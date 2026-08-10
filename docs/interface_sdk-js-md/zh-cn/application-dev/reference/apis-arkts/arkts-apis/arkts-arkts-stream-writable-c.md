@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { stream } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Writable**的构造函数。
+**Writable**的构造函数。
 
 **起始版本：** 12
 
@@ -28,7 +34,7 @@ Writable**的构造函数。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 let writableStream = new stream.Writable();
@@ -40,7 +46,7 @@ let writableStream = new stream.Writable();
 cork(): boolean
 ```
 
-强制将后续写入的数据缓存起来。调用此API可优化连续写入操作的性能。调用此API后，**writableCorked**的值加1。建议与[uncork()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用。
+强制将后续写入的数据缓存起来。调用此API可优化连续写入操作的性能。调用此API后，**writableCorked**的值加1。建议与[uncork()](arkts-arkts-stream-writable-c.md#uncork)配合使用。
 
 **起始版本：** 12
 
@@ -58,9 +64,7 @@ cork(): boolean
 | --- | --- |
 | boolean | 操作结果。**true**表示成功；**false**表示失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -76,24 +80,6 @@ class TestWritable extends stream.Writable {
 let writableStream = new TestWritable();
 let result = writableStream.cork();
 console.info("Writable cork result", result); // Writable cork result true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.cork();
-console.info("Writable cork result", result); // 期望结果: Writable cork result true
 ```
 
 ## doInitialize
@@ -120,7 +106,7 @@ doInitialize(callback: Function): void
 | --- | --- | --- | --- |
 | callback | Function | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 class MyWritable extends stream.Writable {
@@ -163,9 +149,7 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 | encoding | string | 是 | 编码格式。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
 | callback | Function | 是 | 回调函数。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -176,24 +160,6 @@ class TestWritable extends stream.Writable {
   doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
     console.info("Writable chunk is", chunk); // Writable chunk is data
     callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write("data", "utf8");
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // 期望结果: Writable chunk is data
-    callback.unsafeCall();
   }
 }
 
@@ -226,9 +192,7 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 | chunks | string[] \| Uint8Array[] | 是 | 批量写入的数据数组。 |
 | callback | Function | 是 | 回调函数。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -239,29 +203,6 @@ class TestWritable extends stream.Writable {
   doWritev(chunks: string[] | Uint8Array[], callback: Function) {
     console.info("Writable chunk", chunks);
     callback();
-  }
-  // Writable chunk data1
-  // Writable chunk data2
-}
-
-let writableStream = new TestWritable();
-writableStream.write("data1", "utf8");
-writableStream.write("data2", "utf8");
-writableStream.uncork();
-writableStream.end();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("Writable chunk", chunks);
-    callback.unsafeCall();
   }
   // Writable chunk data1
   // Writable chunk data2
@@ -304,17 +245,15 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前**Writable**对象。 |
+| [Writable](arkts-arkts-stream-writable-c.md) | 当前**Writable**对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200035](../errorcode-utils.md#10200035-dowrite接口未实现) | The doWrite method has not been implemented. |
+| 10200035 | The doWrite method has not been implemented. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -334,29 +273,6 @@ let writableStream = new TestWritable();
 writableStream.write("test", "utf8");
 writableStream.end("finish", "utf8", () => {
   console.info("Writable is end"); // Writable is end
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk);
-    callback.unsafeCall();
-  }
-  // Writable chunk is test
-  // Writable chunk is finish
-}
-
-let writableStream = new TestWritable();
-writableStream.write("test", "utf8");
-writableStream.end("finish", "utf8", () => {
-  console.info("Writable is end"); // 期望结果: Writable is end
 });
 ```
 
@@ -383,11 +299,9 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。 - 'close'：完成end()调用，结束写入操作，触发该事件。 - 'drain'：在可写流缓冲区中数据清空时触发该事件。 - 'error'：在可写流发生异常时触发该事件。 - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -411,33 +325,6 @@ writableStream.write("test");
 writableStream.end();
 setTimeout(() => {
   console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
-}, 0);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-let testListenerCalled = false;
-let testListener = () => {
-  testListenerCalled = true;
-};
-writableStream.on("finish", testListener);
-writableStream.off("finish");
-writableStream.write("test");
-writableStream.end();
-setTimeout(() => {
-  console.info("Writable off test", testListenerCalled.toString()); // 期望结果: Writable off test false
 }, 0);
 ```
 
@@ -489,11 +376,9 @@ on(event: string, callback: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。 - 'close'：完成end()调用，结束写入操作，触发该事件。 - 'drain'：在可写流缓冲区中数据清空时触发该事件。 - 'error'：在可写流发生异常时触发该事件。 - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件传输的数据。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件传输的数据。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -508,30 +393,8 @@ class TestWritable extends stream.Writable {
 
 let callbackCalled = false;
 let writableStream = new TestWritable();
-writableStream.on('error', () => {
+writableStream.on("error", () => {
   console.info("Writable event test", callbackCalled.toString()); // Writable event test false
-});
-writableStream.write("hello", "utf8", () => {
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall(new Error());
-  }
-}
-
-let callbackCalled = false;
-let writableStream = new TestWritable();
-writableStream.on('error', (): void => {
-  console.info("Writable event test", callbackCalled.toString()); // 期望结果: Writable event test false
 });
 writableStream.write("hello", "utf8", () => {
 });
@@ -592,9 +455,7 @@ setDefaultEncoding(encoding?: string): boolean
 | --- | --- |
 | boolean | 操作结果。**true**表示成功；**false**表示失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -612,31 +473,13 @@ let result = writableStream.setDefaultEncoding("utf8");
 console.info("Writable is result", result); // Writable is result true
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.setDefaultEncoding("utf8");
-console.info("Writable is result", result); // 期望结果: Writable is result true
-```
-
 ## uncork
 
 ```TypeScript
 uncork(): boolean
 ```
 
-释放cork状态，刷新缓冲区中的数据并写入目标位置。调用此API后，**writableCorked**的值减1。如果值变为**0**，则流不再处于cork状态；否则，流仍处于cork状态。建议与[cork()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用。
+释放cork状态，刷新缓冲区中的数据并写入目标位置。调用此API后，**writableCorked**的值减1。如果值变为**0**，则流不再处于cork状态；否则，流仍处于cork状态。建议与[cork()](arkts-arkts-stream-writable-c.md#cork)配合使用。
 
 **起始版本：** 12
 
@@ -654,9 +497,7 @@ uncork(): boolean
 | --- | --- |
 | boolean | 操作结果。**true**表示成功；**false**表示失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -678,30 +519,6 @@ writableStream.end();
 writableStream.on("finish", () => {
   console.info("all Data is End"); // all Data is End
 });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.cork();
-writableStream.write("data1", "utf8");
-writableStream.write("data2", "utf8");
-writableStream.uncork();
-writableStream.on("finish", () => {
-  console.info("all Data is End"); // 期望结果: all Data is End
-});
-writableStream.end();
 ```
 
 ## write
@@ -740,13 +557,11 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200035](../errorcode-utils.md#10200035-dowrite接口未实现) | The doWrite method has not been implemented. |
-| [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) | The stream has been ended. |
-| [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
+| 10200035 | The doWrite method has not been implemented. |
+| 10200037 | The callback is invoked multiple times consecutively. |
+| 10200036 | The stream has been ended. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestWritable extends stream.Writable {
@@ -757,24 +572,6 @@ class TestWritable extends stream.Writable {
   doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
     console.info("Writable chunk is", chunk); // Writable chunk is test
     callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write("test", "utf8");
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // 期望结果: Writable chunk is test
-    callback.unsafeCall();
   }
 }
 
@@ -810,7 +607,7 @@ get writableCorked(): int
 
 为完全释放流，需要调用writable.uncork()的次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -870,7 +667,7 @@ get writableHighWatermark(): int
 
 highWatermark的值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -890,7 +687,7 @@ get writableLength(): int
 
 可刷新的数据大小，单位为字节或对象。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

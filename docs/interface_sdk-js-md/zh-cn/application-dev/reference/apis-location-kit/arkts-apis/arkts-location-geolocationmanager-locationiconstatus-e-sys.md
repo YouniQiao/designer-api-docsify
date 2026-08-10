@@ -1,0 +1,68 @@
+# LocationIconStatus（系统接口）
+
+Enum for location icon status.
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
+<!--Device-geoLocationManager-export enum LocationIconStatus--><!--Device-geoLocationManager-export enum LocationIconStatus-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+**系统接口：** 此接口为系统接口。
+
+## LOCATING_NOT_STARTED
+
+```TypeScript
+LOCATING_NOT_STARTED = 0
+```
+
+The locating service is not started.
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
+<!--Device-LocationIconStatus-LOCATING_NOT_STARTED = 0--><!--Device-LocationIconStatus-LOCATING_NOT_STARTED = 0-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+**系统接口：** 此接口为系统接口。
+
+## LOCATING_STARTED
+
+```TypeScript
+LOCATING_STARTED = 1
+```
+
+The normal locating service is started.
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
+<!--Device-LocationIconStatus-LOCATING_STARTED = 1--><!--Device-LocationIconStatus-LOCATING_STARTED = 1-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+**系统接口：** 此接口为系统接口。
+
+## HD_LOCATING_STARTED
+
+```TypeScript
+HD_LOCATING_STARTED = 2
+```
+
+The HD locating service(RTK) is started.
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
+<!--Device-LocationIconStatus-HD_LOCATING_STARTED = 2--><!--Device-LocationIconStatus-HD_LOCATING_STARTED = 2-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+**系统接口：** 此接口为系统接口。
+

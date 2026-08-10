@@ -4,7 +4,7 @@
 export type VisualEffect = uiEffect.VisualEffect
 ```
 
-VisualEffect
+导入VisualEffect类型对象。
 
 **Since:** 23
 

@@ -6,7 +6,7 @@
 declare function closeSync(fd: number): void
 ```
 
-Closes a file. This API returns the result synchronously.
+以同步方法关闭文件。
 
 **Since:** 6
 
@@ -24,5 +24,5 @@ Closes a file. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to close. |
+| fd | number | Yes | 待关闭文件的文件描述符。 |
 

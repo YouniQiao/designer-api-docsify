@@ -22,9 +22,9 @@ Navigation组件是路由导航的根视图容器，一般作为Page页面的根
 
 可以包含子组件。
 
-从API version 9开始，推荐与[NavRouter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_组件搭配使用。
+从API version 9开始，推荐与[NavRouter]{@link nav_router}组件搭配使用。
 
-从API version 10开始，推荐使用[NavPathStack]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配合[navDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_属性进行页面路由。
+从API version 10开始，推荐使用[NavPathStack]{@link NavPathStack}配合[navDestination]{@link NavigationAttribute#navDestination}属性进行页面路由。
 
 ## Navigation
 
@@ -32,7 +32,7 @@ Navigation组件是路由导航的根视图容器，一般作为Page页面的根
 Navigation()
 ```
 
-创建路由导航的根视图容器，适用于使用[NavRouter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_组件进行页面路由。
+创建路由导航的根视图容器，适用于使用[NavRouter]{@link nav_router}组件进行页面路由。
 
 **起始版本：** 8
 
@@ -50,8 +50,8 @@ Navigation()
 Navigation(pathInfos: NavPathStack)
 ```
 
-绑定导航控制器到Navigation组件，适用于使用[NavPathStack]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合  
-[navDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_属性进行页面路由。
+绑定导航控制器到Navigation组件，适用于使用[NavPathStack]{@link NavPathStack}配合  
+[navDestination]{@link NavigationAttribute#navDestination}属性进行页面路由。
 
 **起始版本：** 10
 
@@ -69,7 +69,7 @@ Navigation(pathInfos: NavPathStack)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathInfos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 导航控制器对象。  |
+| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | 是 | 导航控制器对象。 |
 
 ## Navigation
 
@@ -77,9 +77,9 @@ Navigation(pathInfos: NavPathStack)
 Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 ```
 
-绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配合  
-[navDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_属性或者系统路由表进行页面路由。使用示例参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack]{@link NavPathStack}配合  
+[navDestination]{@link NavigationAttribute#navDestination}属性或者系统路由表进行页面路由。使用示例参考  
+[示例16（Navigation使用NavDestination作为导航页）](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例16navigation使用navdestination作为导航页)。
 
 **起始版本：** 20
 
@@ -97,8 +97,40 @@ Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathInfos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路由栈信息。  |
-| homeDestination | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 主页NavDestination信息。  |
+| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | 是 | 路由栈信息。 |
+| homeDestination | [HomePathInfo](../arkts-apis/arkts-arkui-navigation-homepathinfo-i.md) | 是 | 主页NavDestination信息。 |
 
 ## 汇总
 
+- [HomePathInfo](arkts-arkui-navigation-homepathinfo-i.md)
+- [MoreButtonOptions](arkts-arkui-navigation-morebuttonoptions-i.md)
+- [NavContentInfo](arkts-arkui-navigation-navcontentinfo-i.md)
+- [NavigationAnimatedTransition](arkts-arkui-navigation-navigationanimatedtransition-i.md)
+- [NavigationCommonTitle](arkts-arkui-navigation-navigationcommontitle-i.md)
+- [NavigationConfiguration](arkts-arkui-navigation-navigationconfiguration-i.md)
+- [NavigationCustomTitle](arkts-arkui-navigation-navigationcustomtitle-i.md)
+- [NavigationDividerStyle](arkts-arkui-navigation-navigationdividerstyle-i.md)
+- [NavigationInterception](arkts-arkui-navigation-navigationinterception-i.md)
+- [NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md)
+- [NavigationMenuOptions](arkts-arkui-navigation-navigationmenuoptions-i.md)
+- [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md)
+- [NavigationTitleOptions](arkts-arkui-navigation-navigationtitleoptions-i.md)
+- [NavigationToolbarOptions](arkts-arkui-navigation-navigationtoolbaroptions-i.md)
+- [NavigationTransitionProxy](arkts-arkui-navigation-navigationtransitionproxy-i.md)
+- [PopInfo](arkts-arkui-navigation-popinfo-i.md)
+- [ScrollEffectOptions](arkts-arkui-navigation-scrolleffectoptions-i.md)
+- [ToolbarItem](arkts-arkui-navigation-toolbaritem-i.md)
+- [InterceptionCallback](arkts-arkui-navigation-interceptioncallback-t.md)
+- [InterceptionModeCallback](arkts-arkui-navigation-interceptionmodecallback-t.md)
+- [InterceptionShowCallback](arkts-arkui-navigation-interceptionshowcallback-t.md)
+- [Material](arkts-arkui-navigation-material-t.md)
+- [NavBar](arkts-arkui-navigation-navbar-t.md)
+- [SystemBarStyle](arkts-arkui-navigation-systembarstyle-t.md)
+- [BarStyle](arkts-arkui-navigation-barstyle-e.md)
+- [LaunchMode](arkts-arkui-navigation-launchmode-e.md)
+- [NavBarPosition](arkts-arkui-navigation-navbarposition-e.md)
+- [NavigationMode](arkts-arkui-navigation-navigationmode-e.md)
+- [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md)
+- [NavigationTitleMode](arkts-arkui-navigation-navigationtitlemode-e.md)
+- [ScrollEffectType](arkts-arkui-navigation-scrolleffecttype-e.md)
+- [ToolbarItemStatus](arkts-arkui-navigation-toolbaritemstatus-e.md)

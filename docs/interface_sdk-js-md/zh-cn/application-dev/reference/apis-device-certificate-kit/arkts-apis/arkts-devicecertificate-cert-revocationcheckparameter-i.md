@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## crlDownloadURI
 
 ```TypeScript
@@ -17,9 +23,10 @@ crlDownloadURI?: string
 ```
 
 表示用于CRL请求的备选下载地址。
-    **说明：**  
-    
-    当前URI只针对实体证书生效。
+
+> **说明：**
+> 
+> 当前URI只针对实体证书生效。
 
 **类型：** string
 
@@ -83,7 +90,7 @@ ocspResponderCert?: X509Cert
 
 表示用于OCSP响应的签名校验的签名证书。
 
-**类型：** X509Cert
+**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
 **起始版本：** 12
 
@@ -102,9 +109,10 @@ ocspResponderURI?: string
 ```
 
 表示用于OCSP请求的备选服务器URI地址，支持HTTP/HTTPS，具体配置由与服务器协商决定。
-    **说明：**  
-    
-    当前URI只针对实体证书生效。
+
+> **说明：**
+> 
+> 当前URI只针对实体证书生效。
 
 **类型：** string
 

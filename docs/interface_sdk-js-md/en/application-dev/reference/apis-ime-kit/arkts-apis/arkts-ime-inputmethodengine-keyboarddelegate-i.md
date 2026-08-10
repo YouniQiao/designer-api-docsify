@@ -1,7 +1,19 @@
 # KeyboardDelegate
 
-In the following API examples, you must first use  
-[getKeyboardDelegate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过  
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取该实例。  
+**核心功能概述：**
+
+- **物理键盘按键事件**：通过on('keyDown'|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回  
+false表示不消费。  
+- **光标与选区变化事件**：通过on('cursorContextChange')订阅光标位置变化事件，通过on('selectionChange')订阅文本选区变化事件。输入法应用可根据这些事件调整候选词位置或输入策略。  
+- **文本变化事件**：通过on('textChange')订阅编辑框文本内容变化事件，输入法应用可据此更新候选词或输入建议。  
+- **编辑框属性变化事件**：通过on('editorAttributeChanged')订阅编辑框属性变化事件，输入法应用可根据编辑框属性变化动态调整键盘布局。  
+**使用场景：**  
+- 开发物理键盘快捷键处理功能时，订阅on('keyDown'|'keyUp')或on('keyEvent')事件拦截特定按键。  
+- 需要根据编辑框实时状态（光标、选区、文本、属性）调整输入法行为时，订阅对应的on事件。
+
+下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取到KeyboardDelegate实例后，通过实例调用。
 
 **Since:** 8
 
@@ -11,13 +23,19 @@ In the following API examples, you must first use
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## off('keyDown' | 'keyUp')
 
 ```TypeScript
 off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 ```
 
-Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+取消订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。
 
 **Since:** 8
 
@@ -31,10 +49,10 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyDown'** indicates the keydown event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'keyDown' \| 'keyUp' | Yes | 设置监听类型。&lt;br/&gt;- 'keyDown'表示键盘按下。&lt;br/&gt;- 'keyUp'表示键盘抬起。 |
+| callback | (event: KeyEvent) =&gt; boolean | No | 取消订阅的回调函数，用于取消特定的键盘按键事件订阅。传入callback时取消指定回调的订阅，参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
@@ -53,7 +71,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 ```
 
-Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+取消订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。
 
 **Since:** 8
 
@@ -67,10 +85,10 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyDown'** indicates the keydown event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'keyDown' \| 'keyUp' | Yes | 设置监听类型。&lt;br/&gt;- 'keyDown'表示键盘按下。&lt;br/&gt;- 'keyUp'表示键盘抬起。 |
+| callback | (event: KeyEvent) =&gt; boolean | No | 取消订阅的回调函数，用于取消特定的键盘按键事件订阅。传入callback时取消指定回调的订阅，参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
@@ -89,7 +107,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
 ```
 
-Disables listening for a keyboard event. This API uses an asynchronous callback to return the result.
+取消订阅硬键盘（即物理键盘）事件。使用callback异步回调。
 
 **Since:** 10
 
@@ -103,10 +121,10 @@ Disables listening for a keyboard event. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'keyEvent' | Yes | 设置监听类型，固定取值为'keyEvent'。 |
+| callback | (event: InputKeyEvent) =&gt; boolean | No | 取消订阅的回调函数，用于取消特定的键盘事件订阅。传入callback时取消指定回调的订阅，参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import type { KeyEvent } from '@kit.InputKit';
@@ -124,7 +142,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyEvent');
 off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void
 ```
 
-Disables listening for cursor context changes. This API uses an asynchronous callback to return the result.
+取消订阅光标变化事件。
 
 **Since:** 8
 
@@ -138,10 +156,10 @@ Disables listening for cursor context changes. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cursorContextChange' | Yes | Event type, which is **'cursorContextChange'**. |
-| callback | (x: number, y: number, height: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'cursorContextChange' | Yes | 光标变化事件，固定取值为'cursorContextChange'。 |
+| callback | (x: number, y: number, height: number) =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('cursorContextChange', (x: number, y: number, height: number) => {
@@ -158,7 +176,7 @@ off(
     ): void
 ```
 
-Disables listening for the text selection change event. This API uses an asynchronous callback to return the result.
+取消订阅文本选择范围变化事件。
 
 **Since:** 8
 
@@ -172,10 +190,10 @@ Disables listening for the text selection change event. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selectionChange' | Yes | Event type, which is **'selectionChange'**. |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'selectionChange' | Yes | 文本选择变化事件，固定取值为'selectionChange'。 |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate()
@@ -190,7 +208,7 @@ inputMethodEngine.getKeyboardDelegate()
 off(type: 'textChange', callback?: (text: string) => void): void
 ```
 
-Disables listening for the text change event. This API uses an asynchronous callback to return the result.
+取消订阅文本内容变化事件。使用callback异步回调。
 
 **Since:** 8
 
@@ -204,10 +222,10 @@ Disables listening for the text change event. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'textChange' | Yes | Event type, which is **'textChange'**. |
-| callback | (text: string) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'textChange' | Yes | 文本变化事件，固定取值为'textChange'。 |
+| callback | (text: string) =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
@@ -221,7 +239,7 @@ inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
 off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void
 ```
 
-Disables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
+取消订阅编辑框属性变化事件。使用callback异步回调。
 
 **Since:** 10
 
@@ -235,10 +253,10 @@ Disables listening for the edit box attribute change event. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
-| callback | (attr: EditorAttribute) =&gt; void | No | Callback used for unsubscription. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
+| type | 'editorAttributeChanged' | Yes | 编辑框属性变化事件，固定取值为'editorAttributeChanged'。 |
+| callback | (attr: EditorAttribute) =&gt; void | No | 所要取消订阅的回调处理函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
@@ -250,7 +268,7 @@ inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
 offCursorContextChange(callback?: CursorContextChangeCallback): void
 ```
 
-Unsubscribe cursor context change.
+取消订阅光标上下文变更cursorcontextchange事件，停止监听编辑框中光标位置及上下文文本的变更动作。
 
 **Since:** 23
 
@@ -264,7 +282,7 @@ Unsubscribe cursor context change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | optional, the callback called when cursor information changes. |
+| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 changes. |
 
 ## offEditorAttributeChanged
 
@@ -272,7 +290,7 @@ Unsubscribe cursor context change.
 offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
 ```
 
-Unsubscribe input text attribute change.
+取消订阅编辑框属性变化事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -286,7 +304,7 @@ Unsubscribe input text attribute change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EditorAttribute&gt; | No | optional, the callback called when editor's attribute changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EditorAttribute&gt; | No | 所要取消订阅的回调处理函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offKeyDown
 
@@ -294,7 +312,7 @@ Unsubscribe input text attribute change.
 offKeyDown(callback?: KeyEventCallback): void
 ```
 
-Unsubscribe key down event
+取消订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -308,7 +326,7 @@ Unsubscribe key down event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | optional, the callback called when a key down event occurs. |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offKeyEvent
 
@@ -316,7 +334,7 @@ Unsubscribe key down event
 offKeyEvent(callback?: InputKeyEventCallback): void
 ```
 
-Unsubscribe key event.
+取消订阅硬键盘（即物理键盘）事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -330,7 +348,7 @@ Unsubscribe key event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | optional, the callback called when a key event event occurs. |
+| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offKeyUp
 
@@ -338,7 +356,7 @@ Unsubscribe key event.
 offKeyUp(callback?: KeyEventCallback): void
 ```
 
-Unsubscribe key up event
+取消订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -352,7 +370,7 @@ Unsubscribe key up event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | optional, the callback called when a key up event occurs. |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offSelectionChange
 
@@ -360,7 +378,7 @@ Unsubscribe key up event
 offSelectionChange(callback?: SelectionChangeCallback): void
 ```
 
-Unsubscribe selection change.
+取消订阅文本选择范围变化事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -374,7 +392,7 @@ Unsubscribe selection change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | optional, the callback called when the text selection changes. |
+| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offTextChange
 
@@ -382,7 +400,7 @@ Unsubscribe selection change.
 offTextChange(callback?: Callback<string>): void
 ```
 
-Unsubscribe text change.
+取消订阅文本内容变化事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -396,7 +414,7 @@ Unsubscribe text change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | No | optional, the callback called when the text changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## on('keyDown' | 'keyUp')
 
@@ -404,7 +422,11 @@ Unsubscribe text change.
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 ```
 
-Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
+
+**使用场景：** 实现快捷键功能、拦截特殊按键、处理功能键（如删除、回车等）等。
+
+**使用后效果：** 当物理按键按下/抬起时触发回调，回调函数返回按键信息。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。返回true时按键事件不再向编辑框传递，返回false时按键事件继续向编辑框传递。
 
 **Since:** 8
 
@@ -418,15 +440,15 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyDown'** indicates the keydown event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| type | 'keyDown' \| 'keyUp' | Yes | 设置监听类型。&lt;br/&gt;- 'keyDown'表示键盘按下。&lt;br/&gt;- 'keyUp'表示键盘抬起。 |
+| callback | (event: KeyEvent) =&gt; boolean | Yes | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().on('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-  console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
+  console.info(`inputMethodEngine keyCode.(keyUp): ${keyEvent.keyCode}`);
+  console.info(`inputMethodEngine keyAction.(keyUp): ${keyEvent.keyAction}`);
   return true;
 });
 inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
@@ -442,7 +464,11 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 ```
 
-Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
+
+**使用场景：** 实现快捷键功能、拦截特殊按键、处理功能键（如删除、回车等）等。
+
+**使用后效果：** 当物理按键按下/抬起时触发回调，回调函数返回按键信息。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。返回true时按键事件不再向编辑框传递，返回false时按键事件继续向编辑框传递。
 
 **Since:** 8
 
@@ -456,15 +482,15 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyDown'** indicates the keydown event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| type | 'keyDown' \| 'keyUp' | Yes | 设置监听类型。&lt;br/&gt;- 'keyDown'表示键盘按下。&lt;br/&gt;- 'keyUp'表示键盘抬起。 |
+| callback | (event: KeyEvent) =&gt; boolean | Yes | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().on('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-  console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
+  console.info(`inputMethodEngine keyCode.(keyUp): ${keyEvent.keyCode}`);
+  console.info(`inputMethodEngine keyAction.(keyUp): ${keyEvent.keyAction}`);
   return true;
 });
 inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
@@ -480,7 +506,11 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 ```
 
-Enables listening for a keyboard event. This API uses an asynchronous callback to return the result.
+订阅硬键盘（即物理键盘）事件。使用callback异步回调。与on('keyDown'|'keyUp')相比，on('keyEvent')提供更完整的按键事件信息（包含组合键Ctrl/Shift/Alt状态、unicodeChar等），适用于需要处理组合键或获取更丰富按键信息的场景。
+
+**使用场景：** 需要处理组合键（如Ctrl+C、Shift+Enter等）或获取更完整按键信息（如unicodeChar、ctrlKey等）的场景。
+
+**使用后效果：** 当物理按键事件触发时回调被调用。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。
 
 **Since:** 10
 
@@ -494,10 +524,10 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Input parameter: [InputKeyEvent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| type | 'keyEvent' | Yes | 设置监听类型，固定取值为'keyEvent'。 |
+| callback | (event: InputKeyEvent) =&gt; boolean | Yes | 回调函数，入参为按键事件信息，返回值类型为布尔类型。&lt;br/&gt;- 入参按键事件信息的数据类型为 [InputKeyEvent](arkts-ime-inputmethodengine-keyevent-i.md)。&lt;br/&gt;- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import type { KeyEvent } from '@kit.InputKit';
@@ -517,7 +547,11 @@ inputMethodEngine.getKeyboardDelegate().on('keyEvent', (keyEvent: KeyEvent) => {
 on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void
 ```
 
-Enables listening for the cursor change event. This API uses an asynchronous callback to return the result.
+订阅光标变化事件。使用callback异步回调。
+
+**使用场景：** 实时更新候选词显示位置、根据光标位置调整输入法界面、实现跟随光标的浮动菜单等。
+
+**使用后效果：** 当编辑框光标位置发生变化时触发回调，返回光标的x坐标、y坐标和高度信息，输入法应用可据此调整候选词窗口或面板的定位。
 
 **Since:** 8
 
@@ -531,10 +565,10 @@ Enables listening for the cursor change event. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cursorContextChange' | Yes | Event type, which is **'cursorContextChange'**. |
-| callback | (x: number, y: number, height: number) =&gt; void | Yes | Callback used to return the cursor information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **x**: x coordinate of the top of the cursor. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **y**: y coordinate of the bottom of the cursor. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **height**: height of the cursor. |
+| type | 'cursorContextChange' | Yes | 光标变化事件，固定取值为'cursorContextChange'。 |
+| callback | (x: number, y: number, height: number) =&gt; void | Yes | 回调函数，返回光标信息。&lt;br/&gt;- x为光标上端的x坐标值，单位：px，y为光标上端的y坐标值，单位：px，height为光标的高度值，单位：px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y: number, height: number) => {
@@ -553,7 +587,11 @@ on(
     ): void
 ```
 
-Enables listening for the text selection change event. This API uses an asynchronous callback to return the result.
+订阅文本选择范围变化事件。使用callback异步回调。
+
+**使用场景：** 监听用户选中文本以提供剪切、复制、粘贴等快捷操作、根据选择文本显示相关建议、实现文本编辑辅助功能等。
+
+**使用后效果：** 当编辑框中文本选择范围发生变化时触发回调，返回变化前后的选区起始和终止下标。
 
 **Since:** 8
 
@@ -567,10 +605,10 @@ Enables listening for the text selection change event. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selectionChange' | Yes | Event type, which is **'selectionChange'**. |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | Yes | Callback used to return the text selection information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **oldBegin**: start of the selected text before the change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **oldEnd**: end of the selected text before the change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **newBegin**: start of the selected text after the change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **newEnd**: end of the selected text after the change. |
+| type | 'selectionChange' | Yes | 文本选择变化事件，固定取值为'selectionChange'。 |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | Yes | 回调函数，返回文本选择信息。&lt;br/&gt;- oldBegin为变化前被选中文本的起始下标，oldEnd为变化前被选中文本的终止下标。&lt;br/&gt;- newBegin为变 化后被选中文本的起始下标，newEnd为变化后被选中文本的终止下标。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate()
@@ -588,7 +626,11 @@ inputMethodEngine.getKeyboardDelegate()
 on(type: 'textChange', callback: (text: string) => void): void
 ```
 
-Enables listening for the text change event. This API uses an asynchronous callback to return the result.
+订阅文本内容变化事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要根据编辑框文本内容变化更新候选词、提供智能输入建议、实现联想输入等。
+
+**使用后效果：** 当编辑框文本内容发生变化时触发回调，返回当前编辑框的完整文本内容。
 
 **Since:** 8
 
@@ -602,10 +644,10 @@ Enables listening for the text change event. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'textChange' | Yes | Event type, which is **'textChange'**. |
-| callback | (text: string) =&gt; void | Yes | Callback used to return the text content. |
+| type | 'textChange' | Yes | 文本变化事件，固定取值为'textChange'。 |
+| callback | (text: string) =&gt; void | Yes | 回调函数，返回订阅的文本内容。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {
@@ -619,7 +661,11 @@ inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {
 on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void
 ```
 
-Enables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
+订阅编辑框属性变化事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要根据编辑框属性变化（如输入类型从文本切换到数字、回车键类型从"搜索"切换到"发送"等）动态调整键盘布局。
+
+**使用后效果：** 当编辑框属性发生变化时触发回调，返回变化后的编辑框属性信息（包括inputPattern和enterKeyType），输入法应用可据此重新调整键盘布局。
 
 **Since:** 10
 
@@ -633,10 +679,10 @@ Enables listening for the edit box attribute change event. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
-| callback | (attr: EditorAttribute) =&gt; void | Yes | Callback used to return the changed edit box attribute. |
+| type | 'editorAttributeChanged' | Yes | 编辑框属性变化事件，固定取值为'editorAttributeChanged'。 |
+| callback | (attr: EditorAttribute) =&gt; void | Yes | 回调函数，返回变化的编辑框属性。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate()
@@ -651,7 +697,7 @@ inputMethodEngine.getKeyboardDelegate()
 onCursorContextChange(callback: CursorContextChangeCallback): void
 ```
 
-Subscribe cursor context change.
+订阅光标变化事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -665,7 +711,7 @@ Subscribe cursor context change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback called when cursor information changes. |
+| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | Yes | 回调函数，返回光标信息。 x为光标上端的的x坐标值，单位为px。y为光标上端的y坐标值，单位为px。height为光标的高度值，单位为px。 |
 
 ## onEditorAttributeChanged
 
@@ -673,7 +719,7 @@ Subscribe cursor context change.
 onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
 ```
 
-Subscribe input text attribute change.
+订阅编辑框属性变化事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -687,7 +733,7 @@ Subscribe input text attribute change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EditorAttribute&gt; | Yes | the callback called when editor's attribute changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EditorAttribute&gt; | Yes | 回调函数，返回变化的编辑框属性。 |
 
 ## onKeyDown
 
@@ -695,7 +741,7 @@ Subscribe input text attribute change.
 onKeyDown(callback: KeyEventCallback): void
 ```
 
-Subscribe key down event
+订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -709,7 +755,7 @@ Subscribe key down event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback called when a key down event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
 ## onKeyEvent
 
@@ -717,7 +763,7 @@ Subscribe key down event
 onKeyEvent(callback: InputKeyEventCallback): void
 ```
 
-Subscribe key event.
+订阅硬键盘（即物理键盘）事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -731,7 +777,7 @@ Subscribe key event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback called when a key event event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | Yes | 回调函数，入参为按键事件信息，返回值类型为布尔类型。 入参按键事件信息的数据类型为InputKeyEvent。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
 ## onKeyUp
 
@@ -739,7 +785,7 @@ Subscribe key event.
 onKeyUp(callback: KeyEventCallback): void
 ```
 
-Subscribe key up event
+订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -753,7 +799,7 @@ Subscribe key up event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback called when a key up event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
 ## onSelectionChange
 
@@ -761,7 +807,7 @@ Subscribe key up event
 onSelectionChange(callback: SelectionChangeCallback): void
 ```
 
-Subscribe selection change.
+订阅文本选择范围变化事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -775,7 +821,7 @@ Subscribe selection change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback called when the text selection changes. |
+| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | Yes | 回调函数，返回文本选择信息。 oldBegin为变化前被选中文本的起始下标，oldEnd为变化前被选中文本的终止下标。 newBegin为变化后被选中文本的起始下标，newEnd为变化后被选中文本的终止下标。 |
 
 ## onTextChange
 
@@ -783,7 +829,7 @@ Subscribe selection change.
 onTextChange(callback: Callback<string>): void
 ```
 
-Subscribe text change.
+订阅文本内容变化事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -797,5 +843,5 @@ Subscribe text change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | the callback called when the text changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 回调函数，返回订阅的文本内容。 |
 

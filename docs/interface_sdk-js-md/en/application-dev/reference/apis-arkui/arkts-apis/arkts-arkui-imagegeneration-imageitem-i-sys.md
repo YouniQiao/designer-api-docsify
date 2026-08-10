@@ -12,6 +12,12 @@ Image information for AI-generated images.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## image
 
 ```TypeScript
@@ -20,8 +26,7 @@ image?: image.PixelMap
 
 Image decoding information for preview in the page of ImageGeneratorDialog.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**:  
-Displayed within the canvas in the ImageGeneratorDialog; if not provided, the image will be decoded from the url.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;**NOTE：**:Displayed within the canvas in the ImageGeneratorDialog; if not provided, the image will be decoded from the url.&lt;/p&gt;
 
 **Type:** image.PixelMap
 
@@ -45,8 +50,7 @@ isHandwrite?: boolean
 
 whether the image type is a hand-drawn line art.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**:  
-it is recommended to be provided in Hand-drawn line art scenarios to achieve better results.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;**NOTE：**:it is recommended to be provided in Hand-drawn line art scenarios to achieve better results.&lt;/p&gt;
 
 **Type:** boolean
 
@@ -70,8 +74,7 @@ rect?: common2D.Rect
 
 The size and position of the container used to display images in the preview canvas.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**:  
-it is recommended to be provided in multi-image fusion scenarios to achieve better results.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;**NOTE：**:it is recommended to be provided in multi-image fusion scenarios to achieve better results.&lt;/p&gt;
 
 **Type:** common2D.Rect
 
@@ -95,8 +98,7 @@ rotation?: componentUtils.Rotation2D
 
 The rotation of the container used to display images in the preview canvas.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**:  
-it is recommended to be provided in multi-image fusion scenarios to achieve better results.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;**NOTE：**:it is recommended to be provided in multi-image fusion scenarios to achieve better results.&lt;/p&gt;
 
 **Type:** componentUtils.Rotation2D
 
@@ -120,10 +122,9 @@ url?: ResourceStr
 
 Original image path information for image generation;
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**:  
-for high-resolution scenarios, it is best to provide the original image path; if not provided, the image.PixelMap will be used for image generation.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;**NOTE：**:for high-resolution scenarios, it is best to provide the original image path; if not provided, the image.PixelMap will be used for image generation.&lt;/p&gt;
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -145,8 +146,7 @@ zIndex?: int
 
 In scenarios with multiple images, information about image rendering hierarchy.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**:  
-it is recommended to be provided in multi-image fusion scenarios to achieve better results.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;**NOTE：**:it is recommended to be provided in multi-image fusion scenarios to achieve better results.&lt;/p&gt;
 
 **Type:** int
 

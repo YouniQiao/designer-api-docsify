@@ -1,6 +1,6 @@
 # AsyncLock
 
-Class to execute an asynchronous operation under lock.
+实现异步锁功能的类，允许在锁下执行异步操作。该类使用@Sendable装饰器装饰。
 
 **Since:** 12
 
@@ -12,13 +12,19 @@ Class to execute an asynchronous operation under lock.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Default constructor.
+默认构造函数。
 
 **Since:** 12
 
@@ -36,7 +42,7 @@ Default constructor.
 lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>
 ```
 
-Perform an operation with the acquired lock exclusively.The method acquires the lock first, then calls the callback, and then releases the lock.The callback is called asynchronously in the same thread where lockAsync was called.
+在获取的锁下执行操作。该方法首先获取锁，然后调用回调，最后释放锁。若锁已被其他任务持有，当前请求将进入等待队列，待锁释放后按顺序获取锁。回调在调用lockAsync的同一线程中以异步方式执行。
 
 **Since:** 12
 
@@ -52,19 +58,19 @@ Perform an operation with the acquired lock exclusively.The method acquires the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | function to call when the lock gets acquired. |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | 获取锁后要调用的函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise that will be resolved after the callback gets executed. |
+| Promise&lt;T&gt; | 回调执行后将解决的Promise。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
+| 10200030 | The lock does not exist. |
 
 ## lockAsync
 
@@ -72,7 +78,7 @@ Perform an operation with the acquired lock exclusively.The method acquires the 
 lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>
 ```
 
-Perform an operation with the acquired lock.The method acquires the lock first, then calls the callback, and then releases the lock.The callback is called asynchronously in the same thread where lockAsync was called.
+在获取的锁下执行操作。该方法首先获取锁，然后调用回调，最后释放锁。若锁已被其他任务持有，当前请求将进入等待队列，待锁释放后按顺序获取锁。回调在调用lockAsync的同一线程中以异步方式执行。
 
 **Since:** 12
 
@@ -88,20 +94,20 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | function to call when the lock gets acquired. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | mode of the lock operation. |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | 获取锁后要调用的函数。 |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes | 锁的操作模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise that will be resolved after the callback gets executed or rejected. |
+| Promise&lt;T&gt; | 回调执行后将解决的Promise。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
+| 10200030 | The lock does not exist. |
 
 ## lockAsync
 
@@ -110,7 +116,7 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
         options: AsyncLockOptions<U>): Promise<T | U>
 ```
 
-Perform an operation with the acquired lock.The method acquires the lock first, then calls the callback, and then releases the lock.The callback is called asynchronously in the same thread where lockAsync was called.An optional timeout value can be provided in \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. In this case, lockAsync will reject the resulting promise with a BusinessError instance if the lock is not acquired before timeout exceeds.The error message, in this case, will contain the held and waited locks information and possible deadlock warnings.
+在获取的锁下执行操作。该方法首先获取锁，然后调用回调，最后释放锁。回调在调用lockAsync的同一线程中以异步方式执行。在{@link AsyncLockOptions}中可以提供一个可选的超时值。在这种情况下，如果超时前未能获取锁，lockAsync将返回被拒绝的Promise并带上一个BusinessError实例。这种情况下，错误信息将包含持有的锁和等待的锁的信息以及可能的死锁警告。
 
 **Since:** 12
 
@@ -126,22 +132,22 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | function to call when the lock gets acquired. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | mode of the lock operation. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;U&gt; | Yes | lock operation options. |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | 获取锁后要调用的函数。 |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes | 锁的操作模式。 |
+| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | Yes | 锁的操作选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T \| U&gt; | Promise that will be resolved after the callback gets executed or rejected in case timeout exceeded. |
+| Promise&lt;T \| U&gt; | 回调执行后解决的Promise，或者在超时情况下被拒绝。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
-| [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) | Timeout exceeded. |
+| 10200031 | Timeout exceeded. |
+| 10200030 | The lock does not exist. |
 
 ## query
 
@@ -149,7 +155,7 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 static query(name: string): AsyncLockState
 ```
 
-Query information about the specified lock.
+查询指定异步锁的信息。
 
 **Since:** 12
 
@@ -165,19 +171,19 @@ Query information about the specified lock.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | name of the lock. |
+| name | string | Yes | 要查询的锁的名称，仅可查询通过request接口获取的锁（即与request接口入参锁名称保持一致）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns an instance of AsyncLockState. |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | 包含状态描述的异步锁状态实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
+| 10200030 | The lock does not exist. |
 
 ## queryAll
 
@@ -185,7 +191,7 @@ Query information about the specified lock.
 static queryAll(): AsyncLockState[]
 ```
 
-Query information about all locks.
+查询所有现有锁的信息。
 
 **Since:** 12
 
@@ -201,7 +207,7 @@ Query information about all locks.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Returns an array of AsyncLockState. |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] | 包含锁状态信息的异步锁状态数组。 |
 
 ## request
 
@@ -209,7 +215,7 @@ Query information about all locks.
 static request(name: string): AsyncLock
 ```
 
-Find or create an instance of AsyncLock using the specified name.
+使用指定的名称查找或创建AsyncLock实例。
 
 **Since:** 12
 
@@ -225,13 +231,13 @@ Find or create an instance of AsyncLock using the specified name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | name of the lock to find or create. |
+| name | string | Yes | 要查找或创建的锁的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns an instance of AsyncLock. |
+| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | 返回AsyncLock实例。 |
 
 ## name
 
@@ -239,7 +245,7 @@ Find or create an instance of AsyncLock using the specified name.
 readonly name: string
 ```
 
-Name of the lock.
+锁的名称。
 
 **Type:** string
 

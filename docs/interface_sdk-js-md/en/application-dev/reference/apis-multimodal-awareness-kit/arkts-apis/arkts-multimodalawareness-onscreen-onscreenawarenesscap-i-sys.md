@@ -12,6 +12,12 @@ Defines onscreen awareness capabilities (including but not limited to awareness 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## capList
 
 ```TypeScript

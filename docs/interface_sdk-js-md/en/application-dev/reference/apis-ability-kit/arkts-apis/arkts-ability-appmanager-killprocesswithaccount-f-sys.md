@@ -1,16 +1,22 @@
 # killProcessWithAccount (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## killProcessWithAccount
 
 ```TypeScript
 function killProcessWithAccount(bundleName: string, accountId: int): Promise<void>
 ```
 
-Kills a process by bundle name and account ID. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS permission is not required when **accountId** specifies the  
-    current user.
+终止account进程。使用Promise异步回调。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **Since:** 9
 
@@ -30,25 +36,25 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| accountId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of a system account. For details, see [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| bundleName | string | Yes | Bundle名称。 |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号的账号ID，详情参考 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -78,11 +84,11 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
     Promise<void>
 ```
 
-Kills a process by bundle name and account ID. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS permission is not required when **accountId** specifies the  
-    current user.
+终止account进程。使用Promise异步回调。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **Since:** 14
 
@@ -100,27 +106,27 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| accountId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of a system account. For details, see [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
-| clearPageStack | boolean | Yes | Whether to clear the page stack. **true** to clear, **false** otherwise. |
-| appIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Index of an application clone. |
+| bundleName | string | Yes | Bundle名称。 |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号的账号ID，详情参考 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 。 |
+| clearPageStack | boolean | Yes | 表示是否清除页面堆栈。true表示清除，false表示不清除。 |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 应用分身ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | If the input parameter is not valid parameter. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -151,11 +157,11 @@ try {
 function killProcessWithAccount(bundleName: string, accountId: int, callback: AsyncCallback<void>): void
 ```
 
-Kills a process by bundle name and account ID. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS permission is not required when **accountId** specifies the  
-    current user.
+终止account进程。使用callback异步回调。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **Since:** 9
 
@@ -175,20 +181,20 @@ Kills a process by bundle name and account ID. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| accountId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of a system account. For details, see [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the API call result. You can perform error handling or custom processing in this callback. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号的账号ID，详情参考 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

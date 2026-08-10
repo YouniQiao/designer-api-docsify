@@ -1,6 +1,6 @@
 # PathIteratorVerb
 
-Enumerates the path operation types contained in an iterator. It is used to read path operation instructions.
+迭代器包含的路径操作类型枚举，可用于读取path的操作指令。常用于路径分析、路径转换、路径动画等需要解析路径构成的场景。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the path operation types contained in an iterator. It is used to read
 MOVE = 0
 ```
 
-Sets the start point.
+设置起始点。
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ Sets the start point.
 LINE = 1
 ```
 
-Adds a line segment.
+添加线段。
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ Adds a line segment.
 QUAD = 2
 ```
 
-Adds a quadratic Bezier curve for smooth transitions.
+添加二阶贝塞尔圆滑曲线。
 
 **Since:** 18
 
@@ -64,7 +64,7 @@ Adds a quadratic Bezier curve for smooth transitions.
 CONIC = 3
 ```
 
-Adds a conic curve.
+添加圆锥曲线。
 
 **Since:** 18
 
@@ -80,7 +80,7 @@ Adds a conic curve.
 CUBIC = 4
 ```
 
-Adds a cubic Bezier curve for smooth transitions.
+添加三阶贝塞尔圆滑曲线。
 
 **Since:** 18
 
@@ -96,7 +96,7 @@ Adds a cubic Bezier curve for smooth transitions.
 CLOSE = 5
 ```
 
-Closes a path.
+路径闭合。
 
 **Since:** 18
 
@@ -112,7 +112,7 @@ Closes a path.
 DONE = CLOSE + 1
 ```
 
-The path setting is complete.
+路径设置完成。
 
 **Since:** 18
 

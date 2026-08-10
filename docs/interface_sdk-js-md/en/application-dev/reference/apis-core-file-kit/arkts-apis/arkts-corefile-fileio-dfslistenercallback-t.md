@@ -20,6 +20,6 @@ DfsListener Callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkId | string | Yes | The networkId of device.  |
-| status | int | Yes | The status code of Distributed File System. The value should be an integer.  |
+| networkId | string | Yes | 设备的网络Id。 |
+| status | int | Yes | 分布式文件系统的状态码（以connectDfs回调onStatus的特定错误码作为入参）。 触发场景为connectDfs调用过程中出现对端设备异常，对应错误码为：- 13900046：软件造成连接中断。 |
 

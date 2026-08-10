@@ -1,6 +1,6 @@
 # PanelInfo
 
-Describes the attributes of the input method panel.
+输入法面板属性。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the attributes of the input method panel.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## flag
 
 ```TypeScript
 flag?: PanelFlag
 ```
 
-State type of the panel.
+面板的状态类型。
 
-**Type:** PanelFlag
+**Type:** [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)
 
 **Default:** FLG_FIXED
 
@@ -36,9 +42,9 @@ State type of the panel.
 type: PanelType
 ```
 
-Type of the panel.
+面板的类型。
 
-**Type:** PanelType
+**Type:** [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 
 **Since:** 10
 

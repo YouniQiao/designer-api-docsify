@@ -1,12 +1,18 @@
 # revokeSharedDirectoryPermission (System API)
 
+## Modules to Import
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## revokeSharedDirectoryPermission
 
 ```TypeScript
 function revokeSharedDirectoryPermission(): Promise<void>
 ```
 
-Revokes permission for application-shared directories
+撤销应用的捐献目录临时访问权限。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -26,14 +32,33 @@ Revokes permission for application-shared directories
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 | 13900001 | Operation not permitted. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | The caller is not a system application. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function revokeSharedDirectoryPermission() {
+  try {
+    fileShare.revokeSharedDirectoryPermission().then(() => {
+      console.info('revokeSharedDirectoryPermission success');
+    }).catch((err: BusinessError) => {
+      console.error(`revokeSharedDirectoryPermission err: ${JSON.stringify(err)}`);
+    });
+  } catch (error) {
+    console.error(`revokeSharedDirectoryPermission error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
 

@@ -20,6 +20,6 @@ Defines the onMove callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | int | Yes | Index number for moving elements.  |
-| to | int | Yes | Target index number for moving elements.  |
+| from | int | Yes | Index number for moving elements. |
+| to | int | Yes | Target index number for moving elements. |
 

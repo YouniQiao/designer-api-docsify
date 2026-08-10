@@ -1,6 +1,6 @@
 # DialogActionInfo
 
-The definition of dialog action result.
+对话框动作信息的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of dialog action result.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## clickedBtnId
 
 ```TypeScript
 clickedBtnId: string
 ```
 
-Id of the button clicked by the user.
+用户点击的按钮的ID。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Id of the button clicked by the user.
 dialogId: string
 ```
 
-Unique ID of the dialog action.
+对话框动作的唯一标识符。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Unique ID of the dialog action.
 isChecked: boolean
 ```
 
-Is the checkbox in the pop-up window selected.
+对话框中的复选框是否已选中。true表示已选中，false表示未选中。无默认值。
 
 **Type:** boolean
 

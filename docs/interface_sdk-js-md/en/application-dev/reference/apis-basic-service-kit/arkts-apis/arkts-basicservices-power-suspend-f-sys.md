@@ -1,12 +1,18 @@
 # suspend (System API)
 
+## Modules to Import
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## suspend
 
 ```TypeScript
 function suspend(isImmediate?: boolean): void
 ```
 
-Enables a device to enter the sleep state.
+使设备进入睡眠状态。
 
 **Since:** 9
 
@@ -25,18 +31,18 @@ Enables a device to enter the sleep state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isImmediate | boolean | No | Whether the device enters the sleep state immediately. The value **true** indicates that the device enters the sleep state immediately after the screen is turned off; **false** indicates that the system controls when the device enters the sleep state. If this parameter is not set, the default value **false** is used. If you only want to turn off the screen, you are advised not to set this parameter.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**: This parameter is supported since API version 10.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 10 |
+| isImmediate | boolean | No | 是否直接使设备进入睡眠状态。true表示灭屏后立即进入睡眠，不填该参数则默认为false，表示灭屏后由系统自动检测何时进入睡眠。如果只想做灭屏操作，建议不填参数。&lt; br&gt;**说明：** 从API version 10开始，支持该参数。<br>**Since:** 10 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 19 and later |
+| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 19 and later |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 4900101 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

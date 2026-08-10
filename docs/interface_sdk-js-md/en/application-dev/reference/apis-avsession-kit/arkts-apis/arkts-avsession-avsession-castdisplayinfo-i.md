@@ -1,6 +1,6 @@
 # CastDisplayInfo
 
-Define the information for extended display screen.
+扩展屏投播显示设备相关属性。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Define the information for extended display screen.
 
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Display height, in pixels.
+投播显示设备的屏幕高度，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Display height, in pixels.
 id: long
 ```
 
-Display ID.The application can get more display information based on the same id from display interface.
+投播显示设备的ID，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -56,7 +62,7 @@ Display ID.The application can get more display information based on the same id
 name: string
 ```
 
-Display name.
+投播显示设备的名称。
 
 **Type:** string
 
@@ -76,9 +82,9 @@ Display name.
 state: CastDisplayState
 ```
 
-The state of display.
+投播显示设备状态。
 
-**Type:** CastDisplayState
+**Type:** [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md)
 
 **Since:** 12
 
@@ -96,9 +102,9 @@ The state of display.
 width: int
 ```
 
-Display width, in pixels.
+投播显示设备的屏幕宽度，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

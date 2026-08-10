@@ -1,12 +1,18 @@
 # createWantRecord
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createWantRecord
 
 ```TypeScript
 function createWantRecord(want: Want): PasteDataRecord
 ```
 
-Creates a **PasteDataRecord** object of the Want type.
+创建一条Want内容条目。
 
 **Since:** 7
 
@@ -24,15 +30,15 @@ Creates a **PasteDataRecord** object of the Want type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want content. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | New **PasteDataRecord** object of the Want type. |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的Want内容条目。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

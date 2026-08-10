@@ -1,12 +1,18 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { continueManager } from 'kits/@kit.AbilityKit';
+```
+
 ## on('prepareContinue')
 
 ```TypeScript
 function on(type: 'prepareContinue', context: Context, callback: AsyncCallback<ContinueResultInfo>): void
 ```
 
-Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result.
+在应用快速拉起时，注册回调函数以获取快速拉起结果。使用callback异步回调。
 
 **Since:** 18
 
@@ -22,17 +28,17 @@ Registers a callback to obtain the quick start result when an application is lau
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepareContinue' | Yes | The value is fixed at **prepareContinue**. |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the ability. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinueResultInfo&gt; | Yes | Callback used to return the result. If obtaining the quick start result is successful, **err** is undefined, and **ContinueResultInfo** is the obtained quick startup result. Otherwise, **err** is an error object. |
+| type | 'prepareContinue' | Yes | 固定值：prepareContinue。 |
+| context | [Context](arkts-ability-context-c.md) | Yes | Ability的Context。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | Yes | 回调函数。当快速拉起结果获取成功，err为undefined，ContinueResultInfo为获取到的快速启动结果。否则为 错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
+| 16300501 | the system ability work abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, continueManager } from '@kit.AbilityKit';

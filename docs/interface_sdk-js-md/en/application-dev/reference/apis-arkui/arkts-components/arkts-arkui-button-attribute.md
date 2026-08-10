@@ -1,8 +1,8 @@
 # Button properties/events
 
-In addition to the [universal attributes]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the following attributes are supported.
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
 
-The [universal events]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ are supported.
+支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
 
 **Inheritance/Implementation:** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
 
@@ -20,12 +20,13 @@ The [universal events]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ are supported.
 buttonStyle(value: ButtonStyleMode)
 ```
 
-Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the  
-[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and [role]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
-    **NOTE**  
-    
-    This API can be called within [attributeModifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ since API version 12.
+设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
+[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
+
+> **说明：**
+> 
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **Since:** 11
 
@@ -45,7 +46,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Style and primacy of the button\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md) | Yes | Button组件的样式和重要程度。&lt;br/&gt;默认值：ButtonStyleMode.EMPHASIZED |
 
 ## contentModifier
 
@@ -53,7 +54,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 contentModifier(modifier: ContentModifier<ButtonConfiguration>)
 ```
 
-Creates a content modifier.
+定制Button内容区的方法。
 
 **Since:** 12
 
@@ -71,7 +72,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ButtonConfiguration&gt; | Yes | Content modifier to apply to the button.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; | Yes | 在Button组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发者需要自定义class实现 ContentModifier接口。 |
 
 ## controlSize
 
@@ -79,10 +80,11 @@ Creates a content modifier.
 controlSize(value: ControlSize)
 ```
 
-Sets the size for the button.
-    **NOTE**  
-    
-    This API can be called within [attributeModifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ since API version 12.
+设置Button组件的尺寸。
+
+> **说明：**
+> 
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **Since:** 11
 
@@ -102,7 +104,7 @@ Sets the size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Size of the button.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **ControlSize.NORMAL |
+| value | [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md) | Yes | Button组件的尺寸。&lt;br/&gt;默认值：ControlSize.NORMAL |
 
 ## fontColor
 
@@ -110,7 +112,7 @@ Sets the size for the button.
 fontColor(value: ResourceColor)
 ```
 
-Sets the font color for the button.
+设置文本显示颜色。
 
 **Since:** 7
 
@@ -128,7 +130,7 @@ Sets the font color for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font color of the button.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **\_\_\_ESCAPED\_DOLLAR\_\_\_r('sys.color.font\_\_\_ESCAPED\_UNDERSCORE\_\_\_on\_\_\_ESCAPED\_UNDERSCORE\_\_\_primary')**, which means white |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 文本显示颜色。&lt;br/&gt;默认值：\\$r('sys.color.font_on_primary')，显示为白色字体。 |
 
 ## fontFamily
 
@@ -136,7 +138,7 @@ Sets the font color for the button.
 fontFamily(value: string | Resource)
 ```
 
-Sets the font family.
+设置字体列表。
 
 **Since:** 8
 
@@ -154,7 +156,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ are supported. |
+| value | string \| Resource | Yes | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 [注册自定义字体](../arkts-apis/arkts-font.md/arkts-font.md)。 |
 
 ## fontSize
 
@@ -162,7 +164,7 @@ Sets the font family.
 fontSize(value: Length)
 ```
 
-Sets the font size for the button.
+设置文本显示字号。
 
 **Since:** 7
 
@@ -180,7 +182,7 @@ Sets the font size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font size of the button.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**\_\_\_ESCAPED\_DOLLAR\_\_\_r('sys.float.Body\_\_\_ESCAPED\_UNDERSCORE\_\_\_L')** when **controlSize** is set to **ControlSize.NORMAL**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**\_\_\_ESCAPED\_DOLLAR\_\_\_r('sys.float.Body\_\_\_ESCAPED\_UNDERSCORE\_\_\_S')** when **controlSize** is set to **ControlSize.SMALL**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note: For the string type, percentage values are not supported. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置文本显示字号。&lt;br/&gt;默认值：当controlSize为ControlSize.NORMAL时，默认值为`\\$r('sys.float.Body_L')`。&lt;br/&gt;当 controlSize为ControlSize.SMALL时，默认值为`\\$r('sys.float.Body_S')`。&lt;br/&gt;**说明：**设置string类型时，不支持百分比。 |
 
 ## fontStyle
 
@@ -188,7 +190,7 @@ Sets the font size for the button.
 fontStyle(value: FontStyle)
 ```
 
-Sets the font style for the button.
+设置文本的字体样式。
 
 **Since:** 8
 
@@ -206,7 +208,7 @@ Sets the font style for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font style of the button.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | 文本的字体样式。&lt;br/&gt;默认值：FontStyle.Normal |
 
 ## fontWeight
 
@@ -214,7 +216,7 @@ Sets the font style for the button.
 fontWeight(value: number | FontWeight | string)
 ```
 
-Sets the font weight for the button.
+设置文本的字体粗细。
 
 **Since:** 7
 
@@ -232,7 +234,7 @@ Sets the font weight for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | Font weight of the button. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **500**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ For the string type, only strings that represent a number, for example, **'400'**, and the following enumerated values of **FontWeight** are supported: **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is abnormal or invalid, the font weight defaults to 400. |
+| value | number \| FontWeight \| string | Yes | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。&lt;br&gt;默认值：500&lt;br/&gt; string类型仅支持number类型取值的字符串形式，例如'400'，以及'bold'、'bolder'、'lighter'、'regular'、'medium'，分别对应FontWeight中相应的枚举值。&lt;br/&gt;当 值为异常值或非法值时，字体粗细取值为400。 |
 
 ## labelStyle
 
@@ -240,7 +242,7 @@ Sets the font weight for the button.
 labelStyle(value: LabelStyle)
 ```
 
-Sets the label style for the button.
+设置Button组件label文本和字体的样式。
 
 **Since:** 10
 
@@ -258,7 +260,7 @@ Sets the label style for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Label style of the button. |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | Button组件label文本和字体的样式。 |
 
 ## maxFontScale
 
@@ -266,7 +268,7 @@ Sets the label style for the button.
 maxFontScale(scale: number | Resource)
 ```
 
-Sets the maximum font scale factor for text.
+设置文本最大的字体缩放倍数。
 
 **Since:** 18
 
@@ -284,7 +286,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Maximum font scale factor for text.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [1, +∞)\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A value less than 1 is handled as **1**. Abnormal values are ineffective by default.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
+| scale | number \| Resource | Yes | 文本最大的字体缩放倍数。&lt;br/&gt;取值范围： [1, +∞)&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于1时，按值为1处理，异常值默认不生效。&lt;br/&gt;未设置最大缩放倍数时，圆形按钮最大缩放倍数为1倍，胶囊型按钮、普通按钮、圆角矩形按钮最大缩放倍数跟随系统设置。 |
 
 ## minFontScale
 
@@ -292,7 +294,7 @@ Sets the maximum font scale factor for text.
 minFontScale(scale: number | Resource)
 ```
 
-Sets the minimum font scale factor for text.
+设置文本最小的字体缩放倍数。
 
 **Since:** 18
 
@@ -310,7 +312,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Minimum font scale factor for text.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, 1]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default. |
+| scale | number \| Resource | Yes | 文本最小的字体缩放倍数。&lt;br/&gt;取值范围：[0, 1]&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0时，按值为0处理，设置的值大于1，按值为1处理，异 常值默认不生效。 |
 
 ## role
 
@@ -318,9 +320,9 @@ Sets the minimum font scale factor for text.
 role(value: ButtonRole)
 ```
 
-Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the  
-[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and [buttonStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+设置Button组件的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
+[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。ERROR角色通常用于删除、清空等危险或警示性操作。
 
 **Since:** 12
 
@@ -340,7 +342,7 @@ Sets the role of the button. The system automatically adjusts the button backgro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Role of the button.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **ButtonRole.NORMAL |
+| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes | Button组件的角色。&lt;br/&gt;默认值：ButtonRole.NORMAL |
 
 ## stateEffect
 
@@ -348,7 +350,7 @@ Sets the role of the button. The system automatically adjusts the button backgro
 stateEffect(value: boolean)
 ```
 
-Specifies whether to enable the pressed state effect when the button is clicked.
+设置是否开启按压态显示效果。
 
 **Since:** 7
 
@@ -366,7 +368,7 @@ Specifies whether to enable the pressed state effect when the button is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the pressed state effect when the button is clicked.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **true |
+| value | boolean | Yes | 按钮按下时是否开启按压态显示效果。&lt;br/&gt;true：开启按压效果；false：关闭按压效果。&lt;br/&gt;默认值：true |
 
 ## type
 
@@ -374,7 +376,7 @@ Specifies whether to enable the pressed state effect when the button is clicked.
 type(value: ButtonType)
 ```
 
-Sets the button type.
+设置Button样式。
 
 **Since:** 7
 
@@ -392,5 +394,5 @@ Sets the button type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Button type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_API version 18 and later: The default value is **ButtonType.ROUNDED\_\_\_ESCAPED\_UNDERSCORE\_\_\_RECTANGLE**. |
+| value | [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md) | Yes | Button样式。&lt;br/&gt;API version 18及之后，ButtonType的默认值从ButtonType.Capsule变更为 ButtonType.ROUNDED_RECTANGLE。 |
 

@@ -1,6 +1,6 @@
 # Template
 
-Defines the struct of the template used in a subscription.
+指定订阅中的模板结构。
 
 **Since:** 10
 
@@ -10,16 +10,22 @@ Defines the struct of the template used in a subscription.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## predicates
 
 ```TypeScript
 predicates: Record<string, string>
 ```
 
-Predicates to use. When  
-[**on**]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is called, the predicates are used to generate data. This parameter applies only to RDB data storage.
+指定模板的谓词。当调用  
+[on](dataShare.DataShareHelper.on(type: 'rdbDataChange', uris: Array&lt;string&gt;, templateId: TemplateId, callback: AsyncCallback&lt;RdbDataChangeNode&gt;))的回调时，谓词用于生成数据。仅适用于rdb存储数据。
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 10
 
@@ -37,11 +43,11 @@ Predicates to use. When
 scheduler: string
 ```
 
-Template scheduler SQL, which is embedded with a custom function. Currently, the **remindTimer** function is embedded. The **remindTimer** triggers a subscription-based update in specified scenarios.
+指定模板的调度程序sql。其中嵌入自定义函数处理，目前预置自定义函数remindTimer处理。remindTimer在指定场景触发一次订阅刷新。
 
-The scheduler SQL statement is triggered when:
+触发场景：
 
-1. The subscribed data is modified.2. The first subscription is added to the corresponding database.
+1. 修改数据时且有订阅的情况下触发对应的调度程序sql语句。2. 添加对应库第一个订阅的情况下触发对应的调度程序sql语句。
 
 **Type:** string
 
@@ -61,8 +67,8 @@ The scheduler SQL statement is triggered when:
 update?: string
 ```
 
-Update SQL statement of a specified template. The default value is an empty string. When  
-[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is called, the **update** parameter is used to update data. This parameter applies only to RDB data storage.
+指定模板的update sql语句，未定义时默认值为空字符串。当调用  
+[on](dataShare.DataShareHelper.on(type: 'rdbDataChange', uris: Array&lt;string&gt;, templateId: TemplateId, callback: AsyncCallback&lt;RdbDataChangeNode&gt;))的回调时，update参数用于更新数据。仅适用于rdb存储数据。
 
 **Type:** string
 

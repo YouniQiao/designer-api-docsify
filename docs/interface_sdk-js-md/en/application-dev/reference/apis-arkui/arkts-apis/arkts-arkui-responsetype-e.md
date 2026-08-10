@@ -1,10 +1,10 @@
 # ResponseType
 
-How menu display is triggered.
+ResponseType for contextMenu
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum ResponseType--><!--Device-unnamed-declare enum ResponseType-End-->
 
@@ -16,11 +16,11 @@ How menu display is triggered.
 RightClick
 ```
 
-Shows the shortcut menu by right-clicking the text.
+Right click.
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,11 +34,11 @@ Shows the shortcut menu by right-clicking the text.
 LongPress
 ```
 
-The menu is displayed when the component is long-pressed.
+Long press.
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

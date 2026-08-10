@@ -1,6 +1,6 @@
 # ImageRawData
 
-Describes raw data in an image.
+图像的RAW数据。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Describes raw data in an image.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## bitsPerPixel
 
 ```TypeScript
 bitsPerPixel: int
 ```
 
-Number of bits that each pixel actually occupies in the buffer data.
+每个像素在缓冲区数据中实际占用的位数。单位：比特（bit）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -36,7 +42,7 @@ Number of bits that each pixel actually occupies in the buffer data.
 buffer: ArrayBuffer
 ```
 
-Binary data of the raw image.
+图像缓冲区。
 
 **Type:** ArrayBuffer
 

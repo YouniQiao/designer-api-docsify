@@ -34,14 +34,14 @@ static collapse(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ListItem节点对象。 |
+| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | 是 | ListItem节点对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | The component type of the node is incorrect. |
-| [106203](../errorcode-node.md#106203-传入的节点未挂载到组件树上) | The node not mounted to component tree. |
+| 100023 | The component type of the node is incorrect. |
+| 106203 | The node not mounted to component tree. |
 
 ## expand
 
@@ -50,9 +50,10 @@ static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 ```
 
 展开指定ListItem的划出菜单。
-    **说明：**  
-    
-    - 如果List组件cachedCount属性show参数设置为true，List显示区域外已预加载完成的ListItem支持展开，否则List显示区域外节点不支持展开。
+
+> **说明：**
+> 
+> - 如果List组件cachedCount属性show参数设置为true，List显示区域外已预加载完成的ListItem支持展开，否则List显示区域外节点不支持展开。
 
 **起始版本：** 21
 
@@ -70,13 +71,13 @@ static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ListItem节点对象。 |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ListItem划出菜单的展开方向。 |
+| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | 是 | ListItem节点对象。 |
+| direction | [ListItemSwipeActionDirection](../arkts-apis/arkts-arkui-listitem-listitemswipeactiondirection-e.md) | 是 | ListItem划出菜单的展开方向。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | The component type of the node is incorrect. |
-| [106203](../errorcode-node.md#106203-传入的节点未挂载到组件树上) | The node not mounted to component tree. |
+| 100023 | The component type of the node is incorrect. |
+| 106203 | The node not mounted to component tree. |
 

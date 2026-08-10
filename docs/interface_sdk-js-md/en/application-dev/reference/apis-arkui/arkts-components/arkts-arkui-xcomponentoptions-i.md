@@ -1,6 +1,6 @@
 # XComponentOptions
 
-Defines the options of the **XComponent**.
+定义XComponent的选项。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines the options of the **XComponent**.
 controller: XComponentController
 ```
 
-Controller bound to the component, which can be used to invoke methods of the component. This parameter is effective only when **type** is **SURFACE** or **TEXTURE**.
+绑定到组件的控制器，可用于调用组件的方法。该参数仅在type为SURFACE或TEXTURE时有效。
 
-**Type:** XComponentController
+**Type:** [XComponentController](../arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md)
 
 **Since:** 12
 
@@ -38,9 +38,9 @@ Controller bound to the component, which can be used to invoke methods of the co
 imageAIOptions?: ImageAIOptions
 ```
 
-AI analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
+给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器，仅类型为SURFACE或TEXTURE时有效。未设置时不配置AI分析选项，可通过[enableAnalyzer](XComponentAttribute#enableAnalyzer)属性单独启用AI分析。
 
-**Type:** ImageAIOptions
+**Type:** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
 
 **Since:** 12
 
@@ -60,9 +60,9 @@ AI analysis options. You can configure the analysis type or bind an analyzer con
 type: XComponentType
 ```
 
-Type of the component.
+组件的类型。
 
-**Type:** XComponentType
+**Type:** [XComponentType](../arkts-apis/arkts-arkui-xcomponenttype-e.md)
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # UpgradeFile (System API)
 
-Represents the upgrade file, including the file type and file path, which are used to specify the local upgrade package to be installed.
+升级文件，包含文件类型和文件路径，用于指定要安装的本地升级包。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Represents the upgrade file, including the file type and file path, which are us
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## filePath
 
 ```TypeScript
 filePath: string
 ```
 
-File path, which can be an absolute path or a relative path. The path length ranges from 1 to 255 characters. If the path length is out of the range, an exception is thrown.
+文件路径，支持绝对路径或相对路径。路径长度范围[1，255]，单位：字符，超出范围时抛出异常。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ File path, which can be an absolute path or a relative path. The path length ran
 fileType: ComponentType
 ```
 
-File type, which specifies the type of the upgrade package. If this parameter is set to **OTA**, the system performs the firmware upgrade based on the OTA type, including integrity check and system partition writing.
+文件类型，用于指定升级包类型。设置为OTA表示OTA升级包，系统将根据OTA类型执行固件升级流程，包括完整性校验和系统分区写入等操作。
 
-**Type:** ComponentType
+**Type:** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
 **Since:** 9
 

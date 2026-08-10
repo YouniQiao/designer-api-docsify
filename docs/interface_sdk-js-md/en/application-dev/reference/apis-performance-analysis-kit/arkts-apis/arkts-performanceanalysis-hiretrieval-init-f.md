@@ -1,12 +1,18 @@
 # init
 
+## Modules to Import
+
+```TypeScript
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## init
 
 ```TypeScript
 function init(): void
 ```
 
-Init the HiRetrieval functionality.
+初始化应用灰度模块。多实例应用不支持调用此接口。
 
 **Since:** 26.0.0
 

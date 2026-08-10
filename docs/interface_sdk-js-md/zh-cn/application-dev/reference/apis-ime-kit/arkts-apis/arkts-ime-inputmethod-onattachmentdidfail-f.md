@@ -1,5 +1,11 @@
 # onAttachmentDidFail
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## onAttachmentDidFail
 
 ```TypeScript
@@ -20,9 +26,9 @@ function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachFailureReason&gt; | 是 | 回调函数，返回绑定失败的原因，仅当注册者进程触发的绑定失败时，调用该回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachFailureReason&gt; | 是 | 回调函数，返回绑定失败的原因，仅当注册者进程触发的绑定失败时，调用该回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

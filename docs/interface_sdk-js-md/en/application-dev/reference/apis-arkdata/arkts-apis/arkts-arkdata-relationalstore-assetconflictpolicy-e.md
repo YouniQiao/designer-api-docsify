@@ -1,6 +1,6 @@
 # AssetConflictPolicy
 
-Describes the asset conflict policy.
+资产冲突策略枚举。请使用枚举名称而非枚举值。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Describes the asset conflict policy.
 CONFLICT_POLICY_DEFAULT = 0
 ```
 
-Indicates the default conflict policy.
+默认冲突策略，按照端云同步模式[SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)执行。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Indicates the default conflict policy.
 CONFLICT_POLICY_TIME_FIRST = 1
 ```
 
-Indicates the time-first conflict policy.
+基于时间优先的冲突策略。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Indicates the time-first conflict policy.
 CONFLICT_POLICY_TEMP_PATH = 2
 ```
 
-Indicates the temporary path conflict policy.
+基于临时路径的冲突策略。
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # ThreatType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for the website's threat type.
+Enum type supplied to {@link threatType} for the website's threat type.
 
 **起始版本：** 11
 

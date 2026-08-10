@@ -20,5 +20,5 @@ Popup state change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The parameter of state change callback.  |
+| event | [PopupStateChangeParam](arkts-arkui-common-popupstatechangeparam-i.md) | 是 | The parameter of state change callback. |
 

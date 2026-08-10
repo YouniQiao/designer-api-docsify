@@ -1,6 +1,6 @@
 # ContinuousTaskActiveInfo
 
-Describes the activation information of a continuous task.
+长时任务激活信息。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the activation information of a continuous task.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## id
 
 ```TypeScript
 id: int
 ```
 
-ID of the activated continuous task.
+被激活的长时任务 Id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

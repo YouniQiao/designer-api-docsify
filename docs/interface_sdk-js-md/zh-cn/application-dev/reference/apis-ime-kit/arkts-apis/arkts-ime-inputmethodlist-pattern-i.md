@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { Pattern, InputMethodListDialog, PatternOptions } from 'kits/@kit.IMEKit';
+```
+
 ## icon
 
 ```TypeScript
@@ -24,7 +30,7 @@ icon: Resource
 
 **说明：** 需使用Resource类型资源引用（如\$r('app.media.xxx')），确保工程resource目录中已添加对应的图标资源文件。不支持string和PixelMap类型的图片资源。
 
-**类型：** Resource
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 11
 
@@ -48,7 +54,7 @@ selectedIcon: Resource
 
 **相关参数间的配合/制约关系：** selectedIcon应与icon在视觉风格上保持一致，仅在选中状态标识上有所区别（如增加高亮、边框等），以便用户识别当前选中的模式。每个Pattern中的icon和selectedIcon必须同时设置，缺一不可。
 
-**类型：** Resource
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 11
 

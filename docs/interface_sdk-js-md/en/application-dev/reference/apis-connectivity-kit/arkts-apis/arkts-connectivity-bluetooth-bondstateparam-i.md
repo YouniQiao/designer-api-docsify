@@ -14,6 +14,12 @@ Describes the class of a bluetooth device.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -44,7 +50,7 @@ state: BondState
 
 Profile connection state of the device.
 
-**Type:** BondState
+**Type:** [BondState](arkts-connectivity-connection-bondstate-e.md)
 
 **Since:** 8
 

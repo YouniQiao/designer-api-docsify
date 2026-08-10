@@ -1,6 +1,6 @@
 # TaskPoolInfo
 
-Describes the internal information about a task pool.
+任务池的内部信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the internal information about a task pool.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## taskInfos
 
 ```TypeScript
 taskInfos: TaskInfo[]
 ```
 
-Internal information about the tasks. You are advised not to change the value.
+任务的内部信息。不建议修改此值。
 
-**Type:** TaskInfo[]
+**Type:** [TaskInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md)[]
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Internal information about the tasks. You are advised not to change the value.
 threadInfos: ThreadInfo[]
 ```
 
-Internal information about the worker threads. You are advised not to change the value.
+工作线程的内部信息。不建议修改此值。
 
-**Type:** ThreadInfo[]
+**Type:** [ThreadInfo](arkts-arkts-taskpool-threadinfo-c.md)[]
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # RemoteDevice
 
-Remote device operation methods.
+远程设备操作方法。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Remote device operation methods.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## cancelDevicePairing
 
 ```TypeScript
 cancelDevicePairing(): Promise<void>
 ```
 
-Cancel an in-progress pairing request.
+取消正在进行的配对请求。
 
 **Since:** 26.0.0
 
@@ -36,16 +42,16 @@ Cancel an in-progress pairing request.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## connect
 
@@ -53,7 +59,7 @@ Cancel an in-progress pairing request.
 connect(): Promise<void>
 ```
 
-Connect all allowed profiles.
+连接所有允许的profile。
 
 **Since:** 26.0.0
 
@@ -73,16 +79,16 @@ Connect all allowed profiles.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the result of connecting to profiles as a Promise. |
+| Promise&lt;void&gt; | 将profile连接结果作为Promise返回。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## disconnect
 
@@ -90,7 +96,7 @@ Connect all allowed profiles.
 disconnect(): Promise<void>
 ```
 
-Disconnect all connected profiles.
+断开所有已连接的profile。
 
 **Since:** 26.0.0
 
@@ -110,16 +116,16 @@ Disconnect all connected profiles.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the result of connecting to profiles as a Promise. |
+| Promise&lt;void&gt; | 将profile连接结果作为Promise返回。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## getDeviceAlias
 
@@ -127,7 +133,7 @@ Disconnect all connected profiles.
 getDeviceAlias(): string
 ```
 
-Gets the alias of a remote device.
+获取远程设备的别名。
 
 **Since:** 26.0.0
 
@@ -147,16 +153,16 @@ Gets the alias of a remote device.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the alias of a remote device. |
+| string | 返回远程设备的别名。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## getDeviceModel
 
@@ -164,7 +170,7 @@ Gets the alias of a remote device.
 getDeviceModel(): DeviceModel
 ```
 
-Obtains the model information of a remote device.
+获取远端设备的型号信息。
 
 **Since:** 26.0.0
 
@@ -182,15 +188,15 @@ Obtains the model information of a remote device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the remote device's model information. |
+| [DeviceModel](arkts-connectivity-remotedevice-devicemodel-i-sys.md) | 返回远程设备的型号信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## getRssiValue
 
@@ -204,7 +210,7 @@ ArkTS-Sta:
 getRssiValue(): Promise<int>
 ```
 
-Gets the RSSI value of a remote device.
+获取远程设备的RSSI值。
 
 **Since:** 26.0.0
 
@@ -224,16 +230,16 @@ Gets the RSSI value of a remote device.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Returns promise object of RSSI value. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 返回RSSI值的promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## removePairedDevice
 
@@ -241,7 +247,7 @@ Gets the RSSI value of a remote device.
 removePairedDevice(): Promise<void>
 ```
 
-Remove a paired remote device.
+删除已配对的远端设备。
 
 **Since:** 26.0.0
 
@@ -261,16 +267,16 @@ Remove a paired remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setConnectionInterval
 
@@ -278,7 +284,7 @@ Remove a paired remote device.
 setConnectionInterval(interval: ConnectionInterval): void
 ```
 
-Sets the connection interval with a remote device.
+设置与远端设备的连接时间间隔。
 
 **Since:** 26.0.0
 
@@ -298,16 +304,16 @@ Sets the connection interval with a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interval | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The connection interval to set. |
+| interval | [ConnectionInterval](arkts-connectivity-remotedevice-connectioninterval-t-sys.md) | Yes | 要设置的连接间隔 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setDeviceAlias
 
@@ -315,7 +321,7 @@ Sets the connection interval with a remote device.
 setDeviceAlias(alias: string): void
 ```
 
-Sets the alias of a remote device.
+设置远端设备的别名。
 
 **Since:** 26.0.0
 
@@ -335,17 +341,17 @@ Sets the alias of a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alias | string | Yes | The alias of a remote device \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The maximum length is 64 and cannot be empty. |
+| alias | string | Yes | 远端设备的别名 &lt;br&gt;最大长度为64且不能为空。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
-| 36100046 | String exceeds maximum length. |
 | 36100099 | Operation failed. |
+| 36100046 | String exceeds maximum length. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setPairingConfirmation
 
@@ -353,7 +359,7 @@ Sets the alias of a remote device.
 setPairingConfirmation(accept: boolean): void
 ```
 
-Set the confirmation to a pairing request.
+设置配对请求的确认信息。
 
 **Since:** 26.0.0
 
@@ -373,16 +379,16 @@ Set the confirmation to a pairing request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accept | boolean | Yes | Set this parameter to true if the pairing request is accepted. Otherwise, set it to false. |
+| accept | boolean | Yes | 如果配对请求被接受，则设置为true。否则，设置为false |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setPairingPasscode
 
@@ -390,7 +396,7 @@ Set the confirmation to a pairing request.
 setPairingPasscode(passcode: string): Promise<void>
 ```
 
-Set the passcode during pairing if the pairing type is passcode
+如果配对类型为通行码，配对时设置通行码
 
 **Since:** 26.0.0
 
@@ -410,23 +416,23 @@ Set the passcode during pairing if the pairing type is passcode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| passcode | string | Yes | The passcode entered by the user. It must be a 6-digit number \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The length must be 6, Six digits within 10. |
+| passcode | string | Yes | 用户输入的通行码。必须是6位数字 &lt;br&gt;长度必须为6，6个10以内数字。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise object is returned. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
-| 36100045 | Passcode must be a 6-digit number. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100045 | Passcode must be a 6-digit number. |
 
 ## startCrediblePairing
 
@@ -434,7 +440,7 @@ Set the passcode during pairing if the pairing type is passcode
 startCrediblePairing(): Promise<void>
 ```
 
-Starts pairing with a credible remote NearLink device.This interface does not trigger a dialog box and does not require user authorization.
+发起与可信的远端星闪设备的配对。该接口不触发对话框，不需要用户授权。
 
 **Since:** 26.0.0
 
@@ -454,14 +460,14 @@ Starts pairing with a credible remote NearLink device.This interface does not tr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 

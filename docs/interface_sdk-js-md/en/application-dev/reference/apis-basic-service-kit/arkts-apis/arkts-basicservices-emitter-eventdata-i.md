@@ -1,6 +1,6 @@
 # EventData
 
-Describes data carried by the emitted event.
+发送事件时传递的数据。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Describes data carried by the emitted event.
 
 **System capability:** SystemCapability.Notification.Emitter
 
+## Modules to Import
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## data
 
 ```TypeScript
 data?: { [key: string]: any }
 ```
 
-Data carried by the emitted event. The value can be in any of the following types: Array, ArrayBuffer, Boolean,DataView, Date, Error, Map, Number, Object, Primitive (except symbol), RegExp, Set, String, and TypedArray. The maximum data size is 16 MB. If the data size exceeds the limit, the event fails to be emitted.
+发送事件时传递的数据，支持数据类型包括Array、ArrayBuffer、Boolean、DataView、Date、Error、Map、Number、Object、Primitive（除了symbol）、RegExp、Set、String、TypedArray，数据大小最大为16MB，超出限制时事件发送失败。
 
 **Type:** { [key: string]: any }
 

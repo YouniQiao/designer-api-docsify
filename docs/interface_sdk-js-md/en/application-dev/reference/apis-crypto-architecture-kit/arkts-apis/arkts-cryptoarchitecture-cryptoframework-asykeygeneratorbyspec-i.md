@@ -1,6 +1,7 @@
 # AsyKeyGeneratorBySpec
 
-Asymmetric key generator interface with specified key specifications, defining methods for generating asymmetric keys based on specified key specifications. Before use, you must create an **AsyKeyGeneratorBySpec** instance by using [createAsyKeyGeneratorBySpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+指定密钥规格的非对称密钥生成器接口，定义根据指定密钥规格生成非对称密钥的方法。调用前，需通过  
+[createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建一个AsyKeyGeneratorBySpec实例。
 
 **Since:** 10
 
@@ -12,16 +13,21 @@ Asymmetric key generator interface with specified key specifications, defining m
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## generateKeyPair
 
 ```TypeScript
 generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```
 
-Generates a key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result.
+获取非对称密钥生成器生成的密钥。使用callback异步回调。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_If a key parameter of the [COMMON\_PARAMS\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the  
-[KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+&lt;br&gt;当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的密钥对。
 
 **Since:** 10
 
@@ -39,17 +45,17 @@ Generates a key pair using this asymmetric key generator. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyPair&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KeyPair&gt; | Yes | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: Incorrect parameter types; |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因：参数类型不正确。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -84,7 +90,7 @@ function testGenerateKeyPair() {
   let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
   asyKeyGeneratorBySpec.generateKeyPair((err, keyPair) => {
     if (err) {
-      console.error('generateKeyPair result: fail.');
+      console.error(`generateKeyPair failed, errCode: ${err.code}, errMsg: ${err.message}`);
       return;
     }
     console.info('generateKeyPair result: success.');
@@ -98,10 +104,9 @@ function testGenerateKeyPair() {
 generateKeyPair(): Promise<KeyPair>
 ```
 
-Generates a key pair using this asymmetric key generator. This API uses a promise to return the result.
+获取该非对称密钥生成器生成的密钥。使用Promise异步回调。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_If a key parameter of the [COMMON\_PARAMS\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the  
-[KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+&lt;br&gt;当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的密钥对。
 
 **Since:** 10
 
@@ -119,17 +124,17 @@ Generates a key pair using this asymmetric key generator. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
+| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -178,13 +183,11 @@ function testGenerateKeyPair() {
 generateKeyPairSync(): KeyPair
 ```
 
-Generates a key pair using this asymmetric key generator. This API returns the result synchronously.
+同步获取该非对称密钥生成器生成的密钥。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_If a key parameter of the [COMMON\_PARAMS\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the  
-[KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+&lt;br&gt;当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的密钥对。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_**NOTE**  
-\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_It is recommended to prioritize the use of asynchronous API, \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generateKeyPair}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **Since:** 12
 
@@ -200,17 +203,17 @@ Generates a key pair using this asymmetric key generator. This API returns the r
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Asymmetric key pair. |
+| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | 非对称密钥。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -264,9 +267,10 @@ function testGenerateKeyPairSync() {
 generatePriKey(callback: AsyncCallback<PriKey>): void
 ```
 
-Generates a private key using this asymmetric key generator. This API uses an asynchronous callback to return the result.
+获取非对称密钥生成器生成的密钥。使用callback异步回调。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_If [PRIVATE\_KEY\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is used to create a key generator, the key generator generates the specified private key. If [KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is used to create a key generator, you can obtain the specified private key from the key pair generated.
+&lt;br&gt;使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型密钥参数创建密钥生成器，生成指定私钥。使用  
+[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型密钥参数创建密钥生成器，从生成的密钥对中获取指定私钥。
 
 **Since:** 10
 
@@ -284,17 +288,17 @@ Generates a private key using this asymmetric key generator. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PriKey&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the private key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PriKey&gt; | Yes | 回调函数。当生成私钥成功时，err为undefined，data为获取到的私钥；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: Mandatory parameters are left unspecified. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因：必填参数未指定。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -329,7 +333,7 @@ function testGeneratePriKey() {
   let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
   asyKeyGeneratorBySpec.generatePriKey((err, prikey) => {
     if (err) {
-      console.error('generatePriKey result: fail.');
+      console.error(`generateKeyPair failed, errCode: ${err.code}, errMsg: ${err.message}`);
       return;
     }
     console.info('generatePriKey result: success.');
@@ -343,10 +347,10 @@ function testGeneratePriKey() {
 generatePriKey(): Promise<PriKey>
 ```
 
-Generates a private key using this asymmetric key generator. This API uses a promise to return the result.
+获取该非对称密钥生成器生成的私钥。使用Promise异步回调。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_If a key parameter of the [PRIVATE\_KEY\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type is used to create the key generator, a private key can be obtained. If a key parameter of the  
-[KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ type is used to create the key generator, you can obtain the private key from the key pair generated.
+&lt;br&gt;当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用  
+[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
 
 **Since:** 10
 
@@ -364,17 +368,17 @@ Generates a private key using this asymmetric key generator. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PriKey&gt; | Promise used to return the private key. |
+| Promise&lt;PriKey&gt; | Promise对象，返回私钥。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -423,13 +427,12 @@ function testGeneratePriKey() {
 generatePriKeySync(): PriKey
 ```
 
-Generates a private key using this asymmetric key generator. This API returns the result synchronously.
+使用该非对称密钥生成器生成私钥。该接口以同步方式返回结果。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_If a key parameter of the [PRIVATE\_KEY\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type is used to create the key generator, a private key can be obtained. If a key parameter of the  
-[KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ type is used to create the key generator, you can obtain the private key from the key pair generated.
+&lt;br&gt;当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用  
+[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_**NOTE**  
-\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_It is recommended to prioritize the use of asynchronous API, \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generatePriKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **Since:** 12
 
@@ -445,17 +448,17 @@ Generates a private key using this asymmetric key generator. This API returns th
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Private key. |
+| [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | 私钥。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -507,10 +510,10 @@ function testGeneratePriKeySync() {
 generatePubKey(callback: AsyncCallback<PubKey>): void
 ```
 
-Generates a public key using this asymmetric key generator. This API uses an asynchronous callback to return the result.
+获取非对称密钥生成器生成的公钥。使用callback异步回调。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_If a key parameter of the [PUBLIC\_KEY\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type is used to create the key generator, the specified public key can be obtained. If a key parameter of the  
-[KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ type is used to create the key generator, you can obtain the specified public key from the key pair generated.
+&lt;br&gt;当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用  
+[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
 
 **Since:** 10
 
@@ -528,17 +531,17 @@ Generates a public key using this asymmetric key generator. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PubKey&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the public key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PubKey&gt; | Yes | 回调函数。当生成公钥成功时，err为undefined，data为获取到的公钥；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: Incorrect parameter types; |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因：参数类型不正确。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -573,7 +576,7 @@ function testGeneratePubKey() {
   let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
   asyKeyGeneratorBySpec.generatePubKey((err, pubKey) => {
     if (err) {
-      console.error('generatePubKey result: fail.');
+      console.error(`generatePubKey failed, errCode: ${err.code}, errMsg: ${err.message}`);
       return;
     }
     console.info('generatePubKey result: success.');
@@ -587,10 +590,10 @@ function testGeneratePubKey() {
 generatePubKey(): Promise<PubKey>
 ```
 
-Generates a public key using this asymmetric key generator. This API uses a promise to return the result.
+获取该非对称密钥生成器生成的公钥。使用Promise异步回调。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_If a key parameter of the [PUBLIC\_KEY\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type is used to create the key generator, the specified public key can be obtained. If a key parameter of the  
-[KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ type is used to create the key generator, you can obtain the specified public key from the key pair generated.
+&lt;br&gt;当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用  
+[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
 
 **Since:** 10
 
@@ -608,17 +611,17 @@ Generates a public key using this asymmetric key generator. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PubKey&gt; | Promise used to return the public key. |
+| Promise&lt;PubKey&gt; | Promise对象，返回非对称密钥的公钥PubKey。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -667,12 +670,12 @@ function testGeneratePubKey() {
 generatePubKeySync(): PubKey
 ```
 
-Generates a public key using this asymmetric key generator. This API returns the result synchronously.
+同步获取该非对称密钥生成器生成的公钥。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_If [PUBLIC\_KEY\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is used to create a key generator, the key generator generates the specified public key. If [KEY\_PAIR\_SPEC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is used to create a key generator, you can obtain the specified public key from the key pair generated.
+&lt;br&gt;当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；使用  
+[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数时，可以从生成的密钥对中获取指定的公钥。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_**NOTE**  
-\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_It is recommended to prioritize the use of asynchronous API, \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generatePubKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **Since:** 12
 
@@ -688,17 +691,17 @@ Generates a public key using this asymmetric key generator. This API returns the
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Public key. |
+| [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 公钥。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -750,7 +753,7 @@ function testGeneratePubKeySync() {
 readonly algName: string
 ```
 
-Indicates the algorithm name of the generator.
+非对称密钥生成器的算法名。
 
 **Type:** string
 

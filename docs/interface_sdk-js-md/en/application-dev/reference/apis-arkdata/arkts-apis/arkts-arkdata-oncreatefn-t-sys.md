@@ -4,7 +4,7 @@
 type OnCreateFn = (want: Want, callback: AsyncCallback<void>) => void
 ```
 
-Callback function called when a datashare extension ability is started for initialization.
+业务逻辑初始化操作的属性类型。
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ Callback function called when a datashare extension ability is started for initi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates connection information about the datashare extension ability.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | callback function, no return value.  |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates connection information about the datashare extension ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | callback function, no return value. |
 

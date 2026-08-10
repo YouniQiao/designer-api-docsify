@@ -1,6 +1,6 @@
 # LaunchController (System API)
 
-Controller for launching the atomic service.
+拉起原子化服务的控制器。
 
 **Since:** 12
 
@@ -12,13 +12,19 @@ Controller for launching the atomic service.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkUI';
+```
+
 ## launchAtomicService
 
 ```TypeScript
 public launchAtomicService: LaunchAtomicServiceCallback
 ```
 
-Function to launch atomicservice.
+拉起原子化服务。
 
 **Since:** 12
 

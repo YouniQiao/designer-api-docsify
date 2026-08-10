@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## boolValue
 
 ```TypeScript
@@ -36,7 +42,7 @@ numValue?: int
 
 数值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -72,7 +78,7 @@ valueType: OptionValueType
 
 值类型。
 
-**类型：** OptionValueType
+**类型：** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
 **起始版本：** 20
 

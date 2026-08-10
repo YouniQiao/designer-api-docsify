@@ -1,12 +1,18 @@
 # getBundleInfoForSelf
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleInfoForSelf
 
 ```TypeScript
 function getBundleInfoForSelf(bundleFlags: int): Promise<BundleInfo>
 ```
 
-Obtains the bundle information of the current application based on the given bundle flags. This API uses a promise to return the result.
+根据给定的bundleFlags获取当前应用的BundleInfo。使用Promise异步回调。
 
 **Since:** 9
 
@@ -22,21 +28,21 @@ Obtains the bundle information of the current application based on the given bun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of the bundle information to obtain. |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的BundleInfo所包含的信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information. |
+| Promise&lt;BundleInfo&gt; | Promise对象，返回当前应用的BundleInfo。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Obtain the bundle information, which contains the application information including a metadata array.
@@ -66,7 +72,7 @@ try {
 function getBundleInfoForSelf(bundleFlags: int, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information of the current application based on the given bundle flags. This API uses an asynchronous callback to return the result.
+根据给定的bundleFlags获取当前应用的BundleInfo。使用callback异步回调。
 
 **Since:** 9
 
@@ -82,16 +88,16 @@ Obtains the bundle information of the current application based on the given bun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of the bundle information to obtain. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleInfo&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the information is successfully obtained, **err** is **null** and **data** is the bundle information of the current application. Otherwise, **err** is an error object. |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的BundleInfo所包含的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的当前应用的BundleInfo；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Obtain the bundle information, which contains the ability information including permissions.

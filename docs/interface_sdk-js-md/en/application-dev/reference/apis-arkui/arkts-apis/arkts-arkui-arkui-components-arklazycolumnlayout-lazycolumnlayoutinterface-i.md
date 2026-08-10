@@ -1,6 +1,6 @@
 # LazyColumnLayoutInterface
 
-Defines the lazy column layout component.
+定义懒加载列布局组件。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines the lazy column layout component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
+```
+
 ## [[Call]]
 
 ```TypeScript
 (): LazyColumnLayoutAttribute
 ```
 
-Construct the lazy column layout attribute.
+构造懒加载列布局属性。
 
 **Since:** 26.0.0
 
@@ -34,5 +40,5 @@ Construct the lazy column layout attribute.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 

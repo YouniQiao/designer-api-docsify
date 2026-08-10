@@ -10,6 +10,12 @@ class FocusController
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## activate
 
 ```TypeScript
@@ -59,7 +65,7 @@ clear focus to the root container.
 isActive(): boolean
 ```
 
-Get whether the focus style is active.
+获取焦点样式是否处于激活态。
 
 **Since:** 23
 
@@ -105,9 +111,9 @@ request focus to the specific component.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [150001](../errorcode-focus.md#150001-component-not-focusable) | the component cannot be focused. |
-| [150002](../errorcode-focus.md#150002-ancestor-component-not-focusable) | This component has an unfocusable ancestor. |
-| [150003](../errorcode-focus.md#150003-component-does-not-exist) | the component is not on tree or does not exist. |
+| 150002 | This component has an unfocusable ancestor. |
+| 150003 | the component is not on tree or does not exist. |
+| 150001 | the component cannot be focused. |
 
 ## setAutoFocusTransfer
 
@@ -115,7 +121,7 @@ request focus to the specific component.
 setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 ```
 
-Set whether to enable autofocus transfer.
+设置是否开启自动焦点转移。
 
 **Since:** 23
 
@@ -139,7 +145,7 @@ Set whether to enable autofocus transfer.
 setKeyProcessingMode(mode: KeyProcessingMode): void
 ```
 
-Set the priority of key event processing when component cannot handle the key event..
+设置组件无法处理按键事件时的按键事件处理优先级。
 
 **Since:** 23
 
@@ -155,5 +161,5 @@ Set the priority of key event processing when component cannot handle the key ev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Key processing mode. |
+| mode | [KeyProcessingMode](arkts-arkui-keyprocessingmode-e.md) | Yes | Key processing mode. |
 

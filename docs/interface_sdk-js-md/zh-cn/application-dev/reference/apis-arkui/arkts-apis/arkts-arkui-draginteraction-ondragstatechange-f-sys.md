@@ -1,5 +1,11 @@
 # onDragStateChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dragInteraction } from 'kits/@kit.ArkUI';
+```
+
 ## onDragStateChange
 
 ```TypeScript
@@ -22,11 +28,11 @@ Listens for dragging state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DragState&gt; | 是 | Indicates the callback to receive the changed dragging state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DragState&gt; | 是 | Indicates the callback to receive the changed dragging state. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

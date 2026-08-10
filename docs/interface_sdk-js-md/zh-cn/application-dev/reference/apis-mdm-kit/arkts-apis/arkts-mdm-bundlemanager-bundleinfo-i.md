@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.MDMKit';
+```
+
 ## appIndex
 
 ```TypeScript
@@ -38,7 +44,7 @@ readonly appInfo: ApplicationInfo
 
 应用程序的配置信息。
 
-**类型：** ApplicationInfo
+**类型：** [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-applicationinfo-t.md)
 
 **起始版本：** 20
 
@@ -96,7 +102,7 @@ readonly installTime: number
 readonly minCompatibleVersionCode: number
 ```
 
-分布式场景下的应用包兼容的最低版本，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的minCompatibleVersionCode字段。
+分布式场景下的应用包兼容的最低版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的minCompatibleVersionCode字段。
 
 **类型：** number
 
@@ -116,7 +122,7 @@ readonly minCompatibleVersionCode: number
 readonly name: string
 ```
 
-应用包的名称，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的bundleName字段。
+应用包的名称，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的bundleName字段。
 
 **类型：** string
 
@@ -138,7 +144,7 @@ readonly signatureInfo: SignatureInfo
 
 应用包的签名信息。
 
-**类型：** SignatureInfo
+**类型：** [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md)
 
 **起始版本：** 20
 
@@ -156,7 +162,7 @@ readonly signatureInfo: SignatureInfo
 readonly targetVersion: number
 ```
 
-应用运行目标版本，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的targetAPIVersion字段。
+应用运行目标版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的targetAPIVersion字段。
 
 **类型：** number
 
@@ -196,7 +202,7 @@ readonly updateTime: number
 readonly vendor: string
 ```
 
-应用包的供应商，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的vendor字段。
+应用包的供应商，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的vendor字段。
 
 **类型：** string
 
@@ -216,7 +222,7 @@ readonly vendor: string
 readonly versionCode: number
 ```
 
-应用包的版本号，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的versionCode字段。
+应用包的版本号，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的versionCode字段。
 
 **类型：** number
 
@@ -236,7 +242,7 @@ readonly versionCode: number
 readonly versionName: string
 ```
 
-应用包的版本文本描述信息，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的versionName字段。
+应用包的版本文本描述信息，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的versionName字段。
 
 **类型：** string
 

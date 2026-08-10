@@ -1,5 +1,11 @@
 # @ohos.file.RecentPhotoComponent(A component which support other applications to select recent photos or videos)
 
+## Modules to Import
+
+```TypeScript
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## Summary
 
 ### Classes

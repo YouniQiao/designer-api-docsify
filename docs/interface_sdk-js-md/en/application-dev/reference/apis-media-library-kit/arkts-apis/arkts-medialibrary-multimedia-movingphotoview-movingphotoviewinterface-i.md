@@ -10,6 +10,12 @@ Defines the moving photo view interface.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## [[Call]]
 
 ```TypeScript
@@ -32,11 +38,11 @@ Set the options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| options | [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
 

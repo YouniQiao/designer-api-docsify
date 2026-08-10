@@ -1,5 +1,11 @@
 # getHotspotConfig (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getHotspotConfig
 
 ```TypeScript
@@ -28,9 +34,9 @@ Obtains the Wi-Fi hotspot configuration.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the configuration of an existing or enabled Wi-Fi hotspot. |
+| [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | Returns the configuration of an existing or enabled Wi-Fi hotspot. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

@@ -1,6 +1,6 @@
 # CustomElement
 
-“我的主页”自定义元素的定义。继承自[OperResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+“我的主页”自定义元素的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
 
 **继承/实现关系：** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## customCompilations
 
 ```TypeScript
@@ -20,7 +26,7 @@ customCompilations?: Compilation[]
 
 合集数组。
 
-**类型：** Compilation[]
+**类型：** [Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]
 
 **起始版本：** 23
 
@@ -40,7 +46,7 @@ settings?: SettingItem[]
 
 设置项数组。
 
-**类型：** SettingItem[]
+**类型：** [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]
 
 **起始版本：** 23
 
@@ -60,7 +66,7 @@ tabs?: MediaTab[]
 
 标签页信息。
 
-**类型：** MediaTab[]
+**类型：** [MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md)[]
 
 **起始版本：** 23
 
@@ -80,7 +86,7 @@ userInfo?: UserInfo
 
 用户信息。
 
-**类型：** UserInfo
+**类型：** [UserInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-userinfo-i.md)
 
 **起始版本：** 23
 

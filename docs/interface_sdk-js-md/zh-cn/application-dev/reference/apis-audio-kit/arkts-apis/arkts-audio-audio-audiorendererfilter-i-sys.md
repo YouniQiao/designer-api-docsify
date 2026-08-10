@@ -10,6 +10,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## rendererId
 
 ```TypeScript
@@ -18,7 +24,7 @@ rendererId?: int
 
 AudioRenderer id.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ AudioRenderer id.
 rendererInfo?: AudioRendererInfo
 ```
 
-**类型：** AudioRendererInfo
+**类型：** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
 **起始版本：** 9
 
@@ -56,7 +62,7 @@ uid?: int
 
 Application uid.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

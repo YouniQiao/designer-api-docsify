@@ -1,5 +1,11 @@
 # onCooperateMessage (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## onCooperateMessage
 
 ```TypeScript
@@ -24,12 +30,12 @@ Enables listening for screen hopping status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CooperateMessage&gt; | Yes | Asynchronous callback used to \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ return the screen hopping status change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CooperateMessage&gt; | Yes | Asynchronous callback used to &lt;br&gt; return the screen hopping status change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

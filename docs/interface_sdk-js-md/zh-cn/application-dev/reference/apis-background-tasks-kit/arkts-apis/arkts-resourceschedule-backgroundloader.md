@@ -6,9 +6,17 @@
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace backgroundLoader--><!--Device-unnamed-declare namespace backgroundLoader-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
+
+## 导入模块
+
+```TypeScript
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+```
 
 ## 汇总
 
@@ -18,7 +26,7 @@
 | --- | --- |
 | [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md#finishtask) | 结束后台加载任务。 |
 | [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md#gettaskinfo) | 获取后台预取任务信息。 |
-| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md#registertask) | 注册后台加载任务。使用 callee.on(ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_START)来接受系统测触发的任务 |
+| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md#registertask) | 注册后台加载任务。使用 callee.on(ON_START)来接受系统测触发的任务 |
 | [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md#unregistertask) | 取消注册后台加载任务。 |
 
 ### 接口
@@ -32,7 +40,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md) | 枚举停止代码， 用于ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_STOP函数。 |
+| [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md) | 枚举停止代码， 用于ON_STOP函数。 |
 
 ### 常量
 

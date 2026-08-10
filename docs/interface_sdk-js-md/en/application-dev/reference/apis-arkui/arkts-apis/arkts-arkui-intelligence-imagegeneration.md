@@ -6,11 +6,19 @@ Module for AI-generated images using UI Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace imageGeneration--><!--Device-unnamed-declare namespace imageGeneration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 

@@ -1,11 +1,12 @@
 # RichEditorTextStyleResult
 
-Provides the text span style information returned by the backend.
+后端返回的文本样式信息。
 
-While **fontWeight** in **RichEditorTextStyle** sets the font weight, **fontWeight** in **RichEditorTextStyleResult**  
-returns the set font weight after conversion to digits.
+在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。
 
-Conversion relationship between fontWeight in RichEditorSymbolSpanStyle and RichEditorSymbolSpanStyleResult, the conversion relationship is the same as that of fontWeight in RichEditorTextStyle and RichEditorTextStyleResult.
+而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。
+
+RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和RichEditorTextStyleResult中fontWeight的转换关系一致。
 
 **Since:** 10
 
@@ -21,9 +22,9 @@ Conversion relationship between fontWeight in RichEditorSymbolSpanStyle and Rich
 decoration: DecorationStyleResult
 ```
 
-Text decorative line.
+文本装饰线样式信息。
 
-**Type:** DecorationStyleResult
+**Type:** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
 
 **Since:** 10
 
@@ -43,9 +44,9 @@ Text decorative line.
 fontColor: ResourceColor
 ```
 
-Font color.
+文本颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
 
@@ -65,7 +66,7 @@ Font color.
 fontFamily: string
 ```
 
-Font family.
+字体列表。
 
 **Type:** string
 
@@ -87,7 +88,7 @@ Font family.
 fontFeature?: string
 ```
 
-Font feature.
+文字特性效果。
 
 **Type:** string
 
@@ -109,7 +110,7 @@ Font feature.
 fontSize: number
 ```
 
-Font size. The default unit is fp.
+字体大小，默认单位为fp。
 
 **Type:** number
 
@@ -131,9 +132,9 @@ Font size. The default unit is fp.
 fontStyle: FontStyle
 ```
 
-Font style.
+字体样式。
 
-**Type:** FontStyle
+**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **Since:** 10
 
@@ -153,7 +154,7 @@ Font style.
 fontWeight: number
 ```
 
-Font weight.
+字体粗细。
 
 **Type:** number
 
@@ -175,11 +176,11 @@ Font weight.
 halfLeading?: boolean
 ```
 
-Whether half leading is enabled.
+文本是否将行间距平分至行的顶部与底部。
 
-Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite.
+true表示将行间距平分至行的顶部与底部，false则不平分。
 
-Default value: **false
+默认值：false。
 
 **Type:** boolean
 
@@ -201,7 +202,7 @@ Default value: **false
 letterSpacing?: number
 ```
 
-Letter spacing. The default unit is fp.
+文本字符间距，默认单位为fp。
 
 **Type:** number
 
@@ -223,7 +224,7 @@ Letter spacing. The default unit is fp.
 lineHeight?: number
 ```
 
-Line height. The default unit is fp.
+文本行高，默认单位为fp。
 
 **Type:** number
 
@@ -245,9 +246,9 @@ Line height. The default unit is fp.
 strokeColor?: ResourceColor
 ```
 
-Text stroke color.
+文本描边颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -267,9 +268,11 @@ Text stroke color.
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Get the stroke join style of the text.
+文本描边拐角样式。
 
-**Type:** StrokeJoinStyle
+默认值：StrokeJoinStyle.MITER_JOIN。
+
+**Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
 
@@ -289,9 +292,9 @@ Get the stroke join style of the text.
 strokeWidth?: number
 ```
 
-Text stroke width.
+文本描边宽度。
 
-The unit is [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
 
 **Type:** number
 
@@ -313,19 +316,9 @@ The unit is [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 textBackgroundStyle?: TextBackgroundStyle
 ```
 
-Text background style.
+文本背景样式。
 
-Default value:
-
-{
-
-color: Color.Transparent,
-
-radius: 0
-
-}
-
-**Type:** TextBackgroundStyle
+**Type:** [TextBackgroundStyle](../arkts-apis/arkts-arkui-span-textbackgroundstyle-i.md)
 
 **Since:** 18
 
@@ -345,11 +338,11 @@ radius: 0
 textShadow?: Array<ShadowOptions>
 ```
 
-Text shadow.
+文字阴影效果。
 
-**NOTE**
+**说明：**
 
-Only the shadow blur radius, shadow color, and shadow offset can be queried.
+仅支持查询阴影模糊半径、颜色和偏移量。
 
 **Type:** Array&lt;ShadowOptions&gt;
 

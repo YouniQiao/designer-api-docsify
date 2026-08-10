@@ -1,6 +1,6 @@
 # AuthCallback
 
-Implements authenticator callbacks.
+认证器回调类。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Implements authenticator callbacks.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onRequestContinued
 
 ```TypeScript
 onRequestContinued?: () => void
 ```
 
-Called to continue to process the request.
+通知请求被继续处理。
 
 **Since:** 9
 
@@ -26,7 +32,7 @@ Called to continue to process the request.
 
 **System capability:** SystemCapability.Account.AppAccount
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -48,7 +54,7 @@ appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCall
 onRequestRedirected: (request: Want) => void
 ```
 
-Called to redirect a request.
+通知请求被跳转。
 
 **Since:** 9
 
@@ -62,9 +68,9 @@ Called to redirect a request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| request | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -91,7 +97,7 @@ class MyAuthenticator extends appAccount.Authenticator {
         authType: 'getSocialData'
       }
     };
-    callback.onResult(appAccount.ResultCode.SUCCESS, result);
+    callback.onResult(0, result);
   }
 }
 ```
@@ -108,7 +114,7 @@ ArkTS-Sta:
 onResult: (code: int, result?: AuthResult) => void
 ```
 
-Called to return the result of an authentication request.
+通知请求结果。
 
 **Since:** 9
 
@@ -122,10 +128,10 @@ Called to return the result of an authentication request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
+| result | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | No |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -143,7 +149,7 @@ appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCall
       authType: 'getSocialData'
     }
   };
-  callback.onResult(appAccount.ResultCode.SUCCESS, result);
+  callback.onResult(0, result);
 }).catch((err: BusinessError) => {
   console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
 });

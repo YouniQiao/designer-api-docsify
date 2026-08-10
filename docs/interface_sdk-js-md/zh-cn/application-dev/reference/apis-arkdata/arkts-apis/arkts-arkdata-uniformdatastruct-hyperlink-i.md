@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## description
 
 ```TypeScript
@@ -48,7 +54,7 @@ details?: Record<string, string>
 
 的数据对象。当需要存储额外的超链接属性信息时传入此参数，不传入时默认值为空字典对象，不提供额外属性。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -67,7 +73,7 @@ readonly uniformDataType: 'general.hyperlink'
 ```
 
 统一数据类型标识为超链接类型数据，固定为“general.hyperlink”，数据类型描述信息见  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **类型：** 'general.hyperlink'
 
@@ -87,7 +93,7 @@ readonly uniformDataType: 'general.hyperlink'
 url: string
 ```
 
-链接URL地址，支持http、https等协议，需符合标准URL格式。例如：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_或\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_。
+链接URL地址，支持http、https等协议，需符合标准URL格式。例如：`https://www.example.com`或`file:///path/to/file`。
 
 **类型：** string
 

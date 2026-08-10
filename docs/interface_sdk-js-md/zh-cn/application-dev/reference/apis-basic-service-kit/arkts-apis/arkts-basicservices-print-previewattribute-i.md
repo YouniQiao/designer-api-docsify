@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## previewRange
 
 ```TypeScript
@@ -18,7 +24,7 @@ previewRange: PrinterRange
 
 表示预览页面范围。
 
-**类型：** PrinterRange
+**类型：** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
 **起始版本：** 24
 
@@ -36,7 +42,7 @@ result?: int
 
 表示预览文件结果。默认值为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 

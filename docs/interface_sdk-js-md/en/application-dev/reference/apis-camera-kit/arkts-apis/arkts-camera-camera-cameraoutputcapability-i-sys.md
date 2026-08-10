@@ -1,6 +1,6 @@
 # CameraOutputCapability
 
-Describes the camera output capability.
+相机输出能力项。
 
 **Since:** 10
 
@@ -9,6 +9,12 @@ Describes the camera output capability.
 <!--Device-camera-interface CameraOutputCapability--><!--Device-camera-interface CameraOutputCapability-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## depthProfiles
 

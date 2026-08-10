@@ -1,6 +1,6 @@
 # GainmapChannel
 
-Describes the data content of a single channel of the gain map. For details, see ISO 21496-1.
+Gainmap图单个通道的数据内容，参考ISO 21496-1。
 
 **Since:** 12
 
@@ -10,6 +10,12 @@ Describes the data content of a single channel of the gain map. For details, see
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## alternateOffset
 
 ```TypeScript
@@ -18,7 +24,7 @@ alternateOffset: double
 
 The per-component alternate offset.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -36,7 +42,7 @@ baseOffset: double
 
 The per-component baseline offset.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -54,7 +60,7 @@ gainmapMax: double
 
 The per-component max gain map values.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -72,7 +78,7 @@ gainmapMin: double
 
 The per-component min gain map values.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -90,7 +96,7 @@ gamma: double
 
 The per-component gamma values.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

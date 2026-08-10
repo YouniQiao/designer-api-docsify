@@ -1,9 +1,8 @@
 # AuthTrustLevel
 
-Enumerates the trust levels of the authentication result. This enum defines four trust levels of the authentication result, which are used to describe the security strength of the authentication result. A higher trust level indicates a stronger liveness detection capability and more accurate user identity recognition of the authentication solution, and is applicable to service scenarios that require higher security. The application should select a proper authentication trust level based on the security requirements of service scenarios.
+表示认证结果的信任等级枚举。该枚举定义了四个认证可信等级，用于描述认证结果的安全强度。认证可信等级越高，表示认证方案的活体检测能力越强、用户身份识别越精确，适用于更高安全要求的业务场景。应用应根据业务场景的安全需求选择合适的认证可信等级。
 
-For typical use cases, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+典型场景及举例可参考[生物认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。
 
 **Since:** 8
 
@@ -19,7 +18,7 @@ For typical use cases, see
 ATL1 = 10000
 ```
 
-Authentication trust level 1. It can identify individual users and provides basic liveness detection capabilities(such as simple action detection). The security strength is low, and the authentication result may be risky. It is applicable to low-security scenarios such as service risk control, common personal data query, and access to non-sensitive information. It is recommended that this level be used together with other security measures.
+认证结果的信任等级级别1，表示该认证方案能够识别用户个体，具备基本的活体检测能力（如简单的动作检测）。安全强度较低，认证结果可能存在一定风险。适用于业务风控、一般个人数据查询、非敏感信息访问等低安全场景。建议配合其他安全措施使用。
 
 **Since:** 8
 
@@ -37,7 +36,7 @@ Authentication trust level 1. It can identify individual users and provides basi
 ATL2 = 20000
 ```
 
-Authentication trust level 2. It can accurately identify individual users and provides standard liveness detection capabilities (such as blinking and nodding detection). It features medium security strength and can effectively defend against simple forgery attacks. It is applicable to medium-security scenarios such as maintaining the screen-unlocked state of a device, application login, and confirmation of general sensitive operations.
+认证结果的信任等级级别2，表示该认证方案能够精确识别用户个体，具备标准的活体检测能力（如眨眼、点头等动作检测）。安全强度中等，可有效防御简单的伪造攻击。适用于维持设备解锁状态、应用登录、一般敏感操作确认等中等安全场景。
 
 **Since:** 8
 
@@ -55,7 +54,7 @@ Authentication trust level 2. It can accurately identify individual users and pr
 ATL3 = 30000
 ```
 
-Authentication trust level 3. It can accurately identify individual users and provides strong liveness detection capabilities (such as 3D face recognition and multi-frame analysis). It features high security strength and can effectively defend against common forgery attacks such as photos and videos. It is applicable to high-security scenarios such as device unlocking, confirmation of important sensitive operations, and enterprise-level application login. 3D face recognition devices support this level.
+认证结果的信任等级级别3，表示该认证方案能够精确识别用户个体，具备较强的活体检测能力（如3D人脸识别、多帧分析等）。安全强度较高，可有效防御照片、视频等常见伪造攻击。适用于设备解锁、重要敏感操作确认、企业级应用登录等较高安全场景。3D人脸识别设备可支持此等级。
 
 **Since:** 8
 
@@ -73,7 +72,7 @@ Authentication trust level 3. It can accurately identify individual users and pr
 ATL4 = 40000
 ```
 
-Authentication trust level 4. It can accurately identify individual users and provides strong liveness detection capabilities (such as in-depth analysis and multi-dimensional verification). It features the highest security strength and can effectively defend against various advanced forgery attacks. It is applicable to high-security scenarios, such as small-amount payment, financial transactions, and access to highly sensitive data. Only a few high-security authentication solutions support this level.
+认证结果的信任等级级别4，表示该认证方案能够高精度识别用户个体，具备很强的活体检测能力（如深度分析、多维度验证等）。安全强度最高，可有效防御各类高级伪造攻击。适用于小额支付、金融交易、高敏感数据访问等高安全场景。仅少数高安全认证方案可支持此等级。
 
 **Since:** 8
 

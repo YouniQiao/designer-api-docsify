@@ -12,6 +12,12 @@ Provides security event management and security model management.Based on event 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+```
+
 ## Summary
 
 <!--Del-->

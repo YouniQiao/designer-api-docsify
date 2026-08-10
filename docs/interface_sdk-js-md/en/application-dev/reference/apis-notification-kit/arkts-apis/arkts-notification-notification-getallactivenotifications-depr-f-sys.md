@@ -6,7 +6,7 @@
 function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void
 ```
 
-Obtains all active notifications. This API uses an asynchronous callback to return the result.
+获取当前未删除的所有通知（Callback形式）。
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)&gt;&gt; | Yes | 获取活动通知回调函数。 |
 
 
 ## getAllActiveNotifications
@@ -37,7 +37,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 ```
 
-Obtains all active notifications. This API uses a promise to return the result.
+获取当前未删除的所有通知（Promise形式）。
 
 **Since:** 7
 
@@ -59,5 +59,5 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)&gt;&gt; | 以Promise形式返回获取活动通知。 |
 

@@ -10,6 +10,12 @@ transfer模块提供子系统类或接口的转换能力。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { transfer } from 'kits/@kit.ArkTS';
+```
+
 ## 汇总
 
 ### 函数

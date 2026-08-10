@@ -10,6 +10,12 @@ Provides the ImageProcessor type, including the processing function.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
+## Modules to Import
+
+```TypeScript
+import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+```
+
 ## enhanceDetail
 
 ArkTS-Dyn:
@@ -22,7 +28,7 @@ ArkTS-Sta:
 enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_according to width and height. Different levels of scaling methods are provided to\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_balance performance and image quality. This method uses a promise to return the result.
+The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to width and height. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
 
 **Since:** 18
 
@@ -39,9 +45,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The zoom value of width. |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The zoom value of height. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The quality level. |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of width. |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of height. |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
@@ -53,11 +59,11 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetail can not work correctly due to \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_limited device capabilities. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_all of the following error conditions: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1 - Invalid input or output image buffer - The image buffer width(height) \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_is too large or colorspace is incorrect. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2 - Invalid parameter - The parameter does not contain valid information, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_such as detail enhancer level is incorrect. |
+| 801 | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
+| 29200009 | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| 29200007 | Out of memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image, videoProcessingEngine } from '@kit.ImageKit';
@@ -83,7 +89,7 @@ ArkTS-Sta:
 enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_according to the zoom ratio. Different levels of scaling methods are provided to\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_balance performance and image quality. This method uses a promise to return the result.
+The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
 
 **Since:** 18
 
@@ -100,8 +106,8 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| scale | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The zoom ratio. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The quality level. |
+| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The zoom ratio. |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
@@ -113,11 +119,11 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetail can not work correctly due to \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_limited device capabilities. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_all of the following error conditions: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1 - Invalid input or output image buffer - The image buffer width(height) \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_is too large or colorspace is incorrect. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2 - Invalid parameter - The parameter does not contain valid information, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_such as detail enhancer level is incorrect. |
+| 801 | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
+| 29200009 | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| 29200007 | Out of memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image, videoProcessingEngine } from '@kit.ImageKit';
@@ -143,7 +149,7 @@ ArkTS-Sta:
 enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_according to width and height. Different levels of scaling methods are provided to\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_balance performance and image quality.
+The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to width and height. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality.
 
 **Since:** 18
 
@@ -160,26 +166,26 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The zoom value of width. |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The zoom value of height. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The quality level. |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of width. |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of height. |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Returns the destination pixelmap instance . \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_if the operation is successful; Otherwise, return undefined. |
+| image.PixelMap | Returns the destination pixelmap instance . &lt;br&gt;if the operation is successful; Otherwise, return undefined. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetailSync can not work correctly due \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to limited device capabilities. |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_all of the following error conditions: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1 - Invalid input or output image buffer - The image buffer width(height) \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_is too large or colorspace is incorrect. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2 - Invalid parameter - The parameter does not contain valid information, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_such as detail enhancer level is incorrect. |
+| 801 | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
+| 29200009 | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| 29200004 | Failed to process image buffer. For example, the processing times out. |
+| 29200007 | Out of memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image, videoProcessingEngine } from '@kit.ImageKit';
@@ -205,7 +211,7 @@ ArkTS-Sta:
 enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_according to the zoom ratio. Different levels of scaling methods are provided to\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_balance performance and image quality.
+The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality.
 
 **Since:** 18
 
@@ -222,25 +228,25 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| scale | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The zoom ratio. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The quality level. |
+| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The zoom ratio. |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Returns the destination pixelmap instance \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_if the operation is successful; Otherwise, return undefined. |
+| image.PixelMap | Returns the destination pixelmap instance &lt;br&gt;if the operation is successful; Otherwise, return undefined. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetailSync can not work correctly due \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to limited device capabilities. |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_all of the following error conditions: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1 - Invalid input or output image buffer - The image buffer width(height) \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_is too large or colorspace is incorrect. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2 - Invalid parameter - The parameter does not contain valid information, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_such as detail enhancer level is incorrect. |
+| 801 | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
+| 29200009 | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| 29200004 | Failed to process image buffer. For example, the processing times out. |
+| 29200007 | Out of memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image, videoProcessingEngine } from '@kit.ImageKit';

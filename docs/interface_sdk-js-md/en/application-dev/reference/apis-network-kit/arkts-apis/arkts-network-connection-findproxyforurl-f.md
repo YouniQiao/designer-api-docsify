@@ -1,5 +1,11 @@
 # findProxyForUrl
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## findProxyForUrl
 
 ```TypeScript
@@ -28,7 +34,7 @@ Find pac proxy info for the url.
 | --- | --- |
 | string | Returns the proxy infomation. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

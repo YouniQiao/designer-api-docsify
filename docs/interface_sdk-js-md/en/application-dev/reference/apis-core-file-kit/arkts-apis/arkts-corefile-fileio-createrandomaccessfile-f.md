@@ -1,5 +1,11 @@
 # createRandomAccessFile
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## createRandomAccessFile
 
 ```TypeScript
@@ -7,7 +13,7 @@ function createRandomAccessFile(file: string | File, mode?: int,
   options?: RandomAccessFileOptions): Promise<RandomAccessFile>
 ```
 
-Creates a **RandomAccessFile** instance based on a file path or file object. This API uses a promise to return the result.
+基于文件路径或文件对象创建RandomAccessFile对象。使用Promise异步回调。
 
 **Since:** 23
 
@@ -21,47 +27,47 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| File | Yes | Application sandbox path of the file or an opened file object. |
-| mode | int | No | [OpenMode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY(0o0)**: Create the file in read-only mode. This is the default value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.WRITE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY(0o1)**: Create the file in write-only mode. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_WRITE(0o2)**: Create the file in read/write mode. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.CREATE(0o100)**: If the file does not exist, create it. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.TRUNC(0o1000)**: If the **RandomAccessFile** object already exists and is created in write mode, truncate the file length to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.APPEND(0o2000)**: Create the file in append mode. New data will be added to the end of the **RandomAccessFile** object. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_11\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.SYNC(0o4010000)**: Create a **RandomAccessFile** instance in synchronous I/O mode. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This parameter takes effect only for file stream objects obtained by [getreadstream]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and [getwritestream]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| file | string \| File | Yes | 文件的应用沙箱路径或已打开的File对象。 |
+| mode | int | No | 创建文件RandomAccessFile对象的[OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)，仅当传入文件沙箱路径时生效，必须指定如下选项中的一个， 默认以只读方式创建：&lt;br/&gt;- OpenMode.READ_ONLY(0o0)：只读创建。&lt;br/&gt;- OpenMode.WRITE_ONLY(0o1)：只写创建。&lt;br/&gt; - OpenMode.READ_WRITE(0o2)：读写创建。&lt;br/&gt;给定如下功能选项，以按位或的方式追加，默认不给定任何额外选项：&lt;br/&gt; - RandomAccessFile对象存在且对应文件具有写权限，则将其长度裁剪为零。&lt;br/&gt; - OpenMode.APPEND(0o2000)：以追加方式打开，后续写将追加到RandomAccessFile对象末尾。&lt;br/&gt; - OpenMode.NONBLOCK(0o4000)：如果path指向FIFO、块特殊文件或字符特殊文件，则本次打开及后续 IO 进行非阻塞操作。&lt;br/&gt; - OpenMode.DIR(0o200000)：如果path不指向目录，则出错。不允许附加写权限。&lt;br/&gt; - OpenMode.NOFOLLOW(0o400000)：如果path指向符号链接，则出错。&lt;br/&gt;- OpenMode.SYNC(0o4010000)：以同步IO的方式创建RandomAccessFile对象。 |
+| options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | No | 支持如下选项：&lt;br/&gt; - start，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。&lt;br/&gt; - end，number类型，表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。&lt;br/&gt; 此选项仅对[getreadstream](arkts-corefile-fileio-randomaccessfile-i.md#getreadstream)及 [getwritestream](arkts-corefile-fileio-randomaccessfile-i.md#getwritestream)获取的文件流对象生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RandomAccessFile&gt; | Promise used to return the **RandomAccessFile** object. |
+| Promise&lt;RandomAccessFile&gt; | Promise对象，返回RandomAccessFile对象的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
+| 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900044 | Network is unreachable |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
 | 13900004 | Interrupted system call |
 | 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 
 
 ## createRandomAccessFile
@@ -70,7 +76,7 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 function createRandomAccessFile(file: string | File, callback: AsyncCallback<RandomAccessFile>): void
 ```
 
-Creates a **RandomAccessFile** instance in read-only mode based on a file path or file object. This API uses an asynchronous callback to return the result.
+基于文件路径或文件对象，以只读方式创建RandomAccessFile对象。使用callback异步回调。
 
 **Since:** 23
 
@@ -84,39 +90,39 @@ Creates a **RandomAccessFile** instance in read-only mode based on a file path o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| File | Yes | Application sandbox path of the file or an opened file object. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RandomAccessFile&gt; | Yes | Callback used to return the **RandomAccessFile** object. |
+| file | string \| File | Yes | 文件的应用沙箱路径或已打开的File对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RandomAccessFile&gt; | Yes | 回调函数，返回RandomAccessFile对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
+| 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
 | 13900004 | Interrupted system call |
 | 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 
 
 ## createRandomAccessFile
@@ -125,7 +131,7 @@ Creates a **RandomAccessFile** instance in read-only mode based on a file path o
 function createRandomAccessFile(file: string | File, mode: int, callback: AsyncCallback<RandomAccessFile>): void
 ```
 
-Creates a **RandomAccessFile** instance based on a file path or file object. This API uses an asynchronous callback to return the result.
+基于文件路径或文件对象创建RandomAccessFile对象。使用callback异步回调。
 
 **Since:** 23
 
@@ -139,38 +145,38 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| File | Yes | Application sandbox path of the file or an opened file object. |
-| mode | int | Yes | [OpenMode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY(0o0)**: Create the file in read-only mode. This is the default value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.WRITE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY(0o1)**: Create the file in write-only mode. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_WRITE(0o2)**: Create the file in read/write mode. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.CREATE(0o100)**: If the file does not exist, create it. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.TRUNC(0o1000)**: If the **RandomAccessFile** object already exists and is created in write mode, truncate the file length to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.APPEND(0o2000)**: Create the file in append mode. New data will be added to the end of the **RandomAccessFile** object. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_11\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **OpenMode.SYNC(0o4010000)**: Create a **RandomAccessFile** instance in synchronous I/O mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RandomAccessFile&gt; | Yes | Callback used to return the **RandomAccessFile** object. |
+| file | string \| File | Yes | 文件的应用沙箱路径或已打开的File对象。 |
+| mode | int | Yes | 创建文件RandomAccessFile对象的[OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)，仅当传入文件沙箱路径时生效，必须指定如下选项中的一个， 默认以只读方式创建：&lt;br/&gt;- OpenMode.READ_ONLY(0o0)：只读创建。&lt;br/&gt;- OpenMode.WRITE_ONLY(0o1)：只写创建。&lt;br/&gt; - OpenMode.READ_WRITE(0o2)：读写创建。&lt;br/&gt;给定如下功能选项，以按位或的方式追加，默认不给定任何额外选项：&lt;br/&gt; - RandomAccessFile对象存在且对应文件具有写权限，则将其长度裁剪为零。&lt;br/&gt; - OpenMode.APPEND(0o2000)：以追加方式打开，后续写将追加到RandomAccessFile对象末尾。&lt;br/&gt; - OpenMode.NONBLOCK(0o4000)：如果path指向FIFO、块特殊文件或字符特殊文件，则本次打开及后续 IO 进行非阻塞操作。&lt;br/&gt; - OpenMode.DIR(0o200000)：如果path不指向目录，则出错。不允许附加写权限。&lt;br/&gt; - OpenMode.NOFOLLOW(0o400000)：如果path指向符号链接，则出错。&lt;br/&gt;- OpenMode.SYNC(0o4010000)：以同步IO的方式创建RandomAccessFile对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RandomAccessFile&gt; | Yes | 回调函数，返回RandomAccessFile对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
+| 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
 | 13900004 | Interrupted system call |
 | 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
 

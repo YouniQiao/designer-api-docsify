@@ -1,6 +1,6 @@
 # DialogButton
 
-Button configuration for fixed-style dialog.
+固定样式对话框的按钮配置。
 
 **Since:** 26.1.0
 
@@ -10,13 +10,19 @@ Button configuration for fixed-style dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
 action: VoidCallback
 ```
 
-Callback executed when the button is clicked.
+点击按钮时执行的回调。
 
 **Since:** 26.1.0
 
@@ -36,9 +42,9 @@ Callback executed when the button is clicked.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the button.
+按钮背景色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.1.0
 
@@ -58,7 +64,7 @@ Background color of the button.
 defaultFocus?: boolean
 ```
 
-Whether the button is the default focus.
+按钮是否为默认焦点。
 
 **Type:** boolean
 
@@ -82,7 +88,7 @@ Whether the button is the default focus.
 enabled?: boolean
 ```
 
-Whether to respond when the button is clicked.
+点击按钮时是否响应。
 
 **Type:** boolean
 
@@ -106,9 +112,9 @@ Whether to respond when the button is clicked.
 fontColor?: ResourceColor
 ```
 
-Text color of the button.
+按钮文字颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.1.0
 
@@ -128,7 +134,7 @@ Text color of the button.
 primary?: boolean
 ```
 
-Define whether the button responds to Enter/Space key by default.
+定义按钮是否默认响应回车/空格键。
 
 **Type:** boolean
 
@@ -150,9 +156,9 @@ Define whether the button responds to Enter/Space key by default.
 style?: DialogButtonStyle
 ```
 
-Style of the button.
+按钮的样式。
 
-**Type:** DialogButtonStyle
+**Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
 **Default:** DialogButtonStyle.DEFAULT
 
@@ -174,9 +180,9 @@ Style of the button.
 value: ResourceStr
 ```
 
-Text content of the button.
+按钮的文本内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
 

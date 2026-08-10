@@ -1,6 +1,6 @@
 # LocalFilePresentStatus (System API)
 
-Specifies a result object that contains the application bundle name and the status information about whether there are files that have not been uploaded to the cloud in the cloud storage space.
+检测结果对象，包含应用包名及其在云盘存储空间内是否存在未上云文件的状态信息。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Specifies a result object that contains the application bundle name and the stat
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name.
+应用包名。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Bundle name.
 isLocalFilePresent: boolean
 ```
 
-Whether there are local files that have not been synchronized to the cloud in the cloud storage space of the application. The value **true** indicates that such file exists, and the value **false** indicates the opposite.
+该应用在云盘存储空间内是否存在尚未同步至云端的本地文件。true 表示存在， false 表示不存在。
 
 **Type:** boolean
 

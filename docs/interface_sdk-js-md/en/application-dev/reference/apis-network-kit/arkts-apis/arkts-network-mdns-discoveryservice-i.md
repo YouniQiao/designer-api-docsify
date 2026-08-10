@@ -10,6 +10,12 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
+## Modules to Import
+
+```TypeScript
+import { mdns } from 'kits/@kit.NetworkKit';
+```
+
 ## off('discoveryStart')
 
 ```TypeScript
@@ -33,9 +39,9 @@ Cancels listening for discoveryStart events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -84,7 +90,7 @@ Cancels listening for discoveryStop events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
 
 ## off('serviceFound')
 
@@ -109,9 +115,9 @@ Cancels listening for serviceFound events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LocalServiceInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocalServiceInfo&gt; | No | the callback used to return the result. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -163,9 +169,9 @@ Cancels listening for serviceLost events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LocalServiceInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocalServiceInfo&gt; | No | the callback used to return the result. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -214,9 +220,9 @@ Enables listening for discoveryStart events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DiscoveryEventInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryEventInfo&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -261,9 +267,9 @@ Enables listening for discoveryStop events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DiscoveryEventInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryEventInfo&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -308,9 +314,9 @@ Enables listening for serviceFound events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LocalServiceInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocalServiceInfo&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -358,9 +364,9 @@ Enables listening for serviceLost events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LocalServiceInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocalServiceInfo&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -400,7 +406,7 @@ Starts searching for mDNS services on the LAN.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
-**Example**
+## Examples
 
 Stage model:
 
@@ -434,7 +440,7 @@ Stops searching for mDNS services on the LAN.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
-**Example**
+## Examples
 
 Stage model:
 

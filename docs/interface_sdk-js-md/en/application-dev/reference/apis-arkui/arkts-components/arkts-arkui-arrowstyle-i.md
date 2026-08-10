@@ -1,6 +1,6 @@
 # ArrowStyle
 
-Describes the left and right arrow attributes.
+左右箭头属性。
 
 **Since:** 10
 
@@ -16,11 +16,11 @@ Describes the left and right arrow attributes.
 arrowColor?: ResourceColor
 ```
 
-Color of the arrow.
+设置箭头颜色。
 
-Default value: **'#182431'
+默认值：'#182431'
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** #182431
 
@@ -42,23 +42,23 @@ Default value: **'#182431'
 arrowSize?: Length
 ```
 
-Size of the arrow.
+设置箭头大小。
 
-On both sides of the navigation indicator:
+在导航点两侧显示时：
 
-Default value: **18vp**.
+默认值：18vp
 
-On both sides of the component:
+在组件两侧显示时：
 
-Default value: **24vp**.
+默认值：24vp
 
-**NOTE**
+**说明：**
 
-If **showBackground** is set to **true**, the value of **arrowSize** is 3/4 of the value of **backgroundSize**.
+showBackground为true时，arrowSize为backgroundSize的3/4。
 
-Percentage values are not supported.
+不支持设置百分比。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** When isSidebarMiddle is false, the default value is 18vp, Otherwise, the default value is 24vp
 
@@ -80,17 +80,17 @@ Percentage values are not supported.
 backgroundColor?: ResourceColor
 ```
 
-Color of the background.
+设置底板颜色。
 
-On both sides of the navigation indicator:
+在导航点两侧显示：
 
-Default value: **'#00000000'**.
+默认值：'#00000000'
 
-On both sides of the component:
+在组件两侧显示：
 
-Default value: **'#19182431'**.
+默认值：'#19182431'
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1 [since 10 - 10] @default When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1 [since 11]
 
@@ -112,19 +112,19 @@ Default value: **'#19182431'**.
 backgroundSize?: Length
 ```
 
-Size of the background.
+设置底板大小。
 
-On both sides of the navigation indicator:
+在导航点两侧显示：
 
-Default value: **24vp**.
+默认值：24vp
 
-On both sides of the component:
+在组件两侧显示：
 
-Default value: **32vp**.
+默认值：32vp
 
-Percentage values are not supported.
+不支持设置百分比。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** When isSidebarMiddle is false, the default value is 24vp, Otherwise,the default value is 32vp
 
@@ -146,9 +146,11 @@ Percentage values are not supported.
 isSidebarMiddle?: boolean
 ```
 
-Whether the arrow is centered on both sides of the **Swiper** component. The value **true** means that the arrow is centered on both sides of the **Swiper** component, and **false** means that the arrow is show on either side of the navigation indicator.
+设置箭头显示位置。为true时箭头居中显示在Swiper组件两侧，为false时显示在导航点指示器两侧。
 
-Default value: **false**.
+默认值：false
+
+默认显示在导航点指示器两侧。
 
 **Type:** boolean
 
@@ -172,10 +174,9 @@ Default value: **false**.
 showBackground?: boolean
 ```
 
-Whether to show the background for the arrow. The value **true** means to show the background for the arrow, and  
-**false** means the opposite.
+设置箭头底板是否显示。为true时箭头底板显示，为false时箭头底板不显示。
 
-Default value: **false**.
+默认值：false
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # RichEditorSelection
 
-Provides information about the selected content.
+选中内容信息。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Provides information about the selected content.
 selection: [number, number]
 ```
 
-Range of the selected.
+选中范围。
 
 **Type:** [number, number]
 
@@ -38,7 +38,7 @@ Range of the selected.
 spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 ```
 
-Span information.
+span信息。
 
 **Type:** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
 

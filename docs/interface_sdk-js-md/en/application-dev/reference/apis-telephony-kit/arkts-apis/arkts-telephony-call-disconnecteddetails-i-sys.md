@@ -12,6 +12,12 @@ Indicates the cause of a call disconnection.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## message
 
 ```TypeScript
@@ -40,7 +46,7 @@ reason: DisconnectedReason
 
 Indicates the reason for ending the call.
 
-**Type:** DisconnectedReason
+**Type:** [DisconnectedReason](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-disconnectedreason-e-sys.md)
 
 **Since:** 9
 

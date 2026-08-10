@@ -16,7 +16,7 @@ Control margin status of ExceptionPromptV2.
 DEFAULT_MARGIN = 0
 ```
 
-Default margin of MarginTypeV2, Margin 1: references ohos\_id\_card\_margin\_start,margin 2: references ohos\_id\_card\_margin\_end.
+Default margin of MarginTypeV2, Margin 1: references ohos_id_card_margin_start,margin 2: references ohos_id_card_margin_end.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Default margin of MarginTypeV2, Margin 1: references ohos\_id\_card\_margin\_sta
 FIT_MARGIN = 1
 ```
 
-Margins can be adapted of MarginTypeV2, wider than the default margin.Margin 1: references ohos\_id\_max\_padding\_start,margin 2: references ohos\_id\_max\_padding\_end.
+Margins can be adapted of MarginTypeV2, wider than the default margin.Margin 1: references ohos_id_max_padding_start,margin 2: references ohos_id_max_padding_end.
 
 **Since:** 26.0.0
 

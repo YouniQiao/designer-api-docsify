@@ -1,6 +1,6 @@
 # CommonTransition
 
-Defines a common transition animation for page transitions.
+页面转场通用动效。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Defines a common transition animation for page transitions.
 constructor()
 ```
 
-A constructor used to create a common transition animation.
+转场通用动效的构造函数。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ A constructor used to create a common transition animation.
 opacity(value: number): T
 ```
 
-Sets the starting opacity value for entrance or the ending opacity value for exit.
+设置入场的起点透明度值或者退场的终点透明度值。
 
 **Since:** 7
 
@@ -50,13 +50,13 @@ Sets the starting opacity value for entrance or the ending opacity value for exi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Starting opacity value for entrance or the ending opacity value for exit.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, 1] |
+| value | number | Yes | 设置入场的起点透明度值或者退场的终点透明度值。&lt;br/&gt;取值范围：[0, 1] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## scale
 
@@ -64,7 +64,7 @@ Sets the starting opacity value for entrance or the ending opacity value for exi
 scale(value: ScaleOptions): T
 ```
 
-Sets the scaling effect for page transitions.
+设置页面转场时的缩放效果。
 
 **Since:** 7
 
@@ -80,13 +80,13 @@ Sets the scaling effect for page transitions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scaling effect for page transitions, specifying the start value for entrance and the end value for exit.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **x**: scale factor along the x-axis.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **y**: scale factor along the y-axis.&lt; br&gt;- **z**: scale factor along the z-axis.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **centerX** and **centerY**: scaling center. The default values are both **"50%"**, meaning the center of the page is used as the scaling center by default.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the center point is (0, 0), it refers to the upper left corner of the component.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | 设置页面转场时的缩放效果，为入场时起点和退场时终点的值。&lt;br/&gt;- x：横向放大倍数（或缩小比例）。&lt;br/&gt;- y：纵向放大倍数（或缩小比例）。&lt;br/&gt;- z： 竖向放大倍数（或缩小比例）。&lt;br/&gt;- centerX、centerY缩放中心点。centerX和centerY默认值是"50%"，即默认以页面的中心点为旋转中心点。&lt;br/&gt;- 中心点为(0, 0)代表页面的左上 角。<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## slide
 
@@ -94,7 +94,7 @@ Sets the scaling effect for page transitions.
 slide(value: SlideEffect): T
 ```
 
-Sets the slide-in and slide-out effects for page transitions.
+设置页面转场时的滑入滑出效果。
 
 **Since:** 7
 
@@ -110,13 +110,13 @@ Sets the slide-in and slide-out effects for page transitions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Slide-in and slide-out effects for page transitions. |
+| value | [SlideEffect](arkts-arkui-slideeffect-e.md) | Yes | 页面转场时的滑入滑出效果。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## translate
 
@@ -124,7 +124,7 @@ Sets the slide-in and slide-out effects for page transitions.
 translate(value: TranslateOptions): T
 ```
 
-Sets the translation effect for page transitions.
+设置页面转场时的平移效果。
 
 **Since:** 7
 
@@ -140,11 +140,11 @@ Sets the translation effect for page transitions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Translation effect for page transitions, specifying the start value for entrance and the end value for exit. When this parameter is set together with **slide**, the latter takes effect by default.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **x**: translation distance along the x-axis.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **y**: translation distance along the y-axis.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **z**: translation distance along the y-axis.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| value | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes | 设置页面转场时的平移效果，为入场时起点和退场时终点的值，和slide同时设置时默认生效slide。&lt;br/&gt;- x：横向的平移距离。&lt;br/&gt;- y：纵向的平 移距离。&lt;br/&gt;- z：竖向的平移距离。<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 

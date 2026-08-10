@@ -1,34 +1,27 @@
 # Refresh
 
-The **Refresh** component is a container that provides the pull-to-refresh feature.
+Refresh是提供下拉刷新交互的容器组件，适用于列表数据刷新、页面内容更新等需要用户触发数据更新的场景。它支持自定义刷新区域显示内容和文本、设置下拉偏移量和跟手系数、控制最大下拉距离等，可灵活适配不同应用的下拉刷新需求，提供一致且流
+畅的刷新体验。
 
-> **NOTE**
+> **说明：**
 >
-> - This component is supported since API version 8. Updates will be marked with a superscript to indicate their
-> earliest API version.
+> - 该组件从API version 12开始支持与垂直滚动的[Swiper]{@link ./swiper}和
+> [Web](docroot://reference/apis-arkui/arkui-js/js-components-basic-web.md)的联动。当[Swiper]{@link ./swiper}设置
+> [loop]{@link SwiperAttribute#loop}属性为true时，Refresh无法和[Swiper]{@link ./swiper}产生联动。
 >
-> - Since API version 12, this component provides linkage with a vertically scrolling [Swiper]{@link swiper} and
-> [Web](docroot://reference/apis-arkui/arkui-js/js-components-basic-web.md) components. When the
-> [loop]{@link SwiperAttribute#loop} attribute of [Swiper]{@link swiper} is set to **true**, the **Refresh**
-> component cannot provide linkage with [Swiper]{@link swiper}.
+> - Refresh和内容大小小于组件自身的[List]{@link ./list}组件嵌套使用并且中间还有其他组件时，手势可能会被中间组件响应，导致Refresh未产生下拉刷新效果。此时可以将
+> [alwaysEnabled]{@link EdgeEffectOptions}参数设为true，[List]{@link ./list}会响应手势并通过嵌套滚动带动Refresh组件产生下拉刷新效果。具体可以参考
+> [示例9（不满一屏场景实现下拉刷新）](docroot://reference/apis-arkui/arkui-ts/ts-container-refresh.md#示例9不满一屏场景实现下拉刷新)。
 >
-> - When the **Refresh** component is nested with a [List]{@link list} component whose content size is smaller than
-> the component itself, and there are other components in between, gestures may be intercepted by the intermediate
-> components, preventing the pull-to-refresh effect. In such cases, set the [alwaysEnabled]{@link EdgeEffectOptions}
-> parameter to **true** to allow [List]{@link list} to respond to gestures and drive the **Refresh** component
-> through nested scrolling for the pull-to-refresh effect. For details, see
-> [Example 9: Implementing Pull-to-Refresh in the Non-Full-Screen Scenario](docroot://reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-9-implementing-pull-to-refresh-in-the-non-full-screen-scenario).
+> - 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强]{@link ./common}进行处理。
 >
-> - The component has been bound with gestures to implement functions such as follow-up scrolling. If you need to add
-> custom gestures, refer to [Gesture Blocking Enhancement]{@link common}.
->
-> - Pull-to-refresh cannot be triggered by mouse click-and-drag operations.
+> - 组件无法通过鼠标按下拖动操作进行下拉刷新。
 
-## Child Components
+## 子组件
 
-This component supports only one child component.
+支持单个子组件。
 
-Since API version 11, this component's child component moves down with the pull-down gesture.
+从API version 11开始，Refresh子组件会跟随手势下拉而下移。
 
 ## Refresh
 
@@ -36,7 +29,7 @@ Since API version 11, this component's child component moves down with the pull-
 Refresh(value: RefreshOptions)
 ```
 
-Creates a **Refresh** container.
+创建Refresh容器。
 
 **Since:** 8
 
@@ -52,7 +45,9 @@ Creates a **Refresh** container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters of the **Refresh** component.  |
+| value | [RefreshOptions](arkts-arkui-refreshoptions-i.md) | Yes | 刷新组件参数。 |
 
 ## Summary
 
+- [RefreshOptions](arkts-arkui-refresh-refreshoptions-i.md)
+- [RefreshStatus](arkts-arkui-refresh-refreshstatus-e.md)

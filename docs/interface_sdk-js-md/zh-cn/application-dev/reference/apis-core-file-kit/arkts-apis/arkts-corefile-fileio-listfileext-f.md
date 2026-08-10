@@ -1,5 +1,11 @@
 # listFileExt
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## listFileExt
 
 ```TypeScript
@@ -28,7 +34,7 @@ function listFileExt(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | 否 | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
 
 **返回值：**
 
@@ -40,8 +46,8 @@ function listFileExt(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900002 | No such file or directory |
-| 13900011 | Out of memory |
-| 13900018 | Not a directory |
 | 13900020 | Invalid argument |
+| 13900002 | No such file or directory |
+| 13900018 | Not a directory |
+| 13900011 | Out of memory |
 

@@ -1,6 +1,6 @@
 # PickInfo
 
-Describes the screenshot options.
+截取图像的信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the screenshot options.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## pickRect
 
 ```TypeScript
 pickRect: Rect
 ```
 
-Region of the screen to capture.
+表示截取图像的区域。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 12
 
@@ -36,7 +42,7 @@ Region of the screen to capture.
 pixelMap: image.PixelMap
 ```
 
-PixelMap object of the captured image.
+表示截取的图像PixelMap对象。
 
 **Type:** image.PixelMap
 

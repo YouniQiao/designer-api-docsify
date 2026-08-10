@@ -10,6 +10,12 @@ systemScreenLock
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
+## Modules to Import
+
+```TypeScript
+import { screenLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Functions

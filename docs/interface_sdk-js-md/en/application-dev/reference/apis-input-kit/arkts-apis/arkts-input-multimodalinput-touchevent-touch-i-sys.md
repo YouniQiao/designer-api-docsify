@@ -1,6 +1,6 @@
 # Touch
 
-Defines the touch point information.
+触屏点信息。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the touch point information.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+```
+
 ## blobId
 
 ```TypeScript
 blobId?: int
 ```
 
-Touch point attribute ID. Currently, only single-finger touch is supported. The value **1** indicates left-hand touch, and the value **2** indicates right-hand touch.
+触摸点属性标识。当前仅支持单指触摸：左手触摸为1，右手触摸为2。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -38,9 +44,9 @@ Touch point attribute ID. Currently, only single-finger touch is supported. The 
 fixedDisplayX?: int
 ```
 
-Corrected value of the screenX coordinate in one-hand mode, in px.
+适配单手模式下screenX坐标的修正值，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 
@@ -58,9 +64,9 @@ Corrected value of the screenX coordinate in one-hand mode, in px.
 fixedDisplayY?: int
 ```
 
-Corrected value of the screenY coordinate in one-hand mode, in px.
+适配单手模式下screenY坐标的修正值，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 

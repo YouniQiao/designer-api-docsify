@@ -1,12 +1,18 @@
 # subscribeThermalLevel
 
+## Modules to Import
+
+```TypeScript
+import { thermal } from 'kits/@kit.BasicServicesKit';
+```
+
 ## subscribeThermalLevel
 
 ```TypeScript
 function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 ```
 
-Subscribes to the thermal level changes. This API uses an asynchronous callback to return the result.
+订阅热档位变化时的回调提醒。使用callback异步回调。
 
 **Since:** 8
 
@@ -24,9 +30,9 @@ Subscribes to the thermal level changes. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ThermalLevel&gt; | Yes | Callback used to return thermal level. This parameter is of the function type. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;ThermalLevel&gt; | Yes | 回调函数，返回变化后的热档位；该参数是一个函数类型。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 thermal.subscribeThermalLevel((err: Error, level: thermal.ThermalLevel) => {

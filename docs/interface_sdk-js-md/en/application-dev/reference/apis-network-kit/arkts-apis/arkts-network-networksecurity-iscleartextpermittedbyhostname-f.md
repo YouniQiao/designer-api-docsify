@@ -1,5 +1,11 @@
 # isCleartextPermittedByHostName
 
+## Modules to Import
+
+```TypeScript
+import { networkSecurity } from 'kits/@kit.NetworkKit';
+```
+
 ## isCleartextPermittedByHostName
 
 ```TypeScript
@@ -34,9 +40,9 @@ Checks whether the Cleartext traffic for a specified hostname is permitted.To in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { networkSecurity } from '@kit.NetworkKit';

@@ -1,0 +1,77 @@
+# getDefaultSmsSlotId
+
+## 导入模块
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
+## getDefaultSmsSlotId
+
+```TypeScript
+function getDefaultSmsSlotId(callback: AsyncCallback<int>): void
+```
+
+Obtains the default SIM card for sending SMS messages.
+
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
+<!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void--><!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void-End-->
+
+**系统能力：** SystemCapability.Telephony.SmsMms
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Indicates the callback for getting the default SIM card for sending SMS messages. Returns {@code 0} if the default SIM card for sending SMS messages is in card slot 1; Returns {@code 1} if the default SIM card for sending SMS messages is in card slot 2. |
+
+## 示例
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sms.getDefaultSmsSlotId((err: BusinessError, data: number) => {
+    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+
+## getDefaultSmsSlotId
+
+```TypeScript
+function getDefaultSmsSlotId(): Promise<int>
+```
+
+Obtains the default SIM card for sending SMS messages.
+
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
+<!--Device-sms-function getDefaultSmsSlotId(): Promise<int>--><!--Device-sms-function getDefaultSmsSlotId(): Promise<int>-End-->
+
+**系统能力：** SystemCapability.Telephony.SmsMms
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns { |
+
+## 示例
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sms.getDefaultSmsSlotId().then((data: number) => {
+    console.info(`getDefaultSmsSlotId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+

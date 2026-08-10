@@ -1,12 +1,18 @@
 # hasIrEmitter
 
+## Modules to Import
+
+```TypeScript
+import { infraredEmitter } from 'kits/@kit.InputKit';
+```
+
 ## hasIrEmitter
 
 ```TypeScript
 function hasIrEmitter(): Promise<boolean>
 ```
 
-Checks whether the device has an infrared transmitter. This API uses a promise to return the result.
+查询设备是否配备红外发射器。使用Promise异步回调。
 
 **Since:** 23
 
@@ -22,16 +28,16 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the device has an infrared emitter, and **false** is returned if the device does not have an infrared emitter. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示设备具有红外发射器；返回false表示设备不具有红外发射器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 3800001 | Input service exception. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { infraredEmitter } from '@kit.InputKit';
@@ -44,10 +50,11 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
+            // Query Whether There Is an Infrared Emitter
             infraredEmitter.hasIrEmitter().then((result: boolean) => {
-              console.info(`hasIrEmitter: ${JSON.stringify(result)}`);
+              console.info(`Succeeded in querying infrared emitter: ${JSON.stringify(result)}.`);
             }).catch((error: BusinessError)=> {
-              console.error(`hasIrEmitter failed: ${JSON.stringify(error)}`);})
+              console.error(`Failed to query infrared emitter, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);})
         })
     }
   }

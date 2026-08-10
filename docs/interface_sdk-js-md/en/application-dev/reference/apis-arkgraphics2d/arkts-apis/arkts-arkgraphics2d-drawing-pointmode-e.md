@@ -1,6 +1,6 @@
 # PointMode
 
-Enumerates the modes for drawing multiple points in an array.
+绘制点数组的方式的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the modes for drawing multiple points in an array.
 POINTS = 0
 ```
 
-Draws each point separately.
+分别绘制每个点。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Draws each point separately.
 LINES = 1
 ```
 
-Draws every two points as a line segment.
+将每对点绘制为线段。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Draws every two points as a line segment.
 POLYGON = 2
 ```
 
-Draws an array of points as an open polygon.
+将点阵列绘制为开放多边形。
 
 **Since:** 12
 

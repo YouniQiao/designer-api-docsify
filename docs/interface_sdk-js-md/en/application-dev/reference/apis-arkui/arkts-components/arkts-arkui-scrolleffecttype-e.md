@@ -1,6 +1,6 @@
 # ScrollEffectType
 
-Enumerates the scroll effect types.
+滑动模糊效果类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates the scroll effect types.
 COMMON_BLUR = 0
 ```
 
-Common blur style. It applies uniform blur to the background.The blurred background appear/disappear with transparent gradient.
+普通模糊样式，对标题栏背景应用统一模糊效果，模糊背景伴随透明渐变出现或消失。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Common blur style. It applies uniform blur to the background.The blurred backgro
 GRADUAL_BLUR = 1
 ```
 
-Gradual blur style. It applies uniform blur to the title background with clear boundaries.The title bar content changes color/state before and after scrolling.During scrolling, it changes linearly following the gesture.
+渐变模糊样式，对标题栏背景应用统一模糊效果，具有清晰边界。标题栏内容在滑动前后改变颜色或状态，滑动过程中跟随手势线性变化。
 
 **Since:** 26.0.0
 

@@ -1,6 +1,8 @@
 # DynamicLayoutInterface
 
-Defines the dynamic layout container.
+动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。
+
+> **说明：**
 
 **Since:** 24
 
@@ -10,13 +12,19 @@ Defines the dynamic layout container.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
+```
+
 ## [[Call]]
 
 ```TypeScript
 (algorithm: LayoutAlgorithm): DynamicLayoutAttribute
 ```
 
-Defines the dynamic layout container.
+动态布局容器。
 
 **Since:** 24
 
@@ -36,11 +44,11 @@ Defines the dynamic layout container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Layout algorithm of the dynamic layout component. If an invalid value is used, the child components are stacked and arranged according to \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes | 指定动态布局组件的布局算法。取非法值时，按照[堆叠布局算法](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md) 布局子组件，子组件堆叠排列。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |
 

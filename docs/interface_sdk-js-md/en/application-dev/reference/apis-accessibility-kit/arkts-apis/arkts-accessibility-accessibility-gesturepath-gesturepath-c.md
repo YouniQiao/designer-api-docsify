@@ -1,6 +1,8 @@
 # GesturePath
 
-The **GesturePath** module provides APIs for creating gesture path information required for an accessibility application to inject gestures.
+GesturePath表示手势路径信息。
+
+本模块用于创建辅助功能注入手势所需的手势路径信息。
 
 **Since:** 9
 
@@ -10,13 +12,19 @@ The **GesturePath** module provides APIs for creating gesture path information r
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
+## Modules to Import
+
+```TypeScript
+import { GesturePath } from 'kits/@kit.AccessibilityKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(durationTime: long)
 ```
 
-Defines a constructor used to create a **GesturePath** instance.
+构造函数。
 
 **Since:** 9
 
@@ -32,14 +40,17 @@ Defines a constructor used to create a **GesturePath** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| durationTime | long | Yes | Total gesture duration, in milliseconds. |
+| durationTime | long | Yes | 手势总耗时，单位为毫秒。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
 
 let gesturePath = new GesturePath(20);
+let startPoint = new GesturePoint(100, 100);
+let endPoint = new GesturePoint(200, 200);
+gesturePath.points = [startPoint, endPoint];
 ```
 
 ## durationTime
@@ -48,7 +59,7 @@ let gesturePath = new GesturePath(20);
 durationTime: long
 ```
 
-Total gesture duration, in milliseconds.
+手势总耗时，单位为毫秒。
 
 **Type:** long
 
@@ -66,9 +77,9 @@ Total gesture duration, in milliseconds.
 points: Array<GesturePoint>
 ```
 
-Gesture touch point.
+手势触摸点。
 
-**Type:** Array&lt;GesturePoint&gt;
+**Type:** Array&lt;[GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)&gt;
 
 **Since:** 9
 

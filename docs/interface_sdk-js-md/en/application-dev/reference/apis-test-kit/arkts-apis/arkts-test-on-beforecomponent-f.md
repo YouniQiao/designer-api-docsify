@@ -1,12 +1,18 @@
 # beforeComponent
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## beforeComponent
 
 ```TypeScript
 export function beforeComponent(com: Component): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_object,used to locate Component relatively.
+要求目标组件位于由给定{@link Component}指定的另一个组件之前对象，用于相对于组件定位。
 
 **Since:** 26.0.0
 
@@ -20,17 +26,17 @@ Requires that the target Component which is before another Component that specif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| com | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | describes the Component which the target one is in front of. |
+| com | [Component](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-component-i.md) | Yes | 描述了目标组件在前面的组件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | this { |
+| [On](arkts-test-uitest-on-c.md) | this { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000007 | Parameter verification failed. |
 

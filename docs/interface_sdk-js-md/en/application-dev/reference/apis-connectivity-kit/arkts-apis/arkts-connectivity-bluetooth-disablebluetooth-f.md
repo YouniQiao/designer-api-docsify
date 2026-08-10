@@ -1,5 +1,11 @@
 # disableBluetooth
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disableBluetooth
 
 ```TypeScript
@@ -28,7 +34,7 @@ Disables Bluetooth on a device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let disable : boolean = bluetooth.disableBluetooth();

@@ -1,6 +1,6 @@
 # @ohos.screenshot
 
-Provides the screen capture capability.
+本模块提供屏幕截图的能力。
 
 **Since:** 12
 
@@ -10,42 +10,48 @@ Provides the screen capture capability.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [capture](arkts-arkui-screenshot-capture-f.md#capture) | Takes a screenshot of the entire screen. This API uses a promise to return the result.  This API allows you to take screenshots of different screens by setting various **displayId** values, but only full  -screen captures are supported. The [pick]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API allows you to take screenshots of a specified  region. |
-| [pick](arkts-arkui-screenshot-pick-f.md#pick) | Obtains this screenshot. Currently, only the screenshot of the display whose ID is **0** can be obtained. (If a screenshot of the extended screen is needed, you can use the [capture]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API.) This API uses a promise to return the result. |
+| [capture](arkts-arkui-screenshot-capture-f.md#capture) | 获取屏幕全屏截图，使用Promise异步回调。  此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick](arkts-arkui-screenshot-pick-f.md#pick)接口可实现区域截屏。 |
+| [pick](arkts-arkui-screenshot-pick-f.md#pick) | 获取屏幕截图，当前仅支持获取displayId为0的屏幕截图（如果需要对扩展屏截图，可以通过[capture](arkts-arkui-screenshot-capture-f.md#capture)接口实现），使用Promise异步回调。 |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save) | Obtains a screenshot. This API uses an asynchronous callback to return the result. |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save-1) | Obtains a screenshot. This API uses an asynchronous callback to return the result. |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save-2) | Obtains a screenshot. This API uses a promise to return the result. |
-| [saveHdrPicture](arkts-arkui-screenshot-savehdrpicture-f-sys.md#savehdrpicture) | Obtains a screenshot. This API uses a promise to return the result. SDR stands for Standard Dynamic Range, and HDR stands for High Dynamic Range.  - If the screen contains HDR resources (even if they are partially obscured), this API returns an array with both  SDR and HDR PixelMaps, regardless of whether HDR is enabled.  - If there are no HDR resources, it returns an array with a single SDR PixelMap. Unlike the  [save]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API, which returns a single SDR PixelMap, this API always returns an array. Additionally, this API does not support cropping,stretching, or rotating features available in the  [save]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API. |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save) | 获取屏幕截图，使用callback异步回调。 |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save-1) | 获取屏幕截图，使用callback异步回调。 |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save-2) | 获取屏幕截图，使用Promise异步回调。 |
+| [saveHdrPicture](arkts-arkui-screenshot-savehdrpicture-f-sys.md#savehdrpicture) | 获取屏幕截图，使用Promise异步回调。SDR为标准动态范围图，HDR为高动态范围图。  - 当物理屏存在HDR资源（包括HDR资源被遮挡）时，无论HDR是否开启，该接口返回一个包含SDR和HDR的PixelMap数组。  - 当物理屏不存在HDR资源时，与[save](arkts-arkui-screenshot-save-f-sys.md#save)  接口返回一个SDR的PixelMap不同，该接口返回包含一个SDR的PixelMap数组。同时该接口不具备  [save](arkts-arkui-screenshot-save-f-sys.md#save)接口的裁剪、拉伸、旋转功能。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | Describes the capture options. |
-| [PickInfo](arkts-arkui-screenshot-pickinfo-i.md) | Describes the screenshot options. |
-| [Rect](arkts-arkui-screenshot-rect-i.md) | Describes the region of the screen to capture. |
+| [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | 设置截取图像的信息。 |
+| [PickInfo](arkts-arkui-screenshot-pickinfo-i.md) | 截取图像的信息。 |
+| [Rect](arkts-arkui-screenshot-rect-i.md) | 表示截取图像的区域。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [HdrScreenshotOptions](arkts-arkui-screenshot-hdrscreenshotoptions-i-sys.md) | Describes the HDR screenshot options. |
-| [ScreenshotOptions](arkts-arkui-screenshot-screenshotoptions-i-sys.md) | Describes the screenshot options. |
-| [Size](arkts-arkui-screenshot-size-i-sys.md) | Describes the size of the screen region to capture. |
+| [HdrScreenshotOptions](arkts-arkui-screenshot-hdrscreenshotoptions-i-sys.md) | 设置截取HDR图像的信息。 |
+| [ScreenshotOptions](arkts-arkui-screenshot-screenshotoptions-i-sys.md) | 设置截取图像的信息。 |
+| [Size](arkts-arkui-screenshot-size-i-sys.md) | 表示截取图像的大小。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -53,6 +59,6 @@ Provides the screen capture capability.
 
 | Name | Description |
 | --- | --- |
-| [DisplayIntentType](arkts-arkui-screenshot-displayintenttype-e-sys.md) | Enumerates the screenshot display intent type. |
+| [DisplayIntentType](arkts-arkui-screenshot-displayintenttype-e-sys.md) | 枚举截图显示意图类型。 |
 <!--DelEnd-->
 

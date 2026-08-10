@@ -1,7 +1,6 @@
 # SaveButton properties/events
 
-Universal attributes are not supported. This component supports the attributes listed below, as well as  
-[universal attributes of security components]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Only the following events are supported.
+不支持通用属性，除了继承[安全控件通用属性](./security_component)，还支持以下属性。不支持通用事件，仅支持以下事件。
 
 **Inheritance/Implementation:** SaveButtonAttribute extends [SecurityComponentMethod<SaveButtonAttribute>](SecurityComponentMethod<SaveButtonAttribute>)
 
@@ -19,7 +18,7 @@ Universal attributes are not supported. This component supports the attributes l
 iconBorderRadius(radius: Dimension | BorderRadiuses)
 ```
 
-Sets the corner radius of the **SaveButton** component.
+设置保存控件图标的边框圆角半径。
 
 **Since:** 20
 
@@ -39,7 +38,7 @@ Sets the corner radius of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| BorderRadiuses | Yes | Corner radius of the **SaveButton** component. You can set the radius for each of the four corners individually. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values are greater than or equal to 0. Negative values are automatically clamped to **0**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the app does not have the **ohos.permission.CUSTOMIZE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUTTON** permission, the corner radius setting of the icon does not take effect. |
+| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses | Yes | 保存控件图标的圆角半径，支持设置四个圆角。 &lt;br&gt;默认值：四个圆角均为0vp。支持像素单位（vp、px等），取值范围≥0。传入负值时自动修正为0。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则图标的圆角半径 设置不生效。 |
 
 ## iconSize
 
@@ -47,7 +46,7 @@ Sets the corner radius of the **SaveButton** component.
 iconSize(size: Dimension | SizeOptions)
 ```
 
-Sets the icon size of the **SaveButton** component.
+设置保存控件的图标尺寸。
 
 **Since:** 20
 
@@ -65,7 +64,7 @@ Sets the icon size of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default width and height are 16 vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Percentage strings are not supported. If a percentage string is passed as a Dimension parameter, the icon will be displayed with the default size. If either the **width** or **height** property of a SizeOptions type parameter is set to a percentage string, the icon will be displayed with a size of 0 vp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For the system icons provided by the **SaveButton** component: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Dimension type: Width and height are both set to the specified value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- SizeOptions type: If width and height are different, the smaller value is used for both. If only one value is specified, it applies to both dimensions. This rule ensures square display and consistent visual appearance of system icons. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For custom icons: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Dimension type: Width and height are both set to the specified value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value is set, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspect ratios. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displays in [ImageFit.Cover]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ mode. |
+| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| SizeOptions | Yes | 图标尺寸，支持像素单位（vp、px等）。 &lt;br&gt;不支持设置百分比字符串。若设置Dimension类型入参的百分比字符串，则图标尺寸显示为默认值； 若设置SizeOptions类型入参的width或height属性为百分比字符串，则图标尺寸显示为0vp。&lt;br/&gt;对于保存控件提供的系统图标：&lt;br/&gt;- 使用Dimension类型入参时，宽 、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，若宽、高设定值不一致，则宽、高相等取两者较小值；若仅设定其中一个值，则取该值作为宽、高值。系统提供图标采用此规则是为保证图标的正方形显示和视觉一致 性。&lt;br/&gt;对于自定义图标：&lt;br/&gt;- 使用Dimension类型入参时，宽、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，建议同时设定宽和高，此时按照指定宽、高生效；若仅设定其中一个值，则宽 高均显示为该设定值。自定义图标允许灵活设定尺寸以适应不同图片比例。&lt;br/&gt;- 当设定的宽高与自定义图标的宽高比例不一致时，图片按[ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md)的方式填充显示区域。 |
 
 ## onClick
 
@@ -73,8 +72,7 @@ Sets the icon size of the **SaveButton** component.
 onClick(event: SaveButtonCallback)
 ```
 
-Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_constructor. Authorization fails if the user declines authorization or closes the dialog box.
+点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见[SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1)构造函数说明）；点击拒绝或关闭弹窗则授权失败。
 
 **Since:** 10
 
@@ -92,7 +90,7 @@ Triggered when the **SaveButton** component is clicked. When a user clicks the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback object for the click event, which carries click details, authorization result and error information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Starting from API version 18, **SaveButtonCallback** is adopted uniformly, which additionally provides error information.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| event | [SaveButtonCallback](../arkts-apis/arkts-arkui-savebuttoncallback-t.md) | Yes | 点击事件的回调对象，包含点击事件信息、授权结果和错误信息。 &lt;br&gt;从APIversion 18开始，统一使用SaveButtonCallback，可额外获取error信息。<br>**Since:** 18 |
 
 ## setIcon
 
@@ -100,7 +98,7 @@ Triggered when the **SaveButton** component is clicked. When a user clicks the s
 setIcon(icon: Resource)
 ```
 
-Sets the icon of the **SaveButton** component.
+设置保存控件的图标。
 
 **Since:** 20
 
@@ -120,7 +118,7 @@ Sets the icon of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Custom icon resource information. Only data sources of the Resource type are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see [Image]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If the resource is not an image resource or the format is not supported, the icon is displayed as blank. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the app does not have the **ohos.permission.CUSTOMIZE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
+| icon | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | 自定义图标资源信息，仅支持Resource类型的数据源。 &lt;br&gt;可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)。当资源为非图片资源或不支持的格式时，图标显示为空白。&lt;br/&gt;从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。&lt;br/&gt;若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
 
 ## setText
 
@@ -128,7 +126,7 @@ Sets the icon of the **SaveButton** component.
 setText(text: string | Resource)
 ```
 
-Sets the text of the **SaveButton** component.
+设置保存控件的文本。
 
 **Since:** 20
 
@@ -148,7 +146,7 @@ Sets the text of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string \| Resource | Yes | Custom text, used to replace the default system text for business-specific scenarios. When a string is passed, the text content is directly used. When a Resource is passed, multi- language adaptation is implemented via resource management. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the app does not have the **ohos.permission.CUSTOMIZE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUTTON** permission, this setting does not take effect and the save button uses the default style. |
+| text | string \| Resource | Yes | 自定义文本信息。适用于需要使用与业务强相关的文本替代系统预置描述的场景。传入字符串时直接使用文本内容；传入Resource时，可配合资源管理实现多语言文本。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效，保存控件保持默认样式。 |
 
 ## stateEffect
 
@@ -156,7 +154,7 @@ Sets the text of the **SaveButton** component.
 stateEffect(enabled: boolean)
 ```
 
-Sets the press effect of the **SaveButton** component.
+设置保存控件的按压效果。
 
 **Since:** 20
 
@@ -176,7 +174,7 @@ Sets the press effect of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the press effect. **true** to enable, **false** otherwise. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the app does not have the **ohos.permission.CUSTOMIZE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUTTON** permission, the press effect setting does not take effect. |
+| enabled | boolean | Yes | true表示保存控件按压时显示按压效果，false表示保存控件按压时不显示按压效果。 &lt;br&gt;默认值：true。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，按压效果设置不生效。 |
 
 ## symbolFontWeight
 
@@ -184,11 +182,10 @@ Sets the press effect of the **SaveButton** component.
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-Sets the font weight of the symbol icon for the save button.
+设置保存控件Symbol图标粗细。
 
-- Before calling this method, you need to call [setIcon]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
-- If no symbol icon is configured, the font weight setting will not apply.
+- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
+- 若未设置Symbol图标，该方法设置的粗细不会生效。
 
 **Since:** 26.0.0
 
@@ -208,7 +205,7 @@ style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of [FontWeight]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ (for example, **"normal"**). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **FontWeight.Normal** (the corresponding value is **400**) \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the app does not have the **ohos.permission.CUSTOMIZE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUTTON** permission, the setting does not take effect. |
+| fontWeight | number \| FontWeight \| string \| Resource | Yes | 设置保存控件Symbol图标粗细。 &lt;br&gt;支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。&lt;br/&gt;支持string类型：可传入number类型的数字字符串（如"400"），或[FontWeight](../arkts-apis/arkts-arkui-enums-fontweight-e.md/arkts-arkui-enums-fontweight-e.md)的枚举值的小写字符串（如"normal"）。&lt;br/&gt;默认值：FontWeight.Normal（对应数值400）。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_ BUTTON权限，则该设置不生效。 |
 
 ## symbolIconColor
 
@@ -216,13 +213,11 @@ style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-Sets the color of the symbol icon for the save button.
+设置保存控件Symbol图标颜色。
 
-- Before calling this method, you need to call [setIcon]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.xxx')**).  
-- If no symbol icon is set, the color set via this method does not take effect.  
-- It is recommended that you use this API together with  
-[symbolRenderingStrategy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to achieve different rendering effects.
+- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
+- 若未设置Symbol图标，该方法设置的颜色不会生效。  
+- 建议与[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy)配合使用，以实现不同的渲染效果。
 
 **Since:** 26.0.0
 
@@ -242,7 +237,7 @@ style icon resource (i.e., **\$r('sys.symbol.xxx')**).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Array&lt;ResourceColor&gt; | Yes | Symbol icon color of the save button. This parameter applies to scenarios where the symbol icon needs to be consistent with the service visual style. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: varies depending on [symbolRenderingStrategy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the app does not have the **ohos.permission.CUSTOMIZE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUTTON** permission, the setting does not take effect. |
+| color | Array&lt;ResourceColor&gt; | Yes | 设置保存控件Symbol图标颜色。适用于Symbol图标需要与业务视觉风格保持一致的场景。 &lt;br&gt;默认值：随[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy)不同而变化。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
 
 ## symbolRenderingStrategy
 
@@ -250,13 +245,11 @@ style icon resource (i.e., **\$r('sys.symbol.xxx')**).
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-Sets the rendering strategy for the symbol icon of the save button.
+设置保存控件Symbol图标渲染策略。
 
-- Before calling this method, you need to call [setIcon]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
-- The configured rendering strategy will not apply if no symbol icon is set.  
-- When this parameter is used together with [symbolIconColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, the  
-rendering strategy determines how the color array is applied.
+- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
+- 若未设置Symbol图标，该方法设置的渲染策略不会生效。  
+- 与[symbolIconColor](SaveButtonAttribute#symbolIconColor)配合使用时，渲染策略会影响颜色数组的作用方式。
 
 **Since:** 26.0.0
 
@@ -276,7 +269,7 @@ rendering strategy determines how the color array is applied.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rendering strategy for the symbol icon of the save button, which defines how the symbol icon is rendered. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: SymbolRenderingStrategy.SINGLE. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the app does not have the **ohos.permission.CUSTOMIZE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUTTON** permission, the setting does not take effect. |
+| strategy | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | 保存控件Symbol图标渲染策略，用于控制Symbol图标的渲染方式。 &lt;br&gt;默认值：SymbolRenderingStrategy.SINGLE。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
 
 ## userCancelEvent
 
@@ -284,7 +277,7 @@ rendering strategy determines how the color array is applied.
 userCancelEvent(enabled: boolean)
 ```
 
-Sets the user authorization cancellation event for the **SaveButton** component. This API can be used to distinguish between user cancellation and authorization failures for differentiated service logic, such as logging user behaviors or prompting users to retry.
+设置接收保存控件的用户取消授权事件。适用于需要区分用户主动取消授权和授权失败的场景，以便进行不同的业务处理，例如记录用户行为、提供重试提示等。
 
 **Since:** 21
 
@@ -302,5 +295,5 @@ Sets the user authorization cancellation event for the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to receive the user authorization cancellation event of the save button. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **true** indicates that when a user manually cancels authorization in the authorization dialog box, the callback returns the result **CANCELED\_\_\_ESCAPED\_UNDERSCORE\_\_\_BY\_\_\_ESCAPED\_UNDERSCORE\_\_\_USER**. The value **false** indicates that user cancellation is not distinguished from other scenarios. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_You are advised to enable this parameter if your service needs to distinguish between user cancellation and system errors/authorization failures. |
+| enabled | boolean | Yes | 表示是否接收保存控件的用户取消授权事件。 &lt;br&gt;true表示当用户在授权弹窗中主动取消时，会通过回调将结果区分为CANCELED_BY_USER；false表示不单独区分此类场景。&lt;br/&gt;当业务需要区分“用户取消”和“系统错误/授 权失败”时，建议开启该参数。 |
 

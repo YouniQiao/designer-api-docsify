@@ -12,6 +12,12 @@ FA模型的使用信息属性集合。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## appGroup
 
 ```TypeScript
@@ -20,7 +26,7 @@ appGroup?: int
 
 应用程序的使用优先级组。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ eventId?: int
 
 应用事件类型。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -80,7 +86,7 @@ eventOccurredTime?: long
 
 应用事件发生的时间戳，单位：ms。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

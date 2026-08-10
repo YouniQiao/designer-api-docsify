@@ -1,5 +1,11 @@
 # removeDevice
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## removeDevice
 
 ```TypeScript
@@ -22,19 +28,19 @@ Remove a Wi-Fi DeviceConfig with networkId.After a Wi-Fi DeviceConfig is removed
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicate the ID of the Wi-Fi DeviceConfig. The value of networkId cannot be less than 0. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicate the ID of the Wi-Fi DeviceConfig. The value of networkId cannot be less than 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
-| [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
+| 401 | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 2501000 | Operation failed. |
+| 2501001 | Wi-Fi STA disabled. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

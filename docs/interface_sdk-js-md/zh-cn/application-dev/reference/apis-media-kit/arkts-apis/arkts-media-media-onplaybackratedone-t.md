@@ -20,5 +20,5 @@ type OnPlaybackRateDone = (rate: double) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 播放速率。  |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 播放速率。 |
 

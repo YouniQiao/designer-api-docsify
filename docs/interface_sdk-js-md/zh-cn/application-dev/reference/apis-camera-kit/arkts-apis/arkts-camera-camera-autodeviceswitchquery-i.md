@@ -2,8 +2,8 @@
 
 自动切换镜头查询类，用于查询设备是否支持自动切换镜头。
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_仅支持折叠屏设备使用，如需使能该能力请参考  
-[enableAutoDeviceSwitch]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+[自动切换镜头能力](../../../media/camera/camera-auto-switch.md)仅支持折叠屏设备使用，如需使能该能力请参考  
+[enableAutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#enableautodeviceswitch)。
 
 **起始版本：** 13
 
@@ -12,6 +12,12 @@
 <!--Device-camera-interface AutoDeviceSwitchQuery--><!--Device-camera-interface AutoDeviceSwitchQuery-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## isAutoDeviceSwitchSupported
 
@@ -36,4 +42,10 @@ isAutoDeviceSwitchSupported(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否支持自动切换镜头，true为支持，false为不支持。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 7400103 | Session not config, only throw in session usage.<br>**适用版本：** 13 - 17 |
 

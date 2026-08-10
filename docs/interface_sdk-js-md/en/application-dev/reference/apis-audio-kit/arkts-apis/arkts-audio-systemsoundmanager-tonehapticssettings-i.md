@@ -1,6 +1,6 @@
 # ToneHapticsSettings
 
-Haptics settings in tone scenario.
+系统铃音的振动设置。
 
 **Since:** 14
 
@@ -10,13 +10,19 @@ Haptics settings in tone scenario.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
+## Modules to Import
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
+
 ## hapticsUri
 
 ```TypeScript
 hapticsUri?: string
 ```
 
-Haptics uri. Users can set/get this parameter when \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. In other cases, this uri is useless and should be ignored.
+振动URI。
 
 **Type:** string
 
@@ -34,9 +40,9 @@ Haptics uri. Users can set/get this parameter when \_\_\_JSDOC\_LINK\_DESC\_USD\
 mode: ToneHapticsMode
 ```
 
-Haptics mode.
+铃音振动模式。
 
-**Type:** ToneHapticsMode
+**Type:** [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e.md)
 
 **Since:** 14
 

@@ -1,12 +1,18 @@
 # transcode
 
+## Modules to Import
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
+
 ## transcode
 
 ```TypeScript
 function transcode(source: Buffer | Uint8Array, fromEnc: string, toEnc: string): Buffer
 ```
 
-Transcodes a **Buffer** or **Uint8Array** object from one encoding format to another.
+将Buffer或Uint8Array对象从一种字符编码重新编码为另一种。适用于需要在不同编码格式之间转换已有Buffer数据的场景。
 
 **Since:** 9
 
@@ -22,17 +28,17 @@ Transcodes a **Buffer** or **Uint8Array** object from one encoding format to ano
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | Instance object. |
-| fromEnc | string | Yes | Current encoding format. For details about the supported formats, see [BufferEncoding]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| toEnc | string | Yes | Target encoding format. For details about the supported formats, see [BufferEncoding]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| source | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 待转码的Buffer或Uint8Array实例，提供需要重新编码的源数据。 |
+| fromEnc | string | Yes | 当前编码。 支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
+| toEnc | string | Yes | 目标编码。 支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | New **Buffer** object in the target encoding format. |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 将当前编码转换成目标编码，并返回一个新的Buffer对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

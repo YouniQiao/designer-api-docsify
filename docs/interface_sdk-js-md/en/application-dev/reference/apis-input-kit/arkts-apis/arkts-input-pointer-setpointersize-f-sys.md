@@ -1,12 +1,18 @@
 # setPointerSize (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## setPointerSize
 
 ```TypeScript
 function setPointerSize(size: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the mouse pointer size. This API uses an asynchronous callback to return the result.
+设置鼠标光标大小，使用callback异步回调。
 
 **Since:** 10
 
@@ -22,17 +28,17 @@ Sets the mouse pointer size. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Pointer size. The value ranges from **1** to **7**. The default value is **1**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标光标大小，范围为[1-7]，默认为1。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -46,15 +52,16 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Set the mouse pointer size.
             pointer.setPointerSize(1, (error: BusinessError) => {
               if (error) {
-                console.error(`setPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 return;
               }
-              console.info(`setPointerSize success`);
+              console.info(`Succeeded in setting pointer size.`);
             });
           } catch (error) {
-            console.error(`setPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -69,7 +76,7 @@ struct Index {
 function setPointerSize(size: int): Promise<void>
 ```
 
-Sets the mouse pointer size. This API uses a promise to return the result.
+设置鼠标光标大小，使用Promise异步回调。
 
 **Since:** 10
 
@@ -85,22 +92,22 @@ Sets the mouse pointer size. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Pointer size. The value ranges from **1** to **7**. The default value is **1**. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标光标大小，范围为[1-7]，默认为1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -114,13 +121,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Set the mouse pointer size.
             pointer.setPointerSize(3).then(() => {
-              console.info(`setPointerSize success`);
+              console.info(`Succeeded in setting pointer size.`);
             }).catch((error: BusinessError) => {
-              console.error(`Set pointer size failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`setPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

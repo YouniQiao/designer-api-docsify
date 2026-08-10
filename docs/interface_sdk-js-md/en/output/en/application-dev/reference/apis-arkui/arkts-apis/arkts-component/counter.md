@@ -1,4 +1,0 @@
-# component/counter
-
-## Summary
-

@@ -1,6 +1,6 @@
 # Options
 
-Defines the options used in **readLines()**.
+可选项类型，支持readLines接口使用。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the options used in **readLines()**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## encoding
 
 ```TypeScript
 encoding?: string
 ```
 
-File encoding format. It is optional.
+文件编码方式。可选项。
 
 **Type:** string
 

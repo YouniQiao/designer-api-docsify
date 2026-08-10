@@ -1,0 +1,56 @@
+# getDnsAscii
+
+## 导入模块
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
+## getDnsAscii
+
+```TypeScript
+function getDnsAscii(host: string, flag?: ConversionProcess): string
+```
+
+Convert a string from Unicode to ASCII Compatible Encoding (ACE), as defined by the ToASCII operation of RFC 3490.
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
+
+<!--Device-connection-function getDnsAscii(host: string, flag?: ConversionProcess): string--><!--Device-connection-function getDnsAscii(host: string, flag?: ConversionProcess): string-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| host | string | 是 | Indicates the domain name of the Unicode type. |
+| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | 否 | Indicates process flag, can be 0 or any logical OR of possible flags. can be ALLOW_UNASSIGNED \| USE_STD3_ASCII_RULES to set all flag. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | Return the converted string. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 2100001 | Invalid parameter value. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+
+## 示例
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+let result = connection.getDnsAscii("www.示例.com", connection.ConversionProcess.NO_CONFIGURATION);
+console.info("Succeeded to getDnsAscii: " + result);  // 预期结果：www.xn--fsq092h.com
+let result = connection.getDnsAscii("www.example.com", connection.ConversionProcess.NO_CONFIGURATION);
+console.info("Succeeded to getDnsAscii: " + result);  // 预期结果：www.example.com
+```
+

@@ -1,6 +1,6 @@
 # WebDarkMode
 
-Enumerates whether to enable web dark mode.
+Web深色模式的配置
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates whether to enable web dark mode.
 Off = 0
 ```
 
-The web dark mode is disabled.
+Web深色模式关闭。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ The web dark mode is disabled.
 On = 1
 ```
 
-The web dark mode is enabled.
+Web深色模式开启。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The web dark mode is enabled.
 Auto = 2
 ```
 
-The web dark mode setting follows the system setting.
+Web深色模式跟随系统。
 
 **Since:** 9
 

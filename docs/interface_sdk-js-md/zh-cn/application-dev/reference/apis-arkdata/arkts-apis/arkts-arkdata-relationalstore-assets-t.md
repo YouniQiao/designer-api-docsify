@@ -4,7 +4,7 @@
 type Assets = Asset[]
 ```
 
-表示[Asset]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类型的数组。
+表示[Asset](arkts-arkdata-relationalstore-asset-i.md)类型的数组。
 
 **起始版本：** 10
 

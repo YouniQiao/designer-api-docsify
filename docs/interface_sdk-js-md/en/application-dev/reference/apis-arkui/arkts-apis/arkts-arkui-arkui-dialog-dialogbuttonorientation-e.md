@@ -1,6 +1,6 @@
 # DialogButtonOrientation
 
-The arrangement of buttons in dialog.
+对话框中按钮的排列。
 
 **Since:** 26.1.0
 
@@ -16,7 +16,7 @@ The arrangement of buttons in dialog.
 AUTO = 0
 ```
 
-Two or fewer buttons are arranged horizontally,and two or more buttons are arranged vertically.
+两个或两个以下的按钮水平排列，且两个或两个以上的按钮垂直排列。
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ Two or fewer buttons are arranged horizontally,and two or more buttons are arran
 HORIZONTAL = 1
 ```
 
-Buttons are arranged horizontally.
+按钮水平排列。
 
 **Since:** 26.1.0
 
@@ -56,7 +56,7 @@ Buttons are arranged horizontally.
 VERTICAL = 2
 ```
 
-Buttons are arranged vertically.
+按钮垂直排列。
 
 **Since:** 26.1.0
 

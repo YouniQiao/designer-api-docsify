@@ -15,7 +15,7 @@ Video组件用于播放视频文件并控制其播放状态，支持播放、暂
 
 ## 权限列表
 
-使用网络视频时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+使用网络视频时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](docroot://security/AccessToken/declare-permissions.md)。
 
 ## 子组件
 
@@ -41,7 +41,14 @@ Video(value: VideoOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 视频信息。  |
+| value | [VideoOptions](arkts-arkui-videooptions-i.md) | 是 | 视频信息。 |
 
 ## 汇总
 
+- [FullscreenInfo](arkts-arkui-video-fullscreeninfo-i.md)
+- [PlaybackInfo](arkts-arkui-video-playbackinfo-i.md)
+- [PosterOptions](arkts-arkui-video-posteroptions-i.md)
+- [PreparedInfo](arkts-arkui-video-preparedinfo-i.md)
+- [VideoOptions](arkts-arkui-video-videooptions-i.md)
+- [PlaybackSpeed](arkts-arkui-video-playbackspeed-e.md)
+- [SeekMode](arkts-arkui-video-seekmode-e.md)

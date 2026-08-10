@@ -1,7 +1,6 @@
 # AbilityWindowConfiguration
 
-Defines the window configuration corresponding to this ability. The configuration is obtained through  
-**featureAbility.AbilityWindowConfiguration**.
+表示当前Ability对应的窗口配置项，使用时通过featureAbility.AbilityWindowConfiguration获取。
 
 **Since:** 7
 
@@ -17,7 +16,7 @@ Defines the window configuration corresponding to this ability. The configuratio
 WINDOW_MODE_UNDEFINED = 0
 ```
 
-The PageAbility is in an undefined window display mode.
+未定义。
 
 **Since:** 7
 
@@ -35,7 +34,7 @@ The PageAbility is in an undefined window display mode.
 WINDOW_MODE_FULLSCREEN = 1
 ```
 
-The PageAbility is in full screen mode.
+全屏。
 
 **Since:** 7
 
@@ -53,7 +52,7 @@ The PageAbility is in full screen mode.
 WINDOW_MODE_SPLIT_PRIMARY = 100
 ```
 
-The left screen in horizontal direction or the upper screen in vertical direction is the primary window.
+屏幕如果是水平方向表示左分屏，屏幕如果是竖直方向表示上分屏。
 
 **Since:** 7
 
@@ -71,7 +70,7 @@ The left screen in horizontal direction or the upper screen in vertical directio
 WINDOW_MODE_SPLIT_SECONDARY = 101
 ```
 
-The right screen in horizontal direction or the lower screen in vertical direction is the secondary window.
+屏幕如果是水平方向表示右分屏，屏幕如果是竖直方向表示下分屏。
 
 **Since:** 7
 
@@ -89,7 +88,7 @@ The right screen in horizontal direction or the lower screen in vertical directi
 WINDOW_MODE_FLOATING = 102
 ```
 
-The PageAbility is displayed in floating window mode.
+悬浮窗。
 
 **Since:** 7
 

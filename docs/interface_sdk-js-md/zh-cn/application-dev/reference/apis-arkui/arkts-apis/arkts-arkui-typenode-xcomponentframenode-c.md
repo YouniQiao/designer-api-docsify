@@ -34,13 +34,13 @@ abstract initialize(value: XComponentParameters): XComponentAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | xcomponent节点的选项。 |
+| value | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) | 是 | xcomponent节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
 
 ## initialize
 
@@ -64,13 +64,13 @@ abstract initialize(value: XComponentOptions): XComponentAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | xcomponent节点的选项。 |
+| value | [XComponentOptions](../arkts-components/arkts-arkui-xcomponentoptions-i.md) | 是 | xcomponent节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
 
 ## initialize
 
@@ -94,11 +94,11 @@ abstract initialize(params: NativeXComponentParameters): XComponentAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于原生开发的 XComponent 的构造参数。 |
+| params | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | 是 | 用于原生开发的 XComponent 的构造参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
 

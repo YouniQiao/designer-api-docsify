@@ -1,12 +1,22 @@
 # find
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## find
 
 ```TypeScript
 function find(id: string, callback: AsyncCallback<Window>): void
 ```
 
-Finds a window based on the ID. This API uses an asynchronous callback to return the result.
+查找id所对应的窗口，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)替代。
 
 **Since:** 7
 
@@ -24,10 +34,10 @@ Finds a window based on the ID. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Window&gt; | Yes | Callback used to return the window found. |
+| id | string | Yes | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | 回调函数。返回当前查找到的窗口对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -51,7 +61,11 @@ window.find('test', (err: BusinessError, data) => {
 function find(id: string): Promise<Window>
 ```
 
-Finds a window based on the ID. This API uses a promise to return the result.
+查找id所对应的窗口，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)替代。
 
 **Since:** 7
 
@@ -69,15 +83,15 @@ Finds a window based on the ID. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| id | string | Yes | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the window found. |
+| Promise&lt;Window&gt; | Promise对象。返回当前查找的窗口对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

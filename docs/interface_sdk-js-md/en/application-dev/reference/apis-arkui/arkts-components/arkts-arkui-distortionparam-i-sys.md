@@ -1,17 +1,14 @@
 # DistortionParam (System API)
 
-Defines the spatial distortion parameters.
-    **NOTE**  
-    
-    - The coordinates of the four corners of the component can be set as follows: top-left corner: [0, 0], top-right  
-    corner: [1, 0], bottom-left corner: [0, 1], bottom-right corner: [1, 1].  
-    
-    - For example, if the **bottomLeft** attribute is set to **[0.5, 0.5]**, the bottom-left corner is deformed to the  
-    position of the component center, and the corresponding distortion effect is generated.  
-    
-    - When setting the coordinates of the four corners, ensure they follow spatial logic. For example, if **topLeft**  
-    is **[0, 0.7]** and **bottomLeft** is **[0, 0.2]**, the top-left corner is lower than the bottom-left corner, which  
-    violates the spatial logic and may cause rendering exceptions.
+空间扭曲形变参数。
+
+> **说明：**
+> 
+> - 四个角的坐标可以按照如下坐标系设置。一个组件，左上角位置为[0, 0]，右上角位置为[1, 0]，左下角位置为[0, 1]，右下角位置为[1, 1]。
+> 
+> - 如bottomLeft属性设置为[0.5, 0.5]，则表示左下角形变到组件中心点的位置，产生对应的形变效果。
+> 
+> - 设置四个角坐标位置时请符合空间感逻辑。如topLeft = [0, 0.7]，bottomLeft = [0, 0.2]，左上角的位置低于左下角的位置，违背空间感的逻辑，可能导致渲染异常。
 
 **Since:** 26.0.0
 
@@ -29,18 +26,17 @@ Defines the spatial distortion parameters.
 barrelDistortion: Vector4
 ```
 
-Barrel distortion degree of the four edges.
+四条边的桶形扭曲程度参数。
 
-The four values in **Vector4** are as follows: **x** indicates the left edge, **y** indicates the right edge, **z**  
-indicates the top edge, and **w** indicates the bottom edge.
+Vector4中四个值分别控制：x是左边，y是右边，z是上边，w是下边。
 
-Default value: **[0, 0, 0, 0]**
+默认值：[0, 0, 0, 0] 
 
-A positive value indicates outward distortion, and a negative value indicates inward distortion. When the absolute value of the distortion parameter reaches 1, the distortion degree is extreme.
+正数表示边向外凸出的扭曲，负数表示边向内凹陷的扭曲。扭曲参数绝对值达到1时，扭曲程度为极端扭曲。
 
-Recommended value range for x, y, z, and w: **[-1, 1]
+x、y、z、w 各值建议设置范围：[-1, 1]
 
-**Type:** Vector4
+**Type:** [Vector4](../arkts-apis/arkts-arkui-graphics-vector4-i.md)
 
 **Default:** [0, 0, 0, 0]
 
@@ -62,13 +58,13 @@ Recommended value range for x, y, z, and w: **[-1, 1]
 bottomLeft: Vector2
 ```
 
-Coordinates of the bottom-left corner.
+左下角的坐标。
 
-Default value: **[0, 1]
+默认值：[0, 1]
 
-**Type:** Vector2
+**Type:** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
 
-**Default:** [0, 1]
+**Default:** [0, 0]
 
 **Since:** 26.0.0
 
@@ -88,13 +84,13 @@ Default value: **[0, 1]
 bottomRight: Vector2
 ```
 
-Coordinates of the bottom-right corner.
+右下角的坐标。
 
-Default value: **[1, 1]
+默认值：[1, 1]
 
-**Type:** Vector2
+**Type:** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
 
-**Default:** [1, 1]
+**Default:** [0, 0]
 
 **Since:** 26.0.0
 
@@ -114,11 +110,11 @@ Default value: **[1, 1]
 topLeft: Vector2
 ```
 
-Coordinates of the top-left corner.
+左上角的坐标。
 
-Default value: **[0, 0]
+默认值：[0, 0]
 
-**Type:** Vector2
+**Type:** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
 
 **Default:** [0, 0]
 
@@ -140,13 +136,13 @@ Default value: **[0, 0]
 topRight: Vector2
 ```
 
-Coordinates of the top-right corner.
+右上角的坐标。
 
-Default value: **[1, 0]
+默认值：[1, 0]
 
-**Type:** Vector2
+**Type:** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
 
-**Default:** [1, 0]
+**Default:** [0, 0]
 
 **Since:** 26.0.0
 

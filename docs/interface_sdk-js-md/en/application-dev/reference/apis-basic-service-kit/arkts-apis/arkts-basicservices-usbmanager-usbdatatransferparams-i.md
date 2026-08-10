@@ -1,6 +1,6 @@
 # UsbDataTransferParams
 
-As a USB data transfer interface, it is required for a client to initiate a transfer request.
+作为通用USB数据传输接口，客户端需要填充这个对象中的参数，用以发起传输请求。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ As a USB data transfer interface, it is required for a client to initiate a tran
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## buffer
 
 ```TypeScript
 buffer: Uint8Array
 ```
 
-Buffer, which is used to store data for read or write requests.
+用于存储读或者写请求时的数据。
 
 **Type:** Uint8Array
 
@@ -34,9 +40,9 @@ Buffer, which is used to store data for read or write requests.
 callback: AsyncCallback<SubmitTransferCallback>
 ```
 
-Information returned by the callback.
+传输完成时的回调信息。
 
-**Type:** AsyncCallback&lt;SubmitTransferCallback&gt;
+**Type:** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;SubmitTransferCallback&gt;
 
 **Since:** 18
 
@@ -52,10 +58,9 @@ Information returned by the callback.
 devPipe: USBDevicePipe
 ```
 
-USB device pipe, which is used to determine the bus number and device address. You need to call  
-[usbManager.connectDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain its value.
+用于确定总线地址和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。
 
-**Type:** USBDevicePipe
+**Type:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
 
 **Since:** 18
 
@@ -71,9 +76,9 @@ USB device pipe, which is used to determine the bus number and device address. Y
 endpoint: int
 ```
 
-Endpoint address, which is a positive integer.
+端点地址，正整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -89,9 +94,9 @@ Endpoint address, which is a positive integer.
 flags: UsbTransferFlags
 ```
 
-USB transfer flag.
+USB传输标志。
 
-**Type:** UsbTransferFlags
+**Type:** [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
 
 **Since:** 18
 
@@ -107,9 +112,9 @@ USB transfer flag.
 isoPacketCount: int
 ```
 
-Number of data packets during real-time transfer, used only for I/Os with real-time transfer endpoints. The value must be a non-negative number.
+实时传输时数据包的数量，仅用于具有实时传输端点的I/O。必须是非负数，（单位：个数）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -125,9 +130,9 @@ Number of data packets during real-time transfer, used only for I/Os with real-t
 length: int
 ```
 
-Length of the data buffer.Unit: bytes. The value must be a non-negative number (expected length).
+数据缓冲区的长度，必须是非负数（期望长度）。（单位：字节）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -143,9 +148,9 @@ Length of the data buffer.Unit: bytes. The value must be a non-negative number (
 timeout: int
 ```
 
-Timeout duration.Unit: milliseconds.
+超时时间。（单位：毫秒）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -161,9 +166,9 @@ Timeout duration.Unit: milliseconds.
 type: UsbEndpointTransferType
 ```
 
-Transfer type.
+传输类型。
 
-**Type:** UsbEndpointTransferType
+**Type:** [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
 
 **Since:** 18
 
@@ -179,7 +184,7 @@ Transfer type.
 userData: Uint8Array
 ```
 
-User data.
+用户上下文数据。
 
 **Type:** Uint8Array
 

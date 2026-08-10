@@ -1,12 +1,13 @@
 # @ohos.distributedBundle
 
 本模块提供分布式包的管理。
-    **说明：**  
-    
-    从API version 9开始，该模块不再维护，建议使用  
-    [@ohos.bundle.distributedBundleManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。  
-    
-    本模块为系统接口。
+
+> **说明：**
+> 
+> 从API version 9开始，该模块不再维护，建议使用
+> [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md)替代。
+> 
+> 本模块为系统接口。
 
 **起始版本：** 8
 
@@ -21,6 +22,12 @@
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { distributedBundle } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 

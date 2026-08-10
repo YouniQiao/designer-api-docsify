@@ -1,5 +1,11 @@
 # ArcScrollBar
 
+## 导入模块
+
+```TypeScript
+import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
+```
+
 ## ArcScrollBar
 
 ```TypeScript
@@ -23,14 +29,14 @@ export declare function ArcScrollBar(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| options | [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
 
 
 ## ArcScrollBar
@@ -60,12 +66,12 @@ export declare function ArcScrollBar(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArcScrollBarAttribute&gt; | 是 | 用于创建ArcScrollBar的样式 |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcScrollBarAttribute&gt; | 是 | 用于创建ArcScrollBar的样式 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ArcScrollBar的属性。 |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) | ArcScrollBar的属性。 |
 

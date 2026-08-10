@@ -1,8 +1,7 @@
 # InsightIntentType (System API)
 
-Enumerates the intent types defined by the intent decorator. You can obtain the intent type from  
-[LinkIntentInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ returned by calling APIs such as  
-[getAllInsightIntentInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+表示通过意图装饰器定义的意图类型，可通过[getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo)等方法返回的  
+[LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md)获取。
 
 **Since:** 20
 
@@ -20,8 +19,7 @@ Enumerates the intent types defined by the intent decorator. You can obtain the 
 LINK = '@InsightIntentLink'
 ```
 
-A decorator of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_type.
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)类型装饰器。
 
 **Since:** 20
 
@@ -41,8 +39,7 @@ A decorator of the
 PAGE = '@InsightIntentPage'
 ```
 
-A decorator of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_type.
+[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)类型装饰器。
 
 **Since:** 20
 
@@ -62,8 +59,7 @@ A decorator of the
 ENTRY = '@InsightIntentEntry'
 ```
 
-A decorator of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_type.
+[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)类型装饰器。
 
 **Since:** 20
 
@@ -83,8 +79,7 @@ A decorator of the
 FUNCTION = '@InsightIntentFunctionMethod'
 ```
 
-A decorator of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_type.
+[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)类型装饰器。
 
 **Since:** 20
 
@@ -104,8 +99,7 @@ A decorator of the
 FORM = '@InsightIntentForm'
 ```
 
-A decorator of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_type.
+[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)类型装饰器。
 
 **Since:** 20
 

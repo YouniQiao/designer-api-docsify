@@ -1,6 +1,6 @@
 # ChangeData
 
-Represents the data change information.
+定义变更数据。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the data change information.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## isDirectory
 
 ```TypeScript
 isDirectory: Array<boolean>
 ```
 
-Whether the URIs with data changed are of directories. The value **true** means the URIs are of directories; the value **false** means the opposite.
+指示更改的URI是否为目录。true：是目录。false：非目录。
 
 **Type:** Array&lt;boolean&gt;
 
@@ -34,9 +40,9 @@ Whether the URIs with data changed are of directories. The value **true** means 
 type: NotifyType
 ```
 
-Type of the data change.
+更改的通知类型。
 
-**Type:** NotifyType
+**Type:** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
 **Since:** 12
 
@@ -52,7 +58,7 @@ Type of the data change.
 uris: Array<string>
 ```
 
-List of URIs whose data needs to be changed.
+需要更改的URI列表。
 
 **Type:** Array&lt;string&gt;
 

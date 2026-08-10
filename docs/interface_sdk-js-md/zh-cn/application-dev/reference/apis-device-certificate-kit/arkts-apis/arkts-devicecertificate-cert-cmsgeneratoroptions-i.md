@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## contentDataFormat
 
 ```TypeScript
@@ -18,7 +24,7 @@ contentDataFormat?: CmsContentDataFormat
 
 内容数据的格式。默认为CmsContentDataFormat.BINARY。
 
-**类型：** CmsContentDataFormat
+**类型：** [CmsContentDataFormat](arkts-devicecertificate-cert-cmscontentdataformat-e.md)
 
 **默认值：** CmsContentDataFormat.BINARY
 
@@ -62,7 +68,7 @@ outFormat?: CmsFormat
 
 Cms最终数据的输出格式。默认为DER。
 
-**类型：** CmsFormat
+**类型：** [CmsFormat](arkts-devicecertificate-cert-cmsformat-e.md)
 
 **默认值：** CmsFormat.DER
 

@@ -1,6 +1,6 @@
 # InputAttribute
 
-Attribute of Input.
+编辑框属性，包含文本输入类型和Enter键功能类型。
 
 **Since:** 10
 
@@ -10,13 +10,24 @@ Attribute of Input.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName?: string
 ```
 
-The name of the ability where the edit box is located.
+编辑框设置的ability名称。
+
+- 编辑框设置ability名称时，长度不超过127个字符（如果超出将会自动截断为127个字符）。  
+- 编辑框未设置ability名称时，默认为空字符串。  
+- 该字段在调用绑定  
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)时提供给输入法应用。
 
 **Type:** string
 
@@ -34,7 +45,12 @@ The name of the ability where the edit box is located.
 consumeKeyEvents?: boolean
 ```
 
-Whether the editor supports consuming key events.
+编辑框是否具有完整处理字母、字符、功能等按键的能力。默认值为false。
+
+- 值为true，表示具备此能力。  
+- 值为false，表示不具备此能力。  
+- 该字段在调用  
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)/ [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md)时提供给输入法应用。
 
 **Type:** boolean
 
@@ -56,9 +72,9 @@ Whether the editor supports consuming key events.
 enterKeyType: EnterKeyType
 ```
 
-Indicates the enter key type of the input method.
+Enter键功能类型。
 
-**Type:** EnterKeyType
+**Type:** [EnterKeyType](../../apis-arkui/arkts-apis/arkts-arkui-textinput-enterkeytype-e.md)
 
 **Since:** 10
 
@@ -74,7 +90,12 @@ Indicates the enter key type of the input method.
 placeholder?: string
 ```
 
-Placeholder text in the edit box.
+编辑框设置的占位符信息。 
+
+- 编辑框设置占位符信息时，长度不超过255个字符（如果超出将会自动截断为255个字符），用于提示或引导用户输入临时性文本或符号。（例如：提示输入项为"必填"或"非必填"的输入结果反馈。）  
+- 编辑框没有设置占位符信息时，默认为空字符串。  
+- 该字段在调用  
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)时提供给输入法应用。
 
 **Type:** string
 
@@ -92,9 +113,9 @@ Placeholder text in the edit box.
 textInputType: TextInputType
 ```
 
-Indicates the text input type of the input method.
+文本输入类型。
 
-**Type:** TextInputType
+**Type:** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 
 **Since:** 10
 

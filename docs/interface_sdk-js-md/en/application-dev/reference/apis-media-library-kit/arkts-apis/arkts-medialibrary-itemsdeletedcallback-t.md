@@ -20,5 +20,5 @@ The callback of onSelectedItemsDeleted event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| baseItemInfos | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes |  |
+| baseItemInfos | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md)[] | Yes |  |
 

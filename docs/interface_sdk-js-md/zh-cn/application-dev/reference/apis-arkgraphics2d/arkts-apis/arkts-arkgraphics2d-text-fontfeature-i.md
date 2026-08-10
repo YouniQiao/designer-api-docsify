@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## name
 
 ```TypeScript
@@ -38,7 +44,7 @@ value: int
 
 字体特征键值对的值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

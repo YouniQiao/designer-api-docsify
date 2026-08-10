@@ -4,7 +4,7 @@
 export type TreeSetComparator<T> = (firstValue: T, secondValue: T) => double
 ```
 
-The type of TreeSet comparator.
+TreeSet的比较器类型。
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ The type of TreeSet comparator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstValue | T | Yes | The first value compared  |
-| secondValue | T | Yes | The second value compared  |
+| firstValue | T | Yes | 第一个比较值。 |
+| secondValue | T | Yes | 第二个比较值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double | - Comparison results  |
+| double | 比较结果。 |
 

@@ -1,20 +1,22 @@
 # DrawingCanvas
 
 ```TypeScript
-export type DrawingCanvas = _drawing.Canvas
+declare type DrawingCanvas = import('../api/@ohos.graphics.drawing').default.Canvas
 ```
 
-Defines drawing canvas.
+可用于向DrawingRenderingContext上绘制内容的画布对象。
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export type DrawingCanvas = _drawing.Canvas--><!--Device-unnamed-export type DrawingCanvas = _drawing.Canvas-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-declare type DrawingCanvas = import('../api/@ohos.graphics.drawing').default.Canvas--><!--Device-unnamed-declare type DrawingCanvas = import('../api/@ohos.graphics.drawing').default.Canvas-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** _drawing.Canvas
+**Property type:** import('../api/@ohos.graphics.drawing').default.Canvas
 

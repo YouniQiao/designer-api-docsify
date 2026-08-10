@@ -1,12 +1,18 @@
 # offGestureNavigationEnabledChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## offGestureNavigationEnabledChange
 
 ```TypeScript
 function offGestureNavigationEnabledChange(callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the gesture navigation status change event.
+移除手势导航启用状态变化的监听。
 
 **Since:** 23
 
@@ -22,13 +28,13 @@ Unsubscribes from the gesture navigation status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback function that has been used for the subscription. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 已注册的回调函数。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有手势导航启用状态变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

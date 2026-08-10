@@ -1,8 +1,6 @@
 # EmbeddableUIAbility
 
-EmbeddableUIAbility is an embeddable UIAbility component provided for atomic services. It inherits from  
-[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.You can implement EmbeddableUIAbility to enable atomic services to be launched by other applications either as a standalone window or embedded within the host application's UI.For details about the inheritance relationship of each ability, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+EmbeddableUIAbility组件是为原子化服务提供可嵌入式的UIAbility组件，继承自[UIAbility](arkts-app-ability-uiability.md)。开发者通过实现EmbeddableUIAbility，为其他应用提供跳出式启动和嵌入式启动原子化服务方式。各类Ability的继承关系详见[继承关系说明](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability的继承关系说明)。
 
 **Inheritance/Implementation:** EmbeddableUIAbility extends [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)
 
@@ -14,15 +12,21 @@ EmbeddableUIAbility is an embeddable UIAbility component provided for atomic ser
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { EmbeddableUIAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## context
 
 ```TypeScript
 context: EmbeddableUIAbilityContext
 ```
 
-Context of the EmbeddableUIAbility.
+EmbeddableUIAbility组件的上下文。
 
-**Type:** EmbeddableUIAbilityContext
+**Type:** [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-c.md)
 
 **Since:** 12
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
+## 导入模块
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## chainId
 
 ```TypeScript
@@ -36,7 +42,7 @@ flags?: int
 
 跟踪标志位，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -54,7 +60,7 @@ parentSpanId?: int
 
 父分支标识，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -72,7 +78,7 @@ spanId?: int
 
 分支标识，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 

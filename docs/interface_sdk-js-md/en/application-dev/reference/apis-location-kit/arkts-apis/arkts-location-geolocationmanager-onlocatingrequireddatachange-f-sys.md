@@ -1,5 +1,11 @@
 # onLocatingRequiredDataChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## onLocatingRequiredDataChange
 
 ```TypeScript
@@ -25,16 +31,16 @@ Subscribe to changes in WiFi/BT scanning information,and use the WiFi/BT scannin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the locating required data configuration parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;LocatingRequiredData&gt;&gt; | Yes | Indicates the callback for reporting WiFi/BT scan info. |
+| config | [LocatingRequiredDataConfig](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md) | Yes | Indicates the locating required data configuration parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;LocatingRequiredData&gt;&gt; | Yes | Indicates the callback for reporting WiFi/BT scan info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.onLocatingRequiredDataChange} due to limited device capabilities. |
-| [3301800](../errorcode-geoLocationManager.md#3301800-failed-to-start-wifi-or-bluetooth-scanning) | Failed to start WiFi or Bluetooth scanning. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.onLocatingRequiredDataChange} due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 3301800 | Failed to start WiFi or Bluetooth scanning. |
 

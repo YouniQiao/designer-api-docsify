@@ -10,6 +10,12 @@ Represents the text information about the recommended images.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## text
 
 ```TypeScript

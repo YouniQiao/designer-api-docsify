@@ -10,6 +10,12 @@
  > [canIUse()](../../../reference/common/js-apis-syscap.md#caniuse)接口判断当前设备是否支持此syscap及对应接口。
 
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 命名空间

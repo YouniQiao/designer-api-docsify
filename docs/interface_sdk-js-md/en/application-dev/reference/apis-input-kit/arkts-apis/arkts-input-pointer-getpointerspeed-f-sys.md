@@ -1,12 +1,18 @@
 # getPointerSpeed (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## getPointerSpeed
 
 ```TypeScript
 function getPointerSpeed(callback: AsyncCallback<int>): void
 ```
 
-Obtains the mouse pointer speed. This API uses an asynchronous callback to return the result.
+获取鼠标移动速度，使用callback异步回调。
 
 **Since:** 9
 
@@ -22,16 +28,16 @@ Obtains the mouse pointer speed. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **number** is the mouse pointer speed. Otherwise, **err** is an error object. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当获取鼠标移动速度成功，err为undefined，number为鼠标移动速度；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -45,15 +51,16 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Obtain the mouse pointer speed.
             pointer.getPointerSpeed((error: BusinessError, speed: number) => {
               if (error) {
-                console.error(`Get pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 return;
               }
-              console.info(`Get pointer speed success, speed: ${JSON.stringify(speed)}`);
+              console.info(`Succeeded in getting pointer speed, speed: ${JSON.stringify(speed)}.`);
             });
           } catch (error) {
-            console.error(`Get pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -68,7 +75,7 @@ struct Index {
 function getPointerSpeed(): Promise<int>
 ```
 
-Obtains the mouse pointer speed. This API uses a promise to return the result.
+获取当前鼠标移动速度，使用Promise异步回调。
 
 **Since:** 9
 
@@ -84,15 +91,15 @@ Obtains the mouse pointer speed. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the mouse pointer speed. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回鼠标移动速度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -106,13 +113,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Obtain the mouse pointer speed.
             pointer.getPointerSpeed().then(speed => {
-              console.info(`Get pointer speed success, speed: ${JSON.stringify(speed)}`);
+              console.info(`Succeeded in getting pointer speed, speed: ${JSON.stringify(speed)}.`);
             }).catch((error: BusinessError) => {
-              console.error(`Get pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`Get pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

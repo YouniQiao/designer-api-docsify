@@ -1,6 +1,6 @@
 # PrinterRange
 
-Defines the print range.
+定义打印范围的接口。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Defines the print range.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## endPage
 
 ```TypeScript
 endPage?: int
 ```
 
-End page. The default value is the maximum number of pages of the file to be printed.
+表示结束页。默认值为待打印文件的最大页数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -34,9 +40,9 @@ End page. The default value is the maximum number of pages of the file to be pri
 pages?: Array<int>
 ```
 
-Page range set of the file to print. The default value is empty.
+表示待打印的页面范围的集合。默认值为空。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 24
 
@@ -52,9 +58,9 @@ Page range set of the file to print. The default value is empty.
 startPage?: int
 ```
 
-Start page. The default value is **1**.
+表示起始页。默认值为1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

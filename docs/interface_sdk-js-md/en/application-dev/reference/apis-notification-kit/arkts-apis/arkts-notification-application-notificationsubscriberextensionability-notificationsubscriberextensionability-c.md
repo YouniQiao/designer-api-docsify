@@ -1,8 +1,8 @@
 # NotificationSubscriberExtensionAbility
 
-NotificationSubscriberExtensionAbility is the base class for notification subscriber extension abilities, providing notification subscription-related functionality. Third-party wearable apps (such as companion applications for watches)implement callback logic by inheriting this class, receiving notification information when notifications are published on the local device and forwarding them to the wearable device via Bluetooth, and receiving callbacks for notification cancellation when local notifications are cancelled and forwarding them to the wearable device to delete the corresponding notifications.
+NotificationSubscriberExtensionAbility是通知订阅者扩展能力的基类，提供通知订阅的相关功能。三方穿戴类应用（如手表配套应用）通过继承此类实现回调逻辑，在本机发布通知时接收通知信息并通过蓝牙转发给穿戴设备，在本机通知被取消时接收取消通知的回调并转发给穿戴设备删除对应通知。
 
-Use this module when your wearable application needs to obtain local notifications and sync them to a paired wearable device. This module is used together with the notificationExtensionSubscription module. This module is responsible for receiving and processing notification data in callbacks, while the notificationExtensionSubscription module is responsible for management operations such as authorization, subscription, and unsubscription.
+当穿戴类应用需要获取本机通知并同步到配对的穿戴设备时，使用本模块。本模块与notificationExtensionSubscription模块配合使用，本模块负责在回调中接收和处理通知数据，notificationExtensionSubscription模块负责授权、订阅和取消订阅等管理操作。
 
 **Since:** 22
 
@@ -12,13 +12,19 @@ Use this module when your wearable application needs to obtain local notificatio
 
 **System capability:** SystemCapability.Notification.Notification
 
+## Modules to Import
+
+```TypeScript
+import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
+```
+
 ## onCancelMessages
 
 ```TypeScript
 onCancelMessages(hashCodes: Array<string>): void
 ```
 
-Called when notifications are canceled.
+取消通知时的回调。
 
 **Since:** 22
 
@@ -34,17 +40,17 @@ Called when notifications are canceled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCodes | Array&lt;string&gt; | Yes | List of hash codes of the notifications to cancel, obtained through \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| hashCodes | Array&lt;string&gt; | Yes | 要取消的通知的哈希码列表。通过onReceiveMessage获取。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
 
 export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-    onCancelMessages(hashCodes: Array<string>): void {
-        console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
-    }
+  onCancelMessages(hashCodes: Array<string>): void {
+    console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
+  }
 }
 ```
 
@@ -54,7 +60,7 @@ export default class NotificationSubscriberExtAbility extends NotificationSubscr
 onDestroy(): void
 ```
 
-Called when the notification subscription extension is destroyed.
+通知订阅扩展被销毁时的回调。
 
 **Since:** 22
 
@@ -66,7 +72,7 @@ Called when the notification subscription extension is destroyed.
 
 **System capability:** SystemCapability.Notification.Notification
 
-**Example**
+## Examples
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -84,7 +90,7 @@ export default class NotificationSubscriberExtAbility extends NotificationSubscr
 onReceiveMessage(notificationInfo: NotificationInfo): void
 ```
 
-Called when a notification is received.
+收到通知时回调。
 
 **Since:** 22
 
@@ -100,9 +106,9 @@ Called when a notification is received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| notificationInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback information about the notification received in the notification subscription extension capability. |
+| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | Yes | 通知订阅扩展能力中收到通知的回调信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -120,9 +126,9 @@ export default class NotificationSubscriberExtAbility extends NotificationSubscr
 context: NotificationSubscriberExtensionContext
 ```
 
-Context for the NotificationSubscriberExtensionAbility.
+NotificationSubscriberExtensionAbility的上下文环境。
 
-**Type:** NotificationSubscriberExtensionContext
+**Type:** [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 
 **Since:** 22
 

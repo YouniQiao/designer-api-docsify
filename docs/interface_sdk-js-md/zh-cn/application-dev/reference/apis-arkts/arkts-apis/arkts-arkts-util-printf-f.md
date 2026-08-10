@@ -1,5 +1,11 @@
 # printf
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## printf
 
 ```TypeScript
@@ -33,7 +39,7 @@ function printf(format: string, ...args: Object[]): string
 | --- | --- |
 | string | 按特定格式式样化后的字符串，包含根据格式说明符处理后的参数值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let res = util.printf("%s", "hello world!");

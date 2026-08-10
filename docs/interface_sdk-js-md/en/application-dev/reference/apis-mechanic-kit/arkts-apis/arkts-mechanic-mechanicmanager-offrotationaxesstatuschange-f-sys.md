@@ -1,5 +1,11 @@
 # offRotationAxesStatusChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## offRotationAxesStatusChange
 
 ```TypeScript
@@ -22,12 +28,12 @@ Unregister a listener for axis state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationAxesStateChangeInfo&gt; | No | Rotate axis state changes callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationAxesStateChangeInfo&gt; | No | Rotate axis state changes callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
 

@@ -1,8 +1,8 @@
 # ResolvedSymbolDateTimeFormatOptions
 
-Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.Define the resolved symbol element and value that need to get.
+自定义符号时间日期格式化对象配置项的解析结果。继承自Intl.ResolvedDateTimeFormatOptions，支持Intl.ResolvedDateTimeFormatOptions的所有配置项，并且功能与其一致。
 
-**Inheritance/Implementation:** ResolvedSymbolDateTimeFormatOptions extends [Intl.ResolvedDateTimeFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolveddatetimeformatoptions-i.md)
+**Inheritance/Implementation:** ResolvedSymbolDateTimeFormatOptions extends [Intl.ResolvedDateTimeFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolveddatetimeformatoptions-i.md/arkts-arkts-intl-resolveddatetimeformatoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.D
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## amPMSymbol
 
 ```TypeScript
 amPMSymbol?: string[]
 ```
 
-AM and PM symbol of date time period part, such as "PM" of "2:23 PM". First parameter is AM,second parameter is PM.
+指定的上午和下午符号，其中第一个元素为上午符号，第二个元素为下午符号。默认值：区域默认的符号。
 
 **Type:** string[]
 

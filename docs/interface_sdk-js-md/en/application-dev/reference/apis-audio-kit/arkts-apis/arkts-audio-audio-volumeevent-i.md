@@ -1,6 +1,6 @@
 # VolumeEvent
 
-Describes the event received by the application when the volume is changed.
+音量改变时，应用接收到的事件。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Describes the event received by the application when the volume is changed.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## updateUi
 
 ```TypeScript
 updateUi: boolean
 ```
 
-Whether to show the volume change in UI. **true** to show, **false** otherwise.
+是否在UI中显示音量变化。true表示显示，false表示不显示。
 
 **Type:** boolean
 
@@ -34,9 +40,9 @@ Whether to show the volume change in UI. **true** to show, **false** otherwise.
 volume: int
 ```
 
-Volume to set. The value range can be obtained by calling **getMinVolume** and **getMaxVolume**.
+音量等级，可设置范围通过调用getMinVolume和getMaxVolume方法获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -52,9 +58,9 @@ Volume to set. The value range can be obtained by calling **getMinVolume** and *
 volumeMode?: AudioVolumeMode
 ```
 
-Audio volume mode. The default value is **SYSTEM\_GLOBAL**.
+音频的音量模式。默认值为SYSTEM_GLOBAL。
 
-**Type:** AudioVolumeMode
+**Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
 **Since:** 19
 
@@ -70,9 +76,9 @@ Audio volume mode. The default value is **SYSTEM\_GLOBAL**.
 volumeType: AudioVolumeType
 ```
 
-Audio volume type.
+音频音量类型。
 
-**Type:** AudioVolumeType
+**Type:** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
 
 **Since:** 9
 

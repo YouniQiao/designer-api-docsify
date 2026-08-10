@@ -1,17 +1,23 @@
 # finishTrace
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## finishTrace
 
 ```TypeScript
 function finishTrace(name: string, taskId: int): void
 ```
 
-Stops an asynchronous trace.
+标记一个异步跟踪耗时任务的结束。调用成功后，完成该任务的跟踪。
 
-To stop a trace, the values of name and task ID in **finishTrace** must be the same as those in  
-[startTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+finishTrace的name和taskId必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace)对应参数值一致。
 
-Since API version 19, you are advised to use [finishAsyncTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, which must be used together with [startAsyncTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+从API version 19开始，建议使用[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishasynctrace)接口（需与  
+[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)接口配套使用）。
 
 **Since:** 8
 
@@ -27,14 +33,10 @@ Since API version 19, you are advised to use [finishAsyncTrace()]\_\_\_JSDOC\_LI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the trace to start. |
-| taskId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Task ID. |
+| name | string | Yes | 要跟踪的任务名称，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace)对应参数值一致。 |
+| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务id，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace)对应参数值一致。 |
 
-**Example**
-
-```TypeScript
-hiTraceMeter.finishTrace("myTestFunc", 1);
-```
+## Examples
 
 ```TypeScript
 // Start trace tasks with the same name concurrently.

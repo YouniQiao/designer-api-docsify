@@ -1,12 +1,18 @@
 # getTrustedDevices (System API)
 
+## Modules to Import
+
+```TypeScript
+import { conversation } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## getTrustedDevices
 
 ```TypeScript
 function getTrustedDevices(): DeviceNodeInfo[]
 ```
 
-Obtains the list of historical trusted devices. Typical use scenarios include querying available target devices before sending data across devices.
+获取历史可信设备列表。典型使用场景包括：跨设备数据发送前查询可用目标设备。
 
 **Since:** 26.1.0
 
@@ -26,14 +32,32 @@ Obtains the list of historical trusted devices. Typical use scenarios include qu
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Device node information. |
+| [DeviceNodeInfo](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md)[] | 获取到的设备信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission to access distributed data. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) | Internal error. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. The application does not have the required permission to access distributed data. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 2000001 | Internal error. |
+
+## Examples
+
+```TypeScript
+import { conversation } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let devices: conversation.DeviceNodeInfo[] = conversation.getTrustedDevices();
+  console.info(`getTrustedDevices success, count: ${devices.length}`);
+  for (let device of devices) {
+    console.info(`device name: ${device.deviceName}, networkId: ${device.networkId}`);
+  }
+} catch (err) {
+  const e: BusinessError = err as BusinessError;
+  console.error(`getTrustedDevices errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 

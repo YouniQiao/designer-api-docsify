@@ -1,6 +1,6 @@
 # USBInterface
 
-一个[USBConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中可以含有多个USBInterface，每个USBInterface提供一个功能。
+一个[USBConfig](arkts-basicservices-usb-usbconfig-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。
 
 **起始版本：** 8
 
@@ -13,6 +13,12 @@
 <!--Device-usb-interface USBInterface--><!--Device-usb-interface USBInterface-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
+
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
 
 ## alternateSetting
 

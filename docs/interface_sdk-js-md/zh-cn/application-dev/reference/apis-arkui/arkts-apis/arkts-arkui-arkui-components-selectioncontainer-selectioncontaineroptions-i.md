@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## controller
 
 ```TypeScript
@@ -18,7 +24,7 @@ controller: SelectionContainerController
 
 SelectionContainer控制器。
 
-**类型：** SelectionContainerController
+**类型：** [SelectionContainerController](arkts-arkui-arkui-components-selectioncontainer-selectioncontainercontroller-c.md)
 
 **起始版本：** 26.0.0
 

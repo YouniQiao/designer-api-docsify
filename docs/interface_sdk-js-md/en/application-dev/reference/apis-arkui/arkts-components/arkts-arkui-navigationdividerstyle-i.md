@@ -1,6 +1,6 @@
 # NavigationDividerStyle
 
-Color of the navigation divider and the upper and lower margins of the **Navigation** component.
+Navigation分割线颜色及上下边距。
 
 **Since:** 23
 
@@ -16,11 +16,11 @@ Color of the navigation divider and the upper and lower margins of the **Navigat
 color?: ResourceColor
 ```
 
-Color of the divider.
+分割线的颜色。
 
-Default value: **#33000000**, indicating gray
+默认值：#33000000，灰色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -40,15 +40,15 @@ Default value: **#33000000**, indicating gray
 endMargin?: Length
 ```
 
-Distance between the divider and the bottom of the sidebar.
+分割线与侧边栏底端的距离。
 
-Default value: **0**
+默认值：0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +��)
+取值范围：[0, +∞)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 23
 
@@ -68,15 +68,15 @@ Value range: [0, +��)
 startMargin?: Length
 ```
 
-Distance between the divider and the top of the sidebar.
+分割线与侧边栏顶端的距离。
 
-Default value: **0**
+默认值：0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +��)
+取值范围：[0, +∞)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 23
 

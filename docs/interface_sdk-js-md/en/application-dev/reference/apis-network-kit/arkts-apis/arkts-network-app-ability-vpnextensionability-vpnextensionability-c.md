@@ -10,6 +10,12 @@ class of vpn extension ability.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { VpnExtensionContext } from 'kits/@kit.NetworkKit';
+```
+
 ## onCreate
 
 ```TypeScript
@@ -32,9 +38,9 @@ Called back when a vpn extension is started for initialization.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the want of created service extension. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want of created service extension. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { VpnExtensionAbility } from '@kit.NetworkKit';
@@ -65,7 +71,7 @@ Called back before a vpn extension is destroyed.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { VpnExtensionAbility } from '@kit.NetworkKit';
@@ -85,7 +91,7 @@ context: VpnExtensionContext
 
 Indicates service extension ability context.
 
-**Type:** VpnExtensionContext
+**Type:** [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)
 
 **Since:** 11
 

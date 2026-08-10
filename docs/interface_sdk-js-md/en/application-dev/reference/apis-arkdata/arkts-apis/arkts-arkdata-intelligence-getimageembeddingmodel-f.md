@@ -1,12 +1,18 @@
 # getImageEmbeddingModel
 
+## Modules to Import
+
+```TypeScript
+import { intelligence } from 'kits/@kit.ArkData';
+```
+
 ## getImageEmbeddingModel
 
 ```TypeScript
 function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>
 ```
 
-Obtains an image embedding model.
+获取图像嵌入模型。使用Promise异步回调。
 
 **Since:** 15
 
@@ -20,23 +26,23 @@ Obtains an image embedding model.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The configuration of the embedding model. |
+| config | [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | Yes | 嵌入模型的配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ImageEmbedding&gt; | The promise returned by the function. |
+| Promise&lt;ImageEmbedding&gt; | Promise对象，返回图像嵌入模型，用于图像向量化。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 31300000 | Inner error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

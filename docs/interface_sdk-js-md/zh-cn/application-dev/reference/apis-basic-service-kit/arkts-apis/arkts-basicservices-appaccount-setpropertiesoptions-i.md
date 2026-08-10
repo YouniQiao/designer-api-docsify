@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Account.AppAccount
 
+## 导入模块
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## parameters
 
 ```TypeScript
@@ -18,7 +24,7 @@ parameters?: Record<string, Object>
 
 自定义参数对象，默认为空。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ properties?: Record<string, Object>
 
 属性对象，默认为空。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 9
 

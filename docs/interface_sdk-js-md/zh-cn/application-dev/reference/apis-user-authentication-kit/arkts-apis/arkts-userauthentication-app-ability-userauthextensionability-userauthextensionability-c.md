@@ -2,7 +2,7 @@
 
 用户认证扩展能力组件
 
-**继承/实现关系：** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
+**继承/实现关系：** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
 **起始版本：** 10
 
@@ -15,4 +15,10 @@
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { UserAuthExtensionAbility } from 'kits/@kit.UserAuthenticationKit';
+```
 

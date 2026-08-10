@@ -22,11 +22,11 @@ Create a FrameNode of Divider type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return Divider type FrameNode. |
+| [Divider](arkts-arkui-typenode-divider-t.md) | Return Divider type FrameNode. |
 

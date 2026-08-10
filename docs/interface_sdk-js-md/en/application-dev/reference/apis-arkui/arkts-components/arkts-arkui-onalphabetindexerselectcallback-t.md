@@ -4,7 +4,7 @@
 declare type OnAlphabetIndexerSelectCallback  = (index: number) => void
 ```
 
-Represents the callback invoked when an index item is selected.
+索引项被选中时触发的事件。
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ Represents the callback invoked when an index item is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | selected index  |
+| index | number | Yes | selected index |
 

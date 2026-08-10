@@ -20,7 +20,7 @@ adaptiveColor?: AdaptiveColor
 
 默认值：AdaptiveColor.DEFAULT
 
-**类型：** AdaptiveColor
+**类型：** [AdaptiveColor](../arkts-apis/arkts-arkui-common-adaptivecolor-e.md)
 
 **默认值：** AdaptiveColor.DEFAULT
 
@@ -46,7 +46,7 @@ blurOptions?: BlurOptions
 
 默认值：grayscale: [0,0]
 
-**类型：** BlurOptions
+**类型：** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
 **默认值：** { grayScale: [0,0] }
 
@@ -72,7 +72,7 @@ colorMode?: ThemeColorMode
 
 默认值：ThemeColorMode.SYSTEM
 
-**类型：** ThemeColorMode
+**类型：** [ThemeColorMode](arkts-arkui-themecolormode-e.md)
 
 **默认值：** ThemeColorMode.SYSTEM
 

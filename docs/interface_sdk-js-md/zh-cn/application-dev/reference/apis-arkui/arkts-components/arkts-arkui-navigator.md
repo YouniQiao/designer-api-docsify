@@ -34,7 +34,7 @@ Navigator(value?: { target: string; type?: NavigationType })
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { target: string; type?: NavigationType } | 否 | 跳转页面的信息。\_\_\_HTML\_TAG\_USD\_0\_\_\_target：指定跳转目标页面的路径。\_\_\_HTML\_TAG\_USD\_1\_\_\_type：指定路由方式。\_\_\_HTML\_TAG\_USD\_2\_\_\_默认值：NavigationType.Push  |
+| value | { target: string; type?: NavigationType } | 否 | 跳转页面的信息。<br/>target：指定跳转目标页面的路径。<br/>type：指定路由方式。<br/>默认值：NavigationType.Push |
 
 ## Navigator
 
@@ -62,3 +62,4 @@ NavigationAttribute为Navigation组件的属性。
 
 ## 汇总
 
+- [NavigationType](arkts-arkui-navigator-navigationtype-e.md)

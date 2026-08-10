@@ -1,6 +1,6 @@
 # DeviceInfo
 
-Device Information Definition
+播放设备的相关信息。
 
 **Since:** 10
 
@@ -10,15 +10,23 @@ Device Information Definition
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## authenticationStatus
 
 ```TypeScript
 authenticationStatus?: int
 ```
 
-Define different authentication status.0: Device not authenticated.1: Device already authenticated.
+播放设备是否可信。默认为0。0代表设备不可信，1代表设备可信。
 
-**Type:** int
+**系统接口：** 该接口为系统接口。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -36,9 +44,9 @@ Define different authentication status.0: Device not authenticated.1: Device alr
 hiPlayDeviceInfo?: HiPlayDeviceInfo
 ```
 
-HiPlayDeviceInfo is used to obtain device-specific information for HiPlay.transmit info during casting.
+HiPlay设备类型定义
 
-**Type:** HiPlayDeviceInfo
+**Type:** [HiPlayDeviceInfo](arkts-avsession-avsession-hiplaydeviceinfo-i-sys.md)
 
 **Since:** 24
 
@@ -58,7 +66,9 @@ HiPlayDeviceInfo is used to obtain device-specific information for HiPlay.transm
 ipAddress?: string
 ```
 
-device ip address if available.
+播放设备的IP地址。
+
+**系统接口：** 该接口为系统接口。
 
 **Type:** string
 
@@ -78,7 +88,9 @@ device ip address if available.
 isLegacy?: boolean
 ```
 
-Indicates the current device is legacy or not.
+表示当前设备是否为旧版设备。 true表示是，false表示不是。 
+
+**系统接口：** 该接口为系统接口。
 
 **Type:** boolean
 
@@ -98,9 +110,15 @@ Indicates the current device is legacy or not.
 mediumTypes?: int
 ```
 
-Medium types used to discover devices.1: BLE2: COAP
+用于发现设备的介质类型。
 
-**Type:** int
+1：蓝牙低功耗（BLE），用于蓝牙设备的发现和链接。 
+
+2：受限应用协议（COAP），用于局域网内的设备发现。
+
+**系统接口：** 该接口为系统接口。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -118,7 +136,9 @@ Medium types used to discover devices.1: BLE2: COAP
 networkId?: string
 ```
 
-Network id.
+播放设备的网络ID。
+
+**系统接口：** 该接口为系统接口。
 
 **Type:** string
 
@@ -138,9 +158,11 @@ Network id.
 providerId?: int
 ```
 
-device provider which supplies the route capability.
+播放设备提供商。
 
-**Type:** int
+**系统接口：** 该接口为系统接口。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

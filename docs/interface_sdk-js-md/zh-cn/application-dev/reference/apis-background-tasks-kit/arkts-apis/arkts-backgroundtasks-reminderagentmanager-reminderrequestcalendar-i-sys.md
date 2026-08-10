@@ -14,6 +14,12 @@ ReminderRequestCalendar extends ReminderRequest
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## rruleWantAgent
 
 ```TypeScript
@@ -22,7 +28,7 @@ rruleWantAgent?: WantAgent
 
 自定义重复日程，指明需要拉起的 Service Extension。
 
-**类型：** WantAgent
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 12
 

@@ -5,8 +5,7 @@ type CreateNativeMediaPlayerCallback =
         (handler: NativeMediaPlayerHandler, mediaInfo: MediaInfo) => NativeMediaPlayerBridge
 ```
 
-Defines a **CreateNativeMediaPlayerCallback** object used as a parameter of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_callback. This object is used to create a player to take over media playback of the web page.
+[onCreateNativeMediaPlayer](../../../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer12)方法的参数。一个回调函数，创建一个播放器，用于接管网页中的媒体播放。
 
 **Since:** 23
 
@@ -20,12 +19,12 @@ Defines a **CreateNativeMediaPlayerCallback** object used as a parameter of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Object used to report the player status to the ArkWeb engine.  |
-| mediaInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the media on the web page.  |
+| handler | [NativeMediaPlayerHandler](arkts-arkweb-webview-nativemediaplayerhandler-i.md) | Yes | 通过该对象，将播放器的状态报告给 ArkWeb 内核。 |
+| mediaInfo | [MediaInfo](arkts-arkweb-webview-mediainfo-i.md) | Yes | 网页媒体的信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Instance of the interface class between the player that takes over web media and the ArkWeb kernel. \_\_\_HTML\_TAG\_USD\_0\_\_\_The application needs to implement this interface class. \_\_\_HTML\_TAG\_USD\_1\_\_\_ The ArkWeb engine uses an object of this interface class to control the player created by the application to take over web page media. \_\_\_HTML\_TAG\_USD\_2\_\_\_If the application returns **null**, the application does not take over the media playback, and the media will be played by the ArkWeb engine.  |
+| [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) | 接管网页媒体的播放器和 ArkWeb 内核之间的一个接口类。<br/>应用需要实现该接口类。<br/> ArkWeb 内核通过该接口类的对象来控制应用创 建的用来接管网页媒体的播放器。<br/>如果应用返回了 null，则表示应用不接管这个媒体的播放，由 ArkWeb 内核来播放该媒体。 |
 

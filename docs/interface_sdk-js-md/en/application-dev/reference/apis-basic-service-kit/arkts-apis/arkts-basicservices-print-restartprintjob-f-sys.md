@@ -1,12 +1,18 @@
 # restartPrintJob (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## restartPrintJob
 
 ```TypeScript
 function restartPrintJob(jobId: string): Promise<void>
 ```
 
-Restarts a print job that has been finished before. This API uses a promise to return the result.
+重新打印之前打印过的打印任务，使用Promise异步回调。
 
 **Since:** 20
 
@@ -24,22 +30,22 @@ Restarts a print job that has been finished before. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | ID of a print job that has been finished before. |
+| jobId | string | Yes | 之前打印过的打印任务ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

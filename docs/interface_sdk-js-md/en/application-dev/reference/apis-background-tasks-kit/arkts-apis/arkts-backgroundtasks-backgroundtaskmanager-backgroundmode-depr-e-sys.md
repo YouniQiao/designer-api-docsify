@@ -1,6 +1,6 @@
 # BackgroundMode
 
-Defines the type of a continuous task.
+长时任务类型。
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ Defines the type of a continuous task.
 WIFI_INTERACTION = 7
 ```
 
-WLAN-related.
+WLAN相关
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ WLAN-related.
 VOIP = 8
 ```
 
-Audio and video calls.
+音视频通话
 
 **Since:** 8
 

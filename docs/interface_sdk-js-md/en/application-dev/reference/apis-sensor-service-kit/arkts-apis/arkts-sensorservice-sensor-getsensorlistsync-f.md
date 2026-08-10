@@ -1,12 +1,18 @@
 # getSensorListSync
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## getSensorListSync
 
 ```TypeScript
 function getSensorListSync(): Array<Sensor>
 ```
 
-Obtains information about all sensors on the device. This API returns the result synchronously.
+获取设备上的所有传感器信息，使用同步方式返回结果。
 
 **Since:** 12
 
@@ -20,15 +26,15 @@ Obtains information about all sensors on the device. This API returns the result
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Sensor&gt; | List of sensor attributes. |
+| Array&lt;Sensor&gt; | 使用同步方式返回传感器属性列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

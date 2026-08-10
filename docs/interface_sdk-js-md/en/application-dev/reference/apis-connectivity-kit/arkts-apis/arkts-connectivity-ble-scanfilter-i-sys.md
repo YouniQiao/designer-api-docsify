@@ -10,13 +10,19 @@ Describes the criteria for filtering scanning results can be set.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## irk
 
 ```TypeScript
 irk?: Uint8Array
 ```
 
-Identity Resolving Key of BLE peripheral device.\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ needs to be used with \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+Identity Resolving Key of BLE peripheral device.{@link ScanFilter#irk} needs to be used with {@link ScanFilter#address}.
 
 **Type:** Uint8Array
 

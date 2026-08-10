@@ -1,12 +1,18 @@
 # destroyAbilityConnectionSession
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## destroyAbilityConnectionSession
 
 ```TypeScript
 function destroyAbilityConnectionSession(sessionId: int): void
 ```
 
-Destroys a collaboration session between applications.
+销毁应用间的协同会话。
 
 **Since:** 18
 
@@ -22,9 +28,9 @@ Destroys a collaboration session between applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Collaboration session ID. |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 待销毁的协同会话ID。&lt;br /&gt;取值范围是大于100的整数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

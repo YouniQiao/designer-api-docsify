@@ -1,6 +1,6 @@
 # HdrStaticMetadata
 
-静态元数据值，[HdrMetadataKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中HDR\_STATIC\_METADATA关键字对应的值。
+静态元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_STATIC_METADATA关键字对应的值。
 
 **起始版本：** 12
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## displayPrimariesX
 
 ```TypeScript
@@ -18,7 +24,7 @@ displayPrimariesX: Array<double>
 
 The X-coordinate of the primary colors. Specifies the normalized X-coordinates of the display device's three primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b).Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
-**类型：** Array&lt;double&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **起始版本：** 12
 
@@ -36,7 +42,7 @@ displayPrimariesY: Array<double>
 
 The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates of the display device's three primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b).Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
-**类型：** Array&lt;double&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **起始版本：** 12
 
@@ -56,7 +62,7 @@ Maximum brightness of displayed content.
 
 The value is measured in units of 1, with a maximum allowed value of 65,535.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -76,7 +82,7 @@ Maximum average brightness of displayed content.
 
 The value is measured in units of 1, with a maximum allowed value of 65,535.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -96,7 +102,7 @@ Maximum luminance of the image's primary display.The value is measured in units 
 
 Unit:nit.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -116,7 +122,7 @@ Minimum luminance of the image's primary display.
 
 The value is measured in units of 0.0001, with a maximum allowed value of 6.55535.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -136,7 +142,7 @@ The X-coordinate of the white point value. Specifies the normalized X-coordinate
 
 The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -156,7 +162,7 @@ The Y-coordinate of the white point value. Specifies the normalized Y-coordinate
 
 The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 

@@ -1,12 +1,18 @@
 # getUniformDataTypeByFilenameExtension
 
+## Modules to Import
+
+```TypeScript
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+```
+
 ## getUniformDataTypeByFilenameExtension
 
 ```TypeScript
 function getUniformDataTypeByFilenameExtension(filenameExtension: string, belongsTo?: string): string
 ```
 
-Obtains the uniform data type ID based on the given file name extension and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned.
+根据给定的文件后缀名和所归属的标准化数据类型查询标准化数据类型ID，若有多个符合条件的标准化数据类型ID，则返回第一个。
 
 **Since:** 11
 
@@ -22,22 +28,22 @@ Obtains the uniform data type ID based on the given file name extension and data
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filenameExtension | string | Yes | File name extension. |
-| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. This parameter has no default value. If it is not specified, the [uniform data type ID] is queried based on the file name extension. |
+| filenameExtension | string | Yes | 文件后缀名称，需要包含点号，如'.ts'、'.jpg'等。 |
+| belongsTo | string | No | 要查询的标准化数据类型所归属类型ID，用于限定查询范围。当需要查询特定归属类型下的数据类型时传入此参数，无默认值，若不传入此参数则只按照文件后缀名称查询[标准化数据类型ID]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | ID of the uniform data type that matches the specified file name extension and **belongsTo** ( if specified). If no match is found, the data type dynamically generated based on the rules specified by the input parameters is returned. |
+| string | 返回与给定文件后缀名以及归属类型ID（如果设置了belongsTo参数）匹配的标准化数据类型ID。如果要查询的标准化数据类型不存在，则返回根据入参按指定规则生成的动态类型（动态类型是系统动态 生成的类型标识，以'flex.'为前缀，用于表示未预定义的数据类型）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height: double
 
 矩形区域的高度，单位为vp。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -38,7 +44,7 @@ left: double
 
 矩形区域的左边界值，单位为vp。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -58,7 +64,7 @@ top: double
 
 矩形区域的上边界值，单位为vp。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -78,7 +84,7 @@ width: double
 
 矩形区域的宽度，单位为vp。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 

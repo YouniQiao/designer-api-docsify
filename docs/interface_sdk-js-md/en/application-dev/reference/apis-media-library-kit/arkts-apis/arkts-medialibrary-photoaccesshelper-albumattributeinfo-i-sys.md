@@ -12,6 +12,12 @@ Album attribute info.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## attrValue
 
 ```TypeScript

@@ -1,16 +1,20 @@
 # begin
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## begin
 
 ```TypeScript
 function begin(name: string, flags?: int): HiTraceId
 ```
 
-Starts call chain trace. This API returns the result synchronously.
+开始跟踪，同步接口。用于在业务流程的起始节点启动分布式跟踪，例如在用户点击按钮发起请求、服务端收到请求开始处理、启动后台任务等场景。
 
-If the current thread's TLS does not contain a valid HiTrace ID, this function generates one, stores it in TLS, and returns it.
-
-If the current thread's TLS already contains a valid HiTrace ID, this function does not start tracing and returns an invalid HiTrace ID with all property values being 0.
+当前线程TLS（Thread Local Storage，线程本地存储）中不存在有效的HiTraceId时，生成有效的HiTraceId并设置到当前线程TLS中，返回该HiTraceId。当前线程TLS中已存在有效的HiTraceId时，不会开始新的跟踪，返回各属性值均为0的无效HiTraceId。
 
 **Since:** 8
 
@@ -24,16 +28,16 @@ If the current thread's TLS already contains a valid HiTrace ID, this function d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Traced service name. It is recommended that the length of this parameter be less than or equal to 63 bytes. The excess part will be truncated. |
-| flags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Trace flag combination. For details, see [HiTraceFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is **0**. |
+| name | string | Yes | 跟踪业务名。该参数的长度不超过63Byte，超出部分将被截断。 |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 跟踪标志组合，具体可参考[HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md)。当需要跟踪异步调用时设置 INCLUDE_ASYNC，不创建分支信息时设置DONOT_CREATE_SPAN，调试场景下设置TP_INFO可打印埋点信息。默认值为0，表示只跟踪同步调用、创建分支信 息、不打印日志。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | HiTraceId** instance. |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 当前线程TLS中的HiTraceId实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Start tracing. The trace flag is the union of INCLUDE_ASYNC and DONOT_CREATE_SPAN.

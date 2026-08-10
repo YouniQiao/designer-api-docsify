@@ -10,6 +10,12 @@ Provides methods to accessing bluetooth audio related capabilities.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { a2dp } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

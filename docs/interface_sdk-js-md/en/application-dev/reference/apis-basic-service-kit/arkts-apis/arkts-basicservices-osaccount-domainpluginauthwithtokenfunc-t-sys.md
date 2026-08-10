@@ -5,7 +5,7 @@ type DomainPluginAuthWithTokenFunc = (domainAccountInfo: DomainAccountInfo,
     token: Uint8Array, callback: IUserAuthCallback) => void
 ```
 
-Authenticates the specified domain account with an authorization token.
+使用授权令牌认证指定的域账号。
 
 **Since:** 23
 
@@ -21,7 +21,7 @@ Authenticates the specified domain account with an authorization token.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the domain account information for authentication.  |
-| token | Uint8Array | Yes | Indicates the authorization token generated when PIN or biometric authentication is successful.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the callback for notifying the authentication result.  |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 表示域账号信息。 |
+| token | Uint8Array | Yes | 表示PIN码或生物识别认证成功时生成的授权令牌。 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 表示认证结果回调。 |
 

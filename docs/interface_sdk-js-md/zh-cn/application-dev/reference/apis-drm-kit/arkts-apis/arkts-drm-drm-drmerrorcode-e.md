@@ -1,0 +1,84 @@
+# DrmErrorCode
+
+Enumerates DRM error codes.
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+<!--Device-drm-enum DrmErrorCode--><!--Device-drm-enum DrmErrorCode-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+## ERROR_UNKNOWN
+
+```TypeScript
+ERROR_UNKNOWN = 24700101
+```
+
+All unknown errors.
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DrmErrorCode-ERROR_UNKNOWN = 24700101--><!--Device-DrmErrorCode-ERROR_UNKNOWN = 24700101-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+## MAX_SYSTEM_NUM_REACHED
+
+```TypeScript
+MAX_SYSTEM_NUM_REACHED = 24700103
+```
+
+Meet max MediaKeySystem num limit.
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DrmErrorCode-MAX_SYSTEM_NUM_REACHED = 24700103--><!--Device-DrmErrorCode-MAX_SYSTEM_NUM_REACHED = 24700103-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+## MAX_SESSION_NUM_REACHED
+
+```TypeScript
+MAX_SESSION_NUM_REACHED = 24700104
+```
+
+Meet max MediaKeySession num limit.
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DrmErrorCode-MAX_SESSION_NUM_REACHED = 24700104--><!--Device-DrmErrorCode-MAX_SESSION_NUM_REACHED = 24700104-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+## SERVICE_FATAL_ERROR
+
+```TypeScript
+SERVICE_FATAL_ERROR = 24700201
+```
+
+Fatal service error, for example, service died.
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DrmErrorCode-SERVICE_FATAL_ERROR = 24700201--><!--Device-DrmErrorCode-SERVICE_FATAL_ERROR = 24700201-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+

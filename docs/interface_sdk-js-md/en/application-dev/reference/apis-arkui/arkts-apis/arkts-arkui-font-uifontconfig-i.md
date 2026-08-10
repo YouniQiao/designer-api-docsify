@@ -8,13 +8,19 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## fallbackGroups
 
 ```TypeScript
 fallbackGroups: Array<UIFontFallbackGroupInfo>
 ```
 
-The fallback font info.
+备用字体集。
 
 **Type:** Array&lt;UIFontFallbackGroupInfo&gt;
 
@@ -34,7 +40,7 @@ The fallback font info.
 fontDir: Array<string>
 ```
 
-The paths of system font files.
+系统字体文件所在的路径。
 
 **Type:** Array&lt;string&gt;
 
@@ -54,7 +60,7 @@ The paths of system font files.
 generic: Array<UIFontGenericInfo>
 ```
 
-The generic font info.
+系统所支持的通用字体集列表。
 
 **Type:** Array&lt;UIFontGenericInfo&gt;
 

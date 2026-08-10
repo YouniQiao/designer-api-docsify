@@ -1,6 +1,6 @@
 # ActionButton
 
-Defines a button displayed in the reminder notification.
+用于设置弹出的提醒通知信息上显示的按钮类型和标题。
 
 **Since:** 7
 
@@ -14,13 +14,19 @@ Defines a button displayed in the reminder notification.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## title
 
 ```TypeScript
 title: string
 ```
 
-Text on the button.
+按钮显示的标题。
 
 **Type:** string
 
@@ -42,9 +48,9 @@ Text on the button.
 type: ActionButtonType
 ```
 
-Button type.
+按钮的类型。
 
-**Type:** ActionButtonType
+**Type:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
 **Since:** 7
 

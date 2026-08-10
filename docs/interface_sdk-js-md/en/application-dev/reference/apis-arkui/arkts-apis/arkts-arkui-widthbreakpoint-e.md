@@ -1,12 +1,10 @@
 # WidthBreakpoint
 
-Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Type of window width breakpoint.
 
-The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed.
+**Since:** 22
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 <!--Device-unnamed-declare enum WidthBreakpoint--><!--Device-unnamed-declare enum WidthBreakpoint-End-->
 
@@ -18,15 +16,15 @@ The following table lists default width breakpoint thresholds for typical device
 WIDTH_XS = 0
 ```
 
-The window width is less than 320 vp.
+Window width < 320vp type.
 
-**Since:** 13
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WidthBreakpoint-WIDTH_XS = 0--><!--Device-WidthBreakpoint-WIDTH_XS = 0-End-->
 
@@ -38,15 +36,15 @@ The window width is less than 320 vp.
 WIDTH_SM = 1
 ```
 
-The window width is greater than or equal to 320 vp and less than 600 vp.
+Window width >= 320vp and < 600vp type.
 
-**Since:** 13
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WidthBreakpoint-WIDTH_SM = 1--><!--Device-WidthBreakpoint-WIDTH_SM = 1-End-->
 
@@ -58,15 +56,15 @@ The window width is greater than or equal to 320 vp and less than 600 vp.
 WIDTH_MD = 2
 ```
 
-The window width is greater than or equal to 600 vp and less than 840 vp.
+Window width >= 600vp and < 840vp type.
 
-**Since:** 13
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WidthBreakpoint-WIDTH_MD = 2--><!--Device-WidthBreakpoint-WIDTH_MD = 2-End-->
 
@@ -78,15 +76,15 @@ The window width is greater than or equal to 600 vp and less than 840 vp.
 WIDTH_LG = 3
 ```
 
-The window width is greater than or equal to 840 vp and less than 1440 vp.
+Window width >= 840vp and < 1440vp type.
 
-**Since:** 13
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WidthBreakpoint-WIDTH_LG = 3--><!--Device-WidthBreakpoint-WIDTH_LG = 3-End-->
 
@@ -98,15 +96,15 @@ The window width is greater than or equal to 840 vp and less than 1440 vp.
 WIDTH_XL = 4
 ```
 
-The window width is greater than or equal to 1440 vp.
+Window width >= 1440vp type.
 
-**Since:** 13
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WidthBreakpoint-WIDTH_XL = 4--><!--Device-WidthBreakpoint-WIDTH_XL = 4-End-->
 

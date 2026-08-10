@@ -14,6 +14,12 @@ Defines user face data.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## angularVelocity
 
 ```TypeScript
@@ -22,7 +28,7 @@ angularVelocity?: double[]
 
 Angular velocity of user motion status, in rad/s.
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 26.0.0
 
@@ -44,7 +50,7 @@ azimuth?: double[]
 
 Azimuth of user motion status.The value ranges from 0 to 360, in degrees.
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 26.0.0
 
@@ -66,7 +72,7 @@ faceNum?: int
 
 Number of faces detected.The value must be an integer within [0,3].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -88,7 +94,7 @@ gravityAcceleration?: double[]
 
 Gravity acceleration of user motion status, in m/s².
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 26.0.0
 
@@ -110,7 +116,7 @@ linearAcceleration?: double[][]
 
 Linear acceleration of user motion status, in m/s².
 
-**Type:** double[][]
+**Type:** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
 
 **Since:** 26.0.0
 
@@ -132,7 +138,7 @@ visualAngle?: double[]
 
 User visual angle.The value ranges from 0 to 90, in degrees.
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 26.0.0
 

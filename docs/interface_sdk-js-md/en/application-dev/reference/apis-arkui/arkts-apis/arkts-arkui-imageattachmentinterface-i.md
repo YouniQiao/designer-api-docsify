@@ -1,6 +1,6 @@
 # ImageAttachmentInterface
 
-Defines the ImageAttachmentInterface.
+定义图片设置项接口。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines the ImageAttachmentInterface.
 colorFilter?: ColorFilterType
 ```
 
-Image color filter of the styled string.
+获取属性字符串的图片颜色滤镜效果。
 
-**Type:** ColorFilterType
+**Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
 **Since:** 15
 
@@ -38,9 +38,9 @@ Image color filter of the styled string.
 layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-Image layout.
+设置图片布局。不传入时使用默认布局（外边距、内边距和圆角均为0）。
 
-**Type:** ImageAttachmentLayoutStyle
+**Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
 **Since:** 12
 
@@ -60,11 +60,11 @@ Image layout.
 objectFit?: ImageFit
 ```
 
-Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
+设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。具体枚举及说明请参考ImageFit。
 
-Default value: **ImageFit.Cover
+默认值：ImageFit.Cover
 
-**Type:** ImageFit
+**Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **Since:** 12
 
@@ -84,12 +84,11 @@ Default value: **ImageFit.Cover
 size?: SizeOptions
 ```
 
-Image size, which does not support percentage values.
+设置图片大小，不支持百分比。
 
-The default value of **size** depends on the value of **objectFit**. For example, if the value of **objectFit** is  
-**Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
+size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。比如当objectFit的值为Cover时，图片高度为组件高度减去组件上下的内边距，图片宽度为组件宽度减去组件左右的内边距。
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
 
 **Since:** 12
 
@@ -109,9 +108,9 @@ The default value of **size** depends on the value of **objectFit**. For example
 value: PixelMap
 ```
 
-Image data source.
+设置图片数据源。
 
-**Type:** PixelMap
+**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 12
 
@@ -131,11 +130,11 @@ Image data source.
 verticalAlign?: ImageSpanAlignment
 ```
 
-Alignment mode of the image with the text.
+设置图片基于文本的对齐方式。
 
-Default value: **ImageSpanAlignment.BOTTOM
+默认值：ImageSpanAlignment.BOTTOM
 
-**Type:** ImageSpanAlignment
+**Type:** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
 
 **Since:** 12
 

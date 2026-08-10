@@ -1,40 +1,31 @@
 # NavDestination
 
-**NavDestination** is the root container of a destination page and represents the content area of the
-[Navigation]{@link navigation} component.
+作为子页面的根容器，用于显示[Navigation]{@link navigation}的内容区。
 
-> **NOTE**
+> **说明：**
 
-> - Since API version 11, this component supports the safe area attribute by default, with the default attribute
-> value being **expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**. You can override
-> this attribute to change the default behavior. In earlier versions, you need to use the
-> [expandSafeArea]{@link common} attribute to implement the safe area feature.
+> - 该组件从API version 11开始默认支持安全区避让特性(默认值为：expandSafeArea([SafeAreaType.SYSTEM],
+> [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM]))，开发者可以重写该属性覆盖默认行为，API version 11之前的版本需配合[expandSafeArea]{@link common}属性实现
+> 安全区避让。
 >
-> - The **NavDestination** component must be used in conjunction with the **Navigation** component to act as the root
-> node for the navigation destination page. When used alone, it can only function as a standard container component
-> and does not possess any routing-related attributes or capabilities.
+> - NavDestination组件必须配合Navigation使用，作为Navigation目的页面的根节点，单独使用只能作为普通容器组件，不具备路由相关属性能力。
 >
-> - If the lifecycle of an intermediate page in the routing stack changes, the lifecycle callbacks (**onWillShow**,
-> **onShown**, **onHidden**, **onWillDisappear**) of the top **NavDestination** in the stack both before and after
-> the navigation will be triggered last in the sequence.
+> - 如果路由栈中间页面的生命周期发生变化，跳转之前的栈顶NavDestination的生命周期(onWillShow, onShown, onHidden, onWillDisappear)与跳转之后的栈顶
+> NavDestination的生命周期(onWillShow, onShown, onHidden, onWillDisappear)均在最后触发。
 >
-> - If no main title or subtitle is set for **NavDestination** and there is no back button, the title bar is not
-> displayed.
+> - NavDestination未设置主副标题并且没有返回键时，不显示标题栏。
 >
-> - Avoid setting layout-related attributes such as the position and size. They may result in display issues on the
-> page. For example, do not apply the [zIndex]{@link CommonMethod#zIndex} attribute to a **NavDestination**
-> component. This will override the system-defined stacking order and may cause display anomalies.
+> - 不建议设置位置、大小等布局相关属性，可能会造成页面显示异常。例如在NavDestination上添加[zIndex]{@link CommonMethod#zIndex}属性时，会覆盖掉系统设置的层级，可能导致出现显示异常。
 
-## Child Components
+## 子组件
 
-    **NOTE**  
-    
-    - Allowed child component types: built-in and custom components, including rendering control types (  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, and  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_).  
-    
-    - Number of child components: multiple.
+> **说明：**
+> 
+> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)和
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
+> 
+> - 子组件个数：多个。
 
 ## NavDestination
 
@@ -42,7 +33,7 @@
 NavDestination()
 ```
 
-Creates the root container for a subpage in [Navigation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+创建[Navigation]{@link navigation}子页面的根容器。
 
 **Since:** 9
 
@@ -56,3 +47,17 @@ Creates the root container for a subpage in [Navigation]\_\_\_JSDOC\_LINK\_DESC\
 
 ## Summary
 
+- [NavDestinationCommonTitle](arkts-arkui-navdestination-navdestinationcommontitle-i.md)
+- [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md)
+- [NavDestinationCustomTitle](arkts-arkui-navdestination-navdestinationcustomtitle-i.md)
+- [NavDestinationTransition](arkts-arkui-navdestination-navdestinationtransition-i.md)
+- [NestedScrollInfo](arkts-arkui-navdestination-nestedscrollinfo-i.md)
+- [RouteMapConfig](arkts-arkui-navdestination-routemapconfig-i.md)
+- [NavDestinationTransitionDelegate](arkts-arkui-navdestination-navdestinationtransitiondelegate-t.md)
+- [Orientation](arkts-arkui-navdestination-orientation-t.md)
+- [RestoreStateCallback](arkts-arkui-navdestination-restorestatecallback-t.md)
+- [SaveStateCallback](arkts-arkui-navdestination-savestatecallback-t.md)
+- [NavDestinationActiveReason](arkts-arkui-navdestination-navdestinationactivereason-e.md)
+- [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md)
+- [NavigationSystemTransitionType](arkts-arkui-navdestination-navigationsystemtransitiontype-e.md)
+- [VisibilityChangeReason](arkts-arkui-navdestination-visibilitychangereason-e.md)

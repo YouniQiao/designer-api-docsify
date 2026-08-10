@@ -1,6 +1,6 @@
 # ScaleOption
 
-Set scaling parameters
+缩放参数。
 
 **Since:** 23
 
@@ -10,13 +10,25 @@ Set scaling parameters
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## centerX
 
 ```TypeScript
 centerX?: double
 ```
 
-Transform the x-axis coordinate of the center point.
+变换中心点x轴坐标。
+
+单位：px
+
+默认值：组件中心点x轴坐标。
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -36,7 +48,13 @@ Transform the x-axis coordinate of the center point.
 centerY?: double
 ```
 
-Transform the y-axis coordinate of the center point.
+变换中心点y轴坐标。
+
+单位：px
+
+默认值：组件中心点y轴坐标。
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -56,7 +74,11 @@ Transform the y-axis coordinate of the center point.
 x?: double
 ```
 
-Zoom factor of the x-axis.
+x轴的缩放倍数。x>1时以x轴方向放大，0<x<1时以x轴方向缩小，x<0时沿x轴反向并缩放。
+
+默认值：1
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -76,7 +98,11 @@ Zoom factor of the x-axis.
 y?: double
 ```
 
-Zoom factor of the y-axis.
+y轴的缩放倍数。y>1时以y轴方向放大，0<y<1时以y轴方向缩小，y<0时沿y轴反向并缩放。
+
+默认值：1
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -96,7 +122,11 @@ Zoom factor of the y-axis.
 z?: double
 ```
 
-Zoom factor of the z-axis.
+z轴的缩放倍数。z>1时以z轴方向放大，0<z<1时以z轴方向缩小，z<0时沿z轴反向并缩放。
+
+默认值：1
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 

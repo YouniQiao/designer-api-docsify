@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## equivalentFocalLength
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly equivalentFocalLength: int
 
 当前焦距比对应的等效焦距值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ readonly zoomRatio: double
 
 可变焦距比。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.0.0
 

@@ -1,11 +1,12 @@
 # OverlayOptions
 
 浮层的定位。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 12版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。  
-    
-    align和offset都设置时，效果重叠，浮层相对于组件方位定位后，再基于当前位置的左上角进行偏移。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 12版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> 
+> align和offset都设置时，效果重叠，浮层相对于组件方位定位后，再基于当前位置的左上角进行偏移。
 
 **起始版本：** 12
 
@@ -25,7 +26,7 @@ align?: Alignment
 
 默认值：TopStart
 
-**类型：** Alignment
+**类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **起始版本：** 7
 
@@ -47,7 +48,7 @@ offset?: OverlayOffset
 
 设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。
 
-**类型：** OverlayOffset
+**类型：** [OverlayOffset](arkts-arkui-overlayoffset-i.md)
 
 **起始版本：** 7
 

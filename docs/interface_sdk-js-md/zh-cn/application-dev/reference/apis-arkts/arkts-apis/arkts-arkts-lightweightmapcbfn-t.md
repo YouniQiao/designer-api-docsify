@@ -20,7 +20,7 @@ LightWeightMap中forEach方法的回调函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | V | 是 | 当前遍历到的元素键值对的值。  |
-| key | K | 是 | 当前遍历到的元素键值对的键。  |
-| map | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | 是 | 当前正在遍历的LightWeightMap实例。  |
+| value | V | 是 | 当前遍历到的元素键值对的值。 |
+| key | K | 是 | 当前遍历到的元素键值对的键。 |
+| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | 是 | 当前正在遍历的LightWeightMap实例。 |
 

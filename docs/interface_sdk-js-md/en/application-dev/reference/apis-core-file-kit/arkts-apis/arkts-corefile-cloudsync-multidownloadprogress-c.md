@@ -1,6 +1,6 @@
 # MultiDownloadProgress
 
-Represents the batch download progress of a file from the Drive Kit.
+云文件批量缓存的进度信息。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Represents the batch download progress of a file from the Drive Kit.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## getFailedFiles
 
 ```TypeScript
 getFailedFiles(): Array<FailedFileInfo>
 ```
 
-Obtains the list of files that fail to be downloaded in batches.
+获取批量缓存失败的文件列表。
 
 **Since:** 20
 
@@ -30,15 +36,15 @@ Obtains the list of files that fail to be downloaded in batches.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FailedFileInfo&gt; | List of file URIs that fail to be downloaded and the corresponding error types. |
+| Array&lt;FailedFileInfo&gt; | 返回缓存失败的文件URI列表及其对应的错误类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -76,7 +82,7 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 getSuccessfulFiles(): Array<string>
 ```
 
-Obtains the list of files that are successfully downloaded in batches.
+获取批量缓存成功的文件列表。
 
 **Since:** 20
 
@@ -90,15 +96,15 @@ Obtains the list of files that are successfully downloaded in batches.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of URIs of the files that are successfully downloaded. The value is an array. |
+| Array&lt;string&gt; | 数组类型，返回缓存成功的文件URI列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -134,10 +140,9 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 downloadedSize: long
 ```
 
-Size of the downloaded file, in bytes. The value range is  
-[0, INT64\_MAX). If the progress is abnormal, the value **INT64\_MAX** is returned.
+已缓存的文件大小，取值范围为 [0, INT64_MAX)，单位：Byte。如果进度异常，返回值为 INT64_MAX。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -153,9 +158,9 @@ Size of the downloaded file, in bytes. The value range is
 errType: DownloadErrorType
 ```
 
-Type of the error returned when the batch download fails.
+返回批量缓存任务执行失败时的错误类型。
 
-**Type:** DownloadErrorType
+**Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
 **Since:** 20
 
@@ -171,9 +176,9 @@ Type of the error returned when the batch download fails.
 failedCount: int
 ```
 
-Number of files that fail to be downloaded. The value ranges from 0 to 400. If the progress is abnormal, the value **-1** is returned.
+缓存失败的文件数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -189,9 +194,9 @@ Number of files that fail to be downloaded. The value ranges from 0 to 400. If t
 state: State
 ```
 
-Execution state of the batch download.
+批量缓存任务的执行状态。
 
-**Type:** State
+**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **Since:** 20
 
@@ -207,10 +212,9 @@ Execution state of the batch download.
 successfulCount: int
 ```
 
-Number of successfully downloaded files. The value ranges from 0 to 400. If the progress is abnormal, the value  
-**-1** is returned.
+缓存成功的文件数量，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -226,10 +230,9 @@ Number of successfully downloaded files. The value ranges from 0 to 400. If the 
 taskId: long
 ```
 
-ID of a batch download task. The value ranges from 0 to INT64\_MAX. If the progress is abnormal, the value **-1**  
-is returned.
+批量缓存任务的ID，取值范围为0到INT64_MAX。如果进度异常，返回值为-1。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -245,9 +248,9 @@ is returned.
 totalCount: int
 ```
 
-Total number of files. The value ranges from 0 to 400. If the progress is abnormal, the value **-1** is returned.
+文件总数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -263,10 +266,9 @@ Total number of files. The value ranges from 0 to 400. If the progress is abnorm
 totalSize: long
 ```
 
-Total size of the files to be downloaded, in bytes. The value range is  
-[0, INT64\_MAX). If the progress is abnormal, the value **INT64\_MAX** is returned.
+待缓存的文件总大小，取值范围为 [0, INT64_MAX)，单位为 Byte。如果进度异常，返回值为 INT64_MAX。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 

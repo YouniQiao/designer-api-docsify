@@ -1,6 +1,6 @@
 # ActionType
 
-Enumerates gesture event types.
+手势事件类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates gesture event types.
 CANCEL = 0
 ```
 
-Canceled.
+手势取消。
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Canceled.
 BEGIN = 1
 ```
 
-Started.
+手势开始。
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Started.
 UPDATE = 2
 ```
 
-Updated.
+手势更新。
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Updated.
 END = 3
 ```
 
-Ended.
+手势结束。
 
 **Since:** 10
 

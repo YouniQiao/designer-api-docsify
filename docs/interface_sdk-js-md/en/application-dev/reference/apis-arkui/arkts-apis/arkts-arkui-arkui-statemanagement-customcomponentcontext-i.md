@@ -1,6 +1,7 @@
 # CustomComponentContext
 
-The **CustomComponentContext** class provides access to component-level services, including the reuse pool. You can obtain an instance through [UIUtils.getCustomComponentContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+`CustomComponentContext`类提供对组件级服务的访问，包括复用池。通过  
+[UIUtils.getCustomComponentContext](arkts-arkui-arkui-statemanagement-uiutils-c.md#getcustomcomponentcontext)获取实例。
 
 **Since:** 26.0.0
 
@@ -10,15 +11,20 @@ The **CustomComponentContext** class provides access to component-level services
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## getReusePool
 
 ```TypeScript
 getReusePool(): IReusePool | undefined
 ```
 
-Obtains the global reuse pool of the custom component. If the component does not configure the reuse pool through  
-**reusePool** and **poolAccepts**, **undefined** is returned. For details about how to configure the global reuse pool, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+返回该自定义组件拥有的全局复用池。如果组件或其上层组件没有通过`reusePool`和`poolAccepts`配置全局复用池，则返回`undefined`。配置全局复用池方式请参考  
+[全局复用开发指南](../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **Since:** 26.0.0
 
@@ -36,5 +42,42 @@ Obtains the global reuse pool of the custom component. If the component does not
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If a global reuse pool is configured for the current component, the reuse pool information is returned. Otherwise, **undefined** is returned. |
+| [IReusePool](arkts-arkui-utils-ireusepool-i.md) | 当前组件配置全局复用池时，返回复用池信息，否则返回`undefined`。 |
+
+## Examples
+
+```TypeScript
+import { UIUtils } from '@kit.ArkUI';
+
+@ReusableV2
+@ComponentV2
+struct ReusableChild {
+  build() {
+    Text('ReusableChild')
+  }
+}
+
+@Entry
+@ComponentV2({ reusePool: 'perInstance', poolAccepts: [ReusableChild], freezeWhenInactive: false })
+struct PoolOwner {
+  checkPool() {
+    const pool = UIUtils.getCustomComponentContext(this).getReusePool();
+    if (pool) {
+      console.info('Global reuse pool configured.');
+    } else {
+      console.info('No global reuse pool configured.');
+    }
+  }
+
+  build() {
+    Column() {
+      ReusableChild()
+      Button('Check Pool')
+        .onClick(() => {
+          this.checkPool();
+        })
+    }
+  }
+}
+```
 

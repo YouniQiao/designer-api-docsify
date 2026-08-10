@@ -1,6 +1,6 @@
 # SizeInVP
 
-Describes the window size, in vp.
+窗口大小，单位为vp。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Describes the window size, in vp.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: double
 ```
 
-Window height, in vp. The value is a floating-point number.
+窗口高度，单位为vp，该参数为浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Window height, in vp. The value is a floating-point number.
 width: double
 ```
 
-Window width, in vp. The value is a floating-point number.
+窗口宽度，单位为vp，该参数为浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 

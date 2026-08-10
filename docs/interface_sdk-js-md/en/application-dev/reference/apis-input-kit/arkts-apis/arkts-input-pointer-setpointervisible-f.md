@@ -1,12 +1,18 @@
 # setPointerVisible
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## setPointerVisible
 
 ```TypeScript
 function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the mouse pointer is visible in the current window. This API uses an asynchronous callback to return the result.
+设置当前窗口的鼠标光标是否显示，使用callback异步回调。
 
 **Since:** 9
 
@@ -20,17 +26,17 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true** indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| visible | boolean | Yes | 当前窗口鼠标光标是否显示。true表示显示，false表示不显示。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置鼠标光标显示状态成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported;\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported;<br>**Applicable version:** 18 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -44,15 +50,16 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Setting Mouse Pointer Visibility
             pointer.setPointerVisible(true, (error: BusinessError) => {
               if (error) {
-                console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to set pointer cursor visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 return;
               }
-              console.info(`Set pointer visible success`);
+              console.info(`Succeeded in setting pointer cursor visible.`);
             });
           } catch (error) {
-            console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set pointer cursor visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -67,7 +74,7 @@ struct Index {
 function setPointerVisible(visible: boolean): Promise<void>
 ```
 
-Sets whether the mouse pointer is visible in the current window. This API uses a promise to return the result.
+设置当前窗口的鼠标光标是否显示，使用Promise异步回调。
 
 **Since:** 9
 
@@ -81,22 +88,22 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true** indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
+| visible | boolean | Yes | 当前窗口鼠标光标是否显示。true表示显示，false表示不显示。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported;\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported;<br>**Applicable version:** 18 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -110,13 +117,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Setting Mouse Pointer Visibility
             pointer.setPointerVisible(false).then(() => {
-              console.info(`Set pointer visible success`);
+              console.info(`Succeeded in setting pointer cursor visible.`);
             }).catch((error: BusinessError) => {
-              console.error(`Set pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to set pointer cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set pointer cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

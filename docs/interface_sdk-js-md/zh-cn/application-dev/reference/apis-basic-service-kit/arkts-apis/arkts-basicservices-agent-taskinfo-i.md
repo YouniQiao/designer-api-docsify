@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## action
 
 ```TypeScript
@@ -21,7 +27,7 @@ readonly action: Action
 - UPLOAD表示上传任务。  
 - DOWNLOAD表示下载任务。
 
-**类型：** Action
+**类型：** [Action](arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 10
 
@@ -40,10 +46,10 @@ readonly ctime: long
 创建任务的Unix时间戳（毫秒），由当前设备的系统生成。
 
 说明：使用  
-[request.agent.search]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行查询时，该值需处于[after,before]区间内才可正常查询到任务id，before和after信息详见  
-[Filter]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+[request.agent.search](arkts-basicservices-agent-search-f.md#search)进行查询时，该值需处于[after,before]区间内才可正常查询到任务id，before和after信息详见  
+[Filter](arkts-basicservices-agent-filter-i.md)。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -61,8 +67,8 @@ readonly data?: string | Array<FormItem>
 
 任务值。
 
-- 通过[request.agent.show]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[request.agent.touch]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_进行查询。
+- 通过[request.agent.show](arkts-basicservices-agent-show-f.md#show)、  
+[request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)进行查询。
 
 **类型：** string \| Array&lt;FormItem&gt;
 
@@ -118,7 +124,7 @@ readonly faults: Faults
 
 任务的失败原因。
 
-**类型：** Faults
+**类型：** [Faults](arkts-basicservices-agent-faults-e.md)
 
 **起始版本：** 10
 
@@ -178,7 +184,7 @@ readonly mode: Mode
 - FOREGROUND表示前台任务。  
 - BACKGROUND表示后台任务。
 
-**类型：** Mode
+**类型：** [Mode](arkts-basicservices-agent-mode-e.md)
 
 **起始版本：** 10
 
@@ -196,7 +202,7 @@ readonly mtime: long
 
 任务状态改变时的Unix时间戳（毫秒），由当前设备的系统生成。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -214,7 +220,7 @@ readonly priority: int
 
 任务的优先级。前台任务的优先级比后台任务高。任务模式相同的情况下，该配置项的数字越小优先级越高，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -232,7 +238,7 @@ readonly progress: Progress
 
 任务的过程进度。
 
-**类型：** Progress
+**类型：** [Progress](arkts-basicservices-agent-progress-i.md)
 
 **起始版本：** 10
 
@@ -268,7 +274,7 @@ readonly retry: boolean
 
 任务的重试开关，仅应用于后台任务。
 
-- true：是  
+- true：是   
 - false：否
 
 **类型：** boolean
@@ -343,7 +349,7 @@ readonly tries: int
 
 任务的尝试次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -361,8 +367,8 @@ readonly url?: string
 
 任务的url。
 
-- 通过[request.agent.show]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[request.agent.touch]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_进行查询。
+- 通过[request.agent.show](arkts-basicservices-agent-show-f.md#show)、  
+[request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)进行查询。
 
 **类型：** string
 

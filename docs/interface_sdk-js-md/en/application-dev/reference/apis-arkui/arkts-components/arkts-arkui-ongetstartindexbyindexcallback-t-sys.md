@@ -4,7 +4,7 @@
 declare type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo
 ```
 
-Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
+根据指定的目标索引，计算Grid滚动到该位置时页面内对应的起始行，用于支持[scrollToIndex](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrolltoindex)等操作。此回调需与onGetStartIndexByOffset同时设置才能生效。
 
 **Since:** 23
 
@@ -14,19 +14,17 @@ Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
 
 <!--Device-unnamed-declare type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo--><!--Device-unnamed-declare type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 **System API:** This is a system API.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetIndex | int | Yes | The target index to scroll to.  |
+| targetIndex | int | Yes | 要滚动到的目标GridItem的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | - |
+| [StartLineInfo](../arkts-apis/arkts-arkui-grid-startlineinfo-i-sys.md) | 用于记录Grid页面内起始行的位置信息。 |
 

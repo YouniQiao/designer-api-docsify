@@ -1,5 +1,11 @@
 # sppConnect
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## sppConnect
 
 ```TypeScript
@@ -27,10 +33,10 @@ Connects to a remote device over the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device to connect. |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the connect parameters \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| option | [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md) | Yes | Indicates the connect parameters {@link SppOption}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

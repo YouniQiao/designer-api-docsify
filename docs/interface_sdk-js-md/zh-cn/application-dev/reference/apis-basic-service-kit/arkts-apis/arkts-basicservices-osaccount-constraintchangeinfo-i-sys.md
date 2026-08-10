@@ -12,13 +12,19 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## constraint
 
 ```TypeScript
 constraint: string
 ```
 
-发生变更的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+发生变更的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。
 
 **类型：** string
 

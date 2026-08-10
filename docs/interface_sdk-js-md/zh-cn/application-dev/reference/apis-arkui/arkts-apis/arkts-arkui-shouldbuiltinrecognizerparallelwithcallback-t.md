@@ -20,12 +20,12 @@ Defines the callback type used in shouldBuiltInRecognizerParallelWith.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| current | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the current gesture recognizer of the component  |
-| others | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | 是 | the gesture recognizers of the component on the response chain  |
+| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | 是 | the current gesture recognizer of the component |
+| others | Array&lt;[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)&gt; | 是 | the gesture recognizers of the component on the response chain |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | gesture recognizer of the component  |
+| [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | gesture recognizer of the component |
 

@@ -1,6 +1,6 @@
 # FontMetrics
 
-Describes the attributes that describe the font size and layout. A typeface has similar font metrics.
+描述字形大小和布局的属性信息，同一种字体中的字符属性大致相同。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Describes the attributes that describe the font size and layout. A typeface has 
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## ascent
 
 ```TypeScript
 ascent: double
 ```
 
-Distance from the baseline to the highest coordinate of the text. The value is a floating point number.
+文字最高处到基线之间的距离，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 
@@ -36,9 +42,9 @@ Distance from the baseline to the highest coordinate of the text. The value is a
 avgCharWidth?: double
 ```
 
-Average character width.
+平均字符宽度，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ Average character width.
 bottom: double
 ```
 
-Maximum distance from the baseline to the lowest coordinate of the text. The value is a floating point number.
+字体中任意字形边界框超出基线下方的最大距离，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 
@@ -76,9 +82,9 @@ Maximum distance from the baseline to the lowest coordinate of the text. The val
 capHeight?: double
 ```
 
-Height of a capital letter. The value is usually a negative value.
+大写字母顶部相对于基线的垂直偏移量，浮点数，通常为负值。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -96,9 +102,9 @@ Height of a capital letter. The value is usually a negative value.
 descent: double
 ```
 
-Distance from the baseline to the lowest coordinate of the text. The value is a floating point number.
+基线到文字最低处之间的距离，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 
@@ -116,9 +122,9 @@ Distance from the baseline to the lowest coordinate of the text. The value is a 
 flags?: FontMetricsFlags
 ```
 
-Font measurement flags that are valid.
+表明哪些字体度量标志有效。
 
-**Type:** FontMetricsFlags
+**Type:** [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md)
 
 **Since:** 12
 
@@ -136,9 +142,9 @@ Font measurement flags that are valid.
 leading: double
 ```
 
-Interline spacing, that is, the distance from the descent of one line of text to the ascent of the next line. The value is a floating point number.
+行间距，从上一行文字descent到下一行文字ascent之间的距离，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 
@@ -156,9 +162,9 @@ Interline spacing, that is, the distance from the descent of one line of text to
 maxCharWidth?: double
 ```
 
-Maximum character width.
+最大字符宽度，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -176,9 +182,9 @@ Maximum character width.
 strikethroughPosition?: double
 ```
 
-Vertical distance from the baseline to the bottom of the strikethrough. The value is usually a negative value.
+文本基线到删除线的垂直距离，浮点数，通常为负值。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -196,9 +202,9 @@ Vertical distance from the baseline to the bottom of the strikethrough. The valu
 strikethroughThickness?: double
 ```
 
-Thickness of the strikethrough.
+文本删除线的厚度，即贯穿文本字符的水平线的宽度，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -216,9 +222,9 @@ Thickness of the strikethrough.
 top: double
 ```
 
-Maximum distance from the baseline to the highest coordinate of the text. The value is a floating point number.
+字体中任意字形边界框超出基线上方的最大距离，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 
@@ -236,9 +242,9 @@ Maximum distance from the baseline to the highest coordinate of the text. The va
 underlinePosition?: double
 ```
 
-Vertical distance from the baseline to the top of the underline. The value is usually a positive number.
+文本基线到下划线顶部的垂直距离，浮点数，通常是正数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -256,9 +262,9 @@ Vertical distance from the baseline to the top of the underline. The value is us
 underlineThickness?: double
 ```
 
-Thickness of the underline.
+下划线的厚度，浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -276,9 +282,9 @@ Thickness of the underline.
 xHeight?: double
 ```
 
-Height of the lowercase letter x. The value is usually a negative value.
+小写字母x顶部相对于基线的垂直偏移量，浮点数，通常为负值。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -296,9 +302,9 @@ Height of the lowercase letter x. The value is usually a negative value.
 xMax?: double
 ```
 
-Horizontal distance from the rightmost edge of any glyph bounding box to the origin. The value is a positive number, indicating the maximum horizontal coordinate across all glyph bounding boxes.
+字体中任意字形边界框最右边沿到原点的水平距离，浮点数，此值多为正数，指示了字形在水平方向上的最大延伸范围。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -316,9 +322,9 @@ Horizontal distance from the rightmost edge of any glyph bounding box to the ori
 xMin?: double
 ```
 
-Horizontal distance from the leftmost edge of any glyph bounding box to the origin. This value is usually less than 0, indicating the minimum horizontal coordinate across all glyph bounding boxes.
+字体中任意字形边界框最左边沿到原点的水平距离，这个值往往小于零，意味着字形在水平方向上的最小边界。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

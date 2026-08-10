@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
 code: int
 ```
 
-表示执行SQL返回的错误码，对应的取值和含义请见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+表示执行SQL返回的错误码，对应的取值和含义请见[SQLite错误码](https://www.sqlite.org/rescode.html)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 

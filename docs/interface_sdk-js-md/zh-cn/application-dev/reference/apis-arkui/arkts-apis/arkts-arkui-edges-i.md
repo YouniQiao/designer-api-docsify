@@ -18,7 +18,7 @@ bottom?: Dimension
 
 bottom property.
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ left?: Dimension
 
 left property.
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
 
@@ -66,7 +66,7 @@ right?: Dimension
 
 right property.
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
 
@@ -90,7 +90,7 @@ top?: Dimension
 
 top property.
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
 

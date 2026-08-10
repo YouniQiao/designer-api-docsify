@@ -1,5 +1,11 @@
 # getAccessoryList
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAccessoryList
 
 ```TypeScript
@@ -26,10 +32,10 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
-| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. No accessory is plugged in. |
+| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| 14400004 | Service exception. Possible causes:  &lt;br&gt;1. No accessory is plugged in. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {

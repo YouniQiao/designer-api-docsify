@@ -1,14 +1,14 @@
 # PlaceholderAlignment
 
-Enumerates the vertical alignment modes of a placeholder relative to the surrounding text.
+占位符相对于周围文本的纵向对齐方式。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
-    **NOTE**  
-    
-    The figure shows the last three alignment modes. The first three alignment modes are similar in text baseline  
-    alignment, with the comparison reference being the text baseline, indicated by the green line.  
-    
-    !\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+![PlaceholderAlignment.png](../../../reference/apis-arkgraphics2d/figures/PlaceholderAlignment.png)
+
+> **说明：**
+> 
+> 示意图展示了后三种对齐方式，前三种对齐方式在文本基线对齐方式上类似，比较位置是文本基线，即绿色线条部分。
+> 
+> ![Baseline.png](../../../reference/apis-arkgraphics2d/figures/Baseline.png)
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ Enumerates the vertical alignment modes of a placeholder relative to the surroun
 OFFSET_AT_BASELINE = 0
 ```
 
-Aligns the baseline of the placeholder to the baseline of the text.
+基线与文本基线对齐。
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ Aligns the baseline of the placeholder to the baseline of the text.
 ABOVE_BASELINE = 1
 ```
 
-Aligns the bottom edge of the placeholder to the baseline of the text.
+底部与文本基线对齐。
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ Aligns the bottom edge of the placeholder to the baseline of the text.
 BELOW_BASELINE = 2
 ```
 
-Aligns the top edge of the placeholder to the baseline of the text.
+顶部与文本基线对齐。
 
 **Since:** 12
 
@@ -78,7 +78,7 @@ Aligns the top edge of the placeholder to the baseline of the text.
 TOP_OF_ROW_BOX = 3
 ```
 
-Aligns the top edge of the placeholder to the top edge of the text.
+顶部与文本顶部对齐。
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Aligns the top edge of the placeholder to the top edge of the text.
 BOTTOM_OF_ROW_BOX = 4
 ```
 
-Aligns the bottom edge of the placeholder to the bottom edge of the text.
+底部与文本底部对齐。
 
 **Since:** 12
 
@@ -114,7 +114,7 @@ Aligns the bottom edge of the placeholder to the bottom edge of the text.
 CENTER_OF_ROW_BOX = 5
 ```
 
-Center-aligned.
+文本居中对齐。
 
 **Since:** 12
 
@@ -132,7 +132,7 @@ Center-aligned.
 FOLLOW_PARAGRAPH = 6
 ```
 
-Aligns with the text baseline.
+跟随文本排版对齐。
 
 **Since:** 20
 

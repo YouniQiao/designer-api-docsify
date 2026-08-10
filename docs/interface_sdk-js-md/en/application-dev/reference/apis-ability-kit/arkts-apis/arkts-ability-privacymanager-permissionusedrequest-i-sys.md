@@ -1,6 +1,6 @@
 # PermissionUsedRequest (System API)
 
-Represents the request for querying permission usage records.
+表示使用记录的查询请求。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Represents the request for querying permission usage records.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## beginTime
 
 ```TypeScript
 beginTime?: long
 ```
 
-Start time of the query.Unit: milliseconds. Default value: **0**, indicating no limit on the start time.
+查询的起始时间。单位为：毫秒。默认值：0，表示不限制起始时间。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Default:** 0
 
@@ -40,9 +46,9 @@ Start time of the query.Unit: milliseconds. Default value: **0**, indicating no 
 bundleName?: string
 ```
 
-Bundle name of the target application.
+目标应用的包名。
 
-Default value: queries all applications.
+默认值：查询所有应用。
 
 **Type:** string
 
@@ -62,9 +68,9 @@ Default value: queries all applications.
 deviceId?: string
 ```
 
-ID of the device where the target application is located.
+目标应用所在设备的ID。
 
-Default value: local device ID.
+默认值：本端设备ID。
 
 **Type:** string
 
@@ -84,9 +90,9 @@ Default value: local device ID.
 endTime?: long
 ```
 
-End time of the query. It must not be earlier than beginTime; otherwise, error code 12100001 is returned.Unit: milliseconds. Default value: **0**, indicating no limit on the end time.
+查询的终止时间，不早于beginTime，否则返回错误码12100001。单位为：毫秒。默认值：0，表示不限制终止时间。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Default:** 0
 
@@ -106,9 +112,9 @@ End time of the query. It must not be earlier than beginTime; otherwise, error c
 flag: PermissionUsageFlag
 ```
 
-Used to specify the query mode. When set to **FLAG\_PERMISSION\_USAGE\_SUMMARY**, summary information is returned;when set to **FLAG\_PERMISSION\_USAGE\_DETAIL**, detailed records are returned.
+指定查询方式。设置为FLAG_PERMISSION_USAGE_SUMMARY时返回汇总信息；设置为FLAG_PERMISSION_USAGE_DETAIL时返回明细记录。
 
-**Type:** PermissionUsageFlag
+**Type:** [PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md)
 
 **Since:** 9
 
@@ -126,9 +132,9 @@ Used to specify the query mode. When set to **FLAG\_PERMISSION\_USAGE\_SUMMARY**
 isRemote?: boolean
 ```
 
-Used to specify whether to query remote devices. The value **false** means to query the permission usage records of the local device, and **true** means to query the records of remote devices.
+指定是否查询远端设备。false表示查询本端设备的权限使用记录，true表示查询远端设备记录。
 
-Default value: **false**.
+默认值：false。
 
 **Type:** boolean
 
@@ -150,9 +156,9 @@ Default value: **false**.
 permissionNames?: Array<Permissions>
 ```
 
-Set of permissions to query.Default value: Empty string. Means querying usage records of all permissions.
+需要查询的权限集合。默认值：空，表示查询所有权限的使用记录。
 
-**Type:** Array&lt;Permissions&gt;
+**Type:** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 
 **Since:** 9
 
@@ -170,12 +176,12 @@ Set of permissions to query.Default value: Empty string. Means querying usage re
 tokenId?: int
 ```
 
-Identity identifier of the target application. It can be obtained through the  
-[accessTokenId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ field of ApplicationInfo.
+目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的  
+ [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。
 
-Default value: **0**, queries all applications.
+默认值：0，查询所有应用。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

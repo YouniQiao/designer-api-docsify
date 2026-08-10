@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
+## 导入模块
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## followSystem
 
 ```TypeScript

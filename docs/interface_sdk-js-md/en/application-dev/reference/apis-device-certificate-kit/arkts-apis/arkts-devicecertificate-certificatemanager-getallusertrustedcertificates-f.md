@@ -1,12 +1,18 @@
 # getAllUserTrustedCertificates
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## getAllUserTrustedCertificates
 
 ```TypeScript
 function getAllUserTrustedCertificates(): Promise<CMResult>
 ```
 
-Obtains all user trusted root CA certificates of the device. This API uses a promise to return the result.
+表示获取当前用户和设备公共位置的所有用户根CA证书列表。使用Promise异步回调。
 
 **Since:** 12
 
@@ -22,16 +28,16 @@ Obtains all user trusted root CA certificates of the device. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **certList** in the [CMResult]{ |
+| Promise&lt;CMResult&gt; | Promise对象，返回获取用户根CA证书列表的结果，返回值为[CMResult]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -47,7 +53,8 @@ try {
       let list = cmResult.certList;
       console.info('Succeeded in getting all user trusted certificates.');
     }
-  }).catch((err: BusinessError) => {
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
     console.error(`Failed to get all user trusted certificates. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {
@@ -62,7 +69,7 @@ try {
 function getAllUserTrustedCertificates(scope: CertScope): Promise<CMResult>
 ```
 
-Obtains the user root CA certificates based on the certificate scope. This API uses a promise to return the result.
+表示根据证书的位置获取用户根CA证书列表。使用Promise异步回调。
 
 **Since:** 18
 
@@ -78,23 +85,23 @@ Obtains the user root CA certificates based on the certificate scope. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scope of the certificates to obtain. |
+| scope | [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md) | Yes | 表示证书的位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **certList** in the [CMResult]{ |
+| Promise&lt;CMResult&gt; | Promise对象，返回获取用户根CA证书列表的结果，返回值为[CMResult]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -112,7 +119,8 @@ try {
       let list = cmResult.certList;
       console.info('Succeeded in getting current user trusted certificates.');
     }
-  }).catch((err: BusinessError) => {
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
     console.error(`Failed to get current user trusted certificates. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {

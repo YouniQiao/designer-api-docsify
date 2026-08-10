@@ -5,7 +5,7 @@ export type FocusCondition = 'forward' | 'backward' |
 'findLast' | 'getForwardScrollAncestor' | 'getBackwardScrollAncestor' | 'getScrollableAncestor'
 ```
 
-Defines a condition for querying the focusable node.
+表示查询可聚焦节点方式。
 
 **Since:** 23
 
@@ -19,10 +19,10 @@ Defines a condition for querying the focusable node.
 
 | Type | Description |
 | --- | --- |
-| 'forward' | Queries the next focusable node. The value is fixed at **'forward'**. |
-| 'backward' | Queries the next focusable node. The value is fixed at **'backward'**. |
-| 'findLast' | Queries the last child node of the start node. The value is fixed at **'findLast'**. |
-| 'getForwardScrollAncestor' | Queries the parent component that supports forward scrolling. The value is fixed at **'getForwardScrollAncestor'**. |
-| 'getBackwardScrollAncestor' | Queries the parent component that supports backward scrolling. The value is fixed at **'getBackwardScrollAncestor'**. |
-| 'getScrollableAncestor' | Queries the parent component that supports scrolling in any direction. The value is fixed at **'getScrollableAncestor'**. |
+| 'forward' | 表示当前节点下一个可聚焦节点，值固定为'forward' 字符串。 |
+| 'backward' | 表示当前节点上一个可聚焦节点，值固定为'backward'字符串。 |
+| 'findLast' | 表示查找起始节点的子节点中的最后一个节点，值固定为'findLast'字符串。 |
+| 'getForwardScrollAncestor' | 表示查找支持前向滚动父组件，值固定为'getForwardScrollAncestor'字符串。 |
+| 'getBackwardScrollAncestor' | 表示查找支持后向滚动父组件，值固定为'getBackwardScrollAncestor'字符串。 |
+| 'getScrollableAncestor' | 表示查找支持任意滚动父组件，值固定为'getScrollableAncestor'字符串。 |
 

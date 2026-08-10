@@ -1,5 +1,11 @@
 # isBatteryPresent
 
+## 导入模块
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isBatteryPresent
 
 ```TypeScript
@@ -21,12 +27,4 @@ function isBatteryPresent(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回true表示支持电池或电池在位，返回false表示不支持电池或电池不在位。 |
-
-**示例：**
-
-```TypeScript
-// ArkTS-Sta示例
-let result = batteryInfo.isBatteryPresent();
-console.info("The result is: " + result);
-```
 

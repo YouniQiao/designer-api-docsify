@@ -1,6 +1,6 @@
 # PopupV2InitInfo
 
-Defines the popup init info.
+定义PopupV2的具体样式参数。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,21 @@ Defines the popup init info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+```
+
 ## buttons
 
 ```TypeScript
 buttons?: [PopupV2Button | undefined, PopupV2Button | undefined]
 ```
 
-The buttons of Popup.
+设置PopupV2操作按钮，按钮最多设置两个。默认不显示按钮。
+
+默认值：[{ text: '' }, { text: '' }]
 
 **Type:** [PopupV2Button \| undefined, PopupV2Button \| undefined]
 
@@ -36,9 +44,11 @@ The buttons of Popup.
 direction?: Direction
 ```
 
-Indicates the attribute of the current popup direction.
+布局方向。
 
-**Type:** Direction
+默认值：Direction.Auto
+
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Default:** Direction.Auto
 
@@ -58,9 +68,11 @@ Indicates the attribute of the current popup direction.
 icon?: ResourceStr
 ```
 
-The icon of Popup.
+设置PopupV2图标。
 
-**Type:** ResourceStr
+**说明：** 默认值：''，不显示图标。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -78,9 +90,11 @@ The icon of Popup.
 iconModifier?: ImageModifier
 ```
 
-The icon attributes of Popup.
+设置图标属性，如图标颜色、大小、边框等。
 
-**Type:** ImageModifier
+默认值：undefined，使用系统图标属性。
+
+**Type:** [ImageModifier](../arkts-components/arkts-arkui-imagemodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -98,9 +112,15 @@ The icon attributes of Popup.
 maxWidth?: Dimension
 ```
 
-Set the max width of the popup.
+设置PopupV2的最大宽度，通过此接口PopupV2可以自定义宽度显示。
 
-**Type:** Dimension
+默认值：400vp
+
+**说明：**
+
+1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。2. maxWidth是数字类型，支持float和整型，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。3. 当类型为Resource时，如果未设置单位，默认单位为px。
+
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** 400.0_vp
 
@@ -120,9 +140,11 @@ Set the max width of the popup.
 message: ResourceStr
 ```
 
-The message of Popup.
+设置PopupV2内容文本。
 
-**Type:** ResourceStr
+**说明：** 默认值：''，不显示内容文本。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -140,7 +162,9 @@ The message of Popup.
 messageModifier?: TextModifier
 ```
 
-The message attributes of Popup.
+设置内容文本属性，如设置内容文本颜色、字体大小、字重等。
+
+默认值：undefined，使用系统内容文本属性。
 
 **Type:** TextModifier
 
@@ -160,9 +184,11 @@ The message attributes of Popup.
 onClose?: VoidCallback
 ```
 
-The close button callback of Popup.
+设置PopupV2关闭按钮回调函数。
 
-**Type:** VoidCallback
+默认不设置关闭按钮回调函数。
+
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -180,7 +206,9 @@ The close button callback of Popup.
 showClose?: boolean | Resource
 ```
 
-The show close of Popup.
+设置PopupV2关闭按钮。true：显示关闭按钮；false：不显示关闭按钮。Resource类型：显示对应的图标。
+
+默认值：true
 
 **Type:** boolean \| Resource
 
@@ -202,9 +230,11 @@ The show close of Popup.
 title?: ResourceStr
 ```
 
-The title of Popup.
+设置PopupV2标题文本。
 
-**Type:** ResourceStr
+**说明：** 默认值：''，不显示标题文本。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -222,7 +252,9 @@ The title of Popup.
 titleModifier?: TextModifier
 ```
 
-The title attributes of Popup.
+设置标题文本属性，如设置标题颜色、字体大小、字重等。
+
+默认值：undefined，使用系统标题文本属性。
 
 **Type:** TextModifier
 

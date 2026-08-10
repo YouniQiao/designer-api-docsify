@@ -1,26 +1,22 @@
 # NavRouter
 
-The **NavRouter** component provides default processing logic for responding to clicks, eliminating the need for
-manual logic definition.
+导航组件，默认提供点击响应处理，不需要开发者自定义点击事件逻辑。
 
-> **NOTE**
->
-> This component is deprecated since API version 13. You are advised to use [NavPathStack]{@link NavPathStack} in
-> conjunction with the **navDestination** attribute for page routing.
+## 子组件
 
-## Child Components
+必须包含两个子组件，其中第二个子组件必须为[NavDestination]{@link nav_destination}。
 
-This component must contain two child components, the second of which must be  
-[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    1. If there is only one child component, the navigation to the **NavDestination** component does not work.  
-    
-    2. If there is only the **NavDestination** child component, the navigation does not work.  
-    
-    3. If there are more than two child components, the excess child components are not displayed.  
-    
-    4. If the second child component is not **NavDestination**, the navigation does not work.
+> **说明：**
+> 
+> 子组件个数异常时：
+> 
+> 1. 有且仅有1个时，触发路由到NavDestination的能力失效。
+> 
+> 2. 有且仅有1个时，且使用NavDestination场景下，不进行路由。
+> 
+> 3. 大于2个时，后续的子组件不显示。
+> 
+> 4. 第二个子组件不为NavDestination时，触发路由功能失效。
 
 ## NavRouter
 
@@ -28,7 +24,7 @@ This component must contain two child components, the second of which must be
 NavRouter()
 ```
 
-Constructor.
+创建NavRouter。
 
 **Since:** 9
 
@@ -50,7 +46,7 @@ Constructor.
 NavRouter(value: RouteInfo)
 ```
 
-Provides route information so that clicking the **NavRouter** component redirects the user to the specified navigation destination page.
+提供路由信息，指定点击NavRouter时，要跳转的NavDestination页面。
 
 **Since:** 10
 
@@ -72,7 +68,9 @@ Provides route information so that clicking the **NavRouter** component redirect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Route information.  |
+| value | [RouteInfo](../../apis-network-kit/arkts-apis/arkts-network-vpnextension-routeinfo-t.md) | Yes | 路由信息。 |
 
 ## Summary
 
+- [RouteInfo](arkts-arkui-navrouter-routeinfo-i.md)
+- [NavRouteMode](arkts-arkui-navrouter-navroutemode-e.md)

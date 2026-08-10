@@ -1,6 +1,11 @@
 # SelectionContainerTextJoinStyle
 
-Defines text join style for SelectionContainer.
+文本聚合拼接方式。
+
+| 名称 | 值 | 说明 |  
+| ---- | -- | ---- |  
+| NEWLINE | 0 | 不同文本节点之间使用换行符`\n`拼接。 |  
+| DIRECT | 1 | 不同文本节点之间直接拼接，不添加分隔符。 |
 
 **Since:** 26.0.0
 
@@ -16,7 +21,7 @@ Defines text join style for SelectionContainer.
 NEWLINE = 0
 ```
 
-Join text with line break (\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_) between text nodes.
+在文本节点之间使用换行符（`\n`）连接文本。
 
 **Since:** 26.0.0
 
@@ -34,7 +39,7 @@ Join text with line break (\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_) between text 
 DIRECT = 1
 ```
 
-Join text directly without separator between text nodes.
+在文本节点之间不使用分隔符直接连接文本。
 
 **Since:** 26.0.0
 

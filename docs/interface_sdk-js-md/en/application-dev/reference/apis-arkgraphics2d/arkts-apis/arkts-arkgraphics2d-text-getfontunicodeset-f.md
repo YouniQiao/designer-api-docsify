@@ -1,14 +1,20 @@
 # getFontUnicodeSet
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getFontUnicodeSet
 
 ```TypeScript
 function getFontUnicodeSet(path: string | Resource, index: int) : Promise<Array<int>>
 ```
 
-Obtains an array of font Unicode by font file path. This API uses a promise to return the result.
+根据字体文件路径获取字体unicode数组。使用Promise异步回调。
 
-An empty array is returned if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format.
+如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回空数组。
 
 **Since:** 23
 
@@ -24,16 +30,16 @@ An empty array is returned if the font file is not found, the font file path is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('file name in the resources/rawfile directory of the project'). |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the font to load when the font file format is ttc/otc. The value ranges from 0 to count-1, where count is the number of fonts contained in the font file. For non-ttc/otc files, the index can only be 0. If this parameter is negative or exceeds the actual index range of the font file, an empty array is returned. |
+| path | string \| Resource | Yes | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 \\$rawfile('工程中resources/rawfile目录下的文件名称')。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 字体文件格式为ttc/otc时，指定加载的字体索引，取值范围为[0, count-1]，其中count为字体文件包含的字体数量。非ttc/otc格式文件索引值只能指定为0。 如果该参数为负数或超出字体文件实际索引范围，将返回空数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the Unicode array corresponding to the font file. |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回字体文件对应的unicode码数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -44,7 +50,7 @@ struct GetFontUnicodeSetTest {
   build() {
     Column({ space: 10 }) {
       Button("get fontUnicode")
-        .onClick(async () => {
+        .onClick(() => {
           let promise = text.getFontUnicodeSet("file:///system/fonts/HMSymbolVF.ttf", 0)
           promise.then((unicodeSet) => {
             for (let index = 0; index < unicodeSet.length; index++) {

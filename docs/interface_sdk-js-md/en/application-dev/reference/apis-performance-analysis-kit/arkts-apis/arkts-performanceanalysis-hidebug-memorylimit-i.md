@@ -1,6 +1,6 @@
 # MemoryLimit
 
-Defines the memory limit of the application process.
+Ӧ�ý����ڴ����ơ�
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Defines the memory limit of the application process.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## rssLimit
 
 ```TypeScript
 rssLimit: bigint
 ```
 
-The limit of the application process's resident set, in kilobyte
+Ӧ�ó�����̿��õ������ڴ����ƣ���KBΪ��λ��
 
 **Type:** bigint
 
@@ -34,7 +40,7 @@ The limit of the application process's resident set, in kilobyte
 vmHeapLimit: bigint
 ```
 
-The limit of the js vm heap size of current virtual machine, in kilobyte
+��ǰ�̵߳� JS VM �Ѵ�С���ƣ���KBΪ��λ��
 
 **Type:** bigint
 
@@ -52,7 +58,7 @@ The limit of the js vm heap size of current virtual machine, in kilobyte
 vmTotalHeapSize: bigint
 ```
 
-The limit of the total js vm heap size of process, in kilobyte
+��ǰ���̵� JS ���ڴ��С���ƣ���KBΪ��λ��
 
 **Type:** bigint
 
@@ -70,7 +76,7 @@ The limit of the total js vm heap size of process, in kilobyte
 vssLimit: bigint
 ```
 
-The limit of the application process's virtual memory, in kilobyte
+���̵������ڴ����ƣ���KBΪ��λ��
 
 **Type:** bigint
 

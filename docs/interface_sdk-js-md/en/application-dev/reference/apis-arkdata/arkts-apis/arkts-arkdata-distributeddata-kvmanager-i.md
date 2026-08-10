@@ -1,7 +1,7 @@
 # KVManager
 
-Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use  
-[createKVManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to create a **KVManager** object.
+数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过  
+[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager)构建一个KVManager实例。
 
 **Since:** 7
 
@@ -21,7 +21,7 @@ Creates a **KVManager** object to obtain KV store information. Before calling an
 closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void
 ```
 
-Closes a KV store. This API uses an asynchronous callback to return the result.
+通过storeId的值关闭指定的KVStore数据库，使用callback异步回调。
 
 **Since:** 8
 
@@ -39,12 +39,12 @@ Closes a KV store. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the app that invokes the KV store. |
-| storeId | string | Yes | Unique identifier of the KV store to close. The length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| kvStore | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KV store to close. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| appId | string | Yes | 所调用数据库方的包名。 |
+| storeId | string | Yes | Unique identifier of the 要关闭的KVStore数据库。 The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | Yes | 要关闭的KVStore数据库。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -77,7 +77,7 @@ try {
 closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 ```
 
-Closes a KV store. This API uses a promise to return the result.
+通过storeId的值关闭指定的KVStore数据库，使用Promise异步回调。
 
 **Since:** 8
 
@@ -95,17 +95,17 @@ Closes a KV store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the app that invokes the KV store. |
-| storeId | string | Yes | Unique identifier of the KV store to close. The length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| kvStore | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KV store to close. |
+| appId | string | Yes | 所调用数据库方的包名。 |
+| storeId | string | Yes | Unique identifier of the 要关闭的KVStore数据库。 The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | Yes | 要关闭的KVStore数据库。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvManager;
@@ -142,7 +142,7 @@ try {
 deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a KV store. This API uses an asynchronous callback to return the result.
+通过storeId的值删除指定的KVStore数据库，使用callback异步回调。
 
 **Since:** 8
 
@@ -160,11 +160,11 @@ Deletes a KV store. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the app that invokes the KV store. |
-| storeId | string | Yes | Unique identifier of the KV store to delete. The length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| appId | string | Yes | 所调用数据库方的包名。 |
+| storeId | string | Yes | 要删除的数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvManager;
@@ -197,7 +197,7 @@ try {
 deleteKVStore(appId: string, storeId: string): Promise<void>
 ```
 
-Deletes a KV store. This API uses a promise to return the result.
+通过storeId的值删除指定的KVStore数据库，使用Promise异步回调。
 
 **Since:** 8
 
@@ -215,16 +215,16 @@ Deletes a KV store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the app that invokes the KV store. |
-| storeId | string | Yes | Unique identifier of the KV store to delete. The length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| appId | string | Yes | 所调用数据库方的包名。 |
+| storeId | string | Yes | 要删除的数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvManager;
@@ -261,9 +261,9 @@ try {
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-Obtains the IDs of all KV stores that are created by  
-[getKVStore()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_and have not been deleted by  
-[deleteKVStore()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API uses an asynchronous callback to return the result.
+获取所有通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
+[deleteKVStore](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore)方法删除的KVStore数据库的storeId，使用callback异步回调。
 
 **Since:** 8
 
@@ -281,10 +281,10 @@ Obtains the IDs of all KV stores that are created by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the app that invokes the KV store. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | Yes | Callback used to return the IDs of all created KV stores. |
+| appId | string | Yes | 所调用数据库方的包名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | 回调函数。返回所有创建的KvStore数据库的storeId。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvManager;
@@ -304,9 +304,9 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-Obtains the IDs of all KV stores that are created by  
-[getKVStore()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_and have not been deleted by  
-[deleteKVStore()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API uses a promise to return the result.
+获取所有通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
+[deleteKVStore](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore)方法删除的KVStore数据库的storeId，使用Promise异步回调。
 
 **Since:** 8
 
@@ -324,15 +324,15 @@ Obtains the IDs of all KV stores that are created by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the app that invokes the KV store. |
+| appId | string | Yes | 所调用数据库方的包名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise used to return the IDs of all created KV stores. |
+| Promise&lt;string[]&gt; | Promise对象。返回所有创建的KvStore数据库的storeId。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvManager;
@@ -355,7 +355,7 @@ try {
 getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 ```
 
-Creates and obtains a KV store. This API uses a promise to return the result.
+通过指定Options和storeId，创建并获取KVStore数据库，使用Promise异步回调。
 
 **Since:** 7
 
@@ -373,16 +373,16 @@ Creates and obtains a KV store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Unique identifier of the KV store. The length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration of the KV store. |
+| storeId | string | Yes | 数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | 创建KVStore实例的配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise used to return the KV store instance created. |
+| Promise&lt;T&gt; | Promise对象。返回创建的KVStore数据库实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -413,7 +413,7 @@ try {
 getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void
 ```
 
-Creates and obtains a KV store. This API uses an asynchronous callback to return the result.
+通过指定Options和storeId，创建并获取KVStore数据库，使用callback异步回调。
 
 **Since:** 7
 
@@ -431,11 +431,11 @@ Creates and obtains a KV store. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Unique identifier of the KV store. The length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration of the KV store. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Callback used to return the KV store instance created. |
+| storeId | string | Yes | 数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | 创建KVStore实例的配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | 回调函数。返回创建的KVStore数据库实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -468,7 +468,7 @@ try {
 off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 ```
 
-Unsubscribes from service status changes.
+取消订阅服务状态变更通知。
 
 **Since:** 8
 
@@ -486,10 +486,10 @@ Unsubscribes from service status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates service status changes. |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for service status changes will be unregistered. |
+| event | 'distributedDataServiceDie' | Yes | 取消订阅的事件名，固定为'distributedDataServiceDie'，即服务状态变更事件。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 取消订阅的函数。如不设置callback，则取消所有已订阅的函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvManager;
@@ -510,7 +510,7 @@ try {
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```
 
-Subscribes to service status changes.
+订阅服务状态变更通知。
 
 **Since:** 8
 
@@ -528,10 +528,10 @@ Subscribes to service status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates service status changes. |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| event | 'distributedDataServiceDie' | Yes | 订阅的事件名，固定为'distributedDataServiceDie'，即服务状态变更事件。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvManager;

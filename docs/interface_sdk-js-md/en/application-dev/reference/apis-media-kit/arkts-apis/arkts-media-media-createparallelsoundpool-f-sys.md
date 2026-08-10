@@ -1,5 +1,11 @@
 # createParallelSoundPool (System API)
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createParallelSoundPool
 
 ```TypeScript
@@ -8,7 +14,7 @@ function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRe
 
 Creates a **SoundPool** instance. This API uses a promise to return the result.
 
-If a **SoundPool** instance created using [createSoundPool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using  
+If a **SoundPool** instance created using [createSoundPool](#createSoundPool) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using  
 **createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
 
 **Since:** 20
@@ -25,7 +31,7 @@ If a **SoundPool** instance created using [createSoundPool]\_\_\_JSDOC\_LINK\_DE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxStreams | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
+| maxStreams | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
 | audioRenderInfo | audio.AudioRendererInfo | Yes | Audio renderer parameters. |
 
 **Return value:**
@@ -38,10 +44,10 @@ If a **SoundPool** instance created using [createSoundPool]\_\_\_JSDOC\_LINK\_DE
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API error. Return by promise. |
+| 5400101 | No memory. Return by promise. |
+| 202 | System API error. Return by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';

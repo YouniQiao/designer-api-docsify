@@ -1,6 +1,6 @@
 # ModelType
 
-The enum of model type
+模型类型枚举
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ The enum of model type
 TEXTURE = 0
 ```
 
-Render to texture, gpu would compose this texture to screen.
+渲染到纹理，GPU将此纹理合成到屏幕.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Render to texture, gpu would compose this texture to screen.
 SURFACE = 1
 ```
 
-Render to surface, special hardware would compose this surface to screen.
+渲染到表面，专有硬件将此表面合成到屏幕.
 
 **Since:** 12
 

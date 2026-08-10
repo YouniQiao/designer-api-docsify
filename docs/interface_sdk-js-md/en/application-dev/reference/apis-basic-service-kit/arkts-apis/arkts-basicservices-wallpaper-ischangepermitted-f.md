@@ -1,12 +1,18 @@
 # isChangePermitted
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isChangePermitted
 
 ```TypeScript
 function isChangePermitted(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether to allow the application to change the wallpaper for the current user.Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
+是否允许应用改变当前用户的壁纸。
 
 **Since:** 7
 
@@ -22,9 +28,9 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -45,7 +51,7 @@ wallpaper.isChangePermitted((error: BusinessError, data: Boolean) => {
 function isChangePermitted(): Promise<boolean>
 ```
 
-Checks whether to allow the application to change the wallpaper for the current user.Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
+是否允许应用改变当前用户的壁纸。
 
 **Since:** 7
 
@@ -61,9 +67,9 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | 返回是否允许应用改变当前用户的壁纸。如果允许返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

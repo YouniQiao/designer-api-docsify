@@ -1,12 +1,18 @@
 # startBluetoothDiscovery
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## startBluetoothDiscovery
 
 ```TypeScript
 function startBluetoothDiscovery(): void
 ```
 
-Starts scanning Bluetooth devices.On API 10 and above, the permission required by this interface is changed from DISCOVER\_BLUETOOTH and LOCATION and APPROXIMATELY\_LOCATION to ACCESS\_BLUETOOTH.
+Starts scanning Bluetooth devices.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH and LOCATION and APPROXIMATELY_LOCATION to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -28,13 +34,13 @@ Starts scanning Bluetooth devices.On API 10 and above, the permission required b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

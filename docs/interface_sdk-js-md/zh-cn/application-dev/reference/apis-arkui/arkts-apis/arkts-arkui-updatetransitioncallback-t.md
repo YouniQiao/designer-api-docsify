@@ -20,5 +20,5 @@ export type UpdateTransitionCallback = (progress: double) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| progress | double | 是 | 设置交互转场动画进度百分比。 取值范围：[0,1]  |
+| progress | double | 是 | 设置交互转场动画进度百分比。 取值范围：[0,1] |
 

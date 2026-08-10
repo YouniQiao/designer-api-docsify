@@ -1,5 +1,11 @@
 # createFilter
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## createFilter
 
 ```TypeScript
@@ -20,11 +26,12 @@ function createFilter(): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Filter实例，支持添加多种Filter效果。 |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回Filter实例，支持添加多种Filter效果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-let filter : uiEffect.Filter = uiEffect.createFilter()
+// 创建Filter实例
+let filter: uiEffect.Filter = uiEffect.createFilter();
 ```
 

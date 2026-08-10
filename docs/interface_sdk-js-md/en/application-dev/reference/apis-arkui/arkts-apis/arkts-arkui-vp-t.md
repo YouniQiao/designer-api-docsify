@@ -4,7 +4,7 @@
 declare type VP = `${number}vp` | number
 ```
 
-Defines the length property with number or number in units of vp.
+定义长度属性，可以是数字或以 vp 为单位的数字。
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ Defines the length property with number or number in units of vp.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_INLINE\_CODE\_USD\_0\_\_\_ |  |
+| `\${number}vp` |  |
 | number |  |
 

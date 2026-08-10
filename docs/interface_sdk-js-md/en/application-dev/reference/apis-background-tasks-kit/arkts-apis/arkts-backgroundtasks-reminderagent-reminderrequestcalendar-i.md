@@ -1,6 +1,6 @@
 # ReminderRequestCalendar
 
-Defines a reminder for a calendar event.
+日历实例对象，用于设置提醒的时间。
 
 **Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
 
@@ -16,15 +16,21 @@ Defines a reminder for a calendar event.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## dateTime
 
 ```TypeScript
 dateTime: LocalDateTime
 ```
 
-Reminder time.
+指明提醒的目标时间。
 
-**Type:** LocalDateTime
+**Type:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
 
 **Since:** 7
 
@@ -44,7 +50,7 @@ Reminder time.
 repeatDays?: Array<number>
 ```
 
-Date on which the reminder repeats.
+指明重复提醒的日期。
 
 **Type:** Array&lt;number&gt;
 
@@ -66,7 +72,7 @@ Date on which the reminder repeats.
 repeatMonths?: Array<number>
 ```
 
-Month in which the reminder repeats.
+指明重复提醒的月份。
 
 **Type:** Array&lt;number&gt;
 

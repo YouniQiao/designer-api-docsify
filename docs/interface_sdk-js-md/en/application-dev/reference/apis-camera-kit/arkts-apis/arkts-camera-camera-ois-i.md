@@ -12,6 +12,12 @@ OIS (Optical Image Stabilization) interface.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## setOISMode
 
 ```TypeScript
@@ -36,14 +42,14 @@ Sets the OIS mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The OIS mode to set. |
+| mode | [OISMode](arkts-camera-camera-oismode-e.md) | Yes | The OIS mode to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## setOISModeCustom
 
@@ -75,13 +81,13 @@ Sets custom OIS bias values for each axis.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pitch | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Bias value for pitch axis. |
-| yaw | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Bias value for yaw axis. |
+| pitch | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Bias value for pitch axis. |
+| yaw | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Bias value for yaw axis. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 

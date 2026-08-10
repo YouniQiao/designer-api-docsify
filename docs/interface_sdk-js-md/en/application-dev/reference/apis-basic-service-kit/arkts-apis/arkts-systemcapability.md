@@ -12,6 +12,12 @@ Provides interfaces to get system capability.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { systemCapability } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 <!--Del-->

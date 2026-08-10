@@ -32,5 +32,5 @@ Converts the object to a JsonElement.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The JsonElement representation. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | The JsonElement representation. |
 

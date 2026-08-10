@@ -1,12 +1,18 @@
 # cancelBackgroundRunning
 
+## Modules to Import
+
+```TypeScript
+import { particleAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## cancelBackgroundRunning
 
 ```TypeScript
 function cancelBackgroundRunning(callback: AsyncCallback<void>): void
 ```
 
-Requests to cancel a continuous task from the system. This API uses an asynchronous callback to return the result.
+向系统申请取消长时任务。使用callback异步回调。
 
 **Since:** 7
 
@@ -14,7 +20,7 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
+**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -26,9 +32,9 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当向系统申请取消长时任务成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';
@@ -52,7 +58,7 @@ particleAbility.cancelBackgroundRunning(callback);
 function cancelBackgroundRunning(): Promise<void>
 ```
 
-Requests to cancel a continuous task from the system. This API uses a promise to return the result.
+向系统申请取消长时任务。使用Promise异步回调。
 
 **Since:** 7
 
@@ -60,7 +66,7 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
+**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -72,9 +78,9 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';

@@ -1,6 +1,6 @@
 # NavigationOperation
 
-Enumerates the page redirection types.
+页面跳转类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the page redirection types.
 PUSH = 1
 ```
 
-The transition is enter transition.
+本次转场为页面进场。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ The transition is enter transition.
 POP = 2
 ```
 
-The transition is exit transition.
+本次转场为页面退场。
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ The transition is exit transition.
 REPLACE = 3
 ```
 
-The transition is page replacement.
+本次转场为页面替换。
 
 **Since:** 11
 

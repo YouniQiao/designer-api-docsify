@@ -1,15 +1,23 @@
 # @ohos.distributedsched.abilityConnectionManager
 
 abilityConnectionManager模块提供了应用协同接口管理能力。设备组网成功（需登录同账号、双端打开蓝牙）后，系统应用和三方应用可以跨设备拉起同应用的一个  
-[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，拉起并连接成功后可实现跨设备数据传输（文本信息）。
+[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md/arkts-app-ability-uiability.md)，拉起并连接成功后可实现跨设备数据传输（文本信息）。
 
 **起始版本：** 18
 
 **ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace abilityConnectionManager--><!--Device-unnamed-declare namespace abilityConnectionManager-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
 
 ## 汇总
 
@@ -40,7 +48,7 @@ abilityConnectionManager模块提供了应用协同接口管理能力。设备�
 | [onReceiveData](arkts-distributedservice-abilityconnectionmanager-onreceivedata-f.md#onreceivedata) | Registers receiveData event. |
 | [onReceiveMessage](arkts-distributedservice-abilityconnectionmanager-onreceivemessage-f.md#onreceivemessage) | Registers receiveMessage event. |
 | [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject) | 在跨端应用协同过程中，在拒绝对端的连接请求后，向对端发送拒绝原因。 |
-| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | 应用连接成功后，设备A或设备B可向对端设备发送\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_字节流。 |
+| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | 应用连接成功后，设备A或设备B可向对端设备发送[ArrayBuffer](../../../arkts-utils/arraybuffer-object.md)字节流。 |
 | [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) | 应用连接成功后，设备A或设备B可向对端设备发送文本信息。 |
 
 <!--Del-->

@@ -4,7 +4,7 @@
 export type Matrix4Transit = matrix4.Matrix4Transit
 ```
 
-Interface for matrix object.
+矩阵对象接口。
 
 **Since:** 23
 

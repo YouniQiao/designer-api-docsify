@@ -1,6 +1,6 @@
 # AutoFinalizerCleaner
 
-A cleaner for releasing resources managed by developers through a developer-defined callback.
+用于通过开发者自定义回调释放由开发者管理的资源的 cleaner。
 
 **Since:** 22
 
@@ -10,13 +10,19 @@ A cleaner for releasing resources managed by developers through a developer-defi
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## register
 
 ```TypeScript
 static register<T>(obj: AutoFinalizer<T>, heldValue: T): void
 ```
 
-Register objects that release resources managed by developers.
+注册释放由开发者管理的资源的对象。
 
 **Since:** 22
 
@@ -32,6 +38,6 @@ Register objects that release resources managed by developers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | The object is registered to the cleaner. |
-| heldValue | T | Yes | The value to pass to the finalizer. |
+| obj | [AutoFinalizer](arkts-arkts-util-autofinalizer-i.md)&lt;T&gt; | Yes | 注册到 cleaner 的对象。 |
+| heldValue | T | Yes | 传递给 finalizer 的值。 |
 

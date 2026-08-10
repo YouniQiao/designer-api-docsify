@@ -14,6 +14,12 @@ Describes the manufacturer data.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## manufactureId
 
 ```TypeScript

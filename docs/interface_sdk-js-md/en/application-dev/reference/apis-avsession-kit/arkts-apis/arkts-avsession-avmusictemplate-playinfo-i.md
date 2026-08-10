@@ -1,6 +1,6 @@
 # PlayInfo
 
-The definition of play information.
+播放信息的定义。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ The definition of play information.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## currentPlayDuration
 
 ```TypeScript
 currentPlayDuration: int
 ```
 
-Current duration.
+当前播放的时长，单位为毫秒（ms）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -36,7 +42,7 @@ Current duration.
 currentPlayRate: string
 ```
 
-Current play rate.
+当前的播放速率。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Current play rate.
 isSupportNext: boolean
 ```
 
-Is support next.
+是否支持下一首。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -76,7 +82,7 @@ Is support next.
 isSupportPlayMode: boolean
 ```
 
-Is support switch play mode.
+是否支持切换播放模式。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -96,7 +102,7 @@ Is support switch play mode.
 isSupportPlayRate: boolean
 ```
 
-Is support change play rate.
+是否支持改变播放速率。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -116,7 +122,7 @@ Is support change play rate.
 isSupportPrev: boolean
 ```
 
-Is support prev.
+是否支持上一首。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -136,7 +142,7 @@ Is support prev.
 isSupportProgress: boolean
 ```
 
-Is supported progress, default true.
+是否支持进度。true表示支持，false表示不支持。默认值为true。
 
 **Type:** boolean
 
@@ -156,7 +162,7 @@ Is supported progress, default true.
 isSupportQuickBackward: boolean
 ```
 
-Is support quick backward.
+是否支持快退。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -176,7 +182,7 @@ Is support quick backward.
 isSupportQuickForward: boolean
 ```
 
-Is support quick forward.
+是否支持快进。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -196,7 +202,7 @@ Is support quick forward.
 isSupportSkipHead: boolean
 ```
 
-Is support skip opening credits.
+是否支持跳过开头。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -216,7 +222,7 @@ Is support skip opening credits.
 isSupportSkipTail: boolean
 ```
 
-Is support skip closing credits.
+是否支持跳过结尾。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -236,7 +242,7 @@ Is support skip closing credits.
 isSupportSoundEffect: boolean
 ```
 
-Is supported sound effect.
+是否支持音效。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -256,7 +262,7 @@ Is supported sound effect.
 isSupportSoundQuality: boolean
 ```
 
-Is supported sound quality.
+是否支持声音质量。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 
@@ -276,7 +282,7 @@ Is supported sound quality.
 playCounts: string
 ```
 
-Play counts.
+播放量。
 
 **Type:** string
 
@@ -296,9 +302,9 @@ Play counts.
 quickBackwardStep: int
 ```
 
-The step of quick backward.
+快退的步长，单位为毫秒（ms）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -316,9 +322,9 @@ The step of quick backward.
 quickForwardStep: int
 ```
 
-The step of quick forward.
+快进的步长，单位为毫秒（ms）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -336,7 +342,7 @@ The step of quick forward.
 supportedPlayRate: string[]
 ```
 
-Supported play rate.
+支持的播放速率的数组。
 
 **Type:** string[]
 
@@ -356,9 +362,9 @@ Supported play rate.
 totalDuration: int
 ```
 
-Total duration.
+播放总时长，单位为毫秒（ms）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

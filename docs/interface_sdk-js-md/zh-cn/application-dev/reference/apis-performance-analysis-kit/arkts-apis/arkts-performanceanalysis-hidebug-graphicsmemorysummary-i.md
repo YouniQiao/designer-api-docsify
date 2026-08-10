@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## gl
 
 ```TypeScript
@@ -18,7 +24,7 @@ gl: int
 
 gl�Դ��С��RenderService��Ⱦ���̼���������Դռ�õ��ڴ棬����ͼƬ�������ȣ���KBΪ��λ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 21
 
@@ -36,9 +42,9 @@ gl�Դ��С��RenderService��Ⱦ���̼���������
 graph: int
 ```
 
-graph�Դ��С������ͳ�Ƶ�DMA�ڴ�ռ�ã�����ֱ��ͨ���ӿ������DMA buffer��ͨ��allocator\_host�����DMA buffer����KBΪ��λ��
+graph�Դ��С������ͳ�Ƶ�DMA�ڴ�ռ�ã�����ֱ��ͨ���ӿ������DMA buffer��ͨ��allocator_host�����DMA buffer����KBΪ��λ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 21
 

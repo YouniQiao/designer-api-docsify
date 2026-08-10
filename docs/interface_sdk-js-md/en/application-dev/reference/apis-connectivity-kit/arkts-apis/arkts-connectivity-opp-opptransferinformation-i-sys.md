@@ -12,6 +12,12 @@ Describes the transferred file information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { opp } from 'kits/@kit.ConnectivityKit';
+```
+
 ## currentBytes
 
 ```TypeScript
@@ -20,7 +26,7 @@ currentBytes: long
 
 Number of bytes of the file that have been transferred currently
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 16
 
@@ -42,7 +48,7 @@ currentCount: int
 
 Number of files currently transferred
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 16
 
@@ -64,7 +70,7 @@ direction: DirectionType
 
 File Transfer Direction
 
-**Type:** DirectionType
+**Type:** [DirectionType](arkts-connectivity-opp-directiontype-e-sys.md)
 
 **Since:** 16
 
@@ -152,7 +158,7 @@ result: TransferResult
 
 File transfer result
 
-**Type:** TransferResult
+**Type:** [TransferResult](arkts-connectivity-opp-transferresult-e-sys.md)
 
 **Since:** 16
 
@@ -174,7 +180,7 @@ status: TransferStatus
 
 File transfer status
 
-**Type:** TransferStatus
+**Type:** [TransferStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-transferstatus-e.md)
 
 **Since:** 16
 
@@ -196,7 +202,7 @@ totalBytes: long
 
 Total number of file bytes to transfer
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 16
 
@@ -218,7 +224,7 @@ totalCount: int
 
 Total number of transferred files
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 16
 

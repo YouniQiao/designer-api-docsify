@@ -10,6 +10,12 @@ Geofence transition status.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## beaconFence
 
 ```TypeScript
@@ -18,7 +24,7 @@ beaconFence?: BeaconFence
 
 Indicate the beaconFence which transitionEvent occurs.
 
-**Type:** BeaconFence
+**Type:** [BeaconFence](arkts-location-geolocationmanager-beaconfence-i.md)
 
 **Since:** 20
 
@@ -36,7 +42,7 @@ geofenceId: int
 
 ID of the geofence.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -54,7 +60,7 @@ transitionEvent: GeofenceTransitionEvent
 
 Indicates the geofence transition status.
 
-**Type:** GeofenceTransitionEvent
+**Type:** [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md)
 
 **Since:** 12
 

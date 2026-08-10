@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## decoratorName
 
 ```TypeScript
@@ -18,13 +24,13 @@ decoratorName: string
 
 当对象是V1对象时，值是对象关联的装饰器名称。
 
-当V1对象使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_时，值为：'@Track'。
+当V1对象使用[@Track](../../../ui/state-management/arkts-track.md)时，值为：'@Track'。
 
-当V2对象使用\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_时，值为：'@Trace'。
+当V2对象使用[@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md)时，值为：'@Trace'。
 
-当V2对象使用[makeObserved]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_时，值为：'MakeObserved'。
+当V2对象使用[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)时，值为：'MakeObserved'。
 
-当V2对象使用[enableV2Compatibility]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_时，值为：'EnableV2Compatible'。
+当V2对象使用[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)时，值为：'EnableV2Compatible'。 
 
 当V2对象使用built-in类型数据时，值为：'ProxyObservedV2'。
 
@@ -72,7 +78,7 @@ owningComponentId: number
 
 V1对象返回被使用的组件id。
 
-**当V1对象有属性使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器时，无组件id，返回-1；V2对象同样无组件id，返回-1。
+**当V1对象有属性使用[@Track](../../../ui/state-management/arkts-track.md)装饰器时，无组件id，返回-1；V2对象同样无组件id，返回-1。**
 
 **类型：** number
 
@@ -96,7 +102,7 @@ owningComponentOrClassName: string
 
 V1对象返回被使用的组件名称。
 
-V1对象有属性使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器时返回对象名称。
+V1对象有属性使用[@Track](../../../ui/state-management/arkts-track.md)装饰器时返回对象名称。
 
 V2对象返回对象名称。
 

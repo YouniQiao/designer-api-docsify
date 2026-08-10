@@ -1,5 +1,11 @@
 # createGZipSync
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createGZipSync
 
 ```TypeScript
@@ -22,9 +28,9 @@ function createGZipSync(): GZip
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | GZip对象实例。 |
+| [GZip](arkts-basicservices-zlib-gzip-i.md) | GZip对象实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

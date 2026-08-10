@@ -1,6 +1,6 @@
 # @ohos.file.backup
 
-Module providing backup and restore capabilities.
+提供备份和恢复能力的模块。
 
 **Since:** 10
 
@@ -12,6 +12,12 @@ Module providing backup and restore capabilities.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -19,14 +25,14 @@ Module providing backup and restore capabilities.
 
 | Name | Description |
 | --- | --- |
-| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#filesystemservicerequest) | Requests filesystem garbage collection with specified configuration. |
-| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getbackupinfo) | Get Backup information from bundle. |
-| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getbackupversion) | Obtain the backupVersion. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities) | Obtain a Json file that describes local capabilities. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-1) | Obtain a Json file that describes local capabilities. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-2) | Obtain a json file that describes local capabilities. |
-| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updatesendrate) | Update send file fd rate. |
-| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updatetimer) | Update backup or restore timeout. |
+| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#filesystemservicerequest) | 根据指定配置请求文件系统执行碎片清理。 |
+| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getbackupinfo) | 获取需要备份的应用信息。 |
+| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getbackupversion) | 获取备份版本信息。 |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities) | 获取描述本地能力的JSON文件。 |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-1) | 获取描述本地能力的JSON文件。 |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-2) | 获取描述本地能力的JSON文件。 |
+| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updatesendrate) | 更新备份应用发送文件描述符的速率。 |
+| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updatetimer) | 设置应用备份或恢复的时长。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -34,32 +40,32 @@ Module providing backup and restore capabilities.
 
 | Name | Description |
 | --- | --- |
-| [IncrementalBackupSession](arkts-corefile-backup-incrementalbackupsession-c-sys.md) | Control class for incremental backup procedure. |
-| [SessionBackup](arkts-corefile-backup-sessionbackup-c-sys.md) | Control class for backup procedure. |
-| [SessionRestore](arkts-corefile-backup-sessionrestore-c-sys.md) | Control class for restore procedure. |
+| [IncrementalBackupSession](arkts-corefile-backup-incrementalbackupsession-c-sys.md) | 增量备份流程对象，用于支撑应用增量备份流程。 |
+| [SessionBackup](arkts-corefile-backup-sessionbackup-c-sys.md) | 备份流程对象，用于支撑应用全量备份流程。 |
+| [SessionRestore](arkts-corefile-backup-sessionrestore-c-sys.md) | 恢复流程对象，用于支撑应用全量恢复流程。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [File](arkts-corefile-backup-file-i.md) | Corresponds to a file, including its metadata and data and the file's manifest data.Files are useful as IPC and backup services. |
-| [IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md) | Corresponds to an incremental application, including its last incremental time and incremental list. |
+| [File](arkts-corefile-backup-file-i.md) | 文件对象，包含文件元数据、文件数据和清单文件信息。用于客户端与备份服务进行IPC。 |
+| [IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md) | 一次增量备份对象，包含最后一次增量备份时间和增量清单。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [BackupParams](arkts-corefile-backup-backupparams-i-sys.md) | Provides configuration parameters for backup and restore. |
-| [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md) | Control backup and restore priority sequence |
-| [FileData](arkts-corefile-backup-filedata-i-sys.md) | Corresponding to a file's data. Filedata is useful when doing IPC with the backup service. |
-| [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md) | Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service. |
-| [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service. |
-| [FileSystemRequestConfig](arkts-corefile-backup-filesystemrequestconfig-i-sys.md) | Parameters required to perform garbage collection (GC). |
-| [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | General callbacks for both backup and restore procedure.The backup service will notify the client by these callbacks. |
-| [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md) | Save the time information of the incremental backup. IncrementalBackupTime is useful when doing IPC with the backup service. |
-| [PathInfo](arkts-corefile-backup-pathinfo-i-sys.md) | Path information for file migration. |
+| [BackupParams](arkts-corefile-backup-backupparams-i-sys.md) | 为备份恢复提供可选配置参数。 |
+| [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md) | 控制备份和恢复的优先级顺序。 |
+| [FileData](arkts-corefile-backup-filedata-i-sys.md) | 文件数据，包含一个已经打开的文件描述符，在与备份服务进行IPC时使用。 |
+| [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md) | 增量数据中的清单文件信息，用于描述应用增量备份、恢复时对应文件的基础信息。 |
+| [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 文件的元数据，包含应用名称及文件URI，在与备份服务进行IPC时使用。 |
+| [FileSystemRequestConfig](arkts-corefile-backup-filesystemrequestconfig-i-sys.md) | 配置系统执行碎片清理所需的参数。 |
+| [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | 备份和恢复过程中的通用回调。备份服务通过这些回调向客户端通知备份或恢复阶段。 |
+| [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md) | 记录最后一次增量备份时间，用于描述备份增量的时间点。 |
+| [PathInfo](arkts-corefile-backup-pathinfo-i-sys.md) | 文件迁移的路径信息。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -67,10 +73,10 @@ Module providing backup and restore capabilities.
 
 | Name | Description |
 | --- | --- |
-| [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md) | function that returns backup BundlePara. |
-| [OnBackupSizeReport](arkts-corefile-backup-onbackupsizereport-t-sys.md) | function that returns backup datasize by bundleName. |
-| [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md) | Function that returns array of file handle. |
-| [OnProcess](arkts-corefile-backup-onprocess-t-sys.md) | function that returns backup datasize by bundleName.Callback called when the backup\_\_\_ESCAPED\_UNDERSCORE\_\_\_sa service return result information.The first return string parameter indicates the result of the bundle. |
-| [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md) | Callback called when the backup service return result information.The first return string parameter indicates the bundleName that triggers the callback.The second return string parameter indicates the result of the bundle. |
+| [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md) | 备份或恢复回调的应用名称参数类型。 |
+| [OnBackupSizeReport](arkts-corefile-backup-onbackupsizereport-t-sys.md) | 返回应用备份数据量信息的回调函数。 |
+| [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md) | 一批文件准备好发送给客户端时触发的回调函数。 |
+| [OnProcess](arkts-corefile-backup-onprocess-t-sys.md) | 返回应用备份数据量信息的回调函数。备份服务返回结果或进度信息时触发的回调。返回应用的处理结果或进度信息。 |
+| [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md) | 备份服务返回结果信息时触发的回调。第一个字符串参数表示触发回调的应用名称。第二个字符串参数表示应用的处理结果。 |
 <!--DelEnd-->
 

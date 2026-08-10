@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## aboutToAppear
 
 ```TypeScript
 aboutToAppear?(): void
 ```
 
-aboutToAppear函数在创建自定义组件的新实例后、其build()函数执行之前被调用。开发者可以在此阶段修改状态变量，更改将在后续执行build()函数中生效。其功能与[aboutToAppear]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类似，受自定义组件状态机约束，在被监听的自定义组件向CustomComponentLifecycleState.APPEARED转变时触发回调。
+aboutToAppear函数在创建自定义组件的新实例后、其build()函数执行之前被调用。开发者可以在此阶段修改状态变量，更改将在后续执行build()函数中生效。其功能与[aboutToAppear](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#abouttoappear)类似，受自定义组件状态机约束，在被监听的自定义组件向CustomComponentLifecycleState.APPEARED转变时触发回调。
 
 **起始版本：** 23
 
@@ -36,7 +42,7 @@ aboutToAppear函数在创建自定义组件的新实例后、其build()函数执
 aboutToDisappear?(): void
 ```
 
-aboutToDisappear函数在自定义组件被销毁之前执行。不建议在aboutToDisappear函数中修改状态变量，特别是\@Link变量的修改可能会导致应用程序行为不稳定。其功能与[aboutToDisappear]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类似，不同的是，CustomComponentLifecycleObserver中的aboutToDisappear函数受状态机约束，只有被监听的自定义组件状态向CustomComponentLifecycleState.DISAPPEARED转变前触发回调。
+aboutToDisappear函数在自定义组件被销毁之前执行。不建议在aboutToDisappear函数中修改状态变量，特别是\@Link变量的修改可能会导致应用程序行为不稳定。其功能与[aboutToDisappear](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#abouttodisappear)类似，不同的是，CustomComponentLifecycleObserver中的aboutToDisappear函数受状态机约束，只有被监听的自定义组件状态向CustomComponentLifecycleState.DISAPPEARED转变前触发回调。
 
 **起始版本：** 23
 
@@ -77,11 +83,12 @@ aboutToReuse?(params?: Record<string, Object | undefined | null>): void
 ```
 
 当可复用的自定义组件从缓存中重新添加到节点树时调用aboutToReuse函数，受自定义组件状态机约束，即从CustomComponentLifecycleState.RECYCLED到CustomComponentLifecycleState.BUILT阶段触发回调。最后，复用会递归遍历所有子组件，对每个完成复用的子组件调用子组件中注册的aboutToReuse函数。在状态管理V1的组件里，该函数允许有一个入参或者无参，当params存在时表示V1组件的复用回调；在状态管理V2的组件里，该函数没有入参。
-    **说明：**  
-    
-    - 在状态管理V1的组件里，aboutToReuse函数允许有一个入参或者无参。入参params建议为Record\&lt;string, Object \| undefined \| null\&gt;类型。  
-    
-    - 在状态管理V2的组件里，aboutToReuse函数没有入参。
+
+> **说明：**
+> 
+> - 在状态管理V1的组件里，aboutToReuse函数允许有一个入参或者无参。入参params建议为Record\&lt;string, Object \| undefined \| null\&gt;类型。
+> 
+> - 在状态管理V2的组件里，aboutToReuse函数没有入参。
 
 **起始版本：** 23
 
@@ -99,7 +106,7 @@ aboutToReuse?(params?: Record<string, Object | undefined | null>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | Record&lt;string, Object \| undefined \| null&gt; | 否 | 组件复用时接收的构造参数，仅V1组件的复用回调支持该参数。不传此参数时，复用回调函数无入参。 |
+| params | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object \| undefined \| null&gt; | 否 | 组件复用时接收的构造参数，仅V1组件的复用回调支持该参数。不传此参数时，复用回调函数无入参。 |
 
 ## onDidBuild
 

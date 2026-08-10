@@ -1,6 +1,6 @@
 # @ohos.file.volumeManager
 
-The **volumeManager** module provides APIs for querying and managing volumes and disks, including querying volume information, mounting or unmounting a volume, partitioning a disk, and formatting a volume.
+该模块提供卷设备、磁盘设备查询和管理的相关功能：包括查询卷设备信息，对卷设备的挂载卸载、对磁盘设备分区以及卷设备的格式化等功能。
 
 **Since:** 9
 
@@ -12,6 +12,12 @@ The **volumeManager** module provides APIs for querying and managing volumes and
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { volumeManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -19,34 +25,22 @@ The **volumeManager** module provides APIs for querying and managing volumes and
 
 | Name | Description |
 | --- | --- |
-| [burn](arkts-corefile-volumemanager-burn-f-sys.md#burn) | Burns data to a volume. This API uses a promise to return the result. |
-| [createIsoImage](arkts-corefile-volumemanager-createisoimage-f-sys.md#createisoimage) | Creates an ISO image from a volume. This API uses a promise to return the result. |
-| [createPartition](arkts-corefile-volumemanager-createpartition-f-sys.md#createpartition) | Creates a partition on a disk. This API uses a promise to return the result. |
-| [deletePartition](arkts-corefile-volumemanager-deletepartition-f-sys.md#deletepartition) | Deletes a partition on a disk. This API uses a promise to return the result. |
-| [eject](arkts-corefile-volumemanager-eject-f-sys.md#eject) | Ejects a volume. This API uses a promise to return the result. |
-| [erase](arkts-corefile-volumemanager-erase-f-sys.md#erase) | Erases a volume. This API uses a promise to return the result. |
-| [format](arkts-corefile-volumemanager-format-f-sys.md#format) | Formats a volume. This API uses an asynchronous callback to return the result. Currently, only the virtual file allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change. |
-| [format](arkts-corefile-volumemanager-format-f-sys.md#format-1) | Formats a volume. This API uses a promise to return the result. Currently, only the virtual file allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change. |
-| [formatPartition](arkts-corefile-volumemanager-formatpartition-f-sys.md#formatpartition) | Formats a partition on a disk. This API uses a promise to return the result. |
-| [getAllDisks](arkts-corefile-volumemanager-getalldisks-f-sys.md#getalldisks) | Querying Information About All Disks. |
-| [getAllVolumes](arkts-corefile-volumemanager-getallvolumes-f-sys.md#getallvolumes) | Obtains information about all volumes of this external storage device. This API uses an asynchronous callback to return the result. |
-| [getAllVolumes](arkts-corefile-volumemanager-getallvolumes-f-sys.md#getallvolumes-1) | Obtains information about all volumes of this external storage device. This API uses a promise to return the result. |
-| [getDiskById](arkts-corefile-volumemanager-getdiskbyid-f-sys.md#getdiskbyid) | Querying disk information based on the disk ID. |
-| [getOpProcess](arkts-corefile-volumemanager-getopprocess-f-sys.md#getopprocess) | Gets the operation progress of a volume. This API uses a promise to return the result. |
-| [getPartitionTable](arkts-corefile-volumemanager-getpartitiontable-f-sys.md#getpartitiontable) | Obtains partition table information based on the disk ID. This API uses a promise to return the result. |
-| [getVolumeById](arkts-corefile-volumemanager-getvolumebyid-f-sys.md#getvolumebyid) | Obtains information about a volume based on the volume ID. This API uses an asynchronous callback to return the result. |
-| [getVolumeById](arkts-corefile-volumemanager-getvolumebyid-f-sys.md#getvolumebyid-1) | Obtains information about a volume based on the volume ID. This API uses a promise to return the result. |
-| [getVolumeByUuid](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md#getvolumebyuuid) | Obtains information about a volume based on the UUID. This API uses an asynchronous callback to return the result. |
-| [getVolumeByUuid](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md#getvolumebyuuid-1) | Obtains information about a volume based on the universally unique identifier (UUID). This API uses a promise to return the result. |
-| [isVolumeInUse](arkts-corefile-volumemanager-isvolumeinuse-f-sys.md#isvolumeinuse) | Query whether the specified volume is currently in use. This API uses a promise to return the result. |
-| [mount](arkts-corefile-volumemanager-mount-f-sys.md#mount) | Mounts a volume. This API uses an asynchronous callback to return the result. Currently, only the FAT, exFAT, ext4and NTFS file systems are supported. |
-| [mount](arkts-corefile-volumemanager-mount-f-sys.md#mount-1) | Mounts a volume. This API uses a promise to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported. |
-| [partition](arkts-corefile-volumemanager-partition-f-sys.md#partition) | Partitions a disk. This API uses an asynchronous callback to return the result. The system supports access to multi-partition disks. Currently, this API can partition a disk into only one partition. |
-| [partition](arkts-corefile-volumemanager-partition-f-sys.md#partition-1) | Partitions a disk. This API uses a promise to return the result. The system supports access to multi-partition disks. Currently, this API can partition a disk into only one partition. |
-| [setVolumeDescription](arkts-corefile-volumemanager-setvolumedescription-f-sys.md#setvolumedescription) | Sets volume description. This API uses an asynchronous callback to return the result. |
-| [setVolumeDescription](arkts-corefile-volumemanager-setvolumedescription-f-sys.md#setvolumedescription-1) | Sets volume description. This API uses a promise to return the result. |
-| [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount) | Unmounts a volume. This API uses an asynchronous callback to return the result. |
-| [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount-1) | Unmounts a volume. This API uses a promise to return the result. |
+| [format](arkts-corefile-volumemanager-format-f-sys.md#format) | 对指定卷设备进行格式化，使用callback异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。 |
+| [format](arkts-corefile-volumemanager-format-f-sys.md#format-1) | 对指定卷设备进行格式化，使用Promise异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。 |
+| [getAllVolumes](arkts-corefile-volumemanager-getallvolumes-f-sys.md#getallvolumes) | 获取当前外置存储中所有卷设备信息，使用callback异步回调。 |
+| [getAllVolumes](arkts-corefile-volumemanager-getallvolumes-f-sys.md#getallvolumes-1) | 获取当前外置存储中所有卷设备信息，使用Promise异步回调。 |
+| [getVolumeById](arkts-corefile-volumemanager-getvolumebyid-f-sys.md#getvolumebyid) | 通过指定卷设备id获得卷设备信息，使用callback异步回调。 |
+| [getVolumeById](arkts-corefile-volumemanager-getvolumebyid-f-sys.md#getvolumebyid-1) | 通过卷设备id获得指定卷设备信息，使用Promise异步回调。 |
+| [getVolumeByUuid](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md#getvolumebyuuid) | 通过卷设备uuid获得指定卷设备信息，使用callback异步回调。 |
+| [getVolumeByUuid](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md#getvolumebyuuid-1) | 通过卷设备uuid获得指定卷设备信息，使用Promise异步回调。 |
+| [mount](arkts-corefile-volumemanager-mount-f-sys.md#mount) | 挂载指定卷设备，使用callback异步回调。当前仅支持vfat、exfat以及ntfs三种文件系统的卷设备挂载。 |
+| [mount](arkts-corefile-volumemanager-mount-f-sys.md#mount-1) | 挂载指定卷设备，使用Promise异步回调。当前仅支持vfat、exfat以及ntfs三种文件系统的卷设备挂载。 |
+| [partition](arkts-corefile-volumemanager-partition-f-sys.md#partition) | 对磁盘进行分区，使用callback异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。不支持对光盘进行分区。 |
+| [partition](arkts-corefile-volumemanager-partition-f-sys.md#partition-1) | 对磁盘设备进行分区，使用Promise异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。不支持对光盘进行分区。 |
+| [setVolumeDescription](arkts-corefile-volumemanager-setvolumedescription-f-sys.md#setvolumedescription) | 修改指定卷设备描述，使用callback异步回调。当前仅支持修改ntfs和exfat两种文件系统类型的设备描述，只有处于卸载状态的卷设备可以修改设备描述。 |
+| [setVolumeDescription](arkts-corefile-volumemanager-setvolumedescription-f-sys.md#setvolumedescription-1) | 修改指定卷设备描述，使用Promise异步回调。当前仅支持修改ntfs和exfat两种文件系统类型的设备描述，只有处于卸载状态的卷设备可以修改设备描述。 |
+| [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount) | 卸载指定卷设备，使用callback异步回调。 |
+| [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount-1) | 卸载指定卷设备，使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -54,19 +48,6 @@ The **volumeManager** module provides APIs for querying and managing volumes and
 
 | Name | Description |
 | --- | --- |
-| [Disk](arkts-corefile-volumemanager-disk-i-sys.md) | Disk information. |
-| [FormatParams](arkts-corefile-volumemanager-formatparams-i-sys.md) | Format options for partition formatting. |
-| [PartitionInfo](arkts-corefile-volumemanager-partitioninfo-i-sys.md) | Partition information. |
-| [PartitionParams](arkts-corefile-volumemanager-partitionparams-i-sys.md) | Partition creation options. |
-| [PartitionTableInfo](arkts-corefile-volumemanager-partitiontableinfo-i-sys.md) | Partition table information. |
-| [Volume](arkts-corefile-volumemanager-volume-i-sys.md) | Get All Volumes. |
-<!--DelEnd-->
-
-<!--Del-->
-### Enums（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [DiskType](arkts-corefile-volumemanager-disktype-e-sys.md) | Disk type. |
+| [Volume](arkts-corefile-volumemanager-volume-i-sys.md) | 获取所有卷。 |
 <!--DelEnd-->
 

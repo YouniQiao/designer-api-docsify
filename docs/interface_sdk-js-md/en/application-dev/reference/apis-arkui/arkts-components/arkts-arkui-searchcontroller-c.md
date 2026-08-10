@@ -1,22 +1,20 @@
 # SearchController
 
-The controller for the **Search** component inherits from  
-[TextContentControllerBase]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The APIs involved are as follows:\_\_\_MD\_COMMENT\_DESC\_USD\_11\_\_\_ system API  
-[getText]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and other APIs like\_\_\_MD\_COMMENT\_DESC\_USD\_12\_\_\_  
-[getTextContentRect]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_,  
-[getTextContentLineCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_,  
-[getCaretOffset]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_, [addText]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_,  
-[deleteText]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_,  
-[getSelection]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_,  
-[clearPreviewText]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_,  
-[setStyledPlaceholder]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_, and  
-[deleteBackward]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_.
+Search组件的控制器继承自[TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md)，涉及的接口有  
+[getTextContentRect](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentrect)、  
+[getTextContentLineCount](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentlinecount)、  
+[getCaretOffset](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getcaretoffset)、[addText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#addtext)、  
+[deleteText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletetext)、[getSelection](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getselection)、[clearPreviewText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#clearpreviewtext)、  
+[setStyledPlaceholder](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#setstyledplaceholder)、  
+[deleteBackward](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletebackward)、  
+[scrollToVisible](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#scrolltovisible)&lt;!--Del--&gt;以及系统接口  
+[getText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c-sys.md/arkts-arkui-common-textcontentcontrollerbase-c-sys.md#gettext)&lt;!--DelEnd--&gt;。
 
-## Objects to Import
+## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts controller: SearchController = new SearchController();```
 
-**Inheritance/Implementation:** SearchController extends [TextContentControllerBase](../arkts-apis/arkts-arkui-component/common-textcontentcontrollerbase-c.md)
+**Inheritance/Implementation:** SearchController extends [TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md)
 
 **Since:** 8
 
@@ -32,7 +30,7 @@ The controller for the **Search** component inherits from
 caretPosition(value: number): void
 ```
 
-Sets the position of the caret.
+设置输入光标的位置。
 
 **Since:** 8
 
@@ -48,7 +46,7 @@ Sets the position of the caret.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Length from the start of the character string to the position where the caret is located. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Values less than 0 are treated as **0**. Values greater than the string length are treated as the string length. |
+| value | number | Yes | 从字符串开始到光标所在位置的长度。&lt;/br&gt;当value&lt;0时，按照0处理。当value&gt;字符串长度时，按照字符串长度处理。 |
 
 ## constructor
 
@@ -56,7 +54,7 @@ Sets the position of the caret.
 constructor()
 ```
 
-A constructor used to create a **SearchController** object.
+SearchController的构造函数。
 
 **Since:** 8
 
@@ -74,7 +72,15 @@ A constructor used to create a **SearchController** object.
 setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void
 ```
 
-Sets the text selection range and highlights the selected text when the component is focused. This API works only when the value of **selectionStart** is less than that of **selectionEnd**.
+组件在获焦状态下，调用该接口设置文本选择区域并高亮显示，且只有在selectionStart小于selectionEnd时，文字才会被选取并高亮显示。
+
+> **说明：**
+> 
+> - 如果selectionStart或selectionEnd被赋值为undefined时，当作0处理。
+> 
+> - 如果selectionMenuHidden被赋值为true或设备为2in1时，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。
+> 
+> - 如果选中的文本含有emoji表情时，表情的起始位置包含在设置的文本选中区域内就会被选中。
 
 **Since:** 12
 
@@ -92,9 +98,9 @@ Sets the text selection range and highlights the selected text when the componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| selectionEnd | number | Yes | End position of the text selection range.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Configuration options for text selection.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **MenuPolicy.DEFAULT |
+| selectionStart | number | Yes | 文本选择区域起始位置，文本框中文字的起始位置为0。 &lt;br&gt;当selectionStart小于0时，按照0处理；当selectionStart大于文字最大长度时，按照文字最大长度处理。 |
+| selectionEnd | number | Yes | 文本选择区域结束位置。 &lt;br&gt;当selectionEnd小于0时、按照0处理；当selectionEnd大于文字最大长度时、按照文字最大长度处理。 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | 选中文字时的配置。 &lt;br&gt;默认值：MenuPolicy.DEFAULT。 |
 
 ## stopEditing
 
@@ -102,7 +108,7 @@ Sets the text selection range and highlights the selected text when the componen
 stopEditing(): void
 ```
 
-Exits the editing state.
+退出编辑态。
 
 **Since:** 10
 

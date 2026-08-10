@@ -1,6 +1,6 @@
 # ConstraintSourceTypeInfo (System API)
 
-Defines the constraint source type.
+表示约束来源类型信息。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Defines the constraint source type.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## localId
 
 ```TypeScript
 localId: int
 ```
 
-ID of the target OS account.
+系统账号ID
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ ID of the target OS account.
 type: ConstraintSourceType
 ```
 
-Type of the constraint source.
+约束来源类型。
 
-**Type:** ConstraintSourceType
+**Type:** [ConstraintSourceType](arkts-basicservices-osaccount-constraintsourcetype-e-sys.md)
 
 **Since:** 9
 

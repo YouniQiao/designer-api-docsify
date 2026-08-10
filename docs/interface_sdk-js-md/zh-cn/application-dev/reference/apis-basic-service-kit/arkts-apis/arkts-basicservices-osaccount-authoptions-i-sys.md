@@ -1,7 +1,7 @@
 # AuthOptions（系统接口）
 
 表示  
-[认证用户]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的可选参数集合。
+[认证用户](arkts-basicservices-osaccount-userauth-c-sys.md#auth)的可选参数集合。
 
 **起始版本：** 12
 
@@ -13,6 +13,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountId
 
 ```TypeScript
@@ -21,7 +27,7 @@ accountId?: int
 
 系统账号标识，默认为undefined。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -63,7 +69,7 @@ authIntent?: AuthIntent
 
 认证意图，默认为undefined。
 
-**类型：** AuthIntent
+**类型：** [AuthIntent](arkts-basicservices-osaccount-authintent-e-sys.md)
 
 **起始版本：** 12
 
@@ -83,7 +89,7 @@ remoteAuthOptions?: RemoteAuthOptions
 
 远程认证选项，默认为undefined。
 
-**类型：** RemoteAuthOptions
+**类型：** [RemoteAuthOptions](arkts-basicservices-osaccount-remoteauthoptions-i-sys.md)
 
 **起始版本：** 12
 

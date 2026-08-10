@@ -6,7 +6,7 @@
 function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>): void
 ```
 
-Adds an array of notification slots. This API uses an asynchronous callback to return the result.
+创建多个通知通道（callback形式）。
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slots | Array&lt;NotificationSlot&gt; | Yes | Notification slots to add. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt; | Yes | 要创建的通知通道对象数组。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示被指定的回调方法。 |
 
 
 ## addSlots
@@ -38,7 +38,7 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 function addSlots(slots: Array<NotificationSlot>): Promise<void>
 ```
 
-Adds an array of notification slots. This API uses a promise to return the result.
+创建多个通知通道（Promise形式）。
 
 **Since:** 7
 
@@ -60,11 +60,11 @@ Adds an array of notification slots. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slots | Array&lt;NotificationSlot&gt; | Yes | Notification slots to add. |
+| slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt; | Yes | 要创建的通知通道对象数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

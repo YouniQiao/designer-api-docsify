@@ -1,12 +1,18 @@
 # getPreferredLanguageList
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getPreferredLanguageList
 
 ```TypeScript
 export function getPreferredLanguageList(): Array<string>
 ```
 
-Obtains the list of preferred languages.
+获取系统偏好语言列表。
 
 **Since:** 8
 
@@ -24,5 +30,5 @@ Obtains the list of preferred languages.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of preferred languages. |
+| Array&lt;string&gt; | 系统偏好语言列表。 |
 

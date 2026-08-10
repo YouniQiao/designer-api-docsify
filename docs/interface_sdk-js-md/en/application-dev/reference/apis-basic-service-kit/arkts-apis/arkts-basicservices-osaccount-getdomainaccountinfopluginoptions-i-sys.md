@@ -1,8 +1,7 @@
 # GetDomainAccountInfoPluginOptions (System API)
 
-Defines the options for the domain plug-in to obtain the domain account information. The  
-**GetDomainAccountInfoPluginOptions** class inherits from  
-[**GetDomainAccountInfoOptions**]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示插件查询域账号信息的选项。GetDomainAccountInfoPluginOptions类继承  
+[GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md)
 
 **Inheritance/Implementation:** GetDomainAccountInfoPluginOptions extends [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md)
 
@@ -16,15 +15,21 @@ Defines the options for the domain plug-in to obtain the domain account informat
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## callerUid
 
 ```TypeScript
 callerUid: int
 ```
 
-Unique identifier of the caller.
+调用方唯一标识符。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

@@ -1,5 +1,11 @@
 # getNameForUid
 
+## 导入模块
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getNameForUid
 
 ```TypeScript
@@ -22,10 +28,10 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | number | 是 | @param { AsyncCallback\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ } callback |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 |  |
+| uid | number | 是 | @param { AsyncCallback&lt;string&gt; } callback |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import bundle from '@ohos.bundle';
@@ -74,7 +80,7 @@ function getNameForUid(uid: number): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Returns the bundle name. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import bundle from '@ohos.bundle';

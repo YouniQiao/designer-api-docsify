@@ -1,6 +1,6 @@
 # SpatialAudioSourceType (System API)
 
-Enumerates the spatial audio source type.
+枚举空间音频源类型。
 
 **Since:** 24
 
@@ -18,7 +18,7 @@ Enumerates the spatial audio source type.
 SPATIAL_AUDIO_SOURCE_TYPE_STEREO = 0
 ```
 
-stereo source type.
+立体声源类型。
 
 **Since:** 24
 
@@ -38,7 +38,7 @@ stereo source type.
 SPATIAL_AUDIO_SOURCE_TYPE_AUDIO_VIVID = 1
 ```
 
-audio vivid source type.
+音频源类型。
 
 **Since:** 24
 
@@ -58,7 +58,7 @@ audio vivid source type.
 SPATIAL_AUDIO_SOURCE_TYPE_MULTI_CHANNEL = 2
 ```
 
-multichannel source type.
+多通道源类型。
 
 **Since:** 24
 

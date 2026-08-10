@@ -1,5 +1,11 @@
 # getWindow
 
+## 导入模块
+
+```TypeScript
+import { featureAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## getWindow
 
 ```TypeScript
@@ -22,9 +28,9 @@ function getWindow(callback: AsyncCallback<window.Window>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;window.Window&gt; | 是 | 回调函数，返回当前Ability对应的窗口。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | 是 | 回调函数，返回当前Ability对应的窗口。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
@@ -66,7 +72,7 @@ function getWindow(): Promise<window.Window>
 | --- | --- |
 | Promise&lt;window.Window&gt; | Promise对象，返回当前Ability对应的窗口。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

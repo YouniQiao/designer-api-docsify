@@ -1,12 +1,18 @@
 # createTouchController
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## createTouchController
 
 ```TypeScript
 function createTouchController(): Promise<TouchController>
 ```
 
-Creates a touch controller for simulating touch operations. This API uses a promise to return the result.
+创建触控控制器，用于模拟触控操作。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -24,13 +30,39 @@ Creates a touch controller for simulating touch operations. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TouchController&gt; | Promise used to return the touch controller instance. |
+| Promise&lt;TouchController&gt; | Promise对象，返回触控控制器实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 801 | Capability not supported. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+
+## Examples
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createTouchController()
+            .then(touchController => {
+              console.info('Succeeded in creating touch controller');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to create touch controller. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```
 

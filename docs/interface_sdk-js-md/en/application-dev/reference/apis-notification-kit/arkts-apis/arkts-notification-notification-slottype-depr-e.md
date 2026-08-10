@@ -1,6 +1,6 @@
 # SlotType
 
-Enumerates the notification slot types.
+通知渠道类型。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Enumerates the notification slot types.
 UNKNOWN_TYPE = 0
 ```
 
-Unknown type.
+未知类型。
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ Unknown type.
 SOCIAL_COMMUNICATION = 1
 ```
 
-Notification slot for social communication.
+社交类型。
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ Notification slot for social communication.
 SERVICE_INFORMATION = 2
 ```
 
-Notification slot for service information.
+服务类型。
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ Notification slot for service information.
 CONTENT_INFORMATION = 3
 ```
 
-Notification slot for content consultation.
+内容类型。
 
 **Since:** 7
 
@@ -100,7 +100,7 @@ Notification slot for content consultation.
 OTHER_TYPES = 0xFFFF
 ```
 
-Notification slot for other purposes.
+其他类型。
 
 **Since:** 7
 

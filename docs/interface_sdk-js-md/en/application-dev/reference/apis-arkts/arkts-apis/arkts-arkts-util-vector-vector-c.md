@@ -1,13 +1,14 @@
 # Vector
 
-Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements.Both Vector and [ArrayList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%.  
-**Recommended use case**: Use Vector when the data volume is large.This topic uses the following to identify the use of generics:
+Vector是一种线性数据结构，底层基于数组实现，解决了需要动态扩容、高效随机访问的数据存储问题。当Vector的内存用尽时，会自动分配更大的连续内存区，将原先的元素复制到新的内存区，并释放旧的内存区。使用Vector能够高效快速地访问元素，其2倍扩容策略减少了频繁的内存重分配，同时丰富的操作接口提供了更灵活的数据管理能力。Vector和[ArrayList](arkts-util-arraylist.md)相似，都是基于数组实现，但Vector提供了更多操作数组的接口。它们都可以动态调整容量，但Vector每次扩容增加1倍，ArrayList只扩容0.5倍。  
+**推荐使用场景：** 当需要频繁按索引随机访问元素且数据量较大时，推荐使用Vector来存取数据。文档中使用了泛型，涉及以下泛型标记符：
 
-- T: Type
-    **NOTE**  
-    
-    - The APIs provided by this module are deprecated since API version 9. You are advised to use  
-    [@ohos.util.ArrayList]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+- T：Type，类
+
+> **说明：**
+> 
+> - 此模块提供的接口从API version 9开始废弃。建议使用
+> [@ohos.util.ArrayList](arkts-util-arraylist.md)。
 
 **Since:** 8
 
@@ -21,13 +22,19 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { Vector } from 'kits/@kit.ArkTS';
+```
+
 ## [Symbol.iterator]
 
 ```TypeScript
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-returns an ES6 iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，用于遍历Vector中的元素。
 
 **Since:** 8
 
@@ -43,9 +50,9 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Vector实例中的元素。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -74,7 +81,7 @@ while(temp != undefined) {
 add(element: T): boolean
 ```
 
-Adds an element at the end of this Vector.
+在Vector中尾部插入元素，插入成功后Vector的长度增加1。
 
 **Since:** 8
 
@@ -90,15 +97,15 @@ Adds an element at the end of this Vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 添加的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
+| boolean | 成功添加元素返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class C1 {
@@ -120,7 +127,7 @@ let result3 = vector.add(c);
 clear(): void
 ```
 
-Clears all elements in this Vector and sets its length to **0**.
+清除Vector中的所有元素，并将length置为0。
 
 **Since:** 8
 
@@ -132,7 +139,7 @@ Clears all elements in this Vector and sets its length to **0**.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -149,7 +156,7 @@ vector.clear();
 clone(): Vector<T>
 ```
 
-Clones this Vector and returns a copy. The modification to the copy does not affect the original instance.
+克隆一个实例，并返回克隆后的实例。修改克隆后的实例并不会影响原实例。
 
 **Since:** 8
 
@@ -165,9 +172,9 @@ Clones this Vector and returns a copy. The modification to the copy does not aff
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | New **Vector** instance obtained. |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回新的Vector实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -184,7 +191,7 @@ let result = vector.clone();
 constructor()
 ```
 
-A constructor used to create a **Vector** instance.
+Vector的构造函数。
 
 **Since:** 8
 
@@ -196,7 +203,7 @@ A constructor used to create a **Vector** instance.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<string | number | Array<number>> = new Vector();
@@ -208,7 +215,7 @@ let vector : Vector<string | number | Array<number>> = new Vector();
 convertToArray(): Array<T>
 ```
 
-Converts this Vector into an array.
+将Vector实例转换为数组。
 
 **Since:** 8
 
@@ -224,9 +231,9 @@ Converts this Vector into an array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array obtained. |
+| Array&lt;T&gt; | 返回数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -243,7 +250,7 @@ let result = vector.convertToArray();
 copyToArray(array: Array<T>): void
 ```
 
-Copies elements in this Vector into an array to overwrite elements of the same position indexes.
+将Vector中的元素复制到指定数组中，覆盖数组中相同下标的元素。
 
 **Since:** 8
 
@@ -259,7 +266,7 @@ Copies elements in this Vector into an array to overwrite elements of the same p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | Array&lt;T&gt; | Yes | Array to which the elements in the Vector will be copied. |
+| array | Array&lt;T&gt; | Yes | 接收Vector中复制元素的数组。 |
 
 ## forEach
 
@@ -267,7 +274,7 @@ Copies elements in this Vector into an array to overwrite elements of the same p
 forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void
 ```
 
-Uses a callback to traverse the elements in this Vector and obtain their position indexes.
+通过回调函数来遍历Vector实例对象上的元素以及元素对应的下标。
 
 **Since:** 8
 
@@ -283,10 +290,10 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | Yes | Callback invoked for replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | Yes | 回调函数。 |
+| thisArg | Object | No | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -305,7 +312,7 @@ vector.forEach((value : number, index ?: number) : void => {
 get(index: number): T
 ```
 
-Obtains an element at the specified position in this Vector.
+获取指定下标对应的元素。
 
 **Since:** 8
 
@@ -321,15 +328,15 @@ Obtains an element at the specified position in this Vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the target element. |
+| index | number | Yes | 查找的下标位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Element obtained. |
+| T | 返回指定下标对应的元素。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -346,7 +353,7 @@ let result = vector.get(2);
 getCapacity(): number
 ```
 
-Obtains the capacity of this Vector.
+获取Vector实例的容量大小。
 
 **Since:** 8
 
@@ -362,9 +369,9 @@ Obtains the capacity of this Vector.
 
 | Type | Description |
 | --- | --- |
-| number | Capacity obtained. |
+| number | 返回Vector的容量。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -381,7 +388,7 @@ let result = vector.getCapacity();
 getFirstElement(): T
 ```
 
-Obtains the first element in this Vector.
+获取Vector实例中的第一个元素。
 
 **Since:** 8
 
@@ -397,9 +404,9 @@ Obtains the first element in this Vector.
 
 | Type | Description |
 | --- | --- |
-| T | The first element obtained. |
+| T | 返回Vector实例中的第一个元素。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -416,7 +423,7 @@ let result = vector.getFirstElement();
 getIndexFrom(element: T, index: number): number
 ```
 
-Searches for an element forward from the specified position index and returns the position index of the element.
+从指定索引向高索引方向搜索，返回该元素的下标索引。
 
 **Since:** 8
 
@@ -432,16 +439,16 @@ Searches for an element forward from the specified position index and returns th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
-| index | number | Yes | Position index where the search starts. |
+| element | T | Yes | 要查找的元素。 |
+| index | number | Yes | 从指定索引向前搜索的起始位置，取值范围为[0, length-1]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the element. If no match is found, **-1** is returned. |
+| number | 返回该元素的下标，如果查找失败，则返回 -1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -458,7 +465,7 @@ let result = vector.getIndexFrom(4, 3);
 getIndexOf(element: T): number
 ```
 
-Obtains the index of the first occurrence of the specified element in this Vector.
+获取指定元素第一次出现的下标值，如果未找到则返回-1。
 
 **Since:** 8
 
@@ -474,15 +481,15 @@ Obtains the index of the first occurrence of the specified element in this Vecto
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the element. If no match is found, **-1** is returned. |
+| number | 返回指定元素第一次出现时的下标值，查找失败返回-1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -502,7 +509,7 @@ let result = vector.getIndexOf(2);
 getLastElement(): T
 ```
 
-Obtains the last element in this Vector.
+获取Vector实例中的最后一个元素。
 
 **Since:** 8
 
@@ -518,9 +525,9 @@ Obtains the last element in this Vector.
 
 | Type | Description |
 | --- | --- |
-| T | The last element obtained. |
+| T | 返回Vector实例中的最后一个元素。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -537,7 +544,7 @@ let result = vector.getLastElement();
 getLastIndexFrom(element: T, index: number): number
 ```
 
-Searches for an element backward from the specified position index and returns the position index of the element.
+从指定索引向低索引方向搜索，返回该元素的下标索引。
 
 **Since:** 8
 
@@ -553,16 +560,16 @@ Searches for an element backward from the specified position index and returns t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
-| index | number | Yes | Position index where the search starts. |
+| element | T | Yes | 要查找的元素。 |
+| index | number | Yes | 从指定索引开始搜索，取值范围[0, length-1]。超出范围时返回-1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the element. If no match is found, **-1** is returned. |
+| number | 返回该元素的下标，如果查找失败，则返回-1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -579,7 +586,7 @@ let result = vector.getLastIndexFrom(4,3);
 getLastIndexOf(element: T): number
 ```
 
-Obtains the index of the last occurrence of the specified element in this Vector.
+获取指定元素最后一次出现的下标值，如果未找到则返回-1。
 
 **Since:** 8
 
@@ -595,15 +602,15 @@ Obtains the index of the last occurrence of the specified element in this Vector
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the element. If no match is found, **-1** is returned. |
+| number | 返回指定元素最后一次出现时的下标值，查找失败返回-1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -623,7 +630,7 @@ let result = vector.getLastIndexOf(2);
 has(element: T): boolean
 ```
 
-Checks whether this Vector has the specified element.
+判断此Vector中是否包含指定元素。
 
 **Since:** 8
 
@@ -639,15 +646,15 @@ Checks whether this Vector has the specified element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the Vector has the specified element; otherwise, **false** is returned. |
+| boolean | 如果包含指定元素返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<string> = new Vector();
@@ -662,7 +669,7 @@ let result1 = vector.has("squirrel");
 increaseCapacityTo(newCapacity: number): void
 ```
 
-Increases the capacity of this Vector.
+如果传入的新容量大于或等于当前Vector实例的元素个数，将容量变更为新容量；如果传入的新容量小于当前Vector实例的元素个数，不做变更。
 
 **Since:** 8
 
@@ -678,9 +685,9 @@ Increases the capacity of this Vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newCapacity | number | Yes | New capacity. |
+| newCapacity | number | Yes | 新容量，需大于或等于当前Vector中的元素个数。传入值小于元素个数时不生效。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -698,7 +705,7 @@ vector.increaseCapacityTo(12);
 insert(element: T, index: number): void
 ```
 
-Inserts an element within the length range and moves its subsequent elements rightwards.
+在长度范围内的指定位置插入元素，并将该位置后续元素向右移动。
 
 **Since:** 8
 
@@ -714,10 +721,10 @@ Inserts an element within the length range and moves its subsequent elements rig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
-| index | number | Yes | Index of the position where the element is to be inserted. |
+| element | T | Yes | 被插入的元素。 |
+| index | number | Yes | 被插入的位置索引，取值范围为[0, length]。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<string | number | Object | Array<number>> = new Vector();
@@ -732,7 +739,7 @@ vector.insert(true, 2);
 isEmpty(): boolean
 ```
 
-Checks whether this Vector is empty (contains no elements).
+判断Vector是否为空。
 
 **Since:** 8
 
@@ -748,9 +755,9 @@ Checks whether this Vector is empty (contains no elements).
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the Vector is empty; otherwise, **false** is returned. |
+| boolean | 为空返回true，不为空返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -767,7 +774,7 @@ let result = vector.isEmpty();
 remove(element: T): boolean
 ```
 
-Removes the first occurrence of the specified element from this Vector.
+删除指定元素第一次出现的元素。
 
 **Since:** 8
 
@@ -783,15 +790,15 @@ Removes the first occurrence of the specified element from this Vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 待删除的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
+| boolean | 成功删除元素返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -808,7 +815,7 @@ let result = vector.remove(2);
 removeByIndex(index: number): T
 ```
 
-Searches for an element based on its index, removes the element after returning it, and moves its subsequent elements leftwards.
+根据下标值找到对应元素并删除，同时将该位置后续元素向左移动，返回被删除的元素。index取值范围为[0, length-1]。
 
 **Since:** 8
 
@@ -824,15 +831,15 @@ Searches for an element based on its index, removes the element after returning 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the target element. |
+| index | number | Yes | 要删除元素的位置下标值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Element removed. If the Vector is empty, **undefined** is returned. If the index is out of range, an exception is thrown. |
+| T | 返回被删除的元素。Vector为空时返回undefined，下标越界时抛出异常。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -850,7 +857,7 @@ let result = vector.removeByIndex(2);
 removeByRange(fromIndex: number, toIndex: number): void
 ```
 
-Removes from this Vector all of the elements within a range, including the element at the start position but not that at the end position.
+从一段范围内删除元素，包括起始值但不包括终止值，删除后后续元素向左移动，Vector的长度相应减少。
 
 **Since:** 8
 
@@ -866,10 +873,10 @@ Removes from this Vector all of the elements within a range, including the eleme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | number | Yes | Index of the start position. |
-| toIndex | number | Yes | Index of the end position. |
+| fromIndex | number | Yes | 起始下标，包含该下标对应的元素。 |
+| toIndex | number | Yes | 终止下标，不包含该下标对应的元素。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -886,7 +893,7 @@ vector.removeByRange(2,4);
 replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void
 ```
 
-Replaces all elements in this Vector with new elements, and returns the new ones.
+对Vector中的所有元素进行替换，并返回替换后的元素。
 
 **Since:** 8
 
@@ -902,10 +909,10 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | Yes | Callback invoked for replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | Yes | 回调函数。 |
+| thisArg | Object | No | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -925,7 +932,7 @@ vector.replaceAllElements((value : number) : number => {
 set(index: number, element: T): T
 ```
 
-Replaces an element at the specified position in this Vector with a given element.
+将此Vector中指定位置的元素替换为指定元素。
 
 **Since:** 8
 
@@ -941,14 +948,14 @@ Replaces an element at the specified position in this Vector with a given elemen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the target element. |
-| element | T | Yes | Element to be used for replacement. |
+| index | number | Yes | 查找的下标值，取值范围为[0, length-1]。 |
+| element | T | Yes | 用来替换的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | New element. |
+| T | 返回被替换位置上的原元素。 |
 
 ## setLength
 
@@ -956,7 +963,7 @@ Replaces an element at the specified position in this Vector with a given elemen
 setLength(newSize: number): void
 ```
 
-Sets a new length for this Vector.
+设置Vector实例的元素个数。若newSize大于当前元素个数则进行扩容，若newSize小于当前元素个数则截断删除超出部分的元素。newSize=0时清空所有元素，length置为0。
 
 **Since:** 8
 
@@ -972,9 +979,9 @@ Sets a new length for this Vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newSize | number | Yes | New length to set. |
+| newSize | number | Yes | 设置的新长度，取值原则：newSize ≥ 0。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -992,7 +999,7 @@ vector.setLength(2);
 sort(comparator?: (firstValue: T, secondValue: T) => number): void
 ```
 
-Sorts elements in this Vector.
+对Vector中的元素进行排序。
 
 **Since:** 8
 
@@ -1008,9 +1015,9 @@ Sorts elements in this Vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; number | No | Callback invoked for sorting. The default value is this instance. |
+| comparator | (firstValue: T, secondValue: T) =&gt; number | No | 排序的回调函数。默认值为当前实例对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1029,7 +1036,7 @@ vector.sort();
 subVector(fromIndex: number, toIndex: number): Vector<T>
 ```
 
-Obtains elements within a range in this Vector, including the element at the start position but not that at the end position, and returns these elements as a new **Vector** instance.
+获取Vector实例中指定范围内的元素，包括起始位置但不包括结束位置的元素，作为一个新的Vector实例返回。
 
 **Since:** 8
 
@@ -1045,16 +1052,16 @@ Obtains elements within a range in this Vector, including the element at the sta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | number | Yes | Index of the start position. |
-| toIndex | number | Yes | Index of the end position. |
+| fromIndex | number | Yes | 起始位置的下标。 |
+| toIndex | number | Yes | 结束位置的下标。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | New **Vector** instance obtained. |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回新的Vector实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1074,7 +1081,7 @@ let result1 = vector.subVector(2,4);
 toString(): string
 ```
 
-Uses commas (,) to concatenate elements in this Vector into a string.
+用逗号（,）将Vector实例中的元素拼接成字符串。
 
 **Since:** 8
 
@@ -1090,9 +1097,9 @@ Uses commas (,) to concatenate elements in this Vector into a string.
 
 | Type | Description |
 | --- | --- |
-| string | String obtained. |
+| string | 返回对应字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1109,7 +1116,7 @@ let result = vector.toString();
 trimToCurrentLength(): void
 ```
 
-Trims the capacity of this Vector into its current length.
+把容量限制为当前的length大小。适用于在完成元素添加后释放多余的内存空间，优化内存使用。
 
 **Since:** 8
 
@@ -1121,7 +1128,7 @@ Trims the capacity of this Vector into its current length.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1138,7 +1145,7 @@ vector.trimToCurrentLength();
 length: number
 ```
 
-Number of elements in a Vector.
+Vector的元素个数。
 
 **Type:** number
 

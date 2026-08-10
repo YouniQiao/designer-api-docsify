@@ -1,6 +1,6 @@
 # DeathRecipient
 
-Subscribes to death notifications of a remote object. When the remote object is dead, the local end will receive a notification and **[onRemoteDied]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_** will be called. A remote object is dead when the process holding the object is terminated or the device of the remote object is shut down or restarted. If the local and remote objects belong to different devices, the remote object is dead when the device holding the remote object is detached from the network.
+用于订阅远端对象的死亡通知。当被订阅该通知的远端对象死亡时，本端可收到消息，调用[onRemoteDied](arkts-ipc-rpc-deathrecipient-i.md#onremotedied)接口。远端对象死亡可以为远端对象所在进程死亡，远端对象所在设备关机或重启，当远端对象与本端对象属于不同设备时，也可为远端对象离开组网时。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Subscribes to death notifications of a remote object. When the remote object is 
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## onRemoteDied
 
 ```TypeScript
 onRemoteDied(): void
 ```
 
-Called to perform subsequent operations when a death notification of the remote object is received.
+在成功添加死亡通知订阅后，当远端对象死亡时，将自动调用本方法。
 
 **Since:** 7
 
@@ -26,7 +32,7 @@ Called to perform subsequent operations when a death notification of the remote 
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

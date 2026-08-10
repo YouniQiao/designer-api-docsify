@@ -4,7 +4,7 @@
 declare type VisibleAreaChangeCallback = (isExpanding: boolean, currentRatio: number) => void
 ```
 
-Represents a callback for visible area changes of the component.
+组件可见区域变化事件的回调类型。
 
 **Since:** 12
 
@@ -22,6 +22,6 @@ Represents a callback for visible area changes of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isExpanding | boolean | Yes | Whether the component's visible area has increased or decreased relative to its total area since the last callback. The value **true** indicates that the visible area has increased, and **false** indicates that the visible area has decreased. |
-| currentRatio | number | Yes | Ratio of the component's visible area to its own area at the moment the callback is triggered.  |
+| isExpanding | boolean | Yes | 视组件的可见面积与自身面积的比值与上一次回调相比的情况而定，比值变大为true，比值变小为false。 |
+| currentRatio | number | Yes | 触发回调时，组件可见面积与自身面积的比值。 |
 

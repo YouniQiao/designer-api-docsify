@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## mouseEvent
 
 ```TypeScript
@@ -18,7 +24,7 @@ mouseEvent: MouseEvent
 
 鼠标事件。
 
-**类型：** MouseEvent
+**类型：** [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)
 
 **起始版本：** 11
 

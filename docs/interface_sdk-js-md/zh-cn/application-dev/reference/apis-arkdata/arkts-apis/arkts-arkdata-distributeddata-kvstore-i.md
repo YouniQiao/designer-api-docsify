@@ -1,7 +1,7 @@
 # KVStore
 
 KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。在调用KVStore的方法前，需要先通过  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构建一个KVStore实例。
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个KVStore实例。
 
 **起始版本：** 7
 
@@ -39,9 +39,9 @@ commit(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -84,7 +84,7 @@ commit(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -123,10 +123,10 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要删除数据的key，不能为空且长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| key | string | 是 | 要删除数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -176,7 +176,7 @@ delete(key: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要删除数据的key，不能为空且长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| key | string | 是 | 要删除数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
 
 **返回值：**
 
@@ -184,7 +184,7 @@ delete(key: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -231,9 +231,9 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keys | string[] | 是 | 表示要批量删除的键值对。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -296,7 +296,7 @@ deleteBatch(keys: string[]): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -356,9 +356,9 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 设定是否开启同步，true表示开启同步，false表示不启用同步。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -407,7 +407,7 @@ enableSync(enabled: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -447,9 +447,9 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -495,9 +495,9 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | 是 | 取消订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -543,10 +543,10 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示订阅的类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | 是 | 回调函数。 |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | 是 | 表示订阅的类型。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -580,9 +580,9 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | 是 | 订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -615,11 +615,11 @@ put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_VALUE\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -662,8 +662,8 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_VALUE\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
 
 **返回值：**
 
@@ -671,7 +671,7 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -712,10 +712,10 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 是 | 表示要批量插入的键值对。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | 是 | 表示要批量插入的键值对。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -770,7 +770,7 @@ putBatch(entries: Entry[]): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 是 | 表示要批量插入的键值对。 |
+| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | 是 | 表示要批量插入的键值对。 |
 
 **返回值：**
 
@@ -778,7 +778,7 @@ putBatch(entries: Entry[]): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -836,9 +836,9 @@ rollback(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -881,7 +881,7 @@ rollback(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -922,9 +922,9 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 | --- | --- | --- | --- |
 | localLabels | string[] | 是 | 表示本地设备的同步标签。 |
 | remoteSupportLabels | string[] | 是 | 表示要同步数据的设备的同步标签。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -972,7 +972,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -1013,9 +1013,9 @@ startTransaction(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -1078,7 +1078,7 @@ startTransaction(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;

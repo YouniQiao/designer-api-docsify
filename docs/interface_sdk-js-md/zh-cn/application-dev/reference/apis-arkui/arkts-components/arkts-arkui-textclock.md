@@ -35,7 +35,9 @@ TextClock(options?: TextClockOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 通过文本显示当前系统时间的组件参数。不传入时使用默认配置，各属性默认值详见TextClockOptions。 |
+| options | [TextClockOptions](arkts-arkui-textclockoptions-i.md) | 否 | 通过文本显示当前系统时间的组件参数。不传入时使用默认配置，各属性默认值详见TextClockOptions。 |
 
 ## 汇总
 
+- [TextClockConfiguration](arkts-arkui-textclock-textclockconfiguration-i.md)
+- [TextClockOptions](arkts-arkui-textclock-textclockoptions-i.md)

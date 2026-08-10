@@ -1,9 +1,8 @@
 # DHKeyPairSpec
 
-Defines a child class of [AsyKeySpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ used to specify full parameters of the public and private keys in the DH algorithm.
+密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DH算法中公私钥包含的全量参数。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_To generate a key based on key parameters, pass it to  
-[createAsyKeyGeneratorBySpec()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to create a key generator.
+&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建密钥生成器。
 
 **Inheritance/Implementation:** DHKeyPairSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
@@ -17,15 +16,21 @@ Defines a child class of [AsyKeySpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ used 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## params
 
 ```TypeScript
 params: DHCommonParamsSpec
 ```
 
-Common parameters of the public and private keys in the DH algorithm.
+指定DH算法中公私钥都包含的公共参数。
 
-**Type:** DHCommonParamsSpec
+**Type:** [DHCommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md)
 
 **Since:** 11
 
@@ -45,7 +50,7 @@ Common parameters of the public and private keys in the DH algorithm.
 pk: bigint
 ```
 
-Public key **pk** in the DH algorithm.
+DH算法中的公钥pk。
 
 **Type:** bigint
 
@@ -67,7 +72,7 @@ Public key **pk** in the DH algorithm.
 sk: bigint
 ```
 
-Private key **sk** in the DH algorithm.
+DH算法中的私钥sk。
 
 **Type:** bigint
 

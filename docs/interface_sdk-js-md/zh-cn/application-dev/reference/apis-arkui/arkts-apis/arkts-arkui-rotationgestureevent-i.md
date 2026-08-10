@@ -1,8 +1,8 @@
 # RotationGestureEvent
 
-继承自[BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。可将该对象作为[onGestureJudgeBegin]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的event参数来传递。
+继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
 
-**继承/实现关系：** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-component/gesture-basegestureevent-i.md)
+**继承/实现关系：** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
 **起始版本：** 11
 
@@ -24,7 +24,7 @@ angle: number
 
 角度计算方式：当旋转手势被识别后，连接两根手指之间的线被识别为起始线条。随着手指的滑动，手指之间的线条会发生旋转。根据起始线条和当前线条两端点的坐标，使用反正切函数分别计算其相对于水平方向的夹角。
 
-最终的旋转角度为：arctan2(cy2-cy1, cx2-cx1) - arctan2(y2-y1, x2-x1)
+最终的旋转角度为：arctan2(cy2-cy1, cx2-cx1) - arctan2(y2-y1, x2-x1) 
 
 在起始线条为坐标系的情况下，顺时针旋转为0到180度，逆时针旋转为0到-180度。
 

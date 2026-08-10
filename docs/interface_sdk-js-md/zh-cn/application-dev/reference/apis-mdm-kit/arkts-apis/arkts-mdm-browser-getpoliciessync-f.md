@@ -1,5 +1,11 @@
 # getPoliciesSync
 
+## 导入模块
+
+```TypeScript
+import { browser } from 'kits/@kit.MDMKit';
+```
+
 ## getPoliciesSync
 
 ```TypeScript
@@ -22,8 +28,8 @@ function getPoliciesSync(admin: Want, appId: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| appId | string | 是 | 应用ID，用于指定浏览器。详情信息可参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appId | string | 是 | 应用ID，用于指定浏览器。详情信息可参考 [什么是appId](../../../quick-start/common-problem-of-application.md#什么是appid)。 |
 
 **返回值：**
 
@@ -35,8 +41,31 @@ function getPoliciesSync(admin: Want, appId: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 9200001 | The application is not an administrator application of the device. |
+
+## 示例
+
+```TypeScript
+import { browser } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
+let appId: string = 'com.example.******_******/******5t5CoBM=';
+
+try {
+  let result: string = browser.getPoliciesSync(wantTemp, appId);
+  console.info(`Succeeded in getting browser policies, result : ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to get browser policies. Code is ${err.code}, message is ${err.message}`);
+}
+```
 
 
 ## getPoliciesSync
@@ -61,8 +90,8 @@ function getPoliciesSync(admin: Want | null, appId: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
-| appId | string | 是 | 应用ID，用于指定浏览器。详情信息可参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| appId | string | 是 | 应用ID，用于指定浏览器。详情信息可参考 [什么是appId](../../../quick-start/common-problem-of-application.md#什么是appid)。 |
 
 **返回值：**
 
@@ -74,26 +103,20 @@ function getPoliciesSync(admin: Want | null, appId: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 9200001 | The application is not an administrator application of the device. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
 
 // 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
 let appId: string = 'com.example.******_******/******5t5CoBM=';
 
 try {
-  let result: string = browser.getPoliciesSync(wantTemp, appId);
+  // 参数需根据实际情况进行替换
+  let result: string = browser.getPoliciesSync(null, appId);
   console.info(`Succeeded in getting browser policies, result : ${JSON.stringify(result)}`);
 } catch(err) {
   console.error(`Failed to get browser policies. Code is ${err.code}, message is ${err.message}`);

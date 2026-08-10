@@ -1,5 +1,11 @@
 # destroyStream (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## destroyStream
 
 ```TypeScript
@@ -24,12 +30,23 @@ Destroy the Stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the ID of a transport stream. |
+| streamId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of a transport stream. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 202 | Not system App. |
+
+## Examples
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let sessionId = 100;
+hilog.info(0x0000, 'testTag', 'destroyStream called');
+abilityConnectionManager.destroyStream(sessionId)
+```
 

@@ -1,6 +1,6 @@
 # AudioDebuggingManager
 
-Provides audio debug management capabilities.
+实现音频调试功能。
 
 **Since:** 26.0.0
 
@@ -9,6 +9,12 @@ Provides audio debug management capabilities.
 <!--Device-audio-interface AudioDebuggingManager--><!--Device-audio-interface AudioDebuggingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## printAppInfo
 
@@ -22,7 +28,7 @@ ArkTS-Sta:
 printAppInfo(fd: int): void
 ```
 
-Prints full audio runtime snapshot for current app process.The snapshot will contain all audio renderers, capturers, audio session information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+显示当前应用进程的完整运行时快照。
 
 **Since:** 26.0.0
 
@@ -38,7 +44,7 @@ Prints full audio runtime snapshot for current app process.The snapshot will con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | fd为文件句柄，表示快照信息将要写入的位置。 如果fd小于0，则将快照信息打印到运行日志中，否则快照将写入文件。 取值限定为整数。 |
 
 ## printCapturerInfo
 
@@ -52,7 +58,7 @@ ArkTS-Sta:
 printCapturerInfo(capturer: AudioCapturer, fd: int): void
 ```
 
-Prints full audio runtime snapshot for target audio capturer instance.The snapshot will contain the stream, pipe, volume and device information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+打印目标音频捕获程序实例的完整音频运行时快照。快照将包含流、管道、卷和设备信息。请注意，不同版本的信息详情和格式可能会有所不同，它只能用于手动调试，用户不应依赖实际功能实现或文件的信息内容提取。
 
 **Since:** 26.0.0
 
@@ -68,8 +74,8 @@ Prints full audio runtime snapshot for target audio capturer instance.The snapsh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capturer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | target audio capturer instance to print snapshot. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes | 目标音频捕获程序实例以打印快照。 取值限定为整数。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | fd是文件描述符，表示快照信息的位置 写入到。如果fd小于0或无可写，则快照信息将打印到 运行日志，否则快照将写入文件。 取值限定为整数。 |
 
 ## printLoopbackInfo
 
@@ -83,7 +89,7 @@ ArkTS-Sta:
 printLoopbackInfo(loopback: AudioLoopback, fd: int): void
 ```
 
-Prints full audio runtime snapshot for target audio loopback instance.The snapshot will contain the loopback status, device and effect information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+打印目标音频环回实例的完整音频运行时快照。快照将包含环回状态、设备和效果信息。请注意，不同版本的信息详情和格式可能会有所不同，它只能用于手动调试，用户不应依赖实际功能实现或文件的信息内容提取。
 
 **Since:** 26.0.0
 
@@ -99,8 +105,8 @@ Prints full audio runtime snapshot for target audio loopback instance.The snapsh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loopback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | target audio loopback instance to print snapshot. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| loopback | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | Yes | 目标音频环回实例以打印快照。 取值限定为整数。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | fd是文件描述符，表示快照信息的位置 写入到。如果fd小于0或无可写，则快照信息将打印到 运行日志，否则快照将写入文件。 取值限定为整数。 |
 
 ## printRendererInfo
 
@@ -114,7 +120,7 @@ ArkTS-Sta:
 printRendererInfo(renderer: AudioRenderer, fd: int): void
 ```
 
-Prints full audio runtime snapshot for target audio renderer instance.The snapshot will contain the stream, pipe, volume and device information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+打印目标音频渲染器实例的完整音频运行时快照。快照将包含流、管道、卷和设备信息。请注意，不同版本的信息详情和格式可能会有所不同，它只能用于手动调试，用户不应依赖实际功能实现或文件的信息内容提取。
 
 **Since:** 26.0.0
 
@@ -130,8 +136,8 @@ Prints full audio runtime snapshot for target audio renderer instance.The snapsh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| renderer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | target audio renderer instance to print snapshot. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | Yes | 目标音频渲染器实例以打印快照。 取值限定为整数。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | fd是文件描述符，表示快照信息的位置 写入到。如果fd小于0或无可写，则快照信息将打印到 运行日志，否则快照将写入文件。 取值限定为整数。 |
 
 ## printSessionInfo
 
@@ -145,7 +151,7 @@ ArkTS-Sta:
 printSessionInfo(session: AudioSessionManager, fd: int): void
 ```
 
-Prints full audio runtime snapshot for target audio session manager instance.The snapshot will contain the session status, scene, strategy and device information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+打印目标音频会话管理器实例的完整音频运行时快照。快照将包含会话状态、场景、策略和设备信息。请注意，不同版本的信息详情和格式可能会有所不同，它只能用于手动调试，用户不应依赖实际功能实现或文件的信息内容提取。
 
 **Since:** 26.0.0
 
@@ -161,6 +167,6 @@ Prints full audio runtime snapshot for target audio session manager instance.The
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | target audio session manager instance to print snapshot. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| session | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | Yes | 目标音频会话管理器实例以打印快照。 取值限定为整数。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | fd是文件描述符，表示快照信息的位置 写入到。如果fd小于0或无可写，则快照信息将打印到 运行日志，否则快照将写入文件。 取值限定为整数。 |
 

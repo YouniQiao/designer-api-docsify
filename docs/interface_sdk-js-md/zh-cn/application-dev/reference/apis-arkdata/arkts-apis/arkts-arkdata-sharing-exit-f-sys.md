@@ -1,5 +1,11 @@
 # exit（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## exit
 
 ```TypeScript
@@ -23,28 +29,28 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回退出共享的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回退出共享的结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-cloudData.sharing.exit('sharing_resource_test', ((err: BusinessError|null, result) => {
+cloudData.sharing.exit('sharing_resource_test', (err: BusinessError, result) => {
   if (err) {
     console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`exit share succeeded, result: ${result}`);
-}))
+});
 ```
 
 
@@ -82,19 +88,19 @@ function exit(sharingResource: string): Promise<Result<void>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 cloudData.sharing.exit('sharing_resource_test').then((result) => {
   console.info(`exit share success, result: ${result}`);
-}).catch((err) => {
+}).catch((err: BusinessError) => {
   console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
-})
+});
 ```
 

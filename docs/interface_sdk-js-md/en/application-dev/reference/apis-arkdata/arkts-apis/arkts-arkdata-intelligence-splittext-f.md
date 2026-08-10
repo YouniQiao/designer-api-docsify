@@ -1,12 +1,18 @@
 # splitText
 
+## Modules to Import
+
+```TypeScript
+import { intelligence } from 'kits/@kit.ArkData';
+```
+
 ## splitText
 
 ```TypeScript
 function splitText(text: string, config: SplitConfig): Promise<Array<string>>
 ```
 
-Splits text.
+获取文本的分块。使用Promise异步回调。
 
 **Since:** 15
 
@@ -20,24 +26,24 @@ Splits text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text for chunking. The length of the text is no longer then 100k tokens. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configurations of text chunking. |
+| text | string | Yes | 待分块的文本。单个文本长度上限为100000个字符。超出长度时抛出异常。 |
+| config | [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | Yes | 文本分块的配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise used to return the result. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回分块结果的数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 31300000 | Inner error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

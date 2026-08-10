@@ -1,14 +1,20 @@
 # isNotificationEnabledSync
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## isNotificationEnabledSync
 
 ```TypeScript
 function isNotificationEnabledSync(): boolean
 ```
 
-Synchronously queries the notification authorization status of the current application.
+同步查询当前应用通知授权状态。
 
-This API is used to quickly check whether the current application is allowed to send notifications before publishing. It is synchronous and returns the result immediately after being called,suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow.
+用于在发布通知前快速检查当前应用是否被允许发送通知。此接口为同步接口，调用后立即返回结果，适用于需要在同步代码流程中获取使能状态的场景。
 
 **Since:** 12
 
@@ -22,17 +28,17 @@ This API is used to quickly check whether the current application is allowed to 
 
 | Type | Description |
 | --- | --- |
-| boolean | Result of the notification enabling status. The value **true** means that the notification is enabled, and **false** means the opposite. |
+| boolean | 返回查询通知使能状态的结果。返回true，表示允许发布通知；返回false，表示禁止发布通知。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let enabled: boolean = notificationManager.isNotificationEnabledSync();

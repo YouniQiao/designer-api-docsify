@@ -1,13 +1,14 @@
 # HKDFSpec
 
-密钥派生函数参数[KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，作为HKDF密钥派生函数进行密钥派生时的输入。
-    **说明：**  
-    
-    key指的是用户输入的最初的密钥材料。根据模式的不同info与salt可以传空，但是不可不传。  
-    
-    例如：EXTRACT\_AND\_EXPAND模式需要输入全部的值，EXTRACT\_ONLY模式info可以为空，在构建HKDFSpec的时候，info传入null值。  
-    
-    默认的模式为EXTRACT\_AND\_EXPAND，"HKDF|SHA256|EXTRACT\_AND\_EXPAND"等价于"HKDF|SHA256"。
+密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为HKDF密钥派生函数进行密钥派生时的输入。
+
+> **说明：**
+> 
+> key指的是用户输入的最初的密钥材料。根据模式的不同info与salt可以传空，但是不可不传。
+> 
+> 例如：EXTRACT_AND_EXPAND模式需要输入全部的值，EXTRACT_ONLY模式info可以为空，在构建HKDFSpec的时候，info传入null值。
+> 
+> 默认的模式为EXTRACT_AND_EXPAND，"HKDF|SHA256|EXTRACT_AND_EXPAND"等价于"HKDF|SHA256"。
 
 **继承/实现关系：** HKDFSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -18,6 +19,12 @@
 <!--Device-cryptoFramework-interface HKDFSpec extends KdfSpec--><!--Device-cryptoFramework-interface HKDFSpec extends KdfSpec-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
 
 ## info
 
@@ -67,7 +74,7 @@ keySize: int
 
 派生得到的密钥字节长度，单位为bytes。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

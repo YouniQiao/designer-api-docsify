@@ -10,6 +10,12 @@ Provides manages model function. Including get inputs, predict ,resize.
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## exportModel
 
 ```TypeScript
@@ -37,7 +43,7 @@ Export train model to file
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | modelFile | string | Yes | model file path. |
-| quantizationType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the quantization type, default NO\_\_\_ESCAPED\_UNDERSCORE\_\_\_QUANT. |
+| quantizationType | [QuantizationType](arkts-mindsporelite-mindsporelite-quantizationtype-e.md) | No | the quantization type, default NO_QUANT. |
 | exportInferenceOnly | boolean | No | whether to export a inference only model, default true. |
 | outputTensorName | string[] | No | the set of name of output tensor the exported inference model, |
 
@@ -45,20 +51,27 @@ Export train model to file
 
 | Type | Description |
 | --- | --- |
-| boolean |  the boolean result if the operation is successful |
+| boolean | the boolean result if the operation is successful |
 
-**Example**
+## Examples
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
 let newPath = '/newpath/to';
+let exportPath = newPath + "/new_model.ms";
 mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
   mindSporeLiteModel.trainMode = true;
-  let ret = mindSporeLiteModel.exportModel(newPath + "/new_model.ms", mindSporeLite.QuantizationType.NO_QUANT, true);
-  if (ret == false) {
-    console.error('MS_LITE exportModel failed.')
+  console.info(`Succeeded in setting train mode. Model file: ${modelFile}`);
+  
+  let ret = mindSporeLiteModel.exportModel(exportPath, mindSporeLite.QuantizationType.NO_QUANT, true);
+  if (ret === false) {
+    console.error(`Failed to export model. Source: ${modelFile}, Target: ${exportPath}, Quantization type: NO_QUANT, Inference only: true`);
+  } else {
+    console.info(`Succeeded in exporting model. Source: ${modelFile}, Target: ${exportPath}`);
   }
-})
+}).catch((error: Error) => {
+  console.error(`Failed to load train model. Model file: ${modelFile}, Error: ${error.message}`);
+});
 ```
 
 ## exportWeightsCollaborateWithMicro
@@ -88,7 +101,7 @@ Export model's weights, which can be used in micro only. Only valid for Lite Tra
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | weightFile | string | Yes | weight file path |
-| isInference | boolean | No | whether to export weights from inference model, only support this is \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for now, default true |
+| isInference | boolean | No | whether to export weights from inference model, only support this is `true` for now, default true |
 | enableFp16 | boolean | No | float-weight is whether to be saved in float16 format, default false |
 | changeableWeightsName | string[] | No | changeable weights name |
 
@@ -98,17 +111,21 @@ Export model's weights, which can be used in micro only. Only valid for Lite Tra
 | --- | --- |
 | boolean | the boolean result if the operation is successful |
 
-**Example**
+## Examples
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
 let microWeight = '/path/to/xxx.bin';
 mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
   let ret = mindSporeLiteModel.exportWeightsCollaborateWithMicro(microWeight);
-  if (ret == false) {
-    console.error('MSLITE exportWeightsCollaborateWithMicro failed.')
+  if (ret === false) {
+    console.error(`Failed to export weights for micro. Model file: ${modelFile}, Target weight file: ${microWeight}`);
+  } else {
+    console.info(`Succeeded in exporting weights for micro. Model file: ${modelFile}, Target weight file: ${microWeight}`);
   }
-})
+}).catch((error: Error) => {
+  console.error(`Failed to load train model. Model file: ${modelFile}, Error: ${error.message}`);
+});
 ```
 
 ## getInputs
@@ -133,20 +150,24 @@ Get model input tensors.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | the MSTensor array of the inputs. |
+| [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | the MSTensor array of the inputs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
 mindSporeLite.loadModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
   if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, Result: null`);
+  } else if (modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, Input count: 0`);
   } else {
-    console.info(modelInputs[0].name);
+    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}, Total inputs: ${modelInputs.length}`);
   }
-})
+}).catch((error: Error) => {
+  console.error(`Failed to load model. Model file: ${modelFile}, Error: ${error.message}`);
+});
 ```
 
 ## getWeights
@@ -171,9 +192,9 @@ Obtain all weights of the model
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | the weight tensors of the model |
+| [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | the weight tensors of the model |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -189,19 +210,24 @@ globalContext.getApplicationContext()
     mindSporeLite.loadTrainModelFromBuffer(modelBuffer.buffer.slice(0))
       .then((mindSporeLiteModel: mindSporeLite.Model) => {
         mindSporeLiteModel.trainMode = true;
+        console.info(`Succeeded in setting train mode. Model file: ${modelFile}`);
+        
         const weights = mindSporeLiteModel.getWeights();
-        for (let i = 0; i < weights.length; i++) {
-          let printStr = weights[i].name + ", ";
-          printStr += weights[i].shape + ", ";
-          printStr += weights[i].dtype + ", ";
-          printStr += weights[i].dataSize + ", ";
-          printStr += weights[i].getData();
-          console.info("MS_LITE weights: ", printStr);
+        if (weights == null || weights.length === 0) {
+          console.error(`Failed to get model weights. Model file: ${modelFile}, Weights count: ${weights ? weights.length : 0}`);
+        } else {
+          console.info(`Succeeded in getting model weights. Model file: ${modelFile}, Weights count: ${weights.length}`);
+          for (let i = 0; i < Math.min(3, weights.length); i++) {
+            console.info(`Weight[${i}]: name=${weights[i].name}, shape=[${weights[i].shape.join(', ')}], dtype=${weights[i].dtype}, dataSize=${weights[i].dataSize}`);
+          }
         }
       })
+      .catch((error: Error) => {
+        console.error(`Failed to load train model from buffer. Model file: ${modelFile}, Buffer size: ${modelBuffer.byteLength}, Error: ${error.message}`);
+      });
   })
   .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
+    console.error(`Failed to read model file from resources. File name: ${modelFile}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
 
@@ -227,37 +253,53 @@ Infer model
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | indicates the MSTensor array of the inputs. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MSTensor[]&gt; | Yes | the callback of MSTensor array. |
+| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MSTensor[]&gt; | Yes | the callback of MSTensor array. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 import { UIContext } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// File name of the preprocessed model input data
 let inputName = 'input_data.bin';
+let modelFile: string = '/path/to/xxx.ms';
 let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
 globalContext.getApplicationContext()
   .resourceManager
   .getRawFileContent(inputName)
   .then(async (buffer: Uint8Array) => {
     let inputBuffer = buffer.buffer;
-    let modelFile: string = '/path/to/xxx.ms';
+    console.info(`Succeeded in reading input data. File name: ${inputName}, Buffer size: ${inputBuffer.byteLength}`);
+    
     let mindSporeLiteModel: mindSporeLite.Model = await mindSporeLite.loadModelFromFile(modelFile);
+    console.info(`Succeeded in loading model. Model file: ${modelFile}`);
+    
     let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+    if (modelInputs == null || modelInputs.length === 0) {
+      console.error(`Failed to get model inputs. Model file: ${modelFile}, Input count: ${modelInputs ? modelInputs.length : 0}`);
+      return;
+    }
 
     modelInputs[0].setData(inputBuffer);
+    console.info(`Succeeded in setting input data. Input tensor: ${modelInputs[0].name}`);
+    
     mindSporeLiteModel.predict(modelInputs, (mindSporeLiteTensor: mindSporeLite.MSTensor[]) => {
-      let output = new Float32Array(mindSporeLiteTensor[0].getData());
-      for (let i = 0; i < output.length; i++) {
-        console.info('MS_LITE_LOG: ' + output[i].toString());
+      if (mindSporeLiteTensor == null || mindSporeLiteTensor.length === 0) {
+        console.error(`Failed to get prediction output. Model file: ${modelFile}, Output count: ${mindSporeLiteTensor ? mindSporeLiteTensor.length : 0}`);
+      } else {
+        let output = new Float32Array(mindSporeLiteTensor[0].getData());
+        console.info(`Succeeded in prediction. Output length: ${output.length}`);
+        for (let i = 0; i < Math.min(5, output.length); i++) {
+          console.info(`Output[${i}]: ${output[i].toString()}`);
+        }
       }
     })
   })
   .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
+    console.error(`Failed to read input data. File name: ${inputName}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
 
@@ -283,7 +325,7 @@ Infer model
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | indicates the MSTensor array of the inputs. |
+| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
 
 **Return value:**
 
@@ -291,33 +333,52 @@ Infer model
 | --- | --- |
 | Promise&lt;MSTensor[]&gt; | the promise returned by the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 import { UIContext } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// File name of the preprocessed model input data
 let inputName = 'input_data.bin';
+let modelFile = '/path/to/xxx.ms';
 let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
 globalContext.getApplicationContext()
   .resourceManager
   .getRawFileContent(inputName)
   .then(async (buffer: Uint8Array) => {
     let inputBuffer = buffer.buffer;
-    let modelFile = '/path/to/xxx.ms';
+    console.info(`Succeeded in reading input data. File name: ${inputName}, Buffer size: ${inputBuffer.byteLength}`);
+    
     let mindSporeLiteModel: mindSporeLite.Model = await mindSporeLite.loadModelFromFile(modelFile);
+    console.info(`Succeeded in loading model. Model file: ${modelFile}`);
+    
     let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+    if (modelInputs == null || modelInputs.length === 0) {
+      console.error(`Failed to get model inputs. Model file: ${modelFile}, Input count: ${modelInputs ? modelInputs.length : 0}`);
+      return;
+    }
+    
     modelInputs[0].setData(inputBuffer);
+    console.info(`Succeeded in setting input data. Input tensor: ${modelInputs[0].name}`);
+    
     mindSporeLiteModel.predict(modelInputs).then((mindSporeLiteTensor: mindSporeLite.MSTensor[]) => {
-      let output = new Float32Array(mindSporeLiteTensor[0].getData());
-      for (let i = 0; i < output.length; i++) {
-        console.info(output[i].toString());
+      if (mindSporeLiteTensor == null || mindSporeLiteTensor.length === 0) {
+        console.error(`Failed to get prediction output. Model file: ${modelFile}, Output count: ${mindSporeLiteTensor ? mindSporeLiteTensor.length : 0}`);
+      } else {
+        let output = new Float32Array(mindSporeLiteTensor[0].getData());
+        console.info(`Succeeded in prediction. Output length: ${output.length}`);
+        for (let i = 0; i < Math.min(5, output.length); i++) {
+          console.info(`Output[${i}]: ${output[i].toString()}`);
+        }
       }
-    })
+    }).catch((error: Error) => {
+      console.error(`Failed to execute prediction. Model file: ${modelFile}, Error: ${error.message}`);
+    });
   })
   .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
+    console.error(`Failed to read input data. File name: ${inputName}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
 
@@ -349,8 +410,8 @@ resize model input
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | indicates the MSTensor array of the inputs. |
-| dims | ArkTS-Dyn: Array&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;Array&lt;int&gt;&gt; | Yes | indicates the target new shape array |
+| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
+| dims | ArkTS-Dyn: Array&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Array&lt;Array&lt;int&gt;&gt; | Yes | indicates the target new shape array |
 
 **Return value:**
 
@@ -358,15 +419,26 @@ resize model input
 | --- | --- |
 | boolean | the boolean result if the resize operation is successful |
 
-**Example**
+## Examples
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
 mindSporeLite.loadModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  let new_dim = new Array([1, 32, 32, 1]);
-  mindSporeLiteModel.resize(modelInputs, new_dim);
-})
+  let originalShape = modelInputs[0].shape;
+  console.info(`Original input shape: [${originalShape.join(', ')}]`);
+  
+  let new_dim = [[1, 32, 32, 1]];
+  let ret = mindSporeLiteModel.resize(modelInputs, new_dim);
+  
+  if (ret === false) {
+    console.error(`Failed to resize model inputs. Model file: ${modelFile}, Original shape: [${originalShape.join(', ')}], Target shape: [${new_dim[0].join(', ')}]`);
+  } else {
+    console.info(`Succeeded in resizing model inputs. Model file: ${modelFile}, Original shape: [${originalShape.join(', ')}], New shape: [${modelInputs[0].shape.join(', ')}]`);
+  }
+}).catch((error: Error) => {
+  console.error(`Failed to load model. Model file: ${modelFile}, Error: ${error.message}`);
+});
 ```
 
 ## runStep
@@ -391,7 +463,7 @@ Train model by step
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | indicates the MSTensor array of the inputs. |
+| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
 
 **Return value:**
 
@@ -399,18 +471,29 @@ Train model by step
 | --- | --- |
 | boolean | the boolean result if the runStep operation is successful |
 
-**Example**
+## Examples
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
 mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
   mindSporeLiteModel.trainMode = true;
+  console.info(`Succeeded in setting train mode. Model file: ${modelFile}, Train mode: ${mindSporeLiteModel.trainMode}`);
+  
   const modelInputs = mindSporeLiteModel.getInputs();
-  let ret = mindSporeLiteModel.runStep(modelInputs);
-  if (ret == false) {
-    console.error('MS_LITE_LOG: runStep failed.')
+  if (modelInputs == null || modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, Input count: ${modelInputs ? modelInputs.length : 0}`);
+    return;
   }
-})
+  
+  let ret = mindSporeLiteModel.runStep(modelInputs);
+  if (ret === false) {
+    console.error(`Failed to run training step. Model file: ${modelFile}, Input count: ${modelInputs.length}`);
+  } else {
+    console.info(`Succeeded in running training step. Model file: ${modelFile}`);
+  }
+}).catch((error: Error) => {
+  console.error(`Failed to load train model. Model file: ${modelFile}, Error: ${error.message}`);
+});
 ```
 
 ## setupVirtualBatch
@@ -441,9 +524,9 @@ Setup training with virtual batches
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| virtualBatchMultiplier | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | virtual batch multiplier, use any number < 1 to disable |
-| lr | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | learning rate to use for virtual batch, -1 for internal configuration |
-| momentum | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | batch norm momentum to use for virtual batch, -1 for internal configuration |
+| virtualBatchMultiplier | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | virtual batch multiplier, use any number < 1 to disable |
+| lr | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | learning rate to use for virtual batch, -1 for internal configuration |
+| momentum | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | batch norm momentum to use for virtual batch, -1 for internal configuration |
 
 **Return value:**
 
@@ -451,7 +534,7 @@ Setup training with virtual batches
 | --- | --- |
 | boolean | the boolean result if the operation is successful |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -467,14 +550,25 @@ globalContext.getApplicationContext()
     mindSporeLite.loadTrainModelFromBuffer(modelBuffer.buffer.slice(0))
       .then((mindSporeLiteModel: mindSporeLite.Model) => {
         mindSporeLiteModel.trainMode = true;
-        let ret = mindSporeLiteModel.setupVirtualBatch(2, -1, -1);
-        if (ret == false) {
-          console.error('MS_LITE setupVirtualBatch failed.')
+        console.info(`Succeeded in setting train mode. Model file: ${modelFile}`);
+        
+        let virtualBatchMultiplier = 2;
+        let lr = -1;
+        let momentum = -1;
+        
+        let ret = mindSporeLiteModel.setupVirtualBatch(virtualBatchMultiplier, lr, momentum);
+        if (ret === false) {
+          console.error(`Failed to setup virtual batch. Model file: ${modelFile}, Virtual batch multiplier: ${virtualBatchMultiplier}, Learning rate: ${lr}, Momentum: ${momentum}`);
+        } else {
+          console.info(`Succeeded in setting up virtual batch. Model file: ${modelFile}, Virtual batch multiplier: ${virtualBatchMultiplier}`);
         }
       })
+      .catch((error: Error) => {
+        console.error(`Failed to load train model from buffer. Model file: ${modelFile}, Buffer size: ${modelBuffer.byteLength}, Error: ${error.message}`);
+      });
   })
   .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
+    console.error(`Failed to read model file from resources. File name: ${modelFile}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
 
@@ -500,7 +594,7 @@ Update weights of the model
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| weights | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | indicates the MSTensor array of the inputs |
+| weights | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs |
 
 **Return value:**
 
@@ -508,7 +602,7 @@ Update weights of the model
 | --- | --- |
 | boolean | the boolean result if updating weights operation is successful |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -524,15 +618,27 @@ globalContext.getApplicationContext()
     mindSporeLite.loadTrainModelFromBuffer(modelBuffer.buffer.slice(0))
       .then((mindSporeLiteModel: mindSporeLite.Model) => {
         mindSporeLiteModel.trainMode = true;
+        console.info(`Succeeded in setting train mode. Model file: ${modelFile}`);
+        
         const weights = mindSporeLiteModel.getWeights();
+        if (weights == null || weights.length === 0) {
+          console.error(`Failed to get model weights. Model file: ${modelFile}, Weights count: ${weights ? weights.length : 0}`);
+          return;
+        }
+        
         let ret = mindSporeLiteModel.updateWeights(weights);
-        if (ret == false) {
-          console.error('MS_LITE_LOG: updateWeights failed.')
+        if (ret === false) {
+          console.error(`Failed to update model weights. Model file: ${modelFile}, Weights count: ${weights.length}`);
+        } else {
+          console.info(`Succeeded in updating model weights. Model file: ${modelFile}, Weights count: ${weights.length}`);
         }
       })
+      .catch((error: Error) => {
+        console.error(`Failed to load train model from buffer. Model file: ${modelFile}, Buffer size: ${modelBuffer.byteLength}, Error: ${error.message}`);
+      });
   })
   .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
+    console.error(`Failed to read model file from resources. File name: ${modelFile}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
 
@@ -544,7 +650,7 @@ learningRate?: double
 
 The learning rate of the training model
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

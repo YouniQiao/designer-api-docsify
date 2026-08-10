@@ -1,6 +1,6 @@
 # DownloadOptions (System API)
 
-Defines the download options, including the **allowNetwork** and **order** fields, which are used to control the download behavior.
+下载选项，包含allowNetwork(允许下载的网络类型)和order(升级指令)字段，用于控制下载行为。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Defines the download options, including the **allowNetwork** and **order** field
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## allowNetwork
 
 ```TypeScript
 allowNetwork: NetType
 ```
 
-Network type allowed for download. The value **CELLULAR** indicates that only download over the cellular network is allowed; **WiFi** that only download using Wi-Fi is allowed; **CELLULAR\_AND\_WIFI** indicates that download over both the cellular network and Wi-Fi is allowed. You are advised to select a network type based on the upgrade package size and network environment. If the upgrade package is big, you are advised to set the network type to **WIFI** to reduce mobile data usage and improve the download speed. If you are in a mobile scenario or there is no Wi-Fi available, you can set the network type to **CELLULAR**. If the network environment is uncertain, you are advised to set the network type to **CELLULAR\_AND\_WIFI**.
+网络类型，允许下载的网络类型。设置CELLULAR仅允许数据网络下载，设置WIFI仅允许WIFI下载，设置CELLULAR_AND_WIFI允许两者均可下载。建议根据升级包大小和网络环境选择：大文件升级包建议使用WIFI避免流量消耗和提升下载速度；移动场景或无WIFI环境可使用CELLULAR；不确定网络环境建议使用CELLULAR_AND_WIFI。
 
-**Type:** NetType
+**Type:** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Network type allowed for download. The value **CELLULAR** indicates that only do
 order: Order
 ```
 
-The options are as follows: **DOWNLOAD**: download the upgrade package, which needs to be manually installed later; **INSTALL**: install the upgrade package that has been downloaded; **DOWNLOAD\_AND\_INSTALL**: download and install the upgrade package, which is the complete upgrade process; **APPLY**: apply the upgrade package that has been installed by restarting device; **INSTALL\_AND\_APPLY**: install the upgrade package and apply it immediately by restarting the device.
+取值原则：DOWNLOAD仅下载，适用于先下载后手动安装场景；INSTALL仅安装，适用于直接安装已下载的升级包场景；DOWNLOAD_AND_INSTALL下载并安装，适用于完整升级流程；APPLY仅生效，适用于已安装需重启生效场景；INSTALL_AND_APPLY安装并生效，适用于安装后立即重启生效场景。
 
-**Type:** Order
+**Type:** [Order](arkts-basicservices-update-order-e-sys.md)
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # DepthFusion (System API)
 
-Depth fusion class. It inherits from [DepthFusionQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md).
 
 **Inheritance/Implementation:** DepthFusion extends [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md)
 
@@ -13,6 +13,12 @@ Depth fusion class. It inherits from [DepthFusionQuery]\_\_\_JSDOC\_LINK\_DESC\_
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## enableDepthFusion
 
@@ -42,12 +48,12 @@ Enables depth fusion.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -92,10 +98,10 @@ Checks whether depth fusion is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

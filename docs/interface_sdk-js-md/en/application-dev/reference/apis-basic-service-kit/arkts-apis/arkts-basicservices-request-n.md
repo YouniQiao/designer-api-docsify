@@ -1,8 +1,8 @@
 # request
 
-The **request** module provides applications with basic upload, download, and background transmission agent capabilities.
+request模块给应用提供上传下载文件、后台代理传输的基础功能。
 
-- Currently, the **request** module cannot be called in extensions.
+- request暂不支持在Extension中调用。
 
 **Since:** 6
 
@@ -13,39 +13,45 @@ The **request** module provides applications with basic upload, download, and ba
 **System capability:** 
 - API version 10 and later: SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Namespaces
 
 | Name | Description |
 | --- | --- |
-| [agent](arkts-basicservices-request-agent-n.md) | The request agent api.Supports "background" and "frontend" tasks as while.Though "background" and "frontend" here do not the same with process's concept.All tasks will be executed at request manager service and recorded.Background tasks is for concurrent transfer, such as caching videos for a later play.Frontend tasks is for instant transfer, such as submitting forms for a consumption bill.Background tasks use notification to tell user tasks' status information.Frontend tasks use callback to tell caller tasks' status information.Background has some automatically restore mechanism.Frontend tasks controlled by caller.Uses \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in client request for upload.A \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ response from server leads to download.More details, please see the architecture documents of the request subsystem.Only front-end mode is supported in cross-platform scenarios. |
+| [agent](arkts-basicservices-request-agent-n.md) | The request agent api.Supports "background" and "frontend" tasks as while.Though "background" and "frontend" here do not the same with process's concept.All tasks will be executed at request manager service and recorded.Background tasks is for concurrent transfer, such as caching videos for a later play.Frontend tasks is for instant transfer, such as submitting forms for a consumption bill.Background tasks use notification to tell user tasks' status information.Frontend tasks use callback to tell caller tasks' status information.Background has some automatically restore mechanism.Frontend tasks controlled by caller.Uses `multipart/form-data` in client request for upload.A `Content-Disposition: attachment; filename=&lt;filename&gt;` response from server leads to download.More details, please see the architecture documents of the request subsystem.Only front-end mode is supported in cross-platform scenarios. |
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [download](arkts-basicservices-request-download-f.md#download) | Downloads a file. This API uses an asynchronous callback to return the result. |
-| [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) | Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use  [on('complete'\|'pause'\|'remove')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to obtain the download task state, including task completion, pause, and removal. You can also use  [on('fail')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the task download error information. |
-| [download](arkts-basicservices-request-download-f.md#download-1) | Downloads a file. This API uses a promise to return the result. |
-| [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1) | Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use  [on('complete'\|'pause'\|'remove')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to obtain the download task state, including task completion, pause, and removal. You can also use  [on('fail')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the task download error information. |
-| [upload](arkts-basicservices-request-upload-f.md#upload) | Uploads a file. This API uses an asynchronous callback to return the result. |
-| [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) | Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use  [on('complete'\|'fail')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to obtain the upload success or error information. |
-| [upload](arkts-basicservices-request-upload-f.md#upload-1) | Uploads a file. This API uses a promise to return the result. |
-| [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1) | Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use  [on('complete'\|'fail')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to obtain the upload success or error information. |
+| [download](arkts-basicservices-request-download-f.md#download) | 创建并启动一个下载任务，使用callback异步回调。 |
+| [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) | 创建并启动一个下载任务，使用callback异步回调，支持HTTP协议。通过  [on('complete'\|'pause'\|'remove')](request.DownloadTask.on(type: 'complete' \| 'pause' \| 'remove', callback: () => void))可获取任务下载时的状态信息，包括任务完成、暂停或移除。通过  [on('fail')](request.DownloadTask.on(type: 'fail', callback: (err: int) => void))可获取任务下载时的错误信息。 |
+| [download](arkts-basicservices-request-download-f.md#download-1) | 创建并启动一个下载任务，使用Promise异步回调。 |
+| [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1) | 创建并启动一个下载任务，使用Promise异步回调，支持HTTP协议。通过  [on('complete'\|'pause'\|'remove')](request.DownloadTask.on(type: 'complete' \| 'pause' \| 'remove', callback: () => void))可以获取任务下载时的状态信息，包括任务完成、暂停或移除。通过  [on('fail')](request.DownloadTask.on(type: 'fail', callback: (err: int) => void))可以获取任务下载时的错误信息。 |
+| [upload](arkts-basicservices-request-upload-f.md#upload) | 创建并启动一个上传任务，使用callback异步回调。 |
+| [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) | 创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过  [on('complete'\|'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))可获取任务上传时的成功信息或错误信息。 |
+| [upload](arkts-basicservices-request-upload-f.md#upload-1) | 创建并启动一个上传任务，使用Promise异步回调。 |
+| [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1) | 创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过  [on('complete'\|'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))可获取任务上传时的成功信息或错误信息。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Defines the download task configuration. |
-| [DownloadInfo](arkts-basicservices-request-downloadinfo-i.md) | Defines the download task information, which is the callback parameter of the  [getTaskInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API. |
-| [DownloadTask](arkts-basicservices-request-downloadtask-i.md) | Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or from a callback through  [request.downloadFile]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [File](arkts-basicservices-request-file-i.md) | Describes the list of files in [UploadConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [RequestData](arkts-basicservices-request-requestdata-i.md) | Describes the form data in [UploadConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Describes the configuration of an upload task. |
-| [TaskState](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the  [on('complete' \| 'fail')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_and  [off('complete' \| 'fail')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_APIs. |
-| [UploadTask](arkts-basicservices-request-uploadtask-i.md) | Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or from a callback through  [request.uploadFile]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 下载任务的配置信息。 |
+| [DownloadInfo](arkts-basicservices-request-downloadinfo-i.md) | 下载任务信息，[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)接口的回调参数。 |
+| [DownloadTask](arkts-basicservices-request-downloadtask-i.md) | 下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过  [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取，callback形式通过  [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取。 |
+| [File](arkts-basicservices-request-file-i.md) | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的文件列表。 |
+| [RequestData](arkts-basicservices-request-requestdata-i.md) | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的表单数据。 |
+| [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | 上传任务的配置信息。 |
+| [TaskState](arkts-basicservices-request-taskstate-i.md) | 上传任务的任务信息，是  [on('complete' \| 'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))和  [off('complete' \| 'fail')](request.UploadTask.off(type: 'complete' \| 'fail', callback?: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))接口的回调参数。 |
+| [UploadTask](arkts-basicservices-request-uploadtask-i.md) | 上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过  [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取，callback形式通过  [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取。 |
 
 ### Types
 
@@ -55,7 +61,7 @@ The **request** module provides applications with basic upload, download, and ba
 | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | The callback function for the download complete event. |
 | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | The callback function for the download pause event. |
 | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | The callback function for the download remove event. |
-| [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | The callback function for the download fail event. |
+| [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | The callback function for the download fail event. &lt;br&gt;The value should be an integer. |
 | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | The callback function for the download progress event. |
 | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | The callback function for the HTTP Response Header event. |
 
@@ -63,34 +69,34 @@ The **request** module provides applications with basic upload, download, and ba
 
 | Name | Description |
 | --- | --- |
-| [EXCEPTION_PERMISSION](arkts-basicservices-request-con.md#exception_permission) | (Universal error codes) Permission verification failed. |
-| [EXCEPTION_PARAMCHECK](arkts-basicservices-request-con.md#exception_paramcheck) | (Universal error codes) Parameter check failed. |
-| [EXCEPTION_UNSUPPORTED](arkts-basicservices-request-con.md#exception_unsupported) | (Universal error codes) The device does not support this API. |
-| [EXCEPTION_FILEIO](arkts-basicservices-request-con.md#exception_fileio) | (Specific error codes) Abnormal file operation. |
-| [EXCEPTION_FILEPATH](arkts-basicservices-request-con.md#exception_filepath) | (Specific error codes) Abnormal file path. |
-| [EXCEPTION_SERVICE](arkts-basicservices-request-con.md#exception_service) | (Specific error codes) Abnormal service. |
-| [EXCEPTION_OTHERS](arkts-basicservices-request-con.md#exception_others) | (Specific error codes) Other errors. |
-| [NETWORK_MOBILE](arkts-basicservices-request-con.md#network_mobile) | (Network type) Bit flag download allowed on a mobile network. |
-| [NETWORK_WIFI](arkts-basicservices-request-con.md#network_wifi) | (Network type) Bit flag download allowed on a WLAN. |
-| [ERROR_CANNOT_RESUME](arkts-basicservices-request-con.md#error_cannot_resume) | (Download error codes) Failure to resume the download due to network errors. |
-| [ERROR_DEVICE_NOT_FOUND](arkts-basicservices-request-con.md#error_device_not_found) | (Download error codes) Failure to find a storage device such as a memory card. |
-| [ERROR_FILE_ALREADY_EXISTS](arkts-basicservices-request-con.md#error_file_already_exists) | (Download error codes) Failure to download the file because it already exists. |
-| [ERROR_FILE_ERROR](arkts-basicservices-request-con.md#error_file_error) | (Download error codes) File operation failed. |
-| [ERROR_HTTP_DATA_ERROR](arkts-basicservices-request-con.md#error_http_data_error) | (Download error codes) HTTP transmission failed. |
-| [ERROR_INSUFFICIENT_SPACE](arkts-basicservices-request-con.md#error_insufficient_space) | (Download error codes) Insufficient storage space. |
-| [ERROR_TOO_MANY_REDIRECTS](arkts-basicservices-request-con.md#error_too_many_redirects) | (Download error codes) Error caused by too many network redirections. |
-| [ERROR_UNHANDLED_HTTP_CODE](arkts-basicservices-request-con.md#error_unhandled_http_code) | (Download error codes) Unidentified HTTP code. |
-| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) | (Download error codes) Unknown error.  In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNKNOWN error. |
-| [ERROR_OFFLINE](arkts-basicservices-request-con.md#error_offline) | (Download error codes) No network connection. |
-| [ERROR_UNSUPPORTED_NETWORK_TYPE](arkts-basicservices-request-con.md#error_unsupported_network_type) | (Download error codes) Network type mismatch. |
-| [PAUSED_QUEUED_FOR_WIFI](arkts-basicservices-request-con.md#paused_queued_for_wifi) | (Causes of download pause) Download paused and queuing for a WLAN connection because the file size exceeds the maximum value allowed for a mobile network session. |
-| [PAUSED_WAITING_FOR_NETWORK](arkts-basicservices-request-con.md#paused_waiting_for_network) | (Causes of download pause) Download paused due to a network connection problem.  Example: network disconnection |
-| [PAUSED_WAITING_TO_RETRY](arkts-basicservices-request-con.md#paused_waiting_to_retry) | (Causes of download pause) Download paused due to network error and then retried. |
-| [PAUSED_BY_USER](arkts-basicservices-request-con.md#paused_by_user) | (Causes of download pause) The user paused the session. |
-| [PAUSED_UNKNOWN](arkts-basicservices-request-con.md#paused_unknown) | (Causes of download pause) Download paused due to unknown reasons. |
-| [SESSION_SUCCESSFUL](arkts-basicservices-request-con.md#session_successful) | (Download task status codes) Successful download. |
-| [SESSION_RUNNING](arkts-basicservices-request-con.md#session_running) | (Download task status codes) Download in progress. |
-| [SESSION_PENDING](arkts-basicservices-request-con.md#session_pending) | (Download task status codes) Download pending. |
-| [SESSION_PAUSED](arkts-basicservices-request-con.md#session_paused) | (Download task status codes) Download paused. |
-| [SESSION_FAILED](arkts-basicservices-request-con.md#session_failed) | (Download task status codes) Download failure without retry. |
+| [EXCEPTION_PERMISSION](arkts-basicservices-request-con.md#exception_permission) | 通用错误码：权限校验失败。 |
+| [EXCEPTION_PARAMCHECK](arkts-basicservices-request-con.md#exception_paramcheck) | 通用错误码：参数检查失败。 |
+| [EXCEPTION_UNSUPPORTED](arkts-basicservices-request-con.md#exception_unsupported) | 通用错误码：该设备不支持此API。 |
+| [EXCEPTION_FILEIO](arkts-basicservices-request-con.md#exception_fileio) | 特有错误码：文件操作异常。 |
+| [EXCEPTION_FILEPATH](arkts-basicservices-request-con.md#exception_filepath) | 特有错误码：文件路径异常。 |
+| [EXCEPTION_SERVICE](arkts-basicservices-request-con.md#exception_service) | 特有错误码：服务异常。 |
+| [EXCEPTION_OTHERS](arkts-basicservices-request-con.md#exception_others) | 特有错误码：其他错误。 |
+| [NETWORK_MOBILE](arkts-basicservices-request-con.md#network_mobile) | 网络类型：使用蜂窝网络时允许下载的位标志。 |
+| [NETWORK_WIFI](arkts-basicservices-request-con.md#network_wifi) | 网络类型：使用WLAN时允许下载的位标志。 |
+| [ERROR_CANNOT_RESUME](arkts-basicservices-request-con.md#error_cannot_resume) | 下载任务错误码：网络原因导致恢复下载失败。 |
+| [ERROR_DEVICE_NOT_FOUND](arkts-basicservices-request-con.md#error_device_not_found) | 下载任务错误码：找不到SD卡等存储设备。 |
+| [ERROR_FILE_ALREADY_EXISTS](arkts-basicservices-request-con.md#error_file_already_exists) | 下载任务错误码：要下载的文件已存在，下载会话无法覆盖现有文件。 |
+| [ERROR_FILE_ERROR](arkts-basicservices-request-con.md#error_file_error) | 下载任务错误码：文件操作失败。 |
+| [ERROR_HTTP_DATA_ERROR](arkts-basicservices-request-con.md#error_http_data_error) | 下载任务错误码：HTTP传输失败。 |
+| [ERROR_INSUFFICIENT_SPACE](arkts-basicservices-request-con.md#error_insufficient_space) | 下载任务错误码：存储空间不足。 |
+| [ERROR_TOO_MANY_REDIRECTS](arkts-basicservices-request-con.md#error_too_many_redirects) | 下载任务错误码：网络重定向过多导致的错误。 |
+| [ERROR_UNHANDLED_HTTP_CODE](arkts-basicservices-request-con.md#error_unhandled_http_code) | 下载任务错误码：无法识别的HTTP代码。 |
+| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) | 下载任务错误码：未知错误。  例如：API version 12及以下版本，系统仅支持串行地尝试连接域名相关IP，不支持单个IP的连接时间控制。若DNS返回的首个IP被阻塞，可能会由于握手超时导致ERROR_UNKNOWN错误。 |
+| [ERROR_OFFLINE](arkts-basicservices-request-con.md#error_offline) | 下载任务错误码：网络未连接。 |
+| [ERROR_UNSUPPORTED_NETWORK_TYPE](arkts-basicservices-request-con.md#error_unsupported_network_type) | 下载任务错误码：网络类型不匹配。 |
+| [PAUSED_QUEUED_FOR_WIFI](arkts-basicservices-request-con.md#paused_queued_for_wifi) | 下载任务暂停原因：文件大小超过了使用蜂窝网络会话允许的最大值，下载被暂停并等待WLAN连接。 |
+| [PAUSED_WAITING_FOR_NETWORK](arkts-basicservices-request-con.md#paused_waiting_for_network) | 下载任务暂停原因：网络问题导致下载暂停。  例如：网络断开。 |
+| [PAUSED_WAITING_TO_RETRY](arkts-basicservices-request-con.md#paused_waiting_to_retry) | 下载任务暂停原因：网络错误导致下载会话将被重试。 |
+| [PAUSED_BY_USER](arkts-basicservices-request-con.md#paused_by_user) | 下载任务暂停原因：用户暂停会话。 |
+| [PAUSED_UNKNOWN](arkts-basicservices-request-con.md#paused_unknown) | 下载任务暂停原因：未知原因导致暂停下载。 |
+| [SESSION_SUCCESSFUL](arkts-basicservices-request-con.md#session_successful) | 下载任务状态码：下载会话已完成。 |
+| [SESSION_RUNNING](arkts-basicservices-request-con.md#session_running) | 下载任务状态码：下载会话正在进行中。 |
+| [SESSION_PENDING](arkts-basicservices-request-con.md#session_pending) | 下载任务状态码：下载会话正在被调度中。 |
+| [SESSION_PAUSED](arkts-basicservices-request-con.md#session_paused) | 下载任务状态码：下载会话已暂停。 |
+| [SESSION_FAILED](arkts-basicservices-request-con.md#session_failed) | 下载任务状态码：下载会话已失败，将不会重试。 |
 

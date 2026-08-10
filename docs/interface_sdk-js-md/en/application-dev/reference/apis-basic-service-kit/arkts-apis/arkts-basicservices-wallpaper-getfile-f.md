@@ -1,12 +1,18 @@
 # getFile
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getFile
 
 ```TypeScript
 function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void
 ```
 
-Obtains a file of the wallpaper of the specified type. Returns the file descriptor.When usage is complete, the caller needs to close the file descriptor in time.
+获取指定类型的壁纸文件。
 
 **Since:** 8
 
@@ -24,10 +30,10 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the wallpaper type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | the callback of getFile. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -48,7 +54,7 @@ wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErro
 function getFile(wallpaperType: WallpaperType): Promise<number>
 ```
 
-Obtains a file of the wallpaper of the specified type. Returns the file descriptor.When usage is complete, the caller needs to close the file descriptor in time.
+获取指定类型的壁纸文件。
 
 **Since:** 8
 
@@ -66,15 +72,15 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | the promise returned by the function. |
+| Promise&lt;number&gt; | 调用成功则返回壁纸文件描述符ID，调用失败则返回error信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

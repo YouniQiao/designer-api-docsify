@@ -1,5 +1,11 @@
 # generateKey
 
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## generateKey
 
 ```TypeScript
@@ -7,11 +13,12 @@ function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCall
 ```
 
 生成密钥。使用callback异步回调。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [huks.generateKeyItem\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.generateKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem)
+> 替代。
 
 **起始版本：** 8
 
@@ -30,10 +37,10 @@ function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于存放生成key所需TAG。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HuksResult&gt; | 是 | 回调函数。当生成密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于存放生成key所需TAG。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | 是 | 回调函数。当生成密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -78,10 +85,11 @@ function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult
 ```
 
 生成密钥。使用Promise异步回调。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [huks.generateKeyItem\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.generateKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem)替代。
 
 **起始版本：** 8
 
@@ -100,7 +108,7 @@ function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于存放生成key所需TAG。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于存放生成key所需TAG。 |
 
 **返回值：**
 
@@ -108,7 +116,7 @@ function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult
 | --- | --- |
 | Promise&lt;HuksResult&gt; | Promise对象，返回HuksResult。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

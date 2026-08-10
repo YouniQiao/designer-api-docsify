@@ -1,6 +1,6 @@
 # IPrefetcher
 
-Implement this interface to provide prefetcher logic.
+该接口用于提供预加载操作。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Implement this interface to provide prefetcher logic.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from 'kits/@kit.ArkUI';
+```
+
 ## setDataSource
 
 ```TypeScript
 setDataSource(dataSource: IDataSourcePrefetching<T>): void
 ```
 
-Sets the data source to bind to this prefetcher.
+设置prefetcher对象的数据源。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Sets the data source to bind to this prefetcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | Yes | 支持预加载的数据源。 |
 
 ## visibleAreaChanged
 
@@ -40,7 +46,7 @@ Sets the data source to bind to this prefetcher.
 visibleAreaChanged(minVisible: int, maxVisible: int): void
 ```
 
-Call this method when the visible area boundaries were changed.
+通知prefetcher屏幕显示范围发生变化。
 
 **Since:** 23
 
@@ -56,6 +62,6 @@ Call this method when the visible area boundaries were changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minVisible | int | Yes | Index of the first visible data item. |
-| maxVisible | int | Yes | Index of the last visible data item. |
+| minVisible | int | Yes | 显示范围内第一个元素的序号。 |
+| maxVisible | int | Yes | 显示范围内最后一个元素的序号。 |
 

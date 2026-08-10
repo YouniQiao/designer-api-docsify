@@ -1,6 +1,6 @@
 # ButtonFrameNode
 
-Define the Button type of FrameNode.
+定义Button类型的FrameNode。
 
 **Inheritance/Implementation:** ButtonFrameNode extends [TypedFrameNode<ButtonAttribute>](TypedFrameNode<ButtonAttribute>)
 
@@ -18,7 +18,7 @@ Define the Button type of FrameNode.
 abstract initialize(): ButtonAttribute
 ```
 
-Initialize Button FrameNode.
+初始化Button类型的FrameNode。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Initialize Button FrameNode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
 
 ## initialize
 
@@ -42,7 +42,7 @@ Initialize Button FrameNode.
 abstract initialize(value: ButtonOptions): ButtonAttribute
 ```
 
-Initialize Button FrameNode.
+初始化Button类型的FrameNode。
 
 **Since:** 23
 
@@ -58,13 +58,13 @@ Initialize Button FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
 
 ## initialize
 
@@ -72,7 +72,7 @@ Initialize Button FrameNode.
 abstract initialize(label: ResourceStr, options?: ButtonOptions): ButtonAttribute
 ```
 
-Initialize Button FrameNode.
+初始化Button类型的FrameNode。
 
 **Since:** 23
 
@@ -88,12 +88,12 @@ Initialize Button FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| label | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |  |
+| options | [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
 

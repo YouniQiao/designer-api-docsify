@@ -1,6 +1,6 @@
 # EffectFillStyle
 
-The fill style of symbol effect.
+EffectFillStyle的枚举值。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ The fill style of symbol effect.
 CUMULATIVE = 0
 ```
 
-Cumulative style.
+累加模式。
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Cumulative style.
 ITERATIVE = 1
 ```
 
-Iterative style.
+迭代模式。
 
 **Since:** 12
 

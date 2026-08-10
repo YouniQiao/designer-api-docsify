@@ -1,12 +1,12 @@
 # AudioVolumeManager
 
-This interface implements audio volume management.
+音量管理。
 
-Before calling any API in AudioVolumeManager, you must use  
-[getVolumeManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an AudioVolumeManager instance.
-    **NOTE**  
-    
-    - The initial APIs of this interface are supported since API version 9.
+在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **Since:** 9
 
@@ -15,6 +15,12 @@ Before calling any API in AudioVolumeManager, you must use
 <!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## getAppVolumePercentage
 
@@ -28,7 +34,7 @@ ArkTS-Sta:
 getAppVolumePercentage(): Promise<int>
 ```
 
-Obtains the volume of the application. (The volume range is 0 to 100.) This API uses a promise to return the result.
+获取应用的音量（范围为[0, 100]）。使用Promise异步回调。
 
 **Since:** 19
 
@@ -44,7 +50,7 @@ Obtains the volume of the application. (The volume range is 0 to 100.) This API 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the application volume. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回应用的音量。 |
 
 ## getMaxVolumeByStream
 
@@ -58,7 +64,7 @@ ArkTS-Sta:
 getMaxVolumeByStream(streamUsage: StreamUsage): int
 ```
 
-Obtains the maximum volume of a specified audio stream.
+获取指定音频流的最大音量。
 
 **Since:** 20
 
@@ -74,19 +80,19 @@ Obtains the maximum volume of a specified audio stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream for which the maximum volume is to be obtained. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 需要获取的最大音量值的音频流。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Volume. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 音量值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## getMinVolumeByStream
 
@@ -100,7 +106,7 @@ ArkTS-Sta:
 getMinVolumeByStream(streamUsage: StreamUsage): int
 ```
 
-Obtains the minimum volume of a specified audio stream.
+获取指定音频流的最小音量。
 
 **Since:** 20
 
@@ -116,19 +122,19 @@ Obtains the minimum volume of a specified audio stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream for which the minimum volume is to be obtained. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 需要获取的最小音量值的音频流。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Volume. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 音量值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## getVolumeByStream
 
@@ -142,7 +148,7 @@ ArkTS-Sta:
 getVolumeByStream(streamUsage: StreamUsage): int
 ```
 
-Obtains the volume of a specified audio stream.
+获取指定音频流的音量。
 
 **Since:** 20
 
@@ -158,19 +164,19 @@ Obtains the volume of a specified audio stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream for which the volume is to be obtained. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 需要获取音量值的音频流。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Volume. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 音量值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## getVolumeGroupManager
 
@@ -184,7 +190,7 @@ ArkTS-Sta:
 getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupManager>): void
 ```
 
-Obtains a VolumeGroupManager instance. This API uses an asynchronous callback to return the result.
+获取音频组音量管理器实例。使用callback异步回调。
 
 **Since:** 9
 
@@ -198,8 +204,8 @@ Obtains a VolumeGroupManager instance. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume group ID. The default value is **DEFAULT\_\_\_ESCAPED\_UNDERSCORE\_\_\_VOLUME\_\_\_ESCAPED\_UNDERSCORE\_\_\_GROUP\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioVolumeGroupManager&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the VolumeGroupManager instance obtained; otherwise, **err** is an error object. |
+| groupId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioVolumeGroupManager&gt; | Yes | 回调函数。当获取音频组音量管理器实例成功，err为undefined，data为获取到的音频组音量管理器 实例；否则为错误对象。 |
 
 ## getVolumeGroupManager
 
@@ -213,7 +219,7 @@ ArkTS-Sta:
 getVolumeGroupManager(groupId: int): Promise<AudioVolumeGroupManager>
 ```
 
-Obtains a VolumeGroupManager instance. This API uses a promise to return the result.
+获取音频组音量管理器实例。使用Promise异步回调。
 
 **Since:** 9
 
@@ -227,13 +233,13 @@ Obtains a VolumeGroupManager instance. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume group ID. The default value is **DEFAULT\_\_\_ESCAPED\_UNDERSCORE\_\_\_VOLUME\_\_\_ESCAPED\_UNDERSCORE\_\_\_GROUP\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID**. |
+| groupId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioVolumeGroupManager&gt; | Promise used to return the VolumeGroupManager instance. |
+| Promise&lt;AudioVolumeGroupManager&gt; | Promise对象，返回音频组音量管理器实例。 |
 
 ## getVolumeGroupManagerSync
 
@@ -247,7 +253,7 @@ ArkTS-Sta:
 getVolumeGroupManagerSync(groupId: int): AudioVolumeGroupManager
 ```
 
-Obtains a VolumeGroupManager instance. This API returns the result synchronously.
+获取音频组音量管理器实例。同步返回结果。
 
 **Since:** 10
 
@@ -263,20 +269,20 @@ Obtains a VolumeGroupManager instance. This API returns the result synchronously
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume group ID. The default value is **DEFAULT\_\_\_ESCAPED\_UNDERSCORE\_\_\_VOLUME\_\_\_ESCAPED\_UNDERSCORE\_\_\_GROUP\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID**. |
+| groupId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | VolumeGroupManager instance. |
+| [AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md) | 音频组音量管理器实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## getVolumeInUnitOfDbByStream
 
@@ -290,7 +296,7 @@ ArkTS-Sta:
 getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: int, device: DeviceType): double
 ```
 
-Obtains the volume (in dB) calculated by the system based on the audio stream, volume level, and device type.
+获取系统通过音频流、音量等级和设备类型计算出的音量dB值。
 
 **Since:** 20
 
@@ -304,21 +310,21 @@ Obtains the volume (in dB) calculated by the system based on the audio stream, v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream. |
-| volumeLevel | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume level. |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device type. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流。 |
+| volumeLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音量等级。 |
+| device | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes | 设备类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Volume of the audio stream, in dB. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 音频流的音量dB值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## isSystemMutedForStream
 
@@ -326,7 +332,7 @@ Obtains the volume (in dB) calculated by the system based on the audio stream, v
 isSystemMutedForStream(streamUsage: StreamUsage): boolean
 ```
 
-Checks whether a specified audio stream is muted.
+检查指定音频流是否静音。
 
 **Since:** 20
 
@@ -340,19 +346,19 @@ Checks whether a specified audio stream is muted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream to check. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 检查是否为静音的音频流。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the audio stream is muted. **true** if muted, **false** otherwise. |
+| boolean | 音频流是否为静音状态，true表示音频流已静音，false表示音频流未静音。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## off('volumeChange')
 
@@ -360,7 +366,7 @@ Checks whether a specified audio stream is muted.
 off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes from the system volume change event. This API uses an asynchronous callback to return the result.
+取消监听系统音量变化事件。使用callback异步回调。
 
 **Since:** 12
 
@@ -378,15 +384,15 @@ Unsubscribes from the system volume change event. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used to return the changed volume. |
+| type | 'volumeChange' | Yes | 事件回调类型，支持的事件为'volumeChange'，当取消监听系统音量变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | 回调函数，返回变化后的音量信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('appVolumeChange')
 
@@ -394,7 +400,7 @@ Unsubscribes from the system volume change event. This API uses an asynchronous 
 off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes from the application-level volume change event of the application. This API uses an asynchronous callback to return the result.
+取消监听当前应用的应用级音量变化事件。使用callback异步回调。
 
 **Since:** 19
 
@@ -408,14 +414,14 @@ Unsubscribes from the application-level volume change event of the application. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appVolumeChange' | Yes | Event type. The event **'appVolumeChange'** is triggered when the application -level volume is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used to return the changed volume. |
+| type | 'appVolumeChange' | Yes | 事件回调类型，支持的事件为'appVolumeChange'，当取消监听当前应用的应用级音量变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | 回调函数，返回变化后的音量信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## off('streamVolumeChange')
 
@@ -423,7 +429,7 @@ Unsubscribes from the application-level volume change event of the application. 
 off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void
 ```
 
-Unsubscribes from the system audio volume change event, which is triggered when the system audio volume is changed. This API uses an asynchronous callback to return the result.
+取消监听系统音频流音量变化事件（当系统音频流音量发生变化时触发）。使用callback异步回调。
 
 **Since:** 20
 
@@ -437,8 +443,8 @@ Unsubscribes from the system audio volume change event, which is triggered when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'streamVolumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StreamVolumeEvent&gt; | No | Callback used to return the changed volume. |
+| type | 'streamVolumeChange' | Yes | 事件回调类型，支持的事件为'streamVolumeChange'，当取消监听系统音量变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StreamVolumeEvent&gt; | No | 回调函数，返回变化后的音量信息。 |
 
 ## offAppVolumeChange
 
@@ -446,7 +452,7 @@ Unsubscribes from the system audio volume change event, which is triggered when 
 offAppVolumeChange(callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the app volume change events..
+Unsubscribes to the app volume change events.
 
 **Since:** 23
 
@@ -460,13 +466,13 @@ Unsubscribes to the app volume change events..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offStreamVolumeChange
 
@@ -488,7 +494,7 @@ Unsubscribes to the stream volume change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StreamVolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. If there is no callback parameter, all callbacks will be unregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StreamVolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. If there is no callback parameter, all callbacks will be unregistered. |
 
 ## on('volumeChange')
 
@@ -496,7 +502,7 @@ Unsubscribes to the stream volume change events.
 on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 ```
 
-Subscribes to the system volume change event, which is triggered when the system volume is changed. This API uses an asynchronous callback to return the result.
+监听系统音量变化事件（当系统音量发生变化时触发）。使用callback异步回调。
 
 **Since:** 9
 
@@ -514,15 +520,15 @@ Subscribes to the system volume change event, which is triggered when the system
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to return the changed volume. |
+| type | 'volumeChange' | Yes | 事件回调类型，支持的事件为'volumeChange'，当系统音量发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | 回调函数，返回变化后的音量信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('appVolumeChange')
 
@@ -530,7 +536,7 @@ Subscribes to the system volume change event, which is triggered when the system
 on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void
 ```
 
-Subscribes to the application-level volume change event of the application (triggered when the application-level volume is changed). This API uses an asynchronous callback to return the result.
+监听当前应用的应用级音量变化事件（当应用级音量发生变化时触发）。使用callback异步回调。
 
 **Since:** 19
 
@@ -544,14 +550,14 @@ Subscribes to the application-level volume change event of the application (trig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appVolumeChange' | Yes | Event type. The event **'appVolumeChange'** is triggered when the application -level volume is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to return the changed volume. |
+| type | 'appVolumeChange' | Yes | 事件回调类型，支持的事件为'appVolumeChange'，当应用级音量发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | 回调函数，返回变化后的音量信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## on('streamVolumeChange')
 
@@ -559,7 +565,7 @@ Subscribes to the application-level volume change event of the application (trig
 on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void
 ```
 
-Subscribes to the system audio volume change event, which is triggered when the system audio volume is changed.This API uses an asynchronous callback to return the result.
+监听系统音频流音量变化事件（当系统音频流音量发生变化时触发）。使用callback异步回调。
 
 **Since:** 20
 
@@ -573,15 +579,15 @@ Subscribes to the system audio volume change event, which is triggered when the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'streamVolumeChange' | Yes | Event type. The event **'streamVolumeChange'** is triggered when the system audio volume is changed. |
-| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream usage. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StreamVolumeEvent&gt; | Yes | Callback used to return the changed volume. |
+| type | 'streamVolumeChange' | Yes | 事件回调类型，支持的事件为'streamVolumeChange'，当系统音量发生变化时，触发该事件。 |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用类型。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StreamVolumeEvent&gt; | Yes | 回调函数，返回变化后的音量信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onAppVolumeChange
 
@@ -589,7 +595,7 @@ Subscribes to the system audio volume change event, which is triggered when the 
 onAppVolumeChange(callback: Callback<VolumeEvent>): void
 ```
 
-Listens for app volume change events. The app volume may changed by your called \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or other system settings.
+Listens for app volume change events. The app volume may changed by your called {@link setAppVolumePercentage}or other system settings.
 
 **Since:** 23
 
@@ -603,13 +609,13 @@ Listens for app volume change events. The app volume may changed by your called 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | Callback used to get the app volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onStreamVolumeChange
 
@@ -631,14 +637,14 @@ Listens for stream volume change events. This method uses a callback to get volu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | StreamUsage to be listened. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StreamVolumeEvent&gt; | Yes | Callback used to get the stream volume change event. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | StreamUsage to be listened. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StreamVolumeEvent&gt; | Yes | Callback used to get the stream volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## setAppVolumePercentage
 
@@ -652,7 +658,7 @@ ArkTS-Sta:
 setAppVolumePercentage(volume: int): Promise<void>
 ```
 
-Sets the volume (within a range of 0 to 100) for the application. This API uses a promise to return the result.
+设置应用的音量（范围为[0, 100]）。使用Promise异步回调。
 
 **Since:** 19
 
@@ -668,18 +674,18 @@ Sets the volume (within a range of 0 to 100) for the application. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume to set. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要设置的音量值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Crash or blocking occurs in system process. |
 

@@ -1,6 +1,6 @@
 # Color
 
-A color class used to store the color picking result. It is suitable for scenarios such as obtaining the main color, the color with the largest proportion, and the color with the highest saturation from an image in conjunction with ColorPicker, helping developers conveniently obtain and pass image color picking results.
+颜色类，用于保存取色的结果，适用于配合ColorPicker获取图像主色、占比最多颜色、饱和度最高颜色等场景，可帮助开发者便捷地获取和传递图像取色结果。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ A color class used to store the color picking result. It is suitable for scenari
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alpha
 
 ```TypeScript
 alpha: int
 ```
 
-Alpha component value. Value range: [0x0, 0xFF].
+透明通道分量值，取值范围为[0x0, 0xFF]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Alpha component value. Value range: [0x0, 0xFF].
 blue: int
 ```
 
-Blue component value. Value range: [0x0, 0xFF].
+蓝色分量值，取值范围为[0x0, 0xFF]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -60,9 +66,9 @@ Blue component value. Value range: [0x0, 0xFF].
 green: int
 ```
 
-Green component value. Value range: [0x0, 0xFF].
+绿色分量值，取值范围为[0x0, 0xFF]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -82,9 +88,9 @@ Green component value. Value range: [0x0, 0xFF].
 red: int
 ```
 
-Red component value. Value range: [0x0, 0xFF].
+红色分量值，取值范围为[0x0, 0xFF]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

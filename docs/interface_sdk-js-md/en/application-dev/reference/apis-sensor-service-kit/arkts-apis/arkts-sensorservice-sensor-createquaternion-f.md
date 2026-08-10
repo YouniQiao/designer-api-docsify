@@ -1,12 +1,24 @@
 # createQuaternion
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## createQuaternion
 
 ```TypeScript
 function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-Converts a rotation vector into a quaternion. This API uses an asynchronous callback to return the result.
+将旋转矢量转换为四元数，使用Callback异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)
+> 替代。
 
 **Since:** 8
 
@@ -24,10 +36,10 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the quaternion. |
+| rotationVector | Array&lt;number&gt; | Yes | 表示旋转矢量。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | 异步返回四元数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -52,7 +64,12 @@ sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877],
 function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 ```
 
-Converts a rotation vector into a quaternion. This API uses a promise to return the result.
+将旋转矢量转换为四元数，使用Promise异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)替代。
 
 **Since:** 8
 
@@ -70,15 +87,15 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
+| rotationVector | Array&lt;number&gt; | Yes | 表示旋转矢量。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the quaternion. |
+| Promise&lt;Array&lt;number&gt;&gt; | 使用异步方式返回四元数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

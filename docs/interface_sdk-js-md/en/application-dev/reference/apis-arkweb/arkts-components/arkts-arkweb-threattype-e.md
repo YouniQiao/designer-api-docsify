@@ -1,6 +1,6 @@
 # ThreatType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for the website's threat type.
+Enum type supplied to {@link threatType} for the website's threat type.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for the website's th
 THREAT_ILLEGAL = 0
 ```
 
-Illegal websites.
+非法网站。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Illegal websites.
 THREAT_FRAUD = 1
 ```
 
-Fraud websites.
+欺诈网站。
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ Fraud websites.
 THREAT_RISK = 2
 ```
 
-Websites with security risks.
+存在安全风险的网站。
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ Websites with security risks.
 THREAT_WARNING = 3
 ```
 
-Websites suspected of containing unhealthy content.ArkWeb will not intercept this type of website and apps could handle it themselves.
+涉嫌包含不健康内容的网站。ArkWeb 不会拦截此类网站，应用程序可以自行处理。
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ Websites suspected of containing unhealthy content.ArkWeb will not intercept thi
 THREAT_NONE = 4
 ```
 
-Security check passed, no risks found.
+安全检查通过，未发现任何风险。
 
 **Since:** 21
 
@@ -104,7 +104,7 @@ Security check passed, no risks found.
 THREAT_UNPROCESSED = 5
 ```
 
-Security check not performed.
+未进行安全检查。
 
 **Since:** 21
 

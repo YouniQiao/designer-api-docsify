@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## beginTime
 
 ```TypeScript
@@ -20,7 +26,7 @@ beginTime: long
 
 查询的系统事件起始时间（13位时间戳），表示距1970年1月1日0时0分0秒0毫秒的毫秒数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ endTime: long
 
 查询的系统事件结束时间（13位时间戳），表示距1970年1月1日0时0分0秒0毫秒的毫秒数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -80,7 +86,7 @@ maxEvents: long
 
 查询的系统事件最多条数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

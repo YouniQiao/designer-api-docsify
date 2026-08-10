@@ -10,6 +10,12 @@ Get information about network connections.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## connectionProperties
 
 ```TypeScript
@@ -18,7 +24,7 @@ connectionProperties: ConnectionProperties
 
 Defines the network connection properties.
 
-**Type:** ConnectionProperties
+**Type:** [ConnectionProperties](arkts-network-connection-connectionproperties-i.md)
 
 **Since:** 11
 
@@ -36,7 +42,7 @@ netHandle: NetHandle
 
 Defines the handle of the data network.
 
-**Type:** NetHandle
+**Type:** [NetHandle](arkts-network-connection-nethandle-i.md)
 
 **Since:** 11
 

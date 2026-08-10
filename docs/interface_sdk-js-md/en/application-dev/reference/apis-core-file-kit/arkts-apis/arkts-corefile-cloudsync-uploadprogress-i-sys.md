@@ -1,6 +1,6 @@
 # UploadProgress (System API)
 
-The UploadProgress data structure.
+文件上传进度信息。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ The UploadProgress data structure.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## error
 
 ```TypeScript
 error: ErrorType
 ```
 
-The error type of upload.
+上传的错误类型。
 
-**Type:** ErrorType
+**Type:** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
 
 **Since:** 26.0.0
 
@@ -40,9 +46,9 @@ The error type of upload.
 processed: long
 ```
 
-The processed data size for current file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Byte.
+已上传数据大小，取值范围[0, 9223372036854775807]，单位：Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -62,9 +68,9 @@ The processed data size for current file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit
 size: long
 ```
 
-The size of current file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Byte.
+当前文件总大小，取值范围[0, 9223372036854775807]，单位：Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -84,9 +90,9 @@ The size of current file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Byte.
 state: UploadState
 ```
 
-The current upload state.
+文件上传状态。
 
-**Type:** UploadState
+**Type:** [UploadState](arkts-corefile-cloudsync-uploadstate-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -106,7 +112,7 @@ The current upload state.
 uri: string
 ```
 
-The uri of current file.
+当前文件的URI。
 
 **Type:** string
 

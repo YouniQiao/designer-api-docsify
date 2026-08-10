@@ -1,6 +1,6 @@
 # ActionMenuOptions
 
-Defines the option of ShowActionMenu.
+操作菜单的选项。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ Defines the option of ShowActionMenu.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { prompt } from 'kits/@kit.ArkUI';
+```
+
 ## buttons
 
 ```TypeScript
 buttons: [Button, Button?, Button?, Button?, Button?, Button?]
 ```
 
-Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to six buttons are supported.
+菜单中菜单项按钮的数组，结构为：{text:'button', color: '#666666'}，支持1-6个按钮。大于6个按钮时弹窗不显示。
 
 **Type:** [Button, Button?, Button?, Button?, Button?, Button?]
 
@@ -42,7 +48,7 @@ Array of buttons in the dialog box.The array structure is {text:'button', color:
 title?: string
 ```
 
-Title of the text to display.
+标题文本。
 
 **Type:** string
 

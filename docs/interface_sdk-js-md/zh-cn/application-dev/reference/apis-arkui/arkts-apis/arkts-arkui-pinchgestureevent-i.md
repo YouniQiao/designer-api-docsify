@@ -1,8 +1,8 @@
 # PinchGestureEvent
 
-继承自[BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。可将该对象作为[onGestureJudgeBegin]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的event参数来传递。
+继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
 
-**继承/实现关系：** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-component/gesture-basegestureevent-i.md)
+**继承/实现关系：** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
 **起始版本：** 11
 

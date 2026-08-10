@@ -1,6 +1,6 @@
 # SpatialEffectParams (System API)
 
-Spatial effect params.
+空间效果选项。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Spatial effect params.
 occlusionWeight?: double
 ```
 
-Occlusion weight for spatial effect.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range:[0, 1].Default value:0
+空间效果的遮挡权重。&lt;br&gt;取值范围:[0, 1]。默认值:0。
 
 **Type:** double
 
@@ -42,9 +42,9 @@ Occlusion weight for spatial effect.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value ran
 position: SpatialPosition | double
 ```
 
-Spatial position defined by corner points or depth value.
+由角点或深度值定义的空间位置。
 
-**Type:** SpatialPosition \| double
+**Type:** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) \| double
 
 **Since:** 26.0.0
 

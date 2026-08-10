@@ -1,21 +1,26 @@
 # setProcDumpInSharedOOM
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setProcDumpInSharedOOM
 
 ```TypeScript
 function setProcDumpInSharedOOM(enable: boolean): void
 ```
 
-Changes the dump heap snapshot from the thread-level to the process-level.
-    **NOTE**  
-    
-    To dump a process-level heap snapshot, you must call this API and pass **true**. In addition, SharedHeap OOM must  
-    occur.  
-    
-    This API does not affect the heap snapshot dumped in other scenarios. For example, it does not affect the result  
-    of [dumpJsRawHeapData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    
-    This API can be called multiple times in the application lifecycle, but only the last call takes effect.
+��ת���Ķѿ������̼߳���Ϊ���̼���
+
+> **ע��**
+> 
+> Ҫ��ת�����̼��Ķѿ��գ����øýӿڲ�����true������OOMʱ��������SharedHeap OOM����������ȱһ���ɡ�
+> 
+> �ýӿڲ�Ӱ������������ת���Ķѿ������ݡ��磺����Ӱ��dumpJsRawHeapData�Ľ����
+> 
+> �ýӿ���Ӧ�õ����������ڿɱ���ε��ã��������һ�ε��õ�ִ�н������Ч��
 
 **Since:** 24
 
@@ -33,9 +38,9 @@ Changes the dump heap snapshot from the thread-level to the process-level.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | When SharedHeap OOM occurs in a process, the system dumps the heap snapshot of the corresponding level based on the information recorded when the process calls the API for the last time in its lifecycle.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true**: process level.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**false**: thread level.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ The default value is **false**. |
+| enable | boolean | Yes | �����̷���SharedHeap OOMʱ��ϵͳ�����ݸý��������������������һ�ε��øýӿ�����¼����Ϣ��ת����Ӧ����Ķѿ��ա� true�����̼��� false���̼߳��� Ĭ��ֵ��false�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

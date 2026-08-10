@@ -40,7 +40,7 @@ remoteControlParams?: RemoteControlParams
 
 远程控制中的交互参数。
 
-**类型：** RemoteControlParams
+**类型：** [RemoteControlParams](arkts-ability-abilitytoolaccessctrl-remotecontrolparams-i-sys.md)
 
 **起始版本：** 26.1.0
 
@@ -80,7 +80,7 @@ role: Role
 
 设备角色。
 
-**类型：** Role
+**类型：** [Role](arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
 
 **起始版本：** 26.1.0
 

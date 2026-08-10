@@ -1,0 +1,217 @@
+# ImageBitmap
+
+ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建  
+[Worker线程](../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+<!--Device-unnamed-declare class ImageBitmap--><!--Device-unnamed-declare class ImageBitmap-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## close
+
+```TypeScript
+close(): void
+```
+
+释放ImageBitmap对象相关联的所有图形资源，并将ImageBitmap对象的宽高置为0。
+
+> **说明：**
+> 
+> - 必须与[constructor()](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-imagebitmap.md#constructor)方法配对
+> 使用，创建ImageBitmap对象后，应在使用完毕时调用close()释放资源。未调用close()可能导致图形资源泄漏，影响应用性能。
+> 
+> - 建议在Canvas绘制完成后调用，如在[onReady](arkts-arkui-canvasattribute-c.md#onready)回调的最后调用close()。
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ImageBitmap-close(): void--><!--Device-ImageBitmap-close(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## constructor
+
+```TypeScript
+constructor(src: string)
+```
+
+通过ImageSrc创建ImageBitmap对象。
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ImageBitmap-constructor(src: string)--><!--Device-ImageBitmap-constructor(src: string)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | string | Yes | 图片的数据源支持本地图片。 &lt;br&gt;1、string格式用于加载本地图片，例如ImageBitmap("common/images/example.jpg")， type为"entry"和"feature"类型的Module，其图片加载路径的起点为当前Module的ets文件夹， type为"har"和"shared"类型的Module，其图片加载路径的起点为当前构建的"entry"或"feature" 类型Module的ets文件夹。 &lt;br/&gt;type为"har"和"shared"类型的Module中推荐使用 [ImageSource](../../../media/image/image-decoding.md)图片解码方式将资源图片解码为统一的 PixelMap加载使用。 &lt;br&gt;2、支持本地图片类型：bmp、jpg、png、svg和webp类型。 &lt;br/&gt;**说明：**&lt;br/&gt;- ArkTS卡片上不支持`http://`等网络相关路径前缀、`datashare://`路径前缀 以及`file://data/storage`路径前缀的字符串。 |
+
+## constructor
+
+```TypeScript
+constructor(src: string, unit: LengthMetricsUnit)
+```
+
+通过ImageSrc创建ImageBitmap对象，支持使用unit配置ImageBitmap对象的单位模式。
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ImageBitmap-constructor(src: string, unit: LengthMetricsUnit)--><!--Device-ImageBitmap-constructor(src: string, unit: LengthMetricsUnit)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| src | string | Yes | 图片的数据源支持本地图片。 &lt;br&gt;1、string格式用于加载本地图片，例如ImageBitmap("common/images/example.jpg")， type为"entry"和"feature"类型的Module，其图片加载路径的起点为当前Module的ets文件夹， type为"har"和"shared"类型的Module，其图片加载路径的起点为当前构建的"entry"或"feature" 类型Module的ets文件夹。 &lt;br/&gt;type为"har"和"shared"类型的Module中推荐使用 [ImageSource](../../../media/image/image-decoding.md)图片解码方式将资源图片解码为统一的 PixelMap加载使用。 &lt;br&gt;2、支持本地图片类型：bmp、jpg、png、svg和webp类型。 &lt;br/&gt;**说明：**&lt;br/&gt;- ArkTS卡片上不支持`http://`等网络相关路径前缀、`datashare://`路径前缀 以及`file://data/storage`路径前缀的字符串。 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Yes | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值undefined、NaN和Infinity按默认值处理。 |
+
+## constructor
+
+```TypeScript
+constructor(data: PixelMap)
+```
+
+通过PixelMap创建ImageBitmap对象。
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImageBitmap-constructor(data: PixelMap)--><!--Device-ImageBitmap-constructor(data: PixelMap)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes | 图片的数据源支持PixelMap对象。 |
+
+## constructor
+
+```TypeScript
+constructor(data: PixelMap, unit: LengthMetricsUnit)
+```
+
+通过PixelMap创建ImageBitmap对象，支持使用unit配置ImageBitmap对象的单位模式。
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageBitmap-constructor(data: PixelMap, unit: LengthMetricsUnit)--><!--Device-ImageBitmap-constructor(data: PixelMap, unit: LengthMetricsUnit)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes | 图片的数据源支持PixelMap对象。 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Yes | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 |
+
+## constructor
+
+```TypeScript
+constructor(data: Resource, unit?: LengthMetricsUnit)
+```
+
+通过Resource创建ImageBitmap对象，支持使用unit配置ImageBitmap对象的单位模式。
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ImageBitmap-constructor(data: Resource, unit?: LengthMetricsUnit)--><!--Device-ImageBitmap-constructor(data: Resource, unit?: LengthMetricsUnit)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | 通过资源引用方式设置图片数据源。 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改。 &lt;br&gt;默认值：LengthMetricsUnit.DEFAULT。 |
+
+## height
+
+```TypeScript
+readonly height: number
+```
+
+ImageBitmap的像素高度。&lt;br&gt;默认单位为vp。
+
+**Type:** number
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ImageBitmap-readonly height: number--><!--Device-ImageBitmap-readonly height: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## width
+
+```TypeScript
+readonly width: number
+```
+
+ImageBitmap的像素宽度。&lt;br&gt;默认单位为vp。
+
+**Type:** number
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ImageBitmap-readonly width: number--><!--Device-ImageBitmap-readonly width: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

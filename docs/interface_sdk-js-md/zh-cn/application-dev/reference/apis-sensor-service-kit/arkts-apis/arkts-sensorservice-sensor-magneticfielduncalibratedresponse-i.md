@@ -1,6 +1,6 @@
 # MagneticFieldUncalibratedResponse
 
-未校准磁场传感器数据，继承于[Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+未校准磁场传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **继承/实现关系：** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## biasX
 
 ```TypeScript
@@ -20,7 +26,7 @@ biasX: double
 
 x轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -38,7 +44,7 @@ biasY: double
 
 y轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -56,7 +62,7 @@ biasZ: double
 
 z轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -74,7 +80,7 @@ x: double
 
 x轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -92,7 +98,7 @@ y: double
 
 y轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -110,7 +116,7 @@ z: double
 
 z轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 

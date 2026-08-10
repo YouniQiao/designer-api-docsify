@@ -12,6 +12,12 @@ Interface for distance measurement result
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## confidence
 
 ```TypeScript
@@ -86,7 +92,7 @@ rank: DistanceRank
 
 indicates distance rank
 
-**Type:** DistanceRank
+**Type:** [DistanceRank](arkts-multimodalawareness-spatialawareness-distancerank-e-sys.md)
 
 **Since:** 23
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
@@ -20,7 +26,7 @@ height: double
 
 动画目标窗口的高度大小。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ left: double
 
 动画目标窗口左上角相对于屏幕的横坐标。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ radius: double
 
 动画目标窗口的圆角大小。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -80,7 +86,7 @@ top: double
 
 动画目标窗口左上角相对于屏幕的纵坐标。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -100,7 +106,7 @@ width: double
 
 动画目标窗口的宽度大小。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 

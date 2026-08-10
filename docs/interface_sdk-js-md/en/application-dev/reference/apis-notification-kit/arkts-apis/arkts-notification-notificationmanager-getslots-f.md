@@ -1,14 +1,20 @@
 # getSlots
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getSlots
 
 ```TypeScript
 function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-Obtains all notification slots of this application. This API uses an asynchronous callback to return the result.
+获取当前应用的所有通知渠道。使用callback异步回调。
 
-This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot.This is suitable for scenarios where all slot configurations need to be viewed. The corresponding notification slots must be created through addSlot first; otherwise, the obtained result will be empty.
+用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。适用于需要查看所有渠道配置的场景。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **Since:** 9
 
@@ -22,18 +28,18 @@ This API is used to batch query the configuration information of all notificatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | Callback used to return the result. If the notification slots are obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot** array. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | 回调函数。当获取通知渠道成功， err为undefined，data为获取到的NotificationSlot数组，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,9 +62,9 @@ notificationManager.getSlots(getSlotsCallback);
 function getSlots(): Promise<Array<NotificationSlot>>
 ```
 
-Obtains all notification slots of this application. This API uses a promise to return the result.
+获取当前应用的所有通知渠道。使用Promise异步回调。
 
-This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot.This is suitable for scenarios where all slot configurations need to be viewed. The corresponding notification slots must be created through addSlot first; otherwise, the obtained result will be empty.
+用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。适用于需要查看所有渠道配置的场景。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **Since:** 9
 
@@ -72,17 +78,17 @@ This API is used to batch query the configuration information of all notificatio
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | Promise对象，返回通知渠道对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

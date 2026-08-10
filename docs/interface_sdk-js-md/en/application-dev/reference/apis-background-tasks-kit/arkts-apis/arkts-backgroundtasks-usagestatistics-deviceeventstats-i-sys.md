@@ -1,5 +1,7 @@
 # DeviceEventStats (System API)
 
+FA模型的使用信息属性集合。
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -10,15 +12,21 @@
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## count
 
 ```TypeScript
 count: int
 ```
 
-The the event occurrence number.
+应用通知次数或者系统事件触发次数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,9 +44,9 @@ The the event occurrence number.
 eventId: int
 ```
 
-The event id.
+应用事件类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,7 +64,7 @@ The event id.
 name: string
 ```
 
-The bundle name or system event name.
+通知应用包名或者系统事件名。
 
 **Type:** string
 

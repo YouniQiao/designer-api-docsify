@@ -1,5 +1,11 @@
 # offScanDeviceFound
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## offScanDeviceFound
 
 ```TypeScript
@@ -22,24 +28,11 @@ Unregister event callback for scanner device found.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScannerDevice&gt; | 否 | Optional callback to unregister. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | 否 | Optional callback to unregister. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-
-**示例：**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-let callback = (device: scan.ScannerDevice) => {
-    console.info('scan device found: ' + JSON.stringify(device));
-};
-scan.onScanDeviceFound(callback);
-// 取消注册
-scan.offScanDeviceFound(callback);
-```
+| 201 | Permission denied. |
 

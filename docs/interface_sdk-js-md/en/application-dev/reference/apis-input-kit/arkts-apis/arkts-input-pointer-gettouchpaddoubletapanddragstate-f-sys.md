@@ -1,12 +1,18 @@
 # getTouchpadDoubleTapAndDragState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## getTouchpadDoubleTapAndDragState
 
 ```TypeScript
 function getTouchpadDoubleTapAndDragState(callback: AsyncCallback<boolean>): void
 ```
 
-Obtains the touchpad double-tap and drag switch state. This API uses an asynchronous callback to return the result.
+获取触控板双击拖拽开关的开启状态，使用callback异步回调。
 
 **Since:** 14
 
@@ -22,16 +28,16 @@ Obtains the touchpad double-tap and drag switch state. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **true** is returned if the switch is enabled while **false** is returned if the switch is disabled. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当获取触控板双击拖拽开关的开启状态成功，err为undefined，返回true代表开启，返回false代表关闭；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -45,15 +51,16 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Obtain the touchpad double-tap and drag switch state.
             pointer.getTouchpadDoubleTapAndDragState((error: BusinessError, state: boolean) => {
               if (error) {
-                console.error(`getTouchpadDoubleTapAndDragState error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to get touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
               } else {
-                console.info(`getTouchpadDoubleTapAndDragState success, state: ${JSON.stringify(state)}`);
+                console.info(`Succeeded in getting touchpad double tap and drag state, state: ${JSON.stringify(state)}.`);
               }
             });
           } catch (error) {
-            console.error(`getTouchpadDoubleTapAndDragState failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -68,7 +75,7 @@ struct Index {
 function getTouchpadDoubleTapAndDragState(): Promise<boolean>
 ```
 
-Obtains the touchpad double-tap and drag switch state. This API uses a promise to return the result.
+获取触控板双击拖拽开关的开启状态，使用Promise异步回调。
 
 **Since:** 14
 
@@ -84,15 +91,15 @@ Obtains the touchpad double-tap and drag switch state. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the touchpad double-tap and drag switch is enabled, and the value **false** indicates that the touchpad double-tap and drag switch is disabled. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示触控板双击拖拽功能开启；返回false表示触控板双击拖拽功能关闭。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -106,13 +113,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Obtain the touchpad double-tap and drag switch state.
             pointer.getTouchpadDoubleTapAndDragState().then((state) => {
-              console.info(`getTouchpadDoubleTapAndDragState success, state: ${JSON.stringify(state)}`);
+              console.info(`Succeeded in getting touchpad double tap and drag state, state: ${JSON.stringify(state)}.`);
             }).catch((error: BusinessError) => {
-              console.error(`Get touchpad failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to get touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`getTouchpadDoubleTapAndDragState failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

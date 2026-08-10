@@ -1,6 +1,6 @@
 # ClipboardPolicy
 
-Represents a device clipboard policy.
+设备剪贴板策略。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Represents a device clipboard policy.
 DEFAULT = 0
 ```
 
-Default policy, which indicates no policy.
+默认，表示无策略。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Default policy, which indicates no policy.
 IN_APP = 1
 ```
 
-Allow the clipboard to be used in the same application.
+剪贴板可在同一应用使用。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Allow the clipboard to be used in the same application.
 LOCAL_DEVICE = 2
 ```
 
-Allow the clipboard to be used on the same device.
+剪贴板可在同一设备使用。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Allow the clipboard to be used on the same device.
 CROSS_DEVICE = 3
 ```
 
-Allow the clipboard to be used across devices.
+剪贴板可跨设备使用。
 
 **Since:** 12
 

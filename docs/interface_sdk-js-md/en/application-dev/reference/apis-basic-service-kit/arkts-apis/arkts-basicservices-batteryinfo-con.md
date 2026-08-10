@@ -6,7 +6,7 @@
 const batteryCapacityLevel: BatteryCapacityLevel
 ```
 
-Battery level of the device.
+表示当前设备电池电量的等级。
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ Battery level of the device.
 const batterySOC: number
 ```
 
-Battery state of charge (SoC) of the device, in unit of percentage, which ranges from 0 to 100.
+表示当前设备剩余电池电量百分比，取值范围是[0，100]。
 
 **Since:** 6
 
@@ -40,7 +40,7 @@ Battery state of charge (SoC) of the device, in unit of percentage, which ranges
 const batteryTemperature: number
 ```
 
-Battery temperature of the device, in unit of 0.1°C.
+表示当前设备电池的温度，单位0.1摄氏度。
 
 **Since:** 6
 
@@ -56,7 +56,7 @@ Battery temperature of the device, in unit of 0.1°C.
 const chargingStatus: BatteryChargeState
 ```
 
-Battery charging state of the current device.
+表示当前设备电池的充电状态。
 
 **Since:** 6
 
@@ -74,7 +74,7 @@ Battery charging state of the current device.
 const healthStatus: BatteryHealthState
 ```
 
-Battery health status of the device.
+表示当前设备电池的健康状态。
 
 **Since:** 6
 
@@ -90,10 +90,7 @@ Battery health status of the device.
 const isBatteryPresent: boolean
 ```
 
-Whether the battery is supported or present. The value **true** means that the battery is supported or present;  
-**false** means the opposite.
-
-Default value: **false**.
+表示当前设备是否支持电池或者电池是否在位。true表示支持电池或电池在位，false表示不支持电池或电池不在位，默认为false。
 
 **Since:** 7
 
@@ -109,7 +106,7 @@ Default value: **false**.
 const nowCurrent: number
 ```
 
-Battery current of the device, in unit of mA.
+表示当前设备电池的电流，单位毫安。
 
 **Since:** 12
 
@@ -125,7 +122,7 @@ Battery current of the device, in unit of mA.
 const pluggedType: BatteryPluggedType
 ```
 
-Charger type of the device.
+表示当前设备连接的充电器类型。
 
 **Since:** 6
 
@@ -141,7 +138,7 @@ Charger type of the device.
 const technology: string
 ```
 
-Battery technology of the device.
+表示当前设备电池的技术型号。
 
 **Since:** 6
 
@@ -157,7 +154,7 @@ Battery technology of the device.
 const voltage: number
 ```
 
-Battery voltage of the device, in unit of microvolt.
+表示当前设备电池的电压，单位微伏。
 
 **Since:** 6
 

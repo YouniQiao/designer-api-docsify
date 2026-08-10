@@ -1,6 +1,6 @@
 # TitleButtonRect
 
-Describes the rectangle used to hold the minimize, maximize, and close buttons on the title bar. This rectangle is located in the top-right corner of the window.
+标题栏上的最小化、最大化、关闭按钮矩形区域，该区域位置坐标相对窗口右上角。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Describes the rectangle used to hold the minimize, maximize, and close buttons o
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Height of the rectangle, in vp. The value must be an integer.
+矩形区域的高度，单位为vp，该参数为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -36,9 +42,9 @@ Height of the rectangle, in vp. The value must be an integer.
 right: int
 ```
 
-Right boundary of the rectangle, in vp. The value must be an integer.
+矩形区域的右边界，单位为vp，该参数为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -56,9 +62,9 @@ Right boundary of the rectangle, in vp. The value must be an integer.
 top: int
 ```
 
-Top boundary of the rectangle, in vp. The value must be an integer.
+矩形区域的上边界，单位为vp，该参数为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -76,9 +82,9 @@ Top boundary of the rectangle, in vp. The value must be an integer.
 width: int
 ```
 
-Width of the rectangle, in vp. The value must be an integer.
+矩形区域的宽度，单位为vp，该参数为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

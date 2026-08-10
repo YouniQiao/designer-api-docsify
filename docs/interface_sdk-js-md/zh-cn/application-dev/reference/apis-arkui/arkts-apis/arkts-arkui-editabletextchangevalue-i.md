@@ -42,7 +42,7 @@ options?: TextChangeOptions
 
 默认值：undefined。
 
-**类型：** TextChangeOptions
+**类型：** [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md)
 
 **起始版本：** 15
 
@@ -66,7 +66,7 @@ previewText?: PreviewText
 
 默认值：undefined，表示无预上屏内容。
 
-**类型：** PreviewText
+**类型：** [PreviewText](arkts-arkui-previewtext-i.md)
 
 **起始版本：** 15
 

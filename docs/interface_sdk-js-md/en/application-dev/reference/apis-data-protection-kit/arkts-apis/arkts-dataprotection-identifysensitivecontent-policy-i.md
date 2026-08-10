@@ -1,6 +1,6 @@
 # Policy
 
-Defines the policy for sensitive content identification.In a single policy, keywords and regular expressions are combined in sequence, and two-level matching is performed. First, keyword matching is performed.If a keyword is matched, regular expression matching is performed within a scope of 100 bytes: from the position 50 bytes before the matched position of the keyword to that 50 bytes after the matched position.If only keywords are set, only keyword matching is performed. If only regular expressions are set, only regular expression matching is performed.Multiple policies are independent of each other, and each policy is applied separately during scanning.sensitiveLabel is used to mark the matching result to identify the specific policy matched.
+定义敏感内容识别策略。单个策略内，关键字与正则表达式为顺序组合关系，实行两级匹配：首先进行关键字匹配，若命中，则仅在该关键字匹配位置的前后50字节窗口内，进行正则表达式匹配。若只设置关键字，则仅进行关键字匹配。若只设置正则表达式，则仅进行正则表达式匹配。多个Policy策略之间独立，扫描时会分别应用每个策略。sensitiveLabel用于标记匹配结果，便于识别具体匹配的策略。
 
 **Since:** 21
 
@@ -10,13 +10,19 @@ Defines the policy for sensitive content identification.In a single policy, keyw
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
+## Modules to Import
+
+```TypeScript
+import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
+```
+
 ## keywords
 
 ```TypeScript
 keywords: Array<string>
 ```
 
-Keyword set, which is used to match sensitive keywords in a file.The system searches for these keywords in the file content and returns the identification result if a keyword is matched.The keywords are case-sensitive.The array can contain a maximum of 50 elements, and each element can contain a maximum of 30 bytes.
+表示关键字集合，用于匹配文件中的敏感关键字。系统会在文件内容中搜索这些关键字，匹配时区分大小写，匹配成功则返回识别结果。Array最大50，每个元素最大30字节。
 
 **Type:** Array&lt;string&gt;
 
@@ -34,7 +40,7 @@ Keyword set, which is used to match sensitive keywords in a file.The system sear
 regex: string
 ```
 
-Regular expression used to match sensitive content.The system performs pattern matching on the file content based on the regular expression.The matched content is returned. The value contains 0 to 512 characters.When entering a string, check whether some special characters (such as backslash (), double quotation marks ("),and newline characters) are automatically escaped to ensure the input effect of the string.
+表示匹配敏感内容的正则表达式。系统将在文件内容中按此正则表达式进行模式匹配，匹配成功的内容将返回在结果中。长度范围0-512字节。在输入字符串时，需检查某些特殊字符（如反斜杠 \、双引号 "、换行符等），不会被自动转义，确保字符串的输入效果。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Regular expression used to match sensitive content.The system performs pattern m
 sensitiveLabel: string
 ```
 
-Label of an identification policy, which is used to identify and classify matching results. The value is a string of 1 to 30 bytes.
+表示识别策略的标签，用于标识和分类匹配结果。长度范围1-30字节。
 
 **Type:** string
 

@@ -1,5 +1,11 @@
 # requestFormWithParams (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
 ## requestFormWithParams
 
 ```TypeScript
@@ -25,7 +31,7 @@ Carries parameters to request a widget update. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| wantParams | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | No | Parameters used for the update. |
+| wantParams | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No | Parameters used for the update. |
 
 **Return value:**
 
@@ -37,12 +43,12 @@ Carries parameters to request a widget update. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+| 16501003 | The form cannot be operated by the current application. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501001 | The ID of the form to be operated does not exist. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
 

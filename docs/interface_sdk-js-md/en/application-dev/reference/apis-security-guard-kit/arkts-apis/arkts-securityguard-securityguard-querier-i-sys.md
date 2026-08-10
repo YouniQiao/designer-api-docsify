@@ -12,6 +12,12 @@ Definition callback of receiving the query data.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+```
+
 ## onComplete
 
 ```TypeScript

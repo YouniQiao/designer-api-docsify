@@ -1,12 +1,18 @@
 # startAdminProvision
 
+## Modules to Import
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## startAdminProvision
 
 ```TypeScript
 function startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record<string, string>): void
 ```
 
-Enables the device administrator application to open a page for the BYOD administrator to perform activation.
+设备管理应用拉起BYOD管理员激活页面进行激活。
 
 **Since:** 15
 
@@ -24,19 +30,19 @@ Enables the device administrator application to open a page for the BYOD adminis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the activated device administrator application. Only the **ADMIN\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BYOD** type is supported. |
-| context | common.Context | Yes | Context information of the administrator application. |
-| parameters | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, string&gt; | Yes | Custom parameters. The key value must contain **activateId** and may optionally include **customizedInfo** and **localDeactivationPolicy**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **activateId**: project activation ID. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **customizedInfo**: enterprise-defined information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **localDeactivationPolicy**: local deactivation delay (unit: hour). This parameter is supported since API version 22. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | 激活的设备管理应用类型，仅支持ADMIN_TYPE_BYOD类型。 |
+| context | common.Context | Yes | 管理应用的上下文信息。 |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | 自定义参数信息，其中Key值必须包含："activateId"，可以包含"customizedInfo"、" localDeactivationPolicy"。&lt;br/&gt;- activateId：项目激活ID。&lt;br/&gt;- customizedInfo：企业自定义信息。&lt;br/&gt;- localDeactivationPolicy： 从API version 22开始支持，本地延迟取消激活时间（单位：小时）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

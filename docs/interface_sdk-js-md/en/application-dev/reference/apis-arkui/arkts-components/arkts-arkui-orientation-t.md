@@ -4,7 +4,7 @@
 declare type Orientation = import('../api/@ohos.window').default.Orientation
 ```
 
-Defines an instance object of the Orientation type.
+页面显示方向的枚举类型。
 
 **Since:** 19
 

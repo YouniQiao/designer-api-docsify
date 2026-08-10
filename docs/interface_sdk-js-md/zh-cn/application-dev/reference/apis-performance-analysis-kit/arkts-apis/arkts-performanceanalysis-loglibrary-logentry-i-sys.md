@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## mtime
 
 ```TypeScript
@@ -20,7 +26,7 @@ mtime: long
 
 上次修改该文件的时间，表示距1970年1月1日0时0分0秒的秒数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -60,7 +66,7 @@ size: long
 
 文件大小，以字节为单位。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 

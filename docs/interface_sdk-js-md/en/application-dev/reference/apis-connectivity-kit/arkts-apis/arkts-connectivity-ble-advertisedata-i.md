@@ -10,13 +10,19 @@ Describes the advertising data.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## advertiseName
 
 ```TypeScript
 advertiseName?: string
 ```
 
-Indicates the local name data type in the advertisement packet. If both the property and\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ property are used together,the \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ property will ultimately take effect.
+Indicates the local name data type in the advertisement packet. If both the property and{@link AdvertiseData#includeDeviceName} property are used together,the {@link AdvertiseData#advertiseName} property will ultimately take effect.
 
 **Type:** string
 

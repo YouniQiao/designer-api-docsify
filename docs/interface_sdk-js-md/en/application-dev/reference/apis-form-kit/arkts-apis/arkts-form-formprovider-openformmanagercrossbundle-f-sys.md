@@ -1,5 +1,11 @@
 # openFormManagerCrossBundle (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formProvider } from 'kits/@kit.FormKit';
+```
+
 ## openFormManagerCrossBundle
 
 ```TypeScript
@@ -24,14 +30,14 @@ Open the view of forms belonging to the specified bundle.Client to communication
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The want of the form to open. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | The want of the form to open. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| 801 | Capability not supported. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
 

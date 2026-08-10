@@ -24,5 +24,5 @@ export type Initializer<T> = (...params: FixedArray<RecordData>) => T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回当前组件。  |
+| T | 返回当前组件。 |
 

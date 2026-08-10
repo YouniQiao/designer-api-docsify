@@ -1,6 +1,6 @@
 # MediaEntity
 
-媒体实例的定义。继承自[OperResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+媒体实例的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
 
 **起始版本：** 23
 
@@ -9,6 +9,12 @@
 <!--Device-avMusicTemplate-interface MediaEntity--><!--Device-avMusicTemplate-interface MediaEntity-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
 
 ## desc
 
@@ -78,7 +84,7 @@ mediaType: EntityType
 
 媒体资源的类型。
 
-**类型：** EntityType
+**类型：** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **起始版本：** 23
 
@@ -118,7 +124,7 @@ parentMediaType: EntityType
 
 父节点的媒体资源类型。
 
-**类型：** EntityType
+**类型：** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **起始版本：** 23
 
@@ -138,7 +144,7 @@ playState: PlaybackState
 
 媒体资源的播放状态。
 
-**类型：** PlaybackState
+**类型：** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
 **起始版本：** 23
 

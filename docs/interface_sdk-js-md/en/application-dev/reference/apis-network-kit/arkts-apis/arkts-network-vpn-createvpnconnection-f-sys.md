@@ -1,5 +1,11 @@
 # createVpnConnection (System API)
 
+## Modules to Import
+
+```TypeScript
+import { vpn } from 'kits/@kit.NetworkKit';
+```
+
 ## createVpnConnection
 
 ```TypeScript
@@ -22,22 +28,22 @@ Create a VPN connection using the AbilityContext.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | Yes | Indicates the context of application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the VpnConnection of the construct VpnConnection instance. |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | the VpnConnection of the construct VpnConnection instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 Stage model:
 

@@ -1,6 +1,6 @@
 # PrinterPreferences
 
-Defines the printer preferences.
+定义打印机首选项的接口。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Defines the printer preferences.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## borderless
 
 ```TypeScript
 borderless?: boolean
 ```
 
-Whether to print without margins. The value **true** means to print without margins, and **false** means the opposite. The default value is **false**.
+表示是否无边距打印，true表示无边距，false表示有边距。默认值为false。
 
 **Type:** boolean
 
@@ -34,7 +40,9 @@ Whether to print without margins. The value **true** means to print without marg
 defaultCollate?: boolean
 ```
 
-Default collate.
+表示默认出纸顺序。true表示逐份打印，false表示逐页打印。默认值为逐份。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Type:** boolean
 
@@ -54,9 +62,11 @@ Default collate.
 defaultColorMode?: PrintColorMode
 ```
 
-Default color mode.
+表示默认色彩模式。默认值为黑白。
 
-**Type:** PrintColorMode
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**Type:** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
 **Since:** 24
 
@@ -74,9 +84,9 @@ Default color mode.
 defaultDuplexMode?: PrintDuplexMode
 ```
 
-Default duplex mode.
+表示默认单双面模式。
 
-**Type:** PrintDuplexMode
+**Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **Since:** 18
 
@@ -92,7 +102,7 @@ Default duplex mode.
 defaultMediaType?: string
 ```
 
-Default paper type.
+表示默认纸张类型。
 
 **Type:** string
 
@@ -110,9 +120,9 @@ Default paper type.
 defaultOrientation?: PrintOrientationMode
 ```
 
-Default print orientation.
+表示默认打印方向。
 
-**Type:** PrintOrientationMode
+**Type:** [PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)
 
 **Since:** 18
 
@@ -128,7 +138,7 @@ Default print orientation.
 defaultPageSizeId?: string
 ```
 
-ID of the default paper size. The value can be a standard paper size defined by the International Organization for Standardization (ISO), for example, ISO\_A4, or a non-standard paper size defined in the system, for example,Custom.178 × 254 mm.
+表示默认纸张尺寸的ID，其范围包含国际标准化组织定义的标准纸张尺寸，如ISO_A4，和系统中定义的非标准的纸张尺寸，如Custom.178x254mm，表示这种纸张尺寸为178毫米 x 254毫米。
 
 **Type:** string
 
@@ -146,9 +156,9 @@ ID of the default paper size. The value can be a standard paper size defined by 
 defaultPrintQuality?: PrintQuality
 ```
 
-Default print quality.
+表示默认打印质量。
 
-**Type:** PrintQuality
+**Type:** [PrintQuality](arkts-basicservices-print-printquality-e.md)
 
 **Since:** 18
 
@@ -164,7 +174,9 @@ Default print quality.
 defaultReverse?: boolean
 ```
 
-Default reverse.
+表示默认打印顺序。true表示逆序打印，false表示正序打印。默认值为正序打印。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Type:** boolean
 
@@ -184,7 +196,7 @@ Default reverse.
 options?: string
 ```
 
-Other fields in the printer preferences. The fields are queried from the printer or obtained from the printer driver and stored in the string in JSON format.
+表示打印机首选项中不在以上字段中的其他字段，查询打印机或者从打印机驱动获取，以json格式存储在string中。
 
 **Type:** string
 
@@ -193,26 +205,6 @@ Other fields in the printer preferences. The fields are queried from the printer
 **ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 <!--Device-PrinterPreferences-options?: string--><!--Device-PrinterPreferences-options?: string-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-## vendorOptions
-
-```TypeScript
-vendorOptions?: string
-```
-
-Vendor-specific printer preferences in JSON format.
-
-**Type:** string
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrinterPreferences-vendorOptions?: string--><!--Device-PrinterPreferences-vendorOptions?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

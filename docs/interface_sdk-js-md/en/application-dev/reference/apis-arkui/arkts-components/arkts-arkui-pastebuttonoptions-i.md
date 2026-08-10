@@ -1,14 +1,13 @@
 # PasteButtonOptions
 
-Defines options for the paste button, including icon, text and button type.
-    **NOTE**  
-    
-    - You are advised to specify at least one of **icon** or **text**.
-    - If neither **icon** nor **text** is specified, **PasteButton** is created with default styles as follows:  
-    **PasteIconStyle** defaults to **LINES**, **PasteDescription** to **PASTE**, and **ButtonType** to **Capsule**.
-    - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification. Styles and properties  
-    of security components are verified by the system upon creation. Dynamic changes may cause the component to  
-    violate specifications for security components and invalidate authorization.
+用于设置粘贴控件的图标、文本、按钮类型等属性。
+
+> **说明：**
+> - 建议icon或text至少传入一个。
+> 
+> - 如果icon、text都不传入，PasteButton将使用默认样式创建，默认样式：PasteIconStyle默认样式为LINES；PasteDescription默认样式为PASTEButtonType默认样式为Capsule。
+> 
+> - icon、text和buttonType不支持动态修改。这是因为安全控件的样式和属性在创建时已通过系统校验，动态修改可能导致控件样式不符合安全控件规范，从而影响授权的有效性。
 
 **Since:** 10
 
@@ -24,9 +23,9 @@ Defines options for the paste button, including icon, text and button type.
 buttonType?: ButtonType
 ```
 
-Shape of the **PasteButton** component.Default value: ButtonType.Capsule.
+设置粘贴控件的按钮形状。Capsule。默认值：ButtonType。
 
-**Type:** ButtonType
+**Type:** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
 
 **Since:** 10
 
@@ -46,9 +45,9 @@ Shape of the **PasteButton** component.Default value: ButtonType.Capsule.
 icon?: PasteIconStyle
 ```
 
-Icon style of the **PasteButton** component.Default value: No icon is displayed.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If neither **icon** nor **text** is provided, the component uses the default style.
+设置粘贴控件的图标风格。默认值：不显示图标。&lt;br&gt;若同时也不传text，控件将显示为默认样式。
 
-**Type:** PasteIconStyle
+**Type:** [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md)
 
 **Since:** 10
 
@@ -68,9 +67,9 @@ Icon style of the **PasteButton** component.Default value: No icon is displayed.
 text?: PasteDescription
 ```
 
-Text on the **PasteButton** component.Default value: No text description is displayed.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the icon is not transferred, the control is displayed in the default style.
+设置粘贴控件的文本描述。默认值：不显示文本描述。&lt;br&gt;若同时也不传icon，控件将显示为默认样式。
 
-**Type:** PasteDescription
+**Type:** [PasteDescription](arkts-arkui-pastedescription-e.md)
 
 **Since:** 10
 

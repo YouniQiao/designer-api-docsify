@@ -1,5 +1,11 @@
 # getCurrentGroup
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getCurrentGroup
 
 ```TypeScript
@@ -55,9 +61,9 @@ Obtains information about the current group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WifiP2pGroupInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -67,11 +73,11 @@ wifi.getCurrentGroup((err, data:wifi.WifiP2pGroupInfo) => {
        console.error("get current P2P group error");
        return;
    }
-	console.info("get current P2P group: " + JSON.stringify(data));
+  console.info("get current P2P group: " + JSON.stringify(data));
 });
 
 wifi.getCurrentGroup().then(data => {
-	console.info("get current P2P group: " + JSON.stringify(data));
+  console.info("get current P2P group: " + JSON.stringify(data));
 });
 ```
 

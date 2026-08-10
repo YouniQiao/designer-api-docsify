@@ -1,6 +1,6 @@
 # AudioSessionStrategy
 
-Describes an audio session strategy.
+音频会话策略。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes an audio session strategy.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## concurrencyMode
 
 ```TypeScript
 concurrencyMode: AudioConcurrencyMode
 ```
 
-Audio concurrency mode.
+音频并发模式。
 
-**Type:** AudioConcurrencyMode
+**Type:** [AudioConcurrencyMode](arkts-audio-audio-audioconcurrencymode-e.md)
 
 **Since:** 12
 

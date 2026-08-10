@@ -1,6 +1,6 @@
 # WindowRect
 
-Defines the location attributes of a modal dialog box.
+表示模态弹框的属性。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Defines the location attributes of a modal dialog box.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { dialogRequest } from 'kits/@kit.AbilityKit';
+```
+
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Height of the dialog box, in px.
+弹框的高度，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Height of the dialog box, in px.
 left: int
 ```
 
-X-coordinate of the upper left corner of the dialog box.
+弹框边框的左上角的X坐标。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -56,9 +62,9 @@ X-coordinate of the upper left corner of the dialog box.
 top: int
 ```
 
-Y-coordinate of the upper left corner of the dialog box.
+弹框边框的左上角的Y坐标。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -76,9 +82,9 @@ Y-coordinate of the upper left corner of the dialog box.
 width: int
 ```
 
-Width of the dialog box, in px.
+弹框的宽度，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

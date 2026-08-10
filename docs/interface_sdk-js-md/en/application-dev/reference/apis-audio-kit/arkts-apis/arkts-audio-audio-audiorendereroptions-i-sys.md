@@ -1,6 +1,6 @@
 # AudioRendererOptions
 
-Describes audio renderer configurations.
+音频渲染器选项信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Describes audio renderer configurations.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## originalAppIdInfo
 
 ```TypeScript
 originalAppIdInfo?: AppIdInfo
 ```
 
-Indicates the original app ID of the audio stream.
+音频流的原始应用ID。
 
-**Type:** AppIdInfo
+**Type:** [AppIdInfo](arkts-audio-audio-appidinfo-i-sys.md)
 
 **Since:** 26.0.0
 

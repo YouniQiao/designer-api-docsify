@@ -1,6 +1,6 @@
 # URLParams
 
-The URLParams interface defines some practical methods to process URL query strings.
+URLParams是一个用于解析、构造和操作URL参数的实用类。该类提供了统一的接口来处理URL查询参数。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ The URLParams interface defines some practical methods to process URL query stri
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { url } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
 $_iterator(): IterableIterator<[string, string]>
 ```
 
-Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields ofeach array are the key and value respectively.
+返回一个ES6的迭代器，迭代器的每一项都是一个JavaScript Array。Array的第一项是name，Array的第二项是value。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
 
 ## [Symbol.iterator]
 
@@ -40,7 +46,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 [Symbol.iterator](): IterableIterator<[string, string]>
 ```
 
-Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields ofeach array are the key and value respectively.
+获取一个ES6迭代器。迭代器的每一项都是一个JavaScript数组，数组的第一项和第二项分别是键和值。
 
 **Since:** 9
 
@@ -56,9 +62,9 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6迭代器。迭代器的每一项都是一个JavaScript Array。 Array的第一项是name，第二项是value。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 const paramsObject = new url.URLParams('fod=bay&edg=bap');
@@ -76,7 +82,7 @@ for (let pair of iter) {
 append(name: string, value: string): void
 ```
 
-Appends a key-value pair into the query string.
+将新的键值对插入到查询字符串。与[set](arkts-arkts-url-urlparams-c.md#set)方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
 
 **Since:** 9
 
@@ -92,10 +98,10 @@ Appends a key-value pair into the query string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key of the key-value pair to append. |
-| value | string | Yes | Value of the key-value pair to append. |
+| name | string | Yes | 需要插入搜索参数的键名。 |
+| value | string | Yes | 需要插入搜索参数的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -109,7 +115,9 @@ paramsObject.append('fod', '3');
 constructor(init?: string[][] | Record<string, string> | string | URLParams)
 ```
 
-A constructor used to create a URLParams instance.
+ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams)
+
+URLParams的构造函数，用于创建URL参数对象，适用于需要解析、构造或操作URL查询参数的场景。
 
 **Since:** 9
 
@@ -125,9 +133,9 @@ A constructor used to create a URLParams instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | No | Input parameter objects, which include the following: - string[][]: two-dimensional string array. - Record&lt;string, string&gt;: list of objects. - string: string. - URLParams: object. The default value is null. |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | No | 入参对象。 &lt;br/&gt;- string[][]：字符串二维数组。 &lt;br/&gt;- Record&lt;string, string&gt;：对象列表。 &lt;br/&gt;- string：URL查询参数字符串。 &lt;br/&gt;- URLParams：URLParams实例对象。 &lt;br/&gt;- 默认值：null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Construct a URLParams object in string[][] mode.
@@ -150,7 +158,7 @@ let objectParams4 = urlObject1.params;
 constructor(init?: [string, string][] | Record<string, string> | string | URLParams)
 ```
 
-A parameterized constructor used to create an URLParams instance.As the input parameter of the constructor function, init supports four types.The input parameter is a character string two-dimensional array.The input parameter is the object list.The input parameter is a character string.The input parameter is the URLParams object.
+用于创建URLParams实例的参数化构造函数。作为构造函数的输入参数，init支持四种类型。输入参数是字符串二维数组。输入参数是对象列表。输入参数是字符串。输入参数是URLParams对象。
 
 **Since:** 23
 
@@ -174,7 +182,7 @@ A parameterized constructor used to create an URLParams instance.As the input pa
 delete(name: string): void
 ```
 
-Deletes key-value pairs of the specified key.
+删除指定名称的所有键值对。如果指定名称不存在，则不做任何操作。
 
 **Since:** 9
 
@@ -190,9 +198,9 @@ Deletes key-value pairs of the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key of the key-value pairs to delete. |
+| name | string | Yes | 需要删除的键值名称。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -206,7 +214,7 @@ paramsObject.delete('fod');
 entries(): IterableIterator<[string, string]>
 ```
 
-Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields of each array are the key and value respectively.
+返回一个ES6的迭代器，迭代器的每一项都是一个Array。Array的第一项是name，Array的第二项是value。
 
 **Since:** 9
 
@@ -222,9 +230,9 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[string, string]&gt; | Returns an iterator for ES6. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let paramsObject = new url.URLParams("keyName1=valueName1&keyName2=valueName2");
@@ -242,7 +250,7 @@ for (let item of pair) {
 forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void
 ```
 
-Callback functions are used to traverse key-value pairs on the URLParams instance object.
+通过回调函数来遍历URLParams实例对象上的键值对。
 
 **Since:** 9
 
@@ -258,10 +266,10 @@ Callback functions are used to traverse key-value pairs on the URLParams instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLParams) =&gt; void | Yes | callbackFn value Current traversal key value, key Indicates the name of the key that is traversed. |
-| thisArg | Object | No | thisArg to be used as this value for when callbackFn is called |
+| callbackFn | (value: string, key: string, searchParams: URLParams) =&gt; void | Yes | 回调函数。 |
+| thisArg | Object | No | callbackFn被调用时用作this值，默认值是本对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 const myURLObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -276,7 +284,7 @@ myURLObject.params.forEach((value, name, searchParams) => {
 forEach(callbackFn: UrlCbFn): void
 ```
 
-Iterates over a collection (e.g., URLs) and executes a callback function for each element.
+通过回调函数来遍历URLSearchParams实例对象上的键值对。
 
 **Since:** 23
 
@@ -292,7 +300,7 @@ Iterates over a collection (e.g., URLs) and executes a callback function for eac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | A callback function to execute for each element. |
+| callbackFn | [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) | Yes | 回调函数。 |
 
 ## get
 
@@ -300,7 +308,7 @@ Iterates over a collection (e.g., URLs) and executes a callback function for eac
 get(name: string): string | null
 ```
 
-Obtains the value of the first key-value pair based on the specified key.
+获取指定名称对应的第一个值。
 
 **Since:** 9
 
@@ -316,15 +324,15 @@ Obtains the value of the first key-value pair based on the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key specified to obtain the value. |
+| name | string | Yes | 指定键值对的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Returns the first value found by name. If no value is found, null is returned. |
+| string | 返回第一个值，如果没找到，返回 null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let paramsObject = new url.URLParams('name=Jonathan&age=18');
@@ -339,7 +347,7 @@ let getObj = paramsObject.get("abc"); // undefined
 get(name: string): string | undefined
 ```
 
-Obtains the value of the first key-value pair based on the specified key.
+根据指定的键获取第一个键值对的值。
 
 **Since:** 23
 
@@ -355,13 +363,13 @@ Obtains the value of the first key-value pair based on the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key specified to obtain the value. |
+| name | string | Yes | 指定用于获取值的键。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Returns the first value found by name. If no value is found, undefined is returned. |
+| string | 返回按名称找到的第一个值。 如果未找到值，则返回undefined。 |
 
 ## getAll
 
@@ -369,7 +377,7 @@ Obtains the value of the first key-value pair based on the specified key.
 getAll(name: string): string[]
 ```
 
-Obtains all the values based on the specified key.
+获取指定名称的所有键对应值的集合。
 
 **Since:** 9
 
@@ -385,15 +393,15 @@ Obtains all the values based on the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Target key. |
+| name | string | Yes | 指定的键值名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string[] | string[] Returns all key-value pairs with the specified name. |
+| string[] | 返回指定名称的所有键对应值的集合。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -408,7 +416,7 @@ console.info(params.getAll('fod').toString()) // Output ["1","3"].
 has(name: string): boolean
 ```
 
-Checks whether a key has a value.
+判断一个指定的键名对应的值是否存在。
 
 **Since:** 9
 
@@ -424,15 +432,15 @@ Checks whether a key has a value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key specified to search for its value. |
+| name | string | Yes | 要查找的参数的键名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns a Boolean value that indicates whether a found |
+| boolean | 是否存在相对应的key值，存在返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -446,7 +454,7 @@ let result = paramsObject.has('bard');
 keys(): IterableIterator<string>
 ```
 
-Obtains an ES6 iterator that contains the keys of all the key-value pairs.
+返回一个包含所有键值对的name的ES6迭代器。
 
 **Since:** 9
 
@@ -462,9 +470,9 @@ Obtains an ES6 iterator that contains the keys of all the key-value pairs.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Returns an ES6 Iterator over the names of each name-value pair. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个包含所有键值对的name的ES6迭代器。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let paramsObject = new url.URLParams("key1=value1&key2=value2");
@@ -482,7 +490,9 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-Sets the value for a key. If key-value pairs matching the specified key exist, the value of the first key-value pair will be set to the specified value and other key-value pairs will be deleted. Otherwise, the key-value pair will be appended to the query string.
+将与name关联的URLSearchParams对象中的值设置为value。
+
+如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不是，则将键值对附加到查询字符串。
 
 **Since:** 9
 
@@ -498,10 +508,10 @@ Sets the value for a key. If key-value pairs matching the specified key exist, t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key of the value to set. |
-| value | string | Yes | Value to set. |
+| name | string | Yes | 将要设置的参数的键值名。 |
+| value | string | Yes | 所要设置的参数值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -515,7 +525,7 @@ paramsObject.set('baz', '3'); // Add a third parameter.
 sort(): void
 ```
 
-Sorts all key-value pairs contained in this object based on the Unicode code points of the keys and returns undefined. This method uses a stable sorting algorithm, that is, the relative order between key-value pairs with equal keys is retained.
+对包含在此对象中的所有键值对进行排序。排序顺序是根据键的Unicode代码点。该方法使用稳定的排序算法（保留具有相等键的键值对之间的相对顺序）。
 
 **Since:** 9
 
@@ -527,7 +537,7 @@ Sorts all key-value pairs contained in this object based on the Unicode code poi
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 let paramsObject = new url.URLParams("c=3&a=9&b=4&d=2"); // Create a test URLParams object
@@ -541,7 +551,7 @@ console.info(paramsObject.toString()); // Display the sorted query string // Out
 toString(): string
 ```
 
-Obtains search parameters that are serialized as a string and, if necessary, percent-encodes the characters in the string.
+返回序列化为字符串的搜索参数，必要时对字符进行百分比编码。
 
 **Since:** 9
 
@@ -557,9 +567,9 @@ Obtains search parameters that are serialized as a string and, if necessary, per
 
 | Type | Description |
 | --- | --- |
-| string | Returns a search parameter serialized as a string, percent-encoded if necessary. |
+| string | 返回序列化为字符串的搜索参数，必要时对字符进行百分比编码。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -574,7 +584,7 @@ console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
 values(): IterableIterator<string>
 ```
 
-Obtains an ES6 iterator that contains the values of all the key-value pairs.
+返回一个包含所有键值对的value的ES6迭代器。
 
 **Since:** 9
 
@@ -590,9 +600,9 @@ Obtains an ES6 iterator that contains the values of all the key-value pairs.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Returns an ES6 Iterator over the values of each name-value pair. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个包含所有键值对的value的ES6迭代器。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let paramsObject = new url.URLParams("key1=value1&key2=value2");

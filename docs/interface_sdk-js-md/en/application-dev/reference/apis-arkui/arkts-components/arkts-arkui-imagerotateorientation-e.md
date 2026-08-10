@@ -1,6 +1,6 @@
 # ImageRotateOrientation
 
-Describes the desired display orientation for image content.
+期望的图像内容显示方向。
 
 **Since:** 14
 
@@ -16,12 +16,11 @@ Describes the desired display orientation for image content.
 AUTO = 0
 ```
 
-Use EXIF metadata for display orientation, with support for rotation and mirroring.
+读取图片携带的EXIF元数据作为显示方向，支持旋转和镜像。
 
-Images of the [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and  
-[DrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ types do not contain header information. When this API is called,the image display effect remains unchanged.
+[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的图片不包含头信息，调用该接口时图片显示效果不变化。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![imageRotateOrientation_0](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_0.png)
 
 **Since:** 14
 
@@ -43,7 +42,7 @@ Images of the [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and
 UP = 1
 ```
 
-Display original pixel data without transformation.
+默认按照当前图片的像素数据进行显示，不做任何处理。
 
 **Since:** 14
 
@@ -65,9 +64,9 @@ Display original pixel data without transformation.
 RIGHT = 2
 ```
 
-Display the image after rotating it 90 degrees clockwise.
+将当前图片顺时针旋转90度后显示。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![imageRotateOrientation_2](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_2.png)
 
 **Since:** 14
 
@@ -89,9 +88,9 @@ Display the image after rotating it 90 degrees clockwise.
 DOWN = 3
 ```
 
-Display the image after rotating it 180 degrees clockwise.
+将当前图片顺时针旋转180度后显示。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![imageRotateOrientation_3](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_3.png)
 
 **Since:** 14
 
@@ -113,9 +112,9 @@ Display the image after rotating it 180 degrees clockwise.
 LEFT = 4
 ```
 
-Display the image after rotating it 270 degrees clockwise.
+将当前图片顺时针旋转270度后显示。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![imageRotateOrientation_4](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_4.png)
 
 **Since:** 14
 
@@ -137,9 +136,9 @@ Display the image after rotating it 270 degrees clockwise.
 UP_MIRRORED = 5
 ```
 
-Display the image after flipping it horizontally.
+将当前图片水平翻转后显示。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![imageRotateOrientation_5](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_5.png)
 
 **Since:** 20
 
@@ -161,9 +160,9 @@ Display the image after flipping it horizontally.
 RIGHT_MIRRORED = 6
 ```
 
-Display the image after flipping it horizontally and then rotating it 90 degrees clockwise.
+将当前图片水平翻转再顺时针旋转90度后显示。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![imageRotateOrientation_6](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_6.png)
 
 **Since:** 20
 
@@ -185,9 +184,9 @@ Display the image after flipping it horizontally and then rotating it 90 degrees
 DOWN_MIRRORED = 7
 ```
 
-Display the image after flipping it vertically.
+将当前图片垂直翻转后显示。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![imageRotateOrientation_7](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_7.png)
 
 **Since:** 20
 
@@ -209,9 +208,9 @@ Display the image after flipping it vertically.
 LEFT_MIRRORED = 8
 ```
 
-Display the image after flipping it horizontally and then rotating it 270 degrees clockwise.
+将当前图片水平翻转再顺时针旋转270度后显示。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![imageRotateOrientation_8](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_8.png)
 
 **Since:** 20
 

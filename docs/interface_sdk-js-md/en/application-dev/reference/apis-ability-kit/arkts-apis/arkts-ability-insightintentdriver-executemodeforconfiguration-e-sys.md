@@ -1,8 +1,7 @@
 # ExecuteModeForConfiguration (System API)
 
-Enumerates the execution modes supported by an  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.For example, if **executeMode** in the  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_is set to **foreground**, the intent bound to the UIAbility can run in the foreground.
+[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)支持的意图执行模式。例如，将  
+[insight_intent.json配置文件](../../../application-models/insight-intent-config-development.md#insight_intentjson配置文件说明)中的executeMode设置为"foreground"，表示支持与UIAbility组件绑定的意图在前台运行。
 
 **Since:** 23
 
@@ -20,7 +19,7 @@ Enumerates the execution modes supported by an
 FOREGROUND = 0
 ```
 
-The intent bound to the UIAbility can run in the foreground.
+表示支持与UIAbility组件绑定的意图在前台运行。
 
 **Since:** 23
 
@@ -40,7 +39,7 @@ The intent bound to the UIAbility can run in the foreground.
 BACKGROUND = 1
 ```
 
-The intent bound to the UIAbility can run in the background.
+表示支持与UIAbility组件绑定的意图在后台运行。
 
 **Since:** 23
 

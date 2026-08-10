@@ -1,6 +1,6 @@
 # DynamicComponent属性/事件
 
-支持[通用属性]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
 
 支持以下事件：
 

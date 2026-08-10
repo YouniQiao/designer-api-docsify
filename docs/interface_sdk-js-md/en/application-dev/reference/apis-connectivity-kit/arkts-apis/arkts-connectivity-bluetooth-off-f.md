@@ -1,5 +1,11 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## off('bluetoothDeviceFind')
 
 ```TypeScript
@@ -27,9 +33,9 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bluetoothDeviceFind' | Yes | Type of the discovering event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | No | Callback used to listen for the discovering event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | No | Callback used to listen for the discovering event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(data : Array<string>) {
@@ -67,9 +73,9 @@ Unsubscribe the event reported when a remote Bluetooth device is bonded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BondStateParam&gt; | No | Callback used to listen for the bond state event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | No | Callback used to listen for the bond state event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(data : bluetooth.BondStateParam) {
@@ -107,9 +113,9 @@ Unsubscribe the event of a pairing request from a remote Bluetooth device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PinRequiredParam&gt; | No | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | No | Callback used to listen for the pairing request event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(data : bluetooth.PinRequiredParam) {
@@ -147,9 +153,9 @@ Unsubscribe the event reported when the Bluetooth state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BluetoothState&gt; | No | Callback used to listen for the Bluetooth state event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | No | Callback used to listen for the Bluetooth state event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(data : bluetooth.BluetoothState) {
@@ -186,9 +192,9 @@ Unsubscribe the event reported when data is read from the socket.
 | --- | --- | --- | --- |
 | type | 'sppRead' | Yes | Type of the spp read event to listen for. |
 | clientSocket | number | Yes | Client socket ID, which is obtained by sppAccept or sppConnect. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | No | Callback used to listen for the spp read event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to listen for the spp read event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

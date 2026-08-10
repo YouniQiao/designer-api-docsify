@@ -34,12 +34,12 @@ abstract initialize(scroller?: Scroller, layoutOptions?: GridLayoutOptions): Gri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | grid的控制器。 |
-| layoutOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Grid布局选项。 |
+| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 否 | grid的控制器。 |
+| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | 否 | Grid布局选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) |  |
 

@@ -1,12 +1,18 @@
 # getDefaultInputMethod
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## getDefaultInputMethod
 
 ```TypeScript
 function getDefaultInputMethod(): InputMethodProperty
 ```
 
-Get default input method
+获取默认输入法。
 
 **Since:** 11
 
@@ -20,15 +26,15 @@ Get default input method
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | property of the default input method. |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 返回默认输入法属性对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let defaultIme: inputMethod.InputMethodProperty = inputMethod.getDefaultInputMethod();

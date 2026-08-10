@@ -10,13 +10,19 @@ class DragController
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## interruptFollowHandMorphDropAnimation
 
 ```TypeScript
 interruptFollowHandMorphDropAnimation(): boolean
 ```
 
-Interrupt the pending follow-hand morph drop animation and trigger the finish sequence immediately.
+中断挂起的后续变形放下动画并立即触发完成序列。
 
 **Since:** 26.0.0
 
@@ -34,5 +40,5 @@ Interrupt the pending follow-hand morph drop animation and trigger the finish se
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if interrupted successfully; false if there is no pending follow-hand morph drop animation to interrupt. |
+| boolean | 后续的变形掉落动画来中断。 |
 

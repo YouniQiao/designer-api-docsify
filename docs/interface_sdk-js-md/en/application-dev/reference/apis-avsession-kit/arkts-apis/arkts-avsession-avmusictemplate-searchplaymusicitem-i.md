@@ -1,6 +1,6 @@
 # SearchPlayMusicItem
 
-The definition of SearchPlayMusicItem.
+搜播的音频项目的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of SearchPlayMusicItem.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## entityId
 
 ```TypeScript
 entityId: string
 ```
 
-Unique id of the Media.
+音频的唯一标识。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Unique id of the Media.
 entityName?: string
 ```
 
-Name of the Media.
+音频的名称。
 
 **Type:** string
 

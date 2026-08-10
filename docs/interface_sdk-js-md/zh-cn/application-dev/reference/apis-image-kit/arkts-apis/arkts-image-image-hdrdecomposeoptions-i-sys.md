@@ -12,15 +12,21 @@ HDR PixelMap分解为Picture的配置选项，分解后的Picture包含一张SDR
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## desiredPixelFormat
 
 ```TypeScript
 desiredPixelFormat?: PixelMapFormat
 ```
 
-分解后SDR PixelMap和增益图的像素格式。支持RGBA\_8888、NV12、NV21。默认值为RGBA\_8888。
+分解后SDR PixelMap和增益图的像素格式。支持RGBA_8888、NV12、NV21。默认值为RGBA_8888。
 
-**类型：** PixelMapFormat
+**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md)
 
 **起始版本：** 26.0.0
 

@@ -4,7 +4,7 @@
 export type WantAgent = object
 ```
 
-Target WantAgent object.
+WantAgent对象。
 
 **Since:** 9
 

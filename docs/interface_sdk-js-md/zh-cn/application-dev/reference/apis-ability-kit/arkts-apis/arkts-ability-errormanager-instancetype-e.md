@@ -70,7 +70,7 @@ MAIN = 0
 CUSTOM = 3
 ```
 
-表示用户通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_从本机代码创建的虚拟机实例。
+表示用户通过[napi_create_ark_runtime](../../../reference/native-lib/napi.md#napi_create_ark_runtime)从本机代码创建的虚拟机实例。
 
 **起始版本：** 18
 

@@ -1,6 +1,6 @@
 # QueryType
 
-Enum for query entity mode.
+查询实体模式的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enum for query entity mode.
 ALL = 'all'
 ```
 
-Query all entities.
+查询所有实体。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Query all entities.
 BY_PROPERTY = 'byProperty'
 ```
 
-Query entities by property.
+根据属性查询实体。
 
 **Since:** 26.0.0
 

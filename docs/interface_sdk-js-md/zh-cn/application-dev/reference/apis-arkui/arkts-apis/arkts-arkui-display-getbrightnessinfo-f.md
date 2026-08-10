@@ -1,12 +1,18 @@
 # getBrightnessInfo
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getBrightnessInfo
 
 ```TypeScript
 function getBrightnessInfo(displayId: long): BrightnessInfo
 ```
 
-获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。
+获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。
 
 **起始版本：** 22
 
@@ -22,45 +28,29 @@ function getBrightnessInfo(displayId: long): BrightnessInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 屏幕ID。该参数仅支持整数输入，该参数大于等于0。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕ID。该参数仅支持整数输入，该参数大于等于0。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回displayId对应屏幕的亮度信息。 |
+| [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | 返回displayId对应屏幕的亮度信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-| [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 801 | Capability not supported. |
+| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1400003 | This display manager service works abnormally. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 try {
   let brightnessInfo = display.getBrightnessInfo(0);
   console.info(`brightness info: ${JSON.stringify(brightnessInfo)}`);
 } catch (error) {
-  console.error(`Failed to getDisplayBrightness. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-
-try {
-  let brightNessInfo = display.getBrightnessInfo(0);
-  console.info(`brightness info: ${JSON.stringify(brightNessInfo)}`);
-} catch (exception) {
-  let error = exception as BusinessError;
   console.error(`Failed to getDisplayBrightness. Code: ${error.code}, message: ${error.message}`);
 }
 ```

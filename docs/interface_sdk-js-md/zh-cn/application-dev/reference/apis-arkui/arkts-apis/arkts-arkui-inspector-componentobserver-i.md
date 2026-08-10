@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { inspector } from 'kits/@kit.ArkUI';
+```
+
 ## offDraw
 
 ```TypeScript
@@ -32,7 +38,7 @@ offDraw(callback?: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。callback需要和onDraw方法中的callback为相同对象时才能取消回调成功。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。callback需要和onDraw方法中的callback为相同对象时才能取消回调成功。 |
 
 ## offDrawChildren
 
@@ -56,7 +62,7 @@ offDrawChildren(callback?: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onDrawChildren方法中的callback为相同对象时才能取消回调成功。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onDrawChildren方法中的callback为相同对象时才能取消回调成功。 |
 
 ## offDrawChildren
 
@@ -80,7 +86,7 @@ offDrawChildren(callback?: Callback<int[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int[]&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onDrawChildren方法中的callback为相同对象时才能取消回调成功。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onDrawChildren方法中的callback为相同对象时才能取消回调成功。 |
 
 ## offLayout
 
@@ -104,7 +110,7 @@ offLayout(callback?: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onLayout方法中的callback为相同对象时才能取消回调成功。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onLayout方法中的callback为相同对象时才能取消回调成功。 |
 
 ## offLayoutChildren
 
@@ -128,7 +134,7 @@ offLayoutChildren(callback?: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onLayoutChildren方法中的callback为相同对象时才能取消回调成功。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onLayoutChildren方法中的callback为相同对象时才能取消回调成功。 |
 
 ## onDraw
 
@@ -152,7 +158,7 @@ onDraw(callback: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 监听draw的回调。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 | 监听draw的回调。 |
 
 ## onDrawChildren
 
@@ -176,7 +182,7 @@ onDrawChildren(callback: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 监听drawChildren的回调。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 | 监听drawChildren的回调。 |
 
 ## onDrawChildren
 
@@ -200,7 +206,7 @@ onDrawChildren(callback: Callback<int[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int[]&gt; | 是 | 监听drawChildren的回调，回调参数为子组件uniqueId数组，表示绘制送显完成的子组件的唯一标识列表。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | 是 | 监听drawChildren的回调，回调参数为子组件uniqueId数组，表示绘制送显完成的子组件的唯一标识列表。 |
 
 ## onLayout
 
@@ -224,7 +230,7 @@ onLayout(callback: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 监听layout的回调。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 | 监听layout的回调。 |
 
 ## onLayoutChildren
 
@@ -248,5 +254,5 @@ onLayoutChildren(callback: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 监听layoutChildren的回调。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 | 监听layoutChildren的回调。 |
 

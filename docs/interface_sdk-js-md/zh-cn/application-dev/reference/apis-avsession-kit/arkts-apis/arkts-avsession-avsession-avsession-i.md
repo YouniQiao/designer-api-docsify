@@ -1,9 +1,10 @@
 # AVSession
 
-调用[avSession.createAVSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。
-    **说明：**  
-    
-    - 本Interface首批接口从API version 10开始支持。
+调用[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession)后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 10
 
@@ -12,6 +13,12 @@
 <!--Device-avSession-interface AVSession--><!--Device-avSession-interface AVSession-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
 
 ## activate
 
@@ -33,14 +40,14 @@ activate(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当会话激活成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当会话激活成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## activate
 
@@ -70,8 +77,8 @@ activate(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## deactivate
 
@@ -81,7 +88,7 @@ deactivate(callback: AsyncCallback<void>): void
 
 禁用当前会话。结果通过callback异步回调方式返回。
 
-禁用当前会话的功能，可通过[activate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_恢复。
+禁用当前会话的功能，可通过[activate](arkts-avsession-avsession-avsession-i.md#activate)恢复。
 
 **起始版本：** 10
 
@@ -95,14 +102,14 @@ deactivate(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当禁用会话成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当禁用会话成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## deactivate
 
@@ -110,7 +117,7 @@ deactivate(callback: AsyncCallback<void>): void
 deactivate(): Promise<void>
 ```
 
-禁用当前会话的功能，可通过[activate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_恢复。结果通过Promise异步回调方式返回。
+禁用当前会话的功能，可通过[activate](arkts-avsession-avsession-avsession-i.md#activate)恢复。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
 
@@ -132,8 +139,8 @@ deactivate(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## destroy
 
@@ -155,14 +162,14 @@ destroy(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当会话销毁成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当会话销毁成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## destroy
 
@@ -192,8 +199,8 @@ destroy(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## dispatchSessionEvent
 
@@ -217,15 +224,15 @@ dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: Asy
 | --- | --- | --- | --- |
 | event | string | 是 | 需要设置的会话事件的名称。 |
 | args | {[key: string]: Object} | 是 | 需要传递的会话事件内容。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当会话事件设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当会话事件设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## dispatchSessionEvent
 
@@ -250,15 +257,15 @@ Dispatch the session event of this session.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | Session event name to dispatch |
-| args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully |
+| args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | The parameters of session event |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## dispatchSessionEvent
 
@@ -295,9 +302,9 @@ dispatchSessionEvent(event: string, args: {[key: string]: Object}): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## dispatchSessionEvent
 
@@ -322,7 +329,7 @@ Dispatch the session event of this session.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | Session event name to dispatch |
-| args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
+| args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | The parameters of session event |
 
 **返回值：**
 
@@ -334,8 +341,8 @@ Dispatch the session event of this session.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## enableDesktopLyric
 
@@ -371,9 +378,9 @@ enableDesktopLyric(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 6600111 | The desktop lyrics feature is not supported. |
 
 ## getAVCastController
 
@@ -395,14 +402,14 @@ getAVCastController(callback: AsyncCallback<AVCastController>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVCastController&gt; | 是 | 回调函数，返回投播控制器实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVCastController&gt; | 是 | 回调函数，返回投播控制器实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 6600102 | The session does not exist |
+| 6600109 | The remote connection is not established |
 
 ## getAVCastController
 
@@ -424,14 +431,14 @@ Get the cast controller when the session is casted to remote device.If the avses
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVCastController \| undefined&gt; | 是 | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVCastController \| undefined&gt; | 是 | async callback for the AVCastController. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 6600102 | The session does not exist |
+| 6600109 | The remote connection is not established |
 
 ## getAVCastController
 
@@ -461,8 +468,8 @@ getAVCastController(): Promise<AVCastController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 6600102 | The session does not exist |
+| 6600109 | The remote connection is not established |
 
 ## getAVCastController
 
@@ -492,8 +499,8 @@ Get the cast controller when the session is casted to remote device.If the avses
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 6600102 | The session does not exist |
+| 6600109 | The remote connection is not established |
 
 ## getAllCastDisplays
 
@@ -523,8 +530,8 @@ getAllCastDisplays(): Promise<Array<CastDisplayInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## getController
 
@@ -546,14 +553,14 @@ getController(callback: AsyncCallback<AVSessionController>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVSessionController&gt; | 是 | 回调函数。返回会话控制器。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVSessionController&gt; | 是 | 回调函数。返回会话控制器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## getController
 
@@ -583,8 +590,8 @@ getController(): Promise<AVSessionController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## getDesktopLyricState
 
@@ -614,10 +621,10 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 6600110 | The desktop lyrics feature of this application is not enabled. |
+| 6600111 | The desktop lyrics feature is not supported. |
 
 ## getOutputDevice
 
@@ -639,14 +646,14 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OutputDeviceInfo&gt; | 是 | 回调函数，返回播放设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OutputDeviceInfo&gt; | 是 | 回调函数，返回播放设备信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## getOutputDevice
 
@@ -676,8 +683,8 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## getOutputDeviceSync
 
@@ -701,14 +708,14 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前输出设备信息。 |
+| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | 当前输出设备信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## isDesktopLyricVisible
 
@@ -738,10 +745,10 @@ isDesktopLyricVisible(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 6600110 | The desktop lyrics feature of this application is not enabled. |
+| 6600111 | The desktop lyrics feature is not supported. |
 
 ## off('play')
 
@@ -765,16 +772,16 @@ off(type: 'play', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'play' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'play' | 是 | 关闭对应的监听事件，支持的事件是`'play'`。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('pause')
 
@@ -798,16 +805,16 @@ off(type: 'pause', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'pause' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'pause' | 是 | 关闭对应的监听事件，支持的事件是`'pause'`。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('stop')
 
@@ -831,16 +838,16 @@ off(type: 'stop', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'stop' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'stop' | 是 | 关闭对应的监听事件，支持的事件是`'stop'`。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('playNext')
 
@@ -864,16 +871,16 @@ off(type: 'playNext', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playNext' | 是 | 关闭对应的监听事件，支持的事件是 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'playNext' | 是 | 关闭对应的监听事件，支持的事件是 `'playNext'`。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('playPrevious')
 
@@ -897,16 +904,16 @@ off(type: 'playPrevious', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playPrevious' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'playPrevious' | 是 | 关闭对应的监听事件，支持的事件是`'playPrevious'`。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('fastForward')
 
@@ -930,16 +937,16 @@ off(type: 'fastForward', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'fastForward' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'fastForward' | 是 | 关闭对应的监听事件，支持的事件是`'fastForward'`。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('rewind')
 
@@ -963,16 +970,16 @@ off(type: 'rewind', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'rewind' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'rewind' | 是 | 关闭对应的监听事件，支持的事件是`'rewind'`。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('playFromAssetId')
 
@@ -981,11 +988,12 @@ off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
 ```
 
 取消媒体ID播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-    **说明：**  
-    
-    从API version 11开始支持，从API version 20开始废弃。建议使用  
-    [off('playWithAssetId')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_取消  
-    媒体ID播放事件监听。
+
+> **说明：**
+> 
+> 从API version 11开始支持，从API version 20开始废弃。建议使用
+> [off('playWithAssetId')](avSession.AVSession.off(type: 'playWithAssetId', callback?: Callback&lt;string&gt;))取消
+> 媒体ID播放事件监听。
 
 **起始版本：** 11
 
@@ -1005,16 +1013,16 @@ off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playFromAssetId' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (assetId: number) =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。参数assetId是媒体ID。 |
+| type | 'playFromAssetId' | 是 | 关闭对应的监听事件，支持的事件是`'playFromAssetId'`。 |
+| callback | (assetId: number) =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。参数assetId是媒体ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('playWithAssetId')
 
@@ -1038,15 +1046,15 @@ off(type: 'playWithAssetId', callback?: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playWithAssetId' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。参数assetId是媒体ID。 |
+| type | 'playWithAssetId' | 是 | 关闭对应的监听事件，支持的事件是`'playWithAssetId'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。参数assetId是媒体ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('seek')
 
@@ -1070,16 +1078,16 @@ off(type: 'seek', callback?: (time: long) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'seek' | 是 | 关闭对应的监听事件，支持关闭事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (time: long) =&gt; void | 否 | 回调函数，参数time是时间节点，单位为毫秒。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'seek' | 是 | 关闭对应的监听事件，支持关闭事件`'seek'`。 |
+| callback | (time: long) =&gt; void | 否 | 回调函数，参数time是时间节点，单位为毫秒。 &lt;br&gt;当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('setSpeed')
 
@@ -1103,16 +1111,16 @@ off(type: 'setSpeed', callback?: (speed: double) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'setSpeed' | 是 | 关闭对应的监听事件，支持关闭事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (speed: double) =&gt; void | 否 | 回调函数，参数speed是播放倍速。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'setSpeed' | 是 | 关闭对应的监听事件，支持关闭事件`'setSpeed'`。 |
+| callback | (speed: double) =&gt; void | 否 | 回调函数，参数speed是播放倍速。 &lt;br&gt;当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('setLoopMode')
 
@@ -1136,16 +1144,16 @@ off(type: 'setLoopMode', callback?: (mode: LoopMode) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'setLoopMode' | 是 | 关闭对应的监听事件，支持关闭事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (mode: LoopMode) =&gt; void | 否 | 回调函数，参数mode是循环模式。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'setLoopMode' | 是 | 关闭对应的监听事件，支持关闭事件`'setLoopMode'`。 |
+| callback | (mode: LoopMode) =&gt; void | 否 | 回调函数，参数mode是循环模式。 &lt;br&gt;- 当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;- 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('setTargetLoopMode')
 
@@ -1169,15 +1177,15 @@ off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'setTargetLoopMode' | 是 | 关闭对应的监听事件，支持关闭事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LoopMode&gt; | 否 | 回调函数，参数表示目标循环模式。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'setTargetLoopMode' | 是 | 关闭对应的监听事件，支持关闭事件`'setTargetLoopMode'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LoopMode&gt; | 否 | 回调函数，参数表示目标循环模式。 &lt;br&gt;- 当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;- 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('toggleFavorite')
 
@@ -1201,16 +1209,16 @@ off(type: 'toggleFavorite', callback?: (assetId: string) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'toggleFavorite' | 是 | 关闭对应的监听事件，支持关闭事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (assetId: string) =&gt; void | 否 | 回调函数，参数assetId是媒体ID。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'toggleFavorite' | 是 | 关闭对应的监听事件，支持关闭事件`'toggleFavorite'`。 |
+| callback | (assetId: string) =&gt; void | 否 | 回调函数，参数assetId是媒体ID。 &lt;br&gt;当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('handleKeyEvent')
 
@@ -1234,16 +1242,16 @@ off(type: 'handleKeyEvent', callback?: (event: KeyEvent) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'handleKeyEvent' | 是 | 关闭对应的监听事件，支持关闭事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (event: KeyEvent) =&gt; void | 否 | 回调函数，参数event是按键事件。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'handleKeyEvent' | 是 | 关闭对应的监听事件，支持关闭事件`'handleKeyEvent'`。 |
+| callback | (event: KeyEvent) =&gt; void | 否 | 回调函数，参数event是按键事件。 &lt;br&gt;当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('outputDeviceChange')
 
@@ -1267,16 +1275,16 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChange' | 是 | 关闭对应的监听事件，支持关闭事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 否 | 回调函数，参数device是设备相关信息。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'outputDeviceChange' | 是 | 关闭对应的监听事件，支持关闭事件`'outputDeviceChange'`。 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 否 | 回调函数，参数device是设备相关信息。 &lt;br&gt;当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist |
 
 ## off('commonCommand')
 
@@ -1300,16 +1308,16 @@ off(type: 'commonCommand', callback?: (command: string, args: {[key: string]: Ob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'commonCommand' | 是 | 取消对应的监听事件，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (command: string, args: {[key: string]: Object}) =&gt; void | 否 | 回调函数，参数command是变化的自定义控制命令名，args为自定义控制命令的参数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有对command事件的监听。 |
+| type | 'commonCommand' | 是 | 取消对应的监听事件，支持事件`'commonCommand'`。 |
+| callback | (command: string, args: {[key: string]: Object}) =&gt; void | 否 | 回调函数，参数command是变化的自定义控制命令名，args为自定义控制命令的参数。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有对command事件的监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('skipToQueueItem')
 
@@ -1333,16 +1341,16 @@ off(type: 'skipToQueueItem', callback?: (itemId: int) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'skipToQueueItem' | 是 | 关闭对应的监听事件，支持关闭事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | (itemId: int) =&gt; void | 否 | 回调函数，参数itemId是播放列表单项ID。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'skipToQueueItem' | 是 | 关闭对应的监听事件，支持关闭事件`'skipToQueueItem'`。 |
+| callback | (itemId: int) =&gt; void | 否 | 回调函数，参数itemId是播放列表单项ID。 &lt;br&gt;当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('answer')
 
@@ -1366,16 +1374,16 @@ off(type: 'answer', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'answer' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'answer' | 是 | 关闭对应的监听事件，支持的事件是`'answer'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('hangUp')
 
@@ -1399,16 +1407,16 @@ off(type: 'hangUp', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hangUp' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'hangUp' | 是 | 关闭对应的监听事件，支持的事件是`'hangUp'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('toggleCallMute')
 
@@ -1432,16 +1440,16 @@ off(type: 'toggleCallMute', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'toggleCallMute' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'toggleCallMute' | 是 | 关闭对应的监听事件，支持的事件是`'toggleCallMute'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## off('castDisplayChange')
 
@@ -1465,16 +1473,16 @@ off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'castDisplayChange' | 是 | 关闭对应的监听事件，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CastDisplayInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会 话的事件监听。 |
+| type | 'castDisplayChange' | 是 | 关闭对应的监听事件，支持的事件是`'castDisplayChange'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CastDisplayInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会 话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist |
 
 ## off('customDataChange')
 
@@ -1499,14 +1507,14 @@ Unsubscribes from custom data changes.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | Custom data type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist. |
 
 ## offAnswer
 
@@ -1528,14 +1536,14 @@ Unregister answer command callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Used to handle ('answer') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | Used to handle ('answer') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offCastDisplayChange
 
@@ -1557,14 +1565,14 @@ Unregister listener for cast display information changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CastDisplayInfo&gt; | 否 | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CastDisplayInfo&gt; | 否 | Callback used to return cast display information. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist |
 
 ## offCommonCommand
 
@@ -1586,14 +1594,14 @@ Unregister session custom command change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Used to cancel a specific listener The callback provide the command name and command args |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 否 | Used to cancel a specific listener The callback provide the command name and command args |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offCustomDataChange
 
@@ -1615,14 +1623,14 @@ Unsubscribes from custom data changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to return the custom data. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist. |
 
 ## offDesktopLyricStateChanged
 
@@ -1646,14 +1654,14 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DesktopLyricState&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1677,14 +1685,14 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offFastForward
 
@@ -1714,14 +1722,14 @@ offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, CommandInfo&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long, CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | ArkTS-Dyn: [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, CommandInfo&gt;  <br>ArkTS-Sta：[TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offHandleKeyEvent
 
@@ -1743,14 +1751,14 @@ Unregister media key handling callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | 否 | Used to handle key events.The callback provides the KeyEvent |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 否 | Used to handle key events.The callback provides the KeyEvent |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offHangUp
 
@@ -1772,14 +1780,14 @@ Unregister hangUp command callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Used to handle ('hangUp') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | Used to handle ('hangUp') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offOutputDeviceChange
 
@@ -1801,14 +1809,14 @@ Unregister session output device change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Used to handle output device changed. The callback provide the new device info \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and related connection state \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 否 | Used to handle output device changed. The callback provide the new device info {@link OutputDeviceInfo} and related connection state {@link ConnectionState}. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist |
 
 ## offPause
 
@@ -1830,14 +1838,14 @@ Unregister pause command callback.When canceling the callback, need to update th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Used to handle ('pause') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | Used to handle ('pause') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offPlay
 
@@ -1861,14 +1869,14 @@ offPlay(callback?: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offPlayNext
 
@@ -1892,14 +1900,14 @@ offPlayNext(callback?: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offPlayPrevious
 
@@ -1923,14 +1931,14 @@ offPlayPrevious(callback?: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offPlayWithAssetId
 
@@ -1954,14 +1962,14 @@ Unsubscribes from playWithAssetId events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 否 | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | Callback used to handle the 'playWithAssetId' command. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offRewind
 
@@ -1991,14 +1999,14 @@ offRewind(callback?: TwoParamCallback<long, CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, CommandInfo&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long, CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | ArkTS-Dyn: [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, CommandInfo&gt;  <br>ArkTS-Sta：[TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, CommandInfo&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offSeek
 
@@ -2020,14 +2028,14 @@ Unregister seek command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | 否 | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Used to handle seek command.The callback provides the seek time(ms) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offSetLoopMode
 
@@ -2049,14 +2057,14 @@ Unregister setLoopMode command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LoopMode&gt; | 否 | Used to handle setLoopMode command. The callback provides the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LoopMode&gt; | 否 | Used to handle setLoopMode command. The callback provides the {@link LoopMode} |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offSetSpeed
 
@@ -2078,14 +2086,14 @@ Unregister setSpeed command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | 否 | Used to handle setSpeed command.The callback provides the speed value |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | 否 | Used to handle setSpeed command.The callback provides the speed value |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offSetTargetLoopMode
 
@@ -2107,14 +2115,14 @@ Unregister setTargetLoopMode command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LoopMode&gt; | 否 | Used to handle setTargetLoopMode command. The callback provides the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LoopMode&gt; | 否 | Used to handle setTargetLoopMode command. The callback provides the {@link LoopMode} |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offSkipToQueueItem
 
@@ -2136,14 +2144,14 @@ Unregister the item to play from the playlist change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | 否 | Used to handle the item to be played. The callback provide the new device info \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Used to handle the item to be played. The callback provide the new device info {@link OutputDeviceInfo} |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offStop
 
@@ -2165,14 +2173,14 @@ Unregister stop command callback.When canceling the callback, need to update the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Used to handle ('stop') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | Used to handle ('stop') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offToggleCallMute
 
@@ -2194,14 +2202,14 @@ Unregister toggleCallMute command callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Used to handle ('toggleCallMute') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | Used to handle ('toggleCallMute') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## offToggleFavorite
 
@@ -2223,14 +2231,14 @@ Unregister toggle favorite command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 否 | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('play')
 
@@ -2256,16 +2264,16 @@ on(type: 'play', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'play' | 是 | 事件回调类型，支持的事件为\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当播放命令被发送到会话时，触发该事件回调。 |
+| type | 'play' | 是 | 事件回调类型，支持的事件为`'play'`，当播放命令被发送到会话时，触发该事件回调。 |
 | callback | () =&gt; void | 是 | 回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('pause')
 
@@ -2291,16 +2299,16 @@ on(type: 'pause', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'pause' | 是 | 事件回调类型，支持的事件为\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当暂停命令被发送到会话时，触发该事件回调。 |
+| type | 'pause' | 是 | 事件回调类型，支持的事件为`'pause'`，当暂停命令被发送到会话时，触发该事件回调。 |
 | callback | () =&gt; void | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('stop')
 
@@ -2326,16 +2334,16 @@ on(type: 'stop', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'stop' | 是 | 事件回调类型，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当停止命令被发送到会话时，触发该事件回调。 |
+| type | 'stop' | 是 | 事件回调类型，支持的事件是`'stop'`，当停止命令被发送到会话时，触发该事件回调。 |
 | callback | () =&gt; void | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('playNext')
 
@@ -2361,16 +2369,16 @@ on(type: 'playNext', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playNext' | 是 | 事件回调类型，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当播放下一首命令被发送到会话时，触发该事件回调。 |
+| type | 'playNext' | 是 | 事件回调类型，支持的事件是`'playNext'`，当播放下一首命令被发送到会话时，触发该事件回调。 |
 | callback | () =&gt; void | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('playPrevious')
 
@@ -2396,16 +2404,16 @@ on(type: 'playPrevious', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playPrevious' | 是 | 事件回调类型，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当播放上一首命令被发送到会话时，触发该事件回调。 |
+| type | 'playPrevious' | 是 | 事件回调类型，支持的事件是`'playPrevious'`，当播放上一首命令被发送到会话时，触发该事件回调。 |
 | callback | () =&gt; void | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('fastForward')
 
@@ -2431,16 +2439,16 @@ on(type: 'fastForward', callback: (time ?: long) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'fastForward' | 是 | 事件回调类型，支持的事件是 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当快进命令被发送到会话时，触发该事件回调。 |
+| type | 'fastForward' | 是 | 事件回调类型，支持的事件是 `'fastForward'`，当快进命令被发送到会话时，触发该事件回调。 |
 | callback | (time ?: long) =&gt; void | 是 | 回调函数。参数time是时间节点，单位为秒。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('rewind')
 
@@ -2466,16 +2474,16 @@ on(type: 'rewind', callback: (time ?: long) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'rewind' | 是 | 事件回调类型，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当快退命令被发送到会话时，触发该事件回调。 |
+| type | 'rewind' | 是 | 事件回调类型，支持的事件是`'rewind'`，当快退命令被发送到会话时，触发该事件回调。 |
 | callback | (time ?: long) =&gt; void | 是 | 回调函数。参数time是时间节点，单位为秒。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('playFromAssetId')
 
@@ -2484,11 +2492,12 @@ on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 ```
 
 设置媒体ID播放监听事件。
-    **说明：**  
-    
-    从API version 11开始支持，从API version 20开始废弃。建议使用  
-    [on('playWithAssetId')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置媒体  
-    ID播放监听事件。
+
+> **说明：**
+> 
+> 从API version 11开始支持，从API version 20开始废弃。建议使用
+> [on('playWithAssetId')](avSession.AVSession.on(type: 'playWithAssetId', callback: Callback&lt;string&gt;))设置媒体
+> ID播放监听事件。
 
 **起始版本：** 11
 
@@ -2508,16 +2517,16 @@ on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playFromAssetId' | 是 | 事件回调类型，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当媒体ID播放时，触发该事件回调。 |
+| type | 'playFromAssetId' | 是 | 事件回调类型，支持的事件是`'playFromAssetId'`，当媒体ID播放时，触发该事件回调。 |
 | callback | (assetId: number) =&gt; void | 是 | 回调函数。参数assetId是媒体ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('playWithAssetId')
 
@@ -2543,15 +2552,15 @@ on(type: 'playWithAssetId', callback: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playWithAssetId' | 是 | 事件回调类型，支持的事件是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当指定资源id进行播放时，触发该事件回调。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数。参数assetId是媒体ID。 |
+| type | 'playWithAssetId' | 是 | 事件回调类型，支持的事件是`'playWithAssetId'`，当指定资源id进行播放时，触发该事件回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。参数assetId是媒体ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('seek')
 
@@ -2577,16 +2586,16 @@ on(type: 'seek', callback: (time: long) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'seek' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当跳转节点命令被发送到会话时，触发该事件。 |
+| type | 'seek' | 是 | 事件回调类型，支持事件`'seek'`：当跳转节点命令被发送到会话时，触发该事件。 |
 | callback | (time: long) =&gt; void | 是 | 回调函数。参数time是时间节点，单位为毫秒。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('setSpeed')
 
@@ -2612,16 +2621,16 @@ on(type: 'setSpeed', callback: (speed: double) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'setSpeed' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当设置播放速率的命令被发送到会话时，触发该事件。 |
+| type | 'setSpeed' | 是 | 事件回调类型，支持事件`'setSpeed'`：当设置播放速率的命令被发送到会话时，触发该事件。 |
 | callback | (speed: double) =&gt; void | 是 | 回调函数。参数speed是播放倍速。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('setLoopMode')
 
@@ -2647,16 +2656,16 @@ on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'setLoopMode' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当设置循环模式的命令被发送到会话时，触发该事件。 |
+| type | 'setLoopMode' | 是 | 事件回调类型，支持事件`'setLoopMode'`：当设置循环模式的命令被发送到会话时，触发该事件。 |
 | callback | (mode: LoopMode) =&gt; void | 是 | 回调函数。参数mode是循环模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('setTargetLoopMode')
 
@@ -2682,15 +2691,15 @@ on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'setTargetLoopMode' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当设置目标循环模式的命令被发送到会话时，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LoopMode&gt; | 是 | 回调函数。参数表示目标循环模式。 |
+| type | 'setTargetLoopMode' | 是 | 事件回调类型，支持事件`'setTargetLoopMode'`。 &lt;br&gt;- `'setTargetLoopMode'`：当设置目标循环模式的命令被发送到会话时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LoopMode&gt; | 是 | 回调函数。参数表示目标循环模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('toggleFavorite')
 
@@ -2716,16 +2725,16 @@ on(type: 'toggleFavorite', callback: (assetId: string) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'toggleFavorite' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当是否收藏的命令被发送到会话时，触发该事件。 |
+| type | 'toggleFavorite' | 是 | 事件回调类型，支持事件`'toggleFavorite'`：当是否收藏的命令被发送到会话时，触发该事件。 |
 | callback | (assetId: string) =&gt; void | 是 | 回调函数。参数assetId是媒体ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('handleKeyEvent')
 
@@ -2751,16 +2760,16 @@ on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'handleKeyEvent' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当按键事件被发送到会话时，触发该事件。 |
+| type | 'handleKeyEvent' | 是 | 事件回调类型，支持事件`'handleKeyEvent'`：当按键事件被发送到会话时，触发该事件。 |
 | callback | (event: KeyEvent) =&gt; void | 是 | 回调函数。参数event是按键事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('outputDeviceChange')
 
@@ -2768,7 +2777,7 @@ on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void
 on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
 ```
 
-设置播放设备变化的监听事件。应用接入[multimedia.avCastPicker (投播组件)]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，当用户通过组件切换设备时，会收到设备切换的回调。
+设置播放设备变化的监听事件。应用接入[multimedia.avCastPicker (投播组件)](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)，当用户通过组件切换设备时，会收到设备切换的回调。
 
 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
@@ -2786,16 +2795,16 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChange' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当播放设备变化时，触发该事件。 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 是 | 回调函数，参数device是设备相关信息。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'outputDeviceChange' | 是 | 事件回调类型，支持事件`'outputDeviceChange'`：当播放设备变化时，触发该事件。 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 是 | 回调函数，参数device是设备相关信息。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist |
 
 ## on('commonCommand')
 
@@ -2821,16 +2830,16 @@ on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Obje
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'commonCommand' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当自定义控制命令变化时，触发该事件。 |
-| callback | (command: string, args: {[key: string]: Object}) =&gt; void | 是 | 回调函数，command为变化的自定义控制命令名，args为自定义控制命令的参数，参数内容与 [sendCommonCommand]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_)} 方法设置的参数内容完全一致。 |
+| type | 'commonCommand' | 是 | 事件回调类型，支持事件`'commonCommand'`：当自定义控制命令变化时，触发该事件。 |
+| callback | (command: string, args: {[key: string]: Object}) =&gt; void | 是 | 回调函数，command为变化的自定义控制命令名，args为自定义控制命令的参数，参数内容与 [sendCommonCommand](arkts-avsession-avsession-avsessioncontroller-i.md#sendcommoncommand))} 方法设置的参数内容完全一致。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('skipToQueueItem')
 
@@ -2856,16 +2865,16 @@ on(type: 'skipToQueueItem', callback: (itemId: int) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'skipToQueueItem' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当播放列表选中单项的命令被发送到会话时，触发该事件。 |
+| type | 'skipToQueueItem' | 是 | 事件回调类型，支持事件`'skipToQueueItem'`：当播放列表选中单项的命令被发送到会话时，触发该事件。 |
 | callback | (itemId: int) =&gt; void | 是 | 回调函数。参数itemId是选中的播放列表项的ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('answer')
 
@@ -2891,16 +2900,16 @@ on(type: 'answer', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'answer' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当通话接听时，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| type | 'answer' | 是 | 事件回调类型，支持事件`'answer'`：当通话接听时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('hangUp')
 
@@ -2926,16 +2935,16 @@ on(type: 'hangUp', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hangUp' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当通话挂断时，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| type | 'hangUp' | 是 | 事件回调类型，支持事件`'hangUp'`：当通话挂断时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('toggleCallMute')
 
@@ -2961,16 +2970,16 @@ on(type: 'toggleCallMute', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'toggleCallMute' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当通话静音或解除静音时，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| type | 'toggleCallMute' | 是 | 事件回调类型，支持事件`'toggleCallMute'`：当通话静音或解除静音时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## on('castDisplayChange')
 
@@ -2996,16 +3005,16 @@ on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'castDisplayChange' | 是 | 事件回调类型，支持事件\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_：当扩展屏投播显示设备变化时触发事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CastDisplayInfo&gt; | 是 | 回调函数。参数是扩展屏投播显示设备信息。 |
+| type | 'castDisplayChange' | 是 | 事件回调类型，支持事件`'castDisplayChange'`：当扩展屏投播显示设备变化时触发事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CastDisplayInfo&gt; | 是 | 回调函数。参数是扩展屏投播显示设备信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist |
 
 ## on('customDataChange')
 
@@ -3030,14 +3039,14 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | 事件回调类型，支持事件'customDataChange'，当媒体提供方发送自定义数据时，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist. |
 
 ## onAnswer
 
@@ -3045,7 +3054,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 onAnswer(callback: NoParamCallback): void
 ```
 
-Register answer command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+Register answer command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
 
 **起始版本：** 23
 
@@ -3059,14 +3068,14 @@ Register answer command callback.As long as it is registered, it means that the 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Used to handle ('answer') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | Used to handle ('answer') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onCastDisplayChange
 
@@ -3088,14 +3097,14 @@ Register listener for cast display information changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CastDisplayInfo&gt; | 是 | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CastDisplayInfo&gt; | 是 | Callback used to return cast display information. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist |
 
 ## onCommonCommand
 
@@ -3117,14 +3126,14 @@ Register session custom command change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Used to handle event when the common command is received The callback provide the command name and command args |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 是 | Used to handle event when the common command is received The callback provide the command name and command args |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onCustomDataChange
 
@@ -3146,14 +3155,14 @@ Register listener for custom data sent from remote device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist. |
 
 ## onDesktopLyricStateChanged
 
@@ -3177,14 +3186,14 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DesktopLyricState&gt; | 是 | 回调函数。返回桌面歌词状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | 是 | 回调函数。返回桌面歌词状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onDesktopLyricVisibilityChanged
 
@@ -3208,14 +3217,14 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onFastForward
 
@@ -3231,7 +3240,7 @@ onFastForward(callback: TwoParamCallback<long, CommandInfo>): void
 
 设置快进命令监听事件。使用callback异步回调。
 
-应用将通过回调接收控制器发送的快进时间参数，以及对应的[CommandInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_信息。
+应用将通过回调接收控制器发送的快进时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 22
 
@@ -3245,14 +3254,14 @@ onFastForward(callback: TwoParamCallback<long, CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, CommandInfo&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long, CommandInfo&gt; | 是 | 回调函数。用于处理'fastForward'操作。 |
+| callback | ArkTS-Dyn: [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, CommandInfo&gt;  <br>ArkTS-Sta：[TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, CommandInfo&gt; | 是 | 回调函数。用于处理'fastForward'操作。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onHandleKeyEvent
 
@@ -3274,14 +3283,14 @@ Register media key handling callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | 是 | Used to handle key events.The callback provides the KeyEvent |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | Used to handle key events.The callback provides the KeyEvent |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onHangUp
 
@@ -3289,7 +3298,7 @@ Register media key handling callback
 onHangUp(callback: NoParamCallback): void
 ```
 
-Register hangUp command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+Register hangUp command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
 
 **起始版本：** 23
 
@@ -3303,14 +3312,14 @@ Register hangUp command callback.As long as it is registered, it means that the 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Used to handle ('hangUp') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | Used to handle ('hangUp') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onOutputDeviceChange
 
@@ -3332,14 +3341,14 @@ Register session output device change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Used to handle output device changed. The callback provide the new device info \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and related connection state \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 是 | Used to handle output device changed. The callback provide the new device info {@link OutputDeviceInfo} and related connection state {@link ConnectionState}. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist |
 
 ## onPause
 
@@ -3347,7 +3356,7 @@ Register session output device change callback
 onPause(callback: NoParamCallback): void
 ```
 
-Register pause command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register pause command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **起始版本：** 23
 
@@ -3361,14 +3370,14 @@ Register pause command callback.As long as it is registered, it means that the a
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Used to handle ('pause') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | Used to handle ('pause') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onPlay
 
@@ -3378,7 +3387,7 @@ onPlay(callback: Callback<CommandInfo>): void
 
 设置播放命令监听事件。使用callback异步回调。
 
-应用将通过回调接收控制器发送的[CommandInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_信息。
+应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 22
 
@@ -3392,14 +3401,14 @@ onPlay(callback: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommandInfo&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onPlayNext
 
@@ -3409,7 +3418,7 @@ onPlayNext(callback: Callback<CommandInfo>): void
 
 设置播放下一首命令监听事件。使用callback异步回调。
 
-应用将通过回调接收控制器发送的[CommandInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_信息。
+应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 22
 
@@ -3423,14 +3432,14 @@ onPlayNext(callback: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommandInfo&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onPlayPrevious
 
@@ -3440,7 +3449,7 @@ onPlayPrevious(callback: Callback<CommandInfo>): void
 
 设置播放上一首命令监听事件。使用callback异步回调。
 
-应用将通过回调接收控制器发送的[CommandInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_信息。
+应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 22
 
@@ -3456,14 +3465,14 @@ onPlayPrevious(callback: Callback<CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommandInfo&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onPlayWithAssetId
 
@@ -3485,14 +3494,14 @@ Subscribes to playWithAssetId events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Callback used to handle the 'playWithAssetId' command. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onRewind
 
@@ -3508,7 +3517,7 @@ onRewind(callback: TwoParamCallback<long, CommandInfo>): void
 
 设置快退命令监听事件。使用callback异步回调。
 
-应用将通过回调接收控制器发送的快退时间参数，以及对应的[CommandInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_信息。
+应用将通过回调接收控制器发送的快退时间参数，以及对应的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 22
 
@@ -3522,14 +3531,14 @@ onRewind(callback: TwoParamCallback<long, CommandInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, CommandInfo&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long, CommandInfo&gt; | 是 | 回调函数。用于处理'rewind'操作。 |
+| callback | ArkTS-Dyn: [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, CommandInfo&gt;  <br>ArkTS-Sta：[TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, CommandInfo&gt; | 是 | 回调函数。用于处理'rewind'操作。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onSeek
 
@@ -3553,14 +3562,14 @@ Register seek command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | 是 | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Used to handle seek command.The callback provides the seek time(ms) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onSetLoopMode
 
@@ -3582,14 +3591,14 @@ Register setLoopMode command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LoopMode&gt; | 是 | Used to handle setLoopMode command.The callback provides the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LoopMode&gt; | 是 | Used to handle setLoopMode command.The callback provides the {@link LoopMode} |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onSetSpeed
 
@@ -3611,14 +3620,14 @@ Register setSpeed command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | 是 | Used to handle setSpeed command.The callback provides the speed value |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | 是 | Used to handle setSpeed command.The callback provides the speed value |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onSetTargetLoopMode
 
@@ -3640,14 +3649,14 @@ Register setTargetLoopMode command callback Application should change playmode t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LoopMode&gt; | 是 | Used to handle setTargetLoopMode command. The callback provides the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LoopMode&gt; | 是 | Used to handle setTargetLoopMode command. The callback provides the {@link LoopMode} |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onSkipToQueueItem
 
@@ -3669,14 +3678,14 @@ Register the item to play from the playlist change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | 是 | Used to handle the item to be played. The callback provide the new device info \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Used to handle the item to be played. The callback provide the new device info {@link OutputDeviceInfo} |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onStop
 
@@ -3684,7 +3693,7 @@ Register the item to play from the playlist change callback
 onStop(callback: NoParamCallback): void
 ```
 
-Register stop command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register stop command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **起始版本：** 23
 
@@ -3698,14 +3707,14 @@ Register stop command callback.As long as it is registered, it means that the ab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Used to handle ('stop') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | Used to handle ('stop') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onToggleCallMute
 
@@ -3713,7 +3722,7 @@ Register stop command callback.As long as it is registered, it means that the ab
 onToggleCallMute(callback: NoParamCallback): void
 ```
 
-Register toggleCallMute command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+Register toggleCallMute command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
 
 **起始版本：** 23
 
@@ -3727,14 +3736,14 @@ Register toggleCallMute command callback.As long as it is registered, it means t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Used to handle ('toggleCallMute') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | Used to handle ('toggleCallMute') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## onToggleFavorite
 
@@ -3756,14 +3765,14 @@ Register toggle favorite command callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## sendCustomData
 
@@ -3787,7 +3796,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
 
 **返回值：**
 
@@ -3799,8 +3808,8 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVCallState
 
@@ -3822,16 +3831,16 @@ setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通话状态。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当通话元数据设置成功，err为undefined，否则返回错误对象。 |
+| state | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | 是 | 通话状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通话元数据设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVCallState
 
@@ -3853,7 +3862,7 @@ setAVCallState(state: AVCallState): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通话状态。 |
+| state | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | 是 | 通话状态。 |
 
 **返回值：**
 
@@ -3865,9 +3874,9 @@ setAVCallState(state: AVCallState): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVMetadata
 
@@ -3889,16 +3898,16 @@ setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 会话元数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当元数据设置成功，err为undefined，否则返回错误对象。 |
+| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | 是 | 会话元数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当元数据设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVMetadata
 
@@ -3922,7 +3931,7 @@ setAVMetadata(data: AVMetadata): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 会话元数据。 |
+| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | 是 | 会话元数据。 |
 
 **返回值：**
 
@@ -3934,9 +3943,9 @@ setAVMetadata(data: AVMetadata): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVPlaybackState
 
@@ -3958,16 +3967,16 @@ setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 会话播放状态，包括状态、倍数、循环模式等信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
+| state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | 是 | 会话播放状态，包括状态、倍数、循环模式等信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVPlaybackState
 
@@ -3991,7 +4000,7 @@ setAVPlaybackState(state: AVPlaybackState): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 会话播放状态，包括状态、倍数、循环模式等信息。 |
+| state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | 是 | 会话播放状态，包括状态、倍数、循环模式等信息。 |
 
 **返回值：**
 
@@ -4003,9 +4012,9 @@ setAVPlaybackState(state: AVPlaybackState): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVQueueItems
 
@@ -4028,15 +4037,15 @@ setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | items | Array&lt;AVQueueItem&gt; | 是 | 播放列表单项的队列，用以表示播放列表。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVQueueItems
 
@@ -4072,9 +4081,9 @@ setAVQueueItems(items: Array<AVQueueItem>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVQueueTitle
 
@@ -4097,15 +4106,15 @@ setAVQueueTitle(title: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | title | string | 是 | 播放列表名称字段。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setAVQueueTitle
 
@@ -4141,9 +4150,9 @@ setAVQueueTitle(title: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setBackgroundPlayMode
 
@@ -4153,7 +4162,7 @@ setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 
 设置后台播放模式。使用promise异步回调。
 
-建议与应用内"是否支持后台播放开关"关联。如未设置，'audio'类型会话默认值为ENABLE\_BACKGROUND\_PLAY；'video'类型会话默认值为DISABLE\_BACKGROUND\_PLAY。
+建议与应用内"是否支持后台播放开关"关联。如未设置，'audio'类型会话默认值为ENABLE_BACKGROUND_PLAY；'video'类型会话默认值为DISABLE_BACKGROUND_PLAY。
 
 **起始版本：** 24
 
@@ -4169,7 +4178,7 @@ setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 后台播放模式。 |
+| mode | [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md) | 是 | 后台播放模式。 |
 
 **返回值：**
 
@@ -4181,7 +4190,7 @@ setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600102 | The session does not exist. |
 
 ## setCallMetadata
 
@@ -4203,16 +4212,16 @@ setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通话会话元数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当通话元数据设置成功，err为undefined，否则返回错误对象。 |
+| data | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | 是 | 通话会话元数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通话元数据设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setCallMetadata
 
@@ -4234,7 +4243,7 @@ setCallMetadata(data: CallMetadata): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通话会话元数据。 |
+| data | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | 是 | 通话会话元数据。 |
 
 **返回值：**
 
@@ -4246,9 +4255,9 @@ setCallMetadata(data: CallMetadata): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setDesktopLyricState
 
@@ -4272,7 +4281,7 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 桌面歌词状态。 |
+| state | [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | 是 | 桌面歌词状态。 |
 
 **返回值：**
 
@@ -4284,10 +4293,10 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 6600110 | The desktop lyrics feature of this application is not enabled. |
+| 6600111 | The desktop lyrics feature is not supported. |
 
 ## setDesktopLyricVisible
 
@@ -4323,10 +4332,10 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 6600110 | The desktop lyrics feature of this application is not enabled. |
+| 6600111 | The desktop lyrics feature is not supported. |
 
 ## setExtras
 
@@ -4348,16 +4357,16 @@ setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extras | {[key: string]: Object} | 是 | 需要传递的自定义媒体数据包键值对。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **说明：** 参数extras支持的数据类型有：字符串、数字、布尔值、对象、数组和文件描述符等，详细介绍请参见 [@ohos.app.ability.Want (Want)]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当自定义媒体数据包设置成功，err为undefined，否则返回错误对象。 |
+| extras | {[key: string]: Object} | 是 | 需要传递的自定义媒体数据包键值对。 &lt;br&gt; **说明：** 参数extras支持的数据类型有：字符串、数字、布尔值、对象、数组和文件描述符等，详细介绍请参见 [@ohos.app.ability.Want (Want)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当自定义媒体数据包设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setExtras
 
@@ -4381,15 +4390,15 @@ Set the custom media packets for this session.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extras | Record&lt;string, Object&gt; | 是 | The custom media packets \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_设置的应用自定义扩展参数 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_回调返回 |
+| extras | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | The custom media packets &lt;br&gt;设置的应用自定义扩展参数 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully. &lt;br&gt;回调返回 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setExtras
 
@@ -4413,7 +4422,7 @@ setExtras(extras: {[key: string]: Object}): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extras | {[key: string]: Object} | 是 | 需要传递的自定义媒体数据包键值对。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **说明：** 参数extras支持的数据类型有：字符串、数字、布尔值、对象、数组和文件描述符等，详细介绍请参见 [@ohos.app.ability.Want (Want)]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| extras | {[key: string]: Object} | 是 | 需要传递的自定义媒体数据包键值对。 &lt;br&gt; **说明：** 参数extras支持的数据类型有：字符串、数字、布尔值、对象、数组和文件描述符等，详细介绍请参见 [@ohos.app.ability.Want (Want)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md)。 |
 
 **返回值：**
 
@@ -4425,9 +4434,9 @@ setExtras(extras: {[key: string]: Object}): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setExtras
 
@@ -4451,7 +4460,7 @@ Set the custom media packets for this session.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extras | Record&lt;string, Object&gt; | 是 | The custom media packets |
+| extras | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | The custom media packets |
 
 **返回值：**
 
@@ -4463,8 +4472,8 @@ Set the custom media packets for this session.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setLaunchAbility
 
@@ -4474,7 +4483,7 @@ setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 
 设置一个WantAgent用于拉起会话的Ability。结果通过callback异步回调方式返回。
 
-通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口传入的context所属的UIAbility界面。
+通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession)接口传入的context所属的UIAbility界面。
 
 **起始版本：** 10
 
@@ -4488,16 +4497,16 @@ setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当Ability设置成功，err为undefined，否则返回错误对象。 |
+| ability | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | 是 | 应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当Ability设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setLaunchAbility
 
@@ -4507,7 +4516,7 @@ setLaunchAbility(ability: WantAgent): Promise<void>
 
 设置一个WantAgent用于拉起会话的Ability。结果通过Promise异步回调方式返回。
 
-通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口传入的context所属的UIAbility界面。
+通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession)接口传入的context所属的UIAbility界面。
 
 **起始版本：** 10
 
@@ -4523,7 +4532,7 @@ setLaunchAbility(ability: WantAgent): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
+| ability | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | 是 | 应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
 
 **返回值：**
 
@@ -4535,9 +4544,9 @@ setLaunchAbility(ability: WantAgent): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setMediaCenterControlType
 
@@ -4547,8 +4556,8 @@ setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>
 
 设置应用支持的控制类型列表。使用Promise异步回调。
 
-设置优先显示在播控中心的控制类型列表，若未设置控制类型优先级，播控中心将根据[AVSessionType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_显示，具体显示规则参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+设置优先显示在播控中心的控制类型列表，若未设置控制类型优先级，播控中心将根据[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)显示，具体显示规则参考  
+[创建不同类型的会话](../../../media/avsession/avsession-access-scene.md#创建不同类型的会话)。
 
 **起始版本：** 26.0.0
 
@@ -4576,8 +4585,8 @@ setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
 ## setSupportedLoopModes
 
@@ -4615,8 +4624,8 @@ setSupportedLoopModes(loopModes: Array<LoopMode>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist. |
 
 ## setSupportedPlaySpeeds
 
@@ -4648,7 +4657,7 @@ setSupportedPlaySpeeds(speeds: Array<double>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speeds | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 是 | 支持的播放倍速列表。 |
+| speeds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 支持的播放倍速列表。 |
 
 **返回值：**
 
@@ -4660,8 +4669,8 @@ setSupportedPlaySpeeds(speeds: Array<double>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception |
+| 6600102 | The session does not exist. |
 
 ## stopCasting
 
@@ -4683,13 +4692,13 @@ stopCasting(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 6600109 | The remote connection is not established |
 
 ## stopCasting
 
@@ -4719,7 +4728,7 @@ stopCasting(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 6600109 | The remote connection is not established |
 
 ## sessionId
 
@@ -4769,7 +4778,7 @@ readonly sessionType: AVSessionType
 
 AVSession会话类型。
 
-**类型：** AVSessionType
+**类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
 **起始版本：** 10
 

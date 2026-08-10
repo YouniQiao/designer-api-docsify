@@ -1,9 +1,9 @@
 # DataLoadInfo
 
-Defines type and quantity of the data to load.
+用于描述被加载数据的类型与数量。
 
-- Used by the **data sender** to define the data range that can be provided. This field is mandatory.  
-- Used by the **data receiver** to define the expected data type and quantity. This field is optional.
+- 在**数据发送方**中使用，表示实际可提供的数据范围，必须设置该字段。  
+- 在**数据接收方**中使用，表示期望加载的数据类型与数量，可根据需要设置该字段。
 
 **Since:** 20
 
@@ -13,15 +13,21 @@ Defines type and quantity of the data to load.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## recordCount
 
 ```TypeScript
 recordCount?: long
 ```
 
-Indicates the maximum number of data records to be loaded.
+表示期望或可提供的最大数据记录数，默认值为0，取值范围为[0, 2&lt;sup&gt;32&lt;/sup&gt;-1]。超过取值范围时会按默认值处理。设置为浮点数时，仅使用整数部分。当用于拖拽时，会作为角标数量显示，最大支持2&lt;sup&gt;31&lt;/sup&gt;-1，超过此数值时不显示角标。作为角标数量时，优先级低于[DragPreviewOptions](../../apis-arkui/arkts-apis/arkts-arkui-common-dragpreviewoptions-i.md/arkts-arkui-common-dragpreviewoptions-i.md)中的numberBadge方法。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -41,7 +47,7 @@ Indicates the maximum number of data records to be loaded.
 types?: Set<string>
 ```
 
-Represents the data type or supported types to load.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This parameter is mandatory when used by the data provider.
+表示数据类型集合，默认为空集合。
 
 **Type:** Set&lt;string&gt;
 

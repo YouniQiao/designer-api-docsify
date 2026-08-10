@@ -1,6 +1,6 @@
 # RichEditorBuilderSpanOptions
 
-Sets the offset and style of the builder.
+设置builder的偏移位置和样式。
 
 **Since:** 11
 
@@ -16,10 +16,9 @@ Sets the offset and style of the builder.
 accessibilitySpanOptions?: AccessibilitySpanOptions
 ```
 
-Accessibility settings. By default, the default value of  
-[AccessibilitySpanOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is used.
+无障碍朗读功能属性。缺省时，取[AccessibilitySpanOptions](../arkts-apis/arkts-arkui-textcommon-accessibilityspanoptions-i.md/arkts-arkui-textcommon-accessibilityspanoptions-i.md)的默认值。
 
-**Type:** AccessibilitySpanOptions
+**Type:** [AccessibilitySpanOptions](../arkts-apis/arkts-arkui-accessibilityspanoptions-i.md)
 
 **Since:** 23
 
@@ -39,7 +38,7 @@ Accessibility settings. By default, the default value of
 offset?: number
 ```
 
-Position of the builder span to be added. If this parameter is omitted or set to an invalid value, the span is added to the end of all content.
+添加builder的位置。取值范围：[0, 所有内容长度]。省略或当值小于0或大于所有内容长度时，添加到所有内容最后面。
 
 **Type:** number
 

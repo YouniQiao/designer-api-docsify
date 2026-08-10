@@ -1,6 +1,6 @@
 # GestureTriggerInfo
 
-The information when one gesture specific callback is triggered.
+特定手势回调函数触发时的信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ The information when one gesture specific callback is triggered.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## current
 
 ```TypeScript
 current: GestureRecognizer
 ```
 
-The gesture recognizer object. You can obtain the detailed information of the gesture from it,but please do not keep this object locally, as it might be unavailable when the node is released.
+手势识别器对象。可从中获取手势的详细信息，但请勿在本地保留此对象，因为当节点释放后该对象可能失效。
 
-**Type:** GestureRecognizer
+**Type:** [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ The gesture recognizer object. You can obtain the detailed information of the ge
 currentPhase: GestureActionPhase
 ```
 
-The gesture action callback phase.
+手势动作回调阶段。
 
-**Type:** GestureActionPhase
+**Type:** [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ The gesture action callback phase.
 event: GestureEvent
 ```
 
-The gesture event object.
+手势事件对象。
 
-**Type:** GestureEvent
+**Type:** [GestureEvent](arkts-arkui-gestureevent-i.md)
 
 **Since:** 26.0.0
 
@@ -76,9 +82,9 @@ The gesture event object.
 node?: FrameNode
 ```
 
-The node which the gesture is being triggered on.
+触发手势的节点。默认值为null，表示没有触发手势的节点。
 
-**Type:** FrameNode
+**Type:** [FrameNode](arkts-arkui-framenode-t.md)
 
 **Since:** 26.0.0
 

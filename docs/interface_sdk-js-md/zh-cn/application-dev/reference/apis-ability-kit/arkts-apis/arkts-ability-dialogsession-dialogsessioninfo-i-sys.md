@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { dialogSession } from 'kits/@kit.AbilityKit';
+```
+
 ## callerAbilityInfo
 
 ```TypeScript
@@ -20,7 +26,7 @@ callerAbilityInfo: DialogAbilityInfo
 
 表示请求方组件信息。
 
-**类型：** DialogAbilityInfo
+**类型：** [DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)
 
 **起始版本：** 11
 
@@ -42,7 +48,7 @@ parameters?: Record<string, Object>
 
 表示其他参数。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 11
 

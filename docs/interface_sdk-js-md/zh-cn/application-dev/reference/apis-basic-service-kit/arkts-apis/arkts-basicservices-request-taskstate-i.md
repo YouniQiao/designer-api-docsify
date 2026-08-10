@@ -1,8 +1,8 @@
 # TaskState
 
 上传任务的任务信息，是  
-[on('complete' | 'fail')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和  
-[off('complete' | 'fail')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口的回调参数。
+[on('complete' | 'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))和  
+[off('complete' | 'fail')](request.UploadTask.off(type: 'complete' | 'fail', callback?: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))接口的回调参数。
 
 **起始版本：** 9
 
@@ -11,6 +11,12 @@
 <!--Device-request-interface TaskState--><!--Device-request-interface TaskState-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
+
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
 
 ## message
 
@@ -57,9 +63,9 @@ responseCode: int
 上传任务返回码。返回0表示上传任务成功，返回其它值表示上传任务失败，具体请参见message参数中的上传任务结果描述信息。
 
 此处推荐使用  
-[request.agent.create]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建上传任务，并获取标准错误码处理异常分支。
+[request.agent.create](arkts-basicservices-agent-create-f.md#create)创建上传任务，并获取标准错误码处理异常分支。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

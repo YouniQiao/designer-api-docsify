@@ -1,10 +1,10 @@
 # PixelMap
 
 The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use  
-[image.createPixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x  
-[Bytes per pixel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.Since API version 11, PixelMap supports cross-thread calls through [Worker]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. If a PixelMap object is invoked by another thread through [Worker]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use  
-[image.createPixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_to pass pixel data to create a PixelMap object, or use [ImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x  
+[Bytes per pixel](arkts-image-image-pixelmapformat-e.md).Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use  
+[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md) to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
+[release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -13,6 +13,12 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 <!--Device-image-interface PixelMap--><!--Device-image-interface PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
+
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
 
 ## applyColorSpace
 
@@ -34,17 +40,17 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | Target color space. SRGB, DCI\_\_\_ESCAPED\_UNDERSCORE\_\_\_P3, DISPLAY\_\_\_ESCAPED\_UNDERSCORE\_\_\_P3, and ADOBE\_\_\_ESCAPED\_UNDERSCORE\_\_\_RGB\_\_\_ESCAPED\_UNDERSCORE\_\_\_1998 are supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
-| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 62980115 | Invalid image parameter. |
+| 62980104 | Failed to initialize the internal object. |
+| 62980108 | Failed to convert the color space. |
 
 ## applyColorSpace
 
@@ -66,7 +72,7 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | Target color space. SRGB, DCI\_\_\_ESCAPED\_UNDERSCORE\_\_\_P3, DISPLAY\_\_\_ESCAPED\_UNDERSCORE\_\_\_P3, and ADOBE\_\_\_ESCAPED\_UNDERSCORE\_\_\_RGB\_\_\_ESCAPED\_UNDERSCORE\_\_\_1998 are supported. |
+| targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
 
 **Return value:**
 
@@ -78,10 +84,10 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
-| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 62980115 | Invalid image parameter. |
+| 62980104 | Failed to initialize the internal object. |
+| 62980108 | Failed to convert the color space. |
 
 ## applyCrop
 
@@ -109,7 +115,7 @@ Crops the PixelMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The region to crop. |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes | The region to crop. |
 
 **Return value:**
 
@@ -121,12 +127,12 @@ Crops the PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600204](../errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600301 | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| 7600204 | The specified region is invalid or out of range. |
 
 ## applyCropSync
 
@@ -154,18 +160,18 @@ Crops the PixelMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The region to crop. |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes | The region to crop. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600204](../errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600301 | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| 7600204 | The specified region is invalid or out of range. |
 
 ## applyFlip
 
@@ -206,12 +212,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. |
+| 7600301 | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyFlipSync
 
@@ -246,12 +252,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. |
+| 7600301 | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyRotate
 
@@ -287,7 +293,7 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The rotation angle in degrees. Unit: Degree. |
+| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The rotation angle in degrees. Unit: Degree. |
 
 **Return value:**
 
@@ -299,12 +305,12 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. |
+| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyRotateSync
 
@@ -340,18 +346,18 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The rotation angle in degrees. Unit: Degree. |
+| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The rotation angle in degrees. Unit: Degree. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. |
+| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScale
 
@@ -385,9 +391,9 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The scale ratio of width. Unit: Percentage. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The scale ratio of height. Unit: Percentage. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The anti-aliasing algorithm to be used. Default value: NONE. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The scale ratio of width. Unit: Percentage. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The scale ratio of height. Unit: Percentage. |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | The anti-aliasing algorithm to be used. Default value: NONE. |
 
 **Return value:**
 
@@ -399,12 +405,12 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. |
+| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScaleSync
 
@@ -438,20 +444,20 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The scale ratio of width. Unit: Percentage. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The scale ratio of height. Unit: Percentage. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The anti-aliasing algorithm to be used. Default value: NONE. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The scale ratio of width. Unit: Percentage. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The scale ratio of height. Unit: Percentage. |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | The anti-aliasing algorithm to be used. Default value: NONE. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. |
+| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslate
 
@@ -485,8 +491,8 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The distance in pixels to move in the horizontal direction. Unit: px. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The distance in pixels to move in the vertical direction. Unit: px. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The distance in pixels to move in the horizontal direction. Unit: px. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The distance in pixels to move in the vertical direction. Unit: px. |
 
 **Return value:**
 
@@ -498,12 +504,12 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. |
+| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslateSync
 
@@ -537,19 +543,19 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The distance in pixels to move in the horizontal direction. Unit: px. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The distance in pixels to move in the vertical direction. Unit: px. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The distance in pixels to move in the horizontal direction. Unit: px. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The distance in pixels to move in the vertical direction. Unit: px. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. |
+| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## clone
 
@@ -571,17 +577,17 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 501 | Resource unavailable. |
+| 62980103 | Image YUV And ASTC types are not supported. |
+| 62980102 | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| 62980104 | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## cloneSync
 
@@ -603,17 +609,17 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 501 | Resource unavailable. |
+| 62980103 | Image YUV And ASTC types are not supported. |
+| 62980102 | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| 62980104 | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## convertPixelFormat
 
@@ -635,7 +641,7 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetPixelFormat | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The pixel format for pixelmap conversion. |
+| targetPixelFormat | [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md) | Yes | The pixel format for pixelmap conversion. |
 
 **Return value:**
 
@@ -647,11 +653,11 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980274](../errorcode-image.md#62980274-failed-to-convert-images) | The conversion failed. |
-| [62980276](../errorcode-image.md#62980276-unsupported-image-conversion-target-type) | The type to be converted is an unsupported target pixel format. |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the pixelmap. |
+| 62980115 | Invalid input parameter. |
+| 62980274 | The conversion failed. |
+| 62980178 | Failed to create the pixelmap. |
+| 62980276 | The type to be converted is an unsupported target pixel format. |
+| 62980111 | The image source data is incomplete. |
 
 ## createAlphaPixelmap
 
@@ -661,7 +667,7 @@ createAlphaPixelmap(): Promise<PixelMap>
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -679,7 +685,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
 ## createAlphaPixelmap
 
@@ -689,7 +695,7 @@ createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -707,7 +713,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
 ## createAlphaPixelmapSync
 
@@ -717,7 +723,7 @@ createAlphaPixelmapSync(): PixelMap
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMapSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -733,14 +739,14 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## createCroppedAndScaledPixelMap
 
@@ -768,25 +774,25 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area to crop. It must be within the original image's dimension (in pixels). |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. It must not be **0**. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. It must not be **0**. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Anti-aliasing level. Default value: **NONE**. |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes | Area to crop. It must be within the original image's dimension (in pixels). |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. It must not be **0**. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. It must not be **0**. |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | Anti-aliasing level. Default value: **NONE**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
-| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
-| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| 7600201 | The PixelMap has been released. |
+| 7600205 | Unsupported memory format or pixel format. |
+| 7600301 | Memory alloc failed. |
+| 7600204 | Invalid region. |
 
 ## createCroppedAndScaledPixelMapSync
 
@@ -814,25 +820,25 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area to crop. It must be within the original image's dimension (in pixels). |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. It must not be **0**. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. It must not be **0**. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Anti-aliasing level. Default value: **NONE**. |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes | Area to crop. It must be within the original image's dimension (in pixels). |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. It must not be **0**. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. It must not be **0**. |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | Anti-aliasing level. Default value: **NONE**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
-| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
-| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| 7600201 | The PixelMap has been released. |
+| 7600205 | Unsupported memory format or pixel format. |
+| 7600301 | Memory alloc failed. |
+| 7600204 | Invalid region. |
 
 ## createScaledPixelMap
 
@@ -860,22 +866,22 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## createScaledPixelMapSync
 
@@ -903,22 +909,22 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## crop
 
@@ -928,7 +934,7 @@ crop(region: Region, callback: AsyncCallback<void>): void
 
 Crops this image based on a given size. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -946,8 +952,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## crop
 
@@ -957,7 +963,7 @@ crop(region: Region): Promise<void>
 
 Crops a PixelMap based on a given size. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -975,7 +981,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 
 **Return value:**
 
@@ -991,7 +997,7 @@ cropSync(region: Region): void
 
 Crops this image based on a given size. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyCropSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1007,14 +1013,14 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## extractAlphaPixelMap
 
@@ -1022,7 +1028,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 extractAlphaPixelMap(): Promise<PixelMap>
 ```
 
-Extracts the alpha channel from the current PixelMap to create a new ALPHA\_U8 format PixelMap.
+Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 format PixelMap.
 
 **Since:** 26.0.0
 
@@ -1042,17 +1048,17 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA\_U8 f
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | A Promise of the new ALPHA\_\_\_ESCAPED\_UNDERSCORE\_\_\_U8 format PixelMap. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | A Promise of the new ALPHA_U8 format PixelMap. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| 7600306 | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| 7600305 | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| 7600106 | The current PixelMap has been passed across threads. |
+| 7600105 | The current PixelMap has been released. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## extractAlphaPixelMapSync
 
@@ -1060,7 +1066,7 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA\_U8 f
 extractAlphaPixelMapSync(): PixelMap
 ```
 
-Extracts the alpha channel from the current PixelMap to create a new ALPHA\_U8 format PixelMap.
+Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 format PixelMap.
 
 **Since:** 26.0.0
 
@@ -1080,17 +1086,17 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA\_U8 f
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new ALPHA\_\_\_ESCAPED\_UNDERSCORE\_\_\_U8 format PixelMap. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | A new ALPHA_U8 format PixelMap. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| 7600306 | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| 7600305 | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| 7600106 | The current PixelMap has been passed across threads. |
+| 7600105 | The current PixelMap has been released. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## flip
 
@@ -1100,7 +1106,7 @@ flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): voi
 
 Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyFlip} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1120,7 +1126,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 | --- | --- | --- | --- |
 | horizontal | boolean | Yes | Whether to flip the image horizontally. **true** to flip the image horizontally, **false** otherwise. |
 | vertical | boolean | Yes | Whether to flip the image vertically. **true** to flip the image vertically, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## flip
 
@@ -1130,7 +1136,7 @@ flip(horizontal: boolean, vertical: boolean): Promise<void>
 
 Flips a PixelMap based on a given angle. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyFlip} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1165,7 +1171,7 @@ flipSync(horizontal: boolean, vertical: boolean): void
 
 Flips this image horizontally or vertically, or both. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyFlipSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1188,8 +1194,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## getBytesNumberPerRow
 
@@ -1221,7 +1227,7 @@ Obtains the number of bytes per row of this image. Unit: bytes.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of bytes per row. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of bytes per row. |
 
 ## getColorSpace
 
@@ -1249,9 +1255,9 @@ Obtains the color space of this image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| 62980115 | Invalid image parameter. |
+| 62980101 | The image data is abnormal. |
+| 62980103 | The image data is not supported. |
 
 ## getDensity
 
@@ -1283,7 +1289,7 @@ Obtains the pixel density of this image. Unit: ppi (pixels/inch)
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Pixel density, in ppi. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Pixel density, in ppi. |
 
 ## getImageInfo
 
@@ -1335,7 +1341,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ImageInfo&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
 ## getImageInfoSync
 
@@ -1361,13 +1367,13 @@ Obtains the image information. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Image information. |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) | Image information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 501 | Resource Unavailable. |
 
 ## getMetadata
 
@@ -1389,22 +1395,22 @@ Obtains the value of the metadata with a given key in this PixelMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Key of the HDR metadata. |
+| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | Yes | Key of the HDR metadata. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Value of the metadata with the given key. |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | Value of the metadata with the given key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource unavailable. |
+| 62980173 | The DMA memory does not exist. |
+| 62980302 | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## getPixelBytesNumber
 
@@ -1436,7 +1442,7 @@ Obtains the total number of bytes of this image. Unit: bytes.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Total number of bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Total number of bytes. |
 
 ## getUniqueId
 
@@ -1464,13 +1470,13 @@ Obtains the unique ID of this PixelMap.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Unique ID. The value is a positive integer. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Unique ID. The value is a positive integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
+| 7600201 | The PixelMap has been released. |
 
 ## isReleased
 
@@ -1479,10 +1485,11 @@ isReleased(): boolean
 ```
 
 Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail.
-    **NOTE**  
-    
-    Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied  
-    by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+
+> **NOTE：**
+> 
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
+> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 22
 
@@ -1524,8 +1531,8 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| 62980115 | Invalid image parameter. |
 
 ## opacity
 
@@ -1541,7 +1548,7 @@ opacity(rate: double, callback: AsyncCallback<void>): void
 
 Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link setOpacity} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1559,8 +1566,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## opacity
 
@@ -1576,7 +1583,7 @@ opacity(rate: double): Promise<void>
 
 Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link setOpacity} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1594,7 +1601,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
 
 **Return value:**
 
@@ -1616,7 +1623,7 @@ opacitySync(rate: double): void
 
 Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link setOpacitySync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1632,14 +1639,14 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Opacity rate. The value range is (0,1]. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## readAllPixelsToBuffer
 
@@ -1679,11 +1686,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| 7600302 | Failed to copy the memory. |
 
 ## readAllPixelsToBufferSync
 
@@ -1717,11 +1724,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| 7600302 | Failed to copy the memory. |
 
 ## readPixels
 
@@ -1729,10 +1736,10 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 readPixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the area specified by [PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.region of this PixelMap object in the BGRA\_8888 format and writes the data to the  
-[PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.pixels buffer. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -1750,7 +1757,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area from which the pixels will be read. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the pixels will be read. |
 
 **Return value:**
 
@@ -1764,10 +1771,10 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 readPixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the area specified by [PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.region of this PixelMap object in the BGRA\_8888 format and writes the data to the  
-[PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.pixels buffer. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -1785,8 +1792,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area from which the pixels will be read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the pixels will be read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## readPixelsSync
 
@@ -1794,10 +1801,10 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 readPixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the area specified by [PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.region of this PixelMap object in the BGRA\_8888 format and writes the data to the  
-[PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.pixels buffer. This API returns the result synchronously.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link readPixelsToAreaSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1813,14 +1820,14 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area from which the pixels will be read. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the pixels will be read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## readPixelsToArea
 
@@ -1828,7 +1835,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 readPixelsToArea(area: PositionArea): Promise<void>
 ```
 
-Reads pixel data from a certain area of the PixelMap to a buffer. The resulting data will be in BGRA\_8888 format.
+Reads pixel data from a certain area of the PixelMap to a buffer. The resulting data will be in BGRA_8888 format.
 
 **Since:** 26.0.0
 
@@ -1848,7 +1855,7 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area of the PixelMap to read the data. Data will be read from the PixelMap and copied into PositionArea.pixels. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area of the PixelMap to read the data. Data will be read from the PixelMap and copied into PositionArea.pixels. |
 
 **Return value:**
 
@@ -1860,11 +1867,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| 7600302 | Failed to copy the memory. |
 
 ## readPixelsToAreaSync
 
@@ -1872,7 +1879,7 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 readPixelsToAreaSync(area: PositionArea): void
 ```
 
-Reads pixel data from a certain area of the PixelMap to a buffer. The resulting data will be in BGRA\_8888 format.
+Reads pixel data from a certain area of the PixelMap to a buffer. The resulting data will be in BGRA_8888 format.
 
 **Since:** 26.0.0
 
@@ -1892,17 +1899,17 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area of the PixelMap to read the data. Data will be read from the PixelMap and copied into PositionArea.pixels. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area of the PixelMap to read the data. Data will be read from the PixelMap and copied into PositionArea.pixels. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| 7600302 | Failed to copy the memory. |
 
 ## readPixelsToBuffer
 
@@ -1912,7 +1919,7 @@ readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer} instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -1930,7 +1937,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | Yes | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| dst | ArrayBuffer | Yes | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](arkts-image-image-pixelmap-i.md#getpixelbytesnumber). |
 
 **Return value:**
 
@@ -1946,7 +1953,7 @@ readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer} instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -1964,8 +1971,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | Yes | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| dst | ArrayBuffer | Yes | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](arkts-image-image-pixelmap-i.md#getpixelbytesnumber). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## readPixelsToBufferSync
 
@@ -1975,7 +1982,7 @@ readPixelsToBufferSync(dst: ArrayBuffer): void
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBufferSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1993,14 +2000,14 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | Yes | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| dst | ArrayBuffer | Yes | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](arkts-image-image-pixelmap-i.md#getpixelbytesnumber). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## release
 
@@ -2009,10 +2016,11 @@ release(callback: AsyncCallback<void>): void
 ```
 
 Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result.Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-    **NOTE**  
-    
-    Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied  
-    by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+
+> **NOTE：**
+> 
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
+> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 7
 
@@ -2030,7 +2038,7 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -2039,10 +2047,11 @@ release(): Promise<void>
 ```
 
 Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-    **NOTE**  
-    
-    Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied  
-    by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+
+> **NOTE：**
+> 
+> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
+> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
 **Since:** 7
 
@@ -2076,7 +2085,7 @@ rotate(angle: double, callback: AsyncCallback<void>): void
 
 Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyRotate} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2094,8 +2103,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## rotate
 
@@ -2111,7 +2120,7 @@ rotate(angle: double): Promise<void>
 
 Rotates a PixelMap based on a given angle. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyRotate} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2129,7 +2138,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
+| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
 
 **Return value:**
 
@@ -2151,7 +2160,7 @@ rotateSync(angle: double): void
 
 Rotates this image based on a given angle. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyRotateSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2167,14 +2176,14 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
+| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate. Unit: degrees. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## scale
 
@@ -2190,7 +2199,7 @@ scale(x: double, y: double, callback: AsyncCallback<void>): void
 
 Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2208,9 +2217,9 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## scale
 
@@ -2226,7 +2235,7 @@ scale(x: double, y: double): Promise<void>
 
 Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2244,8 +2253,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
 
 **Return value:**
 
@@ -2267,7 +2276,7 @@ scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>
 
 Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2285,9 +2294,9 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Anti-aliasing level. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | Yes | Anti-aliasing level. |
 
 **Return value:**
 
@@ -2299,8 +2308,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## scaleSync
 
@@ -2316,7 +2325,7 @@ scaleSync(x: double, y: double): void
 
 Scales this image based on the scale factors of the width and height. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2332,15 +2341,15 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## scaleSync
 
@@ -2356,7 +2365,7 @@ scaleSync(x: double, y: double, level: AntiAliasingLevel): void
 
 Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2372,16 +2381,16 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the width. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor of the height. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Anti-aliasing level. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the width. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor of the height. |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | Yes | Anti-aliasing level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## setColorSpace
 
@@ -2391,7 +2400,7 @@ setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 
 Set color space of pixel map.
 
-This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method.If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_)}.
+This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method.If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
 
 **Since:** 12
 
@@ -2411,8 +2420,8 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
+| 62980115 | If the image parameter invalid. |
+| 62980111 | The image source data is incomplete. |
 
 ## setMemoryNameSync
 
@@ -2440,9 +2449,9 @@ Sets a memory name for this PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980286](../errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) | Memory format not supported. |
+| 401 | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
+| 501 | Resource unavailable. |
+| 62980286 | Memory format not supported. |
 
 ## setMetadata
 
@@ -2464,8 +2473,8 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Key of the HDR metadata. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value of the metadata. |
+| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | Yes | Key of the HDR metadata. |
+| value | [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | Yes | Value of the metadata. |
 
 **Return value:**
 
@@ -2477,10 +2486,10 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource unavailable. |
+| 62980173 | The DMA memory does not exist. |
+| 62980302 | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## setOpacity
 
@@ -2514,7 +2523,7 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
 
 **Return value:**
 
@@ -2526,12 +2535,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
-| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600207 | Unsupported data format. Possible cause: Alpha type is not supported. |
+| 7600206 | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setOpacitySync
 
@@ -2565,18 +2574,18 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
-| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600207 | Unsupported data format. Possible cause: Alpha type is not supported. |
+| 7600206 | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setTransferDetached
 
@@ -2604,7 +2613,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 501 | Resource Unavailable. |
 
 ## toSdr
 
@@ -2632,7 +2641,7 @@ Convert pixelmap to standard dynamic range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid image operation. |
+| 62980137 | Invalid image operation. |
 
 ## translate
 
@@ -2648,7 +2657,7 @@ translate(x: double, y: double, callback: AsyncCallback<void>): void
 
 Translates this image based on given coordinates. This API uses an asynchronous callback to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyTranslate} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2666,9 +2675,9 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## translate
 
@@ -2684,7 +2693,7 @@ translate(x: double, y: double): Promise<void>
 
 Translates a PixelMap based on given coordinates. This API uses a promise to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyTranslate} instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2702,8 +2711,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
 
 **Return value:**
 
@@ -2725,7 +2734,7 @@ translateSync(x: double, y: double): void
 
 Translates this image based on given coordinates. This API returns the result synchronously.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2741,15 +2750,15 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate to translate, in px. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate to translate, in px. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## unmarshalling
 
@@ -2757,7 +2766,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 ```
 
-Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode,use [createPixelMapFromParcel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode,use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createpixelmapfromparcel).
 
 **Since:** 10
 
@@ -2777,15 +2786,15 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980115 | Invalid image parameter. |
 
 ## writeAllPixelsFromBuffer
 
@@ -2825,12 +2834,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| 7600302 | Failed to copy the memory. |
 
 ## writeAllPixelsFromBufferSync
 
@@ -2864,12 +2873,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| 7600302 | Failed to copy the memory. |
 
 ## writeBufferToPixels
 
@@ -2879,7 +2888,7 @@ writeBufferToPixels(src: ArrayBuffer): Promise<void>
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuffer} instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -2897,7 +2906,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | Yes | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| src | ArrayBuffer | Yes | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](arkts-image-image-pixelmap-i.md#getpixelbytesnumber). |
 
 **Return value:**
 
@@ -2913,7 +2922,7 @@ writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuffer} instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -2931,8 +2940,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | Yes | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
+| src | ArrayBuffer | Yes | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](arkts-image-image-pixelmap-i.md#getpixelbytesnumber). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## writeBufferToPixelsSync
 
@@ -2942,7 +2951,7 @@ writeBufferToPixelsSync(src: ArrayBuffer): void
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBufferSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2958,14 +2967,14 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | Yes | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| src | ArrayBuffer | Yes | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](arkts-image-image-pixelmap-i.md#getpixelbytesnumber). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## writePixels
 
@@ -2973,10 +2982,10 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 writePixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the [PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.region buffer in the BGRA\_8888 format and writes the data to the area specified by  
-[PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.pixels in this PixelMap object. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -2994,7 +3003,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area to which the pixels will be written. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the pixels will be written. |
 
 **Return value:**
 
@@ -3008,10 +3017,10 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 writePixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the [PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.region buffer in the BGRA\_8888 format and writes the data to the area specified by  
-[PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.pixels in this PixelMap object. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -3029,8 +3038,8 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area to which the pixels will be written. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the pixels will be written. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## writePixelsFromArea
 
@@ -3038,7 +3047,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 writePixelsFromArea(area: PositionArea): Promise<void>
 ```
 
-Writes data from a buffer to a certain area of the PixelMap. The source data must be in BGRA\_8888 format.
+Writes data from a buffer to a certain area of the PixelMap. The source data must be in BGRA_8888 format.
 
 **Since:** 26.0.0
 
@@ -3058,7 +3067,7 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area of the PixelMap to write the data. Data will be copied from PositionArea.pixels to the PixelMap. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area of the PixelMap to write the data. Data will be copied from PositionArea.pixels to the PixelMap. |
 
 **Return value:**
 
@@ -3070,12 +3079,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| 7600302 | Failed to copy the memory. |
 
 ## writePixelsFromAreaSync
 
@@ -3083,7 +3092,7 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 writePixelsFromAreaSync(area: PositionArea): void
 ```
 
-Writes data from a buffer to a certain area of the PixelMap. The source data must be in BGRA\_8888 format.
+Writes data from a buffer to a certain area of the PixelMap. The source data must be in BGRA_8888 format.
 
 **Since:** 26.0.0
 
@@ -3103,18 +3112,18 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area of the PixelMap to write the data. Data will be copied from PositionArea.pixels to the PixelMap. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area of the PixelMap to write the data. Data will be copied from PositionArea.pixels to the PixelMap. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
+| 7600106 | The PixelMap has been passed to another thread. |
+| 7600105 | The PixelMap has been released. |
+| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
+| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| 7600302 | Failed to copy the memory. |
 
 ## writePixelsSync
 
@@ -3122,10 +3131,10 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 writePixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the [PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.region buffer in the BGRA\_8888 format and writes the data to the area specified by  
-[PositionArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.pixels in this PixelMap object. This API returns the result synchronously.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use {@link writePixelsFromAreaSync} instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -3143,14 +3152,14 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area to which the pixels will be written. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the pixels will be written. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
 ## isEditable
 
@@ -3158,7 +3167,7 @@ Starting from API 26.0.0, it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\
 readonly isEditable: boolean
 ```
 
-Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 11.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_This API can be used in ArkTS widgets since API version 12.
+Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.&lt;br&gt;This API can be used in atomic services since API version 11.&lt;br&gt;This API can be used in ArkTS widgets since API version 12.
 
 **Type:** boolean
 
@@ -3180,8 +3189,7 @@ Whether the image pixels are editable. **true** if editable, **false** otherwise
 readonly isStrideAlignment: boolean
 ```
 
-Whether the row data of the image is memory aligned. The value **true** means that the row data is memory-aligned, and there may be blank bytes padded at the end of each row to meet alignment requirements. The value **false**  
-means that the row data is not memory-aligned, and rows are packed contiguously with no padding bytes at the end.
+Whether the row data of the image is memory aligned. The value **true** means that the row data is memory-aligned, and there may be blank bytes padded at the end of each row to meet alignment requirements. The value **false**means that the row data is not memory-aligned, and rows are packed contiguously with no padding bytes at the end.
 
 **Type:** boolean
 

@@ -1,12 +1,18 @@
 # getCaptionsManager
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## getCaptionsManager
 
 ```TypeScript
 function getCaptionsManager(): CaptionsManager
 ```
 
-Obtains a **CaptionsManager** instance.
+获取无障碍字幕配置管理实例。
 
 **Since:** 8
 
@@ -22,9 +28,9 @@ Obtains a **CaptionsManager** instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Captions configuration. |
+| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | 无障碍字幕配置管理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

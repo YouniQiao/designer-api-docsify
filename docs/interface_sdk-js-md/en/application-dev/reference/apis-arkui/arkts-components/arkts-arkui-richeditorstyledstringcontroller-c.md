@@ -1,9 +1,12 @@
 # RichEditorStyledStringController
 
-Represents the controller of the **RichEditor** component constructed using the styled string. Inherits from  
-[RichEditorBaseController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
-**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](../arkts-apis/arkts-arkui-component/richeditor-richeditorbasecontroller-c.md) and implements [StyledStringController](../arkts-apis/arkts-arkui-component/textcommon-styledstringcontroller-i.md)
+## 导入对象
+
+```ts controller: RichEditorStyledStringController = new RichEditorStyledStringController();```
+
+**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) and implements [StyledStringController](../arkts-apis/arkts-arkui-textcommon-styledstringcontroller-i.md/arkts-arkui-textcommon-styledstringcontroller-i.md)
 
 **Since:** 12
 
@@ -19,7 +22,7 @@ Represents the controller of the **RichEditor** component constructed using the 
 getSelection(): RichEditorRange
 ```
 
-Obtains the current selection range of the **RichEditor** component.
+获取富文本当前的选中区域范围。
 
 **Since:** 12
 
@@ -37,7 +40,7 @@ Obtains the current selection range of the **RichEditor** component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Selection range. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 选中区域范围。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getStyledString
 
@@ -45,7 +48,7 @@ Obtains the current selection range of the **RichEditor** component.
 getStyledString(): MutableStyledString
 ```
 
-Obtains the styled string displayed in the **RichEditor** component.
+获取富文本组件显示的属性字符串。
 
 **Since:** 12
 
@@ -63,7 +66,7 @@ Obtains the styled string displayed in the **RichEditor** component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Styled string displayed in the rich text component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## onContentChanged
 
@@ -71,8 +74,7 @@ Obtains the styled string displayed in the **RichEditor** component.
 onContentChanged(listener: StyledStringChangedListener): void
 ```
 
-Registers the callback for the text content change. This callback is triggered only when the text content is changed by backend programs, and is not triggered when  
-[setStyledString]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is called.
+注册文本内容变化回调，该回调仅在后端程序导致文本内容变更时触发，调用[setStyledString](arkts-arkui-richeditorstyledstringcontroller-c.md#setstyledstring)时不会触发。
 
 **Since:** 12
 
@@ -90,7 +92,7 @@ Registers the callback for the text content change. This callback is triggered o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback listener for text content changes. |
+| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-textcommon-styledstringchangedlistener-i.md) | Yes | 文本内容变化回调监听器。 |
 
 ## setStyledString
 
@@ -98,14 +100,13 @@ Registers the callback for the text content change. This callback is triggered o
 setStyledString(styledString: StyledString): void
 ```
 
-Sets the styled string displayed in the **RichEditor** component.
-    **NOTE**  
-    
-    - When this interface is called, the StyledString of the rich text component is fully replaced and rendered  
-    again.  
-    
-    - When the content exceeds the component area, the component automatically scrolls up until the content is  
-    visible at the end.
+设置富文本组件显示的属性字符串。
+
+> **说明：**
+> 
+> - 调用该接口时，会全量替换富文本组件的StyledString，并重新渲染。
+> 
+> - 当内容超过组件本身区域时，组件会自动向上滚动内容直到末尾处可见。
 
 **Since:** 12
 
@@ -123,5 +124,5 @@ Sets the styled string displayed in the **RichEditor** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Styled string.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The child class [MutableStyledString]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of **StyledString** can also serve as the argument. |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | 属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;StyledString的子类 [MutableStyledString](../arkts-apis/arkts-arkui-styledstring-mutablestyledstring-c.md/arkts-arkui-styledstring-mutablestyledstring-c.md)也可以作为入参值。 |
 

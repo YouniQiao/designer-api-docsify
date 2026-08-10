@@ -10,6 +10,12 @@ The **deviceStatus** module provides the device status awareness functionality.
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
+## Modules to Import
+
+```TypeScript
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## Summary
 
 ### Functions

@@ -1,12 +1,18 @@
 # usbFunctionsFromString (System API)
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## usbFunctionsFromString
 
 ```TypeScript
 function usbFunctionsFromString(funcs: string): number
 ```
 
-Converts the USB function list in the string format to a numeric mask in Device mode.
+在设备模式下，将字符串形式的USB功能列表转化为数字掩码。
 
 **Since:** 9
 
@@ -26,17 +32,17 @@ Converts the USB function list in the string format to a numeric mask in Device 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | string | Yes | Function list in string format. |
+| funcs | string | Yes | 字符串形式的功能列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Function list in numeric mask format after conversion. |
+| number | 转化后的功能列表对应的数字掩码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 

@@ -4,7 +4,7 @@
 declare type Optional<T> = T | undefined
 ```
 
-Defines the Optional type. The value can be **undefined**.
+定义可选类型，其值可以是undefined。
 
 **Since:** 12
 
@@ -22,6 +22,6 @@ Defines the Optional type. The value can be **undefined**.
 
 | Type | Description |
 | --- | --- |
-| T | The object can be of any custom type. |
-| undefined | The object can be **undefined**. |
+| T | 表示泛型T所指定的类型。 |
+| undefined | 表示该类型声明的对象是undefined。 |
 

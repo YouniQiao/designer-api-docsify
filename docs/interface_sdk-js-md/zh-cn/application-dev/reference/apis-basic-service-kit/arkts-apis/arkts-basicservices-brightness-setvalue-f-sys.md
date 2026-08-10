@@ -1,5 +1,11 @@
 # setValue（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { brightness } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setValue
 
 ```TypeScript
@@ -22,23 +28,23 @@ function setValue(value: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 亮度的值。范围：0~255；该参数必须为数字类型。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 亮度的值。范围：0~255；该参数必须为数字类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [4700101](../../apis-basic-services-kit/errorcode-brightness.md#4700101-连接服务失败) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| 4700101 | Failed to connect to the service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
     brightness.setValue(128);
-} catch(err) {
-    console.error('set brightness failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to set brightness. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -65,24 +71,24 @@ function setValue(value: int, continuous: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 亮度的值。范围：0~255。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 亮度的值。范围：0~255。 |
 | continuous | boolean | 是 | 亮度调节是否连续。true表示亮度调节连续，false表示亮度调节不连续，默认为false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [4700101](../../apis-basic-services-kit/errorcode-brightness.md#4700101-连接服务失败) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| 4700101 | Failed to connect to the service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
     brightness.setValue(128, true);
-} catch(err) {
-    console.error('set brightness failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to set brightness. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

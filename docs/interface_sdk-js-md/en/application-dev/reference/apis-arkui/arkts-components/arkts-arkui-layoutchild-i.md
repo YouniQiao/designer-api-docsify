@@ -1,6 +1,6 @@
 # LayoutChild
 
-Sub component info passed from framework when layout and measure happens.
+布局和测量发生时，框架传递给子组件的信息。
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Sub component info passed from framework when layout and measure happens.
 layout(childLayoutInfo: LayoutInfo)
 ```
 
-Call this layout method in onLayout callback to assign layout info to sub component.
+在 onLayout 回调中调用此布局方法，将布局信息分配给子组件。
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ Call this layout method in onLayout callback to assign layout info to sub compon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| childLayoutInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| childLayoutInfo | [LayoutInfo](arkts-arkui-layoutinfo-i.md) | Yes |  |
 
 ## measure
 
@@ -48,7 +48,7 @@ Call this layout method in onLayout callback to assign layout info to sub compon
 measure(childConstraint: ConstraintSizeOptions)
 ```
 
-Call this measure method in onMeasure callback to supply sub component size.
+在 onMeasure 回调中调用此 measure 方法以提供子组件的尺寸。
 
 **Since:** 9
 
@@ -68,7 +68,7 @@ Call this measure method in onMeasure callback to supply sub component size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| childConstraint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| childConstraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |  |
 
 ## borderInfo
 
@@ -76,9 +76,9 @@ Call this measure method in onMeasure callback to supply sub component size.
 borderInfo: LayoutBorderInfo
 ```
 
-Sub component border info.
+子组件边框信息
 
-**Type:** LayoutBorderInfo
+**Type:** [LayoutBorderInfo](arkts-arkui-layoutborderinfo-i.md)
 
 **Since:** 9
 
@@ -100,9 +100,9 @@ Sub component border info.
 constraint: ConstraintSizeOptions
 ```
 
-Sub component constraint.
+子组件约束
 
-**Type:** ConstraintSizeOptions
+**Type:** [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md)
 
 **Since:** 9
 
@@ -124,7 +124,7 @@ Sub component constraint.
 id: string
 ```
 
-Sub component id.
+子组件id
 
 **Type:** string
 
@@ -148,7 +148,7 @@ Sub component id.
 name: string
 ```
 
-Sub component name.
+子组件名字
 
 **Type:** string
 
@@ -172,9 +172,9 @@ Sub component name.
 position: Position
 ```
 
-Sub component position.
+子组件位置信息
 
-**Type:** Position
+**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
 **Since:** 9
 

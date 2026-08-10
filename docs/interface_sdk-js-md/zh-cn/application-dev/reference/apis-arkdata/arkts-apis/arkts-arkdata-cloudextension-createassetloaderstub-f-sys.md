@@ -1,5 +1,11 @@
 # createAssetLoaderStub（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## createAssetLoaderStub
 
 ```TypeScript
@@ -22,7 +28,7 @@ function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| instance | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示一个AssetLoader类型的实例。 |
+| instance | [AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md) | 是 | 表示一个AssetLoader类型的实例。 |
 
 **返回值：**
 
@@ -30,9 +36,7 @@ function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>
 | --- | --- |
 | Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回AssetLoader的rpc.RemoteObject对象。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -47,56 +51,6 @@ class MyCloudService implements cloudExtension.CloudService {
   async connectAssetLoader(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
     console.info(`connect asset loader, bundle: ${bundleName}`);
     return cloudExtension.createAssetLoaderStub(new MyAssetLoader());
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import rpc from '@ohos.rpc';
-import cloudExtension from '@ohos.data.cloudExtension';
-class MyAssetLoader implements cloudExtension.AssetLoader {
-  // ...
-  async download(table: string, gid: string, prefix: string, assets: cloudExtension.CloudAsset[]): Promise<cloudExtension.Result<cloudExtension.CloudAsset>[]> {
-    return [] as cloudExtension.Result<cloudExtension.CloudAsset>[];
-  }
-  async upload(table: string, gid: string, assets: cloudExtension.CloudAsset[]): Promise<cloudExtension.Result<cloudExtension.CloudAsset>[]> {
-    return [] as cloudExtension.Result<cloudExtension.CloudAsset>[];
-  }
-}
-class EmptyRemoteObj extends rpc.RemoteObject {
-  constructor() {
-    super("EmptyRemoteObj");
-  }
-}
-export default class MyCloudService implements cloudExtension.CloudService {
-  constructor() {}
-  // ...
-  async connectAssetLoader(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
-    console.info(`connect asset loader, bundle: ${bundleName}`);
-    return cloudExtension.createAssetLoaderStub(new MyAssetLoader());
-  }
-  async unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int> {
-    return 0;
-  }
-  async getAppBriefInfo(): Promise<Record<string, cloudExtension.AppBriefInfo>> {
-    return {};
-  }
-  async getAppSchema(bundleName: string): Promise<cloudExtension.Result<cloudExtension.AppSchema>> {
-    return { code: 0 } as cloudExtension.Result<cloudExtension.AppSchema>;
-  }
-  async getServiceInfo(): Promise<cloudExtension.ServiceInfo> {
-    return { remainingSpace: 0, totalSpace: 0, id: "", user: 0, enableCloud: false } as cloudExtension.ServiceInfo;
-  }
-  async connectDB(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
-    return new EmptyRemoteObj();
-  }
-  async subscribe(subInfo: Record<string, Array<cloudExtension.Database>>, expirationTime: long): Promise<cloudExtension.Result<cloudExtension.SubscribeInfo>> {
-    return { code: 0 } as cloudExtension.Result<cloudExtension.SubscribeInfo>;
-  }
-  async connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject> {
-    return new rpc.RemoteObject('');
   }
 }
 ```

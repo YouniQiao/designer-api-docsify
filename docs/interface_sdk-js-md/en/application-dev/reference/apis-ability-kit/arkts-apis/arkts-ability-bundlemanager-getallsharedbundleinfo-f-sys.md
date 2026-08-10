@@ -1,12 +1,18 @@
 # getAllSharedBundleInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAllSharedBundleInfo
 
 ```TypeScript
 function getAllSharedBundleInfo(callback: AsyncCallback<Array<SharedBundleInfo>>): void
 ```
 
-Obtains all the shared bundle information. This API uses an asynchronous callback to return the result.
+获取所有的共享包信息。使用callback异步回调。
 
 **Since:** 10
 
@@ -24,16 +30,16 @@ Obtains all the shared bundle information. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;SharedBundleInfo&gt;&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null** and **data** is all the shared bundle information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SharedBundleInfo&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时 ，err为undefined，data为获所有的共享包信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -61,7 +67,7 @@ try {
 function getAllSharedBundleInfo(): Promise<Array<SharedBundleInfo>>
 ```
 
-Obtains all the shared bundle information. This API uses a promise to return the result.
+获取所有的共享包信息。使用Promise异步回调。
 
 **Since:** 10
 
@@ -79,16 +85,16 @@ Obtains all the shared bundle information. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SharedBundleInfo&gt;&gt; | Promise used to return an array of the shared bundle information obtained. |
+| Promise&lt;Array&lt;SharedBundleInfo&gt;&gt; | Promise对象，返回所有的共享包信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

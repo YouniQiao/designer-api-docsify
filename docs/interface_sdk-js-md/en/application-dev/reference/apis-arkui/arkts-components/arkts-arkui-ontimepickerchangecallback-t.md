@@ -4,7 +4,7 @@
 declare type OnTimePickerChangeCallback = (result: TimePickerResult) => void
 ```
 
-Triggered when a time is selected.
+选择时间时触发该事件。
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ Triggered when a time is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Time in 24-hour format.  |
+| result | [TimePickerResult](../arkts-apis/arkts-arkui-timepicker-timepickerresult-i.md) | Yes | 选中的时间结果，hour取值0-23，与展示制式无关。 |
 

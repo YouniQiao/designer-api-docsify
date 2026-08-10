@@ -18,5 +18,5 @@ The callback when mouse event is triggered in native embed area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of mouse event in native embed area.  |
+| event | [NativeEmbedMouseInfo](arkts-arkweb-web-nativeembedmouseinfo-i.md) | Yes | callback information of mouse event in native embed area. |
 

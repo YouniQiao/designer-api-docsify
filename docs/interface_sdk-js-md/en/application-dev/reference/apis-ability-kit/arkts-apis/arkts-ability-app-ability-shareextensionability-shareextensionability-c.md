@@ -1,12 +1,6 @@
 # ShareExtensionAbility
 
-ShareExtensionAbility provides extended capabilities for integrating a share details page. It inherits from  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
-
-By implementing ShareExtensionAbility, you can process content shared from other applications. For example, you could use ShareExtensionAbility to implement the text sharing feature. When a user initiates a share action in another application, your application will appear as an option in the system share panel. Upon selection, the system activates your application to process the content and display the share detail page.
-
-For details about the inheritance relationship of each ability, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+ShareExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)，为开发者提供分享详情页扩展能力。该模块支持开发者创建接收分享内容的分享详情页面，将应用入口展示于系统分享面板的推荐应用区域。
 
 **Inheritance/Implementation:** ShareExtensionAbility extends [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
@@ -19,4 +13,10 @@ For details about the inheritance relationship of each ability, see
 <!--Device-unnamed-export default class ShareExtensionAbility extends UIExtensionAbility--><!--Device-unnamed-export default class ShareExtensionAbility extends UIExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Modules to Import
+
+```TypeScript
+import { ShareExtensionAbility } from 'kits/@kit.AbilityKit';
+```
 

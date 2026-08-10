@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## beginTime
 
 ```TypeScript
@@ -20,7 +26,7 @@ beginTime?: long
 
 查询的起始时间。单位为：毫秒。默认值：0，表示不限制起始时间。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **默认值：** 0
 
@@ -86,7 +92,7 @@ endTime?: long
 
 查询的终止时间，不早于beginTime，否则返回错误码12100001。单位为：毫秒。默认值：0，表示不限制终止时间。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **默认值：** 0
 
@@ -106,9 +112,9 @@ endTime?: long
 flag: PermissionUsageFlag
 ```
 
-指定查询方式。设置为FLAG\_PERMISSION\_USAGE\_SUMMARY时返回汇总信息；设置为FLAG\_PERMISSION\_USAGE\_DETAIL时返回明细记录。
+指定查询方式。设置为FLAG_PERMISSION_USAGE_SUMMARY时返回汇总信息；设置为FLAG_PERMISSION_USAGE_DETAIL时返回明细记录。
 
-**类型：** PermissionUsageFlag
+**类型：** [PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md)
 
 **起始版本：** 9
 
@@ -152,7 +158,7 @@ permissionNames?: Array<Permissions>
 
 需要查询的权限集合。默认值：空，表示查询所有权限的使用记录。
 
-**类型：** Array&lt;Permissions&gt;
+**类型：** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 
 **起始版本：** 9
 
@@ -171,11 +177,11 @@ tokenId?: int
 ```
 
 目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的  
-[accessTokenId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_字段获取。该参数必须为大于0的整数，传入0时返回错误码12100001。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_BundleInfo获取可参考：[bundleManager.getBundleInfoSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+ [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。
 
 默认值：0，查询所有应用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

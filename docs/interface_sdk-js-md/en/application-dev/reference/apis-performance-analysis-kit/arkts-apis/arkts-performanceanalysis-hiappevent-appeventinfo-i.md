@@ -1,6 +1,6 @@
 # AppEventInfo
 
-Defines parameters of the event information.
+提供事件信息的参数选项。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines parameters of the event information.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## domain
 
 ```TypeScript
 domain: string
 ```
 
-Event domain. The value is a string of up to 32 characters, including digits (0 to 9), letters (a to z)(A to Z),and underscores (\_). It must start with a letter and cannot end with an underscore (\_).
+事件领域。事件领域名称支持数字、字母、下划线字符，需要以字母开头且不能以下划线结尾，长度非空且不超过32个字符。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Event domain. The value is a string of up to 32 characters, including digits (0 
 eventType: EventType
 ```
 
-Event type.
+事件类型。
 
-**Type:** EventType
+**Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
 
 **Since:** 9
 
@@ -56,7 +62,7 @@ Event type.
 name: string
 ```
 
-Event name. The value is string that contains a maximum of 48 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (\_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter.
+事件名称。首字符必须为字母字符或\$字符，中间字符必须为数字字符、字母字符或下划线字符，结尾字符必须为数字字符或字母字符，长度非空且不超过48个字符。
 
 **Type:** string
 
@@ -76,14 +82,13 @@ Event name. The value is string that contains a maximum of 48 characters, includ
 params: object
 ```
 
-Event parameter object, which consists of a parameter name and a parameter value. In system events, the fields contained in **params** are defined by system. For details about the fields, you can see the overviews of system events, for example, \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. For application events, you need to define the parameters of the [Write]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API. The specifications are as follows:
+事件参数对象，包含每个事件参数的参数名和参数值。  
+**系统事件中params包含的字段已由各系统事件定义，具体字段含义在各类系统事件指南的介绍中，例如[崩溃事件介绍](../../../dfx/hiappevent-watcher-crash-events.md)。** 针对应用事件，[Write](arkts-performanceanalysis-hiappevent-write-f.md#write)打点写入的参数由开发者定义，其规格如下：
 
-- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to  
-z)(A to Z), underscore (\_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter. For example, **testName** and **\$123\_name**.  
-- The parameter value can be a string, number, boolean, or array. The string type parameter can contain a maximum  
-of 8 * 1024 characters. If the length exceeds the limit, the parameter and its name will be discarded. The value of the number type parameter must be within the range of **Number.MIN\_SAFE\_INTEGER** to  
-**Number.MAX\_SAFE\_INTEGER**. If the value exceeds the range, an uncertain value may be generated. The element type in the array type parameter can only be string, number, or boolean. The number of elements must be less than100. If this limit is exceeded, excess elements will be discarded.  
-- The maximum number of parameters is 32. If this limit is exceeded, excess parameters will be discarded.
+- 参数名为string类型，首字符必须为字母字符或`\$`字符，中间字符必须为数字字符、字母字符或下划线字符，结尾字符必须为数字字符或字母字符，长度非空且不超过32个字符。如testName、\$123_name等。  
+- 参数值支持string、number、boolean、数组类型。string类型参数长度需在8*1024个字符以内，超出后会和对应的参数名一同被丢弃；number类型参数取值需在  
+Number.MIN_SAFE_INTEGER~Number.MAX_SAFE_INTEGER范围内，超出可能会产生不确定值；数组类型参数中的元素类型只能全为string、number、boolean中的一种，且元素个数需在100以内，超出部分即从第101个元素开始会被丢弃。  
+- 参数个数需在32个以内，超出的参数会做丢弃处理。
 
 **Type:** object
 

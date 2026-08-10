@@ -1,5 +1,11 @@
 # terminateTask
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## terminateTask
 
 ```TypeScript
@@ -22,9 +28,9 @@ function terminateTask(longTask: LongTask): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| longTask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要中止的长时任务。 |
+| longTask | [LongTask](arkts-arkts-taskpool-longtask-c.md) | 是 | 需要中止的长时任务。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent

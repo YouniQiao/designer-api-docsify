@@ -4,7 +4,7 @@
 type SystemToneOptions = _SystemToneOptions
 ```
 
-System tone options.
+系统提示音播放器配置项。
 
 **Since:** 11
 

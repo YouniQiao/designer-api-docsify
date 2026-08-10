@@ -8,13 +8,19 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## adjust
 
 ```TypeScript
 adjust: Array<UIFontAdjustInfo>
 ```
 
-Adjust info of the font set.
+字体原本的weight值对应需显示的值。
 
 **Type:** Array&lt;UIFontAdjustInfo&gt;
 
@@ -34,7 +40,7 @@ Adjust info of the font set.
 alias: Array<UIFontAliasInfo>
 ```
 
-Alias info of the font set.
+别名列表。
 
 **Type:** Array&lt;UIFontAliasInfo&gt;
 
@@ -54,7 +60,7 @@ Alias info of the font set.
 family: string
 ```
 
-Name of the font set.
+字体集名，字体文件中指定的"family"值。
 
 **Type:** string
 

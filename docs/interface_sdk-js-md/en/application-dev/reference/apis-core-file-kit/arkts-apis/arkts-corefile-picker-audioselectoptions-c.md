@@ -1,6 +1,6 @@
 # AudioSelectOptions
 
-Defines the options for selecting audio clips.
+音频选择选项。
 
 **Since:** 9
 
@@ -10,17 +10,19 @@ Defines the options for selecting audio clips.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
+
 ## maxSelectNumber
 
 ```TypeScript
 maxSelectNumber?: number
 ```
 
-Maximum number of audio clips that can be selected.
-
-Default value: **1**
-
-Value range: 1 to 500
+选择文件最大个数，默认值为1，上限为500个，有效值范围1-500。
 
 **Type:** number
 

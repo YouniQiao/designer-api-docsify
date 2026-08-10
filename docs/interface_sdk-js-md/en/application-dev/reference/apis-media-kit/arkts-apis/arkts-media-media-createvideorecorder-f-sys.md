@@ -1,12 +1,18 @@
 # createVideoRecorder (System API)
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createVideoRecorder
 
 ```TypeScript
 function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
+该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
 
 **Since:** 9
 
@@ -22,16 +28,16 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VideoRecorder&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns null otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;VideoRecorder&gt; | Yes | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 5400101 | No memory. Return by callback. |
+| 202 | Not System App.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -54,7 +60,7 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
+该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
 
 **Since:** 23
 
@@ -70,14 +76,14 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VideoRecorder \| undefined&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns undefined otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;VideoRecorder \| undefined&gt; | Yes | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| 5400101 | No memory. Return by callback. |
+| 202 | Not System App. |
 
 
 ## createVideoRecorder
@@ -86,7 +92,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 function createVideoRecorder(): Promise<VideoRecorder>
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
+该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
 
 **Since:** 9
 
@@ -102,16 +108,16 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;VideoRecorder&gt; | A Promise instance used to return VideoRecorder instance if the operation is successful; returns null otherwise. |
+| Promise&lt;VideoRecorder&gt; | Promise对象，返回VideoRecorder实例，失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 5400101 | No memory. Return by promise. |
+| 202 | Not System App.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -136,7 +142,7 @@ media.createVideoRecorder().then((video: media.VideoRecorder) => {
 function createVideoRecorder(): Promise<VideoRecorder | undefined>
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
+该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
 
 **Since:** 23
 
@@ -152,12 +158,12 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;VideoRecorder \| undefined&gt; | A Promise instance used to return VideoRecorder instance if the operation is successful; returns undefined otherwise. |
+| Promise&lt;VideoRecorder \| undefined&gt; | Promise对象，返回VideoRecorder实例，失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
+| 202 | Not System App. |
 

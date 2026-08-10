@@ -1,12 +1,18 @@
 # offReadData
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offReadData
 
 ```TypeScript
 function offReadData(callback?: Callback<DataParams>): void
 ```
 
-Unsubscribes from the event reported when data is read from the port.
+取消订阅从端口读取数据的事件。
 
 **Since:** 26.0.0
 
@@ -22,12 +28,12 @@ Unsubscribes from the event reported when data is read from the port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DataParams&gt; | No | Callback used to listen for the port read event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataParams&gt; | No | 监听端口读事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

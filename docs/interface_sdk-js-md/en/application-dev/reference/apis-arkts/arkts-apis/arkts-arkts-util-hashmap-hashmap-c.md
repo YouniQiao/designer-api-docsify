@@ -1,6 +1,6 @@
 # HashMap
 
-HashMap is a map implemented based on the array, linked list, and red-black tree. It provides efficient data query, insertion,and removal. The elements in a HashMap instance are mappings of key-value pairs. Each key must be unique and have only one value.
+HashMap底层采用数组、链表和红黑树实现，支持高效查询、插入和删除。HashMap存储内容基于键值对映射，不允许重复的key，且一个key只能对应一个value。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ HashMap is a map implemented based on the array, linked list, and red-black tree
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { HashMap } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
 $_iterator(): IterableIterator<[K, V]>
 ```
 
-Obtains an iterator, each item of which is a JavaScript object.
+返回一个迭代器，迭代器的每一项都是一个包含键和值的数组[K, V]。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[K, V]&gt; | an iterator for the HashMap |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | HashMap的迭代器。 |
 
 ## [Symbol.iterator]
 
@@ -40,7 +46,7 @@ Obtains an iterator, each item of which is a JavaScript object.
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-Obtains an iterator, each item of which is a JavaScript object.
+返回一个迭代器，迭代器的每一项都是一个包含键和值的数组[K, V]。
 
 **Since:** 8
 
@@ -56,15 +62,15 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[K, V]&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -113,7 +119,7 @@ for(let i = 0; i < 10; i++) {
 clear(): void
 ```
 
-Clears this HashMap and sets its length to **0**.
+清除HashMap中的所有元素，并将length置为0。
 
 **Since:** 8
 
@@ -129,9 +135,9 @@ Clears this HashMap and sets its length to **0**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -148,7 +154,7 @@ console.info("result:", result);  // result: true
 constructor()
 ```
 
-A constructor used to create a **HashMap** instance.
+创建HashMap实例。
 
 **Since:** 8
 
@@ -164,9 +170,9 @@ A constructor used to create a **HashMap** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The HashMap's constructor cannot be directly invoked. |
+| 10200012 | The HashMap's constructor cannot be directly invoked. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -178,7 +184,7 @@ let hashMap = new HashMap<string, number>();
 entries(): IterableIterator<[K, V]>
 ```
 
-Returns an iterator that contains all the elements in this HashMap.
+返回此HashMap中包含的键值对的新迭代器对象。
 
 **Since:** 8
 
@@ -194,15 +200,15 @@ Returns an iterator that contains all the elements in this HashMap.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[K, V]&gt; | Iterator obtained. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| 10200011 | The entries method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -235,7 +241,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void
 ```
 
-Uses a callback to traverse each element.
+在遍历过程中对每个元素调用一次回调函数。
 
 **Since:** 8
 
@@ -251,16 +257,16 @@ Uses a callback to traverse each element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: HashMap&lt;K, V&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the HashMap. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| callbackFn | (value?: V, key?: K, map?: HashMap&lt;K, V&gt;) =&gt; void | Yes | 回调函数。 |
+| thisArg | Object | No | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -291,7 +297,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: HashMapCbFn<K, V>): void
 ```
 
-Uses a callback to traverse the elements in this container and obtain their position indexes.
+通过回调函数遍历此容器中的元素，并获取其位置索引。
 
 **Since:** 23
 
@@ -307,7 +313,7 @@ Uses a callback to traverse the elements in this container and obtain their posi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | Yes | Callback invoked to traverse the elements in the container. |
+| callbackFn | [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md)&lt;K, V&gt; | Yes | 用于遍历容器中元素的回调函数。 |
 
 ## get
 
@@ -315,7 +321,7 @@ Uses a callback to traverse the elements in this container and obtain their posi
 get(key: K): V
 ```
 
-Obtains the value of the specified key in this HashMap. If nothing is obtained, **undefined** is returned.
+获取指定key对应的value，不存在返回undefined。
 
 **Since:** 8
 
@@ -331,21 +337,21 @@ Obtains the value of the specified key in this HashMap. If nothing is obtained, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Target key. |
+| key | K | Yes | 指定要获取其对应value的键。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | Value obtained. |
+| V | 返回key映射的value值；key不存在时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
+| 10200011 | The get method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -361,7 +367,7 @@ console.info("result:", result);  // result: 356
 get(key: K): V | undefined
 ```
 
-Obtains the value of the specified key in this container. If nothing is obtained, undefined is returned.
+获取此容器中指定key对应的值。如果未获取到，则返回undefined。
 
 **Since:** 23
 
@@ -377,13 +383,13 @@ Obtains the value of the specified key in this container. If nothing is obtained
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Target key. |
+| key | K | Yes | 查找的指定key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | value or undefined |
+| V | 值或undefined。 |
 
 ## hasKey
 
@@ -391,7 +397,7 @@ Obtains the value of the specified key in this container. If nothing is obtained
 hasKey(key: K): boolean
 ```
 
-Checks whether this HashMap has the specified key.
+判断此HashMap中是否包含指定key。
 
 **Since:** 8
 
@@ -407,21 +413,21 @@ Checks whether this HashMap has the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Target key. |
+| key | K | Yes | 指定要查询的键，用于判断HashMap中是否包含该键。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the specified key is contained; otherwise, **false** is returned. |
+| boolean | 包含指定key返回true，不包含指定key返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
+| 10200011 | The hasKey method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -436,7 +442,7 @@ console.info("result:", result);  // result: true
 hasValue(value: V): boolean
 ```
 
-Checks whether this HashMap has the specified value.
+判断此HashMap中是否包含指定value。
 
 **Since:** 8
 
@@ -452,21 +458,21 @@ Checks whether this HashMap has the specified value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | V | Yes | Target value. |
+| value | V | Yes | 指定要查询的值，用于判断HashMap中是否包含该值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the specified value is contained; otherwise, **false** is returned. |
+| boolean | 包含指定的value返回true，不包含指定的value返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
+| 10200011 | The hasValue method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -481,7 +487,7 @@ console.info("result:", result);  // result: true
 isEmpty(): boolean
 ```
 
-Checks whether this HashMap is empty (contains no element).
+判断该HashMap是否为空。
 
 **Since:** 8
 
@@ -497,15 +503,15 @@ Checks whether this HashMap is empty (contains no element).
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the HashMap is empty; otherwise, **false** is returned. |
+| boolean | 为空返回true，不为空返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -519,7 +525,7 @@ console.info("result = ", result) // result = true
 keys(): IterableIterator<K>
 ```
 
-Returns an iterator that contains all the keys in this HashMap.
+返回新迭代器对象，包含此HashMap中所有的键。
 
 **Since:** 8
 
@@ -535,15 +541,15 @@ Returns an iterator that contains all the keys in this HashMap.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K&gt; | Iterator obtained. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 返回包含此HashMap中所有key的迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
+| 10200011 | The keys method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -563,7 +569,7 @@ for (let key of keys) {
 remove(key: K): V
 ```
 
-Removes an element with the specified key from this HashMap.
+删除指定key对应的元素，并返回该元素的value。若key不存在，则返回undefined。
 
 **Since:** 8
 
@@ -579,21 +585,21 @@ Removes an element with the specified key from this HashMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key of the target element. |
+| key | K | Yes | 指定key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | Value of the element. |
+| V | 返回删除元素的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -609,7 +615,7 @@ console.info("result:", result);  // result: 356
 remove(key: K): V | undefined
 ```
 
-Removes an element with the specified key from this container.
+删除此容器中指定key所对应的元素。
 
 **Since:** 23
 
@@ -625,13 +631,13 @@ Removes an element with the specified key from this container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key of the target element. |
+| key | K | Yes | 指定key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | Tthe value associated with the key if it was removed, undefined otherwise |
+| V | 如果删除了指定key则返回其关联的值，否则返回undefined。 |
 
 ## replace
 
@@ -639,7 +645,7 @@ Removes an element with the specified key from this container.
 replace(key: K, newValue: V): boolean
 ```
 
-Replaces the value of a specified key.
+替换指定键对应的值。仅当指定key已存在时才执行替换并返回true，若key不存在则不修改HashMap并返回false。
 
 **Since:** 8
 
@@ -655,22 +661,22 @@ Replaces the value of a specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key of the target element. |
-| newValue | V | Yes | New value of the element. |
+| key | K | Yes | 依据key指定替换的元素，仅当key已存在时替换生效。 |
+| newValue | V | Yes | 替换指定key对应value的新值。仅当指定key已存在时，newValue才会替换原有value；若key不存在，该值不会被设置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is replaced; otherwise, **false** is returned. |
+| boolean | 是否成功对已有数据进行替换，成功返回true，失败返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replace method cannot be bound. |
+| 10200011 | The replace method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -685,7 +691,7 @@ console.info("result:", result);  // result: true
 set(key: K, value: V): Object
 ```
 
-Adds or updates an element in this HashMap.
+向HashMap中添加或更新一个键值对。若key不存在，则添加新的键值对；若key已存在，则更新其对应的value。
 
 **Since:** 8
 
@@ -701,22 +707,22 @@ Adds or updates an element in this HashMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key of the target element. |
-| value | V | Yes | Value of the target element. |
+| key | K | Yes | 添加或更新的键名。若key已存在，将替换对应的value。 |
+| value | V | Yes | 添加或更新的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | HashMap that contains the new element. |
+| Object | 返回包含添加或更新后元素的当前HashMap实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
+| 10200011 | The set method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -730,7 +736,7 @@ console.info("result:", hashMap.get("squirrel"));  // result: 123
 setAll(map: HashMap<K, V>): void
 ```
 
-Adds all elements in a **HashMap** instance to this HashMap.
+将指定HashMap中的所有元素设置到当前HashMap中，若当前HashMap中已存在相同key，则对应value会被覆盖。
 
 **Since:** 8
 
@@ -746,15 +752,15 @@ Adds all elements in a **HashMap** instance to this HashMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | Yes | HashMap** instance whose elements are to be added to the current HashMap. |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | 需要将其全部元素添加到当前HashMap的源HashMap对象。若map与当前HashMap存在重复key，map中的value将替换当前HashMap中对应key的value。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
+| 10200011 | The setAll method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -773,7 +779,7 @@ console.info("result:", result);  // result: true
 values(): IterableIterator<V>
 ```
 
-Returns an iterator that contains all the values in this HashMap.
+返回新迭代器对象，包含此HashMap中所有键对应的值。
 
 **Since:** 8
 
@@ -789,15 +795,15 @@ Returns an iterator that contains all the values in this HashMap.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;V&gt; | Iterator obtained. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 返回包含此HashMap中所有value的迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| 10200011 | The values method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -817,7 +823,7 @@ for (let value of values) {
 length: number
 ```
 
-Number of elements in a HashMap.
+HashMap的元素个数。
 
 **Type:** number
 

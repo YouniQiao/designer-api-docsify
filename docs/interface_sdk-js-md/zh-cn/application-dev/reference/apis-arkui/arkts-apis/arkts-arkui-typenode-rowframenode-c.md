@@ -34,11 +34,11 @@ abstract initialize(options?: RowOptions | RowOptionsV2): RowAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| RowOptionsV2 | 否 | Row节点的选项。 |
+| options | [RowOptions](../arkts-components/arkts-arkui-rowoptions-i.md) \| RowOptionsV2 | 否 | Row节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |  |
 

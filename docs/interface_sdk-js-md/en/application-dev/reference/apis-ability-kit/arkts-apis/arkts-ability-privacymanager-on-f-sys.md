@@ -1,5 +1,11 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## on('activeStateChange')
 
 ```TypeScript
@@ -8,17 +14,12 @@ function on(type: 'activeStateChange',
     callback: Callback<ActiveChangeResponse>): void
 ```
 
-Subscribes to permission usage status change events for a specified permission list. Permission usage status changes are triggered by calls to [startUsingPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[stopUsingPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. After a successful subscription, when the permission usage status changes, the callback function is triggered, returning an  
-[ActiveChangeResponse]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object containing details of the permission usage status change. This API uses an asynchronous callback to return the result.
+订阅指定权限列表的权限使用状态变更事件。权限使用状态变更由[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission)和[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission)调用触发。订阅成功后，当权限使用状态变更时，回调函数会被触发，返回[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)对象，包含权限使用状态变化的详情。使用callback异步回调。
 
-Multiple callback functions are allowed to be subscribed for the same permissionList.
-    **NOTE**  
-    It is not allowed to subscribe the same callback function using two permissionLists that have an intersection.  
-    That is, if two permissionLists contain the same permission name, the same callback function cannot be used for  
-subscription.  
-    This API is typically used in conjunction with [off]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.  
-    When listening is no longer needed, off should be called to unsubscribe.
+允许相同permissionList订阅多个回调函数。
+
+> **说明：**
+> 不允许使用有交集的两个permissionList分别订阅同一个回调函数。即如果两个permissionList包含相同的权限名，则不能使用同一个回调函数进行订阅。该接口通常与[off](privacyManager.off)配套使用，在不再需要监听时应调用off取消订阅。
 
 **Since:** 9
 
@@ -36,24 +37,24 @@ subscription.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activeStateChange' | Yes | Event type. The value is **'activeStateChange'**, which indicates the permission usage change. |
-| permissionList | Array&lt;Permissions&gt; | Yes | List of subscribed permission names. An empty value indicates subscription to the usage status changes of all permissions. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The array length cannot exceed 1024. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ActiveChangeResponse&gt; | Yes | Callback used to return the object of subscribing to state changes of the specified permission. |
+| type | 'activeStateChange' | Yes | 订阅事件类型，固定为'activeStateChange'，权限使用状态变更事件。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 订阅的权限名列表。为空时表示订阅所有的权限使用状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：数组长度不能超过1024。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActiveChangeResponse&gt; | Yes | 回调函数，返回订阅指定权限使用状态变更事件的对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION\_\_\_ESCAPED\_UNDERSCORE\_\_\_USED\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATS". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. |
-| [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
+| 12100008 | Out of memory. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| 12100001 | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
+| 202 | Not system app. Interface caller is not a system app. |
+| 12100004 | The API is used repeatedly with the same input. |
+| 12100005 | The registration time has exceeded the limit. |
+| 12100007 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { privacyManager, Permissions } from '@kit.AbilityKit';
@@ -61,11 +62,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let permissionList: Array<Permissions> = [];
 try {
+    // Subscribe to permission usage status change events
     privacyManager.on('activeStateChange', permissionList, (data: privacyManager.ActiveChangeResponse) => {
-        console.debug(`receive permission state change, data: + ${data}`);
+        console.debug(`receive permission state change, data: ${data}`);
     });
-} catch(err) {
-    console.error(`Catch errcode: ${err.code}, message: ${err.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
 }
 ```
 

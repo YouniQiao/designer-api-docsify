@@ -18,7 +18,7 @@ controller: WebController | WebviewController
 
 Sets the controller of the Web.
 
-**类型：** WebController \| WebviewController
+**类型：** [WebController](arkts-arkweb-webcontroller-c.md) \| WebviewController
 
 **起始版本：** 11
 
@@ -78,7 +78,7 @@ renderMode? : RenderMode
 
 Sets the render mode of the web.
 
-**类型：** RenderMode
+**类型：** [RenderMode](../arkts-apis/arkts-arkweb-web-rendermode-e.md)
 
 **起始版本：** 12
 

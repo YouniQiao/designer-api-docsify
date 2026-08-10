@@ -1,6 +1,6 @@
 # DecorationStyleResult
 
-Provides the text decoration information returned by the backend.
+后端返回的文本装饰线样式信息。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Provides the text decoration information returned by the backend.
 color: ResourceColor
 ```
 
-Color of the text decoration.
+装饰线颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -38,9 +38,9 @@ Color of the text decoration.
 style?: TextDecorationStyle
 ```
 
-Style of the text decoration.
+装饰线样式。
 
-**Type:** TextDecorationStyle
+**Type:** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
 
 **Since:** 12
 
@@ -60,13 +60,13 @@ Style of the text decoration.
 thicknessScale?: number
 ```
 
-Scale factor of the text decoration thickness.
+装饰线粗细缩放比例。
 
-Default value: **1.0**
+默认值：1.0
 
-Value range: [0, +∞)
+取值范围：[0, +∞) 
 
-Note: Negative values are treated as the default value.
+**说明：** 负值按默认值处理。
 
 **Type:** number
 
@@ -88,9 +88,9 @@ Note: Negative values are treated as the default value.
 type: TextDecorationType
 ```
 
-Type of the text decoration.
+装饰线类型。
 
-**Type:** TextDecorationType
+**Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 
 **Since:** 12
 

@@ -1,6 +1,10 @@
 # Matrix2D
 
-Matrix2D** allows you to perform matrix transformation, such as scaling, rotating, and translating.
+用于画布绘制  
+[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、  
+[OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、  
+[CanvasPattern](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和  
+[Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
 
 **Since:** 8
 
@@ -16,7 +20,7 @@ Matrix2D** allows you to perform matrix transformation, such as scaling, rotatin
 constructor()
 ```
 
-Constructs a two-dimensional transformation matrix object.The default value is a matrix whose attributes are all 0.
+构造二维变换矩阵对象，默认值是属性全为0的矩阵。
 
 **Since:** 10
 
@@ -38,7 +42,7 @@ Constructs a two-dimensional transformation matrix object.The default value is a
 constructor(unit: LengthMetricsUnit)
 ```
 
-Constructs a two-dimensional transformation matrix object.The default value is a matrix whose attributes are all 0. The unit mode of the Matrix2D object can be configured.
+构造二维变换矩阵对象，默认值是属性全为0的矩阵，支持配置Matrix2D对象的单位模式。
 
 **Since:** 12
 
@@ -58,7 +62,7 @@ Constructs a two-dimensional transformation matrix object.The default value is a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For abnormal values NaN and Infinity, the default values are used.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: DEFAULT. |
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | 用来配置Matrix2D对象的单位模式，配置后无法动态更改， 配置方法同[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值NaN和Infinity按默认值处理。&lt;br&gt;默认值：DEFAULT |
 
 ## identity
 
@@ -66,7 +70,7 @@ Constructs a two-dimensional transformation matrix object.The default value is a
 identity(): Matrix2D
 ```
 
-Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational translation scaling effect)
+创建单位矩阵。
 
 **Since:** 8
 
@@ -84,7 +88,7 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Identity matrix. |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 单位矩阵。 |
 
 ## invert
 
@@ -92,7 +96,7 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 invert(): Matrix2D
 ```
 
-Transform the current 2D matrix into an inverse matrix (that is, the transformation effect is the opposite effect of the original)
+获取当前矩阵的逆矩阵。
 
 **Since:** 8
 
@@ -110,7 +114,7 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Inverse of the current matrix. |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 逆矩阵结果。 |
 
 ## multiply
 
@@ -118,7 +122,7 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 multiply(other?: Matrix2D): Matrix2D
 ```
 
-The matrix is superimposed in right multiplication mode. When the input parameter is empty,the matrix is superimposed.
+当前矩阵与目标矩阵相乘。
 
 **Since:** 8
 
@@ -136,13 +140,13 @@ The matrix is superimposed in right multiplication mode. When the input paramete
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Target matrix. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **null**. |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | 目标矩阵。 &lt;br&gt;异常值undefined和null按无效值处理。&lt;br&gt;默认值：null |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Matrix of the multiplication result. |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 相乘结果矩阵。 |
 
 ## rotate
 
@@ -150,7 +154,7 @@ The matrix is superimposed in right multiplication mode. When the input paramete
 rotate(rx?: number, ry?: number): Matrix2D
 ```
 
-Adds the rotation effect of the X and Y axes to the current matrix.
+对当前矩阵进行旋转运算。
 
 **Since:** 8
 
@@ -170,14 +174,14 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default unit: vp. |
-| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default unit: vp. |
+| rx | number | No | 旋转点的水平方向坐标，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认单位：vp |
+| ry | number | No | 旋转点的垂直方向坐标，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认单位：vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## rotate
 
@@ -185,7 +189,7 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 rotate(degree: number, rx?: number, ry?: number): Matrix2D
 ```
 
-Adds the rotation effect of the X and Y axes to the current matrix.
+以旋转点为中心，对当前矩阵进行右乘旋转运算。
 
 **Since:** 10
 
@@ -205,15 +209,15 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | number | Yes | Rotation angle. The value range is not limited. Positive angles represent clockwise rotation. You can convert the angle to radians using the following formula: degree Math.PI/180. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default unit: radian. |
-| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default unit: vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0**. |
-| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default unit: vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0**. |
+| degree | number | Yes | 旋转角度，取值范围无限制。顺时针方向为正角度， 可以通过 degree Math.PI / 180 将角度转换为弧度值。 &lt;br&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 &lt;br&gt;默认单位：弧度 |
+| rx | number | No | 旋转点的水平方向坐标，取值范围无限制。&lt;br&gt;默认单位：vp &lt;br&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 &lt;br&gt;默认值：0 |
+| ry | number | No | 旋转点的垂直方向坐标，取值范围无限制。&lt;br&gt;默认单位：vp &lt;br&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 &lt;br&gt;默认值：0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## scale
 
@@ -221,7 +225,7 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 scale(sx?: number, sy?: number): Matrix2D
 ```
 
-Adds the scaling effect of the X and Y axes to the current matrix.
+对当前矩阵进行右乘缩放运算。
 
 **Since:** 8
 
@@ -239,14 +243,14 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | No | Horizontal scaling ratio coefficient. The value range is not limited.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **1.0**. |
-| sy | number | No | Vertical scaling ratio coefficient. The value range is not limited.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **1.0**. |
+| sx | number | No | 水平缩放比例系数，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认值：1.0 |
+| sy | number | No | 垂直缩放比例系数，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认值：1.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## translate
 
@@ -254,7 +258,7 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 translate(tx?: number, ty?: number): Matrix2D
 ```
 
-Performs a left multiplication translation operation on this matrix.
+对当前矩阵进行左乘平移运算。
 
 **Since:** 8
 
@@ -272,14 +276,14 @@ Performs a left multiplication translation operation on this matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tx | number | No | Horizontal translation distance. The value range is not limited.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default unit: vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0**. |
-| ty | number | No | Vertical translation distance. The value range is not limited.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default unit: vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0**. |
+| tx | number | No | 水平方向平移距离，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认单位：vp&lt;br&gt;默认值：0 |
+| ty | number | No | 垂直方向平移距离，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认单位：vp&lt;br&gt;默认值：0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Matrix of the translation result. |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 平移后结果矩阵对象。 |
 
 ## rotateX
 
@@ -287,7 +291,7 @@ Performs a left multiplication translation operation on this matrix.
 rotateX?: number
 ```
 
-Horizontal skew coefficient. The value range is not limited.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+水平倾斜系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **Type:** number
 
@@ -309,7 +313,7 @@ Horizontal skew coefficient. The value range is not limited.\_\_\_HTML\_TAG\_DES
 rotateY?: number
 ```
 
-Vertical skew coefficient. The value range is not limited.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+垂直倾斜系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **Type:** number
 
@@ -331,7 +335,7 @@ Vertical skew coefficient. The value range is not limited.\_\_\_HTML\_TAG\_DESC\
 scaleX?: number
 ```
 
-Horizontal scaling coefficient. The value range is not limited.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+水平缩放系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **Type:** number
 
@@ -353,7 +357,7 @@ Horizontal scaling coefficient. The value range is not limited.\_\_\_HTML\_TAG\_
 scaleY?: number
 ```
 
-Vertical scaling coefficient. The value range is not limited.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+垂直缩放系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **Type:** number
 
@@ -375,7 +379,7 @@ Vertical scaling coefficient. The value range is not limited.\_\_\_HTML\_TAG\_DE
 translateX?: number
 ```
 
-Horizontal translation distance. The value range is unlimited. \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Default unit: vp.
+水平平移距离，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br&gt;默认单位：vp
 
 **Type:** number
 
@@ -397,7 +401,7 @@ Horizontal translation distance. The value range is unlimited. \_\_\_HTML\_TAG\_
 translateY?: number
 ```
 
-Vertical translation distance. The value range is unlimited. \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Default unit: vp.
+垂直平移距离，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br&gt;默认单位：vp
 
 **Type:** number
 

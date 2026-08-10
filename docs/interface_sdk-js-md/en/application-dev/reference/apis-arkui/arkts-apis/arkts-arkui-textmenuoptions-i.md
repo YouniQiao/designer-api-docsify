@@ -1,6 +1,6 @@
 # TextMenuOptions
 
-Provides the options for customizing the context menu on selection.
+菜单选项。
 
 **Since:** 16
 
@@ -16,11 +16,11 @@ Provides the options for customizing the context menu on selection.
 showMode?: TextMenuShowMode
 ```
 
-Menu display mode.
+菜单的显示模式。
 
-Default value: **TextMenuShowMode.DEFAULT
+默认值：TextMenuShowMode.DEFAULT
 
-**Type:** TextMenuShowMode
+**Type:** [TextMenuShowMode](arkts-arkui-textcommon-textmenushowmode-e.md)
 
 **Since:** 16
 

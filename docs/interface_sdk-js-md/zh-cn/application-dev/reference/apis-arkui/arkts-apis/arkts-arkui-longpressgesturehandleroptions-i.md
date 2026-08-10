@@ -1,8 +1,8 @@
 # LongPressGestureHandlerOptions
 
-长按手势处理器配置参数。继承自[BaseHandlerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+长按手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
-**继承/实现关系：** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-component/gesture-basehandleroptions-i.md)
+**继承/实现关系：** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ allowableMovement?: number
 
 长按手势识别器识别的手势的最大移动距离，单位为px。
 
-默认值：15
+默认值：15 
 
 取值范围：(0, +∞)，设置小于等于0时，按照默认值15处理。
 
@@ -46,7 +46,7 @@ duration?: number
 
 触发长按的最短时间，单位为毫秒（ms）。
 
-默认值：500
+默认值：500 
 
 **说明：**
 
@@ -74,7 +74,7 @@ fingers?: number
 
 触发长按的最少手指数，最小为1指， 最大取值为10指。
 
-默认值：1
+默认值：1 
 
 取值范围：[1, 10]
 

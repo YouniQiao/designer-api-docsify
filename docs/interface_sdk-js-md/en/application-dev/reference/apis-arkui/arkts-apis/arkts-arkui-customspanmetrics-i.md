@@ -1,6 +1,6 @@
 # CustomSpanMetrics
 
-Defines the CustomSpanMetrics interface.
+定义自定义绘制Span的尺寸信息接口。
 
 **Since:** 12
 
@@ -16,9 +16,11 @@ Defines the CustomSpanMetrics interface.
 height?: number
 ```
 
-Height of the custom span.
+自定义绘制Span的高。
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+默认值：不传入时默认取Text组件的fontSize值作为CustomSpan的高度。
+
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -40,9 +42,9 @@ Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 width: number
 ```
 
-Width of the custom span.
+自定义绘制Span的宽。
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 

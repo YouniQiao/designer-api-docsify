@@ -1,6 +1,6 @@
 # SystemBarRegionTint (System API)
 
-Describes the callback for a single system bar.
+单个导航栏或状态栏回调信息。
 
 **Since:** 8
 
@@ -12,13 +12,19 @@ Describes the callback for a single system bar.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundColor
 
 ```TypeScript
 backgroundColor?: string
 ```
 
-Background color of the system bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive,for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'0x66000000'**.
+系统栏背景颜色，为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 默认值为'0x66000000'。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Background color of the system bar. The value is a hexadecimal RGB or ARGB color
 contentColor?: string
 ```
 
-Color of the text on the system bar. The default value is **'0xE5FFFFFF'**.
+系统栏文字颜色。 默认值为'0xE5FFFFFF'。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Color of the text on the system bar. The default value is **'0xE5FFFFFF'**.
 isEnable?: boolean
 ```
 
-Whether the system bar is displayed. **true** if displayed, **false** otherwise. The default value is **true**.
+当前系统栏是否显示。true表示显示；false表示不显示。默认值为true。
 
 **Type:** boolean
 
@@ -78,9 +84,9 @@ Whether the system bar is displayed. **true** if displayed, **false** otherwise.
 region?: Rect
 ```
 
-Current position and size of the system bar. The default value is {0,0,0,0}.
+当前系统栏的位置及大小。默认值为{0,0,0,0}。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 8
 
@@ -98,9 +104,9 @@ Current position and size of the system bar. The default value is {0,0,0,0}.
 type: WindowType
 ```
 
-Type of the system bar whose properties are changed. Only the status bar and navigation bar are supported.
+当前属性改变的系统栏类型，仅支持类型为导航栏、状态栏的系统栏。
 
-**Type:** WindowType
+**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
 
 **Since:** 8
 

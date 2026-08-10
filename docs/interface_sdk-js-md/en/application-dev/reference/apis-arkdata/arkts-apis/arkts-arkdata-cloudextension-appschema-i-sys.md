@@ -1,6 +1,6 @@
 # AppSchema (System API)
 
-Represents the application database schema.
+应用数据库模式。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents the application database schema.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name of the application.
+应用包名。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Bundle name of the application.
 databases: Array<Database>
 ```
 
-Database information of the application.
+应用的数据库信息。
 
 **Type:** Array&lt;Database&gt;
 
@@ -58,9 +64,9 @@ Database information of the application.
 version: int
 ```
 
-Version of the database schema.
+数据库模式的版本。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

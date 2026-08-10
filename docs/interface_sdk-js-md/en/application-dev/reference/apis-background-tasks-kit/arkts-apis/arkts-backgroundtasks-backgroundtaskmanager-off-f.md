@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## off('continuousTaskCancel')
 
 ```TypeScript
 function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCancelInfo>): void
 ```
 
-Unsubscribes from continuous task cancellation events. This API uses an asynchronous callback to return the result.
+解除长时任务取消的监听，使用callback异步回调。
 
 **Since:** 15
 
@@ -22,17 +28,17 @@ Unsubscribes from continuous task cancellation events. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskCancel' | Yes | Cancels a continuous task. The value is fixed at **'continuousTaskCancel'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskCancelInfo&gt; | No | Callback for which listening is cancelled. If this parameter is left unspecified, all registered callbacks are cancelled. |
+| type | 'continuousTaskCancel' | Yes | 取消长时任务，固定取值为'continuousTaskCancel'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskCancelInfo&gt; | No | 需要取消监听的回调函数，未传入则取消所有注册回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Callback parameter error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Unregister type has not register; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Unregister type has not register; 3. Parameter verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -62,7 +68,7 @@ export default class EntryAbility extends UIAbility {
 function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSuspendInfo>): void
 ```
 
-Unregisters from the listener for continuous task suspension. This API uses an asynchronous callback to return the result.
+取消长时任务暂停的监听，使用callback异步回调。
 
 **Since:** 20
 
@@ -78,17 +84,17 @@ Unregisters from the listener for continuous task suspension. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskSuspend' | Yes | Event type. The value is fixed at **'continuousTaskSuspend'**, indicating that the continuous task is suspended. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskSuspendInfo&gt; | No | Callback used to unregister from the listener for continuous task suspension. If this parameter is not passed, all listeners are unsubscribed from. |
+| type | 'continuousTaskSuspend' | Yes | 事件回调类型，固定取值为'continuousTaskSuspend'，表示长时任务暂停。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskSuspendInfo&gt; | No | 需要取消监听的回调函数，未传入则取消所有注册的暂停回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -119,7 +125,7 @@ export default class EntryAbility extends UIAbility {
 function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskActiveInfo>): void
 ```
 
-Unregisters from the listener for continuous task activation. This API uses an asynchronous callback to return the result.
+取消长时任务激活的监听，使用callback异步回调。
 
 **Since:** 20
 
@@ -135,17 +141,17 @@ Unregisters from the listener for continuous task activation. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskActive' | Yes | Event type. The value is fixed at **'continuousTaskActive'**, indicating that the continuous task is activated. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskActiveInfo&gt; | No | Callback used to unregister from the listener for continuous task activation. If this parameter is not passed, all listeners are unsubscribed from. |
+| type | 'continuousTaskActive' | Yes | 事件回调类型，固定取值为'continuousTaskActive'，表示长时任务激活。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskActiveInfo&gt; | No | 需要取消监听的回调函数，未传入则取消所有注册的激活回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

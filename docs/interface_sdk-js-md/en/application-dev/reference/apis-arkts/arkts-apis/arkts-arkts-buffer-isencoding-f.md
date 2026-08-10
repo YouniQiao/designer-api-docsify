@@ -1,12 +1,18 @@
 # isEncoding
 
+## Modules to Import
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
+
 ## isEncoding
 
 ```TypeScript
 function isEncoding(encoding: string): boolean
 ```
 
-Checks whether the encoding format is supported.
+判断`encoding`是否为支持的编码格式。
 
 **Since:** 9
 
@@ -22,15 +28,15 @@ Checks whether the encoding format is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | Yes | Encoding format. |
+| encoding | string | Yes | 编码格式，支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the encoding format is supported; otherwise, **false** is returned. |
+| boolean | 是支持的编码格式返回true，反之则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

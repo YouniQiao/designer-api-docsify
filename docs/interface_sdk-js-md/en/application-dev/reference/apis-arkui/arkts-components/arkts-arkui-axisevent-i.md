@@ -1,8 +1,8 @@
 # AxisEvent
 
-Describes the axis event object. Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**Inheritance/Implementation:** AxisEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 17
 
@@ -18,7 +18,7 @@ Describes the axis event object. Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DES
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-Gets the coordinates of the top-left corner of the current component based on its real-time position.
+获取点击位置相对于当前组件实时位置的左上角坐标。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  return the coordinates of the top-left corner of the current component based on its real-time position. |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHorizontalAxisValue
 
@@ -44,7 +44,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 getHorizontalAxisValue(): number
 ```
 
-Obtains the horizontal axis value of this axis event.
+获取此次轴事件的水平轴值。
 
 **Since:** 17
 
@@ -62,7 +62,7 @@ Obtains the horizontal axis value of this axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Horizontal axis value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp |
+| number | 水平轴值。 &lt;br&gt;单位：vp |
 
 ## getPinchAxisScaleValue
 
@@ -70,7 +70,7 @@ Obtains the horizontal axis value of this axis event.
 getPinchAxisScaleValue(): number
 ```
 
-Obtains the two-finger pinch zoom ratio from the axis event.
+返回此次轴事件双指缩放的比例。
 
 **Since:** 21
 
@@ -88,7 +88,7 @@ Obtains the two-finger pinch zoom ratio from the axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Two-finger pinch zoom ratio. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Note: This ratio is calculated as the current distance between two fingers during a touchpad pinch event divided by the initial distance when the fingers first made contact. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| number | 双指缩放比例。&lt;br/&gt; **说明：** 缩放比例指的是触控板双指缩放事件触发过程中双指当前的距离与双指最初按下时的距离的比值。&lt;br/&gt;默认值：0 &lt;br/&gt;取值范围：[0, +∞)&lt;br/&gt; |
 
 ## getVerticalAxisValue
 
@@ -96,7 +96,7 @@ Obtains the two-finger pinch zoom ratio from the axis event.
 getVerticalAxisValue(): number
 ```
 
-Obtains the vertical axis value of this axis event.
+获取此次轴事件的垂直轴值。
 
 **Since:** 17
 
@@ -114,7 +114,7 @@ Obtains the vertical axis value of this axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Vertical axis value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp |
+| number | 垂直轴值。 &lt;br&gt;单位：vp |
 
 ## hasAxis
 
@@ -122,7 +122,7 @@ Obtains the vertical axis value of this axis event.
 hasAxis(axisType: AxisType): boolean
 ```
 
-Checks whether this axis event contains the specified axis type.
+检测此轴事件是否包含指定的轴类型。
 
 **Since:** 22
 
@@ -140,13 +140,13 @@ Checks whether this axis event contains the specified axis type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axisType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Axis type to check for. |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | Yes | 轴事件的轴类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the axis event contains the specified axis type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** if the axis event contains the specified axis type; **false** otherwise. |
+| boolean | 此轴事件是否包含指定的轴类型。 &lt;br&gt;true：包含指定的轴类型；false：不包含指定的轴类型。 |
 
 ## action
 
@@ -154,9 +154,9 @@ Checks whether this axis event contains the specified axis type.
 action: AxisAction
 ```
 
-Action type of the axis event.
+轴事件的动作类型。
 
-**Type:** AxisAction
+**Type:** [AxisAction](../arkts-apis/arkts-arkui-axisaction-e.md)
 
 **Since:** 17
 
@@ -176,9 +176,9 @@ Action type of the axis event.
 displayX: number
 ```
 
-X coordinate of the cursor in the coordinate system of the current application screen.
+鼠标光标在当前应用屏幕坐标系中的X坐标。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -200,9 +200,9 @@ Unit: vp
 displayY: number
 ```
 
-Y coordinate of the cursor in the coordinate system of the current application screen.
+鼠标光标在当前应用屏幕坐标系中的Y坐标。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -224,16 +224,13 @@ Unit: vp
 eventHandleId?: number
 ```
 
-Unique identifier for event processing.
+用于事件处理的唯一标识。
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
-**NOTE**
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
-This field is used when dispatching events using the  
-[postInputEventWithStrategy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API. Each time an event is dispatched, this field is increased by 100000.
-
-Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
 **Type:** number
 
@@ -255,12 +252,11 @@ Using the same **eventHandleId** for multiple event dispatches will cause abnorm
 globalDisplayX?: number
 ```
 
-X coordinate of the cursor in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+鼠标光标在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
-Unit: vp
+单位：vp
 
-Value range: (-∞, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -282,12 +278,11 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the cursor in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
 
-Unit: vp
+单位：vp
 
-Value range: (-∞, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -309,9 +304,9 @@ Value range: (-∞, +∞).
 propagation: Callback<void>
 ```
 
-Enables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
+激活[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 17
 
@@ -331,9 +326,9 @@ Enables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
 scrollStep?: number
 ```
 
-Scroll step length for the mouse wheel.
+鼠标轴滚动步长配置。
 
-Note: Only the mouse wheel is supported. The value ranges from 0 to 65535.
+**说明：** 仅支持鼠标滚轮，取值范围：[0~65535]
 
 **Type:** number
 
@@ -355,9 +350,9 @@ Note: Only the mouse wheel is supported. The value ranges from 0 to 65535.
 windowX: number
 ```
 
-X coordinate of the cursor in the coordinate system of the current application window.
+鼠标光标在当前应用窗口坐标系中的X坐标。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -379,9 +374,9 @@ Unit: vp
 windowY: number
 ```
 
-Y coordinate of the cursor in the coordinate system of the current application window.
+鼠标光标在当前应用窗口坐标系中的Y坐标。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -403,10 +398,9 @@ Unit: vp
 x: number
 ```
 
-X coordinate of the cursor in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ based on the clicked element.
+鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -428,10 +422,9 @@ Unit: vp
 y: number
 ```
 
-Y coordinate of the cursor in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ based on the clicked element.
+鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 

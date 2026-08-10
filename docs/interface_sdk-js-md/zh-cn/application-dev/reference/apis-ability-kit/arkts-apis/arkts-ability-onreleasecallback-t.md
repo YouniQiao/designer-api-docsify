@@ -20,5 +20,5 @@ export type OnReleaseCallback = (msg: string) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msg | string | 是 | 用于传递释放消息。  |
+| msg | string | 是 | 用于传递释放消息。 |
 

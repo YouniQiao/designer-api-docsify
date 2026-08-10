@@ -1,6 +1,6 @@
 # AccessFlagType
 
-Enumerates the locations of the file to verify.
+枚举，表示需要校验的文件位置。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the locations of the file to verify.
 LOCAL = 0
 ```
 
-The file is stored locally.
+文件是否在本地。
 
 **Since:** 12
 

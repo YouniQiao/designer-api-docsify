@@ -1,6 +1,6 @@
 # MediaType
 
-Enum for media type.
+枚举，媒体类型。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enum for media type.
 AUDIO = 0
 ```
 
-Media type for audio.
+音频类型。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Media type for audio.
 VIDEO = 1
 ```
 
-Media type for vide.
+视频类型。
 
 **Since:** 20
 

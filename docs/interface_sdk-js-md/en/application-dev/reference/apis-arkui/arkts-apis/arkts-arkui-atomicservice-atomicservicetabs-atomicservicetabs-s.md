@@ -1,6 +1,10 @@
 # AtomicServiceTabs
 
-AtomicServiceTabs** is an advanced component designed to streamline the use of the **Tabs** component by limiting customization options. It restricts the display to a maximum of five tabs, with fixed styles, positions, and sizes for the tabs.
+AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行自定义的属性进行简化，限制最多显示5个页签，固定页签的样式、位置和大小。
+
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **Since:** 12
 
@@ -12,13 +16,19 @@ AtomicServiceTabs** is an advanced component designed to streamline the use of t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
+```
+
 ## onContentWillChange
 
 ```TypeScript
 onContentWillChange?: OnContentWillChangeCallback
 ```
 
-onContentWillChange callback of tabs when tabbar is clicked.
+Tabs页面切换拦截事件，新页面即将显示时触发该回调。当回调返回false拦截页面切换时，onChange事件不会被触发。默认值为空。
 
 **Since:** 12
 
@@ -36,9 +46,9 @@ onContentWillChange callback of tabs when tabbar is clicked.
 barBackgroundColor?: ResourceColor
 ```
 
-Sets the barBackgroundColor of tabs.
+设置TabBar的背景颜色，默认值为透明。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -58,7 +68,7 @@ Sets the barBackgroundColor of tabs.
 barOverlap?: boolean
 ```
 
-set if need overlap, default value is true.
+设置TabBar是否背景变模糊并叠加在TabContent之上。true表示TabBar背景变模糊并叠加在TabContent之上，false表示TabBar背景不变模糊且不叠加在TabContent之上。默认值为true。
 
 **Type:** boolean
 
@@ -80,9 +90,9 @@ set if need overlap, default value is true.
 controller?: TabsController
 ```
 
-Provide methods for switching tabs.
+Tabs组件的控制器，用于控制页签切换。默认值为new TabsController()。
 
-**Type:** TabsController
+**Type:** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
 
 **Since:** 12
 
@@ -100,7 +110,7 @@ Provide methods for switching tabs.
 index?: number
 ```
 
-Sets the index of tabs.
+设置当前显示页签的索引，索引值从0开始，取值范围为[0, 页签数-1]，最大不超过4。默认值为0。
 
 **Type:** number
 
@@ -122,9 +132,9 @@ Sets the index of tabs.
 layoutMode?: LayoutMode
 ```
 
-Sets the layout mode of the bottom tab bar
+设置底部页签的图片、文字排布的方式，默认值为LayoutMode.VERTICAL。
 
-**Type:** LayoutMode
+**Type:** [LayoutMode](arkts-arkui-tabcontent-layoutmode-e.md)
 
 **Since:** 18
 
@@ -144,9 +154,9 @@ Sets the layout mode of the bottom tab bar
 onChange?: Callback<number>
 ```
 
-onChange callback of tabs when tabs changed.
+Tabs页签切换后触发的事件，回调参数为切换后的页签索引，索引值从0开始。当onContentWillChange回调返回false拦截页面切换时，该事件不会被触发。默认值为空。
 
-**Type:** Callback&lt;number&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -164,9 +174,9 @@ onChange callback of tabs when tabs changed.
 onTabBarClick?: Callback<number>
 ```
 
-onTabBarClick callback of tabs when tabbar is clicked.
+Tabs页签点击后触发的事件，回调参数为被点击页签的索引值，索引值从0开始。默认值为空。
 
-**Type:** Callback&lt;number&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -190,9 +200,9 @@ tabBarOptionsArray: [
   ]
 ```
 
-The tabBar array of tabs.
+页签选项数组，最多支持5个页签。
 
-**Type:** [     TabBarOptions,     TabBarOptions,     TabBarOptions?,     TabBarOptions?,     TabBarOptions?   ]
+**Type:** [     TabBarOptions,     TabBarOptions,     TabBarOptions?,     TabBarOptions?,     TabBarOptions?   ]
 
 **Since:** 12
 
@@ -212,9 +222,9 @@ The tabBar array of tabs.
 tabBarPosition?: TabBarPosition
 ```
 
-set the positions of tabbar.
+设置页签栏位置，默认值为TabBarPosition.BOTTOM。
 
-**Type:** TabBarPosition
+**Type:** [TabBarPosition](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md)
 
 **Since:** 12
 
@@ -240,9 +250,9 @@ tabContents?: [
   ]
 ```
 
-The TabContent array of tabs.
+内容视图容器数组，最多支持5个页签，默认值为空。
 
-**Type:** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
+**Type:** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
 
 **Since:** 12
 

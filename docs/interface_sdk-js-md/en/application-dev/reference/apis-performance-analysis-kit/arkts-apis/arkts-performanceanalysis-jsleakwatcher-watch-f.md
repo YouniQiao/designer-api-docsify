@@ -1,12 +1,18 @@
 # watch
 
+## Modules to Import
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## watch
 
 ```TypeScript
 function watch(obj: object, msg: string): void
 ```
 
-Registers the object to be checked.
+ע������й©�Ķ���
 
 **Since:** 12
 
@@ -20,10 +26,10 @@ Registers the object to be checked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | object | Yes | Name of the object to be checked.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note: You can pass objects of any type. |
-| msg | string | Yes | Custom object information. |
+| obj | object | Yes | ��Ҫ���Ķ���&lt;br&gt;**˵��**���ɴ����κη�null��ArkTS���󣬲�֧��undefined�ͻ������͡� |
+| msg | string | Yes | �Զ��������Ϣ�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 let obj:Object = new Object();

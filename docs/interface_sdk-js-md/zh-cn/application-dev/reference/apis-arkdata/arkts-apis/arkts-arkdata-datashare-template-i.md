@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## 导入模块
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## predicates
 
 ```TypeScript
@@ -17,9 +23,9 @@ predicates: Record<string, string>
 ```
 
 指定模板的谓词。当调用  
-[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的回调时，谓词用于生成数据。仅适用于rdb存储数据。
+[on](dataShare.DataShareHelper.on(type: 'rdbDataChange', uris: Array&lt;string&gt;, templateId: TemplateId, callback: AsyncCallback&lt;RdbDataChangeNode&gt;))的回调时，谓词用于生成数据。仅适用于rdb存储数据。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 10
 
@@ -62,7 +68,7 @@ update?: string
 ```
 
 指定模板的update sql语句，未定义时默认值为空字符串。当调用  
-[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的回调时，update参数用于更新数据。仅适用于rdb存储数据。
+[on](dataShare.DataShareHelper.on(type: 'rdbDataChange', uris: Array&lt;string&gt;, templateId: TemplateId, callback: AsyncCallback&lt;RdbDataChangeNode&gt;))的回调时，update参数用于更新数据。仅适用于rdb存储数据。
 
 **类型：** string
 

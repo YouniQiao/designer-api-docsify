@@ -1,12 +1,18 @@
 # stopCasting (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## stopCasting
 
 ```TypeScript
 function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void
 ```
 
-Stop current cast and disconnect device connection.
+结束投播。结果通过callback异步回调方式返回。
 
 **Since:** 10
 
@@ -22,31 +28,25 @@ Stop current cast and disconnect device connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the sessionId which is to be stopped. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | Yes | 会话令牌。SessionToken表示单个token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当成功结束投播，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600109 | The remote connection is not established |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
-avSession.stopCasting(myToken, (err: BusinessError) => {
-  if (err) {
-    console.error(`stopCasting BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('stopCasting successfully');
-  }
+avSession.stopCasting(myToken, () => {
+    console.info('Succeeded in stopping casting.');
 });
 ```
 
@@ -57,7 +57,7 @@ avSession.stopCasting(myToken, (err: BusinessError) => {
 function stopCasting(session: SessionToken): Promise<void>
 ```
 
-Stop current cast and disconnect device connection.
+结束投播。结果通过Promise异步回调方式返回。
 
 **Since:** 10
 
@@ -73,34 +73,30 @@ Stop current cast and disconnect device connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the sessionId which is to be stopped. |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | Yes | 会话令牌。SessionToken表示单个token。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise对象。当成功结束投播，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600109 | The remote connection is not established |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
 avSession.stopCasting(myToken).then(() => {
-  console.info('stopCasting successfully');
-}).catch((err: BusinessError) => {
-  console.error(`stopCasting BusinessError: code: ${err.code}, message: ${err.message}`);
+  console.info('Succeeded in stopping casting.');
 });
 ```
 

@@ -1,5 +1,11 @@
 # decapsulate
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## decapsulate
 
 ```TypeScript
@@ -7,7 +13,7 @@ function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Arra
       sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>
 ```
 
-Decapsulates a post-quantum cryptography key. This operation can be managed by HUKS or the app itself. If the app chooses to manage the key,the symmetric key is contained in the outData field of HuksReturnResult.
+Post-Quantum Cryptography密钥解封装操作，支持HUKS密钥管理或由应用程序本身决定。如果应用程序选择管理密钥，对称密钥包含在HuksReturnResult的outData字段中。
 
 **Since:** 26.0.0
 
@@ -21,35 +27,35 @@ Decapsulates a post-quantum cryptography key. This operation can be managed by H
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the post-quantum cryptography key. |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Decapsulation properties. |
-| encapData | Uint8Array | Yes | Encapsulated shared key. |
-| sharedKeyAlias | string | No | Alias of the key used for decapsulation. This parameter must be specified if HUKS is used for key management. If the app manages the key by itself, ignore this parameter. |
-| sharedKeyParams | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | No | Properties of the decapsulated key. This parameter must be specified if HUKS is used for key management. If the app manages the key by itself, ignore this parameter. |
+| keyAlias | string | Yes | 后量子加密算法的密钥名称。 |
+| params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | Yes | 表示解封装属性。 |
+| encapData | Uint8Array | Yes | 表示封装后的共享密钥。 |
+| sharedKeyAlias | string | No | 表示解封装密钥的密钥别名。 如果使用HUKS进行密钥管理，则必须指定该参数。 如果应用程序自己管理密钥，则忽略此参数。 |
+| sharedKeyParams | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | No | 表示解封装后的key的属性。 如果使用HUKS进行密钥管理，则必须指定该参数。 如果应用程序自己管理密钥，则忽略此参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise used to return the result. |
+| Promise&lt;HuksReturnResult&gt; | 返回值 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | API is not supported. |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Algorithm mode is not supported |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | The algorithm parameter is missing. Check the algorithm parameter. |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | The algorithm parameter is invalid. Check the algorithm parameter. |
-| [12000004](../errorcode-huks.md#12000004-file-error) | The file operation failed. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | The algorithm engine reports an error. Check the input parameters. |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried key does not exist. Check the key-related parameters. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | The device environment or input parameter is abnormal. |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | Queried credential does not exist |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | Insufficient memory. |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information using UserIAM. |
+| 801 | API is not supported. |
+| 12000018 | Invalid input parameter. |
+| 12000017 | A key with the same alias already exists. |
 | 12000016 | The lock screen password is not set. |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | A key with the same alias already exists. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | Invalid input parameter. |
+| 12000006 | The algorithm engine reports an error. Check the input parameters. |
+| 12000005 | IPC communication failed. |
+| 12000004 | The file operation failed. |
+| 12000003 | The algorithm parameter is invalid. Check the algorithm parameter. |
+| 12000002 | The algorithm parameter is missing. Check the algorithm parameter. |
+| 12000001 | Algorithm mode is not supported |
+| 12000015 | Failed to obtain the security information using UserIAM. |
+| 12000014 | Insufficient memory. |
+| 12000013 | Queried credential does not exist |
+| 12000012 | The device environment or input parameter is abnormal. |
+| 12000011 | The queried key does not exist. Check the key-related parameters. |
 

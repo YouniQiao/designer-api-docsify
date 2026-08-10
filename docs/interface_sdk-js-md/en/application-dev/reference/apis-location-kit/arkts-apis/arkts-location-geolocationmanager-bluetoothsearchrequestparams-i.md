@@ -10,6 +10,12 @@ Indicates request parameters for Bluetooth search function.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## deviceIdArray
 
 ```TypeScript
@@ -40,7 +46,7 @@ rssiThreshold?: int
 
 Indicates the Bluetooth RSSI threshold,only search Bluetooth BSSID with RSSI greater than this threshold.The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

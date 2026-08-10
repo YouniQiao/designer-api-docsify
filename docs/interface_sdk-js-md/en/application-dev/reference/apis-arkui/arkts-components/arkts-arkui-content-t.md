@@ -4,7 +4,7 @@
 declare type Content = import('../api/@ohos.arkui.node').Content
 ```
 
-Defines a base class for **ComponentContent** and **NodeContent**.
+定义ComponentContent和NodeContent的基类。
 
 **Since:** 12
 

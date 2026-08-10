@@ -1,6 +1,6 @@
 # ColorSpace
 
-Enumerates color space types for specifying color rendering modes.
+定义了颜色空间的类型，用于指定颜色显示的模式。
 
 **Since:** 20
 
@@ -16,7 +16,9 @@ Enumerates color space types for specifying color rendering modes.
 BT2020 = 2
 ```
 
-BT2020 ColorSpace.
+BT2020颜色空间，具有更广的色域，适用于高端显示设备。
+
+**系统接口：** 此接口为系统接口。
 
 **Since:** 26.0.0
 

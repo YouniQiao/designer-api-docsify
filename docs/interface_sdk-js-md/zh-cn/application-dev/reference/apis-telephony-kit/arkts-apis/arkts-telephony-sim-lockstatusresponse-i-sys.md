@@ -12,6 +12,12 @@ Defines the personalized lock information.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## remain
 
 ```TypeScript
@@ -20,7 +26,7 @@ remain?: int
 
 Indicates the operations remaining.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -40,7 +46,7 @@ result: int
 
 Indicates the current operation result.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 

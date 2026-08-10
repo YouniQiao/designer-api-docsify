@@ -1,12 +1,13 @@
 # AVTranscoder
 
 视频转码管理类，用于视频转码。在调用AVTranscoder的方法前，需要先通过  
-[createAVTranscoder()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_构建一个AVTranscoder实例。
+[createAVTranscoder()](arkts-media-media-createavtranscoder-f.md#createavtranscoder)构建一个AVTranscoder实例。
 
-视频转码demo可参考：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
-    **说明：**  
-    
-    - 本Interface首批接口从API version 12开始支持。
+视频转码demo可参考：[视频转码开发指导](../../../media/media/using-avtranscoder-for-transcodering.md)
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 12
 
@@ -15,6 +16,12 @@
 <!--Device-unnamed-interface AVTranscoder--><!--Device-unnamed-interface AVTranscoder-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
+
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
 
 ## addWatermark
 
@@ -45,22 +52,22 @@ add a watermark for the AVTranscoder. This API uses a promise to return the resu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | watermark | image.PixelMap | 是 | : Watermark image. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | : Configuration of the watermark. |
+| config | [WatermarkConfiguration](arkts-media-multimedia-media-watermarkconfiguration-i.md) | 是 | : Configuration of the watermark. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise that returns the watermark id. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise that returns the watermark id. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | The parameter check failed, parameter value out of range. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
+| 5400108 | The parameter check failed, parameter value out of range. |
 
 ## cancel
 
@@ -70,8 +77,8 @@ cancel(): Promise<void>
 
 取消视频转码。使用Promise异步回调。
 
-需要在[prepare()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[start()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[pause()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_或[resume()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_事件成功触发后，才能调用cancel方法。
+需要在[prepare()](media.AVTranscoder.prepare)、[start()](media.AVTranscoder.start)、  
+[pause()](media.AVTranscoder.pause)或[resume()](media.AVTranscoder.resume)事件成功触发后，才能调用cancel方法。
 
 **起始版本：** 12
 
@@ -93,9 +100,9 @@ cancel(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## off('complete')
 
@@ -120,7 +127,7 @@ off(type:'complete', callback?: Callback<void>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' | 是 | 转码完成事件回调类型，支持的事件：'complete'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 完成事件回调方法。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 完成事件回调方法。 |
 
 ## off('error')
 
@@ -144,8 +151,8 @@ off(type:'error', callback?: ErrorCallback):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 转码错误事件回调类型'error'。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 'error'：转码过程中发生错误，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 错误事件回调方法。 |
+| type | 'error' | 是 | 转码错误事件回调类型'error'。 &lt;br&gt;- 'error'：转码过程中发生错误，触发该事件。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 错误事件回调方法。 |
 
 ## off('progressUpdate')
 
@@ -170,7 +177,7 @@ off(type:'progressUpdate', callback?: Callback<int>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | 是 | 进度更新事件回调类型，支持的事件：'progressUpdate'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | 否 | 已注册的进度更新事件回调。由于当前回调注册时，仅会保留最后一次注册的回调，建议此参数缺省。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 已注册的进度更新事件回调。由于当前回调注册时，仅会保留最后一次注册的回调，建议此参数缺省。 |
 
 ## offComplete
 
@@ -192,7 +199,7 @@ Unsubscribes from the event indicating that transcoding is complete.This event c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | Callback that has been registered to listen for transcoding completion events. |
 
 ## offError
 
@@ -214,7 +221,7 @@ Unsubscribes from AVTranscoder errors. After the unsubscription, your applicatio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Callback that has been registered to listen for AVTranscoder errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback that has been registered to listen for AVTranscoder errors. |
 
 ## offProgressUpdate
 
@@ -236,7 +243,7 @@ Unsubscribes from transcoding progress updates.This event can be triggered by bo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | 否 | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current allback mechanism. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current allback mechanism. |
 
 ## on('complete')
 
@@ -246,7 +253,7 @@ on(type:'complete', callback: Callback<void>):void
 
 注册转码完成事件，并通过注册的回调方法通知开发者。开发者只能注册一个进度更新事件的回调方法，当开发者重复注册时，以最后一次注册的回调接口为准。使用callback异步回调。
 
-当AVTranscoder上报complete事件时，当前转码操作已完成，开发者需要通过[release()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_退出转码操作。
+当AVTranscoder上报complete事件时，当前转码操作已完成，开发者需要通过[release()](media.AVTranscoder.release)退出转码操作。
 
 **起始版本：** 12
 
@@ -263,7 +270,7 @@ on(type:'complete', callback: Callback<void>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' | 是 | 完成事件回调类型，支持的事件：'complete'，在转码过程中系统会自动触发此事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，返回完成事件回调方法。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，返回完成事件回调方法。 |
 
 ## on('error')
 
@@ -271,7 +278,7 @@ on(type:'complete', callback: Callback<void>):void
 on(type:'error', callback: ErrorCallback):void
 ```
 
-注册AVTranscoder的错误事件，该事件仅用于错误提示。如果AVTranscoder上报error事件，开发者需要通过[release()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_退出转码操作。使用callback异步回调。
+注册AVTranscoder的错误事件，该事件仅用于错误提示。如果AVTranscoder上报error事件，开发者需要通过[release()](media.AVTranscoder.release)退出转码操作。使用callback异步回调。
 
 开发者只能订阅一个错误事件的回调方法，当开发者重复订阅时，以最后一次订阅的回调接口为准。
 
@@ -289,21 +296,21 @@ on(type:'error', callback: ErrorCallback):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 转码错误事件回调类型'error'。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 'error'：录制过程中发生错误，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 转码错误事件回调方法。 |
+| type | 'error' | 是 | 转码错误事件回调类型'error'。 &lt;br&gt;- 'error'：录制过程中发生错误，触发该事件。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 转码错误事件回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Time out. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
+| 401 | The parameter check failed. |
+| 801 | Capability not supported. |
+| 5400102 | Operation not allowed. |
+| 5400103 | I/O error. |
+| 5400101 | No memory. |
+| 5400106 | Unsupported format. |
+| 5400104 | Time out. |
+| 5400105 | Service died. |
 
 ## on('progressUpdate')
 
@@ -328,7 +335,7 @@ on(type:'progressUpdate', callback: Callback<int>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | 是 | 进度更新事件回调类型，支持的事件：'progressUpdate'，在转码过程中系统会自动触发此事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | 是 | 回调函数，返回进度更新事件，函数中的参数number，表示当前转码进度。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回进度更新事件，函数中的参数number，表示当前转码进度。 |
 
 ## onComplete
 
@@ -338,7 +345,7 @@ onComplete(callback: Callback<void>):void
 
 Subscribes to the event indicating that transcoding is complete.An application can subscribe to only one transcoding completion event.When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
-When this event is reported, the current transcoding operation is complete.You need to call [release()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to exit the transcoding.
+When this event is reported, the current transcoding operation is complete.You need to call [release()](arkts-media-multimedia-media-avtranscoder-i.md#release) to exit the transcoding.
 
 **起始版本：** 23
 
@@ -352,7 +359,7 @@ When this event is reported, the current transcoding operation is complete.You n
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Callback that has been registered to listen for transcoding completion events. |
 
 ## onError
 
@@ -360,7 +367,7 @@ When this event is reported, the current transcoding operation is complete.You n
 onError(callback: ErrorCallback):void
 ```
 
-Subscribes to AVTranscoder errors. If this event is reported, call [release()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to exit the transcoding.
+Subscribes to AVTranscoder errors. If this event is reported, call [release()](arkts-media-multimedia-media-avtranscoder-i.md#release)to exit the transcoding.
 
 An application can subscribe to only one AVTranscoder error event.When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
@@ -376,20 +383,20 @@ An application can subscribe to only one AVTranscoder error event.When the appli
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback invoked when the event is triggered. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Time out. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
+| 401 | The parameter check failed. |
+| 801 | Capability not supported. |
+| 5400102 | Operation not allowed. |
+| 5400103 | I/O error. |
+| 5400101 | No memory. |
+| 5400106 | Unsupported format. |
+| 5400104 | Time out. |
+| 5400105 | Service died. |
 
 ## onProgressUpdate
 
@@ -411,7 +418,7 @@ Subscribes to transcoding progress updates. An application can subscribe to only
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | 是 | Callback invoked when the event is triggered. **progress** is a number that indicates the current transcoding progress, in percentage. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback invoked when the event is triggered. **progress** is a number that indicates the current transcoding progress, in percentage. |
 
 ## pause
 
@@ -421,7 +428,7 @@ pause(): Promise<void>
 
 暂停视频转码。使用Promise异步回调。
 
-需要[start()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_事件成功触发后，才能调用pause方法，可以通过调用[resume()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口来恢复转码。
+需要[start()](media.AVTranscoder.start)事件成功触发后，才能调用pause方法，可以通过调用[resume()](media.AVTranscoder.resume)接口来恢复转码。
 
 **起始版本：** 12
 
@@ -443,9 +450,9 @@ pause(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## prepare
 
@@ -469,7 +476,7 @@ prepare(config: AVTranscoderConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 配置视频转码的相关参数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| config | [AVTranscoderConfig](arkts-media-multimedia-media-avtranscoderconfig-i.md) | 是 | 配置视频转码的相关参数。 &lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
 
 **返回值：**
 
@@ -481,11 +488,11 @@ prepare(config: AVTranscoderConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| 401 | The parameter check failed. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400106 | Unsupported format. Returned by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## release
 
@@ -517,8 +524,8 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## resume
 
@@ -528,7 +535,7 @@ resume(): Promise<void>
 
 恢复视频转码。使用Promise异步回调。
 
-需要在[pause()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_事件成功触发后，才能调用resume方法。
+需要在[pause()](media.AVTranscoder.pause)事件成功触发后，才能调用resume方法。
 
 **起始版本：** 12
 
@@ -550,9 +557,9 @@ resume(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## start
 
@@ -562,7 +569,7 @@ start(): Promise<void>
 
 开始视频转码。使用Promise异步回调。
 
-需要[prepare()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_事件成功触发后，才能调用start方法。
+需要[prepare()](media.AVTranscoder.prepare)事件成功触发后，才能调用start方法。
 
 **起始版本：** 12
 
@@ -584,9 +591,9 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## fdDst
 
@@ -602,7 +609,7 @@ fdDst: int
 /AVTranscoder。  
 - 同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频转码数据获取异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -632,7 +639,7 @@ fdSrc: AVFileDescriptor
 /AVTranscoder。  
 - 同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频转码数据获取异常。
 
-**类型：** AVFileDescriptor
+**类型：** [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)
 
 **起始版本：** 12
 

@@ -1,12 +1,18 @@
 # createSystemSoundPlayer
 
+## Modules to Import
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
+
 ## createSystemSoundPlayer
 
 ```TypeScript
 function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 ```
 
-Creates a SystemSoundPlayer instance. This function uses a promise to return the result.This player can be used to play some system sounds for media or camera actions.
+创建系统音效播放器对象。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,15 +26,15 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemSoundPlayer \| null&gt; | Promise used to return the result. If the operation is successful, a SystemSoundPlayer instance is returned. Otherwise, null is returned. The instance is used for loading and playback. |
+| Promise&lt;SystemSoundPlayer \| null&gt; | 成功返回系统音效播放器对象，失败返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

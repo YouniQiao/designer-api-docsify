@@ -1,6 +1,6 @@
 # PenKeyOperationOptions
 
-Pen key operation options.
+笔按键操作选项。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Pen key operation options.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## point
 
 ```TypeScript
 point?: Point
 ```
 
-The coordinate point for air mouse mode operations. Required when key is AIR\_MOUSE in air mouse mode.
+空鼠模式操作的坐标点。当按键为 AIR_MOUSE 并处于空鼠模式时，该坐标点是必需的。
 
-**Type:** Point
+**Type:** [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md)
 
 **Since:** 26.0.0
 

@@ -1,12 +1,18 @@
 # addCheckRule
 
+## Modules to Import
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addCheckRule
 
 ```TypeScript
 function addCheckRule(rule: bigint) : void
 ```
 
-Adds one or more check rules. HiChecker detects unexpected operations or gives feedback based on the added rules.You can use **grep HiChecker** to check for the application running information in the hilog.
+����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м�������������Ӧ���򴥷�ʱ����hilog��grep HiChecker�鿴������Ϣ��
 
 **Since:** 9
 
@@ -20,15 +26,15 @@ Adds one or more check rules. HiChecker detects unexpected operations or gives f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | Rule to be added. |
+| rule | bigint | Yes | ��Ҫ���ӵĹ��� |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
+| 401 | the parameter check failed, only one bigint type parameter is needed |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

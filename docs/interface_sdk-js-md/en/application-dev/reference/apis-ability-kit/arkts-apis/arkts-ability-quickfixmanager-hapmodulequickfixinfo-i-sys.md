@@ -1,6 +1,6 @@
 # HapModuleQuickFixInfo (System API)
 
-Defines the quick fix information at the HAP file level.
+hap级别的快速修复信息。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Defines the quick fix information at the HAP file level.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { quickFixManager } from 'kits/@kit.AbilityKit';
+```
+
 ## moduleName
 
 ```TypeScript
 readonly moduleName: string
 ```
 
-Name of the HAP file.
+HAP的名称。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Name of the HAP file.
 readonly originHapHash: string
 ```
 
-Hash value of the HAP file.
+指示hap的哈希值。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Hash value of the HAP file.
 readonly quickFixFilePath: string
 ```
 
-Installation path of the quick fix patch file.
+指示快速修复文件的安装路径。
 
 **Type:** string
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BusManager.Serial
 
+## 导入模块
+
+```TypeScript
+import { serial } from 'kits/@kit.BasicServicesKit';
+```
+
 ## manufacturer
 
 ```TypeScript
@@ -58,7 +64,7 @@ productId?: int
 
 USB虚拟串口设备的productId
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -78,7 +84,7 @@ vendorId?: int
 
 USB虚拟串口的vendorId
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

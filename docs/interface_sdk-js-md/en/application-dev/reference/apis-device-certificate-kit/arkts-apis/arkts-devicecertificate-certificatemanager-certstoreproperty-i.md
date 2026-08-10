@@ -1,6 +1,6 @@
 # CertStoreProperty
 
-Represents the storage information about a certificate, including the certificate type and location.
+表示获取证书存储位置的参数集合，包括证书的类型及证书的位置。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Represents the storage information about a certificate, including the certificat
 
 **System capability:** SystemCapability.Security.CertificateManager
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certAlg
 
 ```TypeScript
 certAlg?: CertAlgorithm
 ```
 
-Certificate algorithm. This parameter is valid only when **certType** is set to **CA\_CERT\_SYSTEM**. The default value is **INTERNATIONAL**.Devices outside China do not support the SM algorithm.
+表示证书算法类型。仅当certType为CA_CERT_SYSTEM时有效，默认值为INTERNATIONAL。海外设备不支持SM算法。
 
-**Type:** CertAlgorithm
+**Type:** [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md)
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Certificate algorithm. This parameter is valid only when **certType** is set to 
 certScope?: CertScope
 ```
 
-Scope of the certificate. This parameter is mandatory when **certType** is **CA\_CERT\_USER**.
+表示证书的存储位置。当证书类型为CA_CERT_USER时，此项为必选项。
 
-**Type:** CertScope
+**Type:** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 
 **Since:** 18
 
@@ -52,9 +58,9 @@ Scope of the certificate. This parameter is mandatory when **certType** is **CA\
 certType: CertType
 ```
 
-Type of the certificate.
+表示证书的类型。
 
-**Type:** CertType
+**Type:** [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md)
 
 **Since:** 18
 

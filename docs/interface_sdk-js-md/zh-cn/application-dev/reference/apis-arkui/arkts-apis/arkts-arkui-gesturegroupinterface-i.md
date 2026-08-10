@@ -32,14 +32,14 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| gesture | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 是 |  |
+| mode | [GestureMode](arkts-arkui-gesture-gesturemode-e.md) | 是 |  |
+| gesture | [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md)[] | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
 
 ## onCancel
 
@@ -69,5 +69,5 @@ onCancel(event: () => void): GestureGroupInterface
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
 

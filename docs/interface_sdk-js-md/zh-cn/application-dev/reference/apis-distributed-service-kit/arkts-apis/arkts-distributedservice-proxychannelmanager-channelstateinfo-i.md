@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## channelId
 
 ```TypeScript
@@ -18,7 +24,7 @@ channelId: int
 
 代理通道的channelId。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -38,7 +44,7 @@ state: ChannelState
 
 通道的连接状态。
 
-**类型：** ChannelState
+**类型：** [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
 
 **起始版本：** 20
 

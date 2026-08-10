@@ -1,6 +1,6 @@
 # ManagedPolicy
 
-Enumerates enterprise device management policies.
+企业设备管控策略。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates enterprise device management policies.
 DEFAULT = 0
 ```
 
-Default policy with no restrictions applied.
+默认，无管控策略。
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ Default policy with no restrictions applied.
 DISALLOW = 1
 ```
 
-Policy that disallows extensions from external sources to run.
+禁用。
 
 **Since:** 22
 
@@ -52,7 +52,7 @@ Policy that disallows extensions from external sources to run.
 FORCE_OPEN = 2
 ```
 
-Policy that forcibly enables extensions from external sources to run.
+强制开启。
 
 **Since:** 22
 

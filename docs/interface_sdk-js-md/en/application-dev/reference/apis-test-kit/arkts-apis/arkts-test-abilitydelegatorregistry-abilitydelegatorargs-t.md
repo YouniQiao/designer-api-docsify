@@ -4,7 +4,7 @@
 export type AbilityDelegatorArgs = _AbilityDelegatorArgs
 ```
 
-Represents the **AbilityDelegatorArgs** module.
+AbilityDelegatorArgs模块。
 
 **Since:** 9
 

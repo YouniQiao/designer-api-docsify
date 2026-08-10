@@ -1,6 +1,6 @@
 # AVMusicTemplateDescriptor (System API)
 
-Description of the AVMusicTemplate.
+音频模板描述。包含音频模板唯一标识，应用的包名和用户ID。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Description of the AVMusicTemplate.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-App package name.
+应用的包名。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ App package name.
 sessionId: string
 ```
 
-Unique id of the AVMusicTemplate.
+音频模板唯一标识。
 
 **Type:** string
 
@@ -62,9 +68,9 @@ Unique id of the AVMusicTemplate.
 userId: int
 ```
 
-The user id.
+用户ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

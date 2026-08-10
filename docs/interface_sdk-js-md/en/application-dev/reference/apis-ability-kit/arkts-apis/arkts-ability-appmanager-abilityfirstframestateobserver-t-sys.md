@@ -4,7 +4,7 @@
 export type AbilityFirstFrameStateObserver = _AbilityFirstFrameStateObserver.default
 ```
 
-Defines the listener for the completion of the first frame rendering of the UIAbility.
+UIAbility首帧绘制完成事件监听对象。
 
 **Since:** 12
 

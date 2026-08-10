@@ -1,5 +1,11 @@
 # createDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## createDeviceManager
 
 ```TypeScript
@@ -26,15 +32,15 @@ function createDeviceManager(bundleName: string): DeviceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回设备管理器对象实例。 |
+| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | 返回设备管理器对象实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';

@@ -41,7 +41,7 @@ ListItem(value?: ListItemOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| value | [ListItemOptions](../arkts-apis/arkts-arkui-listitem-listitemoptions-i.md) | 否 |  |
 
 ## ListItem
 
@@ -50,9 +50,10 @@ ListItem(value?: string)
 ```
 
 创建ListItem组件。
-    **说明：**  
-    
-    从API version 7开始支持，从API version 10开始废弃。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 10开始废弃。
 
 **起始版本：** 7
 
@@ -76,3 +77,12 @@ ListItem(value?: string)
 
 ## 汇总
 
+- [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md)
+- [SwipeActionItem](arkts-arkui-listitem-swipeactionitem-i.md)
+- [SwipeActionOptions](arkts-arkui-listitem-swipeactionoptions-i.md)
+- [EditMode](arkts-arkui-listitem-editmode-e.md)
+- [ListItemStyle](arkts-arkui-listitem-listitemstyle-e.md)
+- [ListItemSwipeActionDirection](arkts-arkui-listitem-listitemswipeactiondirection-e.md)
+- [Sticky](arkts-arkui-listitem-sticky-e.md)
+- [SwipeActionState](arkts-arkui-listitem-swipeactionstate-e.md)
+- [SwipeEdgeEffect](arkts-arkui-listitem-swipeedgeeffect-e.md)

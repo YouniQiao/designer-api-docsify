@@ -1,9 +1,10 @@
 # DataBlob
 
-Encapsulates binary data. The core field **data** is of the Uint8Array type.
-    **NOTE**  
-    
-    The Uint8Array typed array represents an array of 8-bit unsigned integers.
+二进制数据的封装接口，核心字段data为Uint8Array类型。
+
+> **说明：**
+> 
+> Uint8Array类型数据表示8位无符号整数的数组。
 
 **Since:** 9
 
@@ -13,13 +14,19 @@ Encapsulates binary data. The core field **data** is of the Uint8Array type.
 
 **System capability:** SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## data
 
 ```TypeScript
 data: Uint8Array
 ```
 
-Binary data array.
+数据。
 
 **Type:** Uint8Array
 

@@ -1,8 +1,8 @@
 # ProcessManager
 
-Provides APIs for throwing exceptions during the addition of a process.
+提供进程管理相关接口，包括进程 UID 判断、用户信息查询、线程优先级获取、环境变量获取、进程退出和信号发送等功能。
 
-Construct a **ProcessManager** object.
+通过 `new process.ProcessManager()` 构造 ProcessManager 对象。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Construct a **ProcessManager** object.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## exit
 
 ```TypeScript
 exit(code: number): void
 ```
 
-Terminates this process.
+终止程序。
 
-Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur.
+请谨慎使用此接口，此接口调用后应用会退出，如果输入参数非0，可能会导致数据丢失或出现未定义的运行异常。
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Exercise caution when using this API. After this API is called, the application 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Exit code of the process. |
+| code | number | Yes | 进程的退出码。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -51,11 +57,7 @@ pro.exit(0);
 getEnvironmentVar(name: string): string
 ```
 
-Obtains the value of an environment variable.
-    **NOTE**  
-    
-    Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is  
-    returned.
+获取环境变量对应的值。
 
 **Since:** 9
 
@@ -71,15 +73,15 @@ Obtains the value of an environment variable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Environment variable name. |
+| name | string | Yes | 环境变量名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Value of the environment variable. |
+| string | 返回指定环境变量名对应的值。如果环境变量不存在，返回undefined。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -92,7 +94,7 @@ let pres = pro.getEnvironmentVar("PATH");
 getSystemConfig(name: number): number
 ```
 
-Obtains the system configuration.
+获取系统配置信息。
 
 **Since:** 9
 
@@ -108,15 +110,15 @@ Obtains the system configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | number | Yes | System configuration parameter name. |
+| name | number | Yes | 指定系统配置参数名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | System configuration obtained. If the configuration does not exist, **-1** is returned. |
+| number | 返回系统配置信息。如果配置不存在，返回 -1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -130,7 +132,7 @@ let pres = pro.getSystemConfig(_SC_ARG_MAX);
 getThreadPriority(v: number): number
 ```
 
-Obtains the thread priority based on the specified TID.
+根据指定的 tid 获取线程优先级。
 
 **Since:** 9
 
@@ -146,15 +148,15 @@ Obtains the thread priority based on the specified TID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | number | Yes | TID. |
+| v | number | Yes | 指定的线程 tid。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Priority of the thread. The priority depends on the operating system. |
+| number | 返回线程的优先级。优先级顺序取决于当前操作系统。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -168,7 +170,7 @@ let pres = pro.getThreadPriority(tid);
 getUidForName(v: string): number
 ```
 
-Obtains the UID of a user from the user database of the system based on the specified user name.
+根据指定的用户名，从系统的用户数据库中获取该用户 uid。
 
 **Since:** 9
 
@@ -184,15 +186,15 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | string | Yes | User name. |
+| v | string | Yes | 用户名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | UID of the user. If the user does not exist, **-1** is returned. |
+| number | 获取用户 uid，如果用户不存在则返回 -1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -205,7 +207,7 @@ let pres = pro.getUidForName("tool");
 isAppUid(v: number): boolean
 ```
 
-Checks whether a UID belongs to this application.
+判断 uid 是否属于当前应用程序。
 
 **Since:** 9
 
@@ -221,15 +223,15 @@ Checks whether a UID belongs to this application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | number | Yes | UID. which can be obtained by running **process.uid**. |
+| v | number | Yes | 应用程序的 uid。可通过 process.uid 获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the UID belongs to the application; otherwise, **false** is returned. |
+| boolean | 返回判断结果。如果是应用程序的 uid 则返回 true； 否则返回 false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -245,7 +247,7 @@ console.info("result: " + result); // result: true
 kill(signal: number, pid: number): boolean
 ```
 
-Sends a signal to the specified process to terminate it. Only the current process can be terminated.
+发送信号到指定的进程，结束指定进程（仅支持结束本进程）。
 
 **Since:** 9
 
@@ -261,16 +263,16 @@ Sends a signal to the specified process to terminate it. Only the current proces
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signal | number | Yes | Signal to send. Value range: 1 <= signal <= 64. |
-| pid | number | Yes | PID of the process, to which the signal will be sent. |
+| signal | number | Yes | 发送特定的信号给目标进程。取值范围：1 <= signal <= 64。 |
+| pid | number | Yes | 进程的 id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Signal sending result. The value **true** is returned if the signal is sent successfully; otherwise, **false** is returned. |
+| boolean | 信号是否发送成功。如果信号发送成功则返回 true； 否则返回 false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro = new process.ProcessManager();

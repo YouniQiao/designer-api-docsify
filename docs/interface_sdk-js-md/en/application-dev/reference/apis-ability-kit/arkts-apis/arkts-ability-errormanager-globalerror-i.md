@@ -1,8 +1,8 @@
 # GlobalError
 
-Describes the object related to the exception event name, message, error stack information, exception thread name,and exception thread type.
+有关异常事件名字、消息、错误堆栈信息、异常线程名称和类型的对象。
 
-**Inheritance/Implementation:** GlobalError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-static/error-error-c.md)
+**Inheritance/Implementation:** GlobalError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
 
 **Since:** 18
 
@@ -12,21 +12,27 @@ Describes the object related to the exception event name, message, error stack i
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## instanceName
 
 ```TypeScript
 instanceName: string
 ```
 
-Name of a VM instance.
+表示虚拟机实例名称。
 
-**NOTE**
+**说明：**
 
-Rules for the **instanceName** field in exceptions in the TaskPool thread:
+TaskPool线程中异常的instanceName标识规则：
 
-- **globalErrorOccurred** events: identified as "TaskPool Thread + method name".  
-- **globalUnhandledRejectionDetected** events: identified as "TaskPool Thread + task name".  
-- If identified as "TaskPool Thread" only, the exception occurs within an asynchronous callback.
+- globalErrorOccurred：标识为“TaskPool Thread + 方法名”；  
+- globalUnhandledRejectionDetected：标识为“TaskPool Thread + 任务名”；  
+- 若仅标识为“TaskPool Thread”，则表明异常源于异步回调内部。
 
 **Type:** string
 
@@ -46,9 +52,9 @@ Rules for the **instanceName** field in exceptions in the TaskPool thread:
 instanceType: InstanceType
 ```
 
-Type of the VM instance.
+表示虚拟机的实例类型。
 
-**Type:** InstanceType
+**Type:** [InstanceType](arkts-ability-errormanager-instancetype-e.md)
 
 **Since:** 18
 

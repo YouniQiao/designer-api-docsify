@@ -1,14 +1,20 @@
 # addFreezeExemptedApps
 
+## Modules to Import
+
+```TypeScript
+import { applicationManager } from 'kits/@kit.MDMKit';
+```
+
 ## addFreezeExemptedApps
 
 ```TypeScript
 function addFreezeExemptedApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void
 ```
 
-Adds applications to the background freeze-exempt application list for a specified user. This policy applies only to installed applications. If the parameter list contains uninstalled applications, error code 9200012 will be returned. If an application in the list is uninstalled after the policy is set, the uninstalled application will be removed from the list. Adding an application that already exists in the list will return success, but the application will not be added repeatedly to the policy list.
+为指定用户添加后台防冻结应用名单，仅可对已安装应用设置该策略。若参数列表中存在未安装应用，则返回9200012错误码。若设置策略后，名单中有应用被卸载，则卸载的应用将从名单中移除。若添加已存在于名单中的应用，返回成功，但已设置策略名单中不会重复添加该应用。
 
-Freezing operations include suspending the target application, and managing software resource agents, hardware resource agents, and high-power consumption.
+冻结操作：对目标应用的挂起、软件资源代理、硬件资源代理和高功耗管控等操作。
 
 **Since:** 22
 
@@ -26,19 +32,19 @@ Freezing operations include suspending the target application, and managing soft
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstances | Array&lt;common.ApplicationInstance&gt; | Yes | Array of the background freeze-exempt application list. A maximum of 10 applications can be added to the list. This limit is not divided among users. Specifically, the total number of such applications added by all users cannot exceed 10. For example, if there are already 3 applications in the current list, a maximum of 7 more can be added for a specified user via this API. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| applicationInstances | Array&lt;common.ApplicationInstance&gt; | Yes | 后台防冻结应用名单数组，后台防冻结应用名单最多支持包含10个应用，该数量限制不区分用户，即所有 用户下添加应用的总和的最大限制为10个。例如：若当前名单中已有3个应用，则最多还能通过本接口为指定用户添加7个应用。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200012 | Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { applicationManager, common } from '@kit.MDMKit';

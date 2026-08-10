@@ -4,7 +4,7 @@
 export type Validity = _AppProvisionInfo.Validity
 ```
 
-Defines the validity period in the configuration file.
+配置文件中的有效期。
 
 **Since:** 10
 

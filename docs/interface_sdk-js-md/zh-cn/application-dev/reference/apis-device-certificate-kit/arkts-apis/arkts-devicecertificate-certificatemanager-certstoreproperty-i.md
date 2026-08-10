@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certAlg
 
 ```TypeScript
 certAlg?: CertAlgorithm
 ```
 
-表示证书算法类型。仅当certType为CA\_CERT\_SYSTEM时有效，默认值为INTERNATIONAL。海外设备不支持SM算法。
+表示证书算法类型。仅当certType为CA_CERT_SYSTEM时有效，默认值为INTERNATIONAL。海外设备不支持SM算法。
 
-**类型：** CertAlgorithm
+**类型：** [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md)
 
 **起始版本：** 20
 
@@ -34,9 +40,9 @@ certAlg?: CertAlgorithm
 certScope?: CertScope
 ```
 
-表示证书的存储位置。当证书类型为CA\_CERT\_USER时，此项为必选项。
+表示证书的存储位置。当证书类型为CA_CERT_USER时，此项为必选项。
 
-**类型：** CertScope
+**类型：** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 
 **起始版本：** 18
 
@@ -54,7 +60,7 @@ certType: CertType
 
 表示证书的类型。
 
-**类型：** CertType
+**类型：** [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md)
 
 **起始版本：** 18
 

@@ -10,6 +10,12 @@ Provides the train configuration
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## lossName
 
 ```TypeScript
@@ -38,7 +44,7 @@ optimizationLevel?: OptimizationLevel
 
 Train optimization level
 
-**Type:** OptimizationLevel
+**Type:** [OptimizationLevel](arkts-mindsporelite-mindsporelite-optimizationlevel-e.md)
 
 **Since:** 12
 

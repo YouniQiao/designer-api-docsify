@@ -1,6 +1,6 @@
 # KeyEventInfo
 
-Defines the key event information injected by the user.
+定义用户注入的按键事件信息。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Defines the key event information injected by the user.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## KeyEvent
 
 ```TypeScript
 KeyEvent: KeyEvent
 ```
 
-Key injection description.
+按键注入描述信息。
 
-**Type:** KeyEvent
+**Type:** [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md)
 
 **Since:** 23
 

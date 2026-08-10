@@ -1,12 +1,18 @@
 # setNetFirewallPolicy
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## setNetFirewallPolicy
 
 ```TypeScript
 function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>
 ```
 
-Set firewall policy by userId.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Set firewall policy by userId.&lt;p&gt;Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.&lt;/p&gt;
 
 **Since:** 15
 
@@ -23,7 +29,7 @@ Set firewall policy by userId.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Enables or disa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The firewall policy to be set. |
+| policy | [NetFirewallPolicy](arkts-network-netfirewall-netfirewallpolicy-i.md) | Yes | The firewall policy to be set. |
 
 **Return value:**
 
@@ -35,14 +41,14 @@ Set firewall policy by userId.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Enables or disa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) | The specified user does not exist. |
+| 29400000 | The specified user does not exist. |
+| 401 | Parameter error. |
+| 2100001 | Invalid parameter value. |
+| 2100002 | Operation failed. Cannot connect to service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { netFirewall } from '@kit.NetworkKit';

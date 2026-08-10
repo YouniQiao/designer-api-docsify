@@ -10,6 +10,12 @@ Configuring parameters in single location requests.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## locatingPriority
 
 ```TypeScript
@@ -18,7 +24,7 @@ locatingPriority: LocatingPriority
 
 Priority of the location request.
 
-**Type:** LocatingPriority
+**Type:** [LocatingPriority](arkts-location-geolocationmanager-locatingpriority-e.md)
 
 **Since:** 12
 
@@ -38,7 +44,7 @@ locatingTimeoutMs: int
 
 Timeout of a single location request, in milliseconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

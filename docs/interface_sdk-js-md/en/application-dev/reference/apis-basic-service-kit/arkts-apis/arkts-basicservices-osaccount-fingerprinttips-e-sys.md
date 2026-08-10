@@ -1,6 +1,6 @@
 # FingerprintTips (System API)
 
-Enumerates the tip codes for fingerprint authentication.
+表示指纹身份验证过程中提示的枚举。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the tip codes for fingerprint authentication.
 FINGERPRINT_TIP_GOOD = 0
 ```
 
-The captured image is clear.
+表示采集的图像良好。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ The captured image is clear.
 FINGERPRINT_TIP_IMAGER_DIRTY = 1
 ```
 
-The fingerprint image has big noise due to dirt on the sensor.
+表示由于传感器上可疑或检测到污垢，指纹图像噪声过大。
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ The fingerprint image has big noise due to dirt on the sensor.
 FINGERPRINT_TIP_INSUFFICIENT = 2
 ```
 
-Failed to process the fingerprint image due to big noise.
+表示由于检测到的情况，指纹图像噪声太大，无法处理。
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Failed to process the fingerprint image due to big noise.
 FINGERPRINT_TIP_PARTIAL = 3
 ```
 
-Only part of the fingerprint image is detected.
+表示仅检测到部分指纹图像。
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ Only part of the fingerprint image is detected.
 FINGERPRINT_TIP_TOO_FAST = 4
 ```
 
-The fingerprint image is incomplete due to quick motion.
+表示指纹图像由于快速运动而不完整。
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ The fingerprint image is incomplete due to quick motion.
 FINGERPRINT_TIP_TOO_SLOW = 5
 ```
 
-Failed to read the fingerprint image due to lack of motion.
+表示由于缺少运动，指纹图像无法读取。
 
 **Since:** 8
 
@@ -126,7 +126,7 @@ Failed to read the fingerprint image due to lack of motion.
 FINGERPRINT_TIP_FINGER_DOWN = 6
 ```
 
-Press your finger.
+表示手指落下。
 
 **Since:** 10
 
@@ -144,7 +144,7 @@ Press your finger.
 FINGERPRINT_TIP_FINGER_UP = 7
 ```
 
-Lift your finger.
+表示手指抬起。
 
 **Since:** 10
 

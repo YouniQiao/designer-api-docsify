@@ -1,7 +1,6 @@
 # VideoOutput
 
-VideoOutput implements output information used in a video session. It inherits from  
-[CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+录像会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -12,6 +11,12 @@ VideoOutput implements output information used in a video session. It inherits f
 <!--Device-camera-interface VideoOutput extends CameraOutput--><!--Device-camera-interface VideoOutput extends CameraOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## attachMetaSurface
 
@@ -36,15 +41,15 @@ Attach a meta surface to VideoOutput.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | Surface object id used for receiving meta infos. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Video meta type. |
+| type | [VideoMetaType](arkts-camera-camera-videometatype-e-sys.md) | Yes | Video meta type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## enableAutoDeferredVideoEnhancement
 
@@ -74,9 +79,9 @@ Enable auto deferred video enhancement if needed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## enableAutoVideoFrameRate
 
@@ -106,8 +111,8 @@ Enable auto frame rate for video capture.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## getSupportedRotations
 
@@ -137,7 +142,7 @@ Get supported video rotations.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## getSupportedVideoMetaTypes
 
@@ -167,8 +172,8 @@ Get supported video meta types.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## isAutoDeferredVideoEnhancementEnabled
 
@@ -198,8 +203,8 @@ Confirm if auto deferred video enhancement is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## isAutoDeferredVideoEnhancementSupported
 
@@ -229,8 +234,8 @@ Confirm if auto deferred video enhancement is supported in the specific device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## isAutoVideoFrameRateSupported
 
@@ -260,7 +265,7 @@ Determine whether auto frame rate is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## isRotationSupported
 
@@ -290,7 +295,7 @@ Determine whether video rotation is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## off('deferredVideoEnhancementInfo')
 
@@ -315,13 +320,13 @@ Unsubscribes from deferred video enhancement info callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredVideoEnhancementInfo' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeferredVideoEnhancementInfo&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredVideoEnhancementInfo&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## offDeferredVideoEnhancementInfo
 
@@ -345,13 +350,13 @@ Unsubscribes from deferred video enhancement info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeferredVideoEnhancementInfo&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredVideoEnhancementInfo&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## on('deferredVideoEnhancementInfo')
 
@@ -376,13 +381,13 @@ Subscribes deferred video enhancement info callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredVideoEnhancementInfo' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeferredVideoEnhancementInfo&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredVideoEnhancementInfo&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## onDeferredVideoEnhancementInfo
 
@@ -406,13 +411,13 @@ Subscribes deferred video enhancement info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeferredVideoEnhancementInfo&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredVideoEnhancementInfo&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## setRotation
 
@@ -436,12 +441,12 @@ Set a video rotation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The rotation angle. |
+| rotation | [ImageRotation](arkts-camera-camera-imagerotation-e.md) | Yes | The rotation angle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 202 | Not System Application. |
 

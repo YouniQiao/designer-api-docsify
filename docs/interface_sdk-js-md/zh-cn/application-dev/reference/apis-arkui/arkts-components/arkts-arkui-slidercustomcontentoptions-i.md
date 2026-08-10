@@ -16,11 +16,11 @@ Slider前后缀组件无障碍信息参数。
 accessibilityDescription?: ResourceStr
 ```
 
-无障碍功能详细描述，描述滑块前缀或后缀的功能或用途，供屏幕阅读器等工具使用。
+无障碍功能详细描述，描述滑块前缀或后缀的功能或用途，供屏幕阅读器等工具使用。 
 
 默认值为“单指双击即可执行”。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 20
 
@@ -100,11 +100,11 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-无障碍文本，供屏幕阅读器等工具读取，增强无障碍功能。
+无障碍文本，供屏幕阅读器等工具读取，增强无障碍功能。 
 
 默认值：""
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 20
 

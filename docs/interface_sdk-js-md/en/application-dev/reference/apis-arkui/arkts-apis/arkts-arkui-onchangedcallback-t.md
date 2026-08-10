@@ -4,7 +4,7 @@
 declare type OnChangedCallback = (callbackParam: CallbackParamV2) => void
 ```
 
-Callback method of event registration and processing.
+节点事件回调函数类型。
 
 **Since:** 26.0.0
 
@@ -20,5 +20,5 @@ Callback method of event registration and processing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The result of event.  |
+| callbackParam | [CallbackParamV2](arkts-arkui-arkui-advanced-treeviewv2-callbackparamv2-i.md) | Yes | The result of event. |
 

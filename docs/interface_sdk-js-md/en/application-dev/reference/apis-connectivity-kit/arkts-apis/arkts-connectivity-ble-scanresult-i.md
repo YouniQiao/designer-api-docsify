@@ -10,6 +10,12 @@ Describes the contents of the scan results.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -18,7 +24,7 @@ address?: BluetoothAddress
 
 The address object of a BLE peripheral device, including the address type.
 
-**Type:** BluetoothAddress
+**Type:** [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ advertiseFlags?: int
 
 This field is used to identify the discovery mode and supported capabilities of the peer device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -60,7 +66,7 @@ advertisingDataMap?: Map<int, Uint8Array>
 
 Map of advertising data fields.
 
-**Type:** Map&lt;int, Uint8Array&gt;
+**Type:** ArkTS-Dyn: Map&lt;number, Uint8Array&gt;  <br>ArkTS-Sta：Map&lt;int, Uint8Array&gt;
 
 **Since:** 22
 
@@ -170,7 +176,7 @@ manufacturerDataMap?: Map<int, Uint8Array>
 
 Map of manufacturer data.
 
-**Type:** Map&lt;int, Uint8Array&gt;
+**Type:** ArkTS-Dyn: Map&lt;number, Uint8Array&gt;  <br>ArkTS-Sta：Map&lt;int, Uint8Array&gt;
 
 **Since:** 22
 
@@ -192,7 +198,7 @@ rssi: int
 
 RSSI of the remote device
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -258,7 +264,7 @@ txPowerLevel?: int
 
 The tx power level of the packet in dBm.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

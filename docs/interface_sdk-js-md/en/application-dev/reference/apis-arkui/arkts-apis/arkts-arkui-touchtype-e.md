@@ -1,6 +1,6 @@
 # TouchType
 
-Sets the trigger status type of a touch operation.
+定义触摸操作的触发状态类型。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Sets the trigger status type of a touch operation.
 Down
 ```
 
-A finger is pressed.
+手指按下时触发。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ A finger is pressed.
 Up
 ```
 
-A finger is lifted.
+手指抬起时触发。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ A finger is lifted.
 Move
 ```
 
-A finger moves on the screen in pressed state.
+手指按压并在屏幕上移动时触发。
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ A finger moves on the screen in pressed state.
 Cancel
 ```
 
-A touch event is canceled. Examples: 1. touching the home button to return to the home screen while keeping a finger on the screen; 2. folding a foldable phone to switch to the external screen while keeping a finger on the screen.
+触摸事件取消时触发。例如：1.手指按住屏幕同时点击Home键返回桌面，此时会触发Cancel；2.手指触摸过程中存在手写笔操作，手指的触摸操作会收到Cancel事件。
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ A touch event is canceled. Examples: 1. touching the home button to return to th
 HOVER_ENTER = 9
 ```
 
-A finger is pressed in accessibility mode.
+无障碍模式下，手指按下时触发。
 
 **Since:** 20
 
@@ -108,7 +108,7 @@ A finger is pressed in accessibility mode.
 HOVER_MOVE = 10
 ```
 
-The mouse pointer moves in accessibility mode.
+无障碍模式下，触摸移动时触发。
 
 **Since:** 20
 
@@ -128,7 +128,7 @@ The mouse pointer moves in accessibility mode.
 HOVER_EXIT = 11
 ```
 
-The mouse pointer exits the component in accessibility mode.
+无障碍模式下，抬手时触发。
 
 **Since:** 20
 
@@ -148,7 +148,7 @@ The mouse pointer exits the component in accessibility mode.
 HOVER_CANCEL = 12
 ```
 
-The triggered event is canceled in accessibility mode.
+无障碍模式下，取消当前触发的事件。
 
 **Since:** 20
 

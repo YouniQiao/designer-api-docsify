@@ -4,7 +4,7 @@
 declare type PasteEventCallback = (event?: PasteEvent) => void
 ```
 
-Represents the callback invoked when the paste is about to be completed.
+粘贴完成前，触发回调。
 
 **Since:** 12
 
@@ -22,5 +22,5 @@ Represents the callback invoked when the paste is about to be completed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | User paste event.  |
+| event | [PasteEvent](../arkts-apis/arkts-arkui-richeditor-pasteevent-i.md) | No | 定义用户粘贴事件。省略时，不接收粘贴事件信息。 |
 

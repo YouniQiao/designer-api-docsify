@@ -1,5 +1,11 @@
 # createSubscriber
 
+## Modules to Import
+
+```TypeScript
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createSubscriber
 
 ```TypeScript
@@ -9,7 +15,7 @@ function createSubscriber(
   ): void
 ```
 
-Creates a subscriber. This API uses an asynchronous callback to return the result.
+创建订阅者。使用callback异步回调。
 
 **Since:** 9
 
@@ -25,18 +31,16 @@ Creates a subscriber. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subscriber information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommonEventSubscriber&gt; | Yes | Callback used to receive the created subscriber object. When a common event subscriber is successfully created, **err** is **undefined** and **data** is the **CommonEventSubscriber** object created. If the subscriber fails to be created, **err** is an error object. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Yes | 表示订阅信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventSubscriber&gt; | Yes | 回调函数，用于接收创建的订阅者对象。当公共事件订阅者 创建成功时，err为undefined，data为创建成功的CommonEventSubscriber订阅者对象；创建失败时，err为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -52,51 +56,13 @@ let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
 try {
   commonEventManager.createSubscriber(subscribeInfo,
     (err: BusinessError, commonEventSubscriber: commonEventManager.CommonEventSubscriber) => {
-      if(!err) {
+      if (!err) {
         console.info(`Succeeded in creating subscriber.`);
         subscriber = commonEventSubscriber;
         return;
       }
       console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
     });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Define a subscriber to save the created subscriber object for subsequent subscription and unsubscription.
-let subscriber: commonEventManager.CommonEventSubscriber | null = null;
-
-// Subscriber information.
-let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
-  events: ['event']
-};
-
-// Create a subscriber.
-try {
-  commonEventManager.createSubscriber(
-    subscribeInfo,
-    (err: BusinessError | null,
-      commonEventSubscriber: commonEventManager.CommonEventSubscriber | undefined | null) => {
-      if (!err && commonEventSubscriber) {
-        console.info(`Succeeded in creating subscriber.`);
-        subscriber = commonEventSubscriber; // Type matching.
-        return;
-      }
-
-      if (err) {
-        console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
-      } else {
-        console.error(`Failed to create subscriber: commonEventSubscriber is null or undefined`);
-      }
-    }
-  );
 } catch (error) {
   let err: BusinessError = error as BusinessError;
   console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
@@ -110,7 +76,7 @@ try {
 function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>
 ```
 
-Creates a subscriber. This API uses a promise to return the result.
+创建订阅者。使用Promise异步回调。
 
 **Since:** 9
 
@@ -126,23 +92,21 @@ Creates a subscriber. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subscriber information. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Yes | 表示订阅信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CommonEventSubscriber&gt; | Promise used to return the created subscriber object. |
+| Promise&lt;CommonEventSubscriber&gt; | Promise对象，返回创建成功的订阅者对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -160,28 +124,5 @@ commonEventManager.createSubscriber(subscribeInfo).then((commonEventSubscriber: 
 }).catch((err: BusinessError) => {
   console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
 });
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Define a subscriber to save the created subscriber object for subsequent subscription and unsubscription.
-let subscriber: commonEventManager.CommonEventSubscriber;
-// Subscriber information.
-let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
-  events: ['event']
-};
-// Create a subscriber.
-commonEventManager.createSubscriber(subscribeInfo)
-  .then((commonEventSubscriber: commonEventManager.CommonEventSubscriber) => {
-    console.info(`Succeeded in creating subscriber.`);
-    subscriber = commonEventSubscriber;
-  })
-  .catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`Failed to create subscriber. Code is ${error.code}, message is ${error.message}`);
-  });
 ```
 

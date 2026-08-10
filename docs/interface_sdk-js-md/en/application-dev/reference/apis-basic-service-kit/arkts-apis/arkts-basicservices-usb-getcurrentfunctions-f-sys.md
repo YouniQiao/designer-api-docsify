@@ -1,12 +1,18 @@
 # getCurrentFunctions (System API)
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getCurrentFunctions
 
 ```TypeScript
 function getCurrentFunctions(): FunctionType
 ```
 
-Obtains the numeric mask combination for the USB function list in Device mode.
+在设备模式下，获取当前的USB功能列表的数字组合掩码。
 
 **Since:** 9
 
@@ -26,9 +32,9 @@ Obtains the numeric mask combination for the USB function list in Device mode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Numeric mask combination for the USB function list. |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 当前的USB功能列表的数字组合掩码。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let ret = usb.getCurrentFunctions();

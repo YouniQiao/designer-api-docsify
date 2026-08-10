@@ -1,5 +1,11 @@
 # createVpnObserver
 
+## Modules to Import
+
+```TypeScript
+import { vpnExtension } from 'kits/@kit.NetworkKit';
+```
+
 ## createVpnObserver
 
 ```TypeScript
@@ -22,5 +28,13 @@ Create a VPN observer.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The VpnObserver instance. |
+| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | The VpnObserver instance. |
+
+## Examples
+
+```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
+
+let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
+```
 

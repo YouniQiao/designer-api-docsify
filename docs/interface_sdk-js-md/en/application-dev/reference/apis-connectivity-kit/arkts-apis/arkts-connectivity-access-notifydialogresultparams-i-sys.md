@@ -12,6 +12,12 @@ Describes the result of bluetooth dialog.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { access } from 'kits/@kit.ConnectivityKit';
+```
+
 ## dialogResult
 
 ```TypeScript
@@ -40,7 +46,7 @@ dialogType: DialogType
 
 The type of bluetooth dialog.
 
-**Type:** DialogType
+**Type:** [DialogType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-dialogtype-e.md)
 
 **Since:** 20
 

@@ -10,6 +10,12 @@ class DragController
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## interruptFollowHandMorphDropAnimation
 
 ```TypeScript
@@ -34,5 +40,5 @@ interruptFollowHandMorphDropAnimation(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  后续的变形掉落动画来中断。 |
+| boolean | 后续的变形掉落动画来中断。 |
 

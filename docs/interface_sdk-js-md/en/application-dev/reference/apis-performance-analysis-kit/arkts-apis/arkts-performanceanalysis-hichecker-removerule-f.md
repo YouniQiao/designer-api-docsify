@@ -1,12 +1,22 @@
 # removeRule
 
+## Modules to Import
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## removeRule
 
 ```TypeScript
 function removeRule(rule: bigint): void
 ```
 
-Removes one or more rules. The removed rules will become ineffective.
+> **˵����**
+> 
+> ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule)�����
+
+ɾ��һ�����������ɾ���Ĺ��������������Ч��
 
 **Since:** 8
 
@@ -24,9 +34,9 @@ Removes one or more rules. The removed rules will become ineffective.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | Rule to be removed. |
+| rule | bigint | Yes | ��Ҫɾ���Ĺ��� |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Remove a rule.

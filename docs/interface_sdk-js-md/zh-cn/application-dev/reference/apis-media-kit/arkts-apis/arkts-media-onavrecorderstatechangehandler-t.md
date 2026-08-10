@@ -20,6 +20,6 @@ type OnAVRecorderStateChangeHandler = (state: AVRecorderState, reason: StateChan
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前录制状态。  |
-| reason | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前录制状态的切换原因。  |
+| state | [AVRecorderState](arkts-media-avrecorderstate-t.md) | 是 | 当前录制状态。 |
+| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | 是 | 当前录制状态的切换原因。 |
 

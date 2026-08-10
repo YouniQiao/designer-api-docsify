@@ -1,6 +1,6 @@
 # AssetStatus
 
-Enumerates the asset statuses. Use the enum name rather than the enum value.
+描述资产附件的状态枚举。请使用枚举名称而非枚举值。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the asset statuses. Use the enum name rather than the enum value.
 ASSET_NORMAL
 ```
 
-The asset is in normal status.
+表示资产状态正常。
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ The asset is in normal status.
 ASSET_INSERT
 ```
 
-The asset is to be inserted to the cloud.
+表示资产需要插入到云端。
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ The asset is to be inserted to the cloud.
 ASSET_UPDATE
 ```
 
-The asset is to be updated to the cloud.
+表示资产需要更新到云端。
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ The asset is to be updated to the cloud.
 ASSET_DELETE
 ```
 
-The asset is to be deleted from the cloud.
+表示资产需要在云端删除。
 
 **Since:** 10
 
@@ -80,7 +80,7 @@ The asset is to be deleted from the cloud.
 ASSET_ABNORMAL
 ```
 
-The asset is in abnormal status.
+表示资产状态异常。
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ The asset is in abnormal status.
 ASSET_DOWNLOADING
 ```
 
-The asset is being downloaded to a local device.
+表示资产正在下载到本地设备。
 
 **Since:** 10
 
@@ -112,7 +112,7 @@ The asset is being downloaded to a local device.
 ASSET_TO_DOWNLOAD
 ```
 
-ASSET\_TO\_DOWNLOAD: means the asset will be downloaded.
+表示资产待下载。
 
 **Since:** 26.0.0
 

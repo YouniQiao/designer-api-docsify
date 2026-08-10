@@ -1,6 +1,6 @@
 # DialogSheet
 
-The information of sheet item for action sheet style.
+Dialog sheet的配置项。
 
 **Since:** 26.1.0
 
@@ -10,13 +10,19 @@ The information of sheet item for action sheet style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
 action: VoidCallback
 ```
 
-Callback executed when the sheet item is clicked.
+单击选项时执行的回调。
 
 **Since:** 26.1.0
 
@@ -36,9 +42,9 @@ Callback executed when the sheet item is clicked.
 icon?: ResourceStr
 ```
 
-Icon of the sheet item.
+图标内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
 
@@ -58,9 +64,9 @@ Icon of the sheet item.
 title: ResourceStr
 ```
 
-Title of the sheet item.
+标题内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
 

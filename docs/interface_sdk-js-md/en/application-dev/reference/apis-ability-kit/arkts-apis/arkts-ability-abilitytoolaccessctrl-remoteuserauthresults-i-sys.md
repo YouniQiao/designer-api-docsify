@@ -1,6 +1,6 @@
 # RemoteUserAuthResults (System API)
 
-Remote user authorization results.
+远程用户授权结果。
 
 **Since:** 26.1.0
 
@@ -18,9 +18,9 @@ Remote user authorization results.
 permissionQuery: PermissionQuery
 ```
 
-Permission query information.
+权限查询信息。
 
-**Type:** PermissionQuery
+**Type:** [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)
 
 **Since:** 26.1.0
 
@@ -38,9 +38,9 @@ Permission query information.
 results: RemoteUserAuthItem[]
 ```
 
-Authorization result list.
+授权结果列表。
 
-**Type:** RemoteUserAuthItem[]
+**Type:** [RemoteUserAuthItem](arkts-ability-abilitytoolaccessctrl-remoteuserauthitem-i-sys.md)[]
 
 **Since:** 26.1.0
 

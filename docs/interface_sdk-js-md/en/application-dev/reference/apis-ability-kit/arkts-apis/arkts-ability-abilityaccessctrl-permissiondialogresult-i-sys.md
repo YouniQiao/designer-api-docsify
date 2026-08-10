@@ -1,6 +1,6 @@
 # PermissionDialogResult (System API)
 
-Represents the permission dialog query result.
+表示权限弹窗查询结果。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Represents the permission dialog query result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## detailList
 
 ```TypeScript
 detailList: Array<PermissionDialogDetail>
 ```
 
-List of permission dialog information.
+权限弹窗的信息列表。
 
 **Type:** Array&lt;PermissionDialogDetail&gt;
 

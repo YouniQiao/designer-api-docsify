@@ -1,15 +1,20 @@
 # connectDevice
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## connectDevice
 
 ```TypeScript
 function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 ```
 
-Connects to a USB device.
+打开USB设备。
 
-Before you do this, call [usb.getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the USB device list, and then call  
-[usb.requestRight]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to request the device access permission.
+需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices)获取设备信息以及device，再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright)获取设备请求权限。
 
 **Since:** 8
 
@@ -27,15 +32,15 @@ Before you do this, call [usb.getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | USB device information. |
+| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | Yes | USB设备信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;USBDevicePipe&gt; | USB device pipe for data transfer. |
+| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevicePipe&gt; | 指定的传输通道对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let devicepipe= usb.connectDevice(device);

@@ -1,5 +1,11 @@
 # getDarkMode
 
+## Modules to Import
+
+```TypeScript
+import { uiAppearance } from 'kits/@kit.ArkUI';
+```
+
 ## getDarkMode
 
 ```TypeScript
@@ -20,11 +26,11 @@ Acquire the current dark-mode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | current dark-mode. |
+| [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | current dark-mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| 500001 | Internal error. |
 

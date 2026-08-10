@@ -22,6 +22,6 @@ Define item generator function.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item | T | 是 | item in an array  |
-| index | int | 是 | index corresponding to an array item. 取值限定为整数。  |
+| item | T | 是 | item in an array |
+| index | int | 是 | index corresponding to an array item. 取值限定为整数。 |
 

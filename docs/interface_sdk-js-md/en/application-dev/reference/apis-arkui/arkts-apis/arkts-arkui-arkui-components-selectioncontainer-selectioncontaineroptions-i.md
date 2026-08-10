@@ -1,6 +1,6 @@
 # SelectionContainerOptions
 
-Describes the initialization options of the SelectionContainer component.
+组件初始化配置项。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes the initialization options of the SelectionContainer component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## controller
 
 ```TypeScript
 controller: SelectionContainerController
 ```
 
-SelectionContainer controller.
+SelectionContainer控制器。
 
-**Type:** SelectionContainerController
+**Type:** [SelectionContainerController](arkts-arkui-arkui-components-selectioncontainer-selectioncontainercontroller-c.md)
 
 **Since:** 26.0.0
 

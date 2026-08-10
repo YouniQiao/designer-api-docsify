@@ -1,5 +1,11 @@
 # createX509CRL
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## createX509CRL
 
 ```TypeScript
@@ -22,18 +28,18 @@ function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;X509CRL&gt; | 是 | 回调函数。当创建X.509证书吊销列表对象成功时，err为undefined，data为获取到的 X509CRL实例；否则为错误对象。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509CRL&gt; | 是 | 回调函数。当创建X.509证书吊销列表对象成功时，err为undefined，data为获取到的 X509CRL实例；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 必填参数未指定； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. 参数类型不正确； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. 参数校验失败。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| 801 | 不支持该操作。 |
+| 19020001 | 内存错误。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -95,7 +101,7 @@ function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
 
 **返回值：**
 
@@ -107,13 +113,11 @@ function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 必填参数未指定； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. 参数类型不正确； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. 参数校验失败。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| 801 | 不支持该操作。 |
+| 19020001 | 内存错误。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -149,46 +153,5 @@ cert.createX509CRL(encodingBlob).then(X509CRL => {
 }).catch((error: BusinessError) => {
   console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@ohos.base';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-async function TestCreateX509CRL() {
-  let crlData = '-----BEGIN X509 CRL-----\n' +
-    'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-    'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-    'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-    'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-    '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-    'eavsH0Q3\n' +
-    '-----END X509 CRL-----\n';
-
-  // 证书吊销列表二进制数据，需业务自行赋值。
-  let encodingBlob: cert.EncodingBlob = {
-    data: stringToUint8Array(crlData),
-    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-    encodingFormat: cert.EncodingFormat.FORMAT_PEM
-  };
-  try {
-    let X509CRL = await cert.createX509CRL(encodingBlob);
-    console.info('createX509CRL result: success.');
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`createX509CRL failed, ${e.code}, ${e.message}`);
-  }
-}
 ```
 

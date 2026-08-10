@@ -1,12 +1,18 @@
 # printf
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## printf
 
 ```TypeScript
 function printf(format: string, ...args: Object[]): string
 ```
 
-Formats a string by replacing the placeholders in it.
+通过式样化字符串对输入的内容按特定格式输出。
 
 **Since:** 7
 
@@ -24,16 +30,16 @@ Formats a string by replacing the placeholders in it.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| format | string | Yes | Format string. |
-| args | Object[] | Yes | Data used to replace the placeholders in **format**. If **null** is passed in, the first argument is returned by default. |
+| format | string | Yes | 式样化字符串。 |
+| args | Object[] | Yes | 替换式样化字符串通配符的数据，此参数缺失时，默认返回第一个参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | String containing the formatted values. |
+| string | 按特定格式式样化后的字符串，包含根据格式说明符处理后的参数值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let res = util.printf("%s", "hello world!");

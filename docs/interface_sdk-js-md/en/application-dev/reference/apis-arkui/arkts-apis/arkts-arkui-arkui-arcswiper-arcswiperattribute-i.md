@@ -1,8 +1,8 @@
 # ArcSwiperAttribute
 
-Defines the Arc swiper attribute functions.
+除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性，不支持[Menu控制](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
 
-**Inheritance/Implementation:** ArcSwiperAttribute extends [CommonMethod](arkts-arkui-component/common-commonmethod-i.md)
+**Inheritance/Implementation:** ArcSwiperAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
 **Since:** 26.0.0
 
@@ -12,13 +12,22 @@ Defines the Arc swiper attribute functions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+```
+
 ## customContentTransition
 
 ```TypeScript
 default customContentTransition(transition: ArcSwiperContentAnimatedTransition | undefined): this
 ```
 
-Custom swiper content transition animation.
+自定义ArcSwiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调，开发者可在回调中设置透明度、缩放比例、位移等属性。
+
+在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发  
+[SwiperContentTransitionProxy](../../../reference/apis-arkui/arkui-ts/ts-container-arcswiper copy.md#swipercontenttransitionproxy)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。
 
 **Since:** 26.0.0
 
@@ -34,7 +43,7 @@ Custom swiper content transition animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transition | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | custom content transition animation, undefined means clear transition. |
+| transition | [ArcSwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-arcswipercontentanimatedtransition-i.md) \| undefined | Yes | ArcSwiper自定义切换动画相关信息。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **Return value:**
 
@@ -48,7 +57,7 @@ Custom swiper content transition animation.
 default digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 ```
 
-Set the sensitivity of rotating crown.
+设置旋转表冠的灵敏度。未通过该接口设置时，旋转表冠的灵敏度默认为CrownSensitivity.MEDIUM。
 
 **Since:** 26.0.0
 
@@ -64,7 +73,7 @@ Set the sensitivity of rotating crown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The sensitivity of rotating crown, default value is { MEDIUM }, undefined means setting to default value. |
+| sensitivity | [CrownSensitivity](arkts-arkui-crownsensitivity-e.md) \| undefined | Yes | 旋转表冠的灵敏度。设置不同灵敏度级别可调整表冠滚动的响应速度。&lt;br/&gt;取值为undefined时，旋转表冠的灵敏度为CrownSensitivity.MEDIUM。 |
 
 **Return value:**
 
@@ -78,7 +87,7 @@ Set the sensitivity of rotating crown.
 default disableSwipe(disabled: boolean | undefined): this
 ```
 
-Set whether to disable sliding function.
+设置是否禁用组件滑动切换功能。未通过该接口设置时，默认不禁用组件滑动切换功能。
 
 **Since:** 26.0.0
 
@@ -94,7 +103,7 @@ Set whether to disable sliding function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | boolean \| undefined | Yes | The value indicates whether the sliding function is enabled, default value is { false }, undefined means setting to default value. |
+| disabled | boolean \| undefined | Yes | 是否禁用组件滑动切换功能。设置为true禁用，false不禁用。&lt;br/&gt;取值为undefined时，不禁用组件滑动切换功能。 |
 
 **Return value:**
 
@@ -108,7 +117,7 @@ Set whether to disable sliding function.
 default disableTransitionAnimation(disabled: boolean | undefined): this
 ```
 
-Custom swiper content transition animation.
+是否关闭特殊动效效果。未通过该接口设置时，默认不关闭特殊动效效果。
 
 **Since:** 26.0.0
 
@@ -124,7 +133,7 @@ Custom swiper content transition animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | boolean \| undefined | Yes | the value indicates whether to disable the transition animation, default value is { false }, undefined means setting to default value. |
+| disabled | boolean \| undefined | Yes | 是否关闭特殊动效效果。&lt;br/&gt;传入参数非法时，按false处理。&lt;br/&gt;取值为undefined时，不关闭特殊动效效果。 |
 
 **Return value:**
 
@@ -138,7 +147,7 @@ Custom swiper content transition animation.
 default duration(duration: int | undefined): this
 ```
 
-Set the animation duration of the switch in ms.
+设置子组件切换的动画时长。未通过该接口设置时，默认子组件切换的动画时长为400ms。
 
 **Since:** 26.0.0
 
@@ -154,7 +163,7 @@ Set the animation duration of the switch in ms.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | int \| undefined | Yes | Duration of animation, default value is { 400ms }, undefined means setting to default value. |
+| duration | int \| undefined | Yes | 子组件切换的动画时长。&lt;br/&gt;取值为undefined时，子组件切换的动画时长为400。&lt;br/&gt;单位：毫秒 |
 
 **Return value:**
 
@@ -168,7 +177,7 @@ Set the animation duration of the switch in ms.
 default effectMode(edgeEffect: EdgeEffect | undefined): this
 ```
 
-Set effect when scrolling over edge.
+设置边缘滑动效果。未通过该接口设置时，边缘滑动效果默认为EdgeEffect.Spring。通过[ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md)的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
 
 **Since:** 26.0.0
 
@@ -184,7 +193,7 @@ Set effect when scrolling over edge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | scrolling effect over edge, default value is { EdgeEffect.Spring }, undefined means setting to default value. |
+| edgeEffect | [EdgeEffect](arkts-arkui-edgeeffect-e.md) \| undefined | Yes | 边缘滑动效果。通过ArcSwiperController接口控制翻页时，回弹效果不生效。&lt;br/&gt;取值为undefined时，边缘滑动效果为EdgeEffect.Spring。 |
 
 **Return value:**
 
@@ -198,7 +207,7 @@ Set effect when scrolling over edge.
 default index(index: int | undefined): this
 ```
 
-Set the index value of the displayed subcomponent.
+设置当前在容器中显示的子组件的索引值。设置小于0或大于等于子组件数量时，按照默认值0处理。
 
 **Since:** 26.0.0
 
@@ -214,7 +223,7 @@ Set the index value of the displayed subcomponent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int \| undefined | Yes | The index value of the subcomponents to be displayed, default value is { 0 }, undefined means setting to default value. |
+| index | int \| undefined | Yes | 当前在容器中显示的子组件的索引值。&lt;br/&gt;取值为undefined时，当前在容器中显示的子组件的索引值为0。 |
 
 **Return value:**
 
@@ -228,7 +237,7 @@ Set the index value of the displayed subcomponent.
 default indicator(style: ArcDotIndicator | boolean | undefined): this
 ```
 
-Set whether the indicator is available or set the indicator style.
+设置弧形圆点指示器样式。未通过该接口设置时，默认启用弧形圆点指示器样式。
 
 **Since:** 26.0.0
 
@@ -244,7 +253,7 @@ Set whether the indicator is available or set the indicator style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| boolean \| undefined | Yes | The style information of the indicator or whether to display the indicator, default value is { true }, undefined means setting to default value. |
+| style | [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) \| boolean \| undefined | Yes | ArcDotIndicator：弧形圆点指示器属性及功能。&lt;br/&gt;- boolean：是否启用弧形圆点指示器。 设置为true启用，false不启用。&lt;br/&gt;取值为undefined时，启用弧形圆点指示器样式。&lt;br/&gt;默认类型：ArcDotIndicator |
 
 **Return value:**
 
@@ -258,7 +267,9 @@ Set whether the indicator is available or set the indicator style.
 default onAnimationEnd(handler: AnimationEndHandler | undefined): this
 ```
 
-Called when the swiper animation has ended.
+切换动画结束时触发该回调。默认无回调。
+
+当ArcSwiper切换动效结束时触发，包括动画过程中手势中断，通过[SwiperController](arkts-arkui-swiper-swipercontroller-c.md)调用finishAnimation。参数为动画结束后的index值，多列ArcSwiper时，index为最左侧组件的索引。
 
 **Since:** 26.0.0
 
@@ -274,7 +285,7 @@ Called when the swiper animation has ended.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The handler is used to listen for the animation has ended, undefined means clear handler. |
+| handler | [AnimationEndHandler](arkts-arkui-animationendhandler-t.md) \| undefined | Yes | 切换动画结束时触发该回调。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **Return value:**
 
@@ -288,7 +299,7 @@ Called when the swiper animation has ended.
 default onAnimationStart(handler: AnimationStartHandler | undefined): this
 ```
 
-Called when the swiper animation has started.
+切换动画开始时触发该回调。
 
 **Since:** 26.0.0
 
@@ -304,7 +315,7 @@ Called when the swiper animation has started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The handler is used to listen for the animation has started, undefined means clear handler. |
+| handler | [AnimationStartHandler](arkts-arkui-animationstarthandler-t.md) \| undefined | Yes | 切换动画开始时的回调。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **Return value:**
 
@@ -318,7 +329,9 @@ Called when the swiper animation has started.
 default onChange(handler: IndexChangedHandler | undefined): this
 ```
 
-Called when the index value has changed.
+当前显示子组件的索引变化时触发该事件，返回值为当前显示子组件的索引值。
+
+ArcSwiper组件结合[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，不能在onChange事件里触发子页面UI的刷新。
 
 **Since:** 26.0.0
 
@@ -334,7 +347,7 @@ Called when the index value has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The handler is used to listen for index values that have changed, undefined means clear handler. |
+| handler | [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) \| undefined | Yes | 当前显示的子组件索引变化时触发该事件。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **Return value:**
 
@@ -348,7 +361,7 @@ Called when the index value has changed.
 default onGestureSwipe(handler: GestureSwipeHandler | undefined): this
 ```
 
-Called when swiping the switch using gestures.
+在页面跟手滑动过程中，逐帧触发该回调。
 
 **Since:** 26.0.0
 
@@ -364,7 +377,7 @@ Called when swiping the switch using gestures.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The handler is used to listen for swiping through gestures, undefined means clear handler. |
+| handler | [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md) \| undefined | Yes | 在页面跟手滑动过程中，逐帧触发该回调。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **Return value:**
 
@@ -378,11 +391,11 @@ Called when swiping the switch using gestures.
 default setArcSwiperOptions(controller?: ArcSwiperController): this
 ```
 
-Set arcSwiper options.
+设置arcSwiper选项。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -394,13 +407,13 @@ Set arcSwiper options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | ArcSwiper constructor options |
+| controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No | ArcSwiper构造函数选项 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns instance of ArcSwiperAttribute. |
+| this | 返回ArcSwiperAttribute的实例。 |
 
 ## vertical
 
@@ -408,7 +421,7 @@ Set arcSwiper options.
 default vertical(isVertical: boolean | undefined): this
 ```
 
-Set whether to slide vertically.
+设置是否为纵向滑动。未通过该接口设置时，默认为横向滑动。
 
 **Since:** 26.0.0
 
@@ -424,7 +437,7 @@ Set whether to slide vertically.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isVertical | boolean \| undefined | Yes | The value indicates whether to slide vertically, default value is { false }, undefined means setting to default value. |
+| isVertical | boolean \| undefined | Yes | 是否为纵向滑动。&lt;br/&gt;true表示纵向滑动；false表示横向滑动。&lt;br/&gt;取值为undefined时，进行横向滑动。 |
 
 **Return value:**
 

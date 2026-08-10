@@ -1,5 +1,11 @@
 # LazyVWaterFlowLayout
 
+## 导入模块
+
+```TypeScript
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## LazyVWaterFlowLayout
 
 ```TypeScript
@@ -24,13 +30,13 @@ export declare function LazyVWaterFlowLayout (
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
 
 
 ## LazyVWaterFlowLayout
@@ -60,12 +66,12 @@ export declare function LazyVWaterFlowLayout(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LazyVWaterFlowLayoutAttribute&gt; | 是 | The style to create a LazyVWaterFlowLayout. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyVWaterFlowLayoutAttribute&gt; | 是 | The style to create a LazyVWaterFlowLayout. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | LazyVWaterFlowLayout的属性。 |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | LazyVWaterFlowLayout的属性。 |
 

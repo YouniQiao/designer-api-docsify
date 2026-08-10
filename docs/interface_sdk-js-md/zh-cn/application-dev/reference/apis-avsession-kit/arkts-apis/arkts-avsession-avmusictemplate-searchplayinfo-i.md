@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## musicInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ musicInfo?: SearchPlayMusicInfo
 
 搜播的音频信息。
 
-**类型：** SearchPlayMusicInfo
+**类型：** [SearchPlayMusicInfo](arkts-avsession-avmusictemplate-searchplaymusicinfo-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +44,7 @@ videoInfo?: SearchPlayVideoInfo
 
 搜播的视频信息。
 
-**类型：** SearchPlayVideoInfo
+**类型：** [SearchPlayVideoInfo](arkts-avsession-avmusictemplate-searchplayvideoinfo-i.md)
 
 **起始版本：** 23
 

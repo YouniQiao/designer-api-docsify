@@ -1,14 +1,20 @@
 # getFontDescriptorByFullName
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getFontDescriptorByFullName
 
 ```TypeScript
 function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>
 ```
 
-Obtains the font descriptor based on the font name and type. This API uses a promise to return the result.
+根据字体名称和类型获取字体描述符，使用Promise异步回调。
 
-A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties.
+字体描述符是描述字体特征的数据结构，包含字体外观和属性的详细信息。
 
 **Since:** 14
 
@@ -24,22 +30,22 @@ A font descriptor is a data structure that describes font features. It contains 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ called. |
-| fontType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font type. |
+| fullName | string | Yes | 指定的字体名称。可以使用[getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype)获取。 |
+| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | 指定的字体类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FontDescriptor&gt; | Promise used to return the font descriptor. |
+| Promise&lt;FontDescriptor&gt; | Promise对象，返回指定的字体描述符。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'

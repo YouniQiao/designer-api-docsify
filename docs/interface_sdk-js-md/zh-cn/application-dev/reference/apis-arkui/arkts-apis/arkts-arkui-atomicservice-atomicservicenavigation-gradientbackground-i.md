@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+```
+
 ## alpha
 
 ```TypeScript
@@ -18,7 +24,7 @@ alpha?: GradientAlpha
 
 设置渐变色显示区域的不透明度。
 
-**类型：** GradientAlpha
+**类型：** [GradientAlpha](arkts-arkui-atomicservice-atomicservicenavigation-gradientalpha-e.md)
 
 **起始版本：** 18
 
@@ -38,7 +44,7 @@ backgroundTheme?: BackgroundTheme
 
 导航栏背景底色。
 
-**类型：** BackgroundTheme
+**类型：** [BackgroundTheme](arkts-arkui-atomicservice-atomicservicenavigation-backgroundtheme-e.md)
 
 **起始版本：** 18
 
@@ -58,7 +64,7 @@ mixMode?: MixMode
 
 同时设置primaryColor和secondaryColor时此参数生效。表示双色渐变下两种颜色的融合方式。
 
-**类型：** MixMode
+**类型：** [MixMode](arkts-arkui-atomicservice-atomicservicenavigation-mixmode-e.md)
 
 **起始版本：** 18
 
@@ -78,7 +84,7 @@ primaryColor: ResourceColor
 
 单色渐变色彩值和双色渐变第一色彩值。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
 
@@ -98,7 +104,7 @@ secondaryColor?: ResourceColor
 
 双色渐变色第二色彩值。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
 

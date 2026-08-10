@@ -16,7 +16,7 @@ Enumerates the status code returned after data processing is complete.
 TRANSFER_COMPLETED = 0
 ```
 
-Transfer completed.
+传输完成。
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ Transfer completed.
 TRANSFER_ERROR = 1
 ```
 
-Transfer failed.
+传输失败。
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ Transfer failed.
 TRANSFER_TIMED_OUT = 2
 ```
 
-Transfer timeout.
+传输超时。
 
 **Since:** 18
 
@@ -64,7 +64,7 @@ Transfer timeout.
 TRANSFER_CANCELED = 3
 ```
 
-Transfer canceled.
+传输已被取消。
 
 **Since:** 18
 
@@ -80,7 +80,7 @@ Transfer canceled.
 TRANSFER_STALL = 4
 ```
 
-Transfer stalled (at bulk/interrupt endpoint).
+检测到暂停（批量/中断端点）。
 
 **Since:** 18
 
@@ -96,7 +96,7 @@ Transfer stalled (at bulk/interrupt endpoint).
 TRANSFER_NO_DEVICE = 5
 ```
 
-Device disconnected.
+设备已断开。
 
 **Since:** 18
 
@@ -112,7 +112,7 @@ Device disconnected.
 TRANSFER_OVERFLOW = 6
 ```
 
-Data overflow.
+设备发送的数据比请求的多。
 
 **Since:** 18
 

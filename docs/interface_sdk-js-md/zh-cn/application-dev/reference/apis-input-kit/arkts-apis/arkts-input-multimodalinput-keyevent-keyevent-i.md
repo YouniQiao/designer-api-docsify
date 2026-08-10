@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
+```
+
 ## action
 
 ```TypeScript
@@ -20,7 +26,7 @@ action: Action
 
 按键事件类型。
 
-**类型：** Action
+**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ action: Action
 altKey: boolean
 ```
 
-当前altKey是否处于按下状态。
+当前altKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -60,7 +66,7 @@ true表示处于按下状态，false表示处于抬起状态。
 capsLock: boolean
 ```
 
-当前capsLock是否处于使能状态。
+当前capsLock是否处于使能状态。 
 
 true表示处于使能状态，false表示处于未使能状态。
 
@@ -82,7 +88,7 @@ true表示处于使能状态，false表示处于未使能状态。
 ctrlKey: boolean
 ```
 
-当前ctrlKey是否处于按下状态。
+当前ctrlKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -104,7 +110,7 @@ true表示处于按下状态，false表示处于抬起状态。
 fnKey: boolean
 ```
 
-当前fnKey是否处于按下状态。
+当前fnKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -128,7 +134,7 @@ key: Key
 
 按键。
 
-**类型：** Key
+**类型：** [Key](arkts-input-multimodalinput-keyevent-key-i.md)
 
 **起始版本：** 9
 
@@ -148,7 +154,7 @@ keys: Key[]
 
 当前处于按下状态的按键列表。
 
-**类型：** Key[]
+**类型：** [Key](arkts-input-multimodalinput-keyevent-key-i.md)[]
 
 **起始版本：** 9
 
@@ -166,7 +172,7 @@ keys: Key[]
 logoKey: boolean
 ```
 
-当前logoKey是否处于按下状态。
+当前logoKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -188,7 +194,7 @@ true表示处于按下状态，false表示处于抬起状态。
 numLock: boolean
 ```
 
-当前numLock是否处于使能状态。
+当前numLock是否处于使能状态。 
 
 true表示处于使能状态，false表示处于未使能状态。
 
@@ -210,7 +216,7 @@ true表示处于使能状态，false表示处于未使能状态。
 scrollLock: boolean
 ```
 
-当前scrollLock是否处于使能状态。
+当前scrollLock是否处于使能状态。 
 
 true表示处于使能状态，false表示处于未使能状态。
 
@@ -232,7 +238,7 @@ true表示处于使能状态，false表示处于未使能状态。
 shiftKey: boolean
 ```
 
-当前shiftKey是否处于按下状态。
+当前shiftKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -256,7 +262,7 @@ unicodeChar: int
 
 按键对应的unicode字符。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

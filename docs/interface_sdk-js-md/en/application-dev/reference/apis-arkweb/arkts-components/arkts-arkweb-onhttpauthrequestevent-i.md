@@ -1,6 +1,6 @@
 # OnHttpAuthRequestEvent
 
-Defines the triggered when the browser needs credentials from the user.
+定义通知收到http auth认证请求。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines the triggered when the browser needs credentials from the user.
 handler: HttpAuthHandler
 ```
 
-Defines the http auth request result.
+通知Web组件用户操作行为。
 
-**Type:** HttpAuthHandler
+**Type:** [HttpAuthHandler](../arkts-apis/arkts-arkweb-web-httpauthhandler-c.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Defines the http auth request result.
 host: string
 ```
 
-Host of the page.
+HTTP身份验证凭据应用的主机。
 
 **Type:** string
 
@@ -56,7 +56,7 @@ Host of the page.
 realm: string
 ```
 
-realm of the page.
+HTTP身份验证凭据应用的域。
 
 **Type:** string
 

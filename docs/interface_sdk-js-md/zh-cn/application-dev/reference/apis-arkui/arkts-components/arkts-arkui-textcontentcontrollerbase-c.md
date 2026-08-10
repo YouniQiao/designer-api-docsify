@@ -35,7 +35,7 @@ Add a text.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | text value. |
-| textOperationOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | operation info. |
+| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | 否 | operation info. |
 
 **返回值：**
 
@@ -107,7 +107,7 @@ Delete text in TextRange.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | range for deleting. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | range for deleting. |
 
 ## getCaretOffset
 
@@ -117,7 +117,7 @@ getCaretOffset() : CaretOffset
 
 Get the index and relative position of the CaretOffset.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_If this API is called when the caret position is updated in the current frame, it will not take effect.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_For the Search component, the returned position information is the offset of the first character relative to the search icon in the component.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_If no text is entered in the Search component,the return value contains the position information relative to the component.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_The location information in the return value is the location of the caret relative to the editable component.\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If this API is called when the caret position is updated in the current frame, it will not take effect.&lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component.&lt;br&gt;If no text is entered in the Search component,the return value contains the position information relative to the component.&lt;br&gt;The location information in the return value is the location of the caret relative to the editable component.&lt;/p&gt;
 
 **起始版本：** 12
 
@@ -135,7 +135,7 @@ Get the index and relative position of the CaretOffset.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | index and relative position of the CaretOffset. |
+| [CaretOffset](../arkts-apis/arkts-arkui-common-caretoffset-i.md) | index and relative position of the CaretOffset. |
 
 ## getSelection
 
@@ -161,7 +161,7 @@ Gets the selected range of text content.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | range for selecting. |
+| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | range for selecting. |
 
 ## getTextContentLineCount
 
@@ -197,7 +197,7 @@ getTextContentRect() : RectResult
 
 Get the start and end positions of the text content.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_If no text is entered, the return value contains the position information, but the size is 0.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_The position information is the offset of the first character relative to the editable area.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_For the Search component, the returned position information is the offset of the first character relative to the search icon in the component.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_If there is input, the width in the return value is the fixed width of the editable area.\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If no text is entered, the return value contains the position information, but the size is 0.&lt;br&gt;The position information is the offset of the first character relative to the editable area.&lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component.&lt;br&gt;If there is input, the width in the return value is the fixed width of the editable area.&lt;/p&gt;
 
 **起始版本：** 11
 
@@ -215,7 +215,7 @@ Get the start and end positions of the text content.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Text content rect.The unit of the return value is pixel. |
+| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | Text content rect.The unit of the return value is pixel. |
 
 ## scrollToVisible
 
@@ -241,7 +241,7 @@ scrollToVisible(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 可见区范围。 若该参数非法，则本方法不会生效。 |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 可见区范围。 若该参数非法，则本方法不会生效。 |
 
 ## setStyledPlaceholder
 
@@ -267,5 +267,5 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置提示文本样式的属性字符串 若传入的入参无效，则本接口不生效 |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置提示文本样式的属性字符串 若传入的入参无效，则本接口不生效 |
 

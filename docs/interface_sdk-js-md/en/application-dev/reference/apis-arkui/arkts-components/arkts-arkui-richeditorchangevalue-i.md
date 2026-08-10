@@ -1,6 +1,6 @@
 # RichEditorChangeValue
 
-Image and text change information.
+图文变化信息。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Image and text change information.
 rangeBefore: TextRange
 ```
 
-Start and end indexes of the content to be replaced.
+即将被替换内容的开始和结束索引。
 
-**Type:** TextRange
+**Type:** [TextRange](../arkts-apis/arkts-arkui-textrange-i.md)
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Start and end indexes of the content to be replaced.
 replacedImageSpans: Array<RichEditorImageSpanResult>
 ```
 
-Information about the image span after the change.
+替换后ImageSpan的具体信息。
 
 **Type:** Array&lt;RichEditorImageSpanResult&gt;
 
@@ -60,7 +60,7 @@ Information about the image span after the change.
 replacedSpans: Array<RichEditorTextSpanResult>
 ```
 
-Information about the text span after the change.
+替换后文本Span的具体信息。
 
 **Type:** Array&lt;RichEditorTextSpanResult&gt;
 
@@ -82,7 +82,7 @@ Information about the text span after the change.
 replacedSymbolSpans: Array<RichEditorTextSpanResult>
 ```
 
-Information about the symbol span after the change.
+替换后SymbolSpan的具体信息。
 
 **Type:** Array&lt;RichEditorTextSpanResult&gt;
 

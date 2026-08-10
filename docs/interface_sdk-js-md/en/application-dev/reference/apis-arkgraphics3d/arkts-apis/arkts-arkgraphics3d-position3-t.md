@@ -4,7 +4,7 @@
 export type Position3 = Vec3
 ```
 
-3D position information, the unit is the scene unit in the world coordinate system (e.g., cm, m, km).
+3D位置信息, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
 
 **Since:** 12
 

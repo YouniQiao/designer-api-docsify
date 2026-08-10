@@ -1,6 +1,6 @@
 # BaseShape
 
-继承自[CommonShapeMethod]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。
 
 **继承/实现关系：** BaseShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
@@ -11,6 +11,12 @@
 <!--Device-unnamed-export declare class BaseShape extends CommonShapeMethod--><!--Device-unnamed-export declare class BaseShape extends CommonShapeMethod-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
 
 ## height
 
@@ -34,7 +40,7 @@ height(height: Length): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 形状的高度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为异常值时按照0vp处理。 |
+| height | [Length](arkts-arkui-length-t.md) | 是 | 形状的高度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -64,7 +70,7 @@ size(size: SizeOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 形状的大小。 |
+| size | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 | 形状的大小。 |
 
 **返回值：**
 
@@ -94,7 +100,7 @@ width(width: Length): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 形状的宽度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为异常值时按照0vp处理。 |
+| width | [Length](arkts-arkui-length-t.md) | 是 | 形状的宽度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **返回值：**
 

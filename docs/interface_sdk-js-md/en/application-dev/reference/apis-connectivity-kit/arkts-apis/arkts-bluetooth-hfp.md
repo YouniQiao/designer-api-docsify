@@ -10,6 +10,12 @@ Provides methods to accessing bluetooth call-related capabilities.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hfp } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## index
 
 ```TypeScript
@@ -18,7 +24,7 @@ index: int
 
 表示卡片索引。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -36,7 +42,7 @@ simType: SimType
 
 表示SIM卡类型。
 
-**类型：** SimType
+**类型：** [SimType](arkts-telephony-sim-simtype-e.md)
 
 **起始版本：** 20
 

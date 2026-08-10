@@ -1,12 +1,18 @@
 # isLocalContact
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## isLocalContact
 
 ```TypeScript
 function isLocalContact(id: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the ID of this contact is in the local address book. This API uses an asynchronous callback to return the result.
+判断当前联系人id是否在电话簿中。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,14 +32,16 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | Contact ID. Each contact corresponds to one ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, a Boolean value is returned. The value **true** indicates that the contact ID is in the local phonebook, and the value **false** indicates the opposite. If the operation fails, an error code is returned. |
+| id | number | Yes | 联系人对象的id属性，一个联系人对应一个id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。成功返回布尔值，true代表联系人id在本地电话簿中，false则代表联系人id不在本地电话簿中；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Check whether the contact with ID 1 is in the local phone book.
 contact.isLocalContact(1, (err: BusinessError, data) => {
   if (err) {
     console.error(`Failed to isLocalContact. Code: ${err.code}, message: ${err.message}`);
@@ -50,7 +58,7 @@ contact.isLocalContact(1, (err: BusinessError, data) => {
 function isLocalContact(context: Context, id: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the ID of this contact is in the local address book. This API uses an asynchronous callback to return the result.
+判断当前联系人id是否在电话簿中。使用callback异步回调。
 
 **Since:** 10
 
@@ -66,26 +74,27 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| id | number | Yes | Contact ID. Each contact corresponds to one ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, a Boolean value is returned. The value **true** indicates that the contact ID is in the local phonebook, and the value **false** indicates the opposite. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| id | number | Yes | 联系人对象的id属性，一个联系人对应一个id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。成功返回布尔值，true代表联系人id在本地电话簿中，false则代表联系人id不在本地电话簿中；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.isLocalContact(context, 1, (err: BusinessError, data) => {
   if (err) {
@@ -103,7 +112,7 @@ contact.isLocalContact(context, 1, (err: BusinessError, data) => {
 function isLocalContact(id: number): Promise<boolean>
 ```
 
-Checks whether the ID of this contact is in the local address book. This API uses a promise to return the result.
+判断当前联系人id是否在电话簿中。使用Promise异步回调。
 
 **Since:** 7
 
@@ -123,24 +132,23 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | Contact ID. Each contact corresponds to one ID. |
+| id | number | Yes | 联系人对象的id属性，一个联系人对应一个id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the contact ID is in the local phonebook, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示联系人id在本地电话簿中，返回false表示联系人id不在本地电话簿中。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Check whether the contact with ID 1 is in the local phone book.
 let promise = contact.isLocalContact(1);
 promise.then((data) => {
   console.info(`Succeeded in isLocalContact. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to isLocalContact. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -151,7 +159,7 @@ promise.then((data) => {
 function isLocalContact(context: Context, id: number): Promise<boolean>
 ```
 
-Checks whether the ID of this contact is in the local address book. This API uses a promise to return the result.
+判断当前联系人id是否在电话簿中。使用Promise异步回调。
 
 **Since:** 10
 
@@ -167,37 +175,35 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| id | number | Yes | Contact ID. Each contact corresponds to one ID. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| id | number | Yes | 联系人对象的id属性，一个联系人对应一个id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the contact ID is in the local phonebook, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示联系人id在本地电话簿中，返回false表示联系人id不在本地电话簿中。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
   import { common } from '@kit.AbilityKit';
 
-  // Obtain the context within the component.
+  // Obtain the context in the component.
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
   let promise = contact.isLocalContact(context, 1);
   promise.then((data) => {
     console.info(`Succeeded in isLocalContact. data->${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to isLocalContact. Code: ${err.code}, message: ${err.message}`);
   });
 ```
 

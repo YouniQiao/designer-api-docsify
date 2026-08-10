@@ -1,6 +1,6 @@
 # CollaborateEventInfo
 
-Collaboration event information.
+协同事件信息。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Collaboration event information.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## eventMsg
 
 ```TypeScript
 eventMsg?: string
 ```
 
-Content of a collaboration event.
+表示协同事件的消息内容。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Content of a collaboration event.
 eventType: CollaborateEventType
 ```
 
-Collaboration event type.
+表示协同事件的类型。
 
-**Type:** CollaborateEventType
+**Type:** [CollaborateEventType](arkts-distributedservice-abilityconnectionmanager-collaborateeventtype-e.md)
 
 **Since:** 18
 

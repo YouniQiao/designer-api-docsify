@@ -4,7 +4,7 @@
 export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: string) => boolean
 ```
 
-Invoke upon clicking an item, capable of intercepting the default system menu execution behavior.
+点击菜单项时触发，可拦截系统默认菜单项（如复制、粘贴菜单项）的执行行为。
 
 **Since:** 26.0.0
 
@@ -20,12 +20,12 @@ Invoke upon clicking an item, capable of intercepting the default system menu ex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | current clicked menu item.  |
-| value | string | Yes | selected text content.  |
+| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes | 当前点击的菜单项。 |
+| value | string | Yes | 选中文本内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Return true if the event is consumed; false otherwise.  |
+| boolean | 菜单项点击事件的处理结果。返回true表示事件已处理，返回false表示未处理。 |
 

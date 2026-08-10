@@ -1,6 +1,6 @@
 # PGOParam (System API)
 
-Defines the parameters of the PGO configuration file.
+PGO（Profile-guided Optimization）配置文件参数信息。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Defines the parameters of the PGO configuration file.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## moduleName
 
 ```TypeScript
 moduleName: string
 ```
 
-Module name of the bundle.
+应用程序模块名称。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Module name of the bundle.
 pgoFilePath: string
 ```
 
-Path of the PGO configuration file.
+PGO配置文件路径。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # ConnectErrorCode
 
-Enumerates connection error codes.
+连接的错误码。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates connection error codes.
 CONNECTED_SESSION_EXISTS = 0
 ```
 
-A session already exists between applications.
+表示应用之间存在已连接的会话。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ A session already exists between applications.
 PEER_APP_REJECTED = 1
 ```
 
-The peer application rejects the collaboration request.
+表示对端应用拒绝了协作请求。
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ The peer application rejects the collaboration request.
 LOCAL_WIFI_NOT_OPEN = 2
 ```
 
-Wi-Fi is disabled at the local end.
+表示本端WiFi未开启。
 
 **Since:** 18
 
@@ -70,7 +70,7 @@ Wi-Fi is disabled at the local end.
 PEER_WIFI_NOT_OPEN = 3
 ```
 
-Wi-Fi is disabled at the peer end.
+表示对端WiFi未开启。
 
 **Since:** 18
 
@@ -88,7 +88,7 @@ Wi-Fi is disabled at the peer end.
 PEER_ABILITY_NO_ONCOLLABORATE = 4
 ```
 
-The **onCollaborate** callback is not implemented.
+表示未实现onCollaborate方法。
 
 **Since:** 18
 
@@ -106,7 +106,7 @@ The **onCollaborate** callback is not implemented.
 SYSTEM_INTERNAL_ERROR = 5
 ```
 
-An internal system error occurs.
+表示系统内部错误。
 
 **Since:** 18
 

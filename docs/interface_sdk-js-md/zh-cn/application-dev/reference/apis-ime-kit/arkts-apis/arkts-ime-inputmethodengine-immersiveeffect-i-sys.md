@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## fluidLightMode
 
 ```TypeScript
@@ -20,7 +26,7 @@ fluidLightMode?: FluidLightMode
 
 该属性仅系统应用可以使用。
 
-**类型：** FluidLightMode
+**类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **起始版本：** 20
 

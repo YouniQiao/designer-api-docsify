@@ -12,6 +12,12 @@ SendableLruCache在缓存空间不足时，会用新数据替换近期最少使�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## clear
 
 ```TypeScript
@@ -106,7 +112,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回键值对的迭代器。 |
 
 ## get
 
@@ -397,7 +403,7 @@ remove(key: K): V | undefined
 toString(): string
 ```
 
-返回对象的字符串表示形式，包含缓存最大容量、查询匹配成功次数、查询匹配失败次数及匹配率等信息。返回字符串格式是：SendableLruCache[ maxSize = (maxSize), hits = (hitCount),misses = (missCount), hitRate = (hitRate) ]。(maxSize)表示缓存最大值，(hitCount)表示查询值匹配成功的次数，(missCount)表示查询值匹配失败的次数，(hitRate)表示查询值匹配率。
+返回对象的字符串表示形式，包含缓存最大容量、查询匹配成功次数、查询匹配失败次数及匹配率等信息。返回字符串格式是：SendableLruCache[ maxSize = (maxSize), hits = (hitCount), misses = (missCount), hitRate = (hitRate) ]。(maxSize)表示缓存最大值，(hitCount)表示查询值匹配成功的次数，(missCount)表示查询值匹配失败的次数，(hitRate)表示查询值匹配率。
 
 **起始版本：** 18
 

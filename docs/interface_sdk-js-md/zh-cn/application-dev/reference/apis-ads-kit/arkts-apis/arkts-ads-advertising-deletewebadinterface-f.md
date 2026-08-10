@@ -1,5 +1,11 @@
 # deleteWebAdInterface
 
+## 导入模块
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## deleteWebAdInterface
 
 ```TypeScript
@@ -22,17 +28,17 @@ function deleteWebAdInterface(controller: web_webview.WebviewController, needRef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | web\_webview.WebviewController | 是 | Web组件控制器。 |
+| controller | web_webview.WebviewController | 是 | Web组件控制器。 |
 | needRefresh | boolean | 是 | 是否需要刷新页面（true: 需要；false: 不需要）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| 401 | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| 21800001 | System internal error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

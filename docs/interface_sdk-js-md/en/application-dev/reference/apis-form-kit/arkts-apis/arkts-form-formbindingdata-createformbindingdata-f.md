@@ -1,5 +1,11 @@
 # createFormBindingData
 
+## Modules to Import
+
+```TypeScript
+import { formBindingData } from 'kits/@kit.FormKit';
+```
+
 ## createFormBindingData
 
 ```TypeScript
@@ -22,21 +28,21 @@ Creates a **FormBindingData** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object \| string | No | Data to be displayed on the widget. The value can be an object containing multiple key-value pairs or a JSON string. The image data is identified by **'formImages'**, and the content is multiple key- value pairs, each of which consists of an image identifier and image file descriptor. The final format is {' formImages': {'key1': fd1, 'key2': fd2}}.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_During \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, when the widget UI receives widget data through @LocalStorageProp, the **FormBindingData** object is serialized, that is, the widget data is converted into the string type. Since API version 20, if the widget data is updated using shared memory, the total size of the updated data cannot exceed 10 MB, and the number of updated images cannot exceed 20. In API version 19 and earlier versions, the maximum number of image files is 5, and the maximum memory size of each image is 2 MB. Exceeding this 2 MB limit for any image will result in abnormal display. |
+| obj | Object \| string | No | Data to be displayed on the widget. The value can be an object containing multiple key-value pairs or a JSON string. The image data is identified by **'formImages'**, and the content is multiple key- value pairs, each of which consists of an image identifier and image file descriptor. The final format is {' formImages': {'key1': fd1, 'key2': fd2}}.&lt;br&gt;**NOTE：**&lt;br&gt;During [widget update](../../../form/arkts-ui-widget-interaction-overview.md), when the widget UI receives widget data through @LocalStorageProp, the **FormBindingData** object is serialized, that is, the widget data is converted into the string type. Since API version 20, if the widget data is updated using shared memory, the total size of the updated data cannot exceed 10 MB, and the number of updated images cannot exceed 20. In API version 19 and earlier versions, the maximum number of image files is 5, and the maximum memory size of each image is 2 MB. Exceeding this 2 MB limit for any image will result in abnormal display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FormBindingData** object created based on the passed data. |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | FormBindingData** object created based on the passed data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formBindingData } from '@kit.FormKit';
@@ -50,20 +56,25 @@ struct Index {
   pathDir: string = this.content.filesDir;
 
   createFormBindingData() {
+    let filePath = this.pathDir + "/form.png";
+    let fd: number = -1;
     try {
-      let filePath = this.pathDir + "/form.png";
-      let file = fileIo.openSync(filePath);
+      fd = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY).fd;
       let formImagesParam: Record<string, number> = {
-        'image': file.fd
+        'image': fd
       };
       let createFormBindingDataParam: Record<string, string | Record<string, number>> = {
         'name': '21°',
         'imgSrc': 'image',
         'formImages': formImagesParam
       };
-      formBindingData.createFormBindingData(createFormBindingDataParam);
+      let formBindingDataObj = formBindingData.createFormBindingData(createFormBindingDataParam);
     } catch (error) {
-      console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
+      console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    } finally {
+      if (fd !== -1) {
+        fileIo.closeSync(fd);
+      }
     }
   }
 
@@ -97,11 +108,11 @@ Create an FormBindingData instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the FormBindingData instance data. |
+| obj | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Indicates the FormBindingData instance data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the FormBindingData. |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | Returns the FormBindingData. |
 

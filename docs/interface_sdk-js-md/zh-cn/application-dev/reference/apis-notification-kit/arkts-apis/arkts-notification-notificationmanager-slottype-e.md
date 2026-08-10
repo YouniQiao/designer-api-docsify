@@ -18,7 +18,7 @@
 UNKNOWN_TYPE = 0
 ```
 
-未知类型。该类型对应SlotLevel为LEVEL\_MIN。
+未知类型。该类型对应SlotLevel为LEVEL_MIN。
 
 **起始版本：** 9
 
@@ -36,7 +36,7 @@ UNKNOWN_TYPE = 0
 SOCIAL_COMMUNICATION = 1
 ```
 
-社交通讯。该类型对应SlotLevel为LEVEL\_HIGH。
+社交通讯。该类型对应SlotLevel为LEVEL_HIGH。
 
 **起始版本：** 9
 
@@ -54,7 +54,7 @@ SOCIAL_COMMUNICATION = 1
 SERVICE_INFORMATION = 2
 ```
 
-服务提醒。该类型对应SlotLevel为LEVEL\_HIGH。
+服务提醒。该类型对应SlotLevel为LEVEL_HIGH。
 
 **起始版本：** 9
 
@@ -72,7 +72,7 @@ SERVICE_INFORMATION = 2
 CONTENT_INFORMATION = 3
 ```
 
-内容资讯。该类型对应SlotLevel为LEVEL\_MIN。
+内容资讯。该类型对应SlotLevel为LEVEL_MIN。
 
 **起始版本：** 9
 
@@ -90,7 +90,7 @@ CONTENT_INFORMATION = 3
 LIVE_VIEW = 4
 ```
 
-实况窗。不支持三方应用直接创建该渠道类型通知，可以由系统代理创建后，三方应用发布同ID的通知来更新指定内容。该类型对应SlotLevel为LEVEL\_DEFAULT。
+实况窗。不支持三方应用直接创建该渠道类型通知，可以由系统代理创建后， 三方应用发布同ID的通知来更新指定内容。该类型对应SlotLevel为LEVEL_DEFAULT。
 
 **起始版本：** 11
 
@@ -108,7 +108,7 @@ LIVE_VIEW = 4
 CUSTOMER_SERVICE = 5
 ```
 
-客服消息。该类型用于用户与商家之间的客服消息，需由用户主动发起。该类型对应SlotLevel为LEVEL\_DEFAULT。
+客服消息。该类型用于用户与商家之间的客服消息，需由用户主动发起。 该类型对应SlotLevel为LEVEL_DEFAULT。
 
 **起始版本：** 11
 
@@ -126,7 +126,7 @@ CUSTOMER_SERVICE = 5
 OTHER_TYPES = 0xFFFF
 ```
 
-其他。该类型对应SlotLevel为LEVEL\_MIN。
+其他。该类型对应SlotLevel为LEVEL_MIN。
 
 **起始版本：** 9
 

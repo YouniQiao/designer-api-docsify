@@ -1,6 +1,6 @@
 # ListItemSwipeActionManager
 
-Implements the swipe action menu manager for list items.
+ListItem划出菜单的管理器。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Implements the swipe action menu manager for list items.
 static collapse(node: FrameNode): void
 ```
 
-Collapses the swipe action menu for the specified list item.
+收起指定ListItem的划出菜单。
 
 **Since:** 21
 
@@ -34,14 +34,14 @@ Collapses the swipe action menu for the specified list item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The ListItem FrameNode. |
+| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | Yes | ListItem节点对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
-| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
+| 100023 | The component type of the node is incorrect. |
+| 106203 | The node not mounted to component tree. |
 
 ## expand
 
@@ -49,7 +49,11 @@ Collapses the swipe action menu for the specified list item.
 static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 ```
 
-Expands the swipe action menu for the specified list item.
+展开指定ListItem的划出菜单。
+
+> **说明：**
+> 
+> - 如果List组件cachedCount属性show参数设置为true，List显示区域外已预加载完成的ListItem支持展开，否则List显示区域外节点不支持展开。
 
 **Since:** 21
 
@@ -67,13 +71,13 @@ Expands the swipe action menu for the specified list item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The ListItem FrameNode. |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The direction to expand. |
+| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | Yes | ListItem节点对象。 |
+| direction | [ListItemSwipeActionDirection](../arkts-apis/arkts-arkui-listitem-listitemswipeactiondirection-e.md) | Yes | ListItem划出菜单的展开方向。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
-| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
+| 100023 | The component type of the node is incorrect. |
+| 106203 | The node not mounted to component tree. |
 

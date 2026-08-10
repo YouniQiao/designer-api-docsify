@@ -1,6 +1,6 @@
 # SheetMode
 
-Define the display mode of the sheet.
+半模态的显示层级模式。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Define the display mode of the sheet.
 OVERLAY = 0
 ```
 
-The sheet is displayed at the top of the window corresponding to the current **UIContext** instance,above all pages. It is displayed at the same level as dialog boxes.
+设置半模态面板在当前UIContext内顶层显示，在所有页面之上。和弹窗类组件显示在一个层级。
 
 **Since:** 12
 
@@ -36,9 +36,15 @@ The sheet is displayed at the top of the window corresponding to the current **U
 EMBEDDED = 1
 ```
 
-The sheet is displayed at the top of the current page.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Currently, the sheet can only be mounted on a **Page**  
-or **NavDestination** node, with priority given to the **NavDestination**  
-node if it is present. This means that, the sheet can only be displayed at the top of these two types of pages.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_ In this mode, new pages can overlay the sheet, and when the user returns to the previous page, the sheet remains present without losing its content.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ In this mode, you must ensure that the target page node, such as the **Page** node, has been attached to the tree before bringing up the sheet; otherwise, the sheet will not be able to be attached to the corresponding page node.
+设置半模态面板在当前页面内的顶层显示。 
+
+**说明：**
+
+目前只支持挂载在Page或者NavDestination节点上，若有NavDestination优先挂载在NavDestination上。只支持在这两种页面内顶层显示。
+
+该模式下新起的页面可以覆盖在半模态弹窗上，页面返回后该半模态依旧存在，半模态面板内容不丢失。 
+
+该模式下需确保目标页面节点如Page节点已挂载上树，再拉起半模态，否则半模态将无法挂载到对应的页面节点内。
 
 **Since:** 12
 

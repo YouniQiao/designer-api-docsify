@@ -1,6 +1,6 @@
 # EnabledState
 
-Enumerates the enabled state.
+输入法启用状态。
 
 **Since:** 15
 
@@ -16,7 +16,9 @@ Enumerates the enabled state.
 DISABLED = 0
 ```
 
-Disabled state.
+未启用。
+
+**使用场景：**输入法已被禁用，不能作为当前输入法使用。
 
 **Since:** 15
 
@@ -32,7 +34,9 @@ Disabled state.
 BASIC_MODE
 ```
 
-Enabled state with basic mode.
+基础模式。
+
+**使用场景：**输入法已启用但处于基础模式，仅具备基础输入能力，不支持高级功能（如自定义通信）。
 
 **Since:** 15
 
@@ -48,7 +52,9 @@ Enabled state with basic mode.
 FULL_EXPERIENCE_MODE
 ```
 
-Enabled state with full experience mode.
+完整体验模式。
+
+**使用场景：**输入法已启用且处于完整体验模式，支持所有功能（包括自定义通信、预上屏等）。
 
 **Since:** 15
 

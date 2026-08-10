@@ -1,5 +1,11 @@
 # checkable
 
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## checkable
 
 ```TypeScript
@@ -26,5 +32,5 @@ Specifies the checkable status of the target Component.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | this { |
+| [On](arkts-test-uitest-on-c.md) | this { |
 

@@ -1,6 +1,6 @@
 # CaptureFilterOptions
 
-Defines the options for filtering the played audio streams to be recorded.
+待录制的播放音频流的筛选信息。
 
 **Since:** 10
 
@@ -13,6 +13,12 @@ Defines the options for filtering the played audio streams to be recorded.
 <!--Device-audio-interface CaptureFilterOptions--><!--Device-audio-interface CaptureFilterOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## usages
 

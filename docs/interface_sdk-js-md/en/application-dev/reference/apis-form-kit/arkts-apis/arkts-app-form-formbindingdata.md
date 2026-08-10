@@ -1,6 +1,6 @@
 # @ohos.app.form.formBindingData
 
-The **FormBindingData** module provides APIs for widget data binding. You can use the APIs to create a  
+The **FormBindingData** module provides APIs for widget data binding. You can use the APIs to create a   
 **FormBindingData** object and obtain related information.
 
 **Since:** 9
@@ -10,6 +10,12 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 <!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
 
 **System capability:** SystemCapability.Ability.Form
+
+## Modules to Import
+
+```TypeScript
+import { formBindingData } from 'kits/@kit.FormKit';
+```
 
 ## Summary
 

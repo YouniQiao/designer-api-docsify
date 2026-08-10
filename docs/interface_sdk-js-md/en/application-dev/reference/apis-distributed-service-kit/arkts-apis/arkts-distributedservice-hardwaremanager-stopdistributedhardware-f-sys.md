@@ -1,12 +1,18 @@
 # stopDistributedHardware (System API)
 
+## Modules to Import
+
+```TypeScript
+import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## stopDistributedHardware
 
 ```TypeScript
 function stopDistributedHardware(description: HardwareDescriptor): Promise<void>
 ```
 
-Stops the distributed hardware service on the controlled device. This API uses a promise to return the result.
+停止被控端分布式硬件业务。使用promise异步回调。
 
 **Since:** 11
 
@@ -24,25 +30,25 @@ Stops the distributed hardware service on the controlled device. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Hardware information. |
+| description | [HardwareDescriptor](arkts-distributedservice-hardwaremanager-hardwaredescriptor-i-sys.md) | Yes | 硬件描述信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. |
+| 401 | Input parameter error. |
 | 24200101 | The specified distributed hardware is not started. |
 | 24200102 | The specified source device is not connected. |
+| 201 | Permission verification failed. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hardwareManager } from '@kit.DistributedServiceKit';

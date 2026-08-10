@@ -1,13 +1,18 @@
 # saveAppState
 
+## Modules to Import
+
+```TypeScript
+import { appRecovery } from 'kits/@kit.AbilityKit';
+```
+
 ## saveAppState
 
 ```TypeScript
 function saveAppState(): boolean
 ```
 
-Saves the application state. This API can be used together with the APIs of  
-[errorManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+保存当前App状态，可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
 
 **Since:** 9
 
@@ -25,9 +30,9 @@ Saves the application state. This API can be used together with the APIs of
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the application state is saved. **true** if saved, **false** otherwise. |
+| boolean | 保存成功与否。true：保存成功，false：保存失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appRecovery, errorManager } from '@kit.AbilityKit';
@@ -54,8 +59,7 @@ try {
 function saveAppState(context?: UIAbilityContext): boolean
 ```
 
-Saves the ability state, which will be used for recovery. This API can be used together with the APIs of  
-[errorManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+主动保存Ability的状态，这个状态将在下次恢复启动时使用。可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
 
 **Since:** 10
 
@@ -73,15 +77,15 @@ Saves the ability state, which will be used for recovery. This API can be used t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Context of the target ability. |
+| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | No | 需要保存状态的UIAbility所对应的context。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the application state is saved. **true** if saved, **false** otherwise. |
+| boolean | 保存成功与否。true：保存成功，false：保存失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appRecovery, errorManager } from '@kit.AbilityKit';

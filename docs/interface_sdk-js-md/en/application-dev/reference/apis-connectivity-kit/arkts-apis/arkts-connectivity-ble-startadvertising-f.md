@@ -1,5 +1,11 @@
 # startAdvertising
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## startAdvertising
 
 ```TypeScript
@@ -8,14 +14,14 @@ function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, adv
 
 Starts BLE advertising.
 
-- If only \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to true,  
+- If only {@link AdvertiseData#includeDeviceName} is set to true,  
 the local name will be carried in the broadcast packet.  
-- If only \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is set,  
+- If only {@link AdvertiseData#advertiseName} is set,  
 its value will be used as a custom name and carried in the broadcast packet.  
-- If \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is set to true and \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is specified,  
-the \_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ property will take effect.  
-- To set \_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_,  
-ensure that ohos.permission.MANAGE\_BLUETOOTH\_ADVERTISER\_NAME has been added.
+- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
+the {@link AdvertiseData#advertiseName} property will take effect.  
+- To set {@link AdvertiseData#advertiseName},  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 10
 
@@ -37,24 +43,24 @@ ensure that ohos.permission.MANAGE\_BLUETOOTH\_ADVERTISER\_NAME has been added.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the settings for BLE advertising. |
-| advData | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the advertising data. |
-| advResponse | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the scan response associated with the advertising data. |
+| setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | Yes | Indicates the settings for BLE advertising. |
+| advData | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | Yes | Indicates the advertising data. |
+| advResponse | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | No | Indicates the scan response associated with the advertising data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900010 | The number of advertising resources reaches the upper limit.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2902054 | The length of the advertising data exceeds the upper limit.<br>**Applicable version:** 20 and later |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900010 | The number of advertising resources reaches the upper limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
-| 2902054 | The length of the advertising data exceeds the upper limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);
@@ -88,13 +94,13 @@ try {
         serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
         manufactureData:[manufactureDataUnit],
         serviceData:[serviceDataUnit],
- 	    advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
+        advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
     };
     let advResponse: ble.AdvertiseData = {
         serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
         manufactureData:[manufactureDataUnit],
         serviceData:[serviceDataUnit],
- 	    advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
+        advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
     };
     ble.startAdvertising(setting, advData ,advResponse);
 } catch (err) {
@@ -109,16 +115,16 @@ try {
 function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void
 ```
 
-Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.To completely stop the advertising corresponding to the ID, invoke the API \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ with ID.
+Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API {@link enableAdvertising} or {@link disableAdvertising}.To completely stop the advertising corresponding to the ID, invoke the API {@link stopAdvertising} with ID.
 
-- If only \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is set to true,  
+- If only {@link AdvertiseData#includeDeviceName} is set to true,  
 the local name will be carried in the broadcast packet.  
-- If only \_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ is set,  
+- If only {@link AdvertiseData#advertiseName} is set,  
 its value will be used as a custom name and carried in the broadcast packet.  
-- If \_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ is set to true and \_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ is specified,  
-the \_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ property will take effect.  
-- To set \_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_,  
-ensure that ohos.permission.MANAGE\_BLUETOOTH\_ADVERTISER\_NAME has been added.
+- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
+the {@link AdvertiseData#advertiseName} property will take effect.  
+- To set {@link AdvertiseData#advertiseName},  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 11
 
@@ -138,23 +144,23 @@ ensure that ohos.permission.MANAGE\_BLUETOOTH\_ADVERTISER\_NAME has been added.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the params for BLE advertising. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | the callback of advertise ID. |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes | Indicates the params for BLE advertising. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | the callback of advertise ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900010 | The number of advertising resources reaches the upper limit.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2902054 | The length of the advertising data exceeds the upper limit.<br>**Applicable version:** 20 and later |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900010 | The number of advertising resources reaches the upper limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
-| 2902054 | The length of the advertising data exceeds the upper limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);
@@ -223,16 +229,16 @@ try {
 function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 ```
 
-Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.To completely stop the advertising corresponding to the ID, invoke the API \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ with ID.
+Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API {@link enableAdvertising} or {@link disableAdvertising}.To completely stop the advertising corresponding to the ID, invoke the API {@link stopAdvertising} with ID.
 
-- If only \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is set to true,  
+- If only {@link AdvertiseData#includeDeviceName} is set to true,  
 the local name will be carried in the broadcast packet.  
-- If only \_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ is set,  
+- If only {@link AdvertiseData#advertiseName} is set,  
 its value will be used as a custom name and carried in the broadcast packet.  
-- If \_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ is set to true and \_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ is specified,  
-the \_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ property will take effect.  
-- To set \_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_,  
-ensure that ohos.permission.MANAGE\_BLUETOOTH\_ADVERTISER\_NAME has been added.
+- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
+the {@link AdvertiseData#advertiseName} property will take effect.  
+- To set {@link AdvertiseData#advertiseName},  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 11
 
@@ -252,28 +258,28 @@ ensure that ohos.permission.MANAGE\_BLUETOOTH\_ADVERTISER\_NAME has been added.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the param for BLE advertising. |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes | Indicates the param for BLE advertising. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Returns the promise object. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns the promise object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900010 | The number of advertising resources reaches the upper limit.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2902054 | The length of the advertising data exceeds the upper limit.<br>**Applicable version:** 20 and later |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900010 | The number of advertising resources reaches the upper limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
-| 2902054 | The length of the advertising data exceeds the upper limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);
@@ -307,13 +313,13 @@ try {
         serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
         manufactureData:[manufactureDataUnit],
         serviceData:[serviceDataUnit],
- 	    advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
+        advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
     };
     let advResponse: ble.AdvertiseData = {
         serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
         manufactureData:[manufactureDataUnit],
         serviceData:[serviceDataUnit],
- 	    advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
+        advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
     };
     let advertisingParams: ble.AdvertisingParams = {
         advertisingSettings: setting,

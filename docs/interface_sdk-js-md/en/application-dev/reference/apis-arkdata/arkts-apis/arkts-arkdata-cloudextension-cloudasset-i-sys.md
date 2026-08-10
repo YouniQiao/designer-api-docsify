@@ -1,6 +1,6 @@
 # CloudAsset (System API)
 
-Represents the cloud asset information.
+云资产的信息。
 
 **Inheritance/Implementation:** CloudAsset extends [relationalStore.Asset](arkts-arkdata-relationalstore-asset-i.md)
 
@@ -14,13 +14,19 @@ Represents the cloud asset information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## assetId
 
 ```TypeScript
 assetId: string
 ```
 
-Asset ID.
+资产ID。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Asset ID.
 hash: string
 ```
 
-Hashed value of the asset modification time and size.
+资产的修改时间和大小转换成的哈希值。
 
 **Type:** string
 

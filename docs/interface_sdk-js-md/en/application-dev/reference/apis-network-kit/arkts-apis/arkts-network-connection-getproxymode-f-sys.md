@@ -1,12 +1,18 @@
 # getProxyMode (System API)
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## getProxyMode
 
 ```TypeScript
 function getProxyMode(): Promise<ProxyMode>
 ```
 
-Obtain the proxy mode \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Obtain the proxy mode {@link ProxyMode}.
 
 **Since:** 20
 
@@ -30,10 +36,10 @@ Obtain the proxy mode \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

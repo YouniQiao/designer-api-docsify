@@ -33,7 +33,19 @@ TextInput(value?: TextInputOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | TextInput组件参数。默认值undefined。不设置该参数时，输入框初始化为空。  |
+| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | 否 | TextInput组件参数。默认值undefined。不设置该参数时，输入框初始化为空。 |
 
 ## 汇总
 
+- [PasswordIcon](arkts-arkui-textinput-passwordicon-i.md)
+- [SubmitEvent](arkts-arkui-textinput-submitevent-i.md)
+- [TextInputOptions](arkts-arkui-textinput-textinputoptions-i.md)
+- [UnderlineColor](arkts-arkui-textinput-underlinecolor-i.md)
+- [OnContentScrollCallback](arkts-arkui-textinput-oncontentscrollcallback-t.md)
+- [OnPasteCallback](arkts-arkui-textinput-onpastecallback-t.md)
+- [OnSubmitCallback](arkts-arkui-textinput-onsubmitcallback-t.md)
+- [OnTextSelectionChangeCallback](arkts-arkui-textinput-ontextselectionchangecallback-t.md)
+- [ContentType](arkts-arkui-textinput-contenttype-e.md)
+- [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md)
+- [InputType](arkts-arkui-textinput-inputtype-e.md)
+- [TextInputStyle](arkts-arkui-textinput-textinputstyle-e.md)

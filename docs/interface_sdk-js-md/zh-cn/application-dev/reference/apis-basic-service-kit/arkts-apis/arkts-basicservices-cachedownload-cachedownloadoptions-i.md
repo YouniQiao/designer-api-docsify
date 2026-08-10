@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## caPath
 
 ```TypeScript
@@ -36,7 +42,7 @@ cacheStrategy?: CacheStrategy
 
 使用缓存刷新策略FORCE或LAZY，默认使用FORCE。
 
-**类型：** CacheStrategy
+**类型：** [CacheStrategy](arkts-basicservices-cachedownload-cachestrategy-e.md)
 
 **起始版本：** 23
 
@@ -54,7 +60,7 @@ headers?: Record<string, string>
 
 缓存下载任务在HTTP传输时使用的请求头。默认值为空。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 18
 
@@ -72,7 +78,7 @@ retry?: RetryOptions
 
 Task retry configuration.
 
-**类型：** RetryOptions
+**类型：** [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -92,7 +98,7 @@ sslType?: SslType
 
 使用安全通信协议TLS或TLCP，默认使用TLS。当前TLS和TLCP均不支持双向认证。
 
-**类型：** SslType
+**类型：** [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
 
 **起始版本：** 21
 
@@ -110,7 +116,7 @@ timeout?: TimeoutOptions
 
 Task timeout configuration.
 
-**类型：** TimeoutOptions
+**类型：** [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md)
 
 **起始版本：** 26.0.0
 

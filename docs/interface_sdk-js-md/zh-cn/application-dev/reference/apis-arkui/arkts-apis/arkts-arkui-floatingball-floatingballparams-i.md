@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { floatingBall } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundColor
 
 ```TypeScript
@@ -75,7 +81,7 @@ icon?: image.PixelMap
 ```
 
 闪控球图标，图标像素的总字节数不超过192KB（图标像素的总字节数通过  
-[getPixelBytesNumber]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取）。建议图标像素宽高为128px*128px。实际显示效果依赖于设备能力和闪控球UI样式。
+[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）。建议图标像素宽高为128px*128px。实际显示效果依赖于设备能力和闪控球UI样式。
 
 **类型：** image.PixelMap
 
@@ -95,7 +101,7 @@ template: FloatingBallTemplate
 
 闪控球模板。
 
-**类型：** FloatingBallTemplate
+**类型：** [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md)
 
 **起始版本：** 20
 
@@ -111,9 +117,9 @@ template: FloatingBallTemplate
 textUpdateAnimationType?: FloatingBallTextUpdateAnimationType
 ```
 
-闪控球文本更新时的动画类型。默认为FloatingBallTextUpdateAnimationType.ANIMATION\_NONE。
+闪控球文本更新时的动画类型。默认为FloatingBallTextUpdateAnimationType.ANIMATION_NONE。
 
-**类型：** FloatingBallTextUpdateAnimationType
+**类型：** [FloatingBallTextUpdateAnimationType](arkts-arkui-floatingball-floatingballtextupdateanimationtype-e.md)
 
 **默认值：** FloatingBallTextUpdateAnimationType.ANIMATION_NONE
 

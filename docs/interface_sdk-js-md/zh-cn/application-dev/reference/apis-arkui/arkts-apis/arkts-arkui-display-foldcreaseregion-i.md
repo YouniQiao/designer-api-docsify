@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## creaseRects
 
 ```TypeScript
@@ -38,7 +44,7 @@ readonly displayId: long
 
 屏幕ID，用于识别折痕所在的屏幕。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 

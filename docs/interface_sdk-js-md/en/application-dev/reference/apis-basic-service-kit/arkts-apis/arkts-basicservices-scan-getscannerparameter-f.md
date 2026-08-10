@@ -1,12 +1,18 @@
 # getScannerParameter
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getScannerParameter
 
 ```TypeScript
 function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 ```
 
-Obtains scanner parameters. This API uses a promise to return the result.
+获取扫描仪参数。使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,7 +28,7 @@ Obtains scanner parameters. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | Scanner ID. |
+| scannerId | string | Yes | 扫描仪的ID。 |
 
 **Return value:**
 
@@ -34,9 +40,9 @@ Obtains scanner parameters. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

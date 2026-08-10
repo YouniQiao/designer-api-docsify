@@ -1,5 +1,11 @@
 # createCustomizedToneAttrs
 
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
+
 ## createCustomizedToneAttrs
 
 ```TypeScript
@@ -20,15 +26,15 @@ function createCustomizedToneAttrs(): ToneAttrs
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 铃声属性类。 |
+| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 铃声属性类。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let toneAttrs: systemSoundManager.ToneAttrs = systemSoundManager.createCustomizedToneAttrs();

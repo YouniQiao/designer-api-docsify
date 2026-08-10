@@ -1,8 +1,8 @@
 # PasteButton properties/events
 
-This component can only inherit the [universal attributes of security components]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+不支持通用属性，仅继承[安全控件通用属性](./security_component)。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Only the following events are supported.
+不支持通用事件，仅支持以下事件。
 
 **Inheritance/Implementation:** PasteButtonAttribute extends [SecurityComponentMethod<PasteButtonAttribute>](SecurityComponentMethod<PasteButtonAttribute>)
 
@@ -20,11 +20,10 @@ This component can only inherit the [universal attributes of security components
 onClick(event: PasteButtonCallback)
 ```
 
-Triggered when the paste button is clicked, returning the authorization result. Upon successful authorization, the application obtains temporary permission to read clipboard content.
-    **NOTE**  
-    - You may want to learn the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    to avoid authorization failures caused by incompliant styles.
+点击粘贴控件触发该回调，回调返回授权结果。授权成功后应用可临时获取读取剪贴板权限。
+
+> **说明：**
+> - 为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式的[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。
 
 **Since:** 10
 
@@ -42,5 +41,5 @@ Triggered when the paste button is clicked, returning the authorization result. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback for the click event, used to handle the authorization result after the paste button is clicked. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Starting from API version 18, **PasteButtonCallback** is adopted uniformly, which additionally provides error information.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| event | [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) | Yes | 点击事件的回调函数，用于处理粘贴控件点击后的授权结果。 &lt;br&gt;从API version 18开始，统一使用[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md)，可额外获取error信息。<br>**Since:** 18 |
 

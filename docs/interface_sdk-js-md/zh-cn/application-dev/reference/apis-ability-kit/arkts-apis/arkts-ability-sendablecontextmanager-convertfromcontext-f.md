@@ -1,5 +1,11 @@
 # convertFromContext
 
+## 导入模块
+
+```TypeScript
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
+```
+
 ## convertFromContext
 
 ```TypeScript
@@ -30,15 +36,15 @@ function convertFromContext(context: common.Context): SendableContext
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [SendableContext]{ |
+| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | [SendableContext]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| 401 | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, sendableContextManager } from '@kit.AbilityKit';

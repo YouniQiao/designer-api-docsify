@@ -1,6 +1,6 @@
 # MaterialInfo
 
-Provides material configuration information, including the material enabling state and material type.
+材质配置信息，包含材质使能状态和材质类型。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Provides material configuration information, including the material enabling sta
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiMaterial } from 'kits/@kit.ArkUI';
+```
+
 ## state
 
 ```TypeScript
 state: MaterialState
 ```
 
-Material enabling state.
+材质使能状态配置。
 
-**Type:** MaterialState
+**Type:** [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Material enabling state.
 type: MaterialType
 ```
 
-Material type ID, indicating the material type corresponding to the current configuration. The value is used only for type identification and does not map to underlying features.
+材质类型标识，表示当前配置对应的材质类型。该值仅用于类型标识，不映射到底层功能。
 
-**Type:** MaterialType
+**Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 
 **Since:** 26.0.0
 

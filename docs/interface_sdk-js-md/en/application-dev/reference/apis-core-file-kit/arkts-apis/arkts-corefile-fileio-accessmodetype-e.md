@@ -1,6 +1,6 @@
 # AccessModeType
 
-Enumerates the access modes to verify. If this parameter is left blank, the system checks whether the file exists.
+枚举，表示需要校验的具体权限。若不填，默认校验文件是否存在。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the access modes to verify. If this parameter is left blank, the syst
 EXIST = 0
 ```
 
-Whether the file exists.
+文件是否存在。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Whether the file exists.
 WRITE = 2
 ```
 
-Verify the write permission on the file.
+文件是否具有写入权限。
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Verify the write permission on the file.
 READ = 4
 ```
 
-Verify the read permission on the file.
+文件是否具有读取权限。
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ Verify the read permission on the file.
 READ_WRITE = 6
 ```
 
-Verify the read/write permission on the file.
+文件是否具有读写权限。
 
 **Since:** 23
 

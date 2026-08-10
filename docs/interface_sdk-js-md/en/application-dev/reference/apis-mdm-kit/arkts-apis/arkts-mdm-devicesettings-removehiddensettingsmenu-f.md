@@ -1,15 +1,22 @@
 # removeHiddenSettingsMenu
 
+## Modules to Import
+
+```TypeScript
+import { deviceSettings } from 'kits/@kit.MDMKit';
+```
+
 ## removeHiddenSettingsMenu
 
 ```TypeScript
 function removeHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void
 ```
 
-Removes a setting item from the hidden setting item list of the current user. Setting items in the hidden setting item list are hidden in the current user's settings menu and cannot be found in settings search. Even if a setting item is located through some means, it cannot be opened when tapped. If the remaining hidden setting item list is empty after the removal, all setting items are displayed. The settings take effect immediately after the API is called. The Settings application does not need to be restarted.
+将设置项从当前用户下的隐藏设置项列表中移除。隐藏设置项列表中的设置项在当前用户的设置菜单中会被隐藏，隐藏后不可以在设置的搜索中搜索到，如果通过某种方式搜索到该设置项，点击后也无法打开。若移除后剩余的隐藏设置项列表为空，则设置项会全部显示。调用接口后即刻生效，无需重启设置应用。
 
-Since API version 26.0.0, if you call  
-[setDisallowedPolicyForAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to disable [SUPER\_HUB]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and then call this API to remove SuperHub from the hidden setting item list, a policy conflict occurs and error code 9200010 is reported.
+从API版本26.0.0开始，调用  
+[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口禁用  
+[SUPER_HUB](arkts-mdm-restrictions-featureforaccount-e.md)后，再调用该接口将中转站从隐藏设置项列表中移除时，会发生策略冲突，抛出9200010错误码。
 
 **Since:** 24
 
@@ -27,18 +34,44 @@ Since API version 26.0.0, if you call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| menusToHidden | Array&lt;SettingsMenu&gt; | Yes | Hidden setting item list. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| menusToHidden | Array&lt;SettingsMenu&gt; | Yes | 隐藏的设置项列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) | Service timeout. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 9200012 | Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 9200010 | A conflict policy has been configured.<br>**Applicable version:** 26.0.0 and later |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200016 | Service timeout. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
+
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let menusToHidden: Array<deviceSettings.SettingsMenu> = [
+  // Replace or add items as needed.
+  deviceSettings.SettingsMenu.ACCOUNT_ID,
+  deviceSettings.SettingsMenu.WIFI,
+]
+
+try {
+  deviceSettings.removeHiddenSettingsMenu(wantTemp, menusToHidden);
+  console.info('Succeeded in removing hidden settings menu.');
+} catch (err) {
+  console.error(`Failed to remove hidden settings menu. Code: ${err.code}, message: ${err.message}`);
+}
+```
 

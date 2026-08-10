@@ -1,5 +1,11 @@
 # createMediaSourceWithStreamData
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createMediaSourceWithStreamData
 
 ```TypeScript
@@ -28,9 +34,9 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回MediaSource，用于媒体资源设置。 |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let streams : Array<media.MediaStream> = [];
@@ -67,5 +73,5 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | MediaSource instance if the operation is successful; returns null otherwise. |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns null otherwise. |
 

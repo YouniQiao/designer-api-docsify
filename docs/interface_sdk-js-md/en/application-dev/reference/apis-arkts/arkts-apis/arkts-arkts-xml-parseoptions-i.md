@@ -1,6 +1,6 @@
 # ParseOptions
 
-Parse options for XmlPullParser.
+XML解析选项。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ Parse options for XmlPullParser.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { xml } from 'kits/@kit.ArkTS';
+```
+
 ## attributeValueCallbackFunction
 
 ```TypeScript
 attributeValueCallbackFunction?: (name: string, value: string) => boolean
 ```
 
-Attribute value callback function.
+解析属性和属性值，默认值undefined，表示不解析。
 
 **Since:** 8
 
@@ -41,7 +47,7 @@ Attribute value callback function.
 attributeWithTagCallbackFunction?: AttributeWithTagCb
 ```
 
-Attribute value and tag callback function.
+解析tagName标签，默认值undefined，表示不解析。
 
 **Since:** 20
 
@@ -59,7 +65,7 @@ Attribute value and tag callback function.
 tagValueCallbackFunction?: (name: string, value: string) => boolean
 ```
 
-Tag value callback function.
+解析开始标签、标签值和结束标签，默认值undefined，表示不解析。
 
 **Since:** 8
 
@@ -84,7 +90,7 @@ Tag value callback function.
 tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 ```
 
-Token value callback function.
+解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md)属性，默认值undefined，表示不解析。
 
 **Since:** 8
 
@@ -100,8 +106,8 @@ Token value callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |  |
+| value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | Yes |  |
 
 ## ignoreNameSpace
 
@@ -109,7 +115,7 @@ Token value callback function.
 ignoreNameSpace?: boolean
 ```
 
-Whether to ignore parsing texts of the elements.
+是否忽略命名空间，忽略命名空间后，将不会对其进行解析。true表示忽略命名空间，false表示不忽略命名空间，默认值false。
 
 **Type:** boolean
 
@@ -129,7 +135,7 @@ Whether to ignore parsing texts of the elements.
 supportDoctype?: boolean
 ```
 
-Whether to parsing Doctype of the elements.
+是否解析文档类型，false表示不解析文档类型，true表示解析文档类型，默认值false。
 
 **Type:** boolean
 

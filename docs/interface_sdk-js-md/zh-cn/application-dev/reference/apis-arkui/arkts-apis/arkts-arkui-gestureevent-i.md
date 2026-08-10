@@ -1,8 +1,8 @@
 # GestureEvent
 
-定义手势的事件信息。继承自[BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+定义手势的事件信息。继承自[BaseEvent](arkts-arkui-common-baseevent-i.md)。
 
-**继承/实现关系：** GestureEvent extends [BaseEvent](arkts-arkui-component/common-baseevent-i.md)
+**继承/实现关系：** GestureEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md)
 
 **起始版本：** 7
 
@@ -52,7 +52,7 @@ fingerInfos?: FingerInfo[]
 
 fingerInfos只会记录参与触摸的有效手指信息，先按下但未参与当前手势触发的手指在fingerInfos中不会显示。默认值为空数组[]，返回空数组时，表示当前无有效触点信息。
 
-**类型：** FingerInfo[]
+**类型：** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 
 **起始版本：** 20
 
@@ -78,7 +78,7 @@ fingerList: FingerInfo[]
 
 1. 手指索引编号与位置对应，即fingerList[index]的id为index。先按下且未参与当前手势触发的手指在fingerList中对应位置为空。2. 当使用键盘或手柄触发手势时，不存在手指信息，fingerList为空。
 
-**类型：** FingerInfo[]
+**类型：** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 
 **起始版本：** 8
 
@@ -250,7 +250,7 @@ tapLocation?: EventLocationInfo
 
 用于点击手势中，获取当前手势的坐标信息。在非点击手势中，tapLocation返回值为undefined。
 
-**类型：** EventLocationInfo
+**类型：** [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md)
 
 **起始版本：** 20
 
@@ -270,7 +270,7 @@ tapLocation?: EventLocationInfo
 velocity: number
 ```
 
-用于[PanGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_手势中，获取当前手势的主方向速度。为xy轴方向速度的平方和的算术平方根。单位为vp/s。
+用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的主方向速度。为xy轴方向速度的平方和的算术平方根。单位为vp/s。
 
 取值范围：[0, +∞)
 
@@ -294,7 +294,7 @@ velocity: number
 velocityX: number
 ```
 
-用于[PanGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_手势中，获取当前手势的x轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从左往右为正，反之为负。单位为vp/s。
+用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的x轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从左往右为正，反之为负。单位为vp/s。
 
 取值范围：(-∞, +∞)
 
@@ -318,7 +318,7 @@ velocityX: number
 velocityY: number
 ```
 
-用于[PanGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_手势中，获取当前手势的y轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从上往下为正，反之为负。单位为vp/s。
+用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的y轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从上往下为正，反之为负。单位为vp/s。
 
 取值范围：(-∞, +∞)
 

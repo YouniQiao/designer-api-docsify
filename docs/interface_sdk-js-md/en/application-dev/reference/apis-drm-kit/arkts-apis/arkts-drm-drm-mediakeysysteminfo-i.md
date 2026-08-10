@@ -10,6 +10,12 @@ Used to indicate the media key system info of media source.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## pssh
 
 ```TypeScript

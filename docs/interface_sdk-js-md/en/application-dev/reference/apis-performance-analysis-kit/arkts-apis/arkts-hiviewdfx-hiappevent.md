@@ -1,11 +1,17 @@
-# @ohos.hiviewdfx.hiAppEvent(Application Event Logging)
+# @ohos.hiviewdfx.hiAppEvent(应用事件打点)
 
-This module provides application logging and event subscription capabilities, including event storage, event subscription, event clearance, and logging configuration. HiAppEvent records the events triggered during application running in [AppEventInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and classifies the events into system events and application events.
+本模块提供应用打点和事件订阅能力，包括事件存储、事件订阅、事件清理、打点配置等功能。HiAppEvent将应用运行过程中触发的事件信息统一归纳到[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)中，并将事件分为系统事件和应用事件两类。
 
-System events are triggered in system services and are predefined in the system. The fields of the event parameter object **params** of such events are defined by each system event. For details, see overviews of user guides. For example, \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+系统事件来源于系统服务，是系统预先定义的事件，这类事件信息中的事件参数对象params包含的字段已由各系统事件定义，具体字段含义在各系统事件指南的介绍中，例如  
+[崩溃事件介绍](../../../dfx/hiappevent-watcher-crash-events.md)。
 
-Application events are defined by application developers and can be customized using the  
-[Write]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API as required.
+应用事件来源于应用，是应用开发者自己定义的事件，这类事件信息支持自定义后通过[Write](arkts-performanceanalysis-hiappevent-write-f.md#write)打点接口进行配置设定，具体字段含义可结合开发者需求展开。
+
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
 
 ## Summary
 
@@ -13,5 +19,5 @@ Application events are defined by application developers and can be customized u
 
 | Name | Description |
 | --- | --- |
-| [hiAppEvent](arkts-performanceanalysis-hiappevent-n.md) | This module provides application logging and event subscription capabilities, including event storage, event subscription, event clearance, and logging configuration. HiAppEvent records the events triggered during application running in [AppEventInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and classifies the events into system events and application events.  System events are triggered in system services and are predefined in the system. The fields of the event parameter object **params** of such events are defined by each system event. For details, see overviews of user guides. For example, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.  Application events are defined by application developers and can be customized using the  [Write]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API as required. |
+| [hiAppEvent](arkts-performanceanalysis-hiappevent-n.md) | 本模块提供应用打点和事件订阅能力，包括事件存储、事件订阅、事件清理、打点配置等功能。HiAppEvent将应用运行过程中触发的事件信息统一归纳到[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)中，并将事件分为系统事件和应用事件两类。  系统事件来源于系统服务，是系统预先定义的事件，这类事件信息中的事件参数对象params包含的字段已由各系统事件定义，具体字段含义在各系统事件指南的介绍中，例如  [崩溃事件介绍](../../../dfx/hiappevent-watcher-crash-events.md)。  应用事件来源于应用，是应用开发者自己定义的事件，这类事件信息支持自定义后通过[Write](arkts-performanceanalysis-hiappevent-write-f.md#write)打点接口进行配置设定，具体字段含义可结合开发者需求展开。 |
 

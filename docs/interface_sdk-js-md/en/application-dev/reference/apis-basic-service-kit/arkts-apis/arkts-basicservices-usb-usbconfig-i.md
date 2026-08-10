@@ -1,7 +1,6 @@
 # USBConfig
 
-Represents the USB configuration. One [USBDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can contain multiple **USBConfig**  
-instances.
+USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以含有多个配置。
 
 **Since:** 8
 
@@ -15,13 +14,19 @@ instances.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## attributes
 
 ```TypeScript
 attributes: number
 ```
 
-Configuration attributes.
+配置的属性。
 
 **Type:** number
 
@@ -43,7 +48,7 @@ Configuration attributes.
 id: number
 ```
 
-Unique ID of the USB configuration.
+配置的唯一标识。
 
 **Type:** number
 
@@ -65,7 +70,7 @@ Unique ID of the USB configuration.
 interfaces: Array<USBInterface>
 ```
 
-Supported interface attributes.
+配置支持的接口属性。
 
 **Type:** Array&lt;USBInterface&gt;
 
@@ -87,7 +92,7 @@ Supported interface attributes.
 isRemoteWakeup: boolean
 ```
 
-Support for remote wakeup.
+检查当前配置是否支持远程唤醒。
 
 **Type:** boolean
 
@@ -109,7 +114,7 @@ Support for remote wakeup.
 isSelfPowered: boolean
 ```
 
-Support for independent power supplies.
+检查当前配置是否支持独立电源。
 
 **Type:** boolean
 
@@ -131,7 +136,7 @@ Support for independent power supplies.
 maxPower: number
 ```
 
-Maximum power consumption, in mA.
+最大功耗，以毫安为单位。
 
 **Type:** number
 
@@ -153,7 +158,7 @@ Maximum power consumption, in mA.
 name: string
 ```
 
-Configuration name, which can be left empty.
+配置的名称，可以为空。
 
 **Type:** string
 

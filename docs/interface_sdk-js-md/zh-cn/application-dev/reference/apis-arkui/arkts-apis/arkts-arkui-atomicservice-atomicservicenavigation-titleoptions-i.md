@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundColor
 
 ```TypeScript
@@ -18,7 +24,7 @@ backgroundColor?: ResourceColor
 
 标题栏背景颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ barStyle?: BarStyle
 
 设置标题栏样式。
 
-**类型：** BarStyle
+**类型：** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
 
 **默认值：** BarStyle.STANDARD
 
@@ -82,7 +88,7 @@ titleBarType?: TitleBarType
 
 设置标题栏类型。
 
-**类型：** TitleBarType
+**类型：** [TitleBarType](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md)
 
 **默认值：** TitleBarType.ROUND_ICON
 
@@ -104,7 +110,7 @@ titleIcon?: Resource | SymbolGlyphModifier
 
 设置标题栏的图标。
 
-**类型：** Resource \| SymbolGlyphModifier
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier
 
 **默认值：** atomicservice icon
 

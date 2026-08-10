@@ -1,11 +1,11 @@
 # Progress
 
-The **Progress** component represents a progress indicator that displays the progress of content loading or an
-operation.
+进度条组件，用于显示内容加载或操作处理等进度。支持线性、环形、圆形、胶囊等多种样式，可自定义颜色、渐变效果和动效，适用于文件下载、数据加载、任务处理等需要展示进度状态的场景。通过丰富的样式与动效配置，可快速实现进度可视化，提升用户体
+验。
 
-## Child Components
+## 子组件
 
-Not supported
+无
 
 ## Progress
 
@@ -13,7 +13,7 @@ Not supported
 Progress(options: ProgressOptions<Type>)
 ```
 
-Creates a progress indicator.
+创建进度条组件。
 
 **Since:** 7
 
@@ -31,7 +31,21 @@ Creates a progress indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Type&gt; | Yes | Options of the progress indicator, which vary by progress indicator type.  |
+| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;Type&gt; | Yes | 按进度条类型不同，设置不同属性的进度条组件参数。 |
 
 ## Summary
 
+- [CapsuleStyleOptions](arkts-arkui-progress-capsulestyleoptions-i.md)
+- [CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md)
+- [EclipseStyleOptions](arkts-arkui-progress-eclipsestyleoptions-i.md)
+- [LinearStyleOptions](arkts-arkui-progress-linearstyleoptions-i.md)
+- [ProgressConfiguration](arkts-arkui-progress-progressconfiguration-i.md)
+- [ProgressOptions](arkts-arkui-progress-progressoptions-i.md)
+- [ProgressStyleMap](arkts-arkui-progress-progressstylemap-i.md)
+- [ProgressStyleOptions](arkts-arkui-progress-progressstyleoptions-i.md)
+- [RingStyleOptions](arkts-arkui-progress-ringstyleoptions-i.md)
+- [ScaleRingStyleOptions](arkts-arkui-progress-scaleringstyleoptions-i.md)
+- [ScanEffectOptions](arkts-arkui-progress-scaneffectoptions-i.md)
+- [ProgressStatus](arkts-arkui-progress-progressstatus-e.md)
+- [ProgressStyle](arkts-arkui-progress-progressstyle-e.md)
+- [ProgressType](arkts-arkui-progress-progresstype-e.md)

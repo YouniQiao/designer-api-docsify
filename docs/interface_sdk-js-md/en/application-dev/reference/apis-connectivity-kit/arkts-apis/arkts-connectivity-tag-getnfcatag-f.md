@@ -1,12 +1,18 @@
 # getNfcATag
 
+## Modules to Import
+
+```TypeScript
+import { tag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getNfcATag
 
 ```TypeScript
 function getNfcATag(tagInfo: TagInfo): NfcATag
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object based on the tag information.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_During tag reading, if the tag supports the NFC-A technology, an \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ object will be created based on the tag information.
+Obtains an {@link NfcATag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-A technology, an {@link NfcATag} object will be created based on the tag information.
 
 **Since:** 7
 
@@ -24,11 +30,11 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object based on the tag informa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | Yes | Indicates the tag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The { |
+| [NfcATag](arkts-connectivity-tag-nfcatag-t.md) | The { |
 

@@ -4,10 +4,8 @@
 declare type OnUIPickerComponentCallback = (selectedIndex: number) => void
 ```
 
-Defines the callback types for the [onChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[onScrollStop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ events.
-
-Value range: an integer in the range of [0, Number of child components – 1].
+定义[onChange](UIPickerComponentAttribute#onChange)和  
+[onScrollStop](UIPickerComponentAttribute#onScrollStop)事件的回调类型。
 
 **Since:** 22
 
@@ -25,5 +23,5 @@ Value range: an integer in the range of [0, Number of child components – 1].
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedIndex | number | Yes | Index of the selected item.  |
+| selectedIndex | number | Yes | 当前选中项的索引值。 <br>取值范围：[0, 子组件的个数-1]内的整数。 |
 

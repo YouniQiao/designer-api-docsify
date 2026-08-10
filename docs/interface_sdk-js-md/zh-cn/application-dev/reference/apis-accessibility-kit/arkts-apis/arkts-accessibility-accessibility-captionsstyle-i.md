@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## backgroundColor
 
 ```TypeScript
@@ -24,7 +30,7 @@ string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**类型：** int \| string
+**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
 
 **起始版本：** 8
 
@@ -52,7 +58,7 @@ string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**类型：** int \| string
+**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
 
 **起始版本：** 8
 
@@ -74,7 +80,7 @@ fontEdgeType: CaptionsFontEdgeType
 
 描述字幕字体边缘。
 
-**类型：** CaptionsFontEdgeType
+**类型：** [CaptionsFontEdgeType](arkts-accessibility-accessibility-captionsfontedgetype-t.md)
 
 **起始版本：** 8
 
@@ -96,7 +102,7 @@ fontFamily: CaptionsFontFamily
 
 描述字幕字体。
 
-**类型：** CaptionsFontFamily
+**类型：** [CaptionsFontFamily](arkts-accessibility-accessibility-captionsfontfamily-t.md)
 
 **起始版本：** 8
 
@@ -118,7 +124,7 @@ fontScale: int
 
 描述字幕字体缩放系数，单位%，参数范围1~200。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -146,7 +152,7 @@ string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
 例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**类型：** int \| string
+**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
 
 **起始版本：** 8
 

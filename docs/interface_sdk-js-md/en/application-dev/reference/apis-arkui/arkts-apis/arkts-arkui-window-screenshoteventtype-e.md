@@ -1,6 +1,6 @@
 # ScreenshotEventType
 
-Enumerates the screenshot event types.
+截屏事件类型枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the screenshot event types.
 SYSTEM_SCREENSHOT = 0
 ```
 
-System screenshot succeeds.
+系统截屏成功。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ System screenshot succeeds.
 SYSTEM_SCREENSHOT_ABORT = 1
 ```
 
-System screenshot aborted.
+系统截屏中止。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ System screenshot aborted.
 SCROLL_SHOT_START = 2
 ```
 
-Scroll screenshot starts.
+滚动截屏开始。
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ Scroll screenshot starts.
 SCROLL_SHOT_END = 3
 ```
 
-Scroll screenshot ends.
+滚动截屏结束。
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ Scroll screenshot ends.
 SCROLL_SHOT_ABORT = 4
 ```
 
-Scroll screenshot aborted.
+滚动截屏中止。
 
 **Since:** 20
 

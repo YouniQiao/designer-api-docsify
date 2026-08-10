@@ -1,5 +1,11 @@
 # getRawDescriptor
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getRawDescriptor
 
 ```TypeScript
@@ -8,8 +14,8 @@ function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 
 获取原始的USB描述符。
 
-需要调用[usb.getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取设备列表；调用[usb.requestRight]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取设备请求权限；调用  
-[usb.connectDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口得到devicepipe作为参数。
+需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices)获取设备列表；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright)获取设备请求权限；调用  
+[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice)接口得到devicepipe作为参数。
 
 **起始版本：** 8
 
@@ -27,7 +33,7 @@ function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于确定总线号和设备地址。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 | 用于确定总线号和设备地址。 |
 
 **返回值：**
 
@@ -35,7 +41,7 @@ function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 | --- | --- |
 | Uint8Array | 返回获取的原始数据；失败返回undefined。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let ret = usb.getRawDescriptor(devicepipe);

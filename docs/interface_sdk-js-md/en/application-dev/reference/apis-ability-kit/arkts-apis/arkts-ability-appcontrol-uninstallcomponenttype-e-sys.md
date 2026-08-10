@@ -1,6 +1,6 @@
 # UninstallComponentType (System API)
 
-Enumerates the types of abilities during uninstallation.
+标识卸载时功能组件类型。
 
 **Since:** 15
 
@@ -18,10 +18,9 @@ Enumerates the types of abilities during uninstallation.
 EXTENSION = 1
 ```
 
-ExtensionAbility component. Only  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ components of the service type is supported.
+服务扩展能力类型。仅支持service类型的[ExtensionAbility](../../../quick-start/module-configuration-file.md#extensionabilities标签)。
 
-The ExtensionAbility component is determined by bundleName, moduleName, and abilityName in want.
+被拉起的ExtensionAbility通过want中bundleName、moduleName、abilityName字段共同确定。
 
 **Since:** 15
 
@@ -39,11 +38,10 @@ The ExtensionAbility component is determined by bundleName, moduleName, and abil
 UI_EXTENSION = 2
 ```
 
-UIExtensionAbility component.
+UI扩展能力类型。
 
-The UIExtensionAbility is determined by bundleName, moduleName, and abilityName in want, and the  
-**ability.want.params.uiExtensionType** field in **want.parameters** is set to  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+被拉起的UIExtensionAbility通过want中bundleName、moduleName、abilityName字段共同确定，同时want.parameters中的ability.want.params.uiExtensionType字段需要配置为  
+[UIExtensionAbility](../../../application-models/uiextensionability-sys.md)的类型。
 
 **Since:** 22
 

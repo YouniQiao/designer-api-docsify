@@ -1,10 +1,10 @@
 # TextContentControllerBase
 
-Represents the base controller for **TextInput**, **TextArea**, and **Search** components.
+TextContentControllerBase
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare abstract class TextContentControllerBase--><!--Device-unnamed-declare abstract class TextContentControllerBase-End-->
 
@@ -16,7 +16,7 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 getText(range?: TextRange): string
 ```
 
-Obtains the text content within a specified range.
+Gets the text content of the selected range.
 
 **Since:** 19
 
@@ -36,11 +36,11 @@ Obtains the text content within a specified range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Range of the text content to obtain, defined by start and end positions.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the range is not specified, the entire text is obtained by default. If the start position is not specified, it defaults to index 0. If the end position is not specified, it defaults to the end of the text. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | selected range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Text content within the specified range. |
+| string | text content of the selected range. |
 

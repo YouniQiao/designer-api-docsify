@@ -1,33 +1,27 @@
 # GridItem
 
-The **GridItem** component provides a single item in a grid.
+网格容器中单项内容容器。
 
-> **NOTE**
+> **说明：**
 >
 > *
 >
-> * This component can be used only as a child of [Grid]{@link grid}.
+> * 仅支持作为[Grid]{@link ./grid}组件的子组件使用。
 >
-> * When this component is used with
-> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are
-> created when it is created. When this component is used with
-> [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md) or
-> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is
-> **Grid**, its child components are created when it is laid out.
+> * 当GridItem配合[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，GridItem子组件在
+> GridItem创建时创建。配合[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)使用时，或父组件为Grid时，GridItem子组件在GridItem布局时创
+> 建。
 >
-> * If a **Grid** component contains a large number of **GridItem** components, using
-> [columnStart]{@link GridItemAttribute#columnStart}/[columnEnd]{@link GridItemAttribute#columnEnd} or
-> [rowStart]{@link GridItemAttribute#rowStart}/[rowEnd]{@link GridItemAttribute#rowEnd} to set the size of
-> **GridItem** components can lead to performance issues, especially when **scrollToIndex** is used to scroll to a
-> specific index. This is because **Grid** will traverse all **GridItem** nodes sequentially to find the specified
-> index, which can be time-consuming. To address this issue, it is recommended that you use
-> [GridLayoutOptions]{@link GridLayoutOptions} for layout, which significantly improves the efficiency of finding the
-> position of **GridItem** components. For best practices, see
-> [Optimizing Frame Loss for Grid Component Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve_grid_performance).
+> * 当Grid中存在大量GridItem时，使用[columnStart]{@link GridItemAttribute#columnStart}/
+> [columnEnd]{@link GridItemAttribute#columnEnd}、[rowStart]{@link GridItemAttribute#rowStart}/
+> [rowEnd]{@link GridItemAttribute#rowEnd}设置GridItem大小会导致在使用scrollToIndex滑动到指定Index时，依次遍历GridItem节点，耗时较长。建议使用
+> [GridLayoutOptions]{@link GridLayoutOptions}布局，以提高查找GridItem位置的效率。最佳实践请参考
+> [优化Grid组件加载慢丢帧问题](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-improve_grid_performance)。
 
-## Child Components
+## 子组件
 
-This component can contain a single child component.
+可以包含单个子组件。
 
 ## GridItem
 
@@ -35,7 +29,7 @@ This component can contain a single child component.
 GridItem(value?: GridItemOptions)
 ```
 
-Creates a **GridItem** component.
+创建网格容器中单项内容容器。
 
 **Since:** 7
 
@@ -51,7 +45,9 @@ Creates a **GridItem** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ enum type. |
+| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | No | 为GridItem提供可选参数，该对象内包含[GridItemStyle]{@link GridItemStyle}枚举类型的style参数。不传入时使用默认样 式，即GridItemStyle.NONE。<br/> |
 
 ## Summary
 
+- [GridItemOptions](arkts-arkui-griditem-griditemoptions-i.md)
+- [GridItemStyle](arkts-arkui-griditem-griditemstyle-e.md)

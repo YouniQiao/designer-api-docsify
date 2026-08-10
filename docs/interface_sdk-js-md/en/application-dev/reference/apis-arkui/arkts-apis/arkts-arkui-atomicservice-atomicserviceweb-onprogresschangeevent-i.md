@@ -1,6 +1,6 @@
 # OnProgressChangeEvent
 
-Represents the callback invoked when the web page loading progress changes.
+定义网页加载进度变化时触发该回调。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the callback invoked when the web page loading progress changes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+```
+
 ## newProgress
 
 ```TypeScript
 newProgress: number
 ```
 
-The new progress of the page.
+新的加载进度，取值范围为0到100的整数。单位：%。
 
 **Type:** number
 

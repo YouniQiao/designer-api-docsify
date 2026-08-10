@@ -1,12 +1,18 @@
 # queryPrinterInfoByIp (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## queryPrinterInfoByIp
 
 ```TypeScript
 function queryPrinterInfoByIp(printerIp: string): Promise<void>
 ```
 
-Query printer info by ip.
+根据ip查询打印机信息。
 
 **Since:** 24
 
@@ -26,7 +32,7 @@ Query printer info by ip.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIp | string | Yes | Indicates the printer IP. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Indicates the printer IP. |
+| printerIp | string | Yes | 打印机IP。 |
 
 **Return value:**
 
@@ -38,7 +44,7 @@ Query printer info by ip.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Invalid printer IP. |
+| 13100005 | Invalid printer IP. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application. |
 

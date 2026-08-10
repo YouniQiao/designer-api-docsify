@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## parameters
 
 ```TypeScript
@@ -39,9 +45,9 @@ userId?: int
 ```
 
 指定安装、卸载插件程序所在的用户ID，可以通过  
-[getOsAccountLocalId接口]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取。默认值：调用方所在用户。
+[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。默认值：调用方所在用户。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 

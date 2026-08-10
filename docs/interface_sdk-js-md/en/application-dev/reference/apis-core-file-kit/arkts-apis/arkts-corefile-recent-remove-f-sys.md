@@ -1,12 +1,18 @@
 # remove (System API)
 
+## Modules to Import
+
+```TypeScript
+import { recent } from 'kits/@kit.CoreFileKit';
+```
+
 ## remove
 
 ```TypeScript
 function remove(uri: string): void
 ```
 
-Removes the file of the specified URI from the recent file list.
+将uri对应的文件从最近访问列表中移除。
 
 **Since:** 10
 
@@ -28,17 +34,17 @@ Removes the file of the specified URI from the recent file list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File URI. |
+| uri | string | Yes | 公共目录文件类URI。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
 | 13900020 | Invalid argument |
+| 13900002 | No such file or directory |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 let uri = 'file://docs/storage/Users/currentUser/<publicPath>';

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## left
 
 ```TypeScript
@@ -20,7 +26,7 @@ left: int
 
 水印到左侧像素行的偏移量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 13
 
@@ -40,7 +46,7 @@ top: int
 
 水印到顶部像素行的偏移量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 13
 

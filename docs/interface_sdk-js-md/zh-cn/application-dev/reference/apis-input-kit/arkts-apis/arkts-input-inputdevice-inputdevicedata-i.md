@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## axisRanges
 
 ```TypeScript
@@ -36,7 +42,7 @@ bus: int
 
 输入设备的总线类型，该值以输入设备上报为准。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -54,7 +60,7 @@ id: int
 
 输入设备的唯一标识，同一个物理设备反复插拔，设备ID可能会发生变化。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -148,7 +154,7 @@ product: int
 
 输入设备的产品信息。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -202,7 +208,7 @@ vendor: int
 
 输入设备的厂商信息。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -220,7 +226,7 @@ version: int
 
 输入设备的版本信息。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

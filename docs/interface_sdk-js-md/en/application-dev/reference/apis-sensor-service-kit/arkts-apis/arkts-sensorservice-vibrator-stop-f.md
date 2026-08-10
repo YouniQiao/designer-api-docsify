@@ -1,12 +1,23 @@
 # stop
 
+## Modules to Import
+
+```TypeScript
+import { vibrator } from 'kits/@kit.SensorServiceKit';
+```
+
 ## stop
 
 ```TypeScript
 function stop(stopMode: VibratorStopMode): Promise<void>
 ```
 
-Stops vibration in the specified mode. This API uses a promise to return the result.
+按照指定模式停止马达的振动。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)替代。
 
 **Since:** 8
 
@@ -26,15 +37,15 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stopMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mode to stop the vibration. |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Yes | 马达停止指定的振动模式。需与启动振动时的模式对应：VIBRATOR_STOP_MODE_TIME用于停止时长振动， VIBRATOR_STOP_MODE_PRESET用于停止预置效果振动。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the result. |
+| Promise&lt;void&gt; | Promise对象。调用成功时Promise resolve，表示振动成功停止；调用失败时Promise reject，返回错误对象包含错误码和错误信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';
@@ -63,7 +74,13 @@ vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET).then(() => {
 function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 ```
 
-Stops vibration in the specified mode. This API uses an asynchronous callback to return the result.
+按照指定模式停止马达的振动。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)
+> 替代。
 
 **Since:** 8
 
@@ -83,10 +100,10 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stopMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mode to stop the vibration. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to return the result. If the vibration stops, **err** is **undefined**; otherwise, **err** is an error object. |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Yes | 马达停止指定的振动模式。需与启动振动时的模式对应：VIBRATOR_STOP_MODE_TIME用于停止时长振动， VIBRATOR_STOP_MODE_PRESET用于停止预置效果振动。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，当马达停止振动成功，err为undefined，否则为错误对象。使用场景：不填写时仅停止振动不获取回调结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

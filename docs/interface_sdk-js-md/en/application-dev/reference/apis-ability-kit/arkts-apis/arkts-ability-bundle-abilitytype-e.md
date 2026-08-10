@@ -1,11 +1,11 @@
 # AbilityType
 
-    **NOTE**  
-    
-    This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
-    [bundleManager.AbilityType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)替代。
 
-Enumerates the ability types.
+Ability组件类型。
 
 **Since:** 7
 
@@ -25,7 +25,7 @@ Enumerates the ability types.
 UNKNOWN = 0
 ```
 
-Unknown ability type.
+未知Ability类型。
 
 **Since:** 7
 
@@ -42,8 +42,6 @@ Unknown ability type.
 ```TypeScript
 PAGE = 1
 ```
-
-FA developed using the Page template to provide the capability of interacting with users.
 
 **Since:** 7
 
@@ -63,8 +61,6 @@ FA developed using the Page template to provide the capability of interacting wi
 SERVICE = 2
 ```
 
-PA developed using the Service template to provide the capability of running tasks in the background.
-
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
@@ -82,8 +78,6 @@ PA developed using the Service template to provide the capability of running tas
 ```TypeScript
 DATA = 3
 ```
-
-PA developed using the Data template to provide unified data access for external systems.
 
 **Since:** 7
 

@@ -1,5 +1,11 @@
 # compressFiles
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## compressFiles
 
 ```TypeScript
@@ -22,9 +28,9 @@ function compressFiles(inFiles: Array<string>, outFile: string, options: Options
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFiles | Array&lt;string&gt; | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_， [Stage模型]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。待压缩的文件夹不可为空，否则使用 [decompressFile]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对压缩后的文件解压时会报错。 |
+| inFiles | Array&lt;string&gt; | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)， [Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。待压缩的文件夹不可为空，否则使用 [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)对压缩后的文件解压时会报错。 |
 | outFile | string | 是 | 指定的压缩结果的文件路径。多个线程同时压缩文件时，outFile不能相同。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 压缩的配置参数。 |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 压缩的配置参数。 |
 
 **返回值：**
 
@@ -36,18 +42,18 @@ function compressFiles(inFiles: Array<string>, outFile: string, options: Options
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
-| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) | The input destination file is invalid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 900001 | The input source file is invalid. |
+| 900002 | The input destination file is invalid. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 代码中使用的路径需为应用的沙箱路径，如/data/storage/el2/base/temp，也可以通过context获取。
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
 
 let inFile = '/data/storage/el2/base/temp/filename.xxx';
-let pathDir = 'data/storage/el2/base/temp/xxx';
+let pathDir = '/data/storage/el2/base/temp/xxx';
 let outFile = '/data/storage/el2/base/temp/xxx.zip';
 let options: zlib.Options = {
   level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,

@@ -1,12 +1,18 @@
 # offSystemAutoStartup
 
+## Modules to Import
+
+```TypeScript
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offSystemAutoStartup
 
 ```TypeScript
 function offSystemAutoStartup(callback?: AutoStartupCallback): void
 ```
 
-Unregister listener that watches for all applications auto startup state.
+注销监听应用组件开机自启动状态变化的回调函数。
 
 **Since:** 23
 
@@ -24,13 +30,13 @@ Unregister listener that watches for all applications auto startup state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Auto startup callback. |
+| callback | [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | No | 监听应用组件开机自启动状态变化的回调对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_BOOT". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+| 16000050 | Connect to system server failed. |
+| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| 202 | Permission denied, non-system app called system api. |
 

@@ -1,6 +1,6 @@
 # HolidayManager
 
-Provide some functions to manage holidays in a country or region. Partly follows the RFC2445 standard.
+提供解析节假日数据的能力，包括节假日判断和指定年份节假日列表获取等。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provide some functions to manage holidays in a country or region. Partly follows
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(icsPath: String)
 ```
 
-Creates a HolidayManager object for parsing holiday data.
+创建HolidayManager对象，用于解析节假日数据。
 
 **Since:** 23
 
@@ -32,14 +38,14 @@ Creates a HolidayManager object for parsing holiday data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icsPath | String | Yes | Path of the .ics file with the read permission granted for applications. |
+| icsPath | String | Yes | 在设备上有应用读取权限的iCalendar格式的ics文件路径。iCalendar格式是一种标准的互联网日历格式，用于存储日历数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getHolidayInfoItemArray
 
@@ -47,7 +53,7 @@ Creates a HolidayManager object for parsing holiday data.
 getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>
 ```
 
-Obtains the holiday information list of the specified year.
+获取指定年的节假日信息列表。
 
 **Since:** 23
 
@@ -63,20 +69,20 @@ Obtains the holiday information list of the specified year.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | int | No | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. - Specified year, for example, 2023.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is the current year. |
+| year | int | No | 年，例如2023。 &lt;br&gt;默认值：当前年份。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;HolidayInfoItem&gt; | Holiday information list. |
+| Array&lt;HolidayInfoItem&gt; | 返回节假日信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## isHoliday
 
@@ -84,7 +90,7 @@ Obtains the holiday information list of the specified year.
 isHoliday(date?: Date): boolean
 ```
 
-Determines whether the specified date is a holiday.
+判断指定的日期是否是节假日。
 
 **Since:** 23
 
@@ -100,17 +106,17 @@ Determines whether the specified date is a holiday.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | No | Date and time. Note: The month starts from 0. For example, 0 indicates January. The default value is the current date. |
+| date | Date | No | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 &lt;br&gt;默认值：当前日期。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the specified date is a holiday, and false otherwise. |
+| boolean | true表示指定的日期是节假日，false表示指定的日期不是节假日。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 

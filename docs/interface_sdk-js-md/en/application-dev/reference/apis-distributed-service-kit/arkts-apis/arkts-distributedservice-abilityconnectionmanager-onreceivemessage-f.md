@@ -1,5 +1,11 @@
 # onReceiveMessage
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## onReceiveMessage
 
 ```TypeScript
@@ -24,11 +30,11 @@ Registers receiveMessage event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | int | Yes | Ability connection Session id. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EventCallbackInfo&gt; | Yes | Used to handle ('receiveMessage') command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Used to handle ('receiveMessage') command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
 

@@ -1,5 +1,11 @@
 # getPrinterInformationById
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPrinterInformationById
 
 ```TypeScript
@@ -34,20 +40,21 @@ function getPrinterInformationById(printerId: string): Promise<PrinterInformatio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
+// printerId可通过on('printerChange')回调获取
 let printerId : string = 'testPrinterId';
 print.getPrinterInformationById(printerId).then((printerInformation : print.PrinterInformation) => {
     console.info('getPrinterInformationById data : ' + JSON.stringify(printerInformation));
 }).catch((error: BusinessError) => {
-    console.error('getPrinterInformationById error : ' + JSON.stringify(error));
+    console.error(`Failed to getPrinterInformationById. Code: ${error.code}, message: ${error.message}`);
 })
 ```
 

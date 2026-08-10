@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
+## 导入模块
+
+```TypeScript
+import { Configuration } from 'kits/@kit.AbilityKit';
+```
+
 ## colorMode
 
 ```TypeScript
@@ -18,13 +24,13 @@ colorMode?: ConfigurationConstant.ColorMode
 
 表示应用深浅色模式，默认为浅色。
 
-支持开发者\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+支持开发者[设置应用或组件深浅色](../../application-models/subscribe-system-environment-variable-changes.md#设置深浅色模式)。
 
 取值范围：
 
-- COLOR\_MODE\_NOT\_SET：未设置  
-- COLOR\_MODE\_LIGHT：浅色模式  
-- COLOR\_MODE\_DARK：深色模式
+- COLOR_MODE_NOT_SET：未设置  
+- COLOR_MODE_LIGHT：浅色模式  
+- COLOR_MODE_DARK：深色模式
 
 **类型：** ConfigurationConstant.ColorMode
 
@@ -48,14 +54,14 @@ direction?: ConfigurationConstant.Direction
 
 取值范围：
 
-- DIRECTION\_NOT\_SET：未设置  
-- DIRECTION\_HORIZONTAL：水平方向  
-- DIRECTION\_VERTICAL：垂直方向
+- DIRECTION_NOT_SET：未设置  
+- DIRECTION_HORIZONTAL：水平方向  
+- DIRECTION_VERTICAL：垂直方向 
 
-该环境变量支持在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_组件和  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_组件中订阅，不支持在  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_和  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_组件容器中订阅。
+该环境变量支持在[UIAbility](./js-apis-app-ability-uiAbility.md)组件和  
+[UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md)组件中订阅，不支持在  
+[ApplicationContext](./js-apis-inner-application-applicationContext.md)和  
+[AbilityStage](./js-apis-app-ability-abilityStage.md)组件容器中订阅。
 
 **类型：** ConfigurationConstant.Direction
 
@@ -77,12 +83,12 @@ displayId?: long
 
 表示应用所在的物理屏幕ID。
 
-该环境变量支持在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_组件和  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_组件中订阅，不支持在  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_和  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_组件容器中订阅。
+该环境变量支持在[UIAbility](./js-apis-app-ability-uiAbility.md)组件和  
+[UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md)组件中订阅，不支持在  
+[ApplicationContext](./js-apis-inner-application-applicationContext.md)和  
+[AbilityStage](./js-apis-app-ability-abilityStage.md)组件容器中订阅。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -122,9 +128,9 @@ fontSizeScale?: double
 
 表示字体大小缩放比例，取值为非负数，默认值为1。
 
-支持开发者\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+支持开发者[设置应用字体大小](../../application-models/subscribe-system-environment-variable-changes.md#设置字体大小)。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -144,7 +150,7 @@ fontWeightScale?: double
 
 表示字体粗细缩放比例，取值为非负数，默认值为1。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -184,9 +190,9 @@ language?: string
 
 表示应用当前语言，例如“zh"(中文)，“en”（英文）。
 
-支持开发者\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+支持开发者[设置应用语言](../../application-models/subscribe-system-environment-variable-changes.md#设置应用语言)。
 
-取值范围参考\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
+取值范围参考[获取系统支持的语言列表](../apis-localization-kit/js-apis-i18n.md#getsystemlanguages9)。
 
 **类型：** string
 
@@ -272,20 +278,20 @@ screenDensity?: ConfigurationConstant.ScreenDensity
 
 取值范围：
 
-- SCREEN\_DENSITY\_NOT\_SET：未设置  
-- SCREEN\_DENSITY\_SDPI：120  
-- SCREEN\_DENSITY\_MDPI：160  
-- SCREEN\_DENSITY\_LDPI：240  
-- SCREEN\_DENSITY\_XLDPI：320  
-- SCREEN\_DENSITY\_XXLDPI：480  
-- SCREEN\_DENSITY\_XXXLDPI：640
+- SCREEN_DENSITY_NOT_SET：未设置  
+- SCREEN_DENSITY_SDPI：120  
+- SCREEN_DENSITY_MDPI：160  
+- SCREEN_DENSITY_LDPI：240  
+- SCREEN_DENSITY_XLDPI：320  
+- SCREEN_DENSITY_XXLDPI：480  
+- SCREEN_DENSITY_XXXLDPI：640 
 
-字体显示大小与屏幕像素密度呈正相关关系。通过监听屏幕像素密度变化，可以感知字体显示大小的调整。通常情况下，对于相同的物理尺寸，屏幕像素密度越高，字体显示效果越大。
+字体显示大小与屏幕像素密度呈正相关关系。通过监听屏幕像素密度变化，可以感知字体显示大小的调整。通常情况下，对于相同的物理尺寸，屏幕像素密度越高，字体显示效果越大。 
 
-该环境变量支持在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_组件和  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_组件中订阅，不支持在  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_和  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_组件容器中订阅。
+该环境变量支持在[UIAbility](./js-apis-app-ability-uiAbility.md)组件和  
+[UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md)组件中订阅，不支持在  
+[ApplicationContext](./js-apis-inner-application-applicationContext.md)和  
+[AbilityStage](./js-apis-app-ability-abilityStage.md)组件容器中订阅。
 
 **类型：** ConfigurationConstant.ScreenDensity
 

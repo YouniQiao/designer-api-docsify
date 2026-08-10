@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## collectorNetworkId
 
 ```TypeScript
@@ -40,7 +46,7 @@ collectorTokenId?: int
 
 凭据收集者的令牌标识，默认为undefined。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

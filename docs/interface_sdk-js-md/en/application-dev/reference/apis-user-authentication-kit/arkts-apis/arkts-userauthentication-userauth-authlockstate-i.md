@@ -1,6 +1,6 @@
 # AuthLockState
 
-Enumerates the lockout status of an identity authentication type. This API is used to query the lockout status of a specified authentication type (such as face, fingerprint, or PIN), including whether the authentication type is locked out, the number of remaining attempts, and the lockout duration. If a user fails to be authenticated multiple times, the authenticator may enter a temporary or permanent lockout state. The application can notify the user based on the lockout information.
+认证类型的身份认证冻结状态。该接口用于查询指定认证类型（如人脸、指纹、PIN）当前的冻结状态，包括是否被冻结、剩余尝试次数和冻结时长等信息。当用户多次认证不通过后，认证器可能进入临时冻结或永久冻结状态，应用可根据冻结信息提示用户。
 
 **Since:** 22
 
@@ -10,13 +10,19 @@ Enumerates the lockout status of an identity authentication type. This API is us
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## isLocked
 
 ```TypeScript
 isLocked: boolean
 ```
 
-Whether the authentication is locked. The value **true** indicates that the authentication type is locked and cannot be used for authentication, and **false** indicates the opposite. The lockout status is usually triggered by multiple consecutive authentication failures.
+表示认证是否已被冻结。true表示已冻结，此时用户无法使用该认证类型进行身份认证；false表示未冻结，用户可以正常使用该认证类型。冻结状态通常由连续多次认证不通过触发。
 
 **Type:** boolean
 
@@ -36,12 +42,12 @@ Whether the authentication is locked. The value **true** indicates that the auth
 lockoutDuration: int
 ```
 
-Remaining lockout duration, in milliseconds. This parameter is valid only when **isLocked** is set to **true**.
+认证被冻结时的剩余冻结时间，单位为毫秒。此字段仅在isLocked为true时有效。
 
-If the authenticator is permanently locked, the value is  
-[PERMANENT\_LOCKOUT\_DURATION]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,indicating that the authenticator has been permanently locked. The user needs to perform PIN authentication before using the authentication type again. If the authenticator is temporarily locked, the value is the actual remaining lockout duration. After the lockout period ends, the user can continue to attempt authentication.
+当永久冻结时，值为  
+[PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#permanent_lockout_duration)，表示认证器已永久锁定，需要用户通过PIN认证解锁后才能继续使用该认证类型。临时冻结时，该值为实际的剩余冻结时长，冻结结束后用户可继续尝试认证。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -59,9 +65,9 @@ If the authenticator is permanently locked, the value is
 remainingAuthAttempts: int
 ```
 
-Number of remaining attempts before the authentication is locked. The maximum value is **5**. The value decreases by 1 each time the authentication fails. When the value decreases to 0, the authenticator is locked. This parameter is valid only when **isLocked** is set to **false**.
+认证未被冻结时的剩余尝试次数，最大为5次。每次认证不通过后该值会递减，当降为0时认证器将进入冻结状态。此字段仅在isLocked为false时有效。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

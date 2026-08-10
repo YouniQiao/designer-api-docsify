@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
+## 导入模块
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## focusX
 
 ```TypeScript
@@ -18,7 +24,7 @@ focusX?: int
 
 自定义光标焦点的水平坐标。该坐标受自定义光标大小的限制。最小值为0，最大值为资源图的宽度最大值该参数缺省时默认为0，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 15
 
@@ -36,7 +42,7 @@ focusY?: int
 
 自定义光标焦点的垂直坐标。该坐标受自定义光标大小的限制。最小值为0，最大值为资源图的高度最大值该参数缺省时默认为0，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 15
 

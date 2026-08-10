@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## mute
 
 ```TypeScript

@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## actionButton
 
 ```TypeScript
@@ -88,7 +94,7 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 提醒到达时跳转的目标包。如果设备正在使用中，则弹出一个通知框。
 
-**类型：** MaxScreenWantAgent
+**类型：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
 **起始版本：** 7
 
@@ -132,7 +138,7 @@ reminderType: ReminderType
 
 指明提醒类型。
 
-**类型：** ReminderType
+**类型：** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
 
 **起始版本：** 7
 
@@ -286,7 +292,7 @@ wantAgent?: WantAgent
 
 点击通知后需要跳转的目标ability信息。
 
-**类型：** WantAgent
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 7
 

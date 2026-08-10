@@ -6,9 +6,17 @@ This module allows developers to export snapshot image from a component or a cus
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace componentSnapshot--><!--Device-unnamed-declare namespace componentSnapshot-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 

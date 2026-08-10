@@ -1,6 +1,6 @@
 # BusinessSubType (System API)
 
-Represents an update type.
+升级类型。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Represents an update type.
 FIRMWARE = 1
 ```
 
-Firmware, indicating firmware upgrade,which is applicable to upgrade of the system firmware instead of the app.For details, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+固件。表示升级类型为固件升级，用于升级系统固件而非应用。详见[术语](../../../basic-services/update/update-kit-term.md)。
 
 **Since:** 9
 

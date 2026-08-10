@@ -1,6 +1,6 @@
 # NotificationKey (System API)
 
-Defines the notification key value.
+通知键值。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Defines the notification key value.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+```
+
 ## id
 
 ```TypeScript
 id: int
 ```
 
-Notification ID.
+通知ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -38,7 +44,7 @@ Notification ID.
 label?: string
 ```
 
-Notification label. This parameter is left empty by default.
+通知标签，默认为空。
 
 **Type:** string
 

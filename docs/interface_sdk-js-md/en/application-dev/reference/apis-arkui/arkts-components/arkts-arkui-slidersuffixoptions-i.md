@@ -1,8 +1,8 @@
 # SliderSuffixOptions
 
-Provides accessibility configuration of the slider suffix.
+Slider后缀组件无障碍信息参数。
 
-**Inheritance/Implementation:** SliderSuffixOptions extends [SliderCustomContentOptions](../arkts-apis/arkts-arkui-component/slider-slidercustomcontentoptions-i.md)
+**Inheritance/Implementation:** SliderSuffixOptions extends [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md)
 
 **Since:** 20
 

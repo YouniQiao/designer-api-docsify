@@ -22,11 +22,11 @@ Create a FrameNode of SymbolGlyph type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return SymbolGlyph type FrameNode. |
+| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) | Return SymbolGlyph type FrameNode. |
 

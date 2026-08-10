@@ -1,6 +1,6 @@
 # WindowProperties
 
-Describes the window properties.
+窗口属性。
 
 **Since:** 6
 
@@ -10,16 +10,22 @@ Describes the window properties.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## brightness
 
 ```TypeScript
 brightness: double
 ```
 
-Screen brightness of the window. The brightness can be set by calling  
-[setWindowBrightness()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. The value is a floating-point number. Valid values are in the range \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or the special value **-1.0** (which means that the brightness follows the system). If no value is passed, the brightness follows the system. In this case, the obtained brightness value is **-1.0**.
+窗口亮度。通过  
+[setWindowBrightness()](arkts-arkui-window-window-i.md#setwindowbrightness)设置窗口的亮度值。该参数为浮点数，可设置的亮度范围为[0.0, 1.0]或-1.0，其取值1.0时表示最大亮度，取值-1.0时，表示亮度跟随系统。如果窗口没有设置亮度值，表示亮度跟随系统，此时获取到的亮度值为-1.0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 6
 
@@ -37,9 +43,9 @@ Screen brightness of the window. The brightness can be set by calling
 dimBehindValue: number
 ```
 
-Dimness of the window that is not on top. The value is a floating-point number in the range [0.0, 1.0], and the value **1.0** means the dimmest.
+下层窗口的暗度值。该参数为浮点数，取值范围为[0.0, 1.0]，其取1.0表示最暗。
 
-Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
+**说明：** 从API version 7开始支持，从API version 9开始废弃，当前无可替代接口。
 
 **Type:** number
 
@@ -59,9 +65,9 @@ Note: This property is supported since API version 7 and deprecated since API ve
 displayId?: long
 ```
 
-ID of the screen where the window is located. By default, the ID of the main screen is returned. The value is an integer.
+窗口所在屏幕ID，默认返回主屏幕ID，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -79,10 +85,10 @@ ID of the screen where the window is located. By default, the ID of the main scr
 drawableRect: Rect
 ```
 
-Size of the rectangle that can be drawn in the window. The upper boundary and left boundary are calculated relative to the top-left vertex of the window. In the stage model, this property should be obtained after  
-[loadContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_is called to load the page content.
+窗口内的可绘制区域尺寸，其中左边界上边界是相对于窗口左上顶点计算。在Stage模型下，需要在调用  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)加载页面内容后获取该属性。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 11
 
@@ -100,7 +106,7 @@ Size of the rectangle that can be drawn in the window. The upper boundary and le
 focusable: boolean
 ```
 
-Whether the window is focusable. **true** if focusable, **false** otherwise.
+窗口是否可获焦。true表示可获焦；false表示不可获焦。
 
 **Type:** boolean
 
@@ -120,9 +126,9 @@ Whether the window is focusable. **true** if focusable, **false** otherwise.
 globalDisplayRect?: Rect
 ```
 
-Window size in the global coordinate system. In extended screen scenarios, the top-left corner of the primary screen is used as the coordinate origin. In virtual screen scenarios, the top-left corner of the virtual screen is used as the coordinate origin. The default value is [0, 0, 0, 0].
+全局坐标系下的窗口尺寸。扩展屏场景下以主屏左上角为坐标原点，虚拟屏场景下以虚拟屏左上角为坐标原点。默认值：[0, 0, 0, 0]。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 20
 
@@ -138,9 +144,9 @@ Window size in the global coordinate system. In extended screen scenarios, the t
 id: int
 ```
 
-Window ID. The value is an integer.
+窗口ID，该参数为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -158,7 +164,7 @@ Window ID. The value is an integer.
 isFullScreen: boolean
 ```
 
-Whether the status bar is hidden when **isLayoutFullScreen** is set to **true**. If the status bar is hidden, the return value is **true**. In other cases, the return value is **false**.
+在满足isLayoutFullScreen为true的条件下如果隐藏了状态栏，返回值为true，其他情况下均返回false。
 
 **Type:** boolean
 
@@ -178,7 +184,7 @@ Whether the status bar is hidden when **isLayoutFullScreen** is set to **true**.
 isKeepScreenOn: boolean
 ```
 
-Whether the screen is always on. **true** if always on, **false** otherwise.
+屏幕是否常亮。true表示常亮；false表示不常亮。
 
 **Type:** boolean
 
@@ -198,11 +204,11 @@ Whether the screen is always on. **true** if always on, **false** otherwise.
 isLayoutFullScreen: boolean
 ```
 
-Whether an \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is set for a child window. If an immersive-layout is set for the child window, the return value is **true**.
+对于子窗，如果设置了[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)，返回值为true。
 
-Whether an \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ is set for the main window and the main window is in full-screen mode. If an immersive-layout is set for the main window and the main window is in full-screen mode, the return value is **true**.
+对于主窗，如果设置了[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)且处于全屏模式，返回值为true。
 
-In other cases, the return value is **false**.
+其他情况下均返回false
 
 **Type:** boolean
 
@@ -222,8 +228,8 @@ In other cases, the return value is **false**.
 isPrivacyMode: boolean
 ```
 
-Whether the window is in privacy mode. **true** if the window is in privacy mode, **false** otherwise. You can call  
-[setWindowPrivacyMode()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to set the privacy mode of the window.
+窗口是否为隐私模式。true表示窗口为隐私模式；false表示窗口为非隐私模式。可通过  
+[setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setwindowprivacymode)设置窗口的隐私模式。
 
 **Type:** boolean
 
@@ -243,9 +249,9 @@ Whether the window is in privacy mode. **true** if the window is in privacy mode
 isRoundCorner: boolean
 ```
 
-Whether the window has rounded corners. **true** if the window has rounded corners; **false** otherwise.
+窗口是否为圆角。true表示窗口为圆角；false表示窗口为非圆角。
 
-Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
+**说明：** 从API version 7开始支持，从API version 9开始废弃，当前无可替代接口。
 
 **Type:** boolean
 
@@ -265,7 +271,7 @@ Note: This property is supported since API version 7 and deprecated since API ve
 isTransparent: boolean
 ```
 
-Whether the window background is transparent. **true** if transparent, **false** otherwise.
+窗口背景是否透明。true表示透明；false表示不透明。
 
 **Type:** boolean
 
@@ -285,7 +291,7 @@ Whether the window background is transparent. **true** if transparent, **false**
 name?: string
 ```
 
-Window name. The default value is an empty string.
+窗口名称，默认为空字符串。
 
 **Type:** string
 
@@ -305,7 +311,7 @@ Window name. The default value is an empty string.
 touchable: boolean
 ```
 
-Whether the window is touchable. **true** if touchable, **false** otherwise.
+窗口是否可触摸。true表示可触摸；false表示不可触摸。
 
 **Type:** boolean
 
@@ -325,9 +331,11 @@ Whether the window is touchable. **true** if touchable, **false** otherwise.
 type: WindowType
 ```
 
-Window type.
+窗口类型。
 
-**Type:** WindowType
+当前存在主窗使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)接口返回type不准确的问题，开发者在创建窗口时已指明窗口类型，无需通过getWindowProperties()接口获取窗口类型。
+
+**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
 
 **Since:** 7
 
@@ -349,10 +357,11 @@ Window type.
 windowRect: Rect
 ```
 
-Window size, which can be obtained from the page lifecycle  
-[onPageShow]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or the application lifecycle [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+窗口尺寸，其中左边界上边界是相对于窗口所在屏幕左上顶点计算，可在页面生命周期  
+[onPageShow](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#onpageshow)或应用生命周期  
+[onForeground](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md#onforeground)阶段获取。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 7
 
@@ -370,9 +379,9 @@ Window size, which can be obtained from the page lifecycle
 windowType?: WindowType
 ```
 
-Window type
+含义：窗口类型使用场景：判断当前窗口主窗口还是子窗口等
 
-**Type:** WindowType
+**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
 
 **Since:** 26.0.0
 

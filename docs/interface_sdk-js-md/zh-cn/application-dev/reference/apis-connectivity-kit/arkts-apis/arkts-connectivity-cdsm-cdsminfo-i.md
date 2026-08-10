@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { cdsm } from 'kits/@kit.ConnectivityKit';
+```
+
 ## members
 
 ```TypeScript
@@ -18,7 +24,7 @@ members: CdsmMemberInfo[]
 
 合作设备集的成员。
 
-**类型：** CdsmMemberInfo[]
+**类型：** [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md)[]
 
 **起始版本：** 26.0.0
 

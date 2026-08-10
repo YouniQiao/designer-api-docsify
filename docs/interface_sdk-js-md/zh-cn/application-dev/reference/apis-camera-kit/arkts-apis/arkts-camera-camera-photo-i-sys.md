@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## depthData
 
 ```TypeScript
@@ -18,7 +24,7 @@ depthData?: DepthData
 
 Depth data.
 
-**类型：** DepthData
+**类型：** [DepthData](arkts-camera-camera-depthdata-i-sys.md)
 
 **起始版本：** 13
 

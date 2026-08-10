@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## progressListener
 
 ```TypeScript
@@ -34,7 +40,7 @@ copySignal?: TaskSignal
 
 取消拷贝信号。
 
-**类型：** TaskSignal
+**类型：** [TaskSignal](arkts-corefile-fileio-tasksignal-c.md)
 
 **起始版本：** 12
 

@@ -4,7 +4,7 @@
 type OnProcess = (bundleName: string, process: string) => void
 ```
 
-function that returns backup datasize by bundleName.Callback called when the backup\_sa service return result information.The first return string parameter indicates the result of the bundle.
+返回应用备份数据量信息的回调函数。备份服务返回结果或进度信息时触发的回调。返回应用的处理结果或进度信息。
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ function that returns backup datasize by bundleName.Callback called when the bac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | the bundleName that triggers the callback.  |
-| process | string | Yes | the process info of the bundle.  |
+| bundleName | string | Yes | 触发回调的应用名称。 |
+| process | string | Yes | 应用备份或恢复的进度信息。 |
 

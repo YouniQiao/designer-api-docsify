@@ -4,7 +4,7 @@
 export type UsedScene = _BundleInfo.UsedScene
 ```
 
-Defines the use scenario and timing for using the permission.
+权限使用的场景和时机。
 
 **Since:** 9
 

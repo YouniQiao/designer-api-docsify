@@ -1,19 +1,24 @@
 # getRunningProcessInformation
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getRunningProcessInformation
 
 ```TypeScript
 function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 ```
 
-Obtains information about the running processes of the current application. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - In versions earlier than API version 11, this API requires the ohos.permission.GET\_RUNNING\_INFO permission,  
-    which is available only for system applications.  
-    
-    - Starting from API version 11, this API is used only to obtain the process information of the caller. No  
-    permission is required.
+获取当前应用运行进程的相关信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
+> 
+> - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
 **Since:** 9
 
@@ -32,15 +37,15 @@ Obtains information about the running processes of the current application. This
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -60,14 +65,13 @@ appManager.getRunningProcessInformation().then((data) => {
 function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-Obtains information about the running processes of the current application. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    - In versions earlier than API version 11, this API requires the ohos.permission.GET\_RUNNING\_INFO permission,  
-    which is available only for system applications.  
-    
-    - Starting from API version 11, this API is used only to obtain the process information of the caller. No  
-    permission is required.
+获取当前应用运行进程的相关信息。使用callback异步回调。
+
+> **说明：**
+> 
+> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
+> 
+> - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
 **Since:** 9
 
@@ -86,16 +90,16 @@ Obtains information about the running processes of the current application. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | 回调函数。当接口调用成功，err为undefined，data为当前应用运行进程的信息；否则为错误对象。可进行错误 处理或其他自定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

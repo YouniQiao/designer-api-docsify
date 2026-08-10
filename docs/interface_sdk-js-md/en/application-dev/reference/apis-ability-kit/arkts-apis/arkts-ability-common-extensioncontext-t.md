@@ -4,8 +4,7 @@
 export type ExtensionContext = _ExtensionContext.default
 ```
 
-Defines the context environment for the  
-[ExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It inherits from Context.
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)组件上下文，继承自Context。
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # SoundCardInfo (System API)
 
-Describes sound card information.
+描述声卡信息。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Describes sound card information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## busAddress
 
 ```TypeScript
 busAddress: string
 ```
 
-Sound card bus address.
+声卡总线地址。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Sound card bus address.
 driver: string
 ```
 
-Sound card driver.
+声卡驱动。
 
 **Type:** string
 
@@ -62,7 +68,7 @@ Sound card driver.
 model: string
 ```
 
-Sound card model.
+声卡型号。
 
 **Type:** string
 
@@ -84,7 +90,7 @@ Sound card model.
 name: string
 ```
 
-Sound card name.
+声卡名称。
 
 **Type:** string
 
@@ -106,7 +112,7 @@ Sound card name.
 vendor: string
 ```
 
-Sound card vendor.
+声卡供应商。
 
 **Type:** string
 

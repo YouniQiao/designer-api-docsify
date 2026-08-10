@@ -1,5 +1,11 @@
 # getBundleInstallerSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleInstallerSync
 
 ```TypeScript
@@ -22,26 +28,11 @@ function getBundleInstallerSync(): BundleInstaller
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BundleInstaller object. |
+| [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md) | BundleInstaller object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例：**
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    installer.getBundleInstallerSync();
-    console.info('getBundleInstallerSync successfully.');
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstallerSync failed. Cause: ' + message);
-}
-```
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

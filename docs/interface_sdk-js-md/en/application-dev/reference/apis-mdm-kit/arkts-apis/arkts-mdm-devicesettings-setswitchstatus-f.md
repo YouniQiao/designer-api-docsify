@@ -1,13 +1,19 @@
 # setSwitchStatus
 
+## Modules to Import
+
+```TypeScript
+import { deviceSettings } from 'kits/@kit.MDMKit';
+```
+
 ## setSwitchStatus
 
 ```TypeScript
 function setSwitchStatus(admin: Want, key: SwitchKey, status: SwitchStatus): void
 ```
 
-Sets the state of a switch. This API can enable or disable NearLink, Bluetooth, Wi-Fi, and NFC. After the setting is applied, users can manually enable or disable them. Bluetooth and NFC can be forced on. Once set, they cannot be manually turned on or off by the user. If a switch has been disabled through the  
-[setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API, error code 203will be reported when you attempt to set the state of the switch through this API. In this case, you need to use the [setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API to enable the switch. When multiple MDM applications are present on the device, there are no conflicts among the switch states set by different MDM applications. The policy set last takes effect. The three states, on (user can manually enable/disable), off (user can manually enable/disable), and forced on (user cannot manually disable), can be switched arbitrarily, and no conflict occurs.
+设置开关的状态。支持设置星闪、蓝牙、Wi-Fi、NFC的状态为开启或关闭，设置完毕后，用户可以手动开关。支持设置蓝牙、NFC的状态为强制开启，设置完毕后，用户不可以手动开关。若已经通过  
+[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) 接口禁用了某个开关，则通过本接口设置这个开关的状态会抛出错误码203，需通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) 接口解除该开关禁用策略。当设备有多个MDM应用时，各MDM应用设置开关状态不存在冲突，最后设置的策略生效。开启(用户可手动开启、关闭)、关闭(用户可手动开启、关闭)、强制开启(用户不可手动关闭)三个状态可以随意切换，也不存在冲突。
 
 **Since:** 26.0.0
 
@@ -25,19 +31,42 @@ Sets the state of a switch. This API can enable or disable NearLink, Bluetooth, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| key | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Switch name. An application that has obtained the ohos.permission.PERSONAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ can use this API to set the following switches: NearLink, Bluetooth, and Wi-Fi. Attempting to set the NFC switch will result in error code 9200002. |
-| status | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Switch state. An application that has obtained the ohos.permission.PERSONAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ can use this API to set the following states: ON and OFF. Attempting to set the FORCE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ON state will result in error code 9200002. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| key | [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md) | Yes | 开关的名称，应用申请权限 ohos.permission.PERSONAL_MANAGE_RESTRICTIONS 并通过接口 [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision)激活为自带设备管理应用，可以使用此接口设 置以下开关：星闪、蓝牙、Wi-Fi。设置NFC开关时会报错误码9200002。 |
+| status | [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md) | Yes | 开关的状态，应用申请权限 ohos.permission.PERSONAL_MANAGE_RESTRICTIONS 并通过接口 [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision)激活为自带设备管理应用，可以使用此接口设 置以下状态：ON、OFF。设置为FORCE_ON状态时会报错误码9200002。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| 9200012 | Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 203 | This function is prohibited by enterprise management policies. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 | 9201042 | Failed to toggle the switch state. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+## Examples
+
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace with actual values.
+  let key: deviceSettings.SwitchKey = deviceSettings.SwitchKey.BLUETOOTH;
+  let status: deviceSettings.SwitchStatus  = deviceSettings.SwitchStatus.ON;
+  deviceSettings.setSwitchStatus(wantTemp, key, status);
+  console.info(`Succeeded in setting switch status.`);
+} catch (err) {
+  console.error(`Failed to set switch status. Code: ${err.code}, message: ${err.message}`);
+}
+```
 

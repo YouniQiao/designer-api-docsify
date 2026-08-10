@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
+```
+
 ## inputType
 
 ```TypeScript
@@ -20,7 +26,7 @@ inputType: InputMethodInputType
 
 输入法的输入类型。
 
-**类型：** InputMethodInputType
+**类型：** [InputMethodInputType](arkts-ime-inputmethodsystempanelmanager-inputmethodinputtype-e-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -86,7 +92,7 @@ panelFlag: PanelFlag
 
 输入法软键盘面板的面板标志。
 
-**类型：** PanelFlag
+**类型：** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 
 **起始版本：** 26.0.0
 

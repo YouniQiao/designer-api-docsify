@@ -1,6 +1,6 @@
 # DeviceLogEventCode (System API)
 
-Enumerates device log event code.
+设备日志事件返回值的枚举。
 
 **Since:** 13
 
@@ -18,7 +18,7 @@ Enumerates device log event code.
 DEVICE_LOG_FULL = 1
 ```
 
-Log is full.
+日志已满。
 
 **Since:** 13
 
@@ -36,7 +36,7 @@ Log is full.
 DEVICE_LOG_EXCEPTION = 2
 ```
 
-Log is written with exception, such as the fd cannot be written and so on.
+日志写入异常。
 
 **Since:** 13
 

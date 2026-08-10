@@ -1,5 +1,11 @@
 # createAudioRenderer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## createAudioRenderer
 
 ```TypeScript
@@ -20,10 +26,10 @@ function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 配置渲染器。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRenderer&gt; | 是 | 回调函数。当获取音频渲染器成功，err为undefined，data为获取到的音频渲染器对象；否则为错误对象。 |
+| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 | 配置渲染器。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRenderer&gt; | 是 | 回调函数。当获取音频渲染器成功，err为undefined，data为获取到的音频渲染器对象；否则为错误对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -64,13 +70,13 @@ audio.createAudioRenderer(audioRendererOptions,(err, data) => {
 function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer | null>): void
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.This method uses a promise to return the renderer instance.
+Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
 
-The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document [Low-Power Rules in Music Playback Scenarios]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.And for navigation situation, you can follow [Low-Power Rules in Navigation and Positioning Scenarios]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document [Low-Power Rules in Music Playback Scenarios](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-music-playback-scenarios).And for navigation situation, you can follow [Low-Power Rules in Navigation and Positioning Scenarios](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-navigation-scenarios).
 
-Application developer should also be careful when app goes to background, please check if your audio playback is still needed, see [Audio Resources]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.And avoiding to send silence audio data continuously to waste system resources, otherwise system will take control measures when this behavior is detected, see [Audio Playback]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
+Application developer should also be careful when app goes to background, please check if your audio playback is still needed, see [Audio Resources](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-reasonable-audio-use).And avoiding to send silence audio data continuously to waste system resources, otherwise system will take control measures when this behavior is detected, see [Audio Playback](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-reasonable-audio-playback-use).
 
-If you want to use AudioRenderer api to implement a music playback application, there are also many interactive scenes to consider, see [Developing an Audio Application]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_.
+If you want to use AudioRenderer api to implement a music playback application, there are also many interactive scenes to consider, see [Developing an Audio Application](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-audio-interaction-practice).
 
 **起始版本：** 23
 
@@ -84,8 +90,8 @@ If you want to use AudioRenderer api to implement a music playback application, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Renderer configurations. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRenderer \| null&gt; | 是 | Callback used to return the audio renderer instance, or null when an error happens. |
+| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 | Renderer configurations. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRenderer \| null&gt; | 是 | Callback used to return the audio renderer instance, or null when an error happens. |
 
 
 ## createAudioRenderer
@@ -108,7 +114,7 @@ function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRender
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 配置渲染器。 |
+| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 | 配置渲染器。 |
 
 **返回值：**
 
@@ -116,7 +122,7 @@ function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRender
 | --- | --- |
 | Promise&lt;AudioRenderer&gt; | Promise对象，返回音频渲染器对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -156,13 +162,13 @@ audio.createAudioRenderer(audioRendererOptions).then((data) => {
 function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer | null>
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.This method uses a promise to return the renderer instance.
+Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
 
-The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document [Low-Power Rules in Music Playback Scenarios]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.And for navigation situation, you can follow [Low-Power Rules in Navigation and Positioning Scenarios]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document [Low-Power Rules in Music Playback Scenarios](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-music-playback-scenarios).And for navigation situation, you can follow [Low-Power Rules in Navigation and Positioning Scenarios](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-navigation-scenarios).
 
-Application developer should also be careful when app goes to background, please check if your audio playback is still needed, see [Audio Resources]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.And avoiding to send silence audio data continuously to waste system resources, otherwise system will take control measures when this behavior is detected, see [Audio Playback]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
+Application developer should also be careful when app goes to background, please check if your audio playback is still needed, see [Audio Resources](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-reasonable-audio-use).And avoiding to send silence audio data continuously to waste system resources, otherwise system will take control measures when this behavior is detected, see [Audio Playback](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-reasonable-audio-playback-use).
 
-If you want to use AudioRenderer api to implement a music playback application, there are also many interactive scenes to consider, see [Developing an Audio Application]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_.
+If you want to use AudioRenderer api to implement a music playback application, there are also many interactive scenes to consider, see [Developing an Audio Application](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-audio-interaction-practice).
 
 **起始版本：** 23
 
@@ -176,7 +182,7 @@ If you want to use AudioRenderer api to implement a music playback application, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Renderer configurations. |
+| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 | Renderer configurations. |
 
 **返回值：**
 

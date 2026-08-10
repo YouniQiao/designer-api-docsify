@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
+## 导入模块
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## getDeviceIconInfo
 
 ```TypeScript
@@ -34,7 +40,7 @@ getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIco
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filterOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 查询过程中使用的过滤条件。 |
+| filterOptions | [DeviceIconInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceiconinfofilteroptions-i-sys.md) | 是 | 查询过程中使用的过滤条件。 |
 
 **返回值：**
 
@@ -46,17 +52,16 @@ getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIco
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-从云端获取数据失败) | Get data from cloud fail. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600106 | Get data from cloud fail. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -74,43 +79,12 @@ try {
   }
   dmInstance.getDeviceIconInfo(options).then((data: distributedDeviceManager.DeviceIconInfo) => {
     console.info('getDeviceIconInfo' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`getDeviceIconInfo errCode: ${e.code}, errMessage: ${e.message}`);
+  }).catch((e : BusinessError) => {
+    console.error('getDeviceIconInfo errCode:' + e.code + ',errMessage:' + e.message);
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`getDeviceIconInfo errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let productIds:Array<string> = ['M0D2', 'M0D3', 'M0D5', 'M0AB', 'M0BD', 'M0E9', 'M0BC', 'M0EA'];
-  let options:distributedDeviceManager.DeviceIconInfoFilterOptions = {
-    productId: 'P14U',
-    imageType: 'ID',
-    specName: 'lg',
-  };
-  if (productIds.indexOf(options.productId) != -1) {
-    options.internalModel = '';
-  } else {
-    options.subProductId = '';
-  }
-  dmInstance.getDeviceIconInfo(options).then((data: distributedDeviceManager.DeviceIconInfo) => {
-    console.info('getDeviceIconInfo' + JSON.stringify(data));
-  }).catch((err) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`getDeviceIconInfo errCode: ${e.code}, errMessage: ${e.message}`);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`getDeviceIconInfo errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('getDeviceIconInfo errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -138,7 +112,7 @@ getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<strin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filterOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 查询过程中使用的过滤条件。 |
+| filterOptions | [NetworkIdQueryFilter](arkts-distributedservice-distributeddevicemanager-networkidqueryfilter-i-sys.md) | 是 | 查询过程中使用的过滤条件。 |
 
 **返回值：**
 
@@ -150,17 +124,16 @@ getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<strin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600107 | A login account is required. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -171,36 +144,12 @@ try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
   dmInstance.getDeviceNetworkIdList(queryFiler).then((data:Array<string>) => {
     console.info('getDeviceNetworkIdList name:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`getDeviceNetworkIdList errCode: ${e.code}, errMessage: ${e.message}`);
+  }).catch((e: BusinessError) => {
+    console.error('getDeviceNetworkIdList errCode:' + e.code + ',errMessage:' + e.message);
   })
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`getDeviceNetworkIdList errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let queryFiler: distributedDeviceManager.NetworkIdQueryFilter = {
-    wiseDeviceId: '',
-    onlineStatus: 1,
-  }
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.getDeviceNetworkIdList(queryFiler).then((data:Array<string>) => {
-    console.info('getDeviceNetworkIdList name:' + JSON.stringify(data));
-  }).catch((err) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`getDeviceNetworkIdList errCode: ${e.code}, errMessage: ${e.message}`);
-  })
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`getDeviceNetworkIdList errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('getDeviceNetworkIdList errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -228,7 +177,7 @@ getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filterOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 查询过程中使用的过滤条件。 |
+| filterOptions | [DeviceProfileInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceprofileinfofilteroptions-i-sys.md) | 是 | 查询过程中使用的过滤条件。 |
 
 **返回值：**
 
@@ -240,50 +189,29 @@ getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-从云端获取数据失败) | Get data from cloud fail. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600107 | A login account is required. |
+| 11600106 | Get data from cloud fail. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
   dmInstance.getDeviceProfileInfoList({"isCloud": false}).then((data: Array<distributedDeviceManager.DeviceProfileInfo>) => {
     console.info('getDeviceProfileInfoList' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`getDeviceProfileInfoList errCode: ${e.code}, errMessage: ${e.message}`);
+  }).catch((e: BusinessError) => {
+    console.error('getDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`getDeviceProfileInfoList errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.getDeviceProfileInfoList({"isCloud": false}).then((data: Array<distributedDeviceManager.DeviceProfileInfo>) => {
-    console.info('getDeviceProfileInfoList' + JSON.stringify(data));
-  }).catch((err) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`getDeviceProfileInfoList errCode: ${e.code}, errMessage: ${e.message}`);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`getDeviceProfileInfoList errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('getDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -325,12 +253,12 @@ getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentificati
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | User permission verify failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 11600101 | Failed to execute the function. |
+| 201 | User permission verify failed. |
+| 202 | The caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let idsLists: undefined|Array<distributedDeviceManager.DeviceIdentification> = [];
@@ -375,7 +303,7 @@ getLocalDisplayDeviceName(maxNameLength: int): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxNameLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 可显示的设备名称长度（字节数），取值范围为[18，100]，为0时表示不限制。 |
+| maxNameLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 可显示的设备名称长度（字节数），取值范围为[18，100]，为0时表示不限制。 |
 
 **返回值：**
 
@@ -387,16 +315,15 @@ getLocalDisplayDeviceName(maxNameLength: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -405,31 +332,11 @@ try {
   dmInstance.getLocalDisplayDeviceName(maxNameLength).then((data:string)=>{
     console.info('getLocalDisplayDeviceName name:' + JSON.stringify(data));
   }).catch((e: BusinessError)=>{
-    console.error(`getLocalDisplayDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
+    console.error('getLocalDisplayDeviceName errCode:' + e.code + ',errMessage:' + e.message);
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`getLocalDisplayDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let maxNameLength: int = 21;
-  dmInstance.getLocalDisplayDeviceName(maxNameLength).then((data: string) => {
-    console.info('getLocalDisplayDeviceName name:' + JSON.stringify(data));
-  }).catch((err) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`getLocalDisplayDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`getLocalDisplayDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('getLocalDisplayDeviceName errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -471,15 +378,15 @@ getOsTypeByNetworkId(networkId: string): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int |  Returns the device operating system type. Possible return: 1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the device operating system type. Possible return: 1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | User permission verify failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| 11600102 | Failed to obtain service. |
+| 201 | User permission verify failed. |
+| 202 | The caller is not a system application. |
 | 11600110 | Invalid network ID. |
 
 ## off('replyResult')
@@ -507,19 +414,20 @@ off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'replyResult' | 是 | 取消注册的设备管理器 UI 状态回调，固定为replyResult。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ param: string; }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -527,7 +435,7 @@ try {
   dmInstance.off('replyResult');
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`replyResult errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -555,28 +463,14 @@ offReplyResult(callback?: Callback<ReplyResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ReplyResult&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ReplyResult&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例：**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.offReplyResult();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`offReplyResult errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## on('replyResult')
 
@@ -603,19 +497,20 @@ on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'replyResult' | 是 | 注册的设备管理器 UI 状态回调，以便在状态改变时通知应用，固定为replyResult。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ param: string; }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 class Data {
@@ -636,7 +531,7 @@ try {
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`replyResult errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -664,30 +559,14 @@ onReplyResult(callback: Callback<ReplyResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ReplyResult&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ReplyResult&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例：**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.onReplyResult((data: distributedDeviceManager.ReplyResult) => {
-    console.info('onReplyResult executed, data: ' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`onReplyResult errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## putDeviceProfileInfoList
 
@@ -725,22 +604,21 @@ putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -749,31 +627,11 @@ try {
   dmInstance.putDeviceProfileInfoList(deviceProfileInfoList).then((data:number) => {
     console.info('put device profile info:' + JSON.stringify(data));
   }).catch((e: BusinessError) => {
-    console.error(`putDeviceProfileInfoList errCode: ${e.code}, errMessage: ${e.message}`);
+    console.error('putDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`putDeviceProfileInfoList errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceProfileInfoList: Array<distributedDeviceManager.DeviceProfileInfo> = [];
-  dmInstance.putDeviceProfileInfoList(deviceProfileInfoList).then((data: int) => {
-    console.info('put device profile info:' + JSON.stringify(data));
-  }).catch((err) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`putDeviceProfileInfoList errCode: ${e.code}, errMessage: ${e.message}`);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`putDeviceProfileInfoList errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('putDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -807,26 +665,25 @@ replyUiAction(action: int, actionResult: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 用户操作动作。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 0：允许授权。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 1：取消授权。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 2：授权框用户操作超时。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 3：取消pin码框展示。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 4：取消pin码输入框展示。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 5：pin码输入框确定操作。 |
+| action | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 用户操作动作。 &lt;br /&gt;- 0：允许授权。 &lt;br /&gt;- 1：取消授权。 &lt;br /&gt;- 2：授权框用户操作超时。 &lt;br /&gt;- 3：取消pin码框展示。 &lt;br /&gt;- 4：取消pin码输入框展示。 &lt;br /&gt;- 5：pin码输入框确定操作。 |
 | actionResult | string | 是 | 表示用户操作结果，长度范围1~255字符。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  /*
+  /**
    * action = 0 - 允许授权
    * action = 1 - 取消授权
    * action = 2 - 授权框用户操作超时
@@ -839,30 +696,7 @@ try {
   dmInstance.replyUiAction(operation, 'extra');
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`replyUiAction errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  /*
-   * action = 0 - 允许授权
-   * action = 1 - 取消授权
-   * action = 2 - 授权框用户操作超时
-   * action = 3 - 取消pin码框展示
-   * action = 4 - 取消pin码输入框展示
-   * action = 5 - pin码输入框确定操作
-   */
-  let operation : int = 0;
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.replyUiAction(operation, 'extra');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`replyUiAction errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('replyUiAction errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -894,13 +728,14 @@ restoreLocalDeivceName(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain the service. |
+| 11600102 | Failed to obtain the service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -908,7 +743,7 @@ try {
   dmInstance.restoreLocalDeivceName();
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`restoreLocalDeivceName errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('restoreLocalDeivceName errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -938,13 +773,14 @@ restoreLocalDeviceName(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain the service. |
+| 11600102 | Failed to obtain the service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -952,7 +788,7 @@ try {
   dmInstance.restoreLocalDeviceName();
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`restoreLocalDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('restoreLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -986,23 +822,22 @@ setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 心跳广播策略。 |
-| delayTime | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 临时关闭心跳广播的时长，单位为：ms，取值范围1000ms到15000ms。 |
+| policy | [StrategyForHeartbeat](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md) | 是 | 心跳广播策略。 |
+| delayTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 临时关闭心跳广播的时长，单位为：ms，取值范围1000ms到15000ms。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -1012,24 +847,7 @@ try {
   dmInstance.setHeartbeatPolicy(policy, delayTime);
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`setHeartbeatPolicy errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let policy: distributedDeviceManager.StrategyForHeartbeat =
-    distributedDeviceManager.StrategyForHeartbeat.TEMP_STOP_HEARTBEAT;
-  let delayTime: int = 1000;
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.setHeartbeatPolicy(policy, delayTime);
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`setHeartbeatPolicy errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('setHeartbeatPolicy errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -1069,25 +887,24 @@ setLocalDeviceName(deviceName: string): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-从云端获取数据失败) | Failed to get data from the cloud. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
-| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-设备名称含非法信息) | The device name contains non-compliant content. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600107 | A login account is required. |
+| 11600106 | Failed to get data from the cloud. |
+| 11600108 | The device name contains non-compliant content. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -1096,31 +913,11 @@ try {
   dmInstance.setLocalDeviceName(deviceName).then((data:number)=>{
     console.info('setLocalDeviceName name:' + JSON.stringify(data));
   }).catch((e: BusinessError)=>{
-    console.error(`setLocalDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
+    console.error('setLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`setLocalDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceName: string = 'xxx';
-  dmInstance.setLocalDeviceName(deviceName).then((data: int) => {
-    console.info('setLocalDeviceName name:' + JSON.stringify(data));
-  }).catch((err) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`setLocalDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`setLocalDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('setLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 
@@ -1161,25 +958,24 @@ setRemoteDeviceName(deviceId: string, deviceName: string): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-从云端获取数据失败) | Failed to get data from the cloud. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-需要登录账号) | A login account is required. |
-| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-设备名称含非法信息) | The device name contains non-compliant content. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600107 | A login account is required. |
+| 11600106 | Failed to get data from the cloud. |
+| 11600108 | The device name contains non-compliant content. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -1189,32 +985,11 @@ try {
   dmInstance.setRemoteDeviceName(deviceId, deviceName).then((data:number)=>{
     console.info('setRemoteDeviceName name:' + JSON.stringify(data));
   }).catch((e: BusinessError)=>{
-    console.error(`setRemoteDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
+    console.error('setRemoteDeviceName errCode:' + e.code + ',errMessage:' + e.message);
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`setRemoteDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceId: string = 'xxx';
-  let deviceName: string = 'xxx';
-  dmInstance.setRemoteDeviceName(deviceId, deviceName).then((data: int) => {
-    console.info('setRemoteDeviceName name:' + JSON.stringify(data));
-  }).catch((err) => {
-    let e: BusinessError = err as BusinessError;
-    console.error(`setRemoteDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`setRemoteDeviceName errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error('setRemoteDeviceName errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
 

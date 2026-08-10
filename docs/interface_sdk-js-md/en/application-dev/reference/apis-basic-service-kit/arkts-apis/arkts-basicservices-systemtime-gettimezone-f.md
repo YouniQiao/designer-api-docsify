@@ -1,12 +1,18 @@
 # getTimezone
 
+## Modules to Import
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getTimezone
 
 ```TypeScript
 function getTimezone(callback: AsyncCallback<string>): void
 ```
 
-Obtains the system time zone. This API uses an asynchronous callback to return the result.
+获取系统时区，使用callback异步回调。
 
 **Since:** 8
 
@@ -24,7 +30,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
 
 **Error codes:**
 
@@ -32,7 +38,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,7 +64,7 @@ try {
 function getTimezone(): Promise<string>
 ```
 
-Obtains the system time zone. This API uses a promise to return the result.
+获取系统时区，使用Promise异步回调。
 
 **Since:** 8
 
@@ -76,7 +82,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the system time zone. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| Promise&lt;string&gt; | Promise对象，返回系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
 
 **Error codes:**
 
@@ -84,7 +90,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

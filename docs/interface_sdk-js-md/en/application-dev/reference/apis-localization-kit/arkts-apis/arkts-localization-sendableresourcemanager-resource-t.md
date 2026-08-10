@@ -4,7 +4,7 @@
 export type Resource = _Resource
 ```
 
-Represents resource-related information, including the application bundle name, application module name, resource ID, resource type, and other resource parameters.
+表示资源相关信息，包括应用包名、应用模块名、资源ID、资源类型和其他资源参数。
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # TimeFormat
 
-TimeFormat enum defines the format of the time picker.
+TimeFormat枚举用于定义时间选择器的格式。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ TimeFormat enum defines the format of the time picker.
 HOUR_MINUTE = 0
 ```
 
-Displays hour and minute.
+显示时、分。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Displays hour and minute.
 HOUR_MINUTE_SECOND = 1
 ```
 
-Displays hour, minute, and second.
+显示时、分、秒。
 
 **Since:** 26.0.0
 

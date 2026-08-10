@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## interactionUI
 
 ```TypeScript
@@ -20,7 +26,7 @@ interactionUI?: InteractionUI
 
 当前意图执行完成后需要展示的交互界面信息。
 
-**类型：** InteractionUI
+**类型：** [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
 
 **起始版本：** 26.1.0
 

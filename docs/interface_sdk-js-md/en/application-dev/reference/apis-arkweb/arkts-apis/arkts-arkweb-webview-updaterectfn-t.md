@@ -18,8 +18,8 @@ The function of the rect of video tag has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | double | Yes | The x position of video tag in web component.  |
-| y | double | Yes | The y position of video tag in web component.  |
-| width | double | Yes | The width of video tag.  |
-| height | double | Yes | The height of video tag.  |
+| x | double | Yes | The x position of video tag in web component. |
+| y | double | Yes | The y position of video tag in web component. |
+| width | double | Yes | The width of video tag. |
+| height | double | Yes | The height of video tag. |
 

@@ -2,9 +2,9 @@
 
 用于表示当前设备类型。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_
+&lt;!--RP1--&gt;
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP1End--&gt;
 
 **起始版本：** 6
 

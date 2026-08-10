@@ -12,6 +12,12 @@ Configuration parameter of ExceptionPromptV2.Use @ObservedV2 and @Trace to suppo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
@@ -34,7 +40,7 @@ Constructor of PromptOptionsV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Configuration information of ExceptionPromptV2 |
+| config | [PromptOptionsV2Config](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2config-i.md) | No | Configuration information of ExceptionPromptV2 |
 
 ## actionText
 
@@ -44,7 +50,7 @@ public actionText?: ResourceStr
 
 Text of the icon on the right of the ExceptionPromptV2.If this parameter is not set or is set to undefined, the text is not displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ public icon?: ResourceStr
 
 Icon style of the ExceptionPromptV2.If this parameter is not set or is set to undefined, the icon is not displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -104,7 +110,7 @@ public marginTop: Dimension
 
 Top margin of the ExceptionPromptV2.Distance from the top to the content area of ExceptionPromptV2.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 26.0.0
 
@@ -124,7 +130,7 @@ public marginType: MarginTypeV2
 
 Margin Type of ExceptionPromptV2.Margin from the content area to the edge of the container.
 
-**Type:** MarginTypeV2
+**Type:** [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
 
 **Since:** 26.0.0
 
@@ -144,7 +150,7 @@ public symbolStyle?: SymbolGlyphModifier
 
 Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.If this parameter is not set or is set to undefined, the symbol icon is not displayed.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -162,9 +168,11 @@ Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.
 public tip?: ResourceStr
 ```
 
-Text content of the ExceptionPromptV2.By default, the following text resources are provided:1. ohos\_network\_not\_connected: displayed when no Internet connection.2. ohos\_network\_connected\_unstable: displayed when the Internet connection is unstable.3. ohos\_unstable\_connect\_server: displayed when the server fails to be connected.4. ohos\_custom\_network\_tips\_left: displayed when an Internet connection is available but the location fails to be obtained.If this parameter is not set or is set to undefined, the text content is not displayed.
+Text content of the ExceptionPromptV2.By default, the following text resources are provided:
 
-**Type:** ResourceStr
+1. ohos_network_not_connected: displayed when no Internet connection.2. ohos_network_connected_unstable: displayed when the Internet connection is unstable.3. ohos_unstable_connect_server: displayed when the server fails to be connected.4. ohos_custom_network_tips_left: displayed when an Internet connection is available but the location fails to be obtained.If this parameter is not set or is set to undefined, the text content is not displayed.
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

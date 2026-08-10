@@ -22,8 +22,8 @@ export type OnTabsContentWillChangeCallback = (currentIndex: int, comingIndex: i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| currentIndex | int | 是 | 当前显示页面的index索引，索引从0开始计算。 取值范围为全体整数 取值限定为整数。  |
-| comingIndex | int | 是 | 将要显示的新页面的index索引。 取值范围为全体整数 取值限定为整数。  |
+| currentIndex | int | 是 | 当前显示页面的index索引，索引从0开始计算。 取值范围为全体整数 取值限定为整数。 |
+| comingIndex | int | 是 | 将要显示的新页面的index索引。 取值范围为全体整数 取值限定为整数。 |
 
 **返回值：**
 

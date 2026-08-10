@@ -1,7 +1,6 @@
 # IntentResult
 
-Defines the return result of intent execution. The  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is supported.
+意图执行的返回结果，支持[泛型类型](../../../quick-start/introduction-to-arkts.md#泛型类和接口)。
 
 **Since:** 20
 
@@ -11,15 +10,21 @@ Defines the return result of intent execution. The
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## code
 
 ```TypeScript
 code: int
 ```
 
-Error code returned by the intent execution, defined by the developer.
+意图执行返回的错误码，由开发者定义。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -39,7 +44,7 @@ Error code returned by the intent execution, defined by the developer.
 result?: T
 ```
 
-Result data returned by the intent execution, typically containing information to be passed back to the system entry point.
+意图执行返回的结果，通常会包含需要返回给系统入口的数据。
 
 **Type:** T
 

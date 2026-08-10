@@ -1,5 +1,11 @@
 # getBtConnectionState
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getBtConnectionState
 
 ```TypeScript
@@ -26,9 +32,9 @@ Get the local device connection state to any profile of any remote device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | One of { |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | One of { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let connectionState : bluetooth.ProfileConnectionState = bluetooth.getBtConnectionState();

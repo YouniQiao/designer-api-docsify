@@ -1,6 +1,6 @@
 # AudioRendererChangeInfo
 
-Describes the audio renderer change event.
+描述音频渲染器更改信息。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Describes the audio renderer change event.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## deviceDescriptors
 
 ```TypeScript
 readonly deviceDescriptors: AudioDeviceDescriptors
 ```
 
-Audio device description.
+音频设备描述。
 
-**Type:** AudioDeviceDescriptors
+**Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Audio device description.
 readonly rendererInfo: AudioRendererInfo
 ```
 
-Audio renderer information.
+音频渲染器信息。
 
-**Type:** AudioRendererInfo
+**Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
 **Since:** 9
 
@@ -52,9 +58,9 @@ Audio renderer information.
 readonly streamId: int
 ```
 
-Unique ID of an audio stream.
+音频流唯一id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # NetworkPolicy
 
-Indicates network policy.
+下载云侧模型的网络策略枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Indicates network policy.
 WIFI_ONLY = 0
 ```
 
-Using WiFi.
+仅在Wi-Fi状态下下载模型，适用于需要节省移动数据流量的场景。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Using WiFi.
 WIFI_AND_CELLULAR = 1
 ```
 
-Using WiFi and Cellular.
+在Wi-Fi和蜂窝网络状态下下载模型，适用于需要快速获取模型且允许使用移动数据的场景。
 
 **Since:** 26.0.0
 

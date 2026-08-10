@@ -33,7 +33,7 @@ Constructs a new MessageHandler with a handler function
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handler | (message: concurrency.Message) =&gt; void | Yes | the handler function to process messages. |
-| worker | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | the worker to associate with this handler. |
+| worker | [EAWorker](arkts-arkts-eaworker-c.md) \| undefined | Yes | the worker to associate with this handler. |
 
 ## getWorker
 
@@ -57,7 +57,7 @@ Returns the worker associated with this handler
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the associated worker |
+| [EAWorker](arkts-arkts-eaworker-c.md) | the associated worker |
 
 ## hasCallbacks
 
@@ -111,7 +111,7 @@ Checks whether the handler has messages with the specified what code
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to check for. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| what | int | Yes | the message code to check for. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
@@ -141,7 +141,7 @@ Checks whether the handler has messages with the specified what code and object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to check for. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| what | int | Yes | the message code to check for. &lt;br&gt;The value should be an integer. |
 | obj | Any | Yes | the object to check for. |
 
 **Return value:**
@@ -232,7 +232,7 @@ Removes pending messages with the specified what code
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to remove. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| what | int | Yes | the message code to remove. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
@@ -262,7 +262,7 @@ Removes pending messages with the specified what code and object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to remove. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| what | int | Yes | the message code to remove. &lt;br&gt;The value should be an integer. |
 | obj | Any | Yes | the object to match. |
 
 **Return value:**
@@ -293,7 +293,7 @@ Sends an empty message with the specified what code
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to send. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| what | int | Yes | the message code to send. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 

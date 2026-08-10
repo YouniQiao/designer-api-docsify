@@ -1,6 +1,6 @@
 # SearchFrameNode
 
-Define the Search type of FrameNode.
+定义Search类型的FrameNode。
 
 **Inheritance/Implementation:** SearchFrameNode extends [TypedFrameNode<SearchAttribute>](TypedFrameNode<SearchAttribute>)
 
@@ -18,7 +18,7 @@ Define the Search type of FrameNode.
 abstract initialize(value?: SearchOptions): SearchAttribute
 ```
 
-Initialize Search FrameNode.
+初始化Search类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Search FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| value | [SearchOptions](../arkts-components/arkts-arkui-searchoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SearchAttribute](../arkts-components/arkts-arkui-search-attribute.md) |  |
 

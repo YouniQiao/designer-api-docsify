@@ -14,6 +14,12 @@ Define configuration of the system VPN network.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { vpn } from 'kits/@kit.NetworkKit';
+```
+
 ## forwardingRoutes
 
 ```TypeScript
@@ -244,7 +250,7 @@ vpnType?: SysVpnType
 
 The type for the VPN network.
 
-**Type:** SysVpnType
+**Type:** [SysVpnType](arkts-network-vpn-sysvpntype-e-sys.md)
 
 **Since:** 12
 

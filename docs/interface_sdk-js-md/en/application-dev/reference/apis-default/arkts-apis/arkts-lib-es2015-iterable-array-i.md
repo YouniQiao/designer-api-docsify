@@ -1,0 +1,76 @@
+# Array
+
+**ArkTS mode:** ArkTS-Dyn only
+
+## [Symbol.iterator]
+
+```TypeScript
+[Symbol.iterator](): IterableIterator<T>
+```
+
+Iterator
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-Array-[Symbol.iterator](): IterableIterator<T>--><!--Device-Array-[Symbol.iterator](): IterableIterator<T>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+
+## entries
+
+```TypeScript
+entries(): IterableIterator<[number, T]>
+```
+
+Returns an iterable of key, value pairs for every entry in the array
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-Array-entries(): IterableIterator<[number, T]>--><!--Device-Array-entries(): IterableIterator<[number, T]>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, T]&gt; |  |
+
+## keys
+
+```TypeScript
+keys(): IterableIterator<number>
+```
+
+Returns an iterable of keys in the array
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-Array-keys(): IterableIterator<number>--><!--Device-Array-keys(): IterableIterator<number>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |  |
+
+## values
+
+```TypeScript
+values(): IterableIterator<T>
+```
+
+Returns an iterable of values in the array
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-Array-values(): IterableIterator<T>--><!--Device-Array-values(): IterableIterator<T>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+

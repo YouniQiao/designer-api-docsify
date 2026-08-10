@@ -10,6 +10,12 @@ Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Elem
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## accessType
 
 ```TypeScript
@@ -18,7 +24,7 @@ accessType: int
 
 The type of access.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

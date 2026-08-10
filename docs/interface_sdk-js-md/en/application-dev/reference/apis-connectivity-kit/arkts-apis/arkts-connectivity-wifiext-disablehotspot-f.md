@@ -1,5 +1,11 @@
 # disableHotspot
 
+## Modules to Import
+
+```TypeScript
+import { wifiext } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disableHotspot
 
 ```TypeScript

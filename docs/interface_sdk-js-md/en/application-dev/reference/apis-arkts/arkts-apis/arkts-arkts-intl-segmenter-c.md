@@ -32,8 +32,8 @@ Creates a new Segmenter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| BCP47LanguageTag[] | No | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| locales | [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| BCP47LanguageTag[] | No | the locales. |
+| options | [SegmenterOptions](arkts-arkts-intl-segmenteroptions-i.md) | No | the options. |
 
 ## resolvedOptions
 
@@ -57,7 +57,7 @@ Returns resolved options.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the resolved options. |
+| [ResolvedSegmenterOptions](arkts-arkts-intl-resolvedsegmenteroptions-i.md) | the resolved options. |
 
 ## segment
 
@@ -87,7 +87,7 @@ Segments a document.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the segments. |
+| [Segments](arkts-arkts-intl-segments-c.md) | the segments. |
 
 ## supportedLocalesOf
 
@@ -112,12 +112,12 @@ Returns supported locales.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| BCP47LanguageTag[] | Yes | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| locales | [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| BCP47LanguageTag[] | Yes | the locales. |
+| options | [PickLocaleMatchSegmenterOptions](arkts-arkts-intl-picklocalematchsegmenteroptions-i.md) | No | the options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | supported locales. |
+| [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md)[] | supported locales. |
 

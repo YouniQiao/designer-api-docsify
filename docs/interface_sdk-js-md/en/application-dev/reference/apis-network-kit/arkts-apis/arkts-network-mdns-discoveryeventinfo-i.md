@@ -10,6 +10,12 @@ Defines the discovery events information of mDNS services.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
+## Modules to Import
+
+```TypeScript
+import { mdns } from 'kits/@kit.NetworkKit';
+```
+
 ## errorCode
 
 ```TypeScript
@@ -18,7 +24,7 @@ errorCode?: MdnsError
 
 The mDNS error information.
 
-**Type:** MdnsError
+**Type:** [MdnsError](arkts-network-mdns-mdnserror-e.md)
 
 **Since:** 11
 
@@ -38,7 +44,7 @@ serviceInfo: LocalServiceInfo
 
 Information about the mDNS service.
 
-**Type:** LocalServiceInfo
+**Type:** [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)
 
 **Since:** 11
 

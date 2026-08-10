@@ -1,6 +1,6 @@
 # RRect (System API)
 
-Round rect.
+圆角矩形。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Round rect.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: double
 ```
 
-Height of the round rect, in pixels.
+动画目标窗口的高度大小。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Height of the round rect, in pixels.
 left: double
 ```
 
-The X-axis coordinate of the upper left vertex of the round rect, in pixels.
+动画目标窗口左上角相对于屏幕的横坐标。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ The X-axis coordinate of the upper left vertex of the round rect, in pixels.
 radius: double
 ```
 
-Radius of the round corner of the round rect, in pixels.
+动画目标窗口的圆角大小。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -78,9 +84,9 @@ Radius of the round corner of the round rect, in pixels.
 top: double
 ```
 
-The Y-axis coordinate of the upper left vertex of the round rect, in pixels.
+动画目标窗口左上角相对于屏幕的纵坐标。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -98,9 +104,9 @@ The Y-axis coordinate of the upper left vertex of the round rect, in pixels.
 width: double
 ```
 
-Width of the round rect, in pixels.
+动画目标窗口的宽度大小。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 

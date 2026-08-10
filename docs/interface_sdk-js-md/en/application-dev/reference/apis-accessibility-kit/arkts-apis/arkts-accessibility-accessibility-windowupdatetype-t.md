@@ -4,7 +4,7 @@
 type WindowUpdateType = 'add' | 'remove' | 'bounds' | 'active' | 'focus'
 ```
 
-Window update type.
+窗口变化类型。
 
 **Since:** 7
 
@@ -20,9 +20,9 @@ Window update type.
 
 | Type | Description |
 | --- | --- |
-| 'add' | Window adding. |
-| 'remove' | Window deletion. |
-| 'bounds' | Window boundary change. |
-| 'active' | Window activity change. |
-| 'focus' | Window focus change. |
+| 'add' | 表示添加窗口的窗口变化事件，值固定为'add'字符串。 |
+| 'remove' | 表示一个窗口被删除的窗口变化事件，值固定为'remove'字符串。 |
+| 'bounds' | 表示窗口边界已更改的窗口变化事件，值固定为'bounds'字符串。 |
+| 'active' | 表示窗口变为活动或不活动的窗口变化事件，值固定为'active'字符串。 |
+| 'focus' | 表示窗口焦点发生变化的窗口变化事件，值固定为'focus'字符串。 |
 

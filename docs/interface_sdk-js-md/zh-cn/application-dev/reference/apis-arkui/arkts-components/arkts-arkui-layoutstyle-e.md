@@ -1,6 +1,6 @@
 # LayoutStyle
 
-[Scrollable]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_模式下不滚动时的页签排布方式枚举。
+[Scrollable](TabsAttribute#barMode(value: BarMode, options?: ScrollableBarModeOptions))模式下不滚动时的页签排布方式枚举。
 
 **起始版本：** 10
 

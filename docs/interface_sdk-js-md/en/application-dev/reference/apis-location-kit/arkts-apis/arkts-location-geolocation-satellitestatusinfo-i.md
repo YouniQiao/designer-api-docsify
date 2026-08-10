@@ -16,6 +16,12 @@ Satellite status information
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## altitudes
 
 ```TypeScript

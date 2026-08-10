@@ -10,6 +10,12 @@ Network traceroute option definition.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## maxJumpNumber
 
 ```TypeScript
@@ -18,7 +24,7 @@ maxJumpNumber?: int
 
 Maximum number of jumps, max is 30. Default is 30.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Maximum number of jumps, max is 30. Default is 30.
 packetsType?: PacketsType
 ```
 
-Packets type. Default is NETCONN\_PACKETS\_ICMP.
+Packets type. Default is NETCONN_PACKETS_ICMP.
 
-**Type:** PacketsType
+**Type:** [PacketsType](arkts-network-connection-packetstype-e.md)
 
 **Since:** 26.0.0
 

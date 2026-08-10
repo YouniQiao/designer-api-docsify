@@ -1,6 +1,6 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance.
 
 **Since:** 10
 
@@ -9,6 +9,12 @@ Manages GATT client. Before calling an Gatt client method, you must use \_\_\_JS
 <!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
 
 ## writeCharacteristicValueWithContext
 
@@ -37,8 +43,8 @@ Writes the characteristic of a BLE peripheral device with context.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to write. |
-| writeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Write type of the characteristic. The interface currently only supports \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ mode. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. The interface currently only supports {@link GattWriteType#WRITE} mode. |
 
 **Return value:**
 
@@ -50,19 +56,19 @@ Writes the characteristic of a BLE peripheral device with context.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900011 | The operation is busy. The last operation is not complete. |
-| 2900099 | Operation failed. |
-| 2901001 | Write forbidden. |
-| 2901003 | The connection is not established. |
 | 2901004 | The connection is congested. |
+| 801 | Capability not supported. |
 | 2901005 | The connection is not encrypted. |
 | 2901006 | The connection is not authenticated. |
 | 2901007 | The connection is not authorized. |
+| 2901001 | Write forbidden. |
+| 2900011 | The operation is busy. The last operation is not complete. |
+| 2901003 | The connection is not established. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let descriptors: Array<ble.BLEDescriptor>  = [];

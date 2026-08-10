@@ -1,5 +1,11 @@
 # isNotificationEnabledSync
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## isNotificationEnabledSync
 
 ```TypeScript
@@ -28,11 +34,11 @@ function isNotificationEnabledSync(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let enabled: boolean = notificationManager.isNotificationEnabledSync();

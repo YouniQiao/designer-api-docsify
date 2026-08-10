@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## targetTimestamp
 
 ```TypeScript
@@ -18,7 +24,7 @@ targetTimestamp: long
 
 下一帧预期到达的时间（单位：纳秒）。系统启动以来的单调递增时间，值应大于timestamp。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -36,7 +42,7 @@ timestamp: long
 
 当前帧到达的时间（单位：纳秒）。系统启动以来的单调递增时间。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 

@@ -1,6 +1,6 @@
 # TabBarOptions
 
-Array of tab bar container configurations.
+页签选项。
 
 **Since:** 12
 
@@ -10,6 +10,12 @@ Array of tab bar container configurations.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
@@ -17,7 +23,7 @@ constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr,
     unselectedColor?: ResourceColor, selectedColor?: ResourceColor)
 ```
 
-A constructor used to create a **TabBarOptions** instance.
+TabBarOptions的构造函数。
 
 **Since:** 12
 
@@ -33,8 +39,8 @@ A constructor used to create a **TabBarOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| TabBarSymbol | Yes | Image for the tab. |
-| text | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text of the tab. |
-| unselectedColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Color of the tab when it is not selected. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **#99182431 |
-| selectedColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Color of the tab when it is selected. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **#FF007DFF |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | 页签内的图标内容。 |
+| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
+| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | 未选择时的页签颜色，默认值为#99182431。 |
+| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | 已选择时的页签颜色，默认值为#FF007DFF。 |
 

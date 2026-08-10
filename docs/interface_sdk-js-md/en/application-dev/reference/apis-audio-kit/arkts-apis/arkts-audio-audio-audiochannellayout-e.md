@@ -1,6 +1,6 @@
 # AudioChannelLayout
 
-Audio AudioChannel Layout.A 64-bit integer indicates that the appearance and order of the speakers for recording or playback.
+表示音频文件声道布局类型的枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Audio AudioChannel Layout.A 64-bit integer indicates that the appearance and ord
 CH_LAYOUT_UNKNOWN = 0x0
 ```
 
-Unknown Channel Layout.
+未知声道布局。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Unknown Channel Layout.
 CH_LAYOUT_MONO = 0x4
 ```
 
-Channel Layout For Mono, 1 channel in total.Speaker layout: front center(FC).
+声道布局为MONO。
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Channel Layout For Mono, 1 channel in total.Speaker layout: front center(FC).
 CH_LAYOUT_STEREO = 0x3
 ```
 
-Channel Layout For Stereo, 2 channels in total.Speaker layout: front left(FL), front right(FR).
+声道布局为STEREO。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Channel Layout For Stereo, 2 channels in total.Speaker layout: front left(FL), f
 CH_LAYOUT_STEREO_DOWNMIX = 0x60000000
 ```
 
-Channel Layout For Stereo-Downmix, 2 channels in total.Speaker layout: Stereo left, stereo right.
+声道布局为STEREO-DOWNMIX。
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ Channel Layout For Stereo-Downmix, 2 channels in total.Speaker layout: Stereo le
 CH_LAYOUT_2POINT1 = 0xB
 ```
 
-Channel Layout For 2.1, 3 channels in total.Speaker layout: Stereo plus low-frequency effects(LFE).
+声道布局为2.1。
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ Channel Layout For 2.1, 3 channels in total.Speaker layout: Stereo plus low-freq
 CH_LAYOUT_3POINT0 = 0x103
 ```
 
-Channel Layout For 3.0, 3 channels in total.Speaker layout: Stereo plus back center(BC).
+声道布局为3.0。
 
 **Since:** 11
 
@@ -112,7 +112,7 @@ Channel Layout For 3.0, 3 channels in total.Speaker layout: Stereo plus back cen
 CH_LAYOUT_SURROUND = 0x7
 ```
 
-Channel Layout For Surround, 3 channels in total.Speaker layout: Stereo plus FC.
+声道布局为SURROUND。
 
 **Since:** 11
 
@@ -128,7 +128,7 @@ Channel Layout For Surround, 3 channels in total.Speaker layout: Stereo plus FC.
 CH_LAYOUT_3POINT1 = 0xF
 ```
 
-Channel Layout For 3.1, 4 channels in total.Speaker layout: Surround plus LFE.
+声道布局为3.1。
 
 **Since:** 11
 
@@ -144,7 +144,7 @@ Channel Layout For 3.1, 4 channels in total.Speaker layout: Surround plus LFE.
 CH_LAYOUT_4POINT0 = 0x107
 ```
 
-Channel Layout For 4.0, 4 channels in total.Speaker layout: Surround plus BC.
+声道布局为4.0。
 
 **Since:** 11
 
@@ -160,7 +160,7 @@ Channel Layout For 4.0, 4 channels in total.Speaker layout: Surround plus BC.
 CH_LAYOUT_QUAD = 0x33
 ```
 
-Channel Layout For Quad, 4 channels in total.Speaker layout: Stereo plus left and right back speakers.
+声道布局为QUAD。
 
 **Since:** 11
 
@@ -176,7 +176,7 @@ Channel Layout For Quad, 4 channels in total.Speaker layout: Stereo plus left an
 CH_LAYOUT_QUAD_SIDE = 0x603
 ```
 
-Channel Layout For Quad-Side, 4 channels in total.Speaker layout: Stereo plus left and right side speakers(SL, SR).
+声道布局为QUAD-SIDE。
 
 **Since:** 11
 
@@ -192,7 +192,7 @@ Channel Layout For Quad-Side, 4 channels in total.Speaker layout: Stereo plus le
 CH_LAYOUT_2POINT0POINT2 = 0x3000000003
 ```
 
-Channel Layout For 2.0.2, 4 channels in total.Speaker layout: Stereo plus left and right top side speakers.
+声道布局为2.0.2。
 
 **Since:** 11
 
@@ -208,7 +208,7 @@ Channel Layout For 2.0.2, 4 channels in total.Speaker layout: Stereo plus left a
 CH_LAYOUT_AMB_ORDER1_ACN_N3D = 0x100000000001
 ```
 
-Channel Layout For ORDER1-ACN-N3D First Order Ambisonic(FOA), 4 channels in total.First order, Ambisonic Channel Number(ACN) format, Normalization of three-D(N3D).
+声道排序为ACN_N3D（根据ITU标准）的一阶FOA文件。
 
 **Since:** 11
 
@@ -224,7 +224,7 @@ Channel Layout For ORDER1-ACN-N3D First Order Ambisonic(FOA), 4 channels in tota
 CH_LAYOUT_AMB_ORDER1_ACN_SN3D = 0x100000001001
 ```
 
-Channel Layout For ORDER1-ACN-SN3D FOA, 4 channels in total.First order, ACN format, Semi-Normalization of three-D(SN3D).
+声道排序为ACN_SN3D（根据ITU标准）的一阶FOA文件。
 
 **Since:** 11
 
@@ -240,7 +240,7 @@ Channel Layout For ORDER1-ACN-SN3D FOA, 4 channels in total.First order, ACN for
 CH_LAYOUT_AMB_ORDER1_FUMA = 0x100000000101
 ```
 
-Channel Layout For ORDER1-FUMA FOA, 4 channels in total.First order, Furse-Malham(FuMa) format.
+声道排序为FUMA（根据ITU标准）的一阶FOA文件。
 
 **Since:** 11
 
@@ -256,7 +256,7 @@ Channel Layout For ORDER1-FUMA FOA, 4 channels in total.First order, Furse-Malha
 CH_LAYOUT_4POINT1 = 0x10F
 ```
 
-Channel Layout For 4.1, 5 channels in total.Speaker layout: 4.0 plus LFE.
+声道布局为4.1。
 
 **Since:** 11
 
@@ -272,7 +272,7 @@ Channel Layout For 4.1, 5 channels in total.Speaker layout: 4.0 plus LFE.
 CH_LAYOUT_5POINT0 = 0x607
 ```
 
-Channel Layout For 5.0, 5 channels in total.Speaker layout: Surround plus two side speakers.
+声道布局为5.0。
 
 **Since:** 11
 
@@ -288,7 +288,7 @@ Channel Layout For 5.0, 5 channels in total.Speaker layout: Surround plus two si
 CH_LAYOUT_5POINT0_BACK = 0x37
 ```
 
-Channel Layout For 5.0-Back, 5 channels in total.Speaker layout: Surround plus two back speakers.
+声道布局为5.0-BACK。
 
 **Since:** 11
 
@@ -304,7 +304,7 @@ Channel Layout For 5.0-Back, 5 channels in total.Speaker layout: Surround plus t
 CH_LAYOUT_2POINT1POINT2 = 0x300000000B
 ```
 
-Channel Layout For 2.1.2, 5 channels in total.Speaker layout: 2.0.2 plus LFE.
+声道布局为2.1.2。
 
 **Since:** 11
 
@@ -320,7 +320,7 @@ Channel Layout For 2.1.2, 5 channels in total.Speaker layout: 2.0.2 plus LFE.
 CH_LAYOUT_3POINT0POINT2 = 0x3000000007
 ```
 
-Channel Layout For 3.0.2, 5 channels in total.Speaker layout: 2.0.2 plus FC.
+声道布局为3.0.2。
 
 **Since:** 11
 
@@ -336,7 +336,7 @@ Channel Layout For 3.0.2, 5 channels in total.Speaker layout: 2.0.2 plus FC.
 CH_LAYOUT_5POINT1 = 0x60F
 ```
 
-Channel Layout For 5.1, 6 channels in total.Speaker layout: 5.0 plus LFE.
+声道布局为5.1。
 
 **Since:** 11
 
@@ -352,7 +352,7 @@ Channel Layout For 5.1, 6 channels in total.Speaker layout: 5.0 plus LFE.
 CH_LAYOUT_5POINT1_BACK = 0x3F
 ```
 
-Channel Layout For 5.1-Back, 6 channels in total.Speaker layout: 5.0-Back plus LFE.
+声道布局为5.1-BACK。
 
 **Since:** 11
 
@@ -368,7 +368,7 @@ Channel Layout For 5.1-Back, 6 channels in total.Speaker layout: 5.0-Back plus L
 CH_LAYOUT_6POINT0 = 0x707
 ```
 
-Channel Layout For 6.0, 6 channels in total.Speaker layout: 5.0 plus BC.
+声道布局为6.0。
 
 **Since:** 11
 
@@ -384,7 +384,7 @@ Channel Layout For 6.0, 6 channels in total.Speaker layout: 5.0 plus BC.
 CH_LAYOUT_HEXAGONAL = 0x137
 ```
 
-Channel Layout For Hexagonal, 6 channels in total.Speaker layout: 5.0-Back plus BC.
+声道布局为HEXAGONAL。
 
 **Since:** 11
 
@@ -400,7 +400,7 @@ Channel Layout For Hexagonal, 6 channels in total.Speaker layout: 5.0-Back plus 
 CH_LAYOUT_3POINT1POINT2 = 0x500F
 ```
 
-Channel Layout For 3.1.2, 6 channels in total.Speaker layout: 3.1 plus two top front speakers(TFL, TFR).
+声道布局为3.1.2。
 
 **Since:** 11
 
@@ -416,7 +416,7 @@ Channel Layout For 3.1.2, 6 channels in total.Speaker layout: 3.1 plus two top f
 CH_LAYOUT_6POINT0_FRONT = 0x6C3
 ```
 
-Channel Layout For 6.0-Front, 6 channels in total.Speaker layout: Quad-Side plus left and right front center speakers(FLC, FRC).
+声道布局为6.0-FRONT。
 
 **Since:** 11
 
@@ -432,7 +432,7 @@ Channel Layout For 6.0-Front, 6 channels in total.Speaker layout: Quad-Side plus
 CH_LAYOUT_6POINT1 = 0x70F
 ```
 
-Channel Layout For 6.1, 7 channels in total.Speaker layout: 5.1 plus BC.
+声道布局为6.1。
 
 **Since:** 11
 
@@ -448,7 +448,7 @@ Channel Layout For 6.1, 7 channels in total.Speaker layout: 5.1 plus BC.
 CH_LAYOUT_6POINT1_BACK = 0x13F
 ```
 
-Channel Layout For 6.1-Back, 7 channels in total.Speaker layout: 5.1-Back plus BC.
+声道布局为6.1-BACK。
 
 **Since:** 11
 
@@ -464,7 +464,7 @@ Channel Layout For 6.1-Back, 7 channels in total.Speaker layout: 5.1-Back plus B
 CH_LAYOUT_6POINT1_FRONT = 0x6CB
 ```
 
-Channel Layout For 6.1-Front, 7 channels in total.Speaker layout: 6.0-Front plus LFE.
+声道布局为6.1-FRONT。
 
 **Since:** 11
 
@@ -480,7 +480,7 @@ Channel Layout For 6.1-Front, 7 channels in total.Speaker layout: 6.0-Front plus
 CH_LAYOUT_7POINT0 = 0x637
 ```
 
-Channel Layout For 7.0, 7 channels in total.Speaker layout: 5.0 plus two back speakers.
+声道布局为7.0。
 
 **Since:** 11
 
@@ -496,7 +496,7 @@ Channel Layout For 7.0, 7 channels in total.Speaker layout: 5.0 plus two back sp
 CH_LAYOUT_7POINT0_FRONT = 0x6C7
 ```
 
-Channel Layout For 7.0-Front, 7 channels in total.Speaker layout: 5.0 plus left and right front center speakers.
+声道布局为7.0-FRONT。
 
 **Since:** 11
 
@@ -512,7 +512,7 @@ Channel Layout For 7.0-Front, 7 channels in total.Speaker layout: 5.0 plus left 
 CH_LAYOUT_7POINT1 = 0x63F
 ```
 
-Channel Layout For 7.1, 8 channels in total.Speaker layout: 5.1 plus two back speakers.
+声道布局为7.1。
 
 **Since:** 11
 
@@ -528,7 +528,7 @@ Channel Layout For 7.1, 8 channels in total.Speaker layout: 5.1 plus two back sp
 CH_LAYOUT_OCTAGONAL = 0x737
 ```
 
-Channel Layout For Octagonal, 8 channels in total.Speaker layout: 5.0 plus BL, BR and BC.
+声道布局为OCTAGONAL。
 
 **Since:** 11
 
@@ -544,7 +544,7 @@ Channel Layout For Octagonal, 8 channels in total.Speaker layout: 5.0 plus BL, B
 CH_LAYOUT_5POINT1POINT2 = 0x300000060F
 ```
 
-Channel Layout For 5.1.2, 8 channels in total.Speaker layout: 5.1 plus two top side speakers.
+声道布局为5.1.2。
 
 **Since:** 11
 
@@ -560,7 +560,7 @@ Channel Layout For 5.1.2, 8 channels in total.Speaker layout: 5.1 plus two top s
 CH_LAYOUT_7POINT1_WIDE = 0x6CF
 ```
 
-Channel Layout For 7.1-Wide, 8 channels in total.Speaker layout: 5.1 plus left and right front center speakers.
+声道布局为7.1-WIDE。
 
 **Since:** 11
 
@@ -576,7 +576,7 @@ Channel Layout For 7.1-Wide, 8 channels in total.Speaker layout: 5.1 plus left a
 CH_LAYOUT_7POINT1_WIDE_BACK = 0xFF
 ```
 
-Channel Layout For 7.1-Wide, 8 channels in total.Speaker layout: 5.1-Back plus left and right front center speakers.
+声道布局为7.1-WIDE-BACK。
 
 **Since:** 11
 
@@ -592,7 +592,7 @@ Channel Layout For 7.1-Wide, 8 channels in total.Speaker layout: 5.1-Back plus l
 CH_LAYOUT_AMB_ORDER2_ACN_N3D = 0x100000000002
 ```
 
-Channel Layout For ORDER2-ACN-N3D Higher Order Ambisonics(HOA), 9 channels in total.Second order, ACN format, N3D.
+声道排序为ACN_N3D（根据ITU标准）的二阶HOA文件。
 
 **Since:** 11
 
@@ -608,7 +608,7 @@ Channel Layout For ORDER2-ACN-N3D Higher Order Ambisonics(HOA), 9 channels in to
 CH_LAYOUT_AMB_ORDER2_ACN_SN3D = 0x100000001002
 ```
 
-Channel Layout For ORDER2-ACN-SN3D HOA, 9 channels in total.Second order, ACN format, SN3D.
+声道排序为ACN_SN3D（根据ITU标准）的二阶HOA文件。
 
 **Since:** 11
 
@@ -624,7 +624,7 @@ Channel Layout For ORDER2-ACN-SN3D HOA, 9 channels in total.Second order, ACN fo
 CH_LAYOUT_AMB_ORDER2_FUMA = 0x100000000102
 ```
 
-Channel Layout For ORDER2-FUMA HOA, 9 channels in total.Second order, FuMa format.
+声道排序为FUMA（根据ITU标准）的二阶HOA文件。
 
 **Since:** 11
 
@@ -640,7 +640,7 @@ Channel Layout For ORDER2-FUMA HOA, 9 channels in total.Second order, FuMa forma
 CH_LAYOUT_5POINT1POINT4 = 0x2D60F
 ```
 
-Channel Layout For 5.1.4, 10 channels in total.Speaker layout: 5.1 plus four top speakers(TFL, TFR, TBL, TBR).
+声道布局为5.1.4。
 
 **Since:** 11
 
@@ -656,7 +656,7 @@ Channel Layout For 5.1.4, 10 channels in total.Speaker layout: 5.1 plus four top
 CH_LAYOUT_7POINT1POINT2 = 0x300000063F
 ```
 
-Channel Layout For 7.1.2, 10 channels in total.Speaker layout: 7.1 plus two top side speakers.
+声道布局为7.1.2。
 
 **Since:** 11
 
@@ -672,7 +672,7 @@ Channel Layout For 7.1.2, 10 channels in total.Speaker layout: 7.1 plus two top 
 CH_LAYOUT_7POINT1POINT4 = 0x2D63F
 ```
 
-Channel Layout For 7.1.4, 12 channels in total.Speaker layout: 7.1 plus four top speakers.
+声道布局为7.1.4。
 
 **Since:** 11
 
@@ -688,7 +688,7 @@ Channel Layout For 7.1.4, 12 channels in total.Speaker layout: 7.1 plus four top
 CH_LAYOUT_10POINT2 = 0x180005737
 ```
 
-Channel Layout For 10.2, 12 channels in total.Speaker layout: FL, FR, FC, TFL, TFR, BL, BR, BC, SL, SR, wide left(WL), and wide right(WR).
+声道布局为10.2。
 
 **Since:** 11
 
@@ -704,7 +704,7 @@ Channel Layout For 10.2, 12 channels in total.Speaker layout: FL, FR, FC, TFL, T
 CH_LAYOUT_9POINT1POINT4 = 0x18002D63F
 ```
 
-Channel Layout For 9.1.4, 14 channels in total.Speaker layout: 7.1.4 plus two wide speakers(WL, WR).
+声道布局为9.1.4。
 
 **Since:** 11
 
@@ -720,7 +720,7 @@ Channel Layout For 9.1.4, 14 channels in total.Speaker layout: 7.1.4 plus two wi
 CH_LAYOUT_9POINT1POINT6 = 0x318002D63F
 ```
 
-Channel Layout For 9.1.6, 16 channels in total.Speaker layout: 9.1.4 plus two top side speakers.
+声道布局为9.1.6。
 
 **Since:** 11
 
@@ -736,7 +736,7 @@ Channel Layout For 9.1.6, 16 channels in total.Speaker layout: 9.1.4 plus two to
 CH_LAYOUT_HEXADECAGONAL = 0x18003F737
 ```
 
-Channel Layout For Hexadecagonal, 16 channels in total.Speaker layout: Octagonal plus two wide speakers, six top speakers(TFL, TFR, TFC, TBL, TBR, TBC).
+声道布局为HEXADECAGONAL。
 
 **Since:** 11
 
@@ -752,7 +752,7 @@ Channel Layout For Hexadecagonal, 16 channels in total.Speaker layout: Octagonal
 CH_LAYOUT_AMB_ORDER3_ACN_N3D = 0x100000000003
 ```
 
-Channel Layout For ORDER3-ACN-N3D HOA, 16 channels in total.Third order, ACN format, N3D.
+声道排序为ACN_N3D（根据ITU标准）的三阶HOA文件。
 
 **Since:** 11
 
@@ -768,7 +768,7 @@ Channel Layout For ORDER3-ACN-N3D HOA, 16 channels in total.Third order, ACN for
 CH_LAYOUT_AMB_ORDER3_ACN_SN3D = 0x100000001003
 ```
 
-Channel Layout For ORDER3-ACN-SN3D HOA, 16 channels in total.Third order, ACN format, N3D.
+声道排序为ACN_SN3D（根据ITU标准）的三阶HOA文件。
 
 **Since:** 11
 
@@ -784,7 +784,7 @@ Channel Layout For ORDER3-ACN-SN3D HOA, 16 channels in total.Third order, ACN fo
 CH_LAYOUT_AMB_ORDER3_FUMA = 0x100000000103
 ```
 
-Channel Layout For ORDER3-FUMA HOA, 16 channels in total.Third order, FuMa format.
+声道排序为FUMA（根据ITU标准）的三阶HOA文件。
 
 **Since:** 11
 

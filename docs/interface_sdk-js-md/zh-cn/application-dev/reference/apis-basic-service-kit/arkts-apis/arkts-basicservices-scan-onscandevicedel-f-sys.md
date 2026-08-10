@@ -1,5 +1,11 @@
 # onScanDeviceDel（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onScanDeviceDel
 
 ```TypeScript
@@ -24,12 +30,12 @@ Register event callback for scanner device delete (system API).
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScannerDevice&gt; | 是 | Callback for device delete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | 是 | Callback for device delete event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

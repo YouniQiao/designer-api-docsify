@@ -1,5 +1,11 @@
 # changePrivilege（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## changePrivilege
 
 ```TypeScript
@@ -28,17 +34,17 @@ function changePrivilege(
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
 | participants | Array&lt;Participant&gt; | 是 | 端云共享的参与者。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | 是 | 回调函数。返回更改权限的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | 是 | 回调函数。返回更改权限的结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,15 +62,15 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 
-cloudData.sharing.changePrivilege('sharing_resource_test', participants, ((err: BusinessError|null, result) => {
+cloudData.sharing.changePrivilege('sharing_resource_test', participants, (err: BusinessError, result) => {
   if (err) {
     console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`change privilege succeeded, result: ${result}`);
-}))
+});
 ```
 
 
@@ -106,11 +112,11 @@ function changePrivilege(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -128,12 +134,12 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 
 cloudData.sharing.changePrivilege('sharing_resource_test', participants).then((result) => {
   console.info(`change privilege succeeded, result: ${result}`);
-}).catch((err) => {
+}).catch((err: BusinessError) => {
   console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
-})
+});
 ```
 

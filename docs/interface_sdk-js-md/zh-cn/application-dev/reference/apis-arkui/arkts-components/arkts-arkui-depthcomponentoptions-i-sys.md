@@ -20,7 +20,7 @@ depthSpace?: DepthSpaceType
 
 景深空间类型。
 
-**类型：** DepthSpaceType
+**类型：** [DepthSpaceType](../arkts-apis/arkts-arkui-depthcomponent-depthspacetype-e-sys.md)
 
 **默认值：** DepthSpace.INSTANCE
 

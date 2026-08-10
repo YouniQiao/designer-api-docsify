@@ -10,6 +10,12 @@ Describes the settings for filtering media files by type and size.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## photoViewMimeType
 
 ```TypeScript
@@ -18,7 +24,7 @@ photoViewMimeType: PhotoViewMIMETypes
 
 Media file types used for filtering.
 
-**Type:** PhotoViewMIMETypes
+**Type:** [PhotoViewMIMETypes](../../apis-core-file-kit/arkts-apis/arkts-corefile-picker-photoviewmimetypes-e.md)
 
 **Since:** 20
 
@@ -38,7 +44,7 @@ sizeFilter: FileSizeFilter
 
 Media file size used for filtering.
 
-**Type:** FileSizeFilter
+**Type:** [FileSizeFilter](arkts-medialibrary-photoaccesshelper-filesizefilter-c.md)
 
 **Since:** 20
 

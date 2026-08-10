@@ -22,5 +22,5 @@ export type CompatibleUpdatableBuilder<T> = (arg: T) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arg | T | 是 | 自定义构建函数。  |
+| arg | T | 是 | 自定义构建函数。 |
 

@@ -1,7 +1,6 @@
 # DistributedAccountAbility
 
-Provides APIs for querying and updating the login state of a distributed account. You must obtain a  
-**DistributedAccountAbility** instance first.
+提供查询和更新分布式账号登录状态方法（需要先获取分布式账号的单实例对象）。
 
 **Since:** 7
 
@@ -11,13 +10,19 @@ Provides APIs for querying and updating the login state of a distributed account
 
 **System capability:** SystemCapability.Account.OsAccount
 
+## Modules to Import
+
+```TypeScript
+import { distributedAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getOsAccountDistributedInfo
 
 ```TypeScript
 getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 ```
 
-Obtains the distributed account information. This API uses an asynchronous callback to return the result.
+获取分布式账号信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -33,21 +38,22 @@ Obtains the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 12300001 | System service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
 try {
   accountAbility.getOsAccountDistributedInfo(
@@ -70,7 +76,7 @@ try {
 getOsAccountDistributedInfo(): Promise<DistributedInfo>
 ```
 
-Obtains the distributed account information. This API uses a promise to return the result.
+获取分布式账号信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -86,20 +92,21 @@ Obtains the distributed account information. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| Promise&lt;DistributedInfo&gt; | Promise对象，返回分布式账号信息对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| 201 | Permission denied. |
+| 12300001 | System service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
 try {
   accountAbility.getOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
@@ -119,12 +126,13 @@ try {
 queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 ```
 
-Queries the distributed account information. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
-    [getOsAccountDistributedInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+获取分布式账号信息。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccount-distributedaccountability-i.md#getosaccountdistributedinfo)
+> 替代。
 
 **Since:** 7
 
@@ -144,13 +152,14 @@ Queries the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | 回调函数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
 accountAbility.queryOsAccountDistributedInfo(
   (err: BusinessError, data: distributedAccount.DistributedInfo) => {
@@ -168,12 +177,13 @@ accountAbility.queryOsAccountDistributedInfo(
 queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 ```
 
-Queries the distributed account information. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
-    [getOsAccountDistributedInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+获取分布式账号信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccount-distributedaccountability-i.md#getosaccountdistributedinfo)
+> 替代。
 
 **Since:** 7
 
@@ -193,13 +203,14 @@ Queries the distributed account information. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| Promise&lt;DistributedInfo&gt; | Promise对象，返回分布式账号信息对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
 accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
   console.info('distributed information: ' + JSON.stringify(data));
@@ -214,7 +225,7 @@ accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.Di
 setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Sets the distributed account information. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
+更新分布式账号信息。使用callback异步回调。该接口仅限系统应用调用。
 
 **Since:** 9
 
@@ -230,26 +241,28 @@ Sets the distributed account information. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Distributed account information to set. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | 分布式账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| 12300406 | The distributed account information has already been bound to a sub-profile of the same OS account.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| 12300003 | Account not found. |
+| 201 | Permission denied. |
+| 12300002 | Invalid accountInfo. |
+| 12300001 | System service exception. |
+| 12300406 | The distributed account information has already been bound to a sub-profile of the same OS account.<br>**Applicable version:** 26.0.0 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+// This is an example. Replace it with the actual distributed account information obtained using getOsAccountDistributedInfo.
 let accountInfo: distributedAccount.DistributedInfo =
   { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
 try {
@@ -272,7 +285,7 @@ try {
 setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-Sets the distributed account information. This API uses a promise to return the result.This API can be called only by system applications.
+更新分布式账号信息。使用Promise异步回调。该接口仅限系统应用调用。
 
 **Since:** 9
 
@@ -288,31 +301,33 @@ Sets the distributed account information. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Distributed account information to set. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | 分布式账号信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| 12300406 | The distributed account information has already been bound to a sub-profile of the same OS account.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| 12300003 | Account not found. |
+| 201 | Permission denied. |
+| 12300002 | Invalid accountInfo. |
+| 12300001 | System service exception. |
+| 12300406 | The distributed account information has already been bound to a sub-profile of the same OS account.<br>**Applicable version:** 26.0.0 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+// This is an example. Replace it with the actual distributed account information obtained using getOsAccountDistributedInfo.
 let accountInfo: distributedAccount.DistributedInfo =
   { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
 try {
@@ -333,12 +348,13 @@ try {
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Updates the distributed account information. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
-    [setOsAccountDistributedInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+更新分布式账号信息。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccount-distributedaccountability-i.md#setosaccountdistributedinfo)
+> 替代。
 
 **Since:** 7
 
@@ -358,15 +374,17 @@ Updates the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Distributed account information to update. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | 分布式账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+// This is an example. Replace it with the actual distributed account information obtained using getOsAccountDistributedInfo.
 let accountInfo: distributedAccount.DistributedInfo =
   { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
 accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) => {
@@ -384,12 +402,13 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-Updates the distributed account information. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
-    [setOsAccountDistributedInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+更新分布式账号信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccount-distributedaccountability-i.md#setosaccountdistributedinfo)
+> 替代。
 
 **Since:** 7
 
@@ -409,20 +428,22 @@ Updates the distributed account information. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Distributed account information to update. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | 分布式账号信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+// This is an example. Replace it with the actual distributed account information obtained using getOsAccountDistributedInfo.
 let accountInfo: distributedAccount.DistributedInfo =
   { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
 accountAbility.updateOsAccountDistributedInfo(accountInfo).then(() => {

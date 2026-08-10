@@ -1,8 +1,8 @@
 # UserDataSpan
 
-Implements a **UserDataSpan** object for storing and obtaining user data. Only the base class is provided. You need to define the specific implementation.
+支持存储自定义扩展信息，用于存储和获取用户数据，仅提供基类，具体实现由开发者定义。
 
-The extended user data does not affect the display effect.
+扩展信息不影响实际显示效果。
 
 **Since:** 12
 

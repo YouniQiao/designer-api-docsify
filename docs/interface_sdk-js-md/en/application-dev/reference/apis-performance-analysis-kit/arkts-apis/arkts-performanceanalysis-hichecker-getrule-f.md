@@ -1,12 +1,18 @@
 # getRule
 
+## Modules to Import
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getRule
 
 ```TypeScript
 function getRule() : bigint
 ```
 
-Obtains a collection of thread, process, and alarm rules that have been added.
+��ȡ��ǰ�̹߳��򡢽��̹��򡢸澯����ĺϼ���
 
 **Since:** 8
 
@@ -20,15 +26,15 @@ Obtains a collection of thread, process, and alarm rules that have been added.
 
 | Type | Description |
 | --- | --- |
-| bigint | Collection of added rules. |
+| bigint | ��ǰϵͳ�����ӵĹ��� |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Add a rule.
 hichecker.addCheckRule(hichecker.RULE_CAUTION_PRINT_LOG);
 
 // Obtain the collection of added rules.
-hichecker.getRule();   // return 1n;
+hichecker.getRule(); // return 1n;
 ```
 

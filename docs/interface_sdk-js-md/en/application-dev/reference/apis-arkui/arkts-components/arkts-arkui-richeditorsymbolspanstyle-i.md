@@ -1,6 +1,6 @@
 # RichEditorSymbolSpanStyle
 
-Sets the symbol span style.
+组件SymbolSpan样式信息。
 
 **Since:** 11
 
@@ -16,11 +16,11 @@ Sets the symbol span style.
 effectStrategy?: SymbolEffectStrategy
 ```
 
-Effect strategy of the symbol span.
+设置SymbolSpan组件动效策略。
 
-Default value: **SymbolEffectStrategy.NONE
+默认值：SymbolEffectStrategy.NONE。
 
-**Type:** SymbolEffectStrategy
+**Type:** [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md)
 
 **Since:** 11
 
@@ -40,9 +40,9 @@ Default value: **SymbolEffectStrategy.NONE
 fontColor?: Array<ResourceColor>
 ```
 
-Color of the symbol span.
+设置SymbolSpan组件颜色。
 
-Default value: depending on the rendering strategy
+默认值：不同渲染策略下默认值不同。
 
 **Type:** Array&lt;ResourceColor&gt;
 
@@ -64,9 +64,11 @@ Default value: depending on the rendering strategy
 fontSize?: number | string | Resource
 ```
 
-Size of the symbol span. The default unit is fp.
+设置SymbolSpan组件大小，默认单位为fp。
 
-The default value follows the theme.
+number类型取值范围：(0, +∞)，设置为0时显示默认字体大小。
+
+默认值：跟随主题。
 
 **Type:** number \| string \| Resource
 
@@ -88,15 +90,13 @@ The default value follows the theme.
 fontWeight?: number | FontWeight | string
 ```
 
-Weight of the symbol span.
+设置SymbolSpan组件粗细。
 
-For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**.
+number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。
 
-For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**,  
-**"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in  
-**FontWeight**.
+string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular” 、“medium”分别对应FontWeight中相应的枚举值。
 
-Default value: **FontWeight.Normal
+默认值：FontWeight.Normal。
 
 **Type:** number \| FontWeight \| string
 
@@ -118,11 +118,11 @@ Default value: **FontWeight.Normal
 renderingStrategy?: SymbolRenderingStrategy
 ```
 
-Rendering strategy of the symbol span.
+设置SymbolSpan组件渲染策略。
 
-Default value: **SymbolRenderingStrategy.SINGLE
+默认值：SymbolRenderingStrategy.SINGLE。
 
-**Type:** SymbolRenderingStrategy
+**Type:** [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # VideoProfile
 
-视频配置信息项，继承[Profile]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+视频配置信息项，继承[Profile](arkts-camera-camera-profile-i.md)。
 
 **继承/实现关系：** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md)
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## frameRateRange
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly frameRateRange: FrameRateRange
 
 帧率范围。单位：fps(frames per second)。
 
-**类型：** FrameRateRange
+**类型：** [FrameRateRange](arkts-camera-camera-frameraterange-i.md)
 
 **起始版本：** 10
 

@@ -1,5 +1,11 @@
 # setPowerConfig（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setPowerConfig
 
 ```TypeScript
@@ -33,20 +39,20 @@ function setPowerConfig(sceneName: string, value: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
-| [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-接口入参无效) | Invalid parameter. Possible causes: 1. The sceneName or value parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes; 3. The length of value parameter exceeds 128 bytes. |
-| [4900601](../../apis-basic-services-kit/errorcode-power.md#4900601-写电源配置值失败) | Failed to write the power configuration value. |
+| 4900601 | Failed to write the power configuration value. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 4900400 | Invalid parameter. Possible causes: 1. The sceneName or value parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes; 3. The length of value parameter exceeds 128 bytes. |
+| 4900101 | Failed to connect to the service. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
     power.setPowerConfig('scene_name_test', 'value_test');
     console.info('set power config success');
-} catch(err) {
-    console.error('set power config failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to set power config. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

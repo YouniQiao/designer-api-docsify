@@ -1,6 +1,6 @@
 # TypeConstructorWithArgs
 
-Represents a class constructor that accepts arbitrary arguments.
+含有任意入参的类构造器。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents a class constructor that accepts arbitrary arguments.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## [[Construct]]
 
 ```TypeScript
 new(...args: any): T
 ```
 
-Creates and returns an instance of the specified type T.
+创建并返回一个指定类型T的实例。
 
 **Since:** 12
 
@@ -34,11 +40,11 @@ Creates and returns an instance of the specified type T.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | any | Yes | Function arguments. |
+| args | any | Yes | 创建类型T实例时传入的构造参数，用于初始化实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Instance of the T type. |
+| T | 通过new方法创建的T类型实例。默认不传入任何构造参数。 |
 

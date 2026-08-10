@@ -1,5 +1,11 @@
 # stopAdvertising
 
+## 导入模块
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## stopAdvertising
 
 ```TypeScript
@@ -24,7 +30,7 @@ function stopAdvertising(advertisingId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| advertisingId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示广播ID \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值应为≥0的整数，取值为当前广播的广播ID。 |
+| advertisingId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示广播ID &lt;br&gt;取值应为≥0的整数，取值为当前广播的广播ID。 |
 
 **返回值：**
 
@@ -36,9 +42,9 @@ function stopAdvertising(advertisingId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100040](../errorcode-nearlink-service.md#36100040-整数超出范围) | Invalid advertising ID. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 801 | Capability not supported because the chip does not support it. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 36100040 | Invalid advertising ID. |
 

@@ -1,6 +1,6 @@
 # ControlCenterStatusInfo
 
-Describes the effect status information of a camera controller.
+相机控制器效果激活状态信息。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the effect status information of a camera controller.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## effectType
 
 ```TypeScript
 readonly effectType: ControlCenterEffectType
 ```
 
-Effect type of the camera controller.
+相机控制器效果类型。
 
-**Type:** ControlCenterEffectType
+**Type:** [ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)
 
 **Since:** 20
 
@@ -36,7 +42,7 @@ Effect type of the camera controller.
 readonly isActive: boolean
 ```
 
-Whether the camera controller is activated. **true** if activated, **false** otherwise.
+相机控制器效果激活状态。true表示已激活，false表示未激活。
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # JsMessageType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the result of JavaScript code execution.
+Enum type supplied to {@link runJavaScriptExt} for indicating the result of JavaScript code execution.
 
 **Since:** 23
 

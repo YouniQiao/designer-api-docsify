@@ -1,6 +1,6 @@
 # EventClassifyInfo (System API)
 
-Represents event type information.
+事件信息。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Represents event type information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## eventClassify
 
 ```TypeScript
 eventClassify: EventClassify
 ```
 
-Event type, which specifies the type of event to listen for. The value can be **TASK**, indicating a task event.
+事件类型，用于指定要监听的事件分类。可取值：TASK（任务事件）。
 
-**Type:** EventClassify
+**Type:** [EventClassify](arkts-basicservices-update-eventclassify-e-sys.md)
 
 **Since:** 9
 
@@ -38,7 +44,7 @@ Event type, which specifies the type of event to listen for. The value can be **
 extraInfo: string
 ```
 
-Additional information, which is used to transfer the extended data. The default value is an empty string,indicating that there is no additional information. The value is a string of 0 to 128 characters. The value can contain letters, digits, underscores (\_), hyphens (-), and spaces. If the value is out of range or contains invalid characters, an exception is thrown.
+额外信息，用于传递扩展数据。默认值为空字符串，表示无额外信息。长度范围[0, 128]，单位：字符。有效字符包括字母、数字、下划线、连字符和空格，超出范围或包含无效字符时抛出异常。
 
 **Type:** string
 

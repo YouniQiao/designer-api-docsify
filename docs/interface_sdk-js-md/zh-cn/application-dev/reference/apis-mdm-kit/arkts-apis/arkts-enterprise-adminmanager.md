@@ -1,9 +1,10 @@
 # @ohos.enterprise.adminManager(admin权限管理)
 
 本模块为企业MDM应用提供admin权限管理能力，包括激活/解除激活admin权限、事件订阅、委托授权等。
-    **说明：**  
-    
-    本模块接口仅对设备管理应用开放，具体请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+
+> **说明：**
+> 
+> 本模块接口仅对设备管理应用开放，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 12
 
@@ -12,6 +13,12 @@
 <!--Device-unnamed-declare namespace adminManager--><!--Device-unnamed-declare namespace adminManager-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
 
 ## 汇总
 
@@ -24,13 +31,13 @@
 | [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin) | 将当前用户下指定的普通设备管理应用解除激活。使用callback异步回调。 |
 | [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin-1) | 将指定用户（通过userId指定）下指定的普通管理应用解除激活。使用callback异步回调。 |
 | [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin-2) | 解除激活指定用户的设备管理应用。使用Promise异步回调。调用成功后，指定的设备管理应用将被解除激活，不再具备设备管理能力。 |
-| [disableDeviceAdmin](arkts-mdm-adminmanager-disabledeviceadmin-f.md#disabledeviceadmin) | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_应用通过该接口可以解除激活其他  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_应用，使用Promise异步回调。调用成功后，指定的DA应用将被解除激活，不再具备设备管理能力。该接口仅支持超级设备管理应用调用。 |
+| [disableDeviceAdmin](arkts-mdm-adminmanager-disabledeviceadmin-f.md#disabledeviceadmin) | [SDA](../../../mdm/mdm-kit-term.md#super-device-admin-sda超级设备管理员)应用通过该接口可以解除激活其他  [DA](../../../mdm/mdm-kit-term.md#device-admin-da普通设备管理员)应用，使用Promise异步回调。调用成功后，指定的DA应用将被解除激活，不再具备设备管理能力。该接口仅支持超级设备管理应用调用。 |
 | [disableSuperAdmin](arkts-mdm-adminmanager-disablesuperadmin-f.md#disablesuperadmin) | 根据bundleName将超级设备管理应用解除激活。使用callback异步回调。 |
 | [disableSuperAdmin](arkts-mdm-adminmanager-disablesuperadmin-f.md#disablesuperadmin-1) | 根据bundleName将超级设备管理应用解除激活。使用Promise异步回调。 |
-| [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin) | 激活指定的设备管理应用。超级设备管理应用仅在首用户（u100）下可激活。激活后，应用不可卸载，其  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_组件将开机自启并在用户切换后自启。使用callback异步回调。 |
+| [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin) | 激活指定的设备管理应用。超级设备管理应用仅在首用户（u100）下可激活。激活后，应用不可卸载，其  [企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)组件将开机自启并在用户切换后自启。使用callback异步回调。 |
 | [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin-1) | 激活指定用户（通过userId指定）下指定的设备管理应用，其中超级管理应用仅能在首用户（u100）下被激活。使用callback异步回调。 |
 | [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin-2) | 激活当前/指定用户下指定的设备管理应用，其中超级管理应用仅能在首用户（u100）下被激活。使用Promise异步回调。 |
-| [enableDeviceAdmin](arkts-mdm-adminmanager-enabledeviceadmin-f.md#enabledeviceadmin) | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_应用通过该接口可以激活其他  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_应用，使用Promise异步回调。调用成功后，指定的DA应用将被激活并具备设备管理能力。该接口仅支持超级设备管理应用调用。 |
+| [enableDeviceAdmin](arkts-mdm-adminmanager-enabledeviceadmin-f.md#enabledeviceadmin) | [SDA](../../../mdm/mdm-kit-term.md#super-device-admin-sda超级设备管理员)应用通过该接口可以激活其他  [DA](../../../mdm/mdm-kit-term.md#device-admin-da普通设备管理员)应用，使用Promise异步回调。调用成功后，指定的DA应用将被激活并具备设备管理能力。该接口仅支持超级设备管理应用调用。 |
 | [enableSelfDeviceAdmin](arkts-mdm-adminmanager-enableselfdeviceadmin-f.md#enableselfdeviceadmin) | 在企业设备中，MDM应用没有预置激活的场景下，MDM应用可以通过该接口实现自激活。该接口仅支持激活MDM应用自身，不支持激活其他MDM应用；支持的激活类型包括超级设备管理应用和普通设备管理应用。 |
 | [getAdmins](arkts-mdm-adminmanager-getadmins-f.md#getadmins) | 查询当前用户下的所有设备管理应用。使用Promise异步回调。 |
 | [getDelegatedBundleNames](arkts-mdm-adminmanager-getdelegatedbundlenames-f.md#getdelegatedbundlenames) | 查询可以访问某个委托策略的被委托应用，输出被委托应用列表。 |
@@ -54,7 +61,7 @@
 | [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision) | 设备管理应用拉起BYOD管理员激活页面进行激活。 |
 | [subscribeManagedEvent](arkts-mdm-adminmanager-subscribemanagedevent-f.md#subscribemanagedevent) | 订阅系统管理事件。使用callback异步回调。 |
 | [subscribeManagedEvent](arkts-mdm-adminmanager-subscribemanagedevent-f.md#subscribemanagedevent-1) | 订阅系统管理事件。使用Promise异步回调。 |
-| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync) | 订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。  从API版本26.0.0开始，非超级设备管理应用调用该接口订阅[MANAGED\_\_\_ESCAPED\_UNDERSCORE\_\_\_EVENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_POLICIES\_\_\_ESCAPED\_UNDERSCORE\_\_\_CHANGED]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_事件时返回9200002错误码。 |
+| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync) | 订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。  从API版本26.0.0开始，非超级设备管理应用调用该接口订阅[MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md)事件时返回9200002错误码。 |
 | [unsubscribeManagedEvent](arkts-mdm-adminmanager-unsubscribemanagedevent-f.md#unsubscribemanagedevent) | 取消订阅系统管理事件。使用callback异步回调。 |
 | [unsubscribeManagedEvent](arkts-mdm-adminmanager-unsubscribemanagedevent-f.md#unsubscribemanagedevent-1) | 取消订阅系统管理事件。使用Promise异步回调。 |
 | [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md#unsubscribemanagedeventsync) | 取消订阅系统管理事件。调用成功后，将不再收到已取消订阅的系统管理事件通知。 |

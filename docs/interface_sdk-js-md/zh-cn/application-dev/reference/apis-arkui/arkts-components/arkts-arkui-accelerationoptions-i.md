@@ -1,9 +1,10 @@
 # AccelerationOptions
 
 粒子加速度配置。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -23,7 +24,7 @@ angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 
 默认值：{range:[0.0,0.0]}
 
-**类型：** ParticlePropertyOptions&lt;number, ACC\_ANGLE\_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_ANGLE_UPDATER&gt;
 
 **起始版本：** 10
 
@@ -47,7 +48,7 @@ speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>
 
 默认值：{range:[0.0,0.0]}
 
-**类型：** ParticlePropertyOptions&lt;number, ACC\_SPEED\_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_SPEED_UPDATER&gt;
 
 **起始版本：** 10
 

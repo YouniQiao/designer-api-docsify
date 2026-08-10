@@ -1,12 +1,18 @@
 # getSensorListByDeviceSync
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## getSensorListByDeviceSync
 
 ```TypeScript
 function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>
 ```
 
-Obtains the information about all sensors on the device.
+同步获取设备的所有传感器信息。
 
 **Since:** 19
 
@@ -20,15 +26,15 @@ Obtains the information about all sensors on the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or [sensorStatusChange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the device ID. |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 设备ID，默认为查询本地设备，默认值为-1，表示本地设备，设备ID需通过 [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist)查询或者监听设备上下线接口 [sensorStatusChange](arkts-sensorservice-sensor-on-f.md#on)获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Sensor&gt; | Sensor attribute list. |
+| Array&lt;Sensor&gt; | 传感器属性列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

@@ -1,12 +1,18 @@
 # getSystemConfig
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getSystemConfig
 
 ```TypeScript
 function getSystemConfig(name: number): number
 ```
 
-Obtains the system configuration.
+获取系统配置信息。
 
 **Since:** 8
 
@@ -24,15 +30,15 @@ Obtains the system configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | number | Yes | System configuration parameter name. |
+| name | number | Yes | 指定系统配置参数名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | System configuration obtained. |
+| number | 返回系统配置信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let _SC_ARG_MAX = 0;

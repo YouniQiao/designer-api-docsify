@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## abilityName
 
 ```TypeScript
@@ -54,7 +60,7 @@ readonly capitalizeMode?: CapitalizeMode
 
 编辑框设置大小写模式。如果没有设置或设置非法值，默认不进行任何首字母大写处理。
 
-**类型：** CapitalizeMode
+**类型：** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
 
 **起始版本：** 20
 
@@ -95,7 +101,7 @@ readonly displayId?: long
 
 编辑框设置窗口对应的屏幕ID。如果没有设置windowId，取当前焦点窗口屏幕ID。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 18
 
@@ -113,7 +119,7 @@ readonly enterKeyType: int
 
 编辑框的功能属性
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -131,7 +137,7 @@ readonly extraConfig?: InputMethodExtraConfig
 
 输入法扩展信息。
 
-**类型：** InputMethodExtraConfig
+**类型：** [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
 
 **起始版本：** 22
 
@@ -149,7 +155,7 @@ readonly gradientMode?: GradientMode
 
 渐变模式。如果没有设置或设置非法值，默认不使用渐变模式。
 
-**类型：** GradientMode
+**类型：** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
 **起始版本：** 20
 
@@ -167,7 +173,7 @@ readonly immersiveMode?: ImmersiveMode
 
 输入法沉浸模式。
 
-**类型：** ImmersiveMode
+**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
 
 **起始版本：** 15
 
@@ -185,7 +191,7 @@ readonly inputPattern: int
 
 编辑框的文本属性
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -242,7 +248,7 @@ readonly windowId?: int
 
 编辑框设置所属窗口ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

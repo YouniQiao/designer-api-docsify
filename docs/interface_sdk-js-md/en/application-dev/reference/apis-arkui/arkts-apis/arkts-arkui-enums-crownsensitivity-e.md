@@ -1,0 +1,66 @@
+# CrownSensitivity
+
+旋转表冠灵敏度。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare enum CrownSensitivity--><!--Device-unnamed-export declare enum CrownSensitivity-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## LOW
+
+```TypeScript
+LOW = 0
+```
+
+低灵敏度。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CrownSensitivity-LOW = 0--><!--Device-CrownSensitivity-LOW = 0-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## MEDIUM
+
+```TypeScript
+MEDIUM = 1
+```
+
+中灵敏度。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CrownSensitivity-MEDIUM = 1--><!--Device-CrownSensitivity-MEDIUM = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## HIGH
+
+```TypeScript
+HIGH = 2
+```
+
+高灵敏度。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CrownSensitivity-HIGH = 2--><!--Device-CrownSensitivity-HIGH = 2-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

@@ -1,6 +1,6 @@
 # InterruptType
 
-Enumerates the audio interruption types.
+表示中断类型的枚举。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the audio interruption types.
 INTERRUPT_TYPE_BEGIN = 1
 ```
 
-Audio interruption started.
+音频播放中断事件开始。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Audio interruption started.
 INTERRUPT_TYPE_END = 2
 ```
 
-Audio interruption ended.
+音频播放中断事件结束。
 
 **Since:** 7
 

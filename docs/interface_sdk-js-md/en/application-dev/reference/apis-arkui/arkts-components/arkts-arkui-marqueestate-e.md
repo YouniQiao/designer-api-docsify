@@ -1,6 +1,6 @@
 # MarqueeState
 
-Enumerates the return values of the marquee state callback.
+Marquee状态回调的返回值。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the return values of the marquee state callback.
 START = 0
 ```
 
-The marquee starts scrolling.
+跑马灯滚动开始。
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ The marquee starts scrolling.
 BOUNCE = 1
 ```
 
-The marquee completes one scroll movement. If the number of **loops** is not 1, this value will be returned multiple times.
+完成一次跑马灯滚动，如果循环次数不是1，将会多次返回。
 
 **Since:** 18
 
@@ -56,7 +56,7 @@ The marquee completes one scroll movement. If the number of **loops** is not 1, 
 FINISH = 2
 ```
 
-All loops of the marquee are completed.
+跑马灯全部循环次数完成。
 
 **Since:** 18
 

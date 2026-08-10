@@ -1,8 +1,10 @@
 # Region
 
-Describes the region information.It inherits from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示区域信息。
 
-**Inheritance/Implementation:** Region extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
+继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
+
+**Inheritance/Implementation:** Region extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
 
 **Since:** 12
 
@@ -12,15 +14,21 @@ Describes the region information.It inherits from \_\_\_MD\_LINK\_DESC\_USD\_0\_
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## size
 
 ```TypeScript
 size: Size
 ```
 
-Region size.
+区域大小。
 
-**Type:** Size
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **Since:** 12
 
@@ -40,7 +48,7 @@ Region size.
 x: number
 ```
 
-X coordinate, in px.
+区域横坐标。单位：像素。
 
 **Type:** number
 
@@ -62,7 +70,7 @@ X coordinate, in px.
 y: number
 ```
 
-Y coordinate, in px.
+区域纵坐标。单位：像素。
 
 **Type:** number
 

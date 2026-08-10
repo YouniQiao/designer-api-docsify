@@ -18,11 +18,11 @@ export type GetTextCallback = (length: int) => string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | int | 是 | 文本的长度。  |
+| length | int | 是 | 文本的长度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | represents the text in edit box.  |
+| string | represents the text in edit box. |
 

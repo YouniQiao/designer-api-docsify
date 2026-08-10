@@ -10,6 +10,12 @@ Defines the ICC account information.
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## operatorName
 
 ```TypeScript
@@ -40,7 +46,7 @@ simLabelIndex?: int
 
 卡的simLabelIndex。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

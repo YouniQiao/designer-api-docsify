@@ -1,6 +1,6 @@
 # ServiceDieData
 
-ServiceDie data.
+DeviceManager 服务进程退出信息。
 
 **Since:** 23
 
@@ -9,4 +9,10 @@ ServiceDie data.
 <!--Device-distributedDeviceManager-interface ServiceDieData--><!--Device-distributedDeviceManager-interface ServiceDieData-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
 

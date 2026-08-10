@@ -1,6 +1,6 @@
 # PrintTask
 
-Implements event listeners for print jobs.
+打印任务完成后的事件监听回调接口类。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Implements event listeners for print jobs.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## off('block')
 
 ```TypeScript
 off(type: 'block', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the block events of a print job. This API uses an asynchronous callback to return the result.
+取消打印任务阻塞的监听，使用callback异步回调。
 
 **Since:** 10
 
@@ -32,17 +38,17 @@ Unsubscribes from the block events of a print job. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'block' | Yes | Listening type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is fixed at **'block'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It means that the print job is blocked. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to unsubscribe from the block events of a specified print job. |
+| type | 'block' | Yes | 取消监听，&lt;br/&gt;监听字段：block，&lt;br/&gt;表示打印任务阻塞。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，取消指定的打印任务阻塞事件订阅。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -83,7 +89,7 @@ struct Index {
 off(type: 'succeed', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the success events of a print job. This API uses an asynchronous callback to return the result.
+取消打印任务成功的监听，使用callback异步回调。
 
 **Since:** 10
 
@@ -99,17 +105,17 @@ Unsubscribes from the success events of a print job. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'succeed' | Yes | Listening type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is fixed at **'succeed'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It means that the print job is successful. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to unsubscribe from the success events of a specified print job. |
+| type | 'succeed' | Yes | 取消监听，&lt;br/&gt;监听字段：succeed，&lt;br/&gt;表示打印任务成功。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，取消指定的打印任务成功事件订阅。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -150,7 +156,7 @@ struct Index {
 off(type: 'fail', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the failure events of a print job. This API uses an asynchronous callback to return the result.
+取消打印任务失败的监听，使用callback异步回调。
 
 **Since:** 10
 
@@ -166,17 +172,17 @@ Unsubscribes from the failure events of a print job. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | Listening type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is fixed at **'fail'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It means that the print job is failed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to unsubscribe from the failure events of a specified print job. |
+| type | 'fail' | Yes | 取消监听，&lt;br/&gt;监听字段：fail，&lt;br/&gt;表示打印任务失败。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，取消指定的打印任务失败事件订阅。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -217,7 +223,7 @@ struct Index {
 off(type: 'cancel', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the cancellation events of a print job. This API uses an asynchronous callback to return the result.
+取消打印任务被取消的监听，使用callback异步回调。
 
 **Since:** 10
 
@@ -233,17 +239,17 @@ Unsubscribes from the cancellation events of a print job. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cancel' | Yes | Listening type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is fixed at **'cancel'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It means that the print job is canceled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to unsubscribe from the cancellation events of a specified print job. |
+| type | 'cancel' | Yes | 取消监听，&lt;br/&gt;监听字段：cancel，&lt;br/&gt;表示打印任务被取消。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，取消指定的打印任务被取消事件订阅。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -300,14 +306,14 @@ Unregister event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
 ## offCancel
 
@@ -331,14 +337,14 @@ Unregister event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
 ## offFail
 
@@ -362,14 +368,14 @@ Unregister event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
 ## offSucceed
 
@@ -393,14 +399,14 @@ Unregister event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
 ## on('block')
 
@@ -408,7 +414,7 @@ Unregister event callback when the current print task is in process.
 on(type: 'block', callback: Callback<void>): void
 ```
 
-Subscribes to the block events of a print job. This API uses an asynchronous callback to return the result.
+注册打印任务阻塞的监听，使用callback异步回调。
 
 **Since:** 10
 
@@ -424,17 +430,17 @@ Subscribes to the block events of a print job. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'block' | Yes | Listening type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is fixed at **'block'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It means that the print job is blocked. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to notify the caller that the print job is blocked. |
+| type | 'block' | Yes | 注册监听，&lt;br/&gt;监听字段：block，&lt;br/&gt;表示打印任务阻塞。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，通知调用方打印任务阻塞。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -475,7 +481,7 @@ struct Index {
 on(type: 'succeed', callback: Callback<void>): void
 ```
 
-Subscribes to the success events of a print job. This API uses an asynchronous callback to return the result.
+注册打印任务成功的监听，使用callback异步回调。
 
 **Since:** 10
 
@@ -491,17 +497,17 @@ Subscribes to the success events of a print job. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'succeed' | Yes | Listening type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is fixed at **'succeed'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It means that the print job is successful. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to notify the caller that the print job is successful. |
+| type | 'succeed' | Yes | 注册监听，&lt;br/&gt;监听字段：succeed，&lt;br/&gt;表示打印任务成功。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，通知调用方打印任务成功。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -542,7 +548,7 @@ struct Index {
 on(type: 'fail', callback: Callback<void>): void
 ```
 
-Subscribes to the failure events of a print job. This API uses an asynchronous callback to return the result.
+注册打印任务失败的监听，使用callback异步回调。
 
 **Since:** 10
 
@@ -558,17 +564,17 @@ Subscribes to the failure events of a print job. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | Listening type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is fixed at **'fail'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It means that the print job is failed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to notify the caller that the print job is failed. |
+| type | 'fail' | Yes | 注册监听，&lt;br/&gt;监听字段：fail，&lt;br/&gt;表示打印任务失败。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，通知调用方打印任务失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -609,7 +615,7 @@ struct Index {
 on(type: 'cancel', callback: Callback<void>): void
 ```
 
-Subscribes to the cancellation events of a print job. This API uses an asynchronous callback to return the result.
+注册打印任务被取消的监听，使用callback异步回调。
 
 **Since:** 10
 
@@ -625,17 +631,17 @@ Subscribes to the cancellation events of a print job. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cancel' | Yes | Listening type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is fixed at **'cancel'**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It means that the print job is canceled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to notify the caller that the print job is canceled. |
+| type | 'cancel' | Yes | 注册监听，&lt;br/&gt;监听字段：cancel，&lt;br/&gt;表示打印任务被取消。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，通知调用方打印任务被取消。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -692,14 +698,14 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
 ## onCancel
 
@@ -723,14 +729,14 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
 ## onFail
 
@@ -754,14 +760,14 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
 ## onSucceed
 
@@ -785,12 +791,12 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 

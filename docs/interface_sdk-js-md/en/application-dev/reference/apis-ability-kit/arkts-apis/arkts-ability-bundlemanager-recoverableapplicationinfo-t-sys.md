@@ -4,7 +4,7 @@
 export type RecoverableApplicationInfo = _RecoverableApplicationInfo
 ```
 
-Defines the information about a preinstalled application that can be restored after being uninstalled.
+预置应用被卸载后可以恢复的预置应用信息。
 
 **Since:** 11
 

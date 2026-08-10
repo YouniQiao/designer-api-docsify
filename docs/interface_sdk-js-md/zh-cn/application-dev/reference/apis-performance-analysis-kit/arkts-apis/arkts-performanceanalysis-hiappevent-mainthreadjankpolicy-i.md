@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## autoStopSampling
 
 ```TypeScript
@@ -44,7 +50,7 @@ ignoreStartupTime?: int
 
 应用启动期间忽略主线程超时检测的时间。单位：秒，默认值：10，最小值：3。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -70,12 +76,12 @@ logType=1：仅采集调用栈，触发检测的阈值由用户自定义。
 
 logType=2：仅采集trace。
 
-**说明**：
+**说明：**
 
 - logType=0时，仅需配置autoStopSampling参数，其他参数均取默认值，无需设置。  
 - logType=2时，其他参数均不生效，无需设置。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -99,7 +105,7 @@ reportTimesPerApp?: int
 
 每分钟上报次数范围：[1, 3]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -121,13 +127,13 @@ sampleCount?: int
 
 最大值需要结合自定义的sampleInterval进行动态计算，计算公式：sampleCount <= (2500 / sampleInterval - 4)。
 
-**说明**：
+**说明：**
 
 - 2500的含义：根据系统规定，主线程超时事件从检测到上报的时间不可以超过2.5s（即：2500ms）。因此sampleCount的设置值不能超过系统按计算公式得出的最大值。  
 - 4的含义：第一次超时间隔检测时间 + 第二次超时间隔（系统提供两次再次发生超时事件的检测机会）时间 + 收集并上报堆栈信息的时间。  
 - 开发者要结合需求场景，进行合理的设置。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -147,7 +153,7 @@ sampleInterval?: int
 
 主线程超时检测间隔和采样间隔。单位：毫秒，默认值：150，取值范围：[50, 500]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 

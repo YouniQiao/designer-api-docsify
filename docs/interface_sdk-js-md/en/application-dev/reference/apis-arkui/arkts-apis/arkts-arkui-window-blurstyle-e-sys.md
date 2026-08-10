@@ -1,6 +1,6 @@
 # BlurStyle (System API)
 
-Enumerates the window blur styles.
+窗口模糊类型枚举。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates the window blur styles.
 OFF = 0
 ```
 
-Blur disabled.
+表示关闭模糊。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Blur disabled.
 THIN = 1
 ```
 
-Thin blur.
+表示较薄的模糊类型。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Thin blur.
 REGULAR = 2
 ```
 
-Regular blur.
+表示适中的模糊类型。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Regular blur.
 THICK = 3
 ```
 
-Thick blur.
+表示较厚的模糊类型。
 
 **Since:** 9
 

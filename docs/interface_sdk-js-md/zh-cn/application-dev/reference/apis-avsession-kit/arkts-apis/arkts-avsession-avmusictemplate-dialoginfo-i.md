@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## buttons
 
 ```TypeScript
@@ -18,7 +24,7 @@ buttons?: DialogButtonInfo[]
 
 对话框按钮的数组。
 
-**类型：** DialogButtonInfo[]
+**类型：** [DialogButtonInfo](arkts-avsession-avmusictemplate-dialogbuttoninfo-i.md)[]
 
 **起始版本：** 23
 
@@ -78,7 +84,7 @@ dialogType: DialogType
 
 对话框的类型。
 
-**类型：** DialogType
+**类型：** [DialogType](arkts-avsession-avmusictemplate-dialogtype-e.md)
 
 **起始版本：** 23
 
@@ -100,7 +106,7 @@ qrCodes?: QrCodeInfo[]
 
 当设置了二维码信息时，此对话框将被识别为二维码对话框，并将优先显示二维码信息。最多可以设置两个。
 
-**类型：** QrCodeInfo[]
+**类型：** [QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]
 
 **起始版本：** 23
 

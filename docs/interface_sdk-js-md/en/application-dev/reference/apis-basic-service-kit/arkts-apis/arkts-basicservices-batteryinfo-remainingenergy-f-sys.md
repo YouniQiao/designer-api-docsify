@@ -1,12 +1,18 @@
 # remainingEnergy (System API)
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## remainingEnergy
 
 ```TypeScript
 function remainingEnergy(): int
 ```
 
-Remaining battery capacity of the device, in unit of mAh. This is a system API.
+获取当前设备电池的剩余容量，单位毫安时。
 
 **Since:** 23
 
@@ -22,5 +28,5 @@ Remaining battery capacity of the device, in unit of mAh. This is a system API.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the remaining battery capacity of the device, in mAh. |
+| int | 返回当前设备电池的剩余容量，单位毫安时。 |
 

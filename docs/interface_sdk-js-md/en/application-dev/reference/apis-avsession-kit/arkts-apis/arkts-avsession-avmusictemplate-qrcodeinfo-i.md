@@ -1,6 +1,6 @@
 # QrCodeInfo
 
-The definition of QR code Information.
+二维码信息的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of QR code Information.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## codeData
 
 ```TypeScript
 codeData?: image.PixelMap
 ```
 
-QR code image.
+二维码图片。
 
 **Type:** image.PixelMap
 
@@ -36,7 +42,7 @@ QR code image.
 content: string
 ```
 
-QR code content.
+二维码的内容。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ QR code content.
 detailName: string
 ```
 
-Detail name.
+详情名称。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ Detail name.
 icon?: image.PixelMap
 ```
 
-The icon of the app associated with the QR code,such as a QR code for logging in via WeChat, should be the WeChat icon.
+与二维码关联的应用图标，用于应用登录的二维码应显示目标应用的图标。
 
 **Type:** image.PixelMap
 
@@ -96,7 +102,9 @@ The icon of the app associated with the QR code,such as a QR code for logging in
 id: string
 ```
 
-A QR code session used to uniquely identify a user login.When the QR code expires,MediaUI will use this ID to query and update a new QR code from the third party.
+用于唯一标识用户登录的二维码会话。
+
+当二维码过期时，MediaUI将使用此ID从媒体应用查询并更新新的二维码。
 
 **Type:** string
 
@@ -116,7 +124,7 @@ A QR code session used to uniquely identify a user login.When the QR code expire
 price: string
 ```
 
-Purchase price.
+购买价格。
 
 **Type:** string
 
@@ -136,7 +144,7 @@ Purchase price.
 tips: string
 ```
 
-Tips message.
+提示信息。
 
 **Type:** string
 
@@ -156,7 +164,7 @@ Tips message.
 titleName: string
 ```
 
-Title name.
+标题名称。
 
 **Type:** string
 
@@ -176,9 +184,11 @@ Title name.
 validPeriod: int
 ```
 
-QR code validity period (unit: seconds).When the QR code expires,the QR code ID will be used to query and obtain a new QR code again.
+二维码有效期（单位：秒）。
 
-**Type:** int
+当二维码到期时，二维码ID将用于再次查询并获得新的二维码。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

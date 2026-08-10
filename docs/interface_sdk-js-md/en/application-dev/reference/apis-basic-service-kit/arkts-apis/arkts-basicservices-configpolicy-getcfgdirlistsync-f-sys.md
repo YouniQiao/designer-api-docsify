@@ -1,12 +1,18 @@
 # getCfgDirListSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { configPolicy } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getCfgDirListSync
 
 ```TypeScript
 function getCfgDirListSync(): Array<string>
 ```
 
-Obtains a list of configuration level directories, in ascending order of priority.
+获取配置层级目录列表，按优先级从低到高。
 
 **Since:** 11
 
@@ -22,5 +28,5 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Obtains the list of configuration level directories. This API returns the result synchronously. |
+| Array&lt;string&gt; | 返回配置层级目录列表。 |
 

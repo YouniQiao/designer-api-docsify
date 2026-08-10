@@ -1,17 +1,24 @@
 # getAppNativeMemInfo
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppNativeMemInfo
 
 ```TypeScript
 function getAppNativeMemInfo(): NativeMemInfo
 ```
 
-��ȡӦ�ý����ڴ���Ϣ����ȡ/proc/{pid}/smaps\_rollup��/proc/{pid}/statm�ڵ�����ݡ�
-    **ע��**  
-    
-    ���ڶ�ȡ/proc/{pid}/smaps\_rollup��ʱ�ϳ����Ƽ�ʹ���첽�ӿ�hidebug.getAppNativeMemInfoAsync���Ա���Ӧ�ö�֡�򿨶١�  
-    
-    �Ƽ�ʹ��hidebug.getRssInfo�ӿڻ�ȡӦ�õ�rssʹ����Ϣ��
+��ȡӦ�ý����ڴ���Ϣ����ȡ/proc/{pid}/smaps_rollup��/proc/{pid}/statm�ڵ�����ݡ�
+
+> **ע��**
+> 
+> ���ڶ�ȡ/proc/{pid}/smaps_rollup��ʱ�ϳ����Ƽ�ʹ���첽�ӿ�hidebug.getAppNativeMemInfoAsync���Ա���Ӧ�ö�֡�򿨶١�
+> 
+> �Ƽ�ʹ��hidebug.getRssInfo�ӿڻ�ȡӦ�õ�rssʹ����Ϣ��
 
 **起始版本：** 12
 
@@ -25,9 +32,9 @@ function getAppNativeMemInfo(): NativeMemInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Ӧ�ý����ڴ���Ϣ�� |
+| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Ӧ�ý����ڴ���Ϣ�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

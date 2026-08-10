@@ -1,6 +1,6 @@
 # ProgressMask
 
-Sets the progress, maximum value, and color for a mask.
+ProgressMask设置遮罩的进度、最大值和颜色。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Sets the progress, maximum value, and color for a mask.
 constructor(value: number, total: number, color: ResourceColor)
 ```
 
-Constructs a **ProgressMask** object.
+构造ProgressMask对象。
 
 **Since:** 10
 
@@ -34,9 +34,9 @@ Constructs a **ProgressMask** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Current value of the progress mask.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Value range: [0.0, +∞) |
-| total | number | Yes | Maximum value of the progress mask.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Value range: [0.0, +∞) |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color of the progress mask. |
+| value | number | Yes | 进度遮罩的当前值。&lt;br/&gt; 取值范围：[0.0, +∞) |
+| total | number | Yes | 进度遮罩的最大值。&lt;br/&gt; 取值范围：[0.0, +∞) |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 进度遮罩的颜色。 |
 
 ## enableBreathingAnimation
 
@@ -44,7 +44,7 @@ Constructs a **ProgressMask** object.
 enableBreathingAnimation(value: boolean): void
 ```
 
-Sets whether to enable the breathing animation when the progress indicator is full. If this API is not set, the breathing animation is disabled by default.
+进度满时的呼吸光晕动画开关。不设置该接口时，默认关闭呼吸光晕动画。
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ Sets whether to enable the breathing animation when the progress indicator is fu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the breathing animation.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true**: The breathing animation is enabled.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**false**: The breathing halo animation is disabled. |
+| value | boolean | Yes | 是否开启呼吸光晕动画。&lt;br/&gt;true：开启呼吸光晕动画。&lt;br/&gt;false：关闭呼吸光晕动画。 |
 
 ## updateColor
 
@@ -70,7 +70,7 @@ Sets whether to enable the breathing animation when the progress indicator is fu
 updateColor(value: ResourceColor): void
 ```
 
-Updates the color of the progress mask.
+更新进度遮罩的颜色。
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ Updates the color of the progress mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color of the progress mask. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 进度遮罩的颜色。 |
 
 ## updateProgress
 
@@ -96,7 +96,7 @@ Updates the color of the progress mask.
 updateProgress(value: number): void
 ```
 
-Updates the progress value of the progress mask.
+更新进度遮罩的进度值。
 
 **Since:** 10
 
@@ -114,5 +114,5 @@ Updates the progress value of the progress mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Current value of the progress mask. |
+| value | number | Yes | 进度遮罩的当前值。 |
 

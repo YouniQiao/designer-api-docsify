@@ -6,9 +6,17 @@
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace dataTransfer--><!--Device-unnamed-declare namespace dataTransfer-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+```
 
 ## 汇总
 
@@ -23,8 +31,8 @@
 | [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md#getconnectionstate) | 获取数据传输的连接状态。 |
 | [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md#offconnectionstatechanged) | 取消订阅连接状态变更事件。 |
 | [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md#offreaddata) | 取消订阅从端口读取数据的事件。 |
-| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md#onconnectionstatechanged) | 订阅连接状态变化事件。  只有授予了ohos.permission.NEARLINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACCESS权限的应用程序才能访问此事件。 |
-| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md#onreaddata) | 订阅从端口读取数据事件。  只有授予了ohos.permission.NEARLINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACCESS权限的应用程序才能访问此事件。 |
+| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md#onconnectionstatechanged) | 订阅连接状态变化事件。  只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 |
+| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md#onreaddata) | 订阅从端口读取数据事件。  只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 |
 | [writeData](arkts-connectivity-datatransfer-writedata-f.md#writedata) | 根据地址和UUID写入数据。 |
 
 ### 接口

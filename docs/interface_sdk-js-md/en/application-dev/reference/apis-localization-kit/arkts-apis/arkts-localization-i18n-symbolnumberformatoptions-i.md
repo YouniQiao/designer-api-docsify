@@ -1,8 +1,8 @@
 # SymbolNumberFormatOptions
 
-Represents optional configuration items for the SymbolNumberFormat object.Define the symbol element and value that need to be replaced.
+创建自定义符号数字格式化对象时的可选配置项。继承自Intl.NumberFormatOptions，支持Intl.NumberFormatOptions的所有配置项，并且功能与其一致。
 
-**Inheritance/Implementation:** SymbolNumberFormatOptions extends [Intl.NumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformatoptions-i.md)
+**Inheritance/Implementation:** SymbolNumberFormatOptions extends [Intl.NumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformatoptions-i.md/arkts-arkts-intl-numberformatoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Represents optional configuration items for the SymbolNumberFormat object.Define
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## groupingSeparator
 
 ```TypeScript
 groupingSeparator?: string | undefined
 ```
 
-Grouping Separator symbol of localized number part, such as "," of "10,000".
+分组符号。默认值：区域默认的符号。例如：","。
 
 **Type:** string \| undefined
 
@@ -40,7 +46,7 @@ Grouping Separator symbol of localized number part, such as "," of "10,000".
 infinity?: string | undefined
 ```
 
-Infinity symbol of localized number part, such as "∞".
+无穷符号。默认值：区域默认的符号。例如："∞"。
 
 **Type:** string \| undefined
 
@@ -62,7 +68,7 @@ Infinity symbol of localized number part, such as "∞".
 minusSign?: string | undefined
 ```
 
-Minus sign of localized number part, such as "-".
+减符号。默认值：区域默认的符号。例如："-"。
 
 **Type:** string \| undefined
 
@@ -84,7 +90,7 @@ Minus sign of localized number part, such as "-".
 nan?: string | undefined
 ```
 
-NaN symbol of localized number part, such as "null".
+NaN符号。默认值：区域默认的符号。例如："null"。
 
 **Type:** string \| undefined
 
@@ -106,7 +112,7 @@ NaN symbol of localized number part, such as "null".
 plusSign?: string | undefined
 ```
 
-Plus sign of localized number part, such as "+".
+加符号。默认值：区域默认的符号。例如："+"。
 
 **Type:** string \| undefined
 
@@ -128,7 +134,7 @@ Plus sign of localized number part, such as "+".
 zero?: string | undefined
 ```
 
-Zero symbol of localized number part, such as "0".
+零符号。默认值：区域默认的符号。例如："0"。
 
 **Type:** string \| undefined
 

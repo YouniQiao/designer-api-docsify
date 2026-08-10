@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { quickFixManager } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -40,7 +46,7 @@ readonly bundleVersionCode: long
 
 应用的版本号。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -100,7 +106,7 @@ readonly quickFixVersionCode: long
 
 快速修复补丁包的版本号。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

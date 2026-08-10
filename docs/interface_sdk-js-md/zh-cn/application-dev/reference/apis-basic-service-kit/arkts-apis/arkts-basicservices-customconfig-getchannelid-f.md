@@ -1,5 +1,11 @@
 # getChannelId
 
+## 导入模块
+
+```TypeScript
+import { customConfig } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getChannelId
 
 ```TypeScript
@@ -24,35 +30,12 @@ function getChannelId(): string
 | --- | --- |
 | string | 渠道号 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { customConfig } from '@kit.BasicServicesKit';
 
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let channelId: string = customConfig.getChannelId();
-    console.info('app channelId is ' + channelId);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { customConfig } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let channelId: string = customConfig.getChannelId();
-    console.info('app channelId is ' + channelId);
-  }
-}
+let channelId: string = customConfig.getChannelId();
+console.info('app channelId is ' + channelId);
 ```
 

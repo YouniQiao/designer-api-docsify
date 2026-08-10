@@ -11,10 +11,16 @@
  ###### 子组件
  无
  ###### ArcSliderAttribute
- 不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+ 不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
  ###### ArcSliderAttribute
- 不支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+ 不支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
 
+
+## 导入模块
+
+```TypeScript
+import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderStyleOptionsConstructorOptions, ArcSlider, ArcSliderLayoutOptionsConstructorOptions, ArcSliderOptions, ArcSliderStyleOptions, ArcSliderPosition, ArcSliderOptionsConstructorOptions } from 'kits/@kit.ArkUI';
+```
 
 ## 汇总
 

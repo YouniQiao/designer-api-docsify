@@ -1,12 +1,18 @@
 # listAliases
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## listAliases
 
 ```TypeScript
 function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 ```
 
-Lists key aliases. This API uses a promise to return the result.
+查询密钥别名集接口。使用Promise异步回调。
 
 **Since:** 12
 
@@ -22,26 +28,26 @@ Lists key aliases. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters for listing key aliases. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | listAliases操作的参数集合。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksListAliasesReturnResult&gt; | Promise that returns the operation result. If the operation is successful, **keyAliases** of **HuksListAliasesReturnResult** is the obtained key aliases. |
+| Promise&lt;HuksListAliasesReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksListAliasesReturnResult的成员 keyAliases为获取的密钥别名集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| 12000014 | memory is insufficient |
+| 12000012 | Device environment or input parameter abnormal |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit'
@@ -57,8 +63,14 @@ async function testListAliases() {
     properties: queryProperties
   };
 
-  let result: huks.HuksListAliasesReturnResult = await huks.listAliases(queryOptions);
-  console.info(`promise: listAliases success`);
+  try{
+    await huks.listAliases(queryOptions)
+      .then((data) => {
+      console.info(`promise: listAliases success, data: ` + JSON.stringify(data));
+    });
+  } catch (error) {
+    console.error(`promise: listAliases failed, errCode : ${error.code}, errMsg : ${error.message}`);
+  }
 }
 ```
 

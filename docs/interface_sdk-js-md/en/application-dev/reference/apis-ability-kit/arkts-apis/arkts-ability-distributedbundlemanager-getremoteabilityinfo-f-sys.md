@@ -1,12 +1,18 @@
 # getRemoteAbilityInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { distributedBundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getRemoteAbilityInfo
 
 ```TypeScript
 function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void
 ```
 
-Obtains information about the remote ability that matches the given element name. This API uses an asynchronous callback to return the result.
+获取由elementName指定的远程设备上的应用的AbilityInfo信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,23 +30,23 @@ Obtains information about the remote ability that matches the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target element name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RemoteAbilityInfo&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null** and **data** is the RemoteAbilityInfo object obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | ElementName信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RemoteAbilityInfo&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为 RemoteAbilityInfo对象；调用失败err为错误对象, data为undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700027 | The distributed service is not running. |
+| 201 | Permission denied. |
+| 17700007 | The specified device ID is not found. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700003 | The specified ability name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -73,7 +79,7 @@ try {
 function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>
 ```
 
-Obtains information about the remote ability that matches the given element name. This API uses a promise to return the result.
+获取由elementName指定的远程设备上的应用的AbilityInfo信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -91,28 +97,28 @@ Obtains information about the remote ability that matches the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target element name. |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | ElementName信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RemoteAbilityInfo&gt; | Promise used to return the result. If the operation is successful, the RemoteAbilityInfo object is returned. Otherwise, an error object is returned. |
+| Promise&lt;RemoteAbilityInfo&gt; | Promise对象，调用成功返回RemoteAbilityInfo对象；调用失败返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700027 | The distributed service is not running. |
+| 201 | Permission denied. |
+| 17700007 | The specified device ID is not found. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700003 | The specified ability name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -143,7 +149,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void
 ```
 
-Obtains information about the remote abilities that match the given element names. This API uses an asynchronous callback to return the result.
+获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -161,23 +167,23 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;ElementName&gt; | Yes | ElementName** array, whose maximum length is 10. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName信息,最大数组长度为10。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null ，data为RemoteAbilityInfo数组对象；调用失败err为错误对象, data为undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700027 | The distributed service is not running. |
+| 201 | Permission denied. |
+| 17700007 | The specified device ID is not found. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700003 | The specified ability name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -217,7 +223,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>
 ```
 
-Obtains information about the remote abilities that match the given element names. This API uses a promise to return the result.
+获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -235,28 +241,28 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;ElementName&gt; | Yes | ElementName** array, whose maximum length is 10. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName信息，最大数组长度为10。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Promise used to return the result. If the operation is successful, an array of RemoteAbilityInfo objects is returned. Otherwise, an error object is returned. |
+| Promise&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Promise对象，调用成功返回RemoteAbilityInfo对象；调用失败返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700027 | The distributed service is not running. |
+| 201 | Permission denied. |
+| 17700007 | The specified device ID is not found. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700003 | The specified ability name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -294,7 +300,7 @@ try {
 function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback: AsyncCallback<RemoteAbilityInfo>): void
 ```
 
-Obtains information about the remote ability that matches the given element name and locale. This API uses an asynchronous callback to return the result.
+获取由elementName和locale指定的远程设备上的应用的AbilityInfo信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -312,24 +318,24 @@ Obtains information about the remote ability that matches the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target element name. |
-| locale | string | Yes | Target locale. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RemoteAbilityInfo&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null** and **data** is the RemoteAbilityInfo object obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | ElementName信息。 |
+| locale | string | Yes | 语言地区。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RemoteAbilityInfo&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为 RemoteAbilityInfo对象；调用失败err为错误对象, data为undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700027 | The distributed service is not running. |
+| 201 | Permission denied. |
+| 17700007 | The specified device ID is not found. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700003 | The specified ability name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -362,7 +368,7 @@ try {
 function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise<RemoteAbilityInfo>
 ```
 
-Obtains information about the remote ability that matches the given element name and locale. This API uses a promise to return the result.
+获取由elementName和locale指定的远程设备上的应用的AbilityInfo信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -380,29 +386,29 @@ Obtains information about the remote ability that matches the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target element name. |
-| locale | string | Yes | Target locale. |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | ElementName信息。 |
+| locale | string | Yes | 语言地区。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RemoteAbilityInfo&gt; | Promise used to return the result. If the operation is successful, the RemoteAbilityInfo object is returned. Otherwise, an error object is returned. |
+| Promise&lt;RemoteAbilityInfo&gt; | Promise对象，调用成功返回RemoteAbilityInfo对象；调用失败返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700027 | The distributed service is not running. |
+| 201 | Permission denied. |
+| 17700007 | The specified device ID is not found. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700003 | The specified ability name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -433,7 +439,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void
 ```
 
-Obtains information about the remote abilities that match the given element names and locale. This API uses an asynchronous callback to return the result.
+获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -451,24 +457,24 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;ElementName&gt; | Yes | ElementName** array, whose maximum length is 10. |
-| locale | string | Yes | Target locale. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName信息,最大数组长度为10。 |
+| locale | string | Yes | 语言地区。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null ，data为RemoteAbilityInfo数组对象；调用失败err为错误对象, data为undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700027 | The distributed service is not running. |
+| 201 | Permission denied. |
+| 17700007 | The specified device ID is not found. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700003 | The specified ability name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -508,7 +514,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string): Promise<Array<RemoteAbilityInfo>>
 ```
 
-Obtains information about the remote abilities that match the given element names and locale. This API uses a promise to return the result.
+获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -526,29 +532,29 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;ElementName&gt; | Yes | ElementName** array, whose maximum length is 10. |
-| locale | string | Yes | Target locale. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName信息,最大数组长度为10。 |
+| locale | string | Yes | 语言地区。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Promise used to return the result. If the operation is successful, an array of RemoteAbilityInfo objects is returned. Otherwise, an error object is returned. |
+| Promise&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Promise对象，调用成功返回RemoteAbilityInfo对象；调用失败返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700027 | The distributed service is not running. |
+| 201 | Permission denied. |
+| 17700007 | The specified device ID is not found. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700003 | The specified ability name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';

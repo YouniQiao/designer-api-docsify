@@ -1,5 +1,11 @@
 # isWifiActive
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isWifiActive
 
 ```TypeScript
@@ -28,10 +34,10 @@ Query the Wi-Fi status
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 2501000 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

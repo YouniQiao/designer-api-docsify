@@ -1,15 +1,22 @@
 # getPrivateDirty
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getPrivateDirty
 
 ```TypeScript
 function getPrivateDirty() : bigint
 ```
 
-��ȡ���̵�˽�����ڴ��С����ȡ/proc/{pid}/smaps\_rollup�е�Private\_Dirtyֵ��
-    **ע��**  
-    
-    ����/proc/{pid}/smaps\_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
+��ȡ���̵�˽�����ڴ��С����ȡ/proc/{pid}/smaps_rollup�е�Private_Dirtyֵ��
+
+> **ע��**
+> 
+> ����/proc/{pid}/smaps_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
 
 **起始版本：** 9
 
@@ -25,7 +32,7 @@ function getPrivateDirty() : bigint
 | --- | --- |
 | bigint | ���ؽ��̵�˽�����ڴ��С����λΪKB�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

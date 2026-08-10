@@ -1,6 +1,6 @@
 # WindowLayoutMode (System API)
 
-Enumerates the window layout modes.
+窗口布局模式枚举。
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Enumerates the window layout modes.
 WINDOW_LAYOUT_MODE_CASCADE = 0
 ```
 
-Cascade mode. In this mode, freeform windows are stacked with Z-order arrangement.
+表示使用层叠布局模式。层叠布局下，多个自由窗口层叠放置，以Z轴次序区分。
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ Cascade mode. In this mode, freeform windows are stacked with Z-order arrangemen
 WINDOW_LAYOUT_MODE_TILE = 1
 ```
 
-Tile mode. In this mode, newly opened application windows appear on the rightmost.
+表示使用平铺布局模式。平铺布局下，新打开的应用窗口出现在最右侧。
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # PiPWindowInfo
 
-Describes the PiP window information.
+画中画窗口信息。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Describes the PiP window information.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { PiPWindow } from 'kits/@kit.ArkUI';
+```
+
 ## size
 
 ```TypeScript
 size: PiPWindowSize
 ```
 
-Size of the PiP window.
+画中画窗口大小。
 
-**Type:** PiPWindowSize
+**Type:** [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)
 
 **Since:** 15
 
@@ -36,9 +42,9 @@ Size of the PiP window.
 windowId: int
 ```
 
-ID of the PiP window.
+画中画窗口ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 

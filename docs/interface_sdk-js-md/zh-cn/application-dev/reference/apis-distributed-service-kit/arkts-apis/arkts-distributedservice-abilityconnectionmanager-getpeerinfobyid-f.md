@@ -1,5 +1,11 @@
 # getPeerInfoById
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## getPeerInfoById
 
 ```TypeScript
@@ -22,40 +28,25 @@ function getPeerInfoById(sessionId: int): PeerInfo | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 协同会话ID。 |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 协同会话ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 若存在对应PeerInfo，则返回接收端的协作应用信息。若sessionId未找到，则查询失败，返回undefined。 |
+| [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | 若存在对应PeerInfo，则返回接收端的协作应用信息。若sessionId未找到，则查询失败，返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hilog.info(0x0000, 'testTag', 'getPeerInfoById called');
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-// 获取指定会话中对端应用信息
-const peerInfo = abilityConnectionManager.getPeerInfoById(sessionId);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
-import hilog from '@ohos.hilog';
 
 hilog.info(0x0000, 'testTag', 'getPeerInfoById called');
 // sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例

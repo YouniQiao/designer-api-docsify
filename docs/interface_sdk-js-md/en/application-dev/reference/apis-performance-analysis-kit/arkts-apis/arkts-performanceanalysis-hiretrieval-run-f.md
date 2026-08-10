@@ -1,12 +1,18 @@
 # run
 
+## Modules to Import
+
+```TypeScript
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## run
 
 ```TypeScript
 function run(): void
 ```
 
-Trigger the HiRetrieval functionality, make it start working.
+若此设备正在参与应用灰度活动（即已调用participate接口且未调用quit接口），则应用灰度模块开始工作，否则调用该接口不会产生任何效果。
 
 **Since:** 26.0.0
 

@@ -126,7 +126,7 @@ position?: PositionT<number>
 
 x、y的取值范围：(-∞, +∞)。
 
-**类型：** PositionT&lt;number&gt;
+**类型：** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
 
 **默认值：** {x:0,y:0}
 
@@ -152,7 +152,7 @@ shape?: DisturbanceFieldShape
 
 默认为DisturbanceFieldShape.RECT。
 
-**类型：** DisturbanceFieldShape
+**类型：** [DisturbanceFieldShape](arkts-arkui-disturbancefieldshape-e.md)
 
 **默认值：** DisturbanceFieldShape.RECT
 
@@ -180,7 +180,7 @@ size?: SizeT<number>
 
 width和height的取值范围：[0, +∞)。
 
-**类型：** SizeT&lt;number&gt;
+**类型：** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
 
 **默认值：** {width:0,height:0}
 

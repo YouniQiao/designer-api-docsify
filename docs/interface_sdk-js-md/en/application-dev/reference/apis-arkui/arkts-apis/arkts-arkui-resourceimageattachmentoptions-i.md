@@ -1,6 +1,6 @@
 # ResourceImageAttachmentOptions
 
-Defines the settings for images of the ResourceStr type.
+ResourceStr类型图片设置项。
 
 **Since:** 15
 
@@ -16,9 +16,9 @@ Defines the settings for images of the ResourceStr type.
 colorFilter?: ColorFilterType
 ```
 
-Image color filter of the styled string.
+获取属性字符串的图片颜色滤镜效果。
 
-**Type:** ColorFilterType
+**Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
 **Since:** 15
 
@@ -38,9 +38,9 @@ Image color filter of the styled string.
 layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-Image layout.
+设置图片布局。
 
-**Type:** ImageAttachmentLayoutStyle
+**Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
 **Since:** 15
 
@@ -60,11 +60,11 @@ Image layout.
 objectFit?: ImageFit
 ```
 
-Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
+设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。具体枚举及说明请参考ImageFit。
 
-Default value: **ImageFit.Cover
+默认值：ImageFit.Cover。
 
-**Type:** ImageFit
+**Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **Since:** 15
 
@@ -84,9 +84,9 @@ Default value: **ImageFit.Cover
 resourceValue: Optional<ResourceStr>
 ```
 
-Image data source.
+设置图片数据源。
 
-**Type:** Optional&lt;ResourceStr&gt;
+**Type:** [Optional](arkts-arkui-optional-t.md)&lt;ResourceStr&gt;
 
 **Since:** 15
 
@@ -106,9 +106,11 @@ Image data source.
 size?: SizeOptions
 ```
 
-Image size.
+设置图片大小，不支持百分比。
 
-**Type:** SizeOptions
+size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。
+
+**Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
 
 **Since:** 15
 
@@ -128,12 +130,11 @@ Image size.
 supportSvg2?: boolean
 ```
 
-Whether to enable  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
 
-**true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.
+true：支持SVG解析新能力；false：保持原有SVG解析能力。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -155,11 +156,11 @@ Default value: **false
 syncLoad?: boolean
 ```
 
-Whether to load the image synchronously. By default, the image is loaded asynchronously. During synchronous loading, the UI thread is blocked and the placeholder image is not displayed.
+是否同步加载图片，默认是异步加载。同步加载时阻塞UI线程，不会显示占位图。
 
-**true**: synchronous loading; **false**: asynchronous loading.
+true：同步加载；false：异步加载。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -181,11 +182,11 @@ Default value: **false
 verticalAlign?: ImageSpanAlignment
 ```
 
-Alignment mode of the image with the text.
+设置图片基于文本的对齐方式。具体枚举及说明请参考ImageSpanAlignment。
 
-Default value: **ImageSpanAlignment.BOTTOM
+默认值：ImageSpanAlignment.BOTTOM。
 
-**Type:** ImageSpanAlignment
+**Type:** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
 
 **Since:** 15
 

@@ -1,0 +1,78 @@
+# @ohos.multimodalAwareness.userStatus
+
+The **UserStatus** module, designed for user state awareness, empowers the system to perceive specific conditions of users, such as determining their age group or recognizing environmental sounds, among other functions.
+
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
+<!--Device-unnamed-declare namespace userStatus--><!--Device-unnamed-declare namespace userStatus-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.UserStatus
+
+## 导入模块
+
+```TypeScript
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
+## 汇总
+
+### 函数
+
+| 名称 | 说明 |
+| --- | --- |
+| [off](arkts-multimodalawareness-userstatus-off-f.md#off) | Disables the age group detection function.  > **NOTE：** >  > This API is supported only on some phones. Error code **33900003** is returned if it is called on unsupported > phones. |
+| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offuseragegroupdetected) | Unsubscribe to age group detection feature. |
+| [on](arkts-multimodalawareness-userstatus-on-f.md#on) | Enables the age group detection function.  When the function is enabled, the application can recommend content based on the age group detection result.  > **NOTE：** >  > This API is supported only on some phones. Error code **801** is returned if it is called on unsupported phones. |
+| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onuseragegroupdetected) | Subscribe to age group detection feature. |
+
+<!--Del-->
+### 函数（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) | Configures feature parameters. |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) | Queries device-supported atomic capabilities. |
+| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) | Subscribes to user status monitoring. |
+| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) | Unsubscribes from user status monitoring. |
+<!--DelEnd-->
+
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md) | Defines the user age group detection result. |
+
+<!--Del-->
+### 接口（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [ComfortReminderData](arkts-multimodalawareness-userstatus-comfortreminderdata-i-sys.md) | Defines comfort reminder data. |
+| [DeviceInfo](arkts-multimodalawareness-userstatus-deviceinfo-i-sys.md) | Defines device information. |
+| [UserBlowData](arkts-multimodalawareness-userstatus-userblowdata-i-sys.md) | Defines user blow data. |
+| [UserEmotionData](arkts-multimodalawareness-userstatus-useremotiondata-i-sys.md) | Defines user emotion data. |
+| [UserFaceAngleData](arkts-multimodalawareness-userstatus-userfaceangledata-i-sys.md) | Defines user face angle data. |
+| [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md) | Defines user face data. |
+| [UserGesturesData](arkts-multimodalawareness-userstatus-usergesturesdata-i-sys.md) | Defines user gesture data. |
+| [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | Defines user status data. |
+<!--DelEnd-->
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md) | Enumerates the user age groups, for example, child or adult. |
+
+<!--Del-->
+### 枚举（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [DeviceType](arkts-multimodalawareness-userstatus-devicetype-e-sys.md) | Enumerates device types. |
+| [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md) | Enumerates comfort reminder levels required for triggering specific alert ringtones. |
+| [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md) | Enumerates user status atomic capabilities. |
+| [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | Enumerates user status detection features. |
+<!--DelEnd-->
+

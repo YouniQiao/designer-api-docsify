@@ -12,6 +12,12 @@ Queries portrait parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getSupportedPortraitEffects
 
 ```TypeScript
@@ -40,10 +46,10 @@ Obtains the supported portrait effects.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 function getSupportedPortraitEffects(portraitPhotoSession: camera.PortraitPhotoSession): Array<camera.PortraitEffect> {

@@ -1,6 +1,6 @@
 # @ohos.userIAM.userAccessCtrl(用户访问控制)
 
-userAccessCtrl**模块是OpenHarmony用户身份认证体系（UserIAM）的核心组件，专门用于认证令牌的验证和管理。该模块提供了验证认证令牌（AuthToken）的API，能够解析和验证用户身份认证结果，并返回详细的认证信息。
+**userAccessCtrl**模块是OpenHarmony用户身份认证体系（UserIAM）的核心组件，专门用于认证令牌的验证和管理。该模块提供了验证认证令牌（AuthToken）的API，能够解析和验证用户身份认证结果，并返回详细的认证信息。
 
 该模块主要用于以下场景：
 
@@ -15,6 +15,12 @@ userAccessCtrl**模块是OpenHarmony用户身份认证体系（UserIAM）的核�
 <!--Device-unnamed-declare namespace userAccessCtrl--><!--Device-unnamed-declare namespace userAccessCtrl-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
+```
 
 ## 汇总
 

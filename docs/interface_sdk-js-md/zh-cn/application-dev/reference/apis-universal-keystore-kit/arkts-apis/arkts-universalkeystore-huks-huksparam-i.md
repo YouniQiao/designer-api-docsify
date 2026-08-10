@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## tag
 
 ```TypeScript
@@ -18,7 +24,7 @@ tag: HuksTag
 
 标签。
 
-**类型：** HuksTag
+**类型：** [HuksTag](arkts-universalkeystore-huks-hukstag-e.md)
 
 **起始版本：** 8
 

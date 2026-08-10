@@ -34,7 +34,7 @@ constructor(value?: TextStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字体样式设置项。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：不传入时继承TextStyleInterface各属性的默认值。 |
+| value | [TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md) | 否 | 字体样式设置项。 &lt;br&gt;默认值：不传入时继承TextStyleInterface各属性的默认值。 |
 
 ## fontColor
 
@@ -44,7 +44,7 @@ readonly fontColor?: ResourceColor
 
 获取属性字符串的文本颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -68,7 +68,7 @@ readonly fontConfigs?: FontConfigs
 
 默认返回undefined，表示未设置fontConfigs。
 
-**类型：** FontConfigs
+**类型：** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
 **起始版本：** 24
 
@@ -114,7 +114,7 @@ readonly fontSize?: number
 
 获取属性字符串的文本字体大小。
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ 
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
 
 **类型：** number
 
@@ -138,7 +138,7 @@ readonly fontStyle?: FontStyle
 
 获取属性字符串的文本字体样式。
 
-**类型：** FontStyle
+**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **起始版本：** 12
 
@@ -214,7 +214,7 @@ readonly strokeColor?: ResourceColor
 
 默认返回字体颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 20
 
@@ -236,9 +236,9 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 
 获取属性字符串的文本描边拐角样式。
 
-默认值：StrokeJoinStyle.MITER\_JOIN。
+默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** StrokeJoinStyle
+**类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
@@ -260,7 +260,7 @@ readonly strokeWidth?: number
 
 获取属性字符串的文本描边宽度。
 
-默认返回0，单位为\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+默认返回0，单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
 
 **类型：** number
 
@@ -286,7 +286,7 @@ readonly superscript?: SuperscriptStyle
 
 默认值：SuperscriptStyle.NORMAL。
 
-**类型：** SuperscriptStyle
+**类型：** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **起始版本：** 20
 

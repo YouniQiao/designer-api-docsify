@@ -1,6 +1,13 @@
 # CapitalizeMode
 
-Enumerates the modes of capitalizing the first letter of a text.
+枚举，定义了文本首字母大写的不同模式。
+
+| 名称 | 值 | 说明 |  
+| -------- | -- | -------- |  
+| NONE | 0 | 不进行任何首字母大写处理。|  
+| SENTENCES | 1 | 每个句子的首字母大写。|  
+| WORDS | 2 | 每个单词的首字母大写。|  
+| CHARACTERS | 3 | 每个字母都大写。|
 
 **Since:** 20
 
@@ -16,7 +23,7 @@ Enumerates the modes of capitalizing the first letter of a text.
 NONE = 0
 ```
 
-Capitalize nothing.
+不进行任何首字母大写处理。
 
 **Since:** 20
 
@@ -32,7 +39,7 @@ Capitalize nothing.
 SENTENCES
 ```
 
-Capitalize the first letter of each sentence.
+每个句子的首字母大写。
 
 **Since:** 20
 
@@ -48,7 +55,7 @@ Capitalize the first letter of each sentence.
 WORDS
 ```
 
-Capitalize the first letter of each word.
+每个单词的首字母大写。
 
 **Since:** 20
 
@@ -64,7 +71,7 @@ Capitalize the first letter of each word.
 CHARACTERS
 ```
 
-Capitalize each letter.
+每个字母都大写。
 
 **Since:** 20
 

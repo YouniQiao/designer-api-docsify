@@ -1,6 +1,6 @@
 # ValidationPolicyType
 
-Enumerates the types of the online certificate chain validation policy.
+表示证书链在线校验策略的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the types of the online certificate chain validation policy.
 VALIDATION_POLICY_TYPE_X509 = 0
 ```
 
-Do not verify **sslHostname** or **dNSName** in the certificate. It is the default value.
+默认值，不需要校验证书中的sslHostname或dNSName。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Do not verify **sslHostname** or **dNSName** in the certificate. It is the defau
 VALIDATION_POLICY_TYPE_SSL = 1
 ```
 
-Verify **sslHostname** or **dNSName** in the certificate.
+需要校验证书中的sslHostname字段。
 
 **Since:** 12
 

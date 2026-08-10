@@ -8,7 +8,7 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 
 **使用后效果：** 调用此控件后，将弹出输入法切换列表弹窗。用户在弹窗中选择输入法后，系统将切换到指定的输入法；若用户选择了默认输入法的模式选项，系统将按指定模式显示键盘布局。
 
-**相似接口差异点及选取原则：** 与[inputMethod.switchInputMethod]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口相比，本控件提供了可视化的输入法选择界面，适用于需要交互式选择界面的场景；switchInputMethod接口适用于程序化切换输入法的场景，无需用户手动选择。
+**相似接口差异点及选取原则：** 与[inputMethod.switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod)接口相比，本控件提供了可视化的输入法选择界面，适用于需要交互式选择界面的场景；switchInputMethod接口适用于程序化切换输入法的场景，无需用户手动选择。
 
 **起始版本：** 11
 
@@ -17,6 +17,12 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 <!--Device-unnamed-export declare struct InputMethodListDialog--><!--Device-unnamed-export declare struct InputMethodListDialog-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { Pattern, InputMethodListDialog, PatternOptions } from 'kits/@kit.IMEKit';
+```
 
 ## build
 
@@ -44,7 +50,7 @@ controller: CustomDialogController
 
 设置控制器。
 
-**类型：** CustomDialogController
+**类型：** [CustomDialogController](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller-c.md)
 
 **起始版本：** 11
 
@@ -62,7 +68,7 @@ patternOptions?: PatternOptions
 
 设置图案选项。当不是默认输入法时，此参数可省略。
 
-**类型：** PatternOptions
+**类型：** [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
 
 **起始版本：** 11
 

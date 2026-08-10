@@ -4,7 +4,7 @@
 declare type Want = import('../api/@ohos.app.ability.Want').default
 ```
 
-Indicates want.
+表示Want。
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # TemplateProperty
 
-Provides parameter configuration required for switching the float view template and modifying the size of the window.
+切换悬浮窗模板并修改窗口尺寸时需要提供的参数配置。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Provides parameter configuration required for switching the float view template 
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## size
 
 ```TypeScript
 size: window.Size
 ```
 
-Window size required for updating the template type.
+更新模板类型时需要提供的窗口尺寸。
 
 **Type:** window.Size
 
@@ -36,9 +42,9 @@ Window size required for updating the template type.
 templateType: FloatViewTemplateType
 ```
 
-Template type of the float view.
+标准悬浮窗的模板类型。
 
-**Type:** FloatViewTemplateType
+**Type:** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
 **Since:** 26.0.0
 

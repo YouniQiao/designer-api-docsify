@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from 'kits/@kit.MDMKit';
+```
+
 ## abilityInFgTotalTime
 
 ```TypeScript
@@ -37,7 +43,7 @@ appIndex: number
 ```
 
 应用分身索引，取值范围：大于等于0的整数。appIndex可以通过@ohos.bundle.bundleManager中的  
-[getAppCloneIdentity]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_等接口来获取。
+[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity)等接口来获取。
 
 **类型：** number
 

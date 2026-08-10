@@ -70,9 +70,9 @@ BREAK_WORD = 2
 BREAK_HYPHEN = 3
 ```
 
-每行末尾单词尝试通过连字符“-”进行断行，若无法添加连字符“-”，则跟\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_保持一致。
+每行末尾单词尝试通过连字符“-”进行断行，若无法添加连字符“-”，则跟`BREAK_WORD`保持一致。
 
-使用此断词策略时，需与[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_中\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_属性配合使用，通过locale定义语言环境共同作用影响断词效果。
+使用此断词策略时，需与[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)中`locale`属性配合使用，通过locale定义语言环境共同作用影响断词效果。
 
 **起始版本：** 18
 

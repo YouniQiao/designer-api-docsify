@@ -1,5 +1,11 @@
 # getLocalName
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getLocalName
 
 ```TypeScript
@@ -28,7 +34,7 @@ Obtains the Bluetooth local name of a device.
 | --- | --- |
 | string | Returns the name the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let localName : string = bluetooth.getLocalName();

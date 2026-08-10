@@ -1,7 +1,6 @@
 # AbilityState
 
-Enumerates the ability states. This enum can be used together with  
-[AbilityRunningInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to return the ability state.
+Ability的状态，该类型为枚举，可配合[AbilityRunningInfo](arkts-ability-abilitymanager-abilityrunninginfo-t.md)返回Ability的状态。
 
 **Since:** 14
 
@@ -17,7 +16,7 @@ Enumerates the ability states. This enum can be used together with
 INITIAL = 0
 ```
 
-The ability is in the initial state.
+表示ability为初始化状态。
 
 **Since:** 14
 
@@ -33,7 +32,7 @@ The ability is in the initial state.
 FOCUS = 2
 ```
 
-The ability has the focus.
+表示ability为获焦状态。
 
 **Since:** 14
 
@@ -49,7 +48,7 @@ The ability has the focus.
 FOREGROUND = 9
 ```
 
-The ability is in the foreground state.
+表示ability为前台状态。
 
 **Since:** 14
 
@@ -65,7 +64,7 @@ The ability is in the foreground state.
 BACKGROUND = 10
 ```
 
-The ability is in the background state.
+表示ability为后台状态。
 
 **Since:** 14
 
@@ -81,7 +80,7 @@ The ability is in the background state.
 FOREGROUNDING = 11
 ```
 
-The ability is in the state of being switched to the foreground.
+表示ability为前台调度中状态。
 
 **Since:** 14
 
@@ -97,7 +96,7 @@ The ability is in the state of being switched to the foreground.
 BACKGROUNDING = 12
 ```
 
-The ability is in the state of being switched to the background.
+表示ability为后台调度中状态。
 
 **Since:** 14
 

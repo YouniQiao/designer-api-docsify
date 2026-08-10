@@ -12,15 +12,21 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## scope
 
 ```TypeScript
 scope: FactoryResetScope
 ```
 
-重置范围。DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA\_AND\_OS同时清除用户数据分区和操作系统分区，适用于同时清除系统和数据的场景。
+重置范围。DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA_AND_OS同时清除用户数据分区和操作系统分区，适用于同时清除系统和数据的场景。
 
-**类型：** FactoryResetScope
+**类型：** [FactoryResetScope](arkts-basicservices-update-factoryresetscope-e-sys.md)
 
 **起始版本：** 26.0.0
 

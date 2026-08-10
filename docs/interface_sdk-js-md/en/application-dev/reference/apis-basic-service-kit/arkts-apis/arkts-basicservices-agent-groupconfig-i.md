@@ -1,6 +1,6 @@
 # GroupConfig
 
-Describes group configuration options for download tasks.
+下载任务分组配置选项。
 
 **Since:** 15
 
@@ -10,18 +10,24 @@ Describes group configuration options for download tasks.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## gauge
 
 ```TypeScript
 gauge?: boolean
 ```
 
-Whether to send progress notifications. This parameter applies only to background tasks.
+后台任务的进度通知策略。 
 
-- **true**: The progress, success, and failure notifications are displayed.  
-- **false**: Only success and failure notifications are displayed.
+- true，显示进度、成功、失败通知。   
+- false，仅显示成功、失败通知。
 
-The default value is **false**.
+默认为false。
 
 **Type:** boolean
 
@@ -39,9 +45,9 @@ The default value is **false**.
 notification: Notification
 ```
 
-Custom settings for the notification bar. The default value is **{}**.
+通知栏自定义设置。默认值为`{}`
 
-**Type:** Notification
+**Type:** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **Since:** 15
 

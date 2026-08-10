@@ -1,5 +1,11 @@
 # createImagePacker
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createImagePacker
 
 ```TypeScript
@@ -8,7 +14,7 @@ function createImagePacker(): ImagePacker
 
 创建ImagePacker实例。
 
-由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](arkts-image-image-imagepacker-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -24,21 +30,13 @@ function createImagePacker(): ImagePacker
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回ImagePacker实例。 |
+| [ImagePacker](arkts-image-image-imagepacker-i.md) | 返回ImagePacker实例。 |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 async function CreateImagePacker() {
   const imagePackerObj: image.ImagePacker = image.createImagePacker();
 }
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-const imagePacker: image.ImagePacker = image.createImagePacker();
 ```
 

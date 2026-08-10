@@ -12,6 +12,12 @@ Defines the updating SIM message options.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## msgIndex
 
 ```TypeScript
@@ -20,7 +26,7 @@ msgIndex: int
 
 Indicates the message index for the updating SIM message options.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -40,7 +46,7 @@ newStatus: SimMessageStatus
 
 Indicates the new status for the updating SIM message options.
 
-**Type:** SimMessageStatus
+**Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
 **Since:** 7
 
@@ -80,7 +86,7 @@ slotId: int
 
 Indicates the card slot ID for the updating SIM message options.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 

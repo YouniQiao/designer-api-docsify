@@ -28,7 +28,7 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
 
 
 ## getDoNotDisturbDate
@@ -91,7 +91,7 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
 
 
 ## getDoNotDisturbDate

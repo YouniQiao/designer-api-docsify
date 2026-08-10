@@ -12,6 +12,12 @@ Configuration for canceling an analysis tool.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## param
 
 ```TypeScript

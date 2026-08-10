@@ -1,6 +1,6 @@
 # BaseGestureHandlingProposal
 
-Class BaseGestureHandlingProposal.
+类BaseGestureHandlingProposal。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Class BaseGestureHandlingProposal.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
 action: SmartGestureAction
 ```
 
-The smart gesture action to be performed. Defines the specific operation triggered by the gesture.
+要执行的智能手势操作。定义手势触发的具体操作。
 
-**Type:** SmartGestureAction
+**Type:** [SmartGestureAction](arkts-arkui-smartgestureaction-e.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ The smart gesture action to be performed. Defines the specific operation trigger
 operateIntention: OperateIntention
 ```
 
-The underlying user operation intention. Represents the fundamental user interaction goal.
+底层的用户操作意图。表示基本的用户交互目标。
 
-**Type:** OperateIntention
+**Type:** [OperateIntention](arkts-arkui-operateintention-e.md)
 
 **Since:** 26.0.0
 

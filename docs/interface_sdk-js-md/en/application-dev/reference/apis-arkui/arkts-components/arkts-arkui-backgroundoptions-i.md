@@ -1,6 +1,6 @@
 # BackgroundOptions
 
-Defines background options.
+指定背景选项
 
 **Since:** 20
 
@@ -20,7 +20,7 @@ Set the alignment of the custom background and component.
 
 Anonymous Object Rectification.
 
-**Type:** Alignment
+**Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **Default:** Alignment.Center
 

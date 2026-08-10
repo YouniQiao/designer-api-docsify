@@ -1,6 +1,6 @@
 # KeyboardAvoidMode
 
-Enumerates modes in which a popup responds when the keyboard is displayed.
+气泡避让键盘时，避让模式的枚举类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates modes in which a popup responds when the keyboard is displayed.
 DEFAULT = 0
 ```
 
-Automatically avoids the soft keyboard and compresses the height when reaching the maximum limit.
+默认避让软键盘并在到达极限高度之后进行高度压缩。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Automatically avoids the soft keyboard and compresses the height when reaching t
 NONE = 1
 ```
 
-Does not avoid the soft keyboard.
+不避让软键盘。
 
 **Since:** 12
 

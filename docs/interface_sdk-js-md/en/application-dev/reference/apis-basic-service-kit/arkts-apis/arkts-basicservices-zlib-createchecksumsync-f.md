@@ -1,12 +1,18 @@
 # createChecksumSync
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createChecksumSync
 
 ```TypeScript
 function createChecksumSync(): Checksum
 ```
 
-Creates this checksum object. A checksum instance is returned upon a success.
+创建校验对象。成功时返回Checksum对象实例。
 
 **Since:** 12
 
@@ -22,9 +28,9 @@ Creates this checksum object. A checksum instance is returned upon a success.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Checksum object instance. |
+| [Checksum](arkts-basicservices-zlib-checksum-i.md) | 校验对象实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

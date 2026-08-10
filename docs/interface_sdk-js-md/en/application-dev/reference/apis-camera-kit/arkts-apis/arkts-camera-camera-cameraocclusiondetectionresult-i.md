@@ -1,6 +1,6 @@
 # CameraOcclusionDetectionResult
 
-Describes the instance returned by the occlusion status callback, which indicates whether the camera lens is blocked or dirty.
+镜头遮挡或脏污检测回调返回的接口实例，表示镜头遮挡或脏污状态信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Describes the instance returned by the occlusion status callback, which indicate
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isCameraLensDirty
 
 ```TypeScript
 readonly isCameraLensDirty: boolean
 ```
 
-Whether the camera lens is dirty. **true** if dirty, false otherwise.
+镜头是否有脏污。true表示镜头有脏污，false表示镜头无脏污。
 
 **Type:** boolean
 
@@ -36,7 +42,7 @@ Whether the camera lens is dirty. **true** if dirty, false otherwise.
 readonly isCameraOccluded: boolean
 ```
 
-Whether the camera lens is blocked. **true** if blocked, **false** otherwise.
+镜头是否被遮挡。true表示镜头被遮挡，false表示镜头无遮挡。
 
 **Type:** boolean
 

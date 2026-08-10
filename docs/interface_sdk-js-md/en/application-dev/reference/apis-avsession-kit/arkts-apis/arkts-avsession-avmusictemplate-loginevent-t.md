@@ -4,7 +4,7 @@
 type LoginEvent = (controlType: LoginType, id?: string) => Promise<QrCodeInfo[]>
 ```
 
-The login event.
+登录事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ The login event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | control type  |
-| id | string | No | id  |
+| controlType | [LoginType](arkts-avsession-avmusictemplate-logintype-t.md) | Yes | 登录类型。 |
+| id | string | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;QrCodeInfo[]&gt; | (QrCodeInfo[]) returned through promise  |
+| Promise&lt;QrCodeInfo[]&gt; | Promise对象，返回二维码信息的数组。 |
 

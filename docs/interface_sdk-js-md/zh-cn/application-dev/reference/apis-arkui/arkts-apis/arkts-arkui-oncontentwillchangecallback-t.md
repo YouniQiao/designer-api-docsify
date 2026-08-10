@@ -20,8 +20,8 @@ export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| currentIndex | number | 是 | 当前页签索引。  |
-| comingIndex | number | 是 | 即将切换的页签索引。  |
+| currentIndex | number | 是 | 当前页签索引。 |
+| comingIndex | number | 是 | 即将切换的页签索引。 |
 
 **返回值：**
 

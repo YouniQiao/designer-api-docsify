@@ -12,6 +12,12 @@ Sendable PixelMap instance.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## applyColorSpace
 
 ```TypeScript
@@ -46,19 +52,19 @@ This method is used to change color space of PixelMap.Pixel data will be changed
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
-| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 62980115 | Invalid image parameter. |
+| 62980104 | Failed to initialize the internal object. |
+| 62980108 | Failed to convert the color space. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { colorSpaceManager } from '@kit.ArkGraphics2D';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function ApplyColorSpace(pixelMap : sendableImage.PixelMap) {
     let colorSpaceName = colorSpaceManager.ColorSpace.SRGB; // The colorSpaceManager.ColorSpace object is supported only on 2-in-1 devices/PCs.
     let targetColorSpace: colorSpaceManager.ColorSpaceManager = colorSpaceManager.create(colorSpaceName);
     pixelMap.applyColorSpace(targetColorSpace).then(() => {
@@ -93,13 +99,13 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 | --- | --- |
 | Promise&lt;PixelMap&gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function CreateAlphaPixelmap(pixelMap : sendableImage.PixelMap) {
   if (pixelMap != undefined) {
     pixelMap.createAlphaPixelmap().then((alphaPixelMap: sendableImage.PixelMap) => {
       console.info('Succeeded in creating alpha pixelmap.');
@@ -132,21 +138,21 @@ Obtains new pixelmap with alpha information.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | return the new image pixelmap. If the operation fails, an error message is returned. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | return the new image pixelmap. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function CreateAlphaPixelmapSync(pixelMap : sendableImage.PixelMap) {
   let resPixelMap : sendableImage.PixelMap = pixelMap.createAlphaPixelmapSync();
   return resPixelMap;
 }
@@ -182,14 +188,14 @@ Crop the image. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function Crop(pixelMap : sendableImage.PixelMap) {
   let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
   if (pixelMap != undefined) {
     pixelMap.crop(region).then(() => {
@@ -230,16 +236,16 @@ Crop the image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function CropSync(pixelMap : sendableImage.PixelMap) {
   let region : image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
   if (pixelMap != undefined) {
     pixelMap.cropSync(region);
@@ -278,13 +284,13 @@ Image flipping. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function Flip(pixelMap : sendableImage.PixelMap) {
   let horizontal: boolean = true;
   let vertical: boolean = false;
   if (pixelMap != undefined) {
@@ -327,15 +333,15 @@ Image flipping.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function FlipSync(pixelMap : sendableImage.PixelMap) {
   let horizontal : boolean = true;
   let vertical : boolean = false;
   if (pixelMap != undefined) {
@@ -368,12 +374,12 @@ Obtains the number of bytes in each line of the image pixelmap.
 | --- | --- |
 | number | Number of bytes in each line. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function GetBytesNumberPerRow(pixelMap : sendableImage.PixelMap) {
   let rowCount: number = pixelMap.getBytesNumberPerRow();
 }
 ```
@@ -404,16 +410,16 @@ Get color space of pixelmap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | If the image data abnormal. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | If the image data unsupport. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
+| 62980115 | If the image parameter invalid. |
+| 62980101 | If the image data abnormal. |
+| 62980103 | If the image data unsupport. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function GetColorSpace(pixelMap : sendableImage.PixelMap) {
   if (pixelMap != undefined) {
     let csm = pixelMap.getColorSpace();
   }
@@ -444,12 +450,12 @@ Obtains the density of the image pixelmap.
 | --- | --- |
 | number | The number of density, in ppi. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function GetDensity(pixelMap : sendableImage.PixelMap) {
   let getDensity: number = pixelMap.getDensity();
 }
 ```
@@ -478,14 +484,14 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 | --- | --- |
 | Promise&lt;image.ImageInfo&gt; | A Promise instance used to return the image pixelmap information. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function GetImageInfo(pixelMap : sendableImage.PixelMap) {
   if (pixelMap != undefined) {
     pixelMap.getImageInfo().then((imageInfo: image.ImageInfo) => {
       if (imageInfo != undefined) {
@@ -526,15 +532,15 @@ Get image information from image source.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function GetImageInfoSync(pixelMap : sendableImage.PixelMap) {
   if (pixelMap != undefined) {
     let imageInfo : image.ImageInfo = pixelMap.getImageInfoSync();
   }
@@ -565,12 +571,12 @@ Obtains the total number of bytes of the image pixelmap.
 | --- | --- |
 | number | Total number of bytes. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function GetPixelBytesNumber(pixelMap : sendableImage.PixelMap) {
   let pixelBytesNumber: number = pixelMap.getPixelBytesNumber();
 }
 ```
@@ -601,12 +607,13 @@ Marshalling PixelMap and write into MessageSequence.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
+| 62980097 | IPC error. |
+| 62980115 | Invalid image parameter. |
 
-**Example**
+## Examples
 
 ```TypeScript
+// EntryAbility.ets
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 import { rpc } from '@kit.IPCKit';
@@ -618,7 +625,7 @@ class MySequence implements rpc.Parcelable {
   }
   marshalling(messageSequence : rpc.MessageSequence) {
     this.pixel_map.marshalling(messageSequence);
-    console.info('marshalling');
+    console.info('Succeeded in marshalling a PixelMap.');
     return true;
   }
   unmarshalling(messageSequence : rpc.MessageSequence) {
@@ -626,7 +633,7 @@ class MySequence implements rpc.Parcelable {
       pixelParcel.unmarshalling(messageSequence).then(async (pixelMap: sendableImage.PixelMap) => {
         this.pixel_map = pixelMap;
         pixelMap.getImageInfo().then((imageInfo: image.ImageInfo) => {
-          console.info("unmarshalling information h:" + imageInfo.size.height + "w:" + imageInfo.size.width);
+          console.info(`Succeeded in unmarshalling a PixelMap. Height: ${imageInfo.size.height}, width: ${imageInfo.size.width}.`);
         })
       })
     });
@@ -634,7 +641,7 @@ class MySequence implements rpc.Parcelable {
   }
 }
 
-async function Demo() {
+async function Marshalling() {
   const color: ArrayBuffer = new ArrayBuffer(96);
   let bufferArr: Uint8Array = new Uint8Array(color);
   for (let i = 0; i < bufferArr.length; i++) {
@@ -693,13 +700,13 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function Opacity(pixelMap : sendableImage.PixelMap) {
   let rate: number = 0.5;
   if (pixelMap != undefined) {
     pixelMap.opacity(rate).then(() => {
@@ -739,15 +746,15 @@ Set the transparent rate of pixelmap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function OpacitySync(pixelMap : sendableImage.PixelMap) {
   let rate : number = 0.5;
   if (pixelMap != undefined) {
     pixelMap.opacitySync(rate);
@@ -785,14 +792,14 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function ReadPixels(pixelMap : sendableImage.PixelMap) {
   const area: image.PositionArea = {
     pixels: new ArrayBuffer(8),
     offset: 0,
@@ -837,16 +844,16 @@ Reads image pixelmap data in an area.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function ReadPixelsSync(pixelMap : sendableImage.PixelMap) {
   const area : image.PositionArea = {
     pixels: new ArrayBuffer(8),
     offset: 0,
@@ -889,13 +896,13 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function ReadPixelsToBuffer(pixelMap : sendableImage.PixelMap) {
   const readBuffer: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
   if (pixelMap != undefined) {
     pixelMap.readPixelsToBuffer(readBuffer).then(() => {
@@ -935,15 +942,15 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap: sendableImage.PixelMap) {
+async function ReadPixelsToBufferSync(pixelMap: sendableImage.PixelMap) {
   const bufferSize = pixelMap.getPixelBytesNumber();
   const readBuffer: ArrayBuffer = new ArrayBuffer(bufferSize);
   if (pixelMap != undefined) {
@@ -976,13 +983,13 @@ Releases this PixelMap object. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the instance release result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap: sendableImage.PixelMap) {
+async function Release(pixelMap: sendableImage.PixelMap) {
   if (pixelMap != undefined) {
     await pixelMap.release().then(() => {
       console.info('Succeeded in releasing pixelmap object.');
@@ -1023,13 +1030,13 @@ Image rotation. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function Rotate(pixelMap : sendableImage.PixelMap) {
   let angle: number = 90.0;
   if (pixelMap != undefined) {
     pixelMap.rotate(angle).then(() => {
@@ -1069,15 +1076,15 @@ Image rotation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function RotateSync(pixelMap : sendableImage.PixelMap) {
   let angle : number = 90.0;
   if (pixelMap != undefined) {
     pixelMap.rotateSync(angle);
@@ -1116,13 +1123,13 @@ Image zoom in width and height. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function Scale(pixelMap : sendableImage.PixelMap) {
   let scaleX: number = 2.0;
   let scaleY: number = 1.0;
   if (pixelMap != undefined) {
@@ -1165,15 +1172,15 @@ Image zoom in width and height.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function ScaleSync(pixelMap : sendableImage.PixelMap) {
   let scaleX: number = 2.0;
   let scaleY: number = 1.0;
   if (pixelMap != undefined) {
@@ -1210,16 +1217,16 @@ This method is only used to set the colorspace property of PixelMap,while all pi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | If the operation invalid. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
+| 62980115 | If the image parameter invalid. |
+| 62980111 | If the operation invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { colorSpaceManager } from '@kit.ArkGraphics2D';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function SetColorSpace(pixelMap : sendableImage.PixelMap) {
   let colorSpaceName = colorSpaceManager.ColorSpace.SRGB; // The colorSpaceManager.ColorSpace object is supported only on 2-in-1 devices/PCs.
   let csm: colorSpaceManager.ColorSpaceManager = colorSpaceManager.create(colorSpaceName);
   if (pixelMap != undefined) {
@@ -1259,13 +1266,13 @@ Image position transformation. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function Translate(pixelMap : sendableImage.PixelMap) {
   let translateX: number = 50.0;
   let translateY: number = 10.0;
   if (pixelMap != undefined) {
@@ -1307,15 +1314,15 @@ Image position transformation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function TranslateSync(pixelMap : sendableImage.PixelMap) {
   let translateX : number = 50.0;
   let translateY : number = 10.0;
   if (pixelMap != undefined) {
@@ -1356,13 +1363,14 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. |
+| 62980097 | IPC error. |
+| 62980096 | The operation failed. |
+| 62980115 | Invalid image parameter. |
 
-**Example**
+## Examples
 
 ```TypeScript
+// EntryAbility.ets
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 import { rpc } from '@kit.IPCKit';
@@ -1374,7 +1382,7 @@ class MySequence implements rpc.Parcelable {
   }
   marshalling(messageSequence: rpc.MessageSequence) {
     this.pixel_map.marshalling(messageSequence);
-    console.info('marshalling');
+    console.info('Succeeded in marshalling a PixelMap.');
     return true;
   }
   unmarshalling(messageSequence: rpc.MessageSequence) {
@@ -1382,7 +1390,7 @@ class MySequence implements rpc.Parcelable {
       pixelParcel.unmarshalling(messageSequence).then(async (pixelMap : sendableImage.PixelMap) => {
         this.pixel_map = pixelMap;
         pixelMap.getImageInfo().then((imageInfo : image.ImageInfo) => {
-          console.info("unmarshalling information h:" + imageInfo.size.height + "w:" + imageInfo.size.width);
+          console.info(`Succeeded in unmarshalling a PixelMap. Height: ${imageInfo.size.height}, width: ${imageInfo.size.width}.`);
         })
       })
     });
@@ -1390,7 +1398,7 @@ class MySequence implements rpc.Parcelable {
   }
 }
 
-async function Demo() {
+async function Unmarshalling() {
   const color: ArrayBuffer = new ArrayBuffer(96);
   let bufferArr: Uint8Array = new Uint8Array(color);
   for (let i = 0; i < bufferArr.length; i++) {
@@ -1449,13 +1457,13 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function WriteBufferToPixels(pixelMap : sendableImage.PixelMap) {
   const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
   let bufferArr: Uint8Array = new Uint8Array(color);
   for (let i = 0; i < bufferArr.length; i++) {
@@ -1499,15 +1507,15 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(pixelMap: sendableImage.PixelMap) {
+async function WriteBufferToPixelsSync(pixelMap: sendableImage.PixelMap) {
   const bufferSize = pixelMap.getPixelBytesNumber();
   const color : ArrayBuffer = new ArrayBuffer(bufferSize);
   let bufferArr : Uint8Array = new Uint8Array(color);
@@ -1550,14 +1558,14 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function WritePixels(pixelMap : sendableImage.PixelMap) {
   const area: image.PositionArea = {
     pixels: new ArrayBuffer(8),
     offset: 0,
@@ -1606,16 +1614,16 @@ Writes image pixelmap data to the specified area.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 
-async function Demo(pixelMap : sendableImage.PixelMap) {
+async function WritePixelsSync(pixelMap : sendableImage.PixelMap) {
   const area: image.PositionArea = {
     pixels: new ArrayBuffer(8),
     offset: 0,

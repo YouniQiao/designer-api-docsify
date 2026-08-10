@@ -528,37 +528,13 @@
   - [FileInfo(system api)](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
 - [@ohos.file.volumeManager](arkts-file-volumemanager.md)
   <!--Del-->
-  - [burn(system api)](arkts-corefile-volumemanager-burn-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [createIsoImage(system api)](arkts-corefile-volumemanager-createisoimage-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [createPartition(system api)](arkts-corefile-volumemanager-createpartition-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [deletePartition(system api)](arkts-corefile-volumemanager-deletepartition-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [eject(system api)](arkts-corefile-volumemanager-eject-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [erase(system api)](arkts-corefile-volumemanager-erase-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [format(system api)](arkts-corefile-volumemanager-format-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [formatPartition(system api)](arkts-corefile-volumemanager-formatpartition-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getAllDisks(system api)](arkts-corefile-volumemanager-getalldisks-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [getAllVolumes(system api)](arkts-corefile-volumemanager-getallvolumes-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getDiskById(system api)](arkts-corefile-volumemanager-getdiskbyid-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getOpProcess(system api)](arkts-corefile-volumemanager-getopprocess-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getPartitionTable(system api)](arkts-corefile-volumemanager-getpartitiontable-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getVolumeById(system api)](arkts-corefile-volumemanager-getvolumebyid-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getVolumeByUuid(system api)](arkts-corefile-volumemanager-getvolumebyuuid-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [isVolumeInUse(system api)](arkts-corefile-volumemanager-isvolumeinuse-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [mount(system api)](arkts-corefile-volumemanager-mount-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -568,19 +544,7 @@
   <!--Del-->
   - [unmount(system api)](arkts-corefile-volumemanager-unmount-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [Disk(system api)](arkts-corefile-volumemanager-disk-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FormatParams(system api)](arkts-corefile-volumemanager-formatparams-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PartitionInfo(system api)](arkts-corefile-volumemanager-partitioninfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PartitionParams(system api)](arkts-corefile-volumemanager-partitionparams-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PartitionTableInfo(system api)](arkts-corefile-volumemanager-partitiontableinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [Volume(system api)](arkts-corefile-volumemanager-volume-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DiskType(system api)](arkts-corefile-volumemanager-disktype-e-sys.md)<!--DelEnd-->
 - [@ohos.fileio](arkts-fileio.md)
   - [fileIO](arkts-corefile-fileio-depr-n.md)
   - [access](arkts-corefile-fileio-access-f.md)
@@ -729,21 +693,21 @@
 - [@ohos.statfs](arkts-statfs.md)
   - [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md)
   - [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md)
-- [@system.file](arkts-file.md)
-  - [File](arkts-corefile-file-file-depr-c.md)
-  - [FileAccessOption](arkts-corefile-file-fileaccessoption-depr-i.md)
-  - [FileCopyOption](arkts-corefile-file-filecopyoption-depr-i.md)
-  - [FileDeleteOption](arkts-corefile-file-filedeleteoption-depr-i.md)
-  - [FileGetOption](arkts-corefile-file-filegetoption-depr-i.md)
-  - [FileListOption](arkts-corefile-file-filelistoption-depr-i.md)
-  - [FileListResponse](arkts-corefile-file-filelistresponse-depr-i.md)
-  - [FileMkdirOption](arkts-corefile-file-filemkdiroption-depr-i.md)
-  - [FileMoveOption](arkts-corefile-file-filemoveoption-depr-i.md)
-  - [FileReadArrayBufferOption](arkts-corefile-file-filereadarraybufferoption-depr-i.md)
-  - [FileReadArrayBufferResponse](arkts-corefile-file-filereadarraybufferresponse-depr-i.md)
-  - [FileReadTextOption](arkts-corefile-file-filereadtextoption-depr-i.md)
-  - [FileReadTextResponse](arkts-corefile-file-filereadtextresponse-depr-i.md)
-  - [FileResponse](arkts-corefile-file-fileresponse-depr-i.md)
-  - [FileRmdirOption](arkts-corefile-file-filermdiroption-depr-i.md)
-  - [FileWriteArrayBufferOption](arkts-corefile-file-filewritearraybufferoption-depr-i.md)
-  - [FileWriteTextOption](arkts-corefile-file-filewritetextoption-depr-i.md)
+- [@system.file](arkts-system-file.md)
+  - [File](arkts-corefile-system-file-file-depr-c.md)
+  - [FileAccessOption](arkts-corefile-system-file-fileaccessoption-depr-i.md)
+  - [FileCopyOption](arkts-corefile-system-file-filecopyoption-depr-i.md)
+  - [FileDeleteOption](arkts-corefile-system-file-filedeleteoption-depr-i.md)
+  - [FileGetOption](arkts-corefile-system-file-filegetoption-depr-i.md)
+  - [FileListOption](arkts-corefile-system-file-filelistoption-depr-i.md)
+  - [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md)
+  - [FileMkdirOption](arkts-corefile-system-file-filemkdiroption-depr-i.md)
+  - [FileMoveOption](arkts-corefile-system-file-filemoveoption-depr-i.md)
+  - [FileReadArrayBufferOption](arkts-corefile-system-file-filereadarraybufferoption-depr-i.md)
+  - [FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md)
+  - [FileReadTextOption](arkts-corefile-system-file-filereadtextoption-depr-i.md)
+  - [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md)
+  - [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)
+  - [FileRmdirOption](arkts-corefile-system-file-filermdiroption-depr-i.md)
+  - [FileWriteArrayBufferOption](arkts-corefile-system-file-filewritearraybufferoption-depr-i.md)
+  - [FileWriteTextOption](arkts-corefile-system-file-filewritetextoption-depr-i.md)

@@ -4,7 +4,7 @@
 export type DialogOptionsBorderStyle = BorderStyle | EdgeStyles
 ```
 
-Border style type of DialogOptions.
+表示弹窗背板的边框样式允许的数据字段类型。
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ Border style type of DialogOptions.
 
 | Type | Description |
 | --- | --- |
-| BorderStyle |  |
-| EdgeStyles |  |
+| BorderStyle | 表示值类型为边框类型，用于描述组件边框的类型。 |
+| EdgeStyles | 表示值类型为边框样式，用于描述组件边框四条边的样式。 |
 

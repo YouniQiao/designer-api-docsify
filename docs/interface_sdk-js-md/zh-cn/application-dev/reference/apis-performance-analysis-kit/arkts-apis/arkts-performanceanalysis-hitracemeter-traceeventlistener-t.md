@@ -20,5 +20,5 @@ type TraceEventListener = (traceStatus: boolean) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| traceStatus | boolean | 是 | 当前应用trace捕获开关状态。 true：开启；false：关闭。  |
+| traceStatus | boolean | 是 | 当前应用trace捕获开关状态。 true：开启；false：关闭。 |
 

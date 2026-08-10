@@ -10,6 +10,12 @@ BadgeConfig
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## badgeType
 
 ```TypeScript
@@ -18,7 +24,7 @@ public badgeType?: BadgeType
 
 The type of the special badge.
 
-**Type:** BadgeType
+**Type:** [BadgeType](arkts-medialibrary-file-photopickercomponent-badgetype-e.md)
 
 **Since:** 26.0.0
 

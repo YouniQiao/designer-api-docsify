@@ -4,7 +4,7 @@
 export type ShortcutWant = _ShortcutWant
 ```
 
-Defines the target \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ defined in the shortcut configuration.
+快捷方式内定义的目标[wants](../../../quick-start/module-configuration-file.md#wants标签)信息集合。
 
 **Since:** 20
 

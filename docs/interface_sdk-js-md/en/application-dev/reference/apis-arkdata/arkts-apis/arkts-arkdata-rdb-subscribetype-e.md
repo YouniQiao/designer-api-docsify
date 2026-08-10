@@ -1,6 +1,6 @@
 # SubscribeType
 
-Defines the subscription type.
+描述订阅类型。
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ Defines the subscription type.
 SUBSCRIBE_TYPE_REMOTE = 0
 ```
 
-Subscribe to remote data changes.
+订阅远程数据更改。
 
 **Since:** 8
 

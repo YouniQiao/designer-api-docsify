@@ -1,12 +1,18 @@
 # isAudioMonoEnabledSync
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isAudioMonoEnabledSync
 
 ```TypeScript
 function isAudioMonoEnabledSync(): boolean
 ```
 
-Checks whether mono audio mode is enabled with a synchronous mode.
+使用同步方法判断单声道音频模式是否开启。
 
 **Since:** 23
 
@@ -22,9 +28,9 @@ Checks whether mono audio mode is enabled with a synchronous mode.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether mono audio mode is enabled. Returns **true** if mono audio mode is enabled; returns **false** otherwise. |
+| boolean | 表示是否开启单声道音频模式。true表示开启单声道音频模式，false表示未开启单声道音频模式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

@@ -1,5 +1,11 @@
 # getPostProcessingTrack
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## getPostProcessingTrack
 
 ```TypeScript
@@ -7,11 +13,11 @@ function getPostProcessingTrack(sportsType: SportsType): Promise<Array<Location>
 ```
 
 Obtain post-processing trajectory information under specific sport mode. Only  
-[SKIING]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported currently.
+[SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.
 
 Before calling this API, you need to call  
-[on('locationChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and set the input parameter  
-[sportsType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to the specific sport mode to start tracking.
+[on('locationChange')](geoLocationManager.on('locationChange')) and set the input parameter  
+[sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i.md#sportstype) to the specific sport mode to start tracking.
 
 Returns data within 24 hours since tracking started; Subsequent calls return only new records.
 
@@ -33,21 +39,21 @@ Returns data within 24 hours since tracking started; Subsequent calls return onl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sportsType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicate the type of sports. |
+| sportsType | [SportsType](arkts-location-geolocationmanager-sportstype-e.md) | Yes | Indicate the type of sports. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Location&gt;&gt; | Promise used to return \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| Promise&lt;Array&lt;Location&gt;&gt; | Promise used to return `Array&lt;Location&gt;`. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.getPostProcessingTrack} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the post processing track because sports type is not supported. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.getPostProcessingTrack} due to limited device capabilities. |
+| 3301200 | Failed to obtain the post processing track because sports type is not supported. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 

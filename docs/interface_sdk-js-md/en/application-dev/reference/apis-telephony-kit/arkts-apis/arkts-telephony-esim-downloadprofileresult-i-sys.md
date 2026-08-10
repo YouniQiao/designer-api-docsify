@@ -12,6 +12,12 @@ Result of the given downloadable Profile.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## cardId
 
 ```TypeScript
@@ -20,7 +26,7 @@ cardId: int
 
 Gets the card Id. This value comes from EuiccService and is used when resolving solvable errors.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -40,7 +46,7 @@ responseResult: ResultCode
 
 Gets the result of the operation.
 
-**Type:** ResultCode
+**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
 
 **Since:** 18
 
@@ -60,7 +66,7 @@ solvableErrors: SolvableErrors
 
 Gets the solvable errors.
 
-**Type:** SolvableErrors
+**Type:** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
 **Since:** 18
 

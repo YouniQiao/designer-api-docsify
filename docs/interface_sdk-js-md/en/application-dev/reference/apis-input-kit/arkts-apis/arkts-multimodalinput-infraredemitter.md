@@ -1,6 +1,8 @@
 # @ohos.multimodalInput.infraredEmitter(IR Management)
 
-The **infraredEmitter** module generates IR signals of the specified frequency and size, and queries the frequency range supported by the device.
+红外管理模块提供产生特定频率和大小的红外信号，以及查询设备支持的频率范围等功能。
+
+> **说明：**
 
 **Since:** 12
 
@@ -10,19 +12,25 @@ The **infraredEmitter** module generates IR signals of the specified frequency a
 
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
+## Modules to Import
+
+```TypeScript
+import { infraredEmitter } from 'kits/@kit.InputKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md#getinfraredfrequencies) | Queries the frequency range of IR signals supported by the device. |
-| [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md#hasiremitter) | Checks whether the device has an infrared transmitter. This API uses a promise to return the result. |
-| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md#transmitinfrared) | Generates IR signals at the specified frequency and level. |
+| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md#getinfraredfrequencies) | 查询设备支持的红外信号的频率范围。 |
+| [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md#hasiremitter) | 查询设备是否配备红外发射器。使用Promise异步回调。 |
+| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md#transmitinfrared) | 产生特定频率和特定电平大小的红外信号。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md) | Defines the frequency range of IR signals. |
+| [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md) | 红外信号的频率范围。 |
 

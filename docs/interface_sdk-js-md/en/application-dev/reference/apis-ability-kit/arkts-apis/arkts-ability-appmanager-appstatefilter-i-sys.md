@@ -1,7 +1,7 @@
 # AppStateFilter (System API)
 
-Describes the filter for application lifecycle change events. It can be used as a parameter of  
-[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to filter application lifecycle change events you want to listen for.
+应用生命周期变化事件的过滤器，可作为  
+[on](appManager.on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter))的参数用于筛选所需监听的应用生命周期变化事件。
 
 **Since:** 21
 
@@ -13,20 +13,26 @@ Describes the filter for application lifecycle change events. It can be used as 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## abilityStateTypes
 
 ```TypeScript
 abilityStateTypes?: int
 ```
 
-Type of ability state to filter. The options are as follows:
+表示要监听的Ability状态。取值范围是：
 
-- **0**: Do not listen for any ability state.  
-- A bitwise OR combination of the enumerated values of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, for  
-example, "appManager.FilterAbilityStateType.CREATE | appManager.FilterAbilityStateType.FOREGROUND" listens for both the creating and foreground states of ability components.  
-- If this parameter is not set, all ability state types are listened for by default.
+- 0：表示不监听任何Ability状态。  
+- [FilterAbilityStateType](#filterabilitystatetype21)中枚举的按位或运算组合：例如 "appManager.FilterAbilityStateType.CREATE |   
+appManager.FilterAbilityStateType.FOREGROUND" ，表示同时监听Ability的创建状态和前台状态。  
+- 如果该项不设置，则默认监听所有的Ability状态。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -44,14 +50,14 @@ example, "appManager.FilterAbilityStateType.CREATE | appManager.FilterAbilitySta
 appStateTypes?: int
 ```
 
-Type of application state to filter. The options are as follows:
+表示要监听的应用状态。 取值范围是：
 
-- **0**: Do not listen for any application state.  
-- A bitwise OR combination of the enumerated values of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, for example,  
-"appManager.FilterAppStateType.CREATE | appManager.FilterAppStateType.FOREGROUND" listens for both the creating and foreground states of applications.  
-- If this parameter is not set, all application state types are listened for by default.
+- 0：表示不监听任何应用状态。  
+- [FilterAppStateType](#filterappstatetype21)中枚举的按位或运算组合：例如 "appManager.FilterAppStateType.CREATE |   
+appManager.FilterAppStateType.FOREGROUND" ，表示同时监听应用的创建状态和前台状态。  
+- 如果该项不设置，则默认监听所有的应用状态。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -69,14 +75,14 @@ Type of application state to filter. The options are as follows:
 bundleTypes?: int
 ```
 
-Type of application to filter. The options are as follows:
+表示要监听的应用类型。取值范围是：
 
-- **0**: Do not listen for any application type.  
-- A bitwise OR combination of the enumerated values of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, for example, "  
-appManager.FilterBundleType.APP | appManager.FilterBundleType.ATOMIC\_SERVICE" listens for lifecycle change events for both applications and atomic services.  
-- If this parameter is not set, all application types are listened for by default.
+- 0：表示不监听任何类型的应用。  
+- [FilterBundleType](#filterbundletype21)中枚举的按位或运算组合：例如 "appManager.FilterBundleType.APP |   
+appManager.FilterBundleType.ATOMIC_SERVICE" ，表示同时监听应用和原子化服务的生命周期变化事件。  
+- 如果该项不设置，则默认监听所有的应用类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -94,17 +100,16 @@ appManager.FilterBundleType.APP | appManager.FilterBundleType.ATOMIC\_SERVICE" l
 callbacks?: int
 ```
 
-Callback to filter. The options are as follows:
+表示要监听的回调函数。取值范围是：
 
-- **0**: Do not listen for any callback.  
-- A bitwise OR combination of the enumerated values of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, for example, "  
-appManager.FilterCallback.ON\_ABILITY\_STATE\_CHANGED | appManager.FilterCallback.ON\_PROCESS\_STATE\_CHANGED" listens for both  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_and  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.  
-- If this parameter is not set, all callbacks enumerated in \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_ are listened for  
-by default.
+- 0：表示不监听任何回调函数。  
+- [FilterCallback](#filtercallback21)中枚举的按位或运算组合：例如 "appManager.FilterCallback.ON_ABILITY_STATE_CHANGED |   
+appManager.FilterCallback.ON_PROCESS_STATE_CHANGED" ，表示同时监听  
+[ApplicationStateObserver.onAbilityStateChanged](js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronabilitystatechanged)和  
+[ApplicationStateObserver.onProcessStateChanged](js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocessstatechanged)。   
+- 如果该项不设置，则默认监听[FilterCallback](#filtercallback21)中对应的所有回调函数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -122,14 +127,14 @@ by default.
 processStateTypes?: int
 ```
 
-Type of process state to filter. The options are as follows:
+表示要监听的进程状态。取值范围是：
 
-- **0**: Do not listen for any process state.  
-- A bitwise OR combination of the enumerated values of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, for  
-example, "appManager.FilterProcessStateType.CREATE | appManager.FilterProcessStateType.FOREGROUND" listens for both the creating and foreground states of processes.  
-- If this parameter is not set, all process state types are listened for by default.
+- 0：表示不监听任何进程状态。  
+- [FilterProcessStateType](#filterprocessstatetype21)中枚举的按位或运算组合：例如 "appManager.FilterProcessStateType.CREATE |   
+appManager.FilterProcessStateType.FOREGROUND" ，表示同时监听进程的创建状态和前台状态。  
+- 如果该项不设置，则默认监听所有的进程状态。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 

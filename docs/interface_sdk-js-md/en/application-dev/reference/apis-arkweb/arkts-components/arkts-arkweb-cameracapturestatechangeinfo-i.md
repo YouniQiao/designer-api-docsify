@@ -1,6 +1,6 @@
 # CameraCaptureStateChangeInfo
 
-Defines the state information of the camera before and after the callback is triggered.
+定义摄像头触发回调时的改变前后的状态信息。
 
 **Since:** 23
 
@@ -16,9 +16,9 @@ Defines the state information of the camera before and after the callback is tri
 newState: CameraCaptureState
 ```
 
-New state.
+改变后的状态
 
-**Type:** CameraCaptureState
+**Type:** [CameraCaptureState](../arkts-apis/arkts-arkweb-web-cameracapturestate-e.md)
 
 **Since:** 23
 
@@ -34,9 +34,9 @@ New state.
 originalState: CameraCaptureState
 ```
 
-Original state.
+原来的状态
 
-**Type:** CameraCaptureState
+**Type:** [CameraCaptureState](../arkts-apis/arkts-arkweb-web-cameracapturestate-e.md)
 
 **Since:** 23
 

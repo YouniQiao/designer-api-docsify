@@ -18,7 +18,7 @@ color?: ResourceColor
 
 Font color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ font?: Font
 
 Text style.
 
-**Type:** Font
+**Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **Since:** 11
 

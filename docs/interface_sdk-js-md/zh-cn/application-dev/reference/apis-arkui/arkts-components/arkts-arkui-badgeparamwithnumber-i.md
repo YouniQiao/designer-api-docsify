@@ -1,8 +1,8 @@
 # BadgeParamWithNumber
 
-BadgeParamWithNumber继承自[BadgeParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，具有BadgeParam的全部属性。
+BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。
 
-**继承/实现关系：** BadgeParamWithNumber extends [BadgeParam](../arkts-apis/arkts-arkui-component/badge-badgeparam-i.md)
+**继承/实现关系：** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badgeparam-i.md)
 
 **起始版本：** 7
 
@@ -46,7 +46,7 @@ count: number
 maxCount?: number
 ```
 
-最大消息数，超过最大消息时仅显示maxCount+，如maxCount是99时，显示\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+最大消息数，超过最大消息时仅显示maxCount+，如maxCount是99时，显示`99+`。
 
 默认值：99
 

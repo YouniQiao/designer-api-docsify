@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { statfs } from 'kits/@kit.CoreFileKit';
+```
+
 ## 汇总
 
 ### 函数

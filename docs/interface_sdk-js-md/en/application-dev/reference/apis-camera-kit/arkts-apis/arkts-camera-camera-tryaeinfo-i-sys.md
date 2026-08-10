@@ -12,6 +12,12 @@ Describes the Try AE parameters. Try AE indicates that the hardware reports the 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## captureInterval
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly captureInterval?: int
 
 Timelapse capture interval.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -80,7 +86,7 @@ readonly previewType?: TimeLapsePreviewType
 
 Timelapse preview type.
 
-**Type:** TimeLapsePreviewType
+**Type:** [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md)
 
 **Since:** 12
 

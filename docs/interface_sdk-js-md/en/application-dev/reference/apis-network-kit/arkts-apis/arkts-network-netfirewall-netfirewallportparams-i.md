@@ -10,6 +10,12 @@ Firewall port parameters.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## endPort
 
 ```TypeScript

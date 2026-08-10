@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## colorMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ colorMode: int
 
 表示色彩模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -36,7 +42,7 @@ duplexMode: int
 
 表示单双面打印模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -54,7 +60,7 @@ minMargin?: PrintMargin
 
 表示打印机最小边距。
 
-**类型：** PrintMargin
+**类型：** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
 **起始版本：** 24
 

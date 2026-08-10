@@ -4,7 +4,7 @@
 type GcStats = Record<string, long>
 ```
 
-Describes the key-value pair used to store GC statistics. This type does not support multi-thread operations. If this type is operated by multiple threads at the same time in an application, use a lock for it.
+�������ڴ洢GCͳ����Ϣ�ļ�ֵ�ԡ������Ͳ�֧�ֶ��̲߳��������Ӧ���д��ڶ��߳�ͬʱ���ʣ������������
 
 **Since:** 12
 

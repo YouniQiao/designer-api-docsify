@@ -1,6 +1,6 @@
 # PageSwitchActionProposal
 
-Class PageSwitchActionProposal. The default page switch direction is forward.
+类PageSwitchActionProposal。默认的页面切换方向为前进。
 
 **Inheritance/Implementation:** PageSwitchActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
 
@@ -12,13 +12,19 @@ Class PageSwitchActionProposal. The default page switch direction is forward.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(node: FrameNode, pageCount: int)
 ```
 
-PageSwitchActionProposal constructor.
+PageSwitchActionProposal构造函数。
 
 **Since:** 26.0.0
 
@@ -34,8 +40,8 @@ PageSwitchActionProposal constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The node responding to page switch action. |
-| pageCount | int | Yes | The number of pages to navigate. The value should be an integer. |
+| node | [FrameNode](arkts-arkui-framenode-t.md) | Yes | 响应页面切换动作的节点。 |
+| pageCount | int | Yes | 要切换的页数。 取值限定为整数。 |
 
 ## pageCount
 
@@ -43,7 +49,7 @@ PageSwitchActionProposal constructor.
 pageCount: int
 ```
 
-Page count parameter for gesture operations. Specifies the number of pages to navigate.The value should be an integer.
+手势操作的页数参数。指定要导航的页数。取值限定为整数。
 
 **Type:** int
 

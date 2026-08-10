@@ -19,8 +19,8 @@
 
 ## 子组件
 
-    
-    该组件为基础组件，不建议包含子组件。
+> 
+> 该组件为基础组件，不建议包含子组件。
 
 ## TextPicker
 
@@ -44,7 +44,19 @@ TextPicker(options?: TextPickerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 配置文本选择器的参数。当需要自定义选择器的数据源、选中项、列宽等配置时传入此参数。参数缺省时 组件无法显示。  |
+| options | [TextPickerOptions](../arkts-apis/arkts-arkui-textpicker-textpickeroptions-i.md) | 否 | 配置文本选择器的参数。当需要自定义选择器的数据源、选中项、列宽等配置时传入此参数。参数缺省时 组件无法显示。 |
 
 ## 汇总
 
+- [DividerOptions](arkts-arkui-textpicker-divideroptions-i.md)
+- [PickerBackgroundStyle](arkts-arkui-textpicker-pickerbackgroundstyle-i.md)
+- [TextCascadePickerRangeContent](arkts-arkui-textpicker-textcascadepickerrangecontent-i.md)
+- [TextPickerDialogOptions](arkts-arkui-textpicker-textpickerdialogoptions-i.md)
+- [TextPickerDialogOptionsExt](arkts-arkui-textpicker-textpickerdialogoptionsext-i.md)
+- [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)
+- [TextPickerRangeContent](arkts-arkui-textpicker-textpickerrangecontent-i.md)
+- [TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)
+- [TextPickerTextStyle](arkts-arkui-textpicker-textpickertextstyle-i.md)
+- [OnTextPickerChangeCallback](arkts-arkui-textpicker-ontextpickerchangecallback-t.md)
+- [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpicker-textpickerenterselectedareacallback-t.md)
+- [TextPickerScrollStopCallback](arkts-arkui-textpicker-textpickerscrollstopcallback-t.md)

@@ -1,6 +1,6 @@
 # BadgeFrameNode
 
-Define the Badge type of FrameNode.
+定义Badge类型的FrameNode。
 
 **Inheritance/Implementation:** BadgeFrameNode extends [TypedFrameNode<BadgeAttribute>](TypedFrameNode<BadgeAttribute>)
 
@@ -18,7 +18,7 @@ Define the Badge type of FrameNode.
 abstract initialize(value: BadgeParamWithNumber): BadgeAttribute
 ```
 
-Initialize Badge FrameNode.
+初始化Badge类型的FrameNode。
 
 **Since:** 23
 
@@ -34,13 +34,13 @@ Initialize Badge FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [BadgeParamWithNumber](../arkts-components/arkts-arkui-badgeparamwithnumber-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
 
 ## initialize
 
@@ -48,7 +48,7 @@ Initialize Badge FrameNode.
 abstract initialize(value: BadgeParamWithString): BadgeAttribute
 ```
 
-Initialize Badge FrameNode.
+初始化Badge类型的FrameNode。
 
 **Since:** 23
 
@@ -64,11 +64,11 @@ Initialize Badge FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [BadgeParamWithString](../arkts-components/arkts-arkui-badgeparamwithstring-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
 

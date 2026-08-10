@@ -12,6 +12,12 @@ Describes the status information about a batch download.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## taskInfos
 
 ```TypeScript

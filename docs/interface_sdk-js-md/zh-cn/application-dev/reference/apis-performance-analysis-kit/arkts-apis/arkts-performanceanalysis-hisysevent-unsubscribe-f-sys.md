@@ -1,5 +1,11 @@
 # unsubscribe（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## unsubscribe
 
 ```TypeScript
@@ -24,12 +30,12 @@ function unsubscribe(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_DFX\_\_\_ESCAPED\_UNDERSCORE\_\_\_SYSEVENT. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [11200305](../errorcode-hisysevent-sys.md#11200305-取消订阅失败) | Unsubscription failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 201 | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| 202 | System API is not allowed called by Non-system application. |
+| 11200305 | Unsubscription failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';

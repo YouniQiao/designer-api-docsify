@@ -16,7 +16,7 @@
 onCreateAISession: OnCreateAISession
 ```
 
-AI会话创建时触发的回调函数。返回\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_跳过系统默认行为，返回\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_继续执行系统默认逻辑。
+AI会话创建时触发的回调函数。返回`true`跳过系统默认行为，返回`false`继续执行系统默认逻辑。
 
 **起始版本：** 26.0.0
 
@@ -72,7 +72,7 @@ aiSessionType: AISessionType
 
 AI会话类型。
 
-**类型：** AISessionType
+**类型：** [AISessionType](../arkts-apis/arkts-arkweb-web-aisessiontype-e.md)
 
 **起始版本：** 26.0.0
 

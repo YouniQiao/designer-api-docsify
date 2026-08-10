@@ -1,6 +1,6 @@
 # FileMapping
 
-File mapping object. Before invoking the FileMapping method, you need to use the mmap() method (synchronous or asynchronous) to construct a FileMapping instance.
+文件映射对象，在调用FileMapping的方法前，需要先通过mmap()方法（同步或异步）构建一个FileMapping实例。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ File mapping object. Before invoking the FileMapping method, you need to use the
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## capacity
 
 ```TypeScript
 capacity(): number
 ```
 
-Obtains the capacity of the file mapping area.
+获取文件映射区的容量，单位为Byte。
 
 **Since:** 26.0.0
 
@@ -32,15 +38,27 @@ Obtains the capacity of the file mapping area.
 
 | Type | Description |
 | --- | --- |
-| number |  Size of the file mapping area, in bytes. |
+| number | Size of the file mapping area, in bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+let cap = mapping.capacity();
+console.info(`Succeeded in getting capacity, the capacity is: ${cap}`);
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## flip
 
@@ -48,7 +66,7 @@ Obtains the capacity of the file mapping area.
 flip(): void
 ```
 
-Mode reversal. That is, the limit attribute is set to the current position, and then the current position is set to 0.
+模式翻转。即将 limit 属性设置为当前 position，再将当前 position 设置为0。
 
 **Since:** 26.0.0
 
@@ -65,8 +83,27 @@ Mode reversal. That is, the limit attribute is set to the current position, and 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let writeData = new ArrayBuffer(50);
+mapping.write(writeData);
+mapping.flip(); // limit=50, position=0
+console.info("Succeeded in flip.");
+
+let readBuffer = new ArrayBuffer(50);
+mapping.read(readBuffer);
+
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## getLimit
 
@@ -74,7 +111,7 @@ Mode reversal. That is, the limit attribute is set to the current position, and 
 getLimit(): number
 ```
 
-Obtains the upper bound of the readable and writable area of the file mapping area.
+获取文件映射区可读写区域的上界。
 
 **Since:** 26.0.0
 
@@ -90,15 +127,27 @@ Obtains the upper bound of the readable and writable area of the file mapping ar
 
 | Type | Description |
 | --- | --- |
-| number |  Upper bound of the current readable and writable area, in bytes. |
+| number | 当前可读写区域上界值，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+let lim = mapping.getLimit();
+console.info(`Succeeded in getting limit, the limit is: ${lim}`);
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## getPosition
 
@@ -106,7 +155,7 @@ Obtains the upper bound of the readable and writable area of the file mapping ar
 getPosition(): number
 ```
 
-Gets the current location of the file mapping area.
+获取文件映射区的当前位置，单位为Byte。
 
 **Since:** 26.0.0
 
@@ -122,15 +171,27 @@ Gets the current location of the file mapping area.
 
 | Type | Description |
 | --- | --- |
-| number |  Current location of the file mapping area, in bytes. |
+| number | Current location of the file mapping area. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+let pos = mapping.getPosition();
+console.info(`Succeeded in getting position, the position is: ${pos}`);
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## msync
 
@@ -138,7 +199,7 @@ Gets the current location of the file mapping area.
 msync(): Promise<void>
 ```
 
-Synchronizes the dirty page data in the entire file mapping area to the disk file and uses the promise asynchronous callback function.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+将整个文件映射区的脏页数据同步到磁盘文件，使用promise异步回调。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **Since:** 26.0.0
 
@@ -154,18 +215,40 @@ Synchronizes the dirty page data in the entire file mapping area to the disk fil
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise object. No return value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(buffer);
+
+mapping.msync().then(() => {
+  console.info("Succeeded in msync.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  mapping.unmapSync();
+  fileIo.closeSync(file);
+});
+```
 
 ## msync
 
@@ -173,7 +256,7 @@ Synchronizes the dirty page data in the entire file mapping area to the disk fil
 msync(position: number, length: number): Promise<void>
 ```
 
-Synchronizes the dirty page data in the specified range of the file mapping area to the disk file and uses the promise asynchronous callback function.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+将文件映射区指定范围内的脏页数据同步到磁盘文件，使用promise异步回调。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **Since:** 26.0.0
 
@@ -189,25 +272,47 @@ Synchronizes the dirty page data in the specified range of the file mapping area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Start position to synchronize from, in bytes. |
-| length | number | Yes | Length of the data to be synchronized, in bytes. |
+| position | number | Yes | 期望同步的起始位置，单位为Byte。 |
+| length | number | Yes | 期望同步的数据长度，单位为Byte。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise object. No return value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(50, buffer);
+
+mapping.msync(50, buffer.byteLength).then(() => {
+  console.info("Succeeded in msync.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  mapping.unmapSync();
+  fileIo.closeSync(file);
+});
+```
 
 ## msyncSync
 
@@ -215,7 +320,7 @@ Synchronizes the dirty page data in the specified range of the file mapping area
 msyncSync(): void
 ```
 
-Synchronizes the dirty page data of the entire file mapping area to the disk file by using the synchronization method.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+以同步方法将整个文件映射区的脏页数据同步到磁盘文件。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **Since:** 26.0.0
 
@@ -231,12 +336,31 @@ Synchronizes the dirty page data of the entire file mapping area to the disk fil
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(buffer);
+
+mapping.msyncSync();
+console.info("Succeeded in msync.");
+
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## msyncSync
 
@@ -244,7 +368,7 @@ Synchronizes the dirty page data of the entire file mapping area to the disk fil
 msyncSync(position: number, length: number): void
 ```
 
-Synchronize the dirty page data in the specified range of the file mapping area to the disk file by using the synchronization method.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+以同步方法将文件映射区指定范围内的脏页数据同步到磁盘文件。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **Since:** 26.0.0
 
@@ -260,19 +384,38 @@ Synchronize the dirty page data in the specified range of the file mapping area 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Start position to synchronize from, in bytes. |
-| length | number | Yes | Length of the data to be synchronized, in bytes. |
+| position | number | Yes | 期望同步的起始位置，单位为Byte。 |
+| length | number | Yes | 期望同步的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(50, buffer);
+
+mapping.msyncSync(50, buffer.byteLength);
+console.info("Succeeded in msync.");
+
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## read
 
@@ -280,7 +423,7 @@ Synchronize the dirty page data in the specified range of the file mapping area 
 read(buffer: ArrayBuffer, length?: number): number
 ```
 
-Reads data from the current position and moves the position backward by the number of bytes actually read.
+从当前位置读取数据，并将位置后移实际读取的字节数。
 
 **Since:** 26.0.0
 
@@ -296,24 +439,39 @@ Reads data from the current position and moves the position backward by the numb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer for storing the read file data. |
-| length | number | No | Length of the data to be read, in bytes. This parameter is optional. The default value is the buffer length. |
+| buffer | ArrayBuffer | Yes | 用于保存读取到的文件数据的缓冲区。 |
+| length | number | No | 期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number |  Length of the actually read data, in bytes. |
+| number | 返回实际读取的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(100);
+let bytesRead = mapping.read(buffer);
+console.info(`Succeeded in reading data, size is: ${bytesRead}`);
+
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## read
 
@@ -321,7 +479,7 @@ Reads data from the current position and moves the position backward by the numb
 read(position: number, buffer: ArrayBuffer, length?: number): number
 ```
 
-Reads data from the specified location without affecting the current location.
+从指定位置读取数据，不影响当前位置。
 
 **Since:** 26.0.0
 
@@ -337,25 +495,40 @@ Reads data from the specified location without affecting the current location.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Start position to read from. |
-| buffer | ArrayBuffer | Yes | Buffer for storing the read file data. |
-| length | number | No | Length of the data to be read, in bytes. This parameter is optional. The default value is the buffer length. |
+| position | number | Yes | 期望读取的起始位置。 |
+| buffer | ArrayBuffer | Yes | 用于保存读取到的文件数据的缓冲区。 |
+| length | number | No | 期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number |  Length of the actually read data, in bytes. |
+| number | 返回实际读取的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(100);
+let bytesRead = mapping.read(50, buffer, 50);
+console.info(`Succeeded in reading data, size is: ${bytesRead}`);
+
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## remaining
 
@@ -363,7 +536,7 @@ Reads data from the specified location without affecting the current location.
 remaining(): number
 ```
 
-Obtains the number of remaining bytes between the current position (position) and the upper bound (limit) of the readable and writable area.
+获取从当前位置（pisition）到可读写区域的上界（limit）之间的剩余字节数。
 
 **Since:** 26.0.0
 
@@ -379,15 +552,30 @@ Obtains the number of remaining bytes between the current position (position) an
 
 | Type | Description |
 | --- | --- |
-| number |  Number of remaining readable or writable bytes. |
+| number | 剩余可读或可写的字节数，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+mapping.setPosition(100);
+let remaining = mapping.remaining();
+console.info(`Succeeded in getting remaining, the remaining is: ${remaining}`);
+
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## setLimit
 
@@ -395,7 +583,7 @@ Obtains the number of remaining bytes between the current position (position) an
 setLimit(limit: number): void
 ```
 
-Sets the upper bound of the readable and writable area of the file mapping area. The upper bound does not exceed the total capacity of the mapping area (0 <= limit <= capacity).
+设置文件映射区可读写区域的上界。该上界不会超过映射区的总容量（0 ≤ limit ≤ capacity）。
 
 **Since:** 26.0.0
 
@@ -411,15 +599,27 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| limit | number | Yes | Upper bound of the readable and writable area to be set, in bytes. If the current position is greater than the new upper bound, the value is automatically adjusted to limit. |
+| limit | number | Yes | 要设置的可读写区域上界值，单位为Byte。如果当前位置大于新上界，则会被自动调整为 limit。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+mapping.setLimit(512);
+console.info("Succeeded in setLimit.");
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## setPosition
 
@@ -427,7 +627,7 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 setPosition(position: number): void
 ```
 
-Sets the current location of the file mapping area.
+设置文件映射区的当前位置。
 
 **Since:** 26.0.0
 
@@ -443,15 +643,27 @@ Sets the current location of the file mapping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Target location, in bytes. The value must be a non-negative number and cannot be greater than the current upper bound (limit). |
+| position | number | Yes | 期望设置的目标位置，单位为Byte。必须为非负数且不大于当前可读写上限（limit）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+mapping.setPosition(100);
+console.info("Succeeded in setPosition.");
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## unmap
 
@@ -459,7 +671,7 @@ Sets the current location of the file mapping area.
 unmap(): Promise<void>
 ```
 
-Releases the file mapping area and use the promise asynchronous callback function.
+释放文件映射区，使用promise异步回调。
 
 **Since:** 26.0.0
 
@@ -475,7 +687,7 @@ Releases the file mapping area and use the promise asynchronous callback functio
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise object. No return value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **Error codes:**
 
@@ -484,13 +696,33 @@ Releases the file mapping area and use the promise asynchronous callback functio
 | 13900020 | Invalid argument |
 | 13900050 | Internal resource error |
 
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(buffer);
+mapping.unmap().then(() => {
+  console.info("Succeeded in unmap.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unmap. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fileIo.closeSync(file);
+});
+```
+
 ## unmapSync
 
 ```TypeScript
 unmapSync(): void
 ```
 
-Releases the file mapping area by using the synchronization method.
+以同步方法释放文件映射区。
 
 **Since:** 26.0.0
 
@@ -509,13 +741,27 @@ Releases the file mapping area by using the synchronization method.
 | 13900020 | Invalid argument |
 | 13900050 | Internal resource error |
 
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+mapping.unmapSync();
+console.info("Succeeded in unmap.");
+fileIo.closeSync(file);
+```
+
 ## write
 
 ```TypeScript
 write(data: ArrayBuffer, length?: number): number
 ```
 
-Writes data from the current location and moves the location backward by the number of bytes actually written.
+从当前位置写入数据，并将位置后移实际写入的字节数。
 
 **Since:** 26.0.0
 
@@ -531,25 +777,41 @@ Writes data from the current location and moves the location backward by the num
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
-| length | number | No | Length of the data to be written, in bytes. This parameter is optional. The default value is the buffer length. |
+| data | ArrayBuffer | Yes | 待写入文件的缓冲区数据。 |
+| length | number | No | 期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number |  Length of the data written. |
+| number | 返回实际写入的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+let bytesWritten = mapping.write(buffer);
+console.info(`Succeeded in writing data to file, size is: ${bytesWritten}`);
+
+mapping.msyncSync();
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## write
 
@@ -557,7 +819,7 @@ Writes data from the current location and moves the location backward by the num
 write(position: number, data: ArrayBuffer, length?: number): number
 ```
 
-Writes data from the specified location without affecting the current location.
+从指定位置写入数据，不影响当前位置。
 
 **Since:** 26.0.0
 
@@ -573,24 +835,40 @@ Writes data from the specified location without affecting the current location.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Start position of the expected write. |
-| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
-| length | number | No | Length of the data to be written, in bytes. This parameter is optional. The default value is the buffer length. |
+| position | number | Yes | 期望写入的起始位置，单位为Byte。 |
+| data | ArrayBuffer | Yes | 待写入文件的缓冲区数据。 |
+| length | number | No | 期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number |  Length of the data written, in bytes. |
+| number | 返回实际写入的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
+
+## Examples
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+let bytesWritten = mapping.write(50, buffer);
+console.info(`Succeeded in writing data to file, size is: ${bytesWritten}`);
+
+mapping.msyncSync();
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 

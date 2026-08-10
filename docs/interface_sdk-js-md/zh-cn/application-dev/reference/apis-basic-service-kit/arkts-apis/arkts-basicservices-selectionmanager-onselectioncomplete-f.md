@@ -1,12 +1,18 @@
 # onSelectionComplete
 
+## 导入模块
+
+```TypeScript
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onSelectionComplete
 
 ```TypeScript
 function onSelectionComplete(callback: Callback<SelectionInfo>): void
 ```
 
-订阅划词完成事件，与[offSelectionComplete]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用取消订阅。
+订阅划词完成事件，与[offSelectionComplete](selectionManager.offSelectionComplete(callback?: Callback&lt;SelectionInfo&gt;))搭配使用取消订阅。
 
 **起始版本：** 24
 
@@ -22,26 +28,11 @@ function onSelectionComplete(callback: Callback<SelectionInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SelectionInfo&gt; | 是 | 回调函数，返回划词事件信息[SelectionInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。该回 调仅在用户通过鼠标或触控板选中文本（双击/三击/滑动）后按下Ctrl键时触发。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | 是 | 回调函数，返回划词事件信息[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)。该回 调仅在用户通过鼠标或触控板选中文本（双击/三击/滑动）后按下Ctrl键时触发。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-调用接口的应用与系统设置中选择的应用不匹配) | The application calling the API does not match the application selected in the system settings. |
-
-**示例：**
-
-```TypeScript
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  // 订阅划词完成事件
-  selectionManager.onSelectionComplete((info: selectionManager.SelectionInfo) => {
-    console.info(`SelectionInfo: ${JSON.stringify(info)}`);
-  });
-} catch (err) {
-  console.error(`Failed to register selectionCompleted callback. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
+| 33600003 | The application calling the API does not match the application selected in the system settings. |
 

@@ -20,7 +20,7 @@ direction?: Axis
 
 默认值：Axis.Horizontal
 
-**类型：** Axis
+**类型：** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
 **默认值：** Axis.Horizontal [since 11]
 
@@ -164,7 +164,7 @@ style?: SliderStyle
 
 默认值：SliderStyle.OutSet
 
-**类型：** SliderStyle
+**类型：** [SliderStyle](arkts-arkui-sliderstyle-e.md)
 
 **默认值：** SliderStyle.OutSet [since 11]
 
@@ -190,16 +190,16 @@ value?: number
 
 默认值：与属性min的取值一致。
 
-从API version 10开始，该属性支持\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_双向绑定变量。
+从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-该属性支持\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_双向绑定变量。
+该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 取值范围： [min, max]
 
 小于min时取min，大于max时取max。
 
 \$\$运算符为系统组件提供TS变量的引用，使得TS变量和slider组件的value值保持同步。详细使用示例请参考  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_。
+[示例7（设置滑动条的双向绑定）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#示例7设置滑动条的双向绑定)。
 
 **类型：** number
 

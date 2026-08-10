@@ -1,6 +1,6 @@
 # USBRequestDirection
 
-Enumerates request directions.
+请求方向。
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ Enumerates request directions.
 USB_REQUEST_DIR_TO_DEVICE = 0
 ```
 
-Request for writing data from the host to the device.
+写数据，主设备往从设备。
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ Request for writing data from the host to the device.
 USB_REQUEST_DIR_FROM_DEVICE = 0x80
 ```
 
-Request for reading data from the device to the host.
+读数据，从设备往主设备。
 
 **Since:** 8
 

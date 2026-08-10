@@ -4,7 +4,7 @@
 declare type FractionStop = [ number, number ]
 ```
 
-Defines a gradient blur stop.
+定义模糊段。
 
 **Since:** 12
 

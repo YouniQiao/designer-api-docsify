@@ -6,7 +6,7 @@
 declare function show(uri: string, type: string): Promise<void>
 ```
 
-Opens a file. This API uses a promise to return the result.
+异步打开URI对应的文件，使用promise形式返回结果。
 
 **Since:** 6
 
@@ -22,14 +22,14 @@ Opens a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file to open. |
-| type | string | Yes | Type of the file to open. |
+| uri | string | Yes | 待打开的文件URI |
+| type | string | Yes | 待打开文件的类型 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. An error code is returned. |
+| Promise&lt;void&gt; | Promise回调返回void表示成功打开文件（注：当前返回错误码） |
 
 
 ## show
@@ -38,7 +38,7 @@ Opens a file. This API uses a promise to return the result.
 declare function show(uri: string, type: string, callback: AsyncCallback<void>): void
 ```
 
-Opens a file. This API uses an asynchronous callback to return the result.
+异步打开URI对应的文件，使用callback形式返回结果。
 
 **Since:** 6
 
@@ -54,7 +54,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file to open. |
-| type | string | Yes | Type of the file to open. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. An error code is returned. |
+| uri | string | Yes | 待打开的文件URI |
+| type | string | Yes | 待打开文件的类型 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步打开uri对应文件（注：当前返回错误码） |
 

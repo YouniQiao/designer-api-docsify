@@ -1,12 +1,18 @@
 # setShortcutVisibleForSelf
 
+## Modules to Import
+
+```TypeScript
+import { shortcutManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setShortcutVisibleForSelf
 
 ```TypeScript
 function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 ```
 
-Sets whether to display the specified shortcut for the current application. This API uses a promise to return the result.
+设置当前应用指定的快捷方式是否显示。使用Promise异步回调。
 
 **Since:** 20
 
@@ -20,22 +26,22 @@ Sets whether to display the specified shortcut for the current application. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Shortcut ID, which is the value of the **shortcutId** field under the **shortcuts** tag in the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ file. The value is a string of up to 63 bytes. |
-| visible | boolean | Yes | Whether to display the shortcut. **true** to display, **false** otherwise. |
+| id | string | Yes | 快捷方式的ID，通过[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的shortcuts标 签下的shortcutId字段获取，取值为长度不超过63字节的字符串。 |
+| visible | boolean | Yes | 快捷方式是否显示。true：快捷方式显示；false：快捷方式不显示。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is not exist. |
+| 17700070 | The specified shortcut id is not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';

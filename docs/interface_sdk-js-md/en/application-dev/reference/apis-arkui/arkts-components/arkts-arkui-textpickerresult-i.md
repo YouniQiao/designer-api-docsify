@@ -1,6 +1,6 @@
 # TextPickerResult
 
-Defines the struct of TextPickerResult.
+文本选择器结果。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Defines the struct of TextPickerResult.
 index: number | number[]
 ```
 
-The subscript of the current selection.
+选中项在选择范围数组中的索引值，索引从0开始。（文本选择器显示多列时，index为数组类型。）
 
 **Type:** number \| number[]
 
@@ -36,7 +36,13 @@ The subscript of the current selection.
 value: string | string[]
 ```
 
-The currently selected value.Only valid when only text is displayed.When picture or picture plus text is displayed, the value of value is "".
+选中项的文本内容。
+
+> **说明：**当显示文本或图片加文本列表时，value值为选中项中的文本值。（文本选择器显示多列时，value为数组类型。）
+> 
+> 当显示图片列表时，value值为空。
+> 
+> value值必须在range参数定义的选项范围内，不支持包含转义字符''。
 
 **Type:** string \| string[]
 

@@ -1,6 +1,6 @@
 # HuksKeyAlg
 
-Enumerates the key algorithms.
+表示密钥使用的算法。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the key algorithms.
 HUKS_ALG_RSA = 1
 ```
 
-RSA.
+表示使用RSA算法。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ RSA.
 HUKS_ALG_ECC = 2
 ```
 
-ECC.
+表示使用ECC算法。
 
 **Since:** 8
 
@@ -56,7 +56,7 @@ ECC.
 HUKS_ALG_DSA = 3
 ```
 
-DSA\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_.
+表示使用DSA算法&lt;!--RP5--&gt;&lt;!--RP5End--&gt;。
 
 **Since:** 8
 
@@ -76,7 +76,7 @@ DSA\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_.
 HUKS_ALG_AES = 20
 ```
 
-AES.
+表示使用AES算法。
 
 **Since:** 8
 
@@ -94,7 +94,7 @@ AES.
 HUKS_ALG_HMAC = 50
 ```
 
-HMAC.
+表示使用HMAC算法。
 
 **Since:** 8
 
@@ -114,7 +114,7 @@ HMAC.
 HUKS_ALG_HKDF = 51
 ```
 
-HKDF.
+表示使用HKDF算法。
 
 **Since:** 8
 
@@ -134,7 +134,7 @@ HKDF.
 HUKS_ALG_PBKDF2 = 52
 ```
 
-PBKDF2.
+表示使用PBKDF2算法。
 
 **Since:** 8
 
@@ -154,7 +154,7 @@ PBKDF2.
 HUKS_ALG_ECDH = 100
 ```
 
-ECDH.
+表示使用ECDH算法。
 
 **Since:** 8
 
@@ -174,7 +174,7 @@ ECDH.
 HUKS_ALG_X25519 = 101
 ```
 
-X25519.
+表示使用X25519算法。
 
 **Since:** 8
 
@@ -194,7 +194,7 @@ X25519.
 HUKS_ALG_ED25519 = 102
 ```
 
-Ed25519.
+表示使用ED25519算法。
 
 **Since:** 8
 
@@ -214,7 +214,7 @@ Ed25519.
 HUKS_ALG_DH = 103
 ```
 
-DH.
+表示使用DH算法。
 
 **Since:** 8
 
@@ -234,7 +234,7 @@ DH.
 HUKS_ALG_SM2 = 150
 ```
 
-SM2.
+表示使用SM2算法。
 
 **Since:** 9
 
@@ -254,7 +254,7 @@ SM2.
 HUKS_ALG_SM3 = 151
 ```
 
-SM3
+表示SM3摘要算法。
 
 **Since:** 9
 
@@ -274,7 +274,7 @@ SM3
 HUKS_ALG_SM4 = 152
 ```
 
-SM4.
+表示使用SM4算法。
 
 **Since:** 9
 
@@ -294,7 +294,7 @@ SM4.
 HUKS_ALG_DES = 160
 ```
 
-DES (supported for \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_lightweight devices\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ since API version 12; supported for \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_standard devices\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_ since API version 18).
+表示使用DES算法（API 12开始支持&lt;!--RP4--&gt;轻量级设备&lt;!--RP4End--&gt;，API 18开始支持&lt;!--RP5--&gt;标准设备&lt;!--RP5End--&gt;）。
 
 **Since:** 12
 
@@ -312,7 +312,7 @@ DES (supported for \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_lightweight devices\_\_\
 HUKS_ALG_3DES = 161
 ```
 
-3DES (supported for \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_lightweight devices\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ since API version 12; supported for \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_standard devices\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_ since API version 18).
+表示使用3DES算法（API 12开始支持&lt;!--RP4--&gt;轻量级设备&lt;!--RP4End--&gt;，API 18开始支持&lt;!--RP5--&gt;标准设备&lt;!--RP5End--&gt;）。
 
 **Since:** 12
 
@@ -330,7 +330,7 @@ HUKS_ALG_3DES = 161
 HUKS_ALG_CMAC = 162
 ```
 
-CMAC (supported for \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_lightweight devices\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ since API version 12; supported for \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_standard devices\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_ since API version 18).
+表示使用CMAC算法（API 12开始支持&lt;!--RP4--&gt;轻量级设备&lt;!--RP4End--&gt;，API 18开始支持&lt;!--RP5--&gt;标准设备&lt;!--RP5End--&gt;）。
 
 **Since:** 12
 
@@ -348,7 +348,7 @@ CMAC (supported for \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_lightweight devices\_\_
 HUKS_ALG_ML_KEM = 200
 ```
 
-ML-KEM.
+ML-KEM算法
 
 **Since:** 26.0.0
 
@@ -366,7 +366,7 @@ ML-KEM.
 HUKS_ALG_ML_DSA = 201
 ```
 
-ML-DSA.
+ML-DSA算法
 
 **Since:** 26.0.0
 

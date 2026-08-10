@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## event
 
 ```TypeScript
@@ -20,7 +26,7 @@ event: MechEventType
 
 事件类型
 
-**类型：** MechEventType
+**类型：** [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -40,7 +46,7 @@ mechId: int
 
 具身设备ID。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

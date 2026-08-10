@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -98,7 +104,7 @@ manufacturerId?: int
 
 厂商ID。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -118,7 +124,7 @@ rssi?: int
 
 接收信号强度指示。单位为： 分贝毫瓦，取值应为[-128,127]内的整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

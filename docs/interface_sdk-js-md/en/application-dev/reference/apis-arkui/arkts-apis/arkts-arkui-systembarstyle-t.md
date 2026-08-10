@@ -4,7 +4,7 @@
 export type SystemBarStyle = window.SystemBarStyle
 ```
 
-Import the SystemBarStyle type for Navigation.
+状态栏的属性。在设置页面级状态栏属性时使用。
 
 **Since:** 23
 

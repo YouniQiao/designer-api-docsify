@@ -44,7 +44,7 @@ userInfo: UserInfo
 
 调用方的用户信息。
 
-**类型：** UserInfo
+**类型：** [UserInfo](arkts-arkdata-distributeddata-userinfo-i.md)
 
 **起始版本：** 7
 

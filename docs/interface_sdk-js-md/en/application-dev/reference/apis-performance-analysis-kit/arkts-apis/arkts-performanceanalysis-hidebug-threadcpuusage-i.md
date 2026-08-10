@@ -1,6 +1,6 @@
 # ThreadCpuUsage
 
-Describes the CPU usage of a thread.
+�̵߳�CPUʹ�������
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the CPU usage of a thread.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## cpuUsage
 
 ```TypeScript
 cpuUsage: double
 ```
 
-CPU usage of the thread.
+�߳�CPUʹ���ʡ�
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -34,9 +40,9 @@ CPU usage of the thread.
 threadId: long
 ```
 
-Thread ID.
+�̺߳š�
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 

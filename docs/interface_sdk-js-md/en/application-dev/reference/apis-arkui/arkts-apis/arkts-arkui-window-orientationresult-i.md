@@ -1,6 +1,6 @@
 # OrientationResult
 
-Result of setting preferred orientation
+设置窗口显示方向的执行结果。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Result of setting preferred orientation
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## executionResult
 
 ```TypeScript
 executionResult : OrientationExecutionResult
 ```
 
-Execution result of setting preferred orientation.
+窗口显示方向的执行结果枚举。
 
-**Type:** OrientationExecutionResult
+**Type:** [OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md)
 
 **Since:** 26.0.0
 

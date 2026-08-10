@@ -1,6 +1,6 @@
 # AsyncLockInfo
 
-Information about a lock.
+关于锁的信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Information about a lock.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## contextId
 
 ```TypeScript
 contextId: number
 ```
 
-lockAsync caller's execution context identifier.
+AsyncLockMode调用者的执行上下文标识符。
 
 **Type:** number
 
@@ -36,9 +42,9 @@ lockAsync caller's execution context identifier.
 mode: AsyncLockMode
 ```
 
-Lock operation mode.
+锁的模式。
 
-**Type:** AsyncLockMode
+**Type:** [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md)
 
 **Since:** 12
 
@@ -56,7 +62,7 @@ Lock operation mode.
 name: string
 ```
 
-Name of the lock.
+锁的名称。
 
 **Type:** string
 

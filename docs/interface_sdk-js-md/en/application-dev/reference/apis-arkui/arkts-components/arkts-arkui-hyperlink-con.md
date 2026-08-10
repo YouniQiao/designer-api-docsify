@@ -6,7 +6,7 @@
 declare const HyperlinkInterface: HyperlinkAttribute
 ```
 
-Defines Hyperlink Component instance.
+定义超链接组件实例。
 
 **Since:** 7
 

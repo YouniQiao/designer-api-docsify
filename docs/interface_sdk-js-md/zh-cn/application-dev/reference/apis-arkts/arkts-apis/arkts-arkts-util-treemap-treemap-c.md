@@ -10,6 +10,12 @@ TreeMap可用于存储具有关联关系的key-value键值对集合，存储元�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { TreeMap } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
@@ -32,30 +38,7 @@ $_iterator(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | TreeMap的迭代器。 |
-
-**示例：**
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-
-// 使用方法一：
-for (let item of treeMap) {
-  console.info("key:" + item[0]);
-  console.info("value:" + item[1]);
-}
-
-// 使用方法二：
- let iter = treeMap.$_iterator();
- let temp: IteratorResult<[string, int]> = iter.next();
- while(!temp.done) {
-   console.info("key:" + temp.value![0]);
-   console.info("value:" + temp.value![1]);
-   temp = iter.next();
- }
-```
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | TreeMap的迭代器。 |
 
 ## [Symbol.iterator]
 
@@ -79,15 +62,15 @@ for (let item of treeMap) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -150,11 +133,9 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -164,17 +145,6 @@ treeMap.set('sparrow', 356);
 treeMap.clear();
 let result = treeMap.isEmpty();
 console.info('result:', result); // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-treeMap.clear();
-let result = treeMap.isEmpty();
-console.info("result:", result); // result: true
 ```
 
 ## constructor
@@ -205,9 +175,9 @@ TreeMap的构造函数，支持通过比较函数使元素按照自定义规则�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The TreeMap's constructor cannot be directly invoked. |
+| 10200012 | The TreeMap's constructor cannot be directly invoked. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 默认构造
@@ -275,52 +245,7 @@ TreeMap的构造函数，支持通过比较函数使元素按照自定义规则�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K&gt; | 否 | 比较函数。 comparator（可选）用户自定义的比较函数。 |
-
-**示例：**
-
-```TypeScript
-// 默认构造
-let treeMap : TreeMap<int, int> = new TreeMap<int, int>();
-```
-
-```TypeScript
-import { TreeMapComparator } from '@kit.ArkTS';
-
-//使用comparator firstValue < secondValue，表示期望结果为升序排序。反之firstValue > secondValue，表示为降序排序。
-let treeMapCb: TreeMapComparator<string> = (firstValue: string, secondValue: string): double => {
-  return firstValue.compareTo(secondValue);
-};
-let treeMap: TreeMap<string, string> = new TreeMap<string, string>(treeMapCb);
-treeMap.set("aa", "3");
-treeMap.set("dd", "1");
-treeMap.set("cc", "2");
-treeMap.set("bb", "4");
-let numbers = Array.from(treeMap.keys());
-for (let item of numbers) {
-  console.info("treeMap: " + item);
-}
-```
-
-```TypeScript
-// 当插入自定义类型时，则必须要提供比较函数。
- class TestEntry{
-   id: int = 0;
- }
- let treeMapCb: TreeMapComparator<TestEntry> = (firstValue: TestEntry, secondValue: TestEntry): double => {
-  return firstValue.id - secondValue.id;
-};
- let ts1: TreeMap<TestEntry, string> = new TreeMap<TestEntry, string>(treeMapCb);
- let entry1: TestEntry = {
-   id: 0
- };
- let entry2: TestEntry = {
-   id: 1
- }
- ts1.set(entry1, "0");
- ts1.set(entry2, "1");
- console.info("treeMap: ", ts1.length);
-```
+| comparator | [TreeMapComparator](arkts-arkts-treemapcomparator-t.md)&lt;K&gt; | 否 | 比较函数。 comparator（可选）用户自定义的比较函数。 |
 
 ## entries
 
@@ -344,17 +269,15 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| 10200011 | The entries method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -381,31 +304,6 @@ while (!nextResult.done) {
  }
  for (let i = 0;i < 10; i++) {
    treeMap.remove('sparrow' + i);
- }
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let it = treeMap.entries();
-let t: IteratorResult<[string, int]> = it.next();
-while(!t.done) {
-  console.info("TreeMap" + t.value);
-  t = it.next()
-}
-```
-
-```TypeScript
-// 不建议在entries中使用set、remove方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
- let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
- for(let i = 0; i < 10; i++) {
-   treeMap.set("sparrow" + i, 123);
- }
- for(let i = 0;i < 10; i++) {
-   treeMap.remove("sparrow" + i);
  }
 ```
 
@@ -438,9 +336,9 @@ forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -488,21 +386,7 @@ forEach(callbackFn: TreeMapForEachCb<K, V>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | 是 | 回调函数。 |
-
-**示例：**
-
-```TypeScript
-import { TreeMapForEachCb } from '@kit.ArkTS'
-
-let treeMap: TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("sparrow", 123);
-treeMap.set("gull", 357);
-let treeMapCb: TreeMapForEachCb<string, int> = (value: int, key: string, map: TreeMap<string, int>): void => {
-  console.info("value: " + value, " key: " + key);
-};
-treeMap.forEach(treeMapCb);
-```
+| callbackFn | [TreeMapForEachCb](arkts-arkts-treemapforeachcb-t.md)&lt;K, V&gt; | 是 | 回调函数。 |
 
 ## get
 
@@ -538,9 +422,9 @@ get(key: K): V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound. |
+| 10200011 | The get method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -581,15 +465,6 @@ get(key: K): V | undefined
 | --- | --- |
 | V | 如果存在与key关联的值则返回该值，否则返回undefined。 |
 
-**示例：**
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let result = treeMap.get("sparrow");
-```
-
 ## getFirstKey
 
 ```TypeScript
@@ -618,12 +493,10 @@ getFirstKey(): K
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirstKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| 10200011 | The getFirstKey method cannot be bound. |
+| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -632,15 +505,6 @@ treeMap.set('sparrow', 356);
 // 获取容器中排序第一的key
 let result = treeMap.getFirstKey();
 console.info('result:', result); // result: sparrow
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let result = treeMap.getFirstKey();
 ```
 
 ## getHigherKey
@@ -677,9 +541,9 @@ getHigherKey(key: K): K
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getHigherKey method cannot be bound. |
+| 10200011 | The getHigherKey method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<number, string>();
@@ -726,18 +590,8 @@ getHigherKey(key: K): K | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getHigherKey method cannot be bound. |
-
-**示例：**
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-treeMap.set("gander", 356);
-let result = treeMap.getHigherKey("sparrow");
-```
+| 10200011 | The getHigherKey method cannot be bound. |
+| 10200010 | Container is empty. |
 
 ## getLastKey
 
@@ -767,12 +621,10 @@ getLastKey(): K
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| 10200011 | The getLastKey method cannot be bound. |
+| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -781,15 +633,6 @@ treeMap.set('sparrow', 356);
 // 获取容器中排序最后的key
 let result = treeMap.getLastKey();
 console.info('result:', result); // result: squirrel
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let result = treeMap.getLastKey();
 ```
 
 ## getLowerKey
@@ -826,9 +669,9 @@ getLowerKey(key: K): K
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLowerKey method cannot be bound. |
+| 10200011 | The getLowerKey method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<number, string>();
@@ -875,18 +718,8 @@ getLowerKey(key: K): K | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLowerKey method cannot be bound. |
-
-**示例：**
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-treeMap.set("gander", 356);
-let result = treeMap.getLowerKey("sparrow");
-```
+| 10200011 | The getLowerKey method cannot be bound. |
+| 10200010 | Container is empty. |
 
 ## hasKey
 
@@ -922,11 +755,9 @@ hasKey(key: K): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasKey method cannot be bound. |
+| 10200011 | The hasKey method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -935,15 +766,6 @@ treeMap.set('squirrel', 123);
 // 判断容器中是否包含指定key
 let result = treeMap.hasKey('squirrel');
 console.info('result:', result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-let result = treeMap.hasKey("squirrel");
-console.info("result:", result);  // result: true
 ```
 
 ## hasValue
@@ -980,11 +802,9 @@ hasValue(value: V): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasValue method cannot be bound. |
+| 10200011 | The hasValue method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -992,15 +812,6 @@ treeMap.set('squirrel', 123);
 // 判断容器中是否包含指定value
 let result = treeMap.hasValue(123);
 console.info('result:', result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-let result = treeMap.hasValue(123);
-console.info("result:", result);  // result: true
 ```
 
 ## isEmpty
@@ -1031,25 +842,15 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<number, number>();
 // 判断容器是否为空
 let result = treeMap.isEmpty();
 console.info('result:', result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<int, int> = new TreeMap<int, int>();
-let result = treeMap.isEmpty(); // result: true
-console.info("result:", result);  // result: true
 ```
 
 ## keys
@@ -1074,17 +875,15 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;K&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
+| 10200011 | The keys method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1098,23 +897,6 @@ for (let key of keys) {
 // 输出结果：
 // key: sparrow
 // key: squirrel
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let it = treeMap.keys();
-let t: IteratorResult<string> = it.next();
-while(!t.done) {
-  console.info("TreeMap:", t.value);
-  t = it.next();
-}
-// 输出结果：
-// TreeMap: sparrow
-// TreeMap: squirrel
 ```
 
 ## remove
@@ -1151,9 +933,9 @@ remove(key: K): V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1193,15 +975,6 @@ remove(key: K): V | undefined
 | --- | --- |
 | V | 如果删除了元素则返回该元素的值，否则返回undefined。 |
 
-**示例：**
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let result = treeMap.remove("sparrow");
-```
-
 ## replace
 
 ```TypeScript
@@ -1237,11 +1010,9 @@ replace(key: K, newValue: V): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The replace method cannot be bound. |
+| 10200011 | The replace method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1249,15 +1020,6 @@ treeMap.set('sparrow', 123);
 // 替换指定key对应的value
 treeMap.replace('sparrow', 357);
 console.info('sparrow:', treeMap.get('sparrow')); // sparrow: 357
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("sparrow", 123);
-let result = treeMap.replace("sparrow", 357);
-console.info("sparrow:", treeMap.get("sparrow")); // sparrow: 357
 ```
 
 ## set
@@ -1295,24 +1057,14 @@ set(key: K, value: V): Object
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+| 10200011 | The set method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
 treeMap.set('squirrel', 123);
 console.info('squirrel:', treeMap.get('squirrel')); // squirrel: 123
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-console.info("squirrel:", treeMap.get("squirrel")); // squirrel: 123
 ```
 
 ## setAll
@@ -1337,17 +1089,15 @@ setAll(map: TreeMap<K, V>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| map | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | 是 | 将参数map中的所有元素添加到调用setAll方法的TreeMap对象中。 |
+| map | [TreeMap](arkts-arkts-util-treemap-treemap-c.md)&lt;K, V&gt; | 是 | 将参数map中的所有元素添加到调用setAll方法的TreeMap对象中。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The setAll method cannot be bound. |
+| 10200011 | The setAll method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1359,24 +1109,6 @@ map.setAll(treeMap); // 将treeMap中的所有元素添加到map中
 map.forEach((value?: number, key?: string) : void => {
   console.info('value: ' + value, 'key: ' + key); 
 });
-// 输出结果:
-// value: 12 key: demo
-// value: 356 key: sparrow
-// value: 123 key: squirrel
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let map : TreeMap<string, int> = new TreeMap<string, int>();
-map.set("demo", 12);
-map.setAll(treeMap); // 将treeMap中的所有元素添加到map中
-map.forEach((value ?: int, key ?: string) : void => {
-  console.info("value: " + value, "key: " + key); 
-})
 // 输出结果:
 // value: 12 key: demo
 // value: 356 key: sparrow
@@ -1405,17 +1137,15 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;V&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| 10200011 | The values method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1428,23 +1158,6 @@ for (let value of values) {
 }
 // value: 356
 // value: 123
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let treeMap : TreeMap<string, int> = new TreeMap<string, int>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let it = treeMap.values();
-let t: IteratorResult<int> = it.next();
-while(!t.done) {
-  console.info("TreeMap:", t.value);
-  t = it.next();
-}
-// 输出结果：
-// TreeMap: 356
-// TreeMap: 123
 ```
 
 ## length

@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## encryptionAlgorithm
 
 ```TypeScript
 encryptionAlgorithm?: PbesEncryptionAlgorithm
 ```
 
-表示PBES加密算法类型。默认为AES\_256\_CBC。
+表示PBES加密算法类型。默认为AES_256_CBC。
 
-**类型：** PbesEncryptionAlgorithm
+**类型：** [PbesEncryptionAlgorithm](arkts-devicecertificate-cert-pbesencryptionalgorithm-e.md)
 
 **默认值：** PbesEncryptionAlgorithm.AES_256_CBC
 
@@ -40,7 +46,7 @@ iterations?: int
 
 表示迭代次数。默认为2048。取值应为正整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 2048
 
@@ -62,7 +68,7 @@ saltLen?: int
 
 表示盐值长度。默认为16，最小值为8。取值应为≥8的整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 16
 

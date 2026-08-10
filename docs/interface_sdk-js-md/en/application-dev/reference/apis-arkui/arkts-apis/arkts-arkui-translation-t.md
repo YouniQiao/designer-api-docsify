@@ -4,7 +4,7 @@
 export type Translation = Vector2
 ```
 
-Translation info.
+用于设置组件的平移量。
 
 **Since:** 23
 

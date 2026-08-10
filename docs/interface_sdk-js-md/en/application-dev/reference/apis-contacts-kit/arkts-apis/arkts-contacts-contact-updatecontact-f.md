@@ -1,12 +1,18 @@
 # updateContact
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## updateContact
 
 ```TypeScript
 function updateContact(contact: Contact, callback: AsyncCallback<void>): void
 ```
 
-Updates a contact. This API uses an asynchronous callback to return the result.
+更新联系人。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,20 +32,21 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)接口获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
-// Select a contact via selectContacts.
+// Select a contact through the selectContacts API.
 contact.selectContacts().then((data) => {
   // Obtain the context within the component.
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
   contact.updateContact(context, {
-    id: data[0].id, // Select the contact ID.
+    id: data[0].id, // ID of the selected contact.
     name: {
       fullName: 'xxx'
     },
@@ -53,8 +60,6 @@ contact.selectContacts().then((data) => {
     }
     console.info('Succeeded in updating Contact.');
   });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -65,7 +70,7 @@ contact.selectContacts().then((data) => {
 function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void
 ```
 
-Updates a contact. This API uses an asynchronous callback to return the result.
+更新联系人。使用callback异步回调。
 
 **Since:** 10
 
@@ -81,31 +86,33 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)接口获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Select a contact via selectContacts.
+// Select a contact through the selectContacts API.
 contact.selectContacts().then((data) => {
-  // Obtain the context within the component.
+  // Obtain the context in the component.
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
   contact.updateContact(context, {
-    id: data[0].id, // Select the contact ID.
+    id: data[0].id, // ID of the selected contact.
     name: {
       fullName: 'xxx'
     },
@@ -119,8 +126,6 @@ contact.selectContacts().then((data) => {
     }
     console.info('Succeeded in updating Contact.');
   });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -131,7 +136,7 @@ contact.selectContacts().then((data) => {
 function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void
 ```
 
-Updates a contact. (The contact attribute list can be imported.) This API uses an asynchronous callback to return the result.
+更新联系人，支持传入联系人的属性列表。使用callback异步回调。
 
 **Since:** 7
 
@@ -151,19 +156,21 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)接口获取。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
-// Select a contact via selectContacts.
+
+// Select a contact through the selectContacts API.
 contact.selectContacts().then((data) => {
   contact.updateContact({
-    id: data[0].id, // Select the contact ID.
+    id: data[0].id, // ID of the selected contact.
     name: {
       fullName: 'xxx'
     },
@@ -179,8 +186,6 @@ contact.selectContacts().then((data) => {
     }
     console.info('Succeeded in updating Contact.');
   });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -191,7 +196,7 @@ contact.selectContacts().then((data) => {
 function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void
 ```
 
-Updates a contact. (The contact attribute list can be imported.) This API uses an asynchronous callback to return the result.
+更新联系人（支持传入联系人的属性列表）。使用callback异步回调。
 
 **Since:** 10
 
@@ -207,32 +212,33 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)接口获取。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Select a contact via selectContacts.
+// Select contacts through the selectContacts API.
 contact.selectContacts().then((data) => {
   // Obtain the context within the component.
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
   contact.updateContact(context, {
-    id: data[0].id, // Select the contact ID.
+    id: data[0].id, // ID of the selected contact.
     name: {
       fullName: 'xxx'
     },
@@ -248,8 +254,6 @@ contact.selectContacts().then((data) => {
     }
     console.info('Succeeded in updating Contact.');
   });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -260,7 +264,7 @@ contact.selectContacts().then((data) => {
 function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>
 ```
 
-Updates a contact. (The contact attribute list can be imported.) This API uses a promise to return the result.
+更新联系人，支持传入联系人的属性列表。使用Promise异步回调。
 
 **Since:** 7
 
@@ -280,24 +284,24 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)接口获取。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
-// Select a contact via selectContacts.
+// Select a contact through the selectContacts API.
 contact.selectContacts().then((data) => {
   let promise = contact.updateContact({
-    id: data[0].id, // Select the contact ID.
+    id: data[0].id, // ID of the selected contact.
     name: {
       fullName: 'xxx'
     },
@@ -309,11 +313,7 @@ contact.selectContacts().then((data) => {
   });
   promise.then(() => {
     console.info('Succeeded in updating Contact.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
   });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -324,7 +324,7 @@ contact.selectContacts().then((data) => {
 function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>
 ```
 
-Updates a contact. (The contact attribute list can be imported.) This API uses a promise to return the result.
+更新联系人（支持传入联系人的属性列表）。使用Promise异步回调。
 
 **Since:** 10
 
@@ -340,37 +340,37 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)接口获取。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
   import { common } from '@kit.AbilityKit';
 
-  // Select a contact via selectContacts.
+  // Select a contact through the selectContacts API.
   contact.selectContacts().then((data) => {
     // Obtain the context within the component.
     let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
     let promise = contact.updateContact(context, {
-      id: data[0].id, // Select the contact ID.
+      id: data[0].id, // ID of the selected contact.
       name: {
         fullName: 'xxx'
       },
@@ -382,11 +382,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
     });
     promise.then(() => {
       console.info('Succeeded in updating Contact.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
     });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
   });
 ```
 

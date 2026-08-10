@@ -1,5 +1,11 @@
 # getSingleSensorByDeviceSync
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## getSingleSensorByDeviceSync
 
 ```TypeScript
@@ -20,8 +26,8 @@ function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sens
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定传感器类型。 |
-| deviceId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 设备ID，默认为查询本地设备，默认值为-1，表示本地设备，设备ID需通过 [getSensorList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_查询或者监听设备上下线接口 [sensorStatusChange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
+| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | 是 | 指定传感器类型。 |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 设备ID，默认为查询本地设备，默认值为-1，表示本地设备，设备ID需通过 [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist)查询或者监听设备上下线接口 [sensorStatusChange](arkts-sensorservice-sensor-on-f.md#on)获取。 |
 
 **返回值：**
 
@@ -29,7 +35,7 @@ function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sens
 | --- | --- |
 | Array&lt;Sensor&gt; | 传感器属性列表。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

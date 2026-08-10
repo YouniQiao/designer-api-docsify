@@ -1,5 +1,11 @@
 # getPowerConfig（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPowerConfig
 
 ```TypeScript
@@ -38,20 +44,20 @@ function getPowerConfig(sceneName: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
-| [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-接口入参无效) | Invalid parameter. Possible causes: 1. The sceneName parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes. |
-| [4900501](../../apis-basic-services-kit/errorcode-power.md#4900501-读电源配置值失败) | Failed to read the power configuration value. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 4900400 | Invalid parameter. Possible causes: 1. The sceneName parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes. |
+| 4900101 | Failed to connect to the service. |
+| 4900501 | Failed to read the power configuration value. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
     let configVal = power.getPowerConfig('scene_name_test');
     console.info('get power config success, configVal: ' + configVal);
-} catch(err) {
-    console.error('get power config failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to get power config. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

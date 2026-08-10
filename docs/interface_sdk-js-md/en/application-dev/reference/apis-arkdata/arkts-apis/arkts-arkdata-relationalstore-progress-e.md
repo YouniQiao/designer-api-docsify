@@ -1,6 +1,6 @@
 # Progress
 
-Enumerates the stages in the device-cloud sync progress. Use the enum name rather than the enum value.
+描述端云同步过程的枚举。请使用枚举名称而非枚举值。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the stages in the device-cloud sync progress. Use the enum name rathe
 SYNC_BEGIN = 0
 ```
 
-SYNC\_BEGIN: means the sync process begin.
+表示端云同步过程开始。
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ SYNC\_BEGIN: means the sync process begin.
 SYNC_IN_PROGRESS = 1
 ```
 
-SYNC\_BEGIN: means the sync process is in progress
+表示正在端云同步过程中。
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ SYNC\_BEGIN: means the sync process is in progress
 SYNC_FINISH = 2
 ```
 
-SYNC\_BEGIN: means the sync process is finished
+表示端云同步过程已完成。
 
 **Since:** 10
 

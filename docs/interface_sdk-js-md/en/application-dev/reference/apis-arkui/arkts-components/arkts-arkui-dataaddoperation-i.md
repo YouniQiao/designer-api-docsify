@@ -1,6 +1,6 @@
 # DataAddOperation
 
-Represents an operation for adding data.
+添加数据操作。
 
 **Since:** 12
 
@@ -16,9 +16,7 @@ Represents an operation for adding data.
 count?: number
 ```
 
-Number of data records to insert.
-
-Default value: **1
+添加数量，必须是正整数（大于0），默认为1。传入0或负数时可能导致渲染效果异常。
 
 **Type:** number
 
@@ -42,7 +40,7 @@ Default value: **1
 index: number
 ```
 
-Index at which to insert the data record. The value range is [0, data source length].
+添加数据索引值。取值范围是[0, 数据源长度]。超出取值范围时渲染异常。
 
 **Type:** number
 
@@ -64,7 +62,7 @@ Index at which to insert the data record. The value range is [0, data source len
 key?: string | Array<string>
 ```
 
-Keys to assign to the inserted data records. The original keys are used by default.
+为添加的数据分配键值，默认使用原键值。键值支持string或Array&lt;string&gt;类型；当键值为数组且长度大于count时报参数无效错误。
 
 **Type:** string \| Array&lt;string&gt;
 
@@ -86,7 +84,7 @@ Keys to assign to the inserted data records. The original keys are used by defau
 type: DataOperationType.ADD
 ```
 
-Type of data addition.
+数据添加类型。
 
 **Type:** DataOperationType.ADD
 

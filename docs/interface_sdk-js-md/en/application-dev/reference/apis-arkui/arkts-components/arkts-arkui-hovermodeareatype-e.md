@@ -1,6 +1,6 @@
 # HoverModeAreaType
 
-Enumerates the type of area in hover mode.
+悬停态显示区域类型。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates the type of area in hover mode.
 TOP_SCREEN = 0
 ```
 
-Layout top half screen when the phone in hover mode.
+上半屏。
 
 **Since:** 14
 
@@ -36,7 +36,7 @@ Layout top half screen when the phone in hover mode.
 BOTTOM_SCREEN = 1
 ```
 
-Layout bottom half screen when the phone in hover mode.
+下半屏。
 
 **Since:** 14
 

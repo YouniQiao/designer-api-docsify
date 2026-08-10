@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## authInfo
 
 ```TypeScript
@@ -38,7 +44,7 @@ description?: PackageDescription
 
 系统更新包描述信息。
 
-**类型：** PackageDescription
+**类型：** [PackageDescription](arkts-mdm-systemmanager-packagedescription-i.md)
 
 **起始版本：** 12
 

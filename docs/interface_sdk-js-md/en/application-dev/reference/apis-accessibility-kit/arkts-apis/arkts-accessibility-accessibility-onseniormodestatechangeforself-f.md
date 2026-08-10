@@ -1,5 +1,11 @@
 # onSeniorModeStateChangeForSelf
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## onSeniorModeStateChangeForSelf
 
 ```TypeScript
@@ -22,5 +28,5 @@ Register an observer for this application's senior mode state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Asynchronous callback interface. |
 

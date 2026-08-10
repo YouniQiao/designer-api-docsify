@@ -1,6 +1,6 @@
 # SmartGestureController
 
-Class SmartGestureController.
+类SmartGestureController。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Class SmartGestureController.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## clearMonitors
 
 ```TypeScript
 clearMonitors(): void
 ```
 
-Clear the callback functions to monitor gesture events.
+清除监听手势事件的回调函数。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ Clear the callback functions to monitor gesture events.
 clearSelected(): void
 ```
 
-Clear the current smart gesture selection.
+清除当前智能手势选择。
 
 **Since:** 26.0.0
 
@@ -52,7 +58,7 @@ Clear the current smart gesture selection.
 enableSmartTapAndSlideGestures(enabled: boolean): void
 ```
 
-Enable or disable smart tap and slide gestures for watch. This switch controls the new implementation of tap and slide gestures. When enabled, the new smart gesture handling pipeline is used. When disabled, the legacy implementation is used for compatibility.
+开启或关闭手表的智能点击和滑动手势。此开关控制点击和滑动手势的新实现。启用后，将使用新的智能手势处理流水线。禁用时，将使用传统实现以实现兼容性。
 
 **Since:** 26.0.0
 
@@ -68,7 +74,7 @@ Enable or disable smart tap and slide gestures for watch. This switch controls t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable smart tap and slide gesture handling. |
+| enabled | boolean | Yes | 是否启用智能点击和滑动手势处理。 |
 
 ## registerMonitor
 
@@ -76,7 +82,7 @@ Enable or disable smart tap and slide gestures for watch. This switch controls t
 registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void
 ```
 
-Register a callback function to monitor gesture events. This method enables the application to receive the processing intention of the current gesture and carry out customized intervention before the system processes the gesture event.
+注册一个回调函数来监听手势事件。在系统处理手势事件之前，应用程序可以接收到当前手势的处理意图，并进行自定义干预。
 
 **Since:** 26.0.0
 
@@ -92,7 +98,7 @@ Register a callback function to monitor gesture events. This method enables the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | Yes | Callback function invoked when a gesture is recognized. |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | Yes | 手势识别时调用的回调函数。 |
 
 ## requestSelected
 
@@ -100,7 +106,7 @@ Register a callback function to monitor gesture events. This method enables the 
 requestSelected(id: string): void
 ```
 
-Request smart gesture selection of a frame node by its identifier.
+通过节点的标识符请求智能手势选择节点。
 
 **Since:** 26.0.0
 
@@ -116,7 +122,7 @@ Request smart gesture selection of a frame node by its identifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | The identifier of the frame node to select. |
+| id | string | Yes | 要选择的节点的标识符。 |
 
 ## unregisterMonitor
 
@@ -124,7 +130,7 @@ Request smart gesture selection of a frame node by its identifier.
 unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void
 ```
 
-Unregister a callback function to monitor gesture events.
+注销监听手势事件的回调函数。
 
 **Since:** 26.0.0
 
@@ -140,5 +146,5 @@ Unregister a callback function to monitor gesture events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | Yes | Callback function invoked when a gesture is recognized. |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | Yes | 识别手势时调用的回调函数。 |
 

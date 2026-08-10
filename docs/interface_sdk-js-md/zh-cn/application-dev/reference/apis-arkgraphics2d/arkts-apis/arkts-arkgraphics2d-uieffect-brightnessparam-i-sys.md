@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## cubicCoeff
 
 ```TypeScript
@@ -20,7 +26,7 @@ cubicCoeff : double
 
 灰度调整三阶系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大，灰度调整效果越强。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 
@@ -40,7 +46,7 @@ fraction : double
 
 提亮效果混合比例。取值范围为[0, 1]，小于0时取值为0，大于1时取值为1，值越大，提亮效果越弱。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 
@@ -60,7 +66,7 @@ lightUpDegree : double
 
 灰度调整比例。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大，灰度调整效果越强。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 
@@ -80,7 +86,7 @@ negRgb : [double, double, double]
 
 基于基准饱和度的负向调整系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大饱和度越低。
 
-**类型：** [double, double, double]
+**类型：** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
 
 **起始版本：** 22
 
@@ -100,7 +106,7 @@ posRgb : [double, double, double]
 
 基于基准饱和度的正向调整系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大饱和度越高。
 
-**类型：** [double, double, double]
+**类型：** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
 
 **起始版本：** 22
 
@@ -120,7 +126,7 @@ quadCoeff : double
 
 灰度调整二阶系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大，灰度调整效果越强。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 
@@ -140,7 +146,7 @@ rate : double
 
 灰度调整线性系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大，灰度调整效果越强。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 
@@ -160,7 +166,7 @@ saturation : double
 
 提亮基准饱和度。取值范围为[0, 1]，小于0时取值为0，大于1时取值为1，值越大基准饱和度越高。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 

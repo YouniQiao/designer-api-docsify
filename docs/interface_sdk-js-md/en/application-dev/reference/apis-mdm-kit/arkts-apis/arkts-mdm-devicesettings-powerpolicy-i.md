@@ -1,6 +1,6 @@
 # PowerPolicy
 
-Represents the power policy.
+电源策略。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Represents the power policy.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { deviceSettings } from 'kits/@kit.MDMKit';
+```
+
 ## delayTime
 
 ```TypeScript
 delayTime: number
 ```
 
-Delay, in ms.
+延迟时间（单位：毫秒）。
 
 **Type:** number
 
@@ -36,9 +42,9 @@ Delay, in ms.
 powerPolicyAction: PowerPolicyAction
 ```
 
-Action to apply the power policy.
+执行电源策略的动作。
 
-**Type:** PowerPolicyAction
+**Type:** [PowerPolicyAction](arkts-mdm-devicesettings-powerpolicyaction-e.md)
 
 **Since:** 11
 

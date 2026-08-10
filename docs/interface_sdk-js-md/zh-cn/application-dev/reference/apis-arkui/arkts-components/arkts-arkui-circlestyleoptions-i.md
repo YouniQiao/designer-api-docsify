@@ -16,11 +16,11 @@
 color?: ResourceColor
 ```
 
-背景圆环颜色。
+背景圆环颜色。 
 
 默认值：'#33182431'（深灰色，20%不透明度）。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -94,11 +94,11 @@ radius?: LengthMetrics
 
 背景圆环的半径。
 
-默认值：[circleRadius]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的约1.833倍（即11/6）。
+默认值：[circleRadius](PatternLockAttribute#circleRadius)的约1.833倍（即11/6）。
 
 取值范围：大于0。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 

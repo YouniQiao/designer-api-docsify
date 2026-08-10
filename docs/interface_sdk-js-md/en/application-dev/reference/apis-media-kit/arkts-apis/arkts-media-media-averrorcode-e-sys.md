@@ -1,6 +1,6 @@
 # AVErrorCode
 
-Enumerates the types of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。
 
 **Since:** 9
 

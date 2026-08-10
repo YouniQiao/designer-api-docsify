@@ -6,7 +6,7 @@ export type UidNetStatsInfo = {
   }
 ```
 
-\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for every UID. Key is UID.
+{@link NetStatsInfo} for every UID. Key is UID.
 
 **Since:** 12
 

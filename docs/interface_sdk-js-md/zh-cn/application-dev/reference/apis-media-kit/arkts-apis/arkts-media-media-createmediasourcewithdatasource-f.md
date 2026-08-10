@@ -1,5 +1,11 @@
 # createMediaSourceWithDataSource
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createMediaSourceWithDataSource
 
 ```TypeScript
@@ -24,15 +30,15 @@ function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSou
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataSrc | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 流式媒体资源描述符。 |
+| dataSrc | [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md) | 是 | 流式媒体资源描述符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回MediaSource，用于媒体资源设置。 |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -55,6 +61,6 @@ let dataSrc: media.AVDataSrcDescriptor = {
     return readLen > 0 ? readLen : -1;
   }
 }
-let mediaSource : media.MediaSource | undefined = media.createMediaSourceWithDataSource(dataSrc);
+let mediaSource : media.MediaSource | undefined =  media.createMediaSourceWithDataSource(dataSrc);
 ```
 

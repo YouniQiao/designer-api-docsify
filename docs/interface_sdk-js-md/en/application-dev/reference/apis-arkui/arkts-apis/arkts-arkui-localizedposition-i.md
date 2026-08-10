@@ -18,7 +18,7 @@ start?: LengthMetrics
 
 Coordinate start of the Position.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ top?: LengthMetrics
 
 Coordinate top of the Position.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 

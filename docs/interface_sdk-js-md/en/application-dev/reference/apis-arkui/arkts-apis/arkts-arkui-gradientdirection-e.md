@@ -1,6 +1,6 @@
 # GradientDirection
 
-GradientDirection enumeration description
+线性渐变的方向。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ GradientDirection enumeration description
 Left = 0
 ```
 
-From right to left.
+从右向左。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ From right to left.
 Top = 1
 ```
 
-From bottom to top.
+从下向上。
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ From bottom to top.
 Right = 2
 ```
 
-From left to right.
+从左向右。
 
 **Since:** 7
 
@@ -76,7 +76,7 @@ From left to right.
 Bottom = 3
 ```
 
-From top to bottom.
+从上向下。
 
 **Since:** 7
 
@@ -96,7 +96,7 @@ From top to bottom.
 LeftTop = 4
 ```
 
-From upper left to lower right.
+从左上向右下。
 
 **Since:** 7
 
@@ -116,7 +116,7 @@ From upper left to lower right.
 LeftBottom = 5
 ```
 
-From lower left to upper right.
+从左下向右上。
 
 **Since:** 7
 
@@ -136,7 +136,7 @@ From lower left to upper right.
 RightTop = 6
 ```
 
-From upper right to lower left.
+从右上向左下。
 
 **Since:** 7
 
@@ -156,7 +156,7 @@ From upper right to lower left.
 RightBottom = 7
 ```
 
-From lower right to upper left.
+从右下向左上。
 
 **Since:** 7
 
@@ -176,7 +176,7 @@ From lower right to upper left.
 None = 8
 ```
 
-None.
+无。
 
 **Since:** 7
 

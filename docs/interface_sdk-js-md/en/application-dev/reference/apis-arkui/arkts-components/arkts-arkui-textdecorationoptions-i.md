@@ -1,6 +1,6 @@
 # TextDecorationOptions
 
-Provides text decoration options.
+Defines the options of decoration.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Provides text decoration options.
 color?: ResourceColor
 ```
 
-Color of the text decoration.Default value: Color.Black.
+Sets the color of decoration.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -38,9 +38,9 @@ Color of the text decoration.Default value: Color.Black.
 style?: TextDecorationStyle
 ```
 
-Style of the text decoration.Default value: TextDecorationStyle.SOLID.
+The style value of decoration.
 
-**Type:** TextDecorationStyle
+**Type:** [TextDecorationStyle](../arkts-apis/arkts-arkui-textdecorationstyle-e.md)
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ Style of the text decoration.Default value: TextDecorationStyle.SOLID.
 thicknessScale?: number
 ```
 
-The scale value of decoration thickness.Value constraint: Negative values are handled as default values. Default value: 1.
+装饰线粗细。
 
 **Type:** number
 
@@ -82,9 +82,9 @@ The scale value of decoration thickness.Value constraint: Negative values are ha
 type: TextDecorationType
 ```
 
-Type of the text decoration.
+The decoration type.
 
-**Type:** TextDecorationType
+**Type:** [TextDecorationType](../arkts-apis/arkts-arkui-textdecorationtype-e.md)
 
 **Since:** 12
 

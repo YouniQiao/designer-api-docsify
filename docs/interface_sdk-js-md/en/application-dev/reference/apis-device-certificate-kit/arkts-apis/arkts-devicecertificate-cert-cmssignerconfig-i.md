@@ -1,6 +1,6 @@
 # CmsSignerConfig
 
-Represents the configuration of the CMS signer.
+表示Cms签名者的配置选项。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Represents the configuration of the CMS signer.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## addAttr
 
 ```TypeScript
 addAttr?: boolean
 ```
 
-Whether to add the signature attribute. The default value is **true**. **true**: yes; **false**: no.
+是否添加签名属性。默认为true。true为需要，false为不需要。
 
 **Type:** boolean
 
@@ -38,7 +44,7 @@ Whether to add the signature attribute. The default value is **true**. **true**:
 addCert?: boolean
 ```
 
-Whether to add a certificate. The default value is **true**. **true**: yes; **false**: no.
+是否添加证书。默认为true。true为需要，false为不需要。
 
 **Type:** boolean
 
@@ -60,8 +66,7 @@ Whether to add a certificate. The default value is **true**. **true**: yes; **fa
 addSmimeCapAttr?: boolean
 ```
 
-Whether to add the SMIME capability to the CMS object. The default value is **true**. **true**: yes; **false**:  
-no.
+是否将SMIME能力添加到Cms对象。默认为true。true为需要，false为不需要。
 
 **Type:** boolean
 
@@ -83,8 +88,7 @@ no.
 mdName: string
 ```
 
-Message digest algorithm, for example, **SHA384**. Currently, **SHA1**, **SHA256**, **SHA384**, and **SHA512**  
-are supported.
+消息摘要算法的名称，例如 "SHA384", 当前支持"SHA1"、"SHA256"、"SHA384"、"SHA512"。
 
 **Type:** string
 
@@ -104,13 +108,13 @@ are supported.
 rsaSignaturePadding?: CmsRsaSignaturePadding
 ```
 
-Padding mode for an RSA signature. The default value is **PKCS1\_PADDING**.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_When **PKCS1\_PSS\_PADDING** is set, **mdName** must be set to **SHA256**, **SHA384**, or  
-**SHA512**.
-    **NOTE**  
-    
-    This parameter is valid only when the private key type of the signature is RSA.
+RSA签名填充方式。默认值为：PKCS1_PADDING。&lt;br&gt;当设置为 PKCS1_PSS_PADDING 时，mdName 必须为 "SHA256"、"SHA384" 或 "SHA512"。
 
-**Type:** CmsRsaSignaturePadding
+> **说明：**
+> 
+> 仅当签名者私钥类型为RSA时有效。
+
+**Type:** [CmsRsaSignaturePadding](arkts-devicecertificate-cert-cmsrsasignaturepadding-e.md)
 
 **Default:** CmsRsaSignaturePadding.PKCS1_PADDING
 

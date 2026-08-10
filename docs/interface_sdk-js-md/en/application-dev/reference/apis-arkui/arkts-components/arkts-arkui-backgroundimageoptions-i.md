@@ -1,6 +1,10 @@
 # BackgroundImageOptions
 
-Define the options for background image.
+定义背景图选项。
+
+> **说明：**
+> 
+> 背景图片的同步加载可能会带来潜在性能问题，详情可见[Image](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#image-1)中说明。
 
 **Since:** 18
 
@@ -16,9 +20,9 @@ Define the options for background image.
 repeat?: ImageRepeat
 ```
 
-Set the repeat style of the background image.
+设置背景图片的重复样式。默认值为ImageRepeat.NoRepeat。
 
-**Type:** ImageRepeat
+**Type:** [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md)
 
 **Since:** 18
 
@@ -40,7 +44,13 @@ Set the repeat style of the background image.
 syncLoad?: boolean
 ```
 
-Sets the synchronous or asynchronous mode for background image loading.The default parameter type is bool, and the default value is false.
+是否同步加载图片，默认是异步加载。同步加载时阻塞UI线程，不会显示占位图。
+
+默认值：false
+
+false：异步加载图片。
+
+true：同步加载图片。
 
 **Type:** boolean
 

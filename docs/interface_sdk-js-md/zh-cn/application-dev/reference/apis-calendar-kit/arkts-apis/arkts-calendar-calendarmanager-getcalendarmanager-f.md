@@ -1,5 +1,11 @@
 # getCalendarManager
 
+## 导入模块
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## getCalendarManager
 
 ```TypeScript
@@ -24,15 +30,15 @@ function getCalendarManager(context: Context) : CalendarManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文Context。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的CalendarManager对象。 |
+| [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | 返回创建的CalendarManager对象。 |
 
-**示例：**
+## 示例
 
 示例中的mContext的获取方式请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 

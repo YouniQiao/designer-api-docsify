@@ -1,6 +1,6 @@
 # CallingInfo
 
-Defines the IPC context, including the PID and UID, local and remote device IDs, and whether the API is invoked on the same device.
+IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调用是否在同一设备上。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the IPC context, including the PID and UID, local and remote device IDs,
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## callerPid
 
 ```TypeScript
 readonly callerPid: number
 ```
 
-PID of the caller.callerPid is valid only when the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is true. Otherwise callerPid is invalid
+调用者的PID，仅IPC场景有效。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ PID of the caller.callerPid is valid only when the \_\_\_JSDOC\_LINK\_DESC\_USD\
 readonly callerTokenId: number
 ```
 
-Token ID of the caller.callerTokenId is valid only when the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is true. Otherwise callerTokenId is invalid.
+调用者的TokenId，仅IPC场景有效。
 
 **Type:** number
 
@@ -56,7 +62,7 @@ Token ID of the caller.callerTokenId is valid only when the \_\_\_JSDOC\_LINK\_D
 readonly callerUid: number
 ```
 
-UID of the caller.callerUid is valid only when the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is true. Otherwise callerUid is invalid.
+调用者的UID，仅IPC场景有效。
 
 **Type:** number
 
@@ -76,7 +82,7 @@ UID of the caller.callerUid is valid only when the \_\_\_JSDOC\_LINK\_DESC\_USD\
 readonly isLocalCalling: boolean
 ```
 
-Whether the peer end of the current communication is a process on the local device. Returns **true** if the local and peer processes are on the same device; returns **false** otherwise.
+当前通信对端是否为本设备进程。true：调用在同一台设备（IPC场景），false：调用未在同一台设备（RPC场景）。
 
 **Type:** boolean
 
@@ -96,7 +102,7 @@ Whether the peer end of the current communication is a process on the local devi
 readonly localDeviceId: string
 ```
 
-Local device ID. This parameter is valid only in RPC scenarios.localDeviceId is valid only when the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is false. Otherwise localDeviceId is invalid.
+本端设备的设备ID，仅RPC场景有效。
 
 **Type:** string
 
@@ -116,7 +122,7 @@ Local device ID. This parameter is valid only in RPC scenarios.localDeviceId is 
 readonly remoteDeviceId: string
 ```
 
-Remote device ID. This parameter is valid only in RPC scenarios.remoteDeviceId is valid only when the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is false. Otherwise remoteDeviceId is invalid.
+对端设备的设备ID，仅RPC场景有效。
 
 **Type:** string
 

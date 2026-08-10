@@ -20,6 +20,6 @@ Defines the callback type used in registering to listen for PrinterState.The val
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the state of printer  |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the information of the latest printer  |
+| state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | Yes | the state of printer |
+| info | [PrinterInfo](arkts-basicservices-print-printerinfo-i.md) | Yes | the information of the latest printer |
 

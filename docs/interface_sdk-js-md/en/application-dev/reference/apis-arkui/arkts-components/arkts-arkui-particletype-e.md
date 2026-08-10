@@ -1,6 +1,6 @@
 # ParticleType
 
-Enumerates the particle types.
+粒子类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the particle types.
 POINT = 'point'
 ```
 
-Point-like particle.
+点状粒子
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Point-like particle.
 IMAGE = 'image'
 ```
 
-Image-like particle.
+图片粒子
 
 **Since:** 10
 

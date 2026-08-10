@@ -4,7 +4,7 @@
 declare type OnGridScrollIndexCallback = (first: number, last: number) => void
 ```
 
-Represents a callback for item changes in the visible area of the **Grid** component.
+Grid组件可见区域item变化事件的回调类型。
 
 **Since:** 19
 
@@ -22,6 +22,6 @@ Represents a callback for item changes in the visible area of the **Grid** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| first | number | Yes | Index of the first item of the **Grid** component.  |
-| last | number | Yes | Index of the last item of the **Grid** component.  |
+| first | number | Yes | 当前显示的Grid起始位置的索引值。 |
+| last | number | Yes | 当前显示的Grid终止位置的索引值。 |
 

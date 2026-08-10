@@ -4,7 +4,7 @@
 export type NotificationCapsule = _NotificationCapsule
 ```
 
-Describes the notification capsule.
+通知胶囊。
 
 **Since:** 11
 

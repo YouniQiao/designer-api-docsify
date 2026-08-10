@@ -1,6 +1,6 @@
 # AbilityLifecycleCallback
 
-[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
+[UIAbility](arkts-app-ability-uiability.md)从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听[UIAbility](arkts-app-ability-uiability.md)生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
 
 **起始版本：** 9
 
@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## 导入模块
+
+```TypeScript
+import { AbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## onAbilityBackground
 
 ```TypeScript
 onAbilityBackground(ability: UIAbility): void
 ```
 
-在UIAbility的[onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发后回调。
 
 **起始版本：** 9
 
@@ -34,9 +40,9 @@ onAbilityBackground(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -46,7 +52,7 @@ onAbilityBackground(ability: UIAbility): void
 onAbilityContinue(ability: UIAbility): void
 ```
 
-在UIAbility的[onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发后回调。
 
 **起始版本：** 9
 
@@ -64,9 +70,9 @@ onAbilityContinue(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -76,7 +82,7 @@ onAbilityContinue(ability: UIAbility): void
 onAbilityCreate(ability: UIAbility): void
 ```
 
-在UIAbility的[onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发后回调。
 
 **起始版本：** 9
 
@@ -94,9 +100,9 @@ onAbilityCreate(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -106,7 +112,7 @@ onAbilityCreate(ability: UIAbility): void
 onAbilityDestroy(ability: UIAbility): void
 ```
 
-在UIAbility的[onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发后回调。
 
 **起始版本：** 9
 
@@ -124,9 +130,9 @@ onAbilityDestroy(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -136,7 +142,7 @@ onAbilityDestroy(ability: UIAbility): void
 onAbilityForeground(ability: UIAbility): void
 ```
 
-在UIAbility的[onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发后回调。
 
 **起始版本：** 9
 
@@ -154,9 +160,9 @@ onAbilityForeground(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -166,7 +172,7 @@ onAbilityForeground(ability: UIAbility): void
 onAbilitySaveState?(ability: UIAbility): void
 ```
 
-在UIAbility的[onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发后回调。
 
 **起始版本：** 12
 
@@ -184,9 +190,9 @@ onAbilitySaveState?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -196,7 +202,7 @@ onAbilitySaveState?(ability: UIAbility): void
 onAbilitySaveState?: OnAbilitySaveStateFn
 ```
 
-在UIAbility的[onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发后回调。
 
 **起始版本：** 23
 
@@ -214,7 +220,7 @@ onAbilitySaveState?: OnAbilitySaveStateFn
 onAbilityWillBackground?(ability: UIAbility): void
 ```
 
-在UIAbility的[onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发前回调。
 
 **起始版本：** 12
 
@@ -232,9 +238,9 @@ onAbilityWillBackground?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -244,7 +250,7 @@ onAbilityWillBackground?(ability: UIAbility): void
 onAbilityWillBackground?: OnAbilityWillBackgroundFn
 ```
 
-在UIAbility的[onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发前回调。
 
 **起始版本：** 23
 
@@ -262,7 +268,7 @@ onAbilityWillBackground?: OnAbilityWillBackgroundFn
 onAbilityWillContinue?(ability: UIAbility): void
 ```
 
-在UIAbility的[onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发前回调。
 
 **起始版本：** 12
 
@@ -280,9 +286,9 @@ onAbilityWillContinue?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -292,7 +298,7 @@ onAbilityWillContinue?(ability: UIAbility): void
 onAbilityWillContinue?: OnAbilityWillContinueFn
 ```
 
-在UIAbility的[onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发前回调。
 
 **起始版本：** 23
 
@@ -310,7 +316,7 @@ onAbilityWillContinue?: OnAbilityWillContinueFn
 onAbilityWillCreate?(ability: UIAbility): void
 ```
 
-在UIAbility的[onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发前回调。
 
 **起始版本：** 12
 
@@ -328,9 +334,9 @@ onAbilityWillCreate?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -340,7 +346,7 @@ onAbilityWillCreate?(ability: UIAbility): void
 onAbilityWillCreate?: OnAbilityWillCreateFn
 ```
 
-在UIAbility的[onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发前回调。
 
 **起始版本：** 23
 
@@ -358,7 +364,7 @@ onAbilityWillCreate?: OnAbilityWillCreateFn
 onAbilityWillDestroy?(ability: UIAbility): void
 ```
 
-在UIAbility的[onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发前回调。
 
 **起始版本：** 12
 
@@ -376,9 +382,9 @@ onAbilityWillDestroy?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -388,7 +394,7 @@ onAbilityWillDestroy?(ability: UIAbility): void
 onAbilityWillDestroy?: OnAbilityWillDestroyFn
 ```
 
-在UIAbility的[onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发前回调。
 
 **起始版本：** 23
 
@@ -406,7 +412,7 @@ onAbilityWillDestroy?: OnAbilityWillDestroyFn
 onAbilityWillForeground?(ability: UIAbility): void
 ```
 
-在UIAbility的[onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发前回调。
 
 **起始版本：** 12
 
@@ -424,9 +430,9 @@ onAbilityWillForeground?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -436,7 +442,7 @@ onAbilityWillForeground?(ability: UIAbility): void
 onAbilityWillForeground?: OnAbilityWillForegroundFn
 ```
 
-在UIAbility的[onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发前回调。
 
 **起始版本：** 23
 
@@ -454,7 +460,7 @@ onAbilityWillForeground?: OnAbilityWillForegroundFn
 onAbilityWillSaveState?(ability: UIAbility): void
 ```
 
-在UIAbility的[onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发前回调。
 
 **起始版本：** 12
 
@@ -472,9 +478,9 @@ onAbilityWillSaveState?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -484,7 +490,7 @@ onAbilityWillSaveState?(ability: UIAbility): void
 onAbilityWillSaveState?: OnAbilityWillSaveStateFn
 ```
 
-在UIAbility的[onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发前回调。
 
 **起始版本：** 23
 
@@ -502,7 +508,7 @@ onAbilityWillSaveState?: OnAbilityWillSaveStateFn
 onNewWant?(ability: UIAbility): void
 ```
 
-在UIAbility的[onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发后回调。
 
 **起始版本：** 12
 
@@ -520,9 +526,9 @@ onNewWant?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -532,7 +538,7 @@ onNewWant?(ability: UIAbility): void
 onNewWant?: OnNewWantFn
 ```
 
-在UIAbility的[onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发后回调。
 
 **起始版本：** 23
 
@@ -550,7 +556,7 @@ onNewWant?: OnNewWantFn
 onWillNewWant?(ability: UIAbility): void
 ```
 
-在UIAbility的[onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发前回调。
 
 **起始版本：** 12
 
@@ -568,9 +574,9 @@ onWillNewWant?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -580,7 +586,7 @@ onWillNewWant?(ability: UIAbility): void
 onWillNewWant?: OnWillNewWantFn
 ```
 
-在UIAbility的[onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发前回调。
 
 **起始版本：** 23
 
@@ -616,10 +622,10 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -629,7 +635,7 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发后回调。
 
 **起始版本：** 9
 
@@ -647,10 +653,10 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -660,7 +666,7 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发后回调。
 
 **起始版本：** 9
 
@@ -678,10 +684,10 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -709,10 +715,10 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -722,7 +728,7 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发后回调。
 
 **起始版本：** 12
 
@@ -740,10 +746,10 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -753,7 +759,7 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 onWindowStageRestore?: OnWindowStageRestoreFn
 ```
 
-在UIAbility的[onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发后回调。
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发后回调。
 
 **起始版本：** 23
 
@@ -771,7 +777,7 @@ onWindowStageRestore?: OnWindowStageRestoreFn
 onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发前回调。
 
 **起始版本：** 12
 
@@ -789,10 +795,10 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -802,7 +808,7 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 onWindowStageWillCreate?: OnWindowStageWillCreateFn
 ```
 
-在UIAbility的[onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发前回调。
 
 **起始版本：** 23
 
@@ -820,7 +826,7 @@ onWindowStageWillCreate?: OnWindowStageWillCreateFn
 onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发前回调。
 
 **起始版本：** 12
 
@@ -838,10 +844,10 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -851,7 +857,7 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 onWindowStageWillDestroy?: OnWindowStageWillDestroyFn
 ```
 
-在UIAbility的[onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发前回调。
 
 **起始版本：** 23
 
@@ -869,7 +875,7 @@ onWindowStageWillDestroy?: OnWindowStageWillDestroyFn
 onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发前回调。
 
 **起始版本：** 12
 
@@ -887,10 +893,10 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
-**示例：**
+## 示例
 
 参见[AbilityLifecycleCallback使用示例](#abilitylifecyclecallback使用示例)。
 
@@ -900,7 +906,7 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 onWindowStageWillRestore?: OnWindowStageWillRestoreFn
 ```
 
-在UIAbility的[onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_触发前回调。
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发前回调。
 
 **起始版本：** 23
 

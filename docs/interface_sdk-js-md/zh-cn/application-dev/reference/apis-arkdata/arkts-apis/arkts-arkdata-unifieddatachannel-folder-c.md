@@ -1,6 +1,6 @@
 # Folder
 
-文件夹类型数据，是[File]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，用于描述文件夹。
+文件夹类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述文件夹。
 
 **继承/实现关系：** Folder extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
@@ -11,6 +11,12 @@
 <!--Device-unifiedDataChannel-class Folder extends File--><!--Device-unifiedDataChannel-class Folder extends File-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
 
 ## folderUri
 

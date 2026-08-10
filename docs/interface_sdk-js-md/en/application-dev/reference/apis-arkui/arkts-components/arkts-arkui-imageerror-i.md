@@ -1,9 +1,8 @@
 # ImageError
 
-Describes the object returned by the image loading error callback.
+图片加载异常时触发回调的返回对象。
 
-This event is not triggered if the parameter type of the component is  
-[AnimatedDrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
 
 **Since:** 9
 
@@ -19,9 +18,9 @@ This event is not triggered if the parameter type of the component is
 componentHeight: number
 ```
 
-Height of the component.
+组件的高。
 
-Unit: px
+单位：px
 
 **Type:** number
 
@@ -43,9 +42,9 @@ Unit: px
 componentWidth: number
 ```
 
-Width of the component.
+组件的宽。
 
-Unit: px
+单位：px
 
 **Type:** number
 
@@ -67,11 +66,11 @@ Unit: px
 downloadInfo?: RequestDownloadInfo
 ```
 
-Detailed information about online image download, including download resources, network, and performance. This field is carried when the image source is an online image and the download fails.
+网络图片下载的详细信息，包含下载资源、网络、性能等信息。当图片来源为网络图片且下载失败时将携带此字段。
 
-Default value: **null
+默认值：null
 
-**Type:** RequestDownloadInfo
+**Type:** [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md)
 
 **Since:** 23
 
@@ -93,12 +92,11 @@ Default value: **null
 error?: BusinessError<void>
 ```
 
-Error information returned when an error occurs during image loading, where **code** represents the error code and  
-**message** indicates the error message. For details, see the error code reference below.
+图片加载异常返回的报错信息，其中code为错误码，message为错误信息。报错信息请参考以下错误信息的详细介绍。
 
-Default value: **{ code : -1, message : "" }
+默认值：{ code : -1, message : "" }
 
-**Type:** BusinessError&lt;void&gt;
+**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
 
 **Since:** 20
 
@@ -120,7 +118,7 @@ Default value: **{ code : -1, message : "" }
 message: string
 ```
 
-Error information.
+报错信息。
 
 **Type:** string
 

@@ -1,12 +1,18 @@
 # startShortcut (System API)
 
+## Modules to Import
+
+```TypeScript
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## startShortcut
 
 ```TypeScript
 function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability based on the specified [shortcut information]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+拉起指定[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)中的ability。使用Promise异步回调。
 
 **Since:** 12
 
@@ -24,26 +30,26 @@ Starts an ability based on the specified [shortcut information]\_\_\_JSDOC\_LINK
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Shortcut information of the application. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | Yes | 应用的快捷方式信息。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not support. |
-| [17700065](../errorcode-bundle.md#17700065-ability-specified-by-want-in-the-shortcutinfo-struct-cannot-be-started) | The specified shortcut want in shortcut info is not supported to be started. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not support. |
+| 201 | Verify permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700065 | The specified shortcut want in shortcut info is not supported to be started. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';

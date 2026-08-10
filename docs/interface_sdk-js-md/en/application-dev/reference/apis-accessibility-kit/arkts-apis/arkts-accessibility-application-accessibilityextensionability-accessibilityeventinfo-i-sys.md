@@ -1,6 +1,6 @@
 # AccessibilityEventInfo (System API)
 
-Describes the accessibility event information.
+无障碍事件信息。
 
 **Since:** 20
 
@@ -12,15 +12,21 @@ Describes the accessibility event information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
+```
+
 ## eventType
 
 ```TypeScript
 eventType: AccessibilityEventType
 ```
 
-Event type.
+无障碍事件类型。
 
-**Type:** AccessibilityEventType
+**Type:** [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md)
 
 **Since:** 20
 
@@ -38,8 +44,7 @@ Event type.
 extraInfo?: string
 ```
 
-Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit**  
-component.
+针对TextArea、TextInput、SearchField、RichEdit组件， 组件文本内容有新增或删除时，新增或删除的文本内容。
 
 **Type:** string
 
@@ -59,9 +64,9 @@ component.
 target?: AccessibilityElement
 ```
 
-Target component where the event occurs.
+发生事件的目标组件。
 
-**Type:** AccessibilityElement
+**Type:** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)
 
 **Since:** 20
 
@@ -79,9 +84,9 @@ Target component where the event occurs.
 timestamp?: long
 ```
 
-Timestamp of the event, in milliseconds. The default value is **0**.
+事件时间戳，单位是毫秒。默认值为0。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 

@@ -43,8 +43,8 @@ action?: string
 ```
 
 表示要执行的通用操作（如：查看、分享、应用详情）。在隐式Want中，您可以定义该字段，配合uri或parameters来表示对数据要执行的操作。具体参考：  
-[action说明]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。隐式Want定义及匹配规则参考：  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[action说明](arkts-ability-wantconstant-action-depr-e.md)。隐式Want定义及匹配规则参考：  
+[显式Want与隐式Want匹配规则](../../../application-models/explicit-implicit-want-mappings.md)。
 
 **类型：** string
 
@@ -111,7 +111,7 @@ entities?: Array<string>
 ```
 
 表示目标Ability额外的类别信息（如：浏览器、视频播放器）。在隐式Want中是对action字段的补充。在隐式Want中，您可以定义该字段，来过滤匹配Ability类型。具体参考：  
-[entity说明]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[entity说明](arkts-ability-wantconstant-entity-depr-e.md)。
 
 **类型：** Array&lt;string&gt;
 
@@ -133,7 +133,7 @@ entities?: Array<string>
 flags?: number
 ```
 
-表示处理Want的方式。默认传数字，具体参考：[flags说明]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+表示处理Want的方式。默认传数字，具体参考：[flags说明](arkts-ability-wantconstant-flags-e.md)。
 
 **类型：** number
 
@@ -161,7 +161,7 @@ ohos.aafwk.param.callerPid 表示拉起方的pid。
 
 ohos.aafwk.param.callerToken 表示拉起方的token。
 
-ohos.aafwk.param.callerUid 表示\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的uid，应用包里应用程序的uid。
+ohos.aafwk.param.callerUid 表示[bundleInfo](js-apis-bundle-BundleInfo.md#bundleinfodeprecated)中的uid，应用包里应用程序的uid。
 
 - component.startup.newRules：表示是否启用新的管控规则。  
 - moduleName：表示拉起方的模块名，该字段的值即使定义成其他字符串，在传递到另一端时会被修改为正确的值。  
@@ -187,7 +187,7 @@ ohos.aafwk.param.callerUid 表示\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的uid，�
 type?: string
 ```
 
-表示MIME type类型描述，打开文件的类型，主要用于文管打开文件。比如：'text/xml' 、 'image/*'等，MIME定义参考：https://www.iana.org/assignments/media-types/media-types.xhtml?utm\_source=ld246.com。
+表示MIME type类型描述，打开文件的类型，主要用于文管打开文件。比如：'text/xml' 、 'image/*'等，MIME定义参考：https://www.iana.org/assignments/media-types/media-types.xhtml?utm_source=ld246.com。
 
 **类型：** string
 

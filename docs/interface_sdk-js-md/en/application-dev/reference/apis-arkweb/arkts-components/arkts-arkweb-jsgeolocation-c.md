@@ -34,7 +34,7 @@ Constructor.
 invoke(origin: string, allow: boolean, retain: boolean): void
 ```
 
-Sets the geolocation permission status of a web page.
+Report the geolocation permission status from users.
 
 **Since:** 8
 
@@ -52,5 +52,5 @@ Sets the geolocation permission status of a web page.
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
 | allow | boolean | Yes | Geolocation permission status. {@code true} means to allow geolocation permission; {@code false} means to disallow geolocation permission. |
-| retain | boolean | Yes | Whether the geolocation permission status can be saved to the system. {@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| retain | boolean | Yes | Whether the geolocation permission status can be saved to the system. {@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through {@link GeolocationPermissions}. |
 

@@ -10,6 +10,12 @@ Firewall policy.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## inAction
 
 ```TypeScript
@@ -18,7 +24,7 @@ inAction: FirewallRuleAction
 
 Inbound connections are allowed or denied by default.
 
-**Type:** FirewallRuleAction
+**Type:** [FirewallRuleAction](arkts-network-netfirewall-firewallruleaction-e.md)
 
 **Since:** 15
 
@@ -54,7 +60,7 @@ outAction: FirewallRuleAction
 
 Outbound connections are allowed or denied by default.
 
-**Type:** FirewallRuleAction
+**Type:** [FirewallRuleAction](arkts-network-netfirewall-firewallruleaction-e.md)
 
 **Since:** 15
 

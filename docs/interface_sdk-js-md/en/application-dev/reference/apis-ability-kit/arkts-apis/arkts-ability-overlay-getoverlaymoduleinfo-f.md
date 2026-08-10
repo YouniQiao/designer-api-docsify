@@ -1,12 +1,18 @@
 # getOverlayModuleInfo
 
+## Modules to Import
+
+```TypeScript
+import { overlay } from 'kits/@kit.AbilityKit';
+```
+
 ## getOverlayModuleInfo
 
 ```TypeScript
 function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void
 ```
 
-Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result.
+获取当前应用中overlay特征module的OverlayModuleInfo信息。使用callback异步回调。
 
 **Since:** 10
 
@@ -20,19 +26,19 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Name of the module with the overlay feature. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OverlayModuleInfo&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result, which is an [OverlayModuleInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| moduleName | string | Yes | 指定当前应用中的overlay特征module的名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取当前应用中指定的module的 [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)信息成功时，err返回undefined。否则回调函数返回具体错误 对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
-| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
-| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700002 | The specified module name is not found. |
+| 17700032 | The specified bundle does not contain any overlay module. |
+| 17700033 | The specified module is not an overlay module. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -62,7 +68,7 @@ try {
 function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>
 ```
 
-Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses a promise to return the result.
+获取当前应用中overlay特征module的OverlayModuleInfo信息。使用Promise异步回调。
 
 **Since:** 10
 
@@ -76,24 +82,24 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Name of the module with the overlay feature. |
+| moduleName | string | Yes | 指定当前应用中的overlay module的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OverlayModuleInfo&gt; | Promise used to return the result, which is an [OverlayModuleInfo]{ |
+| Promise&lt;OverlayModuleInfo&gt; | Promise对象，返回 [OverlayModuleInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
-| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
-| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700002 | The specified module name is not found. |
+| 17700032 | The specified bundle does not contain any overlay module. |
+| 17700033 | The specified module is not an overlay module. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';

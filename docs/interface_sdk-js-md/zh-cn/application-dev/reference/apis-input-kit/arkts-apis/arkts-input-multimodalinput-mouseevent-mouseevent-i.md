@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
+```
+
 ## action
 
 ```TypeScript
@@ -20,7 +26,7 @@ action: Action
 
 鼠标事件类型。
 
-**类型：** Action
+**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ action: Action
 altKey: boolean
 ```
 
-当前altKey是否处于按下状态。
+当前altKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -58,7 +64,7 @@ axes: AxisValue[]
 
 鼠标轴类型和轴的值。
 
-**类型：** AxisValue[]
+**类型：** [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md)[]
 
 **起始版本：** 9
 
@@ -76,7 +82,7 @@ button: Button
 
 鼠标按键。
 
-**类型：** Button
+**类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
 
 **起始版本：** 9
 
@@ -92,7 +98,7 @@ button: Button
 capsLock: boolean
 ```
 
-当前capsLock是否处于使能状态。
+当前capsLock是否处于使能状态。 
 
 true表示使能状态，false表示处于未使能状态。
 
@@ -112,7 +118,7 @@ true表示使能状态，false表示处于未使能状态。
 ctrlKey: boolean
 ```
 
-当前ctrlKey是否处于按下状态。
+当前ctrlKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -132,7 +138,7 @@ true表示处于按下状态，false表示处于抬起状态。
 fnKey: boolean
 ```
 
-当前fnKey是否处于按下状态。
+当前fnKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -152,10 +158,10 @@ true表示处于按下状态，false表示处于抬起状态。
 globalX?: int
 ```
 
-该鼠标事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_作为入参时，若接口参数中的  
-[MouseEventData.useGlobalCoordinate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_作为出参时，由系统上报。
+该鼠标事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
+[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -171,10 +177,10 @@ globalX?: int
 globalY?: int
 ```
 
-该鼠标事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_作为入参时，若接口参数中的  
-[MouseEventData.useGlobalCoordinate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_作为出参时，由系统上报。
+该鼠标事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
+[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -190,7 +196,7 @@ globalY?: int
 logoKey: boolean
 ```
 
-当前logoKey是否处于按下状态。
+当前logoKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -210,7 +216,7 @@ true表示处于按下状态，false表示处于抬起状态。
 numLock: boolean
 ```
 
-当前numLock是否处于使能状态。
+当前numLock是否处于使能状态。 
 
 true表示使能状态，false表示处于未使能状态。
 
@@ -232,7 +238,7 @@ pressedButtons: Button[]
 
 当前处于按下状态的鼠标按键。
 
-**类型：** Button[]
+**类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)[]
 
 **起始版本：** 9
 
@@ -250,7 +256,7 @@ pressedKeys: KeyCode[]
 
 当前处于按下状态的键值列表。
 
-**类型：** KeyCode[]
+**类型：** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)[]
 
 **起始版本：** 9
 
@@ -268,7 +274,7 @@ rawDeltaX: int
 
 鼠标当前事件相对于上次事件的X坐标偏移值。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -286,7 +292,7 @@ rawDeltaY: int
 
 鼠标当前事件相对于上次事件的Y坐标偏移值。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -304,7 +310,7 @@ screenX: int
 
 该鼠标事件以指定屏幕左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -322,7 +328,7 @@ screenY: int
 
 该鼠标事件以指定屏幕左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -338,7 +344,7 @@ screenY: int
 scrollLock: boolean
 ```
 
-当前scrollLock是否处于使能状态。
+当前scrollLock是否处于使能状态。 
 
 true表示使能状态，false表示处于未使能状态。
 
@@ -358,7 +364,7 @@ true表示使能状态，false表示处于未使能状态。
 shiftKey: boolean
 ```
 
-当前shiftKey是否处于按下状态。
+当前shiftKey是否处于按下状态。 
 
 true表示处于按下状态，false表示处于抬起状态。
 
@@ -380,7 +386,7 @@ toolType: ToolType
 
 工具类型。
 
-**类型：** ToolType
+**类型：** [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md)
 
 **起始版本：** 11
 
@@ -398,7 +404,7 @@ windowX: int
 
 鼠标所在窗口左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -416,7 +422,7 @@ windowY: int
 
 鼠标所在窗口左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

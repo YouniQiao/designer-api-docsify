@@ -1,8 +1,8 @@
 # CompletionHandler
 
-CompletionHandler provides two callback functions,  
-[onRequestSuccess]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[onRequestFailure]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, to handle the results of successful and failed application launch requests, respectively.
+CompletionHandler提供了  
+[onRequestSuccess](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestsuccess)和  
+[onRequestFailure](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestfailure)两个回调函数，分别用来处理拉起应用成功和失败时的结果。
 
 **Since:** 20
 
@@ -12,13 +12,19 @@ CompletionHandler provides two callback functions,
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { CompletionHandler } from 'kits/@kit.AbilityKit';
+```
+
 ## onRequestFailure
 
 ```TypeScript
 onRequestFailure(elementName: ElementName, message: string): void
 ```
 
-Called when the application fails to be launched.
+拉起应用失败时的回调函数。
 
 **Since:** 20
 
@@ -36,10 +42,10 @@ Called when the application fails to be launched.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ElementName** information used to identify the target application.  - Typically, **ElementName** includes only **abilityName** and **bundleName**. The presence of **moduleName** and **deviceId** depends on whether the caller provides them. **shortName** and **uri** are empty.  - **ElementName** information cannot be obtained if the implicit startup fails. |
-| message | string | Yes | Message displayed when the application fails to be launched. This message is in JSON format, as follows:  {  ?"errMsg": "xxx"  }  The value of *xxx* is described as follows:  Failed to call &lt;api-name&gt;: An error occurs when calling the API. &lt;api-name&gt; is the specific API name, for example, **startAbility**.  User refused redirection: The user has closed the application redirection dialog box.  User closed the implicit startup picker: The user has closed the dialog box for selecting an application for implicit startup.  User closed the app clone picker: The user has closed the dialog box for selecting a cloned application.  Free installation failed: The free installation fails. |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | ElementName信息用于标识被拉起应用。  - 通常，ElementName仅包含abilityName和bundleName。moduleName和deviceId信息是否存在取决于调用方是否传入。shortName和uri为空。  - 隐式启动失败时，无法获取ElementName信息。 |
+| message | string | Yes | 拉起应用失败时的信息。该信息采用JSON格式，样式如下：  {  ?"errMsg": "xxx"  }  其中，"xxx"的取值说明如下：  Failed to call &lt;api-name&gt;：表示调用接口出错。其中，&lt;api-name&gt;为具体的接口名，比如startAbility。  User refused redirection：表示用户关闭了应用跳转弹框。  User closed the implicit startup picker：表示用户关闭了隐式启动时的应用选择弹框。  User closed the app clone picker：表示用户关闭了分身应用选择弹框。  Free installation failed：表示免安装失败。 |
 
-**Example**
+## Examples
 
 See [Usage of CompletionHandler](#usage-of-completionhandler).
 
@@ -49,7 +55,7 @@ See [Usage of CompletionHandler](#usage-of-completionhandler).
 onRequestFailure: OnRequestFailureFn
 ```
 
-Notify the failure result of startAbility.
+拉端失败时的回调函数。
 
 **Since:** 23
 
@@ -67,7 +73,7 @@ Notify the failure result of startAbility.
 onRequestSuccess(elementName: ElementName, message: string): void
 ```
 
-Called when the application is successfully launched.
+拉起应用成功时的回调函数。
 
 **Since:** 20
 
@@ -85,10 +91,10 @@ Called when the application is successfully launched.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ElementName** information used to identify the target application. Typically, **ElementName** includes only **abilityName** and **bundleName**. The presence of **moduleName** and **deviceId** depends on whether the caller provides them. **shortName** and **uri** are empty. |
-| message | string | Yes | Message displayed when the application is successfully launched. This message is in JSON format, as follows:  {  ?"errMsg": "Succeeded."  } |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | ElementName信息用于标识被拉起应用。通常，ElementName仅包含abilityName和bundleName。moduleName和deviceId信 息是否存在取决于调用方是否传入。shortName和uri为空。 |
+| message | string | Yes | 成功拉起应用时的信息。该信息采用JSON格式，样式如下：  {  ?"errMsg": "Succeeded."  } |
 
-**Example**
+## Examples
 
 See [Usage of CompletionHandler](#usage-of-completionhandler).
 
@@ -98,7 +104,7 @@ See [Usage of CompletionHandler](#usage-of-completionhandler).
 onRequestSuccess: OnRequestSuccessFn
 ```
 
-Notify the success result of startAbility.
+拉端成功时的回调函数。
 
 **Since:** 23
 

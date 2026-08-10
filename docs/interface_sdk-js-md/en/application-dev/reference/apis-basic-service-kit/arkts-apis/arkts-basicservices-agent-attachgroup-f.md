@@ -1,14 +1,20 @@
 # attachGroup
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## attachGroup
 
 ```TypeScript
 function attachGroup(gid: string, tids: string[]): Promise<void>
 ```
 
-Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result.
+向指定分组id中绑定多个下载任务id。使用Promise异步回调。
 
-If any task ID does not meet the attachment conditions, all tasks in the list will not be added to the group.
+如果任意一个任务id不满足添加条件，则所有列表中的任务都不会添加到分组中。
 
 **Since:** 15
 
@@ -22,23 +28,23 @@ If any task ID does not meet the attachment conditions, all tasks in the list wi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gid | string | Yes | Target group ID. |
-| tids | string[] | Yes | List of task IDs to attach. |
+| gid | string | Yes | 目标分组id。 |
+| tids | string[] | Yes | 待绑定的任务id列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode. |
-| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
-| [21900008](../../apis-basic-services-kit/errorcode-request.md#21900008-task-group-not-found-or-deleted) | Group deleted or not found. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| 21900008 | Group deleted or not found. |
+| 21900006 | Task removed or not found. |
+| 21900007 | Operation with wrong task state. |
+| 21900005 | Operation with wrong task mode. |
+| 13400003 | Task service ability error. |
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## negativePitchMax
 
 ```TypeScript
@@ -20,7 +26,7 @@ negativePitchMax: double
 
 Maximum pitch rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians.If the value is less than or equal to -2*Math.PI, there is no restriction.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -40,7 +46,7 @@ negativeRollMax: double
 
 Maximum roll rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians.If the value is less than or equal to -2*Math.PI, there is no restriction.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -60,7 +66,7 @@ negativeYawMax: double
 
 Maximum yaw rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians.If the value is less than or equal to -2*Math.PI, there is no restriction.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -80,7 +86,7 @@ positivePitchMax: double
 
 Maximum pitch rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians.If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -100,7 +106,7 @@ positiveRollMax: double
 
 Maximum roll rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians.If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -120,7 +126,7 @@ positiveYawMax: double
 
 Maximum yaw rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians.If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 

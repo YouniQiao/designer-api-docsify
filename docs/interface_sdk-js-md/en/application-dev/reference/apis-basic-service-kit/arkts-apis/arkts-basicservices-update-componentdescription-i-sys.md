@@ -1,6 +1,6 @@
 # ComponentDescription (System API)
 
-Represents a component description file.
+组件描述文件。
 
 **Since:** 9
 
@@ -12,19 +12,23 @@ Represents a component description file.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## componentId
 
 ```TypeScript
 componentId: string
 ```
 
-Component ID, which uniquely identifies a component in the upgrade package.
+组件标识，用于唯一标识升级包中的组件。
 
-Use scenarios: Pass this parameter to obtain the description of the corresponding component when calling  
-**getNewVersionDescription**. Use this parameter to distinguish different components when displaying version details.
+使用场景：在获取版本描述信息(getNewVersionDescription)时需要传入componentId以获取对应组件的描述内容；在展示版本详情时可通过componentId区分不同组件。
 
-How to obtain: Obtain the value of **componentId** of the corresponding component from the **versionComponents**  
-array in the version check result.
+获取方式：从版本检查结果的versionComponents数组中获取对应组件的componentId字段。
 
 **Type:** string
 
@@ -44,9 +48,9 @@ array in the version check result.
 descriptionInfo: DescriptionInfo
 ```
 
-Information about the description file.
+描述文件信息。
 
-**Type:** DescriptionInfo
+**Type:** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
 **Since:** 9
 

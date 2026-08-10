@@ -1,6 +1,6 @@
 # TextBaseController
 
-Defines a text selection controller.
+文本选择控制器。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines a text selection controller.
 closeSelectionMenu(): void
 ```
 
-Closes the custom or default text selection menu.
+关闭自定义选择菜单或系统默认选择菜单。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Closes the custom or default text selection menu.
 getLayoutManager(): LayoutManager
 ```
 
-Obtains a **LayoutManager** object.
+获取布局管理器对象。
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ Obtains a **LayoutManager** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Layout manager object. |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象，用于获取文本布局信息，如行数、行度量、字形位置等。 |
 
 ## setSelection
 
@@ -62,17 +62,17 @@ Obtains a **LayoutManager** object.
 setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void
 ```
 
-Sets the range of content selection. The selected content is highlighted.
+支持设置组件内的内容选中，选中部分背板高亮。
 
-If both **selectionStart** and **selectionEnd** are set to **-1**, the entire content is selected.
+selectionStart和selectionEnd均为-1时表示全选。
 
-The component must be focused for the API call to have effect.
+未获焦时调用该接口不产生选中效果。
 
-Since API version 12, on 2-in-1 devices, regardless of the value of **options**, calling the **setSelection** API will not display a menu; if a menu is already open, calling the API will close it.
+从API version 12开始，在PC/2in1设备中，无论options取何值，调用setSelection接口都不会弹出菜单，此外，如果组件中已经存在菜单，调用setSelection接口会关闭菜单。
 
-On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the following rules apply after the API is called:
+在非2in1设备中，options取值为MenuPolicy.DEFAULT时，遵循以下规则：
 
-1. If the component has a menu with a selection handle,the menu remains open and is relocated according to the selection.2. If the component has a menu without a selection handle,the menu remains open and its position remains unchanged.3. If there is no menu open, no menu will appear after the selection.
+1. 组件内有手柄菜单时，接口调用后不关闭菜单，并且调整菜单位置。2. 组件内有不带手柄的菜单时，接口调用后不关闭菜单，并且菜单位置不变。3. 组件内无菜单时，接口调用后也无菜单显示。
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Start position of the selection.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Values less than 0 are treated as **0**. |
-| selectionEnd | number | Yes | End position of the selection.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value exceeds the text length, the current text length is used instead. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Configuration of options. The default value is inherited from [SelectionOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| selectionStart | number | Yes | 选中开始位置。 &lt;br&gt;取值小于0时，按0处理。取值大于文本长度时，按当前文本长度处理。 &lt;br&gt;特殊取值效果：当selectionStart和selectionEnd均为-1时，表示全选。 |
+| selectionEnd | number | Yes | 选中结束位置。 &lt;br&gt;取值小于0时，按0处理。取值大于文本长度时，按当前文本长度处理。 &lt;br&gt;特殊取值效果：当selectionStart和selectionEnd均为-1时，表示全选。 |
+| options | [SelectionOptions](arkts-arkui-common-selectionoptions-i.md) | No | 选择项配置。 默认值继承[SelectionOptions](arkts-arkui-common-selectionoptions-i.md)。 |
 

@@ -1,12 +1,18 @@
 # setDisposedRules (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appControl } from 'kits/@kit.AbilityKit';
+```
+
 ## setDisposedRules
 
 ```TypeScript
 function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfiguration>): void
 ```
 
-Sets disposed rules in batches for an application or an application clone.
+批量设置指定应用或分身应用的拦截规则。
 
 **Since:** 20
 
@@ -24,19 +30,19 @@ Sets disposed rules in batches for an application or an application clone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disposedRuleConfigurations | Array&lt;DisposedRuleConfiguration&gt; | Yes | Configuration for the disposed rules in batches, including the appId of the target application, the index of the application clone, and the rules themselves. The maximum number of disposed rules in an array is 1000.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. If multiple **DisposedRuleConfiguration** entries in the array have the same appId and appIndex, the later entry will overwrite the earlier one.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. If an application has already set disposed rules, re-setting the rules will replace the existing ones. Identical appId and appIndex values indicate the same application instance. |
+| disposedRuleConfigurations | Array&lt;DisposedRuleConfiguration&gt; | Yes | 表示批量设置拦截规则的配置，包括待拦截应用的appId、分身应用索引及拦截规则。每次 设置拦截规则的数组的最大数量为1000。&lt;br/&gt;**说明：**&lt;br/&gt;1.如果数组中存在appId和appIndex相同的DisposedRuleConfiguration时，后面的 DisposedRuleConfiguration会覆盖前面的。&lt;br/&gt;2.如果应用已设置过拦截规则，重新为该应用设置拦截规则，会覆盖之前的。appId和appIndex一致则表示同一应用。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is invalid. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex is not in the valid range. |
+| 801 | Capability not supported. |
+| 17700061 | AppIndex is not in the valid range. |
+| 201 | Permission denied. |
+| 202 | Permission denied. A non-system application is not allowed to call a system API. |
+| 17700005 | The specified app ID is invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

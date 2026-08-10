@@ -14,6 +14,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## freq
 
 ```TypeScript
@@ -22,7 +28,7 @@ freq: ExchangeFreq
 
 发现频率。
 
-**类型：** ExchangeFreq
+**类型：** [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)
 
 **起始版本：** 9
 
@@ -44,7 +50,7 @@ mode: DiscoverMode
 
 发现模式。
 
-**类型：** DiscoverMode
+**类型：** [DiscoverMode](arkts-distributedservice-devicemanager-discovermode-e-sys.md)
 
 **起始版本：** 9
 

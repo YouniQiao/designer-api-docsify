@@ -18,7 +18,7 @@ springBack: Callback<void>
 
 半模态页面关闭前控制回弹函数，开发者需要半模态回弹时调用。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 12
 

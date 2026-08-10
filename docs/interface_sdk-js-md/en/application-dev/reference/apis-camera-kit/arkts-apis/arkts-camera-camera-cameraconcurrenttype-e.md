@@ -1,6 +1,6 @@
 # CameraConcurrentType
 
-Enumerates the camera concurrency types.
+枚举，镜头并发类型。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the camera concurrency types.
 CAMERA_FULL_CAPABILITY = 1
 ```
 
-Full camera concurrency.
+镜头全量能力并发。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Full camera concurrency.
 CAMERA_LIMITED_CAPABILITY = 0
 ```
 
-Limited camera concurrency.
+镜头受限能力并发。
 
 **Since:** 18
 

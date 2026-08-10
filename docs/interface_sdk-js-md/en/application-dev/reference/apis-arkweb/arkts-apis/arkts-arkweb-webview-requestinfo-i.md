@@ -10,6 +10,12 @@ Defines the Web's request info.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## formData
 
 ```TypeScript

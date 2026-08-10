@@ -1,12 +1,18 @@
 # getSystemRegion
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getSystemRegion
 
 ```TypeScript
 export function getSystemRegion(): string
 ```
 
-Obtains the system region.
+获取系统地区。
 
 **Since:** 7
 
@@ -24,5 +30,5 @@ Obtains the system region.
 
 | Type | Description |
 | --- | --- |
-| string | System region ID. |
+| string | 系统地区ID。 |
 

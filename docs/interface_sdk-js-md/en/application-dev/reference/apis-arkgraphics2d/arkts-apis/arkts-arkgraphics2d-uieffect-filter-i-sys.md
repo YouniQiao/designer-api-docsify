@@ -1,6 +1,6 @@
 # Filter
 
-Filter effect class, used to apply corresponding effects to specified components.Before calling Filter methods, you need to first create a Filter instance through createFilter.
+Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter)创建一个Filter实例。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Filter effect class, used to apply corresponding effects to specified components
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## bezierWarp
 
 ```TypeScript
 bezierWarp(controlPoints: Array<common2D.Point>): Filter
 ```
 
-Adds a Bezier curve deformation effect to the component. This effect achieves precise distortion and shape adjustment of the image by creating closed Bezier curves at the layer boundary.There are four Bezier curve segments, connected head to tail in sequence, with each segment containing one vertex and two tangent points. Typical application scenarios include face deformation effects,card perspective distortion, etc.
+将贝塞尔曲线变形的效果添加至组件上。该效果通过在图层边界上创建封闭的贝塞尔曲线，实现对图像的精准扭曲和形状调整。贝塞尔曲线共有四段，首尾顺次相连，每段包含一个顶点和两个切点。典型应用场景包括人脸形变特效、卡片透视变形等。
 
 **Since:** 20
 
@@ -32,21 +38,21 @@ Adds a Bezier curve deformation effect to the component. This effect achieves pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlPoints | Array&lt;common2D.Point&gt; | Yes | 12 Bezier deformation control points. The array length must be 12. Changing the positions of the control points changes the shape of the curves forming the edges, thereby distorting the image. The control point coordinates use a normalized coordinate system (default range [0, 1]), and coordinate values can be greater than 1 or less than 0. If the array length is not 12, the effect will not take effect. |
+| controlPoints | Array&lt;common2D.Point&gt; | Yes | 12个贝塞尔形变控制点，数组长度必须为12， 更改控制点的位置可改变形成边缘的曲线形状，从而扭曲图像。控制点坐标使用归一化坐标系 （默认范围为[0, 1]），且坐标值可大于1或小于0。数组长度不为12时效果不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the Bezier curve deformation effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了贝塞尔曲线变形效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common2D, uiEffect } from '@kit.ArkGraphics2D'
@@ -63,6 +69,7 @@ struct BezierWarpExample {
   build() {
     Column() {
       Image($rawfile('test.jpg'))
+        // Add the Bezier curve deformation effect to the component.
         .foregroundFilter(uiEffect.createFilter().bezierWarp(this.valueBezier))
     }
   }
@@ -75,7 +82,7 @@ struct BezierWarpExample {
 blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter
 ```
 
-Applies a blur bubbles rise effect to the image, simulating a dreamy, bubbly distortion similar to rising bubbles in liquid.
+应用模糊气泡上升效果到图像，模拟气泡在液体中上升的梦幻模糊扭曲效果。
 
 **Since:** 26.0.0
 
@@ -93,13 +100,65 @@ Applies a blur bubbles rise effect to the image, simulating a dreamy, bubbly dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The blur bubbles rise effect parameters. |
+| param | [BlurBubblesRiseEffectParam](arkts-arkgraphics2d-uieffect-blurbubblesriseeffectparam-i-sys.md) | Yes | 模糊气泡上升效果的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the blur bubbles rise effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回模糊气泡上升滤镜。 |
+
+## Examples
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+import { image } from '@kit.ImageKit';
+
+@Entry
+@Component
+struct BlurBubblesRiseExample {
+  private context: Context | undefined = this.getUIContext().getHostContext();
+  @State blurIntensity: number = 0.8;
+  @State mixStrength: number = 0.6;
+  @State progress: number = 0.5;
+  @State maskImage: image.PixelMap | null = null;
+
+  aboutToAppear() {
+    if (this.context) {
+      this.getImagePixelMap(this.context)
+    }
+  }
+
+  getImagePixelMap(context: Context) {
+    let resourceMgr = context.resourceManager;
+    resourceMgr?.getMediaContent($r('app.media.drawBlurMask').id)
+      .then((val: Uint8Array) => {
+        let buffer: ArrayBuffer = val.buffer.slice(0, val.buffer.byteLength)
+        let imageSource: image.ImageSource = image.createImageSource(buffer);
+        imageSource.createPixelMap().then((pixelmap: image.PixelMap) => {
+          this.maskImage = pixelmap as PixelMap;
+        })
+      })
+  }
+
+  build() {
+    Stack() {
+      Image($r('app.media.test'))
+        .width('100%')
+        .height('100%')
+        // Apply the blur bubbles rise effect to the image, simulating the dreamy blur distortion effect of bubbles rising in liquid.
+        .foregroundFilter(uiEffect.createFilter().blurBubblesRise({
+          blurIntensity: this.blurIntensity,
+          mixStrength: this.mixStrength,
+          progress: this.progress,
+          maskImage: this.maskImage
+        }))
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## colorGradient
 
@@ -115,7 +174,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
         alphaMask?: Mask): Filter
 ```
 
-Adds a color gradient effect to the component content.
+为组件内容添加颜色渐变效果。
 
 **Since:** 20
 
@@ -131,48 +190,49 @@ Adds a color gradient effect to the component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
-| positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the distribution positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
-| strengths | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | The strength array, corresponding to the diffusion strength of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
-| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The mask that controls the transparency distribution of the gradient effect. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
+| colors | Array&lt;Color&gt; | Yes | 颜色数组，多个颜色的渐变。数组长度取值范围为[0, 12], 每一个颜色值取值范围需大于等于0。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
+| positions | Array&lt;common2D.Point&gt; | Yes | 位置数组，颜色对应的分布位置。数组长度取值范围为[0, 12]。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
+| strengths | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | 强度数组，颜色对应的扩散强度。数组长度取值范围为[0, 12], 每一个强度值取值范围需大于等于0。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
+| alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | 控制渐变效果透明度分布的遮罩。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制颜色渐变效果的 透明度分布（如局部透明或动态透明效果）时传入此参数。不设置时，颜色渐变效果的透明度 完全由colors参数决定。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the color gradient effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了颜色渐变效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { common2D, uiEffect } from "@kit.ArkGraphics2D"
+import { common2D, uiEffect } from '@kit.ArkGraphics2D'
 
 @Entry
 @Component
 struct ColorGradientExample {
-  @State colorsExample: Array<uiEffect.Color> = [
+  @State gradientColors: Array<uiEffect.Color> = [
     {red: 1.0, green: 0.8, blue: 0.5, alpha: 0.8},
     {red: 1.0, green: 1.5, blue: 0.5, alpha: 1.0}
   ]
 
-  @State positionsExample: Array<common2D.Point> = [
+  @State gradientPositions: Array<common2D.Point> = [
     {x: 0.2, y: 0.2},
     {x: 0.8, y: 0.6}]
 
-  @State strengthsExample: Array<number> = [0.3, 0.3]
+  @State gradientStrengths: Array<number> = [0.3, 0.3]
 
   build() {
     Column() {
       Row()
         .width("100%")
         .height("100%")
-        .backgroundFilter(uiEffect.createFilter().colorGradient(this.colorsExample, this.positionsExample, this.strengthsExample))
+        // Add a color gradient effect to the component content.
+        .backgroundFilter(uiEffect.createFilter().colorGradient(this.gradientColors, this.gradientPositions, this.gradientStrengths))
     }
   }
 }
@@ -192,7 +252,7 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
       displacementMap?: Mask): Filter
 ```
 
-Adds a 3D lighting effect to the component content.
+为组件内容添加3D光照效果。
 
 **Since:** 20
 
@@ -208,24 +268,24 @@ Adds a 3D lighting effect to the component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | Yes | The position of the light source in the component space. [-1, -1, 0] is the top-left corner of the component, [1, 1, 0] is the bottom-right corner of the component. The larger the z-axis component, the farther the light source is from the component plane, and the larger the illuminated area. The x component range is [-10, 10], the y component range is [-10, 10], and the z component range is [0, 10]. Values outside the range will be automatically clamped. |
-| lightColor | common2D.Color | Yes | The color of the light source. The RGBA components range from [0, 1]. Values outside the range will be automatically clamped. |
-| lightIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The intensity of the light source. The value range is [0, 1]. A larger value indicates a brighter light source. Values outside the range will be automatically clamped. |
-| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The displacement map parameter. This parameter is not currently effective and is not recommended to be passed in. Not setting it has no effect on the functionality. |
+| lightPosition | common2D.Point3d | Yes | 光源在组件空间的位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角， z轴分量越大光源离组件平面越远，可照射区域越大。 x分量取值范围为[-10, 10]，y分量取值范围为[-10, 10]，z分量取值范围为[0, 10]，超出范围会自动截断。 |
+| lightColor | common2D.Color | Yes | 光源颜色，RGBA各分量取值范围为[0, 1]，超出范围会自动截断。 |
+| lightIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 光源强度，取值范围为[0, 1]，数值越大光源亮度越大，超出范围会自动截断。 |
+| displacementMap | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | 置换贴图参数，该参数暂不生效，不建议传入。不设置时对功能无影响。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the content lighting effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回了具有内容光照效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common2D, uiEffect } from '@kit.ArkGraphics2D'
@@ -233,16 +293,16 @@ import { common2D, uiEffect } from '@kit.ArkGraphics2D'
 @Entry
 @Component
 struct Index {
-  @State point2: common2D.Point3d = {
+  @State contentLightPosition: common2D.Point3d = {
     x: 0, y: 0, z: 2
   }
-  @State color2: common2D.Color = {
+  @State contentLightColor: common2D.Color = {
     red: 1,
     green: 1,
     blue: 1,
     alpha: 1
   }
-  @State lightIntensity2: number = 1
+  @State lightIntensity: number = 1
 
   build() {
     Column() {
@@ -251,7 +311,8 @@ struct Index {
           .width('646px')
           .height('900px')
           .borderRadius(10)
-          .foregroundFilter(uiEffect.createFilter().contentLight(this.point2, this.color2, this.lightIntensity2))
+          // Add 3D lighting effect to the component content.
+          .foregroundFilter(uiEffect.createFilter().contentLight(this.contentLightPosition, this.contentLightColor, this.lightIntensity))
       }
       .width('100%')
       .height('55%')
@@ -276,7 +337,7 @@ ArkTS-Sta:
 directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter
 ```
 
-Provides a Mask-based and directional light lighting effect for the component content.Directional light illuminates the component plane from a uniform direction, with all light rays in the same direction, not attenuating with distance, and the light intensity is evenly distributed across the component,suitable for simulating distant light sources such as sunlight. Unlike the point light source of contentLight,directional light does not need to specify the specific position of the light source.Through the Mask, you can control lighting details, and through the factor, you can combine height maps to enhance the relief effect.
+为组件内容提供基于Mask和平行光的光照效果。平行光从统一方向照射组件平面，所有光线方向一致， 不因距离衰减，光照强度在组件各处均匀分布，适合模拟太阳光等远距离光源场景。 与contentLight的点光源不同，平行光无需指定光源具体位置。通过Mask可控制光照细节， 通过factor可结合高度图增强浮雕效果。
 
 **Since:** 20
 
@@ -292,25 +353,25 @@ Provides a Mask-based and directional light lighting effect for the component co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | common2D.Point3d | Yes | The direction of the incident light, represented by three-dimensional coordinates indicating the direction of the light rays. |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The light color. |
-| intensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The light intensity. The value range is [0, +∞). A larger value indicates a brighter light source. |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The displacement map, used to describe the three-dimensional details of the two-dimensional image surface. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to enhance local details and lighting reflection effects (such as relief, bump textures). Implemented through normal maps or height maps; if a height map is input, it needs to be used with the factor parameter. If not set, the default is empty, resulting in a global flat lighting effect without details. |
-| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | The sampling scale coefficient. Pass this parameter when using a height map as the mask and needing to control the height scaling. If not set, the mask is sampled directly as a normal map; if a value is set, the mask is sampled as a height map, and the actual height value is the product of the mask sampling value and the factor. |
+| direction | common2D.Point3d | Yes | 入射光的方向，通过三维坐标表示光线的入射方向。 |
+| color | [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Yes | 光照颜色。 |
+| intensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 光照强度，取值范围为[0, +∞)，数值越大光源亮度越大。 |
+| mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | 置换贴图，用于描述二维图像表面的三维细节。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。 当需要增强局部细节和光照反射效果（如浮雕、凹凸纹理）时传入此参数。通过法线或高度图实现，若输入为高度图需与factor参数配合使用。 不设置时默认为空，表现为全局无细节的平面光照效果。 |
+| factor | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 采样缩放系数。当使用高度图作为mask且需要控制高度缩放时传入此参数。不设置时mask作为法线图采样直接使用； 设置了值时mask作为高度图采样，实际高度值为mask采样值与factor的乘积。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the lighting effect controlled by the displacement map attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了由置换贴图控制的光照效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uiEffect, common2D } from "@kit.ArkGraphics2D";
@@ -331,6 +392,7 @@ struct Index {
           .width("100%")
           .height("100%")
           .backgroundColor(this.color)
+          // Provide a lighting effect based on mask and parallel light for the component content.
           .backgroundFilter(uiEffect.createFilter()
             .directionLight(
               {x:0, y:0, z:-1}, {red:2.0, green:2.0, blue:2.0, alpha:1.0}, 0.5,
@@ -359,7 +421,7 @@ ArkTS-Sta:
 displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter
 ```
 
-Adds a distortion effect to the component content.
+为组件内容添加扭曲效果。
 
 **Since:** 20
 
@@ -375,30 +437,30 @@ Adds a distortion effect to the component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The displacement map, used to control the direction and intensity of distortion. A Mask instance can be created through Mask creation methods (such as createRippleMask, createPixelMapMask, etc.). It works together with the factor to determine the degree of distortion. |
-| factor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No | Specifies the horizontal and vertical distortion intensity coefficients. Pass this parameter when you need to control the direction and intensity of distortion (such as one-way distortion or differential distortion). The larger the absolute value of the coefficient, the more obvious the distortion. The recommended value range is [-10.0, 10.0]. If not set, the default value is [1.0, 1.0], indicating that both horizontal and vertical directions apply the default distortion intensity. Setting it to [0.0, 0.0] results in no distortion effect. The grayscale value of the Mask controls the direction and intensity of distortion, and the factor multiplied by the Mask grayscale value jointly determines the final distortion degree, i.e., actual distortion value = Mask grayscale value × factor value. |
+| displacementMap | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Yes | 置换贴图，用于控制扭曲的方向和强度。可通过Mask类的创建方法 （如createRippleMask、createPixelMapMask等）创建Mask实例。与factor相乘后共同决定扭曲程度。 |
+| factor | ArkTS-Dyn: [number, number]  <br>ArkTS-Sta：[double, double] | No | 指定水平、竖直方向扭曲程度系数。当需要控制扭曲的方向和强度 （如单向扭曲或差异扭曲）时传入此参数。系数的绝对值越大，扭曲程度越明显，建议取值范围为 [-10.0, 10.0]。不设置时默认值为[1.0, 1.0]，表示水平和竖直方向均应用默认扭曲强度。 设置为[0.0, 0.0]时，无扭曲效果。Mask的灰度值控制扭曲的方向和强度，factor与Mask灰度值 相乘后共同决定最终的扭曲程度，即实际扭曲值 = Mask灰度值 × factor值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the distortion effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了扭曲效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { uiEffect } from "@kit.ArkGraphics2D"
+import { uiEffect } from '@kit.ArkGraphics2D'
 
 @Entry
 @Component
 struct DisplacementDistortExample {
-  @State maskExample: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.3, 0.0)
+  @State distortMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.3, 0.0)
   
   build() {
     Stack() {
@@ -406,7 +468,8 @@ struct DisplacementDistortExample {
       Row()  
         .width("100%")
         .height("100%")
-        .backgroundFilter(uiEffect.createFilter().displacementDistort(this.maskExample, [5.0, 5.0]))
+        // Add a distortion effect to the component content.
+        .backgroundFilter(uiEffect.createFilter().displacementDistort(this.distortMask, [5.0, 5.0]))
     }
   }
 }
@@ -424,7 +487,7 @@ ArkTS-Sta:
 distort(distortionK: double): Filter
 ```
 
-Adds a lens distortion effect to the component.
+将透镜畸变效果添加至组件上。
 
 **Since:** 13
 
@@ -440,23 +503,25 @@ Adds a lens distortion effect to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distortionK | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The distortion coefficient, indicating the degree of lens distortion. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. When the distortion coefficient is less than 0, the effect is barrel distortion; when greater than 0, the effect is pincushion distortion. The closer the value is to 0, the smaller the distortion; when the value is 0, there is no distortion effect. |
+| distortionK | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 畸变系数，表示透镜畸变的程度，取值范围为[-1, 1]。 畸变系数设置小于-1的值时，按值为-1处理；设置大于1的值时，按值为1处理。 畸变系数小于0时，效果为桶形畸变；大于0时，效果为枕形畸变； 越接近0时，畸变程度越小，等于0时，没有畸变效果。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the lens distortion effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了透镜畸变效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+// Add the lens distortion effect to the component.
+let filter = uiEffect.createFilter()
 filter.distort(-0.5)
 ```
 
@@ -472,7 +537,7 @@ ArkTS-Sta:
 edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter
 ```
 
-Detects edges of the component content and adds an edge highlight effect.This effect automatically detects the edge contours of the component content and overlays a highlight stroke.
+为组件内容检测边缘，并添加边缘高亮效果。该效果自动检测组件内容的边缘轮廓并叠加高亮描边。
 
 **Since:** 20
 
@@ -488,34 +553,34 @@ Detects edges of the component content and adds an edge highlight effect.This ef
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Specifies the stroke highlight transparency. A larger value makes the stroke more obvious. The value range is [0, 1]. Setting it to 0 results in no stroke; values less than 0 are treated as 0; values greater than 1 are treated as 1. |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Specifies the stroke highlight color. The RGB components range from [0, +∞). Pass this parameter when you need to customize the stroke highlight color (such as emphasizing a specific color effect). If not set, the original color of the component content is used by default. When the color parameter is set, the alpha in Color does not take effect; only RGB is used. |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Specifies the stroke highlight intensity mask. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the area of the stroke highlight effect (such as local highlight instead of global highlight). If not set, the entire component content has the stroke highlight effect by default. |
-| bloom | boolean | No | Specifies whether the stroke has a bloom effect. Set to true when you need to enhance the visual effect; set to false when you need a simple stroke effect. The default value is true (with bloom effect). For images smaller than 16x16, there is only a stroke effect by default, no bloom effect, and this parameter has no effect. |
+| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 指定描边高光透明度，越大描边越明显。取值范围为[0, 1]。 设置为0时无描边；设置小于0的值时，按值为0处理；设置大于1的值时，按值为1处理。 |
+| color | [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | No | 指定描边高光颜色，RGB各分量取值范围为[0, +∞)。 当需要自定义描边高光颜色（如强调特定颜色效果）时传入此参数。不设置时， 默认使用组件内容的原始颜色。设置了color参数时，Color中的alpha不发挥作用，仅使用rgb。 |
+| mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | 指定描边高光强度遮罩。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制描边高光效果的 作用区域（如局部高光而非全局高光）时传入此参数。不设置时，默认组件内容全部有描边高光效果。 |
+| bloom | boolean | No | 指定描边是否发光。当需要增强视觉效果时设置为true； 当需要简洁描边效果时设置为false。不设置时默认为true（带发光效果）。 小于16*16的图片默认只有描边效果，无发光效果，此参数失去作用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the edge highlight effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了描边高光效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { uiEffect } from "@kit.ArkGraphics2D"
+import { uiEffect } from '@kit.ArkGraphics2D'
 
 @Entry
 @Component
 struct EdgeLightExample {
-  @State colorExample: uiEffect.Color = {red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0}
+  @State edgeLightColor: uiEffect.Color = {red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0}
   
-  @State maskExample: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.5, 0.5)
+  @State edgeLightMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.5, 0.5)
   
   build() {
     Stack() {
@@ -523,7 +588,8 @@ struct EdgeLightExample {
       Row()  
         .width("100%")
         .height("100%")
-        .backgroundFilter(uiEffect.createFilter().edgeLight(1.0, this.colorExample, this.maskExample, false))
+        // Detect edges for the component content and add an edge highlighting effect.
+        .backgroundFilter(uiEffect.createFilter().edgeLight(1.0, this.edgeLightColor, this.edgeLightMask, false))
     }
   }
 }
@@ -541,7 +607,7 @@ ArkTS-Sta:
 flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter
 ```
 
-Adds a fly-in or fly-out deformation effect to the component.Typical application scenarios include page transition animations, window entry/exit animations,dialog pop-up animations, list item entry/exit animations, etc.
+将飞入飞出形变效果添加至组件上。典型应用场景包括页面切换动画、窗口进出动画、对话框弹出动画、列表项进出动画等。
 
 **Since:** 12
 
@@ -557,24 +623,26 @@ Adds a fly-in or fly-out deformation effect to the component.Typical application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the degree of fly-in or fly-out deformation. The value range is [0, 1]. The closer the value is to 1, the more obvious the deformation. Values outside the range will not produce a deformation effect. |
-| flyMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The scene mode of the fly-in or fly-out effect. BOTTOM indicates the fly-in or fly-out deformation scene from the bottom of the device. TOP indicates the fly-in or fly-out deformation scene from the top of the device. |
+| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示控制飞入飞出形变的程度，取值范围为[0, 1]。 越靠近1，变形程度越明显。 超出取值范围形变不会出现效果。 |
+| flyMode | [FlyMode](arkts-arkgraphics2d-uieffect-flymode-e-sys.md) | Yes | 飞入飞出的场景模式。 BOTTOM表示从设备底部飞入飞出形变场景。 TOP表示从设备顶部飞入飞出形变场景。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the fly-in or fly-out deformation effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了飞入飞出形变效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+// Add the fly in/out transformation effect to the component.
+let filter = uiEffect.createFilter()
 filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
 ```
 
@@ -584,7 +652,7 @@ filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
 heatDistortion(param: HeatDistortionEffectParam): Filter
 ```
 
-Applies a heat distortion effect to the image, simulating the visual distortion caused by hot air flow.
+应用热浪扭曲效果到图像，模拟热空气流动产生的视觉扭曲效果。
 
 **Since:** 26.0.0
 
@@ -602,13 +670,45 @@ Applies a heat distortion effect to the image, simulating the visual distortion 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The heat distortion effect parameters. |
+| param | [HeatDistortionEffectParam](arkts-arkgraphics2d-uieffect-heatdistortioneffectparam-i-sys.md) | Yes | 热浪扭曲效果的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the heat distortion effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回添加了热浪扭曲效果的Filter。 |
+
+## Examples
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct HeatDistortionExample {
+  @State intensity: number = 0.8;
+  @State noiseScale: number = 2.0;
+  @State riseWeight: number = 0.5;
+  @State progress: number = 0.3;
+
+  build() {
+    Stack() {
+      Image($r('app.media.test'))
+        .width('100%')
+        .height('100%')
+        // Apply the heat distortion effect to the image, simulating the visual distortion caused by hot air flow.
+        .foregroundFilter(uiEffect.createFilter().heatDistortion({
+          intensity: this.intensity,
+          noiseScale: this.noiseScale,
+          riseWeight: this.riseWeight,
+          progress: this.progress
+        }))
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## maskDispersion
 
@@ -624,7 +724,7 @@ maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], g
       bFactor?: [double, double]): Filter
 ```
 
-Adds a dispersion effect controlled by a displacement map to the component content, simulating the dispersion phenomenon when light passes through a prism. Typical application scenarios include colorful effects, prism refraction simulation, etc.
+为组件内容添加由置换贴图控制的色散效果，模拟光线通过棱镜时的色散现象。典型应用场景包括炫彩特效、棱镜折射模拟等。
 
 **Since:** 20
 
@@ -640,23 +740,23 @@ Adds a dispersion effect controlled by a displacement map to the component conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dispersionMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The displacement map, used to control the intensity, direction, and transparency of dispersion. It is recommended to use a PixelMapMask-type displacement map, which allows fine-grained control over the dispersion area and intensity through custom image textures. A Mask instance can be created through the createPixelMapMask method. |
-| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The overall transparency of the dispersion effect. A smaller transparency value results in a more transparent effect. The value range is [0, 1.0]. Setting it to 0 results in no dispersion effect; values less than 0 are treated as 0; values greater than 1.0 are treated as 1.0. |
-| rFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No | The basic offset of the R channel in the X/Y direction. Pass this parameter when you need to customize the dispersion intensity and direction of the red channel. A larger offset results in a more obvious red dispersion effect. If not passed, the default value is [0.0, 0.0], meaning no R channel dispersion offset. The value range for each direction is [-1.0, 1.0], and values outside the range will be automatically clamped. |
-| gFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No | The basic offset of the G channel in the X/Y direction. Pass this parameter when you need to customize the dispersion intensity and direction of the green channel. If not passed, the default value is [0.0, 0.0], meaning no G channel dispersion offset. The value range is the same as rFactor, [-1.0, 1.0], and values outside the range will be automatically clamped. |
-| bFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No | The basic offset of the B channel in the X/Y direction. Pass this parameter when you need to customize the dispersion intensity and direction of the blue channel. If not passed, the default value is [0.0, 0.0], meaning no B channel dispersion offset. The value range is the same as rFactor, [-1.0, 1.0], and values outside the range will be automatically clamped. |
+| dispersionMap | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Yes | 置换贴图，用于控制色散的强度、方向和透明度。建议使用 PixelMapMask类型的置换贴图，可通过自定义图片纹理实现对色散区域和强度的精细控制。 可通过createPixelMapMask方法创建Mask实例。 |
+| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 色散整体透明度，透明度越小效果越透明。取值范围为[0, 1.0]。 透明度设置为0时色散效果不生效；透明度设置小于0的值时，按值为0处理；设置大于1.0的值时，按值为1.0处理。 |
+| rFactor | ArkTS-Dyn: [number, number]  <br>ArkTS-Sta：[double, double] | No | X/Y方向上R通道的色散基础偏移。当需要自定义红色通道的 色散强度和方向时传入此参数，偏移越大红色色散效果越明显。不传入时默认值为[0.0, 0.0]， 无R通道色散偏移。每个方向上的取值范围为[-1.0, 1.0]，超出范围自动截断。 |
+| gFactor | ArkTS-Dyn: [number, number]  <br>ArkTS-Sta：[double, double] | No | X/Y方向上G通道的色散基础偏移。当需要自定义绿色通道的 色散强度和方向时传入此参数。不传入时默认值为[0.0, 0.0]，无G通道色散偏移。 取值范围同rFactor，为[-1.0, 1.0]，超出范围自动截断。 |
+| bFactor | ArkTS-Dyn: [number, number]  <br>ArkTS-Sta：[double, double] | No | X/Y方向上B通道的色散基础偏移。当需要自定义蓝色通道的 色散强度和方向时传入此参数。不传入时默认值为[0.0, 0.0]，无B通道色散偏移。 取值范围同rFactor，为[-1.0, 1.0]，超出范围自动截断。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the dispersion effect controlled by the displacement map attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了由置换贴图控制的色散效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
 ## maskTransition
 
@@ -670,9 +770,9 @@ ArkTS-Sta:
 maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter
 ```
 
-Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc.
+为组件内容提供基于Mask的转场效果，可用于页面切换动画、场景过渡效果等场景。
 
-It is not recommended to use this effect during screen size changes, such as screen rotation,foldable screen opening/closing, etc.
+不建议在屏幕尺寸发生改变的过程中使用此效果，如：旋转屏幕，折叠屏开合屏幕等。
 
 **Since:** 20
 
@@ -688,23 +788,23 @@ It is not recommended to use this effect during screen size changes, such as scr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the area of the transition effect through a mask. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). The grayscale value of the Mask determines the degree of the transition effect; a larger grayscale value results in a more obvious transition effect in that area. |
-| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | The transition coefficient. Pass this parameter when you need to control the transition progress (such as during animation or dynamic adjustment). A larger value makes the image closer to the post-transition page. If not set, the default value is 1.0 (transition completed state). The value range is [0.0, 1.0], and values outside the range will be automatically clamped to [0.0, 1.0]. |
-| inverse | boolean | No | Whether to enable reverse transition. Set to true when you need a reverse transition effect (such as transitioning from the back page to the front page); set to false when you need a forward transition effect (such as transitioning from the front page to the back page). The default value is false (forward transition). |
+| alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Yes | 通过遮罩指定转场效果的作用区域。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。Mask的灰度值 决定转场效果的作用程度，灰度值越大的区域转场效果越明显。 |
+| factor | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 转场过渡系数。当需要控制转场进度（如动画中途或动态调整）时 传入此参数，值越大画面越接近转场后页面。不设置时默认值为1.0（转场完成状态）。 取值范围为[0.0, 1.0]，超出范围自动截断到[0.0, 1.0]。 |
+| inverse | boolean | No | 是否启用反向转场。当需要反向转场效果（如从后页面向前页面过渡） 时设置为true；当需要正向转场效果（从前页面向后页面过渡）时设置为false。 默认值为false（正向转场）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the transition effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了转场效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uiEffect, common2D } from "@kit.ArkGraphics2D";
@@ -719,11 +819,12 @@ struct Index {
   @State rippleMaskRadius: number = 0.1
   build() {
     Stack() {
-      // Page before transition
+      // Page before the transition.
       Image($r("app.media.before")).width("100%").height("100%")
-        if (this.enterNewPage){
-          // Page after transition
+        if (this.enterNewPage) {
+          // Page after the transition.
           Column().width("100%").height("100%").backgroundImage($r("app.media.after"))
+            // Provide a mask-based transition effect for the component content.
             .backgroundFilter(uiEffect.createFilter()
               .maskTransition(
                 uiEffect.Mask.createRadialGradientMask(this.rippleMaskCenter, this.rippleMaskRadius,this.rippleMaskRadius, [[1, 0], [1, 1]]),
@@ -761,7 +862,7 @@ ArkTS-Sta:
 pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter
 ```
 
-Adds a pixel stretch effect to the component.
+将边缘像素扩展效果添加至组件上。
 
 **Since:** 12
 
@@ -777,18 +878,20 @@ Adds a pixel stretch effect to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stretchSizes | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | The percentage ratios of edge pixel stretching in the top, bottom, left, and right directions. The value range is [-1, 1]. A positive value indicates outward stretching, and the edge pixels of the specified original image ratio are used to fill in the top, bottom, left, and right directions. A negative value indicates inward shrinking, but the final image size remains unchanged. Note that the parameters for all four directions must be uniformly non-positive or non-negative, otherwise the effect will not take effect. |
-| tileMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The pixel fill mode for edge pixel stretching. |
+| stretchSizes | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | 上下左右四个方向边缘像素扩展的百分比比例，取值范围为[-1, 1]。 正值表示向外扩展，上下左右四个方向分别用指定原图比例的边缘像素填充。负值表示内缩，但是最终图像大小不变。 注意四个方向对应的参数需统一为非正值或非负值，否则效果无效。 |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 边缘像素扩展的像素填充模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the pixel stretch effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了边缘像素扩展效果的Filter。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+// Add the edge pixel extension effect to the component.
+let filter = uiEffect.createFilter()
 filter.pixelStretch([0.2, 0.2, 0.2, 0.2], uiEffect.TileMode.CLAMP)
 ```
 
@@ -804,7 +907,7 @@ ArkTS-Sta:
 radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter
 ```
 
-Adds a radius linear gradient blur effect to the component content.
+为组件内容添加半径线性渐变模糊效果。
 
 **Since:** 19
 
@@ -820,20 +923,20 @@ Adds a radius linear gradient blur effect to the component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in px. A larger blur radius results in a stronger blur effect. The value range is [0, 128]. When the blur radius is 0, there is no blur effect; values less than 0 are treated as 0; values greater than 128 are treated as 128. |
-| gradientParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The linear gradient parameters, including fractionStops and direction. |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 模糊半径，单位为px，模糊半径越大越模糊。 取值范围为[0, 128]。模糊半径设置为0时不模糊；模糊半径设置小于0的值时，按值为0处理； 设置大于128的值时，按值为128处理。 |
+| gradientParam | [LinearGradientBlurOptions](../../apis-arkui/arkts-components/arkts-arkui-lineargradientbluroptions-i.md) | Yes | 线性渐变参数，包含两个部分fractionStops和direction。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the radius linear gradient blur effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了半径线性渐变模糊效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
 ## variableRadiusBlur
 
@@ -847,7 +950,7 @@ ArkTS-Sta:
 variableRadiusBlur(radius: double, radiusMap: Mask): Filter
 ```
 
-Provides a Mask-based gradient blur effect for the component content.
+为组件内容提供基于Mask的渐变模糊效果。
 
 **Since:** 20
 
@@ -863,38 +966,39 @@ Provides a Mask-based gradient blur effect for the component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Maximum blur radius, in px. A larger value results in a stronger blur effect. The value range is [0, 128]. When the blur radius is 0, there is no blur effect; values less than 0 are treated as 0; values greater than 128 are treated as 128. |
-| radiusMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The Mask object representing the degree of blurring. The grayscale value of the Mask represents the degree of blurring at the corresponding position; a larger grayscale value indicates more blurring. |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 最大模糊半径，单位为px，该值越大越模糊。取值范围为[0, 128]。 模糊半径设置为0时不模糊；模糊半径设置小于0的值时，按值为0处理；设置大于128的值时，按值为128处理。 |
+| radiusMap | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Yes | 代表模糊程度的Mask对象。Mask的灰度值代表对应位置的模糊程度，灰度值越大越模糊。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the current effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回当前效果的Filter对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { uiEffect } from "@kit.ArkGraphics2D";
+import { uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
 struct VariableRadiusBlurExample {
-  @State maskExample: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1)
+  @State blurMask: uiEffect.Mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1)
 
   build() {
     Stack() {
       Image($rawfile('test.png'))
       Row()
-        .width("100%")
-        .height("100%")
-        .backgroundFilter(uiEffect.createFilter().variableRadiusBlur(64, this.maskExample))
+        .width('100%')
+        .height('100%')
+        // Provide a mask-based gradient blur effect for the component content.
+        .backgroundFilter(uiEffect.createFilter().variableRadiusBlur(64, this.blurMask))
     }
   }
 }
@@ -912,7 +1016,7 @@ ArkTS-Sta:
 waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter
 ```
 
-Adds a water ripple effect to the component.
+将水波纹效果添加至组件上。
 
 **Since:** 12
 
@@ -928,27 +1032,29 @@ Adds a water ripple effect to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the ripple progress. The value range is [0, 1]. The closer the progress is to 1, the more fully the ripples are displayed. Values outside the range will not produce a ripple effect. |
-| waveCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The number of waves when the water ripples. The value range is [1, 3]. The wave count must be an integer. If a floating-point number or a value outside the range is provided, the ripple effect will not appear. |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The X-axis position of the center point where the water ripple first appears on the screen. The screen is normalized, with the top-left corner at (0, 0) and the top-right corner at (1, 0). A negative value indicates a position to the left of the screen. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The Y-axis position of the center point where the water ripple first appears on the screen. The screen is normalized, with the top-left corner at (0, 0) and the bottom-left corner at (0, 1). A negative value indicates a position above the screen. |
-| rippleMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The scene mode of the water ripple. |
+| progress | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示水波纹的进度，取值范围为[0, 1]。 水波纹进度越趋向于1，水波纹展示越完全。 超出取值范围水波纹不会出现效果。 |
+| waveCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 水波纹波动时波纹的个数，取值范围为[1, 3]。 水波纹的个数只能取整数，如果为浮点数或超出取值范围，水波纹不会出现效果。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 水波纹中心在屏幕中第一次出现的x轴位置。 水波纹对屏幕进行归一化处理，左上角的坐标为（0, 0），右上角坐标为（1, 0）。 当x取值为负值时，代表在屏幕左侧。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 水波纹中心在屏幕中第一次出现的y轴位置。 水波纹对屏幕进行归一化处理，左上角的坐标为（0, 0），左下角坐标为（0, 1）。 当y取值为负值时，代表在屏幕上方。 |
+| rippleMode | [WaterRippleMode](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md) | Yes | 水波纹的场景模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the water ripple effect attached. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了水波纹效果的Filter。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+// Add the water ripple effect to the component.
+let filter = uiEffect.createFilter()
 filter.waterRipple(0.5, 2, 0.5, 0.5, uiEffect.WaterRippleMode.SMALL2SMALL)
 ```
 

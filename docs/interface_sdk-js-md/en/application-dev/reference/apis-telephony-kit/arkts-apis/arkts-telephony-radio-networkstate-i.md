@@ -10,6 +10,12 @@ Describes the network registration state.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## cfgTech
 
 ```TypeScript
@@ -18,7 +24,7 @@ cfgTech: RadioTechnology
 
 Obtains the radio Access technology after config conversion.
 
-**Type:** RadioTechnology
+**Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
 **Since:** 8
 
@@ -116,7 +122,7 @@ Obtains the NSA network registration status of the device.
 
 Returns the NSA network registration status {@code NsaState}.
 
-**Type:** NsaState
+**Type:** [NsaState](arkts-telephony-radio-nsastate-e.md)
 
 **Since:** 6
 
@@ -154,7 +160,7 @@ regState: RegState
 
 Obtains the network registration status of the device.
 
-**Type:** RegState
+**Type:** [RegState](arkts-telephony-radio-regstate-e.md)
 
 **Since:** 6
 

@@ -1,7 +1,7 @@
 # @ohos.security.cert
 
 证书算法库框架提供证书相关接口。其中，依赖加解密算法库框架的基础算法能力的部分，详细接口说明可参考  
-[cryptoFramework API参考]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[cryptoFramework API参考](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md/arkts-security-cryptoframework.md)。
 
 **起始版本：** 9
 
@@ -10,6 +10,12 @@
 <!--Device-unnamed-declare namespace cert--><!--Device-unnamed-declare namespace cert-End-->
 
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
 
 ## 汇总
 
@@ -26,7 +32,7 @@
 | [createCmsParser](arkts-devicecertificate-cert-createcmsparser-f.md#createcmsparser) | 表示创建CmsParser对象。 |
 | [createPkcs12](arkts-devicecertificate-cert-createpkcs12-f.md#createpkcs12) | 表示创建P12。使用Promise方式返回结果。 |
 | [createPkcs12Sync](arkts-devicecertificate-cert-createpkcs12sync-f.md#createpkcs12sync) | 表示创建P12，同步返回结果。 |
-| [createTrustAnchorsWithKeyStore](arkts-devicecertificate-cert-createtrustanchorswithkeystore-f.md#createtrustanchorswithkeystore) | 表示从P12中读取ca证书来构造[TrustAnchor]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对象数组。使用Promise方式返回结果。 |
+| [createTrustAnchorsWithKeyStore](arkts-devicecertificate-cert-createtrustanchorswithkeystore-f.md#createtrustanchorswithkeystore) | 表示从P12中读取ca证书来构造[TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)对象数组。使用Promise方式返回结果。 |
 | [createX500DistinguishedName](arkts-devicecertificate-cert-createx500distinguishedname-f.md#createx500distinguishedname) | 表示使用字符串格式的名称创建X500DistinguishedName对象。使用Promise方式返回结果。 |
 | [createX500DistinguishedName](arkts-devicecertificate-cert-createx500distinguishedname-f.md#createx500distinguishedname-1) | 表示使用DER格式的名称创建X500DistinguishedName对象。使用Promise方式返回结果。 |
 | [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl) | 表示创建X.509证书吊销列表对象。使用Callback异步回调。 |
@@ -65,7 +71,7 @@
 | [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | CMS封装数据的接收者信息。 |
 | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | 表示Cms签名者的配置选项。 |
 | [CmsVerificationConfig](arkts-devicecertificate-cert-cmsverificationconfig-i.md) | CMS验签的配置。 |
-| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | 定义CSR属性表示。  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_CSR属性字段，当前仅支持字符串类型的属性字段，属性值添加到CSR中编码为utf-8。常见的type为challengePassword。 |
+| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | 定义CSR属性表示。  &lt;br&gt;CSR属性字段，当前仅支持字符串类型的属性字段，属性值添加到CSR中编码为utf-8。常见的type为challengePassword。 |
 | [CsrGenerationConfig](arkts-devicecertificate-cert-csrgenerationconfig-i.md) | 用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。 |
 | [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 数据数组的列表。 |
 | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 二进制数据的封装接口，核心字段data为Uint8Array类型。 |

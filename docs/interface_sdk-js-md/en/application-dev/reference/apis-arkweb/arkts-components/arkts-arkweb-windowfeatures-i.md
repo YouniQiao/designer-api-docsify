@@ -1,6 +1,6 @@
 # WindowFeatures
 
-Represents the feature information of the new window requested to be created by the web page, including the size and location.
+Defines the window features info for window.open.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Represents the feature information of the new window requested to be created by 
 height: number
 ```
 
-Height of the new window. Unit:pixels.
+The requested height of the containing window.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ Height of the new window. Unit:pixels.
 width: number
 ```
 
-Width of the new window. Unit:pixels.
+The requested width of the containing window.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Width of the new window. Unit:pixels.
 x: number
 ```
 
-X coordinate of the top-left corner of the new window. Unit:pixels.
+The requested x-coordinate of the containing window.
 
 **Type:** number
 
@@ -70,7 +70,7 @@ X coordinate of the top-left corner of the new window. Unit:pixels.
 y: number
 ```
 
-Y coordinate of the top-left corner of the new window. Unit:pixels.
+The requested y-coordinate of the containing window.
 
 **Type:** number
 

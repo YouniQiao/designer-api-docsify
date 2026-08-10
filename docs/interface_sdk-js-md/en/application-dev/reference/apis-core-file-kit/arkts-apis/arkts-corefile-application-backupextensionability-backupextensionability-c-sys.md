@@ -1,6 +1,6 @@
 # BackupExtensionAbility
 
-Class to be override for backup extension ability.
+备份恢复扩展能力。应用可通过该类实现自定义备份、恢复、进度上报和安全退出逻辑。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Class to be override for backup extension ability.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
+## Modules to Import
+
+```TypeScript
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
+```
+
 ## getBackupCompatibilityInfo
 
 ```TypeScript
 getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 ```
 
-Callback to be called when getting application backup compatibilityInfo.Developer could override this method to provide the backup compatibilityInfo.
+在应用备份阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
 
 **Since:** 20
 
@@ -34,13 +40,13 @@ Callback to be called when getting application backup compatibilityInfo.Develope
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | string | Yes | Information about the capabilities of the peer. |
+| extInfo | string | Yes | 传递给应用的额外信息，由应用自行处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Return backup compatibilityInfo, support promise. |
+| Promise&lt;string&gt; | Promise对象，返回备份过程中应用自定义的兼容性信息。 |
 
 ## getBackupInfo
 
@@ -48,7 +54,7 @@ Callback to be called when getting application backup compatibilityInfo.Develope
 getBackupInfo(): string
 ```
 
-Callback to be called when getting application backupInfo.Developer could override this method to provide the backupInfo.
+在调用方查询应用数据时执行，由应用返回自定义备份信息。
 
 **Since:** 12
 
@@ -66,7 +72,7 @@ Callback to be called when getting application backupInfo.Developer could overri
 
 | Type | Description |
 | --- | --- |
-| string | Return the backup application's info. |
+| string | 应用自定义的备份信息，具体格式和字段由应用自行定义。 |
 
 ## getRestoreCompatibilityInfo
 
@@ -74,7 +80,7 @@ Callback to be called when getting application backupInfo.Developer could overri
 getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 ```
 
-Callback to be called when getting application restore compatibilityInfo.Developer could override this method to provide the restore compatibilityInfo.
+在应用恢复阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
 
 **Since:** 20
 
@@ -92,11 +98,11 @@ Callback to be called when getting application restore compatibilityInfo.Develop
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | string | Yes | Information about the capabilities of the peer. |
+| extInfo | string | Yes | 传递给应用的额外信息，由应用自行处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Return restore compatibilityInfo, support promise. |
+| Promise&lt;string&gt; | Promise对象，返回恢复过程中应用自定义的兼容性信息。 |
 

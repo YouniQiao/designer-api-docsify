@@ -10,6 +10,12 @@ Describes the contents of the ranging support types.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
+## Modules to Import
+
+```TypeScript
+import { ranging } from 'kits/@kit.ConnectivityKit';
+```
+
 ## nearlinkHadm
 
 ```TypeScript

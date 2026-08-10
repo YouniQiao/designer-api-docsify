@@ -1,6 +1,6 @@
 # LockInfo (System API)
 
-Represents the cloud database lock information.
+云数据库锁信息。
 
 **Since:** 11
 
@@ -12,15 +12,21 @@ Represents the cloud database lock information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## interval
 
 ```TypeScript
 interval: int
 ```
 
-Lock period of the cloud database, in seconds.
+云数据库锁的持续时间，单位为s。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -38,9 +44,9 @@ Lock period of the cloud database, in seconds.
 lockId: int
 ```
 
-Lock ID.
+锁ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

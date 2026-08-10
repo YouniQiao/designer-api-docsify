@@ -14,6 +14,12 @@ Describes the parameters of the Gatt client's characteristic read request.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## characteristicUuid
 
 ```TypeScript

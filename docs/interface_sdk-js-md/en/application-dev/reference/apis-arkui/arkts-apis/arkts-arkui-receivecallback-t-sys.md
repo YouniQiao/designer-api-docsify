@@ -4,7 +4,7 @@
 export type ReceiveCallback = Callback<Record<string, RecordData>>
 ```
 
-Get Callback from @ohos.base.
+回调函数，用于封装被拉起的Ability发送的数据。
 
 **Since:** 23
 

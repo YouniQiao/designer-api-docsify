@@ -1,6 +1,6 @@
 # RectStyle
 
-Describes the style of a rectangle.
+矩形框样式。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes the style of a rectangle.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## color
 
 ```TypeScript
 color: common2D.Color
 ```
 
-Color of the rectangle.
+矩形框的颜色。
 
 **Type:** common2D.Color
 
@@ -36,9 +42,9 @@ Color of the rectangle.
 leftBottomRadius: double
 ```
 
-Lower left radius of the rectangle, in physical pixels (px).
+矩形框的左下半径，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ Lower left radius of the rectangle, in physical pixels (px).
 leftTopRadius: double
 ```
 
-Upper left radius of the rectangle, in physical pixels (px).
+矩形框的左上半径，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -76,9 +82,9 @@ Upper left radius of the rectangle, in physical pixels (px).
 rightBottomRadius: double
 ```
 
-Lower right radius of the rectangle, in physical pixels (px).
+矩形框的右下半径，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -96,9 +102,9 @@ Lower right radius of the rectangle, in physical pixels (px).
 rightTopRadius: double
 ```
 
-Upper right radius of the rectangle, in physical pixels (px).
+矩形框的右上半径，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

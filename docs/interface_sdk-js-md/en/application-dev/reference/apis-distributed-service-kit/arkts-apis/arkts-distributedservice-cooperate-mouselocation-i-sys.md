@@ -1,6 +1,6 @@
 # MouseLocation (System API)
 
-Defines the mouse pointer position for screen hopping.
+键鼠穿越的位置。
 
 **Since:** 12
 
@@ -12,15 +12,21 @@ Defines the mouse pointer position for screen hopping.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## displayHeight
 
 ```TypeScript
 displayHeight: int
 ```
 
-Screen height, in pixels.
+屏幕高度，单位：px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -38,9 +44,9 @@ Screen height, in pixels.
 displayWidth: int
 ```
 
-Screen width, in pixels.
+屏幕宽度，单位：px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -58,9 +64,9 @@ Screen width, in pixels.
 displayX: int
 ```
 
-Position of the mouse pointer on the X coordinate of the screen.
+鼠标指针位于屏幕的X坐标上的位置。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -78,9 +84,9 @@ Position of the mouse pointer on the X coordinate of the screen.
 displayY: int
 ```
 
-Position of the mouse pointer on the Y coordinate of the screen.
+鼠标指针位于屏幕的Y坐标上的位置。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # IndicatorComponent properties/events
 
-Defines the IndicatorComponent attribute functions.
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性。
 
 **Inheritance/Implementation:** IndicatorComponentAttribute extends [CommonMethod<IndicatorComponentAttribute>](CommonMethod<IndicatorComponentAttribute>)
 
@@ -18,7 +18,9 @@ Defines the IndicatorComponent attribute functions.
 count(totalCount: number)
 ```
 
-Sets the total number of indicator.
+设置导航点总数量。
+
+单独导航点组件和Swiper绑定的时候，以Swiper的页面数量为准。
 
 **Since:** 15
 
@@ -46,7 +48,9 @@ Sets the total number of indicator.
 initialIndex(index: number)
 ```
 
-Called when the index value of the displayed subcomponent is set in the container.
+设置首次显示时当前导航点的索引值。传入值小于0或大于等于导航点数量时，按照默认值0处理。
+
+单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **Since:** 15
 
@@ -74,7 +78,9 @@ Called when the index value of the displayed subcomponent is set in the containe
 loop(isLoop: boolean)
 ```
 
-Called when setting whether to turn on cyclic sliding.
+设置是否开启循环。
+
+单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **Since:** 15
 
@@ -122,7 +128,7 @@ Called when the index value changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes |  |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;number&gt; | Yes |  |
 
 ## style
 
@@ -130,7 +136,7 @@ Called when the index value changes.
 style(indicatorStyle: DotIndicator | DigitIndicator)
 ```
 
-Sets the indicator style.
+设置可选导航点指示器样式。
 
 **Since:** 15
 
@@ -150,7 +156,7 @@ Sets the indicator style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indicatorStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| DigitIndicator | Yes | the style value |
+| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| DigitIndicator | Yes | 可选导航点指示器样式。&lt;br/&gt; - DotIndicator：圆点指示器样式。&lt;br/&gt; - DigitIndicator：数字指示器样式。&lt;br/&gt;  默认类型：DotIndicator。 |
 
 ## vertical
 
@@ -158,7 +164,9 @@ Sets the indicator style.
 vertical(isVertical: boolean)
 ```
 
-Called when setting whether to slide vertically.
+设置是否为纵向滑动。
+
+单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **Since:** 15
 

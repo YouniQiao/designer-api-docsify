@@ -1,14 +1,20 @@
 # addSlot
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## addSlot
 
 ```TypeScript
 function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 ```
 
-Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result.
+创建指定类型的通知渠道。使用callback异步回调。
 
-The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
+通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。同一类型的通知渠道只能创建一个。
 
 **Since:** 9
 
@@ -22,20 +28,20 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification slot type to create. Different slot types correspond to different default SlotLevel values, which affect the notification alert method. For example, **SOCIAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMUNICATION** corresponds to **LEVEL\_\_\_ESCAPED\_UNDERSCORE\_\_\_HIGH** (status bar icon + banner + sound), and **CONTENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFORMATION** corresponds to **LEVEL\_\_\_ESCAPED\_UNDERSCORE\_\_\_MIN** (no status bar icon + no banner + no sound). |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | 要创建的通知渠道的类型。不同的渠道类型对应不同的默认SlotLevel， 影响通知的提醒方式。例如SOCIAL_COMMUNICATION对应LEVEL_HIGH （状态栏图标+横幅+提示音），CONTENT_INFORMATION对应LEVEL_MIN （状态栏不显示图标+无横幅+无提示音）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当创建指定类型的通知渠道成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600012 | No memory space. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,9 +64,9 @@ notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, a
 function addSlot(type: SlotType): Promise<void>
 ```
 
-Adds a notification slot of a specified type. This API uses a promise to return the result.
+创建指定类型的通知渠道。使用Promise异步回调。
 
-The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
+通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。同一类型的通知渠道只能创建一个。
 
 **Since:** 9
 
@@ -74,25 +80,25 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification slot type to create. Different slot types correspond to different default SlotLevel values, which affect the notification alert method. For example, **SOCIAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMUNICATION** corresponds to **LEVEL\_\_\_ESCAPED\_UNDERSCORE\_\_\_HIGH** (status bar icon + banner + sound), and **CONTENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFORMATION** corresponds to **LEVEL\_\_\_ESCAPED\_UNDERSCORE\_\_\_MIN** (no status bar icon + no banner + no sound). |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | 要创建的通知渠道的类型。不同的渠道类型对应不同的默认SlotLevel， 影响通知的提醒方式。例如SOCIAL_COMMUNICATION对应LEVEL_HIGH （状态栏图标+横幅+提示音），CONTENT_INFORMATION对应LEVEL_MIN （状态栏不显示图标+无横幅+无提示音）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600012 | No memory space. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

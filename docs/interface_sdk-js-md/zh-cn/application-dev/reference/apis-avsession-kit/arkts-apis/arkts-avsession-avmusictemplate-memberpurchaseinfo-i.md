@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## diagramContent
 
 ```TypeScript
@@ -98,7 +104,7 @@ memberPurchaseType: MemberPurchaseType
 
 会员购买类型。
 
-**类型：** MemberPurchaseType
+**类型：** [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md)
 
 **起始版本：** 23
 

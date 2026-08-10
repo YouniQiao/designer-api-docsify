@@ -1,5 +1,11 @@
 # hasRight
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## hasRight
 
 ```TypeScript
@@ -32,7 +38,7 @@ function hasRight(deviceName: string): boolean
 | --- | --- |
 | boolean | true表示有访问设备的权限，false表示没有访问设备的权限。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let devicesName= "1-1";

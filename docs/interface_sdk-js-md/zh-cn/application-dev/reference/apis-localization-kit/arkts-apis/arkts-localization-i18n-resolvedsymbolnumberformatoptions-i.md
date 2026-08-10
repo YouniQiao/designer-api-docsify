@@ -2,7 +2,7 @@
 
 自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions，支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。
 
-**继承/实现关系：** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](Intl.ResolvedNumberFormatOptions)
+**继承/实现关系：** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvednumberformatoptions-i.md/arkts-arkts-intl-resolvednumberformatoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,12 @@
 <!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions--><!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
 
 ## groupingSeparator
 

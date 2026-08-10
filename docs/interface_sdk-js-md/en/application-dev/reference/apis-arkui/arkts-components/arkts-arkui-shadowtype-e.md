@@ -1,10 +1,10 @@
 # ShadowType
 
-Define the type of shadow
+阴影类型。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum ShadowType--><!--Device-unnamed-declare enum ShadowType-End-->
 
@@ -16,11 +16,11 @@ Define the type of shadow
 COLOR = 0
 ```
 
-Define a color type of shadow
+颜色。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +36,11 @@ Define a color type of shadow
 BLUR = 1
 ```
 
-Define a blur type of shadow
+模糊。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

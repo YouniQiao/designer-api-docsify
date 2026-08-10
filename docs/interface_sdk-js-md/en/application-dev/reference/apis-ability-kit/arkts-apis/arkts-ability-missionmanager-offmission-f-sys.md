@@ -1,12 +1,18 @@
 # offMission (System API)
 
+## Modules to Import
+
+```TypeScript
+import { missionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offMission
 
 ```TypeScript
 function offMission(listenerId: long, callback: AsyncCallback<void>): void
 ```
 
-Unregister the missionListener to ams.
+解注册任务状态监听器。使用callback异步回调。
 
 **Since:** 23
 
@@ -24,16 +30,16 @@ Unregister the missionListener to ams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listenerId | long | Yes | Indicates the listener id to be unregistered. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of off. |
+| listenerId | long | Yes | 系统任务状态监器法的index值，和监听器一一对应，由on方法返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 执行结果回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) | The specified mission listener does not exist. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 16300002 | The specified mission listener does not exist. |
 
 
 ## offMission
@@ -42,7 +48,7 @@ Unregister the missionListener to ams.
 function offMission(listenerId: long): Promise<void>
 ```
 
-Unregister the missionListener to ams.
+解注册任务状态监听。使用Promise异步回调。
 
 **Since:** 23
 
@@ -60,19 +66,19 @@ Unregister the missionListener to ams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listenerId | long | Yes | Indicates the listener id to be unregistered. |
+| listenerId | long | Yes | 系统任务状态监听器的index值，和监听器一一对应，由on方法返回。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) | The specified mission listener does not exist. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 16300002 | The specified mission listener does not exist. |
 

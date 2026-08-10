@@ -1,6 +1,6 @@
 # PrintDocumentAdapterState
 
-Enumerates the print job states.
+打印任务状态的枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the print job states.
 PREVIEW_DESTROY = 0
 ```
 
-The preview fails.
+表示预览失败。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ The preview fails.
 PRINT_TASK_SUCCEED = 1
 ```
 
-The print job is successful.
+表示打印任务成功。
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ The print job is successful.
 PRINT_TASK_FAIL = 2
 ```
 
-The print job is failed.
+表示打印任务失败。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ The print job is failed.
 PRINT_TASK_CANCEL = 3
 ```
 
-The print job is canceled.
+表示打印任务取消。
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ The print job is canceled.
 PRINT_TASK_BLOCK = 4
 ```
 
-The print job is blocked.
+表示打印任务阻塞。
 
 **Since:** 11
 

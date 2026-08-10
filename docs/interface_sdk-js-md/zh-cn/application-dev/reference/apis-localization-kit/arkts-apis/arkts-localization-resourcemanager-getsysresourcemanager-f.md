@@ -1,5 +1,11 @@
 # getSysResourceManager
 
+## 导入模块
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## getSysResourceManager
 
 ```TypeScript
@@ -22,15 +28,15 @@ export function getSysResourceManager(): ResourceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 系统资源管理对象。 |
+| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | 系统资源管理对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9001009](../errorcode-resource-manager.md#9001009-获取系统资源管理对象失败) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
+| 9001009 | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';

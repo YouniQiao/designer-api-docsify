@@ -1,6 +1,6 @@
 # InputFilterParams
 
-Sets regular expression for input filtering.
+搜索框过滤设置项。
 
 **Since:** 18
 
@@ -10,16 +10,21 @@ Sets regular expression for input filtering.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+```
+
 ## error
 
 ```TypeScript
 error?: Callback<string>
 ```
 
-Callback used to return the filtered-out content when regular expression matching fails. Default value:  
-**undefined**.
+正则匹配失败时，返回被过滤的内容。默认值为`undefined`。
 
-**Type:** Callback&lt;string&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
 
 **Since:** 18
 
@@ -37,9 +42,9 @@ Callback used to return the filtered-out content when regular expression matchin
 inputFilterValue: ResourceStr
 ```
 
-Regular expression.
+正则表达式。仅支持单个字符匹配，不支持字符串匹配。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
 

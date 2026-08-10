@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
@@ -94,7 +100,7 @@ static request(name: string): ConditionVariable
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回查找到或创建后的异步等待通知操作的实例。 |
+| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | 返回查找到或创建后的异步等待通知操作的实例。 |
 
 ## wait
 

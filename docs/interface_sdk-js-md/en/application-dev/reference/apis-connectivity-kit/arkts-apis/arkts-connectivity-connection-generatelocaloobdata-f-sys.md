@@ -1,5 +1,11 @@
 # generateLocalOobData (System API)
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## generateLocalOobData
 
 ```TypeScript
@@ -26,7 +32,7 @@ Generate out-of-band data of the local device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transport | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the transport of a remote Bluetooth device. |
+| transport | [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | Yes | Indicates the transport of a remote Bluetooth device. |
 
 **Return value:**
 
@@ -38,13 +44,13 @@ Generate out-of-band data of the local device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

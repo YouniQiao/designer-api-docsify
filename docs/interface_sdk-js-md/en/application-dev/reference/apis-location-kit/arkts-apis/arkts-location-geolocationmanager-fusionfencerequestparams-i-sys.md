@@ -12,6 +12,12 @@ Indicates fusion fence request params.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## cellFences
 
 ```TypeScript
@@ -42,7 +48,7 @@ expirationMs: double
 
 Indicates expiration of the circular fence.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ fenceTransitionCallback: Callback<FusionFenceTransition>
 
 Indicates the callback for reporting the fence transition status.
 
-**Type:** Callback&lt;FusionFenceTransition&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FusionFenceTransition&gt;
 
 **Since:** 26.0.0
 
@@ -84,9 +90,9 @@ Indicates the callback for reporting the fence transition status.
 fenceType: int
 ```
 
-Indicates fusion fence type.This field is in bitmap format. Multiple types of fences can be transferred.The definition of each bit is as follows: [FusionFenceType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.The value range is all integers.
+Indicates fusion fence type.This field is in bitmap format. Multiple types of fences can be transferred.The definition of each bit is as follows: [FusionFenceType](arkts-location-geolocationmanager-fusionfencetype-e-sys.md).The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -150,9 +156,9 @@ Identifier of the fusion fence.The string format should be a valid unique identi
 loiterTimeMs: int
 ```
 
-Indicates time for which a device is dwelling in the geofence, in milliseconds.If the device dwelling time reaches the value specified by this parameter,a GEOFENCE\_TRANSITION\_EVENT\_DWELL event is reported.The value range is all integers.
+Indicates time for which a device is dwelling in the geofence, in milliseconds.If the device dwelling time reaches the value specified by this parameter,a GEOFENCE_TRANSITION_EVENT_DWELL event is reported.The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -172,9 +178,9 @@ Indicates time for which a device is dwelling in the geofence, in milliseconds.I
 monitorTransitionEvents: int
 ```
 
-Indicates geofence transition status monitored.This field is in bitmap format.The definition of each bit is as follows \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.The value range is all integers.
+Indicates geofence transition status monitored.This field is in bitmap format.The definition of each bit is as follows {@link geoLocationManager.GeofenceTransitionEvent}.The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -196,7 +202,7 @@ poiLocation: Point
 
 Indicates the location of POI.
 
-**Type:** Point
+**Type:** [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md)
 
 **Since:** 26.0.0
 
@@ -240,7 +246,7 @@ scene: FusionFenceScene
 
 Indicates fusion fence scene.
 
-**Type:** FusionFenceScene
+**Type:** [FusionFenceScene](arkts-location-geolocationmanager-fusionfencescene-e-sys.md)
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # CommonArcButtonOptions
 
-Defines the arc button options.
+ArcButton的默认样式或自定义样式参数。
 
 **Since:** 23
 
@@ -10,15 +10,23 @@ Defines the arc button options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundBlurStyle
 
 ```TypeScript
 backgroundBlurStyle?: BlurStyle
 ```
 
-Describe the blurred background style of the arc-shaped button.
+弧形按钮背景模糊能力。
 
-**Type:** BlurStyle
+默认值：BlurStyle.NONE
+
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.NONE
 
@@ -36,9 +44,13 @@ Describe the blurred background style of the arc-shaped button.
 backgroundColor?: ColorMetrics
 ```
 
-Describes the arc button background color.
+弧形按钮背景颜色。
 
-**Type:** ColorMetrics
+ArcButtonStyleMode需要设置为CUSTOM。
+
+默认值：Color.Black
+
+**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
 
 **Default:** Color.Black
 
@@ -56,9 +68,13 @@ Describes the arc button background color.
 fontColor?: ColorMetrics
 ```
 
-Describes the arc button text color.
+弧形按钮文本颜色。
 
-**Type:** ColorMetrics
+ArcButtonStyleMode需要设置为CUSTOM。
+
+默认值：Color.White
+
+**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
 
 **Default:** Color.White
 
@@ -76,7 +92,7 @@ Describes the arc button text color.
 fontFamily?: string | Resource
 ```
 
-Describes the arc button text family.
+弧形按钮字体名。
 
 **Type:** string \| Resource
 
@@ -94,9 +110,11 @@ Describes the arc button text family.
 fontMargin?: LocalizedMargin
 ```
 
-Describes the arc button text margin.
+弧形按钮文本边距。
 
-**Type:** LocalizedMargin
+默认值：{start:24vp, top: 10vp,end: 24vp, bottom:16vp }
+
+**Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
 **Default:** { start: 24.0_vp, top: 10.0_vp, end: 24.0_vp, bottom: 16.0_vp }
 
@@ -114,9 +132,11 @@ Describes the arc button text margin.
 fontSize?: LengthMetrics
 ```
 
-Describes the arc button text size.
+弧形按钮文本大小。
 
-**Type:** LengthMetrics
+默认值：19fp
+
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Default:** 19.0_fp
 
@@ -134,9 +154,11 @@ Describes the arc button text size.
 fontStyle?: FontStyle
 ```
 
-Describes the arc button text style.
+弧形按钮文本样式。
 
-**Type:** FontStyle
+默认值：FontStyle.Normal
+
+**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **Default:** FontStyle.Normal
 
@@ -154,9 +176,9 @@ Describes the arc button text style.
 label?: ResourceStr
 ```
 
-Describes the arc button displays text.
+弧形按钮显示文本。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -172,9 +194,9 @@ Describes the arc button displays text.
 onClick?: Callback<ClickEvent>
 ```
 
-Describes the arc button click event.
+弧形按钮点击动作触发该回调。
 
-**Type:** Callback&lt;ClickEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
 
 **Since:** 23
 
@@ -190,9 +212,9 @@ Describes the arc button click event.
 onTouch?: Callback<TouchEvent>
 ```
 
-Describes the arc button touch event.
+弧形按钮手指触摸动作触发该回调。
 
-**Type:** Callback&lt;TouchEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
 
 **Since:** 23
 
@@ -208,9 +230,11 @@ Describes the arc button touch event.
 position?: ArcButtonPosition
 ```
 
-Describes the arc button position.
+上下弧形按钮类型属性。
 
-**Type:** ArcButtonPosition
+默认值：ArcButtonPosition.BOTTOM_EDGE
+
+**Type:** [ArcButtonPosition](arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md)
 
 **Default:** ArcButtonPosition.BOTTOM_EDGE
 
@@ -228,9 +252,13 @@ Describes the arc button position.
 pressedFontColor?: ColorMetrics
 ```
 
-Describes the arc button pressed text color.
+弧形按钮按下文本颜色。
 
-**Type:** ColorMetrics
+ArcButtonStyleMode需要设置为CUSTOM。
+
+默认值：Color.White
+
+**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
 
 **Default:** Color.White
 
@@ -248,9 +276,14 @@ Describes the arc button pressed text color.
 progressConfig?: ArcButtonProgressConfig
 ```
 
-Sets the ArcButton progress bar parameters.When not set, the button style is used.When set, the progress style is used.
+ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（  
+[示例1](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton copy.md#示例1-设置弧形按钮)），设置后表现为进度条样式（  
+[示例2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton copy.md#示例2-设置设备进度条按钮)），进度条样式不受  
+[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)属性设置影响。 
 
-**Type:** ArcButtonProgressConfig
+默认值：[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) 的各项子属性均取其默认值。
+
+**Type:** [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **Since:** 23
 
@@ -268,9 +301,11 @@ Sets the ArcButton progress bar parameters.When not set, the button style is use
 shadowColor?: ColorMetrics
 ```
 
-Describes the arc button shadow color.
+弧形按钮阴影颜色。
 
-**Type:** ColorMetrics
+默认值：Color.Black
+
+**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
 
 **Default:** Color.Black
 
@@ -288,7 +323,11 @@ Describes the arc button shadow color.
 shadowEnabled?: boolean
 ```
 
-Describes the arc button shadow switch.
+弧形按钮阴影开关。
+
+默认值：false
+
+值为true时，显示阴影。值为false时，不显示阴影。
 
 **Type:** boolean
 
@@ -308,9 +347,11 @@ Describes the arc button shadow switch.
 status?: ArcButtonStatus
 ```
 
-Describes the arc button status.
+弧形按钮状态。
 
-**Type:** ArcButtonStatus
+默认值：ArcButtonStatus.NORMAL
+
+**Type:** [ArcButtonStatus](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
 
 **Default:** ArcButtonStatus.NORMAL
 
@@ -328,9 +369,11 @@ Describes the arc button status.
 styleMode?: ArcButtonStyleMode
 ```
 
-Describes the arc button style mode.
+弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)样式同时使用。
 
-**Type:** ArcButtonStyleMode
+默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT
+
+**Type:** [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
 
 **Default:** ArcButtonStyleMode.EMPHASIZED_LIGHT
 

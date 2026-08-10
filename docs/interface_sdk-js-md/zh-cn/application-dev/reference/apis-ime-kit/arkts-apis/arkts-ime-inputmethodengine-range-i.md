@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## end
 
 ```TypeScript
@@ -18,7 +24,7 @@ end: int
 
 选中文本的末字符在编辑框的索引值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -36,7 +42,7 @@ start: int
 
 选中文本的首字符在编辑框的索引值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

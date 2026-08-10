@@ -4,7 +4,7 @@
 export type FocusDirection = 'up' | 'down' | 'left' | 'right' | 'forward' | 'backward'
 ```
 
-Enumerates the focus directions.
+表示查询下一焦点元素的方向。
 
 **Since:** 9
 
@@ -16,10 +16,10 @@ Enumerates the focus directions.
 
 | Type | Description |
 | --- | --- |
-| 'up' | Search for the next focusable item above the current item in focus. |
-| 'down' | Search for the next focusable item below the current item in focus. |
-| 'left' | Search for the next focusable item on the left of the current item in focus. |
-| 'right' | Search for the next focusable item on the right of the current item in focus. |
-| 'forward' | Search for the next focusable item before the current item in focus. |
-| 'backward' | Search for the next focusable item after the current item in focus. |
+| 'up' | 表示向上查询。 |
+| 'down' | 表示向下查询。 |
+| 'left' | 表示向左查询。 |
+| 'right' | 表示向右查询。 |
+| 'forward' | 表示向前查询。 |
+| 'backward' | 表示向后查询。 |
 

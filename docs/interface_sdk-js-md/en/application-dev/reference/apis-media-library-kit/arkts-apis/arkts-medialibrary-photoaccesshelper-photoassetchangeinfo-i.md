@@ -10,6 +10,12 @@ Describes the information about a media asset.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumUri
 
 ```TypeScript
@@ -54,7 +60,7 @@ mediaType: PhotoType
 
 Type of the media asset (image or video).
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
 
 **Since:** 20
 

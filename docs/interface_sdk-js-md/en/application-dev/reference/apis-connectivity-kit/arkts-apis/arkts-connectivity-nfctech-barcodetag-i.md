@@ -1,0 +1,48 @@
+# BarcodeTag
+
+Provides methods for accessing Barcode tag.
+
+**Inheritance/Implementation:** BarcodeTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface BarcodeTag extends TagSession--><!--Device-unnamed-export interface BarcodeTag extends TagSession-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## getBarcode
+
+```TypeScript
+getBarcode(): Promise<ArrayBuffer>
+```
+
+Returns the barcode of a Barcode tag.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-BarcodeTag-getBarcode(): Promise<ArrayBuffer>--><!--Device-BarcodeTag-getBarcode(): Promise<ArrayBuffer>-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ArrayBuffer&gt; | The barcode of tag. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 3100204 | The tag I/O operation failed. |
+| 3100201 | The tag running state is abnormal in the service. |
+| 201 | Permission denied. |
+

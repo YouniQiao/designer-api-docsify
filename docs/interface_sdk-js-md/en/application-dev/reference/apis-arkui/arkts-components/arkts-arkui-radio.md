@@ -1,15 +1,17 @@
 # Radio
 
-The **Radio** component allows users to select from a set of mutually exclusive options.
+单选框，提供单选类型的用户交互选择项。
 
-> **NOTE**
+> **说明：**
 >
-> Since API version 12, the default indicator type for the **Radio** component changes from 
-> **RadioIndicatorType.DOT** to **RadioIndicatorType.TICK**.
+> - API version 12开始，Radio选中默认样式由RadioIndicatorType.DOT变为RadioIndicatorType.TICK。
 
-## Child Components
+> - 该组件默认有[margin]{@link CommonMethod#margin}间距，默认值为：{&nbsp;top: '14px',&nbsp;right: '14px',&nbsp;bottom: '14px',&
+> nbsp;left: '14px' }。
 
-Not supported
+## 子组件
+
+无
 
 ## Radio
 
@@ -17,7 +19,7 @@ Not supported
 Radio(options: RadioOptions)
 ```
 
-Creates a radio button.
+创建单选框组件。
 
 **Since:** 8
 
@@ -35,7 +37,12 @@ Creates a radio button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters of the radio button.  |
+| options | [RadioOptions](../arkts-apis/arkts-arkui-radio-radiooptions-i.md) | Yes | 配置单选框的参数。 |
 
 ## Summary
 
+- [RadioConfiguration](arkts-arkui-radio-radioconfiguration-i.md)
+- [RadioOptions](arkts-arkui-radio-radiooptions-i.md)
+- [RadioStyle](arkts-arkui-radio-radiostyle-i.md)
+- [OnRadioChangeCallback](arkts-arkui-radio-onradiochangecallback-t.md)
+- [RadioIndicatorType](arkts-arkui-radio-radioindicatortype-e.md)

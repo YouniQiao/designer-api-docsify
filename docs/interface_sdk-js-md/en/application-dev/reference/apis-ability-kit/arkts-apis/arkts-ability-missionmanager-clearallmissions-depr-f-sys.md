@@ -6,7 +6,7 @@
 function clearAllMissions(callback: AsyncCallback<void>): void
 ```
 
-Clears all unlocked missions. This API uses an asynchronous callback to return the result.
+清理所有未锁定的任务。使用callback异步回调。
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If all the unlocked missions are cleared, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当清理所有未锁定的任务成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager'
@@ -55,7 +55,7 @@ try {
 function clearAllMissions(): Promise<void>
 ```
 
-Clears all unlocked missions. This API uses a promise to return the result.
+清理所有未锁定的任务。使用Promise异步回调。
 
 **Since:** 8
 
@@ -77,9 +77,9 @@ Clears all unlocked missions. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

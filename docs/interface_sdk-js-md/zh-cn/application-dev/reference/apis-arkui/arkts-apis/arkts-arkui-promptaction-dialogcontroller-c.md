@@ -1,9 +1,9 @@
 # DialogController
 
-自定义弹窗控制器，继承自\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+自定义弹窗控制器，继承自[CommonController](../../../reference/apis-arkui/js-apis-promptAction copy.md#commoncontroller18)。
 
 DialogController可作为UIContext弹出自定义弹窗的成员变量，具体用法可看  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_和\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_示例。
+[openCustomDialogWithController](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#opencustomdialogwithcontroller18)和[presentCustomDialog](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#presentcustomdialog18)示例。
 
 **继承/实现关系：** DialogController extends [CommonController](arkts-arkui-promptaction-commoncontroller-c.md)
 
@@ -16,4 +16,10 @@ DialogController可作为UIContext弹出自定义弹窗的成员变量，具体�
 <!--Device-promptAction-export class DialogController extends CommonController--><!--Device-promptAction-export class DialogController extends CommonController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
 

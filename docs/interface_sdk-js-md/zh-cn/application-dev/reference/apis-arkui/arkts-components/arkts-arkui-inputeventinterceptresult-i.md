@@ -1,6 +1,6 @@
 # InputEventInterceptResult
 
-输入事件拦截结果接口，用于监听器回调[InputEventListener]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_返回是否拦截的决策。
+输入事件拦截结果接口，用于监听器回调[InputEventListener](arkts-arkui-inputeventlistener-t.md)返回是否拦截的决策。
 
 **起始版本：** 26.0.0
 
@@ -22,7 +22,7 @@ CONTINUE：允许事件继续传递到UI框架。
 
 BLOCK：阻止事件传递到UI框架。
 
-**类型：** InputEventInterceptAction
+**类型：** [InputEventInterceptAction](../arkts-apis/arkts-arkui-inputeventinterceptaction-e.md)
 
 **起始版本：** 26.0.0
 

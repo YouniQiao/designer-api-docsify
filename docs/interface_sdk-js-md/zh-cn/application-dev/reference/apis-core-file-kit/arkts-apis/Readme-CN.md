@@ -611,6 +611,57 @@
   - [Stat](arkts-corefile-fileio-stat-depr-i.md)
   - [Stream](arkts-corefile-fileio-stream-depr-i.md)
   - [Watcher](arkts-corefile-fileio-watcher-depr-i.md)
+- [@ohos.filemanagement.userFileManager](arkts-filemanagement-userfilemanager.md)
+  <!--Del-->
+  - [getUserFileMgr(系统接口)](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AbsAlbum(系统接口)](arkts-corefile-userfilemanager-absalbum-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Album(系统接口)](arkts-corefile-userfilemanager-album-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AlbumFetchOptions(系统接口)](arkts-corefile-userfilemanager-albumfetchoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ChangeData(系统接口)](arkts-corefile-userfilemanager-changedata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FetchOptions(系统接口)](arkts-corefile-userfilemanager-fetchoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FetchResult(系统接口)](arkts-corefile-userfilemanager-fetchresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileAsset(系统接口)](arkts-corefile-userfilemanager-fileasset-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PeerInfo(系统接口)](arkts-corefile-userfilemanager-peerinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PhotoCreateOptions(系统接口)](arkts-corefile-userfilemanager-photocreateoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PrivateAlbum(系统接口)](arkts-corefile-userfilemanager-privatealbum-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [UserFileManager(系统接口)](arkts-corefile-userfilemanager-userfilemanager-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ChangeEvent(系统接口)](arkts-corefile-userfilemanager-changeevent-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [MemberType(系统接口)](arkts-corefile-userfilemanager-membertype-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AlbumKey(系统接口)](arkts-corefile-userfilemanager-albumkey-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AlbumSubType(系统接口)](arkts-corefile-userfilemanager-albumsubtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AlbumType(系统接口)](arkts-corefile-userfilemanager-albumtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AudioKey(系统接口)](arkts-corefile-userfilemanager-audiokey-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DefaultChangeUri(系统接口)](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileType(系统接口)](arkts-corefile-userfilemanager-filetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImageVideoKey(系统接口)](arkts-corefile-userfilemanager-imagevideokey-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NotifyType(系统接口)](arkts-corefile-userfilemanager-notifytype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PhotoSubType(系统接口)](arkts-corefile-userfilemanager-photosubtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PositionType(系统接口)](arkts-corefile-userfilemanager-positiontype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PrivateAlbumType(系统接口)](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md)<!--DelEnd-->
 - [@ohos.fileshare](arkts-fileshare.md)
   - [activatePermission](arkts-corefile-fileshare-activatepermission-f.md)
   <!--Del-->
@@ -642,21 +693,21 @@
 - [@ohos.statfs](arkts-statfs.md)
   - [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md)
   - [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md)
-- [@system.file](arkts-file.md)
-  - [File](arkts-corefile-file-file-depr-c.md)
-  - [FileAccessOption](arkts-corefile-file-fileaccessoption-depr-i.md)
-  - [FileCopyOption](arkts-corefile-file-filecopyoption-depr-i.md)
-  - [FileDeleteOption](arkts-corefile-file-filedeleteoption-depr-i.md)
-  - [FileGetOption](arkts-corefile-file-filegetoption-depr-i.md)
-  - [FileListOption](arkts-corefile-file-filelistoption-depr-i.md)
-  - [FileListResponse](arkts-corefile-file-filelistresponse-depr-i.md)
-  - [FileMkdirOption](arkts-corefile-file-filemkdiroption-depr-i.md)
-  - [FileMoveOption](arkts-corefile-file-filemoveoption-depr-i.md)
-  - [FileReadArrayBufferOption](arkts-corefile-file-filereadarraybufferoption-depr-i.md)
-  - [FileReadArrayBufferResponse](arkts-corefile-file-filereadarraybufferresponse-depr-i.md)
-  - [FileReadTextOption](arkts-corefile-file-filereadtextoption-depr-i.md)
-  - [FileReadTextResponse](arkts-corefile-file-filereadtextresponse-depr-i.md)
-  - [FileResponse](arkts-corefile-file-fileresponse-depr-i.md)
-  - [FileRmdirOption](arkts-corefile-file-filermdiroption-depr-i.md)
-  - [FileWriteArrayBufferOption](arkts-corefile-file-filewritearraybufferoption-depr-i.md)
-  - [FileWriteTextOption](arkts-corefile-file-filewritetextoption-depr-i.md)
+- [@system.file](arkts-system-file.md)
+  - [File](arkts-corefile-system-file-file-depr-c.md)
+  - [FileAccessOption](arkts-corefile-system-file-fileaccessoption-depr-i.md)
+  - [FileCopyOption](arkts-corefile-system-file-filecopyoption-depr-i.md)
+  - [FileDeleteOption](arkts-corefile-system-file-filedeleteoption-depr-i.md)
+  - [FileGetOption](arkts-corefile-system-file-filegetoption-depr-i.md)
+  - [FileListOption](arkts-corefile-system-file-filelistoption-depr-i.md)
+  - [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md)
+  - [FileMkdirOption](arkts-corefile-system-file-filemkdiroption-depr-i.md)
+  - [FileMoveOption](arkts-corefile-system-file-filemoveoption-depr-i.md)
+  - [FileReadArrayBufferOption](arkts-corefile-system-file-filereadarraybufferoption-depr-i.md)
+  - [FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md)
+  - [FileReadTextOption](arkts-corefile-system-file-filereadtextoption-depr-i.md)
+  - [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md)
+  - [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)
+  - [FileRmdirOption](arkts-corefile-system-file-filermdiroption-depr-i.md)
+  - [FileWriteArrayBufferOption](arkts-corefile-system-file-filewritearraybufferoption-depr-i.md)
+  - [FileWriteTextOption](arkts-corefile-system-file-filewritetextoption-depr-i.md)

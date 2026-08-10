@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## command
 
 ```TypeScript
 command: AVCastControlCommandType
 ```
 
-命令。每种命令对应的参数不同，具体的对应关系可查阅[AVCastControlCommandType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+命令。每种命令对应的参数不同，具体的对应关系可查阅[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)。
 
-**类型：** AVCastControlCommandType
+**类型：** [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ parameter?: media.PlaybackSpeed | double | string | LoopMode
 
 命令对应的参数。
 
-**类型：** media.PlaybackSpeed \| double \| string \| LoopMode
+**类型：** ArkTS-Dyn: media.PlaybackSpeed \| number \| string \| LoopMode  <br>ArkTS-Sta：media.PlaybackSpeed \| double \| string \| LoopMode
 
 **起始版本：** 10
 

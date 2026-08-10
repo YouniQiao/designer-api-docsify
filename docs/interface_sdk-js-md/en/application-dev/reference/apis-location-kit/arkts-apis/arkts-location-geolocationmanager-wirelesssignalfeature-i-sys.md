@@ -12,6 +12,12 @@ Indicates wireless signal feature.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## mac
 
 ```TypeScript
@@ -42,7 +48,7 @@ rssiAvg: int
 
 Indicates average RSSI value.The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ rssiStandardDeviation: double
 
 Indicates RSSI standard deviation.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 

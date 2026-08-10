@@ -1,8 +1,8 @@
 # ToneHapticsAttrs
 
-系统铃音的振动属性。在调用ToneHapticsAttrs\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_14+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_的接口前，需要先通过  
-[getToneHapticsList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或  
-[getHapticsAttrsSyncedWithTone]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法获取实例。
+系统铃音的振动属性。在调用ToneHapticsAttrs&lt;sup&gt;14+&lt;/sup&gt;的接口前，需要先通过  
+[getToneHapticsList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gettonehapticslist)或  
+[getHapticsAttrsSyncedWithTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gethapticsattrssyncedwithtone)方法获取实例。
 
 **起始版本：** 14
 
@@ -11,6 +11,12 @@
 <!--Device-systemSoundManager-interface ToneHapticsAttrs--><!--Device-systemSoundManager-interface ToneHapticsAttrs-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
 
 ## getFileName
 
@@ -38,9 +44,9 @@ getFileName(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 toneHapticsAttrs.getFileName();
@@ -72,9 +78,9 @@ getGentleFileName(): string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 toneHapticsAttrs.getGentleFileName();
@@ -106,9 +112,9 @@ getGentleTitle(): string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 toneHapticsAttrs.getGentleTitle();
@@ -140,9 +146,9 @@ getGentleUri(): string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 toneHapticsAttrs.getGentleUri();
@@ -174,9 +180,9 @@ getTitle(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 toneHapticsAttrs.getTitle();
@@ -208,9 +214,9 @@ getUri(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 toneHapticsAttrs.getUri();

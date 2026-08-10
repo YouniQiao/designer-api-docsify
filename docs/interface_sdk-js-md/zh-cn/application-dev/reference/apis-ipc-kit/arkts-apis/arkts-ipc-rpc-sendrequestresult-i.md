@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## code
 
 ```TypeScript
@@ -44,7 +50,7 @@ data: MessageParcel
 
 发送给对端进程的MessageParcel对象。
 
-**类型：** MessageParcel
+**类型：** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
 **起始版本：** 8
 
@@ -88,7 +94,7 @@ reply: MessageParcel
 
 对端进程返回的MessageParcel对象。
 
-**类型：** MessageParcel
+**类型：** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
 **起始版本：** 8
 

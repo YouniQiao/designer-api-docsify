@@ -1,5 +1,11 @@
 # startCastDeviceDiscovery（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## startCastDeviceDiscovery
 
 ```TypeScript
@@ -22,15 +28,15 @@ function startCastDeviceDiscovery(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 avSession.startCastDeviceDiscovery(() => {
@@ -61,22 +67,22 @@ function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 进行设备发现的过滤条件，由ProtocolType组合而成。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
+| filter | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 进行设备发现的过滤条件，由ProtocolType组合而成。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filter = 2;
-avSession.startCastDeviceDiscovery(filter, (err) => {
-  console.info('startCastDeviceDiscovery successfully');
+avSession.startCastDeviceDiscovery(filter, () => {
+    console.info('Succeeded in starting cast device discovery.');
 });
 ```
 
@@ -103,8 +109,8 @@ function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 进行设备发现的过滤条件，由ProtocolType组合而成。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
-| drmSchemes | Array&lt;string&gt; | 否 | 进行支持DRM资源播放的设备发现的过滤条件，由DRM uuid组合而成。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_从API version 12开始支持该可选参 数。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| filter | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 进行设备发现的过滤条件，由ProtocolType组合而成。<br>**起始版本：** 12 |
+| drmSchemes | Array&lt;string&gt; | 否 | 进行支持DRM资源播放的设备发现的过滤条件，由DRM uuid组合而成。 &lt;br/&gt;从API version 12开始支持该可选参 数。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -116,16 +122,16 @@ function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filter = 2;
 let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
 avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
-  console.info('startCastDeviceDiscovery successfully');
+  console.info('Succeeded in starting cast device discovery.');
 });
 ```
 

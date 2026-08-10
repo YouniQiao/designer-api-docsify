@@ -1,6 +1,6 @@
 # DeviceChangeType
 
-Enumerates the device connection statuses.
+表示设备连接状态变化的枚举。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the device connection statuses.
 CONNECT = 0
 ```
 
-Connected.
+设备连接。
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Connected.
 DISCONNECT = 1
 ```
 
-Disconnected.
+断开设备连接。
 
 **Since:** 7
 

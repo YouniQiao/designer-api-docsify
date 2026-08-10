@@ -1,6 +1,6 @@
 # SheetType
 
-Defines the sheet type.
+半模态弹窗的样式。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Defines the sheet type.
 BOTTOM = 0
 ```
 
-Defines bottom sheet type.
+底部弹窗。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Defines bottom sheet type.
 CENTER = 1
 ```
 
-Defines center sheet type.
+居中弹窗。
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ Defines center sheet type.
 POPUP = 2
 ```
 
-Defines popup sheet type.
+跟手弹窗。跟手弹窗面板不支持跟手滑动，下滑面板不关闭。
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ Defines popup sheet type.
 SIDE = 3
 ```
 
-Defines side sheet type.
+侧边弹窗。
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ Defines side sheet type.
 CONTENT_COVER = 4
 ```
 
-Defines content cover type.
+全屏弹窗。
 
 **Since:** 20
 

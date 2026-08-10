@@ -4,7 +4,7 @@
 type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'
 ```
 
-Enumerates the page update types.
+页面刷新类型。
 
 **Since:** 9
 
@@ -16,6 +16,6 @@ Enumerates the page update types.
 
 | Type | Description |
 | --- | --- |
-| 'pageContentUpdate' | Update of the page content. |
-| 'pageStateUpdate' | Update of the page status. |
+| 'pageContentUpdate' | 表示页面内容刷新。 |
+| 'pageStateUpdate' | 表示页面状态刷新。 |
 

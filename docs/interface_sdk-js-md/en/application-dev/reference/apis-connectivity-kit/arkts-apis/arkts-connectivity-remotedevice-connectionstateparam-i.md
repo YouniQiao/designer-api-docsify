@@ -1,6 +1,6 @@
 # ConnectionStateParam
 
-Describes the connection state parameters.
+连接状态参数。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the connection state parameters.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the device address.The length must be 17, The value consists of hexade
 connectionReason: ConnectionReason
 ```
 
-Connection reason.
+连接原因。
 
-**Type:** ConnectionReason
+**Type:** [ConnectionReason](arkts-connectivity-remotedevice-connectionreason-e.md)
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ Connection reason.
 preState: ConnectionState
 ```
 
-Indicates the previous connection state.
+上一个连接状态。
 
-**Type:** ConnectionState
+**Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
 
 **Since:** 26.0.0
 
@@ -76,7 +82,7 @@ Indicates the previous connection state.
 reasonMsg?: string
 ```
 
-Indicates reason message. This field is intended for log information only and should not be used for logic processing.
+原因消息。此字段仅用于日志信息，不应该用于逻辑处理。
 
 **Type:** string
 
@@ -96,9 +102,9 @@ Indicates reason message. This field is intended for log information only and sh
 state: ConnectionState
 ```
 
-Indicates the current connection state.
+当前连接状态。
 
-**Type:** ConnectionState
+**Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
 
 **Since:** 26.0.0
 

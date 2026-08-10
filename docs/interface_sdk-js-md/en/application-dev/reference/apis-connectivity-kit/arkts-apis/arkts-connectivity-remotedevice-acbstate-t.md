@@ -4,7 +4,7 @@
 type AcbState = nearlinkConstant.AcbState
 ```
 
-Indicates the ACB(Asynchronous Connection-Oriented Bidirectional) connection status.
+ACB（异步面向连接的双向）连接状态。
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 type Modulo = Rounding | 9
 ```
 
-The type used to set modulo
+表示可设置的取模方法舍入类型。
 
 **Since:** 12
 

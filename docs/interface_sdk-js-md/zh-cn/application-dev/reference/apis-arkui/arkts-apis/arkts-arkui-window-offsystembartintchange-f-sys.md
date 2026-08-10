@@ -1,5 +1,11 @@
 # offSystemBarTintChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## offSystemBarTintChange
 
 ```TypeScript
@@ -22,29 +28,11 @@ function offSystemBarTintChange(callback?: Callback<SystemBarTintState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemBarTintState&gt; | 否 | 回调函数。返回当前的状态栏、导航栏信息集合。如果传入参数， 则关闭该监听。如果未传入参数，则关闭所有状态栏、导航栏属性变化的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SystemBarTintState&gt; | 否 | 回调函数。返回当前的状态栏、导航栏信息集合。如果传入参数， 则关闭该监听。如果未传入参数，则关闭所有状态栏、导航栏属性变化的监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例：**
-
-```TypeScript
-const callback = (systemBarTintState: window.SystemBarTintState) => {
-  // ...
-}
-try {
-  window.onSystemBarTintChange(callback);
-
-  window.offSystemBarTintChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  window.offSystemBarTintChange();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to enable or disable the listener for systemBarTint changes. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

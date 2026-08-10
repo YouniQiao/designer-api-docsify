@@ -1,7 +1,7 @@
 # Kem
 
-Key encapsulation mechanism (KEM) interface, defining methods for key encapsulation and decapsulation based on KEM.Before use, you must create a **Kem** instance by using  
-[createKem(algNameId: KemAlgNameId): Kem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+密钥封装机制（KEM）接口，定义基于密钥封装机制进行密钥封装和解封装的方法。调用前，需通过  
+[createKem(algNameId: KemAlgNameId): Kem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem)方法创建一个Kem实例。
 
 **Since:** 26.0.0
 
@@ -11,13 +11,19 @@ Key encapsulation mechanism (KEM) interface, defining methods for key encapsulat
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## decapsulate
 
 ```TypeScript
 decapsulate(priKey: PriKey, wrappedKey: Uint8Array): Promise<Uint8Array>
 ```
 
-Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext. This API uses a promise to return the result.
+密钥解封装操作。使用接收方的私钥，由接收方执行，从密文中解封装出共享密钥。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -35,23 +41,45 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The private key of the receiver. |
-| wrappedKey | Uint8Array | Yes | The wrapped key of the KEM. |
+| priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | 接收方的私钥。 |
+| wrappedKey | Uint8Array | Yes | KEM封装的密钥。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the shared secret. |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回共享密钥。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
+| 17620002 | 获取Native对象失败或参数转换失败。 |
+| 17620003 | 参数检查失败。 |
+
+## Examples
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function kemDecapsulate() {
+  try {
+    let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ML-KEM-768');
+    let keyPair = await asyKeyGenerator.generateKeyPair();
+    let kem = cryptoFramework.createKem(cryptoFramework.KemAlgNameId.ML_KEM_768);
+    let encapResult = await kem.encapsulate(keyPair.pubKey, null);
+    let sharedSecret = await kem.decapsulate(keyPair.priKey, encapResult.wrappedKey);
+    console.info('decapsulate success');
+    console.info('sharedSecret length: ' + sharedSecret.length);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`decapsulate failed: errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
 
 ## decapsulateSync
 
@@ -59,10 +87,9 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array
 ```
 
-Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext.
+密钥解封装操作。使用接收方的私钥，由接收方执行，从密文中解封装出共享密钥。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_**NOTE**  
-\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_It is recommended to prioritize the use of asynchronous API, \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link decapsulate}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **Since:** 26.0.0
 
@@ -80,23 +107,45 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The private key of the receiver. |
-| wrappedKey | Uint8Array | Yes | The wrapped key of the KEM. |
+| priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | 接收方的私钥。 |
+| wrappedKey | Uint8Array | Yes | KEM封装的密钥。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | The decapsulation result of the KEM. |
+| Uint8Array | 共享密钥。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
+| 17620002 | 获取Native对象失败或参数转换失败。 |
+| 17620003 | 参数检查失败。 |
+
+## Examples
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function kemDecapsulateSync() {
+  try {
+    let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ML-KEM-768');
+    let keyPair = asyKeyGenerator.generateKeyPairSync();
+    let kem = cryptoFramework.createKem(cryptoFramework.KemAlgNameId.ML_KEM_768);
+    let encapResult = kem.encapsulateSync(keyPair.pubKey, null);
+    let sharedSecret = kem.decapsulateSync(keyPair.priKey, encapResult.wrappedKey);
+    console.info('decapsulateSync success');
+    console.info('sharedSecret length: ' + sharedSecret.length);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`decapsulateSync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
 
 ## encapsulate
 
@@ -104,7 +153,7 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 encapsulate(pubKey: PubKey, ikme: Uint8Array | null): Promise<KemEncapResult>
 ```
 
-Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key. This API uses a promise to return the result.
+密钥封装操作。使用接收方的公钥，由发送方执行，生成并封装一个共享密钥。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -122,23 +171,45 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The public key of the receiver. |
-| ikme | Uint8Array \| null | Yes | Random number seed, used to replace the random number within the algorithm. For the ML-KEM algorithm, the random number seed is 32 bytes. It is recommended to pass null. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | 接收方的公钥。 |
+| ikme | Uint8Array \| null | Yes | 随机数种子，用于替代算法内部的随机数。对于ML-KEM算法，随机数种子是32字节。建议传null。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KemEncapResult&gt; | Promise used to return the KemEncapResult. |
+| Promise&lt;KemEncapResult&gt; | Promise对象，返回KEM封装结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
+| 17620002 | 获取Native对象失败或参数转换失败。 |
+| 17620003 | 参数检查失败。 |
+
+## Examples
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function kemEncapsulate() {
+  try {
+    let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ML-KEM-768');
+    let keyPair = await asyKeyGenerator.generateKeyPair();
+    let kem = cryptoFramework.createKem(cryptoFramework.KemAlgNameId.ML_KEM_768);
+    let encapResult = await kem.encapsulate(keyPair.pubKey, null);
+    console.info('encapsulate success');
+    console.info('sharedSecret length: ' + encapResult.sharedSecret.length);
+    console.info('wrappedKey length: ' + encapResult.wrappedKey.length);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`encapsulate failed: errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
 
 ## encapsulateSync
 
@@ -146,10 +217,9 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 ```
 
-Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key.
+密钥封装操作。使用接收方的公钥，由发送方执行，生成并封装一个共享密钥。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_**NOTE**  
-\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_It is recommended to prioritize the use of asynchronous API, \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link encapsulate}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **Since:** 26.0.0
 
@@ -167,21 +237,43 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The public key of the receiver. |
-| ikme | Uint8Array \| null | Yes | Random number seed, used to replace the random number within the algorithm. For the ML-KEM algorithm, the random number seed is 32 bytes. It is recommended to pass null. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | 接收方的公钥。 |
+| ikme | Uint8Array \| null | Yes | 随机数种子，用于替代算法内部的随机数。对于ML-KEM算法，随机数种子是32字节。建议传null。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The encapsulation result of the KEM. |
+| [KemEncapResult](arkts-cryptoarchitecture-cryptoframework-kemencapresult-i.md) | KEM封装结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
+| 17620002 | 获取Native对象失败或参数转换失败。 |
+| 17620003 | 参数检查失败。 |
+
+## Examples
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function kemEncapsulateSync() {
+  try {
+    let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ML-KEM-768');
+    let keyPair = asyKeyGenerator.generateKeyPairSync();
+    let kem = cryptoFramework.createKem(cryptoFramework.KemAlgNameId.ML_KEM_768);
+    let encapResult = kem.encapsulateSync(keyPair.pubKey, null);
+    console.info('encapsulateSync success');
+    console.info('sharedSecret length: ' + encapResult.sharedSecret.length);
+    console.info('wrappedKey length: ' + encapResult.wrappedKey.length);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`encapsulateSync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
 

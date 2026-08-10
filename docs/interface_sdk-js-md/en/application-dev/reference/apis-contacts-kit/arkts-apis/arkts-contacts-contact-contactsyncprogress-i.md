@@ -1,8 +1,8 @@
 # ContactSyncProgress
 
-Information about the contact synchronization progress.
+联系人同步进度的信息。
 
-Contains the sync ID, current batch, and total batch.
+包含同步ID、当前批次和总批次。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Contains the sync ID, current batch, and total batch.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## currentBatch
 
 ```TypeScript
 currentBatch: int
 ```
 
-Indicates the identifier of the current batch of contacts to be synchronized.
+表示要同步的当前联系人批次的标识符。
 
-The range of values is from 1 to totalBatches.
+值的范围是从1到totalBatches。
 
 **Type:** int
 
@@ -42,9 +48,9 @@ The range of values is from 1 to totalBatches.
 syncId: int
 ```
 
-Indicates the sync identifier used for synchronizing all contacts.
+表示用于同步所有联系人的同步标识符。
 
-The value should start from 0.
+该值应从0开始。
 
 **Type:** int
 
@@ -66,7 +72,7 @@ The value should start from 0.
 totalBatches: int
 ```
 
-Indicates the total number of batches of contacts to be synchronized.
+表示要同步的联系人批次总数。
 
 **Type:** int
 

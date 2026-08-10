@@ -1,6 +1,6 @@
 # WebSocketServer
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Defines a WebSocketServer object. Before invoking WebSocketServer APIs,you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;Defines a WebSocketServer object. Before invoking WebSocketServer APIs,you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.&lt;/p&gt;
 
 **Since:** 24
 
@@ -9,6 +9,12 @@
 <!--Device-webSocket-export interface WebSocketServer--><!--Device-webSocket-export interface WebSocketServer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
+
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
 
 ## close
 
@@ -32,8 +38,8 @@ Close a given WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | which on to be closed. |
-| options | webSocket.WebSocketCloseOptions | No | Optional parameters \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes | which on to be closed. |
+| options | webSocket.WebSocketCloseOptions | No | Optional parameters {@link WebSocketCloseOptions}. |
 
 **Return value:**
 
@@ -45,10 +51,10 @@ Close a given WebSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2302006 | websocket connection does not exist. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -106,15 +112,15 @@ List all alive connections.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | an array consists connections from all clients. |
+| [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)[] | an array consists connections from all clients. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -175,9 +181,9 @@ Cancels listening for the error events of a WebSocket Server.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -208,9 +214,9 @@ Cancels listening for events that a client requested to connect the server.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | event indicating that a client requested to connect the server. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WebSocketConnection&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WebSocketConnection&gt; | No | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -241,9 +247,9 @@ Cancels listening for events that a connection from a given client has been clos
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | event indicating that a connection from a given client has been closed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the callback used to return the result. |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | No | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -274,9 +280,9 @@ Cancels listening for events that the server received a message.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | event indicating that the server received a message. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WebSocketMessage&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WebSocketMessage&gt; | No | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -306,7 +312,7 @@ Cancels listening for events that a client requested to connect the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WebSocketConnection&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WebSocketConnection&gt; | No | the callback used to return the result. |
 
 ## offMessageReceive
 
@@ -328,7 +334,7 @@ Cancels listening for events that the server received a message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WebSocketMessage&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WebSocketMessage&gt; | No | the callback used to return the result. |
 
 ## offWebSocketServerClose
 
@@ -350,7 +356,7 @@ Cancels listening for events that a connection from a given client has been clos
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the callback used to return the result. |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | No | the callback used to return the result. |
 
 ## offWebSocketServerError
 
@@ -372,7 +378,7 @@ Cancels listening for the error events of a WebSocket Server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
 
 ## on('error')
 
@@ -395,9 +401,9 @@ Enables listening for the error events of a WebSocket Server.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -430,9 +436,9 @@ Enables listening for events that a client requested to connect the server.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | event indicating that a client requested to connect the server. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WebSocketConnection&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WebSocketConnection&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -465,9 +471,9 @@ Enables listening for events that the server received a message.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | event indicating that the server received a message. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WebSocketMessage&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WebSocketMessage&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -500,9 +506,9 @@ Enables listening for events that a connection from a given client has been clos
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | event indicating that a connection from a given client has been closed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback function when a client connection is closed. |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | Yes | the callback function when a client connection is closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -534,7 +540,7 @@ Enables listening for events that a client requested to connect the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WebSocketConnection&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WebSocketConnection&gt; | Yes | the callback used to return the result. |
 
 ## onMessageReceive
 
@@ -556,7 +562,7 @@ Enables listening for events that the server received a message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WebSocketMessage&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WebSocketMessage&gt; | Yes | the callback used to return the result. |
 
 ## onWebSocketServerClose
 
@@ -578,7 +584,7 @@ Enables listening for events that a connection from a given client has been clos
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback function when a client connection is closed. |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | Yes | the callback function when a client connection is closed. |
 
 ## onWebSocketServerError
 
@@ -600,7 +606,7 @@ Enables listening for the error events of a WebSocket Server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
 ## send
 
@@ -625,7 +631,7 @@ Send a message using a specific connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string \| ArrayBuffer | Yes | What to send. It can be a string or an ArrayBuffer. |
-| connection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Where to sent. |
+| connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes | Where to sent. |
 
 **Return value:**
 
@@ -637,10 +643,10 @@ Send a message using a specific connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2302006 | websocket connection does not exist. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -701,7 +707,7 @@ Start the WebSocket Server, and listen to a given port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | setting for the server, such as ip address and port to listen to. |
+| config | [WebSocketServerConfig](arkts-network-websocket-websocketserverconfig-i.md) | Yes | setting for the server, such as ip address and port to listen to. |
 
 **Return value:**
 
@@ -713,14 +719,14 @@ Start the WebSocket Server, and listen to a given port.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
-| [2302004](../errorcode-net-webSocket.md#2302004-listening-failed-on-the-specified-nic) | Can't listen on the given NIC. |
-| [2302005](../errorcode-net-webSocket.md#2302005-listening-failed-on-the-specified-port) | Can't listen on the given Port. |
-| [2302007](../errorcode-net-webSocket.md#2302007-listening-port-already-occupied) | Websocket port already occupied. |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error. |
+| 2302002 | Websocket certificate file does not exist. |
+| 2302007 | Websocket port already occupied. |
+| 2302999 | Websocket other unknown error. |
+| 2302005 | Can't listen on the given Port. |
+| 2302004 | Can't listen on the given NIC. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -773,9 +779,9 @@ Stop listening.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';

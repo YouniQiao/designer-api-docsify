@@ -1,6 +1,6 @@
 # DistributedHardwareErrorCode (System API)
 
-Enumerates the error codes used for the distributed hardware.
+分布式硬件错误码的枚举。
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ Enumerates the error codes used for the distributed hardware.
 ERR_CODE_DISTRIBUTED_HARDWARE_NOT_STARTED = 24200101
 ```
 
-The distributed hardware is not started.
+表示分布式硬件未启动。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ The distributed hardware is not started.
 ERR_CODE_DEVICE_NOT_CONNECTED = 24200102
 ```
 
-The source device is not connected.
+表示源端设备未连接。
 
 **Since:** 11
 

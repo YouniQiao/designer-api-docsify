@@ -1,6 +1,6 @@
 # FlexOptions
 
-Describes the layout and alignment of child components within the **Flex** component.
+设置Flex子组件的排列对齐方式。
 
 **Since:** 7
 
@@ -16,10 +16,22 @@ Describes the layout and alignment of child components within the **Flex** compo
 alignContent?: FlexAlign
 ```
 
-Alignment mode of multiple lines when there is extra space along the cross axis. This parameter is valid only when  
-**wrap** is set to **Wrap** or **WrapReverse**.If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
+当交叉轴存在额外空间时，多行内容之间的对齐方式。仅在wrap为Wrap或WrapReverse下生效。
 
-**Type:** FlexAlign
+默认值：FlexAlign.Start 
+
+异常值按默认值处理。
+
+取值包括：
+
+- Start：首端对齐。  
+- Center：居中对齐。  
+- End：尾端对齐。  
+- SpaceBetween：两端对齐，行与行之间间距相等。  
+- SpaceAround：每行两侧间距相等。  
+- SpaceEvenly：行与行之间及两端间距完全相等。
+
+**Type:** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
 **Since:** 7
 
@@ -39,9 +51,22 @@ Alignment mode of multiple lines when there is extra space along the cross axis.
 alignItems?: ItemAlign
 ```
 
-Alignment mode of the child components in the **Flex** component along the cross axis.If an invalid value is passed, the default value will be used. Default value: **ItemAlign.Start**.
+所有子组件在Flex容器交叉轴上的对齐格式。设置后，子组件将按照指定的对齐方式在交叉轴方向上定位。
 
-**Type:** ItemAlign
+默认值：ItemAlign.Start 
+
+异常值按默认值处理。
+
+取值包括：
+
+- Auto：使用父容器的对齐方式。  
+- Start：首部对齐。  
+- Center：居中对齐。  
+- End：尾部对齐。  
+- Stretch：拉伸填充。  
+- Baseline：基线对齐。
+
+**Type:** [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md)
 
 **Since:** 7
 
@@ -61,9 +86,22 @@ Alignment mode of the child components in the **Flex** component along the cross
 direction?: FlexDirection
 ```
 
-Direction in which child components are arranged in the **Flex** component, that is, the direction of the main axis.If an invalid value is passed, the default value will be used. Default value: **FlexDirection.Row**.
+子组件在Flex容器上排列的方向，即主轴的方向。设置后，子组件将按照指定的方向在主轴上依次排列。
 
-**Type:** FlexDirection
+默认值：FlexDirection.Row 
+
+异常值按默认值处理。
+
+取值包括：
+
+- Row：主轴为水平方向，起点在左端。  
+- RowReverse：主轴为水平方向，起点在右端。  
+- Column：主轴为垂直方向，起点在上端。  
+- ColumnReverse：主轴为垂直方向，起点在下端。
+
+Row和RowReverse的起点位置受容器的direction属性影响。
+
+**Type:** [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md)
 
 **Since:** 7
 
@@ -83,9 +121,24 @@ Direction in which child components are arranged in the **Flex** component, that
 justifyContent?: FlexAlign
 ```
 
-Alignment mode of the child components in the **Flex** component along the main axis.If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
+所有子组件在Flex容器主轴上的对齐格式。设置后，子组件将按照指定的对齐方式在主轴方向上分布和排列。
 
-**Type:** FlexAlign
+默认值：FlexAlign.Start 
+
+异常值按默认值处理。
+
+取值包括：
+
+- Start：首端对齐。  
+- Center：居中对齐。  
+- End：尾端对齐。  
+- SpaceBetween：两端对齐，子组件之间间距相等。  
+- SpaceAround：子组件两侧间距相等。  
+- SpaceEvenly：子组件之间及两端间距完全相等。
+
+**说明：** 当justifyContent设置为SpaceBetween、SpaceAround、SpaceEvenly时，space参数不生效。
+
+**Type:** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
 **Since:** 7
 
@@ -105,10 +158,15 @@ Alignment mode of the child components in the **Flex** component along the main 
 space?: FlexSpaceOptions
 ```
 
-Spacing between child components along the main axis or cross axis of the **Flex** component.Invalid values are treated as the default value. This parameter does not take effect if the value specified is a negative number or percentage, or if **justifyContent** is set to **FlexAlign.SpaceBetween**,  
-**FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.Default value: **{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}**.
+设置Flex容器子组件在主轴和交叉轴上的间距，包含main和cross两个属性。当需要调整子组件之间的间距时传入此参数，不传入时子组件之间无间距。
 
-**Type:** FlexSpaceOptions
+默认值：{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)} 
+
+非法值：按默认值处理。 
+
+当space.main或space.cross的值为负数，或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space参数不生效。其中main属性在单行或多行布局时均生效，cross属性仅在wrap为Wrap或WrapReverse（多行布局）时生效。
+
+**Type:** [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md)
 
 **Since:** 12
 
@@ -128,13 +186,23 @@ Spacing between child components along the main axis or cross axis of the **Flex
 wrap?: FlexWrap
 ```
 
-Whether the **Flex** component has a single line or multiple lines.If an invalid value is passed, the default value will be used.  
-    **NOTE**  
-    
-    When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the  
-    cross axis direction. Default value: **FlexWrap.NoWrap**.
+Flex容器是单行/列还是多行/列排列。设置后，子组件将在容器中按指定的换行方式进行布局。
 
-**Type:** FlexWrap
+默认值：FlexWrap.NoWrap 
+
+异常值按默认值处理。
+
+取值包括：
+
+- NoWrap：不换行，子组件总宽度超过容器宽度时被截断。  
+- Wrap：换行，第一行在上方。  
+- WrapReverse：换行，第一行在下方。
+
+**说明：**
+
+在多行布局时，通过交叉轴方向，确认新行堆叠方向。
+
+**Type:** [FlexWrap](../arkts-apis/arkts-arkui-flexwrap-e.md)
 
 **Since:** 7
 

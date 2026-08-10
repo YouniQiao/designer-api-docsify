@@ -1,5 +1,11 @@
 # cleanBundleCacheFiles（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## cleanBundleCacheFiles
 
 ```TypeScript
@@ -29,7 +35,7 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指示要清除其缓存数据的应用Bundle名称。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 
 ## cleanBundleCacheFiles

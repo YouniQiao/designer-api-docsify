@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## pressKey
 
 ```TypeScript
@@ -36,7 +42,7 @@ pressKey(keyCode: KeyCode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要按下的按键键码。 |
+| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 是 | 要按下的按键键码。 |
 
 **返回值：**
 
@@ -48,11 +54,11 @@ pressKey(keyCode: KeyCode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The key is already pressed and is not the most recently pressed key. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 4300001 | The key is already pressed and is not the most recently pressed key. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { inputEventClient, KeyCode } from '@kit.InputKit';
@@ -109,7 +115,7 @@ releaseKey(keyCode: KeyCode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要抬起的按键键码。 |
+| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 是 | 要抬起的按键键码。 |
 
 **返回值：**
 
@@ -121,11 +127,11 @@ releaseKey(keyCode: KeyCode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The key is not pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 4300001 | The key is not pressed. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 参见[pressKey](#presskey)示例。
 

@@ -1,5 +1,11 @@
 # bulkTransfer
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## bulkTransfer
 
 ```TypeScript
@@ -13,8 +19,8 @@ function bulkTransfer(
 
 批量传输。
 
-需要调用[usb.getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取设备信息列表以及endpoint；再调用[usb.requestRight]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取设备请求权限；然后调用[usb.connectDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口得到返回数据devicepipe之后，再次获取接口  
-[usb.claimInterface]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_；再调用usb.bulkTransfer接口。
+需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices)获取设备信息列表以及endpoint；再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright)获取设备请求权限；然后调用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice)接口得到返回数据devicepipe之后，再次获取接口  
+[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface)；再调用usb.bulkTransfer接口。
 
 **起始版本：** 8
 
@@ -32,8 +38,8 @@ function bulkTransfer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于确定设备。 |
-| endpoint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于确定传输的端口。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 | 用于确定设备。 |
+| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | 是 | 用于确定传输的端口。 |
 | buffer | Uint8Array | 是 | 用于写入或读取的缓冲区。 |
 | timeout | number | 否 | 超时时间（单位：ms），可选参数，默认为0不超时。 |
 
@@ -43,7 +49,7 @@ function bulkTransfer(
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象，获取传输或接收到的数据块大小。失败返回-1。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 //usb.getDevices 接口返回数据集合，取其中一个设备对象，并获取权限 。

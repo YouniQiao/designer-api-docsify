@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
+## 导入模块
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## appUsagePriorityGroup
 
 ```TypeScript
@@ -96,7 +102,7 @@ The class name.
 stateOccurredTime?: number
 ```
 
-The time when this state occurred, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The time when this state occurred, in milliseconds.&lt;br&gt; Unit:ms
 
 **类型：** number
 

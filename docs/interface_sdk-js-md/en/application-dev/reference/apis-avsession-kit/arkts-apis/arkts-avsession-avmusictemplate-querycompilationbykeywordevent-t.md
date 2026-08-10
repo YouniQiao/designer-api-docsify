@@ -4,7 +4,7 @@
 type QueryCompilationByKeywordEvent = (keyword: string) => Promise<Compilation[]>
 ```
 
-The query compilation by keyword event.
+按关键字查询合集的事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ The query compilation by keyword event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyword | string | Yes | keyword  |
+| keyword | string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Compilation[]&gt; | (Compilation[]) returned through promise  |
+| Promise&lt;Compilation[]&gt; | Promise对象，返回与关键字相关的合集数组。 |
 

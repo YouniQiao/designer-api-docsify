@@ -1,5 +1,11 @@
 # onAdd
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## onAdd
 
 ```TypeScript
@@ -20,5 +26,5 @@ Register the callback for display add events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | the display id of changed |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | the display id of changed |
 

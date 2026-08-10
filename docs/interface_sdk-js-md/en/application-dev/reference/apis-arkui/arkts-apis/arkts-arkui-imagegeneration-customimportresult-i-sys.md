@@ -12,6 +12,12 @@ The result of import operation for custom import icon.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## content
 
 ```TypeScript
@@ -20,7 +26,7 @@ content?: ResourceStr
 
 Text content for import operation.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

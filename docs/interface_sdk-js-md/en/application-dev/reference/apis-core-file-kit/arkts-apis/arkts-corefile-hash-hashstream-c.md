@@ -1,10 +1,8 @@
 # HashStream
 
-The **HashStream** class is a utility for creating a message digest of data. You can use  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to create a  
-**HashStream** instance.
+HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md#createhash) 接口获得。
 
-**Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md)
+**Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md/arkts-arkts-stream-transform-c.md)
 
 **Since:** 12
 
@@ -14,13 +12,19 @@ The **HashStream** class is a utility for creating a message digest of data. You
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { hash } from 'kits/@kit.CoreFileKit';
+```
+
 ## digest
 
 ```TypeScript
 digest(): string
 ```
 
-Generates a message digest.
+计算传递给哈希处理的所有数据的摘要。
 
 **Since:** 12
 
@@ -34,16 +38,16 @@ Generates a message digest.
 
 | Type | Description |
 | --- | --- |
-| string | Hash value, which is a hexadecimal string consisting of digits and uppercase letters. |
+| string | 返回数据的哈希值。该哈希值表示为十六进制数字串，所有字母均大写。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| 401 | Parameter error |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Create a hash stream.
@@ -61,7 +65,7 @@ console.info(`hashResult: ${hashResult}`);
 update(data: ArrayBuffer): void
 ```
 
-Updates the data for generating a message digest. This API can be called multiple times.
+使用给定的 data 更新哈希内容，可多次调用。
 
 **Since:** 12
 
@@ -75,16 +79,16 @@ Updates the data for generating a message digest. This API can be called multipl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to be calculated. |
+| data | ArrayBuffer | Yes | updated data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| 401 | Parameter error |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Create a hash stream.

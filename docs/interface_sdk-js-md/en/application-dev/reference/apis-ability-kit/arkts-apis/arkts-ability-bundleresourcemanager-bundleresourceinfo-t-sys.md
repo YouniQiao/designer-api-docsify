@@ -4,7 +4,7 @@
 export type BundleResourceInfo = _BundleResourceInfo
 ```
 
-Defines the icon and name of an application.
+应用配置的图标和名称信息。
 
 **Since:** 11
 

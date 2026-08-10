@@ -1,6 +1,6 @@
 # CaptionsStyle
 
-Describes the style of captions.
+字幕风格。
 
 **Since:** 8
 
@@ -10,21 +10,27 @@ Describes the style of captions.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## backgroundColor
 
 ```TypeScript
 backgroundColor: int | string
 ```
 
-Background color of captions.
+描述字幕背景颜色。
 
-**number**: HEX format, used to represent colors defined in either the RGB or ARGB color models.
+number：HEX 格式颜色，支持 rgb 或 argb。
 
-**string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format.
+string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
-Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**Type:** int \| string
+**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
 
 **Since:** 8
 
@@ -44,15 +50,15 @@ Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00',
 fontColor: int | string
 ```
 
-Font color of captions.
+描述字幕字体颜色。
 
-**number**: HEX format, used to represent colors defined in either the RGB or ARGB color models.
+number：HEX 格式颜色，支持 rgb 或 argb。
 
-**string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format.
+string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
-Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**Type:** int \| string
+**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
 
 **Since:** 8
 
@@ -72,9 +78,9 @@ Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00',
 fontEdgeType: CaptionsFontEdgeType
 ```
 
-Font edge type of captions.
+描述字幕字体边缘。
 
-**Type:** CaptionsFontEdgeType
+**Type:** [CaptionsFontEdgeType](arkts-accessibility-accessibility-captionsfontedgetype-t.md)
 
 **Since:** 8
 
@@ -94,9 +100,9 @@ Font edge type of captions.
 fontFamily: CaptionsFontFamily
 ```
 
-Font family of captions.
+描述字幕字体。
 
-**Type:** CaptionsFontFamily
+**Type:** [CaptionsFontFamily](arkts-accessibility-accessibility-captionsfontfamily-t.md)
 
 **Since:** 8
 
@@ -116,9 +122,9 @@ Font family of captions.
 fontScale: int
 ```
 
-Font scale factor of captions, in percentage. The value ranges from 1 to 200.
+描述字幕字体缩放系数，单位%，参数范围1~200。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -138,15 +144,15 @@ Font scale factor of captions, in percentage. The value ranges from 1 to 200.
 windowColor: int | string
 ```
 
-Window color of captions.
+描述字幕窗口颜色。
 
-**number**: HEX format, used to represent colors defined in either the RGB or ARGB color models.
+number：HEX 格式颜色，支持 rgb 或 argb。
 
-**string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format.
+string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
-Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+例：不透明红色，number: 0xffff0000，string: '#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**Type:** int \| string
+**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
 
 **Since:** 8
 

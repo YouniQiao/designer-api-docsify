@@ -1,13 +1,18 @@
 # subscribe
 
+## Modules to Import
+
+```TypeScript
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+```
+
 ## subscribe
 
 ```TypeScript
 function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 ```
 
-Subscribes to the notification extension. You can subscribe to the notification extension only after obtaining the unique address of the Bluetooth device by calling the APIs related to the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+订阅通知扩展。使用蓝牙模块相关接口获取蓝牙设备的唯一地址后方可订阅。使用Promise异步回调。
 
 **Since:** 22
 
@@ -23,24 +28,24 @@ Subscribes to the notification extension. You can subscribe to the notification 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | List of subscribed notifications (in array). |
+| info | [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)[] | Yes | 订阅的信息列表（数组）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied or current device not supported. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600023](../errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) | The application does not implement the NotificationSubscriberExtensionAbility. |
+| 201 | Permission denied or current device not supported. |
+| 1600001 | Internal error. |
+| 1600003 | Failed to connect to the service. |
+| 1600023 | The application does not implement the NotificationSubscriberExtensionAbility. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[] = [
@@ -50,9 +55,9 @@ let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionIn
   }
 ];
 notificationExtensionSubscription.subscribe(infos).then(() => {
-  console.info("subscribe success");
+  console.info(`subscribe success`);
 }).catch((err: BusinessError) => {
-  console.error(`subscribe fail: ${JSON.stringify(err)}`);
+  console.error(`subscribe fail, code is ${err.code}, message is ${err.message}`);
 });
 ```
 

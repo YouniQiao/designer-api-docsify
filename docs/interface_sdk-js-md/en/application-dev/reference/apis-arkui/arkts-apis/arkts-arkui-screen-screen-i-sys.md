@@ -1,10 +1,9 @@
 # Screen (System API)
 
-Defines the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ instance.
+[物理屏](../../../displaymanager/display-terminology.md#物理屏)屏幕实例。
 
-Before calling any API in Screen, you must use  
-[getAllScreens()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or  
-[createVirtualScreen()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_to obtain a Screen instance.
+下列API示例中都需先使用[getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens)、  
+[createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md#createvirtualscreen)中的任一方法获取到Screen实例，再通过此实例调用对应方法。
 
 **Since:** 9
 
@@ -15,6 +14,12 @@ Before calling any API in Screen, you must use
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
 
 ## setDensityDpi
 
@@ -28,7 +33,7 @@ ArkTS-Sta:
 setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void
 ```
 
-Sets the pixel density of the screen. This API uses an asynchronous callback to return the result.
+设置屏幕的像素密度，使用callback异步回调。
 
 **Since:** 9
 
@@ -44,18 +49,18 @@ Sets the pixel density of the screen. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| densityDpi | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Pixel density. The value must be an integer in the range [80, 640]. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the pixel density is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| densityDpi | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 像素密度。支持的输入范围为[80, 640]，该参数仅支持整数输入。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置屏幕的像素密度成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,7 +75,7 @@ class VirtualScreenOption {
   supportsFocus ?: boolean = true;
 }
 
-let option : VirtualScreenOption = {
+let option: VirtualScreenOption = {
   name: 'screen01',
   width: 1080,
   height: 2340,
@@ -79,19 +84,21 @@ let option : VirtualScreenOption = {
   supportsFocus: false
 };
 
+// Create a virtual screen.
 screen.createVirtualScreen(option).then((data: screen.Screen) => {
   let screenClass: screen.Screen = data;
   console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
+  // Set the screen pixel density.
   screenClass.setDensityDpi(densityDpi, (err: BusinessError) => {
     const errCode: number = err.code;
     if (errCode) {
-      console.error(`Failed to set the pixel density of the screen to 320. Code:${err.code}, message is ${err.message}`);
+      console.error(`Failed to set the pixel density of the screen to 320. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in setting the density dpi.');
   });
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -107,7 +114,7 @@ ArkTS-Sta:
 setDensityDpi(densityDpi: double): Promise<void>
 ```
 
-Sets the pixel density of the screen. This API uses a promise to return the result.
+设置屏幕的像素密度，使用Promise异步回调。
 
 **Since:** 9
 
@@ -123,23 +130,23 @@ Sets the pixel density of the screen. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| densityDpi | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Pixel density. The value must be an integer in the range [80, 640]. |
+| densityDpi | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 像素密度。支持的输入范围为[80, 640]，该参数仅支持整数输入。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -154,7 +161,7 @@ class VirtualScreenOption {
   supportsFocus ?: boolean = true;
 }
 
-let option : VirtualScreenOption = {
+let option: VirtualScreenOption = {
   name: 'screen01',
   width: 1080,
   height: 2340,
@@ -163,16 +170,18 @@ let option : VirtualScreenOption = {
   supportsFocus: false
 };
 
+// Create a virtual screen.
 screen.createVirtualScreen(option).then((data: screen.Screen) => {
   let screenClass: screen.Screen = data;
+  // Set the screen pixel density.
   let promise: Promise<void> = screenClass.setDensityDpi(densityDpi);
   promise.then(() => {
     console.info('Succeeded in setting the pixel density of the screen to 320.');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to set the pixel density of the screen to 320. Code:${err.code}, message is ${err.message}`);
+    console.error(`Failed to set the pixel density of the screen to 320. Code: ${err.code}, message: ${err.message}`);
   });
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -182,9 +191,7 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 ```
 
-Sets the screen orientation. This API uses an asynchronous callback to return the result. The screen orientation changes only when the specified orientation complies with the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the  
-**module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
+设置屏幕方向，使用callback异步回调。当设置的方向符合[应用旋转策略](../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
 
 **Since:** 9
 
@@ -200,18 +207,18 @@ Sets the screen orientation. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the screen orientation is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| orientation | [Orientation](arkts-arkui-window-orientation-e.md) | Yes | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置屏幕方向成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -225,7 +232,7 @@ class VirtualScreenOption {
   supportsFocus ?: boolean = true;
 }
 
-let option : VirtualScreenOption = {
+let option: VirtualScreenOption = {
   name: 'screen01',
   width: 1080,
   height: 2340,
@@ -234,19 +241,21 @@ let option : VirtualScreenOption = {
   supportsFocus: false
 };
 
+// Create a virtual screen.
 screen.createVirtualScreen(option).then((data: screen.Screen) => {
   let screenClass: screen.Screen = data;
   console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
+  // Set the screen orientation to vertical.
   screenClass.setOrientation(screen.Orientation.VERTICAL, (err: BusinessError) => {
     const errCode: number = err.code;
     if (errCode) {
-      console.error(`Failed to set the vertical orientation. Code:${err.code}, message is ${err.message}`);
+      console.error(`Failed to set the vertical orientation. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in setting the vertical orientation.');
   });
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -256,9 +265,7 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation): Promise<void>
 ```
 
-Sets the screen orientation. This API uses a promise to return the result. The screen orientation changes only when the specified orientation complies with the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the  
-**module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
+设置屏幕方向，使用Promise异步回调。当设置的方向符合[应用旋转策略](../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
 
 **Since:** 9
 
@@ -274,23 +281,23 @@ Sets the screen orientation. This API uses a promise to return the result. The s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
+| orientation | [Orientation](arkts-arkui-window-orientation-e.md) | Yes | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -304,7 +311,7 @@ class VirtualScreenOption {
   supportsFocus ?: boolean = true;
 }
 
-let option : VirtualScreenOption = {
+let option: VirtualScreenOption = {
   name: 'screen01',
   width: 1080,
   height: 2340,
@@ -313,17 +320,19 @@ let option : VirtualScreenOption = {
   supportsFocus: false
 };
 
+// Create a virtual screen.
 screen.createVirtualScreen(option).then((data: screen.Screen) => {
   let screenClass: screen.Screen = data;
   console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
+  // Set the screen orientation to vertical.
   let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL);
   promise.then(() => {
     console.info('Succeeded in setting the vertical orientation.');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to set the vertical orientation. Code:${err.code}, message is ${err.message}`);
+    console.error(`Failed to set the vertical orientation. Code: ${err.code}, message: ${err.message}`);
   });
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -333,7 +342,7 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>
 ```
 
-Set the orientation of the screen
+设置屏幕方向
 
 **Since:** 26.0.0
 
@@ -351,8 +360,8 @@ Set the orientation of the screen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Screen orientation. orientation value must from enum Orientation. |
-| orientationOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options of setting orientation. |
+| orientation | [Orientation](arkts-arkui-window-orientation-e.md) | Yes | 屏幕方向。方向值必须来自方向枚举值。 |
+| orientationOptions | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | No | Options of setting orientation. |
 
 **Return value:**
 
@@ -364,9 +373,38 @@ Set the orientation of the screen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: The screen is not a wired external display in extended mode. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 1400001 | Invalid display or screen. Possible cause: The screen is not a wired external display in extended mode. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let orientationOptions : screen.OrientationOptions = {
+  needAnimation: true,
+  ignoreRotationLock: false,
+};
+
+let screenClass: screen.Screen | null = null;
+// Obtain all screen objects.
+let screensPromise: Promise<Array<screen.Screen>> = screen.getAllScreens();
+screensPromise.then((data: Array<screen.Screen>) => {
+  if (data.length > 0) {
+    screenClass = data[0];
+    // Set the screen orientation to vertical, with animation and rotation lock not ignored.
+    let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL, orientationOptions);
+    promise.then(() => {
+      console.info('Succeeded in setting the vertical orientation with orientationOptions.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to set the vertical orientation with orientationOptions. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## setScreenActiveMode
 
@@ -380,7 +418,7 @@ ArkTS-Sta:
 setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void
 ```
 
-Sets the active mode of the screen. This API uses an asynchronous callback to return the result.
+设置屏幕当前显示模式，使用callback异步回调。
 
 **Since:** 9
 
@@ -396,18 +434,18 @@ Sets the active mode of the screen. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modeIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Index of the mode to set. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value must be an integer. The index is the mode ID in the [ScreenModeInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ property of the screen. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the active mode is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| modeIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。索引为screen中 [ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md)属性的模式id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置屏幕当前显示模式成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -421,7 +459,7 @@ class VirtualScreenOption {
   supportsFocus ?: boolean = true;
 }
 
-let option : VirtualScreenOption = {
+let option: VirtualScreenOption = {
   name: 'screen01',
   width: 1080,
   height: 2340,
@@ -430,20 +468,22 @@ let option : VirtualScreenOption = {
   supportsFocus: false
 };
 
+// Create a virtual screen.
 screen.createVirtualScreen(option).then((data: screen.Screen) => {
   let screenClass: screen.Screen = data;
   console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
   let modeIndex: number = 0;
+  // Set the current display mode of the screen.
   screenClass.setScreenActiveMode(modeIndex, (err: BusinessError) => {
     const errCode: number = err.code;
     if (errCode) {
-      console.error(`Failed to set screen active mode 0. Code:${err.code}, message is ${err.message}`);
+      console.error(`Failed to set screen active mode 0. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in setting the screen active mode 0.');
   });
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -459,7 +499,7 @@ ArkTS-Sta:
 setScreenActiveMode(modeIndex: long): Promise<void>
 ```
 
-Sets the active mode of the screen. This API uses a promise to return the result.
+设置屏幕当前显示模式，使用Promise异步回调。
 
 **Since:** 9
 
@@ -475,23 +515,23 @@ Sets the active mode of the screen. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modeIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Index of the mode to set. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value must be an integer. |
+| modeIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -505,7 +545,7 @@ class VirtualScreenOption {
   supportsFocus ?: boolean = true;
 }
 
-let option : VirtualScreenOption = {
+let option: VirtualScreenOption = {
   name: 'screen01',
   width: 1080,
   height: 2340,
@@ -514,18 +554,20 @@ let option : VirtualScreenOption = {
   supportsFocus: false
 };
 
+// Create a virtual screen.
 screen.createVirtualScreen(option).then((data: screen.Screen) => {
   let screenClass: screen.Screen = data;
   console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
   let modeIndex: number = 0;
+  // Set the current display mode of the screen.
   let promise: Promise<void> = screenClass.setScreenActiveMode(modeIndex);
   promise.then(() => {
     console.info('Succeeded in setting screen active mode 0.');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to set screen active mode 0.Code:${err.code}, message is ${err.message}`);
+    console.error(`Failed to set screen active mode 0. Code: ${err.code}, message: ${err.message}`);
   });
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -535,9 +577,9 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 readonly activeModeIndex: long
 ```
 
-Index of the active screen mode. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value is an integer.
+当前屏幕所处模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化。该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -549,37 +591,15 @@ Index of the active screen mode. The current value and value range of this param
 
 **System API:** This is a system API.
 
-## densityDpi
-
-```TypeScript
-readonly densityDpi?: double
-```
-
-Physical pixel density of the screen, that is, the number of pixels per inch.
-
-**Type:** double
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Screen-readonly densityDpi?: double--><!--Device-Screen-readonly densityDpi?: double-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
 ## id
 
 ```TypeScript
 readonly id: long
 ```
 
-Screen ID, which is an integer.
+屏幕的id，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -591,37 +611,15 @@ Screen ID, which is an integer.
 
 **System API:** This is a system API.
 
-## isInUse
-
-```TypeScript
-readonly isInUse?: boolean
-```
-
-The screen is in use
-
-**Type:** boolean
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Screen-readonly isInUse?: boolean--><!--Device-Screen-readonly isInUse?: boolean-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
 ## orientation
 
 ```TypeScript
 readonly orientation: Orientation
 ```
 
-Screen orientation.
+屏幕方向。
 
-**Type:** Orientation
+**Type:** [Orientation](arkts-arkui-window-orientation-e.md)
 
 **Since:** 9
 
@@ -639,9 +637,9 @@ Screen orientation.
 readonly parent: long
 ```
 
-ID of the group to which a screen belongs, where the ID is an integer.
+屏幕所属群组的id，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -659,9 +657,9 @@ ID of the group to which a screen belongs, where the ID is an integer.
 readonly rsId: long
 ```
 
-Screen port ID, which is an integer.
+屏幕端口的id，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 21
 
@@ -679,9 +677,9 @@ Screen port ID, which is an integer.
 readonly screenType?: ScreenType
 ```
 
-Screen type
+屏幕类型
 
-**Type:** ScreenType
+**Type:** [ScreenType](arkts-arkui-screen-screentype-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -701,7 +699,7 @@ Screen type
 readonly serialNumber?: string
 ```
 
-Serial number of the extended screen. By default, the value is an empty string.
+扩展屏幕的序列号，默认返回为空字符串。
 
 **Type:** string
 
@@ -721,9 +719,9 @@ Serial number of the extended screen. By default, the value is an empty string.
 readonly sourceMode: ScreenSourceMode
 ```
 
-Source mode of the screen
+屏幕来源模式。
 
-**Type:** ScreenSourceMode
+**Type:** [ScreenSourceMode](arkts-arkui-screen-screensourcemode-e-sys.md)
 
 **Since:** 10
 
@@ -741,7 +739,7 @@ Source mode of the screen
 readonly supportedModeInfo: Array<ScreenModeInfo>
 ```
 
-Mode set supported by the screen.
+屏幕支持的模式集合。
 
 **Type:** Array&lt;ScreenModeInfo&gt;
 

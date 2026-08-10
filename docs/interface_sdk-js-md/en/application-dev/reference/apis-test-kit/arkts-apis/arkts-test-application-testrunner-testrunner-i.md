@@ -1,6 +1,6 @@
 # TestRunner
 
-Base class for the test framework.If you want to implement your own unit test framework, you must inherit this class and overrides all its methods.
+TestRunner模块提供了框架测试的能力。包括准备单元测试环境、运行测试用例。如果您想实现自己的单元测试框架，您必须继承这个类并覆盖它的所有方法。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ Base class for the test framework.If you want to implement your own unit test fr
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { TestRunner } from 'kits/@kit.TestKit';
+```
+
 ## onPrepare
 
 ```TypeScript
 onPrepare(): void
 ```
 
-Prepare the unit testing environment for running test cases.
+为运行测试用例准备单元测试环境。
 
 **Since:** 8
 
@@ -28,12 +34,14 @@ Prepare the unit testing environment for running test cases.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { TestRunner } from '@kit.TestKit';
 
+// Implement a custom test runner.
 export default class UserTestRunner implements TestRunner {
+  // Prepare the unit test environment.
   onPrepare() {
     console.info('Trigger onPrepare');
   }
@@ -49,11 +57,13 @@ export default class UserTestRunner implements TestRunner {
 onPrepare: OnPrepareFn
 ```
 
-Prepare the unit testing environment for running test cases.
+为运行测试用例准备单元测试环境。
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TestRunner-onPrepare: OnPrepareFn--><!--Device-TestRunner-onPrepare: OnPrepareFn-End-->
 
@@ -65,7 +75,7 @@ Prepare the unit testing environment for running test cases.
 onRun(): void
 ```
 
-Run all test cases.
+运行测试用例。
 
 **Since:** 8
 
@@ -77,15 +87,17 @@ Run all test cases.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { TestRunner } from '@kit.TestKit';
 
+// Implement a custom test runner.
 export default class UserTestRunner implements TestRunner {
   onPrepare() {
   }
 
+  // Run test cases.
   onRun() {
     console.info('Trigger onRun');
   }
@@ -98,11 +110,13 @@ export default class UserTestRunner implements TestRunner {
 onRun: OnRunFn
 ```
 
-Run all test cases.
+运行测试用例。
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TestRunner-onRun: OnRunFn--><!--Device-TestRunner-onRun: OnRunFn-End-->
 
@@ -114,7 +128,7 @@ Run all test cases.
 onStop?: OnStopFn
 ```
 
-Stop all test cases.
+当测试完成时，系统会在测试环境退出前触发该回调。
 
 **Since:** 26.0.0
 

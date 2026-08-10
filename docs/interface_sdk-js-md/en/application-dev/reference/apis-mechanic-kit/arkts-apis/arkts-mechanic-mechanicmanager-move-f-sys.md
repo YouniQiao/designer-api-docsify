@@ -1,12 +1,18 @@
 # move (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## move
 
 ```TypeScript
 function move(mechId: int, params: MoveParams): Promise<Result>
 ```
 
-Move a mechanical device with the specified parameters.
+以特定参数移动一个具身设备
 
 **Since:** 26.0.0
 
@@ -22,21 +28,21 @@ Move a mechanical device with the specified parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the mechanical device. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters to use when moving. |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
+| params | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | Yes | 移动参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that returns the execution result. |
+| Promise&lt;Result&gt; | 202 - 非系统应用 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
+| 33300003 | Feature not supported. |
 

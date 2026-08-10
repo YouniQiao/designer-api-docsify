@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## networkId
 
 ```TypeScript
@@ -40,7 +46,7 @@ state: CooperateState
 
 键鼠穿越的状态。
 
-**类型：** CooperateState
+**类型：** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 
 **起始版本：** 11
 

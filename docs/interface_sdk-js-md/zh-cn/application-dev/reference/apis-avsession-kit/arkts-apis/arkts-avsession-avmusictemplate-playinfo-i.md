@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## currentPlayDuration
 
 ```TypeScript
@@ -18,7 +24,7 @@ currentPlayDuration: int
 
 当前播放的时长，单位为毫秒（ms）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -298,7 +304,7 @@ quickBackwardStep: int
 
 快退的步长，单位为毫秒（ms）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -318,7 +324,7 @@ quickForwardStep: int
 
 快进的步长，单位为毫秒（ms）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -358,7 +364,7 @@ totalDuration: int
 
 播放总时长，单位为毫秒（ms）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

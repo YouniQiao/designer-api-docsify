@@ -1,6 +1,10 @@
-# @ohos.wallpaper
+# @ohos.wallpaper(壁纸)
 
-System wallpaper
+壁纸管理服务为OpenHarmony系统服务，提供壁纸切换功能。从API 9开始壁纸管理的接口调整为系统API，壁纸的切换只能通过系统应用来完成。壁纸管理提供壁纸切换通道，使用壁纸的应用（如：桌面）需订阅壁纸变化通知并刷新壁纸显示。
+
+> **说明：**
+> 
+> 当前页面仅包含本模块的系统接口，其他公开接口参见[@ohos.wallpaper (壁纸)](arkts-wallpaper.md)。
 
 **Since:** 7
 
@@ -10,94 +14,100 @@ System wallpaper
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [getColors](arkts-basicservices-wallpaper-getcolors-f.md#getcolors) | Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function. |
-| [getColors](arkts-basicservices-wallpaper-getcolors-f.md#getcolors-1) | Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function. |
-| [getFile](arkts-basicservices-wallpaper-getfile-f.md#getfile) | Obtains a file of the wallpaper of the specified type. Returns the file descriptor.When usage is complete, the caller needs to close the file descriptor in time. |
-| [getFile](arkts-basicservices-wallpaper-getfile-f.md#getfile-1) | Obtains a file of the wallpaper of the specified type. Returns the file descriptor.When usage is complete, the caller needs to close the file descriptor in time. |
-| [getId](arkts-basicservices-wallpaper-getid-f.md#getid) | Obtains the ID of the wallpaper of the specified type. Returns an integer greater than or equal to {@code 0} representing the wallpaper ID.if the specified type of wallpaper has been set; returns {@code -1} otherwise. The return value is an integer ranging from -1 to 2^31 - 1. |
-| [getId](arkts-basicservices-wallpaper-getid-f.md#getid-1) | Obtains the ID of the wallpaper of the specified type. Returns an integer greater than or equal to {@code 0} representing the wallpaper ID.if the specified type of wallpaper has been set; returns {@code -1} otherwise. The return value is an integer ranging from -1 to 2^31 - 1. |
-| [getMinHeight](arkts-basicservices-wallpaper-getminheight-f.md#getminheight) | Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
-| [getMinHeight](arkts-basicservices-wallpaper-getminheight-f.md#getminheight-1) | Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
-| [getMinWidth](arkts-basicservices-wallpaper-getminwidth-f.md#getminwidth) | Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
-| [getMinWidth](arkts-basicservices-wallpaper-getminwidth-f.md#getminwidth-1) | Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
-| [isChangePermitted](arkts-basicservices-wallpaper-ischangepermitted-f.md#ischangepermitted) | Checks whether to allow the application to change the wallpaper for the current user.Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise. |
-| [isChangePermitted](arkts-basicservices-wallpaper-ischangepermitted-f.md#ischangepermitted-1) | Checks whether to allow the application to change the wallpaper for the current user.Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise. |
-| [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md#isoperationallowed) | Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise. |
-| [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md#isoperationallowed-1) | Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise. |
-| [off](arkts-basicservices-wallpaper-off-f.md#off) | Unregisters a listener for wallpaper color changes. |
-| [on](arkts-basicservices-wallpaper-on-f.md#on) | Registers a listener for wallpaper color changes to receive notifications about the changes. |
-| [reset](arkts-basicservices-wallpaper-reset-f.md#reset) | Removes a wallpaper of the specified type and restores the default one. |
-| [reset](arkts-basicservices-wallpaper-reset-f.md#reset-1) | Removes a wallpaper of the specified type and restores the default one. |
-| [setWallpaper](arkts-basicservices-wallpaper-setwallpaper-f.md#setwallpaper) | Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file. |
-| [setWallpaper](arkts-basicservices-wallpaper-setwallpaper-f.md#setwallpaper-1) | Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file. |
+| [getColors](arkts-basicservices-wallpaper-getcolors-f.md#getcolors) | 获取指定类型壁纸的主要颜色信息。 |
+| [getColors](arkts-basicservices-wallpaper-getcolors-f.md#getcolors-1) | 获取指定类型壁纸的主要颜色信息。 |
+| [getFile](arkts-basicservices-wallpaper-getfile-f.md#getfile) | 获取指定类型的壁纸文件。 |
+| [getFile](arkts-basicservices-wallpaper-getfile-f.md#getfile-1) | 获取指定类型的壁纸文件。 |
+| [getId](arkts-basicservices-wallpaper-getid-f.md#getid) | 获取指定类型壁纸的ID。 |
+| [getId](arkts-basicservices-wallpaper-getid-f.md#getid-1) | 获取指定类型壁纸的ID。 |
+| [getMinHeight](arkts-basicservices-wallpaper-getminheight-f.md#getminheight) | 获取壁纸的最小高度值。 |
+| [getMinHeight](arkts-basicservices-wallpaper-getminheight-f.md#getminheight-1) | 获取壁纸的最小高度值。 |
+| [getMinWidth](arkts-basicservices-wallpaper-getminwidth-f.md#getminwidth) | 获取壁纸的最小宽度值。 |
+| [getMinWidth](arkts-basicservices-wallpaper-getminwidth-f.md#getminwidth-1) | 获取壁纸的最小宽度值。 |
+| [isChangePermitted](arkts-basicservices-wallpaper-ischangepermitted-f.md#ischangepermitted) | 是否允许应用改变当前用户的壁纸。 |
+| [isChangePermitted](arkts-basicservices-wallpaper-ischangepermitted-f.md#ischangepermitted-1) | 是否允许应用改变当前用户的壁纸。 |
+| [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md#isoperationallowed) | 是否允许用户设置壁纸。 |
+| [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md#isoperationallowed-1) | 是否允许用户设置壁纸。 |
+| [off](arkts-basicservices-wallpaper-off-f.md#off) | 取消订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。 |
+| [on](arkts-basicservices-wallpaper-on-f.md#on) | 订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。 |
+| [reset](arkts-basicservices-wallpaper-reset-f.md#reset) | 移除指定类型的壁纸，恢复为默认显示的壁纸。 |
+| [reset](arkts-basicservices-wallpaper-reset-f.md#reset-1) | 移除指定类型的壁纸，恢复为默认显示的壁纸。 |
+| [setWallpaper](arkts-basicservices-wallpaper-setwallpaper-f.md#setwallpaper) | 将指定资源设置为指定类型的壁纸。 |
+| [setWallpaper](arkts-basicservices-wallpaper-setwallpaper-f.md#setwallpaper-1) | 将指定资源设置为指定类型的壁纸。 |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getColorsSync](arkts-basicservices-wallpaper-getcolorssync-f-sys.md#getcolorssync) | Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function. |
-| [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.Only the static wallpaper set by using setImage can be obtained. |
-| [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage-1) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.Only the static wallpaper set by using setImage can be obtained. |
-| [getMinHeightSync](arkts-basicservices-wallpaper-getminheightsync-f-sys.md#getminheightsync) | Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
-| [getMinWidthSync](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md#getminwidthsync) | Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
-| [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map. |
-| [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap-1) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map. |
-| [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md#getwallpaperbystate) | Obtains the default pixel map of a wallpaper of the specified device type. Returns the default pixel map.Only the static wallpaper set by using setAllWallpapers can be obtained. |
-| [off](arkts-basicservices-wallpaper-off-f-sys.md#off-1) | Unregisters a listener for wallpaper changes. |
-| [offWallpaperChange](arkts-basicservices-wallpaper-offwallpaperchange-f-sys.md#offwallpaperchange) | Unregisters a listener for wallpaper changes. |
-| [on](arkts-basicservices-wallpaper-on-f-sys.md#on-1) | Registers a listener for wallpaper changes to receive notifications about the changes. |
-| [onWallpaperChange](arkts-basicservices-wallpaper-onwallpaperchange-f-sys.md#onwallpaperchange) | Registers a listener for wallpaper changes to receive notifications about the changes. |
-| [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore) | Removes a wallpaper of the specified type and restores the default one. |
-| [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore-1) | Removes a wallpaper of the specified type and restores the default one. |
-| [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md#setallwallpapers) | Set wallpapers for all forms of devices. |
-| [setCustomWallpaper](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md#setcustomwallpaper) | Sets wallpaper of the specified type based on the uri path of the custom wallpaper. |
-| [setCustomWallpaper](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md#setcustomwallpaper-1) | Sets wallpaper of the specified type based on the uri path of the custom wallpaper. |
-| [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage) | Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file. |
-| [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage-1) | Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file. |
-| [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo) | Sets live wallpaper of the specified type based on the uri path of the MP4 file. |
-| [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo-1) | Sets live wallpaper of the specified type based on the uri path of the MP4 file. |
+| [getColorsSync](arkts-basicservices-wallpaper-getcolorssync-f-sys.md#getcolorssync) | 获取指定类型壁纸的主要颜色信息。 |
+| [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage) | 获取壁纸图片的像素图，且只能获取使用setImage设置的静态壁纸。使用callback异步回调。 |
+| [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage-1) | 获取壁纸图片的像素图，且只能获取使用setImage设置的静态壁纸。使用promise异步回调。 |
+| [getMinHeightSync](arkts-basicservices-wallpaper-getminheightsync-f-sys.md#getminheightsync) | 获取壁纸的最小高度值。 |
+| [getMinWidthSync](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md#getminwidthsync) | 获取壁纸的最小宽度值。 |
+| [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap) | 获取壁纸图片的像素图。 |
+| [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap-1) | 获取壁纸图片的像素图。 |
+| [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md#getwallpaperbystate) | 获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -> unfolded-port ->normal-port。使用promise异步回调。 |
+| [off](arkts-basicservices-wallpaper-off-f-sys.md#off-1) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [offWallpaperChange](arkts-basicservices-wallpaper-offwallpaperchange-f-sys.md#offwallpaperchange) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [on](arkts-basicservices-wallpaper-on-f-sys.md#on-1) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [onWallpaperChange](arkts-basicservices-wallpaper-onwallpaperchange-f-sys.md#onwallpaperchange) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。 |
+| [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore-1) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用promise异步回调。 |
+| [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md#setallwallpapers) | 设置设备所有形态的壁纸。使用promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选） |
+| [setCustomWallpaper](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md#setcustomwallpaper) | 将指定的zip资源包设置为桌面或锁屏的壁纸资源，仅当com.ohos.sceneboard存在时，支持使用该接口。且具有ohos.permission.GET_WALLPAPER权限的应用可以访问/data/wallpaper/目录获取设置的资源。使用callback异步回调。 |
+| [setCustomWallpaper](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md#setcustomwallpaper-1) | 将指定的zip资源包设置为桌面或锁屏的壁纸资源，仅当com.ohos.sceneboard存在时，支持使用该接口。且具有ohos.permission.GET_WALLPAPER权限的应用可以访问/data/wallpaper/目录获取设置的资源。使用Promise异步回调。 |
+| [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage) | 将指定资源设置为指定类型的壁纸。使用callback异步回调。 |
+| [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage-1) | 将指定资源设置为指定类型的壁纸。使用promise异步回调。 |
+| [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo) | 将视频资源设置为桌面或锁屏的动态壁纸。使用callback异步回调。 |
+| [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo-1) | 将视频资源设置为桌面或锁屏的动态壁纸。使用promise异步回调。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md) | RgbaColor definition |
+| [RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md) | 定义壁纸颜色信息结构。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [WallpaperInfo](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md) | WallpaperInfo definition including folding status, rotation status, and resource path. |
+| [WallpaperInfo](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md) | 定义壁纸的信息结构。 |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Indicates wallpaper type. |
+| [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 定义壁纸的枚举类型。 |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | Define the folding state of wallpaper |
-| [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | Define the rotation state of wallpaper |
-| [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | Indicates the resource type of the wallpaper. |
+| [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | 定义设备的折展状态枚举类型。 |
+| [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | 定义设备的横竖屏状态枚举类型。 |
+| [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | 定义壁纸资源的枚举类型。 |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [WallpaperChangeObserver](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) | Defines a callback used to return wallpaper change. |
+| [WallpaperChangeObserver](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) | 定义壁纸变化的监听回调函数。 |
 

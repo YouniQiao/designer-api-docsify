@@ -4,7 +4,7 @@
 export type NotificationUserInput = _NotificationUserInput
 ```
 
-Describes the user input for the notification.
+保存用户输入的通知消息。
 
 **Since:** 9
 

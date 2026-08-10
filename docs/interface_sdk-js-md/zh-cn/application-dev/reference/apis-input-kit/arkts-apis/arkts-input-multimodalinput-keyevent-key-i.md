@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
+```
+
 ## code
 
 ```TypeScript
@@ -18,7 +24,7 @@ code: KeyCode
 
 键值。
 
-**类型：** KeyCode
+**类型：** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ deviceId: int
 
 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -58,7 +64,7 @@ pressedTime: long
 
 按键按下时间，表示系统启动运行至今逝去的微秒数，单位为微秒（μs）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

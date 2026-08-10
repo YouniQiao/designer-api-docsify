@@ -1,6 +1,6 @@
 # Querier (System API)
 
-Defines an event query instance.
+系统事件查询者对象接口。
 
 **Since:** 9
 
@@ -11,6 +11,12 @@ Defines an event query instance.
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
 
 ## onComplete
 
@@ -24,8 +30,7 @@ ArkTS-Sta:
 onComplete: (reason: int, total: int) => void
 ```
 
-Callback used to return the query result statistics: (reason: int, total: int) =  
-    void
+查询结果统计的回调方法(reason: int, total: int) => void。
 
 **Since:** 9
 
@@ -41,8 +46,8 @@ Callback used to return the query result statistics: (reason: int, total: int) =
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
-| total | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
+| reason | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
+| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
 
 ## onQuery
 
@@ -50,7 +55,7 @@ Callback used to return the query result statistics: (reason: int, total: int) =
 onQuery: (infos: SysEventInfo[]) => void
 ```
 
-Callback used to return the queried system events: (infos: [SysEventInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_[]) =>void.
+返回查询到的系统事件的回调方法(infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) => void。
 
 **Since:** 9
 
@@ -66,5 +71,5 @@ Callback used to return the queried system events: (infos: [SysEventInfo]\_\_\_J
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| infos | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes |  |
+| infos | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[] | Yes |  |
 

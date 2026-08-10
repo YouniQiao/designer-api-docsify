@@ -1,8 +1,6 @@
 # MessageParcel
 
-Provides APIs for reading and writing data in specific format. During RPC, the sender can use the **write()**  
-method provided by **MessageParcel** to write data in specific format to a **MessageParcel** object. The receiver can use the **read()** method provided by **MessageParcel** to read data in specific format from a  
-**MessageParcel** object. The data formats include basic data types and arrays, IPC objects, interface tokens,and custom sequenceable objects.
+在RPC过程中，发送方可以使用MessageParcel提供的写方法，将待发送的数据以特定格式写入该对象。接收方可以使用MessageParcel提供的读方法从该对象中读取特定格式的数据。数据格式包括：基础类型及数组、IPC对象、接口描述符和自定义序列化对象。
 
 **Since:** 7
 
@@ -16,13 +14,19 @@ method provided by **MessageParcel** to write data in specific format to a **Mes
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## closeFileDescriptor
 
 ```TypeScript
 static closeFileDescriptor(fd: number): void
 ```
 
-Closes a file descriptor. This API is a static method.
+静态方法，关闭给定的文件描述符。
 
 **Since:** 8
 
@@ -40,9 +44,9 @@ Closes a file descriptor. This API is a static method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor to close. |
+| fd | number | Yes | 要关闭的文件描述符。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -64,7 +68,7 @@ try {
 containFileDescriptors(): boolean
 ```
 
-Checks whether this **MessageParcel** object contains file descriptors.
+检查此MessageParcel对象是否包含文件描述符。
 
 **Since:** 8
 
@@ -82,9 +86,9 @@ Checks whether this **MessageParcel** object contains file descriptors.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the **MessageParcel** object contains file descriptors; returns **false** otherwise. |
+| boolean | true：包含文件描述符，false：未包含文件描述符。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -110,7 +114,7 @@ try {
 static create(): MessageParcel
 ```
 
-Creates a **MessageParcel** object. This method is a static method.
+静态方法，创建MessageParcel对象。
 
 **Since:** 7
 
@@ -128,9 +132,9 @@ Creates a **MessageParcel** object. This method is a static method.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | MessageParcel** object created. |
+| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 返回创建的MessageParcel对象，用于在IPC过程中封装请求和响应数据。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -153,7 +157,7 @@ try {
 static dupFileDescriptor(fd: number): number
 ```
 
-Duplicates a file descriptor. This API is a static method.
+静态方法，复制给定的文件描述符。
 
 **Since:** 8
 
@@ -171,15 +175,15 @@ Duplicates a file descriptor. This API is a static method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor to duplicate. |
+| fd | number | Yes | 表示已存在的文件描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | New file descriptor. |
+| number | 返回新的文件描述符。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -201,7 +205,7 @@ try {
 getCapacity(): number
 ```
 
-Obtains the capacity of this **MessageParcel** object.
+获取当前MessageParcel的容量。
 
 **Since:** 7
 
@@ -219,9 +223,9 @@ Obtains the capacity of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | MessageParcel** capacity obtained, in bytes. |
+| number | 获取的MessageParcel的容量大小。以字节为单位。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -242,7 +246,7 @@ try {
 getRawDataCapacity(): number
 ```
 
-Obtains the maximum amount of raw data that can be held by this **MessageParcel** object.
+获取MessageParcel可以容纳的最大原始数据量。
 
 **Since:** 8
 
@@ -260,9 +264,9 @@ Obtains the maximum amount of raw data that can be held by this **MessageParcel*
 
 | Type | Description |
 | --- | --- |
-| number | Maximum amount of raw data that **MessageParcel** can hold, that is, 128 MB. |
+| number | 返回MessageParcel可以容纳的最大原始数据量，即128MB。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -283,7 +287,7 @@ try {
 getReadPosition(): number
 ```
 
-Obtains the read position of this **MessageParcel** object.
+获取MessageParcel的读位置。
 
 **Since:** 7
 
@@ -301,9 +305,9 @@ Obtains the read position of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Current read position of the **MessageParcel** object. |
+| number | 返回MessageParcel实例中的当前读取位置。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -324,7 +328,7 @@ try {
 getReadableBytes(): number
 ```
 
-Obtains the readable capacity of this **MessageParcel** object.
+获取MessageParcel的可读字节空间。
 
 **Since:** 7
 
@@ -342,9 +346,9 @@ Obtains the readable capacity of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | MessageParcel** object readable capacity, in bytes. |
+| number | 获取到的MessageParcel的可读字节空间。以字节为单位。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -366,7 +370,7 @@ try {
 getSize(): number
 ```
 
-Obtains the data size of this **MessageParcel** object.
+获取当前MessageParcel的数据大小。
 
 **Since:** 7
 
@@ -384,9 +388,9 @@ Obtains the data size of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Size of the **MessageParcel** object obtained, in bytes. |
+| number | 获取的MessageParcel的数据大小。以字节为单位。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -408,7 +412,7 @@ try {
 getWritableBytes(): number
 ```
 
-Obtains the writable capacity of this **MessageParcel** object.
+获取MessageParcel的可写字节空间。
 
 **Since:** 7
 
@@ -426,9 +430,9 @@ Obtains the writable capacity of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | MessageParcel** writable capacity obtained, in bytes. |
+| number | 获取到的MessageParcel的可写字节空间。以字节为单位。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -450,7 +454,7 @@ try {
 getWritePosition(): number
 ```
 
-Obtains the write position of this **MessageParcel** object.
+获取MessageParcel的写位置。
 
 **Since:** 7
 
@@ -468,9 +472,9 @@ Obtains the write position of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Current write position of the **MessageParcel** object. |
+| number | 返回MessageParcel实例中的当前写入位置。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -492,7 +496,7 @@ try {
 readAshmem(): Ashmem
 ```
 
-Reads the anonymous shared object from this **MessageParcel** object.
+从MessageParcel读取匿名共享对象。
 
 **Since:** 8
 
@@ -510,9 +514,9 @@ Reads the anonymous shared object from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Anonymous share object obtained. |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回匿名共享对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -536,7 +540,7 @@ try {
 readBoolean(): boolean
 ```
 
-Reads the Boolean value from this **MessageParcel** object.
+从MessageParcel实例中读取布尔值。
 
 **Since:** 7
 
@@ -554,9 +558,9 @@ Reads the Boolean value from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| boolean | Boolean value read. |
+| boolean | 返回读取到的布尔值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -579,7 +583,7 @@ try {
 readBooleanArray(dataIn: boolean[]): void
 ```
 
-Reads the Boolean array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取布尔数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -597,9 +601,9 @@ Reads the Boolean array from this **MessageParcel** object and writes it to the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | boolean[] | Yes | Boolean array to read. |
+| dataIn | boolean[] | Yes | 要读取的布尔数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -623,7 +627,7 @@ try {
 readBooleanArray(): boolean[]
 ```
 
-Reads the Boolean array from this **MessageParcel** object.
+从MessageParcel实例中读取布尔数组。
 
 **Since:** 7
 
@@ -641,9 +645,9 @@ Reads the Boolean array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| boolean[] | Boolean array read. |
+| boolean[] | 返回布尔数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -666,7 +670,7 @@ try {
 readByte(): number
 ```
 
-Reads the byte value from this **MessageParcel** object.
+从MessageParcel实例中读取字节值。
 
 **Since:** 7
 
@@ -684,9 +688,9 @@ Reads the byte value from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Byte value read. |
+| number | 返回字节值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -709,7 +713,7 @@ try {
 readByteArray(dataIn: number[]): void
 ```
 
-Reads the byte array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取字节数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -727,9 +731,9 @@ Reads the byte array from this **MessageParcel** object and writes it to the cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | Byte array to read. |
+| dataIn | number[] | Yes | 要读取的字节数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -753,7 +757,7 @@ try {
 readByteArray(): number[]
 ```
 
-Reads the byte array from this **MessageParcel** object.
+从MessageParcel实例中读取字节数组。
 
 **Since:** 7
 
@@ -771,9 +775,9 @@ Reads the byte array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number[] | Byte array read. |
+| number[] | 返回字节数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -797,7 +801,7 @@ try {
 readChar(): number
 ```
 
-Reads the single character value from this **MessageParcel** object.
+从MessageParcel实例中读取单个字符值。
 
 **Since:** 7
 
@@ -815,9 +819,9 @@ Reads the single character value from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Char** value read. |
+| number | 返回单个字符值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -840,7 +844,7 @@ try {
 readCharArray(dataIn: number[]): void
 ```
 
-Reads the character array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取单个字符数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -858,9 +862,9 @@ Reads the character array from this **MessageParcel** object and writes it to th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | Character array to read. |
+| dataIn | number[] | Yes | 要读取的单个字符数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -884,7 +888,7 @@ try {
 readCharArray(): number[]
 ```
 
-Reads the single character array from this **MessageParcel** object.
+从MessageParcel实例中读取单个字符数组。
 
 **Since:** 7
 
@@ -902,9 +906,9 @@ Reads the single character array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number[] | Character array read. |
+| number[] | 返回单个字符数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -927,7 +931,7 @@ try {
 readDouble(): number
 ```
 
-Reads the double value from this **MessageParcel** object.
+从MessageParcel实例中读取双精度浮点值。
 
 **Since:** 7
 
@@ -945,9 +949,9 @@ Reads the double value from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Double value read. |
+| number | 返回双精度浮点值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -970,7 +974,7 @@ try {
 readDoubleArray(dataIn: number[]): void
 ```
 
-Reads the double array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取双精度浮点数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -988,9 +992,9 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | Double array to read. |
+| dataIn | number[] | Yes | 要读取的双精度浮点数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1014,7 +1018,7 @@ try {
 readDoubleArray(): number[]
 ```
 
-Reads the double array from this **MessageParcel** object.
+从MessageParcel实例中读取双精度浮点数组。
 
 **Since:** 7
 
@@ -1032,9 +1036,9 @@ Reads the double array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number[] | Double array read. |
+| number[] | 返回双精度浮点数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1057,7 +1061,7 @@ try {
 readException(): void
 ```
 
-Reads the exception information from this **MessageParcel** object.
+从MessageParcel中读取异常。
 
 **Since:** 8
 
@@ -1071,7 +1075,7 @@ Reads the exception information from this **MessageParcel** object.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -1153,7 +1157,7 @@ try {
 readFileDescriptor(): number
 ```
 
-Reads the file descriptor from this **MessageParcel** object.
+从MessageParcel中读取文件描述符。
 
 **Since:** 8
 
@@ -1171,9 +1175,9 @@ Reads the file descriptor from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | File descriptor read. |
+| number | 返回文件描述符。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1198,7 +1202,7 @@ try {
 readFloat(): number
 ```
 
-Reads the double value from this **MessageParcel** object.
+从MessageParcel实例中读取双精度浮点值。
 
 **Since:** 7
 
@@ -1216,9 +1220,9 @@ Reads the double value from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Double value read. |
+| number | 返回双精度浮点值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1241,7 +1245,7 @@ try {
 readFloatArray(dataIn: number[]): void
 ```
 
-Reads the double array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取双精度浮点数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -1259,9 +1263,9 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | Double array to read. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
+| dataIn | number[] | Yes | 要读取的双精度浮点数组。由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1285,7 +1289,7 @@ try {
 readFloatArray(): number[]
 ```
 
-Reads the double array from this **MessageParcel** object.
+从MessageParcel实例中读取双精度浮点数组。
 
 **Since:** 7
 
@@ -1303,9 +1307,9 @@ Reads the double array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number[] | Double array read. |
+| number[] | 返回双精度浮点数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1328,7 +1332,7 @@ try {
 readInt(): number
 ```
 
-Reads the integer from this **MessageParcel** object.
+从MessageParcel实例中读取整数值。
 
 **Since:** 7
 
@@ -1346,9 +1350,9 @@ Reads the integer from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Integer read. |
+| number | 返回整数值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1371,7 +1375,7 @@ try {
 readIntArray(dataIn: number[]): void
 ```
 
-Reads the integer array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取整数数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -1389,9 +1393,9 @@ Reads the integer array from this **MessageParcel** object and writes it to the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | Integer array to read. |
+| dataIn | number[] | Yes | 要读取的整数数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1415,7 +1419,7 @@ try {
 readIntArray(): number[]
 ```
 
-Reads the integer array from this **MessageParcel** object.
+从MessageParcel实例中读取整数数组。
 
 **Since:** 7
 
@@ -1433,9 +1437,9 @@ Reads the integer array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number[] | Integer array read. |
+| number[] | 返回整数数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1458,7 +1462,7 @@ try {
 readInterfaceToken(): string
 ```
 
-Reads the interface token from this **MessageParcel** object. The interface token is read in the sequence in which it is written to the **MessageParcel** object. The local object can use it to verify the communication.
+从MessageParcel中读取接口描述符，接口描述符按写入MessageParcel的顺序读取，本地对象可使用该信息检验本次通信。
 
 **Since:** 7
 
@@ -1476,9 +1480,9 @@ Reads the interface token from this **MessageParcel** object. The interface toke
 
 | Type | Description |
 | --- | --- |
-| string | Interface token obtained. |
+| string | 返回读取到的接口描述符。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1500,7 +1504,7 @@ try {
 readLong(): number
 ```
 
-Reads the long int value from this **MessageParcel** object.
+从MessageParcel实例中读取长整数值。
 
 **Since:** 7
 
@@ -1518,9 +1522,9 @@ Reads the long int value from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Long integer read. |
+| number | 返回长整数值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1543,7 +1547,7 @@ try {
 readLongArray(dataIn: number[]): void
 ```
 
-Reads the long array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取长整数数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -1561,9 +1565,9 @@ Reads the long array from this **MessageParcel** object and writes it to the cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | Long array to read. |
+| dataIn | number[] | Yes | 要读取的长整数数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1587,7 +1591,7 @@ try {
 readLongArray(): number[]
 ```
 
-Reads the long array from this **MessageParcel** object.
+从MessageParcel实例中读取长整数数组。
 
 **Since:** 7
 
@@ -1605,9 +1609,9 @@ Reads the long array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number[] | Long array read. |
+| number[] | 返回长整数数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1630,7 +1634,7 @@ try {
 readRawData(size: number): number[]
 ```
 
-Reads raw data from this **MessageParcel** object.
+从MessageParcel读取原始数据。
 
 **Since:** 8
 
@@ -1648,15 +1652,15 @@ Reads raw data from this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Size of the raw data to read. |
+| size | number | Yes | 要读取的原始数据的大小，以字节为单位。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number[] | Raw data obtained, in bytes. |
+| number[] | 返回原始数据（以字节为单位）。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1680,8 +1684,7 @@ try {
 readRemoteObject(): IRemoteObject
 ```
 
-Reads the remote object from this **MessageParcel** object. You can use this method to deserialize the  
-**MessageParcel** object to generate an **IRemoteObject**. The remote objects are read in the order in which they are written to this **MessageParcel** object.
+从MessageParcel读取远程对象。此方法用于反序列化MessageParcel对象以生成IRemoteObject。远程对象按写入MessageParcel的顺序读取。
 
 **Since:** 7
 
@@ -1699,9 +1702,9 @@ Reads the remote object from this **MessageParcel** object. You can use this met
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Remote object obtained. |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 读取到的远程对象，用于IPC/RPC通信。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1735,7 +1738,7 @@ try {
 readRemoteObjectArray(objects: IRemoteObject[]): void
 ```
 
-Reads the **IRemoteObject** array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel读取IRemoteObject对象数组，并将其写入到创建的空数组中。
 
 **Since:** 8
 
@@ -1753,9 +1756,9 @@ Reads the **IRemoteObject** array from this **MessageParcel** object and writes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objects | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | IRemoteObject** array to read. |
+| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | 从MessageParcel读取的IRemoteObject对象数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1791,7 +1794,7 @@ try {
 readRemoteObjectArray(): IRemoteObject[]
 ```
 
-Reads the **IRemoteObject** array from this **MessageParcel** object.
+从MessageParcel读取IRemoteObject对象数组。
 
 **Since:** 8
 
@@ -1809,9 +1812,9 @@ Reads the **IRemoteObject** array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | IRemoteObject** object array obtained. |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | 返回IRemoteObject对象数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1847,7 +1850,7 @@ try {
 readSequenceable(dataIn: Sequenceable): boolean
 ```
 
-Reads member variables from this **MessageParcel** object.
+从MessageParcel实例中读取成员变量到指定的对象（dataIn）。
 
 **Since:** 7
 
@@ -1865,15 +1868,15 @@ Reads member variables from this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Object that reads member variables from the **MessageParcel** object. |
+| dataIn | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | 需要从MessageParcel读取成员变量的对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：反序列化成功，false：反序列化失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1917,7 +1920,7 @@ try {
 readSequenceableArray(sequenceableArray: Sequenceable[]): void
 ```
 
-Reads the **Sequenceable** array from this **MessageParcel** object.
+从MessageParcel实例中读取可序列化对象数组。
 
 **Since:** 8
 
@@ -1935,9 +1938,9 @@ Reads the **Sequenceable** array from this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequenceableArray | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Sequenceable** array to read. |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | 要读取的可序列化对象数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1983,7 +1986,7 @@ try {
 readShort(): number
 ```
 
-Reads the short integer from this **MessageParcel** object.
+从MessageParcel实例中读取短整数值。
 
 **Since:** 7
 
@@ -2001,9 +2004,9 @@ Reads the short integer from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Short integer read. |
+| number | 返回短整数值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2026,7 +2029,7 @@ try {
 readShortArray(dataIn: number[]): void
 ```
 
-Reads the short array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取短整数数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -2044,9 +2047,9 @@ Reads the short array from this **MessageParcel** object and writes it to the cr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | Short array to read. |
+| dataIn | number[] | Yes | 要读取的短整数数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2070,7 +2073,7 @@ try {
 readShortArray(): number[]
 ```
 
-Reads the short array from this **MessageParcel** object.
+从MessageParcel实例中读取短整数数组。
 
 **Since:** 7
 
@@ -2088,9 +2091,9 @@ Reads the short array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number[] | Short array read. |
+| number[] | 返回短整数数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2113,7 +2116,7 @@ try {
 readString(): string
 ```
 
-Reads the string from this **MessageParcel** object.
+从MessageParcel实例中读取字符串值。
 
 **Since:** 7
 
@@ -2131,9 +2134,9 @@ Reads the string from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| string | String read. |
+| string | 返回字符串值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2156,7 +2159,7 @@ try {
 readStringArray(dataIn: string[]): void
 ```
 
-Reads the string array from this **MessageParcel** object and writes it to the created empty array.
+从MessageParcel实例中读取字符串数组，并将其写入到创建的空数组中。
 
 **Since:** 7
 
@@ -2174,9 +2177,9 @@ Reads the string array from this **MessageParcel** object and writes it to the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | string[] | Yes | String array to read. |
+| dataIn | string[] | Yes | 要读取的字符串数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2200,7 +2203,7 @@ try {
 readStringArray(): string[]
 ```
 
-Reads the string array from this **MessageParcel** object.
+从MessageParcel实例中读取字符串数组。
 
 **Since:** 7
 
@@ -2218,9 +2221,9 @@ Reads the string array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| string[] | String array read. |
+| string[] | 返回字符串数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2243,7 +2246,7 @@ try {
 reclaim(): void
 ```
 
-Reclaims the **MessageParcel** object that is no longer used.
+释放不再使用的MessageParcel对象。
 
 **Since:** 7
 
@@ -2257,7 +2260,7 @@ Reclaims the **MessageParcel** object that is no longer used.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2277,7 +2280,7 @@ try {
 rewindRead(pos: number): boolean
 ```
 
-Moves the read pointer to the specified position.
+重新偏移读取位置到指定的位置。
 
 **Since:** 7
 
@@ -2295,15 +2298,15 @@ Moves the read pointer to the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | number | Yes | Position from which data is to read. |
+| pos | number | Yes | 开始读取数据的目标位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the read position changes; returns **false** otherwise. |
+| boolean | true：读取位置发生更改，false：读取位置未发生更改。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2329,7 +2332,7 @@ try {
 rewindWrite(pos: number): boolean
 ```
 
-Moves the write pointer to the specified position.
+重新偏移写位置到指定的位置。
 
 **Since:** 7
 
@@ -2347,15 +2350,15 @@ Moves the write pointer to the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | number | Yes | Position from which data is to write. |
+| pos | number | Yes | 开始写入数据的目标位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the write position changes; returns **false** otherwise. |
+| boolean | true：写入位置发生更改，false：写入位置未发生更改。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2379,7 +2382,7 @@ try {
 setCapacity(size: number): boolean
 ```
 
-Sets the storage capacity of this **MessageParcel** object.
+设置MessageParcel实例的存储容量。
 
 **Since:** 7
 
@@ -2397,15 +2400,15 @@ Sets the storage capacity of this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Storage capacity to set, in bytes. |
+| size | number | Yes | MessageParcel实例的存储容量。以字节为单位。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：设置成功，false：设置失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2426,7 +2429,7 @@ try {
 setSize(size: number): boolean
 ```
 
-Sets the size of data contained in this **MessageParcel** object.
+设置MessageParcel实例中包含的数据大小。
 
 **Since:** 7
 
@@ -2444,15 +2447,15 @@ Sets the size of data contained in this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Data size to set, in bytes. |
+| size | number | Yes | MessageParcel实例的数据大小。以字节为单位。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：设置成功，false：设置失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2473,7 +2476,7 @@ try {
 writeAshmem(ashmem: Ashmem): boolean
 ```
 
-Writes an anonymous shared object to this **MessageParcel** object.
+将指定的匿名共享对象写入此MessageParcel。
 
 **Since:** 8
 
@@ -2491,15 +2494,15 @@ Writes an anonymous shared object to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Anonymous shared object to write. |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | 要写入MessageParcel的匿名共享对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2521,7 +2524,7 @@ try {
 writeBoolean(val: boolean): boolean
 ```
 
-Writes a Boolean value to this **MessageParcel** object.
+将布尔值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2539,15 +2542,15 @@ Writes a Boolean value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | boolean | Yes | Boolean value to write. |
+| val | boolean | Yes | 要写入的布尔值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2568,7 +2571,7 @@ try {
 writeBooleanArray(booleanArray: boolean[]): boolean
 ```
 
-Writes a Boolean array to this **MessageParcel** object.
+将布尔数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2586,15 +2589,15 @@ Writes a Boolean array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| booleanArray | boolean[] | Yes | Boolean array to write. |
+| booleanArray | boolean[] | Yes | 要写入的布尔数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2615,7 +2618,7 @@ try {
 writeByte(val: number): boolean
 ```
 
-Writes a Byte value to this **MessageParcel** object.
+将字节值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2633,15 +2636,15 @@ Writes a Byte value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Byte value to write. |
+| val | number | Yes | 要写入的字节值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2662,7 +2665,7 @@ try {
 writeByteArray(byteArray: number[]): boolean
 ```
 
-Writes a byte array to this **MessageParcel** object.
+将字节数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2680,15 +2683,15 @@ Writes a byte array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteArray | number[] | Yes | Byte array to write. |
+| byteArray | number[] | Yes | 要写入的字节数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2710,7 +2713,7 @@ try {
 writeChar(val: number): boolean
 ```
 
-Writes a single character value to this **MessageParcel** object.
+将单个字符值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2728,15 +2731,15 @@ Writes a single character value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Char** value to write. |
+| val | number | Yes | 要写入的单个字符值。取值范围：[0, 65535]，对应Unicode字符编码范围。超出此范围可能导致字符编码异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2757,7 +2760,7 @@ try {
 writeCharArray(charArray: number[]): boolean
 ```
 
-Writes a single character array to this **MessageParcel** object.
+将单个字符数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2775,15 +2778,15 @@ Writes a single character array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| charArray | number[] | Yes | Character array to write. |
+| charArray | number[] | Yes | 要写入的单个字符数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2804,7 +2807,7 @@ try {
 writeDouble(val: number): boolean
 ```
 
-Writes a double value to this **MessageParcel** object.
+将双精度浮点值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2822,15 +2825,15 @@ Writes a double value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Double value to write. |
+| val | number | Yes | 要写入的双精度浮点值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2851,7 +2854,7 @@ try {
 writeDoubleArray(doubleArray: number[]): boolean
 ```
 
-Writes a double array to this **MessageParcel** object.
+将双精度浮点数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2869,15 +2872,15 @@ Writes a double array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| doubleArray | number[] | Yes | Double array to write. |
+| doubleArray | number[] | Yes | 要写入的双精度浮点数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2898,7 +2901,7 @@ try {
 writeFileDescriptor(fd: number): boolean
 ```
 
-Writes a file descriptor to this **MessageParcel** object.
+写入文件描述符到MessageParcel。
 
 **Since:** 8
 
@@ -2916,15 +2919,15 @@ Writes a file descriptor to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor to write. |
+| fd | number | Yes | 文件描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：操作成功，false：操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2948,7 +2951,7 @@ try {
 writeFloat(val: number): boolean
 ```
 
-Writes a double value to this **MessageParcel** object.
+将双精度浮点值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -2966,15 +2969,15 @@ Writes a double value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Double value to write. |
+| val | number | Yes | 要写入的双精度浮点值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2995,7 +2998,7 @@ try {
 writeFloatArray(floatArray: number[]): boolean
 ```
 
-Writes a double array to this **MessageParcel** object.
+将双精度浮点数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3013,15 +3016,15 @@ Writes a double array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| floatArray | number[] | Yes | Double array to write. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
+| floatArray | number[] | Yes | 要写入的双精度浮点数组。由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3042,7 +3045,7 @@ try {
 writeInt(val: number): boolean
 ```
 
-Writes an int value to this **MessageParcel** object.
+将整数值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3060,15 +3063,15 @@ Writes an int value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Integer to write. |
+| val | number | Yes | 要写入的整数值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3089,7 +3092,7 @@ try {
 writeIntArray(intArray: number[]): boolean
 ```
 
-Writes an integer array to this **MessageParcel** object.
+将整数数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3107,15 +3110,15 @@ Writes an integer array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intArray | number[] | Yes | Integer array to write. |
+| intArray | number[] | Yes | 要写入的整数数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3136,7 +3139,7 @@ try {
 writeInterfaceToken(token: string): boolean
 ```
 
-Writes an interface token to this **MessageParcel** object. The remote object can use this interface token to verify the communication.
+将接口描述符写入MessageParcel对象，远端对象可使用该信息校验本次通信。
 
 **Since:** 7
 
@@ -3154,15 +3157,15 @@ Writes an interface token to this **MessageParcel** object. The remote object ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | string | Yes | Interface token to write. The length of the string must be less than 40960. |
+| token | string | Yes | 字符串类型描述符，其长度应小于40960。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：操作成功，false：操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3183,7 +3186,7 @@ try {
 writeLong(val: number): boolean
 ```
 
-Writes a long int value to this **MessageParcel** object.
+将长整数值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3201,15 +3204,15 @@ Writes a long int value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Long int value to write. |
+| val | number | Yes | 要写入的长整数值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3230,7 +3233,7 @@ try {
 writeLongArray(longArray: number[]): boolean
 ```
 
-Writes a long array to this **MessageParcel** object.
+将长整数数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3248,15 +3251,15 @@ Writes a long array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| longArray | number[] | Yes | Long array to write. |
+| longArray | number[] | Yes | 要写入的长整数数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3277,7 +3280,7 @@ try {
 writeNoException(): void
 ```
 
-Writes information to this **MessageParcel** object indicating that no exception occurred.
+向MessageParcel写入“指示未发生异常”的信息。
 
 **Since:** 8
 
@@ -3291,7 +3294,7 @@ Writes information to this **MessageParcel** object indicating that no exception
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3326,7 +3329,7 @@ onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
 writeRawData(rawData: number[], size: number): boolean
 ```
 
-Writes raw data to this **MessageParcel** object.
+将原始数据写入MessageParcel对象。
 
 **Since:** 8
 
@@ -3344,16 +3347,16 @@ Writes raw data to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawData | number[] | Yes | Raw data to write. The size cannot exceed 128 MB. |
-| size | number | Yes | Size of the raw data, in bytes. |
+| rawData | number[] | Yes | 要写入的原始数据，大小不能超过128MB。 |
+| size | number | Yes | 发送的原始数据大小，以字节为单位。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3375,7 +3378,7 @@ try {
 writeRemoteObject(object: IRemoteObject): boolean
 ```
 
-Serializes a remote object and writes it to this **MessageParcel** object.
+序列化远程对象并将其写入MessageParcel对象。
 
 **Since:** 7
 
@@ -3393,15 +3396,15 @@ Serializes a remote object and writes it to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Remote object to serialize and write to the **MessageParcel** object. |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | 要序列化并写入MessageParcel的远程对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：操作成功，false：操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3432,7 +3435,7 @@ try {
 writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean
 ```
 
-Writes an **IRemoteObject** array to this **MessageParcel** object.
+将IRemoteObject对象数组写入MessageParcel。
 
 **Since:** 8
 
@@ -3450,15 +3453,15 @@ Writes an **IRemoteObject** array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objectArray | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | IRemoteObject** array to write. |
+| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | 要写入MessageParcel的IRemoteObject对象数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3491,7 +3494,7 @@ try {
 writeSequenceable(val: Sequenceable): boolean
 ```
 
-Writes a **Sequenceable** object to this **MessageParcel** object.
+将自定义序列化对象写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3509,15 +3512,15 @@ Writes a **Sequenceable** object to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Sequenceable** object to write. |
+| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | 要写入的可序列对象。建议实现marshalling和unmarshalling方法时确保数据完整性，序列化与反序列化的数据结构应保持一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3558,7 +3561,7 @@ try {
 writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean
 ```
 
-Writes a **Sequenceable** array to this **MessageParcel** object.
+将可序列化对象数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3576,15 +3579,15 @@ Writes a **Sequenceable** array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequenceableArray | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Sequenceable** array to write. |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | 要写入的可序列化对象数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3628,7 +3631,7 @@ try {
 writeShort(val: number): boolean
 ```
 
-Writes a short int value to this **MessageParcel** object.
+将短整数值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3646,15 +3649,15 @@ Writes a short int value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Short integer to write. |
+| val | number | Yes | 要写入的短整数值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3675,7 +3678,7 @@ try {
 writeShortArray(shortArray: number[]): boolean
 ```
 
-Writes a short array to this **MessageParcel** object.
+将短整数数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3693,15 +3696,15 @@ Writes a short array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortArray | number[] | Yes | Short array to write. |
+| shortArray | number[] | Yes | 要写入的短整数数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3722,7 +3725,7 @@ try {
 writeString(val: string): boolean
 ```
 
-Writes a string to this **MessageParcel** object.
+将字符串值写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3740,15 +3743,15 @@ Writes a string to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | string | Yes | String to write. The length of the string must be less than 40960. |
+| val | string | Yes | 要写入的字符串值，其长度应小于40960。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3769,7 +3772,7 @@ try {
 writeStringArray(stringArray: string[]): boolean
 ```
 
-Writes a string array to this **MessageParcel** object.
+将字符串数组写入MessageParcel实例。
 
 **Since:** 7
 
@@ -3787,15 +3790,15 @@ Writes a string array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stringArray | string[] | Yes | String array to write. The length of a single element in the array must be less than 40960. |
+| stringArray | string[] | Yes | 要写入的字符串数组，数组单个元素的长度应小于40960。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：写入成功，false：写入失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

@@ -1,12 +1,18 @@
 # openInstallCertificateDialog
 
+## Modules to Import
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## openInstallCertificateDialog
 
 ```TypeScript
 function openInstallCertificateDialog(context: common.Context, certType: CertificateType, certScope: CertificateScope, cert: Uint8Array): Promise<string>
 ```
 
-Opens the Certificate Management Install Certificate dialog box. After the certificate is successfully installed,the unique identifier of the certificate is returned. Applications can use the identifier to use the certificate.Use Promise asynchronous callback.
+打开证书管理安装证书向导，显示相应的页面。证书安装成功后，返回证书的唯一标识符，应用可通过该标识符对证书进行使用。使用Promise异步回调。
 
 **Since:** 14
 
@@ -24,31 +30,31 @@ Opens the Certificate Management Install Certificate dialog box. After the certi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context of the application. |
-| certType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the certificate to install. **CA\_\_\_ESCAPED\_UNDERSCORE\_\_\_CERT**, **CREDENTIAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_USER**, and **CREDENTIAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_SYSTEM** are currently supported. |
-| certScope | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Usage scope of the certificate to install. **CURRENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_USER** and **NOT\_\_\_ESCAPED\_UNDERSCORE\_\_\_SPECIFIED** are currently supported. |
-| cert | Uint8Array | Yes | The certificate data. The size cannot exceed 8 KB. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When certType is set to CA\_\_\_ESCAPED\_UNDERSCORE\_\_\_CERT, the certificate data must be in PEM or DER format. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When certType is set to CREDENTIAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_USER or CREDENTIAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_SYSTEM, the value must be in the P12 encoding format. |
+| context | common.Context | Yes | 表示应用的上下文信息。 |
+| certType | [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md) | Yes | 表示安装证书类型，目前仅支持CA_CERT、CREDENTIAL_USER、CREDENTIAL_SYSTEM。 |
+| certScope | [CertificateScope](arkts-devicecertificate-certificatemanagerdialog-certificatescope-e.md) | Yes | 表示安装证书的使用范围，目前仅支持CURRENT_USER、NOT_SPECIFIED。 |
+| cert | Uint8Array | Yes | 表示证书数据，大小不超过8KB。&lt;br&gt;当certType为CA_CERT，应为PEM或DER编码格式的证书数据。&lt;br&gt;当certType为CREDENTIAL_USER或CREDENTIAL_SYSTEM，应为P12编码格式的 证书凭据数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the certificate URI. The value contains up to 256 bytes. |
+| Promise&lt;string&gt; | Promise对象。表示返回证书uri的结果，最大长度为256字节。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The certificate management application Hap is not preinstalled in the system, and the capability is not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
-| [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the installation operation. |
-| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | The user install certificate failed in the certificate manager dialog, such as the certificate is in an invalid format. |
-| [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to determine whether the device supports opening the dialog box for installing a CA certificate with certType set to CA. |
-| [29700005](../errorcode-certManagerDialog.md#29700005-nonsecure-operation) | The operation does not comply with the device security policy, such as the device does not allow users to manage the CA certificate of the global user.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 29700005 | The operation does not comply with the device security policy, such as the device does not allow users to manage the CA certificate of the global user.<br>**Applicable version:** 18 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | The certificate management application Hap is not preinstalled in the system, and the capability is not supported.<br>**Applicable version:** 26.0.0 and later |
+| 29700004 | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md#supportscacertdialog) to determine whether the device supports opening the dialog box for installing a CA certificate with certType set to CA. |
+| 29700001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| 29700003 | The user install certificate failed in the certificate manager dialog, such as the certificate is in an invalid format. |
+| 29700002 | The user cancels the installation operation. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
@@ -68,8 +74,9 @@ let caCert: Uint8Array = new Uint8Array([
 ]);
 try {
   certificateManagerDialog.openInstallCertificateDialog(context, certificateType, certificateScope, caCert).then((uri: string) => {
-    console.info('Succeeded opening install certificate');
-  }).catch((err: BusinessError) => {
+    console.info('Succeeded in opening install certificate');
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
     console.error(`Failed to open install certificate dialog. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {

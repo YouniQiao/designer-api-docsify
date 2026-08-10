@@ -1,12 +1,18 @@
 # offAttachmentDidFail
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## offAttachmentDidFail
 
 ```TypeScript
 function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void
 ```
 
-Unsubscribe the attachment failure event.
+取消订阅绑定失败事件。使用callback异步回调。
 
 **Since:** 22
 
@@ -20,9 +26,9 @@ Unsubscribe the attachment failure event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachFailureReason&gt; | No | the callback is invoked only when the attachment triggered by the registrant's process fails. When subscriber unsubscribes all callback, this parameter can be left blank. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachFailureReason&gt; | No | 取消订阅的回调函数，需要与订阅接口传入的保持一致。参数不填写时，取消订阅该事件的所有回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

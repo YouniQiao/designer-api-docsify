@@ -1,6 +1,6 @@
 # DialogAbilityInfo (System API)
 
-Provides DialogAbility information, including the bundle name, module name, and ability name.
+提供会话组件信息，包括包名、模块名、组件名等信息。
 
 **Since:** 11
 
@@ -12,15 +12,21 @@ Provides DialogAbility information, including the bundle name, module name, and 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { dialogSession } from 'kits/@kit.AbilityKit';
+```
+
 ## abilityIconId
 
 ```TypeScript
 abilityIconId: int
 ```
 
-ID of the ability icon.
+表示Ability图标ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -40,9 +46,9 @@ ID of the ability icon.
 abilityLabelId: int
 ```
 
-ID of the ability label.
+表示Ability标签ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -62,7 +68,7 @@ ID of the ability label.
 abilityName: string
 ```
 
-Ability name.
+表示组件名。
 
 **Type:** string
 
@@ -84,9 +90,9 @@ Ability name.
 appIndex: int
 ```
 
-Index of the application clone.
+表示应用的分身索引。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -106,9 +112,9 @@ Index of the application clone.
 bundleIconId: int
 ```
 
-ID of the bundle icon.
+表示Bundle图标ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -128,9 +134,9 @@ ID of the bundle icon.
 bundleLabelId: int
 ```
 
-ID of the bundle label.
+表示Bundle标签ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -150,7 +156,7 @@ ID of the bundle label.
 bundleName: string
 ```
 
-Bundle name.
+表示包名。
 
 **Type:** string
 
@@ -172,7 +178,7 @@ Bundle name.
 codePath?: string
 ```
 
-Installation directory of the application.
+表示应用程序的安装目录。
 
 **Type:** string
 
@@ -194,14 +200,13 @@ Installation directory of the application.
 installSource?: string
 ```
 
-Installation source of the application. The options are as follows:
+表示应用程序的安装来源，支持的取值如下：
 
-- **pre-installed**: pre-installed application installed during the first boot.  
-- **ota**: pre-installed application added during system upgrade.  
-- **recovery**: pre-installed application manually restored by the user after uninstallation.  
-- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a  
-variable, subject to the actual value.  
-- **unknown**: unknown application installation source.
+- pre-installed：表示首次开机时安装的预置应用。  
+- ota：表示系统升级时新增的预置应用。  
+- recovery：表示用户卸载后又手动恢复的预置应用。  
+- bundleName：表示由此包名对应的应用安装。该bundleName代表变量，以实际值为准。  
+- unknown：表示应用安装来源未知。
 
 **Type:** string
 
@@ -223,7 +228,7 @@ variable, subject to the actual value.
 moduleName: string
 ```
 
-Module name.
+表示模块名。
 
 **Type:** string
 
@@ -245,9 +250,9 @@ Module name.
 multiAppMode: MultiAppMode
 ```
 
-Multi-app mode.
+表示应用的多开模式。
 
-**Type:** MultiAppMode
+**Type:** [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md)
 
 **Since:** 12
 
@@ -267,7 +272,7 @@ Multi-app mode.
 visible: boolean
 ```
 
-Whether the ability is visible. **true** if visible, **false** otherwise.
+表示Ability是否可见。true表示Ability可见，false表示Ability不可见。
 
 **Type:** boolean
 

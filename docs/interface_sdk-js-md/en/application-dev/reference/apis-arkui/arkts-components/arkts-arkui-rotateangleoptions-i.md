@@ -1,6 +1,6 @@
 # RotateAngleOptions
 
-Rotation parameter option of the rotation angle on each axis.
+指定各轴旋转角的旋转参数选项。
 
 **Since:** 20
 
@@ -16,11 +16,11 @@ Rotation parameter option of the rotation angle on each axis.
 angleX?: number | string
 ```
 
-Rotation angle along the x-axis. A positive value indicates clockwise rotation relative to the rotation axis, and a negative value indicates counterclockwise rotation. The value can be of the string type, for example, **'90deg'**.
+X轴方向上的旋转角。取值为正时相对于旋转轴方向顺时针转动，取值为负时逆时针转动。取值可为string类型，如'90deg'。
 
-Default value: **0**.
+默认值：0
 
-Value range: (-∞, +∞).
+取值范围：(-∞, +∞)
 
 **Type:** number \| string
 
@@ -46,11 +46,11 @@ Value range: (-∞, +∞).
 angleY?: number | string
 ```
 
-Rotation angle along the y-axis. A positive value indicates clockwise rotation relative to the rotation axis, and a negative value indicates counterclockwise rotation. The value can be of the string type, for example, **'90deg'**.
+Y轴方向上的旋转角。取值为正时相对于旋转轴方向顺时针转动，取值为负时逆时针转动。取值可为string类型，如'90deg'。
 
-Default value: **0**.
+默认值：0
 
-Value range: (-∞, +∞).
+取值范围：(-∞, +∞)
 
 **Type:** number \| string
 
@@ -76,11 +76,11 @@ Value range: (-∞, +∞).
 angleZ?: number | string
 ```
 
-Rotation angle along the z-axis. A positive value indicates clockwise rotation relative to the rotation axis, and a negative value indicates counterclockwise rotation. The value can be of the string type, for example, **'90deg'**.
+Z轴方向上的旋转角。取值为正时相对于旋转轴方向顺时针转动，取值为负时逆时针转动。取值可为string类型，如'90deg'。
 
-Default value: **0**.
+默认值：0
 
-Value range: (-∞, +∞).
+取值范围：(-∞, +∞)
 
 **Type:** number \| string
 
@@ -106,13 +106,13 @@ Value range: (-∞, +∞).
 centerX?: number | string
 ```
 
-X coordinate of the transformation center point (anchor).
+变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。
 
-Unit: vp
+单位：vp
 
-Default value: **'50%'**.
+默认值：'50%'
 
-Value range: (-∞, +∞).
+取值范围：(-∞, +∞)
 
 **Type:** number \| string
 
@@ -138,13 +138,13 @@ Value range: (-∞, +∞).
 centerY?: number | string
 ```
 
-Y coordinate of the transformation center point (anchor).
+变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。
 
-Unit: vp
+单位：vp
 
-Default value: **'50%'**.
+默认值：'50%'
 
-Value range: (-∞, +∞).
+取值范围：(-∞, +∞)
 
 **Type:** number \| string
 
@@ -170,13 +170,13 @@ Value range: (-∞, +∞).
 centerZ?: number
 ```
 
-Z-axis anchor, that is, the z-component of the 3D rotation center point.
+z轴锚点，即3D旋转中心点的z轴分量。
 
-Default value: **0**.
+默认值：0
 
-Unit: px
+单位：px
 
-Value range: (-∞, +∞).
+取值范围：(-∞, +∞)
 
 **Type:** number
 
@@ -202,16 +202,15 @@ Value range: (-∞, +∞).
 perspective?: number
 ```
 
-Z-axis coordinate of the camera. The value indicates the viewing distance, that is, the distance between the camera and the z=0 plane. The positive and negative values of the parameter determine the camera observation direction.When perspective is set to 0, the system automatically calculates a proper camera Z-axis position. The value is negative.
+相机放置的z轴坐标。数值大小表示视距，即相机到z=0平面的距离。取值的正负决定了相机观察的方向。当perspective=0，系统会自动计算适合的相机z轴位置，取值为负数。
 
-The rotation axis and center point are defined based on the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. When the component moves, the coordinate system does not follow it.
+旋转轴和旋转中心点都基于[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)设定，组件发生位移时，坐标系不会随之移动。
 
-Default value: **0**.
+默认值：0
 
-Unit: px
+单位：px
 
-Value range: (-∞, +∞).
+取值范围：(-∞, +∞)
 
 **Type:** number
 

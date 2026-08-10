@@ -6,7 +6,7 @@
 function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void
 ```
 
-Obtains a WantAgent object.
+创建WantAgent。创建失败返回的WantAgent为空值。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,10 +26,10 @@ Obtains a WantAgent object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | about the WantAgent object to obtain. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WantAgent&gt; | Yes | Callback method for obtaining the user ID of WantAgent instance. |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes | WantAgent信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | Yes | 创建WantAgent的回调方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -79,7 +79,7 @@ wantAgent.getWantAgent({
 function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 ```
 
-Obtains a WantAgent object.
+创建WantAgent。创建失败返回的WantAgent为空值。使用Promise异步回调。
 
 **Since:** 7
 
@@ -99,15 +99,15 @@ Obtains a WantAgent object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | about the WantAgent object to obtain. |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes | WantAgent信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WantAgent&gt; | Returns the created { |
+| Promise&lt;WantAgent&gt; | 以Promise形式返回WantAgent。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

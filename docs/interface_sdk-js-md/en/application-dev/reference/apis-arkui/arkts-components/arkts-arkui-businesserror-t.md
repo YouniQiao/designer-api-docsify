@@ -4,9 +4,9 @@
 declare type BusinessError<T = void> = import('../api/@ohos.base').BusinessError<T>
 ```
 
-Represents the error information returned when an error occurs during image loading.
+图片加载异常返回的错误信息。
 
-The table below describes the **ImageError** error codes. The **error** property of **ImageError** contains error details with **code** and **message** fields, representing the error code and error message, respectively.
+以下是错误信息的详细介绍：ImageError的error属性为错误信息对象，其中code为错误码，message为错误信息。
 
 **Since:** 20
 

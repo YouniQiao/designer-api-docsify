@@ -1,12 +1,18 @@
 # unsubscribeReminderState
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## unsubscribeReminderState
 
 ```TypeScript
 function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Promise<void>
 ```
 
-Unsubscribes from agent-powered reminder state changes. This API uses a promise to return the result.
+取消订阅代理提醒状态。使用Promise异步回调。
 
 **Since:** 23
 
@@ -22,21 +28,21 @@ Unsubscribes from agent-powered reminder state changes. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;ReminderState&gt;&gt; | No | Callback used to return the result. If the **callback** parameter is not passed, all subscriptions are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ReminderState&gt;&gt; | No | 回调函数。如果不传参数callback，则取消所有订阅。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
+| 1700007 | If the input parameter is not valid parameter. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';

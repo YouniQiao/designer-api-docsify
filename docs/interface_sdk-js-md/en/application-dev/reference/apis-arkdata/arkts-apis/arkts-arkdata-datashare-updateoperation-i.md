@@ -1,6 +1,6 @@
 # UpdateOperation
 
-Represents the batch update operation information.
+批量更新操作的参数结构。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the batch update operation information.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## predicates
 
 ```TypeScript
 predicates: dataSharePredicates.DataSharePredicates
 ```
 
-Conditions for updating data.
+筛选条件。
 
 **Type:** dataSharePredicates.DataSharePredicates
 
@@ -36,9 +42,9 @@ Conditions for updating data.
 values: ValuesBucket
 ```
 
-Data to be updated.
+要更新的数据。
 
-**Type:** ValuesBucket
+**Type:** [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # HuksUnwrapSuite
 
-Enumerates the algorithm suites for securely importing a key.
+表示安全导入密钥的算法套件。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates the algorithm suites for securely importing a key.
 HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1
 ```
 
-Use X25519 for key agreement and then use AES-256 GCM to decrypt the key.
+安全导入密钥时，X25519密钥协商后使用AES-256 GCM解密。
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ Use X25519 for key agreement and then use AES-256 GCM to decrypt the key.
 HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2
 ```
 
-Use ECDH for key agreement and then use AES-256 GCM to decrypt the key.
+安全导入密钥时，ECDH密钥协商后使用AES-256 GCM解密。
 
 **Since:** 9
 
@@ -58,7 +58,7 @@ Use ECDH for key agreement and then use AES-256 GCM to decrypt the key.
 HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5
 ```
 
-Use the temporary SM4 key to encrypt the imported key and use the SM2 key that has been imported to HUKS to encrypt the SM4 key.
+安全导入密钥时，使用临时SM4密钥加密导入密钥，使用已导入HUKS的SM2密钥加密SM4密钥。
 
 **Since:** 23
 

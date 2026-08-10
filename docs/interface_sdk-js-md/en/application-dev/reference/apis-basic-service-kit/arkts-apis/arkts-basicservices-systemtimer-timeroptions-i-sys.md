@@ -1,6 +1,6 @@
 # TimerOptions (System API)
 
-Defines the initialization options for the system timer.
+创建系统定时器的初始化选项。
 
 **Since:** 7
 
@@ -12,15 +12,21 @@ Defines the initialization options for the system timer.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { systemTimer } from 'kits/@kit.BasicServicesKit';
+```
+
 ## callback
 
 ```TypeScript
 callback?: () => void
 ```
 
-Callback to be executed by the user.
+用户需要执行的回调函数。
 
-The default value is empty.
+默认值为空。
 
 **Since:** 7
 
@@ -38,14 +44,13 @@ The default value is empty.
 autoRestore?: boolean
 ```
 
-Whether the timer is restored after the device is restarted.
+是否在设备重启后恢复。
 
-The value **true** means that the timer is restored after the restart, and the value **false** means the opposite.
+true为重启后恢复，false为重启后不恢复。
 
-This parameter can be set to **true** only for timers that are not of the **TIMER\_TYPE\_REALTIME** type and have  
-**wantAgent** configured.
+仅支持非`TIMER_TYPE_REALTIME`类型且配置了wantAgent的定时器配置为true。
 
-The default value is **false**.
+默认值为false。
 
 **Type:** boolean
 
@@ -65,15 +70,15 @@ The default value is **false**.
 interval?: long
 ```
 
-Interval between two consecutive timers, in milliseconds.
+定时器时间间隔，单位：毫秒。
 
-For a repeating timer, the minimum value of **interval** is 1s and the maximum value is 365 days. It is recommended that the value be greater than or equal to 5000 ms.
+如果是循环定时器，interval值最小为1s，最大为365天，建议interval值不小于5000毫秒；
 
-For a one-shot timer, the value is **0**.
+单次定时器interval值为0。
 
-Default value: **0**.
+默认值为0。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 7
 
@@ -91,11 +96,11 @@ Default value: **0**.
 name?: string
 ```
 
-Timer name, with a maximum length of 64 bytes.
+定时器名称，长度不超过64字节。
 
-A UID cannot contain two timers with the same name. If a timer with the same name as an existing timer is created, the existing timer is destroyed.
+同一个UID中不可以同时存在两个同名定时器。如果创建了一个和之前已创建的定时器名字相同的定时器，先创建的定时器会被销毁。
 
-The default value is an empty string.
+默认值为空字符串。
 
 **Type:** string
 
@@ -115,8 +120,7 @@ The default value is an empty string.
 repeat: boolean
 ```
 
-Whether the timer is a repeating timer. The value **true** means that the timer is a repeating timer, and  
-**false** means that the timer is a one-shot timer.
+是否为循环定时器。true表示循环定时器，false表示单次定时器。
 
 **Type:** boolean
 
@@ -136,9 +140,17 @@ Whether the timer is a repeating timer. The value **true** means that the timer 
 type: int
 ```
 
-Timer types. Use pipe (|) symbol
+定时器类型，可以使用 '|' 多选。
 
-**Type:** int
+取值为1，表示为系统启动时间定时器（定时器启动时间不能晚于当前设置的系统时间）；
+
+取值为2，表示为唤醒定时器；
+
+取值为4，表示为精准定时器（APP被冻结时，定时器也会被冻结，并且定时器受统一心跳管控，因此即使是精准定时器也不能确保在指定时间点触发）；
+
+取值为8，表示为IDLE模式定时器（仅支持系统服务配置，不支持应用配置）。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -156,11 +168,11 @@ Timer types. Use pipe (|) symbol
 wantAgent?: WantAgent
 ```
 
-WantAgent** object of the notification to be sent when the timer expires. (An application **MainAbility** can be started, but not a **ServiceAbility**.)
+设置通知的WantAgent，定时器到期后通知（支持拉起应用MainAbility，不支持拉起ServiceAbility）。
 
-The default value is empty.
+默认值为空。
 
-**Type:** WantAgent
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 7
 

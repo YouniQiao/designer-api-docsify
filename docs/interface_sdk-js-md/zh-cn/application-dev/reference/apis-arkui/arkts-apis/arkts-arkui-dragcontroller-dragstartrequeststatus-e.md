@@ -1,10 +1,10 @@
 # DragStartRequestStatus
 
-定义应用是否可以发起拖拽的枚举类型。仅在[onDragStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_调用时有效。
+Define the status for the application to notify the framework whether to execute drag.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 <!--Device-dragController-const enum DragStartRequestStatus--><!--Device-dragController-const enum DragStartRequestStatus-End-->
 
@@ -16,15 +16,13 @@
 WAITING = 0
 ```
 
-应用在准备数据阶段，无法发起拖拽。
+Notify the framework that the application is not yet ready and needs to temporarily block the start of drag, only effective in onDragStart calls.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DragStartRequestStatus-WAITING = 0--><!--Device-DragStartRequestStatus-WAITING = 0-End-->
 
@@ -36,15 +34,13 @@ WAITING = 0
 READY = 1
 ```
 
-应用数据准备完成，可以发起拖拽。
+Notify the framework that the drag can continue to be started, but only during the start of drag, and will not take effect when the drag is started.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DragStartRequestStatus-READY = 1--><!--Device-DragStartRequestStatus-READY = 1-End-->
 

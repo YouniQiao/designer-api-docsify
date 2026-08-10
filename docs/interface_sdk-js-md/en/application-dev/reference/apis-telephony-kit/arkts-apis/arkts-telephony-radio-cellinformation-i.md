@@ -10,6 +10,12 @@ Obtains current cell information.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## networkType
 
 ```TypeScript
@@ -20,7 +26,7 @@ Obtains the network type of the serving cell.
 
 An application can call this method to determine the network type that the child class uses.
 
-**Type:** NetworkType
+**Type:** [NetworkType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workscheduler-networktype-e.md)
 
 **Since:** 8
 
@@ -38,7 +44,7 @@ signalInformation: SignalInformation
 
 An abstract method of the parent class whose implementation depends on the child classes.Returned child class objects vary according to the network type.Returns child class objects specific to the network type.
 
-**Type:** SignalInformation
+**Type:** [SignalInformation](arkts-telephony-radio-signalinformation-i.md)
 
 **Since:** 8
 

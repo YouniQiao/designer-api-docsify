@@ -10,6 +10,12 @@ Defines options of DNS query.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## family
 
 ```TypeScript
@@ -18,7 +24,7 @@ family?: FamilyType
 
 Specify family type of DNS query.
 
-**Type:** FamilyType
+**Type:** [FamilyType](arkts-network-connection-familytype-e.md)
 
 **Since:** 23
 

@@ -10,6 +10,12 @@ The class of a running form information.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## abilityName
 
 ```TypeScript
@@ -60,9 +66,9 @@ Obtains the bundle name of the application to which this form belongs.
 readonly dimension: int
 ```
 
-Obtains the grid style of this form.The value must be a positive integer, refer to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Obtains the grid style of this form.The value must be a positive integer, refer to {@link formInfo.FormDimension}.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** -
 
@@ -84,7 +90,7 @@ readonly extraData?: Record<string, Object>
 
 Obtains the extra data of the this form.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Default:** -
 
@@ -144,7 +150,7 @@ readonly formLocation: FormLocation
 
 The location of this form.
 
-**Type:** FormLocation
+**Type:** [FormLocation](arkts-form-forminfo-formlocation-e.md)
 
 **Default:** -
 
@@ -188,7 +194,7 @@ readonly formUsageState: FormUsageState
 
 Obtains the stage of form use.
 
-**Type:** FormUsageState
+**Type:** [FormUsageState](arkts-form-forminfo-formusagestate-e-sys.md)
 
 **Default:** FormUsageState.USED
 
@@ -250,7 +256,7 @@ readonly visibilityType: VisibilityType
 
 Obtains the visibility of this form.
 
-**Type:** VisibilityType
+**Type:** [VisibilityType](arkts-form-forminfo-visibilitytype-e.md)
 
 **Default:** -
 

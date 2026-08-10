@@ -16,9 +16,9 @@
 fontWeightConfigs?: FontWeightConfigs
 ```
 
-字体粗细配置。默认值继承[FontWeightConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+字体粗细配置。默认值继承[FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)。
 
-**类型：** FontWeightConfigs
+**类型：** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
 
 **起始版本：** 24
 

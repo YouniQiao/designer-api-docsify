@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { MeasureOptions } from 'kits/@kit.ArkUI';
+```
+
 ## baselineOffset
 
 ```TypeScript
@@ -200,7 +206,7 @@ maxLines?: int
 
 设置被计算文本最大行数。
 
-取值范围：[0, INT32\_MAX]
+取值范围：[0, INT32_MAX]
 
 **类型：** int
 
@@ -334,13 +340,13 @@ wordBreak?: WordBreak
 
 设置断行规则。
 
-默认值：WordBreak.BREAK\_WORD
+默认值：WordBreak.BREAK_WORD
 
 **说明：**
 
-WordBreak.BREAK\_ALL与{overflow: TextOverflow.Ellipsis}，\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_组合使用可实现英文单词按字母截断，超出部分以省略号显示。
+WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
 
-**类型：** WordBreak
+**类型：** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **起始版本：** 23
 

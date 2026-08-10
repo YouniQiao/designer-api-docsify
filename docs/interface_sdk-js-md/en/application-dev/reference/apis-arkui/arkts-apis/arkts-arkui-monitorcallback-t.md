@@ -4,7 +4,7 @@
 export type MonitorCallback = (iMonitor: IMonitor) => void
 ```
 
-Defines IMonitor callback function.
+触发监听时被调用的回调函数。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Defines IMonitor callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iMonitor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Monitor value  |
+| iMonitor | [IMonitor](arkts-arkui-decorator-imonitor-i.md) | Yes | 保存触发监听前后的值以及路径。 |
 

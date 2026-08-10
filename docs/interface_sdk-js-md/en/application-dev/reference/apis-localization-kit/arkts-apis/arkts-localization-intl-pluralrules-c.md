@@ -1,6 +1,6 @@
 # PluralRules
 
-Provides the capability for obtaining the plural rule type.
+提供获取单复数类型的能力。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ Provides the capability for obtaining the plural rule type.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Creates a **PluralRules** object to obtain the singular-plural type of numbers.
+创建单复数对象来计算数字的单复数类别。
 
 **Since:** 8
 
@@ -36,7 +42,7 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **System capability:** SystemCapability.Global.I18n
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -51,7 +57,7 @@ let pluralRules = new intl.PluralRules();
 constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 ```
 
-Creates a **PluralRules** object to obtain the singular-plural type of numbers.
+创建单复数对象来计算数字的单复数类别。
 
 **Since:** 8
 
@@ -71,10 +77,10 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for creating a **PluralRules** object. |
+| locale | string \| Array&lt;string&gt; | Yes | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [PluralRulesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-pluralrulesoptions-i.md) | No | 创建单复数对象时设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -89,7 +95,7 @@ let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatche
 select(n: double): string
 ```
 
-Obtains the singular-plural type of the specified number.
+获取数字的单复数类别。
 
 **Since:** 8
 
@@ -109,15 +115,15 @@ Obtains the singular-plural type of the specified number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | double | Yes | Number for which the singular-plural type is to be obtained. |
+| n | double | Yes | 待获取单复数类别的数字。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Singular-plural type. The value can be any of the following: **zero**, **one**, **two**, **few**, **many**, **others**. For details about the meanings of different values, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| string | 单复数类别，取值包括："zero"，"one"，"two", "few", "many", "other"。 &lt;br&gt;不同取值的含义请参考[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

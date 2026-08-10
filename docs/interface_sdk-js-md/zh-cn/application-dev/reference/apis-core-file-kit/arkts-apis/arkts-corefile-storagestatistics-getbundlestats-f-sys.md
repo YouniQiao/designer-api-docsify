@@ -1,5 +1,11 @@
 # getBundleStats（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getBundleStats
 
 ```TypeScript
@@ -25,26 +31,25 @@ function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | packageName | string | 是 | 应用包名。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleStats&gt; | 是 | 获取指定卷上的应用存储数据的空间大小之后的回调。 |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 分身应用的索引号，默认值为0（表示未分身的主应用）。分身应用索引号在分身创建时默认 占用从1开始且当前未被占用的最小索引号，并赋值给该应用的 [BundleResourceInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的appIndex属性，后续可以通过调用 [getBundleResourceInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 接口获得。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleStats&gt; | 是 | 获取指定卷上的应用存储数据的空间大小之后的回调。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 分身应用的索引号，默认值为0（表示未分身的主应用）。分身应用索引号在分身创建时默认 占用从1开始且当前未被占用的最小索引号，并赋值给该应用的 [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md/arkts-ability-bundleresourceinfo-i-sys.md)的appIndex属性，后续可以通过调用 [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo) 接口获得。<br>**起始版本：** 12 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid. |
 | 13600008 | No such object. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
@@ -56,43 +61,17 @@ try {
 
   let packageName:string = bundleName;
   let index:number = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, (err: BusinessError, BundleStats: storageStatistics.BundleStats) => {
+  storageStatistics.getBundleStats(packageName, (err: BusinessError, bundleStats: storageStatistics.BundleStats) => {
     if (err) {
-      hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
+      console.error(`getBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
     } else {
-      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
+      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(bundleStats));
     }
   }, index);
+
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let bundleFlags = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, bundleFlags);
-  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s', JSON.stringify(resourceInfo.label));
-  let packageName:string = bundleName;
-  let index:int = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, (err: BusinessError, BundleStats: storageStatistics.BundleStats): void => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
-    } else {
-      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
-    }
-  }, index);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
+  console.error(`getBundleResourceInfo failed with err, message is: ${message}`);
 }
 ```
 
@@ -122,7 +101,7 @@ function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | packageName | string | 是 | 应用包名。 |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 分身应用的索引号，默认值为0（表示未分身的主应用）。分身应用索引号在分身创建时默认占用 从1开始且当前未被占用的最小索引号，并赋值给该应用的 [BundleResourceInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的appIndex属性，后续可以通过调用 [getBundleResourceInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 接口获得。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 分身应用的索引号，默认值为0（表示未分身的主应用）。分身应用索引号在分身创建时默认占用 从1开始且当前未被占用的最小索引号，并赋值给该应用的 [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md/arkts-ability-bundleresourceinfo-i-sys.md)的appIndex属性，后续可以通过调用 [getBundleResourceInfo] {@link @ohos.bundle.bundleResourceManager:bundleResourceManager.getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int)} 接口获得。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -134,19 +113,18 @@ function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid. |
 | 13600008 | No such object. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
@@ -158,42 +136,15 @@ try {
 
   let packageName:string = bundleName;
   let index:number = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, index).then((BundleStats: storageStatistics.BundleStats) => {
-    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
+  storageStatistics.getBundleStats(packageName, index).then((bundleStats: storageStatistics.BundleStats) => {
+    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(bundleStats));
   }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
+    console.error(`getBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
   });
 
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let bundleFlags = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, bundleFlags);
-  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s', JSON.stringify(resourceInfo.label));
-
-  let packageName:string = bundleName;
-  let index:int = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, index).then((BundleStats: storageStatistics.BundleStats): void => {
-    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
-  }).catch((err: BusinessError): void => {
-    hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
-  });
-
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
+  console.error(`getBundleResourceInfo failed with err, message is: ${message}`);
 }
 ```
 

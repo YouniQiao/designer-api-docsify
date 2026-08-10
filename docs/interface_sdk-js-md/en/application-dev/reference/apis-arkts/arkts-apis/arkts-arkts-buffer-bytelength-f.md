@@ -1,5 +1,11 @@
 # byteLength
 
+## Modules to Import
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
+
 ## byteLength
 
 ```TypeScript
@@ -9,7 +15,7 @@ function byteLength(
   ): number
 ```
 
-Obtains the number of bytes of a string based on the encoding format.
+根据不同的编码格式，返回指定数据的字节数。
 
 **Since:** 9
 
@@ -25,16 +31,16 @@ Obtains the number of bytes of a string based on the encoding format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format. The default value is **'utf8'**. |
+| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | 要计算字节长度的字符串或其他数据对象。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式（string参数为string类型时才有意义）。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Number of bytes of the string. |
+| number | 返回指定字符串的字节数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -54,7 +60,7 @@ function byteLength(
   ): int
 ```
 
-Obtains the number of bytes of a string based on the encoding format.
+根据不同的编码格式，返回指定字符串的字节数。
 
 **Since:** 23
 
@@ -70,12 +76,12 @@ Obtains the number of bytes of a string based on the encoding format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| doc | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer | Yes | Target string. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format of the string. The default value is 'utf8'. |
+| doc | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer | Yes | 指定字符串。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | The number of bytes contained within \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| int | 返回指定字符串的字节数 |
 

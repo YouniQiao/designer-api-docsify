@@ -1,6 +1,6 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance.
 
 **Since:** 7
 
@@ -13,6 +13,12 @@ Manages GATT client. Before calling an Gatt client method, you must use \_\_\_JS
 <!--Device-bluetooth-interface GattClientDevice--><!--Device-bluetooth-interface GattClientDevice-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
 
 ## close
 
@@ -44,7 +50,7 @@ This method unregisters the device and clears the registered callbacks and handl
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -81,7 +87,7 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -116,7 +122,7 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -149,9 +155,9 @@ Obtains the name of BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to obtain the device name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -191,7 +197,7 @@ Obtains the name of BLE peripheral device.
 | --- | --- |
 | Promise&lt;string&gt; | Returns a string representation of the name if obtained; returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 // promise
@@ -227,9 +233,9 @@ Get the RSSI value of this BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -270,7 +276,7 @@ Get the RSSI value of this BLE peripheral device.
 | --- | --- |
 | Promise&lt;number&gt; | Returns the RSSI value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // promise
@@ -306,9 +312,9 @@ Starts discovering services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -357,7 +363,7 @@ Starts discovering services.
 | --- | --- |
 | Promise&lt;Array&lt;GattService&gt;&gt; | Returns the list of services { |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Promise
@@ -395,9 +401,9 @@ Unsubscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -431,9 +437,9 @@ Unsubscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -467,9 +473,9 @@ Subscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function CharacteristicChange(CharacteristicChangeReq : bluetooth.BLECharacteristic) {
@@ -508,9 +514,9 @@ Subscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function ConnectStateChanged(state : bluetooth.BLEConnectChangedState) {
@@ -547,10 +553,10 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -608,15 +614,15 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLECharacteristic&gt; |  Promise used to return the characteristic value read. |
+| Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -665,10 +671,10 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -716,15 +722,15 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLEDescriptor&gt; |  Promise used to return the descriptor read. |
+| Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -771,7 +777,7 @@ Set the mtu size of a BLE peripheral device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -804,7 +810,7 @@ Enables or disables notification of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | BLE characteristic to listen for. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | BLE characteristic to listen for. |
 | enable | boolean | Yes | Specifies whether to enable notification of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that notification is disabled. |
 
 **Return value:**
@@ -813,7 +819,7 @@ Enables or disables notification of a characteristic when value changed.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Create descriptors.
@@ -858,7 +864,7 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to write. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
 
 **Return value:**
 
@@ -866,7 +872,7 @@ Writes the characteristic of a BLE peripheral device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -919,7 +925,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to write. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
 
 **Return value:**
 
@@ -927,7 +933,7 @@ Writes the descriptor of a BLE peripheral device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');

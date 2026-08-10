@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## code
 
 ```TypeScript
@@ -18,7 +24,7 @@ code: int
 
 消息代码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ data: MessageSequence
 
 发送给对端进程的MessageSequence对象。
 
-**类型：** MessageSequence
+**类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 **起始版本：** 9
 
@@ -54,7 +60,7 @@ errCode: int
 
 错误码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -72,7 +78,7 @@ reply: MessageSequence
 
 对端进程返回的MessageSequence对象。
 
-**类型：** MessageSequence
+**类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 **起始版本：** 9
 

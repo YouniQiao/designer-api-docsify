@@ -1,6 +1,10 @@
 # UiComponent
 
-In **UiTest**, the **UiComponent** class represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
+UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[Component&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md)替代。
 
 **Since:** 8
 
@@ -14,13 +18,23 @@ In **UiTest**, the **UiComponent** class represents a component on the UI and pr
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## click
 
 ```TypeScript
 click(): Promise<void>
 ```
 
-Clicks this component. This API uses a promise to return the result.
+控件对象进行点击操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[click&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#click)替代。
 
 **Since:** 8
 
@@ -38,13 +52,13 @@ Clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
-import { UiDriver, BY, Driver, UiComponent } from '@kit.TestKit';
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
   let driver: UiDriver = UiDriver.create();
@@ -59,7 +73,11 @@ async function demo() {
 doubleClick(): Promise<void>
 ```
 
-Double-clicks this component. This API uses a promise to return the result.
+控件对象进行双击操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
 
 **Since:** 8
 
@@ -77,9 +95,9 @@ Double-clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -98,7 +116,11 @@ async function demo() {
 getId(): Promise<number>
 ```
 
-Obtains the ID of this component. This API uses a promise to return the result.
+获取控件对象的id值。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getId&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#getid)替代。
 
 **Since:** 8
 
@@ -116,9 +138,9 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; |  Promise used to return the component ID. |
+| Promise&lt;number&gt; | Promise对象，返回控件的id值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -137,7 +159,11 @@ async function demo() {
 getKey(): Promise<string>
 ```
 
-Obtains the key of this component. This API uses a promise to return the result.
+获取控件对象的key值。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getId&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#getid)替代。
 
 **Since:** 8
 
@@ -155,9 +181,9 @@ Obtains the key of this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the key value. |
+| Promise&lt;string&gt; | Promise对象，返回控件的key值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -176,7 +202,11 @@ async function demo() {
 getText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result.
+获取控件对象的文本信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getText&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#gettext)替代。
 
 **Since:** 8
 
@@ -194,9 +224,9 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the text information of the component. |
+| Promise&lt;string&gt; | Promise对象，返回控件的文本信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -215,7 +245,11 @@ async function demo() {
 getType(): Promise<string>
 ```
 
-Obtains the type of this component. This API uses a promise to return the result.
+获取控件对象的控件类型。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getType&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#gettype)替代。
 
 **Since:** 8
 
@@ -233,9 +267,9 @@ Obtains the type of this component. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the component type. |
+| Promise&lt;string&gt; | Promise对象，返回控件的类型。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -254,7 +288,11 @@ async function demo() {
 inputText(text: string): Promise<void>
 ```
 
-Inputs text to a component. This API takes effect only for editable text components. This API uses a promise to return the result.
+向控件中输入文本，仅针对可编辑的文本组件生效。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[inputText&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#inputtext)替代。
 
 **Since:** 8
 
@@ -272,15 +310,15 @@ Inputs text to a component. This API takes effect only for editable text compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text to enter. |
+| text | string | Yes | 输入的文本信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -299,7 +337,11 @@ async function demo() {
 isClickable(): Promise<boolean>
 ```
 
-Obtains the clickable status of this component. This API uses a promise to return the result.
+获取控件对象可点击状态。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[isClickable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isclickable)替代。
 
 **Since:** 8
 
@@ -317,9 +359,9 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象可点击状态。true：可点击。false：不可点击。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -331,7 +373,7 @@ async function demo() {
   if (await button.isClickable()) {
     console.info('This button can be Clicked');
   } else {
-    console.info('This button can not be Clicked');
+    console.info('This button cannot be Clicked');
   }
 }
 ```
@@ -342,7 +384,11 @@ async function demo() {
 isEnabled(): Promise<boolean>
 ```
 
-Obtains the enabled status of this component. This API uses a promise to return the result.
+获取控件使能状态。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[isEnabled&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isenabled)替代。
 
 **Since:** 8
 
@@ -360,9 +406,9 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component is enabled. The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件使能状态。true：使能。false：未使能。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -374,7 +420,7 @@ async function demo() {
   if (await button.isEnabled()) {
     console.info('This button can be operated');
   } else {
-    console.info('This button can not be operated');
+    console.info('This button cannot be operated');
   }
 }
 ```
@@ -385,7 +431,11 @@ async function demo() {
 isFocused(): Promise<boolean>
 ```
 
-Obtains the focused status of this component. This API uses a promise to return the result.
+判断控件对象是否获焦。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[isFocused&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isfocused)替代。
 
 **Since:** 8
 
@@ -403,9 +453,9 @@ Obtains the focused status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象是否获焦。true：获焦。false：未获焦。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -428,7 +478,11 @@ async function demo() {
 isScrollable(): Promise<boolean>
 ```
 
-Obtains the scrollable status of this component. This API uses a promise to return the result.
+获取控件对象可滑动状态。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[isScrollable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isscrollable)替代。
 
 **Since:** 8
 
@@ -446,9 +500,9 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象可滑动状态。true：可滑动。false：不可滑动。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -460,7 +514,7 @@ async function demo() {
   if (await scrollBar.isScrollable()) {
     console.info('This scrollBar can be operated');
   } else {
-    console.info('This scrollBar can not be operated');
+    console.info('This scrollBar cannot be operated');
   }
 }
 ```
@@ -471,7 +525,11 @@ async function demo() {
 isSelected(): Promise<boolean>
 ```
 
-Obtains the selected status of this component. This API uses a promise to return the result.
+获取控件对象被选中状态。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[isSelected&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isselected)替代。
 
 **Since:** 8
 
@@ -489,9 +547,9 @@ Obtains the selected status of this component. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component is selected. The value **true** indicates that the component is selected, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象被选中的状态。true：被选中。false：未被选中。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -514,7 +572,11 @@ async function demo() {
 longClick(): Promise<void>
 ```
 
-Long-clicks this component. This API uses a promise to return the result.
+控件对象进行长按操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
 
 **Since:** 8
 
@@ -532,9 +594,9 @@ Long-clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -553,7 +615,11 @@ async function demo() {
 scrollSearch(by: By): Promise<UiComponent>
 ```
 
-Scrolls on this component to search for the target component (applicable to components that support scrolling, such as **List**). This API uses a promise to return the result.
+在控件上滑动查找目标控件（适用于List等支持滑动的控件）。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[scrollSearch&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#scrollsearch)替代。
 
 **Since:** 8
 
@@ -571,15 +637,15 @@ Scrolls on this component to search for the target component (applicable to comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target component. |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | 目标控件的属性要求。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; |  Promise used to return the target component. |
+| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise对象，返回目标控件对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets

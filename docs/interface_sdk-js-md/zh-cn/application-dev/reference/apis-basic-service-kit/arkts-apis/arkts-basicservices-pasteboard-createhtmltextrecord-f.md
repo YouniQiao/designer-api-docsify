@@ -1,5 +1,11 @@
 # createHtmlTextRecord
 
+## 导入模块
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createHtmlTextRecord
 
 ```TypeScript
@@ -30,9 +36,9 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 一条新建的HTML内容条目。 |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的HTML内容条目。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";

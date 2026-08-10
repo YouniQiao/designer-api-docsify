@@ -1,12 +1,18 @@
 # batteryCapacityLevel
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## batteryCapacityLevel
 
 ```TypeScript
 function batteryCapacityLevel(): BatteryCapacityLevel
 ```
 
-Battery level of the device.
+表示当前设备电池电量的等级。
 
 **Since:** 23
 
@@ -20,5 +26,5 @@ Battery level of the device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the battery capacity level of the device. |
+| [BatteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) | 返回当前设备电池电量的等级。 |
 

@@ -1,6 +1,6 @@
 # DataDeleteOperation
 
-Represents an operation for deleting data.
+删除数据操作。
 
 **Since:** 12
 
@@ -16,9 +16,7 @@ Represents an operation for deleting data.
 count?: number
 ```
 
-Number of data records to delete.
-
-Default value: **1
+删除数据数量，必须是正整数（大于0），且index与count之和不超过数据源长度，默认为1。传入负数时该操作会被忽略；传入0时会异常地将index处的数据项标记删除。index与count之和超过数据源长度时可能导致渲染异常。
 
 **Type:** number
 
@@ -42,7 +40,7 @@ Default value: **1
 index: number
 ```
 
-Index at which to start deleting data. The value range is [0, data source length - 1].
+起始删除位置索引值。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
 
 **Type:** number
 
@@ -64,7 +62,7 @@ Index at which to start deleting data. The value range is [0, data source length
 type: DataOperationType.DELETE
 ```
 
-Type of data deletion.
+数据删除类型。
 
 **Type:** DataOperationType.DELETE
 

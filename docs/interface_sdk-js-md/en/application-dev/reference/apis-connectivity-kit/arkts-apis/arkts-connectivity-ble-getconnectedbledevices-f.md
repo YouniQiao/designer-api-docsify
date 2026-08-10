@@ -1,12 +1,18 @@
 # getConnectedBLEDevices
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getConnectedBLEDevices
 
 ```TypeScript
 function getConnectedBLEDevices(): Array<string>
 ```
 
-Obtains the list of devices in the connected status.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Obtains the list of devices in the connected status.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -34,13 +40,13 @@ Obtains the list of devices in the connected status.On API 10 and above, the per
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

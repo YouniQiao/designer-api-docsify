@@ -1,5 +1,11 @@
 # getPairedDevices
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getPairedDevices
 
 ```TypeScript
@@ -28,7 +34,7 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 | --- | --- |
 | Array&lt;string&gt; | Returns a list of paired Bluetooth devices's address. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let devices : Array<string> = bluetooth.getPairedDevices();

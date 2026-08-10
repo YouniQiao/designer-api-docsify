@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## actionButton
 
 ```TypeScript
@@ -41,9 +47,9 @@ autoDeletedTime?: long
 自动清除的时间。
 
 数据格式：时间戳，单位：ms，具体请参考  
-[NotificationRequest.autoDeletedTime]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+[NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -77,9 +83,9 @@ content?: string
 contentResourceId?: int
 ```
 
-指明提醒内容的资源ID，通过\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_方法获取。
+指明提醒内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -131,9 +137,9 @@ expiredContent?: string
 expiredContentResourceId?: int
 ```
 
-指明提醒过期后内容的资源ID，通过\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_方法获取。
+指明提醒过期后内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -151,7 +157,7 @@ fixedTimeZone?: TimeZoneType
 
 时区类型，默认为TimeZoneType.DEFAULT。
 
-**类型：** TimeZoneType
+**类型：** [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
 
 **起始版本：** 26.0.0
 
@@ -187,11 +193,11 @@ groupId?: string
 maxScreenWantAgent?: MaxScreenWantAgent
 ```
 
-提醒到达时，全屏显示自动拉起目标的ability信息。如果设备正在使用中，则弹出一个通知横幅框。
+提醒到达时，全屏显示自动拉起目标的ability信息。如果设备正在使用中，则弹出一个通知横幅框。 
 
 说明：该接口为预留接口，暂不支持使用。
 
-**类型：** MaxScreenWantAgent
+**类型：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
 **起始版本：** 9
 
@@ -209,7 +215,7 @@ notificationId?: int
 
 指明提醒使用的通知的id号，需开发者传入，相同id号的提醒会覆盖，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -227,7 +233,7 @@ notificationRequestProxy?: NotificationRequestProxy
 
 通知请求信息，默认为空。
 
-**类型：** NotificationRequestProxy
+**类型：** [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md)
 
 **起始版本：** 26.0.0
 
@@ -247,7 +253,7 @@ reminderType: ReminderType
 
 指明代理提醒类型。
 
-**类型：** ReminderType
+**类型：** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
 
 **起始版本：** 9
 
@@ -265,7 +271,7 @@ ringChannel?: RingChannel
 
 指明自定义提示音的音频播放通道，默认为闹钟通道。
 
-**类型：** RingChannel
+**类型：** [RingChannel](arkts-backgroundtasks-reminderagentmanager-ringchannel-e.md)
 
 **起始版本：** 20
 
@@ -285,14 +291,14 @@ ringDuration?: long
 
 单位：s，默认1s，范围：[0, 1800]。
 
-值为0时：跟随系统设置中的通知铃声。
+值为0时：跟随系统设置中的通知铃声。 
 
-值大于0时：如果设置了[ReminderRequest.customRingUri]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，则在指定的通道  
-[ReminderRequest.ringChannel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_上响铃。否则使用代理提醒默认的自定义提示音。
+值大于0时：如果设置了[ReminderRequest.customRingUri](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)，则在指定的通道  
+[ReminderRequest.ringChannel](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)上响铃。否则使用代理提醒默认的自定义提示音。
 
 响铃同时会触发振动，从API版本26.0.0开始，支持长振动，振动时长与响铃时长一致。API版本26.0.0之前版本，响铃时会快速振动一次。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -344,9 +350,9 @@ snoozeContent?: string
 snoozeContentResourceId?: int
 ```
 
-指明延时提醒内容的资源ID，通过\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_方法获取。
+指明延时提醒内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -382,7 +388,7 @@ snoozeTimes?: int
 
 指明延时提醒次数，默认0次（不适用于倒计时提醒类型）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -399,7 +405,7 @@ tapDismissed?: boolean
 ```
 
 通知是否自动清除，默认值为true，具体请参考  
-[NotificationRequest.tapDismissed]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+[NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed)
 
 - true：点击通知消息或通知按钮后，自动删除当前通知。  
 - false：点击通知消息或通知按钮后，保留当前通知。
@@ -424,7 +430,7 @@ timeInterval?: long
 
 单位：s，最少30s（不适用于倒计时提醒类型）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -458,9 +464,9 @@ title?: string
 titleResourceId?: int
 ```
 
-指明提醒标题的资源ID，通过\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_方法获取。
+指明提醒标题的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -478,7 +484,7 @@ wantAgent?: WantAgent
 
 点击通知后需要跳转的目标ability信息。
 
-**类型：** WantAgent
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 9
 

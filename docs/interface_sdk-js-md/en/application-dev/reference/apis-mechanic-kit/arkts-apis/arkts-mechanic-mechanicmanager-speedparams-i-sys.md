@@ -1,6 +1,6 @@
 # SpeedParams (System API)
 
-Parameters for moving or turning at a speed.
+速度控制参数
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Parameters for moving or turning at a speed.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## angle
 
 ```TypeScript
 angle: double
 ```
 
-Turning angle, unit degree.
+转动角度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -38,9 +44,9 @@ Turning angle, unit degree.
 mode?: MarchingMode
 ```
 
-Movement mode.
+行进方式。
 
-**Type:** MarchingMode
+**Type:** [MarchingMode](arkts-mechanic-mechanicmanager-marchingmode-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -58,9 +64,9 @@ Movement mode.
 speed: int
 ```
 
-Turning or moving speed, unit cm.The value should be an integer.
+转动或移动速度。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

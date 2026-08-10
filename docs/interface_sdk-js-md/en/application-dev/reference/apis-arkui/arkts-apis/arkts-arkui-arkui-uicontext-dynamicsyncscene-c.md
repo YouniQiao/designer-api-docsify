@@ -10,6 +10,12 @@ Represents a dynamic synchronization scene.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## getFrameRateRange
 
 ```TypeScript
@@ -32,7 +38,7 @@ Gets the FrameRateRange of the DynamicSyncScene.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The range of frameRate. |
+| [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | The range of frameRate. |
 
 ## setFrameRateRange
 
@@ -56,5 +62,5 @@ Sets the FrameRateRange of the DynamicSyncScene.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The range of frameRate. |
+| range | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | The range of frameRate. |
 

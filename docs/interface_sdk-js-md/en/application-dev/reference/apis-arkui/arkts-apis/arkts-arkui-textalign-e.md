@@ -1,6 +1,6 @@
 # TextAlign
 
-The horizontal alignment of the text paragraph.
+Alignment of text.
 
 **Since:** 7
 
@@ -13,10 +13,10 @@ The horizontal alignment of the text paragraph.
 ## Center
 
 ```TypeScript
-Center
+Center = 0
 ```
 
-Horizontally centered.
+Center the text.
 
 **Since:** 7
 
@@ -26,17 +26,17 @@ Horizontally centered.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextAlign-Center--><!--Device-TextAlign-Center-End-->
+<!--Device-TextAlign-Center = 0--><!--Device-TextAlign-Center = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Start
 
 ```TypeScript
-Start
+Start = 1
 ```
 
-Aligned with the start.
+The text is aligned in the same direction as the writing
 
 **Since:** 7
 
@@ -46,17 +46,17 @@ Aligned with the start.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextAlign-Start--><!--Device-TextAlign-Start-End-->
+<!--Device-TextAlign-Start = 1--><!--Device-TextAlign-Start = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## End
 
 ```TypeScript
-End
+End = 2
 ```
 
-Aligned with the end.
+The text is aligned in the opposite direction of writing
 
 **Since:** 7
 
@@ -66,17 +66,17 @@ Aligned with the end.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextAlign-End--><!--Device-TextAlign-End-End-->
+<!--Device-TextAlign-End = 2--><!--Device-TextAlign-End = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## JUSTIFY
 
 ```TypeScript
-JUSTIFY
+JUSTIFY = 3
 ```
 
-Aligned with both margins.
+Justify the text.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ Aligned with both margins.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-TextAlign-JUSTIFY--><!--Device-TextAlign-JUSTIFY-End-->
+<!--Device-TextAlign-JUSTIFY = 3--><!--Device-TextAlign-JUSTIFY = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,7 +98,7 @@ Aligned with both margins.
 LEFT = 4
 ```
 
-The text is aligned in the left direction.
+文本在左侧对齐。
 
 **Since:** 23
 
@@ -120,7 +120,7 @@ The text is aligned in the left direction.
 RIGHT = 5
 ```
 
-The text is aligned in the right direction.
+文本在右侧对齐。
 
 **Since:** 23
 

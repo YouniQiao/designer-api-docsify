@@ -1,12 +1,18 @@
 # createCustomizedToneAttrs
 
+## Modules to Import
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
+
 ## createCustomizedToneAttrs
 
 ```TypeScript
 function createCustomizedToneAttrs(): ToneAttrs
 ```
 
-Create customized tone attributes.
+创建自定义铃声属性。
 
 **Since:** 12
 
@@ -20,15 +26,15 @@ Create customized tone attributes.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Tone attributes created. |
+| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 铃声属性类。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let toneAttrs: systemSoundManager.ToneAttrs = systemSoundManager.createCustomizedToneAttrs();

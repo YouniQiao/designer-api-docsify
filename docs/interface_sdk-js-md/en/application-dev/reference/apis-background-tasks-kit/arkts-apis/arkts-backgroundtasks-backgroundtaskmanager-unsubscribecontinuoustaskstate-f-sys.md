@@ -1,12 +1,18 @@
 # unsubscribeContinuousTaskState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## unsubscribeContinuousTaskState
 
 ```TypeScript
 function unsubscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void
 ```
 
-Unregisters the callback for continuous task changes.
+解注册长时任务变化回调。
 
 **Since:** 23
 
@@ -26,24 +32,24 @@ Unregisters the callback for continuous task changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Background task listener that listens for continuous task state changes, including start, update and stop events. |
+| subscriber | [BackgroundTaskSubscriber](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubscriber-i-sys.md) | Yes | 后台任务监听对象，包含长时任务开始，长时任务更新，长时任务结束。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 9800004 | System service operation failed. |
+| 201 | Permission denied. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
     onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
         console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
     },
@@ -56,7 +62,7 @@ private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscribe
 }
 
 try {
-    backgroundTaskManager.unsubscribeContinuousTaskState(this.backgroundTaskSubscriber);
+    backgroundTaskManager.unsubscribeContinuousTaskState(backgroundTaskSubscriber);
     console.info('Operation unsubscribeContinuousTaskState succeeded');
 } catch (error) {
     console.error(`Operation unsubscribeContinuousTaskState failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);

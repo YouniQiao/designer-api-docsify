@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## day
 
 ```TypeScript
@@ -18,7 +24,7 @@ day: int
 
 日，取值范围是[1, 31]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ hour: int
 
 时，取值范围是[0, 23]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -54,7 +60,7 @@ minute: int
 
 分，取值范围是[0, 59]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -72,7 +78,7 @@ month: int
 
 月，取值范围是[1, 12]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -90,7 +96,7 @@ second?: int
 
 秒，取值范围是[0, 59]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -108,7 +114,7 @@ year: int
 
 年
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

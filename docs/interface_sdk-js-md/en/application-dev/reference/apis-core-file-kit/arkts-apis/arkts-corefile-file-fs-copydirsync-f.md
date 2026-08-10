@@ -1,12 +1,18 @@
 # copyDirSync
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## copyDirSync
 
 ```TypeScript
 declare function copyDirSync(src: string, dest: string, mode?: number): void
 ```
 
-Copies the source directory to the destination path. This API returns the result synchronously.
+以同步方法复制源目录至目标路径下。
 
 **Since:** 10
 
@@ -20,31 +26,31 @@ Copies the source directory to the destination path. This API returns the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | Application sandbox path of the source directory. |
-| dest | string | Yes | Application sandbox path of the destination directory. |
-| mode | number | No | Copy mode. The default value is **0**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: Throw an exception if a file conflict occurs.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_&gt; format.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: Forcibly overwrite the files with the same name in the destination directory.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
+| src | string | Yes | 源目录的应用沙箱路径。 |
+| dest | string | Yes | 目标目录的应用沙箱路径。 |
+| mode | number | No | 复制模式，默认值为0。&lt;br/&gt;- mode为0，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录 下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;形式提供。&lt;br/&gt;- mode为1，文件级别强制覆盖。目 标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件，未冲突文件将继续保留。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
+| 13900020 | Invalid argument |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 13900020 | Invalid argument |
 | 13900030 | File name too long |
 | 13900031 | Function not implemented |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
 | 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900034 | Operation would block |
+| 13900012 | Permission denied |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+| 13900013 | Bad address |
+| 13900015 | File exists |
+| 13900008 | Bad file descriptor |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 13900011 | Out of memory |
 

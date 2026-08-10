@@ -1,8 +1,8 @@
 # TapRecognizer
 
-点击手势识别器对象，继承自[GestureRecognizer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+点击手势识别器对象，继承自[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
-**继承/实现关系：** TapRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
+**继承/实现关系：** TapRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **起始版本：** 18
 
@@ -36,5 +36,5 @@ getTapCount(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 预设点击手势识别器连续点击次数阈值。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0, +∞) |
+| number | 预设点击手势识别器连续点击次数阈值。&lt;br/&gt;取值范围：[0, +∞) |
 

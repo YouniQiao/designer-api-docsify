@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## animated
 
 ```TypeScript
@@ -38,7 +44,7 @@ beginRect: Rect
 
 动画开始前软键盘的位置和大小。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 18
 
@@ -58,7 +64,7 @@ config?: WindowAnimationConfig
 
 动画配置信息。
 
-**类型：** WindowAnimationConfig
+**类型：** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
 **起始版本：** 20
 
@@ -78,7 +84,7 @@ endRect: Rect
 
 动画结束后软键盘的位置和大小。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 18
 

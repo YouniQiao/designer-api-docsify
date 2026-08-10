@@ -1,18 +1,22 @@
 # getSharedDirty
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getSharedDirty
 
 ```TypeScript
 function getSharedDirty() : bigint
 ```
 
-Obtains the size of the shared dirty memory of a process. This API is implemented by reading the value of  
-**Shared\_Dirty** in the **\/proc/{pid}/smaps\_rollup** node.
-    **NOTE**  
-    
-    Reading the **\/proc/{pid}/smaps\_rollup** node is time-consuming. Therefore, you are advised not to use this API  
-    in the main thread. You can use this API in the asynchronous thread started by calling  
-    [@ohos.taskpool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [@ohos.worker]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to avoid frame freezing.
+��ȡ���̵Ĺ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps_rollup�ڵ��е�Shared_Dirtyֵ��
+
+> **ע��**
+> 
+> ����/proc/{pid}/smaps_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
 
 **Since:** 8
 
@@ -26,13 +30,14 @@ Obtains the size of the shared dirty memory of a process. This API is implemente
 
 | Type | Description |
 | --- | --- |
-| bigint | Size of the shared dirty memory of the process, in KB. |
+| bigint | ���ؽ��̵Ĺ������ڴ��С����λΪKB�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let sharedDirty: bigint = hidebug.getSharedDirty();
+console.info(`sharedDirty = ${sharedDirty}`);
 ```
 

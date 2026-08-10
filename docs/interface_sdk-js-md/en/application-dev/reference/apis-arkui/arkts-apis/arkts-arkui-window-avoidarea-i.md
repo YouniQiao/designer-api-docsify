@@ -1,16 +1,17 @@
 # AvoidArea
 
-Describes the area to avoid for window content.
+窗口内容的避让区域。
 
-When adapting window content for an  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)对应的AvoidArea做窗口内容避让。
 
-In the avoid area, the application window content is obscured and does not respond to user click events.
-    **NOTE**  
-    
-    The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**.  
-    
-    !\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。
+
+> **说明：**
+> 
+> 示意图展示了leftRect、topRect、rightRect、bottomRect的含义。
+> 
+> ![avoidArea](../../../reference/apis-arkui/figures/avoidArea.png)
 
 **Since:** 7
 
@@ -20,15 +21,21 @@ In the avoid area, the application window content is obscured and does not respo
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## bottomRect
 
 ```TypeScript
 bottomRect: Rect
 ```
 
-Rectangle centered at the bottom of the window's two diagonals.
+中心位于窗口的两条对角线的底部的矩形区。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 7
 
@@ -46,9 +53,9 @@ Rectangle centered at the bottom of the window's two diagonals.
 leftRect: Rect
 ```
 
-Rectangle centered to the left of the window's two diagonals.
+中心位于窗口的两条对角线的左侧的矩形区。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 7
 
@@ -66,9 +73,9 @@ Rectangle centered to the left of the window's two diagonals.
 rightRect: Rect
 ```
 
-Rectangle centered to the right of the window's two diagonals.
+中心位于窗口的两条对角线的右侧的矩形区。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 7
 
@@ -86,9 +93,9 @@ Rectangle centered to the right of the window's two diagonals.
 topRect: Rect
 ```
 
-Rectangle centered at the top of the window's two diagonals.
+中心位于窗口的两条对角线的顶部的矩形区。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 7
 
@@ -106,7 +113,7 @@ Rectangle centered at the top of the window's two diagonals.
 visible: boolean
 ```
 
-Whether the avoid area is visible. **true** if visible, **false** otherwise.
+无实际意义，暂不支持使用。
 
 **Type:** boolean
 

@@ -1,15 +1,24 @@
 # getControlledAppLists
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## getControlledAppLists
 
 ```TypeScript
 function getControlledAppLists(): Promise<Array<string>>
 ```
 
-Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result.
-    **NOTE**  
-    This API can only be used to query the list of applications controlled by enterprise DLP, which is set using  
-    [setControlledAppLists]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取当前用户受企业DLP控制的应用程序列表。使用Promise异步回调。
+
+> **说明：**
+> 
+> 该接口仅能查询通过
+> [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setcontrolledapplists)
+> 设置的受企业DLP控制的应用程序列表。
 
 **Since:** 26.0.0
 
@@ -27,13 +36,28 @@ Obtains the list of applications controlled by enterprise DLP for the current us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of applications controlled by enterprise DLP for the current user. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise that returns the appIdentifiers of controlled application for the current user. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 801 | Capability not supported. |
+| 19100011 | The system ability works abnormally. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dlpPermission.getControlledAppLists().then((res) => {
+  console.info('res', JSON.stringify(res));
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+}).finally(() => {
+  console.info("Completed getControlledAppLists operation.");
+})
+```
 

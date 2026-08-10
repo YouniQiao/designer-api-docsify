@@ -1,12 +1,18 @@
 # setPacFileUrl
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## setPacFileUrl
 
 ```TypeScript
 function setPacFileUrl(pacFileUrl: string): void
 ```
 
-Set the URL \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the current PAC script.Proxy information can be obtained through parsing the script address.To invoke this method, you must have the {@code ohos.permission.SET\_PAC\_URL} permission.
+Set the URL {@link pacFileUrl} of the current PAC script.Proxy information can be obtained through parsing the script address.To invoke this method, you must have the {@code ohos.permission.SET_PAC_URL} permission.
 
 **Since:** 20
 
@@ -28,10 +34,10 @@ Set the URL \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the current PAC script.Prox
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| 2100002 | Failed to connect to the service. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

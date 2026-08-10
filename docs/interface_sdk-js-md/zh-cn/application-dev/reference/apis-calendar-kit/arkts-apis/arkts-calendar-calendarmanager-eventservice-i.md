@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
+## 导入模块
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## description
 
 ```TypeScript
@@ -38,7 +44,7 @@ type: ServiceType
 
 服务类型。
 
-**类型：** ServiceType
+**类型：** [ServiceType](arkts-calendar-calendarmanager-servicetype-e.md)
 
 **起始版本：** 10
 

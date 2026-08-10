@@ -1,6 +1,6 @@
 # AuthorizationManager (System API)
 
-Defines the OS account authorization manager class.
+系统账号授权管理类，用于管理系统账号授权。
 
 **Since:** 24
 
@@ -12,13 +12,19 @@ Defines the OS account authorization manager class.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## acquireAuthorization
 
 ```TypeScript
 acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>
 ```
 
-Acquires an authorization for a process.
+为当前进程获取授权。
 
 **Since:** 24
 
@@ -38,25 +44,25 @@ Acquires an authorization for a process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | Target permission. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Authorization options. This parameter is left empty by default. |
+| privilege | string | Yes | 目标权限，详见 [配置文件](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json) 。 |
+| options | [AcquireAuthorizationOptions](arkts-basicservices-osaccount-acquireauthorizationoptions-i-sys.md) | No | 获取授权的选项，默认为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AcquireAuthorizationResult&gt; | Promise used to return the authorization result. |
+| Promise&lt;AcquireAuthorizationResult&gt; | Promise对象，返回获取授权的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid privilege or options. |
+| 201 | Permission denied. |
+| 12300002 | Invalid privilege or options. |
+| 202 | Not system application. |
+| 12300001 | The system service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -86,7 +92,7 @@ try {
 hasAuthorization(privilege: string): Promise<boolean>
 ```
 
-Checks whether the current process has specified authorization.
+检查当前进程是否已获得指定特权的授权。
 
 **Since:** 24
 
@@ -104,23 +110,23 @@ Checks whether the current process has specified authorization.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | Target permission. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| privilege | string | Yes | 目标权限，详见 [配置文件](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json) 。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the current process has specified authorization, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回true表示已获得指定特权的授权；返回false表示未获得指定特权的授权。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
+| 12300002 | Invalid privilege. |
+| 202 | Not system application. |
+| 12300001 | The system service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -147,7 +153,7 @@ try {
 releaseAuthorization(privilege: string): Promise<void>
 ```
 
-Releases the specified authorization for the current process.
+为当前进程撤销指定特权的授权。
 
 **Since:** 24
 
@@ -165,23 +171,23 @@ Releases the specified authorization for the current process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | Target permission. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| privilege | string | Yes | 目标权限，详见 [配置文件](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json) 。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
+| 12300002 | Invalid privilege. |
+| 202 | Not system application. |
+| 12300001 | The system service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

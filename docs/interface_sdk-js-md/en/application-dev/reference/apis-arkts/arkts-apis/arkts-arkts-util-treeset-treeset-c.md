@@ -1,6 +1,6 @@
 # TreeSet
 
-TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed.TreeSet can be used to store values, each of which must be unique.
+TreeSet基于[TreeMap](arkts-util-treemap.md)实现，在TreeSet中，仅处理元素的值（value），不单独处理键（key）。TreeSet的每个元素在底层TreeMap中同时作为key和value存储，因此元素中value唯一且有序。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ TreeSet is implemented based on TreeMap. In TreeSet, only value objects are proc
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { TreeSet } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
 $_iterator(): IterableIterator<T>
 ```
 
-returns an ES6 iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，每一项都是一个JavaScript对象。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | an iterator for the TreeSet |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | TreeSet的迭代器。 |
 
 ## [Symbol.iterator]
 
@@ -40,7 +46,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-returns an ES6 iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，迭代器的每一项为容器中的元素值。
 
 **Since:** 8
 
@@ -56,15 +62,15 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -105,7 +111,7 @@ for(let i = 0; i < 10; i++) {
 add(value: T): boolean
 ```
 
-If the set does not contain the element, the specified element is added
+向容器中添加指定元素。不建议插入null值，可能会影响排序结果；添加自定义类型元素时，需确保TreeSet在构造时已提供比较函数。
 
 **Since:** 8
 
@@ -121,21 +127,21 @@ If the set does not contain the element, the specified element is added
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | the element to add to the set |
+| value | T | Yes | 向TreeSet中添加的值元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | whether the element was already present |
+| boolean | 成功添加新元素至容器返回true，当元素已存在时返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| 10200011 | The add method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -149,7 +155,7 @@ console.info("result:", result); // result: true
 clear(): void
 ```
 
-Clears all element groups in a set
+清除容器中的所有元素，并将length置为0。
 
 **Since:** 8
 
@@ -165,9 +171,9 @@ Clears all element groups in a set
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -184,7 +190,7 @@ console.info("result:", result); // result: true
 constructor(comparator?: (firstValue: T, secondValue: T) => boolean)
 ```
 
-A constructor used to create a TreeSet object.
+TreeSet的构造函数，支持通过比较函数对元素进行升序或降序排序。当插入自定义类型时，必须提供比较函数。
 
 **Since:** 8
 
@@ -200,15 +206,15 @@ A constructor used to create a TreeSet object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; boolean | No | comparator comparator (Optional) User-defined comparison functions. firstValue (required) previous element. secondValue (required) next element. |
+| comparator | (firstValue: T, secondValue: T) =&gt; boolean | No | 比较函数。 comparator（可选）用户自定义的比较函数。 firstValue（必填）前一项元素。 secondValue（必填）后一项元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The TreeSet's constructor cannot be directly invoked. |
+| 10200012 | The TreeSet's constructor cannot be directly invoked. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Default constructor.
@@ -256,7 +262,7 @@ console.info("treeSet: ", ts1.length);
 constructor(comparator?: TreeSetComparator<T>)
 ```
 
-A constructor used to create a TreeSet object.
+TreeSet的构造函数，支持通过比较函数对元素进行升序或降序排序。当插入自定义类型时，必须提供比较函数。
 
 **Since:** 23
 
@@ -272,7 +278,7 @@ A constructor used to create a TreeSet object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | No | comparator comparator (Optional) User-defined comparison functions. |
+| comparator | [TreeSetComparator](arkts-arkts-treesetcomparator-t.md)&lt;T&gt; | No | 比较函数。 comparator（可选）用户自定义的比较函数。 |
 
 ## entries
 
@@ -280,7 +286,7 @@ A constructor used to create a TreeSet object.
 entries(): IterableIterator<[T, T]>
 ```
 
-Returns a new Iterator object that contains the [key, value] pairs for each element in the Set object in insertion order
+返回包含此容器中元素的新迭代器对象，每个元素以[value, value]的形式返回。
 
 **Since:** 8
 
@@ -296,15 +302,15 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[T, T]&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含TreeSet中所有元素键值对的迭代器对象，每个键值对中键与值相同，均为元素本身。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| 10200011 | The entries method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -337,7 +343,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void
 ```
 
-Executes a provided function once for each value in the Set object.
+通过回调函数来遍历实例对象上的元素。
 
 **Since:** 8
 
@@ -353,16 +359,16 @@ Executes a provided function once for each value in the Set object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: TreeSet&lt;T&gt;) =&gt; void | Yes | callbackFn callbackFn (required) A function that accepts up to three arguments. The function to be called for each element. |
-| thisArg | Object | No | thisArg thisArg (Optional) The value to be used as this value for when callbackFn is called. If thisArg is omitted, undefined is used as the this value. |
+| callbackFn | (value?: T, key?: T, set?: TreeSet&lt;T&gt;) =&gt; void | Yes | 遍历实例对象中每个元素时调用的回调函数，开发者可在回调中对元素及其下标进行自定义处理。 |
+| thisArg | Object | No | callbackFn被调用时用作this值。当需要在回调函数中使用特定的this上下文（如访问外部对象属性）时传入此参数。 不传入时默认值为当前实例对象，回调函数中的this指向TreeSet实例本身。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -392,7 +398,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: TreeSetForEachCb<T>): void
 ```
 
-Executes a provided function once for each value in the Set object.
+通过回调函数来遍历实例对象上的元素及其下标。
 
 **Since:** 23
 
@@ -408,7 +414,7 @@ Executes a provided function once for each value in the Set object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | callbackFn |
+| callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | Yes | 回调函数。 |
 
 ## getFirstValue
 
@@ -416,7 +422,7 @@ Executes a provided function once for each value in the Set object.
 getFirstValue(): T
 ```
 
-Gets the first elements in a set
+获取容器中排序第一的元素，为空时返回undefined。
 
 **Since:** 8
 
@@ -432,16 +438,16 @@ Gets the first elements in a set
 
 | Type | Description |
 | --- | --- |
-| T | value or undefined |
+| T | 返回排序第一的数据，为空时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The getFirstValue method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -457,7 +463,7 @@ console.info("result:", result); // result: sparrow
 getHigherValue(key: T): T
 ```
 
-Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
+获取容器中比传入元素排序靠后一位的元素，为空时返回undefined。
 
 **Since:** 8
 
@@ -473,21 +479,21 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | the key to compare against |
+| key | T | Yes | 作为查找基准的元素，用于定位排序中比该元素靠后一位的数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | key or undefined |
+| T | 返回排序中传入元素后一位的数据。为空时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherValue method cannot be bound. |
+| 10200011 | The getHigherValue method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -504,7 +510,7 @@ console.info("result:", result); // result: squirrel
 getHigherValue(key: T): T | undefined
 ```
 
-Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
+获取容器中比传入元素排序靠后一位的元素，如果key不存在，则返回undefined。
 
 **Since:** 23
 
@@ -520,19 +526,19 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | the key to compare against |
+| key | T | Yes | 对比的元素值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | the higher value of the given key's element if exists, undefined otherwise |
+| T | 如果存在则返回指定key元素的后一位值，否则返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| 10200010 | Container is empty. |
 
 ## getLastValue
 
@@ -540,7 +546,7 @@ Returns the least element greater than or equal to the specified key if the key 
 getLastValue(): T
 ```
 
-Gets the last elements in a set
+获取容器中排序最后的数据，为空时返回undefined。
 
 **Since:** 8
 
@@ -556,16 +562,16 @@ Gets the last elements in a set
 
 | Type | Description |
 | --- | --- |
-| T | value or undefined |
+| T | 返回排序最后的数据，为空时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The getLastValue method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -581,7 +587,7 @@ console.info("result:", result); // result: squirrel
 getLowerValue(key: T): T
 ```
 
-Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
+获取容器中比传入元素排序靠前一位的元素，为空时返回undefined。
 
 **Since:** 8
 
@@ -597,21 +603,21 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | the key to compare against |
+| key | T | Yes | 作为查找基准的元素值，用于定位排序中比该元素靠前一位的数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | key or undefined |
+| T | 返回排序中传入元素前一位的数据，为空时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerValue method cannot be bound. |
+| 10200011 | The getLowerValue method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -628,7 +634,7 @@ console.info("result:", result); // result: gander
 getLowerValue(key: T): T | undefined
 ```
 
-Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
+获取容器中比传入元素排序靠前一位的元素，如果key不存在，则返回undefined。
 
 **Since:** 23
 
@@ -644,19 +650,19 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | the key to compare against |
+| key | T | Yes | 对比的元素值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | the lower value of the given key's element if exists, undefined otherwise |
+| T | 如果存在则返回指定key元素的前一位值，否则返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| 10200010 | Container is empty. |
 
 ## has
 
@@ -664,7 +670,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 has(value: T): boolean
 ```
 
-Returns whether the Set object contains the elements
+判断容器中是否包含指定元素。
 
 **Since:** 8
 
@@ -680,21 +686,21 @@ Returns whether the Set object contains the elements
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | the value to check for presence in the set |
+| value | T | Yes | 要判断是否存在于容器中的目标元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | the boolean type |
+| boolean | 包含指定元素返回true，不包含指定元素返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| 10200011 | The has method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet  = new TreeSet<number>();
@@ -709,7 +715,7 @@ console.info("result:", result); // result: true
 isEmpty(): boolean
 ```
 
-Returns whether the Set object contains elements
+判断容器是否为空。
 
 **Since:** 8
 
@@ -725,15 +731,15 @@ Returns whether the Set object contains elements
 
 | Type | Description |
 | --- | --- |
-| boolean | the boolean type |
+| boolean | 为空返回true，不为空返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -747,7 +753,7 @@ console.info("result:", result);  // result: true
 popFirst(): T
 ```
 
-Return and delete the first element, returns undefined if tree set is empty
+删除容器中排序最前的数据，为空时返回undefined。
 
 **Since:** 8
 
@@ -763,16 +769,16 @@ Return and delete the first element, returns undefined if tree set is empty
 
 | Type | Description |
 | --- | --- |
-| T | first value or undefined |
+| T | 返回删除的数据，为空时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The popFirst method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -788,7 +794,7 @@ console.info("result:", result); // result: sparrow
 popLast(): T
 ```
 
-Return and delete the last element, returns undefined if tree set is empty
+删除容器中排序最后的数据，为空时返回undefined。
 
 **Since:** 8
 
@@ -804,16 +810,16 @@ Return and delete the last element, returns undefined if tree set is empty
 
 | Type | Description |
 | --- | --- |
-| T | last value or undefined |
+| T | 返回删除的数据，为空时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The popLast method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -829,7 +835,7 @@ console.info("result:", result); // result: squirrel
 remove(value: T): boolean
 ```
 
-Remove a specified element from a Set object
+删除指定的元素。
 
 **Since:** 8
 
@@ -845,21 +851,21 @@ Remove a specified element from a Set object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | the element to remove from the set |
+| value | T | Yes | 要从容器中删除的目标元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | the boolean type(Is there contain this element) |
+| boolean | 成功删除元素返回true，指定元素不存在返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -875,7 +881,7 @@ console.info("result:", result); // result: true
 values(): IterableIterator<T>
 ```
 
-Returns a new Iterator object that contains the values contained in this set
+返回包含此容器中元素值的新迭代器对象。
 
 **Since:** 8
 
@@ -891,15 +897,15 @@ Returns a new Iterator object that contains the values contained in this set
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| 10200011 | The values method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -919,7 +925,7 @@ for (let value of values) {
 length: number
 ```
 
-Gets the element number of the TreeSet.
+TreeSet的元素个数。
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # CropOffset (System API)
 
-2D offset for crop frame.
+裁剪偏移量。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 x: int
 ```
 
-X coordinate.
+水平方向偏移量，单位为像素。
 
 **Type:** int
 
@@ -42,7 +42,7 @@ X coordinate.
 y: int
 ```
 
-Y coordinate.
+垂直方向偏移量，单位为像素。
 
 **Type:** int
 

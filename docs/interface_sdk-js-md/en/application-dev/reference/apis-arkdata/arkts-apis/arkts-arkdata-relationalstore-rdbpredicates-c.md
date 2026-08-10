@@ -1,7 +1,6 @@
 # RdbPredicates
 
-Defines the predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false. Multiple predicates statements can be concatenated by using **and()** by default.  
-**RdbPredicates** cannot be passed across threads using Sendable.
+表示关系型数据库（RDB）的谓词。该类确定RDB中条件表达式的值是true还是false。谓词间支持多语句拼接，拼接时默认使用and()连接。不支持Sendable跨线程传递。
 
 **Since:** 9
 
@@ -11,13 +10,19 @@ Defines the predicates for an RDB store. This class determines whether the condi
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## and
 
 ```TypeScript
 and(): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to add the AND condition.
+向谓词添加和条件。
 
 **Since:** 9
 
@@ -31,7 +36,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有和条件的谓词。 |
 
 ## beginWrap
 
@@ -39,7 +44,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 beginWrap(): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to add a left parenthesis.
+向谓词添加左括号。
 
 **Since:** 9
 
@@ -53,7 +58,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有左括号的谓词。 |
 
 ## beginsWith
 
@@ -61,7 +66,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 beginsWith(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that begin with the given value.
+配置谓词以匹配数据表的field列中以value开头的字段。该方法等同于SQL语句中的"LIKE 'xxx%'"。
 
 **Since:** 9
 
@@ -75,20 +80,20 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | string | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## between
 
@@ -96,7 +101,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 between(field: string, low: ValueType, high: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are within the given range (including the min.and max. values) in the specified column.
+配置谓词以匹配数据表的field列中值在给定范围内的字段（包含范围边界）。该方法等同于SQL语句中的"BETWEEN"。
 
 **Since:** 9
 
@@ -110,21 +115,21 @@ Creates an **RdbPredicates** object to search for the records that are within th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| low | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Minimum value of the range to set. |
-| high | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Maximum value of the range to set. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最小值。 |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最大值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## constructor
 
@@ -132,7 +137,7 @@ Creates an **RdbPredicates** object to search for the records that are within th
 constructor(name: string)
 ```
 
-Defines a constructor used to create an **RdbPredicates** object.
+构造函数。
 
 **Since:** 9
 
@@ -146,13 +151,13 @@ Defines a constructor used to create an **RdbPredicates** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Database table name. |
+| name | string | Yes | 数据库表名，不能为空字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## contains
 
@@ -160,7 +165,7 @@ Defines a constructor used to create an **RdbPredicates** object.
 contains(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that contain the given value.
+配置谓词以匹配数据表的field列中包含value的字段。该方法等同于SQL语句中的"LIKE '%xxx%'"。
 
 **Since:** 9
 
@@ -174,20 +179,20 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | string | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## distinct
 
@@ -195,7 +200,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 distinct(): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to filter out duplicate records.
+配置谓词以过滤重复记录并仅保留其中一个。
 
 **Since:** 9
 
@@ -209,7 +214,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object that can filter out duplicate records. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
 
 ## endWrap
 
@@ -217,7 +222,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 endWrap(): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to add a right parenthesis.
+向谓词添加右括号。
 
 **Since:** 9
 
@@ -231,7 +236,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有右括号的谓词。 |
 
 ## endsWith
 
@@ -239,7 +244,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 endsWith(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that end with the given value.
+配置谓词以匹配数据表的field列中以value结尾的字段。该方法等同于SQL语句中的"LIKE '%xxx'"。
 
 **Since:** 9
 
@@ -253,20 +258,20 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | string | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## equalTo
 
@@ -274,7 +279,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 equalTo(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are equal to the given value.
+配置谓词以匹配数据表的field列中值为value的字段。该方法等同于SQL语句中的"="。
 
 **Since:** 9
 
@@ -288,20 +293,20 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## glob
 
@@ -309,7 +314,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 glob(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that match the given string.
+配置RdbPredicates匹配数据字段为string且值符合指定通配符模式的字段，其中*匹配任意多个字符，?匹配单个字符。该方法等同于SQL语句中的"GLOB"。
 
 **Since:** 9
 
@@ -323,20 +328,20 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | string | Yes | Value to match.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Wildcards are supported. An asterisk (*) indicates zero, one, or multiple digits or characters, and a question mark (?) indicates a single digit or character. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 &lt;br&gt;支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## greaterThan
 
@@ -344,7 +349,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 greaterThan(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are greater than the given value in the specified column.
+配置谓词以匹配数据表的field列中值大于value的字段。该方法等同于SQL语句中的">"。
 
 **Since:** 9
 
@@ -358,20 +363,20 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -379,7 +384,7 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are greater than or equal to the given value in the specified column.
+配置谓词以匹配数据表的field列中值大于或者等于value的字段。该方法等同于SQL语句中的">="。
 
 **Since:** 9
 
@@ -393,20 +398,20 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## groupBy
 
@@ -414,7 +419,7 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 groupBy(fields: Array<string>): RdbPredicates
 ```
 
-Creates a **RdbPredicates** object to group the query results based on the specified columns.
+配置谓词按指定列分组查询结果。
 
 **Since:** 9
 
@@ -428,19 +433,19 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes | Names of columns to group. |
+| fields | Array&lt;string&gt; | Yes | 指定分组依赖的列名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Predicates that group rows with the same value. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回分组查询列的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## having
 
@@ -448,7 +453,7 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 having(conditions: string, args?: Array<ValueType>): RdbPredicates
 ```
 
-Filters for group data that meets the conditions.
+筛选符合条件的分组数据。
 
 **Since:** 20
 
@@ -462,20 +467,20 @@ Filters for group data that meets the conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| conditions | string | Yes | Condition used to filter the data obtained using [groupBy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. This parameter cannot be empty and must be used with [groupBy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| args | Array&lt;ValueType&gt; | No | Parameters used in **conditions**, which replace the placeholder in the conditional statement. If this parameter is not specified, the default value is an empty array. |
+| conditions | string | Yes | 用于过滤使用[groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby)获得的数据，conditions参数不能为空 字符串且必须与[groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby)配合使用。 |
+| args | Array&lt;ValueType&gt; | No | 条件中使用的参数，用来替换条件语句中的占位符，不传时默认为空数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Missing GROUP BY clause. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range; &lt;br&gt;2. Missing GROUP BY clause. |
 
 ## in
 
@@ -483,12 +488,11 @@ Filters for group data that meets the conditions.
 in(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are in the given range in the specified column.
-    **NOTE**  
-    
-    The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (  
-    such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the  
-    **value** array is empty to avoid misoperations.
+配置谓词条件，表示字段`field`的值必须在给定的`value`列表内。该方法等同于SQL语句中的"IN"。
+
+> **说明：**
+> 
+> `value`集合不能为空。如果传入空集，此条件将失效，导致操作针对所有数据（如全量查询、更新或删除）。请在调用前判断`value`是否为空集，避免误操作。
 
 **Since:** 9
 
@@ -502,20 +506,20 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | Array&lt;ValueType&gt; | Yes | 以ValueType型数组形式指定的要匹配的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## inAllDevices
 
@@ -523,7 +527,7 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 inAllDevices(): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to specify all remote devices on the network to connect during distributed database sync.
+同步分布式数据库时连接到组网内所有的远程设备。
 
 **Since:** 9
 
@@ -537,7 +541,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 ## inDevices
 
@@ -545,13 +549,17 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
-    **NOTE**  
-    
-    **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]  
-    \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,  
-    data will be synced to all devices on the network by default.
+同步分布式数据库时连接到组网内指定的远程设备。
+
+> **说明：**
+> 
+> 其中devices通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> 调用
+> [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
+> 接口同步数据库时，在入参谓词中调用inDevices接口以选择设备。如果不调用inDevices接口，则默认连接组网内所有的设备。
 
 **Since:** 9
 
@@ -565,19 +573,19 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| devices | Array&lt;string&gt; | Yes | IDs of the remote devices to connect. |
+| devices | Array&lt;string&gt; | Yes | 指定的组网内的远程设备ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## inValues
 
@@ -585,7 +593,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 inValues(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-Configure RdbPredicates to match the specified field whose data type is ValueType array and values are within a given range.
+配置谓词条件，表示字段`field`的值必须在给定的`value`列表内。该方法等同于SQL语句中的"IN"。
 
 **Since:** 23
 
@@ -599,20 +607,20 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Indicates the column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Indicates the values to match with \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | Array&lt;ValueType&gt; | Yes | 以ValueType型数组形式指定的要匹配的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  The SQL statement with the specified { |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了谓词条件的RdbPredicates对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## indexedBy
 
@@ -620,7 +628,7 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 indexedBy(field: string): RdbPredicates
 ```
 
-Creates a **RdbPredicates** object to specify the index column.
+配置谓词以指定索引列。
 
 **Since:** 9
 
@@ -634,19 +642,19 @@ Creates a **RdbPredicates** object to specify the index column.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Name of the index column. |
+| field | string | Yes | 索引列的名称，不能为空字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回具有指定索引列的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## isNotNull
 
@@ -654,7 +662,7 @@ Creates a **RdbPredicates** object to specify the index column.
 isNotNull(field: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are not **null**.
+配置谓词以匹配数据表的field列中值不为null的字段。该方法等同于SQL语句中的"IS NOT NULL"。
 
 **Since:** 9
 
@@ -668,19 +676,19 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## isNull
 
@@ -688,7 +696,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 isNull(field: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are **null**.
+配置谓词以匹配数据表的field列中值为null的字段。该方法等同于SQL语句中的"IS NULL"。
 
 **Since:** 9
 
@@ -702,19 +710,19 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## lessThan
 
@@ -722,7 +730,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 lessThan(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are less than the given value in the specified column.
+配置谓词以匹配数据表的field列中值小于value的字段。该方法等同于SQL语句中的"<"。
 
 **Since:** 9
 
@@ -736,20 +744,20 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -757,7 +765,7 @@ Creates an **RdbPredicates** object to search for the records that are less than
 lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are less than or equal to the given value in the specified column.
+配置谓词以匹配数据表的field列中值小于或者等于value的字段。该方法等同于SQL语句中的"<="。
 
 **Since:** 9
 
@@ -771,20 +779,20 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## like
 
@@ -792,7 +800,7 @@ Creates an **RdbPredicates** object to search for the records that are less than
 like(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are similar to the given value.
+配置模糊查询条件，指定`field`列的模糊匹配条件。该方法等同于SQL语句中的"LIKE"。
 
 **Since:** 9
 
@@ -806,20 +814,20 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | string | Yes | Condition for fuzzy match. Generally, this parameter is used together with a wildcard. A percent sign (%) represents any character of any length, and an underscore (\_\_\_ESCAPED\_UNDERSCORE\_\_\_) represents a single character. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | string | Yes | 指定模糊匹配条件，通常配合通配符使用，`%`表示任意长度任意字符，`_`表示单个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## limitAs
 
@@ -833,7 +841,7 @@ ArkTS-Sta:
 limitAs(value: int): RdbPredicates
 ```
 
-Creates a **RdbPredicates** object to limit the number of records.
+设置谓词的最大数据记录数量。
 
 **Since:** 9
 
@@ -847,19 +855,19 @@ Creates a **RdbPredicates** object to limit the number of records.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Maximum number of data records. The value should be a positive integer. If a value less than or equal to **0** is specified, the number of records is not limited. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 最大数据记录数，取值应为正整数，传入值小于等于0时，不会限制记录数量。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Predicates that specify the maximum number of records. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notBetween
 
@@ -867,7 +875,7 @@ Creates a **RdbPredicates** object to limit the number of records.
 notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are out of the given range (excluding the min.and max. values) in the specified column.
+配置谓词以匹配数据表的field列中值超出给定范围的字段（不包含范围边界）。该方法等同于SQL语句中的"NOT BETWEEN"。
 
 **Since:** 9
 
@@ -881,21 +889,21 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| low | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Minimum value of the range to set. |
-| high | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Maximum value of the range to set. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最小值。 |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最大值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notContains
 
@@ -903,7 +911,7 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 notContains(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that do not contain the given value in the specified column.
+配置谓词以匹配数据表的field列中不包含value的字段。
 
 **Since:** 12
 
@@ -917,20 +925,20 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | string | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notEqualTo
 
@@ -938,7 +946,7 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 notEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are not equal to the given value.
+配置谓词以匹配数据表的field列中值不为value的字段。该方法等同于SQL语句中的"!="。
 
 **Since:** 9
 
@@ -952,20 +960,20 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notIn
 
@@ -973,7 +981,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 notIn(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are out of the given range in the specified column.
+配置谓词以匹配数据表的field列中值不在给定的value集合内的字段。该方法等同于SQL语句中的"NOT IN"。
 
 **Since:** 9
 
@@ -987,20 +995,20 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | Array&lt;ValueType&gt; | Yes | 以ValueType数组形式指定的要匹配的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notInValues
 
@@ -1008,7 +1016,7 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 notInValues(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range.
+配置谓词条件，表示字段`field`的值不在给定的`value`列表内。该方法等同于SQL语句中的"NOT IN"。
 
 **Since:** 23
 
@@ -1022,20 +1030,20 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Indicates the column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Indicates the values to match with \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | Array&lt;ValueType&gt; | Yes | 以ValueType型数组形式指定的要匹配的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  The SQL statement with the specified { |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了谓词条件的RdbPredicates对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## notLike
 
@@ -1043,7 +1051,7 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 notLike(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are not similar to the given value.
+配置模糊查询条件，指定`field`列**不包含**的模糊匹配条件。
 
 **Since:** 12
 
@@ -1057,20 +1065,20 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
-| value | string | Yes | Condition for fuzzy match. Generally, this parameter is used together with a wildcard. A percent sign (%) represents any character of any length, and an underscore (\_\_\_ESCAPED\_UNDERSCORE\_\_\_) represents a single character. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| value | string | Yes | 指定**不包含**的模糊匹配条件，通常配合通配符使用，`%`表示任意长度任意字符，`_`表示单个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offsetAs
 
@@ -1084,7 +1092,7 @@ ArkTS-Sta:
 offsetAs(rowOffset: int): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in a parameter less than or equal to **0** in **limitAs**.
+设置谓词查询结果返回的起始位置。需要同步调用limitAs接口指定查询数量，否则将无查询结果。如需查询指定偏移位置后的所有行，limitAs接口入参需小于等于0。
 
 **Since:** 9
 
@@ -1098,19 +1106,19 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rowOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Start position of the query result. By default, the start position is the beginning of the result set. If **rowOffset** is a negative number, the start position is the beginning of the result set. If **rowOffset** exceeds the end of the result set, the query result is empty. |
+| rowOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定查询结果的起始位置，默认初始位置为结果集的最前端。当rowOffset为负数时，起始位置为结果集的最前端。当rowOffset超出结果集最后位置时，查询结果为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Predicates that specify the start position of the returned result. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## or
 
@@ -1118,7 +1126,7 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 or(): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to add the OR condition.
+将或条件添加到谓词中。
 
 **Since:** 9
 
@@ -1132,7 +1140,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有或条件的谓词。 |
 
 ## orderByAsc
 
@@ -1140,7 +1148,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 orderByAsc(field: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to sort the records in the specified column in ascending order.
+配置谓词以匹配数据表的field列中值按升序排序的列。该方法等同于SQL语句中的"ORDER BY ASC"。
 
 **Since:** 9
 
@@ -1154,19 +1162,19 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## orderByDesc
 
@@ -1174,7 +1182,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 orderByDesc(field: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to sort the records in the specified column in descending order.
+配置谓词以匹配数据表的field列中值按降序排序的列。该方法等同于SQL语句中的"ORDER BY DESC"。
 
 **Since:** 9
 
@@ -1188,17 +1196,17 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table. |
+| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

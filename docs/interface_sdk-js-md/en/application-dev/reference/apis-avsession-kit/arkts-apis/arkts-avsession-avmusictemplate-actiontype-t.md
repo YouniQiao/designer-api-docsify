@@ -4,7 +4,7 @@
 type ActionType = 'add' | 'remove'
 ```
 
-Action type add & remove.
+操作类型的定义。该类型可取的值为下表字符串。
 
 **Since:** 23
 

@@ -1,10 +1,11 @@
 # LocaleOptions
 
-Options for initializing the **Locale** object. Since API version 9, the **LocaleOptions** attribute is changed from mandatory to optional.
-    **NOTE**  
-    
-    - For details about **calendar**, see Table 1 in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+> 从API version 6开始支持，从API version 20开始废弃，以calendar为例，
+> 区域初始化配置项。从API version 9开始，LocaleOptions属性由必填改为可选。
+
+> **说明：**
+> 
+> - calendar：不同取值的含义请参考[设置日历和历法表1](../../../internationalization/i18n-calendar.md)。
 
 **Since:** 6
 
@@ -18,15 +19,21 @@ Options for initializing the **Locale** object. Since API version 9, the **Local
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
+
 ## calendar
 
 ```TypeScript
 calendar?: string
 ```
 
-Calendar parameter. The value can be:
+历法参数，取值包括：
 
-"buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc",or "islamicc".
+"buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc", "islamicc"。
 
 **Type:** string
 
@@ -52,13 +59,13 @@ Calendar parameter. The value can be:
 caseFirst?: string
 ```
 
-Whether case is taken into account for the locale's collation rules. The value can be:
+区域的排序规则是否考虑大小写，取值包括：
 
-**upper**: Uppercase letters come first.
+"upper"：大写排前面。
 
-**lower**: Lowercase letters come first.
+"lower"：小写排前面。
 
-**false**: The default collation rules of the locale are used.
+"false"：使用区域默认的大小写排序规则。
 
 **Type:** string
 
@@ -84,39 +91,39 @@ Whether case is taken into account for the locale's collation rules. The value c
 collation?: string
 ```
 
-Collation rules for the locale. The value can be:
+区域的排序规则，取值包括：
 
-**big5han**: Pinyin sorting for Latin letters.
+"big5han"：拉丁字母使用的拼音排序。
 
-**compat**: compatibility sorting, only for Arabic.
+"compat"：兼容性排序，仅用于阿拉伯语。
 
-**dict**: dictionary-style sorting, only for Singhalese.
+"dict"：词典风格排序，仅用于僧伽罗语。
 
-**direct**: binary code point sorting.
+"direct"：二进制码点排序。
 
-**ducet**: sorting according to the Unicode collation element table.
+"ducet"：按Unicode排序元素表排序。
 
-**eor**: sorting according to the European collation rules.
+"eor"：按欧洲排序规则排序。
 
-**gb2312**: Pinyin sorting, only for Chinese.
+"gb2312"：拼音排序，仅用于中文排序。
 
-**phonebk**: phone book-style sorting.
+"phonebk"：电话本风格排序。
 
-**phonetic**: phonetic sorting.
+"phonetic"：发音排序。
 
-**pinyin**: Pinyin sorting.
+"pinyin"：拼音排序。
 
-**reformed**: reformed sorting, only for Swedish.
+"reformed"：瑞典语排序。
 
-**searchjl**: special sorting for Korean initial consonant search.
+"searchjl"：韩语初始辅音搜索的特殊排序。
 
-**stroke**: stroke sorting for Chinese.
+"stroke"：汉语的笔画排序。
 
-**trad**: traditional-style sorting, for example, Spanish.
+"trad"：传统风格排序，如西班牙语。
 
-**unihan**: radical-stroke sorting for Han characters, only for Chinese, Japanese, and Korean.
+"unihan"：统一汉字排序，用于日语、韩语、中文等汉字排序。
 
-**zhuyin**: Zhuyin sorting, only for Chinese.
+"zhuyin"：注音排序，仅用于中文排序。
 
 **Type:** string
 
@@ -142,9 +149,9 @@ Collation rules for the locale. The value can be:
 hourCycle?: string
 ```
 
-Hour cycle. The value can be:
+时制格式，取值包括：
 
-"h11", "h12", "h23", or  "h24".
+"h11", "h12", "h23", "h24"。
 
 **Type:** string
 
@@ -170,15 +177,9 @@ Hour cycle. The value can be:
 numberingSystem?: string
 ```
 
-Numbering system. The value can be:
+数字系统，取值包括：
 
-**adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**,  
-**diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**,  
-**kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**,  
-**mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**,  
-**mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**,  
-**shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**,  
-**tirh**, **vaii**, **wara**, or **wcho**.
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", "wcho"。
 
 **Type:** string
 
@@ -204,8 +205,7 @@ Numbering system. The value can be:
 numeric?: boolean
 ```
 
-Whether to treat numeric characters as numbers for sorting. The value true means to treat numeric characters as numbers for sorting, and the value **false** means to treat numeric characters as ordinary characters for sorting. For example, when this parameter is set to **true**, comparing the string **21** with the string **123**  
-is equivalent to comparing the number 21 with the number 123. The default value is **false**.
+true表示将数字字符视为数字进行排序处理，false表示将数字字符视为普通字符进行排序处理。例如设置为true时，字符串“21”和字符串“123”比较，相当于数字21和123比较。默认值：false。
 
 **Type:** boolean
 

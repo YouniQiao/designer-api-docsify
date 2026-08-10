@@ -10,13 +10,19 @@ Worker构造函数的选项，用于为Worker添加其他信息。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## name
 
 ```TypeScript
 name?: string
 ```
 
-Worker的名称。默认值为undefined，此时线程名称为'WorkerThread'。非默认值情况下，对应的线程名称带有'WorkerThread\_'前缀。比如name为'testName'时，对应的线程名称为'WorkerThread\_testName'。线程名称可通过HeapMemoryInfo的threadName获取。
+Worker的名称。默认值为undefined，此时线程名称为'WorkerThread'。非默认值情况下，对应的线程名称带有'WorkerThread_'前缀。比如name为'testName'时，对应的线程名称为'WorkerThread_testName'。线程名称可通过HeapMemoryInfo的threadName获取。
 
 **类型：** string
 
@@ -38,7 +44,7 @@ priority?: ThreadWorkerPriority
 
 表示Worker线程优先级。默认值为MEDIUM。
 
-**类型：** ThreadWorkerPriority
+**类型：** [ThreadWorkerPriority](arkts-arkts-worker-threadworkerpriority-e.md)
 
 **起始版本：** 18
 

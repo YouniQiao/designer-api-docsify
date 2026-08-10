@@ -1,6 +1,6 @@
 # StickyStyle
 
-Enumerates the sticky styles.
+ListItemGroup吸顶或吸底效果枚举。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the sticky styles.
 None = 0
 ```
 
-In the **ListItemGroup** component, the header is not pinned to the top, and the footer is not pinned to the bottom.
+ListItemGroup的header不吸顶，footer不吸底。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ In the **ListItemGroup** component, the header is not pinned to the top, and the
 Header = 1
 ```
 
-In the **ListItemGroup** component, the header is pinned to the top, and the footer is not pinned to the bottom.
+ListItemGroup的header吸顶，footer不吸底。
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ In the **ListItemGroup** component, the header is pinned to the top, and the foo
 Footer = 2
 ```
 
-In the **ListItemGroup** component, the footer is pinned to the bottom, and the header is not pinned to the top.
+ListItemGroup的footer吸底，header不吸顶。
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ In the **ListItemGroup** component, the footer is pinned to the bottom, and the 
 BOTH = 3
 ```
 
-In the **ListItemGroup** component, the header is pinned to the top, and the footer is pinned to the bottom.
+ListItemGroup的header吸顶，footer吸底。
 
 **Since:** 20
 

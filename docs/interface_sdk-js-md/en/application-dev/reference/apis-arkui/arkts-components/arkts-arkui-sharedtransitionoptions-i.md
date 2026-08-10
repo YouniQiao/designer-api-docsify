@@ -1,15 +1,13 @@
 # sharedTransitionOptions
 
-Parameters of the shared element transition animation.
-    **NOTE**  
-    
-    **motionPath** is effective only when **type** is set to **SharedTransitionEffectType.Exchange**.  
-    
-    When **type** is set to **SharedTransitionEffectType.Exchange**, the effect focuses on smooth transition of the  
-    position and size of matching shared elements, which can be visually observed through the component's border. The  
-    transition, however, does not involve content properties, which will abruptly change to the target page's values at  
-    the end of the animation. For example, if a **Text** component has different **fontSize** values on two pages, the  
-    font size will snap to the target page's value once the shared transition animation completes.
+共享元素转场动画参数。
+
+> **说明：**
+> 
+> type为SharedTransitionEffectType.Exchange时motionPath才会生效。
+> 
+> type为SharedTransitionEffectType.Exchange时，效果为对匹配的共享元素产生位置、大小的过渡（可通过配置组件的border观察），不支持内容的过渡效果。例如，Text组件在两个页面上使用不同的
+> fontSize属性值，即绘制内容有大小差异，在sharedTransition动画结束后的最后一帧，Text的fontSize效果会突变为跳转目标页fontSize的效果。
 
 **Since:** 7
 
@@ -25,16 +23,16 @@ Parameters of the shared element transition animation.
 curve?: Curve | string | ICurve
 ```
 
-Animation curve.
+动画曲线。
 
-You are advised to specify the curve using the **Curve** or **ICurve** type.
+推荐以Curve或ICurve形式指定。
 
-For the string type, this parameter indicates an animation interpolation curve. For available values, see the  
-**curve** parameter in [AnimateParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+当类型为string时，为动画插值曲线，取值参考  
+[AnimateParam](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#animateparam对象说明)的curve参数。
 
-Default value: **Curve.Linear
+默认值：Curve.Linear
 
-**Type:** Curve \| string \| ICurve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
 
 **Default:** Curve.Linear
 
@@ -54,11 +52,13 @@ Default value: **Curve.Linear
 delay?: number
 ```
 
-Delay of animation playback.
+延迟播放时间。
 
-Default value: **0**
+取值范围：[0, +∞)
 
-Unit: ms
+默认值：0 
+
+单位：毫秒
 
 **Type:** number
 
@@ -80,13 +80,13 @@ Unit: ms
 duration?: number
 ```
 
-Animation duration.
+描述共享元素转场动效播放时长。
 
-Default value: **1000**
+默认值：1000 
 
-Unit: ms
+单位：毫秒
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -108,9 +108,9 @@ Value range: [0, +∞)
 motionPath?: MotionPathOptions
 ```
 
-Motion path.
+运动路径信息。
 
-**Type:** MotionPathOptions
+**Type:** [MotionPathOptions](../arkts-apis/arkts-arkui-common-motionpathoptions-i.md)
 
 **Since:** 7
 
@@ -128,11 +128,11 @@ Motion path.
 type?: SharedTransitionEffectType
 ```
 
-Animation type.
+动画类型。
 
-Default value: **SharedTransitionEffectType.Exchange
+默认值：SharedTransitionEffectType.Exchange
 
-**Type:** SharedTransitionEffectType
+**Type:** [SharedTransitionEffectType](../arkts-apis/arkts-arkui-sharedtransitioneffecttype-e.md)
 
 **Default:** SharedTransitionEffectType.Exchange
 
@@ -152,11 +152,11 @@ Default value: **SharedTransitionEffectType.Exchange
 zIndex?: number
 ```
 
-Z-axis.
+设置Z轴。
 
-Value range: (-∞, +∞)
+取值范围：(-∞, +∞)
 
-Default value: **0
+默认值：0
 
 **Type:** number
 

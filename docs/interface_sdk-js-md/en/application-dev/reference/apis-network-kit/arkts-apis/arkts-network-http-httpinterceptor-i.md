@@ -10,6 +10,12 @@ Defines an HTTP Interceptor. User can implement this interface to define the han
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## interceptorHandle
 
 ```TypeScript
@@ -32,8 +38,8 @@ Intercept an HTTP process and do changes as disired.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reqContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the context of the target HTTP request. |
-| rspContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the context of the target HTTP response. |
+| reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | Yes | the context of the target HTTP request. |
+| rspContext | [HttpResponse](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-httpresponse-i.md) | Yes | the context of the target HTTP response. |
 
 **Return value:**
 
@@ -41,7 +47,7 @@ Intercept an HTTP process and do changes as disired.
 | --- | --- |
 | Promise&lt;ChainContinue&gt; | Continue the HTTP process or terminate then return the HTTP response. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -87,7 +93,7 @@ interceptorType: InterceptorType
 
 The type of this interceptor. It defines when this intercptor would be called.
 
-**Type:** InterceptorType
+**Type:** [InterceptorType](arkts-network-http-interceptortype-e.md)
 
 **Since:** 22
 

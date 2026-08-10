@@ -6,7 +6,7 @@
 function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<void>): void
 ```
 
-Sets the DND time. This API uses an asynchronous callback to return the result.
+设置免打扰时间（Callback形式）。
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ Sets the DND time. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | DND time to set. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | 免打扰时间选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 设置免打扰时间回调函数。 |
 
 
 ## setDoNotDisturbDate
@@ -38,7 +38,7 @@ Sets the DND time. This API uses an asynchronous callback to return the result.
 function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 ```
 
-Sets the DND time. This API uses a promise to return the result.
+设置免打扰时间（Promise形式）。
 
 **Since:** 8
 
@@ -60,13 +60,13 @@ Sets the DND time. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | DND time to set. |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | 免打扰时间选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 
 ## setDoNotDisturbDate
@@ -75,7 +75,7 @@ Sets the DND time. This API uses a promise to return the result.
 function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the DND time for a specified user. This API uses an asynchronous callback to return the result.
+指定用户设置免打扰时间（Callback形式）。
 
 **Since:** 8
 
@@ -97,9 +97,9 @@ Sets the DND time for a specified user. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | DND time to set. |
-| userId | number | Yes | ID of the user for whom you want to set the DND time. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | 免打扰时间选项。 |
+| userId | number | Yes | 设置免打扰时间的用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 设置免打扰时间回调函数。 |
 
 
 ## setDoNotDisturbDate
@@ -108,7 +108,7 @@ Sets the DND time for a specified user. This API uses an asynchronous callback t
 function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<void>
 ```
 
-Sets the DND time for a specified user. This API uses a promise to return the result.
+指定用户设置免打扰时间（Promise形式）。
 
 **Since:** 8
 
@@ -130,12 +130,12 @@ Sets the DND time for a specified user. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | DND time to set. |
-| userId | number | Yes | ID of the user for whom you want to set the DND time. |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | 免打扰时间选项。 |
+| userId | number | Yes | 设置免打扰时间的用户ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

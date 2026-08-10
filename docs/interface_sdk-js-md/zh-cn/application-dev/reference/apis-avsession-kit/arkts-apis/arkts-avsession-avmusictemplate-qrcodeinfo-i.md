@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## codeData
 
 ```TypeScript
@@ -182,7 +188,7 @@ validPeriod: int
 
 当二维码到期时，二维码ID将用于再次查询并获得新的二维码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

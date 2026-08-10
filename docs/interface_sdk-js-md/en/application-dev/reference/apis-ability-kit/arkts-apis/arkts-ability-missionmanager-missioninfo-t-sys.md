@@ -4,7 +4,7 @@
 export type MissionInfo = _MissionInfo
 ```
 
-Mission information corresponding to ability.
+表示任务的详细信息。
 
 **Since:** 9
 

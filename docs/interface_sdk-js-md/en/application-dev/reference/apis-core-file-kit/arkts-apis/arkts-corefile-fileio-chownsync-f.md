@@ -6,7 +6,7 @@
 declare function chownSync(path: string, uid: number, gid: number): void
 ```
 
-Changes the file owner based on its path. This API returns the result synchronously.
+以同步的方法基于文件路径改变文件所有者。
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ Changes the file owner based on its path. This API returns the result synchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
-| uid | number | Yes | New UID. |
-| gid | number | Yes | New GID. |
+| path | string | Yes | 待改变文件的应用沙箱路径。 |
+| uid | number | Yes | 新的UID。 |
+| gid | number | Yes | 新的GID。 |
 

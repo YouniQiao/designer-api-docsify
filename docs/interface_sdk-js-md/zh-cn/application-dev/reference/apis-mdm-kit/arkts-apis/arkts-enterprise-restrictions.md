@@ -20,9 +20,10 @@
 - 提升企业设备安全性，降低数据泄露风险。  
 - 满足企业合规要求，符合安全审计标准。  
 - 实现精细化的设备功能管控，平衡安全与使用体验。
-    **说明：**  
-    
-    本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+
+> **说明：**
+> 
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 12
 
@@ -31,6 +32,12 @@
 <!--Device-unnamed-declare namespace restrictions--><!--Device-unnamed-declare namespace restrictions-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { restrictions } from 'kits/@kit.MDMKit';
+```
 
 ## 汇总
 
@@ -61,7 +68,7 @@
 | [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) | 设置禁用/启用指定用户的某特性。 |
 | [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) | 设置禁用/启用指定用户的某特性。 |
 | [setFingerprintAuthDisabled](arkts-mdm-restrictions-setfingerprintauthdisabled-f.md#setfingerprintauthdisabled) | 禁用或启用指纹认证。 |
-| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled) | 使设备禁用或启用\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。使用callback异步回调。 |
+| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled) | 使设备禁用或启用[HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc-guide.md)。使用callback异步回调。 |
 | [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled-1) | 使设备禁用或启用HDC。使用Promise异步回调。 |
 | [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f.md#setprinterdisabled) | 使设备禁用或启用打印能力。使用callback异步回调。 |
 | [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f.md#setprinterdisabled-1) | 使设备禁用或启用打印能力。使用Promise异步回调。 |

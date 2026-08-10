@@ -8,13 +8,19 @@ The **userFileManager** module provides user data management capabilities, inclu
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md/arkts-file-photoaccesshelper.md)
 
 <!--Device-unnamed-declare namespace userFileManager--><!--Device-unnamed-declare namespace userFileManager-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { userFileManager } from 'kits/@kit.CoreFileKit';
+```
 
 ## Summary
 
@@ -40,7 +46,7 @@ The **userFileManager** module provides user data management capabilities, inclu
 | [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md) | Provides APIs for encapsulating file asset attributes. |
 | [PeerInfo](arkts-corefile-userfilemanager-peerinfo-i-sys.md) | Defines information about a registered device. |
 | [PhotoCreateOptions](arkts-corefile-userfilemanager-photocreateoptions-i-sys.md) | Defines the options for creating an image or video asset. |
-| [PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md) | Provides APIs for managing the system albums.  This API will be deprecated. Use [Album]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instead. |
+| [PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md) | Provides APIs for managing the system albums.  This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md) instead. |
 | [UserFileManager](arkts-corefile-userfilemanager-userfilemanager-i-sys.md) | Defines the UserFileManager class and provides functions to access the data in user file storage. |
 <!--DelEnd-->
 
@@ -57,9 +63,9 @@ The **userFileManager** module provides user data management capabilities, inclu
 | [FileType](arkts-corefile-userfilemanager-filetype-e-sys.md) | Enumerates media file types. |
 | [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md) | Defines the key information about an image or video file. |
 | [NotifyType](arkts-corefile-userfilemanager-notifytype-e-sys.md) | Enumerates the notification event types. |
-| [PhotoSubType](arkts-corefile-userfilemanager-photosubtype-e-sys.md) | Enumerates the [FileAsset]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ types. |
+| [PhotoSubType](arkts-corefile-userfilemanager-photosubtype-e-sys.md) | Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md) types. |
 | [PositionType](arkts-corefile-userfilemanager-positiontype-e-sys.md) | Enumerates the file location. |
-| [PrivateAlbumType](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md) | Enumerates the system album types.  This API will be deprecated. Use [AlbumType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and  [AlbumSubType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instead. |
+| [PrivateAlbumType](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md) | Enumerates the system album types.  This API will be deprecated. Use [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md) and  [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) instead. |
 <!--DelEnd-->
 
 <!--Del-->

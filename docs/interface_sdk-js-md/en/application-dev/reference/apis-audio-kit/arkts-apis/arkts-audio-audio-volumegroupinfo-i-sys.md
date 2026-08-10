@@ -12,6 +12,12 @@ Describes an audio volume group.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## groupId
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly groupId: int
 
 Volume group id.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -60,7 +66,7 @@ readonly mappingId: int
 
 Volume mapping group id.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -100,7 +106,7 @@ readonly type: ConnectType
 
 Connect type of device for this group.
 
-**Type:** ConnectType
+**Type:** [ConnectType](arkts-audio-audio-connecttype-e-sys.md)
 
 **Since:** 9
 

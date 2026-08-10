@@ -1,5 +1,11 @@
 # getChineseCalendar
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getChineseCalendar
 
 ```TypeScript
@@ -30,5 +36,5 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 农历对象。 |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | 农历对象。 |
 

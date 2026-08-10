@@ -1,12 +1,18 @@
 # disconnectAbility
 
+## Modules to Import
+
+```TypeScript
+import { particleAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## disconnectAbility
 
 ```TypeScript
 function disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-Disconnects this ability from a specific ServiceAbility. This API uses an asynchronous callback to return the result.
+断开当前ability与指定ServiceAbility的连接。使用callback异步回调。
 
 **Since:** 7
 
@@ -22,10 +28,10 @@ Disconnects this ability from a specific ServiceAbility. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | number | Yes | ID of the ServiceAbility to disconnect. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| connection | number | Yes | 表示断开连接的ServiceAbility的ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当断开当前ability与指定ServiceAbility的连接成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';
@@ -61,7 +67,7 @@ particleAbility.disconnectAbility(connId, (err) => {
 function disconnectAbility(connection: number): Promise<void>
 ```
 
-Disconnects this ability from a specific ServiceAbility. This API uses a promise to return the result.
+断开当前ability与指定ServiceAbility的连接。使用Promise异步回调。
 
 **Since:** 7
 
@@ -77,15 +83,15 @@ Disconnects this ability from a specific ServiceAbility. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | number | Yes | ID of the ServiceAbility to disconnect. |
+| connection | number | Yes | 表示断开连接的ServiceAbility的ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';

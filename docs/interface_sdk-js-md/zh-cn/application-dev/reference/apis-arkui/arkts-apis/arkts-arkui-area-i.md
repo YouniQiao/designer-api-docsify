@@ -18,7 +18,7 @@ globalPosition: Position
 
 目标元素左上角在当前窗口坐标系中的位置。
 
-**类型：** Position
+**类型：** [Position](arkts-arkui-display-position-i.md)
 
 **起始版本：** 8
 
@@ -42,7 +42,7 @@ height: Length
 
 单位：vp
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 8
 
@@ -62,9 +62,9 @@ height: Length
 position: Position
 ```
 
-目标元素左上角在以父元素为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的位置。
+目标元素左上角在以父元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的位置。
 
-**类型：** Position
+**类型：** [Position](arkts-arkui-display-position-i.md)
 
 **起始版本：** 8
 
@@ -88,7 +88,7 @@ width: Length
 
 单位：vp
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 8
 

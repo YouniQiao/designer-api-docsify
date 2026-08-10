@@ -1,6 +1,6 @@
 # BitVector
 
-An ordered collections of bit values, which are either 0 or 1.If multiple threads access a BitVector instance concurrently,and at least one of the threads modifies the array structurally,it must be synchronized externally.
+按顺序排列的比特值集合，每个比特值只能是0或1。如果多个线程同时访问BitVector实例，并且至少有一个线程修改了数组结构，则必须在外部进行同步。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ An ordered collections of bit values, which are either 0 or 1.If multiple thread
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { collections } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
 $_iterator(): IterableIterator<int>
 ```
 
-Returns an iterator that iterates over bit vector.
+返回一个迭代位向量的迭代器。
 
 **Since:** 23
 
@@ -30,7 +36,7 @@ Returns an iterator that iterates over bit vector.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | A new iterable iterator object. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | 一个新的可迭代迭代器对象。 |
 
 ## constructor
 
@@ -38,7 +44,7 @@ Returns an iterator that iterates over bit vector.
 constructor(length: int)
 ```
 
-A constructor used to create a BitVector object.
+用于创建BitVector对象的构造函数。
 
 **Since:** 23
 
@@ -52,7 +58,7 @@ A constructor used to create a BitVector object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | int | Yes | The length of BitVector object. |
+| length | int | Yes | BitVector对象的长度。 |
 
 ## flipBitByIndex
 
@@ -60,7 +66,7 @@ A constructor used to create a BitVector object.
 flipBitByIndex(index: int): void
 ```
 
-Flips the bit value by index in a bit vector.(Flip 0 to 1, flip 1 to 0)
+翻转位向量中指定索引处的比特值。（0翻转为1，1翻转为0）
 
 **Since:** 23
 
@@ -74,15 +80,15 @@ Flips the bit value by index in a bit vector.(Flip 0 to 1, flip 1 to 0)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index in the bit vector. |
+| index | int | Yes | 位向量中的索引。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The flipBitByIndex method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | flipBitByIndex方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
+| 10200001 | index的值超出范围。 |
 
 ## flipBitsByRange
 
@@ -90,7 +96,7 @@ Flips the bit value by index in a bit vector.(Flip 0 to 1, flip 1 to 0)
 flipBitsByRange(fromIndex: int, toIndex: int): void
 ```
 
-Flips a range of bit values in a bit vector.(Flip 0 to 1, flip 1 to 0).
+翻转位向量中一定范围内的比特值。（0翻转为1，1翻转为0）
 
 **Since:** 23
 
@@ -104,16 +110,16 @@ Flips a range of bit values in a bit vector.(Flip 0 to 1, flip 1 to 0).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
-| toIndex | int | Yes | The end of the index, excluding the value at that index. |
+| fromIndex | int | Yes | 起始索引位置，包含该索引位置的值。 |
+| toIndex | int | Yes | 结束索引，不包含该索引的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The flipBitsByRange method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | flipBitsByRange方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
+| 10200001 | fromIndex或toIndex的值超出范围。 |
 
 ## getBitCountByRange
 
@@ -121,7 +127,7 @@ Flips a range of bit values in a bit vector.(Flip 0 to 1, flip 1 to 0).
 getBitCountByRange(element: int, fromIndex: int, toIndex: int): int
 ```
 
-Counts the number of times a certain bit element occurs within a range of bits in a bit vector.
+统计位向量中一定范围内某个比特元素出现的次数。
 
 **Since:** 23
 
@@ -135,23 +141,23 @@ Counts the number of times a certain bit element occurs within a range of bits i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | int | Yes | Element to be counted (0 means 0, else means 1). |
-| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
-| toIndex | int | Yes | The end of the index, excluding the value at that index. |
+| element | int | Yes | 要统计的元素（0表示0，否则表示1）。 |
+| fromIndex | int | Yes | 起始索引位置，包含该索引位置的值。 |
+| toIndex | int | Yes | 结束索引，不包含该索引的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | The number type, return the number of times a certain bit element |
+| int | number类型，返回某个比特元素出现的次数 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getBitCountByRange method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | getBitCountByRange方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
+| 10200001 | fromIndex或toIndex的值超出范围。 |
 
 ## getBitsByRange
 
@@ -159,7 +165,7 @@ Counts the number of times a certain bit element occurs within a range of bits i
 getBitsByRange(fromIndex: int, toIndex: int): BitVector
 ```
 
-Returns the bit values in a range of indices in a bit vector.
+返回位向量中一定索引范围内的比特值。
 
 **Since:** 23
 
@@ -173,22 +179,22 @@ Returns the bit values in a range of indices in a bit vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
-| toIndex | int | Yes | The end of the index, excluding the value at that index. |
+| fromIndex | int | Yes | 起始索引位置，包含该索引位置的值。 |
+| toIndex | int | Yes | 结束索引，不包含该索引的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The BitVector type, returns the bit values in a range of indices in a bit vector. |
+| [BitVector](arkts-arkts-collections-bitvector-c.md) | BitVector类型，返回位向量中一定索引范围内的比特值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getBitsByRange method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | getBitsByRange方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
+| 10200001 | fromIndex或toIndex的值超出范围。 |
 
 ## getIndexOf
 
@@ -196,7 +202,7 @@ Returns the bit values in a range of indices in a bit vector.
 getIndexOf(element: int, fromIndex: int, toIndex: int): int
 ```
 
-Locates the first occurrence of a certain bit value within a range of bits in a bit vector.
+在位向量中查找某个比特值在指定范围内第一次出现的位置。
 
 **Since:** 23
 
@@ -210,23 +216,23 @@ Locates the first occurrence of a certain bit value within a range of bits in a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | int | Yes | Element to be Located (0 means 0, else means 1). |
-| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
-| toIndex | int | Yes | The end of the index, excluding the value at that index. |
+| element | int | Yes | 要查找的元素（0表示0，否则表示1）。 |
+| fromIndex | int | Yes | 起始索引位置，包含该索引位置的值。 |
+| toIndex | int | Yes | 结束索引，不包含该索引的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | The number type, return the first index of specified bit within a range, or -1 if this range of the bitVector does not contain the element. |
+| int | number类型，返回指定比特在范围内第一次出现的索引， 如果此范围内不包含该元素则返回-1。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | getIndexOf方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
+| 10200001 | fromIndex或toIndex的值超出范围。 |
 
 ## getLastIndexOf
 
@@ -234,7 +240,7 @@ Locates the first occurrence of a certain bit value within a range of bits in a 
 getLastIndexOf(element: int, fromIndex: int, toIndex: int): int
 ```
 
-Locates the last occurrence of a certain bit value within a range of bits in a bit vector.
+在位向量中查找某个比特值在指定范围内最后一次出现的位置。
 
 **Since:** 23
 
@@ -248,23 +254,23 @@ Locates the last occurrence of a certain bit value within a range of bits in a b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | int | Yes | Element to be Located (0 means 0, else means 1). |
-| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
-| toIndex | int | Yes | The end of the index, excluding the value at that index. |
+| element | int | Yes | 要查找的元素（0表示0，否则表示1）。 |
+| fromIndex | int | Yes | 起始索引位置，包含该索引位置的值。 |
+| toIndex | int | Yes | 结束索引，不包含该索引的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | The number type, return the last index of specified bit within a range, or -1 if this range of the bitVector does not contain the element. |
+| int | number类型，返回指定比特在范围内最后一次出现的索引， 如果此范围内不包含该元素则返回-1。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | getLastIndexOf方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
+| 10200001 | fromIndex或toIndex的值超出范围。 |
 
 ## has
 
@@ -272,7 +278,7 @@ Locates the last occurrence of a certain bit value within a range of bits in a b
 has(element: int, fromIndex: int, toIndex: int): boolean
 ```
 
-Check if bit vector contains a particular bit element.
+检查位向量是否包含特定的比特元素。
 
 **Since:** 23
 
@@ -286,23 +292,23 @@ Check if bit vector contains a particular bit element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | int | Yes | Element to be contained (0 means 0, else means 1). |
-| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
-| toIndex | int | Yes | The end of the index, containing the value at that index. |
+| element | int | Yes | 要检查的元素（0表示0，否则表示1）。 |
+| fromIndex | int | Yes | 起始索引位置，包含该索引位置的值。 |
+| toIndex | int | Yes | 结束索引，包含该索引的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The boolean type, if bit vector contains the specified element, return true, |
+| boolean | boolean类型，如果位向量包含指定元素则返回true， 否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | has方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
+| 10200001 | fromIndex或toIndex的值超出范围。 |
 
 ## pop
 
@@ -310,7 +316,7 @@ Check if bit vector contains a particular bit element.
 pop(): int | undefined
 ```
 
-Retrieves and removes the bit element to the end of this bit vector.
+取出并移除位向量末尾的比特元素。
 
 **Since:** 23
 
@@ -324,7 +330,7 @@ Retrieves and removes the bit element to the end of this bit vector.
 
 | Type | Description |
 | --- | --- |
-| int | The boolean type, if the bit push successfully, return true, else return false. |
+| int | int类型，如果位弹出成功则返回对应的int值，否则返回undefined。 |
 
 ## push
 
@@ -332,7 +338,7 @@ Retrieves and removes the bit element to the end of this bit vector.
 push(element: int): boolean
 ```
 
-Appends the bit element to the end of this bit vector.
+将比特元素追加到位向量的末尾。
 
 **Since:** 23
 
@@ -346,20 +352,20 @@ Appends the bit element to the end of this bit vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | int | Yes | Element to be appended to this bit vector (0 means 0, else means 1). |
+| element | int | Yes | 要追加到此位向量的元素（0表示0，否则表示1）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The boolean type, returns true if the addition is successful, and returns false if it fails. |
+| boolean | boolean类型，如果添加成功返回true，失败返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The push method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | push方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
 
 ## resize
 
@@ -367,7 +373,7 @@ Appends the bit element to the end of this bit vector.
 resize(size: int): void
 ```
 
-Resize the bitVector's length.
+调整位向量的长度。
 
 **Since:** 23
 
@@ -381,14 +387,14 @@ Resize the bitVector's length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | int | Yes | The new size for bitVector. If count is greater than the current size of bitVector, the additional bit elements are set to 0. |
+| size | int | Yes | bitVector的新大小。如果count大于bitVector当前大小， 则额外的比特元素将设置为0。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The resize method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | resize方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
 
 ## setAllBits
 
@@ -396,7 +402,7 @@ Resize the bitVector's length.
 setAllBits(element: int): void
 ```
 
-Sets all of bits in a bit vector to a particular element.
+将位向量中的所有比特设置为特定的元素。
 
 **Since:** 23
 
@@ -410,14 +416,14 @@ Sets all of bits in a bit vector to a particular element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | int | Yes | Element to be set (0 means 0, else means 1). |
+| element | int | Yes | 要设置的元素（0表示0，否则表示1）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAllBits method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | setAllBits方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
 
 ## setBitsByRange
 
@@ -425,7 +431,7 @@ Sets all of bits in a bit vector to a particular element.
 setBitsByRange(element: int, fromIndex: int, toIndex: int): void
 ```
 
-Sets a range of bits in a bit vector to a particular element.
+将位向量中一定范围内的比特设置为特定的元素。
 
 **Since:** 23
 
@@ -439,17 +445,17 @@ Sets a range of bits in a bit vector to a particular element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | int | Yes | Element to be set (0 means 0, else means 1). |
-| fromIndex | int | Yes | The starting position of the index, containing the value at that index position. |
-| toIndex | int | Yes | The end of the index, excluding the value at that index. |
+| element | int | Yes | 要设置的元素（0表示0，否则表示1）。 |
+| fromIndex | int | Yes | 起始索引位置，包含该索引位置的值。 |
+| toIndex | int | Yes | 结束索引，不包含该索引的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setBitsByRange method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | setBitsByRange方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
+| 10200001 | fromIndex或toIndex的值超出范围。 |
 
 ## values
 
@@ -457,7 +463,7 @@ Sets a range of bits in a bit vector to a particular element.
 values(): IterableIterator<int>
 ```
 
-Returns an iterable of values in the bit vector
+返回位向量中值的可迭代对象。
 
 **Since:** 23
 
@@ -471,14 +477,14 @@ Returns an iterable of values in the bit vector
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | A new iterable iterator object. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | 一个新的可迭代迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | values方法无法被绑定。 |
+| 10200201 | 并发修改错误。 |
 
 ## [index: int]
 
@@ -486,7 +492,7 @@ Returns an iterable of values in the bit vector
 [index: int]: int
 ```
 
-Accesses or sets the element at the specified index in the BitVector.
+访问或设置BitVector中指定索引处的元素。
 
 **Type:** int
 
@@ -504,7 +510,7 @@ Accesses or sets the element at the specified index in the BitVector.
 get length(): int
 ```
 
-Gets the element number of the BitVector. This is a number one higher than the highest index in the bit vector.It can be changed by resize().
+获取BitVector的元素个数。这是比位向量中最高索引大一的数字。可以通过resize()方法更改。
 
 **Type:** int
 

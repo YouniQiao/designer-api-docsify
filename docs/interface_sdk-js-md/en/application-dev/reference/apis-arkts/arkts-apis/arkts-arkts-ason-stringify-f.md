@@ -1,12 +1,20 @@
 # stringify
 
+## Modules to Import
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## stringify
 
 ```TypeScript
 function stringify(value: Object | null | undefined): string
 ```
 
-Converts an ArkTS value to a JavaScript Object Notation (JSON) string.Extra supports Map and Set.
+该方法将ArkTS对象数据转换为JSON字符串，额外支持Map和Set相关类型。
+
+从API 18开始参数修改为Object类型，API 18之前参数只支持ISendable类型（除Int8Array、Uint8Array、Int16Array、Uint16Array、Int32Array、Uint32Array、Uint8ClampedArray、Float32Array外）。
 
 **Since:** 12
 
@@ -22,11 +30,11 @@ Converts an ArkTS value to a JavaScript Object Notation (JSON) string.Extra supp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | Yes | The value to stringify.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| value | Object \| null \| undefined | Yes | ArkTS对象数据。<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | The JSON string representation of the value. |
+| string | 转换后的JSON字符串。 |
 

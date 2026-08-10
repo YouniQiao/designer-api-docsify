@@ -12,6 +12,12 @@ Provides the conditions of querySecurityEvent.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+```
+
 ## beginTime
 
 ```TypeScript

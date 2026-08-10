@@ -10,6 +10,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## app
 
 ```TypeScript
@@ -18,7 +24,7 @@ app: long
 
 应用数据大小，单位为Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ audio: long
 
 音频数据大小，单位为Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -58,7 +64,7 @@ file: long
 
 文件数据大小，单位为Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -78,7 +84,7 @@ image: long
 
 图像数据大小，单位为Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -98,7 +104,7 @@ total: long
 
 内置存储总空间大小，单位为Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -118,7 +124,7 @@ video: long
 
 视频数据大小，单位为Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

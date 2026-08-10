@@ -1,6 +1,6 @@
 # CacheMode
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the Web cache mode.
+Enum type supplied to {@link cacheMode} for setting the Web cache mode.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the Web 
 Default = 0
 ```
 
-load cache when they are available and not expired, otherwise load online.
+优先使用未过期cache加载资源，无效或无cache时从网络获取。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ load cache when they are available and not expired, otherwise load online.
 None = 1
 ```
 
-load cache when they are available, otherwise load online.
+优先使用cache（含过期）加载资源，无cache时从网络获取。
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ load cache when they are available, otherwise load online.
 Online = 2
 ```
 
-Load online and not cache.
+强制从网络获取最新资源，不使用任何cache。
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Load online and not cache.
 Only = 3
 ```
 
-load cache and not online.
+仅使用本地cache加载资源。
 
 **Since:** 8
 

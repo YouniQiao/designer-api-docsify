@@ -1,12 +1,18 @@
 # setScanAutoOption
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setScanAutoOption
 
 ```TypeScript
 function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>
 ```
 
-Sets the scan option to auto mode. This API uses a promise to return the result.
+设置扫描选项为自动模式。使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,22 +28,22 @@ Sets the scan option to auto mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | Scanner ID. |
-| optionIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the option to be set to auto mode. |
+| scannerId | string | Yes | 扫描仪的ID。 |
+| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要设置为自动的选项的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

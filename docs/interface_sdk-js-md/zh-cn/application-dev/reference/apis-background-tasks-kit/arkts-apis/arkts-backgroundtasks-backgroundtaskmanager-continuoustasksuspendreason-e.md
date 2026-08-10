@@ -16,7 +16,7 @@
 SYSTEM_SUSPEND_DATA_TRANSFER_LOW_SPEED = 4
 ```
 
-申请DATA\_TRANSFER类型长时任务，但是数据传输速率低。
+申请DATA_TRANSFER类型长时任务，但是数据传输速率低。
 
 **起始版本：** 20
 
@@ -32,7 +32,7 @@ SYSTEM_SUSPEND_DATA_TRANSFER_LOW_SPEED = 4
 SYSTEM_SUSPEND_AUDIO_PLAYBACK_NOT_USE_AVSESSION = 5
 ```
 
-申请AUDIO\_PLAYBACK类型长时任务，但是未接入\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+申请AUDIO_PLAYBACK类型长时任务，但是未接入[AVSession](../../../media/avsession/avsession-overview.md)。
 
 **起始版本：** 20
 
@@ -48,7 +48,7 @@ SYSTEM_SUSPEND_AUDIO_PLAYBACK_NOT_USE_AVSESSION = 5
 SYSTEM_SUSPEND_AUDIO_PLAYBACK_NOT_RUNNING = 6
 ```
 
-申请AUDIO\_PLAYBACK类型长时任务，但是未播放音视频。
+申请AUDIO_PLAYBACK类型长时任务，但是未播放音视频。
 
 **起始版本：** 20
 
@@ -64,7 +64,7 @@ SYSTEM_SUSPEND_AUDIO_PLAYBACK_NOT_RUNNING = 6
 SYSTEM_SUSPEND_AUDIO_RECORDING_NOT_RUNNING = 7
 ```
 
-申请AUDIO\_RECORDING类型长时任务，但是未录制。
+申请AUDIO_RECORDING类型长时任务，但是未录制。
 
 **起始版本：** 20
 
@@ -96,7 +96,7 @@ SYSTEM_SUSPEND_LOCATION_NOT_USED = 8
 SYSTEM_SUSPEND_BLUETOOTH_NOT_USED = 9
 ```
 
-申请BLUETOOTH\_INTERACTION类型长时任务，但是未使用蓝牙相关业务。
+申请BLUETOOTH_INTERACTION类型长时任务，但是未使用蓝牙相关业务。
 
 **起始版本：** 20
 
@@ -112,7 +112,7 @@ SYSTEM_SUSPEND_BLUETOOTH_NOT_USED = 9
 SYSTEM_SUSPEND_MULTI_DEVICE_NOT_USED = 10
 ```
 
-申请MULTI\_DEVICE\_CONNECTION类型长时任务，但是未使用多设备互联。
+申请MULTI_DEVICE_CONNECTION类型长时任务，但是未使用多设备互联。
 
 **起始版本：** 20
 
@@ -128,7 +128,7 @@ SYSTEM_SUSPEND_MULTI_DEVICE_NOT_USED = 10
 SYSTEM_SUSPEND_USED_ILLEGALLY = 11
 ```
 
-使用非法类型的长时任务，如申请AUDIO\_PLAYBACK类型长时任务，但是使用音视频播放及定位导航业务。预留接口，暂未启用。
+使用非法类型的长时任务，如申请AUDIO_PLAYBACK类型长时任务，但是使用音视频播放及定位导航业务。预留接口，暂未启用。
 
 **起始版本：** 20
 
@@ -178,7 +178,7 @@ SYSTEM_SUSPEND_VOIP_NOT_USED = 13
 SYSTEM_SUSPEND_BLUETOOTH_DATA_NOT_EXIST = 14
 ```
 
-申请BLUETOOTH\_INTERACTION类型长时任务，但是一段时间没有蓝牙数据流。
+申请BLUETOOTH_INTERACTION类型长时任务，但是一段时间没有蓝牙数据流。
 
 **起始版本：** 26.0.0
 
@@ -214,7 +214,7 @@ SYSTEM_SUSPEND_POSITION_NOT_MOVED = 15
 SYSTEM_SUSPEND_AUDIO_PLAYBACK_MUTE = 16
 ```
 
-申请AUDIO\_PLAYBACK类型长时任务，但是一段时间内处于整机静音状态。
+申请AUDIO_PLAYBACK类型长时任务，但是一段时间内处于整机静音状态。
 
 **起始版本：** 26.0.0
 

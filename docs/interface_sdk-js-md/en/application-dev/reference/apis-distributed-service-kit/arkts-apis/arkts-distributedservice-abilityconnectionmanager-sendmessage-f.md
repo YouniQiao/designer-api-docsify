@@ -1,12 +1,18 @@
 # sendMessage
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## sendMessage
 
 ```TypeScript
 function sendMessage(sessionId: int, msg: string): Promise<void>
 ```
 
-Sends text messages after a collaboration session is set up.
+应用连接成功后，设备A或设备B可向对端设备发送文本信息。
 
 **Since:** 18
 
@@ -22,22 +28,22 @@ Sends text messages after a collaboration session is set up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the collaboration session. |
-| msg | string | Yes | Text content. The maximum size of the text content is 1 KB. |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 协同会话ID。 |
+| msg | string | Yes | 文本信息内容（内容最大限制为1KB）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomTheme } from 'kits/@kit.ArkUI';
+```
+
 ## alert
 
 ```TypeScript
 alert: ResourceColor
 ```
 
-二级提示色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+二级提示色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -36,10 +42,10 @@ alert: ResourceColor
 backgroundEmphasize: ResourceColor
 ```
 
-高亮背景颜色（实色，不透明）。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_影响组件：[Progress]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Button]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Slider]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_
+高亮背景颜色（实色，不透明）。&lt;/br&gt;影响组件：[Progress](../../apis-arkui/arkts-components/arkts-arkui-progress-i)、  
+[Button](../../apis-arkui/arkts-components/arkts-arkui-button-i)、[Slider](../../apis-arkui/arkts-components/arkts-arkui-slider-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -57,9 +63,9 @@ backgroundEmphasize: ResourceColor
 backgroundFourth: ResourceColor
 ```
 
-四级背景颜色（实色，不透明）。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+四级背景颜色（实色，不透明）。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -77,10 +83,10 @@ backgroundFourth: ResourceColor
 backgroundPrimary: ResourceColor
 ```
 
-一级背景颜色（实色，不透明）。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_影响组件：[TextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[QRCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+一级背景颜色（实色，不透明）。&lt;/br&gt;影响组件：[TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)、  
+[QRCode](../../apis-arkui/arkts-components/arkts-arkui-qrcode-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -98,9 +104,9 @@ backgroundPrimary: ResourceColor
 backgroundSecondary: ResourceColor
 ```
 
-二级背景颜色（实色，不透明）。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+二级背景颜色（实色，不透明）。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -118,9 +124,9 @@ backgroundSecondary: ResourceColor
 backgroundTertiary: ResourceColor
 ```
 
-三级背景颜色（实色，不透明）。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+三级背景颜色（实色，不透明）。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -138,10 +144,10 @@ backgroundTertiary: ResourceColor
 brand: ResourceColor
 ```
 
-品牌色。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_影响组件：[TextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Search]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+品牌色。&lt;/br&gt;影响组件：[TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)、  
+[Search](../../apis-arkui/arkts-components/arkts-arkui-search-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -159,11 +165,11 @@ brand: ResourceColor
 compBackgroundEmphasize: ResourceColor
 ```
 
-高亮背景。\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_影响组件：[Swiper]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[Toggle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_[Checkbox]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-[CheckboxGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、[Radio]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_
+高亮背景。&lt;/br&gt;影响组件：[Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-i)、[Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i)、  
+[Chip](arkts-arkui-advanced-chip.md)、&lt;/br&gt;[Checkbox](../../apis-arkui/arkts-components/arkts-arkui-checkbox-i)、  
+[CheckboxGroup](../../apis-arkui/arkts-components/arkts-arkui-checkboxgroup-i)、[Radio](../../apis-arkui/arkts-components/arkts-arkui-radio-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -181,9 +187,9 @@ compBackgroundEmphasize: ResourceColor
 compBackgroundFocus: ResourceColor
 ```
 
-获焦态背景颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+获焦态背景颜色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -201,9 +207,9 @@ compBackgroundFocus: ResourceColor
 compBackgroundGray: ResourceColor
 ```
 
-灰色背景。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+灰色背景。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -221,9 +227,9 @@ compBackgroundGray: ResourceColor
 compBackgroundNeutral: ResourceColor
 ```
 
-黑色中性高亮背景颜色。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[PatternLock]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+黑色中性高亮背景颜色。&lt;/br&gt;影响组件：[PatternLock](../../apis-arkui/arkts-components/arkts-arkui-pattern_lock-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -241,9 +247,9 @@ compBackgroundNeutral: ResourceColor
 compBackgroundPrimary: ResourceColor
 ```
 
-白色背景。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+白色背景。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -261,9 +267,9 @@ compBackgroundPrimary: ResourceColor
 compBackgroundPrimaryContrary: ResourceColor
 ```
 
-常亮背景。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_影响组件：[Toggle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[Slider]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+常亮背景。&lt;/br&gt;影响组件：[Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i)、[Slider](../../apis-arkui/arkts-components/arkts-arkui-slider-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -281,9 +287,9 @@ compBackgroundPrimaryContrary: ResourceColor
 compBackgroundPrimaryTran: ResourceColor
 ```
 
-白色透明背景。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+白色透明背景。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -301,9 +307,9 @@ compBackgroundPrimaryTran: ResourceColor
 compBackgroundSecondary: ResourceColor
 ```
 
-二级背景。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_影响组件：[Swiper]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[Slider]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+二级背景。&lt;/br&gt;影响组件：[Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-i)、[Slider](../../apis-arkui/arkts-components/arkts-arkui-slider-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -321,15 +327,15 @@ compBackgroundSecondary: ResourceColor
 compBackgroundTertiary: ResourceColor
 ```
 
-三级背景。\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_影响组件：[EditableTitleBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Progress]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[AlphabetIndexer]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_  
-[Button]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[Select]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、  
-[Toggle]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、  
-[TextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、[Search]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_。从API版本26.0.0开始，新增[UIPickerComponent]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、  
-[TextPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_。
+三级背景。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar.md)、  
+[Progress](../../apis-arkui/arkts-components/arkts-arkui-progress-i)、  
+[AlphabetIndexer](../../apis-arkui/arkts-components/arkts-arkui-alphabet_indexer-i)、&lt;/br&gt;  
+[Button](../../apis-arkui/arkts-components/arkts-arkui-button-i)、[Select](../../apis-arkui/arkts-components/arkts-arkui-select-i)、  
+[Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i)、&lt;/br&gt;[Chip](arkts-arkui-advanced-chip.md)、  
+[TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)、[Search](../../apis-arkui/arkts-components/arkts-arkui-search-i)。从API版本26.0.0开始，新增[UIPickerComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_picker_component-i)、  
+[TextPicker](../../apis-arkui/arkts-components/arkts-arkui-text_picker-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -347,9 +353,9 @@ compBackgroundTertiary: ResourceColor
 compCommonContrary: ResourceColor
 ```
 
-通用反转颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+通用反转颜色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -367,12 +373,12 @@ compCommonContrary: ResourceColor
 compDivider: ResourceColor
 ```
 
-通用分割线颜色。\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_影响组件：[SelectDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[PatternLock]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Divider]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_。从API版本26.0.0开始，新增[UIPickerComponent]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-[TextPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、  
-[MenuItemGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、[Select]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_。
+通用分割线颜色。&lt;/br&gt;影响组件：[SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md)、  
+[PatternLock](../../apis-arkui/arkts-components/arkts-arkui-pattern_lock-i)、[Divider](../../apis-arkui/arkts-components/arkts-arkui-divider-i)。从API版本26.0.0开始，新增[UIPickerComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_picker_component-i)、  
+[TextPicker](../../apis-arkui/arkts-components/arkts-arkui-text_picker-i)、[MenuItem](../../apis-arkui/arkts-components/arkts-arkui-menu_item-i)、  
+[MenuItemGroup](../../apis-arkui/arkts-components/arkts-arkui-menu_item_group-i)、[Select](../../apis-arkui/arkts-components/arkts-arkui-select-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -390,12 +396,12 @@ compDivider: ResourceColor
 compEmphasizeSecondary: ResourceColor
 ```
 
-20%高亮背景颜色。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_影响组件：[Progress]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[ProgressButton]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[AlphabetIndexer]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_  
-[Select]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[Toggle]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_
+20%高亮背景颜色。&lt;/br&gt;影响组件：[Progress](../../apis-arkui/arkts-components/arkts-arkui-progress-i)、  
+[ProgressButton](arkts-arkui-advanced-progressbutton.md)、  
+[AlphabetIndexer](../../apis-arkui/arkts-components/arkts-arkui-alphabet_indexer-i)、&lt;/br&gt;  
+[Select](../../apis-arkui/arkts-components/arkts-arkui-select-i)、[Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -413,9 +419,9 @@ compEmphasizeSecondary: ResourceColor
 compEmphasizeTertiary: ResourceColor
 ```
 
-10%高亮背景颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+10%高亮背景颜色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -433,9 +439,9 @@ compEmphasizeTertiary: ResourceColor
 compFocusedPrimary: ResourceColor
 ```
 
-获焦态一级反转颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+获焦态一级反转颜色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -453,9 +459,9 @@ compFocusedPrimary: ResourceColor
 compFocusedSecondary: ResourceColor
 ```
 
-获焦态二级反转颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+获焦态二级反转颜色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -473,9 +479,9 @@ compFocusedSecondary: ResourceColor
 compFocusedTertiary: ResourceColor
 ```
 
-获焦态三级反转颜色。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[Scroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+获焦态三级反转颜色。&lt;/br&gt;影响组件：[Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -493,9 +499,9 @@ compFocusedTertiary: ResourceColor
 compForegroundPrimary: ResourceColor
 ```
 
-前背景。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[QRCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+前背景。&lt;/br&gt;影响组件：[QRCode](../../apis-arkui/arkts-components/arkts-arkui-qrcode-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -513,9 +519,9 @@ compForegroundPrimary: ResourceColor
 confirm: ResourceColor
 ```
 
-确认色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+确认色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -535,7 +541,7 @@ container?: ResourceColor
 
 系统容器颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.0.0
 
@@ -553,21 +559,21 @@ container?: ResourceColor
 fontEmphasize: ResourceColor
 ```
 
-高亮字体颜色。\_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_影响组件：[TipsDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[ConfirmDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[AlertDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_17\_\_\_  
-[SelectDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-[CustomContentDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、  
-[SubHeader]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_18\_\_\_  
-[AlphabetIndexer]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、[Popup]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、  
-[Button]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_19\_\_\_[Select]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、  
-[ToolBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_、[Search]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_20\_\_\_  
-[TimePicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_、  
-[DatePicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_13\_\_\_、  
-[TextPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_14\_\_\_。从API版本26.0.0开始，新增  
-[RichEditor]\_\_\_JSDOC\_LINK\_DESC\_USD\_15\_\_\_。
+高亮字体颜色。&lt;/br&gt;影响组件：[TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、  
+[ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md)、  
+[AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、&lt;/br&gt;  
+[SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md)、  
+[CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、  
+[SubHeader](arkts-arkui-advanced-subheader.md)、&lt;/br&gt;  
+[AlphabetIndexer](../../apis-arkui/arkts-components/arkts-arkui-alphabet_indexer-i)、[Popup](arkts-arkui-advanced-popup.md)、  
+[Button](../../apis-arkui/arkts-components/arkts-arkui-button-i)、&lt;/br&gt;[Select](../../apis-arkui/arkts-components/arkts-arkui-select-i)、  
+[ToolBar](arkts-arkui-advanced-toolbar.md)、[Search](../../apis-arkui/arkts-components/arkts-arkui-search-i)、&lt;/br&gt;  
+[TimePicker](../../apis-arkui/arkts-components/arkts-arkui-time_picker-i)、  
+[DatePicker](../../apis-arkui/arkts-components/arkts-arkui-date_picker-i)、  
+[TextPicker](../../apis-arkui/arkts-components/arkts-arkui-text_picker-i)。从API版本26.0.0开始，新增  
+[RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -585,9 +591,9 @@ fontEmphasize: ResourceColor
 fontFourth: ResourceColor
 ```
 
-四级文本字体颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+四级文本字体颜色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -605,9 +611,9 @@ fontFourth: ResourceColor
 fontOnFourth: ResourceColor
 ```
 
-四级文本反转颜色，用于彩色背景。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+四级文本反转颜色，用于彩色背景。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -625,10 +631,10 @@ fontOnFourth: ResourceColor
 fontOnPrimary: ResourceColor
 ```
 
-一级文本反转颜色，用于彩色背景。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_影响组件：[Badge]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Button]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_
+一级文本反转颜色，用于彩色背景。&lt;/br&gt;影响组件：[Badge](../../apis-arkui/arkts-components/arkts-arkui-badge-i)、  
+[Button](../../apis-arkui/arkts-components/arkts-arkui-button-i)、[Chip](arkts-arkui-advanced-chip.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -646,9 +652,9 @@ fontOnPrimary: ResourceColor
 fontOnSecondary: ResourceColor
 ```
 
-二级文本反转颜色，用于彩色背景。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+二级文本反转颜色，用于彩色背景。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -666,9 +672,9 @@ fontOnSecondary: ResourceColor
 fontOnTertiary: ResourceColor
 ```
 
-三级文本反转颜色，用于彩色背景。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+三级文本反转颜色，用于彩色背景。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -686,29 +692,29 @@ fontOnTertiary: ResourceColor
 fontPrimary: ResourceColor
 ```
 
-一级文本字体颜色。\_\_\_HTML\_TAG\_DESC\_USD\_30\_\_\_影响组件：[EditableTitleBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[LoadingDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[TipsDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_31\_\_\_  
-[ConfirmDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-[AlertDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、  
-[SelectDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_32\_\_\_  
-[CustomContentDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、  
-[Swiper]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_33\_\_\_  
-[SubHeader]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、[ProgressButton]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_、  
-[AlphabetIndexer]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_34\_\_\_  
-[Popup]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_、[Select]\_\_\_JSDOC\_LINK\_DESC\_USD\_13\_\_\_、  
-[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_14\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_35\_\_\_[ToolBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_15\_\_\_、  
-[Menu]\_\_\_JSDOC\_LINK\_DESC\_USD\_16\_\_\_、[TextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_17\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_36\_\_\_  
-[Search]\_\_\_JSDOC\_LINK\_DESC\_USD\_18\_\_\_、[TimePicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_19\_\_\_、  
-[DatePicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_20\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_37\_\_\_  
-[TextPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_21\_\_\_、  
-[ComposeListItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_22\_\_\_、[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_23\_\_\_。从API版本26.0.0开始，新增[CalendarPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_24\_\_\_、  
-[UIPickerComponent]\_\_\_JSDOC\_LINK\_DESC\_USD\_25\_\_\_、  
-[RichEditor]\_\_\_JSDOC\_LINK\_DESC\_USD\_26\_\_\_、[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_27\_\_\_、  
-[MenuItemGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_28\_\_\_、  
-[Counter]\_\_\_JSDOC\_LINK\_DESC\_USD\_29\_\_\_。
+一级文本字体颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar.md)、  
+[LoadingDialog](arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md)、  
+[TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、&lt;/br&gt;  
+[ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md)、  
+[AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、  
+[SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md)、&lt;/br&gt;  
+[CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、  
+[Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-i)、[Text](../../apis-arkui/arkts-components/arkts-arkui-text-i)、&lt;/br&gt;  
+[SubHeader](arkts-arkui-advanced-subheader.md)、[ProgressButton](arkts-arkui-advanced-progressbutton.md)、  
+[AlphabetIndexer](../../apis-arkui/arkts-components/arkts-arkui-alphabet_indexer-i)、&lt;/br&gt;  
+[Popup](arkts-arkui-advanced-popup.md)、[Select](../../apis-arkui/arkts-components/arkts-arkui-select-i)、  
+[Chip](arkts-arkui-advanced-chip.md)、&lt;/br&gt;[ToolBar](arkts-arkui-advanced-toolbar.md)、  
+[Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-i)、[TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)、&lt;/br&gt;  
+[Search](../../apis-arkui/arkts-components/arkts-arkui-search-i)、[TimePicker](../../apis-arkui/arkts-components/arkts-arkui-time_picker-i)、  
+[DatePicker](../../apis-arkui/arkts-components/arkts-arkui-date_picker-i)、&lt;/br&gt;  
+[TextPicker](../../apis-arkui/arkts-components/arkts-arkui-text_picker-i)、  
+[ComposeListItem](arkts-arkui-advanced-composelistitem.md)、[TreeView](arkts-arkui-advanced-treeview.md)。从API版本26.0.0开始，新增[CalendarPicker](../../apis-arkui/arkts-components/arkts-arkui-calendar_picker-i)、  
+[UIPickerComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_picker_component-i)、  
+[RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i)、[MenuItem](../../apis-arkui/arkts-components/arkts-arkui-menu_item-i)、  
+[MenuItemGroup](../../apis-arkui/arkts-components/arkts-arkui-menu_item_group-i)、  
+[Counter](../../apis-arkui/arkts-components/arkts-arkui-counter-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -726,16 +732,16 @@ fontPrimary: ResourceColor
 fontSecondary: ResourceColor
 ```
 
-二级文本字体颜色。\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_影响组件：[EditableTitleBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[AlertDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[CustomContentDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_  
-[SubHeader]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-[AlphabetIndexer]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、[Popup]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_[TextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、[Search]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、  
-[ComposeListItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_  
-[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、[TextClock]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_。从API版本26.0.0开始，新增[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_、  
-[MenuItemGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_。
+二级文本字体颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar.md)、  
+[AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、  
+[CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、&lt;/br&gt;  
+[SubHeader](arkts-arkui-advanced-subheader.md)、  
+[AlphabetIndexer](../../apis-arkui/arkts-components/arkts-arkui-alphabet_indexer-i)、[Popup](arkts-arkui-advanced-popup.md)、&lt;/br&gt;[TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)、[Search](../../apis-arkui/arkts-components/arkts-arkui-search-i)、  
+[ComposeListItem](arkts-arkui-advanced-composelistitem.md)、&lt;/br&gt;  
+[TreeView](arkts-arkui-advanced-treeview.md)、[TextClock](../../apis-arkui/arkts-components/arkts-arkui-text_clock-i)。从API版本26.0.0开始，新增[MenuItem](../../apis-arkui/arkts-components/arkts-arkui-menu_item-i)、  
+[MenuItemGroup](../../apis-arkui/arkts-components/arkts-arkui-menu_item_group-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -753,9 +759,9 @@ fontSecondary: ResourceColor
 fontTertiary: ResourceColor
 ```
 
-三级文本字体颜色。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[ComposeListItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+三级文本字体颜色。&lt;/br&gt;影响组件：[ComposeListItem](arkts-arkui-advanced-composelistitem.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -773,9 +779,9 @@ fontTertiary: ResourceColor
 iconEmphasize: ResourceColor
 ```
 
-高亮图标颜色。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[ToolBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+高亮图标颜色。&lt;/br&gt;影响组件：[ToolBar](arkts-arkui-advanced-toolbar.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -793,10 +799,10 @@ iconEmphasize: ResourceColor
 iconFourth: ResourceColor
 ```
 
-四级图标颜色。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_影响组件：[Checkbox]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[CheckboxGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Radio]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_
+四级图标颜色。&lt;/br&gt;影响组件：[Checkbox](../../apis-arkui/arkts-components/arkts-arkui-checkbox-i)、  
+[CheckboxGroup](../../apis-arkui/arkts-components/arkts-arkui-checkboxgroup-i)、[Radio](../../apis-arkui/arkts-components/arkts-arkui-radio-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -814,9 +820,9 @@ iconFourth: ResourceColor
 iconOnFourth: ResourceColor
 ```
 
-四级图标反转颜色，用于彩色背景。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[ProgressButton]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+四级图标反转颜色，用于彩色背景。&lt;/br&gt;影响组件：[ProgressButton](arkts-arkui-advanced-progressbutton.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -834,10 +840,10 @@ iconOnFourth: ResourceColor
 iconOnPrimary: ResourceColor
 ```
 
-一级图标反转颜色，用于彩色背景。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_影响组件：[Checkbox]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[CheckboxGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Radio]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_
+一级图标反转颜色，用于彩色背景。&lt;/br&gt;影响组件：[Checkbox](../../apis-arkui/arkts-components/arkts-arkui-checkbox-i)、  
+[CheckboxGroup](../../apis-arkui/arkts-components/arkts-arkui-checkboxgroup-i)、[Radio](../../apis-arkui/arkts-components/arkts-arkui-radio-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -855,9 +861,9 @@ iconOnPrimary: ResourceColor
 iconOnSecondary: ResourceColor
 ```
 
-二级图标反转颜色，用于彩色背景。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+二级图标反转颜色，用于彩色背景。&lt;/br&gt;影响组件：[Chip](arkts-arkui-advanced-chip.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -875,9 +881,9 @@ iconOnSecondary: ResourceColor
 iconOnTertiary: ResourceColor
 ```
 
-三级图标反转颜色，用于彩色背景。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+三级图标反转颜色，用于彩色背景。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -895,12 +901,12 @@ iconOnTertiary: ResourceColor
 iconPrimary: ResourceColor
 ```
 
-一级图标颜色。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_影响组件：[EditableTitleBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Swiper]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[ToolBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_  
-[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_。从API版本26.0.0开始，新增  
-[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_。
+一级图标颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar.md)、  
+[Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-i)、[ToolBar](arkts-arkui-advanced-toolbar.md)、&lt;/br&gt;  
+[TreeView](arkts-arkui-advanced-treeview.md)。从API版本26.0.0开始，新增  
+[MenuItem](../../apis-arkui/arkts-components/arkts-arkui-menu_item-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -918,13 +924,13 @@ iconPrimary: ResourceColor
 iconSecondary: ResourceColor
 ```
 
-二级图标颜色。\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_影响组件：[LoadingDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[SubHeader]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_[Popup]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[Search]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_  
-[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_。从API版本26.0.0开始，新增  
-[LoadingProgress]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_。
+二级图标颜色。&lt;/br&gt;影响组件：[LoadingDialog](arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md)、  
+[SubHeader](arkts-arkui-advanced-subheader.md)、&lt;/br&gt;[Popup](arkts-arkui-advanced-popup.md)、  
+[Chip](arkts-arkui-advanced-chip.md)、[Search](../../apis-arkui/arkts-components/arkts-arkui-search-i)、&lt;/br&gt;  
+[TreeView](arkts-arkui-advanced-treeview.md)。从API版本26.0.0开始，新增  
+[LoadingProgress](../../apis-arkui/arkts-components/arkts-arkui-loading_progress-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -942,9 +948,9 @@ iconSecondary: ResourceColor
 iconSubEmphasize: ResourceColor
 ```
 
-高亮辅助图标颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_影响组件：暂无组件使用。
+高亮辅助图标颜色。&lt;/br&gt;影响组件：暂无组件使用。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -962,9 +968,9 @@ iconSubEmphasize: ResourceColor
 iconTertiary: ResourceColor
 ```
 
-三级图标颜色。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[SubHeader]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+三级图标颜色。&lt;/br&gt;影响组件：[SubHeader](arkts-arkui-advanced-subheader.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -982,9 +988,9 @@ iconTertiary: ResourceColor
 interactiveActive: ResourceColor
 ```
 
-通用激活交互式颜色。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+通用激活交互式颜色。&lt;/br&gt;影响组件：[TreeView](arkts-arkui-advanced-treeview.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -1002,10 +1008,10 @@ interactiveActive: ResourceColor
 interactiveClick: ResourceColor
 ```
 
-通用点击交互式颜色。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_影响组件：从API版本26.0.0开始，新增[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Select]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+通用点击交互式颜色。&lt;/br&gt;影响组件：从API版本26.0.0开始，新增[MenuItem](../../apis-arkui/arkts-components/arkts-arkui-menu_item-i)、  
+[Select](../../apis-arkui/arkts-components/arkts-arkui-select-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -1023,10 +1029,10 @@ interactiveClick: ResourceColor
 interactiveFocus: ResourceColor
 ```
 
-通用获焦交互式颜色。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_影响组件：[EditableTitleBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_
+通用获焦交互式颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar.md)、  
+[Chip](arkts-arkui-advanced-chip.md)、[TreeView](arkts-arkui-advanced-treeview.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -1044,12 +1050,12 @@ interactiveFocus: ResourceColor
 interactiveHover: ResourceColor
 ```
 
-通用悬停交互式颜色。\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_影响组件：[EditableTitleBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_。从API版本26.0.0开始，新增  
-[RichEditor]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、  
-[Select]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_。
+通用悬停交互式颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar.md)、  
+[Chip](arkts-arkui-advanced-chip.md)、[TreeView](arkts-arkui-advanced-treeview.md)。从API版本26.0.0开始，新增  
+[RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i)、[MenuItem](../../apis-arkui/arkts-components/arkts-arkui-menu_item-i)、  
+[Select](../../apis-arkui/arkts-components/arkts-arkui-select-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -1067,11 +1073,11 @@ interactiveHover: ResourceColor
 interactivePressed: ResourceColor
 ```
 
-通用按压交互式颜色。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_影响组件：[EditableTitleBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_。从API版本26.0.0开始，新增  
-[RichEditor]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_。
+通用按压交互式颜色。&lt;/br&gt;影响组件：[EditableTitleBar](arkts-arkui-advanced-editabletitlebar.md)、  
+[Chip](arkts-arkui-advanced-chip.md)、[TreeView](arkts-arkui-advanced-treeview.md)。从API版本26.0.0开始，新增  
+[RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -1089,9 +1095,9 @@ interactivePressed: ResourceColor
 interactiveSelect: ResourceColor
 ```
 
-通用选择交互式颜色。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_影响组件：[TreeView]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+通用选择交互式颜色。&lt;/br&gt;影响组件：[TreeView](arkts-arkui-advanced-treeview.md)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -1111,7 +1117,7 @@ onPrimary?: ResourceColor
 
 系统主题反色的颜色值。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.0.0
 
@@ -1131,7 +1137,7 @@ primary?: ResourceColor
 
 系统主色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.0.0
 
@@ -1149,12 +1155,12 @@ primary?: ResourceColor
 warning: ResourceColor
 ```
 
-一级警示色。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_影响组件：[TipsDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[AlertDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[CustomContentDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_  
-[Badge]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[Button]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_
+一级警示色。&lt;/br&gt;影响组件：[TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、  
+[AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、  
+[CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、&lt;/br&gt;  
+[Badge](../../apis-arkui/arkts-components/arkts-arkui-badge-i)、[Button](../../apis-arkui/arkts-components/arkts-arkui-button-i)
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 

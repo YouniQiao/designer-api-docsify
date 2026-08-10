@@ -26,7 +26,7 @@ Called when the Screen is used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | long | Yes | indicates the identifier of a screen.  |
+| screenId | long | Yes | indicates the identifier of a screen. |
 
 ## Summary
 

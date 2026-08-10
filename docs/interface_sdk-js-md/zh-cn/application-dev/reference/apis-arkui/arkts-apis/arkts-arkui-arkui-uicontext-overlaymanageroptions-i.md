@@ -1,6 +1,6 @@
 # OverlayManagerOptions
 
-初始化[OverlayManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_时所用参数。
+初始化[OverlayManager](arkts-arkui-uicontext.md)时所用参数。
 
 **起始版本：** 23
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## onBackPress
 
 ```TypeScript
@@ -17,8 +23,7 @@ onBackPress?: OnOverlayBackPressCallback
 ```
 
 Callback for intercepting back-press events on an overlay.  
-**NOTE**  
-1. When this callback is registered and **enableBackPressedEvent** is set to **true**,the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components.2. Return **true** to intercept the event (the event is consumed and will not be passed to lower layers), or **false** to allow the event to propagate through to the components below the overlay.
+**NOTE：**1. When this callback is registered and **enableBackPressedEvent** is set to **true**, the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback  to decide whether the event should be propagated to the underlying components.2. Return **true** to intercept the event (the event is consumed and will not be passed  to lower layers), or **false** to allow the event to propagate through to the components  below the overlay.
 
 **起始版本：** 26.0.0
 

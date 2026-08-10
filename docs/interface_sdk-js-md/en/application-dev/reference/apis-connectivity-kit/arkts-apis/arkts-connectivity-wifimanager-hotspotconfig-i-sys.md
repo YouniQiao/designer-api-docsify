@@ -12,6 +12,12 @@ Wi-Fi hotspot configuration information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## band
 
 ```TypeScript
@@ -20,7 +26,7 @@ band: int
 
 The frequency band of the Wi-Fi hotspot
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -40,7 +46,7 @@ channel?: int
 
 The channel of the Wi-Fi hotspot.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -80,7 +86,7 @@ maxConn: int
 
 The maximum number of connections allowed by the Wi-Fi hotspot
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -120,7 +126,7 @@ securityType: WifiSecurityType
 
 The encryption mode of the Wi-Fi hotspot
 
-**Type:** WifiSecurityType
+**Type:** [WifiSecurityType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-wifisecuritytype-e.md)
 
 **Since:** 9
 

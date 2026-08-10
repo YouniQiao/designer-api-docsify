@@ -1,12 +1,18 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## on('scanDeviceAdd')
 
 ```TypeScript
 function on(type: 'scanDeviceAdd', callback: Callback<ScannerDevice>): void
 ```
 
-Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result.
+注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。
 
 **Since:** 20
 
@@ -24,17 +30,17 @@ Registers a callback used to listen for the scanner addition event. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scanDeviceAdd' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScannerDevice&gt; | Yes | Callback used to return the added scanner. |
+| type | 'scanDeviceAdd' | Yes | 事件类型。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | 回调函数，返回扫描仪设备添加信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';
@@ -51,7 +57,7 @@ scan.on('scanDeviceAdd', (device: scan.ScannerDevice) => {
 function on(type: 'scanDeviceDel', callback: Callback<ScannerDevice>): void
 ```
 
-Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result.
+注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。
 
 **Since:** 20
 
@@ -69,17 +75,17 @@ Registers a callback used to listen for the scanner deletion event. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scanDeviceDel' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScannerDevice&gt; | Yes | Callback used to return the deleted scanner. |
+| type | 'scanDeviceDel' | Yes | 事件类型。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | 回调函数，返回扫描仪设备删除信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

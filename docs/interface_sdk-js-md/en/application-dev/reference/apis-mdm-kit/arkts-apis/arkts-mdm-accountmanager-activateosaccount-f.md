@@ -1,12 +1,18 @@
 # activateOsAccount
 
+## Modules to Import
+
+```TypeScript
+import { accountManager } from 'kits/@kit.MDMKit';
+```
+
 ## activateOsAccount
 
 ```TypeScript
 function activateOsAccount(admin: Want, accountId: number): Promise<void>
 ```
 
-Switches the system account. Currently, this API is supported only on phones and tablets, and can only switch between normal system accounts created via [createNormalOsAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and the default system account (ID: 100).
+切换系统账号。当前仅支持手机、平板设备使用，只能在[createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createnormalosaccount)创建的普通系统账号和默认系统账号 (ID为100) 之间切换。
 
 **Since:** 26.0.0
 
@@ -24,25 +30,52 @@ Switches the system account. Currently, this API is supported only on phones and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | System account ID. If you switch to a system account that does not exist, error code 9200012 is reported. If you switch to a restricted system account, for example, a system account created via [addOsAccountAsync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, error code 9201041 is reported. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| accountId | number | Yes | 系统账号ID。切换不存在的系统账号，会报错误码9200012。切换受限制的系统账号，例如使用 [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addosaccountasync)创建的系统账号，会报错误码9201041。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. If the operation fails., an error object is thrown. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当切换系统账号失败时，会抛出错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) | Service timeout. |
-| [9201041](../errorcode-enterpriseDeviceManager.md#9201041-system-account-type-restricted) | Restricted account. |
-| [9201046](../errorcode-enterpriseDeviceManager.md#9201046-signedin-system-account-count-reached-the-upper-limit) | The number of signed-in accounts reaches the upper limit. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 9200012 | Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9201046 | The number of signed-in accounts reaches the upper limit. |
+| 9200016 | Service timeout. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9201041 | Restricted account. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
+
+```TypeScript
+import { accountManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Create a normal system account.
+accountManager.createNormalOsAccount(wantTemp, "TestAccountName").then((accountInfo: osAccount.OsAccountInfo) => {
+  console.info('Succeeded in creating normal os account, accountInfo: ' + JSON.stringify(accountInfo));
+  // Switch the account based on the system account ID.
+  let accountId: number = accountInfo.localId;
+  return accountManager.activateOsAccount(wantTemp, accountId);
+}).then(() => {
+  console.info('Succeeded in activating os account');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create and activate normal os account: code is ${err.code}, message is ${err.message}`);
+});
+```
 

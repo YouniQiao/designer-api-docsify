@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## appVolume
 
 ```TypeScript
@@ -20,7 +26,7 @@ appVolume: int
 
 应用的音量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -42,7 +48,7 @@ clientUid: int
 
 音频应用的Uid。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -64,7 +70,7 @@ volumeType: AudioVolumeType
 
 当前音频流的音量类型。
 
-**类型：** AudioVolumeType
+**类型：** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md)
 
 **起始版本：** 24
 

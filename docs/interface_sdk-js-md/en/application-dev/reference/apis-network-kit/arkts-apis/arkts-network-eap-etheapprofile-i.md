@@ -10,6 +10,12 @@ Eth EAP profile.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
+## Modules to Import
+
+```TypeScript
+import { eap } from 'kits/@kit.NetworkKit';
+```
+
 ## altSubjectMatch
 
 ```TypeScript
@@ -162,7 +168,7 @@ eapMethod: EapMethod
 
 EAP authentication method
 
-**Type:** EapMethod
+**Type:** [EapMethod](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-eapmethod-e.md)
 
 **Since:** 20
 
@@ -234,7 +240,7 @@ phase2Method: Phase2Method
 
 Phase 2 authentication method
 
-**Type:** Phase2Method
+**Type:** [Phase2Method](arkts-network-eap-phase2method-e.md)
 
 **Since:** 20
 

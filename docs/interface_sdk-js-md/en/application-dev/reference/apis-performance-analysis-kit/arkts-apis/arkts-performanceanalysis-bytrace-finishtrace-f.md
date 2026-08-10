@@ -6,11 +6,11 @@
 function finishTrace(name: string, taskId: number): void
 ```
 
-Marks the end of a timeslice trace task.
-    **NOTE**  
-    
-    To stop a trace task, the values of name and task ID in **finishTrace** must be the same as those in  
-    **startTrace**.
+标记一个时间片跟踪事件的结束。
+
+> **说明：**
+> 
+> finishTrace的name和taskId必须与流程开始的startTrace对应参数值一致。
 
 **Since:** 7
 
@@ -28,10 +28,10 @@ Marks the end of a timeslice trace task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of a timeslice trace task. |
-| taskId | number | Yes | ID of a timeslice trace task. |
+| name | string | Yes | 时间片跟踪任务名称，必须与startTrace调用时的name参数值一致。 |
+| taskId | number | Yes | 时间片跟踪任务id，必须与startTrace调用时的taskId参数值一致。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 bytrace.finishTrace("myTestFunc", 1);

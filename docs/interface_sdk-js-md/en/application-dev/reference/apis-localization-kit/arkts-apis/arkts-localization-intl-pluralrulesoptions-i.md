@@ -1,7 +1,6 @@
 # PluralRulesOptions
 
-Defines the options for creating a **PluralRules** object. Since API version 9, the **PluralRulesOptions**  
-attribute is changed from mandatory to optional.
+创建单复数对象时可设置的配置项。从API version 9开始，PluralRulesOptions的属性由必填改为可选。
 
 **Since:** 8
 
@@ -15,15 +14,24 @@ attribute is changed from mandatory to optional.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
+
 ## localeMatcher
 
 ```TypeScript
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be **lookup** or **best fit**.
+从API version 8开始支持，从API version 20开始废弃，建议使用Intl.PluralRulesOptions.localeMatcher替代，用法参考  
+[Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)。
 
-The default value is **best fit**.
+区域匹配算法，取值包括："best fit", "lookup"。
+
+默认值：best fit。
 
 **Type:** string
 
@@ -47,9 +55,12 @@ The default value is **best fit**.
 maximumFractionDigits?: int
 ```
 
-Maximum number of digits in the fraction part of a number. The value ranges from **1** to **21**.
+从API version 8开始支持，从API version 20开始废弃，建议使用Intl.PluralRulesOptions.maximumFractionDigits替代，用法参考  
+[Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)。
 
-The default value is **3**.
+表示要使用的最大分数位数，取值范围：[1, 21]，小于1时取值为1，大于21时取值为21。
+
+默认值：3。
 
 **Type:** int
 
@@ -73,9 +84,12 @@ The default value is **3**.
 maximumSignificantDigits?: int
 ```
 
-Maximum number of the least significant digits. The value ranges from **1** to **21**.
+从API version 8开始支持，从API version 20开始废弃，建议使用Intl.PluralRulesOptions.maximumSignificantDigits替代，用法参考  
+[Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)。
 
-The default value is **21**.
+表示要使用的最大有效位数，取值范围：[1, 21]，小于1时取值为1，大于21时取值为21。
+
+默认值：21。
 
 **Type:** int
 
@@ -99,9 +113,12 @@ The default value is **21**.
 minimumFractionDigits?: int
 ```
 
-Minimum number of digits in the fraction part of a number. The value ranges from **0** to **20**.
+从API version 8开始支持，从API version 20开始废弃，建议使用Intl.PluralRulesOptions.minimumFractionDigits替代，用法参考  
+[Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)。
 
-The default value is **0**.
+表示要使用的最小分数位数，取值范围：[0, 20]，小于0时取值为0，大于20时取值为20。
+
+默认值：0。
 
 **Type:** int
 
@@ -125,9 +142,12 @@ The default value is **0**.
 minimumIntegerDigits?: int
 ```
 
-Minimum number of digits allowed in the integer part of a number. The value ranges from **1** to **21**.
+从API version 8开始支持，从API version 20开始废弃，建议使用Intl.PluralRulesOptions.minimumIntegerDigits替代，用法参考  
+[Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)。
 
-The default value is **1**.
+表示要使用的最小整数位数，取值范围：[1, 21]，小于1时取值为1，大于21时取值为21。
+
+默认值：1。
 
 **Type:** int
 
@@ -151,9 +171,12 @@ The default value is **1**.
 minimumSignificantDigits?: int
 ```
 
-Minimum number of the least significant digits. The value ranges from **1** to **21**.
+从API version 8开始支持，从API version 20开始废弃，建议使用Intl.PluralRulesOptions.minimumSignificantDigits替代，用法参考  
+[Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)。
 
-The default value is **1**.
+表示要使用的最小有效位数，取值范围：[1, 21]，小于1时取值为1，大于21时取值为21。
+
+默认值：1。
 
 **Type:** int
 
@@ -177,11 +200,14 @@ The default value is **1**.
 type?: string
 ```
 
-Collation type. The value can be **cardinal** or **ordinal**.
+从API version 8开始支持，从API version 20开始废弃，建议使用Intl.PluralRulesOptions.type替代，用法参考  
+[Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)。
 
-The default value is **cardinal**.
+排序的类型，取值包括："cardinal", "ordinal",
 
-The value **cardinal** indicates a cardinal number and the value **ordinal** indicates an ordinal number.
+默认值：cardinal。
+
+- cardinal：基数词，ordinal：序数词。
 
 **Type:** string
 

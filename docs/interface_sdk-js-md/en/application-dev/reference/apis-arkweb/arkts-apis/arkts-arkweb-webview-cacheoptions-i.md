@@ -10,6 +10,12 @@ Options of generating code cache
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## responseHeaders
 
 ```TypeScript

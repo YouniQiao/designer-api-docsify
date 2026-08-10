@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -40,10 +46,10 @@ bundleName?: string
 intentFlags: int
 ```
 
-意图信息（[InsightIntentInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考  
-[GetInsightIntentFlag]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考  
+[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -111,9 +117,9 @@ userId?: int
 
 **说明：**
 
-如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限`ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

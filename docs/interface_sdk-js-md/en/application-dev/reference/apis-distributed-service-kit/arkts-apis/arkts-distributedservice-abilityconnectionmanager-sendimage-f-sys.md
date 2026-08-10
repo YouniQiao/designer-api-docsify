@@ -1,5 +1,11 @@
 # sendImage (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## sendImage
 
 ```TypeScript
@@ -24,9 +30,9 @@ Send image data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Ability connection Session id. |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Ability connection Session id. |
 | image | image.PixelMap | Yes | image data to be sent. |
-| quality | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | image compression quality, range 0~100, default 30. |
+| quality | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | image compression quality, range 0~100, default 30. |
 
 **Return value:**
 
@@ -38,17 +44,17 @@ Send image data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 import { image } from '@kit.ImageKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit';
 
 try {
   let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
@@ -61,7 +67,7 @@ try {
     return;
     }
 
-    let file = fs.openSync(photoSelectResult.photoUris[0], fs.OpenMode.READ_ONLY);
+    let file = fileIo.openSync(photoSelectResult.photoUris[0], fileIo.OpenMode.READ_ONLY);
     hilog.info(0x0000, 'testTag', 'file.fd:' + file.fd);
 
     let sessionId = 100;

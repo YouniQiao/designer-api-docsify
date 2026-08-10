@@ -1,9 +1,9 @@
 # RotationChangeResult
 
-Describes the information returned by the application during window rotation changes. The system uses the information to adjust the size of the current window rectangle. If the returned information is about the rotation change of the main window, the system does not change the size of the main window.
+应用在窗口旋转变化时返回的信息，系统会根据此信息改变当前窗口矩形区域大小。当返回主窗口旋转变化的信息时，系统不改变主窗口的大小。
 
-There are limitations on the size of application windows and system windows. For details about specific restrictions and rules, see  
-[resize]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+应用窗口与系统窗口大小存在限制，具体限制与相关规则可见  
+[resize](arkts-arkui-window-window-i.md#resize)。
 
 **Since:** 19
 
@@ -13,15 +13,21 @@ There are limitations on the size of application windows and system windows. For
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## rectType
 
 ```TypeScript
 rectType: RectType
 ```
 
-Type of window rectangle coordinate system.
+窗口矩形区域坐标系类型。
 
-**Type:** RectType
+**Type:** [RectType](arkts-arkui-window-recttype-e.md)
 
 **Since:** 19
 
@@ -39,9 +45,9 @@ Type of window rectangle coordinate system.
 windowRect: Rect
 ```
 
-Information about the window's rectangle relative to the screen or parent window coordinate system.
+相对于屏幕或父窗坐标系的窗口矩形区域信息。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 19
 

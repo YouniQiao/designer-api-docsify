@@ -1,5 +1,11 @@
 # getHash
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## getHash
 
 ```TypeScript
@@ -20,7 +26,7 @@ Get the hash code of an object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The object that need to get hash code. |
+| obj | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | Yes | The object that need to get hash code. |
 
 **Return value:**
 

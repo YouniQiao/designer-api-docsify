@@ -10,6 +10,12 @@ Wi-Fi connection information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## chload
 
 ```TypeScript
@@ -18,7 +24,7 @@ chload: int
 
 The load value of this Wi-Fi connection. A greater value indicates a higher load.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -58,7 +64,7 @@ networkId: int
 
 The ID(uniquely identifies) of a Wi-Fi connection.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -78,7 +84,7 @@ snr: int
 
 The signal-to-noise ratio (SNR) of this Wi-Fi connection.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -98,7 +104,7 @@ suppState: SuppState
 
 The state of the supplicant of this Wi-Fi connection.
 
-**Type:** SuppState
+**Type:** [SuppState](arkts-connectivity-wifi-suppstate-e-sys.md)
 
 **Since:** 9
 

@@ -22,7 +22,7 @@ borderWidth: EdgeWidths
 
 子组件边框宽度信息
 
-**类型：** EdgeWidths
+**类型：** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
 
 **起始版本：** 9
 
@@ -46,7 +46,7 @@ margin: Margin
 
 子组件外边距信息
 
-**类型：** Margin
+**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **起始版本：** 9
 
@@ -70,7 +70,7 @@ padding: Padding
 
 子组件内边距信息
 
-**类型：** Padding
+**类型：** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
 
 **起始版本：** 9
 

@@ -1,6 +1,6 @@
 # ContactAttributes
 
-Provides a list of contact attributes, which are generally used as arguments.If **null** is passed, all attributes are queried by default.
+联系人属性列表，一般作为入参用来标识希望查询的联系人属性。当传入为null时，默认查询全部属性。
 
 **Since:** 7
 
@@ -10,15 +10,21 @@ Provides a list of contact attributes, which are generally used as arguments.If 
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## attributes
 
 ```TypeScript
 attributes: Attribute[]
 ```
 
-Indicates the contact attributes.
+联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。
 
-**Type:** Attribute[]
+**Type:** [Attribute](arkts-contacts-contact-attribute-e.md)[]
 
 **Since:** 7
 

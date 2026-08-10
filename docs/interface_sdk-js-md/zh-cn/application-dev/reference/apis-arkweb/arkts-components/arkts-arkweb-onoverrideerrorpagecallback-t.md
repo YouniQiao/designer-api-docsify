@@ -18,11 +18,11 @@ The callback of onOverrideErrorPage.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| errorPageEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The information of error.  |
+| errorPageEvent | [OnErrorReceiveEvent](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md) | 是 | The information of error. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | - Return an HTML text content encoded in Base64.  |
+| string | Return an HTML text content encoded in Base64. |
 

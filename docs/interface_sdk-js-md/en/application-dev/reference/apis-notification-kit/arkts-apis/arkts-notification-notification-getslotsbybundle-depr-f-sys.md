@@ -6,7 +6,7 @@
 function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-Obtains the notification slots of a specified application.This API uses an asynchronous callback to return the result.
+获取指定应用的所有通知通道（Callback形式）。
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ Obtains the notification slots of a specified application.This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | Yes | 获取通知通道回调函数。 |
 
 
 ## getSlotsByBundle
@@ -38,7 +38,7 @@ Obtains the notification slots of a specified application.This API uses an async
 function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>>
 ```
 
-Obtains the notification slots of a specified application. This API uses a promise to return the result.
+获取指定应用的所有通知通道（Promise形式）。
 
 **Since:** 7
 
@@ -60,11 +60,11 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | 以Promise形式返回获取指定应用的通知通道。 |
 

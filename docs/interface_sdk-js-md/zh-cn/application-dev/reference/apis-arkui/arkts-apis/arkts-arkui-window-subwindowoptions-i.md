@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## decorEnabled
 
 ```TypeScript
@@ -58,10 +64,10 @@ maximizeSupported?: boolean
 
 子窗口是否支持最大化特性。true表示子窗口支持最大化，false表示子窗口不支持最大化。不设置，则默认为false。
 
-该参数在支持并处于\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态的设备上可正常调用；在不支持  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_状态的设备上，作为入参使用时，对应接口不生效不报错；在支持但不处于  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_状态的设备上，作为入参使用时，对应接口不生效不报错，切换到  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_状态后生效。
+该参数在支持并处于[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备上可正常调用；在不支持  
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备上，作为入参使用时，对应接口不生效不报错；在支持但不处于  
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备上，作为入参使用时，对应接口不生效不报错，切换到  
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态后生效。
 
 **类型：** boolean
 
@@ -81,9 +87,9 @@ maximizeSupported?: boolean
 modalityType?: ModalityType
 ```
 
-子窗口模态类型，仅当子窗口启用模态属性时生效。不设置，则默认为WINDOW\_MODALITY。
+子窗口模态类型，仅当子窗口启用模态属性时生效。不设置，则默认为WINDOW_MODALITY。
 
-**类型：** ModalityType
+**类型：** [ModalityType](arkts-arkui-window-modalitytype-e.md)
 
 **起始版本：** 14
 
@@ -144,9 +150,9 @@ windowRect?: Rect
 ```
 
 子窗口矩形区域，其中子窗口存在大小限制，具体参考  
-[resize()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法。不设置且未调用[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_显示前，则默认为{left: 0,top: 0, width: 0, height: 0}。具体参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_开发指南。
+[resize()](arkts-arkui-window-window-i.md#resize)方法。不设置且未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)显示前，则默认为{left: 0, top: 0, width: 0, height: 0}。具体参考[设置应用子窗口](../../../windowmanager/application-window-stage.md#设置应用子窗口)开发指南。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 18
 
@@ -166,7 +172,7 @@ zLevel?: int
 
 子窗口层级级别，仅当子窗口未启用模态属性，即未设置isModal时生效。该参数是整数，取值范围为[-10000, 10000]，浮点数输入将向下取整。不设置，则默认为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

@@ -1,12 +1,18 @@
 # set (System API)
 
+## Modules to Import
+
+```TypeScript
+import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
+```
+
 ## set
 
 ```TypeScript
 function set(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Sets a value of the specified key. This API uses an asynchronous callback to return the result.
+设置系统参数key对应的值，使用callback异步回调。
 
 **Since:** 9
 
@@ -22,20 +28,20 @@ Sets a value of the specified key. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Target key. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_) are allowed. |
-| value | string | Yes | Value to set. The value can contain a maximum of 96 bytes (including the end character). |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | 待设置的系统参数key。最大长度128字节，只允许字母数字加"."，"-"，"@"，":"或"_"，不允许".."。 |
+| value | string | Yes | 待设置的系统参数值。最大长度96字节（包括结束符）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，异步设置系统参数。成功时err为undefined；失败时err为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-invalid-system-parameter-value) | Invalid system parameter value. |
-| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-operation-permission-denied) | The operation on the system permission is denied. |
-| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) | System internal error such as out memory or deadlock. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
+| 14700102 | Invalid system parameter value. |
+| 14700103 | The operation on the system permission is denied. |
+| 14700104 | System internal error such as out memory or deadlock. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -59,7 +65,7 @@ try {
 function set(key: string, value: string): Promise<void>
 ```
 
-Sets a value of the specified key. This API uses a promise to return the result.
+设置系统参数key对应的值，使用Promise异步回调。
 
 **Since:** 9
 
@@ -75,25 +81,25 @@ Sets a value of the specified key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Target key. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_) are allowed. |
-| value | string | Yes | Value to set. The value can contain a maximum of 96 bytes (including the end character). |
+| key | string | Yes | 待设置的系统参数key。最大长度128字节，只允许字母数字加"."，"-"，"@"，":"或"_"，不允许".."。 |
+| value | string | Yes | 待设置的系统参数值。最大长度96字节（包括结束符）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the execution result. |
+| Promise&lt;void&gt; | Promise实例，用于异步获取结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-invalid-system-parameter-value) | Invalid system parameter value. |
-| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-operation-permission-denied) | The operation on the system permission is denied. |
-| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) | System internal error such as out memory or deadlock. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
+| 14700102 | Invalid system parameter value. |
+| 14700103 | The operation on the system permission is denied. |
+| 14700104 | System internal error such as out memory or deadlock. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

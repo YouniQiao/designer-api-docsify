@@ -1,12 +1,18 @@
 # getPorts (System API)
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPorts
 
 ```TypeScript
 function getPorts(): Array<USBPort>
 ```
 
-Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty.
+获取所有物理USB端口描述信息。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处理。
 
 **Since:** 9
 
@@ -26,5 +32,5 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 | Type | Description |
 | --- | --- |
-| Array&lt;USBPort&gt; | List of physical USB ports. |
+| Array&lt;USBPort&gt; | USB端口描述信息列表。 |
 

@@ -12,6 +12,12 @@ Sendable PixelMap instance.
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## applyColorSpace
 
 ```TypeScript
@@ -46,12 +52,12 @@ This method is used to change color space of PixelMap.Pixel data will be changed
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
-| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) | Failed to convert the color space. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 62980115 | Invalid image parameter. |
+| 62980104 | Failed to initialize the internal object. |
+| 62980108 | Failed to convert the color space. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -93,7 +99,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 | --- | --- |
 | Promise&lt;PixelMap&gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -132,16 +138,16 @@ Obtains new pixelmap with alpha information.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | return the new image pixelmap. If the operation fails, an error message is returned. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | return the new image pixelmap. If the operation fails, an error message is returned. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -182,7 +188,7 @@ Crop the image. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -230,10 +236,10 @@ Crop the image.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -278,7 +284,7 @@ Image flipping. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -327,10 +333,10 @@ Image flipping.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -368,7 +374,7 @@ Obtains the number of bytes in each line of the image pixelmap.
 | --- | --- |
 | number | Number of bytes in each line. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -404,11 +410,11 @@ Get color space of pixelmap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | If the image data abnormal. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | If the image data unsupport. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
+| 62980115 | If the image parameter invalid. |
+| 62980101 | If the image data abnormal. |
+| 62980103 | If the image data unsupport. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -444,7 +450,7 @@ Obtains the density of the image pixelmap.
 | --- | --- |
 | number | The number of density, in ppi. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -478,7 +484,7 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 | --- | --- |
 | Promise&lt;image.ImageInfo&gt; | A Promise instance used to return the image pixelmap information. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -526,9 +532,9 @@ Get image information from image source.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -565,7 +571,7 @@ Obtains the total number of bytes of the image pixelmap.
 | --- | --- |
 | number | Total number of bytes. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -601,10 +607,10 @@ Marshalling PixelMap and write into MessageSequence.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. |
+| 62980097 | IPC error. |
+| 62980115 | Invalid image parameter. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // EntryAbility.ets
@@ -694,7 +700,7 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -740,10 +746,10 @@ Set the transparent rate of pixelmap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -786,7 +792,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -838,10 +844,10 @@ Reads image pixelmap data in an area.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -890,7 +896,7 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -936,10 +942,10 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -977,7 +983,7 @@ Releases this PixelMap object. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the instance release result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1024,7 +1030,7 @@ Image rotation. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1070,10 +1076,10 @@ Image rotation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1117,7 +1123,7 @@ Image zoom in width and height. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1166,10 +1172,10 @@ Image zoom in width and height.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1211,10 +1217,10 @@ This method is only used to set the colorspace property of PixelMap,while all pi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | If the operation invalid. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
+| 62980115 | If the image parameter invalid. |
+| 62980111 | If the operation invalid. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1260,7 +1266,7 @@ Image position transformation. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1308,10 +1314,10 @@ Image position transformation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1357,11 +1363,11 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. |
+| 62980097 | IPC error. |
+| 62980096 | The operation failed. |
+| 62980115 | Invalid image parameter. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // EntryAbility.ets
@@ -1451,7 +1457,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1501,10 +1507,10 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1552,7 +1558,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1608,10 +1614,10 @@ Writes image pixelmap data to the specified area.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 501 | Resource Unavailable. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

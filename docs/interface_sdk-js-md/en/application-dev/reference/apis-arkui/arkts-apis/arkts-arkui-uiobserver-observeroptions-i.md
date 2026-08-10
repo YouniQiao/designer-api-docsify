@@ -10,6 +10,12 @@ observer options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## id
 
 ```TypeScript

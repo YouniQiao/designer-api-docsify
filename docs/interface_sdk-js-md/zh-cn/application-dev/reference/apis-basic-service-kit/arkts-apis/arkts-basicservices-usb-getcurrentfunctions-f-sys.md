@@ -1,5 +1,11 @@
 # getCurrentFunctions（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getCurrentFunctions
 
 ```TypeScript
@@ -26,9 +32,9 @@ function getCurrentFunctions(): FunctionType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前的USB功能列表的数字组合掩码。 |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 当前的USB功能列表的数字组合掩码。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let ret = usb.getCurrentFunctions();

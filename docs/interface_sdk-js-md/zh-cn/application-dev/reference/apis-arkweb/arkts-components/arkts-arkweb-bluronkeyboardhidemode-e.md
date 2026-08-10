@@ -1,6 +1,6 @@
 # BlurOnKeyboardHideMode
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the web blurOnKeyboardHide mode.
+Enum type supplied to {@link blurOnKeyboardHideMode} for setting the web blurOnKeyboardHide mode.
 
 **起始版本：** 14
 

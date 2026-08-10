@@ -1,6 +1,6 @@
 # CaptureStartInfo
 
-Describes the capture start information.
+拍照开始信息。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Describes the capture start information.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## captureId
 
 ```TypeScript
 captureId: int
 ```
 
-ID of this capture action.
+拍照的ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -36,9 +42,9 @@ ID of this capture action.
 time: long
 ```
 
-Estimated duration when the sensor captures frames at the bottom layer in a single capture. If **-1** is reported, there is no estimated duration.
+预估的单次拍照底层出sensor采集帧时间，如果上报-1，代表没有预估时间。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 11
 

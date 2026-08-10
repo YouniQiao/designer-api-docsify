@@ -20,6 +20,6 @@ Defines the options for the AreaChangeEvent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oldValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Component area information before the change.  |
-| newValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Component area information after the change.  |
+| oldValue | [Area](arkts-arkui-area-i.md) | 是 | Component area information before the change. |
+| newValue | [Area](arkts-arkui-area-i.md) | 是 | Component area information after the change. |
 

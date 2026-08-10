@@ -10,6 +10,12 @@ Defines the configuration of creating pdf, related to {@Link createPdf} method.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## height
 
 ```TypeScript

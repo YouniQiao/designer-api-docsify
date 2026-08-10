@@ -1,7 +1,6 @@
 # GetInputDataOptions (System API)
 
-Represents a set of optional parameters for  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示[通知调用者获取数据](../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8)的可选参数集合。
 
 **Since:** 12
 
@@ -13,13 +12,19 @@ Represents a set of optional parameters for
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## challenge
 
 ```TypeScript
 challenge?: Uint8Array
 ```
 
-Challenge value, which is **undefined** by default.
+挑战值，默认为undefined。
 
 **Type:** Uint8Array
 

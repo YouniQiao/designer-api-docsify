@@ -10,6 +10,12 @@ Describes the change data of a media asset.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## assetAfterChange
 
 ```TypeScript
@@ -18,7 +24,7 @@ assetAfterChange: PhotoAssetChangeInfo | null
 
 Data of the media asset after change. In the case of asset deletion, **assetAfterChange** is null.
 
-**Type:** PhotoAssetChangeInfo \| null
+**Type:** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md) \| null
 
 **Since:** 20
 
@@ -36,7 +42,7 @@ assetBeforeChange: PhotoAssetChangeInfo | null
 
 Data of the media asset before change. In the case of asset addition, **assetBeforeChange** is null.
 
-**Type:** PhotoAssetChangeInfo \| null
+**Type:** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md) \| null
 
 **Since:** 20
 

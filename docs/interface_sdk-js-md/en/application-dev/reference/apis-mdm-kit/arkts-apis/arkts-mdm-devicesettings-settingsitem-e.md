@@ -1,6 +1,6 @@
 # SettingsItem
 
-Policy type.
+设置的策略类型。
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Policy type.
 DEVICE_NAME = 0
 ```
 
-Device name.
+设备名称。
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Device name.
 FLOATING_NAVIGATION = 1
 ```
 
-Three-key navigation.
+三键导航。
 
 **Since:** 24
 

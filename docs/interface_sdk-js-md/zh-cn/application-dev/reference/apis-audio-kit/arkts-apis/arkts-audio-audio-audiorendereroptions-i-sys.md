@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## originalAppIdInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ originalAppIdInfo?: AppIdInfo
 
 音频流的原始应用ID。
 
-**类型：** AppIdInfo
+**类型：** [AppIdInfo](arkts-audio-audio-appidinfo-i-sys.md)
 
 **起始版本：** 26.0.0
 

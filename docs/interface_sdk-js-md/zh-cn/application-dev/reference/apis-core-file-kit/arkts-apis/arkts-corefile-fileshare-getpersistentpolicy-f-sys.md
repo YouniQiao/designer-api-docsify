@@ -1,5 +1,11 @@
 # getPersistentPolicy（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## getPersistentPolicy
 
 ```TypeScript
@@ -26,7 +32,7 @@ function getPersistentPolicy(tokenID: int): Promise<Array<PolicyInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标应用的访问令牌标识。 |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的访问令牌标识。 |
 
 **返回值：**
 
@@ -38,16 +44,14 @@ function getPersistentPolicy(tokenID: int): Promise<Array<PolicyInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| 13900001 | Operation not permitted. |
-| 13900011 | Out of memory |
 | 13900020 | Invalid tokenID |
+| 801 | Capability not supported. |
+| 13900001 | Operation not permitted. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | The caller is not a system application. |
+| 13900011 | Out of memory |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,27 +69,6 @@ async function getPersistentPolicyExample() {
     });
   } catch (error) {
     console.error(`get persist policy failed with error, Code: ${error.code}, message: ${error.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function getPersistentPolicyExample() {
-  let tokenID = 537688848; // 系统应用可以通过bundleManager.getApplicationInfo获取。
-  try {
-    let policies = await fileShare.getPersistentPolicy(tokenID);
-    console.info("get persist policy success, policies count: " + policies.length + ".");
-    for (let policy of policies) {
-      console.info("Policy uri: " + policy.uri + ", operationMode: " + policy.operationMode);
-    }
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error("get persist policy failed with error:" + JSON.stringify(err));
   }
 }
 ```

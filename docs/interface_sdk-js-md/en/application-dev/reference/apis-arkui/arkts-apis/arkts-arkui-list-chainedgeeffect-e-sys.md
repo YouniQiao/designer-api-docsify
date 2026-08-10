@@ -1,0 +1,54 @@
+# ChainEdgeEffect (System API)
+
+链式动效边缘效果枚举。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare enum ChainEdgeEffect--><!--Device-unnamed-export declare enum ChainEdgeEffect-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## DEFAULT
+
+```TypeScript
+DEFAULT
+```
+
+Default edge effect. Compress the space in the drag direction and stretch the space in the opposite drag direction.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChainEdgeEffect-DEFAULT--><!--Device-ChainEdgeEffect-DEFAULT-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## STRETCH
+
+```TypeScript
+STRETCH
+```
+
+Stretch all space.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChainEdgeEffect-STRETCH--><!--Device-ChainEdgeEffect-STRETCH-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+

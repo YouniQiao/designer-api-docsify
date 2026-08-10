@@ -2,12 +2,13 @@
 
 ImageCreator类，作为图片的生产者，用于将图片写入到Surface中。
 
-在调用以下方法前需要先通过[image.createImageCreator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建ImageCreator实例，ImageCreator不支持多线程。
+在调用以下方法前需要先通过[image.createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator)创建ImageCreator实例，ImageCreator不支持多线程。
 
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-    **说明：**  
-    
-    - 本Interface首批接口从API version 9开始支持。
+由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 9
 
@@ -16,6 +17,12 @@ ImageCreator类，作为图片的生产者，用于将图片写入到Surface中�
 <!--Device-image-interface ImageCreator--><!--Device-image-interface ImageCreator-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
+
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
 
 ## dequeueImage
 
@@ -37,7 +44,7 @@ dequeueImage(callback: AsyncCallback<Image>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Image&gt; | 是 | 回调函数，当获取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | 是 | 回调函数，当获取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
 
 ## dequeueImage
 
@@ -82,7 +89,7 @@ off(type: 'imageRelease', callback?: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imageRelease' | 是 | 监听事件类型，如'imageRelease'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 回调函数。当移除注册成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数。当移除注册成功时，err为undefined，否则为错误对象。 |
 
 ## offImageRelease
 
@@ -104,7 +111,7 @@ Remove callback subscriptions when releasing buffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | Callback to be removed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback to be removed. |
 
 ## on('imageRelease')
 
@@ -127,7 +134,7 @@ on(type: 'imageRelease', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imageRelease' | 是 | 监听事件类型，如'imageRelease'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，当监听事件触发成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当监听事件触发成功，err为undefined，否则为错误对象。 |
 
 ## onImageRelease
 
@@ -149,7 +156,7 @@ Subscribe callback when releasing buffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the operation result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the operation result. |
 
 ## queueImage
 
@@ -171,8 +178,8 @@ queueImage(image: Image, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 绘制好的buffer图像。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，当将图片放入队列成功，err为undefined，否则为错误对象。 |
+| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | 是 | 绘制好的buffer图像。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当将图片放入队列成功，err为undefined，否则为错误对象。 |
 
 ## queueImage
 
@@ -194,7 +201,7 @@ queueImage(image: Image): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 绘制好的buffer图像。 |
+| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | 是 | 绘制好的buffer图像。 |
 
 **返回值：**
 
@@ -226,7 +233,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -262,7 +269,7 @@ readonly capacity: int
 
 同时访问的图像数。该参数仅作为期望值，实际capacity由设备硬件决定。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -280,7 +287,7 @@ readonly format: ImageFormat
 
 图像格式。
 
-**类型：** ImageFormat
+**类型：** [ImageFormat](arkts-image-image-imageformat-e.md)
 
 **起始版本：** 9
 

@@ -1,6 +1,6 @@
 # DownloadState
 
-Enumerates the full download states.
+全量下载任务状态的枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the full download states.
 RUNNING = 0
 ```
 
-Downloading.
+下载中未停止。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Downloading.
 COMPLETED = 1
 ```
 
-Downloaded.
+下载完成。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ Downloaded.
 STOPPED = 2
 ```
 
-Downloading stopped.
+下载停止。
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # WindowDensityInfo
 
-Describes the information about the display density of the screen where the window is located and the window's custom display density. It is a scale factor independent of pixel units, that is, a factor for scaling display size.
+窗口所在显示设备和窗口自定义的显示密度信息，是与像素单位无关的缩放系数，即显示大小缩放系数。
 
 **Since:** 15
 
@@ -10,16 +10,21 @@ Describes the information about the display density of the screen where the wind
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## customDensity
 
 ```TypeScript
 customDensity: double
 ```
 
-Custom display size scale factor of the window. The value ranges from 0.5 to 4.0. If this parameter is left unspecified, the system's display size scale factor is used. This parameter takes effect only for the main window. For the child window or system window, it is equivalent to the system's display size scale factor (  
-**systemDensity**).
+窗口自定义设置的显示大小缩放系数，该参数取值范围为0.5-4.0。未设置该参数时，将跟随系统显示大小缩放系数变化。该参数仅主窗口生效，在子窗或系统窗口上等于系统显示大小缩放系数(systemDensity)。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 15
 
@@ -37,9 +42,9 @@ Custom display size scale factor of the window. The value ranges from 0.5 to 4.0
 defaultDensity: double
 ```
 
-Default display size scale factor for the screen where the window is located. The value ranges from 0.5 to 4.0and varies with the screen.
+窗口所在屏幕的系统默认显示大小缩放系数，跟随窗口所在屏幕变化，该参数变化范围为0.5-4.0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 15
 
@@ -57,9 +62,9 @@ Default display size scale factor for the screen where the window is located. Th
 systemDensity: double
 ```
 
-System's display size scale factor for the screen where the window is located. The value ranges from 0.5 to 4.0and varies according to user settings.
+窗口所在屏幕的系统显示大小缩放系数，跟随用户设置变化，该参数变化范围为0.5-4.0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 15
 

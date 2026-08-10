@@ -1,6 +1,6 @@
 # CertValidationParams
 
-Parameters for certificate validation.
+证书验证的参数。
 
 **Since:** 26.0.0
 
@@ -10,17 +10,22 @@ Parameters for certificate validation.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## allowDownloadIntermediateCa
 
 ```TypeScript
 allowDownloadIntermediateCa?: boolean
 ```
 
-Whether to allow intermediate CA certificates to be downloaded from the network. The default value is **false**.  
-- **true**: attempts to use the issuer address in the certificate AIA extension to download the issuer  
-certificate when an intermediate certificate is missing in the certificate chain, resolving the incomplete certificate chain issue;  
-- **false**: intermediate CA certificates cannot be downloaded from the network.  
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_The download address is obtained from the certificate AIA extension. Only HTTP is supported. To use the network for download, you need to request the **ohos.permission.INTERNET** permission. For details about the permission configuration, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+是否允许从网络下载中间CA证书。默认值为false。  
+- true：当构建证书链缺失中间证书时，尝试使用证书AIA扩展中颁发者地址下载颁发者证书，解决证书链不完整的问题；  
+- false：不允许从网络下载中间的CA证书。  
+&lt;br&gt;下载地址从证书的AIA扩展中获取，仅支持HTTP。若要使用网络进行下载，需要申请ohos.permission.INTERNET权限。关于权限配置的详细信息，请参见声明权限[Declaring Permissions](../../../security/AccessToken/declare-permissions.md)。
 
 **Type:** boolean
 
@@ -44,7 +49,7 @@ certificate when an intermediate certificate is missing in the certificate chain
 date?: string
 ```
 
-Validation date, in the format of YYMMDDHHMMSSZ or YYYYMMDDHHMMSSZ. By default, the current system time is used.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Custom verification time is supported, which is applicable to scenarios such as offline verification of historical signatures.
+校验日期。格式为YYMMDDHHMMSSZ或YYYYMMDDHHMMSSZ，默认使用当前系统时间。&lt;br&gt;支持自定义验证时间，适用于离线验证历史签名等场景。
 
 **Type:** string
 
@@ -66,7 +71,7 @@ Validation date, in the format of YYMMDDHHMMSSZ or YYYYMMDDHHMMSSZ. By default, 
 emailAddresses?: Array<string>
 ```
 
-Email address list. Verify that the certificate contains the specified email address. The maximum number is 1.The maximum length of the email address is 128.
+邮箱地址。验证证书是否包含指定的邮箱地址。最大个数：1，邮箱地址最大长度：128。
 
 **Type:** Array&lt;string&gt;
 
@@ -88,7 +93,7 @@ Email address list. Verify that the certificate contains the specified email add
 hostnames?: Array<string>
 ```
 
-List of hostnames. Verify that the certificate's subject alternative name (SAN) or common name (CN) contains the specified hostname. Maximum number: 100; maximum length of each host name: 128.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Verification is successful as long as one of the hostnames is matched.
+主机名列表。验证证书的主体备用名（SAN）或通用名（CN）是否包含指定的主机名。最大个数：100，每个主机名最大长度：128。&lt;br&gt;只要匹配其中一个主机名即校验成功。
 
 **Type:** Array&lt;string&gt;
 
@@ -110,7 +115,7 @@ List of hostnames. Verify that the certificate's subject alternative name (SAN) 
 ignoreErrs?: Array<CertResult>
 ```
 
-Allows specific validation errors to be ignored. Maximum count: 8.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The errors that can be ignored include: ERR\_CERT\_NOT\_YET\_VALID, ERR\_CERT\_HAS\_EXPIRED,ERR\_UNKNOWN\_CRITICAL\_EXTENSION, ERR\_CRL\_NOT\_FOUND, ERR\_CRL\_NOT\_YET\_VALID, ERR\_CRL\_HAS\_EXPIRED,ERR\_OCSP\_RESPONSE\_NOT\_FOUND, ERR\_NETWORK\_TIMEOUT.
+允许忽略特定的验证错误。最大个数：8。&lt;br&gt;可忽略的错误包括：ERR_CERT_NOT_YET_VALID、ERR_CERT_HAS_EXPIRED、ERR_UNKNOWN_CRITICAL_EXTENSION、ERR_CRL_NOT_FOUND、ERR_CRL_NOT_YET_VALID、ERR_CRL_HAS_EXPIRED、ERR_OCSP_RESPONSE_NOT_FOUND、ERR_NETWORK_TIMEOUT。
 
 **Type:** Array&lt;CertResult&gt;
 
@@ -132,7 +137,7 @@ Allows specific validation errors to be ignored. Maximum count: 8.\_\_\_HTML\_TA
 keyUsage?: Array<KeyUsageType>
 ```
 
-Key usage list. Verify that the certificate's key usage extension includes the specified usage.Maximum count: 9.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The certificate must contain all specified key usages for verification to be successful.
+密钥用途列表。验证证书的密钥用途扩展是否包含指定的用途。最大个数：9。&lt;br&gt;证书必须包含所有指定的密钥用途才校验成功。
 
 **Type:** Array&lt;KeyUsageType&gt;
 
@@ -154,10 +159,9 @@ Key usage list. Verify that the certificate's key usage extension includes the s
 partialChain?: boolean
 ```
 
-Whether to allow partial chain validation. The default value is **false**.  
-- **true**: any certificate in the trusted certificates can be used as the trust anchor instead of the root  
-certificate;  
-- **false**: the root certificate must be traced during certificate chain construction.
+是否允许部分链验证。默认值为false。  
+- true：允许使用信任证书中的任意证书作为信任锚，而非必须追溯到根证书；  
+- false：构建证书链时必须追溯到根证书。
 
 **Type:** boolean
 
@@ -181,9 +185,9 @@ certificate;
 revokedParams?: X509CertRevokedParams
 ```
 
-Indicates the certificate revocation check parameter. Used to check whether a certificate is revoked. The configuration includes the CRL list, OCSP response data, and whether online check is allowed.
+证书吊销检查参数。用于检查证书是否被吊销。包含CRL列表、OCSP响应数据、是否允许在线检查等配置。
 
-**Type:** X509CertRevokedParams
+**Type:** [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)
 
 **Since:** 26.0.0
 
@@ -203,9 +207,9 @@ Indicates the certificate revocation check parameter. Used to check whether a ce
 trustSystemCa?: boolean
 ```
 
-Whether to trust the system CA. The default value is **false**.  
-- **true**: uses the system preset CA certificate library as a trust anchor;  
-- **false**: does not use the system preset CA certificate library as a trust anchor.
+是否信任系统CA。默认值为false。  
+- true：使用系统预置的CA证书库作为信任锚；  
+- false：不使用系统预置的CA证书库作为信任锚。
 
 **Type:** boolean
 
@@ -229,7 +233,7 @@ Whether to trust the system CA. The default value is **false**.
 trustedCerts?: Array<X509Cert>
 ```
 
-Trust certificate list. Specifies the trusted root certificate or intermediate CA certificate as the trust anchor for validation. Maximum count: 100.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_During verification, the certificate chain must trace back to a trusted certificate. You must set this parameter or set trustSystemCa to true.
+信任证书列表。指定信任的根证书或中间CA证书，作为验证的信任锚点。最大个数：100。&lt;br&gt;验证时，证书链须追溯至信任证书，必须设置此参数或将trustSystemCa设为true。
 
 **Type:** Array&lt;X509Cert&gt;
 
@@ -251,7 +255,7 @@ Trust certificate list. Specifies the trusted root certificate or intermediate C
 untrustedCerts?: Array<X509Cert>
 ```
 
-Indicates the list of untrusted certificates. An intermediate certificate is used only to construct a certificate chain and is not used as a trust anchor. Maximum count: 100.
+非信任证书列表。仅用于构建证书链的中间证书，不作为信任锚点。最大个数：100。
 
 **Type:** Array&lt;X509Cert&gt;
 
@@ -273,8 +277,8 @@ Indicates the list of untrusted certificates. An intermediate certificate is use
 userId?: Uint8Array
 ```
 
-User ID. Used to set the user identifier required for signature verification when verifying the SM2 certificate.Maximum length: 128 characters.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The most commonly used value in the SM2 certificate scenario is  
-[0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38].(The corresponding ASCII character string is 1234567812345678, 16 bytes.)Certificate revocation check is not supported after userId is set.
+用户ID。用于验证国密SM2证书时设置签名验证所需的用户标识符。最大长度：128。&lt;br&gt;国密证书场景最常用的值为  
+[0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38]（对应ASCII字符串为"1234567812345678"，16字节）。设置userId后不支持证书吊销检查。
 
 **Type:** Uint8Array
 
@@ -296,7 +300,7 @@ User ID. Used to set the user identifier required for signature verification whe
 validateDate?: boolean
 ```
 
-Indicates whether to verify the date. true: Verify the validity period of the certificate and CRL. false: The validity period of the certificate and CRL is not verified.
+是否校验日期。true：校验证书和CRL有效期；false：不校验证书和CRL有效期。
 
 **Type:** boolean
 

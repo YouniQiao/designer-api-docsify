@@ -12,6 +12,12 @@ AI Text Model Abstract Interface.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## cancelTextGeneration
 
 ```TypeScript
@@ -36,7 +42,7 @@ Cancel AI text generation task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id for cancel an AI text generation task. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value: range: [0, +∞] |
+| sessionId | int | Yes | The session id for cancel an AI text generation task. &lt;br&gt;Value: range: [0, +∞] |
 
 ## onComplain
 
@@ -62,9 +68,9 @@ User use complaint menu to complain the result of an AI-generated text task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id of AI text generation task. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value: range: [0, +∞] |
+| sessionId | int | Yes | The session id of AI text generation task. &lt;br&gt;Value: range: [0, +∞] |
 | request | string | Yes | The origin request for AI-generated text task. |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The result for AI-generated text task. |
+| result | [GenerateTextTaskResult](arkts-arkui-imagegeneration-generatetexttaskresult-i-sys.md) | Yes | The result for AI-generated text task. |
 
 ## requestTextGeneration
 
@@ -91,7 +97,7 @@ Request AI text generation task to get the generated text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id for requesting an AI text generation task. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value: range: [0, +∞] |
+| sessionId | int | Yes | The session id for requesting an AI text generation task. &lt;br&gt;Value: range: [0, +∞] |
 | value | string | Yes | Parameters for requesting an AI text generation task. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GenerateTextTaskPartialResult&gt; | Yes | the callback used to return the GenerateTextTaskPartialResult. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GenerateTextTaskPartialResult&gt; | Yes | the callback used to return the GenerateTextTaskPartialResult. |
 

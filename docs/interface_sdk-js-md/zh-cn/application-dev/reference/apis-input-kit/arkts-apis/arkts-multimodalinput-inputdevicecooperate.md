@@ -1,11 +1,12 @@
 # @ohos.multimodalInput.inputDeviceCooperate(Screen Hopping)
 
 键鼠穿越功能模块，提供两台或多台设备组网协同后键鼠共享能力，实现键鼠输入设备的跨设备协同操作。
-    **说明**  
-    
-    - 本模块接口从API Version 10开始不再维护，从API version 23开始废弃，推荐使用新接口[@ohos.cooperate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ (键鼠穿越)。  
-    
-    - 本模块接口均为系统接口。
+
+> **说明：**
+> 
+> - 本模块接口从API Version 10开始不再维护，从API version 23开始废弃，推荐使用新接口[@ohos.cooperate](../../apis-distributed-service-kit/arkts-apis/arkts-cooperate.md/arkts-cooperate.md) (键鼠穿越)。
+> 
+> - 本模块接口均为系统接口。
 
 **起始版本：** 9
 
@@ -18,6 +19,12 @@
 <!--Device-unnamed-declare namespace inputDeviceCooperate--><!--Device-unnamed-declare namespace inputDeviceCooperate-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
+
+## 导入模块
+
+```TypeScript
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
+```
 
 ## 汇总
 

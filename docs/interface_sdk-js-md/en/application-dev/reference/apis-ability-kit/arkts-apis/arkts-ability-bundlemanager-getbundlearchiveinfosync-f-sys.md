@@ -1,12 +1,18 @@
 # getBundleArchiveInfoSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleArchiveInfoSync
 
 ```TypeScript
 function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo
 ```
 
-Obtains the bundle information based on the given HAP file path and bundle flags. This API returns the result synchronously.
+以同步方法根据给定的hapFilePath和bundleFlags获取BundleInfo对象。
 
 **Since:** 10
 
@@ -24,25 +30,25 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePath | string | Yes | Path where the HAP file is stored. The path must be the relative path of the current bundle's data directory. |
-| bundleFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of the bundle information to obtain. |
+| hapFilePath | string | Yes | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回BundleInfo对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700022](../errorcode-bundle.md#17700022-invalid-source-file) | The hapFilePath is invalid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700022 | The hapFilePath is invalid. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -1,6 +1,6 @@
 # SensorStatusEvent
 
-Defines a device status change event.
+设备状态变化事件数据，用于描述传感器上下线事件的信息。
 
 **Since:** 19
 
@@ -10,15 +10,21 @@ Defines a device status change event.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
 deviceId: int
 ```
 
-Device ID.
+设备ID。-1表示本地设备，其它值表示远程设备。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 
@@ -34,7 +40,7 @@ Device ID.
 deviceName: string
 ```
 
-Device name.
+设备名称，标识传感器的来源设备。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Device name.
 isSensorOnline: boolean
 ```
 
-Sensor status. The value **true** indicates that the sensor is online, and the value **false** indicates the opposite.
+传感器是否上线。true表示传感器上线，false表示传感器下线。
 
 **Type:** boolean
 
@@ -70,9 +76,9 @@ Sensor status. The value **true** indicates that the sensor is online, and the v
 sensorId: int
 ```
 
-Sensor ID.
+传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md)枚举值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 
@@ -88,9 +94,9 @@ Sensor ID.
 sensorIndex: int
 ```
 
-Sensor index.
+传感器索引，同一类型传感器可能有多个实例，通过sensorIndex区分。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 
@@ -106,9 +112,9 @@ Sensor index.
 timestamp: long
 ```
 
-Timestamp when an event occurs, in ms.
+事件发生的时间戳。从设备开机开始计时到事件发生的时间。单位：ms（毫秒）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 

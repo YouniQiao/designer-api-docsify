@@ -1,9 +1,10 @@
 # OAuthTokenInfo
 
 表示OAuth令牌信息。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃。建议使用[AuthTokenInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)替代。
 
 **起始版本：** 8
 
@@ -16,6 +17,12 @@
 <!--Device-appAccount-interface OAuthTokenInfo--><!--Device-appAccount-interface OAuthTokenInfo-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
+
+## 导入模块
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
 
 ## authType
 

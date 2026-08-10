@@ -1,5 +1,11 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## on('streamChange')
 
 ```TypeScript
@@ -29,7 +35,7 @@ Subscribe Wi-Fi stream change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'streamChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
 
 
 ## on('hotspotStaJoin')
@@ -61,7 +67,7 @@ Subscribe Wi-Fi hotspot sta join events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
 
 
 ## on('hotspotStaLeave')
@@ -93,5 +99,5 @@ Subscribe Wi-Fi hotspot sta leave events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
 

@@ -1,6 +1,6 @@
 # Result
 
-Records the number of affected data rows and the result set.
+记录受影响的数据行数量和结果集。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Records the number of affected data rows and the result set.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## changed
 
 ```TypeScript
 readonly changed: long
 ```
 
-Number of affected rows.
+表示受影响的行数量。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Number of affected rows.
 readonly resultSet: LiteResultSet
 ```
 
-Result set of the affected data. Defaults to 1,024 rows of data, with a maximum supported limit of 32,766 rows supported; excess rows will be discarded.
+表示受影响数据的结果集。默认返回1024行，最大支持32766行，超出部分将被丢弃。
 
-**Type:** LiteResultSet
+**Type:** [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)
 
 **Since:** 23
 

@@ -1,14 +1,24 @@
 # Button
 
-Defines the prompt info of button.
+菜单中的菜单项按钮。
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-unnamed-export interface Button--><!--Device-unnamed-export interface Button-End-->
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.Button
+
+<!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { prompt } from 'kits/@kit.ArkUI';
+```
 
 ## color
 
@@ -16,15 +26,17 @@ Defines the prompt info of button.
 color: string
 ```
 
-Defines the color of button.
+按钮文本颜色。
 
 **Type:** string
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.Button#color
 
 <!--Device-Button-color: string--><!--Device-Button-color: string-End-->
 
@@ -36,15 +48,17 @@ Defines the color of button.
 text: string
 ```
 
-Defines the button info.
+按钮文本内容。
 
 **Type:** string
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.Button#text
 
 <!--Device-Button-text: string--><!--Device-Button-text: string-End-->
 

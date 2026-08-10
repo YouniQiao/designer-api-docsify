@@ -1,12 +1,18 @@
 # setCertificateStatus (System API)
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## setCertificateStatus
 
 ```TypeScript
 function setCertificateStatus(certUri: string, certType: CertType, enabled: boolean) : Promise<void>
 ```
 
-Sets the status of a CA certificate. Currently, only the status of a user's CA certificate can be set. This API is called only by the certificate management application. This API uses a promise to return the result.
+设置CA证书的状态，当前仅支持设置用户CA证书状态，仅证书管理应用调用。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -26,27 +32,27 @@ Sets the status of a CA certificate. Currently, only the status of a user's CA c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certUri | string | Yes | Unique identifier of the certificate. Currently, only user CA certificates are supported. |
-| certType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Certificate type. Currently, only the status of user CA certificates ( **CA\_\_\_ESCAPED\_UNDERSCORE\_\_\_CERT\_\_\_ESCAPED\_UNDERSCORE\_\_\_USER**) can be set. |
-| enabled | boolean | Yes | Whether the certificate is enabled. **true**: enabled; **false**: disabled. |
+| certUri | string | Yes | 表示证书的唯一标识符。当前仅支持用户CA证书。 |
+| certType | [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md) | Yes | 表示证书类型。当前仅支持设置用户CA证书（CA_CERT_USER）的状态。 |
+| enabled | boolean | Yes | 表示证书状态是否启用。true：已启用，false：已禁用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Possible causes: the URI is null or the URI format is wrong, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ the certType's value is invalid or not supported. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
-| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| 401 | Parameter verification failed. &lt;br&gt;Possible causes: the URI is null or the URI format is wrong, &lt;br&gt; the certType's value is invalid or not supported. |
+| 201 | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| 17500002 | The certificate does not exist. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -57,10 +63,11 @@ try {
   /* Set the user CA certificate status to enabled. */
   certificateManager.setCertificateStatus(certUri, certificateManager.CertType.CA_CERT_USER, true).then(() => {
     console.info('Succeeded in setting certificate status.');
-  }).catch((err: BusinessError) => {
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
     console.error(`Failed to set certificate status. Code: ${err.code}, message: ${err.message}`);
   })
-} catch (error: BusinessError) {
+} catch (error) {
   console.error(`Failed to set certificate status. Code: ${error.code}, message: ${error.message}`);
 }
 ```

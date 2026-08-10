@@ -4,7 +4,7 @@
 type OnTrackChangeHandler = (index: int, isSelected: boolean) => void
 ```
 
-Describes the callback invoked for the track change event.
+track变更事件回调方法。
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ Describes the callback invoked for the track change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the track that has changed.  |
-| isSelected | boolean | Yes | Whether the track at the current index is selected. **true** if selected, **false** otherwise.  |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前变更的track索引。 |
+| isSelected | boolean | Yes | 当前变更的track索引是否被选中。true表示处于选中状态，false表示处于非选中状态。 |
 

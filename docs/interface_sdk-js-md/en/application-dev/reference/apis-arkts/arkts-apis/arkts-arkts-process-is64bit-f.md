@@ -1,12 +1,18 @@
 # is64Bit
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## is64Bit
 
 ```TypeScript
 function is64Bit(): boolean
 ```
 
-Checks whether this process is running in a 64-bit environment.
+检查运行环境是否为 64 位。
 
 **Since:** 8
 
@@ -22,9 +28,9 @@ Checks whether this process is running in a 64-bit environment.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the process is running in a 64-bit environment; otherwise, **false** is returned. |
+| boolean | 返回判断结果。如果运行环境是 64 位则返回 true； 否则返回 false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let result = process.is64Bit();

@@ -12,6 +12,12 @@ Indicates the peer dimension.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## callId
 
 ```TypeScript
@@ -20,7 +26,7 @@ callId: int
 
 Indicates the id of call.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -40,7 +46,7 @@ height: int
 
 Indicates the the peer dimensions height.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -60,7 +66,7 @@ width: int
 
 Indicates the peer dimensions width.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

@@ -1,5 +1,11 @@
 # getKeyProperties
 
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## getKeyProperties
 
 ```TypeScript
@@ -7,11 +13,12 @@ function getKeyProperties(keyAlias: string, options: HuksOptions, callback: Asyn
 ```
 
 获取密钥属性。使用callback异步回调。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [huks.getKeyItemProperties\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.getKeyItemProperties&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties)
+> 替代。
 
 **起始版本：** 8
 
@@ -30,10 +37,10 @@ function getKeyProperties(keyAlias: string, options: HuksOptions, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，应与所用密钥生成时使用的别名相同。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 空对象（此处传空即可）。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HuksResult&gt; | 是 | 回调函数。当获取密钥属性成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 空对象（此处传空即可）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | 是 | 回调函数。当获取密钥属性成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -55,11 +62,12 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 ```
 
 获取密钥属性。使用Promise异步回调。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [huks.getKeyItemProperties\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.getKeyItemProperties&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties)
+> 替代。
 
 **起始版本：** 8
 
@@ -78,7 +86,7 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，应与所用密钥生成时使用的别名相同。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 空对象（此处传空即可）。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 空对象（此处传空即可）。 |
 
 **返回值：**
 
@@ -86,7 +94,7 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 | --- | --- |
 | Promise&lt;HuksResult&gt; | Promise对象，返回HuksResult。HuksResult的properties返回密钥参数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

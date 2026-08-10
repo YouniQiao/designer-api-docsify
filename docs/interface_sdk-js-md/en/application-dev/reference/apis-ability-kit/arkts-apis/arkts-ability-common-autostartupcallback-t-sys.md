@@ -4,7 +4,7 @@
 export type AutoStartupCallback = _AutoStartupCallback
 ```
 
-Level-2 module AutoStartupCallback.
+AutoStartupCallback二级模块。
 
 **Since:** 11
 

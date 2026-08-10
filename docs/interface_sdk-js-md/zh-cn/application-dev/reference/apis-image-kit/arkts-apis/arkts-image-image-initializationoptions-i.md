@@ -10,15 +10,21 @@ PixelMap的初始化选项。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## alphaType
 
 ```TypeScript
 alphaType?: AlphaType
 ```
 
-透明度。默认值为IMAGE\_ALPHA\_TYPE\_PREMUL。
+透明度。默认值为IMAGE_ALPHA_TYPE_PREMUL。
 
-**类型：** AlphaType
+**类型：** [AlphaType](arkts-image-image-alphatype-e.md)
 
 **起始版本：** 9
 
@@ -60,9 +66,9 @@ editable?: boolean
 pixelFormat?: PixelMapFormat
 ```
 
-生成的PixelMap的像素格式。默认值为RGBA\_8888。
+生成的PixelMap的像素格式。默认值为RGBA_8888。
 
-**类型：** PixelMapFormat
+**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **起始版本：** 8
 
@@ -82,9 +88,9 @@ pixelFormat?: PixelMapFormat
 scaleMode?: ScaleMode
 ```
 
-缩放模式。默认值为FIT\_TARGET\_SIZE。
+缩放模式。默认值为FIT_TARGET_SIZE。
 
-**类型：** ScaleMode
+**类型：** [ScaleMode](arkts-image-image-scalemode-e.md)
 
 **起始版本：** 9
 
@@ -106,7 +112,7 @@ size: Size
 
 创建的图片尺寸，宽高值必须为正整数。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 8
 
@@ -126,9 +132,9 @@ size: Size
 srcPixelFormat?: PixelMapFormat
 ```
 
-传入的缓冲区数据的像素格式。默认值为BGRA\_8888。
+传入的缓冲区数据的像素格式。默认值为BGRA_8888。
 
-**类型：** PixelMapFormat
+**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **起始版本：** 12
 

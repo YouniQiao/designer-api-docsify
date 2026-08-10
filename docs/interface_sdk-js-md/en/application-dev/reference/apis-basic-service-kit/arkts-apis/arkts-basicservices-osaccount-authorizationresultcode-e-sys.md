@@ -1,6 +1,6 @@
 # AuthorizationResultCode (System API)
 
-Enumerates authorization result codes.
+表示授权结果码的枚举。
 
 **Since:** 24
 
@@ -18,7 +18,7 @@ Enumerates authorization result codes.
 AUTHORIZATION_SUCCESS = 0
 ```
 
-The authorization is successful.
+表示授权成功。
 
 **Since:** 24
 
@@ -38,7 +38,7 @@ The authorization is successful.
 AUTHORIZATION_CANCELED = 12300301
 ```
 
-The authorization is canceled.
+表示授权已取消。
 
 **Since:** 24
 
@@ -58,11 +58,11 @@ The authorization is canceled.
 AUTHORIZATION_INTERACTION_NOT_ALLOWED = 12300302
 ```
 
-The authorization is rejected because user interaction is not allowed.
+表示服务因不允许用户交互而拒绝授权。
 
-Possible causes:
+可能原因：
 
-1. The caller is in the background.2. The value of **isInteractionAllowed** is **false**.3. The specified interaction context is invalid.
+1. 调用者位于后台；2. isInteractionAllowed选项的值为false；3. 指定的交互上下文无效。
 
 **Since:** 24
 
@@ -82,7 +82,7 @@ Possible causes:
 AUTHORIZATION_DENIED = 12300303
 ```
 
-The authorization is rejected because the authorization rules are not met, for example, the account type is not an administrator or the device type is not supported.
+表示因不符合授权规则，如账号类型不是管理员、设备类型不支持等原因而拒绝授权。
 
 **Since:** 24
 
@@ -102,9 +102,9 @@ The authorization is rejected because the authorization rules are not met, for e
 AUTHORIZATION_SERVICE_BUSY = 12300304
 ```
 
-Authorization service is busy.
+表示服务忙碌。
 
-Possible cause: Another authorization is being processed.
+可能原因：正在处理其他授权。
 
 **Since:** 24
 

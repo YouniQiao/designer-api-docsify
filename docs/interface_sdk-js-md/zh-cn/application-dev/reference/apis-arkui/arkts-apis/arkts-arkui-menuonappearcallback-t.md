@@ -20,6 +20,6 @@ export type MenuOnAppearCallback = (start: int, end: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | int | 是 | 选中内容的起始位置。  |
-| end | int | 是 | 选中内容的终止位置。  |
+| start | int | 是 | 选中内容的起始位置。 |
+| end | int | 是 | 选中内容的终止位置。 |
 

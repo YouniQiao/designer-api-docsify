@@ -10,6 +10,12 @@ Describes the measurement result.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
+## Modules to Import
+
+```TypeScript
+import { ranging } from 'kits/@kit.ConnectivityKit';
+```
+
 ## confidence
 
 ```TypeScript
@@ -18,7 +24,7 @@ confidence: RangingConfidence
 
 Confidence level of measurement results.
 
-**Type:** RangingConfidence
+**Type:** [RangingConfidence](arkts-connectivity-ranging-rangingconfidence-e.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +44,7 @@ value: int
 
 Measurement result value. The value is expressed in centimeters.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

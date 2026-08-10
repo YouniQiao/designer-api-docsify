@@ -1,6 +1,6 @@
 # BindTargetResult
 
-Bind target result.
+认证设备结果信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Bind target result.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
 deviceId: string
 ```
 
-Device identifier. The actual value is udid-hash confused with appid and salt value based on sha256.This id remains unchanged after application installation. If the application is uninstalled and reinstalled,the obtained ID will change.
+设备Id。
 
 **Type:** string
 

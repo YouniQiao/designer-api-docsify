@@ -1,6 +1,6 @@
 # TextTab
 
-Implements a paragraph-style text tab, which stores the alignment mode and position.
+段落风格的文本制表符，储存了对齐方式和位置。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Implements a paragraph-style text tab, which stores the alignment mode and posit
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alignment
 
 ```TypeScript
 alignment: TextAlign
 ```
 
-Text alignment method after the tab character in a paragraph. It supports the LEFT (left alignment), RIGHT (right alignment), and CENTER (center alignment) alignment methods of [TextAlign]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Unlisted enum values are treated as left alignment, with left alignment as the default.
+段落中制表符之后的文本对齐方式，支持设置[TextAlign](arkts-arkgraphics2d-text-textalign-e.md)的LEFT左对齐、RIGHT右对齐和CENTER居中对齐方式，未列出的枚举值将视为左对齐，默认为左对齐。
 
-**Type:** TextAlign
+**Type:** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
 
 **Since:** 18
 
@@ -36,9 +42,9 @@ Text alignment method after the tab character in a paragraph. It supports the LE
 location: double
 ```
 
-Alignment position of the text following the tab character. The value is a floating point number, in px. The minimum value is 1.0. When the value is less than 1.0, the tab character is replaced with a space.
+制表符之后的文本对齐位置，浮点数，单位为物理像素px，最小值为1.0，当该值小于1.0时，该制表符会被替换为一个空格。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 18
 

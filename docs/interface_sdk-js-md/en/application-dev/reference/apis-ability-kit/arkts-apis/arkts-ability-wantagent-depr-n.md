@@ -1,6 +1,6 @@
 # wantAgent
 
-The WantAgent module provides APIs for creating and comparing WantAgent objects, and obtaining the user ID and bundle name of a WantAgent object.
+WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取want信息、比较WantAgent实例和获取bundle名称等能力。
 
 **Since:** 7
 
@@ -20,37 +20,37 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 | Name | Description |
 | --- | --- |
-| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename) | Obtains the bundle name of a WantAgent. |
-| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename-1) | Obtains the bundle name of a WantAgent. |
-| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid) | Obtains the UID of a WantAgent. |
-| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid-1) | Obtains the UID of a WantAgent. |
-| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
-| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel-1) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
-| [trigger](arkts-ability-wantagent-trigger-depr-f.md#trigger) | Triggers a WantAgent. |
-| [equal](arkts-ability-wantagent-equal-depr-f.md#equal) | Checks whether two WantAgent objects are equal. |
-| [equal](arkts-ability-wantagent-equal-depr-f.md#equal-1) | Checks whether two WantAgent objects are equal. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent) | Obtains a WantAgent object. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent-1) | Obtains a WantAgent object. |
+| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename) | 获取WantAgent实例的Bundle名称。使用callback异步回调。 |
+| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename-1) | 获取WantAgent实例的Bundle名称。使用Promise异步回调。 |
+| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid) | 获取WantAgent实例的用户ID。使用callback异步回调。 |
+| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid-1) | 获取WantAgent实例的用户ID。使用Promise异步回调。 |
+| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel) | 取消WantAgent实例。使用callback异步回调。 |
+| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel-1) | 取消WantAgent实例。使用Promise异步回调。 |
+| [trigger](arkts-ability-wantagent-trigger-depr-f.md#trigger) | 主动激发WantAgent实例。使用callback异步回调。 |
+| [equal](arkts-ability-wantagent-equal-depr-f.md#equal) | 判断两个WantAgent实例是否相等，以此来判断是否是来自同一应用的相同操作。使用callback异步回调。 |
+| [equal](arkts-ability-wantagent-equal-depr-f.md#equal-1) | 判断两个WantAgent实例是否相等，以此来判断是否是来自同一应用的相同操作。使用Promise异步回调。 |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent) | 创建WantAgent。创建失败返回的WantAgent为空值。使用callback异步回调。 |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent-1) | 创建WantAgent。创建失败返回的WantAgent为空值。使用Promise异步回调。 |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of an \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant-1) | Obtains the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of an \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | 获取WantAgent中的Want(callback形式)。 |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant-1) | 获取WantAgent中的Want(Promise形式)。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CompleteData](arkts-ability-wantagent-completedata-depr-i.md) | Describes the data returned by after wantAgent.trigger is called. |
+| [CompleteData](arkts-ability-wantagent-completedata-depr-i.md) | 表示主动触发WantAgent返回的数据。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md) | Enumerates flags for using a WantAgent. |
-| [OperationType](arkts-ability-wantagent-operationtype-depr-e.md) | Identifies the operation for using a WantAgent, such as starting an ability or sending a common event. |
+| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md) | 表示WantAgent行为控制标志，用于配置WantAgent的创建和触发行为。 |
+| [OperationType](arkts-ability-wantagent-operationtype-depr-e.md) | 表示WantAgent支持的操作类型。 |
 

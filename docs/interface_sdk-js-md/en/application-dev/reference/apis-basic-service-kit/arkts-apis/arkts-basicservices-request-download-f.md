@@ -1,12 +1,18 @@
 # download
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## download
 
 ```TypeScript
 function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void
 ```
 
-Downloads a file. This API uses an asynchronous callback to return the result.
+创建并启动一个下载任务，使用callback异步回调。
 
 **Since:** 6
 
@@ -28,16 +34,16 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Download configuration. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DownloadTask&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
+| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | 下载的配置信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadTask&gt; | Yes | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let downloadTask: request.DownloadTask;
@@ -59,7 +65,7 @@ filePath: 'xxx/xxxxx.hap'}, (err: BusinessError, data: request.DownloadTask) => 
 function download(config: DownloadConfig): Promise<DownloadTask>
 ```
 
-Downloads a file. This API uses a promise to return the result.
+创建并启动一个下载任务，使用Promise异步回调。
 
 **Since:** 6
 
@@ -81,21 +87,21 @@ Downloads a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Download configuration. |
+| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | 下载的配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadTask&gt; | Promise used to return the **DownloadTask** object. |
+| Promise&lt;DownloadTask&gt; | 使用Promise方式，异步返回下载任务DownloadTask的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let downloadTask: request.DownloadTask;

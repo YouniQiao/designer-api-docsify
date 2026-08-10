@@ -1,5 +1,11 @@
 # getGwpAsanGrayscaleState
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getGwpAsanGrayscaleState
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getGwpAsanGrayscaleState(): number
 | --- | --- |
 | number | ��ȡ��ǰGWP-ASanʣ��ʹ������������ǰδʹ�ܣ�����ֵ0�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
@@ -58,9 +64,9 @@ function getGwpAsanGrayscaleState(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | ��ȡ��ǰGWP-ASanʣ��ʹ������������ǰδʹ�ܣ�����ֵ0�� |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | ��ȡ��ǰGWP-ASanʣ��ʹ������������ǰδʹ�ܣ�����ֵ0�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

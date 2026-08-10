@@ -1,8 +1,10 @@
 # Size
 
-Describes the size of an image.It inherits from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示图片尺寸。
 
-**Inheritance/Implementation:** Size extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
+继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
+
+**Inheritance/Implementation:** Size extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
 
 **Since:** 12
 
@@ -12,13 +14,19 @@ Describes the size of an image.It inherits from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## height
 
 ```TypeScript
 height: number
 ```
 
-Height of the output image, in px.
+输出图片的高，单位：像素。
 
 **Type:** number
 
@@ -40,7 +48,7 @@ Height of the output image, in px.
 width: number
 ```
 
-Width of the output image, in px.
+输出图片的宽，单位：像素。
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # OverScrollMode
 
-Enumerates whether to enable overscroll mode.
+设置Web的过滚动模式为关闭或开启。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates whether to enable overscroll mode.
 NEVER = 0
 ```
 
-The overscroll mode is disabled.
+Web过滚动模式关闭。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ The overscroll mode is disabled.
 ALWAYS = 1
 ```
 
-The overscroll mode is enabled.
+Web过滚动模式开启。
 
 **Since:** 11
 

@@ -16,7 +16,7 @@ The type of an AgentCard.
 LOW_CODE = 2
 ```
 
-LOW\_CODE agent card.
+LOW_CODE agent card.
 
 **Since:** 26.0.0
 

@@ -10,6 +10,12 @@ RecentPhotoOptions Object
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## MIMEType
 
 ```TypeScript
@@ -38,7 +44,7 @@ public colorMode?: PickerColorMode
 
 color mode of recentPhotoComponent placeholder
 
-**Type:** PickerColorMode
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.0.0
 
@@ -98,7 +104,7 @@ public photoSource?: PhotoSource
 
 PhotoSource
 
-**Type:** PhotoSource
+**Type:** [PhotoSource](arkts-medialibrary-photoaccesshelper-photosource-e.md)
 
 **Since:** 26.0.0
 

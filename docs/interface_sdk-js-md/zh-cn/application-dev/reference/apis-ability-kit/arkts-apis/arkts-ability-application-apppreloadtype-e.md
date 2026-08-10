@@ -52,7 +52,7 @@ TYPE_CREATE_PROCESS = 1
 TYPE_CREATE_ABILITY_STAGE = 2
 ```
 
-进程最终预加载到[AbilityStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建完成阶段。
+进程最终预加载到[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)创建完成阶段。
 
 **起始版本：** 22
 
@@ -70,7 +70,7 @@ TYPE_CREATE_ABILITY_STAGE = 2
 TYPE_CREATE_WINDOW_STAGE = 3
 ```
 
-进程最终预加载到[WindowStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建完成阶段。
+进程最终预加载到[WindowStage](../../apis-arkui/arkts-apis/arkts-window.md/arkts-window.md)创建完成阶段。
 
 **起始版本：** 22
 
@@ -88,7 +88,7 @@ TYPE_CREATE_WINDOW_STAGE = 3
 TYPE_CREATE_BACKGROUND_ABILITY = 4
 ```
 
-进程最终预加载到[onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_执行完成阶段。
+进程最终预加载到[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)执行完成阶段。
 
 **起始版本：** 23
 

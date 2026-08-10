@@ -4,7 +4,7 @@
 declare type ImmersiveMode = import('../api/@ohos.promptAction').ImmersiveMode
 ```
 
-Defines the overlay effect for the dialog box.
+弹窗的蒙层效果。
 
 **Since:** 15
 

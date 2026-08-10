@@ -1,6 +1,6 @@
 # FileAccessHelper (System API)
 
-Provides a **FileAccessHelper** object.
+FileAccessHelper对象。
 
 **Since:** 9
 
@@ -14,13 +14,19 @@ Provides a **FileAccessHelper** object.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { fileAccess } from 'kits/@kit.CoreFileKit';
+```
+
 ## access
 
 ```TypeScript
 access(sourceFileUri: string) : Promise<boolean>
 ```
 
-Checks whether a file or directory exists. This API uses a promise to return the result.
+以异步方法判断文件(夹)是否存在。使用Promise异步回调。
 
 **Since:** 9
 
@@ -54,42 +60,42 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -122,7 +128,7 @@ async function accessFunc() {
 access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a file or directory exists. This API uses an asynchronous callback to return the result.
+以异步方法判断文件(夹)是否存在。使用callback异步回调。
 
 **Since:** 9
 
@@ -145,48 +151,48 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceFileUri | string | Yes | Indicates the selected file or directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | The callback is used to return whether it exists. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback is used to return whether it exists. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -221,7 +227,7 @@ try {
 copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>
 ```
 
-Copies a file or directory. This API uses a promise to return the result.
+复制文件或目录，使用 Promise 异步回调。
 
 **Since:** 10
 
@@ -243,15 +249,15 @@ Copies a file or directory. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| force | boolean | No | Whether to forcibly overwrite the file with the same name. If **force** is **true**, the file with the same name will be overwritten. If **force** is **false** or not specified, the file with the same name will not be overwritten. The default value is **false**. |
+| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
+| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
+| force | boolean | No | 含有同名文件时是否强制覆盖文件。force 为 true 时强制覆盖文件；force 为空或 false 时不强制覆盖文件。该参数不填，默认为false。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CopyResult&gt;&gt; | Promise used to return the result. If the file or directory is copied successfully, no information is returned. If the file copy fails, a **copyResult** array is returned. |
+| Promise&lt;Array&lt;CopyResult&gt;&gt; | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
 ## copy
 
@@ -259,7 +265,7 @@ Copies a file or directory. This API uses a promise to return the result.
 copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void
 ```
 
-Copies a file or directory. This API uses an asynchronous callback to return the result.
+复制文件或目录，使用 callback 异步回调。
 
 **Since:** 10
 
@@ -281,11 +287,11 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;CopyResult&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
+| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
+| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | Yes | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -326,7 +332,7 @@ try {
 copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void
 ```
 
-Copies a file or directory. If a file with the same name already exists, you can choose whether to forcibly overwrite the original file. This API uses an asynchronous callback to return the result.
+复制文件或目录，含有同名文件时可以选择是否强制覆盖原文件，使用 callback 异步回调。
 
 **Since:** 10
 
@@ -348,12 +354,12 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**, the original file is not overwritten. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;CopyResult&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
+| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
+| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
+| force | boolean | Yes | 含有同名文件时是否强制覆盖原文件。force 为 true 时强制覆盖原文件；force 为空或 false 时不覆盖原文件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | Yes | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -394,7 +400,7 @@ try {
 copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 ```
 
-Copies a file with an alternative file name. This API uses a promise to return the result.
+复制文件并传入备用文件名，使用Promise异步回调。
 
 **Since:** 11
 
@@ -418,46 +424,46 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
+| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
+| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
+| fileName | string | Yes | 如果目标目录中有1.txt文件，就是用fileName 作为文件名进行复制。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | URI of the file generated. |
+| Promise&lt;string&gt; | 返回一个复制成功的文件的uri。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken |
+| 202 | Permission verification failed, application which is not a system application uses system API |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
+| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -488,7 +494,7 @@ async function copyFunc01() {
 copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void
 ```
 
-Copies a file with an alternative file name. This API uses an asynchronous callback to return the result.
+复制文件并传入备用文件名，使用callback异步回调。
 
 **Since:** 11
 
@@ -512,41 +518,41 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | URI of the file generated. |
+| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
+| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
+| fileName | string | Yes | 如果目标目录中有1.txt文件。就是用fileName 作为文件名进行复制。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 返回一个复制成功的文件的uri。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken |
+| 202 | Permission verification failed, application which is not a system application uses system API |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
+| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -576,7 +582,7 @@ try {
 createFile(uri: string, displayName: string) : Promise<string>
 ```
 
-Creates a file in a directory. This API uses a promise to return the result.
+以异步方法创建文件到指定目录，返回新文件uri。使用Promise异步回调。
 
 **Since:** 9
 
@@ -611,42 +617,42 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -681,7 +687,7 @@ async function createFile() {
 createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void
 ```
 
-Creates a file in a directory. This API uses an asynchronous callback to return the result.
+以异步方法创建文件到指定目录，返回新文件uri。使用callback异步回调。
 
 **Since:** 9
 
@@ -705,48 +711,48 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | uri | string | Yes | Represents a specific parent directory. |
 | displayName | string | Yes | Indicates the new file name, and supports with suffix. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | The callback is used to return the new file's URI. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the new file's URI. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -778,7 +784,7 @@ try {
 delete(uri: string) : Promise<number>
 ```
 
-Deletes a file or directory. This API uses a promise to return the result.
+以异步方法删除文件(夹)，返回错误码。使用Promise异步回调。
 
 **Since:** 9
 
@@ -812,42 +818,42 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -877,7 +883,7 @@ async function deleteFile01() {
 delete(uri: string, callback: AsyncCallback<number>): void
 ```
 
-Deletes a file or directory. This API uses an asynchronous callback to return the result.
+以异步方法删除文件(夹)，返回错误码。使用callback异步回调。
 
 **Since:** 9
 
@@ -900,48 +906,48 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the file or directory to be deleted. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -972,7 +978,7 @@ try {
 getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 ```
 
-Obtains a **FileInfo** object based on a relative path. This API uses a promise to return the result.
+以异步方法获取relativePath对应的FileInfo对象。使用promise异步回调。
 
 **Since:** 10
 
@@ -1002,7 +1008,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 | --- | --- |
 | Promise&lt;FileInfo&gt; | Returns a FileInfo. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1029,7 +1035,7 @@ async function getRelativePath() {
 getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void
 ```
 
-Obtains a **FileInfo** object based on a relative path. This API uses an asynchronous callback to return the result.
+以异步方法获取relativePath对应的FileInfo对象。使用callback异步回调。
 
 **Since:** 10
 
@@ -1052,9 +1058,9 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relativePath | string | Yes | Indicates the selected file or directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1085,7 +1091,7 @@ try {
 getFileInfoFromUri(uri: string) : Promise<FileInfo>
 ```
 
-Obtains a **FileInfo** object based on a URI. This API uses a promise to return the result.
+以异步方法获取uri对应的FileInfo对象。使用promise异步回调。
 
 **Since:** 10
 
@@ -1115,7 +1121,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;FileInfo&gt; | Returns a FileInfo. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1143,7 +1149,7 @@ async function getUri() {
 getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 ```
 
-Obtains a **FileInfo** object based on a URI. This API uses an asynchronous callback to return the result.
+以异步方法获取uri对应的FileInfo对象。使用callback异步回调。
 
 **Since:** 10
 
@@ -1166,9 +1172,9 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1200,9 +1206,7 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper**  
-object.This API uses a promise to return a **RootIterator** object. You can use  
-[next]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to return [RootInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用Promise异步回调。该方法返回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回[RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md)。
 
 **Since:** 9
 
@@ -1228,42 +1232,42 @@ object.This API uses a promise to return a **RootIterator** object. You can use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 async function getRoots() {
@@ -1300,9 +1304,8 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper**  
-object.This API uses an asynchronous callback to return a **RootIterator** object. You can use  
-[next]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to return [RootInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用callback异步回调。callback带回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
+[RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md)。
 
 **Since:** 9
 
@@ -1322,48 +1325,48 @@ object.This API uses an asynchronous callback to return a **RootIterator** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RootIterator&gt; | Yes | The callback is used to return a RootIterator. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RootIterator&gt; | Yes | The callback is used to return a RootIterator. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1401,7 +1404,7 @@ async function getRoots() {
 mkDir(parentUri: string, displayName: string) : Promise<string>
 ```
 
-Creates a directory in a specified directory. This API uses a promise to return the result.
+以异步方法创建文件夹到指定目录，返回文件夹uri。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1436,42 +1439,42 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1506,7 +1509,7 @@ async function createDirectory() {
 mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void
 ```
 
-Creates a directory in a specified directory. This API uses an asynchronous callback to return the result.
+以异步方法创建文件夹到指定目录，返回文件夹uri。使用callback异步回调。
 
 **Since:** 9
 
@@ -1530,48 +1533,48 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | parentUri | string | Yes | Represents a specific parent directory. |
 | displayName | string | Yes | Indicates the new directory name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | The callback is used to return the new directory's URI. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the new directory's URI. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1603,7 +1606,7 @@ try {
 move(sourceFile: string, destFile: string) : Promise<string>
 ```
 
-Moves a file or directory. This API uses a promise to return the result. Currently, this API does not support move of files or directories across devices.
+以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用Promise异步回调。目前仅支持设备内移动，跨设备不支持移动。
 
 **Since:** 9
 
@@ -1632,48 +1635,48 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the URI of the file or directory in the destination directory. |
+| Promise&lt;string&gt; | 新路径下的文件(夹)的uri。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1703,7 +1706,7 @@ async function moveFile01() {
 move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void
 ```
 
-Moves a file or directory. This API uses an asynchronous callback to return the result. Currently, this API does not support move of files or directories across devices.
+以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。目前仅支持设备内移动，跨设备不支持移动。
 
 **Since:** 9
 
@@ -1727,48 +1730,48 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | sourceFile | string | Yes | Indicates the file or directory to be moved. |
 | destFile | string | Yes | Represents the destination folder. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | The callback is used to return the generated new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the generated new file or directory. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1800,7 +1803,7 @@ try {
 moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 ```
 
-Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses a promise to return the result.If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory.Currently, this API does not support move of files across devices.
+以异步方法移动文件，返回移动后文件的uri。使用Promise异步回调。当存在同名文件时（即发生文件移动冲突时），可以重命名待移动的文件，再保存到目标文件夹。目前仅支持设备内移动，跨设备不支持移动。
 
 **Since:** 11
 
@@ -1824,46 +1827,46 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file is moved. |
-| fileName | string | Yes | New name of the file. |
+| sourceUri | string | Yes | 待移动源文件的uri。 |
+| destUri | string | Yes | 目标文件夹的uri。 |
+| fileName | string | Yes | 冲突文件的新名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the URI of the file in the destination directory. |
+| Promise&lt;string&gt; | 新路径下的文件uri。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
+| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1894,7 +1897,7 @@ async function moveFile01() {
 moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void
 ```
 
-Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses an asynchronous callback to return the result.If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory.Currently, this API does not support move of files across devices.
+以异步方法移动文件，返回移动后文件的uri。使用callback异步回调。当存在同名文件时（即发生文件移动冲突时），可以重命名待移动的文件，再保存到目标文件夹。当前仅支持设备内移动，不支持跨设备移动。
 
 **Since:** 11
 
@@ -1918,41 +1921,41 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file is moved. |
-| fileName | string | Yes | New name of the file. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback invoked to return the URI of the file in the destination directory. |
+| sourceUri | string | Yes | 待移动的源文件的uri。 |
+| destUri | string | Yes | 目标文件夹的uri。 |
+| fileName | string | Yes | 冲突文件的新名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 新路径下的文件uri。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
+| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1985,7 +1988,7 @@ try {
 moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>
 ```
 
-Moves a file or directory. This API uses a promise to return the result.You can forcibly overwrite the file with the same name in the destination directory.Currently, this API does not support move of files or directories across devices.
+以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用Promise异步回调。当存在同名文件时，可以选择强制覆盖文件。目前仅支持设备内移动，跨设备不支持移动。
 
 **Since:** 11
 
@@ -2009,44 +2012,44 @@ Moves a file or directory. This API uses a promise to return the result.You can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| force | boolean | No | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
+| sourceUri | string | Yes | 待移动的源文件(夹)的uri。 |
+| destUri | string | Yes | 目标文件夹的uri。 |
+| force | boolean | No | 选择当存在同名文件时，是否强制覆盖文件。当force为true时，强制覆盖文件；为false时不强制覆盖文件。该参数不填，默认为false。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MoveResult&gt;&gt; | Promise used to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| Promise&lt;Array&lt;MoveResult&gt;&gt; | 返回 moveresult 数组。moveResult 为移动操作失败的返回信息；复制成功无返回信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
+| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
 ## moveItem
 
@@ -2054,7 +2057,7 @@ Moves a file or directory. This API uses a promise to return the result.You can 
 moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-Moves a file or directory. This API uses an asynchronous callback to return the result.Currently, this API does not support move of files or directories across devices.
+以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。当前仅支持设备内移动，不支持跨设备移动。
 
 **Since:** 11
 
@@ -2078,40 +2081,40 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;MoveResult&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| sourceUri | string | Yes | 待移动的源文件(夹)的uri。 |
+| destUri | string | Yes | 目标文件夹的uri。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | Yes | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
+| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2152,7 +2155,7 @@ try {
 moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-Moves a file or directory. This API uses an asynchronous callback to return the result.You can forcibly overwrite the file with the same name in the destination directory.Currently, this API does not support move of files or directories across devices.
+以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。当存在同名文件时，可以选择强制覆盖文件。当前仅支持设备内移动，不支持跨设备移动。
 
 **Since:** 11
 
@@ -2176,41 +2179,41 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| force | boolean | Yes | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;MoveResult&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| sourceUri | string | Yes | 待移动的源文件(夹)的uri。 |
+| destUri | string | Yes | 目标文件夹的uri。 |
+| force | boolean | Yes | 选择当存在同名文件时，是否强制覆盖文件。当force为true时，强制覆盖文件；为false时不强制覆盖文件。该参数不填，默认为false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | Yes | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
+| 13900042 | Unknown error |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2251,7 +2254,7 @@ try {
 openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 ```
 
-Opens a file. This API uses a promise to return the result.
+以异步方法打开文件，返回文件描述符。使用Promise异步回调。
 
 **Since:** 9
 
@@ -2274,7 +2277,7 @@ Opens a file. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the path of the file to open. |
-| flags | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicate options of opening a file. The default value is read-only. |
+| flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | Yes | Indicate options of opening a file. The default value is read-only. |
 
 **Return value:**
 
@@ -2286,42 +2289,42 @@ Opens a file. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2349,7 +2352,7 @@ async function openFile01() {
 openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 ```
 
-Opens a file. This API uses an asynchronous callback to return the result.
+以异步方法打开文件，返回文件描述符。使用callback异步回调。
 
 **Since:** 9
 
@@ -2372,49 +2375,49 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the path of the file to open. |
-| flags | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicate options of opening a file. The default value is read-only. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | The callback is used to return the file descriptor. |
+| flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | Yes | Indicate options of opening a file. The default value is read-only. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback is used to return the file descriptor. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2445,7 +2448,7 @@ try {
 query(uri: string, metaJson: string) : Promise<string>
 ```
 
-Queries the attribute information about a file or directory based on a URI. This API uses a promise to return the result.
+通过uri查询文件或目录的相关信息，使用Promise异步回调。
 
 **Since:** 10
 
@@ -2467,16 +2470,16 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| metaJson | string | Yes | Attribute [FILEKEY]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to query. |
+| uri | string | Yes | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)中获取）。 |
+| metaJson | string | Yes | json字符串，包含查询属性[FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) 。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a JSON string that contains the file attribute and the value obtained. |
+| Promise&lt;string&gt; | 返回json字符串，包括查询属性和值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2504,7 +2507,7 @@ async function getQuery01() {
 query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 ```
 
-Queries the attribute information about a file or directory based on a URI. This API uses an asynchronous callback to return the result.
+通过uri查询文件或目录的相关信息，使用callback异步回调。
 
 **Since:** 10
 
@@ -2526,11 +2529,11 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| metaJson | string | Yes | Attribute [FILEKEY]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to query. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
+| uri | string | Yes | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)中获取）。 |
+| metaJson | string | Yes | json字符串，包含查询属性[FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 返回json字符串，包括查询属性和值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2563,7 +2566,7 @@ async function getQuery02() {
 registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void
 ```
 
-Registers a callback to listen for a URI. URIs and callbacks can be in many-to-many relationships. You are advised to use one callback to listen for one URI.
+注册指定uri的callback。uri与callback可以为多对多的关系，推荐使用一个callback监听一个uri。
 
 **Since:** 10
 
@@ -2585,9 +2588,9 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file or directory. |
-| notifyForDescendants | boolean | Yes | Whether to observe changes of the files in the directory. The value **true** means to observe changes of the files in the directory; the value **false** means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NotifyMessage&gt; | Yes | Callback invoked to return the notification. |
+| uri | string | Yes | 文件或目录的uri。 |
+| notifyForDescendants | boolean | Yes | 监听目录时，是否监听子文件变化。true为监听；false为不监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | Yes | 返回通知信息。 |
 
 **Error codes:**
 
@@ -2601,7 +2604,7 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 rename(uri: string, displayName: string) : Promise<string>
 ```
 
-Renames a file or directory. This API uses a promise to return the result.
+以异步方法重命名文件(夹)，返回重命名后的文件(夹)的Uri。使用Promise异步回调。
 
 **Since:** 9
 
@@ -2636,42 +2639,42 @@ Renames a file or directory. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2700,7 +2703,7 @@ async function renameFile01() {
 rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 ```
 
-Renames a file or directory. This API uses an asynchronous callback to return the result.
+以异步方法重命名文件(夹)，返回重命名后的文件(夹)的Uri。使用callback异步回调。
 
 **Since:** 9
 
@@ -2724,48 +2727,48 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
 | displayName | string | Yes | Indicates the new directory or file name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | The callback is used to return a URI representing the new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return a URI representing the new file or directory. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2796,7 +2799,7 @@ try {
 unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 ```
 
-Unregisters a callback that is used to listen for the specified URI.
+取消注册指定的uri和callback。
 
 **Since:** 10
 
@@ -2816,8 +2819,8 @@ Unregisters a callback that is used to listen for the specified URI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file or directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NotifyMessage&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the specified URI will be unregistered. |
+| uri | string | Yes | 文件或目录的uri。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | No | 解注册uri下对应的callback。如果该参数不填，则解注册对应的所有callbackback。 |
 
 **Error codes:**
 

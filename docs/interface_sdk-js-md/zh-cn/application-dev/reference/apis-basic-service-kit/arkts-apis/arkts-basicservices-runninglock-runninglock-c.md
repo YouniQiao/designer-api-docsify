@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
+## 导入模块
+
+```TypeScript
+import { runningLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## hold
 
 ArkTS-Dyn:
@@ -38,39 +44,43 @@ hold(timeout: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 锁定和持有RunningLock的时长，单位：毫秒。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数必须为数字类型：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**-1**：永久持锁，需要主动释放。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**0**：默认3s后超时释放。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **>0**：按传入值超时释放。 |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 锁定和持有RunningLock的时长，单位：毫秒。&lt;br&gt;该参数必须为数字类型：&lt;br&gt;**-1**：永久持锁，需要主动释放。&lt;br&gt;**0**：默认3s后超时释放。&lt;br&gt; **>0**：按传入值超时释放。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| 201 | If the permission is denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // RunningLockTest.ets
 class RunningLockTest {
-    public static recordLock: runningLock.RunningLock | undefined;
+    public static recordLock: runningLock.RunningLock;
 
     public static holdRunningLock(): void {
         if (RunningLockTest.recordLock) {
-            RunningLockTest.recordLock!.hold(500);
-            console.info('hold running lock success');
+            try {
+                RunningLockTest.recordLock.hold(500);
+                console.info('hold running lock success');
+            } catch(err) {
+                console.error(`Failed to hold running lock. Code: ${err.code}, message: ${err.message}`);
+            }
         } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error | null, lock: runningLock.RunningLock | undefined) => {
-                if (!err) {
+            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
+                if (err) {
+                    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
+                } else {
                     console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock!;
+                    RunningLockTest.recordLock = lock;
                     try {
-                        lock!.hold(500);
+                        lock.hold(500);
                         console.info('hold running lock success');
                     } catch(err) {
-                        console.error('hold running lock failed, err: ' + err);
+                        console.error(`Failed to hold running lock. Code: ${err.code}, message: ${err.message}`);
                     }
-                } else {
-                    console.error('create running lock failed, err: ' + err);
                 }
             });
         }
@@ -100,26 +110,26 @@ isHolding(): boolean
 | --- | --- |
 | boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // RunningLockTest.ets
 class RunningLockTest {
-    public static recordLock: runningLock.RunningLock | undefined;
+    public static recordLock: runningLock.RunningLock;
 
     public static isHoldingRunningLock(): void {
         if (RunningLockTest.recordLock) {
-            let isHolding = RunningLockTest.recordLock!.isHolding();
+            let isHolding = RunningLockTest.recordLock.isHolding();
             console.info('check running lock holding status: ' + isHolding);
         } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error | null, lock: runningLock.RunningLock | undefined) => {
-                if (!err) {
-                    console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock!;
-                    let isHolding = lock!.isHolding();
-                    console.info('check running lock holding status: ' + isHolding);
+            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
+                if (err) {
+                    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
                 } else {
-                    console.error('create running lock failed, err: ' + err);
+                    console.info('create running lock: ' + lock);
+                    RunningLockTest.recordLock = lock;
+                    let isHolding = lock.isHolding();
+                    console.info('check running lock holding status: ' + isHolding);
                 }
             });
         }
@@ -153,7 +163,7 @@ isUsed(): boolean
 | --- | --- |
 | boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -161,8 +171,8 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
     let isUsed = lock.isUsed();
     console.info('check running lock used status: ' + isUsed);
 })
-.catch((err: Error) => {
-    console.error('check running lock used status failed, err: ' + err);
+.catch((err: BusinessError) => {
+    console.error(`Failed to check running lock used status. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -194,7 +204,7 @@ lock(timeout: number): void
 | --- | --- | --- | --- |
 | timeout | number | 是 | 锁定和持有RunningLock的时长，单位：毫秒。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -202,8 +212,8 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
     lock.lock(500);
     console.info('create running lock and lock success');
 })
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
+.catch((err: BusinessError) => {
+    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -229,34 +239,36 @@ unhold(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
+| 201 | If the permission is denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // RunningLockTest.ets
 class RunningLockTest {
-    public static recordLock: runningLock.RunningLock | undefined;
+    public static recordLock: runningLock.RunningLock;
 
     public static unholdRunningLock(): void {
         if (RunningLockTest.recordLock) {
-            RunningLockTest.recordLock!.unhold();
-            console.info('unhold running lock success');
+            try {
+                RunningLockTest.recordLock.unhold();
+                console.info('unhold running lock success');
+            } catch(err) {
+                console.error(`Failed to unhold running lock. Code: ${err.code}, message: ${err.message}`);
+            }
         } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error | null, lock: runningLock.RunningLock | undefined) => {
-                if (!err) {
+            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
+                if (err) {
+                    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
+                } else {
                     console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock!;
+                    RunningLockTest.recordLock = lock;
                     try {
-                        lock!.hold(500);
-                        // Finish other tasks before unhold lock.
-                        lock!.unhold();
+                        lock.unhold();
                         console.info('unhold running lock success');
                     } catch(err) {
-                        console.error('unhold running lock failed, err: ' + err);
+                        console.error(`Failed to unhold running lock. Code: ${err.code}, message: ${err.message}`);
                     }
-                } else {
-                    console.error('create running lock failed, err: ' + err);
                 }
             });
         }
@@ -286,7 +298,7 @@ unlock(): void
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
-**示例：**
+## 示例
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -294,8 +306,8 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
     lock.unlock();
     console.info('create running lock and unlock success');
 })
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
+.catch((err: BusinessError) => {
+    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

@@ -1,6 +1,6 @@
 # ManualExposure
 
-ManualExposure extends [ManualExposureQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_Provides APIs to obtain and set the exposure duration.
+ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md)Provides APIs to obtain and set the exposure duration.
 
 **Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md)
 
@@ -11,6 +11,12 @@ ManualExposure extends [ManualExposureQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\
 <!--Device-camera-interface ManualExposure extends ManualExposureQuery--><!--Device-camera-interface ManualExposure extends ManualExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getExposure
 
@@ -38,17 +44,17 @@ Obtains the manual exposure duration in use.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | The current exposure value, in units of ms |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | The current exposure value, in units of ms |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function getExposure(nightPhotoSession: camera.NightPhotoSession): number | undefined {
@@ -89,14 +95,14 @@ Gets current exposure value.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | The current exposure value, in units of microsecond |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | The current exposure value, in units of microsecond |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, session or inputdevice maybe abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, session or inputdevice maybe abnormal. |
+| 7400103 | Session not config. |
 
 ## setExposure
 
@@ -111,7 +117,7 @@ setExposure(exposure: int): void
 ```
 
 Sets the manual exposure duration. Before using this API, call  
-[getSupportedExposureRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the supported manual exposure durations, in ms.
+[getSupportedExposureRange](arkts-camera-camera-manualexposurequery-i.md#getsupportedexposurerange) to obtain the supported manual exposure durations, in ms.
 
 **Since:** 11
 
@@ -125,15 +131,15 @@ Sets the manual exposure duration. Before using this API, call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposure | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Manual exposure duration, which must be one of the supported durations obtained by running [getSupportedExposureRange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| exposure | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Manual exposure duration, which must be one of the supported durations obtained by running [getSupportedExposureRange](arkts-camera-camera-manualexposurequery-i.md#getsupportedexposurerange). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## setExposureDuration
 
@@ -147,7 +153,7 @@ ArkTS-Sta:
 setExposureDuration(exposureDuration: int): void
 ```
 
-Sets Exposure duration value, units: microseconds.This control is only effective if ExposureMode is set to EXPOSURE\_MODE\_MANUAL.
+Sets Exposure duration value, units: microseconds.This control is only effective if ExposureMode is set to EXPOSURE_MODE_MANUAL.
 
 **Since:** 24
 
@@ -163,11 +169,11 @@ Sets Exposure duration value, units: microseconds.This control is only effective
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureDuration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Exposure duration value |
+| exposureDuration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Exposure duration value |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
 

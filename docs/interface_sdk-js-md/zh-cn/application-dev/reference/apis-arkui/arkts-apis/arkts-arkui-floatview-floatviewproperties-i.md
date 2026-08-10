@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## avoidArea
 
 ```TypeScript
@@ -20,8 +26,8 @@ avoidArea: window.AvoidArea
 
 **注意：**
 
-通过[setUIContext()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或  
-[setUIContextByName()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_加载的页面中，位于避让区域的组件将不响应手势事件，添加需要手势响应事件的组件时，请注意避让这些区域。
+通过[setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext)或  
+[setUIContextByName()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontextbyname)加载的页面中，位于避让区域的组件将不响应手势事件，添加需要手势响应事件的组件时，请注意避让这些区域。
 
 **类型：** window.AvoidArea
 
@@ -43,7 +49,7 @@ displayId: int
 
 标准悬浮窗所在屏幕ID。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -83,7 +89,7 @@ templateType: FloatViewTemplateType
 
 标准悬浮窗的模板类型。
 
-**类型：** FloatViewTemplateType
+**类型：** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
 **起始版本：** 26.0.0
 
@@ -103,7 +109,7 @@ windowId: int
 
 标准悬浮窗窗口ID。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -143,7 +149,7 @@ windowScale: double
 
 标准悬浮窗窗口缩放比例。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.0.0
 

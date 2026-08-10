@@ -1,13 +1,14 @@
 # TypefaceArguments
 
 提供字体属性配置的类，用于配置可变字体的属性参数（如字重维度等轴标签及对应属性值）。
-    **说明：**  
-    
-    - 本Class首批接口从API version 20开始支持。  
-    
-    - 本模块使用屏幕物理像素单位px。  
-    
-    - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 20开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 20
 
@@ -16,6 +17,12 @@
 <!--Device-drawing-class TypefaceArguments--><!--Device-drawing-class TypefaceArguments-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## addVariation
 
@@ -46,7 +53,7 @@ addVariation(axis: string, value: number)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## addVariation
 
@@ -79,7 +86,7 @@ Adds variation axis for the TypefaceArguments.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## constructor
 

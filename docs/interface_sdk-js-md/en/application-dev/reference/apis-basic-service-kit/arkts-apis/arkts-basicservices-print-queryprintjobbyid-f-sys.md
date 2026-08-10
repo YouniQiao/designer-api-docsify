@@ -1,12 +1,18 @@
 # queryPrintJobById (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## queryPrintJobById
 
 ```TypeScript
 function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): void
 ```
 
-Queries a print job by ID. This API uses an asynchronous callback to return the result.
+按打印任务ID查询打印任务，使用callback异步回调。
 
 **Since:** 11
 
@@ -24,18 +30,18 @@ Queries a print job by ID. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PrintJob&gt; | Yes | Callback used to return the result. |
+| jobId | string | Yes | 表示打印任务ID。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PrintJob&gt; | Yes | 异步按打印任务ID查询打印任务之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -58,7 +64,7 @@ print.queryPrintJobById(jobId, (err: BusinessError, printJob : print.PrintJob) =
 function queryPrintJobById(jobId: string): Promise<PrintJob>
 ```
 
-Queries a print job by ID. This API uses a promise to return the result.
+按打印任务ID查询打印任务，使用Promise异步回调。
 
 **Since:** 11
 
@@ -76,23 +82,23 @@ Queries a print job by ID. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
+| jobId | string | Yes | 表示打印任务ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrintJob&gt; | Promise used to return the queried print job. |
+| Promise&lt;PrintJob&gt; | Promise对象，返回查询到的打印任务。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

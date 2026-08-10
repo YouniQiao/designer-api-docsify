@@ -12,6 +12,12 @@ Defines device information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -64,7 +70,7 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** DeviceType
+**Type:** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
 **Since:** 26.0.0
 

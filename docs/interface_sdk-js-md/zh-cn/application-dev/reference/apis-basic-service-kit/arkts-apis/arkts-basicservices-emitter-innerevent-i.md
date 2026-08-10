@@ -1,6 +1,6 @@
 # InnerEvent
 
-订阅或发送的事件，订阅事件时\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_不生效。
+订阅或发送的事件，订阅事件时`EventPriority`不生效。
 
 **起始版本：** 7
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Notification.Emitter
 
+## 导入模块
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## eventId
 
 ```TypeScript
@@ -18,7 +24,7 @@ eventId: long
 
 事件ID，由开发者定义，用于辨别事件。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 7
 
@@ -38,7 +44,7 @@ priority?: EventPriority
 
 事件的优先级，默认值为EventPriority.LOW。
 
-**类型：** EventPriority
+**类型：** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
 **起始版本：** 7
 

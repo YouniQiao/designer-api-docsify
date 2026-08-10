@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
+## 导入模块
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## code
 
 ```TypeScript
@@ -18,7 +24,7 @@ code: PolicyErrorCode
 
 授权策略失败的URI对应的错误码。
 
-**类型：** PolicyErrorCode
+**类型：** [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
 
 **起始版本：** 11
 

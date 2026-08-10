@@ -1,6 +1,6 @@
 # PreconfigType
 
-Enumerates the preconfigured resolution types.
+枚举，提供预配置的类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the preconfigured resolution types.
 PRECONFIG_720P = 0
 ```
 
-720p resolution.
+720P预配置。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ PRECONFIG_720P = 0
 PRECONFIG_1080P = 1
 ```
 
-1080p resolution.
+1080P预配置。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ PRECONFIG_1080P = 1
 PRECONFIG_4K = 2
 ```
 
-4K resolution.
+4K预配置。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ PRECONFIG_4K = 2
 PRECONFIG_HIGH_QUALITY = 3
 ```
 
-High-quality resolution.
+高质量预配置。
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ High-quality resolution.
 PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4
 ```
 
-Resolution that supports HDR preview and GIF photography.
+预配置支持预览高动态范围显示和HDR动图拍摄。
 
 **Since:** 23
 

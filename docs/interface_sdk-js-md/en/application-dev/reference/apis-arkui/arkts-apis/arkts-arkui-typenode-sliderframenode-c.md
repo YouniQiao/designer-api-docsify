@@ -1,6 +1,6 @@
 # SliderFrameNode
 
-Define the Slider type of FrameNode.
+定义Slider类型的FrameNode。
 
 **Inheritance/Implementation:** SliderFrameNode extends [TypedFrameNode<SliderAttribute>](TypedFrameNode<SliderAttribute>)
 
@@ -18,7 +18,7 @@ Define the Slider type of FrameNode.
 abstract initialize(options?: SliderOptions): SliderAttribute
 ```
 
-Initialize Slider FrameNode.
+初始化Slider类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Slider FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [SliderOptions](../arkts-components/arkts-arkui-slideroptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |  |
 

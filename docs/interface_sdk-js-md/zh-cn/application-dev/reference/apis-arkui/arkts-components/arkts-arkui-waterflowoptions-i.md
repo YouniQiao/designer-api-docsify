@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 设置WaterFlow尾部组件，用于在瀑布流末尾显示自定义内容（如加载提示、底部标识等）。不设置时不显示尾部组件。
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 
@@ -38,7 +38,7 @@ footerContent?: ComponentContent
 
 设置WaterFlow尾部组件。该参数的优先级高于参数footer，即同时设置footer和footerContent时，以footerContent设置的组件为准。
 
-**类型：** ComponentContent
+**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
 **起始版本：** 18
 
@@ -60,7 +60,7 @@ layoutMode?: WaterFlowLayoutMode
 
 设置WaterFlow的布局模式，根据使用场景选择更切合的模式。
 
-**类型：** WaterFlowLayoutMode
+**类型：** [WaterFlowLayoutMode](../arkts-apis/arkts-arkui-waterflow-waterflowlayoutmode-e.md)
 
 **默认值：** ALWAYS_TOP_DOWN
 
@@ -84,9 +84,9 @@ scroller?: Scroller
 
 可滚动组件的控制器，与可滚动组件绑定。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_说明\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。&lt;/p&gt;
 
-**类型：** Scroller
+**类型：** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
 
 **起始版本：** 9
 
@@ -106,9 +106,9 @@ sections?: WaterFlowSections
 
 设置FlowItem分组，实现同一个瀑布流组件内部各分组使用不同列数混合布局。适用于需要在不同区域使用不同列数布局的场景。不设置时使用统一列数布局。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_说明\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_1. 使用分组混合布局时会忽略columnsTemplate和rowsTemplate属性。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_2. 使用分组混合布局时不支持单独设置footer，可以使用最后一个分组作为尾部组件。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1. 使用分组混合布局时会忽略columnsTemplate和rowsTemplate属性。&lt;br&gt;2. 使用分组混合布局时不支持单独设置footer，可以使用最后一个分组作为尾部组件。&lt;/p&gt;
 
-**类型：** WaterFlowSections
+**类型：** [WaterFlowSections](arkts-arkui-waterflowsections-c.md)
 
 **起始版本：** 12
 

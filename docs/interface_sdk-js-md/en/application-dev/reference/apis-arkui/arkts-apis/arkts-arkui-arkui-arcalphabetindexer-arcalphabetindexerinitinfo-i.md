@@ -1,6 +1,6 @@
 # ArcAlphabetIndexerInitInfo
 
-Define the initialization parameters of the arc alphabet index bar
+定义弧形字母索引条的初始化参数。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Define the initialization parameters of the arc alphabet index bar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+```
+
 ## arrayValue
 
 ```TypeScript
 arrayValue: string[]
 ```
 
-Array of alphabetic indexed strings, cannot be set to empty.
+字母索引字符串数组，不可设置为空。
 
 **Type:** string[]
 
@@ -36,7 +42,9 @@ Array of alphabetic indexed strings, cannot be set to empty.
 selected: int | Bindable<int>
 ```
 
-The index value of the initial selected item.If it is out of the index range, the default value is 0
+初始选中项索引值，若超出索引值范围，则取默认值0。
+
+该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
 
 **Type:** int \| Bindable&lt;int&gt;
 

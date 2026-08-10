@@ -10,6 +10,12 @@ Defines the image recommendation options. The image recommendation feature depen
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## recommendationType
 
 ```TypeScript
@@ -18,7 +24,7 @@ recommendationType?: RecommendationType
 
 Type of the recommended image.
 
-**Type:** RecommendationType
+**Type:** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)
 
 **Since:** 11
 
@@ -36,10 +42,10 @@ Type of the recommended image.
 textContextInfo?: TextContextInfo
 ```
 
-Text based on which images are recommended. If both **recommendationType** and **textContextInfo** are set,  
+Text based on which images are recommended. If both **recommendationType** and **textContextInfo** are set,   
 **textContextInfo** takes precedence over **recommendationType**.
 
-**Type:** TextContextInfo
+**Type:** [TextContextInfo](arkts-medialibrary-photoaccesshelper-textcontextinfo-i.md)
 
 **Since:** 12
 

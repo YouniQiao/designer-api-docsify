@@ -5,7 +5,7 @@ export type OnSwiperAnimationStartCallback = (index: int, targetIndex: int,
   extraInfo: SwiperAnimationEvent) => void
 ```
 
-Defines a swiper callback when onAnimationStart.
+切换动画开始时触发的回调。
 
 **Since:** 23
 
@@ -21,7 +21,7 @@ Defines a swiper callback when onAnimationStart.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index value of the swiper page that when animation start. The value range is all integers The value should be an integer.  |
-| targetIndex | int | Yes | The target index value of the swiper page that when animation start. The value range is all integers The value should be an integer.  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The extra callback info.  |
+| index | int | Yes | 当前显示元素的索引。多列Swiper时，index为最左侧组件的索引。 取值范围为全体整数 取值限定为整数。 |
+| targetIndex | int | Yes | 当前显示元素的索引。多列Swiper时，index为最左侧组件的索引。 取值范围为全体整数 取值限定为整数。 |
+| extraInfo | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | 动画相关信息，包括主轴方向上当前显示元素和目标元素相对Swiper起始位置的位移，以及离手速度。 |
 

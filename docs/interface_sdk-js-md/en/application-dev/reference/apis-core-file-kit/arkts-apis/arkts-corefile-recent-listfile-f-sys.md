@@ -1,12 +1,18 @@
 # listFile (System API)
 
+## Modules to Import
+
+```TypeScript
+import { recent } from 'kits/@kit.CoreFileKit';
+```
+
 ## listFile
 
 ```TypeScript
 function listFile(): Array<FileInfo>
 ```
 
-Lists the files that are accessed recently.
+查询最近访问列表中文件信息。
 
 **Since:** 10
 
@@ -34,11 +40,11 @@ Lists the files that are accessed recently.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
 | 13900020 | Invalid argument |
+| 13900002 | No such file or directory |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 let fileinfos = recent.listFile();

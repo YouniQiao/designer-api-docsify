@@ -4,7 +4,7 @@
 type OnAISessionCallback = (state: AISessionResultType, content: string) => void
 ```
 
-Callback type for AI session operations.Used to report the result of session creation or execution.
+AI会话操作结果回调函数类型。用于报告会话创建或执行的结果。
 
 **Since:** 26.0.0
 
@@ -20,6 +20,6 @@ Callback type for AI session operations.Used to report the result of session cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The current result state.  |
-| content | string | Yes | The detailed result or response content.  |
+| state | [AISessionResultType](../arkts-apis/arkts-arkweb-web-aisessionresulttype-e.md) | Yes | The current result state. |
+| content | string | Yes | The detailed result or response content. |
 

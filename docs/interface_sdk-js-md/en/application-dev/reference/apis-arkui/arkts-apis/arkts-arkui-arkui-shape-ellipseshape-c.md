@@ -1,6 +1,8 @@
 # EllipseShape
 
-Defines an ellipse drawing class.
+用于clipShape和maskShape接口的椭圆形状。
+
+继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。
 
 **Inheritance/Implementation:** EllipseShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
 
@@ -12,13 +14,19 @@ Defines an ellipse drawing class.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(options?: ShapeSize)
 ```
 
-Constructor.
+创建CircleShape对象。
 
 **Since:** 23
 
@@ -34,5 +42,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | No | 形状的大小。 |
 

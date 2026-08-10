@@ -1,5 +1,11 @@
 # offWifiStateChange
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offWifiStateChange
 
 ```TypeScript
@@ -24,13 +30,13 @@ All callback functions will be deregistered If there is no specific callback par
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | No | the callback of off |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | the callback of off |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 2501000 | Operation failed. |
 

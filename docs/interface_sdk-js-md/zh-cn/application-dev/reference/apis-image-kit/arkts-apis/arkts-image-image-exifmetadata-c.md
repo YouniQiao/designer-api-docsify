@@ -14,6 +14,12 @@ Exif（Exchangeable image file format）元数据。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## clone
 
 ```TypeScript
@@ -36,7 +42,7 @@ clone(): Promise<ExifMetadata>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise对象，成功返回Exif元数据实例。 |
+| Promise&lt;[ExifMetadata](arkts-image-image-exifmetadata-c.md)&gt; | Promise对象，成功返回Exif元数据实例。 |
 
 ## createInstance
 
@@ -44,7 +50,7 @@ clone(): Promise<ExifMetadata>
 static createInstance(): ExifMetadata
 ```
 
-创建一个空的[ExifMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_实例。
+创建一个空的[ExifMetadata](arkts-image-image-exifmetadata-c.md)实例。
 
 **起始版本：** 23
 
@@ -60,7 +66,7 @@ static createInstance(): ExifMetadata
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回ExifMetadata的空实例。 |
+| [ExifMetadata](arkts-image-image-exifmetadata-c.md) | 返回ExifMetadata的空实例。 |
 
 ## getAllProperties
 
@@ -118,7 +124,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 获取图像的元数据属性值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -146,7 +152,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## setBlob
 
@@ -182,7 +188,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| 7600206 | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -192,7 +198,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 批量设置图片元数据中的指定属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -208,7 +214,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 用户要修改的ExifMetadata对象的属性和键值对的集合。 |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | 是 | 用户要修改的ExifMetadata对象的属性和键值对的集合。 |
 
 **返回值：**
 
@@ -220,7 +226,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## apertureValue
 
@@ -230,7 +236,7 @@ apertureValue?: double
 
 镜头光圈。单位为APEX。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -270,7 +276,7 @@ bitsPerSample?: int[]
 
 像素各分量的位数。如RGB是3分量，格式是8，8，8。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -310,7 +316,7 @@ brightnessValue?: double
 
 图像的亮度值。单位为APEX。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -370,7 +376,7 @@ colorSpace?: int
 
 颜色空间信息标签，通常记录为颜色空间说明符。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -410,7 +416,7 @@ compositeImage?: int
 
 指示图像是否为合成图像。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -430,7 +436,7 @@ compressedBitsPerPixel?: double
 
 图像压缩方案。单位为每像素比特。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -450,7 +456,7 @@ compression?: int
 
 用于图像压缩的算法标准。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -470,7 +476,7 @@ contrast?: int
 
 相机应用的对比度优化策略。例如：标准处理、弱化对比度等。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -510,7 +516,7 @@ customRendered?: int
 
 表示对图像数据的特殊处理，如HDR合成、AI场景增强。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -616,7 +622,7 @@ digitalZoomRatio?: double
 
 拍摄时的数字变焦比。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -656,7 +662,7 @@ exposureBiasValue?: double
 
 曝光偏差值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -676,7 +682,7 @@ exposureIndex?: double
 
 拍摄时选定的曝光指数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -696,7 +702,7 @@ exposureMode?: int
 
 曝光模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -716,7 +722,7 @@ exposureProgram?: int
 
 相机在拍摄照片时用于设置曝光的程序类。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -736,7 +742,7 @@ exposureTime?: double
 
 曝光时间。单位为秒（s）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -756,7 +762,7 @@ fNumber?: double
 
 光圈值，如f/1.8。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -796,7 +802,7 @@ flash?: int
 
 闪光。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -816,7 +822,7 @@ flashEnergy?: double
 
 图像捕获时的闪光灯能量。单位为光束烛光秒（BCPS，Beam Candlepower Seconds）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -856,7 +862,7 @@ focalLength?: double
 
 焦距。单位为毫米（mm）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -876,7 +882,7 @@ focalLengthIn35mmFilm?: int
 
 换算成35mm等效焦距。单位为毫米（mm）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -896,7 +902,7 @@ focalPlaneResolutionUnit?: int
 
 FocalPlaneXResolution和FocalPlaneYResolution的测量单位。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -916,7 +922,7 @@ focalPlaneXResolution?: double
 
 传感器物理平面X轴方向上每单位物理长度的像素数量。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -936,7 +942,7 @@ focalPlaneYResolution?: double
 
 传感器物理平面Y轴方向上每单位物理长度的像素数量。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -956,7 +962,7 @@ gainControl?: int
 
 整体图像增益调整程度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -976,7 +982,7 @@ gamma?: double
 
 每个组件的伽玛值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -996,7 +1002,7 @@ gpsAltitude?: double
 
 基于GPSAltitudeRef中的参考高度。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1016,7 +1022,7 @@ gpsAltitudeRef?: int
 
 用于GPS的参考高度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1076,7 +1082,7 @@ gpsDestBearing?: double
 
 到达目的地的方位。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1116,7 +1122,7 @@ gpsDestDistance?: double
 
 到目的地的距离。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1156,7 +1162,7 @@ gpsDestLatitude?: double[]
 
 目的地的纬度。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -1196,7 +1202,7 @@ gpsDestLongitude?: double[]
 
 目的地的经度。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -1236,7 +1242,7 @@ gpsDifferential?: int
 
 是否对GPS数据应用了差分校正，这对精确定位精度至关重要。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1256,7 +1262,7 @@ gpsDop?: double
 
 GPS数据精度DOP精度衰减因子（Dilution of Precision）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1276,7 +1282,7 @@ gpsHPositioningError?: double
 
 水平定位误差。单位为米（m）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1296,7 +1302,7 @@ gpsImgDirection?: double
 
 拍摄时图像的方向。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1340,7 +1346,7 @@ GPS纬度。
 
 当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100,0/1。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -1384,7 +1390,7 @@ GPS经度。
 
 当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100，0/1。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -1504,7 +1510,7 @@ gpsSpeed?: double
 
 GPS接收器移动的速度。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1564,7 +1570,7 @@ gpsTimestamp?: double[]
 
 GPS时间戳。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -1584,7 +1590,7 @@ gpsTrack?: double
 
 GPS接收器移动的方向。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1624,7 +1630,7 @@ gpsVersionID?: int[]
 
 GPS信息的格式版本标识符。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -1664,7 +1670,7 @@ imageLength?: int
 
 图像长度。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1704,7 +1710,7 @@ imageWidth?: int
 
 图像宽度。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1724,7 +1730,7 @@ isoSpeedLatitudeyyy?: int
 
 表示相机传感器在单次曝光中可记录的最大动态范围。单位为EV。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1744,7 +1750,7 @@ isoSpeedLatitudezzz?: int
 
 表示相机传感器在过曝方向保护高光细节的能力边界。单位为EV。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1764,7 +1770,7 @@ isoSpeedRatings?: int
 
 ISO 12232中指定的相机或输入设备的ISO速度和ISO纬度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1784,7 +1790,7 @@ jpegInterchangeFormat?: int
 
 JPEG交换格式比特流的SOI（Start of Image）标记。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1804,7 +1810,7 @@ jpegInterchangeFormatLength?: int
 
 JPEG流的字节数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1884,7 +1890,7 @@ lensSpecification?: double[]
 
 所用镜头的规格。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -1904,7 +1910,7 @@ lightSource?: int
 
 光源。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -1964,7 +1970,7 @@ maxApertureValue?: double
 
 镜头的最小光圈值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -1984,7 +1990,7 @@ meteringMode?: int
 
 测光模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2024,7 +2030,7 @@ newSubfileType?: int
 
 表示该子文件的数据类型（例如文本/图像等基本类型，而非具体存储格式）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2124,7 +2130,7 @@ orientation?: Orientation
 
 图像方向。
 
-**类型：** Orientation
+**类型：** [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md)
 
 **起始版本：** 23
 
@@ -2144,7 +2150,7 @@ photoMode?: int
 
 照片模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2164,7 +2170,7 @@ photographicSensitivity?: int[]
 
 拍摄图像时相机或输入设备的灵敏度。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -2184,7 +2190,7 @@ photometricInterpretation?: int
 
 像素组成，如RGB（红绿蓝，Red Green Blue）和YCbCr（亮度-蓝色色差-红色色差，Luma-Chrominance）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2204,7 +2210,7 @@ pixelXDimension?: int
 
 图像在X轴上的（二维坐标系中的Horizontal Axis）尺寸。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2224,7 +2230,7 @@ pixelYDimension?: int
 
 图像在Y轴上的（二维坐标系中的Vertical Axis）尺寸。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2244,7 +2250,7 @@ planarConfiguration?: int
 
 指示像素分量是以块状或平面格式记录。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2264,7 +2270,7 @@ primaryChromaticities?: double[]
 
 图像原色的色度。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -2284,7 +2290,7 @@ recommendedExposureIndex?: int
 
 推荐曝光指数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2304,7 +2310,7 @@ referenceBlackWhite?: double[]
 
 参考黑点值和白点值。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -2344,7 +2350,7 @@ resolutionUnit?: int
 
 用于测量宽度方向上的图像分辨率和高度方向上的图像分辨率的单位。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2364,7 +2370,7 @@ rowsPerStrip?: int
 
 每条图像数据的行数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2388,7 +2394,7 @@ samplesPerPixel?: int
 
 对于JPEG压缩图像，此标签将会被对应的JPEG标记替换。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2408,7 +2414,7 @@ saturation?: int
 
 相机应用的色彩饱和度调节策略。例如：标准、降饱和模式等。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2428,7 +2434,7 @@ sceneCaptureType?: int
 
 拍摄的场景类型。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2468,7 +2474,7 @@ sensingMethod?: int
 
 摄像头的图像传感器类型。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2488,7 +2494,7 @@ sensitivityType?: int
 
 灵敏度类型。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2508,7 +2514,7 @@ sharpness?: int
 
 相机应用的边缘增强处理方式。例如：弱锐化、标准锐化等。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2528,7 +2534,7 @@ shutterSpeedValue?: double
 
 快门速度，表示为摄影曝光相加系统值APEX（Additive System of Photographic Exposure）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -2588,7 +2594,7 @@ sourceImageNumberOfCompositeImage?: int[]
 
 用于合成图像的源图像数量。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -2648,7 +2654,7 @@ standardOutputSensitivity?: int
 
 标准输出灵敏度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2668,7 +2674,7 @@ stripByteCounts?: int[]
 
 压缩后每个条带中的字节数。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -2692,7 +2698,7 @@ stripOffsets?: int[]
 
 此标签按顺序存储每个条带在文件中的起始位置偏移量。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -2712,7 +2718,7 @@ subfileType?: int
 
 已弃用标签，表示该子文件中的数据类型。请使用newSubfileType替代。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2732,7 +2738,7 @@ subjectArea?: int[]
 
 用于指示主要对象在整个场景中的位置和区域。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -2752,7 +2758,7 @@ subjectDistance?: double
 
 拍照设备到被摄体的距离。单位为米（m）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -2772,7 +2778,7 @@ subjectDistanceRange?: int
 
 指示到对象的距离范围。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2792,7 +2798,7 @@ subjectLocation?: int[]
 
 图像中主体的像素坐标（基于左上角原点）。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -2912,7 +2918,7 @@ whiteBalance?: int
 
 白平衡。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -2932,7 +2938,7 @@ whitePoint?: double[]
 
 图像白点的色度。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -2952,7 +2958,7 @@ xResolution?: double
 
 宽度方向上的图像分辨率。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -2972,7 +2978,7 @@ yCbCrCoefficients?: double[]
 
 用于将RGB图像数据转换为YCbCr图像数据的变换矩阵系数。
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 23
 
@@ -2992,7 +2998,7 @@ yCbCrPositioning?: int
 
 色度分量相对于亮度分量的位置。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -3012,7 +3018,7 @@ yCbCrSubSampling?: int[]
 
 色度分量与亮度分量的采样比。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -3032,7 +3038,7 @@ yResolution?: double
 
 高度方向上的图像分辨率。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 

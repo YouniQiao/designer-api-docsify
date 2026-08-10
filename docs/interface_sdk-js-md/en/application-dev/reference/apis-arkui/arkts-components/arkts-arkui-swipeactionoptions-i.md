@@ -1,8 +1,8 @@
 # SwipeActionOptions
 
-The top layer of the @builder function corresponding to start and end must be a single component.Otherwise, undefined behavior occurs. If the top layer of the @builder function is a statement such as if/else or ForEach, ensure that these statements can generate a single component.
+start和end对应的@builder函数中顶层必须是单个组件（如果顶层是if/else、ForEach等渲染控制语句，则必须保证其仅能生成单个组件），否则会引发未定义行为。
 
-The swipe gesture works only in the list item area. If a swipe causes a child component to extend beyond the list item area, the portion outside the area does not respond to the swipe.
+滑动手势只在ListItem区域上生效，如果子组件滑出ListItem区域外，在ListItem以外部分不会响应滑动手势。所以在多列模式下，建议不要将划出组件设置太宽。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ The swipe gesture works only in the list item area. If a swipe causes a child co
 onOffsetChange?: (offset: number) => void
 ```
 
-Callback invoked when the location of the list item changes, in vp, when it is swiped left or right(in vertical list layout) or up or down (in horizontal list layout).
+当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）位置发生变化触发。
 
 **Since:** 11
 
@@ -44,9 +44,9 @@ Callback invoked when the location of the list item changes, in vp, when it is s
 edgeEffect?: SwipeEdgeEffect
 ```
 
-Scroll effect.
+滑动效果。
 
-**Type:** SwipeEdgeEffect
+**Type:** [SwipeEdgeEffect](arkts-arkui-swipeedgeeffect-e.md)
 
 **Since:** 9
 
@@ -64,9 +64,9 @@ Scroll effect.
 end?: CustomBuilder | SwipeActionItem
 ```
 
-Swipe action item displayed on the right of the list item when the item is swiped left(in vertical list layout) or below the list item when the item is swiped up (in horizontal list layout).
+ListItem向左划动时item右边的组件（List垂直布局时）或ListItem向上划动时item下方的组件（List水平布局时）。
 
-**Type:** CustomBuilder \| SwipeActionItem
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| SwipeActionItem
 
 **Since:** 9
 
@@ -84,9 +84,9 @@ Swipe action item displayed on the right of the list item when the item is swipe
 start?: CustomBuilder | SwipeActionItem
 ```
 
-Swipe action item displayed on the left of the list item when the item is swiped right(in vertical list layout) or above the list item when the item is swiped down (in horizontal list layout).
+ListItem向右划动时item左边的组件（List垂直布局时）或ListItem向下划动时item上方的组件（List水平布局时）。
 
-**Type:** CustomBuilder \| SwipeActionItem
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| SwipeActionItem
 
 **Since:** 9
 

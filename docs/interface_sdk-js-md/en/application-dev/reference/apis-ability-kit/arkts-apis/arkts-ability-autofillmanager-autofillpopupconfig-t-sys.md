@@ -4,7 +4,7 @@
 export type AutoFillPopupConfig = _AutoFillPopupConfig.default
 ```
 
-Defines the size and position information of an auto-fill pop-up.
+自动填充气泡弹窗的尺寸和位置信息。
 
 **Since:** 12
 

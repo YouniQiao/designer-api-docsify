@@ -16,6 +16,12 @@ Worker线程自身的运行环境，与宿主线程环境隔离。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## close
 
 ```TypeScript
@@ -36,7 +42,7 @@ close(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -80,8 +86,8 @@ onmessage属性用于指定当Worker线程收到来自其宿主线程通过postM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| this | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| this | [DedicatedWorkerGlobalScope](arkts-arkts-worker-dedicatedworkerglobalscope-i.md) | 是 |  |
+| ev | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | 是 |  |
 
 ## onmessageerror
 
@@ -107,8 +113,8 @@ onmessage属性用于指定当Worker线程收到一条无法被反序列化的�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| this | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| this | [DedicatedWorkerGlobalScope](arkts-arkts-worker-dedicatedworkerglobalscope-i.md) | 是 |  |
+| ev | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | 是 |  |
 
 ## postMessage
 
@@ -162,9 +168,9 @@ Worker线程向宿主线程发送消息。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | messageObject | Object | 是 | messageObject 发送至宿主线程的数据。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 可为postMessage设置的选项。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 可为postMessage设置的选项。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -214,7 +220,7 @@ Worker线程向宿主线程发送消息。
 | messageObject | Object | 是 | messageObject 发送至宿主线程的数据。 |
 | transfer | ArrayBuffer[] | 是 | transfer 数组不可包含null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets

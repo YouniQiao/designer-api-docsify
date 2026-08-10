@@ -1,6 +1,14 @@
 # BlendMode
 
-Enumerates the blend modes. A blend mode combines two colors (source color and destination color) in a specific way to create a new color. This is commonly used in graphics operations like overlaying, filtering, and masking. The blending process applies the same logic to the red, green, and blue color channels separately. The alpha channel,however, is handled according to the specific definitions of each blend mode.For brevity, the following abbreviations are used:s: source. d: destination. sa: source alpha. da: destination alpha.The following abbreviations are used in the calculation result:r: used when the calculation method is the same for the four channels (alpha, red, green, and blue channels). ra:used when only the alpha channel is manipulated. **rc**: used when the other three color channels are manipulated.The table below shows the effect of each blend mode, where the yellow rectangle is the source and the blue circle is the destination.
+混合模式枚举。混合模式会将两种颜色（源色、目标色）以特定的方式混合生成一种新的颜色，通常用于叠加、滤镜和遮罩等图形操作场景。混合操作会分别作用于红、绿、蓝三个颜色通道，采用相同的混合逻辑，而透明度（Alpha通道）则根据各模式的定义另行处理。为简洁起见，我们使用以下缩写：
+
+s : source 源的缩写；d : destination 目标的缩写；sa : source alpha 源透明度的缩写；da : destination alpha 目标透明度的缩写。
+
+计算结果用如下缩写表示：
+
+r : 如果4个通道（透明度、红、绿、蓝）的计算方式相同，用r表示。ra : 如果只操作透明度通道，用ra表示。rc : 如果操作3个颜色通道，用rc表示。
+
+以黄色矩形为源图像，蓝色圆形为目标图像，各混合模式枚举生成的效果示意图请参考下表。
 
 **Since:** 11
 
@@ -16,7 +24,7 @@ Enumerates the blend modes. A blend mode combines two colors (source color and d
 CLEAR = 0
 ```
 
-r = 0, sets the destination pixels to fully transparent.
+清除模式，r = 0，设置为全透明。
 
 **Since:** 11
 
@@ -32,7 +40,7 @@ r = 0, sets the destination pixels to fully transparent.
 SRC = 1
 ```
 
-r = s (all channels of the result equal those of the source), replaces the destination pixels with the source pixels.
+r = s，result的4个通道都等于source的4个通道，即结果等于源。使用源像素替换目标像素。
 
 **Since:** 11
 
@@ -48,7 +56,7 @@ r = s (all channels of the result equal those of the source), replaces the desti
 DST = 2
 ```
 
-r = d (all channels of the result equal those of the destination), keeps the destination pixels unchanged.
+r = d，result的4个通道都等于destination的4个通道，即结果等于目标。保持目标像素不变。
 
 **Since:** 11
 
@@ -64,7 +72,7 @@ r = d (all channels of the result equal those of the destination), keeps the des
 SRC_OVER = 3
 ```
 
-r = s + (1 - sa) * d, draws the source pixels over the destination pixels, considering the source's transparency.
+r = s + (1 - sa) * d，在目标像素上方绘制源像素，考虑源像素的透明度。
 
 **Since:** 11
 
@@ -80,7 +88,7 @@ r = s + (1 - sa) * d, draws the source pixels over the destination pixels, consi
 DST_OVER = 4
 ```
 
-r = d + (1 - da) * s, draws the destination pixels over the source pixels, considering the destination's transparency.
+r = d + (1 - da) * s，在源像素上方绘制目标像素，考虑目标像素的透明度。
 
 **Since:** 11
 
@@ -96,7 +104,7 @@ r = d + (1 - da) * s, draws the destination pixels over the source pixels, consi
 SRC_IN = 5
 ```
 
-r = s * da, retains only the intersection of the source pixels with the opaque parts of the destination.
+r = s * da，仅保留源像素与目标不透明部分的交集。
 
 **Since:** 11
 
@@ -112,7 +120,7 @@ r = s * da, retains only the intersection of the source pixels with the opaque p
 DST_IN = 6
 ```
 
-r = d * sa, retains only the intersection of the destination pixels with the opaque parts of the source.
+r = d * sa，仅保留目标像素与源不透明部分的交集。
 
 **Since:** 11
 
@@ -128,7 +136,7 @@ r = d * sa, retains only the intersection of the destination pixels with the opa
 SRC_OUT = 7
 ```
 
-r = s * (1 - da), retains the parts of the source pixels that do not overlap with the destination.
+r = s * (1 - da)，保留源像素中不与目标重叠的部分。
 
 **Since:** 11
 
@@ -144,7 +152,7 @@ r = s * (1 - da), retains the parts of the source pixels that do not overlap wit
 DST_OUT = 8
 ```
 
-r = d * (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
+r = d * (1 - sa)，保留目标像素中不与源重叠的部分。
 
 **Since:** 11
 
@@ -160,7 +168,7 @@ r = d * (1 - sa), retains the parts of the destination pixels that do not overla
 SRC_ATOP = 9
 ```
 
-r = s * da + d * (1 - sa), covers the destination pixels with the source pixels, showing the source only in the opaque parts of the destination.
+r = s * da + d * (1 - sa)，源像素覆盖在目标像素上，仅在目标不透明部分显示源像素。
 
 **Since:** 11
 
@@ -176,7 +184,7 @@ r = s * da + d * (1 - sa), covers the destination pixels with the source pixels,
 DST_ATOP = 10
 ```
 
-r = d * sa + s * (1 - da), covers the source pixels with the destination pixels, showing the destination only in the opaque parts of the source.
+r = d * sa + s * (1 - da)，目标像素覆盖在源像素上，仅在源不透明部分显示目标像素。
 
 **Since:** 11
 
@@ -192,7 +200,7 @@ r = d * sa + s * (1 - da), covers the source pixels with the destination pixels,
 XOR = 11
 ```
 
-r = s * (1 - da) + d * (1 - sa), shows only the non-overlapping parts of the source and destination pixels.
+r = s * (1 - da) + d * (1 - sa)，仅显示源像素和目标像素中不重叠的部分。
 
 **Since:** 11
 
@@ -208,7 +216,7 @@ r = s * (1 - da) + d * (1 - sa), shows only the non-overlapping parts of the sou
 PLUS = 12
 ```
 
-r = min(s + d, 1), adds the color values of the source and destination pixels.
+r = min(s + d, 1)，源和目标像素的颜色值相加。
 
 **Since:** 11
 
@@ -224,7 +232,7 @@ r = min(s + d, 1), adds the color values of the source and destination pixels.
 MODULATE = 13
 ```
 
-r = s * d, multiplies the color values of the source and destination pixels.
+r = s * d，源和目标像素的颜色值相乘。
 
 **Since:** 11
 
@@ -240,7 +248,7 @@ r = s * d, multiplies the color values of the source and destination pixels.
 SCREEN = 14
 ```
 
-r = s + d - s * d, inverts the color values of the source and destination pixels, multiplies them, and then inverts the result, typically producing a brighter outcome.
+滤色模式，r = s + d - s * d，反转源和目标像素的颜色值，相乘后再反转，结果通常更亮。
 
 **Since:** 11
 
@@ -256,7 +264,7 @@ r = s + d - s * d, inverts the color values of the source and destination pixels
 OVERLAY = 15
 ```
 
-Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the destination pixels, enhancing contrast.
+叠加模式，根据目标像素的亮度，选择性地应用MULTIPLY或SCREEN模式，增强对比度。
 
 **Since:** 11
 
@@ -272,7 +280,7 @@ Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the de
 DARKEN = 16
 ```
 
-rc = s + d - max(s * da, d * sa), ra = s + (1 - sa) * d, takes the darker color values between the source and destination pixels.
+变暗模式，rc = s + d - max(s * da, d * sa), ra = s + (1 - sa) * d，取源和目标像素中较暗的颜色值。
 
 **Since:** 11
 
@@ -288,7 +296,7 @@ rc = s + d - max(s * da, d * sa), ra = s + (1 - sa) * d, takes the darker color 
 LIGHTEN = 17
 ```
 
-rc = s + d - min(s * da, d * sa), ra = s + (1 - sa) * d, takes the lighter color values between the source and destination pixels.
+变亮模式，rc = s + d - min(s * da, d * sa), ra = s + (1 - sa) * d，取源和目标像素中较亮的颜色值。
 
 **Since:** 11
 
@@ -304,7 +312,7 @@ rc = s + d - min(s * da, d * sa), ra = s + (1 - sa) * d, takes the lighter color
 COLOR_DODGE = 18
 ```
 
-Brightens the destination pixels by reducing contrast to reflect the source pixels.
+颜色减淡模式，通过减小对比度使目标像素变亮以反映源像素。
 
 **Since:** 11
 
@@ -320,7 +328,7 @@ Brightens the destination pixels by reducing contrast to reflect the source pixe
 COLOR_BURN = 19
 ```
 
-Darkens the destination pixels by increasing contrast to reflect the source pixels.
+颜色加深模式，通过增加对比度使目标像素变暗以反映源像素。
 
 **Since:** 11
 
@@ -336,7 +344,7 @@ Darkens the destination pixels by increasing contrast to reflect the source pixe
 HARD_LIGHT = 20
 ```
 
-Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the source pixels.
+强光模式，根据源像素的亮度，选择性地应用MULTIPLY或SCREEN模式。
 
 **Since:** 11
 
@@ -352,7 +360,7 @@ Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the so
 SOFT_LIGHT = 21
 ```
 
-Softly brightens or darkens the destination pixels based on the brightness of the source pixels.
+柔光模式，根据源像素的亮度，柔和地变亮或变暗目标像素。
 
 **Since:** 11
 
@@ -368,7 +376,7 @@ Softly brightens or darkens the destination pixels based on the brightness of th
 DIFFERENCE = 22
 ```
 
-rc = s + d - 2 * (min(s * da, d * sa)), ra = s + (1 - sa) * d, calculates the difference between the color values of the source and destination pixels.
+差值模式，rc = s + d - 2 * (min(s * da, d * sa)), ra = s + (1 - sa) * d，计算源和目标像素颜色值的差异。
 
 **Since:** 11
 
@@ -384,7 +392,7 @@ rc = s + d - 2 * (min(s * da, d * sa)), ra = s + (1 - sa) * d, calculates the di
 EXCLUSION = 23
 ```
 
-rc = s + d - two(s * d), ra = s + (1 - sa) * d, similar to **DIFFERENCE** but with lower contrast.
+排除模式，rc = s + d - two(s * d), ra = s + (1 - sa) * d，类似于DIFFERENCE，但对比度较低。
 
 **Since:** 11
 
@@ -400,7 +408,7 @@ rc = s + d - two(s * d), ra = s + (1 - sa) * d, similar to **DIFFERENCE** but wi
 MULTIPLY = 24
 ```
 
-r = s * (1 - da) + d * (1 - sa) + s * d, multiplies the color values of the source and destination pixels,typically resulting in a darker outcome.
+正片叠底，r = s * (1 - da) + d * (1 - sa) + s * d，源和目标像素的颜色值相乘，结果通常更暗。
 
 **Since:** 11
 
@@ -416,7 +424,7 @@ r = s * (1 - da) + d * (1 - sa) + s * d, multiplies the color values of the sour
 HUE = 25
 ```
 
-Uses the hue of the source pixels and the saturation and brightness of the destination pixels.
+色相模式，使用源像素的色相，目标像素的饱和度和亮度。
 
 **Since:** 11
 
@@ -432,7 +440,7 @@ Uses the hue of the source pixels and the saturation and brightness of the desti
 SATURATION = 26
 ```
 
-Uses the saturation of the source pixels and the hue and brightness of the destination pixels.
+饱和度模式，使用源像素的饱和度，目标像素的色相和亮度。
 
 **Since:** 11
 
@@ -448,7 +456,7 @@ Uses the saturation of the source pixels and the hue and brightness of the desti
 COLOR = 27
 ```
 
-Uses the hue and saturation of the source pixels and the brightness of the destination pixels.
+颜色模式，使用源像素的色相和饱和度，目标像素的亮度。
 
 **Since:** 11
 
@@ -464,7 +472,7 @@ Uses the hue and saturation of the source pixels and the brightness of the desti
 LUMINOSITY = 28
 ```
 
-Uses the brightness of the source pixels and the hue and saturation of the destination pixels.
+亮度模式，使用源像素的亮度，目标像素的色相和饱和度。
 
 **Since:** 11
 

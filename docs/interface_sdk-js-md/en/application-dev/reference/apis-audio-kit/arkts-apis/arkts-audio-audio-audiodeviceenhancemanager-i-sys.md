@@ -1,6 +1,6 @@
 # AudioDeviceEnhanceManager
 
-Provides enhanced audio device management capabilities.
+提供增强的音频设备管理能力。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Provides enhanced audio device management capabilities.
 
 **System capability:** SystemCapability.Multimedia.Audio.DeviceEnhance
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## getSoundCardInfo
 
 ```TypeScript
 getSoundCardInfo(): Promise<SoundCardInfo>
 ```
 
-Obtains the sound card information. This method uses a Promise to return the query result.
+获取声卡信息。该方法使用promise返回查询结果。
 
 **Since:** 26.0.0
 
@@ -34,12 +40,12 @@ Obtains the sound card information. This method uses a Promise to return the que
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SoundCardInfo&gt; | Promise used to return the sound card information. |
+| Promise&lt;SoundCardInfo&gt; | Promise用于返回声卡信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 202 | Not system App. |
 

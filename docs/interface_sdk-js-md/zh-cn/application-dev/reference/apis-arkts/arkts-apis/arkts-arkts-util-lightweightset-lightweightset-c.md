@@ -10,6 +10,12 @@ LightWeightSet可用于存储一系列值的集合，存储元素中value值唯�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { LightWeightSet } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
@@ -32,18 +38,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
-
-**示例：**
-
-```TypeScript
-let lightWeightSet: LightWeightSet<string> = new LightWeightSet<string>();
-lightWeightSet.add("squirrel");
-lightWeightSet.add("sparrow");
-for (let item of lightWeightSet) {
-  console.info("value:" + item);
-}
-```
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
 
 ## [Symbol.iterator]
 
@@ -67,15 +62,15 @@ for (let item of lightWeightSet) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -145,9 +140,9 @@ add(obj: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
+| 10200011 | The add method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 向容器中添加元素
@@ -178,7 +173,7 @@ addAll(set: LightWeightSet<T>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| set | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 提供添加元素的LightWeightSet。 |
+| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | 是 | 提供添加元素的LightWeightSet。 |
 
 **返回值：**
 
@@ -190,9 +185,9 @@ addAll(set: LightWeightSet<T>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The addAll method cannot be bound. |
+| 10200011 | The addAll method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -228,9 +223,9 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -264,9 +259,9 @@ LightWeightSet的构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The LightWeightSet's constructor cannot be directly invoked. |
+| 10200012 | The LightWeightSet's constructor cannot be directly invoked. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建LightWeightSet实例
@@ -295,15 +290,15 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| 10200011 | The entries method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -335,9 +330,10 @@ equal(obj: Object): boolean
 ```
 
 判断此容器与obj的构成元素是否相同。
-    **说明：**  
-    
-    此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
+
+> **说明：**
+> 
+> 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -365,9 +361,9 @@ equal(obj: Object): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The equal method cannot be bound. |
+| 10200011 | The equal method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -408,9 +404,9 @@ forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -457,21 +453,7 @@ forEach(callbackFn: LightWeightSetForEachCb<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 对每个元素执行的回调函数。 |
-
-**示例：**
-
-```TypeScript
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
-
-let lightWeightSet: LightWeightSet<string> = new LightWeightSet<string>();
-lightWeightSet.add("sparrow");
-lightWeightSet.add("gull");
-let lightWeightSetCb: LightWeightSetForEachCb<string> = (value: string, key: string, set: LightWeightSet<string>) => {
-  console.info("value: " + value, " key: " + key);
-};
-lightWeightSet.forEach(lightWeightSetCb);
-```
+| callbackFn | [LightWeightSetForEachCb](arkts-arkts-lightweightsetforeachcb-t.md)&lt;T&gt; | 是 | 对每个元素执行的回调函数。 |
 
 ## getIndexOf
 
@@ -507,15 +489,15 @@ getIndexOf(key: T): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 在LightWeightSet中指定数据的下标。若LightWeightSet中没有要查找的元素，则返回一个负值。 表示目标哈希值应该插入的位置，插入位置是从1开始计数的，负号表示这是一个插入位置而不是索引。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 在LightWeightSet中指定数据的下标。若LightWeightSet中没有要查找的元素，则返回一个负值。 表示目标哈希值应该插入的位置，插入位置是从1开始计数的，负号表示这是一个插入位置而不是索引。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOf method cannot be bound. |
+| 10200011 | The getIndexOf method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -548,7 +530,7 @@ getValueAt(index: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 指定下标。需要小于等于INT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX即2147483647。 |
+| index | number | 是 | 指定下标。需要小于等于INT32_MAX即2147483647。 |
 
 **返回值：**
 
@@ -560,9 +542,9 @@ getValueAt(index: number): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getValueAt method cannot be bound. |
+| 10200011 | The getValueAt method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -637,9 +619,9 @@ has(key: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
+| 10200011 | The has method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<number>();
@@ -655,7 +637,7 @@ console.info("result:", result);  // result: true
 hasAll(set: LightWeightSet<T>): boolean
 ```
 
-判断容器中是否包含指定set中的所有元素。当容器中存储的value为number类型且值大于INT32\_MAX(2147483647)或小于INT32\_MIN(-2147483648)时，判断结果可能与预期不一致，详见规格限制。
+判断容器中是否包含指定set中的所有元素。当容器中存储的value为number类型且值大于INT32_MAX(2147483647)或小于INT32_MIN(-2147483648)时，判断结果可能与预期不一致，详见规格限制。
 
 **起始版本：** 8
 
@@ -671,7 +653,7 @@ hasAll(set: LightWeightSet<T>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| set | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 用于判断当前容器是否包含其所有元素的目标集合。 |
+| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | 是 | 用于判断当前容器是否包含其所有元素的目标集合。 |
 
 **返回值：**
 
@@ -683,9 +665,9 @@ hasAll(set: LightWeightSet<T>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasAll method cannot be bound. |
+| 10200011 | The hasAll method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -726,16 +708,16 @@ increaseCapacityTo(minimumCapacity: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minimumCapacity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 需要容纳的元素数量。若传入值小于当前元素个数，则不会变更容量。 |
+| minimumCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 需要容纳的元素数量。若传入值小于当前元素个数，则不会变更容量。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The increaseCapacityTo method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of minimumCapacity is out of range. |
+| 10200011 | The increaseCapacityTo method cannot be bound. |
+| 10200001 | The value of minimumCapacity is out of range. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -771,9 +753,9 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 判断容器是否为空
@@ -816,9 +798,9 @@ remove(key: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -859,15 +841,6 @@ remove(key: T): T | undefined
 | --- | --- |
 | T | 如果存在则返回被删除的值，否则返回undefined。 |
 
-**示例：**
-
-```TypeScript
-let lightWeightSet: LightWeightSet<string> = new LightWeightSet<string>();
-lightWeightSet.add("squirrel");
-lightWeightSet.add("sparrow");
-let result = lightWeightSet.remove("sparrow");
-```
-
 ## removeAt
 
 ArkTS-Dyn:
@@ -896,7 +869,7 @@ removeAt(index: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定下标，取值范围[0, length-1]，且需要小于等于INT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX即2147483647。超出有效下标范围时返回false。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定下标，取值范围[0, length-1]，且需要小于等于INT32_MAX即2147483647。超出有效下标范围时返回false。 |
 
 **返回值：**
 
@@ -908,9 +881,9 @@ removeAt(index: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeAt method cannot be bound. |
+| 10200011 | The removeAt method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -949,9 +922,9 @@ toArray(): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toArray method cannot be bound. |
+| 10200011 | The toArray method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -987,7 +960,7 @@ toString(): String
 | --- | --- |
 | String | 返回包含容器中所有元素的字符串。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -1020,15 +993,15 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| 10200011 | The values method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();

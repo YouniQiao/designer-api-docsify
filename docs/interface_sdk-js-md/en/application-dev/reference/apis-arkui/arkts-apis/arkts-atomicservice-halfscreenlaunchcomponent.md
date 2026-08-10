@@ -1,10 +1,16 @@
 # @ohos.atomicservice.HalfScreenLaunchComponent(Defines the halfScreen launch component)
 
-###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+###### 子组件
+ 无。
+ ###### 属性
+ 不支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
 
+
+## Modules to Import
+
+```TypeScript
+import { HalfScreenLaunchComponent } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 
@@ -12,5 +18,5 @@
 
 | Name | Description |
 | --- | --- |
-| [HalfScreenLaunchComponent](arkts-arkui-atomicservice-halfscreenlaunchcomponent-halfscreenlaunchcomponent-s.md) | HalfScreenLaunchComponent** is a component designed for launching atomic services in half screen. If the invoked application (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in half-screen embedded mode. If authorization is not provided,the invoker will launch the atomic service in a pop-up manner. |
+| [HalfScreenLaunchComponent](arkts-arkui-atomicservice-halfscreenlaunchcomponent-halfscreenlaunchcomponent-s.md) | 半屏嵌入式启动原子化服务组件，当被拉起方未授权嵌入式运行原子化服务时，宿主将使用跳出式拉起原子化服务。 |
 

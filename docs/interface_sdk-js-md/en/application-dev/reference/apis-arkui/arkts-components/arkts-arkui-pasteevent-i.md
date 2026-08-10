@@ -1,6 +1,6 @@
 # PasteEvent
 
-Defines a custom paste event.
+定义用户粘贴事件。
 
 **Since:** 11
 
@@ -16,9 +16,11 @@ Defines a custom paste event.
 preventDefault?: Callback<void>
 ```
 
-Prevents the default paste event.
+阻止系统默认粘贴事件。
 
-**Type:** Callback&lt;void&gt;
+省略时，执行系统默认粘贴行为。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 11
 

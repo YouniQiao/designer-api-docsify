@@ -6,7 +6,7 @@
 const pid: number
 ```
 
-Process ID (PID) of the process.
+进程的 ID（PID）。
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ Process ID (PID) of the process.
 const tid: number
 ```
 
-Thread ID (TID) of the thread.
+线程的 ID（TID）。
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ Thread ID (TID) of the thread.
 const uid: number
 ```
 
-User identifier (UID) of the process.
+进程的用户标识（UID）。
 
 **Since:** 7
 

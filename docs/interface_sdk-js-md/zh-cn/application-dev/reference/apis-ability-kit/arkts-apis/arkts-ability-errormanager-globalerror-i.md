@@ -2,7 +2,7 @@
 
 有关异常事件名字、消息、错误堆栈信息、异常线程名称和类型的对象。
 
-**继承/实现关系：** GlobalError extends [Error](Error)
+**继承/实现关系：** GlobalError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
 
 **起始版本：** 18
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## instanceName
 
 ```TypeScript
@@ -20,7 +26,7 @@ instanceName: string
 
 表示虚拟机实例名称。
 
-**说明**：
+**说明：**
 
 TaskPool线程中异常的instanceName标识规则：
 
@@ -48,7 +54,7 @@ instanceType: InstanceType
 
 表示虚拟机的实例类型。
 
-**类型：** InstanceType
+**类型：** [InstanceType](arkts-ability-errormanager-instancetype-e.md)
 
 **起始版本：** 18
 

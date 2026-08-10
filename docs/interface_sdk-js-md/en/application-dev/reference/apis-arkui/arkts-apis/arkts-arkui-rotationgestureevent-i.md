@@ -1,9 +1,8 @@
 # RotationGestureEvent
 
-Inherits from [BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This object can be passed as the **event** parameter of  
-[onGestureJudgeBegin]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
 
-**Inheritance/Implementation:** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-component/gesture-basegestureevent-i.md)
+**Inheritance/Implementation:** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
 **Since:** 11
 
@@ -19,15 +18,15 @@ Inherits from [BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This obje
 angle: number
 ```
 
-Rotation angle, in deg.
+表示旋转角度，单位为deg。
 
-**NOTE**
+**说明：**
 
-Angle calculation: When a rotation gesture is detected, the line connecting the two fingers is identified as the starting line. As the fingers slide, the line between them rotates. Based on the coordinates of the end points of the starting line and the current line, the arctangent function is used to calculate the included angles relative to the horizontal direction.
+角度计算方式：当旋转手势被识别后，连接两根手指之间的线被识别为起始线条。随着手指的滑动，手指之间的线条会发生旋转。根据起始线条和当前线条两端点的坐标，使用反正切函数分别计算其相对于水平方向的夹角。
 
-The final rotation angle is: arctan2(cy2 - cy1, cx2 - cx1) - arctan2(y2 - y1, x2 - x1)
+最终的旋转角度为：arctan2(cy2-cy1, cx2-cx1) - arctan2(y2-y1, x2-x1) 
 
-With the starting line as the reference axis, clockwise rotation ranges from 0 to 180 degrees, and counterclockwise rotation ranges from 0 to –180 degrees.
+在起始线条为坐标系的情况下，顺时针旋转为0到180度，逆时针旋转为0到-180度。
 
 **Type:** number
 

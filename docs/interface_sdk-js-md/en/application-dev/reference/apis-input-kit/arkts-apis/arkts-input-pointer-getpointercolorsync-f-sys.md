@@ -1,12 +1,18 @@
 # getPointerColorSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## getPointerColorSync
 
 ```TypeScript
 function getPointerColorSync(): int
 ```
 
-Obtains the pointer color. This API returns the result synchronously.
+获取鼠标光标颜色，使用同步方式返回结果。
 
 **Since:** 10
 
@@ -22,15 +28,15 @@ Obtains the pointer color. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Pointer color. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 鼠标光标颜色。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -44,9 +50,9 @@ struct Index {
         .onClick(() => {
           try {
             let pointerColor = pointer.getPointerColorSync();
-            console.info(`getPointerColorSync success, pointerColor: ${JSON.stringify(pointerColor)}`);
+            console.info(`Succeeded in getting pointer color sync, pointerColor: ${JSON.stringify(pointerColor)}.`);
           } catch (error) {
-            console.error(`getPointerColorSync failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get pointer color sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

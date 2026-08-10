@@ -10,6 +10,12 @@ Gainmap图单个通道的数据内容，参考ISO 21496-1。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## alternateOffset
 
 ```TypeScript
@@ -18,7 +24,7 @@ alternateOffset: double
 
 The per-component alternate offset.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -36,7 +42,7 @@ baseOffset: double
 
 The per-component baseline offset.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -54,7 +60,7 @@ gainmapMax: double
 
 The per-component max gain map values.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -72,7 +78,7 @@ gainmapMin: double
 
 The per-component min gain map values.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -90,7 +96,7 @@ gamma: double
 
 The per-component gamma values.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 

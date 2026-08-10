@@ -12,6 +12,12 @@ Describes audio capturer configuration options that can capture microphone input
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerInfo
 
 ```TypeScript
@@ -20,7 +26,7 @@ capturerInfo: AudioCapturerInfo
 
 Capturer attribute information.
 
-**类型：** AudioCapturerInfo
+**类型：** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
 **起始版本：** 23
 
@@ -42,7 +48,7 @@ ecStreamInfo?: AudioStreamInfo
 
 Stream information that describe echo reference signal.If not set this attribute, the capturer will only record Mic-In audio stream.
 
-**类型：** AudioStreamInfo
+**类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **起始版本：** 23
 
@@ -64,7 +70,7 @@ micInStreamInfo: AudioStreamInfo
 
 Stream information that describe Mic-In audio stream.
 
-**类型：** AudioStreamInfo
+**类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **起始版本：** 23
 
@@ -86,7 +92,7 @@ processedStreamInfo?: AudioStreamInfo
 
 描述处理后的音频流的流信息。
 
-**类型：** AudioStreamInfo
+**类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **起始版本：** 24
 

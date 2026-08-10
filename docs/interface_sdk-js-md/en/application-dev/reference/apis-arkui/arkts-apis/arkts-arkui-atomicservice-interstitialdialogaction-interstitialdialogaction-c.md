@@ -1,6 +1,10 @@
 # InterstitialDialogAction
 
-The **InterstitialDialogAction** component is a dialog box used in atomic services to temporarily display information that requires user attention or actions to be taken while maintaining the current context. Users can trigger corresponding actions by clicking different areas of the dialog box.
+InterstitialDialogAction弹框在原子化服务中用于在保持当前的上下文环境时，临时展示用户需关注的信息或待处理的操作，用户点击弹框的不同区域可以触发对应的回调动作。
+
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **Since:** 12
 
@@ -10,13 +14,19 @@ The **InterstitialDialogAction** component is a dialog box used in atomic servic
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from 'kits/@kit.ArkUI';
+```
+
 ## closeDialog
 
 ```TypeScript
 closeDialog(): void
 ```
 
-Closes the dialog box.
+关闭弹框。
 
 **Since:** 12
 
@@ -34,7 +44,7 @@ Closes the dialog box.
 constructor(dialogOptions: DialogOptions)
 ```
 
-A constructor used to create an **InterstitialDialogAction** instance.
+InterstitialDialogAction的构造函数。
 
 **Since:** 12
 
@@ -50,7 +60,7 @@ A constructor used to create an **InterstitialDialogAction** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Creates a new dialog action object. |
+| dialogOptions | [DialogOptions](arkts-arkui-atomicservice-interstitialdialogaction-dialogoptions-i.md) | Yes | Creates a new dialog action object. |
 
 ## openDialog
 
@@ -58,7 +68,7 @@ A constructor used to create an **InterstitialDialogAction** instance.
 openDialog(): void
 ```
 
-Opens the dialog box.
+打开弹框。
 
 **Since:** 12
 

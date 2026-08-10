@@ -1,10 +1,10 @@
 # ClipOp
 
-Enumerates the canvas clipping modes.
-    **NOTE**  
-    
-    The diagrams show the result of cropping a circle based on different enumerated values after a rectangle is  
-    cropped in INTERSECT mode. The green area is the final area obtained.
+画布裁剪方式的枚举。
+
+> **说明：**
+> 
+> 示意图展示了以INTERSECT方式裁剪一个矩形后，使用不同枚举值继续裁剪一个圆形的结果，绿色区域为最终的裁剪区域。
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ Enumerates the canvas clipping modes.
 DIFFERENCE = 0
 ```
 
-Clips a specified area. That is, the difference set is obtained.
+将指定区域裁剪（取差集）。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Clips a specified area. That is, the difference set is obtained.
 INTERSECT = 1
 ```
 
-Retains a specified area. That is, the intersection is obtained.
+将指定区域保留（取交集）。
 
 **Since:** 12
 

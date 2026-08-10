@@ -1,6 +1,6 @@
 # BackgroundTaskSubscriber (System API)
 
-Represents a listener object used to listen for background task state changes.
+后台任务监听。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Represents a listener object used to listen for background task state changes.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## onContinuousTaskStart
 
 ```TypeScript
 onContinuousTaskStart(info: ContinuousTaskInfo): void
 ```
 
-Called when a continuous task starts.
+长时任务开始回调接口。
 
 **Since:** 23
 
@@ -36,14 +42,14 @@ Called when a continuous task starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Continuous task callback information, including the task ID and type. |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
-private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
     onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
         console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
     },
@@ -62,7 +68,7 @@ private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscribe
 onContinuousTaskStop(info: ContinuousTaskInfo): void
 ```
 
-Called when a continuous task stops.
+长时任务结束回调接口。
 
 **Since:** 23
 
@@ -80,14 +86,14 @@ Called when a continuous task stops.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Continuous task callback information, including the task ID and type. |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
-private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
     onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
         console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
     },
@@ -106,7 +112,7 @@ private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscribe
 onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 ```
 
-Called when a continuous task is updated.
+长时任务更新回调接口。
 
 **Since:** 23
 
@@ -124,14 +130,14 @@ Called when a continuous task is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Continuous task callback information, including the task ID and type. |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
-private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
+let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
     onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
         console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
     },

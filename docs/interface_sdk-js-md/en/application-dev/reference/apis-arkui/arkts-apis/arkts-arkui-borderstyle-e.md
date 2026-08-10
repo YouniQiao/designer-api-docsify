@@ -2,9 +2,9 @@
 
 Border Style
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum BorderStyle--><!--Device-unnamed-declare enum BorderStyle-End-->
 
@@ -18,13 +18,13 @@ Dotted
 
 Displays as a series of dots with a radius of half the borderWidth.
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-BorderStyle-Dotted--><!--Device-BorderStyle-Dotted-End-->
 
@@ -38,13 +38,13 @@ Dashed
 
 Shows as a series of short square dashed lines.
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-BorderStyle-Dashed--><!--Device-BorderStyle-Dashed-End-->
 
@@ -58,13 +58,13 @@ Solid
 
 Shows as a solid line.
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-BorderStyle-Solid--><!--Device-BorderStyle-Solid-End-->
 

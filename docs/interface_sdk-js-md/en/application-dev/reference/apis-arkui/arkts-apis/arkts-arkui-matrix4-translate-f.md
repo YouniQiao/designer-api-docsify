@@ -1,12 +1,20 @@
 # translate
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## translate
 
 ```TypeScript
 function translate(options: TranslateOption): Matrix4Transit
 ```
 
-Translates this matrix object along the x, y, and z axes.
+Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
+
+> **说明：**
 
 **Since:** 7
 
@@ -14,7 +22,7 @@ Translates this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
+**Substitutes:** [matrix4.Matrix4Transit.translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
 
 <!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
 
@@ -24,11 +32,11 @@ Translates this matrix object along the x, y, and z axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Translation configuration. |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | 设置平移参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Matrix object after translation. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 平移后的矩阵对象。 |
 

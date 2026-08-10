@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -62,9 +68,9 @@ path: string
 permissionMode: int
 ```
 
-应用程序捐献目录的权限，例如 { OperationMode.READ\_MODE } 或{ OperationMode.READ\_MODE | OperationMode.WRITE\_MODE }。
+应用程序捐献目录的权限，例如 { OperationMode.READ_MODE } 或{ OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

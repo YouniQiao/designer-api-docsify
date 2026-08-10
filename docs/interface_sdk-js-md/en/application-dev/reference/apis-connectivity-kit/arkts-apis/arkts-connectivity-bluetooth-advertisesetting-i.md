@@ -14,6 +14,12 @@ Describes the settings for BLE advertising.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## connectable
 
 ```TypeScript

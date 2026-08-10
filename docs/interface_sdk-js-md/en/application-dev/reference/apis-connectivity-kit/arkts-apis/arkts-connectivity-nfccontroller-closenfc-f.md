@@ -1,5 +1,11 @@
 # closeNfc
 
+## Modules to Import
+
+```TypeScript
+import { nfcController } from 'kits/@kit.ConnectivityKit';
+```
+
 ## closeNfc
 
 ```TypeScript

@@ -12,6 +12,12 @@ Indicates Wi-Fi fence information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## type
 
 ```TypeScript
@@ -20,7 +26,7 @@ type: WifiFingerprintType
 
 Indicates Wi-Fi fingerprint type.
 
-**Type:** WifiFingerprintType
+**Type:** [WifiFingerprintType](arkts-location-geolocationmanager-wififingerprinttype-e-sys.md)
 
 **Since:** 26.0.0
 

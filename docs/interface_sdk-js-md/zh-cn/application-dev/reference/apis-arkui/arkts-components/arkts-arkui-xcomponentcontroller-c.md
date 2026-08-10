@@ -100,7 +100,7 @@ getXComponentSurfaceRect(): SurfaceRect
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | XComponent所持有的surface的矩形。 |
+| [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | XComponent所持有的surface的矩形。 |
 
 ## getXComponentSurfaceRotation
 
@@ -126,7 +126,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 | 类型 | 说明 |
 | --- | --- |
-| Required&lt;SurfaceRotationOptions&gt; | surface旋转选项的结果。 |
+| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;SurfaceRotationOptions&gt; | surface旋转选项的结果。 |
 
 ## lockCanvas
 
@@ -134,7 +134,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 lockCanvas(): DrawingCanvas | null
 ```
 
-获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md/arkts-arkgraphics2d-drawing-canvas-c.md)。
 
 **起始版本：** 20
 
@@ -152,7 +152,7 @@ lockCanvas(): DrawingCanvas | null
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回用于在XComponent创建的surface上绘制的Canvas。 如果surface不可用，则返回null。 |
+| [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | 返回用于在XComponent创建的surface上绘制的Canvas。 如果surface不可用，则返回null。 |
 
 ## onSurfaceChanged
 
@@ -162,8 +162,7 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 
 当XComponent所持有的surface大小发生变化时触发（包括XComponent以指定大小创建时）。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**说明：**  
-仅当XComponent组件未设置libraryname参数时，会进行该回调。
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -182,7 +181,7 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | surfaceId | string | 是 | XComponent所持有的surface的ID。 |
-| rect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于显示XComponent所持有的surface的矩形。 |
+| rect | [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | 是 | 用于显示XComponent所持有的surface的矩形。 |
 
 ## onSurfaceCreated
 
@@ -192,8 +191,7 @@ onSurfaceCreated(surfaceId: string): void
 
 当XComponent所持有的surface创建完成时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**说明：**  
-仅当XComponent组件未设置libraryname参数时，会进行该回调。
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -221,8 +219,7 @@ onSurfaceDestroyed(surfaceId: string): void
 
 当XComponent所持有的surface销毁时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**说明：**  
-仅当XComponent组件未设置libraryname参数时，会进行该回调。
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -249,9 +246,10 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 ```
 
 设置XComponent创建的surface的配置。
-    **说明：**  
-    
-    此接口仅在XComponent的type为TEXTURE或SURFACE时生效。
+
+> **说明：**
+> 
+> 此接口仅在XComponent的type为TEXTURE或SURFACE时生效。
 
 **起始版本：** 22
 
@@ -269,7 +267,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | surface配置 |
+| config | [SurfaceConfig](../arkts-apis/arkts-arkui-xcomponent-surfaceconfig-i.md) | 是 | surface配置 |
 
 ## setXComponentSurfaceRect
 
@@ -295,7 +293,7 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | XComponent所持有的surface的矩形。 |
+| rect | [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | 是 | XComponent所持有的surface的矩形。 |
 
 ## setXComponentSurfaceRotation
 
@@ -321,7 +319,7 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rotationOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 屏幕旋转时是否锁定当前XComponent所持有的surface的方向。 |
+| rotationOptions | [SurfaceRotationOptions](../arkts-apis/arkts-arkui-xcomponent-surfacerotationoptions-i.md) | 是 | 屏幕旋转时是否锁定当前XComponent所持有的surface的方向。 |
 
 ## setXComponentSurfaceSize
 
@@ -352,7 +350,7 @@ setXComponentSurfaceSize(value: {
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | {     surfaceWidth: number;     surfaceHeight: number;   } | 是 | XComponent所持有的surface的宽度和高度。 |
+| value | {     surfaceWidth: number;     surfaceHeight: number;   } | 是 | XComponent所持有的surface的宽度和高度。 |
 
 ## startImageAnalyzer
 
@@ -360,15 +358,17 @@ setXComponentSurfaceSize(value: {
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。
+配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer](XComponentAttribute#enableAnalyzer)，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。
 
 由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。
 
 如果在执行完成之前重复调用此接口，将触发错误回调。
-    **说明：**
-    图像分析类型无法动态修改。  
-    
-    此接口依赖于设备能力。在不兼容的设备上调用将返回错误码。
+
+> **说明：**
+
+> 图像分析类型无法动态修改。
+> 
+> 此接口依赖于设备能力。在不兼容的设备上调用将返回错误码。
 
 **起始版本：** 12
 
@@ -386,7 +386,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | AI图像分析器的设置。 |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | 是 | AI图像分析器的设置。 |
 
 **返回值：**
 
@@ -398,9 +398,9 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | 不支持图像分析特性。 |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | 图像分析正在执行中。 |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | 图像分析已停止。 |
+| 110001 | 不支持图像分析特性。 |
+| 110003 | 图像分析已停止。 |
+| 110002 | 图像分析正在执行中。 |
 
 ## stopImageAnalyzer
 
@@ -409,10 +409,12 @@ stopImageAnalyzer(): void
 ```
 
 停止AI分析功能，AI分析展示的内容将被销毁。仅type为SURFACE或TEXTURE时有效。
-    **说明：**
-    如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。  
-    
-    此特性依赖于设备能力。
+
+> **说明：**
+
+> 如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。
+> 
+> 此特性依赖于设备能力。
 
 **起始版本：** 12
 
@@ -450,5 +452,5 @@ unlockCanvasAndPost(canvas: DrawingCanvas):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 之前通过lockCanvas获取的canvas。 |
+| canvas | [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | 是 | 之前通过lockCanvas获取的canvas。 |
 

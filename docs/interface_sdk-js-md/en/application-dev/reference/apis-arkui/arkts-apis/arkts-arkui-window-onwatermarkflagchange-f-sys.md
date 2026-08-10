@@ -1,12 +1,18 @@
 # onWaterMarkFlagChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## onWaterMarkFlagChange
 
 ```TypeScript
 function onWaterMarkFlagChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to the watermark status change event.
+添加水印启用状态变化的监听。
 
 **Since:** 23
 
@@ -22,13 +28,13 @@ Subscribes to the watermark status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the watermark status. true if enabled, false otherwise. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。返回当前水印的启用状态。true表示当前已启用水印；false表示当前未启用水印。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

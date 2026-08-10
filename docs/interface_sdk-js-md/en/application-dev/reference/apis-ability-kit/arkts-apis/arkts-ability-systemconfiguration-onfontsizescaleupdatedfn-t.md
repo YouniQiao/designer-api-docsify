@@ -22,5 +22,5 @@ Defines an OnFontSizeScaleUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontSizeScale | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the system's font size  |
+| fontSizeScale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Indicates the system's font size |
 

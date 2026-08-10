@@ -1,6 +1,6 @@
 # Protocol
 
-Enumerates network protocols.
+网络协议。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates network protocols.
 ALL = 0
 ```
 
-All network protocols.
+全部网络协议。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ All network protocols.
 TCP = 1
 ```
 
-TCP.
+网络协议TCP。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ TCP.
 UDP = 2
 ```
 
-UDP.
+网络协议UDP。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ UDP.
 ICMP = 3
 ```
 
-ICMP.
+网络协议ICMP。
 
 **Since:** 12
 

@@ -4,7 +4,7 @@
 declare type OnWillStopDraggingCallback = (velocity: number) => void
 ```
 
-On scroll callback using in scrollable onWillStopDragging.
+滚动组件划动离手时触发的回调。
 
 **Since:** 20
 
@@ -24,5 +24,5 @@ On scroll callback using in scrollable onWillStopDragging.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | number | Yes | The veolicity of the scroll view at the moment the touch was released.  |
+| velocity | number | Yes | 划动离手速度，滚动组件的内容向上滚动时速度为正，向下滚动时速度为负。<br/>单位vp/s。 |
 

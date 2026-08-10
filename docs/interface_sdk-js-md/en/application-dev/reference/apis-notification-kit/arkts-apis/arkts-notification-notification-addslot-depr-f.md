@@ -6,7 +6,7 @@
 function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 ```
 
-Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result.
+创建指定类型的通知通道（callback形式）。
 
 **Since:** 7
 
@@ -24,8 +24,8 @@ Adds a notification slot of a specified type. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the notification slot to add. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | 要创建的通知通道的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示被指定的回调方法。 |
 
 
 ## addSlot
@@ -34,7 +34,7 @@ Adds a notification slot of a specified type. This API uses an asynchronous call
 function addSlot(type: SlotType): Promise<void>
 ```
 
-Adds a notification slot of a specified type. This API uses a promise to return the result.
+创建指定类型的通知通道（Promise形式）。
 
 **Since:** 7
 
@@ -52,11 +52,11 @@ Adds a notification slot of a specified type. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the notification slot to add. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | 要创建的通知通道的类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

@@ -1,10 +1,10 @@
 # RenderExitReason
 
-Enumerates the reasons why the rendering process exits.
+Enum type supplied to {@link renderExitReason} when onRenderExited being called.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum RenderExitReason--><!--Device-unnamed-declare enum RenderExitReason-End-->
 
@@ -16,11 +16,11 @@ Enumerates the reasons why the rendering process exits.
 ProcessAbnormalTermination = 0
 ```
 
-The rendering process terminates abnormally. Possible causes include: rendering process startup timeout, system reclaiming older rendering processes upon reaching the process limit, or simultaneous closure of multiple tabs.
+Render process non-zero exit status.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,11 +34,11 @@ The rendering process terminates abnormally. Possible causes include: rendering 
 ProcessWasKilled = 1
 ```
 
-The rendering process receives a SIGKILL message or is manually terminated.
+SIGKILL or task manager kill.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,11 +52,11 @@ The rendering process receives a SIGKILL message or is manually terminated.
 ProcessCrashed = 2
 ```
 
-The rendering process crashes due to segmentation or other errors.
+Segmentation fault.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,11 +70,11 @@ The rendering process crashes due to segmentation or other errors.
 ProcessOom = 3
 ```
 
-The program memory is insufficient.
+Out of memory.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -88,11 +88,11 @@ The program memory is insufficient.
 ProcessExitUnknown = 4
 ```
 
-Other reasons, such as failure to spawn the rendering process.
+Unknown reason.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

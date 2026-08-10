@@ -1,6 +1,6 @@
 # ImageRenderMode
 
-Interpolation effect of the image.
+图片的渲染模式。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Interpolation effect of the image.
 Original
 ```
 
-Render image pixels as they are in the original source image.
+原色渲染模式。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Render image pixels as they are in the original source image.
 Template
 ```
 
-Render image pixels to create a monochrome template image.
+Render the image as a template image, ignoring the color information of the image.
 
 **Since:** 7
 

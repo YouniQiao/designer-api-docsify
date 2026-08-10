@@ -14,6 +14,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { fileAccess } from 'kits/@kit.CoreFileKit';
+```
+
 ## destUri
 
 ```TypeScript
@@ -46,7 +52,7 @@ destUri: string
 errCode: number
 ```
 
-错误码。接口抛出错误码的详细介绍请参见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+错误码。接口抛出错误码的详细介绍请参见[文件管理错误码](../../../reference/apis-core-file-kit/errorcode-filemanagement.md)。
 
 **类型：** number
 

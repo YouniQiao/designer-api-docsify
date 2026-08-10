@@ -1,6 +1,6 @@
 # HTML
 
-Represents the HTML data. It is a child class of [Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超文本标记语言数据。
 
 **Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
@@ -12,13 +12,19 @@ Represents the HTML data. It is a child class of [Text]\_\_\_JSDOC\_LINK\_DESC\_
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## htmlContent
 
 ```TypeScript
 set htmlContent(value: string)
 ```
 
-Indicates the content of html, with html tags
+html格式内容。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Indicates the content of html, with html tags
 plainContent?: string
 ```
 
-Plaintext without HTML tags. This parameter is optional. The default value is an empty string.
+去除html标签后的纯文本内容，非必填字段，默认值为空字符串。
 
 **Type:** string
 
@@ -62,7 +68,8 @@ Plaintext without HTML tags. This parameter is optional. The default value is an
 set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 ```
 
-Defines URI authorization policies for drag intention.
+用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见  
+[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
 **Type:** Array&lt;UriPermission&gt;
 

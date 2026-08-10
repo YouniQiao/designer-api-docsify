@@ -16,6 +16,12 @@ Configuring parameters in current location requests
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## maxAccuracy
 
 ```TypeScript
@@ -42,7 +48,7 @@ maxAccuracy?: number
 priority?: LocationRequestPriority
 ```
 
-**Type:** LocationRequestPriority
+**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
 
 **Since:** 7
 
@@ -62,7 +68,7 @@ priority?: LocationRequestPriority
 scenario?: LocationRequestScenario
 ```
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **Since:** 7
 

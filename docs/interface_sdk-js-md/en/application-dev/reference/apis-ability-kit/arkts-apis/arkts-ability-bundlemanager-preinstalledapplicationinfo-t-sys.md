@@ -4,7 +4,7 @@
 export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo
 ```
 
-Defines the preinstalled application information.
+预置应用信息。
 
 **Since:** 12
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## enabled
 
 ```TypeScript
@@ -58,7 +64,7 @@ fontSize?: double
 
 字体大小，浮点数，默认为14.0，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ fontStyle?: FontStyle
 
 字体样式，默认为常规样式。
 
-**类型：** FontStyle
+**类型：** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **起始版本：** 12
 
@@ -96,9 +102,9 @@ fontStyle?: FontStyle
 fontWeight?: FontWeight
 ```
 
-字重，默认为W400。在\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_之前，仅系统字体中的可变字体支持字重调节；从\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于W600时字体粗细无变化，设置字重值大于等于W600时可能会触发伪加粗效果。
+字重，默认为W400。在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，仅系统字体中的可变字体支持字重调节；从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于W600时字体粗细无变化，设置字重值大于等于W600时可能会触发伪加粗效果。
 
-**类型：** FontWeight
+**类型：** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
 
 **起始版本：** 12
 
@@ -118,7 +124,7 @@ fontWidth?: FontWidth
 
 字体宽度，默认为NORMAL。
 
-**类型：** FontWidth
+**类型：** [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md)
 
 **起始版本：** 12
 
@@ -178,7 +184,7 @@ height?: double
 
 行高缩放倍数，浮点数，默认为1.0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -218,7 +224,7 @@ leading?: double
 
 自定义应用于支柱的行距，浮点数，单位为物理像素px，默认为-1.0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 

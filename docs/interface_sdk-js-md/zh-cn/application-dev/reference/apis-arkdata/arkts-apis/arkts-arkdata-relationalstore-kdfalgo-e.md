@@ -16,7 +16,7 @@
 KDF_SHA1 = 0
 ```
 
-PBKDF2\_HMAC\_SHA1算法。
+PBKDF2_HMAC_SHA1算法。
 
 **起始版本：** 14
 
@@ -32,7 +32,7 @@ PBKDF2\_HMAC\_SHA1算法。
 KDF_SHA256 = 1
 ```
 
-PBKDF2\_HMAC\_SHA256算法。
+PBKDF2_HMAC_SHA256算法。
 
 **起始版本：** 14
 
@@ -48,7 +48,7 @@ PBKDF2\_HMAC\_SHA256算法。
 KDF_SHA512 = 2
 ```
 
-PBKDF2\_HMAC\_SHA512算法。
+PBKDF2_HMAC_SHA512算法。
 
 **起始版本：** 14
 

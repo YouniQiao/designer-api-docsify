@@ -1,6 +1,6 @@
 # AutoSyncTriggerInfo
 
-Describes information about the automatic synchronization trigger mode.
+自动同步触发信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes information about the automatic synchronization trigger mode.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## mode
 
 ```TypeScript
 mode: AutoSyncTriggerMode
 ```
 
-Describes the automatic synchronization triggering mode.
+自动同步触发模式。
 
-**Type:** AutoSyncTriggerMode
+**Type:** [AutoSyncTriggerMode](arkts-arkdata-clouddata-autosynctriggermode-e.md)
 
 **Since:** 26.0.0
 

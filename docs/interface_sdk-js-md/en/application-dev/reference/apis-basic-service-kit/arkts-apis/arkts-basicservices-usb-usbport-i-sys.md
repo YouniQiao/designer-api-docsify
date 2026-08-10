@@ -1,6 +1,6 @@
 # USBPort (System API)
 
-Represents a USB port.
+USB设备端口。
 
 **Since:** 9
 
@@ -16,13 +16,19 @@ Represents a USB port.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## id
 
 ```TypeScript
 id: number
 ```
 
-Unique identifier of a USB port.
+USB端口唯一标识。
 
 **Type:** number
 
@@ -46,9 +52,9 @@ Unique identifier of a USB port.
 status: USBPortStatus
 ```
 
-USB port role.
+USB端口角色。
 
-**Type:** USBPortStatus
+**Type:** [USBPortStatus](arkts-basicservices-usb-usbportstatus-i-sys.md)
 
 **Since:** 9
 
@@ -70,9 +76,9 @@ USB port role.
 supportedModes: PortModeType
 ```
 
-Numeric mask combination for the supported mode list.
+USB端口所支持的模式的数字组合掩码。
 
-**Type:** PortModeType
+**Type:** [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md)
 
 **Since:** 9
 

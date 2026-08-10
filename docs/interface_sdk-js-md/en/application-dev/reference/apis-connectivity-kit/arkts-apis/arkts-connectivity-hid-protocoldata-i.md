@@ -10,6 +10,12 @@ Describe the protocol data is received from remote host.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## protocol
 
 ```TypeScript
@@ -18,7 +24,7 @@ protocol: ProtocolType
 
 protocol of protocol data.
 
-**Type:** ProtocolType
+**Type:** [ProtocolType](arkts-connectivity-hid-protocoltype-e.md)
 
 **Since:** 23
 

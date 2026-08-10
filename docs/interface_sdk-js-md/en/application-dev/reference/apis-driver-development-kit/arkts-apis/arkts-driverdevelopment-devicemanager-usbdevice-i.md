@@ -1,6 +1,6 @@
 # USBDevice
 
-USB device information, which is inherited from [Device]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)。
 
 **Inheritance/Implementation:** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md)
 
@@ -12,15 +12,21 @@ USB device information, which is inherited from [Device]\_\_\_JSDOC\_LINK\_DESC\
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
+## Modules to Import
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## productId
 
 ```TypeScript
 productId: int
 ```
 
-Product ID of the USB device.
+USB设备Product ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Product ID of the USB device.
 vendorId: int
 ```
 
-Vendor ID of the USB device.
+USB设备Vendor ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # SettingItem
 
-The definition of setting Information.
+设置项的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of setting Information.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## desc
 
 ```TypeScript
 desc: string
 ```
 
-Description of the setting item.
+设置项的描述。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Description of the setting item.
 id: string
 ```
 
-Unique ID of the setting item.
+设置项的唯一ID。
 
 **Type:** string
 
@@ -56,7 +62,9 @@ Unique ID of the setting item.
 mediaId: string
 ```
 
-Media id associated with the current settings.If the settings are associated with the current media information,you need to set the mediaId; otherwise,it is not required to set the mediaId.
+与当前设置关联的媒体ID。
+
+如果设置与当前媒体信息相关联，需要设置mediaId；否则，不需要设置mediaId。
 
 **Type:** string
 
@@ -76,9 +84,9 @@ Media id associated with the current settings.If the settings are associated wit
 settingType?: SettingType
 ```
 
-Type of the setting item.
+设置项的类型。
 
-**Type:** SettingType
+**Type:** [SettingType](arkts-avsession-avmusictemplate-settingtype-e.md)
 
 **Since:** 23
 
@@ -96,7 +104,11 @@ Type of the setting item.
 settingValue?: string | boolean | SettingContent[] | WantAgent
 ```
 
-Value of the setting item.SWITCH: bool, LIST: SettingContent, JUMP: string.
+设置项的值。
+
+- 当settingType为SettingType.SWITCH时，该值为boolean类型。  
+- 当settingType为SettingType.LIST时，该值为SettingContent数组。  
+- 当settingType为SettingType.JUMP时，该值为string类型。
 
 **Type:** string \| boolean \| SettingContent[] \| WantAgent
 
@@ -116,7 +128,7 @@ Value of the setting item.SWITCH: bool, LIST: SettingContent, JUMP: string.
 title: string
 ```
 
-Title of the setting item.
+设置项的标题。
 
 **Type:** string
 

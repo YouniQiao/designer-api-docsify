@@ -1,6 +1,6 @@
 # RestrictedWorker (System API)
 
-The RestrictedWorker class contains all Worker functions.
+RestrictedWorker类继承[ThreadWorker](arkts-arkts-worker-threadworker-c.md)，具有ThreadWorker中所有的方法。RestrictedWorker主要用于提供受限的Worker线程运行环境，该线程运行环境中只允许导入Worker模块，不允许导入其他API。
 
 **Inheritance/Implementation:** RestrictedWorker extends [ThreadWorker](arkts-arkts-worker-threadworker-c.md)
 
@@ -14,13 +14,19 @@ The RestrictedWorker class contains all Worker functions.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(scriptURL: string, options?: WorkerOptions)
 ```
 
-Creates a worker instance
+RestrictedWorker构造函数。使用其他方法前，均需先构造RestrictedWorker实例。
 
 **Since:** 11
 
@@ -36,13 +42,13 @@ Creates a worker instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scriptURL | string | Yes | scriptURL URL of the script to be executed by the worker |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options that can be set for the worker |
+| scriptURL | string | Yes | Worker线程文件的路径，路径规则详细参考文件路径注意事项。 |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No | 构造RestrictedWorker时的选项。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failure. |
-| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file patch is invalid path. |
+| 10200003 | Worker initialization failure. |
+| 10200007 | The worker file path is invalid. |
 

@@ -1,6 +1,6 @@
 # Participant (System API)
 
-Represents information about a participant of device-cloud sharing.
+端云共享的参与者。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents information about a participant of device-cloud sharing.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## attachInfo
 
 ```TypeScript
 attachInfo?: string
 ```
 
-Additional information, such as the verification code used for participant identity verification.The default value is an empty string.
+附加信息，用于扩展额外的参与者信息。如用于参与者身份校验的校验码等，默认为空字符串。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Additional information, such as the verification code used for participant ident
 identity: string
 ```
 
-ID of the participant.
+参与者的ID。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ ID of the participant.
 privilege?: Privilege
 ```
 
-Permissions on the shared data. The Privilege defaults are used by default.
+指定的共享数据权限。默认为Privilege的默认值。
 
-**Type:** Privilege
+**Type:** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
 **Since:** 11
 
@@ -78,9 +84,9 @@ Permissions on the shared data. The Privilege defaults are used by default.
 role?: Role
 ```
 
-Role of the participant, inviter or invitee. The default value is undefined.
+参与者的角色，为邀请者或被邀请者。默认为undefined。
 
-**Type:** Role
+**Type:** [Role](../../apis-ability-kit/arkts-apis/arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
 
 **Since:** 11
 
@@ -98,9 +104,9 @@ Role of the participant, inviter or invitee. The default value is undefined.
 state?: State
 ```
 
-State of the device-cloud sharing. The default value is undefined.
+共享的状态。默认为undefined。
 
-**Type:** State
+**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **Since:** 11
 

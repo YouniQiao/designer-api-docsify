@@ -1,6 +1,6 @@
 # HttpAuthHandler
 
-Defines the http auth request result, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the http auth request result, related to {@link onHttpAuthRequest} method.
 
 **起始版本：** 9
 

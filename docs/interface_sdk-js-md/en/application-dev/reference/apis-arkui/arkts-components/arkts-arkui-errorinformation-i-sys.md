@@ -18,7 +18,7 @@ Provides the widget error information.
 errcode: number
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[Error code](../../../reference/apis-form-kit/errorcode-form.md).
 
 **Type:** number
 

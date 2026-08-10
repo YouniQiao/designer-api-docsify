@@ -34,7 +34,7 @@ Compares whether two instance methods are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Another instance method object used for comparison. |
+| other | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes | Another instance method object used for comparison. |
 
 **Return value:**
 

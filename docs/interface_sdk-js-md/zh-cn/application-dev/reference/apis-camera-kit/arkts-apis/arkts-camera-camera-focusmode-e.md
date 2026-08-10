@@ -52,7 +52,7 @@ FOCUS_MODE_CONTINUOUS_AUTO = 1
 FOCUS_MODE_AUTO = 2
 ```
 
-自动对焦。支持对焦点设置，可以使用[Focus.setFocusPoint]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置对焦点，根据对焦点执行一次自动对焦。
+自动对焦。支持对焦点设置，可以使用[Focus.setFocusPoint](arkts-camera-camera-focus-i.md#setfocuspoint)设置对焦点，根据对焦点执行一次自动对焦。
 
 **起始版本：** 10
 

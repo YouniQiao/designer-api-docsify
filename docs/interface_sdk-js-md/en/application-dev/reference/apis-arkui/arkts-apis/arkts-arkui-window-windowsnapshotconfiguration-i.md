@@ -1,6 +1,6 @@
 # WindowSnapshotConfiguration
 
-Describes the configuration of the main window screenshot.
+主窗口截图的配置项。
 
 **Since:** 21
 
@@ -10,13 +10,19 @@ Describes the configuration of the main window screenshot.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## useCache
 
 ```TypeScript
 useCache?: boolean
 ```
 
-Whether the existing screenshot of the main window should be used. The default value is **true**. When it is set to **true**, the system uses the existing screenshot of the main window, or captures the latest screenshot if no existing screenshot is saved. When it is set to **false**, the system captures the latest screenshot of the main window.
+是否使用主窗口的已有截图。默认值为true。 true表示使用主窗口的已有截图，若主窗口无保存的截图，则使用主窗口的最新截图。false表示使用主窗口的最新截图。
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # GesturePriority
 
-Enumerates gesture priority levels.
+绑定手势的优先级。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates gesture priority levels.
 NORMAL = 0
 ```
 
-Normal priority.
+普通优先级手势。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Normal priority.
 PRIORITY = 1
 ```
 
-High priority.
+高优先级手势。
 
 **Since:** 12
 

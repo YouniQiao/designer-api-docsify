@@ -10,6 +10,12 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## details
 
 ```TypeScript
@@ -28,7 +34,7 @@ details?: Record<string, string>
 
 的数据对象。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -46,7 +52,7 @@ details?: Record<string, string>
 htmlContent: string
 ```
 
-HTML格式的内容文本，支持标准HTML标签。可以是完整的HTML文档或HTML片段。长度限制为20MB。建议使用UTF-8编码。例如：\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_标题\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_。
+HTML格式的内容文本，支持标准HTML标签。可以是完整的HTML文档或HTML片段。长度限制为20MB。建议使用UTF-8编码。例如：&lt;div&gt;标题&lt;/div&gt;。
 
 **类型：** string
 
@@ -87,7 +93,7 @@ readonly uniformDataType: 'general.html'
 ```
 
 统一数据类型标识为html类型数据，固定为“general.html”，数据类型描述信息见  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **类型：** 'general.html'
 
@@ -108,9 +114,9 @@ uriAuthorizationPolicies?: Array<int>
 ```
 
 用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见  
-[UriPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 26.0.0
 

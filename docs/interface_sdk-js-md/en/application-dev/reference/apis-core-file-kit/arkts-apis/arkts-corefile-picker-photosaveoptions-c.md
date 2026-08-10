@@ -1,6 +1,6 @@
 # PhotoSaveOptions
 
-Defines the options for saving images or videos.
+图片或视频的保存选项。
 
 **Since:** 9
 
@@ -8,11 +8,17 @@ Defines the options for saving images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-component/savebutton-savebuttonoptions-i.md)
+**Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-savebutton-savebuttonoptions-i.md/arkts-arkui-savebutton-savebuttonoptions-i.md)
 
 <!--Device-picker-class PhotoSaveOptions--><!--Device-picker-class PhotoSaveOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
+
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 
 ## newFileNames
 
@@ -20,7 +26,7 @@ Defines the options for saving images or videos.
 newFileNames?: Array<string>
 ```
 
-File name of the image or video to save. If this parameter is not specified, the user needs to enter the file name.
+拉起photoPicker进行保存图片或视频资源的文件名。若无此参数，则默认需要用户自行输入。
 
 **Type:** Array&lt;string&gt;
 
@@ -30,7 +36,7 @@ File name of the image or video to save. If this parameter is not specified, the
 
 **Deprecated since:** 18
 
-**Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-component/savebutton-savebuttonoptions-i.md)
+**Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-savebutton-savebuttonoptions-i.md/arkts-arkui-savebutton-savebuttonoptions-i.md)
 
 <!--Device-PhotoSaveOptions-newFileNames?: Array<string>--><!--Device-PhotoSaveOptions-newFileNames?: Array<string>-End-->
 

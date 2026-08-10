@@ -1,7 +1,6 @@
 # DownloadInfo
 
-Defines the download task information, which is the callback parameter of the  
-[getTaskInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.
+下载任务信息，[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)接口的回调参数。
 
 **Since:** 7
 
@@ -11,13 +10,19 @@ Defines the download task information, which is the callback parameter of the
 
 **System capability:** SystemCapability.MiscServices.Download
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## description
 
 ```TypeScript
 description: string
 ```
 
-Description of the download task.
+待下载任务的描述信息。
 
 **Type:** string
 
@@ -35,9 +40,9 @@ Description of the download task.
 downloadId: long
 ```
 
-Download task ID.
+下载任务id。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 7
 
@@ -53,7 +58,7 @@ Download task ID.
 downloadTitle: string
 ```
 
-Name of the download task.
+下载任务名称。
 
 **Type:** string
 
@@ -71,9 +76,9 @@ Name of the download task.
 downloadTotalBytes: long
 ```
 
-Total size of the files to download, in bytes.
+下载的文件的总大小，单位为字节（B）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 7
 
@@ -89,9 +94,9 @@ Total size of the files to download, in bytes.
 downloadedBytes: long
 ```
 
-Real-time download size, in bytes.
+实时下载大小，单位为字节（B）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 7
 
@@ -107,10 +112,10 @@ Real-time download size, in bytes.
 failedReason: int
 ```
 
-Cause of the download failure. The value can be any constant in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+下载失败原因，可以是任何  
+[下载任务的错误码](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -126,7 +131,7 @@ Cause of the download failure. The value can be any constant in
 fileName: string
 ```
 
-Name of the downloaded file.
+下载的文件名。
 
 **Type:** string
 
@@ -144,7 +149,7 @@ Name of the downloaded file.
 filePath: string
 ```
 
-URI of the saved file.
+存储文件的URI。
 
 **Type:** string
 
@@ -162,10 +167,10 @@ URI of the saved file.
 pausedReason: int
 ```
 
-Cause of download pause. The value can be any constant in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+会话暂停的原因，可以是任何  
+[下载任务暂停原因](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -181,10 +186,10 @@ Cause of download pause. The value can be any constant in
 status: int
 ```
 
-Download task status code. The value can be any constant in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+下载状态码，可以是任何  
+[下载任务状态码](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -200,7 +205,7 @@ Download task status code. The value can be any constant in
 targetURI: string
 ```
 
-URI of the downloaded file.
+下载文件的URI。
 
 **Type:** string
 

@@ -1,12 +1,18 @@
 # getBatteryStats (System API)
 
+## Modules to Import
+
+```TypeScript
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getBatteryStats
 
 ```TypeScript
 function getBatteryStats(): Promise<Array<BatteryStatsInfo>>
 ```
 
-Obtains the power consumption information list. This API uses a promise to return the result.
+获取耗电信息列表。使用Promise异步回调。
 
 **Since:** 8
 
@@ -22,16 +28,16 @@ Obtains the power consumption information list. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Promise used to return the power consumption information list. |
+| Promise&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Promise对象，返回耗电信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
+| 4600101 | Failed to connect to the service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 batteryStats.getBatteryStats()
@@ -50,7 +56,7 @@ batteryStats.getBatteryStats()
 function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 ```
 
-Obtains the power consumption information list. This API uses an asynchronous callback to return the result.
+获取耗电信息列表。使用callback异步回调。
 
 **Since:** 8
 
@@ -66,17 +72,17 @@ Obtains the power consumption information list. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the obtained Array&lt; [BatteryStatsInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_&gt;. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **BatteryStatsInfo** class. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Yes | 回调函数。当获取耗电信息列表成功，err为undefined，data为获取到的Array&lt; [BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md)&gt;>；否则为错误对象；AsyncCallback封装了一个BatteryStatsInfo类型的接口。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 4600101 | Failed to connect to the service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]) => {

@@ -4,7 +4,7 @@
 export type EnabledPriorityNotificationCallbackData = _EnabledPriorityNotificationCallbackData
 ```
 
-Describes the main switch state for priority notification.
+返回通知优先级总开关状态。
 
 **Since:** 23
 

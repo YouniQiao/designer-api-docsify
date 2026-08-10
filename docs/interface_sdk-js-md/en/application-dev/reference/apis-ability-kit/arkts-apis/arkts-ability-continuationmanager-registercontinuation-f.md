@@ -1,12 +1,18 @@
 # registerContinuation
 
+## Modules to Import
+
+```TypeScript
+import { continuationManager } from 'kits/@kit.AbilityKit';
+```
+
 ## registerContinuation
 
 ```TypeScript
 function registerContinuation(callback: AsyncCallback<number>): void
 ```
 
-Registers the continuation management service and obtains a token. This API does not involve any filter parameters and uses an asynchronous callback to return the result.
+注册流转管理服务，并获取对应的注册token，无过滤条件，使用AsyncCallback方式作为异步方法。
 
 **Since:** 9
 
@@ -28,18 +34,18 @@ Registers the continuation management service and obtains a token. This API does
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | AsyncCallback形式返回流转管理服务连接后生成的token。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
-| [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) | The number of token registration times has reached the upper limit. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 16600001 | The system ability works abnormally. |
+| 16600003 | The number of token registration times has reached the upper limit. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -66,7 +72,7 @@ try {
 function registerContinuation(options: ContinuationExtraParams, callback: AsyncCallback<number>): void
 ```
 
-Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return the result.
+连接流转管理服务，并获取对应的注册token，使用AsyncCallback方式作为异步方法。
 
 **Since:** 9
 
@@ -88,19 +94,19 @@ Registers the continuation management service and obtains a token. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extra parameters used to filter the list of available devices. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | 过滤可选择设备列表的额外参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | AsyncCallback形式返回流转管理服务连接后生成的token。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
-| [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) | The number of token registration times has reached the upper limit. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 16600001 | The system ability works abnormally. |
+| 16600003 | The number of token registration times has reached the upper limit. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -131,7 +137,7 @@ try {
 function registerContinuation(options?: ContinuationExtraParams): Promise<number>
 ```
 
-Registers the continuation management service and obtains a token. This API uses a promise to return the result.
+连接流转管理服务，并获取对应的注册token，使用Promise方式作为异步方法。
 
 **Since:** 9
 
@@ -153,24 +159,24 @@ Registers the continuation management service and obtains a token. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | 过滤可选择设备列表的额外参数，该参数可缺省。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the token generated after the continuation management service is connected. |
+| Promise&lt;number&gt; | Promise形式返回流转管理服务连接后生成的token。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Parameter verification failed; |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
-| [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) | The number of token registration times has reached the upper limit. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; &lt;br&gt;2. Parameter verification failed; |
+| 201 | Permission denied. |
+| 16600001 | The system ability works abnormally. |
+| 16600003 | The number of token registration times has reached the upper limit. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

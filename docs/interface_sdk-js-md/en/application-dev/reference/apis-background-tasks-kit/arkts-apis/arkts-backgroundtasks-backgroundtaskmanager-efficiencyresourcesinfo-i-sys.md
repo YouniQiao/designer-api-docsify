@@ -1,6 +1,6 @@
 # EfficiencyResourcesInfo (System API)
 
-Defines the efficiency resource information.
+能效资源信息。
 
 **Since:** 20
 
@@ -12,15 +12,21 @@ Defines the efficiency resource information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## cpuLevel
 
 ```TypeScript
 cpuLevel?: EfficiencyResourcesCpuLevel
 ```
 
-CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the CPU resource size. The system allocates the specified CPU resources to the application during the idle time of load (for example, when the screen is off).
+指定CPU级别，能效资源类型resourceTypes为CPU时该参数用于指定CPU资源大小，系统会在负载空闲时间（例如灭屏场景）分配指定的CPU资源给应用。
 
-**Type:** EfficiencyResourcesCpuLevel
+**Type:** [EfficiencyResourcesCpuLevel](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcescpulevel-e-sys.md)
 
 **Since:** 23
 
@@ -40,7 +46,7 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 isForProcess: boolean
 ```
 
-Whether the resource is requested by a process or an application. The value **true** indicates that the resource is requested by a process. The value **false** indicates that the resource is requested by an application.
+进程或应用申请，取值为true表示进程申请。取值为false表示应用申请。
 
 **Type:** boolean
 
@@ -60,7 +66,7 @@ Whether the resource is requested by a process or an application. The value **tr
 isPersistent: boolean
 ```
 
-Whether the resource is permanently held. The default value is **false**. The value **true** indicates the resource is permanently held. The value **false** indicates that the resource is held within a limited time.
+是否永久持有资源，默认为false。取值为true表示永久持有。取值为false表示有限时间内持有。
 
 **Type:** boolean
 
@@ -80,9 +86,9 @@ Whether the resource is permanently held. The default value is **false**. The va
 pid: int
 ```
 
-Application PID.
+应用进程的PID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -100,7 +106,7 @@ Application PID.
 reason: string
 ```
 
-Reason for requesting the resource.
+申请资源原因。
 
 **Type:** string
 
@@ -120,9 +126,9 @@ Reason for requesting the resource.
 resourceTypes: int
 ```
 
-Enumerates the efficiency resource types.
+能效资源类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -140,9 +146,9 @@ Enumerates the efficiency resource types.
 timeout: int
 ```
 
-Timeout, in milliseconds.
+超时时间，单位：ms。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -160,9 +166,9 @@ Timeout, in milliseconds.
 uid: int
 ```
 
-Application UID.
+应用的UID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

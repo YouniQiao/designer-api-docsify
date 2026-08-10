@@ -1,5 +1,11 @@
 # @ohos.WallpaperExtensionAbility
 
+## Modules to Import
+
+```TypeScript
+import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 <!--Del-->

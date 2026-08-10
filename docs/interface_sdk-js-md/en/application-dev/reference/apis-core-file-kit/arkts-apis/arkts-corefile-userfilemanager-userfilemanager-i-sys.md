@@ -8,13 +8,19 @@ Defines the UserFileManager class and provides functions to access the data in u
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md)
 
 <!--Device-userFileManager-interface UserFileManager--><!--Device-userFileManager-interface UserFileManager-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { userFileManager } from 'kits/@kit.CoreFileKit';
+```
 
 ## createAlbum
 
@@ -40,7 +46,7 @@ The album name must meet the following requirements:
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAlbumChangeRequest.createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#createalbumrequest)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAlbumChangeRequest.createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#createalbumrequest)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -55,9 +61,9 @@ The album name must meet the following requirements:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the album to create. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Album&gt; | Yes | Callback used to return the created album instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Album&gt; | Yes | Callback used to return the created album instance. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -99,7 +105,7 @@ The album name must meet the following requirements:
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAlbumChangeRequest.createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#createalbumrequest)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAlbumChangeRequest.createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#createalbumrequest)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -121,7 +127,7 @@ The album name must meet the following requirements:
 | --- | --- |
 | Promise&lt;Album&gt; | Promise that returns the created album instance. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -166,7 +172,7 @@ Creates an audio asset. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the audio asset to create. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FileAsset&gt; | Yes | Callback used to return the created audio asset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileAsset&gt; | Yes | Callback used to return the created audio asset. |
 
 **Error codes:**
 
@@ -175,7 +181,7 @@ Creates an audio asset. This API uses an asynchronous callback to return the res
 | 13900020 | if type displayName is not string |
 | 14000001 | if type displayName invalid |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -234,7 +240,7 @@ Creates an audio asset. This API uses a promise to return the result.
 | --- | --- |
 | 13900020 | if type displayName is not string |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -266,7 +272,7 @@ Creates an image or video asset with the specified file name and URI. This API u
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -282,7 +288,7 @@ Creates an image or video asset with the specified file name and URI. This API u
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
 | albumUri | string | Yes | URI of the album where the image or video is located. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -291,7 +297,7 @@ Creates an image or video asset with the specified file name and URI. This API u
 | 13900020 | if type displayName or albumUri is not string |
 | 14000001 | if type displayName invalid |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -332,7 +338,7 @@ Creates an image or video asset with the specified file name. This API uses an a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -347,7 +353,7 @@ Creates an image or video asset with the specified file name. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -356,7 +362,7 @@ Creates an image or video asset with the specified file name. This API uses an a
 | 13900020 | if type displayName is not string |
 | 14000001 | if type displayName invalid |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -389,7 +395,7 @@ Creates an image or video asset with the specified file name and album URI. This
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -418,7 +424,7 @@ Creates an image or video asset with the specified file name and album URI. This
 | --- | --- |
 | 13900020 | if type displayName or albumUri is not string |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -450,7 +456,7 @@ Creates an image or video asset with the specified file name and options. This A
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -465,7 +471,7 @@ Creates an image or video asset with the specified file name and options. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| createOption | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for creating an image or video asset. |
+| createOption | [PhotoCreateOptions](arkts-corefile-userfilemanager-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
 
 **Return value:**
 
@@ -479,7 +485,7 @@ Creates an image or video asset with the specified file name and options. This A
 | --- | --- |
 | 13900020 | if type displayName is not string |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -514,7 +520,7 @@ Creates an image or video asset with the specified file name and options. This A
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -529,8 +535,8 @@ Creates an image or video asset with the specified file name and options. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| createOption | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for creating an image or video asset. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
+| createOption | [PhotoCreateOptions](arkts-corefile-userfilemanager-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -539,7 +545,7 @@ Creates an image or video asset with the specified file name and options. This A
 | 13900020 | if type displayName is not string |
 | 14000001 | if type displayName invalid |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -575,7 +581,7 @@ Deletes a media file. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest.deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest.deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
@@ -590,7 +596,7 @@ Deletes a media file. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the media file. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -598,7 +604,7 @@ Deletes a media file. This API uses an asynchronous callback to return the resul
 | --- | --- |
 | 13900020 | if type uri is not string |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -648,7 +654,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest.deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest.deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
@@ -676,7 +682,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | --- | --- |
 | 13900020 | if type uri is not string |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -719,7 +725,7 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAlbumChangeRequest.deleteAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAlbumChangeRequest.deleteAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -734,9 +740,9 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | albums | Array&lt;Album&gt; | Yes | Albums to delete. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -779,7 +785,7 @@ Deletes user albums. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAlbumChangeRequest.deleteAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAlbumChangeRequest.deleteAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -801,7 +807,7 @@ Deletes user albums. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -854,9 +860,9 @@ Obtains information about online peer devices. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -902,7 +908,7 @@ Obtains the information about online peer devices. This API uses a promise to re
 | --- | --- |
 | Promise&lt;Array&lt;PeerInfo&gt;&gt; | Promise that returns a list of online peer devices. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -938,8 +944,8 @@ getAlbums(
 
 Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use  
-[getHiddenAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use   
+[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -949,7 +955,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -963,10 +969,10 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the album to obtain. |
-| subType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subtype of the album. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Retrieval options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| type | [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
+| subType | [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -974,7 +980,7 @@ Before the operation, ensure that the albums to obtain exist.
 | --- | --- |
 | 13900020 | if type options is not FetchOption |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1014,8 +1020,8 @@ getAlbums(type: AlbumType, subType: AlbumSubType, callback: AsyncCallback<FetchR
 
 Obtains albums by type. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use  
-[getHiddenAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use   
+[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -1025,7 +1031,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1039,9 +1045,9 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the album to obtain. |
-| subType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subtype of the album. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| type | [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
+| subType | [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1049,7 +1055,7 @@ Before the operation, ensure that the albums to obtain exist.
 | --- | --- |
 | 13900020 | if type options is not FetchOption |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1081,8 +1087,8 @@ getAlbums(type: AlbumType, subType: AlbumSubType, options?: FetchOptions): Promi
 
 Obtains albums based on the specified options and album type. This API uses a promise to return the result.
 
-This API cannot be used to obtain hidden albums. Use  
-[getHiddenAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use   
+[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -1092,7 +1098,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1106,9 +1112,9 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the album to obtain. |
-| subType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subtype of the album. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for fetching the albums. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| type | [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
+| subType | [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Options for fetching the albums. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
@@ -1122,7 +1128,7 @@ Before the operation, ensure that the albums to obtain exist.
 | --- | --- |
 | 13900020 | if type options is not FetchOption |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1177,9 +1183,9 @@ Obtains information about all peer devices. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1225,7 +1231,7 @@ Obtains the information about all peer devices. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;Array&lt;PeerInfo&gt;&gt; | Promise that returns the information obtained. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1275,8 +1281,8 @@ Obtains audio assets. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Retrieval options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the audio assets obtained. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the audio assets obtained. |
 
 **Error codes:**
 
@@ -1284,7 +1290,7 @@ Obtains audio assets. This API uses an asynchronous callback to return the resul
 | --- | --- |
 | 13900020 | if type options is not FetchOptions |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1339,7 +1345,7 @@ Obtains an audio asset. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Retrieval options. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
@@ -1353,7 +1359,7 @@ Obtains an audio asset. This API uses a promise to return the result.
 | --- | --- |
 | 13900020 | if type options is not FetchOptions |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1390,11 +1396,11 @@ getPhotoAlbums(options: AlbumFetchOptions, callback: AsyncCallback<FetchResult<A
 
 Obtains image and video albums. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use  
-[getHiddenAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use   
+[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
-This API will be deprecated. Use  
-[getAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_instead.
+This API will be deprecated. Use   
+[getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums)instead.
 
 **Since:** 9
 
@@ -1402,7 +1408,7 @@ This API will be deprecated. Use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1416,8 +1422,8 @@ This API will be deprecated. Use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for fetching the albums. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the albums obtained. |
+| options | [AlbumFetchOptions](arkts-corefile-userfilemanager-albumfetchoptions-i-sys.md) | Yes | Options for fetching the albums. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the albums obtained. |
 
 **Error codes:**
 
@@ -1425,7 +1431,7 @@ This API will be deprecated. Use
 | --- | --- |
 | 13900020 | if type options is not AlbumFetchOptions |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1464,11 +1470,11 @@ getPhotoAlbums(options: AlbumFetchOptions): Promise<FetchResult<Album>>
 
 Obtains albums. This API uses a promise to return the result.
 
-This API cannot be used to obtain hidden albums. Use  
-[getHiddenAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use   
+[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
-This API will be deprecated. Use  
-[getAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_instead.
+This API will be deprecated. Use   
+[getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums)instead.
 
 **Since:** 9
 
@@ -1476,7 +1482,7 @@ This API will be deprecated. Use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1490,7 +1496,7 @@ This API will be deprecated. Use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for fetching the albums. |
+| options | [AlbumFetchOptions](arkts-corefile-userfilemanager-albumfetchoptions-i-sys.md) | Yes | Options for fetching the albums. |
 
 **Return value:**
 
@@ -1504,7 +1510,7 @@ This API will be deprecated. Use
 | --- | --- |
 | 13900020 | if type options is not AlbumFetchOptions |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1542,7 +1548,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1556,8 +1562,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for fetching the image and video assets. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Options for fetching the image and video assets. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 
@@ -1565,7 +1571,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | --- | --- |
 | 13900020 | if type options is not FetchOptions |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1608,7 +1614,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1622,7 +1628,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for fetching the image and video assets. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Options for fetching the image and video assets. |
 
 **Return value:**
 
@@ -1636,7 +1642,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 | --- | --- |
 | 13900020 | if type options is not FetchOptions |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1679,7 +1685,7 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getPhotoIndex](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getphotoindex)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getPhotoIndex](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getphotoindex)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1695,16 +1701,16 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the index obtained. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1759,7 +1765,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getPhotoIndex](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getphotoindex)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getPhotoIndex](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getphotoindex)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1775,7 +1781,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
 
 **Return value:**
 
@@ -1787,9 +1793,9 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1841,8 +1847,8 @@ getPrivateAlbum(type: PrivateAlbumType, callback: AsyncCallback<FetchResult<Priv
 
 Obtains the system album. This API uses an asynchronous callback to return the result.
 
-This API will be deprecated. Use  
-[getAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_instead.
+This API will be deprecated. Use   
+[getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums)instead.
 
 **Since:** 9
 
@@ -1850,7 +1856,7 @@ This API will be deprecated. Use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1864,8 +1870,8 @@ This API will be deprecated. Use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the system album to obtain. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FetchResult&lt;PrivateAlbum&gt;&gt; | Yes | Callback used to return the albums obtained. |
+| type | [PrivateAlbumType](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md) | Yes | Type of the system album to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PrivateAlbum&gt;&gt; | Yes | Callback used to return the albums obtained. |
 
 **Error codes:**
 
@@ -1873,7 +1879,7 @@ This API will be deprecated. Use
 | --- | --- |
 | 13900020 | if type type is not PrivateAlbumType |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1899,8 +1905,8 @@ getPrivateAlbum(type: PrivateAlbumType): Promise<FetchResult<PrivateAlbum>>
 
 Obtains the private album. This API uses a promise to return the result.
 
-This API will be deprecated. Use  
-[getAlbums]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_instead.
+This API will be deprecated. Use   
+[getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums)instead.
 
 **Since:** 9
 
@@ -1908,7 +1914,7 @@ This API will be deprecated. Use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.photoAccessHelper.getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1922,7 +1928,7 @@ This API will be deprecated. Use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the system album to obtain. |
+| type | [PrivateAlbumType](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md) | Yes | Type of the system album to obtain. |
 
 **Return value:**
 
@@ -1936,7 +1942,7 @@ This API will be deprecated. Use
 | --- | --- |
 | 13900020 | if type type is not PrivateAlbumType |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1961,8 +1967,8 @@ off(type: ChangeEvent, callback?: Callback<void>): void
 
 Unsubscribes from changes of the file management library. This API uses a callback to return the result.
 
-This API will be deprecated. Use  
-[off]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_instead.
+This API will be deprecated. Use   
+[off](userFileManager.UserFileManager.off(uri: string, callback?: Callback&lt;ChangeData&gt;)) instead.
 
 **Since:** 9
 
@@ -1982,10 +1988,10 @@ This API will be deprecated. Use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of event to subscribe to. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'deviceChange'**: device change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'albumChange'**: album change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'imageChange'**: image change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'audioChange'**: audio file change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'videoChange'**: video file change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'remoteFileChange'**: change of the file on a registered device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback that returns no value. |
+| type | [ChangeEvent](arkts-corefile-userfilemanager-changeevent-t-sys.md) | Yes | Type of event to subscribe to. &lt;br&gt;**'deviceChange'**: device change. &lt;br&gt;**'albumChange'**: album change. &lt;br&gt;**'imageChange'**: image change. &lt;br&gt;**'audioChange'**: audio file change. &lt;br&gt;**'videoChange'**: video file change. &lt;br&gt;**'remoteFileChange'**: change of the file on a registered device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -2033,7 +2039,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.unregisterChange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#unregisterchange)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.unregisterChange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#unregisterchange)
 
 <!--Device-UserFileManager-off(uri: string, callback?: Callback<ChangeData>): void--><!--Device-UserFileManager-off(uri: string, callback?: Callback<ChangeData>): void-End-->
 
@@ -2045,8 +2051,8 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeData&gt; | No | Callback registered by [on]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note that the specified callback will not be invoked. |
+| uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | No | Callback registered by [on](userFileManager.UserFileManager.on(uri: string, forSubUri: boolean, callback: Callback&lt;ChangeData&gt;)) . If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. &lt;br&gt;Note that the specified callback will not be invoked. |
 
 **Error codes:**
 
@@ -2054,7 +2060,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 | --- | --- |
 | 13900020 | if parameter is invalid |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -2105,8 +2111,8 @@ on(type: ChangeEvent, callback: Callback<void>): void
 
 Subscribes to changes of the file management library. This API uses a callback to return the result.
 
-This API will be deprecated. Use  
-[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_instead.
+This API will be deprecated. Use   
+[on](userFileManager.UserFileManager.on(uri: string, forSubUri: boolean, callback: Callback&lt;ChangeData&gt;))instead.
 
 **Since:** 9
 
@@ -2126,10 +2132,10 @@ This API will be deprecated. Use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of event to subscribe to. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'deviceChange'**: device change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'albumChange'**: album change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'imageChange'**: image change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'audioChange'**: audio file change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'videoChange'**: video file change. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**'remoteFileChange'**: change of the file on a registered device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| type | [ChangeEvent](arkts-corefile-userfilemanager-changeevent-t-sys.md) | Yes | Type of event to subscribe to. &lt;br&gt;**'deviceChange'**: device change. &lt;br&gt;**'albumChange'**: album change. &lt;br&gt;**'imageChange'**: image change. &lt;br&gt;**'audioChange'**: audio file change. &lt;br&gt;**'videoChange'**: video file change. &lt;br&gt;**'remoteFileChange'**: change of the file on a registered device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -2175,7 +2181,7 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.registerChange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#registerchange)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.registerChange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#registerchange)
 
 <!--Device-UserFileManager-on(uri: string, forSubUri: boolean, callback: Callback<ChangeData>): void--><!--Device-UserFileManager-on(uri: string, forSubUri: boolean, callback: Callback<ChangeData>): void-End-->
 
@@ -2187,9 +2193,9 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| forSubUri | boolean | Yes | Whether to perform fuzzy listening. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **uri** is the URI of the album, the value **true** means to listen for the file change in the album; the value **false** means to listen for the album change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is **true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URI cannot be found and no message can be received. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeData&gt; | Yes | Callback used to return [ChangeData]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note that different callbacks can be registered for a URI. You can use [off]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to disable the specified callback or all callbacks for the URI. |
+| uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
+| forSubUri | boolean | Yes | Whether to perform fuzzy listening. &lt;br&gt;If **uri** is the URI of the album, the value **true** means to listen for the file change in the album; the value **false** means to listen for the album change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is **true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URI cannot be found and no message can be received. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md) . &lt;br&gt;Note that different callbacks can be registered for a URI. You can use [off](userFileManager.UserFileManager.off(uri: string, callback?: Callback&lt;ChangeData&gt;)) to disable the specified callback or all callbacks for the URI. |
 
 **Error codes:**
 
@@ -2197,7 +2203,7 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 | --- | --- |
 | 13900020 | if parameter is invalid |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -2255,7 +2261,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#release)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#release)
 
 <!--Device-UserFileManager-release(callback: AsyncCallback<void>): void--><!--Device-UserFileManager-release(callback: AsyncCallback<void>): void-End-->
 
@@ -2267,9 +2273,9 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -2302,7 +2308,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#release)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#release)
 
 <!--Device-UserFileManager-release(): Promise<void>--><!--Device-UserFileManager-release(): Promise<void>-End-->
 
@@ -2316,7 +2322,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 

@@ -1,6 +1,6 @@
 # UpdatePackageInfo
 
-Represents information about the system update packages.
+系统更新包信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents information about the system update packages.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## authInfo
 
 ```TypeScript
 authInfo?: string
 ```
 
-Authentication information of the system update package.
+系统更新包的鉴权信息。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Authentication information of the system update package.
 description?: PackageDescription
 ```
 
-Description of the system update packages.
+系统更新包描述信息。
 
-**Type:** PackageDescription
+**Type:** [PackageDescription](arkts-mdm-systemmanager-packagedescription-i.md)
 
 **Since:** 12
 
@@ -56,7 +62,7 @@ Description of the system update packages.
 packages: Array<Package>
 ```
 
-Details about the system update packages.
+系统更新包详情。
 
 **Type:** Array&lt;Package&gt;
 
@@ -76,7 +82,7 @@ Details about the system update packages.
 version: string
 ```
 
-Version of the system update package.
+系统更新包版本号。
 
 **Type:** string
 

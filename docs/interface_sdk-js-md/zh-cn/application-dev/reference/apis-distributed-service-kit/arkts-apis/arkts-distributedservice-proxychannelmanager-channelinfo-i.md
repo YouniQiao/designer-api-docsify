@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## linkType
 
 ```TypeScript
@@ -18,7 +24,7 @@ linkType: LinkType
 
 代理通道的链路类型。
 
-**类型：** LinkType
+**类型：** [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 
 **起始版本：** 20
 

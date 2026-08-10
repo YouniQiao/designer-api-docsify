@@ -1,14 +1,15 @@
 # SelectionContainerAttribute
 
-支持\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    - 不支持\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。  
-    
-    - 不支持\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_，跨节点场景中Text子组件不支持图形变  
-    换。
+支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。
 
-**继承/实现关系：** SelectionContainerAttribute extends [CommonMethod](arkts-arkui-component/common-commonmethod-i.md)
+> **说明：**
+> 
+> - 不支持[隐私遮罩](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-obscured.md)。
+> 
+> - 不支持[图形变换](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md)，跨节点场景中Text子组件不支持图形变
+> 换。
+
+**继承/实现关系：** SelectionContainerAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
 **起始版本：** 26.0.0
 
@@ -17,6 +18,12 @@
 <!--Device-unnamed-export declare interface SelectionContainerAttribute extends CommonMethod--><!--Device-unnamed-export declare interface SelectionContainerAttribute extends CommonMethod-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
 
 ## attributeModifier
 
@@ -41,7 +48,7 @@ default attributeModifier(modifier: AttributeModifier<SelectionContainerAttribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SelectionContainerAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;SelectionContainerAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -56,16 +63,17 @@ default bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBui
     responseType: TextResponseType | undefined, options?: SelectionContainerMenuOptions | undefined): this
 ```
 
-设置自定义选择菜单。未通过该接口设置时，默认spanType为TextSpanType.TEXT，responseType为TextResponseType.LONG\_PRESS。
-    **说明：**  
-    
-    - bindSelectionMenu的长按响应时长为600ms，  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的长按响应时  
-    长为800ms，当两者同时绑定且触发方式均为长按时，优先响应bindSelectionMenu。  
-    
-    - 自定义菜单过长时，建议内部嵌套使用\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_组件，避免键盘被遮挡。  
-    
-    - 选区跨越不可复制Text时，菜单仅基于实际选中的可复制文本进行显示和处理。
+设置自定义选择菜单。未通过该接口设置时，默认spanType为TextSpanType.TEXT，responseType为TextResponseType.LONG_PRESS。
+
+> **说明：**
+> 
+> - bindSelectionMenu的长按响应时长为600ms，
+> [bindContextMenu](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-menu.md#bindcontextmenu8)的长按响应时
+> 长为800ms，当两者同时绑定且触发方式均为长按时，优先响应bindSelectionMenu。
+> 
+> - 自定义菜单过长时，建议内部嵌套使用[Scroll](../../../reference/apis-arkui/arkui-ts/ts-container-scroll.md)组件，避免键盘被遮挡。
+> 
+> - 选区跨越不可复制Text时，菜单仅基于实际选中的可复制文本进行显示和处理。
 
 **起始版本：** 26.0.0
 
@@ -81,10 +89,10 @@ default bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBui
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanType | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 选择菜单类型。用于指定选择菜单作用的文本类型范围，不同类型对应不同的菜单行为。各枚举值的含义及适用场景详见 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 选择菜单内容。 |
-| responseType | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 选择菜单响应类型。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 否 | 选择菜单选项，用于配置菜单出现、消失、显示、隐藏等事件的回调。当需要监听这些菜单事件时传入此参数，不 传入时默认不监听菜单事件。 |
+| spanType | [TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md) \| undefined | 是 | 选择菜单类型。用于指定选择菜单作用的文本类型范围，不同类型对应不同的菜单行为。各枚举值的含义及适用场景详见 [TextSpanType](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#textspantype11枚举说明)。 |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | 选择菜单内容。 |
+| responseType | [TextResponseType](../arkts-components/arkts-arkui-textresponsetype-e.md) \| undefined | 是 | 选择菜单响应类型。 |
+| options | [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | 否 | 选择菜单选项，用于配置菜单出现、消失、显示、隐藏等事件的回调。当需要监听这些菜单事件时传入此参数，不 传入时默认不监听菜单事件。 |
 
 **返回值：**
 
@@ -99,12 +107,13 @@ default caretColor(color: ResourceColor | undefined): this
 ```
 
 设置选中文本手柄颜色。未通过该接口设置时，默认手柄颜色为'#007DFF'（蓝色）。
-    **说明：**  
-    
-    - 该属性在跨节点场景中用于各Text子组件选中文本手柄颜色。  
-    
-    - 在跨节点场景中Text子组件\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_设置无  
-    效，始终使用SelectionContainer的配置。
+
+> **说明：**
+> 
+> - 该属性在跨节点场景中用于各Text子组件选中文本手柄颜色。
+> 
+> - 在跨节点场景中Text子组件[caretColor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#caretcolor14)设置无
+> 效，始终使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 
@@ -120,7 +129,7 @@ default caretColor(color: ResourceColor | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 手柄颜色。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 手柄颜色。 |
 
 **返回值：**
 
@@ -135,10 +144,11 @@ default copyOption(value: CopyOptions | undefined): this
 ```
 
 设置组件的复制粘贴配置项。未通过该接口设置时，默认为CopyOptions.InApp。
-    **说明：**  
-    
-    Text子组件已显式设置\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_时，优先使用  
-    Text子组件的配置；未设置时，使用SelectionContainer的配置。
+
+> **说明：**
+> 
+> Text子组件已显式设置[copyOption](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#copyoption9)时，优先使用
+> Text子组件的配置；未设置时，使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 
@@ -154,7 +164,7 @@ default copyOption(value: CopyOptions | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
+| value | [CopyOptions](arkts-arkui-copyoptions-e.md) \| undefined | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
 
 **返回值：**
 
@@ -169,10 +179,11 @@ default editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined)
 ```
 
 设置选中文本后的编辑菜单选项，包括菜单文本、图标和回调等。
-    **说明：**  
-    
-    当同时为当前场景设置了[bindSelectionMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和editMenuOptions时，优先使用bindSelectionMenu，editMenuOptions不生  
-    效。bindSelectionMenu用于完全自定义菜单风格和触发条件，由开发者定义所有菜单项；editMenuOptions用于在系统默认菜单基础上添加扩展项，触发条件不变。建议根据自定义程度需求选择。
+
+> **说明：**
+> 
+> 当同时为当前场景设置了[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#bindselectionmenu)和editMenuOptions时，优先使用bindSelectionMenu，editMenuOptions不生
+> 效。bindSelectionMenu用于完全自定义菜单风格和触发条件，由开发者定义所有菜单项；editMenuOptions用于在系统默认菜单基础上添加扩展项，触发条件不变。建议根据自定义程度需求选择。
 
 **起始版本：** 26.0.0
 
@@ -188,7 +199,7 @@ default editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| editMenu | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 自定义编辑菜单配置。 |
+| editMenu | [SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | 是 | 自定义编辑菜单配置。 |
 
 **返回值：**
 
@@ -204,7 +215,7 @@ default enableHapticFeedback(isEnabled: boolean | undefined): this
 
 设置是否开启触控反馈。未通过该接口设置时，默认开启。
 
-开启触控反馈时，需要在工程的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置requestPermissions字段开启振动权限，配置如下：
+开启触控反馈时，需要在工程的[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配置如下：
 
 **起始版本：** 26.0.0
 
@@ -220,7 +231,7 @@ default enableHapticFeedback(isEnabled: boolean | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | boolean \| undefined | 是 | 是否开启触控反馈。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true表示开启触控反馈，false表示不开启触控反馈。 |
+| isEnabled | boolean \| undefined | 是 | 是否开启触控反馈。 &lt;br&gt;true表示开启触控反馈，false表示不开启触控反馈。 |
 
 **返回值：**
 
@@ -235,11 +246,12 @@ default onCopy(callback: Callback<string> | undefined): this
 ```
 
 长按文本内部区域弹出选择菜单后，点击选择菜单的复制按钮，触发该回调。仅支持复制文本。使用callback异步回调。
-    **说明：**  
-    
-    - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配置决定。  
-    
-    - 仅当容器级[onWillCopy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_返回true时，该回调才会触发。
+
+> **说明：**
+> 
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#textjoinstyle)配置决定。
+> 
+> - 仅当容器级[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onwillcopy)返回true时，该回调才会触发。
 
 **起始版本：** 26.0.0
 
@@ -255,7 +267,7 @@ default onCopy(callback: Callback<string> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; \| undefined | 是 | 复制回调。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt; \| undefined | 是 | 复制回调。 |
 
 **返回值：**
 
@@ -270,13 +282,14 @@ default onTextSelectionChange(callback: Callback<Array<string>> | undefined): th
 ```
 
 SelectionContainer中选中文本发生变化时触发该回调。使用callback异步回调。
-    **说明：**  
-    
-    - 回调参数数组中各项顺序与Text组件视觉顺序一致。  
-    
-    - 数组中的每一项对应一个Text子组件的选中文本。  
-    
-    - 仅包含有选中文本的Text子组件，不包含未选中Text子组件，也不包含不可复制Text的空字符串占位。
+
+> **说明：**
+> 
+> - 回调参数数组中各项顺序与Text组件视觉顺序一致。
+> 
+> - 数组中的每一项对应一个Text子组件的选中文本。
+> 
+> - 仅包含有选中文本的Text子组件，不包含未选中Text子组件，也不包含不可复制Text的空字符串占位。
 
 **起始版本：** 26.0.0
 
@@ -292,7 +305,7 @@ SelectionContainer中选中文本发生变化时触发该回调。使用callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; \| undefined | 是 | 选中文本变化回调。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;Array&lt;string&gt;&gt; \| undefined | 是 | 选中文本变化回调。 |
 
 **返回值：**
 
@@ -307,11 +320,12 @@ default onWillCopy(callback: Callback<string, boolean> | undefined): this
 ```
 
 在进行复制操作前，触发该回调。使用callback异步回调。
-    **说明：**  
-    
-    - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配置决定。  
-    
-    - 返回false时，会阻止本次跨节点复制及容器级[onCopy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
+
+> **说明：**
+> 
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#textjoinstyle)配置决定。
+> 
+> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#oncopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
 
 **起始版本：** 26.0.0
 
@@ -327,7 +341,7 @@ default onWillCopy(callback: Callback<string, boolean> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, boolean&gt; \| undefined | 是 | 复制前检查回调，返回true表示允许复制，返回false表示不允许复制。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string, boolean&gt; \| undefined | 是 | 复制前检查回调，返回true表示允许复制，返回false表示不允许复制。 |
 
 **返回值：**
 
@@ -342,13 +356,14 @@ default selectedBackgroundColor(color: ResourceColor | undefined): this
 ```
 
 设置选中文本底板颜色。未通过该接口设置时，默认选中文本底板颜色为'#007DFF'（蓝色），如果未设置不透明度，默认为20%不透明度。
-    **说明：**  
-    
-    - 该属性在跨节点场景中用于各Text子组件选中区域的高亮颜色。  
-    
-    - Text子组件已显式设置  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
+
+> **说明：**
+> 
+> - 该属性在跨节点场景中用于各Text子组件选中区域的高亮颜色。
+> 
+> - Text子组件已显式设置
+> [selectedBackgroundColor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#selectedbackgroundcolor14)
+> 时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 
@@ -364,7 +379,7 @@ default selectedBackgroundColor(color: ResourceColor | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 选中文本底板颜色。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 选中文本底板颜色。 |
 
 **返回值：**
 
@@ -403,13 +418,14 @@ default textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 ```
 
 设置SelectionContainer内聚合文本的拼接方式。未通过该接口设置时，默认为SelectionContainerTextJoinStyle.NEWLINE，表示不同文本节点之间使用换行符\n拼接。
-    **说明：**  
-    
-    - 该配置会影响[onWillCopy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[onCopy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[bindSelectionMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_相关回调中返回  
-    的文本内容。  
-    
-    - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置  
-    为SelectionContainerTextJoinStyle.DIRECT，执行复制后两段文本会直接拼接。
+
+> **说明：**
+> 
+> - 该配置会影响[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onwillcopy)、[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#oncopy)、[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#bindselectionmenu)相关回调中返回
+> 的文本内容。
+> 
+> - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置
+> 为SelectionContainerTextJoinStyle.DIRECT，执行复制后两段文本会直接拼接。
 
 **起始版本：** 26.0.0
 
@@ -425,7 +441,7 @@ default textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 聚合文本拼接方式。 |
+| style | [SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | 是 | 聚合文本拼接方式。 |
 
 **返回值：**
 

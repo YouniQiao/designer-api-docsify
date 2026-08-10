@@ -1,6 +1,6 @@
 # AnimateParam
 
-Defines parameters related to animation effects.
+动画效果相关参数。
 
 **Since:** 7
 
@@ -16,9 +16,9 @@ Defines parameters related to animation effects.
 onFinish?: () => void
 ```
 
-Callback invoked when the animation playback is complete. If the UIAbility moves from the foreground to the background, any finite loop animation that is still in progress will be immediately terminated, triggering the completion callback.
+动画播放完成回调。UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，触发播放完成回调。
 
-If the transition animation is disabled in the developer options and **tempo** is set to **+∞**, the callback is executed immediately when the animation playback is complete.
+在设置的开发者选项中关闭过渡动画，以及tempo设置为+∞时，动画播放完成回调会立即执行。
 
 **Since:** 7
 
@@ -38,60 +38,56 @@ If the transition animation is disabled in the developer options and **tempo** i
 curve?: Curve | string | ICurve
 ```
 
-Animation curve.
+动画曲线。
 
-You are advised to specify the curve using the **Curve** or **ICurve** type.
+推荐以Curve或ICurve形式指定。
 
-When the type is string, it represents an animation interpolation curve, supporting only the following options:
+当类型为string时，为动画插值曲线，仅支持以下可选值：
 
-**"linear"**: Changes linearly.
+"linear"：动画线性变化。
 
-**"ease"**: Slow at both the start and end of an animation; equivalent to cubic-bezier(0.25, 0.1, 0.25, 1.0).
+"ease"：动画开始和结束时的速度较慢，cubic-bezier(0.25、0.1、0.25、1.0)。
 
-**"ease-in"**: Starts slowly and then accelerates; equivalent to cubic-bezier(0.42, 0.0, 1.0, 1.0).
+"ease-in"：动画播放速度先慢后快，cubic-bezier(0.42, 0.0, 1.0, 1.0)。
 
-**"ease-out"**: Starts quickly and then decelerates; equivalent to cubic-bezier(0.0, 0.0, 0.58, 1.0).
+"ease-out"：动画播放速度先快后慢，cubic-bezier(0.0, 0.0, 0.58, 1.0)。
 
-**"ease-in-out"**: Accelerates and then decelerates; equivalent to cubic-bezier(0.42, 0.0, 0.58, 1.0).
+"ease-in-out"：动画播放速度先加速后减速，cubic-bezier(0.42, 0.0, 0.58, 1.0)。
 
-**"fast-out-slow-in"**: Standard curve, **cubic-bezier(0.4, 0.0, 0.2, 1.0)**
+"fast-out-slow-in"：标准曲线，cubic-bezier(0.4, 0.0, 0.2, 1.0)。
 
-**"linear-out-slow-in"**: Deceleration curve, **cubic-bezier(0.0, 0.0, 0.2, 1.0)**
+"linear-out-slow-in"：减速曲线，cubic-bezier(0.0, 0.0, 0.2, 1.0)。
 
-**"fast-out-linear-in"**: Acceleration curve, **cubic-bezier(0.4, 0.0, 1.0, 1.0)**
+"fast-out-linear-in"：加速曲线，cubic-bezier(0.4, 0.0, 1.0, 1.0)。
 
-**"friction"**: Damping curve, **cubic-bezier(0.2, 0.0, 0.2, 1.0)**
+"friction"：阻尼曲线，cubic-bezier(0.2, 0.0, 0.2, 1.0)。
 
-**"extreme-deceleration"**: Extreme deceleration curve, **cubic-bezier(0.0, 0.0, 0.0, 1.0) curve**
+"extreme-deceleration"：急缓曲线，cubic-bezier(0.0, 0.0, 0.0, 1.0)。
 
-**"rhythm"**: Rhythm curve, **cubic-bezier(0.7, 0.0, 0.2, 1.0)**
+"rhythm"：节奏曲线，cubic-bezier(0.7, 0.0, 0.2, 1.0)。
 
-**"sharp"**: Sharp curve, **cubic-bezier(0.33, 0.0, 0.67, 1.0)**
+"sharp"：锐利曲线，cubic-bezier(0.33, 0.0, 0.67, 1.0)。
 
-**"smooth"**: Smooth curve, **cubic-bezier(0.4, 0.0, 0.4, 1.0)**
+"smooth"：平滑曲线，cubic-bezier(0.4, 0.0, 0.4, 1.0)。
 
-**"cubic-bezier(x1, y1, x2, y2)"**: Cubic Bezier curve. The values of **x1** and **x2** must be within the range of  
-[0, 1], as in **"cubic-bezier(0.42, 0.0, 0.58, 1.0)"**.
+"cubic-bezier(x1, y1, x2, y2)"：三次贝塞尔曲线，x1、x2的值必须处于0-1之间。例如"cubic-bezier(0.42, 0.0, 0.58, 1.0)"。
 
-**"steps(number, step-position)"**: Step curve. **number** is required and must be a positive integer.  
-**step-position** is optional and the values **start** and **end** are supported; defaults to end, as in  
-**"steps(3, start)"**.
+"steps(number,step-position)"：阶梯曲线，number必须设置，为正整数，step-position参数可选，支持设置start或end，默认值为end。例如"steps(3,start)"。
 
-**"interpolating-spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see  
-[curves.interpolatingSpring]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+"interpolating-spring(velocity,mass,stiffness,damping)"：具体参数含义参考插值弹簧曲线  
+[curves.interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)。
 
-**"responsive-spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see  
-[curves.responsiveSpringMotion]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+"responsive-spring-motion(response,dampingFraction,overlapDuration)"：具体参数含义参考弹性跟手动画曲线  
+[curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)。
 
-**"spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see  
-[curves.springCurve]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+"spring(velocity,mass,stiffness,damping)"：具体参数含义参考弹簧曲线[curves.springCurve](../arkts-apis/arkts-arkui-curves-springcurve-f.md/arkts-arkui-curves-springcurve-f.md#springcurve)。
 
-**"spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see  
-[curves.springMotion]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
+"spring-motion(response,dampingFraction,overlapDuration)"：具体参数含义参考弹性动画曲线  
+[curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion)。
 
-Default value: **Curve.EaseInOut
+默认值：Curve.EaseInOut
 
-**Type:** Curve \| string \| ICurve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
 
 **Default:** Curve.EaseInOut
 
@@ -113,15 +109,15 @@ Default value: **Curve.EaseInOut
 delay?: number
 ```
 
-Delay of animation playback, in ms. By default, the playback is not delayed.
+动画延迟播放时间，单位为ms(毫秒)，默认不延时播放。
 
-Default value: **0**
+默认值：0
 
-Value range: (-∞, +∞)
+取值范围：(-∞, +∞)
 
-Note: 1. A non-negative **delay** defers the start of the animation. A negative **delay** plays the animation ahead of schedule. If the absolute value of **delay** is less than the actual animation duration, the animation starts its first frame from the state at the absolute value. If the absolute value of **delay** is greater than or equal to the actual animation duration, the animation starts its first frame from the end state. The actual animation duration is equal to the duration of a single animation multiplied by the number of animation playback times.
+**说明：**1.delay>=0为延迟播放，delay<0表示提前播放。对于delay<0的情况：当delay的绝对值小于实际动画时长，动画将在开始后第一帧直接运动到delay绝对值的时刻的状态；当delay的绝对值大于等于实际动画时长，动画将在开始后第一帧直接运动到终点状态。其中实际动画时长等于单次动画时长乘以动画播放次数。
 
-2. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.
+2. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
 
 **Type:** number
 
@@ -143,13 +139,13 @@ Note: 1. A non-negative **delay** defers the start of the animation. A negative 
 duration?: number
 ```
 
-Animation duration, in ms.
+动画持续时间，单位为毫秒。
 
-Default value: **1000**
+默认值：1000
 
-Note: 1. Before API 26.0.0, the maximum animation duration for an ArkTS widget is 1,000 ms; values exceeding this limit are clamped to 1,000 ms. Starting from API version 26.0.0, the maximum animation duration for an ArkTS widget is adjusted to 2,000 ms.
+**说明：**1. API版本26.0.0之前，在ArkTS卡片上最大动画持续时间为1000毫秒，若超出则固定为1000毫秒。从API版本26.0.0开始，在ArkTS卡片上最大动画持续时间调整为2000毫秒。
 
-2. To stop the animation of a property, change the property value in an animation closure with a duration of 0.3. Values less than 0 are clamped to **0**.4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.5. The **duration** parameter does not take effect when [springMotion]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, [responsiveSpringMotion]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and [interpolatingSpring]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ are configured for **curve**.
+2. 可以通过在持续时间为0的动画闭包函数中改变属性，以实现停止该属性动画的效果。3. 设置小于0的值时按0处理。4. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。5. curve配置[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)、[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)曲线时，duration不生效。
 
 **Type:** number
 
@@ -173,9 +169,9 @@ Note: 1. Before API 26.0.0, the maximum animation duration for an ArkTS widget i
 expectedFrameRateRange?: ExpectedFrameRateRange
 ```
 
-Expected frame rate range of the animation.
+设置动画的期望帧率。
 
-**Type:** ExpectedFrameRateRange
+**Type:** [ExpectedFrameRateRange](arkts-arkui-expectedframeraterange-i.md)
 
 **Since:** 11
 
@@ -195,11 +191,11 @@ Expected frame rate range of the animation.
 finishCallbackType?: FinishCallbackType
 ```
 
-Type of the **onFinish** callback.
+在动画中定义onFinish回调的类型。
 
-Default value: **FinishCallbackType.REMOVED
+默认值：FinishCallbackType.REMOVED
 
-**Type:** FinishCallbackType
+**Type:** [FinishCallbackType](../arkts-apis/arkts-arkui-common-finishcallbacktype-e.md)
 
 **Since:** 11
 
@@ -221,13 +217,13 @@ Default value: **FinishCallbackType.REMOVED
 iterations?: number
 ```
 
-Number of times that the animation is played. By default, the animation is played once. The value **-1** indicates that the animation is played for an unlimited number of times. The value **0** indicates that there is no animation.
+动画播放次数。默认播放一次，设置为-1时表示无限次播放。设置为0时表示无动画效果。
 
-Default value: **1**
+默认值：1 
 
-Value range: [-1, +∞)
+取值范围：[-1, +∞)
 
-Note: Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.
+**说明：**设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
 
 **Type:** number
 
@@ -249,24 +245,23 @@ Note: Floating-point values are floored to integers. For example, if the value s
 playMode?: PlayMode
 ```
 
-Playback mode. By default, the animation is played from the beginning after the playback is complete.
+动画播放模式，默认播放完成后从头开始播放。
 
-Default value: **PlayMode.Normal**
-    **Notes about PlayMode**:  
-    
-    - **PlayMode.Normal** and **PlayMode.Alternate** are recommended. Under these settings, the first round of the  
-    animation is played forwards. If **PlayMode.Reverse** or **PlayMode.AlternateReverse** is used, the first round of  
-    the animation is played backwards. In this case, the animation jumps to the end state and then starts from there.  
-    
-    - When using **PlayMode.Alternate** or **PlayMode.AlternateReverse**, make sure the final state of the animation is  
-    the same as the value of the state variable. In other words, make sure the last round of the animation is played  
-    forwards. When **PlayMode.Alternate** is used, **iterations** must be set to an odd number. When  
-    **PlayMode.AlternateReverse** is used, **iterations** must be set to an even number.  
-    
-    - **PlayMode.Reverse** is not recommended. Under this setting, the animation jumps to the end state at the  
-    beginning, and its final state will be different from the value of the state variable.
+默认值：PlayMode.Normal
 
-**Type:** PlayMode
+相关使用约束请参考PlayMode说明。
+
+> **PlayMode说明：**
+> 
+> - PlayMode推荐使用PlayMode.Normal和PlayMode.Alternate，此场景下动画的第一轮是正向播放的。如使用PlayMode.Reverse和PlayMode.AlternateReverse，则动画
+> 的第一轮是逆向播放的，在动画刚开始时会跳变到终止状态，然后逆向播放动画。
+> 
+> - 使用PlayMode.Alternate或PlayMode.AlternateReverse时，开发者应保证动画最终状态和状态变量的取值一致，即应保证动画的最后一轮是正向播放的。使用PlayMode.Alternate时，
+> iterations应为奇数。使用PlayMode.AlternateReverse时，iterations应为偶数。
+> 
+> - 不推荐使用PlayMode.Reverse，此场景下不仅会导致动画刚开始就跳变到终止状态，也会导致动画最终状态和状态变量的取值不同。
+
+**Type:** [PlayMode](../arkts-apis/arkts-arkui-playmode-e.md)
 
 **Default:** PlayMode.Normal
 
@@ -288,15 +283,15 @@ Default value: **PlayMode.Normal**
 tempo?: number
 ```
 
-Animation playback speed. A larger value indicates faster animation playback, and a smaller value indicates slower animation playback. The value **0** means that there is no animation.
+动画播放速度，值越大动画播放越快，值越小播放越慢，为0时无动画效果。
 
-When the value is set to **+∞**, the animation completes in the current frame, and the animation end callback is executed immediately.
+当设置为+∞时，动画会在当帧结束，动画结束回调会立即执行。
 
-Default value: **1.0**
+默认值：1.0
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
-Note: Values less than 0 are clamped to **0**.
+**说明：**当设置小于0的值时按1处理。
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # UIServiceExtensionAbility（系统接口）
 
-UIServiceExtensionAbility提供浮窗组件相关扩展能力，继承自[ExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.主要用于向三方应用提供带界面的服务。
+UIServiceExtensionAbility提供浮窗组件相关扩展能力，继承自[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).主要用于向三方应用提供带界面的服务。
 
 **继承/实现关系：** UIServiceExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 
@@ -14,6 +14,12 @@ UIServiceExtensionAbility提供浮窗组件相关扩展能力，继承自[Extens
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { UIServiceExtensionAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## onConnect
 
 ```TypeScript
@@ -21,8 +27,8 @@ onConnect(want: Want, proxy: UIServiceHostProxy): void
 ```
 
 UIServiceExtension生命周期回调。如果是  
-[connectUIServiceExtensionAbility()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_拉起的服务，会在[onCreate()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_之后回调。接收一个  
-[UIServiceHostProxy]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_对象，用于客户端和服务端进行通信。
+[connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectuiserviceextensionability)拉起的服务，会在[onCreate()](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#oncreate)之后回调。接收一个  
+[UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md)对象，用于客户端和服务端进行通信。
 
 **起始版本：** 14
 
@@ -40,10 +46,10 @@ UIServiceExtension生命周期回调。如果是
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前 [UIServiceExtensionAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相关的 [Want]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_类型信息，包括Ability名称、Bundle名称等。 |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 一个[UIServiceHostProxy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 对象，用于客户端和服务端进行通信。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前 [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)相关的 [Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称等。 |
+| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | 是 | 一个[UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) 对象，用于客户端和服务端进行通信。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want, common} from '@kit.AbilityKit';
@@ -61,7 +67,7 @@ class UIServiceExt extends UIServiceExtensionAbility {
 onCreate(want: Want): void
 ```
 
-[UIServiceExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_生命周期创建接口，执行初始化业务逻辑操作。
+[UIServiceExtensionContext](../../apis-default/arkts-apis/arkts-uiserviceextensioncontext-c-sys.md/arkts-uiserviceextensioncontext-c-sys.md)生命周期创建接口，执行初始化业务逻辑操作。
 
 **起始版本：** 14
 
@@ -79,9 +85,9 @@ onCreate(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前 [UIServiceExtensionAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相关的 [Want]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_类型信息，包括Ability名称、Bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前 [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)相关的 [Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称等。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -118,10 +124,10 @@ onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 往客户端发送数据的Proxy。 |
-| data | Record&lt;string, Object&gt; | 是 | 表示接收到的数据。 |
+| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | 是 | 往客户端发送数据的Proxy。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 表示接收到的数据。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIServiceExtensionAbility, common} from '@kit.AbilityKit';
@@ -157,8 +163,8 @@ onData(proxy: UIServiceHostProxy, data: Record<string, RecordData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 往客户端发送数据的Proxy。 |
-| data | Record&lt;string, RecordData&gt; | 是 | 表示接收到的数据。 |
+| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | 是 | 往客户端发送数据的Proxy。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 表示接收到的数据。 |
 
 ## onDestroy
 
@@ -180,7 +186,7 @@ UIServiceExtension销毁时回调，执行资源清理等操作。
 
 **系统接口：** 此接口为系统接口。
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIServiceExtensionAbility } from '@kit.AbilityKit';
@@ -216,10 +222,10 @@ onDisconnect(want: Want, proxy: UIServiceHostProxy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前 [UIServiceExtensionAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相关的 [Want]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_类型信息，包括Ability名称、Bundle名称等。 |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 往发起方发送数据的Proxy。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前 [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)相关的 [Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称等。 |
+| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | 是 | 往发起方发送数据的Proxy。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want, common } from '@kit.AbilityKit';
@@ -244,8 +250,8 @@ onRequest(want: Want, startId: int): void
 ```
 
 请求拉起UIServiceExtension服务处理。如果是  
-[startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或者  
-[startUIServiceExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_拉起的服务，会在[onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_之后回调。每次拉起服务都会回调，startId会递增。
+[startAbility](arkts-ability-uiabilitycontext-c.md#startability)或者  
+[startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startuiserviceextensionability)拉起的服务，会在[onCreate](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#oncreate)之后回调。每次拉起服务都会回调，startId会递增。
 
 **起始版本：** 14
 
@@ -263,10 +269,10 @@ onRequest(want: Want, startId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前 [UIServiceExtensionAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相关的 [Want]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_类型信息，包括Ability名称、Bundle名称等。 |
-| startId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 返回浮窗拉起次数。首次拉起初始值返回1，多次之后自动递增。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前 [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)相关的 [Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称等。 |
+| startId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 返回浮窗拉起次数。首次拉起初始值返回1，多次之后自动递增。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want} from '@kit.AbilityKit';
@@ -304,7 +310,7 @@ UIServiceExtension创建后回调。UIServiceExtension服务创建窗口成功�
 | --- | --- | --- | --- |
 | window | window.Window | 是 | 表示已创建的Window。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIServiceExtensionAbility } from '@kit.AbilityKit';
@@ -343,7 +349,7 @@ UIServiceExtension窗体创建前的回调。前台应用把要创建windows的�
 | --- | --- | --- | --- |
 | config | window.ExtensionWindowConfig | 是 | UIServiceExtension窗体配置信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIServiceExtensionAbility } from '@kit.AbilityKit';
@@ -362,9 +368,9 @@ class UIServiceExt extends UIServiceExtensionAbility {
 context: UIServiceExtensionContext
 ```
 
-UIServiceExtension的上下文环境，继承自[ExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+UIServiceExtension的上下文环境，继承自[ExtensionContext](arkts-ability-app-ability-extensionability-extensionability-c.md)。
 
-**类型：** UIServiceExtensionContext
+**类型：** [UIServiceExtensionContext](../../apis-default/arkts-apis/arkts-uiserviceextensioncontext-c-sys.md)
 
 **起始版本：** 14
 

@@ -1,12 +1,18 @@
 # getSystemSoundManager
 
+## Modules to Import
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
+
 ## getSystemSoundManager
 
 ```TypeScript
 function getSystemSoundManager(): SystemSoundManager
 ```
 
-Gets system sound manager for all type sound.
+获取系统声音管理器。
 
 **Since:** 10
 
@@ -20,9 +26,9 @@ Gets system sound manager for all type sound.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SystemSoundManager instance. |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | 系统声音管理类。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();

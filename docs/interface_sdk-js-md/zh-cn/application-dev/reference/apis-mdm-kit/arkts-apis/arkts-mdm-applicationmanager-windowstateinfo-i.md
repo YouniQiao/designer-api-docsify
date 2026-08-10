@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from 'kits/@kit.MDMKit';
+```
+
 ## isOnDock
 
 ```TypeScript
@@ -58,7 +64,7 @@ state: WindowState
 
 应用窗口状态。
 
-**类型：** WindowState
+**类型：** [WindowState](arkts-mdm-applicationmanager-windowstate-e.md)
 
 **起始版本：** 26.0.0
 

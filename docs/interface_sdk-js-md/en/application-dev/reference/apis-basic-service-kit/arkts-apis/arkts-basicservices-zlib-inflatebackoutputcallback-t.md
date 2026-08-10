@@ -4,7 +4,7 @@
 type InflateBackOutputCallback = (outDesc: object, buf: ArrayBuffer, length: int) => int
 ```
 
-The output data provided by the user is written into the callback function. Whenever decompressed data is ready for output, zlib calls this function to write the data from the buffer to the target location.
+用户提供的输出数据会被写入回调函数中。每当解压后的数据准备好进行输出时，zlib 就会调用此函数将缓冲区中的数据写入目标位置。
 
 **Since:** 12
 
@@ -20,13 +20,13 @@ The output data provided by the user is written into the callback function. When
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outDesc | object | Yes | Object passed to output function. Object dependency requirement implementation.  |
-| buf | ArrayBuffer | Yes | Used to store data to be written.  |
-| length | int | Yes | Write the length of the output buffer.  |
+| outDesc | object | Yes | 用户定义数据对象。 |
+| buf | ArrayBuffer | Yes | 用于存储要写入的数据。 |
+| length | int | Yes | 写入输出缓冲区的长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Return the number of bytes output.  |
+| int | 输出缓冲区的字节数。 |
 

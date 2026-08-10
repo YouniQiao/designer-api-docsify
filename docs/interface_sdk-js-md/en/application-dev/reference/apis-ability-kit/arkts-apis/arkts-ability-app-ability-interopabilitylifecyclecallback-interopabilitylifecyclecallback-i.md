@@ -10,6 +10,12 @@ The interop ability lifecycle callback.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## Modules to Import
+
+```TypeScript
+import { InteropAbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## onAbilityBackground
 
 ```TypeScript

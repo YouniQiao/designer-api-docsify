@@ -18,11 +18,11 @@ Cipher suite which TLS1.0+ support.
 
 | Type | Description |
 | --- | --- |
-| 'TLS\_ECDHE\_ECDSA\_WITH\_AES\_128\_CBC\_SHA' |  |
-| 'TLS\_ECDHE\_RSA\_WITH\_AES\_128\_CBC\_SHA' |  |
-| 'TLS\_ECDHE\_ECDSA\_WITH\_AES\_256\_CBC\_SHA' |  |
-| 'TLS\_ECDHE\_RSA\_WITH\_AES\_256\_CBC\_SHA' |  |
-| 'TLS\_RSA\_WITH\_AES\_128\_CBC\_SHA' |  |
-| 'TLS\_RSA\_WITH\_AES\_256\_CBC\_SHA' |  |
-| 'TLS\_RSA\_WITH\_3DES\_EDE\_CBC\_SHA' |  |
+| 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' |  |
+| 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' |  |
+| 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' |  |
+| 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' |  |
+| 'TLS_RSA_WITH_AES_128_CBC_SHA' |  |
+| 'TLS_RSA_WITH_AES_256_CBC_SHA' |  |
+| 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' |  |
 

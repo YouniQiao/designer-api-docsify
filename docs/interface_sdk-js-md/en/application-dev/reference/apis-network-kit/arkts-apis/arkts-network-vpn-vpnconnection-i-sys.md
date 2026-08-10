@@ -12,6 +12,12 @@ Defines a VPN connection.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { vpn } from 'kits/@kit.NetworkKit';
+```
+
 ## destroy
 
 ```TypeScript
@@ -36,19 +42,19 @@ Destroy the VPN network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of destroy. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of destroy. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Operation failed. Cannot connect to service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -101,13 +107,13 @@ Destroy the VPN network.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Operation failed. Cannot connect to service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -157,21 +163,21 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | socketFd | number | Yes | File descriptor of socket, this socket from @ohos.net.socket. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of protect. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of protect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
-| [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
+| 2200001 | Invalid parameter value. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Operation failed. Cannot connect to service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2203004 | Invalid socket file descriptor. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -202,7 +208,7 @@ struct Index {
     }
     tcp.connect(addressConnect);
     tcp.getSocketFd().then((tunnelFd: number) => {
-      console.info("tunenlfd: " + tunnelFd);
+      console.info("tunnelFd: " + tunnelFd);
       this.VpnConnection.protect(tunnelFd, (error: BusinessError) => {
         console.error(JSON.stringify(error));
       });
@@ -248,15 +254,15 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
-| [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
+| 2200001 | Invalid parameter value. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Operation failed. Cannot connect to service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2203004 | Invalid socket file descriptor. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -287,7 +293,7 @@ struct Index {
     }
     tcp.connect(addressConnect);
     tcp.getSocketFd().then((tunnelFd: number) => {
-      console.info("tunenlfd: " + tunnelFd);
+      console.info("tunnelFd: " + tunnelFd);
       this.VpnConnection.protect(tunnelFd).then(() => {
         console.info("protect success.");
       }).catch((err: BusinessError) => {
@@ -323,23 +329,23 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ configuration of the VPN network. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | The callback is used to return file descriptor of VPN interface. |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes | Indicates the {@link VpnConfig} configuration of the VPN network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback is used to return file descriptor of VPN interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
-| [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) | VPN creation denied. Check the user type. |
-| [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN already exists. |
+| 2200001 | Invalid parameter value. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Operation failed. Cannot connect to service. |
+| 2203001 | VPN creation denied. Check the user type. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2203002 | VPN already exists. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -398,7 +404,7 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ configuration of the VPN network. |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes | Indicates the {@link VpnConfig} configuration of the VPN network. |
 
 **Return value:**
 
@@ -410,16 +416,16 @@ Create a VPN network using the VpnConfig.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
-| [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) | VPN creation denied. Check the user type. |
-| [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN already exists. |
+| 2200001 | Invalid parameter value. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Operation failed. Cannot connect to service. |
+| 2203001 | VPN creation denied. Check the user type. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2203002 | VPN already exists. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 

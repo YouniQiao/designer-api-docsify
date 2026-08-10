@@ -1,6 +1,6 @@
 # IndexUtil
 
-Sequence text can be grouped under the specified area,and grouping index with different lengths can be specified.
+提供索引相关的能力，包括区域索引列表和文本索引值获取。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Sequence text can be grouped under the specified area,and grouping index with di
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## addLocale
 
 ```TypeScript
 addLocale(locale: string): void
 ```
 
-Adds the index list of a new locale to the index list of the current locale to form a composite list.
+在当前区域的索引列表中，添加新区域的索引列表，形成复合列表。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Adds the index list of a new locale to the index list of the current locale to f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
+| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
 
 ## getIndex
 
@@ -40,7 +46,7 @@ Adds the index list of a new locale to the index list of the current locale to f
 getIndex(text: string): string
 ```
 
-Obtains the index of the text object.
+获取输入文本对应的索引值。
 
 **Since:** 23
 
@@ -56,13 +62,13 @@ Obtains the index of the text object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | text object. |
+| text | string | Yes | 输入文本。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Index of the text object. If no proper index is found, an empty string is returned. |
+| string | 输入文本对应的索引值。无合适索引时返回空字符串。 |
 
 ## getIndexList
 
@@ -70,7 +76,7 @@ Obtains the index of the text object.
 getIndexList(): Array<string>
 ```
 
-Obtains the index list of the current locale.
+获取当前区域的索引列表。
 
 **Since:** 23
 
@@ -86,5 +92,5 @@ Obtains the index list of the current locale.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Index list of the current locale. The first and last elements are "...". |
+| Array&lt;string&gt; | 当前区域的索引列表。第一个元素和最后一个元素为“...”。 |
 

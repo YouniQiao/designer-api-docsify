@@ -18,7 +18,7 @@ x?: Length
 
 位置X坐标。
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ y?: Length
 
 位置Y坐标。
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 

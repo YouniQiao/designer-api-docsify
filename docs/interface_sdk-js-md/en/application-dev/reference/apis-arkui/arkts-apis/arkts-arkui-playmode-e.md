@@ -1,6 +1,6 @@
 # PlayMode
 
-Animation playback mode.
+动画播放模式。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Animation playback mode.
 Normal
 ```
 
-The animation is played forwards.
+动画正向播放。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ The animation is played forwards.
 Reverse
 ```
 
-The animation is played backwards.
+动画反向播放。
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ The animation is played backwards.
 Alternate
 ```
 
-The animation is played forwards for an odd number of times (1, 3, 5...) and backwards for an even number of times(2, 4, 6...).
+动画在奇数次（1、3、5...）正向播放，在偶数次（2、4、6...）反向播放。
 
 **Since:** 7
 
@@ -76,7 +76,7 @@ The animation is played forwards for an odd number of times (1, 3, 5...) and bac
 AlternateReverse
 ```
 
-The animation is played backwards for an odd number of times (1, 3, 5...) and forwards for an even number of times(2, 4, 6...).
+动画在奇数次（1、3、5...）反向播放，在偶数次（2、4、6...）正向播放。
 
 **Since:** 7
 

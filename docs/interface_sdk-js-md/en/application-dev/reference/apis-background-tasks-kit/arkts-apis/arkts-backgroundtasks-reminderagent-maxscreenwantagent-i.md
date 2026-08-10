@@ -1,6 +1,6 @@
 # MaxScreenWantAgent
 
-Provides the information about the target package and ability to start automatically when the reminder is displayed in full-screen mode. This API is reserved.
+全屏显示提醒到达时自动拉起的目标ability信息，该接口预留。
 
 **Since:** 7
 
@@ -14,13 +14,19 @@ Provides the information about the target package and ability to start automatic
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Name of the ability that is automatically started when the reminder arrives and the device is not in use.
+指明提醒到达时自动拉起的目标ability名（如果设备在使用中，则只弹出通知横幅框）。
 
 **Type:** string
 
@@ -42,7 +48,7 @@ Name of the ability that is automatically started when the reminder arrives and 
 pkgName: string
 ```
 
-Name of the HAP that is automatically started when the reminder arrives and the device is not in use.
+指明提醒到达时自动拉起的目标HAP名（如果设备在使用中，则只弹出通知横幅框）。
 
 **Type:** string
 

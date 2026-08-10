@@ -1,6 +1,6 @@
 # WindowChangeType
 
-Enumerates the window change event types that can be listened for.
+支持监听的窗口变化事件类型。
 
 **Since:** 22
 
@@ -16,7 +16,9 @@ Enumerates the window change event types that can be listened for.
 WINDOW_UNDEFINED = 0
 ```
 
-Non-window change event.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
+非窗口变化事件。
+
+**说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
 
 **Since:** 22
 
@@ -34,7 +36,7 @@ Non-window change event.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Note: This value can 
 WINDOW_ADDED = 1
 ```
 
-Window adding event.
+窗口出现事件。
 
 **Since:** 22
 
@@ -52,7 +54,7 @@ Window adding event.
 WINDOW_REMOVED = 2
 ```
 
-Window removing event.
+窗口消失事件。
 
 **Since:** 22
 
@@ -70,7 +72,7 @@ Window removing event.
 WINDOW_BOUNDS_CHANGED = 3
 ```
 
-Window bounds change event.
+窗口边框变化事件。
 
 **Since:** 22
 

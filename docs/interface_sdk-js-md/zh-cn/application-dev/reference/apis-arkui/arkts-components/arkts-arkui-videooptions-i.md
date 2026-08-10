@@ -20,7 +20,7 @@ controller?: VideoController
 
 默认值：不设置视频控制器。
 
-**类型：** VideoController
+**类型：** [VideoController](arkts-arkui-videocontroller-c.md)
 
 **起始版本：** 7
 
@@ -42,7 +42,7 @@ controllerAsync?: VideoControllerAsync
 
 默认值：空
 
-**类型：** VideoControllerAsync
+**类型：** [VideoControllerAsync](arkts-arkui-videocontrollerasync-c.md)
 
 **起始版本：** 26.0.0
 
@@ -73,7 +73,7 @@ string格式支持number格式取值的字符串形式："0.75"，"1.0"，"1.25"
 
 除此之外的取值，例如"abc"或"1.5+1.5"会按照异常值处理。
 
-默认值：1.0 | PlaybackSpeed.Speed\_Forward\_1\_00\_X
+默认值：1.0 | PlaybackSpeed.Speed_Forward_1_00_X
 
 异常值：按默认值处理。
 
@@ -97,7 +97,7 @@ imageAIOptions?: ImageAIOptions
 
 设置图像AI分析选项，可配置分析类型或绑定一个分析控制器。配置后可启用图像AI分析功能，并通过分析控制器控制分析过程。当需要使用AI分析功能时传入此参数，不传入时默认不启用AI分析功能。
 
-**类型：** ImageAIOptions
+**类型：** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
 
 **起始版本：** 12
 
@@ -119,7 +119,7 @@ posterOptions?: PosterOptions
 
 设置视频播放的首帧送显选项，可以控制视频是否支持首帧送显。当需要开启首帧送显功能时传入此参数，不传入时默认不启用首帧送显。
 
-**类型：** PosterOptions
+**类型：** [PosterOptions](arkts-arkui-posteroptions-i.md)
 
 **起始版本：** 18
 
@@ -145,8 +145,8 @@ string格式可用于加载本地图片和网络图片，
 
 - 支持网络图片地址。  
 - 支持相对路径引用本地图片，例如：previewUri: “common/test.jpg”。当使用相对路径引用本地图片时，不支持跨包/跨模块调用。  
-- 支持file://路径前缀的字符串，即应用沙箱URI（见[uriOrPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）：file://<bundleName  
-    /\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
+- 支持file://路径前缀的字符串，即应用沙箱URI（见[uriOrPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)）：file://&lt;bundleName  
+&gt; /&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
 
 Resource格式可以跨包/跨模块访问资源文件。
 
@@ -183,9 +183,9 @@ Resource格式可以跨包/跨模块访问资源文件，常用于访问本地�
 
 string格式可用于加载网络视频和本地视频，常用于加载网络视频。
 
-- 支持网络视频地址，网络视频地址支持的格式见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-- 支持file://路径前缀的字符串，即应用沙箱URI（见[uriOrPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_）：file://<bundleName  
-    /\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
+- 支持网络视频地址，网络视频地址支持的格式见[流媒体支持的格式](../../../media/media/streaming-media-playback-development-guide.md#流媒体支持的格式)。  
+- 支持file://路径前缀的字符串，即应用沙箱URI（见[uriOrPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)）：file://&lt;bundleName  
+&gt; /&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
 
 默认值：空字符串
 

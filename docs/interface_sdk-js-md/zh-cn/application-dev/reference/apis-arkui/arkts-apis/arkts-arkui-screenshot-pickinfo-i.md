@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## pickRect
 
 ```TypeScript
@@ -18,7 +24,7 @@ pickRect: Rect
 
 表示截取图像的区域。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 12
 

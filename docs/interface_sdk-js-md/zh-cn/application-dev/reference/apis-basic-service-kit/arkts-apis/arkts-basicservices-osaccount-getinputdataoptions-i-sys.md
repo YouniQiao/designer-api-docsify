@@ -1,6 +1,6 @@
 # GetInputDataOptions（系统接口）
 
-表示\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的可选参数集合。
+表示[通知调用者获取数据](../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8)的可选参数集合。
 
 **起始版本：** 12
 
@@ -11,6 +11,12 @@
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
 
 ## challenge
 

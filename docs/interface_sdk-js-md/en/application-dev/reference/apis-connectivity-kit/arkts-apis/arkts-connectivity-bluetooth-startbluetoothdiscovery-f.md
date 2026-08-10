@@ -1,5 +1,11 @@
 # startBluetoothDiscovery
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## startBluetoothDiscovery
 
 ```TypeScript
@@ -28,7 +34,7 @@ Starts scanning Bluetooth devices.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let deviceId : Array<string>;

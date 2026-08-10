@@ -1,7 +1,7 @@
 # MetadataFaceObject
 
-Face metadata detected by the camera, which is extended from [MetadataObject]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It serves as the data source of the camera information in [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. It is obtained by calling metadataOutput.  
-[on('metadataObjectsAvailable')]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+相机检测到的人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.  
+[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>))接口获取。
 
 **Inheritance/Implementation:** MetadataFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 
@@ -13,15 +13,21 @@ Face metadata detected by the camera, which is extended from [MetadataObject]\_\
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## emotion
 
 ```TypeScript
 readonly emotion: Emotion
 ```
 
-Detected emotion.
+检测到的情绪类型。
 
-**Type:** Emotion
+**Type:** [Emotion](arkts-camera-camera-emotion-e.md)
 
 **Since:** 26.0.0
 
@@ -39,9 +45,9 @@ Detected emotion.
 readonly emotionConfidence: double
 ```
 
-Emotion detection confidence. The value range is [0, 1].
+情绪检测置信度。取值范围为[0, 1]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -59,9 +65,9 @@ Emotion detection confidence. The value range is [0, 1].
 readonly leftEyeBoundingBox: Rect
 ```
 
-Left eye area.
+左眼区域框。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 26.0.0
 
@@ -79,9 +85,9 @@ Left eye area.
 readonly pitchAngle: int
 ```
 
-Pitch angle. The value range is [-90, 90], with the positive direction being downwards.
+俯仰角度。取值范围为[-90, 90]，以向下为正方向。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -99,9 +105,9 @@ Pitch angle. The value range is [-90, 90], with the positive direction being dow
 readonly rightEyeBoundingBox: Rect
 ```
 
-Right eye area.
+右眼区域框。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 26.0.0
 
@@ -119,9 +125,9 @@ Right eye area.
 readonly rollAngle: int
 ```
 
-Roll angle. The value range is [-180, 180], with the positive direction being clockwise.
+平面内旋转角度。取值范围为[-180, 180]，以顺时针方向为正方向。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -139,9 +145,9 @@ Roll angle. The value range is [-180, 180], with the positive direction being cl
 readonly yawAngle: int
 ```
 
-Yaw angle. The value range is [-90, 90], with the positive direction being rightwards.
+左右旋转角度。取值范围为[-90, 90]，以向右为正方向。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

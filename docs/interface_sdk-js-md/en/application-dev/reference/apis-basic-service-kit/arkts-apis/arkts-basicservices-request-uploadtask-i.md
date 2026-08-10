@@ -1,7 +1,8 @@
 # UploadTask
 
-Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or from a callback through  
-[request.uploadFile]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过  
+[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取，callback形式通过  
+[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取。
 
 **Since:** 6
 
@@ -11,17 +12,23 @@ Implements file uploads. Before using any APIs of this class, you must obtain an
 
 **System capability:** SystemCapability.MiscServices.Download
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## delete
 
 ```TypeScript
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the upload task. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
-    code is removed from API version 12.
+移除上传的任务，使用callback异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **Since:** 9
 
@@ -37,15 +44,15 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**Example**
+## Examples
 
 ```TypeScript
 uploadTask.delete((err: BusinessError, result: boolean) => {
@@ -63,11 +70,11 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
 delete(): Promise<boolean>
 ```
 
-Deletes the upload task. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
-    code is removed from API version 12.
+移除上传的任务，使用Promise异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **Since:** 9
 
@@ -83,15 +90,15 @@ Deletes the upload task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**Example**
+## Examples
 
 ```TypeScript
 uploadTask.delete().then((result: boolean) => {
@@ -107,7 +114,7 @@ uploadTask.delete().then((result: boolean) => {
 off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void
 ```
 
-Unsubscribes from upload progress events.
+取消订阅上传任务进度事件。
 
 **Since:** 6
 
@@ -121,16 +128,16 @@ Unsubscribes from upload progress events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'progress'**: upload progress. |
-| callback | (uploadedSize: long, totalSize: long) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| type | 'progress' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'progress'，表示上传的进度信息。 |
+| callback | (uploadedSize: long, totalSize: long) =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let upProgressCallback1 = (uploadedSize: number, totalSize: number) => {
@@ -153,7 +160,7 @@ uploadTask.off('progress');
 off(type: 'headerReceive', callback?: (header: object) => void): void
 ```
 
-Unsubscribes from HTTP response events for the upload task.
+取消订阅上传任务HTTP响应事件。
 
 **Since:** 7
 
@@ -167,16 +174,16 @@ Unsubscribes from HTTP response events for the upload task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'headerReceive' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'headerReceive'**: The HTTP request receives a response. |
-| callback | (header: object) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| type | 'headerReceive' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'headerReceive'，表示HTTP请求接收到响应。 |
+| callback | (header: object) =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let headerCallback1 = (header: object) => {
@@ -199,7 +206,7 @@ uploadTask.off('headerReceive');
 off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 ```
 
-Unsubscribes from upload completion or failure events.
+取消订阅上传任务的完成或失败事件。
 
 **Since:** 9
 
@@ -213,16 +220,16 @@ Unsubscribes from upload completion or failure events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'complete'**: upload task completion.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'fail'**: upload task failure. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;TaskState&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| type | 'complete' \| 'fail' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示上传任务完成。&lt;br&gt;- 取值为'fail'，表示上传任务失败。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameters check fails. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
@@ -270,7 +277,7 @@ uploadTask.off('fail');
 off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 ```
 
-Unsubscribes from upload completion or failure events.
+取消订阅上传任务的完成或失败事件。
 
 **Since:** 9
 
@@ -284,16 +291,16 @@ Unsubscribes from upload completion or failure events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'complete'**: upload task completion.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'fail'**: upload task failure. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;TaskState&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| type | 'complete' \| 'fail' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示上传任务完成。&lt;br&gt;- 取值为'fail'，表示上传任务失败。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameters check fails. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
@@ -355,7 +362,7 @@ Called when the current upload session complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;TaskState&gt;&gt; | No | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | No | The callback function for the upload complete event. |
 
 ## offFail
 
@@ -377,7 +384,7 @@ Called when the current upload session fail.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;TaskState&gt;&gt; | No | The callback function for the upload fail change event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | No | The callback function for the upload fail change event. |
 
 ## offHeaderReceive
 
@@ -399,7 +406,7 @@ Called when the header of the current upload session has been received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback function for the HTTP Response Header event. |
+| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | No | The callback function for the HTTP Response Header event. |
 
 ## offProgress
 
@@ -421,7 +428,7 @@ Called when the current upload session is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback function for the upload progress event. |
+| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | No | The callback function for the upload progress event. |
 
 ## on('progress')
 
@@ -429,11 +436,11 @@ Called when the current upload session is in process.
 on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void
 ```
 
-Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    To maintain a balance between power consumption and performance, this API cannot be called when the application  
-    is running in the background.
+订阅上传任务进度事件，使用callback异步回调。
+
+> **说明：**
+> 
+> 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
 
 **Since:** 6
 
@@ -447,16 +454,16 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | Event type. The value is fixed at **'progress'**, indicating upload progress. |
-| callback | (uploadedSize: long, totalSize: long) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. |
+| type | 'progress' | Yes | 订阅的事件类型。取值为'progress'，表示上传的进度信息，任务进度有进展时触发该事件。 |
+| callback | (uploadedSize: long, totalSize: long) =&gt; void | Yes | 上传任务进度的回调函数，返回已上传文件大小和上传文件总大小，单位为字节（B）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let upProgressCallback = (uploadedSize: number, totalSize: number) => {
@@ -471,7 +478,7 @@ uploadTask.on('progress', upProgressCallback);
 on(type: 'headerReceive', callback: (header: object) => void): void
 ```
 
-Subscribes to HTTP response events for the upload task.This API uses an asynchronous callback to return the result.
+订阅上传任务HTTP响应事件，使用callback异步回调。
 
 **Since:** 7
 
@@ -485,16 +492,16 @@ Subscribes to HTTP response events for the upload task.This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'headerReceive' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'headerReceive'**: The HTTP request receives a response. |
-| callback | (header: object) =&gt; void | Yes | Callback used to return the response content. |
+| type | 'headerReceive' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'headerReceive'，HTTP请求接收到响应时触发该事件。 |
+| callback | (header: object) =&gt; void | Yes | HTTP Response事件的回调函数，返回响应请求内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let headerCallback = (headers: object) => {
@@ -509,7 +516,7 @@ uploadTask.on('headerReceive', headerCallback);
 on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 ```
 
-Subscribes to upload completion or failure events. This API uses an asynchronous callback to return the result.
+订阅上传任务完成或失败事件，使用callback异步回调。
 
 **Since:** 9
 
@@ -523,16 +530,16 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;TaskState&gt;&gt; | Yes | Callback used to return the state of the upload task. |
+| type | 'complete' \| 'fail' | Yes | 订阅的事件类型，支持的事件包括：`'complete'`\|`'fail'`。&lt;br/&gt;- `'complete'`：表示上传任务完成，任务完成时触发该 事件。 &lt;br/&gt;- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | Yes | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
@@ -556,7 +563,7 @@ uploadTask.on('fail', upFailCallback);
 on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 ```
 
-Subscribes to upload completion or failure events. This API uses an asynchronous callback to return the result.
+订阅上传任务完成或失败事件，使用callback异步回调。
 
 **Since:** 9
 
@@ -570,16 +577,16 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;TaskState&gt;&gt; | Yes | Callback used to return the state of the upload task. |
+| type | 'complete' \| 'fail' | Yes | 订阅的事件类型，支持的事件包括：`'complete'`\|`'fail'`。&lt;br/&gt;- `'complete'`：表示上传任务完成，任务完成时触发该 事件。 &lt;br/&gt;- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | Yes | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
@@ -617,7 +624,7 @@ Called when the current upload session complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;TaskState&gt;&gt; | Yes | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | Yes | The callback function for the upload complete event. |
 
 ## onFail
 
@@ -639,7 +646,7 @@ Called when the current upload session fail.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;TaskState&gt;&gt; | Yes | The callback function for the upload fail event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | Yes | The callback function for the upload fail event. |
 
 ## onHeaderReceive
 
@@ -661,7 +668,7 @@ Called when the header of the current upload session has been received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function for the HTTP Response Header event. |
+| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | Yes | The callback function for the HTTP Response Header event. |
 
 ## onProgress
 
@@ -683,7 +690,7 @@ Called when the current upload session is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function for the upload progress event. |
+| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | Yes | The callback function for the upload progress event. |
 
 ## remove
 
@@ -691,7 +698,12 @@ Called when the current upload session is in process.
 remove(callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the upload task. This API uses an asynchronous callback to return the result.
+移除上传的任务，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
 **Since:** 6
 
@@ -711,15 +723,15 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**Example**
+## Examples
 
 ```TypeScript
 uploadTask.remove((err: BusinessError, result: boolean) => {
@@ -739,7 +751,11 @@ uploadTask.remove((err: BusinessError, result: boolean) => {
 remove(): Promise<boolean>
 ```
 
-Deletes the upload task. This API uses a promise to return the result.
+移除上传的任务，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
 **Since:** 6
 
@@ -759,15 +775,15 @@ Deletes the upload task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | 使用Promise方式异步回调，返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**Example**
+## Examples
 
 ```TypeScript
 uploadTask.remove().then((result: boolean) => {

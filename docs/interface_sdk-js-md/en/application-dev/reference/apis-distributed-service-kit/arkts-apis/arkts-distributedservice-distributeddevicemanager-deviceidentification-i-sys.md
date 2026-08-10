@@ -1,6 +1,6 @@
 # DeviceIdentification (System API)
 
-Struct for distributed device identification.
+用于分布式设备识别的结构体。
 
 **Since:** 24
 
@@ -12,13 +12,19 @@ Struct for distributed device identification.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
 deviceId: string
 ```
 
-Anonymized device ID for application.
+应用获取的匿名化设备ID。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Anonymized device ID for application.
 udid: string
 ```
 
-Unique device ID (UDID).
+设备唯一标识。
 
 **Type:** string
 

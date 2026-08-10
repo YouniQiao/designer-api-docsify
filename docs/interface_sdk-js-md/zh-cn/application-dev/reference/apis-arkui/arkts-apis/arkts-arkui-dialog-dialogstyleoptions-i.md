@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## buttonDirection
 
 ```TypeScript
@@ -20,7 +26,7 @@ buttonDirection?: DialogButtonOrientation
 
 按钮的排列。
 
-**类型：** DialogButtonOrientation
+**类型：** [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md)
 
 **默认值：** DialogButtonOrientation.AUTO
 
@@ -88,7 +94,7 @@ message?: DialogMessage
 
 对话框的消息内容和文字样式。
 
-**类型：** DialogMessage
+**类型：** [DialogMessage](arkts-arkui-dialog-dialogmessage-i.md)
 
 **起始版本：** 26.1.0
 
@@ -132,7 +138,7 @@ subtitle?: ResourceStr
 
 对话框的副标题。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.1.0
 
@@ -154,7 +160,7 @@ title?: ResourceStr
 
 对话框标题。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.1.0
 

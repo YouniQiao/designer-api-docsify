@@ -1,5 +1,11 @@
 # minimizeAllWithExclusion（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## minimizeAllWithExclusion
 
 ```TypeScript
@@ -24,8 +30,8 @@ function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 屏幕ID，该参数仅支持整数输入，输入浮点数会向下取整。 |
-| excludeWindowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 窗口ID。可通过 [getWindowProperties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口获取到相关窗口属性，其中属性id即对应为窗口ID。窗口ID小于等于0 ，或窗口ID为null或者undefined时，会抛出\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_；窗口ID大于0但是不存在会抛出13000 02错误码；窗口ID大于0且窗口存在但是不在该屏幕，最小化指定屏幕上的所有主窗口。该参数仅支持整数输入，输入浮点数会向下取整。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕ID，该参数仅支持整数输入，输入浮点数会向下取整。 |
+| excludeWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。可通过 [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接口获取到相关窗口属性，其中属性id即对应为窗口ID。窗口ID小于等于0 ，或窗口ID为null或者undefined时，会抛出[401错误码](../../../reference/errorcode-universal.md#401-参数检查失败)；窗口ID大于0但是不存在会抛出13000 02错误码；窗口ID大于0且窗口存在但是不在该屏幕，最小化指定屏幕上的所有主窗口。该参数仅支持整数输入，输入浮点数会向下取整。 |
 
 **返回值：**
 
@@ -37,11 +43,11 @@ function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A nonsystem application calls a system API. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Window is nullptr; 2. Failed to find specified window by id. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. Possible cause: 1. Window is nullptr; 2. Failed to find specified window by id. |
+| 202 | Permission verification failed. A nonsystem application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { display, window } from '@kit.ArkUI';

@@ -1,6 +1,6 @@
 # SystemFontType
 
-Enumerates the font types, which can be combined through bitwise OR operations.
+字体类型枚举，通过位或运算可实现组合类型。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates the font types, which can be combined through bitwise OR operations.
 ALL = 1 << 0
 ```
 
-All font types, including the system font type, style font type, and user-installed font type.
+所有字体类型，包括系统字体类型、风格字体类型和用户已安装字体类型。
 
 **Since:** 14
 
@@ -34,7 +34,7 @@ All font types, including the system font type, style font type, and user-instal
 GENERIC = 1 << 1
 ```
 
-System font type.
+系统字体类型。
 
 **Since:** 14
 
@@ -52,7 +52,7 @@ System font type.
 STYLISH = 1 << 2
 ```
 
-Style font type. The style font type is designed for 2-in-1 devices.
+风格字体类型。风格字体类型是专为2in1设备设计的字体类型。
 
 **Since:** 14
 
@@ -70,7 +70,7 @@ Style font type. The style font type is designed for 2-in-1 devices.
 INSTALLED = 1 << 3
 ```
 
-Font type that has been installed.
+用户已安装的字体类型。
 
 **Since:** 14
 
@@ -88,7 +88,7 @@ Font type that has been installed.
 CUSTOMIZED = 1 << 4
 ```
 
-Custom font type.
+自定义字体类型。
 
 **Since:** 18
 

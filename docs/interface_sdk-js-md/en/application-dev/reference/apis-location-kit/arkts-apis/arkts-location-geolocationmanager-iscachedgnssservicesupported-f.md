@@ -1,5 +1,11 @@
 # isCachedGnssServiceSupported
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## isCachedGnssServiceSupported
 
 ```TypeScript
@@ -30,5 +36,5 @@ Check whether the cached GNSS service is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| 3301000 | The location service is unavailable. |
 

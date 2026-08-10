@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
+## 导入模块
+
+```TypeScript
+import { continueManager } from 'kits/@kit.AbilityKit';
+```
+
 ## resultInfo
 
 ```TypeScript
@@ -40,7 +46,7 @@ resultState: ContinueStateCode
 
 操作结果状态码。
 
-**类型：** ContinueStateCode
+**类型：** [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md)
 
 **起始版本：** 18
 

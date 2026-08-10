@@ -1,6 +1,6 @@
 # CopyOptions
 
-Defines the callback for listening for the copy progress.
+拷贝进度回调监听
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the callback for listening for the copy progress.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## progressListener
 
 ```TypeScript
 progressListener?: ProgressListener
 ```
 
-Listener used to observe the copy progress.
+拷贝进度监听。
 
 **Since:** 23
 
@@ -32,9 +38,9 @@ Listener used to observe the copy progress.
 copySignal?: TaskSignal
 ```
 
-Signal used to cancel a copy task.
+取消拷贝信号。
 
-**Type:** TaskSignal
+**Type:** [TaskSignal](arkts-corefile-fileio-tasksignal-c.md)
 
 **Since:** 23
 

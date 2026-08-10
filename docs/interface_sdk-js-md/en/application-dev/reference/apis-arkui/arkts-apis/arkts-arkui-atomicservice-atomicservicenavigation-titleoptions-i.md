@@ -1,6 +1,6 @@
 # TitleOptions
 
-Title bar options.
+标题栏选项。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Title bar options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundColor
 
 ```TypeScript
 backgroundColor?: ResourceColor
 ```
 
-Background color.
+标题栏背景颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Background color.
 barStyle?: BarStyle
 ```
 
-Set title bar style.
+设置标题栏样式。
 
-**Type:** BarStyle
+**Type:** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
 
 **Default:** BarStyle.STANDARD
 
@@ -58,7 +64,7 @@ Set title bar style.
 isBlurEnabled?: boolean
 ```
 
-Whether to enable the blur effect.
+标题栏是否模糊。
 
 **Type:** boolean
 
@@ -80,9 +86,9 @@ Whether to enable the blur effect.
 titleBarType?: TitleBarType
 ```
 
-Set title bar type.
+设置标题栏类型。
 
-**Type:** TitleBarType
+**Type:** [TitleBarType](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md)
 
 **Default:** TitleBarType.ROUND_ICON
 
@@ -102,9 +108,9 @@ Set title bar type.
 titleIcon?: Resource | SymbolGlyphModifier
 ```
 
-Set title bar icon.
+设置标题栏的图标。
 
-**Type:** Resource \| SymbolGlyphModifier
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier
 
 **Default:** atomicservice icon
 

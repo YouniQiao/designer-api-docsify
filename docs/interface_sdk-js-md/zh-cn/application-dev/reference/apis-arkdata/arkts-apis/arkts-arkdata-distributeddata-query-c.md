@@ -38,9 +38,9 @@ and(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回查询对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -79,9 +79,9 @@ beginGroup(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -123,12 +123,13 @@ deviceId(deviceId: string): Query
 ```
 
 添加设备ID作为key的前缀。
-    **说明：**  
-    
-    其中deviceId通过调用\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_deviceManager模块的接口均为系统接口，仅系统应用可用。  
-        deviceId具体获取方式请参考[sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **起始版本：** 8
 
@@ -152,9 +153,9 @@ deviceId(deviceId: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -190,9 +191,9 @@ endGroup(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -238,9 +239,9 @@ equalTo(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -279,7 +280,7 @@ getSqlLike(): string
 | --- | --- |
 | string | 返回一个字段列中包含对应子串的结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -322,9 +323,9 @@ greaterThan(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -368,9 +369,9 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -414,9 +415,9 @@ inNumber(field: string, valueList: number[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -460,9 +461,9 @@ inString(field: string, valueList: string[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -505,9 +506,9 @@ isNotNull(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -550,9 +551,9 @@ isNull(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -596,9 +597,9 @@ lessThan(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -642,9 +643,9 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -688,9 +689,9 @@ like(field: string, value: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -734,9 +735,9 @@ limit(total: number, offset: number): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let total = 10;
@@ -783,9 +784,9 @@ notEqualTo(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -829,9 +830,9 @@ notInNumber(field: string, valueList: number[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -875,9 +876,9 @@ notInString(field: string, valueList: string[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -914,9 +915,9 @@ or(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回查询对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -961,9 +962,9 @@ orderByAsc(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -1007,9 +1008,9 @@ orderByDesc(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -1053,9 +1054,9 @@ prefixKey(prefix: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -1093,9 +1094,9 @@ reset(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回重置的Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回重置的Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -1140,9 +1141,9 @@ setSuggestIndex(index: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -1187,9 +1188,9 @@ unlike(field: string, value: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {

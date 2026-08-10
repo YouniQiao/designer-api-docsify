@@ -20,12 +20,12 @@ Defines the callback type used in shouldRecognizerParallelWith.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| current | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the current gesture recognizer of the component  |
-| others | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Yes | the gesture recognizers of the component on the response chain  |
+| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Yes | the current gesture recognizer of the component |
+| others | Array&lt;[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | the gesture recognizers of the component on the response chain |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | gesture recognizer of the component  |
+| [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | gesture recognizer of the component |
 

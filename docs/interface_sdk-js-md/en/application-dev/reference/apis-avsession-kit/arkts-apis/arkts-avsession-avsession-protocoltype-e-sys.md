@@ -1,6 +1,6 @@
 # ProtocolType
 
-Define different protocol capability
+远端设备支持的协议类型的枚举。
 
 **Since:** 11
 
@@ -16,7 +16,9 @@ Define different protocol capability
 TYPE_CAST_PLUS_MIRROR = 1
 ```
 
-Cast+ mirror capability
+Cast+的镜像模式。 
+
+**系统接口：** 该接口为系统接口。
 
 **Since:** 10
 

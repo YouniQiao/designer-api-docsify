@@ -1,6 +1,6 @@
 # DocumentSelectOptions
 
-Defines the options for selecting documents.
+文档选择选项。
 
 **Since:** 23
 
@@ -11,4 +11,10 @@ Defines the options for selecting documents.
 <!--Device-picker-interface DocumentSelectOptions--><!--Device-picker-interface DocumentSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
+
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 

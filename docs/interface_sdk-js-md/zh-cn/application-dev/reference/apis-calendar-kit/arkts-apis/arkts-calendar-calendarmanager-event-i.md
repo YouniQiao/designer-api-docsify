@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
+## 导入模块
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## attendee
 
 ```TypeScript
@@ -18,7 +24,7 @@ attendee?: Attendee[]
 
 会议日程参与者。不填时，默认为null。
 
-**类型：** Attendee[]
+**类型：** [Attendee](arkts-calendar-calendarmanager-attendee-i.md)[]
 
 **起始版本：** 10
 
@@ -56,7 +62,7 @@ description?: string
 endTime: number
 ```
 
-日程结束时间，需要13位时间戳。全天日程时，该字段转换为传入日期24:00对应的时间戳。 
+日程结束时间，需要13位时间戳。全天日程时，该字段转换为传入日期24:00对应的时间戳。 *
 
 **类型：** number
 
@@ -76,9 +82,9 @@ endTime: number
 id?: number
 ```
 
-日程id。当调用[addEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_创建日程时，不填写此参数；当调用[deleteEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[deleteEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_删除日程时，日程id数组，日程id需为整数，传入其他非法入参会报错。
+日程id。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
+[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数；当调用[deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteevent)、  
+[deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteevents)删除日程时，日程id数组，日程id需为整数，传入其他非法入参会报错。
 
 **类型：** number
 
@@ -118,8 +124,8 @@ identifier?: string
 instanceEndTime?: number
 ```
 
-日程实例结束时间，需要13位时间戳。当调用[addEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_创建日程时，不填写此参数。
+日程实例结束时间，需要13位时间戳。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
+[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数。
 
 **类型：** number
 
@@ -139,8 +145,8 @@ instanceEndTime?: number
 instanceStartTime?: number
 ```
 
-日程实例开始时间，需要13位时间戳。当调用[addEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_创建日程时，不填写此参数。
+日程实例开始时间，需要13位时间戳。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
+[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数。
 
 **类型：** number
 
@@ -202,7 +208,7 @@ location?: Location
 
 日程地点。不填时，默认为undefined。
 
-**类型：** Location
+**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
 
 **起始版本：** 10
 
@@ -222,7 +228,7 @@ recurrenceRule?: RecurrenceRule
 
 日程重复规则，设置了此字段的日程为重复日程。不填时，默认为非重复日程。
 
-**类型：** RecurrenceRule
+**类型：** [RecurrenceRule](arkts-calendar-calendarmanager-recurrencerule-i.md)
 
 **起始版本：** 10
 
@@ -260,9 +266,9 @@ reminderTime?: number[]
 service?: EventService
 ```
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_日程服务。不填时，默认没有一键服务。暂不支持此功能。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP1--&gt;日程服务。不填时，默认没有一键服务。暂不支持此功能。&lt;!--RP1End--&gt;
 
-**类型：** EventService
+**类型：** [EventService](arkts-calendar-calendarmanager-eventservice-i.md)
 
 **起始版本：** 10
 
@@ -301,7 +307,7 @@ timeZone?: string
 ```
 
 日程时区。日程时区。长度建议为[0,5000]字符，不填或异常值时，默认为当前所在时区，当需要创建与当前不一样的时区时，可填入对应的时区。可通过  
-[systemDateTime.getTimezone()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取当前系统时区。
+[systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)获取当前系统时区。
 
 **类型：** string
 
@@ -343,7 +349,7 @@ type: EventType
 
 日程类型。
 
-**类型：** EventType
+**类型：** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
 
 **起始版本：** 10
 

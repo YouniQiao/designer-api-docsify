@@ -1,5 +1,11 @@
 # preloadCallUI (System API)
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## preloadCallUI
 
 ```TypeScript
@@ -30,10 +36,10 @@ Preload callUI.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | 8400001 | Invalid parameter value. |
 | 8400002 | Operation failed. Cannot connect to service. |
 | 8400003 | System internal error. |
 | 8400999 | Unknown error code. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 

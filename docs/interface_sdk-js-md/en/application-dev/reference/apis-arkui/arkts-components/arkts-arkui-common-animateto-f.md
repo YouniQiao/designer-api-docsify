@@ -6,35 +6,27 @@
 declare function animateTo(value: AnimateParam, event: () => void): void
 ```
 
-Defines an explicit animation. When an animation is required, call this API explicitly to modify state and produce an animation effect.
-    **NOTE**  
-    
-    - Since API version 10, you can use  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ to specify the UI execution context.  
-    
-    - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.  
-    
-    - When **animateTo** is called in  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, the  
-    component's build method is not executed yet, and internal components are not created. This means the animation has  
-    no initial values to work with and will not function as expected.  
-    
-    - During  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_, the  
-    component is being destroyed, so animations should not be used.  
-    
-    - When a component appears or disappears, you can add animation effects through the [transition]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_  
-    attribute.  
-    
-    - For attributes not supported by component transitions, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_  
-    and use **animateTo** to implement the component disappearance effect after animation completion.  
-    
-    - In certain scenarios, using **animateTo** with  
-    \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_ may  
-    produce unexpected results. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_.
+显式动画接口。在需要动画时，显式调用该接口改变状态以产生动画。
+
+> 
+> - 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md)中的
+> [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)来明确UI的执行上下文。
+> 
+> - 不推荐在aboutToAppear、aboutToDisappear中调用动画。
+> 
+> - 如果在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中调用动画，自
+> 定义组件内的build还未执行，内部组件还未创建，动画时机过早，动画属性没有初值无法对组件产生动画。
+> 
+> - 执行[aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear)时，
+> 组件即将销毁，不能在aboutToDisappear里面做动画。
+> 
+> - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)添加动画效果。
+> 
+> - 组件内转场不支持的属性，可以参考[示例2](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#示例2动画执行结束后组件消失)，使用
+> animateTo实现动画执行结束后组件消失的效果。
+> 
+> - 某些场景下，在[状态管理V2](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)中使用animateTo动画，会产生异常效果，具体
+> 可参考：[在状态管理V2中使用animateTo动画效果异常](../../../ui/state-management/arkts-new-local.md#在状态管理v2中使用animateto动画效果异常)。
 
 **Since:** 7
 
@@ -56,6 +48,6 @@ Defines an explicit animation. When an animation is required, call this API expl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes |  |
 | event | () =&gt; void | Yes |  |
 

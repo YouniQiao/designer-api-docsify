@@ -1,6 +1,6 @@
 # GetReportData
 
-Describe the GET\_REPORT data is received from remote host.
+Describe the GET_REPORT data is received from remote host.
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Describe the GET\_REPORT data is received from remote host.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## bufferSize
 
 ```TypeScript
 bufferSize: int
 ```
 
-bufferSize of GET\_REPORT data, maximum number of octets to transfer during data phase.
+bufferSize of GET_REPORT data, maximum number of octets to transfer during data phase.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ bufferSize of GET\_REPORT data, maximum number of octets to transfer during data
 id: int
 ```
 
-id of GET\_REPORT data.
+id of GET_REPORT data.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ id of GET\_REPORT data.
 type: ReportType
 ```
 
-reportType of GET\_REPORT data.
+reportType of GET_REPORT data.
 
-**Type:** ReportType
+**Type:** [ReportType](arkts-connectivity-hid-reporttype-e.md)
 
 **Since:** 23
 

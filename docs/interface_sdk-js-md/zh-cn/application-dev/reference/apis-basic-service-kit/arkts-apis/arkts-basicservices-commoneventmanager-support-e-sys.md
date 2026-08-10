@@ -236,7 +236,7 @@ COMMON_EVENT_DISK_VOLUME_STATE_CHANGE = 'usual.event.data.DISK_VOLUME_STATE_CHAN
 
 当系统数据盘卷在格式化或修复等操作过程中状态发生变化（如操作开始、成功或失败）时，会发送此公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE\_MANAGER权限（该权限仅系统应用可申请）。
+要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 26.0.0
 
@@ -260,7 +260,7 @@ COMMON_EVENT_APP_FIRST_LAUNCH = 'usual.event.APP_FIRST_LAUNCH'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-要订阅此事件，您的应用必须具备ohos.permission.INSTALL\_BUNDLE权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.INSTALL_BUNDLE权限（该权限仅系统应用可申请）
 
 **起始版本：** 24
 
@@ -284,7 +284,7 @@ COMMON_EVENT_SMS_RECEIVE_COMPLETED = 'usual.event.SMS_RECEIVE_COMPLETED'
 
 在设备接收到短信时，将会触发事件通知服务发布该系统公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVE\_SMS权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **起始版本：** 10
 
@@ -306,7 +306,7 @@ COMMON_EVENT_SMS_EMERGENCY_CB_RECEIVE_COMPLETED = 'usual.event.SMS_EMERGENCY_CB_
 
 在设备接收到紧急小区广播短信时，将会触发事件通知服务发布该系统公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVE\_SMS权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **起始版本：** 10
 
@@ -328,7 +328,7 @@ COMMON_EVENT_SMS_CB_RECEIVE_COMPLETED = 'usual.event.SMS_CB_RECEIVE_COMPLETED'
 
 在设备接收到小区广播短信时，将会触发事件通知服务发布该系统公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVE\_SMS权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **起始版本：** 10
 
@@ -430,7 +430,7 @@ COMMON_EVENT_SMS_WAPPUSH_RECEIVE_COMPLETED = 'usual.event.SMS_WAPPUSH_RECEIVE_CO
 
 在设备接收服务信息短信完成时，将会触发事件通知服务发布该系统公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVE\_SMS权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **起始版本：** 10
 
@@ -612,7 +612,7 @@ COMMON_EVENT_INCOMING_CALL_MISSED = 'usual.event.INCOMING_CALL_MISSED'
 
 在设备有未接来电时，将会触发事件通知服务发布该系统公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.GET\_TELEPHONY\_STATE权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.GET_TELEPHONY_STATE权限（该权限仅系统应用可申请）
 
 **起始版本：** 10
 
@@ -655,9 +655,9 @@ COMMON_EVENT_DOMAIN_ACCOUNT_STATUS_CHANGED = 'usual.event.DOMAIN_ACCOUNT_STATUS_
 域账号认证、删除、令牌更新、令牌失效将会触发事件通知服务发布该系统公共事件，事件携带域账号名、域名、域账号状态等信息。
 
 与这个公共事件相关的接口：removeOsAccount、DomainAccountManager.auth、updateAccountToken, 这些为系统API，具体参看  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[@ohos.account.osAccount](../../../reference/js-apis-osAccount.md)。
 
-要订阅此事件，您的应用必须具备ohos.permission.GET\_LOCAL\_ACCOUNTS权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.GET_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）
 
 **起始版本：** 10
 
@@ -779,7 +779,7 @@ COMMON_EVENT_BUNDLE_RESOURCES_CHANGED = 'usual.event.BUNDLE_RESOURCES_CHANGED'
 
 在切换语言、切换主题等场景，包管理资源数据刷新完成时，会发送此公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.GET\_BUNDLE\_RESOURCES权限
+要订阅此事件，您的应用必须具备ohos.permission.GET_BUNDLE_RESOURCES权限
 
 **起始版本：** 15
 
@@ -821,7 +821,7 @@ COMMON_EVENT_RESTORE_START = 'usual.event.RESTORE_START'
 
 当数据迁移相关应用拉起备份恢复框架进行恢复任务，某个应用恢复开始时会发送此公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.START\_RESTORE\_NOTIFICATION权限
+要订阅此事件，您的应用必须具备ohos.permission.START_RESTORE_NOTIFICATION权限
 
 **起始版本：** 13
 
@@ -843,7 +843,7 @@ COMMON_EVENT_DEFAULT_APPLICATION_CHANGED = 'usual.event.DEFAULT_APPLICATION_CHAN
 
 在文件默认打开应用发生变更时，会发送此公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.CHANGE\_DEFAULT\_APPLICATION权限
+要订阅此事件，您的应用必须具备ohos.permission.CHANGE_DEFAULT_APPLICATION权限
 
 **起始版本：** 19
 
@@ -864,9 +864,9 @@ COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'
 表示应用快捷方式发生变化的公共事件。
 
 在应用快捷方式的更改设置完成时（例如调用shortcutManager模块的  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_成功时），会发送此公共事件。
+[setShortcutVisibleForSelf](../../../apis-ability-kit/js-apis-shortcutManager.md#shortcutmanagersetshortcutvisibleforself)成功时），会发送此公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE\_SHORTCUTS权限
+要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SHORTCUTS权限
 
 **起始版本：** 20
 
@@ -928,7 +928,7 @@ COMMON_EVENT_SCREEN_SHARE = 'usual.event.SCREEN_SHARE'
 
 这是一个受保护的公共事件，只能由系统发送。
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVE\_SMS权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **起始版本：** 20
 
@@ -950,7 +950,7 @@ COMMON_EVENT_RESTORE_END = 'usual.event.RESTORE_END'
 
 当数据迁移相关应用拉起备份恢复框架进行恢复任务，某个应用恢复结束后会发送此公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.RESTORE\_END\_NOTIFICATION权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.RESTORE_END_NOTIFICATION权限（该权限仅系统应用可申请）
 
 **起始版本：** 23
 
@@ -972,7 +972,7 @@ COMMON_EVENT_CLOUD_DISK_STATE_CHANGED = 'usual.event.CLOUD_DISK_STATE_CHANGED'
 
 在同步根更新完成时，将会触发事件通知服务发布该系统公共事件。
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS\_CLOUD\_DISK\_INFO权限（该权限仅系统应用可申请）
+要订阅此事件，您的应用必须具备ohos.permission.ACCESS_CLOUD_DISK_INFO权限（该权限仅系统应用可申请）
 
 **起始版本：** 21
 

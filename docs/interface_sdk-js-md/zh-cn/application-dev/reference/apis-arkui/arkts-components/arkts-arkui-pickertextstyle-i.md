@@ -18,7 +18,7 @@ color?: ResourceColor
 
 Font color.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ font?: Font
 
 Text style.
 
-**类型：** Font
+**类型：** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
 **起始版本：** 11
 

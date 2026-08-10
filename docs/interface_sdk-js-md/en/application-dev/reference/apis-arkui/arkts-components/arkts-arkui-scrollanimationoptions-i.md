@@ -1,6 +1,6 @@
 # ScrollAnimationOptions
 
-Provides parameters for customizing scroll animations.
+自定义滚动动效的参数选项。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Provides parameters for customizing scroll animations.
 canOverScroll?: boolean
 ```
 
-Whether to enable overscroll.
+是否启用过滚动。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ Scrolling can exceed the boundary and initiate a bounce animation when this parameter is set to \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_true\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_,and the component's \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_edgeEffect\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_ attribute is set to EdgeEffect.Spring.\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt; 设置为&lt;em&gt;true&lt;/em&gt;时可以滚动超出边界并触发回弹动画，同时组件的&lt;em&gt;edgeEffect&lt;/em&gt;属性需设置为EdgeEffect.Spring。&lt;/p&gt;
 
 **Type:** boolean
 
@@ -42,9 +42,9 @@ Whether to enable overscroll.
 curve?: Curve | ICurve
 ```
 
-Scrolling curve.
+滚动曲线。
 
-**Type:** Curve \| ICurve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| ICurve
 
 **Default:** Curve.Ease
 
@@ -66,9 +66,9 @@ Scrolling curve.
 duration?: number
 ```
 
-Scrolling duration.
+滚动时长。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Scrolling duration.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_Default value: **1000**\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_Unit: ms\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_**NOTE**\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_A value less than 0 evaluates to the default value.\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;设置为小于0的值时，按默认值处理。&lt;/p&gt;
 
 **Type:** number
 

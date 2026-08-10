@@ -1,5 +1,11 @@
 # allocResourceAndShare (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## allocResourceAndShare
 
 ```TypeScript
@@ -11,7 +17,7 @@ function allocResourceAndShare(
     ): Promise<relationalStore.ResultSet>
 ```
 
-Allocates a shared resource ID based on the data that matches the specified predicates.This API uses a promise to return the result set of the data to share,which also includes the column names if they are specified.
+根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集。如果指定了列字段，则返回的结果集中同时包含对应列的字段值，使用Promise异步回调。
 
 **Since:** 11
 
@@ -27,26 +33,26 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Name of the RDB store. |
-| predicates | relationalStore.RdbPredicates | Yes | Predicates for matching the data to share. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
-| columns | Array&lt;string&gt; | No | Columns in which the data is located. The default value is undefined, which means column names are not returned. |
+| storeId | string | Yes | 数据库名称。 |
+| predicates | relationalStore.RdbPredicates | Yes | 表示查找共享资源标识的数据的谓词条件。 |
+| participants | Array&lt;Participant&gt; | Yes | 端云共享的参与者。 |
+| columns | Array&lt;string&gt; | No | 表示要查找的列字段名。默认为undefined，不返回列字段。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;relationalStore.ResultSet&gt; | Promise used to return the result set of the data to share. |
+| Promise&lt;relationalStore.ResultSet&gt; | Promise对象，返回查询并共享的共享资源标识结果集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -94,7 +100,7 @@ function allocResourceAndShare(
     ): void
 ```
 
-Allocates a shared resource ID based on the data that matches the specified predicates.This API uses an asynchronous callback to return the result.
+根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集，使用callback异步回调。
 
 **Since:** 11
 
@@ -110,20 +116,20 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Name of the RDB store. |
-| predicates | relationalStore.RdbPredicates | Yes | Predicates for matching the data to share. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;relationalStore.ResultSet&gt; | Yes | Callback used to return the result. |
+| storeId | string | Yes | 数据库名称。 |
+| predicates | relationalStore.RdbPredicates | Yes | 表示查找共享资源标识的数据的谓词条件。 |
+| participants | Array&lt;Participant&gt; | Yes | 端云共享的参与者。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;relationalStore.ResultSet&gt; | Yes | 回调函数。返回查询并共享的共享资源标识结果集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
@@ -174,7 +180,7 @@ function allocResourceAndShare(
     ): void
 ```
 
-Allocates a shared resource ID based on the data that matches the specified predicates.This API uses an asynchronous callback to return the result set of the data to share,which includes the shared resource ID and column names.
+根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集并根据指定的列字段，返回的结果集中同时包含对应列的字段值，使用callback异步回调。
 
 **Since:** 11
 
@@ -190,21 +196,21 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Name of the RDB store. |
-| predicates | relationalStore.RdbPredicates | Yes | Predicates for matching the data to share. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
-| columns | Array&lt;string&gt; | Yes | Columns in which the data is located. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;relationalStore.ResultSet&gt; | Yes | Callback used to return the result set of the data to share. |
+| storeId | string | Yes | 数据库名称。 |
+| predicates | relationalStore.RdbPredicates | Yes | 表示查找共享资源标识的数据的谓词条件。 |
+| participants | Array&lt;Participant&gt; | Yes | 端云共享的参与者。 |
+| columns | Array&lt;string&gt; | Yes | 表示要查找的列字段名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;relationalStore.ResultSet&gt; | Yes | 回调函数。返回查询并共享的共享资源标识结果集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';

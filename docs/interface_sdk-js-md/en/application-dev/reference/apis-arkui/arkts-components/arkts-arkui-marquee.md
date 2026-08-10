@@ -1,23 +1,19 @@
 # Marquee
 
-The **Marquee** component is used to display a scrolling piece of text. Text scrolling is activated only when the
-content width is greater than or equal to the component's width.
+跑马灯组件，用于滚动展示一段单行文本，支持自定义滚动速度、方向、循环次数等。仅当文本内容宽度大于等于跑马灯组件宽度时滚动，否则不滚动。适用于需要在有限空间内展示较长文本的场景，如新闻标题滚动、通知公告、广告轮播等，可以有效节省界面空间
+并吸引用户注意。
 
-> **NOTE**
+> **说明：**
 >
-> To ensure that scrolling frame rates are not affected, it is recommended that the number of **Marquee** components
-> in a scroll container does not exceed four, or alternatively, use the [Text]{@link text} component's
-> [TextOverflow.MARQUEE]{@link TextOverflow} as a substitute.
+> 为了不影响滚动帧率，建议在滚动类组件中Marquee的个数不超过4个，或者使用
 >
-> For the scenario where the frame rate of the **Marquee** component is dynamic, you can use the
-> [MarqueeDynamicSyncScene]{@link @ohos.arkui.UIContext} API.
+> 对于Marquee组件动态帧率的场景，可以使用[MarqueeDynamicSyncScene]{@link @ohos.arkui.UIContext}接口实现。
 >
-> If the text width is less than the **Marquee** component width, use the [property animation]{@link ./common} to
-> implement scrolling.
+> 在文本宽度小于跑马灯组件宽度时，使用[属性动画]{@link ./common}实现滚动。
 
-## Child Components
+## 子组件
 
-Not supported
+无
 
 ## Marquee
 
@@ -25,7 +21,7 @@ Not supported
 Marquee(options: MarqueeOptions)
 ```
 
-Creates a marquee.
+创建跑马灯组件。
 
 **Since:** 8
 
@@ -43,7 +39,8 @@ Creates a marquee.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters of the marquee. |
+| options | [MarqueeOptions](../arkts-apis/arkts-arkui-marquee-marqueeoptions-i.md) | Yes | 配置跑马灯组件的参数。 |
 
 ## Summary
 
+- [MarqueeOptions](arkts-arkui-marquee-marqueeoptions-i.md)

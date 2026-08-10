@@ -1,6 +1,6 @@
 # GaugeIndicatorOptions
 
-Provides gauge indicator options.
+数据量规图表指针选项。
 
 **Since:** 11
 
@@ -16,15 +16,15 @@ Provides gauge indicator options.
 icon?: ResourceStr
 ```
 
-Image path of the icon.
+图标资源路径。
 
-**NOTE**
+**说明：**
 
-If this parameter is not set, the default style is used, which is a triangle pointer.
+不配置则使用系统默认样式，系统默认样式为三角形指针。
 
-Only icons in SVG format are supported. If icons in other formats are used, the default triangle style indicator is used.
+仅支持使用svg格式的图标，若使用其他格式，则使用默认的三角形样式指针。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** system style.
 
@@ -48,21 +48,23 @@ Only icons in SVG format are supported. If icons in other formats are used, the 
 space?: Dimension
 ```
 
-Distance between the indicator and the outer edge of the ring. The value cannot be in percentage.
+指针距离圆环外边的间距。
 
-Default value: **8**
+默认值：8
 
-Unit: vp
+单位：vp 
 
-**NOTE**
+**说明：**
 
-For the default triangle style indicator, the distance is the amount of space between the triangle and the outer edge of the ring.
+不支持百分比。
 
-If this parameter is set to a value less than 0, the default value will be used.
+对于默认的三角形样式指针，为黑色三角形到圆环外边的间距。
 
-If this parameter is set to a value greater than the ring radius, the default value will be used.
+若设置值小于0，则使用默认值。
 
-**Type:** Dimension
+若设置值大于圆环半径，则使用默认值。
+
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 8vp
 

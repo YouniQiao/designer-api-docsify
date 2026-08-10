@@ -1,7 +1,6 @@
 # VideoMeetingControlGroup
 
-Enumerates the video meeting component groups. They are used only when  
-[PiPTemplateType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **VIDEO\_MEETING**.
+视频会议控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_MEETING时使用。
 
 **Since:** 12
 
@@ -17,7 +16,7 @@ Enumerates the video meeting component groups. They are used only when
 HANG_UP_BUTTON = 301
 ```
 
-Hang-up component group.
+挂断控件组。
 
 **Since:** 12
 
@@ -35,7 +34,7 @@ Hang-up component group.
 CAMERA_SWITCH = 302
 ```
 
-Camera on/off component group.
+打开/关闭摄像头控件组。
 
 **Since:** 12
 
@@ -53,7 +52,7 @@ Camera on/off component group.
 MUTE_SWITCH = 303
 ```
 
-Mute/Unmute component group.
+静音控件组。
 
 **Since:** 12
 
@@ -71,7 +70,7 @@ Mute/Unmute component group.
 MICROPHONE_SWITCH = 304
 ```
 
-Microphone on/off component group.
+打开/关闭麦克风控件组。
 
 **Since:** 12
 

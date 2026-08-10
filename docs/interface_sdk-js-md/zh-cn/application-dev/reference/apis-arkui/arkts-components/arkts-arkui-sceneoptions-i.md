@@ -18,7 +18,7 @@ modelType?: ModelType
 
 3D渲染时的场景类型
 
-**类型：** ModelType
+**类型：** [ModelType](arkts-arkui-modeltype-e.md)
 
 **默认值：** ModelType.SURFACE 表面模型类型
 
@@ -40,7 +40,7 @@ scene?: ResourceStr | Scene
 
 3D渲染的资源类型，3D场景控制的Scene类型
 
-**类型：** ResourceStr \| Scene
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| Scene
 
 **起始版本：** 12
 

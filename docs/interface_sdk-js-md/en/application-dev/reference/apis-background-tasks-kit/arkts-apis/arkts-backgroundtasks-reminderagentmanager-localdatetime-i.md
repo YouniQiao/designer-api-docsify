@@ -1,6 +1,6 @@
 # LocalDateTime
 
-Defines the time information for a calendar reminder.
+用于日历类提醒设置时指定时间信息。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the time information for a calendar reminder.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## day
 
 ```TypeScript
 day: int
 ```
 
-Day. The value ranges from 1 to 31.
+日，取值范围是[1, 31]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Day. The value ranges from 1 to 31.
 hour: int
 ```
 
-Hour. The value ranges from 0 to 23.
+时，取值范围是[0, 23]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -52,9 +58,9 @@ Hour. The value ranges from 0 to 23.
 minute: int
 ```
 
-Minute. The value ranges from 0 to 59.
+分，取值范围是[0, 59]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -70,9 +76,9 @@ Minute. The value ranges from 0 to 59.
 month: int
 ```
 
-Month. The value ranges from 1 to 12.
+月，取值范围是[1, 12]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -88,9 +94,9 @@ Month. The value ranges from 1 to 12.
 second?: int
 ```
 
-Second. The value ranges from 0 to 59.
+秒，取值范围是[0, 59]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -106,9 +112,9 @@ Second. The value ranges from 0 to 59.
 year: int
 ```
 
-Year.
+年
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

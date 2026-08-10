@@ -1,5 +1,11 @@
 # queryBundleStateInfoByInterval（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## queryBundleStateInfoByInterval
 
 ```TypeScript
@@ -31,12 +37,12 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
-| begin | number | 是 | Indicates the start time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| end | number | 是 | Indicates the end time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;BundleStateInfo&gt;&gt; | 是 | the callback of usage information about each bundle. |
+| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
+| begin | number | 是 | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| end | number | 是 | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStateInfo&gt;&gt; | 是 | the callback of usage information about each bundle. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -86,9 +92,9 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
-| begin | number | 是 | Indicates the start time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| end | number | 是 | Indicates the end time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
+| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
+| begin | number | 是 | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| end | number | 是 | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 
 **返回值：**
 
@@ -96,7 +102,7 @@ Queries usage information about each bundle within a specified period at a speci
 | --- | --- |
 | Promise&lt;Array&lt;BundleStateInfo&gt;&gt; | the usage information about each bundle. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

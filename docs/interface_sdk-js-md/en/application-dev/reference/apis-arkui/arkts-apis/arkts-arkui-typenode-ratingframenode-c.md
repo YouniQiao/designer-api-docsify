@@ -1,6 +1,6 @@
 # RatingFrameNode
 
-Define the Rating type of FrameNode.
+定义Rating类型的FrameNode。
 
 **Inheritance/Implementation:** RatingFrameNode extends [TypedFrameNode<RatingAttribute>](TypedFrameNode<RatingAttribute>)
 
@@ -18,7 +18,7 @@ Define the Rating type of FrameNode.
 abstract initialize(options?: RatingOptions): RatingAttribute
 ```
 
-Initialize Rating FrameNode.
+初始化Rating类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Rating FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [RatingOptions](../arkts-components/arkts-arkui-ratingoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md) |  |
 

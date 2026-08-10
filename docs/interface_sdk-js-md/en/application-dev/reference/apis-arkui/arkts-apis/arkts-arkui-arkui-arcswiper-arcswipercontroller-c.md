@@ -1,6 +1,6 @@
 # ArcSwiperController
 
-Provide methods for controlling ArcSwiper component.
+ArcSwiper容器组件的控制器，可以将此对象绑定至ArcSwiper组件，实现控制ArcSwiper翻页等功能。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Provide methods for controlling ArcSwiper component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-A constructor used to create a ArcSwiperController object.
+ArcSwiperController的构造函数。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ A constructor used to create a ArcSwiperController object.
 finishAnimation(handler?: FinishAnimationHandler): void
 ```
 
-Finish the swiper animation.
+停止播放动画。默认无回调。
 
 **Since:** 26.0.0
 
@@ -50,7 +56,7 @@ Finish the swiper animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The handler is used to listen for the end of the animation. |
+| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | 动画结束的回调。&lt;br&gt;默认值：不传入时无回调 |
 
 ## showNext
 
@@ -58,7 +64,7 @@ Finish the swiper animation.
 showNext(): void
 ```
 
-Show next subcomponent.
+翻至下一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。
 
 **Since:** 26.0.0
 
@@ -76,7 +82,7 @@ Show next subcomponent.
 showPrevious(): void
 ```
 
-Show previous subcomponent.
+翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。
 
 **Since:** 26.0.0
 

@@ -1,5 +1,11 @@
 # createMediaSourceWithFd
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createMediaSourceWithFd
 
 ```TypeScript
@@ -24,15 +30,15 @@ function createMediaSourceWithFd(fdSrc: AVFileDescriptor): MediaSource | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fdSrc | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 媒体文件描述符。 |
+| fdSrc | [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md) | 是 | 媒体文件描述符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回MediaSource，用于媒体资源设置。 |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

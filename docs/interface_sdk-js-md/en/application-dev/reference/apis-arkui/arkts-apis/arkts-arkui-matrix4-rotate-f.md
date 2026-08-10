@@ -1,12 +1,20 @@
 # rotate
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## rotate
 
 ```TypeScript
 function rotate(options: RotateOption): Matrix4Transit
 ```
 
-Rotates this matrix object along the x, y, and z axes.
+Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
+
+> **说明：**
 
 **Since:** 7
 
@@ -14,7 +22,7 @@ Rotates this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
+**Substitutes:** [matrix4.Matrix4Transit.rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
 
 <!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit--><!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit-End-->
 
@@ -24,11 +32,11 @@ Rotates this matrix object along the x, y, and z axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rotation configuration. |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | 设置旋转参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Matrix object after rotation. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 旋转后的矩阵对象。 |
 

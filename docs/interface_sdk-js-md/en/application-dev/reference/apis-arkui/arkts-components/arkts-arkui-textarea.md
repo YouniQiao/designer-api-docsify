@@ -1,14 +1,12 @@
 # TextArea
 
-The **TextArea** component provides multi-line text input and automatically wraps text to ensure that no line extends
-beyond the component's width.
+多行文本输入框组件，当输入的文本内容超过组件宽度时会自动换行显示，适用于评论输入、反馈表单、内容编辑等需要多行文本输入的场景。
 
-If the component does not have its height set, it adapts its height to the content. If the component does not have
-its width set, it stretches to fill the maximum available width.
+高度未设置时，组件无默认高度，自适应内容高度。宽度未设置时，默认撑满最大宽度。
 
-## Child Components
+## 子组件
 
-Not supported
+无
 
 ## TextArea
 
@@ -16,7 +14,7 @@ Not supported
 TextArea(value?: TextAreaOptions)
 ```
 
-Defines the constructor of TextArea.
+定义TextArea组件构造函数。
 
 **Since:** 7
 
@@ -32,7 +30,10 @@ Defines the constructor of TextArea.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the **TextArea** component.  |
+| value | [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | No | TextArea组件参数。默认值：详见TextAreaOptions。 |
 
 ## Summary
 
+- [TextAreaOptions](arkts-arkui-textarea-textareaoptions-i.md)
+- [TextAreaSubmitCallback](arkts-arkui-textarea-textareasubmitcallback-t.md)
+- [TextAreaType](arkts-arkui-textarea-textareatype-e.md)

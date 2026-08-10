@@ -10,6 +10,12 @@ NavDestination组件信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## index
 
 ```TypeScript
@@ -38,7 +44,7 @@ mode?: NavDestinationMode
 
 NavDestination类型。
 
-**类型：** NavDestinationMode
+**类型：** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
 
 **起始版本：** 23
 
@@ -58,7 +64,7 @@ name: ResourceStr
 
 NavDestination组件的名称。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
@@ -98,7 +104,7 @@ navigationId: ResourceStr
 
 包含NavDestination组件的Navigation组件的id。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
@@ -138,7 +144,7 @@ size?: Size
 
 NavDestination的尺寸。
 
-**类型：** Size
+**类型：** [Size](arkts-arkui-size-i.md)
 
 **起始版本：** 23
 
@@ -158,7 +164,7 @@ state: NavDestinationState
 
 NavDestination组件的状态。
 
-**类型：** NavDestinationState
+**类型：** [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md)
 
 **起始版本：** 23
 

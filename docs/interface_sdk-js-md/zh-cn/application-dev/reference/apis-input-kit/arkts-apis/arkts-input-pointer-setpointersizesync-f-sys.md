@@ -1,5 +1,11 @@
 # setPointerSizeSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## setPointerSizeSync
 
 ```TypeScript
@@ -22,49 +28,20 @@ function setPointerSizeSync(size: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 鼠标光标大小，范围为[1-7]，默认为1。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 鼠标光标大小，范围为[1-7]，默认为1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 同步设置鼠标指针大小
-            pointer.setPointerSizeSync(5);
-            console.info(`Succeeded in setting pointer size sync.`);
-          } catch (error) {
-            console.error(`Failed to set pointer size sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { pointer } from '@kit.InputKit';
-import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

@@ -12,6 +12,12 @@ Manager pan host profile.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { pan } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isPanSupported
 
 ```TypeScript
@@ -72,10 +78,11 @@ Obtains the tethering enable or disable.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 801 | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs.<br>**Applicable version:** 10 - 24 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

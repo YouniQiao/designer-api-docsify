@@ -1,6 +1,6 @@
 # WebKeyboardAvoidMode
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the web keyboard avoid mode.
+Enum type supplied to {@link keyboardAvoidMode} for setting the web keyboard avoid mode.
 
 **起始版本：** 12
 

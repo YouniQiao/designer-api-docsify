@@ -1,6 +1,6 @@
 # Client
 
-管理SSAP客户端。在调用ssap客户端方法之前，必须使用\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建ssap客户端实例。
+管理SSAP客户端。在调用ssap客户端方法之前，必须使用{@link createClient}创建ssap客户端实例。
 
 **起始版本：** 26.0.0
 
@@ -9,6 +9,12 @@
 <!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
 
 ## callMethod
 
@@ -36,7 +42,7 @@ callMethod(method: Method): Promise<Method>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| method | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要调用的方法 |
+| method | [Method](arkts-connectivity-ssap-method-i-sys.md) | 是 | 指示要调用的方法 |
 
 **返回值：**
 
@@ -48,12 +54,12 @@ callMethod(method: Method): Promise<Method>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID. |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID. |
 
 ## offEventNotify
 
@@ -79,7 +85,7 @@ offEventNotify(callback?: Callback<Event>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Event&gt; | 否 | 用于监听事件通知事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | 否 | 用于监听事件通知事件的回调。 |
 
 ## onEventNotify
 
@@ -89,7 +95,7 @@ onEventNotify(callback: Callback<Event>): void
 
 订阅事件通知。
 
-只有授予了ohos.permission.NEARLINK\_ACCESS权限的系统应用程序才能访问此事件。
+只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
 
@@ -107,7 +113,7 @@ onEventNotify(callback: Callback<Event>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Event&gt; | 是 | 用于监听事件通知事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | 是 | 用于监听事件通知事件的回调。 |
 
 ## readDescriptor
 
@@ -135,7 +141,7 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要读取的描述符 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 是 | 指示要读取的描述符 |
 
 **返回值：**
 
@@ -147,12 +153,12 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in descriptor. |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in descriptor. |
 
 ## setPropertyIndication
 
@@ -180,7 +186,7 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要指示的属性。 |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | 是 | 要指示的属性。 |
 | enable | boolean | 是 | 指定是否启用属性的指示 |
 
 **返回值：**
@@ -193,13 +199,13 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 | 36100030 | The connection is not established. |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in property. |
 
 ## writeDescriptor
 
@@ -209,7 +215,7 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 写入服务端的描述符。
 
-此方法不支持写入客户端属性配置描述符。要写入客户端属性配置描述符，请改为调用[setPropertyNotification]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或[setPropertyIndication]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+此方法不支持写入客户端属性配置描述符。要写入客户端属性配置描述符，请改为调用[setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification)或[setPropertyIndication](arkts-connectivity-ssap-client-i-sys.md#setpropertyindication)。
 
 **起始版本：** 26.0.0
 
@@ -229,7 +235,7 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要写入的描述符。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_描述符类型不应为CLIENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_PROPERTY\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFIG。 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 是 | 指示要写入的描述符。 &lt;br&gt;描述符类型不应为CLIENT_PROPERTY_CONFIG。 |
 
 **返回值：**
 
@@ -241,10 +247,10 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in descriptor. |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in descriptor. |
 

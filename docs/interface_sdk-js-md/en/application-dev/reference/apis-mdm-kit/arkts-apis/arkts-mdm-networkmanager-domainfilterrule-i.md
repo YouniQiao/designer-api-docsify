@@ -1,10 +1,10 @@
 # DomainFilterRule
 
-Represents a domain name filtering rule.
+域名过滤规则。
 
-In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
+API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-[LogType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported since API version 23.
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
 **Since:** 12
 
@@ -14,20 +14,25 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
+
 ## action
 
 ```TypeScript
 action?: Action
 ```
 
-Action to take, that is, receive or discard the data packets.
+接收或者丢弃数据包。
 
-This parameter is mandatory when a domain name filtering rule is added.
+添加域名过滤规则时必填；
 
-This parameter is optional when a domain name filtering rule is removed. If this parameter is left empty, all  
-[Action]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ chains are cleared, and **domainName** and **appUid** must be also left empty.
+移除域名过滤规则时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且domainName，appUid也必须传入空值。
 
-**Type:** Action
+**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **Since:** 12
 
@@ -45,7 +50,7 @@ This parameter is optional when a domain name filtering rule is removed. If this
 appUid?: string
 ```
 
-UID of the application.
+应用uid。
 
 **Type:** string
 
@@ -65,14 +70,13 @@ UID of the application.
 direction?: Direction
 ```
 
-Direction chains to which the rule applies.
+规则链。
 
-This parameter is optional when a domain name filtering rule is added. If this parameter is null or set to output chain or input chain, the output chain takes effect. If this parameter is set to a forward chain, **appUid** must be empty. Otherwise, error code 401 will be returned.
+添加域名过滤规则时非必填；当值为空，以及设为输出链或输入链时，实际效果为输出链。设为转发链时，appUid需设置为空，否则会报401错误码。
 
-This parameter is optional when a domain name filtering rule is removed. If the value is empty, all  
-[Direction]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ chains are cleared, and **domainName** and **appUid** must be empty.
+移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且domainName，appUid也必须传入空值。
 
-**Type:** Direction
+**Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 15
 
@@ -90,7 +94,7 @@ This parameter is optional when a domain name filtering rule is removed. If the 
 domainName?: string
 ```
 
-Domain name. This parameter is mandatory when a domain name filtering rule is added. Segment domain name matching is supported. For example, if \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ is set to \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_, then \_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_, \_\_\_INLINE\_CODE\_DESC\_USD\_3\_\_\_, and\_\_\_INLINE\_CODE\_DESC\_USD\_4\_\_\_ will be matched, while \_\_\_INLINE\_CODE\_DESC\_USD\_5\_\_\_ will not.
+域名。添加域名过滤规则时必填。支持域名分段匹配，例如，domainName传入`example.com`，那么`example.com`、`www.example.com`、`www.test.example.com`会被匹配，`linkexample.com`不会被匹配。
 
 **Type:** string
 
@@ -110,7 +114,7 @@ Domain name. This parameter is mandatory when a domain name filtering rule is ad
 family?: number
 ```
 
-IP protocol version. The value can be **1** (IPv4) or **2** (IPv6).
+IP协议版本。支持取值为1或2，取值为1表示IPv4，取值为2表示IPv6。
 
 **Type:** number
 
@@ -130,15 +134,15 @@ IP protocol version. The value can be **1** (IPv4) or **2** (IPv6).
 logType?: LogType
 ```
 
-Log type. Currently, only **NFLOG** is supported. This parameter applies only to PCs/2-in-1 devices.
+日志类型，当前仅支持配置NFLOG类型，该参数仅支持PC/2in1设备。
 
-This parameter is optional when you add a domain name filtering rule. If configured, it only takes effect when data packets are dropped or rejected.
+添加域名过滤规则时，此参数非必填。若填写，仅在丢弃或拒绝数据包时生效。
 
-When removing domain name filter rules, this parameter is optional if a chain is cleared. The clearing of the entire chain is not affected. When removing a single rule, the value of this parameter must be the same as that of the rule. Otherwise, the filter rule may have been removed, but logs are still recorded. When removing the same filter rule, you must remove the rule in the sequence in which the rule is added.
+移除域名过滤规则时，当清空某条链时非必填，不影响整条链的清空；当移除单条规则时，是否填写必须与该规则一致，否则可能导致过滤规则已经移除，但是日志还在记录的问题；相同过滤规则移除时必须按添加时的顺序移除。
 
-When obtaining domain name filter rules, the **logType** field can be obtained only when logs take effect.
+获取域名过滤规则时，仅日志生效的场景可以获取到logType字段。
 
-**Type:** LogType
+**Type:** [LogType](arkts-mdm-networkmanager-logtype-e.md)
 
 **Since:** 23
 

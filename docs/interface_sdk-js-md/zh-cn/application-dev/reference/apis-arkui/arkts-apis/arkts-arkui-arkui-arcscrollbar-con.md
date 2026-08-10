@@ -6,17 +6,18 @@
 export declare const ArcScrollBar: ArcScrollBarInterface
 ```
 
-弧形滚动条组件ArcScrollBar，适用于圆形屏幕等需要弧形滚动条的场景，用于配合可滚动组件使用，如[ArcList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[List]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Grid]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[Scroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[WaterFlow]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_。
-    **说明：**  
-    
-    - 未设置宽高时，ArcScrollBar采用父组件[LayoutConstraint]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_中的maxSize作为尺寸。若父组件存在可滚动组件，如  
-    [ArcList]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、[List]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、  
-    [Grid]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、[Scroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、  
-    [WaterFlow]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_，建议设置ArcScrollBar宽高，否则尺寸可能为无穷大。  
-    
-    - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
+弧形滚动条组件ArcScrollBar，适用于圆形屏幕等需要弧形滚动条的场景，用于配合可滚动组件使用，如[ArcList](arkts-arkui-arclist.md)、  
+[List](../../apis-arkui/arkts-components/arkts-arkui-list-i)、[Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i)、  
+[Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-i)、[WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-water_flow-i)。
+
+> **说明：**
+> 
+> - 未设置宽高时，ArcScrollBar采用父组件[LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md)中的maxSize作为尺寸。若父组件存在可滚动组件，如
+> [ArcList](arkts-arkui-arclist.md)、[List](../../apis-arkui/arkts-components/arkts-arkui-list-i)、
+> [Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i)、[Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-i)、
+> [WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-water_flow-i)，建议设置ArcScrollBar宽高，否则尺寸可能为无穷大。
+> 
+> - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
 
 ### 子组件
 

@@ -1,19 +1,18 @@
 # CommonOptions
 
-CommonOptions defines common options for the date time picker.
-    **Description:**  
-    
-    - For Date usage, refer to  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-    
-    - The text size of DatePickerComponent adapts between 14vp and 16vp. When the component width is too narrow,  
-    text may be truncated.  
-    
-    - When parameters are omitted or set to undefined, default values are used.  
-    
-    - In [DateOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, setting start, end, and selected only takes effect for the date part  
-    (year, month, day). In [TimeOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, setting start, end, and selected only takes effect for the  
-    time part (hour, minute, second).
+CommonOptions定义日期时间选择器的通用选项。
+
+> **说明：**
+> 
+> - Date的使用请参考
+> [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。
+> 
+> - DatePickerComponent的字体字号在14vp至16vp范围内自适应变化，当组件宽度过窄时，可能出现文本显示截断的情况。
+> 
+> - 参数缺省或者设置为undefined时，均保持默认值。
+> 
+> - 在[DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)中设置start、end、selected时仅日期部分（年月日）设置生效，
+> 在[TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。
 
 **Since:** 26.0.0
 
@@ -23,23 +22,28 @@ CommonOptions defines common options for the date time picker.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
+
 ## enableHapticFeedback
 
 ```TypeScript
 enableHapticFeedback?: boolean
 ```
 
-Enables or disables haptic feedback.
+启用或禁用触控反馈。
 
-Default value: true
+默认值：true
 
-- true: Enable haptic feedback.  
-- false: Disable haptic feedback.
+- true：开启触控反馈。  
+- false：不开启触控反馈。
 
-**Description**:
+**说明：**
 
-1. When set to true, its effectiveness depends on whether the system's hardware supports it.2. To enable haptic feedback, you need to configure the requestPermissions field in the project's  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to enable vibration permission, as follows:
+1. 设置为true后，其生效情况取决于系统的硬件是否支持。2. 开启触控反馈时，需要在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段以开启振动权限，配置如下：
 
 "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
@@ -63,11 +67,11 @@ Default value: true
 end?: Date
 ```
 
-End date or time of the picker.
+选择器的结束日期或时间。
 
-Default value: Date(2100, 12, 31, 23, 59, 59)
+默认值：Date(2100, 12, 31, 23, 59, 59)
 
-Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+取值范围：[Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
 
 **Type:** Date
 
@@ -87,12 +91,12 @@ Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
 loop?: boolean
 ```
 
-Sets whether to enable loop mode.
+设置是否启用循环模式。
 
-- true: Enable loop mode.  
-- false: Disable loop mode.
+- true：启用循环模式。  
+- false：不启用循环模式。
 
-Default value: true
+默认值：true
 
 **Type:** boolean
 
@@ -114,9 +118,9 @@ Default value: true
 onChange?: Callback<DatePickerComponentResult>
 ```
 
-Callback triggered after date or time is selected.
+选择日期或时间后触发该回调。
 
-**Type:** Callback&lt;DatePickerComponentResult&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DatePickerComponentResult&gt;
 
 **Since:** 26.0.0
 
@@ -134,9 +138,9 @@ Callback triggered after date or time is selected.
 onScrollStop?: Callback<DatePickerComponentResult>
 ```
 
-Callback triggered when a picker item is selected and scrolling stops.
+选择器项被选中且滚动停止时触发该回调。
 
-**Type:** Callback&lt;DatePickerComponentResult&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DatePickerComponentResult&gt;
 
 **Since:** 26.0.0
 
@@ -154,7 +158,7 @@ Callback triggered when a picker item is selected and scrolling stops.
 selected?: Date
 ```
 
-Selected date.Default value is the current system date or time.
+选中的日期。默认值为当前系统日期或时间。
 
 **Type:** Date
 
@@ -176,11 +180,11 @@ Selected date.Default value is the current system date or time.
 start?: Date
 ```
 
-Start date or time of the picker.
+选择器的起始日期或时间。
 
-Default value: Date(1970, 0, 1, 0, 0, 0)
+默认值：Date(1970, 0, 1, 0, 0, 0)
 
-Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+取值范围：[Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
 
 **Type:** Date
 

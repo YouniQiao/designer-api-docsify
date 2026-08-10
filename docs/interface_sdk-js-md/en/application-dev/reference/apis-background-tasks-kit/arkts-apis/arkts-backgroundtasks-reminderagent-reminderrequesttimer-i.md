@@ -1,6 +1,6 @@
 # ReminderRequestTimer
 
-Defines a reminder for a scheduled timer.
+倒计时实例对象，用于设置提醒的时间。
 
 **Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
 
@@ -16,13 +16,19 @@ Defines a reminder for a scheduled timer.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## triggerTimeInSeconds
 
 ```TypeScript
 triggerTimeInSeconds: number
 ```
 
-Number of seconds in the countdown timer.Unit: s.
+指明倒计时的秒数。
 
 **Type:** number
 

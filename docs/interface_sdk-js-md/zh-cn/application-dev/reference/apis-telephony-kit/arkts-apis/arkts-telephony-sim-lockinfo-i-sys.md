@@ -12,6 +12,12 @@ Defines the personalized lock information.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## lockType
 
 ```TypeScript
@@ -20,7 +26,7 @@ lockType: LockType
 
 Indicates the lock type.
 
-**类型：** LockType
+**类型：** [LockType](arkts-telephony-sim-locktype-e-sys.md)
 
 **起始版本：** 8
 
@@ -60,7 +66,7 @@ state: LockState
 
 Indicates the lock state.
 
-**类型：** LockState
+**类型：** [LockState](arkts-telephony-sim-lockstate-e-sys.md)
 
 **起始版本：** 8
 

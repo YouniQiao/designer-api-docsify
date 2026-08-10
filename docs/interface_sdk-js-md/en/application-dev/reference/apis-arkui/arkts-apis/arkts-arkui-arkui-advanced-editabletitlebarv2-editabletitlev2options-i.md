@@ -1,6 +1,6 @@
 # EditableTitleV2Options
 
-Indicates the options of the title.
+标题配置选项接口。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Indicates the options of the title.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## mainTitle
 
 ```TypeScript
 mainTitle?: ResourceStr
 ```
 
-Main title content.
+主标题内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Main title content.
 subTitle?: ResourceStr
 ```
 
-Subtitle content.
+副标题内容。需要在标题下方显示补充说明信息时传入此参数。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

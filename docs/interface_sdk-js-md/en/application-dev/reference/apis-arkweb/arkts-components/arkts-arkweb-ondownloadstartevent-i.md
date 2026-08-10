@@ -1,6 +1,6 @@
 # OnDownloadStartEvent
 
-Defines the triggered function when starting to download.
+定义通知主应用开始下载一个文件。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the triggered function when starting to download.
 contentDisposition: string
 ```
 
-The contentDisposition of page.
+服务器返回的 Content-Disposition响应头，服务器可能返回空。
 
 **Type:** string
 
@@ -36,7 +36,7 @@ The contentDisposition of page.
 contentLength: number
 ```
 
-The contentLength of page. Unit: bytes.
+服务器返回文件的长度。单位：字节。
 
 **Type:** number
 
@@ -56,7 +56,7 @@ The contentLength of page. Unit: bytes.
 mimetype: string
 ```
 
-The mimetype of page.
+服务器返回内容媒体类型（MIME）信息。
 
 **Type:** string
 
@@ -76,7 +76,7 @@ The mimetype of page.
 url: string
 ```
 
-The URL of page.
+文件下载的URL。
 
 **Type:** string
 
@@ -96,7 +96,7 @@ The URL of page.
 userAgent: string
 ```
 
-The userAgent of page.
+用于下载的用户代理。
 
 **Type:** string
 

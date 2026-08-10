@@ -10,6 +10,12 @@ Provides methods to operate or manage bluetooth socket connection.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

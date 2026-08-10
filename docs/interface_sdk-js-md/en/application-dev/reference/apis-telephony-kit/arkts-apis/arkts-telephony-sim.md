@@ -10,6 +10,12 @@ Provides applications with APIs for obtaining SIM card status, card file informa
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## Summary
 
 ### Functions
@@ -38,14 +44,14 @@ Provides applications with APIs for obtaining SIM card status, card file informa
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md#getsimaccountinfo) | Get account information of SIM card. |
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md#getsimaccountinfo-1) | Get account information of SIM card. |
 | [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel) | Obtains the SIM card label. |
-| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel-1) | Obtains the SIM card label. |
+| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel-1) | 获取SIM卡标签名称 |
 | [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md#getsimlabelsync) | Obtains the SIM card label synchronously. |
-| [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric) | Obtains the home PLMN number of the SIM card in a specified slot.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
-| [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric-1) | Obtains the home PLMN number of the SIM card in a specified slot.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
-| [getSimOperatorNumericSync](arkts-telephony-sim-getsimoperatornumericsync-f.md#getsimoperatornumericsync) | Obtains the home PLMN number of the SIM card in a specified slot.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
-| [getSimSpn](arkts-telephony-sim-getsimspn-f.md#getsimspn) | Obtains the service provider name (SPN) of the SIM card in a specified slot.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
-| [getSimSpn](arkts-telephony-sim-getsimspn-f.md#getsimspn-1) | Obtains the service provider name (SPN) of the SIM card in a specified slot.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
-| [getSimSpnSync](arkts-telephony-sim-getsimspnsync-f.md#getsimspnsync) | Obtains the service provider name (SPN) of the SIM card in a specified slot.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric) | Obtains the home PLMN number of the SIM card in a specified slot.  &lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric-1) | Obtains the home PLMN number of the SIM card in a specified slot.  &lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimOperatorNumericSync](arkts-telephony-sim-getsimoperatornumericsync-f.md#getsimoperatornumericsync) | Obtains the home PLMN number of the SIM card in a specified slot.  &lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimSpn](arkts-telephony-sim-getsimspn-f.md#getsimspn) | Obtains the service provider name (SPN) of the SIM card in a specified slot.  &lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimSpn](arkts-telephony-sim-getsimspn-f.md#getsimspn-1) | Obtains the service provider name (SPN) of the SIM card in a specified slot.  &lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimSpnSync](arkts-telephony-sim-getsimspnsync-f.md#getsimspnsync) | Obtains the service provider name (SPN) of the SIM card in a specified slot.  &lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
 | [getSimState](arkts-telephony-sim-getsimstate-f.md#getsimstate) | Obtains the state of the SIM card in a specified slot. |
 | [getSimState](arkts-telephony-sim-getsimstate-f.md#getsimstate-1) | Obtains the state of the SIM card in a specified slot. |
 | [getSimStateSync](arkts-telephony-sim-getsimstatesync-f.md#getsimstatesync) | Obtains the state of the SIM card in a specified slot. |
@@ -92,8 +98,8 @@ Provides applications with APIs for obtaining SIM card status, card file informa
 | [getSimAuthentication](arkts-telephony-sim-getsimauthentication-f-sys.md#getsimauthentication) | Performs SIM card authentication. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md#getsimgid1) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.The GID1 is recorded in the EFGID1 file of the SIM card. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md#getsimgid1-1) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.The GID1 is recorded in the EFGID1 file of the SIM card. |
-| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md#getsimiccid) | Obtains the ICCID of the SIM card in a specified slot.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
-| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md#getsimiccid-1) | Obtains the ICCID of the SIM card in a specified slot.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
+| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md#getsimiccid) | Obtains the ICCID of the SIM card in a specified slot.  &lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
+| [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md#getsimiccid-1) | Obtains the ICCID of the SIM card in a specified slot.  &lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
 | [getSimTelephoneNumber](arkts-telephony-sim-getsimtelephonenumber-f-sys.md#getsimtelephonenumber) | Obtains the MSISDN of the SIM card in a specified slot.The MSISDN is recorded in the EFMSISDN file of the SIM card. |
 | [getSimTelephoneNumber](arkts-telephony-sim-getsimtelephonenumber-f-sys.md#getsimtelephonenumber-1) | Obtains the MSISDN of the SIM card in a specified slot.The MSISDN is recorded in the EFMSISDN file of the SIM card. |
 | [getVoiceMailIdentifier](arkts-telephony-sim-getvoicemailidentifier-f-sys.md#getvoicemailidentifier) | Obtains the alpha identifier of the voice mailbox of the SIM card in a specified slot. |
@@ -115,7 +121,7 @@ Provides applications with APIs for obtaining SIM card status, card file informa
 | [setShowName](arkts-telephony-sim-setshowname-f-sys.md#setshowname-1) | Set the SIM card display name of the specified card slot. |
 | [setShowNumber](arkts-telephony-sim-setshownumber-f-sys.md#setshownumber) | Set the SIM card number in the specified slot. |
 | [setShowNumber](arkts-telephony-sim-setshownumber-f-sys.md#setshownumber-1) | Set the SIM card number in the specified slot. |
-| [setSimLabelIndex](arkts-telephony-sim-setsimlabelindex-f-sys.md#setsimlabelindex) | Set the SIM card labelIndex. |
+| [setSimLabelIndex](arkts-telephony-sim-setsimlabelindex-f-sys.md#setsimlabelindex) | 设置SIM卡标签索引。 |
 | [setVoiceMailInfo](arkts-telephony-sim-setvoicemailinfo-f-sys.md#setvoicemailinfo) | Sets the voice mail information. |
 | [setVoiceMailInfo](arkts-telephony-sim-setvoicemailinfo-f-sys.md#setvoicemailinfo-1) | Sets the voice mail information. |
 | [unlockPin](arkts-telephony-sim-unlockpin-f-sys.md#unlockpin) | Unlock the SIM card password of the specified card slot. |
@@ -137,7 +143,7 @@ Provides applications with APIs for obtaining SIM card status, card file informa
 | Name | Description |
 | --- | --- |
 | [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md) | Defines the ICC account information. |
-| [SimLabel](arkts-telephony-sim-simlabel-i.md) | Defines the SIM card label. |
+| [SimLabel](arkts-telephony-sim-simlabel-i.md) | 定义SIM卡标签信息。 |
 
 <!--Del-->
 ### Interfaces（系统接口）

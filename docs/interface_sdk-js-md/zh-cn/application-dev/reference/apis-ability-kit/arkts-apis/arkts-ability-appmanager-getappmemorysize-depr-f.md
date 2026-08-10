@@ -26,7 +26,7 @@ function getAppMemorySize(): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | 当前应用程序可以使用的最大内存（RAM）值，可根据此值进行错误处理或其他自定义处理，单位是M。使用Promise异步回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -64,9 +64,9 @@ function getAppMemorySize(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 是 | 获取当前应用程序可以使用的最大内存（RAM）值，可根据此值进行错误处理或其他自定义处理，单位是M。使用callback异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取当前应用程序可以使用的最大内存（RAM）值，可根据此值进行错误处理或其他自定义处理，单位是M。使用callback异步回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

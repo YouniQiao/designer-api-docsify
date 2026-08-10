@@ -1,6 +1,6 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method,you must use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a ssap client instance.
+管理SSAP客户端。在调用ssap客户端方法之前，必须使用{@link createClient}创建ssap客户端实例。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Manages SSAP client. Before calling a SSAP client method,you must use \_\_\_JSDO
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Closes the client.
+关闭客户端。
 
 **Since:** 26.0.0
 
@@ -34,9 +40,9 @@ Closes the client.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
 
 ## connect
 
@@ -44,7 +50,7 @@ Closes the client.
 connect(): Promise<void>
 ```
 
-Connects to the server.
+连接服务端。
 
 **Since:** 26.0.0
 
@@ -62,15 +68,15 @@ Connects to the server.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
 
 ## disconnect
 
@@ -78,7 +84,7 @@ Connects to the server.
 disconnect(): Promise<void>
 ```
 
-Disconnects from or stops an ongoing connection to a server.
+断开或停止与服务端的连接。
 
 **Since:** 26.0.0
 
@@ -96,15 +102,15 @@ Disconnects from or stops an ongoing connection to a server.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
 
 ## getServices
 
@@ -112,7 +118,7 @@ Disconnects from or stops an ongoing connection to a server.
 getServices(): Promise<Service[]>
 ```
 
-Starts discovering all services on server.
+开始发现服务端的所有服务。
 
 **Since:** 26.0.0
 
@@ -136,9 +142,9 @@ Starts discovering all services on server.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
 
 ## offConnectionStateChange
 
@@ -146,7 +152,7 @@ Starts discovering all services on server.
 offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 ```
 
-Unsubscribes from client connection state changed events.
+取消订阅客户端连接状态更改事件。
 
 **Since:** 26.0.0
 
@@ -162,7 +168,7 @@ Unsubscribes from client connection state changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ConnectionChangeState&gt; | No | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | No | 用于监听连接状态改变事件的回调。 |
 
 ## offMtuChange
 
@@ -176,7 +182,7 @@ ArkTS-Sta:
 offMtuChange(callback?: Callback<int>): void
 ```
 
-Unsubscribes from MTU changed events.
+取消订阅MTU更改事件。
 
 **Since:** 26.0.0
 
@@ -192,7 +198,7 @@ Unsubscribes from MTU changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
+| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 用于监听mtu变化事件的回调。 |
 
 ## offPropertyChange
 
@@ -200,7 +206,7 @@ Unsubscribes from MTU changed events.
 offPropertyChange(callback?: Callback<Property>): void
 ```
 
-Unsubscribe property value changed event.
+取消订阅属性值更改事件。
 
 **Since:** 26.0.0
 
@@ -216,7 +222,7 @@ Unsubscribe property value changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Property&gt; | No | Callback used to listen for the property value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Property&gt; | No | 用于监听属性值变更事件的回调。 |
 
 ## onConnectionStateChange
 
@@ -224,9 +230,9 @@ Unsubscribe property value changed event.
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to client connection state changed events.
+订阅客户端连接状态更改事件。
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK\_ACCESS permission.If the application is granted the ohos.permission.GET\_NEARLINK\_PEER\_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
 
 **Since:** 26.0.0
 
@@ -242,7 +248,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ConnectionChangeState&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | Yes | 用于监听连接状态改变事件的回调。 |
 
 ## onMtuChange
 
@@ -256,9 +262,9 @@ ArkTS-Sta:
 onMtuChange(callback: Callback<int>): void
 ```
 
-Subscribes to MTU changed events.
+订阅MTU变化事件。
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK\_ACCESS permission.
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
 
 **Since:** 26.0.0
 
@@ -274,7 +280,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
+| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 用于监听mtu变化事件的回调。 |
 
 ## onPropertyChange
 
@@ -282,9 +288,9 @@ This event is accessible only to applications that granted the ohos.permission.N
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-Subscribe property value changed event.
+订阅属性值变更事件。
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK\_ACCESS permission.
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
 
 **Since:** 26.0.0
 
@@ -300,7 +306,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Property&gt; | Yes | Callback used to listen for the property value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Property&gt; | Yes | 用于监听属性值更改事件的回调。 |
 
 ## readProperty
 
@@ -308,7 +314,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 readProperty(property: Property): Promise<Property>
 ```
 
-Reads the property of a server.
+读取服务端的属性。
 
 **Since:** 26.0.0
 
@@ -326,23 +332,23 @@ Reads the property of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the property to read. |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | 指示要读取的属性 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Property&gt; | Promise used to return the property value. |
+| Promise&lt;Property&gt; | 返回属性值Promise。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID in property. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in property. |
 
 ## requestMtuSize
 
@@ -356,7 +362,7 @@ ArkTS-Sta:
 requestMtuSize(mtu: int): Promise<void>
 ```
 
-Negotiate the MTU size with server.The negotiation result needs to be obtained by subscribing to MTU event.
+与服务端协商MTU大小。协商结果需要通过订阅MTU事件获取。
 
 **Since:** 26.0.0
 
@@ -374,21 +380,21 @@ Negotiate the MTU size with server.The negotiation result needs to be obtained b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mtu | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The maximum transmission unit. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: byte. Recommended value range: [22, 1024]. |
+| mtu | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 最大传输单元。 &lt;br&gt;单位为：字节。取值限定为整数。取值约束：建议范围[22,1024]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
 
 ## setPropertyNotification
 
@@ -396,7 +402,7 @@ Negotiate the MTU size with server.The negotiation result needs to be obtained b
 setPropertyNotification(property: Property, enable: boolean): Promise<void>
 ```
 
-Enables or disables notification of a property when value changed.
+启用或禁用属性值变更通知。
 
 **Since:** 26.0.0
 
@@ -414,24 +420,24 @@ Enables or disables notification of a property when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the property to set notification strategy. |
-| enable | boolean | Yes | Specifies whether to enable notification of the property. |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | 要通知的属性 |
+| enable | boolean | Yes | 指定是否启用属性的通知 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID in property. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in property. |
 
 ## writeProperty
 
@@ -439,7 +445,7 @@ Enables or disables notification of a property when value changed.
 writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 ```
 
-Writes the property of a server.
+写入服务端的属性。
 
 **Since:** 26.0.0
 
@@ -457,22 +463,22 @@ Writes the property of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the property to write. |
-| writeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the write type. |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | 指示要写入的属性 |
+| writeType | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | Yes | 写类型 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise用于返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID in property. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in property. |
 

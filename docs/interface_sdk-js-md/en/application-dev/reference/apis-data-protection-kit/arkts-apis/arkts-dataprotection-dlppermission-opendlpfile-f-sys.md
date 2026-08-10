@@ -1,17 +1,22 @@
 # openDLPFile (System API)
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## openDLPFile
 
 ```TypeScript
 function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>
 ```
 
-Opens a DLP file. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. This API uses a promise to return the result.
+DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。
 
-After calling **openDLPFile()** to return a **DLPFile** object, the system must call  
-[closeDLPFile]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to release resources after using the object.
+调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile)释放资源。
 
-When a DLP management application or an authorized application needs to access a DLP file, it must first open the file to obtain the managed object.
+DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先打开文件获取管理对象。
 
 **Since:** 11
 
@@ -29,42 +34,40 @@ When a DLP management application or an authorized application needs to access a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_31\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_31\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1, the excess part will be truncated. |
-| appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range, error code 401 is thrown. |
+| ciphertextFd | number | Yes | 加密文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时， fd的值被截断。 |
+| appId | string | Yes | 调用方身份。最小8字节，最大1024字节。超出范围时抛出错误码401。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DLPFile&gt; | Promise If the value is **resolve**, a **DLPFile** object is returned, indicating that a DLP file is successfully opened. If the value is **reject**, an error is returned, indicating that the DLP file fails to be opened. |
+| Promise&lt;DLPFile&gt; | Promise对象。resolve时返回DLPFile对象表示成功打开DLP文件，reject时抛出错误表示失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
-| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
-| [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
-| [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
+| 19100003 | Credential task time out. |
+| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
+| 19100001 | Invalid parameter value. |
+| 19100005 | Credential authentication server error. |
+| 19100004 | Credential service error. |
+| 19100011 | The system ability works abnormally. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 19100009 | Failed to operate the DLP file. |
+| 19100008 | The file is not a DLP file. |
+| 19100019 | The DLP file has expired. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 19100018 | The application is not authorized. |
+| 19100020 | No network connection. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -75,25 +78,19 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId; // The app ID is obtained from the application package.
 
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-    dlpFile?.closeDLPFile(); // Close the DLP object.
-  } finally {
-    if (file) {
-      fileIo.closeSync(file);
-    }
+  file = fileIo.openSync(uri).fd; // The FD is obtained by opening a file.
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
+
+  if (file) {
+    fileIo.closeSync(file);
   }
 }
+
+ExampleFunction();
 ```
 
 
@@ -103,7 +100,7 @@ async function ExampleFunction() {
 function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void
 ```
 
-Opens a DLP file. This API uses an asynchronous callback to return the result. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. After using the **DLPFile** object, call **closeDLPFile** to close the object to prevent resource leakage.
+DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资源泄露。
 
 **Since:** 11
 
@@ -121,37 +118,35 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_31\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_31\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1, the excess part will be truncated. |
-| appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DLPFile&gt; | Yes | Callback used to receive the result of opening a DLP file. The callback parameters include **err** and **res**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. **res** is a **DLPFile** object that represents the DLP file opened. |
+| ciphertextFd | number | Yes | 加密文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时， fd的值被截断。 |
+| appId | string | Yes | 调用方身份。最小8字节，最大1024字节。超出范围时抛出错误码401。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DLPFile&gt; | Yes | 回调函数。用于接收打开DLP文件的结果。回调参数包括：err（错误对象，成功时为undefined）和res（DLPFile对象，表示打 开的DLP文件）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
-| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
-| [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
-| [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
+| 19100003 | Credential task time out. |
+| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
+| 19100001 | Invalid parameter value. |
+| 19100005 | Credential authentication server error. |
+| 19100004 | Credential service error. |
+| 19100011 | The system ability works abnormally. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 19100009 | Failed to operate the DLP file. |
+| 19100008 | The file is not a DLP file. |
+| 19100019 | The DLP file has expired. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 19100018 | The application is not authorized. |
+| 19100020 | No network connection. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
 let file: number | undefined = undefined;
@@ -160,30 +155,20 @@ let appId = '';
 let bundleName = 'com.ohos.note';
 let userId = 100;
 
-try{
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-} catch (err) {
-  console.error('error', err.code, err.message);
-}
+let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+appId = data.signatureInfo.appId; // The app ID is obtained from the application package.
 
-try {
-  file = fileIo.openSync(uri).fd;
-  dlpPermission.openDLPFile(file, appId, (err, res) => { // Open a DLP file.
-    if (err !== undefined) {
-      console.error('openDLPFile error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  });
-} catch (err) {
-  console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
+file = fileIo.openSync(uri).fd; // The FD is obtained by opening a file.
+dlpPermission.openDLPFile(file, appId, async (err, res) => { // Open a DLP file.
+  if (err) {
+    console.error('openDLPFile error,', err.code, err.message);
+  } else {
+    console.info('res', JSON.stringify(res));
+  }
+  await res?.closeDLPFile(); // Close the DLP object.
   if (file) {
     fileIo.closeSync(file);
   }
-}
+});
 ```
 

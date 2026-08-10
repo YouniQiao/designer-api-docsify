@@ -1,6 +1,6 @@
 # ContactSelectionOptions
 
-Defines the Contact selection options, which specifies whether one contact or multiple contacts can be selected.
+选择联系人条件。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Defines the Contact selection options, which specifies whether one contact or mu
 
 **System capability:** SystemCapability.Applications.Contacts
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## filter
 
 ```TypeScript
 filter?: ContactSelectionFilter
 ```
 
-Contact selection filter.This API can be used in atomic services since API version 15.
+联系人查询过滤器。从API version 15 开始，该接口支持在原子化服务中使用。
 
-**Type:** ContactSelectionFilter
+**Type:** [ContactSelectionFilter](arkts-contacts-contact-contactselectionfilter-i.md)
 
 **Since:** 15
 
@@ -36,9 +42,7 @@ Contact selection filter.This API can be used in atomic services since API versi
 isAutoDismissOnNavigation?: boolean
 ```
 
-Indicates whether the contact picker is automatically closed when page routing is performed,for example, when the application is in the background.
-
-The default value is false
+联系人picker发生页面路由时是否自动关闭，比如应用退后台场景 默认值为false
 
 **Type:** boolean
 
@@ -60,7 +64,7 @@ The default value is false
 isDisplayedByName?: boolean
 ```
 
-Whether to display contacts by name. The value **true** indicates that contacts are displayed by name, and the value **false** indicates that contacts are displayed by number. The default value is **false**.This API can be used in atomic services since API version 15.
+是否按联系人姓名维度展示，true:按联系人姓名维度展示，false:按联系人号码维度展示，默认值为false。从API version 15 开始，该接口支持在原子化服务中使用。
 
 **Type:** boolean
 
@@ -80,7 +84,7 @@ Whether to display contacts by name. The value **true** indicates that contacts 
 isMultiSelect?: boolean
 ```
 
-Whether multiple contacts can be selected. The value **true** indicates that multiple contacts can be selected,and the value **false** indicates that only one contact can be selected. The default value is **false**.
+是否为多选，true:多选，false:单选。默认值为false。
 
 **Type:** boolean
 
@@ -100,7 +104,7 @@ Whether multiple contacts can be selected. The value **true** indicates that mul
 maxSelectable?: number
 ```
 
-Maximum number of contacts. The default value is **10000**. If the value exceeds the maximum number, the default value is used.This API can be used in atomic services since API version 15.
+联系人数量上限。默认值为10000，超出上限则以默认值筛选。从API version 15 开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 

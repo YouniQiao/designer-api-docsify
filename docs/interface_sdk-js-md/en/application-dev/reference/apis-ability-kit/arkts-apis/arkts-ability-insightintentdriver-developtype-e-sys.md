@@ -1,6 +1,6 @@
 # DevelopType (System API)
 
-Enumerates the modes that define how an intent is developed.
+用于描述意图的开发方式。
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Enumerates the modes that define how an intent is developed.
 CONFIGURATION = 'configuration'
 ```
 
-The intent is developed using a configuration file.
+使用配置文件开发的意图。
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ The intent is developed using a configuration file.
 DECORATOR = 'decorator'
 ```
 
-The intent is developed using a decorator.
+使用装饰器开发的意图。
 
 **Since:** 23
 

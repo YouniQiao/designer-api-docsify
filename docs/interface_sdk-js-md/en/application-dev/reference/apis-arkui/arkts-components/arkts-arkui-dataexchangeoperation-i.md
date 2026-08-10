@@ -1,6 +1,6 @@
 # DataExchangeOperation
 
-Represents an operation for exchanging data.
+交换数据操作。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents an operation for exchanging data.
 index: ExchangeIndex
 ```
 
-Positions for the exchange. The value range is [0, data source length - 1].
+交换位置。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
 
-**Type:** ExchangeIndex
+**Type:** [ExchangeIndex](arkts-arkui-exchangeindex-i.md)
 
 **Since:** 12
 
@@ -38,9 +38,9 @@ Positions for the exchange. The value range is [0, data source length - 1].
 key?: ExchangeKey
 ```
 
-New keys to assign to the exchanged data. The original keys are used by default.
+分配新的键值，默认使用原键值。
 
-**Type:** ExchangeKey
+**Type:** [ExchangeKey](arkts-arkui-exchangekey-i.md)
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ New keys to assign to the exchanged data. The original keys are used by default.
 type: DataOperationType.EXCHANGE
 ```
 
-Type of data exchange.
+数据交换类型。
 
 **Type:** DataOperationType.EXCHANGE
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## attributes
 
 ```TypeScript
@@ -18,7 +24,7 @@ attributes: Attribute[]
 
 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。
 
-**类型：** Attribute[]
+**类型：** [Attribute](arkts-contacts-contact-attribute-e.md)[]
 
 **起始版本：** 7
 

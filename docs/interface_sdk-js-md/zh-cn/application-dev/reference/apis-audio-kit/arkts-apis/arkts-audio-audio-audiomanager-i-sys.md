@@ -2,7 +2,7 @@
 
 音频音量和设备管理。
 
-在使用AudioManager的接口之前，需先通过[getAudioManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取AudioManager实例。
+在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager)获取AudioManager实例。
 
 **起始版本：** 7
 
@@ -11,6 +11,12 @@
 <!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## disableSafeMediaVolume
 
@@ -42,10 +48,10 @@ user disable the safe media volume state.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -79,13 +85,13 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 协同播放管理实例 |
+| [AudioCollaborativeManager](arkts-audio-audio-audiocollaborativemanager-i-sys.md) | 协同播放管理实例 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| 202 | Not system App. |
 
 ## getEffectManager
 
@@ -93,7 +99,7 @@ getCollaborativeManager(): AudioCollaborativeManager
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
+Obtains an {@link AudioEffectManager} instance.
 
 **起始版本：** 18
 
@@ -109,15 +115,15 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | AudioEffectManager instance. |
+| [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) | AudioEffectManager instance. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -160,11 +166,11 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -201,13 +207,13 @@ getRecordingManager(): AudioRecordingManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回音频记录管理器的实例。 |
+| [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i-sys.md) | 返回音频记录管理器的实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
 ## on('volumeChange')
 
@@ -236,9 +242,9 @@ Listens for system volume change events. This method uses a callback to get volu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | 是 | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | 是 | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | 是 | Callback used to get the system volume change event. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
@@ -275,9 +281,9 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | Type of the event to listen for. Only the ringerModeChange event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRingMode&gt; | 是 | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRingMode&gt; | 是 | Callback used to get the updated ringer mode. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
@@ -307,10 +313,10 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scene | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio scene mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | 是 | Audio scene mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -346,7 +352,7 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scene | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio scene mode. |
+| scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | 是 | Audio scene mode. |
 
 **返回值：**
 
@@ -354,7 +360,7 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -391,7 +397,7 @@ Sets extra audio parameters. This method uses a promise to return the result.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mainKey | string | 是 | Main key of the audio parameters to set. |
-| kvpairs | Record&lt;string, string&gt; | 是 | Key-value pairs with subkeys and values to set. |
+| kvpairs | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | 是 | Key-value pairs with subkeys and values to set. |
 
 **返回值：**
 
@@ -403,12 +409,12 @@ Sets extra audio parameters. This method uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

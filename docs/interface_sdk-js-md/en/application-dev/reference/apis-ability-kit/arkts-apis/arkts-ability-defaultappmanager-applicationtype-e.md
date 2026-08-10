@@ -1,6 +1,6 @@
 # ApplicationType
 
-Enumerates the default application types.
+默认应用的应用类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the default application types.
 BROWSER = "Web Browser"
 ```
 
-Default browser.
+默认浏览器。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Default browser.
 IMAGE = "Image Gallery"
 ```
 
-Default image viewer.
+默认图片查看器。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Default image viewer.
 AUDIO = "Audio Player"
 ```
 
-Default audio player.
+默认音频播放器。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Default audio player.
 VIDEO = "Video Player"
 ```
 
-Default video player.
+默认视频播放器。
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Default video player.
 PDF = "PDF Viewer"
 ```
 
-Default PDF reader.
+默认PDF文档查看器。
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ Default PDF reader.
 WORD = "Word Viewer"
 ```
 
-Default Word viewer.
+默认WORD文档查看器。
 
 **Since:** 9
 
@@ -112,7 +112,7 @@ Default Word viewer.
 EXCEL = "Excel Viewer"
 ```
 
-Default Excel viewer.
+默认EXCEL文档查看器。
 
 **Since:** 9
 
@@ -128,7 +128,7 @@ Default Excel viewer.
 PPT = "PPT Viewer"
 ```
 
-Default PowerPoint viewer.
+默认PPT文档查看器。
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ Default PowerPoint viewer.
 EMAIL = 'Email'
 ```
 
-Default email.
+默认邮件。
 
 **Since:** 12
 

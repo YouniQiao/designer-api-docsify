@@ -10,6 +10,12 @@ Define offline resource's content and info.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## resource
 
 ```TypeScript
@@ -54,7 +60,7 @@ type: OfflineResourceType
 
 Resource type
 
-**Type:** OfflineResourceType
+**Type:** [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md)
 
 **Since:** 23
 

@@ -10,6 +10,12 @@ Represents request options.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## sourceMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ sourceMode?: SourceMode
 
 Type of the asset file requested, which can be the original file or edited file.
 
-**Type:** SourceMode
+**Type:** [SourceMode](arkts-medialibrary-photoaccesshelper-sourcemode-e-sys.md)
 
 **Since:** 11
 

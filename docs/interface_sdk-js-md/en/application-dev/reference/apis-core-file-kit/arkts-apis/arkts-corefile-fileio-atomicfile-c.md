@@ -1,6 +1,6 @@
 # AtomicFile
 
-AtomicFile is a class used to perform atomic read and write operations on files.A temporary file is written and renamed to the original file location, which ensures file integrity.If the write operation fails, the temporary file is deleted without modifying the original file content.You can call finishWrite() or failWrite() to write or roll back file content.
+AtomicFile是一个用于对文件进行原子读写等操作的类。在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容。使用者可以自行调用finishWrite或failWrite来完成文件内容的写入或回滚。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ AtomicFile is a class used to perform atomic read and write operations on files.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(path: string)
 ```
 
-The AtomicFile constructor.
+对于给定路径的文件创建一个AtomicFile类。
 
 **Since:** 23
 
@@ -30,13 +36,13 @@ The AtomicFile constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
+| path | string | Yes | 文件的沙箱路径。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -44,7 +50,7 @@ The AtomicFile constructor.
 delete(): void
 ```
 
-Deletes the AtomicFile class, including the original files and temporary files.
+删除AtomicFile类，会删除原始文件和临时文件。
 
 **Since:** 23
 
@@ -61,8 +67,8 @@ Deletes the AtomicFile class, including the original files and temporary files.
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900027 | Read-only file system |
 | 13900042 | Internal error |
+| 13900027 | Read-only file system |
 
 ## failWrite
 
@@ -70,7 +76,7 @@ Deletes the AtomicFile class, including the original files and temporary files.
 failWrite(): void
 ```
 
-Rolls back the file after the file fails to be written.
+文件写入失败后调用，将执行文件回滚操作。
 
 **Since:** 23
 
@@ -92,7 +98,7 @@ Rolls back the file after the file fails to be written.
 finishWrite(): void
 ```
 
-Finishes writing file data when the write operation is complete.
+在完成对startWrite返回流的写入操作时调用，表示文件写入成功。
 
 **Since:** 23
 
@@ -114,7 +120,7 @@ Finishes writing file data when the write operation is complete.
 getBaseFile(): File
 ```
 
-Obtains the file object through the AtomicFile object. The FD needs to be closed by calling close().
+通过AtomicFile对象获取文件对象。
 
 **Since:** 23
 
@@ -128,14 +134,14 @@ Obtains the file object through the AtomicFile object. The FD needs to be closed
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | File object opened. |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | File object opened. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
 | 13900005 | IO error |
+| 13900002 | No such file or directory |
 | 13900012 | Permission denied |
 | 13900042 | Internal error |
 
@@ -145,7 +151,7 @@ Obtains the file object through the AtomicFile object. The FD needs to be closed
 openRead(): ReadStream
 ```
 
-Creates a ReadStream instance.
+创建一个读文件流。
 
 **Since:** 23
 
@@ -159,7 +165,7 @@ Creates a ReadStream instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ReadStream instance obtained. |
+| [ReadStream](arkts-corefile-fileio-readstream-c.md) | ReadStream instance obtained. |
 
 **Error codes:**
 
@@ -176,7 +182,7 @@ Creates a ReadStream instance.
 readFully(): ArrayBuffer
 ```
 
-Reads all content of a file.
+读取文件全部内容。
 
 **Since:** 23
 
@@ -205,7 +211,7 @@ Reads all content of a file.
 startWrite(): WriteStream
 ```
 
-Starts to write new file data in the WriteStream object returned. If the file does not exist, create a file.Call finishWrite() if the write operation is successful; call failWrite() if the write operation fails.
+对文件开始新的写入操作。将返回一个WriteStream，用于在其中写入新的文件数据。当文件不存在时新建文件。在写入文件完成后，写入成功需要调用finishWrite()，写入失败需要调用failWrite()。
 
 **Since:** 23
 
@@ -219,7 +225,7 @@ Starts to write new file data in the WriteStream object returned. If the file do
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the file write stream. |
+| [WriteStream](arkts-corefile-fileio-writestream-c.md) | Returns the file write stream. |
 
 **Error codes:**
 
@@ -228,6 +234,6 @@ Starts to write new file data in the WriteStream object returned. If the file do
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900027 | Read-only file system |
 | 13900042 | Internal error |
+| 13900027 | Read-only file system |
 

@@ -16,6 +16,12 @@ Manager handsfree AG profile.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## connect
 
 ```TypeScript
@@ -50,7 +56,7 @@ Connect to device with hfp.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hfpAg : bluetooth.HandsFreeAudioGatewayProfile= bluetooth.getProfile(bluetooth.ProfileId
@@ -92,7 +98,7 @@ Disconnect to device with hfp.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hfpAg : bluetooth.HandsFreeAudioGatewayProfile = bluetooth.getProfile(bluetooth.ProfileId
@@ -125,7 +131,7 @@ Unsubscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
 
 ## on('connectionStateChange')
 
@@ -152,5 +158,5 @@ Subscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
 

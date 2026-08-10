@@ -1,6 +1,6 @@
 # Result (System API)
 
-Represents the data sharing result.
+端云共享结果的返回值。
 
 **Since:** 11
 
@@ -12,15 +12,21 @@ Represents the data sharing result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
 code: int
 ```
 
-Error code.
+错误码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -38,7 +44,7 @@ Error code.
 description?: string
 ```
 
-Detailed description of the error code. The default value is undefined.
+错误码详细描述，默认为undefined。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Detailed description of the error code. The default value is undefined.
 value?: T
 ```
 
-Value returned. The specific type is specified by the T parameter. The default value is undefined.
+返回结果的值，具体类型由参数T指定，默认为undefined。
 
 **Type:** T
 

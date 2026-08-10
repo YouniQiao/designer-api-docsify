@@ -10,6 +10,12 @@ GWP-ASan����������������Ƿ�ʹ�ܡ���
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## alwaysEnabled
 
 ```TypeScript
@@ -56,7 +62,7 @@ maxSimutaneousAllocations?: int
 
 ������Ĳ������Ĭ��ֵΪ1000����Ҫ�������0����������������С��������ȡ����������þ�ʱ���·�����ڴ潫�����ܼ�ء��ͷ���ʹ�õ��ڴ����ռ�õĲ�۽��Զ����á�����ֵ��<=20000���������ܵ���VMA���ޱ�����
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -74,7 +80,7 @@ sampleRate?: int
 
 GWP-ASan����Ƶ�ʣ�Ĭ��ֵΪ2500����Ҫ�������0����������������С��������ȡ����1/sampleRate�ĸ��ʶԷ�����ڴ���в���������ֵ��>=1000����С������Ӱ�����ܡ�
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 

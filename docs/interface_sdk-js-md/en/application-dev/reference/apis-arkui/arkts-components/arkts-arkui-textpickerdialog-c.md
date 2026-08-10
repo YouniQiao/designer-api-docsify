@@ -1,6 +1,6 @@
 # TextPickerDialog
 
-A text picker dialog box is a dialog box that allows users to select text from the given range.
+Defines TextPickerDialog which uses show method to show TextPicker dialog.
 
 **Since:** 8
 
@@ -16,7 +16,12 @@ A text picker dialog box is a dialog box that allows users to select text from t
 static show(options?: TextPickerDialogOptions)
 ```
 
-Shows a text picker in the given settings.
+定义文本滑动选择器弹窗并弹出。
+
+> **说明：**
+> 
+> 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md)中的
+> [showTextPickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#showtextpickerdialog)来明确UI的执行上下文。
 
 **Since:** 8
 
@@ -36,5 +41,5 @@ Shows a text picker in the given settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the text picker dialog box. |
+| options | [TextPickerDialogOptions](../arkts-apis/arkts-arkui-textpicker-textpickerdialogoptions-i.md) | No | 配置文本选择器弹窗的参数，缺省时无法弹出弹窗。至少需要提供range参数才能正常弹出弹窗， 其他参数均为可选配置。 |
 

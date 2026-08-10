@@ -40,7 +40,7 @@ oldPreviewText: PreviewText
 
 变化前的预上屏信息。
 
-**类型：** PreviewText
+**类型：** [PreviewText](arkts-arkui-previewtext-i.md)
 
 **起始版本：** 15
 
@@ -62,7 +62,7 @@ rangeAfter: TextRange
 
 变化后的选区范围。
 
-**类型：** TextRange
+**类型：** [TextRange](arkts-arkui-textrange-i.md)
 
 **起始版本：** 15
 
@@ -84,7 +84,7 @@ rangeBefore: TextRange
 
 变化前的选区范围。
 
-**类型：** TextRange
+**类型：** [TextRange](arkts-arkui-textrange-i.md)
 
 **起始版本：** 15
 

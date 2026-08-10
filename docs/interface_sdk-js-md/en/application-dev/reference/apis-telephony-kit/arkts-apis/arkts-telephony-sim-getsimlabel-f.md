@@ -1,5 +1,11 @@
 # getSimLabel
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getSimLabel
 
 ```TypeScript
@@ -20,19 +26,19 @@ Obtains the SIM card label.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | SIM card slot ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SimLabel&gt; | Yes | Callback used to return the SIM card label. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimLabel&gt; | Yes | Callback used to return the SIM card label. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 8300999 | Unknown error code. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -50,7 +56,7 @@ sim.getSimLabel(0, (err: BusinessError, data: sim.SimLabel) => {
 function getSimLabel(slotId: int): Promise<SimLabel>
 ```
 
-Obtains the SIM card label.
+获取SIM卡标签名称
 
 **Since:** 20
 
@@ -64,24 +70,24 @@ Obtains the SIM card label.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | SIM card slot ID. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 卡槽索引号 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SimLabel&gt; | Promise used to return the SIM card label. |
+| Promise&lt;SimLabel&gt; | 返回SIM卡标签： |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 8300999 | Unknown error code. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

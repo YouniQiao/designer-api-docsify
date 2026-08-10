@@ -4,7 +4,7 @@
 export type AbilityResult = _AbilityResult
 ```
 
-Defines the level-2 module AbilityResult.
+AbilityResult二级模块。
 
 **Since:** 9
 

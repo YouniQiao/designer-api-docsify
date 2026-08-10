@@ -1,6 +1,6 @@
 # KeyCode
 
-The **keyCode** module provides key codes of key devices, including keyboards, CDs, and gamepads.
+按键设备的键值，按键设备包括键盘、光盘、游戏手柄等。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ The **keyCode** module provides key codes of key devices, including keyboards, C
 KEYCODE_FN = 0
 ```
 
-Function (Fn) key
+功能（Fn）键。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Function (Fn) key
 KEYCODE_UNKNOWN = -1
 ```
 
-Unknown key
+未知按键。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Unknown key
 KEYCODE_HOME = 1
 ```
 
-Function (Home) key
+功能（Home）键。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Function (Home) key
 KEYCODE_BACK = 2
 ```
 
-Back key
+返回键。
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Back key
 KEYCODE_SEARCH = 9
 ```
 
-Search key
+搜索键。
 
 **Since:** 13
 
@@ -96,11 +96,11 @@ Search key
 KEYCODE_MEDIA_PLAY_PAUSE = 10
 ```
 
-Play/Pause key
+多媒体键：播放/暂停。
 
-Difference between this key and **KEYCODE\_PLAYPAUSE**:
+与KEYCODE_PLAYPAUSE的区别为：
 
-**KEYCODE\_PLAYPAUSE** is an earlier definition, while **KEYCODE\_MEDIA\_PLAY\_PAUSE** is designed for modern media key devices.
+KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
 
 **Since:** 9
 
@@ -118,7 +118,7 @@ Difference between this key and **KEYCODE\_PLAYPAUSE**:
 KEYCODE_MEDIA_STOP = 11
 ```
 
-Media: Stop Key
+光盘停止键。
 
 **Since:** 9
 
@@ -136,7 +136,7 @@ Media: Stop Key
 KEYCODE_MEDIA_NEXT = 12
 ```
 
-Next key
+多媒体键：下一首。
 
 **Since:** 9
 
@@ -154,7 +154,7 @@ Next key
 KEYCODE_MEDIA_PREVIOUS = 13
 ```
 
-Previous key
+多媒体键：上一首。
 
 **Since:** 9
 
@@ -172,7 +172,7 @@ Previous key
 KEYCODE_MEDIA_REWIND = 14
 ```
 
-Rewind key
+多媒体键：快退。
 
 **Since:** 9
 
@@ -190,7 +190,7 @@ Rewind key
 KEYCODE_MEDIA_FAST_FORWARD = 15
 ```
 
-Fast forward key
+多媒体键：快进。
 
 **Since:** 9
 
@@ -208,7 +208,7 @@ Fast forward key
 KEYCODE_VOLUME_UP = 16
 ```
 
-Volume Up key
+音量增加键。
 
 **Since:** 9
 
@@ -224,7 +224,7 @@ Volume Up key
 KEYCODE_VOLUME_DOWN = 17
 ```
 
-Volume Down key
+音量减小键。
 
 **Since:** 9
 
@@ -240,7 +240,7 @@ Volume Down key
 KEYCODE_POWER = 18
 ```
 
-Power key
+电源键。
 
 **Since:** 9
 
@@ -256,7 +256,7 @@ Power key
 KEYCODE_CAMERA = 19
 ```
 
-Camera key
+拍照键。
 
 **Since:** 9
 
@@ -272,7 +272,7 @@ Camera key
 KEYCODE_VOLUME_MUTE = 22
 ```
 
-Speaker Mute key
+扬声器静音键。
 
 **Since:** 9
 
@@ -288,7 +288,7 @@ Speaker Mute key
 KEYCODE_MUTE = 23
 ```
 
-Mute key
+话筒静音键。
 
 **Since:** 9
 
@@ -304,7 +304,7 @@ Mute key
 KEYCODE_BRIGHTNESS_UP = 40
 ```
 
-Brightness Up key
+亮度调节按键：调亮。
 
 **Since:** 9
 
@@ -320,7 +320,7 @@ Brightness Up key
 KEYCODE_BRIGHTNESS_DOWN = 41
 ```
 
-Brightness Down key
+亮度调节按键：调暗。
 
 **Since:** 9
 
@@ -336,7 +336,7 @@ Brightness Down key
 KEYCODE_0 = 2000
 ```
 
-Key 0
+按键'0'。
 
 **Since:** 9
 
@@ -352,7 +352,7 @@ Key 0
 KEYCODE_1 = 2001
 ```
 
-Key 1
+按键'1'。
 
 **Since:** 9
 
@@ -368,7 +368,7 @@ Key 1
 KEYCODE_2 = 2002
 ```
 
-Key 2
+按键'2'。
 
 **Since:** 9
 
@@ -384,7 +384,7 @@ Key 2
 KEYCODE_3 = 2003
 ```
 
-Key 3
+按键'3'。
 
 **Since:** 9
 
@@ -400,7 +400,7 @@ Key 3
 KEYCODE_4 = 2004
 ```
 
-Key 4
+按键'4'。
 
 **Since:** 9
 
@@ -416,7 +416,7 @@ Key 4
 KEYCODE_5 = 2005
 ```
 
-Key 5
+按键'5'。
 
 **Since:** 9
 
@@ -432,7 +432,7 @@ Key 5
 KEYCODE_6 = 2006
 ```
 
-Key 6
+按键'6'。
 
 **Since:** 9
 
@@ -448,7 +448,7 @@ Key 6
 KEYCODE_7 = 2007
 ```
 
-Key 7
+按键'7'。
 
 **Since:** 9
 
@@ -464,7 +464,7 @@ Key 7
 KEYCODE_8 = 2008
 ```
 
-Key 8
+按键'8'。
 
 **Since:** 9
 
@@ -480,7 +480,7 @@ Key 8
 KEYCODE_9 = 2009
 ```
 
-Key 9
+按键'9'。
 
 **Since:** 9
 
@@ -496,7 +496,7 @@ Key 9
 KEYCODE_STAR = 2010
 ```
 
-Key /
+按键'*'。
 
 **Since:** 9
 
@@ -512,7 +512,7 @@ Key /
 KEYCODE_POUND = 2011
 ```
 
-Key /
+按键'*'。
 
 **Since:** 9
 
@@ -528,7 +528,7 @@ Key /
 KEYCODE_DPAD_UP = 2012
 ```
 
-Up key on D-pad
+导航键：向上。
 
 **Since:** 9
 
@@ -544,7 +544,7 @@ Up key on D-pad
 KEYCODE_DPAD_DOWN = 2013
 ```
 
-Down key on D-pad
+导航键：向下。
 
 **Since:** 9
 
@@ -560,7 +560,7 @@ Down key on D-pad
 KEYCODE_DPAD_LEFT = 2014
 ```
 
-Left key on D-pad
+导航键：向左。
 
 **Since:** 9
 
@@ -576,7 +576,7 @@ Left key on D-pad
 KEYCODE_DPAD_RIGHT = 2015
 ```
 
-Right key on D-pad
+导航键：向右。
 
 **Since:** 9
 
@@ -592,7 +592,7 @@ Right key on D-pad
 KEYCODE_DPAD_CENTER = 2016
 ```
 
-Center key on D-pad
+导航键：确定键。
 
 **Since:** 9
 
@@ -608,7 +608,7 @@ Center key on D-pad
 KEYCODE_A = 2017
 ```
 
-Key A
+按键'A'。
 
 **Since:** 9
 
@@ -624,7 +624,7 @@ Key A
 KEYCODE_B = 2018
 ```
 
-Key B
+按键'B'。
 
 **Since:** 9
 
@@ -640,7 +640,7 @@ Key B
 KEYCODE_C = 2019
 ```
 
-Key C
+按键'C'。
 
 **Since:** 9
 
@@ -656,7 +656,7 @@ Key C
 KEYCODE_D = 2020
 ```
 
-Key D
+按键'D'。
 
 **Since:** 9
 
@@ -672,7 +672,7 @@ Key D
 KEYCODE_E = 2021
 ```
 
-Key E
+按键'E'。
 
 **Since:** 9
 
@@ -688,7 +688,7 @@ Key E
 KEYCODE_F = 2022
 ```
 
-Key F
+按键'F'。
 
 **Since:** 9
 
@@ -704,7 +704,7 @@ Key F
 KEYCODE_G = 2023
 ```
 
-Key G
+按键'G'。
 
 **Since:** 9
 
@@ -720,7 +720,7 @@ Key G
 KEYCODE_H = 2024
 ```
 
-Key H
+按键'H'。
 
 **Since:** 9
 
@@ -736,7 +736,7 @@ Key H
 KEYCODE_I = 2025
 ```
 
-Key I
+按键'I'。
 
 **Since:** 9
 
@@ -752,7 +752,7 @@ Key I
 KEYCODE_J = 2026
 ```
 
-Key J
+按键'J'。
 
 **Since:** 9
 
@@ -768,7 +768,7 @@ Key J
 KEYCODE_K = 2027
 ```
 
-Key K
+按键'K'。
 
 **Since:** 9
 
@@ -784,7 +784,7 @@ Key K
 KEYCODE_L = 2028
 ```
 
-Key L
+按键'L'。
 
 **Since:** 9
 
@@ -800,7 +800,7 @@ Key L
 KEYCODE_M = 2029
 ```
 
-Key M
+按键'M'。
 
 **Since:** 9
 
@@ -816,7 +816,7 @@ Key M
 KEYCODE_N = 2030
 ```
 
-Key N
+按键'N'。
 
 **Since:** 9
 
@@ -832,7 +832,7 @@ Key N
 KEYCODE_O = 2031
 ```
 
-Key O
+按键'O'。
 
 **Since:** 9
 
@@ -848,7 +848,7 @@ Key O
 KEYCODE_P = 2032
 ```
 
-Key P
+按键'P'。
 
 **Since:** 9
 
@@ -864,7 +864,7 @@ Key P
 KEYCODE_Q = 2033
 ```
 
-Key Q
+按键'Q'。
 
 **Since:** 9
 
@@ -880,7 +880,7 @@ Key Q
 KEYCODE_R = 2034
 ```
 
-Key R
+按键'R'。
 
 **Since:** 9
 
@@ -896,7 +896,7 @@ Key R
 KEYCODE_S = 2035
 ```
 
-Key S
+按键'S'。
 
 **Since:** 9
 
@@ -912,7 +912,7 @@ Key S
 KEYCODE_T = 2036
 ```
 
-Key T
+按键'T'。
 
 **Since:** 9
 
@@ -928,7 +928,7 @@ Key T
 KEYCODE_U = 2037
 ```
 
-Key U
+按键'U'。
 
 **Since:** 9
 
@@ -944,7 +944,7 @@ Key U
 KEYCODE_V = 2038
 ```
 
-Key V
+按键'V'。
 
 **Since:** 9
 
@@ -960,7 +960,7 @@ Key V
 KEYCODE_W = 2039
 ```
 
-Key W
+按键'W'。
 
 **Since:** 9
 
@@ -976,7 +976,7 @@ Key W
 KEYCODE_X = 2040
 ```
 
-Key X
+按键'X'。
 
 **Since:** 9
 
@@ -992,7 +992,7 @@ Key X
 KEYCODE_Y = 2041
 ```
 
-Key Y
+按键'Y'。
 
 **Since:** 9
 
@@ -1008,7 +1008,7 @@ Key Y
 KEYCODE_Z = 2042
 ```
 
-Key Z
+按键'Z'。
 
 **Since:** 9
 
@@ -1024,7 +1024,7 @@ Key Z
 KEYCODE_COMMA = 2043
 ```
 
-Key ,
+按键','。
 
 **Since:** 9
 
@@ -1040,7 +1040,7 @@ Key ,
 KEYCODE_PERIOD = 2044
 ```
 
-Key .
+按键'.'。
 
 **Since:** 9
 
@@ -1056,7 +1056,7 @@ Key .
 KEYCODE_ALT_LEFT = 2045
 ```
 
-Left Alt key
+左Alt键。
 
 **Since:** 9
 
@@ -1072,7 +1072,7 @@ Left Alt key
 KEYCODE_ALT_RIGHT = 2046
 ```
 
-Right Alt key
+右Alt键。
 
 **Since:** 9
 
@@ -1088,7 +1088,7 @@ Right Alt key
 KEYCODE_SHIFT_LEFT = 2047
 ```
 
-Left Shift key
+左Shift键。
 
 **Since:** 9
 
@@ -1104,7 +1104,7 @@ Left Shift key
 KEYCODE_SHIFT_RIGHT = 2048
 ```
 
-Right Shift key
+右Shift键。
 
 **Since:** 9
 
@@ -1120,7 +1120,7 @@ Right Shift key
 KEYCODE_TAB = 2049
 ```
 
-Tab key
+Tab键。
 
 **Since:** 9
 
@@ -1136,7 +1136,7 @@ Tab key
 KEYCODE_SPACE = 2050
 ```
 
-Space key
+空格键。
 
 **Since:** 9
 
@@ -1152,7 +1152,7 @@ Space key
 KEYCODE_SYM = 2051
 ```
 
-Symbol key
+符号修改器按键。
 
 **Since:** 9
 
@@ -1168,7 +1168,7 @@ Symbol key
 KEYCODE_EXPLORER = 2052
 ```
 
-Explorer key, which is used to start the explorer application
+浏览器功能键，此键用于启动浏览器应用程序。
 
 **Since:** 9
 
@@ -1184,7 +1184,7 @@ Explorer key, which is used to start the explorer application
 KEYCODE_ENVELOPE = 2053
 ```
 
-Email key, which is used to start the email application
+电子邮件功能键，此键用于启动电子邮件应用程序。
 
 **Since:** 9
 
@@ -1200,7 +1200,7 @@ Email key, which is used to start the email application
 KEYCODE_ENTER = 2054
 ```
 
-Enter key
+回车键。
 
 **Since:** 9
 
@@ -1216,7 +1216,7 @@ Enter key
 KEYCODE_DEL = 2055
 ```
 
-Delete key
+退格键。
 
 **Since:** 9
 
@@ -1232,7 +1232,7 @@ Delete key
 KEYCODE_GRAVE = 2056
 ```
 
-Key /
+按键'*'。
 
 **Since:** 9
 
@@ -1248,7 +1248,7 @@ Key /
 KEYCODE_MINUS = 2057
 ```
 
-Key 
+按键'-'。
 
 **Since:** 9
 
@@ -1264,7 +1264,7 @@ Key
 KEYCODE_EQUALS = 2058
 ```
 
-Key =
+按键'='。
 
 **Since:** 9
 
@@ -1280,7 +1280,7 @@ Key =
 KEYCODE_LEFT_BRACKET = 2059
 ```
 
-Key [
+按键'['。
 
 **Since:** 9
 
@@ -1296,7 +1296,7 @@ Key [
 KEYCODE_RIGHT_BRACKET = 2060
 ```
 
-Key ]
+按键']'。
 
 **Since:** 9
 
@@ -1312,7 +1312,7 @@ Key ]
 KEYCODE_BACKSLASH = 2061
 ```
 
-Key \
+按键'\'。
 
 **Since:** 9
 
@@ -1328,7 +1328,7 @@ Key \
 KEYCODE_SEMICOLON = 2062
 ```
 
-Key ;
+按键';'。
 
 **Since:** 9
 
@@ -1344,7 +1344,7 @@ Key ;
 KEYCODE_APOSTROPHE = 2063
 ```
 
-Key '
+按键''' (单引号)。
 
 **Since:** 9
 
@@ -1360,7 +1360,7 @@ Key '
 KEYCODE_SLASH = 2064
 ```
 
-Key /
+按键'*'。
 
 **Since:** 9
 
@@ -1376,7 +1376,7 @@ Key /
 KEYCODE_AT = 2065
 ```
 
-Key /
+按键'*'。
 
 **Since:** 9
 
@@ -1392,7 +1392,7 @@ Key /
 KEYCODE_PLUS = 2066
 ```
 
-Key +
+按键'+'。
 
 **Since:** 9
 
@@ -1408,7 +1408,7 @@ Key +
 KEYCODE_MENU = 2067
 ```
 
-Menu key
+菜单键。
 
 **Since:** 9
 
@@ -1424,7 +1424,7 @@ Menu key
 KEYCODE_PAGE_UP = 2068
 ```
 
-Page Up key
+向上翻页键。
 
 **Since:** 9
 
@@ -1440,7 +1440,7 @@ Page Up key
 KEYCODE_PAGE_DOWN = 2069
 ```
 
-Page Down key
+向下翻页键。
 
 **Since:** 9
 
@@ -1456,7 +1456,7 @@ Page Down key
 KEYCODE_ESCAPE = 2070
 ```
 
-Esc key
+Esc键。
 
 **Since:** 9
 
@@ -1472,7 +1472,7 @@ Esc key
 KEYCODE_FORWARD_DEL = 2071
 ```
 
-Forward Delete key
+删除键。
 
 **Since:** 9
 
@@ -1488,7 +1488,7 @@ Forward Delete key
 KEYCODE_CTRL_LEFT = 2072
 ```
 
-Left Ctrl key
+左Ctrl键。
 
 **Since:** 9
 
@@ -1504,7 +1504,7 @@ Left Ctrl key
 KEYCODE_CTRL_RIGHT = 2073
 ```
 
-Right Ctrl key
+右Ctrl键。
 
 **Since:** 9
 
@@ -1520,7 +1520,7 @@ Right Ctrl key
 KEYCODE_CAPS_LOCK = 2074
 ```
 
-Caps Lock key
+大写锁定键。
 
 **Since:** 9
 
@@ -1536,7 +1536,7 @@ Caps Lock key
 KEYCODE_SCROLL_LOCK = 2075
 ```
 
-Scroll Lock key
+滚动锁定键。
 
 **Since:** 9
 
@@ -1552,7 +1552,7 @@ Scroll Lock key
 KEYCODE_META_LEFT = 2076
 ```
 
-Left Meta key
+左Meta键。
 
 **Since:** 9
 
@@ -1568,7 +1568,7 @@ Left Meta key
 KEYCODE_META_RIGHT = 2077
 ```
 
-Right Meta key
+右Meta键。
 
 **Since:** 9
 
@@ -1584,7 +1584,7 @@ Right Meta key
 KEYCODE_FUNCTION = 2078
 ```
 
-Function key
+功能键。
 
 **Since:** 9
 
@@ -1600,7 +1600,7 @@ Function key
 KEYCODE_SYSRQ = 2079
 ```
 
-System Request/Print Screen key
+系统请求/打印屏幕键。
 
 **Since:** 9
 
@@ -1616,7 +1616,7 @@ System Request/Print Screen key
 KEYCODE_BREAK = 2080
 ```
 
-Break/Pause key
+Break/Pause键。
 
 **Since:** 9
 
@@ -1632,7 +1632,7 @@ Break/Pause key
 KEYCODE_MOVE_HOME = 2081
 ```
 
-Move to Home key
+光标移动到开始键。
 
 **Since:** 9
 
@@ -1648,7 +1648,7 @@ Move to Home key
 KEYCODE_MOVE_END = 2082
 ```
 
-Move to End key
+光标移动到末尾键。
 
 **Since:** 9
 
@@ -1664,7 +1664,7 @@ Move to End key
 KEYCODE_INSERT = 2083
 ```
 
-Insert key
+插入键。
 
 **Since:** 9
 
@@ -1680,7 +1680,7 @@ Insert key
 KEYCODE_FORWARD = 2084
 ```
 
-Forward key
+前进键。
 
 **Since:** 9
 
@@ -1696,7 +1696,7 @@ Forward key
 KEYCODE_MEDIA_PLAY = 2085
 ```
 
-Play key
+多媒体键：播放。
 
 **Since:** 9
 
@@ -1714,7 +1714,7 @@ Play key
 KEYCODE_MEDIA_PAUSE = 2086
 ```
 
-Media: Pause Key
+光盘暂停键。
 
 **Since:** 9
 
@@ -1732,7 +1732,7 @@ Media: Pause Key
 KEYCODE_MEDIA_CLOSE = 2087
 ```
 
-Media: Close Key
+光盘关闭键。
 
 **Since:** 9
 
@@ -1748,7 +1748,7 @@ Media: Close Key
 KEYCODE_MEDIA_EJECT = 2088
 ```
 
-Media: Eject Key
+光盘弹出键。
 
 **Since:** 9
 
@@ -1764,7 +1764,7 @@ Media: Eject Key
 KEYCODE_MEDIA_RECORD = 2089
 ```
 
-Record key
+多媒体键：录音。
 
 **Since:** 9
 
@@ -1780,7 +1780,7 @@ Record key
 KEYCODE_F1 = 2090
 ```
 
-F1 key
+按键'F1'。
 
 **Since:** 9
 
@@ -1796,7 +1796,7 @@ F1 key
 KEYCODE_F2 = 2091
 ```
 
-F2 key
+按键'F2'。
 
 **Since:** 9
 
@@ -1812,7 +1812,7 @@ F2 key
 KEYCODE_F3 = 2092
 ```
 
-F3 key
+按键'F3'。
 
 **Since:** 9
 
@@ -1828,7 +1828,7 @@ F3 key
 KEYCODE_F4 = 2093
 ```
 
-F4 key
+按键'F4'。
 
 **Since:** 9
 
@@ -1844,7 +1844,7 @@ F4 key
 KEYCODE_F5 = 2094
 ```
 
-F5 key
+按键'F5'。
 
 **Since:** 9
 
@@ -1860,7 +1860,7 @@ F5 key
 KEYCODE_F6 = 2095
 ```
 
-F6 key
+按键'F6'。
 
 **Since:** 9
 
@@ -1876,7 +1876,7 @@ F6 key
 KEYCODE_F7 = 2096
 ```
 
-F7 key
+按键'F7'。
 
 **Since:** 9
 
@@ -1892,7 +1892,7 @@ F7 key
 KEYCODE_F8 = 2097
 ```
 
-F8 key
+按键'F8'。
 
 **Since:** 9
 
@@ -1908,7 +1908,7 @@ F8 key
 KEYCODE_F9 = 2098
 ```
 
-F9 key
+按键'F9'。
 
 **Since:** 9
 
@@ -1924,7 +1924,7 @@ F9 key
 KEYCODE_F10 = 2099
 ```
 
-F10 key
+按键'F10'。
 
 **Since:** 9
 
@@ -1940,7 +1940,7 @@ F10 key
 KEYCODE_F11 = 2100
 ```
 
-F11 key
+按键'F11'。
 
 **Since:** 9
 
@@ -1956,7 +1956,7 @@ F11 key
 KEYCODE_F12 = 2101
 ```
 
-F12 key
+按键'F12'。
 
 **Since:** 9
 
@@ -1972,7 +1972,7 @@ F12 key
 KEYCODE_NUM_LOCK = 2102
 ```
 
-Number Lock key on numeric keypad
+小键盘锁。
 
 **Since:** 9
 
@@ -1988,7 +1988,7 @@ Number Lock key on numeric keypad
 KEYCODE_NUMPAD_0 = 2103
 ```
 
-Key 0 on numeric keypad
+小键盘按键'0'。
 
 **Since:** 9
 
@@ -2004,7 +2004,7 @@ Key 0 on numeric keypad
 KEYCODE_NUMPAD_1 = 2104
 ```
 
-Key 1 on numeric keypad
+小键盘按键'1'。
 
 **Since:** 9
 
@@ -2020,7 +2020,7 @@ Key 1 on numeric keypad
 KEYCODE_NUMPAD_2 = 2105
 ```
 
-Key 2 on numeric keypad
+小键盘按键'2'。
 
 **Since:** 9
 
@@ -2036,7 +2036,7 @@ Key 2 on numeric keypad
 KEYCODE_NUMPAD_3 = 2106
 ```
 
-Key 3 on numeric keypad
+小键盘按键'3'。
 
 **Since:** 9
 
@@ -2052,7 +2052,7 @@ Key 3 on numeric keypad
 KEYCODE_NUMPAD_4 = 2107
 ```
 
-Key 4 on numeric keypad
+小键盘按键'4'。
 
 **Since:** 9
 
@@ -2068,7 +2068,7 @@ Key 4 on numeric keypad
 KEYCODE_NUMPAD_5 = 2108
 ```
 
-Key 5 on numeric keypad
+小键盘按键'5'。
 
 **Since:** 9
 
@@ -2084,7 +2084,7 @@ Key 5 on numeric keypad
 KEYCODE_NUMPAD_6 = 2109
 ```
 
-Key 6 on numeric keypad
+小键盘按键'6'。
 
 **Since:** 9
 
@@ -2100,7 +2100,7 @@ Key 6 on numeric keypad
 KEYCODE_NUMPAD_7 = 2110
 ```
 
-Key 7 on numeric keypad
+小键盘按键'7'。
 
 **Since:** 9
 
@@ -2116,7 +2116,7 @@ Key 7 on numeric keypad
 KEYCODE_NUMPAD_8 = 2111
 ```
 
-Key 8 on numeric keypad
+小键盘按键'8'。
 
 **Since:** 9
 
@@ -2132,7 +2132,7 @@ Key 8 on numeric keypad
 KEYCODE_NUMPAD_9 = 2112
 ```
 
-Key 9 on numeric keypad
+小键盘按键'9'。
 
 **Since:** 9
 
@@ -2148,7 +2148,7 @@ Key 9 on numeric keypad
 KEYCODE_NUMPAD_DIVIDE = 2113
 ```
 
-Key / on numeric keypad
+小键盘按键'/'。
 
 **Since:** 9
 
@@ -2164,7 +2164,7 @@ Key / on numeric keypad
 KEYCODE_NUMPAD_MULTIPLY = 2114
 ```
 
-Key * on numeric keypad
+小键盘按键'*'。
 
 **Since:** 9
 
@@ -2180,7 +2180,7 @@ Key * on numeric keypad
 KEYCODE_NUMPAD_SUBTRACT = 2115
 ```
 
-Key - on numeric keypad
+小键盘按键'-'。
 
 **Since:** 9
 
@@ -2196,7 +2196,7 @@ Key - on numeric keypad
 KEYCODE_NUMPAD_ADD = 2116
 ```
 
-Key + on numeric keypad
+小键盘按键'+'。
 
 **Since:** 9
 
@@ -2212,7 +2212,7 @@ Key + on numeric keypad
 KEYCODE_NUMPAD_DOT = 2117
 ```
 
-Key . on numeric keypad
+小键盘按键'.'。
 
 **Since:** 9
 
@@ -2228,7 +2228,7 @@ Key . on numeric keypad
 KEYCODE_NUMPAD_COMMA = 2118
 ```
 
-Key , on numeric keypad
+小键盘按键','。
 
 **Since:** 9
 
@@ -2244,7 +2244,7 @@ Key , on numeric keypad
 KEYCODE_NUMPAD_ENTER = 2119
 ```
 
-Enter key on numeric keypad
+小键盘按键回车。
 
 **Since:** 9
 
@@ -2260,7 +2260,7 @@ Enter key on numeric keypad
 KEYCODE_NUMPAD_EQUALS = 2120
 ```
 
-Key = on numeric keypad
+小键盘按键'='。
 
 **Since:** 9
 
@@ -2276,7 +2276,7 @@ Key = on numeric keypad
 KEYCODE_NUMPAD_LEFT_PAREN = 2121
 ```
 
-Key ( on numeric keypad
+小键盘按键'('。
 
 **Since:** 9
 
@@ -2292,7 +2292,7 @@ Key ( on numeric keypad
 KEYCODE_NUMPAD_RIGHT_PAREN = 2122
 ```
 
-Key ) on numeric keypad
+小键盘按键')'。
 
 **Since:** 9
 
@@ -2308,7 +2308,7 @@ Key ) on numeric keypad
 KEYCODE_VIRTUAL_MULTITASK = 2210
 ```
 
-Multi-task key
+虚拟多任务键。
 
 **Since:** 9
 
@@ -2324,7 +2324,7 @@ Multi-task key
 KEYCODE_BUTTON_A = 2301
 ```
 
-Joystick key A
+游戏手柄按键'A'。
 
 **Since:** 15
 
@@ -2340,7 +2340,7 @@ Joystick key A
 KEYCODE_BUTTON_B = 2302
 ```
 
-Joystick key B
+游戏手柄按键'B'。
 
 **Since:** 15
 
@@ -2356,7 +2356,7 @@ Joystick key B
 KEYCODE_BUTTON_X = 2304
 ```
 
-Joystick key X
+游戏手柄按键'X'。
 
 **Since:** 15
 
@@ -2372,7 +2372,7 @@ Joystick key X
 KEYCODE_BUTTON_Y = 2305
 ```
 
-Joystick key Y
+游戏手柄按键'Y'。
 
 **Since:** 15
 
@@ -2388,7 +2388,7 @@ Joystick key Y
 KEYCODE_BUTTON_L1 = 2307
 ```
 
-Joystick key L1
+游戏手柄按键'L1'。
 
 **Since:** 15
 
@@ -2404,7 +2404,7 @@ Joystick key L1
 KEYCODE_BUTTON_R1 = 2308
 ```
 
-Joystick key R1
+游戏手柄按键'R1'。
 
 **Since:** 15
 
@@ -2420,7 +2420,7 @@ Joystick key R1
 KEYCODE_BUTTON_L2 = 2309
 ```
 
-Joystick key L2
+游戏手柄按键'L2'。
 
 **Since:** 15
 
@@ -2436,7 +2436,7 @@ Joystick key L2
 KEYCODE_BUTTON_R2 = 2310
 ```
 
-Joystick key R2
+游戏手柄按键'R2'。
 
 **Since:** 15
 
@@ -2452,7 +2452,7 @@ Joystick key R2
 KEYCODE_BUTTON_SELECT = 2311
 ```
 
-Joystick key Select
+游戏手柄按键'Select'。
 
 **Since:** 15
 
@@ -2468,7 +2468,7 @@ Joystick key Select
 KEYCODE_BUTTON_START = 2312
 ```
 
-Joystick key Start
+游戏手柄按键'Start'。
 
 **Since:** 15
 
@@ -2484,7 +2484,7 @@ Joystick key Start
 KEYCODE_BUTTON_MODE = 2313
 ```
 
-Joystick key Mode
+游戏手柄按键'Mode'。
 
 **Since:** 15
 
@@ -2500,7 +2500,7 @@ Joystick key Mode
 KEYCODE_BUTTON_THUMBL = 2314
 ```
 
-Joystick key THUMBL
+游戏手柄按键'THUMBL'。
 
 **Since:** 15
 
@@ -2516,7 +2516,7 @@ Joystick key THUMBL
 KEYCODE_BUTTON_THUMBR = 2315
 ```
 
-Joystick key THUMBR
+游戏手柄按键'THUMBR'。
 
 **Since:** 15
 
@@ -2532,7 +2532,7 @@ Joystick key THUMBR
 KEYCODE_SLEEP = 2600
 ```
 
-Sleep key
+睡眠键。
 
 **Since:** 9
 
@@ -2548,7 +2548,7 @@ Sleep key
 KEYCODE_ZENKAKU_HANKAKU = 2601
 ```
 
-Zenkaku/Hankaku key
+日文全宽/半宽键。
 
 **Since:** 9
 
@@ -2564,7 +2564,7 @@ Zenkaku/Hankaku key
 KEYCODE_102ND = 2602
 ```
 
-International Keyboard Extension key
+国际键盘扩展键。
 
 **Since:** 9
 
@@ -2580,7 +2580,7 @@ International Keyboard Extension key
 KEYCODE_RO = 2603
 ```
 
-Ro key
+日文Ro键。
 
 **Since:** 9
 
@@ -2596,7 +2596,7 @@ Ro key
 KEYCODE_KATAKANA = 2604
 ```
 
-Katakana key
+日文片假名键。
 
 **Since:** 9
 
@@ -2612,7 +2612,7 @@ Katakana key
 KEYCODE_HIRAGANA = 2605
 ```
 
-Hiragana key
+日文平假名键。
 
 **Since:** 9
 
@@ -2628,7 +2628,7 @@ Hiragana key
 KEYCODE_HENKAN = 2606
 ```
 
-Henkan key
+日文转换键。
 
 **Since:** 9
 
@@ -2644,7 +2644,7 @@ Henkan key
 KEYCODE_KATAKANA_HIRAGANA = 2607
 ```
 
-Katakana/Hiragana key
+日语片假名/平假名键。
 
 **Since:** 9
 
@@ -2660,7 +2660,7 @@ Katakana/Hiragana key
 KEYCODE_MUHENKAN = 2608
 ```
 
-Muhenkan key
+日文非转换键。
 
 **Since:** 9
 
@@ -2676,7 +2676,7 @@ Muhenkan key
 KEYCODE_LINEFEED = 2609
 ```
 
-Linefeed key
+换行键。
 
 **Since:** 9
 
@@ -2692,7 +2692,7 @@ Linefeed key
 KEYCODE_MACRO = 2610
 ```
 
-Macro key
+宏键。
 
 **Since:** 9
 
@@ -2708,7 +2708,7 @@ Macro key
 KEYCODE_NUMPAD_PLUSMINUS = 2611
 ```
 
-Plus/Minus key on the numeric keypad
+数字键盘上的加号/减号键。
 
 **Since:** 9
 
@@ -2724,7 +2724,7 @@ Plus/Minus key on the numeric keypad
 KEYCODE_SCALE = 2612
 ```
 
-Scale key
+扩展键。
 
 **Since:** 9
 
@@ -2740,7 +2740,7 @@ Scale key
 KEYCODE_HANGUEL = 2613
 ```
 
-Hanguel key
+日文韩语键。
 
 **Since:** 9
 
@@ -2756,7 +2756,7 @@ Hanguel key
 KEYCODE_HANJA = 2614
 ```
 
-Hanja key
+日文汉语键。
 
 **Since:** 9
 
@@ -2772,7 +2772,7 @@ Hanja key
 KEYCODE_YEN = 2615
 ```
 
-Yen key
+日元键。
 
 **Since:** 9
 
@@ -2788,7 +2788,7 @@ Yen key
 KEYCODE_STOP = 2616
 ```
 
-Stop key
+停止键。
 
 **Since:** 9
 
@@ -2804,7 +2804,7 @@ Stop key
 KEYCODE_AGAIN = 2617
 ```
 
-Again key
+重复键。
 
 **Since:** 9
 
@@ -2820,7 +2820,7 @@ Again key
 KEYCODE_PROPS = 2618
 ```
 
-Props key
+道具键。
 
 **Since:** 9
 
@@ -2836,7 +2836,7 @@ Props key
 KEYCODE_UNDO = 2619
 ```
 
-Undo key
+撤消键。
 
 **Since:** 9
 
@@ -2852,7 +2852,7 @@ Undo key
 KEYCODE_COPY = 2620
 ```
 
-Copy key
+复制键。
 
 **Since:** 9
 
@@ -2868,7 +2868,7 @@ Copy key
 KEYCODE_OPEN = 2621
 ```
 
-Open key
+打开键。
 
 **Since:** 9
 
@@ -2884,7 +2884,7 @@ Open key
 KEYCODE_PASTE = 2622
 ```
 
-Paste key
+粘贴键。
 
 **Since:** 9
 
@@ -2900,7 +2900,7 @@ Paste key
 KEYCODE_FIND = 2623
 ```
 
-Find key
+查找键。
 
 **Since:** 9
 
@@ -2916,7 +2916,7 @@ Find key
 KEYCODE_CUT = 2624
 ```
 
-Cut key
+剪切键。
 
 **Since:** 9
 
@@ -2932,7 +2932,7 @@ Cut key
 KEYCODE_HELP = 2625
 ```
 
-Help key
+帮助键。
 
 **Since:** 9
 
@@ -2948,7 +2948,7 @@ Help key
 KEYCODE_CALC = 2626
 ```
 
-Calc key, which is used to start the calculator application
+计算器特殊功能键，用于启动计算器应用程序。
 
 **Since:** 9
 
@@ -2964,7 +2964,7 @@ Calc key, which is used to start the calculator application
 KEYCODE_FILE = 2627
 ```
 
-File key
+文件按键。
 
 **Since:** 9
 
@@ -2980,7 +2980,7 @@ File key
 KEYCODE_BOOKMARKS = 2628
 ```
 
-Bookmarks key
+书签键。
 
 **Since:** 9
 
@@ -2996,7 +2996,7 @@ Bookmarks key
 KEYCODE_NEXT = 2629
 ```
 
-Page Down key
+向下翻页键。
 
 **Since:** 9
 
@@ -3012,11 +3012,11 @@ Page Down key
 KEYCODE_PLAYPAUSE = 2630
 ```
 
-Play/Pause key
+多媒体键：播放/暂停。
 
-Difference between this key and **KEYCODE\_MEDIA\_PLAY\_PAUSE**:
+与KEYCODE_MEDIA_PLAY_PAUSE的区别为：
 
-**KEYCODE\_PLAYPAUSE** is an earlier definition, while **KEYCODE\_MEDIA\_PLAY\_PAUSE** is designed for modern media key devices.
+KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
 
 **Since:** 9
 
@@ -3032,7 +3032,7 @@ Difference between this key and **KEYCODE\_MEDIA\_PLAY\_PAUSE**:
 KEYCODE_PREVIOUS = 2631
 ```
 
-Page Up key
+向上翻页键。
 
 **Since:** 9
 
@@ -3048,7 +3048,7 @@ Page Up key
 KEYCODE_STOPCD = 2632
 ```
 
-Stop CD key
+CD停止键。
 
 **Since:** 9
 
@@ -3064,7 +3064,7 @@ Stop CD key
 KEYCODE_CONFIG = 2634
 ```
 
-Config key
+配置键。
 
 **Since:** 9
 
@@ -3080,7 +3080,7 @@ Config key
 KEYCODE_REFRESH = 2635
 ```
 
-Refresh key
+刷新键。
 
 **Since:** 9
 
@@ -3096,7 +3096,7 @@ Refresh key
 KEYCODE_EXIT = 2636
 ```
 
-Exit key
+退出键。
 
 **Since:** 9
 
@@ -3112,7 +3112,7 @@ Exit key
 KEYCODE_EDIT = 2637
 ```
 
-Edit key
+编辑键。
 
 **Since:** 9
 
@@ -3128,7 +3128,7 @@ Edit key
 KEYCODE_SCROLLUP = 2638
 ```
 
-Scroll Up key
+向上滚动键。
 
 **Since:** 9
 
@@ -3144,7 +3144,7 @@ Scroll Up key
 KEYCODE_SCROLLDOWN = 2639
 ```
 
-Scroll Down key
+向下滚动键。
 
 **Since:** 9
 
@@ -3160,7 +3160,7 @@ Scroll Down key
 KEYCODE_NEW = 2640
 ```
 
-New key
+新建键。
 
 **Since:** 9
 
@@ -3176,7 +3176,7 @@ New key
 KEYCODE_REDO = 2641
 ```
 
-Redo key
+恢复键。
 
 **Since:** 9
 
@@ -3192,7 +3192,7 @@ Redo key
 KEYCODE_CLOSE = 2642
 ```
 
-Close key
+关闭键。
 
 **Since:** 9
 
@@ -3208,7 +3208,7 @@ Close key
 KEYCODE_PLAY = 2643
 ```
 
-Play key
+播放键。
 
 **Since:** 9
 
@@ -3224,7 +3224,7 @@ Play key
 KEYCODE_BASSBOOST = 2644
 ```
 
-Bass Boost key
+低音增强键。
 
 **Since:** 9
 
@@ -3240,7 +3240,7 @@ Bass Boost key
 KEYCODE_PRINT = 2645
 ```
 
-Print key
+打印键。
 
 **Since:** 9
 
@@ -3256,7 +3256,7 @@ Print key
 KEYCODE_CHAT = 2646
 ```
 
-Chat key
+聊天键。
 
 **Since:** 9
 
@@ -3272,7 +3272,7 @@ Chat key
 KEYCODE_FINANCE = 2647
 ```
 
-Finance key
+金融键。
 
 **Since:** 9
 
@@ -3288,7 +3288,7 @@ Finance key
 KEYCODE_CANCEL = 2648
 ```
 
-Cancel key
+取消键。
 
 **Since:** 9
 
@@ -3304,7 +3304,7 @@ Cancel key
 KEYCODE_KBDILLUM_TOGGLE = 2649
 ```
 
-Keyboard Illumination Toggle key
+键盘灯光切换键。
 
 **Since:** 9
 
@@ -3320,7 +3320,7 @@ Keyboard Illumination Toggle key
 KEYCODE_KBDILLUM_DOWN = 2650
 ```
 
-Keyboard Illumination Down key
+键盘灯光调暗键。
 
 **Since:** 9
 
@@ -3336,7 +3336,7 @@ Keyboard Illumination Down key
 KEYCODE_KBDILLUM_UP = 2651
 ```
 
-Keyboard Illumination Up key
+键盘灯光调亮键。
 
 **Since:** 9
 
@@ -3352,7 +3352,7 @@ Keyboard Illumination Up key
 KEYCODE_SEND = 2652
 ```
 
-Send key
+发送键。
 
 **Since:** 9
 
@@ -3368,7 +3368,7 @@ Send key
 KEYCODE_REPLY = 2653
 ```
 
-Reply key
+答复键。
 
 **Since:** 9
 
@@ -3384,7 +3384,7 @@ Reply key
 KEYCODE_FORWARDMAIL = 2654
 ```
 
-Forward Mail key
+邮件转发键。
 
 **Since:** 9
 
@@ -3400,7 +3400,7 @@ Forward Mail key
 KEYCODE_SAVE = 2655
 ```
 
-Save key
+保存键。
 
 **Since:** 9
 
@@ -3416,7 +3416,7 @@ Save key
 KEYCODE_DOCUMENTS = 2656
 ```
 
-Documents key
+文件键。
 
 **Since:** 9
 
@@ -3432,7 +3432,7 @@ Documents key
 KEYCODE_VIDEO_NEXT = 2657
 ```
 
-Next Video key
+下一个视频键。
 
 **Since:** 9
 
@@ -3448,7 +3448,7 @@ Next Video key
 KEYCODE_VIDEO_PREV = 2658
 ```
 
-Previous Video key
+上一个视频键。
 
 **Since:** 9
 
@@ -3464,7 +3464,7 @@ Previous Video key
 KEYCODE_BRIGHTNESS_CYCLE = 2659
 ```
 
-Brightness Cycle key
+背光渐变键。
 
 **Since:** 9
 
@@ -3480,7 +3480,7 @@ Brightness Cycle key
 KEYCODE_BRIGHTNESS_ZERO = 2660
 ```
 
-Brightness Zero key
+亮度调节为0键。
 
 **Since:** 9
 
@@ -3496,7 +3496,7 @@ Brightness Zero key
 KEYCODE_DISPLAY_OFF = 2661
 ```
 
-Display Off key
+显示关闭键。
 
 **Since:** 9
 
@@ -3512,7 +3512,7 @@ Display Off key
 KEYCODE_BTN_MISC = 2662
 ```
 
-Misc Button key
+游戏手柄上的各种按键。
 
 **Since:** 9
 
@@ -3528,7 +3528,7 @@ Misc Button key
 KEYCODE_GOTO = 2663
 ```
 
-Goto key
+进入键。
 
 **Since:** 9
 
@@ -3544,7 +3544,7 @@ Goto key
 KEYCODE_INFO = 2664
 ```
 
-Info key
+信息查看键。
 
 **Since:** 9
 
@@ -3560,7 +3560,7 @@ Info key
 KEYCODE_PROGRAM = 2665
 ```
 
-Program key
+程序键。
 
 **Since:** 9
 
@@ -3576,7 +3576,7 @@ Program key
 KEYCODE_PVR = 2666
 ```
 
-PVR key
+个人录像机（PVR）键。
 
 **Since:** 9
 
@@ -3592,7 +3592,7 @@ PVR key
 KEYCODE_SUBTITLE = 2667
 ```
 
-Subtitle key
+字幕键。
 
 **Since:** 9
 
@@ -3608,7 +3608,7 @@ Subtitle key
 KEYCODE_FULL_SCREEN = 2668
 ```
 
-Full Screen key
+全屏键。
 
 **Since:** 9
 
@@ -3624,7 +3624,7 @@ Full Screen key
 KEYCODE_KEYBOARD = 2669
 ```
 
-Keyboard.
+键盘。
 
 **Since:** 9
 
@@ -3640,7 +3640,7 @@ Keyboard.
 KEYCODE_ASPECT_RATIO = 2670
 ```
 
-Aspect Ratio key
+屏幕纵横比调节键。
 
 **Since:** 9
 
@@ -3656,7 +3656,7 @@ Aspect Ratio key
 KEYCODE_PC = 2671
 ```
 
-Port Control key
+端口控制键。
 
 **Since:** 9
 
@@ -3672,7 +3672,7 @@ Port Control key
 KEYCODE_TV = 2672
 ```
 
-TV key
+TV键。
 
 **Since:** 9
 
@@ -3688,7 +3688,7 @@ TV key
 KEYCODE_TV2 = 2673
 ```
 
-TV key 2
+TV键2。
 
 **Since:** 9
 
@@ -3704,7 +3704,7 @@ TV key 2
 KEYCODE_VCR = 2674
 ```
 
-VCR key
+录像机开启键。
 
 **Since:** 9
 
@@ -3720,7 +3720,7 @@ VCR key
 KEYCODE_VCR2 = 2675
 ```
 
-VCR key 2
+录像机开启键2。
 
 **Since:** 9
 
@@ -3736,7 +3736,7 @@ VCR key 2
 KEYCODE_SAT = 2676
 ```
 
-SAT key
+SIM卡应用工具包（SAT）键。
 
 **Since:** 9
 
@@ -3752,7 +3752,7 @@ SAT key
 KEYCODE_CD = 2677
 ```
 
-CD key
+CD键。
 
 **Since:** 9
 
@@ -3768,7 +3768,7 @@ CD key
 KEYCODE_TAPE = 2678
 ```
 
-Tape key
+磁带键。
 
 **Since:** 9
 
@@ -3784,7 +3784,7 @@ Tape key
 KEYCODE_TUNER = 2679
 ```
 
-Tuner key
+调谐器键。
 
 **Since:** 9
 
@@ -3800,7 +3800,7 @@ Tuner key
 KEYCODE_PLAYER = 2680
 ```
 
-Player key
+播放器键。
 
 **Since:** 9
 
@@ -3816,7 +3816,7 @@ Player key
 KEYCODE_DVD = 2681
 ```
 
-DVD key
+DVD键。
 
 **Since:** 9
 
@@ -3832,7 +3832,7 @@ DVD key
 KEYCODE_AUDIO = 2682
 ```
 
-Audio key
+音频键。
 
 **Since:** 9
 
@@ -3848,7 +3848,7 @@ Audio key
 KEYCODE_VIDEO = 2683
 ```
 
-Video key
+视频键。
 
 **Since:** 9
 
@@ -3864,7 +3864,7 @@ Video key
 KEYCODE_MEMO = 2684
 ```
 
-Memo key
+备忘录键。
 
 **Since:** 9
 
@@ -3880,7 +3880,7 @@ Memo key
 KEYCODE_CALENDAR = 2685
 ```
 
-Calendar key
+日历键。
 
 **Since:** 9
 
@@ -3896,7 +3896,7 @@ Calendar key
 KEYCODE_RED = 2686
 ```
 
-Red indicator.
+红色指示器。
 
 **Since:** 9
 
@@ -3912,7 +3912,7 @@ Red indicator.
 KEYCODE_GREEN = 2687
 ```
 
-Green indicator.
+绿色指示器。
 
 **Since:** 9
 
@@ -3928,7 +3928,7 @@ Green indicator.
 KEYCODE_YELLOW = 2688
 ```
 
-Yellow indicator.
+黄色指示器。
 
 **Since:** 9
 
@@ -3944,7 +3944,7 @@ Yellow indicator.
 KEYCODE_BLUE = 2689
 ```
 
-Blue indicator.
+蓝色指示器。
 
 **Since:** 9
 
@@ -3960,7 +3960,7 @@ Blue indicator.
 KEYCODE_CHANNELUP = 2690
 ```
 
-Channel Up key
+频道向上键。
 
 **Since:** 9
 
@@ -3976,7 +3976,7 @@ Channel Up key
 KEYCODE_CHANNELDOWN = 2691
 ```
 
-Channel Down key
+频道向下键。
 
 **Since:** 9
 
@@ -3992,7 +3992,7 @@ Channel Down key
 KEYCODE_LAST = 2692
 ```
 
-Last key
+末尾键。
 
 **Since:** 9
 
@@ -4008,7 +4008,7 @@ Last key
 KEYCODE_RESTART = 2693
 ```
 
-Restart key
+重启键。
 
 **Since:** 9
 
@@ -4024,7 +4024,7 @@ Restart key
 KEYCODE_SLOW = 2694
 ```
 
-Slow key
+慢速键。
 
 **Since:** 9
 
@@ -4040,7 +4040,7 @@ Slow key
 KEYCODE_SHUFFLE = 2695
 ```
 
-Shuffle key
+随机播放键。
 
 **Since:** 9
 
@@ -4056,7 +4056,7 @@ Shuffle key
 KEYCODE_VIDEOPHONE = 2696
 ```
 
-Videophone key
+可视电话键。
 
 **Since:** 9
 
@@ -4072,7 +4072,7 @@ Videophone key
 KEYCODE_GAMES = 2697
 ```
 
-Games key
+游戏键。
 
 **Since:** 9
 
@@ -4088,7 +4088,7 @@ Games key
 KEYCODE_ZOOMIN = 2698
 ```
 
-Zoom in
+放大键。
 
 **Since:** 9
 
@@ -4104,7 +4104,7 @@ Zoom in
 KEYCODE_ZOOMOUT = 2699
 ```
 
-Zoom out
+缩小键。
 
 **Since:** 9
 
@@ -4120,7 +4120,7 @@ Zoom out
 KEYCODE_ZOOMRESET = 2700
 ```
 
-Zoom Reset key
+缩放重置键。
 
 **Since:** 9
 
@@ -4136,7 +4136,7 @@ Zoom Reset key
 KEYCODE_WORDPROCESSOR = 2701
 ```
 
-Word Processor key
+文字处理键。
 
 **Since:** 9
 
@@ -4152,7 +4152,7 @@ Word Processor key
 KEYCODE_EDITOR = 2702
 ```
 
-Editor key
+编辑器键。
 
 **Since:** 9
 
@@ -4168,7 +4168,7 @@ Editor key
 KEYCODE_SPREADSHEET = 2703
 ```
 
-Spreadsheet key
+电子表格键。
 
 **Since:** 9
 
@@ -4184,7 +4184,7 @@ Spreadsheet key
 KEYCODE_GRAPHICSEDITOR = 2704
 ```
 
-Graphics Editor key
+图形编辑器键。
 
 **Since:** 9
 
@@ -4200,7 +4200,7 @@ Graphics Editor key
 KEYCODE_PRESENTATION = 2705
 ```
 
-Presentation key
+演示文稿键。
 
 **Since:** 9
 
@@ -4216,7 +4216,7 @@ Presentation key
 KEYCODE_DATABASE = 2706
 ```
 
-Database key
+数据库键。
 
 **Since:** 9
 
@@ -4232,7 +4232,7 @@ Database key
 KEYCODE_NEWS = 2707
 ```
 
-News key
+新闻键。
 
 **Since:** 9
 
@@ -4248,7 +4248,7 @@ News key
 KEYCODE_VOICEMAIL = 2708
 ```
 
-Voicemail key
+语音信箱。
 
 **Since:** 9
 
@@ -4264,7 +4264,7 @@ Voicemail key
 KEYCODE_ADDRESSBOOK = 2709
 ```
 
-Address book key
+通讯簿。
 
 **Since:** 9
 
@@ -4280,7 +4280,7 @@ Address book key
 KEYCODE_MESSENGER = 2710
 ```
 
-Messenger key
+通信键。
 
 **Since:** 9
 
@@ -4296,7 +4296,7 @@ Messenger key
 KEYCODE_BRIGHTNESS_TOGGLE = 2711
 ```
 
-Brightness Toggle key
+亮度切换键。
 
 **Since:** 9
 
@@ -4312,7 +4312,7 @@ Brightness Toggle key
 KEYCODE_SPELLCHECK = 2712
 ```
 
-Spell Check key
+拼写检查键。
 
 **Since:** 9
 
@@ -4328,7 +4328,7 @@ Spell Check key
 KEYCODE_COFFEE = 2713
 ```
 
-Coffee key, which is used to launch screen lock or screen saver
+终端锁/屏幕保护程序。
 
 **Since:** 9
 
@@ -4344,7 +4344,7 @@ Coffee key, which is used to launch screen lock or screen saver
 KEYCODE_MEDIA_REPEAT = 2714
 ```
 
-Media Repeat key
+媒体循环键。
 
 **Since:** 9
 
@@ -4360,7 +4360,7 @@ Media Repeat key
 KEYCODE_IMAGES = 2715
 ```
 
-Images key
+图像键。
 
 **Since:** 9
 
@@ -4376,7 +4376,7 @@ Images key
 KEYCODE_BUTTONCONFIG = 2716
 ```
 
-Button Configuration key
+按键配置键。
 
 **Since:** 9
 
@@ -4392,7 +4392,7 @@ Button Configuration key
 KEYCODE_TASKMANAGER = 2717
 ```
 
-Task Manager key
+任务管理器。
 
 **Since:** 9
 
@@ -4408,7 +4408,7 @@ Task Manager key
 KEYCODE_JOURNAL = 2718
 ```
 
-Log key
+日志按键。
 
 **Since:** 9
 
@@ -4424,7 +4424,7 @@ Log key
 KEYCODE_CONTROLPANEL = 2719
 ```
 
-Control Panel key
+控制面板键。
 
 **Since:** 9
 
@@ -4440,7 +4440,7 @@ Control Panel key
 KEYCODE_APPSELECT = 2720
 ```
 
-App Select key
+应用程序选择键。
 
 **Since:** 9
 
@@ -4456,7 +4456,7 @@ App Select key
 KEYCODE_SCREENSAVER = 2721
 ```
 
-Screen Saver key
+屏幕保护程序键。
 
 **Since:** 9
 
@@ -4472,7 +4472,7 @@ Screen Saver key
 KEYCODE_ASSISTANT = 2722
 ```
 
-Smart key
+智慧键。
 
 **Since:** 9
 
@@ -4488,7 +4488,7 @@ Smart key
 KEYCODE_KBD_LAYOUT_NEXT = 2723
 ```
 
-Next Keyboard Layout key
+下一个键盘布局键。
 
 **Since:** 9
 
@@ -4504,7 +4504,7 @@ Next Keyboard Layout key
 KEYCODE_BRIGHTNESS_MIN = 2724
 ```
 
-Min Brightness key
+最小亮度键。
 
 **Since:** 9
 
@@ -4520,7 +4520,7 @@ Min Brightness key
 KEYCODE_BRIGHTNESS_MAX = 2725
 ```
 
-Max Brightness key
+最大亮度键。
 
 **Since:** 9
 
@@ -4536,7 +4536,7 @@ Max Brightness key
 KEYCODE_KBDINPUTASSIST_PREV = 2726
 ```
 
-Assist\_Previous key, used to view historical inputs
+键盘输入Assist_Previous，查看输入法输入记录。
 
 **Since:** 9
 
@@ -4552,7 +4552,7 @@ Assist\_Previous key, used to view historical inputs
 KEYCODE_KBDINPUTASSIST_NEXT = 2727
 ```
 
-Assist\_Next key, used to view predictive inputs
+键盘输入Assist_Next，查看输入法输入拓展。
 
 **Since:** 9
 
@@ -4568,7 +4568,7 @@ Assist\_Next key, used to view predictive inputs
 KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728
 ```
 
-Assist\_Previous\_Group key, used to switch to the previous input method in the input group
+键盘输入Assist_Previous，切换输入组中上一个输入法。
 
 **Since:** 9
 
@@ -4584,7 +4584,7 @@ Assist\_Previous\_Group key, used to switch to the previous input method in the 
 KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729
 ```
 
-Assist\_Next\_Group key, used to switch to the next input method in the input group
+键盘输入Assist_Next，切换输入组中下一个输入法。
 
 **Since:** 9
 
@@ -4600,7 +4600,7 @@ Assist\_Next\_Group key, used to switch to the next input method in the input gr
 KEYCODE_KBDINPUTASSIST_ACCEPT = 2730
 ```
 
-Keyboard Input-assisted Accept key
+键盘输入Assist_Accept。
 
 **Since:** 9
 
@@ -4616,7 +4616,7 @@ Keyboard Input-assisted Accept key
 KEYCODE_KBDINPUTASSIST_CANCEL = 2731
 ```
 
-Keyboard Input-assisted Cancel key
+键盘输入Assist_Cancel。
 
 **Since:** 9
 
@@ -4632,11 +4632,7 @@ Keyboard Input-assisted Cancel key
 KEYCODE_MOUSE_ASSISTANT = 2732
 ```
 
-Mouse AI assistant key.
-
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
+鼠标AI助手键。
 
 **Since:** 26.0.0
 
@@ -4654,11 +4650,7 @@ Mouse AI assistant key.
 KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733
 ```
 
-Mouse smart selection key.
-
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
+鼠标智慧框选键。
 
 **Since:** 26.0.0
 
@@ -4676,11 +4668,7 @@ Mouse smart selection key.
 KEYCODE_AOD_SINGLE_CLICK = 2740
 ```
 
-Phone touchscreen single-click event, used in Always-On Display (AOD) mode.
-
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
+手机触摸屏单击事件，在熄屏显示状态下使用。
 
 **Since:** 26.0.0
 
@@ -4698,7 +4686,7 @@ Phone touchscreen single-click event, used in Always-On Display (AOD) mode.
 KEYCODE_FRONT = 2800
 ```
 
-Front key, which is used to launch the windshield defogger
+挡风玻璃除雾器开关。
 
 **Since:** 9
 
@@ -4714,7 +4702,7 @@ Front key, which is used to launch the windshield defogger
 KEYCODE_SETUP = 2801
 ```
 
-Setup key
+设置键。
 
 **Since:** 9
 
@@ -4730,7 +4718,7 @@ Setup key
 KEYCODE_WAKEUP = 2802
 ```
 
-Wakeup key
+唤醒键。
 
 **Since:** 9
 
@@ -4746,7 +4734,7 @@ Wakeup key
 KEYCODE_SENDFILE = 2803
 ```
 
-Send File key
+发送文件按键。
 
 **Since:** 9
 
@@ -4762,7 +4750,7 @@ Send File key
 KEYCODE_DELETEFILE = 2804
 ```
 
-Delete File key
+删除文件按键。
 
 **Since:** 9
 
@@ -4778,7 +4766,7 @@ Delete File key
 KEYCODE_XFER = 2805
 ```
 
-XFER key, which is used to start file transfer
+文件传输（XFER）按键。
 
 **Since:** 9
 
@@ -4794,7 +4782,7 @@ XFER key, which is used to start file transfer
 KEYCODE_PROG1 = 2806
 ```
 
-Program key 1
+程序键1。
 
 **Since:** 9
 
@@ -4810,7 +4798,7 @@ Program key 1
 KEYCODE_PROG2 = 2807
 ```
 
-Program key 2
+程序键2。
 
 **Since:** 9
 
@@ -4826,7 +4814,7 @@ Program key 2
 KEYCODE_MSDOS = 2808
 ```
 
-DOS key
+DOS面板键。
 
 **Since:** 9
 
@@ -4842,7 +4830,7 @@ DOS key
 KEYCODE_SCREENLOCK = 2809
 ```
 
-Screen Lock key
+屏幕锁定键。
 
 **Since:** 9
 
@@ -4858,7 +4846,7 @@ Screen Lock key
 KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810
 ```
 
-Directional Rotation Display key
+方向旋转显示键。
 
 **Since:** 9
 
@@ -4874,7 +4862,7 @@ Directional Rotation Display key
 KEYCODE_CYCLEWINDOWS = 2811
 ```
 
-Window Cycle key
+窗口切换键。
 
 **Since:** 9
 
@@ -4890,7 +4878,7 @@ Window Cycle key
 KEYCODE_COMPUTER = 2812
 ```
 
-Key
+按键。
 
 **Since:** 9
 
@@ -4906,7 +4894,7 @@ Key
 KEYCODE_EJECTCLOSECD = 2813
 ```
 
-Eject CD key
+弹出CD键。
 
 **Since:** 9
 
@@ -4922,7 +4910,7 @@ Eject CD key
 KEYCODE_ISO = 2814
 ```
 
-ISO key
+ISO键。
 
 **Since:** 9
 
@@ -4938,7 +4926,7 @@ ISO key
 KEYCODE_MOVE = 2815
 ```
 
-Move key
+移动键。
 
 **Since:** 9
 
@@ -4954,7 +4942,7 @@ Move key
 KEYCODE_F13 = 2816
 ```
 
-F13 key
+按键'F13'。
 
 **Since:** 9
 
@@ -4970,7 +4958,7 @@ F13 key
 KEYCODE_F14 = 2817
 ```
 
-F14 key
+按键'F14'。
 
 **Since:** 9
 
@@ -4986,7 +4974,7 @@ F14 key
 KEYCODE_F15 = 2818
 ```
 
-F15 key
+按键'F15'。
 
 **Since:** 9
 
@@ -5002,7 +4990,7 @@ F15 key
 KEYCODE_F16 = 2819
 ```
 
-F16 key
+按键'F16'。
 
 **Since:** 9
 
@@ -5018,7 +5006,7 @@ F16 key
 KEYCODE_F17 = 2820
 ```
 
-F17 key
+按键'F17'。
 
 **Since:** 9
 
@@ -5034,7 +5022,7 @@ F17 key
 KEYCODE_F18 = 2821
 ```
 
-F18 key
+按键'F18'。
 
 **Since:** 9
 
@@ -5050,7 +5038,7 @@ F18 key
 KEYCODE_F19 = 2822
 ```
 
-F19 key
+按键'F19'。
 
 **Since:** 9
 
@@ -5066,7 +5054,7 @@ F19 key
 KEYCODE_F20 = 2823
 ```
 
-F20 key
+按键'F20'。
 
 **Since:** 9
 
@@ -5082,7 +5070,7 @@ F20 key
 KEYCODE_F21 = 2824
 ```
 
-F21 key
+按键'F21'。
 
 **Since:** 9
 
@@ -5098,7 +5086,7 @@ F21 key
 KEYCODE_F22 = 2825
 ```
 
-F22 key
+按键'F22'。
 
 **Since:** 9
 
@@ -5114,7 +5102,7 @@ F22 key
 KEYCODE_F23 = 2826
 ```
 
-F23 key
+按键'F23'。
 
 **Since:** 9
 
@@ -5130,7 +5118,7 @@ F23 key
 KEYCODE_F24 = 2827
 ```
 
-F24 key
+按键'F24'。
 
 **Since:** 9
 
@@ -5146,7 +5134,7 @@ F24 key
 KEYCODE_PROG3 = 2828
 ```
 
-Program key 3
+程序键3。
 
 **Since:** 9
 
@@ -5162,7 +5150,7 @@ Program key 3
 KEYCODE_PROG4 = 2829
 ```
 
-Program key 4
+程序键4。
 
 **Since:** 9
 
@@ -5178,7 +5166,7 @@ Program key 4
 KEYCODE_DASHBOARD = 2830
 ```
 
-Dashboard key
+仪表板。
 
 **Since:** 9
 
@@ -5194,7 +5182,7 @@ Dashboard key
 KEYCODE_SUSPEND = 2831
 ```
 
-Suspend key
+挂起键。
 
 **Since:** 9
 
@@ -5210,7 +5198,7 @@ Suspend key
 KEYCODE_HP = 2832
 ```
 
-HP key
+高阶路径键。
 
 **Since:** 9
 
@@ -5226,7 +5214,7 @@ HP key
 KEYCODE_SOUND = 2833
 ```
 
-Sound key
+音量键。
 
 **Since:** 9
 
@@ -5242,7 +5230,7 @@ Sound key
 KEYCODE_QUESTION = 2834
 ```
 
-Question key
+疑问按键。
 
 **Since:** 9
 
@@ -5258,7 +5246,7 @@ Question key
 KEYCODE_CONNECT = 2836
 ```
 
-Connect key
+连接键。
 
 **Since:** 9
 
@@ -5274,7 +5262,7 @@ Connect key
 KEYCODE_SPORT = 2837
 ```
 
-Sport key
+运动按键。
 
 **Since:** 9
 
@@ -5290,7 +5278,7 @@ Sport key
 KEYCODE_SHOP = 2838
 ```
 
-Shop key
+商城键。
 
 **Since:** 9
 
@@ -5306,7 +5294,7 @@ Shop key
 KEYCODE_ALTERASE = 2839
 ```
 
-Alternate key
+交替键。
 
 **Since:** 9
 
@@ -5322,7 +5310,7 @@ Alternate key
 KEYCODE_SWITCHVIDEOMODE = 2841
 ```
 
-Switch Video Mode key (monitor, LCD, and TV, etc.)
+在可用视频之间循环输出（监视器/LCD/TV输出/等）。
 
 **Since:** 9
 
@@ -5338,7 +5326,7 @@ Switch Video Mode key (monitor, LCD, and TV, etc.)
 KEYCODE_BATTERY = 2842
 ```
 
-Battery key
+电池按键。
 
 **Since:** 9
 
@@ -5354,7 +5342,7 @@ Battery key
 KEYCODE_BLUETOOTH = 2843
 ```
 
-Bluetooth key
+蓝牙按键。
 
 **Since:** 9
 
@@ -5370,7 +5358,7 @@ Bluetooth key
 KEYCODE_WLAN = 2844
 ```
 
-WLAN key
+无线局域网。
 
 **Since:** 9
 
@@ -5386,7 +5374,7 @@ WLAN key
 KEYCODE_UWB = 2845
 ```
 
-Ultra-wideband key
+超宽带控制键。
 
 **Since:** 9
 
@@ -5402,7 +5390,7 @@ Ultra-wideband key
 KEYCODE_WWAN_WIMAX = 2846
 ```
 
-Mobile Network Control key
+移动网络控制键。
 
 **Since:** 9
 
@@ -5418,7 +5406,7 @@ Mobile Network Control key
 KEYCODE_RFKILL = 2847
 ```
 
-RF Kill key
+控制所有收音机的键。
 
 **Since:** 9
 
@@ -5434,7 +5422,7 @@ RF Kill key
 KEYCODE_CHANNEL = 3001
 ```
 
-Channel key
+向上频道键。
 
 **Since:** 9
 
@@ -5450,7 +5438,7 @@ Channel key
 KEYCODE_BTN_0 = 3100
 ```
 
-Button 0
+按键0。
 
 **Since:** 9
 
@@ -5466,7 +5454,7 @@ Button 0
 KEYCODE_BTN_1 = 3101
 ```
 
-Button 1
+按键1。
 
 **Since:** 9
 
@@ -5482,7 +5470,7 @@ Button 1
 KEYCODE_BTN_2 = 3102
 ```
 
-Button 2
+按键2。
 
 **Since:** 9
 
@@ -5498,7 +5486,7 @@ Button 2
 KEYCODE_BTN_3 = 3103
 ```
 
-Button 3
+按键3。
 
 **Since:** 9
 
@@ -5514,7 +5502,7 @@ Button 3
 KEYCODE_BTN_4 = 3104
 ```
 
-Button 4
+按键4。
 
 **Since:** 9
 
@@ -5530,7 +5518,7 @@ Button 4
 KEYCODE_BTN_5 = 3105
 ```
 
-Button 5
+按键5。
 
 **Since:** 9
 
@@ -5546,7 +5534,7 @@ Button 5
 KEYCODE_BTN_6 = 3106
 ```
 
-Button 6
+按键6。
 
 **Since:** 9
 
@@ -5562,7 +5550,7 @@ Button 6
 KEYCODE_BTN_7 = 3107
 ```
 
-Button 7
+按键7。
 
 **Since:** 9
 
@@ -5578,7 +5566,7 @@ Button 7
 KEYCODE_BTN_8 = 3108
 ```
 
-Button 8
+按键8。
 
 **Since:** 9
 
@@ -5594,7 +5582,7 @@ Button 8
 KEYCODE_BTN_9 = 3109
 ```
 
-Button 9
+按键9。
 
 **Since:** 9
 
@@ -5610,7 +5598,7 @@ Button 9
 KEYCODE_DAGGER_CLICK = 3211
 ```
 
-Single tapping the smart watch's X-TAP sensor
+智能手表智感窗按键单击。
 
 **Since:** 18
 
@@ -5626,7 +5614,7 @@ Single tapping the smart watch's X-TAP sensor
 KEYCODE_DAGGER_DOUBLE_CLICK = 3212
 ```
 
-Double tapping the smart watch's X-TAP sensor
+智能手表智感窗按键双击。
 
 **Since:** 18
 
@@ -5642,7 +5630,7 @@ Double tapping the smart watch's X-TAP sensor
 KEYCODE_DAGGER_LONG_PRESS = 3213
 ```
 
-Long-pressing the smart watch's X-TAP sensor
+智能手表智感窗按键长按。
 
 **Since:** 18
 
@@ -5658,7 +5646,7 @@ Long-pressing the smart watch's X-TAP sensor
 KEYCODE_DIV = 3220
 ```
 
-Left button of the smart watch
+智能手表左按键。
 
 **Since:** 20
 
@@ -5674,11 +5662,7 @@ Left button of the smart watch
 KEYCODE_XKEY = 3232
 ```
 
-Custom hotkey
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can only be used in the stage model.
+自定义快捷键。
 
 **Since:** 26.0.0
 
@@ -5696,11 +5680,7 @@ Custom hotkey
 KEYCODE_FINGERPRINT_SLIDE_UP = 3233
 ```
 
-Smart control key slide-up
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can only be used in the stage model.
+智控键上滑。
 
 **Since:** 26.0.0
 
@@ -5718,11 +5698,7 @@ Smart control key slide-up
 KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234
 ```
 
-Smart control key slide-down
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can only be used in the stage model.
+智控键下滑。
 
 **Since:** 26.0.0
 

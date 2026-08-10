@@ -1,6 +1,6 @@
 # DecodingOptions
 
-Describes the image decoding options.
+图像解码设置选项。
 
 **Since:** 7
 
@@ -10,17 +10,23 @@ Describes the image decoding options.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## cropAndScaleStrategy
 
 ```TypeScript
 cropAndScaleStrategy?: CropAndScaleStrategy
 ```
 
-If **desiredRegion** and **desiredSize** are both specified, the order of cropping and scaling is determined.
+解码参数如果同时设置desiredRegion与desiredSize，由此决定裁剪与缩放操作的先后策略。
 
-Only **SCALE\_FIRST** and **CROP\_FIRST** are supported.
+仅支持设置：SCALE_FIRST、CROP_FIRST。
 
-**Type:** CropAndScaleStrategy
+**Type:** [CropAndScaleStrategy](arkts-image-image-cropandscalestrategy-e.md)
 
 **Since:** 18
 
@@ -36,7 +42,7 @@ Only **SCALE\_FIRST** and **CROP\_FIRST** are supported.
 desiredColorSpace?: colorSpaceManager.ColorSpaceManager
 ```
 
-Target color space. The default value is **UNKNOWN**.
+目标色彩空间。默认值为UNKNOWN。
 
 **Type:** colorSpaceManager.ColorSpaceManager
 
@@ -54,14 +60,13 @@ Target color space. The default value is **UNKNOWN**.
 desiredDynamicRange?: DecodingDynamicRange
 ```
 
-Desired dynamic range. The default value is **SDR**.
+目标动态范围，默认值为SDR。
 
-This property cannot be set for an image source created using  
-[CreateIncrementalSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. By default, the image source is decoded as SDR content.
+通过[CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource)创建的ImageSource不支持设置此属性，默认解码为SDR内容。
 
-If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
+如果平台不支持HDR，设置无效，默认解码为SDR内容。
 
-**Type:** DecodingDynamicRange
+**Type:** [DecodingDynamicRange](arkts-image-image-decodingdynamicrange-e.md)
 
 **Since:** 12
 
@@ -77,9 +82,9 @@ If the platform does not support HDR, the setting is invalid and the content is 
 desiredPixelFormat?: PixelMapFormat
 ```
 
-Pixel format for decoding. The default value is **RGBA\_8888**. Only RGBA\_8888, BGRA\_8888, and RGB\_565 are supported. RGB\_565 is not supported for images with alpha channels, such as PNG, GIF, ICO, and WEBP.
+解码的像素格式。默认值为RGBA_8888。仅支持设置：RGBA_8888、BGRA_8888和RGB_565。有透明通道图片格式不支持设置RGB_565，如PNG、GIF、ICO和WEBP。
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **Since:** 7
 
@@ -99,12 +104,11 @@ Pixel format for decoding. The default value is **RGBA\_8888**. Only RGBA\_8888,
 desiredRegion?: Region
 ```
 
-Rectangle specified by **Region** in the decoded image. When the original image is large and only a specific part of the image is required, you can set this parameter to improve performance. The default value is the original image size.
+解码图像中由Region指定的矩形区域，当原始图像很大而只需要解码图像的一部分时，可以设置该参数，有助于提升性能，默认为原始大小。
 
-Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include  
-**cropAndScaleStrategy** to determine whether to crop or scale first. **CROP\_FIRST** is recommended.
+注意：若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
 
-**Type:** Region
+**Type:** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
 
 **Since:** 7
 
@@ -124,12 +128,11 @@ Note: If both **desiredSize** and **desiredRegion** are passed to the decoding A
 desiredSize?: Size
 ```
 
-Expected output size. The value must be a positive integer and defaults to the original image size. If the output size is different from the original size, the output is stretched or scaled to the specified size.
+期望输出大小，必须为正整数，若与原尺寸比例不一致，则会进行拉伸/缩放到指定尺寸，默认为原始尺寸。
 
-Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include  
-**cropAndScaleStrategy** to determine whether to crop or scale first. **CROP\_FIRST** is recommended.
+注意：若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
 
-**Type:** Size
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **Since:** 7
 
@@ -149,7 +152,9 @@ Note: If both **desiredSize** and **desiredRegion** are passed to the decoding A
 editable?: boolean
 ```
 
-Whether the image is editable. **true** if editable, **false** otherwise. The default value is **false**. If this option is set to **false**, the image cannot be edited again, and operations such as writing pixels will fail.
+图像像素是否可被编辑。true表示可被编辑，false表示不可被编辑，默认值为false。
+
+当取值为false时，可提升图像的渲染和传输性能，但是图像不可被二次编辑。例如，writePixels操作将失败。
 
 **Type:** boolean
 
@@ -171,9 +176,9 @@ Whether the image is editable. **true** if editable, **false** otherwise. The de
 fitDensity?: int
 ```
 
-Pixel density, in ppi. The default value is **0**.
+图像像素密度。单位：ppi（像素/英寸）。默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -193,9 +198,9 @@ Pixel density, in ppi. The default value is **0**.
 index?: int
 ```
 
-Index of the image to decode. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1).
+解码图片序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为：[0, (帧数-1)]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -215,9 +220,9 @@ Index of the image to decode. The default value is **0**, indicating the first i
 rotate?: int
 ```
 
-Rotation angle. The default value is **0**.
+旋转角度。单位：角度（deg）。默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -237,9 +242,9 @@ Rotation angle. The default value is **0**.
 sampleSize?: int
 ```
 
-Sampling size of the thumbnail. The default value is **1**. Currently, the value can only be **1**.
+缩略图采样大小，默认值为1。当前只能取1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 

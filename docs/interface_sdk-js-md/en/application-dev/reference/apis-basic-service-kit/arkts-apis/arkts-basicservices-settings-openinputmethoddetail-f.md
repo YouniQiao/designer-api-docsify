@@ -1,5 +1,11 @@
 # openInputMethodDetail
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## openInputMethodDetail
 
 ```TypeScript
@@ -22,7 +28,7 @@ Open the input method detail page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
 | bundleName | string | Yes | bundle name of the input method. |
 | inputMethodId | string | Yes | id of the input method. |
 
@@ -30,9 +36,9 @@ Open the input method detail page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
+| 16900010 | Parameter error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

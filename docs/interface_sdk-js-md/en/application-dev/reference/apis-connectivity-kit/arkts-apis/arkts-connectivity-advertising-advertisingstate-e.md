@@ -1,6 +1,6 @@
 # AdvertisingState
 
-The enum of advertising state.
+广播状态的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of advertising state.
 STARTED = 1
 ```
 
-Indicates that advertising has started.
+广播已开始。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Indicates that advertising has started.
 STOPPED = 2
 ```
 
-Indicates that advertising has stopped.
+广播已停止。
 
 **Since:** 26.0.0
 

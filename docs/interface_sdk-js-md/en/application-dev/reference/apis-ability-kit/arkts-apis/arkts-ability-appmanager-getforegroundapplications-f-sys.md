@@ -1,13 +1,18 @@
 # getForegroundApplications (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getForegroundApplications
 
 ```TypeScript
 function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void
 ```
 
-Obtains applications that are running in the foreground. The application information is defined by  
-[AppStateData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses an asynchronous callback to return the result.
+获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appmanager-appstatedata-t.md)定义。使用callback异步回调。
 
 **Since:** 9
 
@@ -25,18 +30,18 @@ Obtains applications that are running in the foreground. The application informa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;AppStateData&gt;&gt; | Yes | Callback used to return the API call result and an array holding the application state data. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppStateData&gt;&gt; | Yes | 以回调方式返回接口运行结果及应用状态数据数组，可进行错误处理或其他自定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -66,8 +71,7 @@ try {
 function getForegroundApplications(): Promise<Array<AppStateData>>
 ```
 
-Obtains applications that are running in the foreground. The application information is defined by  
-[AppStateData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appmanager-appstatedata-t.md)定义。使用Promise异步回调。
 
 **Since:** 9
 
@@ -85,17 +89,17 @@ Obtains applications that are running in the foreground. The application informa
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppStateData&gt;&gt; | Promise used to return an array holding the application state data. |
+| Promise&lt;Array&lt;AppStateData&gt;&gt; | 返回前台进程应用程序的数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

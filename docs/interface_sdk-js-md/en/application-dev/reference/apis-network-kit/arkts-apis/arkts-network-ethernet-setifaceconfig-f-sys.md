@@ -1,5 +1,11 @@
 # setIfaceConfig (System API)
 
+## Modules to Import
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
 ## setIfaceConfig
 
 ```TypeScript
@@ -25,25 +31,25 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the ic. See \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of setIfaceConfig. |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See {@link InterfaceConfiguration}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setIfaceConfig. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2100001 | Invalid parameter value. |
+| 2200003 | System internal error. |
+| 2200002 | Failed to connect to the service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2201005 | Device information does not exist. |
 | 2201004 | Invalid Ethernet profile. |
-| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
-| [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
-| [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
+| 2201007 | Ethernet failed to write user configuration information. |
+| 2201006 | Ethernet device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';
@@ -93,7 +99,7 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the ic. See \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See {@link InterfaceConfiguration}. |
 
 **Return value:**
 
@@ -105,18 +111,18 @@ Set the specified network interface parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2100001 | Invalid parameter value. |
+| 2200003 | System internal error. |
+| 2200002 | Failed to connect to the service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2201005 | Device information does not exist. |
 | 2201004 | Invalid Ethernet profile. |
-| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
-| [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
-| [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
+| 2201007 | Ethernet failed to write user configuration information. |
+| 2201006 | Ethernet device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';

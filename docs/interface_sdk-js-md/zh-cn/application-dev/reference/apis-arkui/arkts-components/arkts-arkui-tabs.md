@@ -10,18 +10,19 @@
 
 ## 子组件
 
-仅支持子组件[TabContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_，以及渲染控制类型  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_和  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_，不建议自定义组件作为子组件。并且if/else和ForEach下也仅支持TabContent作为子组件，不建议自定义组件作为子组件。
-    **说明：**  
-    
-    Tabs子组件设置了通用属性[visibility]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_的值为None，或者设置值为Hidden时，对应子组件不显示，但依然会在视窗内占位。  
-    
-    已经显示的Tabs子组件TabContent后续隐藏时不会被销毁，若需要页面懒加载和释放，可以参考  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_。  
-    
-    Tabs设置[height]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_为auto时，可根据子组件高度自适应高度大小。设置  
-    [width]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_为auto时，可根据子组件宽度自适应宽度大小。
+仅支持子组件[TabContent]{@link tab_content}，以及渲染控制类型  
+[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)和  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)，不建议自定义组件作为子组件。并且if/else和ForEach下也仅支持TabContent作为子组件，不建议自定义组件作为子组件。
+
+> **说明：**
+> 
+> Tabs子组件设置了通用属性[visibility]{@link CommonMethod#visibility}的值为None，或者设置值为Hidden时，对应子组件不显示，但依然会在视窗内占位。
+> 
+> 已经显示的Tabs子组件TabContent后续隐藏时不会被销毁，若需要页面懒加载和释放，可以参考
+> [示例13](docroot://reference/apis-arkui/arkui-ts/ts-container-tabs.md#示例13页面懒加载和释放)。
+> 
+> Tabs设置[height]{@link CommonMethod#height(value: Length)}为auto时，可根据子组件高度自适应高度大小。设置
+> [width]{@link CommonMethod#width(value: Length)}为auto时，可根据子组件宽度自适应宽度大小。
 
 ## Tabs
 
@@ -45,7 +46,30 @@ Tabs(options?: TabsOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
+| options | [TabsOptions](../arkts-apis/arkts-arkui-tabs-tabsoptions-i.md) | 否 | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
 
 ## 汇总
 
+- [BarGridColumnOptions](arkts-arkui-tabs-bargridcolumnoptions-i.md)
+- [DividerStyle](arkts-arkui-tabs-dividerstyle-i.md)
+- [FloatingTabBarStyle](arkts-arkui-tabs-floatingtabbarstyle-i.md)
+- [FloatingTabBarWidth](arkts-arkui-tabs-floatingtabbarwidth-i.md)
+- [ScrollableBarModeOptions](arkts-arkui-tabs-scrollablebarmodeoptions-i.md)
+- [TabContentAnimatedTransition](arkts-arkui-tabs-tabcontentanimatedtransition-i.md)
+- [TabContentTransitionProxy](arkts-arkui-tabs-tabcontenttransitionproxy-i.md)
+- [TabsAnimationEvent](arkts-arkui-tabs-tabsanimationevent-i.md)
+- [TabsOptions](arkts-arkui-tabs-tabsoptions-i.md)
+- [CommonModifier](arkts-arkui-tabs-commonmodifier-t.md)
+- [OnTabsAnimationEndCallback](arkts-arkui-tabs-ontabsanimationendcallback-t.md)
+- [OnTabsAnimationStartCallback](arkts-arkui-tabs-ontabsanimationstartcallback-t.md)
+- [OnTabsContentDidScrollCallback](arkts-arkui-tabs-ontabscontentdidscrollcallback-t.md)
+- [OnTabsContentWillChangeCallback](arkts-arkui-tabs-ontabscontentwillchangecallback-t.md)
+- [OnTabsGestureSwipeCallback](arkts-arkui-tabs-ontabsgestureswipecallback-t.md)
+- [TabsCustomContentTransitionCallback](arkts-arkui-tabs-tabscustomcontenttransitioncallback-t.md)
+- [UIMaterial](arkts-arkui-tabs-uimaterial-t.md)
+- [AnimationMode](arkts-arkui-tabs-animationmode-e.md)
+- [BarMode](arkts-arkui-tabs-barmode-e.md)
+- [BarPosition](arkts-arkui-tabs-barposition-e.md)
+- [LayoutStyle](arkts-arkui-tabs-layoutstyle-e.md)
+- [TabsCacheMode](arkts-arkui-tabs-tabscachemode-e.md)
+- [TabsNestedScrollMode](arkts-arkui-tabs-tabsnestedscrollmode-e.md)

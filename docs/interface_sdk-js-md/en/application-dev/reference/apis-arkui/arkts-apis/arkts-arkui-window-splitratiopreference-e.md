@@ -1,6 +1,6 @@
 # SplitRatioPreference
 
-Describes the type of split ratio preference.
+描述分屏窗口分屏比例
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Describes the type of split ratio preference.
 EQUAL = 0
 ```
 
-Equal split ratio preference of the window.
+分屏窗口比例相等
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Equal split ratio preference of the window.
 PRIMARY_DOMINANT = 1
 ```
 
-Set primary split window to a larger split ratio.
+将主窗口设置为较大的分屏比例。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Set primary split window to a larger split ratio.
 SECONDARY_DOMINANT = 2
 ```
 
-Set secondary split window to a larger split ratio.
+将次窗口设置为较大的分屏比例。
 
 **Since:** 26.0.0
 

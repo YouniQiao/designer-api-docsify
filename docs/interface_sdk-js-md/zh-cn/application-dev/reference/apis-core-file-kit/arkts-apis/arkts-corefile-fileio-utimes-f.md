@@ -1,5 +1,11 @@
 # utimes
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## utimes
 
 ```TypeScript
@@ -27,10 +33,10 @@ function utimes(path: string, mtime: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900020 | Invalid argument |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900020 | Invalid argument |
-| 13900027 | Read-only file system |
 | 13900042 | Unknown error |
+| 13900027 | Read-only file system |
 

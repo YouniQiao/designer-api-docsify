@@ -1,26 +1,29 @@
 # setEventConfig
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setEventConfig
 
 ```TypeScript
 function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>
 ```
 
-Sets event configuration. This method uses a promise to return the result. In the same lifecycle, you can set event configuration by event name.
+事件相关的配置参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件名称，设置事件相关的配置参数。
 
-Configuration items vary depending on events. Currently, only the following events are supported:
+不同的事件有不同的配置项，目前仅支持以下事件：
 
-- **MAIN\_THREAD\_JANK** (For details about the parameter configuration, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.)  
-- **APP\_CRASH** (For details about the parameter configuration, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.)  
-- **RESOURCE\_OVERLIMIT** (For details about the parameter configuration, see  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.)
-    **NOTE**  
-    
-    Since API version 26.0.0, all settings of this API are supported by  
-    [configEventPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_. You are advised to use  
-    [configEventPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
+- MAIN_THREAD_JANK（参数配置详见  
+[主线程超时事件检测](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#seteventconfig接口参数设置说明)）  
+- APP_CRASH（参数配置详见[崩溃日志配置参数设置介绍](../../../dfx/hiappevent-watcher-crash-events.md#自定义规格设置)）  
+- RESOURCE_OVERLIMIT（参数配置详见[资源泄漏事件检测](../../../dfx/hiappevent-watcher-resourceleak-events.md#自定义规格设置)）
+
+> **说明：**
+> 
+> 从API版本26.0.0开始，configEventPolicy已支持本接口所有设置，推荐使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy)。
 
 **Since:** 15
 
@@ -36,22 +39,22 @@ Configuration items vary depending on events. Currently, only the following even
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Event name. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, ParamType&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The parameter name contains a maximum of 1024 characters, which is of the string type and cannot be empty.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The parameter value is of the ParamType and contains a maximum of 1024 characters. |
+| name | string | Yes | 事件名称。 |
+| config | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ParamType&gt; | Yes | 事件自定义参数对象。参数名和参数值规格定义如下： &lt;br&gt;- 参数名为string类型，要求非空，且参数名长度需在1024个字符以内。 &lt;br&gt;- 参数值为ParamType类型，参数值长度需在1024个字符以内。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 The following example sets the collection stack parameters of the MAIN_THREAD_JANK event:
 
@@ -69,7 +72,7 @@ let params: Record<string, hiAppEvent.ParamType> = {
 hiAppEvent.setEventConfig(hiAppEvent.event.MAIN_THREAD_JANK, params).then(() => {
   hilog.info(0x0000, 'hiAppEvent', `Successfully set sampling stack parameters.`);
 }).catch((err: BusinessError) => {
-hilog.error(0x0000, 'hiAppEvent', `Failed to set sample stack value. Code: ${err.code}, message: ${err.message}`);
+  hilog.error(0x0000, 'hiAppEvent', `Failed to set sample stack value. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

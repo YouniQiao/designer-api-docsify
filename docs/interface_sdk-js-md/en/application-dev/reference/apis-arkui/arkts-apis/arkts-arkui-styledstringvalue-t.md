@@ -6,7 +6,7 @@ TextShadowStyle | GestureStyle | ImageAttachment | ParagraphStyle | LineHeightSt
 UserDataSpan | BackgroundColorStyle | LineSpacingStyle
 ```
 
-Defines the style for a styled string.
+样式对象类型，用于设置属性字符串的样式。
 
 **Since:** 12
 
@@ -22,18 +22,18 @@ Defines the style for a styled string.
 
 | Type | Description |
 | --- | --- |
-| TextStyle | Text style. |
-| DecorationStyle | Text decorative line style. |
-| BaselineOffsetStyle | Text baseline offset style. |
-| LetterSpacingStyle | Text letter spacing style. |
-| TextShadowStyle | Text shadow style. |
-| GestureStyle | Gesture style. |
-| ImageAttachment | Image style. |
-| ParagraphStyle | Text paragraph style. |
-| LineHeightStyle | Text line height style. |
-| UrlStyle | URL style. [since 14] |
-| CustomSpan | Custom span style. |
-| UserDataSpan | User data span style. |
-| BackgroundColorStyle | Text background color style. [since 14] |
-| LineSpacingStyle | Text line spacing style. **Since**: 26.0.0 [since 26.0.0] |
+| TextStyle | 文本字体样式。 |
+| DecorationStyle | 文本装饰线样式。 |
+| BaselineOffsetStyle | 文本基线偏移量样式。 |
+| LetterSpacingStyle | 文本字符间距样式。 |
+| TextShadowStyle | 文本阴影样式。 |
+| GestureStyle | 事件手势样式。 |
+| ImageAttachment | 图片样式。 |
+| ParagraphStyle | 文本段落样式。 |
+| LineHeightStyle | 文本行高样式。 |
+| UrlStyle | 超链接样式。 [since 14] |
+| CustomSpan | 自定义绘制Span样式。 |
+| UserDataSpan | UserDataSpan样式。 |
+| BackgroundColorStyle | 文本背景颜色样式。 [since 14] |
+| LineSpacingStyle | 文本行间距样式。 [since 26.0.0] |
 

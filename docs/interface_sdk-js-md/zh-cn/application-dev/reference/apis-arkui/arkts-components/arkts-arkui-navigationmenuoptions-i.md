@@ -18,7 +18,7 @@ moreButtonOptions?: MoreButtonOptions
 
 页面右上角菜单选项。
 
-**类型：** MoreButtonOptions
+**类型：** [MoreButtonOptions](../arkts-apis/arkts-arkui-navigation-morebuttonoptions-i.md)
 
 **起始版本：** 19
 

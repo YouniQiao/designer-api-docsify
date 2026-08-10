@@ -18,7 +18,7 @@ maxHeight?: Length
 
 Defines the max height.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ maxWidth?: Length
 
 Defines the max width.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 
@@ -62,7 +62,7 @@ minHeight?: Length
 
 Defines the min height.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 
@@ -84,7 +84,7 @@ minWidth?: Length
 
 Defines the min width.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 

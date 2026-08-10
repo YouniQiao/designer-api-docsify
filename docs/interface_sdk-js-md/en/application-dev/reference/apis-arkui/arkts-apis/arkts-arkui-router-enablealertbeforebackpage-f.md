@@ -1,12 +1,23 @@
 # enableAlertBeforeBackPage
 
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
 ## enableAlertBeforeBackPage
 
 ```TypeScript
 function enableAlertBeforeBackPage(options: EnableAlertOptions): void
 ```
 
-Enables the display of a confirm dialog box before returning to the previous page.
+开启页面返回询问对话框。调用此方法后，执行[back](#routerbackdeprecated)返回页面时将弹出确认对话框，用户确认后才执行页面返回操作。适用于需要防止用户误操作返回导致数据丢失的场景，例如用户正在填写表单、编辑文档或进行支付操作时，弹出确认对话框以避免意外退出。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)替代。
 
 **Since:** 8
 
@@ -24,17 +35,21 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Description of the dialog box. |
+| options | [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | Yes | 文本弹窗信息描述。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 router.enableAlertBeforeBackPage({
   message: 'Message Info'
 });
 ```
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 router.enableAlertBeforeBackPage({
   message: 'Message Info'
 });

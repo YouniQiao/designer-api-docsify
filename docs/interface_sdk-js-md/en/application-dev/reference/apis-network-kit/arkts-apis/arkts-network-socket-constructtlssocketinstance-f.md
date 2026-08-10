@@ -1,5 +1,11 @@
 # constructTLSSocketInstance
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## constructTLSSocketInstance
 
 ```TypeScript
@@ -20,9 +26,9 @@ Creates a TLSSocket object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the TLSSocket of the constructTLSSocketInstance. |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) | the TLSSocket of the constructTLSSocketInstance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -51,24 +57,24 @@ Creates a TLSSocket object with a TCPSocket object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tcpSocket | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameter for creating a TLSSocket object. |
+| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes | Parameter for creating a TLSSocket object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the TLSSocket of the constructTLSSocketInstance. |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) | the TLSSocket of the constructTLSSocketInstance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| 2303601 | Invalid socket FD. |
+| 401 | Parameter error. |
+| 2300002 | System internal error. |
 | 2303602 | Socket is not connected. |
+| 2303601 | Invalid socket FD. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

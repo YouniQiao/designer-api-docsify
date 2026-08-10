@@ -1,6 +1,6 @@
 # NavPathInfo
 
-Provides the navigation page information.
+路由页面信息。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Provides the navigation page information.
 constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Callback<PopInfo>, isEntry?: boolean)
 ```
 
-Creates a **NavPathInfo** object.
+创建NavPathInfo对象。
 
 **Since:** 10
 
@@ -34,10 +34,10 @@ Creates a **NavPathInfo** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the navigation destination page. The name matches the name in the following route tables:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Custom route table, which is passed via the [navDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ method.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. System route table, which is set by **name** in **routerMap**. For details, please refer to \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | No | Callback returned when [pop]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [popToName]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, or [popToIndex]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [popToName]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, or [popToIndex]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| isEntry | boolean | No | Whether the navigation destination page is the entry page.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true**: yes; **false**: no\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value of this parameter is reviewed or reset under the following conditions:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. A global return event is triggered on the current navigation destination page.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. The application is switched to the background.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| name | string | Yes | NavDestination页面名称。该名称匹配开发者设置的路由表中的name，包括以下两种：&lt;br/&gt;1. 自定义路由表，开发者通过 [navDestination](NavigationAttribute#navDestination)方法传递。&lt;br/&gt;2. 系统路由表，通过routerMap中的name设置，可参考 [示例2](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例2使用导航控制器方法)。 |
+| param | unknown | Yes | 开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。 |
+| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | No | NavDestination页面触发 [pop](arkts-arkui-navpathstack-c.md#pop)、 [popToName](arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)时返回的回调。仅 [pop](arkts-arkui-navpathstack-c.md#pop)、 [popToName](arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触 发。<br>**Since:** 11 |
+| isEntry | boolean | No | 标记NavDestination是否为入口页面。&lt;br/&gt;true：NavDestination是入口页面；false：NavDestination不是入口页面。&lt;br/ &gt;默认值：false &lt;br/&gt;标记清理时机：1. 在当前navDestination页面触发一次全局返回事件。2. 应用退至后台。&lt;br/&gt;**说明：**&lt;br/&gt;入口NavDestination不响应应用内的全局 back事件，直接触发应用间的全局back事件。<br>**Since:** 12 |
 
 ## isEntry
 
@@ -45,19 +45,17 @@ Creates a **NavPathInfo** object.
 isEntry?: boolean
 ```
 
-Whether the navigation destination page is the entry page.
+标记NavDestination是否为入口页面。
 
-**true**: yes; **false**: no
+true：NavDestination是入口页面；false：NavDestination不是入口页面。
 
-Default value: **false**
+默认值：false
 
-The value of this parameter is reviewed or reset under the following conditions:
+标记清理时机：1. 在当前navDestination页面触发一次全局back事件。2. 应用退至后台。
 
-1. A global back event is triggered on the current navigation destination page.2. The application is switched to the background.
+**说明：**
 
-**NOTE**
-
-The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.
+入口NavDestination不响应应用内的全局back事件，直接触发应用间的全局back事件。
 
 **Type:** boolean
 
@@ -79,9 +77,9 @@ The navigation destination page serving as an entry does not respond to the in-a
 name: string
 ```
 
-Name of the navigation destination page. The name matches the name in the following route tables:
+NavDestination页面名称。该名称匹配开发者设置的路由表中的name，包括以下两种：
 
-1. Custom route table, which is passed via the [navDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ method.2. System route table, which is set by **name** in **routerMap**. For details, please refer to \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+1. 自定义路由表，开发者通过[navDestination](NavigationAttribute#navDestination)方法传递。2. 系统路由表，通过routerMap中的name设置，可参考[示例2](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例2使用导航控制器方法)。
 
 **Type:** string
 
@@ -103,7 +101,7 @@ Name of the navigation destination page. The name matches the name in the follow
 navDestinationId?: string
 ```
 
-Unique ID of the navigation destination page. This ID is system-generated and globally unique. It can be obtained using the [getPathStack]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API and should not be manually reassigned.
+NavDestination页面唯一标识符，该id由系统默认生成且全局唯一，通过[getPathStack](arkts-arkui-navpathstack-c.md#getpathstack)接口可读取，但不可以主动赋新值。
 
 **Type:** string
 
@@ -125,12 +123,12 @@ Unique ID of the navigation destination page. This ID is system-generated and gl
 onPop?: import('../api/@ohos.base').Callback<PopInfo>
 ```
 
-Callback returned when [pop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[popToName]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, or  
-[popToIndex]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is called on the navigation destination page. It is triggered only when the **result** parameter is set in  
-[pop]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_,  
-[popToName]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_, or  
-[popToIndex]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_.
+NavDestination页面触发[pop](arkts-arkui-navpathstack-c.md#pop)、  
+[popToName](arkts-arkui-navpathstack-c.md#poptoname)、  
+[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)时返回的回调。仅  
+[pop](arkts-arkui-navpathstack-c.md#pop)、  
+[popToName](arkts-arkui-navpathstack-c.md#poptoname)、  
+[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。
 
 **Type:** import('../api/@ohos.base').Callback&lt;PopInfo&gt;
 
@@ -152,7 +150,7 @@ Callback returned when [pop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,
 param?: unknown
 ```
 
-Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type.
+开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。
 
 **Type:** unknown
 

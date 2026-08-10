@@ -1,6 +1,6 @@
 # TaskResult
 
-Describes the supplementary information captured in **BusinessError** in the catch branch after a task in the waiting or execution phase is canceled. In other scenarios, the task result is **undefined**.
+处于等待或执行过程中的任务进行取消操作后，在catch分支里捕获到BusinessError里的补充信息。其他场景下该信息为undefined。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Describes the supplementary information captured in **BusinessError** in the cat
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## error
 
 ```TypeScript
 error?: Error | Object
 ```
 
-Error message. By default, the value is the same as the **message** field of **BusinessError**. You are advised not to change the value.
+错误信息。默认和BusinessError的message字段一致。不建议修改此值。
 
 **Type:** Error \| Object
 
@@ -36,7 +42,7 @@ Error message. By default, the value is the same as the **message** field of **B
 result?: Object
 ```
 
-Task execution result. The default value is **undefined**. You are advised not to change the value.
+任务执行结果。默认为undefined。不建议修改此值。
 
 **Type:** Object
 

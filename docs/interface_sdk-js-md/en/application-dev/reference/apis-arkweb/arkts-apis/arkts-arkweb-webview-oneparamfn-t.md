@@ -18,11 +18,11 @@ The function with one parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | T | Yes | the first param.  |
+| param | T | Yes | the first param. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | The return value.  |
+| V | The return value. |
 

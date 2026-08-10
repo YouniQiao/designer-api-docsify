@@ -1,7 +1,6 @@
 # ColorMode
 
-Enumerates the dark/light color modes, which are used in the  
-[Configuration.colorMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ field. You can use these predefined enumerated values to set or obtain the dark/light color mode of the system or application.
+表示深浅色模式的枚举，用于[Configuration.colorMode](arkts-ability-app-ability-configuration-configuration-i.md)字段。开发者可以使用这些预置枚举设置或获取系统/应用的深浅色模式。
 
 **Since:** 9
 
@@ -17,7 +16,7 @@ Enumerates the dark/light color modes, which are used in the
 COLOR_MODE_NOT_SET = -1
 ```
 
-Unspecified color mode.
+表示未设置颜色模式。
 
 **Since:** 9
 
@@ -35,7 +34,7 @@ Unspecified color mode.
 COLOR_MODE_DARK = 0
 ```
 
-Dark mode.
+表示深色模式。
 
 **Since:** 9
 
@@ -53,7 +52,7 @@ Dark mode.
 COLOR_MODE_LIGHT = 1
 ```
 
-Light mode.
+表示浅色模式。
 
 **Since:** 9
 

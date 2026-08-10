@@ -1,11 +1,10 @@
 # TextTimerController
 
-Defines the controller for controlling the **TextTimer** component. A **TextTimer** component can only be bound to one controller, and the relevant commands can only be called after the component has been created. A  
-**TextTimerController** can control only the last **TextTimer** component bound to it.
+TextTimer组件的控制器，用于控制文本计时器。一个TextTimer组件仅支持绑定一个控制器，组件创建完成后相关指令才能被调用。一个TextTimerController只能控制最后一个绑定此TextTimerController的TextTimer组件。
 
-## Objects to Import
+## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts textTimerController: TextTimerController = new TextTimerController();```
 
 **Since:** 8
 
@@ -21,7 +20,7 @@ Defines the controller for controlling the **TextTimer** component. A **TextTime
 constructor()
 ```
 
-A constructor used to create a **TextTimerController** object.
+TextTimerController的构造函数。
 
 **Since:** 8
 
@@ -41,7 +40,7 @@ A constructor used to create a **TextTimerController** object.
 pause()
 ```
 
-Pauses the timer.
+计时暂停。需在组件创建完成后调用。
 
 **Since:** 8
 
@@ -61,7 +60,7 @@ Pauses the timer.
 reset()
 ```
 
-Resets the timer.
+重置计时器。需在组件创建完成后调用。
 
 **Since:** 8
 
@@ -81,7 +80,7 @@ Resets the timer.
 start()
 ```
 
-Starts the timer.
+计时开始。需在TextTimer组件创建完成并绑定控制器后调用。
 
 **Since:** 8
 

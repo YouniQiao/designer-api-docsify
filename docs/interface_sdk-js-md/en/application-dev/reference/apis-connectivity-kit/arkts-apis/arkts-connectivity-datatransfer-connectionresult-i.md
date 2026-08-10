@@ -1,6 +1,6 @@
 # ConnectionResult
 
-Describes the parameters for connection result.
+连接结果的参数说明。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the parameters for connection result.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
 
-Indicates the connected device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+连接的设备地址。长度必须为17，由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the connected device address.The length must be 17, The value consists
 mtu: int
 ```
 
-Indicates the maximum channel data length.Unit: Bytes, The value must be an integer within [0,65535].
+通道数据的最大长度单位为： 字节，取值应为[0,65535]内的整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ Indicates the maximum channel data length.Unit: Bytes, The value must be an inte
 state: ConnectionState
 ```
 
-Connection state.
+连接状态。
 
-**Type:** ConnectionState
+**Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
 
 **Since:** 26.0.0
 
@@ -76,7 +82,7 @@ Connection state.
 uuid: string
 ```
 
-Indicates the service UUID.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_NearLink standard UUIDs are not allowed.
+服务ID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;禁止使用星闪标准服务UUID。
 
 **Type:** string
 

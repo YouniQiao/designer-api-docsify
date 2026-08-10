@@ -1,14 +1,20 @@
 # getDLPPermissionInfo
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## getDLPPermissionInfo
 
 ```TypeScript
 function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 ```
 
-Queries the permission information of the current DLP sandbox, including permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API can be called only in DLP sandbox applications. This API uses a promise to return the result.
+查询当前DLP沙箱的权限信息，包括文件授权类型及可执行操作（如查看、编辑、复制等）。仅支持在DLP沙箱应用中调用，使用Promise异步回调。
 
-When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
+在DLP沙箱中处理文件时，可根据权限信息判断当前用户可以执行哪些操作，避免调用无权限的功能。
 
 **Since:** 10
 
@@ -22,35 +28,30 @@ When processing files in the DLP sandbox, the system determines the operations t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DLPPermissionInfo&gt; | Promise used to return the permission information about the DLP file. The operation is successful if no error is reported. |
+| Promise&lt;DLPPermissionInfo&gt; | Promise对象。返回查询的DLP文件的权限信息，无异常则表明查询成功。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100006](../errorcode-dlp.md#19100006-access-denied-for-a-nondlp-sandbox-application) | No permission to call this API, which is available only for DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 19100001 | Invalid parameter value. |
+| 19100006 | No permission to call this API, which is available only for DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-async function ExampleFunction() {
-  try {
-    dlpPermission.isInSandbox().then(async (inSandbox) => { // Check whether the application is running in a sandbox.
-      if (inSandbox) {
-        let res: dlpPermission.DLPPermissionInfo = await dlpPermission.getDLPPermissionInfo(); // Obtain the permission information.
-        console.info('res', JSON.stringify(res));
-      }
-    });
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+dlpPermission.isInSandbox().then(async (inSandbox) => { // Check whether the application is running in a sandbox.
+  if (inSandbox) {
+    dlpPermission.getDLPPermissionInfo().then((permissionInfo: dlpPermission.DLPPermissionInfo) => {
+      console.info('permissionInfo', JSON.stringify(permissionInfo));
+    }).catch((error: BusinessError)=> {
+      console.error(JSON.stringify(error));
+    })
   }
-}
+});
 ```
 
 
@@ -60,9 +61,9 @@ async function ExampleFunction() {
 function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 ```
 
-Obtains the permission information of this DLP file. The returned permission information includes permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API uses an asynchronous callback to return the result.
+查询当前DLP沙箱的权限信息。返回的权限信息包括文件的授权类型和可执行的操作权限（如查看、编辑、复制等）。仅支持在DLP沙箱应用中调用。使用callback异步回调。
 
-When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
+在DLP沙箱中处理文件时，可根据权限信息判断当前用户可以执行哪些操作，避免调用无权限的功能。
 
 **Since:** 10
 
@@ -76,39 +77,32 @@ When processing files in the DLP sandbox, the system determines the operations t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DLPPermissionInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DLPPermissionInfo&gt; | Yes | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100006](../errorcode-dlp.md#19100006-access-denied-for-a-nondlp-sandbox-application) | No permission to call this API, which is available only for DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100006 | No permission to call this API, which is available only for DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
-    if (inSandbox) {
-      dlpPermission.getDLPPermissionInfo((err, res) => {
-        if (err != undefined) {
-          console.error('getDLPPermissionInfo error', err.code, err.message);
-        } else {
-          console.info('res', JSON.stringify(res));
-        }
-      }); // Obtain the permission information.
-    }
-  });
-} catch (err) {
-  console.error('getDLPPermissionInfo error', (err as BusinessError).code, (err as BusinessError).message);
-}
+dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
+  if (inSandbox) {
+    dlpPermission.getDLPPermissionInfo((err, permissionInfo) => { 
+      if (err) {
+        console.error(`Failed to get DLP permission info. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('permissionInfo', JSON.stringify(permissionInfo));
+      }
+    }); // Obtain the permission information.
+  }
+});
 ```
 

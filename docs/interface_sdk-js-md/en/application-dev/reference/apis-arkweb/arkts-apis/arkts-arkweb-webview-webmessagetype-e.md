@@ -1,6 +1,6 @@
 # WebMessageType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the type of web message.
+Enum type supplied to {@link onMessageEventExt} for indicating the type of web message.
 
 **Since:** 23
 

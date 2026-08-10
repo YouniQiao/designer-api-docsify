@@ -1,8 +1,8 @@
 # DisplayOrientation
 
-标识该Ability的显示模式。仅适用于FA模型的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+标识该Ability的显示模式。仅适用于FA模型的[PageAbility](../../../application-models/pageability-overview.md)。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--Table: 40%; 10%; 50%--&gt;
 
 **起始版本：** 9
 

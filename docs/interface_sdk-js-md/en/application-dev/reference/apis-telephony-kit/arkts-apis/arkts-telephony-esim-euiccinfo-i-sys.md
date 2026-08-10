@@ -12,6 +12,12 @@ Information related to eUICC chips/devices.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## osVersion
 
 ```TypeScript

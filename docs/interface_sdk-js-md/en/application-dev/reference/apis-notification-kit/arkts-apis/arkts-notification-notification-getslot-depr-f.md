@@ -6,7 +6,7 @@
 function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void
 ```
 
-Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result.
+获取一个指定类型的通知通道（callback形式）。
 
 **Since:** 7
 
@@ -24,8 +24,8 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NotificationSlot&gt; | Yes | Callback used to return the result. |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | 通知渠道类型，目前分为社交通信、服务提醒、内容咨询和其他类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | Yes | 表示被指定的回调方法。 |
 
 
 ## getSlot
@@ -34,7 +34,7 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 function getSlot(slotType: SlotType): Promise<NotificationSlot>
 ```
 
-Obtains a notification slot of a specified type. This API uses a promise to return the result.
+获取一个指定类型的通知通道（Promise形式）。
 
 **Since:** 7
 
@@ -52,11 +52,11 @@ Obtains a notification slot of a specified type. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | 通知渠道类型，目前分为社交通信、服务提醒、内容咨询和其他类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationSlot&gt; | Promise used to return the result. |
+| Promise&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | 以Promise形式返回获取一个通知通道。 |
 

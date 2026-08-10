@@ -1,12 +1,18 @@
 # addVirtualScreenSurface (System API)
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## addVirtualScreenSurface
 
 ```TypeScript
 function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegion?: Rect): Promise<void>
 ```
 
-Add surface for the virtual screen.
+为虚拟屏幕添加surface。
 
 **Since:** 26.0.0
 
@@ -24,23 +30,61 @@ Add surface for the virtual screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Indicates the screen id of the virtual screen. |
-| surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can use the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ method to obtain the ID of the surface corresponding to an existing surface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytes are used. |
-| surfaceRegion | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Rectangular area of the virtual screen displayed by the surface. If the virtual screen has not bound any surface via [setVirtualScreenSurface()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or [addVirtualScreenSurface()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, the surfaceRegion is invalid and defaults to full screen. In mirror mode, the surfaceRegion is invalid and defaults to full screen. In independent display mode, the surfaceRegion is valid. |
+| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 虚拟屏幕的屏幕ID。 |
+| surfaceId | string | Yes | 代表虚拟屏幕绑定的surfaceId，由用户指定某一实际存在的surface对应的surfaceId， 该参数最大长度为4096个字节，超出最大长度时则取前4096个字节。 |
+| surfaceRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | No | surface显示的虚拟屏的矩形区域。 如果虚拟屏幕未通过[setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface) 或 [addVirtualScreenSurface()](arkts-arkui-display-addvirtualscreensurface-f-sys.md#addvirtualscreensurface)绑定过surface，surfaceRegion无效，默认全屏。 在镜像模式下，surfaceRegion无效，默认全屏。在异源模式下，surfaceRegion有效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function addVirtualScreenSurface can not work correctly due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 801 | Capability not supported. Function addVirtualScreenSurface can not work correctly due to limited device capabilities. |
+| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1400001 | Invalid display or screen. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+// Index.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  xComponentController: XComponentController = new XComponentController();
+
+  addVirtualScreenSurface = () => {
+    let screenId: number = 1;
+    let surfaceId = this.xComponentController.getXComponentSurfaceId();
+    display.addVirtualScreenSurface(screenId, surfaceId).then(() => {
+      console.info('Succeeded in adding surface for the virtual screen.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to add surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
+    });
+  }
+  build() {
+    RelativeContainer() {
+      XComponent({
+        type: XComponentType.SURFACE,
+        controller: this.xComponentController
+      })
+      Button('addSurface')
+        .onClick((event: ClickEvent) => {
+          this.addVirtualScreenSurface();
+      }).width('100%')
+      .height(20)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 

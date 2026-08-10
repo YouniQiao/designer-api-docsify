@@ -1,6 +1,6 @@
 # AVMusicTemplateType
 
-Enumeration of AVMusicTemplate type.
+表示音频模板类型的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,9 @@ Enumeration of AVMusicTemplate type.
 DEFAULT = 'smartCar'
 ```
 
-Smart\_car.
+音频模板类型的默认值。
+
+用于标识当前音频模板应用的业务类型，开发者创建模板时可根据自身业务修改此值。
 
 **Since:** 23
 

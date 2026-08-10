@@ -6,7 +6,7 @@
 function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback<CompleteData>): void
 ```
 
-Triggers a WantAgent.
+主动激发WantAgent实例。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,11 +26,11 @@ Triggers a WantAgent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | to trigger. |
-| triggerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CompleteData&gt; | No | Indicates the callback method to be called after the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is triggered. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | Yes | TriggerInfo对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CompleteData&gt; | No | 主动激发WantAgent实例的回调方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

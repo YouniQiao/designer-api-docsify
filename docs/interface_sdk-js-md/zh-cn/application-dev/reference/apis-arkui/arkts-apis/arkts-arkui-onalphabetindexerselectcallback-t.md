@@ -20,5 +20,5 @@ export type OnAlphabetIndexerSelectCallback = (index: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | selected index  |
+| index | int | 是 | selected index |
 

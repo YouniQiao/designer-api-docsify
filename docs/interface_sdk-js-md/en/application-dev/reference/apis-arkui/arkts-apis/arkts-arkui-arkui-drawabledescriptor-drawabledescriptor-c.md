@@ -1,6 +1,6 @@
 # DrawableDescriptor
 
-Use the DrawableDescriptor class to get drawable image.
+父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)实例，图片资源加载能力。
 
 **Since:** 23
 
@@ -10,13 +10,22 @@ Use the DrawableDescriptor class to get drawable image.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+```
+
 ## getPixelMap
 
 ```TypeScript
 getPixelMap(): image.PixelMap | undefined
 ```
 
-Get pixelMap of drawable image.
+获取PixelMap实例。
+
+> **说明：**
+> > DrawableDescriptor对象通过[release](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
 
 **Since:** 23
 
@@ -32,7 +41,7 @@ Get pixelMap of drawable image.
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap |  Return the PixelMap of the calling DrawableDescriptor object. |
+| image.PixelMap | Return the PixelMap of the calling DrawableDescriptor object. |
 
 ## invalidate
 
@@ -40,7 +49,8 @@ Get pixelMap of drawable image.
 invalidate(): void
 ```
 
-Redraw the DrawableDescriptor. Does nothing if the DrawableDescriptor is not bound to any component.
+重新绘制DrawableDescriptor。当前仅支持  
+[PictureDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md)类型，其他DrawableDescriptor子类型触发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
 
 **Since:** 26.0.0
 
@@ -58,7 +68,13 @@ Redraw the DrawableDescriptor. Does nothing if the DrawableDescriptor is not bou
 isReleased(): boolean
 ```
 
-Releases the DrawableDescriptor object. After release, any method call that accesses the object's internal data wll fail.
+查询DrawableDescriptor是否已被释放。返回true表示已释放，此时调用  
+[getPixelMap](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getpixelmap)、  
+[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground)、  
+[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground)、  
+[getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask)、  
+[loadSync](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadsync)、  
+[load](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load)等接口，返回undefined或默认异常值；返回false表示未释放，对象可正常使用。
 
 **Since:** 26.0.0
 
@@ -74,7 +90,7 @@ Releases the DrawableDescriptor object. After release, any method call that acce
 
 | Type | Description |
 | --- | --- |
-| boolean | Return true if the DrawableDescriptor object has been released, or false if not. |
+| boolean | DrawableDescriptor是否已被释放。true表示已释放，false表示未释放。 |
 
 ## load
 
@@ -82,7 +98,11 @@ Releases the DrawableDescriptor object. After release, any method call that acce
 load(): Promise<DrawableDescriptorLoadedResult>
 ```
 
-Asynchronously loads image and returns loading result.
+发起图片资源的异步加载，并返回加载结果。使用Promise异步回调。
+
+> **说明：**
+> > DrawableDescriptor对象通过[release](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回imageWidth和imageHeight均为
+> -1的Promise结果。
 
 **Since:** 23
 
@@ -98,13 +118,13 @@ Asynchronously loads image and returns loading result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DrawableDescriptorLoadedResult&gt; |  The image loading result. |
+| Promise&lt;DrawableDescriptorLoadedResult&gt; | 图片资源的加载结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
+| 111001 | resource loading failed. |
 
 ## loadSync
 
@@ -112,7 +132,11 @@ Asynchronously loads image and returns loading result.
 loadSync(): DrawableDescriptorLoadedResult
 ```
 
-Synchronously loads the image and returns the loading result.
+发起图片资源的同步加载，并返回加载结果。
+
+> **说明：**
+> > DrawableDescriptor对象通过[release](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回imageWidth和imageHeight均为
+> -1的结果。
 
 **Since:** 23
 
@@ -128,13 +152,13 @@ Synchronously loads the image and returns the loading result.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  loading outcome. |
+| [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | 图片资源的加载结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
+| 111001 | resource loading failed. |
 
 ## release
 
@@ -142,7 +166,13 @@ Synchronously loads the image and returns the loading result.
 release(): void
 ```
 
-Release the DrawableDescriptor object. After relase, any method call that accesses the object's internal data will fail.
+释放DrawableDescriptor持有的资源。调用release后，该对象将不可用，再调用  
+[getPixelMap](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getpixelmap)、  
+[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground)、  
+[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground)、  
+[getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask)、  
+[loadSync](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadsync)、  
+[load](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load)等接口，返回undefined或默认异常值。重复调用release不会崩溃。
 
 **Since:** 26.0.0
 

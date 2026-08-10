@@ -1,11 +1,12 @@
 # ImageAIOptions
 
 图像AI分析选项。
-    **说明：**  
-    
-    该特性中的参数types优先级高于[ImageAnalyzerConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的参数types，两者同时设置时以该特性设置的值为准。  
-    
-    该特性依赖设备能力，且需要和对应组件的[enableAnalyzer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口（例如[Image组件]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_）搭配使用。
+
+> **说明：**
+> 
+> 该特性中的参数types优先级高于[ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md)中的参数types，两者同时设置时以该特性设置的值为准。
+> 
+> 该特性依赖设备能力，且需要和对应组件的[enableAnalyzer](arkts-arkui-image-imageattribute-i.md#enableanalyzer)接口（例如[Image组件](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)）搭配使用。
 
 **起始版本：** 12
 
@@ -23,7 +24,7 @@ aiController?: ImageAnalyzerController
 
 图像AI分析控制器。
 
-**类型：** ImageAnalyzerController
+**类型：** [ImageAnalyzerController](arkts-arkui-imagecommon-imageanalyzercontroller-c.md)
 
 **起始版本：** 12
 
@@ -45,7 +46,7 @@ types?: ImageAnalyzerType[]
 
 图像AI分析类型。
 
-**类型：** ImageAnalyzerType[]
+**类型：** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
 
 **起始版本：** 12
 

@@ -1,6 +1,6 @@
 # ButtonConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **继承/实现关系：** ButtonConfiguration extends [CommonConfiguration<ButtonConfiguration>](CommonConfiguration<ButtonConfiguration>)
 
@@ -40,7 +40,7 @@ label: string
 
 Button的文本标签，用于标识按钮的功能。
 
-**说明**：当文本字符的长度超过按钮本身的宽度时，文本将会被截断。
+**说明：**当文本字符的长度超过按钮本身的宽度时，文本将会被截断。
 
 **类型：** string
 
@@ -66,7 +66,7 @@ pressed: boolean
 
 true：按下；false：未按下。
 
-默认值：false
+默认值：false 
 
 **说明：**
 

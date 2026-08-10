@@ -1,11 +1,10 @@
 # EmitterParticleOptions
 
-Defines parameters of particles used by emitters.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
+粒子配置。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,11 +20,11 @@ Defines parameters of particles used by emitters.
 config: ParticleConfigs[PARTICLE]
 ```
 
-Configuration of the particle type.
+表示对应类型的配置。
 
-The value type of **config** is subject to the value of **type**.
+config类型和type值有关联：
 
-1. If the type is ParticleType.POINT, the config type is [PointParticleParameters]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-pointparticleparameters-i.md) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md) 。
 
 **Type:** ParticleConfigs[PARTICLE]
 
@@ -47,7 +46,7 @@ The value type of **config** is subject to the value of **type**.
 count: number
 ```
 
-Number of particles. The value is greater than or equal to -1. The value **-1** indicates that the number of particles is infinite.
+表示发射的粒子总数，count取值>=-1,当count为-1表示粒子总数无限大。
 
 **Type:** number
 
@@ -69,9 +68,9 @@ Number of particles. The value is greater than or equal to -1. The value **-1** 
 lifetime?: number
 ```
 
-Lifetime of a single particle. The default value is **1000** (that is, 1000 ms, 1s). The value is greater than or equal to -1. The value **-1** indicates that the lifetime of the particle is infinite. If the value specified is less than **-1**, the default value is used.
+表示单个粒子的生命周期，默认值1000（即1000ms，1s），lifetime>=-1。当lifetime为-1表示粒子生命周期无限大。当lifetime<-1，取默认值。
 
-Note: If you do not want the animation to keep playing, you are advised not to set the lifetime to –1, which may greatly affect the performance.
+**说明：**如果不需要动画一直播放，建议不要将生命周期设置为-1，可能对性能造成较大影响。
 
 **Type:** number
 
@@ -95,7 +94,7 @@ Note: If you do not want the animation to keep playing, you are advised not to s
 lifetimeRange?: number
 ```
 
-Random integer within the range of [lifetime – lifetimeRange, lifetime + lifetimeRange]. After lifetimeRange is set, the particle lifecycle is a random integer within the range. The default value is 0. The value range is from 0to positive infinity. If it is set to a negative value, the default value is used.
+表示粒子生命周期取值范围，设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取值范围为0到正无穷。设置为负值时取默认值。
 
 **Type:** number
 
@@ -119,7 +118,7 @@ Random integer within the range of [lifetime – lifetimeRange, lifetime + lifet
 type: PARTICLE
 ```
 
-Particle type, which can be **IMAGE** or **POINT**.
+表示粒子类型，可以选择图片或者是点。
 
 **Type:** PARTICLE
 

@@ -1,15 +1,22 @@
 # getAppNativeMemInfoWithCache
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppNativeMemInfoWithCache
 
 ```TypeScript
 function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo
 ```
 
-��ȡӦ�ý����ڴ���Ϣ����\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_�ӿ���ȣ��ýӿ�ʹ���˻�����ƣ���������ܡ��������Ч��Ϊ5���ӡ�
-    **ע��**  
-    
-    ���ڶ�ȡ /proc/{pid}/smaps\_rollup �ȽϺ�ʱ�����鲻�����߳���ʹ�øýӿڡ�����ͨ��@ohos.taskpool��@ohos.worker�����첽�̣߳��Ա���Ӧ�ÿ��١�
+��ȡӦ�ý����ڴ���Ϣ����`getAppNativeMemInfo`�ӿ���ȣ��ýӿ�ʹ���˻�����ƣ���������ܡ��������Ч��Ϊ5���ӡ�
+
+> **ע��**
+> 
+> ���ڶ�ȡ /proc/{pid}/smaps_rollup �ȽϺ�ʱ�����鲻�����߳���ʹ�øýӿڡ�����ͨ��@ohos.taskpool��@ohos.worker�����첽�̣߳��Ա���Ӧ�ÿ��١�
 
 **起始版本：** 20
 
@@ -29,9 +36,9 @@ function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Ӧ�ý����ڴ���Ϣ�� |
+| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Ӧ�ý����ڴ���Ϣ�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let nativeMemInfo: hidebug.NativeMemInfo = hidebug.getAppNativeMemInfoWithCache();

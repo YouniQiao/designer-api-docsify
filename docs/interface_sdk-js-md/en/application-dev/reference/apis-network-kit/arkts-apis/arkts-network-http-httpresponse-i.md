@@ -10,6 +10,12 @@ Defines the response to an HTTP request.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## connectionExtraInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ connectionExtraInfo?: ConnectionExtraInfo
 
 Information details of HTTP request.
 
-**Type:** ConnectionExtraInfo
+**Type:** [ConnectionExtraInfo](arkts-network-http-connectionextrainfo-i.md)
 
 **Since:** 24
 
@@ -76,7 +82,7 @@ performanceTiming: PerformanceTiming
 
 The time taken of various stages of HTTP request.
 
-**Type:** PerformanceTiming
+**Type:** [PerformanceTiming](arkts-network-http-performancetiming-i.md)
 
 **Since:** 12
 
@@ -94,7 +100,7 @@ responseCode: ResponseCode | int
 
 Server status code.
 
-**Type:** ResponseCode \| int
+**Type:** ArkTS-Dyn: [ResponseCode](arkts-network-http-responsecode-e.md) \| number  <br>ArkTS-Sta：[ResponseCode](arkts-network-http-responsecode-e.md) \| int
 
 **Since:** 11
 
@@ -112,7 +118,7 @@ Server status code.
 result: string | Object | ArrayBuffer
 ```
 
-result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8.If \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set, the system preferentially returns this parameter.
+result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8.If {@link HttpRequestOptions#expectDataType} is set, the system preferentially returns this parameter.
 
 **Type:** string \| Object \| ArrayBuffer
 
@@ -134,7 +140,7 @@ resultType: HttpDataType
 
 If the resultType is string, you can get result directly.If the resultType is Object, you can get result such as this: result['key'].If the resultType is ArrayBuffer, you can use ArrayBuffer to create the binary objects.
 
-**Type:** HttpDataType
+**Type:** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
 **Since:** 11
 

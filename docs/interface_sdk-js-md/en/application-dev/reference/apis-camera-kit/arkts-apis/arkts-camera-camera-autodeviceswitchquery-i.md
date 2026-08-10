@@ -1,9 +1,9 @@
 # AutoDeviceSwitchQuery
 
-AutoDeviceSwitchQuery** is used to check whether a device supports automatic camera switch.
+自动切换镜头查询类，用于查询设备是否支持自动切换镜头。
 
-[Automatic Camera Switching]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported only on foldable devices. For details about how to enable this capability, see  
-[enableAutoDeviceSwitch]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+[自动切换镜头能力](../../../media/camera/camera-auto-switch.md)仅支持折叠屏设备使用，如需使能该能力请参考  
+[enableAutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#enableautodeviceswitch)。
 
 **Since:** 13
 
@@ -13,13 +13,19 @@ AutoDeviceSwitchQuery** is used to check whether a device supports automatic cam
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isAutoDeviceSwitchSupported
 
 ```TypeScript
 isAutoDeviceSwitchSupported(): boolean
 ```
 
-Checks whether the device supports automatic camera switch.
+查询设备是否支持自动切换镜头能力。
 
 **Since:** 13
 
@@ -35,5 +41,11 @@ Checks whether the device supports automatic camera switch.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of automatic camera switch. **true** if supported, **false** otherwise. |
+| boolean | 是否支持自动切换镜头，true为支持，false为不支持。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 7400103 | Session not config, only throw in session usage.<br>**Applicable version:** 13 - 17 |
 

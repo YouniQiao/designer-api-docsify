@@ -1,6 +1,6 @@
 # NavContentInfo
 
-Provides the destination information.
+跳转Destination信息。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Provides the destination information.
 index: number
 ```
 
-Index of the navigation destination in the routing stack. If the view is a root view (**NavBar**), the return value is **-1**.
+NavDestination在NavPathStack中的序号， 如果为根视图(NavBar)，则返回值为 -1。
 
-Value range: [-1, +��)
+取值范围：[-1, +∞)。
 
 **Type:** number
 
@@ -40,9 +40,9 @@ Value range: [-1, +��)
 mode?: NavDestinationMode
 ```
 
-Mode of the navigation destination. If the view is a root view (**NavBar**), the return value is **undefined**.
+NavDestination的模式，如果是根视图(NavBar)，则返回值为undefined。
 
-**Type:** NavDestinationMode
+**Type:** [NavDestinationMode](arkts-arkui-navdestinationmode-e.md)
 
 **Since:** 11
 
@@ -62,7 +62,7 @@ Mode of the navigation destination. If the view is a root view (**NavBar**), the
 name?: string
 ```
 
-Name of the navigation destination. If the view is a root view (**NavBar**), the return value is **undefined**.
+NavDestination名称，如果为根视图(NavBar)，则返回值为undefined。
 
 **Type:** string
 
@@ -84,7 +84,7 @@ Name of the navigation destination. If the view is a root view (**NavBar**), the
 navDestinationId?: string
 ```
 
-Unique identifier of the navigation destination page.
+NavDestination的唯一标识符。
 
 **Type:** string
 
@@ -106,7 +106,7 @@ Unique identifier of the navigation destination page.
 param?: Object
 ```
 
-Parameters loaded on the navigation destination page.
+NavDestination页面加载的参数。
 
 **Type:** Object
 

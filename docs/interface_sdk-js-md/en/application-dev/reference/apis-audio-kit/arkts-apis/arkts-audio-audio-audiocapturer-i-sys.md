@@ -1,12 +1,12 @@
 # AudioCapturer
 
-This interface provides APIs for audio capture.
+提供音频采集的相关接口。
 
-Before calling any API in AudioCapturer, you must use  
-[createAudioCapturer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to create an AudioCapturer instance.
-    **NOTE**  
-    
-    - The initial APIs of this interface are supported since API version 8.
+在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer)获取AudioCapturer实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 8开始支持。
 
 **Since:** 8
 
@@ -16,13 +16,19 @@ Before calling any API in AudioCapturer, you must use
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## offReadMicInData
 
 ```TypeScript
 offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 ```
 
-Unsubscribes from micIn audio data callback.
+取消订阅micIn音频数据回调。
 
 **Since:** 24
 
@@ -40,15 +46,15 @@ Unsubscribes from micIn audio data callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerMicInData&gt; | No | Callback for the buffers to read. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerMicInData&gt; | No | 用于读取缓冲的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at running state. |
+| 6800103 | Operation not permitted at running state. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
 
 ## onReadMicInData
 
@@ -56,7 +62,7 @@ Unsubscribes from micIn audio data callback.
 onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 ```
 
-Subscribes to micIn audio data callback. This callback has higher priority than 'readData' callback.If this callback and 'readData' callback are both subscribed, only this callback will be triggered.See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for more details.The event is triggered when an audio buffer is available for reading more data.
+订阅micIn音频数据回调。此回调的优先级高于“readData”回调。如果此回调和'readData'回调都被订阅，则仅此回调将被调用。有关更多详细信息，请参见{@link #onReadData}。当有音频缓冲可用于读取更多数据时，触发该事件。
 
 **Since:** 24
 
@@ -74,14 +80,14 @@ Subscribes to micIn audio data callback. This callback has higher priority than 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerMicInData&gt; | Yes | Callback for the buffers to read. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerMicInData&gt; | Yes | 读取缓冲的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at running state. |
+| 6800103 | Operation not permitted at running state. |
+| 202 | Caller is not a system application. |
 
 ## setInputDeviceToAccessory
 
@@ -89,7 +95,7 @@ Subscribes to micIn audio data callback. This callback has higher priority than 
 setInputDeviceToAccessory(): void
 ```
 
-Sets default input device of this Capturer to DEVICE\_TYPE\_ACCESSORY.Other capturers' devices will not be affected by this method.This method can only be used before the capture stream starts. Besides,if audio accessory is not connected, this method will report fail. After calling this function, the input device of this capturer will not be affected by other interfaces.
+Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY.Other capturers' devices will not be affected by this method.This method can only be used before the capture stream starts. Besides,if audio accessory is not connected, this method will report fail. After calling this function, the input device of this capturer will not be affected by other interfaces.
 
 **Since:** 19
 
@@ -105,6 +111,6 @@ Sets default input device of this Capturer to DEVICE\_TYPE\_ACCESSORY.Other capt
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
+| 6800103 | Operation not permit at current state. |
+| 202 | Caller is not a system application. |
 

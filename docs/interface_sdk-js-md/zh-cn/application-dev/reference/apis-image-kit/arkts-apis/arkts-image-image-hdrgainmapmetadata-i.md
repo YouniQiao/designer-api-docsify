@@ -1,6 +1,6 @@
 # HdrGainmapMetadata
 
-Gainmap使用的元数据值，[HdrMetadataKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中HDR\_GAINMAP\_METADATA关键字对应的值，参考ISO 21496-1。
+Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_GAINMAP_METADATA关键字对应的值，参考ISO 21496-1。
 
 **起始版本：** 12
 
@@ -10,6 +10,12 @@ Gainmap使用的元数据值，[HdrMetadataKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## alternateHeadroom
 
 ```TypeScript
@@ -18,7 +24,7 @@ alternateHeadroom: double
 
 The alternate hdr headroom.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -36,7 +42,7 @@ baseHeadroom: double
 
 The baseline hdr headroom.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -72,7 +78,7 @@ gainmapChannelCount: int
 
 The number of gain map channels, with a value of 1 or 3.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -90,7 +96,7 @@ miniVersion: int
 
 The minimum version a parser needs to understand.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -126,7 +132,7 @@ writerVersion: int
 
 The version used by the writer.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

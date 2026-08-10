@@ -1,6 +1,6 @@
 # TextFrameNode
 
-Define the Text type of FrameNode.
+定义Text类型的FrameNode。
 
 **Inheritance/Implementation:** TextFrameNode extends [TypedFrameNode<TextAttribute>](TypedFrameNode<TextAttribute>)
 
@@ -18,7 +18,7 @@ Define the Text type of FrameNode.
 abstract initialize(content?: string | Resource, value?: TextOptions): TextAttribute
 ```
 
-Initialize Text FrameNode.
+初始化Text类型的FrameNode。
 
 **Since:** 23
 
@@ -35,11 +35,11 @@ Initialize Text FrameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | string \| Resource | No |  |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| value | [TextOptions](../arkts-components/arkts-arkui-textoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) |  |
 

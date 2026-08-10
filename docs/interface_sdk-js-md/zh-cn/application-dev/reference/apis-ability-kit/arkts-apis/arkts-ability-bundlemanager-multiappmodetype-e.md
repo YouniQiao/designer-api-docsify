@@ -16,7 +16,7 @@
 UNSPECIFIED = 0
 ```
 
-未指定类型，表示\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_未配置时的默认状态。
+未指定类型，表示[multiAppMode配置](../../../quick-start/app-configuration-file.md#multiappmode标签)未配置时的默认状态。
 
 **起始版本：** 12
 
@@ -32,7 +32,7 @@ UNSPECIFIED = 0
 MULTI_INSTANCE = 1
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。常驻进程不支持该字段。
+[多实例模式](../../../quick-start/multiInstance.md)。常驻进程不支持该字段。
 
 **起始版本：** 12
 
@@ -48,7 +48,7 @@ MULTI_INSTANCE = 1
 APP_CLONE = 2
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[分身模式](../../../quick-start/app-clone.md)。
 
 **起始版本：** 12
 

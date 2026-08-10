@@ -1,6 +1,6 @@
 # WebCaptureMode
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the web capture mode.
+Enum type supplied to {@link captureMode} for setting the web capture mode.
 
 **起始版本：** 11
 

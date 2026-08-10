@@ -1,5 +1,11 @@
 # getStartupTaskResult
 
+## 导入模块
+
+```TypeScript
+import { startupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getStartupTaskResult
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getStartupTaskResult(startupTask: string): Object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的名称或预加载so名称。 |
+| startupTask | string | 是 | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
 
 **返回值：**
 
@@ -34,9 +40,9 @@ function getStartupTaskResult(startupTask: string): Object
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
@@ -54,19 +60,17 @@ export default class EntryAbility extends UIAbility {
         hilog.error(0x0000, 'testTag', `StartupTask_001 promise catch failed, error code: ${error.code}, error msg: ${error.message}`);
       });
     } catch (error) {
-      hilog.error(0x0000, 'testTag', `StartupTask_001.run failed, error code: ${error.code}, error msg: ${error.message}`);
+      hilog.error(0x0000, 'testTag', `startupManager.run failed, error code: ${error.code}, error msg: ${error.message}`);
     }
   }
 
   onWindowStageCreate(windowStage: window.WindowStage) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
     let result = startupManager.getStartupTaskResult('StartupTask_001'); // 手动获取启动任务结果
-    hilog.info(0x0000, 'testTag', 'getStartupTaskResult result = %{public}s', result);
+    hilog.info(0x0000, 'testTag', 'getStartupTaskResult result = %{public}s', JSON.stringify(result));
     windowStage.loadContent('pages/Index', (err, data) => {
-      if (err) {
-        let error = err as BusinessError;
-        hilog.error(0x0000, 'testTag',
-          `Failed to load the content. Cause: error code ${error.code}, error msg ${error.message}`);
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause error code: ${err.code}, error msg: ${err.message}`);
         return;
       }
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
@@ -98,7 +102,7 @@ function getStartupTaskResult(startupTask: string): Any
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的名称或预加载so名称。 |
+| startupTask | string | 是 | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
 
 **返回值：**
 

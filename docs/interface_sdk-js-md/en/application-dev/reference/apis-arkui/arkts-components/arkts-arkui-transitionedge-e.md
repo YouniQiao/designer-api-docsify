@@ -1,6 +1,6 @@
 # TransitionEdge
 
-Enumerates the transition edge types.
+转场边缘类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the transition edge types.
 TOP = 0
 ```
 
-Top edge of the window.
+窗口的上边缘。
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ Top edge of the window.
 BOTTOM = 1
 ```
 
-Bottom edge of the window.
+窗口的下边缘。
 
 **Since:** 10
 
@@ -60,7 +60,7 @@ Bottom edge of the window.
 START = 2
 ```
 
-Start edge of the window, which is the left edge for left-to-right scripts and the right edge for right-to-left scripts.
+窗口的起始边缘，LTR时为左边缘，RTL时为右边缘。
 
 **Since:** 10
 
@@ -82,7 +82,7 @@ Start edge of the window, which is the left edge for left-to-right scripts and t
 END = 3
 ```
 
-End edge of the window, which is the right edge for left-to-right scripts and the left edge for right-to-left scripts.
+窗口的终止边缘，LTR时为右边缘，RTL时为左边缘。
 
 **Since:** 10
 

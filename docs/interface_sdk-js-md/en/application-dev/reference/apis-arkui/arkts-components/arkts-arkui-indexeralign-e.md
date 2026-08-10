@@ -1,6 +1,6 @@
 # IndexerAlign
 
-Enumerates the alignment styles of the indexer pop-up window.
+索引条提示弹窗的对齐样式枚举。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the alignment styles of the indexer pop-up window.
 Left
 ```
 
-The pop-up window is displayed on the right of the indexer.
+提示弹窗显示在索引条右侧。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ The pop-up window is displayed on the right of the indexer.
 Right
 ```
 
-The pop-up window is displayed on the left of the indexer.
+提示弹窗显示在索引条左侧。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ The pop-up window is displayed on the left of the indexer.
 START
 ```
 
-The pop-up window is displayed on the right of the indexer for left-to-right scripts, and on the left of the indexer for right-to-left scripts.
+在从左到右（LTR）场景下，提示弹窗显示在索引条右侧的位置。在RTL场景下，提示弹窗显示在索引条左侧的位置。
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ The pop-up window is displayed on the right of the indexer for left-to-right scr
 END
 ```
 
-The pop-up window is displayed on the left of the indexer for left-to-right scripts, and on the right of the indexer for right-to-left scripts.
+在从左到右（LTR）场景下，提示弹窗显示在索引条左侧的位置。在RTL场景下，提示弹窗显示在索引条右侧的位置。
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # AuthenticatorInfo
 
-Defines OAuth authenticator information.
+表示OAuth认证器信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Defines OAuth authenticator information.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## iconId
 
 ```TypeScript
 iconId: long
 ```
 
-ID of the authenticator icon.
+认证器的图标标识。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -34,9 +40,9 @@ ID of the authenticator icon.
 labelId: long
 ```
 
-ID of the authenticator label.
+认证器的标签标识。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -52,7 +58,7 @@ ID of the authenticator label.
 owner: string
 ```
 
-Owner of the authenticator. The value is the Bundle name of the application.
+认证器的所有者的包名。
 
 **Type:** string
 

@@ -4,7 +4,7 @@
 export type OnRequestSuccessFn = (name: string) => void
 ```
 
-Defines the callback for successful ability launches.
+拉起指定类型的Ability组件成功时的回调函数类型。
 
 **Since:** 21
 
@@ -22,5 +22,5 @@ Defines the callback for successful ability launches.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the launched ability or system operation.  The ability component name is in the format of '[bundleName]#[moduleName]#[abilityName]'.  |
+| name | string | Yes | 被拉起Ability组件或系统操作的名称。  Ability组件名称采用'[bundleName]#[moduleName]#[abilityName]'格式拼接。 |
 

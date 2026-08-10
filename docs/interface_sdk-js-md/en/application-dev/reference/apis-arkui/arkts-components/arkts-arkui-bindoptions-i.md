@@ -1,6 +1,6 @@
 # BindOptions
 
-Overlay module options
+半模态、全模态的公共配置接口。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Overlay module options
 onAppear?: () => void
 ```
 
-Callback for when the sheet is displayed (after the animation ends).
+半模态页面显示（动画结束后）回调函数。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Callback for when the sheet is displayed (after the animation ends).
 onDisappear?: () => void
 ```
 
-Callback for when the sheet disappears (after the animation ends).
+半模态页面回退（动画结束后）回调函数。
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ Callback for when the sheet disappears (after the animation ends).
 onWillAppear?: () => void
 ```
 
-Callback for when the sheet is about to be displayed (before the animation starts).
+半模态页面显示（动画开始前）回调函数。
 
 **Since:** 12
 
@@ -76,7 +76,11 @@ Callback for when the sheet is about to be displayed (before the animation start
 onWillDisappear?: () => void
 ```
 
-Callback function before overlay popAnimation starts.
+半模态页面回退（动画开始前）回调函数。
+
+**说明：**
+
+不允许在onWillDisappear函数中修改状态变量，可能会导致组件行为不稳定。
 
 **Since:** 12
 
@@ -96,9 +100,11 @@ Callback function before overlay popAnimation starts.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the sheet.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value: **Color.White**.
+半模态页面的背板颜色。
 
-**Type:** ResourceColor
+默认值：Color.White。
+
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
 

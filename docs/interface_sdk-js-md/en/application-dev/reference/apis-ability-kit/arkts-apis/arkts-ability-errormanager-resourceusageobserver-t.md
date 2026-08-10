@@ -4,7 +4,8 @@
 export type ResourceUsageObserver = (resourceType: ResourceType, resourceSize: long, detailInfo?: Record<string, long>) => void
 ```
 
-The observer will be called by the system when resource usage exceed threshold.
+定义应用资源使用情况的观察者回调函数，作为  
+[errorManager.setDefaultResourceUsageObserver](arkts-ability-errormanager-setdefaultresourceusageobserver-f.md#setdefaultresourceusageobserver)的入参，用于监听各类资源占用变化，并支持应用执行自定义资源处理逻辑。
 
 **Since:** 24
 
@@ -22,7 +23,7 @@ The observer will be called by the system when resource usage exceed threshold.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The type of resource.  |
-| resourceSize | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | The amount of resources occupied. The value must be greater than **0**. \_\_\_HTML\_TAG\_USD\_0\_\_\_Unit: KB.  |
-| detailInfo | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;string, long&gt; | No | Key-value pair of the resource type and its size. \_\_\_HTML\_TAG\_USD\_0\_\_\_This parameter is available only when resourceType is set to PSS\_MEMORY. If resourceType is set to other types or default values, this parameter is left blank. The key is the lowercase memory type, and the value is the resource size of the corresponding subdivision item. The keys of subdivision items include arkts, native, ion, gpu, ashmem, and other. The second value must be greater than 0 *, in KB.  |
+| resourceType | [ResourceType](arkts-ability-errormanager-resourcetype-e.md) | Yes | 表示应用资源超基线的类型。 |
+| resourceSize | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 表示应用资源超基线的资源使用量。 |
+| detailInfo | ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, long&gt; | No | 表示应用资源超基线资源使用量的细分项字典。<br>**说明**：仅在resourceType为PSS_MEMORY时存在，为其他类型或缺 省时为空；<br>key为小写内存类型，value为对应细分项资源大小；<br>细分项的key包含arkts、native、ion、gpu、ashmem和other。 第二个值必须大于**0**。单位：KB。 |
 

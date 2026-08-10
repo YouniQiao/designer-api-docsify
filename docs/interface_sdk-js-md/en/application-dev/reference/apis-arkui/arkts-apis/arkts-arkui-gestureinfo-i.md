@@ -1,6 +1,6 @@
 # GestureInfo
 
-Defines the gesture information type.
+手势信息类型。
 
 **Since:** 11
 
@@ -16,10 +16,9 @@ Defines the gesture information type.
 isSystemGesture: boolean
 ```
 
-Whether the gesture is a system/component gesture. **true** if the gesture is a system/component gesture, **false**  
-otherwise.
+当前手势是否为组件自带手势。true表示是，false表示否。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -41,11 +40,11 @@ Default value: **false
 tag?: string
 ```
 
-Gesture tag.
+手势标志。
 
-**NOTE**
+**说明：**
 
-Returns **undefined** if the gesture's **tag** attribute was not set.
+未设置事件标志tag属性时，tag不返回或返回undefined。
 
 **Type:** string
 
@@ -67,11 +66,11 @@ Returns **undefined** if the gesture's **tag** attribute was not set.
 type: GestureControl.GestureType
 ```
 
-Gesture type.
+手势类型。
 
-**NOTE**
+**说明：**
 
-Returns **-1** for built-in gestures of unexposed types.
+当手势为未暴露类型的系统内置手势事件时，type的值为-1。
 
 **Type:** GestureControl.GestureType
 

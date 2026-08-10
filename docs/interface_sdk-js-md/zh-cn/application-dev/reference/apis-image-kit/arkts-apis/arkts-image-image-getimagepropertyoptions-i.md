@@ -1,9 +1,10 @@
 # GetImagePropertyOptions
 
 表示查询图片属性的索引。
-    **说明：**  
-    
-    [ImagePropertyOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_代替。
+
+> **说明：**
+> 
+> [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)代替。
 
 **起始版本：** 7
 
@@ -16,6 +17,12 @@
 <!--Device-image-interface GetImagePropertyOptions--><!--Device-image-interface GetImagePropertyOptions-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
 
 ## defaultValue
 

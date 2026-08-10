@@ -10,6 +10,12 @@ Specifies the type and value range of the optional parameters in the HTTP reques
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## addressFamily
 
 ```TypeScript
@@ -18,7 +24,7 @@ addressFamily?: AddressFamily
 
 Address family option.
 
-**Type:** AddressFamily
+**Type:** [AddressFamily](arkts-network-http-addressfamily-e.md)
 
 **Since:** 15
 
@@ -103,9 +109,9 @@ If this parameter is set, the system will use ca path specified by user, or else
 certificatePinning?: CertificatePinning | CertificatePinning[]
 ```
 
-Certificate pinning option. If server certificate's digest does not match\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, request will fail.
+Certificate pinning option. If server certificate's digest does not match{@link CertificatePinning.publicKeyHash}, request will fail.
 
-**Type:** CertificatePinning \| CertificatePinning[]
+**Type:** [CertificatePinning](arkts-network-http-certificatepinning-i.md) \| CertificatePinning[]
 
 **Since:** 12
 
@@ -123,7 +129,7 @@ clientCert?: ClientCert
 
 Support the application to pass in client certificates, allowing the server to verify the client's identity.
 
-**Type:** ClientCert
+**Type:** [ClientCert](arkts-network-websocket-clientcert-i.md)
 
 **Since:** 12
 
@@ -141,7 +147,7 @@ clientEncCert?: ClientCert
 
 Support the application to pass in client certificates, allowing the server to verify the client's encryption identity.
 
-**Type:** ClientCert
+**Type:** [ClientCert](arkts-network-websocket-clientcert-i.md)
 
 **Since:** 20
 
@@ -161,7 +167,7 @@ connectTimeout?: int
 
 Connection timeout interval. The default value is 60,000, in ms.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -255,7 +261,7 @@ expectDataType?: HttpDataType
 
 Data type to be returned. If this parameter is set, the system preferentially returns the specified type.
 
-**Type:** HttpDataType
+**Type:** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
 **Since:** 11
 
@@ -315,7 +321,7 @@ inactivityMs?: int
 
 Maximum HTTP idle time (unit: ms)
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -353,7 +359,7 @@ maxRedirects?: int
 
 Support specifying the configuration of maximum redirect count
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -371,7 +377,7 @@ method?: RequestMethod
 
 Request method,default is GET.
 
-**Type:** RequestMethod
+**Type:** [RequestMethod](arkts-network-http-requestmethod-e.md)
 
 **Since:** 11
 
@@ -409,7 +415,7 @@ pathPreference?: PathPreference
 
 Support specifying a preferred network when making HTTP requests.If the specified network is unavailable, the default network will be selected to send the request.
 
-**Type:** PathPreference
+**Type:** [PathPreference](arkts-network-http-pathpreference-t.md)
 
 **Since:** 23
 
@@ -427,7 +433,7 @@ priority?: int
 
 [1, 1000], default is 1.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -446,15 +452,14 @@ queryParams?: string | QueryParamObject
 ```
 
 Query parameters to append to the request URL.Supports two input forms:  
-- \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_: a pre-encoded query string provided by the caller. It is appended  
+- `string`: a pre-encoded query string provided by the caller. It is appended  
 to the URL as-is and is not encoded again by the system.  
-- \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_: a key-value object. The system encodes keys and values  
+- `QueryParamObject`: a key-value object. The system encodes keys and values  
 and serializes them into the URL query string automatically.
 
-Notes:1. For \_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_, do not include the leading \_\_\_INLINE\_CODE\_DESC\_USD\_3\_\_\_  
-(for example, use \_\_\_INLINE\_CODE\_DESC\_USD\_4\_\_\_, not \_\_\_INLINE\_CODE\_DESC\_USD\_5\_\_\_).2. For \_\_\_INLINE\_CODE\_DESC\_USD\_6\_\_\_, the caller is responsible for encoding special characters.3. For \_\_\_INLINE\_CODE\_DESC\_USD\_7\_\_\_, use \_\_\_INLINE\_CODE\_DESC\_USD\_8\_\_\_ to separate multiple parameters.
+Notes:1. For `string`, do not include the leading `?`(for example, use `"key=value"`, not `"?key=value"`).2. For `string`, the caller is responsible for encoding special characters.3. For `string`, use `&` to separate multiple parameters.
 
-If both \_\_\_INLINE\_CODE\_DESC\_USD\_9\_\_\_ and \_\_\_INLINE\_CODE\_DESC\_USD\_10\_\_\_ are specified, \_\_\_INLINE\_CODE\_DESC\_USD\_11\_\_\_ takes precedence for URL construction, and \_\_\_INLINE\_CODE\_DESC\_USD\_12\_\_\_ will be ignored.
+If both `queryParams` and `extraData` are specified, `queryParams` takes precedence for URL construction, and `extraData` will be ignored.
 
 **Type:** string \| QueryParamObject
 
@@ -476,7 +481,7 @@ readTimeout?: int
 
 Read timeout period. The default value is 60,000, in ms.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -496,7 +501,7 @@ remoteValidation?: RemoteValidation
 
 Certificate authority(CA) which is used to verify the remote server's identification.
 
-**Type:** RemoteValidation
+**Type:** [RemoteValidation](arkts-network-http-remotevalidation-t.md)
 
 **Since:** 18
 
@@ -572,7 +577,7 @@ serverAuthentication?: ServerAuthentication
 
 HTTP server authentication settings. No authentication by default.
 
-**Type:** ServerAuthentication
+**Type:** [ServerAuthentication](arkts-network-http-serverauthentication-i.md)
 
 **Since:** 18
 
@@ -610,7 +615,7 @@ sslType?: SslType
 
 Which secure communication protocol is used, TLS (by defaul) or TLCP.If TLCP is used, all TLS related options, such as caPath, caData and clientCert, are ignored.
 
-**Type:** SslType
+**Type:** [SslType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-cachedownload-ssltype-e.md)
 
 **Since:** 20
 
@@ -630,7 +635,7 @@ tlsOptions?: TlsOptions
 
 TLS option.
 
-**Type:** TlsOptions
+**Type:** [TlsOptions](arkts-network-http-tlsoptions-t.md)
 
 **Since:** 18
 
@@ -670,7 +675,7 @@ usingProtocol?: HttpProtocol
 
 default is automatically specified by the system.
 
-**Type:** HttpProtocol
+**Type:** [HttpProtocol](arkts-network-http-httpprotocol-e.md)
 
 **Since:** 11
 
@@ -710,7 +715,7 @@ usingSocks5Proxy?: Socks5Proxy
 
 Specifies the use of a SOCKS5 proxy. Note that this configuration takes precedence over usingProxy.It is recommend not to configure both simultaneously.
 
-**Type:** Socks5Proxy
+**Type:** [Socks5Proxy](arkts-network-connection-socks5proxy-i.md)
 
 **Since:** 26.0.0
 

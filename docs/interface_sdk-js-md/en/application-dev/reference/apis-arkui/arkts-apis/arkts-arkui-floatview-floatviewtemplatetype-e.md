@@ -1,6 +1,6 @@
 # FloatViewTemplateType
 
-Provides the template type of the float view.
+标准悬浮窗模板类型的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Provides the template type of the float view.
 ROUNDED_RECTANGLE = 0
 ```
 
-Rectangle with rounded corners.
+圆角矩形。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Rectangle with rounded corners.
 HORIZONTAL_BAR = 1
 ```
 
-Horizontal bar rectangle.
+水平的条状矩形。
 
 **Since:** 26.0.0
 

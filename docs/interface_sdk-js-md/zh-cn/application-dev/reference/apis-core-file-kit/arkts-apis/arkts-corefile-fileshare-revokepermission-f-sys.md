@@ -1,5 +1,11 @@
 # revokePermission（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## revokePermission
 
 ```TypeScript
@@ -26,7 +32,7 @@ function revokePermission(tokenID: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标应用的访问令牌标识。 |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的访问令牌标识。 |
 
 **返回值：**
 
@@ -38,15 +44,13 @@ function revokePermission(tokenID: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| 13900001 | Operation not permitted. |
 | 13900020 | Invalid tokenID |
+| 801 | Capability not supported. |
+| 13900001 | Operation not permitted. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | The caller is not a system application. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,24 +66,6 @@ async function revokeAllPermissionExample() {
     });
   } catch (error) {
     console.error(`revoke persist permission failed error, Code: ${error.code}, message: ${error.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function revokePermissionExample() {
-  let tokenID = 537688848; // 系统应用可以通过bundleManager.getApplicationInfo获取。
-  try {
-    await fileShare.revokePermission(tokenID);
-    console.info("revoke persist permission successfully.");
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error("revoke persist permission failed with error:" + JSON.stringify(err));
   }
 }
 ```
@@ -111,7 +97,7 @@ function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标应用的访问令牌标识。 |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的访问令牌标识。 |
 | policies | Array&lt;PolicyInfo&gt; | 是 | 需要撤销持久化授权的URI策略信息数组。 |
 
 **返回值：**
@@ -124,17 +110,15 @@ function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; 3.Invalid policy size. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| 13900001 | Operation not permitted. |
-| 13900011 | Out of memory |
 | 13900020 | Invalid tokenID |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; 3.Invalid policy size. |
+| 801 | Capability not supported. |
+| 13900001 | Operation not permitted. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | The caller is not a system application. |
+| 13900011 | Out of memory |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -162,39 +146,6 @@ async function revokeSpecificPermissionExample() {
     });
   } catch (error) {
     console.error(`revokePermission error, Code: ${error.code}, message: ${error.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function revokePermissionWithPoliciesExample() {
-  let tokenID = 537688848; // 系统应用可以通过bundleManager.getApplicationInfo获取。
-  let uri = "file://docs/storage/Users/currentUser/Documents/1.txt";
-  let policyInfo: fileShare.PolicyInfo = {
-    uri: uri,
-    operationMode: fileShare.OperationMode.CREATE_MODE | fileShare.OperationMode.READ_MODE,
-  };
-  let policies: Array<fileShare.PolicyInfo> = [policyInfo];
-
-  try {
-    await fileShare.revokePermission(tokenID, policies);
-    console.info("revoke persist permission with policies successfully.");
-  } catch (error) {
-    let err: BusinessError<Array<fileShare.PolicyErrorResult>> = error as BusinessError<Array<fileShare.PolicyErrorResult>>;
-    console.error("revoke persist permission failed with error message: " + err.message + ", error code: " + err.code);
-    if (err && err.data && err.code == 13900001) {
-      const data = err.data!;
-      for (let i = 0; i < data.length; i++) {
-        console.error("error code : " + data[i].code);
-        console.error("error uri : " + data[i].uri);
-        console.error("error reason : " + data[i].message);
-      }
-    }
   }
 }
 ```

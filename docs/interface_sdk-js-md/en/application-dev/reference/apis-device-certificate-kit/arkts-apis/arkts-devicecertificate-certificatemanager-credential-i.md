@@ -1,6 +1,6 @@
 # Credential
 
-Represents detailed information about a credential.
+表示凭据详细信息。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Represents detailed information about a credential.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## alias
 
 ```TypeScript
 alias: string
 ```
 
-Alias of a credential. The value contains up to 128 bytes.
+表示凭据的别名，最大长度为128字节。
 
 **Type:** string
 
@@ -34,9 +40,9 @@ Alias of a credential. The value contains up to 128 bytes.
 certNum: int
 ```
 
-Number of certificates contained in the credential.
+表示凭据中包含的证书个数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -52,9 +58,9 @@ Number of certificates contained in the credential.
 certPurpose?: CertificatePurpose
 ```
 
-Credential usage. The default value is **CertificatePurpose.PURPOSE\_DEFAULT**.
+表示凭据的用途。默认值为CertificatePurpose.PURPOSE_DEFAULT。
 
-**Type:** CertificatePurpose
+**Type:** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
 **Since:** 22
 
@@ -70,7 +76,7 @@ Credential usage. The default value is **CertificatePurpose.PURPOSE\_DEFAULT**.
 credentialData: Uint8Array
 ```
 
-Binary data of a credential. The value contains up to 20480 bytes.
+表示凭据二进制数据，最大长度为20480字节。
 
 **Type:** Uint8Array
 
@@ -88,9 +94,9 @@ Binary data of a credential. The value contains up to 20480 bytes.
 keyNum: int
 ```
 
-Number of keys contained in the credential.
+表示凭据中包含的密钥个数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -106,7 +112,7 @@ Number of keys contained in the credential.
 keyUri: string
 ```
 
-Unique identifier of a credential. The value contains up to 256 bytes.
+表示凭据的唯一标识符，最大长度为256字节。
 
 **Type:** string
 
@@ -124,7 +130,7 @@ Unique identifier of a credential. The value contains up to 256 bytes.
 type: string
 ```
 
-Type of a credential. The value contains up to 8 bytes.
+表示凭据的类型，最大长度为8字节。
 
 **Type:** string
 

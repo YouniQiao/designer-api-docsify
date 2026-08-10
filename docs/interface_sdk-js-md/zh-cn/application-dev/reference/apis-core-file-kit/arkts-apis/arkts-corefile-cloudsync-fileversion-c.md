@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## clearFileConflict
 
 ```TypeScript
@@ -42,17 +48,15 @@ clearFileConflict(uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | 13900002 | No such file or directory. |
-| 13900010 | Try again. |
-| 13900012 | Permission denied by the file system. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13900012 | Permission denied by the file system. |
+| 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900010 | Try again. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -77,29 +81,6 @@ fileVersion.clearFileConflict(uri).then(() => {
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileVersion = new cloudSync.FileVersion();
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
-let isConflict: boolean = false;
-fileVersion.isFileConflict(uri).then<boolean>((isConflictRet: boolean): void => {
-  isConflict = isConflictRet;
-  console.info("current file is conflict: " + isConflictRet);
-}).catch((err: BusinessError<void>): void => {
-  console.error(`get current file conflict flag failed with error message: ${err.message}, error code: ${err.code}`);
-});
-fileVersion.clearFileConflict(uri).then<void>((): void => {
-  console.info("clean file conflict flag success");
-}).catch((err: BusinessError<void>): void => {
-  console.error("clean file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
 ## constructor
 
 ```TypeScript
@@ -120,9 +101,9 @@ A constructor used to create a FileVersion object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let fileVersion = new cloudSync.FileVersion();
@@ -149,8 +130,8 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 文件的URI。 |
-| versionId | string | 是 | 文件某一版本的版本号，格式以接口 [gethistoryversionlist]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_返回为准。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VersionDownloadProgress&gt; | 是 | 回调函数，返回下载进度。 |
+| versionId | string | 是 | 文件某一版本的版本号，格式以接口 [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist)返回为准。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VersionDownloadProgress&gt; | 是 | 回调函数，返回下载进度。 |
 
 **返回值：**
 
@@ -162,14 +143,14 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | 13900002 | No such file or directory. |
-| 13900010 | Try again. |
-| 13900012 | Permission denied by the file system. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
 | 22400002 | Network unavailable. |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13900012 | Permission denied by the file system. |
+| 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900010 | Try again. |
 
 ## getHistoryVersionList
 
@@ -202,7 +183,7 @@ getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryV
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 文件的URI。 |
-| versionNumLimit | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 历史版本列表长度限制，取值范围[0, 100000]（单位：个）。当输入值大于100000时，按照最大值返回列表。 |
+| versionNumLimit | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 历史版本列表长度限制，取值范围[0, 100000]（单位：个）。当输入值大于100000时，按照最大值返回列表。 |
 
 **返回值：**
 
@@ -214,18 +195,16 @@ getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryV
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | 13900002 | No such file or directory. |
-| 13900010 | Try again. |
-| 13900012 | Permission denied by the file system. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
 | 22400002 | Network unavailable. |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13900012 | Permission denied by the file system. |
+| 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900010 | Try again. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -246,25 +225,6 @@ fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileVersion = new cloudSync.FileVersion();
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
-let limit: int = 10;
-fileVersion.getHistoryVersionList(uri, limit).then<Array<cloudSync.HistoryVersion>>((versionList: Array<cloudSync.HistoryVersion>): void => {
-  for(let i = 0, len = versionList.length; i < len; i++) {
-    console.info("get history versionId: " + versionList[i].versionId);
-  }
-}).catch((err: BusinessError<void>): void => {
-  console.error("get history version failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
 ## isFileConflict
 
 ```TypeScript
@@ -274,7 +234,7 @@ isFileConflict(uri: string): Promise<boolean>
 获取本地文件版本冲突标志。使用Promise异步回调。此方法只有应用在配置手动解冲突后才会生效，否则默认自动解冲突，返回值为false，由同步流程自动完成解冲突；
 
 当应用配置手动解冲突后，调用此方法会返回当前文件是否与云侧文件产生冲突，并且由应用提示用户对冲突进行处理，在冲突解决前不会再自动同步上云。当处理完冲突后，需要调用  
-[clearFileConflict]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法来清除冲突标志，后续才会继续触发同步，与云端保持一致。
+[clearFileConflict](arkts-corefile-cloudsync-fileversion-c.md#clearfileconflict)方法来清除冲突标志，后续才会继续触发同步，与云端保持一致。
 
 **起始版本：** 20
 
@@ -300,17 +260,15 @@ isFileConflict(uri: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | 13900002 | No such file or directory. |
-| 13900010 | Try again. |
-| 13900012 | Permission denied by the file system. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13900012 | Permission denied by the file system. |
+| 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900010 | Try again. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -328,29 +286,13 @@ fileVersion.isFileConflict(uri).then((isConflict: boolean) => {
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileVersion = new cloudSync.FileVersion();
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
-fileVersion.isFileConflict(uri).then<boolean>((isConflict: boolean): void => {
-  console.info("current file is conflict: " + isConflict);
-}).catch((err: BusinessError<void>): void => {
-  console.error("get current file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
 ## replaceFileWithHistoryVersion
 
 ```TypeScript
 replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>
 ```
 
-提供使用历史版本文件替换本地文件的能力。在替换前，需要调用[downloadHistoryVersion]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法对选择的历史版本进行下载并拿到versionUri；直接调用此接口或者versionUri非法会产生异常；替换完成后会删除临时存储文件。使用Promise异步回调。
+提供使用历史版本文件替换本地文件的能力。在替换前，需要调用[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion)方法对选择的历史版本进行下载并拿到versionUri；直接调用此接口或者versionUri非法会产生异常；替换完成后会删除临时存储文件。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -377,20 +319,18 @@ replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.IPC failed or timed out. 2.Failed to load the service. |
-| 13900002 | No such file or directory. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | 13900005 | I/O error. |
-| 13900008 | Bad file descriptor. |
-| 13900010 | Try again. |
-| 13900012 | Permission denied by the file system. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 14000002 | Invalid URI. Possible causes: 1.originalUri invalid; 2.versionUri invalid. |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | 22400007 | The version file specified to replace the original file does not exist. |
+| 13900002 | No such file or directory. |
+| 14000002 | Invalid URI. Possible causes: 1.originalUri invalid; 2.versionUri invalid. |
+| 13900012 | Permission denied by the file system. |
+| 13900008 | Bad file descriptor. |
+| 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900010 | Try again. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -423,39 +363,6 @@ fileVersion.replaceFileWithHistoryVersion(uri, versionUri).then(() => {
   console.info("replace file with history version success.");
 }).catch((err: BusinessError) => {
   console.error("replace file with history version failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileVersion = new cloudSync.FileVersion();
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
-let versionId: string = '123456'; // 以 getHistoryVersionList 方法返回的格式为准，此处仅作为 demo 示例。
-let callback = (data: cloudSync.VersionDownloadProgress): void => {
-  if (data.state == cloudSync.State.RUNNING) {
-    console.info("download progress: " + data.progress);
-  } else if (data.state == cloudSync.State.FAILED) {
-    console.info("download failed errType: " + data.errType);
-  } else if (data.state == cloudSync.State.COMPLETED) {
-    console.info("download version file success");
-  }
-};
-let versionUri: string = "";
-fileVersion.downloadHistoryVersion(uri, versionId, callback).then<string>((fileUri: string): void => {
-  versionUri = fileUri;
-  console.info("success to begin download, downloadFileUri: " + fileUri);
-}).catch((err: BusinessError<void>): void => {
-  console.error(`download history version file failed with error message: ${err.message}, error code: ${err.code}`);
-});
-fileVersion.replaceFileWithHistoryVersion(uri, versionUri).then<void>((): void => {
-  console.info("replace file with history version success.");
-}).catch((err: BusinessError<void>): void => {
-  console.error("replace file with history version filed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 

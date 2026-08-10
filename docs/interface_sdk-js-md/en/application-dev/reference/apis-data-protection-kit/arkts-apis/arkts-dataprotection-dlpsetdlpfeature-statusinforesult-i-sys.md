@@ -1,6 +1,6 @@
 # StatusInfoResult (System API)
 
-Describes the DLP settings.
+DLP特性开关状态设置的结果信息。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Describes the DLP settings.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+```
+
 ## isSuccess
 
 ```TypeScript
 isSuccess: boolean
 ```
 
-Whether the DLP setting is successful. The value **true** indicates that the setting is successful, and the value **false** indicates that the setting fails.
+DLP特性开关状态是否设置成功。true表示设置成功；false表示设置失败。
 
 **Type:** boolean
 

@@ -1,7 +1,6 @@
 # CameraOutput
 
-CameraOutput implements output information used in [Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is the base class of  
-**output**.
+会话中[Session](arkts-camera-camera-session-i.md)使用的输出信息，output的基类。
 
 **Since:** 10
 
@@ -11,13 +10,19 @@ CameraOutput implements output information used in [Session]\_\_\_JSDOC\_LINK\_D
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## release
 
 ```TypeScript
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases output resources. This API uses an asynchronous callback to return the result.
+释放输出资源，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 10
 
@@ -33,13 +38,13 @@ Releases output resources. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the output resources are released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当释放输出资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## release
 
@@ -47,7 +52,7 @@ Releases output resources. This API uses an asynchronous callback to return the 
 release(): Promise<void>
 ```
 
-Releases output resources. This API uses a promise to return the result.
+释放输出资源。使用Promise异步回调。
 
 **Since:** 10
 
@@ -63,11 +68,11 @@ Releases output resources. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 

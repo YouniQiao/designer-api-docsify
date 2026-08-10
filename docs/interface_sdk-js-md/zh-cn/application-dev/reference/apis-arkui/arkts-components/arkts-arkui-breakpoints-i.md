@@ -1,8 +1,8 @@
 # BreakPoints
 
-设置栅格容器组件的断点。更多断点的说明参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+设置栅格容器组件的断点。更多断点的说明参考[栅格容器断点](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--code_no_check--&gt;
 
 **起始版本：** 9
 
@@ -20,11 +20,11 @@ reference?: BreakpointsReference
 
 断点切换参照物。支持WindowSize（以窗口为参照）和ComponentSize（以容器为参照）。
 
-默认值：BreakpointsReference.WindowSize
+默认值：BreakpointsReference.WindowSize 
 
 非法值：按默认值处理。
 
-**类型：** BreakpointsReference
+**类型：** [BreakpointsReference](../arkts-apis/arkts-arkui-gridrow-breakpointsreference-e.md)
 
 **起始版本：** 9
 
@@ -46,7 +46,7 @@ value?: Array<string>
 
 设置断点位置的单调递增数组，字符串格式为"数字+vp"，例如"320vp"、"600vp"等。
 
-默认值：["320vp", "600vp", "840vp"]
+默认值：["320vp", "600vp", "840vp"] 
 
 非法值：按默认值处理。
 

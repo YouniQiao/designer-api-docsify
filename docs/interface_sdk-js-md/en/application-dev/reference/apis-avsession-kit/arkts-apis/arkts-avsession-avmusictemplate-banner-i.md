@@ -1,6 +1,6 @@
 # Banner
 
-The definition of Banner.
+海报的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
 
 **Inheritance/Implementation:** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -12,13 +12,19 @@ The definition of Banner.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## isSupportOnePlay
 
 ```TypeScript
 isSupportOnePlay: boolean
 ```
 
-Is support one play
+是否支持一键启播。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # Movement
 
-Movement of cursor.
+选中文本时，光标移动的方向。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Movement of cursor.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## direction
 
 ```TypeScript
 direction: Direction
 ```
 
-Indicates the direction of cursor movement
+选中文本时，光标的移动方向。
 
-**Type:** Direction
+**Type:** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 10
 

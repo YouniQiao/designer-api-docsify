@@ -14,6 +14,12 @@ Describes the criteria for filtering scanning results can be set.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceId
 
 ```TypeScript

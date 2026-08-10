@@ -1,6 +1,6 @@
 # Method (System API)
 
-Describes the SSAP method.
+SSAP方法。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Describes the SSAP method.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## methodUuid
 
 ```TypeScript
 methodUuid: string
 ```
 
-The UUID of a method instance.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_NearLink standard UUIDs are not allowed.
+方法实例的UUID长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ The UUID of a method instance.The length must be 36, The value consists of 36 he
 parameter?: ArrayBuffer
 ```
 
-The parameter of a method instance.
+方法实例的参数
 
 **Type:** ArrayBuffer
 
@@ -62,7 +68,7 @@ The parameter of a method instance.
 result?: ArrayBuffer
 ```
 
-The result of a method instance.
+方法实例的结果
 
 **Type:** ArrayBuffer
 
@@ -84,7 +90,7 @@ The result of a method instance.
 serviceUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to which the method belongs The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NearLink standard UUIDs are not allowed.
+方法所属的{@link Service}实例的UUID长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **Type:** string
 

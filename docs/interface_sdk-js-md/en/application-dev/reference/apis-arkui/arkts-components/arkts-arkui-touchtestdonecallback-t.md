@@ -4,7 +4,7 @@
 declare type TouchTestDoneCallback = (event: BaseGestureEvent, recognizers: Array<GestureRecognizer>) => void
 ```
 
-Represents the callback type for dynamically specifying gesture recognizer participation in gesture processing.
+动态指定手势识别器是否参与手势处理的回调事件类型，回调内参数的生命周期跟随回调本身，参数内的方法仅支持在回调内同步使用。
 
 **Since:** 20
 
@@ -22,6 +22,6 @@ Represents the callback type for dynamically specifying gesture recognizer parti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Basic gesture event information after \_\_\_MD\_LINK\_USD\_0\_\_\_ completes.\_\_\_HTML\_TAG\_USD\_1\_\_\_**NOTE**\_\_\_HTML\_TAG\_USD\_2\_\_\_Only **BaseGestureEvent** information is contained, excluding child class extensions.\_\_\_HTML\_TAG\_USD\_3\_\_\_The values of **axisHorizontal** and **axisVertical** are **0**.  |
-| recognizers | Array&lt;GestureRecognizer&gt; | Yes | All gesture recognizers after \_\_\_MD\_LINK\_USD\_0\_\_\_ completes.  |
+| event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | Yes | [触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后的基础手势事件的信息。 <br/> **说明：** <br/>仅包含BaseGestureEvent的信息，不包含其子类拓展信息。<br/>axisHorizontal和axisVertical的值为0。 |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | [触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后， 所有手势识别器对象。 |
 

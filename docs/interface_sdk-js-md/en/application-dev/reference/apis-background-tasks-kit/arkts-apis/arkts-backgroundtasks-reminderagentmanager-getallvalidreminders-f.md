@@ -1,12 +1,18 @@
 # getAllValidReminders
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## getAllValidReminders
 
 ```TypeScript
 function getAllValidReminders(): Promise<Array<ReminderInfo>>
 ```
 
-Obtains all \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_set by the current application. This API uses a promise to return the result. To call this API, you need to request the ohos.permission.PUBLISH\_AGENT\_REMINDER permission.
+获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用Promise异步回调。该接口调用需要申请ohos.permission.PUBLISH_AGENT_REMINDER权限。
 
 **Since:** 12
 
@@ -20,15 +26,15 @@ Obtains all \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_set by the current application. Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ReminderInfo&gt;&gt; | Promise used to return all the valid reminders. |
+| Promise&lt;Array&lt;ReminderInfo&gt;&gt; | Promise对象，返回当前应用设置的所有有效（未过期）的代理提醒。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

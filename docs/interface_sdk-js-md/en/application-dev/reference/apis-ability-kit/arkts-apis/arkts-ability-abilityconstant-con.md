@@ -6,8 +6,7 @@
 const REASON_MESSAGE_DESKTOP_SHORTCUT = 'ReasonMessage_DesktopShortcut'
 ```
 
-The UIAbility is launched via a home screen shortcut. If this string is obtained from the **launchReasonMessage**  
-property in [LaunchParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the UIAbility is initiated by touching a shortcut on the home screen.
+通过桌面快捷方式启动。开发者如果从[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md)的launchReasonMessage属性中获取到该字符串，表示UIAbility是通过点击桌面快捷方式启动的。
 
 **Since:** 20
 

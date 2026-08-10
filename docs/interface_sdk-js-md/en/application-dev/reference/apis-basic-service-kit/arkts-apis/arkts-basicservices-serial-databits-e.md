@@ -1,6 +1,6 @@
 # DataBits
 
-Data bits in serial port communication.
+串口通信中的数据位
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Data bits in serial port communication.
 FIVE = 5
 ```
 
-Five data bits.
+5位数据位
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Five data bits.
 SIX = 6
 ```
 
-Six data bits.
+6位数据位
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Six data bits.
 SEVEN = 7
 ```
 
-7 data bits.
+7位数据位
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SEVEN = 7
 EIGHT = 8
 ```
 
-Eight data bits.
+8位数据位
 
 **Since:** 26.0.0
 

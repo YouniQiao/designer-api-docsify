@@ -1,23 +1,24 @@
 # InputMethodController
 
-下列API示例中都需使用[getController]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_获取到InputMethodController实例，再通过实例调用对应方法。
+下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller)获取到InputMethodController实例，再通过实例调用对应方法。
 
-InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_获取实例后，可进行以下操作：
+InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作：
 
 - **绑定管理**：通过  
-[attach]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_建立与输入法的绑定，通过[detach]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_解除绑定。attach和detach必须配对使用。  
-- **键盘控制**：通过[showTextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_拉  
-起软键盘进入编辑状态，通过[hideTextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_隐藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。  
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)建立与输入法的绑定，通过[detach](arkts-ime-inputmethod-inputmethodcontroller-i.md#detach)解除绑定。attach和detach必须配对使用。  
+- **键盘控制**：通过[showTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#showtextinput)拉  
+起软键盘进入编辑状态，通过[hideTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#hidetextinput)隐藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。  
 - **编辑框状态同步**：通过  
-[updateCursor]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_、  
-[changeSelection]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_、  
-[updateAttribute]\_\_\_JSDOC\_LINK\_DESC\_USD\_13\_\_\_等接口向输入法同步光标、选区、属性等编辑框状态信息。  
+[updateCursor](arkts-ime-inputmethod-inputmethodcontroller-i.md#updatecursor)、  
+[changeSelection](arkts-ime-inputmethod-inputmethodcontroller-i.md#changeselection)、  
+[updateAttribute](arkts-ime-inputmethod-inputmethodcontroller-i.md#updateattribute)等接口向输入法同步光标、选区、属性等编辑框状态信息。  
 - **事件订阅**：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。
 
-典型调用序列：\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ → \_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_ → \_\_\_INLINE\_CODE\_DESC\_USD\_3\_\_\_/\_\_\_INLINE\_CODE\_DESC\_USD\_4\_\_\_ → \_\_\_INLINE\_CODE\_DESC\_USD\_5\_\_\_
-    **注意：**  
-    
-    attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
+典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()`
+
+> **注意：**
+> 
+> attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
 
 **起始版本：** 6
 
@@ -26,6 +27,12 @@ InputMethodController是输入法客户端控制器，面向前台应用提供�
 <!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
 
 ## hideSoftKeyboard
 
@@ -59,7 +66,7 @@ hideSoftKeyboard(displayId: long): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 屏幕ID。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕ID。 |
 
 **返回值：**
 
@@ -71,14 +78,12 @@ hideSoftKeyboard(displayId: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 201 | permissions check fails. |
+| 202 | not system application. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -87,19 +92,6 @@ let displayId: number = 30;
 inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
   console.info('Succeeded in hiding softKeyboard.');
 }).catch((err: BusinessError) => {
-  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayId: long = 30;
-inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
-  console.info('Succeeded in hiding softKeyboard.');
-}).catch((err: BusinessError): void=> {
   console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -136,7 +128,7 @@ showSoftKeyboard(displayId: long): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 屏幕ID。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕ID。 |
 
 **返回值：**
 
@@ -148,14 +140,12 @@ showSoftKeyboard(displayId: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 201 | permissions check fails. |
+| 202 | not system application. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -164,19 +154,6 @@ let displayId: number = 20;
 inputMethod.getController().showSoftKeyboard(displayId).then(() => {
   console.info('Succeeded in showing softKeyboard.');
 }).catch((err: BusinessError) => {
-  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayId: long = 20;
-inputMethod.getController().showSoftKeyboard(displayId).then(() => {
-  console.info('Succeeded in showing softKeyboard.');
-}).catch((err: BusinessError): void=> {
   console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
 });
 ```

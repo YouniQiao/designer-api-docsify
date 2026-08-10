@@ -1,15 +1,16 @@
 # Map
 
 一种基于键值对存储的非线性数据结构，能够高效地通过唯一键来存取对应的值。
-    **说明**  
-    
-    - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。  
-    本节使用以下标识符来表示泛型的使用：
+
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> 本节使用以下标识符来表示泛型的使用：
 
 - K：Key，键。  
 - V：Value，值。  
 K和V类型都需为  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
+[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。  
 **装饰器类型**：\@Sendable
 
 **起始版本：** 12
@@ -21,6 +22,12 @@ K和V类型都需为
 <!--Device-collections-class Map<K, V>--><!--Device-collections-class Map<K, V>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { collections } from 'kits/@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -44,13 +51,13 @@ K和V类型都需为
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回一个迭代器对象，该对象包含键值对。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回一个迭代器对象，该对象包含键值对。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
 ## clear
 
@@ -74,8 +81,8 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The clear method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## constructor
 
@@ -105,7 +112,7 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Map's constructor cannot be directly invoked. |
+| 10200012 | The ArkTS Map's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -135,7 +142,7 @@ constructor(iterable: Iterable<readonly [K, V]>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Map's constructor cannot be directly invoked. |
+| 10200012 | The ArkTS Map's constructor cannot be directly invoked. |
 
 ## delete
 
@@ -171,8 +178,8 @@ delete(key: K): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The delete method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The delete method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## entries
 
@@ -196,14 +203,14 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | Map迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Map迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The entries method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## forEach
 
@@ -233,8 +240,8 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The forEach method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## get
 
@@ -270,8 +277,8 @@ get(key: K): V | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The get method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## has
 
@@ -307,8 +314,8 @@ has(key: K): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The has method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## keys
 
@@ -332,14 +339,14 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;K&gt; | Map迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | Map迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The keys method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## set
 
@@ -376,8 +383,8 @@ set(key: K, value: V): Map<K, V>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The set method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## values
 
@@ -401,14 +408,14 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;V&gt; | Map迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | Map迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The values method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## size
 

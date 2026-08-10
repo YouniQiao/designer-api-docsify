@@ -22,7 +22,7 @@ LinkedList的回调函数类型。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | T | 是 | 当前元素的值。  |
-| index | int | 是 | 当前元素的下标。 该值为整数。  |
-| linkedList | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 当前正在遍历的LinkedList实例。  |
+| value | T | 是 | 当前元素的值。 |
+| index | int | 是 | 当前元素的下标。 该值为整数。 |
+| linkedList | [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md)&lt;T&gt; | 是 | 当前正在遍历的LinkedList实例。 |
 

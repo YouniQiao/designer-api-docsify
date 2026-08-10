@@ -1,6 +1,6 @@
 # CredentialChangeInfo (System API)
 
-Defines the credential change information.
+表示凭据变更信息。
 
 **Since:** 23
 
@@ -12,15 +12,21 @@ Defines the credential change information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountId
 
 ```TypeScript
 accountId: int
 ```
 
-OS account ID.
+表示系统账号标识。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ OS account ID.
 addedCredentialId?: Uint8Array
 ```
 
-Credential ID. An ID is returned when a credential is added or updated. which is **undefined** by default.
+表示添加的凭据ID，添加凭据和更新凭据操作都会返回该ID。默认为undefined。
 
 **Type:** Uint8Array
 
@@ -58,9 +64,9 @@ Credential ID. An ID is returned when a credential is added or updated. which is
 changeType: CredentialChangeType
 ```
 
-Credential change type.
+表示凭据变更的类型。
 
-**Type:** CredentialChangeType
+**Type:** [CredentialChangeType](arkts-basicservices-osaccount-credentialchangetype-e-sys.md)
 
 **Since:** 23
 
@@ -78,9 +84,9 @@ Credential change type.
 credentialType: AuthType
 ```
 
-Credential type.
+表示凭据类型。
 
-**Type:** AuthType
+**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **Since:** 23
 
@@ -98,7 +104,7 @@ Credential type.
 deletedCredentialId?: Uint8Array
 ```
 
-Credential ID. An ID is returned when a credential is deleted or updated. which is **undefined** by default.
+表示删除的凭据ID，删除凭据和更新凭据操作都会返回该ID。默认为undefined。
 
 **Type:** Uint8Array
 
@@ -118,7 +124,7 @@ Credential ID. An ID is returned when a credential is deleted or updated. which 
 isSilent: boolean
 ```
 
-Whether the change is silent. A silent change is automatically initiated by the system in the background.
+表示是否为静默变更，静默变更表示变更由系统在后台自动地发起。
 
 **Type:** boolean
 

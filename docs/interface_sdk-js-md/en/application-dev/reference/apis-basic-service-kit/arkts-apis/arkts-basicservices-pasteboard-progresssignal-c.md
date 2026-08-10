@@ -1,7 +1,6 @@
 # ProgressSignal
 
-Defines a function for canceling the paste task. This parameter is valid only when  
-[ProgressIndicator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **NONE**.
+定义进度取消的函数，在粘贴过程中可选择取消任务，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)设置为NONE时此参数才生效。
 
 **Since:** 15
 
@@ -11,13 +10,19 @@ Defines a function for canceling the paste task. This parameter is valid only wh
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## cancel
 
 ```TypeScript
 cancel(): void
 ```
 
-Cancels an ongoing paste task.
+取消正在进行的拷贝粘贴任务。
 
 **Since:** 15
 
@@ -29,7 +34,7 @@ Cancels an ongoing paste task.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError, pasteboard } from '@kit.BasicServicesKit';

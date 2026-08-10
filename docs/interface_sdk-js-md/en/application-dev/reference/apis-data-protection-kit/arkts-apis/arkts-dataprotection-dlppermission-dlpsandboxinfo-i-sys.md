@@ -1,6 +1,6 @@
 # DLPSandboxInfo (System API)
 
-Represents the DLP sandbox information.
+表示DLP沙箱的信息。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Represents the DLP sandbox information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## appIndex
 
 ```TypeScript
 appIndex: number
 ```
 
-Index of the DLP sandbox application.
+表示DLP沙箱应用索引。
 
 **Type:** number
 
@@ -38,7 +44,7 @@ Index of the DLP sandbox application.
 bindAppIndex?: number
 ```
 
-Index of the DLP sandbox application to be bound. This parameter is not returned by default. It is returned only when the sandbox application is previewed.
+表示被绑定的DLP沙箱应用的应用索引。默认不返回，仅当沙箱应用是预览时返回。
 
 **Type:** number
 
@@ -60,7 +66,7 @@ Index of the DLP sandbox application to be bound. This parameter is not returned
 tokenID: number
 ```
 
-Token ID of the DLP sandbox application.
+表示DLP沙箱应用的tokenID。
 
 **Type:** number
 

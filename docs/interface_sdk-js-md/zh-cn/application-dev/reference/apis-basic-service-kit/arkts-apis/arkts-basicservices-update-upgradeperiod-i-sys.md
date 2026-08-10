@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## end
 
 ```TypeScript
@@ -22,7 +28,7 @@ end: int
 
 必须大于或等于start，超出范围时抛出异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -44,7 +50,7 @@ start: int
 
 必须小于或等于end，超出范围时抛出异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

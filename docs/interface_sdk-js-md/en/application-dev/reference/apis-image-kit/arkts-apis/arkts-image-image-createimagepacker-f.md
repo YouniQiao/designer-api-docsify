@@ -1,15 +1,20 @@
 # createImagePacker
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createImagePacker
 
 ```TypeScript
 function createImagePacker(): ImagePacker
 ```
 
-Creates an ImagePacker instance.
+创建ImagePacker实例。
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](arkts-image-image-imagepacker-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 6
 
@@ -25,9 +30,9 @@ Images occupy a large amount of memory. When you finish using an ImagePacker ins
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ImagePacker instance created. |
+| [ImagePacker](arkts-image-image-imagepacker-i.md) | 返回ImagePacker实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 async function CreateImagePacker() {

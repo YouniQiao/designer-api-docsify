@@ -34,7 +34,7 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Routing configuration of the current page. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **undefined** is returned when the page is not configured through the route table. |
+| [RouteMapConfig](../arkts-apis/arkts-arkui-navdestination-routemapconfig-i.md) | Routing configuration of the current page. &lt;br&gt; **undefined** is returned when the page is not configured through the route table. |
 
 ## mode
 
@@ -46,7 +46,7 @@ mode?: NavDestinationMode
 
 从API version 22开始，该接口支持在原子化服务中使用。
 
-**类型：** NavDestinationMode
+**类型：** [NavDestinationMode](arkts-arkui-navdestinationmode-e.md)
 
 **起始版本：** 22
 
@@ -90,7 +90,7 @@ pathInfo: NavPathInfo
 
 跳转NavDestination时指定的参数。
 
-**类型：** NavPathInfo
+**类型：** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
 **起始版本：** 11
 
@@ -112,7 +112,7 @@ pathStack: NavPathStack
 
 当前NavDestination所处的导航控制器。
 
-**类型：** NavPathStack
+**类型：** [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md)
 
 **起始版本：** 11
 

@@ -34,7 +34,7 @@ isMainFrame?: boolean
 isRefreshed: boolean
 ```
 
-true表示该页面是被重新加载的（调用[refresh]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口），false表示该页面是新加载的。
+true表示该页面是被重新加载的（调用[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md/arkts-arkweb-webview-webviewcontroller-c.md#refresh)接口），false表示该页面是新加载的。
 
 **类型：** boolean
 

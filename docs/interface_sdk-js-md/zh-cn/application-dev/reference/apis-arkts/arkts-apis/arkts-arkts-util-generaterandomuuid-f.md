@@ -1,5 +1,11 @@
 # generateRandomUUID
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## generateRandomUUID
 
 ```TypeScript
@@ -32,5 +38,5 @@ function generateRandomUUID(entropyCache?: boolean): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1.参数类型不正确。 |
+| 401 | 参数错误。可能的原因：1.参数类型不正确。 |
 

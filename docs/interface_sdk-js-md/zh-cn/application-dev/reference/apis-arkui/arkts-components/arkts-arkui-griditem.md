@@ -45,7 +45,9 @@ GridItem(value?: GridItemOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 为GridItem提供可选参数，该对象内包含[GridItemStyle]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_枚举类型的style参数。不传入时使用默认样 式，即GridItemStyle.NONE。\_\_\_HTML\_TAG\_USD\_1\_\_\_ |
+| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | 否 | 为GridItem提供可选参数，该对象内包含[GridItemStyle]{@link GridItemStyle}枚举类型的style参数。不传入时使用默认样 式，即GridItemStyle.NONE。<br/> |
 
 ## 汇总
 
+- [GridItemOptions](arkts-arkui-griditem-griditemoptions-i.md)
+- [GridItemStyle](arkts-arkui-griditem-griditemstyle-e.md)

@@ -12,6 +12,12 @@ Defines the personalized lock information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## remain
 
 ```TypeScript
@@ -20,7 +26,7 @@ remain?: int
 
 Indicates the operations remaining.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -40,7 +46,7 @@ result: int
 
 Indicates the current operation result.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 

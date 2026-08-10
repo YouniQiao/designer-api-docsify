@@ -4,7 +4,7 @@
 export type UIAbilityContext = _UIAbilityContext.default
 ```
 
-[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_组件上下文，继承自Context。
+[UIAbility](arkts-app-ability-uiability.md)组件上下文，继承自Context。
 
 **起始版本：** 9
 

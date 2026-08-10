@@ -1,6 +1,6 @@
 # OperateButtonV2Options
 
-Declare interface OperateButtonV2Options
+声明接口OperateButtonV2Options
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Declare interface OperateButtonV2Options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## accessibilityDescription
 
 ```TypeScript
 accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of the button.
+按钮的无障碍描述。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ The accessibilityDescription of the button.
 accessibilityLevel?: string
 ```
 
-The accessibilityLevel of the button.
+按钮的无障碍重要性。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ The accessibilityLevel of the button.
 accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of the button.
+按钮的无障碍文本属性。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -78,9 +84,9 @@ The accessibilityText of the button.
 text?: ResourceStr
 ```
 
-The text on the button.
+按钮文本。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

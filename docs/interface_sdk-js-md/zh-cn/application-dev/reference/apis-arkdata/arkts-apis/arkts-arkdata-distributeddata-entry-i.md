@@ -44,7 +44,7 @@ value: Value
 
 值对象。
 
-**类型：** Value
+**类型：** [Value](arkts-arkdata-distributeddata-value-i.md)
 
 **起始版本：** 7
 

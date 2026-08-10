@@ -1,12 +1,18 @@
 # subscribe (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+```
+
 ## subscribe
 
 ```TypeScript
 function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void
 ```
 
-Subscribes to notifications of all applications under this user. This API uses an asynchronous callback to return the result.
+订阅当前用户下所有应用的通知。使用callback异步回调。
 
 **Since:** 9
 
@@ -28,22 +34,22 @@ Subscribes to notifications of all applications under this user. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscriber. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 订阅动作回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,7 +81,7 @@ function subscribe(
   ): void
 ```
 
-Subscribes to a notification with the subscription information specified. This API uses an asynchronous callback to return the result.
+订阅通知并指定订阅信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -97,23 +103,23 @@ Subscribes to a notification with the subscription information specified. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscriber. |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscription information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | Yes | 通知订阅信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 订阅动作回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -146,7 +152,7 @@ notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
 function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>
 ```
 
-Subscribes to a notification with the subscription information specified. This API uses a promise to return the result.
+订阅通知并指定订阅信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -168,28 +174,28 @@ Subscribes to a notification with the subscription information specified. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscriber. |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Notification subscription information. By default, this parameter is left empty, which means to subscribe to notifications of all applications under this user. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | No | 通知订阅信息，默认为空（当为空时，表示订阅当前用户下所有应用的通知，否则表示订阅通知并指定订阅信息）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -203,7 +209,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 notificationSubscribe.subscribe(subscriber).then(() => {
   console.info("subscribe success");
 }).catch((err: BusinessError) => {
-  console.error(`subscribe fail: ${JSON.stringify(err)}`);
+  console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 

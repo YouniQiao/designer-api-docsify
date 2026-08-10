@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## businessParams
 
 ```TypeScript
@@ -20,7 +26,7 @@ businessParams: Record<string, Object>
 
 业务参数，由业务方根据请求协议自定义。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 10
 
@@ -40,7 +46,7 @@ callerUid: int
 
 调用方唯一标识符。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -60,7 +66,7 @@ domainAccountInfo: DomainAccountInfo
 
 域账号的信息。
 
-**类型：** DomainAccountInfo
+**类型：** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md)
 
 **起始版本：** 10
 

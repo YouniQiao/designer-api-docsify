@@ -12,6 +12,12 @@ Describe the contents of the battery information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { bas } from 'kits/@kit.ConnectivityKit';
+```
+
 ## batteryLevel
 
 ```TypeScript
@@ -20,7 +26,7 @@ batteryLevel: int
 
 battery value of the device. {@code -1} means no power information.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ deviceId: BluetoothAddress
 
 Identify of the discovery device.
 
-**Type:** BluetoothAddress
+**Type:** [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # ShareCenter (System API)
 
-Provides APIs for interacting with the sharedCenter service.You need to inherit this class and implement APIs of this class.The system calls these APIs to initiate, cancel, or exit a device-cloud share.
+提供对接共享云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用共享云服务，实现端云共享的发起、取消或退出等能力。
 
 **Since:** 11
 
@@ -11,6 +11,12 @@ Provides APIs for interacting with the sharedCenter service.You need to inherit 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
 
 ## changeConfirmation
 
@@ -34,7 +40,7 @@ changeConfirmation(
     ): Promise<Result<void>>
 ```
 
-Changes the confirmation state of a share invitation. This API uses a promise to return the result.The application, shared resource ID, and the new conformation state need to be specified.This API uses a promise to return the result.
+更改端云共享邀请。更改共享邀请时，需指定当前更改共享邀请的应用、共享数据的共享资源标识以及更改的状态，使用Promise异步回调。
 
 **Since:** 11
 
@@ -50,18 +56,18 @@ Changes the confirmation state of a share invitation. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
-| sharingResource | string | Yes | Shared resource ID. |
-| state | cloudData.sharing.State | Yes | New confirmation state. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| sharingResource | string | Yes | 端云共享资源标识。 |
+| state | cloudData.sharing.State | Yes | 共享邀请的更改状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;void&gt;&gt; | Promise对象，返回更改共享邀请的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -105,7 +111,7 @@ changePrivilege(
     ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
 ```
 
-Changes the privilege (operation permissions) on the shared data.This API uses a promise to return the result.The application, shared resource ID, and the participants with new privilege need to be specified.
+更改已共享数据的操作权限。更改权限时，需指定当前更改权限的应用、更改权限数据的资源标识和更改权限的参与者，使用Promise异步回调。
 
 **Since:** 11
 
@@ -121,18 +127,18 @@ Changes the privilege (operation permissions) on the shared data.This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
-| sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| sharingResource | string | Yes | 端云共享资源标识。 |
+| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | 端云共享参与者。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回更改权限的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -148,12 +154,12 @@ class MyShareCenter implements cloudExtension.ShareCenter {
     // ...
     // Return the result obtained from ShareCenter.
     let result: Array<cloudExtension.Result<Participant>> = [];
-    participants.forEach((item => {
+    participants.forEach(() => {
       result.push({
         code: cloudData.sharing.SharingCode.SUCCESS,
         description: 'change privilege succeeded'    
-      })
-    }))
+      });
+    });
     return {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'change privilege succeeded',
@@ -186,7 +192,7 @@ confirmInvitation(
     ): Promise<Result<string>>
 ```
 
-Confirms the invitation for a share. This API uses a promise to return the result.The application, invitation code for the share, and the confirmation state need to be specified.
+被邀请者确认端云共享邀请。确认时，需指定当前确认邀请的应用、共享数据的邀请码以及确认状态，使用Promise异步回调。
 
 **Since:** 11
 
@@ -202,18 +208,18 @@ Confirms the invitation for a share. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
-| invitationCode | string | Yes | Invitation code for the share. |
-| state | cloudData.sharing.State | Yes | Confirmation state of the invitation. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| invitationCode | string | Yes | 端云共享邀请码。 |
+| state | cloudData.sharing.State | Yes | 共享邀请的确认状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;string&gt;&gt; | Promise used to return the shared resource ID. |
+| Promise&lt;Result&lt;string&gt;&gt; | Promise对象，返回确认端云共享邀请数据的共享资源标识。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -248,7 +254,7 @@ ArkTS-Sta:
 exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>
 ```
 
-Exits a device-cloud share. This API uses a promise to return the result.The application and shared resource ID need to be specified.
+退出端云共享。退出共享时，需指定当前退出共享的应用以及退出共享数据的资源标识，使用Promise异步回调。
 
 **Since:** 11
 
@@ -264,17 +270,17 @@ Exits a device-cloud share. This API uses a promise to return the result.The app
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
-| sharingResource | string | Yes | Shared resource ID. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| sharingResource | string | Yes | 端云共享资源标识。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;void&gt;&gt; | Promise对象，返回退出共享的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -316,7 +322,7 @@ queryParticipants(
     ): Promise<Result<Array<cloudData.sharing.Participant>>>
 ```
 
-Queries the participants of a share. This API uses a promise to return the result.The application and shared resource ID need to be specified.
+查询当前端云共享的参与者。查询时，需指定当前查询参与者的应用、查询参与者数据的资源标识，使用Promise异步回调。
 
 **Since:** 11
 
@@ -332,17 +338,17 @@ Queries the participants of a share. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
-| sharingResource | string | Yes | Shared resource ID. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| sharingResource | string | Yes | 端云共享资源标识。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise used to return the participants obtained. |
+| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise对象，返回查询共享参与者的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -414,7 +420,7 @@ queryParticipantsByInvitation(
     ): Promise<Result<Array<cloudData.sharing.Participant>>>
 ```
 
-Queries the participants of a share based on the invitation code.This API uses a promise to return the result.The application and the invitation code of the shared data need to be specified.
+根据邀请码查询端云共享参与者。查询时，需指定当前查询参与者的应用、共享数据的邀请码，使用Promise异步回调。
 
 **Since:** 11
 
@@ -430,17 +436,17 @@ Queries the participants of a share based on the invitation code.This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
-| invitationCode | string | Yes | Invitation code for the share. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| invitationCode | string | Yes | 端云共享邀请码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise used to return the participants obtained. |
+| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise对象，返回根据邀请码查询共享参与者的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -514,7 +520,7 @@ share(
     ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
 ```
 
-Shares data. This API uses a promise to return the result.The application that initiates the share, shared resource ID, participants of the share need to be specified.
+发起端云共享邀请。共享邀请时，需指定当前发起共享的应用、共享数据的资源标识和共享参与者，使用Promise异步回调。
 
 **Since:** 11
 
@@ -530,18 +536,18 @@ Shares data. This API uses a promise to return the result.The application that i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
-| sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| sharingResource | string | Yes | 端云共享资源的标识。 |
+| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | 端云共享参与者。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回发起共享的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -557,12 +563,12 @@ class MyShareCenter implements cloudExtension.ShareCenter {
     // ...
     // Return the result obtained from ShareCenter.
     let result: Array<cloudExtension.Result<Participant>> = [];
-    participants.forEach((item => {
+    participants.forEach(() => {
       result.push({
         code: cloudData.sharing.SharingCode.SUCCESS,
         description: 'share succeeded'    
-      })
-    }))
+      });
+    });
     return {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'share succeeded',
@@ -595,7 +601,7 @@ unshare(
     ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
 ```
 
-Unshares data. This API uses a promise to return the result.The application, shared resource ID, and participants for the data to unshare need to be specified.
+取消端云共享。取消共享时，需指定当前取消共享的应用、取消共享数据的资源标识和取消共享的参与者，使用Promise异步回调。
 
 **Since:** 11
 
@@ -611,18 +617,18 @@ Unshares data. This API uses a promise to return the result.The application, sha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
-| sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | Participants of the share. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| sharingResource | string | Yes | 端云共享数据的资源标识。 |
+| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes | 端云共享参与者。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回取消共享的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -638,12 +644,12 @@ class MyShareCenter implements cloudExtension.ShareCenter {
     // ...
     // Return the result obtained from ShareCenter.
     let result: Array<cloudExtension.Result<Participant>> = [];
-    participants.forEach((item => {
+    participants.forEach(() => {
       result.push({
         code: cloudData.sharing.SharingCode.SUCCESS,
         description: 'unshare succeeded'    
-      })
-    }))
+      });
+    });
     return {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'unshare succeeded',

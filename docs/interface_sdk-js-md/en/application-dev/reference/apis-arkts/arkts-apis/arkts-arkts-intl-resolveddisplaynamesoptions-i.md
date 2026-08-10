@@ -18,7 +18,7 @@ fallback: DisplayNamesFallback
 
 Fallback option.
 
-**Type:** DisplayNamesFallback
+**Type:** [DisplayNamesFallback](arkts-arkts-intl-displaynamesfallback-t.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ languageDisplay?: DisplayNamesLanguageDisplay
 
 Language display option.
 
-**Type:** DisplayNamesLanguageDisplay
+**Type:** [DisplayNamesLanguageDisplay](arkts-arkts-intl-displaynameslanguagedisplay-t.md)
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ locale: UnicodeBCP47LocaleIdentifier
 
 Locale identifier.
 
-**Type:** UnicodeBCP47LocaleIdentifier
+**Type:** [UnicodeBCP47LocaleIdentifier](../../apis-default/arkts-apis/arkts-intl-unicodebcp47localeidentifier-t.md)
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ style: RelativeTimeFormatStyle
 
 Style option.
 
-**Type:** RelativeTimeFormatStyle
+**Type:** [RelativeTimeFormatStyle](../../apis-default/arkts-apis/arkts-intl-relativetimeformatstyle-t.md)
 
 **Since:** 26.0.0
 
@@ -98,7 +98,7 @@ type: DisplayNamesType
 
 Type option.
 
-**Type:** DisplayNamesType
+**Type:** [DisplayNamesType](arkts-arkts-intl-displaynamestype-t.md)
 
 **Since:** 26.0.0
 

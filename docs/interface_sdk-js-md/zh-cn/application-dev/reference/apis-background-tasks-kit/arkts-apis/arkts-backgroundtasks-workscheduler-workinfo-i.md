@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
+## 导入模块
+
+```TypeScript
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityName
 
 ```TypeScript
@@ -40,7 +46,7 @@ batteryLevel?: int
 
 取值范围：[0, 100]
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ batteryStatus?: BatteryStatus
 
 电池状态。
 
-**类型：** BatteryStatus
+**类型：** [BatteryStatus](arkts-backgroundtasks-workscheduler-batterystatus-e.md)
 
 **起始版本：** 9
 
@@ -100,7 +106,7 @@ chargerType?: ChargingType
 
 充电类型。
 
-**类型：** ChargingType
+**类型：** [ChargingType](arkts-backgroundtasks-workscheduler-chargingtype-e.md)
 
 **起始版本：** 9
 
@@ -120,7 +126,7 @@ earliestStartTime?: int
 
 任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -140,7 +146,7 @@ idleWaitTime?: int
 
 空闲等待时间，单位：ms。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -252,7 +258,7 @@ networkType?: NetworkType
 
 网络类型。
 
-**类型：** NetworkType
+**类型：** [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md)
 
 **起始版本：** 9
 
@@ -272,7 +278,7 @@ parameters?: Record<string, int | double | string | boolean>
 
 携带参数信息。
 
-**类型：** Record&lt;string, int \| double \| string \| boolean&gt;
+**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| double \| string \| boolean&gt;
 
 **起始版本：** 9
 
@@ -292,7 +298,7 @@ repeatCount?: int
 
 循环次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -312,7 +318,7 @@ repeatCycleTime?: int
 
 循环间隔，单位：ms。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -332,7 +338,7 @@ storageRequest?: StorageRequest
 
 存储状态。
 
-**类型：** StorageRequest
+**类型：** [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
 
 **起始版本：** 9
 
@@ -352,7 +358,7 @@ workId: int
 
 延迟任务ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

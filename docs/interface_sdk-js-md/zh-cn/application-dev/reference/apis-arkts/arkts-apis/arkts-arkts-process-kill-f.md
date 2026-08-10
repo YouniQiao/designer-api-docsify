@@ -1,5 +1,11 @@
 # kill
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## kill
 
 ```TypeScript
@@ -33,7 +39,7 @@ function kill(signal: number, pid: number): boolean
 | --- | --- |
 | boolean | 信号发送成功返回 true，失败返回 false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pid = process.pid;

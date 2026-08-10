@@ -1,13 +1,19 @@
 # setOtaUpdatePolicy
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## setOtaUpdatePolicy
 
 ```TypeScript
 function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void
 ```
 
-Sets the update policy. After the setting is successful, the system performs OTA updates based on the specified policy type. Different policy types correspond to different update behaviors. In intranet updates, call  
-[systemManager.notifyUpdatePackages]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to notify the system of the update packages and then call this API to set the upgrade policy.
+设置升级策略。设置成功后，系统将按照指定的策略类型进行OTA升级处理，不同策略类型对应不同的升级行为。内网升级场景下，需要先调用  
+[systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md#notifyupdatepackages)接口通知系统更新包，再调用该接口设置升级策略。
 
 **Since:** 12
 
@@ -25,19 +31,19 @@ Sets the update policy. After the setting is successful, the system performs OTA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | OTA update policy to set. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| policy | [OtaUpdatePolicy](arkts-mdm-systemmanager-otaupdatepolicy-i.md) | Yes | 升级策略。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { systemManager } from '@kit.MDMKit';
@@ -86,8 +92,8 @@ try {
 let otaUpdatePolicy4: systemManager.OtaUpdatePolicy = {
   "policyType": systemManager.PolicyType.WINDOWS,
   "version": "version_1.0.0.3",
-  "installStartTime": 1716281049, // Timestamp
-  "installEndTime": 1716343200, // Timestamp
+  "installStartTime": 1716281049, // Timestamp.
+  "installEndTime": 1716343200, // Timestamp.
 };
 try {
   systemManager.setOtaUpdatePolicy(wantTemp, otaUpdatePolicy4);

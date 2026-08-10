@@ -1,6 +1,6 @@
 # BackgroundTheme
 
-Enumerates the navigation bar background themes.
+导航栏背景底色的可选项。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the navigation bar background themes.
 DARK = 1
 ```
 
-Dark theme.
+背景底色为黑色。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Dark theme.
 LIGHT = 2
 ```
 
-Light theme.
+背景底色为白色。
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ Light theme.
 DEFAULT = 3
 ```
 
-Light gray theme, with the color value of #F1F3F5.
+背景底色为灰白色。颜色值`#F1F3F5` 。
 
 **Since:** 18
 

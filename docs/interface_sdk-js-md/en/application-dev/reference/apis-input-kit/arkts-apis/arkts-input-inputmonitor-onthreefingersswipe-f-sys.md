@@ -1,12 +1,18 @@
 # onThreeFingersSwipe (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
 ## onThreeFingersSwipe
 
 ```TypeScript
 function onThreeFingersSwipe(receiver: Callback<ThreeFingersSwipe>): void
 ```
 
-Listens for touchPad three fingers swipe events.
+监听全局触控板的三指滑动事件。
 
 **Since:** 23
 
@@ -24,13 +30,13 @@ Listens for touchPad three fingers swipe events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ThreeFingersSwipe&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ThreeFingersSwipe](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md)&gt; | Yes | 回调函数，异步上报三指滑动输入事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permit error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | SystemAPI permit error. |
 

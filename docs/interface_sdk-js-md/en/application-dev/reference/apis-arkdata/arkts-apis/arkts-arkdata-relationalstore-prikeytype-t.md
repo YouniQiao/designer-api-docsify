@@ -4,7 +4,7 @@
 type PRIKeyType = long | double | string
 ```
 
-The type of the priority key can be number or string
+用于表示数据库表某一行主键的数据类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ The type of the priority key can be number or string
 
 | Type | Description |
 | --- | --- |
-| long | The value is a long |
-| double | The value is a double |
-| string | The value is a string |
+| long | 主键的类型可以是长整型。 |
+| double | 主键的类型可以是双精度浮点型。 |
+| string | 主键的类型可以是string。 |
 

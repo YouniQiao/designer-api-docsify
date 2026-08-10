@@ -1,12 +1,22 @@
 # steps
 
+## Modules to Import
+
+```TypeScript
+import { curves } from 'kits/@kit.ArkUI';
+```
+
 ## steps
 
 ```TypeScript
 function steps(count: number, end: boolean): string
 ```
 
-Creates a step curve.
+构造阶梯曲线对象。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves. stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)替代。
 
 **Since:** 7
 
@@ -14,7 +24,7 @@ Creates a step curve.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)
+**Substitutes:** [curves.stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)
 
 <!--Device-curves-function steps(count: number, end: boolean): string--><!--Device-curves-function steps(count: number, end: boolean): string-End-->
 
@@ -24,12 +34,12 @@ Creates a step curve.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | number | Yes | Number of steps. The value must be a positive integer. |
-| end | boolean | Yes | Whether the step change occurs at the start or end of each interval.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **true**: The step change occurs at the end of each interval.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **false**: The step change occurs at the start of each interval. |
+| count | number | Yes | 阶梯的数量，需要为正整数。 |
+| end | boolean | Yes | 在每个间隔的起点或是终点发生阶跃变化。&lt;br&gt;-true：在终点发生阶跃变化。&lt;br&gt;-false：在起点发生阶跃变化。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Steps curve object. |
+| string | 返回阶梯曲线对象。 |
 

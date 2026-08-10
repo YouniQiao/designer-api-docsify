@@ -1,12 +1,18 @@
 # getNotificationParameters
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getNotificationParameters
 
 ```TypeScript
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-获取通知[NotificationRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中wantAgent字段的部分信息。使用Promise异步回调。
+获取通知[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)中wantAgent字段的部分信息。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -35,14 +41,12 @@ function getNotificationParameters(id: number, label?: string): Promise<Notifica
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,21 +60,6 @@ notificationManager.getNotificationParameters(id, label).then((data: notificatio
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let id: int = 0;
-let label: string = '';
-notificationManager.getNotificationParameters(id, label).then((data: notificationManager.NotificationParameters | null) => {
-  console.info(`Succeeded in getting notification parameters, data is ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get notification parameters. Code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## getNotificationParameters
 
@@ -78,7 +67,7 @@ notificationManager.getNotificationParameters(id, label).then((data: notificatio
 function getNotificationParameters(id: int, label?: string): Promise<NotificationParameters | null>
 ```
 
-获取通知[NotificationRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中wantAgent字段的部分信息。使用Promise异步回调。
+获取通知[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)中wantAgent字段的部分信息。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -107,8 +96,8 @@ function getNotificationParameters(id: int, label?: string): Promise<Notificatio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
 

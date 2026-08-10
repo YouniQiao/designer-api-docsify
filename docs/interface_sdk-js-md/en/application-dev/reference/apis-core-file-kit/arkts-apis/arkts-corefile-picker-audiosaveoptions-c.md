@@ -1,6 +1,6 @@
 # AudioSaveOptions
 
-Defines the options for saving audio clips.
+音频保存选项。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines the options for saving audio clips.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
+
 ## newFileNames
 
 ```TypeScript
 newFileNames?: Array<string>
 ```
 
-Name of the document to save. If this parameter is not specified, the user needs to enter the file name.
+拉起documentPicker进行保存的文件名。若无此参数，则默认需要用户自行输入。
 
 **Type:** Array&lt;string&gt;
 

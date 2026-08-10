@@ -1,14 +1,22 @@
 # @ohos.app.ability.contextConstant
 
-The ContextConstant module defines context-related enums, including the file encryption partition level and process mode of the UIAbility after it is started.
+ContextConstant提供Context相关的枚举，包含文件加密分区等级、UIAbility启动后的进程模式等。
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace contextConstant--><!--Device-unnamed-declare namespace contextConstant-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Modules to Import
+
+```TypeScript
+import { contextConstant } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 
@@ -16,17 +24,17 @@ The ContextConstant module defines context-related enums, including the file enc
 
 | Name | Description |
 | --- | --- |
-| [AreaMode](arkts-ability-contextconstant-areamode-e.md) | Enumerates the file encryption levels, which are used to ensure data security for applications across different scenarios. You can select the appropriate encryption level based on the application requirements to protect user data. |
-| [ContextType](arkts-ability-contextconstant-contexttype-e.md) | Context type |
-| [ProcessMode](arkts-ability-contextconstant-processmode-e.md) | Enumerates the process modes of the UIAbility after it is started.As a property of [StartOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, **ProcessMode** takes effect only in  [UIAbilityContext.startAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_and is used to specify the process mode of the target UIAbility.This value takes effect only on 2-in-1 devices and tablets. If it is used on other devices, error code 801 is returned. |
-| [Scenarios](arkts-ability-contextconstant-scenarios-e.md) | Enumerates the scenarios where the [onNewWant]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ lifecycle callback is not triggered. It is used in the  [setOnNewWantSkipScenarios]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API. |
-| [StartupVisibility](arkts-ability-contextconstant-startupvisibility-e.md) | Enumerates the visibility statuses of the UIAbility after it is started.If the target UIAbility is set to invisible, the window of the target UIAbility is not displayed in the foreground,there is no icon in the dock, and the **onForeground** lifecycle of the target UIAbility is not triggered.As a property of [StartOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, **StartupVisibility** takes effect only in  [UIAbilityContext.startAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_and specifies the visibility of the target UIAbility after it is started.This value takes effect only on 2-in-1 devices and tablets. If it is used on other devices, error code 801 is returned. |
+| [AreaMode](arkts-ability-contextconstant-areamode-e.md) | 文件加密分区等级，保证应用在不同场景下的数据安全。开发者可以根据应用的具体需求选择合适的加密等级，以保护用户的数据安全。 |
+| [ContextType](arkts-ability-contextconstant-contexttype-e.md) | 上下文类型 |
+| [ProcessMode](arkts-ability-contextconstant-processmode-e.md) | UIAbility启动后的进程模式。ProcessMode作为[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)的一个属性，仅在  [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效，用来指定目标UIAbility的进程模式。该功能仅在2in1和Tablet设备上生效，在其他设备中返回801错误码。 |
+| [Scenarios](arkts-ability-contextconstant-scenarios-e.md) | 表示不触发[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)生命周期回调场景的枚举，用于  [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口。 |
+| [StartupVisibility](arkts-ability-contextconstant-startupvisibility-e.md) | UIAbility启动后是否可见。当用户设置目标UIAbility为不可见时，目标UIAbility的窗口不会显示在前台，dock栏也不会有图标，同时目标UIAbility的onForeground生命周期不会被调用。StartupVisibility作为[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)的一个属性，仅在  [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效，用来指定目标UIAbility启动后的可见性。该功能仅在2in1和Tablet设备上生效，在其他设备中返回801错误码。 |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ContextType](arkts-ability-contextconstant-contexttype-e-sys.md) | Context type |
+| [ContextType](arkts-ability-contextconstant-contexttype-e-sys.md) | 上下文类型 |
 <!--DelEnd-->
 

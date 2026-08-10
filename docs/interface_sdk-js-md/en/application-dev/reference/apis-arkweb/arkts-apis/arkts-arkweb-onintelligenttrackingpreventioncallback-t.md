@@ -18,5 +18,5 @@ The callback of Intelligent Tracking Prevention.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| details | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of onIntelligentTrackingPrevention.  |
+| details | [IntelligentTrackingPreventionDetails](../arkts-components/arkts-arkweb-intelligenttrackingpreventiondetails-i.md) | Yes | callback information of onIntelligentTrackingPrevention. |
 

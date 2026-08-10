@@ -1,6 +1,6 @@
 # CaptureOption
 
-Describes the capture options.
+设置截取图像的信息。
 
 **Since:** 14
 
@@ -10,17 +10,22 @@ Describes the capture options.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## blackWindowIds
 
 ```TypeScript
 blackWindowIds?: Array<int>
 ```
 
-List of window IDs that are not displayed during screen capture. By default, this list is empty. Valid window IDs must be positive integers. Currently, this parameter applies only to  
-[floating ball windows]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. If a window ID does not correspond to a floating ball window, is not a positive integer, or does not exist, error code 401 is reported. You are advised to call  
-[getFloatingBallWindowInfo()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_to obtain the window ID of a floating ball window.
+表示截取图像时不显示的窗口ID列表，默认为空。窗口ID应为大于0的整数，目前仅[闪控球窗口](arkts-window-floatingball.md)生效，窗口ID为非闪控球窗口、非整数、小于等于0、或者不存在的窗口ID时报参数错误，错误码为401。推荐使用  
+[getFloatingBallWindowInfo()](arkts-arkui-floatingball-floatingballcontroller-i.md#getfloatingballwindowinfo)方法获取闪控球窗口ID属性。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 21
 
@@ -38,9 +43,9 @@ List of window IDs that are not displayed during screen capture. By default, thi
 displayId?: long
 ```
 
-ID of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to capture. The default value is **0**. The value must be an integer greater than or equal to 0. If a non-integer is passed, error code 401 is reported.
+表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，默认为0，该参数应为大于或等于0的整数，非整数会报参数错误。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 14
 

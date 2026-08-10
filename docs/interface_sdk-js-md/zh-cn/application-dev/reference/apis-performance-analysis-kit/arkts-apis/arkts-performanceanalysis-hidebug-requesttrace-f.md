@@ -1,5 +1,11 @@
 # requestTrace
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## requestTrace
 
 ```TypeScript
@@ -24,7 +30,7 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | trace�ɼ�������Ϣ�� |
+| config | [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) | 是 | trace�ɼ�������Ϣ�� |
 
 **返回值：**
 
@@ -36,11 +42,11 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Remote service exception. |
-| [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace文件存储达到限制) | Trace storage limit reached. |
-| [11400302](../errorcode-hiviewdfx-hidebug-trace.md#11400302-trace采集超出资源配额) | Resource unavailable. |
+| 11400302 | Resource unavailable. |
+| 11400104 | Remote service exception. |
+| 11400120 | Trace storage limit reached. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug, hilog } from '@kit.PerformanceAnalysisKit';

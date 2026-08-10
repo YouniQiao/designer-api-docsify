@@ -1,5 +1,11 @@
 # getAVSession
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## getAVSession
 
 ```TypeScript
@@ -24,7 +30,7 @@ function getAVSession(context: Context): Promise<AVSession>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要使用UIAbilityContext，用于系统获取应用组件的相关信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 需要使用UIAbilityContext，用于系统获取应用组件的相关信息。 |
 
 **返回值：**
 
@@ -36,10 +42,10 @@ function getAVSession(context: Context): Promise<AVSession>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';

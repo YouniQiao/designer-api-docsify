@@ -1,15 +1,16 @@
 # @ohos.app.ability.wantAgent
 
-The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md) object, enabling an application to
- trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event)
- at a future time.
- The module provides the APIs for creating a WantAgent object, obtaining the bundle name and UID of the application to
- which a WantAgent object belongs, proactively triggering a WantAgent object, and checking whether two WantAgent
- objects are the same. A typical use scenario of WantAgent is notification processing. For example, when a user
- touches a notification, the [trigger](arkts-ability-wantagent-trigger-f.md#trigger) API of WantAgent is triggered and the target
- application is started. For details, see
- [Notification](../../../notification/notification-with-wantagent.md).
+WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象，允许应用程序在未来的某个时间点触发WantAgent实例执行指定操作（如启动Ability、发送公共事件等）。
+ 该模块提供了创建WantAgent实例、获取WantAgent实例所属应用的包名、获取WantAgent实例所属应用的UID、主动触发WantAgent实例、判断两个WantAgent实例是否相等等功能。WantAgent的一个典型应
+ 用场景是通知处理。例如，当用户点击通知时，会触发WantAgent的[trigger](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-trigger-i-sys.md/arkts-notification-notificationrequest-trigger-i-sys.md)接口，并拉起目标应用。具体使用请参考
+ [通知模块](../../../notification/notification-with-wantagent.md)。
 
+
+## Modules to Import
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 
@@ -17,11 +18,11 @@ The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c
 
 | Name | Description |
 | --- | --- |
-| [wantAgent](arkts-ability-wantagent-n.md) | The WantAgent module encapsulates a [Want]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object, enabling an application to trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event)at a future time.  The module provides the APIs for creating a WantAgent object, obtaining the bundle name and UID of the application to which a WantAgent object belongs, proactively triggering a WantAgent object, and checking whether two WantAgent objects are the same. A typical use scenario of WantAgent is notification processing. For example, when a user touches a notification, the [trigger]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API of WantAgent is triggered and the target application is started. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [wantAgent](arkts-ability-wantagent-n.md) | WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象，允许应用程序在未来的某个时间点触发WantAgent实例执行指定操作（如启动Ability、发送公共事件等）。  该模块提供了创建WantAgent实例、获取WantAgent实例所属应用的包名、获取WantAgent实例所属应用的UID、主动触发WantAgent实例、判断两个WantAgent实例是否相等等功能。WantAgent的一个典型应用场景是通知处理。例如，当用户点击通知时，会触发WantAgent的[trigger](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-trigger-i-sys.md/arkts-notification-notificationrequest-trigger-i-sys.md)接口，并拉起目标应用。具体使用请参考[Notification](../../../notification/notification-with-wantagent.md)。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [WantAgent](arkts-ability-wantagent-t.md) | Target WantAgent object. |
+| [WantAgent](arkts-ability-wantagent-t.md) | WantAgent对象。 |
 

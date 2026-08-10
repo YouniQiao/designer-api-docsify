@@ -1,6 +1,6 @@
 # DataShareHelperOptions
 
-指定[DataShareHelper]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的可选参数，包含是否在代理模式下，以及非静默访问的拉起等待时间。
+指定[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md)的可选参数，包含是否在代理模式下，以及非静默访问的拉起等待时间。
 
 **起始版本：** 10
 
@@ -10,14 +10,20 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## 导入模块
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## isProxy
 
 ```TypeScript
 isProxy?: boolean
 ```
 
-默认为false，如果为true，则要创建的[DataShareHelper]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_处于代理模式，所有操作都不会打开数据提供者APP，除非数据库不存在，当数据库不存在时，  
-[createDataShareHelper]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_会拉起数据提供者创建数据库。
+默认为false，如果为true，则要创建的[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md)处于代理模式，所有操作都不会打开数据提供者APP，除非数据库不存在，当数据库不存在时，  
+[createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f.md#createdatasharehelper)会拉起数据提供者创建数据库。
 
 **类型：** boolean
 
@@ -41,7 +47,7 @@ waitTime?: int
 
 拉起数据提供者进程的等待时间（单位：秒），默认值为2秒。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 2
 

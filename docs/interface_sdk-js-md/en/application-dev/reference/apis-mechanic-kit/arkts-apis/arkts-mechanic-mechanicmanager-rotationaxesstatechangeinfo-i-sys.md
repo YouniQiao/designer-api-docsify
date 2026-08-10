@@ -1,6 +1,6 @@
 # RotationAxesStateChangeInfo (System API)
 
-Rotation axes state change information.
+旋转轴状态变更信息
 
 **Since:** 20
 
@@ -12,15 +12,21 @@ Rotation axes state change information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## mechId
 
 ```TypeScript
 mechId: int
 ```
 
-ID of the mechanical device.
+机械设备唯一ID
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -40,7 +46,7 @@ status: RotationAxesStatus
 
 Rotate axis status.
 
-**Type:** RotationAxesStatus
+**Type:** [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md)
 
 **Since:** 20
 

@@ -4,7 +4,7 @@
 type QueryCustomContentEvent = (queryType: CustomType[]) => Promise<CustomElement>
 ```
 
-The query custom content event.
+自定义内容查询事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ The query custom content event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryType | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | query type  |
+| queryType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md)[] | Yes | 自定义类型：包含用户基本信息、界面选项卡配置、代码编译选项和系统设置项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CustomElement&gt; | (CustomElement) returned through promise  |
+| Promise&lt;CustomElement&gt; | Promise对象，返回我的页面的自定义元素。 |
 

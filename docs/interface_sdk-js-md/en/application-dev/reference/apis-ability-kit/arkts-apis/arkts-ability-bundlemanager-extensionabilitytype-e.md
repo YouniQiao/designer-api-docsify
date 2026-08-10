@@ -1,8 +1,10 @@
 # ExtensionAbilityType
 
-Enumerates the types of ExtensionAbility components.
+扩展组件的类型。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--Table: 30%; 10%; 60%--&gt;
+
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 **Since:** 9
 
@@ -18,7 +20,7 @@ Enumerates the types of ExtensionAbility components.
 FORM = 0
 ```
 
-[FormExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides APIs for widget development.
+[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-formextensionability.md/arkts-app-form-formextensionability.md)：卡片扩展能力，提供卡片开发能力。
 
 **Since:** 9
 
@@ -36,7 +38,7 @@ FORM = 0
 WORK_SCHEDULER = 1
 ```
 
-[WorkSchedulerExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities related to deferred tasks, enabling applications to execute non-real-time tasks when the system is idle.
+[WorkSchedulerExtensionAbility](../../apis-background-tasks-kit/arkts-apis/arkts-workschedulerextensionability.md/arkts-workschedulerextensionability.md)：延时任务扩展能力，允许应用在系统闲时执行实时性不高的任务。
 
 **Since:** 9
 
@@ -52,7 +54,7 @@ WORK_SCHEDULER = 1
 INPUT_METHOD = 2
 ```
 
-[InputMethodExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities related to input method applications.
+[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md/arkts-ime-inputmethodextensionability-c.md)：输入法扩展能力，用于开发输入法应用。
 
 **Since:** 9
 
@@ -68,7 +70,7 @@ INPUT_METHOD = 2
 SERVICE = 3
 ```
 
-[ServiceExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities related to background services.
+[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md)：后台服务扩展能力，提供后台运行并对外提供相应能力。
 
 **Since:** 9
 
@@ -84,7 +86,7 @@ SERVICE = 3
 ACCESSIBILITY = 4
 ```
 
-AccessibilityExtensionAbility: provides extended capabilities related to accessibility services,supporting access and operation of the foreground UI.
+AccessibilityExtensionAbility：无障碍服务扩展能力，支持访问与操作前台界面。
 
 **Since:** 9
 
@@ -100,7 +102,7 @@ AccessibilityExtensionAbility: provides extended capabilities related to accessi
 DATA_SHARE = 5
 ```
 
-[DataShareExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities related to data sharing, providing data reading and writing services.
+[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-application-datashareextensionability.md/arkts-application-datashareextensionability.md)：数据共享扩展能力，用于对外提供数据读写服务。
 
 **Since:** 9
 
@@ -116,7 +118,7 @@ DATA_SHARE = 5
 FILE_SHARE = 6
 ```
 
-FileShareExtensionAbility: provides extended capabilities related to file sharing between applications. This ability is reserved and supported only by system applications.
+FileShareExtensionAbility：文件共享扩展能力，用于应用间的文件分享。预留能力，仅系统应用支持。
 
 **Since:** 9
 
@@ -132,7 +134,7 @@ FileShareExtensionAbility: provides extended capabilities related to file sharin
 STATIC_SUBSCRIBER = 7
 ```
 
-[StaticSubscriberExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities related to static broadcast, used to handle static events such as startup events.
+[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)：静态广播扩展能力，用于处理静态事件，比如开机事件。
 
 **Since:** 9
 
@@ -148,7 +150,7 @@ STATIC_SUBSCRIBER = 7
 WALLPAPER = 8
 ```
 
-WallpaperExtensionAbility: provides extended capabilities to implement wallpapers displayed on home screen. This ability is reserved and supported only by system applications.
+WallpaperExtensionAbility：壁纸扩展能力，用于实现桌面壁纸。预留能力，仅系统应用支持。
 
 **Since:** 9
 
@@ -164,7 +166,7 @@ WallpaperExtensionAbility: provides extended capabilities to implement wallpaper
 BACKUP = 9
 ```
 
-[BackupExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities for data backup and restore.
+[BackupExtensionAbility](../../apis-core-file-kit/arkts-apis/arkts-application-backupextensionability.md/arkts-application-backupextensionability.md)：数据备份扩展能力，提供应用数据的备份恢复能力。
 
 **Since:** 9
 
@@ -180,7 +182,7 @@ BACKUP = 9
 WINDOW = 10
 ```
 
-[WindowExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities that allow system applications to pull up and embed UIs of other applications.
+[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-application-windowextensionability.md/arkts-application-windowextensionability.md)：界面组合扩展能力，允许系统应用进行跨应用的界面拉起和嵌入。
 
 **Since:** 9
 
@@ -196,7 +198,7 @@ WINDOW = 10
 ENTERPRISE_ADMIN = 11
 ```
 
-[EnterpriseAdminExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities for processing enterprise management events, such as application installation events on devices and events indicating too many incorrect screen-lock password attempts.
+[EnterpriseAdminExtensionAbility](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)：企业设备管理扩展能力，提供企业管理时处理管理事件的能力。
 
 **Since:** 9
 
@@ -212,7 +214,7 @@ ENTERPRISE_ADMIN = 11
 THUMBNAIL = 13
 ```
 
-ThumbnailExtensionAbility: provides extended capabilities for offering thumbnails for files. This ability is reserved and supported only by system applications.
+ThumbnailExtensionAbility：文件缩略图扩展能力，用于为文件提供图标缩略图的能力。预留能力，仅系统应用支持。
 
 **Since:** 9
 
@@ -228,7 +230,7 @@ ThumbnailExtensionAbility: provides extended capabilities for offering thumbnail
 PREVIEW = 14
 ```
 
-PreviewExtensionAbility: provides extended capabilities for file preview so that other applications can be embedded and displayed in the current application. This ability is reserved and supported only by system applications.
+PreviewExtensionAbility：文件预览扩展能力，提供文件预览的能力，其他应用可以直接在应用中嵌入显示。预留能力，仅系统应用支持。
 
 **Since:** 9
 
@@ -244,7 +246,7 @@ PreviewExtensionAbility: provides extended capabilities for file preview so that
 PRINT = 15
 ```
 
-PrintExtensionAbility: provides extended capabilities for printing photos and documents in office scenarios. This ability is supported only by system applications.
+PrintExtensionAbility：文件打印扩展能力，提供应用打印照片、文档等办公场景。仅系统应用支持。
 
 **Since:** 10
 
@@ -260,7 +262,7 @@ PrintExtensionAbility: provides extended capabilities for printing photos and do
 SHARE = 16
 ```
 
-[ShareExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides sharing service templates based on the UIExtensionAbility.
+[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md)：提供分享业务能力，为开发者提供基于UIExtension的分享业务模板。
 
 **Since:** 10
 
@@ -276,7 +278,7 @@ SHARE = 16
 PUSH = 17
 ```
 
-PushExtensionAbility: provides extended capabilities for pushing scenario-specific messages. This ability is reserved and supported only by system applications.
+PushExtensionAbility：推送扩展能力，提供推送场景化消息能力。预留能力，仅系统应用支持。
 
 **Since:** 10
 
@@ -292,7 +294,7 @@ PushExtensionAbility: provides extended capabilities for pushing scenario-specif
 DRIVER = 18
 ```
 
-[DriverExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities for the peripheral driver. When an application configures an ExtensionAbility of the driver type, it is recognized as a driver application. Driver applications do not differentiate between users during installation, uninstall, and recovery. Moreover, when a new user account is created, the existing driver applications on the device are installed for that user. For example, when a sub-user is created, the driver applications already installed by the primary user is automatically installed for the sub-user. If a driver application is uninstalled for a sub-user, it is also removed for the primary user.
+[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-app-ability-driverextensionability.md/arkts-app-ability-driverextensionability.md)：驱动扩展能力，提供外设驱动扩展能力。应用配置了driver类型的ExtensionAbility后会被视为驱动应用，驱动应用在安装、卸载和恢复时不会区分用户，且创建新用户时也会安装设备上已有的驱动应用。例如，创建子用户时会默认安装主用户已有的驱动应用，在子用户上卸载驱动应用时，主用户上对应的驱动应用也会同时被卸载。
 
 **Since:** 10
 
@@ -308,7 +310,7 @@ DRIVER = 18
 ACTION = 19
 ```
 
-[ActionExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides custom action service templates based on the UIExtensionAbility.
+[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md)：自定义服务扩展能力，为开发者提供基于UIExtension的自定义操作业务模板。
 
 **Since:** 10
 
@@ -324,7 +326,7 @@ ACTION = 19
 ADS_SERVICE = 20
 ```
 
-AdsServiceExtensionAbility: provides background customized ad services for external systems. This ability is supported only by system applications.
+AdsServiceExtensionAbility：广告服务扩展能力，对外提供后台自定义广告业务服务，仅系统应用支持。
 
 **Since:** 11
 
@@ -340,7 +342,7 @@ AdsServiceExtensionAbility: provides background customized ad services for exter
 EMBEDDED_UI = 21
 ```
 
-[EmbeddedUIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_:provides extended capabilities for the embeddable UI across process.
+[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)：嵌入式UI扩展能力，提供跨进程界面嵌入的能力。
 
 **Since:** 12
 
@@ -356,7 +358,7 @@ EMBEDDED_UI = 21
 INSIGHT_INTENT_UI = 22
 ```
 
-InsightIntentUIExtensionAbility: provides extended capabilities that enable applications to be called by Celia intents so as to be displayed in windows.
+InsightIntentUIExtensionAbility：为开发者提供能被小艺意图调用，以窗口形态呈现内容的扩展能力。
 
 **Since:** 12
 
@@ -372,7 +374,7 @@ InsightIntentUIExtensionAbility: provides extended capabilities that enable appl
 FENCE = 24
 ```
 
-[FenceExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides geofence-related capabilities. It inherits from ExtensionAbility.
+[FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md)：为开发者提供地理围栏相关的能力，继承自ExtensionAbility。
 
 **Since:** 18
 
@@ -388,7 +390,7 @@ FENCE = 24
 CALLER_INFO_QUERY = 25
 ```
 
-CallerInfoQueryExtensionAbility: provides the capability of querying incoming and outgoing call information.
+CallerInfoQueryExtensionAbility：为开发者提供来去电信息查询能力
 
 **Since:** 19
 
@@ -404,7 +406,7 @@ CallerInfoQueryExtensionAbility: provides the capability of querying incoming an
 ASSET_ACCELERATION = 26
 ```
 
-AssetAccelerationExtensionAbility: provides extended capabilities of pre-downloading background resources when the device is idle.
+AssetAccelerationExtensionAbility：资源预下载扩展能力，提供在设备闲时状态，进行后台资源预下载的能力。
 
 **Since:** 18
 
@@ -420,7 +422,7 @@ AssetAccelerationExtensionAbility: provides extended capabilities of pre-downloa
 FORM_EDIT = 27
 ```
 
-[FormEditExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities related to widget editing. It inherits from UIExtensionAbility.
+[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md)：为开发者提供卡片编辑的能力，继承自UIExtensionAbility。
 
 **Since:** 18
 
@@ -436,7 +438,7 @@ FORM_EDIT = 27
 DISTRIBUTED = 28
 ```
 
-[DistributedExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_:provides extended capabilities for distributed services and lifecycle callbacks for creation, destruction, and connection of the DistributedExtensionAbility.
+[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)：提供分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。
 
 **Since:** 20
 
@@ -452,7 +454,7 @@ DISTRIBUTED = 28
 APP_SERVICE = 29
 ```
 
-[AppServiceExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_:provides backend service capabilities for enterprise common applications.
+[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)：为企业普通应用提供后台服务能力。
 
 **Since:** 20
 
@@ -468,7 +470,7 @@ APP_SERVICE = 29
 LIVE_FORM = 30
 ```
 
-[LiveFormExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities for interactive widgets, and provides lifecycle callbacks for creating and destroying interactive widgets.
+[LiveFormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-liveformextensionability.md/arkts-app-form-liveformextensionability.md)：互动卡片相关扩展能力，提供互动卡片创建、销毁的生命周期回调。
 
 **Since:** 20
 
@@ -486,7 +488,9 @@ LIVE_FORM = 30
 SELECTION = 31
 ```
 
-SelectionExtensionAbility: provides extended capabilities for text selection popup.
+[SelectionExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)：为开发者提供划词弹窗能力的ExtensionAbility。
+
+**模型约束**：此接口仅可在Stage模型下使用。
 
 **Since:** 24
 
@@ -504,7 +508,7 @@ SelectionExtensionAbility: provides extended capabilities for text selection pop
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities for web native message communication.
+[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-web-webnativemessagingextensionability.md/arkts-web-webnativemessagingextensionability.md)：为开发者提供Web原生消息通信能力的ExtensionAbility。
 
 **Since:** 21
 
@@ -520,7 +524,7 @@ WEB_NATIVE_MESSAGING = 32
 FAULT_LOG = 33
 ```
 
-[FaultLogExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities for delayed fault notifications.
+[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)：提供故障延迟通知的能力。
 
 **Since:** 21
 
@@ -536,7 +540,7 @@ FAULT_LOG = 33
 NOTIFICATION_SUBSCRIBER = 34
 ```
 
-[NotificationSubscriberExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities for notification subscription.
+[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)：提供通知订阅的相关功能。
 
 **Since:** 22
 
@@ -552,7 +556,7 @@ NOTIFICATION_SUBSCRIBER = 34
 CRYPTO = 35
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_: provides extended capabilities for external key management.
+[CryptoExtensionAbility](../../../security/UniversalKeystoreKit/huks-extension-ability-support-dev.md)：提供外部密钥管理扩展的相关功能。
 
 **Since:** 22
 
@@ -568,7 +572,9 @@ CRYPTO = 35
 PARTNER_AGENT = 36
 ```
 
-[PartnerAgentExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides the device discovery and device offline notification functions based on Bluetooth.
+[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-fusionconnectivity-partneragentextensionability.md/arkts-fusionconnectivity-partneragentextensionability.md)：基于蓝牙通信技术，提供设备发现与设备下线的通知功能。
+
+**模型约束**：此接口仅可在Stage模型下使用。
 
 **Since:** 23
 
@@ -586,7 +592,9 @@ PARTNER_AGENT = 36
 AGENT = 37
 ```
 
-AgentExtensionAbility: provides extended capabilities for agents, including lifecycle callback APIs for agent service creation, destruction, connection and disconnection, as well as callback APIs for receiving data sent by clients and security authentication.
+[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)：提供智能体扩展能力，包括智能体服务的创建、销毁、连接、断开的生命周期回调接口，以及接收客户端所发送数据和安全认证的回调接口。
+
+**模型约束**：此接口仅可在Stage模型下使用。
 
 **Since:** 24
 
@@ -604,7 +612,9 @@ AgentExtensionAbility: provides extended capabilities for agents, including life
 AGENT_UI = 38
 ```
 
-AgentUIExtensionAbility: provides the Agent UI display capability on the access device.
+[AgentUIExtensionAbility](../../../reference/apis-ability-kit/js-apis-agent-agentUIExtensionAbility.md)：为开发者提供接入端侧Agent UI界面显示能力。
+
+**模型约束**：此接口仅可在Stage模型下使用。
 
 **Since:** 24
 
@@ -622,7 +632,7 @@ AgentUIExtensionAbility: provides the Agent UI display capability on the access 
 MODULAR_OBJECT = 39
 ```
 
-Indicates extension info with type of the modular object extension.
+[ModularObjectExtensionAbility](../../../application-models/modular-object-extension-overview.md)：提供应用自身能力开放功能。
 
 **Since:** 26.0.0
 
@@ -640,8 +650,8 @@ Indicates extension info with type of the modular object extension.
 UNSPECIFIED = 255
 ```
 
-The ability type is not specified. \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_It can be used in  
-[queryExtensionAbilityInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain ExtensionAbility components of all types.\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+不指定类型&lt;!--Del--&gt;，配合  
+[queryExtensionAbilityInfo接口](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo)可以查询所有类型的ExtensionAbility&lt;!--DelEnd--&gt;。
 
 **Since:** 9
 

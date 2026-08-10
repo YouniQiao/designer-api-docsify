@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## key
 
 ```TypeScript
@@ -38,7 +44,7 @@ value: Value
 
 值对象。
 
-**类型：** Value
+**类型：** [Value](arkts-arkdata-distributeddata-value-i.md)
 
 **起始版本：** 9
 

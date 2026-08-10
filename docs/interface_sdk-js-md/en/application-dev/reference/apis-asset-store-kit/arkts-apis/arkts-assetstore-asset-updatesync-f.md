@@ -1,12 +1,18 @@
 # updateSync
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## updateSync
 
 ```TypeScript
 function updateSync(query: AssetMap, attributesToUpdate: AssetMap): void
 ```
 
-Updates an asset. This API returns the result synchronously.
+更新符合条件的一条关键资产，使用同步方式返回结果。
 
 **Since:** 12
 
@@ -22,28 +28,28 @@ Updates an asset. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the asset to update, such as the asset alias, access control attributes, and custom data. |
-| attributesToUpdate | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | New attributes of the asset, such as the asset plaintext and custom data. |
+| query | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | 待更新关键资产的搜索条件，如关键资产别名、访问控制属性、自定义数据等。 |
+| attributesToUpdate | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | 待更新关键资产的属性集合，如关键资产明文、自定义数据等。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000002](../errorcode-asset.md#24000002-asset-not-found) | The asset is not found. |
-| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
-| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
-| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
-| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
-| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) | The cryptography operation failed. |
-| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
-| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) | Getting the system time failed. |
+| 24000015 | Getting the system time failed. |
+| 24000012 | Calling the OS Account service failed. |
+| 24000013 | Calling the Access Token service failed. |
+| 24000010 | IPC failed. |
+| 24000011 | Calling the Bundle Manager service failed. |
+| 24000008 | The database operation failed. |
+| 24000009 | The cryptography operation failed. |
+| 24000006 | Insufficient memory. |
+| 24000007 | The asset is corrupted. |
+| 24000005 | The screen lock status does not match. |
+| 24000002 | The asset is not found. |
+| 24000001 | The ASSET service is unavailable. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

@@ -22,12 +22,12 @@ export function createRowNode(context: UIContext, options?: FrameNodeOptions): R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于创建FrameNode的UI上下文。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Options for configuring FrameNode creation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 24 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 用于创建FrameNode的UI上下文。 |
+| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | 否 | Options for configuring FrameNode creation.<br>**起始版本：** 24 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  返回 Row 类型的 FrameNode。 |
+| [Row](arkts-arkui-typenode-row-t.md) | 返回 Row 类型的 FrameNode。 |
 

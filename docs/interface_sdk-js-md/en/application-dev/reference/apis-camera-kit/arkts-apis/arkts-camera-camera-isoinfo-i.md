@@ -1,6 +1,6 @@
 # IsoInfo
 
-Describes the information about the sensitivity (ISO) settings.
+感光度（ISO）参数信息。
 
 **Since:** 22
 
@@ -10,6 +10,12 @@ Describes the information about the sensitivity (ISO) settings.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## iso
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly iso?: int
 
 ISO value.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

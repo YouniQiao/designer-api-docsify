@@ -1,12 +1,13 @@
 # @ohos.bundle.overlay
 
-本模块提供overlay特征应用的[OverlayModuleInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_信息查询以及禁用使能的能力。
+本模块提供overlay特征应用的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息查询以及禁用使能的能力。
 
 overlay特征应用指应用中包含有overlay资源包，overlay资源包详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    本模块接口仅适用于stage模型，且仅适用于\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
+[overlay机制](../../../quick-start/resource-categories-and-access.md#overlay机制)。
+
+> **说明：**
+> 
+> 本模块接口仅适用于stage模型，且仅适用于[静态overlay](../../../quick-start/resource-categories-and-access.md#静态overlay配置方式)。
 
 **起始版本：** 10
 
@@ -15,6 +16,12 @@ overlay特征应用指应用中包含有overlay资源包，overlay资源包详�
 <!--Device-unnamed-declare namespace overlay--><!--Device-unnamed-declare namespace overlay-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
+
+## 导入模块
+
+```TypeScript
+import { overlay } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 

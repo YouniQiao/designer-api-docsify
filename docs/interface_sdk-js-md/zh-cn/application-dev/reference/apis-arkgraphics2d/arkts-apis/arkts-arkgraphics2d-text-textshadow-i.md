@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## blurRadius
 
 ```TypeScript
@@ -18,7 +24,7 @@ blurRadius?: double
 
 模糊半径，浮点数，单位为物理像素px，默认为0.0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 

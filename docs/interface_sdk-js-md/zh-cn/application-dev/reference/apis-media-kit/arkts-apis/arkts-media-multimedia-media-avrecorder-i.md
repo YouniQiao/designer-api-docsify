@@ -1,15 +1,16 @@
 # AVRecorder
 
 音视频录制管理类，用于音视频媒体录制。在调用AVRecorder的方法前，需要先调用  
-[createAVRecorder]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口构建一个AVRecorder实例。
+[createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder)接口构建一个AVRecorder实例。
 
-音视频录制demo可参考：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
-    **说明：**  
-    
-    - 本Interface首批API从API version 9开始支持。  
-    
-    - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_。
+音视频录制demo可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、  
+[视频录制开发指导](../../../media/media/video-recording.md)。
+
+> **说明：**
+> 
+> - 本Interface首批API从API version 9开始支持。
+> 
+> - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md/arkts-multimedia-camera.md)。
 
 **起始版本：** 9
 
@@ -18,6 +19,12 @@
 <!--Device-unnamed-interface AVRecorder--><!--Device-unnamed-interface AVRecorder-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
+
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
 
 ## addWatermark
 
@@ -48,22 +55,22 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | watermark | image.PixelMap | 是 | 水印图片。 |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 水印配置。 |
+| config | [WatermarkConfiguration](arkts-media-multimedia-media-watermarkconfiguration-i.md) | 是 | 水印配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回水印id。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回水印id。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | The parameter check failed, parameter value out of range. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
+| 5400108 | The parameter check failed, parameter value out of range. |
 
 ## getAVRecorderConfig
 
@@ -73,7 +80,7 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 
 获取实时的配置参数。使用callback异步回调。
 
-只能在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口调用成功后调用。
+只能在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口调用成功后调用。
 
 **起始版本：** 11
 
@@ -87,15 +94,15 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVRecorderConfig&gt; | 是 | 回调函数。获取实时配置的参数成功时，err为undefined，data为获取到的配置参数，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVRecorderConfig&gt; | 是 | 回调函数。获取实时配置的参数成功时，err为undefined，data为获取到的配置参数，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operate not permit. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## getAVRecorderConfig
 
@@ -119,15 +126,15 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig | undefined>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVRecorderConfig \| undefined&gt; | 是 | 回调函数，返回实时配置参数，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVRecorderConfig \| undefined&gt; | 是 | 回调函数，返回实时配置参数，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operate not permit. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## getAVRecorderConfig
 
@@ -137,7 +144,7 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 
 获取实时的配置参数。使用Promise异步回调。
 
-只能在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口调用成功后调用。
+只能在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig))接口调用成功后调用。
 
 **起始版本：** 11
 
@@ -157,9 +164,9 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operate not permit. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## getAVRecorderConfig
 
@@ -189,9 +196,9 @@ getAVRecorderConfig(): Promise<AVRecorderConfig | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operate not permit. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## getAudioCapturerMaxAmplitude
 
@@ -207,7 +214,7 @@ getAudioCapturerMaxAmplitude(callback: AsyncCallback<int>): void
 
 获取当前音频最大振幅。使用callback异步回调。
 
-在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用此接口。在[stop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口成功调用后，调用此接口会报错。
+在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用此接口。在[stop](media.AVRecorder.stop(callback: AsyncCallback&lt;void&gt;))接口成功调用后，调用此接口会报错。
 
 调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间里面的最大值。
 
@@ -223,14 +230,14 @@ getAudioCapturerMaxAmplitude(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | 是 | 回调函数。获取当前音频最大振幅成功时，err为undefined，data为获取到的最大振幅，否则为错误对象。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。获取当前音频最大振幅成功时，err为undefined，data为获取到的最大振幅，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operation not allowed. |
+| 5400105 | Service died. Return by callback. |
 
 ## getAudioCapturerMaxAmplitude
 
@@ -246,7 +253,7 @@ getAudioCapturerMaxAmplitude(): Promise<int>
 
 获取当前音频最大振幅。使用Promise异步回调。
 
-在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用此接口。在[stop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口成功调用后，调用此接口会报错。
+在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用此接口。在[stop](media.AVRecorder.stop(callback: AsyncCallback&lt;void&gt;))接口成功调用后，调用此接口会报错。
 
 调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间里面的最大值。
 
@@ -262,14 +269,14 @@ getAudioCapturerMaxAmplitude(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回获取的当前音频最大振幅。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回获取的当前音频最大振幅。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. |
+| 5400105 | Service died. Return by promise. |
 
 ## getAvailableEncoder
 
@@ -291,14 +298,14 @@ getAvailableEncoder(callback: AsyncCallback<Array<EncoderInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;EncoderInfo&gt;&gt; | 是 | 回调函数。获取可用的编码器参数成功时，err为undefined，data为获取到的编码器参数，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;EncoderInfo&gt;&gt; | 是 | 回调函数。获取可用的编码器参数成功时，err为undefined，data为获取到的编码器参数，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operation not allowed. |
+| 5400105 | Service died. Return by callback. |
 
 ## getAvailableEncoder
 
@@ -326,8 +333,8 @@ getAvailableEncoder(): Promise<Array<EncoderInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. |
+| 5400105 | Service died. Return by promise. |
 
 ## getCurrentAudioCapturerInfo
 
@@ -337,7 +344,7 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 
 获取当前音频采集参数。使用callback异步回调。
 
-在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用此接口。在[stop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口成功调用后，调用此接口会报错。
+在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用此接口。在[stop](media.AVRecorder.stop(callback: AsyncCallback&lt;void&gt;))接口成功调用后，调用此接口会报错。
 
 **起始版本：** 11
 
@@ -351,15 +358,15 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;audio.AudioCapturerChangeInfo&gt; | 是 | 回调函数。当获取音频采集参数成功时，err为undefined，data为获取到的 audio.AudioCapturerChangeInfo，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | 是 | 回调函数。当获取音频采集参数成功时，err为undefined，data为获取到的 audio.AudioCapturerChangeInfo，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operation not allowed. |
+| 5400103 | I/O error. |
+| 5400105 | Service died. Return by callback. |
 
 ## getCurrentAudioCapturerInfo
 
@@ -383,15 +390,15 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;audio.AudioCapturerChangeInfo \| undefined&gt; | 是 | 回调函数，返回audio.AudioCapturerChangeInfo对象，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioCapturerChangeInfo \| undefined&gt; | 是 | 回调函数，返回audio.AudioCapturerChangeInfo对象，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operation not allowed. |
+| 5400103 | I/O error. |
+| 5400105 | Service died. Return by callback. |
 
 ## getCurrentAudioCapturerInfo
 
@@ -401,7 +408,7 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 
 获取当前音频采集参数。使用Promise异步回调。
 
-在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用此接口。在[stop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口成功调用后，调用此接口会报错。
+在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用此接口。在[stop](media.AVRecorder.stop(callback: AsyncCallback&lt;void&gt;))接口成功调用后，调用此接口会报错。
 
 **起始版本：** 11
 
@@ -421,9 +428,9 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. |
+| 5400103 | I/O error. |
+| 5400105 | Service died. Return by promise. |
 
 ## getCurrentAudioCapturerInfo
 
@@ -453,9 +460,9 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. |
+| 5400103 | I/O error. |
+| 5400105 | Service died. Return by promise. |
 
 ## getInputSurface
 
@@ -469,7 +476,7 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。
 
-需在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用getInputSurface接口。
+需在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用getInputSurface接口。
 
 **起始版本：** 9
 
@@ -483,15 +490,15 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数。当获取surface成功，err为undefined，data为获取到的surfaceId，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取surface成功，err为undefined，data为获取到的surfaceId，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operate not permit. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## getInputSurface
 
@@ -519,15 +526,15 @@ getInputSurface(callback: AsyncCallback<string | undefined>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string \| undefined&gt; | 是 | 回调函数，返回surfaceId，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| undefined&gt; | 是 | 回调函数，返回surfaceId，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operate not permit. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## getInputSurface
 
@@ -541,7 +548,7 @@ getInputSurface(): Promise<string>
 
 应当注意，填入的视频数据需要携带时间戳（单位ns）和buffersize。时间戳的起始时间请以系统启动时间为基准。
 
-需在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用getInputSurface接口。
+需在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig))接口成功调用后，才能调用getInputSurface接口。
 
 **起始版本：** 9
 
@@ -561,9 +568,9 @@ getInputSurface(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operate not permit. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## getInputSurface
 
@@ -597,9 +604,9 @@ getInputSurface(): Promise<string | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operate not permit. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## off('stateChange')
 
@@ -607,7 +614,7 @@ getInputSurface(): Promise<string | undefined>
 off(type: 'stateChange', callback?: OnAVRecorderStateChangeHandler): void
 ```
 
-取消订阅录制状态机[AVRecorderState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_切换的事件。使用callback异步回调。
+取消订阅录制状态机[AVRecorderState](@ohos.multimedia.media:media.AVRecorderState)切换的事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -624,7 +631,7 @@ off(type: 'stateChange', callback?: OnAVRecorderStateChangeHandler): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 录制状态机切换事件回调类型，支持的事件：'stateChange'，用户操作和系统都会触发此事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 回调函数，返回录制状态机切换事件。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消 所有callback。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_从API version 12开始支持此参数。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| callback | [OnAVRecorderStateChangeHandler](arkts-media-onavrecorderstatechangehandler-t.md) | 否 | 回调函数，返回录制状态机切换事件。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消 所有callback。&lt;br/&gt;从API version 12开始支持此参数。<br>**起始版本：** 12 |
 
 ## off('error')
 
@@ -648,8 +655,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 录制错误事件回调类型'error'。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 'error'：录制过程中发生错误，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 回调函数，返回录制错误事件。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_从API version 12开始支持此参数。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| type | 'error' | 是 | 录制错误事件回调类型'error'。 &lt;br&gt;- 'error'：录制过程中发生错误，触发该事件。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，返回录制错误事件。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。&lt;br/&gt;从API version 12开始支持此参数。<br>**起始版本：** 12 |
 
 ## off('audioCapturerChange')
 
@@ -672,7 +679,7 @@ off(type: 'audioCapturerChange', callback?: Callback<audio.AudioCapturerChangeIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 录音配置变化的回调类型，支持的事件：'audioCapturerChange'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;audio.AudioCapturerChangeInfo&gt; | 否 | 回调函数，返回变化后的录音配置全量信息。如果指定参数则取消对应callback（callback对象不 能是匿名函数），否则取消所有callback。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_从API version 12开始支持此参数。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | 否 | 回调函数，返回变化后的录音配置全量信息。如果指定参数则取消对应callback（callback对象不 能是匿名函数），否则取消所有callback。&lt;br/&gt;从API version 12开始支持此参数。<br>**起始版本：** 12 |
 
 ## off('photoAssetAvailable')
 
@@ -695,7 +702,7 @@ off(type: 'photoAssetAvailable', callback?: Callback<photoAccessHelper.PhotoAsse
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | 是 | 录音配置变化的回调类型，支持的事件：'photoAssetAvailable'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;photoAccessHelper.PhotoAsset&gt; | 否 | 回调函数，返回系统创建的资源文件对应的PhotoAsset对象。如果指定参数则取消对应callback（ callback对象不能是匿名函数），否则取消所有callback。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 否 | 回调函数，返回系统创建的资源文件对应的PhotoAsset对象。如果指定参数则取消对应callback（ callback对象不能是匿名函数），否则取消所有callback。 |
 
 ## offAudioCapturerChange
 
@@ -717,7 +724,7 @@ Subscribes to audio capturer configuration changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;audio.AudioCapturerChangeInfo&gt; | 否 | Callback used to return the entire configuration information about the audio capturer. This parameter is supported since API version 12. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | 否 | Callback used to return the entire configuration information about the audio capturer. This parameter is supported since API version 12. |
 
 ## offError
 
@@ -739,7 +746,7 @@ Unsubscribes from AVRecorder errors. After the unsubscription,your application c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Callback invoked when the event is triggered. This parameter is supported since API version 12. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback invoked when the event is triggered. This parameter is supported since API version 12. |
 
 ## offPhotoAssetAvailable
 
@@ -761,7 +768,7 @@ Unsubscribes from media asset callback events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;photoAccessHelper.PhotoAsset&gt; | 否 | Callback used to return the **PhotoAsset** object corresponding to the resource file created by the system. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 否 | Callback used to return the **PhotoAsset** object corresponding to the resource file created by the system. |
 
 ## offStateChange
 
@@ -783,7 +790,7 @@ Unsubscribes from AVRecorder state changes.This event can be triggered by both u
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Callback invoked when the event is triggered. This parameter is supported since API version 12. |
+| callback | [OnAVRecorderStateChangeHandler](arkts-media-onavrecorderstatechangehandler-t.md) | 否 | Callback invoked when the event is triggered. This parameter is supported since API version 12. |
 
 ## on('audioCapturerChange')
 
@@ -808,13 +815,13 @@ on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 录音配置变化的回调类型，支持的事件：'audioCapturerChange'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;audio.AudioCapturerChangeInfo&gt; | 是 | 回调函数，返回变化后的录音配置全量信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | 是 | 回调函数，返回变化后的录音配置全量信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## on('photoAssetAvailable')
 
@@ -822,9 +829,9 @@ on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo
 on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-订阅媒体资源回调事件，当[FileGenerationMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_枚举设置为系统创建媒体文件时，会在  
-[stop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_操作结束后把  
-[PhotoAsset]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_对象回调给应用。使用callback异步回调。
+订阅媒体资源回调事件，当[FileGenerationMode](@ohos.multimedia.media:media.FileGenerationMode)枚举设置为系统创建媒体文件时，会在  
+[stop](media.AVRecorder.stop(callback: AsyncCallback&lt;void&gt;))操作结束后把  
+[PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md/arkts-file-photoaccesshelper.md)对象回调给应用。使用callback异步回调。
 
 当用户重复订阅时，以最后一次订阅的回调接口为准。
 
@@ -841,14 +848,14 @@ on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAssetAvailable' | 是 | 录像资源的回调类型，支持的事件：'photoAssetAvailable'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;photoAccessHelper.PhotoAsset&gt; | 是 | 回调函数，返回系统创建的资源文件对应的PhotoAsset对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 是 | 回调函数，返回系统创建的资源文件对应的PhotoAsset对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## on('stateChange')
 
@@ -873,14 +880,14 @@ on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 录制状态机切换事件回调类型，支持的事件：'stateChange'，用户操作和系统都会触发此事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回录制状态机切换事件。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| callback | [OnAVRecorderStateChangeHandler](arkts-media-onavrecorderstatechangehandler-t.md) | 是 | 回调函数，返回录制状态机切换事件。<br>**起始版本：** 12 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## on('error')
 
@@ -889,9 +896,9 @@ on(type: 'error', callback: ErrorCallback): void
 ```
 
 订阅AVRecorder的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。如果此时  
-[AVRecorderState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_也切换至error状态，用户需要通过  
-[reset]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_或者  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口退出录制操作。使用callback异步回调。
+[AVRecorderState](@ohos.multimedia.media:media.AVRecorderState)也切换至error状态，用户需要通过  
+[reset](media.AVRecorder.reset(callback: AsyncCallback&lt;void&gt;))或者  
+[release](media.AVRecorder.release(callback: AsyncCallback&lt;void&gt;))接口退出录制操作。使用callback异步回调。
 
 用户只能订阅一个错误事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
 
@@ -909,23 +916,23 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 录制错误事件回调类型'error'。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 'error'：录制过程中发生错误，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回录制错误事件。 |
+| type | 'error' | 是 | 录制错误事件回调类型'error'。 &lt;br&gt;- 'error'：录制过程中发生错误，触发该事件。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，返回录制错误事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Time out. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
-| [5400107](../errorcode-media.md#5400107-音频焦点冲突) | Audio interrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 11+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 801 | Capability not supported. |
+| 5400102 | Operation not allowed. |
+| 5400103 | I/O error. |
+| 5400101 | No memory. |
+| 5400106 | Unsupported format. |
+| 201 | Permission denied. |
+| 5400107 | Audio interrupted.<br>**适用版本：** 11+ |
+| 5400104 | Time out. |
+| 5400105 | Service died. |
 
 ## onAudioCapturerChange
 
@@ -949,13 +956,13 @@ When the application initiates multiple subscriptions to this event, the last su
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;audio.AudioCapturerChangeInfo&gt; | 是 | Callback used to return the entire configuration information about the audio capturer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioCapturerChangeInfo&gt; | 是 | Callback used to return the entire configuration information about the audio capturer. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## onError
 
@@ -979,22 +986,22 @@ An application can subscribe to only one AVRecorder error event. When the applic
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback invoked when the event is triggered. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Time out. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
-| [5400107](../errorcode-media.md#5400107-音频焦点冲突) | Audio interrupted. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 801 | Capability not supported. |
+| 5400102 | Operation not allowed. |
+| 5400103 | I/O error. |
+| 5400101 | No memory. |
+| 5400106 | Unsupported format. |
+| 201 | Permission denied. |
+| 5400107 | Audio interrupted. |
+| 5400104 | Time out. |
+| 5400105 | Service died. |
 
 ## onPhotoAssetAvailable
 
@@ -1018,14 +1025,14 @@ When the application initiates multiple subscriptions to this event, the last su
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;photoAccessHelper.PhotoAsset&gt; | 是 | Callback used to return the **PhotoAsset** object corresponding to the resource file created by the system. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 是 | Callback used to return the **PhotoAsset** object corresponding to the resource file created by the system. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## onStateChange
 
@@ -1047,14 +1054,14 @@ Subscribes to AVRecorder state changes. An application can subscribe to only one
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Callback invoked when the event is triggered. |
+| callback | [OnAVRecorderStateChangeHandler](arkts-media-onavrecorderstatechangehandler-t.md) | 是 | Callback invoked when the event is triggered. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## pause
 
@@ -1064,8 +1071,8 @@ pause(callback: AsyncCallback<void>): void
 
 暂停视频录制。使用callback异步回调。
 
-需要[start]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用pause接口，可以通过调用  
-[resume]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口来恢复录制。
+需要[start](media.AVRecorder.start(callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用pause接口，可以通过调用  
+[resume](media.AVRecorder.resume(callback: AsyncCallback&lt;void&gt;))接口来恢复录制。
 
 **起始版本：** 9
 
@@ -1079,15 +1086,15 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当暂停视频录制成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operate not permit. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## pause
 
@@ -1097,7 +1104,7 @@ pause(): Promise<void>
 
 暂停视频录制。使用Promise异步回调。
 
-需要[start]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用pause接口，可以通过调用[resume]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口来恢复录制。
+需要[start](media.AVRecorder.start())接口成功调用后，才能调用pause接口，可以通过调用[resume](media.AVRecorder.resume())接口来恢复录制。
 
 **起始版本：** 9
 
@@ -1119,9 +1126,9 @@ pause(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operate not permit. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## prepare
 
@@ -1145,17 +1152,17 @@ prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 配置音视频录制的相关参数。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当prepare接口成功，err为undefined，否则为错误对象。 |
+| config | [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md) | 是 | 配置音视频录制的相关参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当prepare接口成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by callback. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 5400102 | Operate not permit. Return by callback. |
+| 201 | Permission denied. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## prepare
 
@@ -1183,7 +1190,7 @@ prepare(config: AVRecorderConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 配置音视频录制的相关参数。 |
+| config | [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md) | 是 | 配置音视频录制的相关参数。 |
 
 **返回值：**
 
@@ -1195,10 +1202,10 @@ prepare(config: AVRecorderConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 5400102 | Operate not permit. Return by promise. |
+| 201 | Permission denied. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## release
 
@@ -1222,13 +1229,13 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当释放音视频录制资源成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放音视频录制资源成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## release
 
@@ -1260,7 +1267,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## reset
 
@@ -1270,9 +1277,9 @@ reset(callback: AsyncCallback<void>): void
 
 重置音视频录制。使用callback异步回调。
 
-纯音频录制时，需要重新调用[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口才能重新录制。纯视频录制，音视频录制时，需要重新调用  
-[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和  
-[getInputSurface]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口才能重新录制。
+纯音频录制时，需要重新调用[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口才能重新录制。纯视频录制，音视频录制时，需要重新调用  
+[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))和  
+[getInputSurface](media.AVRecorder.getInputSurface(callback: AsyncCallback&lt;string&gt;))接口才能重新录制。
 
 **起始版本：** 9
 
@@ -1286,14 +1293,14 @@ reset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当重置音视频录制成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重置音视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## reset
 
@@ -1303,9 +1310,9 @@ reset(): Promise<void>
 
 重置音视频录制。使用Promise异步回调。
 
-纯音频录制时，需要重新调用[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口才能重新录制。纯视频录制，音视频录制时，需要重新调用  
-[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和  
-[getInputSurface]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口才能重新录制。
+纯音频录制时，需要重新调用[prepare](media.AVRecorder.prepare(config: AVRecorderConfig))接口才能重新录制。纯视频录制，音视频录制时，需要重新调用  
+[prepare](media.AVRecorder.prepare(config: AVRecorderConfig))和  
+[getInputSurface](media.AVRecorder.getInputSurface())接口才能重新录制。
 
 **起始版本：** 9
 
@@ -1325,8 +1332,8 @@ reset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## resume
 
@@ -1336,7 +1343,7 @@ resume(callback: AsyncCallback<void>): void
 
 恢复视频录制。使用callback异步回调。
 
-需要在[pause]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用resume接口。
+需要在[pause](media.AVRecorder.pause(callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用resume接口。
 
 **起始版本：** 9
 
@@ -1350,15 +1357,15 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当恢复视频录制成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当恢复视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operate not permit. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## resume
 
@@ -1368,7 +1375,7 @@ resume(): Promise<void>
 
 恢复视频录制。使用Promise异步回调。
 
-需要在[pause]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用resume接口。
+需要在[pause](media.AVRecorder.pause())接口成功调用后，才能调用resume接口。
 
 **起始版本：** 9
 
@@ -1390,9 +1397,9 @@ resume(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operate not permit. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## setMetadata
 
@@ -1401,11 +1408,11 @@ setMetadata(metadata: Record<string, string>): void
 ```
 
 设置录制的元数据信息。如果这些信息的键相同，会覆盖config.metadata.customInfo（参考  
-[prepare()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和  
-[AVRecorderConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_）中的值。
+[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))和  
+[AVRecorderConfig](@ohos.multimedia.media:media.AVRecorderConfig)）中的值。
 
-该方法只能在[prepare()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_事件成功触发后，且必须在  
-[stop()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_之前调用。
+该方法只能在[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))事件成功触发后，且必须在  
+[stop()](media.AVRecorder.stop(callback: AsyncCallback&lt;void&gt;))之前调用。
 
 **起始版本：** 26.0.0
 
@@ -1419,15 +1426,16 @@ setMetadata(metadata: Record<string, string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metadata | Record&lt;string, string&gt; | 是 | 录制的元数据信息。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_格式为字符串键值对，其中，键需要以\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_开头，且值的长度不能超过256个字节。 |
+| metadata | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | 是 | 录制的元数据信息。&lt;br&gt;格式为字符串键值对，其中，键需要以`com.openharmony.`开头，且值的长度不能超过256个字节。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
+| 5400102 | Operation not allowed.<br>**适用版本：** 26.0.0+ |
+| 5400101 | No memory.<br>**适用版本：** 26.0.0+ |
+| 202 | Not System App.<br>**适用版本：** 19 - 24 |
+| 5400108 | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
 ## setWillMuteWhenInterrupted
 
@@ -1461,8 +1469,8 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## start
 
@@ -1472,8 +1480,8 @@ start(callback: AsyncCallback<void>): void
 
 开始视频录制。使用callback异步回调。
 
-纯音频录制需在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用start接口。纯视频录制，音视频录制需在  
-[getInputSurface]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口成功调用后，才能调用start接口。
+纯音频录制需在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用start接口。纯视频录制，音视频录制需在  
+[getInputSurface](media.AVRecorder.getInputSurface(callback: AsyncCallback&lt;string&gt;))接口成功调用后，才能调用start接口。
 
 **起始版本：** 9
 
@@ -1487,15 +1495,15 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当开始录制视频成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始录制视频成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operate not permit. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## start
 
@@ -1505,8 +1513,8 @@ start(): Promise<void>
 
 开始视频录制。使用Promise异步回调。
 
-纯音频录制需在[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，才能调用start接口。纯视频录制，音视频录制需在  
-[getInputSurface]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口成功调用后，才能调用start接口。
+纯音频录制需在[prepare](media.AVRecorder.prepare(config: AVRecorderConfig))接口成功调用后，才能调用start接口。纯视频录制，音视频录制需在  
+[getInputSurface](media.AVRecorder.getInputSurface())接口成功调用后，才能调用start接口。
 
 **起始版本：** 9
 
@@ -1528,9 +1536,9 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operate not permit. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## stop
 
@@ -1540,12 +1548,12 @@ stop(callback: AsyncCallback<void>): void
 
 停止视频录制。使用callback异步回调。
 
-需要在[start]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或  
-[pause]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口成功调用后，才能调用stop接口。
+需要在[start](media.AVRecorder.start(callback: AsyncCallback&lt;void&gt;))或  
+[pause](media.AVRecorder.pause(callback: AsyncCallback&lt;void&gt;))接口成功调用后，才能调用stop接口。
 
-纯音频录制时，需要重新调用[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口才能重新录制。纯视频录制，音视频录制时，需要重新调用  
-[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_和  
-[getInputSurface]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_接口才能重新录制。
+纯音频录制时，需要重新调用[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))接口才能重新录制。纯视频录制，音视频录制时，需要重新调用  
+[prepare](media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))和  
+[getInputSurface](media.AVRecorder.getInputSurface(callback: AsyncCallback&lt;string&gt;))接口才能重新录制。
 
 **起始版本：** 9
 
@@ -1559,15 +1567,15 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当停止视频录制成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止视频录制成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operate not permit. Return by callback. |
+| 5400103 | IO error. Return by callback. |
+| 5400105 | Service died. Return by callback. |
 
 ## stop
 
@@ -1577,11 +1585,11 @@ stop(): Promise<void>
 
 停止视频录制。使用Promise异步回调。
 
-需要在[start]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或[pause]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口成功调用后，才能调用stop接口。
+需要在[start](media.AVRecorder.start())或[pause](media.AVRecorder.pause())接口成功调用后，才能调用stop接口。
 
-纯音频录制时，需要重新调用[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口才能重新录制。纯视频录制，音视频录制时，需要重新调用  
-[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_和  
-[getInputSurface]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_接口才能重新录制。
+纯音频录制时，需要重新调用[prepare](media.AVRecorder.prepare(config: AVRecorderConfig))接口才能重新录制。纯视频录制，音视频录制时，需要重新调用  
+[prepare](media.AVRecorder.prepare(config: AVRecorderConfig))和  
+[getInputSurface](media.AVRecorder.getInputSurface())接口才能重新录制。
 
 **起始版本：** 9
 
@@ -1603,9 +1611,9 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operate not permit. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## updateRotation
 
@@ -1621,8 +1629,8 @@ updateRotation(rotation: int): Promise<void>
 
 更新视频旋转角度。使用Promise异步回调。
 
-当且仅当[prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口成功调用后，且在  
-[start]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口之前，才能调用updateRotation接口。
+当且仅当[prepare](media.AVRecorder.prepare(config: AVRecorderConfig))接口成功调用后，且在  
+[start](media.AVRecorder.start(callback: AsyncCallback&lt;void&gt;))接口之前，才能调用updateRotation接口。
 
 **起始版本：** 12
 
@@ -1636,7 +1644,7 @@ updateRotation(rotation: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rotation | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 旋转角度，取值仅支持0、90、180、270度。 |
+| rotation | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 旋转角度，取值仅支持0、90、180、270度。 |
 
 **返回值：**
 
@@ -1648,10 +1656,10 @@ updateRotation(rotation: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## state
 
@@ -1663,7 +1671,7 @@ readonly state: AVRecorderState
 
 **原子化服务API：** 从API version 12 开始，该接口支持在原子化服务中使用。
 
-**类型：** AVRecorderState
+**类型：** [AVRecorderState](arkts-media-avrecorderstate-t.md)
 
 **起始版本：** 9
 

@@ -1,5 +1,11 @@
 # getPointerColorSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## getPointerColorSync
 
 ```TypeScript
@@ -22,47 +28,19 @@ function getPointerColorSync(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 鼠标光标颜色。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 鼠标光标颜色。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| 202 | SystemAPI permission error. |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            let pointerColor = pointer.getPointerColorSync();
-            console.info(`Succeeded in getting pointer color sync, pointerColor: ${JSON.stringify(pointerColor)}.`);
-          } catch (error) {
-            console.error(`Failed to get pointer color sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { pointer } from '@kit.InputKit';
-import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
 
 @Entry
 @Component

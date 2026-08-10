@@ -1,5 +1,11 @@
 # onDragStateChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { dragInteraction } from 'kits/@kit.ArkUI';
+```
+
 ## onDragStateChange
 
 ```TypeScript
@@ -22,11 +28,11 @@ Listens for dragging state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DragState&gt; | Yes | Indicates the callback to receive the changed dragging state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DragState&gt; | Yes | Indicates the callback to receive the changed dragging state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

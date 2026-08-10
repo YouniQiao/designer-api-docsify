@@ -1,6 +1,6 @@
 # DlpFileQueryOptions
 
-Represents the query options about an enterprise DLP file.
+表示企业DLP文件的查询选项。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Represents the query options about an enterprise DLP file.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## classificationLabel
 
 ```TypeScript
 classificationLabel?: string
 ```
 
-User-defined classification label of an enterprise DLP file. The value contains a maximum of 255 bytes. If the value is out of range, error code 19100001 is thrown.
+表示企业DLP文件的用户定义分类标签。默认为空。最大长度为255字节，超出此范围抛出错误码19100001。
 
 **Type:** string
 

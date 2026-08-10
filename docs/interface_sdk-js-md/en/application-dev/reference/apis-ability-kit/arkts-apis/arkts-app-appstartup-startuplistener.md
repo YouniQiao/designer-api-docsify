@@ -1,7 +1,10 @@
 # @ohos.app.appstartup.StartupListener
 
-The module defines the task listener used in [App Startup](../../../application-models/app-startup.md).
+## Modules to Import
 
+```TypeScript
+import { StartupListener } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 
@@ -9,11 +12,11 @@ The module defines the task listener used in [App Startup](../../../application-
 
 | Name | Description |
 | --- | --- |
-| [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md) | The module defines the task listener used in \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md) | 本模块提供[应用启动框架](../../../application-models/app-startup.md)任务监听器的定义。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnCompletedFn](arkts-ability-oncompletedfn-t.md) | Defines a onCompleted function. |
+| [OnCompletedFn](arkts-ability-oncompletedfn-t.md) | 所有启动任务完成时的回调函数。 |
 

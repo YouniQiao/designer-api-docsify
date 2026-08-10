@@ -1,6 +1,6 @@
 # BluetoothInfo
 
-Represents the device Bluetooth information.
+设备的蓝牙信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the device Bluetooth information.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.MDMKit';
+```
+
 ## connectionState
 
 ```TypeScript
 connectionState: constant.ProfileConnectionState
 ```
 
-Bluetooth profile connection state of the device.
+表示设备的蓝牙连接状态。
 
 **Type:** constant.ProfileConnectionState
 
@@ -36,7 +42,7 @@ Bluetooth profile connection state of the device.
 name: string
 ```
 
-Bluetooth name of the device.
+表示设备的蓝牙名称。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Bluetooth name of the device.
 state: access.BluetoothState
 ```
 
-Bluetooth state of the device.
+表示设备的蓝牙状态。
 
 **Type:** access.BluetoothState
 

@@ -4,7 +4,7 @@
 export type EnabledSilentReminderChangedCallback = _EnabledSilentReminderChangedCallback
 ```
 
-Defines a callback function to listen for the enabling state changes of the application's silent reminder.
+注册应用通知静默提醒使能状态变化的回调函数类型。
 
 **Since:** 24
 

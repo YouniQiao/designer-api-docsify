@@ -1,6 +1,6 @@
 # CertAbstract
 
-Represents brief information about a certificate.
+表示证书简要信息。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Represents brief information about a certificate.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certAlias
 
 ```TypeScript
 certAlias: string
 ```
 
-Alias of a certificate. The value contains up to 128 bytes.
+表示证书的别名，最大长度为128字节。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Alias of a certificate. The value contains up to 128 bytes.
 state: boolean
 ```
 
-Certificate state. The value **true** indicates that the certificate is enabled, and **false** means the opposite.
+表示证书的状态，true为启用状态、false为禁用状态。
 
 **Type:** boolean
 
@@ -52,7 +58,7 @@ Certificate state. The value **true** indicates that the certificate is enabled,
 subjectName: string
 ```
 
-Name of the certificate subject. The value contains up to 1024 bytes.
+表示证书的使用者名称，最大长度为1024字节。
 
 **Type:** string
 
@@ -70,7 +76,7 @@ Name of the certificate subject. The value contains up to 1024 bytes.
 uri: string
 ```
 
-Unique identifier of a certificate. The value contains up to 256 bytes.
+表示证书的唯一标识符，最大长度为256字节。
 
 **Type:** string
 

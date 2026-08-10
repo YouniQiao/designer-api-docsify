@@ -36,7 +36,7 @@ allowedTypes(types: Array<SourceTool>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| types | Array&lt;SourceTool&gt; | 是 | 手势处理器所支持的事件输入源。 |
+| types | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | 是 | 手势处理器所支持的事件输入源。 |
 
 **返回值：**
 

@@ -10,6 +10,12 @@ Wi-Fi device configuration information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## bssid
 
 ```TypeScript
@@ -38,7 +44,7 @@ bssidType?: DeviceAddressType
 
 Wi-Fi bssid type.
 
-**Type:** DeviceAddressType
+**Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
 **Since:** 12
 
@@ -58,7 +64,7 @@ eapConfig?: WifiEapConfig
 
 EAP config info.
 
-**Type:** WifiEapConfig
+**Type:** [WifiEapConfig](arkts-connectivity-wifimanager-wifieapconfig-i.md)
 
 **Since:** 10
 
@@ -94,7 +100,7 @@ netId?: int
 
 Allocated networkId
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -132,7 +138,7 @@ securityType: WifiSecurityType
 
 Security type: reference definition of WifiSecurityType
 
-**Type:** WifiSecurityType
+**Type:** [WifiSecurityType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-wifisecuritytype-e.md)
 
 **Since:** 12
 
@@ -192,7 +198,7 @@ wapiConfig?: WifiWapiConfig
 
 WAPI config info.
 
-**Type:** WifiWapiConfig
+**Type:** [WifiWapiConfig](arkts-connectivity-wifimanager-wifiwapiconfig-i.md)
 
 **Since:** 12
 

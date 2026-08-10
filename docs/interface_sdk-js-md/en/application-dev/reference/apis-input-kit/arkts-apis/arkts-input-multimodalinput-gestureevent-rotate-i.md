@@ -1,6 +1,6 @@
 # Rotate
 
-Defines a rotation gesture event.
+旋转手势事件。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Defines a rotation gesture event.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
+```
+
 ## angle
 
 ```TypeScript
 angle: double
 ```
 
-Rotation angle, in degrees.
+旋转角度，单位为度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 
@@ -34,9 +40,9 @@ Rotation angle, in degrees.
 type: ActionType
 ```
 
-Gesture event type, for example, gesture start, gesture update, or gesture end.
+手势事件类型。如：手势开始、手势更新、手势结束等。
 
-**Type:** ActionType
+**Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 
 **Since:** 11
 

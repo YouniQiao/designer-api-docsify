@@ -1,6 +1,6 @@
 # LabelStyle
 
-Represents a style object for the label text and font.
+label文本和字体的样式对象。
 
 **Since:** 10
 
@@ -16,15 +16,15 @@ Represents a style object for the label text and font.
 font?: Font
 ```
 
-Font of the label text.
+设置label文本字体样式。
 
-When the tab is a subtab, the default font is in 16.0 fp size, 'HarmonyOS Sans' family, normal font style, medium weight when selected, and normal weight when not selected.
+当页签为子页签时，默认值是字体大小16.0fp、字体类型'HarmonyOS Sans'，字体风格正常，选中时字重中等，未选中时字重正常。
 
-When the tab is a bottom tab, the default font is in 10.0 fp size, 'HarmonyOS Sans' family, normal font style, and medium weight.
+当页签为底部页签时，默认值是字体大小10.0fp、字体类型'HarmonyOS Sans'，字体风格正常，字重中等。
 
-The default font size of the bottom tab page is 12.0 fp since API version 12.
+从API version 12开始，底部页签内容左右排布时默认字体大小为12.0fp。
 
-**Type:** Font
+**Type:** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
 
 **Since:** 10
 
@@ -44,9 +44,9 @@ The default font size of the bottom tab page is 12.0 fp since API version 12.
 heightAdaptivePolicy?: TextHeightAdaptivePolicy
 ```
 
-How the adaptive height is determined for the label text. By default, the **maxLines** settings are prioritized.
+设置Label文本自适应高度的方式。默认值是最大行数优先。
 
-**Type:** TextHeightAdaptivePolicy
+**Type:** [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-enums-textheightadaptivepolicy-e.md)
 
 **Since:** 10
 
@@ -66,9 +66,9 @@ How the adaptive height is determined for the label text. By default, the **maxL
 maxFontSize?: number | ResourceStr
 ```
 
-Maximum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **minFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.
+设置label文本最大显示字号（不支持百分比设置）。需配合minFontSize以及maxLines或布局大小限制使用。自适应文本大小生效后，font.size不生效。默认值是0.0fp，即默认自适应文本大小不生效。
 
-Value range: [minFontSize, +∞)
+取值范围：[minFontSize, +∞)。异常值时取默认值。
 
 **Type:** number \| ResourceStr
 
@@ -92,9 +92,9 @@ Value range: [minFontSize, +∞)
 maxLines?: number
 ```
 
-Maximum number of lines in the label text. If this attribute is specified, the text will not exceed the specified number of lines. You can use **textOverflow** to specify how to represent text overflow. Default value: **1**
+设置label文本的最大行数。如果指定此参数，则文本最多不会超过指定的行。如果有多余的文本，可以通过textOverflow来指定截断方式。默认值是1。
 
-Value range: [1, +∞)
+取值范围：[1, +∞)。异常值时取默认值。
 
 **Type:** number
 
@@ -116,9 +116,9 @@ Value range: [1, +∞)
 minFontSize?: number | ResourceStr
 ```
 
-Minimum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **maxFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.
+设置label文本最小显示字号（不支持百分比设置）。需配合maxFontSize以及maxLines或布局大小限制使用。自适应文本大小生效后，font.size不生效。默认值是0.0fp，即默认自适应文本大小不生效。
 
-Value range: (0, +∞)
+取值范围：(0, +∞)。异常值时取默认值。
 
 **Type:** number \| ResourceStr
 
@@ -142,9 +142,9 @@ Value range: (0, +∞)
 overflow?: TextOverflow
 ```
 
-Display mode when the label text is too long. By default, an ellipsis (...) is used to represent text overflow.
+设置label文本超长时的显示方式。默认值是省略号截断。
 
-**Type:** TextOverflow
+**Type:** [TextOverflow](../arkts-apis/arkts-arkui-enums-textoverflow-e.md)
 
 **Since:** 10
 
@@ -164,11 +164,11 @@ Display mode when the label text is too long. By default, an ellipsis (...) is u
 selectedColor?: ResourceColor
 ```
 
-Font color of the label text when it is selected.
+设置label文本字体选中时的颜色。
 
-Default value: **#FF007DFF
+默认值：#FF007DFF
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** #FF007DFF
 
@@ -190,11 +190,11 @@ Default value: **#FF007DFF
 unselectedColor?: ResourceColor
 ```
 
-Font color of the label text when it is not selected.
+设置label文本字体未选中时的颜色。
 
-Default value: **#99182431
+默认值：#99182431
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** #99182431
 

@@ -1,6 +1,6 @@
 # WatermarkHandleResult
 
-Watermark handling result.
+强制水印处理结果的枚举。
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Watermark handling result.
 WATERMARK_HANDLE_SUCCESS = 0
 ```
 
-Watermark handling success.
+表示强制水印处理成功。
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Watermark handling success.
 WATERMARK_HANDLE_FAILURE = 1
 ```
 
-Watermark handling failure.
+表示强制水印处理失败。
 
 **Since:** 24
 

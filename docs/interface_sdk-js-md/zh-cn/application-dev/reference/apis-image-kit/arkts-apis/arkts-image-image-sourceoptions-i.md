@@ -10,6 +10,12 @@ ImageSource的初始化选项。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## sourceDensity
 
 ```TypeScript
@@ -18,12 +24,11 @@ sourceDensity: int
 
 图片资源像素密度。单位：ppi（像素/英寸）。
 
-在解码参数[DecodingOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_未设置desiredSize的前提下，当前参数SourceOptions.sourceDensity与DecodingOptions.fitDensity非零时将对解码输出的pixelmap进行缩放。
+在解码参数[DecodingOptions](arkts-image-image-decodingoptions-i.md)未设置desiredSize的前提下，当前参数SourceOptions.sourceDensity与DecodingOptions.fitDensity非零时将对解码输出的pixelmap进行缩放。
 
-缩放后宽计算公式如下(高同理)：(width * fitDensity + (sourceDensity >  
-    1)) / sourceDensity。
+缩放后宽计算公式如下(高同理)：(width * fitDensity + (sourceDensity >> 1)) / sourceDensity。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -45,7 +50,7 @@ sourcePixelFormat?: PixelMapFormat
 
 图片像素格式，默认值为UNKNOWN。
 
-**类型：** PixelMapFormat
+**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **起始版本：** 9
 
@@ -67,7 +72,7 @@ sourceSize?: Size
 
 图像像素大小，默认值为空。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 9
 

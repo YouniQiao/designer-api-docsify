@@ -10,6 +10,12 @@ Provides the drm media key request definitions.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## data
 
 ```TypeScript
@@ -58,7 +64,7 @@ mediaKeyRequestType: MediaKeyRequestType
 
 Media key request type.
 
-**Type:** MediaKeyRequestType
+**Type:** [MediaKeyRequestType](arkts-drm-drm-mediakeyrequesttype-e.md)
 
 **Since:** 12
 

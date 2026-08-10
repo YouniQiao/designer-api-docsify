@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
@@ -20,7 +26,7 @@ height: long
 
 表示截取图像的高度，单位为px，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 7
 
@@ -40,7 +46,7 @@ width: long
 
 表示截取图像的宽度，单位为px，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 7
 

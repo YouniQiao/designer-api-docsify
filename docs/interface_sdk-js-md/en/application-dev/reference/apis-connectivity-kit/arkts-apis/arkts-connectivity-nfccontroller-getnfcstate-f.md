@@ -1,12 +1,18 @@
 # getNfcState
 
+## Modules to Import
+
+```TypeScript
+import { nfcController } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getNfcState
 
 ```TypeScript
 function getNfcState(): NfcState
 ```
 
-Obtains the NFC status.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_The NFC status can be any of the following: \_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: Indicates that NFC is disabled. \_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_: Indicates that NFC is being enabled.\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_: Indicates that NFC is enabled. \_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_: Indicates that NFC is being disabled.\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_
+Obtains the NFC status.&lt;p&gt;The NFC status can be any of the following: &lt;ul&gt;&lt;li&gt;{@link #STATE_OFF}: Indicates that NFC is disabled. &lt;li&gt;{@link #STATE_TURNING_ON}: Indicates that NFC is being enabled.&lt;li&gt;{@link #STATE_ON}: Indicates that NFC is enabled. &lt;li&gt;{@link #STATE_TURNING_OFF}: Indicates that NFC is being disabled.&lt;/ul&gt;
 
 **Since:** 12
 
@@ -22,5 +28,5 @@ Obtains the NFC status.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_The NFC status can be 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the NFC status. |
+| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | Returns the NFC status. |
 

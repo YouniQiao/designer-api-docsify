@@ -1,6 +1,6 @@
 # ExpandOption (System API)
 
-Defines the parameters for expanding a screen.
+扩展屏幕的参数。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Defines the parameters for expanding a screen.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## screenId
 
 ```TypeScript
 screenId: long
 ```
 
-Screen ID. The value must be an integer.
+屏幕的id，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Screen ID. The value must be an integer.
 startX: long
 ```
 
-Start X coordinate of the screen. in px. The value must be an integer.
+屏幕的起始X轴坐标，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Start X coordinate of the screen. in px. The value must be an integer.
 startY: long
 ```
 
-Start Y coordinate of the screen. in px. The value must be an integer.
+屏幕的起始Y轴坐标，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

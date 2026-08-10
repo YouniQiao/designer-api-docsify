@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+## 导入模块
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## colorMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ colorMode: ColorMode
 
 颜色模式。
 
-**类型：** ColorMode
+**类型：** [ColorMode](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-colormode-e.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ deviceType: DeviceType
 
 设备类型。
 
-**类型：** DeviceType
+**类型：** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ direction: Direction
 
 屏幕方向。
 
-**类型：** Direction
+**类型：** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
 
 **起始版本：** 6
 
@@ -98,7 +104,7 @@ mcc : int
 
 移动国家码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -118,7 +124,7 @@ mnc : int
 
 移动网络码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -138,7 +144,7 @@ screenDensity: ScreenDensity
 
 屏幕密度。
 
-**类型：** ScreenDensity
+**类型：** [ScreenDensity](../../apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-screendensity-e.md)
 
 **起始版本：** 12
 

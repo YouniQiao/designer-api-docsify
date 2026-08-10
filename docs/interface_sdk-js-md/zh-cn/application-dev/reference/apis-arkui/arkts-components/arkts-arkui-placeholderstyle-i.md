@@ -20,7 +20,7 @@ font?: Font
 
 默认值遵循主题设置。
 
-**类型：** Font
+**类型：** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
 
 **起始版本：** 12
 
@@ -44,7 +44,7 @@ fontColor?: ResourceColor
 
 默认值遵循主题设置。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 

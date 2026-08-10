@@ -12,6 +12,12 @@ Custom icon object in the generation result page of ImageGeneratorDialog.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## callback
 
 ```TypeScript
@@ -20,7 +26,7 @@ callback: Callback<GeneratorResult>
 
 Icon click event callback.
 
-**Type:** Callback&lt;GeneratorResult&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GeneratorResult&gt;
 
 **Since:** 23
 
@@ -64,7 +70,7 @@ text: ResourceStr
 
 Icon text description.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 

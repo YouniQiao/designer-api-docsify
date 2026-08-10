@@ -18,7 +18,7 @@ RINGTONE_TYPE_DEFAULT = 0
 
 默认铃声类型。
 
-从 API version 11 开始废弃。建议使用该枚举中的RINGTONE\_TYPE\_SIM\_CARD\_0替代。
+从 API version 11 开始废弃。建议使用该枚举中的RINGTONE_TYPE_SIM_CARD_0替代。
 
 **起始版本：** 10
 
@@ -56,7 +56,7 @@ RINGTONE_TYPE_MULTISIM = 1
 
 多SIM卡铃声类型。
 
-从 API version 11 开始废弃。建议使用该枚举中的RINGTONE\_TYPE\_SIM\_CARD\_1替代。
+从 API version 11 开始废弃。建议使用该枚举中的RINGTONE_TYPE_SIM_CARD_1替代。
 
 **起始版本：** 10
 

@@ -1,20 +1,23 @@
 # download
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## download
 
 ```TypeScript
 function download(url: string, options: CacheDownloadOptions): void
 ```
 
-Downloads a task from a specified URL. If the transfer is successful, the data is downloaded to the memory cache and file cache.
+启动一个缓存下载任务，若传输成功，则将数据下载到内存缓存和文件缓存中。
 
-- After automatically decompressing during HTTP transmission, the size of the target resource cannot exceed 20971  
-520 bytes (20 MB). Otherwise, the resource fails to store in the memory cache or file cache.  
-- When caching the downloaded data, if the data already exists in the destination URL, the new data will  
-overwrite the old one.  
-- In addition, the system determines whether to store the target resource in a specified location based on each  
-cache type's size limit in **cacheDownload**. By default, the LRU mode is used to replace the existing cached data.  
-- This API returns the result synchronously, without blocking the calling thread.
+- 目标资源经过HTTP传输自动解压后的大小不能超过20971520B（即20MB），否则不会保存到内存缓存或文件缓存中。  
+- 在缓存下载数据时，如果在该url下已存在缓存内容，新的缓存内容会覆盖旧缓存内容。  
+- 目标资源在存储到内存缓存或文件缓存中时，依照缓存下载组件的各类型缓存大小上限决定文件是否存储到指定位置，并默认使用“LRU”（最近最少使用）方式替换已有缓存内容。  
+- 该方法为同步方法，不阻塞调用线程。
 
 **Since:** 18
 
@@ -30,17 +33,17 @@ cache type's size limit in **cacheDownload**. By default, the LRU mode is used t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | URL of the target resource. HTTP and HTTPS are supported. The URL length cannot exceed 81 92 bytes. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Cache download options for the target resource. |
+| url | string | Yes | 目标资源的地址。支持HTTP和HTTPS协议，长度不超过8192字节。 |
+| options | [CacheDownloadOptions](arkts-basicservices-cachedownload-cachedownloadoptions-i.md) | Yes | 目标资源的缓存下载选项。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
+| 401 | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| 201 | permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
@@ -51,10 +54,15 @@ let options: cacheDownload.CacheDownloadOptions = {
   sslType: cacheDownload.SslType.TLS,
   caPath: '/path/to/ca.pem',
   cacheStrategy: cacheDownload.CacheStrategy.FORCE,
+  retry: { maxRetryCount: 1 },
+  timeout: {
+    networkCheckTimeout: 20,
+    httpTotalTimeout: 60,
+  }
 };
 
 try {
-  // Download the resource. If the download is successful, the resource will be cached to the specified file in the application memory or sandbox directory. 
+  // Download the resource. If the download is successful, the resource will be cached to the specified file in the application memory or sandbox directory.
   cacheDownload.download("https://www.example.com", options);
 } catch (err) {
   console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);

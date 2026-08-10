@@ -1,12 +1,18 @@
 # getAddedScanners (System API)
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAddedScanners
 
 ```TypeScript
 function getAddedScanners(): Promise<ScannerDevice[]>
 ```
 
-Obtains the added scanners. This API uses a promise to return the result.
+获取已添加的扫描仪（系统API）。使用Promise异步回调。
 
 **Since:** 20
 
@@ -30,10 +36,10 @@ Obtains the added scanners. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

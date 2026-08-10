@@ -1,6 +1,6 @@
 # PreviewOutput
 
-PreviewOutput implements preview output. It inherits from [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+预览输出类。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 **Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -11,6 +11,12 @@ PreviewOutput implements preview output. It inherits from [CameraOutput]\_\_\_JS
 <!--Device-camera-interface PreviewOutput extends CameraOutput--><!--Device-camera-interface PreviewOutput extends CameraOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## attachSketchSurface
 
@@ -34,18 +40,18 @@ Attaches a surface for PiP preview.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponent-f.md/arkts-arkui-xcomponent-xcomponent-f.md#xcomponent). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -94,12 +100,12 @@ Enables or disables PiP preview.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -147,16 +153,16 @@ Obtains the zoom ratio when PiP preview is enabled.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Zoom ratio. If PiP preview is not supported, the value **-1** is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Zoom ratio. If PiP preview is not supported, the value **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function getSketchRatio(previewOutput: camera.PreviewOutput): number {
@@ -193,9 +199,9 @@ Checks whether Picture-in-Picture (PiP) preview is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -236,15 +242,15 @@ Unsubscribes from PiP status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sketchStatusChanged' | Yes | Event type. The value is fixed at **'sketchStatusChanged'**. The event can be listened for when a PiP preview stream is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SketchStatusData&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('sketchStatusChanged')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SketchStatusData&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('sketchStatusChanged')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function unregisterSketchStatusChanged(previewOutput: camera.PreviewOutput): void {
@@ -274,13 +280,13 @@ Unsubscribes sketch status changed event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SketchStatusData&gt; | No | Callback used to get sketch status data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SketchStatusData&gt; | No | Callback used to get sketch status data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## on('sketchStatusChanged')
 
@@ -305,15 +311,15 @@ Subscribes to PiP status change events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sketchStatusChanged' | Yes | Event type. The value is fixed at **'sketchStatusChanged'**. The event can be listened for when a PiP preview stream is created. This event is triggered when PiP preview is enabled or disabled or the zoom ratio changes while PiP preview is enabled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SketchStatusData&gt; | Yes | Callback used to return the PiP status data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SketchStatusData&gt; | Yes | Callback used to return the PiP status data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -353,11 +359,11 @@ Subscribes sketch status changed event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SketchStatusData&gt; | Yes | Callback used to sketch status data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SketchStatusData&gt; | Yes | Callback used to sketch status data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 

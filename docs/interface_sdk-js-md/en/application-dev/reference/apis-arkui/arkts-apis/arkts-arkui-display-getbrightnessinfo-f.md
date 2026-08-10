@@ -1,13 +1,18 @@
 # getBrightnessInfo
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getBrightnessInfo
 
 ```TypeScript
 function getBrightnessInfo(displayId: long): BrightnessInfo
 ```
 
-Obtains the screen brightness information of a display. If the screen does not support HDR, the  
-**currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
+获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。
 
 **Since:** 22
 
@@ -23,19 +28,30 @@ Obtains the screen brightness information of a display. If the screen does not s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Display ID. The value must be an integer greater than or equal to 0. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕ID。该参数仅支持整数输入，该参数大于等于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Screen brightness information. |
+| [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | 返回displayId对应屏幕的亮度信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getBrightnessInfo can not work correctly due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 801 | Capability not supported. |
+| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1400003 | This display manager service works abnormally. |
+
+## Examples
+
+```TypeScript
+try {
+  let brightnessInfo = display.getBrightnessInfo(0);
+  console.info(`brightness info: ${JSON.stringify(brightnessInfo)}`);
+} catch (error) {
+  console.error(`Failed to getDisplayBrightness. Code: ${error.code}, message: ${error.message}`);
+}
+```
 

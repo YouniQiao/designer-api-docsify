@@ -1,6 +1,6 @@
 # AbortSignal
 
-Object used to abort an async operation.An instance of this class must be accessed in the same thread where the instance is created.Access to fields of this class from another thread is undefined behaviour.
+用于终止异步操作的对象。该类的实例必须在其创建的同一线程中访问。从其他线程访问此类的字段会导致未定义的行为。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Object used to abort an async operation.An instance of this class must be access
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## aborted
 
 ```TypeScript
 aborted: boolean
 ```
 
-Set to true to abort an operation.
+是否终止异步操作。为true时表示终止异步操作，为false时表示异步操作未被终止。
 
 **Type:** boolean
 
@@ -36,7 +42,7 @@ Set to true to abort an operation.
 reason: T
 ```
 
-Reason for the abort. This value will be used to reject the promise returned from lockAsync.
+终止的原因。此值将用于拒绝lockAsync返回的Promise。
 
 **Type:** T
 

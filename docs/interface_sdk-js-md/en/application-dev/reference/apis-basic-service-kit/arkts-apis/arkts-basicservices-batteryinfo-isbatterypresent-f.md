@@ -1,15 +1,18 @@
 # isBatteryPresent
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isBatteryPresent
 
 ```TypeScript
 function isBatteryPresent(): boolean
 ```
 
-Whether the battery is supported or present. The value **true** means that the battery is supported or present;  
-**false** means the opposite.
-
-Default value: **false**.
+表示当前设备是否支持电池或者电池是否在位。true表示支持电池或电池在位，false表示不支持电池或电池不在位，默认为false。
 
 **Since:** 23
 
@@ -23,5 +26,5 @@ Default value: **false**.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the battery is supported or present; returns false if the battery is not supported or absent. |
+| boolean | 返回true表示支持电池或电池在位，返回false表示不支持电池或电池不在位。 |
 

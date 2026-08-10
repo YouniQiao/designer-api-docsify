@@ -10,6 +10,12 @@ Png metadata.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## author
 
 ```TypeScript
@@ -38,7 +44,7 @@ readonly chromaticities?: double[]
 
 PNG color primary/white-point coordinates.
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 26.0.0
 
@@ -158,7 +164,7 @@ readonly gamma?: double
 
 PNG gamma.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -178,7 +184,7 @@ readonly interlaceType?: int
 
 PNG interlacing mode.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -218,7 +224,7 @@ readonly sRGBIntent?: int
 
 PNG sRGB rendering intent.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -298,7 +304,7 @@ readonly xPixelsPerMeter?: int
 
 PNG x pixels per meter.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -318,7 +324,7 @@ readonly yPixelsPerMeter?: int
 
 PNG y pixels per meter.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

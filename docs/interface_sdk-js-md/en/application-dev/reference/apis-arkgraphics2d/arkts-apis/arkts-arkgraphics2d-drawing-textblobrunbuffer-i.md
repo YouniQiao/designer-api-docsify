@@ -1,6 +1,6 @@
 # TextBlobRunBuffer
 
-Describes a series of consecutive glyphs with the same attributes in a text blob.
+描述一行文字中具有相同属性的连续字形。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Describes a series of consecutive glyphs with the same attributes in a text blob
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## glyph
 
 ```TypeScript
 glyph: int
 ```
 
-Index of the glyph. The value is an integer. If a floating point number is passed in, the value is rounded down.
+存储文字的索引，该参数为整数，传入浮点类型时向下取整。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -34,9 +40,9 @@ Index of the glyph. The value is an integer. If a floating point number is passe
 positionX: double
 ```
 
-X coordinate of the start point of the text blob. The value is a floating point number.
+文本的起点x轴坐标，该参数为浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 
@@ -52,9 +58,9 @@ X coordinate of the start point of the text blob. The value is a floating point 
 positionY: double
 ```
 
-Y coordinate of the start point of the text blob. The value is a floating point number.
+文本的起点y轴坐标，该参数为浮点数。单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 

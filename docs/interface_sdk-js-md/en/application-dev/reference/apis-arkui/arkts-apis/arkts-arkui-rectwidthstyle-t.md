@@ -4,7 +4,7 @@
 declare type RectWidthStyle = import('../api/@ohos.graphics.text').default.RectWidthStyle
 ```
 
-Enumerates the rectangle width styles.
+矩形区域宽度规格枚举。
 
 **Since:** 14
 

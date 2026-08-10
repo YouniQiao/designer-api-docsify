@@ -4,7 +4,7 @@
 export type OnAlphabetIndexerSelectCallback = (index: int) => void
 ```
 
-Defines an AlphabetIndexer callback when onSelect.
+索引项被选中时触发的事件。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Defines an AlphabetIndexer callback when onSelect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | selected index  |
+| index | int | Yes | selected index |
 

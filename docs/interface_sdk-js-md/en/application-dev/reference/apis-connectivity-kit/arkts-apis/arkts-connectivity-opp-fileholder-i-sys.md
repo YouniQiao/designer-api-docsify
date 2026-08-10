@@ -12,6 +12,12 @@ Describes the file info for transfer
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { opp } from 'kits/@kit.ConnectivityKit';
+```
+
 ## fileFd
 
 ```TypeScript
@@ -20,7 +26,7 @@ fileFd: int
 
 The file fd
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 16
 
@@ -64,7 +70,7 @@ fileSize: long
 
 The file size
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 16
 

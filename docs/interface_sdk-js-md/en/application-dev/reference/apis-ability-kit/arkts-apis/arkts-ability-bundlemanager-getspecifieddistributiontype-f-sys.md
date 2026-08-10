@@ -1,15 +1,20 @@
 # getSpecifiedDistributionType (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getSpecifiedDistributionType
 
 ```TypeScript
 function getSpecifiedDistributionType(bundleName: string): string
 ```
 
-Obtains the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of a bundle in synchronous mode. The return value is the **specifiedDistributionType** field value in  
-[InstallParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ passed when **install** is called.
+以同步的方法查询指定bundleName的[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)，该返回值是在调用install接口时传入的[InstallParam](arkts-ability-installer-installparam-i-sys.md)中的specifiedDistributionType字段。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自身的信息时不需要权限。
 
 **Since:** 10
 
@@ -27,37 +32,38 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 指定的bundleName。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the bundle. |
+| string | 返回指定bundleName的[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let bundleName = "com.example.myapplication";
 
 try {
   let type = bundleManager.getSpecifiedDistributionType(bundleName);
-  console.info('getSpecifiedDistributionType successfully, type:' + type);
+  hilog.info(0x0000, 'testTag', 'getSpecifiedDistributionType successfully, type:%{public}s', type);
 } catch (error) {
   let message = (error as BusinessError).message;
-  console.error('getSpecifiedDistributionType failed. Cause: ' + message);
+  hilog.error(0x0000, 'testTag', 'getSpecifiedDistributionType failed. Cause: %{public}s', message);
 }
 ```
 

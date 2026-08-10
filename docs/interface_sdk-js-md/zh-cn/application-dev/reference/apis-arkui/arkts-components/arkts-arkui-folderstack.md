@@ -22,7 +22,7 @@ FolderStack继承自[Stack]{@link ./stack}（层叠布局）控件，新增了<!
 FolderStack(options?: FolderStackOptions)
 ```
 
-折叠屏悬停布局容器，继承自[Stack]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，通过配置upperItems实现折叠屏悬停能力。当设备处于悬停态时，指定子组件自动移至上半屏，其他组件堆叠在下半屏。
+折叠屏悬停布局容器，继承自[Stack]{@link ./stack}，通过配置upperItems实现折叠屏悬停能力。当设备处于悬停态时，指定子组件自动移至上半屏，其他组件堆叠在下半屏。
 
 **起始版本：** 11
 
@@ -40,7 +40,13 @@ FolderStack(options?: FolderStackOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | FolderStack的配置项，用于设置悬停态时需要移到上半屏的子组件。当需要使用折叠屏悬停能力时，通过upperItems数组指定子组件id；不 传入时FolderStack作为普通Stack组件使用，不启用悬停能力，upperItems默认为空数组。 |
+| options | [FolderStackOptions](../arkts-apis/arkts-arkui-folderstack-folderstackoptions-i.md) | 否 | FolderStack的配置项，用于设置悬停态时需要移到上半屏的子组件。当需要使用折叠屏悬停能力时，通过upperItems数组指定子组件id；不 传入时FolderStack作为普通Stack组件使用，不启用悬停能力，upperItems默认为空数组。 |
 
 ## 汇总
 
+- [FolderStackOptions](arkts-arkui-folderstack-folderstackoptions-i.md)
+- [HoverEventParam](arkts-arkui-folderstack-hovereventparam-i.md)
+- [OnFoldStatusChangeInfo](arkts-arkui-folderstack-onfoldstatuschangeinfo-i.md)
+- [OnFoldStatusChangeCallback](arkts-arkui-folderstack-onfoldstatuschangecallback-t.md)
+- [OnHoverStatusChangeCallback](arkts-arkui-folderstack-onhoverstatuschangecallback-t.md)
+- [WindowStatusType](arkts-arkui-folderstack-windowstatustype-t.md)

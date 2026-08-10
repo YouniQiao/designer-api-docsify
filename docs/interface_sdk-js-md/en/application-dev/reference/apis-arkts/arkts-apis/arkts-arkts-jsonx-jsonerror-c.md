@@ -2,7 +2,7 @@
 
 Base error class for JSON-related errors.Thrown when general JSON parsing or manipulation errors occur.
 
-**Inheritance/Implementation:** JsonError extends [Error](arkts-arkts-static/error-error-c.md)
+**Inheritance/Implementation:** JsonError extends [Error](arkts-arkts-error-c.md)
 
 **Since:** 26.0.0
 

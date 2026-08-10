@@ -1,10 +1,10 @@
 # AuthenticatorCallback
 
-Provides OAuth authenticator callbacks.
-    **NOTE**  
-    
-    This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-    [AuthCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+OAuth认证器回调接口。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)替代。
 
 **Since:** 8
 
@@ -18,16 +18,23 @@ Provides OAuth authenticator callbacks.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onRequestRedirected
 
 ```TypeScript
 onRequestRedirected: (request: Want) => void
 ```
 
-Called to redirect a request.
-    **NOTE**  
-    
-    This API is supported since API version 8 and deprecated since API version 9. Use \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ instead.
+通知请求被跳转。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用[onRequestRedirected](#onrequestredirected9)替代。
 
 **Since:** 8
 
@@ -45,9 +52,9 @@ Called to redirect a request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| request | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -79,10 +86,11 @@ class MyAuthenticator extends appAccount.Authenticator {
 onResult: (code: number, result: { [key: string]: any }) => void
 ```
 
-Called to return the result of an authentication request.
-    **NOTE**  
-    
-    This API is supported since API version 8 and deprecated since API version 9. Use \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ instead.
+通知请求结果。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用[onResult](#onresult9)替代。
 
 **Since:** 8
 
@@ -102,4 +110,23 @@ Called to return the result of an authentication request.
 | --- | --- | --- | --- |
 | code | number | Yes |  |
 | result | { [key: string]: any } | Yes |  |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let sessionId = '1234';
+appAccountManager.getAuthenticatorCallback(sessionId).then((callback: appAccount.AuthenticatorCallback) => {
+  callback.onResult(appAccount.ResultCode.SUCCESS, {
+    name: 'LiSi',
+    owner: 'com.example.accountjsdemo',
+    authType: 'getSocialData',
+    token: 'xxxxxx'
+  });
+}).catch((err: BusinessError) => {
+  console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
+});
+```
 

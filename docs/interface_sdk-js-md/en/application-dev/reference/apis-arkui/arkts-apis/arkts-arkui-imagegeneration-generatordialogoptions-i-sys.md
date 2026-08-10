@@ -12,6 +12,12 @@ Parameters used to open the ImageGeneratorDialog.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## content
 
 ```TypeScript
@@ -20,7 +26,7 @@ content?: ResourceStr
 
 Initial text information used for AI-generated image tasks.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -64,7 +70,7 @@ customImportIcon?: CustomImportIcon
 
 The following configuration parameters are used to customize the imported icon.
 
-**Type:** CustomImportIcon
+**Type:** [CustomImportIcon](arkts-arkui-imagegeneration-customimporticon-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -86,7 +92,7 @@ imageGenerationModel?: ImageGenerationModel
 
 Model used for AI generate image tasks.
 
-**Type:** ImageGenerationModel
+**Type:** [ImageGenerationModel](arkts-arkui-imagegeneration-imagegenerationmodel-i-sys.md)
 
 **Since:** 23
 
@@ -130,7 +136,7 @@ liveViewInfo?: LiveViewInfo
 
 Information for LiveView in AI image generation.
 
-**Type:** LiveViewInfo
+**Type:** [LiveViewInfo](arkts-arkui-imagegeneration-liveviewinfo-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -174,7 +180,7 @@ onAreaDidChange?: Callback<common2D.Rect>
 
 Callback triggered when the ImageGeneratorDialog changes in size or position.
 
-**Type:** Callback&lt;common2D.Rect&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;common2D.Rect&gt;
 
 **Since:** 23
 
@@ -218,7 +224,7 @@ textGenerationModel?: TextGenerationModel
 
 Text polishing model used in AI generate image tasks.
 
-**Type:** TextGenerationModel
+**Type:** [TextGenerationModel](arkts-arkui-imagegeneration-textgenerationmodel-i-sys.md)
 
 **Since:** 23
 

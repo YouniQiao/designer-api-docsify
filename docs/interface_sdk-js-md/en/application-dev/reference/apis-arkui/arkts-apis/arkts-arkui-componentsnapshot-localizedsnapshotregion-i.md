@@ -10,6 +10,12 @@ Defines the extra options for snapshot taking, if this is used, the start and en
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
+
 ## bottom
 
 ```TypeScript

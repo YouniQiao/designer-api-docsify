@@ -10,6 +10,12 @@ Indicates cellular data connect state and technology type.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## network
 
 ```TypeScript
@@ -18,7 +24,7 @@ network: RatType
 
 Indicates technology type.
 
-**Type:** RatType
+**Type:** [RatType](arkts-telephony-observer-rattype-t.md)
 
 **Since:** 11
 
@@ -36,7 +42,7 @@ state: DataConnectState
 
 Indicates cellular data connect state.
 
-**Type:** DataConnectState
+**Type:** [DataConnectState](arkts-telephony-data-dataconnectstate-e.md)
 
 **Since:** 11
 

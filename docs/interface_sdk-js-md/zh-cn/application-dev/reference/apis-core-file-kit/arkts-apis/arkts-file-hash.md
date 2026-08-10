@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { hash } from 'kits/@kit.CoreFileKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -24,5 +30,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) | HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 接口获得。 |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) | HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md#createhash) 接口获得。 |
 

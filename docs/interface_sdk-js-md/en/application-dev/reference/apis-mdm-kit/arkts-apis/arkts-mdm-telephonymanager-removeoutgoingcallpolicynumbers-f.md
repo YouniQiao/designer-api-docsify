@@ -1,17 +1,22 @@
 # removeOutgoingCallPolicyNumbers
 
+## Modules to Import
+
+```TypeScript
+import { telephonyManager } from 'kits/@kit.MDMKit';
+```
+
 ## removeOutgoingCallPolicyNumbers
 
 ```TypeScript
 function removeOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void
 ```
 
-Removes the trustlist or blocklist for outgoing calls. If the list is not set, the removal fails. For example, an enterprise can use this API when removing call restrictions and restoring normal call permissions for employees.
+移除通话呼出的允许或禁用名单，若在该名单尚未设置时进行移除，则会移除失败。例如，企业可在解除通话限制、恢复员工正常通话权限时使用。
 
-A policy conflict is reported when this API is called in the following scenario:
+以下情况下，通过本接口移除通话呼出的允许或禁用名单，会报策略冲突：
 
-If the device's call capability has been disabled via the  
-[setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API, using this API to remove an outgoing call trustlist or blocklist will return error code 203. To resolve the conflict, enable the call capability via [setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了设备通话能力，再通过本接口移除通话呼出的禁用或允许名单，返回203错误码。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口解除禁用设备通话能力后，可解除冲突。
 
 **Since:** 20
 
@@ -29,22 +34,22 @@ If the device's call capability has been disabled via the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| policy | adminManager.Policy | Yes | Policy for trustlist or blocklist. **BLOCK\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIST** indicates a blocklist, and **TRUST\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIST** indicates a trustlist. |
-| numbers | Array&lt;string&gt; | Yes | List of call numbers to remove. The total length of the array must not exceed 1, 000. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| policy | adminManager.Policy | Yes | 允许或禁用名单策略。BLOCK_LIST为禁用名单，TRUST_LIST为允许名单。 |
+| numbers | Array&lt;string&gt; | Yes | 待移除的通话号码数组。数组总长度不能超过1000。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 9200012 | Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 203 | This function is prohibited by enterprise management policies. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -52,16 +57,19 @@ import { telephonyManager } from '@kit.MDMKit';
 import { adminManager } from '@kit.MDMKit';
 
 let wantTemp: Want = {
-  // Replace it as required.
+  // Replace the values as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // Set the policy type to blocklist.
   let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
+  // Set the call numbers to be removed from the blocklist.
   let numbers: Array<string> = [
-    // Replace it as required.
+    // Replace the value as required.
     "13112345678"
   ];
+  // Remove specified numbers from the outgoing call blocklist.
   telephonyManager.removeOutgoingCallPolicyNumbers(wantTemp, policy, numbers);
   console.info('Succeeded in removing outgoing call policy.');
 } catch (err) {

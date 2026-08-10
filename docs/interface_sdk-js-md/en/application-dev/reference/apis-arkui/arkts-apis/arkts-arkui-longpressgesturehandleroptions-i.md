@@ -1,9 +1,8 @@
 # LongPressGestureHandlerOptions
 
-Provides the parameters of the long press gesture handler. Inherits from  
-[BaseHandlerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+长按手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
-**Inheritance/Implementation:** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-component/gesture-basehandleroptions-i.md)
+**Inheritance/Implementation:** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **Since:** 12
 
@@ -19,11 +18,11 @@ Provides the parameters of the long press gesture handler. Inherits from
 allowableMovement?: number
 ```
 
-Maximum movement distance recognized by the long press gesture recognizer, in px.
+长按手势识别器识别的手势的最大移动距离，单位为px。
 
-Default value: **15**
+默认值：15 
 
-Value range: (0, +∞). If the value is less than or equal to 0, the default value **15** is used.
+取值范围：(0, +∞)，设置小于等于0时，按照默认值15处理。
 
 **Type:** number
 
@@ -45,13 +44,13 @@ Value range: (0, +∞). If the value is less than or equal to 0, the default val
 duration?: number
 ```
 
-Minimum hold-down time, in ms.
+触发长按的最短时间，单位为毫秒（ms）。
 
-Default value: **500**
+默认值：500 
 
-**NOTE**
+**说明：**
 
-Value range: [0, +∞). If the value is less than or equal to 0, the default value **500** is used.
+取值范围：[0, +∞)，设置小于等于0时，按照默认值500处理。
 
 **Type:** number
 
@@ -73,15 +72,15 @@ Value range: [0, +∞). If the value is less than or equal to 0, the default val
 fingers?: number
 ```
 
-Minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10.
+触发长按的最少手指数，最小为1指， 最大取值为10指。
 
-Default value: **1**
+默认值：1 
 
-Value range: [1, 10]
+取值范围：[1, 10]
 
-**NOTE**
+**说明：**
 
-If a finger moves more than 15 px after being pressed, the gesture recognition fails.
+手指按下后若发生超过15px的移动，则判定当前长按手势识别失败。
 
 **Type:** number
 
@@ -103,9 +102,9 @@ If a finger moves more than 15 px after being pressed, the gesture recognition f
 repeat?: boolean
 ```
 
-Whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.
+是否连续触发事件回调。true表示为连续触发事件回调，false表示不连续触发事件回调。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 

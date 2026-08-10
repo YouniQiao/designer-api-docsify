@@ -28,7 +28,11 @@ PluginComponent(options: PluginComponentOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 插件组件选项 |
+| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | 是 | 插件组件选项 |
 
 ## 汇总
 
+- [PluginComponentOptions](arkts-arkui-plugincomponent-plugincomponentoptions-i-sys.md)
+- [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i-sys.md)
+- [PluginErrorData](arkts-arkui-plugincomponent-pluginerrordata-i-sys.md)
+- [PluginErrorCallback](arkts-arkui-plugincomponent-pluginerrorcallback-t-sys.md)

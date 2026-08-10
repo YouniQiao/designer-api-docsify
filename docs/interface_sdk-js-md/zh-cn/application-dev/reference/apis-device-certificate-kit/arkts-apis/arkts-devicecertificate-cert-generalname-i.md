@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## name
 
 ```TypeScript
@@ -38,7 +44,7 @@ type: GeneralNameType
 
 GeneralName类型。
 
-**类型：** GeneralNameType
+**类型：** [GeneralNameType](arkts-devicecertificate-cert-generalnametype-e.md)
 
 **起始版本：** 12
 

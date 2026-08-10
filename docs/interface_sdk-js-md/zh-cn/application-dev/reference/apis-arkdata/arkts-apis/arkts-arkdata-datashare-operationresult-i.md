@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## 导入模块
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## key
 
 ```TypeScript
@@ -38,7 +44,7 @@ result: int
 
 指定运算结果。正常情况下返回0，异常情况下返回错误码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

@@ -1,6 +1,6 @@
 # PairingRequestParam
 
-Describes pairing request parameters.
+配对请求参数说明。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes pairing request parameters.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the device address.The length must be 17, The value consists of hexade
 pairingType: PairingType
 ```
 
-Indicates the pairing type.
+配对类型。
 
-**Type:** PairingType
+**Type:** [PairingType](arkts-connectivity-remotedevice-pairingtype-e.md)
 
 **Since:** 26.0.0
 
@@ -56,7 +62,7 @@ Indicates the pairing type.
 passkey: string
 ```
 
-Key for the device pairing.
+设备配对的密钥。
 
 **Type:** string
 

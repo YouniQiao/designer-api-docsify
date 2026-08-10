@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## config
 
 ```TypeScript
@@ -18,7 +24,7 @@ config: WindowAnimationConfig
 
 本次转场动画配置。
 
-**类型：** WindowAnimationConfig
+**类型：** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
 **起始版本：** 20
 
@@ -38,7 +44,7 @@ opacity?: double
 
 不透明度，转场动画作用的窗口属性，值为0时窗口完全透明，默认值为1.0。当动画类型为WindowTransitionType.DESTROY时，代表动画终点的不透明度。取值范围0~1.0，在动画结束时恢复为1.0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 

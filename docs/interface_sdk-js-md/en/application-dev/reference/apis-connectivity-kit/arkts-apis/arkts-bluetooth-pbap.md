@@ -10,6 +10,12 @@ Provides methods to accessing bluetooth PBAP(Phone Book Access Profile)-related 
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { pbap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

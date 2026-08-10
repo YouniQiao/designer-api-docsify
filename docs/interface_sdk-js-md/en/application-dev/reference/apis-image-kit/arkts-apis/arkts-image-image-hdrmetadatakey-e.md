@@ -1,6 +1,6 @@
 # HdrMetadataKey
 
-Enumerates the keys of HDR metadata used by [pixelmap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示[PixelMap](arkts-image-image-pixelmap-i.md)使用的HDR相关元数据信息的关键字的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the keys of HDR metadata used by [pixelmap]\_\_\_JSDOC\_LINK\_DESC\_U
 HDR_METADATA_TYPE = 0
 ```
 
-Metadata type used by [pixelmap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[PixelMap](arkts-image-image-pixelmap-i.md)使用的元数据类型。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Metadata type used by [pixelmap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 HDR_STATIC_METADATA = 1
 ```
 
-Static metadata.
+静态元数据。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Static metadata.
 HDR_DYNAMIC_METADATA = 2
 ```
 
-Dynamic metadata.
+动态元数据。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Dynamic metadata.
 HDR_GAINMAP_METADATA = 3
 ```
 
-Metadata used by gain maps.
+Gainmap使用的元数据。
 
 **Since:** 12
 

@@ -1,12 +1,18 @@
 # removeCheckRule
 
+## Modules to Import
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## removeCheckRule
 
 ```TypeScript
 function removeCheckRule(rule: bigint) : void
 ```
 
-Removes one or more rules. The removed rules will become ineffective.
+ɾ��һ�����������ɾ���Ĺ��������������Ч��
 
 **Since:** 9
 
@@ -20,15 +26,15 @@ Removes one or more rules. The removed rules will become ineffective.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | Rule to be removed. |
+| rule | bigint | Yes | ��Ҫɾ���Ĺ��� |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
+| 401 | the parameter check failed, only one bigint type parameter is needed |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

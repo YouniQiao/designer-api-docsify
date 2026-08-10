@@ -1,6 +1,6 @@
 # EnvPropsOptions
 
-用于指定环境变量名称及其默认值的键值对对象，作为[envProps]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_参数传入。
+用于指定环境变量名称及其默认值的键值对对象，作为[envProps](arkts-arkui-environment-c.md#envprops)参数传入。
 
 **起始版本：** 10
 
@@ -36,7 +36,7 @@ defaultValue: number | string | boolean
 key: string
 ```
 
-环境变量名称，支持的范围详见[内置环境变量说明]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+环境变量名称，支持的范围详见[内置环境变量说明](arkts-arkui-environment-c.md)。
 
 **类型：** string
 

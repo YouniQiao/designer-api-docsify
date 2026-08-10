@@ -1,6 +1,6 @@
 # PermissionDecisionStatus (System API)
 
-Enumerates the permission decision statuses.
+权限决策状态枚举。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Enumerates the permission decision statuses.
 NEED_PERMISSION_DIALOG = 0
 ```
 
-Indicates that a permission dialog needs to pop up.
+表示需要弹出权限对话框。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Indicates that a permission dialog needs to pop up.
 NO_DIALOG_DENIED = 1
 ```
 
-Indicates that no dialog is needed and the permission has been denied by the user.
+表示无需弹窗，权限已被用户拒绝。
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ Indicates that no dialog is needed and the permission has been denied by the use
 NO_DIALOG_RESTRICTED = 2
 ```
 
-Indicates that no dialog is needed and the permission is restricted by the system or policy.
+表示无需弹窗，权限受系统或策略限制。
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ Indicates that no dialog is needed and the permission is restricted by the syste
 NO_DIALOG_GRANTED = 3
 ```
 
-Indicates that no dialog is needed and the permission has been granted.
+表示无需弹窗，权限已授予。
 
 **Since:** 26.0.0
 
@@ -98,7 +98,7 @@ Indicates that no dialog is needed and the permission has been granted.
 NO_DIALOG_NOT_DECLARED = 4
 ```
 
-Indicates that no dialog is needed, but the permission is not declared.
+表示无需弹窗，但权限未声明。
 
 **Since:** 26.0.0
 
@@ -118,7 +118,7 @@ Indicates that no dialog is needed, but the permission is not declared.
 NO_DIALOG_CLI_PERMISSION_RESOLVED = 5
 ```
 
-Indicates that no dialog is needed and the CLI permission has been resolved to runtime permissions.
+表示无需弹窗，CLI权限已完成运行时权限解析。
 
 **Since:** 26.0.0
 

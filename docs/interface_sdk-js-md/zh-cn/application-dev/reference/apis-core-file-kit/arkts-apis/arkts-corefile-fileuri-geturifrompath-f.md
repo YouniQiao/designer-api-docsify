@@ -1,5 +1,11 @@
 # getUriFromPath
 
+## 导入模块
+
+```TypeScript
+import { fileUri } from 'kits/@kit.CoreFileKit';
+```
+
 ## getUriFromPath
 
 ```TypeScript
@@ -34,9 +40,9 @@ function getUriFromPath(path: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pathDir = this.context.filesDir; // 获取应用沙箱路径。

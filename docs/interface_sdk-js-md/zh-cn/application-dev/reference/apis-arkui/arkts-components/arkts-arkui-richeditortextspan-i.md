@@ -18,7 +18,7 @@ spanPosition: RichEditorSpanPosition
 
 Span位置。
 
-**类型：** RichEditorSpanPosition
+**类型：** [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md)
 
 **起始版本：** 10
 
@@ -40,7 +40,7 @@ textStyle?: RichEditorTextStyle
 
 文本Span样式信息。
 
-**类型：** RichEditorTextStyle
+**类型：** [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)
 
 **起始版本：** 10
 

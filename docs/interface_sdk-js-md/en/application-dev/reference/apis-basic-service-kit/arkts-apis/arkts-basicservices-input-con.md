@@ -8,7 +8,7 @@ const ACTIVATED_INPUT_METHODS: string
 
 Indicates the list of input methods that have been activated.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The list is a string that contains the IDs of activated input methods. The IDs are separated by colons(:), and keyboardTypes of an input method are separated by semicolons (;). An example format is{@code ima0:keyboardType0;keyboardType1;ima1:ima2:keyboardTypes0}. The type of \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_imaID\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_ is ElementName,and the type of \_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_keyboard\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_ is int.
+&lt;p&gt;The list is a string that contains the IDs of activated input methods. The IDs are separated by colons(:), and keyboardTypes of an input method are separated by semicolons (;). An example format is{@code ima0:keyboardType0;keyboardType1;ima1:ima2:keyboardTypes0}. The type of &lt;b&gt;imaID&lt;/b&gt; is ElementName,and the type of &lt;b&gt;keyboard&lt;/b&gt; is int.
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ const AUTO_CAPS_TEXT_INPUT: string
 
 Specifies whether automatic capitalization is enabled for the text editor.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is {@code 0}, automatic capitalization is disabled. If the value {@code 1}, automatic capitalization is enabled.
+&lt;p&gt;If the value is {@code 0}, automatic capitalization is disabled. If the value {@code 1}, automatic capitalization is enabled.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ const AUTO_PUNCTUATE_TEXT_INPUT: string
 
 Specifies whether automatic punctuation is enabled for the text editor. Automatic punctuation enables the text editor to convert two spaces into a period (.) and a space.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is {@code 0}, automatic punctuation is disabled. If the value {@code 1}, automatic punctuation is enabled.
+&lt;p&gt;If the value is {@code 0}, automatic punctuation is disabled. If the value {@code 1}, automatic punctuation is enabled.
 
 **Since:** 7
 
@@ -84,7 +84,7 @@ const AUTO_REPLACE_TEXT_INPUT: string
 
 Specifies whether autocorrect is enabled for the text editor. Autocorrect enables the text editor to correct typos.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is {@code 0}, autocorrect is disabled. If the value {@code 1}, autocorrect is enabled.
+&lt;p&gt;If the value is {@code 0}, autocorrect is disabled. If the value {@code 1}, autocorrect is enabled.
 
 **Since:** 7
 
@@ -122,7 +122,7 @@ const SELECTOR_VISIBILITY_FOR_INPUT_METHOD: string
 
 Specifies whether the input method selector is visible.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is {@code 1}, the input method selector is visible. If the value is {@code 0}, the input method selector is invisible.
+&lt;p&gt;If the value is {@code 1}, the input method selector is visible. If the value is {@code 0}, the input method selector is invisible.
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ const SHOW_PASSWORD_TEXT_INPUT: string
 
 Specifies whether password presentation is enabled in the text editor. Password presentation enables the text editor to show password characters when the user types them.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is {@code 0}, password presentation is disabled. If the value {@code 1}, password presentation is enabled.
+&lt;p&gt;If the value is {@code 0}, password presentation is disabled. If the value {@code 1}, password presentation is enabled.
 
 **Since:** 7
 

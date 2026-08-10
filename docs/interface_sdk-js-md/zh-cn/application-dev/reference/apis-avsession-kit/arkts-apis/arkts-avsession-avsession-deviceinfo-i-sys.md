@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## authenticationStatus
 
 ```TypeScript
@@ -20,7 +26,7 @@ authenticationStatus?: int
 
 **系统接口：** 该接口为系统接口。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -40,7 +46,7 @@ hiPlayDeviceInfo?: HiPlayDeviceInfo
 
 HiPlay设备类型定义
 
-**类型：** HiPlayDeviceInfo
+**类型：** [HiPlayDeviceInfo](arkts-avsession-avsession-hiplaydeviceinfo-i-sys.md)
 
 **起始版本：** 24
 
@@ -82,7 +88,7 @@ ipAddress?: string
 isLegacy?: boolean
 ```
 
-表示当前设备是否为旧版设备。 true表示是，false表示不是。
+表示当前设备是否为旧版设备。 true表示是，false表示不是。 
 
 **系统接口：** 该接口为系统接口。
 
@@ -106,13 +112,13 @@ mediumTypes?: int
 
 用于发现设备的介质类型。
 
-1：蓝牙低功耗（BLE），用于蓝牙设备的发现和链接。
+1：蓝牙低功耗（BLE），用于蓝牙设备的发现和链接。 
 
 2：受限应用协议（COAP），用于局域网内的设备发现。
 
 **系统接口：** 该接口为系统接口。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 13
 
@@ -156,7 +162,7 @@ providerId?: int
 
 **系统接口：** 该接口为系统接口。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

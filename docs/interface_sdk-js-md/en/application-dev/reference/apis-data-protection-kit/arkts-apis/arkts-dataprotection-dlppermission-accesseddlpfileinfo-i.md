@@ -1,6 +1,6 @@
 # AccessedDLPFileInfo
 
-Represents the information about a DLP file opened.
+表示被打开的DLP文件的信息。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Represents the information about a DLP file opened.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## lastOpenTime
 
 ```TypeScript
 lastOpenTime: number
 ```
 
-Time when the file was last opened. The value must be greater than or equal to 0. Unit: s.
+表示DLP文件最近打开时间。单位：s。
 
 **Type:** number
 
@@ -34,7 +40,7 @@ Time when the file was last opened. The value must be greater than or equal to 0
 uri: string
 ```
 
-URI of the DLP file. The value contains a maximum of 4095 bytes. If the value is out of range, error code19100001 is thrown.
+表示DLP文件的uri。不超过4095字节。
 
 **Type:** string
 

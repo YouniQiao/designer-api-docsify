@@ -1,6 +1,6 @@
 # TextBadgeType
 
-Enumerates the text badges.
+文本上下标枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the text badges.
 TEXT_BADGE_NONE = 0
 ```
 
-Disables the superscript and subscript.
+不使能上下标。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ Disables the superscript and subscript.
 TEXT_SUPERSCRIPT = 1
 ```
 
-Enables the superscript.
+使能上标。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ Enables the superscript.
 TEXT_SUBSCRIPT = 2
 ```
 
-Enables the subscript.
+使能下标。
 
 **Since:** 20
 

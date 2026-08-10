@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## extensionId
 
 ```TypeScript
@@ -40,7 +46,7 @@ vendorIcon: int
 
 表示供应商图标。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

@@ -12,6 +12,12 @@ Describes the aperture information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## aperture
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly aperture?: double
 
 Aperture.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

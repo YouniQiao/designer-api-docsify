@@ -1,12 +1,18 @@
 # configure
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## configure
 
 ```TypeScript
 function configure(config: ConfigOption): void
 ```
 
-Configures the application event logging function, such as setting the logging switch and directory storage quota.
+应用事件打点配置方法，支持配置打点开关和目录存储配额大小。
 
 **Since:** 9
 
@@ -22,16 +28,16 @@ Configures the application event logging function, such as setting the logging s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration items for application event logging. |
+| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes | 应用事件打点配置项对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [11103001](../errorcode-hiappevent.md#11103001-invalid-maximum-storage-quota) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
+| 11103001 | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Disable the event logging function.

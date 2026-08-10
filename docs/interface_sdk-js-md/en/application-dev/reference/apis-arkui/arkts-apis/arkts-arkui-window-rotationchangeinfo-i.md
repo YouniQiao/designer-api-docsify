@@ -1,6 +1,6 @@
 # RotationChangeInfo
 
-Describes the window information obtained during window rotation changes.
+窗口旋转变化时的窗口信息。
 
 **Since:** 19
 
@@ -10,15 +10,21 @@ Describes the window information obtained during window rotation changes.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
 displayId: long
 ```
 
-ID of the screen where the window is located.
+窗口所在屏幕Id。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 
@@ -36,9 +42,9 @@ ID of the screen where the window is located.
 displayRect: Rect
 ```
 
-Size of the rectangle after the screen where the window is located is rotated.
+窗口所在屏幕旋转后的矩形区域大小。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 19
 
@@ -56,16 +62,16 @@ Size of the rectangle after the screen where the window is located is rotated.
 orientation: int
 ```
 
-Display orientation of the window.
+窗口显示方向。
 
-- **0**: portrait.  
-- **1**: reverse landscape.  
-- **2**: reverse portrait.  
-- **3**: landscape.
+- 0表示竖屏。  
+- 1表示反向横屏。  
+- 2表示反向竖屏。  
+- 3表示横屏。
 
-Note that the orientation here is different from the orientation property of the display object.
+开发者在使用时，需要注意该方向与display对象的属性orientation含义不一致。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 
@@ -83,9 +89,9 @@ Note that the orientation here is different from the orientation property of the
 type: RotationChangeType
 ```
 
-Type of window rotation event.
+窗口旋转事件类型。
 
-**Type:** RotationChangeType
+**Type:** [RotationChangeType](arkts-arkui-window-rotationchangetype-e.md)
 
 **Since:** 19
 

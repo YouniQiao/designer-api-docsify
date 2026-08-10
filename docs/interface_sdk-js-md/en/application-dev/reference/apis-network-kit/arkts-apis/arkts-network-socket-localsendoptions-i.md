@@ -10,6 +10,12 @@ Defines the parameters for sending data over the LocalSocket connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## data
 
 ```TypeScript

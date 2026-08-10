@@ -1,5 +1,11 @@
 # uptime
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## uptime
 
 ```TypeScript
@@ -24,7 +30,7 @@ function uptime(): number
 | --- | --- |
 | number | 当前系统已运行的时间。单位：秒。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let time = process.uptime();

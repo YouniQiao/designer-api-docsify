@@ -1,6 +1,6 @@
 # ScreenCaptureConfig
 
-Provides the web screen capture configuration.
+Web屏幕捕获的配置。
 
 **Since:** 10
 
@@ -16,9 +16,9 @@ Provides the web screen capture configuration.
 captureMode: WebCaptureMode
 ```
 
-Web screen capture mode.
+Web屏幕捕获模式。
 
-**Type:** WebCaptureMode
+**Type:** [WebCaptureMode](../arkts-apis/arkts-arkweb-web-webcapturemode-e.md)
 
 **Since:** 10
 

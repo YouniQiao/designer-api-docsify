@@ -1,6 +1,6 @@
 # LeadingMarginSpan
 
-Defines custom indentation for text paragraphs. Only a base class is provided; the specific implementation is left to developers.
+文本段落的自定义缩进，仅提供基类，具体实现由开发者定义。适用于需要在段落首行或各行开头绘制自定义标记、图标等内容的场景，例如列表项前的自定义符号、段落首行装饰图案等。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Defines custom indentation for text paragraphs. Only a base class is provided; t
 abstract getLeadingMargin(): LengthMetrics
 ```
 
-Returns the indentation distance for a text paragraph.
+返回文本段落的缩进距离。
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ Returns the indentation distance for a text paragraph.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Paragraph indentation distance. The value cannot be in percentage. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 文本段落的缩进。不支持百分比。 &lt;br&gt;默认值：0 |
 
 ## onDraw
 
@@ -42,7 +42,7 @@ Returns the indentation distance for a text paragraph.
 abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 ```
 
-Draws a custom pattern. This API is triggered once for each line of text in a paragraph.
+绘制自定义图案。段落中的每一行文本都会触发一次onDraw。
 
 **Since:** 22
 
@@ -60,6 +60,6 @@ Draws a custom pattern. This API is triggered once for each line of text in a pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Drawing context.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The **canvas** method of **DrawContext** obtains the canvas of the component. As such, the custom span does not extend beyond the area of the component. |
-| drawInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Custom drawing information. |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | 图形绘制上下文。 &lt;br&gt;DrawContext的canvas方法获取的是组件的画布，绘制时不会超出组件的范围。 |
+| drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-styledstring-leadingmarginspandrawinfo-i.md) | Yes | 自定义绘制信息。 |
 

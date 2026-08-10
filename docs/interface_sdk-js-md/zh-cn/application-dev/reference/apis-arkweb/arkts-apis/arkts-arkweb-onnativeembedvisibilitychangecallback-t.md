@@ -18,5 +18,5 @@ The callback of onNativeEmbedVisibilityChange.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| nativeEmbedVisibilityInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | callback information of onNativeEmbedVisibilityChange.  |
+| nativeEmbedVisibilityInfo | [NativeEmbedVisibilityInfo](arkts-arkweb-web-nativeembedvisibilityinfo-i.md) | 是 | callback information of onNativeEmbedVisibilityChange. |
 

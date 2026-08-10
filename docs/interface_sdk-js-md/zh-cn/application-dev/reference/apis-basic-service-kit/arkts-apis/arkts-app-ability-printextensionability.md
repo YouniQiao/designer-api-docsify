@@ -3,6 +3,12 @@
 打印扩展能力
 
 
+## 导入模块
+
+```TypeScript
+import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 ### 类

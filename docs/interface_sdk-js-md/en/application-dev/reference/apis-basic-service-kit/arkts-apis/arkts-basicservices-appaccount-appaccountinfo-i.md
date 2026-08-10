@@ -1,6 +1,6 @@
 # AppAccountInfo
 
-Defines application account information.
+表示应用账号信息。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines application account information.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## name
 
 ```TypeScript
 name: string
 ```
 
-Name of the application account.
+应用账号的名称。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Name of the application account.
 owner: string
 ```
 
-Owner of the application account. The value is the bundle name of the application.
+应用账号所有者的包名。最大长度为1024个字符。
 
 **Type:** string
 

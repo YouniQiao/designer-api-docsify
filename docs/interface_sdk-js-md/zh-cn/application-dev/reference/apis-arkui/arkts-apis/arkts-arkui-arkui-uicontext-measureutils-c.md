@@ -10,6 +10,12 @@ class MeasureUtils
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## getParagraphs
 
 ```TypeScript
@@ -32,14 +38,14 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 属性字符串值。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 布局选项。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 属性字符串值。 |
+| options | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | 否 | 布局选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | paragraph result |
+| Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | paragraph result |
 
 ## measureText
 
@@ -63,7 +69,7 @@ measureText(options: MeasureOptions): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Options. |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 | Options. |
 
 **返回值：**
 
@@ -93,11 +99,11 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Options of measure area occupied by text. |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 | Options of measure area occupied by text. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | width and height for text to display |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | width and height for text to display |
 

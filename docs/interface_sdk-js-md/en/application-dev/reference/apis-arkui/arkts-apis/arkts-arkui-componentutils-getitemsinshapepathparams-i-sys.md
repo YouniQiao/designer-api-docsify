@@ -12,6 +12,12 @@ Image options setted when need to get the image objects.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { componentUtils } from 'kits/@kit.ArkUI';
+```
+
 ## images
 
 ```TypeScript

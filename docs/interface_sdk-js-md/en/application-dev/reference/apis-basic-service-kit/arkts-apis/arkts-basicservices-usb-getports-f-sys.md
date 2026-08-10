@@ -1,12 +1,18 @@
 # getPorts (System API)
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPorts
 
 ```TypeScript
 function getPorts(): Array<USBPort>
 ```
 
-Obtains the list of all physical USB ports.
+获取所有物理USB端口描述信息。
 
 **Since:** 9
 
@@ -26,9 +32,9 @@ Obtains the list of all physical USB ports.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;USBPort&gt; | List of physical USB ports. |
+| Array&lt;USBPort&gt; | USB端口描述信息列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let ret = usb.getPorts();

@@ -22,6 +22,6 @@ type PrinterInfoQueryCallback = (printerInfo: PrinterInformation, ppdInfo: PpdIn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 打印机信息 \_\_\_HTML\_TAG\_USD\_0\_\_\_打印机信息。  |
-| ppdInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 是 | 所有打印机ppd信息 \_\_\_HTML\_TAG\_USD\_0\_\_\_所有打印机ppd信息。  |
+| printerInfo | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | 是 | 打印机信息 <br>打印机信息。 |
+| ppdInfo | [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)[] | 是 | 所有打印机ppd信息 <br>所有打印机ppd信息。 |
 

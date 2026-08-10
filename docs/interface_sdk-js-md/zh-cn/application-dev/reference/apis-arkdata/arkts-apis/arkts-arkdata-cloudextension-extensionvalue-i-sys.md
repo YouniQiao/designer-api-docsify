@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## createTime
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly createTime: long
 
 创建行数据的时间（ms）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -60,7 +66,7 @@ readonly modifyTime: long
 
 修改行数据的时间（ms）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -80,7 +86,7 @@ readonly operation: Flag
 
 对行数据所做的操作。
 
-**类型：** Flag
+**类型：** [Flag](arkts-arkdata-cloudextension-flag-e-sys.md)
 
 **起始版本：** 11
 

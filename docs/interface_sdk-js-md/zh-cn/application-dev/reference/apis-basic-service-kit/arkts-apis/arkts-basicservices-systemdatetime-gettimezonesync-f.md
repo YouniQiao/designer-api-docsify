@@ -1,5 +1,11 @@
 # getTimezoneSync
 
+## 导入模块
+
+```TypeScript
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getTimezoneSync
 
 ```TypeScript
@@ -20,24 +26,9 @@ function getTimezoneSync(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回系统时区。具体可见\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| string | 返回系统时区。具体可见[支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let timezone: string = systemDateTime.getTimezoneSync();
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-ArkTS-Sta示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

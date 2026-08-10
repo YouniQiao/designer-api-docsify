@@ -1,15 +1,12 @@
 # PropertyKey
 
-Enumerates the types of Exchangeable Image File Format (Exif) data of an image.
+表示Exif（Exchangeable image file format）图像信息的枚举。
 
-- The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for  
-example, **image.PropertyKey.NEW\_SUBFILE\_TYPE**).  
-- The format example is used only to show how to modify values and read results. For details about how to use them,  
-see  
-[modifyImageProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_(to modify a single Exif field),  
-[modifyImageProperties]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_(to modify multiple Exif fields),  
-[getImageProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_(to read a single Exif field), and  
-[getImageProperties]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ (to read multiple Exif fields).
+- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。  
+- 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：  
+[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、  
+[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修改多个Exif字段）、  
+[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
 
 **Since:** 7
 
@@ -25,7 +22,7 @@ see
 XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
 ```
 
-Describes xtstyle template name.
+个性色卡模板名称。
 
 **Since:** 26.0.0
 
@@ -45,7 +42,7 @@ Describes xtstyle template name.
 XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'
 ```
 
-Describes xtstyle custom light and shadow.
+个性色卡自定义光影。
 
 **Since:** 26.0.0
 
@@ -65,7 +62,7 @@ Describes xtstyle custom light and shadow.
 XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'
 ```
 
-Describes xtstyle custom saturation.
+个性色卡自定义饱和度。
 
 **Since:** 26.0.0
 
@@ -85,7 +82,7 @@ Describes xtstyle custom saturation.
 XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
 ```
 
-Describes xtstyle custom hue.
+个性色卡自定义色调。
 
 **Since:** 26.0.0
 
@@ -105,7 +102,7 @@ Describes xtstyle custom hue.
 XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'
 ```
 
-Describes xtstyle exposure param.
+个性色卡曝光参数。
 
 **Since:** 26.0.0
 

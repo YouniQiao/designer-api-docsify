@@ -1,12 +1,18 @@
 # updatePrinters (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## updatePrinters
 
 ```TypeScript
 function updatePrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>): void
 ```
 
-Updates information about the specified printers. This API uses an asynchronous callback to return the result.
+更新特定打印机的信息，使用callback异步回调。
 
 **Since:** 10
 
@@ -24,18 +30,18 @@ Updates information about the specified printers. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printers | Array&lt;PrinterInfo&gt; | Yes | List of printers whose information is to be updated. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| printers | Array&lt;PrinterInfo&gt; | Yes | 表示待更新的打印机列表。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步更新打印机信息之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -52,9 +58,9 @@ let printerInfo : print.PrinterInfo = {
 };
 print.updatePrinters([printerInfo], (err: BusinessError) => {
     if (err) {
-        console.error('updataPrinters failed, because : ' + JSON.stringify(err));
+        console.error('updatePrinters failed, because : ' + JSON.stringify(err));
     } else {
-        console.info('updataPrinters success');
+        console.info('updatePrinters success');
     }
 })
 ```
@@ -66,7 +72,7 @@ print.updatePrinters([printerInfo], (err: BusinessError) => {
 function updatePrinters(printers: Array<PrinterInfo>): Promise<void>
 ```
 
-Updates information about the specified printers. This API uses a promise to return the result.
+更新特定打印机的信息，使用Promise异步回调。
 
 **Since:** 10
 
@@ -84,23 +90,23 @@ Updates information about the specified printers. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printers | Array&lt;PrinterInfo&gt; | Yes | List of printers whose information is to be updated. |
+| printers | Array&lt;PrinterInfo&gt; | Yes | 表示待更新的打印机列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

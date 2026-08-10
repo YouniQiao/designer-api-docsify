@@ -12,6 +12,12 @@ Provides APIs for input Context Map.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## topicField
 
 ```TypeScript
@@ -20,7 +26,7 @@ topicField: FieldType[]
 
 Field Types
 
-**Type:** FieldType[]
+**Type:** [FieldType](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-fieldtype-e-sys.md)[]
 
 **Since:** 23
 

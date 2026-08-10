@@ -1,12 +1,18 @@
 # getMinHeightSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getMinHeightSync
 
 ```TypeScript
 function getMinHeightSync(): int
 ```
 
-Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
+获取壁纸的最小高度值。
 
 **Since:** 9
 
@@ -22,15 +28,15 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | the number returned by the function. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回壁纸的最小高度值，单位是像素。如果返回值等于0，说明没有设置壁纸，调用者应该使用默认显示的高度值代替。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| 202 | permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

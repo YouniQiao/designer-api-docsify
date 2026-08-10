@@ -1,6 +1,6 @@
 # OnScrollEvent
 
-Represents the callback invoked when the scrollbar scrolls to a specified position.
+定义滚动条滑动到指定位置时触发。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents the callback invoked when the scrollbar scrolls to a specified positi
 xOffset: number
 ```
 
-Position of the scrollbar on the x-axis relative to the leftmost of the web page.
+以网页最左端为基准，水平滚动条滚动所在位置。
 
-Unit: vp.
+单位：vp。
 
 **Type:** number
 
@@ -38,9 +38,9 @@ Unit: vp.
 yOffset: number
 ```
 
-Position of the scrollbar on the y-axis relative to the top of the web page.
+以网页最上端为基准，竖直滚动条滚动所在位置。
 
-Unit: vp.
+单位：vp。
 
 **Type:** number
 

@@ -1,12 +1,18 @@
 # unregisterRemoteAuthCallback (System API)
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## unregisterRemoteAuthCallback
 
 ```TypeScript
 function unregisterRemoteAuthCallback(): void
 ```
 
-Unregisters the remote authentication callback. This API is used to unregister a previously registered remote authentication callback. After unregistration, the system no longer receives remote authentication page parameter requests or authentication result notification.
+注销远程认证回调。该接口用于注销已注册的远程认证回调，注销后系统不再接收远程认证的页面参数请求和认证结果通知。
 
 **Since:** 26.0.0
 
@@ -26,7 +32,22 @@ Unregisters the remote authentication callback. This API is used to unregister a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| 201 | Permission denied. |
+| 202 | Permission denied. Called by non-system application. |
+| 12500002 | General operation error. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  userAuth.unregisterRemoteAuthCallback();
+  console.info('Remote auth callback unregistered successfully');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`failed to unregister remote auth callback. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
 

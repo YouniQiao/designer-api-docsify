@@ -18,5 +18,5 @@ The callback of firstMeaningfulPaint.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| firstMeaningfulPaint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | callback information of onFirstMeaningfulPaint.  |
+| firstMeaningfulPaint | [FirstMeaningfulPaint](../arkts-components/arkts-arkweb-firstmeaningfulpaint-i.md) | 是 | callback information of onFirstMeaningfulPaint. |
 

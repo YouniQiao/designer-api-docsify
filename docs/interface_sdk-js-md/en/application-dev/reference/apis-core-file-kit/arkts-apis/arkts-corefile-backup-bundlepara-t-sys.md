@@ -4,7 +4,7 @@
 type BundlePara = undefined | string
 ```
 
-function that returns backup BundlePara.
+备份或恢复回调的应用名称参数类型。
 
 **Since:** 23
 

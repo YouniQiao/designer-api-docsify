@@ -1,8 +1,8 @@
 # Zoom
 
-Zoom** inherits from [ZoomQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
 
-It provides APIs related to zoom operations.
+变焦类，对设备变焦操作。
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 
@@ -13,6 +13,12 @@ It provides APIs related to zoom operations.
 <!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getZoomRatio
 
@@ -26,7 +32,7 @@ ArkTS-Sta:
 getZoomRatio(): double
 ```
 
-Obtains the zoom ratio in use.
+获取当前的变焦比。
 
 **Since:** 11
 
@@ -42,14 +48,14 @@ Obtains the zoom ratio in use.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 获取当前的变焦比结果。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## setSmoothZoom
 
@@ -63,7 +69,7 @@ ArkTS-Sta:
 setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void
 ```
 
-Sets smooth zoom.
+触发平滑变焦。
 
 **Since:** 11
 
@@ -79,8 +85,14 @@ Sets smooth zoom.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetRatio | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Target zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If the value passed in is not within the supported range, the value within the precision range is retained. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Smooth zoom mode. The default value is **0**. |
+| targetRatio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标值。通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。 |
+| mode | [SmoothZoomMode](arkts-camera-camera-smoothzoommode-e.md) | No | 平滑变焦模式。默认为0。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 7400103 | Session not config.<br>**Applicable version:** 11 - 17 |
 
 ## setZoomRatio
 
@@ -94,7 +106,7 @@ ArkTS-Sta:
 setZoomRatio(zoomRatio: double): void
 ```
 
-Sets a zoom ratio, with a maximum precision of two decimal places.
+设置变焦比，变焦精度最高为小数点后两位，如果设置超过支持的精度范围，则只保留精度范围内数值。
 
 **Since:** 11
 
@@ -110,11 +122,11 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoomRatio | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If the value passed in is not within the supported range, the value within the precision range is retained. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It takes some time for the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait for one to two frames. |
+| zoomRatio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 可变焦距比，通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。 &lt;br&gt;设置可变焦距比到底层生效需要一定时间，获取正确设置的可变焦距比需要等待1~2帧的时间。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
 

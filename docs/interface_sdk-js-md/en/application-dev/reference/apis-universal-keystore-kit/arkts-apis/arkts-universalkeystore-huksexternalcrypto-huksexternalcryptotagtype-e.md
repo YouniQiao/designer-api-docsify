@@ -1,6 +1,6 @@
 # HuksExternalCryptoTagType
 
-Enumerates the external encrypted data types.
+表示外部加密数据类型的枚举。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the external encrypted data types.
 HUKS_EXT_CRYPTO_TAG_TYPE_INT = 1 << 28
 ```
 
-The tag value is an integer.
+表示TAG的值为整数类型。
 
 **Since:** 22
 
@@ -32,7 +32,7 @@ The tag value is an integer.
 HUKS_EXT_CRYPTO_TAG_TYPE_BYTES = 5 << 28
 ```
 
-The tag value is a byte array.
+表示TAG的值为字节数组。
 
 **Since:** 22
 

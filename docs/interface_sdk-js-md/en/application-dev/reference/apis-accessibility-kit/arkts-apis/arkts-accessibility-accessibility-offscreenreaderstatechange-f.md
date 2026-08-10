@@ -1,5 +1,11 @@
 # offScreenReaderStateChange
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## offScreenReaderStateChange
 
 ```TypeScript
@@ -24,5 +30,5 @@ Unregister the observe of the screen reader state changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | callback Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | callback Asynchronous callback interface. |
 

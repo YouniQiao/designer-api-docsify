@@ -1,6 +1,6 @@
 # AppPreloadType
 
-Enumerates the preloading types of the current application process.
+表示应用当前进程的预加载类型枚举。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the preloading types of the current application process.
 UNSPECIFIED = 0
 ```
 
-No preloading has taken place, or the preloaded data has been cleared.
+未发生预加载或预加载数据已被清除。
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ No preloading has taken place, or the preloaded data has been cleared.
 TYPE_CREATE_PROCESS = 1
 ```
 
-Preloads the process up to the point of process creation completion.
+进程最终预加载到进程创建完成阶段。
 
 **Since:** 22
 
@@ -52,7 +52,7 @@ Preloads the process up to the point of process creation completion.
 TYPE_CREATE_ABILITY_STAGE = 2
 ```
 
-Preloads the process up to the point of [AbilityStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_creation completion.
+进程最终预加载到[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)创建完成阶段。
 
 **Since:** 22
 
@@ -70,7 +70,7 @@ Preloads the process up to the point of [AbilityStage]\_\_\_JSDOC\_LINK\_DESC\_U
 TYPE_CREATE_WINDOW_STAGE = 3
 ```
 
-Preloads the process up to the point of [WindowStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ creation completion.
+进程最终预加载到[WindowStage](../../apis-arkui/arkts-apis/arkts-window.md/arkts-window.md)创建完成阶段。
 
 **Since:** 22
 
@@ -88,7 +88,7 @@ Preloads the process up to the point of [WindowStage]\_\_\_JSDOC\_LINK\_DESC\_US
 TYPE_CREATE_BACKGROUND_ABILITY = 4
 ```
 
-Preloads the process up to the point of [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_execution completion.
+进程最终预加载到[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)执行完成阶段。
 
 **Since:** 23
 

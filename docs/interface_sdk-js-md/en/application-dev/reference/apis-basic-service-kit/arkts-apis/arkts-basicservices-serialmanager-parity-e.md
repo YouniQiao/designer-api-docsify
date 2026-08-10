@@ -16,7 +16,7 @@ Enumerates the parity check modes.
 PARITY_NONE = 0
 ```
 
-No parity.
+无校验。
 
 **Since:** 19
 
@@ -32,7 +32,7 @@ No parity.
 PARITY_ODD = 1
 ```
 
-Odd parity.
+奇校验。
 
 **Since:** 19
 
@@ -48,7 +48,7 @@ Odd parity.
 PARITY_EVEN = 2
 ```
 
-Even parity.
+偶校验。
 
 **Since:** 19
 
@@ -64,7 +64,7 @@ Even parity.
 PARITY_MARK = 3
 ```
 
-Mark parity, whose parity bit is fixed at **1**.
+固定为1。
 
 **Since:** 19
 
@@ -80,7 +80,7 @@ Mark parity, whose parity bit is fixed at **1**.
 PARITY_SPACE = 4
 ```
 
-Space parity, whose parity bit is fixed at **0**.
+固定为0。
 
 **Since:** 19
 

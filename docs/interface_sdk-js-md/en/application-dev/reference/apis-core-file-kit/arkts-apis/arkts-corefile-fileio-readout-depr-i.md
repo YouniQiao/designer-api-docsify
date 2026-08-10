@@ -1,6 +1,6 @@
 # ReadOut
 
-Obtains the file read result. This class applies only to the **read()** method.
+仅用于read方法，获取文件的读取结果。
 
 **Since:** 6
 
@@ -18,7 +18,7 @@ Obtains the file read result. This class applies only to the **read()** method.
 buffer: ArrayBuffer
 ```
 
-Buffer for storing the data read.
+保存读取数据的缓冲区。
 
 **Type:** ArrayBuffer
 
@@ -38,7 +38,7 @@ Buffer for storing the data read.
 bytesRead: number
 ```
 
-Length of the data read, in bytes.
+实际读取长度，单位为Byte。
 
 **Type:** number
 
@@ -58,7 +58,7 @@ Length of the data read, in bytes.
 offset: number
 ```
 
-Position of the buffer to which the data will be read relative to the start address of the buffer, in bytes.
+读取数据相对于缓冲区首地址的偏移，单位为Byte。
 
 **Type:** number
 

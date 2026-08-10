@@ -18,5 +18,5 @@ The callback when the param element which is a child item of the object element 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | callback information of param element.  |
+| event | [NativeEmbedParamDataInfo](arkts-arkweb-web-nativeembedparamdatainfo-i.md) | 是 | callback information of param element. |
 

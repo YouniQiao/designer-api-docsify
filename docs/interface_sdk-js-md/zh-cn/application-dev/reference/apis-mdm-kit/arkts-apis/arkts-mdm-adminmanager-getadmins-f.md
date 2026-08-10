@@ -1,5 +1,11 @@
 # getAdmins
 
+## 导入模块
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## getAdmins
 
 ```TypeScript
@@ -22,15 +28,15 @@ function getAdmins(): Promise<Array<Want>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt;&gt; | 包含所有已激活的设备管理应用的Promise对象。 |
+| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt;&gt; | 包含所有已激活的设备管理应用的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

@@ -1,5 +1,11 @@
 # offContinuousTaskCancel
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## offContinuousTaskCancel
 
 ```TypeScript
@@ -22,35 +28,12 @@ function offContinuousTaskCancel(callback?: Callback<ContinuousTaskCancelInfo>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskCancelInfo&gt; | 否 | the callback of continuous task cancel. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskCancelInfo&gt; | 否 | the callback of continuous task cancel. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Callback parameter error; 2. Unregister type has not register; 3. Parameter verification failed. |
-
-**示例：**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-function callback(info: backgroundTaskManager.ContinuousTaskCancelInfo) {
-  console.info('continuousTaskCancel callback id ' + info.id);
-  console.info('continuousTaskCancel callback reason ' + info.reason);
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      backgroundTaskManager.offContinuousTaskCancel(callback);
-    } catch (error) {
-      console.error(`Operation offContinuousTaskCancel failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
+| 401 | Parameter error. Possible cause: 1. Callback parameter error; 2. Unregister type has not register; 3. Parameter verification failed. |
+| 201 | Permission denied. |
 

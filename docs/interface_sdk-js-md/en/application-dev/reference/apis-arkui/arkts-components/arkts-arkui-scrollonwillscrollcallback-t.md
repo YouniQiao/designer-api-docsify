@@ -5,7 +5,7 @@ declare type ScrollOnWillScrollCallback =
  (xOffset: number, yOffset: number, scrollState: ScrollState, scrollSource: ScrollSource) => void | OffsetResult
 ```
 
-Called before scroll to allow developer to control real offset the Scroll can scroll.
+Scroll滚动前触发的回调。
 
 **Since:** 12
 
@@ -23,14 +23,14 @@ Called before scroll to allow developer to control real offset the Scroll can sc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xOffset | number | Yes | Horizontal offset per frame during scrolling. A positive offset indicates scrolling to the left, and a negative offset indicates scrolling to the right. \_\_\_HTML\_TAG\_USD\_0\_\_\_Unit: vp  |
-| yOffset | number | Yes | offset per frame during scrolling. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward. \_\_\_HTML\_TAG\_USD\_0\_\_\_Unit: vp  |
-| scrollState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current scrolling state.  |
-| scrollSource | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Source of the current scrolling operation.  |
+| xOffset | number | Yes | 相对于上一帧水平方向的偏移量，Scroll中的内容向左滚动时偏移量为正，向右滚动时偏移量为负。 <br>单位vp |
+| yOffset | number | Yes | 相对于上一帧竖直方向的偏移量，Scroll中的内容向上滚动时偏移量为正，向下滚动时偏移量为负。 <br>单位vp |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | 当前滚动状态。 |
+| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-scrollsource-e.md) | Yes | 当前滚动操作的来源。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| void \| OffsetResult | the remain offset for the Scroll, same as (xOffset, yOffset) when no OffsetResult is returned.  |
+| void \| OffsetResult | 返回OffsetResult时按照开发者指定的偏移量滚动； 不返回时按回调参数(xOffset, yOffset)滚动。 |
 

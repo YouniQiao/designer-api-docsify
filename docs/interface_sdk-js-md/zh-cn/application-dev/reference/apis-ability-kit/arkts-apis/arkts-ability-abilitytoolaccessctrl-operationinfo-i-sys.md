@@ -20,7 +20,7 @@ info: CliCmdInfo | Permissions
 
 操作详细信息。
 
-**类型：** CliCmdInfo \| Permissions
+**类型：** [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md) \| Permissions
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ operationType: OperationType
 
 操作类型。
 
-**类型：** OperationType
+**类型：** [OperationType](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-operationtype-e.md)
 
 **起始版本：** 26.0.0
 

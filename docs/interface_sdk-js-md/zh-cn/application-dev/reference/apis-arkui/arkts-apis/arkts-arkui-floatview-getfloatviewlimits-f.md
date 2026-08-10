@@ -1,5 +1,11 @@
 # getFloatViewLimits
 
+## 导入模块
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## getFloatViewLimits
 
 ```TypeScript
@@ -22,26 +28,27 @@ function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| templateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 标准悬浮窗模板类型。 |
+| templateType | [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md) | 是 | 标准悬浮窗模板类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回标准悬浮窗窗口的限制，包括最大尺寸、最小尺寸和宽高比的限制范围。 |
+| [FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md) | 返回标准悬浮窗窗口的限制，包括最大尺寸、最小尺寸和宽高比的限制范围。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible cause: Call the API on unsupported device. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid template type. |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| 801 | Capability not supported. Possible cause: Call the API on unsupported device. |
+| 1300002 | This window state is abnormal. Possible cause: System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 1300016 | Parameter error. Possible cause: Invalid template type. |
 
-**示例：**
+## 示例
 
 ```TypeScript
+// 获取圆角矩形模板的闪控窗窗口限制
 let limits: floatView.FloatViewLimits = floatView.getFloatViewLimits(floatView.FloatViewTemplateType.ROUNDED_RECTANGLE);
 console.info('Float view limits: ' + JSON.stringify(limits));
 ```

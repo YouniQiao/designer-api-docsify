@@ -1,12 +1,18 @@
 # offScrollEvent
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## offScrollEvent
 
 ```TypeScript
 export function offScrollEvent(options: ObserverOptions, callback?: Callback<ScrollEventInfo>): void
 ```
 
-Removes a callback function that was previously registered with \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+Removes a callback function that was previously registered with `onScrollEvent()`.
 
 **Since:** 23
 
@@ -22,8 +28,8 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The options object. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
+| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
 
 
 ## offScrollEvent
@@ -32,7 +38,7 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 export function offScrollEvent(callback?: Callback<ScrollEventInfo>): void
 ```
 
-Removes a callback function that was previously registered with \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+Removes a callback function that was previously registered with `onScrollEvent()`.
 
 **Since:** 23
 
@@ -48,5 +54,5 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 

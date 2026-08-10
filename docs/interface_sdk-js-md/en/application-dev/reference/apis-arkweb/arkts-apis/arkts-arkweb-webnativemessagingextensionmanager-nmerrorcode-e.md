@@ -1,6 +1,6 @@
 # NmErrorCode
 
-Provides the native messaging error codes.
+Native Messaging的错误列表。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Provides the native messaging error codes.
 PERMISSION_DENY = 17100203
 ```
 
-Provides the native messaging error codes.
+由于缺少 ohos.permission.WEB_NATIVE_MESSAGING，权限被拒绝。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Provides the native messaging error codes.
 WANT_CONTENT_ERROR = 17100202
 ```
 
-The want content is invalid.
+所需内容无效。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ The want content is invalid.
 INNER_ERROR = 17100201
 ```
 
-Inner error for native messaging.
+原生消息的内部错误。
 
 **Since:** 23
 

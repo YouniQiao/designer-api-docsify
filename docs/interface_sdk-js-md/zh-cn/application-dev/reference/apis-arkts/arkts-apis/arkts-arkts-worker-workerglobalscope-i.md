@@ -16,6 +16,12 @@ Worker线程自身的运行环境，与宿主线程环境隔离。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## onerror
 
 ```TypeScript
@@ -40,7 +46,7 @@ onerror属性用于指定Worker在执行过程中发生异常被调用的回调�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | 是 |  |
 
 ## name
 
@@ -72,7 +78,7 @@ readonly self: WorkerGlobalScope & typeof globalThis
 
 为self指定的type属性。
 
-**类型：** WorkerGlobalScope & typeof globalThis
+**类型：** [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md) & typeof globalThis
 
 **起始版本：** 7
 

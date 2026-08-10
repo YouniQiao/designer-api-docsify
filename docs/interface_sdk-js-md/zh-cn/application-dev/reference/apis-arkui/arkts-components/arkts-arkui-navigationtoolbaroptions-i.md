@@ -18,7 +18,7 @@ backgroundBlurStyle?: BlurStyle
 
 工具栏背景模糊样式，设置后，工具栏将应用指定的模糊样式；不设置时关闭背景模糊效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 11
 
@@ -46,7 +46,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 不建议与backgroundEffect同时使用。
 
-**类型：** BackgroundBlurStyleOptions
+**类型：** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 19
 
@@ -68,7 +68,7 @@ backgroundColor?: ResourceColor
 
 工具栏背景颜色，设置后，工具栏背景将显示为指定颜色；不设置时为系统默认颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 11
 
@@ -94,7 +94,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 不建议与backgroundBlurStyleOptions同时使用。
 
-**类型：** BackgroundEffectOptions
+**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 19
 
@@ -118,7 +118,7 @@ barStyle?: BarStyle
 
 默认值：BarStyle.STANDARD
 
-**类型：** BarStyle
+**类型：** [BarStyle](arkts-arkui-barstyle-e.md)
 
 **默认值：** BarStyle.STANDARD
 
@@ -170,7 +170,7 @@ moreButtonOptions?: MoreButtonOptions
 
 工具栏更多图标的菜单选项。
 
-**类型：** MoreButtonOptions
+**类型：** [MoreButtonOptions](../arkts-apis/arkts-arkui-navigation-morebuttonoptions-i.md)
 
 **起始版本：** 19
 

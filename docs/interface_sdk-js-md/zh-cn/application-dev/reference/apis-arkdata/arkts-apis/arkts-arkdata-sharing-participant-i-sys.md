@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## attachInfo
 
 ```TypeScript
@@ -60,7 +66,7 @@ privilege?: Privilege
 
 指定的共享数据权限。默认为Privilege的默认值。
 
-**类型：** Privilege
+**类型：** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
 **起始版本：** 11
 
@@ -80,7 +86,7 @@ role?: Role
 
 参与者的角色，为邀请者或被邀请者。默认为undefined。
 
-**类型：** Role
+**类型：** [Role](../../apis-ability-kit/arkts-apis/arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
 
 **起始版本：** 11
 
@@ -100,7 +106,7 @@ state?: State
 
 共享的状态。默认为undefined。
 
-**类型：** State
+**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **起始版本：** 11
 

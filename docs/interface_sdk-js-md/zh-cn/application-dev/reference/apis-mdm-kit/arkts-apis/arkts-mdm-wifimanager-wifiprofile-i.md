@@ -10,6 +10,12 @@ Wi-Fi配置信息。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.MDMKit';
+```
+
 ## bssid
 
 ```TypeScript
@@ -76,9 +82,9 @@ disableReason?: number
 eapProfile?: WifiEapProfile
 ```
 
-可扩展身份验证协议配置。只有securityType为WIFI\_SEC\_TYPE\_EAP时必填。
+可扩展身份验证协议配置。只有securityType为WIFI_SEC_TYPE_EAP时必填。
 
-**类型：** WifiEapProfile
+**类型：** [WifiEapProfile](arkts-mdm-wifimanager-wifieapprofile-i.md)
 
 **起始版本：** 12
 
@@ -98,7 +104,7 @@ ipType?: IpType
 
 IP地址类型，默认值DHCP。
 
-**类型：** IpType
+**类型：** [IpType](arkts-mdm-wifimanager-iptype-e.md)
 
 **起始版本：** 12
 
@@ -218,7 +224,7 @@ securityType: WifiSecurityType
 
 安全类型。
 
-**类型：** WifiSecurityType
+**类型：** [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 
 **起始版本：** 12
 
@@ -258,7 +264,7 @@ staticIp?: IpProfile
 
 静态IP配置信息。ipType为STATIC时，该字段必填。
 
-**类型：** IpProfile
+**类型：** [IpProfile](arkts-mdm-wifimanager-ipprofile-i.md)
 
 **起始版本：** 12
 

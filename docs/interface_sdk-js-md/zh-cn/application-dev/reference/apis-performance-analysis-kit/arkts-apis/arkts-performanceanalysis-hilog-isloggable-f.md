@@ -1,5 +1,11 @@
 # isLoggable
 
+## 导入模块
+
+```TypeScript
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## isLoggable
 
 ```TypeScript
@@ -22,9 +28,9 @@ function isLoggable(domain: int, tag: string, level: LogLevel): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| domain | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 日志对应的领域标识，范围是0x0~0xFFFF，超出范围则日志无法打印。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_建议开发者在应用内根据需要自定义划分。 |
+| domain | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 日志对应的领域标识，范围是0x0~0xFFFF，超出范围则日志无法打印。&lt;br/&gt;建议开发者在应用内根据需要自定义划分。 |
 | tag | string | 是 | 指定日志标识，可以为任意字符串，建议用于标识调用所在的类或者业务行为。tag长度最多为31字节，超出后会截断，不建议使用中文字符，可能出现乱码或者对齐问题。 |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 日志级别。 |
+| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | 是 | 日志级别。 |
 
 **返回值：**
 
@@ -32,7 +38,7 @@ function isLoggable(domain: int, tag: string, level: LogLevel): boolean
 | --- | --- |
 | boolean | 如果返回true，则该领域标识、日志标识和级别的日志可以打印，否则不能打印。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 hilog.isLoggable(0x0001, "testTag", hilog.LogLevel.INFO);

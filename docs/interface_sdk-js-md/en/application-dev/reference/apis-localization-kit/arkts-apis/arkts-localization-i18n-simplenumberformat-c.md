@@ -1,6 +1,6 @@
 # SimpleNumberFormat
 
-Provide a simple number formatting interface.
+基于框架字符串提供数字格式化的能力。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provide a simple number formatting interface.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## format
 
 ```TypeScript
 format(value: double): string
 ```
 
-Formats a number.
+对数字进行格式化。
 
 **Since:** 23
 
@@ -32,11 +38,11 @@ Formats a number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | Number to be formatted. |
+| value | double | Yes | 数字对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Formatted number. |
+| string | 格式化后的数字字符串。 |
 

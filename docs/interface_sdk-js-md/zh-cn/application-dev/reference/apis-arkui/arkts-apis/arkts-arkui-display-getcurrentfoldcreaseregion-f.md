@@ -1,5 +1,11 @@
 # getCurrentFoldCreaseRegion
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getCurrentFoldCreaseRegion
 
 ```TypeScript
@@ -22,15 +28,15 @@ function getCurrentFoldCreaseRegion(): FoldCreaseRegion
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FoldCreaseRegion对象，返回设备在当前显示模式下的折叠折痕区域。 |
+| [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | FoldCreaseRegion对象，返回设备在当前显示模式下的折叠折痕区域。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let data: display.FoldCreaseRegion = display.getCurrentFoldCreaseRegion();

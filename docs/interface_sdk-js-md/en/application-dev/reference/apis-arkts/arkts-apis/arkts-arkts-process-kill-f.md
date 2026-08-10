@@ -1,12 +1,18 @@
 # kill
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## kill
 
 ```TypeScript
 function kill(signal: number, pid: number): boolean
 ```
 
-Sends a signal to a specified process to terminate it.
+发送信号到指定进程，结束该进程。
 
 **Since:** 7
 
@@ -24,16 +30,16 @@ Sends a signal to a specified process to terminate it.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signal | number | Yes | Signal to send. |
-| pid | number | Yes | PID of the process, to which the signal will be sent. |
+| signal | number | Yes | 发送的信号。 |
+| pid | number | Yes | 进程的 id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | If the signal is sent successfully, **true** is returned. Other, **false** is returned. |
+| boolean | 信号发送成功返回 true，失败返回 false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pres = process.pid;

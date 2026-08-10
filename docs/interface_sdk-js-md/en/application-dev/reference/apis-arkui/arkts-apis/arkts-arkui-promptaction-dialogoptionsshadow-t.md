@@ -4,7 +4,7 @@
 export type DialogOptionsShadow = ShadowOptions | ShadowStyle
 ```
 
-Shadow type of DialogOptions.
+表示弹窗背板的阴影允许的数据字段类型。
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ Shadow type of DialogOptions.
 
 | Type | Description |
 | --- | --- |
-| ShadowOptions |  |
-| ShadowStyle |  |
+| ShadowOptions | 表示值类型为阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。 |
+| ShadowStyle | 表示值类型为阴影类型，用于描述阴影的类型。 |
 

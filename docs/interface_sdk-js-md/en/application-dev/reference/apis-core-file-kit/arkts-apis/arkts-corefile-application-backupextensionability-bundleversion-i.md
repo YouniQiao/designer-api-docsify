@@ -1,6 +1,6 @@
 # BundleVersion
 
-Describe bundle version
+恢复时所需要的版本信息，开发者可根据配置的版本号来判断本次恢复时的应用版本数据。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describe bundle version
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
+## Modules to Import
+
+```TypeScript
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
+```
+
 ## code
 
 ```TypeScript
 code: long
 ```
 
-Indicates bundle's version code.
+应用的版本号。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -36,7 +42,7 @@ Indicates bundle's version code.
 name: string
 ```
 
-Indicates bundle's version name.
+应用的版本名称。
 
 **Type:** string
 

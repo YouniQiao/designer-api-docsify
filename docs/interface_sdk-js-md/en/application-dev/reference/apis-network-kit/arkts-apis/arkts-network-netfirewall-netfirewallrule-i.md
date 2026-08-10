@@ -10,6 +10,12 @@ Firewall rules.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## action
 
 ```TypeScript
@@ -18,7 +24,7 @@ action: FirewallRuleAction
 
 Rule action.
 
-**Type:** FirewallRuleAction
+**Type:** [FirewallRuleAction](arkts-network-netfirewall-firewallruleaction-e.md)
 
 **Since:** 15
 
@@ -72,7 +78,7 @@ direction: NetFirewallRuleDirection
 
 Rule direction, inbound or outbound.
 
-**Type:** NetFirewallRuleDirection
+**Type:** [NetFirewallRuleDirection](arkts-network-netfirewall-netfirewallruledirection-e.md)
 
 **Since:** 15
 
@@ -88,9 +94,9 @@ Rule direction, inbound or outbound.
 dns?: NetFirewallDnsParams
 ```
 
-DNS: valid when ruleType = RULE\_DNS, otherwise it will be ignored.
+DNS: valid when ruleType = RULE_DNS, otherwise it will be ignored.
 
-**Type:** NetFirewallDnsParams
+**Type:** [NetFirewallDnsParams](arkts-network-netfirewall-netfirewalldnsparams-i.md)
 
 **Since:** 15
 
@@ -106,7 +112,7 @@ DNS: valid when ruleType = RULE\_DNS, otherwise it will be ignored.
 domains?: Array<NetFirewallDomainParams>
 ```
 
-Domain name list: valid when ruleType = RULE\_DOMAIN, otherwise it will be ignored.
+Domain name list: valid when ruleType = RULE_DOMAIN, otherwise it will be ignored.
 
 **Type:** Array&lt;NetFirewallDomainParams&gt;
 
@@ -142,7 +148,7 @@ Rule id: When a rule is added to the system, the system generates a rule ID.
 interface?: string
 ```
 
-Interface name: valid when type = RULE\_IP, otherwise it will be ignored.
+Interface name: valid when type = RULE_IP, otherwise it will be ignored.
 
 **Type:** string
 
@@ -180,7 +186,7 @@ Whether the rule is enabled.
 localIps?: Array<NetFirewallIpParams>
 ```
 
-Local IP address: valid when ruleType = RULE\_IP, otherwise it will be ignored.
+Local IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
 **Type:** Array&lt;NetFirewallIpParams&gt;
 
@@ -198,7 +204,7 @@ Local IP address: valid when ruleType = RULE\_IP, otherwise it will be ignored.
 localPorts?: Array<NetFirewallPortParams>
 ```
 
-Local ports: valid when ruleType = RULE\_IP, otherwise it will be ignored.
+Local ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
 **Type:** Array&lt;NetFirewallPortParams&gt;
 
@@ -234,7 +240,7 @@ Rule name.
 protocol?: number
 ```
 
-Protocol, 1: ICMPv4, 6: TCP, 17: UDP, 58: ICMPv6. Valid when ruleType = RULE\_IP, otherwise it will be ignored.
+Protocol, 1: ICMPv4, 6: TCP, 17: UDP, 58: ICMPv6. Valid when ruleType = RULE_IP, otherwise it will be ignored.
 
 **Type:** number
 
@@ -252,7 +258,7 @@ Protocol, 1: ICMPv4, 6: TCP, 17: UDP, 58: ICMPv6. Valid when ruleType = RULE\_IP
 remoteIps?: Array<NetFirewallIpParams>
 ```
 
-Remote IP address: valid when ruleType = RULE\_IP, otherwise it will be ignored.
+Remote IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
 **Type:** Array&lt;NetFirewallIpParams&gt;
 
@@ -270,7 +276,7 @@ Remote IP address: valid when ruleType = RULE\_IP, otherwise it will be ignored.
 remotePorts?: Array<NetFirewallPortParams>
 ```
 
-Remote ports: valid when ruleType = RULE\_IP, otherwise it will be ignored.
+Remote ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
 **Type:** Array&lt;NetFirewallPortParams&gt;
 
@@ -290,7 +296,7 @@ type: NetFirewallRuleType
 
 Rule type.
 
-**Type:** NetFirewallRuleType
+**Type:** [NetFirewallRuleType](arkts-network-netfirewall-netfirewallruletype-e.md)
 
 **Since:** 15
 

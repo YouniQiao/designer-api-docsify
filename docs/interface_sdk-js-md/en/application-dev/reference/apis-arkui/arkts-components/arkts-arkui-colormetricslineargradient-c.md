@@ -1,6 +1,6 @@
 # ColorMetricsLinearGradient
 
-Sets the linear gradient background color of the track.
+滑轨轨道的线性渐变背景颜色。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Sets the linear gradient background color of the track.
 constructor(colorStops: ColorMetricsStop[])
 ```
 
-Constructor of **ColorMetricsLinearGradient**.
+ColorMetricsLinearGradient的构造函数。
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ Constructor of **ColorMetricsLinearGradient**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorStops | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Array of linear gradient color stops. Each element describes a color and its stop in the gradient. |
+| colorStops | [ColorMetricsStop](../arkts-apis/arkts-arkui-slider-colormetricsstop-i.md)[] | Yes | 线性渐变颜色断点数组，每个元素描述一个颜色及其在渐变中的断点值。 |
 

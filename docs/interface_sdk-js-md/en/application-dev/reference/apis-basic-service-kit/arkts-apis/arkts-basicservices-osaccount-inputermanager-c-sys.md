@@ -1,6 +1,6 @@
 # InputerManager (System API)
 
-Provides APIs for managing credential inputers.
+凭据输入管理器。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Provides APIs for managing credential inputers.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## registerInputer
 
 ```TypeScript
 static registerInputer(authType: AuthType, inputer: IInputer): void
 ```
 
-Registers a credential inputer.
+注册凭据输入器。
 
 **Since:** 9
 
@@ -36,22 +42,22 @@ Registers a credential inputer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication credential type. |
-| inputer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Credential inputer to register. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型。 |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | 凭据输入器，用于获取凭据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType or inputer. |
-| [12300103](../../apis-basic-services-kit/errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
-| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| 12300106 | The authentication type is not supported. |
+| 201 | Permission denied. |
+| 12300002 | Invalid authType or inputer. |
+| 202 | Not system application. |
+| 12300001 | The system service works abnormally. |
+| 12300103 | The credential inputer already exists. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,7 +83,7 @@ try {
 static unregisterInputer(authType: AuthType): void
 ```
 
-Unregisters a credential inputer.
+解注册凭据输入器。
 
 **Since:** 9
 
@@ -95,18 +101,18 @@ Unregisters a credential inputer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication credential type. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 12300002 | Invalid authType. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

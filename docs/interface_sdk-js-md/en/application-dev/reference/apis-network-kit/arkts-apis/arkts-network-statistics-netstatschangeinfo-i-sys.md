@@ -12,6 +12,12 @@ Used to monitor and manage the status and usage of network interfaces.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { statistics } from 'kits/@kit.NetworkKit';
+```
+
 ## iface
 
 ```TypeScript
@@ -40,7 +46,7 @@ uid?: int
 
 Network interface for querying traffic.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

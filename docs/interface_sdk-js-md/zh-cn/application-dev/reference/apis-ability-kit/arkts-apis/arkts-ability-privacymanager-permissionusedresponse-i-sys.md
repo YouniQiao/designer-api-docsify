@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## beginTime
 
 ```TypeScript
@@ -20,7 +26,7 @@ beginTime: long
 
 查询记录的起始时间。单位为：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ endTime: long
 
 查询记录的终止时间。单位为：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

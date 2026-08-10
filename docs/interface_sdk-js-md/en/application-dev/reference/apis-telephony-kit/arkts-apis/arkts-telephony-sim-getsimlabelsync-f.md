@@ -1,5 +1,11 @@
 # getSimLabelSync
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getSimLabelSync
 
 ```TypeScript
@@ -20,15 +26,15 @@ Obtains the SIM card label synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | SIM card slot ID, which ranges from 0 to the maximum number of slots supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID, which ranges from 0 to the maximum number of slots supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SIM card label. |
+| [SimLabel](arkts-telephony-sim-simlabel-i.md) | SIM card label. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

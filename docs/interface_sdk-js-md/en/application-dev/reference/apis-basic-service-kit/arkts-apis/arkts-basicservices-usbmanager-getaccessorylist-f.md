@@ -1,12 +1,18 @@
 # getAccessoryList
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAccessoryList
 
 ```TypeScript
 function getAccessoryList(): Array<Readonly<USBAccessory>>
 ```
 
-Obtains the list of USB accessories connected to the host.
+获取当前已接入主机的USB配件列表。
 
 **Since:** 14
 
@@ -20,16 +26,16 @@ Obtains the list of USB accessories connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBAccessory&gt;&gt; | List of USB accessories (read-only). Currently, only one USB accessory is contained in the list. |
+| Array&lt;Readonly&lt;USBAccessory&gt;&gt; | 只读的USB配件列表。当前仅支持列表中包含1个USB配件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. No accessory is plugged in. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 14400004 | Service exception. Possible causes:  &lt;br&gt;1. No accessory is plugged in. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -37,7 +43,7 @@ try {
   let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
   hilog.info(0, 'testTag ui', `getAccessoryList success, accList: ${JSON.stringify(accList)}`)
 } catch (error) {
-  hilog.info(0, 'testTag ui', `getAccessoryList error ${error.code}, message is ${error.message}`)
+  hilog.error(0, 'testTag ui', `getAccessoryList error ${error.code}, message is ${error.message}`)
 }
 ```
 

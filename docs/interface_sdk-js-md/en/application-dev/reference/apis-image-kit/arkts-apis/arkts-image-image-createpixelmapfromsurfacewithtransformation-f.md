@@ -1,5 +1,11 @@
 # createPixelMapFromSurfaceWithTransformation
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createPixelMapFromSurfaceWithTransformation
 
 ```TypeScript
@@ -35,8 +41,22 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get the data from Surface. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation, e.g. on cross-platform. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. |
+| 7600305 | Failed to create the PixelMap. |
+| 7600201 | Unsupported operation, e.g. on cross-platform. |
+| 7600104 | Failed to get the data from Surface. |
+| 7600206 | Invalid parameter. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPixelMapFromSurfaceWithTransformation(surfaceId: string, transformEnabled: boolean) {
+  image.createPixelMapFromSurfaceWithTransformation(surfaceId, transformEnabled).then((pixelMap: image.PixelMap) => {
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 

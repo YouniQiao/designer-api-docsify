@@ -4,7 +4,7 @@
 declare type OnTabsAnimationStartCallback = (index: number, targetIndex: number, extraInfo: TabsAnimationEvent) => void
 ```
 
-Defines the callback triggered when the tab switching animation starts.
+切换动画开始时触发的回调。
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ Defines the callback triggered when the tab switching animation starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the currently displayed element. The index is zero-based.  |
-| targetIndex | number | Yes | Index of the target element to switch to. The index is zero-based.  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extra information of the animation, including the offset of the currently displayed element and target element relative to the start position of the **Tabs** along the main axis, and the hands-off velocity.  |
+| index | number | Yes | 当前显示元素的索引，索引从0开始。 |
+| targetIndex | number | Yes | 当前显示元素的索引，索引从0开始。 |
+| extraInfo | [TabsAnimationEvent](../arkts-apis/arkts-arkui-tabs-tabsanimationevent-i.md) | Yes | 动画相关信息，包括主轴方向上当前显示元素和目标元素相对Tabs起始位置的位移，以及离手速度。 |
 

@@ -12,6 +12,12 @@ Defines the contact number information.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## alphaTag
 
 ```TypeScript
@@ -80,7 +86,7 @@ recordNumber?: int
 
 Indicates the record number.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 

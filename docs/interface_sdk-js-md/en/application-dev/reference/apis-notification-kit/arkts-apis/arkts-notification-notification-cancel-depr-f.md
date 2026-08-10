@@ -6,7 +6,7 @@
 function cancel(id: number, callback: AsyncCallback<void>): void
 ```
 
-Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result.
+取消与指定通知ID相匹配的已发布通知（callback形式）。
 
 **Since:** 7
 
@@ -24,8 +24,8 @@ Cancels a notification with the specified ID. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | Notification ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| id | number | Yes | 通知ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示被指定的回调方法。 |
 
 
 ## cancel
@@ -34,7 +34,7 @@ Cancels a notification with the specified ID. This API uses an asynchronous call
 function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels a notification with the specified ID and label. This API uses an asynchronous callback to return the result.
+通过通知ID和通知标签取消已发布的通知（callback形式）。
 
 **Since:** 7
 
@@ -52,9 +52,9 @@ Cancels a notification with the specified ID and label. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | Notification ID. |
-| label | string | Yes | Notification label. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| id | number | Yes | 通知ID。 |
+| label | string | Yes | 通知标签。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示被指定的回调方法。 |
 
 
 ## cancel
@@ -63,7 +63,7 @@ Cancels a notification with the specified ID and label. This API uses an asynchr
 function cancel(id: number, label?: string): Promise<void>
 ```
 
-Cancels a notification with the specified ID and optional label. This API uses a promise to return the result.
+取消与指定通知ID相匹配的已发布通知，label可以指定也可以不指定（Promise形式）。
 
 **Since:** 7
 
@@ -81,12 +81,12 @@ Cancels a notification with the specified ID and optional label. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | Notification ID. |
-| label | string | No | Notification label. This parameter is left empty by default. |
+| id | number | Yes | 通知ID。 |
+| label | string | No | 通知标签，默认为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

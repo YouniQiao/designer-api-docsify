@@ -1,12 +1,18 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## on('applicationState')
 
 ```TypeScript
 function on(type: 'applicationState', observer: ApplicationStateObserver): int
 ```
 
-Registers an observer to listen for lifecycle changes of all applications.
+注册所有应用程序的状态监听器。
 
 **Since:** 14
 
@@ -22,24 +28,24 @@ Registers an observer to listen for lifecycle changes of all applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application state observer, which is used to listen for applications lifecycle changes. |
+| type | 'applicationState' | Yes | 调用接口类型，固定填'applicationState'字符串。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | ID of the observer registered. You can pass this ID to [off('applicationState')]{ |
+| int | 已注册监听器ID，调用方可以通过 [off('applicationState')]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -86,7 +92,7 @@ try {
 function on(type: 'applicationState', observer: ApplicationStateObserver, bundleNameList: Array<string>): int
 ```
 
-Registers an observer to listen for lifecycle changes of the specified application.
+注册指定应用程序的状态监听器。
 
 **Since:** 14
 
@@ -102,25 +108,25 @@ Registers an observer to listen for lifecycle changes of the specified applicati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application state observer, which is used to listen for application lifecycle changes. |
-| bundleNameList | Array&lt;string&gt; | Yes | bundleName** array of the application. A maximum of 128 bundle names can be passed. |
+| type | 'applicationState' | Yes | 调用接口类型，固定填'applicationState'字符串。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
+| bundleNameList | Array&lt;string&gt; | Yes | 表示需要注册监听的bundleName数组。最大值128。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | ID of the observer registered. You can pass this ID to [off('applicationState')]{ |
+| int | 已注册监听器ID，调用方可以通过 [off('applicationState')]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

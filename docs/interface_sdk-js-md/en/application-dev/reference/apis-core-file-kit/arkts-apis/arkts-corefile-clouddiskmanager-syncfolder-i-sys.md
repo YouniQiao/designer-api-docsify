@@ -1,6 +1,6 @@
 # SyncFolder (System API)
 
-Encapsulates the sync root information.
+表示同步根信息。
 
 **Since:** 21
 
@@ -12,13 +12,19 @@ Encapsulates the sync root information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name of the sync root.
+同步根对应的包名。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Bundle name of the sync root.
 customAlias?: string
 ```
 
-Custom alias displayed in the File Manager list. The default value is **undefined**.
+在文管列表显示的别名。默认值为undefined。
 
 **Type:** string
 
@@ -58,10 +64,9 @@ Custom alias displayed in the File Manager list. The default value is **undefine
 displayNameResId?: int
 ```
 
-Resource ID, which can be mapped to the alias displayed in the File Manager list. The default value is  
-**undefined**.
+资源ID，可以映射到文管列表显示的别名。默认值为undefined。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -79,7 +84,7 @@ Resource ID, which can be mapped to the alias displayed in the File Manager list
 path: string
 ```
 
-URI of the sync root.
+同步根对应的URI。
 
 **Type:** string
 
@@ -99,9 +104,9 @@ URI of the sync root.
 state: SyncFolderState
 ```
 
-State of the sync root.
+同步根对应的状态信息。
 
-**Type:** SyncFolderState
+**Type:** [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)
 
 **Since:** 21
 

@@ -1,12 +1,18 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## on('applicationState')
 
 ```TypeScript
 function on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter): int
 ```
 
-Registers an application state observer, which allows you to filter for specific application lifecycle changes by setting filter criteria.
+注册应用程序的状态监听器，并通过设置过滤条件来筛选所需监听的应用生命周期变化事件。
 
 **Since:** 21
 
@@ -24,25 +30,25 @@ Registers an application state observer, which allows you to filter for specific
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application state observer, which is used to listen for application lifecycle changes. |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter for application lifecycle changes. |
+| type | 'applicationState' | Yes | 调用接口类型，固定填'applicationState'字符串。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
+| filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | Yes | 应用生命周期变化事件的过滤器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | ID of the observer registered. You can pass this ID to [off]{ |
+| int | 已注册监听器ID，可用于 [off]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -101,7 +107,7 @@ try {
 function on(type: 'appForegroundState', observer: AppForegroundStateObserver): void
 ```
 
-Registers an observer to listen for application start or exit events. The observer can be used by a system application to observe the start or event events of all applications.
+注册应用启动和退出的监听器，可用于系统应用监听所有应用的启动和退出。
 
 **Since:** 11
 
@@ -119,19 +125,19 @@ Registers an observer to listen for application start or exit events. The observ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appForegroundState' | Yes | Event type. It is fixed at **'appForegroundState'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Observer used to listen for application start or exit events. |
+| type | 'appForegroundState' | Yes | 调用接口类型，固定填'appForegroundState'字符串。 |
+| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | Yes | 应用状态监听器，用于监听应用的启动和退出。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -159,7 +165,7 @@ try {
 function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void
 ```
 
-Registers an observer to listen for the complete of the first frame rendering of a given ability.
+注册监听Ability首帧绘制完成事件观察者对象，可用于系统应用监听Ability首帧绘制事件。
 
 **Since:** 12
 
@@ -177,20 +183,20 @@ Registers an observer to listen for the complete of the first frame rendering of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'abilityFirstFrameState' | Yes | Event type. It is fixed at **'abilityFirstFrameState'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Observer used to listen for the complete of the first frame rendering of the ability. |
-| bundleName | string | No | Bundle name of the ability to be listened for. If this parameter is left blank, the event is listened for all applications. |
+| type | 'abilityFirstFrameState' | Yes | 调用接口类型，固定填'abilityFirstFrameState'字符串。 |
+| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | Yes | 表示待注册的Ability首帧绘制完成事件观察者对象。 |
+| bundleName | string | No | 表示待监听的Ability的应用bundleName，不填表示注册监听所有应用ability首帧绘制完成事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

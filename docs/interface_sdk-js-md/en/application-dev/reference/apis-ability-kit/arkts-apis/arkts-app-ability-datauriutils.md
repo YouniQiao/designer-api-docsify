@@ -1,6 +1,6 @@
 # @ohos.app.ability.dataUriUtils
 
-The DataUriUtils module provides APIs to process URI objects. You can use the APIs to attach an ID to the end of a given URI and obtain, delete, or update the ID attached to the end of a given URI.
+DataUriUtils模块提供用于处理uri对象的能力，包括获取、绑定、删除和更新指定uri对象的路径末尾的ID。
 
 **Since:** 9
 
@@ -10,14 +10,20 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { dataUriUtils } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [attachId](arkts-ability-datauriutils-attachid-f.md#attachid) | Attaches an ID to the end of a given URI. |
-| [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid) | Deletes the ID from the end of a given URI. |
-| [getId](arkts-ability-datauriutils-getid-f.md#getid) | Obtains the ID attached to the end of a given URI. |
-| [updateId](arkts-ability-datauriutils-updateid-f.md#updateid) | Updates the ID in a given URI. |
+| [attachId](arkts-ability-datauriutils-attachid-f.md#attachid) | 将ID附加到uri的路径末尾。 |
+| [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid) | 删除指定uri路径末尾的ID。 |
+| [getId](arkts-ability-datauriutils-getid-f.md#getid) | 获取指定uri路径末尾的ID。 |
+| [updateId](arkts-ability-datauriutils-updateid-f.md#updateid) | 更新指定uri中的ID。 |
 

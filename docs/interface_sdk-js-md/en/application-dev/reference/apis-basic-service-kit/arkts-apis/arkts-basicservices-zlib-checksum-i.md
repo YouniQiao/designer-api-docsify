@@ -1,6 +1,6 @@
 # Checksum
 
-Checksum object.
+校验对象。
 
 **Since:** 12
 
@@ -9,6 +9,12 @@ Checksum object.
 <!--Device-zlib-interface Checksum--><!--Device-zlib-interface Checksum-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
+
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
 
 ## adler32
 
@@ -22,7 +28,7 @@ ArkTS-Sta:
 adler32(adler: long, buf: ArrayBuffer): Promise<long>
 ```
 
-Calculates the Adler-32 checksum. This API uses a promise to return the result.
+计算Adler-32校验和。使用Promise异步回调。
 
 **Since:** 12
 
@@ -38,22 +44,22 @@ Calculates the Adler-32 checksum. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adler | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Initial value of the Adler-32 checksum. |
-| buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
+| adler | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Adler-32校验和的初始值。 |
+| buf | ArrayBuffer | Yes | 计算校验和数据缓冲区。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the calculated Adler-32 checksum. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回计算后的Adler-32校验和。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -85,7 +91,7 @@ ArkTS-Sta:
 adler32Combine(adler1: long, adler2: long, len2: long): Promise<long>
 ```
 
-Combines two Adler-32 checksums. This API uses a promise to return the result.
+将两个Adler-32校验和合并。使用Promise异步回调。
 
 **Since:** 12
 
@@ -101,23 +107,23 @@ Combines two Adler-32 checksums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adler1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | The first Adler-32 checksum to be combined. |
-| adler2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | The second Adler-32 checksum to be combined. |
-| len2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Length of the data block of the second Adler-32 checksum. |
+| adler1 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 第一个要合并的Adler-32校验和。 |
+| adler2 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 第二个要合并的Adler-32校验和。 |
+| len2 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 第二个Adler-32校验和的数据块的长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the combined Adler-32 checksum. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回合并后的Adler-32校验和。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -160,7 +166,7 @@ ArkTS-Sta:
 crc32(crc: long, buf: ArrayBuffer): Promise<long>
 ```
 
-Updates a CRC-32 checksum. This API uses a promise to return the result.
+更新CRC-32校验。使用Promise异步回调。
 
 **Since:** 12
 
@@ -176,22 +182,22 @@ Updates a CRC-32 checksum. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| crc | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Initial value of the CRC-32 checksum. |
-| buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
+| crc | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | CRC-32校验的初始值。 |
+| buf | ArrayBuffer | Yes | 计算校验数据缓冲区。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the updated CRC-32 checksum. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回更新后的CRC-32校验。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -225,7 +231,7 @@ ArkTS-Sta:
 crc32Combine(crc1: long, crc2: long, len2: long): Promise<long>
 ```
 
-Combines two CRC-32 checksums. This API uses a promise to return the result.
+将两个CRC-32校验合并。使用Promise异步回调。
 
 **Since:** 12
 
@@ -241,23 +247,23 @@ Combines two CRC-32 checksums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| crc1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | The first CRC-32 checksum to be combined. |
-| crc2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | The second CRC-32 checksum to be combined. |
-| len2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Indicates the length of the second data block checked by CRC-32 |
+| crc1 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 第一个要合并的CRC-32校验。 |
+| crc2 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 第二个要合并的CRC-32校验。 |
+| len2 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 第二个CRC-32校验的数据块的长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the combined CRC-32 checksum. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回合并后的CRC-32校验。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -300,7 +306,7 @@ ArkTS-Sta:
 crc64(crc: long, buf: ArrayBuffer): Promise<long>
 ```
 
-Updates a CRC-64 checksum. This API uses a promise to return the result.
+更新CRC-64校验。使用Promise异步回调。
 
 **Since:** 12
 
@@ -316,22 +322,22 @@ Updates a CRC-64 checksum. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| crc | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Initial value of the CRC-64 checksum. |
-| buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
+| crc | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | CRC-64校验的初始值。 |
+| buf | ArrayBuffer | Yes | 计算校验数据缓冲区。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the updated CRC-64 checksum. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回更新后的CRC-64校验。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -365,7 +371,7 @@ ArkTS-Sta:
 getCrc64Table(): Promise<Array<long>>
 ```
 
-Obtains this CRC-64 checksum table. This API uses a promise to return the result.
+输出CRC-64校验表。使用Promise异步回调。
 
 **Since:** 12
 
@@ -381,9 +387,9 @@ Obtains this CRC-64 checksum table. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the CRC-64 checksum table. |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;long&gt;&gt; | Promise对象。返回CRC-64校验表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -409,7 +415,7 @@ ArkTS-Sta:
 getCrcTable(): Promise<Array<long>>
 ```
 
-Obtains this CRC-32 checksum table. This API uses a promise to return the result.
+输出CRC-32校验表。使用Promise异步回调。
 
 **Since:** 12
 
@@ -425,9 +431,9 @@ Obtains this CRC-32 checksum table. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the CRC-32 checksum table. |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;long&gt;&gt; | Promise对象。返回CRC-32校验表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';

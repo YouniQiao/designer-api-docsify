@@ -1,6 +1,6 @@
 # Color (System API)
 
-RGBA color description.
+RGBA格式的颜色描述。
 
 **Since:** 20
 
@@ -12,15 +12,21 @@ RGBA color description.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alpha
 
 ```TypeScript
 alpha: double
 ```
 
-Alpha component of the color (transparency).
+颜色的A分量（透明度）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -38,9 +44,9 @@ Alpha component of the color (transparency).
 blue: double
 ```
 
-Blue component of the color.
+颜色的B分量（蓝色）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -58,9 +64,9 @@ Blue component of the color.
 green: double
 ```
 
-Green component of the color.
+颜色的G分量（绿色）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -78,9 +84,9 @@ Green component of the color.
 red: double
 ```
 
-Red component of the color.
+颜色的R分量（红色）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 

@@ -1,12 +1,22 @@
 # spring
 
+## Modules to Import
+
+```TypeScript
+import { curves } from 'kits/@kit.ArkUI';
+```
+
 ## spring
 
 ```TypeScript
 function spring(velocity: number, mass: number, stiffness: number, damping: number): string
 ```
 
-Constructs a spring curve object.
+构造弹簧曲线对象。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves.springCurve](arkts-arkui-curves-springcurve-f.md#springcurve)替代。
 
 **Since:** 7
 
@@ -14,7 +24,7 @@ Constructs a spring curve object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [springCurve](arkts-arkui-curves-springcurve-f.md#springcurve)
+**Substitutes:** [curves.springCurve](arkts-arkui-curves-springcurve-f.md#springcurve)
 
 <!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string--><!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string-End-->
 
@@ -24,14 +34,14 @@ Constructs a spring curve object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | number | Yes | Initial velocity. It is applied by external factors to the spring animation, designed to help ensure the smooth transition from the previous motion state. |
-| mass | number | Yes | Mass, which influences the inertia in the spring system. The greater the mass, the greater the amplitude of the oscillation, and the slower the speed of restoring to the equilibrium position. |
-| stiffness | number | Yes | Stiffness. It is the degree to which an object deforms by resisting the force applied. In an elastic system, the greater the stiffness, the stronger the ability to resist deformation, and the faster the speed of restoring to the equilibrium position. |
-| damping | number | Yes | Damping. It is a pure number and has no real physical meaning. It is used to describe the oscillation and attenuation of the system after being disturbed. The larger the damping, the smaller the number of oscillations of elastic motion, and the smaller the oscillation amplitude. |
+| velocity | number | Yes | 初始速度。是由外部因素对弹性动效产生的影响参数，其目的是保证对象从之前的运动状态平滑地过渡到弹性动效。 |
+| mass | number | Yes | 质量。弹性系统的受力对象，会对弹性系统产生惯性影响。质量越大，震荡的幅度越大，恢复到平衡位置的速度越慢。 |
+| stiffness | number | Yes | 刚度。是物体抵抗施加的力而形变的程度。在弹性系统中，刚度越大，抵抗变形的能力越强，恢复到平衡位置的速度就越快。 |
+| damping | number | Yes | 阻尼。是一个纯数，无真实的物理意义，用于描述系统在受到扰动后震荡及衰减的情形。阻尼越大，弹性运动的震荡次数越少、震荡幅度越小。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Spring curve object. |
+| string | 返回弹簧曲线对象。 |
 

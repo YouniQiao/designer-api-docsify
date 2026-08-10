@@ -1,10 +1,11 @@
 # PluginComponentOptions（系统接口）
 
 定义用于构造插件组件的选项。
-    **说明：**  
-    
-    为了规范化匿名对象定义，此处的元素定义已在API版本18中进行修订。  
-    虽然为匿名对象保留了历史版本信息，但可能会出现外层元素的@since版本号高于内层元素的情况。这不影响接口的可用性。
+
+> **说明：**
+> 
+> 为了规范化匿名对象定义，此处的元素定义已在API版本18中进行修订。
+> 虽然为匿名对象保留了历史版本信息，但可能会出现外层元素的@since版本号高于内层元素的情况。这不影响接口的可用性。
 
 **起始版本：** 9
 
@@ -44,7 +45,7 @@ template: PluginComponentTemplate
 
 插件组件模板。
 
-**类型：** PluginComponentTemplate
+**类型：** [PluginComponentTemplate](../arkts-apis/arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
 
 **起始版本：** 9
 

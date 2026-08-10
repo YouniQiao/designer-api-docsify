@@ -1,6 +1,6 @@
 # CompressStrategy
 
-CompressStrategy作为[Options]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的一个属性，用于指定压缩时的压缩策略。
+CompressStrategy作为[Options](arkts-basicservices-zlib-options-i.md)的一个属性，用于指定压缩时的压缩策略。
 
 **起始版本：** 7
 

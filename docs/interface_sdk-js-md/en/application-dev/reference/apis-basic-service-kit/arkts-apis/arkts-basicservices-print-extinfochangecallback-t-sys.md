@@ -20,6 +20,6 @@ Defines the callback type used in registering to listen for extension change.The
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionId | string | Yes | the printer extension id  |
-| info | string | Yes | the information of printer  |
+| extensionId | string | Yes | the printer extension id |
+| info | string | Yes | the information of printer |
 

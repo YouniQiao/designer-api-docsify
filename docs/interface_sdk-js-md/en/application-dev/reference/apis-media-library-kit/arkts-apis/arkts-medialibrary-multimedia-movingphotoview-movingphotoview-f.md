@@ -25,12 +25,12 @@ Defines the MovingPhotoView component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MovingPhotoView option. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | container |
+| options | [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Yes | MovingPhotoView option. |
+| content_ | [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the movingPhotoView. |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) | The attribute of the movingPhotoView. |
 

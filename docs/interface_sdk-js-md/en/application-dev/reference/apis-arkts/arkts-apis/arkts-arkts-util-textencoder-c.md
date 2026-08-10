@@ -10,6 +10,12 @@ The TextEncoder interface represents a text encoder.The encoder takes the byte s
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
@@ -58,7 +64,7 @@ Create a TextEncoder object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) |  |
 
 ## encodeInto
 
@@ -115,7 +121,7 @@ Encode string, write the result to dest array.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters. |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters. |
 
 ## encoding
 

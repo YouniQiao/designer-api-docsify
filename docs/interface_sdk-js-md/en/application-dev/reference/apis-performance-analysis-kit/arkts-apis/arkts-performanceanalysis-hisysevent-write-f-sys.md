@@ -1,12 +1,18 @@
 # write (System API)
 
+## Modules to Import
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## write
 
 ```TypeScript
 function write(info: SysEventInfo): Promise<void>
 ```
 
-Writes event information to the event file. This API uses a promise to return the result.
+系统事件打点方法，接收[SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)类型的对象作为事件参数，使用promise方式作为异步回调。
 
 **Since:** 9
 
@@ -22,29 +28,29 @@ Writes event information to the event file. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | System event information. |
+| info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | Yes | 系统事件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise used to return the result. Depending on whether event writing is successful, you can use the **then()** or **catch()** method to process the callback. |
+| Promise&lt;void&gt; | Promise实例，可以在其then()、catch()方法中分别对系统事件写入成功、写入异常的回调进行处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 11200001 | Invalid event domain. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | 11200002 | Invalid event name. |
-| [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
-| [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) | The event length exceeds the limit. |
-| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
-| [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
-| [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
-| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
+| 11200003 | Abnormal environment. |
+| 11200051 | Invalid event parameter. |
+| 11200001 | Invalid event domain. |
+| 11200054 | The number of event parameters of the array type exceeds the limit. |
+| 11200004 | The event length exceeds the limit. |
+| 11200052 | The size of the event parameter of the string type exceeds the limit. |
+| 11200053 | The number of event parameters exceeds the limit. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
@@ -85,7 +91,7 @@ try {
 function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 ```
 
-Writes event information to the event file. This API uses an asynchronous callback to return the result.
+系统事件打点方法，接收[SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)类型的对象作为事件参数，使用callback方式作为异步回调。
 
 **Since:** 9
 
@@ -101,24 +107,24 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | System event information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to process the received return value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Value **0**: The event verification is successful, and the event will be written to the event file asynchronously. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- A value greater than **0**: Invalid parameters are present in the event, and the event will be written to the event file asynchronously after the invalid parameters are ignored. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- A value smaller than **0**: The event parameter verification fails, and the event will not be written to the event file. |
+| info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | Yes | 系统事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，可以在回调函数中处理接口返回值。 &lt;br/&gt;- 0表示事件校验成功，事件正常异步写入事件文件； &lt;br/&gt;- 正值表示事件打点存在异常，但可以正常写入； &lt;br/&gt;- 负值表示事件打点失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 11200001 | Invalid event domain. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | 11200002 | Invalid event name. |
-| [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
-| [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) | The event length exceeds the limit. |
-| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) | Invalid event parameter. |
-| [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
-| [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
-| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
+| 11200003 | Abnormal environment. |
+| 11200051 | Invalid event parameter. |
+| 11200001 | Invalid event domain. |
+| 11200054 | The number of event parameters of the array type exceeds the limit. |
+| 11200004 | The event length exceeds the limit. |
+| 11200052 | The size of the event parameter of the string type exceeds the limit. |
+| 11200053 | The number of event parameters exceeds the limit. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';

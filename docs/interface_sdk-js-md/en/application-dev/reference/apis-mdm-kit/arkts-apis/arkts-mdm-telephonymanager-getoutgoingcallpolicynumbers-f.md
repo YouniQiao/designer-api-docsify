@@ -1,12 +1,18 @@
 # getOutgoingCallPolicyNumbers
 
+## Modules to Import
+
+```TypeScript
+import { telephonyManager } from 'kits/@kit.MDMKit';
+```
+
 ## getOutgoingCallPolicyNumbers
 
 ```TypeScript
 function getOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy): Array<string>
 ```
 
-Obtains the trustlist or blocklist for outgoing calls.
+获取通话呼出的允许或禁用名单。
 
 **Since:** 20
 
@@ -24,44 +30,23 @@ Obtains the trustlist or blocklist for outgoing calls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| policy | adminManager.Policy | Yes | Policy for trustlist or blocklist. **BLOCK\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIST** indicates a blocklist, and **TRUST\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIST** indicates a trustlist. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| policy | adminManager.Policy | Yes | 允许或禁用名单策略。 BLOCK_LIST为禁用名单，TRUST_LIST为允许名单。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | An array of numbers in the outgoing call blocklist or trustlist. |
+| Array&lt;string&gt; | 通话呼出禁用或允许名单的号码数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-
-**Example**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(wantTemp, policy);
-  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
-} catch (err) {
-  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
 
 ## getOutgoingCallPolicyNumbers
@@ -70,7 +55,7 @@ try {
 function getOutgoingCallPolicyNumbers(admin: Want | null, policy: adminManager.Policy): Array<string>
 ```
 
-Obtains the trustlist or blocklist for outgoing calls.
+获取通话呼出的允许或禁用名单。
 
 **Since:** 26.0.0
 
@@ -88,21 +73,44 @@ Obtains the trustlist or blocklist for outgoing calls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
-| policy | adminManager.Policy | Yes | Policy for trustlist or blocklist. **BLOCK\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIST** indicates a blocklist, and **TRUST\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIST** indicates a trustlist. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| policy | adminManager.Policy | Yes | 允许或禁用名单策略。 BLOCK_LIST为禁用名单，TRUST_LIST为允许名单。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | An array of numbers in the outgoing call blocklist or trustlist. |
+| Array&lt;string&gt; | 通话呼出禁用或允许名单的号码数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { telephonyManager } from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace the values as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // Set the policy type to blocklist.
+  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
+  // Obtain the outgoing call blocklist.
+  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(wantTemp, policy);
+  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
+} catch (err) {
+  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
 

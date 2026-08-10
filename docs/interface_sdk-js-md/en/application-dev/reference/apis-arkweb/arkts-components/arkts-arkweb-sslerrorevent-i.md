@@ -16,7 +16,7 @@ Defines the ssl error event.
 certChainData?: Array<Uint8Array>
 ```
 
-Certificate chain data in DER format.
+证书链数据。
 
 **Type:** Array&lt;Uint8Array&gt;
 
@@ -34,9 +34,9 @@ Certificate chain data in DER format.
 error: SslError
 ```
 
-Error codes.
+错误码。
 
-**Type:** SslError
+**Type:** [SslError](arkts-arkweb-sslerror-e.md)
 
 **Since:** 12
 
@@ -54,9 +54,9 @@ Error codes.
 handler: SslErrorHandler
 ```
 
-Notifies the user of the operation behavior of the web component.
+通知Web组件用户操作行为。
 
-**Type:** SslErrorHandler
+**Type:** [SslErrorHandler](arkts-arkweb-sslerrorhandler-c.md)
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ Notifies the user of the operation behavior of the web component.
 isFatalError: boolean
 ```
 
-Whether the error is fatal.
+是否是致命错误。
 
 **Type:** boolean
 
@@ -94,7 +94,7 @@ Whether the error is fatal.
 isMainFrame: boolean
 ```
 
-Whether the request is main frame.
+是否是主资源。
 
 **Type:** boolean
 
@@ -114,7 +114,7 @@ Whether the request is main frame.
 originalUrl: string
 ```
 
-Original url.
+请求的原始url地址。
 
 **Type:** string
 
@@ -134,7 +134,7 @@ Original url.
 referrer: string
 ```
 
-Referrer.
+referrer url地址。
 
 **Type:** string
 
@@ -154,7 +154,7 @@ Referrer.
 url: string
 ```
 
-Request url.
+url地址。
 
 **Type:** string
 

@@ -1,5 +1,11 @@
 # getDirection
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## getDirection
 
 ```TypeScript
@@ -7,11 +13,12 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 ```
 
 根据旋转矩阵计算设备的方向，使用Callback异步方式返回结果。
-    **说明**：  
-    
-    从API version 8 开始支持，从API version 9 开始废弃，建议使用  
-    [sensor.getOrientation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation)
+> 替代。
 
 **起始版本：** 8
 
@@ -30,9 +37,9 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rotationMatrix | Array&lt;number&gt; | 是 | 表示旋转矩阵。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt; | 是 | 异步返回围绕z、x、y轴方向的旋转角度，单位度（°）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回围绕z、x、y轴方向的旋转角度，单位度（°）。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -58,10 +65,11 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 ```
 
 根据旋转矩阵计算设备的方向，使用Promise异步方式返回结果。
-    **说明**：  
-    
-    从API version 8 开始支持，从API version 9 开始废弃，建议使用  
-    [sensor.getOrientation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation)替代。
 
 **起始版本：** 8
 
@@ -87,7 +95,7 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 | --- | --- |
 | Promise&lt;Array&lt;number&gt;&gt; | 使用异步方式返回围绕z、x、y轴方向的旋转角度，单位度（°）。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

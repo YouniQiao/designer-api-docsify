@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Notification.Emitter
 
+## 导入模块
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## priority
 
 ```TypeScript
@@ -18,7 +24,7 @@ priority?: EventPriority
 
 事件的优先级，默认值为EventPriority.LOW。
 
-**类型：** EventPriority
+**类型：** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
 **起始版本：** 11
 

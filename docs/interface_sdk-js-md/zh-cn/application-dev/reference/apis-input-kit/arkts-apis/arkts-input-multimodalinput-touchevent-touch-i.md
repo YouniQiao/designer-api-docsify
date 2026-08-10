@@ -10,16 +10,22 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+```
+
 ## globalX
 
 ```TypeScript
 globalX?: int
 ```
 
-该触屏输入事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_作为入参时，若接口参数中的  
-[TouchEventData.useGlobalCoordinate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_作为出参时，由系统上报。
+该触屏输入事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
+[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -35,10 +41,10 @@ globalX?: int
 globalY?: int
 ```
 
-该触屏输入事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_作为入参时，若接口参数中的  
-[TouchEventData.useGlobalCoordinate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_作为出参时，由系统上报。
+该触屏输入事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
+[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -56,7 +62,7 @@ height: int
 
 触屏区域的高度，单位为像素（px）。当前仅支持整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -74,7 +80,7 @@ id: int
 
 触屏输入事件ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -92,7 +98,7 @@ pressedTime: long
 
 按下时间戳，表示系统启动运行至今逝去的微秒数，单位为微秒（μs）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -110,7 +116,7 @@ pressure: double
 
 压力值，取值范围是[0.0, 1.0]，0.0表示不支持。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -128,7 +134,7 @@ rawX: int
 
 输入设备上的X坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -146,7 +152,7 @@ rawY: int
 
 输入设备上的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -164,7 +170,7 @@ screenX: int
 
 该触屏输入事件以指定屏幕左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -182,7 +188,7 @@ screenY: int
 
 该触屏输入事件以指定屏幕左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -200,7 +206,7 @@ tiltX: int
 
 相对YZ平面的角度，单位为度，取值的范围[-90, 90]，其中正值是向右倾斜。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -218,7 +224,7 @@ tiltY: int
 
 相对XZ平面的角度，单位为度，取值的范围[-90, 90]，其中正值是向下倾斜。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -236,7 +242,7 @@ toolHeight: int
 
 工具区域高度，单位为像素（px）。当前仅支持整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -254,7 +260,7 @@ toolType: ToolType
 
 工具类型。
 
-**类型：** ToolType
+**类型：** [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md)
 
 **起始版本：** 9
 
@@ -272,7 +278,7 @@ toolWidth: int
 
 工具区域宽度，单位为像素（px）。当前仅支持整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -290,7 +296,7 @@ toolX: int
 
 工具区域的中心点以指定屏幕左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -308,7 +314,7 @@ toolY: int
 
 工具区域的中心点以指定屏幕左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -326,7 +332,7 @@ width: int
 
 触屏区域的宽度，单位为像素（px）。当前仅支持整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -344,7 +350,7 @@ windowX: int
 
 触屏所在窗口左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -362,7 +368,7 @@ windowY: int
 
 触屏所在窗口左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

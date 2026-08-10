@@ -1,7 +1,6 @@
 # OnContinueResult
 
-Enumerates the ability continuation results. You can use it in  
-[onContinue()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the UIAbility to complete different operations.
+Ability迁移结果，该类型为枚举，可配合UIAbility的[onContinue()](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)方法完成相应的返回。
 
 **Since:** 9
 
@@ -17,7 +16,7 @@ Enumerates the ability continuation results. You can use it in
 AGREE = 0
 ```
 
-The ability continuation is accepted.
+表示同意。
 
 **Since:** 9
 
@@ -37,8 +36,7 @@ The ability continuation is accepted.
 REJECT = 1
 ```
 
-The ability continuation is rejected. If the application is abnormal in  
-[onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which results in abnormal display during data restoration, this result is returned.
+表示拒绝：如应用在[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)中异常会导致迁移以后数据恢复时显示异常，则可以返回REJECT。
 
 **Since:** 9
 
@@ -58,7 +56,7 @@ The ability continuation is rejected. If the application is abnormal in
 MISMATCH = 2
 ```
 
-The version does not match. The application on the initiator can obtain the version of the target application from [onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. If the ability continuation cannot be performed due to version mismatch, this result is returned.
+表示版本不匹配：迁移发起端应用可以在[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)中获取到迁移目标端应用的版本号，进行协商后，如果版本不匹配导致无法迁移，可以返回该结果。
 
 **Since:** 9
 

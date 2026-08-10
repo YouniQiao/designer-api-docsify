@@ -14,17 +14,23 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## eventId
 
 ```TypeScript
 eventId: EventId
 ```
 
-事件ID，用于标识具体的升级事件类型。通过eventId可判断当前发生的具体事件(如EVENT\_DOWNLOAD\_START表示开始下载、EVENT\_UPGRADE\_SUCCESS表示升级成功等)，从而采取相应处理。
+事件ID，用于标识具体的升级事件类型。通过eventId可判断当前发生的具体事件(如EVENT_DOWNLOAD_START表示开始下载、EVENT_UPGRADE_SUCCESS表示升级成功等)，从而采取相应处理。
 
-常见事件类型包括下载事件(EVENT\_DOWNLOAD\_START等)、升级事件(EVENT\_UPGRADE\_START等)、完成事件(EVENT\_UPGRADE\_SUCCESS、EVENT\_UPGRADE\_FAIL)。建议在事件回调中根据eventId执行不同的业务逻辑。
+常见事件类型包括下载事件(EVENT_DOWNLOAD_START等)、升级事件(EVENT_UPGRADE_START等)、完成事件(EVENT_UPGRADE_SUCCESS、EVENT_UPGRADE_FAIL)。建议在事件回调中根据eventId执行不同的业务逻辑。
 
-**类型：** EventId
+**类型：** [EventId](arkts-basicservices-update-eventid-e-sys.md)
 
 **起始版本：** 9
 
@@ -44,7 +50,7 @@ taskBody: TaskBody
 
 任务数据。
 
-**类型：** TaskBody
+**类型：** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
 **起始版本：** 9
 

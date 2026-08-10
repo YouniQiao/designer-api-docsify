@@ -1,5 +1,11 @@
 # stopBluetoothSearch
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## stopBluetoothSearch
 
 ```TypeScript
@@ -24,12 +30,12 @@ Stop Bluetooth scanning and searching.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BluetoothScanResult&gt; | No | Callback used to return \_\_\_ESCAPED\_DOLLAR\_\_\_{BluetoothScanResult}. It should be the same as the callback passed to \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.startBluetoothSearch}. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothScanResult&gt; | No | Callback used to return \\${BluetoothScanResult}. It should be the same as the callback passed to \\${geoLocationManager.startBluetoothSearch}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.stopBluetoothSearch} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.stopBluetoothSearch} due to limited device capabilities. |
+| 3301000 | The location service is unavailable. |
 

@@ -1,6 +1,6 @@
 # ContentForm
 
-Represents data of the content widget type.
+内容卡片类型数据，用于跨应用共享内容卡片信息。典型使用场景包括：资讯应用分享文章卡片、电商应用分享商品卡片、社交应用分享内容预览等。
 
 **Since:** 14
 
@@ -10,13 +10,19 @@ Represents data of the content widget type.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## appIcon
 
 ```TypeScript
 appIcon?: Uint8Array
 ```
 
-Application icon data in the content widget.
+内容卡片中的应用图标数据。默认值为空。
 
 **Type:** Uint8Array
 
@@ -36,7 +42,7 @@ Application icon data in the content widget.
 appName?: string
 ```
 
-Application name in the content widget.
+内容卡片中应用的应用名。默认值为空字符串。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Application name in the content widget.
 description?: string
 ```
 
-Description of the content widget.
+内容卡片中的描述信息。默认值为空字符串。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ Description of the content widget.
 linkUri?: string
 ```
 
-Hyperlink in the content widget.
+内容卡片对应的跳转超链接，需符合URI格式规范。默认值为空字符串。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ Hyperlink in the content widget.
 thumbData?: Uint8Array
 ```
 
-Image data in the content widget.
+内容卡片对应的图片数据。默认值为空。
 
 **Type:** Uint8Array
 
@@ -116,7 +122,7 @@ Image data in the content widget.
 title: string
 ```
 
-Title of the content widget.
+内容卡片的标题。
 
 **Type:** string
 
@@ -136,7 +142,7 @@ Title of the content widget.
 readonly uniformDataType: 'general.content-form'
 ```
 
-Uniform data type, which has a fixed value of **general.content-form**.
+统一数据类型标识为内容卡片类型数据，固定为“general.content-form”。
 
 **Type:** 'general.content-form'
 

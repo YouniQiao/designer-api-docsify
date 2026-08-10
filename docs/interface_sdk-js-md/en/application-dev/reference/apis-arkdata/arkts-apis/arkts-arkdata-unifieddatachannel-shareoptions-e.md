@@ -1,6 +1,6 @@
 # ShareOptions
 
-Enumerates the options for using **UnifiedData** in a device.
+UDMF支持的设备内使用范围类型枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the options for using **UnifiedData** in a device.
 IN_APP = 0
 ```
 
-UnifiedData** can be used only in the same application of a device.
+表示允许在本设备同应用内使用。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ UnifiedData** can be used only in the same application of a device.
 CROSS_APP = 1
 ```
 
-UnifiedData** can be used across applications of a device.
+表示允许在本设备内跨应用使用。
 
 **Since:** 12
 

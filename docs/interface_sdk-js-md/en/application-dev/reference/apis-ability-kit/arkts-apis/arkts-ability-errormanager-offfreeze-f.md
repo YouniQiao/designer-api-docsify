@@ -1,12 +1,18 @@
 # offFreeze
 
+## Modules to Import
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offFreeze
 
 ```TypeScript
 function offFreeze(observer?: FreezeObserver): void
 ```
 
-Unregister the observer for freeze event.This function can only be called from main thread.
+注销冻屏事件观测器。此函数只能在主线程中调用。
 
 **Since:** 24
 
@@ -20,13 +26,13 @@ Unregister the observer for freeze event.This function can only be called from m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The freeze event observer. |
+| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | 冻屏事件观测器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
-| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist. |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 调用者无效。 |
+| 16300004 | 观测器不存在。 |
 

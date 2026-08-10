@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -49,7 +55,7 @@
 | [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getuserstoragestats-2) | 异步获取指定用户各类别存储空间大小（单位为Byte），以Promise方式返回。 |
 | [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getuserstoragestats-3) | 异步获取指定用户各类别存储空间大小（单位为Byte），以callback方式返回。 |
 | [listUserdataDirInfo](arkts-corefile-storagestatistics-listuserdatadirinfo-f-sys.md#listuserdatadirinfo) | 查询用户设备中/data目录下的空间占用详情，使用Promise异步回调。 |
-| [setExtBundleStats](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md#setextbundlestats) | 系统应用或系统服务上报自身的空间占用信息。使用Promise异步回调。  **说明**：     入参stats中的flag为false时，businessName必须为某个应用的包名。 |
+| [setExtBundleStats](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md#setextbundlestats) | 系统应用或系统服务上报自身的空间占用信息。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 接口

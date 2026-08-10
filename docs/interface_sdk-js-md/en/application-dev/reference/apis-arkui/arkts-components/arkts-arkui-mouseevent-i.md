@@ -1,8 +1,8 @@
 # MouseEvent
 
-Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**Inheritance/Implementation:** MouseEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-Gets the coordinates of the top-left corner of the current component based on its real-time position.
+获取点击位置相对于当前组件实时位置的左上角坐标。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  return the coordinates of the top-left corner of the current component based on its real-time position. |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHistoricalPoints
 
@@ -44,10 +44,9 @@ Gets the coordinates of the top-left corner of the current component based on it
 getHistoricalPoints?(): Array<MouseHistoricalPoint>
 ```
 
-Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects.
+获取当前帧的所有历史点信息。历史点可用于实现更平滑的绘制效果。
 
-This API can only be called from [MouseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain information about historical points of the current frame when [onMouse]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of  
-[MouseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, and the remaining points are treated as historical points.
+该接口仅能在[MouseEvent](arkts-arkui-mouseevent-i.md)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](arkts-arkui-mouseevent-i.md)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse)返回，其余点作为历史点。
 
 **Since:** 26.0.0
 
@@ -65,7 +64,7 @@ This API can only be called from [MouseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 
 | Type | Description |
 | --- | --- |
-| Array&lt;MouseHistoricalPoint&gt; | Array of all historical point information for the current frame. |
+| Array&lt;MouseHistoricalPoint&gt; | 当前帧的所有历史点信息组成的数组。 |
 
 ## stopPropagation
 
@@ -73,7 +72,7 @@ This API can only be called from [MouseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 stopPropagation: () => void
 ```
 
-Disables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
 **Since:** 8
 
@@ -91,9 +90,9 @@ Disables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
 action: MouseAction
 ```
 
-Mouse action.
+鼠标动作。
 
-**Type:** MouseAction
+**Type:** [MouseAction](../arkts-apis/arkts-arkui-mouseaction-e.md)
 
 **Since:** 8
 
@@ -111,9 +110,9 @@ Mouse action.
 button: MouseButton
 ```
 
-Mouse button.
+鼠标按键。
 
-**Type:** MouseButton
+**Type:** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)
 
 **Since:** 8
 
@@ -131,9 +130,9 @@ Mouse button.
 displayX: number
 ```
 
-X coordinate of the mouse position in the coordinate system of the current screen window.
+鼠标位置在当前应用屏幕坐标系中的X坐标。
 
-Unit: vp.
+单位：vp
 
 **Type:** number
 
@@ -155,9 +154,9 @@ Unit: vp.
 displayY: number
 ```
 
-Y coordinate of the mouse position in the coordinate system of the current screen window.
+鼠标位置在当前应用屏幕坐标系中的Y坐标。
 
-Unit: vp.
+单位：vp
 
 **Type:** number
 
@@ -179,16 +178,13 @@ Unit: vp.
 eventHandleId?: number
 ```
 
-Unique identifier for event processing.
+用于事件处理的唯一标识。
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
-**NOTE**
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
-This field is used when dispatching events using the  
-[postInputEventWithStrategy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API. Each time an event is dispatched, this field is increased by 100000.
-
-Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
 **Type:** number
 
@@ -210,12 +206,11 @@ Using the same **eventHandleId** for multiple event dispatches will cause abnorm
 globalDisplayX?: number
 ```
 
-X coordinate of the mouse position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
-Unit: vp.
+单位：vp
 
-Value range: (-∞, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -237,12 +232,11 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the mouse position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+鼠标光标在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
 
-Unit: vp.
+单位：vp
 
-Value range: (-∞, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -264,9 +258,9 @@ Value range: (-∞, +∞).
 pressedButtons?: MouseButton[]
 ```
 
-Set of buttons being pressed.
+当前按下的鼠标按键集合。
 
-**Type:** MouseButton[]
+**Type:** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)[]
 
 **Since:** 15
 
@@ -286,11 +280,9 @@ Set of buttons being pressed.
 rawDeltaX?: number
 ```
 
-Movement increment of the mouse along the X axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world.The reported value is determined by the hardware, not the physical or logical pixels of the screen.
+鼠标设备在二维平面X轴的移动增量。其数值为鼠标硬件的原始移动数据，使用物理世界中鼠标移动的距离单位进行表示。上报数值由硬件本身决定，并非屏幕的物理/逻辑像素。
 
-**NOTE**
-
-Before API version 26.0.0, the return value of **rawDeltaX** was not the original movement data of the mouse hardware, but the original data reduced by a factor of X, where X is the system's display size ratio. Since API version 26.0.0, the return value of **rawDeltaX** is the original movement data of the mouse hardware.
+**说明：** API版本26.0.0之前，rawDeltaX的返回值并非鼠标硬件的原始移动数据，而是原始数据缩小了X倍，X为系统的显示大小比例。API版本26.0.0开始，rawDeltaX的返回值为鼠标硬件的原始移动数据。
 
 **Type:** number
 
@@ -312,11 +304,9 @@ Before API version 26.0.0, the return value of **rawDeltaX** was not the origina
 rawDeltaY?: number
 ```
 
-Movement increment of the mouse along the Y axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world.The reported value is determined by the hardware, not the physical or logical pixels of the screen.
+鼠标设备在二维平面Y轴的移动增量。其数值为鼠标硬件的原始移动数据，使用物理世界中鼠标移动的距离单位进行表示。上报数值由硬件本身决定，并非屏幕的物理/逻辑像素。
 
-**NOTE**
-
-Before API version 26.0.0, the return value of **rawDeltaY** was not the original movement data of the mouse hardware, but the original data reduced by a factor of X, where X is the system's display size ratio. Since API version 26.0.0, the return value of **rawDeltaY** is the original movement data of the mouse hardware.
+**说明：** API版本26.0.0之前，rawDeltaY的返回值并非鼠标硬件的原始移动数据，而是原始数据缩小了X倍，X为系统的显示大小比例。API版本26.0.0开始，rawDeltaY的返回值为鼠标硬件的原始移动数据。
 
 **Type:** number
 
@@ -338,12 +328,9 @@ Before API version 26.0.0, the return value of **rawDeltaY** was not the origina
 screenX: number
 ```
 
-X coordinate of the mouse position in the coordinate system of the current application window.
+鼠标位置在当前应用窗口坐标系中的X坐标。
 
-Unit: vp.
-
-Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use  
-**windowX** instead.
+单位：vp
 
 **Type:** number
 
@@ -353,7 +340,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [MouseEvent#windowX](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-mouseevent-i.md#windowx)
+**Substitutes:** [MouseEvent#windowX](arkts-arkui-mouseevent-i.md#windowx)
 
 <!--Device-MouseEvent-screenX: number--><!--Device-MouseEvent-screenX: number-End-->
 
@@ -365,12 +352,9 @@ Note: This API is supported since API version 8 and deprecated since API version
 screenY: number
 ```
 
-Y coordinate of the mouse position in the coordinate system of the current application window.
+鼠标位置在当前应用窗口坐标系中的Y坐标。
 
-Unit: vp.
-
-Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use  
-**windowY** instead.
+单位：vp
 
 **Type:** number
 
@@ -380,7 +364,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [MouseEvent#windowY](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-mouseevent-i.md#windowy)
+**Substitutes:** [MouseEvent#windowY](arkts-arkui-mouseevent-i.md#windowy)
 
 <!--Device-MouseEvent-screenY: number--><!--Device-MouseEvent-screenY: number-End-->
 
@@ -392,9 +376,9 @@ Note: This API is supported since API version 8 and deprecated since API version
 windowX: number
 ```
 
-X coordinate of the mouse position in the coordinate system of the current application window.
+鼠标位置在当前应用窗口坐标系中的X坐标。
 
-Unit: vp.
+单位：vp
 
 **Type:** number
 
@@ -416,9 +400,9 @@ Unit: vp.
 windowY: number
 ```
 
-Y coordinate of the mouse position in the coordinate system of the current application window.
+鼠标位置在当前应用窗口坐标系中的Y坐标。
 
-Unit: vp.
+单位：vp
 
 **Type:** number
 
@@ -440,10 +424,9 @@ Unit: vp.
 x: number
 ```
 
-X coordinate of the mouse point in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ based on the event-responsive component.
+鼠标位置在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
 
-Unit: vp.
+单位：vp
 
 **Type:** number
 
@@ -463,10 +446,9 @@ Unit: vp.
 y: number
 ```
 
-Y coordinate of the mouse point in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ based on the event-responsive component.
+鼠标位置在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
 
-Unit: vp.
+单位：vp
 
 **Type:** number
 

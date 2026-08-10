@@ -1,6 +1,6 @@
 # ActionButtonType
 
-Enumerates the button types.
+按钮的类型。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Enumerates the button types.
 ACTION_BUTTON_TYPE_CLOSE = 0
 ```
 
-Button for closing the reminder.
+表示关闭提醒的按钮。
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ Button for closing the reminder.
 ACTION_BUTTON_TYPE_SNOOZE = 1
 ```
 
-Button for snoozing the reminder.
+表示延迟提醒的按钮。
 
 **Since:** 7
 

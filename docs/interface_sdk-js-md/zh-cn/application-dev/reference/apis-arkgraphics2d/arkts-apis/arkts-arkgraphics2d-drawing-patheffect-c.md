@@ -1,13 +1,14 @@
 # PathEffect
 
-路径效果对象，用于创建多种路径效果，包括虚线、圆角、离散、叠加和组合路径效果等。可通过[Pen.setPathEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_将其应用到画笔上，从而在绘制路径时改变路径的渲染样式。
-    **说明：**  
-    
-    - 本Class首批接口从API version 12开始支持。  
-    
-    - 本模块使用屏幕物理像素单位px。  
-    
-    - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+路径效果对象，用于创建多种路径效果，包括虚线、圆角、离散、叠加和组合路径效果等。可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上，从而在绘制路径时改变路径的渲染样式。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 12
 
@@ -16,6 +17,12 @@
 <!--Device-drawing-class PathEffect--><!--Device-drawing-class PathEffect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## createComposePathEffect
 
@@ -37,14 +44,14 @@ static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 组合路径效果中的外部路径效果，在内部路径效果应用之后进行叠加处理，决定最终呈现的叠加效果。 |
-| inner | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 组合路径效果中的内部路径效果，首先应用于原始路径，作为第一层效果处理，随后再由外部路径效果进行叠加。 |
+| outer | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 是 | 组合路径效果中的外部路径效果，在内部路径效果应用之后进行叠加处理，决定最终呈现的叠加效果。 |
+| inner | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 是 | 组合路径效果中的内部路径效果，首先应用于原始路径，作为第一层效果处理，随后再由外部路径效果进行叠加。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的组合路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的组合路径效果对象，可通过[Pen.setPathEffect]{ |
 
 ## createComposePathEffect
 
@@ -66,14 +73,14 @@ static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 组合路径效果中的外部路径效果，在内部路径效果应用之后进行叠加处理，决定最终呈现的叠加效果。 |
-| inner | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 组合路径效果中的内部路径效果，首先应用于原始路径，作为第一层效果处理，随后再由外部路径效果进行叠加。 |
+| outer | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 是 | 组合路径效果中的外部路径效果，在内部路径效果应用之后进行叠加处理，决定最终呈现的叠加效果。 |
+| inner | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 是 | 组合路径效果中的内部路径效果，首先应用于原始路径，作为第一层效果处理，随后再由外部路径效果进行叠加。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的组合路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的组合路径效果对象，可通过[Pen.setPathEffect]{ |
 
 ## createCornerPathEffect
 
@@ -101,13 +108,13 @@ static createCornerPathEffect(radius: number): PathEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的圆角路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的圆角路径效果对象，可通过[Pen.setPathEffect]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createCornerPathEffect
 
@@ -135,13 +142,13 @@ static createCornerPathEffect(radius: double): PathEffect | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的圆角路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的圆角路径效果对象，可通过[Pen.setPathEffect]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createDashPathEffect
 
@@ -150,7 +157,7 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 ```
 
 创建将路径变为虚线的路径效果对象，通过指定ON/OFF长度数组生成规则间距的虚线。当需要自定义形状作为虚线段填充时，可使用  
-[createPathDashEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[createPathDashEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createpathdasheffect)。
 
 **起始版本：** 12
 
@@ -171,13 +178,13 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createDashPathEffect
 
@@ -186,7 +193,7 @@ static createDashPathEffect(intervals: Array<double>, phase: double): PathEffect
 ```
 
 创建将路径变为虚线的路径效果对象，通过指定ON/OFF长度数组生成规则间距的虚线。当需要自定义形状作为虚线段填充时，可使用  
-[createPathDashEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[createPathDashEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createpathdasheffect)。
 
 **起始版本：** 23
 
@@ -207,13 +214,13 @@ static createDashPathEffect(intervals: Array<double>, phase: double): PathEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createDiscretePathEffect
 
@@ -243,7 +250,7 @@ static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: num
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的离散路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的离散路径效果对象，可通过[Pen.setPathEffect]{ |
 
 ## createDiscretePathEffect
 
@@ -273,7 +280,7 @@ static createDiscretePathEffect(segLength: double, dev: double, seedAssist?: int
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的离散路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的离散路径效果对象，可通过[Pen.setPathEffect]{ |
 
 ## createPathDashEffect
 
@@ -282,7 +289,7 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 ```
 
 创建一个虚线路径效果对象，通过路径描述的形状生成。与  
-[createDashPathEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
+[createDashPathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createdashpatheffect)使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
 
 **起始版本：** 18
 
@@ -296,22 +303,22 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
 | advance | number | 是 | 虚线段的步长，取值范围>0，否则会抛错误码。单位为物理像素px。 |
 | phase | number | 是 | 表示虚线段内图形在虚线步长范围内的偏移量，该参数为浮点数，效果为先对偏移量取绝对值，然后对步长取模。单位为物理像素px。 |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定虚线效果的样式，决定虚线段图形在路径上的变换方式。 |
+| style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 是 | 指定虚线效果的样式，决定虚线段图形在路径上的变换方式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createPathDashEffect
 
@@ -321,7 +328,7 @@ static createPathDashEffect(path: Path, advance: double, phase: double,
 ```
 
 创建一个虚线路径效果对象，通过路径描述的形状生成。与  
-[createDashPathEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
+[createDashPathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createdashpatheffect)使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
 
 **起始版本：** 23
 
@@ -335,22 +342,22 @@ static createPathDashEffect(path: Path, advance: double, phase: double,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
 | advance | double | 是 | 虚线段的步长，取值范围>0，否则会抛错误码。单位为物理像素px。 |
 | phase | double | 是 | 表示虚线段内图形在虚线步长范围内的偏移量，该参数为浮点数，效果为先对偏移量取绝对值，然后对步长取模。单位为物理像素px。 |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定虚线效果的样式，决定虚线段图形在路径上的变换方式。 |
+| style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 是 | 指定虚线效果的样式，决定虚线段图形在路径上的变换方式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSumPathEffect
 
@@ -359,7 +366,7 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 ```
 
 创建一个叠加的路径效果。与  
-[createComposePathEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
+[createComposePathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createcomposepatheffect)不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
 
 **起始版本：** 18
 
@@ -373,14 +380,14 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| firstPathEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示第一个路径效果。 |
-| secondPathEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示第二个路径效果。 |
+| firstPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 是 | 表示第一个路径效果。 |
+| secondPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 是 | 表示第二个路径效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的叠加路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的叠加路径效果对象，可通过[Pen.setPathEffect]{ |
 
 ## createSumPathEffect
 
@@ -389,7 +396,7 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 ```
 
 创建一个叠加的路径效果。与  
-[createComposePathEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
+[createComposePathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createcomposepatheffect)不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
 
 **起始版本：** 23
 
@@ -403,12 +410,12 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| firstPathEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示第一个路径效果。 |
-| secondPathEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示第二个路径效果。 |
+| firstPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 是 | 表示第一个路径效果。 |
+| secondPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 是 | 表示第二个路径效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的叠加路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的叠加路径效果对象，可通过[Pen.setPathEffect]{ |
 

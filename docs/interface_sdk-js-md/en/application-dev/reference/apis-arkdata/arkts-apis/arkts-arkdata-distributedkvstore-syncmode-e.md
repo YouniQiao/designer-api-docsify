@@ -1,6 +1,6 @@
 # SyncMode
 
-Enumerates the sync modes.
+同步模式枚举。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the sync modes.
 PULL_ONLY
 ```
 
-Indicates that data is only pulled from the remote end.
+表示只能从远端拉取数据到本端。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Indicates that data is only pulled from the remote end.
 PUSH_ONLY
 ```
 
-Indicates that data is only pushed from the local end.
+表示只能从本端推送数据到远端。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Indicates that data is only pushed from the local end.
 PUSH_PULL
 ```
 
-Indicates that data is pushed from the local end, and then pulled from the remote end.
+表示从本端推送数据到远端，然后从远端拉取数据到本端。
 
 **Since:** 9
 

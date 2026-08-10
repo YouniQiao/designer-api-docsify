@@ -1,5 +1,11 @@
 # constructTCPSocketInstance
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## constructTCPSocketInstance
 
 ```TypeScript
@@ -20,9 +26,9 @@ Creates a TCPSocket object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the TCPSocket of the constructTCPSocketInstance. |
+| [TCPSocket](arkts-network-socket-tcpsocket-i.md) | the TCPSocket of the constructTCPSocketInstance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

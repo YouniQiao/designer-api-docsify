@@ -1,5 +1,11 @@
 # sendIntentResult
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentProvider } from 'kits/@kit.AbilityKit';
+```
+
 ## sendIntentResult
 
 ```TypeScript
@@ -31,16 +37,16 @@ Send intent result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000003 | The specified ID does not exist. |
 
-**Example**
+## Examples
 
 Below is an example of setting the return mode of the intent execution result to FUNCTION.
 
@@ -200,12 +206,12 @@ Send intent result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000003 | The specified ID does not exist. |
 

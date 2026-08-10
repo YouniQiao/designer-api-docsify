@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## angle
 
 ```TypeScript
@@ -20,7 +26,7 @@ angle: double
 
 转动角度。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.0.0
 
@@ -40,7 +46,7 @@ mode?: MarchingMode
 
 行进方式。
 
-**类型：** MarchingMode
+**类型：** [MarchingMode](arkts-mechanic-mechanicmanager-marchingmode-e-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -60,7 +66,7 @@ speed: int
 
 转动或移动速度。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

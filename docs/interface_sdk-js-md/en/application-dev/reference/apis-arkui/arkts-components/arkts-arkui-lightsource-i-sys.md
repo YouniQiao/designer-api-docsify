@@ -1,6 +1,6 @@
 # LightSource (System API)
 
-Each component allows for one light source.
+一个组件支持添加1个光源。
 
 **Since:** 11
 
@@ -18,11 +18,11 @@ Each component allows for one light source.
 color?: ResourceColor
 ```
 
-Light source color.
+光源颜色。
 
-Default value: **Color.White
+默认值：Color.White
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ Default value: **Color.White
 intensity: number
 ```
 
-Intensity of the light source. The recommended value range is 0-1. When the intensity is **0**, the light source does not emit light.
+光源强度，建议取值范围0-1。当光源强度为0时，光源不发光。
 
 **Type:** number
 
@@ -64,9 +64,9 @@ Intensity of the light source. The recommended value range is 0-1. When the inte
 positionX: Dimension
 ```
 
-X-coordinate of the light source relative to the current component.
+光源相对于当前组件的X坐标。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 11
 
@@ -86,9 +86,9 @@ X-coordinate of the light source relative to the current component.
 positionY: Dimension
 ```
 
-Y-coordinate of the light source relative to the current component.
+光源相对于当前组件的Y坐标。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 11
 
@@ -108,9 +108,9 @@ Y-coordinate of the light source relative to the current component.
 positionZ: Dimension
 ```
 
-Height of the light source. The higher the light source, the broader the light distribution.
+光源高度。光源越高，照射范围越大。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 11
 

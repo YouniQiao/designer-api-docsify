@@ -4,7 +4,7 @@
 export type NotificationSystemLiveViewContent = _NotificationSystemLiveViewContent
 ```
 
-Describes the system live view notification.
+系统实况窗通知内容。
 
 **Since:** 11
 

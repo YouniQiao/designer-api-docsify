@@ -1,5 +1,11 @@
 # isMediaKeySystemSupported
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## isMediaKeySystemSupported
 
 ```TypeScript
@@ -24,7 +30,7 @@ Judge whether a system that specifies name, mimetype and content protection leve
 | --- | --- | --- | --- |
 | name | string | Yes | Used to point a Digital Right Management solution. |
 | mimeType | string | Yes | Used to specifies the media type. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Used to specifies the ContentProtectionLevel. |
+| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Yes | Used to specifies the ContentProtectionLevel. |
 
 **Return value:**
 
@@ -36,23 +42,17 @@ Judge whether a system that specifies name, mimetype and content protection leve
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  let supported: boolean = drm.isMediaKeySystemSupported("com.clearplay.drm", "video/avc", drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
-  console.info("isMediaKeySystemSupported: ", supported);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`isMediaKeySystemSupported ERROR: ${error}`);
-}
+let supported: boolean = drm.isMediaKeySystemSupported('com.clearplay.drm', 'video/avc', drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
+console.info("isMediaKeySystemSupported: ", supported);
 ```
 
 
@@ -91,23 +91,17 @@ Judge whether a system that specifies name, mimetype is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  let supported: boolean = drm.isMediaKeySystemSupported("com.clearplay.drm", "video/avc");
-  console.info("isMediaKeySystemSupported: ", supported);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`isMediaKeySystemSupported ERROR: ${error}`);
-}
+let supported: boolean = drm.isMediaKeySystemSupported('com.clearplay.drm', 'video/avc');
+console.info("isMediaKeySystemSupported: ", supported);
 ```
 
 
@@ -145,22 +139,16 @@ Judge whether a system that specifies name is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param name's length is zero or too big(exceeds 4096 Bytes). |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param name's length is zero or too big(exceeds 4096 Bytes). |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  let supported: boolean = drm.isMediaKeySystemSupported("com.clearplay.drm");
-  console.info("isMediaKeySystemSupported: ", supported);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`isMediaKeySystemSupported ERROR: ${error}`);
-}
+let supported: boolean = drm.isMediaKeySystemSupported('com.clearplay.drm');
+console.info("isMediaKeySystemSupported: ", supported);
 ```
 

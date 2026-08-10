@@ -10,6 +10,12 @@ Wi-Fi connection information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## band
 
 ```TypeScript
@@ -18,7 +24,7 @@ band: int
 
 The frequency band of a Wi-Fi access point.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,7 +62,7 @@ channelWidth: WifiChannelWidth
 
 Channel width of the connected hotspot.
 
-**Type:** WifiChannelWidth
+**Type:** [WifiChannelWidth](arkts-connectivity-wifimanager-wifichannelwidth-e.md)
 
 **Since:** 10
 
@@ -74,7 +80,7 @@ connState: ConnState
 
 The state of this Wi-Fi connection.
 
-**Type:** ConnState
+**Type:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
 
 **Since:** 9
 
@@ -92,7 +98,7 @@ frequency: int
 
 The frequency of a Wi-Fi access point.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -112,7 +118,7 @@ ipAddress: int
 
 The IP address of this Wi-Fi connection.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -184,7 +190,7 @@ linkSpeed: int
 
 The speed of a Wi-Fi access point.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -220,7 +226,7 @@ macType: int
 
 Type of macAddress: 0 - real mac, 1 - random mac.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -238,7 +244,7 @@ maxSupportedRxLinkSpeed: int
 
 Max rx speed of a Wi-Fi access point.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -256,7 +262,7 @@ maxSupportedTxLinkSpeed: int
 
 Max tx speed of a Wi-Fi access point.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -274,7 +280,7 @@ rssi: int
 
 The RSSI(dBm) of a Wi-Fi access point.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -294,7 +300,7 @@ rxLinkSpeed: int
 
 The rx speed of a Wi-Fi access point.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -332,7 +338,7 @@ supportedWifiCategory: WifiCategory
 
 Supported wifi category
 
-**Type:** WifiCategory
+**Type:** [WifiCategory](arkts-connectivity-wifimanager-wificategory-e.md)
 
 **Since:** 12
 
@@ -350,7 +356,7 @@ wifiLinkType?: WifiLinkType
 
 Wi-Fi link type
 
-**Type:** WifiLinkType
+**Type:** [WifiLinkType](arkts-connectivity-wifimanager-wifilinktype-e.md)
 
 **Since:** 18
 
@@ -368,7 +374,7 @@ wifiStandard: WifiStandard
 
 Wifi standard of current connection.
 
-**Type:** WifiStandard
+**Type:** [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md)
 
 **Since:** 10
 

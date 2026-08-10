@@ -1,5 +1,11 @@
 # queryAppUsagePriorityGroup
 
+## Modules to Import
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## queryAppUsagePriorityGroup
 
 ```TypeScript
@@ -24,12 +30,13 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 
 bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
   if(err) {
@@ -67,10 +74,11 @@ The priority defined in a priority group restricts the resource usage of an appl
 | --- | --- |
 | Promise&lt;number&gt; | the promise returned by queryAppUsagePriorityGroup. Returns the app group of the calling application. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 
 bundleState.queryAppUsagePriorityGroup().then((res: number) => {
   console.info('BUNDLE_ACTIVE QueryPackageGroup promise succeeded. result: ' + JSON.stringify(res));

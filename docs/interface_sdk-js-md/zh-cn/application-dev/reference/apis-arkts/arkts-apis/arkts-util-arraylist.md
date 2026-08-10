@@ -10,6 +10,12 @@ ArrayList是一种线性数据结构，底层基于数组实现，解决了固�
  > - 容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
 
+## 导入模块
+
+```TypeScript
+import { ArrayList } from 'kits/@kit.ArkTS';
+```
+
 ## 汇总
 
 ### 类

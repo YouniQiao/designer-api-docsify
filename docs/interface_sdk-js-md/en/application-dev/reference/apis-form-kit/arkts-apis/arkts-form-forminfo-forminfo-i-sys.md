@@ -10,6 +10,12 @@ Provides information about a form.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## enableBlurBackground
 
 ```TypeScript
@@ -38,7 +44,7 @@ readonly funInteractionParams?: FunInteractionParams
 
 Indicates the fun interaction form params
 
-**Type:** FunInteractionParams
+**Type:** [FunInteractionParams](arkts-form-forminfo-funinteractionparams-i-sys.md)
 
 **Since:** 20
 
@@ -76,7 +82,7 @@ Obtains the group id of the form.
 isFontScaleFollowSystem?: boolean
 ```
 
-Obtains whether the font scaling factor follows system settings.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:The default value is true.
+Obtains whether the font scaling factor follows system settings.&lt;br&gt;Default value:The default value is true.
 
 **Type:** boolean
 
@@ -184,9 +190,9 @@ Obtains whether the form is template form.
 readonly previewImages?: Array<int>
 ```
 
-Indicates the form previewImage IDs map corresponds to the \"supportDimensions\". The maximum length is +∞,positive integer.
+Indicates the form previewImage IDs map corresponds to the \"supportDimensions\". The maximum length is +∞, positive integer.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 18
 
@@ -208,7 +214,7 @@ readonly renderingMode?: RenderingMode
 
 Obtains the rendering mode of the form.
 
-**Type:** RenderingMode
+**Type:** [RenderingMode](arkts-form-forminfo-renderingmode-e-sys.md)
 
 **Since:** 18
 
@@ -248,7 +254,7 @@ readonly sceneAnimationParams?: SceneAnimationParams
 
 Indicates the scene animation form params
 
-**Type:** SceneAnimationParams
+**Type:** [SceneAnimationParams](arkts-form-forminfo-sceneanimationparams-i-sys.md)
 
 **Since:** 20
 

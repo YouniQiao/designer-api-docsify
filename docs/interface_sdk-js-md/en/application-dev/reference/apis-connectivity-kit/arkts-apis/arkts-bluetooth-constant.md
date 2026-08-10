@@ -10,6 +10,12 @@ The definition of constant.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { constant } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Enums

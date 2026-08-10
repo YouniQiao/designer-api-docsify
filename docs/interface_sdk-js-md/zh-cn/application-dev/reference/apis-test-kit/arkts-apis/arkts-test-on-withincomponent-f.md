@@ -1,12 +1,18 @@
 # withinComponent
 
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## withinComponent
 
 ```TypeScript
 export function withinComponent(com: Component): On
 ```
 
-要求目标组件位于由给定\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_指定的另一个组件的内部对象，用于相对于组件定位。
+要求目标组件位于由给定{@link Component}指定的另一个组件的内部对象，用于相对于组件定位。
 
 **起始版本：** 26.0.0
 
@@ -20,17 +26,17 @@ export function withinComponent(com: Component): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| com | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 描述目标组件所在的组件。 |
+| com | [Component](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-component-i.md) | 是 | 描述目标组件所在的组件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | this { |
+| [On](arkts-test-uitest-on-c.md) | this { |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 17000007 | Parameter verification failed. |
 

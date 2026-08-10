@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## begins
 
 ```TypeScript
@@ -18,7 +24,7 @@ begins?: long
 
 上传任务开始时读取的文件起点，单位为字节（B）。默认值为0，取值范围为闭区间，表示从头开始传输。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -54,7 +60,7 @@ ends?: long
 
 上传任务结束时读取的文件终点，单位为字节（B）。默认值为-1，取值范围为闭区间，表示传输到整个文件末尾结束。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -108,7 +114,7 @@ index?: int
 
 任务的路径索引，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -143,7 +149,7 @@ url: string
 ```
 
 资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_功能。
+[HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
 
 **类型：** string
 

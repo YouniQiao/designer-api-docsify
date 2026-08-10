@@ -1,12 +1,18 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formObserver } from 'kits/@kit.FormKit';
+```
+
 ## off('formAdd')
 
 ```TypeScript
 function off(type: 'formAdd', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Cancels listening to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use this method to cancel listening to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Cancels listening to the event of add form.&lt;p&gt;You can use this method to cancel listening to the event of add form.&lt;/p&gt;
 
 **Since:** 10
 
@@ -26,14 +32,14 @@ Cancels listening to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Yo
 | --- | --- | --- | --- |
 | type | 'formAdd' | Yes | Indicates event type. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 202 | The application is not a system application. |
 
 
 ## off('formRemove')
@@ -42,7 +48,7 @@ Cancels listening to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Yo
 function off(type: 'formRemove', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Cancels listening to the event of remove form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use this method to cancel listening to the event of remove form.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Cancels listening to the event of remove form.&lt;p&gt;You can use this method to cancel listening to the event of remove form.&lt;/p&gt;
 
 **Since:** 10
 
@@ -62,14 +68,14 @@ Cancels listening to the event of remove form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\
 | --- | --- | --- | --- |
 | type | 'formRemove' | Yes | Indicates event type. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 202 | The application is not a system application. |
 
 
 ## off('notifyVisible')
@@ -82,7 +88,7 @@ function off(
   ): void
 ```
 
-Cancels listening to the event of notifyVisible type change.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use this method to cancel listening to the event of notifyVisible type change.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Cancels listening to the event of notifyVisible type change.&lt;p&gt;You can use this method to cancel listening to the event of notifyVisible type change.&lt;/p&gt;
 
 **Since:** 10
 
@@ -102,14 +108,14 @@ Cancels listening to the event of notifyVisible type change.\_\_\_HTML\_TAG\_DES
 | --- | --- | --- | --- |
 | type | 'notifyVisible' | Yes | Indicates event type. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 202 | The application is not a system application. |
 
 
 ## off('notifyInvisible')
@@ -122,7 +128,7 @@ function off(
   ): void
 ```
 
-Cancels listening to the event of notifyInvisible type change.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use this method to cancel listening to the event of notifyInvisible type change.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Cancels listening to the event of notifyInvisible type change.&lt;p&gt;You can use this method to cancel listening to the event of notifyInvisible type change.&lt;/p&gt;
 
 **Since:** 10
 
@@ -142,14 +148,14 @@ Cancels listening to the event of notifyInvisible type change.\_\_\_HTML\_TAG\_D
 | --- | --- | --- | --- |
 | type | 'notifyInvisible' | Yes | Indicates event type. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 202 | The application is not a system application. |
 
 
 ## off('router')
@@ -178,14 +184,14 @@ Unregister form router event Listening.
 | --- | --- | --- | --- |
 | type | 'router' | Yes | Indicates event type. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 202 | The application is not a system application. |
 
 
 ## off('message')
@@ -214,14 +220,14 @@ Unregister form message event Listening.
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates event type. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 202 | The application is not a system application. |
 
 
 ## off('call')
@@ -250,12 +256,12 @@ Unregister form call event Listening.
 | --- | --- | --- | --- |
 | type | 'call' | Yes | Indicates event type. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 202 | The application is not a system application. |
 

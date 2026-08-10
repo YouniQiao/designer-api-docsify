@@ -4,7 +4,7 @@
 export type OnTimePickerChangeCallback = (result: TimePickerResult) => void
 ```
 
-Callback of the timePicker time is selected event.
+选择时间时触发该事件。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Callback of the timePicker time is selected event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| result | [TimePickerResult](arkts-arkui-timepicker-timepickerresult-i.md) | Yes |  |
 

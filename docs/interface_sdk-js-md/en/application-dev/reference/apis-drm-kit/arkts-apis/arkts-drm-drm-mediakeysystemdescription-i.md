@@ -10,6 +10,12 @@ Name and UUID of DRM plugin.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## name
 
 ```TypeScript

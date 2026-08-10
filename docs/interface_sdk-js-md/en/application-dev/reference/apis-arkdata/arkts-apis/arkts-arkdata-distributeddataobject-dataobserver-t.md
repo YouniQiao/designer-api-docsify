@@ -4,7 +4,7 @@
 type DataObserver = (sessionId: string, fields: Array<string>) => void
 ```
 
-Defines an observer for obtaining the data change of a distributed object.
+定义获取分布式对象数据变更的监听回调函数。
 
 **Since:** 20
 
@@ -18,6 +18,6 @@ Defines an observer for obtaining the data change of a distributed object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | Session ID of the distributed data object, with a maximum length of 128 bytes. The value can contain only letters, digits, and underscores (\_).  |
-| fields | Array&lt;string&gt; | Yes | Changed properties of the distributed data object, with a maximum length of 128 bytes. The value can be customized and must be a non-empty string.  |
+| sessionId | string | Yes | 标识变更对象的sessionId。长度不大于128字节，且只能包含字母、数字或下划线_。 |
+| fields | Array&lt;string&gt; | Yes | 标识对象变更的属性名。属性名可自定义，要求字符串非空且长度不超过128字节。 |
 

@@ -1,12 +1,18 @@
 # stopOptimizeSpace (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## stopOptimizeSpace
 
 ```TypeScript
 function stopOptimizeSpace(): void
 ```
 
-Synchronously stops optimizing cloud resource space. This method is used with **startOptimizeSpace**.
+同步方法停止图库云图资源空间优化，和startOptimizeSpace配对使用。
 
 **Since:** 17
 
@@ -24,12 +30,12 @@ Synchronously stops optimizing cloud resource space. This method is used with **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error. |
 | 22400005 | Inner error. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -39,7 +45,7 @@ let callback = (data:cloudSync.OptimizeSpaceProgress) => {
   if (data.state == cloudSync.OptimizeState.FAILED) {
     console.info("optimize space failed");
   } else if (data.state == cloudSync.OptimizeState.RUNNING) {
-    console.info("optimize space progress:" + data.progress);
+    console.info("optimize space progress: " + data.progress);
   }
 }
 cloudSync.startOptimizeSpace(para, callback);

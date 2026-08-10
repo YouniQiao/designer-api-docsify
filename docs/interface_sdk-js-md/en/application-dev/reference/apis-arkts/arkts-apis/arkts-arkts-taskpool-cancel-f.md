@@ -1,16 +1,24 @@
 # cancel
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## cancel
 
 ```TypeScript
 function cancel(task: Task): void
 ```
 
-Cancels a task in the task pool. If the task is in the internal queue of the task pool, the task will not be executed after being canceled, and an exception indicating task cancellation is returned. If the task has been distributed to the worker thread of the task pool, canceling the task does not affect the task execution, and the execution result is returned in the catch branch. You can use **isCanceled()** to check the task cancellation status. In other words, **taskpool.cancel** takes effect for calls of **taskpool.execute**,  
-**taskpool.executeDelayed**, or **taskpool.executePeriodically**.Starting from API version 20, after performing a cancel operation, you can use the generic type BusinessError<  
-[taskpool.TaskResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    in the catch branch to obtain the exception information thrown by  
-the task or the final execution result.
+取消任务池中的任务。  
+- 当任务在taskpool等待队列中，取消该任务后该任务将不再执行，并返回任务被取消的异常。  
+- 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。  
+- taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。
+
+从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;  
+[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
 
 **Since:** 9
 
@@ -26,14 +34,15 @@ the task or the final execution result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Task to cancel. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | 需要取消执行的任务。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200015](../errorcode-utils.md#10200015-failed-to-cancel-a-task-that-does-not-exist) | The task to cancel does not exist. |
-| [10200055](../errorcode-utils.md#10200055-asynchronous-queue-task-canceled) | The asyncRunner task has been canceled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 10200015 | The task to cancel does not exist. |
+| 10200016 | The task to cancel is being executed.<br>**Applicable version:** 9 - 17 |
+| 10200055 | The asyncRunner task has been canceled.<br>**Applicable version:** 18 and later |
 
 
 ## cancel
@@ -42,11 +51,8 @@ the task or the final execution result.
 function cancel(group: TaskGroup): void
 ```
 
-Cancels a task group in the task pool. If a task group is canceled before all the tasks in it are finished,  
-**undefined** is returned.Starting from API version 20, after performing a cancel operation, you can use the generic type BusinessError<  
-[taskpool.TaskResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    in the catch branch to obtain the exception information thrown by  
-the task or the final execution result.
+取消任务池中的任务组。如果任务组中的任务未全部执行结束，则整个任务组的执行结果返回undefined。从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;  
+[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
 
 **Since:** 10
 
@@ -62,15 +68,15 @@ the task or the final execution result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| group | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Task group to cancel. |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes | 需要取消执行的任务组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200018](../errorcode-utils.md#10200018-failed-to-cancel-a-task-group-that-does-not-exist) | The task group to cancel does not exist. |
+| 10200018 | The task group to cancel does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -117,11 +123,14 @@ concurrentFunc();
 function cancel(taskId: number): void
 ```
 
-Cancels a task in the task pool by task ID. If the task is in the internal queue of the task pool, the task will not be executed after being canceled, and an exception indicating task cancellation is returned. If the task has been distributed to the worker thread of the task pool, canceling the task does not affect the task execution, and the execution result is returned in the catch branch. You can use **isCanceled()** to check the task cancellation status. **taskpool.cancel** takes effect for the previous calls of **taskpool.execute** or  
-**taskpool.executeDelayed**. If **taskpool.cancel** is called by other threads, note that the cancel operation,which is asynchronous, may take effect for later calls of **taskpool.execute** or **taskpool.executeDelayed**.Starting from API version 20, after performing a cancel operation, you can use the generic type BusinessError<  
-[taskpool.TaskResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    in the catch branch to obtain the exception information thrown by  
-the task or the final execution result.
+通过任务ID取消任务池中的任务。  
+- 如果任务在taskpool等待队列中，取消后任务将不再执行，并返回任务取消的异常。  
+- 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。  
+- taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。  
+- 在其他线程调用taskpool.cancel时，需注意其行为是异步的，可能导致在cancel调用之后的taskpool.execute或taskpool.executeDelayed的任务被取消。
+
+从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;  
+[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记。这可以用来获取任务中抛出的异常信息或最终的执行结果。
 
 **Since:** 18
 
@@ -137,16 +146,16 @@ the task or the final execution result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | number | Yes | ID of the task to cancel. |
+| taskId | number | Yes | 需要取消执行的任务的ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200015](../errorcode-utils.md#10200015-failed-to-cancel-a-task-that-does-not-exist) | The task to cancel does not exist. |
-| [10200055](../errorcode-utils.md#10200055-asynchronous-queue-task-canceled) | The asyncRunner task has been canceled. |
+| 10200015 | The task to cancel does not exist. |
+| 10200055 | The asyncRunner task has been canceled. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

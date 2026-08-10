@@ -1,14 +1,20 @@
 # setStartWindowBackgroundColor
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## setStartWindowBackgroundColor
 
 ```TypeScript
 function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>
 ```
 
-Sets the background color of the splash screen of the UIAbility based on the specified module name and ability name within the same bundle name. This API uses a promise to return the result.
+设置同一应用包名下指定moduleName、abilityName对应UIAbility的启动页背景色，使用Promise异步回调。
 
-This API takes effect for all processes of the same bundle name, for example, in multi-instance or clone scenarios.
+该接口对同一应用包名下的所有进程生效，例如多实例或应用分身场景。
 
 **Since:** 20
 
@@ -24,25 +30,25 @@ This API takes effect for all processes of the same bundle name, for example, in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the UIAbility. The value is a string of 0 to 200 bytes. Only the module names within the same application can be set. The module name is specified in the **name** field of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| abilityName | string | Yes | Name of the UIAbility. The value is a string of 0 to 200 bytes. Only the ability names within the same application can be set. The UIAbility name is specified in the **name** field under \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Background color of the splash screen. |
+| moduleName | string | Yes | 需要设置的UIAbility所属模块名，moduleName的长度范围为0-200字节，仅支持设置当前同一应用包名内的模块。模块名由开发者在 [module.json5配置文件](../../../quick-start/module-configuration-file.md#配置文件标签)中的name字段指定。 |
+| abilityName | string | Yes | 需要设置的UIAbility名字，abilityName的长度范围为0-200字节，仅支持设置当前同一应用包名内的abilityName。UIAbility名由开发者 在[module.json5配置文件abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的name字段指定。 |
+| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Yes | 设置的启动页背景色。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal task error. |
+| 801 | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
+| 1300016 | Parameter error. Possible cause: Parameter exceeds the allowed length. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

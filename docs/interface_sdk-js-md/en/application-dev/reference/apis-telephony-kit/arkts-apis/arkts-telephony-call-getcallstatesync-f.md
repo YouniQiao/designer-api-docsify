@@ -1,5 +1,11 @@
 # getCallStateSync
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## getCallStateSync
 
 ```TypeScript
@@ -8,7 +14,7 @@ function getCallStateSync(): CallState
 
 Obtains the call state.
 
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL\_STATE\_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL\_STATE\_OFFHOOK}. In other cases, the system returns {@code CallState#CALL\_STATE\_IDLE}.
+If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}. In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
 
 **Since:** 10
 
@@ -22,9 +28,9 @@ If an incoming call is ringing or waiting, the system returns {@code CallState#C
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the call state. |
+| [CallState](arkts-telephony-call-callstate-e.md) | Returns the call state. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callState: call.CallState = call.getCallStateSync();

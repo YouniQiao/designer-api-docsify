@@ -2,7 +2,7 @@
 
 定义懒列布局属性。
 
-**继承/实现关系：** LazyColumnLayoutAttribute extends [CommonMethod](arkts-arkui-component/common-commonmethod-i.md)
+**继承/实现关系：** LazyColumnLayoutAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,12 @@
 <!--Device-unnamed-export declare interface LazyColumnLayoutAttribute extends CommonMethod--><!--Device-unnamed-export declare interface LazyColumnLayoutAttribute extends CommonMethod-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
+```
 
 ## alignItems
 
@@ -34,7 +40,7 @@ default alignItems(value: HorizontalAlign | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 行内容的水平对齐。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：HorizontalAlign.Center。 |
+| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) \| undefined | 是 | 行内容的水平对齐。 &lt;br&gt;默认值：HorizontalAlign.Center。 |
 
 **返回值：**
 
@@ -64,7 +70,7 @@ default attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -94,7 +100,7 @@ default footer(builder: CustomBuilder | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | footer生成器函数 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_传递undefined将移除footer。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | footer生成器函数 &lt;br&gt;传递undefined将移除footer。 |
 
 **返回值：**
 
@@ -124,7 +130,7 @@ default header(builder: CustomBuilder | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | header生成器函数 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_传递undefined将移除header。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | header生成器函数 &lt;br&gt;传递undefined将移除header。 |
 
 **返回值：**
 
@@ -154,7 +160,7 @@ default onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_传递undefined将取消注册回调。 |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发. &lt;br&gt;传递undefined将取消注册回调。 |
 
 **返回值：**
 
@@ -208,7 +214,7 @@ default space(space: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 行之间的间距。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值为0。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_范围：[0, +∞)。 |
+| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 &lt;br&gt;默认值为0。&lt;br&gt;范围：[0, +∞)。 |
 
 **返回值：**
 
@@ -238,7 +244,7 @@ default sticky(sticky: StickyStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sticky | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | header和footer的吸顶吸底样式。 |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | 是 | header和footer的吸顶吸底样式。 |
 
 **返回值：**
 

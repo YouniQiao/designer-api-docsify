@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## off('notify')
 
 ```TypeScript
 function off(type: 'notify', callback?: Callback<number>): void
 ```
 
-Unsubscribes NFC RF status change events.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All callback functions will be unregistered If there is no specific callback parameter.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Unsubscribes NFC RF status change events.&lt;p&gt;All callback functions will be unregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 8
 
@@ -23,5 +29,5 @@ Unsubscribes NFC RF status change events.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'notify' | Yes | The callback type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | The callback function to be unregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | The callback function to be unregistered. |
 

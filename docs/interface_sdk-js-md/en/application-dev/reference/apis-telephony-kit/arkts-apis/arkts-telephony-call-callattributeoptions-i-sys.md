@@ -12,6 +12,12 @@ Indicates the options of call attribute.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## accountId
 
 ```TypeScript
@@ -20,7 +26,7 @@ accountId: int
 
 Indicates the id of account.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -60,7 +66,7 @@ callId: int
 
 Indicates the id of call.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -80,7 +86,7 @@ callState: DetailedCallState
 
 Indicates the detailed state of call.
 
-**Type:** DetailedCallState
+**Type:** [DetailedCallState](arkts-telephony-call-detailedcallstate-e-sys.md)
 
 **Since:** 7
 
@@ -100,7 +106,7 @@ callType: CallType
 
 Indicates the type of call.
 
-**Type:** CallType
+**Type:** [CallType](arkts-telephony-call-calltype-e-sys.md)
 
 **Since:** 7
 
@@ -120,7 +126,7 @@ conferenceState: ConferenceState
 
 Indicates the state of conference.
 
-**Type:** ConferenceState
+**Type:** [ConferenceState](arkts-telephony-call-conferencestate-e-sys.md)
 
 **Since:** 7
 
@@ -140,7 +146,7 @@ crsType: int
 
 Indicates the color tone type.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -160,7 +166,7 @@ extraParams?: Record<string, Object>
 
 Indicates the extra call parameters.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 14
 
@@ -240,7 +246,7 @@ numberMarkInfo?: NumberMarkInfo
 
 Indicates the mark information of the phone number.
 
-**Type:** NumberMarkInfo
+**Type:** [NumberMarkInfo](arkts-telephony-call-numbermarkinfo-i-sys.md)
 
 **Since:** 12
 
@@ -260,7 +266,7 @@ originalCallType: int
 
 Indicates the initial type of this call.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -280,7 +286,7 @@ rttState?: RttState
 
 Indicates the rtt state.
 
-**Type:** RttState
+**Type:** [RttState](arkts-telephony-call-rttstate-e-sys.md)
 
 **Since:** 22
 
@@ -320,7 +326,7 @@ startTime: int
 
 Indicates the start time.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -340,7 +346,7 @@ videoState: VideoStateType
 
 Indicates the type of video state.
 
-**Type:** VideoStateType
+**Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
 **Since:** 7
 
@@ -360,7 +366,7 @@ voipCallAttribute?: VoipCallAttribute
 
 Indicates the detail information of voip call.
 
-**Type:** VoipCallAttribute
+**Type:** [VoipCallAttribute](arkts-telephony-call-voipcallattribute-i-sys.md)
 
 **Since:** 11
 
@@ -380,7 +386,7 @@ xCallType?: XCallType
 
 Indicates the xcall type.
 
-**Type:** XCallType
+**Type:** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)
 
 **Since:** 26.0.0
 

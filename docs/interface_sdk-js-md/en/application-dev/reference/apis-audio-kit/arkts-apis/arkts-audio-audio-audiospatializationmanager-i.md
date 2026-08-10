@@ -1,6 +1,13 @@
 # AudioSpatializationManager
 
-Implements audio spatialization management.
+空间音频管理。
+
+在使用AudioSpatializationManager的接口之前，需先通过  
+[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取AudioSpatializationManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 18开始支持。
 
 **Since:** 18
 
@@ -10,13 +17,19 @@ Implements audio spatialization management.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## isSpatializationEnabledForCurrentDevice
 
 ```TypeScript
 isSpatializationEnabledForCurrentDevice(): boolean
 ```
 
-Checks whether spatial audio rendering is enabled for the current device. This API returns the result synchronously.
+获取当前设备空间音频渲染是否开启。同步返回结果。
 
 **Since:** 18
 
@@ -30,7 +43,7 @@ Checks whether spatial audio rendering is enabled for the current device. This A
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
+| boolean | 当前设备空间音频渲染是否开启。true表示开启，false表示未开启。 |
 
 ## off('spatializationEnabledChangeForCurrentDevice')
 
@@ -38,7 +51,7 @@ Checks whether spatial audio rendering is enabled for the current device. This A
 off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the spatial audio rendering status change event of the current device. This API uses an asynchronous callback to return the result.
+取消监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **Since:** 18
 
@@ -52,14 +65,14 @@ Unsubscribes from the spatial audio rendering status change event of the current
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForCurrentDevice' | Yes | Event type. The event **'spatializationEnabledChangeForCurrentDevice'** is triggered when the spatial audio rendering status is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result, indicating whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
+| type | 'spatializationEnabledChangeForCurrentDevice' | Yes | 事件回调类型，支持的事件为' spatializationEnabledChangeForCurrentDevice'，当取消订阅当前设备空间音频渲染开关状态变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数。返回true表示打开空间音频渲染状态；返回false表示关闭空间音频渲染状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offSpatializationEnabledChangeForCurrentDevice
 
@@ -81,13 +94,13 @@ Unsubscribes to the spatialization enable state change events by the current dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## on('spatializationEnabledChangeForCurrentDevice')
 
@@ -95,7 +108,7 @@ Unsubscribes to the spatialization enable state change events by the current dev
 on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void
 ```
 
-Subscribes to the spatial audio rendering status change event of the current device. This API uses an asynchronous callback to return the result.
+监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **Since:** 18
 
@@ -109,14 +122,14 @@ Subscribes to the spatial audio rendering status change event of the current dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForCurrentDevice' | Yes | Event type. The event **'spatializationEnabledChangeForCurrentDevice'** is triggered when the spatial audio rendering status is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result, indicating whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
+| type | 'spatializationEnabledChangeForCurrentDevice' | Yes | 事件回调类型，支持的事件为' spatializationEnabledChangeForCurrentDevice'，当空间音频渲染开关状态变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示打开空间音频渲染状态；返回false表示关闭空间音频渲染状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onSpatializationEnabledChangeForCurrentDevice
 
@@ -138,11 +151,11 @@ Subscribes to the spatialization enable state change events by the current devic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 

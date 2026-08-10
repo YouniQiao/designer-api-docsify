@@ -20,8 +20,8 @@ Defines the callback type used in onItemDragStart.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the dragged item.  |
-| itemIndex | int | Yes | The index number of the dragged item.  |
+| event | [ItemDragInfo](arkts-arkui-common-itemdraginfo-i.md) | Yes | Information about the dragged item. |
+| itemIndex | int | Yes | The index number of the dragged item. |
 
 **Return value:**
 

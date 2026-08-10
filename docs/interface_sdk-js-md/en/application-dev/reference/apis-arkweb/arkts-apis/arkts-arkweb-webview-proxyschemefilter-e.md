@@ -1,6 +1,6 @@
 # ProxySchemeFilter
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the scheme filter for proxy.
+Enum type supplied to {@link insertProxyRule} for indicating the scheme filter for proxy.
 
 **Since:** 23
 

@@ -9,7 +9,7 @@ type UpdateFn = (
 ) => void
 ```
 
-Callback function called when updating one or more data records in the database.
+更新操作的属性类型。
 
 **Since:** 23
 
@@ -27,8 +27,8 @@ Callback function called when updating one or more data records in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the database table storing the data to update.  |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be updated by default.  |
-| valueBucket | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the data to update. This parameter can be null.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Returns the number of data records updated.  |
+| uri | string | Yes | Indicates the database table storing the data to update. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be updated by default. |
+| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Indicates the data to update. This parameter can be null. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the number of data records updated. |
 

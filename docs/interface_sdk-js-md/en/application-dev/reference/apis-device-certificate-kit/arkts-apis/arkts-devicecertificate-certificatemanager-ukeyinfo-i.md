@@ -1,6 +1,6 @@
 # UkeyInfo
 
-Provides USB Key certificate credential attribute information.
+提供USB Key证书凭据属性信息。
 
 **Since:** 22
 
@@ -10,15 +10,21 @@ Provides USB Key certificate credential attribute information.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certPurpose
 
 ```TypeScript
 certPurpose?: CertificatePurpose
 ```
 
-Credential usage.Default value: PURPOSE\_DEFAULT.
+表示凭据用途。默认值： PURPOSE_DEFAULT。
 
-**Type:** CertificatePurpose
+**Type:** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
 **Since:** 22
 

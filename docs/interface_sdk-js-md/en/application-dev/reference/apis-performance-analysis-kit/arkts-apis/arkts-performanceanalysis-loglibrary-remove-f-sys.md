@@ -1,12 +1,18 @@
 # remove (System API)
 
+## Modules to Import
+
+```TypeScript
+import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## remove
 
 ```TypeScript
 function remove(logType: string, logName: string): void
 ```
 
-Deletes log files of the specified type in synchronous mode.
+以同步方法删除指定日志类型的指定文件。
 
 **Since:** 10
 
@@ -24,25 +30,28 @@ Deletes log files of the specified type in synchronous mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| logType | string | Yes | Log type, for example, **FAULTLOG**, **BETACLUB**, or **REMOTELOG**. |
-| logName | string | Yes | Log file name. |
+| logType | string | Yes | 日志类型字符串，例如"FAULTLOG", "BETACLUB", "REMOTELOG"等。 |
+| logName | string | Yes | 日志文件名称。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
-| [21300001](../errorcode-loglibrary-sys.md#21300001-specified-file-not-exist) | Source file does not exists |
+| 401 | Invalid argument. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| 21300001 | Source file does not exists |
+| 201 | Permission denied |
+| 202 | Permission denied, non-system app called system api |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { logLibrary } from '@kit.PerformanceAnalysisKit';
 
 try {
-  logLibrary.remove('FAULTLOG', 'fault_log_test.zip');
+  let logObj = logLibrary.list('FAULTLOG');
+  if (logObj.length > 0) {
+    logLibrary.remove('FAULTLOG', logObj[0].name);
+  }
 } catch (error) {
   console.error(`error code: ${error?.code}, error msg: ${error?.message}`);
 }

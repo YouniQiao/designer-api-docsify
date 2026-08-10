@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
+
 ## addNode
 
 ```TypeScript
@@ -32,13 +38,13 @@ addNode(nodeParam?: NodeParamV2): TreeControllerV2
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| nodeParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 节点信息，用于指定新增节点的属性。如果不传该参数，在当前选中的节点下添加一个标题为"新建文件夹"的节点。 |
+| nodeParam | [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) | 否 | 节点信息，用于指定新增节点的属性。如果不传该参数，在当前选中的节点下添加一个标题为"新建文件夹"的节点。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  树视图组件的控制器。 |
+| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | 树视图组件的控制器。 |
 
 ## buildDone
 
@@ -98,9 +104,9 @@ refreshNode(parentId: int, parentSubTitle: ResourceStr, currentSubtitle: Resourc
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parentId | int | 是 | 父节点Id。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：大于等于-1。 |
-| parentSubTitle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 父节点副标题。 |
-| currentSubtitle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前节点副标题。 |
+| parentId | int | 是 | 父节点Id。&lt;br /&gt;取值范围：大于等于-1。 |
+| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 父节点副标题。 |
+| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 当前节点副标题。 |
 
 ## removeNode
 

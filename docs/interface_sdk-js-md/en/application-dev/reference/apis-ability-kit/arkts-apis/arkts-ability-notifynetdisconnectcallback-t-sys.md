@@ -4,7 +4,7 @@
 type NotifyNetDisconnectCallback = (deviceId: string, state: int) => void
 ```
 
-Callback function on network disconnect.
+断开连接时的回调函数。
 
 **Since:** 9
 
@@ -22,6 +22,6 @@ Callback function on network disconnect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Indicates the deviceId network disconnect.  |
-| state | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the state of network.  |
+| deviceId | string | Yes | Indicates the deviceId network disconnect. |
+| state | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the state of network. |
 

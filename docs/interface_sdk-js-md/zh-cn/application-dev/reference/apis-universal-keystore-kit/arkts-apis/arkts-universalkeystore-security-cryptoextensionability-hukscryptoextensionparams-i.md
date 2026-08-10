@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
+## 导入模块
+
+```TypeScript
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## inData
 
 ```TypeScript
@@ -38,7 +44,7 @@ properties: HuksCryptoExtensionParam[]
 
 操作的属性。
 
-**类型：** HuksCryptoExtensionParam[]
+**类型：** [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[]
 
 **起始版本：** 26.0.0
 

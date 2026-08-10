@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## dmDeviceInfo
 
 ```TypeScript
@@ -38,9 +44,9 @@ Extended information for distributed device, including whether the device suppor
 readonly dmDeviceType?: int
 ```
 
-Only \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with networkId, \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_or \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ has dmDeviceType which indicated deviceTypeId.
+Only {@link DeviceType.SPEAKER} with networkId, {@link DeviceType.REMOTE_CAST}or {@link DeviceType.REMOTE_DAUDIO} has dmDeviceType which indicated deviceTypeId.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -80,7 +86,7 @@ readonly interruptGroupId: int
 
 Interrupt group id
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -118,7 +124,7 @@ readonly volumeGroupId: int
 
 Volume group id
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

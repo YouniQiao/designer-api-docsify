@@ -1,12 +1,18 @@
 # getBackupVersion (System API)
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## getBackupVersion
 
 ```TypeScript
 function getBackupVersion(): string
 ```
 
-Obtain the backupVersion.
+获取备份版本信息。
 
 **Since:** 18
 
@@ -24,16 +30,16 @@ Obtain the backupVersion.
 
 | Type | Description |
 | --- | --- |
-| string | Return the backupVersion. |
+| string | 返回备份版本信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

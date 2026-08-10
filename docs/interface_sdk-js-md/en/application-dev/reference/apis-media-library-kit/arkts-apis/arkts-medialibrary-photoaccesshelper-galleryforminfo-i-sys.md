@@ -12,6 +12,12 @@ Defines the Gallery widget information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## assetUris
 
 ```TypeScript
@@ -22,7 +28,7 @@ URIs of the images or albums bound to the widget.
 
 This parameter cannot be empty when creating or updating a widget.
 
-If you attempt to create or update a widget with more than 500 URIs in **assetUris**, only the first 500 URIs are registered for listening. Any URIs beyond the first 500 are not registered.
+If you attempt to create or update a widget with more than 500 URIs in **assetUris**, only the first 500 URIs are registered for listening. Any URIs beyond the first 500 are not registered. 
 
 When deleting a widget, this parameter can be omitted.
 

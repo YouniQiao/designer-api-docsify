@@ -1,12 +1,18 @@
 # getDate
 
+## Modules to Import
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getDate
 
 ```TypeScript
 function getDate(callback: AsyncCallback<Date>): void
 ```
 
-Obtains the current system date. This API uses an asynchronous callback to return the result.
+获取当前系统日期，使用callback异步回调。
 
 **Since:** 8
 
@@ -14,7 +20,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate)
+**Substitutes:** [@ohos.systemDateTime:systemDateTime.getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
 
 <!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 
@@ -24,7 +30,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Date&gt; | Yes | Callback used to return the current system date. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | Yes | 回调函数，返回当前系统日期。 |
 
 **Error codes:**
 
@@ -32,7 +38,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,7 +64,7 @@ try {
 function getDate(): Promise<Date>
 ```
 
-Obtains the current system date. This API uses a promise to return the result.
+获取当前系统日期，使用Promise异步回调。
 
 **Since:** 8
 
@@ -76,7 +82,7 @@ Obtains the current system date. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Date&gt; | Promise used to return the current system date. |
+| Promise&lt;Date&gt; | Promise对象，返回当前系统日期。 |
 
 **Error codes:**
 
@@ -84,7 +90,7 @@ Obtains the current system date. This API uses a promise to return the result.
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

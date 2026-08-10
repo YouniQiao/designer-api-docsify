@@ -1,12 +1,18 @@
 # deleteId
 
+## Modules to Import
+
+```TypeScript
+import { dataUriUtils } from 'kits/@kit.AbilityKit';
+```
+
 ## deleteId
 
 ```TypeScript
 function deleteId(uri: string): string
 ```
 
-Deletes the ID from the end of a given URI.
+删除指定uri路径末尾的ID。
 
 **Since:** 9
 
@@ -20,21 +26,21 @@ Deletes the ID from the end of a given URI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI object from which the ID is to be deleted. |
+| uri | string | Yes | 表示要从中删除ID的uri对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | URI object with the ID deleted. |
+| string | 返回删除ID之后的uri对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dataUriUtils } from '@kit.AbilityKit';

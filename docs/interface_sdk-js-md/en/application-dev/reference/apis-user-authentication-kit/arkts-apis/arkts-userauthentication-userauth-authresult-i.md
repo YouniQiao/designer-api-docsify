@@ -1,6 +1,6 @@
 # AuthResult
 
-Represents the authentication result object.
+表示认证结果的对象。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ Represents the authentication result object.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## freezingTime
 
 ```TypeScript
 freezingTime?: number
 ```
 
-Time for which the authentication operation is frozen. The unit is milliseconds.
+认证操作的冻结时间。单位为毫秒。
 
 **Type:** number
 
@@ -42,7 +48,7 @@ Time for which the authentication operation is frozen. The unit is milliseconds.
 remainTimes?: number
 ```
 
-Number of remaining authentication operations.
+剩余的认证操作次数。
 
 **Type:** number
 
@@ -64,7 +70,7 @@ Number of remaining authentication operations.
 token?: Uint8Array
 ```
 
-Authentication token information.
+认证通过的令牌信息。
 
 **Type:** Uint8Array
 

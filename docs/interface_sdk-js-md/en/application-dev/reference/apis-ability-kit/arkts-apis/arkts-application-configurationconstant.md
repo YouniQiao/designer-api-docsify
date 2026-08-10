@@ -1,6 +1,6 @@
 # @ohos.application.ConfigurationConstant
 
-The ConfigurationConstant module provides the enumerated values of the environment configuration information.
+ConfigurationConstant模块提供配置信息枚举值定义的能力。
 
 **Since:** 8
 
@@ -20,5 +20,5 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 | Name | Description |
 | --- | --- |
-| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) | Enumerates the color modes. |
+| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) | 表示颜色模式的枚举。 |
 

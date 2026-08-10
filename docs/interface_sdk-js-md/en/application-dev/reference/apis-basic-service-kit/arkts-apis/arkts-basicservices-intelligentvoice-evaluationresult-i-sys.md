@@ -12,6 +12,12 @@ Describes evaluation result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+```
+
 ## resultCode
 
 ```TypeScript
@@ -20,7 +26,7 @@ resultCode: EvaluationResultCode
 
 Describes evaluation result code.
 
-**Type:** EvaluationResultCode
+**Type:** [EvaluationResultCode](arkts-basicservices-intelligentvoice-evaluationresultcode-e-sys.md)
 
 **Since:** 12
 
@@ -40,7 +46,7 @@ score: int
 
 Evaluation score.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

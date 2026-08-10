@@ -12,6 +12,12 @@ Cell information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## additionsMap
 
 ```TypeScript
@@ -42,7 +48,7 @@ arfcn: int
 
 Indicates absolute radio frequency channel number (ARFCN).The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -64,7 +70,7 @@ cellId: long
 
 Indicates ID of cell.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -86,7 +92,7 @@ lac: int
 
 Indicates location area code(LAC).The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -108,7 +114,7 @@ mcc: int
 
 Indicates mobile country code (MCC).The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -130,7 +136,7 @@ mnc: int
 
 Indicates mobile network code (MNC).The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -152,7 +158,7 @@ pci: int
 
 Indicates physical cell identifier (PCI).The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -174,7 +180,7 @@ rat: int
 
 Indicates radio access technology (RAT).The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -196,7 +202,7 @@ signalIntensity: int
 
 Indicates signal intensity.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -218,7 +224,7 @@ tac?: int
 
 Indicates tracking area code (TAC).The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -240,7 +246,7 @@ timeSinceBoot: long
 
 Indicates timestamp since boot.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 

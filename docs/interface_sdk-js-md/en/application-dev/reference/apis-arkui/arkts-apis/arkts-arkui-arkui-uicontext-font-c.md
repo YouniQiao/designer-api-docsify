@@ -10,13 +10,19 @@ class Font
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## getFontByName
 
 ```TypeScript
 getFontByName(fontName: string): font.FontInfo
 ```
 
-Get font details according to the font name.
+根据名称获取系统字体的详细信息。
 
 **Since:** 23
 
@@ -70,7 +76,7 @@ Gets a list of fonts supported by system.
 registerFont(options: font.FontOptions): void
 ```
 
-Register a customized font in the FontManager.
+在字体管理器中注册自定义字体。
 
 **Since:** 23
 

@@ -12,6 +12,12 @@ HUKS所管理的密钥可以由应用导入或者由应用调用HUKS接口生成
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -25,8 +31,8 @@ HUKS所管理的密钥可以由应用导入或者由应用调用HUKS接口生成
 | [anonAttestKeyItem](arkts-universalkeystore-huks-anonattestkeyitem-f.md#anonattestkeyitem) | 获取匿名化密钥证书。使用callback异步回调。  该操作需要联网进行，且耗时较长。返回12000012错误码时，可能是由于网络异常导致。此时如果没有联网，需要提示用户网络没有连接，如果已经联网，可能是由于网络抖动导致失败，建议重试。 |
 | [anonAttestKeyItem](arkts-universalkeystore-huks-anonattestkeyitem-f.md#anonattestkeyitem-1) | 获取匿名化密钥证书。使用Promise异步回调。  该操作需要联网进行，且耗时较长。返回12000012错误码时，可能是由于网络异常导致。此时如果没有联网，需要提示用户网络没有连接，如果已经联网，可能是由于网络抖动导致失败，建议重试。 |
 | [anonAttestKeyItemOffline](arkts-universalkeystore-huks-anonattestkeyitemoffline-f.md#anonattestkeyitemoffline) | 离线模式下获取匿名化密钥证书。使用Promise异步回调。 |
-| [attestKeyItem](arkts-universalkeystore-huks-attestkeyitem-f.md#attestkeyitem) | 获取密钥证书。使用callback异步回调。  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| [attestKeyItem](arkts-universalkeystore-huks-attestkeyitem-f.md#attestkeyitem-1) | 获取密钥证书。使用Promise异步回调。  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| [attestKeyItem](arkts-universalkeystore-huks-attestkeyitem-f.md#attestkeyitem) | 获取密钥证书。使用callback异步回调。  &lt;!--RP6--&gt; |
+| [attestKeyItem](arkts-universalkeystore-huks-attestkeyitem-f.md#attestkeyitem-1) | 获取密钥证书。使用Promise异步回调。  &lt;!--RP6--&gt; |
 | [decapsulate](arkts-universalkeystore-huks-decapsulate-f.md#decapsulate) | Post-Quantum Cryptography密钥解封装操作，支持HUKS密钥管理或由应用程序本身决定。如果应用程序选择管理密钥，对称密钥包含在HuksReturnResult的outData字段中。 |
 | [deleteKey](arkts-universalkeystore-huks-deletekey-f.md#deletekey) | 删除密钥。使用callback异步回调。 |
 | [deleteKey](arkts-universalkeystore-huks-deletekey-f.md#deletekey-1) | 删除密钥。使用Promise异步回调。 |
@@ -44,8 +50,8 @@ HUKS所管理的密钥可以由应用导入或者由应用调用HUKS接口生成
 | [finishSession](arkts-universalkeystore-huks-finishsession-f.md#finishsession-2) | finishSession操作密钥接口。使用Promise异步回调。  huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。 |
 | [generateKey](arkts-universalkeystore-huks-generatekey-f.md#generatekey) | 生成密钥。使用callback异步回调。 |
 | [generateKey](arkts-universalkeystore-huks-generatekey-f.md#generatekey-1) | 生成密钥。使用Promise异步回调。 |
-| [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem) | 生成密钥。使用callback异步回调。  基于密钥不出\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。 |
-| [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem-1) | 生成密钥。使用Promise异步回调。  基于密钥不出\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。 |
+| [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem) | 生成密钥。使用callback异步回调。  基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。 |
+| [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem-1) | 生成密钥。使用Promise异步回调。  基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。 |
 | [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties) | Obtains key properties. This API uses an asynchronous callback to return the result. |
 | [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties-1) | 获取密钥属性。使用Promise异步回调。 |
 | [getKeyProperties](arkts-universalkeystore-huks-getkeyproperties-f.md#getkeyproperties) | 获取密钥属性。使用callback异步回调。 |
@@ -82,11 +88,11 @@ HUKS所管理的密钥可以由应用导入或者由应用调用HUKS接口生成
 | 名称 | 说明 |
 | --- | --- |
 | [anonAttestKeyItemAsUser](arkts-universalkeystore-huks-anonattestkeyitemasuser-f-sys.md#anonattestkeyitemasuser) | 指定用户身份获取匿名化密钥证书，使用Promise方式异步返回结果。  该操作需要联网进行，且耗时较长。 |
-| [anonAttestKeyItemOfflineAsUser](arkts-universalkeystore-huks-anonattestkeyitemofflineasuser-f-sys.md#anonattestkeyitemofflineasuser) | 离线获取匿名证明证书。该接口使用promise返回结果。此操作不需要每次都需要网络连接，比anonAttestKeyItemAsUser函数性能高。  **说明**     -离线密钥证明依赖于网络。您需要定期连接网络才能使用此API更新离线证书。     -离线匿名密钥证明要求本地时间准确。否则，可能导致对端无法正常工作。验证证书过期。 |
+| [anonAttestKeyItemOfflineAsUser](arkts-universalkeystore-huks-anonattestkeyitemofflineasuser-f-sys.md#anonattestkeyitemofflineasuser) | 离线获取匿名证明证书。该接口使用promise返回结果。此操作不需要每次都需要网络连接，比anonAttestKeyItemAsUser函数性能高。 |
 | [attestKeyItemAsUser](arkts-universalkeystore-huks-attestkeyitemasuser-f-sys.md#attestkeyitemasuser) | 指定用户身份获取密钥证书，使用Promise方式异步返回结果。 |
 | [deleteKeyItemAsUser](arkts-universalkeystore-huks-deletekeyitemasuser-f-sys.md#deletekeyitemasuser) | 指定用户身份删除密钥，使用Promise方式异步返回结果。 |
 | [exportKeyItemAsUser](arkts-universalkeystore-huks-exportkeyitemasuser-f-sys.md#exportkeyitemasuser) | 指定用户身份导出密钥，使用Promise方式回调异步返回的结果。 |
-| [generateKeyItemAsUser](arkts-universalkeystore-huks-generatekeyitemasuser-f-sys.md#generatekeyitemasuser) | 指定用户身份生成密钥，使用Promise方式异步返回结果。基于密钥不出\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_原则，通过promise不会返回密钥材料内容，只用于表示此次调用是否成功。 |
+| [generateKeyItemAsUser](arkts-universalkeystore-huks-generatekeyitemasuser-f-sys.md#generatekeyitemasuser) | 指定用户身份生成密钥，使用Promise方式异步返回结果。基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，通过promise不会返回密钥材料内容，只用于表示此次调用是否成功。 |
 | [getKeyItemPropertiesAsUser](arkts-universalkeystore-huks-getkeyitempropertiesasuser-f-sys.md#getkeyitempropertiesasuser) | Get properties of the key as user. |
 | [hasKeyItemAsUser](arkts-universalkeystore-huks-haskeyitemasuser-f-sys.md#haskeyitemasuser) | 指定用户身份判断密钥是否存在，使用Promise回调异步返回结果。 |
 | [importKeyItemAsUser](arkts-universalkeystore-huks-importkeyitemasuser-f-sys.md#importkeyitemasuser) | 指定用户身份导入明文密钥，使用Promise方式异步返回结果。 |
@@ -116,7 +122,7 @@ HUKS所管理的密钥可以由应用导入或者由应用调用HUKS接口生成
 | [HuksChallengeType](arkts-universalkeystore-huks-hukschallengetype-e.md) | 表示密钥使用时生成challenge的类型。 |
 | [HuksCipherMode](arkts-universalkeystore-huks-huksciphermode-e.md) | 表示加密模式。 |
 | [HuksErrorCode](arkts-universalkeystore-huks-hukserrorcode-e.md) | 表示错误码的枚举。 |
-| [HuksExceptionErrCode](arkts-universalkeystore-huks-huksexceptionerrcode-e.md) | 表示错误码的枚举以及对应的错误信息，错误码表示错误类型，错误信息展示错误详情。  关于错误码的具体信息，可在\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_和  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中查看。 |
+| [HuksExceptionErrCode](arkts-universalkeystore-huks-huksexceptionerrcode-e.md) | 表示错误码的枚举以及对应的错误信息，错误码表示错误类型，错误信息展示错误详情。  关于错误码的具体信息，可在[通用错误码](../../../reference/errorcode-universal.md)和  [HUKS错误码](../../../reference/apis-universal-keystore-kit/errorcode-huks.md)中查看。 |
 | [HuksImportKeyType](arkts-universalkeystore-huks-huksimportkeytype-e.md) | 表示导入密钥的密钥类型，默认为导入公钥，导入对称密钥时不需要该字段。 |
 | [HuksKeyAlg](arkts-universalkeystore-huks-hukskeyalg-e.md) | 表示密钥使用的算法。 |
 | [HuksKeyClassType](arkts-universalkeystore-huks-hukskeyclasstype-e.md) | 表示密钥的来源。 |
@@ -129,7 +135,7 @@ HUKS所管理的密钥可以由应用导入或者由应用调用HUKS接口生成
 | [HuksKeySize](arkts-universalkeystore-huks-hukskeysize-e.md) | 表示密钥长度。 |
 | [HuksKeyStorageType](arkts-universalkeystore-huks-hukskeystoragetype-e.md) | 表示密钥存储方式。 |
 | [HuksKeyWrapType](arkts-universalkeystore-huks-hukskeywraptype-e.md) | 表示密钥加密类型（加密导出或导入密钥）的枚举。 |
-| [HuksRsaPssSaltLenType](arkts-universalkeystore-huks-huksrsapsssaltlentype-e.md) | 表示Rsa在签名验签、padding为pss时需指定的salt\_\_\_ESCAPED\_UNDERSCORE\_\_\_len类型。 |
+| [HuksRsaPssSaltLenType](arkts-universalkeystore-huks-huksrsapsssaltlentype-e.md) | 表示Rsa在签名验签、padding为pss时需指定的salt_len类型。 |
 | [HuksSecureSignType](arkts-universalkeystore-huks-hukssecuresigntype-e.md) | 表示生成或导入密钥时，指定该密钥的签名类型。 |
 | [HuksSendType](arkts-universalkeystore-huks-hukssendtype-e.md) | 表示发送TAG的方式。 |
 | [HuksTag](arkts-universalkeystore-huks-hukstag-e.md) | 表示调用参数的Tag。 |

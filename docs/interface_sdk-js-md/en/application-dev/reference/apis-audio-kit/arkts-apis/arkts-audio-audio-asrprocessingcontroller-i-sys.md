@@ -1,7 +1,5 @@
 # AsrProcessingController (System API)
 
-ASR processing controller.
-
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
@@ -11,6 +9,12 @@ ASR processing controller.
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## getAsrAecMode
 
@@ -34,16 +38,16 @@ Get ASR AEC mode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ASR AEC Mode. |
+| [AsrAecMode](arkts-audio-audio-asraecmode-e-sys.md) | ASR AEC Mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let mode = asrProcessingController.getAsrAecMode();
@@ -71,16 +75,16 @@ Get ASR noise suppression mode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ASR noise suppression mode. |
+| [AsrNoiseSuppressionMode](arkts-audio-audio-asrnoisesuppressionmode-e-sys.md) | ASR noise suppression mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let mode = asrProcessingController.getAsrNoiseSuppressionMode();
@@ -108,16 +112,16 @@ Get ASR whisper detection mode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ASR whisper detection mode. |
+| [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | ASR whisper detection mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let mode = asrProcessingController.getAsrWhisperDetectionMode();
@@ -151,10 +155,10 @@ Query whether user is whispering.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let flag = asrProcessingController.isWhispering();
@@ -182,7 +186,7 @@ Set ASR AEC mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ASR AEC Mode. |
+| mode | [AsrAecMode](arkts-audio-audio-asraecmode-e-sys.md) | Yes | ASR AEC Mode. |
 
 **Return value:**
 
@@ -194,12 +198,12 @@ Set ASR AEC mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let flag = asrProcessingController.setAsrAecMode(audio.AsrAecMode.BYPASS);
@@ -227,7 +231,7 @@ Set ASR noise suppression mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ASR noise suppression mode. |
+| mode | [AsrNoiseSuppressionMode](arkts-audio-audio-asrnoisesuppressionmode-e-sys.md) | Yes | ASR noise suppression mode. |
 
 **Return value:**
 
@@ -239,12 +243,12 @@ Set ASR noise suppression mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let flag = asrProcessingController.setAsrNoiseSuppressionMode(audio.AsrNoiseSuppressionMode.BYPASS);
@@ -272,7 +276,7 @@ Set ASR voice control mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ASR voice control mode. |
+| mode | [AsrVoiceControlMode](arkts-audio-audio-asrvoicecontrolmode-e-sys.md) | Yes | ASR voice control mode. |
 | enable | boolean | Yes | Indicates whether to switch on/off this mode. |
 
 **Return value:**
@@ -285,12 +289,12 @@ Set ASR voice control mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let flag = asrProcessingController.setAsrVoiceControlMode(audio.AsrVoiceControlMode.AUDIO_2_VOICE_TX, true);
@@ -318,7 +322,7 @@ Set ASR voice mute mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ASR voice mute mode. |
+| mode | [AsrVoiceMuteMode](arkts-audio-audio-asrvoicemutemode-e-sys.md) | Yes | ASR voice mute mode. |
 | enable | boolean | Yes | Indicates whether to switch on/off this mode. |
 
 **Return value:**
@@ -331,12 +335,12 @@ Set ASR voice mute mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let flag = asrProcessingController.setAsrVoiceMuteMode(audio.AsrVoiceMuteMode.OUTPUT_MUTE, true);
@@ -364,7 +368,7 @@ Set ASR whisper detection mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ASR whisper detection mode. |
+| mode | [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | Yes | ASR whisper detection mode. |
 
 **Return value:**
 
@@ -376,12 +380,12 @@ Set ASR whisper detection mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let flag = asrProcessingController.setAsrWhisperDetectionMode(audio.AsrWhisperDetectionMode.BYPASS);

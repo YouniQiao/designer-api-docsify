@@ -1,12 +1,18 @@
 # getPolicies
 
+## Modules to Import
+
+```TypeScript
+import { browser } from 'kits/@kit.MDMKit';
+```
+
 ## getPolicies
 
 ```TypeScript
 function getPolicies(admin: Want, appId: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the policy of the specified browser. This API uses an asynchronous callback to return the result.
+获取指定浏览器的策略，使用callback异步回调。
 
 **Since:** 10
 
@@ -26,19 +32,19 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appId | string | Yes | Application ID, which is used to specify the browser. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appId | string | Yes | 应用ID，用于指定浏览器。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 9200001 | The application is not an administrator application of the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';
@@ -67,7 +73,7 @@ browser.getPolicies(wantTemp, appId, (err, result) => {
 function getPolicies(admin: Want, appId: string): Promise<string>
 ```
 
-Obtains the policy of the specified browser. This API uses a promise to return the result.
+获取指定浏览器的策略，使用Promise异步回调。
 
 **Since:** 10
 
@@ -87,24 +93,24 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appId | string | Yes | Application ID, which is used to specify the browser. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appId | string | Yes | 应用ID，用于指定浏览器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the browser policies obtained. |
+| Promise&lt;string&gt; | Promise对象，返回浏览器策略。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 9200001 | The application is not an administrator application of the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';

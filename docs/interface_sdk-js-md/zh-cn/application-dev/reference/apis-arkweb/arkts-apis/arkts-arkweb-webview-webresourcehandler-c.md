@@ -10,6 +10,12 @@ Used to intercept url requests. Response headers and body can be sent through We
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## didFail
 
 ```TypeScript
@@ -30,14 +36,14 @@ Notify that this request should be failed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| 17100021 | The resource handler is invalid. |
 
 ## didFail
 
@@ -59,15 +65,15 @@ Notify that this request should be failed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
 | completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) | The errorCode is either ARKWEB\_\_\_ESCAPED\_UNDERSCORE\_\_\_NET\_\_\_ESCAPED\_UNDERSCORE\_\_\_OK or outside the range of error codes in WebNetErrorList. |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| 17100101 | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
+| 17100021 | The resource handler is invalid. |
 
 ## didFinish
 
@@ -89,7 +95,7 @@ Notify that this request should be finished and there is no more data available.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| 17100021 | The resource handler is invalid. |
 
 ## didReceiveResponse
 
@@ -111,14 +117,14 @@ Pass response headers to intercepted requests.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Set response header to intercept. |
+| response | [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md) | 是 | Set response header to intercept. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| 17100021 | The resource handler is invalid. |
 
 ## didReceiveResponseBody
 
@@ -146,6 +152,6 @@ Pass response body data to intercepted requests.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| 17100021 | The resource handler is invalid. |
 

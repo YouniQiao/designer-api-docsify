@@ -1,6 +1,6 @@
 # CommonShapeMethod
 
-Common shape method class
+常见的形状方法。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Common shape method class
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## fill
 
 ```TypeScript
 fill(color: ResourceColor): this
 ```
 
-Sets the fill color of the shape.
+设置形状的填充区域的透明度，黑色表示完全透明，白色表示完全不透明。
 
 **Since:** 23
 
@@ -32,13 +38,13 @@ Sets the fill color of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 形状的填充区域的透明度，黑色表示完全透明，白色表示完全不透明。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| this | 返回当前对象。 |
 
 ## offset
 
@@ -46,7 +52,7 @@ Sets the fill color of the shape.
 offset(offset: Position): this
 ```
 
-Sets coordinate offset relative to the layout completion position.
+设置相对于组件布局位置的坐标偏移。
 
 **Since:** 23
 
@@ -62,13 +68,13 @@ Sets coordinate offset relative to the layout completion position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| offset | [Position](arkts-arkui-position-i.md) | Yes | 相对于组件布局位置的坐标偏移。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| this | 返回当前对象。 |
 
 ## position
 
@@ -76,7 +82,7 @@ Sets coordinate offset relative to the layout completion position.
 position(position: Position): this
 ```
 
-Sets the position of the shape.
+设置形状的位置。
 
 **Since:** 23
 
@@ -92,11 +98,11 @@ Sets the position of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| position | [Position](arkts-arkui-position-i.md) | Yes | 设置形状的位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| this | 返回当前对象。 |
 

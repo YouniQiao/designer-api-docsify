@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## close
 
 ```TypeScript
@@ -74,5 +80,5 @@ getState(): DialogState
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回状态。 |
+| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) | 返回状态。 |
 

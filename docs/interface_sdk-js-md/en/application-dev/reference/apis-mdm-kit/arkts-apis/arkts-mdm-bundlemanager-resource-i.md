@@ -1,6 +1,6 @@
 # Resource
 
-Describes application resource information, including the bundle name, module name, and resource ID.
+资源相关信息，包括应用包名、应用模块名、资源id。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Describes application resource information, including the bundle name, module na
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.MDMKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name of the application.
+应用的bundle名称。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Bundle name of the application.
 id: number
 ```
 
-Resource ID.
+资源的id值。
 
 **Type:** number
 
@@ -56,7 +62,7 @@ Resource ID.
 moduleName: string
 ```
 
-Module name of the application.
+应用的module名称。
 
 **Type:** string
 

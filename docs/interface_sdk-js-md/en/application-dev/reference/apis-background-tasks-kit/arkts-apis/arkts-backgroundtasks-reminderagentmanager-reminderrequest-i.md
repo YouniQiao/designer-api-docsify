@@ -1,6 +1,6 @@
 # ReminderRequest
 
-Defines the request for publishing a reminder.
+代理提醒对象，用于设置提醒类型、响铃时长等具体信息。
 
 **Since:** 9
 
@@ -10,17 +10,23 @@ Defines the request for publishing a reminder.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## actionButton
 
 ```TypeScript
 actionButton?: [ActionButton?, ActionButton?, ActionButton?]
 ```
 
-Buttons displayed for the reminder notification.
+弹出的提醒通知中显示的按钮。
 
-For third-party applications, a maximum of two buttons are supported.
+针对三方应用：最多支持两个按钮。
 
-For system applications, a maximum of three buttons are supported in API version 10 and later versions, and a maximum of two buttons are supported in versions earlier than API version 10.
+针对系统应用：从API version 10开始最多支持三个按钮，API version 10之前的版本最多支持两个按钮。
 
 **Type:** [ActionButton?, ActionButton?, ActionButton?]
 
@@ -38,12 +44,12 @@ For system applications, a maximum of three buttons are supported in API version
 autoDeletedTime?: long
 ```
 
-Time when the notification is automatically cleared.
+自动清除的时间。
 
-The data format is timestamp, in milliseconds. For details, please refer to  
-[NotificationRequest.autoDeletedTime]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+数据格式：时间戳，单位：ms，具体请参考  
+[NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -59,7 +65,7 @@ The data format is timestamp, in milliseconds. For details, please refer to
 content?: string
 ```
 
-Reminder content.
+指明提醒内容。
 
 **Type:** string
 
@@ -77,9 +83,9 @@ Reminder content.
 contentResourceId?: int
 ```
 
-Resource ID of the reminder content, which can be obtained through \$r(*resource-name*).id.
+指明提醒内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -95,7 +101,7 @@ Resource ID of the reminder content, which can be obtained through \$r(*resource
 customRingUri?: string
 ```
 
-URI of the custom prompt tone. The prompt tone file must be stored in the **resources/rawfile** directory and supports formats such as M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
+指明自定义提示音的uri，提示音文件必须放在resources/rawfile目录下，支持m4a、aac、mp3、ogg、wav、flac、amr等格式。
 
 **Type:** string
 
@@ -113,7 +119,7 @@ URI of the custom prompt tone. The prompt tone file must be stored in the **reso
 expiredContent?: string
 ```
 
-Content to be displayed after the reminder expires.
+指明提醒过期后需要显示的内容。
 
 **Type:** string
 
@@ -131,10 +137,9 @@ Content to be displayed after the reminder expires.
 expiredContentResourceId?: int
 ```
 
-Resource ID of the content to be displayed after the reminder expires, which can be obtained through \$r(*resource  
--name*).id.
+指明提醒过期后内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -150,9 +155,9 @@ Resource ID of the content to be displayed after the reminder expires, which can
 fixedTimeZone?: TimeZoneType
 ```
 
-Time zone type. The default value is **TimeZoneType.DEFAULT**.
+时区类型，默认为TimeZoneType.DEFAULT。
 
-**Type:** TimeZoneType
+**Type:** [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
 
 **Since:** 26.0.0
 
@@ -170,7 +175,7 @@ Time zone type. The default value is **TimeZoneType.DEFAULT**.
 groupId?: string
 ```
 
-Group ID used for the reminder. If "Don't ask again" or similar information is selected for the reminder, other reminders with the same group ID are also canceled.
+指明提醒使用相同的组id。相同组id中，一个提醒被点击不在提醒后，组内其他提醒也会被取消。
 
 **Type:** string
 
@@ -188,11 +193,11 @@ Group ID used for the reminder. If "Don't ask again" or similar information is s
 maxScreenWantAgent?: MaxScreenWantAgent
 ```
 
-Information about the ability that is started automatically and displayed in full-screen mode when the reminder arrives. If the device is in use, only a notification banner is displayed.
+提醒到达时，全屏显示自动拉起目标的ability信息。如果设备正在使用中，则弹出一个通知横幅框。 
 
-This API is reserved.
+说明：该接口为预留接口，暂不支持使用。
 
-**Type:** MaxScreenWantAgent
+**Type:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
 **Since:** 9
 
@@ -208,9 +213,9 @@ This API is reserved.
 notificationId?: int
 ```
 
-Notification ID used by the reminder. You must pass in a notification ID. If there are reminders with the same notification ID, the later one will overwrite the earlier one. The default value is **0**.
+指明提醒使用的通知的id号，需开发者传入，相同id号的提醒会覆盖，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -226,9 +231,9 @@ Notification ID used by the reminder. You must pass in a notification ID. If the
 notificationRequestProxy?: NotificationRequestProxy
 ```
 
-Notification request message. This parameter is left empty by default.
+通知请求信息，默认为空。
 
-**Type:** NotificationRequestProxy
+**Type:** [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md)
 
 **Since:** 26.0.0
 
@@ -246,9 +251,9 @@ Notification request message. This parameter is left empty by default.
 reminderType: ReminderType
 ```
 
-Type of the reminder.
+指明代理提醒类型。
 
-**Type:** ReminderType
+**Type:** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
 
 **Since:** 9
 
@@ -264,9 +269,9 @@ Type of the reminder.
 ringChannel?: RingChannel
 ```
 
-Audio channel of the custom prompt tone. The default channel is the alarm channel.
+指明自定义提示音的音频播放通道，默认为闹钟通道。
 
-**Type:** RingChannel
+**Type:** [RingChannel](arkts-backgroundtasks-reminderagentmanager-ringchannel-e.md)
 
 **Since:** 20
 
@@ -282,18 +287,18 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 ringDuration?: long
 ```
 
-Ringing duration.
+指明响铃时长。
 
-The value ranges from 0 to1800, in seconds. The default value is **1**.
+单位：s，默认1s，范围：[0, 1800]。
 
-If the value is **0**, the system notification tone is used.
+值为0时：跟随系统设置中的通知铃声。 
 
-If the value is greater than 0 and [ReminderRequest.customRingUri]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set, the reminder rings on the specified channel  
-[ReminderRequest.ringChannel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. Otherwise, the custom notification tone of the agent-powered reminder is used.
+值大于0时：如果设置了[ReminderRequest.customRingUri](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)，则在指定的通道  
+[ReminderRequest.ringChannel](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)上响铃。否则使用代理提醒默认的自定义提示音。
 
-The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
+响铃同时会触发振动，从API版本26.0.0开始，支持长振动，振动时长与响铃时长一致。API版本26.0.0之前版本，响铃时会快速振动一次。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -309,7 +314,7 @@ The device vibrates when the reminder rings. Since API version 26.0.0, long vibr
 slotType?: notification.SlotType
 ```
 
-Type of the slot used by the reminder.
+指明提醒的通道渠道类型。
 
 **Type:** notification.SlotType
 
@@ -327,7 +332,7 @@ Type of the slot used by the reminder.
 snoozeContent?: string
 ```
 
-Content to be displayed when the reminder is snoozing. (It is not applicable to countdown reminders.)
+指明延时提醒时需要显示的内容（不适用于倒计时提醒类型）。
 
 **Type:** string
 
@@ -345,10 +350,9 @@ Content to be displayed when the reminder is snoozing. (It is not applicable to 
 snoozeContentResourceId?: int
 ```
 
-Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through \$r(  
-*resource-name*).id.
+指明延时提醒内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -364,7 +368,7 @@ Resource ID of the content to be displayed when the reminder is snoozing, which 
 snoozeSlotType?: notification.SlotType
 ```
 
-Type of the slot used by the snoozed reminder. (It is not applicable to countdown reminders.)
+指明延时提醒的通道渠道类型（不适用于倒计时提醒类型）。
 
 **Type:** notification.SlotType
 
@@ -382,9 +386,9 @@ Type of the slot used by the snoozed reminder. (It is not applicable to countdow
 snoozeTimes?: int
 ```
 
-Number of reminder snooze times. The default value is **0**. (It is not applicable to countdown reminders.)
+指明延时提醒次数，默认0次（不适用于倒计时提醒类型）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -400,11 +404,11 @@ Number of reminder snooze times. The default value is **0**. (It is not applicab
 tapDismissed?: boolean
 ```
 
-Whether the reminder is automatically cleared. The default value is **true**. For details, see  
-[NotificationRequest.tapDismissed]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+通知是否自动清除，默认值为true，具体请参考  
+[NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed)
 
-- **true** (default): The reminder is automatically cleared after the notification or button is tapped.  
-- **false**: The reminder is retained after the notification or button is tapped.
+- true：点击通知消息或通知按钮后，自动删除当前通知。  
+- false：点击通知消息或通知按钮后，保留当前通知。
 
 **Type:** boolean
 
@@ -422,11 +426,11 @@ Whether the reminder is automatically cleared. The default value is **true**. Fo
 timeInterval?: long
 ```
 
-Reminder snooze interval,
+执行延时提醒间隔。
 
-in seconds. The minimum value is 30s. (It is not applicable to countdown reminders.)
+单位：s，最少30s（不适用于倒计时提醒类型）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -442,7 +446,7 @@ in seconds. The minimum value is 30s. (It is not applicable to countdown reminde
 title?: string
 ```
 
-Reminder title.
+指明提醒标题。
 
 **Type:** string
 
@@ -460,9 +464,9 @@ Reminder title.
 titleResourceId?: int
 ```
 
-Resource ID of the reminder title, which can be obtained through \$r(*resource-name*).id.
+指明提醒标题的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -478,9 +482,9 @@ Resource ID of the reminder title, which can be obtained through \$r(*resource-n
 wantAgent?: WantAgent
 ```
 
-Information about the ability that is redirected to when the reminder is clicked.
+点击通知后需要跳转的目标ability信息。
 
-**Type:** WantAgent
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 9
 

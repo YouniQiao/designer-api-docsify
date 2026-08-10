@@ -1,14 +1,16 @@
 # Column
 
-The **Column** component lays out child components vertically.
-> **NOTE**
+沿垂直方向布局的容器。适用于需要将多个子组件按垂直方向依次排列的场景，如列表项、表单项、卡片内容等。支持设置子组件间距、对齐方式等属性，能够快速实现垂直方向的线性布局。
+
+> **说明：**
 >
-> If no height or width is set for the **Column** component, the component automatically adapts to the size of its
-> child components in the main axis and cross axis respectively.
+> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 >
-> **Child Components**
->
-> Supported
+> Column未设置高度或宽度时，在主轴（垂直方向）或交叉轴（水平方向）方向上自适应子组件大小。
+
+## 子组件
+
+可以包含子组件。
 
 ## Column
 
@@ -16,16 +18,11 @@ The **Column** component lays out child components vertically.
 Column(options?: ColumnOptions)
 ```
 
-Creates a vertical linear layout container. You can set the spacing between child components.
-    **NOTE**  
-    
-    Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant  
-    performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the  
-    component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control  
-    syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the  
-    best practices, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    .
+创建垂直方向线性布局容器，可以设置子组件的间距。
+
+> **说明：**
+> 
+> 在复杂界面中使用多组件嵌套时，若布局组件的嵌套层数过深或嵌套的组件数量过多，将会产生额外开销。建议通过移除冗余节点、利用布局边界减少布局计算、合理采用渲染控制语法及布局组件方法来优化性能。最佳实践请参考布局优化指导。
 
 **Since:** 7
 
@@ -43,7 +40,7 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Vertical spacing between two adjacent child components. The value can be of the number or string type. |
+| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) | No | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 <br> |
 
 ## Column
 
@@ -51,7 +48,11 @@ Creates a vertical linear layout container. You can set the spacing between chil
 Column(options?: ColumnOptions | ColumnOptionsV2)
 ```
 
-Creates a vertical linear layout container. You can set the spacing between child components.
+创建垂直方向线性布局容器，可以设置子组件的间距。
+
+> **说明：**
+> 
+> 在复杂界面中使用多组件嵌套时，若布局组件的嵌套层数过深或嵌套的组件数量过多，将会产生额外开销。建议通过移除冗余节点、利用布局边界减少布局计算、合理采用渲染控制语法及布局组件方法来优化性能。最佳实践请参考布局优化指导。
 
 **Since:** 18
 
@@ -71,7 +72,10 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| ColumnOptionsV2 | No | Vertical spacing between two adjacent child components. The value can be of the number, string, or Resource type.  |
+| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | No | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距，space支持设置number、 string或Resource类型。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 |
 
 ## Summary
 
+- [ColumnOptions](arkts-arkui-column-columnoptions-i.md)
+- [ColumnOptionsV2](arkts-arkui-column-columnoptionsv2-i.md)
+- [SpaceType](arkts-arkui-column-spacetype-t.md)

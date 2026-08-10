@@ -24,7 +24,7 @@ count?: number
 
 当为上图下文形的栅格样式时，元素数量范围为[0, 6]。
 
-当为纯图标形的栅格样式时，元素数量范围[0, 4]。
+当为纯图标形的栅格样式时，元素数量范围[0, 4]。 
 
 未设置、异常值按照默认值处理。
 
@@ -88,7 +88,7 @@ position?: MenuGridPosition
 
 默认值：MenuGridPosition.TOP
 
-**类型：** MenuGridPosition
+**类型：** [MenuGridPosition](../arkts-apis/arkts-arkui-common-menugridposition-e.md)
 
 **默认值：** MenuGridPosition.TOP
 

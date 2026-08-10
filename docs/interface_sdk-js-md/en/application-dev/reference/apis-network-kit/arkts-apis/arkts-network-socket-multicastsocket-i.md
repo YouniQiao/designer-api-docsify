@@ -12,6 +12,12 @@ Defines a UDP MulticastSocket connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## addMembership
 
 ```TypeScript
@@ -34,20 +40,20 @@ Add the socket to the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Multicast address information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of addMembership. |
+| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Multicast address information. {@link NetAddress}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of addMembership. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| 2301022 | Invalid argument. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
+| 201 | Permission denied. |
 | 2301098 | Address in use. |
+| 2301022 | Invalid argument. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -88,7 +94,7 @@ Add the socket to the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Multicast address information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Multicast address information. {@link NetAddress}. |
 
 **Return value:**
 
@@ -100,12 +106,12 @@ Add the socket to the multicast group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
+| 201 | Permission denied. |
 | 2301098 | Address in use. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -144,19 +150,19 @@ Drop the socket from the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Multicast address information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of dropMembership. |
+| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Multicast address information. {@link NetAddress}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of dropMembership. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
+| 201 | Permission denied. |
 | 2301098 | Address in use. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -197,7 +203,7 @@ Drop the socket from the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Multicast address information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Multicast address information. {@link NetAddress}. |
 
 **Return value:**
 
@@ -209,12 +215,12 @@ Drop the socket from the multicast group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
+| 201 | Permission denied. |
 | 2301098 | Address in use. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -251,16 +257,16 @@ Get the loopback mode of the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | The callback of getLoopbackMode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of getLoopbackMode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -301,10 +307,10 @@ Get the loopback mode of the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -337,16 +343,16 @@ Get the TTL value of socket multicast packet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | The callback of getMulticastTTL. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback of getMulticastTTL. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -387,10 +393,10 @@ Get the TTL value of socket multicast packet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -433,15 +439,15 @@ Obtains the file descriptor of the MulticastSocket.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | The promise returns the file descriptor of the Multicast socket. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returns the file descriptor of the Multicast socket. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -486,16 +492,16 @@ Set the loopback mode for the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | flag | boolean | Yes | Whether to enable loopback mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of setLoopbackMode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setLoopbackMode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -542,10 +548,10 @@ Set the loopback mode for the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -579,17 +585,17 @@ Set the TTL value for socket multicast packets.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ttl | number | Yes | The TTL value to set. Valid range is typically 0 to 255. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of setMulticastTTL. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setMulticastTTL. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| 2301022 | Invalid argument. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
+| 2301022 | Invalid argument. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -637,11 +643,11 @@ Set the TTL value for socket multicast packet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| 2301022 | Invalid argument. |
+| 401 | Parameter error. |
 | 2301088 | Not a socket. |
+| 2301022 | Invalid argument. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -677,4 +683,30 @@ Sets whether the multicast socket supports address reuse.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reuse | boolean | Yes | whether the multicast socket supports address reuse. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let bindAddr: socket.NetAddress = {
+  // 0.0.0.0 indicates that port 8080 on all IPv4 network APIs of the local host is bound. This is commonly used to receive data from this port in multicast scenarios.
+  address: '0.0.0.0',
+  port: 8080
+}
+
+try {
+  multicast.setReuseAddress(true);
+  multicast.bind(bindAddr).then(() => {
+    console.info('setReuseAddress success');
+  }).catch((err: BusinessError) => {
+    console.error(`bind failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`setReuseAddress failed, code is ${error.code}, message is ${error.message}`);
+}
+```
 

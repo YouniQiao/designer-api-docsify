@@ -16,7 +16,7 @@
 FONT_SIZE = 0
 ```
 
-以字号大小作为缩放基数。最终行高为[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.fontSize * [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.heightScale。
+以字号大小作为缩放基数。最终行高为[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontSize * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale。
 
 **起始版本：** 21
 
@@ -34,7 +34,7 @@ FONT_SIZE = 0
 FONT_HEIGHT = 1
 ```
 
-以字形高度作为缩放基数。最终行高为塑形后字形高度 * [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.heightScale。
+以字形高度作为缩放基数。最终行高为塑形后字形高度 * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale。
 
 **起始版本：** 21
 

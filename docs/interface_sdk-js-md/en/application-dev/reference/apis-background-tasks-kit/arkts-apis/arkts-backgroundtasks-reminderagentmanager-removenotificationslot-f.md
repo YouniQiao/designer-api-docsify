@@ -1,12 +1,18 @@
 # removeNotificationSlot
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## removeNotificationSlot
 
 ```TypeScript
 function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void
 ```
 
-Removes a specified notification slot. This API uses an asynchronous callback to return the result.
+删除指定的通知渠道类型，使用callback异步回调。
 
 **Since:** 9
 
@@ -20,16 +26,16 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | Type of the notification slot. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| slotType | notification.SlotType | Yes | 通知渠道类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 当删除成功，err为undefined；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
+| 401 | If the input parameter is not valid parameter. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
@@ -53,7 +59,7 @@ reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT
 function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 ```
 
-Removes a specified notification slot. This API uses a promise to return the result.
+删除指定的通知渠道类型，使用Promise异步回调。
 
 **Since:** 9
 
@@ -67,21 +73,21 @@ Removes a specified notification slot. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | Type of the notification slot. |
+| slotType | notification.SlotType | Yes | 通知渠道类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
+| 401 | If the input parameter is not valid parameter. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';

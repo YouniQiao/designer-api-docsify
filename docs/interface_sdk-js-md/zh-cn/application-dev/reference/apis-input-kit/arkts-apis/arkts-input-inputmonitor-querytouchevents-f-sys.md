@@ -1,5 +1,11 @@
 # queryTouchEvents（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
 ## queryTouchEvents
 
 ```TypeScript
@@ -24,24 +30,22 @@ function queryTouchEvents(count: int) : Promise<Array<TouchEvent>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| count | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 需要查询的触屏输入事件数量，取值范围为0到100的整数。小于0时取值为0、大于100时取值为100。从API版本26.0.0开始，大于60时取值为60。如果实际触屏输入事件只有30个， 但该参数取值为50 ，则仅支持查询到30个触屏输入事件。 |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 需要查询的触屏输入事件数量，取值范围为0到100的整数。小于0时取值为0、大于100时取值为100。从API版本26.0.0开始，大于60时取值为60。如果实际触屏输入事件只有30个， 但该参数取值为50 ，则仅支持查询到30个触屏输入事件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt;&gt; | Promise对象，返回查询到的触屏输入事件。包含以下有效信息，其余均为无效信息：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- actionTime：触屏输入事件发生的时间，表示系统 启动运行至今逝去的微秒数，单位为微秒（μs）。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- [SourceType]{ |
+| Promise&lt;Array&lt;[TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i-sys.md)&gt;&gt; | Promise对象，返回查询到的触屏输入事件。包含以下有效信息，其余均为无效信息：&lt;br/&gt;- actionTime：触屏输入事件发生的时间，表示系统 启动运行至今逝去的微秒数，单位为微秒（μs）。&lt;br/&gt;- [SourceType]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { inputMonitor, TouchEvent } from '@kit.InputKit';
@@ -60,36 +64,6 @@ try {
   const code = (error as BusinessError).code;
   const message = (error as BusinessError).message;
   console.error(`Failed to query touch events, Code: ${code}, message: ${message}.`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { inputMonitor, TouchEvent } from '@kit.InputKit'
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 查询触屏事件数量
-            inputMonitor.queryTouchEvents(10).then((events: Array<TouchEvent>) => {
-              console.info(`Succeeded in querying touch events, events=${events}.`);
-            });
-          } catch(error) {
-            const code = (error as BusinessError).code;
-            const message = (error as BusinessError).message;
-            console.error(`Failed to query touch events, Code: ${code}, message: ${message}.`);
-          }
-        })
-    }
-  }
 }
 ```
 

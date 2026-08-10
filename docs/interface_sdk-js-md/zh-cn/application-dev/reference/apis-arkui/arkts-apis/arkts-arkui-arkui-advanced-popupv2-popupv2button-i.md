@@ -10,6 +10,12 @@ PopupV2Button定义按钮的相关属性和事件。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
@@ -20,7 +26,7 @@ action?: VoidCallback
 
 默认不执行任何操作。
 
-**类型：** VoidCallback
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **起始版本：** 26.0.0
 
@@ -60,7 +66,7 @@ text: ResourceStr
 
 设置按钮内容。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 

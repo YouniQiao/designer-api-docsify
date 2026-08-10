@@ -10,6 +10,12 @@ Indicates observer options.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## slotId
 
 ```TypeScript
@@ -18,7 +24,7 @@ slotId: int
 
 Indicates the ID of the target card slot.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

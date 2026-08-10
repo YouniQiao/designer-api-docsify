@@ -20,6 +20,6 @@ Defines the callback type used in OnVisibleIndexesChange.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | int | 是 | the first index in visible content.  |
-| end | int | 是 | the last index in visible content.  |
+| start | int | 是 | the first index in visible content. |
+| end | int | 是 | the last index in visible content. |
 

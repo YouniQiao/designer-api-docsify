@@ -1,6 +1,6 @@
 # AVMetadata
 
-The metadata of the current media.Used to set the properties of the current media file
+媒体元数据的相关属性。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ The metadata of the current media.Used to set the properties of the current medi
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## album
 
 ```TypeScript
 album?: string
 ```
 
-The album of this media
+专辑名称。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ The album of this media
 artist?: string
 ```
 
-The artist of this media
+艺术家。
 
 **Type:** string
 
@@ -56,7 +62,11 @@ The artist of this media
 assetId: string
 ```
 
-Unique ID used to represent this media.
+媒体ID。媒体信息的唯一标识，由应用自定义。
+
+- 该属性发生变化则其他元数据属性都将被刷新。  
+- 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
+- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
 
 **Type:** string
 
@@ -76,7 +86,7 @@ Unique ID used to represent this media.
 author?: string
 ```
 
-The author of this media
+专辑作者。
 
 **Type:** string
 
@@ -96,7 +106,7 @@ The author of this media
 avQueueId?: string
 ```
 
-The id of play list which current media belongs to, it should be an unique identifier in the application.
+歌单（歌曲列表）唯一标识Id。
 
 **Type:** string
 
@@ -114,7 +124,12 @@ The id of play list which current media belongs to, it should be an unique ident
 avQueueImage?: image.PixelMap | string
 ```
 
-The artwork of play list as a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or an uri formatted String,
+歌单（歌曲列表）封面图。
+
+图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。
+
+- 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
+- 设置为url图片路径，获取的为url图片路径。
 
 **Type:** image.PixelMap \| string
 
@@ -132,7 +147,7 @@ The artwork of play list as a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or an uri fo
 avQueueName?: string
 ```
 
-The name of play list which current media belongs to
+歌单（歌曲列表）名称。
 
 **Type:** string
 
@@ -150,7 +165,7 @@ The name of play list which current media belongs to
 readonly bundleIcon?: image.PixelMap
 ```
 
-The image of the bundle icon as a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, no need to be set by application.
+应用图标图片的像素数据。只读类型，不从应用侧设置。
 
 **Type:** image.PixelMap
 
@@ -168,7 +183,7 @@ The image of the bundle icon as a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, no need
 composer?: string
 ```
 
-The composer of this media
+作曲者。
 
 **Type:** string
 
@@ -186,7 +201,7 @@ The composer of this media
 description?: string
 ```
 
-The description of the media, used for display
+媒体描述。
 
 **Type:** string
 
@@ -206,9 +221,9 @@ The description of the media, used for display
 displayTags?: int
 ```
 
-The display tags supported by application to be displayed on media center
+媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -224,7 +239,7 @@ The display tags supported by application to be displayed on media center
 drmSchemes?: Array<string>
 ```
 
-The drm schemes supported by this session which are represented by uuid.
+当前session支持的DRM方案，取值为DRM方案uuid。
 
 **Type:** Array&lt;string&gt;
 
@@ -242,9 +257,9 @@ The drm schemes supported by this session which are represented by uuid.
 duration?: long
 ```
 
-The duration of this media, used to automatically calculate playback position, described by milliseconds.
+媒体时长，单位毫秒（ms）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -262,9 +277,15 @@ The duration of this media, used to automatically calculate playback position, d
 fastForwardSkipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing fast forward operation, the default is \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.The system will use this value for fastforward skip intervals instead of \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.If not set, the fast forward skip intervals still use \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.See \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_
+快进支持的时间间隔。默认为SECONDS_15，即15秒。
 
-**Type:** SkipIntervals
+系统会使用此值作为快进操作的时间间隔，而非skipIntervals的值。
+
+若未设置此参数，快进操作的时间间隔仍会沿用skipIntervals的值。
+
+**起始版本**：26.0.0
+
+**Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Since:** 26.0.0
 
@@ -282,9 +303,9 @@ The supported skipIntervals when doing fast forward operation, the default is \_
 filter?: int
 ```
 
-The protocols supported by this session, if not set, the default is \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.See \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+当前会话支持的协议，默认为TYPE_CAST_PLUS_STREAM。具体取值参考[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -302,7 +323,11 @@ The protocols supported by this session, if not set, the default is \_\_\_JSDOC\
 lyric?: string
 ```
 
-The lyric of the media, it should be in standard lyric format
+媒体歌词内容。应用需将歌词内容拼接为一个字符串传入。
+
+字符串长度需小于40960字节。
+
+**说明：** 系统支持简单版的LRC格式（Simple LRC format）的歌词文本内容。当传入的歌词内容不规范（例如：出现重复的时间戳等），将导致解析失败，并在系统中显示异常。
 
 **Type:** string
 
@@ -320,7 +345,10 @@ The lyric of the media, it should be in standard lyric format
 mediaImage?: image.PixelMap | string
 ```
 
-The image of the media as a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or an uri formatted String,used to display in media center.
+图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。
+
+- 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
+- 设置为url图片路径，获取的为url图片路径。
 
 **Type:** image.PixelMap \| string
 
@@ -340,7 +368,7 @@ The image of the media as a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or an uri form
 nextAssetId?: string
 ```
 
-The next playable media id.Used to tell the controller if there is a next playable media
+下一首媒体ID。
 
 **Type:** string
 
@@ -360,7 +388,7 @@ The next playable media id.Used to tell the controller if there is a next playab
 previousAssetId?: string
 ```
 
-The previous playable media id.Used to tell the controller if there is a previous playable media
+上一首媒体ID。
 
 **Type:** string
 
@@ -380,7 +408,7 @@ The previous playable media id.Used to tell the controller if there is a previou
 publishDate?: Date
 ```
 
-The publishDate of the media
+发行日期。
 
 **Type:** Date
 
@@ -398,9 +426,15 @@ The publishDate of the media
 rewindSkipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing rewind operation, the default is \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.The system will use this value for rewind skip intervals instead of \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.If not set, the rewind skip intervals still use \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.See \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_
+快退支持的时间间隔。默认为SECONDS_15，即15秒。
 
-**Type:** SkipIntervals
+系统会使用此值作为快退操作的时间间隔，而非skipIntervals的值。
+
+若未设置此参数，快退操作的时间间隔仍会沿用skipIntervals的值。
+
+**起始版本**：26.0.0
+
+**Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Since:** 26.0.0
 
@@ -418,7 +452,9 @@ The supported skipIntervals when doing rewind operation, the default is \_\_\_JS
 singleLyricText?: string
 ```
 
-The single lyric text of the media, not including time prefix
+单条媒体歌词内容。应用需将歌词内容拼接为一个字符串传入（不包含时间戳）。
+
+字符串长度小于40960字节。
 
 **Type:** string
 
@@ -438,9 +474,9 @@ The single lyric text of the media, not including time prefix
 skipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing fast forward and rewind operation, the default is \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.See \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+快进快退支持的时间间隔。默认为SECONDS_15，即15秒。
 
-**Type:** SkipIntervals
+**Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Since:** 11
 
@@ -456,7 +492,7 @@ The supported skipIntervals when doing fast forward and rewind operation, the de
 subtitle?: string
 ```
 
-The subtitle of the media, used for display
+子标题。
 
 **Type:** string
 
@@ -476,7 +512,7 @@ The subtitle of the media, used for display
 title?: string
 ```
 
-The title of this media, for display in media center.
+标题。
 
 **Type:** string
 
@@ -496,7 +532,7 @@ The title of this media, for display in media center.
 writer?: string
 ```
 
-The writer of this media
+词作者。
 
 **Type:** string
 

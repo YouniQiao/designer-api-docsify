@@ -1,10 +1,10 @@
 # BundleOptions
 
-    **NOTE**  
-    
-    This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided.
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，暂无替代接口。
 
-Options that contain the user ID.
+查询选项，包含userId。
 
 **Since:** 7
 
@@ -16,13 +16,19 @@ Options that contain the user ID.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## userId
 
 ```TypeScript
 userId?: number
 ```
 
-User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0.
+用户ID。默认值：调用方所在用户，取值范围：大于等于0。
 
 **Type:** number
 

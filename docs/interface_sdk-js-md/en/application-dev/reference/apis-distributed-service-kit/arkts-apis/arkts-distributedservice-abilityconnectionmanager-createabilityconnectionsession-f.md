@@ -1,5 +1,11 @@
 # createAbilityConnectionSession
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## createAbilityConnectionSession
 
 ```TypeScript
@@ -7,7 +13,7 @@ function createAbilityConnectionSession(serviceName: string, context: Context, p
         connectOptions: ConnectOptions): int
 ```
 
-Creates a collaboration session between applications.
+创建应用间的协同会话。
 
 **Since:** 18
 
@@ -25,26 +31,26 @@ Creates a collaboration session between applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serviceName | string | Yes | Service name for the application. The service name must be the same on the local end and peer end. The value contains a maximum of 256 characters. |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. |
-| peerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Collaboration information of the peer end. |
-| connectOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Connection options for the application. |
+| serviceName | string | Yes | 应用设置的服务名称（两端必须一致），最大长度为256字符。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 表示应用上下文。 |
+| peerInfo | [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | Yes | 对端的协同信息。 |
+| connectOptions | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-common-connectoptions-t.md) | Yes | 应用设置的连接选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | ID of the collaboration session. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 成功创建的协同会话ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 On device A, an application calls createAbilityConnectionSession() to create a collaboration session and return the session ID.
 

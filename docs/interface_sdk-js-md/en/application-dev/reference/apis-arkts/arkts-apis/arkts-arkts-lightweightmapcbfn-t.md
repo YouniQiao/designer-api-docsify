@@ -4,7 +4,7 @@
 export type LightWeightMapCbFn<K, V> = (value: V, key: K, map: LightWeightMap<K, V>) => void
 ```
 
-The type of LightWeightMap callback function.
+LightWeightMap中forEach方法的回调函数。
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ The type of LightWeightMap callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | V | Yes | The value of the current entry  |
-| key | K | Yes | The key of the current entry  |
-| map | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | Yes | The LightWeightMap instance being traversed  |
+| value | V | Yes | 当前遍历到的元素键值对的值。 |
+| key | K | Yes | 当前遍历到的元素键值对的键。 |
+| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | 当前正在遍历的LightWeightMap实例。 |
 

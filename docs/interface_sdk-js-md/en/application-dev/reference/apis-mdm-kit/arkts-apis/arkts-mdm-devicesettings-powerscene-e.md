@@ -1,6 +1,6 @@
 # PowerScene
 
-Defines the scenario to which the power policy applies.
+执行电源策略的场景。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Defines the scenario to which the power policy applies.
 TIME_OUT = 0
 ```
 
-Timeout scenario.
+超时场景。
 
 **Since:** 11
 

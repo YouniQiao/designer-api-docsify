@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
@@ -52,7 +58,7 @@ OperateIconV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | OperateIconV2的可选项 |
+| options | [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | 否 | OperateIconV2的可选项 |
 
 ## accessibilityDescription
 
@@ -62,7 +68,7 @@ public accessibilityDescription?: ResourceStr
 
 图标的无障碍描述。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -104,7 +110,7 @@ public accessibilityText?: ResourceStr
 
 图标的无障碍文本属性。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -124,7 +130,7 @@ public symbolStyle?: SymbolGlyphModifier
 
 文本内容或图标地址。
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 
@@ -144,7 +150,7 @@ public value: ResourceStr
 
 文本内容或图标地址。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 

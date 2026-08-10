@@ -12,6 +12,12 @@ Defines the onscreen content.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -38,7 +44,7 @@ Bundle name of the onscreen content.
 content?: string
 ```
 
-Body of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to  
+Body of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
 **True**.
 
 **Type:** string
@@ -81,7 +87,7 @@ paragraphs?: Paragraph[]
 
 Paragraph information of the onscreen content. This parameter is available only when **options.textOnly** is set to **True**.
 
-**Type:** Paragraph[]
+**Type:** [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md)[]
 
 **Since:** 20
 
@@ -99,10 +105,10 @@ Paragraph information of the onscreen content. This parameter is available only 
 scenario?: Scenario
 ```
 
-Scenario of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to  
+Scenario of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
 **True**.
 
-**Type:** Scenario
+**Type:** [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md)
 
 **Since:** 20
 
@@ -122,7 +128,7 @@ sessionId: long
 
 Session ID, which identifies the call action.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -140,7 +146,7 @@ Session ID, which identifies the call action.
 title?: string
 ```
 
-Title of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to  
+Title of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
 **True**.
 
 **Type:** string
@@ -163,7 +169,7 @@ windowId: int
 
 Window ID of the onscreen content.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

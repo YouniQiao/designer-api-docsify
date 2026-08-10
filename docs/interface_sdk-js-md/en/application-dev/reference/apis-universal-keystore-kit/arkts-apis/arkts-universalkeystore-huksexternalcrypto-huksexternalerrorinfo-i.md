@@ -1,6 +1,6 @@
 # HuksExternalErrorInfo
 
-Defines detailed error information.
+详细错误信息
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines detailed error information.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
+## Modules to Import
+
+```TypeScript
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## errno
 
 ```TypeScript
 errno: number
 ```
 
-The detailed error code.
+详细错误码
 
 **Type:** number
 
@@ -36,7 +42,7 @@ The detailed error code.
 errorDesc: string
 ```
 
-The detailed error description.
+错误描述
 
 **Type:** string
 

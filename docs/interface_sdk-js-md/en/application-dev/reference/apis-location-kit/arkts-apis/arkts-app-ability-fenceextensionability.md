@@ -1,5 +1,11 @@
 # @ohos.app.ability.FenceExtensionAbility
 
+## Modules to Import
+
+```TypeScript
+import { FenceExtensionAbility } from 'kits/@kit.LocationKit';
+```
+
 ## Summary
 
 ### Classes

@@ -1,12 +1,18 @@
 # getAbilityIcon
 
+## 导入模块
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getAbilityIcon
 
 ```TypeScript
 function getAbilityIcon(bundleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-通过bundleName和abilityName获取对应Icon的[PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，使用callback异步回调。
+通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)，使用callback异步回调。
 
 获取调用方自己的信息时不需要权限。
 
@@ -30,9 +36,9 @@ function getAbilityIcon(bundleName: string, abilityName: string, callback: Async
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | abilityName | string | 是 | 要查询的Ability组件名。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | 是 | 程序启动作为入参的回调函数，返回指定 [PixelMap]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 程序启动作为入参的回调函数，返回指定 [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import bundle from '@ohos.bundle';
@@ -56,7 +62,7 @@ bundle.getAbilityIcon(bundleName, abilityName, (err, data) => {
 function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-通过bundleName和abilityName获取对应Icon的[PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，使用Promise异步回调。
+通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)，使用Promise异步回调。
 
 获取调用方自己的信息时不需要权限。
 
@@ -87,7 +93,7 @@ function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.
 | --- | --- |
 | Promise&lt;image.PixelMap&gt; | Returns the PixelMap object representing the icon of the specified ability. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import bundle from '@ohos.bundle';

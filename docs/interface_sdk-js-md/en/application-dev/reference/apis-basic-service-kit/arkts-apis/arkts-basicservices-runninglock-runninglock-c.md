@@ -1,6 +1,6 @@
 # RunningLock
 
-Defines a **RunningLock** object.
+阻止系统睡眠的锁。
 
 **Since:** 7
 
@@ -9,6 +9,12 @@ Defines a **RunningLock** object.
 <!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
+
+## Modules to Import
+
+```TypeScript
+import { runningLock } from 'kits/@kit.BasicServicesKit';
+```
 
 ## hold
 
@@ -22,7 +28,7 @@ ArkTS-Sta:
 hold(timeout: int): void
 ```
 
-Holds a running lock.
+锁定和持有RunningLock。
 
 **Since:** 9
 
@@ -38,16 +44,16 @@ Holds a running lock.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Duration for locking and holding the **RunningLock** object, in ms.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value must be a number:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**-1**: The lock is permanently held and needs to be released automatically.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**0**: The lock is released 3 seconds after the timer expires by default.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_       0: The lock is released based on the input value after the timer expires. |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 锁定和持有RunningLock的时长，单位：毫秒。&lt;br&gt;该参数必须为数字类型：&lt;br&gt;**-1**：永久持锁，需要主动释放。&lt;br&gt;**0**：默认3s后超时释放。&lt;br&gt; **>0**：按传入值超时释放。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| 201 | If the permission is denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // RunningLockTest.ets
@@ -84,7 +90,7 @@ class RunningLockTest {
 isHolding(): boolean
 ```
 
-Checks whether this running lock is being held.
+查询当前RunningLock是持有状态还是释放状态。
 
 **Since:** 9
 
@@ -98,9 +104,9 @@ Checks whether this running lock is being held.
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the **RunningLock** object is held; and the value **false** indicates that the **RunningLock** object is released. |
+| boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // RunningLockTest.ets
@@ -133,7 +139,7 @@ class RunningLockTest {
 isUsed(): boolean
 ```
 
-Checks whether this running lock is used.
+查询当前RunningLock是持有状态还是释放状态。
 
 **Since:** 7
 
@@ -151,9 +157,9 @@ Checks whether this running lock is used.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the lock is held or in use; returns false if the lock has been released. |
+| boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -172,7 +178,7 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 lock(timeout: number): void
 ```
 
-Locks and holds a **RunningLock** object.
+锁定和持有RunningLock。
 
 **Since:** 7
 
@@ -192,9 +198,9 @@ Locks and holds a **RunningLock** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | Duration for locking and holding the **RunningLock** object, in ms. |
+| timeout | number | Yes | 锁定和持有RunningLock的时长，单位：毫秒。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -213,7 +219,7 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 unhold(): void
 ```
 
-Releases this running lock.
+释放RunningLock锁。
 
 **Since:** 9
 
@@ -229,9 +235,9 @@ Releases this running lock.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
+| 201 | If the permission is denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // RunningLockTest.ets
@@ -268,7 +274,7 @@ class RunningLockTest {
 unlock(): void
 ```
 
-Releases this running lock.
+释放RunningLock锁。
 
 **Since:** 7
 
@@ -284,7 +290,7 @@ Releases this running lock.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)

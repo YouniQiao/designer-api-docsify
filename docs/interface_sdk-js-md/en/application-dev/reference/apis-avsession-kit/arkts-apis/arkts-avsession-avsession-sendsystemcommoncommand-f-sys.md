@@ -1,12 +1,18 @@
 # sendSystemCommonCommand (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## sendSystemCommonCommand
 
 ```TypeScript
 function sendSystemCommonCommand(command: string, args: ExtraInfo): Promise<string>
 ```
 
-Send system control command. The system automatically selects the recipient.
+发送通用事件命令
 
 **Since:** 24
 
@@ -26,8 +32,8 @@ Send system control command. The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | string | Yes | The command name to be sent. |
-| args | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The parameters of command info |
+| command | string | Yes | 通用的控制命令 |
+| args | [ExtraInfo](arkts-avsession-avsession-extrainfo-t.md) | Yes | 事件参数 |
 
 **Return value:**
 
@@ -39,9 +45,9 @@ Send system control command. The system automatically selects the recipient.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. |
+| 6600105 | Invalid session command. |
+| 6600107 | Too many commands or events. |
 

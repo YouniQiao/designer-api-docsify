@@ -1,12 +1,18 @@
 # analyzePrintEvents (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## analyzePrintEvents
 
 ```TypeScript
 function analyzePrintEvents(printerId: string, eventType: string): Promise<string>
 ```
 
-Analyze print events.
+分析打印事件。
 
 **Since:** 24
 
@@ -26,8 +32,8 @@ Analyze print events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Indicates the printer ID. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Printer ID to be analyzed. |
-| eventType | string | Yes | Indicates the avant type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Event types to be analyzed. |
+| printerId | string | Yes | 打印机ID。 &lt;br&gt;要分析的打印机ID。 |
+| eventType | string | Yes | 前卫类型。 &lt;br&gt;需要分析的事件类型。 |
 
 **Return value:**
 
@@ -39,6 +45,6 @@ Analyze print events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application. |
 

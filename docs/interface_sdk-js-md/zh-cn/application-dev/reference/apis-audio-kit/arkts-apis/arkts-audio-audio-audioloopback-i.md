@@ -2,15 +2,16 @@
 
 提供音频返听的相关接口。
 
-在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取AudioLoopback实例。
+在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback)获取AudioLoopback实例。
 
 当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与  
-[STREAM\_USAGE\_MUSIC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_相匹配。对于采集器，其音频焦点策略与[SOURCE\_TYPE\_MIC]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_相匹配。
+[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md)相匹配。
 
 输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。
-    **说明：**  
-    
-    - 本Interface首批接口从API version 20开始支持。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 20开始支持。
 
 **起始版本：** 20
 
@@ -19,6 +20,12 @@
 <!--Device-audio-interface AudioLoopback--><!--Device-audio-interface AudioLoopback-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## enable
 
@@ -54,8 +61,8 @@ enable(enable: boolean): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
 
 ## getEqualizerPreset
 
@@ -77,7 +84,7 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前音频返听器的均衡器类型。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_在没有被修改的情况下，默认的均衡器类型是FULL。 |
+| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 返回当前音频返听器的均衡器类型。 &lt;br&gt;在没有被修改的情况下，默认的均衡器类型是FULL。 |
 
 ## getPreferredDevicePair
 
@@ -101,7 +108,7 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回系统推荐的音频输入输出设备组合。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果没有可用的输入输出设备组合，则返回null。 |
+| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) | 返回系统推荐的音频输入输出设备组合。 &lt;br&gt;如果没有可用的输入输出设备组合，则返回null。 |
 
 ## getReverbPreset
 
@@ -123,7 +130,7 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前音频返听器的混响模式。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_在没有被修改的情况下，默认的混响模式是THEATER。 |
+| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 返回当前音频返听器的混响模式。 &lt;br&gt;在没有被修改的情况下，默认的混响模式是THEATER。 |
 
 ## getStatus
 
@@ -169,7 +176,7 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;AudioDevicePair&gt; | 返回支持返听的音频输入输出设备数组。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果没有可用的输入输出设备组合，则返回空数组。 |
+| Array&lt;AudioDevicePair&gt; | 返回支持返听的音频输入输出设备数组。 &lt;br&gt;如果没有可用的输入输出设备组合，则返回空数组。 |
 
 ## getVolume
 
@@ -199,7 +206,7 @@ getVolume(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 返回当前音频返听输出音量，范围为[0.0, 1.0]。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回当前音频返听输出音量，范围为[0.0, 1.0]。 |
 
 ## off('statusChange')
 
@@ -222,13 +229,13 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当取消监听音频状态事件时，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioLoopbackStatus&gt; | 否 | 回调函数，返回当前音频返听的状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | 否 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offStatusChange
 
@@ -250,13 +257,13 @@ Unsubscribes audio loopback status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioLoopbackStatus&gt; | 否 | Callback used to listen for the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | 否 | Callback used to listen for the audio loopback status change event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## on('statusChange')
 
@@ -279,13 +286,13 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当AudioLoopback的状态发生变化时，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioLoopbackStatus&gt; | 是 | 回调函数，返回当前音频返听的状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | 是 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onStatusChange
 
@@ -307,13 +314,13 @@ Subscribes to audio loopback status changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioLoopbackStatus&gt; | 是 | Callback used to return the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | 是 | Callback used to return the audio loopback status change event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## setEqualizerPreset
 
@@ -335,7 +342,7 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preset | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 均衡器类型。 |
+| preset | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 是 | 均衡器类型。 |
 
 **返回值：**
 
@@ -347,7 +354,7 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## setReverbPreset
 
@@ -369,7 +376,7 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preset | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 混响模式。 |
+| preset | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 是 | 混响模式。 |
 
 **返回值：**
 
@@ -381,7 +388,7 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## setVolume
 
@@ -409,7 +416,7 @@ setVolume(volume: double): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 音量值范围为[0.0, 1.0]。 |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 音量值范围为[0.0, 1.0]。 |
 
 **返回值：**
 
@@ -421,5 +428,5 @@ setVolume(volume: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, form 0.0 to 1.0. |
+| 6800101 | Parameter verification failed, form 0.0 to 1.0. |
 

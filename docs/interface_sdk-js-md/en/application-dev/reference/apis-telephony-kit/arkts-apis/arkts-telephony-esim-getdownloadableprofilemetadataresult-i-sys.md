@@ -12,6 +12,12 @@ Result the metadata for a downloadableProfile.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## downloadableProfile
 
 ```TypeScript
@@ -20,7 +26,7 @@ downloadableProfile: DownloadableProfile
 
 Information about a profile which is downloadable to an eUICC using.
 
-**Type:** DownloadableProfile
+**Type:** [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)
 
 **Since:** 18
 
@@ -80,7 +86,7 @@ pprType: int
 
 The type of profile policy rule.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -100,7 +106,7 @@ profileClass: ProfileClass
 
 Profile class for the profile.
 
-**Type:** ProfileClass
+**Type:** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
 **Since:** 18
 
@@ -140,7 +146,7 @@ responseResult: ResultCode
 
 Gets the result of the operation.
 
-**Type:** ResultCode
+**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
 
 **Since:** 18
 
@@ -180,7 +186,7 @@ solvableErrors: SolvableErrors
 
 Gets the solvable errors.
 
-**Type:** SolvableErrors
+**Type:** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
 **Since:** 18
 

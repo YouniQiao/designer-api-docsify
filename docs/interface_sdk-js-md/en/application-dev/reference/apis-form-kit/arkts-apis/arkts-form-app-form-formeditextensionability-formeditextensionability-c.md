@@ -1,9 +1,9 @@
 # FormEditExtensionAbility
 
-The **FormEditExtensionAbility** module, inherited from  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, provides the widget editing function.
+The **FormEditExtensionAbility** module, inherited from   
+[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), provides the widget editing function.
 
-**Inheritance/Implementation:** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
+**Inheritance/Implementation:** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
 **Since:** 18
 
@@ -13,6 +13,12 @@ The **FormEditExtensionAbility** module, inherited from
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { FormEditExtensionAbility } from 'kits/@kit.FormKit';
+```
+
 ## context
 
 ```TypeScript
@@ -21,7 +27,7 @@ context: FormEditExtensionContext
 
 Indicates configuration information about a form edit extension ability context.
 
-**Type:** FormEditExtensionContext
+**Type:** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
 
 **Since:** 18
 
@@ -41,7 +47,7 @@ formEditContext: FormEditExtensionContext
 
 Indicates configuration information about a form edit extension ability context.
 
-**Type:** FormEditExtensionContext
+**Type:** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
 
 **Since:** 23
 

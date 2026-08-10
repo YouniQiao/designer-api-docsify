@@ -1,5 +1,11 @@
 # bindDeviceDriver
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## bindDeviceDriver
 
 ```TypeScript
@@ -7,7 +13,7 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
     callback: AsyncCallback<RemoteDeviceDriver>): void
 ```
 
-根据queryDevices()返回的设备信息绑定设备。需要调用[deviceManager.queryDevices()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取设备信息以及device。
+根据queryDevices()返回的设备信息绑定设备。需要调用[deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获取设备信息以及device。
 
 **起始版本：** 11
 
@@ -28,18 +34,18 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过queryDevices获得。 |
-| onDisconnect | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RemoteDeviceDriver&gt; | 是 | 回调函数。当绑定设备驱动成功时，err为undefined，data为包括设备ID和远程对象的 [RemoteDeviceDriver]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对象；否则为错误对象。 |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RemoteDeviceDriver&gt; | 是 | 回调函数。当绑定设备驱动成功时，err为undefined，data为包括设备ID和远程对象的 [RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 201 | The permission check failed. |
+| 22900001 | ExternalDeviceManager service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';
@@ -68,7 +74,7 @@ try {
 function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<RemoteDeviceDriver>
 ```
 
-根据queryDevices()返回的设备信息绑定设备。需要调用[deviceManager.queryDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取设备信息以及device。
+根据queryDevices()返回的设备信息绑定设备。需要调用[deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获取设备信息以及device。
 
 **起始版本：** 11
 
@@ -89,7 +95,7 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过queryDevices获得。 |
-| onDisconnect | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
 
 **返回值：**
 
@@ -101,11 +107,11 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 201 | The permission check failed. |
+| 22900001 | ExternalDeviceManager service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

@@ -4,7 +4,7 @@
 type OnAtomicServiceRequestSuccessFn = (appId: string) => void
 ```
 
-Notify the success result of openAtomicService.
+打开原子化服务成功时的回调函数。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Notify the success result of openAtomicService.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Globally unique identifier of an atomicservice, which is allocated by the cloud.  |
+| appId | string | Yes | 被拉起原子化服务的appId。 |
 

@@ -1,5 +1,11 @@
 # startDiscoverDevices
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## startDiscoverDevices
 
 ```TypeScript
@@ -28,15 +34,15 @@ Discover Wi-Fi P2P devices.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	wifi.startDiscoverDevices();	
+  wifi.startDiscoverDevices();  
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

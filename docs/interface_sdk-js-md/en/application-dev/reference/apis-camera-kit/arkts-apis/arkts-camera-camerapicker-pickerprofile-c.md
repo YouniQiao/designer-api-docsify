@@ -1,6 +1,6 @@
 # PickerProfile
 
-Defines the configuration information about the camera picker.
+相机选择器的配置信息。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Defines the configuration information about the camera picker.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { cameraPicker } from 'kits/@kit.CameraKit';
+```
+
 ## cameraPosition
 
 ```TypeScript
 cameraPosition: camera.CameraPosition
 ```
 
-Camera position.
+相机的位置。
 
 **Type:** camera.CameraPosition
 
@@ -36,8 +42,7 @@ Camera position.
 saveUri?: string
 ```
 
-URI for saving the configuration information. For details about the default value, see  
-[File URI]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The **saveUri** parameter is optional. If it is not specified, images and videos are automatically saved to the media library. To prevent them from being saved to the media library, specify a valid file path within your application's sandbox. When you use your own resource path, ensure that the file exists and is writable; otherwise, the save operation fails.
+保存配置信息的uri，默认值请参考[文件uri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。当前saveUri参数为可选参数，若未配置该参数，则拍摄的照片和视频会默认存入媒体库中；若不想将照片和视频存入媒体库中，请自行配置应用沙箱内的文件资源路径，如自行传入资源路径时请确保该文件存在且具备写入权限，否则会保存失败。
 
 **Type:** string
 
@@ -57,9 +62,9 @@ URI for saving the configuration information. For details about the default valu
 videoDuration?: int
 ```
 
-Maximum video duration, in seconds. The default value is **0**, indicating that the maximum video duration is not set.
+录制的最大时长（单位：秒）。默认为0，不设置最大录制时长。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

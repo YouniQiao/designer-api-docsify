@@ -1,6 +1,6 @@
 # AtManager
 
-Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager)获取实例。
 
 **Since:** 8
 
@@ -9,6 +9,12 @@ Program access control management class, providing capabilities such as permissi
 <!--Device-abilityAccessCtrl-interface AtManager--><!--Device-abilityAccessCtrl-interface AtManager-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
+
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
 
 ## checkAccessToken
 
@@ -22,9 +28,9 @@ ArkTS-Sta:
 checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>
 ```
 
-Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned. The developer can decide accordingly whether to directly execute subsequent services, continue to initiate a permission request, or guide the user to go to system settings to modify the authorization status. This API uses a promise to return the result.
+校验应用是否已被授予指定权限。调用成功后，返回当前权限的授权状态，开发者可据此决定直接执行后续业务、继续发起权限申请，或引导用户前往系统设置修改授权状态。使用Promise异步回调。
 
-Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources such as the camera, microphone, or location.
+适用于应用访问相机、麦克风、位置等受保护资源前进行前置权限判断的场景。
 
 **Since:** 9
 
@@ -40,33 +46,40 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. Value constraint: This parameter must be an integer greater than 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| permissionName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | 需要校验的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise used to return the authorization status result. |
+| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12100001 | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create a permission manager instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a third-party application.
-atManager.checkAccessToken(tokenID, 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS').then((data: abilityAccessCtrl.GrantStatus) => {
+// Obtain the bundleInfo of the app
+let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+// Obtain the TokenID of the app
+let tokenID: number = bundleInfo.appInfo.accessTokenId;
+// Set the permission name to be verified
+let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
+// Verify whether the app has been granted the permission
+atManager.checkAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
   console.info(`checkAccessToken success, result: ${data}`);
-}).catch((err: BusinessError) => {
+}).catch((err: BusinessError): void => {
   console.error(`checkAccessToken fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -83,11 +96,11 @@ ArkTS-Sta:
 checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus
 ```
 
-Verifies whether an app has been granted the specified permission, and synchronously returns the authorization status of the permission. The developer can decide accordingly whether to directly execute subsequent service processes, continue to initiate a permission request, or guide the user to go to the settings page to modify the authorization status.
+校验应用是否已被授予指定权限，同步返回该权限的授权状态。开发者可据此决定直接执行后续业务流程，或继续发起权限申请，或引导用户前往设置页修改授权状态。
 
-Compared with [checkAccessToken]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, this API returns the authorization status synchronously, making it suitable for permission verification scenarios that do not require asynchronous processing.
+与[checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)相比，本接口同步返回授权状态，适用于无需异步处理的权限校验场景。
 
-Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources such as the camera, microphone, or location.
+适用于应用访问相机、麦克风、位置等受保护资源前进行前置权限判断的场景。
 
 **Since:** 10
 
@@ -103,30 +116,36 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. Value constraint: This parameter must be an integer greater than 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| permissionName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | 需要校验的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Permission grant state. |
+| [GrantStatus](arkts-ability-bundle-grantstatus-e.md) | 枚举实例，返回授权状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100001 | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
 
+// Create a permission manager instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a third-party application.
+// Obtain the bundleInfo of the app
+let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+// Obtain the TokenID of the app
+let tokenID: number = bundleInfo.appInfo.accessTokenId;
+// Set the permission name to be verified
 let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
+// Synchronously verify whether the app has been granted the permission
 let data: abilityAccessCtrl.GrantStatus = atManager.checkAccessTokenSync(tokenID, permissionName);
 console.info(`Result: ${data}`);
 ```
@@ -137,10 +156,9 @@ console.info(`Result: ${data}`);
 getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 ```
 
-Queries the permission status of the current app and returns the result synchronously. After the call is successful, the status of the current permission is returned. Unlike  
-[checkAccessToken]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, this API does not require passing in the app identity and is only used to query the permission status of the current app itself.
+查询当前应用的权限状态，同步返回结果。调用成功后，返回当前权限的状态。与[checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)不同，本接口无需传入应用身份标识，仅用于查询当前应用自身权限状态。
 
-Applicable to scenarios such as before determining whether to request a permission, confirming the authorization result after a permission request, or re-querying after monitoring a permission status change.
+适用于在判断是否需要请求权限前、权限申请后确认授权结果、或监听到权限状态变化后重新查询等场景。
 
 **Since:** 20
 
@@ -156,33 +174,36 @@ Applicable to scenarios such as before determining whether to request a permissi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the permission whose status is to be queried. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The permission name length cannot exceed 256 characters. |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | 需要查询状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Permission status. |
+| [PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md) | 枚举实例，返回权限状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionName is empty or exceeds 256 characters. |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| 12100001 | Invalid parameter. The permissionName is empty or exceeds 256 characters. |
+| 12100007 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create a permission management instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 try {
+  // Query the permission status of the current app
   let data: abilityAccessCtrl.PermissionStatus = atManager.getSelfPermissionStatus('ohos.permission.CAMERA');
   console.info(`getSelfPermissionStatus success, result: ${data}`);
-} catch(err) {
-  console.error(`getSelfPermissionStatus fail, code: ${err.code}, message: ${err.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getSelfPermissionStatus fail, code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -196,13 +217,13 @@ off(
     ): void
 ```
 
-Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received.
+取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。
 
-This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages.
+在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。
 
-When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch.
-
-This API is usually used in conjunction with [on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to cancel the monitoring relationship created through on.
+> **说明：**
+> 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。
+> 该接口通常与[on](abilityAccessCtrl.AtManager.on)配套使用，用于取消通过on创建的监听关系。
 
 **Since:** 18
 
@@ -218,29 +239,34 @@ This API is usually used in conjunction with [on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selfPermissionStateChange' | Yes | Type of the unsubscription event, which is fixed as 'selfPermissionStateChange', indicating a permission status change event. |
-| permissionList | Array&lt;Permissions&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ subscription (order insensitive). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionStateChangeInfo&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
+| type | 'selfPermissionStateChange' | Yes | 取消订阅事件类型，固定为'selfPermissionStateChange'，权限状态变更事件。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on订阅时的权限列表匹配（不区分顺序）。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | No | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'on'. |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100004 | The API is not used in pair with 'on'. |
+| 12100007 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
 try {
-    atManager.off('selfPermissionStateChange', permissionList);
-} catch(err) {
-    console.error(`Code: ${err.code}, message: ${err.message}`);
+  // Create a permission management instance
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  // Set the permission list to unsubscribe from
+  let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
+  // Unsubscribe from permission status changes
+  atManager.off('selfPermissionStateChange', permissionList);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -253,14 +279,13 @@ offSelfPermissionStateChange(
     ): void
 ```
 
-Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received.
+取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。
 
-This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages.
+在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。
 
-When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch.
+当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。
 
-This API is usually used in conjunction with  
-[onSelfPermissionStateChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to cancel the monitoring relationship created through on.
+该接口通常与[onSelfPermissionStateChange](abilityAccessCtrl.AtManager.onSelfPermissionStateChange)配套使用，用于取消通过onSelfPermissionStateChange创建的监听关系。
 
 **Since:** 23
 
@@ -276,15 +301,15 @@ This API is usually used in conjunction with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;Permissions&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [onSelfPermissionStateChange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ subscription (order insensitive). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionStateChangeInfo&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与onSelfPermissionStateChange 订阅时的权限列表匹配（不区分顺序）。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | No | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'on'. |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| 12100004 | The API is not used in pair with 'on'. |
+| 12100007 | Service exception. |
 
 ## on('selfPermissionStateChange')
 
@@ -296,20 +321,16 @@ on(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app,using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior.When monitoring is no longer needed, call [off]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to unsubscribe.
+订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用[off](abilityAccessCtrl.AtManager.off)取消订阅。
 
-- When this subscription API is called for multiple times, if the subscribed permission lists are the same but  
-the callbacks are different, the subscription is successful.  
-- When this subscription API is called for multiple times, if the subscribed permission lists contain the same  
-subset and the callbacks are the same, the subscription fails.
+- 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。  
+- 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
 
-There are two possible scenarios when the permission status changes from "authorized" to "unauthorized":
-
-- User actively revokes: The system will terminate the corresponding app process.  
-- System actively reclaims: The app process will not be terminated. A typical scenario is the one-time  
-authorization of a security component, which is automatically reclaimed by the system after the authorization period ends.
-
-This API is usually used in conjunction with [off]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.When monitoring is no longer needed, call off to unsubscribe.
+> **说明：**
+> 权限状态由“已授权”变更为“未授权”可能存在两种场景：
+> - 用户主动撤销：系统会终止对应应用进程。
+> - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
+> 该接口通常与[off](abilityAccessCtrl.AtManager.off)配套使用，当不再需要监听时应调用off取消订阅。
 
 **Since:** 18
 
@@ -325,33 +346,39 @@ This API is usually used in conjunction with [off]\_\_\_JSDOC\_LINK\_DESC\_USD\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selfPermissionStateChange' | Yes | Event type. The value is **'selfPermissionStateChange'**, which indicates the changes in the permission states specific to this application alone. |
-| permissionList | Array&lt;Permissions&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionStateChangeInfo&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
+| type | 'selfPermissionStateChange' | Yes | 订阅事件类型，固定为'selfPermissionStateChange'，自身权限状态变更事件。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | Yes | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. |
-| [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100001 | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
+| 12100004 | The API is used repeatedly with the same input. |
+| 12100005 | The registration time has exceeded the limit. |
+| 12100007 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
 try {
-    atManager.on('selfPermissionStateChange', permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
-        console.info(`receive permission state change, result: ${data}`);
-    });
-} catch(err) {
-    console.error(`Code: ${err.code}, message: ${err.message}`);
+  // Create a permission management instance
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  // Set the list of permissions to subscribe to
+  let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
+  // Subscribe to permission status changes
+  atManager.on('selfPermissionStateChange', permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
+    console.info('receive permission state change');
+    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -364,22 +391,18 @@ onSelfPermissionStateChange(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call  
-[offSelfPermissionStateChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to unsubscribe.
+订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用  
+[offSelfPermissionStateChange](abilityAccessCtrl.AtManager.offSelfPermissionStateChange)取消订阅。
 
-- When this subscription API is called for multiple times, if the subscribed permission lists are the same but  
-the callbacks are different, the subscription is successful.  
-- When this subscription API is called for multiple times, if the subscribed permission lists contain the same  
-subset and the callbacks are the same, the subscription fails.
+- 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。  
+- 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
 
-There are two possible scenarios when the permission status changes from "authorized" to "unauthorized":
+权限状态由“已授权”变更为“未授权”可能存在两种场景：
 
-- User actively revokes: The system will terminate the corresponding app process.  
-- System actively reclaims: The app process will not be terminated. A typical scenario is the one-time  
-authorization of a security component, which is automatically reclaimed by the system after the authorization period ends.
+- 用户主动撤销：系统会终止对应应用进程。  
+- 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
 
-This API is usually used in conjunction with  
-[offSelfPermissionStateChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.When monitoring is no longer needed, call offSelfPermissionStateChange to unsubscribe.
+该接口通常与[offSelfPermissionStateChange](abilityAccessCtrl.AtManager.offSelfPermissionStateChange)配套使用，当不再需要监听时应调用offSelfPermissionStateChange取消订阅。
 
 **Since:** 23
 
@@ -395,17 +418,17 @@ This API is usually used in conjunction with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;Permissions&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionStateChangeInfo&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | Yes | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. |
-| [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| 12100001 | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
+| 12100004 | The API is used repeatedly with the same input. |
+| 12100005 | The registration time has exceeded the limit. |
+| 12100007 | Service exception. |
 
 ## openPermissionOnSetting
 
@@ -413,11 +436,10 @@ This API is usually used in conjunction with
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-Used by [UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_/  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to bring up the permission settings page. After the call is successful, the permission settings page will be opened. After the user operates on the page, the user's selection result on the settings page will be returned. This API uses a promise to return the result.
+用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
 
-Applicable to scenarios where  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_type permissions cannot be applied for through the normal authorization dialog box and the user must be guided to enter system settings to complete authorization. manual\_settings type permissions are permissions that can only be manually enabled by the user in system settings and cannot be directly applied for through the normal authorization dialog box.
+适用于 [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权)类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
 
 **Since:** 22
 
@@ -433,24 +455,24 @@ Applicable to scenarios where
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the UIAbility or UIExtensionAbility requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to open the settings page. |
-| permission | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the permission for which the settings page needs to be opened. If an invalid permission or a permission not declared in module.json is passed in, error code 12100001 is returned. Only permissions of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ type are supported. If a permission of another type is passed in, error code 12100014 is returned. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The permission name cannot exceed 256 characters. |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法打开设置页面。 |
+| permission | [Permissions](arkts-ability-permissions-t.md) | Yes | 需要跳转设置页处理的权限名。传入无效或未在module.json中声明的权限时返回错误码12100001；仅支持授权方式为[manual_settings](../../../security/AccessToken/app -permission-mgmt-overview.md#manual_settings手动设置授权)类型的权限，传入其他类型权限时返回错误码12100014。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SelectedResult&gt; | Promise used to return the user's selection result on the settings page. |
+| Promise&lt;SelectedResult&gt; | Promise对象，返回用户在设置页面中的选择结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission is invalid or not declared in the module.json file. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
-| [12100014](../errorcode-access-token.md#12100014-unexpected-permission) | Unexpected permission. The permission is not a manual\_\_\_ESCAPED\_UNDERSCORE\_\_\_settings permission. |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
+| 12100014 | Unexpected permission. The permission is not a manual_settings permission. |
+| 12100001 | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission is invalid or not declared in the module.json file. |
 
-**Example**
+## Examples
 
 For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -458,12 +480,14 @@ For details about how to obtain the context in the example, see [Obtaining the C
 import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create a permission manager instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 // Obtain the context within the component.
 let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// Launch the pop-up window for redirecting to the settings page
 atManager.openPermissionOnSetting(context, 'ohos.permission.HOOK_KEY_EVENT').then((data: abilityAccessCtrl.SelectedResult) => {
   console.info(`openPermissionOnSetting success, result: ${data}`);
-}).catch((err: BusinessError) => {
+}).catch((err: BusinessError): void => {
   console.error(`openPermissionOnSetting fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -474,17 +498,17 @@ atManager.openPermissionOnSetting(context, 'ohos.permission.HOOK_KEY_EVENT').the
 requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 ```
 
-Used by UIAbility/UIExtensionAbility to bring up the global switch settings dialog box. After the call is successful, if the global switch is off, the global switch settings interface will pop up for the user to operate. If the global switch is already on, the dialog box will not be brought up and **true** will be returned.This API uses a promise to return the result.
+用于UIAbility/UIExtensionAbility拉起全局开关设置弹窗。调用成功后，若全局开关处于关闭状态，则弹出全局开关设置界面供用户操作；若全局开关已开启，则不拉起弹窗并返回true。使用Promise异步回调。
 
-Applicable to scenarios that depend on system-level global switches (such as camera, microphone, and location)being turned on.
+适用于依赖系统级全局开关（如相机、麦克风、定位）开启的场景。
 
-When an app needs to use functions such as the camera, microphone, or location that require global switch control, if the corresponding global switch is turned off, the app can bring up this dialog box to request the user to turn on the corresponding function. If the current global switch status is on, the dialog box will not be brought up.
+当应用需要使用相机、麦克风或定位等需要全局开关管控的功能时，如果对应的全局开关被关闭，应用可拉起此弹窗请求用户开启对应功能。如果当前全局开关的状态为开启，则不拉起弹窗。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP5--&gt;
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![requestGlobalSwitch](../../../reference/apis-ability-kit/figures/requestGlobalSwitch.png)
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+&lt;!--RP5End--&gt;
 
 **Since:** 12
 
@@ -502,23 +526,23 @@ When an app needs to use functions such as the camera, microphone, or location t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the UIAbility or UIExtensionAbility that requests the global switch. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the type of global switch to request to enable. |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | 请求全局开关的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉 起弹窗。 |
+| type | [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md) | Yes | 指定需要请求开启的全局开关类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates the current global switch is enabled, and **false** indicates the current global switch is still disabled. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前全局开关处于开启状态；返回false表示当前全局开关仍处于关闭状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The type of global switch is not supported. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. An error occurs when creating the pop-up window or obtaining user operation result. |
-| [12100013](../errorcode-access-token.md#12100013-global-switch-enabled) | The specific global switch is already open. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining user operation result. |
+| 12100013 | The specific global switch is already open. |
+| 12100001 | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The type of global switch is not supported. |
 
 ## requestPermissionOnSetting
 
@@ -526,19 +550,19 @@ When an app needs to use functions such as the camera, microphone, or location t
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-Used by [UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_/  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to bring up the permission settings dialog box for a second time, and returns an array of authorization statuses.This API uses a promise to return the result.
+用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异步回调。
 
-Applicable to scenarios where the user has already denied the permission grant in the first dialog box and needs to continue applying for the permission through the settings page.
+适用于用户在首次弹窗中已拒绝过该权限授予，需要通过设置页面继续申请权限的场景。
 
-Before calling this API, the app needs to call  
-[requestPermissionsFromUser]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ first.If the user has already authorized in the first dialog box, calling this API will not bring up the authorization dialog box.
+在调用此接口前，应用需要先调用  
+[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser)。如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_
+&lt;!--RP4--&gt;
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![requestPermissionOnSetting](../../../reference/apis-ability-kit/figures/requestPermissionOnSetting.png)
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_
+&lt;!--RP4End--&gt;
 
 **Since:** 12
 
@@ -556,24 +580,25 @@ Before calling this API, the app needs to call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the UIAbility or UIExtensionAbility requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the pop-up window. |
-| permissionList | Array&lt;Permissions&gt; | Yes | List of permission names. This array cannot be empty. Only user\_\_\_ESCAPED\_UNDERSCORE\_\_\_grant permissions that have been declared and for which the user has revoked authorization can be passed in, and the permissions passed in must belong to the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The permission name length cannot exceed 256 characters. |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹 窗。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 权限名列表。该数组不能为空，仅支持传入已声明且用户已撤销授权的user_grant权限，且传入权限需属于同一 [权限组](../../../security/AccessToken/app-permission-group-list.md)。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;GrantStatus&gt;&gt; | Promise used to return an array of authorization statuses. Each element in the array corresponds to the authorization result of the respective permission in permissionList. |
+| Promise&lt;Array&lt;GrantStatus&gt;&gt; | Promise对象，返回授权状态数组，数组中每个元素对应permissionList中相应权限的授权结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission list contains the permission that is not declared in the module.json file; 3. The permission list is invalid because the permissions in it do not belong to the same permission group; 4. The permission list contains one or more system\_\_\_ESCAPED\_UNDERSCORE\_\_\_grant permissions. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
-| [12100011](../errorcode-access-token.md#12100011-all-requested-permissions-granted) | All permissions in the permission list have been granted. |
-| [12100012](../errorcode-access-token.md#12100012-not-all-permissions-are-rejected-by-the-user) | The permission list contains the permission that has not been revoked by the user. |
-| [12100014](../errorcode-access-token.md#12100014-unexpected-permission) | Unexpected permission. You cannot request this type of permission from users via a pop-up window.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 21 and later |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
+| 12100010 | The request already exists.<br>**Applicable version:** 12 - 20 |
+| 12100011 | All permissions in the permission list have been granted. |
+| 12100012 | The permission list contains the permission that has not been revoked by the user. |
+| 12100014 | Unexpected permission. You cannot request this type of permission from users via a pop-up window.<br>**Applicable version:** 21 and later |
+| 12100001 | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission list contains the permission that is not declared in the module.json file; 3. The permission list is invalid because the permissions in it do not belong to the same permission group; 4. The permission list contains one or more system_grant permissions. |
 
 ## requestPermissionsFromUser
 
@@ -581,19 +606,20 @@ Before calling this API, the app needs to call
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-Used by \_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_6\_\_\_ to bring up a dialog box to request \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, and returns the authorization result of the permissions requested this time. This API uses an asynchronous callback to return the result.
+用于&lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&lt;!--RP1End--&gt;拉起弹窗请求  
+[用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。
 
-Applicable to scenarios where an app proactively applies for  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_permissions from the user before accessing protected resources for the first time.
+适用于应用首次访问受保护资源前主动向用户申请  
+[user_grant](../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant用户授权) 权限的场景。
 
-If the user denies authorization, the authorization dialog box cannot be brought up again through this API.The developer can guide the user to go to the system settings interface for manual authorization, or call  
-[requestPermissionOnSetting]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ to bring up the permission settings dialog box to guide the user to complete authorization.
+如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用  
+[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_7\_\_\_
+&lt;!--RP3--&gt;
 
-!\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_
+![requestPermissionsFromUser](../../../reference/apis-ability-kit/figures/requestPermissionsFromUser.png)
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_8\_\_\_
+&lt;!--RP3End--&gt;
 
 **Since:** 9
 
@@ -611,19 +637,19 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_UIAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ requesting the permission. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
-| permissionList | Array&lt;Permissions&gt; | Yes | List of permission names. It is recommended to pass in only the sensitive permissions necessary for the current business scenario, avoiding requesting too many permissions at once. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The minimum length is 1. Value constraint: The permission name can contain a maximum of 256 characters. |
-| requestCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionRequestResult&gt; | Yes | Callback function. After the call is complete, error information is returned through **err**, and the permission request result object is returned through **data**. The developer can determine whether the user has authorized, whether a dialog box has been displayed, and the reason for failure based on the permission request result. |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | 请求权限的&lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt;的Context。 &lt;br&gt;若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。 &lt;br&gt;最小长度为1。取值约束：权限名长度不能超过256个字符。 |
+| requestCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | Yes | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. An error occurs when creating the pop-up window or obtaining user operation results. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining user operation results. |
+| 12100001 | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
 
-**Example**
+## Examples
 
 For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../security/AccessToken/request-user-authorization.md).
 
@@ -631,9 +657,11 @@ For details about the process and example of applying for user authorization, se
 import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create a permission manager instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 // Obtain the context within the component.
 let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// Request user authorization
 atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: BusinessError, data: PermissionRequestResult) => {
   if (err) {
     console.error(`requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`);
@@ -653,12 +681,14 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-Used by \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_ to bring up a dialog box to request \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, and returns the authorization result of the permissions requested this time. This API uses a promise to return the result.
+用于&lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&lt;!--RP1End--&gt;拉起弹窗请求  
+[用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。
 
-Applicable to scenarios where an app proactively applies for user\_grant permissions from the user before accessing protected resources for the first time.
+适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。
 
-If the user denies authorization, the authorization dialog box cannot be brought up again through this API.The developer can guide the user to go to the system settings interface for manual authorization, or call  
-[requestPermissionOnSetting]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to bring up the permission settings dialog box to guide the user to complete authorization.
+> **说明：**
+> 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用
+> [requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
 
 **Since:** 9
 
@@ -676,24 +706,24 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_UIAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
-| permissionList | Array&lt;Permissions&gt; | Yes | List of permission names. This array cannot be empty. It is recommended to pass in only the sensitive permissions necessary for the current business scenario and avoid requesting too many permissions at once. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The minimum length is 1. Value constraint: The length of a permission name cannot exceed 256 characters. |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | 请求权限的&lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt;的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。 &lt;br&gt;最小长度为1。取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PermissionRequestResult&gt; | Promise used to return the permission request result object, which contains information such as the permission array, the authorization result of each permission, whether to show a dialog box, and the failure reason. |
+| Promise&lt;PermissionRequestResult&gt; | Promise对象，返回权限请求结果对象，包含权限数组、每个权限的授权结果、是否展示弹窗以及失败原因等信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result.<br>**Applicable version:** 11 and later |
+| 12100001 | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
 
-**Example**
+## Examples
 
 For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../security/AccessToken/request-user-authorization.md).
 
@@ -701,16 +731,18 @@ For details about the process and example of applying for user authorization, se
 import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create a permission manager instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 // Obtain the context within the component.
 let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// Request user authorization
 atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
   console.info(`requestPermissionsFromUser success, result: ${data}`);
   console.info('requestPermissionsFromUser data permissions:' + data.permissions);
   console.info('requestPermissionsFromUser data authResults:' + data.authResults);
   console.info('requestPermissionsFromUser data dialogShownResults:' + data.dialogShownResults);
   console.info('requestPermissionsFromUser data errorReasons:' + data.errorReasons);
-}).catch((err: BusinessError) => {
+}).catch((err: BusinessError): void => {
   console.error(`requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -727,11 +759,12 @@ ArkTS-Sta:
 verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>
 ```
 
-Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned. The developer can decide accordingly whether to directly execute subsequent services, continue to initiate a permission request, or guide the user to go to system settings to modify the authorization status. This API uses a promise to return the result.
+校验应用是否已被授予指定权限，调用成功后，返回当前权限的授权状态，开发者可据此决定直接执行后续业务、继续发起权限申请，或引导用户前往系统设置修改授权状态。使用Promise异步回调。
 
-Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources.
-    **NOTE**  
-    You are advised to use [checkAccessToken]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+适用于应用访问受保护资源前进行前置权限判断的场景。
+
+> **说明：**
+> 建议使用[checkAccessToken](#checkaccesstoken9)替代。
 
 **Since:** 9
 
@@ -745,27 +778,33 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. Value constraint: This parameter must be an integer greater than 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| permissionName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | 需要校验的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise used to return the authorization status result. |
+| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create a permission manager instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a third-party application.
+// Obtain the bundleInfo of the app
+let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+// Obtain the TokenID of the app
+let tokenID: number = bundleInfo.appInfo.accessTokenId;
+// Set the permission name to be verified
 let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
+// Verify whether the app has been granted the permission
 atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
   console.info(`verifyAccessToken success, result: ${data}`);
-}).catch((err: BusinessError) => {
+}).catch((err: BusinessError): void => {
   console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -776,10 +815,10 @@ atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCt
 verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 ```
 
-Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned, and the developer can decide on subsequent operations accordingly. This API uses a promise to return the result.
-    **NOTE**  
-    This API is supported since API version 8 and deprecated since API version 9. It is recommended to use  
-    [checkAccessToken]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+校验应用是否已被授予指定权限。调用成功后，返回当前权限的授权状态，开发者可据此决定后续操作。使用Promise异步回调。
+
+> **说明：**
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[checkAccessToken](#checkaccesstoken9)替代。
 
 **Since:** 8
 
@@ -797,26 +836,33 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. Value constraint: This parameter must be an integer greater than 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| permissionName | string | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | number | Yes | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | string | Yes | 需要校验的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise used to return the authorization status result. |
+| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create a permission manager instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a third-party application.
-atManager.verifyAccessToken(tokenID, 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS').then((data: abilityAccessCtrl.GrantStatus) => {
+// Obtain the bundleInfo of the app
+let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+// Obtain the TokenID of the app
+let tokenID: number = bundleInfo.appInfo.accessTokenId;
+// Set the permission name to be verified
+let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
+// Verify whether the app has been granted the permission
+atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
   console.info(`verifyAccessToken success, result: ${data}`);
-}).catch((err: BusinessError) => {
+}).catch((err: BusinessError): void => {
   console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -833,11 +879,11 @@ ArkTS-Sta:
 verifyAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus
 ```
 
-Verifies whether an app has been granted the specified permission, and synchronously returns the authorization status of the permission. The developer can decide accordingly whether to directly execute subsequent service processes, continue to initiate a permission request, or guide the user to go to system settings to modify the authorization status.
+校验应用是否已被授予指定权限，同步返回该权限的授权状态。开发者可据此决定直接执行后续业务流程，或继续发起权限申请，或引导用户前往系统设置修改授权状态。
 
-Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources such as the camera, microphone, or location.
+适用于应用访问相机、麦克风、位置等受保护资源前进行前置权限判断的场景。
 
-It is recommended to use [checkAccessTokenSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+建议使用[checkAccessTokenSync](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstokensync)替代。
 
 **Since:** 9
 
@@ -851,34 +897,43 @@ It is recommended to use [checkAccessTokenSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. Value constraint: This parameter must be an integer greater than 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| permissionName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的 [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | 需要校验的权限名称。权限名长度不能超过256个字符，传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Permission grant state. |
+| [GrantStatus](arkts-ability-bundle-grantstatus-e.md) | 枚举实例，返回授权状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100001 | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
+// Create a permission manager instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a third-party application.
+// Obtain the bundleInfo of the app
+let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+// Obtain the TokenID of the app
+let tokenID: number = bundleInfo.appInfo.accessTokenId;
 try {
-  let data: abilityAccessCtrl.GrantStatus = atManager.verifyAccessTokenSync(tokenID, 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS');
+  // Set the permission name to be verified
+  let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
+  // Synchronously verify whether the app has been granted the permission
+  let data: abilityAccessCtrl.GrantStatus = atManager.verifyAccessTokenSync(tokenID, permissionName);
   console.info(`verifyAccessTokenSync success, result: ${data}`);
-} catch(err) {
-  console.error(`verifyAccessTokenSync fail, code: ${err.code}, message: ${err.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`verifyAccessTokenSync fail, code: ${error.code}, message: ${error.message}`);
 }
 ```
 

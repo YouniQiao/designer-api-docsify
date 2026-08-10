@@ -1,5 +1,11 @@
 # setDate
 
+## 导入模块
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setDate
 
 ```TypeScript
@@ -27,7 +33,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | date | Date | 是 | 目标日期。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -35,7 +41,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -96,7 +102,7 @@ function setDate(date: Date): Promise<void>
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

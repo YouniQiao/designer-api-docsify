@@ -4,7 +4,7 @@
 declare type EditableTextOnChangeCallback = (value: string, previewText?: PreviewText, options?: TextChangeOptions) => void
 ```
 
-Represents the callback triggered when the content in the text box changes.
+输入内容发生变化时，触发该回调。
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ Represents the callback triggered when the content in the text box changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Text displayed in the text box.  |
-| previewText | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Information about the preview text, including its start position and text content.  |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Information about the text change, including the selection range, text displayed in the text box, and preview text. |
+| value | string | Yes | Text displayed in the text box. |
+| previewText | [PreviewText](arkts-arkui-previewtext-i.md) | No | Information about the preview text, including its start position and text content. |
+| options | [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md) | No | Information about the text change, including the selection range, text displayed in the text box, and preview text. |
 

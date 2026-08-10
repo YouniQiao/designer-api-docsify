@@ -1,6 +1,6 @@
 # KeyframeState
 
-Provides keyframe configuration options.
+设置关键帧选项。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Provides keyframe configuration options.
 event: () => void
 ```
 
-Closure function of the state at the time of the keyframe, that is, the state to be reached at the time of the keyframe.
+指定在该关键帧时刻状态的闭包函数，即在该关键帧时刻要达到的状态。
 
 **Since:** 11
 
@@ -36,22 +36,22 @@ Closure function of the state at the time of the keyframe, that is, the state to
 curve?: Curve | string | ICurve
 ```
 
-Animation curve used by the keyframe.
+该关键帧使用的动画曲线。
 
-You are advised to specify the curve using the **Curve** or **ICurve** type.
+推荐以Curve或ICurve形式指定。
 
-For the string type, this parameter indicates an animation interpolation curve. For available values, see the  
-**curve** parameter in [AnimateParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+当类型为string时，为动画插值曲线，取值参考  
+[AnimateParam](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#animateparam对象说明)的curve参数。
 
-Default value: **Curve.EaseInOut**
+默认值：Curve.EaseInOut
 
-**NOTE**
+**说明：**
 
-Because the [springMotion]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,  
-[responsiveSpringMotion]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and  
-[interpolatingSpring]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ curves do not have effective duration settings, they are not supported.
+由于[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion)、  
+[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)、  
+[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)曲线时长不生效，故不支持这三种曲线。
 
-**Type:** Curve \| string \| ICurve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
 
 **Default:** Curve.EaseInOut
 
@@ -73,14 +73,15 @@ Because the [springMotion]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,
 duration: number
 ```
 
-Duration of the keyframe animation, in ms.
+该段关键帧动画的持续时间，单位为毫秒。
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
-**NOTE**
+**说明：**
 
-- If this parameter is set to a value less than 0, the value **0** is used.  
-- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
+- 设置小于0的值时按0处理。
+
+- 设置浮点型的值时，向下取整。例如，设置值为1.2，按照1处理。
 
 **Type:** number
 

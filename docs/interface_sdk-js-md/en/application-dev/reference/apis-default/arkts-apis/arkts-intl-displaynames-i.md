@@ -9,7 +9,7 @@ of(code: string): string | undefined
 ```
 
 Receives a code and returns a string based on the locale and options provided when instantiating  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+[`Intl.DisplayNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -34,9 +34,9 @@ resolvedOptions(): ResolvedDisplayNamesOptions
 ```
 
 Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ object.
+[`Intl/DisplayNames`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) object.
 
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions).
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -46,5 +46,5 @@ Returns a new object with properties reflecting the locale and style formatting 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ResolvedDisplayNamesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolveddisplaynamesoptions-i.md) |  |
 

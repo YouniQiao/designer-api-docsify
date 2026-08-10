@@ -1,12 +1,18 @@
 # getSupportedCloudModel
 
+## Modules to Import
+
+```TypeScript
+import { intelligence } from 'kits/@kit.ArkData';
+```
+
 ## getSupportedCloudModel
 
 ```TypeScript
 function getSupportedCloudModel(): Promise<Array<CloudModelInfo>>
 ```
 
-Obtains the supported cloud embedding models.
+获取支持的云侧模型信息。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -22,5 +28,5 @@ Obtains the supported cloud embedding models.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CloudModelInfo&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;CloudModelInfo&gt;&gt; | Promise对象，返回支持的云侧模型信息。 |
 

@@ -1,6 +1,6 @@
 # WhiteBalance
 
-WhiteBalance继承自[WhiteBalanceQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。
 
 提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
 
@@ -13,6 +13,12 @@ WhiteBalance继承自[WhiteBalanceQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 <!--Device-camera-interface WhiteBalance extends WhiteBalanceQuery--><!--Device-camera-interface WhiteBalance extends WhiteBalanceQuery-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getColorTint
 
@@ -44,13 +50,13 @@ getColorTint(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回当前白平衡色调调节值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前白平衡色调调节值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getWhiteBalance
 
@@ -80,13 +86,14 @@ getWhiteBalance(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回当前白平衡值，单位为K（Kelvin，温度单位）。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前白平衡值，单位为K（Kelvin，温度单位）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 12 - 19 |
 
 ## getWhiteBalanceGains
 
@@ -110,14 +117,14 @@ Gets RGB white balance gain values.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The current RGB white balance gain values. |
+| [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) | The current RGB white balance gain values. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## getWhiteBalanceMode
 
@@ -141,13 +148,14 @@ getWhiteBalanceMode(): WhiteBalanceMode
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 获取当前白平衡模式。若接口调用失败，返回undefined。 |
+| [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 获取当前白平衡模式。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 12 - 19 |
 
 ## setColorTint
 
@@ -163,7 +171,7 @@ setColorTint(colorTint: int): void
 
 设置白平衡的色调调节值。
 
-设置之前需要先检查设备支持配置的白平衡色调调节范围，具体方法请参考[getColorTintRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+设置之前需要先检查设备支持配置的白平衡色调调节范围，具体方法请参考[getColorTintRange](arkts-camera-camera-whitebalancequery-i.md#getcolortintrange)。
 
 **起始版本：** 26.0.0
 
@@ -181,13 +189,13 @@ setColorTint(colorTint: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorTint | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 设置手动白平衡色调调节值。 |
+| colorTint | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 设置手动白平衡色调调节值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## setWhiteBalance
 
@@ -203,7 +211,7 @@ setWhiteBalance(whiteBalance: int): void
 
 设置手动白平衡值。
 
-设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i.md#getwhitebalancerange)。
 
 **起始版本：** 20
 
@@ -219,14 +227,15 @@ setWhiteBalance(whiteBalance: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| whiteBalance | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 设置手动白平衡值，单位为K（Kelvin，温度单位）。 |
+| whiteBalance | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 设置手动白平衡值，单位为K（Kelvin，温度单位）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 12 - 19 |
 
 ## setWhiteBalanceGains
 
@@ -250,14 +259,14 @@ Sets RGB white balance gain values.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gains | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | RGB white balance gain values. |
+| gains | [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) | 是 | RGB white balance gain values. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## setWhiteBalanceMode
 
@@ -266,7 +275,7 @@ setWhiteBalanceMode(mode: WhiteBalanceMode): void
 ```
 
 设置白平衡模式。设置之前需要先检查设备是否支持指定的白平衡模式，具体方法请参考  
-[isWhiteBalanceModeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[isWhiteBalanceModeSupported](arkts-camera-camera-whitebalancequery-i.md#iswhitebalancemodesupported)。
 
 **起始版本：** 20
 
@@ -282,12 +291,13 @@ setWhiteBalanceMode(mode: WhiteBalanceMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 白平衡模式。 |
+| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 是 | 白平衡模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 12 - 19 |
 

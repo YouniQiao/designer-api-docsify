@@ -1,12 +1,22 @@
 # addRule
 
+## Modules to Import
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addRule
 
 ```TypeScript
 function addRule(rule: bigint): void
 ```
 
-Adds one or more rules. HiChecker detects unexpected operations or gives feedback based on the added rules.
+> **˵����**
+> 
+> ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule)�����
+
+����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м�������
 
 **Since:** 8
 
@@ -24,9 +34,9 @@ Adds one or more rules. HiChecker detects unexpected operations or gives feedbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | Rule to be added. |
+| rule | bigint | Yes | ��Ҫ���ӵĹ��� |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Add a rule.

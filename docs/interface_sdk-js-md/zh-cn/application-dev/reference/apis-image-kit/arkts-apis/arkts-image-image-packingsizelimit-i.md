@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## level
 
 ```TypeScript
@@ -18,7 +24,7 @@ level: AntiAliasingLevel
 
 缩放时采用的缩放算法。默认值是AntiAliasingLevel.NONE。
 
-**类型：** AntiAliasingLevel
+**类型：** [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md)
 
 **起始版本：** 26.0.0
 
@@ -44,7 +50,7 @@ maxSize: Size
 
 单位：像素（px）。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 26.0.0
 

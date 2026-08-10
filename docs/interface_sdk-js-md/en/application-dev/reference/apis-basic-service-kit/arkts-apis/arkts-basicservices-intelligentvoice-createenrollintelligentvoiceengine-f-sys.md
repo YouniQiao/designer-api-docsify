@@ -1,12 +1,18 @@
 # createEnrollIntelligentVoiceEngine (System API)
 
+## Modules to Import
+
+```TypeScript
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createEnrollIntelligentVoiceEngine
 
 ```TypeScript
 function createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEngineDescriptor, callback: AsyncCallback<EnrollIntelligentVoiceEngine>): void
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an asynchronous callback to return the EnrollIntelligentVoiceEngine instance.
+Obtains an {@link EnrollIntelligentVoiceEngine} instance. This method uses an asynchronous callback to return the EnrollIntelligentVoiceEngine instance.
 
 **Since:** 10
 
@@ -24,20 +30,20 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EnrollIntelligentVoiceEngine&gt; | Yes | the callback used to return the EnrollIntelligentVoiceEngine instance. |
+| descriptor | [EnrollIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-enrollintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;EnrollIntelligentVoiceEngine&gt; | Yes | the callback used to return the EnrollIntelligentVoiceEngine instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [22700101](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
-| [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 22700102 | Invalid parameter. |
+| 22700101 | No memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,7 +69,7 @@ intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor, (err: Busi
 function createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEngineDescriptor): Promise<EnrollIntelligentVoiceEngine>
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a promise to return the EnrollIntelligentVoiceEngine instance.
+Obtains an {@link EnrollIntelligentVoiceEngine} instance. This method uses a promise to return the EnrollIntelligentVoiceEngine instance.
 
 **Since:** 10
 
@@ -81,7 +87,7 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
+| descriptor | [EnrollIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-enrollintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
 
 **Return value:**
 
@@ -93,13 +99,13 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [22700101](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
-| [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 22700102 | Invalid parameter. |
+| 22700101 | No memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

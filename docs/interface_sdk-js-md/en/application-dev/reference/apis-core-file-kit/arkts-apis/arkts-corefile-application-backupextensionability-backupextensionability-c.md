@@ -1,6 +1,6 @@
 # BackupExtensionAbility
 
-Class to be override for backup extension ability.
+备份恢复扩展能力。应用可通过该类实现自定义备份、恢复、进度上报和安全退出逻辑。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Class to be override for backup extension ability.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
+## Modules to Import
+
+```TypeScript
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
+```
+
 ## onBackup
 
 ```TypeScript
 onBackup(): void
 ```
 
-Callback to be called when the backup procedure is started.Developer could override this method to build files to be backup.
+Extension生命周期回调，在执行备份数据时回调，由开发者实现自定义备份数据处理。
 
 **Since:** 10
 
@@ -28,7 +34,7 @@ Callback to be called when the backup procedure is started.Developer could overr
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
-**Example**
+## Examples
 
 ```TypeScript
 class BackupExt extends BackupExtensionAbility {
@@ -44,7 +50,7 @@ class BackupExt extends BackupExtensionAbility {
 onBackupEx(backupInfo: string): string | Promise<string>
 ```
 
-Callback to be called when the backup procedure is started.Developer could override this method to restore.
+备份恢复框架在备份时向应用传递扩展参数，由开发者实现自定义备份处理。
 
 **Since:** 12
 
@@ -60,15 +66,15 @@ Callback to be called when the backup procedure is started.Developer could overr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupInfo | string | Yes | BackupInfo to be backup, the param is a JSON string, it is an array, each array element includes detail and type now. |
+| backupInfo | string | Yes | 备份时框架传递给应用的扩展信息，参数为JSON格式字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return backup result, support promise, the result is a JSON string, it includes type, errorCode and errorInfo now. |
+| string | 应用执行自定义备份操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -137,7 +143,7 @@ class BackupExt extends BackupExtensionAbility {
 onProcess(): string
 ```
 
-Callback to be called when getting backup/restore process info.Developer could override this method to provide the backup/restore process info.
+返回应用执行备份或恢复业务的进度信息。
 
 **Since:** 12
 
@@ -153,9 +159,9 @@ Callback to be called when getting backup/restore process info.Developer could o
 
 | Type | Description |
 | --- | --- |
-| string | Return the backup/restore process info. |
+| string | 应用处理数据的进度信息，返回值为JSON格式字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BackupExtensionAbility } from '@kit.CoreFileKit';
@@ -243,7 +249,7 @@ ArkTS-Sta:
 onRelease(scenario: int): Promise<void>
 ```
 
-Callback to be called before extension ability exits.Developer could override this method to clean abnormal data.
+备份恢复框架安全退出回调，应用可在备份或恢复完成后清理临时文件。
 
 **Since:** 20
 
@@ -259,15 +265,15 @@ Callback to be called before extension ability exits.Developer could override th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scenario | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The value 1 indicates backup and the value 2 indicates restoration. |
+| scenario | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前操作场景，值为1表示备份，值为2表示恢复。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The following describes an example of removing files.
@@ -306,7 +312,7 @@ class BackupExt extends BackupExtensionAbility {
 onRestore(bundleVersion: BundleVersion): void
 ```
 
-Callback to be called when the restore procedure is started.Developer could override this method to restore from copies for various bundle versions.
+Extension生命周期回调，在执行恢复数据时回调，由开发者提供扩展的恢复数据操作。
 
 **Since:** 10
 
@@ -322,9 +328,9 @@ Callback to be called when the restore procedure is started.Developer could over
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleVersion | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle version to be restore. |
+| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | 恢复时应用数据所在的版本信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -342,7 +348,7 @@ class BackupExt extends BackupExtensionAbility {
 onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>
 ```
 
-Callback to be called when the restore procedure is started.Developer could override this method to restore.
+Extension生命周期回调，在执行恢复数据时回调，由开发者实现自定义恢复数据处理。
 
 **Since:** 12
 
@@ -358,16 +364,16 @@ Callback to be called when the restore procedure is started.Developer could over
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleVersion | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle version to be restore. |
-| restoreInfo | string | Yes | RestoreInfo to be restore, the param is a JSON string, it is an array, each array element includes detail and type now. |
+| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | 恢复时应用数据所在的版本信息。 |
+| restoreInfo | string | Yes | 恢复时框架传递给应用的扩展信息，参数为JSON格式字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return restore result, support promise. the result is a JSON string, it includes type, errorCode and errorInfo now. |
+| string | 应用执行自定义恢复操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -436,9 +442,9 @@ class BackupExt extends BackupExtensionAbility {
 context: BackupExtensionContext
 ```
 
-Indicates backup extension ability context.
+BackupExtensionAbility的上下文环境，继承自ExtensionContext。
 
-**Type:** BackupExtensionContext
+**Type:** [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
 
 **Since:** 12
 

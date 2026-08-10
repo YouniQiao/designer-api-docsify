@@ -6,7 +6,7 @@
 function createNode(context: UIContext, nodeType: 'Text'): Text
 ```
 
-Creates a FrameNode of the **Text** type.
+创建Text类型的FrameNode节点。使用typeNode创建Text节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 **Since:** 12
 
@@ -24,14 +24,14 @@ Creates a FrameNode of the **Text** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Text' | Yes | 创建Text类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Text** type. |
+| [Text](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-text-c.md) | Text类型的FrameNode节点。 |
 
 
 ## createNode
@@ -40,7 +40,7 @@ Creates a FrameNode of the **Text** type.
 function createNode(context: UIContext, nodeType: 'Column'): Column
 ```
 
-Creates a FrameNode of the **Column** type.
+创建Column类型的FrameNode节点。
 
 **Since:** 12
 
@@ -58,14 +58,14 @@ Creates a FrameNode of the **Column** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Column' | Yes | Node type. Set to **'Column'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Column' | Yes | 创建Column类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Column** type. |
+| [Column](arkts-arkui-typenode-column-t.md) | Column类型的FrameNode节点。 |
 
 
 ## createNode
@@ -74,7 +74,7 @@ Creates a FrameNode of the **Column** type.
 function createNode(context: UIContext, nodeType: 'Row'): Row
 ```
 
-Creates a FrameNode of the Row type.
+创建Row类型的FrameNode节点。
 
 **Since:** 12
 
@@ -92,14 +92,14 @@ Creates a FrameNode of the Row type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Row' | Yes | Node type. Set to **'Row'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Row' | Yes | 创建Row类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Row** type. |
+| [Row](arkts-arkui-typenode-row-t.md) | Row类型的FrameNode节点。 |
 
 
 ## createNode
@@ -108,7 +108,7 @@ Creates a FrameNode of the Row type.
 function createNode(context: UIContext, nodeType: 'Stack'): Stack
 ```
 
-Creates a FrameNode of the **Stack** type.
+创建Stack类型的FrameNode节点。
 
 **Since:** 12
 
@@ -126,14 +126,14 @@ Creates a FrameNode of the **Stack** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Stack' | Yes | Node type. Set to **'Stack'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Stack' | Yes | 创建Stack类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Stack** type. |
+| [Stack](arkts-arkui-typenode-stack-t.md) | Stack类型的FrameNode节点。 |
 
 
 ## createNode
@@ -142,7 +142,7 @@ Creates a FrameNode of the **Stack** type.
 function createNode(context: UIContext, nodeType: 'GridRow'): GridRow
 ```
 
-Creates a FrameNode of the **GridRow** type.
+创建GridRow类型的FrameNode节点。
 
 **Since:** 12
 
@@ -160,14 +160,14 @@ Creates a FrameNode of the **GridRow** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'GridRow' | Yes | Node type. Set to **'GridRow'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'GridRow' | Yes | 创建GridRow类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **GridRow** type. |
+| [GridRow](arkts-arkui-typenode-gridrow-t.md) | GridRow类型的FrameNode节点。 |
 
 
 ## createNode
@@ -176,7 +176,7 @@ Creates a FrameNode of the **GridRow** type.
 function createNode(context: UIContext, nodeType: 'GridCol'): GridCol
 ```
 
-Creates a FrameNode of the **GridCol** type.
+创建GridCol类型的FrameNode节点。
 
 **Since:** 12
 
@@ -194,14 +194,14 @@ Creates a FrameNode of the **GridCol** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'GridCol' | Yes | Node type. Set to **'GridCol'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'GridCol' | Yes | 创建GridCol类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **GridCol** type. |
+| [GridCol](arkts-arkui-typenode-gridcol-t.md) | GridCol类型的FrameNode节点。 |
 
 
 ## createNode
@@ -210,7 +210,7 @@ Creates a FrameNode of the **GridCol** type.
 function createNode(context: UIContext, nodeType: 'Flex'): Flex
 ```
 
-Creates a FrameNode of the Flex type.
+创建Flex类型的FrameNode节点。
 
 **Since:** 12
 
@@ -228,14 +228,14 @@ Creates a FrameNode of the Flex type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Flex' | Yes | Node type. Set to **'Flex'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Flex' | Yes | 创建Flex类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Flex** type. |
+| [Flex](arkts-arkui-typenode-flex-t.md) | Flex类型的FrameNode节点。 |
 
 
 ## createNode
@@ -244,7 +244,7 @@ Creates a FrameNode of the Flex type.
 function createNode(context: UIContext, nodeType: 'Swiper'): Swiper
 ```
 
-Creates a FrameNode of the **Swiper** type.
+创建Swiper类型的FrameNode节点。
 
 **Since:** 12
 
@@ -262,14 +262,14 @@ Creates a FrameNode of the **Swiper** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Swiper' | Yes | 创建Swiper类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Swiper** type. |
+| [Swiper](arkts-arkui-typenode-swiper-t.md) | Swiper类型的FrameNode节点。 |
 
 
 ## createNode
@@ -278,7 +278,7 @@ Creates a FrameNode of the **Swiper** type.
 function createNode(context: UIContext, nodeType: 'Progress'): Progress
 ```
 
-Creates a FrameNode of the **Progress** type.
+创建Progress类型的FrameNode节点。
 
 **Since:** 12
 
@@ -296,14 +296,14 @@ Creates a FrameNode of the **Progress** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Progress' | Yes | Node type. Set to **'Progress'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Progress' | Yes | 创建Progress类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Progress** type. |
+| [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | Progress类型的FrameNode节点。 |
 
 
 ## createNode
@@ -312,7 +312,7 @@ Creates a FrameNode of the **Progress** type.
 function createNode(context: UIContext, nodeType: 'Scroll'): Scroll
 ```
 
-Creates a FrameNode of the **Scroll** type.
+创建Scroll类型的FrameNode节点。
 
 **Since:** 12
 
@@ -330,14 +330,14 @@ Creates a FrameNode of the **Scroll** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Scroll' | Yes | Node type. Set to **'Scroll'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Scroll' | Yes | 创建Scroll类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Scroll** type. |
+| [Scroll](arkts-arkui-typenode-scroll-t.md) | Scroll类型的FrameNode节点。 |
 
 
 ## createNode
@@ -346,7 +346,7 @@ Creates a FrameNode of the **Scroll** type.
 function createNode(context: UIContext, nodeType: 'RelativeContainer'): RelativeContainer
 ```
 
-Creates a FrameNode of the **RelativeContainer** type.
+创建RelativeContainer类型的FrameNode节点。
 
 **Since:** 12
 
@@ -364,14 +364,14 @@ Creates a FrameNode of the **RelativeContainer** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'RelativeContainer' | Yes | Node type. Set to **'RelativeContainer'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'RelativeContainer' | Yes | 创建RelativeContainer类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **RelativeContainer** type. |
+| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) | RelativeContainer类型的FrameNode节点。 |
 
 
 ## createNode
@@ -380,7 +380,7 @@ Creates a FrameNode of the **RelativeContainer** type.
 function createNode(context: UIContext, nodeType: 'Divider'): Divider
 ```
 
-Creates a FrameNode of the **Divider** type.
+创建Divider类型的FrameNode节点。
 
 **Since:** 12
 
@@ -398,14 +398,14 @@ Creates a FrameNode of the **Divider** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Divider' | Yes | Node type. Set to **'Divider'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Divider' | Yes | 创建Divider类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Divider** type. |
+| [Divider](arkts-arkui-typenode-divider-t.md) | Divider类型的FrameNode节点。 |
 
 
 ## createNode
@@ -414,7 +414,7 @@ Creates a FrameNode of the **Divider** type.
 function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingProgress
 ```
 
-Creates a FrameNode of the **LoadingProgress** type.
+创建LoadingProgress类型的FrameNode节点。
 
 **Since:** 12
 
@@ -432,14 +432,14 @@ Creates a FrameNode of the **LoadingProgress** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'LoadingProgress' | Yes | Node type. Set to **'LoadingProgress'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'LoadingProgress' | Yes | 创建LoadingProgress类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **LoadingProgress** type. |
+| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) | LoadingProgress类型的FrameNode节点。 |
 
 
 ## createNode
@@ -448,7 +448,7 @@ Creates a FrameNode of the **LoadingProgress** type.
 function createNode(context: UIContext, nodeType: 'Search'): Search
 ```
 
-Creates a FrameNode of the **Search** type.
+创建Search类型的FrameNode节点。
 
 **Since:** 12
 
@@ -466,14 +466,14 @@ Creates a FrameNode of the **Search** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Search' | Yes | Node type. Set to **'Search'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Search' | Yes | 创建Search类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Search** type. |
+| [Search](arkts-arkui-typenode-search-t.md) | Search类型的FrameNode节点。 |
 
 
 ## createNode
@@ -482,7 +482,7 @@ Creates a FrameNode of the **Search** type.
 function createNode(context: UIContext, nodeType: 'Blank'): Blank
 ```
 
-Creates a FrameNode of the **Blank** type.
+创建Blank类型的FrameNode节点。
 
 **Since:** 12
 
@@ -500,14 +500,14 @@ Creates a FrameNode of the **Blank** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Blank' | Yes | Node type. Set to **'Blank'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Blank' | Yes | 创建Blank类型的FrameNode节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Blank** type. |
+| [Blank](arkts-arkui-typenode-blank-t.md) | Blank类型的FrameNode节点。 |
 
 
 ## createNode
@@ -516,7 +516,7 @@ Creates a FrameNode of the **Blank** type.
 function createNode(context: UIContext, nodeType: 'Image'): Image
 ```
 
-Creates a FrameNode of the **Image** type.
+创建Image类型的FrameNode节点。使用typeNode创建Image节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 **Since:** 12
 
@@ -534,14 +534,14 @@ Creates a FrameNode of the **Image** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Image' | Yes | Node type, which is **Image** in this API. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Image' | Yes | 创建Image类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Image** type. |
+| [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Image类型的FrameNode节点。 |
 
 
 ## createNode
@@ -550,7 +550,7 @@ Creates a FrameNode of the **Image** type.
 function createNode(context: UIContext, nodeType: 'List'): List
 ```
 
-Creates a FrameNode of the **List** type.
+创建List类型的FrameNode节点。
 
 **Since:** 12
 
@@ -568,14 +568,14 @@ Creates a FrameNode of the **List** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'List' | Yes | Node type, which is **List** in this API. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'List' | Yes | 创建List类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **List** type. |
+| [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md) | List类型的FrameNode节点。 |
 
 
 ## createNode
@@ -584,7 +584,7 @@ Creates a FrameNode of the **List** type.
 function createNode(context: UIContext, nodeType: 'ListItem'): ListItem
 ```
 
-Creates a FrameNode of the **ListItem** type.
+创建ListItem类型的FrameNode节点。
 
 **Since:** 12
 
@@ -602,14 +602,14 @@ Creates a FrameNode of the **ListItem** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'ListItem' | Yes | Node type. Set to **'ListItem'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'ListItem' | Yes | 创建ListItem类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **ListItem** type. |
+| [ListItem](arkts-arkui-typenode-listitem-t.md) | ListItem类型的FrameNode节点。 |
 
 
 ## createNode
@@ -618,7 +618,7 @@ Creates a FrameNode of the **ListItem** type.
 function createNode(context: UIContext, nodeType: 'TextInput'): TextInput
 ```
 
-Creates a FrameNode of the **TextInput** type.
+创建TextInput类型的FrameNode节点。
 
 **Since:** 12
 
@@ -636,14 +636,14 @@ Creates a FrameNode of the **TextInput** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'TextInput' | Yes | 创建TextInput类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **TextInput** type. |
+| [TextInput](arkts-arkui-typenode-textinput-t.md) | TextInput类型的FrameNode节点。 |
 
 
 ## createNode
@@ -652,7 +652,7 @@ Creates a FrameNode of the **TextInput** type.
 function createNode(context: UIContext, nodeType: 'Button'): Button
 ```
 
-Creates a FrameNode of the **Button** type.
+创建Button类型的FrameNode节点。
 
 **Since:** 12
 
@@ -670,14 +670,14 @@ Creates a FrameNode of the **Button** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Button' | Yes | Node type. Set to **'Button'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Button' | Yes | 创建Button类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Button** type. |
+| [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md) | Button类型的FrameNode节点。 |
 
 
 ## createNode
@@ -686,7 +686,7 @@ Creates a FrameNode of the **Button** type.
 function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGroup
 ```
 
-Creates a FrameNode of the **ListItemGroup** type.
+创建ListItemGroup类型的FrameNode节点。
 
 **Since:** 12
 
@@ -704,14 +704,14 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'ListItemGroup' | Yes | Node type. Set to **'ListItemGroup'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'ListItemGroup' | Yes | 创建ListItemGroup类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **ListItemGroup** type. |
+| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) | ListItemGroup类型的FrameNode节点。 |
 
 
 ## createNode
@@ -720,7 +720,7 @@ Creates a FrameNode of the **ListItemGroup** type.
 function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow
 ```
 
-Creates a FrameNode of the **WaterFlow** type.
+创建WaterFlow类型的FrameNode节点。
 
 **Since:** 12
 
@@ -738,14 +738,14 @@ Creates a FrameNode of the **WaterFlow** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'WaterFlow' | Yes | 创建WaterFlow类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **WaterFlow** type. |
+| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) | WaterFlow类型的FrameNode节点。 |
 
 
 ## createNode
@@ -754,7 +754,7 @@ Creates a FrameNode of the **WaterFlow** type.
 function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem
 ```
 
-Creates a FrameNode of the **FlowItem** type.
+创建FlowItem类型的FrameNode节点。
 
 **Since:** 12
 
@@ -772,14 +772,14 @@ Creates a FrameNode of the **FlowItem** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'FlowItem' | Yes | Node type. Set to **'FlowItem'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'FlowItem' | Yes | 创建FlowItem类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **FlowItem** type. |
+| [FlowItem](arkts-arkui-typenode-flowitem-t.md) | FlowItem类型的FrameNode节点。 |
 
 
 ## createNode
@@ -788,7 +788,7 @@ Creates a FrameNode of the **FlowItem** type.
 function createNode(context: UIContext, nodeType: 'XComponent'): XComponent
 ```
 
-Creates a FrameNode of the **XComponent** type.
+创建XComponent类型的FrameNode节点。
 
 **Since:** 12
 
@@ -806,14 +806,14 @@ Creates a FrameNode of the **XComponent** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'XComponent' | Yes | 创建XComponent类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | XComponent类型的FrameNode节点。 |
 
 
 ## createNode
@@ -822,7 +822,7 @@ Creates a FrameNode of the **XComponent** type.
 function createNode(context: UIContext, nodeType: 'XComponent', options: XComponentOptions): XComponent
 ```
 
-Creates a FrameNode of the **XComponent** type based on the settings specified in **options**.
+按照options中的配置参数创建XComponent类型的FrameNode节点。
 
 **Since:** 12
 
@@ -840,15 +840,15 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options of the **XComponent**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'XComponent' | Yes | 创建XComponent类型的节点。 |
+| options | [XComponentOptions](../arkts-components/arkts-arkui-xcomponentoptions-i.md) | Yes | 定义XComponent的具体配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | XComponent类型的FrameNode节点。 |
 
 
 ## createNode
@@ -857,7 +857,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 function createNode(context: UIContext, nodeType: 'XComponent', parameters: NativeXComponentParameters): XComponent
 ```
 
-Creates a FrameNode of the **XComponent** type based on the settings specified in **parameters**.
+按照parameters中的配置参数创建XComponent类型的FrameNode节点。
 
 **Since:** 19
 
@@ -875,15 +875,15 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
-| parameters | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options of the **XComponent**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'XComponent' | Yes | 创建XComponent类型的节点。 |
+| parameters | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | Yes | 定义XComponent的具体配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | XComponent类型的FrameNode节点。 |
 
 
 ## createNode
@@ -892,7 +892,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox
 ```
 
-Creates a FrameNode of the **Checkbox** type.
+创建Checkbox类型的FrameNode节点。
 
 **Since:** 18
 
@@ -910,14 +910,14 @@ Creates a FrameNode of the **Checkbox** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Checkbox' | Yes | Node type. Set to **'Checkbox'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Checkbox' | Yes | 创建Checkbox类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Checkbox** type. |
+| [Checkbox](arkts-arkui-typenode-checkbox-t.md) | Checkbox类型的FrameNode节点。 |
 
 
 ## createNode
@@ -926,7 +926,7 @@ Creates a FrameNode of the **Checkbox** type.
 function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGroup
 ```
 
-Creates a FrameNode of the **CheckboxGroup** type.
+创建CheckboxGroup类型的FrameNode节点。
 
 **Since:** 18
 
@@ -944,14 +944,14 @@ Creates a FrameNode of the **CheckboxGroup** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'CheckboxGroup' | Yes | Node type. Set to **'CheckboxGroup'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'CheckboxGroup' | Yes | 创建CheckboxGroup类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **CheckboxGroup** type. |
+| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) | CheckboxGroup类型的FrameNode节点。 |
 
 
 ## createNode
@@ -960,7 +960,7 @@ Creates a FrameNode of the **CheckboxGroup** type.
 function createNode(context: UIContext, nodeType: 'Radio'): Radio
 ```
 
-Creates a FrameNode of the **Radio** type.
+创建Radio类型的FrameNode节点。
 
 **Since:** 18
 
@@ -978,14 +978,14 @@ Creates a FrameNode of the **Radio** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Radio' | Yes | Node type. Set to **'Radio'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Radio' | Yes | 创建Radio类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Radio** type. |
+| [Radio](arkts-arkui-typenode-radio-t.md) | Radio类型的FrameNode节点。 |
 
 
 ## createNode
@@ -994,7 +994,7 @@ Creates a FrameNode of the **Radio** type.
 function createNode(context: UIContext, nodeType: 'Rating'): Rating
 ```
 
-Creates a FrameNode of the **Rating** type.
+创建Rating类型的FrameNode节点。
 
 **Since:** 18
 
@@ -1012,14 +1012,14 @@ Creates a FrameNode of the **Rating** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Rating' | Yes | Node type, which is **Rating** in this API. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Rating' | Yes | 创建Rating类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Rating** type. |
+| [Rating](arkts-arkui-typenode-rating-t.md) | Rating类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1028,7 +1028,7 @@ Creates a FrameNode of the **Rating** type.
 function createNode(context: UIContext, nodeType: 'Select'): Select
 ```
 
-Creates a FrameNode of the **Select** type.
+创建Select类型的FrameNode节点。使用typeNode创建Select节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 **Since:** 18
 
@@ -1046,14 +1046,14 @@ Creates a FrameNode of the **Select** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Select' | Yes | Node type. Set to **'Select'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Select' | Yes | 创建Select类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Select** type. |
+| [Select](arkts-arkui-typenode-select-t.md) | Select类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1062,7 +1062,7 @@ Creates a FrameNode of the **Select** type.
 function createNode(context: UIContext, nodeType: 'Slider'): Slider
 ```
 
-Creates a FrameNode of the **Slider** type.
+创建Slider类型的FrameNode节点。
 
 **Since:** 18
 
@@ -1080,14 +1080,14 @@ Creates a FrameNode of the **Slider** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Slider' | Yes | Node type. Set to **'Slider'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Slider' | Yes | 创建Slider类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Slider** type. |
+| [Slider](arkts-arkui-typenode-slider-t.md) | Slider类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1096,7 +1096,7 @@ Creates a FrameNode of the **Slider** type.
 function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle
 ```
 
-Creates a FrameNode of the **Toggle** type.
+创建Toggle类型的FrameNode节点。使用typeNode创建Toggle节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 **Since:** 18
 
@@ -1114,15 +1114,15 @@ Creates a FrameNode of the **Toggle** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Toggle' | Yes | Node type. Set to **'Toggle'**. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for configuring the node of the Toggle type, including setting the style through the **type** property. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Toggle' | Yes | 创建Toggle类型的节点。 |
+| options | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | No | 创建Toggle节点的接口参数，仅可通过ToggleOptions中的type属性设置开关样式。不传入该参数时，需通过initialize接口设置 Toggle的type属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Toggle** type. |
+| [Toggle](arkts-arkui-typenode-toggle-t.md) | Toggle类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1131,7 +1131,7 @@ Creates a FrameNode of the **Toggle** type.
 function createNode(context: UIContext, nodeType: 'Marquee'): Marquee
 ```
 
-Creates a FrameNode of the **Marquee** type.
+创建Marquee类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1149,14 +1149,14 @@ Creates a FrameNode of the **Marquee** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Marquee' | Yes | Node type. Set to **'Marquee'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Marquee' | Yes | 创建Marquee类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Marquee** type. |
+| [Marquee](arkts-arkui-typenode-marquee-t.md) | Marquee类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1165,7 +1165,7 @@ Creates a FrameNode of the **Marquee** type.
 function createNode(context: UIContext, nodeType: 'TextArea'): TextArea
 ```
 
-Creates a FrameNode of the **TextArea** type.
+创建TextArea类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1183,14 +1183,14 @@ Creates a FrameNode of the **TextArea** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'TextArea' | Yes | 创建TextArea类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **TextArea** type. |
+| [TextArea](arkts-arkui-typenode-textarea-t.md) | TextArea类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1199,7 +1199,7 @@ Creates a FrameNode of the **TextArea** type.
 function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph
 ```
 
-Creates a FrameNode of the **SymbolGlyph** type.
+创建SymbolGlyph类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1217,14 +1217,14 @@ Creates a FrameNode of the **SymbolGlyph** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'SymbolGlyph' | Yes | Node type. Set to **'SymbolGlyph'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'SymbolGlyph' | Yes | 创建SymbolGlyph类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **SymbolGlyph** type. |
+| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) | SymbolGlyph类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1233,7 +1233,7 @@ Creates a FrameNode of the **SymbolGlyph** type.
 function createNode(context: UIContext, nodeType: 'QRCode'): QRCode
 ```
 
-Creates a FrameNode of the **QRCode** type.
+创建QRCode类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1251,14 +1251,14 @@ Creates a FrameNode of the **QRCode** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'QRCode' | Yes | Node type, which is **QRCode** in this API. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'QRCode' | Yes | 创建QRCode类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **QRCode** type. |
+| [QRCode](arkts-arkui-typenode-qrcode-t.md) | QRCode类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1267,7 +1267,7 @@ Creates a FrameNode of the **QRCode** type.
 function createNode(context: UIContext, nodeType: 'Badge'): Badge
 ```
 
-Creates a FrameNode of the **Badge** type.
+创建Badge类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1285,14 +1285,14 @@ Creates a FrameNode of the **Badge** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Badge' | Yes | Node type. Set to **'Badge'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Badge' | Yes | 创建Badge类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Badge** type. |
+| [Badge](arkts-arkui-typenode-badge-t.md) | Badge类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1301,7 +1301,7 @@ Creates a FrameNode of the **Badge** type.
 function createNode(context: UIContext, nodeType: 'TextClock'): TextClock
 ```
 
-Creates a FrameNode of the **TextClock** type.
+创建TextClock类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1319,14 +1319,14 @@ Creates a FrameNode of the **TextClock** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'TextClock' | Yes | Node type. Set to **'TextClock'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'TextClock' | Yes | 创建TextClock类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **TextClock** type. |
+| [TextClock](arkts-arkui-typenode-textclock-t.md) | TextClock类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1335,7 +1335,7 @@ Creates a FrameNode of the **TextClock** type.
 function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer
 ```
 
-Creates a FrameNode of the **TextTimer** type.
+创建TextTimer类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1353,14 +1353,14 @@ Creates a FrameNode of the **TextTimer** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'TextTimer' | Yes | Node type. Set to **'TextTimer'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'TextTimer' | Yes | 创建TextTimer类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **TextTimer** type. |
+| [TextTimer](arkts-arkui-typenode-texttimer-t.md) | TextTimer类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1369,7 +1369,7 @@ Creates a FrameNode of the **TextTimer** type.
 function createNode(context: UIContext, nodeType: 'Grid'): Grid
 ```
 
-Creates a FrameNode of the **Grid** type.
+创建Grid类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1387,14 +1387,14 @@ Creates a FrameNode of the **Grid** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'Grid' | Yes | 创建Grid类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **Grid** type. |
+| [Grid](arkts-arkui-typenode-grid-t.md) | Grid类型的FrameNode节点。 |
 
 
 ## createNode
@@ -1403,7 +1403,7 @@ Creates a FrameNode of the **Grid** type.
 function createNode(context: UIContext, nodeType: 'GridItem'): GridItem
 ```
 
-Creates a FrameNode of the **GridItem** type.
+创建GridItem类型的FrameNode节点。
 
 **Since:** 14
 
@@ -1421,12 +1421,12 @@ Creates a FrameNode of the **GridItem** type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context for node creation. |
-| nodeType | 'GridItem' | Yes | Node type. Set to **'GridItem'**. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 创建对应节点时所需的UI上下文。 |
+| nodeType | 'GridItem' | Yes | 创建GridItem类型的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FrameNode of the **GridItem** type. |
+| [GridItem](arkts-arkui-typenode-griditem-t.md) | GridItem类型的FrameNode节点。 |
 

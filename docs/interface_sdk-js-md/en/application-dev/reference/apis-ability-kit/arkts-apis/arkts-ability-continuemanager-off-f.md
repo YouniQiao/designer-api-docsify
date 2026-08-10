@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { continueManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('prepareContinue')
 
 ```TypeScript
 function off(type: 'prepareContinue', context: Context, callback?: AsyncCallback<ContinueResultInfo>): void
 ```
 
-Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result.
+在应用快速拉起时，注销回调函数，不再获取快速拉起结果。使用callback异步回调。
 
 **Since:** 18
 
@@ -22,17 +28,17 @@ Unregisters the callback used to obtain the quick start result when an applicati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepareContinue' | Yes | The value is fixed at **prepareContinue**. |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the ability. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinueResultInfo&gt; | No | Callback used to return the result. If the callback is unregistered, **err** is undefined, and **ContinueResultInfo** is the callback unregistration result. Otherwise, **err** is an error object. |
+| type | 'prepareContinue' | Yes | 固定值：prepareContinue。 |
+| context | [Context](arkts-ability-context-c.md) | Yes | Ability的Context。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | No | 回调函数。当回调函数注销成功，err为undefined，ContinueResultInfo为获回调函数注销结果。否则为错误对 象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
+| 16300501 | the system ability work abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, continueManager } from '@kit.AbilityKit';

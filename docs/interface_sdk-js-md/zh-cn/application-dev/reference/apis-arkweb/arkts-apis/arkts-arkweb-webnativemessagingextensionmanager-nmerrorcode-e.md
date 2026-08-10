@@ -16,7 +16,7 @@ Native Messaging的错误列表。
 PERMISSION_DENY = 17100203
 ```
 
-由于缺少 ohos.permission.WEB\_NATIVE\_MESSAGING，权限被拒绝。
+由于缺少 ohos.permission.WEB_NATIVE_MESSAGING，权限被拒绝。
 
 **起始版本：** 23
 

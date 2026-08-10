@@ -1,12 +1,18 @@
 # usbFunctionsToString (System API)
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## usbFunctionsToString
 
 ```TypeScript
 function usbFunctionsToString(funcs: FunctionType): string
 ```
 
-Converts the USB function list in the numeric mask format to a string in Device mode.
+在设备模式下，将数字掩码形式的USB功能列表转化为字符串。
 
 **Since:** 9
 
@@ -26,15 +32,15 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Yes | 功能列表对应数字掩码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Function list in string format after conversion. |
+| string | 转化后的字符串形式的功能列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let funcs = usb.FunctionType.ACM | usb.FunctionType.ECM;

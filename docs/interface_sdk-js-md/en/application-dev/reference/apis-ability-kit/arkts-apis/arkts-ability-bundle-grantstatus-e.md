@@ -1,12 +1,11 @@
 # GrantStatus
 
-    **NOTE**  
-    
-    This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
-    [bundleManager.PermissionGrantState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)替代。
 
-Enumerates the permission grant states.
+权限授予状态。
 
 **Since:** 7
 
@@ -26,7 +25,7 @@ Enumerates the permission grant states.
 PERMISSION_DENIED = -1
 ```
 
-Permission denied.
+拒绝授予权限。
 
 **Since:** 7
 
@@ -46,7 +45,7 @@ Permission denied.
 PERMISSION_GRANTED = 0
 ```
 
-Permission granted.
+授予权限。
 
 **Since:** 7
 

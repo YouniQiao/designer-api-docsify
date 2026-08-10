@@ -1,5 +1,11 @@
 # LazyDynamicLayout
 
+## 导入模块
+
+```TypeScript
+import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from 'kits/@kit.ArkUI';
+```
+
 ## LazyDynamicLayout
 
 ```TypeScript
@@ -25,14 +31,14 @@ export declare function LazyDynamicLayout (
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algorithm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 懒布局算法。 |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | 是 | 懒布局算法。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
 
 
 ## LazyDynamicLayout
@@ -62,12 +68,12 @@ export declare function LazyDynamicLayout(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LazyDynamicLayoutAttribute&gt; | 是 | The style to create a LazyDynamicLayout. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyDynamicLayoutAttribute&gt; | 是 | The style to create a LazyDynamicLayout. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | LazyDynamicLayout的属性。 |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) | LazyDynamicLayout的属性。 |
 

@@ -2,7 +2,7 @@
 
 错误参数。
 
-**继承/实现关系：** BusinessError extends [Error](Error)
+**继承/实现关系：** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
 
 **起始版本：** 23
 
@@ -11,6 +11,12 @@
 <!--Device-unnamed-export declare class BusinessError<T = void> extends Error--><!--Device-unnamed-export declare class BusinessError<T = void> extends Error-End-->
 
 **系统能力：** SystemCapability.Base
+
+## 导入模块
+
+```TypeScript
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
+```
 
 ## constructor
 

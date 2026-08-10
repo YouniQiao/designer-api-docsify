@@ -4,7 +4,7 @@
 type NonSendableValues = Array<relationalStore.ValueType>
 ```
 
-表示[ValueType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_数据数组存储。不支持跨线程传递。
+表示[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)数据数组存储。不支持跨线程传递。
 
 **起始版本：** 20
 

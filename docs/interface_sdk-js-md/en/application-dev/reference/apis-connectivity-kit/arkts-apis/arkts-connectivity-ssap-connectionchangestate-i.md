@@ -1,6 +1,6 @@
 # ConnectionChangeState
 
-Describes SSAP connection state.
+描述SSAP连接状态。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes SSAP connection state.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the device address.The length must be 17, The value consists of hexade
 state: ConnectionState
 ```
 
-Connection state.
+连接状态。
 
-**Type:** ConnectionState
+**Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
 
 **Since:** 26.0.0
 

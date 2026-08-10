@@ -1,6 +1,6 @@
 # ToolBarItem properties/events
 
-The [universal attributes]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ are not supported.
+不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
 
 **Since:** 20
 

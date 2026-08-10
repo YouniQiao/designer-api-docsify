@@ -1,6 +1,6 @@
 # DfsListeners
 
-The listeners of Distributed File System.
+事件监听类。创建DFSListener对象，用于监听分布式文件系统状态。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The listeners of Distributed File System.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## onStatus
 
 ```TypeScript
 onStatus: DfsListenerCallback
 ```
 
-The Listener of Distributed File System status
+分布式文件系统状态监听器。
 
 **Since:** 23
 

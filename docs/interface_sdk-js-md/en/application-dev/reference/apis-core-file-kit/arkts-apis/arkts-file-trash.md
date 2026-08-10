@@ -1,9 +1,10 @@
 # @ohos.file.trash
 
-The **file.trash** module provides APIs for querying, recovering, or permanently deleting the files or directories in Recently deleted (trash). Currently, only local files and directories are supported.You can use **delete()** of [@ohos.file.fileAccess]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to move a file or directory to the trash.
-    **NOTE**  
-    
-    - Currently, the APIs of this module can be called only by **FileManager**.
+The **file.trash** module provides APIs for querying, recovering, or permanently deleting the files or directories in Recently deleted (trash). Currently, only local files and directories are supported.You can use **delete()** of [@ohos.file.fileAccess](arkts-file-fileaccess.md) to move a file or directory to the trash.
+
+> **NOTE：**
+> 
+> - Currently, the APIs of this module can be called only by **FileManager**.
 
 **Since:** 10
 
@@ -11,11 +12,19 @@ The **file.trash** module provides APIs for querying, recovering, or permanently
 
 **Deprecated since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace trash--><!--Device-unnamed-declare namespace trash-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { trash } from 'kits/@kit.CoreFileKit';
+```
 
 ## Summary
 

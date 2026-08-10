@@ -74,7 +74,7 @@ HUKS_PADDING_PSS = 2
 HUKS_PADDING_PKCS1_V1_5 = 3
 ```
 
-表示使用PKCS1\_V1\_5填充算法。
+表示使用PKCS1_V1_5填充算法。
 
 **起始版本：** 8
 
@@ -132,7 +132,7 @@ HUKS_PADDING_PKCS7 = 5
 HUKS_PADDING_ISO_IEC_9796_2 = 6
 ```
 
-表示使用ISO\_IEC\_9796\_2填充算法\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_（暂不支持）\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_。
+表示使用ISO_IEC_9796_2填充算法&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;。
 
 **起始版本：** 12
 
@@ -150,7 +150,7 @@ HUKS_PADDING_ISO_IEC_9796_2 = 6
 HUKS_PADDING_ISO_IEC_9797_1 = 7
 ```
 
-表示使用ISO\_IEC\_9797\_1填充算法\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_（暂不支持）\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_。
+表示使用ISO_IEC_9797_1填充算法&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;。
 
 **起始版本：** 12
 

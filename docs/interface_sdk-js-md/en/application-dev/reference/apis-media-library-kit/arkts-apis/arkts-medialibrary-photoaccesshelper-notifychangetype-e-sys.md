@@ -18,8 +18,8 @@ NOTIFY_CHANGE_YUV_READY = 3
 
 A high-quality image is ready in deferred photo delivery scenarios.
 
-Image quality metrics such as sharpness and color accuracy can be checked in the  
-[OnDataPrepared]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback.
+Image quality metrics such as sharpness and color accuracy can be checked in the   
+[OnDataPrepared](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md#ondataprepared)callback.
 
 **Since:** 23
 

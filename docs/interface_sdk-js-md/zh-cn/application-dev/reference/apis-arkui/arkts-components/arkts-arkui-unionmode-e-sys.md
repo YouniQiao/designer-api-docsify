@@ -43,8 +43,8 @@ GRAVITY_UNION = 1
 **说明：**
 
 设置该类型时，需要结合  
-[useUnionEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_并设置  
-[GravityCenterOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的gravityCenter为true才能生效。
+[useUnionEffect](../arkts-apis/arkts-arkui-common-commonmethod-i-sys.md/arkts-arkui-common-commonmethod-i-sys.md#useunioneffect)并设置  
+[GravityCenterOptions](../arkts-apis/arkts-arkui-common-gravitycenteroptions-i-sys.md/arkts-arkui-common-gravitycenteroptions-i-sys.md)的gravityCenter为true才能生效。
 
 **起始版本：** 26.0.0
 

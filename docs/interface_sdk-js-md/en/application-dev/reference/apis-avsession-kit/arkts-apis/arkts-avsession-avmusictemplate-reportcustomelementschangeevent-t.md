@@ -5,7 +5,7 @@ type ReportCustomElementsChangeEvent = (actionType: ActionType, customType: Cust
     customElement: CustomElement) => void
 ```
 
-The report custom elements change event.
+上报自定义元素变更信息的回调事件
 
 **Since:** 23
 
@@ -21,7 +21,7 @@ The report custom elements change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | action type  |
-| customType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | custom type  |
-| customElement | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | custom element  |
+| actionType | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | 操作类型 |
+| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Yes | 自定义信息类型 |
+| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Yes | 自定义数据 |
 

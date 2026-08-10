@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## on('hotkeyChange')
 
 ```TypeScript
@@ -21,19 +27,19 @@ function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hotkeyChange' | 是 | 事件类型，固定取值为'hotkeyChange'。 |
-| hotkeyOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 快捷键选项。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HotkeyOptions&gt; | 是 | 回调函数，返回满足条件的组合按键输入事件。 |
+| hotkeyOptions | [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | 是 | 快捷键选项。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HotkeyOptions&gt; | 是 | 回调函数，返回满足条件的组合按键输入事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [4200002](../errorcode-inputconsumer.md#4200002-快捷键被系统注册) | The hotkey has been used by the system. |
-| [4200003](../errorcode-inputconsumer.md#4200003-快捷键已经被其他应用注册) | The hotkey has been subscribed to by another. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 4200002 | The hotkey has been used by the system. |
+| 4200003 | The hotkey has been subscribed to by another. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
@@ -78,7 +84,7 @@ function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<Ke
 订阅按键按下事件。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。使用callback异步回调。
 
 订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用  
-[off]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法取消订阅。
+[off](inputConsumer.off(type: 'keyPressed', callback?: Callback&lt;KeyEvent&gt;))方法取消订阅。
 
 **起始版本：** 16
 
@@ -93,17 +99,17 @@ function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<Ke
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyPressed' | 是 | 事件类型，固定取值为'keyPressed'。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 按键事件消费设置。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | 是 | 回调函数，返回按键事件。订阅不同的按键事件需要使用不同的callback，否则订阅不生效。 |
+| options | [KeyPressedConfig](arkts-input-inputconsumer-keypressedconfig-i.md) | 是 | 按键事件消费设置。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | 回调函数，返回按键事件。订阅不同的按键事件需要使用不同的callback，否则订阅不生效。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { inputConsumer, KeyEvent } from '@kit.InputKit';

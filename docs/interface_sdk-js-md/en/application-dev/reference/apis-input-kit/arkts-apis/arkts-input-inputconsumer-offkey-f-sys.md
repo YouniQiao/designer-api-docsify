@@ -1,12 +1,18 @@
 # offKey (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## offKey
 
 ```TypeScript
 function offKey(keyOptions: KeyOptions, callback?: Callback<KeyOptions>): void
 ```
 
-Subscribe system keys.
+取消订阅系统快捷键。使用callback异步回调。
 
 **Since:** 23
 
@@ -22,15 +28,15 @@ Subscribe system keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the key events about input which is to be subscribed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyOptions&gt; | No | callback function, receive reported data. |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | 组合键选项。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | No | 需要取消订阅的回调函数。若不填，则取消当前应用组合键选项已订阅的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission denied, non-system app called system api. |
 
 
 ## offKey
@@ -39,7 +45,7 @@ Subscribe system keys.
 function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void
 ```
 
-Unsubscribe system keys.
+取消订阅系统快捷键。使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -57,12 +63,12 @@ Unsubscribe system keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the key events about input which is to be subscribed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback function that receives reported data. |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | 组合键选项，需与订阅时传入的keyOptions一致。 |
+| callback | [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | No | 需要取消订阅的回调函数。若不填，则取消当前应用组合键选项已订阅的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 202 | Permission denied, non-system app called system api. |
 

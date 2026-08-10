@@ -10,6 +10,12 @@ Circular fence information.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## coordinateSystemType
 
 ```TypeScript
@@ -18,7 +24,7 @@ coordinateSystemType?: CoordinateSystemType
 
 Coordinate system type.
 
-**Type:** CoordinateSystemType
+**Type:** [CoordinateSystemType](arkts-location-geolocationmanager-coordinatesystemtype-e.md)
 
 **Since:** 12
 
@@ -36,7 +42,7 @@ expiration: double
 
 Expiration of the circular fence.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -54,7 +60,7 @@ latitude: double
 
 Latitude of the center point of the circular fence.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -72,7 +78,7 @@ longitude: double
 
 Longitude of the center point of the circular fence.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -90,7 +96,7 @@ radius: double
 
 Radius of the circular fence.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 

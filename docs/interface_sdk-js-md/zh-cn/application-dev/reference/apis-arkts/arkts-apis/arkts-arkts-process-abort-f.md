@@ -1,5 +1,11 @@
 # abort
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## abort
 
 ```TypeScript
@@ -18,7 +24,7 @@ function abort(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 process.abort();

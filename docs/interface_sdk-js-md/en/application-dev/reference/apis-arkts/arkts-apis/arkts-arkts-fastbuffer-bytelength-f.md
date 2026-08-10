@@ -1,12 +1,18 @@
 # byteLength
 
+## Modules to Import
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## byteLength
 
 ```TypeScript
 function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number
 ```
 
-Returns the byte length of a string when encoded using \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.This is not the same as [\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_], which does not account for the encoding that is used to convert the string into bytes.
+根据不同的编码格式，返回指定内容的字节数。
 
 **Since:** 20
 
@@ -22,16 +28,16 @@ Returns the byte length of a string when encoded using \_\_\_INLINE\_CODE\_DESC\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| FastBuffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format of the string. The default value is 'utf8'. |
+| value | string \| FastBuffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | 指定用于计算字节长度的内容。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式（当`value`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | The number of bytes contained within \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| number | 返回指定内容的字节数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

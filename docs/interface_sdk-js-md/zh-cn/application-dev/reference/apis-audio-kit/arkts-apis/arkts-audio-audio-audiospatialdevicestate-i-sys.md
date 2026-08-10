@@ -10,6 +10,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## address
 
 ```TypeScript
@@ -70,7 +76,7 @@ isSpatializationSupported: boolean
 spatialDeviceType: AudioSpatialDeviceType
 ```
 
-**类型：** AudioSpatialDeviceType
+**类型：** [AudioSpatialDeviceType](arkts-audio-audio-audiospatialdevicetype-e-sys.md)
 
 **起始版本：** 11
 

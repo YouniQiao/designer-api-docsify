@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
+## 导入模块
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certType
 
 ```TypeScript
@@ -18,7 +24,7 @@ certType: CertificateType
 
 表示证书类型。
 
-**类型：** CertificateType
+**类型：** [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)
 
 **起始版本：** 22
 

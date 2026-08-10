@@ -12,6 +12,12 @@ progress info of batch operations.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## processed
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly processed: int
 
 processed info of batch operations.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ readonly remain: int
 
 remain info of batch operations.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

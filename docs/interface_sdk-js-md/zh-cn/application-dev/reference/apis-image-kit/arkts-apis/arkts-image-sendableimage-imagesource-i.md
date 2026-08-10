@@ -1,9 +1,9 @@
 # ImageSource
 
 ImageSource类，用于获取图片相关信息。在调用ImageSource的方法前，需要先通过  
-[sendableImage.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构建一个ImageSource实例。
+[sendableImage.createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource)构建一个ImageSource实例。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 12
 
@@ -13,6 +13,12 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## createPixelMap
 
 ```TypeScript
@@ -21,7 +27,7 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 
 通过图片解码参数创建PixelMap对象。使用Promise异步回调。
 
-由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 12
 
@@ -47,7 +53,7 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 | --- | --- |
 | Promise&lt;PixelMap&gt; | Promise实例，用于异步返回创建结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -90,7 +96,7 @@ release(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise实例，异步返回结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

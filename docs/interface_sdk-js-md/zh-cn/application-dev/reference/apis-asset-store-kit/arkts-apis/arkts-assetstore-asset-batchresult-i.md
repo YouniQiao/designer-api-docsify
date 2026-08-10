@@ -1,6 +1,6 @@
 # BatchResult
 
-[batchAdd]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[batchUpdate]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和[batchRemove]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_批量操作的结果。
+[batchAdd](arkts-assetstore-asset-batchadd-f.md#batchadd)、[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchupdate)和[batchRemove](arkts-assetstore-asset-batchremove-f.md#batchremove)批量操作的结果。
 
 **起始版本：** 26.0.0
 
@@ -9,6 +9,12 @@
 <!--Device-asset-interface BatchResult--><!--Device-asset-interface BatchResult-End-->
 
 **系统能力：** SystemCapability.Security.Asset
+
+## 导入模块
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
 
 ## failedCount
 

@@ -1,6 +1,6 @@
 # AISessionEvent
 
-Custom AI session model integration for Web components.Users can define custom AI session behaviors via this interface.
+自定义AI会话配置对象，用于定义AI会话的生命周期回调。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Custom AI session model integration for Web components.Users can define custom A
 onCreateAISession: OnCreateAISession
 ```
 
-Triggered when an AI session is created.Allows custom model initialization and result handling.Return \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ to bypass the default system behavior;return \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ to proceed with the default logic.
+AI会话创建时触发的回调函数。返回`true`跳过系统默认行为，返回`false`继续执行系统默认逻辑。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Triggered when an AI session is created.Allows custom model initialization and r
 onDestroyAISession: OnDestroyAISession
 ```
 
-Triggered when an AI session is destroyed.Used for cleaning up resources associated with custom AI models.
+AI会话销毁时触发的回调函数，用于清理与自定义AI模型关联的资源。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Triggered when an AI session is destroyed.Used for cleaning up resources associa
 onExecuteAIAction: OnExecuteAIAction
 ```
 
-Triggered when executing an AI session action.Enables custom implementation of AI model execution.
+AI会话执行操作时触发的回调函数。
 
 **Since:** 26.0.0
 
@@ -70,9 +70,9 @@ Triggered when executing an AI session action.Enables custom implementation of A
 aiSessionType: AISessionType
 ```
 
-The type of AI session.
+AI会话类型。
 
-**Type:** AISessionType
+**Type:** [AISessionType](../arkts-apis/arkts-arkweb-web-aisessiontype-e.md)
 
 **Since:** 26.0.0
 

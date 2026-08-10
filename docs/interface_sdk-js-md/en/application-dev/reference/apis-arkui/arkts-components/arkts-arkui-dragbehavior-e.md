@@ -1,7 +1,6 @@
 # DragBehavior
 
-Describes the drag behavior. When [DragResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **DROP\_ENABLED**, you can define  
-**DragBehavior** as either **COPY** or **MOVE**. When **DragBehavior** is set to **COPY**, a plus sign will be displayed in the badge of the dragged object. When **DragBehavior** is set to **MOVE**, the plus sign will not be displayed. **DragBehavior** is used to indicate the intended way of handling data (either copy or move) without governing the actual data processing. This behavior is reported back to the drag source through **onDragEnd**,enabling the drag initiator to distinguish whether the operation results in a copy or a move of the data.
+当设置[DragResult](arkts-arkui-dragresult-e.md)为DROP_ENABLED后，可设置DragBehavior为复制（COPY）或剪切（MOVE）。当DragBehavior为复制（COPY）时，拖拽对象的角标会显示加号；为剪切（MOVE）时，拖拽对象的角标不会显示加号。DragBehavior用来向开发者描述数据的处理方式是复制（COPY）还是剪切（MOVE），但无法最终决定对数据的实际处理方式。DragBehavior会通过onDragEnd带回给数据拖出方，发起拖拽的一方可通过DragBehavior来区分做出的是复制（COPY）还是剪切（MOVE）数据的不同行为。
 
 **Since:** 10
 
@@ -17,7 +16,7 @@ Describes the drag behavior. When [DragResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\
 COPY = 0
 ```
 
-The data is handled as a copy operation.
+指定对数据的处理方式为复制。
 
 **Since:** 10
 
@@ -37,7 +36,7 @@ The data is handled as a copy operation.
 MOVE = 1
 ```
 
-The data is handled as a move operation, effectively cutting it from its original location.
+指定对数据的处理方式为剪切。
 
 **Since:** 10
 

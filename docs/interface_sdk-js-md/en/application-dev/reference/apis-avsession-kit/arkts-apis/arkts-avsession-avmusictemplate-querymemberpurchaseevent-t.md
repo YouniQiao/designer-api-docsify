@@ -4,7 +4,7 @@
 type QueryMemberPurchaseEvent = (memberPurchaseType: MemberPurchaseType) => Promise<MemberPurchaseInfo[]>
 ```
 
-The query member purchase event.
+购买会员查询事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ The query member purchase event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| memberPurchaseType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | memberPurchaseType  |
+| memberPurchaseType | [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MemberPurchaseInfo[]&gt; | (MemberPurchaseInfo[]) returned through promise  |
+| Promise&lt;MemberPurchaseInfo[]&gt; | Promise对象，返回会员购买信息的数组。 |
 

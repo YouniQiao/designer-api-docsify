@@ -1,5 +1,11 @@
 # getFontWeightScale
 
+## Modules to Import
+
+```TypeScript
+import { uiAppearance } from 'kits/@kit.ArkUI';
+```
+
 ## getFontWeightScale
 
 ```TypeScript
@@ -26,5 +32,5 @@ Acquire the current font-weight-scale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| 500001 | Internal error. |
 

@@ -14,6 +14,12 @@ ArcButton({ options: ArcButtonOptions })
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from 'kits/@kit.ArkUI';
+```
+
 ## build
 
 ```TypeScript
@@ -40,7 +46,7 @@ readonly options: ArcButtonOptions
 
 定义ArcButton组件的文本、背景色、阴影等参数。
 
-**类型：** ArcButtonOptions
+**类型：** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **起始版本：** 23
 

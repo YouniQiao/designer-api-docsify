@@ -1,24 +1,26 @@
 # CanvasLineCap
 
 ```TypeScript
-export type CanvasLineCap = 'butt' | 'round' | 'square'
+declare type CanvasLineCap = "butt" | "round" | "square"
 ```
 
-Specifies the attribute of drawing the end of each line segment. The following configurations are supported:'butt': (Default) Segment Ends in Square'round': Segment ends in a circle'square': The end of the segment ends in a square, but a rectangular area is added that is the same width as the segment and is half the thickness of the segment.
+定义绘制每条线段端点的类型。取值类型为下表类型中的并集。
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-export type CanvasLineCap = 'butt' | 'round' | 'square'--><!--Device-unnamed-export type CanvasLineCap = 'butt' | 'round' | 'square'-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-unnamed-declare type CanvasLineCap = "butt" | "round" | "square"--><!--Device-unnamed-declare type CanvasLineCap = "butt" | "round" | "square"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |
 | --- | --- |
-| 'butt' |  |
-| 'round' |  |
-| 'square' |  |
+| "butt" | 线条两端为平行线，不额外扩展。 |
+| "round" | 在线条两端延伸半个圆，直径等于线宽。 |
+| "square" | 在线条两端延伸一个矩形，宽度等于线宽的一半，高度等于线宽。 |
 

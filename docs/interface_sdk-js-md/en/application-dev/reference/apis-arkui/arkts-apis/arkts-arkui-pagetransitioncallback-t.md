@@ -4,7 +4,7 @@
 export type PageTransitionCallback = (type: RouteType, progress: double) => void
 ```
 
-Callback used to report page trasition events.
+页面转场事件回调。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ Callback used to report page trasition events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | transition route type  |
-| progress | double | Yes | transition progess  |
+| type | [RouteType](../arkts-components/arkts-arkui-routetype-e.md) | Yes | transition route type |
+| progress | double | Yes | transition progess |
 

@@ -1,5 +1,11 @@
 # closeScanner
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## closeScanner
 
 ```TypeScript
@@ -34,9 +40,9 @@ function closeScanner(scannerId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';
@@ -46,7 +52,7 @@ let scannerId: string = 'scanner_001';
 scan.closeScanner(scannerId).then(() => {
     console.info('close scanner success');
 }).catch((error: BusinessError) => {
-    console.error('close scanner failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to close scanner. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

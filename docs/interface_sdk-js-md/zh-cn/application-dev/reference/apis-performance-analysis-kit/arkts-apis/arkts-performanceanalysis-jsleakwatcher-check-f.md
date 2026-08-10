@@ -1,5 +1,11 @@
 # check
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## check
 
 ```TypeScript
@@ -20,9 +26,9 @@ function check(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | ����GC��δ�����յ�й©�����б��� \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**˵��**��check�ɹ�������JSON��ʽ��й©�����б���checkʧ�ܣ����ؿ��ַ����� |
+| string | ����GC��δ�����յ�й©�����б��� &lt;br&gt;**˵��**��check�ɹ�������JSON��ʽ��й©�����б���checkʧ�ܣ����ؿ��ַ����� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let leakObjlist:string = jsLeakWatcher.check();

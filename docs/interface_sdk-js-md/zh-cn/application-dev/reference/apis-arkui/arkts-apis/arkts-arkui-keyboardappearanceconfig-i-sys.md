@@ -22,7 +22,7 @@ fluidLightMode?: KeyboardFluidLightMode
 
 默认值：KeyboardFluidLightMode.NONE
 
-**类型：** KeyboardFluidLightMode
+**类型：** [KeyboardFluidLightMode](arkts-arkui-textcommon-keyboardfluidlightmode-e-sys.md)
 
 **起始版本：** 20
 
@@ -46,7 +46,7 @@ gradientMode?: KeyboardGradientMode
 
 默认值：KeyboardGradientMode.NONE
 
-**类型：** KeyboardGradientMode
+**类型：** [KeyboardGradientMode](arkts-arkui-keyboardgradientmode-e-sys.md)
 
 **起始版本：** 20
 

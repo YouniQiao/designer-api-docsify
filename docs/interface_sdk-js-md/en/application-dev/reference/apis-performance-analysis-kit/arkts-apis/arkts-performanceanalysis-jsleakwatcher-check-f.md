@@ -1,12 +1,18 @@
 # check
 
+## Modules to Import
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## check
 
 ```TypeScript
 function check(): string
 ```
 
-Obtains the list of objects that are leaked and registered using **jsLeakWatcher.watch()**. Objects that are not reclaimed after GC is triggered are marked as leaked.
+��ȡ��ͨ��jsLeakWatcher.watchע�ᷢ��й©�Ķ����б�������GC��δ�����յĶ���ᱻ���Ϊй©��
 
 **Since:** 12
 
@@ -20,9 +26,9 @@ Obtains the list of objects that are leaked and registered using **jsLeakWatcher
 
 | Type | Description |
 | --- | --- |
-| string | List of leaked objects that are not reclaimed after GC is triggered. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note: If this API is successful, a list of leaked objects in JSON format is returned. Otherwise, an empty string is returned. |
+| string | ����GC��δ�����յ�й©�����б��� &lt;br&gt;**˵��**��check�ɹ�������JSON��ʽ��й©�����б���checkʧ�ܣ����ؿ��ַ����� |
 
-**Example**
+## Examples
 
 ```TypeScript
 let leakObjlist:string = jsLeakWatcher.check();

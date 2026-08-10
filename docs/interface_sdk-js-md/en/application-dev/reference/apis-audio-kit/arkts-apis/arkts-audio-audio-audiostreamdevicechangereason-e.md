@@ -1,6 +1,6 @@
 # AudioStreamDeviceChangeReason
 
-Enumerates the reasons for audio stream device changes.
+表示流设备变更原因的枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the reasons for audio stream device changes.
 REASON_UNKNOWN = 0
 ```
 
-Unknown reason.
+未知原因。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Unknown reason.
 REASON_NEW_DEVICE_AVAILABLE = 1
 ```
 
-A new device is available.
+新设备可用。
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ A new device is available.
 REASON_OLD_DEVICE_UNAVAILABLE = 2
 ```
 
-The old device is unavailable. When this reason is reported, consider pausing audio playback.
+旧设备不可用。报告此原因时，应考虑暂停音频播放。
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ The old device is unavailable. When this reason is reported, consider pausing au
 REASON_OVERRODE = 3
 ```
 
-Forcibly selected.
+强选。
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ Forcibly selected.
 REASON_SESSION_ACTIVATED = 4
 ```
 
-The audio session has been activated.
+音频会话已激活。
 
 **Since:** 20
 
@@ -104,7 +104,7 @@ The audio session has been activated.
 REASON_STREAM_PRIORITY_CHANGED = 5
 ```
 
-An audio stream with higher priority appears.
+更高优先级的音频流出现导致的系统设备切换。
 
 **Since:** 20
 

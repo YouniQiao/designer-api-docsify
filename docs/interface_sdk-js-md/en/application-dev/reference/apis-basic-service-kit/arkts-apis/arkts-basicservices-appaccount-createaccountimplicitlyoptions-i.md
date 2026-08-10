@@ -1,6 +1,6 @@
 # CreateAccountImplicitlyOptions
 
-Defines the options for implicitly creating an application account.
+表示隐式创建账号的选项。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines the options for implicitly creating an application account.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authType
 
 ```TypeScript
 authType?: string
 ```
 
-Authentication type.
+令牌的鉴权类型。
 
 **Type:** string
 
@@ -34,9 +40,9 @@ Authentication type.
 parameters?: Record<string, Object>
 ```
 
-Custom parameter object. By default, no value is passed in.
+自定义参数对象，默认为空。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 9
 
@@ -52,7 +58,7 @@ Custom parameter object. By default, no value is passed in.
 requiredLabels?: Array<string>
 ```
 
-Required labels. By default, no value is passed in.
+所需的标签，默认为空。
 
 **Type:** Array&lt;string&gt;
 

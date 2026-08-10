@@ -1,18 +1,24 @@
 # setMinLogLevel
 
+## Modules to Import
+
+```TypeScript
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setMinLogLevel
 
 ```TypeScript
 function setMinLogLevel(level: LogLevel): void
 ```
 
-Sets the minimum log level.
-    **NOTE**  
-    
-    If the set log level is lower than the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, the setting does not take effect.  
-    
-    This function does not take effect for debug applications.
+设置应用日志打印的最低日志级别，用于拦截低级别日志打印。
+
+> **注意：**
+> 
+> 如果设置的日志级别低于[全局日志级别](../../../dfx/hilog.md#查看和设置日志级别)，设置不生效。
+> 
+> debug版本应用下，此函数不生效。
 
 **Since:** 15
 
@@ -28,9 +34,9 @@ Sets the minimum log level.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Log level. |
+| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | 日志级别。 |
 
-**Example**
+## Examples
 
 The following example prints five HiLog logs of different levels and calls the setMinLogLevel API twice when the global log level is INFO:
 

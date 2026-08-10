@@ -1,15 +1,23 @@
 # @ohos.resourceschedule.workScheduler
 
 本模块提供延迟任务注册、取消、查询的能力。在开发过程中，对于实时性要求不高的任务，可以调用本模块接口注册延迟任务，在系统空闲时根据性能、功耗、热等情况进行调度执行。开发指导请参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[延迟任务开发指南](../../../task-management/work-scheduler.md)。
 
 **起始版本：** 9
 
 **ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace workScheduler--><!--Device-unnamed-declare namespace workScheduler-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
+
+## 导入模块
+
+```TypeScript
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+```
 
 ## 汇总
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+```
+
 ## buttons
 
 ```TypeScript
@@ -42,7 +48,7 @@ direction?: Direction
 
 默认值：Direction.Auto
 
-**类型：** Direction
+**类型：** [Direction](arkts-arkui-direction-e.md)
 
 **默认值：** Direction.Auto
 
@@ -66,7 +72,7 @@ icon?: ResourceStr
 
 **说明：** 默认值：''，不显示图标。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -88,7 +94,7 @@ iconModifier?: ImageModifier
 
 默认值：undefined，使用系统图标属性。
 
-**类型：** ImageModifier
+**类型：** [ImageModifier](../arkts-components/arkts-arkui-imagemodifier-t.md)
 
 **起始版本：** 26.0.0
 
@@ -112,9 +118,9 @@ maxWidth?: Dimension
 
 **说明：**
 
-1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。2. maxWidth是数字类型，支持float和整型，例如\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_。3. 当类型为Resource时，如果未设置单位，默认单位为px。
+1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。2. maxWidth是数字类型，支持float和整型，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。3. 当类型为Resource时，如果未设置单位，默认单位为px。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** 400.0_vp
 
@@ -138,7 +144,7 @@ message: ResourceStr
 
 **说明：** 默认值：''，不显示内容文本。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -182,7 +188,7 @@ onClose?: VoidCallback
 
 默认不设置关闭按钮回调函数。
 
-**类型：** VoidCallback
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **起始版本：** 26.0.0
 
@@ -228,7 +234,7 @@ title?: ResourceStr
 
 **说明：** 默认值：''，不显示标题文本。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## foldDisplayMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ foldDisplayMode: FoldDisplayMode
 
 设备的显示模式，非折叠设备时值为0。
 
-**类型：** FoldDisplayMode
+**类型：** [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ physicalHeight: long
 
 设备的高度，单位为px，该参数为大于0的整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ physicalWidth: long
 
 设备的宽度，单位为px，该参数为大于0的整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 

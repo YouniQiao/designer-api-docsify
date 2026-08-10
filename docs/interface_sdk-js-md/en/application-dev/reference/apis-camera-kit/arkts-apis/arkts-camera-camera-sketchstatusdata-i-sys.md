@@ -12,6 +12,12 @@ Defines the PiP status data.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## centerPointOffset
 
 ```TypeScript
@@ -20,7 +26,7 @@ centerPointOffset: Point
 
 Offset of PiP.
 
-**Type:** Point
+**Type:** [Point](arkts-camera-camera-point-i.md)
 
 **Since:** 20
 
@@ -40,7 +46,7 @@ sketchRatio: double
 
 Zoom ratio of PiP.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 11
 
@@ -60,7 +66,7 @@ status: int
 
 Status of PiP. The options are 0 (stopped), 1 (started), 2 (stopping), and 3 (starting).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

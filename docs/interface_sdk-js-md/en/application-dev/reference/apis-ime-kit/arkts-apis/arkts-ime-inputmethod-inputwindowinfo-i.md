@@ -1,6 +1,6 @@
 # InputWindowInfo
 
-Information of input window.
+输入法软键盘的窗口信息。
 
 **Since:** 10
 
@@ -10,15 +10,23 @@ Information of input window.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## displayId
 
 ```TypeScript
 displayId?: long
 ```
 
-Indicates the id of the display where the input window is shown.
+输入法软键盘窗口所在的屏幕ID。
 
-**Type:** long
+**模型约束：** 该参数仅可在Stage模型下使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -36,9 +44,9 @@ Indicates the id of the display where the input window is shown.
 height: long
 ```
 
-Indicates the height of the input window, unit is px.
+输入法窗口的高度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -54,9 +62,9 @@ Indicates the height of the input window, unit is px.
 left: int
 ```
 
-Indicates the abscissa of the upper-left vertex of input window, unit is px.
+输入法窗口左上顶点的横坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -72,7 +80,7 @@ Indicates the abscissa of the upper-left vertex of input window, unit is px.
 name: string
 ```
 
-Indicates name of the input window.
+输入法窗口的名称。
 
 **Type:** string
 
@@ -90,9 +98,9 @@ Indicates name of the input window.
 top: int
 ```
 
-Indicates the ordinate of the upper-left vertex of input window, unit is px.
+输入法窗口左上顶点的纵坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -108,9 +116,9 @@ Indicates the ordinate of the upper-left vertex of input window, unit is px.
 width: long
 ```
 
-Indicates the width of the input window, unit is px.
+输入法窗口的宽度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 

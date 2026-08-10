@@ -1,15 +1,19 @@
 # FaultLogExtensionAbility
 
-This module implements the delayed fault notification feature.
+本模块实现故障的延迟通知功能。
 
-When the crash and freeze events are subscribed by [HiAppEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a long time, the fault may not be reported in time.
-    **NOTE**  
-    
-    - The APIs of this module can be used only in the stage model.  
-    
-    - Exceptions may occur if some APIs are called by this module. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    .
+[HiAppEvent](arkts-performanceanalysis-hiappevent-n.md)订阅崩溃、应用冻屏事件时，只有当应用下次启动后才能接收上一次的事件。如果应用无法启动或长时间未打开，则存在故障无法及时上报的局限性。
+
+本模块作为该场景的补充。在应用实现FaultLogExtensionAbility后，当应用发生崩溃或冻屏时，系统服务预计会在30分钟后拉起FaultLogExtensionAbility。
+
+开发者可在[onFaultReportReady](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#onfaultreportready)中订阅并处理故障事件。
+
+> **说明：**
+> 
+> - 本模块接口从API version 21开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> 
+> - 本模块设置了不允许调用的API名单，调用名单中的API将导致功能异常，详情请参见
+> [附录](../../../reference/apis-performance-analysis-kit/js-apis-hiviewdfx-FaultLogExtensionAbility.md#附录)。
 
 **Since:** 21
 
@@ -19,13 +23,19 @@ When the crash and freeze events are subscribed by [HiAppEvent]\_\_\_JSDOC\_LINK
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
+## Modules to Import
+
+```TypeScript
+import { FaultLogExtensionAbility } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## onConnect
 
 ```TypeScript
 onConnect(): void
 ```
 
-Called to perform the initialization operation when the system service completes the connection. This API can be overridden selectively.
+FaultLogExtensionAbility生命周期回调。当系统服务完成连接时调用此接口，用于执行初始化操作，该方法可选择性重写。
 
 **Since:** 21
 
@@ -37,7 +47,7 @@ Called to perform the initialization operation when the system service completes
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
-**Example**
+## Examples
 
 ```TypeScript
 export default class MyFaultLogExtension extends FaultLogExtensionAbility {
@@ -53,7 +63,7 @@ export default class MyFaultLogExtension extends FaultLogExtensionAbility {
 onDisconnect(): void
 ```
 
-Called to release resources and clear the running status when the system service completes the disconnection. This API can be overridden selectively.
+FaultLogExtensionAbility生命周期回调。当系统服务完成断开连接时调用此接口，用于释放资源清理运行状态，该方法可选择性重写。
 
 **Since:** 21
 
@@ -65,7 +75,7 @@ Called to release resources and clear the running status when the system service
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
-**Example**
+## Examples
 
 ```TypeScript
 export default class MyFaultLogExtension extends FaultLogExtensionAbility {
@@ -81,7 +91,7 @@ export default class MyFaultLogExtension extends FaultLogExtensionAbility {
 onFaultReportReady(): void
 ```
 
-Called to subscribe to and process fault events when the system service notifies the FaultLogExtensionAbility to process faults.
+FaultLogExtensionAbility回调。系统服务通知FaultLogExtensionAbility可以进行故障处理时，回调此接口，可以在该方法中订阅故障事件进行处理。
 
 **Since:** 21
 
@@ -93,7 +103,7 @@ Called to subscribe to and process fault events when the system service notifies
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
@@ -122,10 +132,9 @@ export default class MyFaultLogExtension extends FaultLogExtensionAbility {
 context: FaultLogExtensionContext
 ```
 
-Context of the FaultLogExtensionAbility. This context is inherited from  
-[ExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+FaultLogExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)。
 
-**Type:** FaultLogExtensionContext
+**Type:** [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
 
 **Since:** 21
 

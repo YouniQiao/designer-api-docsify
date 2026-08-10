@@ -1,6 +1,6 @@
 # CrownSensitivity
 
-Enumerates the sensitivity levels for crown rotation.
+旋转表冠灵敏度。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the sensitivity levels for crown rotation.
 LOW = 0
 ```
 
-Low sensitivity.
+低灵敏度。
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ Low sensitivity.
 MEDIUM = 1
 ```
 
-Medium sensitivity.
+中灵敏度。
 
 **Since:** 18
 
@@ -56,7 +56,7 @@ Medium sensitivity.
 HIGH = 2
 ```
 
-High sensitivity.
+高灵敏度。
 
 **Since:** 18
 

@@ -10,6 +10,12 @@ This module provides the DRM capability to multimedia player.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## Summary
 
 ### Functions

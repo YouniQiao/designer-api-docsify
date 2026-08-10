@@ -4,7 +4,7 @@
 declare type AttachmentType = ImageAttachmentInterface | ResourceImageAttachmentOptions
 ```
 
-图片设置项类型，用于设置属性字符串PixelMap类型或[ResourceStr]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类型图片。
+图片设置项类型，用于设置属性字符串PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片。
 
 **起始版本：** 15
 

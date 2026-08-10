@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## held
 
 ```TypeScript
@@ -18,7 +24,7 @@ held: AsyncLockInfo[]
 
 持有的锁信息。
 
-**类型：** AsyncLockInfo[]
+**类型：** [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md)[]
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ pending: AsyncLockInfo[]
 
 等待中的锁信息。
 
-**类型：** AsyncLockInfo[]
+**类型：** [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md)[]
 
 **起始版本：** 12
 

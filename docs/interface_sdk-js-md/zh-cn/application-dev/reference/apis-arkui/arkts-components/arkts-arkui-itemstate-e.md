@@ -8,7 +8,7 @@
 
 **废弃版本：** 22
 
-**替代接口：** [Swiper](../arkts-apis/arkts-arkui-component/swiper-swiper-f.md#swiper)
+**替代接口：** [Swiper](../arkts-apis/arkts-arkui-swiper-swiper-f.md/arkts-arkui-swiper-swiper-f.md#swiper)
 
 <!--Device-unnamed-declare enum ItemState--><!--Device-unnamed-declare enum ItemState-End-->
 
@@ -24,7 +24,7 @@ Normal
 
 **说明：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[index]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+从API version 8开始支持，从API version 22开始废弃，建议使用[index](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#index)替代。
 
 **起始版本：** 8
 
@@ -50,7 +50,7 @@ Disabled
 
 **说明：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[indicatorInteractive]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+从API version 8开始支持，从API version 22开始废弃，建议使用[indicatorInteractive](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#indicatorinteractive)替代。
 
 **起始版本：** 8
 
@@ -76,7 +76,7 @@ Waiting
 
 **说明：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[Swiper]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+从API version 8开始支持，从API version 22开始废弃，建议使用[Swiper](../arkts-apis/arkts-arkui-swiper-swiper-f.md/arkts-arkui-swiper-swiper-f.md#swiper)替代。
 
 **起始版本：** 8
 
@@ -84,7 +84,7 @@ Waiting
 
 **废弃版本：** 22
 
-**替代接口：** [Swiper](../arkts-apis/arkts-arkui-component/swiper-swiper-f.md#swiper)
+**替代接口：** [Swiper](../arkts-apis/arkts-arkui-swiper-swiper-f.md/arkts-arkui-swiper-swiper-f.md#swiper)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -102,7 +102,7 @@ Skip
 
 **说明：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[index]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+从API version 8开始支持，从API version 22开始废弃，建议使用[index](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#index)替代。
 
 **起始版本：** 8
 

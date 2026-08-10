@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## format
 
 ```TypeScript
@@ -20,7 +26,7 @@ format: DescriptionFormat
 
 描述文件格式。取值原则：STANDARD适合需要完整描述信息的场景，SIMPLIFIED适合仅需精简描述信息的场景。
 
-**类型：** DescriptionFormat
+**类型：** [DescriptionFormat](arkts-basicservices-update-descriptionformat-e-sys.md)
 
 **起始版本：** 9
 

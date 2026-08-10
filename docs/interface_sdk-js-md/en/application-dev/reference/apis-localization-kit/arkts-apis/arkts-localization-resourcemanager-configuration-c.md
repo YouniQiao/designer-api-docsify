@@ -1,6 +1,6 @@
 # Configuration
 
-Defines the device configuration.
+表示当前设备的状态。
 
 **Since:** 6
 
@@ -10,15 +10,21 @@ Defines the device configuration.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+## Modules to Import
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## colorMode
 
 ```TypeScript
 colorMode: ColorMode
 ```
 
-Color mode.
+颜色模式。
 
-**Type:** ColorMode
+**Type:** [ColorMode](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-colormode-e.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Color mode.
 deviceType: DeviceType
 ```
 
-Device type.
+设备类型。
 
-**Type:** DeviceType
+**Type:** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ Device type.
 direction: Direction
 ```
 
-Screen orientation modes.
+屏幕方向。
 
-**Type:** Direction
+**Type:** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 6
 
@@ -76,7 +82,7 @@ Screen orientation modes.
 locale: string
 ```
 
-Language locale.
+语言文字国家地区。
 
 **Type:** string
 
@@ -96,9 +102,9 @@ Language locale.
 mcc : int
 ```
 
-Mobile country code (MCC).
+移动国家码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -116,9 +122,9 @@ Mobile country code (MCC).
 mnc : int
 ```
 
-Mobile network code (MNC).
+移动网络码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -136,9 +142,9 @@ Mobile network code (MNC).
 screenDensity: ScreenDensity
 ```
 
-Screen density
+屏幕密度。
 
-**Type:** ScreenDensity
+**Type:** [ScreenDensity](../../apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-screendensity-e.md)
 
 **Since:** 12
 

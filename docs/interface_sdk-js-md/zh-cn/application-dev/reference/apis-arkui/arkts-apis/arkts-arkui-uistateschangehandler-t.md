@@ -20,6 +20,6 @@ UI状态变化处理函数，返回当前UI状态，值为结果的所有当前�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 触发UI状态变化的节点。  |
-| currentUIStates | int | 是 | 回调触发时当前的UI状态。可以通过位与运算判断当前包含哪些[UIState]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_状态。位与运算方法：if (currentState & UIState.PRESSED == UIState.PRESSED)。一般的UIState状态检查可以直接判断：if (currentState == UIState.PRESSED)。 \_\_\_HTML\_TAG\_USD\_1\_\_\_取值限定为整数。  |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 触发UI状态变化的节点。 |
+| currentUIStates | int | 是 | 回调触发时当前的UI状态。可以通过位与运算判断当前包含哪些[UIState](arkts-arkui-framenode-uistate-e.md)状态。位与运算方法：if (currentState & UIState.PRESSED == UIState.PRESSED)。一般的UIState状态检查可以直接判断：if (currentState == UIState.PRESSED)。 <br>取值限定为整数。 |
 

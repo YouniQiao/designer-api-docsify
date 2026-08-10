@@ -1,5 +1,11 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## on('locationChange')
 
 ```TypeScript
@@ -27,10 +33,10 @@ Subscribe location changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the location request parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md) | Yes | Indicates the location request parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -69,9 +75,9 @@ Subscribe location switch changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationServiceState' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -109,10 +115,10 @@ Subscribe to cache GNSS locations update messages
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsReporting' | Yes | Indicates the location service event to be subscribed to. |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the cached GNSS locations request parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
+| request | [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md) | Yes | Indicates the cached GNSS locations request parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -151,9 +157,9 @@ Subscribe gnss status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the gnss status change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the gnss status change. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -191,9 +197,9 @@ Subscribe nmea message changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'nmeaMessageChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Indicates the callback for reporting the nmea message. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback for reporting the nmea message. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -231,10 +237,10 @@ Add a geofence and subscribe geo fence status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the Geo-fence configuration parameters. |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates which ability to start when the geofence event is triggered. |
+| request | [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md) | Yes | Indicates the Geo-fence configuration parameters. |
+| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

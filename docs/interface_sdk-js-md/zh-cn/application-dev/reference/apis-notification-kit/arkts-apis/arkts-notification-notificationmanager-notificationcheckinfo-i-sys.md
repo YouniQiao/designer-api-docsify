@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -42,7 +48,7 @@ contentType: ContentType
 
 通知类型。
 
-**类型：** ContentType
+**类型：** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
 
 **起始版本：** 10
 
@@ -64,7 +70,7 @@ creatorUserId: int
 
 通知的user ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -86,7 +92,7 @@ extraInfos?: Record<string, Object>
 
 实况通知的附加信息。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 11
 
@@ -130,7 +136,7 @@ notificationId: int
 
 通知ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -152,7 +158,7 @@ slotType: SlotType
 
 渠道类型。
 
-**类型：** SlotType
+**类型：** [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md)
 
 **起始版本：** 11
 

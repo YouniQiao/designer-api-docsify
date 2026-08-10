@@ -1,12 +1,18 @@
 # getAuthLockState
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## getAuthLockState
 
 ```TypeScript
 function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 ```
 
-Queries the lockout state of the specified authentication type. This API uses a promise to return the result.
+查询指定认证类型的冻结状态，使用Promise异步回调。
 
 **Since:** 22
 
@@ -24,25 +30,25 @@ Queries the lockout state of the specified authentication type. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication type, which is used to specify the credential type to query. Supported values: **FACE**, **FINGERPRINT**, and **PIN**. Select an appropriate authentication type based on the security requirements of the service scenario. |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | 认证类型，用于指定查询的凭据类型。支持FACE（人脸）、FINGERPRINT（指纹）、PIN（密码）等。根据业务场景安全需求选择合适的认证类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthLockState&gt; | Promise used to return the result. An error is reported when the operation fails. |
+| Promise&lt;AuthLockState&gt; | Promise对象，当查询成功时，返回值为指定认证类型的身份认证冻结状态。失败时报错。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
-| [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) | The parameter is out of range. |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
+| 12500010 | The type of credential has not been enrolled. |
+| 12500008 | The parameter is out of range. |
+| 201 | Permission denied. |
+| 12500005 | The authentication type is not supported. |
+| 12500002 | General operation error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -56,12 +62,12 @@ let authLockState : userAuth.AuthLockState = {
 }
 
 userAuth.getAuthLockState(queryType)
-  .then((result : userAuth.AuthLockState) => {
+  .then((result: userAuth.AuthLockState) => {
     authLockState = result;
-    console.info(`get auth lock state success, authLockState is: ${JSON.stringify(authLockState)}`);
+    console.info('get auth lock state successfully.');
   })
-  .catch((err : BusinessError) => {
-    console.info(`get auth lock state failed, err code is : ${err?.code}, err message is : ${err?.message}`);
+  .catch((err: BusinessError) => {
+    console.error(`get auth lock state failed, err code is : ${err?.code}, err message is : ${err?.message}`);
   })
 ```
 

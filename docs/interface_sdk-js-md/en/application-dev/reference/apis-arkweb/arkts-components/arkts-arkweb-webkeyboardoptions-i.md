@@ -1,6 +1,6 @@
 # WebKeyboardOptions
 
-Represents the return value of the callback that intercepts the soft keyboard started from editable elements on the web page. You can specify the types of the keyboard, and return the value to the Web kernel to control the startup of different types of soft keyboards.
+Defines the web keyboard options when onInterceptKeyboardAttach event return.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents the return value of the callback that intercepts the soft keyboard st
 customKeyboard?: CustomBuilder
 ```
 
-Builder of a custom keyboard. This parameter is required when **useSystemKeyboard** is set to **false**. After it is set, the **Web** component starts the custom keyboard as configured.
+Set the custom keyboard builder when the custom keyboard is used.
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **Since:** 12
 
@@ -36,9 +36,7 @@ Builder of a custom keyboard. This parameter is required when **useSystemKeyboar
 enterKeyType?: number
 ```
 
-Type of the **Enter** key on the system soft keyboard. For details about the value range, see  
-[EnterKeyType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This parameter is optional and the default value is **UNSPECIFIED**. This parameter is valid only when **useSystemKeyboard** is set to **true** and  
-**enterKeyType** is set to a valid value.
+Set the enter key type when the system keyboard is used, the "enter" key related to the {@link inputMethodEngine}.
 
 **Type:** number
 
@@ -58,7 +56,7 @@ Type of the **Enter** key on the system soft keyboard. For details about the val
 useSystemKeyboard: boolean
 ```
 
-Whether to use the system's default soft keyboard.
+Whether the system keyboard is used.
 
 **Type:** boolean
 

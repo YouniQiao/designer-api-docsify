@@ -1,0 +1,52 @@
+# @ohos.security.securityGuard(This module provides the capabilities to security guard.)
+
+Provides security event management and security model management.Based on event information, you will be able to analyze the running status of devices.
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+<!--Device-unnamed-declare namespace securityGuard--><!--Device-unnamed-declare namespace securityGuard-End-->
+
+**系统能力：** SystemCapability.Security.SecurityGuard
+
+**系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+```
+
+## 汇总
+
+<!--Del-->
+### 函数（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md#getmodelresult) | Request security model result from security guard. |
+| [off](arkts-securityguard-securityguard-off-f-sys.md#off) | Unsubscribe the security event. |
+| [on](arkts-securityguard-securityguard-on-f-sys.md#on) | Subscribe the security event. |
+| [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md#querysecurityevent) | Query security event information from security guard. |
+| [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md#reportsecurityevent) | Report security information to the security guard. |
+| [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md#startsecurityeventcollector) | start the collector to collect data |
+| [stopSecurityEventCollector](arkts-securityguard-securityguard-stopsecurityeventcollector-f-sys.md#stopsecurityeventcollector) | stop the collector. |
+| [updatePolicyFile](arkts-securityguard-securityguard-updatepolicyfile-f-sys.md#updatepolicyfile) | Update the policy file. |
+<!--DelEnd-->
+
+<!--Del-->
+### 接口（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [CollectorRule](arkts-securityguard-securityguard-collectorrule-i-sys.md) | Provides the conditions of Collector. |
+| [ModelResult](arkts-securityguard-securityguard-modelresult-i-sys.md) | Provides the ModelResult type. |
+| [ModelRule](arkts-securityguard-securityguard-modelrule-i-sys.md) | Provides the ModelRule type. |
+| [PolicyFile](arkts-securityguard-securityguard-policyfile-i-sys.md) | Provides policy file information. |
+| [Querier](arkts-securityguard-securityguard-querier-i-sys.md) | Definition callback of receiving the query data. |
+| [SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md) | Provides the SecurityEvent type, including the event id, version info, report content. |
+| [SecurityEventInfo](arkts-securityguard-securityguard-securityeventinfo-i-sys.md) | Provides the conditions of on/off. |
+| [SecurityEventRule](arkts-securityguard-securityguard-securityeventrule-i-sys.md) | Provides the conditions of querySecurityEvent. |
+<!--DelEnd-->
+

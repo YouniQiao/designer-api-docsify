@@ -1,12 +1,18 @@
 # startWork
 
+## Modules to Import
+
+```TypeScript
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## startWork
 
 ```TypeScript
 function startWork(work: WorkInfo): void
 ```
 
-Requests a deferred task. Upon successful request, the deferred task is added to the execution queue and will be executed by the system once the trigger conditions are met.
+申请延迟任务，成功后会把任务添加到执行队列，满足触发条件后由系统调度执行。
 
 **Since:** 9
 
@@ -22,20 +28,20 @@ Requests a deferred task. Upon successful request, the deferred task is added to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| work | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The info of work. |
+| work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | Yes | The info of work. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
-| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
-| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
-| [9700005](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700005-startwork-call-failure) | Calling startWork failed. |
+| 9700004 | Check on workInfo failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| 9700005 | Calling startWork failed. |
+| 9700001 | Memory operation failed. |
+| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| 9700003 | System service operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

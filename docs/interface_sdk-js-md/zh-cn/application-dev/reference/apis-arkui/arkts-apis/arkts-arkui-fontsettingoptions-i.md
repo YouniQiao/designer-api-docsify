@@ -17,9 +17,9 @@ enableVariableFontWeight?: boolean
 ```
 
 是否启用可变字重调节。字体配置项作为  
-[fontWeight]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口的入参，fontWeight接口中weight取值为[100, 900]内非整百数值时，enableVariableFontWeight用于设置weight的值是否生效。
+[fontWeight](arkts-arkui-text-textattribute-i.md#fontweight)接口的入参，fontWeight接口中weight取值为[100, 900]内非整百数值时，enableVariableFontWeight用于设置weight的值是否生效。
 
-默认值：false
+默认值：false 
 
 true：启用可变字重调节。此时如果weight取值为[100, 900]范围内任意整数，字重取值为weight，否则取默认值400。
 

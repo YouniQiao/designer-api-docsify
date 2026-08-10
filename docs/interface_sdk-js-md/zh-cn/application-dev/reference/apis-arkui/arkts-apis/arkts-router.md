@@ -1,32 +1,27 @@
-# @system.router(页面路由)
+# @ohos.router
 
-通过不同的uri访问不同的页面。
- > **说明：**
- >
- > - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.router](../../../reference/apis-arkui/js-apis-md)。
+**起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-unnamed-declare namespace router--><!--Device-unnamed-declare namespace router-End-->
+
+**系统能力：** 
+- API版本23+：SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
 
 ## 汇总
 
-### 类
+### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [Router](arkts-arkui-router-router-c.md) | 通过不同的uri访问不同的页面。 |
-
-### 接口
-
-| 名称 | 说明 |
-| --- | --- |
-| [BackRouterOptions](arkts-arkui-router-backrouteroptions-i.md) | 定义路由器返回的选项。 |
-| [DisableAlertBeforeBackPageOptions](arkts-arkui-router-disablealertbeforebackpageoptions-i.md) | 定义DisableAlertBeforeBackPage参数选项。 |
-| [EnableAlertBeforeBackPageOptions](arkts-arkui-router-enablealertbeforebackpageoptions-i.md) | 定义EnableAlertBeforeBackPage选项。 |
-| [RouterOptions](arkts-arkui-router-routeroptions-i.md) | 定义路由器的选项。 |
-| [RouterState](arkts-arkui-router-routerstate-i.md) | 定义路由器的状态。 |
-
-### 类型
-
-| 名称 | 说明 |
-| --- | --- |
-| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | 路由参数列表。 |
+| [RouterMode](arkts-arkui-router-routermode-e.md) | 路由跳转模式。 |
 

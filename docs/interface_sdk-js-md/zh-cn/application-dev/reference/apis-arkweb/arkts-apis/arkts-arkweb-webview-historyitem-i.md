@@ -10,6 +10,12 @@ Provides information for history item in BackForwardList.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## historyRawUrl
 
 ```TypeScript

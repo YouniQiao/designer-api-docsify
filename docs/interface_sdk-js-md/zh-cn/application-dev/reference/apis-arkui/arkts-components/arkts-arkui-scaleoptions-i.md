@@ -1,9 +1,9 @@
 # ScaleOptions
 
-    **说明：**  
-    
-    当组件同时设置了[rotate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和  
-    [scale]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_属性时，centerX和centerY的取值会发生冲突，此时centerX和centerY的值以最后设定的属性的值为准。
+> **说明：**
+> 
+> 当组件同时设置了[rotate](arkts-arkui-commonmethod-c.md#rotate)和
+> [scale](arkts-arkui-commonmethod-c.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和centerY的值以最后设定的属性的值为准。
 
 **起始版本：** 7
 

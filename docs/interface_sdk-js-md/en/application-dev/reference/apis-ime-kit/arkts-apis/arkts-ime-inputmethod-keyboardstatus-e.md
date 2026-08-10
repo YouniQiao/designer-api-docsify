@@ -1,6 +1,6 @@
 # KeyboardStatus
 
-Enumerates the keyboard status.
+输入法软键盘状态。
 
 **Since:** 10
 
@@ -16,7 +16,9 @@ Enumerates the keyboard status.
 NONE = 0
 ```
 
-The keyboard status is none.
+NONE。
+
+**使用场景：**表示键盘状态尚未确定或无法判断时使用。
 
 **Since:** 10
 
@@ -32,7 +34,9 @@ The keyboard status is none.
 HIDE = 1
 ```
 
-The keyboard status is hide.
+隐藏状态。
+
+**使用场景：**表示当前软键盘处于隐藏状态。
 
 **Since:** 10
 
@@ -48,7 +52,9 @@ The keyboard status is hide.
 SHOW = 2
 ```
 
-The keyboard status is show.
+显示状态。
+
+**使用场景：**表示当前软键盘处于显示状态。
 
 **Since:** 10
 

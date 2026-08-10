@@ -1,12 +1,18 @@
 # getPointerSpeedSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## getPointerSpeedSync
 
 ```TypeScript
 function getPointerSpeedSync(): int
 ```
 
-Obtains the mouse pointer speed. This API returns the result synchronously.
+使用同步方式获取当前鼠标移动速度。
 
 **Since:** 10
 
@@ -22,16 +28,16 @@ Obtains the mouse pointer speed. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Mouse pointer speed. The value ranges from 1 to 20. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回鼠标移动速度，范围1-20。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -45,9 +51,9 @@ struct Index {
         .onClick(() => {
           try {
             let speed = pointer.getPointerSpeedSync();
-            console.info(`Get pointer speed success, speed: ${JSON.stringify(speed)}`);
+            console.info(`Succeeded in getting pointer speed, speed: ${JSON.stringify(speed)}.`);
           } catch (error) {
-            console.error(`Get pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

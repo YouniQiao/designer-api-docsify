@@ -10,6 +10,12 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { FormExtensionAbility } from 'kits/@kit.FormKit';
+```
+
 ## onAcquireFormState
 
 ```TypeScript
@@ -34,7 +40,7 @@ Called to notify the widget provider that the widget host is requesting the widg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Description of the widget state, including the bundle name, ability name, module name, and widget name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Description of the widget state, including the bundle name, ability name, module name, and widget name. |
 
 **Return value:**
 
@@ -42,7 +48,7 @@ Called to notify the widget provider that the widget host is requesting the widg
 | --- | --- |
 | formInfo.FormState | Enumerated values of the current widget status. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FormExtensionAbility, formInfo } from '@kit.FormKit';
@@ -53,7 +59,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
     console.info(`FormExtensionAbility onAcquireFormState, want: ${want}`);
     return formInfo.FormState.UNKNOWN;
   }
-};
+}
 ```
 
 ## onAcquireFormState
@@ -62,9 +68,9 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onAcquireFormState?: OnAcquireFormStateFn
 ```
 
-Called to return a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object.
+Called to return a {@link FormState} object.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ by default.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_
+&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns {@link FormState#DEFAULT} by default.&lt;/p&gt;
 
 **Since:** 23
 
@@ -102,7 +108,7 @@ Called to notify the widget provider that a widget is being created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-forminfo-formparam-e.md), such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
 
 **Return value:**
 
@@ -110,7 +116,7 @@ Called to notify the widget provider that a widget is being created.
 | --- | --- |
 | formBindingData.FormBindingData | A **formBindingData.FormBindingData** object containing the data to be displayed on the widget. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formBindingData, FormExtensionAbility } from '@kit.FormKit';
@@ -119,13 +125,13 @@ import { Want } from '@kit.AbilityKit';
 export default class MyFormExtensionAbility extends FormExtensionAbility {
   onAddForm(want: Want) {
     console.info(`FormExtensionAbility onAddForm, want: ${want.abilityName}`);
-    let dataObj1: Record<string, string> = {
-      'temperature': '11c',
+    let temperatureData: Record<string, string> = {
+      'temperature': '11°C',
       'time': '11:00'
     };
 
-    let obj1: formBindingData.FormBindingData = formBindingData.createFormBindingData(dataObj1);
-    return obj1;
+    let formBindingDataObj: formBindingData.FormBindingData = formBindingData.createFormBindingData(temperatureData);
+    return formBindingDataObj;
   }
 }
 ```
@@ -156,7 +162,7 @@ Called to notify the widget provider that a temporary widget has been converted 
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget that requests to be converted to a normal one. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
@@ -166,7 +172,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
     // Called to notify the widget provider that a temporary widget has been converted to a normal one. You need to perform operations as required.
     console.info(`FormExtensionAbility onCastToNormalForm, formId: ${formId}`);
   }
-};
+}
 ```
 
 ## onChangeFormVisibility
@@ -197,9 +203,9 @@ Called to notify the widget provider that the widget visibility status is being 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newStatus | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;string, int&gt; | Yes | ID and visibility status of the widget to be changed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| newStatus | ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int&gt; | Yes | ID and visibility status of the widget to be changed.<br>**Since:** 11 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formBindingData, FormExtensionAbility, formProvider } from '@kit.FormKit';
@@ -216,23 +222,23 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   onChangeFormVisibility(newStatus: Record<string, number>) {
     console.info(`FormExtensionAbility onChangeFormVisibility, newStatus: ${newStatus}`);
     let param: Record<string, string> = {
-      'temperature': '22c',
+      'temperature': '22°C',
       'time': '22:00'
     }
-    let obj2: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+    let formBindingDataObj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
 
     let keys: string[] = getObjKeys(newStatus);
 
     for (let i: number = 0; i < keys.length; i++) {
       console.info(`FormExtensionAbility onChangeFormVisibility, key: ${keys[i]}, value= ${newStatus[keys[i]]}`);
-      formProvider.updateForm(keys[i], obj2).then(() => {
+      formProvider.updateForm(keys[i], formBindingDataObj).then(() => {
         console.info('FormExtensionAbility context updateForm');
-      }).catch((error: BusinessError) => {
-        console.error(`Operation updateForm failed. , code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
+      }).catch ((error: BusinessError) => {
+        console.error(`Operation updateForm failed, code: ${error.code}, message: ${error.message}`);
       });
     }
   }
-};
+}
 ```
 
 ## onConfigurationUpdate
@@ -241,8 +247,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Since API version 20, for system applications, the  
-**onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. &lt;!--Del--&gt;Since API version 20, for system applications, the   
+**onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.&lt;!--DelEnd--&gt;
 
 **Since:** 9
 
@@ -260,9 +266,9 @@ Called when system configuration items change. The **onConfigurationUpdate** cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | New configuration. |
+| newConfig | [Configuration](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | Yes | New configuration. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
@@ -274,7 +280,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
     // If no operation is performed within 10 seconds after a FormExtensionAbility instance is created, the instance will be deleted.
     console.info(`onConfigurationUpdate, config: ${newConfig?.language}`);
   }
-};
+}
 ```
 
 ## onFormEvent
@@ -304,7 +310,7 @@ Called to instruct the widget provider to process the widget event.
 | formId | string | Yes | ID of the widget that requests the event. |
 | message | string | Yes | Event message. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
@@ -313,7 +319,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   onFormEvent(formId: string, message: string) {
     console.info(`FormExtensionAbility onFormEvent, formId: ${formId}, message: ${message}`);
   }
-};
+}
 ```
 
 ## onFormLocationChanged
@@ -343,7 +349,7 @@ Called when the widget location changes.
 | formId | string | Yes | Widget ID. |
 | newFormLocation | formInfo.FormLocation | Yes | Enumerated value of the latest widget location. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formBindingData, FormExtensionAbility, formInfo } from '@kit.FormKit';
@@ -357,7 +363,7 @@ export default class EntryFormAbility extends FormExtensionAbility {
     return formBindingData.createFormBindingData(formData);
   }
   onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation) {
-    console.info("EntryFormAbility onFormLocationChanged current location: " + newFormLocation);
+    console.info('EntryFormAbility onFormLocationChanged current location: ' + newFormLocation);
   }
 }
 ```
@@ -388,7 +394,7 @@ Called to notify the widget provider that a widget is being destroyed.
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget to be destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
@@ -397,7 +403,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   onRemoveForm(formId: string) {
     console.info(`FormExtensionAbility onRemoveForm, formId: ${formId}`);
   }
-};
+}
 ```
 
 ## onSizeChanged
@@ -425,10 +431,10 @@ Called when the widget size changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| newDimension | formInfo.FormDimension | Yes | Widget dimension. For example, **Dimension\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_2** indicates a 1 x 2 widget. |
+| newDimension | formInfo.FormDimension | Yes | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
 | newRect | formInfo.Rect | Yes | Widget position information, including the X and Y coordinates of the widget's top- left corner, as well as its width and height. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FormExtensionAbility, formInfo } from '@kit.FormKit';
@@ -460,7 +466,7 @@ Called when the widget process of the widget provider exits.
 
 **System capability:** SystemCapability.Ability.Form
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
@@ -498,8 +504,8 @@ Called when this ability breaks the last link, notifying the provider that the p
 onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 ```
 
-Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call  
-[updateForm]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_of **formProvider** to update the widget data.
+Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call   
+[updateForm](arkts-form-formprovider-updateform-f.md#updateform) of **formProvider** to update the widget data.
 
 **Since:** 9
 
@@ -518,9 +524,9 @@ Called to notify the widget provider that a widget is being updated, with update
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget that requests to be updated. |
-| wantParams | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | No | Parameters used for the update. |
+| wantParams | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No | Parameters used for the update. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formBindingData, FormExtensionAbility, formProvider } from '@kit.FormKit';
@@ -541,7 +547,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
       console.error(`FormExtensionAbility context updateForm failed, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
     });
   }
-};
+}
 ```
 
 ## context
@@ -550,12 +556,12 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 context: FormExtensionContext
 ```
 
-Context of the FormExtensionAbility. This context is inherited from  
-[ExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Context of the FormExtensionAbility. This context is inherited from   
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
 
 This API can be used in atomic services since API version 11.
 
-**Type:** FormExtensionContext
+**Type:** [FormExtensionContext](arkts-form-formextensioncontext-c-sys.md)
 
 **Since:** 9
 

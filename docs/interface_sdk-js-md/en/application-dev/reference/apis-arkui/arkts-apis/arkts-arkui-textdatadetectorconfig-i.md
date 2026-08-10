@@ -1,6 +1,6 @@
 # TextDataDetectorConfig
 
-This configuration is only available for the [Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and [RichEditor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ components.
+该配置只支持[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件和[RichEditor](./rich_editor)组件。
 
 **Since:** 11
 
@@ -16,11 +16,11 @@ This configuration is only available for the [Text]\_\_\_JSDOC\_LINK\_DESC\_USD\
 color?: ResourceColor
 ```
 
-Color of the entity after successful text detection.
+设置文本识别成功后的实体颜色。
 
-Default value: **'#ff0a59f7'
+默认值：'#ff0a59f7'，表示蓝色（不透明度为100%）
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -40,21 +40,21 @@ Default value: **'#ff0a59f7'
 decoration?: DecorationStyleInterface
 ```
 
-Decoration style of the entity after successful text detection.
+设置文本识别成功后的实体装饰线样式。
 
-Default value:
+默认值：
 
 {
 
  type: TextDecorationType.Underline,
 
- color: same as the entity
+ color: 与实体颜色一致,
 
- style: TextDecorationStyle.SOLID
+ style: TextDecorationStyle.SOLID 
 
 }
 
-**Type:** DecorationStyleInterface
+**Type:** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
 
 **Since:** 12
 
@@ -74,13 +74,13 @@ Default value:
 enablePreviewMenu?: boolean
 ```
 
-Whether to enable the preview menu displayed when long-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.
+设置是否开启文本识别长按显示预览菜单。true表示开启，false表示未开启。
 
-Default value: **false**
+默认值：false
 
-When [copyOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **None**, even if **enablePreviewMenu** is set to **true**, long-pressing AI entities will not display the preview menu.
+当[copyOptions](arkts-arkui-richeditor-richeditorattribute-i.md#copyoptions)设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
 
-This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1devices, TVs, and wearables.
+本接口实际支持的设备类型范围（Phone、Tablet）小于其所属系统能力支持的设备类型范围（Phone、PC/2in1、Tablet、TV、Car、Wearable）。因硬件形态限制，该接口在PC/2in1、TV、Car、Wearable设备中调用功能不生效。
 
 **Type:** boolean
 
@@ -102,9 +102,11 @@ This API can be properly called on phones and tablets, but has no effect on othe
 onDetectResultUpdate?: Callback<string>
 ```
 
-Callback invoked when text recognition succeeds.
+文本识别成功后，触发onDetectResultUpdate回调。
 
-**Type:** Callback&lt;string&gt;
+默认值：undefined，不触发回调。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
 
 **Since:** 11
 
@@ -124,9 +126,9 @@ Callback invoked when text recognition succeeds.
 types: TextDataDetectorType[]
 ```
 
-Entity types for text recognition. Values **null** and **[]** indicate that all types of entities can be recognized.
+设置文本识别的实体类型。设置types为null或者[]时，识别所有类型的实体，否则只识别指定类型的实体。
 
-**Type:** TextDataDetectorType[]
+**Type:** [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md)[]
 
 **Since:** 11
 

@@ -1,5 +1,11 @@
 # setDlpFeature（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+```
+
 ## setDlpFeature
 
 ```TypeScript
@@ -28,7 +34,7 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | DLP特性开关状态。ENABLED\_\_\_ESCAPED\_UNDERSCORE\_\_\_FEATURE用于开启DLP特性，菜单中显示"加密保护"选项；NOT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENABLED\_\_\_ESCAPED\_UNDERSCORE\_\_\_FEATURE用于关闭DLP特性 ，菜单中不显示"加密保护"选项。超出此范围抛出错误码401。 |
+| status | [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | 是 | DLP特性开关状态。ENABLED_FEATURE用于开启DLP特性，菜单中显示"加密保护"选项；NOT_ENABLED_FEATURE用于关闭DLP特性 ，菜单中不显示"加密保护"选项。超出此范围抛出错误码401。 |
 
 **返回值：**
 
@@ -40,11 +46,11 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| 19100001 | Invalid parameter value. |
+| 19100011 | The system ability works abnormally. |
+| 202 | Non-system applications use system APIs. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { dlpSetDlpFeature } from '@kit.DataProtectionKit';

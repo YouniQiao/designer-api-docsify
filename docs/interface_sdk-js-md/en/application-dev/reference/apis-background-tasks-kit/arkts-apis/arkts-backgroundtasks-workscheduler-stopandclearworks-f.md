@@ -1,12 +1,18 @@
 # stopAndClearWorks
 
+## Modules to Import
+
+```TypeScript
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## stopAndClearWorks
 
 ```TypeScript
 function stopAndClearWorks(): void
 ```
 
-Stops and clears all the deferred tasks.
+停止和取消当前应用所有的延迟任务。
 
 **Since:** 9
 
@@ -22,12 +28,12 @@ Stops and clears all the deferred tasks.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
-| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| 9700001 | Memory operation failed. |
+| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| 9700003 | System service operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

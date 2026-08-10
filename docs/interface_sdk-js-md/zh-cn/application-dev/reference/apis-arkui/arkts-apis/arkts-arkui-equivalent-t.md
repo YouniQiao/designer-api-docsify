@@ -20,12 +20,12 @@ Determine whether two values are equal.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oldV | T | 是 | the old value  |
-| newV | T | 是 | the new value  |
+| oldV | T | 是 | the old value |
+| newV | T | 是 | the new value |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | - Returns the comparison result between old value and new value, if they are equal, return true; otherwise, return false.  |
+| boolean | Returns the comparison result between old value and new value, if they are equal, return true; otherwise, return false. |
 

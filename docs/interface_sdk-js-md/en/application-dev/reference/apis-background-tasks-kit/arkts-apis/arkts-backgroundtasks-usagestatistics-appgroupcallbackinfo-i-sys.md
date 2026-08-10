@@ -1,5 +1,7 @@
 # AppGroupCallbackInfo (System API)
 
+应用分组变化回调返回的属性集合
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -10,15 +12,21 @@
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## appNewGroup
 
 ```TypeScript
 appNewGroup: int
 ```
 
-The usage new group of the application
+变化后的应用分组。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,9 +44,9 @@ The usage new group of the application
 appOldGroup: int
 ```
 
-The usage old group of the application
+变化前的应用分组。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,7 +64,7 @@ The usage old group of the application
 bundleName: string
 ```
 
-The bundle name
+应用名称。
 
 **Type:** string
 
@@ -76,9 +84,14 @@ The bundle name
 changeReason: long
 ```
 
-The change reason
+分组变化原因。
 
-**Type:** long
+- 256:使用记录初创建时，默认匹配的原因。  
+- 512:计算优先级分组时异常。  
+- 768:使用时长变化。   
+- 1024:有其他应用为当前应用强制设置优先级分组。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -96,9 +109,9 @@ The change reason
 userId: int
 ```
 
-The use id
+用户id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

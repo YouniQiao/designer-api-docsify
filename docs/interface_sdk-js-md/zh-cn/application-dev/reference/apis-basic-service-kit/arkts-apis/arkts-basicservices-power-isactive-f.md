@@ -1,5 +1,11 @@
 # isActive
 
+## 导入模块
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isActive
 
 ```TypeScript
@@ -25,7 +31,7 @@ function isActive(): boolean
 | --- | --- |
 | boolean | 活动状态返回true，非活动状态返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let isActive = power.isActive();

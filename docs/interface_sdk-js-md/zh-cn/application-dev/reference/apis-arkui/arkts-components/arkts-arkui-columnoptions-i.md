@@ -1,9 +1,10 @@
 # ColumnOptions
 
 设置Column组件的子组件间距属性。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -21,7 +22,7 @@ space?: string | number
 
 纵向布局元素垂直方向间距。
 
-space为负数或者[justifyContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
+space为负数或者[justifyContent](ColumnAttribute#justifyContent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
 
 取值范围：[0, +∞)
 

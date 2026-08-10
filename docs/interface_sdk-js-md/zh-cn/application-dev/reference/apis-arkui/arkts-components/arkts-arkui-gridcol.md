@@ -35,7 +35,9 @@ GridCol(option?: GridColOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| option | [GridColOptions](../arkts-apis/arkts-arkui-gridcol-gridcoloptions-i.md) | 否 |  |
 
 ## 汇总
 
+- [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
+- [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md)

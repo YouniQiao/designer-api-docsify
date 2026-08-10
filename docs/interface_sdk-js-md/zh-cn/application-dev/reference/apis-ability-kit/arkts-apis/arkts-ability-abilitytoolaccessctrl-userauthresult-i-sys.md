@@ -20,7 +20,7 @@ permissionInfo: PermissionInfo[]
 
 权限信息列表。
 
-**类型：** PermissionInfo[]
+**类型：** [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md)[]
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ permissionQuery: PermissionQuery
 
 权限查询信息。
 
-**类型：** PermissionQuery
+**类型：** [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,7 @@
 # AutoFillExtensionAbility (System API)
 
-The AutoFillExtensionAbility module provides APIs for automatically filling in and saving accounts and passwords. It inherits from [ExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类型的自动填充与保存，继承自  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)。
 
 **Inheritance/Implementation:** AutoFillExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 
@@ -14,13 +15,19 @@ The AutoFillExtensionAbility module provides APIs for automatically filling in a
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { AutoFillExtensionAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## onBackground
 
 ```TypeScript
 onBackground(): void
 ```
 
-Called when this AutoFillExtensionAbility is switched from the foreground to the background.
+当AutoFillExtensionAbility从前台转到后台时触发。
 
 **Since:** 11
 
@@ -34,7 +41,7 @@ Called when this AutoFillExtensionAbility is switched from the foreground to the
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
@@ -53,7 +60,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onCreate(): void
 ```
 
-Called when an AutoFillExtensionAbility is created.
+AutoFillExtensionAbility创建时触发回调函数。
 
 **Since:** 11
 
@@ -67,7 +74,7 @@ Called when an AutoFillExtensionAbility is created.
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
@@ -86,7 +93,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onDestroy(): void | Promise<void>
 ```
 
-Called to clear resources when this AutoFillExtensionAbility is destroyed. This API either returns the result directly or uses a promise to return the result.
+在AutoFillExtensionAbility销毁时回调，执行资源清理等操作。回调结束直接返回，或者使用Promise异步回调。
 
 **Since:** 11
 
@@ -100,7 +107,7 @@ Called to clear resources when this AutoFillExtensionAbility is destroyed. This 
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
@@ -119,7 +126,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onDestroy(): Promise<void> | undefined
 ```
 
-Called to clear resources when this AutoFillExtensionAbility is destroyed.
+在AutoFillExtensionAbility销毁时回调，执行资源清理等操作。
 
 **Since:** 23
 
@@ -145,7 +152,7 @@ Called to clear resources when this AutoFillExtensionAbility is destroyed.
 onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback: FillRequestCallback): void
 ```
 
-Called when an auto-fill request is initiated or a password is generated.
+当发起自动填充请求或者生成密码时触发此回调函数。
 
 **Since:** 11
 
@@ -163,11 +170,11 @@ Called when an auto-fill request is initiated or a password is generated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI content information related to the AutoFillExtensionAbility. |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Data to be automatically filled in. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used for the auto-fill request. |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | Yes | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i-sys.md) | Yes | 自动填充数据。 |
+| callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | Yes | 自动填充请求回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
@@ -208,7 +215,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onForeground(): void
 ```
 
-Called when this AutoFillExtensionAbility is switched from the background to the foreground.
+当AutoFillExtensionAbility从后台转到前台时触发。
 
 **Since:** 11
 
@@ -222,7 +229,7 @@ Called when this AutoFillExtensionAbility is switched from the background to the
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
@@ -241,7 +248,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback: SaveRequestCallback): void
 ```
 
-Called when automatic or manual saving is initiated.
+当发起自动保存或者手动保存时触发此回调函数。
 
 **Since:** 11
 
@@ -259,11 +266,11 @@ Called when automatic or manual saving is initiated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI content information related to the AutoFillExtensionAbility. |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Data to be saved. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used for the saving request. |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | Yes | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | Yes | 保存请求数据。 |
+| callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | Yes | 保存请求回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
@@ -302,7 +309,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onSessionDestroy(session: UIExtensionContentSession): void
 ```
 
-Called when a UIExtensionContentSession instance is destroyed for this AutoFillExtensionAbility.
+当AutoFillExtensionAbility界面内容对象销毁后调用。
 
 **Since:** 11
 
@@ -320,9 +327,9 @@ Called when a UIExtensionContentSession instance is destroyed for this AutoFillE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI content information related to the AutoFillExtensionAbility. |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | Yes | AutoFillExtensionAbility界面内容相关信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AutoFillExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
@@ -341,7 +348,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onUpdateRequest(request: UpdateRequest): void
 ```
 
-Called when an update request is received.
+当收到更新请求时触发此回调函数。
 
 **Since:** 12
 
@@ -359,9 +366,9 @@ Called when an update request is received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Update request. |
+| request | [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | Yes | 更新请求。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AutoFillExtensionAbility, autoFillManager } from '@kit.AbilityKit';
@@ -381,9 +388,9 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 context: AutoFillExtensionContext
 ```
 
-Context of the AutoFillExtensionAbility. This context inherits from **ExtensionContext**.
+AutoFillExtension的上下文环境，继承自ExtensionContext。
 
-**Type:** AutoFillExtensionContext
+**Type:** [AutoFillExtensionContext](arkts-ability-autofillextensioncontext-c-sys.md)
 
 **Since:** 11
 

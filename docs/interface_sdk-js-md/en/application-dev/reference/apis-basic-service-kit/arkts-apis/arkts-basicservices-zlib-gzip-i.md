@@ -1,6 +1,6 @@
 # GZip
 
-Describes gzip-related APIs.
+Gzip相关接口。
 
 **Since:** 12
 
@@ -9,6 +9,12 @@ Describes gzip-related APIs.
 <!--Device-zlib-interface GZip--><!--Device-zlib-interface GZip-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
+
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
 
 ## gzbuffer
 
@@ -22,7 +28,7 @@ ArkTS-Sta:
 gzbuffer(size: long): Promise<int>
 ```
 
-Sets the internal buffer size for the current library function. This API uses a promise to return the result.
+为当前库函数设置内部缓冲区尺寸。
 
 **Since:** 12
 
@@ -38,22 +44,22 @@ Sets the internal buffer size for the current library function. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Size of the internal buffer to be set. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 需要设置的内部缓冲区尺寸。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. If the operation is successful, **0** is returned. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，成功时，返回0。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fileIo as fs } from '@kit.CoreFileKit';
@@ -100,7 +106,7 @@ struct Index {
 gzclearerr(): Promise<void>
 ```
 
-Clears the errors and end-of-file flags of a file. This API uses a promise to return the result.
+清除文件的错误和文件结束标志。使用Promise异步回调。
 
 **Since:** 12
 
@@ -116,9 +122,9 @@ Clears the errors and end-of-file flags of a file. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -175,7 +181,7 @@ struct Index {
 gzclose(): Promise<ReturnStatus>
 ```
 
-Clears all pending output of the file. Closes the file and releases the decompression or compression state if necessary. This API uses a promise to return the result.
+清除文件的所有挂起输出，如有必要，关闭文件和释放（解）压缩状态。使用Promise异步回调。
 
 **Since:** 12
 
@@ -191,16 +197,16 @@ Clears all pending output of the file. Closes the file and releases the decompre
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
-| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
+| 17800006 | Memory allocation failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -244,7 +250,7 @@ struct Index {
 gzcloser(): Promise<ReturnStatus>
 ```
 
-Implements the same functions as that of **gzclose()** for reading only. This API uses a promise to return the result.
+与gzclose()功能相同，仅适用于读取时。使用Promise异步回调。
 
 **Since:** 12
 
@@ -260,15 +266,15 @@ Implements the same functions as that of **gzclose()** for reading only. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -314,7 +320,7 @@ struct Index {
 gzclosew(): Promise<ReturnStatus>
 ```
 
-Implements the same functions as that of **gzclose()** for writing or appending. This API uses a promise to return the result.
+与gzclose()功能相同，仅适用于写入或追加时。使用Promise异步回调。
 
 **Since:** 12
 
@@ -330,16 +336,16 @@ Implements the same functions as that of **gzclose()** for writing or appending.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
-| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
+| 17800006 | Memory allocation failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -389,7 +395,7 @@ ArkTS-Sta:
 gzdirect(): Promise<int>
 ```
 
-Checks whether the specified gzip file handle directly accesses the original uncompressed data and reallocates the buffer. This API uses a promise to return the result.
+检查指定的gzip文件句柄文件是否直接访问原始未压缩数据，重新分配缓冲区。使用Promise异步回调。
 
 **Since:** 12
 
@@ -405,9 +411,9 @@ Checks whether the specified gzip file handle directly accesses the original unc
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. If the original uncompressed data is directly accessed, **1** is returned. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，如果直接访问原始未压缩数据，则返回1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -458,7 +464,7 @@ ArkTS-Sta:
 gzdopen(fd: int, mode: string): Promise<void>
 ```
 
-Associates gzip file with the file descriptor (fd) and opens the file for reading and decompressing, or compressing and writing. This API uses a promise to return the result.
+将gzFile与文件描述符fd相关联，打开文件，用于进行读取并解压缩，或者压缩并写入。使用Promise异步回调。
 
 **Since:** 12
 
@@ -474,23 +480,23 @@ Associates gzip file with the file descriptor (fd) and opens the file for readin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File descriptor. Generally, the value is obtained by calling the **open** method or other methods. |
-| mode | string | Yes | Specifies the access mode. For details, see the description of [gzopen]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符。通常情况下，通过系统调用“open”或其他方法获得的。 |
+| mode | string | Yes | 用于指定访问模式。详情与[gzopen](arkts-basicservices-zlib-gzip-i.md#gzopen)一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800002 | No such file or access mode error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -541,7 +547,7 @@ ArkTS-Sta:
 gzeof(): Promise<int>
 ```
 
-Checks whether the position from which data is read has reached the end of the gzip file. This API uses a promise to return the result.
+检查gzip压缩文件的读取位置是否已到达文件的末尾。使用Promise异步回调。
 
 **Since:** 12
 
@@ -557,9 +563,9 @@ Checks whether the position from which data is read has reached the end of the g
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. If the end-of-file indicator is set while reading, **1** is returned. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，如果在读取时设置了文件的文件结束指示符，则返回1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -614,7 +620,7 @@ struct Index {
 gzerror(): Promise<GzErrorOutputInfo>
 ```
 
-Describes the last error message that reported for the file. This API uses a promise to return the result.
+文件上发生的最后一个错误的错误消息。使用Promise异步回调。
 
 **Since:** 12
 
@@ -630,15 +636,15 @@ Describes the last error message that reported for the file. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GzErrorOutputInfo&gt; | Promise used to return the result. |
+| Promise&lt;GzErrorOutputInfo&gt; | Promise对象，返回结果状态和出现的最后一个状态的状态消息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -695,7 +701,7 @@ struct Index {
 gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 ```
 
-Flushes all pending output into a compressed file. This API uses a promise to return the result.
+将所有挂起的输出刷新到文件中。使用Promise异步回调。
 
 **Since:** 12
 
@@ -711,22 +717,22 @@ Flushes all pending output into a compressed file. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Controls the flushing mode. For details, see [CompressFlushMode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | 控制刷新操作的行为，参考[CompressFlushMode枚举](arkts-basicservices-zlib-compressflushmode-e.md)的定义。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -777,7 +783,7 @@ ArkTS-Sta:
 gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 ```
 
-Decompresses and reads data from a gzip file. This API uses a promise to return the result.
+从gzip压缩文件中解压缩并读取数据。使用Promise异步回调。
 
 **Since:** 12
 
@@ -793,24 +799,24 @@ Decompresses and reads data from a gzip file. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Destination buffer for storing read results. |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Number of bytes in a single data block. |
-| nitems | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Number of data blocks to be written. |
+| buf | ArrayBuffer | Yes | 用于存储读取结果的目标缓冲区。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 单个数据块中的字节数。 |
+| nitems | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 要写入的数据块数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回读取大小为size的完整数据块的数目。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -870,7 +876,7 @@ ArkTS-Sta:
 gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 ```
 
-Compresses data blocks that are declared with size and nitems from the buffer and writes the data blocks to a file. This API uses a promise to return the result.
+将大小为size，数量为nitems的数据块从buf压缩并写入文件。使用Promise异步回调。
 
 **Since:** 12
 
@@ -886,24 +892,24 @@ Compresses data blocks that are declared with size and nitems from the buffer an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Buffer to which data is to be written. |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Number of bytes in a single data block. |
-| nitems | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Number of data blocks to be written. |
+| buf | ArrayBuffer | Yes | 要将数据写入的缓冲区。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 单个数据块中的字节数。 |
+| nitems | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 要写入的数据块数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回写入大小为size的完整数据块的数目。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -959,7 +965,7 @@ ArkTS-Sta:
 gzgetc(): Promise<int>
 ```
 
-Reads and decompresses a byte from a file. This API uses a promise to return the result.
+从文件中读取并解压缩一个字节。使用Promise异步回调。
 
 **Since:** 12
 
@@ -975,15 +981,15 @@ Reads and decompresses a byte from a file. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回读取字符的ASCII值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1031,7 +1037,7 @@ struct Index {
 gzgets(buf: ArrayBuffer): Promise<string>
 ```
 
-Reads bytes from a compressed file until len-1 characters are read, a newline character is read and transferred to a buffer, or an end-of-file condition is encountered. This API uses a promise to return the result.
+从文件中读取字节并将其解压缩到buf中，直到读取len-1字符，或者直到读取换行符并将其传输到buf，或者遇到文件结束条件。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1047,22 +1053,22 @@ Reads bytes from a compressed file until len-1 characters are read, a newline ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Stores the read row data. |
+| buf | ArrayBuffer | Yes | 存储读取的行数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a string ended with **null**. |
+| Promise&lt;string&gt; | Promise对象，返回以null结尾的字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1117,7 +1123,7 @@ ArkTS-Sta:
 gzoffset(): Promise<long>
 ```
 
-Returns the current compressed read or write offset of the file. This API uses a promise to return the result.
+返回文件的当前压缩（实际）读或写偏移量。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1133,15 +1139,15 @@ Returns the current compressed read or write offset of the file. This API uses a
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回文件的当前压缩（实际）读或写偏移量。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1186,7 +1192,7 @@ struct Index {
 gzopen(path: string, mode: string): Promise<void>
 ```
 
-Opens the .gz file in the specified path for reading and decompressing, or compressing and writing. This API uses a promise to return the result.
+打开位于指定路径的gzip(.gz)文件，用于进行读取并解压缩，或者压缩并写入。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1202,23 +1208,23 @@ Opens the .gz file in the specified path for reading and decompressing, or compr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the file to be opened. |
-| mode | string | Yes | Specifies a mode for opening a file.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Basic modes (one of the following must be selected):\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"r"** or **"rb"**: read mode. The system automatically detects and decompresses the gzip file. If the file is not in gzip format, the original data is directly read.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"w"** or **"wb"**: write mode. The system creates a new file and compresses data.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"a"** or **"ab"**: append mode. The system appends a new gzip stream to the end of the existing file without verifying the format of the original file.&lt; br&gt;Optional function parameters (can be used together):\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Compression level: **0** (no compression) to **9** (maximum compression). The default compression level is **6**. This parameter must be used together with the write or append mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Compression strategy: **"f"** (filtering strategy), **"h"** (Huffman coding strategy), **"R"** (RLE compression strategy), or **"F"** (fixed encoding strategy). You can only select one of the strategies.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Transparent mode: **"T"**. In this mode, data is not compressed and no gzip header is generated during writing (a common file is generated). This parameter is mutually exclusive with the compression strategy parameter.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Exclusive creation: **"x"**. The file fails to be opened if it already exists. This parameter must be used together with the write or append mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Close-on-exec flag: **"e"**. This parameter is used to set the **FD\_\_\_ESCAPED\_UNDERSCORE\_\_\_CLOEXEC** property of the file descriptor (system-dependent). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Examples:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"r"**: read mode. Data is read in binary format.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_11\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"rb"**: read mode. Data is read in binary format.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_12\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"wb6"**: write mode. Data is written in binary format with the compression level of 6.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_13\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"wb9f"**: write mode. Data is written in binary format with the maximum compression level and filtering strategy.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_14\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"wbT"**: write mode. Data is not compressed and a common file is generated.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_15\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"wbx"**: write mode. Data is written to the exclusively created file in binary format.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_16\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"abx"**: append mode. Data is appended and written to the exclusively created file in binary format. |
+| path | string | Yes | 需要打开的文件路径。 |
+| mode | string | Yes | 指定文件打开方法。&lt;br&gt;基础模式（必须三选一）：&lt;br/&gt;-?“r”或“rb”：读取模式，自动检测并解压gzip文件（若非gzip格式则直接读取原始数据）。&lt;br/&gt;-? “w”或“wb”：写入模式，创建新文件并压缩数据。&lt;br/&gt;-?“a”或“ab”：追加模式，在现有文件末尾追加新的gzip流（不校验原文件格式）。&lt;br/&gt;可选功能参数（可组合使用）：&lt;br/&gt;-?压缩级别：0（不压 缩）至9（最佳压缩），默认压缩级别为6，需要配合写入模式或者追加模式使用。&lt;br/&gt;-?压缩策略：“f”（过滤策略）、“h”（霍夫曼策略）、“R”（游标编码策略）、“F”（固定编码策略），只能选取一种压缩策略。 &lt;br/&gt;- 透明模式：“T”，写入时不压缩且不生成gzip头（生成普通文件），与压缩策略互斥。&lt;br/&gt;-?独占创建：“x”，如果文件存在则打开失败，需要配合写入模式或者追加模式使用&lt;br/&gt;-? close-on-exec标志：“e”，设置文件描述符的FD_CLOEXEC属性（依赖系统支持）。&lt;br/&gt;模式字符串示例：&lt;br/&gt;-?“r”：读取模式，读取时以二进制形式读取。&lt;br/&gt;-?“rb”：读取模式，读 取时以二进制形式读取。&lt;br/&gt;-“wb6”：写入模式，压缩时以二进制形式写入，压缩级别为6。&lt;br/&gt;-?“wb9f”：写入模式，压缩时以二进制形式写入，压缩级别为最佳压缩，压缩策略采用过滤策略。&lt;br/&gt;-? “wbT”：写入模式，不压缩，生成普通文件。&lt;br/&gt;-?“wbx”：写入模式，压缩时以二进制形式写入，采用独占创建的方式写入文件。&lt;br/&gt;-?“abx”：追加模式，压缩时以二进制形式追加并写入，采用独占创建的方式 写入文件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800002 | No such file or access mode error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1268,7 +1274,7 @@ ArkTS-Sta:
 gzprintf(format: string, ...args: Array<string | double>): Promise<int>
 ```
 
-Converts and formats the parameters under the control of the string format and then compresses and writes them into a file, as shown in the **fprintf()**. This API uses a promise to return the result.
+在字符串格式的控制下，将参数转换和格式化后，压缩并写入文件，如fprintf中所示。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1284,24 +1290,24 @@ Converts and formats the parameters under the control of the string format and t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| format | string | Yes | Format descriptors and plain text. |
-| args | ArkTS-Dyn: Array&lt;string \| number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;string \| double&gt; | Yes | List of variable parameters. If variable parameters are passed, for example, **gzprintf("name is %s, age is %d", "Tom", 23)**, the content **"name is Tom, age is 23"** is written. If no variable parameter is passed, for example, **gzprintf("name is %s, age is %d")**, the content **"name is %s, age is %d"** is written. |
+| format | string | Yes | 格式化描述符和纯文本。 |
+| args | ArkTS-Dyn: Array&lt;string \| number&gt;  <br>ArkTS-Sta：Array&lt;string \| double&gt; | Yes | 可变参数列表。传入可变参数，例如gzprintf("name is %s, age is %d", "Tom", 23)，写入内容为“name is Tom, age is 23”。不传可变参数，例如gzprintf("name is %s, age is %d")，写入内容为“name is %s, age is %d”。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Return the number of uncompressed bytes actually written. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回实际写入的未压缩字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1352,7 +1358,7 @@ ArkTS-Sta:
 gzputc(ch: int): Promise<int>
 ```
 
-Compresses **char** converted to an unsigned character and writes it to a file. This API uses a promise to return the result.
+将转换为无符号字符的c压缩并写入文件。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1368,22 +1374,22 @@ Compresses **char** converted to an unsigned character and writes it to a file. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Write character ASCII. |
+| ch | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 写入字符ASCII。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回已写入的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1434,7 +1440,7 @@ ArkTS-Sta:
 gzputs(str: string): Promise<int>
 ```
 
-Compresses the given null-terminated strings and writes them to the file, excluding the null operator. This API uses a promise to return the result.
+压缩给定的以null结尾的字符串并将其写入文件，不包括终止的null字符。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1450,22 +1456,22 @@ Compresses the given null-terminated strings and writes them to the file, exclud
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| str | string | Yes | Format descriptors and plain text. |
+| str | string | Yes | 格式化描述符和纯文本。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回写入的字符数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1516,7 +1522,7 @@ ArkTS-Sta:
 gzread(buf: ArrayBuffer): Promise<long>
 ```
 
-Reads a maximum of **len** uncompressed bytes from a file and decompresses them into the buffer. This API uses a promise to return the result.
+从文件中读取最多len个未压缩字节并将其解压缩到buf中。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1532,22 +1538,22 @@ Reads a maximum of **len** uncompressed bytes from a file and decompresses them 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Target offset position. |
+| buf | ArrayBuffer | Yes | 目标偏移位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回实际读取的未压缩字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1601,7 +1607,7 @@ struct Index {
 gzrewind(): Promise<ReturnStatus>
 ```
 
-Repositions the file pointer to the beginning of the file. This feature is applied only for reading. This API uses a promise to return the result.
+将文件指针重新定位到文件的开头，此功能仅用于读取。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1617,15 +1623,15 @@ Repositions the file pointer to the beginning of the file. This feature is appli
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1678,7 +1684,7 @@ ArkTS-Sta:
 gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
 ```
 
-Sets the start position to the offset position relative to the next **gzread** or **gzwrite** in the file.
+将起始位置设置为相对于文件中下一个gzread或gzwrite的偏移位置。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1694,23 +1700,23 @@ Sets the start position to the offset position relative to the next **gzread** o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Target offset position. |
-| whence | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Defines the reference point for the offset. For details, see [OffsetReferencePoint]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 目标偏移位置。 |
+| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | Yes | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-zlib-offsetreferencepoint-e.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回从未压缩流开始以字节为单位测量的结果偏移位置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1755,7 +1761,7 @@ struct Index {
 gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>
 ```
 
-Dynamically updates the compression level and compression strategy of a file. This API uses a promise to return the result.
+动态更新文件的压缩级别和压缩策略。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1771,23 +1777,23 @@ Dynamically updates the compression level and compression strategy of a file. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Compression level. For details, see [CompressLevel]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Compression strategy. For details, see [CompressStrategy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | 压缩级别，参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | 压缩策略，参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1839,7 +1845,7 @@ ArkTS-Sta:
 gztell(): Promise<long>
 ```
 
-Returns the start position of the next **gzread** or **gzwrite** in the file. This API uses a promise to return the result.
+返回文件中下一个gzread或gzwrite的起始位置。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1855,15 +1861,15 @@ Returns the start position of the next **gzread** or **gzwrite** in the file. Th
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回文件种下一个gzread或gzwrite的起始位置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1914,7 +1920,7 @@ ArkTS-Sta:
 gzungetc(c: int): Promise<int>
 ```
 
-Pushes **c** back into the input stream so that it will be read as the first character the next time the file is read. This API uses a promise to return the result.
+将c推回到流中，以便在下次读取文件时将作为第一个字符读取。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1930,22 +1936,22 @@ Pushes **c** back into the input stream so that it will be read as the first cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| c | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Characters before being pushed into the input stream. |
+| c | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 回退到输入流之前的字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回推送的字符。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1999,7 +2005,7 @@ ArkTS-Sta:
 gzwrite(buf: ArrayBuffer, len: long): Promise<long>
 ```
 
-Compresses the uncompressed bytes of the declared length in the buffer and writes them to the file. This API uses a promise to return the result.
+将buf中的len长度的未压缩字节进行压缩并将其写入文件。使用Promise异步回调。
 
 **Since:** 12
 
@@ -2015,23 +2021,23 @@ Compresses the uncompressed bytes of the declared length in the buffer and write
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Data buffer pointed by an object to be written. |
-| len | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Length of uncompressed bytes. |
+| buf | ArrayBuffer | Yes | 对象指向要写入的数据缓冲区。 |
+| len | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 未压缩字节长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回写入的未压缩字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800009 | Internal structure error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

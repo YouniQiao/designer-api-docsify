@@ -1,16 +1,20 @@
 # setBadgeNumber
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## setBadgeNumber
 
 ```TypeScript
 function setBadgeNumber(badgeNumber: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the notification badge number. This API uses an asynchronous callback to return the result.
+设定角标个数，在应用的桌面图标上呈现。使用callback异步回调。
 
-A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.
-
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+角标是应用桌面图标右上角显示的数字标识，用于提示用户有未处理的通知数量。 设定后，桌面图标将显示对应角标数字。适用于需要在桌面图标上提示用户 待处理消息数量的场景，如未读消息数、待办事项数等。
 
 **Since:** 10
 
@@ -24,21 +28,21 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| badgeNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Notification badge number to set. If **badgeNumber** is set to a value less than or equal to **0**, badges are cleared; if the value is greater than **99**, **99+** is displayed on the badge. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| badgeNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 角标个数。当角标设定个数取值小于或等于0时，清除角标。取值大于99时，通知角标将显示99+。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设定角标个数成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 1600012 | No memory space. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,11 +65,9 @@ notificationManager.setBadgeNumber(badgeNumber, setBadgeNumberCallback);
 function setBadgeNumber(badgeNumber: int): Promise<void>
 ```
 
-Sets the notification badge number. This API uses a promise to return the result.
+设定角标个数，在应用的桌面图标上呈现。使用Promise异步回调。
 
-A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.
-
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+角标是应用桌面图标右上角显示的数字标识，用于提示用户有未处理的通知数量。 设定后，桌面图标将显示对应角标数字。适用于需要在桌面图标上提示用户 待处理消息数量的场景，如未读消息数、待办事项数等。
 
 **Since:** 10
 
@@ -79,26 +81,26 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| badgeNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Notification badge number to set. If **badgeNumber** is set to a value less than or equal to **0**, badges are cleared; if the value is greater than **99**, **99+** is displayed on the badge. |
+| badgeNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 角标个数。当角标设定个数取值小于或等于0时，清除角标。取值大于99时，通知角标将显示99+。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 1600012 | No memory space. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

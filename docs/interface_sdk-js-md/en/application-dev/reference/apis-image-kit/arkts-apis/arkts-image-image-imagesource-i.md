@@ -1,14 +1,12 @@
 # ImageSource
 
-The **ImageSource** class provides APIs to obtain image information.
+ImageSource类，用于获取图片相关信息。
 
-Before calling any API in ImageSource, you must use  
-[image.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create an ImageSource instance.
+在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)构建一个ImageSource实例。
 
-All APIs in ImageSource cannot be called concurrently.
+ImageSource的所有方法均不支持并发调用。
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 6
 
@@ -18,13 +16,19 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createImageRawData
 
 ```TypeScript
 createImageRawData(): Promise<ImageRawData>
 ```
 
-Obtains raw data from an image.
+获取图片原始数据。使用Promise异步回调。目前仅支持获取DNG图片类型的原始数据。
 
 **Since:** 24
 
@@ -40,14 +44,14 @@ Obtains raw data from an image.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ImageRawData&gt; | A Promise instance used to return image raw data. |
+| Promise&lt;ImageRawData&gt; | Promise对象，返回ImageRawData对象，其中含有数据缓冲区和像素位数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| 7700101 | Bad source. |
+| 7700102 | Unsupported MIME type. |
 
 ## createPicture
 
@@ -55,12 +59,11 @@ Obtains raw data from an image.
 createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 ```
 
-Creates a Picture object based on decoding options. This API uses a promise to return the result.
+通过图片解码参数创建Picture对象。使用Promise异步回调。
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly.
+由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法，及时释放内存。
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 13
 
@@ -74,21 +77,21 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Decoding options. |
+| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | No | 解码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Picture&gt; | Promise used to return the Picture object. |
+| Promise&lt;Picture&gt; | Promise对象，返回Picture。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 7700301 | Decode failed. |
+| 7700203 | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**Applicable version:** 24 and later |
 
 ## createPicture
 
@@ -110,7 +113,7 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image decoding parameters. |
+| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | No | Image decoding parameters. |
 
 **Return value:**
 
@@ -122,7 +125,7 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| 7700301 | Failed to decode image. |
 
 ## createPictureAtIndex
 
@@ -130,12 +133,15 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 createPictureAtIndex(index: int): Promise<Picture>
 ```
 
-Creates a **Picture** object using a specified image (only GIF and HEIF\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_ images currently). This API uses a promise to return the result.
+通过指定序号的图片创建Picture对象。使用Promise异步回调。
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+> **说明：**
+> 
+> - 支持GIF和HEIF&lt;sup&gt;23+&lt;/sup&gt;图像序列格式。从API版本26.0.0开始，增加支持AVIS格式。
+> 
+> - 由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 20
 
@@ -149,23 +155,23 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the image. The value range is [0, Number of frames – 1]. |
+| index | int | Yes | 解码图片序号。图片序号有效的取值范围为：[0, (帧数-1)]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Picture&gt; | Promise used to return the Picture object. |
+| Promise&lt;Picture&gt; | Promise对象，返回Picture。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| 7700101 | Bad source. |
+| 7700103 | Image too large. |
+| 7700102 | Unsupported MIME type. |
+| 7700301 | Decoding failed. |
+| 7700203 | Unsupported options. For example, index is invalid. |
 
 ## createPictureAtIndex
 
@@ -199,11 +205,11 @@ Decodes an image at the specified index into a Picture object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| 7700101 | Bad source. |
+| 7700103 | Image too large. |
+| 7700102 | Unsupported MIME type. |
+| 7700301 | Decoding failed. |
+| 7700203 | Unsupported options. For example, index is invalid. |
 
 ## createPixelMap
 
@@ -211,21 +217,18 @@ Decodes an image at the specified index into a Picture object.
 createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result.
+通过图片解码参数创建PixelMap对象。使用Promise异步回调。
 
-Starting from API version 15, you are advised to use  
-[createPixelMapUsingAllocator]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API can be used to specify the memory type  
-[AllocatorType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ of the output PixelMap. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
-    
-    - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to free the memory promptly.  
-    
-    - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
-    finished and the instance is no longer needed.
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+
+> **说明：**
+> 
+> - 该方法为非线程安全的方法，不支持在同一个ImageSource实例上并发调用。
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 7
 
@@ -243,13 +246,13 @@ Starting from API version 15, you are advised to use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Decoding options. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | 解码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
 
 ## createPixelMap
 
@@ -271,7 +274,7 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image decoding parameters. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Image decoding parameters. |
 
 **Return value:**
 
@@ -285,21 +288,18 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 createPixelMap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result.
+通过默认参数创建PixelMap对象。使用callback异步回调。
 
-Starting from API version 15, you are advised to use  
-[createPixelMapUsingAllocator]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API can be used to specify the memory type  
-[AllocatorType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ of the output PixelMap. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
-    
-    - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to free the memory promptly.  
-    
-    - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
-    finished and the instance is no longer needed.
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+
+> **说明：**
+> 
+> - 该方法为非线程安全的方法，不支持在同一个ImageSource实例上并发调用。
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 7
 
@@ -317,7 +317,7 @@ Starting from API version 15, you are advised to use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
 
 ## createPixelMap
 
@@ -339,7 +339,7 @@ Creates a PixelMap object. This method uses a callback to return the object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
 
 ## createPixelMap
 
@@ -347,21 +347,18 @@ Creates a PixelMap object. This method uses a callback to return the object.
 createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
+通过图片解码参数创建PixelMap对象。使用callback异步回调。
 
-Starting from API version 15, you are advised to use  
-[createPixelMapUsingAllocator]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API can be used to specify the memory type  
-[AllocatorType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ of the output PixelMap. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
-    
-    - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to free the memory promptly.  
-    
-    - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
-    finished and the instance is no longer needed.
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+
+> **说明：**
+> 
+> - 该方法为非线程安全的方法，不支持在同一个ImageSource实例上并发调用。
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 7
 
@@ -379,8 +376,8 @@ Starting from API version 15, you are advised to use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Decoding options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | 解码参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
 
 ## createPixelMap
 
@@ -402,8 +399,8 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image decoding parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Image decoding parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
 
 ## createPixelMapList
 
@@ -411,23 +408,20 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 ```
 
-Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result.
+通过图片解码参数创建PixelMap数组。使用Promise异步回调。
 
-For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
-    **NOTE**  
-    
-    - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
-    
-    - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly.  
-    
-    - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
-    finished and the instance is no longer needed.  
-    
-    - This function decodes all frames at once. If the number of frames is high or the size of individual frames is  
-    large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component  
-    for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this  
-    function.
+针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
+
+> **说明：**
+> 
+> - 该方法为非线程安全的方法，不支持在同一个ImageSource实例上并发调用。
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+> 
+> - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时（如2000×3000像素的100帧GIF动图），会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接
+> 口少。
 
 **Since:** 10
 
@@ -441,31 +435,31 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Decoding options. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | 解码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PixelMap&gt;&gt; | Promise used to return an array of PixelMap objects. |
+| Promise&lt;Array&lt;PixelMap&gt;&gt; | 异步返回PixelMap数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980099 | The shared memory data is abnormal. |
+| 62980101 | The image data is abnormal. |
+| 62980103 | The image data is not supported. |
+| 62980137 | Invalid media operation. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980109 | Failed to crop the image. |
+| 62980173 | The DMA memory does not exist. |
+| 62980111 | The image source data is incomplete. |
+| 62980174 | The DMA memory data is abnormal. |
+| 62980115 | Invalid image parameter. |
+| 62980116 | Failed to decode the image. |
+| 62980118 | Failed to create the image plugin. |
 
 ## createPixelMapList
 
@@ -473,23 +467,19 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-Creates an array of PixelMap objects based on the default parameters. This API uses an asynchronous callback to return the result.
+通过默认参数创建PixelMap数组。使用callback异步回调。
 
-For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
-    **NOTE**  
-    
-    - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
-    
-    - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly.  
-    
-    - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
-    finished and the instance is no longer needed.  
-    
-    - This function decodes all frames at once. If the number of frames is high or the size of individual frames is  
-    large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component  
-    for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this  
-    function.
+针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
+
+> **说明：**
+> 
+> - 该方法为非线程安全的方法，不支持在同一个ImageSource实例上并发调用。
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+> 
+> - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
 **Since:** 10
 
@@ -503,25 +493,25 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否 则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980099 | The shared memory data is abnormal. |
+| 62980101 | The image data is abnormal. |
+| 62980103 | The image data is not supported. |
+| 62980137 | Invalid media operation. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980109 | Failed to crop the image. |
+| 62980173 | The DMA memory does not exist. |
+| 62980111 | The image source data is incomplete. |
+| 62980174 | The DMA memory data is abnormal. |
+| 62980115 | Invalid image parameter. |
+| 62980116 | Failed to decode the image. |
+| 62980118 | Failed to create the image plugin. |
 
 ## createPixelMapList
 
@@ -529,23 +519,19 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-Creates an array of PixelMap objects based on decoding options. This API uses an asynchronous callback to return the result.
+通过图片解码参数创建PixelMap数组。使用callback异步回调。
 
-For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
-    **NOTE**  
-    
-    - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
-    
-    - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly.  
-    
-    - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
-    finished and the instance is no longer needed.  
-    
-    - This function decodes all frames at once. If the number of frames is high or the size of individual frames is  
-    large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component  
-    for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this  
-    function.
+针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
+
+> **说明：**
+> 
+> - 该方法为非线程安全的方法，不支持在同一个ImageSource实例上并发调用。
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+> 
+> - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
 **Since:** 10
 
@@ -559,26 +545,26 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Decoding options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | 解码参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否 则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980099 | The shared memory data is abnormal. |
+| 62980101 | The image data is abnormal. |
+| 62980103 | The image data is not supported. |
+| 62980137 | Invalid media operation. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980109 | Failed to crop the image. |
+| 62980173 | The DMA memory does not exist. |
+| 62980111 | The image source data is incomplete. |
+| 62980174 | The DMA memory data is abnormal. |
+| 62980115 | Invalid image parameter. |
+| 62980116 | Failed to decode the image. |
+| 62980118 | Failed to create the image plugin. |
 
 ## createPixelMapSync
 
@@ -586,23 +572,19 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 createPixelMapSync(options?: DecodingOptions): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options. This API returns the result synchronously.
+通过图片解码参数同步创建PixelMap对象。
 
-Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to free the memory promptly.
+由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
-Starting from API version 15, you are advised to use  
-[createPixelMapUsingAllocatorSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_. This API can be used to specify the memory type  
-[AllocatorType]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ of the output PixelMap. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    This API operates synchronously and will block the current thread during execution. It should not be invoked  
-    from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For  
-    details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+从API version 15开始，推荐使用[createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+
+> **说明：**
+> 
+> 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考
+> [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **Since:** 12
 
@@ -616,13 +598,13 @@ Starting from API version 15, you are advised to use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Decoding options. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | 解码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PixelMap object. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
 
 ## createPixelMapSync
 
@@ -644,13 +626,13 @@ Create a PixelMap object based on image decoding parameters synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image decoding parameters. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Image decoding parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the PixelMap. If decoding fails, return undefined. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Return the PixelMap. If decoding fails, return undefined. |
 
 ## createPixelMapUsingAllocator
 
@@ -658,17 +640,16 @@ Create a PixelMap object based on image decoding parameters synchronously.
 createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API uses a promise to return the result. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
-    
-    - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to free the memory promptly.  
-    
-    - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
-    finished and the instance is no longer needed.
+使用指定的分配器根据图像解码参数异步创建PixelMap对象。使用Promise异步回调。接口使用详情请参考  
+[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+
+> **说明：**
+> 
+> - 该方法为非线程安全的方法，不支持在同一个ImageSource实例上并发调用。
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 15
 
@@ -682,27 +663,27 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Decoding options. |
-| allocatorType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Type of the memory. The default value is **AllocatorType.AUTO**. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | 解码参数。 |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | 用于图像解码的内存类型。默认值为AllocatorType.AUTO。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| 7700101 | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 7700103 | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| 7700102 | Unsupported mimetype. |
+| 7700301 | Failed to decode image. |
+| 7700302 | Failed to allocate memory. |
+| 7700201 | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
+| 7700203 | Unsupported options, e.g, cannot convert image into desired pixel format. |
 
 ## createPixelMapUsingAllocator
 
@@ -725,8 +706,8 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image decoding parameters. |
-| allocatorType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicate which memory type will be used by the returned PixelMap. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Image decoding parameters. |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | Indicate which memory type will be used by the returned PixelMap. |
 
 **Return value:**
 
@@ -738,13 +719,13 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| 7700101 | Bad source. |
+| 7700103 | Image too large. |
+| 7700102 | Unsupported mimetype. |
+| 7700301 | Failed to decode image. |
+| 7700302 | Failed to allocate memory. |
+| 7700201 | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
+| 7700203 | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -752,18 +733,16 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously.For details, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+根据指定的分配器同步创建一个基于图像解码参数的PixelMap对象。接口使用详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
-Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to free the memory promptly.
+由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-    **NOTE**  
-    
-    This API operates synchronously and will block the current thread during execution. It should not be invoked  
-    from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For  
-    details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+
+> **说明：**
+> 
+> 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考
+> [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **Since:** 15
 
@@ -777,27 +756,27 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Decoding options. |
-| allocatorType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Type of the memory. The default value is **AllocatorType.AUTO**. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | 解码参数。 |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | 用于图像解码的内存类型。默认值为AllocatorType.AUTO。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PixelMap object. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| 7700101 | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 7700103 | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| 7700102 | Unsupported mimetype. |
+| 7700301 | Failed to decode image. |
+| 7700302 | Failed to allocate memory. |
+| 7700201 | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
+| 7700203 | Unsupported options, e.g, cannot convert image into desired pixel format. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -819,26 +798,26 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image decoding parameters. |
-| allocatorType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicate which memory type will be used by the returned PixelMap. |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Image decoding parameters. |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | Indicate which memory type will be used by the returned PixelMap. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the PixelMap. If decoding fails, return undefined. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Return the PixelMap. If decoding fails, return undefined. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| 7700101 | Bad source. |
+| 7700103 | Image too large. |
+| 7700102 | Unsupported MIME type. |
+| 7700301 | Failed to decode image. |
+| 7700302 | Failed to allocate memory. |
+| 7700201 | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
+| 7700203 | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
 
 ## createThumbnail
 
@@ -846,7 +825,19 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>
 ```
 
-Creates a thumbnail image based on image decoding parameters.This method uses a promise to return the PixelMap object, which represents the thumbnail.
+通过图片解码参数创建缩略图PixelMap对象。使用Promise异步回调。
+
+当前支持对JPEG和HEIF格式的图片创建缩略图PixelMap对象。
+
+优先解码图片文件中包含的缩略图。若图片文件中没有缩略图，则对原图进行解码。
+
+> **说明：**
+> 
+> - 不支持在同一个ImageSource实例上并发调用。
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 26.0.0
 
@@ -862,24 +853,24 @@ Creates a thumbnail image based on image decoding parameters.This method uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image decoding parameters for creating the thumbnail. |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | No | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 &lt;br&gt;默认表现： &lt;br&gt;- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。 &lt;br&gt;- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object representing the thumbnail. |
+| Promise&lt;PixelMap \| undefined&gt; | Promise对象，返回PixelMap。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
-| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
+| 7700103 | Image too large. |
+| 7700102 | Unsupported mimetype. |
+| 7700305 | Thumbnail generation failed. |
+| 7700301 | Decode failed. |
+| 7700204 | Invalid parameter, e.g, invalid generate size. |
+| 7700303 | Image does not carry thumbnail data. |
 
 ## createThumbnailSync
 
@@ -887,7 +878,20 @@ Creates a thumbnail image based on image decoding parameters.This method uses a 
 createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 ```
 
-Synchronously creates a thumbnail image based on image decoding parameters.This method returns a \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ object, which represents the generated thumbnail.
+通过图片解码参数同步创建缩略图。返回创建结果对应的[PixelMap](arkts-image-image-pixelmap-i.md)对象。
+
+当前支持对JPEG和HEIF格式的图片创建缩略图PixelMap对象。
+
+优先解码图片文件中包含的缩略图。若图片文件中没有缩略图，则对原图进行解码。
+
+> **说明：**
+> 
+> - 由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+> 
+> - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+> 
+> - 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考
+> [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **Since:** 26.0.0
 
@@ -903,24 +907,24 @@ Synchronously creates a thumbnail image based on image decoding parameters.This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image decoding parameters for creating the thumbnail. |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | No | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 &lt;br&gt;默认表现： &lt;br&gt;- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。 &lt;br&gt;- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The PixelMap object representing the generated thumbnail. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
-| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
+| 7700103 | Image too large. |
+| 7700102 | Unsupported mimetype. |
+| 7700305 | Thumbnail generation failed. |
+| 7700301 | Decode failed. |
+| 7700204 | Invalid parameter, e.g, invalid generate size. |
+| 7700303 | Image does not carry thumbnail data. |
 
 ## getDelayTimeList
 
@@ -934,7 +938,7 @@ ArkTS-Sta:
 getDelayTimeList(): Promise<Array<int>>
 ```
 
-Obtains an array of delay times. This API uses a promise to return the result. This API applies only to images in GIF or WebP format.
+获取图像延迟时间数组。使用Promise异步回调。此接口仅用于gif图片和webp图片。
 
 **Since:** 10
 
@@ -948,20 +952,20 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array of delay times. |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回延迟时间数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980115 | Invalid image parameter. |
+| 62980149 | Invalid MIME type for the image source. |
+| 62980116 | Failed to decode the image. |
+| 62980118 | Failed to create the image plugin. |
+| 62980122 | Failed to decode the image header. |
+| 62980111 | The image source data is incomplete. |
+| 62980110 | The image source data is incorrect. |
 
 ## getDelayTimeList
 
@@ -975,7 +979,7 @@ ArkTS-Sta:
 getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 ```
 
-Obtains an array of delay times. This API uses an asynchronous callback to return the result. This API applies only to images in GIF or WebP format.
+获取图像延迟时间数组。使用callback异步回调。此接口仅用于gif图片和webp图片。
 
 **Since:** 10
 
@@ -989,20 +993,20 @@ Obtains an array of delay times. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the array of delay times obtained; otherwise, **err** is an error object. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | 回调函数，当获取图像延迟时间数组成功，err为undefined，data为获取到的图像延时时间数组；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980115 | Invalid image parameter. |
+| 62980149 | Invalid MIME type for the image source. |
+| 62980116 | Failed to decode the image. |
+| 62980118 | Failed to create the image plugin. |
+| 62980122 | Failed to decode the image header. |
+| 62980111 | The image source data is incomplete. |
+| 62980110 | The image source data is incorrect. |
 
 ## getDisposalTypeList
 
@@ -1016,7 +1020,7 @@ ArkTS-Sta:
 getDisposalTypeList(): Promise<Array<int>>
 ```
 
-Obtains the list of disposal types. This API uses a promise to return the result. It is used only for GIF images.
+获取图像帧过渡模式数组。使用Promise异步回调。此接口仅用于gif图片。
 
 **Since:** 12
 
@@ -1030,16 +1034,16 @@ Obtains the list of disposal types. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array of disposal types. |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回帧过渡模式数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980101 | The image data is abnormal. |
+| 62980149 | Invalid MIME type for the image source. |
+| 62980137 | Invalid media operation. |
 
 ## getFrameCount
 
@@ -1053,7 +1057,7 @@ ArkTS-Sta:
 getFrameCount(): Promise<int>
 ```
 
-Obtains the number of frames. This API uses a promise to return the result.
+获取图像帧数。使用Promise异步回调。
 
 **Since:** 10
 
@@ -1067,21 +1071,21 @@ Obtains the number of frames. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of frames. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回图像帧数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980112 | The image format does not match. |
+| 62980115 | Invalid image parameter. |
+| 62980116 | Failed to decode the image. |
+| 62980118 | Failed to create the image plugin. |
+| 62980137 | Invalid media operation. |
+| 62980122 | Failed to decode the image header. |
+| 62980111 | The image source data is incomplete. |
 
 ## getFrameCount
 
@@ -1095,7 +1099,7 @@ ArkTS-Sta:
 getFrameCount(callback: AsyncCallback<int>): void
 ```
 
-Obtains the number of frames. This API uses an asynchronous callback to return the result.
+获取图像帧数。使用callback异步回调。
 
 **Since:** 10
 
@@ -1109,21 +1113,21 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of frames obtained; otherwise, **err** is an error object. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数，当获取图像帧数成功，err为undefined，data为获取到的图像帧数；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980112 | The image format does not match. |
+| 62980115 | Invalid image parameter. |
+| 62980116 | Failed to decode the image. |
+| 62980118 | Failed to create the image plugin. |
+| 62980137 | Invalid media operation. |
+| 62980122 | Failed to decode the image header. |
+| 62980111 | The image source data is incomplete. |
 
 ## getImageInfo
 
@@ -1131,7 +1135,7 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void
 ```
 
-Obtains the image information with the specified index. This API uses an asynchronous callback to return the result.
+获取指定序号的图片信息。使用callback异步回调。
 
 **Since:** 6
 
@@ -1149,8 +1153,8 @@ Obtains the image information with the specified index. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ImageInfo&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| index | int | Yes | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | Yes | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
 
 ## getImageInfo
 
@@ -1173,7 +1177,7 @@ Obtains information about an image with the specified sequence number and uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int | Yes | Sequence number of an image. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ImageInfo \| undefined&gt; | Yes | Callback used to return the image information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo \| undefined&gt; | Yes | Callback used to return the image information. |
 
 ## getImageInfo
 
@@ -1181,7 +1185,7 @@ Obtains information about an image with the specified sequence number and uses a
 getImageInfo(callback: AsyncCallback<ImageInfo>): void
 ```
 
-Obtains the image information. This API uses an asynchronous callback to return the result.
+获取图片信息。使用callback异步回调。
 
 **Since:** 6
 
@@ -1199,7 +1203,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ImageInfo&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | Yes | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
 
 ## getImageInfo
 
@@ -1221,7 +1225,7 @@ Obtains information about this image and uses a callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ImageInfo \| undefined&gt; | Yes | Callback used to return the image information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo \| undefined&gt; | Yes | Callback used to return the image information. |
 
 ## getImageInfo
 
@@ -1229,7 +1233,7 @@ Obtains information about this image and uses a callback to return the result.
 getImageInfo(index?: int): Promise<ImageInfo>
 ```
 
-Obtains the image information. This API uses a promise to return the result.
+获取图片信息。使用Promise异步回调。
 
 **Since:** 6
 
@@ -1247,13 +1251,13 @@ Obtains the image information. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | No | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
+| index | int | No | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ImageInfo&gt; | Promise used to return the image information. |
+| Promise&lt;ImageInfo&gt; | Promise对象，返回获取到的图片信息。 |
 
 ## getImageInfo
 
@@ -1289,13 +1293,12 @@ Get image information from image source.
 getImageInfoSync(index?: int): ImageInfo
 ```
 
-Obtains the image information with the specified index. This API returns the result synchronously.
-    **NOTE**  
-    
-    This API operates synchronously and will block the current thread during execution. It should not be invoked  
-    from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For  
-    details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+获取指定序号的图片信息，使用同步形式返回图片信息。
+
+> **说明：**
+> 
+> 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考
+> [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **Since:** 12
 
@@ -1309,13 +1312,13 @@ Obtains the image information with the specified index. This API returns the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | No | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
+| index | int | No | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Image information. |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) | 同步返回获取到的图片信息。 |
 
 ## getImageInfoSync
 
@@ -1337,13 +1340,13 @@ Get image information from image source synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | No | Index of sequence image. If this parameter is specified, default value is 0 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value range is all integers. |
+| index | int | No | Index of sequence image. If this parameter is specified, default value is 0 &lt;br&gt;The value range is all integers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The image information. |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) | The image information. |
 
 ## getImageProperties
 
@@ -1351,9 +1354,9 @@ Get image information from image source synchronously.
 getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>
 ```
 
-Obtains the values of properties with the given names in this image. This API uses a promise to return the result.
+批量获取图片中的指定属性键的值。使用Promise异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF, WEBP\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, or DNG\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_format and contain Exif information. (The supported formats may vary depending on the hardware.)
+该接口仅支持JPEG、PNG、HEIF、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **Since:** 12
 
@@ -1367,23 +1370,23 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP\_\_\_HTML\_TAG
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array&lt;PropertyKey&gt; | Yes | Array of properties names. |
+| key | Array&lt;PropertyKey&gt; | Yes | 图片属性名的数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;PropertyKey, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, **null** is returned. |
+| Promise&lt;Record&lt;PropertyKey, string \| null&gt;&gt; | Promise对象，返回图片属性值，如获取失败则返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980116 | Failed to decode the image. |
+| 62980110 | The image source data is incorrect. |
 
 ## getImageProperties
 
@@ -1417,10 +1420,10 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980116 | Failed to decode the image. |
+| 62980110 | The image source data is incorrect. |
 
 ## getImageProperty
 
@@ -1428,10 +1431,9 @@ Obtains the value of properties in an image. This method uses a promise to retur
 getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
+获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, WEBP\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_, or DNG\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_23+</sup  
-    format and contain Exif information. (The supported formats may vary depending on the hardware.)
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **Since:** 11
 
@@ -1445,31 +1447,31 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the property. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image properties, including the image index and default property value. |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | 图片属性名。 |
+| options | [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) | No | 图片属性，包括图片序号与默认属性值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
+| Promise&lt;string&gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980112 | The image format does not match. |
+| 62980115 | Invalid image parameter. |
+| 62980103 | The image data is not supported. |
+| 62980135 | The EXIF value is invalid. |
+| 62980118 | Failed to create the image plugin. |
+| 62980123 | The image does not support EXIF decoding. |
+| 62980122 | Failed to decode the image header. |
+| 62980111 | The image source data is incomplete. |
+| 62980110 | The image source data is incorrect. |
 
 ## getImageProperty
 
@@ -1477,9 +1479,15 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
+获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, or WEBP\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 11废弃，建议使用
+> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> 替。
 
 **Since:** 7
 
@@ -1497,14 +1505,14 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image properties, including the image index and default property value. |
+| key | string | Yes | 图片属性名。 |
+| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | No | 图片属性，包括图片序号与默认属性值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
+| Promise&lt;string&gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
 
 ## getImageProperty
 
@@ -1512,9 +1520,15 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 getImageProperty(key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses an asynchronous callback to return the result.
+获取图片中给定索引处图像的指定属性键的值。使用callback异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, or WEBP\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 11废弃，建议使用
+> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> 替。
 
 **Since:** 7
 
@@ -1532,8 +1546,8 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
+| key | string | Yes | 图片属性名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，当获取图片属性值成功，err为undefined，data为获取到的图片属性值；否则为错误对象。 |
 
 ## getImageProperty
 
@@ -1541,7 +1555,15 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void
 ```
 
-Obtains the value of a property in this image. This API uses an asynchronous callback to return the result.This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, or WEBP\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+获取图片指定属性键的值。使用callback异步回调。
+
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 11废弃，建议使用
+> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> 替。
 
 **Since:** 7
 
@@ -1559,9 +1581,9 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image properties, including the image index and default property value. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
+| key | string | Yes | 图片属性名。 |
+| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | Yes | 图片属性，包括图片序号与默认属性值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，当获取图片属性值成功，err为undefined，data为获取到的图片属性值；否则为错误对象。 |
 
 ## getImagePropertySync
 
@@ -1569,19 +1591,16 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 getImagePropertySync(key: PropertyKey): string
 ```
 
-Obtains the value of a specified Exif property. This API returns the result synchronously.
-    **NOTE**  
-    
-    - This API applies only to images that are in JPEG, PNG, HEIF, WEBP\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_, or DNG\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_format  
-    and contain Exif information. (The supported formats may vary depending on the hardware.)  
-    
-    - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and  
-    ISO.  
-    
-    - This API operates synchronously and will block the current thread during execution. It should not be invoked  
-    from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For  
-    details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+获取图片Exif指定属性键的值，使用同步形式返回结果。
+
+> **说明：**
+> 
+> - 该方法仅支持JPEG、PNG、HEIF、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+> 
+> - Exif信息是图片的元数据，包含拍摄时间、相机型号、光圈、焦距、ISO等。
+> 
+> - 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考
+> [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **Since:** 20
 
@@ -1595,21 +1614,21 @@ Obtains the value of a specified Exif property. This API returns the result sync
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the property. |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | 图片属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Value of the specified Exif property. If retrieval fails, the default value of the property is returned. For details about the meaning of each data value, see [PropertyKey]{ |
+| string | 返回图片Exif中指定属性键的值（如获取失败则返回属性默认值），各个数据值作用请参考[PropertyKey]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
+| 7700101 | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| 7700102 | Unsupported MIME type. |
+| 7700202 | Unsupported metadata. For example, key is not supported. |
 
 ## getImagePropertySync
 
@@ -1631,7 +1650,7 @@ Obtains the value of a property in the image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Property name. |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | Property name. |
 
 **Return value:**
 
@@ -1643,9 +1662,9 @@ Obtains the value of a property in the image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
+| 7700101 | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| 7700102 | Unsupported MIME type. |
+| 7700202 | Unsupported metadata. For example, key is not supported. |
 
 ## modifyImageProperties
 
@@ -1653,14 +1672,16 @@ Obtains the value of a property in the image.
 modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 ```
 
-Modifies the values of properties in this image. This API uses a promise to return the result.
+批量通过指定的键修改图片属性的值。使用Promise异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF, or WEBP\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-    **NOTE**  
-    
-    The property byte length is changed when the **modifyImageProperties** API is called to modify the values of  
-    properties. Currently, you can call the API in an ImageSource instance created based on a file descriptor or  
-    path, but not an ImageSource instance created based on buffers.
+该接口仅支持JPEG、PNG、HEIF和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+
+> **说明：**
+> 
+> - 调用modifyImageProperties修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperties会导致buffer内容覆盖，目前buffer创建的
+> ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
+> 
+> - 调用modifyImageProperties接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **Since:** 12
 
@@ -1674,22 +1695,22 @@ This API applies only to images that are in JPEG, PNG, HEIF, or WEBP\_\_\_HTML\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PropertyKey, string \| null&gt; | Yes | Array of property names and property values. |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;PropertyKey, string \| null&gt; | Yes | 包含图片属性名和属性值的数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
+| 62980146 | The EXIF data failed to be written to the file. |
+| 62980135 | The EXIF value is invalid. |
+| 62980123 | The image does not support EXIF decoding. |
 
 ## modifyImageProperties
 
@@ -1711,7 +1732,7 @@ Modify the value of properties in an image with the specified keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, string \| null&gt; | Yes | Array of the property Records whose values are to be modified. |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | Array of the property Records whose values are to be modified. |
 
 **Return value:**
 
@@ -1723,9 +1744,9 @@ Modify the value of properties in an image with the specified keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| 62980146 | The EXIF data failed to be written to the file. |
+| 62980135 | The EXIF value is invalid. |
+| 62980123 | The image does not support EXIF decoding. |
 
 ## modifyImagePropertiesEnhanced
 
@@ -1733,21 +1754,20 @@ Modify the value of properties in an image with the specified keys.
 modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>
 ```
 
-Modifies image properties in batches. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - Calling this API to modify properties alters the property byte length. You are advised to create an  
-    [image.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance by passing a  
-    file descriptor or an  
-    [image.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ instance by  
-    passing a URI.  
-    
-    - This API modifies batch data in memory and writes the data to the file in a single operation. It is more  
-    efficient than  
-    [modifyImageProperties]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    .  
-    
-    - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
+批量修改图片属性。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例或通过传入的uri创建
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例。
+> 
+> - 该方法在内存中完成批量数据修改后会一次性写入文件，相比
+> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)
+> 更高效。
+> 
+> - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
+> 
+> - 调用modifyImagePropertiesEnhanced接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **Since:** 22
 
@@ -1761,21 +1781,21 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, string \| null&gt; | Yes | Key-value pairs of image property names and property values. |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | 包含图片属性名和属性值的键值对集合。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
-| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
+| 7700102 | Unsupported MIME type. |
+| 7700304 | Failed to write image properties to the file. |
+| 7700202 | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 
 ## modifyImageProperty
 
@@ -1783,14 +1803,16 @@ Modifies image properties in batches. This API uses a promise to return the resu
 modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 ```
 
-Modifies the value of a property in this image. This API uses a promise to return the result.
+通过指定的键修改图片属性的值。使用Promise异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, or WEBP\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-    **NOTE**  
-    
-    The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a  
-    property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path  
-    , but not an ImageSource instance created based on buffers.
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+
+> **说明：**
+> 
+> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的
+> ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
+> 
+> - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **Since:** 11
 
@@ -1804,24 +1826,24 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Name of the property. |
-| value | string | Yes | New value of the property. |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | 图片属性名。 |
+| value | string | Yes | 属性值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980133](../errorcode-image.md#62980133-image-property-value-out-of-range) | The EXIF data is out of range. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
+| 62980146 | The EXIF data failed to be written to the file. |
+| 62980133 | The EXIF data is out of range. |
+| 62980135 | The EXIF value is invalid. |
+| 62980123 | The image does not support EXIF decoding. |
 
 ## modifyImageProperty
 
@@ -1829,14 +1851,19 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 modifyImageProperty(key: string, value: string): Promise<void>
 ```
 
-Modifies the value of a property in this image. This API uses a promise to return the result.
+通过指定的键修改图片属性的值。使用Promise异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, or WEBP\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-    **NOTE**  
-    
-    - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a  
-    property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path  
-    , but not an ImageSource instance created based on buffers.
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+
+> **说明：**
+> 
+> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的
+> ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
+> 
+> - 从API version 9开始支持，从API version 11废弃，建议使用
+> [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)代替。
+> 
+> - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **Since:** 9
 
@@ -1854,14 +1881,14 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| value | string | Yes | New value of the property. |
+| key | string | Yes | 图片属性名。 |
+| value | string | Yes | 属性值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## modifyImageProperty
 
@@ -1869,14 +1896,19 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Modifies the value of a property in this image. This API uses an asynchronous callback to return the result.
+通过指定的键修改图片属性的值。使用callback异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, or WEBP\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-    **NOTE**  
-    
-    - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a  
-    property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path  
-    , but not an ImageSource instance created based on buffers.
+仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+
+> **说明：**
+> 
+> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的
+> ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
+> 
+> - 从API version 9开始支持，从API version 11废弃，建议使用
+> [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)代替。
+> 
+> - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **Since:** 9
 
@@ -1894,9 +1926,9 @@ This API applies only to images that are in JPEG, PNG, HEIF\_\_\_HTML\_TAG\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| value | string | Yes | New value of the property. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| key | string | Yes | 图片属性名。 |
+| value | string | Yes | 属性值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当修改图片属性值成功，err为undefined，否则为错误对象。 |
 
 ## readImageMetadata
 
@@ -1910,35 +1942,46 @@ ArkTS-Sta:
 readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 ```
 
-Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result.
+读取图像源的元数据，使用propertyKeys指定元数据字段。使用Promise异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. (The supported formats may vary depending on the hardware.)
-    **NOTE**  
-    
-    When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the  
-    values of the following properties, see [PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_:  
-    
-    - **NewSubfileType**, **ImageWidth**, **ImageLength**, **DefaultCropSize**, **Orientation**, **Compression**,  
-    **PhotometricInterpretation**, **PlanarConfiguration**, **RowsPerStrip**, **StripOffsets**, **StripByteCounts**  
-    , **SamplesPerPixel**, **BitsPerSample**, **YCbCrCoefficients**, **YCbCrSubSampling**, **YCbCrPositioning**,  
-    **ReferenceBlackWhite**, **XResolution**, **YResolution**, and **ResolutionUnit**: For these properties, values  
-    related to the main image are returned.  
-    
-    - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the  
-    specifications, an empty string is returned.  
-    
-    - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an  
-    error code is returned.  
-    
-    - **DNGVersion**: If the value is earlier than **1.0.0.0**, **1.0.0.0** is returned.  
-    
-    - **GPSVersionID**: If there is no valid GPS data, the GPS version number is cleared and **0** is returned.  
-    
-    - **GPSAltitudeRef**: If **GPSAltitude** is not set, this property is set to **0xFFFFFFFF**.  
-    
-    - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the  
-    recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are  
-    used in sequence.
+该接口仅支持JPEG、PNG、HEIF、WebP、DNG、GIF、TIFF、HEIFS、JFIF和AVIS（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+
+> **说明：**
+> 
+> 读取DNG格式图片时，该接口对部分propertyKeys有特殊处理。以下字段的字符串取值请参考[PropertyKey](arkts-image-image-propertykey-e.md)中的值：
+> 
+> - NewSubfileType、ImageWidth、ImageLength、DefaultCropSize、Orientation、Compression、PhotometricInterpretation、
+> PlanarConfiguration、RowsPerStrip、StripOffsets、StripByteCounts、SamplesPerPixel、BitsPerSample、YCbCrCoefficients、
+> YCbCrSubSampling、YCbCrPositioning、ReferenceBlackWhite、XResolution、YResolution、ResolutionUnit字段：返回主图相关的字段值。
+> 
+> - ImageUniqueID字段：根据规范进行校验，不符合规范时会返回空字符串。
+> 
+> - ExifVersion、FlashpixVersion、ColorSpace字段：当图片中不存在该标签时，返回错误码。
+> 
+> - DNGVersion字段：当版本号小于1.0.0.0时，统一返回1.0.0.0。
+> 
+> - GPSVersionID字段：当没有有效的GPS数据时，会清除GPS版本号并返回0。
+> 
+> - GPSAltitudeRef字段：当未设置GPSAltitude时，会设置为0xFFFFFFFF。
+> 
+> - ISOSpeedRatings字段：当该标签值为0或65535时，会优先使用推荐曝光指数，若不存在则依次使用标准输出灵敏度、ISO速度、曝光指数。
+> 
+> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md)。
+> 
+> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
+> [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。
+> 
+> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
 
 **Since:** 23
 
@@ -1954,22 +1997,22 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propertyKeys | string[] | No | Array of properties names. If **propertyKeys** is not specified, all supported metadata is returned. |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Index of the property to be obtained. The default value is **0**. |
+| propertyKeys | string[] | No | 图片属性名的数组。若未指定propertyKeys，则返回所有支持的元数据。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 感兴趣的索引，默认值为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ImageMetadata&gt; | Promise used to return the **ImageMetadata** object, which contains the metadata object corresponding to the image property name. You can obtain the image property values through this metadata object. |
+| Promise&lt;ImageMetadata&gt; | Promise对象，返回ImageMetadata对象，其中含有图片属性名对应的metadata对象，通过ImageMetadata中的metadata对 象可以获取图片属性值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| 7700102 | Unsupported MIME type. |
+| 7700204 | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| 7700202 | Unsupported metadata. |
 
 ## readImageMetadataByType
 
@@ -1983,17 +2026,34 @@ ArkTS-Sta:
 readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>
 ```
 
-Reads the metadata of an image source. You can use **metadataTypes** to specify the metadata types. If  
-**metadataTypes** is not specified, all supported metadata is returned. This API uses a promise to return the result.
+读取图像源的元数据，使用metadataTypes指定元数据类型。若未指定metadataTypes，则返回所有支持的元数据。使用Promise异步回调。
 
-This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS format. (The supported formats may vary depending on the hardware.)
-    **NOTE**  
-    
-    - **EXIF\_METADATA** applies to JPEG, PNG, HEIF, WEBP, and DNG images.  
-    
-    - **HEIFS\_METADATA** applies to HEIFS images.  
-    
-    - If the input **MetadataType** does not match the image format, error code **7700102** will be returned.
+该接口仅支持JPEG、PNG、HEIF、WebP、DNG、GIF、TIFF、HEIFS、JFIF和AVIS（不同硬件设备支持情况不同）文件。
+
+> **说明：**
+> 
+> - EXIF_METADATA元数据类型适用于JPEG、PNG、HEIF、WEBP和DNG格式图片。
+> 
+> - HEIFS_METADATA元数据类型适用于HEIFS格式图片。
+> 
+> - 当传入的MetadataType与图片格式无法匹配时，返回错误码7700102。
+> 
+> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md)。
+> 
+> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。
+> 
+> - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
+> [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。
+> 
+> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
 
 **Since:** 24
 
@@ -2009,22 +2069,22 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataTypes | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | No | Metadata type array. If this parameter is left empty, all supported metadata is obtained. |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No |  |
+| metadataTypes | [MetadataType](arkts-image-image-metadatatype-e.md)[] | No | 元数据类型的数组。当该参数缺省时，获取全部支持的元数据。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ImageMetadata&gt; | Promise used to return the **ImageMetadata** object, which contains the corresponding metadata object. You can obtain the image property values through this metadata object. |
+| Promise&lt;ImageMetadata&gt; | Promise对象。返回的ImageMetadata对象中含有对应的metadata对象，通过ImageMetadata中的metadata对象可以获取图 片属性值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| 7700102 | Unsupported MIME type. |
+| 7700204 | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| 7700202 | Unsupported metadata. |
 
 ## release
 
@@ -2032,11 +2092,11 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageSource instance. This API uses an asynchronous callback to return the result.
+释放ImageSource实例。使用callback异步回调。
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 6
 
@@ -2050,7 +2110,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当资源释放成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -2058,11 +2118,11 @@ Before releasing the instance, ensure that all asynchronous operations associate
 release(): Promise<void>
 ```
 
-Releases this ImageSource instance. This API uses a promise to return the result.
+释放ImageSource实例。使用Promise异步回调。
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 6
 
@@ -2076,7 +2136,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## updateData
 
@@ -2090,7 +2150,7 @@ ArkTS-Sta:
 updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>
 ```
 
-Updates incremental data. This API uses a promise to return the result.
+更新增量数据。使用Promise异步回调。
 
 **Since:** 9
 
@@ -2104,16 +2164,16 @@ Updates incremental data. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Buffer for storing the incremental data. |
-| isFinished | boolean | Yes | Whether data update is complete. The value **true** means that the data update is complete and the last segment of data is stored in the buffer. The value **false** means that the data update is still in progress. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Length of the buffer, in bytes. |
+| buf | ArrayBuffer | Yes | 存放增量数据的buffer。 |
+| isFinished | boolean | Yes | true表示数据更新完成，当前buffer内存放最后一段数据；false表示数据还未更新完成，需要继续更新。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 即当前buffer中的数据首地址，相对于整个图片文件首地址的偏移量。单位：字节（Byte）。<br>**Since:** 11 |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前buffer的长度。单位：字节（Byte）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## updateData
 
@@ -2139,7 +2199,7 @@ updateData(
     ): void
 ```
 
-Updates incremental data. This API uses an asynchronous callback to return the result.
+更新增量数据。使用callback异步回调。
 
 **Since:** 9
 
@@ -2153,11 +2213,11 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Buffer for storing the incremental data. |
-| isFinished | boolean | Yes | Whether data update is complete. The value **true** means that the data update is complete and the last segment of data is stored in the buffer. The value **false** means that the data update is still in progress. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Length of the buffer, in bytes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| buf | ArrayBuffer | Yes | 存放增量数据的buffer。 |
+| isFinished | boolean | Yes | true表示数据更新完成，当前buffer内存放最后一段数据；false表示数据还未更新完成，需要继续更新。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 即当前buffer中的数据首地址，相对于整个图片文件首地址的偏移量。单位：字节（Byte）。<br>**Since:** 11 |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前buffer的长度。单位：字节（Byte）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当更新增量数据成功，err为undefined，否则为错误对象。 |
 
 ## writeImageMetadata
 
@@ -2165,23 +2225,23 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 ```
 
-Modifies image properties in batches. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - Calling this API to modify properties alters the property byte length. You are advised to create an  
-    [image.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance by passing a  
-    file descriptor or an  
-    [image.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ instance by  
-    passing a URI.  
-    
-    - This API modifies batch data in memory and writes the data to the file in a single operation. It is more  
-    efficient than  
-    [modifyImageProperties]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    .  
-    
-    - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information.  
-    Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif  
-    information read/write in HEIF format.
+批量修改图片属性。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例或通过传入的uri创建
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例。
+> 
+> - 该方法在内存中完成批量数据修改后会一次性写入文件，相比
+> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)
+> 更高效。
+> 
+> - 支持修改JPEG、PNG和HEIF文件类型的图片属性，图片需要包含Exif信息。修改属性前，先通过supportedFormats属性查询设备是否支持HEIF格式的Exif读写。
+> 
+> - 从API版本26.0.0开始，支持修改JPEG、PNG、GIF格式图片的XMP元数据。XMP元数据的操作方法可以参考
+> [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。
+> 
+> - 调用writeImageMetadata接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **Since:** 23
 
@@ -2197,21 +2257,21 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageMetadata | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image metadata set. If all property values in **imageMetadata** are empty, all Exif metadata is cleared. |
+| imageMetadata | [ImageMetadata](arkts-image-image-imagemetadata-i.md) | Yes | 图像的元数据集。若imageMetadata中的属性值都为空，则清空所有Exif元数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: The imageSource object is released. |
+| 7700102 | Unsupported MIME type. |
+| 7700204 | Invalid parameter. Possible causes: The imageSource object is released. |
+| 7700202 | Unsupported metadata. |
 
 ## supportedFormats
 
@@ -2219,13 +2279,17 @@ Modifies image properties in batches. This API uses a promise to return the resu
 readonly supportedFormats: Array<string>
 ```
 
-Supported image formats.
+支持的图片格式。
+
+包括：PNG、JPEG、BMP、GIF、WebP、DNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、WBMP&lt;sup&gt;23+&lt;/sup&gt;、HEIFS&lt;sup&gt;23+&lt;/sup&gt;、TIFF&lt;sup&gt;23+&lt;/sup&gt;。从API版本26.0.0开始，增加支持AVIF、AVIS格式。
+
+部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用[image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getimagesourcesupportedformats)接口，动态查询当前设备上的解码能力。
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 <!--Device-ImageSource-readonly supportedFormats: Array<string>--><!--Device-ImageSource-readonly supportedFormats: Array<string>-End-->
 

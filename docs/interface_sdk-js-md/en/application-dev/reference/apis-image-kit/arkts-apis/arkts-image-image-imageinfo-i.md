@@ -1,6 +1,6 @@
 # ImageInfo
 
-Describes image information.
+表示图片信息。
 
 **Since:** 6
 
@@ -10,15 +10,21 @@ Describes image information.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## alphaType
 
 ```TypeScript
 alphaType: AlphaType
 ```
 
-Alpha type.
+透明度。
 
-**Type:** AlphaType
+**Type:** [AlphaType](arkts-image-image-alphatype-e.md)
 
 **Since:** 12
 
@@ -38,9 +44,9 @@ Alpha type.
 density: int
 ```
 
-Pixel density, in ppi.
+像素密度。单位：ppi（像素/英寸）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -60,8 +66,8 @@ Pixel density, in ppi.
 isHdr: boolean
 ```
 
-Whether the image is an HDR image. The value **true** means an HDR image, and **false** means an SDR image. For  
-[ImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, this parameter specifies whether the source image is in HDR format. For [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, this parameter specifies whether the decoded PixelMap is in HDR format.
+true表示图片为高动态范围（HDR），false表示图片非高动态范围（SDR）。对于[ImageSource](arkts-image-image-imagesource-i.md)，代表源图片是否为HDR；对于  
+[PixelMap](arkts-image-image-pixelmap-i.md)，代表解码后的PixelMap是否为HDR。
 
 **Type:** boolean
 
@@ -79,13 +85,11 @@ Whether the image is an HDR image. The value **true** means an HDR image, and **
 mimeType: string
 ```
 
-Actual image format (MIME type).
+图片真实格式（MIME type）。
 
-The supported formats for image decoding and image encoding are different. Do not directly use the actual image format obtained after decoding as the value of **format** in [PackingOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ during image encoding.
+图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption](arkts-image-image-packingoption-i.md)的format。
 
-You can use the **supportedFormats** property of  
-[ImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and  
-[ImagePacker]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to view the supported formats for decoding and encoding.
+可以使用ImageSource[属性](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性)中的supportedFormats和ImagePacker[属性](../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md#属性)中的supportedFormats查看解码和编码支持的格式范围。
 
 **Type:** string
 
@@ -103,9 +107,9 @@ You can use the **supportedFormats** property of
 pixelFormat: PixelMapFormat
 ```
 
-Pixel format.
+像素格式。
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **Since:** 12
 
@@ -125,9 +129,9 @@ Pixel format.
 size: Size
 ```
 
-Image size.
+图片大小。
 
-**Type:** Size
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **Since:** 6
 
@@ -147,10 +151,9 @@ Image size.
 stride: int
 ```
 
-Number of bytes from one row of pixels in memory to the next row of pixels in memory.stride >= region.size.width*  
-4
+跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride >= size.width * 4，不满足时数据读取异常。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

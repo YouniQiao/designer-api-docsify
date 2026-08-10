@@ -12,6 +12,12 @@ Defines the device information of the Ethernet.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
 ## connectionMode
 
 ```TypeScript
@@ -20,7 +26,7 @@ connectionMode: DeviceConnectionType
 
 Device connection mode.
 
-**Type:** DeviceConnectionType
+**Type:** [DeviceConnectionType](arkts-network-ethernet-deviceconnectiontype-e-sys.md)
 
 **Since:** 20
 

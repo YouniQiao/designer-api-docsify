@@ -1,5 +1,11 @@
 # compare
 
+## 导入模块
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
+
 ## compare
 
 ```TypeScript
@@ -22,16 +28,16 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buf1 | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
-| buf2 | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
+| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
+| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| -1 | 如果buf1与buf2相同，则返回0。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果排序时buf1位于buf2之后，则返回1。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果排序时buf1位于buf2之前，则返回-1。 |
+| -1 | 如果buf1与buf2相同，则返回0。 &lt;br/&gt;如果排序时buf1位于buf2之后，则返回1。 &lt;br/&gt;如果排序时buf1位于buf2之前，则返回-1。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -67,25 +73,12 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buf1 | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
-| buf2 | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
+| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
+| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 如果buf1与buf2相同，则返回0。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果排序时buf1位于buf2之后，则返回1。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果排序时buf1位于buf2之前，则返回-1。 |
-
-**示例：**
-
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from('1234');
-let buf2 = buffer.from('0123');
-let res = buffer.compare(buf1, buf2);
-
-console.info(Number(res).toString());
-// 输出结果：1
-```
+| int | 如果buf1与buf2相同，则返回0。&lt;br/&gt;如果排序时buf1位于buf2之后，则返回1。&lt;br/&gt;如果排序时buf1位于buf2之前，则返回-1。 |
 

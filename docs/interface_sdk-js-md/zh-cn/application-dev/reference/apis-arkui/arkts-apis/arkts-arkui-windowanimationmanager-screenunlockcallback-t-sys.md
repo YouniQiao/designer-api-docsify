@@ -20,5 +20,5 @@ type ScreenUnlockCallback = (finishCallback: WindowAnimationFinishedCallback) =>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 动画完成后的回调。  |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调。 |
 

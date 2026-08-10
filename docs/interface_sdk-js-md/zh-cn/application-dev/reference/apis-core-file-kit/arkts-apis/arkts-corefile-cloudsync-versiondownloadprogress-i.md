@@ -1,7 +1,7 @@
 # VersionDownloadProgress
 
-历史版本文件下载状态和进度信息，调用端云文件版本管理类[FileVersion]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的  
-[downloadHistoryVersion]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法时，回调函数的入参类型。
+历史版本文件下载状态和进度信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md)的  
+[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion)方法时，回调函数的入参类型。
 
 **起始版本：** 20
 
@@ -11,6 +11,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## errType
 
 ```TypeScript
@@ -19,7 +25,7 @@ errType: DownloadErrorType
 
 返回批量缓存任务执行失败时的错误类型。
 
-**类型：** DownloadErrorType
+**类型：** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
 **起始版本：** 20
 
@@ -37,7 +43,7 @@ progress: int
 
 下载进度，单位：百分比。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -55,7 +61,7 @@ state: State
 
 所选版本云文件的下载状态。
 
-**类型：** State
+**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **起始版本：** 20
 

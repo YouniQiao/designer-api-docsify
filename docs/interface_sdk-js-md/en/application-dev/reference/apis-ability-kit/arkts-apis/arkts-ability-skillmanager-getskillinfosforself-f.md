@@ -1,12 +1,18 @@
 # getSkillInfosForSelf
 
+## Modules to Import
+
+```TypeScript
+import { skillManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getSkillInfosForSelf
 
 ```TypeScript
 function getSkillInfosForSelf(flags: int): Promise<Array<SkillInfo>>
 ```
 
-Obtains all SkillInfo objects of the calling application.
+获取本应用的所有技能信息。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -30,11 +36,11 @@ Obtains all SkillInfo objects of the calling application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Returns the list of SkillInfo objects. |
+| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Promise对象，返回调用方所在应用的所有技能信息数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700101](../errorcode-bundle.md#17700101-bundle-manager-service-abnormal) | Bundle manager service is exception. Possible causes: 1. Failed to connect to the system service. 2. IPC data transmission failed. 3. Failed to obtain the object constructor. |
+| 17700101 | Bundle manager service is exception. Possible causes: 1. Failed to connect to the system service. 2. IPC data transmission failed. 3. Failed to obtain the object constructor. |
 

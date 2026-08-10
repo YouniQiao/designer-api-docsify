@@ -24,7 +24,7 @@ borderRadius?: Length
 
 取值范围：[0, +∞)。异常值时取默认值。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
@@ -50,7 +50,7 @@ color?: ResourceColor
 
 默认值：#FF007DFF，浅蓝色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
 
@@ -78,7 +78,7 @@ height?: Length
 
 取值范围：[0, +∞)。异常值时取默认值。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
 
@@ -106,7 +106,7 @@ marginTop?: Length
 
 取值范围：[0, +∞)。异常值时取默认值。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 8
 
@@ -140,7 +140,7 @@ width?: Length
 
 宽度设置为0时，按页签文本宽度显示。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 

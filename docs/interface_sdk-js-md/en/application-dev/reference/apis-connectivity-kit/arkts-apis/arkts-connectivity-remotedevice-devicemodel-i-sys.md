@@ -1,6 +1,6 @@
 # DeviceModel (System API)
 
-Describes the remote device's model information.
+远程设备的型号信息。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Describes the remote device's model information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## iconId
 
 ```TypeScript
 iconId: string
 ```
 
-The icon ID of the remote device.
+远程设备的图标ID。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ The icon ID of the remote device.
 modelId: string
 ```
 
-The model ID of the remote device.
+远程设备的型号ID。
 
 **Type:** string
 
@@ -62,7 +68,7 @@ The model ID of the remote device.
 subModelId: string
 ```
 
-The sub-model ID of the remote device.
+远端设备的子型号ID。
 
 **Type:** string
 

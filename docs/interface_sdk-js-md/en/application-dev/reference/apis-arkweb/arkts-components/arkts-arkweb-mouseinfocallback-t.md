@@ -4,7 +4,7 @@
 type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void
 ```
 
-Defines a callback triggered when a same-layer tag is clicked using the mouse or touchpad.
+当鼠标/触摸板点击到同层标签时触发该回调。
 
 **Since:** 20
 
@@ -18,5 +18,5 @@ Defines a callback triggered when a same-layer tag is clicked using the mouse or
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Detailed information about clicking or touching and holding a same-layer tag using the mouse or touchpad.  |
+| event | [NativeEmbedMouseInfo](../arkts-apis/arkts-arkweb-web-nativeembedmouseinfo-i.md) | Yes | 提供鼠标/触摸板在同层标签上点击或长按的详细信息。 |
 

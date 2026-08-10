@@ -1,6 +1,10 @@
 # ImageSourceSize
 
-Defines source size of image.
+图片解码尺寸。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -16,7 +20,11 @@ Defines source size of image.
 height: number
 ```
 
-Image decode height. The unit of the number type is vp.Anonymous Object Rectification.
+图片解码尺寸高度。
+
+单位：vp
+
+**取值范围：** (0, +∞)；当取值小于等于0时，该参数不生效，按图片原始尺寸解码。Anonymous Object Rectification.
 
 **Type:** number
 
@@ -38,7 +46,11 @@ Image decode height. The unit of the number type is vp.Anonymous Object Rectific
 width: number
 ```
 
-Image decode width. The unit of the number type is vp.Anonymous Object Rectification.
+图片解码尺寸宽度。
+
+单位：vp
+
+**取值范围：** (0, +∞)；当取值小于等于0时，该参数不生效，按图片原始尺寸解码。Anonymous Object Rectification.
 
 **Type:** number
 

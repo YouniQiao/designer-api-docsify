@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
+```
+
 ## bundleName
 
 ```TypeScript

@@ -10,6 +10,12 @@ Provides APIs for mobile applications to access different SEs in mobile devices,
 
 **System capability:** SystemCapability.Communication.SecureElement
 
+## Modules to Import
+
+```TypeScript
+import { omapi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

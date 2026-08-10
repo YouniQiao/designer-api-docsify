@@ -1,6 +1,6 @@
 # DialogAlignment
 
-Enumerates the alignment modes of the alert dialog boxes.
+警告弹窗的对齐方式。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the alignment modes of the alert dialog boxes.
 Top
 ```
 
-Vertical top alignment.
+垂直顶部对齐。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Vertical top alignment.
 Center
 ```
 
-Vertical center alignment.
+垂直居中对齐。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Vertical center alignment.
 Bottom
 ```
 
-Vertical bottom alignment.
+垂直底部对齐。
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Vertical bottom alignment.
 Default
 ```
 
-Default alignment.
+默认对齐。
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ Default alignment.
 TopStart
 ```
 
-Top left alignment.
+左上对齐。
 
 **Since:** 8
 
@@ -106,7 +106,7 @@ Top left alignment.
 TopEnd
 ```
 
-Top right alignment.
+右上对齐。
 
 **Since:** 8
 
@@ -124,7 +124,7 @@ Top right alignment.
 CenterStart
 ```
 
-Center left alignment.
+左中对齐。
 
 **Since:** 8
 
@@ -142,7 +142,7 @@ Center left alignment.
 CenterEnd
 ```
 
-Center right alignment.
+右中对齐。
 
 **Since:** 8
 
@@ -160,7 +160,7 @@ Center right alignment.
 BottomStart
 ```
 
-Bottom left alignment.
+左下对齐。
 
 **Since:** 8
 
@@ -178,7 +178,7 @@ Bottom left alignment.
 BottomEnd
 ```
 
-Bottom right alignment.
+右下对齐。
 
 **Since:** 8
 

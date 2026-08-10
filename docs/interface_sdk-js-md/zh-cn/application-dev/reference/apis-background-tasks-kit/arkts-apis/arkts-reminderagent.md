@@ -16,6 +16,12 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -30,8 +36,8 @@
 | [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelreminder-1) | 取消指定id的提醒，使用Promise方式实现异步调用。 |
 | [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getvalidreminders) | 获取当前应用已设置的所有有效（未过期）的提醒，使用回调的方式实现异步调用。 |
 | [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getvalidreminders-1) | 获取当前应用已设置的所有有效（未过期）的提醒，使用Promise方式实现异步调用。 |
-| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder) | 发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限  [Notification.requestEnableNotification]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_后才能调用。 |
-| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder-1) | 发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限  [Notification.requestEnableNotification]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_后才能调用。 |
+| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder) | 发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限  [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)后才能调用。 |
+| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder-1) | 发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限  [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)后才能调用。 |
 | [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removenotificationslot) | 删除目标NotificationSlot，使用callback方式实现异步调用。 |
 | [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removenotificationslot-1) | 删除目标NotificationSlot，使用Promise方式实现异步调用。 |
 

@@ -1,6 +1,6 @@
 # SymbolEffect
 
-Defines the **SymbolEffect** class.
+定义SymbolEffect类。
 
 **Since:** 12
 

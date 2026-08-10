@@ -1,5 +1,11 @@
 # create
 
+## 导入模块
+
+```TypeScript
+import { runningLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## create
 
 ```TypeScript
@@ -23,38 +29,24 @@ function create(name: string, type: RunningLockType, callback: AsyncCallback<Run
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 锁的名字；该参数必须为字符串类型。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要创建的锁的类型；该参数必须是一个枚举类。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RunningLock&gt; | 是 | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象； AsyncCallback封装了一个RunningLock类型的类。 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 | 要创建的锁的类型；该参数必须是一个枚举类。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;RunningLock&gt; | 是 | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象； AsyncCallback封装了一个RunningLock类型的类。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 201 | If the permission is denied. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
-runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
-    if (typeof err === 'undefined') {
-        console.info('created running lock: ' + lock);
+runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
+    if (err) {
+        console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.error('create running lock failed, err: ' + err);
-    }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error | null, lock: runningLock.RunningLock | undefined) => {
-    if (!err) {
-        console.info('created running lock: ' + lock);
-    } else {
-        console.error('create running lock failed, err: ' + err);
+        console.info('created running lock: ' + lock); // 创建并保存锁对象后，需要结合hold、unhold方法使用
     }
 });
 ```
@@ -83,7 +75,7 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 锁的名字；该参数必须为字符串类型。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要创建的锁的类型；该参数必须是一个枚举类。 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 | 要创建的锁的类型；该参数必须是一个枚举类。 |
 
 **返回值：**
 
@@ -95,18 +87,18 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 201 | If the permission is denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
 .then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock);
+    console.info('created running lock: ' + lock); // 创建并保存锁对象后，需要结合hold、unhold方法使用
 })
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
+.catch((err: BusinessError) => {
+    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

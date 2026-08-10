@@ -1,6 +1,6 @@
 # RotateOptions (System API)
 
-Describes the rotation parameters.
+旋转参数。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Describes the rotation parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## pivotX
 
 ```TypeScript
 pivotX?: double
 ```
 
-X coordinate of the rotation center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
+旋转中心点X轴坐标。该参数为浮点数，默认值为0.5， 取值范围为[0.0, 1.0]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ X coordinate of the rotation center. The value is a floating-point number in the
 pivotY?: double
 ```
 
-Y coordinate of the rotation center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
+旋转中心点Y轴坐标。该参数为浮点数，默认值为0.5， 取值范围为[0.0, 1.0]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Y coordinate of the rotation center. The value is a floating-point number in the
 x?: double
 ```
 
-Rotation angle around the x-axis. The value is a floating-point number, and the default value is **0.0**.
+绕X轴的旋转角度。该参数为浮点数，默认值为0.0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -78,9 +84,9 @@ Rotation angle around the x-axis. The value is a floating-point number, and the 
 y?: double
 ```
 
-Rotation angle around the y-axis. The value is a floating-point number, and the default value is **0.0**.
+绕Y轴的旋转角度。该参数为浮点数，默认值为0.0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -98,9 +104,9 @@ Rotation angle around the y-axis. The value is a floating-point number, and the 
 z?: double
 ```
 
-Rotation angle around the z-axis. The value is a floating-point number, and the default value is **0.0**.
+绕Z轴的旋转角度。该参数为浮点数，默认值为0.0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 

@@ -1,10 +1,10 @@
 # ShadowStyle
 
-enum Shadow style
+组件阴影效果。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum ShadowStyle--><!--Device-unnamed-declare enum ShadowStyle-End-->
 
@@ -16,11 +16,11 @@ enum Shadow style
 OUTER_DEFAULT_XS = 0
 ```
 
-Mini shadow.
+超小阴影。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +36,11 @@ Mini shadow.
 OUTER_DEFAULT_SM = 1
 ```
 
-Small shadow.
+小阴影。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +56,11 @@ Small shadow.
 OUTER_DEFAULT_MD = 2
 ```
 
-Medium shadow.
+中阴影。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,11 +76,11 @@ Medium shadow.
 OUTER_DEFAULT_LG = 3
 ```
 
-Large shadow.
+大阴影。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,11 +96,11 @@ Large shadow.
 OUTER_FLOATING_SM = 4
 ```
 
-Floating small shadow.
+浮动小阴影。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,9 +118,9 @@ OUTER_FLOATING_MD = 5
 
 Floating medium shadow.
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

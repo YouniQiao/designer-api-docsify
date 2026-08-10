@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## alias
 
 ```TypeScript
@@ -36,7 +42,7 @@ certNum: int
 
 表示凭据中包含的证书个数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -52,9 +58,9 @@ certNum: int
 certPurpose?: CertificatePurpose
 ```
 
-表示凭据的用途。默认值为CertificatePurpose.PURPOSE\_DEFAULT。
+表示凭据的用途。默认值为CertificatePurpose.PURPOSE_DEFAULT。
 
-**类型：** CertificatePurpose
+**类型：** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
 **起始版本：** 22
 
@@ -90,7 +96,7 @@ keyNum: int
 
 表示凭据中包含的密钥个数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

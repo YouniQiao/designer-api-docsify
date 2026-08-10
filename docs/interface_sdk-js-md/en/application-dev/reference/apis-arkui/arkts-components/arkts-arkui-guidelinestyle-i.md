@@ -1,6 +1,6 @@
 # GuideLineStyle
 
-Defines the ID, direction, and position of a guideline.
+guideLine参数，用于定义一条guideLine的id、方向和位置，辅助子组件在RelativeContainer中进行定位和对齐。
 
 **Since:** 12
 
@@ -16,15 +16,13 @@ Defines the ID, direction, and position of a guideline.
 direction : Axis
 ```
 
-Direction of the guideline.
+指定guideLine的方向。Axis.Vertical表示垂直辅助线，仅能作为组件水平方向的锚点；Axis.Horizontal表示水平辅助线，仅能作为组件垂直方向的锚点。
 
-A guideline in the vertical direction can only be used as the anchor of the component in the horizontal direction,and the value is **0** when it is used as the anchor in the vertical direction. A guideline in the horizontal direction can only be used as the anchor of the component in the vertical direction, and the value is **0** when it is used as the anchor in the horizontal direction.
+默认值：Axis.Vertical
 
-Default value: **Axis.Vertical**
+非法值：按默认值处理。
 
-Invalid values are treated as the default value.
-
-**Type:** Axis
+**Type:** [Axis](../arkts-apis/arkts-arkui-enums-axis-e.md)
 
 **Since:** 12
 
@@ -44,7 +42,7 @@ Invalid values are treated as the default value.
 id : string
 ```
 
-ID of the guideline, which must be unique and cannot be the same as the name of any component in the container.
+guideLine的id，用于标识辅助线，子组件可通过此id引用该辅助线作为锚点。必须是唯一的并且不可与容器内组件重名。
 
 **Type:** string
 
@@ -66,15 +64,21 @@ ID of the guideline, which must be unique and cannot be the same as the name of 
 position : GuideLinePosition
 ```
 
-Position of the guideline.
+指定guideLine的位置。
 
-If no value is specified or an invalid value (for example, **undefined**) is provided, the guideline position defaults to **start: 0**. Only **start** or **end** can be selected for the guideline position. If both are declared, only **start** takes effect. If the container size in a certain direction is set to **"auto"**, the guideline position in that direction must be declared in **start** mode, and the value cannot be a percentage.
+当未声明或声明异常值（如undefined）时，guideLine的位置默认为start: 0。start和end两种声明方式选择一种即可。若同时声明，仅start生效。若容器的width被声明为"auto"，则Axis.Vertical类型guideLine的位置只能使用start方式声明（不允许使用百分比）；若容器的height被声明为"auto"，则Axis.Horizontal类型guideLine的位置只能使用start方式声明（不允许使用百分比）。
 
-Default value:\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+默认值：
 
-Invalid values are treated as the default value.
+{
 
-**Type:** GuideLinePosition
+start: 0
+
+}
+
+非法值：按默认值处理。
+
+**Type:** [GuideLinePosition](../arkts-apis/arkts-arkui-relativecontainer-guidelineposition-i.md)
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # GridRowSizeOption
 
-Describes the gutter sizes for different device width types.
+栅格在不同宽度设备类型下的gutter大小配置。
 
 **Since:** 9
 
@@ -16,9 +16,15 @@ Describes the gutter sizes for different device width types.
 lg?: Length
 ```
 
-Gutter size for large device width.Unit: vp. Default value: **0vp**.
+在大宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
 
-**Type:** Length
+默认值：0vp
+
+单位：vp
+
+非法值：按默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
 
@@ -38,9 +44,15 @@ Gutter size for large device width.Unit: vp. Default value: **0vp**.
 md?: Length
 ```
 
-Gutter size for medium device width.Unit: vp. Default value: **0vp**.
+在中等宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
 
-**Type:** Length
+默认值：0vp
+
+单位：vp
+
+非法值：按默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
 
@@ -60,9 +72,15 @@ Gutter size for medium device width.Unit: vp. Default value: **0vp**.
 sm?: Length
 ```
 
-Gutter size for small device width.Unit: vp. Default value: **0vp**.
+在小宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
 
-**Type:** Length
+默认值：0vp
+
+单位：vp
+
+非法值：按默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
 
@@ -82,9 +100,15 @@ Gutter size for small device width.Unit: vp. Default value: **0vp**.
 xl?: Length
 ```
 
-Gutter size for extra large device width.Unit: vp. Default value: **0vp**.
+在特大宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
 
-**Type:** Length
+默认值：0vp
+
+单位：vp
+
+非法值：按默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
 
@@ -104,9 +128,15 @@ Gutter size for extra large device width.Unit: vp. Default value: **0vp**.
 xs?: Length
 ```
 
-Gutter size for minimum device width.Unit: vp. Default value: **0vp**.
+在最小宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
 
-**Type:** Length
+默认值：0vp
+
+单位：vp
+
+非法值：按默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
 
@@ -126,9 +156,15 @@ Gutter size for minimum device width.Unit: vp. Default value: **0vp**.
 xxl?: Length
 ```
 
-Gutter size for extra extra large device width.Unit: vp. Default value: **0vp**.
+在超大宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
 
-**Type:** Length
+默认值：0vp
+
+单位：vp
+
+非法值：按默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
 

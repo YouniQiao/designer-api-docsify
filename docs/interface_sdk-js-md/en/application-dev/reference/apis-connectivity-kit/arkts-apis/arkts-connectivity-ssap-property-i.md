@@ -1,6 +1,6 @@
 # Property
 
-Describes the SSAP property.
+SSAP属性。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes the SSAP property.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## descriptors
 
 ```TypeScript
 descriptors?: PropertyDescriptor[]
 ```
 
-The list of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ contained in the property.
+属性中包含的描述符列表。
 
-**Type:** PropertyDescriptor[]
+**Type:** [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md)[]
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ The list of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ contained in the property.
 operation?: int
 ```
 
-Indications specify how data values and descriptor values are accessed \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.The value is the OR operation of enumerated values.The value should be an integer. Default value: 3(READABLE | WRITE\_NO\_RESPONSE).
+指示如何访问数据值和描述符值。取值为枚举值的或运算。取值范围为全体整数。 默认值： 默认值：READABLE | WRITE_NO_RESPONSE。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -56,7 +62,7 @@ Indications specify how data values and descriptor values are accessed \_\_\_JSD
 propertyUuid: string
 ```
 
-The UUID of a Property instance.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_NearLink standard UUIDs are not allowed.
+Property实例的UUID长度必须为32，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ The UUID of a Property instance.The length must be 36, The value consists of 36 
 serviceUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance which the property belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NearLink standard UUIDs are not allowed.
+属性所属的{@link Service}实例的UUID长度必须为32，禁止使用星闪标准服务UUID。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance which the propert
 value: ArrayBuffer
 ```
 
-The value of a Property instance.
+Property实例的值。
 
 **Type:** ArrayBuffer
 

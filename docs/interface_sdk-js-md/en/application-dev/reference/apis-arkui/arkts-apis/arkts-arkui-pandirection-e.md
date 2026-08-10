@@ -1,6 +1,6 @@
 # PanDirection
 
-Enumerates the pan directions. Unlike **SwipeDirection**, **PanDirection** has no angular restrictions.
+与SwipeDirection不同，PanDirection没有角度限制。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the pan directions. Unlike **SwipeDirection**, **PanDirection** has n
 None
 ```
 
-Panning disabled.
+任何方向都不可触发滑动手势事件。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Panning disabled.
 Horizontal
 ```
 
-Horizontal direction.
+水平方向。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Horizontal direction.
 Left
 ```
 
-Leftward.
+向左滑动。
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Leftward.
 Right
 ```
 
-Rightward.
+向右滑动。
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ Rightward.
 Vertical
 ```
 
-Vertical direction.
+竖直方向。
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ Vertical direction.
 Up
 ```
 
-Upward.
+向上滑动。
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ Upward.
 Down
 ```
 
-Downward.
+向下滑动。
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ Downward.
 All
 ```
 
-All directions.
+所有方向。
 
 **Since:** 7
 

@@ -1,7 +1,7 @@
 # StartupTask
 
 The module provides capabilities related to startup tasks in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[AppStartup](../../../application-models/app-startup.md).
 
 **起始版本：** 23
 
@@ -10,6 +10,12 @@ The module provides capabilities related to startup tasks in
 <!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
+
+## 导入模块
+
+```TypeScript
+import { StartupTask } from 'kits/@kit.AbilityKit';
+```
 
 ## init
 
@@ -33,7 +39,7 @@ init(context: AbilityStageContext): Promise<Any> | Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | AbilityStage的上下文环境。 |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | 是 | AbilityStage的上下文环境。 |
 
 **返回值：**
 

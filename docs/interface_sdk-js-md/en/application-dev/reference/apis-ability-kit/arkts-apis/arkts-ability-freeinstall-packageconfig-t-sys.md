@@ -4,7 +4,7 @@
 export type PackageConfig = _PackInfo.PackageConfig
 ```
 
-Defines the package configuration information in the **pack.info** file.
+pack.info的包信息。
 
 **Since:** 9
 

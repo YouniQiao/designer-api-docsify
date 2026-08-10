@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onCancelPrintJob
 
 ```TypeScript
@@ -33,6 +39,12 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobInfo | print.PrintJob | 是 | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，需为已通过onStartPrintJob启动的打印任务， 用于取消打印任务时定位目标任务。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 202 | not system application<br>**适用版本：** 10 - 23 |
 
 ## onConnectPrinter
 
@@ -62,30 +74,15 @@ onConnectPrinter(printerId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示打印机ID，应为已发现的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示打印机ID，应为已发现的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onConnectPrinter(printerId: number): void {
-        console.info('onConnectPrinter enter');
-        // ...
-    }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { PrintExtensionAbility } from '@kit.BasicServicesKit';
-
-export default class HWPrintExtension extends PrintExtensionAbility {
-    onConnectPrinter(printerId: int): void {
         console.info('onConnectPrinter enter');
         // ...
     }
@@ -114,15 +111,15 @@ onCreate(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示创建打印扩展时传入的Want意图信息，包含调用方指定的信息（如action、uri等），用于初始化打印扩展能力。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 表示创建打印扩展时传入的Want意图信息，包含调用方指定的信息（如action、uri等），用于初始化打印扩展能力。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 import { Want } from '@kit.AbilityKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onCreate(want: Want): void {
         console.info('onCreate');
         // ...
@@ -148,12 +145,12 @@ onDestroy(): void
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onDestroy(): void {
         console.info('onDestroy');
     }
@@ -188,30 +185,15 @@ onDisconnectPrinter(printerId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onDisconnectPrinter(printerId: number): void {
-        console.info('onDisconnectPrinter enter');
-        // ...
-    }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { PrintExtensionAbility } from '@kit.BasicServicesKit';
-
-export default class HWPrintExtension extends PrintExtensionAbility {
-    onDisconnectPrinter(printerId: int): void {
         console.info('onDisconnectPrinter enter');
         // ...
     }
@@ -252,9 +234,9 @@ onRequestPreview(jobInfo: print.PrintJob): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -263,8 +245,8 @@ export default class HWPrintExtension extends PrintExtensionAbility {
     onRequestPreview(jobInfo: print.PrintJob): string {
         console.info('onRequestPreview enter');
         // ...
-        let tmp : string = '';
-        return tmp;
+        let previewResult: string = '';
+        return previewResult;
     }
 }
 ```
@@ -297,7 +279,7 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
 **返回值：**
 
@@ -305,13 +287,19 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 | --- | --- |
 | print.PrinterCapability | printer capability. |
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 202 | not system application<br>**适用版本：** 10 - 23 |
+
 ## onStartDiscoverPrinter
 
 ```TypeScript
 onStartDiscoverPrinter(): void
 ```
 
-开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 将发现的打印机信息上报给系统。
+开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addprintertodiscovery) 将发现的打印机信息上报给系统。
 
 **起始版本：** 14
 
@@ -323,12 +311,12 @@ onStartDiscoverPrinter(): void
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onStartDiscoverPrinter(): void {
         console.info('onStartDiscoverPrinter enter');
         // ...
@@ -360,6 +348,12 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 | --- | --- | --- | --- |
 | jobInfo | print.PrintJob | 是 | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，用于指定要开始的打印任务。 |
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 202 | not system application<br>**适用版本：** 10 - 23 |
+
 ## onStopDiscoverPrinter
 
 ```TypeScript
@@ -378,12 +372,12 @@ onStopDiscoverPrinter(): void
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class HWPrintExtension extends PrintExtensionAbility {
+export default class CustomPrintExtension extends PrintExtensionAbility {
     onStopDiscoverPrinter(): void {
         console.info('onStopDiscoverPrinter enter');
         // ...
@@ -399,7 +393,7 @@ context: PrintExtensionContext
 
 打印扩展能力上下文。
 
-**类型：** PrintExtensionContext
+**类型：** [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 
 **起始版本：** 26.0.0
 

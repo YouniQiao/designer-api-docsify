@@ -1,6 +1,6 @@
 # MatchPattern
 
-Enumerates the match patterns supported for component attributes.
+控件属性支持的匹配模式。
 
 **Since:** 8
 
@@ -16,7 +16,9 @@ Enumerates the match patterns supported for component attributes.
 EQUALS = 0
 ```
 
-Equals the given value.
+等于给定值。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Since:** 8
 
@@ -34,7 +36,9 @@ Equals the given value.
 CONTAINS = 1
 ```
 
-Contains the given value.
+包含给定值。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Since:** 8
 
@@ -52,7 +56,9 @@ Contains the given value.
 STARTS_WITH = 2
 ```
 
-Starts with the given value.
+以给定值开始。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Since:** 8
 
@@ -70,7 +76,9 @@ Starts with the given value.
 ENDS_WITH = 3
 ```
 
-Ends with the given value.
+以给定的值结束。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Since:** 8
 
@@ -88,7 +96,9 @@ Ends with the given value.
 REG_EXP = 4
 ```
 
-Uses regular expression matching.
+正则表达式匹配。
+
+从API version 18开始，该接口支持在原子化服务中使用。
 
 **Since:** 18
 
@@ -106,7 +116,9 @@ Uses regular expression matching.
 REG_EXP_ICASE = 5
 ```
 
-Uses case-insensitive regular expression matching.
+正则表达式匹配，忽略大小写。
+
+从API version 18开始，该接口支持在原子化服务中使用。
 
 **Since:** 18
 

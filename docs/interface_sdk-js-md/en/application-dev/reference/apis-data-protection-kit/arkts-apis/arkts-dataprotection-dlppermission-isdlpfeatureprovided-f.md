@@ -1,18 +1,24 @@
 # isDLPFeatureProvided
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## isDLPFeatureProvided
 
 ```TypeScript
 function isDLPFeatureProvided(): Promise<boolean>
 ```
 
-Checks whether the current system provides the encryption protection feature. This API is available only for enterprise devices and must be enabled by the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ kit. After the API is successfully called, the query result is returned, indicating whether the system supports DLP encryption. This API uses a promise to return the result.
+查询当前系统是否提供加密保护特性，仅支持企业设备且需[MDM（Mobile Device Management，移动设备管理）](../../../mdm/mdm-kit-intro.md)配置使能。调用成功后返回查询结果，用于判断系统是否支持DLP加密功能。使用Promise异步回调。
 
-This API checks whether the current system supports the DLP encryption function, so that compatibility processing or function degradation can be performed on devices that do not support this function.
-    **NOTE**  
-    
-    This API is enabled by the \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ kit and is used for enterprise devices. For  
-    other devices (such as consumer devices), this API is inapplicable. Calling it returns **false**.
+该接口用于判断当前系统是否支持DLP加密功能，以便在不支持的设备上做兼容处理或功能降级。
+
+> **说明：**
+> 
+> 该接口由[MDM](../../../mdm/mdm-kit-intro.md)配置使能，且使能场景为企业设备。其他设备（如消费者终端设备）无需关注该接口，如若调用该接口，则返回值为false。
 
 **Since:** 12
 
@@ -26,23 +32,21 @@ This API checks whether the current system supports the DLP encryption function,
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Pomise对象。返回true表示当前系统提供加密保护特性，返回false表示不提供加密保护特性。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-dlpPermission.isDLPFeatureProvided().then((res) => {
-  console.info('res', JSON.stringify(res));
+dlpPermission.isDLPFeatureProvided().then((isFeatureProvided) => { // Check whether the current system provides the encryption protection feature.
+  console.info('isFeatureProvided', JSON.stringify(isFeatureProvided));
 }).catch((err: BusinessError) => {
   console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
 });

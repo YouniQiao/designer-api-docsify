@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
 
+## 导入模块
+
+```TypeScript
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## deviceModel
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # ArcButtonProgressConfig
 
-The class used for configuring ArcButton to support progress bar display.
+ArcButton内进度条的参数配置。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ The class used for configuring ArcButton to support progress bar display.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(value: double, total?: double, color?: ResourceColor)
 ```
 
-Constructor of the ArcButtonProgressConfig.
+进度条参数配置的构造函数。
 
 **Since:** 23
 
@@ -34,9 +40,9 @@ Constructor of the ArcButtonProgressConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | sets the value of progress. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[0, total] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When setting a value less than 0, it is set to 0; when setting a value greater than total, it is set to total. |
-| total | double | No | sets the total of progress. |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | sets the foreground color of progress. |
+| value | double | Yes | 设置进度条的进度值。&lt;br/&gt;取值范围：[0, total]，当设置小于0的值时，按0处理；当设置大于total的值时，按total处理。 |
+| total | double | No | 设置进度条的总进度值。&lt;br/&gt;默认值：100&lt;br/&gt;取值范围：[0, 2147483647] |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | 设置进度条的前景颜色。 |
 
 ## color
 
@@ -44,9 +50,12 @@ Constructor of the ArcButtonProgressConfig.
 public color?: ResourceColor
 ```
 
-Sets the foreground color of Progress.
+进度条前景色。如果组件设置了[ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)的背景色（backgroundColor），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（  
+[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。 
 
-**Type:** ResourceColor
+默认值："#1F71FF"，显示为蓝色。
+
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -64,9 +73,11 @@ Sets the foreground color of Progress.
 public total?: double
 ```
 
-Sets the total of Progress.
+进度的最大值。
 
-Range value: [0, 2147483647].
+默认值：100
+
+取值范围：[0, 2147483647]，设置0或超出取值范围取默认值为100。
 
 **Type:** double
 
@@ -88,9 +99,11 @@ Range value: [0, 2147483647].
 public value: double
 ```
 
-Sets the value of Progress.
+进度条当前值。设置小于0的数值时置为0，设置大于total的数值时置为total。
 
-Range value: [0, total].
+默认值：0
+
+取值范围：[0, total]
 
 **Type:** double
 

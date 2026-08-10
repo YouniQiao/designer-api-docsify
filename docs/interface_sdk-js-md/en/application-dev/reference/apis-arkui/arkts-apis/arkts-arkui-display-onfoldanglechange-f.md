@@ -1,5 +1,11 @@
 # onFoldAngleChange
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## onFoldAngleChange
 
 ```TypeScript
@@ -20,11 +26,11 @@ Register the callback for fold angle changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the current fold angle of device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the current fold angle of device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 

@@ -12,6 +12,12 @@ PickerOptions Object
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## backgroundColor
 
 ```TypeScript
@@ -40,7 +46,7 @@ public badgeConfig?: BadgeConfig
 
 Support to config special badge display.The picker component supports only one type of badge
 
-**Type:** BadgeConfig
+**Type:** [BadgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
 
 **Since:** 26.0.0
 
@@ -140,7 +146,7 @@ public gridMargin?: Margin
 
 Support set gridMargin
 
-**Type:** Margin
+**Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 26.0.0
 
@@ -240,7 +246,7 @@ public maxSelectedReminderMode?: ReminderMode
 
 Support to set max select number remind mode.
 
-**Type:** ReminderMode
+**Type:** [ReminderMode](arkts-medialibrary-file-photopickercomponent-remindermode-e.md)
 
 **Since:** 26.0.0
 
@@ -280,7 +286,7 @@ public orientation?: PickerOrientation
 
 Support to set display orientation
 
-**Type:** PickerOrientation
+**Type:** [PickerOrientation](arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md)
 
 **Since:** 26.0.0
 
@@ -300,7 +306,7 @@ public photoBrowserBackgroundColorMode?: PickerColorMode
 
 Support to set photo browser background color mode
 
-**Type:** PickerColorMode
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.0.0
 
@@ -323,7 +329,7 @@ public photoBrowserCheckboxPosition?: [
 
 Support to set photo browser checkbox position
 
-**Type:** [         double,         double     ]
+**Type:** [         double,         double     ]
 
 **Since:** 26.0.0
 
@@ -343,7 +349,7 @@ public photoBrowserMargin?: Margin
 
 Support set photoBrowserMargin
 
-**Type:** Margin
+**Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 26.0.0
 
@@ -383,7 +389,7 @@ public preselectedInfos?: PreselectedInfo[]
 
 Support automatically selecting the user-selected image/video on the PhotoPickerComponent at the specified picker index.
 
-**Type:** PreselectedInfo[]
+**Type:** [PreselectedInfo](arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md)[]
 
 **Since:** 26.0.0
 
@@ -403,7 +409,7 @@ public selectMode?: SelectMode
 
 Support to set select mode
 
-**Type:** SelectMode
+**Type:** [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 26.0.0
 
@@ -423,7 +429,7 @@ public singleLineConfig?: SingleLineConfig
 
 Single-line display mode for the PhotoPickerComponent.
 
-**Type:** SingleLineConfig
+**Type:** [SingleLineConfig](arkts-medialibrary-file-photopickercomponent-singlelineconfig-c.md)
 
 **Since:** 26.0.0
 
@@ -443,7 +449,7 @@ public uiComponentColorMode?: PickerColorMode
 
 Support to set UIComponent color mode.
 
-**Type:** PickerColorMode
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.0.0
 

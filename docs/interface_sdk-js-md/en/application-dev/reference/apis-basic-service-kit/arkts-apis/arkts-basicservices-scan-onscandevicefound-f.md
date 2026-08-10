@@ -1,5 +1,11 @@
 # onScanDeviceFound
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onScanDeviceFound
 
 ```TypeScript
@@ -22,11 +28,11 @@ Register event callback for scanner device found.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScannerDevice&gt; | Yes | Callback for device found event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | Callback for device found event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 

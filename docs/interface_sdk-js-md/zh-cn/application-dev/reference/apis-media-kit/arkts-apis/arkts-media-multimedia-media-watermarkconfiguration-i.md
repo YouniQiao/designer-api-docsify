@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height?: int
 
 target height of the watermark in pixel The value range is all integers.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ left: int
 
 水印到左侧像素行的偏移量取值为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -58,7 +64,7 @@ top: int
 
 水印到顶部像素行的偏移量取值为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -78,7 +84,7 @@ width?: int
 
 target width of the watermark in pixel The value range is all integers.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

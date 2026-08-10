@@ -1,6 +1,6 @@
 # USBConfiguration
 
-USB配置，一个[USBDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中可以含有多个配置。
+USB配置，一个[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)中可以含有多个配置。
 
 **起始版本：** 9
 
@@ -10,6 +10,12 @@ USB配置，一个[USBDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中可以含�
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## attributes
 
 ```TypeScript
@@ -18,7 +24,7 @@ attributes: int
 
 配置的属性。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ id: int
 
 配置的唯一标识。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -108,7 +114,7 @@ maxPower: int
 
 最大功耗。（单位：毫安）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

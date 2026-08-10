@@ -16,9 +16,9 @@
 CALLBACK = 0
 ```
 
-表示意图执行结果将由[意图执行基类]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的  
-[onExecuteInUIAbilityForegroundMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口或  
-[onExecuteInUIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口返回。
+表示意图执行结果将由[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)中的  
+[onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode)接口或  
+[onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability)接口返回。
 
 **起始版本：** 23
 
@@ -38,9 +38,9 @@ CALLBACK = 0
 FUNCTION = 1
 ```
 
-表示意图执行结果会延迟返回，直到开发者主动调用[意图提供方管理能力]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的  
-[sendExecuteResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口或  
-[sendIntentResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口返回意图执行结果。
+表示意图执行结果会延迟返回，直到开发者主动调用[意图提供方管理能力](arkts-app-ability-insightintentprovider.md)中的  
+[sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult)接口或  
+[sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult)接口返回意图执行结果。
 
 **起始版本：** 23
 

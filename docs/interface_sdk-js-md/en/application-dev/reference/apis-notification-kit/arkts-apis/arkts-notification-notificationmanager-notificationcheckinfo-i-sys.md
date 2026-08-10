@@ -1,6 +1,6 @@
 # NotificationCheckInfo (System API)
 
-Describes the parameters of check notifications.
+通知校验参数。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Describes the parameters of check notifications.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name.
+Bundle名称。
 
 **Type:** string
 
@@ -40,9 +46,9 @@ Bundle name.
 contentType: ContentType
 ```
 
-Notification type.
+通知类型。
 
-**Type:** ContentType
+**Type:** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
 
 **Since:** 10
 
@@ -62,9 +68,9 @@ Notification type.
 creatorUserId: int
 ```
 
-User ID of the notification.
+通知的user ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -84,9 +90,9 @@ User ID of the notification.
 extraInfos?: Record<string, Object>
 ```
 
-Extra information about the live view.
+实况通知的附加信息。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 11
 
@@ -106,7 +112,7 @@ Extra information about the live view.
 label?: string
 ```
 
-Notification label.
+通知标签。
 
 **Type:** string
 
@@ -128,9 +134,9 @@ Notification label.
 notificationId: int
 ```
 
-Notification ID.
+通知ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -150,9 +156,9 @@ Notification ID.
 slotType: SlotType
 ```
 
-Notification slot type.
+渠道类型。
 
-**Type:** SlotType
+**Type:** [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md)
 
 **Since:** 11
 

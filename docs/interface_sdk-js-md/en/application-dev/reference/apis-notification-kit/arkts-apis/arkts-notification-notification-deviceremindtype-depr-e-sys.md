@@ -1,6 +1,6 @@
 # DeviceRemindType (System API)
 
-Defines the notification reminder type.
+通知提醒方式。
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ Defines the notification reminder type.
 IDLE_DONOT_REMIND = 0
 ```
 
-The device is not in use. No notification is required.
+设备未被使用，无需提醒。
 
 **Since:** 8
 
@@ -44,7 +44,7 @@ The device is not in use. No notification is required.
 IDLE_REMIND = 1
 ```
 
-The device is not in use.
+提醒设备未被使用。
 
 **Since:** 8
 
@@ -66,7 +66,7 @@ The device is not in use.
 ACTIVE_DONOT_REMIND = 2
 ```
 
-The device is in use. No notification is required.
+设备正在使用，无需提醒。
 
 **Since:** 8
 
@@ -88,7 +88,7 @@ The device is in use. No notification is required.
 ACTIVE_REMIND = 3
 ```
 
-The device is in use.
+提醒设备正在使用。
 
 **Since:** 8
 

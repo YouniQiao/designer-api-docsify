@@ -1,5 +1,11 @@
 # offUnhandledRejection
 
+## Modules to Import
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offUnhandledRejection
 
 ```TypeScript
@@ -20,12 +26,12 @@ Unregister unhandled rejection observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the registered observer |
+| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | No | the registered observer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16300004 | 观测器不存在。 |
 

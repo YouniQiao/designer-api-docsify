@@ -1,6 +1,6 @@
 # File
 
-[UploadConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的文件列表。
+[UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的文件列表。
 
 **起始版本：** 6
 
@@ -9,6 +9,12 @@
 <!--Device-request-interface File--><!--Device-request-interface File-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
+
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
 
 ## filename
 

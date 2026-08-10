@@ -12,6 +12,12 @@ Configuration parameters for simulating reverse geocoding.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## geoAddress
 
 ```TypeScript
@@ -20,7 +26,7 @@ geoAddress: GeoAddress
 
 Actual address information corresponding to the location.
 
-**Type:** GeoAddress
+**Type:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i-sys.md)
 
 **Since:** 9
 
@@ -40,7 +46,7 @@ location: ReverseGeoCodeRequest
 
 Location for which reverse geocoding query is required.
 
-**Type:** ReverseGeoCodeRequest
+**Type:** [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md)
 
 **Since:** 9
 

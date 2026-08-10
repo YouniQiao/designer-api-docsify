@@ -1,12 +1,18 @@
 # openUkeyAuthDialog
 
+## Modules to Import
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## openUkeyAuthDialog
 
 ```TypeScript
 function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRequest): Promise<void>
 ```
 
-Opens the PIN authentication dialog box of the USB Key credential. On the displayed page, the user can enter the PIN to authorize the USB credential. After the call is successful, the USB key credential will be unlocked. The app can use the credential to perform operations such as signing and encryption. This API uses a promise to return the result.
+打开证书管理对话框的USB Key证书凭据PIN码认证页面。在弹出的页面中，用户可以输入PIN码授权USB Key证书凭据。调用成功后，USB Key证书凭据将被解锁，应用可使用该凭据进行签名、加密等操作。使用Promise异步回调。
 
 **Since:** 22
 
@@ -24,27 +30,27 @@ Opens the PIN authentication dialog box of the USB Key credential. On the displa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context of the application. |
-| ukeyAuthRequest | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication request information of the USB Key credential |
+| context | common.Context | Yes | 表示应用的上下文信息。 |
+| ukeyAuthRequest | [UkeyAuthRequest](arkts-devicecertificate-certificatemanagerdialog-ukeyauthrequest-i.md) | Yes | 表示USB Key凭据认证请求信息 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [29700006](../errorcode-certManagerDialog.md#29700006-failed-to-validate-the-input-parameter) | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
-| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
-| [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authentication operation. |
-| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | The authentication operation failed, such as the USB key certificate does not exist, the USB key status is abnormal. |
+| 801 | Capability not supported. |
+| 29700006 | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
+| 29700001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| 29700003 | The authentication operation failed, such as the USB key certificate does not exist, the USB key status is abnormal. |
+| 29700002 | The user cancels the authentication operation. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
@@ -58,14 +64,15 @@ let context: common.Context = new UIContext().getHostContext() as common.Context
 let keyUri: string = "test"
 let ukeyAuthRequest: certificateManagerDialog.UkeyAuthRequest = { keyUri: keyUri }
 try {
-    certificateManagerDialog.openUkeyAuthDialog(context, ukeyAuthRequest).then(() => {
-        console.info(`Success to open ukey authorization dialog`)
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to open ukey authorization dialog. Code: ${err.code}, message: ${err.message}`);
-    });
+  certificateManagerDialog.openUkeyAuthDialog(context, ukeyAuthRequest).then(() => {
+    console.info(`Succeeded in opening ukey authorization dialog`)
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to open ukey authorization dialog. Code: ${err.code}, message: ${err.message}`);
+  });
 } catch (err) {
-    let error = err as BusinessError;
-    console.error(`Failed to open ukey authorization dialog. Code: ${error.code}, message: ${error.message}`);
+  let error = err as BusinessError;
+  console.error(`Failed to open ukey authorization dialog. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

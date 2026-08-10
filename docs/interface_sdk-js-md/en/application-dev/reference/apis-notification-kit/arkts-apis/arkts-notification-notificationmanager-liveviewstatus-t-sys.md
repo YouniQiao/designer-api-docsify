@@ -4,7 +4,7 @@
 export type LiveViewStatus = _LiveViewStatus
 ```
 
-Enumerates the statuses of the common live view.
+描述普通实况通知的状态。
 
 **Since:** 11
 

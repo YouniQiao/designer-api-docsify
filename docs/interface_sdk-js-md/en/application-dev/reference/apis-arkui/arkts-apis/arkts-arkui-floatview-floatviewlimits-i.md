@@ -1,6 +1,6 @@
 # FloatViewLimits
 
-Provides the limits of the float view.
+标准悬浮窗窗口的限制。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Provides the limits of the float view.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## maxSize
 
 ```TypeScript
 maxSize: window.Size
 ```
 
-Maximum size of the float view.
+标准悬浮窗的最大尺寸。
 
 **Type:** window.Size
 
@@ -36,7 +42,7 @@ Maximum size of the float view.
 minSize: window.Size
 ```
 
-Minimum size of the float view.
+标准悬浮窗的最小尺寸。
 
 **Type:** window.Size
 
@@ -56,7 +62,7 @@ Minimum size of the float view.
 ratioLimits: Array<RatioLimit>
 ```
 
-Aspect ratio range of the float view.
+标准悬浮窗的宽高比限制范围。
 
 **Type:** Array&lt;RatioLimit&gt;
 

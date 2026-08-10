@@ -1,6 +1,6 @@
 # GestureActionPhase
 
-This is an enumeration type representing the gesture callback phases to be triggered, corresponding to the action callbacks defined in gesture.d.ts. Therefore, not all gesture types have all the following phase definitions. For example, SwipeGesture only has one callback named onAction, so it also only has one enumeration type, which is WILL\_START.
+表示触发的手势回调阶段的枚举类型，对应the action callbacks defined in gesture.d.ts. Therefore, not all gesture types have all the following phase definitions. For example, SwipeGesture only has one callback named onAction, so it also only has one enumeration type, which is WILL_START.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ This is an enumeration type representing the gesture callback phases to be trigg
 WILL_START = 0
 ```
 
-The gesture has been successfully recognized by the system, and the action-start/action callback will be executed immediately.
+手势已被系统成功识别，action-start/action回调即将被触发。executed immediately.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ The gesture has been successfully recognized by the system, and the action-start
 WILL_END = 1
 ```
 
-This indicates the gesture has been determined to be an end, which usually happens when the user lifts their fingers, ending the entire interaction, and the action-end callback will be executed immediately.
+表示手势已确定为结束，通常发生在用户抬起手指时，fingers, ending the entire interaction, and the action-end callback will be executed immediately.
 
 **Since:** 26.0.0
 

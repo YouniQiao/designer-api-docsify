@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## addDeathRecipient
 
 ```TypeScript
@@ -36,7 +42,7 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| recipient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 收件人表示要注册的回调。 |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | 是 | 收件人表示要注册的回调。 |
 | flags | number | 是 | 死亡通知标志。保留参数。设置为0。 |
 
 **返回值：**
@@ -45,7 +51,7 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 | --- | --- |
 | boolean | true：回调注册成功，false：回调注册失败。 |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -127,10 +133,10 @@ getDescriptor(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900007](../errorcode-rpc.md#1900007-远端对象通信失败) | communication failed. |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| 1900008 | The proxy or remote object is invalid. |
+| 1900007 | communication failed. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -214,7 +220,7 @@ getInterfaceDescriptor(): string
 | --- | --- |
 | string | 当前的接口描述符。 |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -291,16 +297,16 @@ getLocalInterface(interfaceDes: string): IRemoteBroker
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 默认返回Null，标识该接口是一个代理侧接口。 |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 默认返回Null，标识该接口是一个代理侧接口。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | check param failed |
-| [1900006](../errorcode-rpc.md#1900006-ipc对象权限错误) | Operation allowed only for the remote object. |
+| 401 | check param failed |
+| 1900006 | Operation allowed only for the remote object. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -380,7 +386,7 @@ isObjectDead(): boolean
 | --- | --- |
 | boolean | true：对应的对象已经死亡，false：对应的对象未死亡。 |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -461,9 +467,9 @@ queryLocalInterface(interface: string): IRemoteBroker
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 默认返回Null，标识该接口是一个代理侧接口。 |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 默认返回Null，标识该接口是一个代理侧接口。 |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -540,17 +546,17 @@ registerDeathRecipient(recipient: DeathRecipient, flags: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| recipient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要注册的回调。 |
-| flags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 死亡通知标志。 |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | 是 | 要注册的回调。 |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 死亡通知标志。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| 1900008 | The proxy or remote object is invalid. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -637,7 +643,7 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| recipient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要注销的死亡回调。 |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | 是 | 要注销的死亡回调。 |
 | flags | number | 是 | 死亡通知标志。保留参数。设置为0。 |
 
 **返回值：**
@@ -646,7 +652,7 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 | --- | --- |
 | boolean | true：回调注销成功，false：回调注销失败。 |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -739,10 +745,10 @@ sendMessageRequest(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageSequence对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageSequence对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 
 **返回值：**
 
@@ -754,9 +760,9 @@ sendMessageRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -857,7 +863,7 @@ sendMessageRequest(
 ```
 
 以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，将在  
-[sendMessageRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_返回后、服务端处理请求完成时执行回调，回调中可读取[RequestResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取服务端返回的数据。
+ [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)返回后、服务端处理请求完成时执行回调，回调中可读取[RequestResult](arkts-ipc-rpc-requestresult-i.md)获取服务端返回的数据。
 
 **起始版本：** 9
 
@@ -871,17 +877,17 @@ sendMessageRequest(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageSequence对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageSequence对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RequestResult&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -908,9 +914,9 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageParcel对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageParcel对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 
 **返回值：**
 
@@ -918,7 +924,7 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 | --- | --- |
 | boolean | true：发送成功，false：发送失败。 |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -1017,9 +1023,9 @@ sendRequest(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageParcel对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageParcel对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 
 **返回值：**
 
@@ -1027,7 +1033,7 @@ sendRequest(
 | --- | --- |
 | Promise&lt;SendRequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -1135,10 +1141,10 @@ sendRequest(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageParcel对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageParcel对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SendRequestResult&gt; | 是 | 接收发送结果的回调。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | 是 | 接收发送结果的回调。 |
 
 ## unregisterDeathRecipient
 
@@ -1166,17 +1172,17 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| recipient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要注销的回调。 |
-| flags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 死亡通知标志。 |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | 是 | 要注销的回调。 |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 死亡通知标志。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| 1900008 | The proxy or remote object is invalid. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 

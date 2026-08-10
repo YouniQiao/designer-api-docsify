@@ -1,7 +1,7 @@
 # CollaborateResult
 
-Enumerates the collaboration request results. You can use it in multi-device collaboration scenarios to specify whether the target application accepts the collaboration request from the caller application. You can use it in  
-[onCollaborate()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the UIAbility.
+应用协同状态，该类型为枚举。用于多设备场景下，调用方应用拉起协同方应用时，协同方应用是否接受协同。需要配合UIAbility的  
+[onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate)方法进行设置。
 
 **Since:** 18
 
@@ -17,7 +17,7 @@ Enumerates the collaboration request results. You can use it in multi-device col
 ACCEPT = 0
 ```
 
-Accepts the collaboration request.
+接受协同。
 
 **Since:** 18
 
@@ -35,7 +35,7 @@ Accepts the collaboration request.
 REJECT = 1
 ```
 
-Rejects the collaboration request.
+拒绝协同。
 
 **Since:** 18
 

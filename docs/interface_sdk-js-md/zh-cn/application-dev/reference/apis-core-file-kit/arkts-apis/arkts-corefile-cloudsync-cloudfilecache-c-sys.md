@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## cleanCache
 
 ```TypeScript
@@ -40,16 +46,14 @@ cleanCache(uri: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,22 +68,6 @@ try {
 } catch (err) {
   let error: BusinessError = err as BusinessError;
   console.error(`clean cache failed with error message: ${error.message}, error code: ${error.code}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
-try {
-  fileCache.cleanCache(uri);
-} catch (err) {
-  console.error("clean cache failed with error message: " + err.message + ", error code: " + err.code);
 }
 ```
 
@@ -113,9 +101,9 @@ A constructor used to create a CloudFileCache object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 202 | The caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let fileCache = new cloudSync.CloudFileCache("com.ohos.demo");
@@ -153,20 +141,18 @@ getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; |  Promise对象，返回文件下载进度列表的结果。 |
+| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | Promise对象，返回文件下载进度列表的结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. &lt;br&gt;3.The input parameter contains an invalid uri. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13900010 | Try again. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.The input parameter contains an invalid uri. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -191,36 +177,6 @@ try {
     console.error("get download list failed with error message: " + error.message + ", error code: " + error.code);
   });
 } catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("get download list failed with error message: " + error.message + ", error code: " + error.code);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache: cloudSync.CloudFileCache = new cloudSync.CloudFileCache();
-let path1: string = "/data/storage/el2/cloud/1.txt";
-let path2: string = "/data/storage/el2/cloud/2.txt";
-let uri1: string = fileUri.getUriFromPath(path1);
-let uri2: string = fileUri.getUriFromPath(path2);
-let uriArray: Array<string> = [uri1, uri2];
-
-try {
-  fileCache.getDownloadList(uriArray).then((downloadList: Array<cloudSync.DownloadProgress>): void => {
-    console.info("get download list successfully");
-    for (let i = 0; i < downloadList.length; i++) {
-      console.info("download progress - uri: ".concat(downloadList[i].uri, ", state: ").concat(downloadList[i].state.toString()));
-      console.info("processed: ".concat(downloadList[i].processed.toString(), ", size: ").concat(downloadList[i].size.toString()));
-      console.info("error: ".concat(downloadList[i].error.toString()));
-    }
-  }).catch((error: BusinessError): void => {
-    console.error("get download list failed with error message: " + error.message + ", error code: " + error.code);
-  });
-} catch (err: Error) {
   let error: BusinessError = err as BusinessError;
   console.error("get download list failed with error message: " + error.message + ", error code: " + error.code);
 }

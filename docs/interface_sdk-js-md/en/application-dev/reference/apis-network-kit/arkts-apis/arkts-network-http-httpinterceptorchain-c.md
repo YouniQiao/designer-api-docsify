@@ -10,6 +10,12 @@ Defines an HTTP Interceptor chain.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## addChain
 
 ```TypeScript
@@ -32,7 +38,7 @@ Add an interceptor chain to the HTTP client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chain | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | The chain of interceptors. |
+| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | Yes | The chain of interceptors. |
 
 **Return value:**
 
@@ -44,9 +50,9 @@ Add an interceptor chain to the HTTP client.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300801 | Parameter type not supported by the interceptor. |
 | 2300802 | Duplicated interceptor type in the chain. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| 2300801 | Parameter type not supported by the interceptor. |
+| 2300999 | Internal error. |
 
 ## apply
 
@@ -70,7 +76,7 @@ Attach the chain to the target http request.Only one chain can be attached to a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpRequest | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Initiates an HTTP request to a given URL. |
+| httpRequest | [HttpRequest](arkts-network-http-httprequest-i.md) | Yes | Initiates an HTTP request to a given URL. |
 
 **Return value:**
 
@@ -83,7 +89,7 @@ Attach the chain to the target http request.Only one chain can be attached to a 
 | Error Code ID | Error Message |
 | --- | --- |
 | 2300801 | Parameter type not supported by the interceptor. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| 2300999 | Internal error. |
 
 ## getChain
 
@@ -107,5 +113,5 @@ The method to get the chain of interceptors.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | The chain of interceptors. |
+| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | The chain of interceptors. |
 

@@ -1,6 +1,6 @@
 # CircleStyleOptions
 
-Describes the parameters of the ring style.
+圆环样式的参数说明。
 
 **Since:** 12
 
@@ -16,11 +16,11 @@ Describes the parameters of the ring style.
 color?: ResourceColor
 ```
 
-Color of the background circle.
+背景圆环颜色。 
 
-Default value: **'#33182431'
+默认值：'#33182431'（深灰色，20%不透明度）。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -40,11 +40,11 @@ Default value: **'#33182431'
 enableForeground?: boolean
 ```
 
-Whether the background circle is displayed above the grid dot.
+背景圆环是否显示在宫格圆点上层。
 
-**true**: The background ring is displayed above the grid dot to cover the grid dot. **false**: The background ring is displayed below the grid dot and does not cover the grid dot.
+true：背景圆环显示在宫格圆点上层，遮盖宫格圆点；false：背景圆环显示在宫格圆点下层，不遮盖宫格圆点。
 
-Default value: **false
+默认值：false。
 
 **Type:** boolean
 
@@ -66,11 +66,11 @@ Default value: **false
 enableWaveEffect?: boolean
 ```
 
-Whether to enable the wave effect after a grid dot is selected.
+选中宫格圆点后的波浪效果开关。
 
-**true** to enable; **false** otherwise.
+true：显示波浪效果；false：不显示波浪效果。
 
-Default value: **true
+默认值：true。
 
 **Type:** boolean
 
@@ -92,11 +92,13 @@ Default value: **true
 radius?: LengthMetrics
 ```
 
-Radius of the background circle.
+背景圆环的半径。
 
-Default value: 1.833 times (that is, 11/6) of the value of [circleRadius]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+默认值：[circleRadius](PatternLockAttribute#circleRadius)的约1.833倍（即11/6）。
 
-**Type:** LengthMetrics
+取值范围：大于0。
+
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 

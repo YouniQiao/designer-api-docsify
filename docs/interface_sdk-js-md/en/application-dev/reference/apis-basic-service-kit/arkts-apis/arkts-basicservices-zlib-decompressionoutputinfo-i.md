@@ -1,6 +1,6 @@
 # DecompressionOutputInfo
 
-Uncompress2 return value information.
+解压缩返回信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Uncompress2 return value information.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## destLength
 
 ```TypeScript
 destLength: long
 ```
 
-Total length of the destination buffer.
+目标缓冲区的总长度。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Total length of the destination buffer.
 sourceLength: long
 ```
 
-Length of the source buffer.
+源缓冲区的长度。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ Length of the source buffer.
 status: ReturnStatus
 ```
 
-For details, see [ReturnStatus]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md)。
 
-**Type:** ReturnStatus
+**Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **Since:** 12
 

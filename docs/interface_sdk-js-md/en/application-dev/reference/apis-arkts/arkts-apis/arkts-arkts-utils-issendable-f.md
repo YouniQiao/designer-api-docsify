@@ -1,12 +1,18 @@
 # isSendable
 
+## Modules to Import
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## isSendable
 
 ```TypeScript
 function isSendable(value: Object | null | undefined): boolean
 ```
 
-Checks whether an ArkTS value is sendable.
+检查ArkTS值是否为Sendable。
 
 **Since:** 12
 
@@ -24,11 +30,11 @@ Checks whether an ArkTS value is sendable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | Yes | The value to check. |
+| value | Object \| null \| undefined | Yes | 要检查的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the value is sendable, false otherwise. |
+| boolean | 如果值为Sendable则返回true，否则返回false。 |
 

@@ -1,14 +1,22 @@
 # batchRemove
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## batchRemove
 
 ```TypeScript
 function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 ```
 
-Removes assets in batches based on an alias list.
+批量删除符合条件的关键资产。使用Promise异步回调。
 
-Only assets with the same \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ can be removed in batches.
+批量删除的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。
+
+批量删除的关键资产数量最大值为100。
 
 **Since:** 26.0.0
 
@@ -22,26 +30,26 @@ Only assets with the same \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and \_\_\_JSDOC\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsToBeRemoved | Array&lt;AssetMap&gt; | Yes | an array of attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ attributes of all data must be the same. |
+| assetsToBeRemoved | Array&lt;AssetMap&gt; | Yes | 待删除关键资产的搜索条件数组，如别名、访问控制属性、自定义数据等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise object returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
-| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
-| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
-| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
-| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) | Getting the system time failed. |
-| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in the array is not consistent. |
+| 24000015 | Getting the system time failed. |
+| 24000012 | Calling the OS Account service failed. |
+| 24000013 | Calling the Access Token service failed. |
+| 24000010 | IPC failed. |
+| 24000011 | Calling the Bundle Manager service failed. |
+| 24000008 | The database operation failed. |
+| 24000006 | Insufficient memory. |
+| 24000007 | The asset is corrupted. |
+| 24000019 | Each value of {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} in the array is not consistent. |
+| 24000001 | The ASSET service is unavailable. |
 

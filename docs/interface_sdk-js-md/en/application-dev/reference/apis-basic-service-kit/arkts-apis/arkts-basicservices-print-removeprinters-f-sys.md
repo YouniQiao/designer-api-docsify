@@ -1,12 +1,18 @@
 # removePrinters (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## removePrinters
 
 ```TypeScript
 function removePrinters(printerIds: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Removes printers. This API uses an asynchronous callback to return the result.
+移除打印机，使用callback异步回调。
 
 **Since:** 10
 
@@ -24,18 +30,18 @@ Removes printers. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIds | Array&lt;string&gt; | Yes | List of printers to remove. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| printerIds | Array&lt;string&gt; | Yes | 表示需移除的打印机列表。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步移除打印机之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -58,7 +64,7 @@ print.removePrinters([printerId], (err: BusinessError) => {
 function removePrinters(printerIds: Array<string>): Promise<void>
 ```
 
-Removes printers. This API uses a promise to return the result.
+移除打印机，使用Promise异步回调。
 
 **Since:** 10
 
@@ -76,23 +82,23 @@ Removes printers. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIds | Array&lt;string&gt; | Yes | List of printers to remove. |
+| printerIds | Array&lt;string&gt; | Yes | 表示需移除的打印机列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

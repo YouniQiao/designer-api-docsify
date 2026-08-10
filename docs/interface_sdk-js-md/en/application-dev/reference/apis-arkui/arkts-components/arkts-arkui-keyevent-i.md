@@ -1,6 +1,6 @@
 # KeyEvent
 
-KeyEvent object description.
+按键事件信息。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ KeyEvent object description.
 getModifierKeyState?(keys: Array<string>): boolean
 ```
 
-Obtains the pressed status of modifier keys.
+获取功能键按压状态。
 
 **Since:** 12
 
@@ -34,19 +34,19 @@ Obtains the pressed status of modifier keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl'\| 'Alt' \| 'Shift'.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**&lt; br&gt;This API is not supported in stylus scenarios. |
+| keys | Array&lt;string&gt; | Yes | 功能键列表。支持功能键 'Ctrl'\| 'Alt' \| 'Shift'。&lt;br/&gt;**说明：**&lt;br/&gt;此接口不支持在手写笔场景下使用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the modifier key is pressed. **true** if the modifier key is pressed; **false** otherwise. |
+| boolean | 功能键是否被按下。true表示被按下，false表示未被按下。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## stopPropagation
 
@@ -54,7 +54,7 @@ Obtains the pressed status of modifier keys.
 stopPropagation: () => void
 ```
 
-Blocks \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)传递。
 
 **Since:** 7
 
@@ -72,7 +72,7 @@ Blocks \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
 deviceId: number
 ```
 
-ID of the input device that triggers the key event.
+触发当前按键的输入设备ID。
 
 **Type:** number
 
@@ -92,11 +92,11 @@ ID of the input device that triggers the key event.
 intentionCode: IntentionCode
 ```
 
-Intention corresponding to the key.
+按键对应的意图。
 
-Default value: **IntentionCode.INTENTION\_UNKNOWN**.
+默认值：IntentionCode.INTENTION_UNKNOWN。
 
-**Type:** IntentionCode
+**Type:** [IntentionCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
 
 **Default:** IntentionCode.INTENTION_UNKNOWN
 
@@ -118,7 +118,7 @@ Default value: **IntentionCode.INTENTION\_UNKNOWN**.
 isCapsLockOn?: boolean
 ```
 
-CapsLock state. **true**: locked. **false**: unlocked.
+CapsLock是否锁定（true: 锁定；false: 解锁）。
 
 **Type:** boolean
 
@@ -140,7 +140,7 @@ CapsLock state. **true**: locked. **false**: unlocked.
 isNumLockOn?: boolean
 ```
 
-NumLock state. **true**: locked. **false**: unlocked.
+NumLock是否锁定（true: 锁定；false: 解锁）。
 
 **Type:** boolean
 
@@ -162,7 +162,7 @@ NumLock state. **true**: locked. **false**: unlocked.
 isScrollLockOn?: boolean
 ```
 
-ScrollLock state. **true**: locked. **false**: unlocked.
+ScrollLock是否锁定（true: 锁定；false: 解锁）。
 
 **Type:** boolean
 
@@ -184,8 +184,7 @@ ScrollLock state. **true**: locked. **false**: unlocked.
 keyCode: number
 ```
 
-Key value. For details about the key values provided by the key-based input devices, see  
-[KeyCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+按键的键值。按键设备提供的键值请参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。
 
 **Type:** number
 
@@ -205,9 +204,9 @@ Key value. For details about the key values provided by the key-based input devi
 keySource: KeySource
 ```
 
-Type of the input device that triggers the key event.
+触发当前按键的输入设备类型。
 
-**Type:** KeySource
+**Type:** [KeySource](../arkts-apis/arkts-arkui-keysource-e.md)
 
 **Since:** 7
 
@@ -225,7 +224,7 @@ Type of the input device that triggers the key event.
 keyText: string
 ```
 
-Name of the key.
+按键的名称。
 
 **Type:** string
 
@@ -245,7 +244,7 @@ Name of the key.
 metaKey: number
 ```
 
-State of the Meta key (the key located next to the **Ctrl** key in the lower left corner of the keyboard, or the key marked with a window logo) when the key event occurs. The value **1** indicates that the Meta key is pressed,and **0** indicates that it is not pressed.
+按键发生时元键（即键盘左下角紧挨Ctrl键或Fn标记了窗口logo的按键）的状态，1表示按压态，0表示未按压态。
 
 **Type:** number
 
@@ -265,7 +264,7 @@ State of the Meta key (the key located next to the **Ctrl** key in the lower lef
 timestamp: number
 ```
 
-Timestamp of the event. It is the interval between the time when the event is triggered and the time when the system starts, in nanoseconds.
+事件时间戳。触发事件时距离系统启动的时间间隔，单位：ns。
 
 **Type:** number
 
@@ -285,9 +284,9 @@ Timestamp of the event. It is the interval between the time when the event is tr
 type: KeyType
 ```
 
-Key type.
+按键的类型。
 
-**Type:** KeyType
+**Type:** [KeyType](../arkts-apis/arkts-arkui-keytype-e.md)
 
 **Since:** 7
 
@@ -305,7 +304,7 @@ Key type.
 unicode?: number
 ```
 
-Unicode value of the key. Non-space basic Latin characters in the 0x0021-0x007E range are supported. Characters with a value of 0 are not supported. In the case of key combination, this API returns the Unicode value of the key corresponding to the key event.
+按键的Unicode码值。支持范围为非空格的基本拉丁字符：0x0021-0x007E，不支持字符为0。组合键场景下，返回当前keyEvent对应按键的Unicode码值。
 
 **Type:** number
 

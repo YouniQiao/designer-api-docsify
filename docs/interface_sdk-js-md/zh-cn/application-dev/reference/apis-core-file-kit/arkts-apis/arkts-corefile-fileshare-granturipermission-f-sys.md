@@ -1,5 +1,11 @@
 # grantUriPermission（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## grantUriPermission
 
 ```TypeScript
@@ -31,19 +37,19 @@ function grantUriPermission(
 | --- | --- | --- | --- |
 | uri | string | 是 | 公共目录文件URI。 |
 | bundleName | string | 是 | 分享目标的包名。 |
-| flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_AUTH\_\_\_ESCAPED\_UNDERSCORE\_\_\_READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_URI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSION或 wantConstant.Flags.FLAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_AUTH\_\_\_ESCAPED\_UNDERSCORE\_\_\_WRITE\_\_\_ESCAPED\_UNDERSCORE\_\_\_URI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSION。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 异步授权之后的回调。 |
+| flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或 wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| 201 | Permission verification failed |
+| 202 | The caller is not a system application |
 | 14300001 | IPC error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { wantConstant } from '@kit.AbilityKit';
@@ -95,7 +101,7 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 | --- | --- | --- | --- |
 | uri | string | 是 | 公共目录文件URI。 |
 | bundleName | string | 是 | 分享目标的包名。 |
-| flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_AUTH\_\_\_ESCAPED\_UNDERSCORE\_\_\_READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_URI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSION或 wantConstant.Flags.FLAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_AUTH\_\_\_ESCAPED\_UNDERSCORE\_\_\_WRITE\_\_\_ESCAPED\_UNDERSCORE\_\_\_URI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSION。 |
+| flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或 wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
 
 **返回值：**
 
@@ -107,12 +113,12 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| 201 | Permission verification failed |
+| 202 | The caller is not a system application |
 | 14300001 | IPC error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { wantConstant } from '@kit.AbilityKit';
@@ -162,7 +168,7 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 | --- | --- | --- | --- |
 | policies | Array&lt;PolicyInfo&gt; | 是 | 需要授权URI的策略信息数组。 |
 | targetBundleName | string | 是 | 被授权应用的应用包名。 |
-| appCloneIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 被授权应用的分身索引，取值为0时表示主应用。 |
+| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 被授权应用的分身索引，取值为0时表示主应用。 |
 
 **返回值：**
 
@@ -174,13 +180,13 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 801 | Capability not supported. |
 | 13900001 | Operation not permitted. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13900011 | Out of memory. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

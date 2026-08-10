@@ -1,6 +1,6 @@
 # ChargingType
 
-Enumerates the charging types that trigger deferred task callback.
+触发延迟任务回调的充电类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the charging types that trigger deferred task callback.
 CHARGING_PLUGGED_ANY = 0
 ```
 
-Any charging type.
+表示这个触发条件是任何类型的充电器连接。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Any charging type.
 CHARGING_PLUGGED_AC = 1
 ```
 
-DC charging.
+表示这个触发条件是直流充电器连接。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ DC charging.
 CHARGING_PLUGGED_USB = 2
 ```
 
-USB charging.
+表示这个触发条件是USB充电连接。
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ USB charging.
 CHARGING_PLUGGED_WIRELESS = 3
 ```
 
-Wireless charging.
+表示这个触发条件是无线充电器连接。
 
 **Since:** 9
 

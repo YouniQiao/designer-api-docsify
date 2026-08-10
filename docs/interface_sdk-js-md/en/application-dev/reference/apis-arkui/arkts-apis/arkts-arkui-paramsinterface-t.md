@@ -6,7 +6,7 @@ type ParamsInterface = {
 }
 ```
 
-List of routing parameters.
+路由参数列表。
 
 **Since:** 7
 

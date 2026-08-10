@@ -1,6 +1,6 @@
 # DeviceStateChangeResult
 
-Device status change result.
+设备状态改变结果信息。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Device status change result.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## action
 
 ```TypeScript
 action: DeviceStateChange
 ```
 
-The state of the nearby devices.
+设备状态信息。
 
-**Type:** DeviceStateChange
+**Type:** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
 
 **Since:** 23
 
@@ -34,9 +40,9 @@ The state of the nearby devices.
 device: DeviceBasicInfo
 ```
 
-Basic description information of a distributed device.
+分布式设备基本信息。
 
-**Type:** DeviceBasicInfo
+**Type:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 
 **Since:** 23
 

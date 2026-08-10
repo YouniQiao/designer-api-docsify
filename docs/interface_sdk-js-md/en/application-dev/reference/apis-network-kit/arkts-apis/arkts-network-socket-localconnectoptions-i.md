@@ -10,6 +10,12 @@ Defines LocalSocket connection parameters.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## address
 
 ```TypeScript
@@ -18,7 +24,7 @@ address: LocalAddress
 
 Bound Local address.
 
-**Type:** LocalAddress
+**Type:** [LocalAddress](arkts-network-socket-localaddress-i.md)
 
 **Since:** 12
 

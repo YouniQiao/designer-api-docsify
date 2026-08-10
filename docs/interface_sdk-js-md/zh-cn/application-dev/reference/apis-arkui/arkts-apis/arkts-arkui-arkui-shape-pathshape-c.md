@@ -2,7 +2,7 @@
 
 用于clipShape和maskShape接口的路径。
 
-继承自[CommonShapeMethod]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。
 
 **继承/实现关系：** PathShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
@@ -13,6 +13,12 @@
 <!--Device-unnamed-export declare class PathShape extends CommonShapeMethod--><!--Device-unnamed-export declare class PathShape extends CommonShapeMethod-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
 
 ## commands
 
@@ -66,5 +72,5 @@ constructor(options?: PathShapeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 路径参数。 |
+| options | [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | 否 | 路径参数。 |
 

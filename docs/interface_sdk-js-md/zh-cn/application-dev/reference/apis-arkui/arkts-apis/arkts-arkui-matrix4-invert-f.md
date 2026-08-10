@@ -1,5 +1,11 @@
 # invert
 
+## 导入模块
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## invert
 
 ```TypeScript
@@ -7,7 +13,8 @@ function invert(): Matrix4Transit
 ```
 
 Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。
-    **说明：
+
+> **说明：**
 
 **起始版本：** 7
 
@@ -25,5 +32,5 @@ Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效�
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前矩阵的逆矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的逆矩阵对象。 |
 

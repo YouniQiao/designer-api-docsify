@@ -1,6 +1,6 @@
 # SwiperFrameNode
 
-Define the Swiper type of FrameNode.
+定义Swiper类型的FrameNode。
 
 **Inheritance/Implementation:** SwiperFrameNode extends [TypedFrameNode<SwiperAttribute>](TypedFrameNode<SwiperAttribute>)
 
@@ -18,7 +18,7 @@ Define the Swiper type of FrameNode.
 abstract initialize(controller?: SwiperController): SwiperAttribute
 ```
 
-Initialize Swiper FrameNode.
+初始化Swiper类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Swiper FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The controller for swiper. |
+| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | No | swiper的控制器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) |  |
 

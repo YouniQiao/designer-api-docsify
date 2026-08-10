@@ -1,6 +1,6 @@
 # DisplayTag
 
-The pre-defined display tag by system.
+枚举，表示当前媒体资源的金标，即应用媒体音源的特殊类型标识。
 
 **Since:** 11
 
@@ -15,8 +15,6 @@ The pre-defined display tag by system.
 ```TypeScript
 TAG_AUDIO_VIVID = 1
 ```
-
-Indicate the AUDIO VIVID property of current media resource.
 
 **Since:** 11
 

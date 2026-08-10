@@ -1,5 +1,11 @@
 # getCurrentLocation
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## getCurrentLocation
 
 ```TypeScript
@@ -25,21 +31,21 @@ Obtain current location.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| SingleLocationRequest | Yes | Indicates the location request parameters.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) \| SingleLocationRequest | Yes | Indicates the location request parameters.<br>**Since:** 12 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.getCurrentLocation} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the geographical location. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.getCurrentLocation} due to limited device capabilities. |
+| 3301200 | Failed to obtain the geographical location. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -111,20 +117,20 @@ Obtain current location.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.getCurrentLocation} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the geographical location. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.getCurrentLocation} due to limited device capabilities. |
+| 3301200 | Failed to obtain the geographical location. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -172,7 +178,7 @@ Obtain current location.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| SingleLocationRequest | No | Indicates the location request parameters.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) \| SingleLocationRequest | No | Indicates the location request parameters.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -184,14 +190,14 @@ Obtain current location.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.getCurrentLocation} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the geographical location. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.getCurrentLocation} due to limited device capabilities. |
+| 3301200 | Failed to obtain the geographical location. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

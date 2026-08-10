@@ -1,5 +1,11 @@
 # setDevicePairingConfirmation
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## setDevicePairingConfirmation
 
 ```TypeScript
@@ -35,7 +41,7 @@ Sets the confirmation of pairing with a certain device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Subscribe to the pinRequired event and configure the pairing confirmation after receiving a pairing request from the remote device.

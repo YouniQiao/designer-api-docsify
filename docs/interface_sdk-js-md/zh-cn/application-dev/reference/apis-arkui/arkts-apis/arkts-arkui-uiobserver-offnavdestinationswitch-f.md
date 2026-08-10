@@ -1,5 +1,11 @@
 # offNavDestinationSwitch
 
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## offNavDestinationSwitch
 
 ```TypeScript
@@ -25,8 +31,8 @@ export function offNavDestinationSwitch(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NavDestinationSwitchInfo&gt; | 否 | 需要被注销的回调函数。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | 否 | 需要被注销的回调函数。 |
 
 
 ## offNavDestinationSwitch
@@ -55,7 +61,7 @@ export function offNavDestinationSwitch(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
-| observerOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 监听选项。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NavDestinationSwitchInfo&gt; | 否 | 需要被注销的回调函数。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
+| observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 | 监听选项。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | 否 | 需要被注销的回调函数。 |
 

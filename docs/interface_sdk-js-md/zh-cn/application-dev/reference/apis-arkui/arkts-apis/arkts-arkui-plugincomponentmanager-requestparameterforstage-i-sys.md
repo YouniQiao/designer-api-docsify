@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## data
 
 ```TypeScript
@@ -20,7 +26,7 @@ data: KVObject
 
 附加数据，以键值对形式存储。用于向组件提供方传递请求时的自定义业务参数，以便提供方根据这些数据返回合适的组件模板。
 
-**类型：** KVObject
+**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 23
 
@@ -86,7 +92,7 @@ owner: Want
 
 组件使用方Ability信息。
 
-**类型：** Want
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
 
@@ -108,7 +114,7 @@ target: Want
 
 组件提供方Ability信息。
 
-**类型：** Want
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
 

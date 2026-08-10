@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.AccessToken
 
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## change
 
 ```TypeScript
@@ -18,7 +24,7 @@ change: PermissionStateChangeType
 
 权限授权状态变化类型。
 
-**类型：** PermissionStateChangeType
+**类型：** [PermissionStateChangeType](arkts-ability-abilityaccessctrl-permissionstatechangetype-e.md)
 
 **起始版本：** 18
 
@@ -36,9 +42,9 @@ change: PermissionStateChangeType
 permissionName: Permissions
 ```
 
-当前授权状态发生变化的权限名，合法的权限名取值可在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中查询。
+当前授权状态发生变化的权限名，合法的权限名取值可在[应用权限列表](../../../security/AccessToken/app-permissions.md)中查询。
 
-**类型：** Permissions
+**类型：** [Permissions](arkts-ability-permissions-t.md)
 
 **起始版本：** 18
 
@@ -56,9 +62,9 @@ permissionName: Permissions
 tokenID: int
 ```
 
-被订阅的应用身份标识。该参数必须为大于0的整数，传入0时返回错误码12100001。BundleInfo获取可参考：[bundleManager.getBundleInfoSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。获取。
+被订阅的应用身份标识。该参数必须为大于0的整数，传入0时返回错误码12100001。BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

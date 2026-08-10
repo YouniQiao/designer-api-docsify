@@ -12,6 +12,12 @@ PublishFormCrossBundleInfo
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## callerBundleName
 
 ```TypeScript

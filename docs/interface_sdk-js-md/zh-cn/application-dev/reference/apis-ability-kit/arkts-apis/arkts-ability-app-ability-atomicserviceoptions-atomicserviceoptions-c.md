@@ -1,7 +1,7 @@
 # AtomicServiceOptions
 
-AtomicServiceOptions** is used as an input parameter of  
-[openAtomicService()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to carry arguments. It inherits from [StartOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+**AtomicServiceOptions** is used as an input parameter of  
+[openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md).
 
 **继承/实现关系：** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 
@@ -13,6 +13,12 @@ AtomicServiceOptions** is used as an input parameter of
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { AtomicServiceOptions } from 'kits/@kit.AbilityKit';
+```
+
 ## completionHandlerForAtomicService
 
 ```TypeScript
@@ -21,7 +27,7 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 
 打开原子化服务结果的操作类，用于接收打开原子化服务的结果。
 
-**类型：** CompletionHandlerForAtomicService
+**类型：** [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
 
 **起始版本：** 20
 
@@ -41,9 +47,9 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 flags?: int
 ```
 
-系统处理该次启动的方式。例如通过wantConstant.Flags.FLAG\_INSTALL\_ON\_DEMAND表示使用免安装能力。
+系统处理该次启动的方式。例如通过wantConstant.Flags.FLAG_INSTALL_ON_DEMAND表示使用免安装能力。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -63,9 +69,9 @@ flags?: int
 parameters?: Record<string, Object>
 ```
 
-表示额外参数描述。具体描述参考[Want]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中parameters字段描述。
+表示额外参数描述。具体描述参考[Want](arkts-ability-app-ability-want-want-c.md)中parameters字段描述。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 12
 

@@ -1,9 +1,10 @@
 # CmsRecipientInfo
 
-Represents recipient information for the CMS message.
-    **NOTE**  
-    
-    At least one recipient needs to be set.
+CMS封装数据的接收者信息。
+
+> **说明：**
+> 
+> 至少需要设置一个接收者。
 
 **Since:** 22
 
@@ -13,15 +14,21 @@ Represents recipient information for the CMS message.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## keyAgreeInfo
 
 ```TypeScript
 keyAgreeInfo?: CmsKeyAgreeRecipientInfo
 ```
 
-KeyAgree recipient information.
+keyAgree接收者信息。
 
-**Type:** CmsKeyAgreeRecipientInfo
+**Type:** [CmsKeyAgreeRecipientInfo](arkts-devicecertificate-cert-cmskeyagreerecipientinfo-i.md)
 
 **Since:** 22
 
@@ -39,9 +46,9 @@ KeyAgree recipient information.
 keyTransInfo?: CmsKeyTransRecipientInfo
 ```
 
-KeyTrans recipient information.
+keyTrans接收者信息。
 
-**Type:** CmsKeyTransRecipientInfo
+**Type:** [CmsKeyTransRecipientInfo](arkts-devicecertificate-cert-cmskeytransrecipientinfo-i.md)
 
 **Since:** 22
 

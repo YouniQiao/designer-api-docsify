@@ -29,7 +29,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## releaseForm
@@ -62,7 +62,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | isReleaseCache | boolean | Yes | Whether to release the cache. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## releaseForm

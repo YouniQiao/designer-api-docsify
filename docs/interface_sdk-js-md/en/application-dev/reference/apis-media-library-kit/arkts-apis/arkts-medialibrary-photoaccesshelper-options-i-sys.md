@@ -12,6 +12,12 @@ Provides APIs for input Options.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## rankingMethod
 
 ```TypeScript
@@ -20,7 +26,7 @@ rankingMethod?: RankingMethod
 
 Ranking Method option
 
-**Type:** RankingMethod
+**Type:** [RankingMethod](arkts-medialibrary-photoaccesshelper-rankingmethod-e-sys.md)
 
 **Since:** 23
 
@@ -42,7 +48,7 @@ recommendationCount?: int
 
 Recommendation Count option
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -64,7 +70,7 @@ suggestionFields?: FieldType[]
 
 Suggestion Fields option
 
-**Type:** FieldType[]
+**Type:** [FieldType](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-fieldtype-e-sys.md)[]
 
 **Since:** 23
 

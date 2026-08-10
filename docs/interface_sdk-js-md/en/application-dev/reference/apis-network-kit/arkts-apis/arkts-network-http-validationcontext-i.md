@@ -1,6 +1,6 @@
 # ValidationContext
 
-The validation context of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+The validation context of {@link ValidationCallback}
 
 **Since:** 26.0.0
 
@@ -9,6 +9,12 @@ The validation context of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 <!--Device-http-export interface ValidationContext--><!--Device-http-export interface ValidationContext-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
+
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
 
 ## host
 
@@ -78,7 +84,7 @@ x509Certs: X509Cert[]
 
 X509 certificate chain.
 
-**Type:** X509Cert[]
+**Type:** [X509Cert](arkts-network-http-x509cert-t.md)[]
 
 **Since:** 26.0.0
 

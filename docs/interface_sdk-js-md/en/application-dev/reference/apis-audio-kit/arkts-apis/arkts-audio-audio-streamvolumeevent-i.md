@@ -1,6 +1,6 @@
 # StreamVolumeEvent
 
-Describes the event received by the application when the audio stream volume is changed.
+音频流音量变化时，应用接收到的事件。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the event received by the application when the audio stream volume is 
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## previousVolume
 
 ```TypeScript
 previousVolume?: int
 ```
 
-Volume level before change.
+变化前的音量值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -34,9 +40,9 @@ Volume level before change.
 streamUsage: StreamUsage
 ```
 
-Audio stream for which the volume changes.
+音量发生变化的音频流。
 
-**Type:** StreamUsage
+**Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **Since:** 20
 
@@ -52,7 +58,7 @@ Audio stream for which the volume changes.
 updateUi: boolean
 ```
 
-Whether to show the volume change in UI. **true** to show, **false** otherwise.
+是否在UI上展示音量变化。true表示展示，false表示不展示。
 
 **Type:** boolean
 
@@ -70,9 +76,9 @@ Whether to show the volume change in UI. **true** to show, **false** otherwise.
 volume: int
 ```
 
-Volume.
+音量值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

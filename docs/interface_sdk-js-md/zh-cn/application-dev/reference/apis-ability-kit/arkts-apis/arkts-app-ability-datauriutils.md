@@ -10,6 +10,12 @@ DataUriUtils模块提供用于处理uri对象的能力，包括获取、绑定�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { dataUriUtils } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 函数

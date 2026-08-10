@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## enableSystemRecordController
 
 ```TypeScript
@@ -33,7 +39,7 @@ enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | show | boolean | 是 | 一个布尔值，指示是显示（true）还是隐藏(false) 系统记录控制器面板 |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 系统录像控制器面板配置 |
+| config | [SystemRecordControllerConfig](arkts-audio-audio-systemrecordcontrollerconfig-i.md) | 是 | 系统录像控制器面板配置 |
 
 **返回值：**
 
@@ -45,6 +51,6 @@ enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio service error occurs like service died. |
 

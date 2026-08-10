@@ -16,7 +16,7 @@
 COMPONENT_UNDEFINED = 0
 ```
 
-非窗口变化事件。
+非控件操作事件。
 
 **说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
 
@@ -108,7 +108,7 @@ COMPONENT_SCROLL_END = 4
 COMPONENT_TEXT_CHANGED = 5
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_文本变化事件。
+[输入框控件](../../../ui/arkts-common-components-text-input.md)文本变化事件。
 
 **起始版本：** 22
 

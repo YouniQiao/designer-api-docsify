@@ -1,6 +1,6 @@
 # Options
 
-Describes the event emit priority.
+发送事件的优先级。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Describes the event emit priority.
 
 **System capability:** SystemCapability.Notification.Emitter
 
+## Modules to Import
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## priority
 
 ```TypeScript
 priority?: EventPriority
 ```
 
-Event priority. The default value is **EventPriority.LOW**.
+事件的优先级，默认值为EventPriority.LOW。
 
-**Type:** EventPriority
+**Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
 **Since:** 11
 

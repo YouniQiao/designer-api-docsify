@@ -10,6 +10,12 @@ class ComponentSnapshot
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## getWithRange
 
 ```TypeScript
@@ -17,7 +23,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
     options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null
 ```
 
-Get a component snapshot by component range.
+通过组件范围获取组件截图。
 
 **Since:** 26.0.0
 
@@ -35,8 +41,8 @@ Get a component snapshot by component range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the start component ID, set by developer through .id attribute or the unique ID get from FrameNode. |
-| end | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the end component ID, set by developer through.id attribute or the unique ID get from FrameNode. |
+| start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | the start component ID, set by developer through .id attribute or the unique ID get from FrameNode. |
+| end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | the end component ID, set by developer through.id attribute or the unique ID get from FrameNode. |
 | isStartRect | boolean | Yes | indicating the snapshot rect to use, true for using the rect of the start component, false for using the rect of the end component. |
 | options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
 
@@ -50,7 +56,7 @@ Get a component snapshot by component range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID detected. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| 100001 | Invalid ID detected. |
+| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
+| 202 | The caller is not a system application. |
 

@@ -1,6 +1,6 @@
 # FloatViewProperties
 
-Provides the properties of the float view.
+标准悬浮窗窗口的属性。
 
 **Since:** 26.0.0
 
@@ -10,17 +10,24 @@ Provides the properties of the float view.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## avoidArea
 
 ```TypeScript
 avoidArea: window.AvoidArea
 ```
 
-Avoid area for the content of the float view.
+标准悬浮窗内容的避让区域。
 
-Note:
+**注意：**
 
-On the page loaded by [setUIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, components in the avoid area do not respond to gesture events. When adding components that require gesture response events, avoid the area.
+通过[setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext)或  
+[setUIContextByName()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontextbyname)加载的页面中，位于避让区域的组件将不响应手势事件，添加需要手势响应事件的组件时，请注意避让这些区域。
 
 **Type:** window.AvoidArea
 
@@ -40,9 +47,9 @@ On the page loaded by [setUIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, compo
 displayId: int
 ```
 
-ID of the display where the float view is located.
+标准悬浮窗所在屏幕ID。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -60,7 +67,7 @@ ID of the display where the float view is located.
 inSidebar: boolean
 ```
 
-Whether the float view is in the sidebar. **true**: in the sidebar; **false**: not in the sidebar.
+标准悬浮窗是否在侧边栏中。true为在侧边栏中，false为不在侧边栏中。
 
 **Type:** boolean
 
@@ -80,9 +87,9 @@ Whether the float view is in the sidebar. **true**: in the sidebar; **false**: n
 templateType: FloatViewTemplateType
 ```
 
-Template type of the float view.
+标准悬浮窗的模板类型。
 
-**Type:** FloatViewTemplateType
+**Type:** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
 **Since:** 26.0.0
 
@@ -100,9 +107,9 @@ Template type of the float view.
 windowId: int
 ```
 
-Float view ID.
+标准悬浮窗窗口ID。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -120,7 +127,7 @@ Float view ID.
 windowRect: window.Rect
 ```
 
-Rectangle area of the float view.
+标准悬浮窗窗口矩形区域。
 
 **Type:** window.Rect
 
@@ -140,9 +147,9 @@ Rectangle area of the float view.
 windowScale: double
 ```
 
-Scale factor of the float view.
+标准悬浮窗窗口缩放比例。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 

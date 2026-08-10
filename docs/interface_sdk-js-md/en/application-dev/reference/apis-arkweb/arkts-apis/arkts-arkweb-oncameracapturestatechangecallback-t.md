@@ -18,5 +18,5 @@ The callback when camera capturing state of current page has been changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the camera capturing state event.  |
+| event | [CameraCaptureStateChangeInfo](../arkts-components/arkts-arkweb-cameracapturestatechangeinfo-i.md) | Yes | the camera capturing state event. |
 

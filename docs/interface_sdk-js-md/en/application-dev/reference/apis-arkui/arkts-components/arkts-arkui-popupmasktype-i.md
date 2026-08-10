@@ -1,6 +1,6 @@
 # PopupMaskType
 
-Sets the color of the mask.
+设置遮罩层颜色。
 
 **Since:** 18
 
@@ -16,9 +16,9 @@ Sets the color of the mask.
 color: ResourceColor
 ```
 
-Color of the mask.
+设置遮罩层颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
 

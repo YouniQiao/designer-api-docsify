@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## onMessage
 
 ```TypeScript
@@ -36,7 +42,7 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 
 接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_当已注册的MessageHandler接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_
+&lt;p&gt;当已注册的MessageHandler接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。&lt;/p&gt;&lt;p&gt;msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。&lt;/p&gt;
 
 **起始版本：** 15
 
@@ -53,7 +59,7 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 | msgId | string | 是 | 接收到的自定义通信数据的标识符。 |
 | msgParam | ArrayBuffer | 否 | 接收到的自定义通信数据的消息体。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -79,7 +85,7 @@ onTerminated(): void
 
 监听对象终止回调函数。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_当应用注册新的MessageHandler对象时，会触发上一个已注册MessageHandler对象的onTerminated回调函数。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_当应用取消注册时，会触发当前已注册MessageHandler对象的onTerminated回调函数。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_
+&lt;p&gt;当应用注册新的MessageHandler对象时，会触发上一个已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;&lt;p&gt;当应用取消注册时，会触发当前已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;
 
 **起始版本：** 15
 
@@ -89,7 +95,7 @@ onTerminated(): void
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-**示例：**
+## 示例
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -103,7 +109,7 @@ inputMethodEngine.getInputMethodAbility()
           console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
         }
       }
-      inputClient.recvMessage(messageHandler);
+      client.recvMessage(messageHandler);
     });
 ```
 
@@ -117,7 +123,7 @@ onTerminated(): void
 
 监听对象终止回调函数。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # Measurable
 
-Provides the child component position information.
+子组件位置信息。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Provides the child component position information.
 getBorderWidth() : DirectionalEdgesT<number>
 ```
 
-Obtains the border widths of the child component.
+调用此方法获取子组件的borderWidth信息。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Obtains the border widths of the child component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Border widths of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的borderWidth信息。 |
 
 ## getMargin
 
@@ -42,7 +42,7 @@ Obtains the border widths of the child component.
 getMargin() : DirectionalEdgesT<number>
 ```
 
-Obtains the margin values of the child component.
+调用此方法获取子组件的margin信息。
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ Obtains the margin values of the child component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Margin values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的margin信息。 |
 
 ## getPadding
 
@@ -68,7 +68,7 @@ Obtains the margin values of the child component.
 getPadding() : DirectionalEdgesT<number>
 ```
 
-Obtains the padding values of the child component.
+调用此方法获取子组件的padding信息。
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ Obtains the padding values of the child component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Padding values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的padding信息。 |
 
 ## measure
 
@@ -94,7 +94,7 @@ Obtains the padding values of the child component.
 measure(constraint: ConstraintSizeOptions) : MeasureResult
 ```
 
-Imposes size constraints on the child component.
+调用此方法限制子组件的尺寸范围。
 
 **Since:** 10
 
@@ -112,13 +112,13 @@ Imposes size constraints on the child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Size constraint. |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | 约束尺寸。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Provides the measurement result of the component. |
+| [MeasureResult](../arkts-apis/arkts-arkui-common-measureresult-i.md) | Provides the measurement result of the component. |
 
 ## uniqueId
 
@@ -126,7 +126,7 @@ Imposes size constraints on the child component.
 uniqueId?: number
 ```
 
-Unique ID that the system assigns to the child component.The value range is all integers.
+系统为子组件分配的唯一标识UniqueID。取值限定为整数。
 
 **Type:** number
 

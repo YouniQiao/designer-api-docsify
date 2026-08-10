@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## authResult
 
 ```TypeScript
@@ -64,7 +70,7 @@ permissionNameList: Array<Permissions>
 
 发起CLI相关操作的智能体当前未满足的权限名称列表。若相关权限不满足，CLI将无法拉起，或拉起后的CLI进程无法获得对应权限。
 
-**类型：** Array&lt;Permissions&gt;
+**类型：** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 
 **起始版本：** 26.0.0
 

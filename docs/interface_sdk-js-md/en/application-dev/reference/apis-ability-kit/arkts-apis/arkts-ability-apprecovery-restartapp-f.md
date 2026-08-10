@@ -1,23 +1,28 @@
 # restartApp
 
+## Modules to Import
+
+```TypeScript
+import { appRecovery } from 'kits/@kit.AbilityKit';
+```
+
 ## restartApp
 
 ```TypeScript
 function restartApp(): void
 ```
 
-Restarts the current process and starts the first ability that is displayed when the application is started. If the state of this ability is saved, the saved state data is passed into the **wantParam** property in the **want**  
-parameter of the **onCreate** lifecycle callback of the ability.
+重启当前进程，并拉起应用启动时第一个Ability，如果该Ability存在已经保存的状态，这些状态数据会在Ability的onCreate生命周期回调的want参数中作为wantParam属性传入。
 
-In API version 10, the ability specified by [setRestartWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is started. If no ability is specified, the following rules are used:
+API10时将启动由[setRestartWant](arkts-ability-apprecovery-setrestartwant-f.md#setrestartwant)指定的Ability。如果没有指定则按以下规则启动：
 
-If the ability of the current application running in the foreground supports recovery, that ability is started.
+如果当前应用前台的Ability支持恢复，则重新拉起该Ability。
 
-If multiple abilities that support recovery is running in the foreground, only the last ability is started.
+如果存在多个支持恢复的Ability处于前台，则只拉起最后一个。
 
-If no ability is running in the foreground, none of them is started.
+如果没有Ability处于前台，则不拉起。
 
-This API can be used together with the APIs of [errorManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.The interval between two restarts must be greater than one minute. If this API is called repeatedly within one minute, the application exits but does not restart. The behavior of automatic restart is the same as that of proactive restart.
+可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。两次重启的间隔应大于一分钟，一分钟之内重复调用此接口只会退出应用不会重启应用。自动重启的行为与主动重启一致。
 
 **Since:** 9
 
@@ -31,7 +36,7 @@ This API can be used together with the APIs of [errorManager]\_\_\_JSDOC\_LINK\_
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appRecovery, errorManager } from '@kit.AbilityKit';

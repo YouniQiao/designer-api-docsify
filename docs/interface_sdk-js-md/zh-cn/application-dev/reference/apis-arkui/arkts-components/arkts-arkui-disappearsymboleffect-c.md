@@ -2,7 +2,7 @@
 
 DisappearSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** DisappearSymbolEffect extends [SymbolEffect](../arkts-apis/arkts-arkui-component/symbolglyph-symboleffect-c.md)
+**继承/实现关系：** DisappearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ AppearSymbolEffect的构造函数，出现动效。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scope | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：EffectScope.LAYER |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 &lt;br&gt;默认值：EffectScope.LAYER |
 
 ## scope
 
@@ -50,7 +50,7 @@ scope?: EffectScope
 
 默认值：EffectScope.LAYER
 
-**类型：** EffectScope
+**类型：** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **起始版本：** 12
 

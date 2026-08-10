@@ -1,6 +1,6 @@
 # Range
 
-Defines the range.
+定义范围的接口。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Defines the range.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## maxValue
 
 ```TypeScript
 maxValue: int
 ```
 
-Maximum value.
+范围的最大值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Maximum value.
 minValue: int
 ```
 
-Minimum value.
+范围的最小值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -52,9 +58,9 @@ Minimum value.
 quantValue: int
 ```
 
-Quantized value.
+范围的量化值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

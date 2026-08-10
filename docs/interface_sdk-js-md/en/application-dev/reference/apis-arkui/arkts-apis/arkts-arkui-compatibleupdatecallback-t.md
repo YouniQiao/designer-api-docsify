@@ -4,7 +4,7 @@
 export type CompatibleUpdateCallback = (component: ESValue) => void
 ```
 
-Defines the callback for updating compatible custom component.
+更新占位组件的回调函数类型。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Defines the callback for updating compatible custom component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| component | ESValue | Yes | the compatible custom component  |
+| component | ESValue | Yes | 在ArkTS-Dyn上下文创建的自定义组件对象。 |
 

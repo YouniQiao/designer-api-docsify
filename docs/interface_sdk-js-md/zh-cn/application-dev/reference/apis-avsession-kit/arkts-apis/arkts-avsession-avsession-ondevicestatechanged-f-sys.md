@@ -1,5 +1,11 @@
 # onDeviceStateChanged（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## onDeviceStateChanged
 
 ```TypeScript
@@ -24,12 +30,12 @@ Registers a system callback for the device connection phase.The callback include
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceState&gt; | 是 | Callback used to return the device information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceState&gt; | 是 | Callback used to return the device information. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| 201 | Permission denied. |
+| 202 | Not System App. |
 

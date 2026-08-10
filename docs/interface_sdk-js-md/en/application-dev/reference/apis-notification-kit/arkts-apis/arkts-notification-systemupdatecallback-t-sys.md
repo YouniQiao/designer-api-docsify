@@ -4,8 +4,7 @@
 export type SystemUpdateCallback = (data: SubscribeCallbackData) => void
 ```
 
-Returns the notification information carrying system property values.type SystemUpdateCallback = (data: SubscribeCallbackData) =  
-    void
+type SystemUpdateCallback = (data: SubscribeCallbackData) => void返回携带系统属性值通知信息的回调函数类型。
 
 **Since:** 23
 
@@ -23,5 +22,5 @@ Returns the notification information carrying system property values.type System
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification information that carries the system property value.  |
+| data | [SubscribeCallbackData](arkts-notification-notificationsubscribe-subscribecallbackdata-t-sys.md) | Yes | 返回携带系统属性值的通知信息。 |
 

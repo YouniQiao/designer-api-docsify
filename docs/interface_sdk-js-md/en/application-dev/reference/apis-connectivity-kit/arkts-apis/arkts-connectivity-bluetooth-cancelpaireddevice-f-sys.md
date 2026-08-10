@@ -1,5 +1,11 @@
 # cancelPairedDevice (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## cancelPairedDevice
 
 ```TypeScript
@@ -36,7 +42,7 @@ Remove a paired remote device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let result : boolean = bluetooth.cancelPairedDevice("XX:XX:XX:XX:XX:XX");

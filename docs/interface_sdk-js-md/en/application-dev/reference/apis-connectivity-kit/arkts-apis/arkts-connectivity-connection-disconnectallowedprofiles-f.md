@@ -1,5 +1,11 @@
 # disconnectAllowedProfiles
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disconnectAllowedProfiles
 
 ```TypeScript
@@ -38,13 +44,15 @@ Disconnects all allowed bluetooth profiles between the local and remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 11 - 24 |
+| 801 | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs.<br>**Applicable version:** 11 - 24 |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,6 +64,14 @@ try {
     });
 } catch (err) {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+try {
+  await connection.disconnectAllowedProfiles('68:13:24:79:4C:8C');
+} catch (err) {
+  console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
 

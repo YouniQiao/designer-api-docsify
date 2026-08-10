@@ -1,6 +1,6 @@
 # DLPSandboxState (System API)
 
-Represents the DLP sandbox state information.
+DLP沙箱的状态信息。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Represents the DLP sandbox state information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## appIndex
 
 ```TypeScript
 appIndex: number
 ```
 
-Index of the DLP sandbox application. The value range is [1000, 1100]. If the value is out of range, an error log is generated.
+表示DLP沙箱应用索引。
 
 **Type:** number
 
@@ -38,7 +44,7 @@ Index of the DLP sandbox application. The value range is [1000, 1100]. If the va
 bundleName: string
 ```
 
-Bundle name of the application.
+表示应用包名。
 
 **Type:** string
 

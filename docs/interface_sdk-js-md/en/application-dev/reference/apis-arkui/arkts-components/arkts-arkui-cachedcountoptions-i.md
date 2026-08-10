@@ -1,6 +1,6 @@
 # CachedCountOptions
 
-Describes the configuration options for child components to be preloaded.
+预加载子组件的配置选项。
 
 **Since:** 24
 
@@ -16,13 +16,13 @@ Describes the configuration options for child components to be preloaded.
 independent?: boolean
 ```
 
-Whether to calculate [cachedCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_by group.
+[cachedCount](SwiperAttribute#cachedCount(count: number, options: CachedCountOptions))是否按实际子组件个数计算。
 
-**true**: **cachedCount** is calculated based on the actual number of child components, not by group.
+设置为true时，cachedCount按实际子组件个数计算，不按组计算。
 
-**false**: If **displayCount.swipeByGroup=true**, **cachedCount** is calculated by group. Otherwise, it is calculated based on the actual number of child components.
+设置为false时，如果displayCount.swipeByGroup=true，则cachedCount按组计算，否则按实际子组件个数计算。
 
-Default value: **false**.
+默认值：false
 
 **Type:** boolean
 
@@ -48,13 +48,13 @@ Default value: **false**.
 isShown?: boolean
 ```
 
-Whether to draw nodes within the preloading range.
+预加载范围内的节点是否进行绘制。
 
-**true**: yes.
+设置为true时，预加载范围内的节点进行绘制。
 
-**false**: no.
+设置为false时，预加载范围内的节点不进行绘制。
 
-Default value: **false**.
+默认值：false
 
 **Type:** boolean
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## clamp
 
 ```TypeScript
@@ -38,7 +44,7 @@ static clamp(order: double): LevelOrder
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前对象实例。 |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回当前对象实例。 |
 
 ## getOrder
 

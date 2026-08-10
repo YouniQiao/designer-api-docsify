@@ -5,7 +5,7 @@ declare type NavDestinationTransitionDelegate =
     (operation: NavigationOperation, isEnter: boolean) => Array<NavDestinationTransition> | undefined
 ```
 
-Defines the delegate function for custom transition animations of the **NavDestination** component.
+NavDestination自定义转场动画的代理函数。
 
 **Since:** 15
 
@@ -23,12 +23,12 @@ Defines the delegate function for custom transition animations of the **NavDesti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of navigation operation for the current page transition.  |
-| isEnter | boolean | Yes | Whether the current page is an entry page.\_\_\_HTML\_TAG\_USD\_0\_\_\_**true**: The current page is an entry page.\_\_\_HTML\_TAG\_USD\_1\_\_\_**false**: The current page is not an entry page.  |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | 当前页面转场的操作类型。 |
+| isEnter | boolean | Yes | 当前页面是否为入场页面。<br/>true：当前页面是入场页面；false：当前页面不是入场页面。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NavDestinationTransition&gt; \| undefined | Array of custom animations for the **NavDestination** page. If **undefined** is returned, the default system animation is used.  |
+| Array&lt;NavDestinationTransition&gt; \| undefined | Array of custom animations for the **NavDestination** page. If **undefined** is returned, the default system animation is used. |
 

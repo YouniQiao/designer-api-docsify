@@ -1,6 +1,6 @@
 # AudioCapturerMicInConfig (System API)
 
-Describes audio capturer configuration that can capture microphone input (mic-in) audio data before any processing.
+Describes audio capturer configuration options that can capture microphone input (mic-in) audio data before any processing.
 
 **Since:** 23
 
@@ -12,6 +12,12 @@ Describes audio capturer configuration that can capture microphone input (mic-in
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerInfo
 
 ```TypeScript
@@ -20,7 +26,7 @@ capturerInfo: AudioCapturerInfo
 
 Capturer attribute information.
 
-**Type:** AudioCapturerInfo
+**Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
 **Since:** 23
 
@@ -40,9 +46,9 @@ Capturer attribute information.
 ecStreamInfo?: AudioStreamInfo
 ```
 
-Stream information that describes echo reference signal.If not set this attribute, the capturer will only record Mic-In audio stream.
+Stream information that describe echo reference signal.If not set this attribute, the capturer will only record Mic-In audio stream.
 
-**Type:** AudioStreamInfo
+**Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 23
 
@@ -62,9 +68,9 @@ Stream information that describes echo reference signal.If not set this attribut
 micInStreamInfo: AudioStreamInfo
 ```
 
-Stream information that describes Mic-In audio stream.
+Stream information that describe Mic-In audio stream.
 
-**Type:** AudioStreamInfo
+**Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 23
 
@@ -78,37 +84,15 @@ Stream information that describes Mic-In audio stream.
 
 **System API:** This is a system API.
 
-## preferredInputDevice
-
-```TypeScript
-preferredInputDevice?: AudioDeviceDescriptor
-```
-
-Prefered input device for this audio capturer.The preferred device must be an input device, and the source type in\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ must be \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ or \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_,otherwise this parameter will be ignored.If the user does not specify a device, the system will automatically select the recording device for the audio capturer.When the user specifies a preferred device:1) If the preferred device is online, the current audio capturer may use the preferred device for recording. If the preferred device becomes offline during recording, the system will select another device.2) If the preferred device is offline, the system will select a recording device.If the preferred device becomes online during recording, it may switch to the preferred device.The user can query the selected device by \_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
-
-**Type:** AudioDeviceDescriptor
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioCapturerMicInConfig-preferredInputDevice?: AudioDeviceDescriptor--><!--Device-AudioCapturerMicInConfig-preferredInputDevice?: AudioDeviceDescriptor-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**System API:** This is a system API.
-
 ## processedStreamInfo
 
 ```TypeScript
 processedStreamInfo?: AudioStreamInfo
 ```
 
-Stream information that describes the processed audio stream.
+描述处理后的音频流的流信息。
 
-**Type:** AudioStreamInfo
+**Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 24
 

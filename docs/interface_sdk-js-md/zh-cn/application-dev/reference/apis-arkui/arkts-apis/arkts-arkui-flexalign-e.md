@@ -96,7 +96,7 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 SpaceAround
 ```
 
-Elastic elements are evenly distributed in the direction of the Flex principal axis,with the same distance between adjacent elements. Half the distance between adjacent elements as the distance between the first element and the distance between the last element and the end of the row.
+Elastic elements are evenly distributed in the direction of the Flex principal axis, with the same distance between adjacent elements. Half the distance between adjacent elements as the distance between the first element and the distance between the last element and the end of the row.
 
 **起始版本：** 11
 

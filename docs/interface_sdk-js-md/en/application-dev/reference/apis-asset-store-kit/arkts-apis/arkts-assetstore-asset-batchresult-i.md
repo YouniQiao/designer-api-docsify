@@ -1,6 +1,6 @@
 # BatchResult
 
-Result object containing batch operation,including \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+[batchAdd](arkts-assetstore-asset-batchadd-f.md#batchadd)、[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchupdate)和[batchRemove](arkts-assetstore-asset-batchremove-f.md#batchremove)批量操作的结果。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Result object containing batch operation,including \_\_\_JSDOC\_LINK\_DESC\_USD\
 
 **System capability:** SystemCapability.Security.Asset
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## failedCount
 
 ```TypeScript
 failedCount: number
 ```
 
-Failed count of the batch operation, 0 means all success.
+批量操作的失败数量，0表示全部成功。
 
 **Type:** number
 
@@ -34,7 +40,7 @@ Failed count of the batch operation, 0 means all success.
 failedErrorInfos: Array<BatchErrInfo>
 ```
 
-An array of error details for assets that failed in the batch operation,including \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ items, which is an empty array if all succeed.
+批量操作中失败的关键资产的错误信息数组，全部成功时为空数组。
 
 **Type:** Array&lt;BatchErrInfo&gt;
 

@@ -1,6 +1,6 @@
 # HashSet
 
-HashSet is implemented based on HashMap. In HashSet, only the value object is processed.
+HashSet是一种非线性容器，用于存储不重复的元素集合，支持高效的元素增删和存在性判断。HashSet基于HashMap实现，仅操作元素的值对象，不涉及键的概念。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ HashSet is implemented based on HashMap. In HashSet, only the value object is pr
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { HashSet } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
 $_iterator(): IterableIterator<T>
 ```
 
-returns an iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，迭代器的每一项为HashSet中的元素。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | an iterator for the HashSet |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器。 |
 
 ## [Symbol.iterator]
 
@@ -40,7 +46,10 @@ returns an iterator.Each item of the iterator is a Javascript Object
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-returns an iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，迭代器的每一项为HashSet中的元素。  
+> **说明：**
+> 
+> 不建议在Symbol.iterator中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **Since:** 8
 
@@ -56,15 +65,15 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -106,7 +115,7 @@ for(let i = 0;i < 10;i++) {
 add(value: T): boolean
 ```
 
-Adds elements to this HashSet.
+向HashSet添加元素。成功添加后HashSet的length增加1；若待添加元素已存在则不会重复添加，返回false且length不变。
 
 **Since:** 8
 
@@ -122,21 +131,21 @@ Adds elements to this HashSet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | Target element. |
+| value | T | Yes | 要添加的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
+| boolean | 成功添加元素返回true，若元素已存在则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| 10200011 | The add method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -150,7 +159,7 @@ console.info("result:", result);  // result: true
 clear(): void
 ```
 
-Clears this HashSet and sets its length to **0**.
+清除HashSet中的所有元素，并将length置为0。
 
 **Since:** 8
 
@@ -166,9 +175,9 @@ Clears this HashSet and sets its length to **0**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -185,7 +194,7 @@ console.info("result:", result);  // result: true
 constructor()
 ```
 
-A constructor used to create a **HashSet** instance.
+HashSet的构造函数，用于创建一个空的HashSet实例。
 
 **Since:** 8
 
@@ -201,9 +210,9 @@ A constructor used to create a **HashSet** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The HashSet's constructor cannot be directly invoked. |
+| 10200012 | The HashSet's constructor cannot be directly invoked. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<number>();
@@ -215,7 +224,10 @@ let hashSet = new HashSet<number>();
 entries(): IterableIterator<[T, T]>
 ```
 
-Returns an iterator that contains all the elements in this HashSet.
+返回包含此HashSet中所有元素的新迭代器对象，每个元素以[value, value]形式返回。  
+> **说明：**
+> 
+> 不建议在entries迭代过程中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **Since:** 8
 
@@ -231,15 +243,15 @@ Returns an iterator that contains all the elements in this HashSet.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[T, T]&gt; | Iterator obtained. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| 10200011 | The entries method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -275,7 +287,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void
 ```
 
-Uses a callback to traverse each element.
+在遍历过程中对每个元素调用一次回调函数。不建议在forEach回调中使用add、remove方法修改HashSet，因其可能导致迭代过程中的状态异常。
 
 **Since:** 8
 
@@ -291,16 +303,16 @@ Uses a callback to traverse each element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: HashSet&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the HashSet. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| callbackFn | (value?: T, key?: T, set?: HashSet&lt;T&gt;) =&gt; void | Yes | 回调函数，在遍历过程中对每个元素调用一次。回调参数包括value、key和set，详见callbackFn的参数说明。 |
+| thisArg | Object | No | callbackFn被调用时用作this值。当需要改变回调函数内this指向时传入此参数，不传入时默认值为当前实例对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -330,7 +342,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: HashSetCbFn<T>): void
 ```
 
-Iterates over all elements in the HashSet and executes a callback function for each element.
+遍历HashSet中的所有元素，并对每个元素执行回调函数。
 
 **Since:** 23
 
@@ -346,7 +358,7 @@ Iterates over all elements in the HashSet and executes a callback function for e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | A callback function to execute for each element. |
+| callbackFn | [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md)&lt;T&gt; | Yes | 对每个元素执行的回调函数。 |
 
 ## has
 
@@ -354,7 +366,7 @@ Iterates over all elements in the HashSet and executes a callback function for e
 has(value: T): boolean
 ```
 
-Checks whether this HashSet has the specified element.
+判断HashSet是否包含指定元素，基于哈希值进行查找，具有O(1)的时间复杂度。
 
 **Since:** 8
 
@@ -370,21 +382,21 @@ Checks whether this HashSet has the specified element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | Target element. |
+| value | T | Yes | 指定要查找的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the specified element is contained; otherwise, **false** is returned. |
+| boolean | 包含指定元素返回true，不包含指定元素返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| 10200011 | The has method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -399,7 +411,7 @@ console.info("result:", result);  // result: true
 isEmpty(): boolean
 ```
 
-Checks whether this HashSet is empty (contains no element).
+判断HashSet是否为空。
 
 **Since:** 8
 
@@ -415,15 +427,15 @@ Checks whether this HashSet is empty (contains no element).
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the HashSet is empty; otherwise, **false** is returned. |
+| boolean | 为空返回true，不为空返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 const hashSet = new HashSet<number>();
@@ -437,7 +449,7 @@ console.info("result:", result);  // result: true
 remove(value: T): boolean
 ```
 
-Removes an element from this HashSet.
+从HashSet中删除指定的元素。成功删除后HashSet的length减少1；若指定元素不存在则集合不变，返回false。
 
 **Since:** 8
 
@@ -453,21 +465,21 @@ Removes an element from this HashSet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | Target element. |
+| value | T | Yes | 指定要删除的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
+| boolean | 成功删除指定元素返回true，若指定元素不存在则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -483,7 +495,10 @@ console.info("result:", result);  // result: true
 values(): IterableIterator<T>
 ```
 
-Returns an iterator that contains all the values in this HashSet.
+返回包含此HashSet中所有值的新迭代器对象。  
+> **说明：**
+> 
+> 不建议在values迭代过程中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
 **Since:** 8
 
@@ -499,15 +514,15 @@ Returns an iterator that contains all the values in this HashSet.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Iterator obtained. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含此HashSet中所有值的迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| 10200011 | The values method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -527,7 +542,7 @@ for (let value of values) {
 length: number
 ```
 
-Number of elements in a HashSet.
+HashSet的元素个数。
 
 **Type:** number
 

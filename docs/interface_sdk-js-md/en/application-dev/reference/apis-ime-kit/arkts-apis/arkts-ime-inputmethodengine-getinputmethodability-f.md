@@ -1,14 +1,20 @@
 # getInputMethodAbility
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## getInputMethodAbility
 
 ```TypeScript
 function getInputMethodAbility(): InputMethodAbility
 ```
 
-Obtains an [InputMethodAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance for the input method. This API can be called only by an input method.
+获取输入法应用客户端实例[InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)（输入法能力对象），仅支持输入法应用调用。
 
-The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/destroy an input method panel, and the like.
+输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件、创建/销毁输入法面板等。
 
 **Since:** 9
 
@@ -22,9 +28,9 @@ The input method can use the obtained instance to subscribe to a soft keyboard d
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | InputMethodAbility** instance. |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | 输入法应用客户端。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let InputMethodAbility: inputMethodEngine.InputMethodAbility = inputMethodEngine.getInputMethodAbility();
@@ -37,7 +43,7 @@ let InputMethodAbility: inputMethodEngine.InputMethodAbility = inputMethodEngine
 function getInputMethodAbility(): InputMethodAbility | null
 ```
 
-Get InputMethodAbility object to subscribe events about IME.
+获取输入法应用客户端实例[InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)（输入法能力对象），仅支持输入法应用调用。
 
 **Since:** 23
 
@@ -51,5 +57,5 @@ Get InputMethodAbility object to subscribe events about IME.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the object of the InputMethodAbility. |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | 输入法应用客户端。 |
 

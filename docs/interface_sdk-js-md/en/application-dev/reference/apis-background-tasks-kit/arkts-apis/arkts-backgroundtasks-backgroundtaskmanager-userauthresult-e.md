@@ -1,6 +1,6 @@
 # UserAuthResult
 
-Represents the user authorization result.
+用户授权结果。
 
 **Since:** 22
 
@@ -16,8 +16,7 @@ Represents the user authorization result.
 NOT_SUPPORTED = 0
 ```
 
-The authorization is not supported. For example, if the main type of the requested continuous task is not  
-**MODE\_SPECIAL\_SCENARIO\_PROCESSING**, continuous task running in the background is not supported.
+不支持。例如：申请的长时任务主类型非MODE_SPECIAL_SCENARIO_PROCESSING时，不支持申请用户授权是否能在后台长时间运行。
 
 **Since:** 22
 
@@ -33,7 +32,7 @@ The authorization is not supported. For example, if the main type of the request
 NOT_DETERMINED = 1
 ```
 
-No user operation.
+用户未操作。
 
 **Since:** 22
 
@@ -49,7 +48,7 @@ No user operation.
 DENIED = 2
 ```
 
-The authorization is denied.
+拒绝。
 
 **Since:** 22
 
@@ -65,9 +64,9 @@ The authorization is denied.
 GRANTED_ONCE = 3
 ```
 
-The authorization is granted this time.
+本次允许。
 
-Note: The authorization record will be cleared when the application exits.
+**说明：** 在应用退出时该授权记录会被清除
 
 **Since:** 22
 
@@ -83,17 +82,17 @@ Note: The authorization record will be cleared when the application exits.
 GRANTED_ALWAYS = 4
 ```
 
-The authorization is granted always.
+始终允许。
 
-**NOTE**
+**说明：**
 
-When the following common events are received, the related authorization records will be cleared:
+当接收到以下公共事件时，相关授权记录将被清除：
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_.
+[COMMON_EVENT_PACKAGE_ADDED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_added)、  
+[COMMON_EVENT_PACKAGE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_removed)、  
+[COMMON_EVENT_BUNDLE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_bundle_removed)、  
+[COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_fully_removed)、  
+[COMMON_EVENT_PACKAGE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_changed)。
 
 **Since:** 22
 

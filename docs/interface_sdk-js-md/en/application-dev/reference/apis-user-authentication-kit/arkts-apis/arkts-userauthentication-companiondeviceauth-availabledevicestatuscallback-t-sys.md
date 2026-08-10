@@ -4,7 +4,7 @@
 type AvailableDeviceStatusCallback = (deviceStatusList: DeviceStatus[]) => void
 ```
 
-Defines the callback triggered for receiving notifications of available device status changes. When the list of available devices changes (for example, a new device goes online or a device goes offline), the system notifies the application through this callback.
+回调函数，用于接收可添加的设备列表变化通知。当可添加的伴随设备列表发生变化（如新设备上线、设备离线等）时，系统会通过此回调通知应用。
 
 **Since:** 23
 
@@ -22,5 +22,5 @@ Defines the callback triggered for receiving notifications of available device s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceStatusList | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Device status list. It contains the status information about all devices that can be added as companion devices. The application can filter online devices based on the **isOnline** field and determine the service scope supported by the device based on the **supportedBusinessIds** field.  |
+| deviceStatusList | [DeviceStatus](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md)[] | Yes | 设备状态列表。包含当前可添加为伴随设备的所有设备状态信息。应用可根据isOnline字段筛选在线设备，根据 supportedBusinessIds字段判断设备支持的业务范围。 |
 

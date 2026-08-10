@@ -1,5 +1,11 @@
 # createHfpHfProfile
 
+## Modules to Import
+
+```TypeScript
+import { hfp } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createHfpHfProfile
 
 ```TypeScript
@@ -22,11 +28,11 @@ create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile).
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the instance of profile. |
+| [HandsFreeHfProfile](arkts-connectivity-hfp-handsfreehfprofile-i-sys.md) | Returns the instance of profile. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 

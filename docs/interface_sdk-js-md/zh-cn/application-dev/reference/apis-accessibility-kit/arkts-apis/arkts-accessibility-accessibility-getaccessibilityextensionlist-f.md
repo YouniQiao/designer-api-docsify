@@ -1,5 +1,11 @@
 # getAccessibilityExtensionList
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## getAccessibilityExtensionList
 
 ```TypeScript
@@ -24,8 +30,8 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的类型。 |
-| stateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的状态。 |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
 
 **返回值：**
 
@@ -37,9 +43,9 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 查询所有已安装的辅助应用。
 
@@ -108,19 +114,19 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的类型。 |
-| stateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的状态。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | 是 | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信 息列表；否则为错误对象。 |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | 是 | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信 息列表；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
-查询所有已安装的辅助应用ArkTS-Dyn示例。
+查询所有已安装的辅助应用。
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -129,13 +135,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let abilityType: accessibility.AbilityType = 'all'; // 辅助应用类型为所有类型。
 let abilityState: accessibility.AbilityState = 'install'; // 辅助应用状态为已安装。
 
-  accessibility.getAccessibilityExtensionList(abilityType, abilityState, (err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
-    if (err) {
-      console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
-  });
+accessibility.getAccessibilityExtensionList(abilityType, abilityState, (err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
+  if (err) {
+    console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
+});
 
 // 例如：系统内安装一个包名为com.example.myaccessibilityapp的辅助应用。
 // 日志打印结果为：
@@ -148,25 +154,7 @@ let abilityState: accessibility.AbilityState = 'install'; // 辅助应用状态�
 // "requestFocusForAccessibilityNotInterrupt","scrolling","pageActive"],"targetBundleNames":[],"needHide":false}}]
 ```
 
-查询所有已安装的辅助应用ArkTS-Sta示例。
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityType: accessibility.AbilityType = 'all'; // 辅助应用类型为所有类型。
-let abilityState: accessibility.AbilityState = 'install'; // 辅助应用状态为已安装。
-
-accessibility.getAccessibilityExtensionList(abilityType, abilityState,(err: BusinessError | null, data: accessibility.AccessibilityAbilityInfo[] | undefined) => {
-  if (err?.code) {
-    console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
-});
-```
-
-查询所有已启用的具有语音反馈的辅助应用ArkTS-Dyn示例。
+查询所有已启用的具有语音反馈的辅助应用。
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -175,27 +163,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let abilityType: accessibility.AbilityType = 'spoken'; // 辅助应用类型为具有语音反馈类型。
 let abilityState: accessibility.AbilityState = 'enable'; // 辅助应用状态为已启用。
 
-accessibility.getAccessibilityExtensionList(abilityType, abilityState,(err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
+accessibility.getAccessibilityExtensionList(abilityType, abilityState, (err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
   if (err) {
-    console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
-});
-```
-
-查询所有已启用的具有语音反馈的辅助应用ArkTS-Sta示例。
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityType: accessibility.AbilityType = 'spoken'; // 辅助应用类型为具有语音反馈类型。
-let abilityState: accessibility.AbilityState = 'enable'; // 辅助应用状态为已启用。
-
-accessibility.getAccessibilityExtensionList(abilityType, abilityState,(err: BusinessError | null, data: accessibility.AccessibilityAbilityInfo[] | undefined) => {
-  if (err?.code) {
-    console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);

@@ -1,5 +1,11 @@
 # stopDiscoverDevices
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## stopDiscoverDevices
 
 ```TypeScript
@@ -28,15 +34,15 @@ Stops discovering Wi-Fi P2P devices.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	wifi.stopDiscoverDevices();	
+  wifi.stopDiscoverDevices();  
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

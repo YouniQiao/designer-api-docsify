@@ -4,13 +4,14 @@
 
 用于效率型应用，如备忘录、电子邮件、图库中的侧边导航栏。
 
-该组件基于\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_实现，相较于  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制树视图的数据和状态，实现更高效的用户界面刷新。
-    **说明：**  
-    
-    - 如果TreeViewV2设置[通用属性]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_和[通用事件]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_，编译工具链  
-    会额外生成节点\_\_Common\_\_，并将通用属性或通用事件挂载在\_\_Common\_\_上，而不是直接应用到TreeViewV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议TreeViewV2设置通用  
-    属性和通用事件。
+该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于  
+[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制树视图的数据和状态，实现更高效的用户界面刷新。
+
+> **说明：**
+> 
+> - 如果TreeViewV2设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链
+> 会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到TreeViewV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议TreeViewV2设置通用
+> 属性和通用事件。
 
 **起始版本：** 26.0.0
 
@@ -21,6 +22,12 @@
 <!--Device-unnamed-export declare struct TreeViewV2--><!--Device-unnamed-export declare struct TreeViewV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
 
 ## build
 
@@ -50,7 +57,7 @@ treeControllerV2: TreeControllerV2
 
 树视图节点控制器。
 
-**类型：** TreeControllerV2
+**类型：** [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
 
 **起始版本：** 26.0.0
 

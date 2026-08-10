@@ -4,7 +4,7 @@
 declare type OnSwiperAnimationEndCallback = (index: number, extraInfo: SwiperAnimationEvent) => void
 ```
 
-Defines the callback triggered when the page transition animation ends.
+切换动画结束时触发的回调。
 
 **Since:** 18
 
@@ -24,6 +24,6 @@ Defines the callback triggered when the page transition animation ends.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the currently displayed element. If there are multiple columns, **index** indicates the index of the leftmost component.  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **Swiper** along the main axis.  |
+| index | number | Yes | 当前显示元素的索引。多列Swiper时，index为最左侧组件的索引。 |
+| extraInfo | [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Yes | 动画相关信息，只返回主轴方向上当前显示元素相对于Swiper起始位置的位移。 |
 

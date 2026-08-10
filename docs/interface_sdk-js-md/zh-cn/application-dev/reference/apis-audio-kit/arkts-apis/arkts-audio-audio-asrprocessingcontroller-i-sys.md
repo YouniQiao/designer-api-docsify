@@ -10,6 +10,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## getAsrAecMode
 
 ```TypeScript
@@ -32,16 +38,16 @@ Get ASR AEC mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ASR AEC Mode. |
+| [AsrAecMode](arkts-audio-audio-asraecmode-e-sys.md) | ASR AEC Mode. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let mode = asrProcessingController.getAsrAecMode();
@@ -69,16 +75,16 @@ Get ASR noise suppression mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ASR noise suppression mode. |
+| [AsrNoiseSuppressionMode](arkts-audio-audio-asrnoisesuppressionmode-e-sys.md) | ASR noise suppression mode. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let mode = asrProcessingController.getAsrNoiseSuppressionMode();
@@ -106,16 +112,16 @@ Get ASR whisper detection mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ASR whisper detection mode. |
+| [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | ASR whisper detection mode. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let mode = asrProcessingController.getAsrWhisperDetectionMode();
@@ -149,10 +155,10 @@ Query whether user is whispering.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let flag = asrProcessingController.isWhispering();
@@ -180,7 +186,7 @@ Set ASR AEC mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ASR AEC Mode. |
+| mode | [AsrAecMode](arkts-audio-audio-asraecmode-e-sys.md) | 是 | ASR AEC Mode. |
 
 **返回值：**
 
@@ -192,12 +198,12 @@ Set ASR AEC mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let flag = asrProcessingController.setAsrAecMode(audio.AsrAecMode.BYPASS);
@@ -225,7 +231,7 @@ Set ASR noise suppression mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ASR noise suppression mode. |
+| mode | [AsrNoiseSuppressionMode](arkts-audio-audio-asrnoisesuppressionmode-e-sys.md) | 是 | ASR noise suppression mode. |
 
 **返回值：**
 
@@ -237,12 +243,12 @@ Set ASR noise suppression mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let flag = asrProcessingController.setAsrNoiseSuppressionMode(audio.AsrNoiseSuppressionMode.BYPASS);
@@ -270,7 +276,7 @@ Set ASR voice control mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ASR voice control mode. |
+| mode | [AsrVoiceControlMode](arkts-audio-audio-asrvoicecontrolmode-e-sys.md) | 是 | ASR voice control mode. |
 | enable | boolean | 是 | Indicates whether to switch on/off this mode. |
 
 **返回值：**
@@ -283,12 +289,12 @@ Set ASR voice control mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let flag = asrProcessingController.setAsrVoiceControlMode(audio.AsrVoiceControlMode.AUDIO_2_VOICE_TX, true);
@@ -316,7 +322,7 @@ Set ASR voice mute mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ASR voice mute mode. |
+| mode | [AsrVoiceMuteMode](arkts-audio-audio-asrvoicemutemode-e-sys.md) | 是 | ASR voice mute mode. |
 | enable | boolean | 是 | Indicates whether to switch on/off this mode. |
 
 **返回值：**
@@ -329,12 +335,12 @@ Set ASR voice mute mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let flag = asrProcessingController.setAsrVoiceMuteMode(audio.AsrVoiceMuteMode.OUTPUT_MUTE, true);
@@ -362,7 +368,7 @@ Set ASR whisper detection mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ASR whisper detection mode. |
+| mode | [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | 是 | ASR whisper detection mode. |
 
 **返回值：**
 
@@ -374,12 +380,12 @@ Set ASR whisper detection mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
+| 6800104 | Operation not allowed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let flag = asrProcessingController.setAsrWhisperDetectionMode(audio.AsrWhisperDetectionMode.BYPASS);

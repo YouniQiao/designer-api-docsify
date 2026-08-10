@@ -1,10 +1,10 @@
 # PopupCommonOptions
 
-配置弹出气泡的参数。使用[UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_中的  
-[getPromptAction()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_方法获取到  
-[PromptAction]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_对象，再通过该对象调用  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_和  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_时传入的options参数。
+配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md)中的  
+[getPromptAction()](@ohos.arkui.UIContext#getPromptAction)方法获取到  
+[PromptAction](@ohos.arkui.UIContext#PromptAction)对象，再通过该对象调用  
+[openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18)和  
+[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)时传入的options参数。
 
 **起始版本：** 18
 
@@ -24,7 +24,7 @@ onStateChange?: PopupStateChangeCallback
 
 **说明：**
 
-不支持通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_进行更新。
+不支持通过[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
 **起始版本：** 18
 
@@ -46,7 +46,7 @@ arrowHeight?: Dimension
 
 The height of the arrow.
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 8.0_vp.
 
@@ -82,7 +82,7 @@ Popup箭头在气泡处的偏移。
 
 1. 没设置arrowOffset的情况下，气泡箭头与四个角的距离不能小于圆角半径。2. 只有arrowPointPosition不设置或者设置为null、undefined时，arrowOffset属性才生效。3. 不支持设置百分比。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 18
 
@@ -104,7 +104,7 @@ arrowPointPosition?: ArrowPointPosition
 
 The position of the sharp corner of popup.
 
-**类型：** ArrowPointPosition
+**类型：** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
 
 **起始版本：** 18
 
@@ -126,7 +126,7 @@ arrowWidth?: Dimension
 
 The width of the arrow.
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 16.0_vp.
 
@@ -178,9 +178,9 @@ avoidTarget?: AvoidanceMode
 
 设置Popup避让时是否覆盖指向组件。
 
-默认值：AvoidanceMode.COVER\_TARGET
+默认值：AvoidanceMode.COVER_TARGET
 
-**类型：** AvoidanceMode
+**类型：** [AvoidanceMode](arkts-arkui-avoidancemode-e.md)
 
 **默认值：** AvoidanceMode.COVER_TARGET
 
@@ -204,7 +204,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines popup background blur Style
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -228,7 +228,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 定义Popup的背景模糊样式选项。
 
-**类型：** BackgroundBlurStyleOptions
+**类型：** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -250,7 +250,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 定义Popup的背景效果选项。
 
-**类型：** BackgroundEffectOptions
+**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -276,7 +276,7 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 1. borderLinearGradient不设置或者设置为null、undefined时，内描边没有线性渐变效果。2. borderLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
 
-**类型：** PopupBorderLinearGradient
+**类型：** [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
 
 **起始版本：** 20
 
@@ -298,7 +298,7 @@ borderWidth?: Dimension
 
 设置Popup组件内描边的宽度。
 
-默认值：1
+默认值：1 
 
 单位：vp
 
@@ -306,7 +306,7 @@ borderWidth?: Dimension
 
 1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件内描边的情况下，该接口需要和borderLinearGradient配合使用。3. 当设置双描边时，建议内描边宽度不超过10vp。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 20
 
@@ -328,13 +328,13 @@ colorMode?: AnchoredColorMode
 
 设置气泡深浅色模式，默认跟随绑定组件深浅色模式。
 
-默认值：AnchoredColorMode.FOLLOW\_TARGET
+默认值：AnchoredColorMode.FOLLOW_TARGET
 
 **说明：**
 
-1. 仅当绑定组件使用了\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW\_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
+1. 仅当绑定组件使用了[WithTheme](../../../reference/apis-arkui/arkui-ts/ts-container-with-theme.md#接口)标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
 
-**类型：** AnchoredColorMode
+**类型：** [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md)
 
 **默认值：** AnchoredColorMode.FOLLOW_TARGET
 
@@ -422,7 +422,7 @@ true：气泡可以获焦；false：气泡不会获焦。
 
 **说明：**
 
-不支持通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_进行更新。
+不支持通过[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
 **类型：** boolean
 
@@ -478,7 +478,7 @@ levelMode?: LevelMode
 
 默认值：LevelMode.OVERLAY
 
-**类型：** LevelMode
+**类型：** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **起始版本：** 26.0.0
 
@@ -530,7 +530,7 @@ offset?: Position
 
 单位：vp
 
-**类型：** Position
+**类型：** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
 **默认值：** { x: 0, y: 0 }
 
@@ -554,11 +554,11 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 设置Popup交互式关闭拦截开关及拦截回调函数，默认值为true，Popup响应点击、侧滑（左滑/右滑）、三键back。
 
-1. 当为boolean类型时，如果设置为false，则不响应点击、侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC退出事件，仅当设置“气泡显示状态”参数show值为false时才退出；如果设置为true，则正常响应退出事件；2. 如果设置为函数类型，则拦截退出事件且执行回调函数。侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC在回调函数中返回的reason为PRESS\_BACK，点击为TOUCH\_OUTSIDE。
+1. 当为boolean类型时，如果设置为false，则不响应点击、侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC退出事件，仅当设置“气泡显示状态”参数show值为false时才退出；如果设置为true，则正常响应退出事件；2. 如果设置为函数类型，则拦截退出事件且执行回调函数。侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC在回调函数中返回的reason为PRESS_BACK，点击为TOUCH_OUTSIDE。
 
 **说明：**
 
-1. 在onWillDismiss回调中，不能再做onWillDismiss拦截。2. 不支持通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_进行更新。
+1. 在onWillDismiss回调中，不能再做onWillDismiss拦截。2. 不支持通过[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
 **类型：** boolean \| Callback&lt;DismissPopupAction&gt;
 
@@ -586,7 +586,7 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 1. outlineLinearGradient不设置或者设置为null、undefined时，外描边没有线性渐变效果。2. outlineLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
 
-**类型：** PopupBorderLinearGradient
+**类型：** [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
 
 **起始版本：** 20
 
@@ -608,7 +608,7 @@ outlineWidth?: Dimension
 
 设置Popup组件外描边的宽度。
 
-默认值：1
+默认值：1 
 
 单位：vp
 
@@ -616,7 +616,7 @@ outlineWidth?: Dimension
 
 1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件外描边的情况下，该接口需要和outlineLinearGradient配合使用。3. 当设置双描边时，建议外描边宽度不超过10vp。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 20
 
@@ -640,7 +640,7 @@ placement?: Placement
 
 默认值：Placement.Bottom
 
-**类型：** Placement
+**类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **默认值：** Placement.Bottom
 
@@ -662,10 +662,10 @@ placement?: Placement
 popupColor?: ResourceColor
 ```
 
-气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色[TRANSPARENT]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_加模糊背景填充效果  
-[COMPONENT\_ULTRA\_THICK]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色[TRANSPARENT](../arkts-apis/arkts-arkui-enums-color-e.md/arkts-arkui-enums-color-e.md)加模糊背景填充效果  
+[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
 
@@ -687,7 +687,7 @@ radius?: Dimension
 
 The round corners of the popup.
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 20.0_vp.
 
@@ -711,7 +711,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 The style of popup Shadow.
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
 **默认值：** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -741,7 +741,7 @@ true：气泡会显示在创建的子窗里；false：气泡会显示在对应�
 
 **说明：**
 
-不支持通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_进行更新。
+不支持通过[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
 **类型：** boolean
 
@@ -767,15 +767,15 @@ systemMaterial?: SystemUiMaterial
 
 设置组件的系统材质。
 
-默认值：undefined，会清除由该接口设置的材质效果。
+默认值：undefined，会清除由该接口设置的材质效果。 
 
 **说明：**
 
-不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、边框颜色  
-[borderColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、边框宽度[borderWidth]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、阴影  
-[shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_，不建议与上述接口一起使用。
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 
@@ -801,7 +801,7 @@ targetSpace?: Length
 
 单位：vp
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 18
 
@@ -827,9 +827,9 @@ transition?: TransitionEffect
 
 1. 如果不设置，则使用默认的显示/退出动效。2. 显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。3. 退出动效中按back键，不会打断退出动效，退出动效继续执行，back键不被响应。
 
-4.不支持通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_进行更新。
+4.不支持通过[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
-**类型：** TransitionEffect
+**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 18
 
@@ -851,7 +851,7 @@ width?: Dimension
 
 Set the width of the popup.
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 18
 

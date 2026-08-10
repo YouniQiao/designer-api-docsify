@@ -1,6 +1,6 @@
 # WaterfallDisplayAreaRects
 
-Describes the curved area on a waterfall display.
+瀑布屏曲面部分显示区域。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Describes the curved area on a waterfall display.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## bottom
 
 ```TypeScript
 readonly bottom: Rect
 ```
 
-Rectangle of the curved area at the bottom of the waterfall display.
+瀑布曲面区域的底部矩形区域。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Rectangle of the curved area at the bottom of the waterfall display.
 readonly left: Rect
 ```
 
-Rectangle of the curved area on the left of the waterfall display.
+瀑布曲面区域的左侧矩形区域。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 9
 
@@ -56,9 +62,9 @@ Rectangle of the curved area on the left of the waterfall display.
 readonly right: Rect
 ```
 
-Rectangle of the curved area on the right of the waterfall display.
+瀑布曲面区域的右侧矩形区域。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 9
 
@@ -76,9 +82,9 @@ Rectangle of the curved area on the right of the waterfall display.
 readonly top: Rect
 ```
 
-Rectangle of the curved area on the top of the waterfall display.
+瀑布曲面区域的顶部矩形区域。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 9
 

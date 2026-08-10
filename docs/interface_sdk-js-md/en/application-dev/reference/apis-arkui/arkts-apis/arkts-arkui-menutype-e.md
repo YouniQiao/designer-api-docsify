@@ -1,6 +1,6 @@
 # MenuType
 
-Enumerates the menu types.
+菜单类型。
 
 **Since:** 13
 
@@ -16,7 +16,7 @@ Enumerates the menu types.
 SELECTION_MENU = 0
 ```
 
-Text selection menu.
+文本选择菜单。
 
 **Since:** 13
 
@@ -36,7 +36,7 @@ Text selection menu.
 PREVIEW_MENU = 1
 ```
 
-Preview menu.
+图片预览菜单。
 
 **Since:** 13
 

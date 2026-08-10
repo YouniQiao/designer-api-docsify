@@ -1,7 +1,6 @@
 # Want
 
-Want is a carrier for information transfer between objects (application components).A typical scenario is when a UIAbility (for example, UIAbility A) needs to launch another UIAbility (for example,UIAbility B) and pass some data along. In this case, a Want can be used as the medium. For example, in the **want**  
-parameter of the **startAbility** API, you can specify the target ability using the **abilityName** field or include additional data via the **parameters** field.
+Want是对象间信息传递的载体，可以用于应用组件间的信息传递。其典型应用场景之一是，当UIAbilityA启动UIAbilityB、并需要传入一些数据时，可使用Want作为载体。例如在startAbility接口的入参want中，可以通过abilityName指定启动的目标Ability，也可以通过parameters等字段携带其他数据。
 
 **Since:** 9
 
@@ -11,13 +10,19 @@ parameter of the **startAbility** API, you can specify the target ability using 
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
+## Modules to Import
+
+```TypeScript
+import { Want } from 'kits/@kit.AbilityKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName?: string
 ```
 
-Ability name of the application. It represents the ability name of the target application in the application launch scenario. If both **bundleName** and **abilityName** are specified in a Want object, the Want object can match a specific ability. The value of **abilityName** must be unique in an application.
+应用的Ability组件名。在应用启动场景中表示被拉起方的Ability组件名。如果在Want中该字段同时指定了BundleName和AbilityName，则Want可以直接匹配到指定的Ability。AbilityName需要在一个应用的范围内保证唯一。
 
 **Type:** string
 
@@ -37,8 +42,8 @@ Ability name of the application. It represents the ability name of the target ap
 action?: string
 ```
 
-Action to take, such as viewing and sharing application details. In implicit Want, you can define this field and use it together with **uri** or **parameters** to specify the operation to be performed on the data. For details about the definition and matching rules of implicit Want, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示要执行的通用操作（如：查看、分享、应用详情）。在隐式Want中，开发者可以定义该字段，配合uri或parameters来表示对数据执行的操作。隐式Want定义及匹配规则请参见  
+[显式Want与隐式Want匹配规则](../../../application-models/explicit-implicit-want-mappings.md)。
 
 **Type:** string
 
@@ -58,7 +63,7 @@ Action to take, such as viewing and sharing application details. In implicit Wan
 bundleName?: string
 ```
 
-Bundle name of the application. It represents the bundle name of the target application in the application launch scenario.
+应用包名。在应用启动场景中表示被拉起方的应用包名。
 
 **Type:** string
 
@@ -78,7 +83,7 @@ Bundle name of the application. It represents the bundle name of the target appl
 deviceId?: string
 ```
 
-Device ID. It indicates the device ID of the target application in the application launch scenario. If not specified, it defaults to the current device.
+设备ID。在应用启动场景中表示被拉起方的设备ID，如果未设置该字段，则表示指定当前设备。
 
 **Type:** string
 
@@ -98,8 +103,7 @@ Device ID. It indicates the device ID of the target application in the applicati
 entities?: Array<string>
 ```
 
-Additional category information (such as browser and video player) of the ability. It is a supplement to the  
-**action** field for implicit Want. and is used to filter ability types.
+表示目标Ability额外的类别信息（如：浏览器、视频播放器）。在隐式Want中是对action字段的补充。在隐式Want中，开发者可以定义该字段，来过滤匹配Ability类型。
 
 **Type:** Array&lt;string&gt;
 
@@ -119,11 +123,11 @@ Additional category information (such as browser and video player) of the abilit
 readonly fds?: Record<string, int>
 ```
 
-File descriptor (FD). The FD written by the launcher in the application launch scenario is set to this parameter.
+表示文件描述符，在启动场景中拉起方写入的FD，会设置到该参数中。
 
-This API can be used in atomic services since API version 15.
+从API version 15开始，该接口支持在原子化服务中使用。
 
-**Type:** Record&lt;string, int&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int&gt;
 
 **Since:** 15
 
@@ -141,12 +145,11 @@ This API can be used in atomic services since API version 15.
 flags?: int
 ```
 
-How the Want object will be handled. The value is of the enumeration type  
-[Flags]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. A numeric value should be passed by default.
+表示处理Want的方式。值为枚举类型[Flags](arkts-ability-wantconstant-flags-e.md)，默认传数字。
 
-For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG\_AUTH\_READ\_URI\_PERMISSION**), the receiver is temporarily granted the permission to read the data pointed to by the URI.
+例如取值为0x00000001（即wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION）表示临时授予接收方读取该URI指向的数据的权限。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -164,11 +167,12 @@ For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG\_AUTH\_READ\_
 moduleName?: string
 ```
 
-Module name of the application. It represents the module name of the target application in the application launch scenario.
+应用模块名。在应用启动场景中表示被拉起方的应用模块名。
 
-**NOTE**
+**说明：**
 
-If the ability belongs to a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ module, **moduleName** must be set to the name of the \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ or \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ module that depends on this HAR.
+若待启动的Ability所属的模块为[HAR](../../../quick-start/har-package.md)，则moduleName需为依赖该HAR的  
+[HAP](../../../quick-start/hap-package.md)/[HSP](../../../quick-start/in-app-hsp.md)的moduleName。
 
 **Type:** string
 
@@ -188,45 +192,45 @@ If the ability belongs to a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ module, **moduleN
 parameters?: Record<string, Object>
 ```
 
-List of parameters in the Want object.
+表示WantParams描述。
 
-1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the system automatically changes the values to the actual values during data transfer.
+一、以下Key均由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。
 
-- **ohos.aafwk.param.callerPid**: PID of the caller. The value is a string.  
-- **ohos.aafwk.param.callerBundleName**: bundle name of the caller. The value is a string.  
-- **ohos.aafwk.param.callerAbilityName**: ability name of the caller. The value is a string.  
-- **ohos.aafwk.param.callerNativeName**: process name of the caller when the native method is called. The value is  
-a string.  
-- **ohos.aafwk.param.callerAppId**: appId of the caller. The value is a string.  
-- **ohos.aafwk.param.callerAppIdentifier**: appIdentifier of the caller. The value is a string.  
-- **ohos.aafwk.param.callerToken**: token of the caller. The value is a string.  
-- **ohos.aafwk.param.callerUid**: UID in [BundleInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, that is,  
-the application's UID in the bundle information. The value is a number.  
-- **ohos.param.callerAppCloneIndex**: clone index of the caller. The value is of the numeric type.  
-- **component.startup.newRules**: enabled status of the new control rule. The value is of the Boolean type.  
-- **moduleName**: module name of the caller. The value is a string.  
-- **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of  
-the Boolean type.  
-- **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of  
-[wantConstant.ShowMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+- ohos.aafwk.param.callerPid：表示拉起方的pid，值为字符串类型。  
+- ohos.aafwk.param.callerBundleName：表示拉起方的BundleName，值为字符串类型。  
+- ohos.aafwk.param.callerAbilityName：表示拉起方的AbilityName，值为字符串类型。  
+- ohos.aafwk.param.callerNativeName：表示native调用时拉起方的进程名，值为字符串类型。  
+- ohos.aafwk.param.callerAppId：表示拉起应用的AppId信息，值为字符串类型。  
+- ohos.aafwk.param.callerAppIdentifier：表示拉起应用的AppIdentifier信息，值为字符串类型。  
+- ohos.aafwk.param.callerToken：表示拉起方的token，值为字符串类型。  
+- ohos.aafwk.param.callerUid：表示[BundleInfo](arkts-ability-bundleinfo-i.md)中的uid，应用包里应用程序的uid，值为数  
+值类型。  
+- ohos.param.callerAppCloneIndex：表示拉起方应用的分身索引，值为数值类型。  
+- component.startup.newRules：表示是否启用新的管控规则，值为布尔类型。  
+- moduleName：表示被拉起方的moduleName，值为字符串类型。  
+- ohos.ability.params.abilityRecoveryRestart：表示当前Ability是否发生了故障恢复重启，值为布尔类型。  
+- ohos.extra.param.key.showMode：表示拉起原子化服务的展示模式，值为枚举类型  
+[wantConstant.ShowMode](arkts-ability-wantconstant-showmode-e.md)。
 
-**NOTE**
+**说明：**
 
-In cross-device scenarios, the following fields do not take effect and cannot be used for identity or permission verification: **ohos.aafwk.param.callerPid**, **ohos.aafwk.param.callerToken**, and **ohos.aafwk.param.callerUid**.
+在跨端场景中，以下三个字段不生效，不可用于身份或权限校验：ohos.aafwk.param.callerPid、ohos.aafwk.param.callerToken、ohos.aafwk.param.callerUid。
 
-2. Certain keys are defined by the system, and their values need to be manually assigned. For details about the keys and their values, see [wantConstant.Params]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.
+二、提供了一些由系统定义、开发者按需赋值的Key。具体的key值与对应说明详见  
+[wantConstant.Params](arkts-ability-wantconstant-params-e.md)。
 
-**NOTE**
+三、除了上述情况，应用间还可以相互约定传入的键值对。
 
-For details about the constants of **Params** in **want**, see  
-[wantConstant]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
+**说明：**
 
-Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100KB, transfer data in [WriteRawDataBuffer]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ or  
-[uri]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ mode.
+want的Params操作的常量的具体信息请参考[wantConstant](arkts-ability-wantconstant.md)。
 
-The values of **parameters** must be of the following basic data types: String, Number, Boolean, Object, undefined,and null. Functions in an object cannot be transferred.
+需注意，WantParams支持传输的最大数据量遵循[Want约束限制](#约束限制)。当数据量超过该限制时，请使用  
+[WriteRawDataBuffer](./@ohos.rpc:rpc.writeRawDataBuffer)或[uri](arkts-ability-app-ability-want-want-c.md#uri)的方式进行数据传输。
 
-**Type:** Record&lt;string, Object&gt;
+parameters的Value值仅支持基本数据类型：String、Number、Boolean、Object、undefined和null，不支持传递Object内部的function。
+
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 9
 
@@ -244,8 +248,8 @@ The values of **parameters** must be of the following basic data types: String, 
 type?: string
 ```
 
-MIME type, that is, the type of the file to open, for example, **'text/xml'** and **'image/*'**. For details about the MIME type definition, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示MIME type类型描述，打开文件的类型，主要用于文管打开文件。比如：'text/xml' 、 'image/*'等，MIME定义请参见  
+[Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml?utm_source=ld246.com)。
 
 **Type:** string
 
@@ -265,9 +269,7 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 uri?: string
 ```
 
-URI, which is used with **type** to specify the data type to be processed in the application launch scenario. If  
-**uri** is specified in a Want, the Want will match the specified URI information, including **scheme**,  
-**schemeSpecificPart**, **authority**, and **path**.
+统一资源标识符，一般在应用启动场景中配合type使用，指明待处理的数据类型。如果在Want中指定了uri，则Want将匹配指定的Uri信息，包括`scheme`、`schemeSpecificPart`、`authority`和`path`信息。
 
 **Type:** string
 

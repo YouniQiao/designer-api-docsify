@@ -1,6 +1,6 @@
 # KeyEvent
 
-Defines the key event to inject.
+按键注入描述信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Defines the key event to inject.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## isIntercepted
 
 ```TypeScript
 isIntercepted: boolean
 ```
 
-Whether the key event can be intercepted.
+按键是否可以被拦截。
 
-The value **true** indicates that the key event can be intercepted, and the value **false** indicates the opposite.
+true表示可以被拦截，false表示不可被拦截。
 
 **Type:** boolean
 
@@ -36,9 +42,9 @@ The value **true** indicates that the key event can be intercepted, and the valu
 isPressed: boolean
 ```
 
-Whether the key is pressed.
+按键是否按下。
 
-The value **true** indicates that the key is pressed, and the value **false** indicates that the key is released.
+true表示按键按下，false表示按键抬起。
 
 **Type:** boolean
 
@@ -56,9 +62,9 @@ The value **true** indicates that the key is pressed, and the value **false** in
 keyCode: int
 ```
 
-Key code. Currently, only the **KEYCODE\_BACK** key is supported.
+按键键值。当前仅支持返回键/KEYCODE_BACK键。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -74,9 +80,9 @@ Key code. Currently, only the **KEYCODE\_BACK** key is supported.
 keyDownDuration: int
 ```
 
-Duration of key press, in microseconds (μs).
+按键按下持续时间，单位为微秒（μs）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

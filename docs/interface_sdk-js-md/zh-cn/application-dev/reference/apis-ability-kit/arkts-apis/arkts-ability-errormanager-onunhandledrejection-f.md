@@ -1,5 +1,11 @@
 # onUnhandledRejection
 
+## 导入模块
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onUnhandledRejection
 
 ```TypeScript
@@ -20,11 +26,11 @@ Register unhandled rejection observer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 注册被拒绝promise监听器。 |
+| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | 是 | 注册被拒绝promise监听器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
 

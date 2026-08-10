@@ -1,6 +1,6 @@
 # BundleOption
 
-Describes the **BundleOption** information, that is, the bundle information of an application.
+描述BundleOption信息，即应用的包信息。
 
 **Since:** 7
 
@@ -8,7 +8,7 @@ Describes the **BundleOption** information, that is, the bundle information of a
 
 **Deprecated since:** 9
 
-**Substitutes:** .ohos.notificationManager/notificationManager#BundleOption
+**Substitutes:** [./notification/NotificationCommonDef:BundleOption](arkts-notification-notification-bundleoption-depr-i.md)
 
 <!--Device-notification-export interface BundleOption--><!--Device-notification-export interface BundleOption-End-->
 
@@ -20,7 +20,7 @@ Describes the **BundleOption** information, that is, the bundle information of a
 bundle: string
 ```
 
-Bundle information of the application.
+应用的包信息。
 
 **Type:** string
 
@@ -42,7 +42,7 @@ Bundle information of the application.
 uid?: number
 ```
 
-User ID. The default value is 0.
+用户ID，默认为0。
 
 **Type:** number
 

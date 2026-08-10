@@ -1,6 +1,6 @@
 # TaskBody (System API)
 
-Represents task data.
+任务数据。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Represents task data.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## errorMessages
 
 ```TypeScript
 errorMessages: Array<ErrorMessage>
 ```
 
-Error message.
+错误信息。
 
 **Type:** Array&lt;ErrorMessage&gt;
 
@@ -38,9 +44,9 @@ Error message.
 installMode: int
 ```
 
-Install mode. The value range is [0, 2]. The value **0** indicates the regular upgrade, which is applicable to scenarios where users proactively trigger the upgrade. **1** indicates the upgrade at night, which is applicable to scenarios where automatic upgrade is performed at night. **2** indicates the automatic upgrade, which is applicable to scenarios where the system automatically detects and performs the upgrade. Select a value based on the upgrade policy and user experience requirements. An exception is thrown if the value is out of range.
+安装模式，取值范围[0, 2]。取值原则：0为正常升级，适用于用户主动触发升级的场景；1为夜间升级，适用于设置夜间时段自动升级的场景；2为自动升级，适用于系统自动检测并执行升级的场景。应根据升级策略和用户体验需求选择。超出范围时抛出异常。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Install mode. The value range is [0, 2]. The value **0** indicates the regular u
 progress: int
 ```
 
-Progress, in percentage. The value range is [0, 100]. If the value is out of the range, an exception is thrown.
+进度，单位为%，取值范围[0, 100]，超出范围时抛出异常。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -78,11 +84,9 @@ Progress, in percentage. The value range is [0, 100]. If the value is out of the
 status: UpgradeStatus
 ```
 
-Upgrade status, which indicates the current execution phase of the upgrade task. The value can be a download status (from **WAITING\_DOWNLOAD** to **DOWNLOAD\_FAIL**), installation status (from **WAITING\_INSTALL** to  
-**UPDATING**), effective status (from **WAITING\_APPLY** to **APPLYING**), or the final result (  
-**UPGRADE\_SUCCESS** or **UPGRADE\_FAIL**). This parameter is used for status monitoring, progress display, and exception handling.
+升级状态。用于标识升级任务的当前执行阶段。包含下载状态（WAITING_DOWNLOAD到DOWNLOAD_FAIL）、安装状态（WAITING_INSTALL到UPDATING）、生效状态（WAITING_APPLY到APPLYING）和最终结果（UPGRADE_SUCCESS或UPGRADE_FAIL），用于任务状态监控、进度展示和异常处理等场景。
 
-**Type:** UpgradeStatus
+**Type:** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
 **Since:** 9
 
@@ -100,9 +104,9 @@ Upgrade status, which indicates the current execution phase of the upgrade task.
 subStatus: int
 ```
 
-Sub-status. For details about the value range, see [UpgradeStatus]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+子状态，取值范围参考[UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)状态码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -120,7 +124,7 @@ Sub-status. For details about the value range, see [UpgradeStatus]\_\_\_JSDOC\_L
 versionComponents: Array<VersionComponent>
 ```
 
-Version components.
+版本组件。
 
 **Type:** Array&lt;VersionComponent&gt;
 
@@ -140,9 +144,9 @@ Version components.
 versionDigestInfo: VersionDigestInfo
 ```
 
-Version digest information.
+版本摘要。
 
-**Type:** VersionDigestInfo
+**Type:** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
 **Since:** 9
 

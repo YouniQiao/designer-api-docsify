@@ -10,6 +10,12 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## callback
 
 ArkTS-Dyn:
@@ -39,8 +45,8 @@ Callback function implemented by users, which is used to fill data.buffer - The 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 |  |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 |  |
-| pos | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 否 |  |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 |  |
+| pos | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 |  |
 
 ## fileSize
 
@@ -50,7 +56,7 @@ fileSize: long
 
 Size of the file, -1 means the file size is unknown, in this case,seek and setSpeed can't be executed, loop can't be set, and can't replay.
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 

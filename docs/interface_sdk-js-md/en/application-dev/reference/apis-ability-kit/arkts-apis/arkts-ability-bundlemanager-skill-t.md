@@ -4,7 +4,7 @@
 export type Skill = _Skill.Skill
 ```
 
-Defines the skill information.
+skill信息。
 
 **Since:** 12
 

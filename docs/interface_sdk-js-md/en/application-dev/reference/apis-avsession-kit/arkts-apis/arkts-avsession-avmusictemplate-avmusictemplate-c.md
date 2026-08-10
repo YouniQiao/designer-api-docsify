@@ -1,6 +1,10 @@
 # AVMusicTemplate
 
-AVMusicTemplate interface
+调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取方法。随后，同步数据给模板控制方，以完成后续操作。
+
+> **说明：**
+> 
+> - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **Since:** 23
 
@@ -10,13 +14,19 @@ AVMusicTemplate interface
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## destroy
 
 ```TypeScript
 destroy(): Promise<void>
 ```
 
-Destroy the AVMusicTemplate instance.
+销毁音频模板实例。使用Promise异步回调。
 
 **Since:** 23
 
@@ -32,13 +42,13 @@ Destroy the AVMusicTemplate instance.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function destroy can not work correctly due to limited device capabilities. |
+| 801 | Capability not supported.function destroy can not work correctly due to limited device capabilities. |
 
 ## offClearSearchHistory
 
@@ -46,7 +56,7 @@ Destroy the AVMusicTemplate instance.
 offClearSearchHistory(callback?: ClearSearchHistoryEvent): void
 ```
 
-Unregister clear search history callback.
+注销清除搜索历史的监听。
 
 **Since:** 23
 
@@ -62,46 +72,14 @@ Unregister clear search history callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('clearSearchHistory') event. |
+| callback | [ClearSearchHistoryEvent](arkts-avsession-avmusictemplate-clearsearchhistoryevent-t.md) | No | 清除搜索历史的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offClearSearchHistory can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000012 | AVMusicTemplate error. |
-
-## offCustomCommand
-
-```TypeScript
-offCustomCommand(callback?: CustomCommandEvent): void
-```
-
-Unregister custom command callback.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVMusicTemplate-offCustomCommand(callback?: CustomCommandEvent): void--><!--Device-AVMusicTemplate-offCustomCommand(callback?: CustomCommandEvent): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('sendCustomCommand') event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offCustomCommand can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offClearSearchHistory can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offDownloadMediaEntity
@@ -110,7 +88,7 @@ Unregister custom command callback.
 offDownloadMediaEntity(callback?: DownloadMediaEntityEvent): void
 ```
 
-Unregister download media entity callback.
+注销下载媒体实体事件的监听。
 
 **Since:** 23
 
@@ -126,14 +104,14 @@ Unregister download media entity callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('downloadMediaEntity') event. |
+| callback | [DownloadMediaEntityEvent](arkts-avsession-avmusictemplate-downloadmediaentityevent-t.md) | No | 下载媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offDownloadMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offDownloadMediaEntity can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offExecuteAction
@@ -142,7 +120,7 @@ Unregister download media entity callback.
 offExecuteAction(callback?: ExecuteActionEvent): void
 ```
 
-Unregister execute action callback.
+注销执行操作事件的监听。
 
 **Since:** 23
 
@@ -158,14 +136,14 @@ Unregister execute action callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('executeAction') event. |
+| callback | [ExecuteActionEvent](arkts-avsession-avmusictemplate-executeactionevent-t.md) | No | 执行操作的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offExecuteAction can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offExecuteAction can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offFavoriteMediaEntity
@@ -174,7 +152,7 @@ Unregister execute action callback.
 offFavoriteMediaEntity(callback?: FavoriteMediaEntityEvent): void
 ```
 
-Unregister favorite media entity callback.
+注销收藏媒体实体事件的监听。
 
 **Since:** 23
 
@@ -190,14 +168,14 @@ Unregister favorite media entity callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('favoriteMediaEntity') event. |
+| callback | [FavoriteMediaEntityEvent](arkts-avsession-avmusictemplate-favoritemediaentityevent-t.md) | No | 收藏媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offFavoriteMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offFavoriteMediaEntity can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offHandleMemberPurchase
@@ -206,7 +184,7 @@ Unregister favorite media entity callback.
 offHandleMemberPurchase(callback?: HandleMemberPurchaseEvent): void
 ```
 
-Unregister handle member purchase callback.
+注销处理购买会员事件的监听。
 
 **Since:** 23
 
@@ -222,14 +200,14 @@ Unregister handle member purchase callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('handleMemberPurchase') event. |
+| callback | [HandleMemberPurchaseEvent](arkts-avsession-avmusictemplate-handlememberpurchaseevent-t.md) | No | 处理购买会员的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offHandleMemberPurchase can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offHandleMemberPurchase can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offLogin
@@ -238,7 +216,7 @@ Unregister handle member purchase callback.
 offLogin(callback?: LoginEvent): void
 ```
 
-Unregister login callback.
+注销登录事件的监听。
 
 **Since:** 23
 
@@ -254,14 +232,14 @@ Unregister login callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('login') event. |
+| callback | [LoginEvent](arkts-avsession-avmusictemplate-loginevent-t.md) | No | 登录事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offLogin can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offLogin can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offPlayForSearch
@@ -270,7 +248,7 @@ Unregister login callback.
 offPlayForSearch(callback?: PlayForSearchEvent): void
 ```
 
-Unregister play for search callback.
+注销搜播事件的监听。
 
 **Since:** 23
 
@@ -286,14 +264,14 @@ Unregister play for search callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('playForSearch') event. |
+| callback | [PlayForSearchEvent](arkts-avsession-avmusictemplate-playforsearchevent-t.md) | No | 搜播的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offPlayForSearch can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offPlayForSearch can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offPlayMediaEntity
@@ -302,7 +280,7 @@ Unregister play for search callback.
 offPlayMediaEntity(callback?: PlayMediaEntityEvent): void
 ```
 
-Unregister play media entity callback.
+注销播放媒体实体事件的监听。
 
 **Since:** 23
 
@@ -318,14 +296,14 @@ Unregister play media entity callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('playMediaEntity') event. |
+| callback | [PlayMediaEntityEvent](arkts-avsession-avmusictemplate-playmediaentityevent-t.md) | No | 播放媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offPlayMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offPlayMediaEntity can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offProblemAndAdvice
@@ -334,7 +312,7 @@ Unregister play media entity callback.
 offProblemAndAdvice(callback?: ProblemAndAdviceEvent): void
 ```
 
-Unregister problem and advice callback.
+注销问题与建议事件的监听。
 
 **Since:** 23
 
@@ -350,14 +328,14 @@ Unregister problem and advice callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('problemAndAdvice') event. |
+| callback | [ProblemAndAdviceEvent](arkts-avsession-avmusictemplate-problemandadviceevent-t.md) | No | 处理问题与建议的回调。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offProblemAndAdvice can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offProblemAndAdvice can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryCompilation
@@ -366,7 +344,7 @@ Unregister problem and advice callback.
 offQueryCompilation(callback?: QueryCompilationEvent): void
 ```
 
-Unregister query compilation callback.
+注销查询合集的监听。
 
 **Since:** 23
 
@@ -382,14 +360,14 @@ Unregister query compilation callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryCompilation') event. |
+| callback | [QueryCompilationEvent](arkts-avsession-avmusictemplate-querycompilationevent-t.md) | No | 查询合集的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryCompilation can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryCompilation can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryCompilationByKeyword
@@ -398,7 +376,7 @@ Unregister query compilation callback.
 offQueryCompilationByKeyword(callback?: QueryCompilationByKeywordEvent): void
 ```
 
-Unregister query compilation by keyword callback.
+注销按关键字查询合集的监听。
 
 **Since:** 23
 
@@ -414,14 +392,14 @@ Unregister query compilation by keyword callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryCompilationByKeyword') event. |
+| callback | [QueryCompilationByKeywordEvent](arkts-avsession-avmusictemplate-querycompilationbykeywordevent-t.md) | No | 按关键字查询合集的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryCurrentSingle
@@ -430,7 +408,7 @@ Unregister query compilation by keyword callback.
 offQueryCurrentSingle(callback?: QueryCurrentSingleEvent): void
 ```
 
-Unregister query current single callback.
+注销查询当前单曲的监听。
 
 **Since:** 23
 
@@ -446,14 +424,14 @@ Unregister query current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryCurrentSingle') event. |
+| callback | [QueryCurrentSingleEvent](arkts-avsession-avmusictemplate-querycurrentsingleevent-t.md) | No | 查询当前单曲的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryCurrentSingle can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryCurrentSingle can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryCustomContent
@@ -462,7 +440,7 @@ Unregister query current single callback.
 offQueryCustomContent(callback?: QueryCustomContentEvent): void
 ```
 
-Unregister query custom content callback.
+注销查询自定义内容事件的监听。
 
 **Since:** 23
 
@@ -478,14 +456,14 @@ Unregister query custom content callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryCustomContent') event. |
+| callback | [QueryCustomContentEvent](arkts-avsession-avmusictemplate-querycustomcontentevent-t.md) | No | 查询自定义内容的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryCustomContent can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryCustomContent can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryHotWords
@@ -494,7 +472,7 @@ Unregister query custom content callback.
 offQueryHotWords(callback?: QueryHotWordsEvent): void
 ```
 
-Unregister query hot words callback.
+注销查询热词的监听。
 
 **Since:** 23
 
@@ -510,14 +488,14 @@ Unregister query hot words callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryHotWords') event. |
+| callback | [QueryHotWordsEvent](arkts-avsession-avmusictemplate-queryhotwordsevent-t.md) | No | 查询热词的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryHotWords can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryHotWords can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryMainTabs
@@ -526,7 +504,7 @@ Unregister query hot words callback.
 offQueryMainTabs(callback?: QueryMainTabsEvent): void
 ```
 
-Unregister query main tabs callback.
+注销查询主标签事件监听。
 
 **Since:** 23
 
@@ -542,14 +520,14 @@ Unregister query main tabs callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryMainTabs') event. |
+| callback | [QueryMainTabsEvent](arkts-avsession-avmusictemplate-querymaintabsevent-t.md) | No | 查询主标签事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryMainTabs can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryMainTabs can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryMediaEntity
@@ -558,7 +536,7 @@ Unregister query main tabs callback.
 offQueryMediaEntity(callback?: QueryMediaEntityEvent): void
 ```
 
-Unregister query media entity callback.
+注销查询媒体实体监听。
 
 **Since:** 23
 
@@ -574,14 +552,14 @@ Unregister query media entity callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryMediaEntity') event. |
+| callback | [QueryMediaEntityEvent](arkts-avsession-avmusictemplate-querymediaentityevent-t.md) | No | 查询媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryMediaEntity can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryMediaEntityByKeyword
@@ -590,7 +568,7 @@ Unregister query media entity callback.
 offQueryMediaEntityByKeyword(callback?: QueryMediaEntityByKeywordEvent): void
 ```
 
-Unregister query media entity by keyword callback.
+注销按关键字查询媒体实体的监听。
 
 **Since:** 23
 
@@ -606,14 +584,14 @@ Unregister query media entity by keyword callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryMediaEntityByKeyword') event. |
+| callback | [QueryMediaEntityByKeywordEvent](arkts-avsession-avmusictemplate-querymediaentitybykeywordevent-t.md) | No | 按关键字查询媒体实体的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryMediaTabContent
@@ -622,7 +600,7 @@ Unregister query media entity by keyword callback.
 offQueryMediaTabContent(callback?: QueryMediaTabContentEvent): void
 ```
 
-Unregister query media tab content callback.
+取消查询媒体标签内容监听。
 
 **Since:** 23
 
@@ -638,14 +616,14 @@ Unregister query media tab content callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryMediaTabContent') event. |
+| callback | [QueryMediaTabContentEvent](arkts-avsession-avmusictemplate-querymediatabcontentevent-t.md) | No | 查询媒体标签页内容的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryMediaTabContent can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryMediaTabContent can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryMemberPurchase
@@ -654,7 +632,7 @@ Unregister query media tab content callback.
 offQueryMemberPurchase(callback?: QueryMemberPurchaseEvent): void
 ```
 
-Unregister query member purchase callback.
+注销查询购买会员事件的监听。
 
 **Since:** 23
 
@@ -670,14 +648,14 @@ Unregister query member purchase callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryMemberPurchase') event. |
+| callback | [QueryMemberPurchaseEvent](arkts-avsession-avmusictemplate-querymemberpurchaseevent-t.md) | No | 查询购买会员的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryMemberPurchase can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryMemberPurchase can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryPlaylist
@@ -686,7 +664,7 @@ Unregister query member purchase callback.
 offQueryPlaylist(callback?: QueryPlaylistEvent): void
 ```
 
-Unregister query playlist callback.
+注销查询播放列表的监听。
 
 **Since:** 23
 
@@ -702,14 +680,14 @@ Unregister query playlist callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryPlaylist') event. |
+| callback | [QueryPlaylistEvent](arkts-avsession-avmusictemplate-queryplaylistevent-t.md) | No | 查询播放列表的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryPlaylist can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryPlaylist can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQueryRecommendMediaEntityList
@@ -718,7 +696,7 @@ Unregister query playlist callback.
 offQueryRecommendMediaEntityList(callback?: QueryRecommendMediaEntityListEvent): void
 ```
 
-Unregister query recommend media entity list callback.
+注销查询推荐媒体列表的监听。
 
 **Since:** 23
 
@@ -734,14 +712,14 @@ Unregister query recommend media entity list callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('queryRecommendMediaEntityList') event. |
+| callback | [QueryRecommendMediaEntityListEvent](arkts-avsession-avmusictemplate-queryrecommendmediaentitylistevent-t.md) | No | 查询推荐媒体列表的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offQuerySearchHistory
@@ -750,7 +728,7 @@ Unregister query recommend media entity list callback.
 offQuerySearchHistory(callback?: QuerySearchHistoryEvent): void
 ```
 
-Unregister query search history callback.
+注销查询搜索历史的监听。
 
 **Since:** 23
 
@@ -766,14 +744,14 @@ Unregister query search history callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('querySearchHistory') event. |
+| callback | [QuerySearchHistoryEvent](arkts-avsession-avmusictemplate-querysearchhistoryevent-t.md) | No | 查询搜索历史的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offQuerySearchHistory can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offQuerySearchHistory can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offRequestDialogInfo
@@ -782,7 +760,7 @@ Unregister query search history callback.
 offRequestDialogInfo(callback?: RequestDialogInfoEvent): void
 ```
 
-Unregister request dialog info callback.
+注销请求对话框信息的监听。
 
 **Since:** 23
 
@@ -798,14 +776,14 @@ Unregister request dialog info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('requestDialogInfo') event. |
+| callback | [RequestDialogInfoEvent](arkts-avsession-avmusictemplate-requestdialoginfoevent-t.md) | No | 请求对话框信息的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offRequestDialogInfo can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offRequestDialogInfo can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offSettingsChange
@@ -814,7 +792,7 @@ Unregister request dialog info callback.
 offSettingsChange(callback?: SettingsChangeEvent): void
 ```
 
-Unregister settings change callback.
+注销设置改变事件的监听。
 
 **Since:** 23
 
@@ -830,14 +808,14 @@ Unregister settings change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('settingsChange') event. |
+| callback | [SettingsChangeEvent](arkts-avsession-avmusictemplate-settingschangeevent-t.md) | No | 设置改变的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function offSettingsChange can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function offSettingsChange can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onClearSearchHistory
@@ -846,7 +824,7 @@ Unregister settings change callback.
 onClearSearchHistory(callback: ClearSearchHistoryEvent): void
 ```
 
-Register clear search history callback.
+注册清除搜索历史的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -862,46 +840,14 @@ Register clear search history callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('clearSearchHistory') event. |
+| callback | [ClearSearchHistoryEvent](arkts-avsession-avmusictemplate-clearsearchhistoryevent-t.md) | Yes | 回调函数，返回清除搜索历史的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onClearSearchHistory can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000012 | AVMusicTemplate error. |
-
-## onCustomCommand
-
-```TypeScript
-onCustomCommand(callback: CustomCommandEvent): void
-```
-
-Register custom command callback.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVMusicTemplate-onCustomCommand(callback: CustomCommandEvent): void--><!--Device-AVMusicTemplate-onCustomCommand(callback: CustomCommandEvent): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('sendCustomCommand') event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onCustomCommand can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onClearSearchHistory can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onDownloadMediaEntity
@@ -910,7 +856,7 @@ Register custom command callback.
 onDownloadMediaEntity(callback: DownloadMediaEntityEvent): void
 ```
 
-Register download media entity callback.
+注册下载媒体实体事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -926,14 +872,14 @@ Register download media entity callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('downloadMediaEntity') event. |
+| callback | [DownloadMediaEntityEvent](arkts-avsession-avmusictemplate-downloadmediaentityevent-t.md) | Yes | 回调函数，返回下载媒体实体的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onDownloadMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onDownloadMediaEntity can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onExecuteAction
@@ -942,7 +888,7 @@ Register download media entity callback.
 onExecuteAction(callback: ExecuteActionEvent): void
 ```
 
-Register execute action callback.
+注册执行操作事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -958,14 +904,14 @@ Register execute action callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('executeAction') event. |
+| callback | [ExecuteActionEvent](arkts-avsession-avmusictemplate-executeactionevent-t.md) | Yes | 回调函数，返回执行操作的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onExecuteAction can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onExecuteAction can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onFavoriteMediaEntity
@@ -974,7 +920,7 @@ Register execute action callback.
 onFavoriteMediaEntity(callback: FavoriteMediaEntityEvent): void
 ```
 
-Register favorite media entity callback.
+注册收藏媒体实体事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -990,14 +936,14 @@ Register favorite media entity callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('favoriteMediaEntity') event. |
+| callback | [FavoriteMediaEntityEvent](arkts-avsession-avmusictemplate-favoritemediaentityevent-t.md) | Yes | 回调函数，返回收藏媒体实体的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onFavoriteMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onFavoriteMediaEntity can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onHandleMemberPurchase
@@ -1006,7 +952,7 @@ Register favorite media entity callback.
 onHandleMemberPurchase(callback: HandleMemberPurchaseEvent): void
 ```
 
-Register handle member purchase callback.
+注册处理购买会员事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1022,14 +968,14 @@ Register handle member purchase callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('handleMemberPurchase') event. |
+| callback | [HandleMemberPurchaseEvent](arkts-avsession-avmusictemplate-handlememberpurchaseevent-t.md) | Yes | 回调函数，返回处理购买会员的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onHandleMemberPurchase can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onHandleMemberPurchase can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onLogin
@@ -1038,7 +984,7 @@ Register handle member purchase callback.
 onLogin(callback: LoginEvent): void
 ```
 
-Register login callback.
+注册登录事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1054,14 +1000,14 @@ Register login callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('login') event. |
+| callback | [LoginEvent](arkts-avsession-avmusictemplate-loginevent-t.md) | Yes | 回调函数，返回登录事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onLogin can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onLogin can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onPlayForSearch
@@ -1070,7 +1016,7 @@ Register login callback.
 onPlayForSearch(callback: PlayForSearchEvent): void
 ```
 
-Register play for search callback.
+注册搜播事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1086,14 +1032,14 @@ Register play for search callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('playForSearch') event. |
+| callback | [PlayForSearchEvent](arkts-avsession-avmusictemplate-playforsearchevent-t.md) | Yes | 回调函数，返回搜播的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onPlayForSearch can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onPlayForSearch can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onPlayMediaEntity
@@ -1102,7 +1048,7 @@ Register play for search callback.
 onPlayMediaEntity(callback: PlayMediaEntityEvent): void
 ```
 
-Register play media entity callback.
+注册播放媒体实体事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1118,14 +1064,14 @@ Register play media entity callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('playMediaEntity') event. |
+| callback | [PlayMediaEntityEvent](arkts-avsession-avmusictemplate-playmediaentityevent-t.md) | Yes | 回调函数，返回播放媒体实体的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onPlayMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onPlayMediaEntity can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onProblemAndAdvice
@@ -1134,7 +1080,7 @@ Register play media entity callback.
 onProblemAndAdvice(callback: ProblemAndAdviceEvent): void
 ```
 
-Register problem and advice callback.
+注册问题与建议事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1150,14 +1096,14 @@ Register problem and advice callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('problemAndAdvice') event. |
+| callback | [ProblemAndAdviceEvent](arkts-avsession-avmusictemplate-problemandadviceevent-t.md) | Yes | 回调函数，返回问题与建议的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onProblemAndAdvice can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onProblemAndAdvice can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryCompilation
@@ -1166,7 +1112,7 @@ Register problem and advice callback.
 onQueryCompilation(callback: QueryCompilationEvent): void
 ```
 
-Register query compilation callback.
+注册查询合集的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1182,14 +1128,14 @@ Register query compilation callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryCompilation') event. |
+| callback | [QueryCompilationEvent](arkts-avsession-avmusictemplate-querycompilationevent-t.md) | Yes | 回调函数，返回查询合集的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryCompilation can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryCompilation can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryCompilationByKeyword
@@ -1198,7 +1144,7 @@ Register query compilation callback.
 onQueryCompilationByKeyword(callback: QueryCompilationByKeywordEvent): void
 ```
 
-Register query compilation by keyword callback.
+注册按关键字查询合集的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1214,14 +1160,14 @@ Register query compilation by keyword callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryCompilationByKeyword') event. |
+| callback | [QueryCompilationByKeywordEvent](arkts-avsession-avmusictemplate-querycompilationbykeywordevent-t.md) | Yes | 回调函数，返回按关键字查询合集的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryCompilationByKeyword can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryCurrentSingle
@@ -1230,7 +1176,7 @@ Register query compilation by keyword callback.
 onQueryCurrentSingle(callback: QueryCurrentSingleEvent): void
 ```
 
-Register query current single callback.
+注册查询当前单曲的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1246,14 +1192,14 @@ Register query current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryCurrentSingle') event. |
+| callback | [QueryCurrentSingleEvent](arkts-avsession-avmusictemplate-querycurrentsingleevent-t.md) | Yes | 回调函数，返回查询当前单曲的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryCurrentSingle can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryCurrentSingle can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryCustomContent
@@ -1262,7 +1208,7 @@ Register query current single callback.
 onQueryCustomContent(callback: QueryCustomContentEvent): void
 ```
 
-Register query custom content callback.
+注册查询自定义内容事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1278,14 +1224,14 @@ Register query custom content callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryCustomContent') event. |
+| callback | [QueryCustomContentEvent](arkts-avsession-avmusictemplate-querycustomcontentevent-t.md) | Yes | 回调函数，返回查询自定义内容的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryCustomContent can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryCustomContent can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryHotWords
@@ -1294,7 +1240,7 @@ Register query custom content callback.
 onQueryHotWords(callback: QueryHotWordsEvent): void
 ```
 
-Register query hot words callback.
+注册查询热词的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1310,14 +1256,14 @@ Register query hot words callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryHotWords') event. |
+| callback | [QueryHotWordsEvent](arkts-avsession-avmusictemplate-queryhotwordsevent-t.md) | Yes | 回调函数，返回查询热词的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryHotWords can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryHotWords can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryMainTabs
@@ -1326,7 +1272,7 @@ Register query hot words callback.
 onQueryMainTabs(callback: QueryMainTabsEvent): void
 ```
 
-Register query main tabs callback.
+注册查询主标签的事件监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1342,14 +1288,14 @@ Register query main tabs callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryMainTabs') event. |
+| callback | [QueryMainTabsEvent](arkts-avsession-avmusictemplate-querymaintabsevent-t.md) | Yes | 回调函数，返回查询主标签事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryMainTabs can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryMainTabs can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryMediaEntity
@@ -1358,7 +1304,7 @@ Register query main tabs callback.
 onQueryMediaEntity(callback: QueryMediaEntityEvent): void
 ```
 
-Register query media entity callback.
+注册查询媒体实体监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1374,14 +1320,14 @@ Register query media entity callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryMediaEntity') event. |
+| callback | [QueryMediaEntityEvent](arkts-avsession-avmusictemplate-querymediaentityevent-t.md) | Yes | 回调函数，返回查询媒体实体的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryMediaEntity can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryMediaEntity can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryMediaEntityByKeyword
@@ -1390,7 +1336,7 @@ Register query media entity callback.
 onQueryMediaEntityByKeyword(callback: QueryMediaEntityByKeywordEvent): void
 ```
 
-Register query media entity by keyword callback.
+注册按关键字查询媒体实体的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1406,14 +1352,14 @@ Register query media entity by keyword callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryMediaEntityByKeyword') event. |
+| callback | [QueryMediaEntityByKeywordEvent](arkts-avsession-avmusictemplate-querymediaentitybykeywordevent-t.md) | Yes | 回调函数，返回按关键字查询媒体实体的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryMediaEntityByKeyword can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryMediaTabContent
@@ -1422,7 +1368,7 @@ Register query media entity by keyword callback.
 onQueryMediaTabContent(callback: QueryMediaTabContentEvent): void
 ```
 
-Register query media tab content callback.
+注册查询媒体标签内容事件监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1438,14 +1384,14 @@ Register query media tab content callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryMediaTabContent') event. |
+| callback | [QueryMediaTabContentEvent](arkts-avsession-avmusictemplate-querymediatabcontentevent-t.md) | Yes | 回调函数，返回查询媒体标签页内容的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryMediaTabContent can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryMediaTabContent can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryMemberPurchase
@@ -1454,7 +1400,7 @@ Register query media tab content callback.
 onQueryMemberPurchase(callback: QueryMemberPurchaseEvent): void
 ```
 
-Register query member purchase callback.
+注册查询购买会员事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1470,14 +1416,14 @@ Register query member purchase callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryMemberPurchase') event. |
+| callback | [QueryMemberPurchaseEvent](arkts-avsession-avmusictemplate-querymemberpurchaseevent-t.md) | Yes | 回调函数，返回查询购买会员的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryMemberPurchase can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryMemberPurchase can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryPlaylist
@@ -1486,7 +1432,7 @@ Register query member purchase callback.
 onQueryPlaylist(callback: QueryPlaylistEvent): void
 ```
 
-Register query playlist callback.
+注册查询播放列表的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1502,14 +1448,14 @@ Register query playlist callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryPlaylist') event. |
+| callback | [QueryPlaylistEvent](arkts-avsession-avmusictemplate-queryplaylistevent-t.md) | Yes | 回调函数，返回查询播放列表的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryPlaylist can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryPlaylist can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQueryRecommendMediaEntityList
@@ -1518,7 +1464,7 @@ Register query playlist callback.
 onQueryRecommendMediaEntityList(callback: QueryRecommendMediaEntityListEvent): void
 ```
 
-Register query recommend media entity list callback.
+注册查询推荐媒体列表的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1534,14 +1480,14 @@ Register query recommend media entity list callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('queryRecommendMediaEntityList') event. |
+| callback | [QueryRecommendMediaEntityListEvent](arkts-avsession-avmusictemplate-queryrecommendmediaentitylistevent-t.md) | Yes | 回调函数，返回查询推荐媒体列表的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQueryRecommendMediaEntityList can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onQuerySearchHistory
@@ -1550,7 +1496,7 @@ Register query recommend media entity list callback.
 onQuerySearchHistory(callback: QuerySearchHistoryEvent): void
 ```
 
-Register query search history callback.
+注册查询搜索历史的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1566,14 +1512,14 @@ Register query search history callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('querySearchHistory') event. |
+| callback | [QuerySearchHistoryEvent](arkts-avsession-avmusictemplate-querysearchhistoryevent-t.md) | Yes | 回调函数，返回查询搜索历史的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onQuerySearchHistory can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onQuerySearchHistory can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onRequestDialogInfo
@@ -1582,7 +1528,7 @@ Register query search history callback.
 onRequestDialogInfo(callback: RequestDialogInfoEvent): void
 ```
 
-Register request dialog info callback.
+注册请求对话框信息的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1598,14 +1544,14 @@ Register request dialog info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('requestDialogInfo') event. |
+| callback | [RequestDialogInfoEvent](arkts-avsession-avmusictemplate-requestdialoginfoevent-t.md) | Yes | 回调函数，返回请求对话框信息的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onRequestDialogInfo can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onRequestDialogInfo can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onSettingsChange
@@ -1614,7 +1560,7 @@ Register request dialog info callback.
 onSettingsChange(callback: SettingsChangeEvent): void
 ```
 
-Register settings change callback.
+注册设置改变事件的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1630,14 +1576,14 @@ Register settings change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('settingsChange') event. |
+| callback | [SettingsChangeEvent](arkts-avsession-avmusictemplate-settingschangeevent-t.md) | Yes | 回调函数，返回设置改变的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onSettingsChange can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function onSettingsChange can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
 | 35000012 | AVMusicTemplate error. |
 
 ## reportExecuteAction
@@ -1646,7 +1592,7 @@ Register settings change callback.
 reportExecuteAction(actionType: string, params: string): Promise<void>
 ```
 
-Report execute action information to MediaUI.
+向音频模板控制方同步执行操作信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1662,22 +1608,22 @@ Report execute action information to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | string | Yes | action type |
-| params | string | Yes | params value |
+| actionType | string | Yes | 行为类型。 |
+| params | string | Yes | 行为信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function reportExecuteAction can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function reportExecuteAction can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setCurrentSingle
 
@@ -1685,7 +1631,7 @@ Report execute action information to MediaUI.
 setCurrentSingle(single: Single): Promise<void>
 ```
 
-Report current single song to MediaUI.
+向音频模板控制方同步当前单曲。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1701,21 +1647,21 @@ Report current single song to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| single | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | single information |
+| single | [Single](arkts-avsession-avmusictemplate-single-i.md) | Yes | 当前单曲。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setCurrentSingle can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setCurrentSingle can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setCustomElements
 
@@ -1724,7 +1670,7 @@ setCustomElements(actionType: ActionType, customType: CustomType,
       customElement: CustomElement): Promise<void>
 ```
 
-Report custom elements change information to MediaUI.
+上报自定义数据变更信息至媒体中心
 
 **Since:** 23
 
@@ -1740,23 +1686,23 @@ Report custom elements change information to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | action type |
-| customType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | custom type |
-| customElement | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | custom element |
+| actionType | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | 操作类型 |
+| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Yes | 自定义数据的类型 |
+| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Yes | 自定义数据 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | 通过promise'返回上报自定义数据的结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setCustomElements can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setCustomElements can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setDialogCommand
 
@@ -1764,7 +1710,7 @@ Report custom elements change information to MediaUI.
 setDialogCommand(type: DialogControlType, dialogInfo: DialogInfo): Promise<void>
 ```
 
-Report dialog command to MediaUI.
+向音频模板控制方同步对话框命令。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1780,22 +1726,22 @@ Report dialog command to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | dialog control type |
-| dialogInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | dialog information |
+| type | [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md) | Yes | 对话框控制类型。 |
+| dialogInfo | [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | Yes | 对话框信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setDialogCommand can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setDialogCommand can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setDownloadMediaEntityStatus
 
@@ -1803,7 +1749,7 @@ Report dialog command to MediaUI.
 setDownloadMediaEntityStatus(single: MediaEntity): Promise<void>
 ```
 
-Report single download status information to MediaUI.
+向音频模板控制方同步单曲下载状态信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1819,21 +1765,21 @@ Report single download status information to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| single | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | single information |
+| single | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | 单曲。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setDownloadMediaEntityStatus can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setDownloadMediaEntityStatus can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setExtensionAbility
 
@@ -1841,7 +1787,7 @@ Report single download status information to MediaUI.
 setExtensionAbility(want: WantAgent): Promise<void>
 ```
 
-Report execute extension ability to MediaUI.
+向音频模板控制方同步用于被拉起的Ability。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1857,21 +1803,21 @@ Report execute extension ability to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ability info |
+| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | Yes | 能力信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setMediaEntities
 
@@ -1879,7 +1825,7 @@ Report execute extension ability to MediaUI.
 setMediaEntities(entities: MediaEntity[]): Promise<void>
 ```
 
-Report media resource change information to MediaUI.
+向音频模板控制方同步媒体资源变更信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1895,21 +1841,21 @@ Report media resource change information to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entities | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | media resource information |
+| entities | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[] | Yes | 媒体实体的数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setMediaEntities can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setMediaEntities can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setPlaylist
 
@@ -1917,7 +1863,7 @@ Report media resource change information to MediaUI.
 setPlaylist(playlist: PageMediaEntity): Promise<void>
 ```
 
-Report play list information to MediaUI.
+向音频模板控制方同步播放列表。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1933,21 +1879,21 @@ Report play list information to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| playlist | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | play list information |
+| playlist | [PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Yes | 分页媒体实体。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setPlaylist can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setPlaylist can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setSettings
 
@@ -1955,7 +1901,7 @@ Report play list information to MediaUI.
 setSettings(settingItems: SettingItem[]): Promise<void>
 ```
 
-Report settings information to MediaUI.
+向音频模板控制方同步设置信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1971,21 +1917,21 @@ Report settings information to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settingItems | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | setting items |
+| settingItems | [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[] | Yes | 设置项数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setSettings can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setSettings can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setTabContent
 
@@ -1993,7 +1939,7 @@ Report settings information to MediaUI.
 setTabContent(tabId: string, tabContent: MediaTabContent): Promise<void>
 ```
 
-Report tab page content information to MediaUI.
+向音频模板控制方同步标签页内容信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -2009,22 +1955,22 @@ Report tab page content information to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabId | string | Yes | tab page id |
-| tabContent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | tab page content |
+| tabId | string | Yes | 标签的ID。 |
+| tabContent | [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | Yes | 媒体标签页内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setTabContent can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setTabContent can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## setUserInfo
 
@@ -2032,7 +1978,7 @@ Report tab page content information to MediaUI.
 setUserInfo(userInfo: UserInfo): Promise<void>
 ```
 
-Report user infomation to MediaUI.
+向音频模板控制方同步用户信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -2048,21 +1994,21 @@ Report user infomation to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | user information |
+| userInfo | [UserInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-userinfo-i.md) | Yes | 用户信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setUserInfo can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| 35000011 | The data write error, data is invalid. |
+| 801 | Capability not supported.function setUserInfo can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000011 | Thr data write error, data is invalid. |
 
 ## startTemplate
 
@@ -2070,7 +2016,7 @@ Report user infomation to MediaUI.
 startTemplate(): Promise<OperResult>
 ```
 
-Start media center template interface.
+启动音频模板界面。使用Promise异步回调。
 
 **Since:** 23
 
@@ -2086,13 +2032,13 @@ Start media center template interface.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | (OperResult) returned through promise |
+| Promise&lt;OperResult&gt; | Promise对象，返回启动音频模板界面的操作结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| 801 | capability not supported. |
 
 ## sessionId
 
@@ -2100,7 +2046,7 @@ Start media center template interface.
 sessionId: string
 ```
 
-Unique AVMusicTemplate descriptor.
+音频模板唯一的标识。
 
 **Type:** string
 
@@ -2120,7 +2066,7 @@ Unique AVMusicTemplate descriptor.
 sessionTag: string
 ```
 
-AVMusicTemplate tag.
+音频模板标签。
 
 **Type:** string
 

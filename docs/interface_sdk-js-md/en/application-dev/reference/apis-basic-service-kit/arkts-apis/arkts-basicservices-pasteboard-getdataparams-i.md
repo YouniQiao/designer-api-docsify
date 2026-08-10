@@ -1,6 +1,6 @@
 # GetDataParams
 
-Defines parameters when an application obtains the Data from the pasteboard, including the destination path, file conflict options, and progress indicator types.
+应用在使用剪贴板提供的文件拷贝能力的情况下需要的参数，包含目标路径、文件冲突选项、进度条类型等。调用本接口前，需确保无其他拷贝或粘贴操作正在进行。
 
 **Since:** 15
 
@@ -10,13 +10,19 @@ Defines parameters when an application obtains the Data from the pasteboard, inc
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## progressListener
 
 ```TypeScript
 progressListener?: ProgressListener
 ```
 
-Defines a listener for progress data changes. If the default progress indicator is not used, you can set this type to obtain the paste progress. This parameter is left empty by default.
+定义进度数据变化的订阅函数，用于获取粘贴过程的进度。仅当progressIndicator设置为NONE时此参数才生效，可设置该项自行处理进度显示；当progressIndicator设置为DEFAULT时此参数无效。默认为空（不监听进度）。
 
 **Since:** 15
 
@@ -34,7 +40,7 @@ Defines a listener for progress data changes. If the default progress indicator 
 destUri?: string
 ```
 
-Destination path for copying files. If file processing is not supported, this parameter is not required. If the application involves complex file processing policies or needs to distinguish file multipathing storage, you are advised not to set this parameter but let the application copy files by itself. This parameter is left empty by default.
+拷贝文件的目标路径对应的URI。若不支持文件处理，则不需要设置此参数；若应用涉及复杂文件处理策略或需要区分文件多路径存储，建议不设置此参数，由应用自行完成文件copy处理，默认为空。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ Destination path for copying files. If file processing is not supported, this pa
 fileConflictOptions?: FileConflictOptions
 ```
 
-File conflict options for a paste task. The default value is **OVERWRITE**.
+定义文件拷贝冲突时的选项。OVERWRITE（覆盖）适合需要确保目标路径使用最新文件内容的场景；SKIP（跳过）适合需要保留目标路径原有文件、避免意外覆盖的场景。默认为OVERWRITE。
 
-**Type:** FileConflictOptions
+**Type:** [FileConflictOptions](arkts-basicservices-pasteboard-fileconflictoptions-e.md)
 
 **Default:** FileConflictOptions.OVERWRITE
 
@@ -78,9 +84,9 @@ File conflict options for a paste task. The default value is **OVERWRITE**.
 progressIndicator: ProgressIndicator
 ```
 
-Progress indicator options. You can choose whether to use the default progress indicator.
+定义进度条指示选项，可选择是否采用系统默认进度显示。设置为DEFAULT时采用系统默认进度显示；设置为NONE时需应用自行处理进度，此时progressListener和progressSignal参数才有效。
 
-**Type:** ProgressIndicator
+**Type:** [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)
 
 **Since:** 15
 
@@ -98,10 +104,9 @@ Progress indicator options. You can choose whether to use the default progress i
 progressSignal?: ProgressSignal
 ```
 
-Function for canceling the paste task. This parameter is valid only when  
-[ProgressIndicator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **NONE**. This parameter is left empty by default.
+定义进度取消的函数，在粘贴过程中可选择取消任务，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)设置为NONE时此参数才有意义，默认为空。
 
-**Type:** ProgressSignal
+**Type:** [ProgressSignal](arkts-basicservices-pasteboard-progresssignal-c.md)
 
 **Default:** -
 

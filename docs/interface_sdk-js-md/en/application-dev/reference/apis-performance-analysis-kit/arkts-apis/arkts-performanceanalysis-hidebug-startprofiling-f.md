@@ -1,13 +1,18 @@
 # startProfiling
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## startProfiling
 
 ```TypeScript
 function startProfiling(filename: string): void
 ```
 
-Starts the VM profiling method. **startProfiling(filename: string)** and **stopProfiling()** are called in pairs.  
-**startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur.
+���������Profiling�������٣�`startProfiling(filename: string)`�����ĵ�����Ҫ��`stopProfiling()`�����ĵ���һһ��Ӧ���ȿ�����رգ�������ظ��������ظ��رյĵ��÷�ʽ�������ӿڵ����쳣��
 
 **Since:** 8
 
@@ -25,9 +30,9 @@ Starts the VM profiling method. **startProfiling(filename: string)** and **stopP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filename | string | Yes | Custom file name of the sampling data. The .json file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128. |
+| filename | string | Yes | �û��Զ���Ĳ������������ļ���������Ӧ�õ�`files`Ŀ¼�������Ըò���������json�ļ���string���ȵ����ֵΪ128�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

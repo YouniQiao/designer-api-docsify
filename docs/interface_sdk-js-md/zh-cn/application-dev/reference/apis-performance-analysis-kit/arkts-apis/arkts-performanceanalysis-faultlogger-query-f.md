@@ -1,5 +1,11 @@
 # query
 
+## 导入模块
+
+```TypeScript
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## query
 
 ```TypeScript
@@ -24,18 +30,18 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| faultType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 输入要查询的故障类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;FaultLogInfo&gt;&gt; | 是 | 回调函数，在回调函数中获取故障信息数组。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_value拿到故障信息数组；value为undefined表示获取过程中出现异常，error返回错误提示字符串。 |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 | 输入要查询的故障类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;FaultLogInfo&gt;&gt; | 是 | 回调函数，在回调函数中获取故障信息数组。 &lt;br&gt;value拿到故障信息数组；value为undefined表示获取过程中出现异常，error返回错误提示字符串。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed, Parameter type error |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found |
-| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) | The service is not started or is faulty |
+| 10600001 | The service is not started or is faulty |
+| 401 | The parameter check failed, Parameter type error |
+| 801 | The specified SystemCapability name was not found |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { FaultLogger } from '@kit.PerformanceAnalysisKit';
@@ -92,23 +98,23 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| faultType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 输入要查询的故障类型。 |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 | 输入要查询的故障类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; | Promise实例，可以在其then()方法中获取故障信息实例，也可以使用await。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_value拿到故障信息数组；value为undefined表示获取过程中出现异常。 |
+| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; | Promise实例，可以在其then()方法中获取故障信息实例，也可以使用await。 &lt;br&gt;value拿到故障信息数组；value为undefined表示获取过程中出现异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed, Parameter type error |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found |
-| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) | The service is not started or is faulty |
+| 10600001 | The service is not started or is faulty |
+| 401 | The parameter check failed, Parameter type error |
+| 801 | The specified SystemCapability name was not found |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { FaultLogger } from '@kit.PerformanceAnalysisKit';

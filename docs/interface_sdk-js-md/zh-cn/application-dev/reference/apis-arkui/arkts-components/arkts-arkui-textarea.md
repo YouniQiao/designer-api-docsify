@@ -30,7 +30,10 @@ TextArea(value?: TextAreaOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | TextArea组件参数。默认值：详见TextAreaOptions。  |
+| value | [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | 否 | TextArea组件参数。默认值：详见TextAreaOptions。 |
 
 ## 汇总
 
+- [TextAreaOptions](arkts-arkui-textarea-textareaoptions-i.md)
+- [TextAreaSubmitCallback](arkts-arkui-textarea-textareasubmitcallback-t.md)
+- [TextAreaType](arkts-arkui-textarea-textareatype-e.md)

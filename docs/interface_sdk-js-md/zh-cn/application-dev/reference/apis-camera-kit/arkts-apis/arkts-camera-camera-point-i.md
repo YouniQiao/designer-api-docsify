@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## x
 
 ```TypeScript
@@ -18,7 +24,7 @@ x: double
 
 点的x坐标。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ y: double
 
 点的y坐标。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 10
 

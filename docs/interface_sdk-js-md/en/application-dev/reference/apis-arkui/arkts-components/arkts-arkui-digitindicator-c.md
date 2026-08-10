@@ -1,15 +1,14 @@
 # DigitIndicator
 
-A constructor used to create a **DigitIndicator** object. It inherits from [Indicator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count  
-    placeholder nodes.  
-    
-    The maximum value of [maxFontScale]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ for the digit-style navigation indicator is  
-    **2**.  
-    
-    The mirror display of the page number depends on the RTL status of the system.
+构造数字指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
+
+> **说明：**
+
+> 按组翻页时，数字导航点显示的子节点数量不包括占位节点。
+
+> 数字导航点文本最大的字体缩放倍数[maxFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#maxfontscale)为2。
+
+> 页码的镜像显示依据为系统的RTL状态。
 
 **Inheritance/Implementation:** DigitIndicator extends [Indicator<DigitIndicator>](Indicator<DigitIndicator>)
 
@@ -27,16 +26,14 @@ A constructor used to create a **DigitIndicator** object. It inherits from [Indi
 constructor()
 ```
 
-A constructor used to create a **DotIndicator** object.
-    **NOTE**  
-    
-    - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain  
-    distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.  
-    The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and  
-    **selectedItemHeight**.  
-    
-    - If there are too many pages and dot-style indicators exceed the page, you are advised to use the  
-    **maxDisplayCount** parameter to set the number of dots to be displayed.
+DotIndicator的构造函数。
+
+> **说明：**
+
+> - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、
+> selectedItemHeight等参数变大而变大。
+> 
+> - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
 
 **Since:** 10
 
@@ -58,7 +55,7 @@ A constructor used to create a **DotIndicator** object.
 digitFont(value: Font): DigitIndicator
 ```
 
-Sets the font style of the digit-style navigation indicator.
+Swiper组件数字导航点的字体样式。按组翻页时，数字导航点显示的子节点数量不包括占位节点。
 
 **Since:** 10
 
@@ -78,13 +75,13 @@ Sets the font style of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font style of the digit-style navigation indicator.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_{ size:?14,?weight:?FontWeight.Normal?} |
+| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | 设置Swiper组件数字导航点的字体样式。&lt;br/&gt;只支持Font中size和weight参数，family和style设置不生效。&lt;br/&gt;默认值：&lt;br/&gt;{ size: 14,  weight: FontWeight.Normal } |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current digit-style navigation indicator. |
+| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## fontColor
 
@@ -92,7 +89,7 @@ Sets the font style of the digit-style navigation indicator.
 fontColor(value: ResourceColor): DigitIndicator
 ```
 
-Sets the font color of the digit-style navigation indicator.
+Swiper组件数字导航点的字体颜色。
 
 **Since:** 10
 
@@ -112,13 +109,13 @@ Sets the font color of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font color of the digit-style navigation indicator.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置Swiper组件数字导航点的字体颜色。&lt;br/&gt;默认值：'#ff182431' |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current digit-style navigation indicator. |
+| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## selectedDigitFont
 
@@ -126,7 +123,7 @@ Sets the font color of the digit-style navigation indicator.
 selectedDigitFont(value: Font): DigitIndicator
 ```
 
-Sets the font style of the selected digit-style navigation indicator.
+选中Swiper组件数字导航点的字体样式。
 
 **Since:** 10
 
@@ -146,13 +143,13 @@ Sets the font style of the selected digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font style of the selected digit-style navigation indicator.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_{?size:?1 4,?weight:?FontWeight.Normal?} |
+| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | 设置选中Swiper组件数字导航点的字体样式。&lt;br/&gt;默认值：&lt;br/&gt;{ size: 14, weight: FontWeight.Normal } |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current digit-style navigation indicator. |
+| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## selectedFontColor
 
@@ -160,7 +157,7 @@ Sets the font style of the selected digit-style navigation indicator.
 selectedFontColor(value: ResourceColor): DigitIndicator
 ```
 
-Sets the font color of the selected digit-style navigation indicator.
+选中Swiper组件数字导航点的字体颜色。
 
 **Since:** 10
 
@@ -180,11 +177,11 @@ Sets the font color of the selected digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font color of the selected digit-style navigation indicator.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置选中Swiper组件数字导航点的字体颜色。&lt;br/&gt;默认值：'#ff182431' |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current digit-style navigation indicator. |
+| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
 

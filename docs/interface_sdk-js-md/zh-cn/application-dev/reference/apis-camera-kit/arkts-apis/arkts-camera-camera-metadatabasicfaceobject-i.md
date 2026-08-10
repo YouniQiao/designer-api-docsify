@@ -1,7 +1,7 @@
 # MetadataBasicFaceObject
 
-相机检测到的基础人脸元数据信息，继承自[MetadataObject]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。[CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_相机信息中的数据来源，通过metadataOutput.  
-[on('metadataObjectsAvailable')]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口获取。
+相机检测到的基础人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.  
+[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>))接口获取。
 
 **继承/实现关系：** MetadataBasicFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 
@@ -13,6 +13,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## leftEyeBoundingBox
 
 ```TypeScript
@@ -21,7 +27,7 @@ readonly leftEyeBoundingBox?: Rect
 
 左眼区域框。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 26.0.0
 
@@ -41,7 +47,7 @@ readonly pitchAngle?: int
 
 俯仰角度。取值范围为[-90, 90]，以向下为正方向。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -61,7 +67,7 @@ readonly rightEyeBoundingBox?: Rect
 
 右眼区域框。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 26.0.0
 
@@ -81,7 +87,7 @@ readonly rollAngle?: int
 
 平面内旋转角度。取值范围为[-180, 180]，以顺时针方向为正方向。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -101,7 +107,7 @@ readonly yawAngle?: int
 
 左右旋转角度。取值范围为[-90, 90]，以向右为正方向。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

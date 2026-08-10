@@ -1,16 +1,15 @@
 # TransitionOptions
 
-Defines the transition effect by setting parameters in the struct.
-    **NOTE**  
-    
-    1. When set to a value of the **TransitionOptions** type, the **transition** attribute must work with  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. The animation duration,  
-    curve, and delay follow the settings in **animateTo**.  
-    
-    2. If the value of the **TransitionOptions** type has only **type** specified, the transition effect will take on  
-    the default opacity. For example, **{type: TransitionType.Insert}** produces the same effect as  
-    **{type: TransitionType.Insert, opacity: 0}**. If a specific style is specified, the transition effect will not  
-    take on the default opacity.
+TransitionOptions通过指定结构体内的参数来指定转场效果。
+
+> **说明：**
+> 
+> 1. 当使用TransitionOptions类型的入参指定转场效果时，**必须**配合
+> [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)使用才有动画效果，动效时长、曲线、延时跟随
+> animateTo中的配置。
+> 
+> 2. 当使用TransitionOptions作为入参，且不指定除type外的任何参数时，此时相当于指定了透明度的转场效果。例如，指定{type: TransitionType.Insert}相当于指定了{type:
+> TransitionType.Insert, opacity: 0}的转场效果。而指定了具体效果时，则不会添加默认的透明度转场效果。
 
 **Since:** 7
 
@@ -18,7 +17,7 @@ Defines the transition effect by setting parameters in the struct.
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md)
+**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 <!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
@@ -30,14 +29,13 @@ Defines the transition effect by setting parameters in the struct.
 opacity?: number
 ```
 
-Opacity of the component during transition, which is the value of the start point of insertion and the end point of deletion.
+设置组件转场时的透明度效果，为插入时起点和删除时终点的值。
 
-Value range: [0, 1]
+取值范围： [0, 1]
 
-**NOTE**
+**说明：**
 
-If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value  
-**1** is used.
+设置小于0的非法值时，按0处理；设置大于1的非法值时，按1处理。
 
 **Type:** number
 
@@ -47,7 +45,7 @@ If the value specified is less than 0, the value **0** is used. If the value spe
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect#opacity](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md#opacity)
+**Substitutes:** [TransitionEffect#opacity](arkts-arkui-transitioneffect-c.md#opacity)
 
 <!--Device-TransitionOptions-opacity?: number--><!--Device-TransitionOptions-opacity?: number-End-->
 
@@ -59,16 +57,19 @@ If the value specified is less than 0, the value **0** is used. If the value spe
 rotate?: RotateOptions
 ```
 
-Rotation of the component during transition, which is the value of the start point of insertion and the end point of deletion.
+设置组件转场时的旋转效果，为插入时起点和删除时终点的值。
 
-- **x**: X-component of the rotation vector.  
-- **y**: Y-component of the rotation vector.  
-- **z**: Z-component of the rotation vector.  
-- **centerX** and **centerY**: rotation center point. The default values are both **"50%"**, indicating the center  
-point of the page.  
-- If the center point is (0, 0), it refers to the upper left corner of the component.
+-x：横向的旋转向量分量。
 
-**Type:** RotateOptions
+-y：纵向的旋转向量分量。
+
+-z：竖向的旋转向量分量。
+
+- centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。
+
+- 中心点为(0, 0)代表组件的左上角。
+
+**Type:** [RotateOptions](arkts-arkui-rotateoptions-i.md)
 
 **Since:** 7
 
@@ -76,7 +77,7 @@ point of the page.
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect#rotate](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md#rotate)
+**Substitutes:** [TransitionEffect#rotate](arkts-arkui-transitioneffect-c.md#rotate)
 
 <!--Device-TransitionOptions-rotate?: RotateOptions--><!--Device-TransitionOptions-rotate?: RotateOptions-End-->
 
@@ -88,21 +89,23 @@ point of the page.
 scale?: ScaleOptions
 ```
 
-Scaling of the component during transition, which is the value of the start point of insertion and the end point of deletion.
+设置组件转场时的缩放效果，为插入时起点和删除时终点的值。
 
-- **x**: scale factor along the x-axis.  
-- **y**: scale factor along the y-axis.  
-- **z**: scale factor along the z-axis (not effective for the current 2D graphics).  
-- **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center  
-point of the page.  
-- If the center point is (0, 0), it refers to the upper left corner of the component.
+-x：横向放大倍数（或缩小比例）。
 
-**NOTE**
+-y：纵向放大倍数（或缩小比例）。
 
-If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value  
-**"0"** is used.
+-z：当前为二维显示，该参数无效 。
 
-**Type:** ScaleOptions
+- centerX、centerY指缩放中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。
+
+- 中心点为(0, 0)代表组件的左上角。
+
+**说明：**
+
+设置centerX、centerY为非法字符串时（例如，"illegalString"），默认值为"0"。
+
+**Type:** [ScaleOptions](arkts-arkui-scaleoptions-i.md)
 
 **Since:** 7
 
@@ -110,7 +113,7 @@ If **centerX** or **centerY** is set to an invalid string (for example, **"illeg
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect#scale](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md#scale)
+**Substitutes:** [TransitionEffect#scale](arkts-arkui-transitioneffect-c.md#scale)
 
 <!--Device-TransitionOptions-scale?: ScaleOptions--><!--Device-TransitionOptions-scale?: ScaleOptions-End-->
 
@@ -122,15 +125,15 @@ If **centerX** or **centerY** is set to an invalid string (for example, **"illeg
 translate?: TranslateOptions
 ```
 
-Translation of the component during transition, which is the value of the start point of insertion and the end point of deletion.
+设置组件转场时的平移效果，为插入时起点和删除时终点的值。
 
--**x**: distance to translate along the x-axis.
+-x：横向的平移距离。
 
--**y**: distance to translate along the y-axis.
+-y：纵向的平移距离。
 
--**z**: distance to translate along the z-axis.
+-z：竖向的平移距离。
 
-**Type:** TranslateOptions
+**Type:** [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md)
 
 **Since:** 7
 
@@ -138,7 +141,7 @@ Translation of the component during transition, which is the value of the start 
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect#translate](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md#translate)
+**Substitutes:** [TransitionEffect#translate](arkts-arkui-transitioneffect-c.md#translate)
 
 <!--Device-TransitionOptions-translate?: TranslateOptions--><!--Device-TransitionOptions-translate?: TranslateOptions-End-->
 
@@ -150,15 +153,15 @@ Translation of the component during transition, which is the value of the start 
 type?: TransitionType
 ```
 
-Transition type.
+指定该转场样式生效的场景。
 
-Default value: **TransitionType.All**
+默认值：TransitionType.All
 
-**NOTE**
+**说明：**
 
-If **type** is not specified, the default value **TransitionType.All** is used, which means that the transition effect works for both component addition and deletion.
+不指定type时默认为TransitionType.All，即插入删除都生效。
 
-**Type:** TransitionType
+**Type:** [TransitionType](../arkts-apis/arkts-arkui-transitiontype-e.md)
 
 **Since:** 7
 
@@ -166,7 +169,7 @@ If **type** is not specified, the default value **TransitionType.All** is used, 
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md)
+**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 <!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
 

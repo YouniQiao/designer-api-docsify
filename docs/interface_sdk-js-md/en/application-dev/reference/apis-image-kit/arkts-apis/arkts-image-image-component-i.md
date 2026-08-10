@@ -1,6 +1,6 @@
 # Component
 
-Describes the color components of an image.
+描述图像颜色分量。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Describes the color components of an image.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## byteBuffer
 
 ```TypeScript
 readonly byteBuffer: ArrayBuffer
 ```
 
-Component buffer.
+组件缓冲区。
 
 **Type:** ArrayBuffer
 
@@ -34,9 +40,9 @@ Component buffer.
 readonly componentType: ComponentType
 ```
 
-Color component type.
+组件类型。
 
-**Type:** ComponentType
+**Type:** [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md)
 
 **Since:** 9
 
@@ -52,9 +58,9 @@ Color component type.
 readonly pixelStride: int
 ```
 
-Pixel stride.
+像素间距。单位：字节（Byte）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -70,10 +76,10 @@ Pixel stride.
 readonly rowStride: int
 ```
 
-Row stride. The camera preview stream data needs to be read by stride. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+行距。单位：字节（Byte）。读取相机预览流数据时，需要按stride进行读取，使用详情请参考  
+[相机预览花屏解决方案](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-deal-stride-solution)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

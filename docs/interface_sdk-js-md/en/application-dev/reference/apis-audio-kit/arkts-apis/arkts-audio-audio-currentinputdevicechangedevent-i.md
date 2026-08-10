@@ -1,6 +1,6 @@
 # CurrentInputDeviceChangedEvent
 
-Describes the event indicating that the input device changes.
+应用接收到输入设备的变更事件。
 
 **Since:** 21
 
@@ -10,15 +10,21 @@ Describes the event indicating that the input device changes.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## changeReason
 
 ```TypeScript
 changeReason: AudioStreamDeviceChangeReason
 ```
 
-Audio input device change reason.
+设备变更原因。
 
-**Type:** AudioStreamDeviceChangeReason
+**Type:** [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md)
 
 **Since:** 21
 
@@ -34,9 +40,9 @@ Audio input device change reason.
 devices: AudioDeviceDescriptors
 ```
 
-Audio input device descriptors after change.
+设备信息。
 
-**Type:** AudioDeviceDescriptors
+**Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **Since:** 21
 

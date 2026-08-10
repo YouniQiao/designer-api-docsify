@@ -38,7 +38,7 @@ unit?: RelativeTimeFormatUnit
 
 Unit option.
 
-**Type:** RelativeTimeFormatUnit
+**Type:** [RelativeTimeFormatUnit](../../apis-default/arkts-apis/arkts-intl-relativetimeformatunit-t.md)
 
 **Since:** 26.0.0
 

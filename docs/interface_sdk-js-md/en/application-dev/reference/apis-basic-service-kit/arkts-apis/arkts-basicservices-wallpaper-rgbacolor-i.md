@@ -1,6 +1,6 @@
 # RgbaColor
 
-RgbaColor definition
+定义壁纸颜色信息结构。
 
 **Since:** 7
 
@@ -12,13 +12,19 @@ RgbaColor definition
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## alpha
 
 ```TypeScript
 alpha: long
 ```
 
-The range is 0 to 255.
+表示 alpha 值，范围为 0 到 255。
 
 **Type:** long
 
@@ -38,7 +44,7 @@ The range is 0 to 255.
 blue: long
 ```
 
-The range is 0 to 255.
+表示蓝色值，范围为 0 到 255。
 
 **Type:** long
 
@@ -58,7 +64,7 @@ The range is 0 to 255.
 green: long
 ```
 
-The range is 0 to 255.
+表示绿色值，范围为 0 到 255。
 
 **Type:** long
 
@@ -78,7 +84,7 @@ The range is 0 to 255.
 red: long
 ```
 
-The range is 0 to 255.
+表示红色值，范围为 0 到 255。
 
 **Type:** long
 

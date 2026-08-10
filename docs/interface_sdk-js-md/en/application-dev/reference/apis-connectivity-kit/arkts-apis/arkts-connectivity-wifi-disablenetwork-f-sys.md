@@ -1,5 +1,11 @@
 # disableNetwork (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disableNetwork
 
 ```TypeScript
@@ -8,7 +14,7 @@ function disableNetwork(netId: number): boolean
 
 Disables a specified network.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The disabled network will not be associated with again.
+&lt;p&gt;The disabled network will not be associated with again.
 
 **Since:** 7
 
@@ -38,7 +44,7 @@ Disables a specified network.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

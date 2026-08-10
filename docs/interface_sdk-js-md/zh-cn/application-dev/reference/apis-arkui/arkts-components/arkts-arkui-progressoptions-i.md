@@ -18,11 +18,11 @@ style?: ProgressStyle
 
 指定进度条样式。
 
-从API version 7开始支持，从API version 8开始废弃。建议使用[type]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md)替代。
 
 默认值：ProgressStyle.Linear
 
-**类型：** ProgressStyle
+**类型：** [ProgressStyle](arkts-arkui-progressstyle-e.md)
 
 **起始版本：** 7
 
@@ -72,10 +72,10 @@ type?: Type
 
 默认值：ProgressType.Linear
 
-**说明：** 不同的type需分别对应相应的[style]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_属性设置，详细映射关系参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+**说明：** 不同的type需分别对应相应的[style](ProgressAttribute#style)属性设置，详细映射关系参考
+[ProgressStyleMap](../../../reference/apis-arkui/arkui-ts/ts-basic-components-progress.md#progressstylemap10)。
 
-**类型：** Type
+**类型：** [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)
 
 **起始版本：** 8
 

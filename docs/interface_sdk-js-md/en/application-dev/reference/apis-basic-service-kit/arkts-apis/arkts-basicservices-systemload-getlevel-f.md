@@ -1,12 +1,18 @@
 # getLevel
 
+## Modules to Import
+
+```TypeScript
+import { systemLoad } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getLevel
 
 ```TypeScript
 function getLevel(): Promise<SystemLoadLevel>
 ```
 
-Obtains the system load level. This API uses a promise to return the result.
+获取系统负载融合档位，使用promise异步回调。
 
 **Since:** 12
 
@@ -20,5 +26,5 @@ Obtains the system load level. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemLoadLevel&gt; | Promise used to return the system load level. |
+| Promise&lt;SystemLoadLevel&gt; | Promise对象，返回系统负载融合档位。 |
 

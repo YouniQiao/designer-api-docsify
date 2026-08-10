@@ -1,6 +1,13 @@
 # RequestKeyboardReason
 
-Enumerates the reasons for requesting keyboard input.
+枚举，请求键盘输入的原因。
+
+| 名称 | 值 | 说明 |  
+| ------------ | -- | ------------------ |  
+| NONE | 0 | 表示没有特定的原因触发键盘请求。 |  
+| MOUSE | 1 | 表示键盘请求是由鼠标操作触发的。 |  
+| TOUCH | 2 | 表示键盘请求是由触摸操作触发的。 |  
+| OTHER | 20 | 表示键盘请求是由其他原因触发的。 |
 
 **Since:** 19
 
@@ -16,7 +23,7 @@ Enumerates the reasons for requesting keyboard input.
 NONE = 0
 ```
 
-The request keyboard reason is NONE.
+表示没有特定的原因触发键盘请求。
 
 **Since:** 19
 
@@ -32,7 +39,7 @@ The request keyboard reason is NONE.
 MOUSE = 1
 ```
 
-The request keyboard reason is MOUSE.
+表示键盘请求是由鼠标操作触发的。
 
 **Since:** 19
 
@@ -48,7 +55,7 @@ The request keyboard reason is MOUSE.
 TOUCH = 2
 ```
 
-The request keyboard reason is TOUCH.
+表示键盘请求是由触摸操作触发的。
 
 **Since:** 19
 
@@ -64,7 +71,7 @@ The request keyboard reason is TOUCH.
 OTHER = 20
 ```
 
-The request keyboard reason is OTHER.
+表示键盘请求是由其他原因触发的。
 
 **Since:** 19
 

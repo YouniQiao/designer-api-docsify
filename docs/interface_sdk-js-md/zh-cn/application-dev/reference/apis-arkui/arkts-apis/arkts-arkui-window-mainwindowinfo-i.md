@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
@@ -18,7 +24,7 @@ displayId: long
 
 ID of the display to which the main window belongs.
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 21
 
@@ -52,8 +58,7 @@ label: string
 showing: boolean
 ```
 
-Foreground/Background status of the main window. **true** if the main window is in the foreground, **false**  
-otherwise.
+Foreground/Background status of the main window. **true** if the main window is in the foreground, **false**otherwise.
 
 **类型：** boolean
 
@@ -73,7 +78,7 @@ windowId: int
 
 ID of the main window.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 21
 

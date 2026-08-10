@@ -10,6 +10,12 @@ Describes the class of a bluetooth device.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## cause
 
 ```TypeScript
@@ -18,7 +24,7 @@ cause: UnbondCause
 
 Cause of unbond.
 
-**Type:** UnbondCause
+**Type:** [UnbondCause](arkts-connectivity-connection-unbondcause-e.md)
 
 **Since:** 12
 
@@ -78,7 +84,7 @@ state: BondState
 
 Profile connection state of the device.
 
-**Type:** BondState
+**Type:** [BondState](arkts-connectivity-connection-bondstate-e.md)
 
 **Since:** 10
 

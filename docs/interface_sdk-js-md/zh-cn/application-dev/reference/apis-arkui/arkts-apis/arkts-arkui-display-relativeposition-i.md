@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
@@ -18,7 +24,7 @@ displayId: long
 
 相对坐标所对应的屏幕ID，仅支持整数输入，且需大于等于0。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 
@@ -36,7 +42,7 @@ position: Position
 
 以displayId所指定屏幕左上角为原点的坐标值。
 
-**类型：** Position
+**类型：** [Position](arkts-arkui-display-position-i.md)
 
 **起始版本：** 20
 

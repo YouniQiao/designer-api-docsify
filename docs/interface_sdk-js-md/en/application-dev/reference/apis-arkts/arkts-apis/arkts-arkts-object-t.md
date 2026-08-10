@@ -4,7 +4,7 @@
 export type object = Object
 ```
 
-\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ is an alias for type \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_
+`object` is an alias for type `Object`
 
 **Since:** 26.0.0
 

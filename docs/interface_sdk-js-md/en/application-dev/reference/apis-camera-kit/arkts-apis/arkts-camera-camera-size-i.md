@@ -1,6 +1,6 @@
 # Size
 
-Describes the image dimensions.
+尺寸参数。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the image dimensions.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Image height, in pixels.
+图像尺寸高（像素）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Image height, in pixels.
 width: int
 ```
 
-Image width, in pixels.
+图像尺寸宽（像素）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

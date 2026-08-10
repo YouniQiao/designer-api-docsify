@@ -12,6 +12,12 @@ GesturePath表示手势路径信息。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 导入模块
+
+```TypeScript
+import { GesturePath } from 'kits/@kit.AccessibilityKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -36,7 +42,7 @@ constructor(durationTime: long)
 | --- | --- | --- | --- |
 | durationTime | long | 是 | 手势总耗时，单位为毫秒。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
@@ -73,7 +79,7 @@ points: Array<GesturePoint>
 
 手势触摸点。
 
-**类型：** Array&lt;GesturePoint&gt;
+**类型：** Array&lt;[GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)&gt;
 
 **起始版本：** 9
 

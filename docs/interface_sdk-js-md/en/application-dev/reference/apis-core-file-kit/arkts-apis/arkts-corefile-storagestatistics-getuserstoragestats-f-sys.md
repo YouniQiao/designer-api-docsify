@@ -1,12 +1,18 @@
 # getUserStorageStats (System API)
 
+## Modules to Import
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getUserStorageStats
 
 ```TypeScript
 function getUserStorageStats(): Promise<StorageStats>
 ```
 
-Obtains the storage statistics of this user, in bytes. This API uses a promise to return the result.
+异步获取当前用户各类别存储空间大小（单位为Byte），以Promise方式返回。
 
 **Since:** 9
 
@@ -24,19 +30,19 @@ Obtains the storage statistics of this user, in bytes. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;StorageStats&gt; | Promise used to return the storage statistics (in bytes) obtained. |
+| Promise&lt;StorageStats&gt; | Promise对象，返回当前用户各类别存储空间大小（单位为Byte）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -54,7 +60,7 @@ storageStatistics.getUserStorageStats().then((storageStats: storageStatistics.St
 function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 ```
 
-Obtains the storage statistics of this user, in bytes. This API uses an asynchronous callback to return the result.
+异步获取当前用户各类别存储空间大小（单位为Byte），以callback方式返回。
 
 **Since:** 9
 
@@ -72,19 +78,19 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StorageStats&gt; | Yes | Callback used to return the storage statistics obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;StorageStats&gt; | Yes | 返回用户各类别存储空间大小之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -105,7 +111,7 @@ storageStatistics.getUserStorageStats((error: BusinessError, storageStats: stora
 function getUserStorageStats(userId: long): Promise<StorageStats>
 ```
 
-Obtains the storage statistics of the specified user, in bytes. This API uses a promise to return the result.
+异步获取指定用户各类别存储空间大小（单位为Byte），以Promise方式返回。
 
 **Since:** 9
 
@@ -123,26 +129,26 @@ Obtains the storage statistics of the specified user, in bytes. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | User ID. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 用户id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;StorageStats&gt; | Promise used to return the storage statistics (in bytes) obtained. |
+| Promise&lt;StorageStats&gt; | Promise对象，返回指定用户各类别存储空间大小（单位为Byte）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600009 | User if out of range. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -161,7 +167,7 @@ storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatist
 function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void
 ```
 
-Obtains the storage statistics of the specified user, in bytes. This API uses an asynchronous callback to return the result.
+异步获取指定用户各类别存储空间大小（单位为Byte），以callback方式返回。
 
 **Since:** 9
 
@@ -179,21 +185,21 @@ Obtains the storage statistics of the specified user, in bytes. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | User ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StorageStats&gt; | Yes | Callback used to return the storage statistics obtained. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 用户id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;StorageStats&gt; | Yes | 返回指定用户各类别存储空间大小之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600009 | User if out of range. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

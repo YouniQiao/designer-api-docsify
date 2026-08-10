@@ -1,6 +1,6 @@
 # OnPdfScrollEvent
 
-Defines the function triggered when the PDF page is scrolled to the bottom.
+定义PDF页面滚动到底时触发的回调函数。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Defines the function triggered when the PDF page is scrolled to the bottom.
 url:string
 ```
 
-URL of the page.
+页面的URL地址。
 
 **Type:** string
 

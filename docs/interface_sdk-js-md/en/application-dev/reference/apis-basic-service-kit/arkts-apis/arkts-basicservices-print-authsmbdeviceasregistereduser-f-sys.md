@@ -1,12 +1,18 @@
 # authSmbDeviceAsRegisteredUser (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authSmbDeviceAsRegisteredUser
 
 ```TypeScript
 function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, password: string): Promise<PrinterInformation[]>
 ```
 
-Authenticate SMB device as registered user and get available printers.
+以注册用户身份对SMB设备进行身份验证，并获取可用打印机。
 
 **Since:** 24
 
@@ -26,9 +32,9 @@ Authenticate SMB device as registered user and get available printers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The SMB host to authenticate. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The SMB host to authenticate. |
-| username | string | Yes | The username for authentication. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_User name used for authentication. |
-| password | string | Yes | The password for authentication. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Password used for authentication. |
+| host | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | Yes | 要进行身份验证的SMB主机。 |
+| username | string | Yes | 用于鉴权的用户名。 |
+| password | string | Yes | 用于身份验证的密码。 |
 
 **Return value:**
 
@@ -40,9 +46,9 @@ Authenticate SMB device as registered user and get available printers.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| 13100012 | SMB account is locked due to multiple failed login attempts. |
-| 13100013 | SMB connection failed (network error, host unreachable, or port blocked). |
+| 201 | the application does not have permission to call this function. |
 | 13100014 | Invalid login account or password. |
+| 202 | not system application. |
+| 13100013 | SMB connection failed (network error, host unreachable, or port blocked). |
+| 13100012 | SMB account is locked due to multiple failed login attempts. |
 

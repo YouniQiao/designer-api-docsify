@@ -4,7 +4,7 @@
 export type Orientation = window.Orientation
 ```
 
-Import the Orientation type from @ohos.window.
+Orientation实例对象。
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # MouseButton
 
-Describes the injected simulated mouse button.
+模拟注入的鼠标按钮。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Describes the injected simulated mouse button.
 MOUSE_BUTTON_LEFT = 0
 ```
 
-Left button on the mouse.
+鼠标左键。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ Left button on the mouse.
 MOUSE_BUTTON_RIGHT = 1
 ```
 
-Right button on the mouse.
+鼠标右键。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ Right button on the mouse.
 MOUSE_BUTTON_MIDDLE = 2
 ```
 
-MIDDLE button on the mouse.
+鼠标中间键。
 
 **Since:** 10
 

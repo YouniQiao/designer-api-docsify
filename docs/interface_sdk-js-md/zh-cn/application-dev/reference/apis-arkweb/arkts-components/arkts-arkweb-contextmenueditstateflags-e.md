@@ -1,6 +1,6 @@
 # ContextMenuEditStateFlags
 
-支持以按位或的方式使用此枚举。例如，如果需要同时支持CAN\_CUT、CAN\_COPY和CAN\_SELECT\_ALL，可使用CAN\_CUT | CAN\_COPY | CAN\_SELECT\_ALL或11。
+支持以按位或的方式使用此枚举。例如，如果需要同时支持CAN_CUT、CAN_COPY和CAN_SELECT_ALL，可使用CAN_CUT | CAN_COPY | CAN_SELECT_ALL或11。
 
 **起始版本：** 9
 

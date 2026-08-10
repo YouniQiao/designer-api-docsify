@@ -12,6 +12,12 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## callback
 
 ```TypeScript
@@ -22,7 +28,7 @@ Callback for the blankless frame interpolation, which is used to return the blan
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**Type:** Callback&lt;BlanklessFrameInterpolationInfo&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BlanklessFrameInterpolationInfo&gt;
 
 **Since:** 23
 
@@ -42,7 +48,7 @@ duration?: int
 
 Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000].
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: ms.
+Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.&lt;br&gt;Unit: ms.
 
 **Type:** int
 

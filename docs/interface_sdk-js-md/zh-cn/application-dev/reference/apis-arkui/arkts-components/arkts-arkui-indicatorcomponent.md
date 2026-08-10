@@ -28,7 +28,7 @@ Called when a indicator is set.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | indicator component controller.  |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) | 否 | indicator component controller. |
 
 ## 汇总
 

@@ -12,6 +12,12 @@ Describes the LCD flash information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isLcdFlashNeeded
 
 ```TypeScript
@@ -40,7 +46,7 @@ readonly lcdCompensation: int
 
 LCD flash compensation.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

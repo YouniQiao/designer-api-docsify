@@ -1,6 +1,6 @@
 # MultiScreenMode (System API)
 
-Enumerates the display modes of secondary screens.
+屏幕模式枚举。
 
 **Since:** 13
 
@@ -18,7 +18,7 @@ Enumerates the display modes of secondary screens.
 SCREEN_MIRROR = 0
 ```
 
-Mirror mode.
+表示屏幕为镜像模式。
 
 **Since:** 13
 
@@ -36,7 +36,7 @@ Mirror mode.
 SCREEN_EXTEND = 1
 ```
 
-Extend mode.
+表示屏幕为扩展模式。
 
 **Since:** 13
 

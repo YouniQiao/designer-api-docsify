@@ -28,9 +28,9 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 | 应用的包信息。 |
 | groupName | string | 是 | 通知组名称。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 删除指定应用指定组下通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定应用指定组下通知的回调函数。 |
 
 
 ## removeGroupByBundle
@@ -61,7 +61,7 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 | 应用的包信息。 |
 | groupName | string | 是 | 通知组名称。 |
 
 **返回值：**

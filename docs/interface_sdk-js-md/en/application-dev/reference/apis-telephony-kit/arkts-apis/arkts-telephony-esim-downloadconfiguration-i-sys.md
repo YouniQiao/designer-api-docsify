@@ -12,13 +12,19 @@ Specifies the download configuration.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## forceDisableProfile
 
 ```TypeScript
 forceDisableProfile: boolean
 ```
 
-Specifies whether to forcibly disable the profile. If true, the active profile is disabled in order to perform the operation. Otherwise, \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is returned in resultCode to ask for the user's agreement to the operation.
+Specifies whether to forcibly disable the profile. If true, the active profile is disabled in order to perform the operation. Otherwise, {@link RESULT_MUST_DISABLE_PROFILE} is returned in resultCode to ask for the user's agreement to the operation.
 
 **Type:** boolean
 

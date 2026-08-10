@@ -4,7 +4,7 @@
 type NonSendableAsset = relationalStore.Asset
 ```
 
-Represents the asset (such as a document, image, or video) that cannot be passed across threads.
+记录资产附件（文件、图片、视频等类型文件）的相关信息。不支持跨线程传递。
 
 **Since:** 12
 

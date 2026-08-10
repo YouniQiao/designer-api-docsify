@@ -1,12 +1,18 @@
 # offConnectionStateChanged
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offConnectionStateChanged
 
 ```TypeScript
 function offConnectionStateChanged(callback?: Callback<ConnectionResult>): void
 ```
 
-Unsubscribes from the connection state change event.
+取消订阅连接状态变更事件。
 
 **Since:** 26.0.0
 
@@ -22,12 +28,12 @@ Unsubscribes from the connection state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ConnectionResult&gt; | No | Callback used to listen for the state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionResult&gt; | No | 用于监听状态改变事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

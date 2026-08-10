@@ -1,6 +1,6 @@
 # Connection
 
-Represents a **Connection** object, which provides methods for connecting to and disconnecting from a peer device,obtaining the device's ID, sending data, and registering or unregistering event callbacks.
+连接对象，提供连接、断连、获取对端设备ID、发送数据、注册/取消注册回调等方法。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Represents a **Connection** object, which provides methods for connecting to and
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Destroys the **Connection** object to release resources. If the device needs to interact with the peer device again, create a **Connection** object again and call \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ to initiate a connection.
+业务执行完毕后，任意设备可调用该接口销毁connection对象，释放资源。若需再次与对端设备交互，必须重新创建connection对象并调用`connect()`发起连接。
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Destroys the **Connection** object to release resources. If the device needs to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -68,7 +74,7 @@ try {
 connect(): void
 ```
 
-Connects to the server on the client. A maximum number of 10 connections are supported.
+在客户端执行，向服务端设备发起连接，最大连接个数限制为10。
 
 **Since:** 20
 
@@ -86,11 +92,11 @@ Connects to the server on the client. A maximum number of 10 connections are sup
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390204](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390204-number-of-connections-exceeding-the-limit) | The number of connection exceeds the limit. |
-| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
+| 32390204 | The number of connection exceeds the limit. |
+| 32390300 | Internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 After creating a Connection object, the application on the client device calls connect() to connect to the target device (that is, the server).
 
@@ -123,7 +129,7 @@ try {
 disconnect(): void
 ```
 
-Disconnects from the peer device. The created **Connection** object remains valid after this API is called. You can call **connect()** to reconnect to the peer device if necessary.
+业务执行完毕后，双端任意设备可调用该接口断开连接。创建的connection对象仍有效，需要时可调用connect()重新连接。
 
 **Since:** 20
 
@@ -141,9 +147,9 @@ Disconnects from the peer device. The created **Connection** object remains vali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -175,7 +181,7 @@ try {
 getPeerDeviceId(): string
 ```
 
-Obtains the device ID of the peer device. This API is called when the connection is established successfully either by initiating a connection or accepting an incoming connection.
+获取对端设备的deviceId，作为对端设备的标识符，连接成功后或者被连接成功后调用。
 
 **Since:** 20
 
@@ -193,15 +199,15 @@ Obtains the device ID of the peer device. This API is called when the connection
 
 | Type | Description |
 | --- | --- |
-| string | Device ID of the peer device, that is, the BLE MAC address of the peer device. An empty string is returned if no device ID is obtained. |
+| string | 对端设备的deviceId，即对端设备的BLE MAC地址。如果获取失败返回空字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -214,8 +220,7 @@ try {
   let peerDeviceId: string = "00:11:22:33:44:55";
   hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
   let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.getPeerDeviceId();
-  hilog.info(0x0000, TAG, "peerDeviceId=%{public}s" + connection.getPeerDeviceId());
+  hilog.info(0x0000, TAG, "peerDeviceId=%{public}s", connection.getPeerDeviceId());
 } catch (err) {
   hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
   (err as BusinessError).message);
@@ -228,7 +233,7 @@ try {
 off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 ```
 
-Unregisters the listener for **connectResult** events.
+取消connect事件的回调监听，使用callback异步回调。
 
 **Since:** 20
 
@@ -246,17 +251,17 @@ Unregisters the listener for **connectResult** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is called. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ConnectResult&gt; | No | Registered callback. |
+| type | 'connectResult' | Yes | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | No | 注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -288,7 +293,7 @@ try {
 off(type: 'disconnected', callback?: Callback<number>): void
 ```
 
-Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the result.
+取消注册disconnected事件的回调监听。连接被动断开或底层异常断开时触发该事件，使用callback异步回调。
 
 **Since:** 20
 
@@ -306,17 +311,17 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or encounters an exception. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. |
+| type | 'disconnected' | Yes | 事件回调类型，支持的事件为'disconnected'，连接被动断开或底层异常断开时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | 注册的回调函数，number为返回的错误码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -348,7 +353,7 @@ try {
 off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
 ```
 
-Unregisters the listener for **dataReceived** events.
+取消dataReceived事件的回调监听，使用callback异步回调。
 
 **Since:** 20
 
@@ -366,17 +371,17 @@ Unregisters the listener for **dataReceived** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data is received. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | No | Registered callback. |
+| type | 'dataReceived' | Yes | 事件回调类型，支持的事件为'dataReceived'，收到数据时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | 注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -409,7 +414,7 @@ try {
 offConnectResult(callback?: Callback<ConnectResult>): void
 ```
 
-Unregisters the listener for **connectResult** events.
+取消connect事件的回调监听，使用callback异步回调。
 
 **Since:** 23
 
@@ -427,14 +432,14 @@ Unregisters the listener for **connectResult** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ConnectResult&gt; | No | Registered callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | No | 注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
 ## offDataReceived
 
@@ -442,7 +447,7 @@ Unregisters the listener for **connectResult** events.
 offDataReceived(callback?: Callback<ArrayBuffer>): void
 ```
 
-Unregisters the listener for **dataReceived** events.
+取消dataReceived事件的回调监听，使用callback异步回调。
 
 **Since:** 23
 
@@ -460,14 +465,14 @@ Unregisters the listener for **dataReceived** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | No | Registered callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | 注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
 ## offDisconnected
 
@@ -475,7 +480,7 @@ Unregisters the listener for **dataReceived** events.
 offDisconnected(callback?: Callback<int>): void
 ```
 
-Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the result.
+取消注册disconnected事件的回调监听。连接被动断开或底层异常断开时触发该事件，使用callback异步回调。
 
 **Since:** 23
 
@@ -493,14 +498,14 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 注册的回调函数，int为返回的错误码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
 ## on('connectResult')
 
@@ -508,7 +513,7 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 on(type: 'connectResult', callback: Callback<ConnectResult>): void
 ```
 
-Registers a listener for **connectResult** events. This API uses an asynchronous callback to return the result.
+注册connect事件的回调监听，通过回调函数获取连接结果。使用callback进行异步回调。
 
 **Since:** 20
 
@@ -526,17 +531,17 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is called. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ConnectResult&gt; | Yes | Registered callback. |
+| type | 'connectResult' | Yes | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | Yes | 注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -568,7 +573,7 @@ try {
 on(type: 'disconnected', callback: Callback<number>): void
 ```
 
-Registers a listener for **disconnected** events. This API uses an asynchronous callback to return the result.
+注册disconnected事件的回调监听，连接被动断开或者底层异常断开时触发该事件。使用callback异步回调。
 
 **Since:** 20
 
@@ -586,17 +591,17 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or encounters an exception. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. |
+| type | 'disconnected' | Yes | 事件回调类型，支持的事件为'disconnected'，连接被动断开或底层异常断开时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | 注册的回调函数，number为返回的错误码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -625,7 +630,7 @@ try {
 on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 ```
 
-Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the result.
+注册dataReceived事件的回调监听。使用callback异步回调。
 
 **Since:** 20
 
@@ -643,17 +648,17 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data is received. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | Yes | Registered callback. |
+| type | 'dataReceived' | Yes | 事件回调类型，支持的事件为'dataReceived'，收到数据时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | 注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -684,7 +689,7 @@ try {
 onConnectResult(callback: Callback<ConnectResult>): void
 ```
 
-Registers a listener for **connectResult** events. This API uses an asynchronous callback to return the result.
+注册connect事件的回调监听，通过回调函数获取连接结果。使用callback进行异步回调。
 
 **Since:** 23
 
@@ -702,14 +707,14 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ConnectResult&gt; | Yes | Registered callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | Yes | 注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
 ## onDataReceived
 
@@ -717,7 +722,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 onDataReceived(callback: Callback<ArrayBuffer>): void
 ```
 
-Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the result.
+注册dataReceived事件的回调监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -735,14 +740,14 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | Yes | Registered callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | 注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
 ## onDisconnected
 
@@ -750,7 +755,7 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 onDisconnected(callback: Callback<int>): void
 ```
 
-Registers a listener for **disconnected** events. This API uses an asynchronous callback to return the result.
+注册disconnected事件的回调监听，连接被动断开或者底层异常断开时触发该事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -768,14 +773,14 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 注册的回调函数，int为返回的错误码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 201 | Permission denied. |
 
 ## sendData
 
@@ -783,7 +788,7 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 sendData(data: ArrayBuffer): void
 ```
 
-Sends data to the server after a connection is established successfully. When the server receives the connection callback, it can also send data to the client.
+客户端连接成功后，可以向服务端发送数据。服务端接收到连接回调时，也可以向客户端发送数据。
 
 **Since:** 20
 
@@ -801,18 +806,18 @@ Sends data to the server after a connection is established successfully. When th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to send. The maximum length is 1024 bytes. |
+| data | ArrayBuffer | Yes | 需要发送的数据，最大发送长度为1024字节。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-| [32390205](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390205-connection-unavailable) | Connection is not ready. |
-| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
+| 32390206 | Invalid parameter. |
+| 32390300 | Internal error. |
+| 32390205 | Connection is not ready. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -829,9 +834,9 @@ try {
     hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
     if (result.success) {
       let len = 1;
-      let arraybuffer = new ArrayBuffer(len); // Create the data to send.
-      connection.sendData(arraybuffer);
-      hilog.info(0x0000, TAG, "sendData data connection peerDeviceId=%{public}s" + connection.getPeerDeviceId());
+      let arrayBuffer = new ArrayBuffer(len); // Create the data to send.
+      connection.sendData(arrayBuffer);
+      hilog.info(0x0000, TAG, "sendData data connection peerDeviceId=%{public}s", connection.getPeerDeviceId());
       connection.disconnect();
     }
   });

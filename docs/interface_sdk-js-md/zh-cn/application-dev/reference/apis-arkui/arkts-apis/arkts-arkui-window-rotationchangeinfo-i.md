@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
@@ -18,7 +24,7 @@ displayId: long
 
 窗口所在屏幕Id。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 
@@ -38,7 +44,7 @@ displayRect: Rect
 
 窗口所在屏幕旋转后的矩形区域大小。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 19
 
@@ -65,7 +71,7 @@ orientation: int
 
 开发者在使用时，需要注意该方向与display对象的属性orientation含义不一致。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -85,7 +91,7 @@ type: RotationChangeType
 
 窗口旋转事件类型。
 
-**类型：** RotationChangeType
+**类型：** [RotationChangeType](arkts-arkui-window-rotationchangetype-e.md)
 
 **起始版本：** 19
 

@@ -1,5 +1,11 @@
 # attachId
 
+## 导入模块
+
+```TypeScript
+import { dataUriUtils } from 'kits/@kit.AbilityKit';
+```
+
 ## attachId
 
 ```TypeScript
@@ -21,7 +27,7 @@ function attachId(uri: string, id: double): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示uri对象。 |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示要附加的ID。 |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示要附加的ID。 |
 
 **返回值：**
 
@@ -33,9 +39,9 @@ function attachId(uri: string, id: double): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { dataUriUtils } from '@kit.AbilityKit';
@@ -49,7 +55,7 @@ try {
   );
   console.info(`attachId the uri is: ${uri}`);
 } catch (err) {
-  console.error(`get id err, code: ${(err as BusinessError).code}, msg: ${(err as BusinessError).message}`);
+  console.error(`attachId err, code: ${JSON.stringify((err as BusinessError).code)}, msg: ${JSON.stringify((err as BusinessError).message)}`);
 }
 ```
 

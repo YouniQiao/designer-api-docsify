@@ -14,6 +14,12 @@ Profile state change parameters.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -44,7 +50,7 @@ state: ProfileConnectionState
 
 Profile state value
 
-**Type:** ProfileConnectionState
+**Type:** [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
 
 **Since:** 9
 

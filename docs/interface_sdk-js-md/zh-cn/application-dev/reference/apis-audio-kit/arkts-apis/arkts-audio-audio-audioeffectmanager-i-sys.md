@@ -12,6 +12,12 @@ Implements audio effect management.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## getAudioEffectProperty
 
 ```TypeScript
@@ -42,11 +48,11 @@ Gets current audio effect properties.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | System error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,11 +96,11 @@ Gets supported audio effect properties based on current devices.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | System error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -138,9 +144,9 @@ isAudioSeparationEffectSupported(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -173,16 +179,16 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 否 | 订阅函数中用于取消订阅的回调。 如果不使用此参数，则之前在当前进程中订阅的所有回调都将被取消订阅 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 订阅函数中用于取消订阅的回调。 如果不使用此参数，则之前在当前进程中订阅的所有回调都将被取消订阅 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -214,15 +220,15 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 监听系统音频分离效果的回调 启用状态更改事件 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 监听系统音频分离效果的回调 启用状态更改事件 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -262,12 +268,12 @@ Sets current audio effect properties.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or catergory of the input audioEffectProperties is incorrect. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
+| 6800101 | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or catergory of the input audioEffectProperties is incorrect. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | System error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -315,8 +321,8 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 所需的效果状态，true表示启用，false表示禁用 |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要添加效果的目标应用程序进程的uid。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值限定为整数。 |
-| streamId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 否 | 要添加效果的目标音频播放流的ID，播放应用程序 可以使用\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_来获取 |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要添加效果的目标应用程序进程的uid。 &lt;br&gt;取值限定为整数。 |
+| streamId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 要添加效果的目标音频播放流的ID，播放应用程序 可以使用{@link AudioRenderer#getAudioStreamId}来获取 |
 
 **返回值：**
 
@@ -328,13 +334,13 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Effect is not supported in this device. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | Audio service error occurs like service died. |
+| 6800104 | Effect is not supported in this device. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -379,8 +385,8 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要设置音量的类型 |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标卷值。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0,1]。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0,1]. |
+| type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | 是 | 要设置音量的类型 |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标卷值。 &lt;br&gt;取值范围：[0,1]。 &lt;br&gt;Value range: [0,1]. |
 
 **返回值：**
 
@@ -392,13 +398,13 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Effect is not supported in this device. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | Audio service error occurs like service died. |
+| 6800104 | Effect is not supported in this device. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';

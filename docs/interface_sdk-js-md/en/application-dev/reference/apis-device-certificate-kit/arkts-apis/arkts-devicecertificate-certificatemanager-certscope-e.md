@@ -1,6 +1,6 @@
 # CertScope
 
-Enumerates the certificate scopes.
+表示证书的位置。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the certificate scopes.
 CURRENT_USER = 1
 ```
 
-The certificate is accessible only to the current user.
+表示当前用户。
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ The certificate is accessible only to the current user.
 GLOBAL_USER = 2
 ```
 
-The certificate is accessible to all users.
+表示设备公共，即所有用户都可以访问的位置。
 
 **Since:** 18
 

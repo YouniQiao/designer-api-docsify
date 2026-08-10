@@ -1,5 +1,11 @@
 # getTotalSize
 
+## 导入模块
+
+```TypeScript
+import { statfs } from 'kits/@kit.CoreFileKit';
+```
+
 ## getTotalSize
 
 ```TypeScript
@@ -26,27 +32,27 @@ function getTotalSize(path: string): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回总字节数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回总字节数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
 | 13900018 | Not a directory |
 | 13900030 | File name too long |
 | 13900031 | Function not implemented |
-| 13900033 | Too many symbolic links encountered |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
 | 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -84,27 +90,27 @@ function getTotalSize(path: string, callback: AsyncCallback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 需要查询的文件系统的文件路径。 |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long&gt; | 是 | 异步获取总字节数之后的回调。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 异步获取总字节数之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
 | 13900018 | Not a directory |
 | 13900030 | File name too long |
 | 13900031 | Function not implemented |
-| 13900033 | Too many symbolic links encountered |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
 | 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

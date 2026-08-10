@@ -10,6 +10,12 @@ Single-Line display mode.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## itemBorderRadius
 
 ```TypeScript
@@ -18,7 +24,7 @@ public itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 Rounded corner radius of grid items.
 
-**Type:** Length \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Since:** 26.0.0
 
@@ -38,7 +44,7 @@ public itemDisplayRatio?: ItemDisplayRatio
 
 item display ratio
 
-**Type:** ItemDisplayRatio
+**Type:** [ItemDisplayRatio](arkts-medialibrary-file-photopickercomponent-itemdisplayratio-e.md)
 
 **Since:** 26.0.0
 
@@ -58,7 +64,7 @@ public itemGap?: Length
 
 item gap
 
-**Type:** Length
+**Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 26.0.0
 

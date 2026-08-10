@@ -4,7 +4,7 @@
 type AudioRendererChangeInfoArray = Array<Readonly<AudioRendererChangeInfo>>
 ```
 
-Defines an AudioRendererChangeInfo array, which is read-only.
+数组类型，AudioRendererChangeInfo数组，只读。
 
 **Since:** 9
 

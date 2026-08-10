@@ -1,8 +1,8 @@
 # PageIntentInfo（系统接口）
 
 PageIntentInfo用于描述  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器支持的参数，例如目标页面的  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_名称。
+[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)装饰器支持的参数，例如目标页面的  
+[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)名称。
 
 **起始版本：** 20
 
@@ -14,6 +14,12 @@ PageIntentInfo用于描述
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## navDestinationName
 
 ```TypeScript
@@ -21,7 +27,7 @@ readonly navDestinationName: string
 ```
 
 表示与意图绑定  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的名称。
+[NavDestination组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)的名称。
 
 **类型：** string
 
@@ -43,7 +49,7 @@ readonly navDestinationName: string
 readonly navigationId: string
 ```
 
-表示与意图绑定[Navigation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的id。
+表示与意图绑定[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)的id。
 
 **类型：** string
 

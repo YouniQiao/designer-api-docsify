@@ -1,14 +1,20 @@
 # SpringLoadingContext
 
-定义回调上下文信息的类，用于在悬停检测回调中传递给应用程序，使其能访问拖拽状态、动态刷新UI效果以及访问拖拽数据以确定是否处理拖拽操作。
+Context information for the current spring loading trigger. This object is passed to the application in the spring loading callback, allowing it to obtain the current state, dynamically refresh UI effects,and access drag data to determine whether to handle the drag operation.
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-dragController-class SpringLoadingContext--><!--Device-dragController-class SpringLoadingContext-End-->
+<!--Device-dragController-export class SpringLoadingContext--><!--Device-dragController-export class SpringLoadingContext-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
 
 ## abort
 
@@ -16,15 +22,13 @@
 abort(): void
 ```
 
-终止后续的悬停检测。本方法不会触发CANCEL状态通知，应用程序需要在执行本方法时进行状态清理。
+Aborts subsequent spring loading triggers.Note: Aborting does not trigger a CANCEL notification, the application must handle state cleanup when aborting.
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SpringLoadingContext-abort(): void--><!--Device-SpringLoadingContext-abort(): void-End-->
 
@@ -36,15 +40,13 @@ abort(): void
 updateConfiguration(config: DragSpringLoadingConfiguration): void
 ```
 
-更新悬停检测的配置，仅在悬停检测状态为BEGIN时生效。应用程序通常在绑定[onDragSpringLoading]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_时设置悬停检测配置或使用默认配置。该方法不会修改绑定时的原始配置，而是在后续悬停检测中更新动态的配置信息。请谨慎使用本方法，因为不同的拖拽数据类型可能需要不同的UX时间。
+Updates the spring loading configuration for the current trigger. Only effective during the BEGIN state.This method does not modify the original configuration set during onDragSpringLoading binding.It provides an opportunity for dynamic configuration updates during the current trigger.Typically, applications should use default configurations or set them once during binding.Use this method sparingly, e.g., for different drag data types requiring varied UX timing.
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SpringLoadingContext-updateConfiguration(config: DragSpringLoadingConfiguration): void--><!--Device-SpringLoadingContext-updateConfiguration(config: DragSpringLoadingConfiguration): void-End-->
 
@@ -54,7 +56,7 @@ updateConfiguration(config: DragSpringLoadingConfiguration): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 悬停检测配置。 |
+| config | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | 是 |  |
 
 ## currentConfig
 
@@ -62,18 +64,15 @@ updateConfiguration(config: DragSpringLoadingConfiguration): void
 currentConfig?: DragSpringLoadingConfiguration
 ```
 
-当前回调中的配置信息，当悬停检测状态为CANCEL时缺失，为undefined时取  
-[DragSpringLoadingConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_默认值。
+Current spring loading configuration. Absent when the state is CANCEL.
 
-**类型：** DragSpringLoadingConfiguration
+**类型：** [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md)
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SpringLoadingContext-currentConfig?: DragSpringLoadingConfiguration--><!--Device-SpringLoadingContext-currentConfig?: DragSpringLoadingConfiguration-End-->
 
@@ -82,22 +81,20 @@ currentConfig?: DragSpringLoadingConfiguration
 ## currentNotifySequence
 
 ```TypeScript
-currentNotifySequence: number
+currentNotifySequence: int
 ```
 
-在一次悬停检测流转中的回调通知次数，从0开始。
+Sequence number of the current spring loading state notification. Begins at 0 for BEGIN and increments with each callback.
 
-**类型：** number
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SpringLoadingContext-currentNotifySequence: number--><!--Device-SpringLoadingContext-currentNotifySequence: number-End-->
+<!--Device-SpringLoadingContext-currentNotifySequence: int--><!--Device-SpringLoadingContext-currentNotifySequence: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,17 +104,15 @@ currentNotifySequence: number
 dragInfos?: SpringLoadingDragInfos
 ```
 
-拖拽信息，当悬停检测状态为CANCEL时缺失，为undefined时取[SpringLoadingDragInfos]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_默认值。
+Drag-related information. Absent when the state is CANCEL.
 
-**类型：** SpringLoadingDragInfos
+**类型：** [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md)
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SpringLoadingContext-dragInfos?: SpringLoadingDragInfos--><!--Device-SpringLoadingContext-dragInfos?: SpringLoadingDragInfos-End-->
 
@@ -129,17 +124,15 @@ dragInfos?: SpringLoadingDragInfos
 state: DragSpringLoadingState
 ```
 
-当前悬停检测的状态。
+Current spring loading state. Refer to the DragSpringLoadingState enum for details.
 
-**类型：** DragSpringLoadingState
+**类型：** [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md)
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SpringLoadingContext-state: DragSpringLoadingState--><!--Device-SpringLoadingContext-state: DragSpringLoadingState-End-->
 

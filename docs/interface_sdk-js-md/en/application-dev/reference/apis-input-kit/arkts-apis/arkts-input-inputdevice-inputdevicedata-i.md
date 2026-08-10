@@ -1,6 +1,6 @@
 # InputDeviceData
 
-Provides information about an input device.
+描述输入设备的信息。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ Provides information about an input device.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
+## Modules to Import
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## axisRanges
 
 ```TypeScript
 axisRanges: Array<AxisRange>
 ```
 
-Axis information of the input device.
+输入设备的轴信息。
 
 **Type:** Array&lt;AxisRange&gt;
 
@@ -34,9 +40,9 @@ Axis information of the input device.
 bus: int
 ```
 
-Bus type of the input device. By default, the bus type reported by the input device prevails.
+输入设备的总线类型，该值以输入设备上报为准。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -52,9 +58,9 @@ Bus type of the input device. By default, the bus type reported by the input dev
 id: int
 ```
 
-Unique ID of the input device. If a physical device is repeatedly plugged and unplugged, its ID may change.
+输入设备的唯一标识，同一个物理设备反复插拔，设备ID可能会发生变化。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -70,9 +76,9 @@ Unique ID of the input device. If a physical device is repeatedly plugged and un
 isLocal?: boolean
 ```
 
-Whether the input device is a local device.
+输入设备是否为本地设备。
 
-The value **true** indicates that the device is a local device, and the value **false** indicates that the device is a non-local device.
+true表示是本地设备，false表示是非本地设备。
 
 **Type:** boolean
 
@@ -90,9 +96,9 @@ The value **true** indicates that the device is a local device, and the value **
 isVirtual?: boolean
 ```
 
-Whether the input device is a virtual device.
+输入设备是否为虚拟设备。
 
-The value **true** indicates that the device is a virtual device, and the value **false** indicates that the device is a non-virtual device.
+true表示是虚拟设备，false表示是非虚拟设备。
 
 **Type:** boolean
 
@@ -110,7 +116,7 @@ The value **true** indicates that the device is a virtual device, and the value 
 name: string
 ```
 
-Name of the input device.
+输入设备的名称。
 
 **Type:** string
 
@@ -128,7 +134,7 @@ Name of the input device.
 phys: string
 ```
 
-Physical address of the input device.
+输入设备的物理地址。
 
 **Type:** string
 
@@ -146,9 +152,9 @@ Physical address of the input device.
 product: int
 ```
 
-Product information of the input device.
+输入设备的产品信息。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -164,7 +170,7 @@ Product information of the input device.
 sources: Array<SourceType>
 ```
 
-Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
+输入设备的输入能力。包括键盘、鼠标、触摸屏、轨迹球、触控板、操纵杆等。
 
 **Type:** Array&lt;SourceType&gt;
 
@@ -182,7 +188,7 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 uniq: string
 ```
 
-Unique ID of the input device.
+输入设备的唯一标识。
 
 **Type:** string
 
@@ -200,9 +206,9 @@ Unique ID of the input device.
 vendor: int
 ```
 
-Vendor information of the input device.
+输入设备的厂商信息。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -218,9 +224,9 @@ Vendor information of the input device.
 version: int
 ```
 
-Version information of the input device.
+输入设备的版本信息。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

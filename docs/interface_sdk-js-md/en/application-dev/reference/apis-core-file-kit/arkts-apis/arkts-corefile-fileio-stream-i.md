@@ -1,9 +1,7 @@
 # Stream
 
-Provides APIs for stream operations, such as reading and writing data streams of files. After using an API of the  
-**Stream** class, you need to call **close** to close the file stream. Before calling an API of the  
-**Stream** class, you need to create a **Stream** instance by using  
-[fileIo.createStream]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [fileIo.fdopenStream]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过[fileIo.createStream](arkts-corefile-fileio-createstream-f.md#createstream)方法或者  
+[fileIo.fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream)（同步或异步）来构建一个Stream实例。
 
 **Since:** 23
 
@@ -13,13 +11,19 @@ Provides APIs for stream operations, such as reading and writing data streams of
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## close
 
 ```TypeScript
 close(): Promise<void>
 ```
 
-Closes the file stream. After the stream is closed, it cannot be used for read or write operations.This API uses a promise to return the result.
+关闭文件流，关闭后不可再用于读写等操作。使用Promise异步回调。
 
 **Since:** 23
 
@@ -33,7 +37,7 @@ Closes the file stream. After the stream is closed, it cannot be used for read o
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
@@ -52,7 +56,7 @@ Closes the file stream. After the stream is closed, it cannot be used for read o
 close(callback: AsyncCallback<void>): void
 ```
 
-Closes the file stream. After the stream is closed, it cannot be used for read or write operations. This API uses an asynchronous callback to return the result.
+关闭文件流，关闭后不可再用于读写等操作。使用callback异步回调。
 
 **Since:** 23
 
@@ -66,7 +70,7 @@ Closes the file stream. After the stream is closed, it cannot be used for read o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the file stream is closed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当关闭文件流成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
@@ -85,7 +89,7 @@ Closes the file stream. After the stream is closed, it cannot be used for read o
 closeSync(): void
 ```
 
-Closes the file stream synchronously. After the stream is closed, it cannot be used for read or write operations.
+同步关闭文件流，关闭后不可再用于读写等操作。
 
 **Since:** 23
 
@@ -112,7 +116,7 @@ Closes the file stream synchronously. After the stream is closed, it cannot be u
 flush(): Promise<void>
 ```
 
-Flushes all data from this stream. This API uses a promise to return the result.
+刷新文件流。使用Promise异步回调。
 
 **Since:** 23
 
@@ -126,23 +130,23 @@ Flushes all data from this stream. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## flush
@@ -151,7 +155,7 @@ Flushes all data from this stream. This API uses a promise to return the result.
 flush(callback: AsyncCallback<void>): void
 ```
 
-Flushes the file stream. This API returns the result asynchronously. This API uses an asynchronous callback to return the result.
+异步刷新文件流。使用callback异步回调。
 
 **Since:** 23
 
@@ -165,23 +169,23 @@ Flushes the file stream. This API returns the result asynchronously. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the file stream is refreshed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当刷新文件流成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## flushSync
@@ -190,7 +194,7 @@ Flushes the file stream. This API returns the result asynchronously. This API us
 flushSync(): void
 ```
 
-Flushes the file stream. This API returns the result synchronously.
+同步刷新文件流。
 
 **Since:** 23
 
@@ -204,17 +208,17 @@ Flushes the file stream. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## read
@@ -226,7 +230,7 @@ read(
   ): Promise<long>
 ```
 
-Reads data from a stream file and returns the number of bytes read. This API uses a promise to return the result.
+从流文件读取数据，返回实际读取的字节数。使用Promise异步回调。
 
 **Since:** 23
 
@@ -240,29 +244,29 @@ Reads data from a stream file and returns the number of bytes read. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. |
+| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | Promise used to return the data read, in bytes. |
+| Promise&lt;long&gt; | Promise对象，返回读取的结果，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900044 | Network is unreachable |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable |
 
 ## read
 
@@ -270,7 +274,7 @@ Reads data from a stream file and returns the number of bytes read. This API use
 read(buffer: ArrayBuffer, callback: AsyncCallback<long>): void
 ```
 
-Reads data from a stream file and returns the number of bytes read. This API uses an asynchronous callback to return the result.
+从流文件读取数据，返回实际读取的字节数。使用callback异步回调。
 
 **Since:** 23
 
@@ -284,21 +288,21 @@ Reads data from a stream file and returns the number of bytes read. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the data read, in bytes. |
+| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回读取的结果，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
 
 ## read
@@ -311,7 +315,7 @@ read(
   ): void
 ```
 
-Reads data from a stream file and returns the number of bytes read. The read options can be configured. This API uses an asynchronous callback to return the result.
+从流文件读取数据，支持配置读取选项，返回实际读取的字节数。使用callback异步回调。
 
 **Since:** 23
 
@@ -325,22 +329,22 @@ Reads data from a stream file and returns the number of bytes read. The read opt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the data read, in bytes. |
+| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回读取的结果，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
 
 ## readSync
@@ -352,7 +356,7 @@ readSync(
   ): long
 ```
 
-Reads data from a stream file synchronously and returns the number of bytes read.
+以同步方法从流文件读取数据，返回实际读取的字节数。
 
 **Since:** 23
 
@@ -366,29 +370,29 @@ Reads data from a stream file synchronously and returns the number of bytes read
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。&lt;br/&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | Length of the data read, in bytes. |
+| long | 实际读取的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900044 | Network is unreachable |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable |
 
 ## write
 
@@ -399,7 +403,7 @@ write(
   ): Promise<long>
 ```
 
-Writes data to a stream file and returns the number of bytes written.This API uses a promise to return the result.
+将数据写入流文件，返回实际写入的字节数。使用Promise异步回调。
 
 **Since:** 23
 
@@ -413,30 +417,30 @@ Writes data to a stream file and returns the number of bytes written.This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to write, in bytes. The default value is the buffer length. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
+| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效， 表示数据的编码方式，默认 'utf-8'。仅支持 'utf-8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | Promise used to return the length of the data written, in bytes. |
+| Promise&lt;long&gt; | Promise对象，返回实际写入的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## write
@@ -445,7 +449,7 @@ Writes data to a stream file and returns the number of bytes written.This API us
 write(buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void
 ```
 
-Writes data to a stream file and returns the number of bytes written. This API uses an asynchronous callback to return the result.
+将数据写入流文件，返回实际写入的字节数。使用callback异步回调。
 
 **Since:** 23
 
@@ -459,24 +463,24 @@ Writes data to a stream file and returns the number of bytes written. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
+| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回实际写入的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## write
@@ -489,7 +493,7 @@ write(
   ): void
 ```
 
-Writes data to a stream file and returns the number of bytes written. The write options can be configured.This API uses an asynchronous callback to return the result.
+将数据写入流文件，支持配置写入选项，返回实际写入的字节数。使用callback异步回调。
 
 **Since:** 23
 
@@ -503,25 +507,25 @@ Writes data to a stream file and returns the number of bytes written. The write 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
+| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式， 默认 'utf-8'。仅支持 'utf-8'。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回实际写入的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## writeSync
@@ -533,7 +537,7 @@ writeSync(
   ): long
 ```
 
-Writes data to a stream file synchronously and returns the number of bytes written.
+以同步方法将数据写入流文件，返回实际写入的字节数。
 
 **Since:** 23
 
@@ -547,29 +551,29 @@ Writes data to a stream file synchronously and returns the number of bytes writt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
+| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式， 默认 'utf-8'。仅支持 'utf-8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | Length of the data written in the file, in bytes. |
+| long | 实际写入的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 

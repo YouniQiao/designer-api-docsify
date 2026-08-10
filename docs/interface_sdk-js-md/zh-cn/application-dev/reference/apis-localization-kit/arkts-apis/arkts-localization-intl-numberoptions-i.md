@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
+
 ## compactDisplay
 
 ```TypeScript
@@ -20,7 +26,7 @@ compactDisplay?: string
 
 默认值：short。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表18](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -40,7 +46,7 @@ compactDisplay?: string
 currency?: string
 ```
 
-货币单位（需设置style为currency）， 取值符合\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，如："EUR"，"CNY"，"USD"等。
+货币单位（需设置style为currency）， 取值符合[ISO-4217标准](https://www.iso.org/iso-4217-currency-codes.html)，如："EUR"，"CNY"，"USD"等。
 
 从API version 12开始支持三位数字代码，如："978"，"156"，"840"等。
 
@@ -66,7 +72,7 @@ currencyDisplay?: string
 
 默认值：symbol。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表20](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -90,7 +96,7 @@ currencySign?: string
 
 默认值：standard。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表19](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -158,7 +164,7 @@ maximumFractionDigits?: int
 
 默认值：3。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表13](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** int
 
@@ -182,7 +188,7 @@ maximumSignificantDigits?: int
 
 默认值：21。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表15](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** int
 
@@ -206,7 +212,7 @@ minimumFractionDigits?: int
 
 默认值：0。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表12](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** int
 
@@ -230,7 +236,7 @@ minimumIntegerDigits?: int
 
 默认值：1。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表11](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** int
 
@@ -254,7 +260,7 @@ minimumSignificantDigits?: int
 
 默认值：1。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表14](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** int
 
@@ -278,7 +284,7 @@ notation?: string
 
 默认值：standard。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表17](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -484,7 +490,7 @@ unitDisplay?: string
 
 默认值：short。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表21](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -508,7 +514,7 @@ unitUsage?: string
 
 默认值：default。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表22](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -532,7 +538,7 @@ true表示分组显示，false表示不分组显示。
 
 默认值：true。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表16](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** boolean
 

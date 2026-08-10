@@ -1,6 +1,6 @@
 # RepeatItem
 
-Construct a new type for each item.
+数据项类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Construct a new type for each item.
 index: number
 ```
 
-Index corresponding to the current data item.
+当前数据项对应的索引。
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Index corresponding to the current data item.
 item: T
 ```
 
-Each data item in the **arr** array. **T** indicates the data type passed in.
+arr中每一个数据项。T为开发者传入的数据类型。
 
 **Type:** T
 

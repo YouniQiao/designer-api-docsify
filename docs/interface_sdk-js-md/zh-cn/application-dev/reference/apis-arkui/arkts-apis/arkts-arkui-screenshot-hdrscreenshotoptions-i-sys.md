@@ -12,15 +12,21 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
 displayId?: long
 ```
 
-表示截取图像的显示设备[Display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的ID号，该参数应为整数。默认为0。
+表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，该参数应为整数。默认为0。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **默认值：** The ID of the current display. The value is a positive integer greater than or equal to 0.
 
@@ -42,7 +48,7 @@ displayIntent?: DisplayIntentType
 
 截取图像的显示类型。
 
-**类型：** DisplayIntentType
+**类型：** [DisplayIntentType](arkts-arkui-screenshot-displayintenttype-e-sys.md)
 
 **默认值：** DisplayIntentType.CANONICAL
 
@@ -87,7 +93,7 @@ isNotificationNeeded?: boolean
 ```
 
 表示截取图像之后是否发送截屏通知，true表示发送截屏通知，false表示不发送截屏通知，默认值为true。截屏通知可以通过  
-[captureStatusChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口监听。
+[captureStatusChange](@ohos.display:display.on(type: 'captureStatusChange', callback: Callback&lt;boolean&gt;))接口监听。
 
 **类型：** boolean
 

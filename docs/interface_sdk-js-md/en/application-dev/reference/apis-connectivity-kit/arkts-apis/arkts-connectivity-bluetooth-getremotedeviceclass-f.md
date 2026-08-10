@@ -1,5 +1,11 @@
 # getRemoteDeviceClass
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getRemoteDeviceClass
 
 ```TypeScript
@@ -32,9 +38,9 @@ Obtains the class of a peer Bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The class of the remote device, { |
+| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | The class of the remote device, { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let remoteDeviceClass : bluetooth.DeviceClass = bluetooth.getRemoteDeviceClass("XX:XX:XX:XX:XX:XX");

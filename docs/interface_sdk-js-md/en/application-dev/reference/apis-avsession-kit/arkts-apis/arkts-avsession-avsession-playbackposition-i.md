@@ -1,6 +1,6 @@
 # PlaybackPosition
 
-Playback position definition
+媒体播放位置的相关属性。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Playback position definition
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## elapsedTime
 
 ```TypeScript
 elapsedTime: long
 ```
 
-Elapsed time(position) of this media set by the app, described by milliseconds.
+已用时间，单位毫秒（ms）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Elapsed time(position) of this media set by the app, described by milliseconds.
 updateTime: long
 ```
 
-Record the system time when elapsedTime is set, described by milliseconds.
+更新时间，单位毫秒（ms）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 

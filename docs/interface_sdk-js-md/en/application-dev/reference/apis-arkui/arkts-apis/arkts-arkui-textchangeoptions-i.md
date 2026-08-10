@@ -1,6 +1,6 @@
 # TextChangeOptions
 
-Provides information about the text before and after a change, including the selection ranges.
+文本变化相关信息，包括变化前后的选区范围、变化前的文本内容等。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Provides information about the text before and after a change, including the sel
 oldContent: string
 ```
 
-Text content before the change.
+变化前的文本内容。
 
 **Type:** string
 
@@ -38,9 +38,9 @@ Text content before the change.
 oldPreviewText: PreviewText
 ```
 
-Preview text before the change.
+变化前的预上屏信息。
 
-**Type:** PreviewText
+**Type:** [PreviewText](arkts-arkui-previewtext-i.md)
 
 **Since:** 15
 
@@ -60,9 +60,9 @@ Preview text before the change.
 rangeAfter: TextRange
 ```
 
-Selection range after the change.
+变化后的选区范围。
 
-**Type:** TextRange
+**Type:** [TextRange](arkts-arkui-textrange-i.md)
 
 **Since:** 15
 
@@ -82,9 +82,9 @@ Selection range after the change.
 rangeBefore: TextRange
 ```
 
-Selection range before the change.
+变化前的选区范围。
 
-**Type:** TextRange
+**Type:** [TextRange](arkts-arkui-textrange-i.md)
 
 **Since:** 15
 

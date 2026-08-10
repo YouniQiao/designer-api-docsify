@@ -1,12 +1,18 @@
 # getMinWidth
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getMinWidth
 
 ```TypeScript
 function getMinWidth(callback: AsyncCallback<number>): void
 ```
 
-Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
+获取壁纸的最小宽度值。
 
 **Since:** 7
 
@@ -22,9 +28,9 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | the callback of getMinWidth. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -45,7 +51,7 @@ wallpaper.getMinWidth((error: BusinessError, data: Number) => {
 function getMinWidth(): Promise<number>
 ```
 
-Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
+获取壁纸的最小宽度值。
 
 **Since:** 7
 
@@ -61,9 +67,9 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | the promise returned by the function. |
+| Promise&lt;number&gt; | 壁纸的最小宽度值，单位是像素。如果返回值等于0，说明没有设置壁纸，调用者应该使用默认显示的宽度值代替。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

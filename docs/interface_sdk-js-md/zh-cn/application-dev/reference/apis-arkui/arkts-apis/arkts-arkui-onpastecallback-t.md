@@ -20,6 +20,6 @@ export type OnPasteCallback = (content: string, event: PasteEvent) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string | 是 | 粘贴的文本内容。  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用户自定义的粘贴事件。  |
+| content | string | 是 | 粘贴的文本内容。 |
+| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | 是 | 用户自定义的粘贴事件。 |
 

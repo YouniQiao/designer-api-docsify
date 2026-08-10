@@ -6,7 +6,7 @@
 declare function ftruncate(fd: number, len?: number): Promise<void>
 ```
 
-Truncates a file based on the file descriptor. This API uses a promise to return the result.
+基于文件描述符截断文件，使用Promise异步回调。
 
 **Since:** 7
 
@@ -24,14 +24,14 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to truncate. |
-| len | number | No | File length after truncation, in bytes. The default value is **0**. |
+| fd | number | Yes | 待截断文件的文件描述符。 |
+| len | number | No | 文件截断后的长度，单位为Byte。默认为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 
 ## ftruncate
@@ -40,7 +40,7 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 declare function ftruncate(fd: number, callback: AsyncCallback<void>): void
 ```
 
-Truncates a file based on the file descriptor. This API uses an asynchronous callback to return the result.
+基于文件描述符截断文件，使用callback异步回调。
 
 **Since:** 7
 
@@ -58,8 +58,8 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to truncate. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| fd | number | Yes | 待截断文件的文件描述符。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，本调用无返回值。 |
 
 
 ## ftruncate
@@ -68,7 +68,7 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void
 ```
 
-Truncates a file based on the file descriptor. This API uses an asynchronous callback to return the result.
+基于文件描述符截断文件，使用callback异步回调。
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to truncate. |
-| len | number | Yes | File length after truncation, in bytes. The default value is **0**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| fd | number | Yes | 待截断文件的文件描述符。 |
+| len | number | Yes | 文件截断后的长度，单位为Byte。默认为0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，本调用无返回值。 |
 

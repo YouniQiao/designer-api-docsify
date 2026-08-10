@@ -1,6 +1,13 @@
 # ImmersiveMode
 
-Enumerates the immersive modes of the input method.
+枚举，输入法沉浸模式。
+
+| 名称 | 值 | 说明 |  
+| ------------ | -- | ------------------ |  
+| NONE_IMMERSIVE | 0 | 不使用沉浸模式。 |  
+| IMMERSIVE | 1 | 沉浸模式，由输入法应用确定沉浸模式类型。 |  
+| LIGHT_IMMERSIVE | 2 | 浅色沉浸模式。 |  
+| DARK_IMMERSIVE | 3 | 深色沉浸模式。 |
 
 **Since:** 15
 
@@ -16,7 +23,7 @@ Enumerates the immersive modes of the input method.
 NONE_IMMERSIVE = 0
 ```
 
-Default immersive mode, the panel is not in immersive mode.
+不使用沉浸模式。
 
 **Since:** 15
 
@@ -32,7 +39,7 @@ Default immersive mode, the panel is not in immersive mode.
 IMMERSIVE
 ```
 
-Immersive mode of the input method.
+沉浸模式，由输入法应用确定沉浸模式类型。
 
 **Since:** 15
 
@@ -48,7 +55,7 @@ Immersive mode of the input method.
 LIGHT_IMMERSIVE
 ```
 
-Light immersive mode.
+浅色沉浸模式。
 
 **Since:** 15
 
@@ -64,7 +71,7 @@ Light immersive mode.
 DARK_IMMERSIVE
 ```
 
-Dark immersive mode.
+深色沉浸模式。
 
 **Since:** 15
 

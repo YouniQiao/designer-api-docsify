@@ -1,12 +1,18 @@
 # setProxyMode (System API)
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## setProxyMode
 
 ```TypeScript
 function setProxyMode(mode: ProxyMode): Promise<void>
 ```
 
-Set the proxy mode \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Set the proxy mode {@link ProxyMode}.
 
 **Since:** 20
 
@@ -24,7 +30,7 @@ Set the proxy mode \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the proxy mode. |
+| mode | [ProxyMode](arkts-network-connection-proxymode-e-sys.md) | Yes | Indicates the proxy mode. |
 
 **Return value:**
 
@@ -36,10 +42,10 @@ Set the proxy mode \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

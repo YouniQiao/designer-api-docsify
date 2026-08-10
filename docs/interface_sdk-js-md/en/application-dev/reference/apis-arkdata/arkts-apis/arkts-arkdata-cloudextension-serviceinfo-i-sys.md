@@ -1,6 +1,6 @@
 # ServiceInfo (System API)
 
-Represents the cloud service information.
+云服务信息
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents the cloud service information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## enableCloud
 
 ```TypeScript
 enableCloud: boolean
 ```
 
-Whether the cloud service is enabled. The value true means that the cloud service is enabled,and the value false means the opposite.
+表示是否启用了云服务。true表示启用云服务，false表示未启用
 
 **Type:** boolean
 
@@ -38,7 +44,7 @@ Whether the cloud service is enabled. The value true means that the cloud servic
 id: string
 ```
 
-Cloud account ID generated using SHA-256.
+使用哈希函数SHA256生成的云账号ID。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ Cloud account ID generated using SHA-256.
 remainingSpace: long
 ```
 
-Available account space on the server, in KB.
+服务器上账号的可用空间（KB）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 11
 
@@ -78,9 +84,9 @@ Available account space on the server, in KB.
 totalSpace: long
 ```
 
-Total account space on the server, in KB.
+服务器上账号的总空间（KB）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 11
 
@@ -98,9 +104,9 @@ Total account space on the server, in KB.
 user: int
 ```
 
-Current user ID of the device.
+设备的当前用户ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

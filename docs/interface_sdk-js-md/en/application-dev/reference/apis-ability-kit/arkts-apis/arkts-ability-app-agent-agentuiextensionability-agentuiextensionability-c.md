@@ -16,3 +16,9 @@ The class of agent UI extension ability. This class cannot be used in Harmony Ar
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { AgentUIExtensionAbility } from 'kits/@kit.AbilityKit';
+```
+

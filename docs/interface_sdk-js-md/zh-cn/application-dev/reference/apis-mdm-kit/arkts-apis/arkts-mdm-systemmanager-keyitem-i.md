@@ -1,6 +1,6 @@
 # KeyItem
 
-其他按键信息。当前[KeyCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_事件发生时，其他已被按下的按键信息。
+其他按键信息。当前[KeyCode](arkts-mdm-systemmanager-keycode-e.md)事件发生时，其他已被按下的按键信息。
 
 **起始版本：** 23
 
@@ -9,6 +9,12 @@
 <!--Device-systemManager-interface KeyItem--><!--Device-systemManager-interface KeyItem-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
 
 ## downTime
 
@@ -38,7 +44,7 @@ keyCode: KeyCode
 
 按键编码。
 
-**类型：** KeyCode
+**类型：** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
 
 **起始版本：** 23
 

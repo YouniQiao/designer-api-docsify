@@ -1,7 +1,7 @@
 # HistoryVersion
 
-端云文件历史版本信息，调用端云文件版本管理类[FileVersion]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的  
-[gethistoryversionlist]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法时，历史版本列表中的属性。
+端云文件历史版本信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md)的  
+[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist)方法时，历史版本列表中的属性。
 
 **起始版本：** 20
 
@@ -10,6 +10,12 @@
 <!--Device-cloudSync-interface HistoryVersion--><!--Device-cloudSync-interface HistoryVersion-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
 
 ## autoResolved
 
@@ -41,7 +47,7 @@ editedTime: long
 
 文件内容修改的时间戳，单位：ms。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 
@@ -59,7 +65,7 @@ fileSize: long
 
 文件大小，单位：Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 

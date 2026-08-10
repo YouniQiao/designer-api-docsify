@@ -1,12 +1,18 @@
 # unregisterChange
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## unregisterChange
 
 ```TypeScript
 function unregisterChange(uri: string): void
 ```
 
-Unsubscribes from the change of a file.
+取消订阅监听指定文件的变化通知。
 
 **Since:** 12
 
@@ -20,19 +26,19 @@ Unsubscribes from the change of a file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file to download. |
+| uri | string | Yes | 待下载文件uri。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory. |
-| 13900012 | Permission denied |
 | 14000002 | Invalid uri. |
+| 13900012 | Permission denied |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -41,9 +47,9 @@ let path = "/data/storage/el2/cloud/1.txt";
 let uri = fileUri.getUriFromPath(path);
 let onCallback1 = (changeData: cloudSync.ChangeData) => {
   if (changeData.type == cloudSync.NotifyType.NOTIFY_ADDED) {
-    // file had added, do something
+    // file has been added, do something
   } else if (changeData.type== cloudSync.NotifyType.NOTIFY_DELETED) {
-    // file had removed, do something
+    // file has been removed, do something
   }
 }
 cloudSync.registerChange(uri, false, onCallback1);

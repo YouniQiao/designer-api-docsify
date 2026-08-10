@@ -1,6 +1,6 @@
 # Panel
 
-划词面板对象，通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。
+划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。
 
 **起始版本：** 24
 
@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
+## 导入模块
+
+```TypeScript
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## hide
 
 ```TypeScript
 hide(): Promise<void>
 ```
 
-隐藏当前划词面板，与[show]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。使用Promise异步回调。如不主动调用，面板在失焦时会自动隐藏。
+隐藏当前划词面板，与[show](arkts-basicservices-selectionmanager-panel-i.md#show)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。如不主动调用，面板在失焦时会自动隐藏。
 
 **起始版本：** 24
 
@@ -36,12 +42,10 @@ hide(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -54,29 +58,17 @@ selectionPanel.hide().then(() => {
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 隐藏划词面板。selectionPanel为createPanel创建出的panel实例
-selectionPanel?.hide().then(() => {
-  console.info('Succeeded in hiding the panel.');
-}).catch((err) => {
-  console.error(`Failed to hide panel. Error code: ${err.code}, error message: ${err.message}`);
-});
-```
-
 ## moveTo
 
 ```TypeScript
 moveTo(x: int, y: int): Promise<void>
 ```
 
-移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取到Panel实例后调用。使用Promise异步回调。
-    **说明：**  
-    
-    从API version 20开始支持，从API version 24开始废弃。
+移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 20开始支持，从API version 24开始废弃。
 
 **起始版本：** 20
 
@@ -107,10 +99,10 @@ moveTo(x: int, y: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -139,7 +131,7 @@ ArkTS-Sta:
 moveToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
-移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取到Panel实例后调用。使用Promise异步回调。
+移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -155,8 +147,8 @@ moveToGlobalDisplay(x: int, y: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标位置在屏幕全局坐标系下的x轴坐标，单位为px。全局坐标系以主屏幕左上角为原点，x轴正方向向右；扩展屏的x坐标视屏幕布局可能为负值。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标位置在屏幕全局坐标系下的y轴坐标，单位为px。全局坐标系以主屏幕左上角为原点，y轴正方向向下；扩展屏的y坐标视屏幕布局可能为负值。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标位置在屏幕全局坐标系下的x轴坐标，单位为px。全局坐标系以主屏幕左上角为原点，x轴正方向向右；扩展屏的x坐标视屏幕布局可能为负值。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标位置在屏幕全局坐标系下的y轴坐标，单位为px。全局坐标系以主屏幕左上角为原点，y轴正方向向下；扩展屏的y坐标视屏幕布局可能为负值。 |
 
 **返回值：**
 
@@ -168,12 +160,10 @@ moveToGlobalDisplay(x: int, y: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -190,30 +180,13 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 移动划词面板至屏幕指定位置。selectionPanel为createPanel创建出的panel实例
-  selectionPanel?.moveToGlobalDisplay(200, 200).then(() => {
-    console.info('Succeeded in moving the panel.');
-  }).catch((err) => {
-    console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
-
 ## off('destroyed')
 
 ```TypeScript
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-取消订阅划词面板销毁事件，与[on('destroyed')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。
+取消订阅划词面板销毁事件，与[on('destroyed')](selectionManager.Panel.on(type: 'destroyed', callback: Callback&lt;void&gt;))搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -228,9 +201,9 @@ off(type: 'destroyed', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'destroyed' | 是 | 取消订阅的事件类型，固定取值为'destroyed'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -247,8 +220,8 @@ try {
 off(type: 'hidden', callback?: Callback<void>): void
 ```
 
-取消订阅划词面板隐藏事件，与[on('hidden')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。
+取消订阅划词面板隐藏事件，与[on('hidden')](selectionManager.Panel.on(type: 'hidden', callback: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -263,9 +236,9 @@ off(type: 'hidden', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hidden' | 是 | 取消订阅的事件类型，固定取值为'hidden'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -282,8 +255,8 @@ try {
 offDestroy(callback?: Callback<void>): void
 ```
 
-取消订阅划词面板销毁事件，与[onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。
+取消订阅划词面板销毁事件，与[onDestroy](selectionManager.Panel.onDestroy(callback: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -299,20 +272,7 @@ offDestroy(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onDestroy方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
-
-**示例：**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 取消订阅划词面板销毁事件。selectionPanel为createPanel创建出的panel实例
-  selectionPanel?.offDestroy();
-} catch (err) {
-  console.error(`Failed to unregister destroyed. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onDestroy方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
 ## offHide
 
@@ -320,8 +280,8 @@ try {
 offHide(callback?: Callback<void>): void
 ```
 
-取消订阅划词面板隐藏事件，与[onHide]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。
+取消订阅划词面板隐藏事件，与[onHide](selectionManager.Panel.onHide(callback: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -337,20 +297,7 @@ offHide(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onHide方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
-
-**示例：**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 取消订阅划词面板隐藏事件。selectionPanel为createPanel创建出的panel实例
-  selectionPanel?.offHide();
-} catch (err) {
-  console.error(`Failed to unregister hidden. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onHide方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
 ## on('destroyed')
 
@@ -358,7 +305,7 @@ try {
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-订阅划词面板销毁事件，与[off('destroyed')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。
+订阅划词面板销毁事件，与[off('destroyed')](selectionManager.Panel.off(type: 'destroyed', callback?: Callback&lt;void&gt;))搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -373,9 +320,9 @@ on(type: 'destroyed', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'destroyed' | 是 | 设置监听类型，固定取值为'destroyed'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，调用[destroyPanel]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_销毁面板时触发。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel)销毁面板时触发。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -394,8 +341,8 @@ try {
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-订阅划词面板隐藏事件，与[off('hidden')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。面板调用  
-[hide]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_隐藏或失焦自动隐藏时触发该事件。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_获取到Panel实例后调用。
+订阅划词面板隐藏事件，与[off('hidden')](selectionManager.Panel.off(type: 'hidden', callback?: Callback&lt;void&gt;))搭配使用。面板调用  
+[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -410,9 +357,9 @@ on(type: 'hidden', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hidden' | 是 | 设置监听类型，固定取值为'hidden'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_主动隐藏，或在失焦时自动隐藏。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)主动隐藏，或在失焦时自动隐藏。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
@@ -431,8 +378,8 @@ try {
 onDestroy(callback: Callback<void>): void
 ```
 
-订阅划词面板销毁事件，与[offDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。
+订阅划词面板销毁事件，与[offDestroy](selectionManager.Panel.offDestroy(callback?: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -448,22 +395,7 @@ onDestroy(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，调用[destroyPanel]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_销毁面板时触发。 |
-
-**示例：**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 订阅划词面板销毁事件。selectionPanel为createPanel创建出的panel实例
-  selectionPanel?.onDestroy(() => {
-    console.info('Panel has been destroyed.');
-  });
-} catch (err) {
-  console.error(`Failed to register destroyed callback. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel)销毁面板时触发。 |
 
 ## onHide
 
@@ -471,8 +403,8 @@ try {
 onHide(callback: Callback<void>): void
 ```
 
-订阅划词面板隐藏事件，与[offHide]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。
+订阅划词面板隐藏事件，与[offHide](selectionManager.Panel.offHide(callback?: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -488,22 +420,7 @@ onHide(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_主动隐藏，或在失焦时自动隐藏。 |
-
-**示例：**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 订阅划词面板隐藏事件。selectionPanel为createPanel创建出的panel实例
-  selectionPanel?.onHide(() => {
-    console.info('Panel has been hidden.');
-  });
-} catch (err) {
-  console.error(`Failed to register hidden callback. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)主动隐藏，或在失焦时自动隐藏。 |
 
 ## setUiContent
 
@@ -511,7 +428,7 @@ try {
 setUiContent(path: string): Promise<void>
 ```
 
-为当前的划词面板设置界面内容，例如展示翻译结果、搜索建议或自定义操作按钮等。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取到Panel实例后调用。使用Promise异步回调。
+为当前的划词面板设置界面内容，例如展示翻译结果、搜索建议或自定义操作按钮等。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -527,7 +444,7 @@ setUiContent(path: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 要加载到面板中的页面内容的路径，Stage模型下该路径需添加到工程的resources/base/profile/main\_\_\_ESCAPED\_UNDERSCORE\_\_\_pages.json文件中，不支持FA模型。 |
+| path | string | 是 | 要加载到面板中的页面内容的路径，Stage模型下该路径需添加到工程的resources/base/profile/main_pages.json文件中，不支持FA模型。 |
 
 **返回值：**
 
@@ -539,12 +456,10 @@ setUiContent(path: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -561,30 +476,13 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 为划词面板加载页面内容。selectionPanel为createPanel创建出的panel实例
-  selectionPanel?.setUiContent('pages/Index').then(() => {
-    console.info('Succeeded in setting the content.');
-  }).catch((err) => {
-    console.error(`Failed to setUiContent. Error code: ${err.code}, error message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to setUiContent. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
-
 ## show
 
 ```TypeScript
 show(): Promise<void>
 ```
 
-显示划词面板，与[hide]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_搭配使用。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取到Panel实例后调用。使用Promise异步回调。
+显示划词面板，与[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -606,12 +504,10 @@ show(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -624,26 +520,13 @@ selectionPanel.show().then(() => {
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 显示划词面板。selectionPanel为createPanel创建出的panel实例
-selectionPanel?.show().then(() => {
-  console.info('Succeeded in showing the panel.');
-}).catch((err) => {
-  console.error(`Failed to show panel. Error code: ${err.code}, error message: ${err.message}`);
-});
-```
-
 ## startMoving
 
 ```TypeScript
 startMoving(): Promise<void>
 ```
 
-设置划词面板可随鼠标、触控板或触屏拖动移动位置，指针释放后自动停止移动。需通过[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取到Panel实例后调用。使用Promise异步回调。该接口需在onTouch的回调函数中调用，并且事件类型为TouchType.Down。
+设置划词面板可随鼠标、触控板或触屏拖动移动位置，指针释放后自动停止移动。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。该接口需在onTouch的回调函数中调用，并且事件类型为TouchType.Down。
 
 **起始版本：** 24
 
@@ -665,12 +548,10 @@ startMoving(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -688,31 +569,6 @@ RelativeContainer() {
       selectionPanel.startMoving().then(() => {
         console.info('Succeeded in startMoving the panel.');
       }).catch((err: BusinessError) => {
-        console.error(`Failed to startMoving panel. Error code: ${err.code}, error message: ${err.message}`);
-      });
-    }
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 此代码需放置在ArkUI页面组件的build()方法中，RelativeContainer为ArkUI内置组件，TouchEvent和TouchType为ArkUI框架内置类型
-RelativeContainer() {
-  /* 
-   * 页面布局内容，需要开发者根据实际补充
-   */
-}
-.onTouch((event: TouchEvent) => {
-  if (event.type === TouchType.Down) {
-    if (selectionPanel !== undefined) {
-      // 使划词面板可随鼠标、触控板或触屏拖动移动位置。selectionPanel为createPanel创建出的panel实例
-      selectionPanel?.startMoving().then(() => {
-        console.info('Succeeded in startMoving the panel.');
-      }).catch((err) => {
         console.error(`Failed to startMoving panel. Error code: ${err.code}, error message: ${err.message}`);
       });
     }

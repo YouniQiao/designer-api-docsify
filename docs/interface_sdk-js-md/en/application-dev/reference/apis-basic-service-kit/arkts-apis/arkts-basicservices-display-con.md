@@ -8,7 +8,7 @@ const ANIMATOR_DURATION_SCALE: string
 
 Indicates the scaling factor for the animation duration.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This affects the start delay and duration of all such animations. If the value is {@code 0},the animation ends immediately. The default value is {@code 1}.
+&lt;p&gt;This affects the start delay and duration of all such animations. If the value is {@code 0},the animation ends immediately. The default value is {@code 1}.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ const AUTO_SCREEN_BRIGHTNESS: string
 
 Specifies whether automatic screen brightness adjustment is enabled.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is {@code 1}, automatic adjustment is enabled. If the value is {@code 0}, automatic adjustment is disabled.
+&lt;p&gt;If the value is {@code 1}, automatic adjustment is enabled. If the value is {@code 0}, automatic adjustment is disabled.
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ Specifies whether automatic screen brightness adjustment is enabled.
 const AUTO_SCREEN_BRIGHTNESS_MODE: int
 ```
 
-Indicates the value of {@code AUTO\_SCREEN\_BRIGHTNESS} when automatic screen brightness adjustment is used.
+Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when automatic screen brightness adjustment is used.
 
 **Since:** 7
 
@@ -62,9 +62,9 @@ const DEFAULT_SCREEN_ROTATION: string
 
 Indicates the screen rotation when no other policy is available.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available:
+&lt;p&gt;This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available:
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_{@code 0} - The screen rotates 0 degrees.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_{@code 1} - The screen rotates 90 degrees.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_{@code 2} - The screen rotates 180 degrees.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_{@code 3} - The screen rotates 270 degrees.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_
+&lt;ul&gt;&lt;li&gt;{@code 0} - The screen rotates 0 degrees.&lt;li&gt;{@code 1} - The screen rotates 90 degrees.&lt;li&gt;{@code 2} - The screen rotates 180 degrees.&lt;li&gt;{@code 3} - The screen rotates 270 degrees.&lt;/ul&gt;
 
 **Since:** 7
 
@@ -84,7 +84,7 @@ const DISPLAY_INVERSION_STATUS: string
 
 Specifies whether display color inversion is enabled.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is {@code 1}, display color inversion is enabled. If the value is {@code 0}, display color inversion is disabled.
+&lt;p&gt;If the value is {@code 1}, display color inversion is enabled. If the value is {@code 0}, display color inversion is disabled.
 
 **Since:** 7
 
@@ -118,7 +118,7 @@ Indicates the scaling factor of fonts, which is a float number.
 const MANUAL_SCREEN_BRIGHTNESS_MODE: int
 ```
 
-Indicates the value of {@code AUTO\_SCREEN\_BRIGHTNESS} when manual screen brightness adjustment is used.
+Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when manual screen brightness adjustment is used.
 
 **Since:** 7
 

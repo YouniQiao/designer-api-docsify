@@ -28,8 +28,8 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通知订阅对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 取消订阅动作回调函数。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 取消订阅动作回调函数。 |
 
 
 ## unsubscribe
@@ -60,7 +60,7 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通知订阅对象。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
 
 **返回值：**
 

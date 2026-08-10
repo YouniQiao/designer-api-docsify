@@ -1,5 +1,11 @@
 # cancelSession (System API)
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## cancelSession
 
 ```TypeScript
@@ -24,9 +30,9 @@ Cancel session can be used in the1.after the response to "ES9+.AuthenticateClien
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the card slot index number. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number. |
 | transactionId | string | Yes | The transaction ID returned by SM-DP+ server. |
-| cancelReason | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The cancel reason. |
+| cancelReason | [CancelReason](arkts-telephony-esim-cancelreason-e-sys.md) | Yes | The cancel reason. |
 
 **Return value:**
 
@@ -38,14 +44,14 @@ Cancel session can be used in the1.after the response to "ES9+.AuthenticateClien
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
-| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 3120002 | System internal error. |
+| 3120001 | Service connection failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

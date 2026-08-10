@@ -1,5 +1,11 @@
 # on（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## on('receiveImage')
 
 ```TypeScript
@@ -27,23 +33,25 @@ function on(type: 'receiveImage', sessionId: number,
 | --- | --- | --- | --- |
 | type | 'receiveImage' | 是 | 事件注册类型，'receiveImage'。 |
 | sessionId | number | 是 | 协同会话ID。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EventCallbackInfo&gt; | 是 | 用于处理('receiveImage')事件的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | 是 | 用于处理('receiveImage')事件的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
+// sessionId需通过协同会话创建接口获取
+let sessionId = 100;
 // 注册receiveImage事件监听
-abilityConnectionManager.on("receiveImage", sessionId, (callbackInfo) => {
+abilityConnectionManager.on('receiveImage', sessionId, (callbackInfo) => {
   hilog.info(0x0000, 'testTag', 'session receiveImage, sessionId is', callbackInfo.sessionId);
 });
 ```
@@ -76,16 +84,16 @@ function on(type: 'collaborateEvent', sessionId: number,
 | --- | --- | --- | --- |
 | type | 'collaborateEvent' | 是 | 事件注册类型，'collaborateEvent'。 |
 | sessionId | number | 是 | 协同会话ID。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CollaborateEventInfo&gt; | 是 | 错误事件回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CollaborateEventInfo&gt; | 是 | 错误事件回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
@@ -94,7 +102,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 // sessionId需通过协同会话创建接口获取
 let sessionId = 100;
 // 注册collaborateEvent事件监听
-abilityConnectionManager.on("collaborateEvent", sessionId, (callbackInfo) => {
+abilityConnectionManager.on('collaborateEvent', sessionId, (callbackInfo) => {
   hilog.info(0x0000, 'testTag', 'session collaborateEvent, eventType is', callbackInfo.eventType);
 });
 ```

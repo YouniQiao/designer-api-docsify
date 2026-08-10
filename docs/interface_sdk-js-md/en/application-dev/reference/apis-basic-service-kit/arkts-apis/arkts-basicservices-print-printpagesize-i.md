@@ -1,6 +1,6 @@
 # PrintPageSize
 
-Defines the size of the printed page.
+定义打印页面尺寸的接口。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Defines the size of the printed page.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Page height, in millimeters.
+表示页面高度，单位：毫米。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -34,7 +40,7 @@ Page height, in millimeters.
 id: string
 ```
 
-Paper size ID.
+表示纸张类型ID。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Paper size ID.
 name: string
 ```
 
-Paper size name.
+表示纸张类型名称。
 
 **Type:** string
 
@@ -70,9 +76,9 @@ Paper size name.
 width: int
 ```
 
-Page width, in millimeters.
+表示页面宽度，单位：毫米。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

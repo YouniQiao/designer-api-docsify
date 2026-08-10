@@ -1,5 +1,11 @@
 # getState
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getState
 
 ```TypeScript
@@ -26,9 +32,9 @@ Obtains the Bluetooth status of a device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Bluetooth status, which can be { |
+| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) | Returns the Bluetooth status, which can be { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let state : bluetooth.BluetoothState = bluetooth.getState();

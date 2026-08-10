@@ -1,10 +1,10 @@
 # FirewallRule
 
-Represents a firewall rule.
+防火墙过滤规则。
 
-In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
+API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-[LogType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported since API version 23.
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
 **Since:** 12
 
@@ -14,21 +14,25 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
+
 ## action
 
 ```TypeScript
 action?: Action
 ```
 
-Action to take, that is, receive or discard the data packets.
+接收或者丢弃数据包。
 
-This parameter is mandatory when a firewall filtering rule is added.
+添加防火墙过滤规则时必填；
 
-This parameter is optional when a firewall is removed. If this parameter is left empty, all  
-[Action]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ chains are cleared, and **srcAddr**, **destAddr**, **srcPort**,  
-**destPort**, and **appUid** must be also left empty.
+移除防火墙时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**Type:** Action
+**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **Since:** 12
 
@@ -46,7 +50,7 @@ This parameter is optional when a firewall is removed. If this parameter is left
 appUid?: string
 ```
 
-UID of the application.
+应用uid。
 
 **Type:** string
 
@@ -66,8 +70,7 @@ UID of the application.
 destAddr?: string
 ```
 
-Destination IP address. An IP address segment, for example, **192.168.0.0/22** or **192.168.1.100-192.168.1.200**  
-is supported.
+ip目标地址。支持IP段，例如：192.168.0.0/22或者192.168.1.100-192.168.1.200
 
 **Type:** string
 
@@ -87,7 +90,7 @@ is supported.
 destPort?: string
 ```
 
-Destination port.
+目标端口。
 
 **Type:** string
 
@@ -107,15 +110,13 @@ Destination port.
 direction?: Direction
 ```
 
-Direction chains to which the rule applies.
+规则链。
 
-This parameter is mandatory when a firewall filtering rule is added.
+添加防火墙过滤规则时必填；
 
-This parameter is optional when a firewall is removed. If this parameter is left empty, all  
-[Direction]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ chains are cleared, and **srcAddr**, **destAddr**, **srcPort**,  
-**destPort**, and **appUid** must be also left empty.
+移除防火墙时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**Type:** Direction
+**Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 12
 
@@ -133,7 +134,7 @@ This parameter is optional when a firewall is removed. If this parameter is left
 family?: number
 ```
 
-IP protocol version. The value can be **1** (IPv4) or **2** (IPv6).
+IP协议版本。支持取值为1或2，取值为1表示IPv4，取值为2表示IPv6。
 
 **Type:** number
 
@@ -153,15 +154,15 @@ IP protocol version. The value can be **1** (IPv4) or **2** (IPv6).
 logType?: LogType
 ```
 
-Log type. Currently, only **NFLOG** is supported. This parameter applies only to PCs/2-in-1 devices.
+日志类型，当前仅支持配置NFLOG类型，该参数仅支持PC/2in1设备。
 
-When adding a firewall filter rule, this parameter is optional. If configured, it only takes effect when data packets are dropped or rejected.
+添加防火墙过滤规则时，此参数非必填。若填写，仅在丢弃或拒绝数据包时生效。
 
-When removing firewall filter rules, this parameter is optional if a chain is cleared. The clearing of the entire chain is not affected. When removing a single rule, the value of this parameter must be the same as that of the rule. Otherwise, the filter rule may have been removed, but logs are still recorded. When removing the same filter rule, you must remove the rule in the sequence in which the rule is added.
+移除防火墙过滤规则时，当清空某条链时非必填，不影响整条链的清空；当移除单条规则时，是否填写必须与该规则一致，否则可能导致过滤规则已经移除，但是日志还在记录的问题；相同过滤规则移除时必须按添加时的顺序移除。
 
-When obtaining firewall filter rules, the **logType** field can be obtained only when logs take effect.
+获取防火墙过滤规则时，仅日志生效的场景可以获取到logType字段。
 
-**Type:** LogType
+**Type:** [LogType](arkts-mdm-networkmanager-logtype-e.md)
 
 **Since:** 23
 
@@ -179,9 +180,9 @@ When obtaining firewall filter rules, the **logType** field can be obtained only
 protocol?: Protocol
 ```
 
-Network protocol. If the value is **ALL** or **ICMP**, the settings of **srcPort** and **destPort** are invalid.
+网络协议。当值为ALL或者ICMP时，设置srcPort与destPort无效。
 
-**Type:** Protocol
+**Type:** [Protocol](../../apis-network-kit/arkts-apis/arkts-network-socket-protocol-e.md)
 
 **Since:** 12
 
@@ -199,7 +200,7 @@ Network protocol. If the value is **ALL** or **ICMP**, the settings of **srcPort
 srcAddr?: string
 ```
 
-Source IP address. An IP address segment, for example, **192.168.0.0/22** or **192.168.1.100-192.168.1.200** is supported.
+ip源地址。支持IP段，例如：192.168.0.0/22或者192.168.1.100-192.168.1.200
 
 **Type:** string
 
@@ -219,7 +220,7 @@ Source IP address. An IP address segment, for example, **192.168.0.0/22** or **1
 srcPort?: string
 ```
 
-Source port.
+源端口。
 
 **Type:** string
 

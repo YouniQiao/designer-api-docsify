@@ -1,6 +1,6 @@
 # ImmersiveEffect
 
-Describes the immersive effect.
+沉浸效果。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the immersive effect.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## gradientHeight
 
 ```TypeScript
 gradientHeight: int
 ```
 
-Gradient height, which cannot exceed 15% of the screen height.
+渐变高度，不能超过屏幕高度的15%。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Gradient height, which cannot exceed 15% of the screen height.
 gradientMode: GradientMode
 ```
 
-Gradient mode. If this attribute is not specified or is set to an invalid value, the gradient mode is not used by default.
+渐变模式。
 
-**Type:** GradientMode
+**Type:** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
 **Since:** 20
 

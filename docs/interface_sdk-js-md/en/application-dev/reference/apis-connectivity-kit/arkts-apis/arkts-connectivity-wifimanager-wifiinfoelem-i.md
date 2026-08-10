@@ -10,6 +10,12 @@ Wi-Fi information elements.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## content
 
 ```TypeScript
@@ -36,7 +42,7 @@ eid: int
 
 Element id
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

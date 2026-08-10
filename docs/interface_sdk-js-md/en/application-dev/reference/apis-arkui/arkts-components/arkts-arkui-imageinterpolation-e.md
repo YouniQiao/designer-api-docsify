@@ -1,6 +1,6 @@
 # ImageInterpolation
 
-Interpolation effect of the image.
+图片的渲染模式。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Interpolation effect of the image.
 None
 ```
 
-Nearest neighbor interpolation.
+最近邻插值。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Nearest neighbor interpolation.
 Low
 ```
 
-Bilinear interpolation.
+Low usage of interpolated image data.
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ Bilinear interpolation.
 Medium
 ```
 
-MipMap interpolation.
+Interpolated image data is used moderately.
 
 **Since:** 7
 
@@ -76,7 +76,7 @@ MipMap interpolation.
 High
 ```
 
-Cubic interpolation. This mode produces scaled images of the highest possible quality, but may require more image rendering time.
+High usage of interpolated image data may affect the speed of image rendering.
 
 **Since:** 7
 

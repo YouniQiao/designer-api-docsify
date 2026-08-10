@@ -1,6 +1,6 @@
 # DelaySuspendInfo
 
-Provides the information about the suspension delay.
+延迟挂起信息。
 
 **Since:** 7
 
@@ -20,9 +20,9 @@ Provides the information about the suspension delay.
 actualDelayTime: number
 ```
 
-Actual suspension delay duration of the application, in milliseconds.
+应用的实际挂起延迟时间，单位：ms。
 
-The default duration is 180000 when the battery level is higher than or equal to the broadcast low battery level and 60000 when the battery level is lower than the broadcast low battery level.
+一般情况下默认值为180000，低电量（依据系统低电量广播）时默认值为60000。
 
 **Type:** number
 
@@ -44,7 +44,7 @@ The default duration is 180000 when the battery level is higher than or equal to
 requestId: number
 ```
 
-ID of the suspension delay request.
+延迟挂起的请求ID。
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # Website
 
-Defines a contact's website.
+联系人的网站信息类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's website.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## website
 
 ```TypeScript
 website: string
 ```
 
-Website that stores the contact information.
+联系人的网站。
 
 **Type:** string
 

@@ -1,5 +1,11 @@
 # disconnect (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disconnect
 
 ```TypeScript
@@ -30,7 +36,7 @@ Disconnect Wi-Fi network.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

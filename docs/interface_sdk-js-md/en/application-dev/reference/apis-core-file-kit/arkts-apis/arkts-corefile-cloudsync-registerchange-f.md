@@ -1,12 +1,18 @@
 # registerChange
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## registerChange
 
 ```TypeScript
 function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void
 ```
 
-Subscribes to the change of a file. The callback returns the changed data.
+订阅监听指定文件的变化通知。callback返回更改的数据。
 
 **Since:** 12
 
@@ -20,21 +26,21 @@ Subscribes to the change of a file. The callback returns the changed data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file to download. |
-| recursion | boolean | Yes | Whether to listen for the change of the URI, subfiles, and subdirectories. The value **true** means to listen for the change of the URI, subfiles, and subdirectories; the value **false** means to only listen for the change of the URI. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeData&gt; | Yes | Callback used to return the changed data. |
+| uri | string | Yes | 待下载文件uri。 |
+| recursion | boolean | Yes | true为监听该URI以及子文件和子目录，false为仅监听该URI文件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | Yes | 回调函数，返回更改的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory. |
-| 13900012 | Permission denied |
 | 14000002 | Invalid uri. |
+| 13900012 | Permission denied |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -43,9 +49,9 @@ let path = "/data/storage/el2/cloud/1.txt";
 let uri = fileUri.getUriFromPath(path);
 let onCallback1 = (changeData: cloudSync.ChangeData) => {
   if (changeData.type == cloudSync.NotifyType.NOTIFY_ADDED) {
-    // file had added, do something
+    // file has been added, do something
   } else if (changeData.type== cloudSync.NotifyType.NOTIFY_DELETED) {
-    // file had removed, do something
+    // file has been removed, do something
   }
 }
 cloudSync.registerChange(uri, false, onCallback1);

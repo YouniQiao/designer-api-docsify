@@ -1,12 +1,20 @@
 # invert
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## invert
 
 ```TypeScript
 function invert(): Matrix4Transit
 ```
 
-Inverts this matrix object.
+Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。
+
+> **说明：**
 
 **Since:** 7
 
@@ -14,7 +22,7 @@ Inverts this matrix object.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
+**Substitutes:** [matrix4.Matrix4Transit.invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
 
 <!--Device-matrix4-function invert(): Matrix4Transit--><!--Device-matrix4-function invert(): Matrix4Transit-End-->
 
@@ -24,5 +32,5 @@ Inverts this matrix object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Inverse matrix object of the current matrix. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的逆矩阵对象。 |
 

@@ -10,6 +10,12 @@ Provides methods to operate or manage Connected Tag.
 
 **System capability:** SystemCapability.Communication.ConnectedTag
 
+## Modules to Import
+
+```TypeScript
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions
@@ -18,7 +24,7 @@ Provides methods to operate or manage Connected Tag.
 | --- | --- |
 | [init](arkts-connectivity-connectedtag-init-f.md#init) | Initializes Connected Tag. |
 | [initialize](arkts-connectivity-connectedtag-initialize-f.md#initialize) | Initializes the connected NFC tag. |
-| [off](arkts-connectivity-connectedtag-off-f.md#off) | Unsubscribes NFC RF status change events.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_All callback functions will be unregistered If there is no specific callback parameter.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| [off](arkts-connectivity-connectedtag-off-f.md#off) | Unsubscribes NFC RF status change events.&lt;p&gt;All callback functions will be unregistered If there is no specific callback parameter.&lt;/p&gt; |
 | [on](arkts-connectivity-connectedtag-on-f.md#on) | Subscribes NFC RF status change events. |
 | [read](arkts-connectivity-connectedtag-read-f.md#read) | Reads the NDEF data from the connected NFC tag. |
 | [read](arkts-connectivity-connectedtag-read-f.md#read-1) | Reads the NDEF data from the connected NFC tag. |

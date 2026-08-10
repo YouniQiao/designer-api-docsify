@@ -10,6 +10,12 @@ Defines TCP port states of system network.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## tcpLocalIp
 
 ```TypeScript
@@ -38,7 +44,7 @@ tcpLocalPort: int
 
 Local port of the TCP network.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -58,7 +64,7 @@ tcpPid: int
 
 PID of the TCP network.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -98,7 +104,7 @@ tcpRemotePort: int
 
 Remote port of the TCP network.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -118,7 +124,7 @@ tcpState: TcpState
 
 Port state of the TCP network.
 
-**Type:** TcpState
+**Type:** [TcpState](arkts-network-connection-tcpstate-e.md)
 
 **Since:** 24
 
@@ -138,7 +144,7 @@ tcpUid: int
 
 UID of the TCP network.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

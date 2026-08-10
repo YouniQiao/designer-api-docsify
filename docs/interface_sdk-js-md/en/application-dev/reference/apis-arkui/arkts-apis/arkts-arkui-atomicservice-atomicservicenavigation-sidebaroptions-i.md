@@ -1,6 +1,6 @@
 # SideBarOptions
 
-Defines sidebar options.
+侧边栏的功能选项。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Defines sidebar options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+```
+
 ## onChange
 
 ```TypeScript
 onChange?: Callback<boolean>
 ```
 
-Side bar status change callback.
+侧边栏显示隐藏回调。
 
-**Type:** Callback&lt;boolean&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
 **Since:** 18
 
@@ -36,9 +42,9 @@ Side bar status change callback.
 sideBarBackground?: ResourceColor
 ```
 
-Side bar Background.
+设置侧边栏的背景颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
 
@@ -56,9 +62,9 @@ Side bar Background.
 sideBarIcon?: Resource | SymbolGlyphModifier
 ```
 
-Side bar icon.
+侧边栏的展开图标。
 
-**Type:** Resource \| SymbolGlyphModifier
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier
 
 **Default:** $r('sys.symbol.open_sidebar')
 

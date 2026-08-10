@@ -22,5 +22,5 @@ Anonymous Object Rectification
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前设备与悬停状态相关的参数，包括设备的折叠状态、 悬停状态、应用方向以及窗口模式枚举。  |
+| param | [HoverEventParam](../arkts-components/arkts-arkui-hovereventparam-i.md) | 是 | 当前设备与悬停状态相关的参数，包括设备的折叠状态、 悬停状态、应用方向以及窗口模式枚举。 |
 

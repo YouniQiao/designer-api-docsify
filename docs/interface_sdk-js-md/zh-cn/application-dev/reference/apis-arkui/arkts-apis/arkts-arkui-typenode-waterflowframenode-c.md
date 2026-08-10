@@ -34,11 +34,11 @@ abstract initialize(options?: WaterFlowOptions): WaterFlowAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | WaterFlow节点的选项。 |
+| options | [WaterFlowOptions](../arkts-components/arkts-arkui-waterflowoptions-i.md) | 否 | WaterFlow节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) |  |
 

@@ -1,6 +1,6 @@
 # DoNotDisturbType (System API)
 
-Defines the DND time type.
+免打扰设置的时间类型。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Defines the DND time type.
 TYPE_NONE = 0
 ```
 
-Non-DND.
+非通知勿扰类型。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Non-DND.
 TYPE_ONCE = 1
 ```
 
-One-shot DND at the specified time segment (only considering the hour and minute).
+以设置时间段(只看小时和分钟)一次执行勿扰。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ One-shot DND at the specified time segment (only considering the hour and minute
 TYPE_DAILY = 2
 ```
 
-Daily DND at the specified time segment (only considering the hour and minute).
+以设置时间段(只看小时和分钟)每天执行勿扰。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Daily DND at the specified time segment (only considering the hour and minute).
 TYPE_CLEARLY = 3
 ```
 
-DND at the specified time segment (with the hour, day, and month specified).
+以设置时间段(明确月日时)执行勿扰。
 
 **Since:** 9
 

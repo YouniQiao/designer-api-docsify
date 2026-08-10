@@ -10,6 +10,12 @@ AlbumPickerOptions Object
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## filterType
 
 ```TypeScript
@@ -36,7 +42,7 @@ The type of the content displayed in the album
 public fontSize?: int | string
 ```
 
-The size of the font displayed in the album. When \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ is an int type, must use 'fp' unit
+The size of the font displayed in the album. When `fontSize` is an int type, must use 'fp' unit
 
 **Type:** int \| string
 
@@ -58,7 +64,7 @@ public themeColorMode?: PickerColorMode
 
 AlbumPickerComponent theme color
 
-**Type:** PickerColorMode
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.0.0
 

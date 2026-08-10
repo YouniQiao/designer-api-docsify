@@ -1,6 +1,6 @@
 # GeomagneticResponse
 
-Describes a geomagnetic response object.
+设置地磁响应对象，用于描述指定地理位置的地磁场信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Describes a geomagnetic response object.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## deflectionAngle
 
 ```TypeScript
 deflectionAngle: double
 ```
 
-Magnetic declination, which is the angle between true north (geographic north) and the magnetic north (the horizontal component of the field), in degrees.
+磁偏角，即地磁北方向与正北方向在水平面上的角度。单位：degree（度）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -34,9 +40,9 @@ Magnetic declination, which is the angle between true north (geographic north) a
 geomagneticDip: double
 ```
 
-Magnetic dip, also called magnetic inclination, which is the angle measured from the horizontal plane to the magnetic field vector, in degrees.
+磁倾角，即地球磁场线与水平面的夹角。单位：degree（度）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -52,9 +58,9 @@ Magnetic dip, also called magnetic inclination, which is the angle measured from
 levelIntensity: double
 ```
 
-Horizontal intensity of the magnetic field vector field, in nT.
+水平磁场强度，即地磁场在水平面上的总强度。单位：nT（纳特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -70,9 +76,9 @@ Horizontal intensity of the magnetic field vector field, in nT.
 totalIntensity: double
 ```
 
-Total intensity of the magnetic field vector, in nT.
+总磁场强度，即地磁场三维空间的总强度。单位：nT（纳特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -88,9 +94,9 @@ Total intensity of the magnetic field vector, in nT.
 x: double
 ```
 
-North component of the geomagnetic field, in nT.
+地磁场X方向分量（北分量）。单位：nT（纳特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -106,9 +112,9 @@ North component of the geomagnetic field, in nT.
 y: double
 ```
 
-East component of the geomagnetic field, in nT.
+地磁场Y方向分量（东分量）。单位：nT（纳特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -124,9 +130,9 @@ East component of the geomagnetic field, in nT.
 z: double
 ```
 
-Vertical component of the geomagnetic field, in nT.
+地磁场Z方向分量（垂直分量）。单位：nT（纳特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

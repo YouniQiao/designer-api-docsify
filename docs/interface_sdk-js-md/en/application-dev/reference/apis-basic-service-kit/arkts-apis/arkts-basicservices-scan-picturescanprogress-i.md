@@ -1,6 +1,6 @@
 # PictureScanProgress
 
-Defines the progress of scanning pictures.
+定义图片扫描进度的接口。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Defines the progress of scanning pictures.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isFinal
 
 ```TypeScript
 isFinal: boolean
 ```
 
-Whether the picture is the last one to be scanned. The value **true** indicates that the picture is the last one to be scanned, and **false** indicates that the picture is not the last one.
+是否是本次扫描的最后一张图片。true表示是最后一张图片，false表示不是最后一张图片。
 
 **Type:** boolean
 
@@ -34,9 +40,9 @@ Whether the picture is the last one to be scanned. The value **true** indicates 
 pictureFd: int
 ```
 
-File descriptor of the scanned picture.
+扫描图片的文件描述符。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -52,9 +58,9 @@ File descriptor of the scanned picture.
 progress: int
 ```
 
-Progress percentage, whose value ranges from 0 to 100. Unit: %
+当前进度百分比，范围从0~100。单位：百分比。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

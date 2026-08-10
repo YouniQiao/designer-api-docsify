@@ -1,6 +1,6 @@
 # CameraBufferCrop (System API)
 
-Camera buffer crop parameters.
+相机移轴裁剪参数。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Camera buffer crop parameters.
 bufferHeight: int
 ```
 
-Camera off-screen rendering buffer height.
+基准图高度，单位为像素。需确保传入图片的高度与实际图片高度一致，否则可能导致显示异常，如位置偏移。
 
 **Type:** int
 
@@ -42,7 +42,7 @@ Camera off-screen rendering buffer height.
 bufferWidth: int
 ```
 
-Camera off-screen rendering buffer width.
+基准图宽度，单位为像素。需确保传入图片的宽度与实际图片宽度一致，否则可能导致显示异常，如位置偏移。
 
 **Type:** int
 
@@ -66,9 +66,9 @@ Camera off-screen rendering buffer width.
 cropOffset: CropOffset
 ```
 
-Crop frame offset relative to buffer top-left corner.
+裁剪区域偏移量。
 
-**Type:** CropOffset
+**Type:** [CropOffset](arkts-arkui-cropoffset-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -90,7 +90,7 @@ Crop frame offset relative to buffer top-left corner.
 cropScale: double
 ```
 
-Crop frame scale relative to depth component size.
+裁剪区域缩放比例，裁剪区基础大小为DepthComponent组件大小。
 
 **Type:** double
 

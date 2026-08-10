@@ -1,12 +1,22 @@
 # concat
 
+## Modules to Import
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## concat
 
 ```TypeScript
 function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer
 ```
 
-Returns a new \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ which is the result of concatenating all the \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_instances in the \_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_ together.
+将数组中指定字节长度的内容复制并拼接后，返回新的FastBuffer对象。
+
+当数组中所有对象的长度总和大于totalLength时，返回结果的长度将被截断为totalLength。
+
+当数组中所有对象的长度总和小于totalLength时，返回结果的多余部分将会被填充为0。
 
 **Since:** 20
 
@@ -22,22 +32,22 @@ Returns a new \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ which is the result of conc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| list | FastBuffer[] \| Uint8Array[] | Yes | Array of FastBuffer or Uint8Array instances to concatenate |
-| totalLength | number | No | Total length of the FastBuffer instances when concatenated |
+| list | FastBuffer[] \| Uint8Array[] | Yes | 待拼接的FastBuffer或Uint8Array实例数组，数组中所有对象的内容将被依次复制到新的FastBuffer对象中。 |
+| totalLength | number | No | 需要复制的总字节长度，默认值为数组中所有对象的长度总和。取值范围：0 <= totalLength <= UINT32_MAX。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return a new allocated FastBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回新的FastBuffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

@@ -1,6 +1,6 @@
 # SelectionContainerMenuOptions
 
-Defines selection menu options for SelectionContainer.
+配置选择菜单中的选项。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Defines selection menu options for SelectionContainer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## onAppear
 
 ```TypeScript
 onAppear?: Callback<string>
 ```
 
-Called when the selection menu appears.The callback parameter is the selected text concatenated in the visual order of Text components.
+选择菜单出现时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
 
-**Type:** Callback&lt;string&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Called when the selection menu appears.The callback parameter is the selected te
 onDisappear?: Callback<void>
 ```
 
-Called when the selection menu disappears.
+选择菜单消失时触发。默认值为空，不触发该回调。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ Called when the selection menu disappears.
 onMenuHide?: Callback<string>
 ```
 
-Called when the selection menu is hidden.The callback parameter is the selected text concatenated in the visual order of Text components.
+选择菜单隐藏时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
 
-**Type:** Callback&lt;string&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -76,9 +82,9 @@ Called when the selection menu is hidden.The callback parameter is the selected 
 onMenuShow?: Callback<string>
 ```
 
-Called when the selection menu is displayed.The callback parameter is the selected text concatenated in the visual order of Text components.
+选择菜单显示时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
 
-**Type:** Callback&lt;string&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 
 **Since:** 26.0.0
 

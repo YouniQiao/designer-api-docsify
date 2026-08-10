@@ -1,22 +1,26 @@
 # enableSilentProxy
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## enableSilentProxy
 
 ```TypeScript
 function enableSilentProxy(context: Context, uri?: string): Promise<void>
 ```
 
-Enables silent access. This API uses a promise to return the result.
+开启静默访问。使用Promise异步回调。
 
-Observe the following when using this API:
+使用规则：
 
-- The data provider calls this API to enable silent access.  
-- Whether silent access is enabled is determined based on the return value of this API and the  
-**isSilentProxyEnable** field in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file together.  
-- If silent access is enabled for a URI using this API, the setting takes effect when the related  
-**datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the  
-**data\_share\_config.json** file is used to determine whether to enable silent access.
+- 数据提供方调用此接口，来开启静默访问功能。  
+- 此接口设置的开启结果在校验的时候是搭配data_share_config.json文件中isSilentProxyEnable字段进行工作的。支持的配置可参考  
+[data_share_config.json配置](../../../database/share-data-by-datashareextensionability-sys.md)。  
+- 此接口生效在调用datashareHelper相关接口过程中，如果此接口有开启过相关uri，那么会按照此接口的配置来开启静默访问。如果此接口未调用过，则会读取data_share_config.json中的配置来校验  
+Datashare的开启状态。
 
 **Since:** 11
 
@@ -32,24 +36,24 @@ Observe the following when using this API:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the application. |
-| uri | string | No | URI of the data, for which silent access is to be enabled.Global setting: If **uri** is **undefined** or **null** or is not specified, all the previous settings will be cleared and silent access will be enabled globally for the data provider.URI-specific setting: If a URI is specified, silent access to the specified URI will be enabled.When datashareHelper APIs are called, the URI-specific setting is preferentially applied. If no match is found, the global setting is applied.URI format: **datashare:///{bundleName}/{moduleName}/{storeName}/{tableName} |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用的上下文环境。 |
+| uri | string | No | 要开启的数据提供方的数据路径。&lt;br /&gt;1、全局开关状态：入参不带uri、uri为undefined、uri为null，会清空掉之前设置的所有uri开关状态，开启数据提供方静默访问 。&lt;br /&gt;2、精准开关状态：uri的入参为固定的值，仅开启该uri对应的静默访问。&lt;br /&gt;在调用datashareHelper相关接口时，优先精准匹配uri的开关状态。如果匹配不到，继续匹配全局的开关状态。&lt;br /&gt;uri格式：datashare:///{bundleName}/{moduleName}/{storeName}/{tableName} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 19 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| 15700011 | The URI does not exist. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -62,9 +66,9 @@ export default class EntryAbility extends UIAbility {
     dataShare.enableSilentProxy(context, uri).then(() => {
       console.info("enableSilentProxy succeed");
     }).catch((err: BusinessError) => {
-      console.error(`enableSilentProxy error: code: ${err.code}, message: ${err.message} `);
+      console.error(`Failed to enable silent proxy. Code: ${err.code}, message: ${err.message}`);
     });
-  };
-};
+  }
+}
 ```
 

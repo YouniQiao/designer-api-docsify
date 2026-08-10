@@ -1,13 +1,18 @@
 # disableGwpAsanGrayscale
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## disableGwpAsanGrayscale
 
 ```TypeScript
 function disableGwpAsanGrayscale(): void
 ```
 
-Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter  
-[GwpAsanOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+ֹͣʹ��GWP-ASan�����øýӿڽ�ȡ���Զ������ã��ָ�Ĭ�ϲ���GwpAsanOptions��
 
 **Since:** 20
 
@@ -17,11 +22,18 @@ Disables GWP-ASan. This API is used to cancel the custom configuration and resto
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { taskpool } from '@kit.ArkTS';
 
-hidebug.disableGwpAsanGrayscale();
+@Concurrent
+function disableGwpAsanTask(): void {
+  hidebug.disableGwpAsanGrayscale();
+}
+taskpool.execute(disableGwpAsanTask).then(() => {
+  console.info(`Disable GWP-ASan succeeded.`);
+})
 ```
 

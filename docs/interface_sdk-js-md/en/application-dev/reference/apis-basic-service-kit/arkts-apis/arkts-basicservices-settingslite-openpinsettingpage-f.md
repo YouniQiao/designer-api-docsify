@@ -1,5 +1,11 @@
 # openPinSettingPage
 
+## Modules to Import
+
+```TypeScript
+import { settingsLite } from 'kits/@kit.BasicServicesKit';
+```
+
 ## openPinSettingPage
 
 ```TypeScript

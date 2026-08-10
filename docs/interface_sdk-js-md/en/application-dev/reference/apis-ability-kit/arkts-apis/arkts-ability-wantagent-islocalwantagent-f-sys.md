@@ -1,12 +1,18 @@
 # isLocalWantAgent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
+
 ## isLocalWantAgent
 
 ```TypeScript
 function isLocalWantAgent(agent: WantAgent): boolean
 ```
 
-Checks whether the specified WantAgent is local.
+判断WantAgent实例是否为本地实例。
 
 **Since:** 20
 
@@ -24,7 +30,7 @@ Checks whether the specified WantAgent is local.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the WantAgent. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the WantAgent. |
 
 **Return value:**
 
@@ -36,9 +42,9 @@ Checks whether the specified WantAgent is local.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System app. Interface caller is not a system app. |
+| 202 | Not System app. Interface caller is not a system app. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wantAgent } from '@kit.AbilityKit';

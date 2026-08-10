@@ -10,6 +10,12 @@ Network Global Proxy Configuration Information.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## exclusionList
 
 ```TypeScript
@@ -76,7 +82,7 @@ port: int
 
 Host port.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

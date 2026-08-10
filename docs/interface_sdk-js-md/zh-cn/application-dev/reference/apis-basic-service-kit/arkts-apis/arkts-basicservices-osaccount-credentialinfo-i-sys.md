@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountId
 
 ```TypeScript
@@ -20,7 +26,7 @@ accountId?: int
 
 系统账号标识，默认为undefined。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -60,7 +66,7 @@ credSubType: AuthSubType
 
 指示凭据子类型。
 
-**类型：** AuthSubType
+**类型：** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
 **起始版本：** 8
 
@@ -80,7 +86,7 @@ credType: AuthType
 
 指示凭据类型。
 
-**类型：** AuthType
+**类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **起始版本：** 8
 

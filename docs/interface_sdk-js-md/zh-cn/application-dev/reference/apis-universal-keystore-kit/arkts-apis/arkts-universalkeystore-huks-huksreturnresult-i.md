@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## certChains
 
 ```TypeScript
@@ -37,7 +43,7 @@ outData?: Uint8Array
 ```
 
 表示  
-[initSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_操作之后获取到的challenge信息。默认为undefined。
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)操作之后获取到的challenge信息。默认为undefined。
 
 **类型：** Uint8Array
 
@@ -58,7 +64,7 @@ properties?: Array<HuksParam>
 ```
 
 表示  
-[initSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_操作之后获取到的challenge信息。默认为undefined。
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)操作之后获取到的challenge信息。默认为undefined。
 
 **类型：** Array&lt;HuksParam&gt;
 

@@ -1,5 +1,11 @@
 # getProfileConnState
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getProfileConnState
 
 ```TypeScript
@@ -26,15 +32,15 @@ Obtains the connection state of profile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The profile id. |
+| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | Yes | The profile id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the connection state. |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Returns the connection state. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let result : bluetooth.ProfileConnectionState = bluetooth.getProfileConnState(bluetooth.ProfileId.PROFILE_A2DP_SOURCE);

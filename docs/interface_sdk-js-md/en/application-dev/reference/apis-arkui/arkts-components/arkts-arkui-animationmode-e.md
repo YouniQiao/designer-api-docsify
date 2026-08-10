@@ -1,6 +1,6 @@
 # AnimationMode
 
-Enumerates the animation modes for switching between tabs.
+点击[TabBar](../arkts-apis/arkts-arkui-tabcontent-tabcontentattribute-i.md/arkts-arkui-tabcontent-tabcontentattribute-i.md#tabbar)页签时切换TabContent的动画形式枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the animation modes for switching between tabs.
 CONTENT_FIRST = 0
 ```
 
-Loads the content of the target page before starting the switching animation.
+先加载目标页内容，再开始切换动画。适用于需要先确保内容加载完成再展示动画的场景，可避免动画过程中出现空白内容，推荐用于内容加载较快、需要平滑过渡的场景。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Loads the content of the target page before starting the switching animation.
 ACTION_FIRST = 1
 ```
 
-Starts the switching animation before loading the content of the target page. This mode works only when neither the height or width of tabs is set to **auto**.
+先开始切换动画，再加载目标页内容；生效需要同时需要满足：Tabs的height、width没有设置成auto。适用于需要立即响应用户操作、快速开始动画的场景，推荐用于内容加载较慢但希望提供快速视觉反馈的场景。
 
 **Since:** 12
 
@@ -56,10 +56,9 @@ Starts the switching animation before loading the content of the target page. Th
 NO_ANIMATION = 2
 ```
 
-Disables the default switching animation. Note that this mode is ineffective when the **changeIndex** API of  
-**TabsController** is used to switch content.
+关闭默认动画。调用TabsController的[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)接口切换TabContent时该枚举值不生效。
 
-To disable the animation under this scenario, set **animationDuration** to **0**.
+可以通过设置[animationDuration](TabsAttribute#animationDuration)为0实现调用TabsController的changeIndex接口时不带动画。
 
 **Since:** 12
 
@@ -79,7 +78,7 @@ To disable the animation under this scenario, set **animationDuration** to **0**
 CONTENT_FIRST_WITH_JUMP = 3
 ```
 
-Loads the content of the target page first, then jumps to the vicinity of the target page without animation, and finally jumps to the target page with animation.
+先加载目标页内容，再无动画跳转到目标页附近，最后有动画跳转到目标页。
 
 **Since:** 15
 
@@ -99,7 +98,7 @@ Loads the content of the target page first, then jumps to the vicinity of the ta
 ACTION_FIRST_WITH_JUMP = 4
 ```
 
-Jumps to the vicinity of the target page without animation first, then jumps to the target page with animation, and finally loads the content of the target page. This mode works only when neither the height or width of tabs is set to **auto**.
+先无动画跳转到目标页附近，再有动画跳转到目标页，最后加载目标页内容。此项生效需要同时需要满足：Tabs的height、width没有设置成auto。
 
 **Since:** 15
 

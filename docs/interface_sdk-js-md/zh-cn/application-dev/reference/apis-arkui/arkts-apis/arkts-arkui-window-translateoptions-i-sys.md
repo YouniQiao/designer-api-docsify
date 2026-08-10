@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## x
 
 ```TypeScript
@@ -20,7 +26,7 @@ x?: double
 
 X轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ y?: double
 
 Y轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ z?: double
 
 Z轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 

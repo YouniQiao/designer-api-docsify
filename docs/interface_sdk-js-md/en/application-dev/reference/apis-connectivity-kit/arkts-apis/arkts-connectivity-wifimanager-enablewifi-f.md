@@ -1,5 +1,11 @@
 # enableWifi
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## enableWifi
 
 ```TypeScript
@@ -22,12 +28,12 @@ Enable Wi-Fi.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
-| [2501003](../errorcode-wifi.md#2501003-failed-to-open-the-service) | Operation failed because the service is being closed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 2501003 | Operation failed because the service is being closed. |
+| 2501000 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

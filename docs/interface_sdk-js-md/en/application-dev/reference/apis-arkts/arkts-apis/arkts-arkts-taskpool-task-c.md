@@ -1,6 +1,6 @@
 # Task
 
-Enumerates tasks, which can be executed for multiple times, placed in a task group, serial queue, or asynchronous queue for execution, or added with dependencies for execution.
+调用Task中的任何接口前必须先使用构造函数创建Task对象。任务可以多次执行，也可以放入任务组、串行队列或异步队列执行，还支持添加依赖关系。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## addDependency
 
 ```TypeScript
 addDependency(...tasks: Task[]): void
 ```
 
-Adds dependent tasks for this task. Before using this API, you must create a **Task** instance. The task and its dependent tasks cannot be a task in a task group, serial queue, or asynchronous queue, a task that has been executed, or a periodic task. A task with a dependency relationship (a task that depends on another task or a task that is depended on) cannot be executed multiple times.
+为当前任务添加对其他任务的依赖。使用该方法前需先构造**Task**实例。该任务和被依赖的任务不能是任务组任务、串行队列任务、异步队列任务、已执行任务或周期任务。存在依赖关系的任务（依赖其他任务的任务或被依赖的任务）执行后不可再次执行。
 
 **Since:** 11
 
@@ -32,17 +38,17 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tasks | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
+| tasks | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md)[] | Yes | 被依赖的任务数组。默认值为**undefined**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200026](../errorcode-utils.md#10200026-task-with-a-cyclic-dependency) | There is a circular dependency. |
-| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 10200026 | There is a circular dependency. |
+| 10200056 | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
+| 10200052 | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -81,7 +87,7 @@ taskpool.execute(task3).then(() => {
 constructor(func: Function, ...args: Object[])
 ```
 
-A constructor used to create a **Task** instance.
+Task的构造函数。
 
 **Since:** 9
 
@@ -97,16 +103,16 @@ A constructor used to create a **Task** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | Function to be executed. The function must be decorated using \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. For details about the supported return value types of the function, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is **undefined**. |
+| func | Function | Yes | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
+| args | Object[] | Yes | 任务执行函数的入参，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| 10200014 | The function is not marked as concurrent. |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -124,7 +130,7 @@ let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
 constructor(name: string, func: Function, ...args: Object[])
 ```
 
-A constructor used to create a **Task** instance, with the task name specified.
+Task的构造函数用于创建任务，并可指定任务名称。
 
 **Since:** 11
 
@@ -140,17 +146,17 @@ A constructor used to create a **Task** instance, with the task name specified.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Task name. |
-| func | Function | Yes | Function to be executed. The function must be decorated using \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. For details about the supported return value types of the function, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| args | Object[] | Yes | Arguments of the function. For details about the supported types, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is **undefined**. |
+| name | string | Yes | 任务名称。 |
+| func | Function | Yes | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
+| args | Object[] | Yes | 任务执行函数的入参。支持的类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| 10200014 | The function is not marked as concurrent. |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -170,7 +176,7 @@ let name: string = task.name;
 static isCanceled(): boolean
 ```
 
-Checks whether the running task is canceled. Before using this method, you need to create a **Task** object.
+检查当前正在运行的任务是否已取消。使用此方法前，需要先创建一个**Task**对象。
 
 **Since:** 10
 
@@ -186,9 +192,9 @@ Checks whether the running task is canceled. Before using this method, you need 
 
 | Type | Description |
 | --- | --- |
-| boolean | If the task is canceled, **true** is returned. Otherwise, **false** is returned. |
+| boolean | 如果当前正在运行的任务被取消返回**true**，否则返回**false**。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -240,7 +246,7 @@ taskpool.execute(task).then((res: Object) => {
 isDone(): boolean
 ```
 
-Checks whether the task is complete.
+检查任务是否已完成。
 
 **Since:** 12
 
@@ -256,9 +262,9 @@ Checks whether the task is complete.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the task is complete; otherwise, **false** is returned. |
+| boolean | 检查结果。任务执行完成时返回**true**，任务未执行完成时返回**false**。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -295,7 +301,7 @@ taskpoolCancel();
 onEnqueued(callback: CallbackFunction): void
 ```
 
-Register a callback function and call it when a task is enqueued.The registration must be carried out before the task is executed. Otherwise, an exception is thrown.
+注册回调函数，任务入队时将调用该函数。若任务执行前未注册回调函数，将抛出异常。
 
 **Since:** 12
 
@@ -311,15 +317,15 @@ Register a callback function and call it when a task is enqueued.The registratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback function to register. |
+| callback | [CallbackFunction](arkts-arkts-taskpool-callbackfunction-t.md) | Yes | 需注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
+| 10200034 | The executed task does not support the registration of listeners. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
@@ -348,7 +354,7 @@ taskpool.execute(task).then(() => {
 onExecutionFailed(callback: CallbackFunctionWithError): void
 ```
 
-Register a callback function and call it when a task fails to be executed(Periodic tasks are not supported).The registration must be carried out before the task is executed. Otherwise, an exception is thrown.
+注册一个回调函数，并在任务执行失败时调用它（周期任务不支持）。需在任务执行前注册，否则会抛异常。
 
 **Since:** 12
 
@@ -364,15 +370,15 @@ Register a callback function and call it when a task fails to be executed(Period
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback function to register. |
+| callback | [CallbackFunctionWithError](arkts-arkts-taskpool-callbackfunctionwitherror-t.md) | Yes | 需注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
+| 10200034 | The executed task does not support the registration of listeners. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
@@ -407,7 +413,7 @@ taskpool.execute(task2).then(() => {
 onExecutionSucceeded(callback: CallbackFunction): void
 ```
 
-Register a callback function and call it when a task is executed successfully.The registration must be carried out before the task is executed. Otherwise, an exception is thrown.
+注册一个回调函数，并在任务执行成功时调用它（周期任务不支持）。需在任务执行前注册，否则会抛异常。
 
 **Since:** 12
 
@@ -423,15 +429,15 @@ Register a callback function and call it when a task is executed successfully.Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback function to register. |
+| callback | [CallbackFunction](arkts-arkts-taskpool-callbackfunction-t.md) | Yes | 需注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
+| 10200034 | The executed task does not support the registration of listeners. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
@@ -460,7 +466,11 @@ taskpool.execute(task).then(() => {
 onReceiveData(callback?: Function): void
 ```
 
-Registers a callback for a task to receive and process data from the worker thread. Before using this API, you must create a Task instance.NOTE:If multiple callbacks are registered for the same task, only the last registration takes effect.
+为任务注册回调函数，接收并处理任务池工作线程的数据。使用此方法前，需构造Task。
+
+> **说明：**
+> 
+> 不支持为同一任务定义多种回调函数。如果多次赋值，只有最后一次赋值的回调函数会生效。
 
 **Since:** 11
 
@@ -476,9 +486,9 @@ Registers a callback for a task to receive and process data from the worker thre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Function | No | Callback function for processing the data received. The data sent to the host thread is transferred to the callback as an input parameter. If no value is passed in, all the registered callbacks are canceled. |
+| callback | Function | No | 处理数据的回调函数，发送到宿主线程的数据将会作为入参传入该回调函数。不传参可以取消注册的回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -511,7 +521,7 @@ testFunc();
 onStartExecution(callback: CallbackFunction): void
 ```
 
-Register a callback function and call it when the execution of a task starts.The registration must be carried out before the task is executed. Otherwise, an exception is thrown.
+注册回调函数，任务执行前将调用该函数。若任务执行前未注册回调函数，将抛出异常。
 
 **Since:** 12
 
@@ -527,15 +537,15 @@ Register a callback function and call it when the execution of a task starts.The
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback function to register. |
+| callback | [CallbackFunction](arkts-arkts-taskpool-callbackfunction-t.md) | Yes | 需注册的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
+| 10200034 | The executed task does not support the registration of listeners. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
@@ -564,7 +574,7 @@ taskpool.execute(task).then(() => {
 removeDependency(...tasks: Task[]): void
 ```
 
-Removes dependent tasks for this task. Before using this method, you need to construct a **Task** object.
+删除当前任务对其他任务的依赖。在使用该方法之前，需要先构造**Task**对象。
 
 **Since:** 11
 
@@ -580,17 +590,17 @@ Removes dependent tasks for this task. Before using this method, you need to con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tasks | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
+| tasks | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md)[] | Yes | 被依赖的任务数组。默认值为**undefined**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200027](../errorcode-utils.md#10200027-dependency-does-not-exist) | The dependency does not exist. |
-| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 10200027 | The dependency does not exist. |
+| 10200056 | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
+| 10200052 | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -633,19 +643,18 @@ taskpool.execute(task3).then(() => {
 static sendData(...args: Object[]): void
 ```
 
-Sends data to the host thread and triggers the registered callback. Before calling this method, you need to construct a **Task** object.
-    **NOTE**  
-    
-    - The API should be called in the TaskPool thread.  
-    
-    - Do not use this API in a callback function. Otherwise, messages may fail to be passed to the host thread.  
-    
-    - Do not use this API in an asynchronous function. Otherwise, messages may fail to be passed to the host  
-    thread. If this API is used in an asynchronous function, use **await** to ensure that the asynchronous function  
-    is executed synchronously in the task.  
-    
-    - Before calling this API, ensure that the callback function for processing data has been registered in the  
-    host thread.
+任务执行过程中向宿主线程发送消息并触发已注册的回调函数。使用此方法前需构造**Task**对象。
+
+> **说明：**
+> 
+> - 该接口应在taskpool的线程中调用。
+> 
+> - 避免在回调函数中调用该方法，否则可能导致消息无法传递到宿主线程。
+> 
+> - 避免在异步函数中调用该方法，否则可能导致消息无法传递到宿主线程。如果在异步函数中使用，
+> 则需要使用**await**来确保该异步函数在任务中同步执行完成。
+> 
+> - 调用该接口时，请确保处理数据的回调函数已在宿主线程注册。
 
 **Since:** 11
 
@@ -661,18 +670,18 @@ Sends data to the host thread and triggers the registered callback. Before calli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | Object[] | Yes | Data to be used as the argument of the registered callback. For details about the supported parameter types, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is **undefined**. |
+| args | Object[] | Yes | 作为已注册回调函数入参的数据，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200022](../errorcode-utils.md#10200022-functions-not-called-in-taskpool) | The function is not called in the TaskPool thread. |
-| [10200023](../errorcode-utils.md#10200023-functions-not-called-in-concurrent-functions) | The function is not called in the concurrent function. |
-| [10200024](../errorcode-utils.md#10200024-functions-not-registered-in-the-host-thread) | The callback is not registered on the host side. |
+| 10200024 | The callback is not registered on the host side. |
+| 10200023 | The function is not called in the concurrent function. |
+| 10200006 | An exception occurred during serialization. |
+| 10200022 | The function is not called in the TaskPool thread. |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -735,12 +744,12 @@ taskpoolTest();
 setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 ```
 
-Sets the task clone list. Before using this method, you need to construct a **Task** object.
-    **NOTE**  
-    
-    This API must be used together with the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. Otherwise, an exception is  
-    thrown. You are advised to use this decorator to avoid exceptions.
+设置任务的拷贝列表。在使用该方法前，需先构造**Task**对象。
+
+> **说明：**
+> 
+> 该接口需搭配
+> [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
 
 **Since:** 11
 
@@ -756,15 +765,15 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cloneList | Object[] \| ArrayBuffer[] | Yes |  The type of the passed-in array must be \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or ArrayBuffer.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- All \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instances or ArrayBuffer objects passed in to **cloneList** are transferred in copy mode between threads. This means that any modification to the destination objects does not affect the original objects. |
+| cloneList | Object[] \| ArrayBuffer[] | Yes | 传入数组的类型必须为 [Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)或ArrayBuffer。&lt;br&gt;- 所有传入 **cloneList**的[Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class)实例或ArrayBuffer类型对象， 在线程间传输的行为都会变成拷贝传递，即修改传输后的对象不会对原有对象产生任何影响。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
+| 10200029 | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // sendable.ets
@@ -899,13 +908,12 @@ struct Index {
 setTransferList(transfer?: ArrayBuffer[]): void
 ```
 
-Sets the task transfer list. Before using this API, you must create a **Task** instance. If this API is not called, the ArrayBuffer in the data is transferred by default.
-    **NOTE**  
-    
-    This API is used to set the task transfer list in the form of **ArrayBuffer** in the task pool. The  
-    **ArrayBuffer** instance does not copy the content in the task to the worker thread during transfer. Instead,  
-    it transfers the buffer control right to the worker thread. After the transfer, the **ArrayBuffer** instance  
-    becomes invalid. An empty **ArrayBuffer** will not be transferred.
+设置任务的传输列表。使用该方法前需要先构造**Task**。不调用该接口，则传给任务的数据中的ArrayBuffer默认transfer转移。
+
+> **说明：**
+> 
+> 此接口可以设置任务池中ArrayBuffer的transfer列表，transfer列表中的ArrayBuffer对象在传输时不会复制buffer内容到工作线程，
+> 而是转移buffer控制权至工作线程，传输后当前的ArrayBuffer失效。若ArrayBuffer为空，则不会transfer转移。
 
 **Since:** 10
 
@@ -921,15 +929,15 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transfer | ArrayBuffer[] | No | ArrayBuffer** instance holding the objects to transfer. The default value is an empty array. |
+| transfer | ArrayBuffer[] | No | 可传输对象是ArrayBuffer的实例对象，默认为空数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 10200029 | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -970,8 +978,7 @@ console.info("testTransfer view3 byteLength: " + view1.byteLength);
 arguments?: Object[]
 ```
 
-Arguments of the function. For details about the supported parameter types, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_This API can be used in atomic services since API version 11.
+创建任务传入函数所需的参数，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** Object[]
 
@@ -991,7 +998,7 @@ Arguments of the function. For details about the supported parameter types, see
 cpuDuration: number
 ```
 
-CPU time of the task. in ms. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 11.
+执行任务CPU耗时。单位为ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -1013,7 +1020,7 @@ CPU time of the task. in ms. You are advised not to change the value.\_\_\_HTML\
 function: Function
 ```
 
-Function to be passed in during task creation. For details about the supported return value types of the function, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_This API can be used in atomic services since API version 11.
+创建任务时需要传入的函数，支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** Function
 
@@ -1033,7 +1040,7 @@ Function to be passed in during task creation. For details about the supported r
 ioDuration: number
 ```
 
-Asynchronous I/O time of the task. in ms. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 11.
+执行任务异步IO耗时。单位为ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -1055,7 +1062,7 @@ Asynchronous I/O time of the task. in ms. You are advised not to change the valu
 name: string
 ```
 
-Name of the task specified when the task is created. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 11.
+创建任务时指定的任务名称。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 
@@ -1075,7 +1082,7 @@ Name of the task specified when the task is created. You are advised not to chan
 taskId: number
 ```
 
-Task ID, which is globally unique by default. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 18.
+任务的ID。任务的标识符，系统默认提供全局唯一值，不建议修改此值。&lt;br&gt;从API version 18开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -1097,7 +1104,7 @@ Task ID, which is globally unique by default. You are advised not to change the 
 totalDuration: number
 ```
 
-Total execution time of the task. in ms. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 11.
+执行任务总耗时。单位为ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 

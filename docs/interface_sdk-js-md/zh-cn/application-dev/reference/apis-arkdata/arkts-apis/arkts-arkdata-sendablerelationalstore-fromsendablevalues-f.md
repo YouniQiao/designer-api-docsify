@@ -1,5 +1,11 @@
 # fromSendableValues
 
+## 导入模块
+
+```TypeScript
+import { sendableRelationalStore } from 'kits/@kit.ArkData';
+```
+
 ## fromSendableValues
 
 ```TypeScript
@@ -26,15 +32,15 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 不可跨线程传递的数组数据。 |
+| [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | 不可跨线程传递的数组数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| 14800000 | Inner error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableRelationalStore } from '@kit.ArkData';

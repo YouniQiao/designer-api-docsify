@@ -1,6 +1,6 @@
 # PerfTest
 
-PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。
+PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。通过{@link create}创建实例。
 
 **起始版本：** 20
 
@@ -9,6 +9,12 @@ PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、
 <!--Device-unnamed-declare class PerfTest--><!--Device-unnamed-declare class PerfTest-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+## 导入模块
+
+```TypeScript
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
+```
 
 ## create
 
@@ -32,24 +38,24 @@ static create(strategy: PerfTestStrategy): PerfTest
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 性能测试执行策略。 |
+| strategy | [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | 是 | 性能测试执行策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回构造的PerfTest对象。 |
+| [PerfTest](arkts-test-test-perftest-perftest-c.md) | 返回构造的PerfTest对象，可用于执行测试任务、采集性能数据和获取测量结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32400001](../errorcode-perftest.md#32400001-初始化失败) | Initialization failed. |
-| [32400002](../errorcode-perftest.md#32400002-内部错误) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
-| [32400003](../errorcode-perftest.md#32400003-参数校验失败) | Parameter verification failed. |
-| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) | The API does not support concurrent calls. @static |
+| 32400007 | The API does not support concurrent calls. @static |
+| 32400002 | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| 32400003 | Parameter verification failed. |
+| 32400001 | Initialization failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -100,10 +106,10 @@ destroy(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32400002](../errorcode-perftest.md#32400002-内部错误) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
-| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) | The API does not support concurrent calls. |
+| 32400007 | The API does not support concurrent calls. |
+| 32400002 | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -115,13 +121,13 @@ async function demo() {
     for (let index = 0; index < 10000; index++) {
       num++;
     }
-    finish(true); // 调用finish回调函数，通知代码段执行结束，且执行符合预期
+    finish(true); // 调用finish回调函数，通知代码段执行结束，且执行符合预期。
   };
   let perfTestStrategy: PerfTestStrategy = {
     metrics: metrics,
     actionCode: actionCode
   };
-  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // 构造一个PerfTest对象，创建测试任务
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // 构造一个PerfTest对象，创建测试任务。
   await perfTest.run();
   perfTest.destroy(); // 销毁PerfTest对象。
 }
@@ -133,7 +139,7 @@ async function demo() {
 getMeasureResult(metric: PerfMetric): PerfMeasureResult
 ```
 
-获取指定性能指标的测量数据。
+获取指定性能指标的测量数据。需要在run()执行完成后调用，否则无法获取到有效的测量数据。
 
 **起始版本：** 20
 
@@ -149,24 +155,24 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metric | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 性能指标。 |
+| metric | [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | 是 | 性能指标。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  性能指标对应测量结果数据。 |
+| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | 性能指标对应测量结果数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32400002](../errorcode-perftest.md#32400002-内部错误) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
-| [32400003](../errorcode-perftest.md#32400003-参数校验失败) | Parameter verification failed. |
-| [32400006](../errorcode-perftest.md#32400006-无法获取性能数据) | Failed to obtain the measurement result. |
-| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) | The API does not support concurrent calls. |
+| 32400006 | Failed to obtain the measurement result. |
+| 32400007 | The API does not support concurrent calls. |
+| 32400002 | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| 32400003 | Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -178,13 +184,13 @@ async function demo() {
     for (let index = 0; index < 10000; index++) {
       num++;
     }
-    finish(true); // 调用finish回调函数，通知代码段执行结束，且执行符合预期
+    finish(true); // 调用finish回调函数，通知代码段执行结束，且执行符合预期。
   };
   let perfTestStrategy: PerfTestStrategy = {
     metrics: metrics,
     actionCode: actionCode
   };
-  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // 构造一个PerfTest对象，创建测试任务
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // 构造一个PerfTest对象，创建测试任务。
   await perfTest.run();
   let res = perfTest.getMeasureResult(PerfMetric.DURATION); // 获取指定性能指标的测量数据。
 }
@@ -218,11 +224,12 @@ run(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32400004](../errorcode-perftest.md#32400004-执行回调函数失败) | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
-| [32400005](../errorcode-perftest.md#32400005-采集性能数据失败) | Failed to collect metric data. |
-| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) | The API does not support concurrent calls. |
+| 32400007 | The API does not support concurrent calls. |
+| 32400004 | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
+| 32400005 | Failed to collect metric data. |
+| 32400002 | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -234,13 +241,13 @@ async function demo() {
     for (let index = 0; index < 10000; index++) {
       num++;
     }
-    finish(true); // 调用finish回调函数，通知代码段执行结束，且执行符合预期
+    finish(true); // 调用finish回调函数，通知代码段执行结束，且执行符合预期。
   };
   let perfTestStrategy: PerfTestStrategy = {
     metrics: metrics,
     actionCode: actionCode
   };
-  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // 构造一个PerfTest对象，创建测试任务
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // 构造一个PerfTest对象，创建测试任务。
   await perfTest.run(); // 运行性能测试。
 }
 ```

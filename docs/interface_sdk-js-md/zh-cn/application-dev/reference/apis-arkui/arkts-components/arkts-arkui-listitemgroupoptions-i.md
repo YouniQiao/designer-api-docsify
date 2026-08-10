@@ -22,7 +22,7 @@ footer?: CustomBuilder
 
 可以放单个子组件或不放子组件，不设置时无尾部组件。该参数的优先级低于参数footerComponent。即同时设置footer和footerComponent时，以footerComponent设置的值为准。
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 
@@ -48,7 +48,7 @@ footerComponent?: ComponentContent
 
 同一个footerComponent不推荐同时给不同的ListItemGroup使用，否则会导致显示问题。
 
-**类型：** ComponentContent
+**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
 **起始版本：** 13
 
@@ -76,7 +76,7 @@ footerStyle?: ListItemGroupHeaderFooterStyle
 
 设置为ListItemGroupHeaderFooterStyle.FLOATING时，尾部组件在滚动时悬浮显示。
 
-**类型：** ListItemGroupHeaderFooterStyle
+**类型：** [ListItemGroupHeaderFooterStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
 
 **默认值：** ListItemGroupHeaderFooterStyle.NONE
 
@@ -104,7 +104,7 @@ header?: CustomBuilder
 
 可以放单个子组件或不放子组件，不设置时无头部组件。该参数的优先级低于参数headerComponent。即同时设置header和headerComponent时，以headerComponent设置的值为准。
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 
@@ -130,7 +130,7 @@ headerComponent?: ComponentContent
 
 同一个headerComponent不推荐同时给不同的ListItemGroup使用，否则会导致显示问题。
 
-**类型：** ComponentContent
+**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
 **起始版本：** 13
 
@@ -158,7 +158,7 @@ headerStyle?: ListItemGroupHeaderFooterStyle
 
 设置为ListItemGroupHeaderFooterStyle.FLOATING时，头部组件在滚动时悬浮显示。
 
-**类型：** ListItemGroupHeaderFooterStyle
+**类型：** [ListItemGroupHeaderFooterStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
 
 **默认值：** ListItemGroupHeaderFooterStyle.NONE
 
@@ -220,7 +220,7 @@ spaceWidth?: Dimension
 
 设置为负数或者大于等于List内容区长度时，按默认值显示。如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 26.0.0
 
@@ -246,7 +246,7 @@ style?: ListItemGroupStyle
 
 设置为ListItemGroupStyle.NONE时无样式。
 
-设置为ListItemGroupStyle.CARD时，建议配合[ListItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的ListItemStyle.CARD同时使用，显示默认卡片样式。
+设置为ListItemGroupStyle.CARD时，建议配合[ListItem](./list_item)的ListItemStyle.CARD同时使用，显示默认卡片样式。
 
 卡片样式下，ListItemGroup默认规格：左右外边距12vp，上下左右内边距4vp。
 
@@ -255,9 +255,9 @@ style?: ListItemGroupStyle
 **说明：**
 
 当设置为ListItemGroupStyle.CARD时，List的listDirection属性值须为Axis.Vertical，如果设置为Axis.Horizontal，会导致显示混乱；List属性  
-[alignListItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_默认为ListItemAlign.Center，居中对齐显示。
+[alignListItem](../arkts-apis/arkts-arkui-list-listattribute-i.md/arkts-arkui-list-listattribute-i.md#alignlistitem)默认为ListItemAlign.Center，居中对齐显示。
 
-**类型：** ListItemGroupStyle
+**类型：** [ListItemGroupStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupstyle-e.md)
 
 **起始版本：** 10
 

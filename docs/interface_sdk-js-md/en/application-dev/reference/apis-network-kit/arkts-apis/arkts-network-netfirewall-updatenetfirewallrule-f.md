@@ -1,5 +1,11 @@
 # updateNetFirewallRule
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## updateNetFirewallRule
 
 ```TypeScript
@@ -22,7 +28,7 @@ Update a firewall rule.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Firewall rule. |
+| rule | [NetFirewallRule](arkts-network-netfirewall-netfirewallrule-i.md) | Yes | Firewall rule. |
 
 **Return value:**
 
@@ -34,20 +40,20 @@ Update a firewall rule.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) | The specified user does not exist. |
-| [29400002](../errorcode-net-netfirewall.md#29400002-number-of-ip-address-rules-in-the-firewall-rule-exceeds-the-maximum) | The number of IP address rules in the firewall rule exceeds the maximum. |
-| [29400003](../errorcode-net-netfirewall.md#29400003-number-of-port-rules-in-the-firewall-rule-exceeds-the-maximum) | The number of port rules in the firewall rule exceeds the maximum. |
-| [29400004](../errorcode-net-netfirewall.md#29400004-number-of-domain-name-rules-in-the-firewall-rule-exceeds-the-maximum) | The number of domain rules in the firewall rule exceeds the maximum. |
-| [29400005](../errorcode-net-netfirewall.md#29400005-number-of-fuzzy-domain-name-rules-exceeds-the-maximum) | The number of domain rules exceeds the maximum. |
-| [29400006](../errorcode-net-netfirewall.md#29400006-specified-rule-does-not-exist) | The specified rule does not exist. |
-| [29400007](../errorcode-net-netfirewall.md#29400007-dns-rule-duplication) | The dns rule is duplication. |
+| 29400000 | The specified user does not exist. |
+| 401 | Parameter error. |
+| 2100001 | Invalid parameter value. |
+| 2100002 | Operation failed. Cannot connect to service. |
+| 29400002 | The number of IP address rules in the firewall rule exceeds the maximum. |
+| 2100003 | System internal error. |
+| 29400003 | The number of port rules in the firewall rule exceeds the maximum. |
+| 29400004 | The number of domain rules in the firewall rule exceeds the maximum. |
+| 29400005 | The number of domain rules exceeds the maximum. |
+| 29400006 | The specified rule does not exist. |
+| 29400007 | The dns rule is duplication. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { netFirewall } from '@kit.NetworkKit';

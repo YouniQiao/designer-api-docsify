@@ -44,7 +44,7 @@ Component type.
 
 **Deprecated since:** 12
 
-**Substitutes:** [Column](arkts-arkui-component/column-column-f.md#column)
+**Substitutes:** [Column](arkts-arkui-column-column-f.md#column)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +60,7 @@ Component type.
 TEXTURE
 ```
 
-Texture type.Supports EGL/OpenGLES and media data rendering.Custom drawing content is composited with XComponent’s native content before display.Key features:1. Maintains frame synchronization between GPU textures and ArkUI drawing commands.2. Supports unified animation with built-in components.3. Utilizes GPU composition, which may have higher power consumption than the SURFACE type using the display subsystem (DSS).
+Texture type.Supports EGL/OpenGLES and media data rendering.Custom drawing content is composited with XComponent’s native content before display.Key features:1. Maintains frame synchronization between GPU textures and ArkUI drawing commands.2. Supports unified animation with built-in components.3. Utilizes GPU composition, which may have higher power consumption than the SURFACE type  using the display subsystem (DSS).
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Node type.
 
 **Deprecated since:** 20
 
-**Substitutes:** [ContentSlot](arkts-arkui-component/contentslot-contentslot-f.md#contentslot)
+**Substitutes:** [ContentSlot](arkts-arkui-contentslot-contentslot-f.md#contentslot)
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -18,6 +18,6 @@ export type SetPreviewTextCallback = (text: string, range: Range) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 预览文本内容。  |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的选中范围。  |
+| text | string | 是 | 预览文本内容。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 | 文本的选中范围。 |
 

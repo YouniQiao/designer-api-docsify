@@ -12,6 +12,12 @@ Wi-Fi station information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## ipAddress
 
 ```TypeScript
@@ -60,7 +66,7 @@ macAddressType?: DeviceAddressType
 
 The MAC address type of the Wi-Fi client
 
-**Type:** DeviceAddressType
+**Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
 **Since:** 10
 

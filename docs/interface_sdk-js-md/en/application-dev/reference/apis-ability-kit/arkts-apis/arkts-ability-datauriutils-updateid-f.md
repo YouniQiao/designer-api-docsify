@@ -1,12 +1,18 @@
 # updateId
 
+## Modules to Import
+
+```TypeScript
+import { dataUriUtils } from 'kits/@kit.AbilityKit';
+```
+
 ## updateId
 
 ```TypeScript
 function updateId(uri: string, id: double): string
 ```
 
-Updates the ID in a given URI.
+更新指定uri中的ID。
 
 **Since:** 9
 
@@ -20,22 +26,22 @@ Updates the ID in a given URI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Target URI object. |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | New ID. |
+| uri | string | Yes | 表示uri对象 |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示要更新的ID |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | URI object with the new ID. |
+| string | 返回更新ID之后的uri对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dataUriUtils } from '@kit.AbilityKit';

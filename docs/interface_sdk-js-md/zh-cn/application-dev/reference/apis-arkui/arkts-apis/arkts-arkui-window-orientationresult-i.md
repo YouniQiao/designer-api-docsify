@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## executionResult
 
 ```TypeScript
@@ -18,7 +24,7 @@ executionResult : OrientationExecutionResult
 
 窗口显示方向的执行结果枚举。
 
-**类型：** OrientationExecutionResult
+**类型：** [OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md)
 
 **起始版本：** 26.0.0
 

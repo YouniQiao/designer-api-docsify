@@ -1,12 +1,12 @@
 # AudioCapturer
 
-This interface provides APIs for audio capture.
+提供音频采集的相关接口。
 
-Before calling any API in AudioCapturer, you must use  
-[createAudioCapturer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to create an AudioCapturer instance.
-    **NOTE**  
-    
-    - The initial APIs of this interface are supported since API version 8.
+在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer)获取AudioCapturer实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 8开始支持。
 
 **Since:** 8
 
@@ -15,6 +15,12 @@ Before calling any API in AudioCapturer, you must use
 <!--Device-audio-interface AudioCapturer--><!--Device-audio-interface AudioCapturer-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## getAudioStreamId
 
@@ -28,7 +34,7 @@ ArkTS-Sta:
 getAudioStreamId(callback: AsyncCallback<long>): void
 ```
 
-Obtains the stream ID of this audio capturer. This API uses an asynchronous callback to return the result.
+获取音频流id。使用callback异步回调。
 
 **Since:** 9
 
@@ -42,7 +48,7 @@ Obtains the stream ID of this audio capturer. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当获取音频流id成功，err为undefined，data为获取到的音频流id；否则为错误对象。 |
 
 ## getAudioStreamId
 
@@ -56,7 +62,7 @@ ArkTS-Sta:
 getAudioStreamId(): Promise<long>
 ```
 
-Obtains the stream ID of this audio capturer. This API uses a promise to return the result.
+获取音频流id。使用Promise异步回调。
 
 **Since:** 9
 
@@ -70,7 +76,7 @@ Obtains the stream ID of this audio capturer. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the stream ID. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回音频流id。 |
 
 ## getAudioStreamIdSync
 
@@ -84,7 +90,7 @@ ArkTS-Sta:
 getAudioStreamIdSync(): long
 ```
 
-Obtains the stream ID of this audio capturer. This API returns the result synchronously.
+获取音频流id。同步返回结果。
 
 **Since:** 10
 
@@ -98,7 +104,7 @@ Obtains the stream ID of this audio capturer. This API returns the result synchr
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Stream ID. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回音频流id。 |
 
 ## getAudioTime
 
@@ -112,7 +118,7 @@ ArkTS-Sta:
 getAudioTime(callback: AsyncCallback<long>): void
 ```
 
-Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,1970). This API uses an asynchronous callback to return the result.
+获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。使用callback异步回调。
 
 **Since:** 8
 
@@ -126,7 +132,7 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当获取时间戳成功，err为undefined，data为获取到的时间戳；否则为错误对象。 |
 
 ## getAudioTime
 
@@ -140,7 +146,7 @@ ArkTS-Sta:
 getAudioTime(): Promise<long>
 ```
 
-Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,1970). This API uses a promise to return the result.
+获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。使用Promise异步回调。
 
 **Since:** 8
 
@@ -154,7 +160,7 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return a timestamp representing the number of nanoseconds elapsed since the Unix epoch (January 1, 1970). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The timestamp unit is nanoseconds. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回时间戳（从1970年1月1日开始）。 &lt;br&gt;单位为纳秒。 |
 
 ## getAudioTimeSync
 
@@ -168,7 +174,7 @@ ArkTS-Sta:
 getAudioTimeSync(): long
 ```
 
-Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,1970). This API returns the result synchronously.
+获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。同步返回结果。
 
 **Since:** 10
 
@@ -182,7 +188,7 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Timestamp. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回时间戳。 |
 
 ## getAudioTimestampInfo
 
@@ -190,9 +196,9 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-Obtains the timestamp and position information of an input audio stream.
+获取输入音频流时间戳和当前数据帧位置信息。
 
-This API obtains the actual recording position (specified by **framePos**) of the audio channel and the timestamp when recording to that position (specified by **timestamp**, in nanoseconds).
+该接口可以获取到音频通道实际录制位置（framePos）以及录制到该位置时候的时间戳（timestamp），时间戳单位为纳秒。
 
 **Since:** 19
 
@@ -206,13 +212,13 @@ This API obtains the actual recording position (specified by **framePos**) of th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioTimestampInfo&gt; | Promise used to return the timestamp and position information. |
+| Promise&lt;AudioTimestampInfo&gt; | Promise对象，返回音频流时间戳和当前数据帧位置信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
+| 6800103 | Operation not permit at current state. |
 
 ## getAudioTimestampInfoSync
 
@@ -220,7 +226,7 @@ This API obtains the actual recording position (specified by **framePos**) of th
 getAudioTimestampInfoSync(): AudioTimestampInfo
 ```
 
-Obtains the timestamp and position information of an input audio stream. This API returns the result synchronously.
+获取音频流时间戳和当前数据帧位置信息。同步返回结果。
 
 **Since:** 19
 
@@ -234,13 +240,13 @@ Obtains the timestamp and position information of an input audio stream. This AP
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Information about the timestamp and position information. |
+| [AudioTimestampInfo](arkts-audio-audio-audiotimestampinfo-i.md) | 返回音频流时间戳和当前数据帧位置信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
+| 6800103 | Operation not permit at current state. |
 
 ## getBufferSize
 
@@ -254,7 +260,7 @@ ArkTS-Sta:
 getBufferSize(callback: AsyncCallback<long>): void
 ```
 
-Obtains a reasonable minimum buffer size in bytes for capturing. This API uses an asynchronous callback to return the result.
+获取采集器合理的最小缓冲区大小。使用callback异步回调。
 
 **Since:** 8
 
@@ -268,7 +274,7 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The unit is bytes. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当获取采集器合理的最小缓冲区大小成功，err为undefined，data为获取到的采集器合理的最小缓冲区大小；否则为错误对象。 &lt;br&gt;单位为字节。 |
 
 ## getBufferSize
 
@@ -282,7 +288,7 @@ ArkTS-Sta:
 getBufferSize(): Promise<long>
 ```
 
-Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a promise to return the result.
+获取采集器合理的最小缓冲区大小。使用Promise异步回调。
 
 **Since:** 8
 
@@ -296,7 +302,7 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the buffer size. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The unit is bytes. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回缓冲区大小。 &lt;br&gt;单位为字节。 |
 
 ## getBufferSizeSync
 
@@ -310,7 +316,7 @@ ArkTS-Sta:
 getBufferSizeSync(): long
 ```
 
-Obtains a reasonable minimum buffer size in bytes for capturing. This API returns the result synchronously.
+获取采集器合理的最小缓冲区大小。同步返回结果。
 
 **Since:** 10
 
@@ -324,7 +330,7 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API return
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Buffer size, in bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回缓冲区大小，单位为字节。 |
 
 ## getCapturerInfo
 
@@ -332,7 +338,7 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API return
 getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void
 ```
 
-Obtains the audio capturer information. This API uses an asynchronous callback to return the result.
+获取音频采集器信息。使用callback异步回调。
 
 **Since:** 8
 
@@ -346,7 +352,7 @@ Obtains the audio capturer information. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturerInfo&gt; | Yes | 回调函数。当获取音频采集器信息成功，err为undefined，data为获取到的音频采集器信息；否则为错误对象。 |
 
 ## getCapturerInfo
 
@@ -354,7 +360,7 @@ Obtains the audio capturer information. This API uses an asynchronous callback t
 getCapturerInfo(): Promise<AudioCapturerInfo>
 ```
 
-Obtains the audio capturer information. This API uses a promise to return the result.
+获取音频采集器信息。使用Promise异步回调。
 
 **Since:** 8
 
@@ -368,7 +374,7 @@ Obtains the audio capturer information. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioCapturerInfo&gt; | Promise used to return the audio capturer information. |
+| Promise&lt;AudioCapturerInfo&gt; | Promise对象，返回音频采集器信息。 |
 
 ## getCapturerInfoSync
 
@@ -376,7 +382,7 @@ Obtains the audio capturer information. This API uses a promise to return the re
 getCapturerInfoSync(): AudioCapturerInfo
 ```
 
-Obtains the audio capturer information. This API returns the result synchronously.
+获取音频采集器信息。同步返回结果。
 
 **Since:** 10
 
@@ -390,7 +396,7 @@ Obtains the audio capturer information. This API returns the result synchronousl
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Audio capturer information. |
+| [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | 返回音频采集器信息。 |
 
 ## getCurrentAudioCapturerChangeInfo
 
@@ -398,7 +404,7 @@ Obtains the audio capturer information. This API returns the result synchronousl
 getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo
 ```
 
-Obtains the configuration changes of the current audio capturer. This API returns the result synchronously.
+获取录音流配置。同步返回结果。
 
 **Since:** 11
 
@@ -412,7 +418,7 @@ Obtains the configuration changes of the current audio capturer. This API return
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Configuration changes of the audio capturer. |
+| [AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md) | 同步接口，返回描述音频采集器更改信息。 |
 
 ## getCurrentInputDevices
 
@@ -420,7 +426,7 @@ Obtains the configuration changes of the current audio capturer. This API return
 getCurrentInputDevices(): AudioDeviceDescriptors
 ```
 
-Obtains the information of the current input devices. This API returns the result synchronously.
+获取录音流输入设备信息。同步返回结果。
 
 **Since:** 11
 
@@ -434,7 +440,7 @@ Obtains the information of the current input devices. This API returns the resul
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | An array of the audio device descriptors. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 同步接口，返回设备属性数组类型数据。 |
 
 ## getNoiseReductionMode
 
@@ -442,7 +448,7 @@ Obtains the information of the current input devices. This API returns the resul
 getNoiseReductionMode(): NoiseReductionMode
 ```
 
-Gets the noise reduction mode for current audio capturer.The mode will only consider the default and setted status, audio input device and stream concurrency will not be considered.
+获取当前音频捕获器的降噪模式。模式将只考虑默认和设置的状态，音频输入设备和流并发将不被视为。
 
 **Since:** 26.0.0
 
@@ -458,7 +464,7 @@ Gets the noise reduction mode for current audio capturer.The mode will only cons
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The noise reduction mode for current audio capturer, the default value is { |
+| [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | 当前音频采集器的降噪模式， 默认值为{ |
 
 ## getOverflowCount
 
@@ -472,7 +478,7 @@ ArkTS-Sta:
 getOverflowCount(): Promise<long>
 ```
 
-Obtains the number of overflow audio frames in the audio stream that is being captured. This API uses a promise to return the result.
+获取当前录制音频流的过载音频帧数量。使用Promise异步回调。
 
 **Since:** 12
 
@@ -486,7 +492,7 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the number of overflow audio frames. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回音频流的过载音频帧数量。 |
 
 ## getOverflowCountSync
 
@@ -500,7 +506,7 @@ ArkTS-Sta:
 getOverflowCountSync(): long
 ```
 
-Obtains the number of overflow audio frames in the audio stream that is being captured. This API returns the result synchronously.
+获取当前录制音频流的过载音频帧数量。同步返回数据。
 
 **Since:** 12
 
@@ -514,7 +520,7 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Number of overflow audio frames. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回音频流的过载音频帧数量。 |
 
 ## getStreamInfo
 
@@ -522,7 +528,7 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 ```
 
-Obtains the stream information of this audio capturer. This API uses an asynchronous callback to return the result.
+获取音频采集器流信息。使用callback异步回调。
 
 **Since:** 8
 
@@ -536,7 +542,7 @@ Obtains the stream information of this audio capturer. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioStreamInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioStreamInfo&gt; | Yes | 回调函数。当获取音频采集器流信息成功，err为undefined，data为获取到的音频采集器流信息；否则为错误对象。 |
 
 ## getStreamInfo
 
@@ -544,7 +550,7 @@ Obtains the stream information of this audio capturer. This API uses an asynchro
 getStreamInfo(): Promise<AudioStreamInfo>
 ```
 
-Obtains the stream information of this audio capturer. This API uses a promise to return the result.
+获取音频采集器流信息。使用Promise异步回调。
 
 **Since:** 8
 
@@ -558,7 +564,7 @@ Obtains the stream information of this audio capturer. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioStreamInfo&gt; | Promise used to return the stream information. |
+| Promise&lt;AudioStreamInfo&gt; | Promise对象，返回音频流信息。 |
 
 ## getStreamInfoSync
 
@@ -566,7 +572,7 @@ Obtains the stream information of this audio capturer. This API uses a promise t
 getStreamInfoSync(): AudioStreamInfo
 ```
 
-Obtains the stream information of this audio capturer. This API returns the result synchronously.
+获取音频采集器流信息。同步返回结果。
 
 **Since:** 10
 
@@ -580,7 +586,7 @@ Obtains the stream information of this audio capturer. This API returns the resu
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Stream information. |
+| [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | 返回音频流信息。 |
 
 ## getSupportedNoiseReductionModes
 
@@ -588,7 +594,7 @@ Obtains the stream information of this audio capturer. This API returns the resu
 getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 ```
 
-Gets all the supported noise reduction modes for current device platform.Currently the noise reduction effect is only supported when using\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, other supported usage may be extened later.The supported modes will only consider the audio format and device platform,audio input device and stream concurrency will not be considered.
+获取当前设备平台支持的所有降噪模式。目前，降噪效果仅在使用{@link StreamUsage#Stream_USAGE_VOICE_MESSAGE}，其他支持的用法可能会在以后扩展。支持的模式只考虑音频格式和设备平台。不会考虑音频输入设备和流并发。
 
 **Since:** 26.0.0
 
@@ -604,13 +610,13 @@ Gets all the supported noise reduction modes for current device platform.Current
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NoiseReductionMode&gt; | The supported noise reduction mode array, at least { |
+| Array&lt;NoiseReductionMode&gt; | 支持的降噪模式数组，至少 支持{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
+| 6800301 | Audio server process died. |
 
 ## off('markReach')
 
@@ -618,7 +624,7 @@ Gets all the supported noise reduction modes for current device platform.Current
 off(type: 'markReach', callback?: Callback<long>): void
 ```
 
-Unsubscribes from the mark reached event. This API uses an asynchronous callback to return the result.
+取消监听标记到达事件。使用callback异步回调。
 
 **Since:** 8
 
@@ -632,8 +638,8 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| type | 'markReach' | Yes | 事件回调类型，支持的事件为'markReach'，当取消监听标记到达事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | 回调函数，返回frame参数的值。<br>**Since:** 18 |
 
 ## off('periodReach')
 
@@ -641,7 +647,7 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 off(type: 'periodReach', callback?: Callback<long>): void
 ```
 
-Unsubscribes from the period reached event. This API uses an asynchronous callback to return the result.
+取消监听标记到达事件。使用callback异步回调。
 
 **Since:** 8
 
@@ -655,8 +661,8 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| type | 'periodReach' | Yes | 事件回调类型，支持的事件为'periodReach'，当取消监听标记到达事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | 回调函数，返回frame参数的值。<br>**Since:** 18 |
 
 ## off('stateChange')
 
@@ -664,7 +670,7 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 off(type: 'stateChange', callback?: Callback<AudioState>): void
 ```
 
-Unsubscribes from the audio capturer state change event. This API uses an asynchronous callback to return the result.
+取消监听状态变化事件。使用callback异步回调。
 
 **Since:** 18
 
@@ -678,14 +684,14 @@ Unsubscribes from the audio capturer state change event. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audio capturer state change event is canceled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioState&gt; | No | Callback used to return the audio status. |
+| type | 'stateChange' | Yes | 事件回调类型，支持的事件为'stateChange'，当取消监听状态变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No | 回调函数，返回当前音频的状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## off('audioInterrupt')
 
@@ -693,7 +699,7 @@ Unsubscribes from the audio capturer state change event. This API uses an asynch
 off(type: 'audioInterrupt'): void
 ```
 
-Unsubscribes from the audio interruption event.
+取消监听音频中断事件。
 
 **Since:** 10
 
@@ -707,14 +713,14 @@ Unsubscribes from the audio interruption event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| type | 'audioInterrupt' | Yes | 事件回调类型，支持的事件为'audioInterrupt'，当取消监听音频中断事件时，触发该事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('inputDeviceChange')
 
@@ -722,7 +728,7 @@ Unsubscribes from the audio interruption event.
 off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes from the audio input device change event. This API uses an asynchronous callback to return the result.
+取消监听音频输入设备更改事件。使用callback异步回调。
 
 **Since:** 11
 
@@ -736,15 +742,15 @@ Unsubscribes from the audio input device change event. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audio input device is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | No | Callback used to return the information about the audio input device. |
+| type | 'inputDeviceChange' | Yes | 事件回调类型，支持的事件为'inputDeviceChange'，当取消监听音频输入设备更改事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No | 回调函数，返回音频输入设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('audioCapturerChange')
 
@@ -752,7 +758,7 @@ Unsubscribes from the audio input device change event. This API uses an asynchro
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void
 ```
 
-Unsubscribes from the audio capturer configuration change event. This API uses an asynchronous callback to return the result.
+取消监听录音流配置变化事件。使用callback异步回调。
 
 **Since:** 11
 
@@ -766,15 +772,15 @@ Unsubscribes from the audio capturer configuration change event. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio capturer configuration is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfo&gt; | No | Callback used for unsubscription. |
+| type | 'audioCapturerChange' | Yes | 事件回调类型，支持的事件为'audioCapturerChange'，当取消监听录音流配置变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfo&gt; | No | 回调函数，返回取消监听的录音流配置或状态变化。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('readData')
 
@@ -782,7 +788,7 @@ Unsubscribes from the audio capturer configuration change event. This API uses a
 off(type: 'readData', callback?: Callback<ArrayBuffer>): void
 ```
 
-Unsubscribes from the audio data read event. This API uses an asynchronous callback to return the result.
+取消监听音频数据读取回调事件。使用callback异步回调。
 
 **Since:** 11
 
@@ -796,15 +802,15 @@ Unsubscribes from the audio data read event. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to be read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | No | Callback used to return the buffer from which the data is read. |
+| type | 'readData' | Yes | 事件回调类型，支持的事件为'readData'，当取消监听音频数据读取回调事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | 回调函数，返回读到的数据缓冲区。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## offAudioCapturerChange
 
@@ -826,13 +832,13 @@ Unsubscribes audio capturer info change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfo&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfo&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offAudioInterrupt
 
@@ -870,13 +876,13 @@ Unsubscribes input device change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offMarkReach
 
@@ -898,7 +904,7 @@ Unsubscribes from the mark reached events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | No | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
 
 ## offPeriodReach
 
@@ -920,7 +926,7 @@ Unsubscribes from period reached events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | No | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
 
 ## offReadData
 
@@ -942,13 +948,13 @@ Unsubscribes audio data callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offStateChange
 
@@ -970,13 +976,13 @@ Unsubscribes audio state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioState&gt; | No | Callback used to listen for the audio state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No | Callback used to listen for the audio state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## on('markReach')
 
@@ -984,9 +990,9 @@ Unsubscribes audio state change event callback.
 on(type: 'markReach', frame: long, callback: Callback<long>): void
 ```
 
-Subscribes to the mark reached event, which is triggered (only once) when the number of frames captured reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
+监听标记到达事件（当采集的帧数达到frame参数的值时触发，仅调用一次）。使用callback异步回调。
 
-For example, if **frame** is set to **100**, the callback is invoked when the number of captured frames reaches the 100th frame.
+如果将frame设置为100，当采集帧数到达第100帧时，系统将上报信息。
 
 **Since:** 8
 
@@ -1000,9 +1006,9 @@ For example, if **frame** is set to **100**, the callback is invoked when the nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
-| frame | long | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| type | 'markReach' | Yes | 事件回调类型，支持的事件为'markReach'，当采集的帧数达到frame参数的值时，触发该事件。 |
+| frame | long | Yes | 触发事件的帧数。该值必须大于0。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | 回调函数，返回frame参数的值。 |
 
 ## on('periodReach')
 
@@ -1010,9 +1016,9 @@ For example, if **frame** is set to **100**, the callback is invoked when the nu
 on(type: 'periodReach', frame: long, callback: Callback<long>): void
 ```
 
-Subscribes to the period reached event, which is triggered each time the number of frames captured reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.
+监听标记到达事件（当采集的帧数达到frame参数的值时触发，即按周期上报信息）。使用callback异步回调。
 
-For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are captured, for example, when the number of frames captured reaches the 10th frame, 20th frame, and 30th frame.
+如果将frame设置为10，每渲染10帧数据均会上报信息（例如：第10帧、第20帧、第30帧......）。
 
 **Since:** 8
 
@@ -1026,9 +1032,9 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
-| frame | long | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| type | 'periodReach' | Yes | 事件回调类型，支持的事件为'periodReach'，当采集的帧数达到frame参数的值时，触发该事件。 |
+| frame | long | Yes | 触发事件的帧数。该值必须大于0。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | 回调函数，返回frame参数的值。 |
 
 ## on('stateChange')
 
@@ -1036,7 +1042,7 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 on(type: 'stateChange', callback: Callback<AudioState>): void
 ```
 
-Subscribes to the audio capturer state change event, which is triggered when the state of the audio capturer is changed. This API uses an asynchronous callback to return the result.
+监听状态变化事件（当AudioCapturer状态发生变化时触发）。使用callback异步回调。
 
 **Since:** 8
 
@@ -1050,8 +1056,8 @@ Subscribes to the audio capturer state change event, which is triggered when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audio capturer is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
+| type | 'stateChange' | Yes | 事件回调类型，支持的事件为'stateChange'，当AudioCapturer状态发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes | 回调函数，返回当前音频的状态。 |
 
 ## on('audioInterrupt')
 
@@ -1059,12 +1065,11 @@ Subscribes to the audio capturer state change event, which is triggered when the
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
+监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
 
-The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
+AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。
 
-After this API is called, an [InterruptEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+调用此方法后，如果AudioCapturer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
 
 **Since:** 10
 
@@ -1078,15 +1083,15 @@ After this API is called, an [InterruptEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;InterruptEvent&gt; | Yes | Callback used to return the event information. |
+| type | 'audioInterrupt' | Yes | 事件回调类型，支持的事件为'audioInterrupt'，当音频焦点状态发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterruptEvent&gt; | Yes | 回调函数，返回中断事件信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('inputDeviceChange')
 
@@ -1094,7 +1099,7 @@ After this API is called, an [InterruptEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_
 on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to the audio input device change event, which is triggered when an audio input device is changed. This API uses an asynchronous callback to return the result.
+监听音频输入设备变化事件（当音频输入设备发生变化时触发）。使用callback异步回调。
 
 **Since:** 11
 
@@ -1108,15 +1113,15 @@ Subscribes to the audio input device change event, which is triggered when an au
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audio input device is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the updated information about the audio input device. |
+| type | 'inputDeviceChange' | Yes | 事件回调类型，支持的事件为'inputDeviceChange'，当音频输入设备发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | 回调函数，返回变化后的音频输入设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('audioCapturerChange')
 
@@ -1124,7 +1129,7 @@ Subscribes to the audio input device change event, which is triggered when an au
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void
 ```
 
-Subscribes to the audio capturer configuration change event, which is triggered when the audio recording stream status or device is changed. This API uses an asynchronous callback to return the result. The subscription is implemented asynchronously and the callback, which is triggered when the audio capturer configuration changes,may fail to reflect the actual condition.
+监听录音流配置变化事件（当音频录制流状态变化、设备变化时触发）。使用callback异步回调。订阅内部是异步实现，是非精确回调，在录音流配置变化的同时注册回调，收到的返回结果存在变化可能性。
 
 **Since:** 11
 
@@ -1138,15 +1143,15 @@ Subscribes to the audio capturer configuration change event, which is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio recording stream status or device is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfo&gt; | Yes | Callback used to return the current configuration and status information of the audio capturer. |
+| type | 'audioCapturerChange' | Yes | 事件回调类型，支持的事件为'audioCapturerChange'，当音频录制流状态变化、设备变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfo&gt; | Yes | 回调函数，录音流配置或状态变化时返回监听的录音流当前配置和状态信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('readData')
 
@@ -1154,11 +1159,11 @@ Subscribes to the audio capturer configuration change event, which is triggered 
 on(type: 'readData', callback: Callback<ArrayBuffer>): void
 ```
 
-Subscribes to the audio data read event, which is triggered when audio stream data needs to be read. This API uses an asynchronous callback to return the result.
+监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callback异步回调。
 
-The callback function is used only to read audio data. Do not call AudioCapturer APIs in it.
+回调函数仅用来读取音频数据，请勿在回调函数中调用AudioCapturer相关接口。
 
-To eliminate power-on noise caused by the microphone hardware design, the first 100 ms of data after recording starts is typically muted.
+为了消除麦克风硬件设计带来的上电杂音，通常会对录音启动后的前100ms数据进行静音。
 
 **Since:** 11
 
@@ -1172,15 +1177,15 @@ To eliminate power-on noise caused by the microphone hardware design, the first 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to be read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | Yes | Callback used to return the buffer from which the data is read. |
+| type | 'readData' | Yes | 事件回调类型，支持的事件为'readData'，当需要读取音频流数据时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | 回调函数，返回读到的数据缓冲区。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## onAudioCapturerChange
 
@@ -1202,13 +1207,13 @@ Subscribes audio capturer info change event callback.The event is triggered when
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfo&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfo&gt; | Yes | Callback used to listen device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onAudioInterrupt
 
@@ -1230,13 +1235,13 @@ Listens for audio interrupt events. This method uses a callback to get interrupt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;InterruptEvent&gt; | Yes | Callback used to listen for interrupt callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterruptEvent&gt; | Yes | Callback used to listen for interrupt callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onInputDeviceChange
 
@@ -1258,13 +1263,13 @@ Subscribes input device change event callback.The event is triggered when input 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to listen device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onMarkReach
 
@@ -1287,7 +1292,7 @@ Subscribes to mark reached events. When the number of frames captured reaches th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | frame | long | Yes | Number of frames to trigger the event. The value must be greater than 0. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onPeriodReach
 
@@ -1310,7 +1315,7 @@ Subscribes to period reached events. When the period of frame capturing reaches 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | frame | long | Yes | Period during which frame capturing is listened. The value must be greater than 0. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onReadData
 
@@ -1332,13 +1337,13 @@ Subscribes audio data callback.The event is triggered when audio buffer is avail
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | Yes | Callback with the buffer to read. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback with the buffer to read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onStateChange
 
@@ -1360,7 +1365,7 @@ Subscribes audio state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioState&gt; | Yes | Callback used to listen for the audio state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes | Callback used to listen for the audio state change event. |
 
 ## read
 
@@ -1368,7 +1373,7 @@ Subscribes audio state change event callback.
 read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-Reads the buffer from the audio capturer. This method uses an asynchronous callback to return the result.
+读入缓冲区。使用callback异步回调。
 
 **Since:** 8
 
@@ -1386,9 +1391,9 @@ Reads the buffer from the audio capturer. This method uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Number of bytes to read. |
-| isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
+| size | number | Yes | 读入的字节数。 |
+| isBlockingRead | boolean | Yes | 是否阻塞读操作。true表示阻塞，false表示不阻塞。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | 回调函数。当读入缓冲区成功，err为undefined，data为获取到的缓冲区；否则为错误对象。 |
 
 ## read
 
@@ -1396,7 +1401,7 @@ Reads the buffer from the audio capturer. This method uses an asynchronous callb
 read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
 ```
 
-Reads the buffer. This API uses a promise to return the result.
+读入缓冲区。使用Promise异步回调。
 
 **Since:** 8
 
@@ -1414,14 +1419,14 @@ Reads the buffer. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Number of bytes to read. |
-| isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
+| size | number | Yes | 读入的字节数。 |
+| isBlockingRead | boolean | Yes | 是否阻塞读操作。true表示阻塞，false表示不阻塞。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the data read from the buffer. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回读取的缓冲区数据。 |
 
 ## release
 
@@ -1429,7 +1434,7 @@ Reads the buffer. This API uses a promise to return the result.
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this audio capturer. This API uses an asynchronous callback to return the result.
+释放音频采集器。使用callback异步回调。
 
 **Since:** 8
 
@@ -1443,7 +1448,7 @@ Releases this audio capturer. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当释放音频采集器成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -1451,7 +1456,7 @@ Releases this audio capturer. This API uses an asynchronous callback to return t
 release(): Promise<void>
 ```
 
-Releases this audio capturer. This API uses a promise to return the result.
+释放音频采集器。使用Promise异步回调。
 
 **Since:** 8
 
@@ -1465,7 +1470,7 @@ Releases this audio capturer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 ## requestPlaybackCaptureStart
 
@@ -1473,7 +1478,11 @@ Releases this audio capturer. This API uses a promise to return the result.
 requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void
 ```
 
-Asynchronously request to start the playback capture stream.This function is non-blocking, which means system will continue to process user authorization and stream starting when receiving the start request. And the final result will be returned by callback.
+请求启动内录流接口，内录流只能通过该接口触发启动。使用callback异步回调。
+
+内录是指以系统内部音频数据作为音频源的输入类型，简称为内录，对应的流称为内录流。常用于录制目标设备应用发送到系统以供播放的音频。
+
+该接口为非阻塞接口，系统接收到内录启动请求后，会继续处理用户授权检查和内录流启动，最终结果通过回调函数返回。
 
 **Since:** 26.0.0
 
@@ -1489,7 +1498,7 @@ Asynchronously request to start the playback capture stream.This function is non
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PlaybackCaptureStartState&gt; | Yes | Callback function used to receive the final result of start request. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PlaybackCaptureStartState&gt; | Yes | 回调函数，用于接收启动内录请求的最终结果。 |
 
 ## setIndependentAudioSessionStrategy
 
@@ -1503,12 +1512,11 @@ ArkTS-Sta:
 setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void
 ```
 
-Sets the independent audio session strategy and behavior parameters.
-    **NOTE**  
-    
-    If this API is called while an audio capturer is running, you must call the  
-    [start]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API again for  
-    the settings to take effect.
+设置独立的音频会话策略和行为参数。
+
+> **说明：**
+> 
+> 当音频采集器在运行状态时调用此接口后，必须重新调用接口[start](arkts-audio-audio-audiocapturer-i.md#start)使其生效。
 
 **Since:** 24
 
@@ -1524,15 +1532,15 @@ Sets the independent audio session strategy and behavior parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio session strategy. |
-| behavior | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Specifies the audio session behavior.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This can be a single flag or a bitwise OR combination of multiple flags.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | Yes | 音频会话策略。 |
+| behavior | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用于设置音频会话行为。 &lt;br&gt;该参数可以是单个标志，也可以是多个标志的按位OR组合。 &lt;br&gt;当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
+| 6800103 | Operation not permit at current state. |
+| 6800101 | Parameter verification failed. |
 
 ## setMuteHint
 
@@ -1540,7 +1548,17 @@ Sets the independent audio session strategy and behavior parameters.
 setMuteHint(mute: boolean): Promise<void>
 ```
 
-Set mute hint for this capturer, this method is used as a hint for power optimization it does not mute the recording stream, only affects internal processing strategy.
+应用将当前录音流的自身静音状态传递给系统音频模块。&lt;!--RP1--&gt;该接口不会触发录音流静音，当前仅在部分PC/2in1设备上用于优化设备功耗。&lt;!--RP1End--&gt;使用Promise异步回调。
+
+> **说明：**
+> 
+> - 该接口用于向系统音频模块上报应用自身的静音状态，不会改变录音流的实际静音状态。
+> 
+> - 该接口仅在录音流处于运行态时允许调用，否则返回错误码6800103。
+> 
+> - 同一录音流同时设置流级静音提示接口（本接口）和会话级静音提示接口
+> [AudioSessionManager.setCapturerMuteHint](arkts-audio-audio-audiosessionmanager-i.md#setcapturermutehint)时，流级
+> [setMuteHint](arkts-audio-audio-audiocapturer-i.md#setmutehint)优先级更高，数值以流级设置值为准。
 
 **Since:** 24
 
@@ -1556,19 +1574,19 @@ Set mute hint for this capturer, this method is used as a hint for power optimiz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mute | boolean | Yes | Use true if application recording stream muted by application if self. |
+| mute | boolean | Yes | 应用自身给系统音频模块上报的静音状态。true表示应用将当前流静音，false表示取消静音。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at current state, stream is not running. |
+| 6800103 | Operation not permitted at current state, stream is not running. |
 
 ## setNoiseReductionMode
 
@@ -1576,7 +1594,7 @@ Set mute hint for this capturer, this method is used as a hint for power optimiz
 setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 ```
 
-Sets noise reduction mode for current audio capturer.The supported mode should be obtained by \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.The actual effect may vary from different audio devices, and will be invalid when there are multiple recording streams running simultaneously.The mode can only be changed in created and stopped state.
+设置当前音频捕获器的降噪模式。支持的模式需要通过{@link#getSupportedNoiseReduceModes}获取。实际效果可能因不同的音频设备而异，当有多个时将无效同时运行的录制流。只能在已创建和已停止状态下更改模式。
 
 **Since:** 26.0.0
 
@@ -1592,16 +1610,16 @@ Sets noise reduction mode for current audio capturer.The supported mode should b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| noiseReductionMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The noise reduction mode to set. |
+| noiseReductionMode | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | Yes | 要设置的降噪模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Illegal state, audio capturer is in running or released state. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | The setted mode is not supported. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
+| 6800103 | Illegal state, audio capturer is in running or released state. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio server process died. |
+| 6800104 | The setted mode is not supported. |
 
 ## setWillMuteWhenInterrupted
 
@@ -1609,8 +1627,7 @@ Sets noise reduction mode for current audio capturer.The supported mode should b
 setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 ```
 
-Sets whether to  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+设置当前录制音频流是否启用[静音打断模式](../../../media/audio/using-audiocapturer-for-recording.md#设置静音打断模式)。使用Promise异步回调。
 
 **Since:** 20
 
@@ -1624,19 +1641,19 @@ Sets whether to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| muteWhenInterrupted | boolean | Yes | Whether to mute the current audio recording stream during an audio interruption. **true** to mute, **false** otherwise. |
+| muteWhenInterrupted | boolean | Yes | 设置当前录制音频流是否启用静音打断模式, true表示启用，false表示不启用，保持为默认打断模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at current state. |
+| 6800103 | Operation not permitted at current state. |
 
 ## start
 
@@ -1644,7 +1661,7 @@ Sets whether to
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts this audio capturer to start capturing audio data. This API uses an asynchronous callback to return the result.
+启动音频采集器，开始获取音频数据。使用callback异步回调。
 
 **Since:** 8
 
@@ -1658,7 +1675,7 @@ Starts this audio capturer to start capturing audio data. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当启动音频采集器成功，err为undefined，否则为错误对象。异常将返回error对象： &lt;br&gt;错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## start
 
@@ -1666,7 +1683,7 @@ Starts this audio capturer to start capturing audio data. This API uses an async
 start(): Promise<void>
 ```
 
-Starts this audio capturer to start capturing audio data. This API uses a promise to return the result.
+启动音频采集器，开始获取音频数据。使用Promise异步回调。
 
 **Since:** 8
 
@@ -1680,7 +1697,7 @@ Starts this audio capturer to start capturing audio data. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object, which indicates that the capturer is started successfully. If the operation fails, an error object with the following error code is returned: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
+| Promise&lt;void&gt; | Promise对象，成功表示启动音频采集器成功。异常将返回error对象： &lt;br&gt;错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## stop
 
@@ -1688,7 +1705,7 @@ Starts this audio capturer to start capturing audio data. This API uses a promis
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops this audio capturer, ceasing the input audio stream. This API uses an asynchronous callback to return the result.
+停止音频采集器，停止输入音频流。使用callback异步回调。
 
 **Since:** 8
 
@@ -1702,7 +1719,7 @@ Stops this audio capturer, ceasing the input audio stream. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止音频采集成功，err为undefined，否则为错误对象。 |
 
 ## stop
 
@@ -1710,7 +1727,7 @@ Stops this audio capturer, ceasing the input audio stream. This API uses an asyn
 stop(): Promise<void>
 ```
 
-Stops this audio capturer, ceasing the input audio stream. This API uses a promise to return the result.
+停止音频采集器，停止输入音频流。使用Promise异步回调。
 
 **Since:** 8
 
@@ -1724,7 +1741,7 @@ Stops this audio capturer, ceasing the input audio stream. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 ## state
 
@@ -1732,9 +1749,9 @@ Stops this audio capturer, ceasing the input audio stream. This API uses a promi
 readonly state: AudioState
 ```
 
-Audio capturer state.
+音频采集器状态。
 
-**Type:** AudioState
+**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
 
 **Since:** 8
 

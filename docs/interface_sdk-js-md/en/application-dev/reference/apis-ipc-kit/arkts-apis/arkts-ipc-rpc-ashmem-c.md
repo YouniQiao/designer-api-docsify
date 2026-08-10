@@ -1,7 +1,15 @@
 # Ashmem
 
-Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an  
-**Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size,and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the local device.
+提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。
+
+共享内存只适用与本设备内跨进程通信。
+
+- 大数据传输：传输大量数据(如图片、文件)时使用共享内存提升效率。  
+- 跨进程数据共享：多个进程需要共享访问同一块内存数据。  
+- 传输效率问题：大数据通过共享内存传输避免序列化开销，提升传输效率。  
+- 内存复用问题：多进程可共享访问同一内存，避免数据拷贝。  
+- 提升传输性能：共享内存机制大幅提升大数据传输效率。  
+- 减少内存占用：避免数据多次拷贝，节省内存资源。
 
 **Since:** 8
 
@@ -11,16 +19,23 @@ Provides methods related to anonymous shared memory objects, including creating,
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## closeAshmem
 
 ```TypeScript
 closeAshmem(): void
 ```
 
-Closes this **Ashmem** object.
-    **NOTE**  
-    
-    Before closing the **Ashmem** object, you need to remove the address mapping.
+关闭这个Ashmem。
+
+> **说明：**
+> 
+> 关闭Ashmem对象前需要先解除地址映射。
 
 **Since:** 8
 
@@ -30,7 +45,7 @@ Closes this **Ashmem** object.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -56,7 +71,7 @@ ArkTS-Sta:
 static create(name: string, size: int): Ashmem
 ```
 
-Creates an **Ashmem** object with the specified name and size. This API is a static method.
+静态方法，根据指定的名称和大小创建Ashmem对象。
 
 **Since:** 9
 
@@ -70,22 +85,22 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the **Ashmem** object to create. The length of the Ashmem name cannot be 0. |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Size of the **Ashmem** object, in bytes. The value must be greater than 0. |
+| name | string | Yes | Ashmem名称，用于查询Ashmem信息，其长度不能为0。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Ashmem的大小，其大小应大于0，以字节为单位。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象；如果创建失败，返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -110,8 +125,7 @@ try {
 static create(ashmem: Ashmem): Ashmem
 ```
 
-Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem**  
-objects point to the same shared memory region.
+静态方法，通过复制现有Ashmem对象的文件描述符(fd)来创建Ashmem对象。两个Ashmem对象指向同一个共享内存区域。
 
 **Since:** 9
 
@@ -125,21 +139,21 @@ objects point to the same shared memory region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Existing **Ashmem** object. |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | 已存在的Ashmem对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Ashmem** object created. |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -164,7 +178,7 @@ try {
 static createAshmem(name: string, size: number): Ashmem
 ```
 
-Creates an **Ashmem** object with the specified name and size. This API is a static method.
+静态方法，根据指定的名称和大小创建Ashmem对象。
 
 **Since:** 8
 
@@ -182,16 +196,16 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the **Ashmem** object to create. |
-| size | number | Yes | Size (in bytes) of the **Ashmem** object to create. |
+| name | string | Yes | 名称，用于查询Ashmem信息。 |
+| size | number | Yes | Ashmem的大小，以字节为单位。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象；如果创建失败，返回null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -213,8 +227,7 @@ try {
 static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 ```
 
-Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem**  
-objects point to the same shared memory region.
+静态方法，通过复制现有Ashmem对象的文件描述符(fd)来创建Ashmem对象。两个Ashmem对象指向同一个共享内存区域。
 
 **Since:** 8
 
@@ -232,15 +245,15 @@ objects point to the same shared memory region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Existing **Ashmem** object. |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | 已存在的Ashmem对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Ashmem** object created. |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -268,7 +281,7 @@ ArkTS-Sta:
 getAshmemSize(): int
 ```
 
-Obtains the memory size of this **Ashmem** object.
+获取Ashmem对象的内存大小。
 
 **Since:** 8
 
@@ -282,9 +295,9 @@ Obtains the memory size of this **Ashmem** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Ashmem** size obtained. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回Ashmem对象的内存大小。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -305,7 +318,7 @@ try {
 mapAshmem(mapType: number): boolean
 ```
 
-Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
+在此进程的虚拟地址空间上创建共享文件映射，映射区域大小由此Ashmem对象指定。
 
 **Since:** 8
 
@@ -323,15 +336,15 @@ Creates the shared file mapping on the virtual address space of this process. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mapType | number | Yes | Protection level of the memory region to which the shared file is mapped. |
+| mapType | number | Yes | 指定映射的内存区域的保护等级。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
+| boolean | true：映射成功，false：映射失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -352,7 +365,7 @@ try {
 mapReadAndWriteAshmem(): boolean
 ```
 
-Maps the shared file to the readable and writable virtual address space of the process.
+在此进程虚拟地址空间上创建可读写的共享文件映射。
 
 **Since:** 8
 
@@ -370,9 +383,9 @@ Maps the shared file to the readable and writable virtual address space of the p
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
+| boolean | true：映射成功，false：映射失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -393,7 +406,7 @@ try {
 mapReadOnlyAshmem(): boolean
 ```
 
-Maps the shared file to the read-only virtual address space of the process.
+在此进程虚拟地址空间上创建只读的共享文件映射。
 
 **Since:** 8
 
@@ -411,9 +424,9 @@ Maps the shared file to the read-only virtual address space of the process.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
+| boolean | true：映射成功，false：映射失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -434,7 +447,7 @@ try {
 mapReadWriteAshmem(): void
 ```
 
-Maps the shared file to the readable and writable virtual address space of the process.
+在此进程虚拟地址空间上创建可读写的共享文件映射。
 
 **Since:** 9
 
@@ -448,9 +461,9 @@ Maps the shared file to the readable and writable virtual address space of the p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+| 1900001 | Failed to call mmap. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -473,7 +486,7 @@ try {
 mapReadonlyAshmem(): void
 ```
 
-Maps the shared file to the read-only virtual address space of the process.
+在此进程虚拟地址空间上创建只读的共享文件映射。
 
 **Since:** 9
 
@@ -487,9 +500,9 @@ Maps the shared file to the read-only virtual address space of the process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+| 1900001 | Failed to call mmap. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -518,7 +531,7 @@ ArkTS-Sta:
 mapTypedAshmem(mapType: int): void
 ```
 
-Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
+在此进程的虚拟地址空间上创建共享文件映射，映射区域大小由此Ashmem对象指定。
 
 **Since:** 9
 
@@ -532,16 +545,16 @@ Creates the shared file mapping on the virtual address space of this process. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mapType | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Protection level of the memory region to which the shared file is mapped. |
+| mapType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定映射的内存区域的保护等级。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
+| 1900001 | Failed to call mmap. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -564,11 +577,11 @@ try {
 readAshmem(size: number, offset: number): number[]
 ```
 
-Reads data from the shared file associated with this **Ashmem** object.
-    **NOTE**  
-    
-    - Before writing an **Ashmem** object, you need to call  
-    [mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for mapping.
+从此Ashmem对象关联的共享文件中读取数据。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **Since:** 9
 
@@ -586,23 +599,23 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Size of the data to read. |
-| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
+| size | number | Yes | 要读取的数据的大小，以字节为单位。 |
+| offset | number | Yes | 要读取的数据在此Ashmem对象关联的内存区间的起始位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number[] | Data read. |
+| number[] | 返回读取的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| 1900004 | Failed to read data from the shared memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -635,11 +648,11 @@ ArkTS-Sta:
 readDataFromAshmem(size: int, offset: int): ArrayBuffer
 ```
 
-Reads data from the shared file associated with this **Ashmem** object.
-    **NOTE**  
-    
-    Before writing an **Ashmem** object, you need to call  
-    [mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for mapping.
+从此Ashmem对象关联的共享文件中读取数据。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **Since:** 11
 
@@ -653,23 +666,23 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Size of the data to read. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要读取的数据的大小，以字节为单位。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要读取的数据在此Ashmem对象关联的内存区间的起始位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Data read. |
+| ArrayBuffer | 返回读取的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| 1900004 | Failed to read data from the shared memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -702,11 +715,11 @@ try {
 readFromAshmem(size: number, offset: number): number[]
 ```
 
-Reads data from the shared file associated with this **Ashmem** object.
-    **NOTE**  
-    
-    - Before writing an **Ashmem** object, you need to call  
-    [mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for mapping.
+从此Ashmem对象关联的共享文件中读取数据。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **Since:** 8
 
@@ -724,16 +737,16 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Size of the data to read. |
-| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
+| size | number | Yes | 要读取的数据的大小，以字节为单位。 |
+| offset | number | Yes | 要读取的数据在此Ashmem对象关联的内存区间的起始位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number[] | Data read. |
+| number[] | 返回读取的数据。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -759,7 +772,7 @@ try {
 setProtection(protectionType: number): boolean
 ```
 
-Sets the protection level of the memory region to which the shared file is mapped.
+设置映射内存区域的保护等级。
 
 **Since:** 8
 
@@ -777,15 +790,15 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protectionType | number | Yes | Protection type to set. |
+| protectionType | number | Yes | 要设置的保护类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：设置成功，false：设置失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -813,7 +826,7 @@ ArkTS-Sta:
 setProtectionType(protectionType: int): void
 ```
 
-Sets the protection level of the memory region to which the shared file is mapped.
+设置映射内存区域的保护等级。
 
 **Since:** 9
 
@@ -827,16 +840,16 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protectionType | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Protection type to set. |
+| protectionType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要设置的保护类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900002](../errorcode-rpc.md#1900002-failed-to-call-ioctl) | Failed to call ioctl. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| 1900002 | Failed to call ioctl. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -859,7 +872,7 @@ try {
 unmapAshmem(): void
 ```
 
-Deletes the mappings for the specified address range of this **Ashmem** object.
+删除该Ashmem对象的地址映射。
 
 **Since:** 8
 
@@ -869,7 +882,7 @@ Deletes the mappings for the specified address range of this **Ashmem** object.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -889,11 +902,11 @@ try {
 writeAshmem(buf: number[], size: number, offset: number): void
 ```
 
-Writes data to the shared file associated with this **Ashmem** object.
-    **NOTE**  
-    
-    - Before writing an **Ashmem** object, you need to call  
-    [mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for mapping.
+将数据写入此Ashmem对象关联的共享文件。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **Since:** 9
 
@@ -911,18 +924,18 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | number[] | Yes | Data to write. |
-| size | number | Yes | Size of the data to write. |
-| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
+| buf | number[] | Yes | 写入Ashmem对象的数据。 |
+| size | number | Yes | 要写入的数据大小，以字节为单位。 |
+| offset | number | Yes | 要写入的数据在此Ashmem对象关联的内存区间的起始位置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
-| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
+| 1900003 | Failed to write data to the shared memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -953,11 +966,11 @@ ArkTS-Sta:
 writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 ```
 
-Writes data to the shared file associated with this **Ashmem** object.
-    **NOTE**  
-    
-    Before writing an **Ashmem** object, you need to call  
-    [mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for mapping.
+将数据写入此Ashmem对象关联的共享文件。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **Since:** 11
 
@@ -971,18 +984,18 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Data to write. |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Size of the data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
+| buf | ArrayBuffer | Yes | 写入Ashmem对象的数据。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的数据大小，以字节为单位。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的数据在此Ashmem对象关联的内存区间的起始位置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
-| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
+| 1900003 | Failed to write data to the shared memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1012,11 +1025,11 @@ try {
 writeToAshmem(buf: number[], size: number, offset: number): boolean
 ```
 
-Writes data to the shared file associated with this **Ashmem** object.
-    **NOTE**  
-    
-    - Before writing an **Ashmem** object, you need to call  
-    [mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for mapping.
+将数据写入此Ashmem对象关联的共享文件。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **Since:** 8
 
@@ -1034,17 +1047,17 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | number[] | Yes | Data to write. |
-| size | number | Yes | Size of the data to write. |
-| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
+| buf | number[] | Yes | 写入Ashmem对象的数据。 |
+| size | number | Yes | 要写入的数据大小，以字节为单位。 |
+| offset | number | Yes | 要写入的数据在此Ashmem对象关联的内存区间的起始位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| boolean | true：如果数据写入成功，false：在其他情况下，如数据写入越界或未获得写入权限。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1068,7 +1081,7 @@ try {
 static readonly PROT_EXEC: number
 ```
 
-Mapped memory protection type, indicating that the mapped memory is executable.
+映射内存保护类型，代表映射的内存可执行。
 
 **Type:** number
 
@@ -1088,7 +1101,7 @@ Mapped memory protection type, indicating that the mapped memory is executable.
 static readonly PROT_NONE: number
 ```
 
-Mapped memory protection type, indicating that the mapped memory cannot be accessed.
+映射内存保护类型，代表映射的内存不可访问。
 
 **Type:** number
 
@@ -1108,7 +1121,7 @@ Mapped memory protection type, indicating that the mapped memory cannot be acces
 static readonly PROT_READ: number
 ```
 
-Mapped memory protection type, indicating that the mapped memory is readable.
+映射内存保护类型，代表映射的内存可读。
 
 **Type:** number
 
@@ -1128,7 +1141,7 @@ Mapped memory protection type, indicating that the mapped memory is readable.
 static readonly PROT_WRITE: number
 ```
 
-Mapped memory protection type, indicating that the mapped memory is readable.
+映射内存保护类型，代表映射的内存可写。
 
 **Type:** number
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
+
 ## dnsServers
 
 ```TypeScript
@@ -78,7 +84,7 @@ ipSetMode: IpSetMode
 
 以太网连接配置模式。
 
-**类型：** IpSetMode
+**类型：** [IpSetMode](arkts-mdm-networkmanager-ipsetmode-e.md)
 
 **起始版本：** 23
 

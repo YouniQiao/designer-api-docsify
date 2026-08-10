@@ -1,6 +1,6 @@
 # ErrorCode
 
-ErrorCode
+错误码。
 
 **Since:** 7
 

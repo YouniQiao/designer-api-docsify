@@ -4,7 +4,7 @@ TextClock容器组件的控制器，可以将该控制器绑定到TextClock组�
 
 ## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts controller: TextClockController = new TextClockController();```
 
 **起始版本：** 8
 

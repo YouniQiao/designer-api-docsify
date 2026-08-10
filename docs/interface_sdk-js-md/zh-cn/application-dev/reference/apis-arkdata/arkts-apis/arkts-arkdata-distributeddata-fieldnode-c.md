@@ -38,7 +38,7 @@ appendChild(child: FieldNode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要附加的域节点。 |
+| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | 是 | 要附加的域节点。 |
 
 **返回值：**
 
@@ -46,7 +46,7 @@ appendChild(child: FieldNode): boolean
 | --- | --- |
 | boolean | 返回true表示子节点成功添加到FieldNode；返回false则表示操作失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import ddm from '@ohos.data.distributedData';

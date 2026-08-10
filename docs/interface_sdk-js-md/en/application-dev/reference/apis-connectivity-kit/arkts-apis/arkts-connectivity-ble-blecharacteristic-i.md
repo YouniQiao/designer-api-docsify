@@ -10,6 +10,12 @@ Describes the Gatt characteristic.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## characteristicUuid
 
 ```TypeScript
@@ -62,7 +68,7 @@ characteristicValueHandle?: int
 
 The characteristic value handle of a BLECharacteristic instance
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -82,7 +88,7 @@ The characteristic value handle of a BLECharacteristic instance
 descriptors: Array<BLEDescriptor>
 ```
 
-The list of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ contained in the characteristic
+The list of {@link BLEDescriptor} contained in the characteristic
 
 **Type:** Array&lt;BLEDescriptor&gt;
 
@@ -106,7 +112,7 @@ permissions?: GattPermissions
 
 The permissions of a BLECharacteristic instance. The default value is Readable and Writable.
 
-**Type:** GattPermissions
+**Type:** [GattPermissions](arkts-connectivity-ble-gattpermissions-i.md)
 
 **Since:** 20
 
@@ -128,7 +134,7 @@ properties?: GattProperties
 
 The properties of a BLECharacteristic instance
 
-**Type:** GattProperties
+**Type:** [GattProperties](arkts-connectivity-ble-gattproperties-i.md)
 
 **Since:** 10
 
@@ -148,7 +154,7 @@ The properties of a BLECharacteristic instance
 serviceUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to which the characteristic belongs
+The UUID of the {@link GattService} instance to which the characteristic belongs
 
 **Type:** string
 

@@ -1,5 +1,11 @@
 # queryApnIds
 
+## Modules to Import
+
+```TypeScript
+import { data } from 'kits/@kit.TelephonyKit';
+```
+
 ## queryApnIds
 
 ```TypeScript
@@ -22,21 +28,21 @@ Query APN IDs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| apnInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The APN information that needs to be queried. |
+| apnInfo | [ApnInfo](arkts-telephony-data-apninfo-i.md) | Yes | The APN information that needs to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Returns IDs of all APNs that meet the query conditions. |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Returns IDs of all APNs that meet the query conditions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

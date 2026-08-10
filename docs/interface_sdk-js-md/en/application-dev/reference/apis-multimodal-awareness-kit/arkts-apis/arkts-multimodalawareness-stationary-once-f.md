@@ -1,5 +1,11 @@
 # once
 
+## Modules to Import
+
+```TypeScript
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## once
 
 ```TypeScript
@@ -20,10 +26,10 @@ Obtains the device status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| activity | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device status type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ActivityResponse&gt; | Yes | Callback used to receive reported data. |
+| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | Yes | Device status type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | Yes | Callback used to receive reported data. |
 
-**Example**
+## Examples
 
 ```TypeScript
 stationary.once('still', (data) => {

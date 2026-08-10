@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## 汇总
 
 ### 函数
@@ -46,7 +52,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ProcessManager](arkts-arkts-process-processmanager-c.md) | 提供进程管理相关接口，包括进程 UID 判断、用户信息查询、线程优先级获取、环境变量获取、进程退出和信号发送等功能。  通过 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 构造 ProcessManager 对象。 |
+| [ProcessManager](arkts-arkts-process-processmanager-c.md) | 提供进程管理相关接口，包括进程 UID 判断、用户信息查询、线程优先级获取、环境变量获取、进程退出和信号发送等功能。  通过 `new process.ProcessManager()` 构造 ProcessManager 对象。 |
 
 <!--Del-->
 ### 接口（系统接口）

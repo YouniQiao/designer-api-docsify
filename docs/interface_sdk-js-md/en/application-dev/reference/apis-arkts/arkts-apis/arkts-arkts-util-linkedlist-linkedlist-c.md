@@ -1,6 +1,6 @@
 # LinkedList
 
-LinkedList is implemented based on the doubly linked list. Each node of the doubly linked list has references pointing to the previous element and the next element. When querying an element,the system traverses the list from the beginning or end.
+LinkedList底层通过双向链表实现，每个节点都包含对前一个元素和后一个元素的引用。查询元素时，可以从头或从尾部遍历，插入和删除效率高，查询效率低。LinkedList允许元素为null。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { LinkedList } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
 $_iterator(): IterableIterator<T>
 ```
 
-returns an iterator. Each item of the iterator is a ArkTS Object
+返回一个迭代器，每一项都是一个ArkTS对象。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ returns an iterator. Each item of the iterator is a ArkTS Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 ## [Symbol.iterator]
 
@@ -40,7 +46,7 @@ returns an iterator. Each item of the iterator is a ArkTS Object
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-returns an iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，用于遍历LinkedList中的元素。
 
 **Since:** 8
 
@@ -56,15 +62,15 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -101,7 +107,7 @@ while(!temp.done) {
 add(element: T): boolean
 ```
 
-Adds an element at the end of this LinkedList.
+在LinkedList尾部插入元素。
 
 **Since:** 8
 
@@ -117,21 +123,21 @@ Adds an element at the end of this LinkedList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 待插入的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
+| boolean | 插入成功返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| 10200011 | The add method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -155,7 +161,7 @@ console.info("result = ", result4) // result =  true
 addFirst(element: T): void
 ```
 
-Adds an element at the top of this LinkedList.
+在LinkedList头部插入元素。
 
 **Since:** 8
 
@@ -171,15 +177,15 @@ Adds an element at the top of this LinkedList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 待插入的元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The addFirst method cannot be bound. |
+| 10200011 | The addFirst method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -204,7 +210,7 @@ console.info("result:", result);  // result: 1,2,3
 clear(): void
 ```
 
-Clears this LinkedList and sets its length to **0**.
+清除LinkedList中的所有元素，并将length置为0。
 
 **Since:** 8
 
@@ -220,9 +226,9 @@ Clears this LinkedList and sets its length to **0**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -241,7 +247,7 @@ console.info("result:", result);  // result: false
 clone(): LinkedList<T>
 ```
 
-Clones an instance identical to this **LinkedList** and returns it. The modification to the copy does not affect the original instance.
+克隆一个与LinkedList相同的实例并返回。修改克隆后的实例并不会影响原实例。
 
 **Since:** 8
 
@@ -257,15 +263,15 @@ Clones an instance identical to this **LinkedList** and returns it. The modifica
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | New **LinkedList** instance obtained. |
+| [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md)&lt;T&gt; | 返回LinkedList对象的克隆实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
+| 10200011 | The clone method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -283,7 +289,7 @@ console.info("result:", result.has(4));  // result: true
 constructor()
 ```
 
-A constructor used to create a **LinkedList** instance.
+LinkedList的构造函数。调用后，创建一个空的LinkedList实例。
 
 **Since:** 8
 
@@ -299,9 +305,9 @@ A constructor used to create a **LinkedList** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The LinkedList's constructor cannot be directly invoked. |
+| 10200012 | The LinkedList's constructor cannot be directly invoked. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -313,7 +319,7 @@ let linkedList = new LinkedList<string | number | boolean | object>();
 convertToArray(): Array<T>
 ```
 
-Converts this LinkedList into an array and returns the array.
+将当前LinkedList实例转换成数组并返回。
 
 **Since:** 8
 
@@ -329,15 +335,15 @@ Converts this LinkedList into an array and returns the array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array obtained. |
+| Array&lt;T&gt; | 返回转换后的数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
+| 10200011 | The convertToArray method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -355,7 +361,7 @@ console.info("result:", result);  // result: 2,4,5,4
 forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void
 ```
 
-Uses a callback to traverse the elements in this LinkedList and obtain their indexes.
+通过回调函数来遍历LinkedList实例对象上的元素以及其下标。
 
 **Since:** 8
 
@@ -371,16 +377,16 @@ Uses a callback to traverse the elements in this LinkedList and obtain their ind
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, LinkedList?: LinkedList&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the LinkedList. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| callbackFn | (value: T, index?: number, LinkedList?: LinkedList&lt;T&gt;) =&gt; void | Yes | 回调函数。 |
+| thisArg | Object | No | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -403,7 +409,7 @@ linkedList.forEach((value: number, index: number) => {
 forEach(callbackFn: LinkedListForEachCb<T>): void
 ```
 
-Replaces each element of this linkedList with the result of applying the operator to that element.
+用对该元素应用操作符的结果替换linkedList中的每个元素。
 
 **Since:** 23
 
@@ -421,7 +427,7 @@ Replaces each element of this linkedList with the result of applying the operato
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | callbackFn |
+| callbackFn | [LinkedListForEachCb](arkts-arkts-linkedlistforeachcb-t.md)&lt;T&gt; | Yes | 回调函数。 |
 
 ## get
 
@@ -435,7 +441,7 @@ ArkTS-Sta:
 get(index: int): T
 ```
 
-Obtains an element at the specified position in this LinkedList.
+根据下标获取LinkedList中的元素。
 
 **Since:** 8
 
@@ -451,22 +457,22 @@ Obtains an element at the specified position in this LinkedList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max, that is, 2147483647. |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的下标值。需要小于等于int32_max即2147483647。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Element obtained. If the element does not exist, **undefined** is returned. |
+| T | 返回指定下标位置的元素，如果元素不存在返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The get method cannot be bound. |
+| 10200001 | The value of index is out of range.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -487,7 +493,7 @@ console.info("result:", result);  // result: 5
 getFirst(): T
 ```
 
-Obtains the first element in this LinkedList.
+获取LinkedList实例中的第一个元素。
 
 **Since:** 8
 
@@ -503,16 +509,16 @@ Obtains the first element in this LinkedList.
 
 | Type | Description |
 | --- | --- |
-| T | Element obtained. If the element is empty, **undefined** is returned. |
+| T | 返回对应元素，如果元素为undefined则返回undefined，为null则返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The getFirst method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -536,7 +542,7 @@ ArkTS-Sta:
 getIndexOf(element: T): int
 ```
 
-Obtains the index of the first occurrence of the specified element in this LinkedList.
+查找指定元素第一次出现时的下标值，查找失败返回-1。
 
 **Since:** 8
 
@@ -552,21 +558,21 @@ Obtains the index of the first occurrence of the specified element in this Linke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定元素第一次出现时的下标值，查找失败返回-1。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
+| 10200011 | The getIndexOf method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -587,7 +593,7 @@ console.info("result:", result);  // result: 0
 getLast(): T
 ```
 
-Obtains the last element in this LinkedList.
+获取LinkedList实例中的最后一个元素。
 
 **Since:** 8
 
@@ -603,16 +609,16 @@ Obtains the last element in this LinkedList.
 
 | Type | Description |
 | --- | --- |
-| T | Element obtained. If the element is empty, **undefined** is returned. |
+| T | 返回对应元素，若元素为空则返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The getLast method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -636,7 +642,7 @@ ArkTS-Sta:
 getLastIndexOf(element: T): int
 ```
 
-Obtains the index of the last occurrence of the specified element in this LinkedList.
+查找指定元素最后一次出现时的下标值，查找失败返回-1。
 
 **Since:** 8
 
@@ -652,21 +658,21 @@ Obtains the index of the last occurrence of the specified element in this Linked
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定元素最后一次出现时的下标值，查找失败返回-1。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
+| 10200011 | The getLastIndexOf method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -687,7 +693,7 @@ console.info("result:", result);  // result: 5
 has(element: T): boolean
 ```
 
-Checks whether this LinkedList has the specified element.
+判断LinkedList中是否包含指定元素。
 
 **Since:** 8
 
@@ -703,21 +709,21 @@ Checks whether this LinkedList has the specified element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the specified element is contained; otherwise, **false** is returned. |
+| boolean | 包含指定元素返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| 10200011 | The has method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<string>();
@@ -738,7 +744,7 @@ ArkTS-Sta:
 insert(index: int, element: T): void
 ```
 
-Inserts an element at the specified position in this LinkedList.
+在长度范围内任意位置插入指定元素，可插入位置区间为[0, LinkedList.length]，在linkedList.length处插入时即在linkedList尾部添加元素。
 
 **Since:** 8
 
@@ -754,17 +760,17 @@ Inserts an element at the specified position in this LinkedList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max, that is, 2147483647. |
-| element | T | Yes | Target element. |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 插入位置索引，可插入位置区间为[0, LinkedList.length]，且需要小于等于int32_max即2147483647。 |
+| element | T | Yes | 待插入元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| 10200011 | The insert method cannot be bound. |
+| 10200001 | The value of index is out of range. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -781,7 +787,7 @@ console.info("result:", result);  // result: 0
 remove(element: T): boolean
 ```
 
-Removes the first occurrence of the specified element from this LinkedList.
+删除查找到的第一个指定元素。
 
 **Since:** 8
 
@@ -797,21 +803,21 @@ Removes the first occurrence of the specified element from this LinkedList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
+| boolean | 删除成功返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -829,7 +835,7 @@ console.info("result:", result);  // result: true
 removeByIndex(index: number): T
 ```
 
-Searches for an element based on its index and then removes it.
+在LinkedList长度范围内，根据元素的下标值查找元素，并将其删除。
 
 **Since:** 8
 
@@ -845,22 +851,22 @@ Searches for an element based on its index and then removes it.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the target element. The value must be less than or equal to int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max, that is, 2147483647. |
+| index | number | Yes | 指定元素的下标值，取值范围[0, LinkedList.length-1]，且需要小于等于int32_max即2147483647。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Element removed. If the element does not exist, **undefined** is returned. |
+| T | 返回删除的元素，如果元素为undefined则返回undefined，为null则返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| 10200011 | The removeByIndex method cannot be bound. |
+| 10200001 | The value of index is out of range. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -879,7 +885,7 @@ console.info("result:", result);  // result: 5
 removeByIndex(index: int): T | undefined
 ```
 
-Removes and returns the element at the specified index in this linkedlist.
+删除并返回此linkedList中指定下标位置的元素。
 
 **Since:** 23
 
@@ -895,20 +901,20 @@ Removes and returns the element at the specified index in this linkedlist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | the index in the linkedList |
+| index | int | Yes | 待查找元素的下标。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | the T type, if the index is out of bounds (greater than or equal to length or less than 0), throw an exception |
+| T | T类型的值，如果下标超出范围（大于等于length或小于0），抛出异常。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && <= \_\_\_ESCAPED\_DOLLAR\_\_\_{length}. Received value is: \_\_\_ESCAPED\_DOLLAR\_\_\_{index} |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| 10200010 | Container is empty. |
+| 10200001 | The value of "index" is out of range. It must be >= 0 && <= \\${length}. Received value is: \\${index} |
 
 ## removeFirst
 
@@ -916,7 +922,7 @@ Removes and returns the element at the specified index in this linkedlist.
 removeFirst(): T
 ```
 
-Removes the first element from this LinkedList.
+删除并返回LinkedList的第一个元素。
 
 **Since:** 8
 
@@ -932,16 +938,16 @@ Removes the first element from this LinkedList.
 
 | Type | Description |
 | --- | --- |
-| T | Element removed. |
+| T | 返回删除的元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| 10200011 | The removeFirst method cannot be bound. |
+| 10200010 | Container is empty. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -960,7 +966,7 @@ console.info("result:", result);  // result: 2
 removeFirst(): T | undefined
 ```
 
-Retrieves and removes the head (first element) of this linkedList.
+获取并删除此linkedList的头部元素（第一个元素）。
 
 **Since:** 23
 
@@ -976,13 +982,13 @@ Retrieves and removes the head (first element) of this linkedList.
 
 | Type | Description |
 | --- | --- |
-| T | the head of this list |
+| T | 返回此list的头部元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| 10200010 | Container is empty. |
 
 ## removeFirstFound
 
@@ -990,7 +996,7 @@ Retrieves and removes the head (first element) of this linkedList.
 removeFirstFound(element: T): boolean
 ```
 
-Removes the first occurrence of the specified element from this LinkedList.
+删除第一次出现的指定元素。如果LinkedList中不存在指定元素，会抛出错误。
 
 **Since:** 8
 
@@ -1006,23 +1012,23 @@ Removes the first occurrence of the specified element from this LinkedList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the element is removed; returns **false** if the element fails to be removed or does not exist. |
+| boolean | 删除成功返回true，删除失败时返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeFirstFound method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
-| [10200017](../errorcode-utils.md#10200017-failed-to-delete-an-element-that-does-not-exist) | The element does not exist in this container. |
+| 10200011 | The removeFirstFound method cannot be bound. |
+| 10200010 | Container is empty. |
+| 10200017 | The element does not exist in this container. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -1040,7 +1046,7 @@ console.info("result:", result);  // result: true
 removeLast(): T
 ```
 
-Removes the last element from this LinkedList.
+删除并返回LinkedList的最后一个元素。
 
 **Since:** 8
 
@@ -1056,16 +1062,16 @@ Removes the last element from this LinkedList.
 
 | Type | Description |
 | --- | --- |
-| T | Element removed. |
+| T | 返回删除的元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| 10200011 | The removeLast method cannot be bound. |
+| 10200010 | Container is empty. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -1084,7 +1090,7 @@ console.info("result:", result);  // result: 4
 removeLast(): T | undefined
 ```
 
-Removes and returns the last element from this linkedList.
+删除并返回此linkedList的最后一个元素。
 
 **Since:** 23
 
@@ -1100,13 +1106,13 @@ Removes and returns the last element from this linkedList.
 
 | Type | Description |
 | --- | --- |
-| T | the head of this list |
+| T | 返回此list的尾部元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| 10200010 | Container is empty. |
 
 ## removeLastFound
 
@@ -1114,7 +1120,7 @@ Removes and returns the last element from this linkedList.
 removeLastFound(element: T): boolean
 ```
 
-Removes the last occurrence of the specified element from this LinkedList.
+删除最后一次出现的指定元素。如果LinkedList中不存在指定元素，会抛出错误。
 
 **Since:** 8
 
@@ -1130,23 +1136,23 @@ Removes the last occurrence of the specified element from this LinkedList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 指定元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the element is removed; returns **false** if the element fails to be removed or does not exist. |
+| boolean | 删除成功返回true，删除失败返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeLastFound method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
-| [10200017](../errorcode-utils.md#10200017-failed-to-delete-an-element-that-does-not-exist) | The element does not exist in this container. |
+| 10200011 | The removeLastFound method cannot be bound. |
+| 10200010 | Container is empty. |
+| 10200017 | The element does not exist in this container. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -1170,7 +1176,7 @@ ArkTS-Sta:
 set(index: int, element: T): T
 ```
 
-Replaces an element at the specified position in this LinkedList with a given element.
+替换LinkedList指定位置的元素。
 
 **Since:** 8
 
@@ -1186,24 +1192,24 @@ Replaces an element at the specified position in this LinkedList with a given el
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max, that is, 2147483647. |
-| element | T | Yes | Element to be used for replacement. |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 查找的下标值。取值范围[0, LinkedList.length-1]，且需要小于等于int32_max即2147483647。 |
+| element | T | Yes | 用来替换的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | New element. If the element is empty, **undefined** is returned. |
+| T | 返回替换后的元素，如果元素为undefined则返回undefined，为null则返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The set method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200001 | The value of index is out of range. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let linkedList = new LinkedList<number | string>();
@@ -1221,7 +1227,7 @@ console.info("result:", result);  // result: b
 length: number
 ```
 
-Number of elements in a LinkedList.
+LinkedList的元素个数。
 
 **Type:** number
 

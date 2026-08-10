@@ -1,7 +1,6 @@
 # IntentResult
 
-Defines the return result of intent execution. The  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is supported.
+意图执行的返回结果，支持[泛型类型](../../../quick-start/introduction-to-arkts.md#泛型类和接口)。
 
 **Since:** 20
 
@@ -11,15 +10,21 @@ Defines the return result of intent execution. The
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## interactionInfo
 
 ```TypeScript
 interactionInfo?: InteractionInfo
 ```
 
-Interaction information returned after the intent execution completes.
+意图执行完成后返回的交互信息。
 
-**Type:** InteractionInfo
+**Type:** [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md)
 
 **Since:** 26.1.0
 

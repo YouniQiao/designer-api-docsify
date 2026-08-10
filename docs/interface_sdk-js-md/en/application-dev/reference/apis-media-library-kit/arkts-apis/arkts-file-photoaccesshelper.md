@@ -10,6 +10,12 @@ The module provides APIs for album management, including creating an album and a
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## Summary
 
 ### Functions
@@ -46,7 +52,7 @@ The module provides APIs for album management, including creating an album and a
 | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md) | Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space. |
 | [PhotoSelectResult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md) | Defines information about the images or videos selected. |
 | [PhotoViewMimeTypeFileSizeFilter](arkts-medialibrary-photoaccesshelper-photoviewmimetypefilesizefilter-c.md) | Describes the settings for filtering media files by type and size. |
-| [PhotoViewPicker](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md) | PhotoViewPicker provides APIs for the user to select images and videos. Before using the APIs of PhotoViewPicker,you need to create a PhotoViewPicker instance. |
+| [PhotoViewPicker](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md) | PhotoViewPicker provides APIs for the user to select images and videos. Before using the APIs of PhotoViewPicker, you need to create a PhotoViewPicker instance. |
 | [RecentPhotoInfo](arkts-medialibrary-photoaccesshelper-recentphotoinfo-c.md) | Recent photo info |
 | [RecentPhotoOptions](arkts-medialibrary-photoaccesshelper-recentphotooptions-c.md) | RecentPhotoOptions Object |
 | [RecommendationOptions](arkts-medialibrary-photoaccesshelper-recommendationoptions-c.md) | Defines the image recommendation options. The image recommendation feature depends on the image data analysis capability, which varies with devices. |
@@ -68,11 +74,11 @@ The module provides APIs for album management, including creating an album and a
 | [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md) | Provides APIs for managing the analysis album change request. |
 | [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md) | Represents a media asset change request. |
 | [MediaAssetEditData](arkts-medialibrary-photoaccesshelper-mediaasseteditdata-c-sys.md) | Represents the edited media asset data. |
-| [MediaHighlightAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md) | Provides APIs for managing the media album change request. It inherits from  [MediaAnalysisAlbumChangeRequest]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [MediaHighlightAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md) | Provides APIs for managing the media album change request. It inherits from  [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md). |
 | [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) | Provides APIs for custom user behavior recording for Gallery. |
 | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c-sys.md) | Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space. |
 | [RecommendationOptions](arkts-medialibrary-photoaccesshelper-recommendationoptions-c-sys.md) | Defines the image recommendation options. The image recommendation feature depends on the image data analysis capability, which varies with devices. |
-| [ResultSet](arkts-medialibrary-photoaccesshelper-resultset-c-sys.md) | Defines APIs to access the result set obtained by querying the RDB store.  Before calling any of the following APIs, you must use [query]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain a ResultSet instance. |
+| [ResultSet](arkts-medialibrary-photoaccesshelper-resultset-c-sys.md) | Defines APIs to access the result set obtained by querying the RDB store.  Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#query) to obtain a ResultSet instance. |
 | [TaskSignal](arkts-medialibrary-photoaccesshelper-tasksignal-c-sys.md) | for interrupting batch operations. |
 <!--DelEnd-->
 
@@ -88,12 +94,12 @@ The module provides APIs for album management, including creating an album and a
 | [AssetCompatibleCapability](arkts-medialibrary-photoaccesshelper-assetcompatiblecapability-i.md) | Defines the asset compatibility capability. |
 | [ChangeData](arkts-medialibrary-photoaccesshelper-changedata-i.md) | Defines the return value of the listener callback. |
 | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | Options for creating an image or video asset.  The title must meet the following requirements:  - It must not contain a file name extension.  - The total length of the file name must be between 1 and 255 characters. |
-| [CreationSetting](arkts-medialibrary-photoaccesshelper-creationsetting-i.md) | Represents the configuration for saving images or videos to the media library, including the file name, file type,and other related parameters. |
+| [CreationSetting](arkts-medialibrary-photoaccesshelper-creationsetting-i.md) | Represents the configuration for saving images or videos to the media library, including the file name, file type, and other related parameters. |
 | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Defines the retrieval options. |
 | [FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md) | FetchResult provides APIs to manage the file retrieval result. |
 | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md) | MediaAssetDataHandler is a media asset handler used to customize the media asset processing logic in  **onDataPrepared**. |
-| [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md) | MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**. |
-| [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) | Media change request, which is the parent class of the asset change request and album change request. |
+| [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md) | **MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**. |
+| [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) | Media change request, which is the parent class of the asset change request and album change request.  > **NOTE：** >  > The media change request takes effect only after > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called. |
 | [MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md) | MediaLibrary availability. |
 | [MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md) | MovingPhoto provides APIs for managing a moving photo instance. |
 | [PhotoAccessHelper](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md) | Helper functions to access photos and albums. |
@@ -165,7 +171,7 @@ The module provides APIs for album management, including creating an album and a
 | [CompatibleMode](arkts-medialibrary-photoaccesshelper-compatiblemode-e.md) | Enumerates the compatible modes. |
 | [CompleteButtonText](arkts-medialibrary-photoaccesshelper-completebuttontext-e.md) | Enumerates the text displayed on the complete button. |
 | [DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md) | Enumerates the **DefaultChangeUri** subtypes. |
-| [DeliveryMode](arkts-medialibrary-photoaccesshelper-deliverymode-e.md) | Enumerates the asset delivery modes.  These modes are used for segmented photo or video delivery. If the device does not support segmentation, the three delivery modes below work the same way and just return the requested image or video directly. The request result is returned through the  [onDataPrepared]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_callback. |
+| [DeliveryMode](arkts-medialibrary-photoaccesshelper-deliverymode-e.md) | Enumerates the asset delivery modes.  These modes are used for segmented photo or video delivery. If the device does not support segmentation, the three delivery modes below work the same way and just return the requested image or video directly. The request result is returned through the  [onDataPrepared](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md#ondataprepared)callback. |
 | [DynamicRangeType](arkts-medialibrary-photoaccesshelper-dynamicrangetype-e.md) | Enumerates the dynamic range types of media assets. |
 | [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md) | Enumeration type of filter operator. |
 | [GridLevel](arkts-medialibrary-photoaccesshelper-gridlevel-e.md) | Enumeration type of grid level. |
@@ -178,7 +184,7 @@ The module provides APIs for album management, including creating an album and a
 | [OperationType](arkts-medialibrary-photoaccesshelper-operationtype-e.md) | Enumerates the predicates. |
 | [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md) | Defines the key information about an image or video file. |
 | [PhotoSource](arkts-medialibrary-photoaccesshelper-photosource-e.md) | Enumeration of PhotoSource type |
-| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ types. |
+| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) types. |
 | [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) | Enumerates the media file types. |
 | [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md) | Enumerates the media file types. |
 | [PlayMode](arkts-medialibrary-photoaccesshelper-playmode-e.md) | Enumerates whether to support automatic playback of the moving photo. |
@@ -208,7 +214,7 @@ The module provides APIs for album management, including creating an album and a
 | [CloudAssetDownloadCode](arkts-medialibrary-photoaccesshelper-cloudassetdownloadcode-e-sys.md) | Enumerates the status codes returned when adding an item to a batch download. |
 | [CloudAssetDownloadNotifyType](arkts-medialibrary-photoaccesshelper-cloudassetdownloadnotifytype-e-sys.md) | Enumerates the types of events reported during a cloud asset download. |
 | [CloudEnhancementState](arkts-medialibrary-photoaccesshelper-cloudenhancementstate-e-sys.md) | Enumerates the cloud enhancement states. |
-| [CloudEnhancementTaskStage](arkts-medialibrary-photoaccesshelper-cloudenhancementtaskstage-e-sys.md) | Enumerates the cloud enhancement task states, which are returned by  [CloudEnhancementTaskState]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [CloudEnhancementTaskStage](arkts-medialibrary-photoaccesshelper-cloudenhancementtaskstage-e-sys.md) | Enumerates the cloud enhancement task states, which are returned by  [CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md). |
 | [CloudMediaAssetTaskStatus](arkts-medialibrary-photoaccesshelper-cloudmediaassettaskstatus-e-sys.md) | Enumerates the statuses of tasks used for downloading cloud media assets. |
 | [CloudMediaDownloadType](arkts-medialibrary-photoaccesshelper-cloudmediadownloadtype-e-sys.md) | Enumerates the types of download tasks. |
 | [CloudMediaRetainType](arkts-medialibrary-photoaccesshelper-cloudmediaretaintype-e-sys.md) | Enumerates the modes used for deleting cloud media assets. |
@@ -228,7 +234,7 @@ The module provides APIs for album management, including creating an album and a
 | [MovingPhotoEffectMode](arkts-medialibrary-photoaccesshelper-movingphotoeffectmode-e-sys.md) | Enumerates the effects of a moving photo. |
 | [NotifyChangeType](arkts-medialibrary-photoaccesshelper-notifychangetype-e-sys.md) | Enumerates the types of changes that trigger the media asset or album change events. |
 | [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md) | Defines the key information about an image or video file. |
-| [PhotoPermissionType](arkts-medialibrary-photoaccesshelper-photopermissiontype-e-sys.md) | Enumerates the types of permissions for accessing media assets.  The permissions include temporary read permission and persistent read permission. The temporary read permission will be removed when the application is dead, while the persistent read permission will not.  For the same media asset and application, the persistent read permission overwrites the temporary read permission.The temporary read permission does not overwrite the persistent read permission. |
+| [PhotoPermissionType](arkts-medialibrary-photoaccesshelper-photopermissiontype-e-sys.md) | Enumerates the types of permissions for accessing media assets.  The permissions include temporary read permission and persistent read permission. The temporary read permission will be removed when the application is dead, while the persistent read permission will not.  For the same media asset and application, the persistent read permission overwrites the temporary read permission. The temporary read permission does not overwrite the persistent read permission. |
 | [PhotoRiskStatus](arkts-medialibrary-photoaccesshelper-photoriskstatus-e-sys.md) | Enumerates the risk types of images. |
 | [RankingMethod](arkts-medialibrary-photoaccesshelper-rankingmethod-e-sys.md) | Enumerates related entity Ranking Method |
 | [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e-sys.md) | Enumerates the types of recommended images. |

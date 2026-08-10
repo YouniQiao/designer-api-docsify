@@ -22,7 +22,7 @@ type: ValueType
 
 值类型。
 
-**类型：** ValueType
+**类型：** [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md)
 
 **起始版本：** 7
 

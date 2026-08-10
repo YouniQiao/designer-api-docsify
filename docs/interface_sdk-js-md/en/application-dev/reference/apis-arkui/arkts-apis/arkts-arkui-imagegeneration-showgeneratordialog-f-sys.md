@@ -1,5 +1,11 @@
 # showGeneratorDialog (System API)
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## showGeneratorDialog
 
 ```TypeScript
@@ -24,12 +30,12 @@ Open the AI image generation task popup and perform AI image generation operatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the context of dialog for ui display. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Generate image task parameters. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes | the context of dialog for ui display. |
+| options | [GeneratorDialogOptions](arkts-arkui-imagegeneration-generatordialogoptions-i-sys.md) | No | Generate image task parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;GeneratorResult&gt;&gt; |  Returns the result of generated image. |
+| Promise&lt;Array&lt;GeneratorResult&gt;&gt; | Returns the result of generated image. |
 

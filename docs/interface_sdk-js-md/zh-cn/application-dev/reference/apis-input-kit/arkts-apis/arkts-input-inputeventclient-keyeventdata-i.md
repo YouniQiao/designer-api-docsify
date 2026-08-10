@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## keyEvent
 
 ```TypeScript
@@ -18,7 +24,7 @@ keyEvent: KeyEvent
 
 按键注入描述信息。
 
-**类型：** KeyEvent
+**类型：** [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md)
 
 **起始版本：** 11
 

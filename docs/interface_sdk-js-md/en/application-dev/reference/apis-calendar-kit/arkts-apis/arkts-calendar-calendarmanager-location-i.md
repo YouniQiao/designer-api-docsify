@@ -1,6 +1,6 @@
 # Location
 
-Describes the event location.
+日程地点。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the event location.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
+## Modules to Import
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## latitude
 
 ```TypeScript
 latitude?: number
 ```
 
-Latitude of the location. The value range is [-90, 90]. The default value is **undefined**. If the value is out of the range, the map cannot be displayed properly.
+地点纬度。取值范围[-90, 90]，默认为undefined。超过取值范围地图将无法正常显示。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ Latitude of the location. The value range is [-90, 90]. The default value is **u
 location?: string
 ```
 
-Location, with a maximum of 5,000 characters. If this parameter is not specified, the default value is an empty string.
+日程地点。不填时，默认为undefined。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Location, with a maximum of 5,000 characters. If this parameter is not specified
 longitude?: number
 ```
 
-Longitude of the location. The value range is [-180, 180]. The default value is **undefined**. If the value is out of the range, the map cannot be displayed properly.
+地点经度。取值范围[-180, 180]，默认为undefined。超过取值范围地图将无法正常显示。
 
 **Type:** number
 

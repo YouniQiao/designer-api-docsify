@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## onStatus
 
 ```TypeScript
 onStatus(networkId: string, status: number): void
 ```
 
-事件回调类。参数由[connectDfs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_传入。
+事件回调类。参数由[connectDfs](arkts-corefile-file-fs-connectdfs-f.md#connectdfs)传入。
 
 **起始版本：** 12
 

@@ -4,7 +4,7 @@
 export type Advertisement = _Advertisement
 ```
 
-Defines the requested ad content.
+请求的广告内容。
 
 **Since:** 11
 

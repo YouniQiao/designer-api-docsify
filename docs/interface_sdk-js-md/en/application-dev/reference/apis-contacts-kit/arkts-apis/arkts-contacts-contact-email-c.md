@@ -1,6 +1,6 @@
 # Email
 
-Defines a contact's email.
+联系人的邮箱。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's email.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## CUSTOM_LABEL
 
 ```TypeScript
 static readonly CUSTOM_LABEL: 0
 ```
 
-Custom mailbox type, the default value is **0**.
+自定义邮箱类型，默认值为0。
 
 **Type:** 0
 
@@ -36,7 +42,7 @@ Custom mailbox type, the default value is **0**.
 static readonly EMAIL_HOME: 1
 ```
 
-Home mailbox, the default value is **1**.
+家庭邮箱类型，默认值为1。
 
 **Type:** 1
 
@@ -56,7 +62,7 @@ Home mailbox, the default value is **1**.
 static readonly EMAIL_OTHER: 3
 ```
 
-Other mailbox, the default value is **3**.
+其它邮箱类型，默认值为3。
 
 **Type:** 3
 
@@ -76,7 +82,7 @@ Other mailbox, the default value is **3**.
 static readonly EMAIL_WORK: 2
 ```
 
-Work mailbox, the default value is **2**.
+工作邮箱类型，默认值为2。
 
 **Type:** 2
 
@@ -96,7 +102,7 @@ Work mailbox, the default value is **2**.
 static readonly INVALID_LABEL_ID: -1
 ```
 
-Invalid mailbox, the default value is **-1**.
+无效邮箱类型，默认值为-1。
 
 **Type:** -1
 
@@ -116,7 +122,7 @@ Invalid mailbox, the default value is **-1**.
 displayName?: string
 ```
 
-Displayed name of the mailbox.
+邮箱的显示名称。
 
 **Type:** string
 
@@ -136,7 +142,7 @@ Displayed name of the mailbox.
 email: string
 ```
 
-Email address of the contact.
+联系人的邮箱地址。
 
 **Type:** string
 
@@ -156,7 +162,7 @@ Email address of the contact.
 labelId?: number
 ```
 
-Mailbox type.
+邮箱的类型。
 
 **Type:** number
 
@@ -176,7 +182,7 @@ Mailbox type.
 labelName?: string
 ```
 
-Name of the mailbox type.
+邮箱的类型名称。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # OperationInfo (System API)
 
-Operation information.
+操作信息。
 
 **Since:** 26.0.0
 
@@ -18,9 +18,9 @@ Operation information.
 info: CliCmdInfo | Permissions
 ```
 
-Operation detail information.
+操作详细信息。
 
-**Type:** CliCmdInfo \| Permissions
+**Type:** [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md) \| Permissions
 
 **Since:** 26.0.0
 
@@ -38,9 +38,9 @@ Operation detail information.
 operationType: OperationType
 ```
 
-Operation type.
+操作类型。
 
-**Type:** OperationType
+**Type:** [OperationType](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-operationtype-e.md)
 
 **Since:** 26.0.0
 

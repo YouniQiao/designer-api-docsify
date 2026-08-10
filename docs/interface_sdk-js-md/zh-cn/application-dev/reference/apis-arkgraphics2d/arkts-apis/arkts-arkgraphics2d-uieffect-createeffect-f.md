@@ -1,5 +1,11 @@
 # createEffect
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## createEffect
 
 ```TypeScript
@@ -22,11 +28,12 @@ function createEffect(): VisualEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回VisualEffect实例，支持添加多种VisualEffect效果。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回VisualEffect实例，支持添加多种VisualEffect效果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect()
+// 创建VisualEffect实例
+let visualEffect: uiEffect.VisualEffect = uiEffect.createEffect();
 ```
 

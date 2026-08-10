@@ -1,12 +1,18 @@
 # getAutoStartApps
 
+## Modules to Import
+
+```TypeScript
+import { applicationManager } from 'kits/@kit.MDMKit';
+```
+
 ## getAutoStartApps
 
 ```TypeScript
 function getAutoStartApps(admin: Want): Array<Want>
 ```
 
-Checks the auto-start applications for the current user.
+查询当前用户开机自启动应用名单。
 
 **Since:** 12
 
@@ -24,24 +30,66 @@ Checks the auto-start applications for the current user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | List of the auto-start applications obtained. Since API version 24, the setting of whether the UI is hidden can be returned. |
+| Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 应用自启动名单数组。从API version 24开始，支持返回是否隐藏UI的配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+
+## getAutoStartApps
+
+```TypeScript
+function getAutoStartApps(admin: Want | null): Array<Want>
+```
+
+查询当前用户开机自启动应用名单。
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-applicationManager-function getAutoStartApps(admin: Want | null): Array<Want>--><!--Device-applicationManager-function getAutoStartApps(admin: Want | null): Array<Want>-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 应用自启动名单数组。支持返回是否隐藏UI的配置。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
 
 ```TypeScript
 import { applicationManager } from '@kit.MDMKit';
@@ -61,47 +109,20 @@ try {
 }
 ```
 
-
-## getAutoStartApps
-
 ```TypeScript
-function getAutoStartApps(admin: Want | null): Array<Want>
+// Return value example.
+[
+  {
+    "bundleName": "com.example.edmtest",
+    "abilityName": "EntryAbility",
+    // Supported since API version 24.
+    "parameters": {
+      "isHiddenStart": false
+    }
+  },
+  // ...
+]
 ```
-
-Checks the auto-start applications for the current user.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-applicationManager-function getAutoStartApps(admin: Want | null): Array<Want>--><!--Device-applicationManager-function getAutoStartApps(admin: Want | null): Array<Want>-End-->
-
-**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | List of the auto-start applications obtained. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## getAutoStartApps
@@ -110,7 +131,7 @@ Checks the auto-start applications for the current user.
 function getAutoStartApps(admin: Want, accountId: number): Array<Want>
 ```
 
-Checks the auto-start applications for the specified user.
+查询指定用户下的开机自启动应用名单。
 
 **Since:** 20
 
@@ -128,24 +149,66 @@ Checks the auto-start applications for the specified user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | Account ID, which must be greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ You can call [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of @ ohos.account.osAccount to obtain the ID. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| accountId | number | Yes | 用户ID，取值范围：大于等于0。 &lt;br&gt; accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | List of the auto-start applications obtained. Since API version 24, the setting of whether the UI is hidden can be returned. |
+| Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 应用自启动名单数组。从API version 24开始，支持返回是否隐藏UI的配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+
+## getAutoStartApps
+
+```TypeScript
+function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>
+```
+
+查询指定用户下的开机自启动应用名单。
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-applicationManager-function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>--><!--Device-applicationManager-function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| accountId | number | Yes | 用户ID，取值范围：大于等于0。 &lt;br&gt; accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 应用自启动名单数组。支持返回是否隐藏UI的配置。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
 
 ```TypeScript
 import { applicationManager } from '@kit.MDMKit';
@@ -165,45 +228,18 @@ try {
 }
 ```
 
-
-## getAutoStartApps
-
 ```TypeScript
-function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>
+// Return value example.
+[
+  {
+    "bundleName": "com.example.edmtest",
+    "abilityName": "EntryAbility",
+    // Supported since API version 24.
+    "parameters": {
+      "isHiddenStart": false
+    }
+  },
+  // ...
+]
 ```
-
-Checks the auto-start applications for the specified user.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-applicationManager-function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>--><!--Device-applicationManager-function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>-End-->
-
-**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
-| accountId | number | Yes | Account ID, which must be greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ You can call [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of @ ohos.account.osAccount to obtain the ID. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | List of the auto-start applications obtained. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

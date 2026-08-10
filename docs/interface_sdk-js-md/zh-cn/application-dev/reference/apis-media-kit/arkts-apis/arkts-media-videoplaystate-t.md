@@ -5,8 +5,9 @@ type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | '
 ```
 
 视频播放的状态机，可通过state属性获取当前状态。
-    **说明：**  
-        从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayerState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> > 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayerState](arkts-media-media-avplayerstate-t.md)替代。
 
 **起始版本：** 8
 

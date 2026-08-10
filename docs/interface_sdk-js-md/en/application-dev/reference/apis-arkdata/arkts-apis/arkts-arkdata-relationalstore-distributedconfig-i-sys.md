@@ -1,6 +1,6 @@
 # DistributedConfig
 
-Defines a struct for distributed configuration of a table.
+记录表的分布式配置信息。
 
 **Since:** 10
 
@@ -10,13 +10,23 @@ Defines a struct for distributed configuration of a table.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## references
 
 ```TypeScript
 references?: Array<Reference>
 ```
 
-Specifies the reference relationships between tables.
+设置表之间的关联关系，可以设置多个字段的关联，子表和父表关联字段的值必须相同。默认数据库表之间无关联关系。
+
+**系统接口：** 此接口为系统接口。
+
+从API version 11开始，支持此可选参数。
 
 **Type:** Array&lt;Reference&gt;
 

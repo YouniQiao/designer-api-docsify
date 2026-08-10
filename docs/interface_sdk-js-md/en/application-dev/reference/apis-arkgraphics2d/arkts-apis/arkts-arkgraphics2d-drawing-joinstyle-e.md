@@ -1,6 +1,6 @@
 # JoinStyle
 
-Enumerates the join styles of a pen. The join style defines the shape of the joints of a polyline segment drawn by the pen.
+定义线条转角样式的枚举，即画笔在绘制折线段时，在折线转角处的样式。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the join styles of a pen. The join style defines the shape of the joi
 MITER_JOIN = 0
 ```
 
-Mitered corner. If the angle of a polyline is small, its miter length may be inappropriate. In this case, you need to use the miter limit to limit the miter length.
+转角类型为尖角，如果折线角度比较小，则尖角会很长，需要使用限制值（miter limit）进行限制。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Mitered corner. If the angle of a polyline is small, its miter length may be ina
 ROUND_JOIN = 1
 ```
 
-Round corner.
+转角类型为圆头。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Round corner.
 BEVEL_JOIN = 2
 ```
 
-Beveled corner.
+转角类型为平头。
 
 **Since:** 12
 

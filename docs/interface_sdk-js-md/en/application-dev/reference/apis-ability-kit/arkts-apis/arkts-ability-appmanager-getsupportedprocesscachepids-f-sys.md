@@ -1,15 +1,22 @@
 # getSupportedProcessCachePids (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getSupportedProcessCachePids
 
 ```TypeScript
 function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>
 ```
 
-Obtains the PIDs of processes that support quick startup after caching in a specified application. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API can only be used to obtain the PIDs of the system account to which the caller belongs.
+查询当前应用中支持缓存后快速启动的进程PID。使用Promise异步回调。
+
+> **说明：**
+> 
+> 本接口仅支持获取调用者所在系统账号下的进程PID。
 
 **Since:** 14
 
@@ -29,25 +36,25 @@ Obtains the PIDs of processes that support quick startup after caching in a spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 表示要查询的应用包名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array containing the PIDs. |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise对象。返回一个数组，包含当前应用中支持缓存后快速启动的所有进程PID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

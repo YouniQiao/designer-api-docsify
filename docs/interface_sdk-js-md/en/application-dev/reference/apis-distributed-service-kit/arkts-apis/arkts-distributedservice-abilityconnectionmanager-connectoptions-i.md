@@ -1,6 +1,6 @@
 # ConnectOptions
 
-Connection options for the application.
+应用连接时所需的连接选项。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Connection options for the application.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## needSendData
 
 ```TypeScript
 needSendData?: boolean
 ```
 
-Whether to send data. The value **true** indicates that data needs to be sent, and the value **false** indicates the opposite.
+true代表需要传输数据，false代表不需要传输数据。
 
 **Type:** boolean
 
@@ -36,9 +42,9 @@ Whether to send data. The value **true** indicates that data needs to be sent, a
 parameters?: Record<string, string>
 ```
 
-Additional configuration for the connection.
+配置连接所需的额外信息。
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 18
 
@@ -56,9 +62,9 @@ Additional configuration for the connection.
 startOptions?: StartOptionParams
 ```
 
-Application startup options.
+配置应用启动选项。
 
-**Type:** StartOptionParams
+**Type:** [StartOptionParams](arkts-distributedservice-abilityconnectionmanager-startoptionparams-e.md)
 
 **Since:** 18
 

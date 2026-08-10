@@ -48,7 +48,7 @@ MIME
 BASIC_URL_SAFE
 ```
 
-表示base64的编码格式为BASIC\_URL\_SAFE
+表示base64的编码格式为BASIC_URL_SAFE
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ BASIC_URL_SAFE
 MIME_URL_SAFE
 ```
 
-表示base64的编码格式为MIME\_URL\_SAFE
+表示base64的编码格式为MIME_URL_SAFE
 
 **起始版本：** 23
 

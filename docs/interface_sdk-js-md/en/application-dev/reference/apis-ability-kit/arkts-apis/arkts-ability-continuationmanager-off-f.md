@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { continuationManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('deviceSelected')
 
 ```TypeScript
 function off(type: 'deviceSelected', token: number): void
 ```
 
-Unsubscribes from device connection events.
+取消监听设备连接状态。
 
 **Since:** 9
 
@@ -30,20 +36,20 @@ Unsubscribes from device connection events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceSelected' | Yes | Event type. The value is fixed at **deviceSelected**. |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| type | 'deviceSelected' | Yes | 取消监听的事件类型，固定值"deviceSelected"。 |
+| token | number | Yes | 注册后的token。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
-| [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) | The specified callback has been registered. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 16600004 | The specified callback has been registered. |
+| 16600001 | The system ability works abnormally. |
+| 16600002 | The specified token or callback is not registered. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -63,7 +69,7 @@ try {
 function off(type: 'deviceUnselected', token: number): void
 ```
 
-Unsubscribes from device disconnection events.
+取消监听设备断开状态。
 
 **Since:** 9
 
@@ -87,20 +93,20 @@ Unsubscribes from device disconnection events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceUnselected' | Yes | Event type. The value is fixed at **deviceUnselected**. |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| type | 'deviceUnselected' | Yes | 取消监听的事件类型，固定值"deviceUnselected"。 |
+| token | number | Yes | 注册后的token。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
-| [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) | The specified callback has been registered. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 16600004 | The specified callback has been registered. |
+| 16600001 | The system ability works abnormally. |
+| 16600002 | The specified token or callback is not registered. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -120,7 +126,7 @@ try {
 function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): void
 ```
 
-Unsubscribes from device connection events. This API uses an asynchronous callback to return the result.
+异步方法，取消监听设备连接状态，使用Callback形式返回连接的设备信息。
 
 **Since:** 8
 
@@ -140,10 +146,10 @@ Unsubscribes from device connection events. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceConnect' | Yes | Event type. The value is fixed at **deviceConnect**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuationResult&gt; | No | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
+| type | 'deviceConnect' | Yes | 取消监听的事件类型，固定值"deviceConnect"。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | No | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -162,7 +168,7 @@ continuationManager.off("deviceConnect", (data) => {
 function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 ```
 
-Unsubscribes from device disconnection events. This API uses an asynchronous callback to return the result.
+异步方法，取消监听设备断开状态，使用Callback形式返回连接的设备信息。
 
 **Since:** 8
 
@@ -182,10 +188,10 @@ Unsubscribes from device disconnection events. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceDisconnect' | Yes | Event type. The value is fixed at **deviceDisconnect**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | No | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID. |
+| type | 'deviceDisconnect' | Yes | 取消监听的事件类型，固定值"deviceDisconnect"。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 当用户从设备选择模块中断开设备时调用，返回设备ID供开发者使用。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

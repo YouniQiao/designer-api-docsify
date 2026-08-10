@@ -1,6 +1,6 @@
 # RandomAccessFile
 
-Provides APIs for randomly reading and writing a stream. Before invoking any API of **RandomAccessFile**, you need to use **createRandomAccessFile()** to create a **RandomAccessFile** instance synchronously or asynchronously.
+随机读写文件流。在调用RandomAccessFile的方法前，需要先通过createRandomAccessFile()方法（同步或异步）来构建一个RandomAccessFile实例。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Provides APIs for randomly reading and writing a stream. Before invoking any API
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Closes the **RandomAccessFile** instance. This API returns the result synchronously.
+以同步方式关闭RandomAccessFile对象。
 
 **Since:** 10
 
@@ -37,11 +43,11 @@ Closes the **RandomAccessFile** instance. This API returns the result synchronou
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
 randomAccessFile.close();
 ```
 
@@ -51,7 +57,7 @@ randomAccessFile.close();
 getReadStream(): ReadStream
 ```
 
-Obtains a **ReadStream** instance of this **RandomAccessFile**.
+获取当前 RandomAccessFile 的一个 ReadStream 实例。
 
 **Since:** 12
 
@@ -65,24 +71,24 @@ Obtains a **ReadStream** instance of this **RandomAccessFile**.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-fileio-readstream-c.md) | 文件可读流。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
 | 13900020 | Invalid argument |
+| 401 | Parameter error |
+| 13900012 | Permission denied |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+const randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
 const rs = randomAccessFile.getReadStream();
 rs.close();
 randomAccessFile.close();
@@ -94,7 +100,7 @@ randomAccessFile.close();
 getWriteStream(): WriteStream
 ```
 
-Obtains a **WriteStream** instance of this **RandomAccessFile**.
+获取当前 RandomAccessFile 的一个 WriteStream 实例。
 
 **Since:** 12
 
@@ -108,24 +114,24 @@ Obtains a **WriteStream** instance of this **RandomAccessFile**.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-fileio-writestream-c.md) | 文件可写流。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
 | 13900020 | Invalid argument |
+| 401 | Parameter error |
+| 13900012 | Permission denied |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+const randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
 const ws = randomAccessFile.getWriteStream();
 ws.close();
 randomAccessFile.close();
@@ -140,7 +146,7 @@ read(
   ): Promise<number>
 ```
 
-Reads data from a file. This API uses a promise to return the result.
+从文件读取数据，使用promise异步回调。
 
 **Since:** 10
 
@@ -154,38 +160,39 @@ Reads data from a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to read , in bytes. This parameter is optional. The default value is the buffer length.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认为缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the data read, in bytes. |
+| Promise&lt;number&gt; | Promise对象。返回读取的结果，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, ReadOptions } from '@kit.CoreFileKit';
+import { ReadOptions } from '@kit.CoreFileKit';
+
 let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-let randomAccessFile = fs.createRandomAccessFileSync(file);
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
 let bufferLength: number = 4096;
 let readOption: ReadOptions = {
   offset: 1,
@@ -193,12 +200,12 @@ let readOption: ReadOptions = {
 };
 let arrayBuffer = new ArrayBuffer(bufferLength);
 randomAccessFile.read(arrayBuffer, readOption).then((readLength: number) => {
-  console.info("randomAccessFile readLength: " + readLength);
+  console.info(`Succeeded in reading, read length: ${readLength}`);
 }).catch((err: BusinessError) => {
-  console.error("create randomAccessFile failed with error message: " + err.message + ", error code: " + err.code);
+  console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   randomAccessFile.close();
-  fs.closeSync(file);
+  fileIo.closeSync(file);
 });
 ```
 
@@ -208,7 +215,7 @@ randomAccessFile.read(arrayBuffer, readOption).then((readLength: number) => {
 read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 ```
 
-Reads data from a file. This API uses an asynchronous callback to return the result.
+从文件读取数据，使用callback异步回调。
 
 **Since:** 10
 
@@ -222,22 +229,46 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
+| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步读取完成后的回调。返回实际读取的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let length: number = 20;
+
+let arrayBuffer = new ArrayBuffer(length);
+randomAccessFile.read(arrayBuffer, (err: BusinessError, readLength: number) => {
+  if (err) {
+    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (readLength) {
+      console.info(`Succeeded in reading, size is: ${readLength}`);
+    }
+  }
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
 
 ## read
 
@@ -249,7 +280,7 @@ read(
   ): void
 ```
 
-Reads data from a file. This API uses an asynchronous callback to return the result.
+从文件读取数据，使用callback异步回调。
 
 **Since:** 10
 
@@ -263,23 +294,51 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The options are as follows:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to read , in bytes. This parameter is optional. The default value is the buffer length.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
+| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示读取数据的长度，单位为Byte。可选，默认为缓冲区长度。&lt;br/&gt;- offset，number 类型，表示读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从filePointer开始读。<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步读取完成后的回调。返回实际读取的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let length: number = 20;
+let readOption: ReadOptions = {
+  offset: 1,
+  length: 5
+};
+let arrayBuffer = new ArrayBuffer(length);
+randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError, readLength: number) => {
+  if (err) {
+    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (readLength) {
+      console.info(`Succeeded in reading, size is: ${readLength}`);
+    }
+  }
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
 
 ## readSync
 
@@ -290,7 +349,7 @@ readSync(
   ): number
 ```
 
-Reads data from a file. This API returns the result synchronously.
+以同步方法从文件读取数据。
 
 **Since:** 10
 
@@ -304,41 +363,41 @@ Reads data from a file. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to read , in bytes. This parameter is optional. The default value is the buffer length.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。&lt;br/&gt;<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Length of the data read, in bytes. |
+| number | 实际读取的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-let randomAccessFile = fs.createRandomAccessFileSync(file);
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
 let length: number = 4096;
 let arrayBuffer = new ArrayBuffer(length);
 let readLength = randomAccessFile.readSync(arrayBuffer);
 randomAccessFile.close();
-fs.closeSync(file);
+fileIo.closeSync(file);
 ```
 
 ## setFilePointer
@@ -347,7 +406,7 @@ fs.closeSync(file);
 setFilePointer(filePointer: number): void
 ```
 
-Sets the file offset pointer.
+设置文件偏移指针。
 
 **Since:** 10
 
@@ -361,23 +420,23 @@ Sets the file offset pointer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePointer | number | Yes | Offset pointer to the **RandomAccessFile** instance, in bytes. |
+| filePointer | number | Yes | RandomAccessFile对象的偏移指针，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
 randomAccessFile.setFilePointer(1);
 randomAccessFile.close();
 ```
@@ -391,7 +450,7 @@ write(
   ): Promise<number>
 ```
 
-Writes data into a file. This API uses a promise to return the result.
+将数据写入文件，使用promise异步回调。
 
 **Since:** 10
 
@@ -405,40 +464,41 @@ Writes data into a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to write, in bytes. The default value is the buffer length.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。&lt;br/&gt;- offset，number类 型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。&lt;br/&gt;- encoding，string类型，当数据是string 类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the length of the data written, in bytes. |
+| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, WriteOptions } from '@kit.CoreFileKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
 let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-let randomAccessFile = fs.createRandomAccessFileSync(file);
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
 let bufferLength: number = 4096;
 let writeOption: WriteOptions = {
   offset: 1,
@@ -447,12 +507,12 @@ let writeOption: WriteOptions = {
 };
 let arrayBuffer = new ArrayBuffer(bufferLength);
 randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: number) => {
-  console.info("randomAccessFile bytesWritten: " + bytesWritten);
+  console.info(`Succeeded in writing, bytes written: ${bytesWritten}`);
 }).catch((err: BusinessError) => {
-  console.error("create randomAccessFile failed with error message: " + err.message + ", error code: " + err.code);
+  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   randomAccessFile.close();
-  fs.closeSync(file);
+  fileIo.closeSync(file);
 });
 ```
 
@@ -462,7 +522,7 @@ randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: number) => 
 write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 ```
 
-Writes data to a file. This API uses an asynchronous callback to return the result.
+将数据写入文件，使用callback异步回调。
 
 **Since:** 10
 
@@ -476,25 +536,48 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
+| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步写入完成后执行的回调函数。返回实际写入数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let bufferLength: number = 4096;
+let arrayBuffer = new ArrayBuffer(bufferLength);
+randomAccessFile.write(arrayBuffer, (err: BusinessError, bytesWritten: number) => {
+  if (err) {
+    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+    }
+  }
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
 
 ## write
 
@@ -506,7 +589,7 @@ write(
   ): void
 ```
 
-Writes data to a file. This API uses an asynchronous callback to return the result.
+将数据写入文件，使用callback异步回调。
 
 **Since:** 10
 
@@ -520,26 +603,55 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The options are as follows:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
+| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认为缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。&lt;br/&gt;- encoding，string类型，当数据 是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步写入完成后执行的回调函数。返回实际写入数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let bufferLength: number = 4096;
+let writeOption: WriteOptions = {
+  offset: 1,
+  length: bufferLength,
+  encoding: 'utf-8'
+};
+let arrayBuffer = new ArrayBuffer(bufferLength);
+randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError, bytesWritten: number) => {
+  if (err) {
+    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+    }
+  }
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
 
 ## writeSync
 
@@ -550,7 +662,7 @@ writeSync(
   ): number
 ```
 
-Writes data to a file. This API returns the result synchronously.
+以同步方法将数据写入文件。
 
 **Since:** 10
 
@@ -564,38 +676,39 @@ Writes data to a file. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options are as follows:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。&lt;br/&gt;- encoding，string类型，当数据 是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Length of the data written in the file, in bytes. |
+| number | 实际写入的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { fileIo as fs, WriteOptions } from '@kit.CoreFileKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
 let filePath = pathDir + "/test.txt";
-let randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
 let writeOption: WriteOptions = {
   offset: 5,
   length: 5,
@@ -611,7 +724,7 @@ randomAccessFile.close();
 readonly fd: number
 ```
 
-FD of the file.
+打开的文件描述符。
 
 **Type:** number
 
@@ -629,7 +742,7 @@ FD of the file.
 readonly filePointer: number
 ```
 
-Offset pointer to the **RandomAccessFile** instance, in bytes.
+RandomAccessFile对象的偏移指针，单位为Byte。
 
 **Type:** number
 

@@ -4,7 +4,7 @@
 export type DialogOptionsBorderWidth = Dimension | EdgeWidths
 ```
 
-Border width type of DialogOptions.
+表示弹窗背板的边框宽度允许的数据字段类型。
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ Border width type of DialogOptions.
 
 | Type | Description |
 | --- | --- |
-| Dimension |  |
-| EdgeWidths |  |
+| Dimension | 表示值类型为长度类型，用于描述尺寸单位。 |
+| EdgeWidths | 表示值类型为边框宽度类型，用于描述组件边框不同方向的宽度。 |
 

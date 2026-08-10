@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## path
 
 ```TypeScript
@@ -42,7 +48,7 @@ totalCnt: int
 
 路径下目录和文件总数量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -64,7 +70,7 @@ totalSize: long
 
 路径占用的总空间大小，单位Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 23
 

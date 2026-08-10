@@ -1,6 +1,6 @@
 # WindowStatusType
 
-Enumerates the window modes.
+窗口模式枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the window modes.
 UNDEFINED = 0
 ```
 
-The window mode is not defined by the application.
+表示APP未定义窗口模式。
 
 **Since:** 11
 
@@ -34,17 +34,17 @@ The window mode is not defined by the application.
 FULL_SCREEN = 1
 ```
 
-The application is displayed in full screen.
+表示APP全屏模式。
 
-In \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state, the window occupies the entire screen with no dock, title bar, or status bar displayed by default.
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，默认无dock栏、标题栏和状态栏显示。
 
-You can use [maximize()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ and  
-[setTitleAndDockHoverShown()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to configure whether to display the title bar and dock upon hovering over the hot zone.
+可通过[maximize()](arkts-arkui-window-window-i.md#maximize)和  
+[setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown)配置，当hover到热区时是否显示标题栏和dock栏。
 
-The last call takes precedence when both the **maximize()** and **setTitleAndDockHoverShown()** APIs are called.
+当maximize()和setTitleAndDockHoverShown()接口都调用时，以最后调用设置的效果为准。
 
-In non-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ state, the window occupies the entire screen with no title bar or dock displayed. You can use  
-[setSpecificSystemBarEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ to configure whether to display the status bar.
+非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，无标题栏和dock栏显示。可通过  
+[setSpecificSystemBarEnabled()](arkts-arkui-window-window-i.md#setspecificsystembarenabled)配置是否显示状态栏。
 
 **Since:** 11
 
@@ -62,8 +62,8 @@ In non-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ state, the window occupies the entire 
 MAXIMIZE = 2
 ```
 
-The application window is maximized. In  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state, the window occupies the entire screen, and the dock, status bar, and title bar are displayed without requiring a hover. This state is unavailable in non-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ state.
+表示APP窗口最大化模式，[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，不需要hover就可以显示dock栏、状态栏和标题栏。非  
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，不存在该状态。
 
 **Since:** 11
 
@@ -81,7 +81,7 @@ The application window is maximized. In
 MINIMIZE = 3
 ```
 
-The application window is minimized.
+表示APP窗口最小化模式。
 
 **Since:** 11
 
@@ -99,7 +99,7 @@ The application window is minimized.
 FLOATING = 4
 ```
 
-The application is displayed in a floating window.
+表示APP自由悬浮形式窗口模式。
 
 **Since:** 11
 
@@ -117,7 +117,7 @@ The application is displayed in a floating window.
 SPLIT_SCREEN = 5
 ```
 
-The application is displayed in split-screen mode.
+表示APP分屏模式。
 
 **Since:** 11
 

@@ -1,7 +1,7 @@
 # LinkIntentInfo（系统接口）
 
 LinkIntentInfo用于描述  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器支持的参数，例如应用间跳转需要的uri信息。
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器支持的参数，例如应用间跳转需要的uri信息。
 
 **起始版本：** 20
 
@@ -12,6 +12,12 @@ LinkIntentInfo用于描述
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
 
 ## uri
 

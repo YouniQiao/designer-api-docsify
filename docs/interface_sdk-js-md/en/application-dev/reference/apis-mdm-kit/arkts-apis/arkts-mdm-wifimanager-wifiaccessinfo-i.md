@@ -1,6 +1,6 @@
 # WifiAccessInfo
 
-Represents Wi-Fi access information containing Service Set Identifier (SSID) and Basic Service Set Identifier (BSSID).
+Wi-Fi的SSID和BSSID信息。
 
 **Since:** 19
 
@@ -10,24 +10,25 @@ Represents Wi-Fi access information containing Service Set Identifier (SSID) and
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.MDMKit';
+```
+
 ## bssid
 
 ```TypeScript
 bssid?: string
 ```
 
-MAC address of the Wi-Fi hotspot, for example, **00:11:22:33:44:55**. To obtain the MAC address, enable  
-**Enable Wi-Fi verbose logging** under **Settings**   
-    **System & updates**   
-    **Developer options** first, and  
-then go to the WLAN list to check the MAC address. If a Wi-Fi network has multiple MAC addresses, all of them must be added here.
+Wi-Fi热点的MAC地址，例如：00:11:22:33:44:55。获取方式如下：打开设置应用-点击系统选项-点击开发者选项-开启WLAN详细日志记录开关，然后进入设置应用中的WLAN列表，查看显示的MAC地址。若一个Wi-Fi对应多个MAC地址，需添加所有MAC地址。
 
-This property is optional when the [addDisallowedWifiList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[removeDisallowedWifiList]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ APIs are called. The default value is an empty string.
+作为[addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md#adddisallowedwifilist)和  
+[removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md#removedisallowedwifilist)接口的入参时，该属性可选，默认值为空字符串。
 
-This property is optional (available since API version 21) when the  
-[addAllowedWifiList]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ and  
-[removeAllowedWifiList]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ APIs are called. The default value is an empty string. However, this property is mandatory in API version 20 and earlier versions.
+作为[addAllowedWifiList](arkts-mdm-wifimanager-addallowedwifilist-f.md#addallowedwifilist)和  
+[removeAllowedWifiList](arkts-mdm-wifimanager-removeallowedwifilist-f.md#removeallowedwifilist)接口入参时，从API version 21开始，该属性可选，默认值为空字符串。API version 20及之前的版本，该属性必填。
 
 **Type:** string
 
@@ -47,7 +48,7 @@ This property is optional (available since API version 21) when the
 ssid: string
 ```
 
-Name of the Wi-Fi hotspot. The encoding format is UTF-8 and the maximum length is 32 bytes (three bytes for each Chinese character and one byte for each English character).
+Wi-Fi热点名称，编码格式为UTF-8，最大长度为32字节（中文字符占3位，英文字符占1位）。
 
 **Type:** string
 

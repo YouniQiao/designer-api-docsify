@@ -1,6 +1,6 @@
 # UIElementInfo
 
-Provides information about the UI event.
+UI事件的相关信息。
 
 **Since:** 10
 
@@ -10,13 +10,21 @@ Provides information about the UI event.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## bundleName
 
 ```TypeScript
 readonly bundleName: string
 ```
 
-Bundle name of the application.
+应用包名。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 
@@ -36,9 +44,11 @@ Bundle name of the application.
 readonly componentEventType?: ComponentEventType
 ```
 
-Component operation event type.If it is not a component operation event, \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is returned.
+控件操作事件类型，若非控件操作事件返回ComponentEventType.COMPONENT_UNDEFINED。
 
-**Type:** ComponentEventType
+从API version 22开始，该接口支持在原子化服务中使用。
+
+**Type:** [ComponentEventType](arkts-test-uitest-componenteventtype-e.md)
 
 **Since:** 22
 
@@ -56,7 +66,9 @@ Component operation event type.If it is not a component operation event, \_\_\_J
 readonly componentId?: string
 ```
 
-Component ID. If it is not a component operation event, an empty string is returned.
+控件id，若非控件操作事件返回空字符串。
+
+从API version 22开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 
@@ -76,9 +88,11 @@ Component ID. If it is not a component operation event, an empty string is retur
 readonly componentRect?: Rect
 ```
 
-The rect of the component, set all attributes of rect to 0 if it's a window.
+控件边框信息，若非控件操作事件则返回属性值均为0的Rect对象。
 
-**Type:** Rect
+从API version 22开始，该接口支持在原子化服务中使用。
+
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 22
 
@@ -96,7 +110,7 @@ The rect of the component, set all attributes of rect to 0 if it's a window.
 readonly text: string
 ```
 
-Text information of the component or window.
+控件/窗口的文本信息。 从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 
@@ -116,7 +130,9 @@ Text information of the component or window.
 readonly type: string
 ```
 
-Component or window type.
+控件/窗口类型。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 
@@ -136,9 +152,11 @@ Component or window type.
 readonly windowChangeType?: WindowChangeType
 ```
 
-Window change event type.If the event is not a window change event, \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is returned.
+窗口变化事件类型，若非窗口变化事件返回WindowChangeType.WINDOW_UNDEFINED。
 
-**Type:** WindowChangeType
+从API version 22开始，该接口支持在原子化服务中使用。
+
+**Type:** [WindowChangeType](arkts-test-uitest-windowchangetype-e.md)
 
 **Since:** 22
 
@@ -156,9 +174,11 @@ Window change event type.If the event is not a window change event, \_\_\_JSDOC\
 readonly windowId?: int
 ```
 
-ID of the window where the component belongs.
+控件所属窗口id。
 
-**Type:** int
+从API version 22开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

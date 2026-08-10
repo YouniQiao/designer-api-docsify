@@ -1,13 +1,12 @@
 # DynamicComponent
 
-**DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files
-within the current page, with the displayed content running in a worker thread.
+**DynamicComponent**用于支持在本页面内嵌入显示独立Abc（.abc文件）提供的UI，展示的内容在Worker线程中运行。
 
-It is typically used in modular development scenarios where .abc pages are dynamically loaded.
+通常用于动态加载Abc页面的模块化开发场景。通过Worker线程隔离运行Abc UI，避免阻塞主线程，提升应用流畅度。
 
-## Child Components
+## 子组件
 
-None
+无
 
 ## DynamicComponent
 
@@ -15,7 +14,7 @@ None
 DynamicComponent(options: DynamicOptions)
 ```
 
-Creates a **DynamicComponent** component to display the .abc UI running in the worker thread.
+创建DynamicComponent组件，用于显示Worker线程中运行的Abc UI。
 
 **Since:** 26.0.0
 
@@ -33,7 +32,10 @@ Creates a **DynamicComponent** component to display the .abc UI running in the w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration parameters for constructing a **DynamicComponent**, which are used to configure the entry of the .abc page to be loaded, worker thread to run, and display options.  |
+| options | [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md) | Yes | DynamicComponent的构造配置参数，用于配置要加载的Abc页面入口、运行Worker及显示选项。 |
 
 ## Summary
 
+- [DynamicOptions](arkts-arkui-dynamiccomponent-dynamicoptions-i-sys.md)
+- [ErrorCallback](arkts-arkui-dynamiccomponent-errorcallback-t-sys.md)
+- [Worker](arkts-arkui-dynamiccomponent-worker-t-sys.md)

@@ -30,5 +30,5 @@ declare function lstatSync(path: string): Stat
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 表示文件的具体信息。 |
+| [Stat](arkts-corefile-fileio-stat-i.md) | 表示文件的具体信息。 |
 

@@ -1,6 +1,6 @@
 # TagType
 
-Enumerates the asset attribute types.
+枚举，关键资产属性支持的数据类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the asset attribute types.
 BOOL = 0x01 << 28
 ```
 
-Boolean.
+标识关键资产属性对应的数据类型是布尔。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Boolean.
 NUMBER = 0x02 << 28
 ```
 
-Number.
+标识关键资产属性对应的数据类型是整型。
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ Number.
 BYTES = 0x03 << 28
 ```
 
-Byte array.
+标识关键资产属性对应的数据类型是字节数组。
 
 **Since:** 11
 

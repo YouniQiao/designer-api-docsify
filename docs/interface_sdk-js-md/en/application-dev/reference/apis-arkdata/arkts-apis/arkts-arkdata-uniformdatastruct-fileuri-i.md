@@ -1,6 +1,6 @@
 # FileUri
 
-Represents data of the file URI type.
+文件地址类型数据，用于描述文件的URI地址信息。创建FileUri对象后，可用于文件拖拽、文件共享等场景，支持通过uriAuthorizationPolicies控制文件访问权限，实现跨应用的文件数据传递和权限管理。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Represents data of the file URI type.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## details
 
 ```TypeScript
 details?: Record<string, int | long | double | string | Uint8Array>
 ```
 
-Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
+字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**Type:** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **Since:** 15
 
@@ -36,7 +42,7 @@ Object of the dictionary type used to describe the icon. The key is of the strin
 fileType: string
 ```
 
-File type, which must be UTD. For details, see [Prebuilt UTDs]. The maximum length of the value is 1024 bytes.
+文件类型（必须是标准化数据类型（即[UTD预置列表](../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。fileType最大长度限制为1024个字节，超出限制时抛出异常。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ File type, which must be UTD. For details, see [Prebuilt UTDs]. The maximum leng
 oriUri: string
 ```
 
-File path.
+文件的原始URI路径。支持本地文件绝对路径、file://协议和http/https网络URL格式。长度限制为4096字节。例如：`/data/local/tmp/test.txt`、`file:///data/local/tmp/test.txt`或`http://example.com/file.txt`。
 
 **Type:** string
 
@@ -76,8 +82,8 @@ File path.
 readonly uniformDataType: 'general.file-uri'
 ```
 
-Uniform data type, which has a fixed value of **general.file-uri**. For details, see  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+统一数据类型标识为文件地址类型数据，固定为“general.file-uri”，数据类型描述信息见  
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **Type:** 'general.file-uri'
 
@@ -97,9 +103,10 @@ Uniform data type, which has a fixed value of **general.file-uri**. For details,
 uriAuthorizationPolicies?: Array<int>
 ```
 
-Defines URI authorization policies for drag intention.
+用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权）。只针对单个record使用，优先级最高，具体策略见  
+[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 26.0.0
 

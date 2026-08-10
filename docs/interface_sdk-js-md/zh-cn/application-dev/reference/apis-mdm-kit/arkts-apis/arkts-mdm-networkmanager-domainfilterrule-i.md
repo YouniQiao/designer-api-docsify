@@ -4,7 +4,7 @@
 
 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-从API version 23开始，支持[LogType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
 **起始版本：** 12
 
@@ -13,6 +13,12 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 <!--Device-networkManager-interface DomainFilterRule--><!--Device-networkManager-interface DomainFilterRule-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
 
 ## action
 
@@ -24,9 +30,9 @@ action?: Action
 
 添加域名过滤规则时必填；
 
-移除域名过滤规则时非必填，当值为空时，表示清空所有的匹配[Action]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_规则的链，且domainName，appUid也必须传入空值。
+移除域名过滤规则时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且domainName，appUid也必须传入空值。
 
-**类型：** Action
+**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 12
 
@@ -68,9 +74,9 @@ direction?: Direction
 
 添加域名过滤规则时非必填；当值为空，以及设为输出链或输入链时，实际效果为输出链。设为转发链时，appUid需设置为空，否则会报401错误码。
 
-移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_链，且domainName，appUid也必须传入空值。
+移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且domainName，appUid也必须传入空值。
 
-**类型：** Direction
+**类型：** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **起始版本：** 15
 
@@ -88,7 +94,7 @@ direction?: Direction
 domainName?: string
 ```
 
-域名。添加域名过滤规则时必填。支持域名分段匹配，例如，domainName传入\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_，那么\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_3\_\_\_会被匹配，\_\_\_INLINE\_CODE\_DESC\_USD\_4\_\_\_不会被匹配。
+域名。添加域名过滤规则时必填。支持域名分段匹配，例如，domainName传入`example.com`，那么`example.com`、`www.example.com`、`www.test.example.com`会被匹配，`linkexample.com`不会被匹配。
 
 **类型：** string
 
@@ -136,7 +142,7 @@ logType?: LogType
 
 获取域名过滤规则时，仅日志生效的场景可以获取到logType字段。
 
-**类型：** LogType
+**类型：** [LogType](arkts-mdm-networkmanager-logtype-e.md)
 
 **起始版本：** 23
 

@@ -12,6 +12,12 @@ Describes enroll callback information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+```
+
 ## context
 
 ```TypeScript
@@ -40,7 +46,7 @@ result: EnrollResult
 
 Result.
 
-**Type:** EnrollResult
+**Type:** [EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md)
 
 **Since:** 10
 

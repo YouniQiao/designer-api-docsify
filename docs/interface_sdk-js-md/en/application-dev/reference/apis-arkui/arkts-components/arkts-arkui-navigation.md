@@ -1,40 +1,30 @@
 # Navigation
 
-The **Navigation** component is the root view container for navigation. It typically functions as the root container
-of a page and includes a title bar, content area, and toolbar. The content area switches between the home page
-content (child components of **Navigation**) and non-home page content (child components of
-[NavDestination]{@link nav_destination}) through routing.
+Navigation组件是路由导航的根视图容器，一般作为Page页面的根容器使用，其内部默认包含了标题栏、内容区和工具栏，其中内容区默认首页显示导航内容（Navigation的子组件）或非首页显示（
+[NavDestination]{@link nav_destination}的子组件），首页和非首页通过路由进行切换。
 
-> **NOTE**
+> **说明：**
 
-> - Since API version 11, this component supports the safe area attribute by default, with the default attribute
-> value being
-> **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP,
- SafeAreaEdge.BOTTOM])**.
-> You can override this attribute to change the default behavior. In earlier versions, you need to use the
-> [expandSafeArea]{@link CommonMethod#expandSafeArea} attribute to implement the safe area feature.
+> - 该组件从API version 11开始默认支持安全区避让特性(默认值为：expandSafeArea(
+> [SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM]))，开发者可以重
+> 写该属性覆盖默认行为，API version 11之前的版本需配合[expandSafeArea]{@link CommonMethod#expandSafeArea}属性实现安全区避让。
 >
-> - When [NavBar]{@link NavBar} is nested within a **Navigation** component, the lifecycle of the inner
-> **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a
-> [modal]{@link common}.
+> - [NavBar]{@link NavBar}嵌套使用Navigation时，内层NavDestination的生命周期不和外层NavDestination以及[全模态]{@link common}的生命周期进行联动。
 >
-> - If the [title]{@link NavigationAttribute#title} and [subTitle]{@link NavigationAttribute#subTitle} are not set
-> and [hideBackButton]{@link NavigationAttribute#hideBackButton} is set to **true**, the title bar is not displayed.
+> - Navigation未设置主副标题（[title]{@link NavigationAttribute#title}或[subTitle]{@link NavigationAttribute#subTitle}）且
+> [hideBackButton]{@link NavigationAttribute#hideBackButton}属性设置为true时，不显示标题栏。
 >
-> - During subpage navigation within **Navigation**, the new page actively requests focus.
+> - Navigation的子页面切换时，新页面会主动请求焦点。
 >
-> - You are not advised to use stack operations in [aboutToAppear]{@link BaseCustomComponent#aboutToAppear}, as the
-> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
-> failures.
+> - 不建议在[aboutToAppear]{@link BaseCustomComponent#aboutToAppear}中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
-## Child Components
+## 子组件
 
-Supported
+可以包含子组件。
 
-Since API version 9, it is recommended that this component be used together with the [NavRouter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_component.
+从API version 9开始，推荐与[NavRouter]{@link nav_router}组件搭配使用。
 
-Since API version 10, it is recommended that this component be used together with the  
-[NavPathStack]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ component and [navDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ attribute for page routing.
+从API version 10开始，推荐使用[NavPathStack]{@link NavPathStack}配合[navDestination]{@link NavigationAttribute#navDestination}属性进行页面路由。
 
 ## Navigation
 
@@ -42,8 +32,7 @@ Since API version 10, it is recommended that this component be used together wit
 Navigation()
 ```
 
-Creates a root view container for route navigation, suitable for page routing using the  
-[NavRouter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ component.
+创建路由导航的根视图容器，适用于使用[NavRouter]{@link nav_router}组件进行页面路由。
 
 **Since:** 8
 
@@ -61,8 +50,8 @@ Creates a root view container for route navigation, suitable for page routing us
 Navigation(pathInfos: NavPathStack)
 ```
 
-Binds a navigation controller to the **Navigation** component, suitable for page routing using  
-[NavPathStack]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with the [navDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ attribute.
+绑定导航控制器到Navigation组件，适用于使用[NavPathStack]{@link NavPathStack}配合  
+[navDestination]{@link NavigationAttribute#navDestination}属性进行页面路由。
 
 **Since:** 10
 
@@ -80,7 +69,7 @@ Binds a navigation controller to the **Navigation** component, suitable for page
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Navigation controller object.  |
+| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | 导航控制器对象。 |
 
 ## Navigation
 
@@ -88,9 +77,9 @@ Binds a navigation controller to the **Navigation** component, suitable for page
 Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 ```
 
-Binds a routing stack to the **Navigation** component and specifies a **NavDestination** component as the navigation page (home page) for **Navigation**. This is suitable for page routing using  
-[NavPathStack]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ with the [navDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ attribute or the system routing table. For the usage example, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack]{@link NavPathStack}配合  
+[navDestination]{@link NavigationAttribute#navDestination}属性或者系统路由表进行页面路由。使用示例参考  
+[示例16（Navigation使用NavDestination作为导航页）](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例16navigation使用navdestination作为导航页)。
 
 **Since:** 20
 
@@ -108,8 +97,40 @@ Binds a routing stack to the **Navigation** component and specifies a **NavDesti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the routing stack.  |
-| homeDestination | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Home page **NavDestination** information.  |
+| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | 路由栈信息。 |
+| homeDestination | [HomePathInfo](../arkts-apis/arkts-arkui-navigation-homepathinfo-i.md) | Yes | 主页NavDestination信息。 |
 
 ## Summary
 
+- [HomePathInfo](arkts-arkui-navigation-homepathinfo-i.md)
+- [MoreButtonOptions](arkts-arkui-navigation-morebuttonoptions-i.md)
+- [NavContentInfo](arkts-arkui-navigation-navcontentinfo-i.md)
+- [NavigationAnimatedTransition](arkts-arkui-navigation-navigationanimatedtransition-i.md)
+- [NavigationCommonTitle](arkts-arkui-navigation-navigationcommontitle-i.md)
+- [NavigationConfiguration](arkts-arkui-navigation-navigationconfiguration-i.md)
+- [NavigationCustomTitle](arkts-arkui-navigation-navigationcustomtitle-i.md)
+- [NavigationDividerStyle](arkts-arkui-navigation-navigationdividerstyle-i.md)
+- [NavigationInterception](arkts-arkui-navigation-navigationinterception-i.md)
+- [NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md)
+- [NavigationMenuOptions](arkts-arkui-navigation-navigationmenuoptions-i.md)
+- [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md)
+- [NavigationTitleOptions](arkts-arkui-navigation-navigationtitleoptions-i.md)
+- [NavigationToolbarOptions](arkts-arkui-navigation-navigationtoolbaroptions-i.md)
+- [NavigationTransitionProxy](arkts-arkui-navigation-navigationtransitionproxy-i.md)
+- [PopInfo](arkts-arkui-navigation-popinfo-i.md)
+- [ScrollEffectOptions](arkts-arkui-navigation-scrolleffectoptions-i.md)
+- [ToolbarItem](arkts-arkui-navigation-toolbaritem-i.md)
+- [InterceptionCallback](arkts-arkui-navigation-interceptioncallback-t.md)
+- [InterceptionModeCallback](arkts-arkui-navigation-interceptionmodecallback-t.md)
+- [InterceptionShowCallback](arkts-arkui-navigation-interceptionshowcallback-t.md)
+- [Material](arkts-arkui-navigation-material-t.md)
+- [NavBar](arkts-arkui-navigation-navbar-t.md)
+- [SystemBarStyle](arkts-arkui-navigation-systembarstyle-t.md)
+- [BarStyle](arkts-arkui-navigation-barstyle-e.md)
+- [LaunchMode](arkts-arkui-navigation-launchmode-e.md)
+- [NavBarPosition](arkts-arkui-navigation-navbarposition-e.md)
+- [NavigationMode](arkts-arkui-navigation-navigationmode-e.md)
+- [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md)
+- [NavigationTitleMode](arkts-arkui-navigation-navigationtitlemode-e.md)
+- [ScrollEffectType](arkts-arkui-navigation-scrolleffecttype-e.md)
+- [ToolbarItemStatus](arkts-arkui-navigation-toolbaritemstatus-e.md)

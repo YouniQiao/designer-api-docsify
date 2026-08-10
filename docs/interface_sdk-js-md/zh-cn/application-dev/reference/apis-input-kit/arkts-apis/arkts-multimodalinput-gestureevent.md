@@ -3,6 +3,12 @@
 The **gestureEvent** module provides APIs for gesture events reported by devices.
 
 
+## 导入模块
+
+```TypeScript
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
+```
+
 ## 汇总
 
 ### 接口

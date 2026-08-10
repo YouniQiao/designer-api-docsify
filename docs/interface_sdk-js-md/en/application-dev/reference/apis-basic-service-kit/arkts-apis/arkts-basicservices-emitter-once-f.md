@@ -1,12 +1,18 @@
 # once
 
+## Modules to Import
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## once
 
 ```TypeScript
 function once(event: InnerEvent, callback: Callback<EventData>): void
 ```
 
-Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
+单次订阅指定的事件，在接收到该事件且执行完对应的回调处理函数后，自动取消订阅。
 
 **Since:** 7
 
@@ -22,12 +28,10 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event to subscribe to in one-shot manner. The [EventPriority]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ parameter is not required and does not take effect. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
+| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | 单次订阅的事件，其中[EventPriority](arkts-basicservices-emitter-eventpriority-e.md)在订阅事件时无需指定，也不生效。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -38,23 +42,7 @@ let innerEvent: emitter.InnerEvent = {
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-// Execute the callback after receiving the event whose eventId is 1.
-emitter.once(innerEvent, callback);
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let innerEvent: emitter.InnerEvent = {
-  eventId: 1
 };
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-}
 // Execute the callback after receiving the event whose ID is 1.
 emitter.once(innerEvent, callback);
 ```
@@ -66,7 +54,7 @@ emitter.once(innerEvent, callback);
 function once(eventId: string, callback: Callback<EventData>): void
 ```
 
-Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
+单次订阅指定的事件，在接收到该事件且执行完对应的回调处理函数后，自动取消订阅。
 
 **Since:** 11
 
@@ -82,19 +70,19 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
+| eventId | string | Yes | 单次订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
+};
 // Execute the callback after receiving the event whose event ID is eventId.
-emitter.once("eventId", callback);
+emitter.once('eventId', callback);
 ```
 
 
@@ -104,7 +92,7 @@ emitter.once("eventId", callback);
 function once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
+单次订阅指定的事件，在接收到该事件且执行完对应的回调处理函数后，自动取消订阅。
 
 **Since:** 12
 
@@ -120,10 +108,10 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
+| eventId | string | Yes | 单次订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -144,8 +132,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-}
+};
 // Execute the callback after receiving the event whose event ID is eventId.
-emitter.once("eventId", callback);
+emitter.once('eventId', callback);
 ```
 

@@ -10,6 +10,12 @@ USB配件句柄。
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accessoryFd
 
 ```TypeScript
@@ -18,7 +24,7 @@ accessoryFd: int
 
 配件文件描述符。合法的accessoryFd是正整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 14
 

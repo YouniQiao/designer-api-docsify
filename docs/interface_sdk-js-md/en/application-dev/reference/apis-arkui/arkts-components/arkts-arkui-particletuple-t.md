@@ -4,7 +4,7 @@
 declare type ParticleTuple<T1, T2> = [T1, T2]
 ```
 
-Defines a pair of given type for particle.
+粒子元组，表示定义一些动画参数的类型。
 
 **Since:** 18
 

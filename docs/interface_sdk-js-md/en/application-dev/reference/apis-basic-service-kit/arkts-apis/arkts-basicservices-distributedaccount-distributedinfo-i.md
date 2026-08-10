@@ -1,6 +1,6 @@
 # DistributedInfo
 
-Represents the distributed information about an OS account.
+提供操作系统账号的分布式信息。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Represents the distributed information about an OS account.
 
 **System capability:** SystemCapability.Account.OsAccount
 
+## Modules to Import
+
+```TypeScript
+import { distributedAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## avatar
 
 ```TypeScript
 avatar?: string
 ```
 
-Avatar of the distributed account. By default, no value is passed in.
+分布式账号的头像，默认为空。
 
 **Type:** string
 
@@ -34,13 +40,13 @@ Avatar of the distributed account. By default, no value is passed in.
 event: string
 ```
 
-Login state of the distributed account. The state can be login, logout, token invalid, or logoff, which correspond to the following strings respectively:
+分布式账号登录状态，包括登录、登出、Token失效和注销，分别对应以下字符串：
 
 - Ohos.account.event.LOGIN
 
 - Ohos.account.event.LOGOUT
 
-- Ohos.account.event.TOKEN\_INVALID
+- Ohos.account.event.TOKEN_INVALID
 
 - Ohos.account.event.LOGOFF
 
@@ -60,7 +66,7 @@ Login state of the distributed account. The state can be login, logout, token in
 id: string
 ```
 
-UID of the distributed account. It must be a non-null string.
+分布式账号UID，非空字符串。
 
 **Type:** string
 
@@ -78,7 +84,7 @@ UID of the distributed account. It must be a non-null string.
 name: string
 ```
 
-Name of the distributed account. It must be a non-null string.
+分布式账号名称，非空字符串。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ Name of the distributed account. It must be a non-null string.
 nickname?: string
 ```
 
-Nickname of the distributed account. By default, no value is passed in.
+分布式账号的昵称，默认为空。
 
 **Type:** string
 
@@ -114,7 +120,7 @@ Nickname of the distributed account. By default, no value is passed in.
 scalableData?: object
 ```
 
-Additional information about the distributed account, in the form of KV pairs. This parameter is left empty by default.
+分布式账号扩展信息，根据业务所需，以k-v形式传递定制化信息，默认为空。
 
 **Type:** object
 
@@ -132,9 +138,9 @@ Additional information about the distributed account, in the form of KV pairs. T
 readonly status?: DistributedAccountStatus
 ```
 
-Status of the distributed account. The value is of the enumerated type. The default status is unlogged.
+分布式账号的状态，枚举类型，默认为未登录状态。
 
-**Type:** DistributedAccountStatus
+**Type:** [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md)
 
 **Since:** 10
 

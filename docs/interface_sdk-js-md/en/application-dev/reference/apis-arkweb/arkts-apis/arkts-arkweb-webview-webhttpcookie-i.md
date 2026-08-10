@@ -1,6 +1,6 @@
 # WebHttpCookie
 
-Defines the Web's HTTPCookie.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The maximum length allowed for each attribute value in a cookie string is 1024.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+Defines the Web's HTTPCookie.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The maximum length allowed for each attribute value in a cookie string is 1024.&lt;/p&gt;
 
 **Since:** 23
 
@@ -9,6 +9,12 @@ Defines the Web's HTTPCookie.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\
 <!--Device-webview-interface WebHttpCookie--><!--Device-webview-interface WebHttpCookie-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
 
 ## domain
 
@@ -144,7 +150,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 Gets the cookie's samesite policy.
 
-**Type:** WebHttpCookieSameSitePolicy
+**Type:** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
 
 **Since:** 23
 

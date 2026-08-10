@@ -1,6 +1,6 @@
 # DecoratorInfo
 
-Defines the decorator and component information associated with the observable object.
+可被观察对象关联的装饰器和组件信息。
 
 **Since:** 23
 
@@ -10,27 +10,29 @@ Defines the decorator and component information associated with the observable o
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## decoratorName
 
 ```TypeScript
 decoratorName: string
 ```
 
-Decorator name.
+当对象是V1对象时，值是对象关联的装饰器名称。
 
-For a V1 object, the value is the name of the decorator associated with the object.
+当V1对象使用[@Track](../../../ui/state-management/arkts-track.md)时，值为：'@Track'。
 
-If the V1 object uses \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, the value is **'@Track'**.
+当V2对象使用[@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md)时，值为：'@Trace'。
 
-If the V2 object uses \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, the value is  
-**'@Trace'**.
+当V2对象使用[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)时，值为：'MakeObserved'。
 
-If the V2 object uses [makeObserved]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, the value is **'MakeObserved'**.
+当V2对象使用[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)时，值为：'EnableV2Compatible'。 
 
-If the V2 object uses [enableV2Compatibility]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, the value is  
-**'EnableV2Compatible'**.
-
-If the V2 object uses built-in data, the value is **'ProxyObservedV2'**.
+当V2对象使用built-in类型数据时，值为：'ProxyObservedV2'。
 
 **Type:** string
 
@@ -52,7 +54,7 @@ If the V2 object uses built-in data, the value is **'ProxyObservedV2'**.
 dependentInfo: Array<ElementInfo>
 ```
 
-Information about the component that uses the observable object. If the object is not used in any UI, an empty array is returned.
+使用该可观察对象的组件信息。若对象没有用在任何UI上，则返回空数组。
 
 **Type:** Array&lt;ElementInfo&gt;
 
@@ -74,11 +76,9 @@ Information about the component that uses the observable object. If the object i
 owningComponentId: number
 ```
 
-Component ID.
+V1对象返回被使用的组件id。
 
-For a V1 object, the component ID is returned.
-
-For the V1 object whose properties are decorated by the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_decorator or for the V2 object, **-1** is returned instead of the component ID.
+**当V1对象有属性使用[@Track](../../../ui/state-management/arkts-track.md)装饰器时，无组件id，返回-1；V2对象同样无组件id，返回-1。**
 
 **Type:** number
 
@@ -100,13 +100,11 @@ For the V1 object whose properties are decorated by the \_\_\_MD\_LINK\_DESC\_US
 owningComponentOrClassName: string
 ```
 
-Component or object name.
+V1对象返回被使用的组件名称。
 
-For a V1 object, the component name is returned.
+V1对象有属性使用[@Track](../../../ui/state-management/arkts-track.md)装饰器时返回对象名称。
 
-For a V1 object whose properties are decorated by the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_decorator, the object name is returned.
-
-For a V2 object, the object name is returned.
+V2对象返回对象名称。
 
 **Type:** string
 
@@ -128,7 +126,7 @@ For a V2 object, the object name is returned.
 stateVariableName: string
 ```
 
-Name of the attribute decorated by the decorator.
+被装饰器装饰的属性名称。
 
 **Type:** string
 

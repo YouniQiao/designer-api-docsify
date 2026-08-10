@@ -1,6 +1,6 @@
 # PrintJobSubState
 
-Enumerates the print job substates.
+打印任务子状态的枚举。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates the print job substates.
 PRINT_JOB_COMPLETED_SUCCESS = 0
 ```
 
-The print job is successful.
+表示打印任务成功。
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ The print job is successful.
 PRINT_JOB_COMPLETED_FAILED = 1
 ```
 
-The print job is failed.
+表示打印任务失败。
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ The print job is failed.
 PRINT_JOB_COMPLETED_CANCELLED = 2
 ```
 
-The print job is canceled by user.
+表示打印任务已取消。
 
 **Since:** 14
 
@@ -64,7 +64,7 @@ The print job is canceled by user.
 PRINT_JOB_COMPLETED_FILE_CORRUPTED = 3
 ```
 
-The print file is corrupted.
+表示打印文件已损坏。
 
 **Since:** 14
 
@@ -80,7 +80,7 @@ The print file is corrupted.
 PRINT_JOB_BLOCK_OFFLINE = 4
 ```
 
-The printer is offline.
+表示打印处于离线状态。
 
 **Since:** 14
 
@@ -96,7 +96,7 @@ The printer is offline.
 PRINT_JOB_BLOCK_BUSY = 5
 ```
 
-The printer is occupied by another process.
+表示打印被其他进程占用。
 
 **Since:** 14
 
@@ -112,7 +112,7 @@ The printer is occupied by another process.
 PRINT_JOB_BLOCK_CANCELLED = 6
 ```
 
-The print job is canceled due to a block.
+表示打印任务已取消。
 
 **Since:** 14
 
@@ -128,7 +128,7 @@ The print job is canceled due to a block.
 PRINT_JOB_BLOCK_OUT_OF_PAPER = 7
 ```
 
-The printer is out of paper.
+表示打印纸张用完。
 
 **Since:** 14
 
@@ -144,7 +144,7 @@ The printer is out of paper.
 PRINT_JOB_BLOCK_OUT_OF_INK = 8
 ```
 
-The printer is out of ink.
+表示打印墨水用完。
 
 **Since:** 14
 
@@ -160,7 +160,7 @@ The printer is out of ink.
 PRINT_JOB_BLOCK_OUT_OF_TONER = 9
 ```
 
-The printer is out of toner.
+表示打印墨粉用完。
 
 **Since:** 14
 
@@ -176,7 +176,7 @@ The printer is out of toner.
 PRINT_JOB_BLOCK_JAMMED = 10
 ```
 
-The printer is in a paper jam.
+表示打印卡纸。
 
 **Since:** 14
 
@@ -192,7 +192,7 @@ The printer is in a paper jam.
 PRINT_JOB_BLOCK_DOOR_OPEN = 11
 ```
 
-The printer door is open.
+表示打印盖开启。
 
 **Since:** 14
 
@@ -208,7 +208,7 @@ The printer door is open.
 PRINT_JOB_BLOCK_SERVICE_REQUEST = 12
 ```
 
-Print service request.
+表示打印服务请求。
 
 **Since:** 14
 
@@ -224,7 +224,7 @@ Print service request.
 PRINT_JOB_BLOCK_LOW_ON_INK = 13
 ```
 
-The printer is low on ink.
+表示打印墨水不足。
 
 **Since:** 14
 
@@ -240,7 +240,7 @@ The printer is low on ink.
 PRINT_JOB_BLOCK_LOW_ON_TONER = 14
 ```
 
-The printer is low on toner.
+表示打印墨粉不足。
 
 **Since:** 14
 
@@ -256,7 +256,7 @@ The printer is low on toner.
 PRINT_JOB_BLOCK_REALLY_LOW_ON_INK = 15
 ```
 
-The printer is extremely low on ink.
+表示打印墨水量非常低。
 
 **Since:** 14
 
@@ -272,7 +272,7 @@ The printer is extremely low on ink.
 PRINT_JOB_BLOCK_BAD_CERTIFICATE = 16
 ```
 
-The print certificate is incorrect.
+表示打印证书有误。
 
 **Since:** 14
 
@@ -288,7 +288,7 @@ The print certificate is incorrect.
 PRINT_JOB_BLOCK_DRIVER_EXCEPTION = 17
 ```
 
-The print driver is abnormal.
+表示打印驱动异常。
 
 **Since:** 20
 
@@ -304,7 +304,7 @@ The print driver is abnormal.
 PRINT_JOB_BLOCK_ACCOUNT_ERROR = 18
 ```
 
-There is an error with the printer account.
+表示打印账户时出错。
 
 **Since:** 14
 
@@ -320,7 +320,7 @@ There is an error with the printer account.
 PRINT_JOB_BLOCK_PRINT_PERMISSION_ERROR = 19
 ```
 
-There is an error with the printer permission.
+表示打印许可异常。
 
 **Since:** 14
 
@@ -336,7 +336,7 @@ There is an error with the printer permission.
 PRINT_JOB_BLOCK_PRINT_COLOR_PERMISSION_ERROR = 20
 ```
 
-There is an error with the color printing permission.
+表示彩色打印权限异常。
 
 **Since:** 14
 
@@ -352,7 +352,7 @@ There is an error with the color printing permission.
 PRINT_JOB_BLOCK_NETWORK_ERROR = 21
 ```
 
-The printer fails to connect to the network.
+表示设备未连接到网络。
 
 **Since:** 14
 
@@ -368,7 +368,7 @@ The printer fails to connect to the network.
 PRINT_JOB_BLOCK_SERVER_CONNECTION_ERROR = 22
 ```
 
-The printer fails to connect to the server.
+表示无法连接服务器。
 
 **Since:** 14
 
@@ -384,7 +384,7 @@ The printer fails to connect to the server.
 PRINT_JOB_BLOCK_LARGE_FILE_ERROR = 23
 ```
 
-There is an error with a large file printing.
+表示打印大文件异常。
 
 **Since:** 14
 
@@ -400,7 +400,7 @@ There is an error with a large file printing.
 PRINT_JOB_BLOCK_FILE_PARSING_ERROR = 24
 ```
 
-There is an error with file parsing.
+表示文件分析异常。
 
 **Since:** 14
 
@@ -416,7 +416,7 @@ There is an error with file parsing.
 PRINT_JOB_BLOCK_SLOW_FILE_CONVERSION = 25
 ```
 
-The file conversion is slow.
+表示文件转换太慢。
 
 **Since:** 14
 
@@ -432,7 +432,7 @@ The file conversion is slow.
 PRINT_JOB_RUNNING_UPLOADING_FILES = 26
 ```
 
-The file is uploading.
+表示正在上传文件。
 
 **Since:** 14
 
@@ -448,7 +448,7 @@ The file is uploading.
 PRINT_JOB_RUNNING_CONVERTING_FILES = 27
 ```
 
-The file is converting.
+表示正在转换文件。
 
 **Since:** 14
 
@@ -464,7 +464,7 @@ The file is converting.
 PRINT_JOB_BLOCK_FILE_UPLOADING_ERROR = 30
 ```
 
-The file fails to be uploaded.
+表示文件上传失败。
 
 **Since:** 18
 
@@ -480,7 +480,7 @@ The file fails to be uploaded.
 PRINT_JOB_BLOCK_DRIVER_MISSING = 34
 ```
 
-The print driver is missing.
+表示打印驱动缺失。
 
 **Since:** 20
 
@@ -496,7 +496,7 @@ The print driver is missing.
 PRINT_JOB_BLOCK_INTERRUPT = 35
 ```
 
-The print job is interrupted.
+表示打印任务中断。
 
 **Since:** 20
 
@@ -512,7 +512,7 @@ The print job is interrupted.
 PRINT_JOB_BLOCK_PRINTER_UNAVAILABLE = 98
 ```
 
-The printer is unavailable.
+表示打印机不可用。
 
 **Since:** 20
 
@@ -528,7 +528,7 @@ The printer is unavailable.
 PRINT_JOB_BLOCK_UNKNOWN = 99
 ```
 
-There is an unknown error with the printer.
+表示打印未知问题。
 
 **Since:** 14
 

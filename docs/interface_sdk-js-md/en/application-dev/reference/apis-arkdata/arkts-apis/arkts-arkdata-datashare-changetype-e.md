@@ -1,6 +1,6 @@
 # ChangeType
 
-Enumerates the data change types.
+数据变更类型枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the data change types.
 INSERT = 0
 ```
 
-Data is inserted.
+表示数据添加。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ Data is inserted.
 DELETE = 1
 ```
 
-Data is deleted.
+表示数据删除。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ Data is deleted.
 UPDATE = 2
 ```
 
-Data is updated.
+表示数据更新。
 
 **Since:** 20
 

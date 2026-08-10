@@ -1,12 +1,18 @@
 # offTrackingStateChange
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## offTrackingStateChange
 
 ```TypeScript
 function offTrackingStateChange(callback?: Callback<TrackingEventInfo>): void
 ```
 
-Unsubscribes from tracking events.
+设置相机跟踪布局
 
 **Since:** 23
 
@@ -20,11 +26,11 @@ Unsubscribes from tracking events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TrackingEventInfo&gt; | No | Callback used to return the tracking event information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TrackingEventInfo&gt; | No | Callback used to return the tracking event information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| 33300001 | Service exception. |
 

@@ -1,9 +1,9 @@
 # WriteStream
 
-Defines a writeable stream. You need to use [fileIo.createWriteStream]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a  
-**WriteStream** instance, which is inherited from [stream.Writable]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+文件可写流，需要先通过[fileIo.createWriteStream](arkts-corefile-fileio-createwritestream-f.md#createwritestream)方法来构建一个WriteStream实例。WriteStream继承自数据流基类  
+[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)。
 
-**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)
+**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)
 
 **Since:** 23
 
@@ -13,13 +13,19 @@ Defines a writeable stream. You need to use [fileIo.createWriteStream]\_\_\_JSDO
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Closes this writeable stream.
+关闭可写流。
 
 **Since:** 23
 
@@ -62,7 +68,7 @@ The WriteStream constructor.
 seek(offset: long, whence?: WhenceType): long
 ```
 
-Adjusts the position of the writeable stream offset pointer.
+调整可写流的偏移指针位置。
 
 **Since:** 23
 
@@ -76,21 +82,21 @@ Adjusts the position of the writeable stream offset pointer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | long | Yes | Relative offset, in bytes. |
-| whence | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | = WhenceType.SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_SET] - Where to start the offset. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_SET, which indicates the beginning of the file. |
+| offset | long | Yes | 相对偏移位置，单位为Byte。 |
+| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | = WhenceType.SEEK_SET] - Where to start the offset. &lt;br&gt;The default value is SEEK_SET, which indicates the beginning of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | Position of the current offset pointer (offset relative to the file header, in bytes). |
+| long | 当前可写流偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900020 | Invalid argument |
+| 401 | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
@@ -100,7 +106,7 @@ Adjusts the position of the writeable stream offset pointer.
 readonly bytesWritten: long
 ```
 
-Number of bytes written to the writable stream.
+可写流已经写入的字节数。
 
 **Type:** long
 
@@ -118,7 +124,7 @@ Number of bytes written to the writable stream.
 readonly path: string
 ```
 
-Path of the file corresponding to the writeable stream.
+当前可写流对应的文件路径。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # CmKeyDigest
 
-Enumerates the digest algorithms that can be used for signing and signature verification.
+表示签名、验签使用的摘要算法的枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the digest algorithms that can be used for signing and signature veri
 CM_DIGEST_NONE = 0
 ```
 
-When this option is selected, it indicates that the application performs a digest calculation on the data to be signed or verified.
+选用此项时，表示由应用程序对待签名、验签的数据进行摘要计算。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ When this option is selected, it indicates that the application performs a diges
 CM_DIGEST_MD5 = 1
 ```
 
-MD5.
+MD5摘要算法。
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ MD5.
 CM_DIGEST_SHA1 = 2
 ```
 
-SHA-1.
+SHA1摘要算法。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ SHA-1.
 CM_DIGEST_SHA224 = 3
 ```
 
-SHA-224.
+SHA224摘要算法。
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ SHA-224.
 CM_DIGEST_SHA256 = 4
 ```
 
-SHA-256.
+SHA256摘要算法。
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ SHA-256.
 CM_DIGEST_SHA384 = 5
 ```
 
-SHA-384.
+SHA384摘要算法。
 
 **Since:** 11
 
@@ -112,7 +112,7 @@ SHA-384.
 CM_DIGEST_SHA512 = 6
 ```
 
-SHA-512.
+SHA512摘要算法。
 
 **Since:** 11
 
@@ -128,7 +128,7 @@ SHA-512.
 CM_DIGEST_SM3 = 7
 ```
 
-SM3.
+SM3摘要算法。
 
 **Since:** 18
 

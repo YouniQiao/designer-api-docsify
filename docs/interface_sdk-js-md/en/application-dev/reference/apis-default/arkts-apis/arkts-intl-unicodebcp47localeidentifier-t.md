@@ -4,9 +4,9 @@
 type UnicodeBCP47LocaleIdentifier = string
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ definition.
+[Unicode BCP 47 Locale Identifiers](https://unicode.org/reports/tr35/#Unicode_Language_and_Locale_Identifiers) definition.
 
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
 **ArkTS mode:** ArkTS-Dyn only
 

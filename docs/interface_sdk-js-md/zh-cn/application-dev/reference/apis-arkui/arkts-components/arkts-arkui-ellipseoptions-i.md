@@ -1,9 +1,10 @@
 # EllipseOptions
 
 用于描述Ellipse组件绘制属性。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -29,7 +30,7 @@ height?: Length
 
 从API version 20开始，支持Resource类型。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
 
@@ -59,7 +60,7 @@ width?: Length
 
 从API version 20开始，支持Resource类型。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
 

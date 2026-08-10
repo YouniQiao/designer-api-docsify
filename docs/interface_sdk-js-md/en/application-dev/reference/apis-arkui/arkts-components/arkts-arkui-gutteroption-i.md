@@ -1,6 +1,6 @@
 # GutterOption
 
-Provides the gutter options for the grid layout to define the spacing between child components in different directions.
+栅格布局间距类型，用于描述栅格子组件不同方向的间距。
 
 **Since:** 9
 
@@ -16,9 +16,15 @@ Provides the gutter options for the grid layout to define the spacing between ch
 x?: Length | GridRowSizeOption
 ```
 
-Horizontal spacing between grid child components.Unit: vp.
+栅格子组件水平方向间距。取值范围：大于等于0的数值或字符串。
 
-**Type:** Length \| GridRowSizeOption
+默认值：0vp。
+
+非法值：按默认值处理。
+
+单位：vp
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GridRowSizeOption
 
 **Since:** 9
 
@@ -38,9 +44,15 @@ Horizontal spacing between grid child components.Unit: vp.
 y?: Length | GridRowSizeOption
 ```
 
-Vertical spacing between grid child components.Unit: vp.
+栅格子组件垂直方向间距。取值范围：大于等于0的数值或字符串。
 
-**Type:** Length \| GridRowSizeOption
+默认值：0vp。
+
+非法值：按默认值处理。
+
+单位：vp
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GridRowSizeOption
 
 **Since:** 9
 

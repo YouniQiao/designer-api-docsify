@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## compressionQuality
 
 ```TypeScript
@@ -20,7 +26,7 @@ compressionQuality?: int
 
 当compressionQuality未下发时，默认按quality生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -42,7 +48,7 @@ location?: Location
 
 图片地理位置信息（默认以设备硬件信息为准）。
 
-**类型：** Location
+**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
 
 **起始版本：** 10
 
@@ -60,7 +66,7 @@ location?: Location
 mirror?: boolean
 ```
 
-镜像使能开关（默认关）。使用之前需要使用[isMirrorSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行判断是否支持。true表示使能，false表示不使能。
+镜像使能开关（默认关）。使用之前需要使用[isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported)进行判断是否支持。true表示使能，false表示不使能。
 
 **类型：** boolean
 
@@ -84,7 +90,7 @@ quality?: QualityLevel
 
 当quality未下发时，默认按compressionQuality下发生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
 
-**类型：** QualityLevel
+**类型：** [QualityLevel](../../apis-image-kit/arkts-apis/arkts-image-videoprocessingengine-qualitylevel-e.md)
 
 **起始版本：** 10
 
@@ -104,7 +110,7 @@ rotation?: ImageRotation
 
 图片旋转角度（默认0度，顺时针旋转）。
 
-**类型：** ImageRotation
+**类型：** [ImageRotation](arkts-camera-camera-imagerotation-e.md)
 
 **起始版本：** 10
 

@@ -1,7 +1,6 @@
 # GetAuthInfoOptions (System API)
 
-Represents a set of optional parameters for  
-[GetAuthInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示[查询认证凭据信息](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getauthinfo)的可选参数集合。
 
 **Since:** 12
 
@@ -13,15 +12,21 @@ Represents a set of optional parameters for
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountId
 
 ```TypeScript
 accountId?: int
 ```
 
-OS account ID, which is **undefined** by default.
+系统账号标识，默认为undefined。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -39,9 +44,9 @@ OS account ID, which is **undefined** by default.
 authType?: AuthType
 ```
 
-Authentication type, which is **undefined** by default.
+认证类型，默认为undefined。
 
-**Type:** AuthType
+**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **Since:** 12
 

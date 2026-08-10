@@ -42,7 +42,7 @@ delay?: number
 
 **说明：**
 
-delay>=0为延迟播放，delay<0表示提前播放。对于delay<0的情况：当delay的绝对值小于实际动画时长，动画将在开始后第一帧直接运动到delay绝对值的时刻的状态；当delay的绝对值大于等于实际动画时长，动画将在开始后第一帧直接运动到终点状态。其中实际动画时长等于单次动画时长乘以动画播放次数。
+ delay>=0为延迟播放，delay<0表示提前播放。对于delay<0的情况：当delay的绝对值小于实际动画时长，动画将在开始后第一帧直接运动到delay绝对值的时刻的状态；当delay的绝对值大于等于实际动画时长，动画将在开始后第一帧直接运动到终点状态。其中实际动画时长等于单次动画时长乘以动画播放次数。
 
 **类型：** number
 
@@ -74,7 +74,7 @@ expectedFrameRateRange?: ExpectedFrameRateRange
 
 开发者通过设置有效的期望帧率后，系统会收集设置的请求帧率，进行决策和分发，在渲染管线上进行分频，尽量能够满足开发者的期望帧率。开发者设置的期望帧率值不能代表最终实际效果，会受限于系统能力和屏幕刷新率。
 
-**类型：** ExpectedFrameRateRange
+**类型：** [ExpectedFrameRateRange](arkts-arkui-expectedframeraterange-i.md)
 
 **默认值：** { min: 0, expected: 0, max: 0 }
 

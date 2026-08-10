@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## borderless
 
 ```TypeScript
@@ -60,7 +66,7 @@ defaultColorMode?: PrintColorMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** PrintColorMode
+**类型：** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
 **起始版本：** 24
 
@@ -80,7 +86,7 @@ defaultDuplexMode?: PrintDuplexMode
 
 表示默认单双面模式。
 
-**类型：** PrintDuplexMode
+**类型：** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **起始版本：** 18
 
@@ -116,7 +122,7 @@ defaultOrientation?: PrintOrientationMode
 
 表示默认打印方向。
 
-**类型：** PrintOrientationMode
+**类型：** [PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)
 
 **起始版本：** 18
 
@@ -132,7 +138,7 @@ defaultOrientation?: PrintOrientationMode
 defaultPageSizeId?: string
 ```
 
-表示默认纸张尺寸的ID，其范围包含国际标准化组织定义的标准纸张尺寸，如ISO\_A4，和系统中定义的非标准的纸张尺寸，如Custom.178x254mm，表示这种纸张尺寸为178毫米 x 254毫米。
+表示默认纸张尺寸的ID，其范围包含国际标准化组织定义的标准纸张尺寸，如ISO_A4，和系统中定义的非标准的纸张尺寸，如Custom.178x254mm，表示这种纸张尺寸为178毫米 x 254毫米。
 
 **类型：** string
 
@@ -152,7 +158,7 @@ defaultPrintQuality?: PrintQuality
 
 表示默认打印质量。
 
-**类型：** PrintQuality
+**类型：** [PrintQuality](arkts-basicservices-print-printquality-e.md)
 
 **起始版本：** 18
 

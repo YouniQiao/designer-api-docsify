@@ -1,8 +1,8 @@
 # AlertDialogButtonOptions
 
-继承自[AlertDialogButtonBaseOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)。
 
-**继承/实现关系：** AlertDialogButtonOptions extends [AlertDialogButtonBaseOptions](arkts-arkui-component/alertdialog-alertdialogbuttonbaseoptions-i.md)
+**继承/实现关系：** AlertDialogButtonOptions extends [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **起始版本：** 10
 

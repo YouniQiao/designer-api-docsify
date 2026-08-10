@@ -1,6 +1,6 @@
 # OnWindowNewEvent
 
-Represents the callback invoked when the web page requests the user to create a window.
+定义网页要求用户创建窗口时触发的回调。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents the callback invoked when the web page requests the user to create a 
 handler: ControllerHandler
 ```
 
-WebviewController** instance for setting the new window.
+Lets you set the WebviewController instance for creating a new window.
 
-**Type:** ControllerHandler
+**Type:** [ControllerHandler](arkts-arkweb-controllerhandler-c.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ WebviewController** instance for setting the new window.
 isAlert: boolean
 ```
 
-Whether to open the target URL in a new window. The value **true** means to open the target URL in a new window,and **false** means to open the target URL in a new tab.
+true indicates the request to create a dialog and false indicates a new tab.
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ Whether to open the target URL in a new window. The value **true** means to open
 isUserTrigger: boolean
 ```
 
-Whether the creation is triggered by the user. The value **true** means that the creation is triggered by the user,and **false** means the opposite.
+true indicates that it is triggered by the user, and false indicates that it is triggered by a non-user.
 
 **Type:** boolean
 
@@ -76,7 +76,7 @@ Whether the creation is triggered by the user. The value **true** means that the
 targetUrl: string
 ```
 
-Target URL.
+Destination URL.
 
 **Type:** string
 

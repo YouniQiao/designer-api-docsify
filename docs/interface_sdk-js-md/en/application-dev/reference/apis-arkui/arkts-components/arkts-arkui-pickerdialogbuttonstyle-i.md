@@ -18,7 +18,7 @@ backgroundColor?: ResourceColor
 
 Describes the button background color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ borderRadius?: Length | BorderRadiuses
 
 Describes the button border radius.
 
-**Type:** Length \| BorderRadiuses
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ fontColor?: ResourceColor
 
 Describes the button text color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -84,7 +84,7 @@ fontFamily?: Resource | string
 
 Describes the button font family.
 
-**Type:** Resource \| string
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| string
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ fontSize?: Length
 
 Describes the button text size.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 12
 
@@ -128,7 +128,7 @@ fontStyle?: FontStyle
 
 Describes the button font style.
 
-**Type:** FontStyle
+**Type:** [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md)
 
 **Since:** 12
 
@@ -150,7 +150,7 @@ fontWeight?: FontWeight | number | string
 
 Describes the button font weight.
 
-**Type:** FontWeight \| number \| string
+**Type:** [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| number \| string
 
 **Since:** 12
 
@@ -194,7 +194,7 @@ role?: ButtonRole
 
 Describes the button role.
 
-**Type:** ButtonRole
+**Type:** [ButtonRole](arkts-arkui-buttonrole-e.md)
 
 **Since:** 12
 
@@ -216,7 +216,7 @@ style?: ButtonStyleMode
 
 Describes the button style.
 
-**Type:** ButtonStyleMode
+**Type:** [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
 
 **Since:** 12
 
@@ -236,9 +236,9 @@ Describes the button style.
 type?: ButtonType
 ```
 
-Describes the button type.
+Describes the button style.
 
-**Type:** ButtonType
+**Type:** [ButtonType](arkts-arkui-buttontype-e.md)
 
 **Since:** 12
 

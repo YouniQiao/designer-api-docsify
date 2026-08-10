@@ -1,5 +1,11 @@
 # setUserGrantedState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+```
+
 ## setUserGrantedState
 
 ```TypeScript
@@ -24,7 +30,7 @@ function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetBundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要设置的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE\_\_\_ESCAPED\_UNDERSCORE\_\_\_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_， 否则返回1600022错误码。 |
+| targetBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 | 需要设置的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)， 否则返回1600022错误码。 |
 | enabled | boolean | 是 | 表示应用的“允许获取本机通知”的开关状态，true表示启用，false表示未启用。 |
 
 **返回值：**
@@ -37,15 +43,13 @@ function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600022](../errorcode-notification.md#1600022-无效的包信息) | The specified bundle is invalid. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600003 | Failed to connect to the service. |
+| 1600022 | The specified bundle is invalid. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let targetBundle: notificationExtensionSubscription.BundleOption =
@@ -57,22 +61,6 @@ notificationExtensionSubscription.setUserGrantedState(targetBundle, true).then((
   console.info(`setUserGrantedState successfully.`);
 }).catch((err: BusinessError) => {
   console.error(`setUserGrantedState fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let targetBundle: notificationExtensionSubscription.BundleOption =
-  {
-    // 应改为开发者需要查询的目标应用信息
-    bundle: 'com.example.testnotification',
-  };
-notificationExtensionSubscription.setUserGrantedState(targetBundle, true).then(() => {
-  console.info(`setUserGrantedState successfully.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setUserGrantedState fail, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

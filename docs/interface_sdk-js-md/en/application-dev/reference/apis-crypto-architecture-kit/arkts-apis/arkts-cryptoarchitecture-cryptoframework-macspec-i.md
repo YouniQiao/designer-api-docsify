@@ -1,9 +1,10 @@
 # MacSpec
 
-Represents the message authentication code (MAC) parameters. You need to construct a child class object and use it as a parameter when computing an HMAC or a CMAC.
-    **NOTE**  
-    
-    **algName** specifies the MAC algorithm to use. It is mandatory.
+消息认证码参数，计算HMAC或CMAC时，需要构建子类对象并作为输入参数。
+
+> **说明：**
+> 
+> algName是必选参数，表示消息认证码算法。
 
 **Since:** 18
 
@@ -13,13 +14,19 @@ Represents the message authentication code (MAC) parameters. You need to constru
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## algName
 
 ```TypeScript
 algName: string
 ```
 
-Algorithm to use.
+消息认证码算法名。
 
 **Type:** string
 

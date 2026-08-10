@@ -1,6 +1,6 @@
 # LargestContentfulPaint
 
-Provides detailed information about the largest contentful paint.
+提供网页绘制页面最大内容的详细信息。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Provides detailed information about the largest contentful paint.
 imageBPP?: number
 ```
 
-Number of pixels of the maximum image.
+最大图片像素位数。
 
 **Type:** number
 
@@ -30,53 +30,13 @@ Number of pixels of the maximum image.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## largestImageLoadEndTime
-
-```TypeScript
-largestImageLoadEndTime?: number
-```
-
-End time of the loading of the maximum image.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: milliseconds.
-
-**Type:** number
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LargestContentfulPaint-largestImageLoadEndTime?: number--><!--Device-LargestContentfulPaint-largestImageLoadEndTime?: number-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-## largestImageLoadStartTime
-
-```TypeScript
-largestImageLoadStartTime?: number
-```
-
-Start time of the loading of the maximum image.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: milliseconds.
-
-**Type:** number
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LargestContentfulPaint-largestImageLoadStartTime?: number--><!--Device-LargestContentfulPaint-largestImageLoadStartTime?: number-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
 ## largestImagePaintTime
 
 ```TypeScript
 largestImagePaintTime?: number
 ```
 
-Paint time of largest image.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+最大图片加载的时间，单位是以毫秒表示。
 
 **Type:** number
 
@@ -96,7 +56,7 @@ Paint time of largest image.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds
 largestTextPaintTime?: number
 ```
 
-Paint time of largest text.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+最大文本加载时间，单位是以毫秒表示。
 
 **Type:** number
 
@@ -116,7 +76,7 @@ Paint time of largest text.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
 navigationStartTime?: number
 ```
 
-Start time of navigation.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:microseconds.
+导航条加载时间，单位以微秒表示。
 
 **Type:** number
 

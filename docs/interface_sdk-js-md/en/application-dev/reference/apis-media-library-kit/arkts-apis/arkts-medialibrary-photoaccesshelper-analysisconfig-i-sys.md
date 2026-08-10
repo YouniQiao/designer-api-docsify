@@ -12,6 +12,12 @@ Defines the asset analysis configuration.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## extraInfos
 
 ```TypeScript
@@ -42,10 +48,10 @@ Length range: (0, 500].
 types: AnalysisType[]
 ```
 
-Array of intelligent analysis types. The maximum size of the array is the number of members defined by the  
-[AnalysisType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ enum.
+Array of intelligent analysis types. The maximum size of the array is the number of members defined by the   
+[AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md) enum.
 
-**Type:** AnalysisType[]
+**Type:** [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md)[]
 
 **Since:** 24
 

@@ -1,6 +1,6 @@
 # AcquireAuthorizationResult (System API)
 
-Defines the result of the authorization.
+表示获取授权的结果。
 
 **Since:** 24
 
@@ -12,15 +12,21 @@ Defines the result of the authorization.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isReused
 
 ```TypeScript
 isReused?: boolean
 ```
 
-Whether the authorization result is reused. The default value is **undefined**.
+是否为复用的授权结果，默认为undefined。
 
-**true**: The authorization result is reused. **false**: The authorization result is not reused.
+true：表示是复用的授权结果。false：表示不是复用的授权结果。
 
 **Type:** boolean
 
@@ -42,7 +48,7 @@ Whether the authorization result is reused. The default value is **undefined**.
 privilege: string
 ```
 
-Permission associated with the authorization.
+与授权关联的权限。
 
 **Type:** string
 
@@ -64,9 +70,9 @@ Permission associated with the authorization.
 resultCode: AuthorizationResultCode
 ```
 
-Authorization result code.If the authorization is successful, AuthorizationResultCode#AUTHORIZATION\_SUCCESS is returned.Otherwise, an error code is returned. For details, see AuthorizationResultCode.
+授权结果码。
 
-**Type:** AuthorizationResultCode
+**Type:** [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md)
 
 **Since:** 24
 
@@ -86,7 +92,7 @@ Authorization result code.If the authorization is successful, AuthorizationResul
 token?: Uint8Array
 ```
 
-Authorization token. The default value is **undefined**.
+授权令牌，默认为undefined。
 
 **Type:** Uint8Array
 
@@ -108,9 +114,9 @@ Authorization token. The default value is **undefined**.
 validityPeriod?: int
 ```
 
-Validity period of the authorization, in seconds. The default value is **300**.
+授权的有效期，默认值为300，单位为s。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

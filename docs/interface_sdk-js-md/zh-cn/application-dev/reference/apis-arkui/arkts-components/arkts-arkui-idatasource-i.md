@@ -62,7 +62,7 @@ registerDataChangeListener(listener: DataChangeListener): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
 
 ## totalCount
 
@@ -110,5 +110,5 @@ unregisterDataChangeListener(listener: DataChangeListener): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
 

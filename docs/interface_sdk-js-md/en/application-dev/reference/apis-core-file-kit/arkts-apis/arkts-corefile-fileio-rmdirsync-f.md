@@ -6,7 +6,7 @@
 declare function rmdirSync(path: string): void
 ```
 
-Removes a directory. This API returns the result synchronously.
+以同步方法删除目录。
 
 **Since:** 7
 
@@ -24,5 +24,5 @@ Removes a directory. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
+| path | string | Yes | 待删除目录的应用沙箱路径。 |
 

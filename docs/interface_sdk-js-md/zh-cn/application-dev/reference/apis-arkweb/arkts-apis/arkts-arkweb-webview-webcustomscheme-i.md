@@ -1,6 +1,6 @@
 # WebCustomScheme
 
-Defines the configuration of web custom scheme, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the configuration of web custom scheme, related to {@link customizeSchemes} method.
 
 **起始版本：** 23
 
@@ -9,6 +9,12 @@ Defines the configuration of web custom scheme, related to \_\_\_JSDOC\_LINK\_DE
 <!--Device-webview-interface WebCustomScheme--><!--Device-webview-interface WebCustomScheme-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
 
 ## isCodeCacheSupported
 

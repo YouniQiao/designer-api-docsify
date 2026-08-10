@@ -1,6 +1,6 @@
 # WebResponseType
 
-Enumerates the response types of the menu.
+菜单的响应类型。
 
 **Since:** 13
 
@@ -16,7 +16,7 @@ Enumerates the response types of the menu.
 LONG_PRESS = 1
 ```
 
-The menu is displayed when the component is long-pressed.
+通过长按触发菜单弹出。
 
 **Since:** 13
 
@@ -32,7 +32,7 @@ The menu is displayed when the component is long-pressed.
 RIGHT_CLICK = 2
 ```
 
-The menu is displayed when the component is right-clicked.
+通过鼠标右键触发菜单弹出。
 
 **Since:** 21
 

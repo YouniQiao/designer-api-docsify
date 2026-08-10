@@ -1,12 +1,18 @@
 # clearPreloadedUIExtensionAbility（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## clearPreloadedUIExtensionAbility
 
 ```TypeScript
 function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>
 ```
 
-清除指定的[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_实例。使用Promise异步回调。
+清除指定的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -26,7 +32,7 @@ function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preloadId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 预加载[UIExtensionAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例的ID。 |
+| preloadId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 预加载[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的ID。 |
 
 **返回值：**
 
@@ -38,12 +44,12 @@ function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | The specified ID does not exist. Possible causes: 1.The specified ID is incorrect; 2.The preloaded UIExtensionAbility has been loaded; 3.The preloaded UIExtensionAbility has been destroyed; |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000003 | The specified ID does not exist. Possible causes: 1.The specified ID is incorrect; 2.The preloaded UIExtensionAbility has been loaded; 3.The preloaded UIExtensionAbility has been destroyed; |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
@@ -51,13 +57,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   // 通过preloadUIExtensionAbility接口预加载后返回的ID
-  let preloadId = 1001;
+  let preloadId: number = 1001;
   abilityManager.clearPreloadedUIExtensionAbility(preloadId)
     .then(() => {
       console.info('clearPreloadedUIExtensionAbility success.');
     })
-    .catch((error: Error) => {
-      let err = error as BusinessError;
+    .catch((err: BusinessError) => {
       console.error(`clearPreloadedUIExtensionAbility fail, err: ${JSON.stringify(err)}`);
     });
 } catch (err) {

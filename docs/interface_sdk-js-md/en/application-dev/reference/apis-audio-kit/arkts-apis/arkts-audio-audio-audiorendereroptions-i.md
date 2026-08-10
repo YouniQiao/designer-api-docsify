@@ -1,6 +1,6 @@
 # AudioRendererOptions
 
-Describes audio renderer configurations.
+音频渲染器选项信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Describes audio renderer configurations.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## privacyType
 
 ```TypeScript
 privacyType?: AudioPrivacyType
 ```
 
-Whether the audio stream can be recorded by other applications. The default value is **0**.
+表示音频流是否可以被其他应用录制，默认值为0。
 
-**Type:** AudioPrivacyType
+**Type:** [AudioPrivacyType](arkts-audio-audio-audioprivacytype-e.md)
 
 **Since:** 10
 
@@ -34,9 +40,9 @@ Whether the audio stream can be recorded by other applications. The default valu
 rendererInfo: AudioRendererInfo
 ```
 
-Describes audio renderer information.
+音频渲染器信息。
 
-**Type:** AudioRendererInfo
+**Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
 **Since:** 8
 
@@ -52,9 +58,9 @@ Describes audio renderer information.
 streamInfo: AudioStreamInfo
 ```
 
-Describes audio stream information.
+音频流信息。
 
-**Type:** AudioStreamInfo
+**Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 8
 

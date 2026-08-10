@@ -4,7 +4,7 @@
 export type RichEditorSpan = RichEditorImageSpanResult | RichEditorTextSpanResult
 ```
 
-Defines the types of spans in rich editor.
+RichEditor span信息。
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ Defines the types of spans in rich editor.
 
 | Type | Description |
 | --- | --- |
-| RichEditorImageSpanResult |  |
-| RichEditorTextSpanResult |  |
+| RichEditorImageSpanResult | 后端返回的图片信息。 |
+| RichEditorTextSpanResult | 后端返回的文本信息。 |
 

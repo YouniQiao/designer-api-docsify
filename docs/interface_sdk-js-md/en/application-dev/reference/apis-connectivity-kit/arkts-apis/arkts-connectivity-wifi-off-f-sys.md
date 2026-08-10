@@ -1,5 +1,11 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## off('streamChange')
 
 ```TypeScript
@@ -8,7 +14,7 @@ function off(type: 'streamChange', callback?: Callback<number>): void
 
 Unsubscribe Wi-Fi stream change events.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All callback functions will be deregistered If there is no specific callback parameter.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 
@@ -31,7 +37,7 @@ Unsubscribe Wi-Fi stream change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'streamChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
 
 
 ## off('hotspotStaJoin')
@@ -42,7 +48,7 @@ function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 
 Unsubscribe Wi-Fi hotspot sta join events.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All callback functions will be deregistered If there is no specific callback parameter.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 
@@ -65,7 +71,7 @@ Unsubscribe Wi-Fi hotspot sta join events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StationInfo&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | No | the callback of on |
 
 
 ## off('hotspotStaLeave')
@@ -97,5 +103,5 @@ Unsubscribe Wi-Fi hotspot sta leave events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StationInfo&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | No | the callback of on |
 

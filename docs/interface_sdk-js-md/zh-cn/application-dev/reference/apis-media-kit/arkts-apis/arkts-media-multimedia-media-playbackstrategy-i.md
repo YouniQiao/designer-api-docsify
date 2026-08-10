@@ -10,13 +10,19 @@ Provides preferred playback settings for player.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## enableSuperResolution
 
 ```TypeScript
 enableSuperResolution?: boolean
 ```
 
-Enable super-resolution feature. default is false.Must enable super-resolution feature before calling \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+Enable super-resolution feature. default is false.Must enable super-resolution feature before calling {@link #setSuperResolution} and {@link #setVideoWindowSize}.
 
 **类型：** boolean
 
@@ -58,7 +64,7 @@ mutedMediaType?: MediaType
 
 mute the specified media stream when playing.
 
-**类型：** MediaType
+**类型：** [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md)
 
 **起始版本：** 12
 
@@ -96,9 +102,9 @@ preferredBufferDuration?: int
 
 Chooses a preferred buffer duration.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_The preferred buffer duration in the playback policy, is used to set the buffer size. For details,see [Online Video Frame Freezing Optimization Practice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_
+&lt;p&gt;The preferred buffer duration in the playback policy, is used to set the buffer size. For details,see [Online Video Frame Freezing Optimization Practice](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-online-video-playback-lags-practice).&lt;/p&gt;
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -118,7 +124,7 @@ preferredBufferDurationForPlaying?: double
 
 Customize the buffering threshold for start or restart playing. The unit is second.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 18
 
@@ -158,7 +164,7 @@ preferredHeight?: int
 
 Choose a stream with height close to it.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -198,7 +204,7 @@ preferredWidth?: int
 
 Choose a stream with width close to it.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -238,7 +244,7 @@ thresholdForAutoQuickPlay?: double
 
 set max buffering threshold for liveStreaming or avplayer while change the speed.It is recommended that the value be 2 seconds greater than the starting waterline.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 18
 

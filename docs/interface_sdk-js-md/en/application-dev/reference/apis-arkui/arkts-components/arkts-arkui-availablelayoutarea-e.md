@@ -1,6 +1,6 @@
 # AvailableLayoutArea
 
-Enumerates the reference sizes of the available layout area when the preview image width and height are set to percentages.
+预览图宽高设置为百分比时的参考可布局区域大小。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the reference sizes of the available layout area when the preview ima
 SAFE_AREA = 0
 ```
 
-The reference size of the available layout area is the window size minus the safe margins on all sides.
+参考可布局区域大小为窗口大小减去上下左右安全边距。
 
 **Since:** 20
 

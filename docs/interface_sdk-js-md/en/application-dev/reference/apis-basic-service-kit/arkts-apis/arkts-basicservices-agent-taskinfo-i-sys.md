@@ -1,6 +1,6 @@
 # TaskInfo
 
-Defines the data structure of the task information for query. The fields available vary depending on the query type.
+查询结果的任务信息数据结构，提供普通查询和系统查询，两种字段的可见范围不同。
 
 **Since:** 10
 
@@ -9,6 +9,12 @@ Defines the data structure of the task information for query. The fields availab
 <!--Device-agent-interface TaskInfo--><!--Device-agent-interface TaskInfo-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
+
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
 
 ## bundle
 

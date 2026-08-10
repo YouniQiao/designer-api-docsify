@@ -1,6 +1,10 @@
 # AudioInterrupt
 
-Describes input parameters of audio interruption events.
+音频监听事件传入的参数。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，无替代接口。
 
 **Since:** 7
 
@@ -14,15 +18,21 @@ Describes input parameters of audio interruption events.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## contentType
 
 ```TypeScript
 contentType: ContentType
 ```
 
-Audio content type.
+音频打断媒体类型。
 
-**Type:** ContentType
+**Type:** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
 
 **Since:** 7
 
@@ -42,8 +52,7 @@ Audio content type.
 pauseWhenDucked: boolean
 ```
 
-Whether audio playback can be paused during an audio interruption. **true** if audio playback can be paused,  
-**false** otherwise.
+音频打断时是否可以暂停音频播放。true表示音频播放可以在音频打断期间暂停，false表示音频播放不可以在音频打断期间暂停。
 
 **Type:** boolean
 
@@ -65,9 +74,9 @@ Whether audio playback can be paused during an audio interruption. **true** if a
 streamUsage: StreamUsage
 ```
 
-Audio stream usage.
+音频流使用类型。
 
-**Type:** StreamUsage
+**Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **Since:** 7
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## grantFlags
 
 ```TypeScript
@@ -32,7 +38,7 @@ grantFlags: int
 - 512：用户策略限制该权限。  
 取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -54,7 +60,7 @@ grantStatus: GrantStatus
 
 权限授权状态。
 
-**类型：** GrantStatus
+**类型：** [GrantStatus](arkts-ability-bundle-grantstatus-e.md)
 
 **起始版本：** 26.0.0
 
@@ -76,7 +82,7 @@ grantTimestamp?: long
 
 授权状态变化的时间戳。该字段为可选字段，当权限状态变化时返回。单位为：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 26.0.0
 
@@ -98,7 +104,7 @@ permissionName: Permissions
 
 权限名称。
 
-**类型：** Permissions
+**类型：** [Permissions](arkts-ability-permissions-t.md)
 
 **起始版本：** 26.0.0
 
@@ -120,7 +126,7 @@ tokenID: int
 
 应用的身份标识。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

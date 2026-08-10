@@ -1,15 +1,22 @@
 # getSharedDirty
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getSharedDirty
 
 ```TypeScript
 function getSharedDirty() : bigint
 ```
 
-��ȡ���̵Ĺ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps\_rollup�ڵ��е�Shared\_Dirtyֵ��
-    **ע��**  
-    
-    ����/proc/{pid}/smaps\_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
+��ȡ���̵Ĺ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps_rollup�ڵ��е�Shared_Dirtyֵ��
+
+> **ע��**
+> 
+> ����/proc/{pid}/smaps_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
 
 **起始版本：** 8
 
@@ -25,7 +32,7 @@ function getSharedDirty() : bigint
 | --- | --- |
 | bigint | ���ؽ��̵Ĺ������ڴ��С����λΪKB�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

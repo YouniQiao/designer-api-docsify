@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## description
 
 ```TypeScript
@@ -58,7 +64,7 @@ items: SearchPlayMusicItem[]
 
 音频列表。
 
-**类型：** SearchPlayMusicItem[]
+**类型：** [SearchPlayMusicItem](arkts-avsession-avmusictemplate-searchplaymusicitem-i.md)[]
 
 **起始版本：** 23
 

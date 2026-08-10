@@ -5,8 +5,8 @@ type PiPControlGroup = VideoPlayControlGroup | VideoCallControlGroup | VideoMeet
     | VideoLiveControlGroup
 ```
 
-画中画控制面板的可选控件组列表，应用可以配置是否显示可选控件。使用时必须和[PiPTemplateType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对应，否则  
-[create]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口抛出401错误码。
+画中画控制面板的可选控件组列表，应用可以配置是否显示可选控件。使用时必须和[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)对应，否则  
+[create](arkts-arkui-pipwindow-create-f.md#create)接口抛出401错误码。
 
 **起始版本：** 12
 

@@ -1,11 +1,11 @@
 # IntentDecoratorInfo
 
-Common properties for intent decorators, used to define basic information about an intent (including the intent name and version number). It applies to all decorators provided by this module.
-    **NOTE**  
-    
-    If a matching intent is found in the standard intent list based on the **schema** and **intentVersion** fields, the  
-    system automatically populates the **intentName**, **domain**, **llmDescription**, **keywords**, **parameters**,  
-    and **result** fields with the values from the matching standard intent.
+意图装饰器的通用属性，用于定义意图的基本信息（包括意图名称、意图版本号）。适用于本模块的所有装饰器。
+
+> **说明：**
+> 
+> 如果根据schema与intentVersion字段，在标准意图列表存在匹配的标准意图，系统会将intentName、domain、llmDescription、keywords、parameters、result字段均设置为标准
+> 意图的相应字段值。
 
 **Since:** 20
 
@@ -15,13 +15,19 @@ Common properties for intent decorators, used to define basic information about 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+```
+
 ## displayDescription
 
 ```TypeScript
 displayDescription?: string
 ```
 
-Description of the intent displayed to users.
+表示显示给用户的意图描述。
 
 **Type:** string
 
@@ -43,7 +49,7 @@ Description of the intent displayed to users.
 displayName: string
 ```
 
-Name of the intent displayed to users.
+表示显示给用户的意图名称。
 
 **Type:** string
 
@@ -65,8 +71,8 @@ Name of the intent displayed to users.
 domain: string
 ```
 
-Vertical domain of the intent. It is used to categorize intents by vertical fields (for example, video, music, and games). For details about the value range, see the vertical domain fields in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示意图垂域，用于将意图按垂直领域分类（例如：视频、音乐、游戏），取值范围参见  
+[各垂域的智慧分发特性列表](https://developer.huawei.com/consumer/cn/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215)中的垂域字段。
 
 **Type:** string
 
@@ -88,13 +94,12 @@ Vertical domain of the intent. It is used to categorize intents by vertical fiel
 icon?: ResourceStr
 ```
 
-Icon of the intent. It is displayed in the AI entry point.
+表示意图图标，用于在AI入口显示。
 
-- If the value is a string, the icon is read from a network resource.  
-- If the value is a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, the icon is read  
-from a local resource.
+- 当取值为字符串类型时，表示图标读取网络资源。  
+- 当取值为[Resource](../../reference/apis-localization-kit/js-apis-resource-manager.md)时，表示图标读取本地资源。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 20
 
@@ -114,7 +119,7 @@ from a local resource.
 intentName: string
 ```
 
-Intent name, which is the unique identifier of an intent.
+表示意图名称，是意图的唯一标识。
 
 **Type:** string
 
@@ -136,7 +141,7 @@ Intent name, which is the unique identifier of an intent.
 intentVersion: string
 ```
 
-Version number of the intent. It is used to distinguish and manage intents when their capabilities evolve.
+表示意图版本号。当意图能力演进时，可通过版本号进行区分和管理。
 
 **Type:** string
 
@@ -158,7 +163,7 @@ Version number of the intent. It is used to distinguish and manage intents when 
 keywords?: string[]
 ```
 
-Search keywords for the intent.
+表示意图的搜索关键字。
 
 **Type:** string[]
 
@@ -180,7 +185,7 @@ Search keywords for the intent.
 llmDescription?: string
 ```
 
-Function of an intent, which helps large language models understand the intent.
+表示意图的功能，用于大型语言模型理解该意图。
 
 **Type:** string
 
@@ -202,9 +207,10 @@ Function of an intent, which helps large language models understand the intent.
 parameters?: Record<string, Object>
 ```
 
-Data format of intent parameters, which is used to define the input data format during intent calls.
+表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。取值参见  
+[各垂域意图Schema](https://developer.huawei.com/consumer/cn/doc/service/intents-schema-0000001901962713)
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 20
 
@@ -224,9 +230,9 @@ Data format of intent parameters, which is used to define the input data format 
 result?: Record<string, Object>
 ```
 
-Data format for the results returned by intent calls. It defines how the data should be structured.
+表示意图调用返回结果的数据格式声明，用于定义意图调用返回结果的数据格式。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 20
 
@@ -246,10 +252,9 @@ Data format for the results returned by intent calls. It defines how the data sh
 schema?: string
 ```
 
-Name of a standard intent schema. This field is required when you  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.It is not required when you  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_. For details about the standard intent list, see  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.
+表示接入的标准意图的名称。开发者[接入标准意图](../../../application-models/insight-intent-definition.md#接入标准意图)时，需要配置该字段，  
+[创建自定义意图](../../../application-models/insight-intent-definition.md#创建自定义意图)时，无需配置该字段。标准意图列表参见  
+[附录：标准意图接入规范](../../../application-models/insight-intent-access-specifications.md)。
 
 **Type:** string
 

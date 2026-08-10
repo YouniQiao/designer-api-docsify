@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Account.OsAccount
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## domain
 
 ```TypeScript
@@ -54,7 +60,7 @@ parameters: Record<string, Object>
 
 服务器配置参数。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 18
 

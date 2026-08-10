@@ -1,5 +1,11 @@
 # recover (System API)
 
+## Modules to Import
+
+```TypeScript
+import { trash } from 'kits/@kit.CoreFileKit';
+```
+
 ## recover
 
 ```TypeScript
@@ -34,11 +40,11 @@ Recovers a file or directory from the trash.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
 | 13900020 | Invalid argument |
+| 13900002 | No such file or directory |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 let fileinfos = trash.listFile();

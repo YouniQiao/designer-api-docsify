@@ -1,10 +1,11 @@
 # SubscribedAbstractProperty
 
-SubscribedAbstractProperty是\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_/  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中属性的单/双向同步绑定对象，用于与AppStorage/LocalStorage中的属性建立数据同步关系。SubscribedAbstractProperty实例需要通过[aboutToBeDeleted]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口手动释放，以取消同步关系并无效化实例。
-    **说明：**  
-    
-    从API version 12开始，AppStorage/LocalStorage支持Map、Set、Date类型，支持null、undefined以及联合类型。
+SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中属性的单/双向同步绑定对象，用于与AppStorage/LocalStorage中的属性建立数据同步关系。SubscribedAbstractProperty实例需要通过[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口手动释放，以取消同步关系并无效化实例。
+
+> **说明：**
+> 
+> 从API version 12开始，AppStorage/LocalStorage支持Map、Set、Date类型，支持null、undefined以及联合类型。
 
 **起始版本：** 9
 
@@ -20,9 +21,9 @@ SubscribedAbstractProperty是\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_/
 abstract aboutToBeDeleted(): void
 ```
 
-取消[SubscribedAbstractProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_实例对  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_/  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_的单向或双向同步关系，并无效化SubscribedAbstractProperty实例。即调用aboutToBeDeleted方法之后，不能再使用SubscribedAbstractProperty实例调用[set]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_或[get]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_方法。
+取消[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)实例对  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)的单向或双向同步关系，并无效化SubscribedAbstractProperty实例。即调用aboutToBeDeleted方法之后，不能再使用SubscribedAbstractProperty实例调用[set](arkts-arkui-localstorage-c.md#set)或[get](arkts-arkui-localstorage-c.md#get)方法。
 
 **起始版本：** 10
 
@@ -59,7 +60,7 @@ constructor(
   )
 ```
 
-构造函数。若传入了subscribeMe参数建立了订阅关系，订阅关系不再需要时，应调用[unlinkSuscriber()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_解除订阅（订阅者ID通过[IPropertySubscriber]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.[id()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_获取）。
+构造函数。若传入了subscribeMe参数建立了订阅关系，订阅关系不再需要时，应调用[unlinkSuscriber()](arkts-arkui-subscribedabstractproperty-c.md#unlinksuscriber)解除订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取）。
 
 **起始版本：** 7
 
@@ -73,7 +74,7 @@ constructor(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeMe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
 | info | string | 否 | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
 ## createOneWaySync
@@ -82,7 +83,7 @@ constructor(
 createOneWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyOneWay<T>
 ```
 
-创建单向同步属性。数据变更仅从数据源向订阅者单向传播。订阅关系不再需要时，应调用[unlinkSuscriber()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_解除订阅（订阅者ID通过[IPropertySubscriber]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.[id()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_获取），或由返回的[SyncedPropertyOneWay]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_对象的[aboutToBeDeleted()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_方法处理取消订阅。
+创建单向同步属性。数据变更仅从数据源向订阅者单向传播。订阅关系不再需要时，应调用[unlinkSuscriber()](arkts-arkui-subscribedabstractproperty-c.md#unlinksuscriber)解除订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取），或由返回的[SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md)对象的[aboutToBeDeleted()](arkts-arkui-syncedpropertyoneway-c-sys.md#abouttobedeleted)方法处理取消订阅。
 
 **起始版本：** 7
 
@@ -96,14 +97,14 @@ createOneWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedProper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeMe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
 | info | string | 否 | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 返回创建的单向同步属性对象，用于接收父组件状态值的单向同步，当父组件状态变化时更新自身值。 |
+| [SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md)&lt;T&gt; | 返回创建的单向同步属性对象，用于接收父组件状态值的单向同步，当父组件状态变化时更新自身值。 |
 
 ## createTwoWaySync
 
@@ -111,7 +112,7 @@ createOneWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedProper
 createTwoWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyTwoWay<T>
 ```
 
-创建双向同步属性。数据变更在数据源与订阅者之间双向传播。与[createOneWaySync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相比，该方法支持数据源与订阅者之间的双向同步，适用于订阅者也需要反向修改数据源的场景；若仅需数据源向订阅者单向同步，请使用[createOneWaySync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。订阅关系不再需要时，应调用[unlinkSuscriber()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_解除订阅（订阅者ID通过[IPropertySubscriber]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.[id()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_获取），或由返回的[SyncedPropertyTwoWay]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_对象的[aboutToBeDeleted()]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_方法处理取消订阅。
+创建双向同步属性。数据变更在数据源与订阅者之间双向传播。与[createOneWaySync](arkts-arkui-subscribedabstractproperty-c.md#createonewaysync)相比，该方法支持数据源与订阅者之间的双向同步，适用于订阅者也需要反向修改数据源的场景；若仅需数据源向订阅者单向同步，请使用[createOneWaySync](arkts-arkui-subscribedabstractproperty-c.md#createonewaysync)。订阅关系不再需要时，应调用[unlinkSuscriber()](arkts-arkui-subscribedabstractproperty-c.md#unlinksuscriber)解除订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取），或由返回的[SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md)对象的[aboutToBeDeleted()](arkts-arkui-syncedpropertytwoway-c-sys.md#abouttobedeleted)方法处理取消订阅。
 
 **起始版本：** 7
 
@@ -125,14 +126,14 @@ createTwoWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedProper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeMe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
 | info | string | 否 | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Two-way synchronized property. |
+| [SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md)&lt;T&gt; | Two-way synchronized property. |
 
 ## get
 
@@ -140,8 +141,8 @@ createTwoWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedProper
 abstract get(): T
 ```
 
-读取\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_/  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中所同步属性的数据。
+读取[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所同步属性的数据。
 
 **起始版本：** 9
 
@@ -189,8 +190,8 @@ id(): number
 info(): string
 ```
 
-返回\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_/  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中所同步属性的属性名。
+返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所同步属性的属性名。
 
 **起始版本：** 10
 
@@ -274,8 +275,8 @@ numberOfSubscrbers(): number
 abstract set(newValue: T): void
 ```
 
-设置\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_/  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中所同步属性的数据，newValue必须是T类型，从API version 12开始可以为null或undefined。
+设置[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所同步属性的数据，newValue必须是T类型，从API version 12开始可以为null或undefined。
 
 **起始版本：** 9
 
@@ -315,7 +316,7 @@ unlinkSuscriber(subscriberId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriberId | number | 是 | 要解除订阅的订阅者ID，需为已通过[createTwoWaySync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 或[createOneWaySync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_建立订阅关系的订阅者ID， 通过[IPropertySubscriber]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.[id()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_方法获取。 |
+| subscriberId | number | 是 | 要解除订阅的订阅者ID，需为已通过[createTwoWaySync](arkts-arkui-subscribedabstractproperty-c.md#createtwowaysync) 或[createOneWaySync](arkts-arkui-subscribedabstractproperty-c.md#createonewaysync)建立订阅关系的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
 
 ## id_
 

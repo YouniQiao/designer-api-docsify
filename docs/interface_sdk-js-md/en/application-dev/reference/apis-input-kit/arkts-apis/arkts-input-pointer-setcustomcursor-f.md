@@ -1,13 +1,19 @@
 # setCustomCursor
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## setCustomCursor
 
 ```TypeScript
 function setCustomCursor(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): Promise<void>
 ```
 
-Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see  
-[setCustomCursor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+设置指定窗口的自定义光标样式，此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅  
+[setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)，使用Promise异步回调。
 
 **Since:** 11
 
@@ -21,24 +27,24 @@ Sets a custom pointer style for a specified window. This API can set only the cu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Window ID. |
-| pixelMap | image.PixelMap | Yes | Custom cursor resource. |
-| focusX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Custom cursor focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
-| focusY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Custom cursor focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口ID。 |
+| pixelMap | image.PixelMap | Yes | 自定义光标资源。 |
+| focusX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 自定义光标焦点x，取值范围：大于等于0，默认为0，单位为像素（px）。 |
+| focusY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 自定义光标焦点y，取值范围：大于等于0，默认为0，单位为像素（px）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -59,19 +65,20 @@ struct Index {
             const svgBuffer: ArrayBuffer = svgFileData.buffer.slice(0);
             let svgImageSource: image.ImageSource = image.createImageSource(svgBuffer);
             let svgDecodingOptions: image.DecodingOptions = { desiredSize: { width: 50, height: 50 } };
+            // Create a PixelMap
             svgImageSource.createPixelMap(svgDecodingOptions).then((pixelMap) => {
               window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
                 let windowId = win.getWindowProperties().id;
                 try {
                   pointer.setCustomCursor(windowId, pixelMap).then(() => {
-                    console.info(`setCustomCursor success`);
+                    console.info(`Succeeded in setting custom cursor.`);
                   });
                 } catch (error) {
-                  console.error(`setCustomCursor failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                  console.error(`Failed to set custom cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 }
               });
             }).catch((error: BusinessError) => {
-                console.error(`createPixelMap promise error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to create pixel map promise, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
               });
           });
         })
@@ -87,10 +94,10 @@ struct Index {
 function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>
 ```
 
-Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see  
-[setCustomCursor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+设置指定窗口的自定义光标样式，此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅  
+[setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)，使用Promise异步回调。
 
-The cursor may be switched back to the system style in the following cases: application window layout change, hot zone switching, page redirection, moving of the cursor out of the window and then back to the window, or moving of the cursor in different areas of the window. In this case, you need to reset the cursor style.
+应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动，以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。
 
 **Since:** 15
 
@@ -104,24 +111,24 @@ The cursor may be switched back to the system style in the following cases: appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Window ID. |
-| cursor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Custom cursor resource. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Custom cursor configuration, which specifies whether to adjust the cursor size based on system settings. If **followSystem** in **CursorConfig** is set to **true**, the supported adjustment range is [size of the cursor image, 256 x 256]. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口ID。 |
+| cursor | [CustomCursor](arkts-input-pointer-customcursor-i.md) | Yes | 自定义光标资源。 |
+| config | [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | Yes | 自定义光标配置，用于配置是否根据系统设置调整光标大小。如果CursorConfig中followSystem设置为true，则光标大小的可调整范围为： [光标资源图大小，256×256]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Abnormal windowId parameter passed in; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Abnormal pixelMap parameter passed in; 3. Abnormal focusX parameter passed in; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_4. Abnormal focusY parameter passed in. |
-| [26500001](../errorcode-pointer.md#26500001-invalid-window-id) | Invalid windowId. Possible causes: The window id does not belong to the current process. |
+| 401 | Parameter error. Possible causes: 1. Abnormal windowId parameter passed in; &lt;br&gt;2. Abnormal pixelMap parameter passed in; 3. Abnormal focusX parameter passed in; &lt;br&gt;4. Abnormal focusY parameter passed in. |
+| 26500001 | Invalid windowId. Possible causes: The window id does not belong to the current process. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -142,20 +149,23 @@ struct Index {
             const svgBuffer: ArrayBuffer = svgFileData.buffer.slice(0);
             let svgImageSource: image.ImageSource = image.createImageSource(svgBuffer);
             let svgDecodingOptions: image.DecodingOptions = { desiredSize: { width: 50, height: 50 } };
+            // Create a PixelMap
             svgImageSource.createPixelMap(svgDecodingOptions).then((pixelMap) => {
+              // Get the most recent window within the application
               window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
                 let windowId = win.getWindowProperties().id;
                 try {
+                  // Set a custom pointer
                   pointer.setCustomCursor(windowId, { pixelMap: pixelMap, focusX: 25, focusY: 25 },
                     { followSystem: false }).then(() => {
-                    console.info(`setCustomCursor success`);
+                    console.info(`Succeeded in setting custom cursor.`);
                   });
                 } catch (error) {
-                  console.error(`setCustomCursor failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                  console.error(`Failed to set custom cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 }
               });
             }).catch((error: BusinessError) => {
-                console.error(`createPixelMap promise error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to create pixel map promise, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
               });
           });
         })

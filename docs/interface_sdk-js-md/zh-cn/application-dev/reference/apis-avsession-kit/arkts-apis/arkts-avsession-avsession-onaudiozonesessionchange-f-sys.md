@@ -1,5 +1,11 @@
 # onAudioZoneSessionChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## onAudioZoneSessionChange
 
 ```TypeScript
@@ -24,13 +30,13 @@ function onAudioZoneSessionChange(userId: int, callback: Callback<AVSessionDescr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 当前userId最终归属的音区 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVSessionDescriptor&gt; | 是 | 返回的会话列表 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 当前userId最终归属的音区 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVSessionDescriptor&gt; | 是 | 返回的会话列表 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| 6600101 | Session service exception. |
+| 202 | Not System App. |
 

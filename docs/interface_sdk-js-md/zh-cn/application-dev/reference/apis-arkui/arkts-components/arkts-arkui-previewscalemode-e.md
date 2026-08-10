@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-预览图根据[Placement]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_自动调整预览图宽高及缩放。
+预览图根据[Placement](../arkts-apis/arkts-arkui-enums-placement-e.md/arkts-arkui-enums-placement-e.md)自动调整预览图宽高及缩放。
 
 **起始版本：** 20
 

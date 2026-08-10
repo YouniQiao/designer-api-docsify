@@ -1,6 +1,6 @@
 # SubmitEvent
 
-Defines the user submission event.
+定义用户提交事件。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Defines the user submission event.
 keepEditableState(): void
 ```
 
-Maintains the editable state of the text box when called.
+用户自定义输入框编辑状态，调用时保持编辑态。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Maintains the editable state of the text box when called.
 text: string
 ```
 
-Text in the text box.
+输入框文本内容。
 
 **Type:** string
 

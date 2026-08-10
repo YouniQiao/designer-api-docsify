@@ -1,5 +1,11 @@
 # onCCallStateChange
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## onCCallStateChange
 
 ```TypeScript
@@ -22,20 +28,20 @@ Called when the carrier call state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CCallStateInfo&gt; | Yes | Indicates the callback for getting the carrier call state. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the options for observer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CCallStateInfo&gt; | Yes | Indicates the callback for getting the carrier call state. |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | No | Indicates the options for observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8800002](../errorcode-telephony.md#8800002-service-connection-error) | Service connection failed. |
-| [8800003](../errorcode-telephony.md#8800003-system-internal-error) | System internal error. |
-| [8800999](../errorcode-telephony.md#8800999-internal-error) | Unknown error. |
+| 8800999 | Unknown error. |
+| 8800002 | Service connection failed. |
+| 8800003 | System internal error. |
+| 8800001 | Invalid parameter value. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { call, observer } from '@kit.TelephonyKit';

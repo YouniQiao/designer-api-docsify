@@ -18,7 +18,7 @@ fileSelector: FileSelectorParam
 
 文件选择器的相关信息。
 
-**类型：** FileSelectorParam
+**类型：** [FileSelectorParam](arkts-arkweb-fileselectorparam-c.md)
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ result: FileSelectorResult
 
 用于通知Web组件文件选择的结果。
 
-**类型：** FileSelectorResult
+**类型：** [FileSelectorResult](../arkts-apis/arkts-arkweb-web-fileselectorresult-c.md)
 
 **起始版本：** 12
 

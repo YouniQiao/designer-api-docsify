@@ -1,7 +1,6 @@
 # EventPolicy
 
-Defines the system event configuration policy, which is set by calling  
-[configEventPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+提供系统事件配置策略的定义，用于使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy)设置事件配置策略。
 
 **Since:** 22
 
@@ -11,15 +10,21 @@ Defines the system event configuration policy, which is set by calling
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addressSanitizerPolicy
 
 ```TypeScript
 addressSanitizerPolicy?: AddressSanitizerPolicy
 ```
 
-ADDRESS\_SANITIZER event configuration policy.
+地址越界事件配置策略。
 
-**Type:** AddressSanitizerPolicy
+**Type:** [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md)
 
 **Since:** 24
 
@@ -37,9 +42,9 @@ ADDRESS\_SANITIZER event configuration policy.
 appCrashPolicy?: AppCrashPolicy
 ```
 
-APP\_CRASH event configuration policy.
+崩溃事件配置策略。
 
-**Type:** AppCrashPolicy
+**Type:** [AppCrashPolicy](arkts-performanceanalysis-hiappevent-appcrashpolicy-i.md)
 
 **Since:** 24
 
@@ -57,9 +62,9 @@ APP\_CRASH event configuration policy.
 appFreezePolicy?: AppFreezePolicy
 ```
 
-APP\_FREEZE event configuration policy.
+应用冻屏事件配置策略。
 
-**Type:** AppFreezePolicy
+**Type:** [AppFreezePolicy](arkts-performanceanalysis-hiappevent-appfreezepolicy-i.md)
 
 **Since:** 24
 
@@ -77,9 +82,9 @@ APP\_FREEZE event configuration policy.
 cpuUsageHighPolicy?: CpuUsageHighPolicy
 ```
 
-Configuration policy for CPU\_USAGE\_HIGH event.
+CPU高负载事件配置策略。
 
-**Type:** CpuUsageHighPolicy
+**Type:** [CpuUsageHighPolicy](arkts-performanceanalysis-hiappevent-cpuusagehighpolicy-i.md)
 
 **Since:** 22
 
@@ -97,9 +102,9 @@ Configuration policy for CPU\_USAGE\_HIGH event.
 mainThreadJankPolicy?: MainThreadJankPolicy
 ```
 
-Configuration policy for MAIN\_THREAD\_JANK event.
+主线程超时事件配置策略。
 
-**Type:** MainThreadJankPolicy
+**Type:** [MainThreadJankPolicy](arkts-performanceanalysis-hiappevent-mainthreadjankpolicy-i.md)
 
 **Since:** 22
 
@@ -117,9 +122,9 @@ Configuration policy for MAIN\_THREAD\_JANK event.
 resourceOverlimitPolicy?: ResourceOverlimitPolicy
 ```
 
-RESOURCE\_OVERLIMIT event configuration policy.
+资源泄漏事件配置策略。
 
-**Type:** ResourceOverlimitPolicy
+**Type:** [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md)
 
 **Since:** 24
 

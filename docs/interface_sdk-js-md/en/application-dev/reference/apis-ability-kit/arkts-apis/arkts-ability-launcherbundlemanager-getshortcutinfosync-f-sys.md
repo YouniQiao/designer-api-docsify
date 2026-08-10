@@ -1,15 +1,21 @@
 # getShortcutInfoSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getShortcutInfoSync
 
 ```TypeScript
 function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 ```
 
-Obtains the [shortcut information]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  
-[getShortcutInfoByAppIndex]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用  
+[getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex)。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自身的信息时不需要权限。
 
 **Since:** 10
 
@@ -27,26 +33,26 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 应用Bundle名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo]{ |
+| Array&lt;ShortcutInfo&gt; | Array形式返回当前用户下指定应用的[ShortcutInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not support. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not support. |
+| 17700026 | The specified bundle is disabled. |
+| 201 | Verify permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';
@@ -69,10 +75,10 @@ try {
 function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInfo>
 ```
 
-Obtains the [shortcut information]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the specified user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  
-[getShortcutInfoByAppIndex]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+查询指定用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用  
+[getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex)。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自身的信息时不需要权限。
 
 **Since:** 13
 
@@ -90,28 +96,28 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo]{ |
+| Array&lt;ShortcutInfo&gt; | Array形式返回指定用户下指定应用的[ShortcutInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not support. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not support. |
+| 17700026 | The specified bundle is disabled. |
+| 201 | Verify permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700004 | The specified user ID is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';

@@ -1,5 +1,11 @@
 # getEthernetDeviceInfos (System API)
 
+## Modules to Import
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
 ## getEthernetDeviceInfos
 
 ```TypeScript
@@ -30,11 +36,11 @@ Get the ethernet mac address list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2201005 | Device information does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';

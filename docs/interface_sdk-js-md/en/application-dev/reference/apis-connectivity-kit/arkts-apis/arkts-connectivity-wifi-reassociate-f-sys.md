@@ -1,5 +1,11 @@
 # reassociate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## reassociate
 
 ```TypeScript
@@ -30,7 +36,7 @@ Re-associate to current network.
 | --- | --- |
 | boolean | { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

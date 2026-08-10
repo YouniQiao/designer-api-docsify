@@ -1,6 +1,6 @@
 # WindowAnchorInfo (System API)
 
-Describes the anchor point information used to maintain the relative position between the level-1 child window and the main window.
+一级子窗与主窗保持相对位置的窗口锚点参数信息。
 
 **Since:** 24
 
@@ -12,15 +12,21 @@ Describes the anchor point information used to maintain the relative position be
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## anchorType
 
 ```TypeScript
 anchorType: WindowAnchor
 ```
 
-Type of the anchor point used to maintain the relative position.
+一级子窗与主窗保持相对位置不变时的窗口锚点枚举。
 
-**Type:** WindowAnchor
+**Type:** [WindowAnchor](arkts-arkui-window-windowanchor-e.md)
 
 **Since:** 24
 
@@ -40,9 +46,9 @@ Type of the anchor point used to maintain the relative position.
 offsetX?: int
 ```
 
-X-axis offset between the anchor points of the child window and the main window, in px. The value must be an integer. Floating-point numbers are rounded down. The default value is **0**.
+一级子窗锚点与主窗锚点位置的X轴偏移量，单位为px。仅支持整数输入，浮点数向下取整，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 0
 
@@ -64,9 +70,9 @@ X-axis offset between the anchor points of the child window and the main window,
 offsetY?: int
 ```
 
-Y-axis offset between the anchor points of the child window and the main window, in px. The value must be an integer. Floating-point numbers are rounded down. The default value is **0**.
+一级子窗锚点与主窗锚点位置的Y轴偏移量，单位为px。仅支持整数输入，浮点数向下取整，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 0
 

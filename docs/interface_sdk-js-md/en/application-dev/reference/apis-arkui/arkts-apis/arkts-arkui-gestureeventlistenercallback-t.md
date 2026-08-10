@@ -4,7 +4,7 @@
 type GestureEventListenerCallback = (event: GestureEvent, node?: FrameNode) => void
 ```
 
-Defines the callback type used in UIObserver watch gesture.The value of event indicates the information of gesture.The value of node indicates the frameNode which will receive the event.
+定义UIObserver监听手势时使用的回调类型。event表示手势的信息。node表示接收事件的frameNode。
 
 **Since:** 26.0.0
 
@@ -20,6 +20,6 @@ Defines the callback type used in UIObserver watch gesture.The value of event in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the information of GestureEvent  |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the information of frameNode  |
+| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes | the information of GestureEvent |
+| node | [FrameNode](arkts-arkui-framenode-t.md) | No | the information of frameNode |
 

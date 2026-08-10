@@ -1,8 +1,8 @@
 # Zoom
 
-Zoom** inherits from [ZoomQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
 
-It provides APIs related to zoom operations.
+变焦类，对设备变焦操作。
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 
@@ -13,6 +13,12 @@ It provides APIs related to zoom operations.
 <!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getZoomCenterPoint
 
@@ -36,14 +42,14 @@ Gets zoom center point.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The current zoom center point. |
+| [Point](arkts-camera-camera-point-i.md) | The current zoom center point. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## prepareZoom
 
@@ -67,10 +73,10 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -108,14 +114,14 @@ Sets zoom center point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target zoom center point. |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes | Target zoom center point. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## unprepareZoom
 
@@ -139,10 +145,10 @@ Instructs the bottom layer to unprepare for zooming.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

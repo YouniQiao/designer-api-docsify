@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## errorCode
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly errorCode: ErrorCode
 
 预下载错误回调返回的特定错误类型。
 
-**类型：** ErrorCode
+**类型：** [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md)
 
 **起始版本：** 23
 
@@ -34,8 +40,8 @@ readonly errorCode: ErrorCode
 readonly message: string
 ```
 
-返回\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_或  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
+返回[通用错误码](../../../reference/errorcode-universal.md)或  
+[HTTP错误码](../../../reference/apis-network-kit/errorcode-net-http.md)。
 
 **类型：** string
 

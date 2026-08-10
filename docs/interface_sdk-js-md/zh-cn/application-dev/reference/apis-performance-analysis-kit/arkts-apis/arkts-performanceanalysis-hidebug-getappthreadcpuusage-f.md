@@ -1,5 +1,11 @@
 # getAppThreadCpuUsage
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppThreadCpuUsage
 
 ```TypeScript
@@ -7,9 +13,10 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 ```
 
 ��ȡӦ���߳�CPUʹ�������
-    **ע��**  
-    
-    ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
+
+> **ע��**
+> 
+> ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
 
 **起始版本：** 12
 
@@ -23,9 +30,9 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | ���ص�ǰӦ�ý���������ThreadCpuUsage���顣 |
+| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] | ���ص�ǰӦ�ý���������ThreadCpuUsage���顣 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

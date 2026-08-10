@@ -1,5 +1,11 @@
 # notifyMetadataBindingEvent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## notifyMetadataBindingEvent
 
 ```TypeScript
@@ -34,10 +40,10 @@ Transfers metadata to the application or service that calls the encoding API. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| 32100001 | Internal handling failed. |
+| 202 | Permission check failed. A non-system application uses the system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';

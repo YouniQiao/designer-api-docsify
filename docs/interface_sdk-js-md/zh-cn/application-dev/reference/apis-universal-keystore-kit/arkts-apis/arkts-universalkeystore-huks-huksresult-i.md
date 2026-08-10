@@ -1,11 +1,12 @@
 # HuksResult
 
 调用接口返回的result。
-    **说明：**  
-    
-    - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_替代。  
-    
-    - errorCode的具体信息，请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+
+> **说明：**
+> 
+> - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksreturnresult-i.md)替代。
+> 
+> - errorCode的具体信息，请参考[HUKS错误码](../../../reference/apis-universal-keystore-kit/errorcode-huks.md)。
 
 **起始版本：** 8
 
@@ -18,6 +19,12 @@
 <!--Device-huks-export interface HuksResult--><!--Device-huks-export interface HuksResult-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
+
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
 
 ## certChains
 

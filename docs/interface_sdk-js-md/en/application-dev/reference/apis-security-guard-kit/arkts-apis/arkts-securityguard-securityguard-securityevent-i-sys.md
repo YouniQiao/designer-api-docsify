@@ -12,6 +12,12 @@ Provides the SecurityEvent type, including the event id, version info, report co
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+```
+
 ## content
 
 ```TypeScript

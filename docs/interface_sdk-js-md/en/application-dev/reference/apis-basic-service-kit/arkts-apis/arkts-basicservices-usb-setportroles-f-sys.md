@@ -1,12 +1,18 @@
 # setPortRoles (System API)
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setPortRoles
 
 ```TypeScript
 function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>
 ```
 
-Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer).
+设置指定的端口支持的角色模式，包含充电角色、数据传输角色。
 
 **Since:** 9
 
@@ -26,17 +32,17 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number. |
-| powerRole | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Role for charging. |
-| dataRole | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Role for data transfer. |
+| portId | number | Yes | 端口号。 |
+| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | Yes | 充电的角色。 |
+| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | Yes | 数据传输的角色。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回设置成功与否的结果。true表示设置成功，false表示设置失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let portId = 1;

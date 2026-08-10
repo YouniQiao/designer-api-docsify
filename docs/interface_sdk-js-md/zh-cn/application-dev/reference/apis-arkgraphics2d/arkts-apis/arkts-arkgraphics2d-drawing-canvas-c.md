@@ -1,14 +1,15 @@
 # Canvas
 
 承载绘制内容与绘制状态的载体。Canvas提供矩形、圆形、椭圆、弧线、路径、文字、图片等多种图形的绘制能力，支持通过画笔和画刷设置绘制样式，支持画布裁剪、矩阵变换、画布状态保存与恢复等功能。
-    **说明：**  
-    
-    - 本模块使用屏幕物理像素单位px。  
-    
-    - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。  
-        **说明：**  
-    
-    画布自带一个默认画刷，该画刷为黑色，具备抗锯齿，不具备其他任何样式效果。当画布中没有主动设置画刷和画笔时，该默认画刷生效。
+
+> **说明：**
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> > **说明：**
+> 
+> 画布自带一个默认画刷，该画刷为黑色，具备抗锯齿，不具备其他任何样式效果。当画布中没有主动设置画刷和画笔时，该默认画刷生效。
 
 **起始版本：** 11
 
@@ -18,6 +19,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## attachBrush
 
 ```TypeScript
@@ -25,10 +32,11 @@ attachBrush(brush: Brush): void
 ```
 
 绑定画刷到画布上，在画布上进行绘制时，将使用画刷的样式对绘制图形形状的内部进行填充。调用本方法后，画刷将持续生效于后续所有绘制操作，直至调用  
-[detachBrush]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_解除绑定。
-    **说明：**  
-    
-    执行该方法后，若brush的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
+[detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachbrush)解除绑定。
+
+> **说明：**
+> 
+> 执行该方法后，若brush的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
 
 **起始版本：** 11
 
@@ -42,13 +50,13 @@ attachBrush(brush: Brush): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 画刷对象。 |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | 是 | 画刷对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## attachPen
 
@@ -56,10 +64,11 @@ attachBrush(brush: Brush): void
 attachPen(pen: Pen): void
 ```
 
-绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作，直至调用[detachPen]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_解除绑定。
-    **说明：**  
-    
-    执行该方法后，若pen的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
+绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作，直至调用[detachPen](arkts-arkgraphics2d-drawing-canvas-c.md#detachpen)解除绑定。
+
+> **说明：**
+> 
+> 执行该方法后，若pen的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
 
 **起始版本：** 11
 
@@ -73,13 +82,13 @@ attachPen(pen: Pen): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pen | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 画笔对象。 |
+| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | 是 | 画笔对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clear
 
@@ -87,7 +96,7 @@ attachPen(pen: Pen): void
 clear(color: common2D.Color): void
 ```
 
-使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)。
 
 **起始版本：** 12
 
@@ -107,7 +116,7 @@ clear(color: common2D.Color): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clear
 
@@ -121,7 +130,7 @@ ArkTS-Sta:
 clear(color: common2D.Color | int): void
 ```
 
-使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)。
 
 **起始版本：** 18
 
@@ -135,7 +144,7 @@ clear(color: common2D.Color | int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | 是 | 颜色，可以用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。 |
+| color | ArkTS-Dyn: common2D.Color \| number  <br>ArkTS-Sta：common2D.Color \| int | 是 | 颜色，可以用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。 |
 
 ## clipPath
 
@@ -157,15 +166,15 @@ clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径对象。 |
-| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 裁剪方式。默认为INTERSECT。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象。 |
+| clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | 否 | 裁剪方式。默认为INTERSECT。 |
 | doAntiAlias | boolean | 否 | 表示是否使用抗锯齿绘制。true表示使用，false表示不使用。默认为false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clipRect
 
@@ -188,14 +197,14 @@ clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 需要裁剪的矩形区域。 |
-| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 裁剪方式。默认值为INTERSECT。 |
+| clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | 否 | 裁剪方式。默认值为INTERSECT。 |
 | doAntiAlias | boolean | 否 | 表示是否使用抗锯齿绘制。true表示使用，false表示不使用。默认值为false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clipRegion
 
@@ -217,14 +226,14 @@ clipRegion(region: Region, clipOp?: ClipOp): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 区域对象，表示裁剪范围。 |
-| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 裁剪方式。默认值为INTERSECT。 |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 区域对象，表示裁剪范围。 |
+| clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | 否 | 裁剪方式。默认值为INTERSECT。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clipRoundRect
 
@@ -246,15 +255,15 @@ clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 圆角矩形对象，表示裁剪范围。 |
-| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 裁剪方式。默认值为INTERSECT。 |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形对象，表示裁剪范围。 |
+| clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | 否 | 裁剪方式。默认值为INTERSECT。 |
 | doAntiAlias | boolean | 否 | 表示是否使用抗锯齿。true表示使用，false表示不使用。默认值为false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## concatMatrix
 
@@ -276,13 +285,13 @@ concatMatrix(matrix: Matrix): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 矩阵对象。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 矩阵对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## constructor
 
@@ -312,7 +321,7 @@ constructor(pixelmap: image.PixelMap)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## detachBrush
 
@@ -320,7 +329,7 @@ constructor(pixelmap: image.PixelMap)
 detachBrush(): void
 ```
 
-将画刷与画布解绑，在画布上进行绘制时，不会再使用画刷对绘制图形形状的内部进行填充。本方法与[attachBrush]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用，用于在完成绘制后解除画刷绑定。
+将画刷与画布解绑，在画布上进行绘制时，不会再使用画刷对绘制图形形状的内部进行填充。本方法与[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachbrush)配合使用，用于在完成绘制后解除画刷绑定。
 
 **起始版本：** 11
 
@@ -336,7 +345,7 @@ detachBrush(): void
 detachPen(): void
 ```
 
-将画笔与画布解绑，在画布上进行绘制时，不会再使用画笔去绘制图形形状的轮廓。本方法与[attachPen]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用，用于在完成绘制后解除画笔绑定。
+将画笔与画布解绑，在画布上进行绘制时，不会再使用画笔去绘制图形形状的轮廓。本方法与[attachPen](arkts-arkgraphics2d-drawing-canvas-c.md#attachpen)配合使用，用于在完成绘制后解除画笔绑定。
 
 **起始版本：** 11
 
@@ -373,14 +382,14 @@ drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | arc | common2D.Rect | 是 | 包含要绘制的圆弧的椭圆的矩形边界。 |
-| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，正数时以顺时针方向放置起始点，负数时以逆时针方向放置起始点。 |
-| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。它的有效范围在-360度到360度之间，当绝对值大于360度时，该方法绘制的是一个椭 圆。 |
+| startAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，正数时以顺时针方向放置起始点，负数时以逆时针方向放置起始点。 |
+| sweepAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。它的有效范围在-360度到360度之间，当绝对值大于360度时，该方法绘制的是一个椭 圆。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawArcWithCenter
 
@@ -394,7 +403,7 @@ ArkTS-Sta:
 drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void
 ```
 
-在画布上绘制圆弧。与[drawArc]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相比，本接口增加了useCenter参数，用于控制圆弧的起点和终点是否连接圆弧的中心点。该方法允许指定圆弧的起始角度和扫描角度。
+在画布上绘制圆弧。与[drawArc](arkts-arkgraphics2d-drawing-canvas-c.md#drawarc)相比，本接口增加了useCenter参数，用于控制圆弧的起点和终点是否连接圆弧的中心点。该方法允许指定圆弧的起始角度和扫描角度。
 
 **起始版本：** 18
 
@@ -409,8 +418,8 @@ drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, us
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | arc | common2D.Rect | 是 | 包含要绘制的圆弧的椭圆的矩形边界。 |
-| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，为正数时以顺时针方向放置起始点，为负数时以逆时针方向放置起始点。 |
-| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。扫描角度可以超过360度，超过360度时将绘制一个完整的椭圆。 |
+| startAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，为正数时以顺时针方向放置起始点，为负数时以逆时针方向放置起始点。 |
+| sweepAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。扫描角度可以超过360度，超过360度时将绘制一个完整的椭圆。 |
 | useCenter | boolean | 是 | 绘制时弧形的起点和终点是否连接弧形的中心点。true表示连接，false表示不连接。 |
 
 ## drawBackground
@@ -433,13 +442,13 @@ drawBackground(brush: Brush): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 画刷对象。 |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | 是 | 画刷对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawCircle
 
@@ -467,15 +476,15 @@ drawCircle(x: double, y: double, radius: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 圆的半径，大于0的浮点数。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 圆的半径，大于0的浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -483,7 +492,7 @@ drawCircle(x: double, y: double, radius: double): void
 drawColor(color: common2D.Color, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对画布当前裁剪区域进行填充。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
 
 **起始版本：** 11
 
@@ -498,13 +507,13 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数。 |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER。 |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -518,8 +527,8 @@ ArkTS-Sta:
 drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对画布当前裁剪区域进行填充。性能优于  
-[drawColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口，推荐使用本接口。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。性能优于  
+[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)接口，推荐使用本接口。
 
 **起始版本：** 12
 
@@ -533,17 +542,17 @@ drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的透明度通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
-| red | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的红色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
-| green | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的绿色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
-| blue | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的蓝色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER。 |
+| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ARGB格式颜色的透明度通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| red | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ARGB格式颜色的红色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| green | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ARGB格式颜色的绿色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| blue | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ARGB格式颜色的蓝色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -557,7 +566,7 @@ ArkTS-Sta:
 drawColor(color: int, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对画布当前裁剪区域进行填充。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
 
 **起始版本：** 18
 
@@ -571,14 +580,14 @@ drawColor(color: int, blendMode?: BlendMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 16进制ARGB格式的颜色，用32位无符号整数表示，例如：0xAARRGGBB。 |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER。 |
+| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 16进制ARGB格式的颜色，用32位无符号整数表示，例如：0xAARRGGBB。 |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawGlyphs
 
@@ -610,18 +619,18 @@ drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphIds | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | 是 | 字形ID的数组。数组成员取值限定为整数，输入浮点数则仅保留整数部分。 |
-| glyphIdOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 在绘制字形ID数组之前要跳过的元素的数量。 取值限定为整数，输入浮点数则仅保留整数部分。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果glyphCount为n，跳过长度为m，则有效glyphIds数组的范围为[glyphIds[m], glyphIds[m+n])。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果glyphIds数组长度小于“glyphIdOffset + glyphCount”则抛出错误码25900001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果glyphIdOffset小于0则抛出错误码25900001。 |
+| glyphIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 是 | 字形ID的数组。数组成员取值限定为整数，输入浮点数则仅保留整数部分。 |
+| glyphIdOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 在绘制字形ID数组之前要跳过的元素的数量。 取值限定为整数，输入浮点数则仅保留整数部分。 &lt;br&gt;如果glyphCount为n，跳过长度为m，则有效glyphIds数组的范围为[glyphIds[m], glyphIds[m+n])。 &lt;br&gt;如果glyphIds数组长度小于“glyphIdOffset + glyphCount”则抛出错误码25900001。 &lt;br&gt;如果glyphIdOffset小于0则抛出错误码25900001。 |
 | positions | Array&lt;common2D.Point&gt; | 是 | 每个字形对应的绘制位置坐标数组。如果glyphCount为n，跳过长度为m，则有效positions数组范围为 [positions[m], positions[m+n])。 |
-| positionOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 在绘制位置数组之前要跳过的元素的数量。取值限定为整数，输入浮点数则仅保留整数部分。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果glyphCount为n，跳过长度为m，则有效positions数组的范围为[positions[m], positions[m+n])。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果positions数组长度小于“positionOffset + glyphCount”则抛出错误码25900001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果positionOffset小于0则抛出错误码25900001。 |
-| glyphCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要绘制的字形的数目。数目小于或等于0，则不绘制任何内容，并抛出错误码25900001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于绘图的字体。 |
+| positionOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 在绘制位置数组之前要跳过的元素的数量。取值限定为整数，输入浮点数则仅保留整数部分。 &lt;br&gt;如果glyphCount为n，跳过长度为m，则有效positions数组的范围为[positions[m], positions[m+n])。 &lt;br&gt;如果positions数组长度小于“positionOffset + glyphCount”则抛出错误码25900001。 &lt;br&gt;如果positionOffset小于0则抛出错误码25900001。 |
+| glyphCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要绘制的字形的数目。数目小于或等于0，则不绘制任何内容，并抛出错误码25900001。 &lt;br&gt;如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 用于绘图的字体。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## drawImage
 
@@ -650,15 +659,15 @@ drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pixelmap | image.PixelMap | 是 | 图片的PixelMap。 |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 图片位置的左上角x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 图片位置的左上角y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 图片位置的左上角x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 图片位置的左上角y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。<br>**起始版本：** 12 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawImageLattice
 
@@ -667,7 +676,7 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
       filterMode: FilterMode): void
 ```
 
-将图像按照矩形网格对象的设置划分为多个网格，并把图像的每个部分按照网格对象的设置绘制到画布上的目标矩形区域。与[drawImageNine]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_固定将图像分割为9个部分不同，本接口通过Lattice对象支持自定义网格分割。使用此接口时，设置开启抗锯齿无效。
+将图像按照矩形网格对象的设置划分为多个网格，并把图像的每个部分按照网格对象的设置绘制到画布上的目标矩形区域。与[drawImageNine](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagenine)固定将图像分割为9个部分不同，本接口通过Lattice对象支持自定义网格分割。使用此接口时，设置开启抗锯齿无效。
 
 偶数行和列（起始计数为0）的每个交叉点对应的网格区域保持原始尺寸不缩放，若固定网格区域的尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区域，则剩下的区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
 
@@ -684,15 +693,15 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pixelmap | image.PixelMap | 是 | 用于绘制网格的像素图。 |
-| lattice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 矩形网格对象。 |
+| lattice | [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | 是 | 矩形网格对象。 |
 | dstRect | common2D.Rect | 是 | 目标矩形区域。 |
-| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 过滤模式。 |
+| filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | 是 | 过滤模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawImageNine
 
@@ -720,13 +729,13 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
 | pixelmap | image.PixelMap | 是 | 用于绘制网格的像素图。 |
 | center | common2D.Rect | 是 | 分割图像的中心矩形。矩形四条边所在的直线将图像分成了9个部分。 |
 | dstRect | common2D.Rect | 是 | 在画布上绘制的目标矩形区域。 |
-| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 过滤模式。 |
+| filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | 是 | 过滤模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawImageRect
 
@@ -750,13 +759,13 @@ drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?
 | --- | --- | --- | --- |
 | pixelmap | image.PixelMap | 是 | 图片的PixelMap。 |
 | dstRect | common2D.Rect | 是 | 矩形对象，用于指定画布上图片的绘制区域。 |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。 |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawImageRectWithSrc
 
@@ -782,14 +791,14 @@ drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: 
 | pixelmap | image.PixelMap | 是 | 图片的PixelMap。 |
 | srcRect | common2D.Rect | 是 | 矩形对象，用于指定图片的待绘制区域。 |
 | dstRect | common2D.Rect | 是 | 矩形对象，用于指定画布上图片的绘制区域。 |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。 |
-| constraint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 源矩形区域约束类型，默认为STRICT。 |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 否 | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。 |
+| constraint | [SrcRectConstraint](arkts-arkgraphics2d-drawing-srcrectconstraint-e.md) | 否 | 源矩形区域约束类型，默认为STRICT。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawLine
 
@@ -817,16 +826,16 @@ drawLine(x0: double, y0: double, x1: double, y1: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x0 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 线段起点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y0 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 线段起点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| x1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 线段终点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 线段终点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| x0 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 线段起点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y0 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 线段起点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| x1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 线段终点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 线段终点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawNestedRoundRect
 
@@ -848,14 +857,14 @@ drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 圆角矩形对象，表示外部圆角矩形边界。 |
-| inner | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 圆角矩形对象，表示内部圆角矩形边界。 |
+| outer | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形对象，表示外部圆角矩形边界。 |
+| inner | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形对象，表示内部圆角矩形边界。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawOval
 
@@ -883,7 +892,7 @@ drawOval(oval: common2D.Rect): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawPath
 
@@ -905,13 +914,13 @@ drawPath(path: Path): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要绘制的路径对象。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 要绘制的路径对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawPixelMapMesh
 
@@ -942,18 +951,18 @@ drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pixelmap | image.PixelMap | 是 | 用于绘制网格的像素图。 |
-| meshWidth | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 网格中的列数，大于0的整数。 |
-| meshHeight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 网格中的行数，大于0的整数。 |
-| vertices | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 是 | 顶点数组，指定网格的绘制位置，该参数为浮点数组，单位为物理像素px。大小必须为((meshWidth+1) (meshHeight+1) + vertOffset) 2。 |
-| vertOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 绘图前要跳过的vert元素数，大于等于0的整数。 |
-| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | 是 | 颜色数组，在每个顶点指定一种颜色，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB，可为null，大小必须为( meshWidth+1) (meshHeight+1) + colorOffset。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 20 |
-| colorOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 绘制前要跳过的颜色元素数，大于等于0的整数。 |
+| meshWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 网格中的列数，大于0的整数。 |
+| meshHeight | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 网格中的行数，大于0的整数。 |
+| vertices | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 顶点数组，指定网格的绘制位置，该参数为浮点数组，单位为物理像素px。大小必须为((meshWidth+1) (meshHeight+1) + vertOffset) 2。 |
+| vertOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 绘图前要跳过的vert元素数，大于等于0的整数。 |
+| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  <br>ArkTS-Sta：Array&lt;int&gt; \| null | 是 | 颜色数组，在每个顶点指定一种颜色，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB，可为null，大小必须为( meshWidth+1) (meshHeight+1) + colorOffset。<br>**起始版本：** 20 |
+| colorOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 绘制前要跳过的颜色元素数，大于等于0的整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawPoint
 
@@ -981,14 +990,14 @@ drawPoint(x: double, y: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawPoints
 
@@ -1011,13 +1020,13 @@ drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | points | Array&lt;common2D.Point&gt; | 是 | 要绘制的点的数组。长度不能为0。 |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 绘制数组中的点的方式。默认值为drawing.PointMode.POINTS。 |
+| mode | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | 否 | 绘制数组中的点的方式。默认值为drawing.PointMode.POINTS。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawRect
 
@@ -1045,7 +1054,7 @@ drawRect(rect: common2D.Rect): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawRect
 
@@ -1059,7 +1068,7 @@ ArkTS-Sta:
 drawRect(left: double, top: double, right: double, bottom: double): void
 ```
 
-绘制一个矩形，默认使用黑色填充。性能优于[drawRect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，推荐使用本接口。
+绘制一个矩形，默认使用黑色填充。性能优于[drawRect](arkts-arkgraphics2d-drawing-canvas-c.md#drawrect)接口，推荐使用本接口。
 
 **起始版本：** 12
 
@@ -1073,16 +1082,16 @@ drawRect(left: double, top: double, right: double, bottom: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawRegion
 
@@ -1104,13 +1113,13 @@ drawRegion(region: Region): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 绘制的区域。 |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 绘制的区域。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawRoundRect
 
@@ -1132,13 +1141,13 @@ drawRoundRect(roundRect: RoundRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 圆角矩形对象。 |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawShadow
 
@@ -1168,19 +1177,19 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径对象，可生成阴影。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象，可生成阴影。 |
 | planeParams | common2D.Point3d | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
 | devLightPos | common2D.Point3d | 是 | 光线相对于画布的位置。 |
-| lightRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 圆形灯半径，取值范围>0，该参数为浮点数。单位为物理像素px。 |
+| lightRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 圆形灯半径，取值范围>0，该参数为浮点数。单位为物理像素px。 |
 | ambientColor | common2D.Color | 是 | 环境阴影颜色。 |
 | spotColor | common2D.Color | 是 | 点阴影颜色。 |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 阴影标志，用于控制阴影的绘制方式。 |
+| flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | 是 | 阴影标志，用于控制阴影的绘制方式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawShadow
 
@@ -1210,19 +1219,19 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径对象，可生成阴影。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象，可生成阴影。 |
 | planeParams | common2D.Point3d | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
 | devLightPos | common2D.Point3d | 是 | 光线相对于画布的位置。 |
-| lightRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 圆形灯半径，该参数为浮点数。单位为物理像素px。 |
-| ambientColor | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | 是 | 环境阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
-| spotColor | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | 是 | 点阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 阴影标志，用于控制阴影的绘制方式。 |
+| lightRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 圆形灯半径，该参数为浮点数。单位为物理像素px。 |
+| ambientColor | ArkTS-Dyn: common2D.Color \| number  <br>ArkTS-Sta：common2D.Color \| int | 是 | 环境阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
+| spotColor | ArkTS-Dyn: common2D.Color \| number  <br>ArkTS-Sta：common2D.Color \| int | 是 | 点阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
+| flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | 是 | 阴影标志，用于控制阴影的绘制方式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawSingleCharacter
 
@@ -1251,15 +1260,15 @@ drawSingleCharacter(text: string, font: Font, x: double, y: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待绘制的单个字符，字符串长度必须为1。 |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字型对象。 |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 所绘制出的字符基线（下图蓝线）的左端点（下图红点）的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 所绘制出的字符基线（下图蓝线）的左端点（下图红点）的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 字型对象。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 所绘制出的字符基线（下图蓝线）的左端点（下图红点）的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 所绘制出的字符基线（下图蓝线）的左端点（下图红点）的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawSingleCharacterWithFeatures
 
@@ -1288,16 +1297,16 @@ drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待绘制的单个字符，字符串长度必须为1。 |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字型对象。 |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 所绘制字符基线左端点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 所绘制字符基线左端点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 字型对象。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 所绘制字符基线左端点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 所绘制字符基线左端点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 | features | Array&lt;FontFeature&gt; | 是 | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## drawTextBlob
 
@@ -1325,15 +1334,15 @@ drawTextBlob(blob: TextBlob, x: double, y: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| blob | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | TextBlob对象。 |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 所绘制出的文字基线（下图蓝线）的左端点（下图红点）的横坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 所绘制出的文字基线（下图蓝线）的左端点（下图红点）的纵坐标，该参数为浮点数。单位为物理像素px。 |
+| blob | [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | 是 | TextBlob对象。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 所绘制出的文字基线（下图蓝线）的左端点（下图红点）的横坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 所绘制出的文字基线（下图蓝线）的左端点（下图红点）的纵坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawVertices
 
@@ -1365,20 +1374,20 @@ drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| vertexMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 绘制顶点的连接方式。 |
-| vertexCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 顶点数组元素的数量，值为大于等于3的整数，输入浮点数则仅保留整数部分。 |
+| vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | 是 | 绘制顶点的连接方式。 |
+| vertexCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 顶点数组元素的数量，值为大于等于3的整数，输入浮点数则仅保留整数部分。 |
 | positions | Array&lt;common2D.Point&gt; | 是 | 描述顶点位置的数组，不能为空，其长度必须等于vertexCount。 |
 | texs | Array&lt;common2D.Point&gt; \| null | 是 | 描述顶点对应纹理空间坐标的数组。其可以为空，表明纹理空间失效；若不为空，其长度必须等于vertexCount。 |
-| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | 是 | 描述顶点对应颜色的数组，用于在三角形中进行插值，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。其可以为空，表明不 使用顶点颜色插值，颜色效果取决于当前画布绑定的画刷或画笔所设置的颜色；若不为空其长度必须等于vertexCount。 |
-| indexCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 索引的数量。其值可以为0，且indices数组长度为0时可以画图；若不为0，则值必须为大于等于3的整数，输入浮点数则仅保留整数部分。 |
-| indices | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | 是 | 描述顶点对应索引的数组。其可以为空，此时将忽略indexCount的合理传值（大于等于3的整数或等于0）；若不为空其长度必须等于 indexCount。 |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 颜色混合模式。 |
+| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  <br>ArkTS-Sta：Array&lt;int&gt; \| null | 是 | 描述顶点对应颜色的数组，用于在三角形中进行插值，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。其可以为空，表明不 使用顶点颜色插值，颜色效果取决于当前画布绑定的画刷或画笔所设置的颜色；若不为空其长度必须等于vertexCount。 |
+| indexCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 索引的数量。其值可以为0，且indices数组长度为0时可以画图；若不为0，则值必须为大于等于3的整数，输入浮点数则仅保留整数部分。 |
+| indices | ArkTS-Dyn: Array&lt;number&gt; \| null  <br>ArkTS-Sta：Array&lt;int&gt; \| null | 是 | 描述顶点对应索引的数组。其可以为空，此时将忽略indexCount的合理传值（大于等于3的整数或等于0）；若不为空其长度必须等于 indexCount。 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 | 颜色混合模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## getHeight
 
@@ -1406,7 +1415,7 @@ getHeight(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回画布的高度，该参数为浮点数。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回画布的高度，该参数为浮点数。单位为物理像素px。 |
 
 ## getLocalClipBounds
 
@@ -1478,7 +1487,7 @@ getSaveCount(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 已保存的画布状态的数量，该参数为正整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 已保存的画布状态的数量，该参数为正整数。 |
 
 ## getTotalMatrix
 
@@ -1500,7 +1509,7 @@ getTotalMatrix(): Matrix
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前画布的变换矩阵，该矩阵累积了已应用的平移、缩放、旋转和倾斜等变换效果。 |
+| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 返回当前画布的变换矩阵，该矩阵累积了已应用的平移、缩放、旋转和倾斜等变换效果。 |
 
 ## getTotalMatrix
 
@@ -1522,7 +1531,7 @@ getTotalMatrix(): Matrix | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前画布的变换矩阵，该矩阵累积了已应用的平移、缩放、旋转和倾斜等变换效果。获取失败时返回undefined。 |
+| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 返回当前画布的变换矩阵，该矩阵累积了已应用的平移、缩放、旋转和倾斜等变换效果。获取失败时返回undefined。 |
 
 ## getWidth
 
@@ -1550,7 +1559,7 @@ getWidth(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回画布的宽度，该参数为浮点数。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回画布的宽度，该参数为浮点数。单位为物理像素px。 |
 
 ## isClipEmpty
 
@@ -1618,7 +1627,7 @@ quickRejectPath(path: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径对象。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象。 |
 
 **返回值：**
 
@@ -1694,7 +1703,7 @@ resetMatrix(): void
 restore(): void
 ```
 
-恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。需要与保存接口[save]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或[saveLayer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配合使用。若栈顶状态由saveLayer保存，恢复时还会将saveLayer分配的位图绘制到画布上；若栈为空（无已保存状态），则不执行恢复操作。
+恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。需要与保存接口[save](arkts-arkgraphics2d-drawing-canvas-c.md#save)或[saveLayer](arkts-arkgraphics2d-drawing-canvas-c.md#savelayer)配合使用。若栈顶状态由saveLayer保存，恢复时还会将saveLayer分配的位图绘制到画布上；若栈为空（无已保存状态），则不执行恢复操作。
 
 **起始版本：** 12
 
@@ -1716,7 +1725,7 @@ ArkTS-Sta:
 restoreToCount(count: int): void
 ```
 
-恢复到指定深度的画布状态（画布矩阵和裁剪区域）。需要先调用[save]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或[saveLayer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_保存画布状态后才能使用本接口恢复。
+恢复到指定深度的画布状态（画布矩阵和裁剪区域）。需要先调用[save](arkts-arkgraphics2d-drawing-canvas-c.md#save)或[saveLayer](arkts-arkgraphics2d-drawing-canvas-c.md#savelayer)保存画布状态后才能使用本接口恢复。
 
 **起始版本：** 12
 
@@ -1730,13 +1739,13 @@ restoreToCount(count: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| count | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要恢复到的画布状态深度，该参数为整数。小于等于1时，恢复为初始状态；大于已保存的画布状态数量时，不执行任何操作。 |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要恢复到的画布状态深度，该参数为整数。小于等于1时，恢复为初始状态；大于已保存的画布状态数量时，不执行任何操作。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rotate
 
@@ -1764,15 +1773,15 @@ rotate(degrees: double, sx: double, sy: double) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| degrees | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 旋转角度，单位为度，该参数为浮点数，正数为顺时针旋转，负数为逆时针旋转。 |
-| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 旋转中心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 旋转中心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| degrees | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转角度，单位为度，该参数为浮点数，正数为顺时针旋转，负数为逆时针旋转。 |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 旋转中心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## save
 
@@ -1786,7 +1795,7 @@ ArkTS-Sta:
 save(): int
 ```
 
-保存当前画布状态（画布矩阵和裁剪区域）到栈顶。需要与恢复接口[restore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用。
+保存当前画布状态（画布矩阵和裁剪区域）到栈顶。需要与恢复接口[restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore)配合使用。
 
 **起始版本：** 12
 
@@ -1800,7 +1809,7 @@ save(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 画布状态个数，该参数为正整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 画布状态个数，该参数为正整数。 |
 
 ## saveLayer
 
@@ -1814,7 +1823,7 @@ ArkTS-Sta:
 saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long
 ```
 
-保存当前画布的矩阵和裁剪区域，并为后续绘制分配位图。需要与恢复接口[restore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用，调用restore将会舍弃对矩阵和裁剪区域做的更改，并绘制位图。
+保存当前画布的矩阵和裁剪区域，并为后续绘制分配位图。需要与恢复接口[restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore)配合使用，调用restore将会舍弃对矩阵和裁剪区域做的更改，并绘制位图。
 
 **起始版本：** 12
 
@@ -1829,19 +1838,19 @@ saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect \| null | 否 | 矩形对象，用于限制图层大小，默认为当前画布大小。 |
-| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 画刷对象，绘制位图时会应用画刷对象的透明度、颜色滤波器效果和混合模式，默认不设置额外效果。 |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) \| null | 否 | 画刷对象，绘制位图时会应用画刷对象的透明度、颜色滤波器效果和混合模式，默认不设置额外效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 返回调用前保存的画布状态数，该参数为正整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回调用前保存的画布状态数，该参数为正整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## scale
 
@@ -1869,14 +1878,14 @@ scale(sx: double, sy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴方向的缩放比例，该参数为浮点数。正值表示正常缩放，负值表示镜像缩放。 |
-| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴方向的缩放比例，该参数为浮点数。正值表示正常缩放，负值表示镜像缩放。 |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴方向的缩放比例，该参数为浮点数。正值表示正常缩放，负值表示镜像缩放。 |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴方向的缩放比例，该参数为浮点数。正值表示正常缩放，负值表示镜像缩放。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setMatrix
 
@@ -1898,13 +1907,13 @@ setMatrix(matrix: Matrix): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 矩阵对象。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 矩阵对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## skew
 
@@ -1932,14 +1941,14 @@ skew(sx: double, sy: double) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## translate
 
@@ -1967,12 +1976,12 @@ translate(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴方向的移动距离，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴方向的移动距离，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴方向的移动距离，该参数为浮点数。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴方向的移动距离，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

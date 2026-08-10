@@ -12,6 +12,12 @@ The interface is used to notify listeners of changes in shared interface status.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sharing } from 'kits/@kit.NetworkKit';
+```
+
 ## iface
 
 ```TypeScript
@@ -40,7 +46,7 @@ state: SharingIfaceState
 
 Network card sharing status.
 
-**Type:** SharingIfaceState
+**Type:** [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md)
 
 **Since:** 11
 
@@ -60,7 +66,7 @@ type: SharingIfaceType
 
 Enumerates the network sharing types of an NIC.
 
-**Type:** SharingIfaceType
+**Type:** [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md)
 
 **Since:** 11
 

@@ -15,7 +15,7 @@ type RelativeTimeFormatPart =
 
 An object representing the relative time format in parts that can be used for custom locale-aware formatting.
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts#Using_formatToParts).
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -23,6 +23,6 @@ An object representing the relative time format in parts that can be used for cu
 
 | Type | Description |
 | --- | --- |
-| {               type: "literal"               value: string           } |  |
-| {               type: Exclude&lt;NumberFormatPartTypes, "literal"&gt;               value: string               unit: RelativeTimeFormatUnitSingular           } |  |
+| {               type: "literal"               value: string           } |  |
+| {               type: Exclude&lt;NumberFormatPartTypes, "literal"&gt;               value: string               unit: RelativeTimeFormatUnitSingular           } |  |
 

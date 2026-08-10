@@ -10,6 +10,12 @@ Defines port states of system network.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## tcpPortStatesInfo
 
 ```TypeScript

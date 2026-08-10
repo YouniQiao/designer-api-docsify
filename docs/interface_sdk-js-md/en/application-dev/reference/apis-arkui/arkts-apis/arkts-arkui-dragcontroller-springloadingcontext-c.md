@@ -10,6 +10,12 @@ Context information for the current spring loading trigger. This object is passe
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
+
 ## abort
 
 ```TypeScript
@@ -50,7 +56,7 @@ Updates the spring loading configuration for the current trigger. Only effective
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| config | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | Yes |  |
 
 ## currentConfig
 
@@ -60,7 +66,7 @@ currentConfig?: DragSpringLoadingConfiguration
 
 Current spring loading configuration. Absent when the state is CANCEL.
 
-**Type:** DragSpringLoadingConfiguration
+**Type:** [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md)
 
 **Since:** 26.0.0
 
@@ -100,7 +106,7 @@ dragInfos?: SpringLoadingDragInfos
 
 Drag-related information. Absent when the state is CANCEL.
 
-**Type:** SpringLoadingDragInfos
+**Type:** [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md)
 
 **Since:** 26.0.0
 
@@ -120,7 +126,7 @@ state: DragSpringLoadingState
 
 Current spring loading state. Refer to the DragSpringLoadingState enum for details.
 
-**Type:** DragSpringLoadingState
+**Type:** [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md)
 
 **Since:** 26.0.0
 

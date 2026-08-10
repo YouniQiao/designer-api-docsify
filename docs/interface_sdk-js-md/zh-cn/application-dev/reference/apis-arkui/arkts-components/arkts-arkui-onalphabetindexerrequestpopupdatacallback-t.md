@@ -4,7 +4,7 @@
 declare type OnAlphabetIndexerRequestPopupDataCallback  = (index: number) => Array<string>
 ```
 
-[usingPopup]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置值为true，索引项被选中时触发的事件。
+[usingPopup](AlphabetIndexerAttribute#usingPopup)设置值为true，索引项被选中时触发的事件。
 
 **起始版本：** 18
 
@@ -22,11 +22,11 @@ declare type OnAlphabetIndexerRequestPopupDataCallback  = (index: number) => Arr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | selected index  |
+| index | number | 是 | selected index |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | string array corresponding to the index  |
+| Array&lt;string&gt; | string array corresponding to the index |
 

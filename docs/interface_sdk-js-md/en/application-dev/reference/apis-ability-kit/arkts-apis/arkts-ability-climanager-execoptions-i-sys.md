@@ -12,6 +12,12 @@ Tool execution options.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cliManager } from 'kits/@kit.AbilityKit';
+```
+
 ## background
 
 ```TypeScript

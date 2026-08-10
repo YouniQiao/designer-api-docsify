@@ -1,10 +1,10 @@
 # PinchGestureInterface
 
-PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers.
-    **NOTE**  
-    
-    To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make  
-    contact again to satisfy the recognition criteria.
+用于触发捏合手势，最少需要2指，最多5指，最小识别距离为5vp。在支持鼠标和键盘输入的设备上，通过“Ctrl+鼠标滚轮”也可以触发捏合手势。
+
+> **说明：**
+> 
+> 捏合手势触发成功后，抬起手指直至不再满足触发条件。再次满足条件时，可重新触发捏合手势。
 
 **Inheritance/Implementation:** PinchGestureInterface extends [GestureInterface<PinchGestureInterface>](GestureInterface<PinchGestureInterface>)
 
@@ -22,7 +22,7 @@ PinchGesture** is used to trigger a pinch gesture, which requires two to five fi
 (value?: { fingers?: number; distance?: number }): PinchGestureInterface
 ```
 
-Sets the parameters for the pinch gesture. Inherits from [GestureInterface\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)，设置捏合手势事件。
 
 **Since:** 7
 
@@ -38,13 +38,13 @@ Sets the parameters for the pinch gesture. Inherits from [GestureInterface\_\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; distance?: number } | No | Parameters for the pinch gesture. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **fingers**: minimum number of fingers to trigger a pinch. The value ranges from 2 to 5.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **2** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [2, 5]. Values outside this range are automatically adjusted to the default value.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_While more fingers than the minimum number can be pressed to trigger the gesture, only the first fingers of the minimum number participate in gesture calculation. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **distance**: minimum recognition distance, in vp. This distance refers to the difference between the current average distance from the multiple finger positions to their center point and the average distance when the fingers first made contact. If this difference meets or exceeds the minimum recognition distance, the pinch gesture is recognized.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **5**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞). If the value is less than or equal to 0, it will be converted to the default value. |
+| value | { fingers?: number; distance?: number } | No | 设置捏合手势事件参数。&lt;br&gt; - fingers：触发捏合的最少手指数，最小为2指，最大为5指。&lt;br/&gt;默认值：2 &lt;br/&gt;取值范围：[2, 5]。当设置的值不在该范围内时，会被转 化为默认值。&lt;br/&gt;触发手势的手指数量可以多于fingers数目，但只有最先落下的与fingers相同数目的手指参与手势计算。 &lt;br&gt; - distance：最小识别距离，单位为vp。该距离是指当前多根手指位置与手指中心位置的平均距离，与手指落下时的平均距离之间的差值。当这一差值大于或等于最小识别距离时，捏合手势被视为成功。 &lt;br/&gt;默认值：5 &lt;br/&gt;**说明：** &lt;br/&gt;取值范围：[0, +∞)。当识别距离的值小于等于0时，会被转化为默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -52,8 +52,7 @@ Sets the parameters for the pinch gesture. Inherits from [GestureInterface\_\_\_
 (options?: PinchGestureHandlerOptions): PinchGestureInterface
 ```
 
-Sets the parameters for the pinch gesture. Compared with  
-[PinchGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_)},this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+设置捏合手势事件。与[PinchGesture](arkts-arkui-pinchgestureinterface-i.md))}相比，options参数新增isFingerCountLimited，表示是否检查触摸屏幕的手指数量。
 
 **Since:** 15
 
@@ -71,13 +70,13 @@ Sets the parameters for the pinch gesture. Compared with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the pinch gesture handler. |
+| options | [PinchGestureHandlerOptions](arkts-arkui-gesture-pinchgesturehandleroptions-i.md) | No | 捏合手势处理器配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -85,7 +84,7 @@ Sets the parameters for the pinch gesture. Compared with
 onActionCancel(event: () => void): PinchGestureInterface
 ```
 
-Triggered when a touch cancellation event occurs after successful pinch gesture recognition. No gesture event information is returned.
+Pinch手势识别成功，接收到触摸取消事件触发的回调，不返回手势事件信息。
 
 **Since:** 7
 
@@ -101,13 +100,13 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | Callback for the pinch event. |
+| event | () =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -115,8 +114,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 onActionCancel(event: Callback<GestureEvent>): PinchGestureInterface
 ```
 
-Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with  
-[onActionCancel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, this callback returns gesture event information.
+Pinch手势识别成功并接收到触摸取消事件的回调。与[onActionCancel](arkts-arkui-pinchgestureinterface-i.md#onactioncancel)相比，该回调返回手势事件信息。
 
 **Since:** 18
 
@@ -134,13 +132,13 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback for the pinch event. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -148,7 +146,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 onActionEnd(event: (event: GestureEvent) => void): PinchGestureInterface
 ```
 
-Triggered when all fingers are lifted after successful pinch gesture recognition.
+Pinch手势识别成功，当抬起最后一根满足手势触发条件的手指后，触发回调。
 
 **Since:** 7
 
@@ -164,13 +162,13 @@ Triggered when all fingers are lifted after successful pinch gesture recognition
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for the pinch event. |
+| event | (event: GestureEvent) =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionStart
 
@@ -178,7 +176,7 @@ Triggered when all fingers are lifted after successful pinch gesture recognition
 onActionStart(event: (event: GestureEvent) => void): PinchGestureInterface
 ```
 
-Triggered after the pinch gesture is recognized.
+Pinch手势识别成功后触发回调。
 
 **Since:** 7
 
@@ -194,13 +192,13 @@ Triggered after the pinch gesture is recognized.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for the pinch event. |
+| event | (event: GestureEvent) =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 
 ## onActionUpdate
 
@@ -208,7 +206,7 @@ Triggered after the pinch gesture is recognized.
 onActionUpdate(event: (event: GestureEvent) => void): PinchGestureInterface
 ```
 
-Triggered when the user moves the finger in the pinch gesture on the screen.
+Pinch手势移动过程中回调。
 
 **Since:** 7
 
@@ -224,11 +222,11 @@ Triggered when the user moves the finger in the pinch gesture on the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for the pinch event. |
+| event | (event: GestureEvent) =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
 

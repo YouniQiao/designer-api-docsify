@@ -1,15 +1,20 @@
 # createImageSource
 
+## Modules to Import
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## createImageSource
 
 ```TypeScript
 function createImageSource(uri: string): ImageSource
 ```
 
-Creates an ImageSource instance based on a given URI.
+通过传入的uri创建ImageSource实例。
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 12
 
@@ -25,20 +30,20 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and ico. |
+| uri | string | Yes | 图片路径，当前仅支持应用沙箱路径。&lt;/br&gt;当前支持格式有：.jpg .png .gif .bmp .webp .dng [SVG](../../../reference/apis-image-kit/arkts-apis-image-f.md#svg标签说明) .ico。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo(context : Context) {
+async function CreateImageSource(context : Context) {
   const path: string = context.cacheDir + "/test.jpg";
   const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
 }
@@ -51,10 +56,9 @@ async function Demo(context : Context) {
 function createImageSource(fd: number): ImageSource
 ```
 
-Creates an ImageSource instance based on a given file descriptor.
+通过传入文件描述符来创建ImageSource实例。
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 12
 
@@ -70,23 +74,23 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor. |
+| fd | number | Yes | 文件描述符fd。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit';
 
-async function Demo(context : Context) {
+async function CreateImageSource(context : Context) {
   const path: string = context.cacheDir + "/test.jpg";
-  let file = fs.openSync(path, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+  let file = fileIo.openSync(path, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
   const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(file.fd);
 }
 ```
@@ -98,11 +102,10 @@ async function Demo(context : Context) {
 function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call  
-[sendableImage.createPixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+通过缓冲区创建ImageSource实例。buf数据是未解码的数据，不可以传入类似于RBGA，YUV的像素buffer数据，如果想通过像素buffer数据创建pixelMap，可以调用  
+[sendableImage.createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createpixelmap)这一类方法。
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 12
 
@@ -120,20 +123,20 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Array of image buffers. |
+| buf | ArrayBuffer | Yes | 图像缓冲区数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 
-async function Demo() {
+async function CreateImageSource() {
   const buf: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
   const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(buf);
 }

@@ -18,7 +18,7 @@ bias?: Bias
 
 设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
 
-**类型：** Bias
+**类型：** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
 
 **默认值：** {horizontal:0.5,vertical:0.5}
 
@@ -42,9 +42,9 @@ bias?: Bias
 bottom?: VerticalAlignParam
 ```
 
-设置底部对齐的参数。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
+设置底部对齐的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
 
-**类型：** VerticalAlignParam
+**类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -64,9 +64,9 @@ bottom?: VerticalAlignParam
 center?: VerticalAlignParam
 ```
 
-设置纵向居中对齐方式的参数。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_API version 23，之前入参类型为{ anchor: string, align: VerticalAlign }
+设置纵向居中对齐方式的参数。&lt;br/&gt;API version 23，之前入参类型为{ anchor: string, align: VerticalAlign }
 
-**类型：** VerticalAlignParam
+**类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -86,9 +86,9 @@ center?: VerticalAlignParam
 left?: HorizontalAlignParam
 ```
 
-设置左对齐参数。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
+设置左对齐参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
 
-**类型：** HorizontalAlignParam
+**类型：** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -108,9 +108,9 @@ left?: HorizontalAlignParam
 middle?: HorizontalAlignParam
 ```
 
-设置横向居中对齐方式的参数。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
+设置横向居中对齐方式的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
 
-**类型：** HorizontalAlignParam
+**类型：** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -130,9 +130,9 @@ middle?: HorizontalAlignParam
 right?: HorizontalAlignParam
 ```
 
-设置右对齐参数。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign}
+设置右对齐参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign}
 
-**类型：** HorizontalAlignParam
+**类型：** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -152,9 +152,9 @@ right?: HorizontalAlignParam
 top?: VerticalAlignParam
 ```
 
-设置顶部对齐的参数。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
+设置顶部对齐的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
 
-**类型：** VerticalAlignParam
+**类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
 

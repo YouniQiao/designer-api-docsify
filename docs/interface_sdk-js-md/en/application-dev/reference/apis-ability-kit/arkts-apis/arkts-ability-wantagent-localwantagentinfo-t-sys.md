@@ -4,7 +4,7 @@
 export type LocalWantAgentInfo = _LocalWantAgentInfo
 ```
 
-Provides the information required to create a local WantAgent.
+LocalWantAgentInfo对象。
 
 **Since:** 20
 

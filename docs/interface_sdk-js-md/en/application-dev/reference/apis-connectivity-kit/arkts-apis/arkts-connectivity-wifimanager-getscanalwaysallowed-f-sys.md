@@ -1,5 +1,11 @@
 # getScanAlwaysAllowed (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getScanAlwaysAllowed
 
 ```TypeScript
@@ -30,12 +36,12 @@ Get scan always allowed flag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | System API is not allowed called by Non-system application. |
+| 2501000 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

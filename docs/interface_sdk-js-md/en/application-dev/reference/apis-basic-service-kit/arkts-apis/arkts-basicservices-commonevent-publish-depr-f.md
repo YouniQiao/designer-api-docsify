@@ -6,7 +6,7 @@
 function publish(event: string, callback: AsyncCallback<void>): void
 ```
 
-Publishes a common event with given properties. This API uses an asynchronous callback to return the result.
+以回调形式发布公共事件。
 
 **Since:** 7
 
@@ -24,25 +24,25 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | Name of the common event to publish. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
+| event | string | Yes | 表示要发布的公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示发布公共事件的回调方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import Base from '@ohos.base';
 
-// Callback for common event publication
-function publishCB(err:Base.BusinessError) {
+// Callback for common event publication.
+let publishCallBack = (err: Base.BusinessError) => {
     if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("publish");
+        console.info('publish');
     }
 }
 
 // Publish a common event.
-commonEvent.publish("event", publishCB);
+commonEvent.publish("event", publishCallBack);
 ```
 
 
@@ -52,7 +52,7 @@ commonEvent.publish("event", publishCB);
 function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void
 ```
 
-Publishes a common event with given properties. This API uses an asynchronous callback to return the result.
+以回调形式发布公共事件。
 
 **Since:** 7
 
@@ -70,11 +70,11 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | Name of the common event to publish. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Properties of the common event to publish. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
+| event | string | Yes | 表示要发布的公共事件。 |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | Yes | 表示发布公共事件的属性。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示发布公共事件的回调方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import Base from '@ohos.base';
@@ -83,20 +83,20 @@ import CommonEventManager from '@ohos.commonEventManager';
 // Information of a common event.
 let options:CommonEventManager.CommonEventPublishData = {
     code: 0,             // Initial code of the common event.
-    data: "initial data",// Initial data of the common event.
+    data: "initial data", // Initial data of the common event.
     isOrdered: true  // The common event is an ordered one.
-}
+};
 
-// Callback for common event publication
-function publishCB(err:Base.BusinessError) {
+// Callback for common event publication.
+let publishCallBack = (err: Base.BusinessError) => {
     if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("publish");
     }
 }
 
 // Publish a common event.
-commonEvent.publish("event", options, publishCB);
+commonEvent.publish("event", options, publishCallBack);
 ```
 

@@ -1,13 +1,18 @@
 # getVss
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getVss
 
 ```TypeScript
 function getVss(): bigint
 ```
 
-Obtains the virtual set size used by the application process. This API is implemented by multiplying the value of  
-**size** (number of memory pages) in the **\/proc/{pid}/statm** node by the page size (4 KB per page).
+��ȡӦ�ý���ռ�õ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/statm�ڵ��е�sizeֵ���ڴ�ҳ������vss = size * ҳ��С��4KB/ҳ����
 
 **Since:** 11
 
@@ -21,13 +26,14 @@ Obtains the virtual set size used by the application process. This API is implem
 
 | Type | Description |
 | --- | --- |
-| bigint | Virtual set size used by the application process, in KB. |
+| bigint | ����Ӧ�ý���ռ�õ������ڴ��С����λΪKB�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let vss: bigint = hidebug.getVss();
+console.info(`vss = ${vss}`);
 ```
 

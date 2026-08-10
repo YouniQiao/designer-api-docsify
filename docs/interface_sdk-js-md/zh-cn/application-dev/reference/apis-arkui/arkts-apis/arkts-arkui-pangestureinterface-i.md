@@ -18,7 +18,7 @@
 (value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface
 ```
 
-创建滑动手势对象。继承自[GestureInterface\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+创建滑动手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。
 
 **起始版本：** 7
 
@@ -40,7 +40,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -48,7 +48,7 @@
 (options?: PanGestureHandlerOptions): PanGestureInterface
 ```
 
-创建滑动手势对象。与[PanGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ | PanGestureOptions)}相比，options参数新增了对isFingerCountLimited和distanceMap参数，分别表示是否检查触摸屏幕的手指数量以及指定不同输入源触发滑动手势事件的最小滑动距离。
+创建滑动手势对象。与[PanGesture](arkts-arkui-pangestureinterface-i.md) | PanGestureOptions)}相比，options参数新增了对isFingerCountLimited和distanceMap参数，分别表示是否检查触摸屏幕的手指数量以及指定不同输入源触发滑动手势事件的最小滑动距离。
 
 **起始版本：** 15
 
@@ -66,13 +66,13 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 滑动手势处理器配置参数。 |
+| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | 否 | 滑动手势处理器配置参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -102,7 +102,7 @@ onActionCancel(event: () => void): PanGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -128,13 +128,13 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureInterface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | 是 | 滑动手势取消回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 滑动手势取消回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -164,7 +164,7 @@ onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionStart
 
@@ -194,7 +194,7 @@ onActionStart(event: (event: GestureEvent) => void): PanGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionUpdate
 
@@ -224,5 +224,5 @@ onActionUpdate(event: (event: GestureEvent) => void): PanGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 

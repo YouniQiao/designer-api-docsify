@@ -1,5 +1,11 @@
 # getVisibleWindowInfo
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## getVisibleWindowInfo
 
 ```TypeScript
@@ -29,13 +35,12 @@ function getVisibleWindowInfo(): Promise<Array<WindowInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.VISIBLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_WINDOW\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO permission.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function getVisibleWindowInfo can not work correctly due to limited device capabilities. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal task error. |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal task error. |
+| 801 | Capability not supported. Function getVisibleWindowInfo can not work correctly due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.VISIBLE_WINDOW_INFO permission.<br>**适用版本：** 18+ |
+| 202 | Permission verification failed, non-system application uses system API.<br>**适用版本：** 12 - 17 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -63,35 +68,6 @@ try {
   });
 } catch (exception) {
   console.error(`Failed to get visible window info. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.getVisibleWindowInfo();
-  promise.then((data) => {
-    data.forEach(windowInfo=>{
-      console.info(`left:${windowInfo.rect.left}`);
-      console.info(`top:${windowInfo.rect.top}`);
-      console.info(`width:${windowInfo.rect.width}`);
-      console.info(`height:${windowInfo.rect.height}`);
-      console.info(`windowId:${windowInfo.windowId}`);
-      console.info(`windowStatusType:${windowInfo.windowStatusType}`);
-      console.info(`abilityName:${windowInfo.abilityName}`);
-      console.info(`bundleName:${windowInfo.bundleName}`);
-      console.info(`isFocused:${windowInfo.isFocused}`);
-    })
-  }).catch((err: Error) => {
-    console.error(`Failed to getWindowInfo. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to get visible window info. Cause code: ${error.code}, message: ${error.message}`);
 }
 ```
 

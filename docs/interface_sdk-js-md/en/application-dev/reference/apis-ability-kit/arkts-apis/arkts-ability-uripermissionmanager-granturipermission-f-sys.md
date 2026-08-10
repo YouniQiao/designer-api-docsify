@@ -1,5 +1,11 @@
 # grantUriPermission (System API)
 
+## Modules to Import
+
+```TypeScript
+import { uriPermissionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## grantUriPermission
 
 ```TypeScript
@@ -11,17 +17,15 @@ function grantUriPermission(
   ): void
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    - If an application has the ohos.permission.PROXY\_AUTHORIZATION\_URI permission, it can grant the accessible URIs  
-    of another application. If the application does not have this permission, it can grant only its own URI  
-    permissions.  
-    
-    - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-    [getUriFromPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API. For URIs combined by the application, the  
-    system cannot guarantee their functions.
+授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考  
+[应用文件分享](../../../file-management/share-app-file.md)。使用callback异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+
+> **说明：**
+> 
+> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
+> 
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
+> 其功能。
 
 **Since:** 10
 
@@ -39,25 +43,25 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
-| targetBundleName | string | Yes | Bundle name of the target application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
+| flag | wantConstant.Flags | Yes | URI的读权限或写权限。 |
+| targetBundleName | string | Yes | 被授权URI的应用包名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回0表示有权限，返回-1表示无权限。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
-| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 19 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
+| 16000050 | Internal error. |
+| 16000060 | A sandbox application cannot grant URI permission. |
+| 201 | Permission denied. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000058 | Invalid URI flag. |
+| 16000059 | Invalid URI type. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
@@ -95,17 +99,15 @@ function grantUriPermission(
   ): void
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    - If an application has the ohos.permission.PROXY\_AUTHORIZATION\_URI permission, it can grant the accessible URIs  
-    of another application. If the application does not have this permission, it can grant only its own URI  
-    permissions.  
-    
-    - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-    [getUriFromPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API. For URIs combined by the application, the  
-    system cannot guarantee their functions.
+授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考  
+[应用文件分享](../../../file-management/share-app-file.md)。使用callback异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+
+> **说明：**
+> 
+> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
+> 
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
+> 其功能。
 
 **Since:** 23
 
@@ -125,22 +127,22 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
-| targetBundleName | string | Yes | Bundle name of the target application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
+| flag | wantConstant.Flags | Yes | URI的读权限或写权限。 |
+| targetBundleName | string | Yes | 被授权URI的应用包名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。返回0表示有权限，返回-1表示无权限。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
-| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| 801 | Capability not supported. |
+| 16000050 | Connect to system server failed. |
+| 16000060 | A sandbox application cannot grant URI permission. |
+| 201 | Permission denied. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000058 | Invalid URI flag. |
+| 16000059 | Invalid URI type. |
 
 
 ## grantUriPermission
@@ -149,17 +151,15 @@ Grants the URI permission to an application. If the call is successful, the appl
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - If an application has the ohos.permission.PROXY\_AUTHORIZATION\_URI permission, it can grant the accessible URIs  
-    of another application. If the application does not have this permission, it can grant only its own URI  
-    permissions.  
-    
-    - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-    [getUriFromPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API. For URIs combined by the application, the  
-    system cannot guarantee their functions.
+授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考  
+[应用文件分享](../../../file-management/share-app-file.md)。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+
+> **说明：**
+> 
+> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
+> 
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
+> 其功能。
 
 **Since:** 10
 
@@ -177,30 +177,30 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
-| targetBundleName | string | Yes | Bundle name of the target application. |
+| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
+| flag | wantConstant.Flags | Yes | URI的读权限或写权限。 |
+| targetBundleName | string | Yes | 被授权URI的应用包名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| Promise&lt;number&gt; | Promise对象。返回0表示有权限，返回-1表示无权限。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
-| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 19 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
+| 16000050 | Internal error. |
+| 16000060 | A sandbox application cannot grant URI permission. |
+| 201 | Permission denied. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000058 | Invalid URI flag. |
+| 16000059 | Invalid URI type. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
@@ -233,17 +233,7 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<void>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - If an application has the ohos.permission.PROXY\_AUTHORIZATION\_URI permission, it can grant the accessible URIs  
-    of another application. If the application does not have this permission, it can grant only its own URI  
-    permissions.  
-    
-    - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-    [getUriFromPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API. For URIs combined by the application, the  
-    system cannot guarantee their functions.
+Grant URI to another application
 
 **Since:** 23
 
@@ -261,27 +251,27 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
-| targetBundleName | string | Yes | Bundle name of the target application. |
+| uri | string | Yes | File URI. |
+| flag | wantConstant.Flags | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_PERSISTABLE_URI_PERMISSION. |
+| targetBundleName | string | Yes | Indicates the bundle name of authorization target. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
-| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| 801 | Capability not supported. |
+| 16000050 | Connect to system server failed. |
+| 16000060 | A sandbox application cannot grant URI permission. |
+| 201 | Permission denied. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000058 | Invalid URI flag. |
+| 16000059 | Invalid URI type. |
 
 
 ## grantUriPermission
@@ -290,20 +280,17 @@ Grants the URI permission to an application. If the call is successful, the appl
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: int): Promise<void>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - If an application has the ohos.permission.PROXY\_AUTHORIZATION\_URI permission, it can grant the accessible URIs  
-    of another application. If the application does not have this permission, it can grant only its own URI  
-    permissions.  
-    
-    - This API can be used to grant URI access permission to a cloned application. You need to specify the  
-    application bundle name and index of the cloned application.  
-    
-    - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-    [getUriFromPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API. For URIs combined by the application, the  
-    system cannot guarantee their functions.
+授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考  
+[应用文件分享](../../../file-management/share-app-file.md)。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+
+> **说明：**
+> 
+> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
+> 
+> - 该接口支持给分身应用授权，需要指定目标应用的应用包名和分身索引。
+> 
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
+> 其功能。
 
 **Since:** 14
 
@@ -321,32 +308,32 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
-| targetBundleName | string | Yes | Bundle name of the target application. |
-| appCloneIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the cloned application. The value range is [0, 1000]. The value **0** indicates the application itself. |
+| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
+| flag | wantConstant.Flags | Yes | URI的读权限或写权限。 |
+| targetBundleName | string | Yes | 被授权应用的应用包名。 |
+| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 被授权应用的分身索引，有效范围为[0, 1000], 取值为0时表示主应用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
-| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
-| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 19 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
+| 16000081 | Failed to obtain the target application information. |
+| 16000050 | Internal error. |
+| 16000060 | A sandbox application cannot grant URI permission. |
+| 201 | Permission denied. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000058 | Invalid URI flag. |
+| 16000059 | Invalid URI type. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';

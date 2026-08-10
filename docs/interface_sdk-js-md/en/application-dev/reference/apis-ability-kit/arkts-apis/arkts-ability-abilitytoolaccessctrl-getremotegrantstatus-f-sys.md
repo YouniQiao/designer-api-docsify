@@ -6,7 +6,7 @@
 export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 ```
 
-Gets the remote grant status.This function queries whether the remote authorization feature is enabled or disabled.When enabled, the device can grant permissions to remote devices;when disabled, remote authorization is not allowed.
+获取远程授权状态。该功能用于查询远程授权特性的使能状态。启用时，设备可以向远程设备授予权限；禁用时，不允许远程授权。
 
 **Since:** 26.1.0
 
@@ -24,14 +24,14 @@ Gets the remote grant status.This function queries whether the remote authorizat
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RemoteGrantStatus&gt; | Promise used to return \_\_\_ESCAPED\_DOLLAR\_\_\_{RemoteGrantStatus}. |
+| Promise&lt;RemoteGrantStatus&gt; | Promise用于返回\\${RemoteGrantStatus}。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY\_\_\_ESCAPED\_UNDERSCORE\_\_\_TOOL\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 24010001 | Service is abnormal. possible cause: IPC failed. |
+| 201 | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
+| 202 | The caller is not a system application. |
 | 24010002 | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
+| 24010001 | Service is abnormal. possible cause: IPC failed. |
 

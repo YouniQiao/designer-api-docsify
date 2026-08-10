@@ -10,6 +10,12 @@ Describes the parameters of a response send by the server to a specified read or
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -40,7 +46,7 @@ offset: int
 
 Indicates the byte offset of the start position for reading or writing operation
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -62,7 +68,7 @@ status: int
 
 Indicates the status of the read or write request, set this parameter to '0' in normal cases
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -84,7 +90,7 @@ transId: int
 
 The Id of the write request
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

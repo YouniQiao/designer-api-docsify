@@ -1,6 +1,6 @@
 # SensorId
 
-Enumerates the sensor types.
+表示当前支持订阅或取消订阅的传感器类型。
 
 **Since:** 9
 
@@ -16,9 +16,9 @@ Enumerates the sensor types.
 ACCELEROMETER = 1
 ```
 
-Acceleration sensor.
+加速度传感器类型，用于测量设备的加速度。
 
-This API can be used in atomic services since API version 11.
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Since:** 9
 
@@ -36,9 +36,9 @@ This API can be used in atomic services since API version 11.
 GYROSCOPE = 2
 ```
 
-Gyroscope sensor.
+陀螺仪传感器类型，用于测量设备的旋转角速度。
 
-This API can be used in atomic services since API version 11.
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ This API can be used in atomic services since API version 11.
 AMBIENT_LIGHT = 5
 ```
 
-Ambient light sensor.
+环境光传感器类型，用于测量环境光照强度。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Ambient light sensor.
 MAGNETIC_FIELD = 6
 ```
 
-Magnetic field sensor.
+磁场传感器类型，用于测量设备周围的环境磁场强度。
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ Magnetic field sensor.
 BAROMETER = 8
 ```
 
-Barometer sensor.
+气压计传感器类型，用于测量大气压力。
 
 **Since:** 9
 
@@ -104,7 +104,7 @@ Barometer sensor.
 HALL = 10
 ```
 
-Hall effect sensor.
+霍尔传感器类型，用于检测设备周围是否存在磁力吸引。
 
 **Since:** 9
 
@@ -120,7 +120,7 @@ Hall effect sensor.
 PROXIMITY = 12
 ```
 
-Proximity sensor.
+接近光传感器类型，用于检测物体与设备显示器的接近程度。
 
 **Since:** 9
 
@@ -136,7 +136,7 @@ Proximity sensor.
 HUMIDITY = 13
 ```
 
-Humidity sensor.
+湿度传感器类型，用于测量环境的相对湿度。
 
 **Since:** 9
 
@@ -152,9 +152,9 @@ Humidity sensor.
 ORIENTATION = 256
 ```
 
-Orientation sensor.
+方向传感器类型，用于测量设备的旋转方向角度。
 
-This API can be used in atomic services since API version 11.
+从API version 11开始，该接口在支持原子化服务中使用。
 
 **Since:** 9
 
@@ -172,7 +172,7 @@ This API can be used in atomic services since API version 11.
 GRAVITY = 257
 ```
 
-Gravity sensor.
+重力传感器类型，用于测量设备的重力加速度。
 
 **Since:** 9
 
@@ -188,7 +188,7 @@ Gravity sensor.
 LINEAR_ACCELEROMETER = 258
 ```
 
-Linear acceleration sensor.
+线性加速度传感器类型，用于测量设备排除重力后的线性加速度。
 
 **Since:** 9
 
@@ -204,7 +204,7 @@ Linear acceleration sensor.
 ROTATION_VECTOR = 259
 ```
 
-Rotation vector sensor.
+旋转矢量传感器类型，用于描述设备相对于参考方向的旋转状态。
 
 **Since:** 9
 
@@ -220,7 +220,7 @@ Rotation vector sensor.
 AMBIENT_TEMPERATURE = 260
 ```
 
-Ambient temperature sensor.
+环境温度传感器类型，用于测量环境的温度。
 
 **Since:** 9
 
@@ -236,7 +236,7 @@ Ambient temperature sensor.
 MAGNETIC_FIELD_UNCALIBRATED = 261
 ```
 
-Uncalibrated magnetic field sensor.
+未校准磁场传感器类型，用于测量未校准的环境磁场强度及其偏量。
 
 **Since:** 9
 
@@ -252,7 +252,7 @@ Uncalibrated magnetic field sensor.
 GYROSCOPE_UNCALIBRATED = 263
 ```
 
-Uncalibrated gyroscope sensor.
+未校准陀螺仪传感器类型，用于测量未校准的设备旋转角速度及其偏量。
 
 **Since:** 9
 
@@ -268,7 +268,7 @@ Uncalibrated gyroscope sensor.
 SIGNIFICANT_MOTION = 264
 ```
 
-Significant motion sensor.
+有效运动传感器类型，用于检测设备是否存在大幅度运动。
 
 **Since:** 9
 
@@ -284,7 +284,7 @@ Significant motion sensor.
 PEDOMETER_DETECTION = 265
 ```
 
-Pedometer detection sensor.
+计步检测传感器类型，用于检测用户的计步动作。
 
 **Since:** 9
 
@@ -300,7 +300,7 @@ Pedometer detection sensor.
 PEDOMETER = 266
 ```
 
-Pedometer sensor.
+计步传感器类型，用于统计用户的行走步数。
 
 **Since:** 9
 
@@ -316,7 +316,7 @@ Pedometer sensor.
 HEART_RATE = 278
 ```
 
-Heart rate sensor.
+心率传感器类型，用于测量用户的心率数值。
 
 **Since:** 9
 
@@ -332,7 +332,7 @@ Heart rate sensor.
 WEAR_DETECTION = 280
 ```
 
-Wear detection sensor.
+佩戴检测传感器类型，用于检测设备是否被佩戴。
 
 **Since:** 9
 
@@ -348,7 +348,7 @@ Wear detection sensor.
 ACCELEROMETER_UNCALIBRATED = 281
 ```
 
-Uncalibrated acceleration sensor.
+未校准加速度传感器类型，用于测量未校准的设备加速度及其偏量。
 
 **Since:** 9
 
@@ -364,9 +364,7 @@ Uncalibrated acceleration sensor.
 FUSION_PRESSURE = 283
 ```
 
-Fused pressure sensor.
-
-This sensor is available only on smart watches.
+融合压力传感器类型，用于测量融合压力值。仅智能表有该传感器。
 
 **Since:** 22
 

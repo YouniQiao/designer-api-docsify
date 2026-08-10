@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isMacroSupported
 
 ```TypeScript
@@ -17,7 +23,7 @@ isMacroSupported(): boolean
 ```
 
 检测当前状态下是否支持微距能力，需要在CaptureSession调用  
-[commitConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_之后进行调用。
+[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之后进行调用。
 
 **起始版本：** 19
 
@@ -34,4 +40,10 @@ isMacroSupported(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回是否支持微距能力。true表示支持，false表示不支持。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 202 | Not System Application.<br>**适用版本：** 11 - 18 |
 

@@ -1,5 +1,11 @@
 # setSeniorModeStateForSelf
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## setSeniorModeStateForSelf
 
 ```TypeScript
@@ -34,9 +40,9 @@ Set this application's senior mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality. |
+| 9300000 | System abnormality. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

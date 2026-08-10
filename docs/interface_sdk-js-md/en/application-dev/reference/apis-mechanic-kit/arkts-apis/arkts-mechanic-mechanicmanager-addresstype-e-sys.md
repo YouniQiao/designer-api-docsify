@@ -1,6 +1,6 @@
 # AddressType (System API)
 
-Mechanic device address type.
+具身设备地址类型
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Mechanic device address type.
 BLE_ADDR = 0
 ```
 
-Mechanic device ble address type.
+具身设备蓝牙地址类型
 
 **Since:** 26.0.0
 

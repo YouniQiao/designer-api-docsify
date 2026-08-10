@@ -1,13 +1,19 @@
 # isOpenAccessibilitySync
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isOpenAccessibilitySync
 
 ```TypeScript
 function isOpenAccessibilitySync(): boolean
 ```
 
-Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, use  
-[accessibility.getAccessibilityExtensionListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+查询当前系统内是否存在已开启的辅助应用。如需获取系统内辅助应用信息，推荐使用  
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。
 
 **Since:** 10
 
@@ -25,9 +31,9 @@ Checks whether any accessibility application has been enabled in the system. To 
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether any accessibility application has been enabled in the system. Returns **true** if one or more accessibility applications are enabled; returns **false** otherwise. |
+| boolean | 表示当前系统内是否有辅助应用开启。true表示启用了一个或多个辅助应用，false表示未启用任何辅助应用。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

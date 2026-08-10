@@ -4,7 +4,7 @@
 export type Position = Vector2
 ```
 
-Sets or returns the position of the component.
+用于设置或返回组件的位置。
 
 **Since:** 11
 

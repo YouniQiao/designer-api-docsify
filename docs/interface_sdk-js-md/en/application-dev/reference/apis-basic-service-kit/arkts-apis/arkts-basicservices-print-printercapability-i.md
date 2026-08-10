@@ -1,6 +1,6 @@
 # PrinterCapability
 
-Defines the printer capabilities.
+定义打印能力的接口。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Defines the printer capabilities.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## colorMode
 
 ```TypeScript
 colorMode: int
 ```
 
-Color mode.
+表示色彩模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -34,9 +40,9 @@ Color mode.
 duplexMode: int
 ```
 
-Simplex or duplex mode.
+表示单双面打印模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -52,9 +58,9 @@ Simplex or duplex mode.
 minMargin?: PrintMargin
 ```
 
-Minimum margin of the printer.
+表示打印机最小边距。
 
-**Type:** PrintMargin
+**Type:** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
 **Since:** 24
 
@@ -70,7 +76,7 @@ Minimum margin of the printer.
 options?: Object
 ```
 
-Printer options. The value is a JSON object string.
+表示JSON对象字符串。
 
 **Type:** Object
 
@@ -88,7 +94,7 @@ Printer options. The value is a JSON object string.
 pageSize: Array<PrintPageSize>
 ```
 
-List of page sizes supported by the printer.
+表示打印机支持的页面尺寸列表。
 
 **Type:** Array&lt;PrintPageSize&gt;
 
@@ -106,7 +112,7 @@ List of page sizes supported by the printer.
 resolution?: Array<PrintResolution>
 ```
 
-List of resolutions supported by the printer.
+表示打印机支持的分辨率列表。
 
 **Type:** Array&lt;PrintResolution&gt;
 

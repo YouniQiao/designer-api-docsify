@@ -12,6 +12,12 @@ Describes the cloud pair device.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## trustedPairedDevices
 
 ```TypeScript

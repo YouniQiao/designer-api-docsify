@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerState
 
 ```TypeScript
 readonly capturerState: AudioState
 ```
 
-**类型：** AudioState
+**类型：** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ readonly clientUid: int
 
 Uid for audio capturer client application.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

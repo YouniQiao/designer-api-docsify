@@ -1,6 +1,6 @@
 # WatchRule (System API)
 
-Defines event subscription rules.
+系统事件订阅规则对象接口。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Defines event subscription rules.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## domain
 
 ```TypeScript
 domain: string
 ```
 
-Event domain.
+事件领域。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Event domain.
 name: string
 ```
 
-Event name.
+事件名称。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ Event name.
 ruleType: RuleType
 ```
 
-Matching rule type.
+匹配规则类型。
 
-**Type:** RuleType
+**Type:** [RuleType](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)
 
 **Since:** 9
 
@@ -78,7 +84,7 @@ Matching rule type.
 tag?: string
 ```
 
-Event tag.
+事件标签。
 
 **Type:** string
 

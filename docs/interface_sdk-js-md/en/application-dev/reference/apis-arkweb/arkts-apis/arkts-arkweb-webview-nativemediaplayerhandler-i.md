@@ -1,10 +1,12 @@
 # NativeMediaPlayerHandler
 
-Implements a **NativeMediaPlayerHandler** object used as a parameter of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_callback. The application uses this object to report the player status to the ArkWeb engine.
-    **NOTE**  
-    
-    - The sample effect is subject to the actual device.
+[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 12开始支持。
+> 
+> - 示例效果请以真机运行为准。
 
 **Since:** 23
 
@@ -14,13 +16,19 @@ Implements a **NativeMediaPlayerHandler** object used as a parameter of the
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## handleBufferedEndTimeChanged
 
 ```TypeScript
 handleBufferedEndTimeChanged(bufferedEndTime: double): void
 ```
 
-Called to notify the ArkWeb engine of the buffer time when the buffer time changes.
+当媒体的缓冲时长发生变化时，调用该方法将媒体的缓冲时长通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -34,7 +42,7 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bufferedEndTime | double | Yes | Duration of media data in the buffer.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: second. Value range: [0, duration] |
+| bufferedEndTime | double | Yes | 媒体缓冲的时长。&lt;br&gt;单位：秒，取值范围：[0, duration] |
 
 ## handleDurationChanged
 
@@ -42,7 +50,7 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 handleDurationChanged(duration: double): void
 ```
 
-Called to notify the ArkWeb engine of the total duration of the media.
+当播放器解析出媒体的总时长时，调用该方法将媒体的总时长通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -56,7 +64,7 @@ Called to notify the ArkWeb engine of the total duration of the media.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | double | Yes | Total duration of the media.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: second. Value range: [0,+��) |
+| duration | double | Yes | 媒体的总时长。&lt;br&gt;单位：秒，取值范围：[0, +∞) |
 
 ## handleEnded
 
@@ -64,7 +72,7 @@ Called to notify the ArkWeb engine of the total duration of the media.
 handleEnded(): void
 ```
 
-Called to notify the ArkWeb engine that the media playback ends.
+当媒体播放结束时，调用该方法将播放结束事件通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -80,7 +88,7 @@ Called to notify the ArkWeb engine that the media playback ends.
 handleError(error: MediaError, errorMessage: string): void
 ```
 
-Called to notify the ArkWeb engine that an error occurs with the player.
+当播放器发生错误时，调用该方法将错误通知 ArkWeb 内核。
 
 **Since:** 23
 
@@ -94,8 +102,8 @@ Called to notify the ArkWeb engine that an error occurs with the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Error object type. |
-| errorMessage | string | Yes | Error message. |
+| error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | Yes | 错误类型。 |
+| errorMessage | string | Yes | 错误的详细描述。 |
 
 ## handleFullscreenChanged
 
@@ -103,7 +111,7 @@ Called to notify the ArkWeb engine that an error occurs with the player.
 handleFullscreenChanged(fullscreen: boolean): void
 ```
 
-Called to notify the ArkWeb engine of the full screen status of the player when the full screen status changes.
+当播放器的全屏状态发生变化时，调用该方法将播放器的全屏状态通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -117,7 +125,7 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullscreen | boolean | Yes | Whether the player is in full screen.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **true** means that the player is in full screen, and **false** means the opposite. |
+| fullscreen | boolean | Yes | 是否全屏。&lt;br&gt;true表示全屏，false表示未全屏。 |
 
 ## handleMutedChanged
 
@@ -125,7 +133,7 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 handleMutedChanged(muted: boolean): void
 ```
 
-Called to notify the ArkWeb engine of the muted status of the player when the muted status changes.
+当播放器的静音状态发生变化时，调用该方法将静音状态通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -139,7 +147,7 @@ Called to notify the ArkWeb engine of the muted status of the player when the mu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| muted | boolean | Yes | Whether the player is muted.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **true** indicates that the player is muted, and **false** indicates the opposite. |
+| muted | boolean | Yes | 当前播放器是否静音。&lt;br&gt;true表示当前播放器静音，false表示当前播放器未静音。 |
 
 ## handleNetworkStateChanged
 
@@ -147,7 +155,7 @@ Called to notify the ArkWeb engine of the muted status of the player when the mu
 handleNetworkStateChanged(state: NetworkState): void
 ```
 
-Called to notify the ArkWeb engine of the network status of the player when the network status changes.
+当播放器的网络状态发生变化时，调用该方法将播放器的网络状态通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -161,7 +169,7 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Network status of the player. |
+| state | [NetworkState](../../apis-telephony-kit/arkts-apis/arkts-telephony-radio-networkstate-i.md) | Yes | 播放器的网络状态。 |
 
 ## handlePlaybackRateChanged
 
@@ -169,7 +177,7 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 handlePlaybackRateChanged(playbackRate: double): void
 ```
 
-Called to notify the ArkWeb engine of the playback rate of the player when the playback rate changes.
+当播放器的播放速率发生变化时，调用该方法将播放速率通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -183,7 +191,7 @@ Called to notify the ArkWeb engine of the playback rate of the player when the p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| playbackRate | double | Yes | Playback rate. The value range is [0, +��). |
+| playbackRate | double | Yes | 播放速率，取值范围：[0, +∞) |
 
 ## handleReadyStateChanged
 
@@ -191,7 +199,7 @@ Called to notify the ArkWeb engine of the playback rate of the player when the p
 handleReadyStateChanged(state: ReadyState): void
 ```
 
-Called to notify the ArkWeb engine of the cache status of the player when the cache status changes.
+当播放器的缓存状态发生变化时，调用该方法将播放器的缓存状态通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -205,7 +213,7 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Cache status of the player. |
+| state | [ReadyState](arkts-arkweb-webview-readystate-e.md) | Yes | 播放器的缓存状态。 |
 
 ## handleSeekFinished
 
@@ -213,7 +221,7 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 handleSeekFinished(): void
 ```
 
-Called to notify the ArkWeb engine that the seek operation is complete.
+当播放器seek完成后，调用该方法将seek完成事件通知 ArkWeb 内核。
 
 **Since:** 23
 
@@ -229,7 +237,7 @@ Called to notify the ArkWeb engine that the seek operation is complete.
 handleSeeking(): void
 ```
 
-Called to notify the ArkWeb engine that the player enters the seek state.
+当播放器进入seek状态时，调用该方法将seek进入事件通知 ArkWeb 内核。
 
 **Since:** 23
 
@@ -245,7 +253,7 @@ Called to notify the ArkWeb engine that the player enters the seek state.
 handleStatusChanged(status: PlaybackStatus): void
 ```
 
-Called to notify the ArkWeb engine of the playback status of the player when the playback status changes.
+当播放器的播放状态发生变化时，调用该方法将播放状态通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -259,7 +267,7 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Player status. |
+| status | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Yes | 播放器的播放状态。 |
 
 ## handleTimeUpdate
 
@@ -267,7 +275,7 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 handleTimeUpdate(currentPlayTime: double): void
 ```
 
-Called to notify the ArkWeb engine of the playback progress when the playback progress changes.
+当媒体的播放进度发生变化时，调用该方法将媒体的播放进度通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -281,7 +289,7 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentPlayTime | double | Yes | Current progress.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: second. Value range: [0, duration] |
+| currentPlayTime | double | Yes | 当前播放时间。&lt;br&gt;单位：秒，取值范围：[0, duration] |
 
 ## handleVideoSizeChanged
 
@@ -289,7 +297,7 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 handleVideoSizeChanged(width: double, height: double): void
 ```
 
-Called to notify the ArkWeb engine of the video size of the player.
+当播放器解析出视频的尺寸时， 调用该方法将视频尺寸通知 ArkWeb 内核。
 
 **Since:** 23
 
@@ -303,8 +311,8 @@ Called to notify the ArkWeb engine of the video size of the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | double | Yes | Video width, in pixels. Value range: [0,+��) |
-| height | double | Yes | Video height, in pixels. Value range: [0,+��) |
+| width | double | Yes | 视频的宽，单位：像素，取值范围：[0, +∞) |
+| height | double | Yes | 视频的高，单位：像素，取值范围：[0, +∞) |
 
 ## handleVolumeChanged
 
@@ -312,7 +320,7 @@ Called to notify the ArkWeb engine of the video size of the player.
 handleVolumeChanged(volume: double): void
 ```
 
-Called to notify the ArkWeb engine of the volume of the player when the volume changes.
+当播放器的音量发生变化时，调用该方法将音量通知给 ArkWeb 内核。
 
 **Since:** 23
 
@@ -326,5 +334,5 @@ Called to notify the ArkWeb engine of the volume of the player when the volume c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volume | double | Yes | Volume of the player. The value range is [0, 1.0]. |
+| volume | double | Yes | 播放器的音量，取值范围：[0, 1.0]。 |
 

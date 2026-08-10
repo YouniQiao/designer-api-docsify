@@ -1,6 +1,6 @@
 # DeviceStatus (System API)
 
-Defines the device status information. It describes the current status of the companion device, including the device service ID, user name, model information, device name, online status, and list of supported service IDs.
+设备状态信息。用于描述伴随设备的当前状态，包括设备业务标识、用户名、型号信息、设备名、在线状态以及支持的业务ID列表等。
 
 **Since:** 23
 
@@ -12,15 +12,21 @@ Defines the device status information. It describes the current status of the co
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## deviceKey
 
 ```TypeScript
 deviceKey: DeviceKey
 ```
 
-Key device information. It uniquely identifies a device, including the device ID type, device ID, and device user ID.
+设备关键信息。包含设备ID类型、设备ID和设备用户ID，作为设备的唯一标识。
 
-**Type:** DeviceKey
+**Type:** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)
 
 **Since:** 23
 
@@ -40,7 +46,7 @@ Key device information. It uniquely identifies a device, including the device ID
 deviceModelInfo: string
 ```
 
-Device model information. It identifies the device model, such as the product model and device type.
+设备模型信息。设备的型号标识，如产品型号、设备类型等信息。
 
 **Type:** string
 
@@ -62,7 +68,7 @@ Device model information. It identifies the device model, such as the product mo
 deviceName: string
 ```
 
-Device name. It is the name or alias of a device, and is displayed to the user in the device list.
+设备名。设备的名称或别名，用于在设备列表中展示给用户。
 
 **Type:** string
 
@@ -84,7 +90,7 @@ Device name. It is the name or alias of a device, and is displayed to the user i
 deviceUserName: string
 ```
 
-Device user name. It is the display name of the current user on the device, and is displayed on the device selection screen.
+设备用户名。设备上当前用户的显示名称，用于在设备选择界面展示。
 
 **Type:** string
 
@@ -106,7 +112,7 @@ Device user name. It is the display name of the current user on the device, and 
 isOnline: boolean
 ```
 
-Device online status. The value **true** indicates that the device is online and can communicate with the primary device. The value **false** indicates that the device is offline and cannot perform authentication interaction.
+设备在线状态。true表示设备处于在线状态，可以与主设备通信；false表示设备处于离线状态，无法进行认证交互。
 
 **Type:** boolean
 
@@ -128,9 +134,9 @@ Device online status. The value **true** indicates that the device is online and
 supportedBusinessIds: int[]
 ```
 
-List of service IDs supported by the device. It indicates the service scenarios supported by the device, such as unlocking the screen lock and unlocking the application lock. The service scenarios supported by a device vary depending on the authentication security.
+设备支持的业务ID列表。表示该设备支持的业务场景范围，如解锁锁屏、解锁应用锁等。不同设备因认证安全性差异，支持的业务范围不同。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 

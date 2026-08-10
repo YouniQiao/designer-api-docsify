@@ -1,6 +1,6 @@
 # EventTargetInfo
 
-Provides the information about the component corresponding to the gesture recognizer.
+手势识别器对应组件的信息。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Provides the information about the component corresponding to the gesture recogn
 getId(): string
 ```
 
-Obtains the ID of this component.
+返回当前组件的组件标识。
 
 **Since:** 12
 
@@ -34,7 +34,33 @@ Obtains the ID of this component.
 
 | Type | Description |
 | --- | --- |
-| string | [ID]{ |
+| string | 当前组件的[组件标识]{ |
+
+## getUniqueId
+
+```TypeScript
+getUniqueId(): number
+```
+
+Returns the component's unique id.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EventTargetInfo-getUniqueId(): number--><!--Device-EventTargetInfo-getUniqueId(): number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | the unique id of the component |
 
 ## getUniqueId
 
@@ -42,7 +68,7 @@ Obtains the ID of this component.
 getUniqueId(): int
 ```
 
-Returns the unique ID of the current component.
+返回当前组件的唯一id。
 
 **Since:** 26.0.0
 
@@ -60,5 +86,5 @@ Returns the unique ID of the current component.
 
 | Type | Description |
 | --- | --- |
-| int | Unique ID of the current component. |
+| int | 当前组件的唯一id。 |
 

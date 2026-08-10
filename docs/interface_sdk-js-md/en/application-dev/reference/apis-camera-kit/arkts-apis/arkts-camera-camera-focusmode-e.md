@@ -1,6 +1,6 @@
 # FocusMode
 
-Enumerates the focus modes.
+枚举，焦距模式。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the focus modes.
 FOCUS_MODE_MANUAL = 0
 ```
 
-Manual focus. The focal length of the camera can be manually set to change the focus position. However, the focal point cannot be set.
+手动对焦。通过手动修改相机焦距来改变对焦位置，不支持对焦点设置。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ Manual focus. The focal length of the camera can be manually set to change the f
 FOCUS_MODE_CONTINUOUS_AUTO = 1
 ```
 
-Continuous auto focus. The focal point cannot be set.
+连续自动对焦。不支持对焦点设置。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ Continuous auto focus. The focal point cannot be set.
 FOCUS_MODE_AUTO = 2
 ```
 
-Auto focus. The focal point can be set by calling [Focus.setFocusPoint]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, and auto focus is performed once based on the focal point.
+自动对焦。支持对焦点设置，可以使用[Focus.setFocusPoint](arkts-camera-camera-focus-i.md#setfocuspoint)设置对焦点，根据对焦点执行一次自动对焦。
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ Auto focus. The focal point can be set by calling [Focus.setFocusPoint]\_\_\_JSD
 FOCUS_MODE_LOCKED = 3
 ```
 
-Focus locked. The focal point cannot be set.
+对焦锁定。不支持对焦点设置。
 
 **Since:** 10
 

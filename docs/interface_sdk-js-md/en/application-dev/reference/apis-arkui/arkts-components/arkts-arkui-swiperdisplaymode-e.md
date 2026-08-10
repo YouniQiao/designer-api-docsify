@@ -1,6 +1,6 @@
 # SwiperDisplayMode
 
-Enumerates the modes in which elements are displayed along the main axis.
+Swiper在主轴上的尺寸大小模式枚举。
 
 **Since:** 7
 
@@ -16,10 +16,9 @@ Enumerates the modes in which elements are displayed along the main axis.
 Stretch
 ```
 
-The width of each page in the **Swiper** component equals the component's own width.
+Swiper滑动一页的宽度为Swiper组件自身的宽度。
 
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
-**STRETCH** instead.
+**说明：**从API version 7开始支持，从API version 10开始废弃，建议使用STRETCH替代。
 
 **Since:** 7
 
@@ -27,7 +26,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [SwiperDisplayMode#STRETCH](../arkts-apis/arkts-arkui-component/swiper-swiperdisplaymode-e.md#stretch)
+**Substitutes:** [SwiperDisplayMode#STRETCH](arkts-arkui-swiperdisplaymode-e.md#stretch)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 7.
 
@@ -40,13 +39,6 @@ Note: This API is supported since API version 7 and deprecated since API version
 ```TypeScript
 AutoLinear
 ```
-
-The width of each page in the **Swiper** component equals the maximum width of child components. This enumerated value behaves the same as setting  
-[displayCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to **'auto'** (string type). For details, see  
-[displayCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
-
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
-**AUTO\_LINEAR** instead.
 
 **Since:** 7
 
@@ -68,7 +60,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 STRETCH
 ```
 
-The width of each page in the **Swiper** component equals the component's own width.
+Carousel map extension.
 
 **Since:** 10
 
@@ -90,20 +82,13 @@ The width of each page in the **Swiper** component equals the component's own wi
 AUTO_LINEAR
 ```
 
-The width of each page in the **Swiper** component equals the width of the leftmost child component in the viewport. This enumerated value behaves the same as setting  
-[displayCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to **'auto'** (string type). For details, see  
-[displayCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
-
-Note: This API is supported since API version 10 and deprecated since API version 12. You are advised to use  
-[Scroller.scrollTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead.
-
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 12
 
-**Substitutes:** [Scroller#scrollTo](../arkts-apis/arkts-arkui-component/scroll-scroller-c.md#scrollto)
+**Substitutes:** [Scroller#scrollTo](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrollto)
 
 **Model restriction:** This API can be used only in the stage model.
 

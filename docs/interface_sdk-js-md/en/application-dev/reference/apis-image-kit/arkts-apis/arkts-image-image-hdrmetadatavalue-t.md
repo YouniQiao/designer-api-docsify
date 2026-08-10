@@ -4,8 +4,7 @@
 type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrGainmapMetadata
 ```
 
-Describes the HDR metadata values used by a PixelMap, which corresponds to the values available for  
-[HdrMetadataKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+PixelMap使用的HDR元数据值类型，与[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)关键字对应。
 
 **Since:** 12
 
@@ -17,8 +16,8 @@ Describes the HDR metadata values used by a PixelMap, which corresponds to the v
 
 | Type | Description |
 | --- | --- |
-| HdrMetadataType | Metadata value corresponding to the **HDR\_METADATA\_TYPE** key in [HdrMetadataKey]{ |
-| HdrStaticMetadata | Metadata value corresponding to the **HDR\_STATIC\_METADATA** key in [HdrMetadataKey]{ |
-| ArrayBuffer | Metadata value corresponding to the **HDR\_DYNAMIC\_METADATA** key in [HdrMetadataKey]{ |
-| HdrGainmapMetadata | Metadata value corresponding to the **HDR\_GAINMAP\_METADATA** key in [HdrMetadataKey]{ |
+| HdrMetadataType | Metadata value corresponding to the **HDR_METADATA_TYPE** key in [HdrMetadataKey]{ |
+| HdrStaticMetadata | Metadata value corresponding to the **HDR_STATIC_METADATA** key in [HdrMetadataKey]{ |
+| ArrayBuffer | Metadata value corresponding to the **HDR_DYNAMIC_METADATA** key in [HdrMetadataKey]{ |
+| HdrGainmapMetadata | Metadata value corresponding to the **HDR_GAINMAP_METADATA** key in [HdrMetadataKey]{ |
 

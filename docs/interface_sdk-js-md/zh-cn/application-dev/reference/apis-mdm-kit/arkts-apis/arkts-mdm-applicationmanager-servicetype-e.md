@@ -16,9 +16,9 @@
 COLLABORATION_SERVICE  = 0
 ```
 
-协同业务。允许使用协同业务的应用，可以通过使用[UIAbilityContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[UIExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_中的API或  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的方式，跨设备拉起其他应用的页面并向其传输数据。
+协同业务。允许使用协同业务的应用，可以通过使用[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md)、  
+[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md/arkts-ability-uiextensioncontext-c.md)中的API或  
+[跨设备连接UIAbility开发指南](../../../distributedservice/abilityconnectmanager-guidelines.md)中的方式，跨设备拉起其他应用的页面并向其传输数据。
 
 **起始版本：** 26.0.0
 

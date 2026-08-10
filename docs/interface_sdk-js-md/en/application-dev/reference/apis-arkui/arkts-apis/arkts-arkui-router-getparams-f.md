@@ -1,21 +1,31 @@
 # getParams
 
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
 ## getParams
 
 ```TypeScript
 function getParams(): Object
 ```
 
-Obtains the parameters passed from the page that initiates redirection to the current page.
-    **NOTE**  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [Router]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated  
-    with the current UI context.  
-    
-    **getParams** obtains only the parameters of the current page and does not clear the parameters associated with  
-    the page.
+获取发起跳转的页面往当前页传入的参数。
+
+> **说明：**
+> 
+> - 从API version 8开始支持，从API version 18开始废弃，建议使用[getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams)替代。
+> getParams需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
+> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [Router](arkts-arkui-uicontext.md)对象。
+> 
+> getParams只获取当前页面的参数，并不会清除页面关联的参数。
 
 **Since:** 8
 
@@ -35,9 +45,9 @@ Obtains the parameters passed from the page that initiates redirection to the cu
 
 | Type | Description |
 | --- | --- |
-| Object | Parameters passed from the page that initiates redirection to the current page. |
+| Object | 发起跳转的页面往当前页传入的参数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 this.getUIContext().getRouter().getParams();

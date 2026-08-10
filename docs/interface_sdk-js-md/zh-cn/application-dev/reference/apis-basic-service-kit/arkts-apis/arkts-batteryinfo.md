@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
+## 导入模块
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -48,5 +54,5 @@
 | [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | 表示电池充电状态的枚举。 |
 | [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | 表示电池健康状态的枚举。 |
 | [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) | 表示连接的充电器类型的枚举。 |
-| [CommonEventBatteryChangedKey](arkts-basicservices-batteryinfo-commoneventbatterychangedkey-e.md) | 表示COMMON\_\_\_ESCAPED\_UNDERSCORE\_\_\_EVENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_BATTERY\_\_\_ESCAPED\_UNDERSCORE\_\_\_CHANGED通用事件附加信息的查询键。 |
+| [CommonEventBatteryChangedKey](arkts-basicservices-batteryinfo-commoneventbatterychangedkey-e.md) | 表示COMMON_EVENT_BATTERY_CHANGED通用事件附加信息的查询键。 |
 

@@ -1,5 +1,11 @@
 # startDiscoverDevices
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## startDiscoverDevices
 
 ```TypeScript
@@ -22,12 +28,12 @@ Start discover Wi-Fi P2P devices.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
-| [2801001](../errorcode-wifi.md#2801001-p2p-module-error) | Wi-Fi STA disabled. |
+| 801 | Capability not supported. |
+| 2801000 | Operation failed. |
+| 2801001 | Wi-Fi STA disabled. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

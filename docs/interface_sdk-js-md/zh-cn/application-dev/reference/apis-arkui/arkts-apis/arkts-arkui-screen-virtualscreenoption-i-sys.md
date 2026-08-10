@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## density
 
 ```TypeScript
@@ -20,7 +26,7 @@ density: double
 
 指定虚拟屏幕的密度，该参数为浮点数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ height: long
 
 指定虚拟屏幕的高度，单位为px，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -120,7 +126,7 @@ userId?: int
 
 指定虚拟屏幕的用户ID，该参数为整数。默认值为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -142,7 +148,7 @@ width: long
 
 指定虚拟屏幕的宽度，单位为px，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

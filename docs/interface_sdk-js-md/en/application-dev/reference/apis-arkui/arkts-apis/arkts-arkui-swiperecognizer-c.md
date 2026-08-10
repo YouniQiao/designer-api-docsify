@@ -1,8 +1,8 @@
 # SwipeRecognizer
 
-Implements a swipe gesture recognizer. Inherits from [GestureRecognizer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+快滑手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
-**Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
+**Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ Implements a swipe gesture recognizer. Inherits from [GestureRecognizer]\_\_\_JS
 getDirection(): SwipeDirection
 ```
 
-Obtains the direction for recognizing swipe gestures.
+返回预设快滑手势识别器触发快滑手势滑动方向。
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ Obtains the direction for recognizing swipe gestures.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Direction for recognizing swipe gestures. |
+| [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md) | 预设快滑手势识别器触发快滑手势滑动方向。 |
 
 ## getVelocityThreshold
 
@@ -44,7 +44,7 @@ Obtains the direction for recognizing swipe gestures.
 getVelocityThreshold(): number
 ```
 
-Obtains the minimum velocity required for the swipe gesture to be recognized.
+返回预设快滑手势识别器识别滑动最小速度阈值。
 
 **Since:** 18
 
@@ -62,5 +62,5 @@ Obtains the minimum velocity required for the swipe gesture to be recognized.
 
 | Type | Description |
 | --- | --- |
-| number | Minimum velocity required for the swipe gesture to be recognized, in vp/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞) |
+| number | 预设快滑手势识别器识别滑动最小速度阈值，单位为vp/s。&lt;br/&gt;取值范围：[0, +∞) |
 

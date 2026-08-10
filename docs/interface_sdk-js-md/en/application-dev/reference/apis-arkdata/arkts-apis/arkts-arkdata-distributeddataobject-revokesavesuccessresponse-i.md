@@ -1,6 +1,6 @@
 # RevokeSaveSuccessResponse
 
-Represents the information returned by the callback of revokeSave.
+[revokeSave](arkts-arkdata-distributeddataobject-dataobject-i.md#revokesave)接口回调信息。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Represents the information returned by the callback of revokeSave.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
+
 ## sessionId
 
 ```TypeScript
 sessionId: string
 ```
 
-Unique ID for multi-device collaboration.
+多设备协同的唯一标识。
 
 **Type:** string
 

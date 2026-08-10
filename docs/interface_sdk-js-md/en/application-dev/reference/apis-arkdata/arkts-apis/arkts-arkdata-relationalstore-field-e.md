@@ -1,6 +1,6 @@
 # Field
 
-Enumerates predicates used as query conditions. Use the enum name rather than the enum value.
+用于谓词查询条件的特殊字段。请使用枚举名称而非枚举值。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates predicates used as query conditions. Use the enum name rather than th
 CURSOR_FIELD = '#_cursor'
 ```
 
-Field name used for cursor-based search.
+用于cursor查找的字段名。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Field name used for cursor-based search.
 ORIGIN_FIELD = '#_origin'
 ```
 
-Field name used to specify the data source in cursor-based search.
+用于cursor查找时指定数据来源的字段名。
 
 **Since:** 11
 
@@ -48,9 +48,9 @@ Field name used to specify the data source in cursor-based search.
 DELETED_FLAG_FIELD = '#_deleted_flag'
 ```
 
-Whether the dirty data (data deleted from the cloud) is cleared from the local device. It fills in the result set returned upon the cursor-based search.
+用于cursor查找的结果集返回时填充的字段，表示云端删除的数据同步到本地后数据是否清理。
 
-The value **true** means the dirty data is cleared; the value **false** means the opposite.
+返回的结果集中，该字段对应的value为false表示数据未清理，true表示数据已清理。
 
 **Since:** 11
 
@@ -66,8 +66,7 @@ The value **true** means the dirty data is cleared; the value **false** means th
 DATA_STATUS_FIELD = '#_data_status'
 ```
 
-Data status in the cursor-based search result set. The value **0** indicates normal data status; **1** indicates that data is retained after the account is logged out; **2** indicates that data is deleted from the cloud; **3**  
-indicates that data is deleted after the account is logged out.
+用于cursor查找的结果集返回时填充的字段，返回的结果集中，该字段对应的0表示正常数据，1表示退出账号保留数据，2表示云侧同步删除，3表示退出账户删除数据。
 
 **Since:** 12
 
@@ -83,7 +82,7 @@ indicates that data is deleted after the account is logged out.
 OWNER_FIELD = '#_cloud_owner'
 ```
 
-Party who shares the data. It fills in the result set returned when the owner of the shared data is searched.
+用于共享表中查找owner时，返回的结果集中填充的字段，表示当前共享记录的共享发起者。
 
 **Since:** 11
 
@@ -99,7 +98,7 @@ Party who shares the data. It fills in the result set returned when the owner of
 PRIVILEGE_FIELD = '#_cloud_privilege'
 ```
 
-Operation permission on the shared data. It fills in the result set returned when the permission on the shared data is searched.
+用于共享表中查找共享数据权限时，返回的结果集中填充的字段，表示当前共享记录的允许的操作权限。
 
 **Since:** 11
 
@@ -115,7 +114,7 @@ Operation permission on the shared data. It fills in the result set returned whe
 SHARING_RESOURCE_FIELD = '#_sharing_resource_field'
 ```
 
-Resource shared. It fills in the result set returned when the shared resource is searched.
+用于数据共享查找共享数据的共享资源时，返回的结果集中填充的字段，表示共享数据的共享资源标识。
 
 **Since:** 11
 

@@ -1,96 +1,80 @@
 # AccelerometerResponse
 
-Defines the callback invoked when the acceleration sensor data changes.
+加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**Since:** 3
+**Inheritance/Implementation:** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**Since:** 8
 
-**Deprecated since:** 8
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Substitutes:** ohos.sensor/sensor#AccelerometerResponse
+<!--Device-sensor-interface AccelerometerResponse extends Response--><!--Device-sensor-interface AccelerometerResponse extends Response-End-->
 
-**Required permissions:** ohos.permission.ACCELEROMETER
+**System capability:** SystemCapability.Sensors.Sensor
 
-<!--Device-unnamed-export interface AccelerometerResponse--><!--Device-unnamed-export interface AccelerometerResponse-End-->
+## Modules to Import
 
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
 
 ## x
 
 ```TypeScript
-x: number
+x: double
 ```
 
-Acceleration on the x-axis.
+施加在设备x轴方向的加速度。单位：m/s²；取值为实际上报物理量。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Substitutes:** ohos.sensor/sensor#AccelerometerResponse.x
+<!--Device-AccelerometerResponse-x: double--><!--Device-AccelerometerResponse-x: double-End-->
 
-**Required permissions:** ohos.permission.ACCELEROMETER
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-AccelerometerResponse-x: number--><!--Device-AccelerometerResponse-x: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 
 ## y
 
 ```TypeScript
-y: number
+y: double
 ```
 
-Acceleration on the y-axis.
+施加在设备y轴方向的加速度。单位：m/s²；取值为实际上报物理量。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Substitutes:** ohos.sensor/sensor#AccelerometerResponse.y
+<!--Device-AccelerometerResponse-y: double--><!--Device-AccelerometerResponse-y: double-End-->
 
-**Required permissions:** ohos.permission.ACCELEROMETER
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-AccelerometerResponse-y: number--><!--Device-AccelerometerResponse-y: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 
 ## z
 
 ```TypeScript
-z: number
+z: double
 ```
 
-Acceleration on the z-axis.
+施加在设备z轴方向的加速度。单位：m/s²；取值为实际上报物理量。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Substitutes:** ohos.sensor/sensor#AccelerometerResponse.z
+<!--Device-AccelerometerResponse-z: double--><!--Device-AccelerometerResponse-z: double-End-->
 
-**Required permissions:** ohos.permission.ACCELEROMETER
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-AccelerometerResponse-z: number--><!--Device-AccelerometerResponse-z: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 

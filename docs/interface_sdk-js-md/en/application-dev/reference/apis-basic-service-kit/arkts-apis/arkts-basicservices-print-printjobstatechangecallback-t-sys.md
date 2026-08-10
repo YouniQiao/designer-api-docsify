@@ -20,6 +20,6 @@ Defines the callback type used in registering to listen for PrintJobState.The va
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the state of print job  |
-| job | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the information of the print job  |
+| state | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | Yes | the state of print job |
+| job | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | the information of the print job |
 

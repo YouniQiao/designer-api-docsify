@@ -1,6 +1,6 @@
 # BackgroundColorStyle
 
-Describes the text background color style.
+文本背景颜色对象说明。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Describes the text background color style.
 constructor(textBackgroundStyle: TextBackgroundStyle)
 ```
 
-A constructor used to create a text background style.
+文本背景颜色的构造函数。未通过该接口设置时，默认背景颜色为Color.Transparent，圆角为0。
 
 **Since:** 14
 
@@ -34,7 +34,7 @@ A constructor used to create a text background style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textBackgroundStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options of the text background color.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_{&lt; br&gt; color: Color.Transparent,\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ radius: 0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_} |
+| textBackgroundStyle | [TextBackgroundStyle](arkts-arkui-span-textbackgroundstyle-i.md) | Yes | 文本背景色设置项。 |
 
 ## textBackgroundStyle
 
@@ -42,9 +42,9 @@ A constructor used to create a text background style.
 readonly textBackgroundStyle: TextBackgroundStyle
 ```
 
-Text background color of the styled string.
+获取属性字符串的文本背景颜色。
 
-Default value:
+默认值：
 
 {
 
@@ -54,7 +54,7 @@ radius: 0
 
 }
 
-**Type:** TextBackgroundStyle
+**Type:** [TextBackgroundStyle](arkts-arkui-span-textbackgroundstyle-i.md)
 
 **Since:** 14
 

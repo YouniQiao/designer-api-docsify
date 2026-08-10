@@ -1,11 +1,10 @@
 # ToggleOptions
 
-Options of the toggle.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is larger than inner elements'. This does not affect interface usability.
+Toggle组件的配置信息。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,16 +20,15 @@ Options of the toggle.
 isOn?: boolean
 ```
 
-Whether the toggle is turned on.
+开关是否打开。
 
-**true**: on. **false**: off.
+true：打开；false：关闭。
 
-Default value: **false**
+默认值：false
 
-This parameter supports two-way binding through \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-This property supports two-way binding through  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **Type:** boolean
 
@@ -52,11 +50,11 @@ This property supports two-way binding through
 type: ToggleType
 ```
 
-Type of the toggle.
+开关的样式。
 
-Default value: **ToggleType.Switch
+默认值：ToggleType.Switch
 
-**Type:** ToggleType
+**Type:** [ToggleType](../arkts-apis/arkts-arkui-toggle-toggletype-e.md)
 
 **Since:** 8
 

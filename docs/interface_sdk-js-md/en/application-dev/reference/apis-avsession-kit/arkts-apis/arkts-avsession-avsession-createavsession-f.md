@@ -1,12 +1,22 @@
 # createAVSession
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## createAVSession
 
 ```TypeScript
 function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void
 ```
 
-Create an AVSession instance. An ability can only create one AVSession
+创建会话对象，一个应用程序仅允许存在一个会话，重复创建会失败，结果通过callback异步回调方式返回。
+
+> **说明：**
+> 
+> - 在业务执行阶段需要保持avsession对象存活，避免后台管控静音、设备选择异常、通知/锁屏/胶囊播控卡片显示异常等情况。
 
 **Since:** 10
 
@@ -20,23 +30,24 @@ Create an AVSession instance. An ability can only create one AVSession
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The context of application |
-| tag | string | Yes | A user-defined name for this session |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The type of session \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVSession&gt; | Yes | async callback for AVSession. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 需要使用UIAbilityContext，用于系统获取应用组件的相关信息。 |
+| tag | string | Yes | 会话的自定义名称。 |
+| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | 会话类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVSession&gt; | Yes | 回调函数。回调返回会话实例对象，可用于获取会话ID，以及设置元数据、播放状态，发送按键事件等操作。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { avSession } from '@kit.AVSessionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 @Entry
 @Component
 struct Index {
@@ -51,15 +62,11 @@ struct Index {
           let context: Context = this.getUIContext().getHostContext() as Context;
           let sessionId: string;  // Used as an input parameter of subsequent functions.
 
-          avSession.createAVSession(context, tag, "audio", async (err: BusinessError, data: avSession.AVSession) => {
-            if (err) {
-              console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
-            } else {
+          avSession.createAVSession(context, tag, "audio", async (err:BusinessError, data: avSession.AVSession) => {
               currentAVSession = data;
               sessionId = currentAVSession.sessionId;
-              console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
-            }
-          });
+              console.info(`Succeeded in creating AV session, sessionId: ${sessionId}`);
+            });
         })
     }
     .width('100%')
@@ -75,7 +82,11 @@ struct Index {
 function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>
 ```
 
-Create an AVSession instance. An ability can only create one AVSession
+创建会话对象，一个应用进程仅允许存在一个会话，重复创建会失败，结果通过Promise异步回调方式返回。
+
+> **说明：**
+> 
+> - 在业务执行阶段需要保持avsession对象存活，避免后台管控静音、设备选择异常、通知/锁屏/胶囊播控卡片显示异常等情况。
 
 **Since:** 10
 
@@ -91,28 +102,28 @@ Create an AVSession instance. An ability can only create one AVSession
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The context of application |
-| tag | string | Yes | A user-defined name for this session |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The type of session \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 需要使用UIAbilityContext，用于系统获取应用组件的相关信息。 |
+| tag | string | Yes | 会话的自定义名称。 |
+| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | 会话类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVSession&gt; | Promise for AVSession |
+| Promise&lt;AVSession&gt; | Promise对象。回调返回会话实例对象，可用于获取会话ID，以及设置元数据、播放状态，发送按键事件等操作。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { avSession } from '@kit.AVSessionKit';
+
 @Entry
 @Component
 struct Index {
@@ -130,9 +141,7 @@ struct Index {
             avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
             currentAVSession = data;
             sessionId = currentAVSession.sessionId;
-            console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
-            }).catch((err: BusinessError) => {
-            console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+            console.info(`Succeeded in creating AV session, sessionId: ${sessionId}`);
             });
           })
       }

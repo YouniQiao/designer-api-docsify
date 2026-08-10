@@ -12,6 +12,12 @@ Obtains NR cell information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## mcc
 
 ```TypeScript
@@ -60,7 +66,7 @@ nci: int
 
 Indicates the 5G network cell ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ nrArfcn: int
 
 Indicates the NR-ARFCN(NR Absolute Radio Frequency Channel Number).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -100,7 +106,7 @@ pci: int
 
 Indicates the physical cell identification.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -120,7 +126,7 @@ tac: int
 
 Indicates the tracking area code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

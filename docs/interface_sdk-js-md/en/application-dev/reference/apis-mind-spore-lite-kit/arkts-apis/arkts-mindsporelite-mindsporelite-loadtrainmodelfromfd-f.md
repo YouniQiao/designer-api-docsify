@@ -1,5 +1,11 @@
 # loadTrainModelFromFd
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## loadTrainModelFromFd
 
 ```TypeScript
@@ -25,9 +31,9 @@ Load train model from file description
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | model file description |
-| trainCfg | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | model train configuration |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | model build context |
+| model | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | model file description |
+| trainCfg | [TrainCfg](arkts-mindsporelite-mindsporelite-traincfg-i.md) | No | model train configuration |
+| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | No | model build context |
 
 **Return value:**
 
@@ -39,10 +45,10 @@ Load train model from file description
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 | 1000012 | Failed to create native training model from file descriptor (fd). Possible causes: 1. The model file or file descriptor (fd) is incorrect; 2. The training configuration is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';
@@ -50,7 +56,9 @@ import { fileIo } from '@kit.CoreFileKit';
 let modelFile = '/path/to/xxx.ms';
 let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
 mindSporeLite.loadTrainModelFromFd(file.fd).then((mindSporeLiteModel: mindSporeLite.Model) => {
-  console.info("MSLITE trainMode: ", mindSporeLiteModel.trainMode);
+  console.info(`Succeeded in loading train model. Train mode: ${mindSporeLiteModel.trainMode}`);
+}).catch((error: Error) => {
+  console.error(`Failed to load train model from file descriptor. Model file: ${modelFile}, File descriptor: ${file.fd}, Error: ${error.message}`);
 });
 ```
 

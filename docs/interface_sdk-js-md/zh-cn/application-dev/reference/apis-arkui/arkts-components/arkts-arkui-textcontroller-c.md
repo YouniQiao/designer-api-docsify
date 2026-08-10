@@ -4,7 +4,7 @@ Text组件的控制器。
 
 ## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts controller: TextController = new TextController()```
 
 **起始版本：** 11
 
@@ -58,7 +58,7 @@ getLayoutManager(): LayoutManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 布局管理器对象，用于获取文本布局信息，包括行数、字形位置、行信息、字符绘制区域等。 |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | 布局管理器对象，用于获取文本布局信息，包括行数、字形位置、行信息、字符绘制区域等。 |
 
 ## setStyledString
 
@@ -84,7 +84,7 @@ setStyledString(value: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 属性字符串。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_StyledString的子类[MutableStyledString]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_也可以作为入参值。 |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 属性字符串。 &lt;br&gt;**说明：** &lt;br&gt;StyledString的子类[MutableStyledString](../arkts-apis/arkts-arkui-styledstring-mutablestyledstring-c.md/arkts-arkui-styledstring-mutablestyledstring-c.md)也可以作为入参值。 |
 
 ## setTextSelection
 
@@ -94,19 +94,20 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 ```
 
 设置文本选择区域并高亮显示。
-    **说明：**  
-    
-    当[copyOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置为CopyOptions.None时，设置setTextSelection不生效。  
-    
-    当[textOverflow]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。  
-    
-    当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。  
-    
-    当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。clip设置为false时，超出父组件的文本选中区域生效。  
-    
-    如果设备为PC/2in1，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。  
-    
-    当emoji表情被选中区域截断时，若表情的起始位置包含在设置的文本选中区域内，该表情就会被选中。
+
+> **说明：**
+> 
+> 当[copyOption](TextAttribute#copyOption)设置为CopyOptions.None时，设置setTextSelection不生效。
+> 
+> 当[textOverflow](TextAttribute#textOverflow)设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。
+> 
+> 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。
+> 
+> 当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。clip设置为false时，超出父组件的文本选中区域生效。
+> 
+> 如果设备为PC/2in1，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。
+> 
+> 当emoji表情被选中区域截断时，若表情的起始位置包含在设置的文本选中区域内，该表情就会被选中。
 
 **起始版本：** 23
 
@@ -124,7 +125,7 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | number \| undefined | 是 | 文本选择区域起始位置。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| selectionEnd | number \| undefined | 是 | 文本选择区域结束位置。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 选中文字时的配置。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：SelectionOptions中MenuPolicy.DEFAULT |
+| selectionStart | number \| undefined | 是 | 文本选择区域起始位置。 &lt;br&gt;取值范围：[0, +∞），值为负数或undefined时按0处理。 |
+| selectionEnd | number \| undefined | 是 | 文本选择区域结束位置。 &lt;br&gt;取值范围：[0, +∞），值为负数或undefined时按0处理。 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选中文字时的配置。 &lt;br&gt;默认值：SelectionOptions中MenuPolicy.DEFAULT |
 

@@ -1,6 +1,6 @@
 # SubWindowOptions
 
-Describes the parameters used for creating a child window.
+子窗口创建参数。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Describes the parameters used for creating a child window.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## decorEnabled
 
 ```TypeScript
 decorEnabled: boolean
 ```
 
-Whether decorations are displayed in the child window. **true** if displayed, **false** otherwise.
+子窗口是否显示装饰。true表示子窗口显示装饰，false表示子窗口不显示装饰。
 
 **Type:** boolean
 
@@ -36,7 +42,7 @@ Whether decorations are displayed in the child window. **true** if displayed, **
 isModal?: boolean
 ```
 
-Whether the modal property is enabled for the child window. **true** if enabled, **false** otherwise. The default value is **false**.
+子窗口是否启用模态属性。true表示子窗口启用模态属性，false表示子窗口禁用模态属性。不设置，则默认为false。
 
 **Type:** boolean
 
@@ -56,11 +62,12 @@ Whether the modal property is enabled for the child window. **true** if enabled,
 maximizeSupported?: boolean
 ```
 
-Whether the child window supports maximization. **true** if supported, **false** otherwise. The default value is  
-**false**.
+子窗口是否支持最大化特性。true表示子窗口支持最大化，false表示子窗口不支持最大化。不设置，则默认为false。
 
-This parameter can be used properly on devices that support the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode and are currently in that mode. On devices that do not support the freeform window mode, the API call will neither take effect nor report an error when this parameter is used as an input. On devices that support the freeform window mode but are not currently in that mode, the API call will neither take effect nor report an error when this parameter is used as an input. The setting will take effect after the devices switch to that mode.
+该参数在支持并处于[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备上可正常调用；在不支持  
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备上，作为入参使用时，对应接口不生效不报错；在支持但不处于  
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备上，作为入参使用时，对应接口不生效不报错，切换到  
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态后生效。
 
 **Type:** boolean
 
@@ -80,9 +87,9 @@ This parameter can be used properly on devices that support the
 modalityType?: ModalityType
 ```
 
-Modality type of the child window. This parameter takes effect only when the modal property is enabled for the child window. **WINDOW\_MODALITY** means window-modal, and **APPLICATION\_MODALITY** means application-modal. The default value is **WINDOW\_MODALITY**.
+子窗口模态类型，仅当子窗口启用模态属性时生效。不设置，则默认为WINDOW_MODALITY。
 
-**Type:** ModalityType
+**Type:** [ModalityType](arkts-arkui-window-modalitytype-e.md)
 
 **Since:** 14
 
@@ -100,10 +107,9 @@ Modality type of the child window. This parameter takes effect only when the mod
 outlineEnabled?: boolean
 ```
 
-Whether the child window displays an outline. **true** if displayed, **false** otherwise. The default value is  
-**false**.
+子窗口是否显示描边。true表示子窗口显示描边，false表示子窗口不显示描边。不设置，则默认为false。
 
-This parameter can be properly used on 2-in-1 devices. If it is used as an input parameter on other device types,the corresponding API has no effect and does not report errors.
+该参数在2in1设备、其他设备的电脑模式中可正常调用，在其他设备和其他模式中作为入参使用时，对应接口不生效不报错。
 
 **Type:** boolean
 
@@ -123,7 +129,7 @@ This parameter can be properly used on 2-in-1 devices. If it is used as an input
 title: string
 ```
 
-Title of the child window. The title display area should not go past the left side of the three-button area of the system. Any part that goes beyond will show as an ellipsis.
+子窗口标题。标题显示区域最右端不超过系统三键区域最左端，超过部分以省略号表示。
 
 **Type:** string
 
@@ -143,12 +149,10 @@ Title of the child window. The title display area should not go past the left si
 windowRect?: Rect
 ```
 
-Rectangle of the child window, and the size of the child window is limited. For details, see  
-[resize()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. If this parameter is not set and  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is not called, the default value {left: 0, top: 0, width: 0, height: 0} is used. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+子窗口矩形区域，其中子窗口存在大小限制，具体参考  
+[resize()](arkts-arkui-window-window-i.md#resize)方法。不设置且未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)显示前，则默认为{left: 0, top: 0, width: 0, height: 0}。具体参考[设置应用子窗口](../../../windowmanager/application-window-stage.md#设置应用子窗口)开发指南。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 18
 
@@ -166,9 +170,9 @@ Rectangle of the child window, and the size of the child window is limited. For 
 zLevel?: int
 ```
 
-Z-level of the child window. This parameter is valid only when the modal property is not enabled for the child window, that is, **isModal** is not set. The value is an integer in the range [-10000, 10000]. Floating-point numbers will be rounded down. The default value is **0**.
+子窗口层级级别，仅当子窗口未启用模态属性，即未设置isModal时生效。该参数是整数，取值范围为[-10000, 10000]，浮点数输入将向下取整。不设置，则默认为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -186,7 +190,7 @@ Z-level of the child window. This parameter is valid only when the modal propert
 zLevelAboveParentLoosened?: boolean
 ```
 
-Indicates whether loose the restriction of sub window z-level above parent.
+标识解除子窗在父窗口的层级限制
 
 **Type:** boolean
 

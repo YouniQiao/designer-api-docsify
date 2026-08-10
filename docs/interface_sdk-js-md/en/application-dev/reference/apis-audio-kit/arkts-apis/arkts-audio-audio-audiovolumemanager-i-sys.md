@@ -1,12 +1,12 @@
 # AudioVolumeManager
 
-This interface implements audio volume management.
+音量管理。
 
-Before calling any API in AudioVolumeManager, you must use  
-[getVolumeManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an AudioVolumeManager instance.
-    **NOTE**  
-    
-    - The initial APIs of this interface are supported since API version 9.
+在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **Since:** 9
 
@@ -15,6 +15,12 @@ Before calling any API in AudioVolumeManager, you must use
 <!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## forceVolumeKeyControlType
 
@@ -46,17 +52,17 @@ Interface for forcibly setting the volume type by pressing the volume key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type that the application expects to control using the volume key. |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Duration for continuing to control the volume type when no key is pressed. The forced volume type setting is released when the timer expires. Unit is second, the maximum duration is 10 seconds. If the duration is set to -1, the setting is canceled. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type that the application expects to control using the volume key. |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Duration for continuing to control the volume type when no key is pressed. The forced volume type setting is released when the timer expires. Unit is second, the maximum duration is 10 seconds. If the duration is set to -1, the setting is canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
+| 6800301 | Crash or blocking occurs in system process. |
 
 ## getActiveStreamsVolumeInfo
 
@@ -64,7 +70,7 @@ Interface for forcibly setting the volume type by pressing the volume key.
 getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 ```
 
-Obtains the Volume information of the active audio streams.
+获取当前音频流的音量信息。
 
 **Since:** 24
 
@@ -82,14 +88,14 @@ Obtains the Volume information of the active audio streams.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the result. |
+| [ActiveStreamsVolumeInfoArray](arkts-audio-audio-activestreamsvolumeinfoarray-t-sys.md) | Returns the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error, crash or blocking occurs in system process. |
+| 202 | Not system App. |
+| 6800301 | System error, crash or blocking occurs in system process. |
 
 ## getAppVolumePercentageForUid
 
@@ -121,23 +127,23 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | App's uid. |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | App's uid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the application's volume percentage. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let uid: number = 20010041; // Application ID.
@@ -169,20 +175,20 @@ Obtains volume type by stream type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream type. |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e-sys.md) | Yes | Audio stream type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the audio volume type. |
+| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Return the audio volume type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## getMaxSystemVolume
 
@@ -212,20 +218,20 @@ Obtains the maximum volume allowed for a volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Max volume level. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Max volume level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## getMinSystemVolume
 
@@ -255,20 +261,20 @@ Obtains the minimum volume allowed for a volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Min volume level. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Min volume level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## getMinSystemVolumePercentage
 
@@ -298,20 +304,20 @@ Gets the minimum system volume percentage application can set for specified volu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type to get. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Returns the volume percentage, which is an interger with the range [0, 100]. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the volume percentage, which is an interger with the range [0, 100]. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## getStreamUsagesByVolumeType
 
@@ -335,20 +341,20 @@ Obtains stream types by volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio stream type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the audio stream types. |
+| [StreamUsageArray](arkts-audio-audio-streamusagearray-t-sys.md) | Return the audio stream types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## getSupportedAudioVolumeTypes
 
@@ -378,7 +384,7 @@ Obtains system supported volume types.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
 ## getSystemVolume
 
@@ -408,20 +414,20 @@ Obtains the volume of a volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Current system volume level. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Current system volume level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## getSystemVolumeByUid
 
@@ -451,22 +457,22 @@ Obtains the volume of streams in specific uid application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| callingUid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Uid of the stream owner. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
+| callingUid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Uid of the stream owner. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Current system volume level. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Current system volume level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
+| 6800301 | Crash or blocking occurs in system process. |
 
 ## getSystemVolumePercentage
 
@@ -496,20 +502,20 @@ Gets the current system volume percentage for specified volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type to get. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Returns the volume percentage, which is an interger with the range [0, 100]. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the volume percentage, which is an integer with the range [0, 100]. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## getVolumeGroupInfos
 
@@ -534,9 +540,9 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Distributed deice net work id |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeGroupInfos&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;VolumeGroupInfos&gt; | Yes | Callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -580,7 +586,7 @@ Get the volume group list for a networkId. This method uses a promise to return 
 | --- | --- |
 | Promise&lt;VolumeGroupInfos&gt; | Promise used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 async function getVolumeGroupInfos(){
@@ -617,16 +623,16 @@ Get the volume group list for a networkId.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Volume group info list. |
+| [VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md) | Volume group info list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -668,22 +674,22 @@ Gets the volume db value that system calculate by volume type, volume level and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| volumeLevel | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume level. |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Output device type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
+| volumeLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Volume level to set. |
+| device | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes | Output device type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | The system volume in dB. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The system volume in dB. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## isAppVolumeMutedForUid
 
@@ -715,7 +721,7 @@ Checks whether the app volume is muted. If there are multiple callers setting mu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | App's uid. |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | App's uid. |
 | owned | boolean | Yes | If true is passed, the result will be indicated your owned muted state settings to this app. Otherwise if false is passed, the result will be indicated the real muted state. |
 
 **Return value:**
@@ -728,9 +734,9 @@ Checks whether the app volume is muted. If there are multiple callers setting mu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
 ## isSystemMuted
 
@@ -754,7 +760,7 @@ Checks whether a volume type is muted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 
 **Return value:**
 
@@ -766,8 +772,8 @@ Checks whether a volume type is muted.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## off('appVolumeChangeForUid')
 
@@ -794,15 +800,15 @@ Unsubscribes to the app volume change events..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'appVolumeChangeForUid' | Yes | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
 ## off('activeVolumeTypeChange')
 
@@ -810,7 +816,7 @@ Unsubscribes to the app volume change events..
 off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 ```
 
-Unsubscribes from active volume type changes.
+取消订阅 活跃的音量类型 事件
 
 **Since:** 20
 
@@ -827,14 +833,14 @@ Unsubscribes from active volume type changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | Yes | Type of the event to unregister. Only the activeVolumeTypeChange event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioVolumeType&gt; | No | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioVolumeType&gt; | No | Callback used to return the active volume type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## off('systemVolumeChange')
 
@@ -859,14 +865,14 @@ Unsubscribes to the system volume change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | Yes | Type of the event to be unregistered. Only the systemVolumeChange event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## offActiveVolumeTypeChange
 
@@ -890,14 +896,14 @@ Unsubscribes from active volume type changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioVolumeType&gt; | No | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioVolumeType&gt; | No | Callback used to return the active volume type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## offAppVolumeChangeForUid
 
@@ -923,15 +929,15 @@ Unsubscribes to the app volume change events..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
 ## offSystemVolumeChange
 
@@ -955,14 +961,14 @@ Unsubscribes to the system volume change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## offSystemVolumeChangeByFilter
 
@@ -970,7 +976,7 @@ Unsubscribes to the system volume change events.
 offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes from the system volume change events.
+取消订阅系统音量变化事件。
 
 **Since:** 26.0.0
 
@@ -988,14 +994,14 @@ Unsubscribes from the system volume change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used in the subscription. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | 订阅中使用的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system app. |
 
 ## offVolumePercentageChange
 
@@ -1019,14 +1025,14 @@ Unsubscribes from system volume percentage change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | No | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | No | Callback used to return the system volume percentage change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## on('appVolumeChangeForUid')
 
@@ -1034,7 +1040,7 @@ Unsubscribes from system volume percentage change events.
 on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void
 ```
 
-Listens for specified app volume change events.The app volume may changed by \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Listens for specified app volume change events.The app volume may changed by {@link setAppVolumePercentageForUid}.
 
 **Since:** 19
 
@@ -1054,15 +1060,15 @@ Listens for specified app volume change events.The app volume may changed by \_\
 | --- | --- | --- | --- |
 | type | 'appVolumeChangeForUid' | Yes | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
 | uid | int | Yes | The app's uid. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | Callback used to get the app volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
 ## on('activeVolumeTypeChange')
 
@@ -1070,7 +1076,7 @@ Listens for specified app volume change events.The app volume may changed by \_\
 on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 ```
 
-Subscribes to active volume type changes.
+订阅 活跃的音量类型 变化事件
 
 **Since:** 20
 
@@ -1087,14 +1093,14 @@ Subscribes to active volume type changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | Yes | Type of the event to listen for. Only the activeVolumeTypeChange event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioVolumeType&gt; | Yes | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioVolumeType&gt; | Yes | Callback used to return the active volume type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## on('systemVolumeChange')
 
@@ -1119,14 +1125,14 @@ Listens for system volume change events. This method uses a callback to get volu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | Yes | Type of the event to listen for. Only the systemVolumeChange event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | Callback used to get the system volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## onActiveVolumeTypeChange
 
@@ -1150,14 +1156,14 @@ Subscribes to active volume type changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioVolumeType&gt; | Yes | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioVolumeType&gt; | Yes | Callback used to return the active volume type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## onAppVolumeChangeForUid
 
@@ -1165,7 +1171,7 @@ Subscribes to active volume type changes.
 onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void
 ```
 
-Listens for specified app volume change events.The app volume may changed by \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Listens for specified app volume change events.The app volume may changed by {@link setAppVolumePercentageForUid}.
 
 **Since:** 23
 
@@ -1184,15 +1190,15 @@ Listens for specified app volume change events.The app volume may changed by \_\
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | The app's uid. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | Callback used to get the app volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
 ## onSystemVolumeChange
 
@@ -1216,14 +1222,14 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | Callback used to get the system volume change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## onSystemVolumeChangeByFilter
 
@@ -1231,7 +1237,7 @@ Listens for system volume change events. This method uses a callback to get volu
 onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
 ```
 
-Subscribes to system volume change events.When the system volume for the target filter changes, registered clients will receive a callback.
+订阅系统音量变化事件。当系统体积为目标时系统卷过滤器更改，已注册的客户端将收到回调。
 
 **Since:** 26.0.0
 
@@ -1249,15 +1255,15 @@ Subscribes to system volume change events.When the system volume for the target 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter for system volume changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback to receive information about the system volume. |
+| filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | Yes | 系统音量变化的过滤器。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | 回调用于接收系统音量的变化。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system app. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not a system app. |
 
 ## onVolumePercentageChange
 
@@ -1281,14 +1287,14 @@ Subscribes to system volume percentage change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | Callback used to return the system volume percentage change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## setAppVolumeMutedForUid
 
@@ -1320,7 +1326,7 @@ Change mute state of specified application volume. If there are multiple callers
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | App's uid. |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | App's uid. |
 | muted | boolean | Yes | Muted state to set. |
 
 **Return value:**
@@ -1333,10 +1339,10 @@ Change mute state of specified application volume. If there are multiple callers
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
+| 6800301 | Crash or blocking occurs in system process. |
 
 ## setAppVolumePercentageForUid
 
@@ -1368,8 +1374,8 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | App's uid. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume to set the application's volume percentage. The value range is from 0 to 100. |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | App's uid. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Volume to set. The value range is from 0 to 100. |
 
 **Return value:**
 
@@ -1381,12 +1387,12 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
+| 6800301 | Crash or blocking occurs in system process. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let uid: number = 20010041; // Application ID.
@@ -1427,9 +1433,9 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callingUid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Uid of the stream owner. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
+| callingUid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Uid of the stream owner. |
 
 **Return value:**
 
@@ -1441,10 +1447,10 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
+| 6800301 | Crash or blocking occurs in system process. |
 
 ## setSystemVolumePercentage
 
@@ -1458,7 +1464,7 @@ ArkTS-Sta:
 setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: int): Promise<void>
 ```
 
-Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100.The volume percentage corresponds to volume levels, with each level tied to a specific percentage.When the volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume levels.Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly distributed beween 1 and 99. When the volume percentage changes, the volume level changes accordingly.
+Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100.The volume percentage corresponds to volume levels, with each level tied to a specific percentage. When the volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume levels.Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly distributed between 1 and 99. When the volume percentage changes, the volume level changes accordingly.
 
 **Since:** 23
 
@@ -1476,8 +1482,8 @@ Sets the system volume percentage, using an integer ranging from minimum system 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type to set. |
-| percentage | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Percentage to set. It must be an integer with the range from minimum value getted by \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to 100. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type to set. |
+| percentage | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Percentage to set. It must be an integer with the range from minimum value getted by {@link #getMinSystemVolumePercentage} to 100. |
 
 **Return value:**
 
@@ -1489,110 +1495,8 @@ Sets the system volume percentage, using an integer ranging from minimum system 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, including volumeType or percentage param begin out of range. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
-
-## setVoipCapturerMuteForUid
-
-ArkTS-Dyn:
-```TypeScript
-setVoipCapturerMuteForUid(uid: number, streamId: number, muted: boolean): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setVoipCapturerMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>
-```
-
-Sets the mute state for the VoIP audio capture stream of a specified application.If there are multiple callers setting muted states for the same uid and streamId,only when all callers cancel muted state the VoIP capture stream will be truly unmuted.When the application abnormally exits, the application releases the audio stream and restarts it, or the audio service abnormally exits and restarts, the mute state set for this audio stream will automatically become invalid. In these cases, you need to call this API again to apply the mute state.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Required permissions:** ohos.permission.MUTE_VOIP_CAPTURE
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioVolumeManager-setVoipCapturerMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setVoipCapturerMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Uid of the application to be muted. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
-| streamId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Unique ID of the VoIP audio stream. |
-| muted | boolean | Yes | Mute state to set. The value **true** means to mute the VoIP capture stream, and **false** means to unmute the VoIP capture stream. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
-
-## setVoipRendererMuteForUid
-
-ArkTS-Dyn:
-```TypeScript
-setVoipRendererMuteForUid(uid: number, streamId: number, muted: boolean): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setVoipRendererMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>
-```
-
-Sets the mute state for the VoIP audio renderer stream of a specified application.If there are multiple callers setting muted states for the same uid and streamId,only when all callers cancel muted state the VoIP renderer stream will be truly unmuted.When the application abnormally exits, the application releases the audio stream and restarts it, or the audio service abnormally exits and restarts, the mute state set for this audio stream will automatically become invalid. In these cases, you need to call this API again to apply the mute state.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Required permissions:** ohos.permission.MUTE_VOIP_PLAYBACK
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioVolumeManager-setVoipRendererMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setVoipRendererMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Uid of the application to be muted. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
-| streamId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Unique ID of the VoIP audio stream. |
-| muted | boolean | Yes | Mute state to set. The value **true** means to mute the VoIP renderer stream, and **false** means to unmute the VoIP renderer stream. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+| 6800101 | Parameter verification failed, including volumeType or percentage param being out of range. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
+| 6800301 | Crash or blocking occurs in system process. |
 

@@ -1,0 +1,118 @@
+# ImageError
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare interface ImageError--><!--Device-unnamed-export declare interface ImageError-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## componentHeight
+
+```TypeScript
+componentHeight: int
+```
+
+组件的高。
+
+单位：px
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageError-componentHeight: int--><!--Device-ImageError-componentHeight: int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## componentWidth
+
+```TypeScript
+componentWidth: int
+```
+
+组件的宽。
+
+单位：px
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageError-componentWidth: int--><!--Device-ImageError-componentWidth: int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## downloadInfo
+
+```TypeScript
+downloadInfo?: RequestDownloadInfo
+```
+
+网络图片下载的详细信息，包含下载资源、网络、性能等信息。当图片来源为网络图片且下载失败时将携带此字段。
+
+默认值：null
+
+**Type:** [RequestDownloadInfo](../arkts-components/arkts-arkui-requestdownloadinfo-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageError-downloadInfo?: RequestDownloadInfo--><!--Device-ImageError-downloadInfo?: RequestDownloadInfo-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## error
+
+```TypeScript
+error?: BusinessError<void>
+```
+
+图片加载异常返回的报错信息，其中code为错误码，message为错误信息。报错信息请参考以下错误信息的详细介绍。
+
+默认值：{ code : -1, message : "" }
+
+**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageError-error?: BusinessError<void>--><!--Device-ImageError-error?: BusinessError<void>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## message
+
+```TypeScript
+message: string
+```
+
+报错信息。
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageError-message: string--><!--Device-ImageError-message: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

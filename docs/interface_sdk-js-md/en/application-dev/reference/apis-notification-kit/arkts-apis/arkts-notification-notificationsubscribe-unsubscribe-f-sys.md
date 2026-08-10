@@ -1,12 +1,18 @@
 # unsubscribe (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+```
+
 ## unsubscribe
 
 ```TypeScript
 function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void
 ```
 
-Unsubscribes from a notification. This API uses an asynchronous callback to return the result.
+取消订阅。使用callback异步回调。
 
 **Since:** 9
 
@@ -25,20 +31,21 @@ Unsubscribes from a notification. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscriber. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 取消订阅动作回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 201 | Permission denied.<br>**Applicable version:** 9 - 19 |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,7 +73,7 @@ notificationSubscribe.unsubscribe(subscriber, unsubscribeCallback);
 function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 ```
 
-Unsubscribes from a notification. This API uses a promise to return the result.
+取消订阅。使用Promise异步回调。
 
 **Since:** 9
 
@@ -85,25 +92,26 @@ Unsubscribes from a notification. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscriber. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 201 | Permission denied.<br>**Applicable version:** 9 - 19 |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -117,7 +125,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 notificationSubscribe.unsubscribe(subscriber).then(() => {
   console.info("unsubscribe success");
 }).catch((err: BusinessError) => {
-  console.error(`unsubscribe fail: ${JSON.stringify(err)}`);
+  console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
 });
 ```
 

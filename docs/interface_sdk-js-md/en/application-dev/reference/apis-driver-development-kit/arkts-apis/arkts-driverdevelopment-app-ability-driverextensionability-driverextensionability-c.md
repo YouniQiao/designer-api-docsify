@@ -1,6 +1,6 @@
 # DriverExtensionAbility
 
-The **DriverExtensionAbility** module provides the ExtensionAbility related to drivers. It provides lifecycle callbacks to be invoked when a driver is created, destroyed, connected, or disconnected.
+DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建、销毁、连接、断开等生命周期回调。
 
 **Since:** 10
 
@@ -10,14 +10,20 @@ The **DriverExtensionAbility** module provides the ExtensionAbility related to d
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
+## Modules to Import
+
+```TypeScript
+import { DriverExtensionContext } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## onConnect
 
 ```TypeScript
 onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 ```
 
-Called following **onCreate()** when a DriverExtensionAbility is started by calling **connectAbility()**. A  
-**RemoteObject** object is returned for communication between the server and client.
+Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitystage-abilitystage-c.md/arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)之后回调。返回一个  
+[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md/arkts-ipc-rpc-remoteobject-c.md)对象，用于客户端和服务端进行通信。
 
 **Since:** 10
 
@@ -33,15 +39,15 @@ Called following **onCreate()** when a DriverExtensionAbility is started by call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
+| rpc.RemoteObject | 一个RemoteObject对象，用于客户端和服务端进行通信；或一个Promise对象，返回用于通信的 RemoteObject对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -59,13 +65,13 @@ class StubTest extends rpc.RemoteObject{
 }
 class DriverExt extends DriverExtensionAbility {
   onConnect(want : Want) {
-    console.info('onConnect , want: ${want.abilityName}');
+    console.info(`onConnect , want: ${want.abilityName}`);
     return new StubTest('test');
   }
 }
 ```
 
-If the returned RemoteObject object depends on an asynchronous API, you can use the asynchronous lifecycle.
+If the returned [RemoteObject](../apis-ipc-kit/js-apis-rpc.md#remoteobject) object depends on an asynchronous API, you can use the asynchronous lifecycle.
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -100,7 +106,7 @@ class DriverExt extends DriverExtensionAbility {
 onDisconnect(want: Want): void | Promise<void>
 ```
 
-Called when a client is disconnected from this DriverExtensionAbility.
+Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 **Since:** 10
 
@@ -116,9 +122,9 @@ Called when a client is disconnected from this DriverExtensionAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -126,7 +132,7 @@ import { Want } from '@kit.AbilityKit';
 
 class DriverExt extends DriverExtensionAbility {
   onDisconnect(want : Want) {
-    console.info('onDisconnect, want: ${want.abilityName}');
+    console.info(`onDisconnect, want: ${want.abilityName}`);
   }
 }
 ```
@@ -139,7 +145,7 @@ import { Want } from '@kit.AbilityKit';
 
 class DriverExt extends DriverExtensionAbility {
   async onDisconnect(want : Want) {
-    console.info('onDisconnect, want: ${want.abilityName}');
+    console.info(`onDisconnect, want: ${want.abilityName}`);
     // Call the asynchronous function.
   }
 }
@@ -151,7 +157,7 @@ class DriverExt extends DriverExtensionAbility {
 onDisconnect(want: Want): undefined | Promise<void>
 ```
 
-Called back when all abilities connected to a driver extension are disconnected.
+Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 **Since:** 23
 
@@ -167,13 +173,13 @@ Called back when all abilities connected to a driver extension are disconnected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates disconnection information about the driver extension. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates disconnection information about the driver extension. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| undefined |  |
+| undefined | 返回值为空；或一个Promise对象，无返回结果。 |
 
 ## onDump
 
@@ -181,7 +187,7 @@ Called back when all abilities connected to a driver extension are disconnected.
 onDump(params: Array<string>): Array<string>
 ```
 
-Dumps client information. It is recommended that developers don't DUMP sensitive information.
+转储客户端信息时调用，建议不要转储敏感信息。
 
 **Since:** 10
 
@@ -197,15 +203,15 @@ Dumps client information. It is recommended that developers don't DUMP sensitive
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array&lt;string&gt; | Yes | Parameters in the form of a command. |
+| params | Array&lt;string&gt; | Yes | 表示命令形式的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | String array used to dump client information. |
+| Array&lt;string&gt; | 一个string类型的数组，用于转存客户端信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class DriverExt extends DriverExtensionAbility {
@@ -222,7 +228,7 @@ class DriverExt extends DriverExtensionAbility {
 onInit(want: Want): void
 ```
 
-Called when a DriverExtensionAbility is created to initialize the service logic.
+Extension生命周期回调，在创建时回调，执行初始化业务逻辑操作。
 
 **Since:** 10
 
@@ -238,9 +244,9 @@ Called when a DriverExtensionAbility is created to initialize the service logic.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -248,7 +254,7 @@ import { Want } from '@kit.AbilityKit';
 
 class DriverExt extends DriverExtensionAbility {
   onInit(want : Want) {
-    console.info('onInit, want: ${want.abilityName}');
+    console.info(`onInit, want: ${want.abilityName}`);
   }
 }
 ```
@@ -259,7 +265,7 @@ class DriverExt extends DriverExtensionAbility {
 onRelease(): void
 ```
 
-Called when this DriverExtensionAbility is destroyed to clear resources.
+Extension生命周期回调，在销毁时回调，执行资源清理等操作。
 
 **Since:** 10
 
@@ -271,7 +277,7 @@ Called when this DriverExtensionAbility is destroyed to clear resources.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
-**Example**
+## Examples
 
 ```TypeScript
 class DriverExt extends DriverExtensionAbility {
@@ -287,9 +293,9 @@ class DriverExt extends DriverExtensionAbility {
 context: DriverExtensionContext
 ```
 
-Context of the **DriverExtension**. This context is inherited from **ExtensionContext**.
+DriverExtension的上下文环境，继承自ExtensionContext。
 
-**Type:** DriverExtensionContext
+**Type:** [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
 
 **Since:** 10
 

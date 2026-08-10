@@ -1,12 +1,18 @@
 # cancelAllReminders
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## cancelAllReminders
 
 ```TypeScript
 function cancelAllReminders(callback: AsyncCallback<void>): void
 ```
 
-Cancels all reminders set by the current application. This API uses an asynchronous callback to return the result.
+取消当前应用设置的所有代理提醒。使用callback异步回调。
 
 **Since:** 9
 
@@ -20,16 +26,16 @@ Cancels all reminders set by the current application. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If all the reminders are canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 当取消代理提醒成功，err为undefined；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
+| 401 | If the input parameter is not valid parameter. |
+| 1700004 | The bundle name does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -51,7 +57,7 @@ reminderAgentManager.cancelAllReminders((err: BusinessError) =>{
 function cancelAllReminders(): Promise<void>
 ```
 
-Cancels all reminders set by the current application. This API uses a promise to return the result.
+取消当前应用设置的所有代理提醒。使用Promise异步回调。
 
 **Since:** 9
 
@@ -65,16 +71,16 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
+| 401 | If the input parameter is not valid parameter. |
+| 1700004 | The bundle name does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

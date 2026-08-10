@@ -1,8 +1,7 @@
 # DeviceKVStore
 
-Provides APIs to query and synchronize data in a device KV store. This class inherits from  
-[KVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified.For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted.Before calling any method in **DeviceKVStore**, you must use  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_to obtain a **DeviceKVStore** object.
+设备协同数据库，继承自KVStore，提供查询数据和同步数据的方法。设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。在调用DeviceKVStore的方法前，需要先通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个DeviceKVStore实例。
 
 **Inheritance/Implementation:** DeviceKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md)
 
@@ -24,8 +23,7 @@ Provides APIs to query and synchronize data in a device KV store. This class inh
 closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KvStoreResultSet** object obtained by  
-[DeviceKVStore.getResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses an asynchronous callback to return the result.
+关闭由[DeviceKVStore.getResultSet](../../../reference/apis-arkdata/js-apis-distributed-data.md#getresultset8-4)返回的KvStoreResultSet对象，使用callback异步回调。
 
 **Since:** 8
 
@@ -43,10 +41,10 @@ Closes the **KvStoreResultSet** object obtained by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KvStoreResultSet** object to close. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | 指示要关闭的KvStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -71,8 +69,7 @@ try {
 closeResultSet(resultSet: KvStoreResultSet): Promise<void>
 ```
 
-Closes the **KvStoreResultSet** object obtained by  
-[DeviceKVStore.getResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+关闭由[DeviceKVStore.getResultSet](../../../reference/apis-arkdata/js-apis-distributed-data.md#getresultset8-4)返回的KvStoreResultSet对象，使用Promise异步回调。
 
 **Since:** 8
 
@@ -90,15 +87,15 @@ Closes the **KvStoreResultSet** object obtained by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KvStoreResultSet** object to close. |
+| resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | 指示要关闭的KvStoreResultSet对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -121,14 +118,14 @@ try {
 get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void
 ```
 
-Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和key匹配的string值，使用callback异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -146,11 +143,11 @@ Obtains a string value that matches the specified device ID and key. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| key | string | Yes | Key to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean \| string \| number \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
+| deviceId | string | Yes | 标识要查询其数据的设备。 |
+| key | string | Yes | 表示要查询key值的键。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| Uint8Array&gt; | Yes | 回调函数，返回匹配给定条件的字符串值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -174,14 +171,14 @@ try{
 get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Array>
 ```
 
-Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和key匹配的string值，使用Promise异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -199,16 +196,16 @@ Obtains a string value that matches the specified device ID and key. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| key | string | Yes | Key to match. |
+| deviceId | string | Yes | 标识要查询其数据的设备。 |
+| key | string | Yes | 表示要查询key值的键。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean \| string \| number \| Uint8Array&gt; | Promise used to return the string value that matches the given condition. |
+| Promise&lt;boolean \| string \| number \| Uint8Array&gt; | Promise对象。返回匹配给定条件的字符串值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -236,14 +233,14 @@ try {
 getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和key前缀匹配的所有键值对，使用callback异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -261,11 +258,11 @@ Obtains all KV pairs that match the specified device ID and key prefix. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| keyPrefix | string | Yes | Key prefix to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs obtained. |
+| deviceId | string | Yes | 标识要查询其数据的设备。 |
+| keyPrefix | string | Yes | 表示要匹配的键前缀。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数，返回满足给定条件的所有键值对的列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -302,14 +299,14 @@ try {
 getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 ```
 
-Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和key前缀匹配的所有键值对，使用Promise异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -327,16 +324,16 @@ Obtains all KV pairs that match the specified device ID and key prefix. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| keyPrefix | string | Yes | Key prefix to match. |
+| deviceId | string | Yes | 标识要查询其数据的设备。 |
+| keyPrefix | string | Yes | 表示要匹配的键前缀。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return all the KV pairs that match the given condition. |
+| Promise&lt;Entry[]&gt; | Promise对象。返回匹配给定条件的所有键值对的列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -379,7 +376,7 @@ try {
 getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的键值对列表，使用callback异步回调。
 
 **Since:** 8
 
@@ -397,10 +394,10 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs obtained. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数，返回与指定Query对象匹配的键值对列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -442,7 +439,7 @@ try {
 getEntries(query: Query): Promise<Entry[]>
 ```
 
-Obtains the KV pairs that match the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的键值对列表，使用Promise异步回调。
 
 **Since:** 8
 
@@ -460,15 +457,15 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified **Query** object. |
+| Promise&lt;Entry[]&gt; | Promise对象。返回与指定Query对象匹配的键值对列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -511,14 +508,14 @@ try {
 getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -536,11 +533,11 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified device ID and **Query** object. |
+| deviceId | string | Yes | 键值对所属的设备ID。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -582,14 +579,14 @@ try {
 getEntries(deviceId: string, query: Query): Promise<Entry[]>
 ```
 
-Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -607,16 +604,16 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| deviceId | string | Yes | 键值对所属的设备ID。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified device ID and **Query** object. |
+| Promise&lt;Entry[]&gt; | Promise对象。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -660,14 +657,14 @@ try {
 getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和key前缀匹配的KvStoreResultSet对象，使用callback异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -685,11 +682,11 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| keyPrefix | string | Yes | Key prefix to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KvStoreResultSet&gt; | Yes | Callback used to return the **KvStoreResultSet** object that matches the specified device ID and key prefix. |
+| deviceId | string | Yes | 标识要查询其数据的设备。 |
+| keyPrefix | string | Yes | 表示要匹配的键前缀。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KvStoreResultSet&gt; | Yes | 回调函数。返回与指定设备ID和key前缀匹配的KvStoreResultSet对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -713,14 +710,14 @@ try {
 getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和key前缀匹配的KvStoreResultSet对象，使用Promise异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -738,16 +735,16 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| keyPrefix | string | Yes | Key prefix to match. |
+| deviceId | string | Yes | 标识要查询其数据的设备。 |
+| keyPrefix | string | Yes | 表示要匹配的键前缀。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KvStoreResultSet&gt; | Promise used to return the **KvStoreResultSet** object that matches the specified device ID and key prefix. |
+| Promise&lt;KvStoreResultSet&gt; | Promise对象。返回与指定设备ID和key前缀匹配的KvStoreResultSet对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -775,7 +772,7 @@ try {
 getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的KvStoreResultSet对象，使用callback异步回调。
 
 **Since:** 8
 
@@ -793,10 +790,10 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KvStoreResultSet&gt; | Yes | Callback used to return the **KvStoreResultSet** object obtained. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KvStoreResultSet&gt; | Yes | 回调函数，返回与指定Query对象匹配的KvStoreResultSet对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -838,7 +835,7 @@ try {
 getResultSet(query: Query): Promise<KvStoreResultSet>
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的KvStoreResultSet对象，使用Promise异步回调。
 
 **Since:** 8
 
@@ -856,15 +853,15 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KvStoreResultSet&gt; | Promise used to return the **KvStoreResultSet** object that matches the specified **Query** object. |
+| Promise&lt;KvStoreResultSet&gt; | Promise对象。返回与指定Query对象匹配的KvStoreResultSet对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -913,14 +910,14 @@ try {
 getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和Query对象匹配的KvStoreResultSet对象，使用callback异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -938,11 +935,11 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KvStoreResultSet&gt; | Yes | Callback used to return the **KvStoreResultSet** object that matches the specified device ID and **Query** object. |
+| deviceId | string | Yes | KvStoreResultSet对象所属的设备ID。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KvStoreResultSet&gt; | Yes | 回调函数。返回与指定设备ID和Query对象匹配的KvStoreResultSet对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -983,14 +980,14 @@ try {
 getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和Query对象匹配的KvStoreResultSet对象，使用Promise异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -1008,16 +1005,16 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| deviceId | string | Yes | KvStoreResultSet对象所属的设备ID。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KvStoreResultSet&gt; | Promise used to return the **KvStoreResultSet** object that matches the specified device ID and **Query** object. |
+| Promise&lt;KvStoreResultSet&gt; | Promise对象。返回与指定设备ID和Query对象匹配的KvStoreResultSet对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1067,7 +1064,7 @@ try {
 getResultSize(query: Query, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的结果数，使用callback异步回调。
 
 **Since:** 8
 
@@ -1085,10 +1082,10 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回与指定Query对象匹配的结果数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1125,7 +1122,7 @@ try {
 getResultSize(query: Query): Promise<number>
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的结果数，使用Promise异步回调。
 
 **Since:** 8
 
@@ -1143,15 +1140,15 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of results obtained. |
+| Promise&lt;number&gt; | Promise对象。返回与指定Query对象匹配的结果数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1192,14 +1189,14 @@ try {
 getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -1217,11 +1214,11 @@ Obtains the number of results that match the specified device ID and **Query** o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
+| deviceId | string | Yes | KvStoreResultSet对象所属的设备ID。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1257,14 +1254,14 @@ try {
 getResultSize(deviceId: string, query: Query): Promise<number>
 ```
 
-Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -1282,16 +1279,16 @@ Obtains the number of results that match the specified device ID and **Query** o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| deviceId | string | Yes | KvStoreResultSet对象所属的设备ID。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of results obtained. |
+| Promise&lt;number&gt; | Promise对象。返回与指定设备ID和Query对象匹配的结果数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1331,7 +1328,7 @@ try {
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 ```
 
-Unsubscribes from data changes.
+取消订阅数据变更通知。
 
 **Since:** 8
 
@@ -1349,10 +1346,10 @@ Unsubscribes from data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| event | 'dataChange' | Yes | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1379,7 +1376,7 @@ class KvstoreModel {
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
 ```
 
-Unsubscribes from sync completion events.
+取消订阅同步完成事件回调通知。
 
 **Since:** 8
 
@@ -1397,10 +1394,10 @@ Unsubscribes from sync completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| event | 'syncComplete' | Yes | 取消订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1427,7 +1424,7 @@ class KvstoreModel {
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
 ```
 
-Subscribes to data changes of the specified type.
+订阅指定类型的数据变更通知。
 
 **Since:** 8
 
@@ -1445,11 +1442,11 @@ Subscribes to data changes of the specified type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of data change. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
+| event | 'dataChange' | Yes | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 表示订阅的类型。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1464,7 +1461,7 @@ kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, fun
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 ```
 
-Subscribes to sync completion events.
+订阅同步完成事件回调通知。
 
 **Since:** 8
 
@@ -1482,10 +1479,10 @@ Subscribes to sync completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
+| event | 'syncComplete' | Yes | 订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | 回调函数。用于向调用方发送同步结果的回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1511,14 +1508,14 @@ try {
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of the specified device from this KV store. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+从当前数据库中删除指定设备的数据，使用callback异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -1536,10 +1533,10 @@ Deletes data of the specified device from this KV store. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| deviceId | string | Yes | 标识要删除其数据的设备。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1571,14 +1568,14 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of the specified device from this KV store. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+从当前数据库中删除指定设备的数据，使用Promise异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -1596,15 +1593,15 @@ Deletes data of the specified device from this KV store. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
+| deviceId | string | Yes | 标识要删除其数据的设备。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1638,14 +1635,14 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Synchronizes the KV store manually.
-    **NOTE**  
-    
-    **deviceIds** is **networkId** in \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [DeviceInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which can be obtained by  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.
+在手动同步方式下，触发数据库同步。
+
+> **说明：**
+> 
+> 其中deviceIds为&lt;!--RP2--&gt;[DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)中的
+> networkId, 通过调用
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP2End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **Since:** 8
 
@@ -1665,11 +1662,11 @@ Synchronizes the KV store manually.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | string[] | Yes | networkId**s of the devices to be synchronized. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Sync mode. |
-| delayMs | number | No | Delay time allowed, in milliseconds. The default value is **0**. |
+| deviceIds | string[] | Yes | 需要同步DeviceKVStore数据库的设备networkId列表。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 同步模式。 |
+| delayMs | number | No | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## message
 
 ```TypeScript
@@ -38,7 +44,7 @@ reason: ContinuousTaskSuspendReason
 
 长时任务暂停的原因。
 
-**类型：** ContinuousTaskSuspendReason
+**类型：** [ContinuousTaskSuspendReason](arkts-backgroundtasks-backgroundtaskmanager-continuoustasksuspendreason-e.md)
 
 **起始版本：** 26.0.0
 

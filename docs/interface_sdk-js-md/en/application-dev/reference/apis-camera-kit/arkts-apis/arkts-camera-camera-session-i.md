@@ -1,7 +1,6 @@
 # Session
 
-Session** implements a session, which saves all [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ instances required to run the camera and requests the camera to take a photo or record a video.
+会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能（录像，拍照）。
 
 **Since:** 11
 
@@ -11,13 +10,19 @@ Session** implements a session, which saves all [CameraInput]\_\_\_JSDOC\_LINK\_
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## addInput
 
 ```TypeScript
 addInput(cameraInput: CameraInput): void
 ```
 
-Adds a [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to this session.
+把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。
 
 **Since:** 11
 
@@ -33,15 +38,16 @@ Adds a [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to this sessi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | CameraInput** instance to add. |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | 需要添加的CameraInput实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config.<br>**Applicable version:** 11 - 17 |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## addOutput
 
@@ -49,7 +55,7 @@ Adds a [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to this sessi
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-Adds a [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to this session.
+把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。
 
 **Since:** 11
 
@@ -65,15 +71,16 @@ Adds a [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to this sess
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | CameraOutput** instance to add. |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | 需要添加的CameraOutput实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config.<br>**Applicable version:** 11 - 17 |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## beginConfig
 
@@ -81,7 +88,7 @@ Adds a [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to this sess
 beginConfig(): void
 ```
 
-Starts configuration for the session.
+开始配置会话。
 
 **Since:** 11
 
@@ -97,8 +104,8 @@ Starts configuration for the session.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400105](../errorcode-camera.md#7400105-session-configuration-locked) | Session config locked. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400105 | Session config locked. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## canAddInput
 
@@ -106,8 +113,8 @@ Starts configuration for the session.
 canAddInput(cameraInput: CameraInput): boolean
 ```
 
-Checks whether a **CameraInput** instance can be added to this session. This API must be called after  
-[beginConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and before [commitConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+判断当前cameraInput是否可以添加到session中。当前函数需要在[beginConfig](arkts-camera-camera-session-i.md#beginconfig)和  
+[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之间生效。
 
 **Since:** 11
 
@@ -123,13 +130,13 @@ Checks whether a **CameraInput** instance can be added to this session. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | CameraInput** instance to add. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | 需要添加的CameraInput实例。传参异常（如超出范围、传入null、未定义等），实际接口不会生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for adding the **CameraInput** instance. **true** if it can be added, **false** otherwise. |
+| boolean | 判断当前cameraInput是否可以添加到session中。true表示支持添加当前cameraInput，false表示不支持添加。 |
 
 ## canAddOutput
 
@@ -137,8 +144,8 @@ Checks whether a **CameraInput** instance can be added to this session. This API
 canAddOutput(cameraOutput: CameraOutput): boolean
 ```
 
-Determines whether a CameraOutput instance can be added to this session. This API must be called after  
-[addInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and before [commitConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+判断当前cameraOutput是否可以添加到session中。当前函数需要在[addInput](arkts-camera-camera-session-i.md#addinput)和  
+[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之间生效。
 
 **Since:** 11
 
@@ -154,13 +161,13 @@ Determines whether a CameraOutput instance can be added to this session. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | CameraOutput** instance to add. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | 需要添加的CameraOutput实例。传参异常（如超出范围、传入null、未定义等），实际接口不会生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for adding the **CameraOutput** instance. **true** if it can be added, **false** otherwise. |
+| boolean | 是否可以添加当前cameraOutput到session中，true为可添加，false为不可添加。 |
 
 ## commitConfig
 
@@ -168,7 +175,7 @@ Determines whether a CameraOutput instance can be added to this session. This AP
 commitConfig(callback: AsyncCallback<void>): void
 ```
 
-Commits the configuration for this session. This API uses an asynchronous callback to return the result.
+提交配置信息，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 11
 
@@ -184,14 +191,14 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. For example, if the aspect ratio of the preview stream is different from that of the video output stream, error code 7400201 is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)，比如预览流与录像输出流的分辨率的宽高比不一致，会返回7400201。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
 
 ## commitConfig
 
@@ -199,7 +206,7 @@ Commits the configuration for this session. This API uses an asynchronous callba
 commitConfig(): Promise<void>
 ```
 
-Commits the configuration for this session. This API uses a promise to return the result.
+提交配置信息。使用Promise异步回调。
 
 **Since:** 11
 
@@ -215,14 +222,14 @@ Commits the configuration for this session. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
 
 ## release
 
@@ -230,7 +237,7 @@ Commits the configuration for this session. This API uses a promise to return th
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this session. This API uses an asynchronous callback to return the result.
+释放会话资源，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 11
 
@@ -246,13 +253,13 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## release
 
@@ -260,7 +267,7 @@ Releases this session. This API uses an asynchronous callback to return the resu
 release(): Promise<void>
 ```
 
-Releases this session. This API uses a promise to return the result.
+释放会话资源。使用Promise异步回调。
 
 **Since:** 11
 
@@ -276,13 +283,13 @@ Releases this session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## removeInput
 
@@ -290,8 +297,8 @@ Releases this session. This API uses a promise to return the result.
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance from this session. This API must be called after  
-[beginConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and before [commitConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+移除[CameraInput](arkts-camera-camera-camerainput-i.md)。当前函数需要在[beginConfig](arkts-camera-camera-session-i.md#beginconfig)和  
+[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之间生效。
 
 **Since:** 11
 
@@ -307,15 +314,16 @@ Removes a [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance from this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | CameraInput** instance to remove. |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | 需要移除的CameraInput实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config.<br>**Applicable version:** 11 - 17 |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## removeOutput
 
@@ -323,7 +331,7 @@ Removes a [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance from this 
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-Removes a [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance from this session.
+从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 **Since:** 11
 
@@ -339,15 +347,16 @@ Removes a [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance from this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | CameraOutput** instance to remove. |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | 需要移除的CameraOutput实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config.<br>**Applicable version:** 11 - 17 |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## start
 
@@ -355,7 +364,7 @@ Removes a [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance from this
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts this session. This API uses an asynchronous callback to return the result.
+开始会话工作，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 11
 
@@ -371,15 +380,15 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
 
 ## start
 
@@ -387,7 +396,7 @@ Starts this session. This API uses an asynchronous callback to return the result
 start(): Promise<void>
 ```
 
-Starts this session. This API uses a promise to return the result.
+开始会话工作。使用Promise异步回调。
 
 **Since:** 11
 
@@ -403,15 +412,15 @@ Starts this session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
 
 ## stop
 
@@ -419,7 +428,7 @@ Starts this session. This API uses a promise to return the result.
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops this session. This API uses an asynchronous callback to return the result.
+停止会话工作，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 11
 
@@ -435,13 +444,13 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## stop
 
@@ -449,7 +458,7 @@ Stops this session. This API uses an asynchronous callback to return the result.
 stop(): Promise<void>
 ```
 
-Stops this session. This API uses a promise to return the result.
+停止会话工作。使用Promise异步回调。
 
 **Since:** 11
 
@@ -465,11 +474,11 @@ Stops this session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 

@@ -10,13 +10,19 @@ Describes the Gatt descriptor.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## characteristicUuid
 
 ```TypeScript
 characteristicUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to which the descriptor belongs
+The UUID of the {@link BLECharacteristic} instance to which the descriptor belongs
 
 **Type:** string
 
@@ -40,7 +46,7 @@ descriptorHandle?: int
 
 The descriptor handle of the BLEDescriptor instance
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -106,7 +112,7 @@ permissions?: GattPermissions
 
 The permissions of a BLEDescriptor instance. The default value is Readable and Writable.
 
-**Type:** GattPermissions
+**Type:** [GattPermissions](arkts-connectivity-ble-gattpermissions-i.md)
 
 **Since:** 20
 
@@ -126,7 +132,7 @@ The permissions of a BLEDescriptor instance. The default value is Readable and W
 serviceUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to which the descriptor belongs
+The UUID of the {@link GattService} instance to which the descriptor belongs
 
 **Type:** string
 

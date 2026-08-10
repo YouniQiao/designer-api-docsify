@@ -1,5 +1,11 @@
 # updateSession
 
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## updateSession
 
 ```TypeScript
@@ -25,33 +31,33 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | handle | long | 是 | updateSession操作的uint64类型的handle值。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | updateSession的参数集合。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HuksReturnResult&gt; | 是 | 回调函数。当密钥操作update成功时，err为undefined，data为获取到的HuksReturnResult；否 则为错误对象。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | updateSession的参数集合。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | 是 | 回调函数。当密钥操作update成功时，err为undefined，data为获取到的HuksReturnResult；否 则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
-| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
-| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine or UKey driver |
-| [12000007](../errorcode-huks.md#12000007-密钥访问失败-密钥已失效) | this credential is already invalidated permanently |
-| [12000008](../errorcode-huks.md#12000008-密钥访问失败-密钥认证失败) | verify auth token failed |
-| [12000009](../errorcode-huks.md#12000009-密钥访问失败-密钥访问超时) | auth token is already timeout |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 22+ |
-| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | the UKey PIN is locked\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 22+ |
-| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | the UKey PIN not authenticated\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 22+ |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 22+ |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 23+ |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
+| 12000023 | the UKey PIN not authenticated<br>**适用版本：** 22+ |
+| 801 | api is not supported |
+| 12000021 | the UKey PIN is locked<br>**适用版本：** 22+ |
+| 12000020 | the provider operation failed<br>**适用版本：** 22+ |
+| 12000018 | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| 12000026 | the secure element is not available<br>**适用版本：** 26.0.0+ |
+| 12000024 | the provider or UKey is busy<br>**适用版本：** 22+ |
+| 12000007 | this credential is already invalidated permanently |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 12000006 | error occurred in crypto engine or UKey driver |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000003 | algorithm param is invalid |
+| 12000002 | algorithm param is missing |
+| 12000001 | algorithm mode is not supported |
+| 12000014 | memory is insufficient |
+| 12000012 | Device environment or input parameter abnormal |
+| 12000011 | queried entity does not exist |
+| 12000009 | auth token is already timeout |
+| 12000008 | verify auth token failed |
 
 
 ## updateSession
@@ -82,30 +88,30 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | handle | long | 是 | Handle of the **updateSession** operation, which is of the uint64 type. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Parameter set used for the **updateSession** operation. |
-| token | Uint8Array | 是 | Authentication token for \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HuksReturnResult&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Parameter set used for the **updateSession** operation. |
+| token | Uint8Array | 是 | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control) . |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
-| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
-| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine |
-| [12000007](../errorcode-huks.md#12000007-密钥访问失败-密钥已失效) | this credential is already invalidated permanently |
-| [12000008](../errorcode-huks.md#12000008-密钥访问失败-密钥认证失败) | verify auth token failed |
-| [12000009](../errorcode-huks.md#12000009-密钥访问失败-密钥访问超时) | auth token is already timeout |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 23+ |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
+| 801 | api is not supported |
+| 12000018 | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| 12000026 | the secure element is not available<br>**适用版本：** 26.0.0+ |
+| 12000007 | this credential is already invalidated permanently |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 12000006 | error occurred in crypto engine |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000003 | algorithm param is invalid |
+| 12000002 | algorithm param is missing |
+| 12000001 | algorithm mode is not supported |
+| 12000014 | memory is insufficient |
+| 12000012 | Device environment or input parameter abnormal |
+| 12000011 | queried entity does not exist |
+| 12000009 | auth token is already timeout |
+| 12000008 | verify auth token failed |
 
 
 ## updateSession
@@ -133,8 +139,8 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | handle | long | 是 | updateSession操作的uint64类型的handle值。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | updateSession操作的参数集合。 |
-| token | Uint8Array | 否 | 密钥 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的用户鉴权证 明(AuthToken)，不填表示不进行二次认证密钥访问控制。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | updateSession操作的参数集合。 |
+| token | Uint8Array | 否 | 密钥 [二次认证密钥访问控制](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#二次认证密钥访问控制)的用户鉴权证 明(AuthToken)，不填表示不进行二次认证密钥访问控制。 |
 
 **返回值：**
 
@@ -146,24 +152,24 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
-| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
-| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine or UKey driver |
-| [12000007](../errorcode-huks.md#12000007-密钥访问失败-密钥已失效) | this credential is already invalidated permanently |
-| [12000008](../errorcode-huks.md#12000008-密钥访问失败-密钥认证失败) | verify auth token failed |
-| [12000009](../errorcode-huks.md#12000009-密钥访问失败-密钥访问超时) | auth token is already timeout |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 22+ |
-| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | the UKey PIN is locked\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 22+ |
-| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | the UKey PIN not authenticated\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 22+ |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 22+ |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 23+ |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
+| 12000023 | the UKey PIN not authenticated<br>**适用版本：** 22+ |
+| 801 | api is not supported |
+| 12000021 | the UKey PIN is locked<br>**适用版本：** 22+ |
+| 12000020 | the provider operation failed<br>**适用版本：** 22+ |
+| 12000018 | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| 12000026 | the secure element is not available<br>**适用版本：** 26.0.0+ |
+| 12000024 | the provider or UKey is busy<br>**适用版本：** 22+ |
+| 12000007 | this credential is already invalidated permanently |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 12000006 | error occurred in crypto engine or UKey driver |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000003 | algorithm param is invalid |
+| 12000002 | algorithm param is missing |
+| 12000001 | algorithm mode is not supported |
+| 12000014 | memory is insufficient |
+| 12000012 | Device environment or input parameter abnormal |
+| 12000011 | queried entity does not exist |
+| 12000009 | auth token is already timeout |
+| 12000008 | verify auth token failed |
 

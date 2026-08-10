@@ -1,5 +1,11 @@
 # setPortRoles（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setPortRoles
 
 ```TypeScript
@@ -27,8 +33,8 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | portId | number | 是 | 端口号。 |
-| powerRole | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 充电的角色。 |
-| dataRole | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 数据传输的角色。 |
+| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | 是 | 充电的角色。 |
+| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | 是 | 数据传输的角色。 |
 
 **返回值：**
 
@@ -40,5 +46,5 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 

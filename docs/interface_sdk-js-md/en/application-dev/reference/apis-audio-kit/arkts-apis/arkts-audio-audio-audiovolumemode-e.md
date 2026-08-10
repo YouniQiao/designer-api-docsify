@@ -1,6 +1,6 @@
 # AudioVolumeMode
 
-Enumerates the audio volume modes.
+表示音量模式的枚举。
 
 **Since:** 19
 
@@ -16,7 +16,7 @@ Enumerates the audio volume modes.
 SYSTEM_GLOBAL = 0
 ```
 
-System-level volume (default mode).
+系统级音量（默认模式）。
 
 **Since:** 19
 
@@ -32,7 +32,7 @@ System-level volume (default mode).
 APP_INDIVIDUAL = 1
 ```
 
-Application-level volume.
+应用级音量。
 
 **Since:** 19
 

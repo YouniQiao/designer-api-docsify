@@ -1,12 +1,18 @@
 # publish
 
+## Modules to Import
+
+```TypeScript
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## publish
 
 ```TypeScript
 function publish(event: string, callback: AsyncCallback<void>): void
 ```
 
-Publishes a common event. This API uses an asynchronous callback to return the result.
+发布公共事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -22,21 +28,19 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | Name of the common event to publish. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the common event is successfully published, **err** is **undefined**; if the event fails to be published, **err** is an error object. |
+| event | string | Yes | 表示要发布的公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当公共事件发布成功时，err为undefined；发布失败时， err为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) | The common event sending frequency too high.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
-| [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
+| 1500007 | Failed to send the message to the common event service. |
+| 1500003 | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
+| 1500008 | Failed to initialize the common event service. |
+| 1500009 | Failed to obtain system parameters. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -44,26 +48,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 // Publish a common event.
 try {
   commonEventManager.publish('event', (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to publish common event. Code is ${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in publishing common event.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to publish common event. Code is ${err.code}, message is ${err.message}`);
-};
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Publish a common event.
-try {
-  commonEventManager.publish('event', (err: BusinessError | null) => {
     if (err) {
       console.error(`Failed to publish common event. Code is ${err.code}, message is ${err.message}`);
       return;
@@ -83,7 +67,7 @@ try {
 function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void
 ```
 
-Publishes a common event. This API uses an asynchronous callback to return the result.
+发布公共事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -99,22 +83,20 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | Name of the common event to publish. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Properties of the common event to publish. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the common event is successfully published, **err** is **undefined**; if the event fails to be published, **err** is an error object. |
+| event | string | Yes | 表示要发布的公共事件。 |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) | Yes | 表示发布公共事件的属性。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当公共事件发布成功时，err为undefined；发布失败时， err为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) | The common event sending frequency too high.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
-| [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
+| 1500007 | Failed to send the message to the common event service. |
+| 1500003 | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
+| 1500008 | Failed to initialize the common event service. |
+| 1500009 | Failed to obtain system parameters. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -124,38 +106,11 @@ let options: commonEventManager.CommonEventPublishData = {
   code: 0,
   data: 'initial data',
   isOrdered: true // The common event is an ordered one.
-}
+};
 
 // Publish a common event.
 try {
   commonEventManager.publish('event', options, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to publish common event. Code is ${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in publishing common event.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to publish common event. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Common event information. The following uses an ordered common event as an example.
-let options: commonEventManager.CommonEventPublishData = {
-  code: 0,
-  data: 'initial data',
-  isOrdered: true // The common event is an ordered one.
-}
-
-// Publish a common event.
-try {
-  commonEventManager.publish('event', options, (err: BusinessError | null) => {
     if (err) {
       console.error(`Failed to publish common event. Code is ${err.code}, message is ${err.message}`);
       return;

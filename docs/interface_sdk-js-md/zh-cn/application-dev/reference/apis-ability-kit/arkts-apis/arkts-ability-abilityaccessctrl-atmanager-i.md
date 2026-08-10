@@ -1,6 +1,6 @@
 # AtManager
 
-程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取实例。
+程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager)获取实例。
 
 **起始版本：** 8
 
@@ -9,6 +9,12 @@
 <!--Device-abilityAccessCtrl-interface AtManager--><!--Device-abilityAccessCtrl-interface AtManager-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
+
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
 
 ## checkAccessToken
 
@@ -40,8 +46,8 @@ checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_字段获取。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值限定为整数。取值约束：该参数必须为大于0的整数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ BundleInfo获取可参考：[bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_；\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
-| permissionName | Permissions | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值约束：权限名长度不能超过256个字符。 |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -53,12 +59,10 @@ checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12100001 | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -72,27 +76,7 @@ let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag
 let tokenID: number = bundleInfo.appInfo.accessTokenId;
 // 设置需要校验的权限名
 let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
-atManager.checkAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
-  console.info(`checkAccessToken success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`checkAccessToken fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建权限管理器实例
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// 获取应用的bundleInfo信息
-let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
-// 获取应用的TokenID
-let tokenID: int = bundleInfo.appInfo.accessTokenId as int;
-// 设置需要校验的权限名
-let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
+// 校验应用是否被授予权限
 atManager.checkAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
   console.info(`checkAccessToken success, result: ${data}`);
 }).catch((err: BusinessError): void => {
@@ -114,7 +98,7 @@ checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus
 
 校验应用是否已被授予指定权限，同步返回该权限的授权状态。开发者可据此决定直接执行后续业务流程，或继续发起权限申请，或引导用户前往设置页修改授权状态。
 
-与[checkAccessToken]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相比，本接口同步返回授权状态，适用于无需异步处理的权限校验场景。
+与[checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)相比，本接口同步返回授权状态，适用于无需异步处理的权限校验场景。
 
 适用于应用访问相机、麦克风、位置等受保护资源前进行前置权限判断的场景。
 
@@ -132,25 +116,23 @@ checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_字段获取。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值限定为整数。取值约束：该参数必须为大于0的整数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ BundleInfo获取可参考：[bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_；\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
-| permissionName | Permissions | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值约束：权限名长度不能超过256个字符。 |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 枚举实例，返回授权状态。 |
+| [GrantStatus](arkts-ability-bundle-grantstatus-e.md) | 枚举实例，返回授权状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100001 | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -168,37 +150,13 @@ let data: abilityAccessCtrl.GrantStatus = atManager.checkAccessTokenSync(tokenID
 console.info(`Result: ${data}`);
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建权限管理器实例
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// 获取应用的bundleInfo信息
-let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
-// 获取应用的TokenID
-let tokenID: int = bundleInfo.appInfo.accessTokenId as int;
-// 设置需要校验的权限名
-let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
-try {
-  // 同步校验应用是否被授予权限
-  let data: abilityAccessCtrl.GrantStatus = atManager.checkAccessTokenSync(tokenID, permissionName);
-  console.info(`checkAccessTokenSync success, result: ${data}`);
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getSelfPermissionStatus
 
 ```TypeScript
 getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 ```
 
-查询当前应用的权限状态，同步返回结果。调用成功后，返回当前权限的状态。与[checkAccessToken]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_不同，本接口无需传入应用身份标识，仅用于查询当前应用自身权限状态。
+查询当前应用的权限状态，同步返回结果。调用成功后，返回当前权限的状态。与[checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)不同，本接口无需传入应用身份标识，仅用于查询当前应用自身权限状态。
 
 适用于在判断是否需要请求权限前、权限申请后确认授权结果、或监听到权限状态变化后重新查询等场景。
 
@@ -216,22 +174,22 @@ getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionName | Permissions | 是 | 需要查询状态的权限名称。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值约束：权限名长度不能超过256个字符。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 需要查询状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 枚举实例，返回权限状态。 |
+| [PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md) | 枚举实例，返回权限状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionName is empty or exceeds 256 characters. |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| 12100001 | Invalid parameter. The permissionName is empty or exceeds 256 characters. |
+| 12100007 | Service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -262,9 +220,10 @@ off(
 取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。
 
 在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。
-    **说明**  
-    当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。  
-    该接口通常与[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配套使用，用于取消通过on创建的监听关系。
+
+> **说明：**
+> 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。
+> 该接口通常与[on](abilityAccessCtrl.AtManager.on)配套使用，用于取消通过on创建的监听关系。
 
 **起始版本：** 18
 
@@ -281,18 +240,18 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 | 取消订阅事件类型，固定为'selfPermissionStateChange'，权限状态变更事件。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on订阅时的权限列表匹配（不区分顺序）。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionStateChangeInfo&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on订阅时的权限列表匹配（不区分顺序）。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is not used in pair with 'on'. |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100004 | The API is not used in pair with 'on'. |
+| 12100007 | Service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
@@ -326,7 +285,7 @@ offSelfPermissionStateChange(
 
 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。
 
-该接口通常与[onSelfPermissionStateChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配套使用，用于取消通过onSelfPermissionStateChange创建的监听关系。
+该接口通常与[onSelfPermissionStateChange](abilityAccessCtrl.AtManager.onSelfPermissionStateChange)配套使用，用于取消通过onSelfPermissionStateChange创建的监听关系。
 
 **起始版本：** 23
 
@@ -342,31 +301,15 @@ offSelfPermissionStateChange(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与onSelfPermissionStateChange 订阅时的权限列表匹配（不区分顺序）。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionStateChangeInfo&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与onSelfPermissionStateChange 订阅时的权限列表匹配（不区分顺序）。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is not used in pair with 'on'. |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
-
-**示例：**
-
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
-try {
-    atManager.offSelfPermissionStateChange(permissionList);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Code: ${error.code}, message: ${error.message}`);
-}
-```
+| 12100004 | The API is not used in pair with 'on'. |
+| 12100007 | Service exception. |
 
 ## on('selfPermissionStateChange')
 
@@ -378,15 +321,16 @@ on(
     ): void
 ```
 
-订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用[off]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_取消订阅。
+订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用[off](abilityAccessCtrl.AtManager.off)取消订阅。
 
 - 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。  
 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
-    **说明**  
-    权限状态由“已授权”变更为“未授权”可能存在两种场景：  
-    - 用户主动撤销：系统会终止对应应用进程。  
-    - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。  
-    该接口通常与[off]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配套使用，当不再需要监听时应调用off取消订阅。
+
+> **说明：**
+> 权限状态由“已授权”变更为“未授权”可能存在两种场景：
+> - 用户主动撤销：系统会终止对应应用进程。
+> - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
+> 该接口通常与[off](abilityAccessCtrl.AtManager.off)配套使用，当不再需要监听时应调用off取消订阅。
 
 **起始版本：** 18
 
@@ -403,20 +347,20 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 | 订阅事件类型，固定为'selfPermissionStateChange'，自身权限状态变更事件。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionStateChangeInfo&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. |
-| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100001 | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
+| 12100004 | The API is used repeatedly with the same input. |
+| 12100005 | The registration time has exceeded the limit. |
+| 12100007 | Service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
@@ -448,7 +392,7 @@ onSelfPermissionStateChange(
 ```
 
 订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用  
-[offSelfPermissionStateChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_取消订阅。
+[offSelfPermissionStateChange](abilityAccessCtrl.AtManager.offSelfPermissionStateChange)取消订阅。
 
 - 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。  
 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
@@ -458,7 +402,7 @@ onSelfPermissionStateChange(
 - 用户主动撤销：系统会终止对应应用进程。  
 - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
 
-该接口通常与[offSelfPermissionStateChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配套使用，当不再需要监听时应调用offSelfPermissionStateChange取消订阅。
+该接口通常与[offSelfPermissionStateChange](abilityAccessCtrl.AtManager.offSelfPermissionStateChange)配套使用，当不再需要监听时应调用offSelfPermissionStateChange取消订阅。
 
 **起始版本：** 23
 
@@ -474,36 +418,17 @@ onSelfPermissionStateChange(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionStateChangeInfo&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. |
-| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
-
-**示例：**
-
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
-try {
-  atManager.onSelfPermissionStateChange(permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
-    console.info('receive permission state change');
-    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Code: ${error.code}, message: ${error.message}`);
-}
-```
+| 12100001 | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
+| 12100004 | The API is used repeatedly with the same input. |
+| 12100005 | The registration time has exceeded the limit. |
+| 12100007 | Service exception. |
 
 ## openPermissionOnSetting
 
@@ -511,10 +436,10 @@ try {
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-用于[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_/  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
+用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
 
-适用于 \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual\_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
+适用于 [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权)类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
 
 **起始版本：** 22
 
@@ -530,8 +455,8 @@ openPermissionOnSetting(context: Context, permission: Permissions): Promise<Sele
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法打开设置页面。 |
-| permission | Permissions | 是 | 需要跳转设置页处理的权限名。传入无效或未在module.json中声明的权限时返回错误码12100001；仅支持授权方式为\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_类型的权限，传入其他类型权限时返回错误码12100014。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值约束：权限名长度不能超过256个字符。 |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法打开设置页面。 |
+| permission | [Permissions](arkts-ability-permissions-t.md) | 是 | 需要跳转设置页处理的权限名。传入无效或未在module.json中声明的权限时返回错误码12100001；仅支持授权方式为[manual_settings](../../../security/AccessToken/app -permission-mgmt-overview.md#manual_settings手动设置授权)类型的权限，传入其他类型权限时返回错误码12100014。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -543,11 +468,11 @@ openPermissionOnSetting(context: Context, permission: Permissions): Promise<Sele
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission is invalid or not declared in the module.json file. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. The permission is not a manual\_\_\_ESCAPED\_UNDERSCORE\_\_\_settings permission. |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
+| 12100014 | Unexpected permission. The permission is not a manual_settings permission. |
+| 12100001 | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission is invalid or not declared in the module.json file. |
 
-**示例：**
+## 示例
 
 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -579,11 +504,11 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 
 当应用需要使用相机、麦克风或定位等需要全局开关管控的功能时，如果对应的全局开关被关闭，应用可拉起此弹窗请求用户开启对应功能。如果当前全局开关的状态为开启，则不拉起弹窗。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP5--&gt;
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![requestGlobalSwitch](../../../reference/apis-ability-kit/figures/requestGlobalSwitch.png)
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+&lt;!--RP5End--&gt;
 
 **起始版本：** 12
 
@@ -601,8 +526,8 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 请求全局开关的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉 起弹窗。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定需要请求开启的全局开关类型。 |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 是 | 请求全局开关的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉 起弹窗。 |
+| type | [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md) | 是 | 指定需要请求开启的全局开关类型。 |
 
 **返回值：**
 
@@ -614,12 +539,12 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The type of global switch is not supported. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining user operation result. |
-| [12100013](../errorcode-access-token.md#12100013-全局开关已开启) | The specific global switch is already open. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining user operation result. |
+| 12100013 | The specific global switch is already open. |
+| 12100001 | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The type of global switch is not supported. |
 
-**示例：**
+## 示例
 
 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -632,7 +557,7 @@ let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager()
 // 请在组件内获取context
 let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 // 拉起全局开关设置弹窗
-atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then((data: Boolean) => {
+atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then((data: boolean) => {
   console.info(`requestGlobalSwitch success, result: ${data}`);
 }).catch((err: BusinessError): void => {
   console.error(`requestGlobalSwitch fail, code: ${err.code}, message: ${err.message}`);
@@ -645,19 +570,19 @@ atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-用于[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_/  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_二次拉起权限设置弹窗，返回授权状态数组。使用Promise异步回调。
+用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异步回调。
 
 适用于用户在首次弹窗中已拒绝过该权限授予，需要通过设置页面继续申请权限的场景。
 
 在调用此接口前，应用需要先调用  
-[requestPermissionsFromUser]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_。如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。
+[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser)。如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_
+&lt;!--RP4--&gt;
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![requestPermissionOnSetting](../../../reference/apis-ability-kit/figures/requestPermissionOnSetting.png)
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_
+&lt;!--RP4End--&gt;
 
 **起始版本：** 12
 
@@ -675,8 +600,8 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹 窗。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。该数组不能为空，仅支持传入已声明且用户已撤销授权的user\_\_\_ESCAPED\_UNDERSCORE\_\_\_grant权限，且传入权限需属于同一 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值约束：权限名长度不能超过256个字符。 |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹 窗。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 权限名列表。该数组不能为空，仅支持传入已声明且用户已撤销授权的user_grant权限，且传入权限需属于同一 [权限组](../../../security/AccessToken/app-permission-group-list.md)。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -688,13 +613,14 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission list contains the permission that is not declared in the module.json file; 3. The permission list is invalid because the permissions in it do not belong to the same permission group; 4. The permission list contains one or more system\_\_\_ESCAPED\_UNDERSCORE\_\_\_grant permissions. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
-| [12100011](../errorcode-access-token.md#12100011-输入的所有权限均已被授权) | All permissions in the permission list have been granted. |
-| [12100012](../errorcode-access-token.md#12100012-输入的权限中存在未被用户拒绝过的权限) | The permission list contains the permission that has not been revoked by the user. |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. You cannot request this type of permission from users via a pop-up window.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 21+ |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
+| 12100010 | The request already exists.<br>**适用版本：** 12 - 20 |
+| 12100011 | All permissions in the permission list have been granted. |
+| 12100012 | The permission list contains the permission that has not been revoked by the user. |
+| 12100014 | Unexpected permission. You cannot request this type of permission from users via a pop-up window.<br>**适用版本：** 21+ |
+| 12100001 | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission list contains the permission that is not declared in the module.json file; 3. The permission list is invalid because the permissions in it do not belong to the same permission group; 4. The permission list contains one or more system_grant permissions. |
 
-**示例：**
+## 示例
 
 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -720,20 +646,20 @@ atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']).then((
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-用于\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_6\_\_\_拉起弹窗请求  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，返回本次请求权限的授权结果。使用callback异步回调。
+用于&lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&lt;!--RP1End--&gt;拉起弹窗请求  
+[用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。
 
 适用于应用首次访问受保护资源前主动向用户申请  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ 权限的场景。
+[user_grant](../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant用户授权) 权限的场景。
 
 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用  
-[requestPermissionOnSetting]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_拉起权限设置弹窗，引导用户完成授权。
+[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_7\_\_\_
+&lt;!--RP3--&gt;
 
-!\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_
+![requestPermissionsFromUser](../../../reference/apis-ability-kit/figures/requestPermissionsFromUser.png)
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_8\_\_\_
+&lt;!--RP3End--&gt;
 
 **起始版本：** 9
 
@@ -751,19 +677,19 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 请求权限的\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_UIAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的Context。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_最小长度为1。取值约束：权限名长度不能超过256个字符。 |
-| requestCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionRequestResult&gt; | 是 | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 是 | 请求权限的&lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt;的Context。 &lt;br&gt;若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。 &lt;br&gt;最小长度为1。取值约束：权限名长度不能超过256个字符。 |
+| requestCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | 是 | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining user operation results. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining user operation results. |
+| 12100001 | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
 
-**示例：**
+## 示例
 
 关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../security/AccessToken/request-user-authorization.md)。
 
@@ -795,13 +721,14 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-用于\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_拉起弹窗请求  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，返回本次请求权限的授权结果。使用Promise异步回调。
+用于&lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&lt;!--RP1End--&gt;拉起弹窗请求  
+[用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。
 
-适用于应用首次访问受保护资源前主动向用户申请user\_grant权限的场景。
-    **说明**  
-    如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用  
-    [requestPermissionOnSetting]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_拉起权限设置弹窗，引导用户完成授权。
+适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。
+
+> **说明：**
+> 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用
+> [requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
 
 **起始版本：** 9
 
@@ -819,8 +746,8 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 请求权限的\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_UIAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_最小长度为1。取值约束：权限名长度不能超过256个字符。 |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 是 | 请求权限的&lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt;的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。 &lt;br&gt;最小长度为1。取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -832,11 +759,11 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 11+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100009 | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result.<br>**适用版本：** 11+ |
+| 12100001 | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
 
-**示例：**
+## 示例
 
 关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../security/AccessToken/request-user-authorization.md)。
 
@@ -875,8 +802,9 @@ verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatu
 校验应用是否已被授予指定权限，调用成功后，返回当前权限的授权状态，开发者可据此决定直接执行后续业务、继续发起权限申请，或引导用户前往系统设置修改授权状态。使用Promise异步回调。
 
 适用于应用访问受保护资源前进行前置权限判断的场景。
-    **说明**  
-    建议使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 建议使用[checkAccessToken](#checkaccesstoken9)替代。
 
 **起始版本：** 9
 
@@ -890,8 +818,8 @@ verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_字段获取。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值限定为整数。取值约束：该参数必须为大于0的整数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ BundleInfo获取可参考：[bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_；\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
-| permissionName | Permissions | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值约束：权限名长度不能超过256个字符。 |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -899,9 +827,7 @@ verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatu
 | --- | --- |
 | Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -923,23 +849,6 @@ atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCt
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
-let tokenID: int = bundleInfo.appInfo.accessTokenId as int;
-let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
-atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
-  console.info(`verifyAccessToken success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## verifyAccessToken
 
 ```TypeScript
@@ -947,8 +856,9 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 ```
 
 校验应用是否已被授予指定权限。调用成功后，返回当前权限的授权状态，开发者可据此决定后续操作。使用Promise异步回调。
-    **说明**  
-    从API version 8开始支持，从API version 9开始废弃，建议使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[checkAccessToken](#checkaccesstoken9)替代。
 
 **起始版本：** 8
 
@@ -966,8 +876,8 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_字段获取。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值限定为整数。取值约束：该参数必须为大于0的整数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ BundleInfo获取可参考：[bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_；\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
-| permissionName | string | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值约束：权限名长度不能超过256个字符。 |
+| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | string | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -975,7 +885,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 | --- | --- |
 | Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -1013,7 +923,7 @@ verifyAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus
 
 适用于应用访问相机、麦克风、位置等受保护资源前进行前置权限判断的场景。
 
-建议使用[checkAccessTokenSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+建议使用[checkAccessTokenSync](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstokensync)替代。
 
 **起始版本：** 9
 
@@ -1027,25 +937,23 @@ verifyAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的 [accessTokenId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值限定为整数。取值约束：该参数必须为大于0的整数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ BundleInfo获取可参考：[bundleManager.getBundleInfoSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_；\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
-| permissionName | Permissions | 是 | 需要校验的权限名称。权限名长度不能超过256个字符，传入无效值时返回错误码12100001。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值约束：权限名长度不能超过256个字符。 |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的 [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt; BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)；&lt;br&gt;若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync)获取。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 需要校验的权限名称。权限名长度不能超过256个字符，传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 枚举实例，返回授权状态。 |
+| [GrantStatus](arkts-ability-bundle-grantstatus-e.md) | 枚举实例，返回授权状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100001 | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -1066,25 +974,6 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`verifyAccessTokenSync fail, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
-let tokenID: int = bundleInfo.appInfo.accessTokenId as int;
-try {
-  let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
-  let data: abilityAccessCtrl.GrantStatus = atManager.verifyAccessTokenSync(tokenID, permissionName);
-  console.info(`verifyAccessTokenSync success, result: ${data}`);
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
 }
 ```
 

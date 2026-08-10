@@ -1,5 +1,11 @@
 # killProcessWithAccount（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## killProcessWithAccount
 
 ```TypeScript
@@ -7,9 +13,10 @@ function killProcessWithAccount(bundleName: string, accountId: int): Promise<voi
 ```
 
 终止account进程。使用Promise异步回调。
-    **说明：**  
-    
-    当accountId为当前用户时，不需要校验ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS权限。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 9
 
@@ -30,7 +37,7 @@ function killProcessWithAccount(bundleName: string, accountId: int): Promise<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | Bundle名称。 |
-| accountId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 系统账号的账号ID，详情参考 [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 。 |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 系统账号的账号ID，详情参考 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 。 |
 
 **返回值：**
 
@@ -42,12 +49,12 @@ function killProcessWithAccount(bundleName: string, accountId: int): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -59,9 +66,8 @@ let accountId = 0;
 try {
   appManager.killProcessWithAccount(bundleName, accountId).then(() => {
     console.info('killProcessWithAccount success');
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`killProcessWithAccount fail, err: ${err.code}, ${err.message}`);
+  }).catch((err: BusinessError) => {
+    console.error(`killProcessWithAccount fail, err: ${JSON.stringify(err)}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
@@ -79,9 +85,10 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 ```
 
 终止account进程。使用Promise异步回调。
-    **说明：**  
-    
-    当accountId为当前用户时，不需要校验ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS权限。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 14
 
@@ -100,9 +107,9 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | Bundle名称。 |
-| accountId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 系统账号的账号ID，详情参考 [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 。 |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 系统账号的账号ID，详情参考 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 。 |
 | clearPageStack | boolean | 是 | 表示是否清除页面堆栈。true表示清除，false表示不清除。 |
-| appIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 应用分身ID。 |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 应用分身ID。 |
 
 **返回值：**
 
@@ -114,12 +121,12 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | If the input parameter is not valid parameter. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -133,9 +140,8 @@ let appIndex = 1;
 try {
   appManager.killProcessWithAccount(bundleName, accountId, isClearPageStack, appIndex).then(() => {
     console.info('killProcessWithAccount success');
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`killProcessWithAccount fail, err: ${err.code}, ${err.message}`);
+  }).catch((err: BusinessError) => {
+    console.error(`killProcessWithAccount fail, err: ${JSON.stringify(err)}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
@@ -152,9 +158,10 @@ function killProcessWithAccount(bundleName: string, accountId: int, callback: As
 ```
 
 终止account进程。使用callback异步回调。
-    **说明：**  
-    
-    当accountId为当前用户时，不需要校验ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS权限。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 9
 
@@ -175,19 +182,19 @@ function killProcessWithAccount(bundleName: string, accountId: int, callback: As
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| accountId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 系统账号的账号ID，详情参考 [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 系统账号的账号ID，详情参考 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -196,7 +203,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let bundleName = 'bundleName';
 let accountId = 0;
 
-function killProcessWithAccountCallback(err: BusinessError | null) {
+function killProcessWithAccountCallback(err: BusinessError) {
   if (err) {
     console.error(`killProcessWithAccountCallback fail, err: ${JSON.stringify(err)}`);
   } else {

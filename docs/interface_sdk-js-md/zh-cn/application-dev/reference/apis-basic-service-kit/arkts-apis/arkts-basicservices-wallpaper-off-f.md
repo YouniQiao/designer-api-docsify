@@ -1,5 +1,11 @@
 # off
 
+## 导入模块
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## off('colorChange')
 
 ```TypeScript
@@ -25,7 +31,7 @@ function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpape
 | type | 'colorChange' | 是 |  |
 | callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | 否 |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let listener = (colors: Array<wallpaper.RgbaColor>, wallpaperType: wallpaper.WallpaperType): void => {

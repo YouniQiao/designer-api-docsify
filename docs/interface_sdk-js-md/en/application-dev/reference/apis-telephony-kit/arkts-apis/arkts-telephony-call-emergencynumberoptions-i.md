@@ -10,6 +10,12 @@ Indicates the option for determining if a number is an emergency number for spec
 
 **System capability:** SystemCapability.Telephony.CallManager
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## slotId
 
 ```TypeScript
@@ -18,7 +24,7 @@ slotId?: int
 
 Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 

@@ -1,6 +1,6 @@
 # WifiSecurityType
 
-Enumerates the Wi-Fi security types.
+表示加密类型的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the Wi-Fi security types.
 WIFI_SEC_TYPE_INVALID = 0
 ```
 
-Invalid security type. For example, airport public Wi-Fi.
+无效加密类型。例如机场公共Wi-Fi。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Invalid security type. For example, airport public Wi-Fi.
 WIFI_SEC_TYPE_OPEN = 1
 ```
 
-Open security type.
+开放加密类型。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Open security type.
 WIFI_SEC_TYPE_WEP = 2
 ```
 
-Wired Equivalent Privacy (WEP).
+Wired Equivalent Privacy (WEP)加密类型。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Wired Equivalent Privacy (WEP).
 WIFI_SEC_TYPE_PSK = 3
 ```
 
-PSK. For example, home and small office Wi-Fi.
+Pre-shared key (PSK)加密类型。 例如家庭、小型办公室Wi-Fi。
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ PSK. For example, home and small office Wi-Fi.
 WIFI_SEC_TYPE_SAE = 4
 ```
 
-Simultaneous Authentication of Equals (SAE). For example, smart home and small- and medium-sized enterprise networks.
+Simultaneous Authentication of Equals (SAE)加密类型。例如智能家居、中小型企业网络。
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ Simultaneous Authentication of Equals (SAE). For example, smart home and small- 
 WIFI_SEC_TYPE_EAP = 5
 ```
 
-EAP. For example, large enterprise authentication and university campus networks.
+EAP加密类型。例如大型企业认证、大学校园网络等。
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ EAP. For example, large enterprise authentication and university campus networks
 WIFI_SEC_TYPE_EAP_SUITE_B = 6
 ```
 
-Suite B 192-bit encryption. After the setting, Wi-Fi will use Suite-B 192-bit high-strength encryption, providing a high level of security authentication. It is suitable for government and high-security institutions.
+Suite-B 192位加密类型。设置后Wi-Fi将使用Suite-B 192位高强度加密，提供高级别的安全认证，适用于政府和高安全机构。
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ Suite B 192-bit encryption. After the setting, Wi-Fi will use Suite-B 192-bit hi
 WIFI_SEC_TYPE_OWE = 7
 ```
 
-Opportunistic Wireless Encryption (OWE). For example, public Wi-Fi in a coffee shop, which does not require a password to provide encryption for connections.
+机会性无线加密类型。例如咖啡馆的公共Wi-Fi，无需密码为连接提供加密。
 
 **Since:** 12
 
@@ -160,7 +160,7 @@ Opportunistic Wireless Encryption (OWE). For example, public Wi-Fi in a coffee s
 WIFI_SEC_TYPE_WAPI_CERT = 8
 ```
 
-WLAN Authentication and Privacy Infrastructure (WAPI) in certificate-based mode (WAPI-CERT). It is China's own wireless security standard.
+WAPI-Cert加密类型。中国自主的无线安全标准。
 
 **Since:** 12
 
@@ -178,7 +178,7 @@ WLAN Authentication and Privacy Infrastructure (WAPI) in certificate-based mode 
 WIFI_SEC_TYPE_WAPI_PSK = 9
 ```
 
-WAPI-PSK.
+WAPI-PSK加密类型。
 
 **Since:** 12
 

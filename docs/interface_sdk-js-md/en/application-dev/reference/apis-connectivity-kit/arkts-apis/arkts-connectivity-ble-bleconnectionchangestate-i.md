@@ -10,6 +10,12 @@ Describes the Gatt profile connection state.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -40,7 +46,7 @@ reason?: GattDisconnectReason
 
 Reason of the disconnection of the gatt connection.
 
-**Type:** GattDisconnectReason
+**Type:** [GattDisconnectReason](arkts-connectivity-ble-gattdisconnectreason-e.md)
 
 **Since:** 20
 
@@ -84,7 +90,7 @@ state: ProfileConnectionState
 
 Connection state of the Gatt profile
 
-**Type:** ProfileConnectionState
+**Type:** [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
 
 **Since:** 10
 

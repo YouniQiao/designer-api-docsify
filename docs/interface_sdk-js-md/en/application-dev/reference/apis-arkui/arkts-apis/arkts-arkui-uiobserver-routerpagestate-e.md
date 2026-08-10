@@ -1,6 +1,6 @@
 # RouterPageState
 
-Router page state.
+routerPage生命周期触发时对应的状态。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Router page state.
 ABOUT_TO_APPEAR = 0
 ```
 
-When the router page create.
+page即将显示。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ When the router page create.
 ABOUT_TO_DISAPPEAR = 1
 ```
 
-When the router page destroy.
+page即将销毁。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ When the router page destroy.
 ON_PAGE_SHOW = 2
 ```
 
-When the router page show.
+page显示。
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ When the router page show.
 ON_PAGE_HIDE = 3
 ```
 
-When the router page hide.
+page隐藏。
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ When the router page hide.
 ON_BACK_PRESS = 4
 ```
 
-When back press event happened in the router page.
+page返回时。
 
 **Since:** 23
 

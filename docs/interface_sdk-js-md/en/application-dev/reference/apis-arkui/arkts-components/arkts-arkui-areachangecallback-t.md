@@ -4,7 +4,7 @@
 declare type AreaChangeCallback = (oldValue: Area, newValue: Area) => void
 ```
 
-Callback type for the component area change event.
+组件区域变化事件的回调类型。
 
 **Since:** 26.0.0
 
@@ -22,6 +22,6 @@ Callback type for the component area change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information before the area change, including the width, height, coordinates relative to the parent element, and position coordinates of the upper-left corner in the current window coordinate system.  |
-| newValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information after the area change, including the width, height, coordinates relative to the parent element, and position coordinates of the upper-left corner in the current window coordinate system.  |
+| oldValue | [Area](../arkts-apis/arkts-arkui-area-i.md) | Yes | 区域变化前的信息，包括：目标元素的宽度、高度、相对于父元素的坐标和目标元素左上角在当前窗口坐标系中的位置坐标。 |
+| newValue | [Area](../arkts-apis/arkts-arkui-area-i.md) | Yes | 区域变化后的信息，包括：目标元素的宽度、高度、相对于父元素的坐标和目标元素左上角在当前窗口坐标系中的位置坐标。 |
 

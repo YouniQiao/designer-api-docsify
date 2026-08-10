@@ -16,10 +16,10 @@
 overflowMode?: MaxLinesMode
 ```
 
-\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_可配置[TextArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_组件的非内联模式。当超出设置的\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_最大行数时，会启用滚动效果。需同时配置  
-[textOverflow]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_，且仅当\_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_为None或Clip时，\_\_\_INLINE\_CODE\_DESC\_USD\_3\_\_\_才能生效。默认情况下，\_\_\_INLINE\_CODE\_DESC\_USD\_4\_\_\_的值为Clip，超出\_\_\_INLINE\_CODE\_DESC\_USD\_5\_\_\_后文本会被截断。
+`overflowMode`可配置[TextArea](./text_area)组件的非内联模式。当超出设置的`maxLines`最大行数时，会启用滚动效果。需同时配置  
+[textOverflow](arkts-arkui-textarea-textareaattribute-i.md#textoverflow)，且仅当`textOverflow`为None或Clip时，`MaxLinesMode`才能生效。默认情况下，`MaxLinesMode`的值为Clip，超出`maxLines`后文本会被截断。
 
-**类型：** MaxLinesMode
+**类型：** [MaxLinesMode](arkts-arkui-maxlinesmode-e.md)
 
 **起始版本：** 20
 

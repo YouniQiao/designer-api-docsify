@@ -1,6 +1,6 @@
 # PointerMatrix
 
-Represents a two-dimensional array of pointers on the device display, it's used to build a multi-finger trace which can be injected with UiDriver.
+存储多指操作中每根手指每一步动作的坐标点及其行为的二维数组。
 
 **Since:** 9
 
@@ -9,6 +9,12 @@ Represents a two-dimensional array of pointers on the device display, it's used 
 <!--Device-unnamed-declare class PointerMatrix--><!--Device-unnamed-declare class PointerMatrix-End-->
 
 **System capability:** SystemCapability.Test.UiTest
+
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
 
 ## create
 
@@ -22,7 +28,7 @@ ArkTS-Sta:
 static create(fingers: int, steps: int): PointerMatrix
 ```
 
-Creates a **PointerMatrix** object and returns the object created. This API is a static API.
+静态方法，构造一个PointerMatrix对象，并返回该对象。
 
 **Since:** 9
 
@@ -38,22 +44,22 @@ Creates a **PointerMatrix** object and returns the object created. This API is a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fingers | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of fingers injected during the multi-finger operation. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[1, 10] |
-| steps | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of steps performed by a finger. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[1, 1000] |
+| fingers | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 多指操作中注入的手指数，取值范围：[1,10]的整数。 |
+| steps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 每根手指操作的步骤数，取值范围：[1,1000]的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  **PointerMatrix** object created. |
+| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 返回构造的PointerMatrix对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -76,8 +82,7 @@ ArkTS-Sta:
 setPoint(finger: int, step: int, point: Point): void
 ```
 
-Sets the coordinates for the action corresponding to the specified finger and step in the **PointerMatrix**  
-object.
+设置PointerMatrix对象中指定手指和步骤对应动作的坐标点。
 
 **Since:** 9
 
@@ -93,17 +98,17 @@ object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| finger | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of fingers. The value is an integer greater than or equal to 0 and cannot exceed the number of fingers set when the **PointerMatrix** object is constructed. |
-| step | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of steps. The value is an integer greater than or equal to 0 and cannot exceed the number of steps set when the **PointerMatrix** object is constructed. |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the action. It is recommended that the distance between adjacent coordinates be within the range of 10 px to 80 px. |
+| finger | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 手指的序号，取值大于等于0的整数，且不超过构造PointerMatrix对象时设置的手指数。 |
+| step | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 步骤的序号，取值大于等于0的整数，且不超过构造PointerMatrix对象时设置的操作的步骤数。 |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 该行为的坐标点。建议相邻的坐标点距离在10px至80px范围内。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets

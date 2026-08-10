@@ -1,12 +1,18 @@
 # createServer
 
+## Modules to Import
+
+```TypeScript
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## createServer
 
 ```TypeScript
 function createServer(name: string): Server
 ```
 
-Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server.
+在服务端设备上，应用创建服务。通过start()开启后，该设备可作为服务端被其他设备连接。
 
 **Since:** 20
 
@@ -24,24 +30,24 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Server** object name. The value is a string of up to 255 bytes. It cannot be empty. |
+| name | string | Yes | 自定义的非空字符串，标识应用的服务名，最大长度255字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Server** object created. |
+| [Server](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-server-i.md) | 创建成功的服务对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the linkEnhance function has been trimmed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-| [32390203](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390203-duplicate-service-name) | Duplicate server name. |
+| 32390206 | Invalid parameter. |
+| 801 | Capability not supported because the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| 32390203 | Duplicate server name. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';

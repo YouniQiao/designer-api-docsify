@@ -1,5 +1,11 @@
 # getPowerModel
 
+## Modules to Import
+
+```TypeScript
+import { wifiext } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getPowerModel
 
 ```TypeScript
@@ -55,5 +61,5 @@ Obtains the current Wi-Fi power mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PowerModel&gt; | Yes | callback function, no return value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PowerModel&gt; | Yes | callback function, no return value. |
 

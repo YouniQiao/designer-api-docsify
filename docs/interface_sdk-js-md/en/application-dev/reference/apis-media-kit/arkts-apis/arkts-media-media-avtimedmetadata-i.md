@@ -10,6 +10,12 @@ Interface for defining time base metadata
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## classify
 
 ```TypeScript
@@ -38,7 +44,7 @@ contents: Record<string, object>
 
 Key-value pair set corresponding to time primitive information
 
-**Type:** Record&lt;string, object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ Key-value pair set corresponding to time primitive information
 duration: int
 ```
 
-Duration of the time primitive information The value should be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+Duration of the time primitive information The value should be an integer.&lt;br&gt;Unit:milliseconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -96,9 +102,9 @@ Defines the unique token of the time base metadata,The tag must be unique in oth
 start: int
 ```
 
-Defines the offset value of the time primitive information relative to the start time of the entire media.The value should be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+Defines the offset value of the time primitive information relative to the start time of the entire media.The value should be an integer.&lt;br&gt;Unit:milliseconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

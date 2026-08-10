@@ -10,6 +10,12 @@ Provides information about a form.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## abilityName
 
 ```TypeScript
@@ -58,7 +64,7 @@ colorMode: ColorMode
 
 Obtains the color mode of this form.
 
-**Type:** ColorMode
+**Type:** [ColorMode](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-colormode-e.md)
 
 **Since:** 9
 
@@ -80,7 +86,7 @@ customizeData: Record<string, string>
 
 Obtains the custom data defined in this form.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 9
 
@@ -98,9 +104,9 @@ Obtains the custom data defined in this form.
 defaultDimension: int
 ```
 
-Obtains the default grid style of this form.The value must be a positive integer, refer to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Obtains the default grid style of this form.The value must be a positive integer, refer to {@link formInfo.FormDimension}.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -140,7 +146,7 @@ descriptionId: int
 
 Obtains the description id of this form.The value must be a positive integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -180,7 +186,7 @@ displayNameId: int
 
 Obtains the displayName resource id of this form.The value must be a positive integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -358,9 +364,9 @@ Obtains the scheduledUpdateTime.
 supportDimensions: Array<int>
 ```
 
-Obtains the grid styles supported by this form.The minimum length is 1, refer to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Obtains the grid styles supported by this form.The minimum length is 1, refer to {@link formInfo.FormDimension}.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 9
 
@@ -378,9 +384,9 @@ Obtains the grid styles supported by this form.The minimum length is 1, refer to
 supportedShapes: Array<int>
 ```
 
-Obtains the shape supported by this form.The minimum length is 1, refer to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Obtains the shape supported by this form.The minimum length is 1, refer to {@link formInfo.FormShape}.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 12
 
@@ -422,7 +428,7 @@ type: FormType
 
 Obtains the type of this form. Currently, JS forms are supported.
 
-**Type:** FormType
+**Type:** [FormType](../../apis-arkdata/arkts-apis/arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **Since:** 9
 
@@ -442,7 +448,7 @@ updateDuration: int
 
 Obtains the updateDuration.The value must be an integer within [0,336].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

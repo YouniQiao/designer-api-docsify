@@ -1,8 +1,10 @@
 # SheetOptions
 
-Optional attributes of the sheet. Inherits from [BindOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[BindOptions](arkts-arkui-bindoptions-i.md)。
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](../arkts-apis/arkts-arkui-component/common-bindoptions-i.md)
+半模态页面内容选项。
+
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
 
 **Since:** 10
 
@@ -12,39 +14,19 @@ Optional attributes of the sheet. Inherits from [BindOptions]\_\_\_JSDOC\_LINK\_
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## blurSnapshot
-
-```TypeScript
-blurSnapshot?: BlurSnapshotOptions
-```
-
-Options for blur snapshot optimization of the sheet.When this property is set, blur optimization is enabled and the sheet background will be rendered using a blur snapshot.This property cannot be dynamically switched after the sheet is presented.
-
-**Type:** BlurSnapshotOptions
-
-**Default:** undefined
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SheetOptions-blurSnapshot?: BlurSnapshotOptions--><!--Device-SheetOptions-blurSnapshot?: BlurSnapshotOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
 ## edgeLightMode
 
 ```TypeScript
 edgeLightMode?: EdgeLightMode
 ```
 
-Edge light animation mode of the sheet.Default value: EdgeLightMode.EDGELIGHT\_DISABLED .
+设置半模态弹窗边缘光效动画模式。
 
-**Type:** EdgeLightMode
+默认值：EdgeLightMode.EDGELIGHT_DISABLED
+
+**系统接口：** 此接口为系统接口。
+
+**Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_DISABLED
 
@@ -66,12 +48,13 @@ Edge light animation mode of the sheet.Default value: EdgeLightMode.EDGELIGHT\_D
 offset?: Position
 ```
 
-Offset of the sheet. Bottom spacing, which is effective only when the sheet is a bottom sheet. The **detents**  
-property of [SheetOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is not supported. This property has no effect when the y-axis value is set to a negative number.
+设置半模态弹窗偏移量。当半模态为底部弹窗时，支持设置底部间距。不支持设置半模态的[SheetOptions](arkts-arkui-sheetoptions-i.md)中的detents属性。y轴设置为负数的时候不生效。
 
-Default value: 0 vp for both the x-axis and y-axis
+默认值：x轴为0vp，y轴坐标为0vp。
 
-**Type:** Position
+**系统接口：** 此接口为系统接口。
+
+**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
 **Since:** 14
 

@@ -1,6 +1,6 @@
 # FrameRateRange
 
-Describes the frame rate range.
+帧率范围。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the frame rate range.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## max
 
 ```TypeScript
 readonly max: int
 ```
 
-Maximum frame rate. Unit: FPS
+最大帧率。单位：fps。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Maximum frame rate. Unit: FPS
 readonly min: int
 ```
 
-Minimum frame rate. Unit: FPS
+最小帧率。单位：fps。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

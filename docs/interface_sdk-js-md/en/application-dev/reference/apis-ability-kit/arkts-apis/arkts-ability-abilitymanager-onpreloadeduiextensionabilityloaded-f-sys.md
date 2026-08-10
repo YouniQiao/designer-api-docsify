@@ -1,13 +1,18 @@
 # onPreloadedUIExtensionAbilityLoaded (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onPreloadedUIExtensionAbilityLoaded
 
 ```TypeScript
 function onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbilityLoadedFn): void
 ```
 
-Subscribes to loaded events of a preloaded  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance in the current process.
+监听当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的加载事件。
 
 **Since:** 23
 
@@ -27,17 +32,17 @@ Subscribes to loaded events of a preloaded
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instance that is loaded. |
+| callback | [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-abilitymanager-preloadeduiextensionabilityloadedfn-t-sys.md) | Yes | 用于接收被加载的预加载 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例ID的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Memory operation error. |
+| 16000050 | Internal error. Possible causes: Memory operation error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

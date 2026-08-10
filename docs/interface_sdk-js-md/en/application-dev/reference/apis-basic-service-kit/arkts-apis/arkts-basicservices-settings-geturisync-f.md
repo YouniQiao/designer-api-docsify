@@ -1,5 +1,11 @@
 # getUriSync
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getUriSync
 
 ```TypeScript
@@ -30,7 +36,7 @@ Get settingsdata uri (synchronous method)
 | --- | --- |
 | string | Returns settingsdata uri. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Obtain the URI of a data item.

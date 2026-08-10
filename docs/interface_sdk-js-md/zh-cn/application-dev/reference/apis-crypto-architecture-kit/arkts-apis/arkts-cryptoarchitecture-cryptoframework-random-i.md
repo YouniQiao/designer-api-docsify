@@ -1,6 +1,6 @@
 # Random
 
-随机数接口，定义随机数生成的方法。调用前，需通过[createRandom]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建一个Random实例。
+随机数接口，定义随机数生成的方法。调用前，需通过[createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom)创建一个Random实例。
 
 **起始版本：** 9
 
@@ -11,6 +11,12 @@
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
 - API版本9-11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
 
 ## enableHardwareEntropy
 
@@ -36,14 +42,12 @@ enableHardwareEntropy(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该操作不支持。 |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| 801 | 该操作不支持。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
+| 17620002 | 获取Native对象失败或参数转换失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -64,34 +68,6 @@ rand.generateRandom(12, (err, randData) => {
     }
   }
 });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@ohos.base';
-
-function doTestEnableHardwareEntropy()
-{
-  let rand = cryptoFramework.createRandom();
-  rand.enableHardwareEntropy();
-  rand.generateRandom(12, (err, randData) => {
-    if (err) {
-      console.error("[Callback] err: " + err.code);
-    } else {
-      if (randData != undefined) {
-        console.info('[Callback]: generate random result: ' + randData.data);
-        try {
-          rand.setSeed(randData);
-        } catch (error) {
-          let e: BusinessError = error as BusinessError;
-          console.error(`sync error, ${e.code}, ${e.message}`);
-        }
-      }
-    }
-  });
-}
 ```
 
 ## generateRandom
@@ -128,20 +104,18 @@ generateRandom(len: int, callback: AsyncCallback<DataBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| len | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX]。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DataBlob&gt; | 是 | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为 错误对象。 |
+| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为 错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 必填参数未指定； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. 参数类型不正确； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. 参数验证失败。 |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -154,25 +128,6 @@ rand.generateRandom(12, (err, randData) => {
     console.info('[Callback]: generate random result: ' + randData.data);
   }
 });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function TestCreateRandom() {
-  let rand = cryptoFramework.createRandom();
-  rand.generateRandom(12, (err, randData) => {
-    if (err) {
-      console.error("[Callback] err: " + err.code);
-    } else {
-      if (randData != undefined) {
-        console.info('[Callback]: generate random result: ' + randData.data);
-      }
-    }
-  });
-}
 ```
 
 ## generateRandom
@@ -207,7 +162,7 @@ generateRandom(len: int): Promise<DataBlob>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| len | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX]。 |
+| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
 
 **返回值：**
 
@@ -219,13 +174,13 @@ generateRandom(len: int): Promise<DataBlob>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 必填参数未指定； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. 参数类型不正确； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. 参数验证失败。 |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**示例：**
+## 示例
 
-ArkTS-Dyn示例：
+ArkTS示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -238,24 +193,6 @@ promiseGenerateRand.then(randData => {
 }).catch((error: BusinessError) => {
   console.error(`[Promise] failed: errCode: ${error.code}, errMsg: ${error.message}`);
 });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@ohos.base';
-
-async function TestGenerateRandom() {
-  try {
-    let rand = cryptoFramework.createRandom();
-    let promiseGenerateRand = await rand.generateRandom(12);
-    console.info('[Promise]: rand result: ' + promiseGenerateRand.data);
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`TestGenerateRandom error, ${e.code}, ${e.message}`);
-  }
-}
 ```
 
 JS示例：
@@ -338,8 +275,7 @@ generateRandomSync(len: int): DataBlob
 
 同步生成指定长度的随机数。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_**说明：**  
-\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_建议优先使用异步API，\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generateRandom}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 10
 
@@ -361,23 +297,23 @@ generateRandomSync(len: int): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| len | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX]。 |
+| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 表示生成的随机数。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示生成的随机数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 必填参数未指定； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. 参数类型不正确； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. 参数验证失败。 |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 17630001 | 密码操作错误。 |
+| 17620001 | 内存操作失败。 |
 
-**示例：**
+## 示例
 
 ArkTS示例：
 
@@ -494,17 +430,15 @@ setSeed(seed: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| seed | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置的种子。 |
+| seed | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 设置的种子。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| 17620001 | 内存操作失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -526,39 +460,13 @@ rand.generateRandom(12, (err, randData) => {
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@ohos.base';
-
-function TestGenerateRandom() {
-  let rand = cryptoFramework.createRandom();
-  rand.generateRandom(12, (err, randData) => {
-    if (err) {
-      console.error("[Callback] err: " + err.code);
-    } else {
-      if (randData != undefined) {
-        console.info('[Callback]: generate random result: ' + randData.data);
-        try {
-          rand.setSeed(randData);
-        } catch (error) {
-          let e: BusinessError = error as BusinessError;
-          console.error(`setSeed error, ${e.code}, ${e.message}`);
-        }
-      }
-    }
-  });
-}
-```
-
 ## algName
 
 ```TypeScript
 readonly algName: string
 ```
 
-代表当前使用的随机数生成算法，目前只支持"CTR\_DRBG"。
+代表当前使用的随机数生成算法，目前只支持"CTR_DRBG"。
 
 **类型：** string
 

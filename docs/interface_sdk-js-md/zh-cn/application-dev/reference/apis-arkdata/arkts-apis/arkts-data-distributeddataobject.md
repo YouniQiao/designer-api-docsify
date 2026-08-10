@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
+## 导入模块
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
+
 ## 汇总
 
 ### 函数
@@ -25,10 +31,10 @@
 | 名称 | 说明 |
 | --- | --- |
 | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 数据库的绑定信息。当前版本只支持关系型数据库的绑定。 |
-| [DataObject](arkts-arkdata-distributeddataobject-dataobject-i.md) | 表示一个分布式数据对象。在使用以下接口前，需调用[create()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取DataObject对象。 |
-| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | 表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取DistributedObject对象。 |
-| [RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md) | [revokeSave]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口回调信息。 |
-| [SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md) | [save]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口回调信息。 |
+| [DataObject](arkts-arkdata-distributeddataobject-dataobject-i.md) | 表示一个分布式数据对象。在使用以下接口前，需调用[create()](arkts-arkdata-distributeddataobject-create-f.md#create)获取DataObject对象。 |
+| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | 表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createdistributedobject)获取DistributedObject对象。 |
+| [RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md) | [revokeSave](arkts-arkdata-distributeddataobject-dataobject-i.md#revokesave)接口回调信息。 |
+| [SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md) | [save](arkts-arkdata-distributeddataobject-dataobject-i.md#save)接口回调信息。 |
 
 ### 类型
 

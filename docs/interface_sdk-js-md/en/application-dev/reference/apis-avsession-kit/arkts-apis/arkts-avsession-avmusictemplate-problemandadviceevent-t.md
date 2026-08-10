@@ -4,7 +4,7 @@
 type ProblemAndAdviceEvent = (advice: string) => Promise<OperResult>
 ```
 
-The problem and advice event.
+问题和建议事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ The problem and advice event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advice | string | Yes | advice  |
+| advice | string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | (OperResult) returned through promise  |
+| Promise&lt;OperResult&gt; | Promise对象，返回问题和建议的操作结果对象。 |
 

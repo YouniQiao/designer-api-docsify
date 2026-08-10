@@ -160,7 +160,7 @@ Multiple options.
 MOVED_PERM
 ```
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Permanently move. The requested resource has been permanently moved to a new URI,and the returned information will include the new URI. The browser will automatically redirect to the new URI.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;Permanently move. The requested resource has been permanently moved to a new URI,and the returned information will include the new URI. The browser will automatically redirect to the new URI.&lt;/p&gt;
 
 **Since:** 11
 
@@ -412,7 +412,7 @@ The request took too long and timed out.
 CONFLICT
 ```
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The server may have returned this code when completing the client's PUT request,as there was a conflict when the server was processing the request.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;The server may have returned this code when completing the client's PUT request,as there was a conflict when the server was processing the request.&lt;/p&gt;
 
 **Since:** 11
 

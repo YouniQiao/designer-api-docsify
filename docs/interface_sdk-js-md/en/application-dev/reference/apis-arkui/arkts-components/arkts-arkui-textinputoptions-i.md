@@ -1,6 +1,6 @@
 # TextInputOptions
 
-TextInput** initialization parameters.
+TextInput初始化参数。
 
 **Since:** 7
 
@@ -16,9 +16,9 @@ TextInput** initialization parameters.
 controller?: TextInputController
 ```
 
-Text input controller.
+设置TextInput控制器。当需要通过控制器调用光标设置、文本选择等方法时传入此参数。不设置时默认无控制器，无法使用控制器相关方法。
 
-**Type:** TextInputController
+**Type:** [TextInputController](../arkts-apis/arkts-arkui-textinput-textinputcontroller-c.md)
 
 **Since:** 8
 
@@ -36,9 +36,9 @@ Text input controller.
 placeholder?: ResourceStr
 ```
 
-Text displayed when there is no input.
+设置无输入时的提示文本。不设置时默认无提示文本。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
 
@@ -56,17 +56,17 @@ Text displayed when there is no input.
 text?: ResourceStr
 ```
 
-Current text input.
+设置输入框当前的文本内容。不设置时默认为空字符串。
 
-You are advised to bind the state variable to the text in real time through the **onChange** event, so as to prevent display errors when the component is updated.
+建议通过onChange事件将状态变量与文本实时绑定，
 
-Since API version 10, this parameter supports two-way binding through  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+避免组件刷新时TextInput中的文本内容异常。
 
-Since API version 18, this parameter supports two-way binding through  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-**Type:** ResourceStr
+从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
 

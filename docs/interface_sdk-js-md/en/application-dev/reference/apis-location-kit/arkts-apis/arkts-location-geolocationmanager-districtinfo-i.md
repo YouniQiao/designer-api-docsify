@@ -10,6 +10,12 @@ Indicates request parameters for obtaining the district information.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## administrativeArea
 
 ```TypeScript

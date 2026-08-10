@@ -1,14 +1,22 @@
 # @ohos.distributedsched.linkEnhance
 
-The **linkEnhance** module delivers highly efficient Bluetooth connectivity and data transmission capabilities,significantly enhancing the cross-device connection stability. By employing a multi-channel merging algorithm, it not only increases the number of available cross-device connections but also strengthens cross-device data transmission capabilities, thereby improving the overall user experience.
+linkEnhance模块提供高效的蓝牙连接和数据传输功能，增强设备间连接的稳定性。使用多通道合并算法，增加设备间连接数，提升跨设备数据传输能力，改善用户使用体验。
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace linkEnhance--><!--Device-unnamed-declare namespace linkEnhance-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+## Modules to Import
+
+```TypeScript
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+```
 
 ## Summary
 
@@ -16,14 +24,14 @@ The **linkEnhance** module delivers highly efficient Bluetooth connectivity and 
 
 | Name | Description |
 | --- | --- |
-| [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md#createconnection) | Creates a **Connection** object on the device that functions as the client. The device can then initiate connection requests to the device that functions as the server. |
-| [createServer](arkts-distributedservice-linkenhance-createserver-f.md#createserver) | Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server. |
+| [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md#createconnection) | 作为客户端的设备创建连接对象，以便后续向服务端设备发起连接。 |
+| [createServer](arkts-distributedservice-linkenhance-createserver-f.md#createserver) | 在服务端设备上，应用创建服务。通过start()开启后，该设备可作为服务端被其他设备连接。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md) | Represents the connection result, which is returned after the client calls **connect()**. |
-| [Connection](arkts-distributedservice-linkenhance-connection-i.md) | Represents a **Connection** object, which provides methods for connecting to and disconnecting from a peer device,obtaining the device's ID, sending data, and registering or unregistering event callbacks. |
-| [Server](arkts-distributedservice-linkenhance-server-i.md) | Represents a **Server** object, which provides methods for starting, stopping, and closing the server, and registering or unregistering event callbacks. |
+| [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md) | 客户端调用connect()后，返回的连接结果。 |
+| [Connection](arkts-distributedservice-linkenhance-connection-i.md) | 连接对象，提供连接、断连、获取对端设备ID、发送数据、注册/取消注册回调等方法。 |
+| [Server](arkts-distributedservice-linkenhance-server-i.md) | 服务对象，提供启动服务、停止服务、关闭服务、注册/取消注册服务端回调等方法。 |
 

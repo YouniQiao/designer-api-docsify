@@ -1,6 +1,6 @@
 # Organization
 
-Defines a contact's organization.
+联系人的组织类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's organization.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## name
 
 ```TypeScript
 name: string
 ```
 
-Organization name.
+单位名称。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Organization name.
 title?: string
 ```
 
-Job title.
+职位名称。
 
 **Type:** string
 

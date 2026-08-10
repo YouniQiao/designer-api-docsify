@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## entityId
 
 ```TypeScript
@@ -38,7 +44,7 @@ episodeRange?: EpisodeRange
 
 要查询的剧集区间。
 
-**类型：** EpisodeRange
+**类型：** [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md)
 
 **起始版本：** 23
 
@@ -58,7 +64,7 @@ pageIndex: int
 
 分页查询页码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -78,7 +84,7 @@ sort?: Sort
 
 查询到的列表数据排序。
 
-**类型：** Sort
+**类型：** [Sort](arkts-avsession-avmusictemplate-sort-e.md)
 
 **起始版本：** 23
 
@@ -98,7 +104,7 @@ subEntityType?: EntityType
 
 子节点的媒体资源类型。
 
-**类型：** EntityType
+**类型：** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **起始版本：** 23
 
@@ -118,7 +124,7 @@ type: EntityType
 
 媒体资源类型。
 
-**类型：** EntityType
+**类型：** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # CertValidationResult
 
-Result of certificate validation.
+证书验证的结果。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Result of certificate validation.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certChain
 
 ```TypeScript
 readonly certChain: Array<X509Cert>
 ```
 
-Indicates the authenticated certificate chain. Upon successful authentication, the complete certificate chain is returned, from the end-entity certificate to the trust anchor. It can be used for subsequent certificate information query or other verification operations.
+验证后的证书链。验证成功时返回完整的证书链，从终端实体证书到信任锚点。可用于后续的证书信息查询或其他验证操作。
 
 **Type:** Array&lt;X509Cert&gt;
 

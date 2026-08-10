@@ -1,6 +1,6 @@
 # AbilityComponent
 
-**AbilityComponent** is a container for independently displaying an ability.
+独立显示Ability的容器。
 
 ## AbilityComponent
 
@@ -8,7 +8,7 @@
 AbilityComponent(value: { want: import('../api/@ohos.app.ability.Want').default })
 ```
 
-Construct the ability component.Called when the ability component is used.
+创建AbilityComponent。当AbilityComponent被使用时调用。
 
 **Since:** 9
 

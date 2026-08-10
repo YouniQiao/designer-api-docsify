@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly capturerInfo: AudioCapturerInfo
 
 音频采集器信息。
 
-**类型：** AudioCapturerInfo
+**类型：** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ readonly deviceDescriptors: AudioDeviceDescriptors
 
 音频设备信息。
 
-**类型：** AudioDeviceDescriptors
+**类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **起始版本：** 9
 
@@ -72,7 +78,7 @@ readonly streamId: int
 
 音频流唯一id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

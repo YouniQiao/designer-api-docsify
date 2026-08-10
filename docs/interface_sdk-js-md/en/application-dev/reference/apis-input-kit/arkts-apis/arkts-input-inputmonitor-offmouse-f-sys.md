@@ -1,12 +1,18 @@
 # offMouse (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
 ## offMouse
 
 ```TypeScript
 function offMouse(receiver?: Callback<MouseEvent>): void
 ```
 
-Cancel listening for mouse input events.
+取消监听全局鼠标事件。
 
 **Since:** 23
 
@@ -24,13 +30,13 @@ Cancel listening for mouse input events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | No | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | No | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 

@@ -1,6 +1,6 @@
 # MicrophoneCaptureStateChangeInfo
 
-Defines the state information of the microphone before and after the callback is triggered.
+定义麦克风触发回调时的改变前后的状态信息。
 
 **Since:** 23
 
@@ -16,9 +16,9 @@ Defines the state information of the microphone before and after the callback is
 newState: MicrophoneCaptureState
 ```
 
-New state.
+改变后的状态
 
-**Type:** MicrophoneCaptureState
+**Type:** [MicrophoneCaptureState](arkts-arkweb-microphonecapturestate-e.md)
 
 **Since:** 23
 
@@ -34,9 +34,9 @@ New state.
 originalState: MicrophoneCaptureState
 ```
 
-Original state.
+原来的状态
 
-**Type:** MicrophoneCaptureState
+**Type:** [MicrophoneCaptureState](arkts-arkweb-microphonecapturestate-e.md)
 
 **Since:** 23
 

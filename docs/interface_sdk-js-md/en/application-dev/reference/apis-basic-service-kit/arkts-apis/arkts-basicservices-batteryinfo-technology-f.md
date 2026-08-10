@@ -1,12 +1,18 @@
 # technology
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## technology
 
 ```TypeScript
 function technology(): string
 ```
 
-Battery technology of the device.
+表示当前设备电池的技术型号。
 
 **Since:** 23
 
@@ -20,5 +26,5 @@ Battery technology of the device.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the battery technology of the device. |
+| string | 返回当前设备电池的技术型号。 |
 

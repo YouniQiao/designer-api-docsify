@@ -14,3 +14,9 @@ Portrait Photo Conflict Functions object.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+

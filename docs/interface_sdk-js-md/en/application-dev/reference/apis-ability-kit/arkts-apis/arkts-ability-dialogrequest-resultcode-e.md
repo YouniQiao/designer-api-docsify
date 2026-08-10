@@ -1,6 +1,6 @@
 # ResultCode
 
-Enumerates the result codes of the request for the modal dialog box.
+模态弹框请求结果码。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the result codes of the request for the modal dialog box.
 RESULT_OK = 0
 ```
 
-The request succeeds.
+表示成功。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ The request succeeds.
 RESULT_CANCEL = 1
 ```
 
-The request fails.
+表示失败。
 
 **Since:** 9
 

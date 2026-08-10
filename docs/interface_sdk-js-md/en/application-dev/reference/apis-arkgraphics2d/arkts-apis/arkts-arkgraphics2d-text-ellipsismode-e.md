@@ -1,8 +1,8 @@
 # EllipsisMode
 
-Enumerates the ellipsis styles.
+省略号类型枚举。
 
-**EllipsisMode.START** and **EllipsisMode.MIDDLE** take effect only when text overflows in a single line.
+EllipsisMode.START和EllipsisMode.MIDDLE仅在单行超长文本生效。
 
 **Since:** 12
 
@@ -18,8 +18,7 @@ Enumerates the ellipsis styles.
 START = 0
 ```
 
-Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in  
-[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+开头省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中设置maxLines为1时生效。
 
 **Since:** 12
 
@@ -37,8 +36,7 @@ Ellipsis at the beginning. This enumerated value is valid only when **maxLines**
 MIDDLE = 1
 ```
 
-Ellipsis in the middle. This enumerated value is valid only when **maxLines** is set to **1** in  
-[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+中间省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中设置maxLines为1时生效。
 
 **Since:** 12
 
@@ -56,8 +54,7 @@ Ellipsis in the middle. This enumerated value is valid only when **maxLines** is
 END = 2
 ```
 
-Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in  
-[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+末尾省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
 
 **Since:** 12
 
@@ -75,8 +72,7 @@ Ellipsis at the end. This enumerated value is valid when **maxLines** is set to 
 MULTILINE_START = 3
 ```
 
-Ellipsis at the beginning. This enumerated value is valid when **maxLines** is set to any value in  
-[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+开头省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
 
 **Since:** 24
 
@@ -94,8 +90,7 @@ Ellipsis at the beginning. This enumerated value is valid when **maxLines** is s
 MULTILINE_MIDDLE = 4
 ```
 
-Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in  
-[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+中间省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
 
 **Since:** 24
 

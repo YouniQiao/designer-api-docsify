@@ -1,6 +1,6 @@
 # CmsVerificationConfig
 
-Represents CMS verification configuration.
+CMS验签的配置。
 
 **Since:** 22
 
@@ -10,13 +10,19 @@ Represents CMS verification configuration.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## contentData
 
 ```TypeScript
 contentData?: Uint8Array
 ```
 
-Content data. If the detached mode is used, you need to specify the plaintext data. This parameter can be left empty in attached mode.
+内容数据，如果是detached模式，则需要指定明文数据。attached模式可以不传。
 
 **Type:** Uint8Array
 
@@ -36,9 +42,9 @@ Content data. If the detached mode is used, you need to specify the plaintext da
 contentDataFormat?: CmsContentDataFormat
 ```
 
-Format of the content. The default value is **CmsContentDataFormat.BINARY**.
+内容数据的格式。默认为CmsContentDataFormat.BINARY。
 
-**Type:** CmsContentDataFormat
+**Type:** [CmsContentDataFormat](arkts-devicecertificate-cert-cmscontentdataformat-e.md)
 
 **Default:** CmsContentDataFormat.BINARY
 
@@ -58,7 +64,7 @@ Format of the content. The default value is **CmsContentDataFormat.BINARY**.
 signerCerts?: Array<X509Cert>
 ```
 
-Signer certificates.
+签名者证书。
 
 **Type:** Array&lt;X509Cert&gt;
 
@@ -78,10 +84,11 @@ Signer certificates.
 trustCerts: Array<X509Cert>
 ```
 
-Trusted certificates.
-    **NOTE**  
-    
-    You need to configure the trust certificates of all signers.
+信任证书。
+
+> **说明：**
+> 
+> 需要配置所有签名者的信任证书。
 
 **Type:** Array&lt;X509Cert&gt;
 

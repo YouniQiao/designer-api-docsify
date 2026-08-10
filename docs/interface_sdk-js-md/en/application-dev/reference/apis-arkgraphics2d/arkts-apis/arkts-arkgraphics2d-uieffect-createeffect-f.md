@@ -1,12 +1,18 @@
 # createEffect
 
+## Modules to Import
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## createEffect
 
 ```TypeScript
 function createEffect(): VisualEffect
 ```
 
-Creates a VisualEffect instance for adding multiple VisualEffect effects to a component.
+创建VisualEffect实例用于给组件添加多种VisualEffect效果。
 
 **Since:** 12
 
@@ -22,11 +28,12 @@ Creates a VisualEffect instance for adding multiple VisualEffect effects to a co
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a VisualEffect instance, which supports adding multiple VisualEffect effects. |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回VisualEffect实例，支持添加多种VisualEffect效果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect()
+// Create a VisualEffect instance
+let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect();
 ```
 

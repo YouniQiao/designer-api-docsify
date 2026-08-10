@@ -1,5 +1,11 @@
 # concat
 
+## 导入模块
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
+
 ## concat
 
 ```TypeScript
@@ -23,21 +29,21 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | list | Buffer[] \| Uint8Array[] | 是 | Buffer或Uint8Array实例数组，用于拼接合并创建新的Buffer对象。 |
-| totalLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 需要复制的总字节长度，默认值为0。 |
+| totalLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 需要复制的总字节长度，默认值为0。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回新的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回新的Buffer对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "length" is out of range. It must be >= 0 and <= uint32 max. Received value is: [length] |
+| 10200001 | The value of "length" is out of range. It must be >= 0 and <= uint32 max. Received value is: [length] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

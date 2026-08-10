@@ -32,5 +32,5 @@ Deserializes a JsonElement into the object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jsonElem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The JsonElement to deserialize. |
+| jsonElem | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | Yes | The JsonElement to deserialize. |
 

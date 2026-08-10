@@ -2,13 +2,13 @@
 
 定义自定义系统事件。用户可以使用公共事件接口获取该事件。
 
-上传下载SA具有'ohos.permission.SEND\_TASK\_COMPLETE\_EVENT'权限，用户可以配置事件的metadata指向的二级配置文件来拦截其他事件发送者。
+上传下载SA具有'ohos.permission.SEND_TASK_COMPLETE_EVENT'权限，用户可以配置事件的metadata指向的二级配置文件来拦截其他事件发送者。
 
-调用CommonEventData类型传输公共事件相关数据，成员的内容填写和 [CommonEventData]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ 介绍的有所区别，其中CommonEventData.code表示任务的状态，目前为0x40 COMPLETE或0x41 FAILED；CommonEventData.data表示任务的taskId。
+调用CommonEventData类型传输公共事件相关数据，成员的内容填写和 [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) 介绍的有所区别，其中CommonEventData.code表示任务的状态，目前为0x40 COMPLETE或0x41 FAILED；CommonEventData.data表示任务的taskId。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+&lt;!--Del--&gt;
 
-请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_以获取事件配置信息和二级配置文件的配置方式。\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+请参考[静态订阅公共事件](../../../basic-services/common-event/common-event-static-subscription-sys.md)以获取事件配置信息和二级配置文件的配置方式。&lt;!--DelEnd--&gt;
 
 **起始版本：** 11
 

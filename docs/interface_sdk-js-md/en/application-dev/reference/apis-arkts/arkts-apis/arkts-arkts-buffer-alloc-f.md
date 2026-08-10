@@ -1,12 +1,18 @@
 # alloc
 
+## Modules to Import
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
+
 ## alloc
 
 ```TypeScript
 function alloc(size: int, fill?: string | Buffer | int | double | long, encoding?: BufferEncoding): Buffer
 ```
 
-Creates and initializes a **Buffer** object of the specified length.
+创建指定字节长度的Buffer对象，并使用指定值进行初始化填充（默认填充0）。
 
 **Since:** 9
 
@@ -22,13 +28,13 @@ Creates and initializes a **Buffer** object of the specified length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Size of the **Buffer** object to create, in bytes. |
-| fill | ArkTS-Dyn: string \| Buffer \| number \| number \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| Buffer \| int \| double \| long | No | Value to be filled in the buffer. The default value is **0**.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 9 - 10 |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **fill** is a string). The default value is **'utf8'**. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的Buffer对象长度，单位：字节。取值为正整数，最大值为2^32-1，即4294967295。 |
+| fill | ArkTS-Dyn: string \| Buffer \| number \| number \| number  <br>ArkTS-Sta：string \| Buffer \| int \| double \| long | No | 填充至新缓冲区的值。默认值：0。<br>**Since:** 9 - 10 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式（当fill为string时，才有意义）。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Buffer** object created. |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回一个Buffer对象。 |
 

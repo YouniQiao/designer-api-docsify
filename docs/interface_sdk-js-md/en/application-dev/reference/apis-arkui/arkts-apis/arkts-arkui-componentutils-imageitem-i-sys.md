@@ -12,6 +12,12 @@ Image object with layout information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { componentUtils } from 'kits/@kit.ArkUI';
+```
+
 ## image
 
 ```TypeScript
@@ -64,7 +70,7 @@ rotation?: Rotation2D
 
 Information about the rotation of the box which displays the image.
 
-**Type:** Rotation2D
+**Type:** [Rotation2D](arkts-arkui-componentutils-rotation2d-i-sys.md)
 
 **Since:** 23
 

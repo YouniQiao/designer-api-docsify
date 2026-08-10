@@ -1,5 +1,11 @@
 # isNRSupported
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## isNRSupported
 
 ```TypeScript
@@ -22,7 +28,7 @@ Checks whether the device supports 5G New Radio (NR).
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let result: boolean = radio.isNRSupported();
@@ -50,7 +56,7 @@ Checks whether the device supports 5G New Radio (NR) by according card slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the card slot index int, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index int, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
@@ -58,7 +64,7 @@ Checks whether the device supports 5G New Radio (NR) by according card slot.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let slotId: number = 0;

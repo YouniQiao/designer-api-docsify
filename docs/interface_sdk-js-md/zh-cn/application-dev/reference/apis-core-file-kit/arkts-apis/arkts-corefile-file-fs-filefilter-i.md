@@ -10,16 +10,23 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## filter
 
 ```TypeScript
 filter(name: string): boolean
 ```
 
-用于[listFileExt]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或[listFileExtSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口的文件过滤，判断指定文件名是否应包含在返回的文件列表中。
-    **说明**：  
-    
-    该函数调用频率较高，请避免执行耗时操作，如文件I/O、网络请求等。
+用于[listFileExt](arkts-corefile-fileio-listfileext-f.md#listfileext)或[listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listfileextsync)接口的文件过滤，判断指定文件名是否应包含在返回的文件列表中。
+
+> **说明：**
+> 
+> 该函数调用频率较高，请避免执行耗时操作，如文件I/O、网络请求等。
 
 **起始版本：** 26.0.0
 

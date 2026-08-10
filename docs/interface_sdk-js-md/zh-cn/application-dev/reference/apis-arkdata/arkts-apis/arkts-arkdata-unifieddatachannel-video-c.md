@@ -1,6 +1,6 @@
 # Video
 
-视频类型数据，是[File]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，用于描述视频文件。
+视频类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述视频文件。
 
 **继承/实现关系：** Video extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
@@ -12,13 +12,19 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## videoUri
 
 ```TypeScript
 set videoUri(value: string)
 ```
 
-本地视频数据uri或网络视频uri，本地视频数据uri可通过[getUriFromPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_函数获取。
+本地视频数据uri或网络视频uri，本地视频数据uri可通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)函数获取。
 
 **类型：** string
 

@@ -1,6 +1,6 @@
 # FilterAbilityStateType（系统接口）
 
-表示要监听的Ability状态，该类型为枚举。可配合[AppStateFilter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_过滤想要监听的Ability状态。
+表示要监听的Ability状态，该类型为枚举。可配合[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md)过滤想要监听的Ability状态。
 
 **起始版本：** 21
 
@@ -19,7 +19,7 @@ CREATE = 1 << 0
 ```
 
 Ability正在创建中，对应  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的ABILITY\_STATE\_CREATE。
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_CREATE。
 
 **起始版本：** 21
 
@@ -38,7 +38,7 @@ FOREGROUND = 1 << 1
 ```
 
 Ability处于前台，对应  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的ABILITY\_STATE\_FOREGROUND。
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_FOREGROUND。
 
 **起始版本：** 21
 
@@ -57,7 +57,7 @@ BACKGROUND = 1 << 2
 ```
 
 Ability处于后台，对应  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的ABILITY\_STATE\_BACKGROUND。
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_BACKGROUND。
 
 **起始版本：** 21
 
@@ -76,7 +76,7 @@ DESTROY = 1 << 3
 ```
 
 Ability已经销毁，对应  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的ABILITY\_STATE\_TERMINATED。
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_TERMINATED。
 
 **起始版本：** 21
 

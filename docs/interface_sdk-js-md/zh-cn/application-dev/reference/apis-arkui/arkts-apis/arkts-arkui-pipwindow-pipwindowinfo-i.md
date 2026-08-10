@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { PiPWindow } from 'kits/@kit.ArkUI';
+```
+
 ## size
 
 ```TypeScript
@@ -18,7 +24,7 @@ size: PiPWindowSize
 
 画中画窗口大小。
 
-**类型：** PiPWindowSize
+**类型：** [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)
 
 **起始版本：** 15
 
@@ -38,7 +44,7 @@ windowId: int
 
 画中画窗口ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 15
 

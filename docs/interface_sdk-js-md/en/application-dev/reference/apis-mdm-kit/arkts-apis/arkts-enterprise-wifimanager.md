@@ -1,33 +1,41 @@
-# @ohos.enterprise.wifiManager(Wi-Fi Management)
+# @ohos.enterprise.wifiManager(Wi-Fi管理)
 
-This module provides Wi-Fi management capabilities for enterprise devices, including querying the Wi-Fi enabling status, configuring Wi-Fi connections, and managing the Wi-Fi list.
+本模块提供企业设备Wi-Fi管理能力，包括查询Wi-Fi开启状态、配置Wi-Fi连接、管理Wi-Fi名单等。
 
-**Use cases:**
+**使用场景**：
 
-- Configuring Wi-Fi connections for enterprise devices in batches, simplifying the device initialization process  
-- Controlling the Wi-Fi networks that devices can connect to, implementing network access compliance management  
-- Managing the Wi-Fi switch of enterprise devices and unifying network policies
+- 企业设备批量配置Wi-Fi连接，简化设备初始化流程  
+- 控制设备可连接的Wi-Fi网络，实现网络访问合规管理  
+- 管理企业设备的Wi-Fi开关，统一网络策略
 
-**Benefits:**
+**功能收益**：
 
-- Improve enterprise network management efficiency and reduces IT O&M costs.  
-- Ensure that devices connect only to secure Wi-Fi networks, reducing security risks.  
-- Implement unified management and control of network policies to meet enterprise compliance requirements.
-    **NOTE**  
-    
-    The APIs of this module can be called only by a device administrator application that is enabled. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.  
-    
-    The global restriction policies are provided by **restrictions**. To disable Wi-Fi globally, see  
-    [@ohos.enterprise.restrictions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+- 提高企业网络管理效率，减少IT运维成本  
+- 确保设备仅连接安全的Wi-Fi网络，降低安全风险  
+- 实现网络策略统一管控，满足企业合规要求
+
+> **说明：**
+> 
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+> 
+> 全局通用限制类策略由restrictions统一提供，若要全局禁用Wi-Fi，请参考
+> [@ohos.enterprise.restrictions（限制类策略）](arkts-enterprise-restrictions.md)。
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace wifiManager--><!--Device-unnamed-declare namespace wifiManager-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.MDMKit';
+```
 
 ## Summary
 
@@ -35,40 +43,40 @@ This module provides Wi-Fi management capabilities for enterprise devices, inclu
 
 | Name | Description |
 | --- | --- |
-| [addAllowedWifiList](arkts-mdm-wifimanager-addallowedwifilist-f.md#addallowedwifilist) | Adds allowed Wi-Fi networks. The current device can only connect to the allowed Wi-Fi networks. This API is applicable to enterprise security management scenarios, for example, restricting employees' devices to connect only to Wi-Fi networks authorized by the enterprise, preventing connection to insecure external Wi-Fi networks and ensuring enterprise network and data security.  A policy conflict is reported when this API is called in the following scenarios:  1. The device Wi-Fi capability has been disabled via [setDisallowedPolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.You can resolve the conflict by enabling Wi-Fi via [setDisallowedPolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.2. Disallowed Wi-Fi networks have been added by calling [addDisallowedWifiList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.You can resolve the conflict by removing the disallowed Wi-Fi networks through [removeDisallowedWifiList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md#adddisallowedwifilist) | Adds disallowed Wi-Fi networks. The current device cannot connect to the disallowed Wi-Fi networks. This API is applicable to enterprise security control and management scenarios, such as preventing devices from connecting to insecure public Wi-Fi networks (for example, those in cafes or airports), and preventing employees from connecting to competitor or malicious networks, thereby safeguarding enterprise data security.  A policy conflict is reported when this API is called in the following scenarios:  1. The device Wi-Fi capability has been disabled via [setDisallowedPolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.You can resolve the conflict by enabling Wi-Fi via [setDisallowedPolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.2. Allowed Wi-Fi networks have been added by calling [addAllowedWifiList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.You can resolve the conflict by removing the allowed Wi-Fi networks through [removeAllowedWifiList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [getAllowedWifiList](arkts-mdm-wifimanager-getallowedwifilist-f.md#getallowedwifilist) | Obtains Wi-Fi networks from the allowed list. |
-| [getAllowedWifiList](arkts-mdm-wifimanager-getallowedwifilist-f.md#getallowedwifilist-1) | Obtains Wi-Fi networks from the allowed list. |
-| [getDisallowedWifiList](arkts-mdm-wifimanager-getdisallowedwifilist-f.md#getdisallowedwifilist) | Obtains disallowed Wi-Fi networks. |
-| [getDisallowedWifiList](arkts-mdm-wifimanager-getdisallowedwifilist-f.md#getdisallowedwifilist-1) | Obtains disallowed Wi-Fi networks. |
-| [isWifiActive](arkts-mdm-wifimanager-iswifiactive-f.md#iswifiactive) | Queries the Wi-Fi status of the current device. This API uses an asynchronous callback to return the result. |
-| [isWifiActive](arkts-mdm-wifimanager-iswifiactive-f.md#iswifiactive-1) | Queries the Wi-Fi status of the current device. This API uses a promise to return the result. |
-| [isWifiActiveSync](arkts-mdm-wifimanager-iswifiactivesync-f.md#iswifiactivesync) | Queries the Wi-Fi status of the current device. |
-| [isWifiDisabled](arkts-mdm-wifimanager-iswifidisabled-f.md#iswifidisabled) | Queries whether Wi-Fi is disabled on the current device. |
-| [removeAllowedWifiList](arkts-mdm-wifimanager-removeallowedwifilist-f.md#removeallowedwifilist) | Removes Wi-Fi networks from the allowed list. If some Wi-Fi networks are removed from the allowed list, the current device can only connect to the remaining ones; if all Wi-Fi networks are removed from the allowed list, the current device can connect to any Wi-Fi network. This API is applicable to enterprise Wi-Fi policy adjustment scenarios,such as removing restrictions on old Wi-Fi networks when the company switches to a new Wi-Fi network, or lifting some Wi-Fi restrictions to allow employees to connect to new office networks. |
-| [removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md#removedisallowedwifilist) | Removes disallowed Wi-Fi networks. If some Wi-Fi networks are removed from the disallowed list, the current device cannot connect to the remaining ones; if all Wi-Fi networks are removed from the disallowed list, the current device can connect to any Wi-Fi network. This API is applicable to enterprise Wi-Fi policy adjustment scenarios,such as lifting restrictions on a specific Wi-Fi network, allowing employees to connect to newly approved office networks, or completely removing the disabling policy. |
-| [setWifiDisabled](arkts-mdm-wifimanager-setwifidisabled-f.md#setwifidisabled) | Sets the Wi-Fi disabling policy. |
-| [setWifiProfile](arkts-mdm-wifimanager-setwifiprofile-f.md#setwifiprofile) | Configures Wi-Fi for the current device to connect to a specified network. This API uses an asynchronous callback to return the result. |
-| [setWifiProfile](arkts-mdm-wifimanager-setwifiprofile-f.md#setwifiprofile-1) | Configures Wi-Fi for the current device to connect to a specified network. This API uses a promise to return the result. |
-| [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync) | Configures Wi-Fi for the current device to connect to a specified network. |
-| [turnOffWifi](arkts-mdm-wifimanager-turnoffwifi-f.md#turnoffwifi) | Disables Wi-Fi.  In the following scenario, attempting to disable Wi-Fi using this API will fail, and a message indicating that the system function is disabled will be returned:  ​Wi-Fi has been disabled via  [setDisallowedPolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. In this case, you must call [setDisallowedPolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to enable Wi-Fi. |
-| [turnOnWifi](arkts-mdm-wifimanager-turnonwifi-f.md#turnonwifi) | Enables Wi-Fi. This API is applicable to enterprise device remote management scenarios, such as administrators remotely enabling Wi-Fi on employee devices, or ensuring that Wi-Fi is turned on when specific policies are enforced.  In the following scenario, attempting to enable Wi-Fi using this API will fail, and a message indicating that the system function is disabled will be returned:  ​Wi-Fi has been disabled via  [setDisallowedPolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. In this case, you must call [setDisallowedPolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to enable Wi-Fi. |
+| [addAllowedWifiList](arkts-mdm-wifimanager-addallowedwifilist-f.md#addallowedwifilist) | 添加Wi-Fi允许名单。添加允许名单后当前设备仅允许连接该名单下的Wi-Fi。适用于企业安全管理场景，例如限制员工设备只能连接公司授权的Wi-Fi网络，防止连接不安全的外部Wi-Fi，保障企业网络安全和数据安全。  以下情况下，调用本接口会报策略冲突：  1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了设备Wi-Fi能力。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)解除Wi-Fi禁用后，可解除冲突。2. 已经通过[addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md#adddisallowedwifilist)接口添加了Wi-Fi禁用名单。通过[removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md#removedisallowedwifilist)移除Wi-Fi禁用名单后，可解除冲突。 |
+| [addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md#adddisallowedwifilist) | 添加Wi-Fi禁用名单。添加禁用名单后当前设备不允许连接该名单下的Wi-Fi。适用于企业安全管控场景，例如禁止设备连接不安全的公共Wi-Fi(如咖啡馆、机场Wi-Fi)、防止员工连接竞争对手或恶意网络，保障企业数据安全。  以下情况下，调用本接口会报策略冲突：  1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了设备Wi-Fi能力。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)解除Wi-Fi禁用后，可解除冲突。2. 已经通过[addAllowedWifiList](arkts-mdm-wifimanager-addallowedwifilist-f.md#addallowedwifilist)接口添加了Wi-Fi允许名单。通过[removeAllowedWifiList](arkts-mdm-wifimanager-removeallowedwifilist-f.md#removeallowedwifilist)移除Wi-Fi允许名单后，可解除冲突。 |
+| [getAllowedWifiList](arkts-mdm-wifimanager-getallowedwifilist-f.md#getallowedwifilist) | 获取Wi-Fi允许名单。 |
+| [getAllowedWifiList](arkts-mdm-wifimanager-getallowedwifilist-f.md#getallowedwifilist-1) | 获取Wi-Fi允许名单。 |
+| [getDisallowedWifiList](arkts-mdm-wifimanager-getdisallowedwifilist-f.md#getdisallowedwifilist) | 获取Wi-Fi禁用名单。 |
+| [getDisallowedWifiList](arkts-mdm-wifimanager-getdisallowedwifilist-f.md#getdisallowedwifilist-1) | 获取Wi-Fi禁用名单。 |
+| [isWifiActive](arkts-mdm-wifimanager-iswifiactive-f.md#iswifiactive) | 查询当前设备的Wi-Fi开启状态。使用callback异步回调。 |
+| [isWifiActive](arkts-mdm-wifimanager-iswifiactive-f.md#iswifiactive-1) | 查询当前设备的Wi-Fi开启状态。使用Promise异步回调。 |
+| [isWifiActiveSync](arkts-mdm-wifimanager-iswifiactivesync-f.md#iswifiactivesync) | 查询当前设备Wi-Fi开启状态。 |
+| [isWifiDisabled](arkts-mdm-wifimanager-iswifidisabled-f.md#iswifidisabled) | 查询当前设备Wi-Fi是否被禁用。 |
+| [removeAllowedWifiList](arkts-mdm-wifimanager-removeallowedwifilist-f.md#removeallowedwifilist) | 移除Wi-Fi允许名单。若移除允许名单中的部分Wi-Fi，则当前设备仅允许连接剩下未移除的Wi-Fi。若移除允许名单中的所有Wi-Fi，则当前设备可以连接任意Wi-Fi。适用于企业Wi-Fi策略调整场景，例如公司更换Wi-Fi网络时移除旧网络限制、或解除部分Wi-Fi限制以允许员工连接新的办公网络。 |
+| [removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md#removedisallowedwifilist) | 移除Wi-Fi禁用名单。若移除禁用名单中的部分Wi-Fi，则当前设备不允许连接禁用名单内剩余的Wi-Fi。若移除禁用名单中的所有Wi-Fi，则当前设备可以连接任意的Wi-Fi。适用于企业Wi-Fi策略调整场景，例如解除对特定Wi-Fi的禁用限制、允许员工连接新批准的办公网络、或完全移除禁用策略。 |
+| [setWifiDisabled](arkts-mdm-wifimanager-setwifidisabled-f.md#setwifidisabled) | 设置禁用Wi-Fi策略。 |
+| [setWifiProfile](arkts-mdm-wifimanager-setwifiprofile-f.md#setwifiprofile) | 为当前设备配置Wi-Fi，使连接到指定网络。使用callback异步回调。 |
+| [setWifiProfile](arkts-mdm-wifimanager-setwifiprofile-f.md#setwifiprofile-1) | 为当前设备配置Wi-Fi，使连接到指定网络。使用Promise异步回调。 |
+| [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync) | 为当前设备配置Wi-Fi，连接到指定网络。 |
+| [turnOffWifi](arkts-mdm-wifimanager-turnoffwifi-f.md#turnoffwifi) | 关闭Wi-Fi开关。  以下情况下，通过本接口关闭Wi-Fi开关，会提示"系统功能被禁用"：  ​已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了Wi-Fi。需通过  [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口启用Wi-Fi，解决"系统功能被禁用"报错。 |
+| [turnOnWifi](arkts-mdm-wifimanager-turnonwifi-f.md#turnonwifi) | 打开Wi-Fi开关。适用于企业设备远程管理场景，例如管理员远程控制员工设备开启Wi-Fi或在特定策略执行时确保Wi-Fi已开启。  以下情况下，通过本接口打开Wi-Fi开关，会打开失败并提示"系统功能被禁用"：  ​已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了Wi-Fi。需通过  [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口启用Wi-Fi，解决"系统功能被禁用"报错。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [IpProfile](arkts-mdm-wifimanager-ipprofile-i.md) | Represents IP configuration information. |
-| [WifiAccessInfo](arkts-mdm-wifimanager-wifiaccessinfo-i.md) | Represents Wi-Fi access information containing Service Set Identifier (SSID) and Basic Service Set Identifier (BSSID). |
-| [WifiEapProfile](arkts-mdm-wifimanager-wifieapprofile-i.md) | Represents EAP profile (configuration) information. |
-| [WifiProfile](arkts-mdm-wifimanager-wifiprofile-i.md) | Represents the Wi-Fi configuration information. |
+| [IpProfile](arkts-mdm-wifimanager-ipprofile-i.md) | IP配置信息。 |
+| [WifiAccessInfo](arkts-mdm-wifimanager-wifiaccessinfo-i.md) | Wi-Fi的SSID和BSSID信息。 |
+| [WifiEapProfile](arkts-mdm-wifimanager-wifieapprofile-i.md) | 可扩展身份验证协议配置信息。 |
+| [WifiProfile](arkts-mdm-wifimanager-wifiprofile-i.md) | Wi-Fi配置信息。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EapMethod](arkts-mdm-wifimanager-eapmethod-e.md) | Enumerates the EAP authentication methods. |
-| [IpType](arkts-mdm-wifimanager-iptype-e.md) | Enumerates the IP address types. |
-| [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md) | Enumerates the Phase 2 authentication methods. |
-| [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md) | Enumerates the Wi-Fi security types. |
+| [EapMethod](arkts-mdm-wifimanager-eapmethod-e.md) | 表示EAP认证方式的枚举。 |
+| [IpType](arkts-mdm-wifimanager-iptype-e.md) | 表示IP类型的枚举。 |
+| [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md) | 表示第二阶段认证方式的枚举。 |
+| [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md) | 表示加密类型的枚举。 |
 

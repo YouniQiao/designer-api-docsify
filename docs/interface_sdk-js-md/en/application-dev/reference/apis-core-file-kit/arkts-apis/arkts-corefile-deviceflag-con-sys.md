@@ -6,7 +6,7 @@
 const SUPPORTS_READ = 0b1
 ```
 
-The device supports read.
+此设备支持读。
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ The device supports read.
 const SUPPORTS_WRITE = 0b10
 ```
 
-The device supports write.
+此设备支持写。
 
 **Since:** 9
 

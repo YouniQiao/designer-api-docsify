@@ -12,6 +12,12 @@ NotificationSubscriberExtensionAbility是通知订阅者扩展能力的基类，
 
 **系统能力：** SystemCapability.Notification.Notification
 
+## 导入模块
+
+```TypeScript
+import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
+```
+
 ## onCancelMessages
 
 ```TypeScript
@@ -36,21 +42,7 @@ onCancelMessages(hashCodes: Array<string>): void
 | --- | --- | --- | --- |
 | hashCodes | Array&lt;string&gt; | 是 | 要取消的通知的哈希码列表。通过onReceiveMessage获取。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onCancelMessages(hashCodes: Array<string>): void {
-    console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
+## 示例
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -80,21 +72,7 @@ onDestroy(): void
 
 **系统能力：** SystemCapability.Notification.Notification
 
-**示例：**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onDestroy(): void {
-    console.info(`${TAG} onDestroy`);
-  }
-}
-```
-
-ArkTS-Sta示例：
+## 示例
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -128,11 +106,9 @@ onReceiveMessage(notificationInfo: NotificationInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| notificationInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通知订阅扩展能力中收到通知的回调信息。 |
+| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | 是 | 通知订阅扩展能力中收到通知的回调信息。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -140,18 +116,6 @@ const TAG = 'NotificationSubscriberExtAbility';
 export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
   onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
     console.info(`${TAG} onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
-    console.info(`${TAG}  onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
   }
 }
 ```
@@ -164,7 +128,7 @@ context: NotificationSubscriberExtensionContext
 
 NotificationSubscriberExtensionAbility的上下文环境。
 
-**类型：** NotificationSubscriberExtensionContext
+**类型：** [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 
 **起始版本：** 22
 

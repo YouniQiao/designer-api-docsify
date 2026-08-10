@@ -1,5 +1,11 @@
 # isCleartextPermitted
 
+## Modules to Import
+
+```TypeScript
+import { networkSecurity } from 'kits/@kit.NetworkKit';
+```
+
 ## isCleartextPermitted
 
 ```TypeScript
@@ -28,9 +34,9 @@ Checks whether the Cleartext traffic is permitted.To invoke this method, you mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { networkSecurity } from '@kit.NetworkKit';

@@ -1,12 +1,15 @@
 # @ohos.data.rdb
 
-The relational database (RDB) manages data based on relational models. With the underlying SQLite database, the RDB provides a complete mechanism for managing local databases. To satisfy different needs in complicated scenarios, the RDB offers a series of methods for performing operations such as adding, deleting, modifying, and querying data, and supports direct execution of SQL statements. The worker threads are not supported.
+关系型数据库（Relational Database，RDB）是一种基于关系模型来管理数据的数据库。关系型数据库基于SQLite组件提供了一套完整的对本地数据库进行管理的机制，对外提供了一系列的增、删、改、查等接口，也可以直接运行用户输入的SQL语句来满足复杂的场景需要。不支持Worker线程。
 
-This module provides the following RDB-related functions:
+该模块提供以下关系型数据库相关的常用功能：
 
-- [RdbPredicates]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: provides APIs for creating predicates. The predicates represent the  
-properties, characteristics, or relationships between data entities in an RDB store and are used to define data operation conditions.  
-- [RdbStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_: provides APIs for managing data in an RDB store.
+- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md)：数据库中用来代表数据实体的性质、特征或者数据实体之间关系的词项，主要用来定义数据库的操作条件。  
+- [RdbStore](arkts-arkdata-rdb-rdbstore-i.md)：提供管理关系数据库（RDB）方法的接口。
+
+> **说明：**
+> 
+> - 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.data.relationalStore](arkts-data-relationalstore.md)。
 
 **Since:** 7
 
@@ -26,36 +29,36 @@ properties, characteristics, or relationships between data entities in an RDB st
 
 | Name | Description |
 | --- | --- |
-| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md#deleterdbstore) | Deletes an RDB store. This API uses an asynchronous callback to return the result. |
-| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md#deleterdbstore-1) | Deletes an RDB store. This API uses a promise to return the result. |
-| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md#getrdbstore) | Obtains an RDB store. This API uses an asynchronous callback to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations. |
-| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md#getrdbstore-1) | Obtains an RDB store. This API uses a promise to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations. |
+| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md#deleterdbstore) | 删除数据库，使用callback异步回调。 |
+| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md#deleterdbstore-1) | 使用指定的数据库文件配置删除数据库，使用Promise异步回调。 |
+| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md#getrdbstore) | 获得一个相关的RdbStore，操作关系型数据库，用户可以根据自己的需求配置RdbStore的参数，然后通过RdbStore调用相关接口可以执行相关的数据操作，使用callback异步回调。 |
+| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md#getrdbstore-1) | 获得一个相关的RdbStore，操作关系型数据库，用户可以根据自己的需求配置RdbStore的参数，然后通过RdbStore调用相关接口可以执行相关的数据操作，使用Promise异步回调。 |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Defines predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 表示关系型数据库（RDB）的谓词。该类确定RDB中条件表达式的值是true还是false。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | Provides APIs for managing data in an RDB store.  Before using the APIs of this class, use  [executeSql]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to initialize the database table structure and related data. |
-| [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) | Defines the RDB store configuration. |
+| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | 提供管理关系数据库（RDB）方法的接口。  在使用以下相关接口前，请使用  [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)接口初始化数据库表结构和相关数据。 |
+| [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) | 管理关系数据库配置。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Defines the subscription type. |
-| [SyncMode](arkts-arkdata-rdb-syncmode-e.md) | Defines the database sync mode. |
+| [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | 描述订阅类型。 |
+| [SyncMode](arkts-arkdata-rdb-syncmode-e.md) | 指数据库同步模式。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range. |
-| [ValueType](arkts-arkdata-rdb-valuetype-t.md) | Defines the data types allowed. |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Defines the types of the key and value in a KV pair. |
+| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | 配置RdbPredicates以匹配数据字段为ValueType且value超出给定范围的指定字段。该方法等同于SQL语句中的"NOT BETWEEN"。 |
+| [ValueType](arkts-arkdata-rdb-valuetype-t.md) | 用于表示允许的数据字段类型。 |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 用于存储键值对的类型。 |
 

@@ -1,14 +1,15 @@
 # Lattice
 
-Lattice object. which is used to divide an image by lattice.
-    **NOTE**  
-    
-    - The initial APIs of this class are supported since API version 12.  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+矩形网格对象。该对象用于将图像按照矩形网格进行划分，支持固定指定网格区域、缩放其余网格实现局部拉伸、自定义网格绘制类型、网格颜色填充以及指定绘制边界矩形等能力。创建Lattice对象后，需配合  
+[Canvas.drawImageLattice](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagelattice)方法使用以实现图像的局部拉伸绘制。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 12
 
@@ -18,6 +19,12 @@ Lattice object. which is used to divide an image by lattice.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## createImageLattice
 
 ```TypeScript
@@ -25,7 +32,7 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
         fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<common2D.Color> | null): Lattice
 ```
 
-Divides the image into lattices. The lattices on both even columns and even rows are fixed, and they are drawn at their original size if the target is large enough. If the target is too small to hold the fixed lattices, all the fixed lattices are scaled down to fit the target, and the lattices that are not on even columns and even rows are scaled to accommodate the remaining space.
+创建矩形网格对象。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格是固定的，如果目标网格足够大，则这些固定网格以其原始大小进行绘制，其余网格将进行缩放，来适应剩余的空间。如果目标网格太小，无法容纳这些固定网格，则所有固定网格都会按比例缩小以适应目标网格。
 
 **Since:** 12
 
@@ -39,25 +46,25 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xDivs | Array&lt;number&gt; | Yes | Array of X coordinates used to divide the image. The value is an integer. |
-| yDivs | Array&lt;number&gt; | Yes | Array of Y coordinates used to divide the image. The value is an integer. |
-| fXCount | number | Yes | Size of the array that holds the X coordinates. The value range is [0, 5]. |
-| fYCount | number | Yes | Size of the array that holds the Y coordinates. The value range is [0, 5]. |
-| fBounds | common2D.Rect \| null | No | Source bounds to draw. The rectangle parameter must be an integer. The default value is the rectangle size of the original image. If the rectangle parameter is a decimal, the decimal part is discarded and converted into an integer. |
-| fRectTypes | Array&lt;RectType&gt; \| null | No | Array that holds the rectangle types. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) (fYCount + 1). |
-| fColors | Array&lt;common2D.Color&gt; \| null | No | Array that holds the colors used to fill the lattices. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) (fYCount + 1). |
+| xDivs | Array&lt;number&gt; | Yes | 用于划分图像的X坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
+| yDivs | Array&lt;number&gt; | Yes | 用于划分图像的Y坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
+| fXCount | number | Yes | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
+| fYCount | number | Yes | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
+| fBounds | common2D.Rect \| null | No | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参 数为小数，会直接舍弃小数部分，转为整数）。 |
+| fRectTypes | Array&lt;RectType&gt; \| null | No | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) ( fYCount + 1)。 |
+| fColors | Array&lt;common2D.Color&gt; \| null | No | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。不传入 时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) (fYCount + 1)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Lattice** object obtained. |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | 返回创建的矩形网格对象，该对象可传入绘制接口以实现图像局部拉伸——固定网格保持原始大小、其余网格自适应缩放填充剩余空间。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createImageLattice
 
@@ -66,7 +73,7 @@ static createImageLattice(xDivs: Array<int>, yDivs: Array<int>, fXCount: int, fY
         fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<common2D.Color> | null): Lattice | undefined
 ```
 
-Divides the image into lattices. The lattices on both even columns and even rows are fixed,and they are drawn at their original size if the target is large enough.If the target is too small to hold the fixed lattices, all the fixed lattices are scaled down to fit the target,and the lattices that are not on even columns and even rows are scaled to accommodate the remaining space.
+创建矩形网格对象。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格是固定的，如果目标网格足够大，则这些固定网格以其原始大小进行绘制，其余网格将进行缩放，来适应剩余的空间。如果目标网格太小，无法容纳这些固定网格，则所有固定网格都会按比例缩小以适应目标网格。
 
 **Since:** 23
 
@@ -80,25 +87,25 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xDivs | Array&lt;int&gt; | Yes | Array of X coordinates used to divide the image. The value is an integer. |
-| yDivs | Array&lt;int&gt; | Yes | Array of Y coordinates used to divide the image. The value is an integer. |
-| fXCount | int | Yes | Size of the array that holds the X coordinates. The value range is [0, 5]. |
-| fYCount | int | Yes | Size of the array that holds the Y coordinates. The value range is [0, 5]. |
-| fBounds | common2D.Rect \| null | No | Source bounds to draw. The rectangle parameter must be an integer. The default value is the rectangle size of the original image. If the rectangle parameter is a decimal, the decimal part is discarded and converted into an integer. |
-| fRectTypes | Array&lt;RectType&gt; \| null | No | Array that holds the rectangle types. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) (fYCount + 1). |
-| fColors | Array&lt;common2D.Color&gt; \| null | No | Array that holds the colors used to fill the lattices. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) (fYCount + 1). |
+| xDivs | Array&lt;int&gt; | Yes | 用于划分图像的X坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
+| yDivs | Array&lt;int&gt; | Yes | 用于划分图像的Y坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
+| fXCount | int | Yes | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
+| fYCount | int | Yes | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
+| fBounds | common2D.Rect \| null | No | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参 数为小数，会直接舍弃小数部分，转为整数）。 |
+| fRectTypes | Array&lt;RectType&gt; \| null | No | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) ( fYCount + 1)。 |
+| fColors | Array&lt;common2D.Color&gt; \| null | No | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。不传入 时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) (fYCount + 1)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Lattice object. |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | 返回创建的矩形网格对象，该对象可传入绘制接口以实现图像局部拉伸——固定网格保持原始大小、其余网格自适应缩放填充剩余空间。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createImageLattice
 
@@ -107,7 +114,7 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
         fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<number> | null): Lattice
 ```
 
-Divides the image into lattices. The lattices on both even columns and even rows are fixed, and they are drawn at their original size if the target is large enough. If the target is too small to hold the fixed lattices, all the fixed lattices are scaled down to fit the target, and the lattices that are not on even columns and even rows are scaled to accommodate the remaining space.
+创建矩形网格对象。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格是固定的，如果目标网格足够大，则这些固定网格以其原始大小进行绘制，其余网格将进行缩放，以适应剩余的空间。如果目标网格太小，无法容纳这些固定网格，则所有固定网格都会按比例缩小以适应目标网格。
 
 **Since:** 18
 
@@ -121,25 +128,25 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xDivs | Array&lt;number&gt; | Yes | Array of X coordinates used to divide the image. The value is an integer. |
-| yDivs | Array&lt;number&gt; | Yes | Array of Y coordinates used to divide the image. The value is an integer. |
-| fXCount | number | Yes | Size of the array that holds the X coordinates. The value range is [0, 5]. |
-| fYCount | number | Yes | Size of the array that holds the Y coordinates. The value range is [0, 5]. |
-| fBounds | common2D.Rect \| null | No | Source bounds to draw. The rectangle parameter must be an integer. The default value is the rectangle size of the original image. If the rectangle parameter is a decimal, the decimal part is discarded and converted into an integer. |
-| fRectTypes | Array&lt;RectType&gt; \| null | No | Array that holds the rectangle types. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) (fYCount + 1). |
-| fColors | Array&lt;number&gt; \| null | No | Array that holds the colors used to fill the lattices. Each color is represented by a 32-bit unsigned integer in hexadecimal ARGB format. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) (fYCount + 1). |
+| xDivs | Array&lt;number&gt; | Yes | 用于划分图像的X坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
+| yDivs | Array&lt;number&gt; | Yes | 用于划分图像的Y坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
+| fXCount | number | Yes | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
+| fYCount | number | Yes | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
+| fBounds | common2D.Rect \| null | No | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参 数为小数，会直接舍弃小数部分，转为整数）。 |
+| fRectTypes | Array&lt;RectType&gt; \| null | No | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) ( fYCount + 1)。 |
+| fColors | Array&lt;number&gt; \| null | No | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。颜色用16进制ARGB 格式的32位无符号整数表示，取值范围[0, 4294967295]。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) (fYCount + 1)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Lattice** object obtained. |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | 返回创建的矩形网格对象，该对象可传入绘制接口以实现图像局部拉伸——固定网格保持原始大小、其余网格自适应缩放填充剩余空间。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createImageLatticeWithArrayInt
 
@@ -148,7 +155,7 @@ static createImageLatticeWithArrayInt(xDivs: Array<int>, yDivs: Array<int>, fXCo
         fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<int> | null): Lattice | undefined
 ```
 
-Divides the image into lattices. The lattices on both even columns and even rows are fixed,and they are drawn at their original size if the target is large enough.If the target is too small to hold the fixed lattices, all the fixed lattices are scaled down to fit the target,and the lattices that are not on even columns and even rows are scaled to accommodate the remaining space.
+创建矩形网格对象。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格是固定的，如果目标网格足够大，则这些固定网格以其原始大小进行绘制，其余网格将进行缩放，以适应剩余的空间。如果目标网格太小，无法容纳这些固定网格，则所有固定网格都会按比例缩小以适应目标网格。
 
 **Since:** 23
 
@@ -162,23 +169,23 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xDivs | Array&lt;int&gt; | Yes | Array of X coordinates used to divide the image. The value is an integer. |
-| yDivs | Array&lt;int&gt; | Yes | Array of Y coordinates used to divide the image. The value is an integer. |
-| fXCount | int | Yes | Size of the array that holds the X coordinates. The value range is [0, 5]. |
-| fYCount | int | Yes | Size of the array that holds the Y coordinates. The value range is [0, 5]. |
-| fBounds | common2D.Rect \| null | No | Source bounds to draw. The rectangle parameter must be an integer. The default value is the rectangle size of the original image. If the rectangle parameter is a decimal, the decimal part is discarded and converted into an integer. |
-| fRectTypes | Array&lt;RectType&gt; \| null | No | Array that holds the rectangle types. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) (fYCount + 1). |
-| fColors | Array&lt;int&gt; \| null | No | Array that holds the colors used to fill the lattices. Each color is represented by a 32-bit unsigned integer in hexadecimal ARGB format. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) (fYCount + 1). |
+| xDivs | Array&lt;int&gt; | Yes | 用于划分图像的X坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
+| yDivs | Array&lt;int&gt; | Yes | 用于划分图像的Y坐标值数组，单位为物理像素px。数组元素需为整数。若传入小数，会直接舍弃小数部分，转为整数。 |
+| fXCount | int | Yes | X坐标值数组的元素个数，需与xDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
+| fYCount | int | Yes | Y坐标值数组的元素个数，需与yDivs数组的长度一致。基于功能和性能的考虑，取值范围为[0, 5]。 |
+| fBounds | common2D.Rect \| null | No | 要绘制的原始边界矩形。当仅需绘制图像的局部区域时传入此参数，不传入时默认为原始图像矩形大小。矩形参数需为整数，单位为物理像素px（若矩形参 数为小数，会直接舍弃小数部分，转为整数）。 |
+| fRectTypes | Array&lt;RectType&gt; \| null | No | 填充矩形网格类型的数组，用于指定每个矩形网格的绘制类型，默认为空。如果设置，大小必须为(fXCount + 1) ( fYCount + 1)。 |
+| fColors | Array&lt;int&gt; \| null | No | 填充网格的颜色数组，用于为每个网格单元格指定填充颜色，设置后对应网格区域将以指定颜色进行纯色填充，替换原有图像内容。颜色用16进制ARGB 格式的32位无符号整数表示，取值范围[0, 4294967295]。不传入时默认为空（网格不使用自定义颜色填充，保留原始图像内容）。如果设置，大小必须为(fXCount + 1) (fYCount + 1)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Lattice object. |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | 返回创建的矩形网格对象，该对象可传入绘制接口以实现图像局部拉伸——固定网格保持原始大小、其余网格自适应缩放填充剩余空间。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

@@ -1,6 +1,6 @@
 # TextBox
 
-Rectangular area of the text, indicating the rectangular space occupied by the text during layout.
+文本矩形区域，表示文本在布局时所占用的矩形空间。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Rectangular area of the text, indicating the rectangular space occupied by the t
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## direction
 
 ```TypeScript
 direction: TextDirection
 ```
 
-Text direction.
+文本方向。
 
-**Type:** TextDirection
+**Type:** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
 
 **Since:** 12
 
@@ -36,7 +42,7 @@ Text direction.
 rect: common2D.Rect
 ```
 
-Rectangular area information, in physical pixels (px).
+矩形区域信息，单位为物理像素px。
 
 **Type:** common2D.Rect
 

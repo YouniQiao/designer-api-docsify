@@ -20,6 +20,6 @@ Callback type for AI session operations.Used to report the result of session cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The current result state.  |
-| content | string | Yes | The detailed result or response content.  |
+| state | [AISessionResultType](arkts-arkweb-web-aisessionresulttype-e.md) | Yes | The current result state. |
+| content | string | Yes | The detailed result or response content. |
 

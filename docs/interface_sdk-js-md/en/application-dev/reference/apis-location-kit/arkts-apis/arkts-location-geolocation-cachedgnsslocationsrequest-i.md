@@ -16,6 +16,12 @@ Parameters for requesting to report cache location information
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## reportingPeriodSec
 
 ```TypeScript

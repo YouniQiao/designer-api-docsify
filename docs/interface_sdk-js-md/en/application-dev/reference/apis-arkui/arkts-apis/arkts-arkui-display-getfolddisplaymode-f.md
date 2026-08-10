@@ -1,12 +1,18 @@
 # getFoldDisplayMode
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getFoldDisplayMode
 
 ```TypeScript
 function getFoldDisplayMode(): FoldDisplayMode
 ```
 
-Obtains the display mode of this foldable device.
+获取可折叠设备当前的显示模式。
 
 **Since:** 10
 
@@ -22,19 +28,17 @@ Obtains the display mode of this foldable device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Display mode of the foldable device. |
+| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | FoldDisplayMode对象，返回可折叠设备当前的显示模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
-
 let data: display.FoldDisplayMode = display.getFoldDisplayMode();
 console.info(`Succeeded in obtaining fold display mode. Data: ${data}`);
 ```

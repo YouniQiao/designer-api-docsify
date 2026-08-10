@@ -1,6 +1,6 @@
 # SearchParams
 
-Provides optional attributes for the search area.
+AtomicServiceSearch中“搜索区”的可选属性。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Provides optional attributes for the search area.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+```
+
 ## onChange
 
 ```TypeScript
 onChange?: EditableTextOnChangeCallback
 ```
 
-Callback triggered when the content in the text box changes. Default value: **undefined**.
+输入内容发生变化时，触发该回调。默认值为`undefined`。
 
 **Since:** 18
 
@@ -34,7 +40,7 @@ Callback triggered when the content in the text box changes. Default value: **un
 onContentScroll?: OnContentScrollCallback
 ```
 
-Callback triggered when the text content is scrolled. Default value: **undefined**.
+文本内容滚动时，触发该回调。默认值为`undefined`。
 
 **Since:** 18
 
@@ -52,7 +58,7 @@ Callback triggered when the text content is scrolled. Default value: **undefined
 onPaste?: OnPasteCallback
 ```
 
-Callback triggered when a paste operation is performed. Default value: **undefined**.
+进行粘贴操作时，触发该回调。默认值为`undefined`。
 
 **Since:** 18
 
@@ -70,7 +76,7 @@ Callback triggered when a paste operation is performed. Default value: **undefin
 onTextSelectionChange?: OnTextSelectionChangeCallback
 ```
 
-Callback triggered when the position of the text selection changes or when the cursor position changes during the editing state. Default value: **undefined**.
+文本选择的位置发生变化或编辑状态下光标位置发生变化时，触发该回调。默认值为`undefined`。
 
 **Since:** 18
 
@@ -88,12 +94,11 @@ Callback triggered when the position of the text selection changes or when the c
 cancelIcon?: IconOptions
 ```
 
-Style of the cancel button on the right. Default value:  
-**{style: CancelButtonStyle.INPUT, icon: {size: '16vp', color: '#99ffffff', src:' '}}**.
+右侧清除按钮样式。默认值：`{style: CancelButtonStyle.INPUT, icon: {size: '16vp', color: '#99ffffff', src: ' '}}`。
 
-When style is set to **CancelButtonStyle.CONSTANT**, the cancel button is displayed in a default style.
+当style为CancelButtonStyle.CONSTANT时，默认显示清除样式。
 
-**Type:** IconOptions
+**Type:** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md)
 
 **Since:** 18
 
@@ -111,9 +116,9 @@ When style is set to **CancelButtonStyle.CONSTANT**, the cancel button is displa
 caretStyle?: CaretStyle
 ```
 
-Pointer style. Default value: **{width: '1.5vp', color: '#007DFF'}**.
+光标样式。默认值：`{width: '1.5vp', color: '#007DFF'}`。
 
-**Type:** CaretStyle
+**Type:** [CaretStyle](arkts-arkui-caretstyle-i.md)
 
 **Since:** 18
 
@@ -131,9 +136,9 @@ Pointer style. Default value: **{width: '1.5vp', color: '#007DFF'}**.
 componentBackgroundColor?: ResourceColor
 ```
 
-Background color of a component. Default value: **\$r('sys.color.ohos\_id\_color\_text\_field\_sub\_bg')**.
+设置组件的背景色。默认值：`\$r('sys.color.ohos_id_color_text_field_sub_bg')`。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
 
@@ -151,9 +156,9 @@ Background color of a component. Default value: **\$r('sys.color.ohos\_id\_color
 copyOptions?: CopyOptions
 ```
 
-Whether the input text can be copied. Default value: **CopyOptions.LocalDevice**.
+输入的文本是否可复制。默认值：`CopyOptions.LocalDevice`，支持设备内复制。
 
-**Type:** CopyOptions
+**Type:** [CopyOptions](arkts-arkui-copyoptions-e.md)
 
 **Since:** 18
 
@@ -171,10 +176,9 @@ Whether the input text can be copied. Default value: **CopyOptions.LocalDevice**
 decoration?: TextDecorationOptions
 ```
 
-Text decorative line options. Default value:  
-**{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}**.
+文本装饰线对象。默认值：`{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}`。
 
-**Type:** TextDecorationOptions
+**Type:** [TextDecorationOptions](arkts-arkui-common-textdecorationoptions-i.md)
 
 **Since:** 18
 
@@ -192,9 +196,9 @@ Text decorative line options. Default value:
 editMenuOptions?: EditMenuOptions
 ```
 
-Extended options of the custom context menu on selection, including the text content, icon, and callback. Default value: **undefined**.
+设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。默认值为`undefined`。
 
-**Type:** EditMenuOptions
+**Type:** [EditMenuOptions](arkts-arkui-editmenuoptions-i.md)
 
 **Since:** 18
 
@@ -212,7 +216,7 @@ Extended options of the custom context menu on selection, including the text con
 enableHapticFeedback?: boolean
 ```
 
-Whether to enable haptic feedback. The value **true** means to enable haptic feedback. Default value: **true**.
+是否开启触控反馈。true表示开启触控反馈。false表示不开启触控反馈。默认值：`true`。
 
 **Type:** boolean
 
@@ -232,7 +236,7 @@ Whether to enable haptic feedback. The value **true** means to enable haptic fee
 enableKeyboardOnFocus?: boolean
 ```
 
-Whether to automatically open the soft keyboard when the **Search** component gains focus. The value **true** means to automatically open the soft keyboard when the **Search** component gains focus. Default value: **true**.
+Search获焦时，是否主动拉起软键盘。true表示Search获焦时主动拉起软键盘。false表示Search获焦时不主动拉起键盘。默认值：`true`。
 
 **Type:** boolean
 
@@ -252,9 +256,9 @@ Whether to automatically open the soft keyboard when the **Search** component ga
 enablePreviewText?: boolean
 ```
 
-Whether to enable preview text. The value **true** means to enable preview text. Default value: **true**.
+是否开启输入预上屏。true表示开启输入预上屏。false表示不开启输入预上屏。默认值：`true`。 
 
-Preview text of the input method should be enabled. Preview text is in a temporary state and does not support text interception. As such, it does not trigger **onWillInsert** and **onDidInsert** callbacks.
+需要配合开启输入法的预上屏功能。预上屏内容定义为文字暂存态，目前不支持文字拦截功能，因此该值为true时不触发onWillInsert、onDidInsert回调。
 
 **Type:** boolean
 
@@ -274,9 +278,9 @@ Preview text of the input method should be enabled. Preview text is in a tempora
 enterKeyType?: EnterKeyType
 ```
 
-Type of the Enter key. Default value: **EnterKeyType.Search**.
+输入法回车键类型。默认值：`EnterKeyType.Search`。
 
-**Type:** EnterKeyType
+**Type:** [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md)
 
 **Since:** 18
 
@@ -294,9 +298,9 @@ Type of the Enter key. Default value: **EnterKeyType.Search**.
 fontColor?: ResourceColor
 ```
 
-Font color of the input text. Default value: **\$r('sys.color.ohos\_id\_color\_text\_secondary')**.
+输入文本的字体颜色。默认值：`\$r('sys.color.ohos_id_color_text_secondary')`。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
 
@@ -314,17 +318,17 @@ Font color of the input text. Default value: **\$r('sys.color.ohos\_id\_color\_t
 fontFeature?: ResourceStr
 ```
 
-Font feature, for example, monospaced digits.
+设置文字特性效果，比如数字等宽的特性。
 
-Format: normal | &lt;feature-tag-value&gt;
+格式为：normal | &lt;feature-tag-value&gt;
 
-Syntax for **&lt;feature-tag-value&gt;**: \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ [ \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ | on | off ]
+&lt;feature-tag-value&gt;的格式为：&lt;string&gt; [ &lt;integer&gt; | on | off ]
 
-There can be multiple **&lt;feature-tag-value&gt;** values, which are separated by commas (,).
+&lt;feature-tag-value&gt;的个数可以有多个，中间用','隔开。
 
-For example, the input format for monospaced digits is "ss01" on. Default value: **undefined**.
+例如，使用等宽数字的输入格式为："ss01" on。默认值为`undefined`。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
 
@@ -342,9 +346,9 @@ For example, the input format for monospaced digits is "ss01" on. Default value:
 hideSelectionMenu?: boolean
 ```
 
-Whether to hide the system text selection menu.
+是否隐藏系统文本选择菜单。
 
-**true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. **false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. Default value: **false**.
+设置为true时，单击输入框光标、长按输入框、双击输入框、三击输入框或者右键输入框，不弹出系统文本选择菜单。设置为false时，弹出系统文本选择菜单。默认值：`false`。
 
 **Type:** boolean
 
@@ -364,12 +368,13 @@ Whether to hide the system text selection menu.
 inputFilter?: InputFilterParams
 ```
 
-Regular expression for input filtering. Only inputs that comply with the regular expression can be displayed. Other inputs are filtered out. The specified regular expression can match single characters, but not strings. Default value: **undefined**.
+通过正则表达式设置输入过滤器。匹配表达式的输入允许显示，不匹配的输入将被过滤。仅支持单个字符匹配，不支持字符串匹配。默认值为`undefined`。
 
-- **value**: regular expression.  
-- **error**: Filtered-out content to return when regular expression matching fails.
+-value: 正则表达式。 
 
-**Type:** InputFilterParams
+-error: 正则匹配失败时，返回被过滤的内容。
+
+**Type:** [InputFilterParams](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md)
 
 **Since:** 18
 
@@ -387,7 +392,7 @@ Regular expression for input filtering. Only inputs that comply with the regular
 letterSpacing?: number | string | Resource
 ```
 
-Letter spacing. A positive value causes characters to spread farther apart, and a negative value bring characters closer together. The value for floating point numbers is **0.0**, in units of px. If the input is not a number and cannot be parsed as a number, the default value will be used.
+设置文本字符间距。正数拉开字符距离，负数则拉近字符距离。浮点数默认值为0.0，单位为物理像素px。若输入类型非number且无法解析为数字，则使用默认值。
 
 **Type:** number \| string \| Resource
 
@@ -407,7 +412,7 @@ Letter spacing. A positive value causes characters to spread farther apart, and 
 maxFontSize?: number | string | Resource
 ```
 
-Maximum font size. For the setting to take effect, this attribute must be used together with **minFontSize** or layout constraint settings. Default value: **undefined**.
+设置文本最大显示字号。需要配合minFontSize以及布局大小限制使用，单独设置不生效。默认值为`undefined`。取值为number类型时，单位：fp。
 
 **Type:** number \| string \| Resource
 
@@ -427,7 +432,7 @@ Maximum font size. For the setting to take effect, this attribute must be used t
 maxLength?: number
 ```
 
-Maximum number of characters in the text input. By default, there is no maximum number of characters. When the maximum number is reached, no more characters can be entered. Default value: **-1**.
+设置文本的最大输入字符数。默认不设置最大输入字符数限制。到达文本最大字符限制，将无法继续输入字符。默认值：`-1`。
 
 **Type:** number
 
@@ -447,7 +452,7 @@ Maximum number of characters in the text input. By default, there is no maximum 
 minFontSize?: number | string | Resource
 ```
 
-Minimum font size. For the setting to take effect, this attribute must be used together with **maxFontSize** or layout constraint settings. Default value: **undefined**.
+设置文本最小显示字号。需要配合maxFontSize以及布局大小限制使用，单独设置不生效。默认值为`undefined`。取值为number类型时，单位：fp。
 
 **Type:** number \| string \| Resource
 
@@ -467,9 +472,9 @@ Minimum font size. For the setting to take effect, this attribute must be used t
 onCopy?: Callback<string>
 ```
 
-Callback triggered when a copy operation is performed. Default value: **undefined**.
+进行复制操作时，触发该回调，string为被复制的文本内容。默认值为`undefined`。
 
-**Type:** Callback&lt;string&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
 
 **Since:** 18
 
@@ -487,9 +492,9 @@ Callback triggered when a copy operation is performed. Default value: **undefine
 onCut?: Callback<string>
 ```
 
-Callback triggered when a cut operation is performed. Default value: **undefined**.
+进行剪切操作时，触发该回调，string为被剪切的文本内容。默认值为`undefined`。
 
-**Type:** Callback&lt;string&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
 
 **Since:** 18
 
@@ -507,9 +512,9 @@ Callback triggered when a cut operation is performed. Default value: **undefined
 onDidDelete?: Callback<DeleteValue>
 ```
 
-Callback triggered when text is deleted. Default value: **undefined**.
+在删除完成时触发该回调，在onWillDelete之后触发。当onWillDelete返回false拦截删除操作时，该回调不触发。默认值为`undefined`。
 
-**Type:** Callback&lt;DeleteValue&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DeleteValue&gt;
 
 **Since:** 18
 
@@ -527,9 +532,9 @@ Callback triggered when text is deleted. Default value: **undefined**.
 onDidInsert?: Callback<InsertValue>
 ```
 
-Callback triggered when text is inserted. Default value: **undefined**.
+在输入完成时触发该回调，在onWillInsert之后触发。当onWillInsert返回false拦截插入操作时，该回调不触发。默认值为`undefined`。当enablePreviewText为true时，不触发本回调。
 
-**Type:** Callback&lt;InsertValue&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;InsertValue&gt;
 
 **Since:** 18
 
@@ -547,10 +552,9 @@ Callback triggered when text is inserted. Default value: **undefined**.
 onEditChange?: Callback<boolean>
 ```
 
-Callback triggered when the input status changes. If a cursor is displayed, that is, the value of **isEditing** is  
-**true**, the text box is in the editing state. Default value: **undefined**.
+输入状态变化时，触发该回调。有光标时为编辑态，无光标时为非编辑态。isEditing为true表示正在输入。默认值为`undefined`。
 
-**Type:** Callback&lt;boolean&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
 
 **Since:** 18
 
@@ -568,9 +572,9 @@ Callback triggered when the input status changes. If a cursor is displayed, that
 onSubmit?: Callback<string> | SearchSubmitCallback
 ```
 
-Callback triggered when users click the search icon or the search button, or touch the search button on a soft keyboard. Default value: **undefined**.
+点击搜索图标、搜索按钮或者按下软键盘搜索按钮时触发该回调。string为当前搜索框中输入的文本内容。默认值为`undefined`。
 
-**Type:** Callback&lt;string&gt; \| SearchSubmitCallback
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; \| SearchSubmitCallback
 
 **Since:** 18
 
@@ -588,9 +592,9 @@ Callback triggered when users click the search icon or the search button, or tou
 onWillDelete?: Callback<DeleteValue, boolean>
 ```
 
-Callback triggered when text is about to be deleted. **true**: Delete the text. **false**: Do not delete the text.Default value: **undefined**.
+在将要删除时，触发该回调。true表示正常删除，false表示不删除。默认值为`undefined`。
 
-**Type:** Callback&lt;DeleteValue, boolean&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DeleteValue, boolean&gt;
 
 **Since:** 18
 
@@ -608,10 +612,9 @@ Callback triggered when text is about to be deleted. **true**: Delete the text. 
 onWillInsert?: Callback<InsertValue, boolean>
 ```
 
-Callback triggered when text is about to be inserted. **true**: Insert the input content into the result string.  
-**false**: Do not insert the input content into the result string. Default value: **undefined**.
+在将要输入时，触发该回调。true表示将输入内容正常插入结果字符串，false表示不插入。默认值为`undefined`。当enablePreviewText为true时，不触发本回调。
 
-**Type:** Callback&lt;InsertValue, boolean&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;InsertValue, boolean&gt;
 
 **Since:** 18
 
@@ -629,9 +632,9 @@ Callback triggered when text is about to be inserted. **true**: Insert the input
 placeholderColor?: ResourceColor
 ```
 
-Placeholder text color. Default value: **\$r('sys.color.ohos\_id\_color\_text\_secondary')**.
+placeholder文本颜色。默认值：`\$r('sys.color.ohos_id_color_text_secondary')`。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
 
@@ -649,10 +652,9 @@ Placeholder text color. Default value: **\$r('sys.color.ohos\_id\_color\_text\_s
 placeholderFont?: Font
 ```
 
-Placeholder text style, including the font size, font weight, font family, and font style. Default value:  
-**{size: \$r('sys\_float.ohos\_id\_text\_size\_body1')}**.
+设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
 
-**Type:** Font
+**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
 
 **Since:** 18
 
@@ -670,9 +672,9 @@ Placeholder text style, including the font size, font weight, font family, and f
 pressedBackgroundColor?: ResourceColor
 ```
 
-Background color of the pressed component. Default value: **\$r('sys.color.ohos\_id\_color\_click\_effect')**.
+设置组件按压态的背景色。默认值：`\$r('sys.color.ohos_id_color_click_effect')`。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
 
@@ -690,13 +692,13 @@ Background color of the pressed component. Default value: **\$r('sys.color.ohos\
 searchButton?: SearchButtonParams
 ```
 
-Search button located next to the search text box. Clicking the search button triggers both **onSubmit** and  
-**onClick** callbacks.
+设置搜索框末尾搜索按钮。点击搜索按钮，触发onSubmit回调。默认值为`undefined`
 
-- **value**: Text on the search button located next to the search text box.  
-- **option**: Font of the search text box. Default value: **{fontSize: '16fp', fontColor: '#ff3f97e9'}
+-searchButtonValue: 搜索框末尾搜索按钮文本内容。
 
-**Type:** SearchButtonParams
+-options: 配置搜索框文本样式。默认值：`{fontSize: '16fp', fontColor: '#ff3f97e9'}`。
+
+**Type:** [SearchButtonParams](arkts-arkui-atomicservice-atomicservicesearch-searchbuttonparams-i.md)
 
 **Since:** 18
 
@@ -714,13 +716,13 @@ Search button located next to the search text box. Clicking the search button tr
 searchIcon?: IconOptions | SymbolGlyphModifier
 ```
 
-Style of the search icon on the left.
+左侧搜索图标样式。
 
-Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**.
+浅色模式默认值：`{size: '16vp', color: '#99182431', src: ' '}`。
 
-Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
+深色模式默认值：`{size: '16vp', color: '#99ffffff', src: ' '}`。
 
-**Type:** IconOptions \| SymbolGlyphModifier
+**Type:** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md) \| SymbolGlyphModifier
 
 **Since:** 18
 
@@ -738,9 +740,9 @@ Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 searchKey?: ResourceStr
 ```
 
-Search key used to find a unique **search** component. Default value: **undefined**.
+用作标识内部search组件的唯一键值，便于外部通过该键值引用或查找对应的Search组件。默认值：`undefined`。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
 
@@ -758,9 +760,9 @@ Search key used to find a unique **search** component. Default value: **undefine
 selectedBackgroundColor?: ResourceColor
 ```
 
-Background color of the selected text. By default, a 20% opacity is applied.
+文本选中底板颜色。默认值：系统默认底板颜色，20%不透明度。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
 
@@ -778,9 +780,9 @@ Background color of the selected text. By default, a 20% opacity is applied.
 textAlign?: TextAlign
 ```
 
-Text alignment mode in the search text box. Default value: **TextAlign.Start**.
+文本在搜索框中的对齐方式。默认值：`TextAlign.Start`。
 
-**Type:** TextAlign
+**Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
 
 **Since:** 18
 
@@ -798,10 +800,9 @@ Text alignment mode in the search text box. Default value: **TextAlign.Start**.
 textFont?: Font
 ```
 
-Style of the text entered in the search box, including the font size, font width, font family, and font style.Currently, only the default font family is supported. Default value:  
-**{size: \$r('sys\_float.ohos\_id\_text\_size\_body1')}**.
+设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
 
-**Type:** Font
+**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
 
 **Since:** 18
 
@@ -819,9 +820,9 @@ Style of the text entered in the search box, including the font size, font width
 textIndent?: Dimension
 ```
 
-Indent of the first line text. Default value: **0**.
+首行文本缩进。默认值：`0`。单位：vp。
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 18
 
@@ -839,9 +840,9 @@ Indent of the first line text. Default value: **0**.
 type?: SearchType
 ```
 
-Text box type. Default value: **SearchType.Normal**.
+输入框类型。默认值：`SearchType.Normal`。
 
-**Type:** SearchType
+**Type:** [SearchType](arkts-arkui-search-searchtype-e.md)
 
 **Since:** 18
 

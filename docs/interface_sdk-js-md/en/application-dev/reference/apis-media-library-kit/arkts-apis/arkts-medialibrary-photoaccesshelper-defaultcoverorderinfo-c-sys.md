@@ -12,6 +12,12 @@ Default Cover Order
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumSubtype
 
 ```TypeScript
@@ -20,7 +26,7 @@ public albumSubtype: AlbumSubtype
 
 Album subtype
 
-**Type:** AlbumSubtype
+**Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ public albumType: AlbumType
 
 Album type
 
-**Type:** AlbumType
+**Type:** [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -86,7 +92,7 @@ public orderKey: PhotoKeys
 
 The field of default cover order.
 
-**Type:** PhotoKeys
+**Type:** [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -108,7 +114,7 @@ public orderSubKey: PhotoKeys
 
 The subfield of default cover order.
 
-**Type:** PhotoKeys
+**Type:** [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -130,7 +136,7 @@ public orderType: int
 
 order type The value must be an integer within [0,1].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

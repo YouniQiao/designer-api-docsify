@@ -4,7 +4,7 @@
 type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: UserAuth.AuthTrustLevel) => void
 ```
 
-Defines the callback triggered for receiving notifications of continuous authentication status changes. When the authentication status of a companion device changes, the system applies the current authentication result and authentication reliability level through this callback notification.
+回调函数，用于接收持续认证状态变化通知。当伴随设备的认证状态发生变化时，系统会通过此回调通知应用当前的认证结果和认证可信等级。
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ Defines the callback triggered for receiving notifications of continuous authent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAuthPassed | boolean | Yes | Whether the authentication is successful. The value **true** indicates that the companion device is successfully authenticated and the user identity is confirmed. The value **false** indicates that the authentication fails, the user identity is not confirmed, or the authentication has expired.  |
-| authTrustLevel | UserAuth.AuthTrustLevel | No | Highest authentication trust level that the companion device can currently achieve. The value can be **ATL1 (10000)**, **ATL2 (20000)**, **ATL3 (30000)**, or **ATL4 (40000)**. A higher level indicates stronger authentication security. \_\_\_HTML\_TAG\_USD\_1\_\_\_Note: \_\_\_HTML\_TAG\_USD\_2\_\_\_This parameter is provided only when **isAuthPassed** is **true**. \_\_\_HTML\_TAG\_USD\_3\_\_\_that is, the trust level of identity authentication required for typical operations. For details, see \_\_\_MD\_LINK\_USD\_0\_\_\_.  |
+| isAuthPassed | boolean | Yes | 认证是否通过。true表示伴随设备认证通过，用户身份已确认；false表示认证未通过，用户身份未确认或认证已失效。 |
+| authTrustLevel | UserAuth.AuthTrustLevel | No | 伴随设备当前能达到的最高认证可信等级。值为ATL1（10000）、ATL2（20000）、ATL3（30000）或ATL4 （40000），等级越高表示认证安全性越强。 <br>**说明**： <br>仅当isAuthPassed为true时提供此参数；不提供时默认为undefined。 <br>典型操作需要的身份认证可信等级，具体请参见 [认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。 |
 

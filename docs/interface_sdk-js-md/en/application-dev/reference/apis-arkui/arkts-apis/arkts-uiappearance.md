@@ -1,6 +1,7 @@
 # @ohos.uiAppearance
 
-Provide APIs to set system uiAppearance.
+用户界面外观
+
 
 **Since:** 23
 
@@ -9,6 +10,12 @@ Provide APIs to set system uiAppearance.
 <!--Device-unnamed-declare namespace uiAppearance--><!--Device-unnamed-declare namespace uiAppearance-End-->
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
+
+## Modules to Import
+
+```TypeScript
+import { uiAppearance } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 
@@ -25,10 +32,10 @@ Provide APIs to set system uiAppearance.
 
 | Name | Description |
 | --- | --- |
-| [setDarkMode](arkts-arkui-uiappearance-setdarkmode-f-sys.md#setdarkmode) | Set the system dark-mode. |
-| [setDarkMode](arkts-arkui-uiappearance-setdarkmode-f-sys.md#setdarkmode-1) | Set the system dark-mode. |
-| [setFontScale](arkts-arkui-uiappearance-setfontscale-f-sys.md#setfontscale) | Set the system font-scale. |
-| [setFontWeightScale](arkts-arkui-uiappearance-setfontweightscale-f-sys.md#setfontweightscale) | Set the system font-weight-scale. |
+| [setDarkMode](arkts-arkui-uiappearance-setdarkmode-f-sys.md#setdarkmode) | 设置系统深色模式。使用callback异步回调。 |
+| [setDarkMode](arkts-arkui-uiappearance-setdarkmode-f-sys.md#setdarkmode-1) | 设置系统深色模式。使用Promise异步回调。 |
+| [setFontScale](arkts-arkui-uiappearance-setfontscale-f-sys.md#setfontscale) | 设置系统字体大小。 |
+| [setFontWeightScale](arkts-arkui-uiappearance-setfontweightscale-f-sys.md#setfontweightscale) | 设置系统字体粗细。 |
 <!--DelEnd-->
 
 ### Enums

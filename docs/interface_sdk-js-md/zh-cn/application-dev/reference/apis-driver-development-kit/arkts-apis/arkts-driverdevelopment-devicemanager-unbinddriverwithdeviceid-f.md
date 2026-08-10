@@ -1,5 +1,11 @@
 # unbindDriverWithDeviceId
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## unbindDriverWithDeviceId
 
 ```TypeScript
@@ -22,23 +28,23 @@ function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 设备ID，通过[queryDevices]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获得。 |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获得。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回解除绑定的设备ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回解除绑定的设备ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
-| [26300003](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-驱动客户端未绑定任何驱动服务端) | There is no binding relationship. |
+| 26300001 | ExternalDeviceManager service exception. |
+| 26300003 | There is no binding relationship. |
+| 201 | The permission check failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

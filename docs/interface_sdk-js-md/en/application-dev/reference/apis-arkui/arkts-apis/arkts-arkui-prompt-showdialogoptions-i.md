@@ -1,87 +1,24 @@
 # ShowDialogOptions
 
-Defines the option of show dialog.
+对话框的选项。
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-unnamed-export interface ShowDialogOptions--><!--Device-unnamed-export interface ShowDialogOptions-End-->
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.ShowDialogOptions
+
+<!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## cancel
+## Modules to Import
 
 ```TypeScript
-cancel?: (data: string, code: string) => void
+import { prompt } from 'kits/@kit.ArkUI';
 ```
-
-Called when the operation is cancelled.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShowDialogOptions-cancel?: (data: string, code: string) => void--><!--Device-ShowDialogOptions-cancel?: (data: string, code: string) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | string | Yes |  |
-
-## complete
-
-```TypeScript
-complete?: (data: string) => void
-```
-
-Called when the dialog box is closed.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShowDialogOptions-complete?: (data: string) => void--><!--Device-ShowDialogOptions-complete?: (data: string) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-
-## success
-
-```TypeScript
-success?: (data: ShowDialogSuccessResponse) => void
-```
-
-Called when the dialog box is displayed.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShowDialogOptions-success?: (data: ShowDialogSuccessResponse) => void--><!--Device-ShowDialogOptions-success?: (data: ShowDialogSuccessResponse) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
 
 ## buttons
 
@@ -89,15 +26,17 @@ Called when the dialog box is displayed.
 buttons?: [Button, Button?, Button?]
 ```
 
-Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to three buttons are supported. The first button is of the positiveButton type, the second is of the negativeButton type, and the third is of the neutralButton type.
+对话框中按钮的数组，结构为：{text:'button', color: '#666666'}，支持1-3个按钮。其中第一个为positiveButton，第二个为negativeButton，第三个为neutralButton。
 
 **Type:** [Button, Button?, Button?]
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.ShowDialogOptions#buttons
 
 <!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
 
@@ -109,15 +48,17 @@ Array of buttons in the dialog box.The array structure is {text:'button', color:
 message?: string
 ```
 
-Text body.
+内容文本。
 
 **Type:** string
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.ShowDialogOptions#message
 
 <!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
 
@@ -129,15 +70,17 @@ Text body.
 title?: string
 ```
 
-Title of the text to display.
+标题文本。
 
 **Type:** string
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.ShowDialogOptions#title
 
 <!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
 

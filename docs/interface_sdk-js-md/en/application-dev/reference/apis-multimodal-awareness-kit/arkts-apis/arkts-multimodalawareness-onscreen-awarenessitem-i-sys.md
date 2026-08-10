@@ -16,6 +16,12 @@ Provides page information, which includes:
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## itemInfo
 
 ```TypeScript
@@ -24,7 +30,7 @@ itemInfo: Record<string, Object>
 
 Entity information of the awareness result, including the content, links, screenshots, and other entity information.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 23
 

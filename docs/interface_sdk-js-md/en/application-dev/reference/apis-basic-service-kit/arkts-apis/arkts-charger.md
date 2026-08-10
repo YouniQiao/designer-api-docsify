@@ -1,9 +1,10 @@
 # @ohos.charger
 
-The **charger** module enumerates charging types.
-    **NOTE**  
-    
-    The APIs provided by this module are system APIs.
+提供充电类型。
+
+> **说明：**
+> 
+> 本模块为系统接口。
 
 **Since:** 10
 
@@ -15,6 +16,12 @@ The **charger** module enumerates charging types.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { charger } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -22,6 +29,6 @@ The **charger** module enumerates charging types.
 
 | Name | Description |
 | --- | --- |
-| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) | Enumerates charging types. |
+| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) | 表示充电类型的枚举。 |
 <!--DelEnd-->
 

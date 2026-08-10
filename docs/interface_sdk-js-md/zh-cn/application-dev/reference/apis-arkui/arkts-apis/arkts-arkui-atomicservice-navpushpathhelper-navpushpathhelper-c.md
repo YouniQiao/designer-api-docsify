@@ -1,9 +1,10 @@
 # NavPushPathHelper
 
-当跳转的目标[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用NavPushPathHelper先下载安装相应hsp分包，再将指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_页面信息入栈或替换当前栈顶页面，从而使[Navigation]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_支持动态加载hsp分包后再跳转。
-    **说明：**  
-    
-    该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+当跳转的目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用NavPushPathHelper先下载安装相应hsp分包，再将指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈或替换当前栈顶页面，从而使[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)支持动态加载hsp分包后再跳转。
+
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
 
@@ -12,6 +13,12 @@
 <!--Device-unnamed-export declare class NavPushPathHelper--><!--Device-unnamed-export declare class NavPushPathHelper-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { NavPushPathHelper } from 'kits/@kit.ArkUI';
+```
 
 ## constructor
 
@@ -35,7 +42,7 @@ NavPushPathHelper的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| navPathStack | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | [Navigation]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_路由栈。 |
+| navPathStack | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | 是 | [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)路由栈。 |
 
 ## pushDestination
 
@@ -43,7 +50,7 @@ NavPushPathHelper的构造函数。
 pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -59,9 +66,9 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持转场动画。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
+| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
 
@@ -73,11 +80,11 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 300001 | hsp silent install fail. |
+| 100006 | NavDestination not found. |
 
 ## pushDestination
 
@@ -85,9 +92,9 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
 
-具体根据options中指定不同的[LaunchMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，有不同的行为。
+具体根据options中指定不同的[LaunchMode](arkts-arkui-navigation-launchmode-e.md)，有不同的行为。
 
 **起始版本：** 12
 
@@ -103,9 +110,9 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面的信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
+| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
 
 **返回值：**
 
@@ -117,11 +124,11 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 300001 | hsp silent install fail. |
+| 100006 | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -129,7 +136,7 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 pushDestinationByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，传递的数据为param，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -145,10 +152,10 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| name | string | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面名称。 |
-| param | Object | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持转场动画。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| name | string | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面名称。 |
+| param | Object | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面详细参数。 |
+| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
 
@@ -160,11 +167,11 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 300001 | hsp silent install fail. |
+| 100006 | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -173,7 +180,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
     onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，传递的数据为param，添加用于页面出栈时处理返回结果的onPop回调，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，添加用于页面出栈时处理返回结果的onPop回调，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -189,11 +196,11 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| name | string | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面名称。 |
-| param | Object | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面的参数对象，用于向目标页面传递数据。 |
-| onPop | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。 |
-| animated | boolean | 否 | 是否支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持转场动画。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| name | string | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面名称。 |
+| param | Object | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的参数对象，用于向目标页面传递数据。 |
+| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。 |
+| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
 
@@ -205,11 +212,11 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 300001 | hsp silent install fail. |
+| 100006 | NavDestination not found. |
 
 ## pushPath
 
@@ -217,7 +224,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -233,9 +240,9 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持转场动画。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
+| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
 
@@ -247,7 +254,7 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 300001 | hsp silent install fail. |
 
 ## pushPath
 
@@ -255,9 +262,9 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
 
-具体根据options中指定的[LaunchMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_不同，执行不同的跳转行为。
+具体根据options中指定的[LaunchMode](arkts-arkui-navigation-launchmode-e.md)不同，执行不同的跳转行为。
 
 **起始版本：** 12
 
@@ -273,9 +280,9 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面的信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
+| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
 
 **返回值：**
 
@@ -287,7 +294,7 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 300001 | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -295,7 +302,7 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 pushPathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，传递的数据为param，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -311,10 +318,10 @@ pushPathByName(moduleName: string, name: string, param: Object, animated?: boole
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| name | string | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面名称。 |
-| param | Object | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持转场动画。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| name | string | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面名称。 |
+| param | Object | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面详细参数。 |
+| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
 
@@ -326,7 +333,7 @@ pushPathByName(moduleName: string, name: string, param: Object, animated?: boole
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 300001 | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -335,7 +342,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
     onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，传递的数据为param，添加onPop回调接收入栈页面出栈时的返回结果，并进行处理，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，添加onPop回调接收入栈页面出栈时的返回结果，并进行处理，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -351,11 +358,11 @@ pushPathByName(moduleName: string, name: string, param: Object,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| name | string | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面名称。 |
-| param | Object | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面详细参数。 |
-| onPop | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。 |
-| animated | boolean | 否 | 是否支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持转场动画。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| name | string | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面名称。 |
+| param | Object | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面详细参数。 |
+| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。 |
+| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
 
@@ -367,7 +374,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 300001 | hsp silent install fail. |
 
 ## replacePath
 
@@ -376,7 +383,7 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 ```
 
 先判断分包是否存在，若不存在，则通过moduleName下载分包，再将当前页面栈栈顶退出，将info指定的  
-[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，使用Promise异步回调。
+[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -392,9 +399,9 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 新栈顶页面参数信息。 |
-| animated | boolean | 否 | 是否支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持转场动画。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
+| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
 
@@ -406,7 +413,7 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 300001 | hsp silent install fail. |
 
 ## replacePath
 
@@ -415,9 +422,9 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 ```
 
 先判断分包是否存在，若不存在，则通过moduleName下载分包，再将当前页面栈栈顶退出，将info指定的  
-[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，使用Promise异步回调。
+[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
 
-具体根据options中指定不同的[LaunchMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，有不同的行为。
+具体根据options中指定不同的[LaunchMode](arkts-arkui-navigation-launchmode-e.md)，有不同的行为。
 
 **起始版本：** 12
 
@@ -433,9 +440,9 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 新栈顶页面参数信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
+| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
 
 **返回值：**
 
@@ -447,7 +454,7 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 300001 | hsp silent install fail. |
 
 ## replacePathByName
 
@@ -456,7 +463,7 @@ replacePathByName(moduleName: string, name: string, param: Object, animated?: bo
 ```
 
 先判断分包是否存在，若不存在，则通过moduleName下载分包，再将当前页面栈栈顶退出，将name指定的  
-[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_页面信息入栈，传递的数据为param，使用Promise异步回调。
+[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -472,10 +479,10 @@ replacePathByName(moduleName: string, name: string, param: Object, animated?: bo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 目标[NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_所在分包的moduleName。 |
-| name | string | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面名称。 |
-| param | Object | 是 | [NavDestination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持转场动画。 |
+| moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
+| name | string | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面名称。 |
+| param | Object | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面详细参数。 |
+| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
 
@@ -487,5 +494,5 @@ replacePathByName(moduleName: string, name: string, param: Object, animated?: bo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| 300001 | hsp silent install fail. |
 

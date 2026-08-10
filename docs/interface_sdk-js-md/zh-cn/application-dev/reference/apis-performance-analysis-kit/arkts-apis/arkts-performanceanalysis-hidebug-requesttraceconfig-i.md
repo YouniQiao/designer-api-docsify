@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## bufferSizeKb
 
 ```TypeScript
@@ -18,7 +24,7 @@ bufferSizeKb: int
 
 trace�ļ��Ļ����С����KBΪ��λ����ֵΪ32λ�޷����������֣�������Ч��Χ��������ֵ�����ȡֵ��ΧΪ[1024, 15360]�������������ȡֵ��Χ��������������Ϊ����ı߽�ֵ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -40,7 +46,7 @@ durationMs: int
 
 trace�ɼ�ʱ������msΪ��λ����ֵΪ32λ�޷����������֣�������Ч��Χ��������ֵ�����ȡֵ��ΧΪ[1000, 15000]�������������ȡֵ��Χ��������������Ϊ����ı߽�ֵ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -84,7 +90,7 @@ reserved: int
 
 Ԥ���ֶΣ���������Ϊ0��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 

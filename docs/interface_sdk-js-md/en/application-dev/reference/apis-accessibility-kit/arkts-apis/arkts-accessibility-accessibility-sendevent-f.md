@@ -1,12 +1,18 @@
 # sendEvent
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## sendEvent
 
 ```TypeScript
 function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void
 ```
 
-Sends an accessibility event. This API uses an asynchronous callback to return the result.
+发送无障碍事件，使用callback异步回调。
 
 **Since:** 7
 
@@ -24,10 +30,10 @@ Sends an accessibility event. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | 辅助事件对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，如果发送无障碍事件失败，则 AsyncCallback中err有数据返回。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -44,7 +50,7 @@ accessibility.sendEvent(eventInfo, (err: BusinessError) => {
     console.error(`failed to sendEvent, Code is ${err.code}, message is ${err.message}`);
     return;
   }
-  console.info(`Succeeded in sendEvent, eventInfo is ${eventInfo}`);
+  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
 });
 ```
 
@@ -55,7 +61,7 @@ accessibility.sendEvent(eventInfo, (err: BusinessError) => {
 function sendEvent(event: EventInfo): Promise<void>
 ```
 
-Sends an accessibility event. This API uses a promise to return the result.
+发送无障碍事件，使用Promise异步回调。
 
 **Since:** 7
 
@@ -73,15 +79,15 @@ Sends an accessibility event. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility event. |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | 无障碍事件对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -94,7 +100,7 @@ let eventInfo: accessibility.EventInfo = ({
 });
 
 accessibility.sendEvent(eventInfo).then(() => {
-  console.info(`Succeeded in send event,eventInfo is ${eventInfo}`);
+  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
 }).catch((err: BusinessError) => {
   console.error(`failed to sendEvent, Code is ${err.code}, message is ${err.message}`);
 });

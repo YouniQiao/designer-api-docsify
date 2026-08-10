@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## inserted
 
 ```TypeScript
@@ -20,7 +26,7 @@ inserted: int
 
 本地新增且未同步到云端的数据条数，如返回值为2，表示本地新增2条数据且还未同步到云端。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -40,7 +46,7 @@ normal: int
 
 端云一致的数据条数。如返回值为2，表示本地与云端一致的数据为2条。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ normal: int
 table: string
 ```
 
-查询的表名。如返回值为"cloud\_notes"，表示查询结果是表名为"cloud\_notes"的同步信息。
+查询的表名。如返回值为"cloud_notes"，表示查询结果是表名为"cloud_notes"的同步信息。
 
 **类型：** string
 
@@ -80,7 +86,7 @@ updated: int
 
 云端同步之后，本地或云端修改还未同步的数据条数，如返回值为2，表示本地或云端修改还有2条数据未同步。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

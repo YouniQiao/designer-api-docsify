@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
@@ -18,7 +24,7 @@ code: ProgressCode
 
 表示端云同步过程的状态。
 
-**类型：** ProgressCode
+**类型：** [ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md)
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ details: Record<string, TableDetails>
 
 键表示表名，值表示该表的端云同步过程统计信息。
 
-**类型：** Record&lt;string, TableDetails&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, TableDetails&gt;
 
 **起始版本：** 10
 
@@ -76,7 +82,7 @@ schedule: Progress
 
 表示端云同步过程。
 
-**类型：** Progress
+**类型：** [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md)
 
 **起始版本：** 10
 

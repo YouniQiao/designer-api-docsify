@@ -1,6 +1,6 @@
 # JsRawHeapTrimLevel
 
-Trimming level of raw heap snapshot.
+ת���ѿ��յĲü������ö�١�TRIM_LEVEL_2���TRIM_LEVEL_1���ü�ʱ���������������ֵΪ6�롣ʹ��TRIM_LEVEL_1ʱ������ﵽ����ֵ���л���TRIM_LEVEL_2ʱ���ü�ʱ����ܻᳬ��6�룬����APP_FREEZE�������¼���������Ӧ�ñ�ϵͳ��ֹ����ʱ������TRIM_LEVEL_1������вü����Ƽ�����ʹ��TRIM_LEVEL_1ȷ��Ӧ���ȶ���������Ҫ�����ײü�ʱ����TRIM_LEVEL_2��
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Trimming level of raw heap snapshot.
 TRIM_LEVEL_1 = 0
 ```
 
-Basic heap snapshot trimming(e.g. reducing content of string object).
+LEVEL 1����ü�����Ҫ�ü��ַ�����
 
 **Since:** 20
 
@@ -32,9 +32,7 @@ Basic heap snapshot trimming(e.g. reducing content of string object).
 TRIM_LEVEL_2 = 1
 ```
 
-On top of level 1 trimming, object address size has been additionally trimmed.Please use latest version of rawheap-translator tool for parsing and converting.rawheap into .heapsnapshot file. Conversion process may fail when legacy tool is utilized.
-
-A higher trimming level means a longer time needed to generate the .rawheap file.Ensure that this duration falls below the app freeze threshold.
+LEVEL 2����ü�����TRIM_LEVEL_1�Ļ����ϣ������˶����ַ��ʶ�Ĵ�С����8���ֽڼ��ٵ�4���ֽڡ�
 
 **Since:** 20
 

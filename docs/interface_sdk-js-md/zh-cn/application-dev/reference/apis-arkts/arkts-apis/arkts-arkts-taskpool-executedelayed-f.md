@@ -1,5 +1,11 @@
 # executeDelayed
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## executeDelayed
 
 ```TypeScript
@@ -7,11 +13,12 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 ```
 
 延时执行任务。当前执行模式可以设置任务优先级，可通过cancel取消任务。使用Promise异步回调。
-    **说明：**  
-    
-    - 该任务不能是任务组任务、串行队列任务、异步队列任务或周期任务。  
-    - 如果任务不是长时任务，可以多次调用executeDelayed执行。  
-    - 如果是长时任务，则仅支持执行一次。
+
+> **说明：**
+> 
+> - 该任务不能是任务组任务、串行队列任务、异步队列任务或周期任务。
+> - 如果任务不是长时任务，可以多次调用executeDelayed执行。
+> - 如果是长时任务，则仅支持执行一次。
 
 **起始版本：** 11
 
@@ -28,8 +35,8 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | delayTime | number | 是 | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要延时执行的任务。 |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要延时执行的任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -41,13 +48,13 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The delayTime is less than zero. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
+| 10200057 | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| 10200014 | The function is not marked as concurrent.<br>**适用版本：** 12+ |
+| 10200028 | The delayTime is less than zero. |
+| 10200051 | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
+| 10200006 | An exception occurred during serialization.<br>**适用版本：** 12+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // import BusinessError
@@ -92,8 +99,8 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | delayTime | number | 是 | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;A, R&gt; | 是 | 需要延时执行的泛型任务。 |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要延时执行的泛型任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -105,11 +112,11 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The delayTime is less than zero. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
+| 10200057 | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| 10200028 | The delayTime is less than zero. |
+| 10200051 | The periodic task cannot be executed again. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // import BusinessError

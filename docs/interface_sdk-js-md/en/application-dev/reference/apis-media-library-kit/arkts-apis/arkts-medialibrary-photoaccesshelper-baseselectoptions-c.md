@@ -10,15 +10,21 @@ Defines the basic options for selecting media files from Gallery.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## MIMEType
 
 ```TypeScript
 MIMEType?: PhotoViewMIMETypes
 ```
 
-Available media file types. **IMAGE\_VIDEO\_TYPE** is used by default.
+Available media file types. **IMAGE_VIDEO_TYPE** is used by default.
 
-**Type:** PhotoViewMIMETypes
+**Type:** [PhotoViewMIMETypes](../../apis-core-file-kit/arkts-apis/arkts-corefile-picker-photoviewmimetypes-e.md)
 
 **Since:** 10
 
@@ -38,7 +44,7 @@ assetCompatibleCapability?: AssetCompatibleCapability
 
 Configuration for asset compatibility capabilities.
 
-**Type:** AssetCompatibleCapability
+**Type:** [AssetCompatibleCapability](arkts-medialibrary-photoaccesshelper-assetcompatiblecapability-i.md)
 
 **Since:** 24
 
@@ -60,9 +66,9 @@ assetFilter?: Array<OperationItem>
 
 Media asset filter, with a maximum length of 50 items. If the limit is exceeded, only the first 50 items are used.
 
-**NOTE**
+**NOTE：**
 
-1. When this filter is applied, other filters become invalid.2. When setting multiple conditions, enclose the filter conditions in parentheses to prevent conflicts with internal filter items.
+1. When this filter is applied, other filters become invalid.2. When setting multiple conditions, enclose the filter conditions in parentheses to prevent conflicts with  internal filter items.
 
 **Type:** Array&lt;OperationItem&gt;
 
@@ -111,10 +117,10 @@ A string array of filter criteria, supporting combinations of various types.
 The string format is as follows: **photoType | photoSubType1,photoSubType2, ... | mimeType1,mimeType2, ...**
 
 - The first part specifies a single **photoType**, which is fixed at **image** or **video**.  
-- The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the  
+- The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the   
 maximum value of *N* is **1**. Options include **movingPhoto** or "*" (ignore).  
-- The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum  
-value of *N* is **10**. The format is similar to [MimeTypeFilter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+- The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum   
+value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md).
 
 Filters are combined using intersection logic.
 
@@ -146,7 +152,7 @@ Configuration for file size filtering.
 
 When this parameter is set, only media files within the specified size range are displayed. You are advised to notify users that only images or videos of the specified size can be selected.
 
-**Type:** FileSizeFilter
+**Type:** [FileSizeFilter](arkts-medialibrary-photoaccesshelper-filesizefilter-c.md)
 
 **Since:** 19
 
@@ -164,9 +170,9 @@ When this parameter is set, only media files within the specified size range are
 globalMovingPhotoState?: MovingPhotoBadgeStateType
 ```
 
-Global effect of the moving photo. Currently, only **MOVING\_PHOTO\_ENABLED** and **MOVING\_PHOTO\_DISABLED** are supported. The default value is **MOVING\_PHOTO\_ENABLED**.
+Global effect of the moving photo. Currently, only **MOVING_PHOTO_ENABLED** and **MOVING_PHOTO_DISABLED** are supported. The default value is **MOVING_PHOTO_ENABLED**.
 
-**Type:** MovingPhotoBadgeStateType
+**Type:** [MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)
 
 **Since:** 23
 
@@ -188,7 +194,7 @@ gridPinchMode?: GridPinchMode
 
 Pinch mode of the grid in the picker.
 
-**Type:** GridPinchMode
+**Type:** [GridPinchMode](arkts-medialibrary-photoaccesshelper-gridpinchmode-c.md)
 
 **Since:** 23
 
@@ -208,12 +214,11 @@ Pinch mode of the grid in the picker.
 isMovingPhotoBadgeShown?: boolean
 ```
 
-Whether the moving photo badge is displayed in the photo browser page. **true** to display the badge, **false**  
-to hide it. The default is **false**.
+Whether the moving photo badge is displayed in the photo browser page. **true** to display the badge, **false** to hide it. The default is **false**.
 
-If this parameter is set to **true**, [Photoselectresult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ returns the  
-**movingPhotoBadgeStates** array. The default status of a moving photo is  
-[MOVING\_PHOTO\_ENABLED]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+If this parameter is set to **true**, [Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md) returns the   
+**movingPhotoBadgeStates** array. The default status of a moving photo is   
+[MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md).
 
 Note: Use both **isMovingPhotoBadgeShown** and **MovingPhotoBadgeStateType** to determine whether a photo is a moving photo.
 
@@ -295,10 +300,9 @@ Whether the image is searchable. **true** if searchable, **false** otherwise.
 maxSelectNumber?: int
 ```
 
-Maximum number of media files that can be selected. The maximum value is **500**, and the default value is **50**  
-.
+Maximum number of media files that can be selected. The maximum value is **500**, and the default value is **50**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -322,7 +326,7 @@ When this parameter is set, the **MIMEType** configuration automatically becomes
 
 When this parameter is set, only media files of the configured filter type are displayed. You are advised to notify users that only images or videos of the specified type can be selected.
 
-**Type:** MimeTypeFilter
+**Type:** [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)
 
 **Since:** 19
 
@@ -364,7 +368,7 @@ preferredCompatibleMode?: PreferredCompatibleMode
 
 Preferred compatibility mode.
 
-**Type:** PreferredCompatibleMode
+**Type:** [PreferredCompatibleMode](arkts-medialibrary-photoaccesshelper-preferredcompatiblemode-e.md)
 
 **Since:** 26.0.0
 
@@ -406,7 +410,7 @@ recommendationOptions?: RecommendationOptions
 
 Image recommendation parameters.
 
-**Type:** RecommendationOptions
+**Type:** [RecommendationOptions](arkts-medialibrary-photoaccesshelper-recommendationoptions-c.md)
 
 **Since:** 11
 
@@ -446,9 +450,9 @@ Whether to display the date group information when the scroll bar is dragged. **
 singleSelectionMode?: SingleSelectionMode
 ```
 
-Single selection mode. The default value is **SingleSelectionMode.BROWSER\_MODE**.
+Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**.
 
-**Type:** SingleSelectionMode
+**Type:** [SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md)
 
 **Since:** 18
 
@@ -470,7 +474,7 @@ Configuration for video duration filtering.
 
 When this parameter is set, only media files within the specified duration range are displayed. You are advised to notify users that only videos of the specified length can be selected.
 
-**Type:** VideoDurationFilter
+**Type:** [VideoDurationFilter](arkts-medialibrary-photoaccesshelper-videodurationfilter-c.md)
 
 **Since:** 19
 

@@ -20,9 +20,9 @@ borderRadius?: LengthMetrics | BorderRadiuses
 
 默认值：0
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**类型：** LengthMetrics \| BorderRadiuses
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses
 
 **起始版本：** 12
 
@@ -46,9 +46,9 @@ margin?: LengthMetrics | Margin
 
 默认值：0
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**类型：** LengthMetrics \| Margin
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Margin
 
 **起始版本：** 12
 
@@ -72,9 +72,9 @@ padding?: LengthMetrics | Padding
 
 默认值：0
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**类型：** LengthMetrics \| Padding
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Padding
 
 **起始版本：** 12
 

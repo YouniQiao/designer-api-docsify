@@ -1,6 +1,6 @@
 # SqlInfo
 
-Represents details about the SQL statement executed by the database.
+描述数据库执行的SQL语句的详细信息。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Represents details about the SQL statement executed by the database.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## args
 
 ```TypeScript
 args: Array<ValueType>
 ```
 
-Parameters in the SQL statements to be executed.
+表示执行SQL中的参数信息。
 
 **Type:** Array&lt;ValueType&gt;
 
@@ -34,7 +40,7 @@ Parameters in the SQL statements to be executed.
 sql: string
 ```
 
-SQL statements to be executed.
+表示执行的SQL语句。
 
 **Type:** string
 

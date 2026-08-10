@@ -1,6 +1,6 @@
 # StatusBarProperty
 
-Describes the properties of the status bar. These properties are returned when you query the status bar's configuration details.
+状态栏的属性。在获取状态栏属性信息时返回。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Describes the properties of the status bar. These properties are returned when y
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## contentColor
 
 ```TypeScript
 contentColor: string
 ```
 
-Color of the text on the status bar. The value is in ARGB format, for example, **#E5FFFFFF**.
+状态栏文字颜色，固定为ARGB格式，如：`#E5FFFFFF`。
 
 **Type:** string
 

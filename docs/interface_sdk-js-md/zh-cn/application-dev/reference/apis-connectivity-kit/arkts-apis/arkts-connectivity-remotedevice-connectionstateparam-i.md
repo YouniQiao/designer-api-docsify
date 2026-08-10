@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -38,7 +44,7 @@ connectionReason: ConnectionReason
 
 连接原因。
 
-**类型：** ConnectionReason
+**类型：** [ConnectionReason](arkts-connectivity-remotedevice-connectionreason-e.md)
 
 **起始版本：** 26.0.0
 
@@ -58,7 +64,7 @@ preState: ConnectionState
 
 上一个连接状态。
 
-**类型：** ConnectionState
+**类型：** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
 
 **起始版本：** 26.0.0
 
@@ -98,7 +104,7 @@ state: ConnectionState
 
 当前连接状态。
 
-**类型：** ConnectionState
+**类型：** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
 
 **起始版本：** 26.0.0
 

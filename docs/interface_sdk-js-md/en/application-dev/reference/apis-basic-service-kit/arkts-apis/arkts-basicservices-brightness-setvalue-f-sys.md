@@ -1,12 +1,18 @@
 # setValue (System API)
 
+## Modules to Import
+
+```TypeScript
+import { brightness } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setValue
 
 ```TypeScript
 function setValue(value: int): void
 ```
 
-Sets the screen brightness.
+设置系统的屏幕亮度。
 
 **Since:** 7
 
@@ -22,17 +28,17 @@ Sets the screen brightness.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Brightness value. Value range: 0 to 255. The value of this parameter must be a number. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 亮度的值。范围：0~255；该参数必须为数字类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [4700101](../../apis-basic-services-kit/errorcode-brightness.md#4700101-service-connection-failure) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| 4700101 | Failed to connect to the service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -49,7 +55,7 @@ try {
 function setValue(value: int, continuous: boolean): void
 ```
 
-Sets the screen brightness. This API is used for continuous brightness adjustment. To achieve a better performance,set **continuous** to **true** when you start, and set it to **false** after you finish.
+设置系统的屏幕亮度。用于连续调节亮度的场景，在连续调节亮度过程中，设置continuous为true，结束时设置continuous为false，会有更好的性能。
 
 **Since:** 11
 
@@ -65,18 +71,18 @@ Sets the screen brightness. This API is used for continuous brightness adjustmen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Brightness value. Value range: [0, 255] |
-| continuous | boolean | Yes | Whether the brightness adjustment is continuous. The value **true** indicates that the brightness adjustment is continuous; **false** indicates the opposite. Default value: **false |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 亮度的值。范围：0~255。 |
+| continuous | boolean | Yes | 亮度调节是否连续。true表示亮度调节连续，false表示亮度调节不连续，默认为false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [4700101](../../apis-basic-services-kit/errorcode-brightness.md#4700101-service-connection-failure) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| 4700101 | Failed to connect to the service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

@@ -1,5 +1,11 @@
 # usbFunctionsToString（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## usbFunctionsToString
 
 ```TypeScript
@@ -26,7 +32,7 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| funcs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 功能列表对应数字掩码。 |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 是 | 功能列表对应数字掩码。 |
 
 **返回值：**
 
@@ -34,7 +40,7 @@ function usbFunctionsToString(funcs: FunctionType): string
 | --- | --- |
 | string | 转化后的字符串形式的功能列表。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let funcs = usb.FunctionType.ACM | usb.FunctionType.ECM;

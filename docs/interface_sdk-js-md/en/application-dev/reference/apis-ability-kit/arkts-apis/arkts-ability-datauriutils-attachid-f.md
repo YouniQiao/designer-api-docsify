@@ -1,12 +1,18 @@
 # attachId
 
+## Modules to Import
+
+```TypeScript
+import { dataUriUtils } from 'kits/@kit.AbilityKit';
+```
+
 ## attachId
 
 ```TypeScript
 function attachId(uri: string, id: double): string
 ```
 
-Attaches an ID to the end of a given URI.
+将ID附加到uri的路径末尾。
 
 **Since:** 9
 
@@ -20,22 +26,22 @@ Attaches an ID to the end of a given URI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Target URI object. |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | ID to be attached. |
+| uri | string | Yes | 表示uri对象。 |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示要附加的ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | URI object with the ID attached. |
+| string | 返回附加ID之后的uri对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dataUriUtils } from '@kit.AbilityKit';

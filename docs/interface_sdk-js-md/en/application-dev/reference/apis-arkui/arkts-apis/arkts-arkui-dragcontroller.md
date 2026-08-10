@@ -6,9 +6,17 @@ This module allows developers to trigger a drag event.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace dragController--><!--Device-unnamed-declare namespace dragController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 
@@ -35,7 +43,7 @@ This module allows developers to trigger a drag event.
 
 | Name | Description |
 | --- | --- |
-| [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | Defines the drag spring loading state.Under default system configuration, if no CANCEL occurs, the state reporting is as follows:Hover still--500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END |
+| [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | Defines the drag spring loading state.Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END |
 | [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | Define the status for the application to notify the framework whether to execute drag. |
 | [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md) | Defines the Drag Status. |
 

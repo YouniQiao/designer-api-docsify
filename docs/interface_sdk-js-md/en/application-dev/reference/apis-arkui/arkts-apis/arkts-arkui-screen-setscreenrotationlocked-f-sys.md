@@ -1,12 +1,18 @@
 # setScreenRotationLocked (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## setScreenRotationLocked
 
 ```TypeScript
 function setScreenRotationLocked(isLocked:boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to lock auto rotate. This API uses an asynchronous callback to return the result.
+设置自动转屏开关是否锁定，使用callback异步回调。
 
 **Since:** 9
 
@@ -22,26 +28,27 @@ Sets whether to lock auto rotate. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLocked | boolean | Yes | Whether to lock auto rotate. **true** to lock; **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| isLocked | boolean | Yes | 自动转屏开关是否锁定。true为锁定，false为未锁定。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置自动转屏是否锁定成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let isLocked: boolean = false;
+// Set auto rotate to unlocked.
 screen.setScreenRotationLocked(isLocked, (err: BusinessError) => {
   const errCode: number = err.code;
   if (errCode) {
-    console.error(`Failed to unlock auto rotate. Code:${err.code}, message is ${err.message}`);
+    console.error(`Failed to unlock auto rotate. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('Succeeded in unlocking auto rotate.');
@@ -55,7 +62,7 @@ screen.setScreenRotationLocked(isLocked, (err: BusinessError) => {
 function setScreenRotationLocked(isLocked:boolean): Promise<void>
 ```
 
-Sets whether to lock auto rotate. This API uses a promise to return the result.
+设置自动转屏开关是否锁定，使用Promise异步回调。
 
 **Since:** 9
 
@@ -71,31 +78,32 @@ Sets whether to lock auto rotate. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLocked | boolean | Yes | Whether to lock auto rotate. **true** to lock; **false** otherwise. |
+| isLocked | boolean | Yes | 自动转屏开关是否锁定。true为锁定，false为未锁定。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let isLocked: boolean = false;
+// Set auto rotate to unlocked.
 screen.setScreenRotationLocked(isLocked).then(() => {
   console.info('Succeeded in unlocking auto rotate');
 }).catch((err: BusinessError) => {
-  console.error(`Failed to unlock auto rotate. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to unlock auto rotate. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

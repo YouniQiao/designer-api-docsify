@@ -1,6 +1,6 @@
 # MouseAction
 
-Sets the action type of a mouse operation.
+定义鼠标操作的动作类型。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Sets the action type of a mouse operation.
 Press
 ```
 
-The mouse button is pressed.
+鼠标按键按下。
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ The mouse button is pressed.
 Release
 ```
 
-The mouse button is released.
+鼠标按键释放。
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ The mouse button is released.
 Move
 ```
 
-The mouse cursor moves.
+鼠标移动。
 
 **Since:** 8
 
@@ -70,9 +70,9 @@ The mouse cursor moves.
 Hover
 ```
 
-The mouse pointer is hovered on an element.
+鼠标悬浮。
 
-Note: This value has no effect.
+**说明：** 该枚举值无效。
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ Note: This value has no effect.
 ENTER_WINDOW = 4
 ```
 
-The mouse pointer moves into the window.
+鼠标进入窗口。
 
 **Since:** 23
 
@@ -110,7 +110,7 @@ The mouse pointer moves into the window.
 LEAVE_WINDOW = 5
 ```
 
-The mouse pointer moves out of the window.
+鼠标离开窗口。
 
 **Since:** 23
 
@@ -130,9 +130,9 @@ The mouse pointer moves out of the window.
 CANCEL = 13
 ```
 
-The mouse button action is canceled. It is triggered in the following scenarios:
+鼠标按键取消。通常在以下场景触发：
 
-1. Component focus loss: This action is triggered when a currently focused component loses focus due to a system event (such as pop-up interruption or app switching).2. Event interruption: During a mouse operation, if a higher-priority event occurs (such as a system-level gesture or forced event stream recycling), causing the current mouse operation to be forcibly terminated.3. Abnormal state exit: In scenarios such as component destruction or abnormal rendering environment, unfinished mouse events are marked as canceled.
+1. 组件失去焦点：当前持有焦点的组件因系统事件（如弹窗打断、应用切换）失去焦点时，会触发该动作。2. 事件中断：鼠标操作过程中发生更高优先级事件（如系统级手势或强制回收事件流），导致当前鼠标操作被强制终止。3. 异常状态退出：如组件销毁、渲染环境异常等场景下，未完成的鼠标事件会被标记为取消。
 
 **Since:** 18
 

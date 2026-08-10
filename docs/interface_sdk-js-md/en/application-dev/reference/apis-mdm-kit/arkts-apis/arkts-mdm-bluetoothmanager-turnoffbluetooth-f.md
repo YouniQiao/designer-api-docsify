@@ -1,12 +1,18 @@
 # turnOffBluetooth
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.MDMKit';
+```
+
 ## turnOffBluetooth
 
 ```TypeScript
 function turnOffBluetooth(admin: Want): void
 ```
 
-Disables Bluetooth. After Bluetooth is disabled, the user can manually enable it.
+关闭蓝牙。蓝牙关闭后用户可以手动打开。
 
 **Since:** 20
 
@@ -24,33 +30,35 @@ Disables Bluetooth. After Bluetooth is disabled, the user can manually enable it
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 203 | This function is prohibited by enterprise management policies. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
 import { bluetoothManager } from '@kit.MDMKit';
 
+// Create an EnterpriseAdminExtensionAbility component.
 let wantTemp: Want = {
   // Replace it as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
-    bluetoothManager.turnOffBluetooth(wantTemp);
-    console.info('Succeeded in turning off bluetooth.');
+  // Disable Bluetooth.
+  bluetoothManager.turnOffBluetooth(wantTemp);
+  console.info('Succeeded in turning off bluetooth.');
 } catch(err) {
-    console.error(`Failed to turn off bluetooth. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to turn off bluetooth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

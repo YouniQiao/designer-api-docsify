@@ -1,12 +1,18 @@
 # convertRelativeToGlobalCoordinate
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## convertRelativeToGlobalCoordinate
 
 ```TypeScript
 function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): Position
 ```
 
-Converts relative coordinates (based on the top-left corner of the screen) into global coordinates (based on the top-left corner of the primary screen). This API supports only coordinate conversion between the primary screen and extended screen.
+将指定屏幕左上角为原点的相对坐标转换成主屏左上角为原点的全局坐标，仅支持主屏和扩展屏的坐标转换。
 
 **Since:** 20
 
@@ -22,26 +28,25 @@ Converts relative coordinates (based on the top-left corner of the screen) into 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| relativePosition | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Relative coordinates to convert. |
+| relativePosition | [RelativePosition](arkts-arkui-display-relativeposition-i.md) | Yes | 需要转化为全局坐标的相对坐标。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Global coordinates based on the top-left corner of the primary screen. |
+| [Position](arkts-arkui-display-position-i.md) | 返回相对于主屏左上角的全局坐标。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
-
+// Define the relative coordinates to convert.
 let relativePosition: display.RelativePosition = {
   displayId: 0,
   position: {
@@ -51,6 +56,7 @@ let relativePosition: display.RelativePosition = {
 };
 
 try {
+   // Convert the relative coordinates to global coordinates.
   let position: display.Position = display.convertRelativeToGlobalCoordinate(relativePosition);
   console.info(`The global coordinate is ${position.x}, ${position.y}`)
 } catch (exception) {

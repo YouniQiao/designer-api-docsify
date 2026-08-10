@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## axis
 
 ```TypeScript
@@ -58,7 +64,7 @@ value: double
 
 可变字体属性键值对的值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 

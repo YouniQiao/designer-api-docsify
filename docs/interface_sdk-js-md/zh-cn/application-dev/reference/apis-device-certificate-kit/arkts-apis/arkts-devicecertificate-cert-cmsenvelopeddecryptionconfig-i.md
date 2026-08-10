@@ -10,6 +10,12 @@ CMS解封装的配置。
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## cert
 
 ```TypeScript
@@ -18,7 +24,7 @@ cert?: X509Cert
 
 公钥证书。默认为空。
 
-**类型：** X509Cert
+**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
 **起始版本：** 22
 
@@ -38,7 +44,7 @@ contentDataFormat?: CmsContentDataFormat
 
 内容数据的格式。
 
-**类型：** CmsContentDataFormat
+**类型：** [CmsContentDataFormat](arkts-devicecertificate-cert-cmscontentdataformat-e.md)
 
 **默认值：** CmsContentDataFormat.BINARY
 
@@ -80,7 +86,7 @@ keyInfo?: PrivateKeyInfo
 
 私钥参数。默认为空。
 
-**类型：** PrivateKeyInfo
+**类型：** [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md)
 
 **起始版本：** 22
 

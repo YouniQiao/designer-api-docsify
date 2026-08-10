@@ -1,11 +1,10 @@
 # Blank
 
-The **Blank** component is a spacer in the layout, automatically filling the remaining space along the main axis of
-its parent container. It works only when the parent component is [Row]{@link Row}, [Column]{@link Column}, or
-[Flex]{@link Flex}.
-> **Child Components**
+空白填充组件，在容器主轴方向上，空白填充组件具有自动填充容器空余部分的能力。仅当父组件为[Row]{@link Row}/[Column]{@link Column}/[Flex]{@link Flex}时生效。
+
+> **说明：**
 >
-> No child component can be set.
+> 该组件从API version 7开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
 
 ## Blank
 
@@ -13,15 +12,14 @@ its parent container. It works only when the parent component is [Row]{@link Row
 Blank(min?: number | string)
 ```
 
-Creates a **Blank** component.
+创建空白填充组件。
 
-Since API version 10:
+从API version 10开始： 
 
-- When the **Blank** component is used within a [Row]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, [Column]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, or [Flex]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-container, it will automatically stretch or shrink along the main axis if it does not have a main axis size specified. If the **Blank** component has a main axis size specified or if the container is set to adapt to the size of its child nodes, the component will not automatically stretch or shrink.  
-- Relationship between **size** and **min** of the **Blank** component on the main axis: max(min, size).  
-- If the **Blank** component has a cross axis size specified, it will not fill up the parent container on the cross  
-axis. If it does not have a cross axis size specified, it will fill up the parent container on the cross axis,following the **ItemAlign.Stretch** mode, the default setting of **alignSelf**.
+- Blank在父容器[Row]{@link Row}, [Column]{@link Column} 或[Flex]{@link Flex}主轴方向上未设置大小时会自动拉伸、压缩，设置了大小或容器自适应子节点大小时不会自动拉伸、压缩  
+。  
+- Blank设置主轴方向大小（size）与min时约束关系为max(min, size)。   
+- Blank在父容器交叉轴上设置大小时不会撑满父容器交叉轴，交叉轴不设置大小时alignSelf默认值为ItemAlign.Stretch，会撑满容器交叉轴。
 
 **Since:** 7
 
@@ -39,7 +37,7 @@ axis. If it does not have a cross axis size specified, it will fill up the paren
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| min | number \| string | No | Minimum size of the **Blank** component in the container along the main axis.\_\_\_HTML\_TAG\_USD\_0\_\_\_ Default value: **0**\_\_\_HTML\_TAG\_USD\_1\_\_\_If the type is number, the default unit is vp. If the type is string, the pixel unit can be explicitly specified, for example, '**10px**'. If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10vp**.\_\_\_HTML\_TAG\_USD\_2\_\_\_Invalid values are treated as the default value.\_\_\_HTML\_TAG\_USD\_3\_\_\_**NOTE**\_\_\_HTML\_TAG\_USD\_4\_\_\_This parameter cannot be set in percentage. If the value is negative, the default value is used. If the minimum size is larger than the available space of the container, it is used as the component size, and the component extends beyond the container.  |
+| min | number \| string | No | 空白填充组件在容器主轴上的最小大小。<br/>默认值：0，number类型单位为vp，string类型可以显式指定像素单位，如'10 px'。不指定像素单位时，默认单位vp，如'10'，等同于10vp。<br />非法值：按默认值处理。<br/>**说明：** <br/>不支持设置百分比。负值使用默认值。当最小值大于容器可用空间时，使用最小值作为自身大小 并超出容器。 |
 
 ## Summary
 

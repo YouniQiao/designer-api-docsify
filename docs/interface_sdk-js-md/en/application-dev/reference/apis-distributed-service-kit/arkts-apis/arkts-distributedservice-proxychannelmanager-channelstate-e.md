@@ -1,6 +1,6 @@
 # ChannelState
 
-Enumerates the connection states of the proxy channel.
+通道状态发生变化时，代理通道上报的通道连接状态。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the connection states of the proxy channel.
 CHANNEL_WAIT_RESUME = 0
 ```
 
-The connection is disconnected, and the channel is unavailable.
+连接已断开，通道不可用。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ The connection is disconnected, and the channel is unavailable.
 CHANNEL_RESUME = 1
 ```
 
-The connection is restored, and the channel is available.
+连接已恢复，通道可用。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ The connection is restored, and the channel is available.
 CHANNEL_EXCEPTION_SOFTWARE_FAILED = 2
 ```
 
-The channel is unavailable due to other software errors.
+其他软件错误导致通道不可用。
 
 **Since:** 20
 
@@ -70,7 +70,7 @@ The channel is unavailable due to other software errors.
 CHANNEL_BR_NO_PAIRED = 3
 ```
 
-The Bluetooth pairing relationship is deleted, and the channel is unavailable.
+蓝牙配对关系被删除，通道不可用。
 
 **Since:** 20
 

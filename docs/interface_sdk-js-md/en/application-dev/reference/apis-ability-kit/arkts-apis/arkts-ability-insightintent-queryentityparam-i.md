@@ -1,6 +1,6 @@
 # QueryEntityParam
 
-Parameter for query entity.
+查询实体的参数。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Parameter for query entity.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## parameters
 
 ```TypeScript
 parameters?: Record<string, Object>
 ```
 
-Indicates the parameters when querying entities by property.
+根据属性查询实体时的参数。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 26.0.0
 
@@ -38,9 +44,9 @@ Indicates the parameters when querying entities by property.
 queryType: QueryType
 ```
 
-The query type.
+查询类型。
 
-**Type:** QueryType
+**Type:** [QueryType](arkts-ability-insightintent-querytype-e.md)
 
 **Since:** 26.0.0
 

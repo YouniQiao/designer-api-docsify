@@ -1,7 +1,14 @@
 # AppStorage
 
-For details about how to use AppStorage, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在应用启动时创建，将UI状态数据存储于运行内存，实现应用级全局状态共享。具体UI使用说明，详见  
+[AppStorage：应用全局的UI状态存储](../../../ui/state-management/arkts-appstorage.md)。
+
+> **说明：**
+> 
+> 从API version 12开始，AppStorage支持[Map](../../../ui/state-management/arkts-appstorage.md#装饰map类型变量)、
+> [Set](../../../ui/state-management/arkts-appstorage.md#装饰set类型变量)、
+> [Date类型](../../../ui/state-management/arkts-appstorage.md#装饰date类型变量)，支持null、undefined以及
+> [联合类型](../../../ui/state-management/arkts-appstorage.md#appstorage支持联合类型)。
 
 **Since:** 7
 
@@ -17,9 +24,9 @@ For details about how to use AppStorage, see
 static Clear(): boolean
 ```
 
-Deletes all properties from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. The deletion is only successful if none of the properties in AppStorage have any subscribers. If there are subscribers, this API does not take effect and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned.
+删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。前提是AppStorage已经没有任何订阅者。如果有订阅者，Clear将不会生效并返回false。如果没有订阅者且删除成功则返回true。
 
-For details about the subscriber, see [delete]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+订阅者的含义参考[delete](arkts-arkui-appstorage-c.md#delete)。
 
 **Since:** 9
 
@@ -37,7 +44,7 @@ For details about the subscriber, see [delete]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 如果AppStorage中的属性已经没有订阅者则删除成功，返回true。否则返回false。 |
 
 ## Delete
 
@@ -45,15 +52,13 @@ For details about the subscriber, see [delete]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\
 static Delete(propName: string): boolean
 ```
 
-Deletes the property corresponding to **propName** from  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中删除propName对应的属性。
 
-The deletion is only successful if the property has no subscribers. If there is a subscriber, the deletion fails and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned.
+仅当AppStorage中该属性没有任何订阅者时可删除成功并返回true；如果有订阅者，则返回false。
 
-Subscribers include properties bound using [Link]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ and [Prop]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ APIs, as well as those decorated with  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ and  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_. This means that if\@StorageLink('propName') and \@StorageProp('propName') are used in a custom component or if there is still a  
-**SubscribedAbstractProperty** instance in a synchronization relationship with the property, the property cannot be deleted from AppStorage.
+属性的订阅者为[Link](arkts-arkui-appstorage-c.md#link)、[Prop](arkts-arkui-appstorage-c.md#prop)等接口返回的实例，以及  
+[@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink)和  
+[@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)装饰的变量。如果\@StorageLink('propName')、\@StorageProp('propName')装饰的变量或SubscribedAbstractProperty实例依旧对propName有同步关系，则该属性不能从AppStorage中删除。
 
 **Since:** 7
 
@@ -71,13 +76,13 @@ Subscribers include properties bound using [Link]\_\_\_JSDOC\_LINK\_DESC\_USD\_3
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** if the operation fails. |
+| boolean | 如果AppStorage中有对应的属性，且该属性已经没有订阅者，则删除成功，返回true。如果属性不存在，或者该属性还存在订阅者，则返回false。 |
 
 ## Get
 
@@ -85,9 +90,7 @@ Subscribers include properties bound using [Link]\_\_\_JSDOC\_LINK\_DESC\_USD\_3
 static Get<T>(propName: string): T | undefined
 ```
 
-Obtains the value of the property corresponding to **propName** from  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the property does not exist, this API returns  
-**undefined**.
+获取propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的属性值。如果不存在则返回undefined。
 
 **Since:** 7
 
@@ -105,13 +108,13 @@ Obtains the value of the property corresponding to **propName** from
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
+| T | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
 ## Has
 
@@ -119,8 +122,7 @@ Obtains the value of the property corresponding to **propName** from
 static Has(propName: string): boolean
 ```
 
-Checks whether the property corresponding to **propName** exists in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+判断propName对应的属性是否在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在。
 
 **Since:** 7
 
@@ -138,13 +140,13 @@ Checks whether the property corresponding to **propName** exists in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the property exists in AppStorage; returns **false** otherwise. |
+| boolean | 如果propName对应的属性在AppStorage中存在，则返回true。不存在则返回false。 |
 
 ## IsMutable
 
@@ -152,8 +154,11 @@ Checks whether the property corresponding to **propName** exists in
 static IsMutable(propName: string): boolean
 ```
 
-Checks whether the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is mutable.
+返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中propName对应的属性是否是可变的。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 10开始废弃，暂无替代接口。
 
 **Since:** 7
 
@@ -169,13 +174,13 @@ Checks whether the property corresponding to **propName** in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the property corresponding to **propName** is mutable. Currently, this return value is always **true**. |
+| boolean | 返回AppStorage中propName对应的属性是否是可变的。当前该返回值恒为true。 |
 
 ## Keys
 
@@ -183,7 +188,7 @@ Checks whether the property corresponding to **propName** in
 static Keys(): IterableIterator<string>
 ```
 
-Obtains all property names in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有的属性名。
 
 **Since:** 7
 
@@ -201,7 +206,7 @@ Obtains all property names in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | All property names in AppStorage. |
+| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | AppStorage中所有的属性名。 |
 
 ## Link
 
@@ -209,12 +214,11 @@ Obtains all property names in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 static Link(propName: string): any
 ```
 
-Establishes a two-way data binding with the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property exists in AppStorage, the two-way bound data of the property in AppStorage is returned.
+与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立双向数据绑定。如果给定的propName在AppStorage中存在，返回与AppStorage中propName对应属性的双向绑定数据。
 
-Any update of the data is synchronized back to AppStorage, which then synchronizes the update to all data and custom components bound to the property.
+双向绑定数据的修改会同步回AppStorage中，AppStorage会将变化同步到所有绑定该propName的数据和自定义组件中。
 
-If the given property does not exist in AppStorage, **undefined** is returned.
+如果AppStorage中不存在propName，则返回undefined。
 
 **Since:** 7
 
@@ -232,13 +236,13 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| any | Two-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+| any | 返回双向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
 ## Prop
 
@@ -246,11 +250,11 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 static Prop(propName: string): any
 ```
 
-Establishes a one-way data binding with the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property exists in AppStorage, the one-way bound data of the property in AppStorage is returned. If the given property does not exist in AppStorage,  
-**undefined** is returned. Updates of the one-way bound data are not synchronized back to AppStorage.
-    **NOTE**
-    Prop supports only simple types.
+与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立单向数据绑定。如果给定的propName在AppStorage中存在，则返回与AppStorage中propName对应属性的单向绑定数据。如果AppStorage中不存在propName，则返回undefined。单向绑定数据的修改不会同步回AppStorage中。
+
+> **说明：**
+> 
+> Prop仅支持S类型（number、boolean、string）。
 
 **Since:** 7
 
@@ -268,13 +272,13 @@ Establishes a one-way data binding with the property corresponding to **propName
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| any | One-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+| any | 返回单向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
 ## Set
 
@@ -282,8 +286,7 @@ Establishes a one-way data binding with the property corresponding to **propName
 static Set<T>(propName: string, newValue: T): boolean
 ```
 
-Sets the value of the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the value of **newValue** is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property. Starting from API version 12, **newValue** can be **null** or **undefined**.
+在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值操作，状态变量不会通知UI刷新propName对应属性的值。与[SetOrCreate](arkts-arkui-appstorage-c.md#setorcreate)不同，Set仅在propName已存在时生效，propName不存在时返回false。从API version 12开始，newValue可以为null或undefined。
 
 **Since:** 7
 
@@ -301,14 +304,14 @@ Sets the value of the property corresponding to **propName** in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| newValue | T | Yes | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **false** if the property corresponding to **propName** does not exist in AppStorage. Returns **true** if the operation is successful. |
+| boolean | 如果AppStorage中不存在propName对应的属性，返回false。设置成功则返回true。 |
 
 ## SetAndLink
 
@@ -316,7 +319,7 @@ Sets the value of the property corresponding to **propName** in
 static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-Similar to the [Link]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API, establishes a two-way data binding with the property corresponding to **propName** in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property exists in AppStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its two-way bound data. The value of **defaultValue** must be of the **T** type and cannot be **null** or **undefined**.
+与[Link](arkts-arkui-appstorage-c.md#link)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其双向绑定数据。defaultValue必须为T类型，且不能为null或undefined。
 
 **Since:** 7
 
@@ -334,14 +337,14 @@ Similar to the [Link]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API, establishes a tw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. The value cannot be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| defaultValue | T | Yes | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值，defaultValue不能为 null或undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Instance of **SubscribedAbstractProperty\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_** and two-way bound data of the given property in AppStorage. |
+| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的双向绑定的数据。 |
 
 ## SetAndProp
 
@@ -349,7 +352,7 @@ Similar to the [Link]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API, establishes a tw
 static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>
 ```
 
-Similar to the [Prop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API, establishes a one-way data binding with the property corresponding to **propName** in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one-way bound data. The value of **defaultValue** must be of the **S** type and cannot be **null** or **undefined**.
+与[Prop](arkts-arkui-appstorage-c.md#prop)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其单向绑定数据。defaultValue必须为S类型，且不能为null或undefined。
 
 **Since:** 7
 
@@ -367,14 +370,14 @@ Similar to the [Prop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API, establishes a on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| defaultValue | S | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. The value cannot be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| defaultValue | S | Yes | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值，defaultValue不能为 null或undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;S&gt; | Instance of **SubscribedAbstractProperty\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**. |
+| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;S&gt; | SubscribedAbstractProperty&lt;S&gt;的实例，为AppStorage中propName对应属性的单向绑定的数据。 |
 
 ## SetOrCreate
 
@@ -382,10 +385,7 @@ Similar to the [Prop]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API, establishes a on
 static SetOrCreate<T>(propName: string, newValue: T): void
 ```
 
-Sets the value of the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to a new value, if the property exists. If the property does not exist, this API creates it with the value of **newValue**.
-
-The value of **newValue** cannot be **null** or **undefined**.
+如果propName已经在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，并且newValue和propName对应属性的值不同，则设置propName对应属性的值为newValue，否则状态变量不会通知UI刷新propName对应属性的值。如果不存在，则创建propName属性，值为newValue。从API version 12开始，newValue可以为null或undefined。
 
 **Since:** 7
 
@@ -403,8 +403,8 @@ The value of **newValue** cannot be **null** or **undefined**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| newValue | T | Yes | Property value, which cannot be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| newValue | T | Yes | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
 
 ## Size
 
@@ -412,7 +412,7 @@ The value of **newValue** cannot be **null** or **undefined**.
 static Size(): number
 ```
 
-Obtains the number of properties in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中的属性数量。
 
 **Since:** 7
 
@@ -430,7 +430,7 @@ Obtains the number of properties in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Type | Description |
 | --- | --- |
-| number | Number of properties in AppStorage. |
+| number | AppStorage中属性的数量。 |
 
 ## clear
 
@@ -438,9 +438,9 @@ Obtains the number of properties in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 static clear(): boolean
 ```
 
-Deletes all properties from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. The deletion is only successful if none of the properties in AppStorage have any subscribers. If there are subscribers, this API does not take effect and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned.
+删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。仅当AppStorage没有任何订阅者时可删除成功并返回true；如果有订阅者，clear不会生效并返回false。
 
-For details about the subscriber, see [delete]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+订阅者的含义参考[delete](arkts-arkui-appstorage-c.md#delete)。
 
 **Since:** 10
 
@@ -456,7 +456,7 @@ For details about the subscriber, see [delete]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the properties in AppStorage have no subscribers and the deletion is successful; returns **false** if there are still subscribers. |
+| boolean | 如果AppStorage中的属性已经没有订阅者则删除成功，返回true；如果当前仍有订阅者，返回false。 |
 
 ## delete
 
@@ -464,26 +464,21 @@ For details about the subscriber, see [delete]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\
 static delete(propName: string): boolean
 ```
 
-Deletes the property corresponding to **propName** from  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中删除propName对应的属性。
 
-The deletion is only successful if the property has no subscribers. If there is a subscriber, the deletion fails and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned.
+仅当AppStorage中该属性没有任何订阅者时可删除成功并返回true；如果有订阅者，则返回false。
 
-The property subscribers include the following:
+属性的订阅者为：
 
-1. Variables decorated by \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_
+1. [@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink)、[@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)装饰的变量。
 
-2. Instances of [SubscribedAbstractProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ returned by  
-[link]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_, [prop]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_, [setAndLink]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_,or [setAndProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_
+2. 通过[link](arkts-arkui-appstorage-c.md#link)、[prop](arkts-arkui-appstorage-c.md#prop)、[setAndLink](arkts-arkui-appstorage-c.md#setandlink)、[setAndProp](arkts-arkui-appstorage-c.md#setandprop)接口返回的[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)的实例。
 
-To delete these subscribers:
+如需删除这些订阅者，可通过以下方式：
 
-1. Remove the custom component containing \@StorageLink or \@StorageProp. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_.
+1. 删除\@StorageLink、\@StorageProp所在的自定义组件。删除自定义组件请参考[自定义组件的删除](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#自定义组件的删除)。
 
-2. Call the [aboutToBeDeleted]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_ API on instances of  
-**SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**, or **setAndProp**.
+2. 对link、prop、setAndLink、setAndProp接口返回的SubscribedAbstractProperty的实例调用[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口。
 
 **Since:** 10
 
@@ -499,13 +494,13 @@ To delete these subscribers:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** if the operation fails. |
+| boolean | 如果AppStorage中有对应的属性，且该属性已经没有订阅者，则删除成功，返回true。如果属性不存在，或者该属性还存在订阅者，则返回false。 |
 
 ## get
 
@@ -513,9 +508,7 @@ To delete these subscribers:
 static get<T>(propName: string): T | undefined
 ```
 
-Obtains the value of the property corresponding to **propName** from  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the property does not exist, this API returns  
-**undefined**.
+获取propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的属性值。如果不存在则返回undefined。
 
 **Since:** 10
 
@@ -531,13 +524,13 @@ Obtains the value of the property corresponding to **propName** from
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
+| T | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
 ## has
 
@@ -545,8 +538,7 @@ Obtains the value of the property corresponding to **propName** from
 static has(propName: string): boolean
 ```
 
-Checks whether the property corresponding to **propName** exists in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+判断propName对应的属性是否在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在。
 
 **Since:** 10
 
@@ -562,13 +554,13 @@ Checks whether the property corresponding to **propName** exists in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the property exists in AppStorage; returns **false** otherwise. |
+| boolean | 如果propName对应的属性在AppStorage中存在，则返回true。不存在则返回false。 |
 
 ## keys
 
@@ -576,7 +568,7 @@ Checks whether the property corresponding to **propName** exists in
 static keys(): IterableIterator<string>
 ```
 
-Obtains all property names in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有的属性名。
 
 **Since:** 10
 
@@ -592,7 +584,7 @@ Obtains all property names in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | All property names in AppStorage. |
+| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | AppStorage中所有的属性名。 |
 
 ## link
 
@@ -600,12 +592,9 @@ Obtains all property names in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 static link<T>(propName: string): SubscribedAbstractProperty<T>
 ```
 
-Establishes a two-way data binding with the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property exists in AppStorage, the two-way bound data of the property in AppStorage is returned.
+与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立双向数据绑定。如果给定的propName在AppStorage中存在，返回AppStorage中propName对应属性的双向绑定数据。与[prop](arkts-arkui-appstorage-c.md#prop)的单向数据绑定不同，link的修改会同步回AppStorage，AppStorage会将变化同步到所有绑定该propName的数据和自定义组件中。
 
-Any update of the data is synchronized back to AppStorage, which then synchronizes the update to all data and custom components bound to the property.
-
-If the given property does not exist in AppStorage, **undefined** is returned.
+如果AppStorage中不存在propName，则返回undefined。
 
 **Since:** 10
 
@@ -621,13 +610,13 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Two-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | 返回双向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
 ## prop
 
@@ -635,9 +624,7 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 static prop<T>(propName: string): SubscribedAbstractProperty<T>
 ```
 
-Establishes a one-way data binding with the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property exists in AppStorage, the one-way bound data of the property in AppStorage is returned. If the given property does not exist in AppStorage,  
-**undefined** is returned. Updates of the one-way bound data are not synchronized back to AppStorage.
+与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立单向数据绑定。如果给定的propName在AppStorage中存在，则返回与AppStorage中propName对应属性的单向绑定数据。如果AppStorage中不存在propName，则返回undefined。单向绑定数据的修改不会同步回AppStorage中。
 
 **Since:** 10
 
@@ -653,13 +640,13 @@ Establishes a one-way data binding with the property corresponding to **propName
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | One-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | 返回单向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
 ## ref
 
@@ -667,10 +654,9 @@ Establishes a one-way data binding with the property corresponding to **propName
 static ref<T>(propName: string): AbstractProperty<T> | undefined
 ```
 
-Returns a reference to the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the provided **propName** does not exist, this API returns **undefined**.
+如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回AppStorage中propName对应属性的引用。否则，返回undefined。
 
-This API is similar to [link]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ but does not require manually releasing the returned variable of the [AbstractProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ type.
+与[link](arkts-arkui-appstorage-c.md#link)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md)类型的变量。
 
 **Since:** 12
 
@@ -686,13 +672,13 @@ This API is similar to [link]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ but does not 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
+| propName | string | Yes | AppStorage中的属性名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | A reference to the property in AppStorage, or **undefined** if the property does not exist. |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | 返回AppStorage中propName对应属性的引用，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
 ## set
 
@@ -700,15 +686,7 @@ This API is similar to [link]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ but does not 
 static set<T>(propName: string, newValue: T): boolean
 ```
 
-Sets the value of the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the value of **newValue** is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property.
-    **NOTE**
-    Since API version 12, AppStorage supports  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_, **null**,  
-    **undefined**, and \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_  
-    types.
+在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值操作，状态变量不会通知UI刷新propName对应属性的值。与[setOrCreate](arkts-arkui-appstorage-c.md#setorcreate)不同，set仅在propName已存在时生效，propName不存在时返回false。
 
 **Since:** 10
 
@@ -724,14 +702,14 @@ Sets the value of the property corresponding to **propName** in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| newValue | T | Yes | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **false** if the property corresponding to **propName** does not exist in AppStorage or if the assignment fails. Returns **true** if the assignment is successful. |
+| boolean | 如果AppStorage中不存在propName对应的属性，或设值失败，则返回false。设置成功则返回true。 |
 
 ## setAndLink
 
@@ -739,14 +717,7 @@ Sets the value of the property corresponding to **propName** in
 static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-Similar to the [link]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ API, establishes a two-way data binding with the property corresponding to **propName** in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property exists in AppStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its two-way bound data.
-    **NOTE**
-    Since API version 12, AppStorage supports  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_, **null**,  
-    **undefined**, and \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_  
-    types.
+与[link](arkts-arkui-appstorage-c.md#link)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其双向绑定数据。
 
 **Since:** 10
 
@@ -762,14 +733,14 @@ Similar to the [link]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ API, establishes a tw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. Since API version 12, **defaultValue** can be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| defaultValue | T | Yes | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值。从API version 12开 始，defaultValue可以为null或undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Instance of **SubscribedAbstractProperty\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**, which is two-way bound data of the given property in AppStorage. |
+| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的双向绑定的数据。 |
 
 ## setAndProp
 
@@ -777,14 +748,7 @@ Similar to the [link]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ API, establishes a tw
 static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-Similar to the [prop]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ API, establishes a one-way data binding with the property corresponding to **propName** in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one-way bound data.
-    **NOTE**
-    Since API version 12, AppStorage supports  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_, **null**,  
-    **undefined**, and \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_  
-    types.
+与[prop](arkts-arkui-appstorage-c.md#prop)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其单向绑定数据。
 
 **Since:** 10
 
@@ -800,14 +764,14 @@ Similar to the [prop]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ API, establishes a on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. Since API version 12, **defaultValue** can be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| defaultValue | T | Yes | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值。从API version 12开 始，defaultValue可以为null或undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Instance of **SubscribedAbstractProperty\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**. |
+| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的单向绑定的数据。 |
 
 ## setAndRef
 
@@ -815,17 +779,9 @@ Similar to the [prop]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ API, establishes a on
 static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 ```
 
-Similar to the [ref]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ API, returns a reference to the property corresponding to **propName**  
-in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its reference.
+与[ref](arkts-arkui-appstorage-c.md#ref)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回AppStorage中propName对应属性的引用。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其引用。
 
-This API is similar to [setAndLink]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ but does not require manually releasing the returned variable of the [AbstractProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ type.
-    **NOTE**
-    Since API version 12, AppStorage supports  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_, **null**,  
-    **undefined**, and \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_  
-    types.
+与[setAndLink](arkts-arkui-appstorage-c.md#setandlink)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md)类型的变量。
 
 **Since:** 12
 
@@ -841,14 +797,14 @@ This API is similar to [setAndLink]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ but doe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in AppStorage if **propName** does not exist. The value can be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| defaultValue | T | Yes | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值，defaultValue可以为 null或undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Instance of **AbstractProperty\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**, which is a reference to the property in AppStorage corresponding to **propName**. |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | AbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的引用。 |
 
 ## setOrCreate
 
@@ -856,17 +812,9 @@ This API is similar to [setAndLink]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ but doe
 static setOrCreate<T>(propName: string, newValue: T): void
 ```
 
-Sets the value of the property corresponding to **propName** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to a new value, if the property exists and the new value is different from the current value. If the new value is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property.
+如果propName已经在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，并且newValue和propName对应属性的值不同，则设置propName对应属性的值为newValue，否则状态变量不会通知UI刷新propName对应属性的值。
 
-If the property does not exist, this API creates it with the value of **newValue**. This **setOrCreate** API can create only one AppStorage key-value pair each time. To create multiple key-value pairs, call this API multiple times.
-    **NOTE**
-    Since API version 12, AppStorage supports  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_, **null**,  
-    **undefined**, and \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_  
-    types.
+如果propName不存在，则创建propName属性，值为newValue。setOrCreate仅可创建单个AppStorage的键值对，如需创建多个AppStorage键值对，可多次调用此方法。
 
 **Since:** 10
 
@@ -882,8 +830,8 @@ If the property does not exist, this API creates it with the value of **newValue
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | Property name in AppStorage. |
-| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+| propName | string | Yes | AppStorage中的属性名。 |
+| newValue | T | Yes | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
 
 ## size
 
@@ -891,7 +839,7 @@ If the property does not exist, this API creates it with the value of **newValue
 static size(): number
 ```
 
-Obtains the number of properties in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中的属性数量。
 
 **Since:** 10
 
@@ -907,7 +855,7 @@ Obtains the number of properties in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Type | Description |
 | --- | --- |
-| number | Number of properties in AppStorage. |
+| number | AppStorage中属性的数量。 |
 
 ## staticClear
 
@@ -915,7 +863,7 @@ Obtains the number of properties in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 static staticClear(): boolean
 ```
 
-Deletes all properties.
+删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。仅当AppStorage没有任何订阅者时可删除成功并返回true；如果有订阅者，staticClear不会生效并返回false。订阅者的含义参考[delete](arkts-arkui-appstorage-c.md#delete)。
 
 **Since:** 7
 
@@ -933,5 +881,5 @@ Deletes all properties.
 
 | Type | Description |
 | --- | --- |
-| boolean | Deletes all properties. Returns **true** if all properties are deleted; returns **false** if any of the properties is being referenced by a state variable. |
+| boolean | 删除AppStorage中所有的属性。仅当没有任何订阅者时删除成功，返回true；如果仍有订阅者，返回false。 |
 

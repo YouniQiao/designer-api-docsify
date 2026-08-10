@@ -1,6 +1,6 @@
 # UserAuthType
 
-Enumerates the identity authentication types. This enum defines the authentication types supported by the system,including PIN authentication and biometric authentication (face and fingerprint). When initiating authentication,an application needs to specify the authentication type list, and the user can select any of the authentication types to complete the authentication. The security strength and user experience vary depending on authentication types. The application needs to select a proper authentication type based on service scenarios.
+表示身份认证的凭据类型枚举。该枚举定义了系统支持的认证类型，包括锁屏密码认证（PIN）、生物特征认证（人脸、指纹）等。应用在发起认证时需指定认证类型列表，用户可选择其中任意一种完成认证。不同认证类型具有不同的安全强度和用户体验特点，应用应根据业务场景选择合适的认证类型。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the identity authentication types. This enum defines the authenticati
 PIN = 1
 ```
 
-PIN authentication. It indicates that the user enters the PIN to complete authentication. PIN authentication has a high security level of ATL4. It is applicable to scenarios requiring high security, such as payment and confirmation of important operations. However, users need to manually enter information, which is not as convenient as biometric authentication.
+口令认证。用户通过输入锁屏密码完成认证。锁屏密码认证具有高安全性，认证可信等级可达ATL4，适用于支付、重要操作确认等高安全场景。用户需要手动输入，体验不如生物认证便捷。
 
 **Since:** 10
 
@@ -34,8 +34,8 @@ PIN authentication. It indicates that the user enters the PIN to complete authen
 FACE = 2
 ```
 
-Face authentication. It indicates that the system checks whether the facial features of a user match the enrolled face. Face authentication supports different levels of liveness detection. For details about the classification principles, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.The advantage is convenient user experience, but the disadvantage is that there are certain requirements on the device and lighting conditions.
+人脸认证。用户通过人脸识别完成认证，系统会验证用户面部特征与已注册人脸的匹配度。人脸认证支持不同级别的活体检测能力，详细划分原则可参考  
+[生物认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。优点是体验便捷，缺点是对设备和光照条件有一定要求。
 
 **Since:** 8
 
@@ -53,8 +53,8 @@ Face authentication. It indicates that the system checks whether the facial feat
 FINGERPRINT = 4
 ```
 
-Fingerprint authentication. It indicates that the user is authenticated through the fingerprint sensor. The system checks whether the user fingerprint matches the enrolled fingerprint. Fingerprint authentication supports multiple trust levels. For details about the classification principles, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.It is applicable to medium-security scenarios. The advantage is that the operation is simple and quick. The disadvantage is that the device must be equipped with a fingerprint sensor, and wet hands or fingerprint abrasion may affect the recognition effect.
+指纹认证。用户通过指纹传感器完成认证，系统会验证用户指纹特征与已注册指纹的匹配度。指纹认证支持多种认证可信等级，详细划分原则可参考  
+[生物认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)，适用于中等安全场景。优点是操作简单快捷，缺点是设备需配备指纹传感器，且湿手或指纹磨损可能影响识别效果。
 
 **Since:** 8
 
@@ -72,8 +72,10 @@ Fingerprint authentication. It indicates that the user is authenticated through 
 COMPANION_DEVICE = 64
 ```
 
-Companion device authentication. It indicates that the user completes the authentication through the companion device. Companion device authentication supports multiple trust levels. For details about the classification principles, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+伴随设备认证。用户通过佩戴的伴随设备完成认证。伴随设备认证支持多种认证可信等级，详细划分原则可参考  
+[生物认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。
+
+**注意**：暂不支持与其他认证类型（PIN/FACE/FINGERPRINT）同时发起认证。
 
 **Since:** 26.0.0
 

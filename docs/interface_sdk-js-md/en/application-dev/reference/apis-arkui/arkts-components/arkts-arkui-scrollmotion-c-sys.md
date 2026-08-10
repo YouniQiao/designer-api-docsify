@@ -1,6 +1,6 @@
 # ScrollMotion (System API)
 
-Rolling animation model: You can build rolling animation based on the initial position, initial speed, boundary position, and spring attributes.
+滚动动画模型。可以根据初始位置、初始速度、边界位置和弹簧属性构建滚动动画。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Rolling animation model: You can build rolling animation based on the initial po
 constructor(position: number, velocity: number, min: number, max: number, prop: SpringProp)
 ```
 
-Constructor parameters
+构造器参数。
 
 **Since:** 7
 
@@ -42,5 +42,5 @@ Constructor parameters
 | velocity | number | Yes |  |
 | min | number | Yes |  |
 | max | number | Yes |  |
-| prop | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |  |
 

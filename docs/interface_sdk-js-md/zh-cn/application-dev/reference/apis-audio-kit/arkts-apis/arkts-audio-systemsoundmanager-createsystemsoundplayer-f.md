@@ -1,5 +1,11 @@
 # createSystemSoundPlayer
 
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
+
 ## createSystemSoundPlayer
 
 ```TypeScript
@@ -26,9 +32,9 @@ function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

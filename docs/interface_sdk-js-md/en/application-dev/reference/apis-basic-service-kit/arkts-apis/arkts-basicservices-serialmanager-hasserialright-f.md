@@ -1,12 +1,18 @@
 # hasSerialRight
 
+## Modules to Import
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## hasSerialRight
 
 ```TypeScript
 function hasSerialRight(portId: int): boolean
 ```
 
-Checks whether the application has the permission to access the serial port device. When an application is restarted after exits, you need to request the permission from the user again.
+检查应用程序是否具有访问串口设备的权限。应用退出后再拉起时，需要重新申请授权。
 
 **Since:** 19
 
@@ -20,24 +26,24 @@ Checks whether the application has the permission to access the serial port devi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| portId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the permission is authorized, and **false** indicates the opposite. |
+| boolean | true表示已授权，false表示未授权。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-database-operation-exception) | Database operation exception. |
-| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
-| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 31400003 | PortId does not exist. |
+| 14400005 | Database operation exception. |
+| 31400001 | Serial port management exception. |
 
-**Example**
+## Examples
 
 The following sample code shows the basic process for calling the hasSerialRight API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
@@ -49,17 +55,16 @@ import { serialManager } from '@kit.BasicServicesKit';
 function hasSerialRight() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('portList: ', JSON.stringify(portList));
-  if (portList === undefined || portList.length === 0) {
-    console.info('portList is empty');
+  if (!portList || portList.length === 0) {
+    console.error('portList is empty');
     return;
   }
-  let portId: number = portList[0].portId;
 
   // Check whether the device can be accessed by the application.
   if (serialManager.hasSerialRight(portId)) {
     console.info('The serial port is accessible');
   } else {
-    console.info('No permission to access the serial port');
+    console.error('No permission to access the serial port');
   }
 }
 ```

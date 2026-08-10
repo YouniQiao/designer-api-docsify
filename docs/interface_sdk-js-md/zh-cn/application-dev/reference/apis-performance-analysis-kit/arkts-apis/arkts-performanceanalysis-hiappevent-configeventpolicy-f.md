@@ -1,5 +1,11 @@
 # configEventPolicy
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## configEventPolicy
 
 ```TypeScript
@@ -24,17 +30,17 @@ function configEventPolicy(policy: EventPolicy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 系统事件配置策略。 |
+| policy | [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md) | 是 | 系统事件配置策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_各个事件的事件配置策略，详细规格见[EventPolicy]{ |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 &lt;br&gt;各个事件的事件配置策略，详细规格见[EventPolicy]{ |
 
-**示例：**
+## 示例
 
-ArkTS-Dyn示例：
+以下示例用于模拟设置MAIN_THREAD_JANK事件的配置策略：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -54,30 +60,6 @@ hiAppEvent.configEventPolicy(policy).then(() => {
   hilog.info(0x0000, 'hiAppEvent', `Successfully set main thread jank event policy.`);
 }).catch((err: BusinessError) => {
   hilog.error(0x0000, 'hiAppEvent', `Failed to set main thread jank event policy. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@ohos.base';
-
-let policy: hiAppEvent.EventPolicy = {
-  mainThreadJankPolicy:{
-    logType: 1,
-    sampleInterval: 100,
-    ignoreStartupTime: 11,
-    sampleCount: 21,
-    reportTimesPerApp: 3,
-    autoStopSampling: true
-  }
-};
-hiAppEvent.configEventPolicy(policy).then(() => {
-  hilog.info(0x0000, 'hiAppEvent', `Successfully set main thread jank event policy.`);
-}).catch((err: Error) => {
-  const bErr = err as BusinessError;
-  hilog.error(0x0000, 'hiAppEvent', `Failed to set main thread jank event policy. Code: ${bErr.code}, message: ${bErr.message}`);
 });
 ```
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -18,7 +24,7 @@ deviceId: long
 
 设备ID。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 

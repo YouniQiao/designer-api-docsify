@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## error
 
 ```TypeScript
@@ -18,7 +24,7 @@ error: ErrorType
 
 枚举值，同步失败错误类型。
 
-**类型：** ErrorType
+**类型：** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
 
 **起始版本：** 12
 
@@ -36,7 +42,7 @@ state: SyncState
 
 枚举值，端云同步状态。
 
-**类型：** SyncState
+**类型：** [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
 
 **起始版本：** 12
 

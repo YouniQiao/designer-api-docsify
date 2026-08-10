@@ -10,6 +10,12 @@ Provides information about geographic locations.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## accuracy
 
 ```TypeScript
@@ -18,7 +24,7 @@ accuracy: double
 
 Indicates location accuracy, in meters.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -38,7 +44,7 @@ additionSize?: int
 
 Indicates the amount of additional descriptive information.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -98,7 +104,7 @@ altitude: double
 
 Indicates location altitude, in meters.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -118,7 +124,7 @@ altitudeAccuracy?: double
 
 Indicates vertical position accuracy in meters.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -138,7 +144,7 @@ direction: double
 
 Indicates direction information.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -158,7 +164,7 @@ directionAccuracy?: double
 
 Indicates direction accuracy in degrees.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -198,7 +204,7 @@ latitude: double
 
 Indicates latitude information.A positive value indicates north latitude,and a negative value indicates south latitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -218,7 +224,7 @@ longitude: double
 
 Indicates Longitude information.A positive value indicates east longitude ,and a negative value indicates west longitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -238,7 +244,7 @@ poi?: PoiInfo
 
 Indicates the poi information.
 
-**Type:** PoiInfo
+**Type:** [PoiInfo](arkts-location-geolocationmanager-poiinfo-i.md)
 
 **Since:** 19
 
@@ -258,7 +264,7 @@ sourceType?: LocationSourceType
 
 Indicates the source of the location.
 
-**Type:** LocationSourceType
+**Type:** [LocationSourceType](arkts-location-geolocationmanager-locationsourcetype-e.md)
 
 **Since:** 12
 
@@ -278,7 +284,7 @@ speed: double
 
 Indicates speed, in m/s.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -298,7 +304,7 @@ speedAccuracy?: double
 
 Indicates speed accuracy in meter per seconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -318,7 +324,7 @@ timeSinceBoot: long
 
 Indicates location timestamp since boot.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -338,7 +344,7 @@ timeStamp: long
 
 Indicates location timestamp in the UTC format.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -358,7 +364,7 @@ uncertaintyOfTimeSinceBoot?: long
 
 Time uncertainty Of timeSinceBoot in nanosecond.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 

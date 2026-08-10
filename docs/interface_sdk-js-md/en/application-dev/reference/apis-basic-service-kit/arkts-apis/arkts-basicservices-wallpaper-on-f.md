@@ -1,12 +1,18 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## on('colorChange')
 
 ```TypeScript
 function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void
 ```
 
-Registers a listener for wallpaper color changes to receive notifications about the changes.
+订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。
 
 **Since:** 7
 
@@ -22,10 +28,10 @@ Registers a listener for wallpaper color changes to receive notifications about 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'colorChange' | Yes | the incoming colorChange table open receiver pick a color change wallpaper wallpaper color changes. |
-| callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | Yes | provides dominant colors of the wallpaper. |
+| type | 'colorChange' | Yes |  |
+| callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { InputEvent } from 'kits/@kit.InputKit';
+```
+
 ## actionTime
 
 ```TypeScript
@@ -18,7 +24,7 @@ actionTime: long
 
 上报输入事件的时间，表示系统启动运行至今逝去的微秒数，单位为微秒（μs）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ deviceId: int
 
 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -58,7 +64,7 @@ id: int
 
 事件ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -78,7 +84,7 @@ screenId: int
 
 目标屏幕ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -98,7 +104,7 @@ windowId: int
 
 目标窗口ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

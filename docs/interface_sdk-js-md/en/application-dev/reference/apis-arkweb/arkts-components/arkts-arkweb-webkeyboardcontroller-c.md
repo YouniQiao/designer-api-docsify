@@ -1,6 +1,6 @@
 # WebKeyboardController
 
-Define the controller to interact with a custom keyboard, related to the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ event.
+Define the controller to interact with a custom keyboard, related to the {@link onInterceptKeyboardAttach} event.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Define the controller to interact with a custom keyboard, related to the \_\_\_J
 close(): void
 ```
 
-Closes this custom keyboard.
+Close the custom keyboard.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Closes this custom keyboard.
 constructor()
 ```
 
-Constructs a **WebKeyboardController** API.
+Constructor.
 
 **Since:** 12
 
@@ -50,7 +50,7 @@ Constructs a **WebKeyboardController** API.
 deleteBackward(length: number): void
 ```
 
-Deletes a specified number of characters backward in a **Web** component text box.
+Delete text from front to back.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Deletes a specified number of characters backward in a **Web** component text bo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | Length of characters to delete backward in a **Web** component text box.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters after the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
+| length | number | Yes | length of text, which will be deleted from front to back. |
 
 ## deleteForward
 
@@ -72,7 +72,7 @@ Deletes a specified number of characters backward in a **Web** component text bo
 deleteForward(length: number): void
 ```
 
-Deletes a specified number of characters forward in a **Web** component text box.
+Delete text from back to front.
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ Deletes a specified number of characters forward in a **Web** component text box
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | Length of characters to delete forward in a **Web** component text box.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters before the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
+| length | number | Yes | length of text, which will be deleted from back to front. |
 
 ## insertText
 
@@ -94,7 +94,7 @@ Deletes a specified number of characters forward in a **Web** component text box
 insertText(text: string): void
 ```
 
-Inserts characters into the **Web** component text box.
+Insert text into Editor.
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ Inserts characters into the **Web** component text box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Characters to insert into the **Web** component text box. |
+| text | string | Yes | text which will be inserted. |
 
 ## sendFunctionKey
 
@@ -116,8 +116,7 @@ Inserts characters into the **Web** component text box.
 sendFunctionKey(key: number): void
 ```
 
-Inserts a function key. Currently, only the Enter key type is supported.For details about the value, see  
-[EnterKeyType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Send the function of the key.
 
 **Since:** 12
 
@@ -131,5 +130,5 @@ Inserts a function key. Currently, only the Enter key type is supported.For deta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | number | Yes | Function key to insert into the **Web** component text box. Currently, only the Enter key is supported. |
+| key | number | Yes | action indicates the "enter" key related to the {@link inputMethodEngine} |
 

@@ -1,6 +1,6 @@
 # ShaderStyle
 
-Defines the base class for text shader effects.
+文本着色器效果基类。
 
 **Since:** 20
 

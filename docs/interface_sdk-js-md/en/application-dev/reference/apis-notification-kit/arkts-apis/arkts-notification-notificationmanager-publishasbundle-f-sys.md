@@ -1,5 +1,11 @@
 # publishAsBundle (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## publishAsBundle
 
 ```TypeScript
@@ -11,7 +17,7 @@ function publishAsBundle(
   ): void
 ```
 
-Publishes a notification through the reminder agent. This API uses an asynchronous callback to return the result.
+发布代理通知。使用callback异步回调。
 
 **Since:** 9
 
@@ -29,39 +35,39 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Content and related configuration of the notification to publish. |
-| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken over by the reminder agent. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | 用于设置要发布通知的内容和相关配置信息。 |
+| representativeBundle | string | Yes | 被代理应用的包名。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 发布代理通知的回调方法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled. |
-| [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
-| [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
-| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
+| 801 | The device does not support geofencing.<br>**Applicable version:** 23 and later |
+| 1600025 | Geofencing disabled.<br>**Applicable version:** 23 and later |
+| 1600026 | The location switch is off.<br>**Applicable version:** 23 and later |
+| 1600027 | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
+| 2300007 | Network unreachable. |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| 1600016 | The notification version for this update is too low. |
+| 201 | Permission denied. |
+| 202 | Not system application to call the interface. |
+| 1600020 | The application is not allowed to send notifications due to permission settings. |
+| 1600008 | The user does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600009 | The notification sending frequency reaches the upper limit. |
+| 1600012 | No memory space. |
+| 1600014 | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
+| 1600015 | The current notification status does not support duplicate configurations. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled. |
+| 1600005 | Notification slot disabled. |
+| 1600007 | The notification does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -100,7 +106,7 @@ notificationManager.publishAsBundle(request, representativeBundle, userId, callb
 function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: int): Promise<void>
 ```
 
-Publishes a notification through the reminder agent. This API uses a promise to return the result.
+发布代理通知。使用Promise异步回调。
 
 **Since:** 9
 
@@ -118,44 +124,44 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Content and related configuration of the notification to publish. |
-| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken over by the reminder agent. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | 用于设置要发布通知的内容和相关配置信息。 |
+| representativeBundle | string | Yes | 被代理应用的包名。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled. |
-| [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
-| [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
-| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
+| 801 | The device does not support geofencing.<br>**Applicable version:** 23 and later |
+| 1600025 | Geofencing disabled.<br>**Applicable version:** 23 and later |
+| 1600026 | The location switch is off.<br>**Applicable version:** 23 and later |
+| 1600027 | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
+| 2300007 | Network unreachable. |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| 1600016 | The notification version for this update is too low. |
+| 201 | Permission denied. |
+| 202 | Not system application to call the interface. |
+| 1600020 | The application is not allowed to send notifications due to permission settings. |
+| 1600008 | The user does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600009 | The notification sending frequency reaches the upper limit. |
+| 1600012 | No memory space. |
+| 1600014 | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
+| 1600015 | The current notification status does not support duplicate configurations. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled. |
+| 1600005 | Notification slot disabled. |
+| 1600007 | The notification does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -190,7 +196,7 @@ notificationManager.publishAsBundle(request, representativeBundle, userId).then(
 function publishAsBundle(representativeBundle: BundleOption, request: NotificationRequest): Promise<void>
 ```
 
-Publishes a notification through the reminder agent. This API uses a promise to return the result.
+发布代理通知。使用Promise异步回调。
 
 **Since:** 12
 
@@ -208,43 +214,43 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| representativeBundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application whose notification function is taken over by the reminder agent. |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Content and related configuration of the notification to publish. |
+| representativeBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 被代理应用的包信息。 |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | 用于设置要发布通知的内容和相关配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled. |
-| [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
-| [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
-| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
+| 801 | The device does not support geofencing.<br>**Applicable version:** 23 and later |
+| 1600025 | Geofencing disabled.<br>**Applicable version:** 23 and later |
+| 1600026 | The location switch is off.<br>**Applicable version:** 23 and later |
+| 1600027 | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
+| 2300007 | Network unreachable. |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| 1600016 | The notification version for this update is too low. |
+| 201 | Permission denied. |
+| 202 | Not system application to call the interface. |
+| 1600020 | The application is not allowed to send notifications due to permission settings. |
+| 1600008 | The user does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600009 | The notification sending frequency reaches the upper limit. |
+| 1600012 | No memory space. |
+| 1600014 | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
+| 1600015 | The current notification status does not support duplicate configurations. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled. |
+| 1600005 | Notification slot disabled. |
+| 1600007 | The notification does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

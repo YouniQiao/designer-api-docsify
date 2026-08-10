@@ -2,7 +2,7 @@
 
 Defines the container reader attribute.
 
-**Inheritance/Implementation:** ContainerReaderAttribute extends [CommonMethod](arkts-arkui-component/common-commonmethod-i.md)
+**Inheritance/Implementation:** ContainerReaderAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
 **Since:** 26.0.0
 
@@ -11,6 +11,12 @@ Defines the container reader attribute.
 <!--Device-unnamed-export declare interface ContainerReaderAttribute extends CommonMethod--><!--Device-unnamed-export declare interface ContainerReaderAttribute extends CommonMethod-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+```
 
 ## attributeModifier
 
@@ -34,7 +40,7 @@ Sets the attribute modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -64,7 +70,7 @@ Sets the breakpoint configuration for container dimension analysis.Defines a set
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | An array of breakpoint values in vp units |
+| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No | An array of breakpoint values in vp units |
 
 **Return value:**
 
@@ -94,7 +100,7 @@ Set ContainerReader options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Used to specify the parameters for container dimension reading and breakpoint analysis. |
+| value | [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | Used to specify the parameters for container dimension reading and breakpoint analysis. |
 
 **Return value:**
 

@@ -1,5 +1,11 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { sharing } from 'kits/@kit.NetworkKit';
+```
+
 ## off('sharingStateChange')
 
 ```TypeScript
@@ -25,17 +31,17 @@ Unregister a callback for the global network sharing state change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sharingStateChange' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | the callback function that returns the status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | the callback function that returns the status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';
@@ -71,17 +77,17 @@ Unregister a callback for the interface network sharing state change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'interfaceSharingStateChange' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;InterfaceSharingStateInfo&gt; | No | the callback function that returns the message. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterfaceSharingStateInfo&gt; | No | the callback function that returns the message. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';
@@ -117,17 +123,17 @@ Unregister a callback for the sharing upstream network change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sharingUpstreamChange' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetHandle&gt; | No | the callback function that returns the network handle. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | No | the callback function that returns the network handle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';

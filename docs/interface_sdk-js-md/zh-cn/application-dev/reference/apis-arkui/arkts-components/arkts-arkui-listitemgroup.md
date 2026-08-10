@@ -40,11 +40,11 @@ ListItemGroup的预加载是指除了加载显示区域内的子组件外，还�
 
 ## 子组件
 
-包含[ListItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_子组件。支持通过渲染控制类型（  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_和  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+包含[ListItem]{@link ./list_item}子组件。支持通过渲染控制类型（  
+[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、  
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和  
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
 
 ## ListItemGroup
 
@@ -68,7 +68,10 @@ ListItemGroup(options?: ListItemGroupOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | ListItemGroup组件参数，用于配置header、footer、间距和样式等。不传入时使用默认配置（无header、footer，间距为 0，无卡片样式）。  |
+| options | [ListItemGroupOptions](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | 否 | ListItemGroup组件参数，用于配置header、footer、间距和样式等。不传入时使用默认配置（无header、footer，间距为 0，无卡片样式）。 |
 
 ## 汇总
 
+- [ListItemGroupOptions](arkts-arkui-listitemgroup-listitemgroupoptions-i.md)
+- [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
+- [ListItemGroupStyle](arkts-arkui-listitemgroup-listitemgroupstyle-e.md)

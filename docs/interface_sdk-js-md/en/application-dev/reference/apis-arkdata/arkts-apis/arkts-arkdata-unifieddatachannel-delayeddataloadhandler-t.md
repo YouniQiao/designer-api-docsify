@@ -4,9 +4,9 @@
 type DelayedDataLoadHandler = (acceptableInfo?: DataLoadInfo) => Promise<UnifiedData | null>
 ```
 
-Defines a handler for lazy data loading. The data sender can dynamically generate data based on the information passed by the data receiver to implement more flexible and precise data interaction policies.
+用于延迟加载数据的处理函数。支持数据发送方根据接收方传入的信息，动态生成数据，实现更灵活、精准的数据交互策略。
 
-This API is an asynchronous function, which uses a promise to return the result. It does not block the main thread and can be used to process time-consuming tasks with complex service logic.
+该处理函数为异步函数，返回Promise对象，不阻塞主线程，可处理复杂业务逻辑、执行长耗时任务。
 
 **Since:** 22
 
@@ -24,11 +24,11 @@ This API is an asynchronous function, which uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| acceptableInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Data type and quantity to receive. The default value is empty.  |
+| acceptableInfo | [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | No | 表示数据接收方可以接收的数据类型和数量，默认为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UnifiedData \| null&gt; | Promise used to return the result.  |
+| Promise&lt;UnifiedData \| null&gt; | Promise对象。resolve返回根据接收方信息生成的UnifiedData对象或null，reject返回错误信息。 |
 

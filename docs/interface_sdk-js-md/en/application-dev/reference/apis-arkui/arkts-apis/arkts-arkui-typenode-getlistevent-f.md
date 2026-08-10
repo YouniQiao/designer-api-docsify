@@ -6,7 +6,7 @@
 export function getListEvent(node: FrameNode): UIListEvent | undefined
 ```
 
-Get the event instance of List node.
+获取List节点的事件实例。
 
 **Since:** 26.0.0
 
@@ -22,11 +22,11 @@ Get the event instance of List node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the target FrameNode. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标FrameNode |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return the event instance of FrameNode, and return undefined if it does not exist. |
+| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

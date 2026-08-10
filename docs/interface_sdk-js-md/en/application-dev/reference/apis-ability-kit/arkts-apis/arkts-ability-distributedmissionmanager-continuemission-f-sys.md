@@ -1,12 +1,18 @@
 # continueMission (System API)
 
+## Modules to Import
+
+```TypeScript
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## continueMission
 
 ```TypeScript
 function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallback, callback: AsyncCallback<void>): void
 ```
 
-Continues a mission on a remote device, with the mission ID specified. This API uses an asynchronous callback to return the result.
+通过指定任务ID（missionId）的方式进行迁移任务。使用callback异步回调。
 
 **Since:** 9
 
@@ -26,25 +32,25 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for mission continuation. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback invoked when the mission continuation is complete. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the mission is continued, **err** is **undefined**; otherwise, **err** is an error object. |
+| parameter | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | Yes | 迁移信息。 |
+| options | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | Yes | 迁移任务完成回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，迁移任务完成时，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | The system ability work abnormally. |
-| [16300502](../errorcode-DistributedSchedule.md#16300502-failed-to-get-the-missioninfo-of-the-specified-missionid) | Failed to get the missionInfo of the specified missionId. |
-| [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) | The application is not installed on the remote end and installation-free isnot supported. |
-| [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
-| [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
-| [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) | The local continuation task is already in progress. |
+| 16300504 | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16300505 | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
+| 16300506 | The local continuation task is already in progress. |
+| 201 | Permission denied. |
+| 202 | The application is not system-app, can not use system-api. |
+| 16300501 | The system ability work abnormally. |
+| 16300502 | Failed to get the missionInfo of the specified missionId. |
+| 16300503 | The application is not installed on the remote end and installation-free isnot supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -83,7 +89,7 @@ try {
 function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallback): Promise<void>
 ```
 
-Continues a mission on a remote device, with the mission ID specified. This API uses a promise to return the result.
+通过指定任务ID（missionId）的方式进行迁移任务。使用promise异步回调。
 
 **Since:** 9
 
@@ -103,30 +109,30 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for mission continuation. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback invoked when the mission continuation is complete. |
+| parameter | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | Yes | 迁移信息。 |
+| options | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | Yes | 迁移任务完成回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | The system ability work abnormally. |
-| [16300502](../errorcode-DistributedSchedule.md#16300502-failed-to-get-the-missioninfo-of-the-specified-missionid) | Failed to get the missionInfo of the specified missionId. |
-| [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) | The application is not installed on the remote end and installation-free isnot supported. |
-| [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
-| [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
-| [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) | The local continuation task is already in progress. |
+| 16300504 | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16300505 | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
+| 16300506 | The local continuation task is already in progress. |
+| 201 | Permission denied. |
+| 202 | The application is not system-app, can not use system-api. |
+| 16300501 | The system ability work abnormally. |
+| 16300502 | Failed to get the missionInfo of the specified missionId. |
+| 16300503 | The application is not installed on the remote end and installation-free isnot supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -162,7 +168,7 @@ try {
 function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback<void>): void
 ```
 
-Continues a mission on a remote device, with the bundle name specified. This API uses an asynchronous callback to return the result.
+通过指定包名（bundleName）的方式进行迁移任务。使用callback异步回调。
 
 **Since:** 10
 
@@ -182,24 +188,24 @@ Continues a mission on a remote device, with the bundle name specified. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for mission continuation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the mission is continued, **err** is **undefined**; otherwise, **err** is an error object. |
+| parameter | [ContinueMissionInfo](arkts-ability-continuemissioninfo-i-sys.md) | Yes | 迁移信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，通过指定包名迁移任务完成时，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | The system ability work abnormally. |
-| [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) | The application is not installed on the remote end and installation-free isnot supported. |
-| [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
-| [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
-| [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) | The local continuation task is already in progress. |
-| [16300507](../errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) | Failed to get the missionInfo of the specified bundle name. |
+| 16300504 | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16300505 | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
+| 16300506 | The local continuation task is already in progress. |
+| 16300507 | Failed to get the missionInfo of the specified bundle name. |
+| 201 | Permission denied. |
+| 202 | The application is not system-app, can not use system-api. |
+| 16300501 | The system ability work abnormally. |
+| 16300503 | The application is not installed on the remote end and installation-free isnot supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -232,7 +238,7 @@ try {
 function continueMission(parameter: ContinueMissionInfo): Promise<void>
 ```
 
-Continues a mission on a remote device, with the bundle name specified. This API uses a promise to return the result.
+通过指定包名（bundleName）的方式进行迁移任务。使用Promise异步回调。
 
 **Since:** 10
 
@@ -252,29 +258,29 @@ Continues a mission on a remote device, with the bundle name specified. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for mission continuation. |
+| parameter | [ContinueMissionInfo](arkts-ability-continuemissioninfo-i-sys.md) | Yes | 迁移信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | The system ability work abnormally. |
-| [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) | The application is not installed on the remote end and installation-free isnot supported. |
-| [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
-| [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
-| [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) | The local continuation task is already in progress. |
-| [16300507](../errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) | Failed to get the missionInfo of the specified bundle name. |
+| 16300504 | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16300505 | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
+| 16300506 | The local continuation task is already in progress. |
+| 16300507 | Failed to get the missionInfo of the specified bundle name. |
+| 201 | Permission denied. |
+| 202 | The application is not system-app, can not use system-api. |
+| 16300501 | The system ability work abnormally. |
+| 16300503 | The application is not installed on the remote end and installation-free isnot supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';

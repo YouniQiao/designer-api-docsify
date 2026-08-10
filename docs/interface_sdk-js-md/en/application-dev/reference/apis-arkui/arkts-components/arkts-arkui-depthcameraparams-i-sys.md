@@ -1,6 +1,6 @@
 # DepthCameraParams (System API)
 
-Camera parameters struct.
+相机参数。
 
 **Since:** 26.0.0
 
@@ -18,9 +18,9 @@ Camera parameters struct.
 cameraBufferCrop?: CameraBufferCrop
 ```
 
-Camera buffer crop parameters.
+相机移轴裁剪参数。未设置时默认使用组件布局尺寸作为默认图像基准大小，裁剪偏移量为(0, 0)，缩放比例为1.0。
 
-**Type:** CameraBufferCrop
+**Type:** [CameraBufferCrop](arkts-arkui-camerabuffercrop-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -42,9 +42,9 @@ Camera buffer crop parameters.
 position: DepthVector3
 ```
 
-Camera position in 3D space.
+相机在三维空间中的位置。无单位，其值表示3D空间中的坐标。
 
-**Type:** DepthVector3
+**Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -66,9 +66,9 @@ Camera position in 3D space.
 quaternion: DepthVector4
 ```
 
-Camera rotation as quaternion (x, y, z, w).Represents the orientation of the camera in 3D space.
+相机旋转四元数，按(x, y, z, w)表示。无单位。
 
-**Type:** DepthVector4
+**Type:** [DepthVector4](../arkts-apis/arkts-arkui-common-depthvector4-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -90,7 +90,7 @@ Camera rotation as quaternion (x, y, z, w).Represents the orientation of the cam
 yFov: double
 ```
 
-Vertical field of view in radians.
+相机垂直方向视场角，单位为弧度。
 
 **Type:** double
 
@@ -114,7 +114,7 @@ Vertical field of view in radians.
 zFar: double
 ```
 
-Far clipping plane distance.
+远裁剪面距离。无单位。必须为正数。
 
 **Type:** double
 
@@ -138,7 +138,7 @@ Far clipping plane distance.
 zNear: double
 ```
 
-Near clipping plane distance.
+近裁剪面距离。无单位。必须为正数。
 
 **Type:** double
 

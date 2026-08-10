@@ -22,7 +22,7 @@ EffectComponent的渲染层级。
 
 默认值：EffectLayer.NONE
 
-**类型：** EffectLayer
+**类型：** [EffectLayer](arkts-arkui-effectlayer-e-sys.md)
 
 **起始版本：** 20
 

@@ -1,6 +1,6 @@
 # KeyEventPolicy
 
-Enumerates key event handling policies. When a key event occurs, only the keys for which the key event handling policy has been delivered are intercepted. For key events where no handling policy has been delivered, the system executes its original response logic.
+按键事件处理策略。按键事件发生时，仅拦截响应已下发按键事件处理策略的按键。对于未下发按键事件处理策略的按键事件，系统执行原先的响应逻辑。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Enumerates key event handling policies. When a key event occurs, only the keys f
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## keyCode
 
 ```TypeScript
 keyCode: KeyCode
 ```
 
-Key code.
+按键编码。
 
-**Type:** KeyCode
+**Type:** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Key code.
 keyPolicy: KeyPolicy
 ```
 
-Key policy.
+按键策略。
 
-**Type:** KeyPolicy
+**Type:** [KeyPolicy](arkts-mdm-systemmanager-keypolicy-e.md)
 
 **Since:** 23
 

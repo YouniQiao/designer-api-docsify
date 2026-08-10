@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## action
 
 ```TypeScript
@@ -21,7 +27,7 @@ action: Action
 - UPLOAD表示上传任务。  
 - DOWNLOAD表示下载任务。
 
-**类型：** Action
+**类型：** [Action](arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 10
 
@@ -44,7 +50,7 @@ begins?: long
 - 下载时，请求读取服务器开始下载文件时的起点位置（HTTP协议中设置"Range"选项）。  
 - 上传时，读取需上传的文件的起点位置。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -62,9 +68,9 @@ begins?: long
 data?: string | Array<FormItem>
 ```
 
- 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。  
+- 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。  
 - 上传时，data是表单项数组Array&lt;  
-[FormItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_&gt;。从API version15开始，创建单个任务可以上传最多100个文件。默认为空。
+[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;。从API version15开始，创建单个任务可以上传最多100个文件。默认为空。
 
 **类型：** string \| Array&lt;FormItem&gt;
 
@@ -109,7 +115,7 @@ ends?: long
 - 下载时，请求读取服务器开始下载文件时的结束位置（HTTP协议中设置"Range"选项）。  
 - 上传时，读取需上传的文件的结束位置。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -195,7 +201,7 @@ index?: int
 
 任务的路径索引，通常情况下用于任务断点续传，默认为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -215,7 +221,7 @@ metered?: boolean
 
 是否允许在按流量计费的网络中工作，默认为false。
 
-- true：是  
+- true：是   
 - false：否
 
 **类型：** boolean
@@ -263,7 +269,7 @@ minSpeed?: MinSpeed
 
 最低限速自定义设置，默认不启用最低限速。
 
-**类型：** MinSpeed
+**类型：** [MinSpeed](arkts-basicservices-agent-minspeed-i.md)
 
 **起始版本：** 20
 
@@ -281,7 +287,7 @@ mode?: Mode
 
 任务模式，默认为后台任务。从API version 20开始，下载到用户文件场景必须为request.agent.Mode.FOREGROUND。
 
-**类型：** Mode
+**类型：** [Mode](arkts-basicservices-agent-mode-e.md)
 
 **起始版本：** 10
 
@@ -301,8 +307,8 @@ multipart?: boolean
 
 是否使用单个请求进行上传，单个请求上传时必定使用multipart/form-data。
 
-- false：每个文件使用一个请求传输。  
-- true：使用多文件单请求上传。
+- false：每个文件使用一个请求传输。   
+- true：使用多文件单请求上传。 
 
 默认值为false。
 
@@ -324,7 +330,7 @@ network?: Network
 
 网络选项，当前支持无线网络WIFI和蜂窝数据网络CELLULAR，默认为ANY（WIFI或CELLULAR）。
 
-**类型：** Network
+**类型：** [Network](arkts-basicservices-agent-network-e.md)
 
 **默认值：** Network.ANY
 
@@ -344,9 +350,9 @@ network?: Network
 notification?: Notification
 ```
 
-通知栏自定义设置。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+通知栏自定义设置。默认值为`{}`。
 
-**类型：** Notification
+**类型：** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **起始版本：** 15
 
@@ -369,7 +375,7 @@ overwrite?: boolean
 
 从API version 20开始，下载到用户文件场景必须为true。
 
-设置为 \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ 时，不建议创建多个任务同时往同一个文件下载内容，会导致文件内容混乱。
+设置为 `true` 时，不建议创建多个任务同时往同一个文件下载内容，会导致文件内容混乱。
 
 **类型：** boolean
 
@@ -389,7 +395,7 @@ overwrite?: boolean
 precise?: boolean
 ```
 
- 如果设置为true，在上传/下载无法获取文件大小时任务失败。  
+- 如果设置为true，在上传/下载无法获取文件大小时任务失败。  
 - 如果设置为false，将文件大小设置为-1时任务继续。
 
 默认值为false。
@@ -414,7 +420,7 @@ priority?: int
 
 任务的优先级。前台任务的优先级比后台任务高。任务模式相同的情况下，该配置项的数字越小优先级越高，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -432,7 +438,7 @@ proxy?: string
 
 设置代理地址，其最大长度为512个字符，默认为空。
 
-代理地址格式:"http://&lt;domain or address&gt;:\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_"
+代理地址格式:"http://&lt;domain or address&gt;:&lt;port&gt;"
 
 **类型：** string
 
@@ -452,7 +458,7 @@ redirect?: boolean
 
 是否允许重定向，默认为true。
 
-- true：是  
+- true：是   
 - false：否
 
 **类型：** boolean
@@ -475,7 +481,7 @@ retry?: boolean
 
 是否为后台任务启用自动重试，仅应用于后台任务，默认为true。
 
-- true：是  
+- true：是   
 - false：否
 
 **类型：** boolean
@@ -498,7 +504,7 @@ roaming?: boolean
 
 是否允许在漫游网络中工作，默认为true。
 
-- true：是  
+- true：是   
 - false：否
 
 **类型：** boolean
@@ -528,7 +534,7 @@ internal://cache/path/to/file.txt"。
 - file协议路径，支持应用文件和用户文件，应用文件必须匹配应用包名，只支持到base及其子目录下，如"file://com.example.test/data/storage/el2/base/file.txt"。用户  
 文件必须为调用方创建好的用户文件uri。
 
-从API version 20开始，除\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_外，其他可默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。
+从API version 20开始，除[下载网络资源文件至用户文件](../../../basic-services/request/app-file-upload-download.md#下载网络资源文件至用户文件)外，其他可默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。
 
 **类型：** string
 
@@ -551,11 +557,11 @@ timeout?: Timeout
 ```
 
 超时时间自定义设置，连接超时时间默认60秒，总超时时间默认604800秒（1周）。当retry参数为true时，  
-[timeout]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_事件会触发立即重试，导致  
-[timeout]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_在外部观察中被重试动作所掩盖，但内部[timeout]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_条件已实际触发。若需显性观察  
-[timeout]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_事件，需关闭retry参数。
+[timeout](arkts-basicservices-agent-timeout-i.md)事件会触发立即重试，导致  
+[timeout](arkts-basicservices-agent-timeout-i.md)在外部观察中被重试动作所掩盖，但内部[timeout](arkts-basicservices-agent-timeout-i.md)条件已实际触发。若需显性观察  
+[timeout](arkts-basicservices-agent-timeout-i.md)事件，需关闭retry参数。
 
-**类型：** Timeout
+**类型：** [Timeout](arkts-basicservices-agent-timeout-i.md)
 
 **起始版本：** 20
 
@@ -592,7 +598,7 @@ token?: string
 ```
 
 任务令牌。查询带有token的任务需提供token并通过  
-[request.agent.touch]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_查询，否则无法查询到指定任务。其最小为8个字节，最大为2048个字节。默认为空。
+[request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)查询，否则无法查询到指定任务。其最小为8个字节，最大为2048个字节。默认为空。
 
 **类型：** string
 
@@ -613,7 +619,7 @@ url: string
 ```
 
 资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_功能。
+[HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
 
 **类型：** string
 

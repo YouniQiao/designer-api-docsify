@@ -1,6 +1,6 @@
 # WebContextMenuResult
 
-Defines the context menu result, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the context menu result, related to {@link WebContextMenuResult} method.
 
 **起始版本：** 9
 

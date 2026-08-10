@@ -12,6 +12,12 @@ Describes the Try AE parameters. Try AE indicates that the hardware reports the 
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## captureInterval
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly captureInterval?: int
 
 Timelapse capture interval.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -80,7 +86,7 @@ readonly previewType?: TimeLapsePreviewType
 
 Timelapse preview type.
 
-**类型：** TimeLapsePreviewType
+**类型：** [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md)
 
 **起始版本：** 12
 

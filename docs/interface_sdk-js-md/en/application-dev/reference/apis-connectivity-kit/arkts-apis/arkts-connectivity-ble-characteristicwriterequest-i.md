@@ -10,6 +10,12 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## characteristicUuid
 
 ```TypeScript
@@ -106,7 +112,7 @@ offset: int
 
 Indicates the byte offset of the start position for writing characteristic value
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -150,7 +156,7 @@ transId: int
 
 The Id of the write request
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

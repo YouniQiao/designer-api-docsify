@@ -1,7 +1,7 @@
 # Duplex
 
 既可读又可写的流。双工流允许数据双向传输，即可读可写。  
-**Duplex**类继承自[Readable]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，支持**Readable**中的所有API。
+**Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md)，支持**Readable**中的所有API。
 
 **继承/实现关系：** Duplex extends [Readable](arkts-arkts-stream-readable-c.md)
 
@@ -12,6 +12,12 @@
 <!--Device-stream-class Duplex extends Readable--><!--Device-stream-class Duplex extends Readable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { stream } from 'kits/@kit.ArkTS';
+```
 
 ## constructor
 
@@ -31,7 +37,7 @@ constructor()
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 let duplex = new stream.Duplex();
@@ -43,7 +49,7 @@ let duplex = new stream.Duplex();
 cork(): boolean
 ```
 
-强制将后续写入的数据缓存起来。调用此API可优化连续写入操作的性能。调用此API后，**writableCorked**的值加1。建议与[uncork()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用。
+强制将后续写入的数据缓存起来。调用此API可优化连续写入操作的性能。调用此API后，**writableCorked**的值加1。建议与[uncork()](arkts-arkts-stream-writable-c.md#uncork)配合使用。
 
 **起始版本：** 12
 
@@ -61,7 +67,7 @@ cork(): boolean
 | --- | --- |
 | boolean | 操作结果。**true**表示成功；**false**表示失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let duplexStream = new stream.Duplex();
@@ -95,9 +101,7 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 | encoding | string | 是 | 编码格式。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
 | callback | Function | 是 | 回调函数。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -111,27 +115,6 @@ class TestDuplex extends stream.Duplex {
   doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
     console.info("duplexStream chunk is", chunk); // duplexStream chunk is data
     callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.write("data", "utf8");
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // 期望结果: duplexStream chunk is data
-    callback.unsafeCall();
   }
 }
 
@@ -164,9 +147,7 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 | chunks | string[] \| Uint8Array[] | 是 | 批量写入的数据数组。 |
 | callback | Function | 是 | 回调函数。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -184,35 +165,6 @@ class TestDuplex extends stream.Duplex {
   doWritev(chunks: string[] | Uint8Array[], callback: Function) {
     console.info("duplexStream chunk", chunks[0]); // duplexStream chunk data1
     callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write("data1", "utf8");
-duplexStream.write("data2", "utf8");
-duplexStream.uncork();
-duplexStream.end();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("duplexStream chunk", (chunks as string[])[0]); // 期望结果: duplexStream chunk data1
-    callback.unsafeCall();
   }
 }
 
@@ -254,17 +206,15 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前**Duplex**对象。 |
+| [Writable](arkts-arkts-stream-writable-c.md) | 当前**Duplex**对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
+| 10200039 | The doTransform method has not been implemented for a class that inherits from Transform. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -284,29 +234,6 @@ class TestDuplex extends stream.Duplex {
 let duplexStream = new TestDuplex();
 duplexStream.end("test", "utf8", () => {
   console.info("Duplex is end"); // Duplex is end
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Duplex chunk is", chunk); // 期望结果: Duplex chunk is test
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.end("test", "utf8", () => {
-  console.info("Duplex is end"); // 期望结果: Duplex is end
 });
 ```
 
@@ -340,9 +267,7 @@ setDefaultEncoding(encoding?: string): boolean
 | --- | --- |
 | boolean | 操作结果。**true**表示成功；**false**表示失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -363,34 +288,13 @@ let result = duplexStream.setDefaultEncoding("utf8");
 console.info("duplexStream is result", result); // duplexStream is result true
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.setDefaultEncoding("utf8");
-console.info("duplexStream is result", result); // 期望结果: duplexStream is result true
-```
-
 ## uncork
 
 ```TypeScript
 uncork(): boolean
 ```
 
-释放cork状态，刷新缓冲区中的数据并写入目标位置。调用此API后，**writableCorked**的值减1。如果值变为**0**，则流不再处于cork状态；否则，流仍处于cork状态。建议与[cork()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用。
+释放cork状态，刷新缓冲区中的数据并写入目标位置。调用此API后，**writableCorked**的值减1。如果值变为**0**，则流不再处于cork状态；否则，流仍处于cork状态。建议与[cork()](arkts-arkts-stream-writable-c.md#cork)配合使用。
 
 **起始版本：** 12
 
@@ -408,9 +312,7 @@ uncork(): boolean
 | --- | --- |
 | boolean | 操作结果。**true**表示成功；**false**表示失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let dataWritten = "";
@@ -434,32 +336,6 @@ duplexStream.write("a");
 duplexStream.write("b");
 duplexStream.uncork();
 console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let dataWritten = "";
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    dataWritten += chunk;
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write("a");
-duplexStream.write("b");
-duplexStream.uncork();
-console.info("Duplex test uncork", dataWritten); // 期望结果: Duplex test uncork
 ```
 
 ## write
@@ -498,13 +374,11 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) | The stream has been ended. |
-| [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
-| [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
+| 10200039 | The doTransform method has not been implemented for a class that inherits from Transform. |
+| 10200037 | The callback is invoked multiple times consecutively. |
+| 10200036 | The stream has been ended. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -524,28 +398,6 @@ class TestDuplex extends stream.Duplex {
 let duplexStream = new TestDuplex();
 let result = duplexStream.write("test", "utf8");
 console.info("duplexStream result", result); // duplexStream result true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // 期望结果: duplexStream chunk is test
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.write("test", "utf8");
-console.info("duplexStream result", result); // 期望结果: duplexStream result true
 ```
 
 ## writable
@@ -576,7 +428,7 @@ get writableCorked(): int
 
 为完全释放流，需要调用writable.uncork()的次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -636,7 +488,7 @@ get writableHighWatermark(): int
 
 highWatermark的值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -656,7 +508,7 @@ get writableLength(): int
 
 可刷新的数据大小，单位为字节或对象。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

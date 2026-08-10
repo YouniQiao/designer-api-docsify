@@ -1,12 +1,18 @@
 # updateTimer (System API)
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## updateTimer
 
 ```TypeScript
 function updateTimer(bundleName: string, timeout: int): boolean
 ```
 
-Update backup or restore timeout.
+设置应用备份或恢复的时长。
 
 **Since:** 12
 
@@ -24,24 +30,24 @@ Update backup or restore timeout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | set update to bundleName app. |
-| timeout | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Update backup or restore timeout(unit:ms). |
+| bundleName | string | Yes | 需要设置备份或恢复时长的应用名称。 |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 备份或恢复的限制时长，单位为毫秒，取值范围为0至14400000。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Return update result, true is success, false is fail. |
+| boolean | 设置结果，true表示成功，false表示失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

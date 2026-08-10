@@ -1,6 +1,6 @@
 # SelectionContainerInterface
 
-Provides a SelectionContainer component interface.
+创建一个SelectionContainer组件。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Provides a SelectionContainer component interface.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## [[Call]]
 
 ```TypeScript
 (value?: SelectionContainerOptions): SelectionContainerAttribute
 ```
 
-Defines the constructor of SelectionContainer.
+定义SelectionContainer的构造函数。
 
 **Since:** 26.0.0
 
@@ -34,11 +40,11 @@ Defines the constructor of SelectionContainer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Initialization options of the component. |
+| value | [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | No | 组件的初始化选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
 

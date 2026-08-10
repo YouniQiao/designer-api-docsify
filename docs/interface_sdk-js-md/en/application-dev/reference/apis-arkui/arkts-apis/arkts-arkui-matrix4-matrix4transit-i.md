@@ -1,6 +1,6 @@
 # Matrix4Transit
 
-Matrix4Transit.
+矩阵对象。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Matrix4Transit.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## combine
 
 ```TypeScript
 combine(options: Matrix4Transit): Matrix4Transit
 ```
 
-Matrix superposition function Which can superpose the effects of two matrices to generate a new matrix object.
+Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个新的矩阵对象。会改变调用该函数的原始矩阵。
 
 **Since:** 23
 
@@ -32,13 +38,13 @@ Matrix superposition function Which can superpose the effects of two matrices to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Yes | 待叠加的矩阵对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return to Matrix4Transit |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 矩阵叠加后的对象。 |
 
 ## copy
 
@@ -46,7 +52,7 @@ Matrix superposition function Which can superpose the effects of two matrices to
 copy(): Matrix4Transit
 ```
 
-Copy function of Matrix, which can copy a copy of the current matrix object.
+Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 **Since:** 23
 
@@ -62,7 +68,7 @@ Copy function of Matrix, which can copy a copy of the current matrix object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return to Matrix4Transit |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的拷贝对象。 |
 
 ## invert
 
@@ -70,7 +76,7 @@ Copy function of Matrix, which can copy a copy of the current matrix object.
 invert(): Matrix4Transit
 ```
 
-The inverse function of Matrix returns an inverse matrix of the current matrix object That is, the effect is exactly the opposite.
+Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。会改变调用该函数的原始矩阵。
 
 **Since:** 23
 
@@ -86,7 +92,7 @@ The inverse function of Matrix returns an inverse matrix of the current matrix o
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return to Matrix4Transit |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的逆矩阵对象。 |
 
 ## rotate
 
@@ -94,7 +100,7 @@ The inverse function of Matrix returns an inverse matrix of the current matrix o
 rotate(options: RotateOption): Matrix4Transit
 ```
 
-Rotation function of the Matrix.You can add the x-axis, Y-axis, or Z-axis rotation effect to the current matrix.
+Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。会改变调用该函数的原始矩阵。
 
 **Since:** 23
 
@@ -110,13 +116,13 @@ Rotation function of the Matrix.You can add the x-axis, Y-axis, or Z-axis rotati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | 设置旋转参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return to Matrix4Transit |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 旋转效果后的矩阵对象。 |
 
 ## scale
 
@@ -124,7 +130,7 @@ Rotation function of the Matrix.You can add the x-axis, Y-axis, or Z-axis rotati
 scale(options: ScaleOption): Matrix4Transit
 ```
 
-Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scaling effect to the current matrix.
+Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。会改变调用该函数的原始矩阵。
 
 **Since:** 23
 
@@ -140,13 +146,13 @@ Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes | 设置缩放参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return to Matrix4Transit |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 缩放效果后的矩阵对象。 |
 
 ## setPolyToPoly
 
@@ -154,7 +160,7 @@ Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scali
 setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 ```
 
-Sets matrix to map src to dst.
+将一个多边形的顶点坐标映射到另外一个多边形的顶点坐标。
 
 **Since:** 23
 
@@ -170,13 +176,13 @@ Sets matrix to map src to dst.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | polyToPoly options |
+| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Yes | 映射相关的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return to Matrix4Transit |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵变换后的对象。 |
 
 ## skew
 
@@ -184,7 +190,7 @@ Sets matrix to map src to dst.
 skew(x: double, y: double): Matrix4Transit
 ```
 
-Skew function of the Matrix, which can add the x-axis, y-axis skew effect to the current matrix.Skew function takes a generic point with coordinates (x0, y0, z0) to the point (x0 + x*y0, y0 + y*x0, z0),where x, y are fixed parameters, called the shear factors.
+Matrix的倾斜函数，可以为当前矩阵增加x轴/y轴倾斜效果。会改变调用该函数的原始矩阵。
 
 **Since:** 23
 
@@ -200,14 +206,14 @@ Skew function of the Matrix, which can add the x-axis, y-axis skew effect to the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | double | Yes | the shear factor of x-axis. |
-| y | double | Yes | the shear factor of y-axis. |
+| x | double | Yes | 设置x轴倾斜参数。 |
+| y | double | Yes | 设置y轴倾斜参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return to Matrix4Transit |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 倾斜效果后的矩阵对象。 |
 
 ## transformPoint
 
@@ -221,7 +227,7 @@ transformPoint(options: [
         ]
 ```
 
-Matrix coordinate point conversion function Which can apply the current transformation effect to a coordinate point.
+Matrix的坐标点转换函数，可以将当前的变换效果作用到一个坐标点上。
 
 **Since:** 23
 
@@ -237,13 +243,13 @@ Matrix coordinate point conversion function Which can apply the current transfor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [             double,             double         ] | Yes |  |
+| options | [             double,             double         ] | Yes | 需要转换的坐标点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [             double,             double         ] | Return to Matrix4Transit |
+| [             double,             double         ] | 返回矩阵变换后的Point对象。 |
 
 ## translate
 
@@ -251,7 +257,7 @@ Matrix coordinate point conversion function Which can apply the current transfor
 translate(options: TranslateOption): Matrix4Transit
 ```
 
-Matrix translation function Which can add the x-axis, Y-axis, or Z-axis translation effect to the current matrix.
+Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。会改变调用该函数的原始矩阵。
 
 **Since:** 23
 
@@ -267,11 +273,11 @@ Matrix translation function Which can add the x-axis, Y-axis, or Z-axis translat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | 设置平移参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return to Matrix4Transit |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 平移效果后的矩阵对象。 |
 

@@ -1,6 +1,6 @@
 # Key
 
-Defines a key.
+按键。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines a key.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
+```
+
 ## code
 
 ```TypeScript
 code: KeyCode
 ```
 
-Key code.
+键值。
 
-**Type:** KeyCode
+**Type:** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Key code.
 deviceId: int
 ```
 
-Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change.
+输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,9 +62,9 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 pressedTime: long
 ```
 
-Time when the key is pressed, in microseconds (μs) since the system starts.
+按键按下时间，表示系统启动运行至今逝去的微秒数，单位为微秒（μs）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

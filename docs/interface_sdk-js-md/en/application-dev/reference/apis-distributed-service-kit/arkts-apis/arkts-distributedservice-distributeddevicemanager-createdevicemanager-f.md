@@ -1,12 +1,18 @@
 # createDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## createDeviceManager
 
 ```TypeScript
 function createDeviceManager(bundleName: string): DeviceManager
 ```
 
-Creates a **DeviceManager** instance. The **DeviceManager** instance is the entry for invoking the APIs for distributed device management. It can be used to obtain information about trusted devices and local devices.
+创建一个设备管理实例。设备管理实例是分布式设备管理方法的调用入口。用于获取可信设备和本地设备的相关信息。
 
 **Since:** 10
 
@@ -20,21 +26,21 @@ Creates a **DeviceManager** instance. The **DeviceManager** instance is the entr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. The value is a string of 1 to 255 characters. |
+| bundleName | string | Yes | 指示应用程序的Bundle名称。长度范围1~255字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | DeviceManager** instance created. |
+| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | 返回设备管理器对象实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';

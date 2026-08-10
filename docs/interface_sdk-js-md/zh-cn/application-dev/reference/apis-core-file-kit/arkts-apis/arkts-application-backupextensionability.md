@@ -1,5 +1,11 @@
 # @ohos.application.BackupExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
+```
+
 ## 汇总
 
 ### 类

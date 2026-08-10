@@ -1,8 +1,8 @@
 # BaseGestureEvent
 
-Defines the basic gesture event type. Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+基础手势事件类型。继承自[BaseEvent](arkts-arkui-common-baseevent-i.md)。
 
-**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](arkts-arkui-component/common-baseevent-i.md)
+**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md)
 
 **Since:** 11
 
@@ -18,15 +18,13 @@ Defines the basic gesture event type. Inherits from [BaseEvent]\_\_\_JSDOC\_LINK
 fingerInfos?: FingerInfo[]
 ```
 
-Information about touch points of the gesture event. For gesture events initiated by a touchscreen, **fingerInfos**  
-includes information about all touch points. For gesture events initiated by a mouse or touchpad, **fingerInfos**  
-contains only one touch point.
+由触屏产生的手势，fingerInfos中会包含触发事件的所有触点信息；由鼠标发起的手势，fingerInfos中只会有一条记录；触摸板的事件大类与鼠标一致，所以由触摸板发起的手势，fingerInfos只会携带一条记录。
 
-**NOTE**
+**说明：**
 
-**fingerInfos** only records information about effective fingers that participate in the touch. Fingers that are pressed first but do not participate in triggering of the current gesture will not be shown in **fingerInfos**. The default value is an empty array **[]**, and an empty array indicates no effective touch point information.
+fingerInfos只会记录参与触摸的有效手指信息，先按下但未参与当前手势触发的手指在fingerInfos中不会显示。默认值为空数组[]，返回空数组时，表示当前无有效触点信息。
 
-**Type:** FingerInfo[]
+**Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 
 **Since:** 20
 
@@ -46,9 +44,9 @@ contains only one touch point.
 fingerList: FingerInfo[]
 ```
 
-Information about all fingers triggering the event.
+触发事件的所有手指信息。
 
-**Type:** FingerInfo[]
+**Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 
 **Since:** 11
 

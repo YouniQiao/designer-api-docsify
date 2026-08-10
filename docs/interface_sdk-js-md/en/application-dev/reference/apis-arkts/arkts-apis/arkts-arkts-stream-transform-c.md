@@ -1,7 +1,6 @@
 # Transform
 
-A special duplex stream that supports data conversion and result output. The **Transform** class inherits from  
-[Duplex]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and supports all the APIs in **Duplex**.
+一种特殊的双工流，支持数据转换和结果输出。**Transform**类继承自[Duplex](arkts-arkts-stream-duplex-c.md)，支持**Duplex**中的所有API。
 
 **Inheritance/Implementation:** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md)
 
@@ -9,9 +8,15 @@ A special duplex stream that supports data conversion and result output. The **T
 
 **ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-stream-export class Transform extends Duplex--><!--Device-stream-export class Transform extends Duplex-End-->
+<!--Device-stream-class Transform extends Duplex--><!--Device-stream-class Transform extends Duplex-End-->
 
 **System capability:** SystemCapability.Utils.Lang
+
+## Modules to Import
+
+```TypeScript
+import { stream } from 'kits/@kit.ArkTS';
+```
 
 ## constructor
 
@@ -19,7 +24,7 @@ A special duplex stream that supports data conversion and result output. The **T
 constructor()
 ```
 
-A constructor used to create a **Transform** object.
+创建**Transform**对象的构造函数。
 
 **Since:** 12
 
@@ -31,7 +36,7 @@ A constructor used to create a **Transform** object.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 let transform = new stream.Transform();
@@ -43,7 +48,7 @@ let transform = new stream.Transform();
 doFlush(callback: Function): void
 ```
 
-Called at the end of the stream to process the remaining data. This API uses an asynchronous callback to return the result.
+在流结束时调用，用于处理剩余数据。使用异步回调返回结果。
 
 **Since:** 12
 
@@ -59,9 +64,9 @@ Called at the end of the stream to process the remaining data. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Function | Yes | Callback function. |
+| callback | Function | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class TestTransform extends stream.Transform {
@@ -91,7 +96,7 @@ transform.on('data', (data) => {
 doTransform(chunk: string, encoding: string, callback: Function): void
 ```
 
-Converts or processes input data chunks and uses a callback to notify that the processing is complete.
+转换或处理输入的数据块，并通过回调通知处理完成。
 
 **Since:** 12
 
@@ -107,11 +112,11 @@ Converts or processes input data chunks and uses a callback to notify that the p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string | Yes | Data to write. |
-| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
-| callback | Function | Yes | Callback function. |
+| chunk | string | Yes | 待写入的数据。 |
+| encoding | string | Yes | 编码格式。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| callback | Function | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class TestTransform extends stream.Transform {

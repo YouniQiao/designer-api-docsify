@@ -1,17 +1,16 @@
 # CsrGenerationConfig
 
-Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute,and output format.
-    **NOTE**  
-    
-    - subject is an X500DistinguishedName object.  
-    
-    - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported.  
-    
-    - attributes is an optional parameter that specifies the attribute types and attribute values specified in  
-    PKCS #9 to generate a CSR. For example, challengePassword.  
-    
-    - outFormat specifies the format of the output CSR. If the format is not specified, the PEM format is used by  
-    default.
+用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。
+
+> **说明：**
+> 
+> - subject是X500DistinguishedName对象。
+> 
+> - mdName是摘要算法名，当前支持SHA1、SHA256、SHA384、SHA512。
+> 
+> - attributes是可选参数，指定**PKCS #9**中规定的扩展类型跟扩展值生成CSR。例如challengePassword。
+> 
+> - outFormat指定输出CSR的格式，若不指定默认为PEM格式。
 
 **Since:** 18
 
@@ -21,13 +20,19 @@ Configuration parameters for generating a CSR, including the subject name, diges
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## attributes
 
 ```TypeScript
 attributes?: Array<CsrAttribute>
 ```
 
-A collection of attributes.
+属性的集合。
 
 **Type:** Array&lt;CsrAttribute&gt;
 
@@ -47,7 +52,7 @@ A collection of attributes.
 mdName: string
 ```
 
-Message digest algorithm name.
+摘要算法名。
 
 **Type:** string
 
@@ -67,9 +72,9 @@ Message digest algorithm name.
 outFormat?: EncodingBaseFormat
 ```
 
-Output format.
+输出类型。
 
-**Type:** EncodingBaseFormat
+**Type:** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)
 
 **Default:** EncodingBaseFormat.PEM
 
@@ -89,9 +94,9 @@ Output format.
 subject: X500DistinguishedName
 ```
 
-Subject name.
+主体名称。
 
-**Type:** X500DistinguishedName
+**Type:** [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md)
 
 **Since:** 18
 

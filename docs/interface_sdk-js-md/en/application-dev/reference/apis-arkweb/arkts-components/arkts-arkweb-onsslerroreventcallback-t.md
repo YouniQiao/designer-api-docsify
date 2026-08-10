@@ -4,7 +4,7 @@
 type OnSslErrorEventCallback = (sslErrorEvent: SslErrorEvent) => void
 ```
 
-The callback of ssl error event.
+SSL错误事件的回调函数。
 
 **Since:** 12
 
@@ -20,5 +20,5 @@ The callback of ssl error event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sslErrorEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of onSslErrorEvent.  |
+| sslErrorEvent | [SslErrorEvent](../arkts-apis/arkts-arkweb-web-sslerrorevent-i.md) | Yes | callback information of onSslErrorEvent. |
 

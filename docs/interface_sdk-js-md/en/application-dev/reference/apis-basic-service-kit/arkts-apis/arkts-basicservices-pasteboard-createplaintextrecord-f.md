@@ -1,12 +1,18 @@
 # createPlainTextRecord
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createPlainTextRecord
 
 ```TypeScript
 function createPlainTextRecord(text: string): PasteDataRecord
 ```
 
-Creates a **PasteDataRecord** object of the plain text type.
+创建一条纯文本内容条目。
 
 **Since:** 7
 
@@ -24,15 +30,15 @@ Creates a **PasteDataRecord** object of the plain text type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Plain text. |
+| text | string | Yes | 纯文本内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | New **PasteDataRecord** object of the plain text type. |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的纯文本内容条目。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let record: pasteboard.PasteDataRecord = pasteboard.createPlainTextRecord('hello');

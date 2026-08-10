@@ -10,6 +10,12 @@ TIFF metadata.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## artist
 
 ```TypeScript
@@ -38,7 +44,7 @@ readonly compression?: int
 
 Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate).The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -198,7 +204,7 @@ readonly orientation?: Orientation
 
 Indicates image orientation for correct display rotation/flip.
 
-**Type:** Orientation
+**Type:** [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md)
 
 **Since:** 26.0.0
 
@@ -218,7 +224,7 @@ readonly photometricInterpretation?: int
 
 Defines how pixel colors are interpreted (e.g., RGB, grayscale).The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -238,7 +244,7 @@ readonly primaryChromaticities?: double[]
 
 Chromaticity coordinates of the RGB primaries.
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 26.0.0
 
@@ -258,7 +264,7 @@ readonly resolutionUnit?: int
 
 Unit for X/Y resolution.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -298,7 +304,7 @@ readonly tileLength?: int
 
 Height of each image tile in pixels.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -318,7 +324,7 @@ readonly tileWidth?: int
 
 Width of each image tile in pixels.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -358,7 +364,7 @@ readonly whitePoint?: double[]
 
 Chromaticity coordinates of the reference white point.
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 26.0.0
 
@@ -378,7 +384,7 @@ readonly xResolution?: double
 
 Horizontal resolution (pixels per resolution unit).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -398,7 +404,7 @@ readonly yResolution?: double
 
 Vertical resolution (pixels per resolution unit).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 

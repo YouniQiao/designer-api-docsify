@@ -8,13 +8,19 @@ Defines the return value of the listener callback.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md/arkts-medialibrary-photoaccesshelper-changedata-i.md)
 
 <!--Device-userFileManager-interface ChangeData--><!--Device-userFileManager-interface ChangeData-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { userFileManager } from 'kits/@kit.CoreFileKit';
+```
 
 ## subUris
 
@@ -46,7 +52,7 @@ type: NotifyType
 
 Notification type.
 
-**Type:** NotifyType
+**Type:** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
 **Since:** 10
 
@@ -54,7 +60,7 @@ Notification type.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.ChangeData.type](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#type)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.ChangeData.type](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md/arkts-medialibrary-photoaccesshelper-changedata-i.md#type)
 
 <!--Device-ChangeData-type: NotifyType--><!--Device-ChangeData-type: NotifyType-End-->
 
@@ -68,7 +74,7 @@ Notification type.
 uris: Array<string>
 ```
 
-Array of all file asset or album URIs with the same [NotifyType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Array of all file asset or album URIs with the same [NotifyType](arkts-corefile-userfilemanager-notifytype-e-sys.md).
 
 **Type:** Array&lt;string&gt;
 
@@ -78,7 +84,7 @@ Array of all file asset or album URIs with the same [NotifyType]\_\_\_JSDOC\_LIN
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.ChangeData.uris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#uris)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.ChangeData.uris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md/arkts-medialibrary-photoaccesshelper-changedata-i.md#uris)
 
 <!--Device-ChangeData-uris: Array<string>--><!--Device-ChangeData-uris: Array<string>-End-->
 

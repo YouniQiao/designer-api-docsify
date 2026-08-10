@@ -10,7 +10,7 @@ function get<T extends object, P extends PropertyKey>(
     ): P extends keyof T ? T[P] : any
 ```
 
-Gets the property of target, equivalent to \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ when \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_.
+Gets the property of target, equivalent to `target[propertyKey]` when `receiver === target`.
 
 **ArkTS mode:** ArkTS-Dyn only
 

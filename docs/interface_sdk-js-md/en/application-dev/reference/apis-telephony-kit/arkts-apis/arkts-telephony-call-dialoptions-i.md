@@ -10,6 +10,12 @@ Indicates the options of placing a call.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## extras
 
 ```TypeScript

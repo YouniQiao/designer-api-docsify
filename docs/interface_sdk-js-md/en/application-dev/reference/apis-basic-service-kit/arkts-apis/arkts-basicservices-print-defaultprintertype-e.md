@@ -1,6 +1,6 @@
 # DefaultPrinterType
 
-Enumerates default printer types.
+默认打印类型的枚举。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates default printer types.
 DEFAULT_PRINTER_TYPE_SET_BY_USER = 0
 ```
 
-The printer set by the user serves as the default printer.
+表示将用户手动设置的默认打印机作为当前默认打印机。
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ The printer set by the user serves as the default printer.
 DEFAULT_PRINTER_TYPE_LAST_USED_PRINTER = 1
 ```
 
-The printer used last time serves as the default printer.
+表示自动将上次使用的打印机作为当前默认打印机。
 
 **Since:** 18
 

@@ -4,7 +4,7 @@
 export type OnReleaseCallback = (msg: string) => void
 ```
 
-Defines the callback that is invoked when the stub on the target UIAbility is disconnected.
+注册通用组件服务端Stub（桩）断开监听通知的回调函数类型。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Defines the callback that is invoked when the stub on the target UIAbility is di
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | Message used for disconnection.  |
+| msg | string | Yes | 用于传递释放消息。 |
 

@@ -6,11 +6,19 @@ Defines a vertical domain panel manager.
 
 **ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace verticalPanelManager--><!--Device-unnamed-declare namespace verticalPanelManager-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { verticalPanelManager } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 
@@ -19,8 +27,8 @@ Defines a vertical domain panel manager.
 
 | Name | Description |
 | --- | --- |
-| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md#startverticalpanel) | Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START\_\_\_ESCAPED\_UNDERSCORE\_\_\_INVISIBLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface. |
-| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md#startverticalpanel-1) | Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START\_\_\_ESCAPED\_UNDERSCORE\_\_\_INVISIBLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface. |
+| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md#startverticalpanel) | Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface. |
+| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md#startverticalpanel-1) | Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface. |
 <!--DelEnd-->
 
 <!--Del-->

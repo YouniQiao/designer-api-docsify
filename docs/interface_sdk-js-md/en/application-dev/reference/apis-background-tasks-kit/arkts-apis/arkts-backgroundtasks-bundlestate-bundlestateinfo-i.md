@@ -10,13 +10,19 @@
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
+## Modules to Import
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## merge
 
 ```TypeScript
 merge(toMerge: BundleStateInfo): void
 ```
 
-Merges a specified \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object with this \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ object.The bundle name of both objects must be the same.
+Merges a specified {@link BundleActiveInfo} object with this {@link BundleActiveInfo} object.The bundle name of both objects must be the same.
 
 **Since:** 7
 
@@ -32,7 +38,7 @@ Merges a specified \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object with this \_\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| toMerge | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the { |
+| toMerge | [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md) | Yes | Indicates the { |
 
 ## abilityInFgTotalTime
 
@@ -40,7 +46,7 @@ Merges a specified \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object with this \_\_\_
 abilityInFgTotalTime?: number
 ```
 
-The total duration, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The total duration, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** number
 
@@ -60,7 +66,7 @@ The total duration, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
 abilityPrevAccessTime?: number
 ```
 
-The last time when the application was accessed, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The last time when the application was accessed, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** number
 
@@ -80,7 +86,7 @@ The last time when the application was accessed, in milliseconds.\_\_\_HTML\_TAG
 abilityPrevSeenTime?: number
 ```
 
-The last time when the application was visible in the foreground, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The last time when the application was visible in the foreground, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** number
 
@@ -100,7 +106,7 @@ The last time when the application was visible in the foreground, in millisecond
 abilitySeenTotalTime?: number
 ```
 
-The total duration when the application was visible in the foreground, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The total duration when the application was visible in the foreground, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** number
 
@@ -140,7 +146,7 @@ The bundle name of the application.
 fgAbilityAccessTotalTime?: number
 ```
 
-The total duration when the foreground application was accessed, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The total duration when the foreground application was accessed, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** number
 
@@ -160,7 +166,7 @@ The total duration when the foreground application was accessed, in milliseconds
 fgAbilityPrevAccessTime?: number
 ```
 
-The last time when the foreground application was accessed, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The last time when the foreground application was accessed, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** number
 
@@ -200,7 +206,7 @@ The identifier of BundleStateInfo.
 infosBeginTime?: number
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The time of the first bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** number
 
@@ -220,7 +226,7 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 infosEndTime?: number
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+The time of the last bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** number
 

@@ -1,7 +1,7 @@
 # AudioOutputFormat
 
-    **说明：**  
-        从API version 6开始支持，从API version 8 开始废弃，建议使用[ContainerFormatType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+> **说明：**
+> > 从API version 6开始支持，从API version 8 开始废弃，建议使用[ContainerFormatType](media.ContainerFormatType)替代。
 
 表示音频封装格式的枚举。
 
@@ -27,7 +27,7 @@ DEFAULT = 0
 
 仅做接口定义，暂不支持使用。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议根据具体情况选择[ContainerFormatType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的一项替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议根据具体情况选择[ContainerFormatType](media.ContainerFormatType)中的一项替代。
 
 **起始版本：** 6
 
@@ -47,7 +47,7 @@ MPEG_4 = 2
 
 封装为MPEG-4格式。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[ContainerFormatType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的CFT\_MPEG\_4替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[ContainerFormatType](media.ContainerFormatType)中的CFT_MPEG_4替代。
 
 **起始版本：** 6
 
@@ -67,11 +67,11 @@ MPEG_4 = 2
 AMR_NB = 3
 ```
 
-封装为AMR\_NB格式。
+封装为AMR_NB格式。
 
 仅做接口定义，暂不支持使用。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[ContainerFormatType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的CFT\_AMR，编码格式使用[CodecMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中的AUDIO\_AMR\_NB替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[ContainerFormatType](media.ContainerFormatType)中的CFT_AMR，编码格式使用[CodecMimeType](media.CodecMimeType)中的AUDIO_AMR_NB替代。
 
 **起始版本：** 6
 
@@ -91,11 +91,11 @@ AMR_NB = 3
 AMR_WB = 4
 ```
 
-封装为AMR\_WB格式。
+封装为AMR_WB格式。
 
 仅做接口定义，暂不支持使用。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[ContainerFormatType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的CFT\_AMR，编码格式使用[CodecMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中的AUDIO\_AMR\_WB替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[ContainerFormatType](media.ContainerFormatType)中的CFT_AMR，编码格式使用[CodecMimeType](media.CodecMimeType)中的AUDIO_AMR_WB替代。
 
 **起始版本：** 6
 
@@ -117,7 +117,7 @@ AAC_ADTS = 6
 
 封装为ADTS（Audio Data Transport Stream）格式，是AAC音频的传输流格式。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[ContainerFormatType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的CFT\_AAC替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[ContainerFormatType](media.ContainerFormatType)中的CFT_AAC替代。
 
 **起始版本：** 6
 

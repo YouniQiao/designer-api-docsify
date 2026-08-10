@@ -1,12 +1,18 @@
 # createKeyboardDelegate
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## createKeyboardDelegate
 
 ```TypeScript
 function createKeyboardDelegate(): KeyboardDelegate
 ```
 
-Obtains a [KeyboardDelegate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
+获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)。输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。
 
 **Since:** 8
 
@@ -24,9 +30,9 @@ Obtains a [KeyboardDelegate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance for t
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | KeyboardDelegate** instance. |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let keyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.createKeyboardDelegate();

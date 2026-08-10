@@ -4,8 +4,8 @@
 export type MissionDeviceInfo = _MissionDeviceInfo
 ```
 
-Defines the parameters required for registering a listener. It is used as an input parameter in  
-[registerMissionListener]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+可以作为  
+[registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener)的入参，表示注册监听时所需参数的枚举。
 
 **Since:** 10
 

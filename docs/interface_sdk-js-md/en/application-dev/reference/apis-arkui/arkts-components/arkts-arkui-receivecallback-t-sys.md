@@ -4,7 +4,7 @@
 declare type ReceiveCallback = import('../api/@ohos.base').Callback<Record<string, Object>>
 ```
 
-Triggered to encapsulate the data sent by the started ability.
+回调函数，用于封装被拉起的Ability发送的数据。
 
 **Since:** 18
 

@@ -10,6 +10,12 @@ Describes the parameters for scan.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## scanEnhanceMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ scanEnhanceMode?: ScanEnhanceMode
 
 Configuration of scan enhance mode.
 
-**Type:** ScanEnhanceMode
+**Type:** [ScanEnhanceMode](arkts-connectivity-ble-scanenhancemode-i-sys.md)
 
 **Since:** 26.0.0
 

@@ -1,5 +1,11 @@
 # requestRight
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## requestRight
 
 ```TypeScript
@@ -32,7 +38,7 @@ function requestRight(deviceName: string): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象，返回临时权限的申请结果。返回true表示临时权限申请成功；返回false则表示临时权限申请失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let devicesName= "1-1";

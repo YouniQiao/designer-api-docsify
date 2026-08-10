@@ -1,6 +1,6 @@
 # NewVersionInfo (System API)
 
-Represents information about the new version.
+新版本数据。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Represents information about the new version.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## versionComponents
 
 ```TypeScript
 versionComponents: Array<VersionComponent>
 ```
 
-Version components.
+版本组件。
 
 **Type:** Array&lt;VersionComponent&gt;
 
@@ -38,9 +44,9 @@ Version components.
 versionDigestInfo: VersionDigestInfo
 ```
 
-Version digest information.
+版本摘要。
 
-**Type:** VersionDigestInfo
+**Type:** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
 **Since:** 9
 

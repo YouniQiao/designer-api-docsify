@@ -1,12 +1,18 @@
 # updatePrinterInformation
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## updatePrinterInformation
 
 ```TypeScript
 function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>
 ```
 
-Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only the **alias** and **options** fields of [PrinterInformation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can be updated.
+更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)的alias和options字段。
 
 **Since:** 24
 
@@ -24,22 +30,23 @@ Updates the information of a printer in the system. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerInformation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Printer information to be updated. |
+| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Yes | 表示待更新信息的打印机。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 18 - 23 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

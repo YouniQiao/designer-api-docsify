@@ -1,20 +1,26 @@
 # apiAvailable
 
+## Modules to Import
+
+```TypeScript
+import { deviceInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## apiAvailable
 
 ```TypeScript
-function apiAvailable(version: string | int): boolean
+function apiAvailable(version: string | number): boolean
 ```
 
-Checks whether a specified API version is available on the current device.This API provides compatibility check across different OpenHarmony/Distribution OS versions.A suitable version check method is automatically selected based on the input format and supported API versions.
+检查指定的API版本在当前设备上是否可用。此方法提供跨不同OpenHarmony/发行版系统版本的兼容性检查。它会根据输入格式和API版本范围自动选择合适的版本检查方法。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-deviceInfo-function apiAvailable(version: string | int): boolean--><!--Device-deviceInfo-function apiAvailable(version: string | int): boolean-End-->
+<!--Device-deviceInfo-function apiAvailable(version: string | number): boolean--><!--Device-deviceInfo-function apiAvailable(version: string | number): boolean-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -22,11 +28,34 @@ Checks whether a specified API version is available on the current device.This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| version | string \| int | Yes | API version number to be verified. The value can be an integer or in the dotted format. - String format shall be in M.S.F (e.g., "26.0.0", "5.0.1"): - For API 26.0.0 & 26.0.0+ (version >= 26.0.0): Represents both OpenHarmony and Distribution OS API versions - For API 26.0.0- (version &lt; 26.0.0): Represents Distribution OS API version - Number format (e.g., 13): Represents OpenHarmony SDK API version (API 26- only) M&gt;=26,0<=S<=99,0<=F<=99. An error will be thrown when an invalid value is passed in. |
+| version | string \| number | Yes | 需要校验的API版本号，支持整数格式版本号和字符串格式版本号。 - 字符串采用M.S.F格式（如 "26.0.0","5.0.1"）： - 对于API 26及以上版本（version >= 26.0.0）：代表OpenHarmony和发行版系统API版本。 - 对于API 26以下版本（version < 26.0.0）：代表发行版系统API版本。 - 整数格式（如 13）：代表OpenHarmony SDK API版本。（仅支持API 26以下） |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Boolean value. The value **true** indicates that the current version number is later than or equal to the input parameter version number; **false** indicates that the current device's API version is lower than the input version number, or the input version number is in an invaild format, or the specified version does not exit. |
+| boolean | 布尔值。返回true表示当前设备API版本大于等于入参版本号；返回false代表当前设备API版本小于入参版本号，或传入的版本号格式非法、该版本不存在。 |
+
+## Examples
+
+```TypeScript
+import { deviceInfo } from '@kit.BasicServicesKit';
+
+// Check whether the API version is 26.0.0 or later. If true is returned, the API version of the current device meets the requirements.
+if (deviceInfo.apiAvailable("26.0.0")) {
+   // Method that requires version isolation
+}
+
+
+// Check API 5.0.1 (Distribution OS version, API 26.0.0-)
+if (deviceInfo.apiAvailable("5.0.1")) {
+   // Method that requires version isolation
+}
+
+
+// Check API 13 (OpenHarmony SDK version, API 26.0.0-)
+if (deviceInfo.apiAvailable(13)) {
+   // Method that requires version isolation
+}
+```
 

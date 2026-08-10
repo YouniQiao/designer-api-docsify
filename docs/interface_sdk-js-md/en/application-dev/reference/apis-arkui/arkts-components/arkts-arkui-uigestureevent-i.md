@@ -1,6 +1,6 @@
 # UIGestureEvent
 
-Provides APIs for configuring gestures bound to a component.
+用于设置组件绑定的手势。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Provides APIs for configuring gestures bound to a component.
 addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: GestureMask): void
 ```
 
-Adds a gesture.
+添加手势。
 
 **Since:** 12
 
@@ -34,9 +34,9 @@ Adds a gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Gesture handler object. |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Priority of the bound gesture.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **GesturePriority.NORMAL**. |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Mask for gesture events.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **GestureMask.Normal**. |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | 手势处理器对象。 |
+| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No | 绑定手势的优先级。&lt;br&gt;默认值：GesturePriority.NORMAL |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | 事件响应设置。&lt;br&gt;默认值：GestureMask.Normal |
 
 ## addParallelGesture
 
@@ -44,7 +44,7 @@ Adds a gesture.
 addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 ```
 
-Adds a gesture that can be recognized at once by the component and its child component.
+绑定可与子组件手势同时触发的手势。
 
 **Since:** 12
 
@@ -62,8 +62,8 @@ Adds a gesture that can be recognized at once by the component and its child com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Gesture handler object. |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Mask for gesture events.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **GestureMask.Normal**. |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | 手势处理器对象。 |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | 事件响应设置。&lt;br&gt;默认值：GestureMask.Normal |
 
 ## clearGestures
 
@@ -71,7 +71,7 @@ Adds a gesture that can be recognized at once by the component and its child com
 clearGestures(): void
 ```
 
-Clears all gestures that have been bound to the component through a modifier.
+清除该组件上通过modifier绑定的所有手势。
 
 **Since:** 12
 
@@ -91,7 +91,7 @@ Clears all gestures that have been bound to the component through a modifier.
 removeGestureByTag(tag: string): void
 ```
 
-Remove a gesture from a component that has been bound with a specific tag through a modifier.
+移除该组件上通过modifier绑定的设置为指定标志的手势。
 
 **Since:** 12
 
@@ -109,5 +109,5 @@ Remove a gesture from a component that has been bound with a specific tag throug
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tag | string | Yes | Gesture handler flag. |
+| tag | string | Yes | 手势处理器标志。 |
 

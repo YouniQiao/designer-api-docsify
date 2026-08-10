@@ -1,6 +1,6 @@
 # UserAuthResult
 
-Represents the user authentication result. If the authentication is successful, the authentication type and token information are returned. If the authentication fails, the corresponding error code is returned. This API is used to describe the result information after the authentication is complete. The application can obtain the result through the **onResult** callback of [IAuthCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)的onResult回调获取此结果。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Represents the user authentication result. If the authentication is successful, 
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## authType
 
 ```TypeScript
 authType?: UserAuthType
 ```
 
-Authentication type that is actually used when the authentication is successful. If multiple authentication types are specified in the **authType** field of [AuthParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, this field identifies the authentication type that the user selects and completes.
+认证通过时，返回实际使用的认证类型。当[AuthParam](arkts-userauthentication-userauth-authparam-i.md)的authType指定了多种认证类型时，此字段标识用户实际选择并完成认证的类型。
 
-**Type:** UserAuthType
+**Type:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **Since:** 10
 
@@ -36,10 +42,9 @@ Authentication type that is actually used when the authentication is successful.
 enrolledState?: EnrolledState
 ```
 
-Enrolled credential status returned when the authentication is successful. It contains the digest and quantity of the current authentication types. The application can compare this value with the previously saved value to determine whether the user credential has changed. If authentication result reuse is enabled and the credential (face or fingerprint) used for the previous authentication has been deleted, the values of **credentialCount** and  
-**credentialDigest** in the returned **enrolledState** are both **0**.
+认证通过时，返回注册凭据的状态。包含当前认证类型的凭据摘要和数量。应用可通过对比此值与之前保存的值，判断用户凭据是否发生变化。若启用了认证结果复用且之前认证使用的凭据已被删除（人脸或指纹），返回的enrolledState中credentialCount和credentialDigest均为0。
 
-**Type:** EnrolledState
+**Type:** [EnrolledState](arkts-userauthentication-userauth-enrolledstate-i.md)
 
 **Since:** 12
 
@@ -57,18 +62,18 @@ Enrolled credential status returned when the authentication is successful. It co
 result: int
 ```
 
-User authentication result. If the operation is successful, **SUCCESS(12500000)** is returned. If the operation fails, the corresponding error code is returned. The error codes are as follows:
+用户认证结果。若成功返回SUCCESS(12500000)，若失败返回相应错误码。错误码包括：
 
-- **FAIL(12500001)**: The authentication fails.  
-- **CANCELED(12500003)**: The authentication is canceled.  
-- **TIMEOUT(12500004)**: The authentication times out.  
-- **LOCKED(12500009)**: The authenticator is locked.  
-- **NOT\_ENROLLED(12500010)**: The credential is not registered.  
-- **PIN\_EXPIRED(12500013)**: The screen lock PIN has expired.
+- FAIL(12500001)：认证不通过。  
+- CANCELED(12500003)：认证取消。  
+- TIMEOUT(12500004)：认证超时。  
+- LOCKED(12500009)：认证器锁定。  
+- NOT_ENROLLED(12500010)：未注册凭据。  
+- PIN_EXPIRED(12500013)：锁屏密码过期。
 
-For details about the complete error code list, see [UserAuthResultCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+完整错误码列表参见[UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -86,7 +91,7 @@ For details about the complete error code list, see [UserAuthResultCode]\_\_\_JS
 token?: Uint8Array
 ```
 
-Token information returned when the authentication is successful. The token contains the credentials for user authentication and can be used for subsequent security operation verification (such as payment confirmation and sensitive data access). The maximum length of a token is 1024 bytes. The token contains the challenge value used during authentication. The service can verify the challenge value to prevent replay attacks.
+认证通过时，返回认证通过的令牌信息。令牌最大长度为1024字节，包含用户身份认证的凭证，可用于后续的安全操作验证（如支付确认、敏感数据访问等）。令牌中包含认证时的挑战值，业务可通过验证挑战值来防止重放攻击。
 
 **Type:** Uint8Array
 

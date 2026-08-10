@@ -1,6 +1,6 @@
 # TextAreaOptions
 
-Describes the initialization options of the **TextArea** component.
+TextArea初始化参数。
 
 **Since:** 7
 
@@ -16,9 +16,9 @@ Describes the initialization options of the **TextArea** component.
 controller?: TextAreaController
 ```
 
-Text area controller.
+设置TextArea控制器。不设置时，组件使用内部默认控制器，但无法调用控制器相关方法。
 
-**Type:** TextAreaController
+**Type:** [TextAreaController](../arkts-apis/arkts-arkui-textarea-textareacontroller-c.md)
 
 **Since:** 8
 
@@ -36,11 +36,13 @@ Text area controller.
 placeholder?: ResourceStr
 ```
 
-Text displayed when there is no input.
+设置无输入时的提示文本。输入内容后，提示文本不显示。
 
-When only the **placeholder** attribute is set, the text selection handle is still available; the caret stays at the beginning of the placeholder text when the handle is released.
+仅设置placeholder属性时，手柄依然跟随拖动，手柄松开后光标停留在文字开头位置。
 
-**Type:** ResourceStr
+默认值：空字符串，不设置时不显示提示文本。
+
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
 
@@ -58,17 +60,17 @@ When only the **placeholder** attribute is set, the text selection handle is sti
 text?: ResourceStr
 ```
 
-Current text input.
+设置输入框当前的文本内容。默认值：空字符串。
 
-You are advised to bind the state variable to the text in real time through the **onChange** event, so as to prevent display errors when the component is updated.
+建议通过onChange事件将状态变量与文本实时绑定，
 
-Since API version 10, this parameter supports two-way binding through  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+避免组件刷新时TextArea中的文本内容异常。
 
-Since API version 18, this parameter supports two-way binding through  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-**Type:** ResourceStr
+从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
 

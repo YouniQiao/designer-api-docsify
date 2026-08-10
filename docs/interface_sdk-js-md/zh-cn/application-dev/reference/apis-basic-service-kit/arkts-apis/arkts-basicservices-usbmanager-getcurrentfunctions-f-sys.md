@@ -1,12 +1,18 @@
 # getCurrentFunctions（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getCurrentFunctions
 
 ```TypeScript
 function getCurrentFunctions(): FunctionType
 ```
 
-在设备模式下，获取当前的USB功能列表的数字组合掩码。开发者模式关闭时，如果没有设备接入，接口可能返回\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_，注意需要对接口返回值做判空处理。
+在设备模式下，获取当前的USB功能列表的数字组合掩码。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处理。
 
 **起始版本：** 9
 
@@ -26,5 +32,5 @@ function getCurrentFunctions(): FunctionType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前的USB功能列表的数字组合掩码。 |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 当前的USB功能列表的数字组合掩码。 |
 

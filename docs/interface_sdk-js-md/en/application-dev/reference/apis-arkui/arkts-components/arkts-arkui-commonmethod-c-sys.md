@@ -16,8 +16,8 @@ CommonMethod.
 advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 ```
 
-Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with  
-[blendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+将当前组件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。不能与  
+[blendMode](arkts-arkui-commonmethod-c.md#blendmode)接口同时使用。
 
 **Since:** 13
 
@@ -29,22 +29,20 @@ Defines how the component's content (including the content of it child component
 
 <!--Device-CommonMethod-advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T--><!--Device-CommonMethod-advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 **System API:** This is a system API.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Blender | Yes | Blend mode or blender type, depending on the parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the parameter type is **BlendMode**, it indicates the blend mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **BlendMode.NONE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A **Blender** instance must be created using methods, for example, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Whether the blend mode is implemented offscreen.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **BlendApplyType.FAST**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. For text components, this API does not apply to emoji expressions when not offscreen.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN\_\_\_ESCAPED\_UNDERSCORE\_\_\_WITH\_\_\_ESCAPED\_UNDERSCORE\_\_\_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
+| effect | [BlendMode](../arkts-apis/arkts-arkui-common-blendmode-e.md) \| Blender | Yes | 入参类型为BlendMode时表示混合模式。&lt;br/&gt;默认值：BlendMode.NONE &lt;br/&gt;入参类型为Blender时表示混合器类型，用于描 述混合效果。&lt;br/&gt;需要使用uiEffect模块中的方法创建Blender实例。例如： [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender)。 使用自定义object作为入参不会生效。 |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e-sys.md) | No | blendMode实现方式是否离屏。&lt;br/&gt;默认值：BlendApplyType.FAST&lt;br/&gt;**说明：**&lt;br/&gt;1. 设置为 BlendApplyType.FAST，不离屏。&lt;br/&gt;2. 设置为BlendApplyType.OFFSCREEN，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下方 画布已有内容进行混合。&lt;br/&gt;3. 不离屏情况下对文字类组件中emoji表情不生效。&lt;br/&gt;4. 相比BlendApplyType.OFFSCREEN，设置为 BlendApplyType.OFFSCREEN_WITH_BACKGROUND，系统在创建与当前组件大小一致的离屏画布时，会先复制一份带有背景的画布作为初始化底色（BlendApplyType.OFFSCREEN类型的画 布初始为透明背景），随后在此基础上进行混合操作。两者在其他功能特性上保持一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## constructor
 
@@ -72,9 +70,16 @@ constructor.
 edgeLight(params: EdgeLightParams | undefined): T
 ```
 
-Sets the edge light effect for the component.
+为组件添加边缘流光效果。边缘流光效果会在组件的边缘创建发光效果，从指定位置开始并沿边缘延伸，此效果可以增强组件的视觉吸引力并突出显示重要组件。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The edge light effect creates a glowing light effect along the component's edges,starting from the specified position and extending along the edge.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_This effect can enhance the visual appeal and highlight important components.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_
+> **说明：**
+> 
+> - 仅设置edgeLight不会产生边缘流光效果，需结合
+> [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)更改position参数达到流光效果。可参考
+> [示例4（设置组件边缘流光效果）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect-sys.md#示例4设置组件边缘流光效果)。
+> 
+> 
+> - 当position参数以对角线方式变更时，边缘流光将沿倾斜角45°的方式运行。
 
 **Since:** 26.0.0
 
@@ -84,21 +89,19 @@ Sets the edge light effect for the component.
 
 <!--Device-CommonMethod-edgeLight(params: EdgeLightParams | undefined): T--><!--Device-CommonMethod-edgeLight(params: EdgeLightParams | undefined): T-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 **System API:** This is a system API.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
+| params | [EdgeLightParams](../arkts-apis/arkts-arkui-common-edgelightparams-i-sys.md) \| undefined | Yes | 定义边缘流光效果的位置、长度、强度、颜色和厚度。&lt;br/&gt;当params的值为undefined时，移除边缘流光效果。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | 返回当前组件。 |
 
 ## excludeFromRenderGroup
 
@@ -106,24 +109,20 @@ Sets the edge light effect for the component.
 excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
-Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the  
-[renderGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ attribute of the ancestor component.
+设置当前组件和其子组件是否从祖先组件的节点组中剔除。需搭配祖先组件设置节点组[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup)属性使用，单独使用无效果。
 
-Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting  
-**excludeFromRenderGroup** helps optimize the drawing performance.
+从节点组剔除后，当前组件和子组件不再影响祖先组件的离屏画布，不会引起节点组的缓存失效，从而达到复用节点组缓存的目的。如果当前组件的显示区域只占节点组绘制内容显示区域的一部分，且当前组件及子组件的显示效果频繁更新，设置excludeFromRenderGroup属性有助于绘制性能优化。
 
-If this attribute is not set, the current component and its children are not removed from the render group of the ancestor component by default.
-    **NOTE**  
-    
-    The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the  
-    component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child  
-    component exceeds the boundary range of the current component due to attributes such as  
-    [translate]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or  
-    [scale]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, or the drawing content extend beyond its boundaries  
-    because the current component has attributes such as  
-    [shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ and  
-    [pixelStretchEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_, the displayed  
-    content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
+不设置该属性时，默认当前组件和其子组件不从祖先组件的节点组中剔除。
+
+> **说明：**
+> 
+> 设置excludeFromRenderGroup为true的组件及其子组件的绘制内容不能超过该组件本身的边界范围，否则会出现显示内容被裁剪的问题。例如当子组件通过
+> [translate](arkts-arkui-commonmethod-c.md#translate)或
+> [scale](arkts-arkui-commonmethod-c.md#scale)等属性导致子组件超出当前组件范围，或当前组件上有
+> [shadow](arkts-arkui-commonmethod-c.md#shadow)、
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)等属性导致当前组件的绘制内容超出组件
+> 边界时，可能出现显示内容被裁剪的问题。此类场景不应设置excludeFromRenderGroup属性为true。
 
 **Since:** 22
 
@@ -133,21 +132,19 @@ If this attribute is not set, the current component and its children are not rem
 
 <!--Device-CommonMethod-excludeFromRenderGroup(exclude: boolean | undefined): T--><!--Device-CommonMethod-excludeFromRenderGroup(exclude: boolean | undefined): T-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 **System API:** This is a system API.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclude | boolean \| undefined | Yes | Whether to remove the current component and its child components from the render group of the ancestor component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true**: yes. **false**: no.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **exclude** is set to **undefined**, the value **false** is used. |
+| exclude | boolean \| undefined | Yes | 设置当前组件及其子组件是否从祖先组件的节点组中剔除。&lt;br/&gt;true表示当前组件及其子组件从祖先组件的节点组中剔除，不属于祖先组件的节点组； false表示当前组件及其子组件归属于祖先组件的节点组。&lt;br/&gt;当exclude的值为undefined时，按false处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## spatialEffect
 
@@ -155,7 +152,7 @@ If this attribute is not set, the current component and its children are not rem
 spatialEffect(params: SpatialEffectParams | undefined): T
 ```
 
-Applies a spatial effect to component.
+将空间效果应用于组件。
 
 **Since:** 26.0.0
 
@@ -175,7 +172,7 @@ Applies a spatial effect to component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Spatial effect parameters. |
+| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | Yes | 空间效果参数。 |
 
 **Return value:**
 
@@ -189,7 +186,7 @@ Applies a spatial effect to component.
 useUnionEffect(value: boolean | undefined): T
 ```
 
-Specify whether the current component participates in the fusion effect of the ancestor component UnionEffectContainer
+指定当前组件是否参与祖先组件UnionEffectContainer的融合效果
 
 **Since:** 23
 
@@ -207,7 +204,7 @@ Specify whether the current component participates in the fusion effect of the a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**. Undefined means to default value. |
+| value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.&lt;br&gt;The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. &lt;br&gt;Default value: **false**. Undefined means to default value. |
 
 **Return value:**
 
@@ -221,7 +218,7 @@ Specify whether the current component participates in the fusion effect of the a
 useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 ```
 
-Specify whether the current component participates in the fusion effect of the ancestor component UnionEffectContainer
+指定当前组件是否参与祖先组件UnionEffectContainer的融合效果
 
 **Since:** 26.0.0
 
@@ -239,12 +236,12 @@ Specify whether the current component participates in the fusion effect of the a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**. The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Gravitational center parameter. GRAVITY\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNION. |
+| value | boolean \| undefined | Yes | 组件是否参与融合效果祖先组件**UnionEffectContainer**.&lt;br&gt;值为**true**表示组件参与在祖先组件**UnionEffectContainer**的融合效果中，而**false**表示相反。 &lt;br&gt;值为**t rue**表示该组件参与祖先组件**UnionEffectContainer**的融合效果，**false**表示相反。 |
+| options | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | No | 引力中心参数。 需要配合UnionMode.GRAVITY_UNION使用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | return the component attribute. |
+| T | 返回组件属性。 |
 

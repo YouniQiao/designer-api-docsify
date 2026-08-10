@@ -1,9 +1,10 @@
 # XComponent properties/events
 
-In addition to universal attributes, the following attributes are supported.
+定义XComponentAttribute。
 
-Since API version 12, the [universal events]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ are supported when **type** is set to **SURFACE** or  
-**TEXTURE**.
+除通用属性外，还支持以下属性。
+
+从API版本12开始，当type设置为**SURFACE**或**TEXTURE**时，支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
 
 **Inheritance/Implementation:** XComponentAttribute extends [CommonMethod<XComponentAttribute>](CommonMethod<XComponentAttribute>)
 
@@ -21,14 +22,11 @@ Since API version 12, the [universal events]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup.
+设置是否启用AI图像分析器，支持主体识别、文字识别和查找对象。
 
-For the settings to take effect, this attribute must be used together with  
-[StartImageAnalyzer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and  
-[StopImageAnalyzer]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ of **XComponentController**.
+要使设置生效，此属性必须与XComponentController的[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer)和[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer)一起使用。
 
-This feature cannot be used together with the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect. This feature depends on device capabilities.
+此特性不能与[overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay)属性同时使用。如果两者都设置，overlay中的CustomBuilder属性将不生效。此特性还依赖于设备能力。
 
 **Since:** 12
 
@@ -46,7 +44,7 @@ This feature cannot be used together with the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI image analyzer.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true**: enable; **false**: disable\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **false**. |
+| enable | boolean | Yes | 是否启用AI图像分析器。&lt;br&gt;**true**：启用；**false**：禁用。&lt;br&gt; 默认值：**false**。 |
 
 ## enableSecure
 
@@ -54,7 +52,7 @@ This feature cannot be used together with the
 enableSecure(isSecure: boolean)
 ```
 
-Sets whether to enable the secure surface to protect the content rendered within the component from being captured or recorded.
+设置是否启用安全surface，以保护组件内渲染的内容不被截屏或录屏。
 
 **Since:** 13
 
@@ -72,7 +70,7 @@ Sets whether to enable the secure surface to protect the content rendered within
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSecure | boolean | Yes | Whether to enable the secure surface.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **true** means to enable the secure surface, and **false** means the opposite.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**. |
+| isSecure | boolean | Yes | 是否启用安全surface。&lt;br&gt;值**true**表示启用安全surface，**false**表示相反的情况。&lt;br&gt; 默认值：**false**。 |
 
 ## hdrBrightness
 
@@ -80,7 +78,9 @@ Sets whether to enable the secure surface to protect the content rendered within
 hdrBrightness(brightness: number)
 ```
 
-Sets the brightness of HDR video playback for the component.
+用于调整组件播放HDR视频的亮度。
+
+**说明：**仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
 
 **Since:** 20
 
@@ -98,7 +98,7 @@ Sets the brightness of HDR video playback for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | number | Yes | Brightness of HDR video playback.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: 0.0 to 1.0. Values less than 0.0 are equivalent to 0.0, and values greater than 1.0 are equivalent to 1.0. **0.0** indicates the brightness of the SDR video, and **1.0** indicates the brightness of the HDR video.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **1.0**. |
+| brightness | number | Yes | HDR视频的亮度。&lt;br/&gt;取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。 &lt;br/&gt;**0.0**表示视频按照SDR亮度显示，**1.0**表示视频按照当前允许的最高HDR亮度显示。&lt;br/&gt;默认值：**1.0**。 |
 
 ## hdrBrightness
 
@@ -106,7 +106,9 @@ Sets the brightness of HDR video playback for the component.
 hdrBrightness(brightness: number, type?: HdrType)
 ```
 
-Set hdrBrightness for XComponent.
+用于调整组件显示HDR内容时的亮度。&lt;br/&gt;当参数type设置为非**HdrType**.DEFAULT时，调用该接口前需先检查Display的hdrFormats属性是否包含对应的HDRFormat。仅当hdrFormats包含对应的HDRFormat时，当前设备才支持对应的HDR类型，参数设置才会生效；否则将使用默认值**HdrType**.DEFAULT。其映射关系如下：&lt;br/&gt;| type取值 | hdrFormats需包含的HDRFormat |&lt;br/&gt;| -------- | -------- |&lt;br/&gt;| **HdrType**.AIHDR | HDRFormat.VIDEO_AIHDR |
+
+**说明：**仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
 
 **Since:** 24
 
@@ -124,8 +126,8 @@ Set hdrBrightness for XComponent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | number | Yes | control the brightness of HDR video. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the HDR type of the XComponent. |
+| brightness | number | Yes | HDR内容的亮度。&lt;br/&gt;取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。 &lt;br/&gt;**0.0**表示内容按照SDR亮度显示，**1.0**表示内容按照当前允许的最高HDR亮度显示。&lt;br/&gt;默认值：**1.0**。 |
+| type | [HdrType](../../apis-media-kit/arkts-apis/arkts-media-media-hdrtype-e.md) | No | 显示HDR内容时的HDR类型。&lt;br/&gt;默认值：**HdrType.DEFAULT |
 
 ## onDestroy
 
@@ -133,7 +135,7 @@ Set hdrBrightness for XComponent.
 onDestroy(event: VoidCallback)
 ```
 
-Triggered when the plugin is destroyed.
+当插件销毁时触发。
 
 **Since:** 8
 
@@ -149,7 +151,7 @@ Triggered when the plugin is destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback triggered after **XComponent** is destroyed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | XComponent销毁后的回调。<br>**Since:** 18 |
 
 ## onLoad
 
@@ -157,7 +159,7 @@ Triggered when the plugin is destroyed.
 onLoad(callback: OnNativeLoadCallback)
 ```
 
-Triggered when the plugin is loaded.
+插件加载完成时回调事件。
 
 **Since:** 8
 
@@ -173,5 +175,5 @@ Triggered when the plugin is loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback triggered after the surface held by **XComponent** is created.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | Yes | 插件加载完成时回调事件，用于获取XComponent实例对象的context。<br>**Since:** 18 |
 

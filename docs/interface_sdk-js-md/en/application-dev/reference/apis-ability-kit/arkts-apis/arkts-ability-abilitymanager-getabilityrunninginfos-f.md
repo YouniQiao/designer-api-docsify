@@ -1,17 +1,22 @@
 # getAbilityRunningInfos
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAbilityRunningInfos
 
 ```TypeScript
 function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 ```
 
-Obtains the UIAbility running information. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If the application has requested the ohos.permission.GET\_RUNNING\_INFO permission, it can obtain the UIAbility  
-    running information of all applications; otherwise, it can obtain the UIAbility running information of the  
-    current application.
+获取UIAbility运行时的相关信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 如果应用申请了ohos.permission.GET_RUNNING_INFO权限，可以获取所有应用UIAbility的运行信息，否则只能获取当前应用UIAbility的运行信息。
 
 **Since:** 14
 
@@ -27,15 +32,15 @@ Obtains the UIAbility running information. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise used to return the UIAbility running information. You can perform error handling or other custom processing. |
+| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise对象，返回UIAbility运行时的相关信息。开发者可在此进行错误处理或其他自定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

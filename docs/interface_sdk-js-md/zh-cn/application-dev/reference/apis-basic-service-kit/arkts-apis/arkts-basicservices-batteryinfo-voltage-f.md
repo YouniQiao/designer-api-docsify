@@ -1,5 +1,11 @@
 # voltage
 
+## 导入模块
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## voltage
 
 ```TypeScript
@@ -21,12 +27,4 @@ function voltage(): int
 | 类型 | 说明 |
 | --- | --- |
 | int | 返回当前设备电池的电压，单位微伏。 |
-
-**示例：**
-
-```TypeScript
-// ArkTS-Sta示例
-let result = batteryInfo.voltage();
-console.info("The result is: " + result);
-```
 

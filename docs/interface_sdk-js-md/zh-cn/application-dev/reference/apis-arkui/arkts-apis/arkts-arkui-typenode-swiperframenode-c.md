@@ -34,11 +34,11 @@ abstract initialize(controller?: SwiperController): SwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | swiper的控制器。 |
+| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | 否 | swiper的控制器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) |  |
 

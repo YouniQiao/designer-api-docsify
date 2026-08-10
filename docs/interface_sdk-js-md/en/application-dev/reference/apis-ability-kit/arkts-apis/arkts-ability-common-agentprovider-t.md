@@ -4,7 +4,7 @@
 export type AgentProvider = _AgentProvider
 ```
 
-The Provider in an AgentCard refers to the organization or platform that issues and manages the agent's credentials.
+AgentCard中的Provider是指发行和的组织或平台。管理代理的凭据。
 
 **Since:** 24
 

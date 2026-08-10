@@ -1,31 +1,22 @@
 # SecurityComponentMethod
 
-The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
+安全控件通用属性模块，提供安全控件的布局、尺寸、文字、图标、颜色、边框和交互等通用属性的统一配置能力。  
+- 为[PasteButton](./paste_button)、[SaveButton](./save_button)等安全控件统一设置布局、尺寸、文字、图标、颜色、边框和交互相关属性。  
+- 在满足安全控件规范的前提下，调整安全控件显示效果和交互体验。具体约束请参见[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。  
+- 通过链式调用方式复用安全控件通用属性能力。
 
-This module is mainly used in the following scenarios:  
-- Set layout, size, text, icon, color, border, and interaction-related attributes for security components  
-such as [PasteButton]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and [SaveButton]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.  
-- Adjust the display effect and interaction experience of security components while ensuring compliance with  
-the security component specifications. For specific constraints,see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.  
-- Reuse the universal attribute capabilities of security components through chained calls.
+## 核心枚举类型
 
-## Key Enums
+- **[SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md)：** 安全控件图标和文字排列方向枚举，用于指定横向或纵向布局。  
+- **[ButtonType](arkts-arkui-button-buttontype-e.md)：** 安全控件按钮样式枚举，用于指定胶囊、圆形、圆角矩形或普通按钮样式。
 
- [SecurityComponentLayoutDirection]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: Enumeration of icon and text  
-layout directions for the security component. Specifies horizontal or vertical layout.  
-- [ButtonType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_: Enumeration of button styles for the security component.  
-Specifies capsule, circle, rounded rectangle, or normal button style.
+## 核心接口类型
 
-## Key APIs
+- **[SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md)：** 安全控件通用属性方法集合，用于为具体安全控件配置布局、尺寸、文字、图标、颜色、边框和交互属性。
 
- [SecurityComponentMethod]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: A collection of universal attribute methods for  
-security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
+## 子组件
 
-## Child Components
-
- Not supported
-
-Defines the method of a security component.
+不支持
 
 **Since:** 10
 
@@ -41,7 +32,7 @@ Defines the method of a security component.
 accessibilityDefaultFocus(focus: boolean): T
 ```
 
-Sets the initial focus for the screen reader on the page, specifying the component that the screen reader announces first after the page loads.
+设置页面的屏幕朗读初始焦点，用于指定页面加载后屏幕朗读首次播报的焦点组件。
 
 **Since:** 26.0.0
 
@@ -59,13 +50,13 @@ Sets the initial focus for the screen reader on the page, specifying the compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| focus | boolean | Yes | Sets the initial focus of the screen reader on the page. **true** means the component is the default first focus on the current page; **false** or any other value is invalid. |
+| focus | boolean | Yes | 为页面设置屏幕朗读初始焦点。值为true则表示该组件为当前页默认首焦点，值为false或其他值无效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current object. |
+| T | 当前对象。 |
 
 ## accessibilityDescription
 
@@ -73,7 +64,7 @@ Sets the initial focus for the screen reader on the page, specifying the compone
 accessibilityDescription(description: string | Resource): T
 ```
 
-Provides an accessibility description for the component. You can set detailed text descriptions to help users understand the component's functionality and the actions it will perform.
+该属性用于为控件提供无障碍描述。开发人员可通过设置详细的文字说明，帮助用户理解组件的功能及即将执行的操作。
 
 **Since:** 26.0.0
 
@@ -91,13 +82,13 @@ Provides an accessibility description for the component. You can set detailed te
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| Resource | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is an empty string. |
+| description | string \| Resource | Yes | 控件的无障碍说明。用于补充组件的详细操作解释，帮助用户理解当前操作的具体内容及其潜在后果。控件被选中时， 若组件同时包含文本属性和无障碍说明，优先播报文本内容，再播报无障碍说明。 &lt;br&gt;该参数的默认值为空字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current object. |
+| T | 当前对象。 |
 
 ## accessibilityNextFocusId
 
@@ -105,7 +96,7 @@ Provides an accessibility description for the component. You can set detailed te
 accessibilityNextFocusId(nextId: string): T
 ```
 
-Specifies the next focus component for the screen reader.
+支持在屏幕朗读过程中，指定朗读的下一个焦点组件。
 
 **Since:** 26.0.0
 
@@ -123,13 +114,13 @@ Specifies the next focus component for the screen reader.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nextId | string | Yes | The [unique ID]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the next component to be focused. If the unique ID does not correspond to any component, the setting is invalid. |
+| nextId | string | Yes | 下一个被指定聚焦组件的 [唯一标识 ID](arkts-arkui-securitycomponentmethod-c.md#id)。若唯一标识id无对应组件，则设置无效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current object. |
+| T | 当前对象。 |
 
 ## accessibilityRole
 
@@ -137,7 +128,7 @@ Specifies the next focus component for the screen reader.
 accessibilityRole(role: SecurityComponentRoleType): T
 ```
 
-Sets the accessibility component type. Each component type is announced in a specific way. You can modify the component type based on your app's requirements to control how the component is announced and what content is announced in accessibility mode.
+设置无障碍组件类型，特定组件类型有特定的朗读方式，可以根据应用诉求，修改组件类型，用于控制无障碍模式下对组件的朗读方式和朗读内容。
 
 **Since:** 26.0.0
 
@@ -155,13 +146,13 @@ Sets the accessibility component type. Each component type is announced in a spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| role | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The component type, such as button or chart, that determines how the component is announced by the screen reader. The specific type can be customized. |
+| role | [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md) | Yes | 屏幕朗读播报的组件类型，如按钮、图表。具体类型可由开发者自定义。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current object. |
+| T | 当前对象。 |
 
 ## align
 
@@ -169,7 +160,7 @@ Sets the accessibility component type. Each component type is announced in a spe
 align(alignType: Alignment): T
 ```
 
-Sets the alignment of the icon and text on the security component.
+设置安全控件图标文本的对齐方式。
 
 **Since:** 15
 
@@ -187,13 +178,13 @@ Sets the alignment of the icon and text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Alignment of the icon and text within the security component. The icon and text are aligned as a unit within the component's background area. The alignment is applied based on the **alignType** value after [padding]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ takes effect, which also affects the visual result. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: Alignment.Center. |
+| alignType | [Alignment](arkts-arkui-alignment-e.md) | Yes | 安全控件图标文本的对齐方式。图标文本作为整体在控件背景范围内进行对齐，显示效果受 [padding](arkts-arkui-securitycomponentmethod-c.md#padding)影响，在padding生效的基础上按照alignType参数指定的对齐方式进行对齐。 &lt;br&gt;默认值：Alignment.Center。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## alignRules
 
@@ -201,7 +192,7 @@ Sets the alignment of the icon and text on the security component.
 alignRules(alignRule: AlignRuleOption): T
 ```
 
-Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is [RelativeContainer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+设置在相对容器中子组件的对齐规则，仅当父容器为[RelativeContainer](./relative_container)时生效。
 
 **Since:** 15
 
@@ -219,13 +210,13 @@ Sets the alignment rules for child components within a relative container. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Alignment rule configuration object that defines anchor alignment options ( **top**, **bottom**, **left**, **right**, and **center**). Specifies the alignment position and method of the security component in [RelativeContainer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| alignRule | [AlignRuleOption](arkts-arkui-common-alignruleoption-i.md) | Yes | 对齐规则配置对象，包含top、bottom、left、right、center等锚点对齐配置， 用于指定安全控件在[RelativeContainer](./relative_container)中的对齐位置和方式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## alignRules
 
@@ -233,8 +224,7 @@ Sets the alignment rules for child components within a relative container. This 
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is [RelativeContainer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. In the horizontal direction, this method replaces **left** and **right** in the [alignRules]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ above with **start**  
-and **end**, respectively, allowing the layout to be mirrored in RTL mode. You are advised to use this method preferentially.
+设置在相对容器中子组件的对齐规则，仅当父容器为[RelativeContainer](./relative_container)时生效。该方法水平方向上以start和end分别替代上述[alignRules](arkts-arkui-securitycomponentmethod-c.md#alignrules)的left和right，以便在RTL模式下能镜像显示，建议优先使用该方法。
 
 **Since:** 15
 
@@ -252,13 +242,13 @@ and **end**, respectively, allowing the layout to be mirrored in RTL mode. You a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Alignment rule configuration object that uses **start** and **end** in place of **left** and **right** to support RTL layout mirroring. Includes anchor alignment settings for **top**, **bottom**, **start**, **end**, and **center**, specifying the alignment position and method of the security component within [RelativeContainer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| alignRule | [LocalizedAlignRuleOptions](../arkts-components/arkts-arkui-localizedalignruleoptions-i.md) | Yes | 对齐规则配置对象，使用start和end替代left和right以支持RTL布局镜像。包含top、bottom、start、end、center等 锚点对齐配置，用于指定安全控件在[RelativeContainer](./relative_container)中的对齐位置和方式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## backgroundColor
 
@@ -266,7 +256,7 @@ and **end**, respectively, allowing the layout to be mirrored in RTL mode. You a
 backgroundColor(value: ResourceColor): T
 ```
 
-Sets the background color of the security component.
+设置安全控件的背景颜色。
 
 **Since:** 10
 
@@ -284,13 +274,13 @@ Sets the background color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Background color of the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: \_\_\_ESCAPED\_DOLLAR\_\_\_r('sys.color.icon\_\_\_ESCAPED\_UNDERSCORE\_\_\_emphasize'). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 安全控件的背景颜色。 &lt;br&gt;默认值：\\$r('sys.color.icon_emphasize')。 &lt;br&gt;安全控件按钮背景色高八位的α值低于**0x1a**（例如**0x1800ff00**）时，会被系统强制调整为**0xff**。以确保安全控件具有足够的可见性， 防止因控件过度透明导致用户在不知情的情况下触发授权。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## borderColor
 
@@ -298,7 +288,7 @@ Sets the background color of the security component.
 borderColor(value: ResourceColor): T
 ```
 
-Sets the border color of the security component.
+设置安全控件的边框颜色。
 
 **Since:** 10
 
@@ -316,13 +306,13 @@ Sets the border color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Border color of the security component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_No border color is set by default. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 安全控件的边框颜色。&lt;br&gt;默认不设置边框颜色。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## borderRadius
 
@@ -330,9 +320,9 @@ Sets the border color of the security component.
 borderRadius(value: Dimension): T
 ```
 
-Sets the border radius of the security component.
+设置安全控件的边框圆角半径。
 
-The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED\_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Circle时，borderRadius设置不生效，按钮圆角半径由按钮类型自动确定；当按钮类型为Normal或ROUNDED_RECTANGLE时，borderRadius设置生效。具体影响请参见[ButtonType](arkts-arkui-button-buttontype-e.md)。
 
 **Since:** 10
 
@@ -350,13 +340,13 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Border radius of the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0vp**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no unit is explicitly specified, the unit is vp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Percentage strings are not supported.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The border radius is constrained by the component size, with a minimum of **0** and a maximum of half the smaller of the width and height. If an invalid value is set, this attribute does not take effect. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件的边框圆角半径。 &lt;br&gt;默认值：**0vp**。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;不支持设置百分比字符串。圆角半径受组件尺寸限制，最小值为0，最大值为宽高中较小值的一半。设置异常值时该属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## borderRadius
 
@@ -364,9 +354,9 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 borderRadius(radius: Dimension | BorderRadiuses): T
 ```
 
-Sets the border radius of the security component, allowing individual setting of the four corner radii.
+设置安全控件的边框圆角半径，支持分别设置四个圆角的半径。
 
-The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED\_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Circle时，borderRadius设置不生效，按钮圆角半径由按钮类型自动确定；当按钮类型为Normal或ROUNDED_RECTANGLE时，borderRadius设置生效。具体影响请参见[ButtonType](arkts-arkui-button-buttontype-e.md)。
 
 **Since:** 15
 
@@ -384,13 +374,13 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| BorderRadiuses | Yes | Border radius of the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0vp**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The Dimension type does not support setting percentage strings. The border radius is constrained by the component size, with a minimum value of **0** and a maximum value of half the smaller dimension of width and height. When an invalid value is set, this attribute does not take effect. |
+| radius | [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses | Yes | 安全控件的边框圆角半径。 &lt;br&gt;默认值：**0vp**。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;Dimension类型不支持设置百分比字符串。圆角半径受组件尺寸限制，最小值为0，最大值为宽高中较小值的一半。设置异常值时该属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## borderStyle
 
@@ -398,7 +388,7 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 borderStyle(value: BorderStyle): T
 ```
 
-Sets the border style of the security component.
+设置安全控件边框的样式。
 
 **Since:** 10
 
@@ -416,13 +406,13 @@ Sets the border style of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Border style of the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_No border style is set by default. |
+| value | [BorderStyle](arkts-arkui-enums-borderstyle-e.md) | Yes | 安全控件边框的样式。 &lt;br&gt;默认不设置边框样式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全组件的属性。 |
 
 ## borderWidth
 
@@ -430,7 +420,7 @@ Sets the border style of the security component.
 borderWidth(value: Dimension): T
 ```
 
-Sets the border width of the security component.
+设置安全控件的边框宽度。
 
 **Since:** 10
 
@@ -448,13 +438,13 @@ Sets the border width of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Border width of the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0vp**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Percentage strings are not supported. This attribute does not take effect when it is set to an invalid value. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件的边框宽度。 &lt;br&gt;默认值：**0vp**。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;不支持设置百分比字符串。设置异常值时该属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## chainMode
 
@@ -462,7 +452,7 @@ Sets the border width of the security component.
 chainMode(direction: Axis, style: ChainStyle): T
 ```
 
-Sets the parameters of the chain in which the component is the head. This API takes effect only when the parent container is [RelativeContainer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+设置以该组件为链头所构成的链式布局的参数（包括链的方向和样式），仅当父容器为[RelativeContainer](./relative_container)时生效。
 
 **Since:** 15
 
@@ -480,14 +470,14 @@ Sets the parameters of the chain in which the component is the head. This API ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headed by this component in the [RelativeContainer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Style of the chain layout. Controls how child components are distributed within the chain, such as evenly distributed, aligned at both ends, or compactly arranged. For specific values and effects, see [ChainStyle]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| direction | [Axis](arkts-arkui-enums-axis-e.md) | Yes | 链式布局的方向，用于指定以该组件为链头的链在[RelativeContainer](./relative_container)中的排列方向。 |
+| style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) | Yes | 链式布局的样式，用于控制链内子组件的分布方式，如均匀分布、两端对齐或紧凑排列等，具体取值及效果请参考[ChainStyle](arkts-arkui-common-chainstyle-e.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## constraintSize
 
@@ -495,7 +485,7 @@ Sets the parameters of the chain in which the component is the head. This API ta
 constraintSize(value: ConstraintSizeOptions): T
 ```
 
-Sets the constraint size, limiting the size range during component layout.
+设置约束尺寸，组件布局时限制尺寸范围。
 
 **Since:** 11
 
@@ -513,13 +503,13 @@ Sets the constraint size, limiting the size range during component layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Constraint size, limiting the size range during component layout. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**constraintSize** takes precedence over **width** and **height**. When used in conjunction with adaptive font size attributes, if the text on the security component is truncated, clicking the component does not perform authorization. The **constraintSize** setting affects whether the text is fully displayed.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For the value results, see [impact of constraintSize values on width/height]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_{\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_minWidth: 0,\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_maxWidth: Infinity,\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_minHeight: 0,\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_maxHeight: Infinity\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_}. |
+| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Yes | 约束尺寸，组件布局时进行尺寸范围限制。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;constraintSize的优先级高于width和height。 &lt;br&gt;使用自适应字号相关属性时，安全控件文本未完全显示将导致点击不授权。constraintSize的设置会影响文本 是否能完整显示。&lt;br&gt;取值结果参考[constraintSize取值对width/height影响](arkts-arkui-securitycomponentmethod-c.md#constraintsize)。 &lt;br&gt;默认值：&lt;br&gt;{&lt;br&gt;minWidth: 0,&lt;br&gt;maxWidth: Infinity,&lt;br&gt;minHeight: 0,&lt;br&gt;maxHeight: Infinity&lt;br&gt;}。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## enabled
 
@@ -527,7 +517,7 @@ Sets the constraint size, limiting the size range during component layout.
 enabled(respond: boolean): T
 ```
 
-Sets whether the security component is interactive.
+设置安全控件是否可交互。
 
 **Since:** 18
 
@@ -545,7 +535,7 @@ Sets whether the security component is interactive.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| respond | boolean | Yes | Whether the security component is interactive. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **true** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true**: The component is interactive and responds to operations such as clicks. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**false**: The component is non-interactive and does not respond to operations such as clicks. |
+| respond | boolean | Yes | 安全控件是否可交互的值。 &lt;br&gt;默认值：true。 &lt;br&gt;值为true表示组件可交互，响应点击等操作。&lt;br&gt;值为false表示组件不可交互，不响应点击等操作。 |
 
 **Return value:**
 
@@ -559,10 +549,9 @@ Sets whether the security component is interactive.
 fallbackLineSpacing(enabled: boolean): T
 ```
 
-Enables adaptive line height based on the actual text height for multi-line text.
+针对多行文字叠加，支持行高基于文字实际高度自适应。
 
-The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of  
-[RichEditorTextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
+fallbackLineSpacing属性和[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md)的lineHeight属性强相关。当设置的 lineHeight值小于文本在当前字号下的实际渲染高度时，将根据fallbackLineSpacing 属性值来确定行高是否要基于文字实际高度自适应。
 
 **Since:** 26.0.0
 
@@ -580,13 +569,13 @@ The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the line height adapts based on the actual text height.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true**: The line height adapts based on the actual text height. **false**: The line height does not adapt based on the actual text height. |
+| enabled | boolean | Yes | 行高是否基于文字实际高度自适应。&lt;br/&gt;true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## focusBox
 
@@ -594,7 +583,7 @@ The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight**
 focusBox(style: FocusBoxStyle): T
 ```
 
-Sets the style of the system focus box for the security component.
+设置安全控件系统焦点框样式。
 
 **Since:** 22
 
@@ -612,13 +601,13 @@ Sets the style of the system focus box for the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration object for the focus box style. Contains properties such as **margin** (the spacing between the focus box and the component) and **strokeColor** (the stroke color of the focus box) to customize the appearance of the system focus box. |
+| style | [FocusBoxStyle](arkts-arkui-focusboxstyle-i.md) | Yes | 焦点框样式配置对象，包含margin（焦点框与控件的间距）和strokeColor（焦点框边框颜色）等属性，用于自定义系统焦点框的外观样式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全组件的属性。 |
 
 ## fontColor
 
@@ -626,7 +615,7 @@ Sets the style of the system focus box for the security component.
 fontColor(value: ResourceColor): T
 ```
 
-Sets the font color of the text on the security component.
+设置安全控件文字的颜色。
 
 **Since:** 10
 
@@ -644,13 +633,13 @@ Sets the font color of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font color of the text on the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: \_\_\_ESCAPED\_DOLLAR\_\_\_r('sys.color.font\_\_\_ESCAPED\_UNDERSCORE\_\_\_on\_\_\_ESCAPED\_UNDERSCORE\_\_\_primary'). |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 安全控件上文字的颜色。 &lt;br&gt;默认值：\\$r('sys.color.font_on_primary')。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## fontFamily
 
@@ -658,7 +647,7 @@ Sets the font color of the text on the security component.
 fontFamily(value: string | Resource): T
 ```
 
-Sets the font family of the text on the security component.
+设置安全控件文字的字体。
 
 **Since:** 10
 
@@ -676,13 +665,13 @@ Sets the font family of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family of the text on the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default font:**'HarmonyOS Sans'**. |
+| value | string \| Resource | Yes | 安全控件上文字的字体。 &lt;br&gt;默认字体：'HarmonyOS Sans'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## fontSize
 
@@ -690,7 +679,7 @@ Sets the font family of the text on the security component.
 fontSize(value: Dimension): T
 ```
 
-Sets the font size of the text for the security component.
+设置安全控件文字的尺寸。
 
 **Since:** 10
 
@@ -708,13 +697,13 @@ Sets the font size of the text for the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font size of the text on the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is fp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: \_\_\_ESCAPED\_DOLLAR\_\_\_r('sys.float.ohos\_\_\_ESCAPED\_UNDERSCORE\_\_\_id\_\_\_ESCAPED\_UNDERSCORE\_\_\_text\_\_\_ESCAPED\_UNDERSCORE\_\_\_size\_\_\_ESCAPED\_UNDERSCORE\_\_\_button1')\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Percentage strings are not supported.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This attribute does not take effect when it is set to an invalid value.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件上文字的尺寸。 &lt;br&gt;未显式指定单位时，单位为fp。&lt;br&gt;默认值：\\$r('sys.float.ohos_id_text_size_button1')。&lt;br&gt;该参数不支持百分比字符串。 &lt;br&gt;设置异常值时该属性不生效。&lt;br&gt;**说明：** 安全控件文本未完全显示时，点击不授权。fontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## fontStyle
 
@@ -722,7 +711,7 @@ Sets the font size of the text for the security component.
 fontStyle(value: FontStyle): T
 ```
 
-Sets the font style of the text on the security component.
+设置安全控件文字的样式。
 
 **Since:** 10
 
@@ -740,13 +729,13 @@ Sets the font style of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font style of the text on the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: FontStyle.Normal. |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | 安全控件上文字的样式。 &lt;br&gt;默认值：FontStyle.Normal。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## fontWeight
 
@@ -754,7 +743,7 @@ Sets the font style of the text on the security component.
 fontWeight(value: number | FontWeight | string | Resource): T
 ```
 
-Sets the font weight of the text on the security component.
+设置安全控件文字的粗细。
 
 **Since:** 10
 
@@ -772,13 +761,13 @@ Sets the font weight of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string \| Resource | Yes | Font weight of the text on the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
+| value | number \| FontWeight \| string \| Resource | Yes | 安全控件上文字粗细。 &lt;br&gt;number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。&lt;br&gt;string类型支持使用数字字符串（如'400'），以及FontWeight中的枚举值对应的字符串 （如'bold'、'bolder'、'lighter'、'regular'、'medium'）。&lt;br&gt;从API version 20开始，支持Resource类型。Resource类型仅支持'integer'和'string'。 类型为'integer'时，取值参考前述number类型；类型为'string'时，取值参考前述string类型。&lt;br&gt;如果控件未设置fontWeight，文字粗细将默认设置为FontWeight.Medium。 value入参为undefined、null，或number类型不在[100, 900]范围内，或string类型不符合FontWeight枚举值对应的字符串格式时，文字粗细将被设置为FontWeight.Normal。<br>**Since:** 20 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## height
 
@@ -786,7 +775,7 @@ Sets the font weight of the text on the security component.
 height(value: Length): T
 ```
 
-Sets the height of the security component. If not set, the height adapts to the element content. When used in conjunction with adaptive font size attributes, the height setting affects whether the text is fully displayed.
+设置安全控件自身的高度，缺省时将根据元素内容自适配高度。配合自适应字号相关属性使用时，height的设置会影响文本是否能完整显示。
 
 **Since:** 11
 
@@ -804,13 +793,13 @@ Sets the height of the security component. If not set, the height adapts to the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Height of the security component. If not set, the height adapts to the element content. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no unit is explicitly specified, the unit is vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When used in conjunction with [minFontSize]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [maxFontSize]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [maxLines]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and [heightAdaptivePolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | [Length](arkts-arkui-length-t.md) | Yes | 安全控件自身的高度，缺省时将根据元素内容自适配高度。 &lt;br&gt;未显式指定单位时，单位为vp。 &lt;br&gt;配合[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)、[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)、 [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)以及[heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy) 使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。设置异常值时该属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## heightAdaptivePolicy
 
@@ -818,17 +807,21 @@ Sets the height of the security component. If not set, the height adapts to the 
 heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 ```
 
-Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.
+设置文字自适应高度的方式。适用于安全控件在不同尺寸或不同语言环境下，需要动态调整文本显示以保证文本完整显示的场景。
 
-The security component text is laid out at [maxFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise,adaptation proceeds according to the specified policy, as follows:\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_**TextHeightAdaptivePolicy.MAX\_LINES\_FIRST**: prioritizes the [maxLines]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ attribute for adjusting the text height. If the layout size with **maxLines**  
-exceeds the layout constraints, the security component attempts to reduce the font size within the range of  
-[minFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ and  
-[maxFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text.\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_**TextHeightAdaptivePolicy.MIN\_FONT\_SIZE\_FIRST**: prioritizes the  
-[minFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text.\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_**TextHeightAdaptivePolicy.LAYOUT\_CONSTRAINT\_FIRST**: prioritizes layout constraints for adjusting the text height.\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_ and  
-[maxFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_. If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the  
-[maxLines]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_ attribute is set, the number of lines does not exceed the  
-**maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines.If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**,  
-**maxLines**, **width**, and **height**.For details, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+安全控件文本以[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)的值进行布局，如果可以完整显示文本，则无需进行自适应调节，该接口设置不生效，否则按指定文本自适应高度的方式进行调节，具体自适应调节规格如下：
+
+当设置为TextHeightAdaptivePolicy.MAX_LINES_FIRST时，优先使用[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)属性来调整文本高度。如果使用maxLines属性的布局大小超过了布局约束，则尝试在[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)和  
+[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)的范围内缩小字体以显示更多文本，如果此时仍不能完整显示文本信息，安全控件会自适应调整高度以使得文本完整显示。
+
+当设置为TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST时，优先使用[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)的范围内增大字体并使用最大可能的字体大小；如果使用minFontSize属性无法将文本布局在一行中，则尝试使用[maxLines]{@linkSecurityComponentMethod.maxLines}属性进行布局，如果此时仍不能完整显示文本信息，安全控件会自适应调整高度以使得文本完整显示。
+
+当设置为TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST时，优先使用布局约束来调整文本高度。如果布局大小超过布局约束，则尝试在  
+[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)和[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)的范围内缩小字体以满足布局约束。如果将字体大小缩小到minFontSize后，布局大小仍然超过布局约束，则删除超过布局约束的行；如果设置了[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)属性，布局后行数不超过maxLines值（可能存在横向截断）；如果未设置maxLines属性值，布局后的行数不限制。
+
+安全控件文本未完全显示时，点击不授权。文本是否完全显示受heightAdaptivePolicy、minFontSize、maxFontSize、maxLines、width和height等属性影响。
+
+具体效果请见[示例](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#示例3)。
 
 **Since:** 18
 
@@ -846,13 +839,13 @@ exceeds the layout constraints, the security component attempts to reduce the fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Policy for text height adaptation. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: TextHeightAdaptivePolicy.MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINES\_\_\_ESCAPED\_UNDERSCORE\_\_\_FIRST. |
+| policy | [TextHeightAdaptivePolicy](arkts-arkui-enums-textheightadaptivepolicy-e.md) | Yes | 文本自适应高度的方式。 &lt;br&gt;默认值：TextHeightAdaptivePolicy.MAX_LINES_FIRST。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## iconColor
 
@@ -860,7 +853,7 @@ exceeds the layout constraints, the security component attempts to reduce the fo
 iconColor(value: ResourceColor): T
 ```
 
-Sets the icon color of the security component.
+设置安全控件图标的颜色。
 
 **Since:** 10
 
@@ -878,13 +871,13 @@ Sets the icon color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Icon color of the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: \_\_\_ESCAPED\_DOLLAR\_\_\_r('sys.color.icon\_\_\_ESCAPED\_UNDERSCORE\_\_\_on\_\_\_ESCAPED\_UNDERSCORE\_\_\_primary'). |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 安全控件上图标的颜色。 &lt;br&gt;默认值：\\$r('sys.color.icon_on_primary')。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## iconSize
 
@@ -892,7 +885,7 @@ Sets the icon color of the security component.
 iconSize(value: Dimension): T
 ```
 
-Sets the icon size of the security component.
+设置安全控件图标的尺寸。
 
 **Since:** 10
 
@@ -910,13 +903,13 @@ Sets the icon size of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Icon size of the security component, in vp by default when no unit is specified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **16vp**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Percentage strings are not supported.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If an invalid value or unit is passed, the attribute does not take effect, and the component is displayed according to the default value. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件上图标的尺寸。未显式指定单位时，单位为vp。 &lt;br&gt;默认值：**16vp**。 &lt;br&gt;该参数不支持百分比字符串。&lt;br/&gt;若传入异常值或无效单位，属性不生效，控件按照默认值显示。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## id
 
@@ -924,7 +917,7 @@ Sets the icon size of the security component.
 id(id: string): T
 ```
 
-Unique ID you assigned for the component.
+组件的唯一标识，唯一性由使用者保证。
 
 **Since:** 15
 
@@ -942,13 +935,13 @@ Unique ID you assigned for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Unique ID you assigned for the component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: ''. |
+| id | string | Yes | 组件的唯一标识，唯一性由使用者保证。 &lt;br&gt;默认值：''。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## layoutDirection
 
@@ -956,7 +949,7 @@ Unique ID you assigned for the component.
 layoutDirection(value: SecurityComponentLayoutDirection): T
 ```
 
-Sets the layout direction of the icon and text on the security component.
+设置安全控件图标和文字分布的方向。
 
 **Since:** 10
 
@@ -974,13 +967,13 @@ Sets the layout direction of the icon and text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the layout direction of the icon and text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value:SecurityComponentLayoutDirection.HORIZONTAL. |
+| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | Yes | 安全控件上图标和文字分布的方向。 &lt;br&gt;默认值：SecurityComponentLayoutDirection.HORIZONTAL。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## markAnchor
 
@@ -988,7 +981,7 @@ Sets the layout direction of the icon and text on the security component.
 markAnchor(value: Position): T
 ```
 
-Sets the anchor of the security component for moving the component with its top-left corner as the reference point.
+设置安全控件在位置定位时的锚点，以控件左上角作为基准点进行偏移。
 
 **Since:** 10
 
@@ -1006,13 +999,13 @@ Sets the anchor of the security component for moving the component with its top-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Anchor of the security component for moving the component with its top-left corner as the reference point. Generally, this attribute is used in conjunction with **position()** and **offset()** for more precise positioning. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_No default value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This attribute does not take effect when it is set to an invalid value. |
+| value | [Position](arkts-arkui-display-position-i.md) | Yes | 安全控件在位置定位时的锚点，以控件左上角作为基准点进行偏移。通常与position()、offset()配合使用，用于更精细地设置控件展示位置。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;无默认值。&lt;br/&gt;传入异常值时该属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## maxFontScale
 
@@ -1020,10 +1013,9 @@ Sets the anchor of the security component for moving the component with its top-
 maxFontScale(scale: number | Resource): T
 ```
 
-Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor.
+设置文本最大的字体放大倍数。调用后，当系统字体缩放使文本放大时，文本放大倍数不会超过设定的最大放大倍数。
 
-This API can be used in conjunction with [minFontScale]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-**maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
+与[minFontScale](arkts-arkui-securitycomponentmethod-c.md#minfontscale)可配合使用，maxFontScale控制放大倍数的上限，minFontScale控制缩小倍数的下限。两者可独立设置，也可同时设置以精确控制字体缩放范围。
 
 **Since:** 18
 
@@ -1041,13 +1033,13 @@ This API can be used in conjunction with [minFontScale]\_\_\_JSDOC\_LINK\_DESC\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Maximum font scale factor for the text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value must be greater than or equal to 1. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number \| Resource | Yes | 文本最大的字体放大倍数。 &lt;br&gt;取值应≥1。 &lt;br&gt;**说明：** &lt;br&gt;设置的值小于1时，按值为1处理；设置的值为undefined或null等非法值时，属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## maxFontSize
 
@@ -1055,15 +1047,13 @@ This API can be used in conjunction with [minFontScale]\_\_\_JSDOC\_LINK\_DESC\_
 maxFontSize(maxSize: number | string | Resource): T
 ```
 
-Sets the maximum font size for text display.
+设置文本最大显示字号。
 
-- When used in conjunction with [minFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[maxLines]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
-- **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**,  
-**minFontSize** will be treated as **maxFontSize**.  
-- When adaptive font size is effective, the **fontSize** setting does not take effect.  
-- If the security component text is not fully displayed, clicking does not trigger authorization. The  
-**maxFontSize** setting affects text visibility, which in turn affects authorization behavior.
+- 配合[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)以及[maxLines]{@linkSecurityComponentMethod.maxLines}或布局  
+大小限制使用，可实现自适应字号，单独设置不生效。  
+- maxFontSize应大于minFontSize，若maxFontSize小于minFontSize，minFontSize将按maxFontSize处理。  
+- 当自适应字号生效时，设置的fontSize将不生效。  
+- 安全控件文本未完全显示时，点击不授权。maxFontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。
 
 **Since:** 18
 
@@ -1081,13 +1071,13 @@ Sets the maximum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | number \| string \| Resource | Yes | Maximum display font size of the text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value must be greater than 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is fp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
+| maxSize | number \| string \| Resource | Yes | 文本最大显示字号。 &lt;br&gt;取值应>0。 &lt;br&gt;未显式指定单位时，单位为fp。 &lt;br&gt;**说明：**&lt;br&gt;设置的值小于或等于0时，自适应字号不生效；设置异常值时该属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## maxLines
 
@@ -1095,10 +1085,9 @@ Sets the maximum font size for text display.
 maxLines(line: number | Resource): T
 ```
 
-Sets the maximum number of lines for text. By default, text wraps automatically. When this attribute is specified,the text will display at most the specified number of lines. It can be used independently to limit text lines, or in conjunction with [minFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[maxFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and  
-[heightAdaptivePolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. When used with adaptive font size attributes, if the security component text is not fully displayed, the click will not trigger authorization. The  
-**maxLines** setting affects whether the text can be fully displayed, thereby affecting the authorization behavior of the security component.
+设置文本的最大行数。默认情况下，文本自动换行，指定此属性后，文本的最大显示行数不会超过指定值。可独立使用限制文本行数，也可配合  
+[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)、[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)以及  
+[heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy)使用。配合自适应字号相关属性使用时，安全控件文本未完全显示将导致点击不授权。maxLines的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。
 
 **Since:** 18
 
@@ -1116,13 +1105,13 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | number \| Resource | Yes | Maximum number of lines for the text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A value less than 1 is handled as the default value **1000000**.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
+| line | number \| Resource | Yes | 文本的最大行数。 &lt;br&gt;number类型入参的取值范围： [1, +∞)。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'，取值范围为[1, +∞)。 **说明：** &lt;br&gt;设置的值小于1时，按默认值1000000处理。<br>**Since:** 18 - 19 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## minFontScale
 
@@ -1130,10 +1119,9 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 minFontScale(scale: number | Resource): T
 ```
 
-Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor.
+设置文本最小的字体缩小倍数。调用后，当系统字体缩放使文本缩小时，文本缩小倍数不会低于设定的最小缩小倍数。
 
-This API can be used in conjunction with [maxFontScale]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-**minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
+与[maxFontScale](arkts-arkui-securitycomponentmethod-c.md#maxfontscale)可配合使用，minFontScale控制缩小倍数的下限，maxFontScale控制放大倍数的上限。两者可独立设置，也可同时设置以精确控制字体缩放范围。
 
 **Since:** 18
 
@@ -1151,13 +1139,13 @@ This API can be used in conjunction with [maxFontScale]\_\_\_JSDOC\_LINK\_DESC\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Minimum font scale factor for the text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0,1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number \| Resource | Yes | 文本最小的字体缩小倍数。 &lt;br&gt;取值范围：[0,1]。 &lt;br&gt;**说明：** &lt;br&gt;设置的值小于0时，按值为0处理，即允许缩小到任意倍数；设置的值大于1时，按值为1处理，即不允许缩小字体；设置的值为undefined或null等非法值时，属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## minFontSize
 
@@ -1165,16 +1153,14 @@ This API can be used in conjunction with [maxFontScale]\_\_\_JSDOC\_LINK\_DESC\_
 minFontSize(minSize: number | string | Resource): T
 ```
 
-Sets the minimum font size for text display.
+设置文本最小显示字号。
 
-- When used in conjunction with [maxFontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[maxLines]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
-- **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**,  
-**maxFontSize** is used instead.  
-- When **minFontSize** is less than or equal to 0, adaptive font size does not take effect.  
-- When adaptive font size is effective, the **fontSize** setting does not take effect.  
-- If the security component text is not fully displayed, clicking does not trigger authorization. The  
-**minFontSize** setting affects text visibility, which in turn affects authorization behavior.
+- 配合[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)以及[maxLines]{@linkSecurityComponentMethod.maxLines}或布局  
+大小限制使用，可实现自适应字号，单独设置不生效。  
+- minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理。  
+- minFontSize小于或等于0时，自适应字号不生效。  
+- 自适应字号生效时，fontSize设置不生效。  
+- 安全控件文本未完全显示时，点击不授权。minFontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。
 
 **Since:** 18
 
@@ -1192,13 +1178,13 @@ Sets the minimum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minSize | number \| string \| Resource | Yes | Minimum display font size of the text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value must be greater than 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is fp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
+| minSize | number \| string \| Resource | Yes | 文本最小显示字号。 &lt;br&gt;取值应>0。 &lt;br&gt;未显式指定单位时，单位为fp。&lt;br&gt; minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理；小于或等于0时，自适应字号不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## offset
 
@@ -1206,7 +1192,7 @@ Sets the minimum font size for text display.
 offset(value: Position | Edges | LocalizedEdges): T
 ```
 
-Sets the coordinate offset of the security component relative to its own layout position.
+设置安全控件相对于自身布局位置的坐标偏移。
 
 **Since:** 10
 
@@ -1224,13 +1210,13 @@ Sets the coordinate offset of the security component relative to its own layout 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Edges \| LocalizedEdges | Yes | Coordinate offset of the security component relative to its own layout position. This attribute does not affect the layout in the parent container. The offset is used only during drawing. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is vp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_No default value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This attribute does not take effect when it is set to an invalid value.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| value | [Position](arkts-arkui-display-position-i.md) \| Edges \| LocalizedEdges | Yes | 安全控件相对于自身布局位置的坐标偏移。设置后不会影响父容器布局，仅在绘制阶段调整控件显示位置。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;无默认值。&lt;br&gt;当入参异常时，该属性不生效。<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## padding
 
@@ -1238,7 +1224,7 @@ Sets the coordinate offset of the security component relative to its own layout 
 padding(value: Padding | Dimension): T
 ```
 
-Sets the padding of the security component.
+设置安全控件的内边距。
 
 **Since:** 10
 
@@ -1256,13 +1242,13 @@ Sets the padding of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Dimension | Yes | Padding of the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 8 vp for the top and bottom and 16 vp for the left and right. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is vp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension | Yes | 安全控件的内边距。 &lt;br&gt;默认值：上下8vp，左右16vp。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;**说明：** 本参数不支持设置百分比字符串数据类型。若设置百分比字符串，则对应内边距显示为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## position
 
@@ -1270,7 +1256,7 @@ Sets the padding of the security component.
 position(value: Position): T
 ```
 
-Sets the absolute position, which is the offset of the top-left corner of the security component relative to the top-left corner of the parent container.
+设置绝对定位，即安全控件的左上角相对于父容器左上角的偏移位置。
 
 **Since:** 10
 
@@ -1288,13 +1274,13 @@ Sets the absolute position, which is the offset of the top-left corner of the se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Offset position of the security component's top-left corner relative to the parent container's top-left corner. Applicable to scenarios where the security component is placed in a fixed area of the page through absolute positioning. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is vp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It is recommended that you pass numeric coordinates for both **x** and **y**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the parameter is **undefined** or **null**, or **x** and **y** are non-numeric types, this attribute does not take effect, and invalid coordinates are treated as **0**. |
+| value | [Position](arkts-arkui-display-position-i.md) | Yes | 安全控件左上角相对于父容器左上角的偏移位置。适用于通过绝对定位将安全控件放置到页面固定区域的场景。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;x和y建议均传入数值型坐标。&lt;br/&gt;若参数为undefined、null，或x、y为非数字类型时，该属性不生效，异常坐标会按0处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## size
 
@@ -1302,8 +1288,7 @@ Sets the absolute position, which is the offset of the top-left corner of the se
 size(value: SizeOptions): T
 ```
 
-Sets the width and height. If not set, the width and height adapt to the element content. The **size** method is used to set both width and height at the same time. To set the width or height individually, use the  
-[width]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [height]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ method.
+设置宽度和高度，缺省时将根据元素内容自适配宽高尺寸。size方法用于同时设置宽度和高度，如需单独设置宽度或高度，可使用[width](arkts-arkui-securitycomponentmethod-c.md#width)或[height](arkts-arkui-securitycomponentmethod-c.md#height)方法。
 
 **Since:** 11
 
@@ -1321,13 +1306,13 @@ Sets the width and height. If not set, the width and height adapt to the element
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Width and height of the security component. When this parameter is not specified, the security component automatically adapts its size to the element content. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no unit is explicitly specified, the unit is vp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When used in conjunction with [minFontSize]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [maxFontSize]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [maxLines]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and [heightAdaptivePolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | Yes | 宽度和高度，缺省时将根据元素内容自适配宽高尺寸。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;配合 [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)、 [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)、[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)以及 [heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy)使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。 size的设置会影响文本是否能完整显示。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## textIconSpace
 
@@ -1335,7 +1320,7 @@ Sets the width and height. If not set, the width and height adapt to the element
 textIconSpace(value: Dimension): T
 ```
 
-Sets the spacing between the icon and text in the security component.
+设置安全控件中图标和文字的间距。
 
 **Since:** 10
 
@@ -1353,13 +1338,13 @@ Sets the spacing between the icon and text in the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Spacing between the icon and text in the security component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **4vp**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is vp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note: Percentage strings are not supported. If a percentage string is set, the corresponding spacing between the icon and text is **0**. Since API version 14, negative values are treated as the default value. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件中图标和文字的间距。 &lt;br&gt;默认值：**4vp**。&lt;br/&gt; &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;**说明：** 本参数不支持设置百分比字符串数据类型，若设置百分比字符串，则图标和文字的间距显示为0； 从API version 14开始，若设置值为负值，则使用默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## width
 
@@ -1367,7 +1352,7 @@ Sets the spacing between the icon and text in the security component.
 width(value: Length): T
 ```
 
-Sets the width of the security component. If not set, the width adapts to the element content. When used in conjunction with adaptive font size attributes, the width setting affects whether the text is fully displayed.
+设置安全控件自身的宽度，缺省时将根据元素内容自适配宽度。配合自适应字号相关属性使用时，width的设置会影响文本是否能完整显示。
 
 **Since:** 11
 
@@ -1385,11 +1370,11 @@ Sets the width of the security component. If not set, the width adapts to the el
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Width of the security component itself. If not set, the width adapts to the element content. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit is not explicitly specified, the unit is vp.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When used in conjunction with [minFontSize]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [maxFontSize]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [maxLines]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and [heightAdaptivePolicy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | [Length](arkts-arkui-length-t.md) | Yes | 安全控件自身的宽度，缺省时将根据元素内容自适配宽度。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;配合 [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)、 [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)、[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)以及 [heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy)使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。 设置异常值时该属性不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 

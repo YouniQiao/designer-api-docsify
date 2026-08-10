@@ -1,12 +1,20 @@
 # copy
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## copy
 
 ```TypeScript
 function copy(): Matrix4Transit
 ```
 
-Copies this matrix object.
+Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
+
+> **说明：**
 
 **Since:** 7
 
@@ -14,7 +22,7 @@ Copies this matrix object.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
+**Substitutes:** [matrix4.Matrix4Transit.copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
 
 <!--Device-matrix4-function copy(): Matrix4Transit--><!--Device-matrix4-function copy(): Matrix4Transit-End-->
 
@@ -24,5 +32,5 @@ Copies this matrix object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Copy object of the current matrix. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的拷贝对象。 |
 

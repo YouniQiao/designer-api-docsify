@@ -1,9 +1,10 @@
 # AVCastController
 
-在投播建立后，调用[avSession.getAVCastController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
-    **说明：**  
-    
-    - 本Interface首批接口从API version 10开始支持。
+在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 10
 
@@ -12,6 +13,12 @@
 <!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
 
 ## setDisplaySurface
 
@@ -36,17 +43,17 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | surfaceId | string | 是 | 设置播放的surfaceId。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，返回当前设置结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，返回当前设置结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600109 | The remote connection is not established |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { media } from '@kit.MediaKit';
@@ -99,11 +106,11 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600109 | The remote connection is not established |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { media } from '@kit.MediaKit';

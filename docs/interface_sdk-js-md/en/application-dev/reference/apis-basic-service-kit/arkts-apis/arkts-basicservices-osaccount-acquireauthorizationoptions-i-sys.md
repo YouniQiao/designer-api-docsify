@@ -1,6 +1,6 @@
 # AcquireAuthorizationOptions (System API)
 
-Defines the options for acquiring the authorization.
+表示获取授权的选项。
 
 **Since:** 24
 
@@ -12,13 +12,19 @@ Defines the options for acquiring the authorization.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## challenge
 
 ```TypeScript
 challenge?: Uint8Array
 ```
 
-Random challenge value, which prevents replay attacks. The value contains a maximum of 32 bytes. The default value is **undefined**.
+随机挑战值，可用于防止重放攻击，长度不得超过32字节，默认为undefined。
 
 **Type:** Uint8Array
 
@@ -42,16 +48,16 @@ Random challenge value, which prevents replay attacks. The value contains a maxi
 interactionContext?: Context
 ```
 
-User interaction context configuration. The default value is **undefined**.
+用户交互上下文配置，默认为undefined。
 
-- If no context is specified, the authorization dialog box is displayed in modal system mode.  
-- If \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ is specified, the authorization dialog box is displayed in modal application mode.  
-- If no valid context is provided, the authorization dialog box cannot be displayed.
+- 未指定上下文时，授权对话框以模态系统模式显示。  
+- 指定[UIAbilityContext](../apis-ability-kit/js-apis-inner-application-uiAbilityContext.md)或  
+[UIExtensionContext](../apis-ability-kit/js-apis-inner-application-uiExtensionContext.md)时，以模态应用模式显示。  
+- 未提供有效上下文时，授权对话框无法显示。
 
-Note: This parameter is valid only when **isInteractionAllowed** is set to **true**.
+**注意**：仅当isInteractionAllowed为true时生效。
 
-**Type:** Context
+**Type:** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c-sys.md)
 
 **Default:** undefined, which means the authorization dialog will be displayed in modal system mode.
 
@@ -73,11 +79,11 @@ Note: This parameter is valid only when **isInteractionAllowed** is set to **tru
 isInteractionAllowed?: boolean
 ```
 
-Whether user interaction is allowed. The default value is **true**.
+是否允许用户交互，默认为true 。
 
-If the value is **true**, the authorization dialog box can be displayed in the interaction context. If the value is **false**, the authorization dialog box cannot be displayed.
+如果为true，则允许在交互上下文中显示授权对话框；如果为false，则不允许显示授权对话框。
 
-Note: This option is valid only when the caller is in the foreground. If the caller is in the background, user interaction is not allowed.
+**注意**：此选项仅在调用者位于前台时生效。如果调用者在后台，则不允许用户交互。
 
 **Type:** boolean
 
@@ -101,9 +107,9 @@ Note: This option is valid only when the caller is in the foreground. If the cal
 isReuseNeeded?: boolean
 ```
 
-Whether to reuse the previous authorization. The default value is **true**.
+是否需要重复用先前的授权，默认为true。
 
-If the value is **true** and the authorization result is valid, the result will be reused. Otherwise, a new authorization will be executed.
+如果为true且存在有效的授权结果，则将复用该结果；否则，将执行新的授权。
 
 **Type:** boolean
 

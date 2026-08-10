@@ -1,6 +1,6 @@
 # PageInfo
 
-Defines the PageInfo type.The value of routerPageInfo indicates the information of the router page, or undefined if the frameNode does not have router page information. And the value of navDestinationInfo indicates the information of the navDestination, or undefined if the frameNode does not have navDestination information.
+Router和NavDestination等页面信息，若无对应的Router或NavDestination页面信息，则对应属性为undefined。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the PageInfo type.The value of routerPageInfo indicates the information 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## navDestinationInfo
 
 ```TypeScript
 navDestinationInfo?: observer.NavDestinationInfo
 ```
 
-the property of navDestination information.
+NavDestination信息。
 
 **Type:** observer.NavDestinationInfo
 
@@ -36,7 +42,7 @@ the property of navDestination information.
 routerPageInfo?: observer.RouterPageInfo
 ```
 
-the property of router page information.
+Router信息。
 
 **Type:** observer.RouterPageInfo
 

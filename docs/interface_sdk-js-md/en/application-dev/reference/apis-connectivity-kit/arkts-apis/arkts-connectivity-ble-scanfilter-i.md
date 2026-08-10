@@ -10,6 +10,12 @@ Describes the criteria for filtering scanning results can be set.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -18,7 +24,7 @@ address?: BluetoothAddress
 
 The address object of a BLE peripheral device, including the address type.
 
-**Type:** BluetoothAddress
+**Type:** [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
 
 **Since:** 23
 
@@ -104,7 +110,7 @@ manufactureId?: int
 
 Manufacture id.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -148,7 +154,7 @@ rssiThreshold?: int
 
 RSSI threshold for filtering advertising that pass through.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

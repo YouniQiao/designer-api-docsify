@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## abilityName
 
 ```TypeScript
@@ -60,7 +66,7 @@ readonly missionId: int
 
 /* 任务ID，多任务中用于与ability进行匹配。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -80,7 +86,7 @@ readonly windowBounds: RRect
 
 /* 动画目标窗口所对应的实际大小。
 
-**类型：** RRect
+**类型：** [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md)
 
 **起始版本：** 9
 

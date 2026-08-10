@@ -4,7 +4,7 @@
 type DataCallback = (deviceId: string, msg: ArrayBuffer) => void
 ```
 
-Defines a callback for receiving data.
+数据接收回调函数类型。
 
 **Since:** 26.1.0
 
@@ -22,6 +22,6 @@ Defines a callback for receiving data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Network ID or UDID of the source device that sends data.  |
-| msg | ArrayBuffer | Yes | Message received, which is binary data in **ArrayBuffer** format. The data format is the same as that of the data sent and is defined by the application layer protocol.  |
+| deviceId | string | Yes | 发送数据的源设备的networkId或UDID。 |
+| msg | ArrayBuffer | Yes | 接收到的数据内容，为ArrayBuffer格式的二进制数据，数据格式与发送端发送的数据格式一致， 由应用层协议定义。 |
 

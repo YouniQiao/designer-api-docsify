@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## max
 
 ```TypeScript
@@ -18,7 +24,7 @@ max: int
 
 最大值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -36,7 +42,7 @@ min: int
 
 最小值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

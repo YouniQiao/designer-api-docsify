@@ -12,6 +12,12 @@ The interface is used to generate network unique identifiers.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## rule
 
 ```TypeScript
@@ -20,7 +26,7 @@ rule: NetUidRule
 
 Rules whether an uid can access to a metered or non-metered network.
 
-**Type:** NetUidRule
+**Type:** [NetUidRule](arkts-network-policy-netuidrule-e-sys.md)
 
 **Since:** 11
 
@@ -38,7 +44,7 @@ Rules whether an uid can access to a metered or non-metered network.
 uid: number
 ```
 
-The warning threshold of traffic, default: DATA\_USAGE\_UNKNOWN.
+The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
 
 **Type:** number
 

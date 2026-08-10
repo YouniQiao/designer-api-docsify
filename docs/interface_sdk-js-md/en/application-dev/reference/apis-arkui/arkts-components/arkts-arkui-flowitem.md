@@ -1,23 +1,20 @@
 # FlowItem
 
-**FlowItem** is a child component of the [WaterFlow]{@link water_flow} container and is used to display specific
-items in the container layout.
+瀑布流组件[WaterFlow]{@link ./water_flow}的子组件，用于展示瀑布流中的具体项。
 
-> **NOTE**
+> **说明：**
 >
 > *
 >
-> * This component can be used only as a child of [WaterFlow]{@link water_flow}.
+> * 仅支持作为[WaterFlow]{@link ./water_flow}组件的子组件使用。
 >
-> * In the swiping scenario, the **FlowItem** component and its child components are frequently created and
-> destroyed. You are advised to encapsulate components in the **FlowItem** component into custom components and
-> decorating them with the @Reusable decorator, making the components reusable and reducing the overhead of
-> repeatedly creating and destroying nodes in the ArkUI framework. For best practices, see
-> [Reusing Components](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-waterflow-performance-optimization#section189041489339).
+> * 在滑动场景中，由于FlowItem及其子组件的频繁创建与销毁，建议将FlowItem中的组件封装为自定义组件，并使用@Reusable装饰器修饰，以增强组件的复用能力，从而减少ArkUI框架内部重复创建和销毁节点的开销。最佳实
+> 践请参考
+> [优化瀑布流加载慢丢帧问题-组件复用](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-waterflow-performance-optimization#section189041489339)。
 
-## Child Components
+## 子组件
 
-This component supports only one child component.
+支持单个子组件。
 
 ## FlowItem
 
@@ -25,7 +22,7 @@ This component supports only one child component.
 FlowItem()
 ```
 
-Creates a child component in the **WaterFlow** layout.
+用于创建瀑布流子组件，仅支持作为[WaterFlow]{@link ./water_flow}组件的子组件使用。
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # PhotoSubType (System API)
 
-Enumerates the [FileAsset]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ types.
+Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md) types.
 
 **Since:** 10
 
@@ -8,7 +8,7 @@ Enumerates the [FileAsset]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ types.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md/arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
 
 <!--Device-userFileManager-enum PhotoSubType--><!--Device-userFileManager-enum PhotoSubType-End-->
 
@@ -30,7 +30,7 @@ Default (photo) type.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.DEFAULT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md#default)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.DEFAULT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md/arkts-medialibrary-photoaccesshelper-photosubtype-e.md#default)
 
 <!--Device-PhotoSubType-DEFAULT--><!--Device-PhotoSubType-DEFAULT-End-->
 
@@ -52,7 +52,7 @@ Screenshots and screen recording files.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md#screenshot)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md/arkts-medialibrary-photoaccesshelper-photosubtype-e.md#screenshot)
 
 <!--Device-PhotoSubType-SCREENSHOT--><!--Device-PhotoSubType-SCREENSHOT-End-->
 
@@ -74,7 +74,7 @@ Photos and videos taken by a camera.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubType.SOURCE_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#source_generic)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubType.SOURCE_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#source_generic)
 
 <!--Device-PhotoSubType-CAMERA--><!--Device-PhotoSubType-CAMERA-End-->
 

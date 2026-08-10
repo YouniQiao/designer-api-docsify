@@ -1,6 +1,6 @@
 # RequestResult
 
-Defines the result of the request for the modal dialog box. It contains **ResultCode** and **ResultWant**.
+模态弹框请求结果，包含结果码ResultCode和请求结果ResultWant。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the result of the request for the modal dialog box. It contains **Result
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { dialogRequest } from 'kits/@kit.AbilityKit';
+```
+
 ## result
 
 ```TypeScript
 result: ResultCode
 ```
 
-Result code of the request.
+表示结果码。
 
-**Type:** ResultCode
+**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Result code of the request.
 want?: Want
 ```
 
-Want information, such as the ability name and bundle name.
+表示Want类型信息，如ability名称，包名等。
 
-**Type:** Want
+**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 10
 

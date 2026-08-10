@@ -1,6 +1,6 @@
 # GwpAsanOptions
 
-GwpAsan Options.
+GWP-ASan����������������Ƿ�ʹ�ܡ�����Ƶ�ʣ��Լ�������Ĳ������
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ GwpAsan Options.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## alwaysEnabled
 
 ```TypeScript
 alwaysEnabled?: boolean
 ```
 
-Control whether to enable GWP-ASan every time
+�����Ƿ�ÿ��������ʹ��GWP-ASan��true��100%ʹ��GWP-ASan��false��1/128����ʹ��GWP-ASan��Ĭ��ֵ��false��
 
 **Type:** boolean
 
@@ -34,7 +40,7 @@ Control whether to enable GWP-ASan every time
 isRecover?: boolean
 ```
 
-the Recoverable mode of GWP-ASAN.
+���ڿ���Ӧ����100%���ʿ���GWP-ASanʱ���Ƿ��Կɻָ�ģʽ���С�true����GWP-ASan��100%���ʿ���ʱ��Ӧ���Կɻָ�ģʽ���С�false����GWP-ASan��100%���ʿ���ʱ��Ӧ���Բ��ɻָ�ģʽ���С�Ĭ��ֵ��false��ע�⣺�ò���ֻ��"��100%���ʿ���GWP-ASan"��������Ч��1/128���ʿ���������Ĭ��Ϊ�ɻָ�������isRecover���ơ�
 
 **Type:** boolean
 
@@ -54,9 +60,9 @@ the Recoverable mode of GWP-ASAN.
 maxSimutaneousAllocations?: int
 ```
 
-the max simutaneous allocations of GWP-ASAN
+������Ĳ������Ĭ��ֵΪ1000����Ҫ�������0����������������С��������ȡ����������þ�ʱ���·�����ڴ潫�����ܼ�ء��ͷ���ʹ�õ��ڴ����ռ�õĲ�۽��Զ����á�����ֵ��<=20000���������ܵ���VMA���ޱ�����
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -72,9 +78,9 @@ the max simutaneous allocations of GWP-ASAN
 sampleRate?: int
 ```
 
-sample rate of GWP-ASAN
+GWP-ASan����Ƶ�ʣ�Ĭ��ֵΪ2500����Ҫ�������0����������������С��������ȡ����1/sampleRate�ĸ��ʶԷ�����ڴ���в���������ֵ��>=1000����С������Ӱ�����ܡ�
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

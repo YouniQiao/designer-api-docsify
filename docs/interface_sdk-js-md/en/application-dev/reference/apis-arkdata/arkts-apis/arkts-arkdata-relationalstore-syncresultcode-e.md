@@ -1,6 +1,6 @@
 # SyncResultCode
 
-Describes the status of device sync.
+描述设备同步状态的枚举。请使用枚举名称而非枚举值。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Describes the status of device sync.
 SUCCESS = 0
 ```
 
-Indicates sync success.
+表示同步成功。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Indicates sync success.
 FAIL = 1
 ```
 
-Indicates sync fail, for detailed reasons, please refer to the message.
+表示同步失败。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Indicates sync fail, for detailed reasons, please refer to the message.
 OFFLINE = 2
 ```
 
-Indicates that the device is offline.
+表示远端设备离线。
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Indicates that the device is offline.
 INVALID_ARGS = 3
 ```
 
-Indicates parameter is invalid.
+表示参数无效。
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ Indicates parameter is invalid.
 DISTRIBUTED_TABLE_NOT_SET = 4
 ```
 
-Indicates that a distributed table is not set.
+表示本端设备或远端设备未设置分布式表。
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ Indicates that a distributed table is not set.
 TABLE_FIELD_MISMATCH = 5
 ```
 
-Indicates that the synchronization field of the peer device is inconsistent with that of the local device.
+表示对端设备与本端设备本地表的同步字段不一致。
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ Indicates that the synchronization field of the peer device is inconsistent with
 DISTRIBUTED_SCHEMA_MISMATCH = 6
 ```
 
-Indicates that the schema field of the peer device is inconsistent with that of the local device.
+表示对端设备与本端设备分布式表的Schema字段不一致，或者存在一个分布式表没有配置Schema。
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ Indicates that the schema field of the peer device is inconsistent with that of 
 BUSY = 7
 ```
 
-Indicates that the database is busy.
+表示数据库繁忙。
 
 **Since:** 26.0.0
 
@@ -160,7 +160,7 @@ Indicates that the database is busy.
 CORRUPTED = 8
 ```
 
-Indicates that the database is corrupted.
+表示数据库损坏。
 
 **Since:** 26.0.0
 
@@ -178,7 +178,7 @@ Indicates that the database is corrupted.
 TIMEOUT = 9
 ```
 
-Indicates synchronization timeout.
+表示同步操作因超时失败。常见原因包括：对端设备数据库未创建、连接中断或网络抖动导致丢包。
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ Indicates synchronization timeout.
 SCHEMA_CHANGED = 10
 ```
 
-Indicates that the table structure changed during the synchronization process.
+表示在同步过程中表结构已更改。
 
 **Since:** 26.0.0
 
@@ -214,7 +214,7 @@ Indicates that the table structure changed during the synchronization process.
 CONSTRAINT_VIOLATION = 11
 ```
 
-Indicates a violation of constraints when synchronizing data.
+表示同步数据时违反约束条件。
 
 **Since:** 26.0.0
 

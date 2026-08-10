@@ -1,6 +1,6 @@
 # SetPropertiesOptions
 
-Represents the options for setting authenticator properties.
+表示用于设置属性的选项。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Represents the options for setting authenticator properties.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## parameters
 
 ```TypeScript
 parameters?: Record<string, Object>
 ```
 
-Custom parameter object. By default, no value is passed in.
+自定义参数对象，默认为空。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Custom parameter object. By default, no value is passed in.
 properties?: Record<string, Object>
 ```
 
-Property object. By default, no value is passed in.
+属性对象，默认为空。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 9
 

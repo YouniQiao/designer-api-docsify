@@ -1,6 +1,6 @@
 # Header
 
-Defines the Web's request/response header.
+Web组件返回的请求/响应头对象。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Defines the Web's request/response header.
 headerKey: string
 ```
 
-Gets the key of the request/response header.
+请求/响应头的key。
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Gets the key of the request/response header.
 headerValue: string
 ```
 
-Gets the value of the request/response header.
+请求/响应头的value。
 
 **Type:** string
 

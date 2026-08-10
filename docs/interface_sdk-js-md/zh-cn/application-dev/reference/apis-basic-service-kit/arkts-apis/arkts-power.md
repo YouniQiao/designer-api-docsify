@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
+## 导入模块
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -31,10 +37,10 @@
 | [getPowerConfig](arkts-basicservices-power-getpowerconfig-f-sys.md#getpowerconfig) | 按场景名称查询电源配置值。 |
 | [hibernate](arkts-basicservices-power-hibernate-f-sys.md#hibernate) | 休眠设备。 |
 | [reboot](arkts-basicservices-power-reboot-f-sys.md#reboot) | 重启设备。 |
-| [refreshActivity](arkts-basicservices-power-refreshactivity-f-sys.md#refreshactivity) | 刷新设备活动状态（如：重设屏幕超时息屏时间等）。  只有设备在活动状态下生效，设备活动状态见[power.isActive]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口。 |
+| [refreshActivity](arkts-basicservices-power-refreshactivity-f-sys.md#refreshactivity) | 刷新设备活动状态（如：重设屏幕超时息屏时间等）。  只有设备在活动状态下生效，设备活动状态见[power.isActive](arkts-basicservices-power-isactive-f.md#isactive)接口。 |
 | [registerShutdownCallback](arkts-basicservices-power-registershutdowncallback-f-sys.md#registershutdowncallback) | 订阅电源关机或重启的回调提醒。使用callback异步回调。 |
 | [setPowerConfig](arkts-basicservices-power-setpowerconfig-f-sys.md#setpowerconfig) | 根据场景名称设置电源配置值。 |
-| [setPowerKeyFilteringStrategy](arkts-basicservices-power-setpowerkeyfilteringstrategy-f-sys.md#setpowerkeyfilteringstrategy) | 设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。  电源键过滤策略见[power.PowerKeyFilteringStrategy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口。 |
+| [setPowerKeyFilteringStrategy](arkts-basicservices-power-setpowerkeyfilteringstrategy-f-sys.md#setpowerkeyfilteringstrategy) | 设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。  电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md)接口。 |
 | [setPowerMode](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode) | 设置当前设备的电源模式。使用callback异步回调。 |
 | [setPowerMode](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-1) | 设置当前设备的电源模式。使用Promise异步回调。 |
 | [setScreenOffTime](arkts-basicservices-power-setscreenofftime-f-sys.md#setscreenofftime) | 设置熄屏超时时间。 |

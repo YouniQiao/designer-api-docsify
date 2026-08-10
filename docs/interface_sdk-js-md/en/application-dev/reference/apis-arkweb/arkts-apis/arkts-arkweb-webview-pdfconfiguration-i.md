@@ -10,13 +10,19 @@ Defines the configuration of creating pdf, related to {@Link createPdf} method.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## height
 
 ```TypeScript
 height: double
 ```
 
-Number of the height. Unit: in.
+Number of the height.
 
 **Type:** double
 
@@ -34,7 +40,7 @@ Number of the height. Unit: in.
 marginBottom: double
 ```
 
-Number of the marginBottom. Unit: in.
+Number of the marginBottom.
 
 **Type:** double
 
@@ -52,7 +58,7 @@ Number of the marginBottom. Unit: in.
 marginLeft: double
 ```
 
-Number of the marginLeft. Unit: in.
+Number of the marginLeft.
 
 **Type:** double
 
@@ -70,7 +76,7 @@ Number of the marginLeft. Unit: in.
 marginRight: double
 ```
 
-Number of the marginRight. Unit: in.
+Number of the marginRight.
 
 **Type:** double
 
@@ -88,7 +94,7 @@ Number of the marginRight. Unit: in.
 marginTop: double
 ```
 
-Number of the marginTop. Unit: in.
+Number of the marginTop.
 
 **Type:** double
 
@@ -142,7 +148,7 @@ Whether background should be printed when creating pdf.
 width: double
 ```
 
-Number of the width. Unit: in.
+Number of the width.
 
 **Type:** double
 

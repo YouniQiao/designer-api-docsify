@@ -1,6 +1,6 @@
 # ColorMode
 
-Enumerates the color modes.
+表示颜色模式的枚举。
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ Enumerates the color modes.
 COLOR_MODE_NOT_SET = -1
 ```
 
-Unspecified color mode.
+未设置颜色模式。
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ Unspecified color mode.
 COLOR_MODE_DARK = 0
 ```
 
-Dark mode.
+深色模式。
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ Dark mode.
 COLOR_MODE_LIGHT = 1
 ```
 
-Light mode.
+浅色模式。
 
 **Since:** 8
 

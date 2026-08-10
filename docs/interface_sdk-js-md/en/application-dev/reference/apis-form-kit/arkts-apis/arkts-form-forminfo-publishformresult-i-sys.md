@@ -12,6 +12,12 @@ The result of publish form.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## code
 
 ```TypeScript
@@ -20,7 +26,7 @@ code: PublishFormErrorCode
 
 The error code.
 
-**Type:** PublishFormErrorCode
+**Type:** [PublishFormErrorCode](arkts-form-forminfo-publishformerrorcode-e-sys.md)
 
 **Since:** 12
 

@@ -10,15 +10,21 @@ The **UserStatus** module, designed for user state awareness, empowers the syste
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
+## Modules to Import
+
+```TypeScript
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-multimodalawareness-userstatus-off-f.md#off) | Disables the age group detection function. |
+| [off](arkts-multimodalawareness-userstatus-off-f.md#off) | Disables the age group detection function.  > **NOTE：** >  > This API is supported only on some phones. Error code **33900003** is returned if it is called on unsupported > phones. |
 | [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offuseragegroupdetected) | Unsubscribe to age group detection feature. |
-| [on](arkts-multimodalawareness-userstatus-on-f.md#on) | Enables the age group detection function.  When the function is enabled, the application can recommend content based on the age group detection result. |
+| [on](arkts-multimodalawareness-userstatus-on-f.md#on) | Enables the age group detection function.  When the function is enabled, the application can recommend content based on the age group detection result.  > **NOTE：** >  > This API is supported only on some phones. Error code **801** is returned if it is called on unsupported phones. |
 | [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onuseragegroupdetected) | Subscribe to age group detection feature. |
 
 <!--Del-->

@@ -1,6 +1,6 @@
 # InsightIntentInfoFilter (System API)
 
-Defines an intent filter, which specifies the criteria for selecting target intents. It is used to filter intents on the device that meet these criteria.
+意图筛选器，描述目标意图的筛选条件，用于筛选设备上符合条件的意图。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Defines an intent filter, which specifies the criteria for selecting target inte
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName?: string
 ```
 
-Bundle name of the application to which the intent belongs.
+目标意图所属的应用包名称。
 
 **Type:** string
 
@@ -40,10 +46,10 @@ Bundle name of the application to which the intent belongs.
 intentFlags: int
 ```
 
-Flag of the intent information ([InsightIntentInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_). It is used to query full or brief intent information. For details, see  
-[GetInsightIntentFlag]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考  
+[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -63,7 +69,7 @@ Flag of the intent information ([InsightIntentInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\
 intentName?: string
 ```
 
-Intent name.
+目标意图名称。
 
 **Type:** string
 
@@ -85,7 +91,7 @@ Intent name.
 moduleName?: string
 ```
 
-Module name of the application to which the intent belongs.
+目标意图所属的模块名称。
 
 **Type:** string
 
@@ -107,13 +113,13 @@ Module name of the application to which the intent belongs.
 userId?: int
 ```
 
-ID of the user to which the intent belongs.
+目标意图所属的用户ID。
 
-**NOTE**
+**说明：**
 
-If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS permission.
+如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限`ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

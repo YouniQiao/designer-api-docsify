@@ -1,6 +1,6 @@
 # LineMetrics
 
-Describes the measurement information of a single line of text in the text layout.
+描述文本布局中单行文字的度量信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the measurement information of a single line of text in the text layou
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## ascent
 
 ```TypeScript
 ascent: double
 ```
 
-Text ascent height, which refers to the distance from the baseline to the top of characters, in physical pixels (px).
+文字上升高度，即从基线到字符顶部的距离，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Text ascent height, which refers to the distance from the baseline to the top of
 baseline: double
 ```
 
-Y coordinate of the baseline in the line relative to the top of the paragraph, in physical pixels (px).
+该行基线相对于段落顶部的 Y 坐标位置，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ Y coordinate of the baseline in the line relative to the top of the paragraph, i
 descent: double
 ```
 
-Text descent height, which refers to the distance from the baseline to the bottom of characters, in physical pixels (px).
+文字下降高度，即从基线到字符底部的距离，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -76,9 +82,9 @@ Text descent height, which refers to the distance from the baseline to the botto
 endIndex: int
 ```
 
-End index of the line in the text buffer.
+文本缓冲区中该行结束的索引位置。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -96,9 +102,9 @@ End index of the line in the text buffer.
 height: double
 ```
 
-Height of the current line, in physical pixels (px). The calculation method is \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+当前行的高度，单位为物理像素px，计算方式为 `Math.round(ascent + descent)`
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -116,10 +122,9 @@ Height of the current line, in physical pixels (px). The calculation method is \
 left: double
 ```
 
-Left edge position of a line, in physical pixels (px). The right edge is the value of **left** plus the value of  
-**width**.
+行的左边缘位置，单位为物理像素px。右边缘可通过 `left+width` 计算得出。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -137,9 +142,9 @@ Left edge position of a line, in physical pixels (px). The right edge is the val
 lineNumber: int
 ```
 
-Line number, starting from 0.
+行号，从0开始计数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -157,9 +162,9 @@ Line number, starting from 0.
 runMetrics: Map<int, RunMetrics>
 ```
 
-Mapping between the text index range and the associated font measurement information.
+文本索引范围与关联的字体度量信息之间的映射。
 
-**Type:** Map&lt;int, RunMetrics&gt;
+**Type:** ArkTS-Dyn: Map&lt;number, RunMetrics&gt;  <br>ArkTS-Sta：Map&lt;int, RunMetrics&gt;
 
 **Since:** 12
 
@@ -177,9 +182,9 @@ Mapping between the text index range and the associated font measurement informa
 startIndex: int
 ```
 
-Start index of the line in the text buffer.
+文本缓冲区中该行开始的索引位置。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -197,9 +202,9 @@ Start index of the line in the text buffer.
 topHeight: double
 ```
 
-Height from the top to the current line, in physical pixels (px).
+从顶部到当前行的高度，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -217,9 +222,9 @@ Height from the top to the current line, in physical pixels (px).
 width: double
 ```
 
-Width of a line, in physical pixels (px).
+行的宽度，单位为物理像素px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

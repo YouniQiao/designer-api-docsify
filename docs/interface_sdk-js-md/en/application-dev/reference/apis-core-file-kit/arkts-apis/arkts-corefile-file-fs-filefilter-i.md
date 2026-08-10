@@ -1,6 +1,6 @@
 # FileFilter
 
-Describes a file name filter, which can be used to customize file name filtering rules.
+文件名过滤器接口，可通过该接口自定义文件名过滤规则。
 
 **Since:** 26.0.0
 
@@ -10,17 +10,23 @@ Describes a file name filter, which can be used to customize file name filtering
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## filter
 
 ```TypeScript
 filter(name: string): boolean
 ```
 
-Filters files of the [listFileExt]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [listFileExtSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API and determines whether a specified file name should be included in the returned file list.
-    **NOTE**  
-    
-    This function is frequently called. Do not perform time-consuming operations, such as file I/O operations and  
-    network requests.
+用于[listFileExt](arkts-corefile-fileio-listfileext-f.md#listfileext)或[listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listfileextsync)接口的文件过滤，判断指定文件名是否应包含在返回的文件列表中。
+
+> **说明：**
+> 
+> 该函数调用频率较高，请避免执行耗时操作，如文件I/O、网络请求等。
 
 **Since:** 26.0.0
 
@@ -36,11 +42,11 @@ Filters files of the [listFileExt]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [list
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name or relative path of the file to be filtered. In recursive mode, the value is a relative file path, which starts with a slash (/). |
+| name | string | Yes | 待过滤的文件名或文件相对路径。递归模式下为文件的相对路径，相对路径以“/”开头。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the file is included in the returned file list. The value **true** indicates the file is included, and the value **false** indicates the opposite. |
+| boolean | 表示是否包含在返回的文件列表中。true：包含该文件；false：不包含该文件。 |
 

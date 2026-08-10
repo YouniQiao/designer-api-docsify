@@ -1,6 +1,6 @@
 # ResolvedUIContext
 
-Defines the result of UIContext.resolveUIContext.This class is a subclass of UIContext and additionally provides the strategy used to obtain this UIContext.
+UIContext.resolveUIContext接口的返回值类型，属于UIContext类型的子类，额外包含获取该UIContext的解析策略。
 
 **Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
@@ -12,15 +12,21 @@ Defines the result of UIContext.resolveUIContext.This class is a subclass of UIC
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## strategy
 
 ```TypeScript
 strategy: ResolveStrategy
 ```
 
-Resolving strategy of the UIContext.
+UIContext的解析策略
 
-**Type:** ResolveStrategy
+**Type:** [ResolveStrategy](arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
 
 **Since:** 23
 

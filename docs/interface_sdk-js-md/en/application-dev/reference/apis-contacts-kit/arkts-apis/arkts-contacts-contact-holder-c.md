@@ -1,6 +1,6 @@
 # Holder
 
-Defines an application that creates the contact.
+创建联系人的应用信息类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines an application that creates the contact.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## bundleName
 
 ```TypeScript
 readonly bundleName: string
 ```
 
-Bundle name. The default value is **com.ohos.contacts**.
+Bundle名称，默认值为com.ohos.contacts。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Bundle name. The default value is **com.ohos.contacts**.
 readonly displayName?: string
 ```
 
-Application name.
+应用名称，默认值为空。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Application name.
 holderId?: number
 ```
 
-Application ID.
+应用Id，默认值为空。
 
 **Type:** number
 

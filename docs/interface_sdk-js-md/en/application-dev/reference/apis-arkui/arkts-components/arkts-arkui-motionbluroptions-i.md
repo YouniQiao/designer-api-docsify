@@ -1,6 +1,6 @@
 # MotionBlurOptions
 
-Defines motion blur options.
+运动模糊选项。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines motion blur options.
 anchor: MotionBlurAnchor
 ```
 
-Coordinates of the motion blur anchor. They must be the same as those of the animation scaling anchor.
+运动模糊锚点坐标。运动模糊锚点坐标设置时需要与动画缩放的锚点保持一致设置。
 
-**Type:** MotionBlurAnchor
+**Type:** [MotionBlurAnchor](../arkts-apis/arkts-arkui-common-motionbluranchor-i.md)
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Coordinates of the motion blur anchor. They must be the same as those of the ani
 radius: number
 ```
 
-Blur radius. The value range is [0.0, ∞). You are advised to set it to a value less than 1.0.
+模糊半径，取值范围[0.0, ∞)，建议设置1.0以内。
 
 **Type:** number
 

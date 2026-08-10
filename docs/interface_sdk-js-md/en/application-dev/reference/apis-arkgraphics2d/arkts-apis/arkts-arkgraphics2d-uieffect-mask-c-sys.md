@@ -1,6 +1,6 @@
 # Mask (System API)
 
-Mask effect class, used as input for Filter and VisualEffect. Different types of Mask provide different grayscale distribution patterns, such as wave ring masks, radial gradients, pixel map masks, etc.
+Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的Mask提供不同的灰度分布模式，如波环遮罩、径向渐变、像素图遮罩等。
 
 **Since:** 20
 
@@ -12,6 +12,12 @@ Mask effect class, used as input for Filter and VisualEffect. Different types of
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## createPixelMapMask
 
 ```TypeScript
@@ -19,7 +25,7 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
       fillColor?: Color): Mask
 ```
 
-Creates a Mask instance with scaling effect by inputting a pixelMap, the area of the pixelMap to be drawn,the drawing area of the mounted node, and the color to fill outside the drawing area.
+通过输入的pixelMap，以及pixelMap的待绘制区域、挂载节点的绘制区域和绘制区域外填充的颜色创建具有缩放效果的Mask实例。
 
 **Since:** 20
 
@@ -35,31 +41,31 @@ Creates a Mask instance with scaling effect by inputting a pixelMap, the area of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
-| srcRect | common2D.Rect | Yes | The area of the pixelMap to be drawn. The leftmost and topmost positions correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
-| dstRect | common2D.Rect | Yes | The drawing area of the pixelMap on the node where the mask is mounted. The leftmost and topmost positions of the node correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
-| fillColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The color to fill the area outside the pixelMap drawing area on the node. Each component range is [0, 1], default is transparent color. Values less than 0 are treated as 0, and values greater than 1 are treated as 1. |
+| pixelMap | image.PixelMap | Yes | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
+| srcRect | common2D.Rect | Yes | pixelMap的待绘制区域。 图片最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top，违反约束时效果不生效。 |
+| dstRect | common2D.Rect | Yes | pixelMap在mask挂载的节点上的绘制区域。 节点最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top，违反约束时效果不生效。 |
+| fillColor | [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | No | 节点上在pixelMap绘制区域之外的区域填充的颜色， 各元素取值范围为[0, 1]，默认透明色，小于0的转为0，大于1的转为1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a Mask instance created based on the pixelMap. |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回基于pixelMap创建的Mask实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { uiEffect, common2D } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { uiEffect, common2D } from '@kit.ArkGraphics2D';
 import { BusinessError } from '@kit.BasicServicesKit'
 
-const color = new ArrayBuffer(96);
+const colorBuffer = new ArrayBuffer(96);
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -68,7 +74,7 @@ let opts : image.InitializationOptions = {
     width: 6
   }
 }
-image.createPixelMap(color, opts).then((pixelMap) => {
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
   let srcRect : common2D.Rect = {
     left: 0,
     top: 0,
@@ -89,7 +95,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
   }
   let mask = uiEffect.Mask.createPixelMapMask(pixelMap, srcRect, dstRect, fillColor);
 }).catch((error: BusinessError)=>{
-  console.error('Failed to create pixelmap. code is ${error.code}, message is ${error.message}');
+  console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
 })
 ```
 
@@ -99,7 +105,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 static createPixelMapMask(pixelMap: image.PixelMap): Mask
 ```
 
-Creates a Mask instance by inputting a pixelMap. This interface does not perform scaling on the input pixelMap.
+通过输入的pixelMap创建Mask实例。该接口不会对传入的pixelMap进行缩放处理。
 
 **Since:** 22
 
@@ -115,21 +121,21 @@ Creates a Mask instance by inputting a pixelMap. This interface does not perform
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
+| pixelMap | image.PixelMap | Yes | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a Mask with the pixelMap. |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回具有pixelMap的Mask。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
@@ -149,7 +155,11 @@ struct Index {
   @State tintColorG: number = 1.;
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
-  @State pixelMapDistort: image.PixelMap | undefined = this.getPixelMap();
+  @State pixelMapDistort: image.PixelMap | undefined = undefined;
+
+  aboutToAppear(): void {
+    this.pixelMapDistort = this.getPixelMap();
+  }
 
   private getPixelMap(): image.PixelMap | undefined {
     try {
@@ -160,7 +170,11 @@ struct Index {
       if (!imageSource) {
         return undefined;
       }
-      const pixelMap: image.PixelMap = imageSource.createPixelMapSync();
+      const pixelMap: image.PixelMap | null = imageSource.createPixelMapSync();
+      if (!pixelMap) {
+        imageSource.release();
+        return undefined;
+      }
       imageSource.release();
       return pixelMap;
     } catch (err) {
@@ -168,8 +182,12 @@ struct Index {
     }
   }
 
-  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
+  private getMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
+    let distortMask: uiEffect.Mask | undefined = undefined;
+    if (this.pixelMapDistort) {
+      distortMask = uiEffect.Mask.createPixelMapMask(this.pixelMapDistort);
+    }
     effect.liquidMaterial({
       enable: true,
       distortProgress : this.distortProgress,
@@ -182,7 +200,7 @@ struct Index {
       ripplePosition: undefined,
     },
       uiEffect.Mask.createUseEffectMask(true),
-      uiEffect.Mask.createPixelMapMask (this.pixelMapDistort), // Example of using createImageMask.
+      distortMask
       );
     return effect;
   }
@@ -195,7 +213,7 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.GetMaterialVisualEffect())
+          .visualEffect(this.getMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,
@@ -222,7 +240,7 @@ static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY
       gradients: Array<[double, double]>): Mask
 ```
 
-Creates an elliptical mask Mask instance by inputting the center position of the ellipse,the semi-major and semi-minor axes, and shape parameters.
+通过输入椭圆中心点的位置、长短轴和形状参数创建椭圆遮罩效果Mask实例。
 
 **Since:** 20
 
@@ -238,22 +256,22 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes | Sets the center point of the ellipse. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| radiusX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the semi-major axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| radiusY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the semi-minor axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| gradients | ArkTS-Dyn: Array&lt;[number, number]&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;[double, double]&gt; | Yes | The binary arrays in the array represent gradients: [RGBA color, position]. The RGBA color uses the same value for all four channels, which can be regarded as a grayscale value; position represents the distribution position of the RGBA color along the radial direction outward. Both RGBA color and position have a value range of [0, 1], floating-point values are supported, values less than 0 are treated as 0, and values greater than 1 are treated as 1. The position parameter values must be strictly increasing, the number of binary arrays in the Array must be greater than or equal to 2, and the elements in the binary arrays must not be empty; otherwise the elliptical distribution effect will not take effect. |
+| center | common2D.Point | Yes | 设置椭圆的中心点，[0, 0]为组件左上角，[1, 1]为组件的右下角。 取值范围为[-10, 10]，可取浮点数，超出边界会在实现时自动截断。 |
+| radiusX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 设置椭圆的长轴，半径为1等于组件的高度。 取值范围为[0, 10]，可取浮点数，超出边界会在实现时自动截断。 |
+| radiusY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 设置椭圆的短轴，半径为1等于组件的高度。 取值范围为[0, 10]，可取浮点数，超出边界会在实现时自动截断。 |
+| gradients | ArkTS-Dyn: Array&lt;[number, number]&gt;  <br>ArkTS-Sta：Array&lt;[double, double]&gt; | Yes | 数组中保存的二元数组表示梯度：[RGBA颜色, 位置]。 RGBA颜色四通道使用相同的值，可看作一个灰度值；位置表示沿径向方向向外时RGBA颜色对应的分布位置； RGBA颜色与位置的取值范围均为[0, 1]，可取浮点数，小于0的转为0，大于1的转为1。 位置参数值须严格递增，Array数组中二元数组个数必须大于等于2，二元数组中的元素不能为空，否则该椭圆分布效果不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a grayscale Mask with the elliptical radial distribution effect. |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回椭圆形状的径向分布效果的灰度Mask。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
 ## createRippleMask
 
@@ -267,7 +285,7 @@ ArkTS-Sta:
 static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask
 ```
 
-Creates a wave ring mask Mask instance by inputting the center position, radius, and width of the wave ring.
+通过输入波环圆心的位置、半径和宽度创建波环遮罩效果Mask实例。
 
 **Since:** 20
 
@@ -283,27 +301,27 @@ Creates a wave ring mask Mask instance by inputting the center position, radius,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes | Sets the position of the wave ring center on the component. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], and values outside the range will be clamped during implementation. |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the radius of the wave ring, using normalized values. When the radius is 1, the wave ring radius equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the width of the wave ring, using normalized values. When the width is 1, the wave ring width equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Sets the offset of the wave peak position. The default value is 0, meaning the wave peak is at the exact center of the wave ring; -1.0 means the wave peak is at the innermost edge of the wave ring; 1.0 means the wave peak is at the outermost edge of the wave ring. The value range is [-1, 1], and values outside the range will be clamped during implementation. |
+| center | common2D.Point | Yes | 设置波环圆心在组件上的位置，[0, 0]为组件左上角，[1, 1]为组件的右下角。 取值范围为[-10, 10]，超出边界会在实现时自动截断。 |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 设置波环的半径，使用归一化值。半径为1时，波环半径等于组件高度。 取值范围为[0, 10]，超出边界会在实现时自动截断。 |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 设置波环的宽度，使用归一化值。宽度为1时，波环宽度等于组件高度。 取值范围为[0, 10]，超出边界会在实现时自动截断。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 设置波峰位置的偏移。 默认值为0，表示波峰在波环的正中心；-1.0表示波峰在波环的最内侧；1.0表示波峰在波环的最外侧。 取值范围为[-1, 1]，超出边界会在实现时自动截断。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a Mask with the wave ring mask effect. |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回具有波环遮罩效果的Mask。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-let mask = uiEffect.Mask.createRippleMask({x:0.5, y:1.0}, 0.5, 0.3, 0.0);
+let mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 1.0}, 0.5, 0.3, 0.0);
 ```
 
 ## createUseEffectMask
@@ -312,7 +330,7 @@ let mask = uiEffect.Mask.createRippleMask({x:0.5, y:1.0}, 0.5, 0.3, 0.0);
 static createUseEffectMask(useEffect: boolean): Mask
 ```
 
-Creates and sets a Mask instance indicating whether to use blur caching. This Mask instance is specifically designed for the useEffectMask parameter of the liquidMaterial method, used to declare whether the material effect uses blur caching to improve performance. When this Mask instance is used with other Filter or VisualEffect methods, the useEffect property may not take effect.
+创建并设置Mask实例是否使用模糊缓存。此Mask实例专为liquidMaterial方法的useEffectMask参数设计， 用于声明材质效果是否使用模糊缓存以提升性能。将此Mask实例用于其他Filter或VisualEffect方法时， useEffect属性可能不生效。
 
 **Since:** 22
 
@@ -328,21 +346,21 @@ Creates and sets a Mask instance indicating whether to use blur caching. This Ma
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| useEffect | boolean | Yes | Flag indicating whether to use blur caching. A value of true means use, and the blur effect will be displayed normally; a value of false means not use, and the blur effect will not be displayed. |
+| useEffect | boolean | Yes | 标记是否使用模糊缓存。值为true，表示使用，会正常显示模糊效果；值为false，表示不使用，不显示模糊效果。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a Mask instance that indicates whether to use blur caching. |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回标记是否使用模糊缓存的Mask实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
@@ -361,7 +379,7 @@ struct Index {
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
 
-  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
+  private getMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
     effect.liquidMaterial({
         enable: true,
@@ -387,7 +405,7 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.GetMaterialVisualEffect())
+          .visualEffect(this.getMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,
@@ -414,7 +432,7 @@ static createWaveGradientMask(center: common2D.Point, width: double, propagation
       blurRadius: double, turbulenceStrength?: double): Mask
 ```
 
-Creates a single-wave mask Mask instance by inputting the wave source center position and single-wave parameters.
+输入波源中心位置、单波参数创建单波遮罩效果Mask实例。
 
 **Since:** 20
 
@@ -430,25 +448,25 @@ Creates a single-wave mask Mask instance by inputting the wave source center pos
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes | Sets the center point of the single-wave source. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the width of the single-wave ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| propagationRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the outer diffusion radius of the single-wave ring. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| blurRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the blur outer radius of the single-wave ring. A blur radius of 0 results in a solid-edge ring; otherwise, it is a soft-edge ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| turbulenceStrength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Sets the turbulence intensity of the single-wave ring. The default value is 0; an intensity of 0 results in a regular ring, otherwise the ring edges will be turbulently distorted. The value range is [-1, 1], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| center | common2D.Point | Yes | 设置单波波源的中心点，[0, 0]为组件左上角，[1, 1]为组件的右下角。 取值范围为[-10, 10]，可取浮点数，超出边界会在实现时自动截断。 |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 设置单波圆环的宽度。 取值范围为[0, 5]，可取浮点数，超出边界会在实现时自动截断。 |
+| propagationRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 设置单波圆环的扩散外径。 取值范围为[0, 10]，可取浮点数，超出边界会在实现时自动截断。 |
+| blurRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 设置单波圆环的模糊外径，模糊半径为0则是实边圆环，否则是虚边圆环。 取值范围为[0, 5]，可取浮点数，超出边界会在实现时自动截断。 |
+| turbulenceStrength | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 设置单波圆环的湍流强度，默认值为0，强度为0则是规则圆环，否则圆环边缘会湍流扭曲。 取值范围为[-1, 1]，可取浮点数，超出边界会在实现时自动截断。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a grayscale Mask with a single wave shape. |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回单个水波形状的灰度Mask。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uiEffect } from "@kit.ArkGraphics2D";

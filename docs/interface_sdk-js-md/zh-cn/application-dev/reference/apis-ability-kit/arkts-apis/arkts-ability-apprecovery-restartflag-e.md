@@ -1,6 +1,6 @@
 # RestartFlag
 
-应用重启标志，[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口重启选项参数，该类型为枚举。
+应用重启标志，[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口重启选项参数，该类型为枚举。
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ ALWAYS_RESTART = 0
 RESTART_WHEN_JS_CRASH = 0x0001
 ```
 
-发生JS\_CRASH时重启应用。
+发生JS_CRASH时重启应用。
 
 **起始版本：** 9
 
@@ -52,7 +52,7 @@ RESTART_WHEN_JS_CRASH = 0x0001
 RESTART_WHEN_APP_FREEZE = 0x0002
 ```
 
-发生APP\_FREEZE时重启应用。
+发生APP_FREEZE时重启应用。
 
 **起始版本：** 9
 
@@ -88,7 +88,7 @@ NO_RESTART = 0xFFFF
 RESTART_WHEN_CPP_CRASH = 0x0004
 ```
 
-发生CPP\_CRASH时重启应用。
+发生CPP_CRASH时重启应用。
 
 **模型约束**：此接口仅可在Stage模型下使用。
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## notify
 
 ```TypeScript
@@ -18,7 +24,7 @@ notify?: NotifyDescription
 
 企业自定义更新通知说明。
 
-**类型：** NotifyDescription
+**类型：** [NotifyDescription](arkts-mdm-systemmanager-notifydescription-i.md)
 
 **起始版本：** 12
 

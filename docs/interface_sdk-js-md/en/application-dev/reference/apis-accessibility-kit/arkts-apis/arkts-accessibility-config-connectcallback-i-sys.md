@@ -1,6 +1,6 @@
 # ConnectCallback (System API)
 
-Callback provided when the [enableAbilityWithCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API is called to enable an accessibility extension ability. This callback will be invoked when the connection to an auxiliary extension ability is disconnected.
+通过[enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback)接口启用辅助扩展应用时提供的回调函数。辅助扩展应用连接断开时，回调函数将被调用。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Callback provided when the [enableAbilityWithCallback]\_\_\_JSDOC\_LINK\_DESC\_U
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { config } from 'kits/@kit.AccessibilityKit';
+```
+
 ## onDisconnect
 
 ```TypeScript
 onDisconnect: OnDisconnectCallback
 ```
 
-Callback to be invoked when the connection to an auxiliary extension ability is disconnected.
+辅助扩展应用的连接断开时调用的回调函数。
 
 **Since:** 23
 

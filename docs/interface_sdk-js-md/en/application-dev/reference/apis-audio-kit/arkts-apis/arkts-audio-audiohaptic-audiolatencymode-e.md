@@ -1,6 +1,6 @@
 # AudioLatencyMode
 
-Enumerates the audio latency modes.
+枚举，音频时延模式。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the audio latency modes.
 AUDIO_LATENCY_MODE_NORMAL = 0
 ```
 
-Normal latency mode.
+普通时延模式。
 
 **Since:** 11
 
@@ -32,8 +32,7 @@ Normal latency mode.
 AUDIO_LATENCY_MODE_FAST = 1
 ```
 
-Low latency mode. This mode is applicable to short audio files. A long audio file may be truncated in this mode.It functions the same as  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+低时延模式。当音频文件过长时可能被截断，该特性与[SoundPool](../../apis-media-kit/arkts-apis/arkts-media-soundpool-soundpool-i.md/arkts-media-soundpool-soundpool-i.md)一致。
 
 **Since:** 11
 

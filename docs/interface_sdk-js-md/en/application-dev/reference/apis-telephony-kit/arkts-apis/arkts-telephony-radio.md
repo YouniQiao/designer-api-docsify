@@ -10,6 +10,12 @@ Provides interfaces for applications to obtain the network state, cell informati
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## Summary
 
 ### Functions

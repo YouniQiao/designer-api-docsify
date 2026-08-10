@@ -1,6 +1,6 @@
 # ImmersiveOptions
 
-Immersive material parameters.
+沉浸式材质参数。
 
 **Since:** 26.0.0
 
@@ -10,19 +10,25 @@ Immersive material parameters.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiMaterial } from 'kits/@kit.ArkUI';
+```
+
 ## applyShadow
 
 ```TypeScript
 applyShadow?: boolean
 ```
 
-Whether to add a shadow effect for a material.
+是否添加材质的阴影效果。
 
-If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
+当该参数为true时，材质中的阴影效果固定生效，优先于[shadow](arkts-arkui-common-commonmethod-i.md#shadow)通用属性。当该参数为false时，shadow通用属性生效，材质的阴影效果不生效。
 
-Note: This parameter takes effect only for the display effect of devices with all levels of computing power.
+**说明：**该参数仅对所有档位的算力设备的显示效果生效。
 
-Default value: **true
+默认值：true
 
 **Type:** boolean
 
@@ -44,27 +50,25 @@ Default value: **true
 colorInvert?: boolean
 ```
 
-Whether the subtree of the node of the material object automatically adapts the material to the complementary color of the background color.
+设置了材质对象的节点的子树是否自动适配材质到背景色的反色。
 
-**false** indicates the material is not automatically adapted to the complementary color of the background color.
+若为false，则不会自动反色。
 
-**true** indicates that the material is automatically adapted to the complementary color of the background color only when the material layer is thin enough. The materials that can be adapted to the complementary color are defined by the system. Such materials must have at least the **THIN** or **ULTRA\_THIN** style, and are related to the strength configuration of the immersive light effect of the application. The thinner the material and the stronger the immersive light effect, the more likely the material meets the requirements for adapting to the complementary color.
+若为true，则只有材质参数足够薄时才会自动反色。具体能反色的材质由系统定义，材质样式至少为THIN或ULTRA_THIN，且与设置应用的沉浸光感的强弱配置相关。材质越薄、沉浸光感越强，越容易符合反色材质的要求。
 
-The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the **Text** component,  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ of the **Button** component,  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ of the **SymbolGlyph** component,  
-[fillColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ of the **Image** component, icon colors in  
-[placeholderColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_, [fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_, and  
-[searchIcon]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ of the **Search** component, icon colors in  
-[cancelButton]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_, caret colors in  
-[caretStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_, and text and icon colors in  
-[tabBar]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_ of the  
-**TabContent** component when the [BottomTabBarStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_ style is used.
+自动反色能力仅对部分属性接口设置特殊资源值时生效，生效的属性接口包括：Text组件的[fontColor](arkts-arkui-text-textattribute-i.md#fontcolor)，Button组件的  
+[fontColor](arkts-arkui-button-buttonattribute-i.md#fontcolor)，SymbolGlyph组件的  
+[fontColor](arkts-arkui-symbolglyph-symbolglyphattribute-i.md#fontcolor)，Image组件的  
+[fillColor](arkts-arkui-image-imageattribute-i.md#fillcolor)，Search组件的  
+[placeholderColor](arkts-arkui-search-searchattribute-i.md#placeholdercolor)、[fontColor](arkts-arkui-search-searchattribute-i.md#fontcolor)、  
+[searchIcon](arkts-arkui-search-searchattribute-i.md#searchicon)中的图标颜色、[cancelButton](arkts-arkui-search-searchattribute-i.md#cancelbutton)中的图标颜色、  
+[caretStyle](arkts-arkui-search-searchattribute-i.md#caretstyle)中的光标颜色，TabContent组件的  
+[tabBar](arkts-arkui-tabcontent-tabcontentattribute-i.md#tabbar)属性使用  
+[BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md)样式时其中的文本和图标颜色。
 
-Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
+**说明：**该参数仅对高档和中档算力设备的显示效果生效。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -86,11 +90,11 @@ Default value: **false
 interactive?: boolean
 ```
 
-Whether to set an interactive deformation effect for the component with a material set.
+是否为设置材质的组件设置交互形变效果。
 
-Note: This parameter takes effect for the display effect of devices with all levels of computing power.
+**说明：**该参数对所有档位的算力设备的显示效果生效。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -112,13 +116,13 @@ Default value: **false
 lightEffect?: LightEffectOptions | null
 ```
 
-Whether to set a light sensing interaction feedback effect for the component with a material set. If this parameter is set to null, the light sensing interaction feedback effect is disabled.
+是否为设置材质的组件设置光感交互反馈效果。当该参数为null时，禁用光感交互反馈效果。
 
-Note: This parameter takes effect for the display effect of devices with all levels of computing power.
+**说明：**该参数对所有档位的算力设备的显示效果生效。
 
-Default value: **undefined**, indicating that the light sensing interaction feedback effect is not set.
+默认值：undefined，不设置光感交互反馈效果。
 
-**Type:** LightEffectOptions \| null
+**Type:** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) \| null
 
 **Since:** 26.0.0
 
@@ -136,13 +140,13 @@ Default value: **undefined**, indicating that the light sensing interaction feed
 materialColor?: ResourceColor
 ```
 
-Coloring of the material layer. This parameter is used to add a pure color effect for the material filter. The pure color must have a certain transparency value and cannot be completely opaque. Otherwise, the material filter effect will be completely blocked.
+材质层赋色，该参数会为材质滤镜再混合一层纯色效果。该颜色需要带一定的透明度值，不能为纯不透明的颜色，否则会将材质滤镜效果完全遮挡。
 
-Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
+**说明：**该参数仅对高档和中档算力设备的显示效果生效。
 
-Default value: **Color.Transparent
+默认值：Color.Transparent
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
@@ -162,13 +166,13 @@ Default value: **Color.Transparent
 style?: ImmersiveStyle
 ```
 
-Material style. Different styles correspond to different material parameters, which affect the material thickness.
+材质样式。不同样式对应不同的材质参数，影响材质的厚度。
 
-Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
+**说明：**该参数仅对高档和中档算力设备的显示效果生效。
 
-Default value: **ImmersiveStyle.REGULAR
+默认值：ImmersiveStyle.REGULAR
 
-**Type:** ImmersiveStyle
+**Type:** [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
 
 **Default:** uiMaterial.ImmersiveStyle.REGULAR
 

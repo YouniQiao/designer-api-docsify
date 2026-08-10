@@ -12,6 +12,12 @@ Session information of a tool execution.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cliManager } from 'kits/@kit.AbilityKit';
+```
+
 ## result
 
 ```TypeScript
@@ -20,7 +26,7 @@ result?: ExecResult
 
 Indicates the execution result, has a value when status is completed or failed.
 
-**Type:** ExecResult
+**Type:** [ExecResult](arkts-ability-climanager-execresult-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ status: SessionStatus
 
 Indicates status of session.
 
-**Type:** SessionStatus
+**Type:** [SessionStatus](arkts-ability-climanager-sessionstatus-e-sys.md)
 
 **Since:** 26.0.0
 

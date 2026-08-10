@@ -1,11 +1,8 @@
 # WebDataBase
 
-Implements a **WebDataBase** object.
-    **NOTE**  
-    
-    - The sample effect is subject to the actual device.  
-    
-    - You must load the **Web** component before calling the APIs in **WebDataBase**.
+Implements a WebDataBase object.
+
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;You must load the Web component before calling the APIs in WebDataBase.&lt;/p&gt;
 
 **Since:** 23
 
@@ -14,6 +11,12 @@ Implements a **WebDataBase** object.
 <!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
 
 ## deleteHttpAuthCredentials
 
@@ -37,7 +40,7 @@ Deletes all HTTP authentication credentials saved in the cache. This API returns
 static existHttpAuthCredentials(): boolean
 ```
 
-Checks whether any saved HTTP authentication credentials exist. This API returns the result synchronously.
+Get whether instances holds any http authentication credentials.
 
 **Since:** 23
 
@@ -51,7 +54,7 @@ Checks whether any saved HTTP authentication credentials exist. This API returns
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether any saved HTTP authentication credentials exist. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** is returned if any saved HTTP authentication credentials exist; otherwise, **false** is returned. |
+| boolean | true if instances saved any http authentication credentials otherwise false. |
 
 ## getHttpAuthCredentials
 
@@ -59,7 +62,7 @@ Checks whether any saved HTTP authentication credentials exist. This API returns
 static getHttpAuthCredentials(host: string, realm: string): Array<string>
 ```
 
-Retrieves HTTP authentication credentials for a given host and realm. This API returns the result synchronously.
+Get http authentication credentials.
 
 **Since:** 23
 
@@ -73,20 +76,20 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Host to which the HTTP authentication credential is applied. |
-| realm | string | Yes | Realm to which the HTTP authentication credential is applied. |
+| host | string | Yes | The host to which the credentials apply. |
+| realm | string | Yes | The realm to which the credentials apply. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of the matching user names and passwords is returned if the operation is successful; otherwise, an empty array is returned. |
+| Array&lt;string&gt; | Return an array containing username and password. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveHttpAuthCredentials
 
@@ -108,8 +111,8 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Host to which the HTTP authentication credential is applied. |
-| realm | string | Yes | Realm to which the HTTP authentication credential is applied. |
+| host | string | Yes | Host to which HTTP authentication credentials apply. |
+| realm | string | Yes | Realm to which HTTP authentication credentials apply. |
 | username | string | Yes | User name. |
 | password | string | Yes | Password. |
 
@@ -117,5 +120,5 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 

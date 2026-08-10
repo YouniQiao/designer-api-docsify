@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
+## 导入模块
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -28,7 +34,7 @@ constructor()
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
-**示例：**
+## 示例
 
 ```TypeScript
 let documentPicker = new picker.DocumentViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
@@ -41,7 +47,7 @@ constructor(context: Context)
 ```
 
 创建DocumentViewPicker对象，推荐使用该构造函数，获取context参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12)。
 
 **起始版本：** 12
 
@@ -57,13 +63,13 @@ constructor(context: Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 @Entry
 @Component
 struct Index {
@@ -94,9 +100,10 @@ constructor(context: Context, window: window.Window)
 ```
 
 应用自行创建窗口中，可用通过该构造函数创建DocumentViewPicker对象。一般场景推荐使用constructor(context: Context)方法创建DocumentViewPicker对象。
-    **说明：**  
-    
-    从API version 19开始，2in1和Tablet设备支持该方法。
+
+> **说明：**
+> 
+> 从API version 19开始，2in1和Tablet设备支持该方法。
 
 **起始版本：** 13
 
@@ -110,15 +117,15 @@ constructor(context: Context, window: window.Window)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
 | window | window.Window | 是 | 应用创建的窗口实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
 import { window } from '@kit.ArkUI';
-
 @Entry
 @Component
 struct Index {
@@ -156,8 +163,8 @@ ArkTS-Sta:
 getSelectedIndex(): int
 ```
 
-获取保存成功后的文件后缀类型的下标。该方法只在调用 [save()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_时使用生效，其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数  
-[DocumentSaveOptions.fileSuffixChoices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_里的某个后缀类型。如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
+获取保存成功后的文件后缀类型的下标。该方法只在调用 [save()](arkts-corefile-picker-documentviewpicker-c.md#save)时使用生效，其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)。该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数  
+[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)里的某个后缀类型。如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
 
 **起始版本：** 14
 
@@ -173,74 +180,7 @@ getSelectedIndex(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回所选后缀类型在[DocumentSaveOptions.fileSuffixChoices]{ |
-
-**示例：**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-async function exampleIndex(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let documentSaveOptions = new picker.DocumentSaveOptions();
-    // 保存文件的名字
-    documentSaveOptions.newFileNames = ['DocumentViewPicker01'];
-    // 保存文件的后缀类型
-    documentSaveOptions.fileSuffixChoices = ['txt', 'mp4', 'pdf'];
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.save(documentSaveOptions).then((documentSaveResult: Array<string>) => {
-      if (documentSaveOptions.fileSuffixChoices != undefined && documentSaveResult != undefined) {
-        // 获取保存文件的后缀类型的下标
-        let index = documentPicker.getSelectedIndex();
-        // 获取保存文件的后缀类型。
-        let selectedSuffix = documentSaveOptions.fileSuffixChoices[index];
-        console.info('DocumentViewPicker.save selectedSuffix is ' + selectedSuffix);
-      }
-      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
-    }).catch((err: BusinessError) => {
-      console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-async function exampleIndex(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let documentSaveOptions: picker.DocumentSaveOptions = {
-      // 保存文件的名字
-      newFileNames: ['DocumentViewPicker01.txt'],
-      // 保存文件的后缀类型
-      fileSuffixChoices: ['txt', 'mp4', 'pdf']
-    };
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.save(documentSaveOptions).then((documentSaveResult: Array<string>) => {
-      if (documentSaveOptions.fileSuffixChoices != undefined && documentSaveResult != undefined) {
-        // 获取保存文件的后缀类型的下标
-        let index = documentPicker.getSelectedIndex();
-        // 获取保存文件的后缀类型。
-        let selectedSuffix = documentSaveOptions.fileSuffixChoices![index];
-        console.info('DocumentViewPicker.save selectedSuffix is ' + selectedSuffix);
-      }
-      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
-    }).catch((err: BusinessError): void => {
-      console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-    });
-  } catch (err: BusinessError) {
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回所选后缀类型在[DocumentSaveOptions.fileSuffixChoices]{ |
 
 ## save
 
@@ -264,22 +204,20 @@ save(option?: DocumentSaveOptions): Promise<Array<string>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | documentPicker保存选项。若无此参数， 则拉起documentPicker界面后需用户自行输入保存的文件名。 |
+| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | 否 | documentPicker保存选项。若无此参数， 则拉起documentPicker界面后需用户自行输入保存的文件名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回documentPicker保存后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example10(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentSaveOptions = new picker.DocumentSaveOptions();
@@ -292,29 +230,6 @@ async function example10(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-async function example10(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let documentSaveOptions: picker.DocumentSaveOptions = {
-      newFileNames: ['DocumentViewPicker01.txt']
-    };
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.save(documentSaveOptions).then((documentSaveResult: Array<string>) => {
-      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
-    }).catch((err: BusinessError): void => {
-      console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-    });
-  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
@@ -342,52 +257,21 @@ save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | documentPicker保存选项。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | 是 | documentPicker保存选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example11(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentSaveOptions = new picker.DocumentSaveOptions();
     documentSaveOptions.newFileNames = ['DocumentViewPicker02.txt'];
     let documentPicker = new picker.DocumentViewPicker(context);
     documentPicker.save(documentSaveOptions, (err: BusinessError, documentSaveResult: Array<string>) => {
-      if (err) {
-        console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-async function example11(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    const documentSaveOptions: picker.DocumentSaveOptions = {
-      newFileNames: ['DocumentViewPicker02.txt'],
-      defaultFilePathUri: 'xxx',
-      fileSuffixChoices: ['txt|文本文件', 'doc|Word文档'],
-      pickerMode: picker.DocumentPickerMode.DEFAULT
-    };
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.save(documentSaveOptions, (err: BusinessError | null, documentSaveResult: Array<string> | undefined) => {
       if (err) {
         console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
         return;
@@ -423,16 +307,14 @@ save(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example12(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentPicker = new picker.DocumentViewPicker(context);
@@ -445,28 +327,6 @@ async function example12(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-function example12(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.save((err: BusinessError | null, documentSaveResult: Array<string> | undefined) => {
-      if (err) {
-        console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
-    });
-  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
@@ -494,22 +354,20 @@ select(option?: DocumentSelectOptions): Promise<Array<string>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | documentPicker选择选项。若无此参数，则默认拉起documentPicker主界面。 |
+| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | 否 | documentPicker选择选项。若无此参数，则默认拉起documentPicker主界面。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回documentPicker选择后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example07(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentSelectOptions = new picker.DocumentSelectOptions();
@@ -521,29 +379,6 @@ async function example07(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-async function example07(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let documentSelectOptions: picker.DocumentSelectOptions = {
-      selectMode: picker.DocumentSelectMode.MIXED
-    };
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.select(documentSelectOptions).then((documentSelectResult: Array<string>) => {
-      console.info('DocumentViewPicker.select successfully, documentSelectResult uri: ' + JSON.stringify(documentSelectResult));
-    }).catch((err: BusinessError): void => {
-      console.error(`DocumentViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
-    });
-  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
@@ -571,17 +406,15 @@ select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | documentPicker选择选项。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | 是 | documentPicker选择选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example08(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentSelectOptions = new picker.DocumentSelectOptions();
@@ -595,31 +428,6 @@ async function example08(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-function example08(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let documentSelectOptions: picker.DocumentSelectOptions = {
-      selectMode: picker.DocumentSelectMode.MIXED
-    };
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.select(documentSelectOptions, (err: BusinessError|null, documentSelectResult: Array<string>|undefined) => {
-      if (err) {
-        console.error(`DocumentViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('DocumentViewPicker.select successfully, documentSelectResult uri: ' + JSON.stringify(documentSelectResult));
-    });
-  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
@@ -647,16 +455,14 @@ select(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example09(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentPicker = new picker.DocumentViewPicker(context);
@@ -669,28 +475,6 @@ async function example09(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
-    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-function example09(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
-  try {
-    let documentPicker = new picker.DocumentViewPicker(context);
-    documentPicker.select((err: BusinessError | null, documentSelectResult: Array<string> | undefined) => {
-      if (err) {
-        console.error(`DocumentViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
-        return;
-      }
-      console.info('DocumentViewPicker.select successfully, documentSelectResult uri: ' + JSON.stringify(documentSelectResult));
-    });
-  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }

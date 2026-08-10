@@ -12,6 +12,12 @@ RGB white balance gain values.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## blueGain
 
 ```TypeScript
@@ -20,7 +26,7 @@ blueGain: double
 
 The blue gain component of the white balance value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.1.0
 
@@ -42,7 +48,7 @@ greenGain: double
 
 The green gain component of the white balance value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.1.0
 
@@ -64,7 +70,7 @@ redGain: double
 
 The red gain component of the white balance value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.1.0
 

@@ -1,6 +1,6 @@
 # MessageOption
 
-Defines the options used to construct the **MessageOption** object.
+公共消息选项，使用指定的标志类型，构造指定的MessageOption对象。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines the options used to construct the **MessageOption** object.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(syncFlags?: number, waitTime?: number)
 ```
 
-A constructor used to create a **MessageOption** object.
+MessageOption构造函数。
 
 **Since:** 7
 
@@ -32,10 +38,10 @@ A constructor used to create a **MessageOption** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| syncFlags | number | No | Call flag to set. The options are as follows: 0 (synchronous call) and 1 (asynchronous call). The default value is **synchronous**. |
-| waitTime | number | No | Maximum wait time for an RPC call, in seconds. The default value is **TF\_\_\_ESCAPED\_UNDERSCORE\_\_\_WAIT\_\_\_ESCAPED\_UNDERSCORE\_\_\_TIME**. |
+| syncFlags | number | No | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0（当需要立即获取响应结果时选择）；异步调用标志：1（当不需要立即获取响应结果时选择）。不传入时默认为0 （同步调用）。 |
+| waitTime | number | No | 调用rpc最长等待时间（单位：秒）。&lt;br/&gt;默认值：8&lt;br/&gt;取值范围：(0, 3000]。当RPC调用耗时较长时，可适当增加等待时间；当需要快速响应时，可适当减少 等待时间。不传入时使用默认等待时间8秒。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -53,7 +59,7 @@ class TestRemoteObject extends rpc.MessageOption {
 constructor(async?: boolean)
 ```
 
-A constructor used to create a **MessageOption** object.
+MessageOption构造函数。
 
 **Since:** 9
 
@@ -69,9 +75,9 @@ A constructor used to create a **MessageOption** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| async | boolean | No | Whether to execute the call asynchronously. The value **true** means to execute the call asynchronously; the value **false** means to execute the call synchronously. The default value is **synchronous**. |
+| async | boolean | No | 是否异步调用。true表示异步调用（当不需要立即获取响应结果时选择），false表示同步调用（当需要立即获取响应结果时选择）。不传入时默认为false（同步调用）。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -164,7 +170,7 @@ A constructor used to create a MessageOption instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | syncFlags | int | Yes | Specifies whether the SendRequest is called synchronously (default) or asynchronously. |
-| waitTime | int | Yes | Maximum wait time for a RPC call, in seconds. The default value is **TF\_\_\_ESCAPED\_UNDERSCORE\_\_\_WAIT\_\_\_ESCAPED\_UNDERSCORE\_\_\_TIME**. |
+| waitTime | int | Yes | Maximum wait time for a RPC call, in seconds. The default value is **TF_WAIT_TIME**. |
 
 ## getFlags
 
@@ -178,7 +184,7 @@ ArkTS-Sta:
 getFlags(): int
 ```
 
-Obtains the call flag, which can be synchronous or asynchronous.
+获取同步调用或异步调用标志。
 
 **Since:** 7
 
@@ -194,9 +200,9 @@ Obtains the call flag, which can be synchronous or asynchronous.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Call flag obtained. **0**: synchronous call flag; **1**: asynchronous call flag. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 调用成功返回同步调用或异步调用标志。同步调用标志：0，异步调用标志：1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -204,13 +210,13 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let option = new rpc.MessageOption();
-  hilog.info(0x0000, 'testTag', 'create object successfully');
+  hilog.info(0x0000, 'testTag', 'Succeeded in creating object');
   let flag = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'run getFlags success, flag is ' + flag);
+  hilog.info(0x0000, 'testTag', 'Succeeded in running getFlags, flag is ' + flag);
   option.setFlags(rpc.MessageOption.TF_ASYNC);
-  hilog.info(0x0000, 'testTag', 'run setFlags success');
+  hilog.info(0x0000, 'testTag', 'Succeeded in running setFlags');
   let flag2 = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'run getFlags success, flag2 is ' + flag2);
+  hilog.info(0x0000, 'testTag', 'Succeeded in running getFlags, flag2 is ' + flag2);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
@@ -228,7 +234,7 @@ ArkTS-Sta:
 getWaitTime(): int
 ```
 
-Obtains the maximum wait time for this RPC call.
+获取rpc调用的最长等待时间。
 
 **Since:** 7
 
@@ -244,9 +250,9 @@ Obtains the maximum wait time for this RPC call.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Return the maximum waiting time obtained by the RPC, in seconds. The default value is **TF\_\_\_ESCAPED\_UNDERSCORE\_\_\_WAIT\_\_\_ESCAPED\_UNDERSCORE\_\_\_TIME**. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | rpc最长等待时间（单位：秒）。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -255,10 +261,10 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 try {
   let option = new rpc.MessageOption();
   let time = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time);
+  hilog.info(0x0000, 'testTag', 'Succeeded in running getWaitTime, time is ' + time);
   option.setWaitTime(16);
   let time2 = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time2);
+  hilog.info(0x0000, 'testTag', 'Succeeded in running getWaitTime, time is ' + time2);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
@@ -270,7 +276,8 @@ try {
 isAsync(): boolean
 ```
 
-Checks whether **SendMessageRequest** is called synchronously or asynchronously.
+获取  
+[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
 
 **Since:** 9
 
@@ -286,9 +293,9 @@ Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if **SendMessageRequest** is called asynchronously; returns **false** if it is called synchronously. |
+| boolean | true：异步调用成功，false：同步调用成功。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -308,7 +315,8 @@ try {
 setAsync(isAsync: boolean): void
 ```
 
-Sets whether **SendMessageRequest** is called synchronously or asynchronously.
+设置  
+[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
 
 **Since:** 9
 
@@ -324,9 +332,9 @@ Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAsync | boolean | Yes | Whether to execute the call asynchronously. The value **true** means to execute the call asynchronously; the value **false** means to execute the call synchronously. |
+| isAsync | boolean | Yes | true：表示异步调用标志，false：表示同步调用标志。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -352,7 +360,7 @@ ArkTS-Sta:
 setFlags(flags: int): void
 ```
 
-Sets the call flag, which can be synchronous or asynchronous.
+设置同步调用或异步调用标志。
 
 **Since:** 7
 
@@ -368,9 +376,9 @@ Sets the call flag, which can be synchronous or asynchronous.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Call flag to set. **0**: synchronous call flag; **1**: asynchronous call flag. |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0；异步调用标志：1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -379,9 +387,9 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 try {
   let option = new rpc.MessageOption();
   option.setFlags(rpc.MessageOption.TF_ASYNC);
-  hilog.info(0x0000, 'testTag', 'run setFlags success');
+  hilog.info(0x0000, 'testTag', 'Succeeded in running setFlags');
   let flag = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'run getFlags success, flag is ' + flag);
+  hilog.info(0x0000, 'testTag', 'Succeeded in running getFlags, flag is ' + flag);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
@@ -399,7 +407,7 @@ ArkTS-Sta:
 setWaitTime(waitTime: int): void
 ```
 
-Sets the maximum wait time for this RPC call.
+设置rpc调用最长等待时间。
 
 **Since:** 7
 
@@ -415,9 +423,9 @@ Sets the maximum wait time for this RPC call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| waitTime | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the maximum waiting time for RPC, in seconds. The upper limit is 3000 seconds. |
+| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | rpc调用最长等待时间（单位：秒），取值范围：(0，3000] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -427,7 +435,7 @@ try {
   let option = new rpc.MessageOption();
   option.setWaitTime(16);
   let time = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time);
+  hilog.info(0x0000, 'testTag', 'Succeeded in running getWaitTime, time is ' + time);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
@@ -439,7 +447,8 @@ try {
 static readonly TF_ACCEPT_FDS: number
 ```
 
-Indication to **sendMessageRequest** for passing the file descriptor.
+指示  
+[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)接口可以传递文件描述符。
 
 **Type:** number
 
@@ -461,7 +470,7 @@ Indication to **sendMessageRequest** for passing the file descriptor.
 static readonly TF_ASYNC: number
 ```
 
-Asynchronous call.
+异步调用标识。
 
 **Type:** number
 
@@ -483,7 +492,7 @@ Asynchronous call.
 static readonly TF_SYNC: number
 ```
 
-Synchronous call.
+同步调用标识。
 
 **Type:** number
 
@@ -505,7 +514,7 @@ Synchronous call.
 static readonly TF_WAIT_TIME: number
 ```
 
-RPC wait time, in seconds. This parameter cannot be used in IPC. The default waiting time is 8 seconds. You are advised not to change the waiting time.
+RPC等待时间（单位：秒），IPC场景下无效。默认等待为8秒（不建议修改等待时间）。
 
 **Type:** number
 

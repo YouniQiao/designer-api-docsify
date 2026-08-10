@@ -1,17 +1,20 @@
 # setInterface
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setInterface
 
 ```TypeScript
 function setInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-Sets a USB interface.
+设置设备接口。
 
-Before you do this, call [usb.getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the USB device list and interfaces, call  
-[usb.requestRight]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to request the device access permission, call  
-[usb.connectDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to obtain **devicepipe** as an input parameter, and call  
-[usb.claimInterface]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to claim the USB interface.
+需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices)获取设备列表以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright)获取设备请求权限；调用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice)得到devicepipe作为参数；调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface)注册通信接口。
 
 **Since:** 8
 
@@ -29,16 +32,16 @@ Before you do this, call [usb.getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device pipe, which is used to determine the bus number and device address. |
-| iface | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | USB interface to set. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址。 |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | 用于确定需要设置的接口。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns **0** if the USB interface is successfully set; returns an error code otherwise. |
+| number | 设置设备接口成功返回0；设置设备接口失败返回其他错误码。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let ret = usb.setInterface(devicepipe, interfaces);

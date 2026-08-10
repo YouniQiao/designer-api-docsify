@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## accessDuration
 
 ```TypeScript
@@ -20,7 +26,7 @@ accessDuration: long
 
 访问时长。单位为：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -42,7 +48,7 @@ count?: int
 
 默认值：0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -67,7 +73,7 @@ lockScreenStatus?: int
 
 默认值：1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -87,7 +93,7 @@ status: int
 
 访问状态。0表示停止使用，1表示前台使用，2表示后台使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -107,7 +113,7 @@ timestamp: long
 
 访问时的时间戳。单位为：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -127,9 +133,9 @@ usedType?: PermissionUsedType
 
 敏感权限访问方式。
 
-默认值：NORMAL\_TYPE。
+默认值：NORMAL_TYPE。
 
-**类型：** PermissionUsedType
+**类型：** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **起始版本：** 12
 

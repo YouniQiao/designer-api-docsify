@@ -1,6 +1,7 @@
 # ColorPicker
 
-A color picker class used to obtain the main color from image data. It is suitable for scenarios such as UI theme color extraction, image color scheme analysis, and intelligent color scheme recommendation, helping developers dynamically generate harmonious color schemes based on image content. Before calling the methods of ColorPicker, you need to create a ColorPicker instance via createColorPicker.
+取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过  
+[createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker)创建一个ColorPicker实例。
 
 **Since:** 9
 
@@ -10,13 +11,19 @@ A color picker class used to obtain the main color from image data. It is suitab
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getAverageColor
 
 ```TypeScript
 getAverageColor(): Color
 ```
 
-Reads the average color value from the image and writes the result to a Color instance. This API returns the result synchronously. It is commonly used in scenarios such as obtaining the overall tone of an image,such as image tone statistics and adaptive background color.
+读取图像平均的颜色值，结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里，使用同步方式返回。常用于获取图片整体色调，如图片色调统计、背景色自适应等场景。
 
 **Since:** 10
 
@@ -34,15 +41,17 @@ Reads the average color value from the image and writes the result to a Color in
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Average color value. If the operation fails, null is returned. |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像平均的颜色值，失败时返回null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for image effects.
+const colorBuffer = new ArrayBuffer(96);
+// Set image initialization options.
 let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -50,18 +59,21 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a ColorPicker instance.
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getAverageColor();
-      console.info('get average color =' + color);
+      // Obtain the average color of the image.
+      let averageColor = colorPicker.getAverageColor();
+      console.info('get average color =' + averageColor);
     }
-  })
-})
+  });
+});
 ```
 
 ## getHighestSaturationColor
@@ -70,7 +82,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getHighestSaturationColor(): Color
 ```
 
-Reads the color value with the highest saturation from the image and writes the result to a Color instance.This API returns the result synchronously. It is commonly used in scenarios such as extracting the most vivid color in an image, such as UI theme accent color extraction and icon highlight color selection.
+读取图像饱和度最高的颜色值，结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里，使用同步方式返回。常用于提取图像中最鲜艳的颜色，如UI主题强调色提取、图标高亮色选择等场景。
 
 **Since:** 10
 
@@ -88,15 +100,17 @@ Reads the color value with the highest saturation from the image and writes the 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Color value of the color with the highest saturation. If the operation fails, null is returned. |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像饱和度最高的颜色值，失败时返回null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for image effects.
+const colorBuffer = new ArrayBuffer(96);
+// Set image initialization options.
 let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -104,18 +118,21 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a ColorPicker instance.
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getHighestSaturationColor();
-      console.info('get highest saturation color =' + color);
+      // Obtain the color with the highest saturation in the image.
+      let saturationColor = colorPicker.getHighestSaturationColor();
+      console.info('get highest saturation color =' + saturationColor);
     }
-  })
-})
+  });
+});
 ```
 
 ## getLargestProportionColor
@@ -124,7 +141,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getLargestProportionColor(): Color
 ```
 
-Reads the color value with the largest proportion in the image and writes the result to a Color instance.This API returns the result synchronously. This API uses the median cut algorithm to partition the color space and obtains the average color of the color space with the largest proportion. It is commonly used in scenarios such as identifying the largest color area in an image, such as icon background color extraction and image content analysis.
+读取图像中占比最多的颜色值，结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里，使用同步方式返回。该接口使用中位切分算法划分颜色空间，获取占比最多的颜色空间的平均颜色。常用于识别图片中面积最大的颜色区域，如图标背景色提取、图片内容分析等场景。
 
 **Since:** 10
 
@@ -142,15 +159,17 @@ Reads the color value with the largest proportion in the image and writes the re
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Color value of the color with the largest proportion. If the operation fails, null is returned. |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像占比最多的颜色值，失败时返回null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for the image effect.
+const colorBuffer = new ArrayBuffer(96);
+// Set the image initialization options.
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -158,18 +177,21 @@ let opts : image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a ColorPicker instance.
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getLargestProportionColor();
-      console.info('get largest proportion color =' + color);
+      // Obtain the most dominant color in the image.
+      let largestColor = colorPicker.getLargestProportionColor();
+      console.info('get largest proportion color =' + largestColor);
     }
-  })
-})
+  });
+});
 ```
 
 ## getMainColor
@@ -178,7 +200,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMainColor(): Promise<Color>
 ```
 
-Reads the color value of the main color from the image and writes the result to a Color instance. This API uses a promise to return the result. This API uses the image scaling algorithm to calculate the weighted value of surrounding pixels and reduce the original image to one pixel to obtain the main color. It is commonly used in scenarios such as automatic app theme color extraction, automatic UI color matching based on images, and dynamic background color adjustment of music players based on album covers.
+读取图像主色的颜色值，结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里，使用Promise异步回调。该接口通过图像缩放算法，根据周围像素的加权计算，将原图缩小到1个像素以得到主色。常用于应用主题色自动提取、UI界面根据图片自动配色、音乐播放器根据专辑封面动态调整背景色等场景。
 
 **Since:** 9
 
@@ -196,15 +218,17 @@ Reads the color value of the main color from the image and writes the result to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Color&gt; | Promise used to return the color value of the main color. If the operation fails, an error message is returned. |
+| Promise&lt;Color&gt; | Promise对象。返回图像主色对应的颜色值，失败时返回错误信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for image effects.
+const colorBuffer = new ArrayBuffer(96);
+// Set image initialization options.
 let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -212,20 +236,23 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a ColorPicker instance.
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
-     } else {
-       console.info('Succeeded in creating color picker.');
-       colorPicker.getMainColor().then(color => {
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('Succeeded in creating color picker.');
+      // Obtain the dominant color of the image.
+      colorPicker.getMainColor().then(mainColor => {
         console.info('Succeeded in getting main color.');
-         console.info(`color[ARGB]=${color.alpha},${color.red},${color.green},${color.blue}`);
-      })
+        console.info(`color[ARGB]=${mainColor.alpha},${mainColor.red},${mainColor.green},${mainColor.blue}`);
+      });
     }
-  })
-})
+  });
+});
 ```
 
 ## getMainColorSync
@@ -234,7 +261,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMainColorSync(): Color
 ```
 
-Reads the color value of the main color from the image and writes the result to a Color instance. This API returns the result synchronously. This API uses the image scaling algorithm to calculate the weighted value of surrounding pixels and reduces the original image to one pixel to obtain the main color. It is commonly used in scenarios such as automatic app theme color extraction, automatic UI color matching based on images,and dynamic background color adjustment of music players based on album covers.
+读取图像主色的颜色值，结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里，使用同步方式返回。该接口通过图像缩放算法，根据周围像素的加权计算，将原图缩小到1个像素以得到主色。常用于应用主题色自动提取、UI界面根据图片自动配色、音乐播放器根据专辑封面动态调整背景色等场景。
 
 **Since:** 9
 
@@ -252,15 +279,17 @@ Reads the color value of the main color from the image and writes the result to 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Color value of the main color. If the operation fails, null is returned. |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像主色对应的颜色值，失败时返回null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for image effects.
+const colorBuffer = new ArrayBuffer(96);
+// Set image initialization options.
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -268,18 +297,21 @@ let opts : image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a ColorPicker instance.
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getMainColorSync();
-      console.info('get main color =' + color);
+      // Obtain the main color of the image synchronously.
+      let mainColor = colorPicker.getMainColorSync();
+      console.info('get main color =' + mainColor);
     }
-  })
-})
+  });
+});
 ```
 
 ## getTopProportionColors
@@ -294,7 +326,7 @@ ArkTS-Sta:
 getTopProportionColors(colorCount: int): Array<Color | null>
 ```
 
-Reads the top proportion colors from the image, with the number specified by colorCount, and writes the results to an array of Color instances. This API returns the result synchronously. It is commonly used in scenarios such as extracting the top multiple colors by proportion in an image, such as multi-tone color scheme generation and image color distribution analysis.
+读取图像占比靠前的颜色值，个数由`colorCount`指定，结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)的数组里，使用同步方式返回。常用于提取图片中占比最高的多个颜色，如多色调配色方案生成、图片色彩分布分析等场景。
 
 **Since:** 12
 
@@ -312,21 +344,23 @@ Reads the top proportion colors from the image, with the number specified by col
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of colors to extract, rounded down. Before OpenHarmony 6.1, the value range is [1, 10]. If the number of colors to extract is greater than 10, the top 10 are taken. Since OpenHarmony 6.1, the value range is [1, 20]. If the number of colors to extract is greater than 20, the top 20 are taken. |
+| colorCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 需要获取的颜色个数，向下取整。在OpenHarmony 6.1之前，取值范围为[1, 10]， 取色个数大于10视为取前10个；从OpenHarmony 6.1开始，取值范围为[1, 20]，取色个数大于20视为取前20个。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Color \| null&gt; | Array of colors, i.e., the top colorCount color values by proportion in the image, sorted by proportion. - If the number of colors obtained is less than the value of colorCount, the array size is the actual number obtained. - If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned. |
+| Array&lt;Color \| null&gt; | Color数组，即图像占比前`colorCount`的颜色值数组，按占比排序。 - 当实际读取的特征色个数小于`colorCount`时，数组大小为实际特征色个数。 - 取色失败或取色个数小于1返回`[null]`。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for image effects.
+const colorBuffer = new ArrayBuffer(96);
+// Set image initialization options.
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -334,22 +368,25 @@ let opts : image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a ColorPicker instance.
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in creating color picker.');
+      // Obtain the top two dominant colors in the image.
       let colors = colorPicker.getTopProportionColors(2);
-      for(let index = 0; index < colors.length; index++) {
+      for (let index = 0; index < colors.length; index++) {
         if (colors[index]) {
           console.info('get top proportion colors: index ' + index + ', color ' + colors[index]);
         }
       }
     }
-  })
-})
+  });
+});
 ```
 
 ## isBlackOrWhiteOrGrayColor
@@ -364,7 +401,7 @@ ArkTS-Sta:
 isBlackOrWhiteOrGrayColor(color: long): boolean
 ```
 
-Determines whether the specified color value is a black, white, or gray color, and returns true or false.It is commonly used in scenarios such as determining whether a color belongs to the achromatic color system,such as intelligent color scheme filtering and image color classification.
+判断指定颜色值是否为黑白灰颜色，返回true或false。常用于判断颜色是否属于无彩色系，如智能配色过滤、图片颜色分类等场景。
 
 **Since:** 10
 
@@ -382,21 +419,23 @@ Determines whether the specified color value is a black, white, or gray color, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Color value to determine whether it is black, white, or gray. The format is 0xAARRGGBB, and the value range is [0x0, 0xFFFFFFFF]. |
+| color | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 需要判断是否黑白灰色的颜色值，格式为0xAARRGGBB，取值范围为[0x0, 0xFFFFFFFF]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value true means the color is black, white, or gray, and false means the opposite. |
+| boolean | true表示颜色为黑白灰色，false表示颜色不是黑白灰色。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for image effects.
+const colorBuffer = new ArrayBuffer(96);
+// Set image initialization options.
 let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -404,17 +443,20 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a ColorPicker instance.
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in creating color picker.');
-      let bJudge = colorPicker.isBlackOrWhiteOrGrayColor(0xFFFFFFFF);
-      console.info('is black or white or gray color[bool](white) =' + bJudge);
+      // Determine whether the color is black, white, or gray.
+      let isBlackOrWhiteOrGray = colorPicker.isBlackOrWhiteOrGrayColor(0xFFFFFFFF);
+      console.info('is black or white or gray color[bool](white) =' + isBlackOrWhiteOrGray);
     }
-  })
-})
+  });
+});
 ```
 

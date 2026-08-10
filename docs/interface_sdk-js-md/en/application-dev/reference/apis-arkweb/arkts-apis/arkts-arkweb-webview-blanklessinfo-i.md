@@ -10,6 +10,12 @@ Defines the blankless information.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## errCode
 
 ```TypeScript
@@ -18,7 +24,7 @@ errCode: WebBlanklessErrorCode
 
 Defines the error codes of blankless.
 
-**Type:** WebBlanklessErrorCode
+**Type:** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 
 **Since:** 23
 

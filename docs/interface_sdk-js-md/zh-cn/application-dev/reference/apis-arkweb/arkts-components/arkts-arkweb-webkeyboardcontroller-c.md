@@ -1,6 +1,6 @@
 # WebKeyboardController
 
-Define the controller to interact with a custom keyboard, related to the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ event.
+Define the controller to interact with a custom keyboard, related to the {@link onInterceptKeyboardAttach} event.
 
 **起始版本：** 12
 
@@ -130,5 +130,5 @@ Send the function of the key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | number | 是 | action indicates the "enter" key related to the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| key | number | 是 | action indicates the "enter" key related to the {@link inputMethodEngine} |
 

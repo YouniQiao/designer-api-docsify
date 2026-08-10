@@ -1,6 +1,6 @@
 # PropertyDescriptor
 
-Describes the SSAP descriptor for property.
+属性的SSAP描述符。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes the SSAP descriptor for property.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## descriptorType
 
 ```TypeScript
 descriptorType: PropertyDescriptorType
 ```
 
-The type of the propertyDescriptor instance.
+属性描述符实例的类型。
 
-**Type:** PropertyDescriptorType
+**Type:** [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md)
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ The type of the propertyDescriptor instance.
 isWriteable?: boolean
 ```
 
-Indicates whether the descriptor is writable.Default value: true.
+描述符是否可写。默认值： 默认值：false。
 
 **Type:** boolean
 
@@ -56,7 +62,7 @@ Indicates whether the descriptor is writable.Default value: true.
 propertyUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance which the propertyDescriptor belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NearLink standard UUIDs are not allowed.
+描述符所属的属性实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;禁止使用星闪标准服务UUID。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance which the propert
 serviceUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance which the master property of descriptor belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NearLink standard UUIDs are not allowed.
+描述符所属属性所属的服务实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance which the master 
 value: ArrayBuffer
 ```
 
-The value of the propertyDescriptor instance.
+属性描述符实例的值。
 
 **Type:** ArrayBuffer
 

@@ -1,5 +1,11 @@
 # isDoubleClickAppForSelf
 
+## Modules to Import
+
+```TypeScript
+import { settingsLite } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isDoubleClickAppForSelf
 
 ```TypeScript
@@ -22,5 +28,5 @@ function isDoubleClickAppForSelf(callback: ClickCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to return the execution result. |
+| callback | [ClickCallback](arkts-basicservices-settingslite-clickcallback-i.md) | Yes | Callback used to return the execution result. |
 

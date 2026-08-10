@@ -1,9 +1,8 @@
 # BreakPoints
 
-Sets breakpoints for the responsive grid container. For details about breakpoints, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+设置栅格容器组件的断点。更多断点的说明参考[栅格容器断点](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--code_no_check--&gt;
 
 **Since:** 9
 
@@ -19,13 +18,13 @@ Sets breakpoints for the responsive grid container. For details about breakpoint
 reference?: BreakpointsReference
 ```
 
-Breakpoint switching reference.
+断点切换参照物。支持WindowSize（以窗口为参照）和ComponentSize（以容器为参照）。
 
-Default value: **BreakpointsReference.WindowSize**
+默认值：BreakpointsReference.WindowSize 
 
-Invalid values are treated as the default value.
+非法值：按默认值处理。
 
-**Type:** BreakpointsReference
+**Type:** [BreakpointsReference](../arkts-apis/arkts-arkui-gridrow-breakpointsreference-e.md)
 
 **Since:** 9
 
@@ -45,13 +44,15 @@ Invalid values are treated as the default value.
 value?: Array<string>
 ```
 
-Array of monotonically increasing breakpoints.
+设置断点位置的单调递增数组，字符串格式为"数字+vp"，例如"320vp"、"600vp"等。
 
-Default value: **["320vp", "600vp", "840vp"]**
+默认值：["320vp", "600vp", "840vp"] 
 
-Invalid values are treated as the default value.
+非法值：按默认值处理。
 
-Unit: vp.
+单位：vp
+
+默认断点适用于大多数场景，可根据特殊屏幕尺寸或特定布局需求自定义。
 
 **Type:** Array&lt;string&gt;
 

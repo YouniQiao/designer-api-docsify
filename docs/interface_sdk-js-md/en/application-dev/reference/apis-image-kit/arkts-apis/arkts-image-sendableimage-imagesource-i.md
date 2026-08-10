@@ -1,10 +1,9 @@
 # ImageSource
 
-Provides APIs to obtain image information. Before calling any API in ImageSource, you must use  
-[sendableImage.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create an ImageSource instance.
+ImageSource类，用于获取图片相关信息。在调用ImageSource的方法前，需要先通过  
+[sendableImage.createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource)构建一个ImageSource实例。
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 12
 
@@ -14,16 +13,21 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
+## Modules to Import
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## createPixelMap
 
 ```TypeScript
 createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result.
+通过图片解码参数创建PixelMap对象。使用Promise异步回调。
 
-Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly. Before releasing the instance,ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 12
 
@@ -41,21 +45,21 @@ Images occupy a large amount of memory. When you finish using a PixelMap instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | image.DecodingOptions | No | Decoding options. |
+| options | image.DecodingOptions | No | 解码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise实例，用于异步返回创建结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(context : Context) {
+async function CreatePixelMap(context : Context) {
   const path: string = context.cacheDir + "/test.jpg";
   const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
   sendableImageSourceObj.createPixelMap().then((pixelMap: sendableImage.PixelMap) => {
@@ -72,11 +76,11 @@ async function Demo(context : Context) {
 release(): Promise<void>
 ```
 
-Releases this ImageSource instance. This API uses a promise to return the result.
+释放ImageSource实例。使用Promise异步回调。
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 12
 
@@ -90,15 +94,15 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise实例，异步返回结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo(context : Context) {
+async function Release(context : Context) {
   const path: string = context.cacheDir + "/test.jpg";
   const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
   sendableImageSourceObj.release().then(() => {

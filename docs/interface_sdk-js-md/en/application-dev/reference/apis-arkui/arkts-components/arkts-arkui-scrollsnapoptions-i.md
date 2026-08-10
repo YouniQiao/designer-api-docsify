@@ -1,6 +1,6 @@
 # ScrollSnapOptions
 
-Defines a scroll snapping mode object.
+限位滚动模式对象。
 
 **Since:** 10
 
@@ -16,9 +16,9 @@ Defines a scroll snapping mode object.
 enableSnapToEnd?: boolean
 ```
 
-Whether to enable the snap to end feature. When scroll snapping is defined for the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Scroll\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ component,setting this parameter to \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_false\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ enables the component to scroll between the end and the last page.
+在Scroll组件限位滚动模式下，该属性设置为true后，不允许Scroll在最后一页和末尾间自由滑动，该属性设置为false后，允许Scroll在最后一页和末尾间自由滑动。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_1. Default value: \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_true\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_2. This attribute takes effect only when \_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_snapPagination\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_is set to a value of the \_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_Array\&lt;Dimension\&gt;\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_ type;it does not work with values of the \_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_Dimension\_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_ type.\_\_\_HTML\_TAG\_DESC\_USD\_17\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1. 该属性值默认为true。&lt;br&gt;2. 该属性仅当snapPagination属性为Array\&lt;Dimension\&gt;时生效，不支持Dimension。&lt;/p&gt;
 
 **Type:** boolean
 
@@ -42,9 +42,9 @@ Whether to enable the snap to end feature. When scroll snapping is defined for t
 enableSnapToStart?: boolean
 ```
 
-Whether to enable the snap to start feature. When scroll snapping is defined for the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Scroll\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ component,setting this parameter to \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_false\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ enables the component to scroll between the start and the first page.
+在Scroll组件限位滚动模式下，该属性设置为true后，不允许Scroll在开头和第一页间自由滑动，该属性设置为false后，允许Scroll在开头和第一页间自由滑动。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_1. Default value: \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_true\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_2. This attribute takes effect only when \_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_snapPagination\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_is set to a value of the \_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_Array\&lt;Dimension\&gt;\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_ type;it does not work with values of the \_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_Dimension\_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_ type.\_\_\_HTML\_TAG\_DESC\_USD\_17\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1. 该属性值默认为true。&lt;br&gt;2. 该属性仅当snapPagination属性为Array\&lt;Dimension\&gt;时生效，不支持Dimension。&lt;/p&gt;
 
 **Type:** boolean
 
@@ -68,9 +68,9 @@ Whether to enable the snap to start feature. When scroll snapping is defined for
 snapAlign: ScrollSnapAlign
 ```
 
-Alignment mode for the scroll snap position.
+限位滚动时的对齐方式。
 
-**Type:** ScrollSnapAlign
+**Type:** [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md)
 
 **Default:** ScrollSnapAlign.NONE [since 11]
 
@@ -92,11 +92,11 @@ Alignment mode for the scroll snap position.
 snapPagination?: Dimension | Array<Dimension>
 ```
 
-Pagination points for scroll snapping.
+限位滚动时的分页点。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_1. If the value is of the Dimension type, it indicates the size of each page,and the system will paginate based on this size.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_2. If the value is of the Array\&lt;Dimension\&gt; type, each \_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_Dimension\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_ represents a pagination point,and the system will paginate accordingly.Each \_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_Dimension\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_ value must be within the [0, scrollable distance] range.\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_3. If this parameter is not set or \_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_Dimension\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_ is set to a value less than or equal to 0,the value is regarded as an invalid value.In this case, there is no scroll snapping. When the value is of the Array\&lt;Dimension\&gt; type,the items in the array must be monotonically increasing.\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_4. When the value is a percentage,the actual size is the product of the viewport of the \_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_Scroll\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_ component and the percentage value.\_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1.当属性为Dimension时，Dimension表示每页的大小，系统按照该大小进行分页。&lt;br&gt;2.当属性为Array\&lt;Dimension\&gt;时，每个Dimension表示分页点，系统按照分页点进行分页。每个Dimension的范围为[0,可滑动距离]。&lt;br&gt;3.当该属性不填或者Dimension为小于等于0的输入时，按异常值，无限位滚动处理。当该属性值为Array\&lt;Dimension\&gt;数组时，数组中的数值必须为单调递增。&lt;br&gt;4.当输入为百分比时，实际的大小为Scroll组件的视口与百分比数值之积。&lt;/p&gt;
 
-**Type:** Dimension \| Array&lt;Dimension&gt;
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Array&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
 **Default:** 100%
 

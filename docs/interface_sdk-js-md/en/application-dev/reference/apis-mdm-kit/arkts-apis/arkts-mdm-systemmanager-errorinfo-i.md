@@ -1,6 +1,6 @@
 # ErrorInfo
 
-Represents the update error information.
+系统更新错误信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the update error information.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## code
 
 ```TypeScript
 code: number
 ```
 
-Error code.
+错误码。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ Error code.
 message: string
 ```
 
-Error message.
+错误描述信息。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # FloatViewStateChangeInfo
 
-Provides the state change information of the float view.
+标准悬浮窗状态变化信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Provides the state change information of the float view.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## state
 
 ```TypeScript
 state: FloatViewState
 ```
 
-State of the float view.
+标准悬浮窗的状态。
 
-**Type:** FloatViewState
+**Type:** [FloatViewState](arkts-arkui-floatview-floatviewstate-e.md)
 
 **Since:** 26.0.0
 
@@ -36,22 +42,21 @@ State of the float view.
 stopReason: string
 ```
 
-Reason why the float view stops. This parameter is valid only when **state** is set to  
-**FloatViewState.STOPPED**. In other states, this parameter is an empty string by default. The stop reasons and their meanings are as follows:
+标准悬浮窗停止的原因。该参数仅在状态为FloatViewState.STOPPED时有效，在其他状态下默认为空字符串。停止原因和对应含义如下：
 
-**"APP\_STOP"**: The application proactively stops the float view.
+"APP_STOP"：应用主动停止
 
-**"STOP\_IN\_SIDEBAR"**: The float view is closed in the sidebar.
+"STOP_IN_SIDEBAR"：在侧边栏被关闭
 
-**"TITLE\_BAR\_STOP\_CLICK"**: The float view is closed by clicking the close button on the title bar.
+"TITLE_BAR_STOP_CLICK"：标题栏点击关闭按钮
 
-**"DUMPSTER\_STOP"**: The float view is dragged to the trash can.
+"DUMPSTER_STOP"：拖入垃圾桶停止
 
-**"REPLACE\_STOP"**: The float view is occupied by another float view.
+"REPLACE_STOP"：被其他标准悬浮窗挤占
 
-**"FLOATING\_BALL\_STOP"**: The float view stops when the bound floating ball stops.
+"FLOATING_BALL_STOP"：绑定状态下跟随闪控球停止
 
-**"MAIN\_WINDOW\_DESTROY\_STOP"**: The float view stops after the main window associated with the context is destroyed.
+"MAIN_WINDOW_DESTROY_STOP"：context关联的主窗被销毁后停止
 
 **Type:** string
 

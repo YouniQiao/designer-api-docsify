@@ -34,5 +34,5 @@ resolvedOptions(): ResolvedNumberFormatOptions
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ResolvedNumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvednumberformatoptions-i.md) |  |
 

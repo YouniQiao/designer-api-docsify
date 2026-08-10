@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## type
 
 ```TypeScript
@@ -18,7 +24,7 @@ type: ValueType
 
 值类型。
 
-**类型：** ValueType
+**类型：** [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md)
 
 **起始版本：** 9
 
@@ -36,9 +42,9 @@ type: ValueType
 value: Uint8Array | string | long | double | boolean
 ```
 
-键值对中的值。Uint8Array、string类型的长度范围为0-[MAX\_VALUE\_LENGTH]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，number和boolean类型的取值范围由其自身类型决定。
+键值对中的值。Uint8Array、string类型的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，number和boolean类型的取值范围由其自身类型决定。
 
-**类型：** Uint8Array \| string \| long \| double \| boolean
+**类型：** ArkTS-Dyn: Uint8Array \| string \| number \| number \| boolean  <br>ArkTS-Sta：Uint8Array \| string \| long \| double \| boolean
 
 **起始版本：** 9
 

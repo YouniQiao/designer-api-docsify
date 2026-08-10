@@ -1,6 +1,6 @@
 # AxisRange
 
-Defines the axis range of an input device.
+输入设备的轴信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Defines the axis range of an input device.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
+## Modules to Import
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## axis
 
 ```TypeScript
 axis: AxisType
 ```
 
-Axis type of an input device.
+输入设备的轴类型。
 
-**Type:** AxisType
+**Type:** [AxisType](../../apis-arkui/arkts-apis/arkts-arkui-axistype-e.md)
 
 **Since:** 8
 
@@ -34,9 +40,9 @@ Axis type of an input device.
 flat: int
 ```
 
-Benchmark value of the axis.
+轴的基准值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -52,9 +58,9 @@ Benchmark value of the axis.
 fuzz: int
 ```
 
-Fuzzy value of the axis.
+轴的模糊值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -70,9 +76,9 @@ Fuzzy value of the axis.
 max: int
 ```
 
-Maximum value of the axis.
+轴的最大值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -88,9 +94,9 @@ Maximum value of the axis.
 min: int
 ```
 
-Minimum value of the axis.
+轴的最小值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -106,9 +112,9 @@ Minimum value of the axis.
 resolution: int
 ```
 
-Resolution of the axis.
+轴的分辨率。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -124,9 +130,9 @@ Resolution of the axis.
 source: SourceType
 ```
 
-Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
+输入设备的输入能力。包括键盘、鼠标、触摸屏、轨迹球、触控板、操纵杆等。
 
-**Type:** SourceType
+**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **Since:** 8
 

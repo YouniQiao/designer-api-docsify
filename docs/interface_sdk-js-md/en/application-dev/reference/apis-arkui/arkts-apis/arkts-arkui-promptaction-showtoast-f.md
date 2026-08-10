@@ -1,5 +1,11 @@
 # showToast
 
+## Modules to Import
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## showToast
 
 ```TypeScript
@@ -7,18 +13,20 @@ function showToast(options: ShowToastOptions): void
 ```
 
 Creates and displays a toast.
-    **NOTE**  
-    
-    - This API is supported since API version 9 and deprecated since API version 18. You are advised to use  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ instead.Before calling this API, you need to obtain the \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ object using the \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ method in  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_. Directly using **showToast** can lead to the issue of  
-\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_.  
-    
-    - Since API version 10, you can use the \_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_ API  
-in \_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_ to obtain the \_\_\_MD\_LINK\_DESC\_USD\_7\_\_\_object associated with the current UI context.  
-    
-    - The toast has a fixed style and does not support content customization. For specific supported capabilities,  
-see \_\_\_MD\_LINK\_DESC\_USD\_8\_\_\_.
+
+创建并显示即时反馈。
+
+> **说明：**
+> 
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用[showToast](arkts-apis-uicontext-promptaction.md#showtoast)替代。
+ showToast需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
+ [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象， 然后通过该对象进行调用。且直接使用showToast可能导致[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
+ [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
+ [PromptAction](arkts-apis-uicontext-promptaction.md)对象。  
+> 
+> - Toast样式单一，不支持内容的自定义，具体支持能力请参考[ShowToastOptions](#showtoastoptions)提供的接口。
 
 **Since:** 9
 
@@ -38,16 +46,16 @@ see \_\_\_MD\_LINK\_DESC\_USD\_8\_\_\_.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Toast configuration options. |
+| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | Toast选项。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

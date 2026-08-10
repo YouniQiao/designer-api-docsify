@@ -33,34 +33,35 @@ Repeat结合，它的预加载行为和ForEach一致。
 
 ## 子组件
 
-仅支持[ListItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、[ListItemGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_子组件和自定义组件。自定义组件在List下使用时，请使用ListItem或ListItemGroup作为自定义组件的顶层组件，请勿直接给自定义组件设置属性和事件方法，因为List通过ListItem或ListItemGroup管理子组件的布局和事件处理，直接设置可能导致部分功能无法正常生效。
+仅支持[ListItem]{@link ./list_item}、[ListItemGroup]{@link ./list_item_group}子组件和自定义组件。自定义组件在List下使用时，请使用ListItem或ListItemGroup作为自定义组件的顶层组件，请勿直接给自定义组件设置属性和事件方法，因为List通过ListItem或ListItemGroup管理子组件的布局和事件处理，直接设置可能导致部分功能无法正常生效。
 
-支持通过渲染控制类型（\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_和  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
-    **说明：**  
-    
-    在处理大量子组件时遇到卡顿问题，请采用懒加载、缓存列表项、动态预加载、组件复用和布局优化等方法进行优化。  
-    
-    从API version 21开始，List单个子组件的宽高最大为16777216px；API version 20及之前，List单个子组件的宽高最大为1000000px。子组件超出该大小可能导致滚动或显示异常。  
-    
-    List的子组件的索引值计算规则：  
-    
-    - 按子组件的顺序依次递增。  
-    
-    - if/else语句中，只有条件成立的分支内的子组件会参与索引值计算，条件不成立的分支内子组件不计算索引值。  
-    
-    - ForEach/LazyForEach/Repeat语句中，会计算展开所有子组件索引值。  
-    
-    - \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_、  
-    \_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_、  
-    \_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_和  
-    \_\_\_MD\_LINK\_DESC\_USD\_7\_\_\_发生变化以后，会更新子组件索引值。  
-    
-    - ListItemGroup作为一个整体计算一个索引值，ListItemGroup内部的ListItem不计算索引值。  
-    
-    - List子组件的visibility属性设置为Hidden或None依然会计算索引值。
+支持通过渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、  
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和  
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+
+> **说明：**
+> 
+> 在处理大量子组件时遇到卡顿问题，请采用懒加载、缓存列表项、动态预加载、组件复用和布局优化等方法进行优化。
+> 
+> 从API version 21开始，List单个子组件的宽高最大为16777216px；API version 20及之前，List单个子组件的宽高最大为1000000px。子组件超出该大小可能导致滚动或显示异常。
+> 
+> List的子组件的索引值计算规则：
+> 
+> - 按子组件的顺序依次递增。
+> 
+> - if/else语句中，只有条件成立的分支内的子组件会参与索引值计算，条件不成立的分支内子组件不计算索引值。
+> 
+> - ForEach/LazyForEach/Repeat语句中，会计算展开所有子组件索引值。
+> 
+> - [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和
+> [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)发生变化以后，会更新子组件索引值。
+> 
+> - ListItemGroup作为一个整体计算一个索引值，ListItemGroup内部的ListItem不计算索引值。
+> 
+> - List子组件的visibility属性设置为Hidden或None依然会计算索引值。
 
 ## List
 
@@ -86,7 +87,23 @@ List(options?: ListOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 设置List组件参数。不传入时使用默认配置。 |
+| options | [ListOptions](arkts-arkui-listoptions-i.md) | 否 | 设置List组件参数。不传入时使用默认配置。 |
 
 ## 汇总
 
+- [ChainAnimationOptions](arkts-arkui-list-chainanimationoptions-i-sys.md)
+- [CloseSwipeActionOptions](arkts-arkui-list-closeswipeactionoptions-i.md)
+- [ListBackPressBehavior](arkts-arkui-list-listbackpressbehavior-i.md)
+- [ListDividerOptions](arkts-arkui-list-listdivideroptions-i.md)
+- [ListOptions](arkts-arkui-list-listoptions-i.md)
+- [UIListEvent](arkts-arkui-list-uilistevent-i.md)
+- [VisibleListContentInfo](arkts-arkui-list-visiblelistcontentinfo-i.md)
+- [OnListScrollIndexCallback](arkts-arkui-list-onlistscrollindexcallback-t.md)
+- [OnScrollVisibleContentChangeCallback](arkts-arkui-list-onscrollvisiblecontentchangecallback-t.md)
+- [ChainEdgeEffect](arkts-arkui-list-chainedgeeffect-e-sys.md)
+- [ListItemAlign](arkts-arkui-list-listitemalign-e.md)
+- [ListItemGroupArea](arkts-arkui-list-listitemgrouparea-e.md)
+- [ScrollSnapAlign](arkts-arkui-list-scrollsnapalign-e.md)
+- [ScrollSnapAnimationSpeed](arkts-arkui-list-scrollsnapanimationspeed-e.md)
+- [ScrollState](arkts-arkui-list-scrollstate-e.md)
+- [StickyStyle](arkts-arkui-list-stickystyle-e.md)

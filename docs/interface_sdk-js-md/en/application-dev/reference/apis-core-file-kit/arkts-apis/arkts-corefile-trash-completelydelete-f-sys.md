@@ -1,5 +1,11 @@
 # completelyDelete (System API)
 
+## Modules to Import
+
+```TypeScript
+import { trash } from 'kits/@kit.CoreFileKit';
+```
+
 ## completelyDelete
 
 ```TypeScript
@@ -34,11 +40,11 @@ Permanently deletes a file or directory from the **Recently deleted** list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
 | 13900020 | Invalid argument |
+| 13900002 | No such file or directory |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 let fileinfos = trash.listFile();

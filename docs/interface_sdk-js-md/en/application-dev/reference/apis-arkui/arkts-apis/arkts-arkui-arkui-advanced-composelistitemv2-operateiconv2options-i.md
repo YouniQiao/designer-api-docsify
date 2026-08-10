@@ -1,6 +1,6 @@
 # OperateIconV2Options
 
-Declare interface OperateIconV2Options
+声明接口OperateIconV2Options
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Declare interface OperateIconV2Options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
 action?: OnActionCallback
 ```
 
-Callback function when operate the icon.
+操作图标时的回调函数。
 
 **Since:** 26.0.0
 
@@ -34,9 +40,9 @@ Callback function when operate the icon.
 accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of the icon.
+图标的无障碍描述。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -54,7 +60,7 @@ The accessibilityDescription of the icon.
 accessibilityLevel?: string
 ```
 
-The accessibilityLevel of the icon.
+图标的无障碍重要性。
 
 **Type:** string
 
@@ -76,9 +82,9 @@ The accessibilityLevel of the icon.
 accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of the icon.
+图标的无障碍文本属性。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -96,9 +102,9 @@ The accessibilityText of the icon.
 symbolStyle?: SymbolGlyphModifier
 ```
 
-The content of text or the address of symbol.
+文本内容或图标地址。
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -116,9 +122,9 @@ The content of text or the address of symbol.
 value?: ResourceStr
 ```
 
-The content of text or the address of icon.
+文本内容或图标地址。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

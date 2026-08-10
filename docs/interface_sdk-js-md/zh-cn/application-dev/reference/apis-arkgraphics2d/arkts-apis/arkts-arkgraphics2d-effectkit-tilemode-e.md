@@ -1,9 +1,10 @@
 # TileMode
 
 着色器效果平铺模式的枚举。
-    **说明：**  
-    
-    CPU渲染下，着色器平铺模式仅支持DECAL。GPU渲染下，DECAL、CLAMP、REPEAT、MIRROR模式均支持。
+
+> **说明：**
+> 
+> CPU渲染下，着色器平铺模式仅支持DECAL。GPU渲染下，DECAL、CLAMP、REPEAT、MIRROR模式均支持。
 
 **起始版本：** 14
 

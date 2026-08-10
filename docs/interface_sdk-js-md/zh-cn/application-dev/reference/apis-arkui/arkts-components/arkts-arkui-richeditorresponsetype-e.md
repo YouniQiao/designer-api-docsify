@@ -76,7 +76,7 @@ SELECT = 2
 DEFAULT = 3
 ```
 
-注册此响应类型的菜单，但未注册RIGHT\_CLICK、LONG\_PRESS、SELECT响应类型的菜单时，通过鼠标右键、长按、鼠标选中都会触发菜单弹出。
+注册此响应类型的菜单，但未注册RIGHT_CLICK、LONG_PRESS、SELECT响应类型的菜单时，通过鼠标右键、长按、鼠标选中都会触发菜单弹出。
 
 **起始版本：** 15
 

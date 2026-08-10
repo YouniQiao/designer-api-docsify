@@ -28,8 +28,8 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定应用的包信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;NotificationSlot&gt;&gt; | 是 | 获取通知通道回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | 是 | 获取通知通道回调函数。 |
 
 
 ## getSlotsByBundle
@@ -60,11 +60,11 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | 以Promise形式返回获取指定应用的通知通道。 |
+| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | 以Promise形式返回获取指定应用的通知通道。 |
 

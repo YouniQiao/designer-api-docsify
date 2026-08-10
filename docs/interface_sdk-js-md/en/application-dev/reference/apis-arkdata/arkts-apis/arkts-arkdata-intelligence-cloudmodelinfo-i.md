@@ -1,6 +1,6 @@
 # CloudModelInfo
 
-Indicates cloud embedding model information.
+云侧模型的配置信息，在使用云侧文本向量模型时配置，可通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel)接口获取当前设备支持的云侧模型信息。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Indicates cloud embedding model information.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
+## Modules to Import
+
+```TypeScript
+import { intelligence } from 'kits/@kit.ArkData';
+```
+
 ## modelType
 
 ```TypeScript
 modelType: string
 ```
 
-Indicates cloud embedding model type.
+模型类型名称，如"arkdata_text_embedding"表示云侧文本向量模型。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Indicates cloud embedding model type.
 modelVersionCode?: string
 ```
 
-Indicates cloud embedding model version.
+模型版本，默认值为空。
 
 **Type:** string
 

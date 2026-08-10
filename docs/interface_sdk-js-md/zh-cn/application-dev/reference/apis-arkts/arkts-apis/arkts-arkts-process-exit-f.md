@@ -1,5 +1,11 @@
 # exit
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## exit
 
 ```TypeScript
@@ -28,7 +34,7 @@ function exit(code: number): void
 | --- | --- | --- | --- |
 | code | number | 是 | 进程的退出码。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 process.exit(0);

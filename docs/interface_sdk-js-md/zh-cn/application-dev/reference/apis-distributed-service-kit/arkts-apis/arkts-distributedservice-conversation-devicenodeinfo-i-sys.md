@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { conversation } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## deviceName
 
 ```TypeScript
@@ -42,7 +48,7 @@ deviceTypeId: int
 
 设备类型标识符，表示设备的类别，取值为整数，例如：0x0E-手机、0x11-平板、0x9C-电视、0x0C-PC等（具体数值以系统定义为准）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.1.0
 

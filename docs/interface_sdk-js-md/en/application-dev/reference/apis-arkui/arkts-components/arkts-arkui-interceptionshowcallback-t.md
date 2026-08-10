@@ -4,7 +4,7 @@
 declare type InterceptionShowCallback = (from: NavDestinationContext|NavBar, to: NavDestinationContext|NavBar, operation: NavigationOperation, isAnimated: boolean) => void
 ```
 
-Represents the interception callback invoked before and after page redirection.
+Navigation页面跳转前和页面跳转后的拦截回调。
 
 **Since:** 12
 
@@ -22,8 +22,8 @@ Represents the interception callback invoked before and after page redirection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| NavBar | Yes | Information about the top page in the routing stack after page redirection. The value **navBar** indicates that the top page is the home page.  |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| NavBar | Yes | Information about the top page in the routing stack after page redirection. The value **navBar** indicates that the top page is the home page.  |
-| operation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current page redirection type.  |
-| isAnimated | boolean | Yes | Whether to enable the transition animation. \_\_\_HTML\_TAG\_USD\_0\_\_\_**true**: Enable the transition animation.\_\_\_HTML\_TAG\_USD\_1\_\_\_**false**: Disable the transition animation.  |
+| from | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | 页面跳转之前的栈顶页面信息。参数值为navBar，则表示跳转前的页面为Navigation首页。 |
+| to | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | 页面跳转之前的栈顶页面信息。参数值为navBar，则表示跳转前的页面为Navigation首页。 |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | 当前页面跳转类型。 |
+| isAnimated | boolean | Yes | 页面跳转是否有动画。<br/>true：页面跳转有动画。<br/>false：页面跳转没有动画。 |
 

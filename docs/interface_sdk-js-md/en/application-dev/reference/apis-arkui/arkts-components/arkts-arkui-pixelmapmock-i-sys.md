@@ -1,6 +1,6 @@
 # PixelMapMock (System API)
 
-pixelmap object with release function.
+带有release函数的像素图对象。
 
 **Since:** 7
 

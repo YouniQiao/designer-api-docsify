@@ -4,7 +4,7 @@
 export type EditableTitleBarItemV2 = EditableTitleBarMenuItemV2
 ```
 
-Declaration of the image item.
+左侧图像项类型别名。
 
 **Since:** 26.0.0
 

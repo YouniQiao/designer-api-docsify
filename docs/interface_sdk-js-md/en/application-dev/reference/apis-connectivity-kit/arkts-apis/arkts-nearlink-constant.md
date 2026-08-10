@@ -1,14 +1,22 @@
 # @ohos.nearlink.constant
 
-The definition of nearlinkConstant.
+nearlinkConstant的定义。
 
 **Since:** 26.0.0
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace nearlinkConstant--><!--Device-unnamed-declare namespace nearlinkConstant-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
+
+## Modules to Import
+
+```TypeScript
+import { nearlinkConstant } from 'kits/@kit.ConnectivityKit';
+```
 
 ## Summary
 

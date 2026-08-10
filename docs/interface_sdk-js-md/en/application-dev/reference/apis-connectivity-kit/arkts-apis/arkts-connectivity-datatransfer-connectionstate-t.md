@@ -4,7 +4,7 @@
 type ConnectionState = nearlinkConstant.ConnectionState
 ```
 
-Indicates the connection state.
+连接状态。
 
 **Since:** 26.0.0
 

@@ -1,12 +1,18 @@
 # getUidForName
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getUidForName
 
 ```TypeScript
 function getUidForName(v: string): number
 ```
 
-Obtains the UID of a user from the user database of the system based on the specified user name.
+根据指定的用户名，从系统的用户数据库中获取该用户的 uid。
 
 **Since:** 8
 
@@ -24,15 +30,15 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | string | Yes | User name. |
+| v | string | Yes | 用户名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | UID of the user. |
+| number | 返回用户 uid。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pres = process.getUidForName("tool");

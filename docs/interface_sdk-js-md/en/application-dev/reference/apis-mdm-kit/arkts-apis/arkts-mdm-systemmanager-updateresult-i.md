@@ -1,6 +1,6 @@
 # UpdateResult
 
-Represents the update result information.
+系统更新结果信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents the update result information.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## errorInfo
 
 ```TypeScript
 errorInfo: ErrorInfo
 ```
 
-Error information.
+系统更新错误信息。
 
-**Type:** ErrorInfo
+**Type:** [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Error information.
 status: UpdateStatus
 ```
 
-System update status.
+系统更新状态。
 
-**Type:** UpdateStatus
+**Type:** [UpdateStatus](arkts-mdm-systemmanager-updatestatus-e.md)
 
 **Since:** 12
 
@@ -56,7 +62,7 @@ System update status.
 version: string
 ```
 
-Current version of the system.
+系统当前版本号。
 
 **Type:** string
 

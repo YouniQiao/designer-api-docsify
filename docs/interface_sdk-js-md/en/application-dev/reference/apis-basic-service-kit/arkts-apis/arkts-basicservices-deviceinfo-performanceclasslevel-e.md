@@ -1,6 +1,6 @@
 # PerformanceClassLevel
 
-Enumerates the device capability levels.
+表示设备能力定级的枚举。
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Enumerates the device capability levels.
 CLASS_LEVEL_HIGH
 ```
 
-High
+表示设备能力定级为高。
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ High
 CLASS_LEVEL_MEDIUM
 ```
 
-Medium
+表示设备能力定级为中。
 
 **Since:** 24
 
@@ -52,7 +52,7 @@ Medium
 CLASS_LEVEL_LOW
 ```
 
-Low
+表示设备能力定级为低。
 
 **Since:** 24
 

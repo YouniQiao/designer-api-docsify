@@ -12,6 +12,12 @@ Indicates the information of call transfer.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## endHour
 
 ```TypeScript
@@ -20,7 +26,7 @@ endHour?: int
 
 End time hours.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -40,7 +46,7 @@ endMinute?: int
 
 End time minutes.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -60,7 +66,7 @@ settingType: CallTransferSettingType
 
 Call forwarding setting type.
 
-**Type:** CallTransferSettingType
+**Type:** [CallTransferSettingType](arkts-telephony-call-calltransfersettingtype-e-sys.md)
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ startHour?: int
 
 Start time hours.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -100,7 +106,7 @@ startMinute?: int
 
 Start time minutes.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -140,7 +146,7 @@ type: CallTransferType
 
 Call forwarding type.
 
-**Type:** CallTransferType
+**Type:** [CallTransferType](arkts-telephony-call-calltransfertype-e.md)
 
 **Since:** 8
 

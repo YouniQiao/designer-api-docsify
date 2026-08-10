@@ -1,16 +1,22 @@
 # startAbility
 
+## Modules to Import
+
+```TypeScript
+import { featureAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## startAbility
 
 ```TypeScript
 function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<number>): void
 ```
 
-Starts an ability. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    For details about the startup rules for the components in the FA model, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+启动新的Ability。使用callback异步回调。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **Since:** 6
 
@@ -26,10 +32,10 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability to start. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **0**; otherwise, **err** is a non-zero value. |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | 表示被启动的Ability。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。当启动Ability成功，err为undefined，data为0表示启动成功，data为其他表示启动失败；否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility, wantConstant } from '@kit.AbilityKit';
@@ -66,11 +72,11 @@ featureAbility.startAbility(
 function startAbility(parameter: StartAbilityParameter): Promise<number>
 ```
 
-Starts an ability. This API uses a promise to return the result.
-    **NOTE**  
-    
-    For details about the startup rules for the components in the FA model, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+启动新的Ability。使用Promise异步回调。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **Since:** 6
 
@@ -86,15 +92,15 @@ Starts an ability. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability to start. |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | 表示被启动的Ability。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, a non-zero value is returned. |
+| Promise&lt;number&gt; | Promise对象。返回0表示启动成功，返回其他表示启动失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility, wantConstant } from '@kit.AbilityKit';

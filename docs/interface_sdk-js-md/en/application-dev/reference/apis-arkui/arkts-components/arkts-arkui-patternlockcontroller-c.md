@@ -1,10 +1,10 @@
 # PatternLockController
 
-Controller of the **PatternLock** component, which is used to reset the component status and challenge result of the pattern password.
+PatternLock组件的控制器，用于重置组件状态和设置图案密码状态。
 
-## Objects to Import
+## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts patternLockController: PatternLockController = new PatternLockController();```
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Controller of the **PatternLock** component, which is used to reset the componen
 constructor()
 ```
 
-A constructor used to create a **PatternLockController** instance.
+PatternLockController的构造函数。
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ A constructor used to create a **PatternLockController** instance.
 reset()
 ```
 
-Resets the component status.
+重置组件状态。需要在PatternLock组件构造时传入对应的controller参数才可生效，未传入时调用不生效。
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ Resets the component status.
 setChallengeResult(result: PatternLockChallengeResult): void
 ```
 
-Challenge result of the pattern password.
+设置图案密码的正确或错误状态。需要在PatternLock组件构造时传入对应的controller参数才可生效，未传入时调用不生效。
 
 **Since:** 11
 
@@ -74,5 +74,5 @@ Challenge result of the pattern password.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication challenge result of the pattern password. The status can be correct or incorrect. |
+| result | [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md) | Yes | 图案密码状态。包括正确和错误状态。 |
 

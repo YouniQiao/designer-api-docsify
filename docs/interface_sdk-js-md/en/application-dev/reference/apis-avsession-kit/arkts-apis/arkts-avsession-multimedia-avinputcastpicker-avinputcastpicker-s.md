@@ -1,6 +1,8 @@
 # AVInputCastPicker
 
-A picker view to show availale input device list.
+录音设备选择组件，可用于切换音频输入设备。
+
+该组件为自定义组件，开发者在使用前需要先了解[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)。
 
 **Since:** 23
 
@@ -12,13 +14,19 @@ A picker view to show availale input device list.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVInputCast
 
+## Modules to Import
+
+```TypeScript
+import { AVInputCastPicker } from 'kits/@kit.AVSessionKit';
+```
+
 ## build
 
 ```TypeScript
 build(): void
 ```
 
-The method to build component.
+构造组件。
 
 **Since:** 23
 
@@ -36,9 +44,11 @@ The method to build component.
 customPicker?: CustomBuilder
 ```
 
-Set the custom builder for the picker appearance.If not set, system will show the default appearance for different device type.
+自定义样式。建议开发者自定义组件样式，可有效提升组件渲染性能。
 
-**Type:** CustomBuilder
+If not set, system will show the default appearance for different device type.
+
+**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -56,9 +66,9 @@ Set the custom builder for the picker appearance.If not set, system will show th
 onStateChange?: OnPickerStateCallback
 ```
 
-Picker state change callback.
+设备列表状态变更回调。
 
-**Type:** OnPickerStateCallback
+**Type:** [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
 
 **Since:** 23
 

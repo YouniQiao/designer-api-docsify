@@ -1,6 +1,6 @@
 # FirstScreenPaint
 
-Defines the event information when the first screen paint is detected.
+检测到首屏渲染时的事件信息。
 
 **Since:** 23
 
@@ -16,7 +16,9 @@ Defines the event information when the first screen paint is detected.
 firstScreenPaintTime: number
 ```
 
-The first screen paint time of the url.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+url所指页面首屏绘制完成的时刻。
+
+单位：毫秒。
 
 **Type:** number
 
@@ -34,7 +36,9 @@ The first screen paint time of the url.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:m
 navigationStartTime: number
 ```
 
-The navigation start time of the url.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+url所指页面开始导航的时刻。
+
+单位：毫秒。
 
 **Type:** number
 
@@ -52,7 +56,7 @@ The navigation start time of the url.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:mil
 url: string
 ```
 
-URL of the first screen paint statistics.
+本次首屏渲染统计所对应的url。
 
 **Type:** string
 

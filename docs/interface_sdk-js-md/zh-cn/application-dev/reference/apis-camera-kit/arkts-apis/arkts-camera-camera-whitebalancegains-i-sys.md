@@ -12,6 +12,12 @@ RGB white balance gain values.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## blueGain
 
 ```TypeScript
@@ -20,7 +26,7 @@ blueGain: double
 
 The blue gain component of the white balance value.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.1.0
 
@@ -42,7 +48,7 @@ greenGain: double
 
 The green gain component of the white balance value.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.1.0
 
@@ -64,7 +70,7 @@ redGain: double
 
 The red gain component of the white balance value.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.1.0
 

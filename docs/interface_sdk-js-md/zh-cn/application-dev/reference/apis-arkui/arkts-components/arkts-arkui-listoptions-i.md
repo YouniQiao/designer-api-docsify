@@ -1,9 +1,10 @@
 # ListOptions
 
 用于设置List组件参数。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -27,11 +28,11 @@ initialIndex?: number
 
 设置为负数或超过了当前List最后一个item的索引值时视为无效取值，无效取值按默认值显示。
 
-从API version 14开始，如果在List组件创建完成后首次布局前（如List的[onAttach]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_事件中），调用Scroller滚动控制器中不带动画的scrollToIndex或scrollEdge方法，会覆盖initialIndex设置的值。
+从API version 14开始，如果在List组件创建完成后首次布局前（如List的[onAttach](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onattach)事件中），调用Scroller滚动控制器中不带动画的scrollToIndex或scrollEdge方法，会覆盖initialIndex设置的值。
 
 设置了initialIndex后，List从initialIndex对应的子组件开始布局，在这之前的子组件未参与布局，无法计算准确大小，因此通过  
-[currentOffset]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口获取到的List的滚动总偏移量通过估算得出，可能会有误差。可通过设置  
-[childrenMainSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_确保List的滚动总偏移量的准确性。
+[currentOffset](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#currentoffset)接口获取到的List的滚动总偏移量通过估算得出，可能会有误差。可通过设置  
+[childrenMainSize](ListAttribute#childrenMainSize)确保List的滚动总偏移量的准确性。
 
 **类型：** number
 
@@ -59,10 +60,10 @@ scroller?: Scroller
 
 **说明：**
 
-不允许和其他滚动类组件，如：[ArcList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[List]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Grid]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[Scroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_和[WaterFlow]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_绑定同一个滚动控制对象。
+不允许和其他滚动类组件，如：[ArcList](../arkts-apis/arkts-arkui-arclist.md/arkts-arkui-arclist.md)、[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、[Grid](../arkts-apis/arkts-arkui-grid-grid-f.md/arkts-arkui-grid-grid-f.md#grid)、  
+[Scroll](../arkts-apis/arkts-arkui-scroll-scroll-f.md/arkts-arkui-scroll-scroll-f.md#scroll)和[WaterFlow](./water_flow)绑定同一个滚动控制对象。
 
-**类型：** Scroller
+**类型：** [Scroller](arkts-arkui-scroller-c.md)
 
 **起始版本：** 7
 
@@ -136,7 +137,7 @@ List子组件的visibility属性设置为None时不显示，但该子组件上�
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 0
 

@@ -1,5 +1,11 @@
 # getBundleInfo
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleInfo
 
 ```TypeScript
@@ -7,9 +13,9 @@ function getBundleInfo(bundleName: string,
     bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on a given bundle name and bundle options. This API uses an asynchronous callback to return the result.
+根据给定的Bundle名称获取BundleInfo，使用callback异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 7
 
@@ -29,10 +35,10 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Includes **userId**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleInfo&gt; | Yes | Callback used to return the bundle information. |
+| bundleName | string | Yes | 要查询的应用Bundle名称。 |
+| bundleFlags | number | Yes | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中包信息相关flag。 |
+| options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | Yes | 包含userid。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | 程序启动作为入参的回调函数，返回包信息。 |
 
 
 ## getBundleInfo
@@ -41,9 +47,9 @@ No permission is required for obtaining the caller's own information.
 function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on a given bundle name. This API uses an asynchronous callback to return the result.
+根据给定的Bundle名称获取BundleInfo，使用callback异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 7
 
@@ -63,9 +69,9 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleInfo&gt; | Yes | Callback used to return the bundle information. |
+| bundleName | string | Yes | 需要查询的应用Bundle名称。 |
+| bundleFlags | number | Yes | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中包信息相关flag。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | 程序启动作为入参的回调函数，返回包信息。 |
 
 
 ## getBundleInfo
@@ -74,9 +80,9 @@ No permission is required for obtaining the caller's own information.
 function getBundleInfo(bundleName: string, bundleFlags: number, options?: BundleOptions): Promise<BundleInfo>
 ```
 
-Obtains the bundle information based on a given bundle name. This API uses a promise to return the result.
+根据给定的Bundle名称获取BundleInfo，使用Promise异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 7
 
@@ -96,13 +102,13 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options that contain the user ID. |
+| bundleName | string | Yes | 要查询的应用Bundle名称。 |
+| bundleFlags | number | Yes | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中包信息相关flag。 |
+| options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | No | 包含userid的查询选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information. |
+| Promise&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Promise对象，获取成功时返回包信息。 |
 

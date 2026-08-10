@@ -4,7 +4,7 @@
 type HandleMemberPurchaseEvent = (info: MemberPurchaseInfo) => Promise<DialogInfo>
 ```
 
-The handle member purchase event.
+处理购买会员事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ The handle member purchase event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | info  |
+| info | [MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | (DialogInfo) returned through promise  |
+| Promise&lt;DialogInfo&gt; | Promise对象，返回对话框信息。 |
 

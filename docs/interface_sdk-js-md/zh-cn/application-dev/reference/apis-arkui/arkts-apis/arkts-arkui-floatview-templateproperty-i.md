@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## size
 
 ```TypeScript
@@ -38,7 +44,7 @@ templateType: FloatViewTemplateType
 
 标准悬浮窗的模板类型。
 
-**类型：** FloatViewTemplateType
+**类型：** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,6 @@
 # ContextMenuDataMediaType
 
-Enumerates the media types that trigger the context menu (enhanced type obtaining capability).
+触发上下文菜单的网页元素类型（增强获取类型能力）。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the media types that trigger the context menu (enhanced type obtainin
 NONE = 0
 ```
 
-Default value, indicating that the current context menu is not associated with any media type (for example, right-click text or blank area).
+默认值，表示当前上下文菜单不关联任何媒体类型（例如右键文本或空白区域）。
 
 **Since:** 22
 
@@ -32,7 +32,7 @@ Default value, indicating that the current context menu is not associated with a
 IMAGE = 1
 ```
 
-Image.
+图片类型。
 
 **Since:** 22
 
@@ -48,7 +48,7 @@ Image.
 VIDEO = 2
 ```
 
-Video.
+视频类型。
 
 **Since:** 22
 
@@ -64,7 +64,7 @@ Video.
 AUDIO = 3
 ```
 
-Audio.
+音频类型。
 
 **Since:** 22
 
@@ -80,7 +80,7 @@ Audio.
 CANVAS = 4
 ```
 
-Canvas.
+Canvas类型。
 
 **Since:** 22
 

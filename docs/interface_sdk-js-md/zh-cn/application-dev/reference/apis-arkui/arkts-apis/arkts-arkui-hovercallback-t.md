@@ -21,5 +21,5 @@ Defines the callback type used in hover events.The value of isHover indicates wh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isHover | boolean | 是 |  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| event | [HoverEvent](arkts-arkui-common-hoverevent-i.md) | 是 |  |
 

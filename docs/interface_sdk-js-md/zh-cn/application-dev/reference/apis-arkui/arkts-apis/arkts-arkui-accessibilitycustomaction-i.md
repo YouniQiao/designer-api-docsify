@@ -40,7 +40,7 @@ name: ResourceStr
 
 name -指定自定义操作的名称。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 

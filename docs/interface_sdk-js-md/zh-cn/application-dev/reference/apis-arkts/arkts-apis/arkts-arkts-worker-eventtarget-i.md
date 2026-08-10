@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## addEventListener
 
 ```TypeScript
@@ -39,9 +45,9 @@ addEventListener(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker.ets
@@ -78,7 +84,7 @@ dispatchEvent(event: Event): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要分发的事件。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 | 需要分发的事件。 |
 
 **返回值：**
 
@@ -86,7 +92,7 @@ dispatchEvent(event: Event): boolean
 | --- | --- |
 | boolean |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker.ets
@@ -149,7 +155,7 @@ removeAllListener(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker.ets
@@ -189,9 +195,9 @@ removeEventListener(type: string, callback?: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 要移除的事件监听的回调函数。 |
+| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 | 要移除的事件监听的回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker.ets

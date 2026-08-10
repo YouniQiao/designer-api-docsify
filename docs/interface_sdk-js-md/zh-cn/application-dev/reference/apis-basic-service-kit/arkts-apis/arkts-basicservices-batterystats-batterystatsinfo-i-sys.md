@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
+```
+
 ## power
 
 ```TypeScript
@@ -20,7 +26,7 @@ power: double
 
 耗电的值，单位毫安时。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -40,7 +46,7 @@ type: ConsumptionType
 
 耗电信息相关的类型。
 
-**类型：** ConsumptionType
+**类型：** [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md)
 
 **起始版本：** 8
 
@@ -60,7 +66,7 @@ uid: int
 
 耗电信息相关的UID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 

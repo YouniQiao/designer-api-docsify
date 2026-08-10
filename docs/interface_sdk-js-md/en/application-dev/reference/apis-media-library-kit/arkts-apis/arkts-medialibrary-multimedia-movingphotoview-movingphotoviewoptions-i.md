@@ -10,6 +10,12 @@ Defines the moving photo view options.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## controller
 
 ```TypeScript
@@ -18,7 +24,7 @@ controller?: MovingPhotoViewController
 
 controller of MovingPhotoView.
 
-**Type:** MovingPhotoViewController
+**Type:** [MovingPhotoViewController](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c.md)
 
 **Since:** 12
 
@@ -38,7 +44,7 @@ imageAIOptions?: ImageAIOptions
 
 image ai options of MovingPhotoView.
 
-**Type:** ImageAIOptions
+**Type:** [ImageAIOptions](../../apis-arkui/arkts-apis/arkts-arkui-imagecommon-imageaioptions-i.md)
 
 **Since:** 18
 

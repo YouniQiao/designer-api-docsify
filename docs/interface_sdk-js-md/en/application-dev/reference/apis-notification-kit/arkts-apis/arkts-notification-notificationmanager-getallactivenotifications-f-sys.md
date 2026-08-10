@@ -1,12 +1,18 @@
 # getAllActiveNotifications (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getAllActiveNotifications
 
 ```TypeScript
 function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void
 ```
 
-Obtains all active notifications. This API uses an asynchronous callback to return the result.
+获取当前未删除的所有通知。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,20 +30,20 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | 获取活动通知回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -60,7 +66,7 @@ notificationManager.getAllActiveNotifications(getAllActiveNotificationsCallback)
 function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 ```
 
-Obtains all active notifications. This API uses a promise to return the result.
+获取当前未删除的所有通知。使用Promise异步回调。
 
 **Since:** 9
 
@@ -78,19 +84,19 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | 以Promise形式返回获取活动通知。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

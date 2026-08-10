@@ -1,12 +1,18 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## on('add' | 'remove' | 'change')
 
 ```TypeScript
 function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void
 ```
 
-Subscribes to display changes.
+开启显示设备变化的监听。
 
 **Since:** 7
 
@@ -22,16 +28,16 @@ Subscribes to display changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **add**, indicating the display addition event. Example: event that a display is connected.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **remove**, indicating the display removal event. Example: event that a display is disconnected.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **change**, indicating the display change event. Example: event that the display orientation is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
+| type | 'add' \| 'remove' \| 'change' | Yes | 监听事件。&lt;br/&gt;- type为"add"，表示增加显示设备事件。例如：插入显示器。&lt;br/&gt;- type为"remove"，表示移除显 示设备事件。例如：移除显示器。&lt;br/&gt;- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | 回调函数。返回监听到的屏幕ID，该参数为整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -40,7 +46,7 @@ let callback: Callback<number> = (data: number) => {
   console.info(`Listening enabled. Data: ${data}`);
 };
 
-display.on("add", callback);
+display.on('add', callback);
 ```
 
 
@@ -50,7 +56,7 @@ display.on("add", callback);
 function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void
 ```
 
-Subscribes to display changes.
+开启显示设备变化的监听。
 
 **Since:** 7
 
@@ -66,16 +72,16 @@ Subscribes to display changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **add**, indicating the display addition event. Example: event that a display is connected.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **remove**, indicating the display removal event. Example: event that a display is disconnected.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **change**, indicating the display change event. Example: event that the display orientation is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
+| type | 'add' \| 'remove' \| 'change' | Yes | 监听事件。&lt;br/&gt;- type为"add"，表示增加显示设备事件。例如：插入显示器。&lt;br/&gt;- type为"remove"，表示移除显 示设备事件。例如：移除显示器。&lt;br/&gt;- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | 回调函数。返回监听到的屏幕ID，该参数为整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -84,7 +90,7 @@ let callback: Callback<number> = (data: number) => {
   console.info(`Listening enabled. Data: ${data}`);
 };
 
-display.on("add", callback);
+display.on('add', callback);
 ```
 
 
@@ -94,7 +100,7 @@ display.on("add", callback);
 function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void
 ```
 
-Subscribes to display changes.
+开启显示设备变化的监听。
 
 **Since:** 7
 
@@ -110,16 +116,16 @@ Subscribes to display changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **add**, indicating the display addition event. Example: event that a display is connected.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **remove**, indicating the display removal event. Example: event that a display is disconnected.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **change**, indicating the display change event. Example: event that the display orientation is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
+| type | 'add' \| 'remove' \| 'change' | Yes | 监听事件。&lt;br/&gt;- type为"add"，表示增加显示设备事件。例如：插入显示器。&lt;br/&gt;- type为"remove"，表示移除显 示设备事件。例如：移除显示器。&lt;br/&gt;- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | 回调函数。返回监听到的屏幕ID，该参数为整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -128,7 +134,7 @@ let callback: Callback<number> = (data: number) => {
   console.info(`Listening enabled. Data: ${data}`);
 };
 
-display.on("add", callback);
+display.on('add', callback);
 ```
 
 
@@ -138,15 +144,15 @@ display.on("add", callback);
 function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void
 ```
 
-Subscribes to fold status change events of the foldable device.
+开启折叠设备折叠状态变化的监听。
 
-To subscribe to display mode change events of foldable devices, use  
-[display.on('foldDisplayModeChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+本接口监听设备物理折叠状态的变化，如果要监听屏幕显示模式的变化，需要使用  
+[display.on('foldDisplayModeChange')](display.on(type: 'foldDisplayModeChange', callback: Callback&lt;FoldDisplayMode&gt;))接口。
 
-The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.
+两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。
 
-To check whether the content is displayed on the inner or outer screen of the foldable device, use  
-[display.on('foldDisplayModeChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+若需监听当前显示内容是显示在折叠设备的内屏还是外屏，请使用  
+[display.on('foldDisplayModeChange')](display.on(type: 'foldDisplayModeChange', callback: Callback&lt;FoldDisplayMode&gt;))。
 
 **Since:** 10
 
@@ -162,17 +168,17 @@ To check whether the content is displayed on the inner or outer screen of the fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldStatusChange' | Yes | Event type. The event **'foldStatusChange'** is triggered when the fold status of the device changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FoldStatus&gt; | Yes | Callback used to return the fold status. |
+| type | 'foldStatusChange' | Yes | 监听事件，固定为'foldStatusChange'，表示折叠设备折叠状态发生变化。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | Yes | 回调函数。表示折叠设备折叠状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -194,7 +200,7 @@ display.on('foldStatusChange', callback);
 function on(type: 'foldAngleChange', callback: Callback<Array<double>>): void
 ```
 
-Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual-fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively.
+开启折叠设备折叠角度变化的监听。如果是双折轴设备，则有两个角度值；在充电口朝下的状态下，从右到左分别是折轴一和折轴二。
 
 **Since:** 12
 
@@ -210,17 +216,17 @@ Subscribes to folding angle change events of the foldable device. Note that ther
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldAngleChange' | Yes | Event type. The event **'foldAngleChange'** is triggered when the folding angle of the device changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the folding angle (0�C180 degrees). For dual- fold axis devices, the array contains two angles. The first value represents the folding angle of the first fold axis, while the second value represents the folding angle of the second fold axis. |
+| type | 'foldAngleChange' | Yes | 监听事件，固定为'foldAngleChange'，表示折叠设备折叠角度发生变化。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | 回调函数。表示折叠设备屏幕折叠角度值（0度~180度）。如果是双折轴设备，则数组返回两个角度值，第一个值是折轴一的折叠角度值，第二个值是折 轴二的折叠角度值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -238,7 +244,7 @@ display.on('foldAngleChange', callback);
 function on(type: 'captureStatusChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to events indicating the status of the device's screen content is being captured.
+开启设备的屏幕显示信息是否被获取的监听。
 
 **Since:** 12
 
@@ -254,17 +260,17 @@ Subscribes to events indicating the status of the device's screen content is bei
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureStatusChange' | Yes | Event type. The event **'captureStatusChange'** is triggered when the screen capture status changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result indicating whether the device's screen content is being captured. **true** is returned when screen content is being captured (including active screen capture, casting, recording, or the creation of a virtual screen that could be captured). **false** is returned when screen content is no longer being captured. In the case of screen capture, **true** is returned only once. |
+| type | 'captureStatusChange' | Yes | 监听事件，固定为'captureStatusChange'表示设备的屏幕显示信息被获取的状态发生变化。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数。表示设备的屏幕显示信息是否被获取。true表示设备的屏幕显示信息开始被获取，包括处于截屏、投屏、录屏状态，或创建了虚拟屏幕(虚拟屏幕可能被 应用获取屏幕图像)，截屏仅返回一次true；false表示获取结束。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -282,12 +288,12 @@ display.on('captureStatusChange', callback);
 function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>): void
 ```
 
-Subscribes to display mode change events of the foldable device.
+开启折叠设备屏幕显示模式变化的监听。
 
-To subscribe to fold status change events of foldable devices, use  
-[display.on('foldStatusChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+本接口监听设备屏幕显示模式的变化，如果要监听设备物理折叠状态的变化，需要使用  
+[display.on('foldStatusChange')](display.on(type: 'foldStatusChange', callback: Callback&lt;FoldStatus&gt;))接口。
 
-The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.
+两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。
 
 **Since:** 10
 
@@ -303,17 +309,17 @@ The two are different. In terms of timing, the fold status changes first, and th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldDisplayModeChange' | Yes | Event type. The event **'foldDisplayModeChange'** is triggered when the display mode of the device changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FoldDisplayMode&gt; | Yes | Callback used to return the display mode. |
+| type | 'foldDisplayModeChange' | Yes | 监听事件，固定为'foldDisplayModeChange'，表示折叠设备屏幕显示模式发生变化。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldDisplayMode&gt; | Yes | 回调函数。表示折叠设备屏幕显示模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -335,8 +341,7 @@ display.on('foldDisplayModeChange', callback);
 function on(type: 'brightnessInfoChange', callback: BrightnessCallback<long, BrightnessInfo>): void
 ```
 
-Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the  
-**currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
+开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。
 
 **Since:** 22
 
@@ -352,27 +357,27 @@ Subscribes to events related to screen brightness information changes. If the sc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'brightnessInfoChange' | Yes | Event type. The value is fixed at **'brightnessInfoChange'**, indicating that the screen brightness information is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long, BrightnessInfo&gt; | Yes | Callback used to return the display ID (parameter 1) and the corresponding screen brightness information (parameter 2). |
+| type | 'brightnessInfoChange' | Yes | 监听事件，固定为'brightnessInfoChange'，表示屏幕亮度信息状态发生变化。 |
+| callback | [BrightnessCallback](arkts-arkui-display-brightnesscallback-t.md)&lt;long, BrightnessInfo&gt; | Yes | 回调函数。返回屏幕亮度信息改变的displayId(参数1)及对应的屏幕亮度信息(参数2)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function on('brightnessInfoChange') can not work correctly due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 801 | Capability not supported. |
+| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callback: display.BrightnessCallback<number, display.BrightnessInfo> = (id: number, data: display.BrightnessInfo) => {
   console.info(`Listening enabled ${id}. Data: ${JSON.stringify(data)}`);
 };
 try {
-  display.on("brightnessInfoChange", callback);
+  display.on('brightnessInfoChange', callback);
 } catch (error) {
-  console.error(`brightnessInfoChange error. Code ${error.code}, message: ${error.message}`);
+  console.error(`Failed to register brightnessInfoChange listener. Code ${error.code}, message: ${error.message}`);
 }
 ```
 

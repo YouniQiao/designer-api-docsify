@@ -1,6 +1,6 @@
 # DocumentSaveOptions
 
-Defines the options for saving documents.
+文档保存选项。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines the options for saving documents.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
+
 ## autoCreateEmptyFile
 
 ```TypeScript
 autoCreateEmptyFile?: boolean
 ```
 
-A Boolean value indicates whether to pre-create empty files when saving files. The default value is **true**, in which case the Picker pre-creates empty files and returns an array of the file URIs. If it is set to **false**,no empty files are pre-created, and only an array of the file URIs is returned.
+保存文件时，由应用决定是否预置空文件。默认为true，Picker会预置空文件并且返回文件的URI数组。false不预置空文件，只会返回文件的URI数组。
 
 **Type:** boolean
 
@@ -38,7 +44,7 @@ A Boolean value indicates whether to pre-create empty files when saving files. T
 defaultFilePathUri?: string
 ```
 
-URI of the file or directory that can be selected. It is empty by default (the recently opened page is displayed).
+指定选择的文件或者目录的URI。默认为空（效果为拉起最近打开页）。
 
 **Type:** string
 
@@ -58,9 +64,7 @@ URI of the file or directory that can be selected. It is empty by default (the r
 fileSuffixChoices?: Array<string>
 ```
 
-Document suffix of the document to save.
-
-The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix.If there is no "|", the option does not have the description. By default, all documents are saved.
+保存文件的后缀类型。传入字符串数组，每一项代表一个后缀选项，每一项内部用"|"分为两部分，第一部分为描述，第二部分为要保存的后缀。没有"|"则没有描述，该项整体是一个保存的后缀。默认没有后缀类型。
 
 **Type:** Array&lt;string&gt;
 
@@ -80,7 +84,7 @@ The value is a string array. Each element specifies an option, which includes at
 newFileNames?: Array<string>
 ```
 
-Name of the document to save. If this parameter is not specified, the user needs to enter the file name.
+拉起documentPicker进行保存的文件名。若无此参数，则默认需要用户自行输入。
 
 **Type:** Array&lt;string&gt;
 
@@ -100,12 +104,9 @@ Name of the document to save. If this parameter is not specified, the user needs
 pickerMode?: DocumentPickerMode
 ```
 
-Mode for starting Picker.
+拉起picker的类型, 默认为DEFAULT。当pickerMode设置为DOWNLOAD时，用户配置的参数newFileNames、defaultFilePathUri和fileSuffixChoices将不会生效。
 
-Default value: **DEFAULT**. If **pickerMode** is **DOWNLOAD**, the settings of **newFileNames**,  
-**defaultFilePathUri**, and **fileSuffixChoices** do not take effect.
-
-**Type:** DocumentPickerMode
+**Type:** [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md)
 
 **Since:** 12
 

@@ -1,5 +1,11 @@
 # onDeviceAvailable（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## onDeviceAvailable
 
 ```TypeScript
@@ -22,21 +28,11 @@ Register device discovery callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OutputDeviceInfo&gt; | 是 | Used to returns the device info |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OutputDeviceInfo&gt; | 是 | Used to returns the device info |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-
-**示例：**
-
-```TypeScript
-let castDevice: avSession.OutputDeviceInfo;
-avSession.onDeviceAvailable((device: avSession.OutputDeviceInfo) => {
-  castDevice = device;
-  console.info(`on deviceAvailable  : ${device} `);
-});
-```
+| 202 | Not System App. |
 

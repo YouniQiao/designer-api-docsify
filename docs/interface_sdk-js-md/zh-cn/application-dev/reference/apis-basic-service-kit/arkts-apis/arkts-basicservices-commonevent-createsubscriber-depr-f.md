@@ -27,10 +27,10 @@ function createSubscriber(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示订阅信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommonEventSubscriber&gt; | 是 | 表示创建订阅者的回调方法。 |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 是 | 表示订阅信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 是 | 表示创建订阅者的回调方法。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import Base from '@ohos.base';
@@ -44,9 +44,9 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // 创建订阅者回调
-function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
+let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}`);
+        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
@@ -54,7 +54,7 @@ function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManag
 }
 
 // 创建订阅者
-commonEvent.createSubscriber(subscribeInfo, createCB);
+commonEvent.createSubscriber(subscribeInfo, createCallBack);
 ```
 
 
@@ -82,15 +82,15 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示订阅信息。 |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 是 | 表示订阅信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CommonEventSubscriber&gt; | 返回订阅者对象。 |
+| Promise&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 返回订阅者对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import Base from '@ohos.base';
@@ -108,7 +108,7 @@ commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEv
     console.info("createSubscriber");
     subscriber = commonEventSubscriber;
 }).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}`);
+    console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 

@@ -1,5 +1,11 @@
 # off
 
+## 导入模块
+
+```TypeScript
+import { continuationManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('deviceSelected')
 
 ```TypeScript
@@ -37,13 +43,13 @@ function off(type: 'deviceSelected', token: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) | The specified token or callback is not registered. |
-| [16600004](../errorcode-DistributedSchedule.md#16600004-指定的callback已注册) | The specified callback has been registered. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 16600004 | The specified callback has been registered. |
+| 16600001 | The system ability works abnormally. |
+| 16600002 | The specified token or callback is not registered. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -94,13 +100,13 @@ function off(type: 'deviceUnselected', token: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) | The specified token or callback is not registered. |
-| [16600004](../errorcode-DistributedSchedule.md#16600004-指定的callback已注册) | The specified callback has been registered. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 16600004 | The specified callback has been registered. |
+| 16600001 | The system ability works abnormally. |
+| 16600002 | The specified token or callback is not registered. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -141,9 +147,9 @@ function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceConnect' | 是 | 取消监听的事件类型，固定值"deviceConnect"。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuationResult&gt; | 否 | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | 否 | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -183,9 +189,9 @@ function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceDisconnect' | 是 | 取消监听的事件类型，固定值"deviceDisconnect"。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 否 | 当用户从设备选择模块中断开设备时调用，返回设备ID供开发者使用。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 当用户从设备选择模块中断开设备时调用，返回设备ID供开发者使用。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

@@ -4,7 +4,7 @@
 export type DownloadFailCallback = (err: int) => void
 ```
 
-The callback function for the download fail event.
+The callback function for the download fail event. &lt;br&gt;The value should be an integer.
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ The callback function for the download fail event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | int | Yes | the error code for download task. \_\_\_HTML\_TAG\_USD\_0\_\_\_The value should be an integer.  |
+| err | int | Yes | the error code for download task. |
 

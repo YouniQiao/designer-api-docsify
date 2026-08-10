@@ -1,6 +1,6 @@
 # DiscoveryFailureResult
 
-Discovery failure result.
+设备发现失败原因。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Discovery failure result.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## reason
 
 ```TypeScript
 reason: int
 ```
 
-Discovery failure cause code.
+失败错误号。
 
 **Type:** int
 

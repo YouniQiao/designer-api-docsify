@@ -1,10 +1,13 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use  
-[media.createAVMetadataExtractor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_to create an AVMetadataExtractor instance.
+元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过  
+[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor)构建一个AVMetadataExtractor实例。
 
-For details about the demo of obtaining audio or video metadata and video thumbnails, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 11开始支持。
 
 **Since:** 11
 
@@ -13,6 +16,12 @@ For details about the demo of obtaining audio or video metadata and video thumbn
 <!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
+
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
 
 ## getFrameIndexByTime
 
@@ -42,23 +51,23 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeUs | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Video timestamp, in microseconds. |
+| timeUs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Video timestamp, in microseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the video frame number. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the video frame number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| 401 | The parameter check failed. Return by promise. |
+| 5400102 | Operation not allowed. Returned by promise. |
+| 5400106 | Unsupported format. Returned by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { media } from '@kit.MediaKit';
@@ -99,23 +108,23 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Video frame number. |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Video frame number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the timestamp, in microseconds. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the timestamp, in microseconds. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| 401 | The parameter check failed. Return by promise. |
+| 5400102 | Operation not allowed. Returned by promise. |
+| 5400106 | Unsupported format. Returned by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { media } from '@kit.MediaKit';

@@ -1,6 +1,6 @@
 # GestureHandler
 
-Represents the base type for gesture handlers.
+手势处理器的基础类型。
 
 **Inheritance/Implementation:** GestureHandler implements [GestureInterface<T>](GestureInterface<T>)
 
@@ -18,7 +18,7 @@ Represents the base type for gesture handlers.
 allowedTypes(types: Array<SourceTool>): T
 ```
 
-Sets the event input sources supported by the gesture handler.
+设置手势处理器所支持的事件输入源。
 
 **Since:** 14
 
@@ -36,13 +36,13 @@ Sets the event input sources supported by the gesture handler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;SourceTool&gt; | Yes | Supported input source types. |
+| types | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes | 手势处理器所支持的事件输入源。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## tag
 
@@ -50,7 +50,7 @@ Sets the event input sources supported by the gesture handler.
 tag(tag: string): T
 ```
 
-Sets the tag for the gesture handler.
+设置手势处理器的标志。
 
 **Since:** 12
 
@@ -68,11 +68,11 @@ Sets the tag for the gesture handler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tag | string | Yes | Gesture handler tag. |
+| tag | string | Yes | 手势处理器的标志。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 

@@ -10,13 +10,19 @@ CompletionHandlerForAbilityStartCallback提供了onRequestSuccess和onRequestFai
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from 'kits/@kit.AbilityKit';
+```
+
 ## onRequestFailure
 
 ```TypeScript
 onRequestFailure?: OnRequestFailureFn
 ```
 
-拉起指定类型的Ability组件失败时的回调函数。
+拉起指定类型的Ability组件失败时的回调函数。 
 
 从API version 21开始，该接口支持在原子化服务中使用。
 

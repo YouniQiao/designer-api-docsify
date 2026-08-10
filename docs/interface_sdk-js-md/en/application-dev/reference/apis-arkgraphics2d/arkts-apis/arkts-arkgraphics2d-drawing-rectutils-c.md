@@ -1,16 +1,18 @@
 # RectUtils
 
-This module provides tools for processing rectangles.Use scenarios:
+提供处理矩形的工具，支持矩形的快速构建与基本属性获取、边界计算与调整、平移与状态判断、边界规范化等功能。
 
-1. Quickly create rectangles and get their basic features, like making a new rectangle, copying one, and obtaining its width, height, and center point.2. Calculate and adjust boundaries, such as obtaining the inclusion relationship, calculating and updating intersections and unions between rectangles, and updating boundary values.
-    **NOTE**  
-    
-    - The initial APIs of this class are supported since API version 20.  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+主要的使用场景：
+
+1. 矩形快速构建与获取基本属性，如构造新矩形、拷贝矩形、获取矩形的宽高以及中心点等。2. 边界计算与调整，如判断包含关系、计算与更新矩形之间交集和并集，更新边界值等。3. 矩形平移与状态判断，如对矩形进行平移、将矩形平移到指定位置、判断矩形是否为空以及判断两个矩形是否相等。4. 矩形边界规范化，如对存在反转情况的矩形边界值进行交换排序等。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 20开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 20
 
@@ -19,6 +21,12 @@ This module provides tools for processing rectangles.Use scenarios:
 <!--Device-drawing-class RectUtils--><!--Device-drawing-class RectUtils-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## centerX
 
@@ -32,7 +40,7 @@ ArkTS-Sta:
 static centerX(rect: common2D.Rect): double
 ```
 
-Obtains the X coordinate of the rectangle center.
+获取矩形中心的x轴坐标，中心x轴坐标为矩形左边界与右边界之和的一半。
 
 **Since:** 20
 
@@ -46,13 +54,13 @@ Obtains the X coordinate of the rectangle center.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | common2D.Rect | Yes | 需要获取中心x轴坐标的矩形对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | X coordinate of the rectangle center. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形中心的x轴坐标。单位为物理像素px。 |
 
 ## centerY
 
@@ -66,7 +74,7 @@ ArkTS-Sta:
 static centerY(rect: common2D.Rect): double
 ```
 
-Obtains the Y coordinate of the rectangle center.
+获取矩形中心的y轴坐标，中心y轴坐标为矩形上边界与下边界之和的一半。
 
 **Since:** 20
 
@@ -80,13 +88,13 @@ Obtains the Y coordinate of the rectangle center.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | common2D.Rect | Yes | 需要获取中心y轴坐标的矩形对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Y coordinate of the rectangle center. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形中心的y轴坐标。单位为物理像素px。 |
 
 ## contains
 
@@ -94,7 +102,7 @@ Obtains the Y coordinate of the rectangle center.
 static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 ```
 
-Checks whether a rectangle completely contains another rectangle.
+判断一个矩形是否完全包含另外一个矩形。
 
 **Since:** 20
 
@@ -108,14 +116,14 @@ Checks whether a rectangle completely contains another rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| other | common2D.Rect | Yes | Another rectangle object. |
+| rect | common2D.Rect | Yes | 用于判断是否包含其他矩形的矩形对象。 |
+| other | common2D.Rect | Yes | 判断是否被包含的矩形对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether a rectangle completely contains another rectangle. **true** means yes; **false** otherwise. An empty rectangle does not contain any other rectangle. |
+| boolean | 返回矩形是否完全包含另一个矩形的结果。true表示other在rect内部或者两者相等；false表示other矩形不完全在rect内部（即存在部分区域在rect外部），或者rect、 other任一为空矩形。左边界和上边界属于矩形内部，右边界和下边界不属于矩形内部。 |
 
 ## contains
 
@@ -129,7 +137,7 @@ ArkTS-Sta:
 static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean
 ```
 
-Checks whether a rectangle completely contains another rectangle (which is marked by the coordinates of the upper left and lower right corners).
+判断一个矩形是否完全包含另外一个矩形（另一个矩形分别用左上右下坐标表示）。
 
 **Since:** 20
 
@@ -143,17 +151,17 @@ Checks whether a rectangle completely contains another rectangle (which is marke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| rect | common2D.Rect | Yes | 用于判断是否包含由左上右下坐标组成的矩形的原矩形对象。 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether a rectangle completely contains another rectangle defined by the coordinates of its upper left and lower right corners. **true** means yes; **false** otherwise. An empty rectangle does not contain any other rectangle. |
+| boolean | 返回矩形是否完全包含由左上右下坐标组成的矩形的结果。true表示由left、top、right、bottom组成的矩形完全在rect矩形内部，或两个矩形完全相等。false表示该矩形不 完全在rect内部（即存在部分区域在rect外部），或者rect、该矩形任一为空矩形。 |
 
 ## contains
 
@@ -167,7 +175,7 @@ ArkTS-Sta:
 static contains(rect: common2D.Rect, x: double, y: double): boolean
 ```
 
-Checks whether a rectangle completely contains a specified point.
+判断一个矩形是否完全包含一个点。
 
 **Since:** 20
 
@@ -181,15 +189,15 @@ Checks whether a rectangle completely contains a specified point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| rect | common2D.Rect | Yes | 用于判断是否包含指定点的原矩形对象。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 要判断点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 要判断点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the rectangle completely contains the point **(x, y)**. **true** means yes; **false** otherwise. An empty rectangle does not contain any point. |
+| boolean | 返回矩形是否完全包含x、y组成的点的结果。true表示矩形完全包含x、y组成的点，false表示矩形不完全包含x、y组成的点。左边界和上边界属于矩形内部，右边界和下边界不属于矩形内部。 空的矩形不包含任何点。 |
 
 ## getHeight
 
@@ -203,7 +211,7 @@ ArkTS-Sta:
 static getHeight(rect: common2D.Rect): double
 ```
 
-Obtains the height of a rectangle.
+获取矩形的高度。
 
 **Since:** 20
 
@@ -217,13 +225,13 @@ Obtains the height of a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | common2D.Rect | Yes | 需要获取高度的矩形对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Height of the rectangle. If the top boundary is greater than the bottom, the height is negative. If the top boundary is less than the bottom, the height is positive. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形的高。如果矩形的上边界大于下边界，获取的高度为负值，上边界小于下边界则为正值。单位为物理像素px。 |
 
 ## getWidth
 
@@ -237,7 +245,7 @@ ArkTS-Sta:
 static getWidth(rect: common2D.Rect): double
 ```
 
-Obtains the width of a rectangle.
+获取矩形的宽度。
 
 **Since:** 20
 
@@ -251,13 +259,13 @@ Obtains the width of a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | common2D.Rect | Yes | 需要获取宽度的矩形对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Width of a rectangle. If the left boundary is greater than the right, the width is negative. If the left boundary is less than the right, the width is positive. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形的宽。如果矩形的左边界大于右边界，获取的宽度为负值，左边界小于右边界则为正值。单位为物理像素px。 |
 
 ## inset
 
@@ -271,7 +279,7 @@ ArkTS-Sta:
 static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void
 ```
 
-Adds the input left, top, right, and bottom values to the left, top, right, and bottom boundaries of a specified rectangle, respectively.
+将指定矩形的左边界、上边界、右边界和下边界分别和传入的“左上右下”的值相加。
 
 **Since:** 20
 
@@ -285,11 +293,11 @@ Adds the input left, top, right, and bottom values to the left, top, right, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Value to be added to the left boundary of the rectangle (X coordinate of the upper left corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Value to be added to the top boundary of the rectangle (Y coordinate of the upper left corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Value to be added to the right boundary of the rectangle (X coordinate of the lower right corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Value to be added to the bottom boundary of the rectangle (Y coordinate of the lower right corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
+| rect | common2D.Rect | Yes | 需要进行边界调整的原矩形对象。 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 添加到矩形左边界的值（矩形左上角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 添加到矩形上边界的值（矩形左上角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 添加到矩形右边界的值（矩形右下角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 添加到矩形下边界的值（矩形右下角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
 
 ## intersect
 
@@ -297,7 +305,7 @@ Adds the input left, top, right, and bottom values to the left, top, right, and 
 static intersect(rect: common2D.Rect, other: common2D.Rect): boolean
 ```
 
-Calculates the intersection of two rectangles and updates the intersection result to the rectangle represented by the first input parameter.
+计算两个矩形的交集区域，并将交集结果更新到第一个入参代表的矩形区域。
 
 **Since:** 20
 
@@ -311,14 +319,14 @@ Calculates the intersection of two rectangles and updates the intersection resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the intersection. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the intersection. |
+| rect | common2D.Rect | Yes | 用于计算交集的原矩形。 |
+| other | common2D.Rect | Yes | 用于计算交集的另一个矩形。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether two rectangles have an intersection. **true** means yes; **false** otherwise. |
+| boolean | 返回两个矩形是否相交。true表示两矩形相交，false表示两矩形不相交，或仅边重叠、点相交。 |
 
 ## isEmpty
 
@@ -326,7 +334,7 @@ Calculates the intersection of two rectangles and updates the intersection resul
 static isEmpty(rect: common2D.Rect): boolean
 ```
 
-Checks whether a rectangle is empty (the left boundary is greater than or equal to the right boundary or the top boundary is greater than or equal to the bottom boundary).
+判断矩形是否为空（左边界大于等于右边界或者上边界大于等于下边界）。
 
 **Since:** 20
 
@@ -340,13 +348,13 @@ Checks whether a rectangle is empty (the left boundary is greater than or equal 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object to be checked. |
+| rect | common2D.Rect | Yes | 用于判断是否为空的矩形对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the rectangle is empty. **true** means yes; **false** otherwise. |
+| boolean | 返回矩形是否为空的结果。true表示矩形为空，false表示矩形不为空。 |
 
 ## isEqual
 
@@ -354,7 +362,7 @@ Checks whether a rectangle is empty (the left boundary is greater than or equal 
 static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean
 ```
 
-Checks whether two rectangles are equal.
+判断两个矩形是否相等。
 
 **Since:** 20
 
@@ -368,14 +376,14 @@ Checks whether two rectangles are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle. |
-| other | common2D.Rect | Yes | Another rectangle. |
+| rect | common2D.Rect | Yes | 需要判断是否相等的原矩形。 |
+| other | common2D.Rect | Yes | 需要判断是否相等的另一个矩形。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether two rectangles are equal. **true** means yes; **false** otherwise. |
+| boolean | 返回两个矩形是否相等的结果。true表示两个矩形相等，false表示两个矩形不相等。 |
 
 ## isIntersect
 
@@ -383,7 +391,7 @@ Checks whether two rectangles are equal.
 static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean
 ```
 
-Checks whether two rectangles intersect.
+判断两个矩形是否相交。
 
 **Since:** 20
 
@@ -397,14 +405,14 @@ Checks whether two rectangles intersect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the intersection. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the intersection. |
+| rect | common2D.Rect | Yes | 用于判断是否相交的原矩形。 |
+| other | common2D.Rect | Yes | 用于判断是否相交的另一个矩形。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether two rectangles have an intersection. **true** means yes; **false** otherwise. If the two rectangles only overlap on the edge or intersect at a point, **false** is returned. |
+| boolean | 返回两个矩形是否有交集的结果。true表示两个矩形有交集，false表示两个矩形没有交集。两矩形仅边重叠或点相交返回false。 |
 
 ## makeCopy
 
@@ -412,7 +420,7 @@ Checks whether two rectangles intersect.
 static makeCopy(src: common2D.Rect): common2D.Rect
 ```
 
-Copies a rectangle.
+拷贝一个矩形。
 
 **Since:** 20
 
@@ -426,13 +434,13 @@ Copies a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | common2D.Rect | Yes | Rectangle to be copied. |
+| src | common2D.Rect | Yes | 用于拷贝的矩形。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Created rectangle. |
+| common2D.Rect | 创建的新矩形。 |
 
 ## makeCopy
 
@@ -440,7 +448,7 @@ Copies a rectangle.
 static makeCopy(src: common2D.Rect): common2D.Rect | undefined
 ```
 
-Makes a deep copy of a 2D rectangular object.
+拷贝一个矩形。
 
 **Since:** 24
 
@@ -454,13 +462,13 @@ Makes a deep copy of a 2D rectangular object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | common2D.Rect | Yes | Indicates the source rectangle to copy. |
+| src | common2D.Rect | Yes | 用于拷贝的矩形。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect |  Returns an Rect object has the same boundary coordinates with the source. |
+| common2D.Rect | 创建的新矩形。 |
 
 ## makeEmpty
 
@@ -468,7 +476,7 @@ Makes a deep copy of a 2D rectangular object.
 static makeEmpty(): common2D.Rect
 ```
 
-Creates a rectangle with the top, bottom, left, and right boundary coordinates all being **0**.
+创建一个上下左右边界坐标都是0的矩形。
 
 **Since:** 20
 
@@ -482,7 +490,7 @@ Creates a rectangle with the top, bottom, left, and right boundary coordinates a
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Created rectangle object. |
+| common2D.Rect | 创建的矩形对象。 |
 
 ## makeEmpty
 
@@ -490,7 +498,7 @@ Creates a rectangle with the top, bottom, left, and right boundary coordinates a
 static makeEmpty(): common2D.Rect | undefined
 ```
 
-Makes an uninitialized 2D rectangular object with zero dimensions and origin at (0, 0).
+创建一个上下左右边界坐标都是0的矩形。
 
 **Since:** 24
 
@@ -504,7 +512,7 @@ Makes an uninitialized 2D rectangular object with zero dimensions and origin at 
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect |  Returns an empty Rect object with all coordinates (left, top, right, bottom) set to 0. |
+| common2D.Rect | 创建的矩形对象。 |
 
 ## makeLtrb
 
@@ -512,7 +520,7 @@ Makes an uninitialized 2D rectangular object with zero dimensions and origin at 
 static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect
 ```
 
-Creates a rectangle with specified top, bottom, left, and right boundaries.
+创建指定上下左右边界的矩形。
 
 **Since:** 20
 
@@ -526,16 +534,16 @@ Creates a rectangle with specified top, bottom, left, and right boundaries.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | number | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | number | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
-| right | number | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| bottom | number | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| left | number | Yes | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | number | Yes | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | number | Yes | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | number | Yes | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Created rectangle. |
+| common2D.Rect | 创建的矩形。 |
 
 ## makeLtrb
 
@@ -543,7 +551,7 @@ Creates a rectangle with specified top, bottom, left, and right boundaries.
 static makeLtrb(left: double, top: double, right: double, bottom: double): common2D.Rect | undefined
 ```
 
-Makes a 2D rectangular object from boundary coordinates.
+创建指定上下左右边界的矩形。
 
 **Since:** 24
 
@@ -557,16 +565,16 @@ Makes a 2D rectangular object from boundary coordinates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | double | Yes | Indicates the X-coordinate of the left edge. |
-| top | double | Yes | Indicates the Y-coordinate of the top edge. |
-| right | double | Yes | Indicates the X-coordinate of the right edge. |
-| bottom | double | Yes | Indicates the Y-coordinate of the bottom edge. |
+| left | double | Yes | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | double | Yes | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | double | Yes | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | double | Yes | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect |  Returns an Rect object with the specific coordinates (left, top, right, bottom). |
+| common2D.Rect | 创建的矩形。 |
 
 ## offset
 
@@ -580,7 +588,7 @@ ArkTS-Sta:
 static offset(rect: common2D.Rect, dx: double, dy: double): void
 ```
 
-Translates a rectangle.
+对矩形进行平移。
 
 **Since:** 20
 
@@ -594,9 +602,9 @@ Translates a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle to be translated. |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Horizontal translation distance. The value is a floating point number. **0** indicates no translation. A negative value indicates translation to the left, and a positive value indicates translation to the right. |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Vertical translation distance. The value is a floating point number. **0** indicates no translation. A negative value indicates translation upwards, and a positive value indicates translation downwards. |
+| rect | common2D.Rect | Yes | 发生平移的矩形区域。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 水平方向平移的距离，该参数为浮点数。0表示不平移，负数表示向左平移，正数表示向右平移。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 竖直方向平移的距离，该参数为浮点数。0表示不平移，负数表示向上平移，正数表示向下平移。单位为物理像素px。 |
 
 ## offsetTo
 
@@ -610,7 +618,7 @@ ArkTS-Sta:
 static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void
 ```
 
-Translates a rectangle to a specified position.
+将矩形平移到指定位置。
 
 **Since:** 20
 
@@ -624,9 +632,9 @@ Translates a rectangle to a specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle to be translated. |
-| newLeft | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the position to which the rectangle is translated. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| newTop | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the position to which the rectangle is translated. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| rect | common2D.Rect | Yes | 发生平移的矩形区域。 |
+| newLeft | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 要平移到的对应位置的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| newTop | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 要平移到的对应位置的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## setEmpty
 
@@ -634,7 +642,7 @@ Translates a rectangle to a specified position.
 static setEmpty(rect: common2D.Rect): void
 ```
 
-Sets the left, right, top, and bottom boundaries of the rectangle to **0**.
+将矩形的上下左右边界都设为0。
 
 **Since:** 20
 
@@ -648,7 +656,7 @@ Sets the left, right, top, and bottom boundaries of the rectangle to **0**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Empty rectangle object. |
+| rect | common2D.Rect | Yes | 用于设置为空的矩形对象。 |
 
 ## setLtrb
 
@@ -662,7 +670,7 @@ ArkTS-Sta:
 static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void
 ```
 
-Updates the top, bottom, left, and right boundary values of the existing rectangle using the input top, bottom,left, and right values, respectively.
+使用传入的“左上右下”的值更新当前矩形的左上右下边界值。
 
 **Since:** 20
 
@@ -676,11 +684,11 @@ Updates the top, bottom, left, and right boundary values of the existing rectang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| rect | common2D.Rect | Yes | 需要更新边界值的原矩形对象。 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## setRect
 
@@ -688,7 +696,7 @@ Updates the top, bottom, left, and right boundary values of the existing rectang
 static setRect(rect: common2D.Rect, other: common2D.Rect): void
 ```
 
-Assigns the existing rectangle with another rectangle.
+使用另一个矩形对当前矩形进行赋值。
 
 **Since:** 20
 
@@ -702,8 +710,8 @@ Assigns the existing rectangle with another rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle. |
-| other | common2D.Rect | Yes | Another rectangle. |
+| rect | common2D.Rect | Yes | 需要被赋值的原矩形对象。 |
+| other | common2D.Rect | Yes | 用于赋值的矩形。 |
 
 ## sort
 
@@ -711,7 +719,9 @@ Assigns the existing rectangle with another rectangle.
 static sort(rect: common2D.Rect): void
 ```
 
-If the rectangle is reversed (that is, the left boundary is greater than the right boundary or the top boundary is greater than the bottom boundary), the top and bottom (left and right) boundary values of the rectangle are exchanged, so that the top boundary is less than the bottom boundary (the left boundary is less than the right boundary).If the rectangle is not reversed (that is, the left boundary is less than or equal to the right boundary or the top boundary is less than or equal to the bottom boundary), no operation is performed.
+如果矩形存在反转的情况（即左边界大于右边界或上边界大于下边界），则将发生反转的对应边界值进行交换（若左边界大于右边界，交换左右边界值；若上边界大于下边界，交换上下边界值），使得上边界小于下边界（左边界小于右边界）。
+
+如果矩形不存在反转的情况（即左边界小于等于右边界且上边界小于等于下边界），不做任何操作。
 
 **Since:** 20
 
@@ -725,7 +735,7 @@ If the rectangle is reversed (that is, the left boundary is greater than the rig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| rect | common2D.Rect | Yes | 待进行边界排序的矩形对象。 |
 
 ## union
 
@@ -733,7 +743,7 @@ If the rectangle is reversed (that is, the left boundary is greater than the rig
 static union(rect: common2D.Rect, other: common2D.Rect): void
 ```
 
-Calculates the union of two rectangles and updates the union result to the rectangle represented by the first input parameter. If the first input parameter is empty, the union result is updated to the rectangle represented by the second input parameter. If the second input parameter is empty, no operation is performed.
+计算两个矩形的并集区域，并将并集结果更新到第一个入参代表的矩形区域。如果第一个入参矩形为空，则将并集结果更新到第二个入参代表的矩形区域；如果第二个入参的矩形为空，则不进行任何操作。
 
 **Since:** 20
 
@@ -747,6 +757,6 @@ Calculates the union of two rectangles and updates the union result to the recta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the union. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the union. |
+| rect | common2D.Rect | Yes | 用于计算并集的原矩形。 |
+| other | common2D.Rect | Yes | 用于计算并集的另一个矩形。 |
 

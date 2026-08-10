@@ -1,12 +1,18 @@
 # cleanBundleCacheFilesForSelf
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## cleanBundleCacheFilesForSelf
 
 ```TypeScript
 function cleanBundleCacheFilesForSelf(): Promise<void>
 ```
 
-Clears the application cache. This API uses a promise to return the result.
+清理应用自身的缓存。使用Promise异步回调。
 
 **Since:** 21
 
@@ -22,15 +28,16 @@ Clears the application cache. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 bundleManager.cleanBundleCacheFilesForSelf().then(() => {
-  console.info('cleanBundleCacheFilesForSelf complete.');
+  hilog.info(0x0000, 'testTag', 'cleanBundleCacheFilesForSelf complete.');
 });
 ```
 

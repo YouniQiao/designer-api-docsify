@@ -1,12 +1,18 @@
 # getTimezoneSync
 
+## Modules to Import
+
+```TypeScript
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getTimezoneSync
 
 ```TypeScript
 function getTimezoneSync(): string
 ```
 
-Obtains the system time zone in synchronous mode.
+获取系统时区，使用同步方式。
 
 **Since:** 10
 
@@ -20,9 +26,9 @@ Obtains the system time zone in synchronous mode.
 
 | Type | Description |
 | --- | --- |
-| string | System time zone. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| string | 返回系统时区。具体可见[支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

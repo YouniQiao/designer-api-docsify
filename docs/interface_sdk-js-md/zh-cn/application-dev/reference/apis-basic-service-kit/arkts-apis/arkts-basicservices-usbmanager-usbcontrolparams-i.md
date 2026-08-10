@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## data
 
 ```TypeScript
@@ -66,7 +72,7 @@ reqType: USBControlRequestType
 
 请求控制类型。
 
-**类型：** USBControlRequestType
+**类型：** [USBControlRequestType](arkts-basicservices-usb-usbcontrolrequesttype-e.md)
 
 **起始版本：** 9
 
@@ -110,7 +116,7 @@ target: USBRequestTargetType
 
 请求目标类型。
 
-**类型：** USBRequestTargetType
+**类型：** [USBRequestTargetType](arkts-basicservices-usb-usbrequesttargettype-e.md)
 
 **起始版本：** 9
 

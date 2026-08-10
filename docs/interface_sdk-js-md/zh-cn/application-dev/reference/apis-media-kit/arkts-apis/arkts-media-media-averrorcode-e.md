@@ -1,6 +1,6 @@
 # AVErrorCode
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_类型枚举。
+[Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。
 
 **起始版本：** 9
 
@@ -412,7 +412,7 @@ AVERR_IO_UNSUPPORTED_REQUEST = 5411011
 AVERR_SEEK_CONTINUOUS_UNSUPPORTED = 5410002
 ```
 
-表示不支持SEEK\_CONTINUOUS模式的seek。
+表示不支持SEEK_CONTINUOUS模式的seek。
 
 **起始版本：** 18
 

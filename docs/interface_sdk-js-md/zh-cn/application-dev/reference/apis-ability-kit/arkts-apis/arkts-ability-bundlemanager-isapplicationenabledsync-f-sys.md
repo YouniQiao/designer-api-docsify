@@ -1,5 +1,11 @@
 # isApplicationEnabledSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## isApplicationEnabledSync
 
 ```TypeScript
@@ -34,11 +40,11 @@ function isApplicationEnabledSync(bundleName: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

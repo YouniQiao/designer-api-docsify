@@ -1,6 +1,6 @@
 # EditableTitleBarStyleV2Options
 
-Indicates the style options of the title bar.
+标题栏样式配置选项接口。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,23 @@ Indicates the style options of the title bar.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundBlurStyle
 
 ```TypeScript
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style.
+标题栏背景模糊样式。
 
-**Type:** BlurStyle
+默认值：BlurStyle.NONE，表示无模糊效果。
+
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +44,11 @@ Background blur style.
 backgroundColor?: ResourceColor
 ```
 
-Background color.
+标题栏背景色。
 
-**Type:** ResourceColor
+默认值：'#00000000'，表示背景透明。
+
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.0.0
 
@@ -56,9 +66,19 @@ Background color.
 contentMargin?: LocalizedMargin
 ```
 
-Content margin, supports RTL layout.
+标题栏外边距，不支持设置负数。
 
-**Type:** LocalizedMargin
+默认值：
+
+{
+
+start: LengthMetrics.resource(\$r('sys.float.margin_left')),
+
+end: LengthMetrics.resource(\$r('sys.float.margin_right'))
+
+}。
+
+**Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
 **Since:** 26.0.0
 
@@ -76,9 +96,11 @@ Content margin, supports RTL layout.
 safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-Indicates the edges of the safe area.
+扩展安全区域的方向。
 
-**Type:** Array&lt;SafeAreaEdge&gt;
+默认值：[SafeAreaEdge.TOP]。
+
+**Type:** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
 
 **Since:** 26.0.0
 
@@ -96,9 +118,11 @@ Indicates the edges of the safe area.
 safeAreaTypes?: Array<SafeAreaType>
 ```
 
-Indicates the types of the safe area.
+扩展安全区域的类型。
 
-**Type:** Array&lt;SafeAreaType&gt;
+默认值：[SafeAreaType.SYSTEM]。
+
+**Type:** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
 
 **Since:** 26.0.0
 

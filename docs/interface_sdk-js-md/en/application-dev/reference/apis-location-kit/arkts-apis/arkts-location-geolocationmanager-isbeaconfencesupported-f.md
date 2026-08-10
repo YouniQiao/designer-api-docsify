@@ -1,5 +1,11 @@
 # isBeaconFenceSupported
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## isBeaconFenceSupported
 
 ```TypeScript
@@ -24,7 +30,7 @@ Check whether the BeaconFence service is supported.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

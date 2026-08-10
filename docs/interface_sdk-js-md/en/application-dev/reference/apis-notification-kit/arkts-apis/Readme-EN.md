@@ -436,125 +436,125 @@
   - [VoiceContentOptions(system api)](arkts-notification-notificationsubscribe-voicecontentoptions-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [RemoveReason(system api)](arkts-notification-notificationsubscribe-removereason-e-sys.md)<!--DelEnd-->
-- [@system.notification](arkts-notification.md)
-  - [Notification](arkts-notification-notification-notification-c.md)
-  - [ActionResult](arkts-notification-notification-actionresult-i.md)
-  - [ShowNotificationOptions](arkts-notification-notification-shownotificationoptions-i.md)
+- [@system.notification](arkts-system-notification.md)
+  - [Notification](arkts-notification-system-notification-notification-c.md)
+  - [ActionResult](arkts-notification-system-notification-actionresult-i.md)
+  - [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md)
 - notification<!--arkts-notificationkit-notification-->
-  - [notification/NotificationCommonDef](arkts-notification/notificationcommondef.md)
-    - [BundleOption](notificationcommondef-bundleoption-i.md)
-    - [GrantedBundleInfo](notificationcommondef-grantedbundleinfo-i.md)
-    - [UserGrantSetting](notificationcommondef-usergrantsetting-i.md)
-  - [notification/NotificationExtensionContent](arkts-notification/notificationextensioncontent.md)
-    - [NotificationExtensionContent](notificationextensioncontent-notificationextensioncontent-i.md)
-  - [notification/NotificationExtensionSubscriptionInfo](arkts-notification/notificationextensionsubscriptioninfo.md)
-    - [NotificationExtensionSubscriptionInfo](notificationextensionsubscriptioninfo-notificationextensionsubscriptioninfo-i.md)
-  - [notification/NotificationInfo](arkts-notification/notificationinfo.md)
-    - [NotificationInfo](notificationinfo-notificationinfo-i.md)
-  - [notification/notificationActionButton](arkts-notification/notificationactionbutton.md)
-    - [NotificationActionButton](notificationactionbutton-notificationactionbutton-i.md)
-  - [notification/notificationContent](arkts-notification/notificationcontent.md)
-    - [NotificationBasicContent](notificationcontent-notificationbasiccontent-i.md)
+  - [NotificationCommonDef](arkts-notificationcommondef.md)
+    - [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
+    - [GrantedBundleInfo](arkts-notification-notificationcommondef-grantedbundleinfo-i.md)
+    - [UserGrantSetting](arkts-notification-notificationcommondef-usergrantsetting-i.md)
+  - [NotificationExtensionContent](arkts-notificationextensioncontent.md)
+    - [NotificationExtensionContent](arkts-notification-notificationextensioncontent-i.md)
+  - [NotificationExtensionSubscriptionInfo](arkts-notificationextensionsubscriptioninfo.md)
+    - [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)
+  - [NotificationInfo](arkts-notificationinfo.md)
+    - [NotificationInfo](arkts-notification-notificationinfo-i.md)
+  - [notificationActionButton](arkts-notificationactionbutton.md)
+    - [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)
+  - [notificationContent](arkts-notificationcontent.md)
+    - [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
     <!--Del-->
-    - [NotificationBasicContent(system api)](notificationcontent-notificationbasiccontent-i-sys.md)<!--DelEnd-->
-    - [NotificationButton](notificationcontent-notificationbutton-i.md)
-    - [NotificationCapsule](notificationcontent-notificationcapsule-i.md)
+    - [NotificationBasicContent(system api)](arkts-notification-notificationcontent-notificationbasiccontent-i-sys.md)<!--DelEnd-->
+    - [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
+    - [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i.md)
     <!--Del-->
-    - [NotificationCapsule(system api)](notificationcontent-notificationcapsule-i-sys.md)<!--DelEnd-->
-    - [NotificationContent](notificationcontent-notificationcontent-i.md)
+    - [NotificationCapsule(system api)](arkts-notification-notificationcontent-notificationcapsule-i-sys.md)<!--DelEnd-->
+    - [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md)
     <!--Del-->
-    - [NotificationContent(system api)](notificationcontent-notificationcontent-i-sys.md)<!--DelEnd-->
+    - [NotificationContent(system api)](arkts-notification-notificationcontent-notificationcontent-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [NotificationIconButton(system api)](notificationcontent-notificationiconbutton-i-sys.md)<!--DelEnd-->
+    - [NotificationIconButton(system api)](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [NotificationLiveViewContent(system api)](notificationcontent-notificationliveviewcontent-i-sys.md)<!--DelEnd-->
-    - [NotificationLongTextContent](notificationcontent-notificationlongtextcontent-i.md)
-    - [NotificationMultiLineContent](notificationcontent-notificationmultilinecontent-i.md)
+    - [NotificationLiveViewContent(system api)](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md)<!--DelEnd-->
+    - [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
+    - [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i.md)
     <!--Del-->
-    - [NotificationMultiLineContent(system api)](notificationcontent-notificationmultilinecontent-i-sys.md)<!--DelEnd-->
-    - [NotificationPictureContent](notificationcontent-notificationpicturecontent-i.md)
-    - [NotificationProgress](notificationcontent-notificationprogress-i.md)
-    - [NotificationSystemLiveViewContent](notificationcontent-notificationsystemliveviewcontent-i.md)
+    - [NotificationMultiLineContent(system api)](arkts-notification-notificationcontent-notificationmultilinecontent-i-sys.md)<!--DelEnd-->
+    - [NotificationPictureContent](arkts-notification-notificationcontent-notificationpicturecontent-i.md)
+    - [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md)
+    - [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md)
     <!--Del-->
-    - [NotificationSystemLiveViewContent(system api)](notificationcontent-notificationsystemliveviewcontent-i-sys.md)<!--DelEnd-->
-    - [NotificationTime](notificationcontent-notificationtime-i.md)
+    - [NotificationSystemLiveViewContent(system api)](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i-sys.md)<!--DelEnd-->
+    - [NotificationTime](arkts-notification-notificationcontent-notificationtime-i.md)
     <!--Del-->
     - [IconType(system api)](arkts-notification-icontype-t-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [LiveViewStatus(system api)](notificationcontent-liveviewstatus-e-sys.md)<!--DelEnd-->
+    - [LiveViewStatus(system api)](arkts-notification-notificationcontent-liveviewstatus-e-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [LiveViewTypes(system api)](notificationcontent-liveviewtypes-e-sys.md)<!--DelEnd-->
-  - [notification/notificationFlags](arkts-notification/notificationflags.md)
-    - [NotificationFlags](notificationflags-notificationflags-i.md)
+    - [LiveViewTypes(system api)](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)<!--DelEnd-->
+  - [notificationFlags](arkts-notificationflags.md)
+    - [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
     <!--Del-->
-    - [NotificationFlags(system api)](notificationflags-notificationflags-i-sys.md)<!--DelEnd-->
-    - [NotificationFlagStatus](notificationflags-notificationflagstatus-e.md)
-  - [notification/notificationRequest](arkts-notification/notificationrequest.md)
-    - [DistributedOptions](notificationrequest-distributedoptions-i.md)
+    - [NotificationFlags(system api)](arkts-notification-notificationflags-notificationflags-i-sys.md)<!--DelEnd-->
+    - [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
+  - [notificationRequest](arkts-notificationrequest.md)
+    - [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md)
     <!--Del-->
-    - [DistributedOptions(system api)](notificationrequest-distributedoptions-i-sys.md)<!--DelEnd-->
+    - [DistributedOptions(system api)](arkts-notification-notificationrequest-distributedoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [Geofence(system api)](notificationrequest-geofence-i-sys.md)<!--DelEnd-->
+    - [Geofence(system api)](arkts-notification-notificationrequest-geofence-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [GroupInfo(system api)](notificationrequest-groupinfo-i-sys.md)<!--DelEnd-->
+    - [GroupInfo(system api)](arkts-notification-notificationrequest-groupinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [NotificationCheckRequest(system api)](notificationrequest-notificationcheckrequest-i-sys.md)<!--DelEnd-->
+    - [NotificationCheckRequest(system api)](arkts-notification-notificationrequest-notificationcheckrequest-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [NotificationFilter(system api)](notificationrequest-notificationfilter-i-sys.md)<!--DelEnd-->
-    - [NotificationParameters](notificationrequest-notificationparameters-i.md)
-    - [NotificationRequest](notificationrequest-notificationrequest-i.md)
+    - [NotificationFilter(system api)](arkts-notification-notificationrequest-notificationfilter-i-sys.md)<!--DelEnd-->
+    - [NotificationParameters](arkts-notification-notificationrequest-notificationparameters-i.md)
+    - [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)
     <!--Del-->
-    - [NotificationRequest(system api)](notificationrequest-notificationrequest-i-sys.md)<!--DelEnd-->
+    - [NotificationRequest(system api)](arkts-notification-notificationrequest-notificationrequest-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [Trigger(system api)](notificationrequest-trigger-i-sys.md)<!--DelEnd-->
+    - [Trigger(system api)](arkts-notification-notificationrequest-trigger-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [UnifiedGroupInfo(system api)](notificationrequest-unifiedgroupinfo-i-sys.md)<!--DelEnd-->
+    - [UnifiedGroupInfo(system api)](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [CoordinateSystemType(system api)](notificationrequest-coordinatesystemtype-e-sys.md)<!--DelEnd-->
+    - [CoordinateSystemType(system api)](arkts-notification-notificationrequest-coordinatesystemtype-e-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [MonitorEvent(system api)](notificationrequest-monitorevent-e-sys.md)<!--DelEnd-->
+    - [MonitorEvent(system api)](arkts-notification-notificationrequest-monitorevent-e-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [TriggerType(system api)](notificationrequest-triggertype-e-sys.md)<!--DelEnd-->
-  - [notification/notificationSlot](arkts-notification/notificationslot.md)
-    - [NotificationSlot](notificationslot-notificationslot-i.md)
+    - [TriggerType(system api)](arkts-notification-notificationrequest-triggertype-e-sys.md)<!--DelEnd-->
+  - [notificationSlot](arkts-notificationslot.md)
+    - [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
     <!--Del-->
-    - [NotificationSlot(system api)](notificationslot-notificationslot-i-sys.md)<!--DelEnd-->
-  - [notification/notificationSorting](arkts-notification/notificationsorting.md)
+    - [NotificationSlot(system api)](arkts-notification-notificationslot-notificationslot-i-sys.md)<!--DelEnd-->
+  - [notificationSorting](arkts-notificationsorting.md)
     <!--Del-->
-    - [NotificationSorting(system api)](notificationsorting-notificationsorting-i-sys.md)<!--DelEnd-->
-  - [notification/notificationSortingMap](arkts-notification/notificationsortingmap.md)
+    - [NotificationSorting(system api)](arkts-notification-notificationsorting-notificationsorting-i-sys.md)<!--DelEnd-->
+  - [notificationSortingMap](arkts-notificationsortingmap.md)
     <!--Del-->
-    - [NotificationSortingMap(system api)](notificationsortingmap-notificationsortingmap-i-sys.md)<!--DelEnd-->
-  - [notification/notificationSubscribeInfo](arkts-notification/notificationsubscribeinfo.md)
+    - [NotificationSortingMap(system api)](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md)<!--DelEnd-->
+  - [notificationSubscribeInfo](arkts-notificationsubscribeinfo.md)
     <!--Del-->
-    - [NotificationSubscribeInfo(system api)](notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md)<!--DelEnd-->
+    - [NotificationSubscribeInfo(system api)](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [PictureOptions(system api)](notificationsubscribeinfo-pictureoptions-i-sys.md)<!--DelEnd-->
+    - [PictureOptions(system api)](arkts-notification-notificationsubscribeinfo-pictureoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [VoiceContentOptions(system api)](notificationsubscribeinfo-voicecontentoptions-i-sys.md)<!--DelEnd-->
-  - [notification/notificationSubscriber](arkts-notification/notificationsubscriber.md)
+    - [VoiceContentOptions(system api)](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md)<!--DelEnd-->
+  - [notificationSubscriber](arkts-notificationsubscriber.md)
     <!--Del-->
-    - [BadgeEnabledChangedCallback(system api)](notificationsubscriber-badgeenabledchangedcallback-i-sys.md)<!--DelEnd-->
+    - [BadgeEnabledChangedCallback(system api)](arkts-notification-notificationsubscriber-badgeenabledchangedcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [BadgeNumberCallbackData(system api)](notificationsubscriber-badgenumbercallbackdata-i-sys.md)<!--DelEnd-->
+    - [BadgeNumberCallbackData(system api)](arkts-notification-notificationsubscriber-badgenumbercallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [EnabledNotificationCallbackData(system api)](notificationsubscriber-enablednotificationcallbackdata-i-sys.md)<!--DelEnd-->
+    - [EnabledNotificationCallbackData(system api)](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [EnabledPriorityNotificationByBundleCallbackData(system api)](notificationsubscriber-enabledprioritynotificationbybundlecallbackdata-i-sys.md)<!--DelEnd-->
+    - [EnabledPriorityNotificationByBundleCallbackData(system api)](arkts-notification-notificationsubscriber-enabledprioritynotificationbybundlecallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [EnabledPriorityNotificationCallbackData(system api)](notificationsubscriber-enabledprioritynotificationcallbackdata-i-sys.md)<!--DelEnd-->
+    - [EnabledPriorityNotificationCallbackData(system api)](arkts-notification-notificationsubscriber-enabledprioritynotificationcallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [EnabledSilentReminderCallbackData(system api)](notificationsubscriber-enabledsilentremindercallbackdata-i-sys.md)<!--DelEnd-->
+    - [EnabledSilentReminderCallbackData(system api)](arkts-notification-notificationsubscriber-enabledsilentremindercallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [NotificationClassification(system api)](notificationsubscriber-notificationclassification-i-sys.md)<!--DelEnd-->
+    - [NotificationClassification(system api)](arkts-notification-notificationsubscriber-notificationclassification-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [NotificationSubscriber(system api)](notificationsubscriber-notificationsubscriber-i-sys.md)<!--DelEnd-->
+    - [NotificationSubscriber(system api)](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [NotificationSwitchChangedCallbackData(system api)](notificationsubscriber-notificationswitchchangedcallbackdata-i-sys.md)<!--DelEnd-->
+    - [NotificationSwitchChangedCallbackData(system api)](arkts-notification-notificationsubscriber-notificationswitchchangedcallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [SubscribeCallbackData(system api)](notificationsubscriber-subscribecallbackdata-i-sys.md)<!--DelEnd-->
+    - [SubscribeCallbackData(system api)](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [VoiceContent(system api)](notificationsubscriber-voicecontent-i-sys.md)<!--DelEnd-->
+    - [VoiceContent(system api)](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [BadgeEnabledChangedCallback(system api)](arkts-notification-badgeenabledchangedcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -563,7 +563,7 @@
     - [NotificationSwitchChangedCallback(system api)](arkts-notification-notificationswitchchangedcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [SystemUpdateCallback(system api)](arkts-notification-systemupdatecallback-t-sys.md)<!--DelEnd-->
-  - [notification/notificationTemplate](arkts-notification/notificationtemplate.md)
-    - [NotificationTemplate](notificationtemplate-notificationtemplate-i.md)
-  - [notification/notificationUserInput](arkts-notification/notificationuserinput.md)
-    - [NotificationUserInput](notificationuserinput-notificationuserinput-i.md)
+  - [notificationTemplate](arkts-notificationtemplate.md)
+    - [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md)
+  - [notificationUserInput](arkts-notificationuserinput.md)
+    - [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md)

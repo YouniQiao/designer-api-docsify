@@ -1,7 +1,7 @@
 # KVManager
 
 数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过  
-[createKVManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构建一个KVManager实例。
+[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager)构建一个KVManager实例。
 
 **起始版本：** 7
 
@@ -40,11 +40,11 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 所调用数据库方的包名。 |
-| storeId | string | 是 | Unique identifier of the 要关闭的KVStore数据库。 The length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| kvStore | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要关闭的KVStore数据库。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| storeId | string | 是 | Unique identifier of the 要关闭的KVStore数据库。 The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | 是 | 要关闭的KVStore数据库。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -96,8 +96,8 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 所调用数据库方的包名。 |
-| storeId | string | 是 | Unique identifier of the 要关闭的KVStore数据库。 The length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| kvStore | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要关闭的KVStore数据库。 |
+| storeId | string | 是 | Unique identifier of the 要关闭的KVStore数据库。 The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | 是 | 要关闭的KVStore数据库。 |
 
 **返回值：**
 
@@ -105,7 +105,7 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvManager;
@@ -161,10 +161,10 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 所调用数据库方的包名。 |
-| storeId | string | 是 | 要删除的数据库唯一标识符，长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| storeId | string | 是 | 要删除的数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvManager;
@@ -216,7 +216,7 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 所调用数据库方的包名。 |
-| storeId | string | 是 | 要删除的数据库唯一标识符，长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| storeId | string | 是 | 要删除的数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
 
 **返回值：**
 
@@ -224,7 +224,7 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvManager;
@@ -262,8 +262,8 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
 获取所有通过  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法创建的且没有调用  
-[deleteKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法删除的KVStore数据库的storeId，使用callback异步回调。
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
+[deleteKVStore](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore)方法删除的KVStore数据库的storeId，使用callback异步回调。
 
 **起始版本：** 8
 
@@ -282,9 +282,9 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 所调用数据库方的包名。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | 是 | 回调函数。返回所有创建的KvStore数据库的storeId。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 | 回调函数。返回所有创建的KvStore数据库的storeId。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvManager;
@@ -305,8 +305,8 @@ getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
 获取所有通过  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法创建的且没有调用  
-[deleteKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法删除的KVStore数据库的storeId，使用Promise异步回调。
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
+[deleteKVStore](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore)方法删除的KVStore数据库的storeId，使用Promise异步回调。
 
 **起始版本：** 8
 
@@ -332,7 +332,7 @@ getAllKVStoreId(appId: string): Promise<string[]>
 | --- | --- |
 | Promise&lt;string[]&gt; | Promise对象。返回所有创建的KvStore数据库的storeId。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvManager;
@@ -373,8 +373,8 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| storeId | string | 是 | 数据库唯一标识符，长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 创建KVStore实例的配置信息。 |
+| storeId | string | 是 | 数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 创建KVStore实例的配置信息。 |
 
 **返回值：**
 
@@ -382,7 +382,7 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 | --- | --- |
 | Promise&lt;T&gt; | Promise对象。返回创建的KVStore数据库实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -431,11 +431,11 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| storeId | string | 是 | 数据库唯一标识符，长度不大于[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 创建KVStore实例的配置信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 回调函数。返回创建的KVStore数据库实例。 |
+| storeId | string | 是 | 数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 创建KVStore实例的配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。返回创建的KVStore数据库实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -487,9 +487,9 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'distributedDataServiceDie' | 是 | 取消订阅的事件名，固定为'distributedDataServiceDie'，即服务状态变更事件。 |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有已订阅的函数。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有已订阅的函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvManager;
@@ -529,9 +529,9 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'distributedDataServiceDie' | 是 | 订阅的事件名，固定为'distributedDataServiceDie'，即服务状态变更事件。 |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvManager;

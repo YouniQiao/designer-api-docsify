@@ -18,5 +18,5 @@ type OnNativeEmbedObjectParamChangeCallback = (event: NativeEmbedParamDataInfo) 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | object标签内嵌param元素的详细变化信息。  |
+| event | [NativeEmbedParamDataInfo](../arkts-apis/arkts-arkweb-web-nativeembedparamdatainfo-i.md) | 是 | object标签内嵌param元素的详细变化信息。 |
 

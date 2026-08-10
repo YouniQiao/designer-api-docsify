@@ -62,7 +62,7 @@ direction: TextDeleteDirection
 
 删除值的方向。
 
-**类型：** TextDeleteDirection
+**类型：** [TextDeleteDirection](arkts-arkui-textdeletedirection-e.md)
 
 **起始版本：** 12
 

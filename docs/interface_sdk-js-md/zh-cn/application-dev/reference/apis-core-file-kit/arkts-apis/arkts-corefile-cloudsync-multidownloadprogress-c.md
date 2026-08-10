@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## getFailedFiles
 
 ```TypeScript
@@ -36,11 +42,9 @@ getFailedFiles(): Array<FailedFileInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -72,36 +76,6 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let taskId: number = -1;
-let failedList: Array<cloudSync.FailedFileInfo> = [];
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (data: cloudSync.MultiDownloadProgress) => {
-  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
-  if (data.state == cloudSync.State.FAILED) {
-    console.info(`Batch download stopped, error type: ${data.errType}.`);
-    failedList = data.getFailedFiles();
-  }
-};
-try {
-  fileCache.on('batchDownload', callback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
-}
-let uriList: Array<string> = [];
-fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then<long>((downloadId: long): void => {
-  taskId = downloadId;
-  console.info("start batch download successfully");
-}).catch((err: BusinessError<void>): void => {
-  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
 ## getSuccessfulFiles
 
 ```TypeScript
@@ -128,11 +102,9 @@ getSuccessfulFiles(): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Failed to access the database or execute the SQL statement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -162,43 +134,15 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let finishedList: Array<string> = [];
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (data: cloudSync.MultiDownloadProgress) => {
-  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
-  if (data.state == cloudSync.State.COMPLETED) {
-    console.info(`Batch download stopped, error type: ${data.errType}.`);
-    finishedList = data.getSuccessfulFiles();
-  }
-};
-try {
-  fileCache.on('batchDownload', callback);
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
-}
-let uriList: Array<string> = [];
-fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then<long>((downloadId: long): void => {
-  console.info(`start batch download successfully, taskId: ${downloadId}`);
-}).catch((err: BusinessError<void>): void => {
-  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
 ## downloadedSize
 
 ```TypeScript
 downloadedSize: long
 ```
 
-已缓存的文件大小，取值范围为 [0, INT64\_MAX)，单位：Byte。如果进度异常，返回值为 INT64\_MAX。
+已缓存的文件大小，取值范围为 [0, INT64_MAX)，单位：Byte。如果进度异常，返回值为 INT64_MAX。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 
@@ -216,7 +160,7 @@ errType: DownloadErrorType
 
 返回批量缓存任务执行失败时的错误类型。
 
-**类型：** DownloadErrorType
+**类型：** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
 **起始版本：** 20
 
@@ -234,7 +178,7 @@ failedCount: int
 
 缓存失败的文件数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -252,7 +196,7 @@ state: State
 
 批量缓存任务的执行状态。
 
-**类型：** State
+**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **起始版本：** 20
 
@@ -270,7 +214,7 @@ successfulCount: int
 
 缓存成功的文件数量，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -286,9 +230,9 @@ successfulCount: int
 taskId: long
 ```
 
-批量缓存任务的ID，取值范围为0到INT64\_MAX。如果进度异常，返回值为-1。
+批量缓存任务的ID，取值范围为0到INT64_MAX。如果进度异常，返回值为-1。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 
@@ -306,7 +250,7 @@ totalCount: int
 
 文件总数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -322,9 +266,9 @@ totalCount: int
 totalSize: long
 ```
 
-待缓存的文件总大小，取值范围为 [0, INT64\_MAX)，单位为 Byte。如果进度异常，返回值为 INT64\_MAX。
+待缓存的文件总大小，取值范围为 [0, INT64_MAX)，单位为 Byte。如果进度异常，返回值为 INT64_MAX。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 

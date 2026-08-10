@@ -16,7 +16,7 @@ Enumerates the modes for saving documents.
 DEFAULT = 0
 ```
 
-Standard mode.
+标准模式。
 
 **Since:** 12
 
@@ -34,9 +34,9 @@ Standard mode.
 DOWNLOAD = 1
 ```
 
-Download mode.
+下载模式。 
 
-**Note**: The directories created in DOWNLOAD mode are used only to save files. There is no access isolation between directories. You are advised not to save sensitive application data.
+**注意**： DOWNLOAD模式创建的目录仅用于保存文件，目录之间无访问隔离，不建议保存应用敏感数据。
 
 **Since:** 12
 

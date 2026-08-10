@@ -1,6 +1,6 @@
 # ImageAttachmentLayoutStyle
 
-Defines the ImageAttachment Layout Style.
+定义图片布局样式。
 
 **Since:** 12
 
@@ -16,13 +16,13 @@ Defines the ImageAttachment Layout Style.
 borderRadius?: LengthMetrics | BorderRadiuses
 ```
 
-Radius of the image border corners.
+设置圆角。
 
-Default value: **0**.
+默认值：0
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**Type:** LengthMetrics \| BorderRadiuses
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses
 
 **Since:** 12
 
@@ -42,13 +42,13 @@ Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 margin?: LengthMetrics | Margin
 ```
 
-Image margin.
+设置图片外边距。
 
-Default value: **0**.
+默认值：0
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**Type:** LengthMetrics \| Margin
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Margin
 
 **Since:** 12
 
@@ -68,13 +68,13 @@ Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 padding?: LengthMetrics | Padding
 ```
 
-Image padding.
+设置图片内边距。
 
-Default value: **0**.
+默认值：0
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**Type:** LengthMetrics \| Padding
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Padding
 
 **Since:** 12
 

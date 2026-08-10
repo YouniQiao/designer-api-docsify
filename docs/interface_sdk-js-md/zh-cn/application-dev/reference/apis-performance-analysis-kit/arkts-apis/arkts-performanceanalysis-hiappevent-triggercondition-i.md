@@ -1,6 +1,6 @@
 # TriggerCondition
 
-提供设置[Watcher]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的onTrigger回调触发条件的参数选项。
+提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的onTrigger回调触发条件的参数选项。
 
 **起始版本：** 9
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## row
 
 ```TypeScript
@@ -18,7 +24,7 @@ row?: int
 
 满足触发回调的事件总数量，正整数。默认值0，不触发回调。传入负值时，会被置为默认值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ size?: int
 
 满足触发回调的事件总大小，正整数，单位为byte。默认值0，不触发回调。传入负值时，会被置为默认值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -58,7 +64,7 @@ timeOut?: int
 
 满足触发回调的超时时长，正整数，单位为s，值为timeOut * 30。默认值0，不触发回调。传入负值时，会被置为默认值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

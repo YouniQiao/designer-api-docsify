@@ -1,6 +1,6 @@
 # HiTraceId
 
-Defines a **HiTraceId** object.
+此接口为HiTraceId对象接口。用于标识分布式跟踪链中的唯一节点，在需要跨线程、跨进程、跨设备跟踪业务流程的场景中使用，例如电商下单流程、支付流程、分布式服务调用链等。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ Defines a **HiTraceId** object.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## chainId
 
 ```TypeScript
 chainId: bigint
 ```
 
-Call chain ID.
+跟踪链标识。
 
 **Type:** bigint
 
@@ -34,9 +40,9 @@ Call chain ID.
 flags?: int
 ```
 
-Trace flag. The default value is **0**.
+跟踪标志位，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -52,9 +58,9 @@ Trace flag. The default value is **0**.
 parentSpanId?: int
 ```
 
-Parent span ID. The default value is **0**.
+父分支标识，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -70,9 +76,9 @@ Parent span ID. The default value is **0**.
 spanId?: int
 ```
 
-Span ID. The default value is **0**.
+分支标识，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

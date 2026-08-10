@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## color
 
 ```TypeScript
@@ -38,7 +44,7 @@ decorationStyle?: TextDecorationStyle
 
 装饰线样式，默认为SOLID。
 
-**类型：** TextDecorationStyle
+**类型：** [TextDecorationStyle](../../apis-arkui/arkts-apis/arkts-arkui-enums-textdecorationstyle-e.md)
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ decorationThicknessScale?: double
 
 装饰线粗细系数，浮点数，默认为1.0。如果设置的值小于等于0，则不会绘制装饰线。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ textDecoration?: TextDecorationType
 
 装饰线类型，默认为NONE。
 
-**类型：** TextDecorationType
+**类型：** [TextDecorationType](../../apis-arkui/arkts-apis/arkts-arkui-textdecorationtype-e.md)
 
 **起始版本：** 12
 

@@ -1,11 +1,10 @@
 # OnFoldStatusChangeInfo
 
-Called when the folding state changes. This API takes effect only in landscape mode.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer  
-    element's @since version number is higher than inner elements'. This does not affect interface usability.
+折叠状态改变时的信息，仅在横屏状态下生效。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,9 +20,9 @@ Called when the folding state changes. This API takes effect only in landscape m
 foldStatus: FoldStatus
 ```
 
-Current fold state of the device.
+当前设备的折叠状态。
 
-**Type:** FoldStatus
+**Type:** [FoldStatus](../arkts-apis/arkts-arkui-enums-foldstatus-e.md)
 
 **Since:** 11
 

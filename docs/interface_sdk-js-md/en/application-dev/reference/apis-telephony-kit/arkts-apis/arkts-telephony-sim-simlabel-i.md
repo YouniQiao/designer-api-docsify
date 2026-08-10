@@ -1,6 +1,6 @@
 # SimLabel
 
-Defines the SIM card label.
+定义SIM卡标签信息。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Defines the SIM card label.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## index
 
 ```TypeScript
 index: int
 ```
 
-Represents the SIM card index.
+表示卡片索引。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Represents the SIM card index.
 simType: SimType
 ```
 
-Represents the SIM card type.
+表示SIM卡类型。
 
-**Type:** SimType
+**Type:** [SimType](arkts-telephony-sim-simtype-e.md)
 
 **Since:** 20
 

@@ -1,16 +1,20 @@
 # getDeviceIds
 
+## Modules to Import
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## getDeviceIds
 
 ```TypeScript
 function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API is supported since API version 8 and deprecated since API version 9. Use  
-    [inputDevice.getDeviceList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+获取所有输入设备的ID列表，使用callback异步回调。
+
+> **说明：**
 
 **Since:** 8
 
@@ -28,9 +32,9 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | 回调函数。当获取成功，err为undefined，data为所有输入设备的ID列表；否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -43,12 +47,13 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
+          // Obtaining the Input Device ID List
           inputDevice.getDeviceIds((error: BusinessError, ids: Array<number>) => {
             if (error) {
-              console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
               return;
             }
-            console.info(`Device id list: ${JSON.stringify(ids)}`);
+            console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
           });
         })
     }
@@ -63,11 +68,9 @@ struct Index {
 function getDeviceIds(): Promise<Array<number>>
 ```
 
-Obtains the IDs of all input devices. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API is supported since API version 8 and deprecated since API version 9. Use  
-    [inputDevice.getDeviceList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+获取所有输入设备的ID列表，使用Promise异步回调。
+
+> **说明：**
 
 **Since:** 8
 
@@ -85,9 +88,9 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the IDs of all input devices. **id** is the unique ID of an input device. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回所有输入设备的ID列表。ID是输入设备的唯一标识。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -100,10 +103,11 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
+          // Obtaining the Input Device ID List
           inputDevice.getDeviceIds().then((ids: Array<number>) => {
-            console.info(`Device id list: ${JSON.stringify(ids)}`);
+            console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
           }).catch((error: BusinessError) => {
-            console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           })
         })
     }

@@ -10,6 +10,12 @@ MediaLibrary availability.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## availabilityStatus
 
 ```TypeScript
@@ -18,7 +24,7 @@ availabilityStatus: AvailabilityStatus
 
 MediaLibrary availability status.
 
-**Type:** AvailabilityStatus
+**Type:** [AvailabilityStatus](arkts-medialibrary-photoaccesshelper-availabilitystatus-e.md)
 
 **Since:** 26.0.0
 

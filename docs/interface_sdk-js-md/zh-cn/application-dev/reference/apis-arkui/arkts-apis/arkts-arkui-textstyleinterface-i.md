@@ -20,7 +20,7 @@ fontColor?: ResourceColor
 
 默认为主题色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -40,9 +40,9 @@ fontColor?: ResourceColor
 fontConfigs?: FontConfigs
 ```
 
-字体配置。默认值继承[FontConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+字体配置。默认值继承[FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)。
 
-**类型：** FontConfigs
+**类型：** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
 **起始版本：** 24
 
@@ -66,7 +66,7 @@ fontFamily?: ResourceStr
 
 默认为主题字体。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
 
@@ -92,9 +92,9 @@ fontSize?: LengthMetrics
 
 如果LengthMetrics的unit值是PERCENT，当前设置不生效，处理为16fp。
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ 
+单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -118,7 +118,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal
 
-**类型：** FontStyle
+**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **起始版本：** 12
 
@@ -194,7 +194,7 @@ strokeColor?: ResourceColor
 
 默认值为字体颜色，设置异常值时取字体颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 20
 
@@ -216,9 +216,9 @@ strokeJoinStyle?: StrokeJoinStyle
 
 文本描边拐角样式。具体枚举及说明请参考StrokeJoinStyle。
 
-默认值：StrokeJoinStyle.MITER\_JOIN。
+默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** StrokeJoinStyle
+**类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
@@ -244,7 +244,7 @@ strokeWidth?: LengthMetrics
 
 默认值为0。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 20
 
@@ -268,7 +268,7 @@ superscript?: SuperscriptStyle
 
 默认值：SuperscriptStyle.NORMAL
 
-**类型：** SuperscriptStyle
+**类型：** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **起始版本：** 20
 

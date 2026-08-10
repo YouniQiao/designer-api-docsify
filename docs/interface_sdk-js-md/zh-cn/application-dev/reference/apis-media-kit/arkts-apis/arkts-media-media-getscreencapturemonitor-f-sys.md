@@ -1,5 +1,11 @@
 # getScreenCaptureMonitor（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## getScreenCaptureMonitor
 
 ```TypeScript
@@ -22,16 +28,16 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ScreenCaptureMonitor&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
+| Promise&lt;ScreenCaptureMonitor&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. &lt;br&gt;If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let screenCaptureMonitor: media.ScreenCaptureMonitor;
@@ -65,12 +71,12 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ScreenCaptureMonitor \| undefined&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
+| Promise&lt;ScreenCaptureMonitor \| undefined&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. &lt;br&gt;If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
+| 202 | Not System App. |
 

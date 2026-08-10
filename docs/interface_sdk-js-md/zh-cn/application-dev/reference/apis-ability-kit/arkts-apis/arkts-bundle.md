@@ -1,10 +1,11 @@
 # @ohos.bundle
 
-本模块提供应用信息查询能力，支持[包信息]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[应用信息]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[Ability组件信息]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_等信息的查询，以及应用禁用状态的查询、设置等。
-    **说明：**  
-    
-    从API version 9开始，该模块不再维护，建议使用[@ohos.bundle.bundleManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_替代。
+本模块提供应用信息查询能力，支持[包信息](arkts-ability-bundleinfo-i.md)、[应用信息](arkts-ability-applicationinfo-i.md)、  
+[Ability组件信息](arkts-ability-abilityinfo-i.md)等信息的查询，以及应用禁用状态的查询、设置等。
+
+> **说明：**
+> 
+> 从API version 9开始，该模块不再维护，建议使用[@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md)替代。
 
 **起始版本：** 7
 
@@ -18,14 +19,20 @@
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
+## 导入模块
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 函数
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon) | 通过bundleName和abilityName获取对应Icon的[PixelMap]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，使用callback异步回调。  获取调用方自己的信息时不需要权限。 |
-| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon-1) | 通过bundleName和abilityName获取对应Icon的[PixelMap]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，使用Promise异步回调。  获取调用方自己的信息时不需要权限。 |
+| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon) | 通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)，使用callback异步回调。  获取调用方自己的信息时不需要权限。 |
+| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon-1) | 通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)，使用Promise异步回调。  获取调用方自己的信息时不需要权限。 |
 | [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo) | 通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。  获取调用方自己的信息时不需要权限。 |
 | [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo-1) | 通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。  获取调用方自己的信息时不需要权限。 |
 | [getAbilityLabel](arkts-ability-bundle-getabilitylabel-f.md#getabilitylabel) | 通过Bundle名称和Ability组件名获取应用名称，使用callback异步回调。  获取调用方自己的信息时不需要权限。 |

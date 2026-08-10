@@ -1,15 +1,22 @@
 # getSdkVersion
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## getSdkVersion
 
 ```TypeScript
 function getSdkVersion(options: HuksOptions): string
 ```
 
-Obtains the SDK version of the current system.
-    **NOTE**  
-    
-    This API is supported since API version 8 and deprecated since API version 11.
+获取当前系统sdk版本。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 11开始废弃。
 
 **Since:** 8
 
@@ -25,15 +32,15 @@ Obtains the SDK version of the current system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Empty object (leave this parameter empty). |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 空对象（此处传空即可）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | SDK version obtained. |
+| string | 返回sdk版本。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

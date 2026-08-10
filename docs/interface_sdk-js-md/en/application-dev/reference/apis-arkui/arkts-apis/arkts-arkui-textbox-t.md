@@ -4,7 +4,7 @@
 declare type TextBox = import('../api/@ohos.graphics.text').default.TextBox
 ```
 
-Describes the rectangle that contains the text.
+文本矩形区域。
 
 **Since:** 14
 

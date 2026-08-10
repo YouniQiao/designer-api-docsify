@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## getInputSurface
 
 ```TypeScript
@@ -34,18 +40,18 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数，返回输入surface id字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回输入surface id字符串。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by callback. |
+| 5400103 | I/O error. Return by callback. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -84,16 +90,16 @@ getInputSurface(callback: AsyncCallback<string | undefined>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string \| undefined&gt; | 是 | 回调函数，返回输入surface id字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| undefined&gt; | 是 | 回调函数，返回输入surface id字符串。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400102 | Operation not allowed. Return by callback. |
+| 5400103 | I/O error. Return by callback. |
+| 202 | Not System App. |
+| 5400105 | Service died. Return by callback. |
 
 ## getInputSurface
 
@@ -123,12 +129,12 @@ getInputSurface(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | I/O error. Return by promise. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -171,10 +177,10 @@ getInputSurface(): Promise<string | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | I/O error. Return by promise. |
+| 202 | Not System App. |
+| 5400105 | Service died. Return by promise. |
 
 ## on('error')
 
@@ -199,18 +205,18 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 视频录制错误事件的类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，监听视频录制错误事件。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，监听视频录制错误事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400103 | I/O error. Return by callback. |
+| 201 | permission denied.<br>**适用版本：** 12+ |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -243,16 +249,16 @@ onError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，监听视频录制错误事件。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，监听视频录制错误事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| 5400103 | I/O error. Return by callback. |
+| 201 | permission denied. |
+| 202 | Not System App. |
+| 5400105 | Service died. Return by callback. |
 
 ## pause
 
@@ -276,18 +282,18 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，暂停录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，暂停录制完成时返回。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by callback. |
+| 5400103 | I/O error. Return by callback. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -330,12 +336,12 @@ pause(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | I/O error. Return by promise. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -372,20 +378,20 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 录制参数。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，准备录制完成时返回。 |
+| config | [VideoRecorderConfig](arkts-media-multimedia-media-videorecorderconfig-i-sys.md) | 是 | 录制参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，准备录制完成时返回。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by callback. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 5400102 | Operation not allowed. Return by callback. |
+| 201 | Permission denied. Return by callback. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -447,7 +453,7 @@ Prepares for recording.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 录制参数。 |
+| config | [VideoRecorderConfig](arkts-media-multimedia-media-videorecorderconfig-i-sys.md) | 是 | 录制参数。 |
 
 **返回值：**
 
@@ -459,13 +465,13 @@ Prepares for recording.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 201 | Permission denied. Return by promise. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -523,16 +529,16 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，释放资源完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，释放资源完成时返回。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -575,10 +581,10 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -613,17 +619,17 @@ reset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，重置完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，重置完成时返回。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400103 | I/O error. Return by callback. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -666,11 +672,11 @@ reset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400103 | I/O error. Return by promise. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -705,18 +711,18 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，恢复录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，恢复录制完成时返回。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by callback. |
+| 5400103 | I/O error. Return by callback. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -759,12 +765,12 @@ resume(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | I/O error. Return by promise. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -799,18 +805,18 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，开始录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，开始录制完成时返回。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by callback. |
+| 5400103 | I/O error. Return by callback. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -853,12 +859,12 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | I/O error. Return by promise. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -893,18 +899,18 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，停止录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，停止录制完成时返回。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by callback. |
+| 5400103 | I/O error. Return by callback. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -947,12 +953,12 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | I/O error. Return by promise. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
+| 5400105 | Service died. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -973,7 +979,7 @@ readonly state: VideoRecordState
 
 视频录制状态。
 
-**类型：** VideoRecordState
+**类型：** [VideoRecordState](arkts-media-videorecordstate-t-sys.md)
 
 **起始版本：** 9
 

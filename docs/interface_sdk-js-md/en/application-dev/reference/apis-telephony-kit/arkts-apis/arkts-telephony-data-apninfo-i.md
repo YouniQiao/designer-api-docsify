@@ -10,6 +10,12 @@ Defines the APN info.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
+## Modules to Import
+
+```TypeScript
+import { data } from 'kits/@kit.TelephonyKit';
+```
+
 ## apn
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # TextMenuItemId
 
-Defines the unique identifier for a custom menu item. It is used to identify menu items. The IDs for built-in menu items are listed in the table below.
+自定义菜单项的Id值。用于识别菜单选项，内置菜单项Id值见下列属性表格。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the unique identifier for a custom menu item. It is used to identify men
 equals(id: TextMenuItemId): boolean
 ```
 
-Checks whether this **TextMenuItemId** object is the same as another **TextMenuItemId** object.
+判断TextMenuItemId是否相等。
 
 **Since:** 12
 
@@ -34,13 +34,13 @@ Checks whether this **TextMenuItemId** object is the same as another **TextMenuI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ID of the **TextMenuItemId** object to compare. |
+| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Yes | 需要比较的TextMenuItemId对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the two **TextMenuItemId** objects are the same. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** if the objects are equal; **false** otherwise. |
+| boolean | 两个TextMenuItemId是否相等。 &lt;br&gt;true表示相等，false表示不相等。 |
 
 ## of
 
@@ -48,7 +48,7 @@ Checks whether this **TextMenuItemId** object is the same as another **TextMenuI
 static of(id: ResourceStr): TextMenuItemId
 ```
 
-Creates a **TextMenuItemId** object based on **id**.
+根据id创建TextMenuItemId。
 
 **Since:** 12
 
@@ -66,13 +66,13 @@ Creates a **TextMenuItemId** object based on **id**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Menu ID. |
+| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | 菜单项标识，用于创建TextMenuItemId对象以识别菜单选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextMenuItemId** object. |
+| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | 根据传入id创建的菜单项标识对象，用于识别菜单选项。 |
 
 ## AI_WRITER
 
@@ -80,9 +80,9 @@ Creates a **TextMenuItemId** object based on **id**.
 static readonly AI_WRITER: TextMenuItemId
 ```
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ID for the menu item involving text enhancement features,such as polishing, summary extraction, and formatting, for selected text.It is a level-1 menu item. This menu item requires the large language model. If no large language model is available,this menu item does not take effect.
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;可对选中的文本进行润色、摘要提取、排版等，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 13
 
@@ -102,9 +102,9 @@ static readonly AI_WRITER: TextMenuItemId
 static readonly CAMERA_INPUT: TextMenuItemId
 ```
 
-ID for the camera input menu item. It is a level-1 menu item.
+拍摄输入，为一级菜单项。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
 
@@ -124,9 +124,9 @@ ID for the camera input menu item. It is a level-1 menu item.
 static readonly COLLABORATION_SERVICE: TextMenuItemId
 ```
 
-ID for the collaboration service menu item. It is a level-1 menu item.
+互通服务，为一级菜单项。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
 
@@ -146,9 +146,9 @@ ID for the collaboration service menu item. It is a level-1 menu item.
 static readonly COPY: TextMenuItemId
 ```
 
-ID for the default copy menu item. It is a level-1 menu item.
+默认复制，为一级菜单项。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
 
@@ -168,9 +168,9 @@ ID for the default copy menu item. It is a level-1 menu item.
 static readonly CUT: TextMenuItemId
 ```
 
-ID for the default cut menu item. It is a level-1 menu item.
+默认剪切，为一级菜单项。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
 
@@ -190,9 +190,9 @@ ID for the default cut menu item. It is a level-1 menu item.
 static readonly PASTE: TextMenuItemId
 ```
 
-ID for the default paste menu item. It is a level-1 menu item.
+默认粘贴，为一级菜单项。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
 
@@ -212,9 +212,9 @@ ID for the default paste menu item. It is a level-1 menu item.
 static readonly SEARCH: TextMenuItemId
 ```
 
-ID for the search menu item. It is a level-1 menu item. This menu item launches a browser to search for the selected text.
+搜索，为一级菜单项。对选中的文本提供搜索服务，拉起浏览器搜索选中文本内容。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 18
 
@@ -234,9 +234,9 @@ ID for the search menu item. It is a level-1 menu item. This menu item launches 
 static readonly SELECT_ALL: TextMenuItemId
 ```
 
-ID for the default select-all menu item. It is a level-1 menu item.
+默认全选，为一级菜单项。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
 
@@ -256,9 +256,9 @@ ID for the default select-all menu item. It is a level-1 menu item.
 static readonly SHARE: TextMenuItemId
 ```
 
-ID for the share menu item. It is a level-1 menu item. This menu item launches a window for sharing the selected text.
+分享，为一级菜单项。对选中的文本提供分享服务，拉起分享窗口分享选中文本内容。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 18
 
@@ -278,9 +278,9 @@ ID for the share menu item. It is a level-1 menu item. This menu item launches a
 static readonly TRANSLATE: TextMenuItemId
 ```
 
-ID for the translate menu item. It is a level-1 menu item. The translation service is provided for the selected text.
+翻译，为一级菜单项。对选中的文本提供翻译服务。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 15
 
@@ -300,9 +300,9 @@ ID for the translate menu item. It is a level-1 menu item. The translation servi
 static readonly address: TextMenuItemId
 ```
 
-ID for the navigation menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected address, launching the map app.
+导航前往，为一级菜单项。对选中的地址提供跳转服务，拉起地图应用。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
 
@@ -322,9 +322,9 @@ ID for the navigation menu item. It is a level-1 menu item. This menu item provi
 static readonly askAI: TextMenuItemId
 ```
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ID for the AI assistant menu item,which provides AI query capabilities for the selected text. It is a level-1 menu item.
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;对选中的文本提供AI问询能力，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
 
@@ -344,11 +344,10 @@ static readonly askAI: TextMenuItemId
 static readonly autoFill: TextMenuItemId
 ```
 
-ID for the autofill menu item. It is a level-1 menu item. When a menu item is tapped, the secondary menu item  
-**Password Vault** is displayed. This menu item is supported exclusively for the [Search]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[TextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, [TextArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and [RichEditor]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ components.
+自动填充，为一级菜单项。点击后会展开二级菜单项“密码保险箱”，仅支持[Search](arkts-arkui-search-search-f.md#search)、[TextInput](./text_input)、  
+[TextArea](./text_area)或[RichEditor](./rich_editor)。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -368,9 +367,9 @@ ID for the autofill menu item. It is a level-1 menu item. When a menu item is ta
 static readonly dateTime: TextMenuItemId
 ```
 
-ID for the event creation menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected date and time, launching the page for creating a calendar event.
+新建日程，为一级菜单项。对选中的日期和时间提供跳转服务，拉起新建日程页面。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
 
@@ -390,9 +389,9 @@ ID for the event creation menu item. It is a level-1 menu item. This menu item p
 static readonly email: TextMenuItemId
 ```
 
-ID for the email menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected email address, launching the email app.
+新建邮件，为一级菜单项。对选中的邮箱地址提供跳转服务，拉起邮箱应用。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
 
@@ -412,11 +411,10 @@ ID for the email menu item. It is a level-1 menu item. This menu item provides t
 static readonly passwordVault: TextMenuItemId
 ```
 
-ID for the password vault menu item. It is a level-2 menu item. Tapping this menu item launches the password vault app, which supports automatic username and password filling. The menu item is supported only for  
-[Search]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, [TextInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, [TextArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and  
-[RichEditor]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
+密码保险箱，为二级菜单项。点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持[Search](arkts-arkui-search-search-f.md#search)、[TextInput](./text_input)、  
+[TextArea](./text_area)或[RichEditor](./rich_editor)。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -436,9 +434,9 @@ ID for the password vault menu item. It is a level-2 menu item. Tapping this men
 static readonly phoneNumber: TextMenuItemId
 ```
 
-ID for the phone call menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected phone number, launching the phone dialer page.
+呼叫，为一级菜单项。对选中的电话号码提供跳转服务，拉起电话拨号页面。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
 
@@ -458,9 +456,9 @@ ID for the phone call menu item. It is a level-1 menu item. This menu item provi
 static readonly url: TextMenuItemId
 ```
 
-ID for the URL menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected URL, launching a browser search or app page.
+打开链接，为一级菜单项。对选中的URL提供跳转服务，拉起浏览器搜索或者应用页面。
 
-**Type:** TextMenuItemId
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
 

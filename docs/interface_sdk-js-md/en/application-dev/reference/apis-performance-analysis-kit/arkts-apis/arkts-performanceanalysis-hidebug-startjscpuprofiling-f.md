@@ -1,12 +1,18 @@
 # startJsCpuProfiling
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## startJsCpuProfiling
 
 ```TypeScript
 function startJsCpuProfiling(filename : string) : void
 ```
 
-Starts the VM profiling method. **startJsCpuProfiling(filename: string)** and **stopJsCpuProfiling()** are called in pairs. **startJsCpuProfiling(filename: string)** always occurs before **stopJsCpuProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur.
+���������Profiling�������٣�`startJsCpuProfiling(filename: string)`�����ĵ�����Ҫ��`stopJsCpuProfiling()`�����ĵ���һһ��Ӧ���ȿ�����رգ�������ظ��������ظ��رյĵ��÷�ʽ�������ӿڵ����쳣��
 
 **Since:** 9
 
@@ -20,15 +26,15 @@ Starts the VM profiling method. **startJsCpuProfiling(filename: string)** and **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filename | string | Yes | Custom file name of the sampling data. The .json file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128. |
+| filename | string | Yes | �û��Զ���Ĳ������������ļ���������Ӧ�õ�`files`Ŀ¼�������Ըò���������json�ļ���string���ȵ����ֵΪ128�� |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Parameter type error. |
+| 401 | the parameter check failed, Parameter type error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

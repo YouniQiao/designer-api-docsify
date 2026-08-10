@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## on('change')
 
 ```TypeScript
@@ -21,15 +27,15 @@ function on(type: 'change', listener: Callback<DeviceListener>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 输入设备的事件类型，固定值为'change'。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceListener&gt; | 是 | 回调函数，返回输入设备热插拔事件。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceListener&gt; | 是 | 回调函数，返回输入设备热插拔事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';

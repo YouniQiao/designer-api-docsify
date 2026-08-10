@@ -1,10 +1,8 @@
 # ConnectOptionsCollections
 
-Defines the parameter type for the  
-[globalConnect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_API. **ConnectOptionsCollections** is inherited from [ConnectOptions\&lt;T\&gt;]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. You can use the  
-**ConnectOptionsCollections** input parameter to persist container data (such as **Array\_\_\_ESCAPED\_UNDERSCORE\_DESC\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_**).
+[globalConnect](PersistenceV2.globalConnect&lt;T extends CollectionType<S>, S extends object&gt;&lt;S&gt;, S extends object>( type: ConnectOptionsCollections&lt;T, S&gt; | ConnectOptions&lt;T&gt; ))接口参数类型，ConnectOptionsCollections继承自[ConnectOptions\&lt;T\&gt;](arkts-arkui-arkui-statemanagement-connectoptions-c.md)。当开发者需要持久化容器类型数据（如`Array&lt;S&gt;`）时，需要使用`ConnectOptionsCollections`入参。
 
-The following shows the examples of **StorageDefaultCreator\_\_\_ESCAPED\_UNDERSCORE\_DESC\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_** and **StorageDefaultCreator\_\_\_ESCAPED\_UNDERSCORE\_DESC\_\_\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_**:
+如下展示`StorageDefaultCreator&lt;T&gt;`和`StorageDefaultCreator&lt;S&gt;`示例：
 
 **Inheritance/Implementation:** ConnectOptionsCollections extends [ConnectOptions<T>](ConnectOptions<T>)
 
@@ -16,14 +14,19 @@ The following shows the examples of **StorageDefaultCreator\_\_\_ESCAPED\_UNDERS
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## defaultCreator
 
 ```TypeScript
 defaultCreator?: StorageDefaultCreator<T>
 ```
 
-Persists container data. **defaultSubCreator** should be provided together with **defaultCreator**; otherwise, the container data cannot be persisted. The collection item type **S** must be the same as the return type of  
-**defaultSubCreator**. If **defaultSubCreator** is provided but **defaultCreator** is not, the persistence fails.
+用于持久化容器类型数据，当提供默认`defaultSubCreator`时，则需要同时提供默认构造器`defaultCreator`，不提供默认构造器会导致持久化失败。集合项类型`S`必须与`defaultSubCreator`的返回类型相同。
 
 **Since:** 23
 
@@ -43,8 +46,7 @@ Persists container data. **defaultSubCreator** should be provided together with 
 defaultSubCreator?: StorageDefaultCreator<S>
 ```
 
-Persists container data. If the return value of **defaultSubCreator** is **undefined** or **null**, the persistence fails. When a user-defined class collection (such as **Array\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**) is persisted, the generic type **T** in  
-**defaultCreator** is **Array\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**, and **S** in **defaultSubCreator** is **ClassA**.
+使用该集合项默认构造函数，用于持久化容器类数据。使用此参数时，必须同时提供`defaultCreator`，否则会导致持久化失败。如果defaultSubCreator返回的是`undefined`或`null`时，会导致持久化失败。 当持久化用户自定义class类集合（如`Array&lt;ClassA&gt;`）时，`defaultCreator`中的泛型类型`T`为`Array&lt;ClassA&gt;`，则`defaultSubCreator`中的泛型类型`S`为`ClassA`。
 
 **Since:** 23
 

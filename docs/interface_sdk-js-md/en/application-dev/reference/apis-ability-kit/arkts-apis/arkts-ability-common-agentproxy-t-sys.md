@@ -4,7 +4,7 @@
 export type AgentProxy = _AgentProxy
 ```
 
-Represents the AgentProxy type.
+表示AgentProxy类型。
 
 **Since:** 24
 

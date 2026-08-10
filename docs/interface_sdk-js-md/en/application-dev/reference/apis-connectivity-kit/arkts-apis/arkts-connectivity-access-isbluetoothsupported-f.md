@@ -1,5 +1,11 @@
 # isBluetoothSupported
 
+## Modules to Import
+
+```TypeScript
+import { access } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isBluetoothSupported
 
 ```TypeScript
@@ -29,4 +35,15 @@ Check whether Bluetooth is available.
 | Error Code ID | Error Message |
 | --- | --- |
 | 2900099 | Operation failed. |
+
+## Examples
+
+```TypeScript
+try {
+    let isSupported: boolean = access.isBluetoothSupported();
+    console.info("isSupported: " + isSupported);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
 

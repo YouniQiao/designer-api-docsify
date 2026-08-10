@@ -2,10 +2,11 @@
 
 音频路由管理。
 
-在使用AudioRoutingManager的接口之前，需先通过[getRoutingManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取AudioRoutingManager实例。
-    **说明：**  
-    
-    - 本Interface首批接口从API version 9开始支持。
+在使用AudioRoutingManager的接口之前，需先通过[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 9
 
@@ -14,6 +15,12 @@
 <!--Device-audio-interface AudioRoutingManager--><!--Device-audio-interface AudioRoutingManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
+
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## excludeOutputDevices
 
@@ -40,8 +47,8 @@ Exclude output devices. After calling this function successfully, audio will not
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Device usage, only output device usages can be accepted. |
-| devices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The devices to be excluded. |
+| usage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | Device usage, only output device usages can be accepted. |
+| devices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | The devices to be excluded. |
 
 **返回值：**
 
@@ -53,10 +60,11 @@ Exclude output devices. After calling this function successfully, audio will not
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permisson denied.<br>**适用版本：** 18 - 22 |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -118,9 +126,9 @@ getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not a system application. |
+| 202 | Not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -153,22 +161,22 @@ Get excluded devices by filter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Device usage, only output device usages can be accepted. |
+| usage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | Device usage, only output device usages can be accepted. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Exclueded devices. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Exclueded devices. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -203,22 +211,22 @@ Get the preferred input device for the target audio capturer filter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio capturer filter. |
+| filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | 是 | Audio capturer filter. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The preferred devices. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | The preferred devices. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -262,22 +270,22 @@ Get the preferred output devices by the target audio renderer filter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio renderer filter. |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Audio renderer filter. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The preferred devices. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | The preferred devices. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -323,16 +331,16 @@ Unsubscribes to preferred output device change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | 否 | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+| 202 | Not system App. |
+| 6800301 | Audio client call audio service error, System error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 取消该事件的所有监听。
@@ -380,16 +388,16 @@ offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | 否 | 要侦听的事件类型。只有 支持的输入设备变更按过滤事件为precedenceInputDeviceChangeByFilter。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | 否 | 要侦听的事件类型。只有 支持的输入设备变更按过滤事件为precedenceInputDeviceChangeByFilter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+| 202 | Not system App. |
+| 6800301 | Audio client call audio service error, System error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 取消该事件的所有监听。
@@ -434,38 +442,14 @@ Unsubscribes to preferred output device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | 否 | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
-
-**示例：**
-
-```TypeScript
-// 取消该事件的所有监听。
-audioRoutingManager.offPreferredOutputDeviceChangeByFilter();
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let preferredOutputDeviceChangeByFilterCallback = (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
-  console.info(`Succeeded in using onPreferredOutputDeviceChangeByFilter or offPreferredOutputDeviceChangeByFilter function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
-};
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-
-audioRoutingManager.onPreferredOutputDeviceChangeByFilter(outputAudioRendererFilter, preferredOutputDeviceChangeByFilterCallback);
-
-audioRoutingManager.offPreferredOutputDeviceChangeByFilter(preferredOutputDeviceChangeByFilterCallback);
-```
+| 202 | Not system App. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## on('preferredOutputDeviceChangeByFilter')
 
@@ -490,18 +474,18 @@ Subscribes to preferred output device change events. When preferred device for t
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Filter for AudioRenderer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | 是 | Callback used to obtain the changed preferred devices information. |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | 是 | Callback used to obtain the changed preferred devices information. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
+| 6800301 | Audio client call audio service error, System error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let outputAudioRendererFilter: audio.AudioRendererFilter = {
@@ -541,18 +525,18 @@ onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 过滤capturer。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | 是 | 回调用于接收首选设备变更信息。 |
+| filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | 是 | 过滤capturer。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | 是 | 回调用于接收首选设备变更信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
+| 6800301 | Audio client call audio service error, System error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let inputAudioCapturerFilter: audio.AudioCapturerFilter = {
@@ -589,32 +573,16 @@ Subscribes to preferred output device change events. When preferred device for t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Filter for AudioRenderer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | 是 | Callback used to obtain the changed preferred devices information. |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | 是 | Callback used to obtain the changed preferred devices information. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
-
-**示例：**
-
-```TypeScript
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-audioRoutingManager.onPreferredOutputDeviceChangeByFilter(outputAudioRendererFilter, (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
-  console.info(`Succeeded in using onPreferredOutputDeviceChangeByFilter function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
-});
-```
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## restoreOutputDeviceByFilter
 
@@ -640,7 +608,7 @@ restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要恢复策略的音频播放流筛选属性 |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | 要恢复策略的音频播放流筛选属性 |
 
 **返回值：**
 
@@ -652,10 +620,10 @@ restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -699,10 +667,10 @@ Select the input device. This method uses an asynchronous callback to return the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputAudioDevices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio device description |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -756,7 +724,7 @@ Select the input device. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputAudioDevices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio device description |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
 
 **返回值：**
 
@@ -764,7 +732,7 @@ Select the input device. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -816,8 +784,8 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Filter for AudioCapturer. |
-| inputAudioDevices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio device descriptions |
+| filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | 是 | Filter for AudioCapturer. |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device descriptions |
 
 **返回值：**
 
@@ -829,10 +797,10 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -894,10 +862,10 @@ Select the output device. This method uses an asynchronous callback to return th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outputAudioDevices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio device description |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -950,7 +918,7 @@ Select the output device. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outputAudioDevices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio device description |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
 
 **返回值：**
 
@@ -958,7 +926,7 @@ Select the output device. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1010,11 +978,11 @@ Select the output device with desired AudioRenderer. This method uses an asynchr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Filter for AudioRenderer. |
-| outputAudioDevices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio device description. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1076,8 +1044,8 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Filter for AudioRenderer. |
-| outputAudioDevices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio device description |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
 
 **返回值：**
 
@@ -1085,7 +1053,7 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1146,9 +1114,9 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Filter for affected AudioRenderers. |
-| outputAudioDevices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio device to select. |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Target audio device select strategy. |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for affected AudioRenderers. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device to select. |
+| strategy | [AudioDevcieSelectStrategy](arkts-audio-audio-audiodevcieselectstrategy-e-sys.md) | 是 | Target audio device select strategy. |
 
 **返回值：**
 
@@ -1160,11 +1128,11 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
+| 6800301 | Audio client call audio service error, System error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1225,8 +1193,8 @@ Unexclude output devices.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Device usage, only output device usages can be accepted. |
-| devices | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The devices to be unexcluded. |
+| usage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | Device usage, only output device usages can be accepted. |
+| devices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | The devices to be unexcluded. |
 
 **返回值：**
 
@@ -1238,10 +1206,11 @@ Unexclude output devices.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permisson denied.<br>**适用版本：** 18 - 22 |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1298,7 +1267,7 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Device usage, only output device usages can be accepted. |
+| usage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | Device usage, only output device usages can be accepted. |
 
 **返回值：**
 
@@ -1310,10 +1279,11 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permisson denied.<br>**适用版本：** 18 - 22 |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';

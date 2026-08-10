@@ -1,12 +1,18 @@
 # getDistributedAccountAbility
 
+## Modules to Import
+
+```TypeScript
+import { distributedAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getDistributedAccountAbility
 
 ```TypeScript
 function getDistributedAccountAbility(): DistributedAccountAbility
 ```
 
-Obtains a **DistributedAccountAbility** instance.
+获取分布式账号单实例对象。
 
 **Since:** 7
 
@@ -20,11 +26,12 @@ Obtains a **DistributedAccountAbility** instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | DistributedAccountAbility** instance obtained. This instance provides APIs for querying and updating the login state of a distributed account. |
+| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | 返回一个实例，实例提供查询和更新分布式账号登录状态方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+// Obtain a DistributedAccountAbility instance.
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
 ```
 

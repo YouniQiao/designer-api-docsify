@@ -1,12 +1,18 @@
 # chdir (System API)
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## chdir
 
 ```TypeScript
 function chdir(dir: string): void
 ```
 
-Change current directory
+修改当前目录。
 
 **Since:** 7
 
@@ -22,5 +28,5 @@ Change current directory
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dir | string | Yes | The path you want to change. |
+| dir | string | Yes | 要切换到的路径。 |
 

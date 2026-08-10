@@ -32,8 +32,8 @@ BottomTabBarStyle的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 9 - 11 |
-| text | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 页签内的文字内容。 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
 
 ## iconStyle
 
@@ -59,13 +59,13 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 底部页签的label图标的样式，用于设置图标的选中态和未选中态颜色。 |
+| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | 是 | 底部页签的label图标的样式，用于设置图标的选中态和未选中态颜色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回BottomTabBarStyle对象本身，用于链式调用。 |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## id
 
@@ -97,7 +97,7 @@ id(value: string): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回BottomTabBarStyle对象本身，用于链式调用。 |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## labelStyle
 
@@ -123,13 +123,13 @@ labelStyle(value: LabelStyle): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 底部页签的label文本和字体的样式，用于设置文字的颜色、大小、字体、行数等属性。 |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | 是 | 底部页签的label文本和字体的样式，用于设置文字的颜色、大小、字体、行数等属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回BottomTabBarStyle对象本身，用于链式调用。 |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## layoutMode
 
@@ -155,13 +155,13 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：LayoutMode.VERTICAL |
+| value | [LayoutMode](../arkts-apis/arkts-arkui-tabcontent-layoutmode-e.md) | 是 | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。&lt;br/&gt;默认值：LayoutMode.VERTICAL |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回BottomTabBarStyle对象本身，用于链式调用。 |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## of
 
@@ -187,14 +187,14 @@ BottomTabBarStyle的静态构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 10 - 11 |
-| text | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 页签内的文字内容。 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的BottomTabBarStyle对象，用于设置底部页签和侧边页签样式。 |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回创建的BottomTabBarStyle对象，用于设置底部页签和侧边页签样式。 |
 
 ## padding
 
@@ -220,13 +220,13 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Dimension \| LocalizedPadding | 是 | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、 优化视觉效果时传入自定义值。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0, +∞]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_使用LocalizedPadding时，支持镜像能力。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 10 - 11 |
+| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Dimension \| LocalizedPadding | 是 | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、 优化视觉效果时传入自定义值。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}&lt;br/&gt;使用LocalizedPadding时，支持镜像能力。&lt;br /&gt;默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),&lt;br/&gt;top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**起始版本：** 10 - 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回BottomTabBarStyle对象本身，用于链式调用。 |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## symmetricExtensible
 
@@ -252,13 +252,13 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值。 传入true启用对称借用功能（当需要优化页签布局、充分利用空间时选择），传入false禁用对称借用功能（当需要保持页签固定布局、避免页签内容位置变化时选择）。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：false。 |
+| value | boolean | 是 | 底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值。 传入true启用对称借用功能（当需要优化页签布局、充分利用空间时选择），传入false禁用对称借用功能（当需要保持页签固定布局、避免页签内容位置变化时选择）。&lt;br/&gt;默认值：false。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 
 ## verticalAlign
 
@@ -284,11 +284,11 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 底部页签的图片、文字在垂直方向上的对齐格式。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：VerticalAlign.Center |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-enums-verticalalign-e.md) | 是 | 底部页签的图片、文字在垂直方向上的对齐格式。&lt;br/&gt;默认值：VerticalAlign.Center |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回BottomTabBarStyle对象本身，用于链式调用。 |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 

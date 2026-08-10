@@ -1,5 +1,11 @@
 # WithEnv
 
+## 导入模块
+
+```TypeScript
+import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
+```
+
 ## WithEnv
 
 ```TypeScript
@@ -24,11 +30,11 @@ WithEnv组件用于为子组件树设置局部环境变量作用域。开发者�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 组件的内容。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 组件的内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) |  |
 

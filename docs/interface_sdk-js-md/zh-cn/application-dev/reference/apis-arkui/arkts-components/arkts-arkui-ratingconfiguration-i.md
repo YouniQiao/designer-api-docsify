@@ -1,6 +1,6 @@
 # RatingConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **继承/实现关系：** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
 
@@ -48,11 +48,11 @@ rating: number
 
 取值范围： [0, stars]
 
-小于0取0，大于[stars]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_取最大值stars。
+小于0取0，大于[stars](RatingAttribute#stars(value: number))取最大值stars。
 
-该参数支持\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_双向绑定变量。
+该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-该参数支持\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_双向绑定变量。
+该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **类型：** number
 
@@ -124,7 +124,7 @@ triggerChange: Callback<number>
 
 触发评分变化的回调，参数为新的评分值。
 
-**类型：** Callback&lt;number&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **起始版本：** 12
 

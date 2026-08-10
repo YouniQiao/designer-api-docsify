@@ -40,7 +40,7 @@ permissionResults: PermissionInfo[]
 
 权限结果列表。
 
-**类型：** PermissionInfo[]
+**类型：** [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md)[]
 
 **起始版本：** 26.0.0
 
@@ -60,7 +60,7 @@ ticket?: TicketInfo
 
 票证信息。
 
-**类型：** TicketInfo
+**类型：** [TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)
 
 **起始版本：** 26.0.0
 

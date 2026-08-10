@@ -1,14 +1,20 @@
 # openNotificationSettings
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## openNotificationSettings
 
 ```TypeScript
 function openNotificationSettings(context: UIAbilityContext): Promise<void>
 ```
 
-Opens the notification settings page of the application, which is displayed in semi-modal mode and can be used to set the notification enabling and notification mode. This API uses a promise to return the result.
+拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、 通知提醒方式等。使用Promise异步回调。
 
-This is suitable for scenarios where users need to manually modify notification settings, such as a secondary request after a user denies authorization, or when the notification reminder method(vibration, ringtone, etc.) needs to be modified. When the requestEnableNotification dialog box is denied by the user, you can call this API to guide the user to the notification settings page to manually enable it.
+适用于用户需要手动修改通知设置的场景，如用户拒绝授权后二次申请，或需要 修改通知提醒方式（振动、响铃等）。当requestEnableNotification弹窗被 用户拒绝后，开发者可调用此接口引导用户前往通知设置页面手动开启。
 
 **Since:** 13
 
@@ -24,24 +30,24 @@ This is suitable for scenarios where users need to manually modify notification 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability context bound to the notification settings page. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | 通知设置页面绑定Ability的上下文。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) | The notification settings window is already displayed. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 1600001 | Internal error. |
+| 1600018 | The notification settings window is already displayed. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,7 +1,7 @@
 # KeepAliveBundleInfo（系统接口）
 
-定义应用保活信息，可以通过[getKeepAliveBundles]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或  
-[getKeepAliveAppServiceExtensions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取。
+定义应用保活信息，可以通过[getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles)或  
+[getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions)获取。
 
 **起始版本：** 14
 
@@ -12,6 +12,12 @@
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
 
 ## allowUserToCancel
 
@@ -61,7 +67,7 @@ setter: KeepAliveSetter
 
 表示应用保活设置者类型。
 
-**类型：** KeepAliveSetter
+**类型：** [KeepAliveSetter](arkts-ability-appmanager-keepalivesetter-e-sys.md)
 
 **起始版本：** 14
 
@@ -81,7 +87,7 @@ setterUserId?: int
 
 应用保活设置者的用户ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -101,7 +107,7 @@ type: KeepAliveAppType
 
 表示被保活应用的应用类型。
 
-**类型：** KeepAliveAppType
+**类型：** [KeepAliveAppType](arkts-ability-appmanager-keepaliveapptype-e-sys.md)
 
 **起始版本：** 14
 

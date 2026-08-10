@@ -1,6 +1,6 @@
 # StyledDateTimeFormat
 
-Provide a DateTime formatting interface which could format DateTime to StyleString.
+提供富文本时间日期格式化的能力。
 
 **Since:** 23
 
@@ -10,6 +10,12 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -17,7 +23,7 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
         options?: StyledDateTimeFormatOptions)
 ```
 
-A constructor used to create a StyledDateTimeFormat object.
+创建需要富文本显示的时间日期格式化的对象。
 
 **Since:** 23
 
@@ -33,8 +39,8 @@ A constructor used to create a StyledDateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| SimpleDateTimeFormat | Yes | Indicates the date and time format object that used to format date. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the options used to format the date. |
+| dateTimeFormat | Intl.DateTimeFormat \| SimpleDateTimeFormat | Yes | 用于格式化时间日期的对象。 |
+| options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No | 指定时间日期格式化对象的配置项。默认值：默认的文本样式。 |
 
 ## format
 
@@ -42,7 +48,7 @@ A constructor used to create a StyledDateTimeFormat object.
 format(date: Date): StyledString
 ```
 
-Formats a date as a rich text object.
+对时间日期进行格式化，返回富文本对象。
 
 **Since:** 23
 
@@ -58,11 +64,11 @@ Formats a date as a rich text object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | date to be formatted. |
+| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rich text object after formatting. |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | 格式化后的富文本对象。 |
 

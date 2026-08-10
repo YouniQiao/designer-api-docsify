@@ -1,5 +1,11 @@
 # getAddedPrinters
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAddedPrinters
 
 ```TypeScript
@@ -28,19 +34,19 @@ function getAddedPrinters(): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 print.getAddedPrinters().then((printers: string[]) => {
     console.info('getAddedPrinters success ' + JSON.stringify(printers));
     // ...
 }).catch((error: BusinessError) => {
-    console.error('failed to getAddedPrinters because ' + JSON.stringify(error));
+    console.error(`Failed to getAddedPrinters. Code: ${error.code}, message: ${error.message}`);
 })
 ```
 

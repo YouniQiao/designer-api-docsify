@@ -34,11 +34,11 @@ abstract initialize(options?: ListItemOptions): ListItemAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | list节点的选项。 |
+| options | [ListItemOptions](../arkts-components/arkts-arkui-listitemoptions-i.md) | 否 | list节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) |  |
 

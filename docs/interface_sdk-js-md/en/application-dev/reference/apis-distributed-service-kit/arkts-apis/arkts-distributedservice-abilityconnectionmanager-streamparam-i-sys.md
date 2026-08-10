@@ -12,15 +12,21 @@ Streaming configuration parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## bitrate
 
 ```TypeScript
 bitrate?: int
 ```
 
-This value indicates video bitrate, default 80(kbps). Only valid on the sender side.
+视频码率，默认80(kbps)。仅在发送端有效。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -40,7 +46,7 @@ This value indicates video bitrate, default 80(kbps). Only valid on the sender s
 colorSpaceConversionTarget?: colorSpaceManager.ColorSpace
 ```
 
-The target color space for conversion. Currently, only BT709\_LIMIT is supported.If the video format on the sender side is HDR and needs to be converted to SDR during transmission, this parameter should be set.
+转换的目标色彩空间。目前仅支持BT709_LIMIT。如果发送端的视频格式为HDR且需要在传输时转换为SDR，则应设置此参数。
 
 **Type:** colorSpaceManager.ColorSpace
 
@@ -62,7 +68,7 @@ The target color space for conversion. Currently, only BT709\_LIMIT is supported
 name: string
 ```
 
-Stream name, the receive end must be consistent with the transmit end.
+流名称，接收端必须与发送端保持一致。
 
 **Type:** string
 
@@ -84,9 +90,9 @@ Stream name, the receive end must be consistent with the transmit end.
 role: StreamRole
 ```
 
-Stream transmission role, which can be a receive stream or a transmit stream.
+流传输角色，可以是接收流或发送流。
 
-**Type:** StreamRole
+**Type:** [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)
 
 **Since:** 18
 

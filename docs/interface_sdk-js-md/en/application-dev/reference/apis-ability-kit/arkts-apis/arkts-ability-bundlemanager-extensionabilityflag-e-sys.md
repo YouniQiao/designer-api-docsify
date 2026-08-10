@@ -1,6 +1,6 @@
 # ExtensionAbilityFlag (System API)
 
-Enumerates the ExtensionAbility flags, which indicate the type of ExtensionAbility information to obtain.
+扩展组件信息标志，指示需要获取的扩展组件信息的内容。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates the ExtensionAbility flags, which indicate the type of ExtensionAbili
 GET_EXTENSION_ABILITY_INFO_DEFAULT = 0x00000000
 ```
 
-Used to obtain the default ExtensionAbility information. The obtained information does not contain the permission, metadata, or disabled ExtensionAbility information.
+用于获取默认extensionAbilityInfo。获取的extensionAbilityInfo不包含permission、metadata 和禁用的extensionAbilityInfo。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Used to obtain the default ExtensionAbility information. The obtained informatio
 GET_EXTENSION_ABILITY_INFO_WITH_PERMISSION = 0x00000001
 ```
 
-Used to obtain the ExtensionAbility information with permission information.
+用于获取包含permission的extensionAbilityInfo。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Used to obtain the ExtensionAbility information with permission information.
 GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION = 0x00000002
 ```
 
-Used to obtain the ExtensionAbility information with application information.
+用于获取包含applicationInfo的extensionAbilityInfo。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Used to obtain the ExtensionAbility information with application information.
 GET_EXTENSION_ABILITY_INFO_WITH_METADATA = 0x00000004
 ```
 
-Used to obtain the ExtensionAbility information with metadata.
+用于获取包含metadata的extensionAbilityInfo。
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ Used to obtain the ExtensionAbility information with metadata.
 GET_EXTENSION_ABILITY_INFO_WITH_SKILL = 0x00000010
 ```
 
-Used to obtain the ExtensionAbility information with skills.
+用于获取包含skills的extensionAbilityInfo。
 
 **Since:** 12
 

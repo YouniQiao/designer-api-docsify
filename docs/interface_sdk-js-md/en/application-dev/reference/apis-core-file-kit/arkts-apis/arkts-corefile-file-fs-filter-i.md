@@ -1,6 +1,6 @@
 # Filter
 
-Defines the file filtering configuration used by **listFile()**.
+文件过滤配置项，支持listFile接口使用。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the file filtering configuration used by **listFile()**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## displayName
 
 ```TypeScript
 displayName?: Array<string>
 ```
 
-Locate files that fuzzy match the specified file names, which are of the OR relationship. Currently, only the wildcard * is supported.
+文件名模糊匹配，各个关键词OR关系。当前仅支持通配符*。
 
 **Type:** Array&lt;string&gt;
 
@@ -34,9 +40,7 @@ Locate files that fuzzy match the specified file names, which are of the OR rela
 excludeMedia?: boolean
 ```
 
-Whether to exclude the files already in **Media**.
-
-The value **true** means to exclude the files already in **Media**; the value **false** means not to exclude the files already in **Media**. This parameter is reserved.
+是否排除Media中已有的文件。true：排除Media中已有的文件；false：不排除Media中已有的文件。预留字段，暂不支持使用。
 
 **Type:** boolean
 
@@ -54,7 +58,7 @@ The value **true** means to exclude the files already in **Media**; the value **
 fileSizeOver?: long
 ```
 
-Locate files that are greater than the specified size, in bytes.
+文件大小匹配，大于指定大小的文件，单位为Byte。
 
 **Type:** long
 
@@ -72,7 +76,7 @@ Locate files that are greater than the specified size, in bytes.
 lastModifiedAfter?: double
 ```
 
-Locate files whose last modification time is the same or later than the specified time.
+文件最近修改时间匹配，在指定时间点及之后的文件。
 
 **Type:** double
 
@@ -90,7 +94,7 @@ Locate files whose last modification time is the same or later than the specifie
 mimeType?: Array<string>
 ```
 
-Locate files that fully match the specified MIME types, which are of the OR relationship. This parameter is reserved.
+mime类型完全匹配，各个关键词OR关系。预留字段，暂不支持使用。
 
 **Type:** Array&lt;string&gt;
 
@@ -108,7 +112,7 @@ Locate files that fully match the specified MIME types, which are of the OR rela
 suffix?: Array<string>
 ```
 
-Locate files that fully match the specified file name extensions, which are of the OR relationship.
+文件后缀名完全匹配，各个关键词OR关系。
 
 **Type:** Array&lt;string&gt;
 

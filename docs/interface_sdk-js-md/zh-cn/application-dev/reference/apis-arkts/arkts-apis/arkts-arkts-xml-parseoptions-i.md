@@ -10,6 +10,12 @@ XML解析选项。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { xml } from 'kits/@kit.ArkTS';
+```
+
 ## attributeValueCallbackFunction
 
 ```TypeScript
@@ -84,7 +90,7 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 ```
 
-解析元素事件类型([EventType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_)和[ParseInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_属性，默认值undefined，表示不解析。
+解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md)属性，默认值undefined，表示不解析。
 
 **起始版本：** 8
 
@@ -100,8 +106,8 @@ tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | 是 |  |
+| value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | 是 |  |
 
 ## ignoreNameSpace
 

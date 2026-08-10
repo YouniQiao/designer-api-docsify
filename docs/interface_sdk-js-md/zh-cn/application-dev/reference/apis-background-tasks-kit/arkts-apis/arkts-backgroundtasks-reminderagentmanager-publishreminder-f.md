@@ -1,5 +1,11 @@
 # publishReminder
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## publishReminder
 
 ```TypeScript
@@ -7,12 +13,13 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<i
 ```
 
 发布后台代理提醒。使用callback异步回调。
-    **说明：**  
-    
-    该接口需要申请通知弹窗权限  
-    [notificationManager.requestEnableNotification]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    后调用。  
-    
+
+> **说明：**
+> 
+> 该接口需要申请通知弹窗权限
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)
+> 后调用。
+> 
 
 **起始版本：** 9
 
@@ -28,21 +35,19 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reminderReq | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要发布的代理提醒实例。 |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | 是 | 回调函数。 当代理提醒发布成功，err为undefined，data为当前发布提醒的id；否则为错误对象。 |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 是 | 需要发布的代理提醒实例。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。 当代理提醒发布成功，err为undefined，data为当前发布提醒的id；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
-| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) | Notification is not enabled. |
-| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) | The number of reminders exceeds the limit. |
+| 401 | If the input parameter is not valid parameter. |
+| 1700001 | Notification is not enabled. |
+| 201 | Permission denied. |
+| 1700002 | The number of reminders exceeds the limit. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,29 +67,6 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-// publishReminder回调
-let publishCallback = (err: BusinessError | null, reminderId: int | undefined | null): void => {
-  if (err) {
-    console.error(`Failed to publish reminder. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in publishing reminder, id is ${JSON.stringify(reminderId)}.`);
-  }
-}
-
-let timer: reminderAgentManager.ReminderRequestTimer = {
-  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgentManager.publishReminder(timer, publishCallback);
-```
-
 
 ## publishReminder
 
@@ -93,12 +75,13 @@ function publishReminder(reminderReq: ReminderRequest): Promise<int>
 ```
 
 发布后台代理提醒。使用Promise异步回调。
-    **说明：**  
-    
-    该接口需要申请通知弹窗权限  
-    [notificationManager.requestEnableNotification]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    后调用。  
-    
+
+> **说明：**
+> 
+> 该接口需要申请通知弹窗权限
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)
+> 后调用。
+> 
 
 **起始版本：** 9
 
@@ -114,26 +97,24 @@ function publishReminder(reminderReq: ReminderRequest): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reminderReq | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要发布的代理提醒实例。 |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 是 | 需要发布的代理提醒实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回当前发布提醒的id。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回当前发布提醒的id。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
-| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) | Notification is not enabled. |
-| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) | The number of reminders exceeds the limit. |
+| 401 | If the input parameter is not valid parameter. |
+| 1700001 | Notification is not enabled. |
+| 201 | Permission denied. |
+| 1700002 | The number of reminders exceeds the limit. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -148,23 +129,6 @@ reminderAgentManager.publishReminder(timer).then((reminderId: number) => {
   console.info("promise, reminderId = " + reminderId);
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let timer: reminderAgentManager.ReminderRequestTimer = {
-  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgentManager.publishReminder(timer).then((reminderId: int) => {
-  console.info(`Succeeded in publishing reminder, reminderId is  ${JSON.stringify(reminderId)}.`);
-}).catch((err): void => {
-  console.error(`Failed to publish reminder. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

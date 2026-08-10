@@ -1,6 +1,6 @@
 # Name
 
-Defines a contact's name.
+联系人的名字类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's name.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## familyName
 
 ```TypeScript
 familyName?: string
 ```
 
-Family name.
+联系人的家庭姓名。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Family name.
 familyNamePhonetic?: string
 ```
 
-Family name in pinyin.
+联系人的家庭姓名拼音。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Family name in pinyin.
 fullName: string
 ```
 
-Full name of the contact.
+联系人的全名。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ Full name of the contact.
 givenName?: string
 ```
 
-Given name of the contact.
+联系人的名称(firstName)。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ Given name of the contact.
 givenNamePhonetic?: string
 ```
 
-Given name of the contact in pinyin.
+联系人的名称拼音。
 
 **Type:** string
 
@@ -116,7 +122,7 @@ Given name of the contact in pinyin.
 hasName?: boolean
 ```
 
-Whether the contact information contains the name. The value **true** indicates that the contact information contains the name, and the value **false** indicates the opposite.
+联系人信息中是否包含姓名。true表示包含，false表示不包含。
 
 **Type:** boolean
 
@@ -136,7 +142,7 @@ Whether the contact information contains the name. The value **true** indicates 
 middleName?: string
 ```
 
-Middle name of the contact.
+联系人的中间名。
 
 **Type:** string
 
@@ -156,7 +162,7 @@ Middle name of the contact.
 middleNamePhonetic?: string
 ```
 
-Middle name of the contact in pinyin.
+联系人的中间名拼音。
 
 **Type:** string
 
@@ -176,7 +182,7 @@ Middle name of the contact in pinyin.
 namePrefix?: string
 ```
 
-Prefix of the contact name.
+联系人的姓名前缀。
 
 **Type:** string
 
@@ -196,7 +202,7 @@ Prefix of the contact name.
 nameSuffix?: string
 ```
 
-Suffix of the contact name.
+联系人的姓名后缀。
 
 **Type:** string
 

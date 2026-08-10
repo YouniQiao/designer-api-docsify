@@ -4,7 +4,7 @@
 export type Context = _Context
 ```
 
-Provides the context for the ability or application, which can be used to access application resources.
+提供Ability或Application的上下文，可用于访问应用程序的资源。
 
 **Since:** 10
 

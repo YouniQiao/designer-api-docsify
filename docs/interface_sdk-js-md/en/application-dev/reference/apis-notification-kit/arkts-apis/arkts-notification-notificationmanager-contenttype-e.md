@@ -1,6 +1,6 @@
 # ContentType
 
-Enumerates the notification content types.
+通知内容类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the notification content types.
 NOTIFICATION_CONTENT_BASIC_TEXT
 ```
 
-Normal text notification.
+普通文本类型通知。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Normal text notification.
 NOTIFICATION_CONTENT_LONG_TEXT
 ```
 
-Long text notification.
+长文本类型通知。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Long text notification.
 NOTIFICATION_CONTENT_PICTURE
 ```
 
-Picture-attached notification.
+图片类型通知。
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ Picture-attached notification.
 NOTIFICATION_CONTENT_CONVERSATION
 ```
 
-Conversation notification.
+社交类型通知。
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ Conversation notification.
 NOTIFICATION_CONTENT_MULTILINE
 ```
 
-Multi-line text notification.
+多行文本类型通知。
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ Multi-line text notification.
 NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW
 ```
 
-System live view notification. A third-party application cannot directly create a notification of this type. After the system proxy creates a system live view, the third-party application publishes a notification with the same ID to update the specified content.
+系统实况窗类型通知。不支持三方应用直接创建该类型通知。系统代理创建系统实况窗类型通知后，三方应用可以通过发布相同ID的通知来更新指定内容。
 
 **Since:** 11
 
@@ -124,7 +124,7 @@ System live view notification. A third-party application cannot directly create 
 NOTIFICATION_CONTENT_LIVE_VIEW
 ```
 
-Common live view notification. Available only to system applications.
+普通实况窗类型通知。仅系统应用可用。
 
 **Since:** 11
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## columns
 
 ```TypeScript
@@ -38,7 +44,7 @@ maxReturningCount?: int
 
 指定结果集返回的最大行数量，默认为1024条，最大支持32766条。注意：当实际修改行数超过maxReturningCount设置的值时，系统会丢弃超出部分的数据。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

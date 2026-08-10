@@ -1,5 +1,11 @@
 # listFile
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## listFile
 
 ```TypeScript
@@ -26,7 +32,7 @@ function listFile(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 文件过滤选项。默认不进行过滤。 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。 |
 
 **返回值：**
 
@@ -39,10 +45,10 @@ function listFile(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900018 | Not a directory |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## listFile
@@ -66,17 +72,17 @@ function listFile(path: string, callback: AsyncCallback<string[]>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | 是 | 回调函数，返回文件名数组，默认以'utf-8'编码。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 | 回调函数，返回文件名数组，默认以'utf-8'编码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900018 | Not a directory |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## listFile
@@ -106,16 +112,16 @@ function listFile(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文件过滤选项。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | 是 | 回调函数，返回文件名数组，默认以'utf-8'编码。 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 是 | 文件过滤选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 | 回调函数，返回文件名数组，默认以'utf-8'编码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900018 | Not a directory |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 

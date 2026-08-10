@@ -4,7 +4,7 @@
 declare type AccessibilityActionInterceptCallback = (action: AccessibilityAction) => AccessibilityActionInterceptResult
 ```
 
-Defines the callback type used in accessibility action intercept.The value of action indicates the accessibility action type.
+定义在可访问性操作拦截中使用的回调类型。action的值表示可访问性动作类型。
 
 **Since:** 20
 
@@ -24,11 +24,11 @@ Defines the callback type used in accessibility action intercept.The value of ac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the enum of accessibility action type.  |
+| action | [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | Yes | 可访问性操作类型的枚举。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the result of continuing to execute the action or interrupting it or bubbling up  |
+| [AccessibilityActionInterceptResult](arkts-arkui-accessibilityactioninterceptresult-e.md) | 继续执行操作、中断操作或事件冒泡的结果 |
 

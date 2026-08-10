@@ -1,6 +1,6 @@
 # CalendarType
 
-Enumerates the account types.
+账户类型枚举。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the account types.
 LOCAL = 'local'
 ```
 
-Local account.
+本地账户。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ Local account.
 EMAIL = 'email'
 ```
 
-Email account.
+邮箱账户。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ Email account.
 BIRTHDAY = 'birthday'
 ```
 
-Birthday account.
+生日账户。
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ Birthday account.
 CALDAV = 'caldav'
 ```
 
-CalDAV account.
+支持CalDAV协议账户。CalDAV是一种基于WebDAV的互联网开放协议，用于在多设备间同步、共享和管理日历、事件和任务数据。
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ CalDAV account.
 SUBSCRIBED = 'subscribed'
 ```
 
-Subscription account.
+订阅账户。
 
 **Since:** 10
 

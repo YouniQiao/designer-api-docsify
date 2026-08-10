@@ -1,6 +1,6 @@
 # ReplyResult (System API)
 
-Reply result.
+分布式设备基本信息。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Reply result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## param
 
 ```TypeScript
 param: string
 ```
 
-Param of ui state changes.
+认证用户界面状态改变信息。
 
 **Type:** string
 

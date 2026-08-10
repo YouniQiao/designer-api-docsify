@@ -1,6 +1,6 @@
 # SendRequestResult
 
-Defines the response to the request.
+发送请求的响应结果。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ Defines the response to the request.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## code
 
 ```TypeScript
 code: number
 ```
 
-Message code.
+消息代码。
 
 **Type:** number
 
@@ -42,9 +48,9 @@ Message code.
 data: MessageParcel
 ```
 
-MessageParcel** object sent to the remote process.
+发送给对端进程的MessageParcel对象。
 
-**Type:** MessageParcel
+**Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
 **Since:** 8
 
@@ -64,7 +70,7 @@ MessageParcel** object sent to the remote process.
 errCode: number
 ```
 
-Error code.
+错误码。
 
 **Type:** number
 
@@ -86,9 +92,9 @@ Error code.
 reply: MessageParcel
 ```
 
-MessageParcel** object returned by the remote process.
+对端进程返回的MessageParcel对象。
 
-**Type:** MessageParcel
+**Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
 **Since:** 8
 

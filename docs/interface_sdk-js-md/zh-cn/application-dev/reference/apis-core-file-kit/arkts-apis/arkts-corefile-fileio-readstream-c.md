@@ -1,11 +1,11 @@
 # ReadStream
 
-文件可读流，需要先通过[fileIo.createReadStream]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法来构建一个ReadStream实例。ReadStream继承自数据流基类  
-[stream.Readable]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+文件可读流，需要先通过[fileIo.createReadStream](arkts-corefile-fileio-createreadstream-f.md#createreadstream)方法来构建一个ReadStream实例。ReadStream继承自数据流基类  
+[stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md)。
 
 **规格**：ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
 
-**继承/实现关系：** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)
+**继承/实现关系：** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md)
 
 **起始版本：** 23
 
@@ -14,6 +14,12 @@
 <!--Device-fileIo-class ReadStream extends stream.Readable--><!--Device-fileIo-class ReadStream extends stream.Readable-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
 
 ## close
 
@@ -79,7 +85,7 @@ seek(offset: long, whence?: WhenceType): long
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | offset | long | 是 | 相对偏移位置，单位为Byte。 |
-| whence | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | = WhenceType.SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_SET] - Where to start the offset. The default value is SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_SET, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_which indicates the beginning of the file. |
+| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | 否 | = WhenceType.SEEK_SET] - Where to start the offset. The default value is SEEK_SET, &lt;br&gt;which indicates the beginning of the file. |
 
 **返回值：**
 
@@ -91,8 +97,8 @@ seek(offset: long, whence?: WhenceType): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
 | 13900020 | Invalid argument |
+| 401 | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
+## 导入模块
+
+```TypeScript
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -38,7 +44,7 @@ displayID: int
 
 被划词应用窗口的屏幕ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -58,7 +64,7 @@ endDisplayX: int
 
 划词结束位置的屏幕x轴坐标，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -78,7 +84,7 @@ endDisplayY: int
 
 划词结束位置的屏幕y轴坐标，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -98,7 +104,7 @@ endWindowX: int
 
 划词结束位置的窗口x轴坐标，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -118,7 +124,7 @@ endWindowY: int
 
 划词结束位置的窗口y轴坐标，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -138,7 +144,7 @@ selectionType: SelectionType
 
 划词方式枚举值。
 
-**类型：** SelectionType
+**类型：** [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md)
 
 **默认值：** MOUSE_MOVE
 
@@ -160,7 +166,7 @@ startDisplayX: int
 
 划词起始位置的屏幕x轴坐标，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -180,7 +186,7 @@ startDisplayY: int
 
 划词起始位置的屏幕y轴坐标，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -200,7 +206,7 @@ startWindowX: int
 
 划词起始位置的窗口x轴坐标，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -220,7 +226,7 @@ startWindowY: int
 
 划词起始位置的窗口y轴坐标，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -240,7 +246,7 @@ windowID: int
 
 被划词应用的窗口ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 

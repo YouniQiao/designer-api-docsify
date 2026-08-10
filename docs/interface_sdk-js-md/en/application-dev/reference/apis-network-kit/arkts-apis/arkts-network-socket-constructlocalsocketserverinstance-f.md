@@ -1,5 +1,11 @@
 # constructLocalSocketServerInstance
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## constructLocalSocketServerInstance
 
 ```TypeScript
@@ -20,9 +26,9 @@ Creates a LocalSocketServer object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the LocalSocketServer of the constructLocalSocketServerInstance. |
+| [LocalSocketServer](arkts-network-socket-localsocketserver-i.md) | the LocalSocketServer of the constructLocalSocketServerInstance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

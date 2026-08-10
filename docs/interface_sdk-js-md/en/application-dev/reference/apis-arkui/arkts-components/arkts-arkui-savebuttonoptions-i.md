@@ -1,14 +1,15 @@
 # SaveButtonOptions
 
-Defines options for the save button, including icon, text, and button type.
-    **NOTE**  
-    
-    - You are advised to specify at least one of **icon** or **text**.  
-    - If neither **icon** nor **text** is specified, **SaveButton** is created with default styles as follows:  
-    **SaveIconStyle** defaults to **FULL\_FILLED**, **SaveDescription** to **DOWNLOAD**, and **ButtonType** to  
-    **Capsule**.  
-    
-    - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification.
+用于设置保存控件的图标、文本、按钮类型等属性。
+
+> **说明：**
+> 
+> - 建议icon或text至少传入一个。
+> 
+> - 如果icon、text都不传入，SaveButton将使用默认样式创建，默认样式：SaveIconStyle默认样式为FULL_FILLED；
+> SaveDescription默认样式为DOWNLOAD；ButtonType默认样式为Capsule。
+> 
+> - icon、text和buttonType不支持动态修改。
 
 **Since:** 10
 
@@ -24,9 +25,9 @@ Defines options for the save button, including icon, text, and button type.
 buttonType?: ButtonType
 ```
 
-Background type of the **SaveButton** component.Default value: ButtonType.Capsule.
+设置保存控件的背景样式。默认值：ButtonType.Capsule。
 
-**Type:** ButtonType
+**Type:** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
 
 **Since:** 10
 
@@ -46,9 +47,9 @@ Background type of the **SaveButton** component.Default value: ButtonType.Capsul
 icon?: SaveIconStyle
 ```
 
-Icon style of the **SaveButton** component.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
+设置保存控件的图标风格。&lt;br&gt;不传入该参数表示不显示图标；若同时也不传text，整体配置将显示为默认样式。
 
-**Type:** SaveIconStyle
+**Type:** [SaveIconStyle](arkts-arkui-saveiconstyle-e.md)
 
 **Since:** 10
 
@@ -68,9 +69,9 @@ Icon style of the **SaveButton** component.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If
 text?: SaveDescription
 ```
 
-Text on the **SaveButton** component.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the component uses the default style.
+设置保存控件的文本描述。&lt;br&gt;不传入该参数表示不显示文本描述；若同时也不传icon，整体配置将显示为默认样式。
 
-**Type:** SaveDescription
+**Type:** [SaveDescription](arkts-arkui-savedescription-e.md)
 
 **Since:** 10
 

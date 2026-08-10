@@ -1,6 +1,6 @@
 # CertRevocationFlag
 
-Enumerates the certificate revocation flags.
+表示证书吊销检查标志的枚举。
 
 **Since:** 26.0.0
 
@@ -16,12 +16,10 @@ Enumerates the certificate revocation flags.
 CERT_REVOCATION_PREFER_OCSP = 0
 ```
 
-OCSP check is preferred. This flag is valid only when CERT\_REVOCATION\_CRL\_CHECK and CERT\_REVOCATION\_OCSP\_CHECK are both set.
+优先OCSP检查。仅当CERT_REVOCATION_CRL_CHECK与CERT_REVOCATION_OCSP_CHECK同时设置时，该标志生效。
 
-- If this flag is set, OCSP check is performed first, and CRL check is performed if no OCSP response is found or  
-a timeout occurs;  
-- If this flag is not set, CRL check is performed first, and OCSP check is performed if no CRL is found or a  
-timeout occurs.
+- 设置后先执行OCSP检查，未找到响应或超时时回退CRL；  
+- 不设置则先执行CRL检查，未找到CRL或超时时回退OCSP。
 
 **Since:** 26.0.0
 
@@ -41,9 +39,10 @@ timeout occurs.
 CERT_REVOCATION_CRL_CHECK = 1
 ```
 
-Enables the CRL check. Checks the certificate status using a certificate revocation list.
+启用CRL检查。使用证书吊销列表检查证书状态。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_First, the **crls** parameter of [X509CertRevokedParams]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is used. If no matching CRL is found and **allowDownloadCrl** of [X509CertRevokedParams]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is set to **true**, the CDP extension of the certificate is used to download the CRL.
+&lt;br&gt;首先使用[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)的crls参数，未匹配到CRL且  
+[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)的allowDownloadCrl参数设置为true时则尝试使用证书的CDP扩展下载CRL。
 
 **Since:** 26.0.0
 
@@ -63,16 +62,16 @@ Enables the CRL check. Checks the certificate status using a certificate revocat
 CERT_REVOCATION_OCSP_CHECK = 2
 ```
 
-Enables OCSP check. Checks the certificate status using the Online Certificate Status Protocol.
+启用OCSP检查。使用在线证书状态协议检查证书状态。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_First, the **ocspResponses** parameter of [X509CertRevokedParams]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is used.If no matching OCSP response is found and **allowOcspCheckOnline** of  
-[X509CertRevokedParams]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is set to **true**, the system attempts to obtain the OCSP URL from the certificate AIA extension and sends a request to obtain the response.
-    **NOTE**  
-    
-    - Always verify the validity period of the OCSP response against the current system time, and allow a time  
-    tolerance of ±5 minutes.  
-    - The validity period of the OCSP signature certificate chain is always verified using the current system time.  
-    - Allows ocsp response to be missing nonce and nextUpdate.
+&lt;br&gt;首先使用[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)的ocspResponses参数，未匹配到响应且  
+[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)的allowOcspCheckOnline参数设置为true则尝试从证书AIA扩展获取OCSP URL并发送请求获取响应。
+
+> **说明：**
+> 
+> - 始终使用系统当前时间校验ocsp响应的有效期，并允许前后5分钟的时间容差。
+> - 始终使用系统当前时间校验ocsp签名者证书链的有效期。
+> - 允许ocsp响应缺少nonce和nextUpdate。
 
 **Since:** 26.0.0
 
@@ -92,12 +91,10 @@ Enables OCSP check. Checks the certificate status using the Online Certificate S
 CERT_REVOCATION_CHECK_ALL_CERT = 3
 ```
 
-Checks the revocation status of all certificates.
+检查所有证书的吊销状态。
 
-- If this flag is set, revocation check is performed on all certificates in the certificate chain  
-(skips self-signed certificates);  
-- If this flag is not set, only the end-entity certificate (the first certificate in the certificate chain) is  
-checked.
+- 设置后对证书链中所有证书执行吊销检查（跳过自签名证书）；  
+- 不设置则仅检查终端实体证书（证书链第一个证书）。
 
 **Since:** 26.0.0
 

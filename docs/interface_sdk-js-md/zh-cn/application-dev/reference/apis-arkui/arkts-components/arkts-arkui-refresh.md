@@ -45,7 +45,9 @@ Refresh(value: RefreshOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 刷新组件参数。  |
+| value | [RefreshOptions](arkts-arkui-refreshoptions-i.md) | 是 | 刷新组件参数。 |
 
 ## 汇总
 
+- [RefreshOptions](arkts-arkui-refresh-refreshoptions-i.md)
+- [RefreshStatus](arkts-arkui-refresh-refreshstatus-e.md)

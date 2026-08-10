@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## foldState
 
 ```TypeScript
@@ -20,7 +26,7 @@ foldState: FoldState
 
 表示设备的折展状态。
 
-**类型：** FoldState
+**类型：** [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md)
 
 **起始版本：** 14
 
@@ -40,7 +46,7 @@ rotateState: RotateState
 
 表示设备的横竖屏状态。
 
-**类型：** RotateState
+**类型：** [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md)
 
 **起始版本：** 14
 

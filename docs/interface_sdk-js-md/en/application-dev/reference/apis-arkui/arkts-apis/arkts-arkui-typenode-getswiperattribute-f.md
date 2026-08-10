@@ -6,7 +6,7 @@
 export function getSwiperAttribute(node: FrameNode): SwiperAttribute | undefined
 ```
 
-Get the attribute instance of FrameNode to set attributes.
+获取Swiper的FrameNode的属性实例来设置属性。
 
 **Since:** 26.0.0
 
@@ -22,11 +22,11 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the target FrameNode. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标Swiper节点 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

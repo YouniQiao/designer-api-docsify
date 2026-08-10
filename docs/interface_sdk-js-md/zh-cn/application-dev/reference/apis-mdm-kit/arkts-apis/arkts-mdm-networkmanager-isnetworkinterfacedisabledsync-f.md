@@ -1,5 +1,11 @@
 # isNetworkInterfaceDisabledSync
 
+## 导入模块
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
+
 ## isNetworkInterfaceDisabledSync
 
 ```TypeScript
@@ -24,7 +30,7 @@ function isNetworkInterfaceDisabledSync(admin: Want, networkInterface: string): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | networkInterface | string | 是 | 指定网络接口。 |
 
 **返回值：**
@@ -37,10 +43,31 @@ function isNetworkInterfaceDisabledSync(admin: Want, networkInterface: string): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## 示例
+
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: boolean = networkManager.isNetworkInterfaceDisabledSync(wantTemp, 'eth0');
+  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 
 ## isNetworkInterfaceDisabledSync
@@ -67,7 +94,7 @@ function isNetworkInterfaceDisabledSync(admin: Want | null, networkInterface: st
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | networkInterface | string | 是 | 指定网络接口。 |
 
 **返回值：**
@@ -80,26 +107,20 @@ function isNetworkInterfaceDisabledSync(admin: Want | null, networkInterface: st
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
 
 try {
   // 参数需根据实际情况进行替换
-  let result: boolean = networkManager.isNetworkInterfaceDisabledSync(wantTemp, 'eth0');
+  // 参数需根据实际情况进行替换
+  let result: boolean = networkManager.isNetworkInterfaceDisabledSync(null, 'eth0');
   console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
 } catch (err) {
   console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);

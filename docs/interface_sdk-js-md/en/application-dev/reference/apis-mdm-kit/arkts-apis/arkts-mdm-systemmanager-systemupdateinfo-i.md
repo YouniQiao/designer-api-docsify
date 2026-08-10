@@ -1,6 +1,6 @@
 # SystemUpdateInfo
 
-Represents information about the system version to update.
+待更新的系统版本信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents information about the system version to update.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## firstReceivedTime
 
 ```TypeScript
 firstReceivedTime: number
 ```
 
-Time when the system update package is received for the first time, in seconds.
+第一次收到系统更新包的时间（单位：秒）。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ Time when the system update package is received for the first time, in seconds.
 packageType: string
 ```
 
-Type of the system update package to update. The value can be **normal** or **patch**.
+待更新的系统更新包类型，类型分为normal和patch类型。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Type of the system update package to update. The value can be **normal** or **pa
 versionName: string
 ```
 
-System version to update.
+待更新的系统版本名称。
 
 **Type:** string
 

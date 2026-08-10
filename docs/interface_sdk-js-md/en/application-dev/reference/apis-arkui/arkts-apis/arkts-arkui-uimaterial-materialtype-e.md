@@ -1,6 +1,6 @@
 # MaterialType
 
-Enumerates system material types.
+系统材质类型枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,9 @@ Enumerates system material types.
 NONE = 0
 ```
 
-Material type with no effect.
+无系统材质效果。对应的效果为背景色  
+[backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor)为透明色，边框颜色[borderColor](arkts-arkui-common-commonmethod-i.md#bordercolor)为透明色，边框宽度[borderWidth](arkts-arkui-common-commonmethod-i.md#borderwidth)为0，无阴影  
+[shadow](arkts-arkui-common-commonmethod-i.md#shadow)。
 
 **Since:** 23
 
@@ -34,7 +36,17 @@ Material type with no effect.
 SEMI_TRANSPARENT = 1
 ```
 
-Material type for semitransparent style. It includes predefined backgroundColor, border, and shadow effects.
+半透明系统材质效果。对应的效果为：
+
+背景色  
+[backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor)：浅色模式为"#f2f1f3f5"，深色模式为"#f2303131"。
+
+边框颜色[borderColor](arkts-arkui-common-commonmethod-i.md#bordercolor)为混合10%的透明度的theme.colors.compForegroundPrimary的  
+[token](../../../ui/theme_skinning.md#系统缺省token色值)值。
+
+边框宽度[borderWidth](arkts-arkui-common-commonmethod-i.md#borderwidth)为1vp。
+
+阴影[shadow](arkts-arkui-common-commonmethod-i.md#shadow)为ShadowStyle.OUTER_DEFAULT_SM。
 
 **Since:** 23
 
@@ -52,9 +64,8 @@ Material type for semitransparent style. It includes predefined backgroundColor,
 IMMERSIVE = 2
 ```
 
-Immersive material type. It is used only by the **type** attribute of the  
-[MaterialInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API to identify the current material type and does not map to underlying features. The actual material effect is implemented by the  
-[ImmersiveMaterial]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ class.
+沉浸式材质类型。仅用于[MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md)接口的type属性标识当前配置的材质类型，不映射到底层功能。实际材质效果通过  
+[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)类实现。
 
 **Since:** 26.0.0
 

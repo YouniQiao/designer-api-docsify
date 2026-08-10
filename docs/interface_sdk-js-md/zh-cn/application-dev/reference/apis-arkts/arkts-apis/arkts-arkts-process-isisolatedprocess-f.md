@@ -1,5 +1,11 @@
 # isIsolatedProcess
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## isIsolatedProcess
 
 ```TypeScript
@@ -24,7 +30,7 @@ function isIsolatedProcess(): boolean
 | --- | --- |
 | boolean | 返回判断结果。如果进程被隔离则返回 true；否则， 返回 false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let result = process.isIsolatedProcess();

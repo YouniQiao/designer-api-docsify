@@ -10,6 +10,12 @@ Provides methods to accessing bluetooth MAP(Message Access Profile)-related capa
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { map } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

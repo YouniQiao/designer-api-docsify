@@ -1,6 +1,6 @@
 # CertificateScope
 
-Defines the usage scope of the certificate to be installed.
+表示安装证书的使用范围。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Defines the usage scope of the certificate to be installed.
 NOT_SPECIFIED = 0
 ```
 
-No user is specified.
+不指定使用范围，用户可在证书安装界面选择。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ No user is specified.
 CURRENT_USER = 1
 ```
 
-The installed certificate is accessible only to the current user.
+当前用户。表示证书仅对当前登录用户可用。
 
 **Since:** 14
 
@@ -52,7 +52,7 @@ The installed certificate is accessible only to the current user.
 GLOBAL_USER = 2
 ```
 
-The installed certificate is accessible to all users of the device.
+所有用户。表示证书对设备的所有用户可见。
 
 **Since:** 18
 

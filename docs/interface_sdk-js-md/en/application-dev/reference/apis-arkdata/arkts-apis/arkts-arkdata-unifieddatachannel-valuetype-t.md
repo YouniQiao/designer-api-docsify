@@ -4,7 +4,7 @@
 type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
 ```
 
-Enumerates the data field types allowed in a unified data record.
+用于表示统一数据记录允许的数据字段类型。
 
 **Since:** 12
 
@@ -20,15 +20,15 @@ Enumerates the data field types allowed in a unified data record.
 
 | Type | Description |
 | --- | --- |
-| int | Int. |
-| long | Long. |
-| double | Double. |
-| string | String. |
-| boolean | Boolean. |
-| image.PixelMap | The value is of the [image.PixelMap]{ |
-| Want | [Want]{ |
-| ArrayBuffer | ArrayBuffer. |
-| object | Object. |
-| null | Null. |
-| undefined | Undefined. |
+| int | 表示Int的类型。 |
+| long | 表示Long的类型。 |
+| double | 表示Double的类型。 |
+| string | 表示string的类型。 |
+| boolean | 表示boolean的类型。 |
+| image.PixelMap | 表示[image.PixelMap]{ |
+| Want | 表示[Want]{ |
+| ArrayBuffer | 表示ArrayBuffer的类型。 |
+| object | 表示object的类型。 |
+| null | 表示null。 |
+| undefined | 表示undefined。 |
 

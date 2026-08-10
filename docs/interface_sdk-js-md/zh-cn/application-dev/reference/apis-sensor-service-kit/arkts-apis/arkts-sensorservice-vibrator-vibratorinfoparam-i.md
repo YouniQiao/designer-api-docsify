@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
+## 导入模块
+
+```TypeScript
+import { vibrator } from 'kits/@kit.SensorServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -17,9 +23,9 @@ deviceId?: int
 ```
 
 设备的ID。默认值：-1，表示本地设备。使用场景：在多设备场景下需指定远程设备时设置此参数；不填此参数时默认控制本地设备。从API version 19开始，设备ID可通过  
-[getVibratorInfoSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_查询获取。
+[getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)或[on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -36,9 +42,9 @@ vibratorId?: int
 ```
 
 马达ID。默认值：0，表示该设备的全部马达。使用场景：在多马达设备上需指定特定马达时设置此参数；不填此参数时默认控制该设备的全部马达。从API version 19开始，马达ID可通过  
-[getVibratorInfoSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_查询获取。
+[getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)或[on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 

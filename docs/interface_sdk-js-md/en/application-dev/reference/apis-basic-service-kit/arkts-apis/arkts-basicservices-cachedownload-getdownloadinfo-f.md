@@ -1,19 +1,23 @@
 # getDownloadInfo
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getDownloadInfo
 
 ```TypeScript
 function getDownloadInfo(url: string): DownloadInfo | undefined
 ```
 
-Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits.
+基于url获取预下载的下载信息。信息存储在内存中的下载信息列表，当应用程序退出时清除。
 
-- If the specified URL is found in the download information list, the latest  
-[DownloadInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ corresponding to the URL is returned.  
-- If the specified URL cannot be found in the download information list, **undefined** is returned.  
-- If the download information has already cached in the URL, the new cached information will overwrite the old  
-one.  
-- When the target information is stored in the memory, the existing cache data is replaced in the LRU mode.
+- 如果下载信息列表中能够找到指定url，返回该url对应的最新[DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md)。  
+- 如果下载信息列表中找不到指定url，返回undefined。  
+- 在缓存下载信息时，如果在该url下已存在缓存信息，新的缓存内容会覆盖旧缓存。  
+- 目标信息在存储到内存时，使用“LRU”（最近最少使用）方式替换已存在的缓存数据。
 
 **Since:** 20
 
@@ -29,17 +33,17 @@ one.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | URL to be queried, with a maximum length of 8192 bytes. |
+| url | string | Yes | 待查询的url，最大长度为8192字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the download information of the corresponding URL if the operation is successful; returns **undefined** if the specified URL does not exist. |
+| [DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md) | 返回对应url的下载信息，url未记录时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| 201 | permission denied. |
 

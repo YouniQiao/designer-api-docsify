@@ -1,6 +1,6 @@
 # HuksListAliasesReturnResult
 
-Defines the returned key alias array.
+返回的密钥别名数组。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Defines the returned key alias array.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## keyAliases
 
 ```TypeScript
 keyAliases: Array<string>
 ```
 
-Array of key aliases.
+表示密钥别名集。
 
 **Type:** Array&lt;string&gt;
 

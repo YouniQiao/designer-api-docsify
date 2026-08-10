@@ -4,7 +4,7 @@
 export type BundleOption = _BundleOption
 ```
 
-Describes the **BundleOption** information, that is, the bundle information of an application.
+描述BundleOption信息，即应用的包信息。
 
 **Since:** 9
 

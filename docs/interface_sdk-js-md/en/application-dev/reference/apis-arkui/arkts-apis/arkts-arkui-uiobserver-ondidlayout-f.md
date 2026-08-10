@@ -1,5 +1,11 @@
 # onDidLayout
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## onDidLayout
 
 ```TypeScript
@@ -22,6 +28,6 @@ Registers a callback function to be called when the layout is done.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The context scope of the observer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback function to be called when the layout is done. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function to be called when the layout is done. |
 

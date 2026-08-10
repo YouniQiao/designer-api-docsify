@@ -1,12 +1,18 @@
 # getTransientTaskInfo
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## getTransientTaskInfo
 
 ```TypeScript
 function getTransientTaskInfo(): Promise<TransientTaskInfo>
 ```
 
-Obtains all transient task information, including the remaining quota of the current day. This API uses a promise to return the result.
+获取所有短时任务信息，如当日剩余总配额等，使用Promise异步回调。
 
 **Since:** 20
 
@@ -20,17 +26,17 @@ Obtains all transient task information, including the remaining quota of the cur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TransientTaskInfo&gt; | Promise that returns all transient task information. |
+| Promise&lt;TransientTaskInfo&gt; | Promise对象，返回所有短时任务信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9900001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900001-caller-information-verification-failure-for-a-transient-task) | Caller information verification failed for a transient task. |
-| [9900003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900003-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Failed to apply for memory. |
-| [9900004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900004-system-service-failure) | System service operation failed. |
+| 9900004 | System service operation failed. |
+| 9900003 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| 9900001 | Caller information verification failed for a transient task. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

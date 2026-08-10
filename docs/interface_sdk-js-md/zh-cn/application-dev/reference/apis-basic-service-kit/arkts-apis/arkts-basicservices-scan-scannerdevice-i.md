@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## deviceName
 
 ```TypeScript
@@ -36,7 +42,7 @@ discoveryMode: ScannerDiscoveryMode
 
 扫描仪的发现模式。
 
-**类型：** ScannerDiscoveryMode
+**类型：** [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
 
 **起始版本：** 20
 

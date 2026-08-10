@@ -1,6 +1,6 @@
 # Photo
 
-Photo defines a full-quality image object.
+全质量图对象。
 
 **Since:** 11
 
@@ -9,6 +9,12 @@ Photo defines a full-quality image object.
 <!--Device-camera-interface Photo--><!--Device-camera-interface Photo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## release
 

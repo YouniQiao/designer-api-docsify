@@ -1,6 +1,6 @@
 # HuksSendType
 
-Enumerates the tag transfer modes.
+表示发送TAG的方式。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the tag transfer modes.
 HUKS_SEND_TYPE_ASYNC = 0
 ```
 
-The tag is sent asynchronously.
+表示异步发送TAG。
 
 **Since:** 8
 
@@ -38,7 +38,7 @@ The tag is sent asynchronously.
 HUKS_SEND_TYPE_SYNC = 1
 ```
 
-The tag is sent synchronously.
+表示同步发送TAG。
 
 **Since:** 8
 

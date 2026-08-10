@@ -1,16 +1,22 @@
 # addAllowedBluetoothDevices
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.MDMKit';
+```
+
 ## addAllowedBluetoothDevices
 
 ```TypeScript
 function addAllowedBluetoothDevices(admin: Want, deviceIds: Array<string>): void
 ```
 
-Adds Bluetooth devices to the trustlist. After adding devices to this list, the current device will only be allowed to connect to Bluetooth devices in the list. Since API version 22, the MAC addresses in the array must comply with the Bluetooth MAC address specifications (for example, 00:1A:2B:3C:4D:5E). Invalid MAC addresses will be removed and only valid MAC addresses will be added.
+添加蓝牙设备可用名单。添加蓝牙设备可用名单后当前设备仅允许连接该名单下的蓝牙设备。从API version 22开始，数组中的MAC地址必须符合蓝牙MAC规范（例如：00:1A:2B:3C:4D:5E），添加时会移除不合法的MAC地址，仅添加合法的MAC地址。
 
-A policy conflict is reported when this API is called in the following scenarios:
+以下情况下，通过本接口添加蓝牙设备可用名单，会报策略冲突：
 
-1. Bluetooth has been disabled via [setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.In this case, you can call [setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_enable Bluetooth to solve the conflict.2. Disallowed Bluetooth devices have been added by calling [addDisallowedBluetoothDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.You can resolve the conflict by removing disallowed Bluetooth devices through [removeDisallowedBluetoothDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
+1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了蓝牙。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口启用蓝牙后，可解除冲突。2. 已经通过[addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md#adddisallowedbluetoothdevices)接口添加了蓝牙设备禁用名单。通过[removeDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-removedisallowedbluetoothdevices-f.md#removedisallowedbluetoothdevices)移除蓝牙设备禁用名单后，可解除冲突。
 
 **Since:** 12
 
@@ -28,37 +34,39 @@ A policy conflict is reported when this API is called in the following scenarios
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| deviceIds | Array&lt;string&gt; | Yes | MAC addresses of the Bluetooth devices to add. The maximum number of allowed Bluetooth devices is 1,000. If there are already 300 MAC addresses of the devices, only 700 more can be added. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| deviceIds | Array&lt;string&gt; | Yes | 蓝牙设备MAC地址的数组。蓝牙设备允许名单数组长度上限为1000，若当前允许名单中已有300个蓝牙设备MAC地址，则只允许再添加700个。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 9200010 | A conflict policy has been configured. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bluetoothManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
 
+// Create an EnterpriseAdminExtensionAbility component.
 let wantTemp: Want = {
   // Replace it as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
-// Replace it as required.
+// Define the array of Bluetooth device MAC addresses. (Replace it as required.)
 let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E","AA:BB:CC:DD:EE:FF"];
 try {
-    bluetoothManager.addAllowedBluetoothDevices(wantTemp,deviceIds);
-    console.info(`Succeeded in adding allowed bluetooth devices.`);
+  // Add Bluetooth devices to the trustlist.
+  bluetoothManager.addAllowedBluetoothDevices(wantTemp,deviceIds);
+  console.info(`Succeeded in adding allowed bluetooth devices.`);
 } catch(err) {
-    console.error(`Failed to add allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to add allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

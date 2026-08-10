@@ -10,6 +10,12 @@ The message for indicating the of result of JavaScript code execution.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## getArray
 
 ```TypeScript
@@ -30,13 +36,13 @@ Get the array value of the the JavaScript code execution result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string \| double \| long \| boolean&gt; |  Returns data of Array type |
+| Array&lt;string \| double \| long \| boolean&gt; | Returns data of Array type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getArrayBuffer
 
@@ -58,13 +64,13 @@ Get the array buffer value of the JavaScript code execution result.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer |  Returns data of ArrayBuffer |
+| ArrayBuffer | Returns data of ArrayBuffer |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getBoolean
 
@@ -86,13 +92,13 @@ Get the boolean value of the JavaScript code execution result.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  Returns data of Boolean type |
+| boolean | Returns data of Boolean type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getErrorDescription
 
@@ -114,7 +120,7 @@ Get the exception or object of the the JavaScript code execution result and seri
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  if an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of 2048 will be truncated; otherwise, return null. |
+| string | if an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of 2048 will be truncated; otherwise, return null. |
 
 ## getNumber
 
@@ -136,13 +142,13 @@ Get the number value of the JavaScript code execution result.
 
 | 类型 | 说明 |
 | --- | --- |
-| double |  Returns data of number type |
+| double | Returns data of number type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getString
 
@@ -164,13 +170,13 @@ Get the string value of the JavaScript code execution result.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns data of string type |
+| string | Returns data of string type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getType
 
@@ -192,5 +198,5 @@ Get the type of the JavaScript code execution result.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns data of JsMessageType type |
+| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
 

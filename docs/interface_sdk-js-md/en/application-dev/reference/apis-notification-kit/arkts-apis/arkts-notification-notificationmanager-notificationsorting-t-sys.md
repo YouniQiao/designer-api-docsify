@@ -4,7 +4,7 @@
 export type NotificationSorting = _NotificationSorting
 ```
 
-The **NotificationSorting** module provides APIs for defining the sorting information of active notifications.
+提供有关活动通知的排序信息。
 
 **Since:** 9
 

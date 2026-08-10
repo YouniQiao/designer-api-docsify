@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.Contacts
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## filterClause
 
 ```TypeScript
@@ -18,7 +24,7 @@ filterClause: FilterClause
 
 过滤条件。
 
-**类型：** FilterClause
+**类型：** [FilterClause](arkts-contacts-contact-filterclause-i.md)
 
 **起始版本：** 15
 
@@ -38,7 +44,7 @@ filterType: FilterType
 
 过滤类型。
 
-**类型：** FilterType
+**类型：** [FilterType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filtertype-e.md)
 
 **起始版本：** 15
 

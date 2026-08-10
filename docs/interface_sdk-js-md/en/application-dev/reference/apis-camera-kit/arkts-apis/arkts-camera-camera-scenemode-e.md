@@ -1,6 +1,6 @@
 # SceneMode
 
-Enumerates the camera scene modes.
+枚举，相机模式。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the camera scene modes.
 NORMAL_PHOTO = 1
 ```
 
-Normal photo mode. For details, see [PhotoSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+普通拍照模式。详情见[PhotoSession](arkts-camera-camera-photosession-i.md)。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Normal photo mode. For details, see [PhotoSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_
 NORMAL_VIDEO = 2
 ```
 
-Normal record mode. For details, see [VideoSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+普通录像模式。详情见[VideoSession](arkts-camera-camera-videosession-i.md)。
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ Normal record mode. For details, see [VideoSession]\_\_\_JSDOC\_LINK\_DESC\_USD\
 SECURE_PHOTO = 12
 ```
 
-Secure mode. For details, see [SecureSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+安全相机模式。详情见[SecureSession](arkts-camera-camera-securesession-i.md)。
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # AudioSaveOptions
 
-Defines the options for saving audio clips.
+音频保存选项。
 
 **Since:** 23
 
@@ -11,4 +11,10 @@ Defines the options for saving audio clips.
 <!--Device-picker-interface AudioSaveOptions--><!--Device-picker-interface AudioSaveOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
+
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 

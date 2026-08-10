@@ -1,16 +1,22 @@
 # getTaskInfo
 
+## Modules to Import
+
+```TypeScript
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## getTaskInfo
 
 ```TypeScript
 function getTaskInfo(taskId: int): Promise<TaskInfo>
 ```
 
-Obtains the information of a background load task. This API returns the result via a promise.
+获取后台预取任务信息。
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -24,19 +30,19 @@ Obtains the information of a background load task. This API returns the result v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Id of the background load task. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value range is all integers. |
+| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 后台加载任务id。 &lt;br&gt;取值范围为全体整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise used to return the TaskInfo. |
+| Promise&lt;TaskInfo&gt; | Promise对象， 返回任务信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | No permission. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
-| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |
+| 9700004 | Check on taskId failed. |
+| 9700003 | System service operation failed. |
+| 201 | Permission denied. |
 

@@ -4,7 +4,7 @@
 export type Initializer<T> = (...params: FixedArray<RecordData>) => T
 ```
 
-function that returns by the function updateConstructorParams.
+可以将属性更新到本地的修饰器。
 
 **Since:** 23
 
@@ -13,8 +13,6 @@ function that returns by the function updateConstructorParams.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type Initializer<T> = (...params: FixedArray<RecordData>) => T--><!--Device-unnamed-export type Initializer<T> = (...params: FixedArray<RecordData>) => T-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
@@ -26,5 +24,5 @@ function that returns by the function updateConstructorParams.
 
 | Type | Description |
 | --- | --- |
-| T | - |
+| T | 返回当前组件。 |
 

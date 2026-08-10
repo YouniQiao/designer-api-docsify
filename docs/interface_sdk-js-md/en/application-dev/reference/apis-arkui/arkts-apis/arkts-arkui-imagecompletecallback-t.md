@@ -4,7 +4,7 @@
 export type ImageCompleteCallback = (result: ImageLoadResult) => void
 ```
 
-Callback function triggered when the image is successfully loaded.
+图片加载成功和解码成功时触发的回调。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Callback function triggered when the image is successfully loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the information about the successfully loaded image.  |
+| result | [ImageLoadResult](arkts-arkui-imagespan-imageloadresult-i.md) | Yes | 图片数据加载成功和解码成功触发回调时返回的对象。 |
 

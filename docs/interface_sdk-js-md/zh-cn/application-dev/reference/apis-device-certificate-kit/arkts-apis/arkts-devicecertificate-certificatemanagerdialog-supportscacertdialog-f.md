@@ -1,12 +1,18 @@
 # supportsCACertDialog
 
+## 导入模块
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## supportsCACertDialog
 
 ```TypeScript
 function supportsCACertDialog(): boolean
 ```
 
-判断设备是否支持[openCertificateDetailDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，[openInstallCertificateDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和[openUninstallCertificateDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口打开管理CA证书的对话框。
+判断设备是否支持[openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md#opencertificatedetaildialog)，[openInstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openinstallcertificatedialog-f.md#openinstallcertificatedialog)和[openUninstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openuninstallcertificatedialog-f.md#openuninstallcertificatedialog)接口打开管理CA证书的对话框。
 
 **起始版本：** 26.0.0
 
@@ -28,9 +34,9 @@ function supportsCACertDialog(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
+| 29700001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';

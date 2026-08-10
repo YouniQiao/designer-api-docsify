@@ -1,12 +1,10 @@
-# @ohos.ability.screenLockFileManager(Sensitive Data Access Management Under Lock Screen)
+# @ohos.ability.screenLockFileManager(锁屏敏感数据管理)
 
-This module provides the capability to protect app sensitive data under the lock screen, supporting requesting and releasing access permissions for sensitive data under the lock screen, as well as querying the status of sensitive data keys. When the reference count of a sensitive data key reaches zero and the screen has been locked for a duration reaching the system-configured lock duration threshold, the key is destroyed, and operations on that data become impossible. These keys can be restored only after the screen is unlocked. By calling the  
-[acquireAccess]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API of this module, you can prevent the key from being destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.
-    **NOTE**  
-    
-    - To enable the sensitive data protection function under the lock screen for an app, you need to configure the  
-    ohos.permission.PROTECT\_SCREEN\_LOCK\_DATA permission in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+本模块提供锁屏下应用敏感数据保护的能力，支持申请和释放锁屏下应用敏感数据访问权限，以及查询敏感数据密钥的状态。当敏感数据密钥的引用计数归零，且屏幕被锁定达到系统配置的时长阈值后，密钥会被销毁，此时无法对该数据进行操作。这些密钥只有在屏幕解锁后才能恢复。通过调用本模块的[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess)接口，可以防止密钥在屏幕被锁定达到系统配置的时长阈值后被销毁。
+
+> **说明：**
+> 
+> - 应用开启锁屏下敏感数据保护功能，需在[requestPermissions](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)中配置权限ohos.permission.PROTECT_SCREEN_LOCK_DATA。
 
 **Since:** 12
 
@@ -16,32 +14,38 @@ This module provides the capability to protect app sensitive data under the lock
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
+## Modules to Import
+
+```TypeScript
+import { screenLockFileManager } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess) | Requests the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the request is successful, the reference count of the sensitive data key increases, preventing the key from being destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.This method must be used in pair with [releaseAccess]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.  Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock screen, and that the key status queried through the  [queryAppKeyState]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API is KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_EXIST. |
-| [queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md#queryappkeystate) | Queries the status of the caller app's sensitive data key under the lock screen in synchronous mode. |
-| [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md#releaseaccess) | Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero,the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.  Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock screen, and that the [acquireAccess]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API has been called to request the permission successfully first. |
+| [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess) | 以同步方法申请调用方应用锁屏下敏感数据访问权限。申请成功后，敏感数据密钥的引用计数增加，防止密钥在屏幕被锁定达到系统配置的时长阈值后被销毁。该方法需与[releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md#releaseaccess)配对使用。  调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并通过[queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md#queryappkeystate)接口查询密钥状态为KEY_EXIST。 |
+| [queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md#queryappkeystate) | 以同步方法查询调用方应用锁屏下敏感数据密钥的状态。 |
+| [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md#releaseaccess) | 以同步方法释放调用方应用锁屏下敏感数据访问权限。释放成功后，敏感数据密钥的引用计数减少，当计数归零时，密钥可以在屏幕被锁定达到系统配置的时长阈值后被销毁。  调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并且先调用[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess)接口成功申请权限后才能使用。 |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f-sys.md#acquireaccess-1) | Requests the permission to access a specified type of sensitive data under the lock screen synchronously. After the request is successful, the reference count of the sensitive data key increases, preventing the key from being destroyed after the screen has been locked for the system-configured duration threshold. This method must be used in pair with [releaseAccess]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.  Before calling this API, ensure that the app has enabled the sensitive data protection under lock screen feature and that the key state queried through the [queryAppKeyState]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API is KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_EXIST. |
-| [queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f-sys.md#queryappkeystate-1) | Queries the status of a specified type of sensitive data key under the lock screen synchronously. |
-| [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f-sys.md#releaseaccess-1) | Releases the permission to access a specified type of sensitive data under the lock screen synchronously. After the release is successful, the reference count of the sensitive data key decreases. When the reference count reaches zero, the key can be destroyed after the screen has been locked for the system-configured duration threshold.  Before calling this API, ensure that the app has enabled the sensitive data protection under lock screen feature and that the permission has been successfully requested by calling the  [acquireAccess]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API first. |
+| [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f-sys.md#acquireaccess-1) | 以同步方法申请锁屏下指定类型的敏感数据访问权限。申请成功后，敏感数据密钥的引用计数增加，防止密钥在锁屏达到系统配置的时长阈值后被销毁。该方法需与[releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md#releaseaccess)配对使用。  调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并通过[queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md#queryappkeystate)接口查询密钥状态为KEY_EXIST。 |
+| [queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f-sys.md#queryappkeystate-1) | 以同步方法查询锁屏下指定类型敏感数据密钥的状态。 |
+| [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f-sys.md#releaseaccess-1) | 以同步方法释放锁屏下指定类型敏感数据访问权限。释放成功后，敏感数据密钥的引用计数减少，当引用计数归零时，密钥可以在锁屏达到系统配置的时长阈值后被销毁。  调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并且先调用[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess)接口成功申请权限后才能使用。 |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AccessStatus](arkts-ability-screenlockfilemanager-accessstatus-e.md) | Enumerates the statuses for requesting access permissions for sensitive data under the lock screen. |
-| [DataType](arkts-ability-screenlockfilemanager-datatype-e.md) | Enumerates the types of sensitive data that can be accessed under the lock screen. |
-| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) | Enumerates the statuses of sensitive data keys under the lock screen. |
-| [ReleaseStatus](arkts-ability-screenlockfilemanager-releasestatus-e.md) | Enumerates the statuses for releasing access permissions for sensitive data under the lock screen. |
+| [AccessStatus](arkts-ability-screenlockfilemanager-accessstatus-e.md) | 表示锁屏下敏感数据访问权限申请状态的枚举。 |
+| [DataType](arkts-ability-screenlockfilemanager-datatype-e.md) | 表示锁屏下访问敏感数据类型的枚举。 |
+| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) | 表示锁屏下敏感数据密钥状态的枚举。 |
+| [ReleaseStatus](arkts-ability-screenlockfilemanager-releasestatus-e.md) | 表示锁屏下敏感数据访问权限释放状态的枚举。 |
 

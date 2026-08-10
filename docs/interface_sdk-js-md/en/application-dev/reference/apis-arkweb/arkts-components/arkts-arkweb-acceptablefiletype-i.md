@@ -1,6 +1,6 @@
 # AcceptableFileType
 
-Defines the file types recommended by the web page when the file selector pulls files.
+定义文件选择器拉取文件时网页推荐的文件类型信息。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Defines the file types recommended by the web page when the file selector pulls 
 acceptableType: Array<string>
 ```
 
-Array of acceptable file types.
+文件类型数组，包含若干可供选择的文件类型。
 
 **Type:** Array&lt;string&gt;
 
@@ -34,7 +34,7 @@ Array of acceptable file types.
 mimeType: string
 ```
 
-MIME type of the file.
+文件MIME类型。
 
 **Type:** string
 

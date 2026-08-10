@@ -1,6 +1,6 @@
 # ToastShowMode
 
-Enum for the toast showMode.
+设置Toast的显示模式，默认显示在应用内，支持显示在子窗。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enum for the toast showMode.
 DEFAULT = 0
 ```
 
-Toast shows in app.
+Toast显示在应用内。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Toast shows in app.
 TOP_MOST = 1
 ```
 
-Toast shows at the top.
+Toast显示在子窗。
 
 **Since:** 23
 

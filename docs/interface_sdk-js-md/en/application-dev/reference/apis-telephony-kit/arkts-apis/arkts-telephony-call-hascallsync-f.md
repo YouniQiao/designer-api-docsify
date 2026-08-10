@@ -1,5 +1,11 @@
 # hasCallSync
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## hasCallSync
 
 ```TypeScript
@@ -22,7 +28,7 @@ Checks whether a call is ongoing.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let hasCall: boolean = call.hasCallSync();

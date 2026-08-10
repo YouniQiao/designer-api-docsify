@@ -1,6 +1,6 @@
 # HceService
 
-A class for NFC host application.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application.
+A class for NFC host application.&lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application.
 
 **Since:** 12
 
@@ -9,6 +9,12 @@ A class for NFC host application.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The NFC host
 <!--Device-cardEmulation-export class HceService--><!--Device-cardEmulation-export class HceService-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+## Modules to Import
+
+```TypeScript
+import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+```
 
 ## off('hceCmd')
 
@@ -35,27 +41,26 @@ Unsubscribe the event to receive the APDU data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | The type to unregister event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int[]&gt; | No | The callback used to listen for the event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Applicable to devices other than lite wearables
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { cardEmulation } from '@kit.ConnectivityKit';
 import { AsyncCallback } from '@kit.BasicServicesKit';
-import { ElementName } from './bundleManager/ElementName'
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { bundleManager, AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 
 let hceService: cardEmulation.HceService = new cardEmulation.HceService();
-let element: ElementName;
+let element: bundleManager.ElementName;
 const apduCallback: AsyncCallback<number[]> = (err, data) => {
   // Implement data processing and handle exceptions.
   console.info("AsyncCallback got apdu data");
@@ -76,7 +81,7 @@ export default class EntryAbility extends UIAbility {
     hceService.off('hceCmd', apduCallback);
     hceService.stop(element);
   }
-  // Implement other lifecycle functions as demanded.
+  // Other functions in the lifecycle
 }
 ```
 
@@ -104,14 +109,14 @@ Unsubscribe the event to receive the APDU data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int[]&gt; | No | The callback used to listen for the event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## on('hceCmd')
 
@@ -138,90 +143,15 @@ register HCE event to receive the APDU data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | The type to register. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-
-**Example**
-
-```TypeScript
-// Applicable to devices other than lite wearables
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { cardEmulation } from '@kit.ConnectivityKit';
-import { AsyncCallback } from '@kit.BasicServicesKit';
-import { ElementName } from './bundleManager/ElementName'
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-let hceService: cardEmulation.HceService = new cardEmulation.HceService();
-let element: ElementName;
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, param: AbilityConstant.LaunchParam) {
-    hilog.info(0x0000, 'testHce', '%{public}s', 'Ability onCreate');
-    element = {
-      bundleName: want.bundleName ?? '',
-      abilityName: want.abilityName ?? '',
-      moduleName: want.moduleName
-    }
-    const apduCallback: AsyncCallback<number[]> = (err, data) => {
-      // Implement data processing and handle exceptions.
-      console.info("got apdu data");
-    };
-    hceService.on('hceCmd', apduCallback);
-  }
-  onDestroy() {
-    hilog.info(0x0000, 'testHce', '%{public}s', 'Ability onDestroy');
-    hceService.stop(element);
-  }
-  // Implement other lifecycle functions as demanded.
-}
-```
-
-```TypeScript
-// Applicable to lite wearables
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-let appName = "com.example.testquestionlite";
-
-export default {
-  data:{
-    fontSize: '30px',
-    fontColor: '#50609f',
-    hide: 'show',
-    headCon: appName,
-    paymentAid: ["A0000000041010", "A0000000041012"]
-  },
-  onCreate() {
-    console.info('onCreate');
-  },
-  onReady() {
-    cardEmulation.hasHceCapability();
-    cardEmulation.isDefaultService(appName, cardEmulation.CardType.PAYMENT);
-    cardEmulation.isDefaultService(appName, cardEmulation.CardType.OTHER);
-    let HceService = new cardEmulation.HceService();
-
-    HceService.start(appName, this.paymentAid);
-    HceService.on("hceCmd", (data) => {
-      console.info('data:' + data);
-      // Data to be sent by the application. The following data is for reference only.
-      let responseData = [0x1, 0x2];
-      HceService.transmit(responseData, () => {
-        console.info('sendResponse start');
-      });
-      console.info('sendResponse end');
-    });
-  },
-  onDestroy() {
-  }
-  // Implement other lifecycle functions as demanded.
-}
-```
+| 401 | Invalid parameter. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## onHceCmd
 
@@ -247,15 +177,15 @@ register HCE event to receive the APDU data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## sendResponse
 
@@ -263,7 +193,7 @@ register HCE event to receive the APDU data.
 sendResponse(responseApdu: number[]): void
 ```
 
-Sends a response APDU to the remote device.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This method is used by a host application when swiping card.
+Sends a response APDU to the remote device.&lt;p&gt;This method is used by a host application when swiping card.
 
 **Since:** 8
 
@@ -311,17 +241,17 @@ Starts the HCE, register more aids and allows this application to be preferred w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The element name of the service ability |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of the service ability |
 | aidList | string[] | Yes | The aid list to be registered by this service, allowed to be empty. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 3100301 | Card emulation running state is abnormal in service. |
+| 201 | Permission denied. |
 
 ## startHCE
 
@@ -383,16 +313,16 @@ Stops the HCE, and unset the preferred service while in foreground.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The element name of the service ability |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of the service ability |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 3100301 | Card emulation running state is abnormal in service. |
+| 201 | Permission denied. |
 
 ## stopHCE
 
@@ -424,10 +354,6 @@ stop HCE
 | --- | --- |
 | boolean | Returns true if HCE is disabled or has been disabled; returns false otherwise. |
 
-**Example**
-
-For details, see the example of [on](#on8).
-
 ## transmit
 
 ArkTS-Dyn:
@@ -458,7 +384,7 @@ Sends a response APDU to the remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | ArkTS-Dyn: number[]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int[] | Yes | Indicates the response to send, which is a byte array. |
+| response | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Indicates the response to send, which is a byte array. |
 
 **Return value:**
 
@@ -470,12 +396,12 @@ Sends a response APDU to the remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 3100301 | Card emulation running state is abnormal in service. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Applicable to devices other than lite wearables
@@ -539,19 +465,19 @@ Sends a response APDU to the remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | ArkTS-Dyn: number[]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int[] | Yes | Indicates the response to send, which is a byte array. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback |
+| response | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Indicates the response to send, which is a byte array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 3100301 | Card emulation running state is abnormal in service. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Applicable to devices other than lite wearables

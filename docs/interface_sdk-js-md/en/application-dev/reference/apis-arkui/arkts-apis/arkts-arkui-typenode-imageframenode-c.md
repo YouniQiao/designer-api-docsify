@@ -1,6 +1,6 @@
 # ImageFrameNode
 
-Define the Image type of FrameNode.
+定义Image类型的FrameNode。
 
 **Inheritance/Implementation:** ImageFrameNode extends [TypedFrameNode<ImageAttribute>](TypedFrameNode<ImageAttribute>)
 
@@ -18,7 +18,7 @@ Define the Image type of FrameNode.
 abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor): ImageAttribute
 ```
 
-Initialize Image FrameNode.
+初始化Image类型的FrameNode。
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ Initialize Image FrameNode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |  |
 
 ## initialize
 
@@ -48,7 +48,7 @@ Initialize Image FrameNode.
 abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor | ImageContent): ImageAttribute
 ```
 
-Initialize Image FrameNode.
+初始化Image类型的FrameNode。
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Initialize Image FrameNode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |  |
 
 ## initialize
 
@@ -78,7 +78,7 @@ Initialize Image FrameNode.
 abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor, value: ImageAIOptions): ImageAttribute
 ```
 
-Initialize Image FrameNode.
+初始化Image类型的FrameNode。
 
 **Since:** 23
 
@@ -95,11 +95,11 @@ Initialize Image FrameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | image.PixelMap \| ResourceStr \| DrawableDescriptor | Yes |  |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |  |
 

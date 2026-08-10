@@ -1,6 +1,6 @@
 # CooperateMessage (System API)
 
-Defines a screen hopping status change event.
+键鼠穿越的消息。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Defines a screen hopping status change event.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## networkId
 
 ```TypeScript
 networkId: string
 ```
 
-Descriptor of the target device for screen hopping.
+键鼠穿越目标设备描述符。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ Descriptor of the target device for screen hopping.
 state: CooperateState
 ```
 
-Screen hopping status.
+键鼠穿越的状态。
 
-**Type:** CooperateState
+**Type:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 
 **Since:** 11
 

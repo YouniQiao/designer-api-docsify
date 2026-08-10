@@ -1,6 +1,6 @@
 # USBDevicePipe
 
-Represents a USB device pipe, which is used to determine a USB device.
+USB设备消息传输通道，用于确定设备。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Represents a USB device pipe, which is used to determine a USB device.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## busNum
 
 ```TypeScript
 busNum: int
 ```
 
-Bus address.
+总线地址。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Bus address.
 devAddress: int
 ```
 
-Device address.
+设备地址。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

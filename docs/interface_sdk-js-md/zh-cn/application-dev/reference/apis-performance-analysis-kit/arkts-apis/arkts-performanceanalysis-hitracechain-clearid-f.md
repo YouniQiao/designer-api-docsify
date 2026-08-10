@@ -1,5 +1,11 @@
 # clearId
 
+## 导入模块
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## clearId
 
 ```TypeScript
@@ -18,7 +24,7 @@ function clearId(): void
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 业务开始前，尝试清除跟踪标识。

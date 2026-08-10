@@ -1,44 +1,38 @@
 # HeartRateResponse
 
-Defines a **HeartRateResponse** object.
+心率传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**Since:** 3
+**Inheritance/Implementation:** HeartRateResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**Since:** 8
 
-**Deprecated since:** 8
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Substitutes:** ohos.sensor/sensor#HeartRateResponse
+<!--Device-sensor-interface HeartRateResponse extends Response--><!--Device-sensor-interface HeartRateResponse extends Response-End-->
 
-**Required permissions:** ohos.permission.READ_HEALTH_DATA
+**System capability:** SystemCapability.Sensors.Sensor
 
-<!--Device-unnamed-export interface HeartRateResponse--><!--Device-unnamed-export interface HeartRateResponse-End-->
+## Modules to Import
 
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
 
 ## heartRate
 
 ```TypeScript
-heartRate: number
+heartRate: double
 ```
 
-Heart rate.
+用户的心率数值。单位：bpm（beats per minute，每分钟心跳次数）。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+<!--Device-HeartRateResponse-heartRate: double--><!--Device-HeartRateResponse-heartRate: double-End-->
 
-**Substitutes:** ohos.sensor/sensor#HeartRateResponse.heartRate
-
-**Required permissions:** ohos.permission.READ_HEALTH_DATA
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-HeartRateResponse-heartRate: number--><!--Device-HeartRateResponse-heartRate: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 

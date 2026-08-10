@@ -10,6 +10,12 @@ Info about the connection from each specific client.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## clientIP
 
 ```TypeScript
@@ -36,7 +42,7 @@ clientPort: int
 
 Port of the client.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

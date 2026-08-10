@@ -1,5 +1,11 @@
 # equal
 
+## 导入模块
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
+
 ## equal
 
 ```TypeScript
@@ -22,19 +28,17 @@ function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WantAgent对象。 |
-| otherAgent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WantAgent对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 判断两个WantAgent实例是否相等的回调方法。返回true表示两个WantAgent实例相等，false表示两个WantAgent实例不相等。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
+| otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 判断两个WantAgent实例是否相等的回调方法。返回true表示两个WantAgent实例相等，false表示两个WantAgent实例不相等。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';
@@ -105,74 +109,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-// wantAgent对象
-let wantAgent1: WantAgent;
-let wantAgent2: WantAgent;
-// WantAgentInfo对象
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters: {
-        'mykey0': 2222,
-        'mykey1': [1, 2, 3],
-        'mykey2': '[1, 2, 3]',
-        'mykey3': 'ssssssssssssssssssssssssss',
-        'mykey4': [false, true, false],
-        'mykey5': ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        'mykey6': true,
-      } as Record<string, RecordData>
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITIES,
-  requestCode: 0,
-};
-
-try {
-  wantAgent.getWantAgent(wantAgentInfo, (err, data) => {
-    if (err) {
-      console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    if (!data) {
-      console.error('getWantAgent failed: data is undefined');
-      return;
-    }
-    wantAgent1 = data;
-    wantAgent2 = data;
-    try {
-      wantAgent.equal(wantAgent1, wantAgent2, (err, data) => {
-        if (err) {
-          console.error(`equal failed! ${err.code} ${err.message}`);
-        } else {
-          console.info(`equal ok! ${JSON.stringify(data)}`);
-        }
-      });
-    } catch (error) {
-      let err = error as BusinessError;
-      console.error(`getBundleName failed! ${err.code} ${err.message}`);
-    }
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`getWantAgent failed! ${err.code} ${err.message}`);
-}
-```
-
 
 ## equal
 
@@ -196,8 +132,8 @@ function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WantAgent对象。 |
-| otherAgent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WantAgent对象。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
+| otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
 
 **返回值：**
 
@@ -209,11 +145,9 @@ function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';
@@ -277,73 +211,6 @@ try {
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-// wantAgent对象
-let wantAgent1: WantAgent;
-let wantAgent2: WantAgent;
-// WantAgentInfo对象
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters: {
-        'mykey0': 2222,
-        'mykey1': [1, 2, 3],
-        'mykey2': '[1, 2, 3]',
-        'mykey3': 'ssssssssssssssssssssssssss',
-        'mykey4': [false, true, false],
-        'mykey5': ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        'mykey6': true,
-      } as Record<string, RecordData>
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITIES,
-  requestCode: 0,
-};
-
-try {
-  wantAgent.getWantAgent(wantAgentInfo, (err, data) => {
-    if (err) {
-      console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    if (!data) {
-      console.error('getWantAgent failed: data is undefined');
-      return;
-    }
-    wantAgent1 = data;
-    wantAgent2 = data;
-    try {
-      wantAgent.equal(wantAgent1, wantAgent2).then((data) => {
-        console.info(`equal ok! `);
-      }).catch((error) => {
-        let err = error as BusinessError;
-        console.error(`equal failed! ${err.code} ${err.message}`);
-      });
-    } catch (error) {
-      let err = error as BusinessError;
-      console.error(`equal failed! ${err.code} ${err.message}`);
-    }
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`getWantAgent failed! ${err.code} ${err.message}`);
 }
 ```
 

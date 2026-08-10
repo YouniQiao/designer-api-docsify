@@ -1,21 +1,30 @@
 # @ohos.web.webNativeMessagingExtensionManager
 
 webNativeMessagingExtensionManager模块是ArkWeb提供的Web原生消息扩展管理模块，用于在应用侧（调用方）发起并管理到  
-[WebNativeMessagingExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的连接。开发者可通过  
-[connectNative]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_方法指定目标扩展Ability并建立连接，通过返回的连接ID与  
-[WebExtensionConnectionCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_监听连接建立、断开及失败事件，也可通过[disconnectNative]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_主动释放连接。该模块适用于浏览器扩展与应用通信的场景；使用前需申请  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_权限，且仅在Stage模型下可用。
-    **说明**  
-    
-    本模块接口仅可在Stage模型下使用。
+[WebNativeMessagingExtensionAbility](arkts-web-webnativemessagingextensionability.md)的连接。开发者可通过  
+[connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md#connectnative)方法指定目标扩展Ability并建立连接，通过返回的连接ID与  
+[WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md)监听连接建立、断开及失败事件，也可通过[disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md#disconnectnative)主动释放连接。该模块适用于浏览器扩展与应用通信的场景；使用前需申请  
+[ohos.permission.WEB_NATIVE_MESSAGING](../../../reference/apis-arkweb/security/AccessToken/restricted-permissions.md#ohospermissionweb_native_messaging)权限，且仅在Stage模型下可用。
+
+> **说明：**
+> 
+> 本模块接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace webNativeMessagingExtensionManager--><!--Device-unnamed-declare namespace webNativeMessagingExtensionManager-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
+```
 
 ## 汇总
 

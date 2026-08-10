@@ -1,10 +1,10 @@
 # SymbolDateTimeFormat
 
 提供自定义时间日期符号的能力。继承自  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，支持  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_的方法。
+[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)，支持  
+[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)的方法。
 
-**继承/实现关系：** SymbolDateTimeFormat extends [Intl.DateTimeFormat](arkts-localization-intl-datetimeformat-c.md)
+**继承/实现关系：** SymbolDateTimeFormat extends [Intl.DateTimeFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-datetimeformat-c.md/arkts-arkts-intl-datetimeformat-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,12 @@
 <!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -39,13 +45,13 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
+| options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | 否 | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## parse
 
@@ -72,7 +78,7 @@ public parse(text: string, lenientMode: boolean): long
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待解析的本地化时间日期字符串。 |
-| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
+| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 &lt;br&gt;宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
 
 **返回值：**
 
@@ -84,7 +90,7 @@ public parse(text: string, lenientMode: boolean): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## resolvedOptions
 
@@ -110,5 +116,5 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 自定义符号时间日期格式化对象配置项的解析结果。 |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | 自定义符号时间日期格式化对象配置项的解析结果。 |
 

@@ -1,7 +1,7 @@
 # ColorPicker
 
 取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过  
-[createColorPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建一个ColorPicker实例。
+[createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker)创建一个ColorPicker实例。
 
 **起始版本：** 9
 
@@ -11,13 +11,19 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## discriminatePictureLightDegree
 
 ```TypeScript
 discriminatePictureLightDegree(): PictureLightDegree
 ```
 
-获取图片的明亮程度。当无法判别图片明亮程度时，返回UNKNOWN\_LIGHT\_COLOR\_DEGREE\_PICTURE。
+获取图片的明亮程度。当无法判别图片明亮程度时，返回UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE。
 
 **起始版本：** 26.0.0
 
@@ -37,13 +43,13 @@ discriminatePictureLightDegree(): PictureLightDegree
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  图像颜色明亮程度。 |
+| [PictureLightDegree](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md) | 图像颜色明亮程度。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -53,7 +59,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -63,8 +69,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let pictureLightDegree: effectKit.PictureLightDegree = colorPicker.discriminatePictureLightDegree();
       console.info('The color light degree of the image is ' + pictureLightDegree);
     }
-  })
-})
+  });
+});
 ```
 
 ## getAlphaZeroTransparentProportion
@@ -97,19 +103,19 @@ getAlphaZeroTransparentProportion(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 完全透明的像素占比，比例的取值范围为[0, 1]。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 完全透明的像素占比，比例的取值范围为[0, 1]。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -119,7 +125,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -129,8 +135,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
         let percentage: number = colorPicker.getAlphaZeroTransparentProportion();
       console.info('Get proportion of fully transparent pixels: ' + percentage);
     }
-  })
-})
+  });
+});
 ```
 
 ## getComplexityDegree
@@ -139,7 +145,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getComplexityDegree(): PictureComplexityDegree
 ```
 
-获取图像内容复杂度。当无法判别图像内容复杂度时，返回默认值UNKNOWN\_COMPLEXITY\_DEGREE\_PICTURE。
+获取图像内容复杂度。当无法判别图像内容复杂度时，返回默认值UNKNOWN_COMPLEXITY_DEGREE_PICTURE。
 
 **起始版本：** 22
 
@@ -157,19 +163,19 @@ getComplexityDegree(): PictureComplexityDegree
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 图像内容复杂度。 |
+| [PictureComplexityDegree](arkts-arkgraphics2d-effectkit-picturecomplexitydegree-e-sys.md) | 图像内容复杂度。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -179,7 +185,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -189,8 +195,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let complexityDegree: effectKit.PictureComplexityDegree = colorPicker.getComplexityDegree();
       console.info('The complexity degree of the image is ' + complexityDegree);
     }
-  })
-})
+  });
+});
 ```
 
 ## getDeepenImmersionColor
@@ -199,7 +205,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getDeepenImmersionColor(): Color
 ```
 
-生成与背景色融合且比背景色更深的强沉浸感颜色，并将结果写入[Color]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_里。该接口通过颜色混合算法，创建一种既与背景色协调又具有更强沉浸感的颜色效果。
+生成与背景色融合且比背景色更深的强沉浸感颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口通过颜色混合算法，创建一种既与背景色协调又具有更强沉浸感的颜色效果。
 
 **起始版本：** 26.0.0
 
@@ -219,23 +225,23 @@ getDeepenImmersionColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -245,8 +251,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getDeepenImmersionColor();
       console.info('get deepen immersion color =' + color);
     }
-  })
-})
+  });
+});
 ```
 
 ## getImmersiveBackgroundColor
@@ -255,7 +261,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getImmersiveBackgroundColor(): Color
 ```
 
-生成能够创造沉浸式视觉效果的沉浸式背景色，并将结果写入[Color]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_里。该接口基于主色生成适合作为沉浸式背景的颜色值。
+生成能够创造沉浸式视觉效果的沉浸式背景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口基于主色生成适合作为沉浸式背景的颜色值。
 
 **起始版本：** 26.0.0
 
@@ -275,23 +281,23 @@ getImmersiveBackgroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -302,7 +308,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       console.info('get immersive background color =' + color);
     }
   })
-})
+});
 ```
 
 ## getImmersiveForegroundColor
@@ -311,7 +317,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getImmersiveForegroundColor(): Color
 ```
 
-生成能够创造沉浸式视觉效果的沉浸式前景色，并将结果写入[Color]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_里。该接口基于主色生成适合作为沉浸式前景的颜色值。
+生成能够创造沉浸式视觉效果的沉浸式前景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口基于主色生成适合作为沉浸式前景的颜色值。
 
 **起始版本：** 26.0.0
 
@@ -331,23 +337,23 @@ getImmersiveForegroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -357,8 +363,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getImmersiveForegroundColor();
       console.info('get immersive foreground color =' + color);
     }
-  })
-})
+  });
+});
 ```
 
 ## getMorandiShadowColor
@@ -367,7 +373,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMorandiShadowColor(): Color
 ```
 
-从图像的主色中获取莫兰迪阴影色，并将结果写入[Color]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。该接口通过特定的颜色转换算法，将主色调转换为具有莫兰迪风格的阴影色调。
+从图像的主色中获取莫兰迪阴影色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)。该接口通过特定的颜色转换算法，将主色调转换为具有莫兰迪风格的阴影色调。
 
 **起始版本：** 26.0.0
 
@@ -387,23 +393,23 @@ getMorandiShadowColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -413,8 +419,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getMorandiShadowColor();
       console.info('get Morandi shadow color =' + color);
     }
-  })
-})
+  });
+});
 ```
 
 ## getReverseColor
@@ -423,8 +429,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getReverseColor(): Color
 ```
 
-基于图像亮度判别结果生成反向颜色，并将结果写入[Color]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_里。根据  
-[discriminatePictureLightDegree]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口获取的图片明亮类型得到一个反色，仅极亮色图片（EXTREMELY\_LIGHT\_COLOR\_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
+基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。根据  
+[discriminatePictureLightDegree](arkts-arkgraphics2d-effectkit-colorpicker-i-sys.md#discriminatepicturelightdegree)接口获取的图片明亮类型得到一个反色，仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
 
 **起始版本：** 26.0.0
 
@@ -444,23 +450,23 @@ getReverseColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -470,8 +476,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getReverseColor();
       console.info('get reverse color =' + color);
     }
-  })
-})
+  });
+});
 ```
 
 ## getShadeDegree
@@ -480,7 +486,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getShadeDegree(): PictureShadeDegree
 ```
 
-获取图像颜色深浅度。当无法判别图像颜色深浅度时，返回默认值UNKNOWN\_SHADE\_DEGREE\_PICTURE。
+获取图像颜色深浅度。当无法判别图像颜色深浅度时，返回默认值UNKNOWN_SHADE_DEGREE_PICTURE。
 
 **起始版本：** 22
 
@@ -498,19 +504,19 @@ getShadeDegree(): PictureShadeDegree
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 图像颜色深浅度。 |
+| [PictureShadeDegree](arkts-arkgraphics2d-effectkit-pictureshadedegree-e-sys.md) | 图像颜色深浅度。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -520,7 +526,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -530,8 +536,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let shadeDegree: effectKit.PictureShadeDegree = colorPicker.getShadeDegree();
       console.info('The shade degree of the image is ' + shadeDegree);
     }
-  })
-})
+  });
+});
 ```
 
 ## getTopProportionColorsAndPercentage
@@ -546,7 +552,7 @@ ArkTS-Sta:
 getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>
 ```
 
-同步返回图像占比靠前的颜色值及其对应比例，个数由\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_指定。
+同步返回图像占比靠前的颜色值及其对应比例，个数由`colorCount`指定。
 
 **起始版本：** 22
 
@@ -564,25 +570,25 @@ getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 颜色值及对应比例的个数，向下取整。在OpenHarmony 6.1之前，取值范围为[1, 10]， 取色个数大于10视为取前10个；从OpenHarmony 6.1开始，取值范围为[1, 20]，取色个数大于20视为取前20个。 |
+| colorCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 颜色值及对应比例的个数，向下取整。在OpenHarmony 6.1之前，取值范围为[1, 10]， 取色个数大于10视为取前10个；从OpenHarmony 6.1开始，取值范围为[1, 20]，取色个数大于20视为取前20个。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Map&lt;Color \| null, number \| null&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Map&lt;Color \| null, double \| null&gt; | 图像占比前\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的颜色值与对应比例的字典，比例的取值范围为[0,1]。 - 当实际读取的特征色个数小于\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_时，字典大小为实际特征色个数。 - 取色失败或取色个数小于1返回\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| ArkTS-Dyn: Map&lt;Color \| null, number \| null&gt;  <br>ArkTS-Sta：Map&lt;Color \| null, double \| null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。 - 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。 - 取色失败或取色个数小于1返回`Map()`。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -592,7 +598,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -604,7 +610,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
         console.info('get top proportion colors and percentages: color ' + key + ', percentage ' + value);
       })
     }
-  })
-})
+  });
+});
 ```
 

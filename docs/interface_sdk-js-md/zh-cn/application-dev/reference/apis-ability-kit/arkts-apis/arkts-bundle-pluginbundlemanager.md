@@ -6,9 +6,17 @@
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace pluginBundleManager--><!--Device-unnamed-declare namespace pluginBundleManager-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+## 导入模块
+
+```TypeScript
+import { pluginBundleManager } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 

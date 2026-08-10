@@ -1,5 +1,11 @@
 # getSelfManagedBrowserPolicy
 
+## 导入模块
+
+```TypeScript
+import { browser } from 'kits/@kit.MDMKit';
+```
+
 ## getSelfManagedBrowserPolicy
 
 ```TypeScript
@@ -24,7 +30,7 @@ function getSelfManagedBrowserPolicy(): ArrayBuffer
 | --- | --- |
 | ArrayBuffer | 浏览器策略。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';

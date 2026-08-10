@@ -1,6 +1,6 @@
 # WebContextMenuResult
 
-Defines the context menu result, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the context menu result, related to {@link WebContextMenuResult} method.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Defines the context menu result, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\
 closeContextMenu(): void
 ```
 
-When close context menu without other call in WebContextMenuResult,User should call this function to close menu
+在WebContextMenuResult中无其他调用且需要关闭上下文菜单时，开发者需调用此函数关闭菜单。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ When close context menu without other call in WebContextMenuResult,User should c
 constructor()
 ```
 
-Constructor.
+WebContextMenuResult的构造函数。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Constructor.
 copy(): void
 ```
 
-Executes the copy operation related to this context menu.
+执行与此上下文菜单关联的复制操作。
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ Executes the copy operation related to this context menu.
 copyImage(): void
 ```
 
-If WebContextMenuParam has image content, this function will copy image related to this context menu.If WebContextMenuParam has no image content, this function will do nothing.
+若WebContextMenuParam包含图片内容，该函数将复制当前上下文菜单对应的图片。若WebContextMenuParam不包含图片内容，则该函数不执行任何操作。
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ If WebContextMenuParam has image content, this function will copy image related 
 cut(): void
 ```
 
-Executes the cut operation related to this context menu.
+执行与此上下文菜单关联的剪切操作。
 
 **Since:** 9
 
@@ -106,9 +106,7 @@ Executes the cut operation related to this context menu.
 paste(): void
 ```
 
-Executes the paste operation related to this context menu.
-
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Permissions need to be configured: ohos.permission.READ\_PASTEBOARD.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+执行与此上下文菜单关联的粘贴操作。
 
 **Since:** 9
 
@@ -126,9 +124,7 @@ Executes the paste operation related to this context menu.
 pasteAndMatchStyle(): void
 ```
 
-Executes the paste and match style operation related to this context menu.
-
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Permissions need to be configured: ohos.permission.READ\_PASTEBOARD.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+执行与此上下文菜单关联的粘贴并匹配样式操作。
 
 **Since:** 20
 
@@ -144,7 +140,7 @@ Executes the paste and match style operation related to this context menu.
 redo(): void
 ```
 
-Executes the redo operation related to this context menu.
+执行与此上下文菜单关联的重做操作。
 
 **Since:** 20
 
@@ -160,7 +156,7 @@ Executes the redo operation related to this context menu.
 requestPasswordAutoFill(): void
 ```
 
-Request to fill the password vault contents into the input field.
+请求将密码保险箱内容填充到输入框中。
 
 **Since:** 23
 
@@ -176,7 +172,7 @@ Request to fill the password vault contents into the input field.
 saveImage(): void
 ```
 
-Performing the "Save As Image" operation associated with this context menu will trigger the download process.
+执行与此上下文菜单关联的“另存为图像”操作将触发下载过程。
 
 **Since:** 24
 
@@ -194,7 +190,7 @@ Performing the "Save As Image" operation associated with this context menu will 
 selectAll(): void
 ```
 
-Executes the selectAll operation related to this context menu.
+执行与此上下文菜单关联的全选操作。
 
 **Since:** 9
 
@@ -212,7 +208,7 @@ Executes the selectAll operation related to this context menu.
 undo(): void
 ```
 
-Executes the undo operation related to this context menu.
+执行与此上下文菜单关联的撤销操作。
 
 **Since:** 20
 

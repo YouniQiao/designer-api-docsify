@@ -1,6 +1,6 @@
 # DistributedObject
 
-Provides APIs for managing a distributed data object. Before using any API of this class, use createDistributedObject() to create a DistributedObject object.
+表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createdistributedobject)获取DistributedObject对象。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ Provides APIs for managing a distributed data object. Before using any API of th
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
+
 ## off('change')
 
 ```TypeScript
 off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void
 ```
 
-Unsubscribes from data changes of this distributed data object.
+当不再进行数据变更监听时，使用此接口删除对象的变更监听。
 
 **Since:** 8
 
@@ -38,37 +44,37 @@ Unsubscribes from data changes of this distributed data object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object.sessionId indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
+| type | 'change' | Yes | 事件类型，固定为'change'，表示数据变更。 |
+| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | No | 需要删除的数据变更回调，若不设置则删除该对象所有的数据变更回调。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;fields：标识对象变更的属性名。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
+  name: string
+  age: number
+  isVis: boolean
 
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
 }
 
-let source: SourceObject = new SourceObject("jack", 18, false);
+let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
 // Unregister the specified data change callback.
-g_object.off("change", (sessionId: string, fields: Array<string>) => {
-    console.info("change" + sessionId);
+g_object.off('change', (sessionId: string, fields: Array<string>) => {
+    console.info('change' + sessionId);
     if (fields != null && fields != undefined) {
         for (let index: number = 0; index < fields.length; index++) {
-            console.info("changed !" + fields[index] + " " + g_object[fields[index]]);
+            console.info('changed !' + fields[index] + ' ' + g_object[fields[index]]);
         }
     }
 });
 // Unregister all data change callbacks.
-g_object.off("change");
+g_object.off('change');
 ```
 
 ## off('status')
@@ -80,7 +86,7 @@ off(
     ): void
 ```
 
-Unsubscribes from the status change of this distributed data object.
+当不再进行对象上下线监听时，使用此接口删除对象的上下线监听。
 
 **Since:** 8
 
@@ -98,32 +104,32 @@ Unsubscribes from the status change of this distributed data object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID of the distributed data object. networkId identifies the distributed data object. status indicates the object status, which can be online or offline. |
+| type | 'status' | Yes | 事件类型，固定为'status'，表示对象上下线。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | No | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;networkId：标识对象设备； &lt;br&gt;status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
+  name: string
+  age: number
+  isVis: boolean
 
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
 }
 
-let source: SourceObject = new SourceObject("jack", 18, false);
+let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
 // Unregister the specified status change callback.
-g_object.off("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info("status changed " + sessionId + " " + status + " " + networkId);
+g_object.off('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
+    console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
 });
 // Unregister all status change callbacks.
-g_object.off("status");
+g_object.off('status');
 ```
 
 ## on('change')
@@ -132,7 +138,7 @@ g_object.off("status");
 on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void
 ```
 
-Subscribes to data changes of this distributed data object.
+监听分布式数据对象的变更。
 
 **Since:** 8
 
@@ -150,31 +156,31 @@ Subscribes to data changes of this distributed data object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | Yes | Callback used to return the changes of the distributed data object. sessionId indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
+| type | 'change' | Yes | 事件类型，固定为'change'，表示数据变更。 |
+| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | Yes | 变更回调对象实例。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;fields：标识对象变更的属性名。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
+  name: string
+  age: number
+  isVis: boolean
 
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
 }
 
-let source: SourceObject = new SourceObject("jack", 18, false);
+let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-g_object.on("change", (sessionId: string, fields: Array<string>) => {
-    console.info("change" + sessionId);
+g_object.on('change', (sessionId: string, fields: Array<string>) => {
+    console.info('change' + sessionId);
     if (fields != null && fields != undefined) {
         for (let index: number = 0; index < fields.length; index++) {
-            console.info("changed !" + fields[index] + " " + g_object[fields[index]]);
+            console.info('changed !' + fields[index] + ' ' + g_object[fields[index]]);
         }
     }
 });
@@ -189,7 +195,7 @@ on(
     ): void
 ```
 
-Subscribes to status changes of this distributed data object.
+监听分布式数据对象的上下线。
 
 **Since:** 8
 
@@ -207,29 +213,29 @@ Subscribes to status changes of this distributed data object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status, which can be online or offline. |
+| type | 'status' | Yes | 事件类型，固定为'status'，表示对象上下线。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | Yes | 监听上下线回调实例。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;networkId：标识对象设备； &lt;br&gt;status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
+  name: string
+  age: number
+  isVis: boolean
 
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
 }
 
-let source: SourceObject = new SourceObject("jack", 18, false);
+let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
 
-g_object.on("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info("status changed " + sessionId + " " + status + " " + networkId);
+g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
+    console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
 });
 ```
 
@@ -239,7 +245,7 @@ g_object.on("status", (sessionId: string, networkId: string, status: 'online' | 
 setSessionId(sessionId?: string): boolean
 ```
 
-Sets a session ID. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
+设置sessionId。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式对象设置为同一个sessionId，就能自动同步。
 
 **Since:** 8
 
@@ -259,34 +265,34 @@ Sets a session ID. For the devices in the collaboration state in a trusted netwo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | No | ID of a distributed data object on a trusted network. To remove a distributed data object from the network, set this parameter to "" or leave it empty. |
+| sessionId | string | No | 分布式数据对象在可信组网中的标识ID。如果要退出分布式组网，设置为""或不设置均可。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the session ID is set successfully; returns false otherwise. |
+| boolean | true：标识设置sessionId成功。 &lt;br&gt;false：标识设置sessionId失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
+  name: string
+  age: number
+  isVis: boolean
 
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
 }
 
-let source: SourceObject = new SourceObject("jack", 18, false);
+let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
 // Add g_object to the distributed network.
 g_object.setSessionId(distributedDataObject.genSessionId());
 // Remove g_object from the distributed network.
-g_object.setSessionId("");
+g_object.setSessionId('');
 ```
 

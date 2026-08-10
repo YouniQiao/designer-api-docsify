@@ -10,6 +10,12 @@ Defines an SMS message instance.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## hasReplyPath
 
 ```TypeScript
@@ -72,7 +78,7 @@ messageClass: ShortMessageClass
 
 Indicates the SMS type.
 
-**Type:** ShortMessageClass
+**Type:** [ShortMessageClass](arkts-telephony-sms-shortmessageclass-e.md)
 
 **Since:** 6
 
@@ -90,7 +96,7 @@ pdu: Array<int>
 
 Indicates Protocol Data Units (PDUs) from an SMS message.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 6
 
@@ -108,7 +114,7 @@ protocolId: int
 
 Indicates the protocol identifier.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 6
 
@@ -144,7 +150,7 @@ scTimestamp: long
 
 Indicates the SMSC timestamp.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 6
 
@@ -162,7 +168,7 @@ status: int
 
 Indicates the SMS message status from the SMS-STATUS-REPORT message sent by the Short Message Service Center (SMSC).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 6
 

@@ -1,9 +1,10 @@
 # ToggleOptions
 
 Toggle组件的配置信息。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -25,9 +26,9 @@ true：打开；false：关闭。
 
 默认值：false
 
-该属性支持\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_双向绑定变量。
+该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-该属性支持\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_双向绑定变量。
+该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **类型：** boolean
 
@@ -53,7 +54,7 @@ type: ToggleType
 
 默认值：ToggleType.Switch
 
-**类型：** ToggleType
+**类型：** [ToggleType](../arkts-apis/arkts-arkui-toggle-toggletype-e.md)
 
 **起始版本：** 8
 

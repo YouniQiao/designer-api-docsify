@@ -1,6 +1,6 @@
 # DedicatedWorkerGlobalScope
 
-Specifies the worker thread running environment, which is isolated from the host thread environment
+Worker线程自身的运行环境，与宿主线程环境隔离。
 
 **Inheritance/Implementation:** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md)
 
@@ -16,13 +16,19 @@ Specifies the worker thread running environment, which is isolated from the host
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Close the worker thread to stop the worker from receiving messages
+销毁Worker线程，终止Worker接收消息。
 
 **Since:** 7
 
@@ -36,7 +42,7 @@ Close the worker thread to stop the worker from receiving messages
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -62,7 +68,7 @@ parentPort.onmessage = (): void => {
 onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 ```
 
-The onmessage attribute of parentPort specifies the event handler to be called then the worker thread receives a message sent by the host thread through worker postMessage.The event handler is executed in the worker thread.
+onmessage属性用于指定当Worker线程收到来自其宿主线程通过postMessage接口发送的消息时被调用的事件处理程序，该事件处理程序在Worker线程中执行。
 
 **Since:** 7
 
@@ -80,8 +86,8 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| this | [DedicatedWorkerGlobalScope](arkts-arkts-worker-dedicatedworkerglobalscope-i.md) | Yes |  |
+| ev | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Yes |  |
 
 ## onmessageerror
 
@@ -89,7 +95,7 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 ```
 
-The onmessage attribute of parentPort specifies the event handler to be called then the worker receives a message that cannot be deserialized.The event handler is executed in the worker thread.
+onmessage属性用于指定当Worker线程收到一条无法被反序列化的消息时被调用的事件处理程序，该事件处理程序在Worker线程中执行。
 
 **Since:** 7
 
@@ -107,8 +113,8 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| this | [DedicatedWorkerGlobalScope](arkts-arkts-worker-dedicatedworkerglobalscope-i.md) | Yes |  |
+| ev | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Yes |  |
 
 ## postMessage
 
@@ -116,7 +122,7 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 postMessage(messageObject: Object, transfer: Transferable[]): void
 ```
 
-Send a message to be host thread from the worker
+Worker线程向宿主线程发送消息。
 
 **Since:** 7
 
@@ -134,8 +140,8 @@ Send a message to be host thread from the worker
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
-| transfer | Transferable[] | Yes | transfer array cannot contain null. |
+| messageObject | Object | Yes | messageObject 发送至宿主线程的数据。 |
+| transfer | Transferable[] | Yes | transfer 数组不可包含null。 |
 
 ## postMessage
 
@@ -143,7 +149,7 @@ Send a message to be host thread from the worker
 postMessage(messageObject: Object, options?: PostMessageOptions): void
 ```
 
-Send a message to be host thread from the worker
+Worker线程向宿主线程发送消息。
 
 **Since:** 7
 
@@ -161,10 +167,10 @@ Send a message to be host thread from the worker
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Option can be set for postmessage. |
+| messageObject | Object | Yes | messageObject 发送至宿主线程的数据。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | 可为postMessage设置的选项。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -193,7 +199,7 @@ parentPort.onmessage = (e: MessageEvents) => {
 postMessage(messageObject: Object, transfer: ArrayBuffer[]): void
 ```
 
-Send a message to host thread from the worker
+Worker线程向宿主线程发送消息。
 
 **Since:** 9
 
@@ -211,10 +217,10 @@ Send a message to host thread from the worker
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
-| transfer | ArrayBuffer[] | Yes | transfer array cannot contain null. |
+| messageObject | Object | Yes | messageObject 发送至宿主线程的数据。 |
+| transfer | ArrayBuffer[] | Yes | transfer 数组不可包含null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets

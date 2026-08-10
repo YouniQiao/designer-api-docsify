@@ -1,12 +1,18 @@
 # getDataSummary (System API)
 
+## Modules to Import
+
+```TypeScript
+import { dragInteraction } from 'kits/@kit.ArkUI';
+```
+
 ## getDataSummary
 
 ```TypeScript
 function getDataSummary(): Array<Summary>
 ```
 
-Obtains the data summary of all dragged objects.
+获取所有拖拽对象的摘要。
 
 **Since:** 11
 
@@ -22,15 +28,15 @@ Obtains the data summary of all dragged objects.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Summary&gt; | Data summary of all dragged objects, including their type and data length. |
+| Array&lt;Summary&gt; | 所有拖拽对象的数据摘要，包含拖拽对象的类型和数据长度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let summary: Array<dragInteraction.Summary> = dragInteraction.getDataSummary();

@@ -1,6 +1,6 @@
 # @ohos.userIAM.companionDeviceAuth(伴随设备认证)
 
-companionDeviceAuth**模块是OpenHarmony用户身份认证体系（UserIAM）的重要组成部分，专门用于伴随设备认证管理。该模块为系统应用提供伴随设备查询、订阅和服务范围管理等能力。
+**companionDeviceAuth**模块是OpenHarmony用户身份认证体系（UserIAM）的重要组成部分，专门用于伴随设备认证管理。该模块为系统应用提供伴随设备查询、订阅和服务范围管理等能力。
 
 设计逻辑：伴随设备认证采用主设备（Host）与伴随设备（Companion）协作的模式。主设备通过绑定流程将另一台设备添加为伴随设备，绑定过程中双端完成密钥协商并分发初始认证令牌。认证模式包括令牌认证和委托认证：令牌认证基于主设备签发至伴随设备的令牌计算消息认证码（MAC）完成身份校验；委托认证由主设备委托伴随设备执行本地认证并返回结果。主设备签发的令牌携带认证可信等级（authTrustLevel），令牌生命周期包括签发、超时、吊销及关联设备离线等阶段。伴随设备的认证状态由令牌生命周期与认证保持状态（如佩戴状态、连接状态等）共同决定。应用通过状态监听器订阅模板状态、可用设备变化和持续认证状态，系统通过回调主动通知变化。
 
@@ -16,11 +16,19 @@ companionDeviceAuth**模块是OpenHarmony用户身份认证体系（UserIAM）�
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace companionDeviceAuth--><!--Device-unnamed-declare namespace companionDeviceAuth-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
 
 ## 汇总
 
@@ -44,7 +52,7 @@ companionDeviceAuth**模块是OpenHarmony用户身份认证体系（UserIAM）�
 | [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md) | 设备标识。用于唯一标识一个设备及其用户，包含设备ID类型、设备ID和设备用户ID等信息。 |
 | [DeviceSelectResult](arkts-userauthentication-companiondeviceauth-deviceselectresult-i-sys.md) | 伴随设备选择回调的返回结果。用于在设备选择回调中返回用户选择的设备信息和扩展上下文。 |
 | [DeviceStatus](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md) | 设备状态信息。用于描述伴随设备的当前状态，包括设备业务标识、用户名、型号信息、设备名、在线状态以及支持的业务ID列表等。 |
-| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | 状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取此对象。 |
+| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | 状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor)获取此对象。 |
 | [TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | 用于描述已注册的伴随设备认证模板的完整状态信息，包括模板ID、数据确认状态、有效性、用户ID、添加时间、支持的业务范围以及关联的设备状态等。 |
 <!--DelEnd-->
 

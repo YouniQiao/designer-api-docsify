@@ -1,12 +1,18 @@
 # getGlobalHttpProxy (System API)
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## getGlobalHttpProxy
 
 ```TypeScript
 function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void
 ```
 
-Obtains the network independent global \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ proxy settings.
+Obtains the network independent global {@link HttpProxy} proxy settings.
 
 **Since:** 10
 
@@ -22,18 +28,18 @@ Obtains the network independent global \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HttpProxy&gt; | Yes | Returns the proxy settings. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | Yes | Returns the proxy settings. For details, see {@link HttpProxy}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -52,7 +58,7 @@ connection.getGlobalHttpProxy((error: BusinessError, data: connection.HttpProxy)
 function getGlobalHttpProxy(): Promise<HttpProxy>
 ```
 
-Obtains the network independent global \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ proxy settings.
+Obtains the network independent global {@link HttpProxy} proxy settings.
 
 **Since:** 10
 
@@ -74,11 +80,11 @@ Obtains the network independent global \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

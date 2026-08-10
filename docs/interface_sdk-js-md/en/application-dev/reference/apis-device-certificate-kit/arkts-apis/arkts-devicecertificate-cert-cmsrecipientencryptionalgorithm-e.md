@@ -1,6 +1,6 @@
 # CmsRecipientEncryptionAlgorithm
 
-Enumerates the content-encryption algorithms for CMS enveloped data.
+CMS封装数据的内容加密算法的枚举。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the content-encryption algorithms for CMS enveloped data.
 AES_128_CBC = 0
 ```
 
-AES\_128\_CBC.
+AES_128_CBC算法。
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ AES\_128\_CBC.
 AES_192_CBC = 1
 ```
 
-AES\_192\_CBC.
+AES_192_CBC算法。
 
 **Since:** 22
 
@@ -52,7 +52,7 @@ AES\_192\_CBC.
 AES_256_CBC = 2
 ```
 
-AES\_256\_CBC.
+AES_256_CBC算法。
 
 **Since:** 22
 
@@ -70,7 +70,7 @@ AES\_256\_CBC.
 AES_128_GCM = 3
 ```
 
-AES\_128\_GCM.
+AES_128_GCM算法。
 
 **Since:** 22
 
@@ -88,7 +88,7 @@ AES\_128\_GCM.
 AES_192_GCM = 4
 ```
 
-AES\_192\_GCM.
+AES_192_GCM算法。
 
 **Since:** 22
 
@@ -106,7 +106,7 @@ AES\_192\_GCM.
 AES_256_GCM = 5
 ```
 
-AES\_256\_GCM.
+AES_256_GCM算法。
 
 **Since:** 22
 

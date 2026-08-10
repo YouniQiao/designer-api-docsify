@@ -1,12 +1,18 @@
 # push
 
+## Modules to Import
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## push
 
 ```TypeScript
 export function push(param: PushParameters, callback: AsyncCallback<void>): void
 ```
 
-Plugin component push method.
+组件提供方向组件使用方主动发送组件和数据。适用于提供方数据更新后需主动通知使用方刷新显示的场景。
 
 **Since:** 23
 
@@ -22,6 +28,6 @@ Plugin component push method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes |  |
+| param | [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Yes | 推送组件的详细参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 此次接口调用的异步回调。 |
 

@@ -1,6 +1,6 @@
 # ScreenSourceMode (System API)
 
-Enumerates the sources of the content displayed on the screen.
+屏幕显示内容来源模式枚举。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Enumerates the sources of the content displayed on the screen.
 SCREEN_MAIN = 0
 ```
 
-Content from the primary screen (default).
+表示屏幕为默认主屏。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Content from the primary screen (default).
 SCREEN_MIRROR = 1
 ```
 
-Content from a mirror screen.
+表示屏幕内容来自镜像。
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ Content from a mirror screen.
 SCREEN_EXTEND = 2
 ```
 
-Content from an extended screen.
+表示屏幕内容来自扩展。
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ Content from an extended screen.
 SCREEN_ALONE = 3
 ```
 
-The source is unspecified.
+表示屏幕为未指定来源。
 
 **Since:** 10
 

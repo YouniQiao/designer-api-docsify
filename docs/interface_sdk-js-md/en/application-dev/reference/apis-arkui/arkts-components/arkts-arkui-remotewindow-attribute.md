@@ -1,6 +1,8 @@
 # RemoteWindow properties/events
 
-Inheritance CommonMethod Set Styles
+支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+
+支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
 
 **Inheritance/Implementation:** RemoteWindowAttribute extends [CommonMethod<RemoteWindowAttribute>](CommonMethod<RemoteWindowAttribute>)
 

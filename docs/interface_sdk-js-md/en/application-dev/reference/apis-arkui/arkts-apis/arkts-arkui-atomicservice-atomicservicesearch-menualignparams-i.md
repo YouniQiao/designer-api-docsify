@@ -1,6 +1,6 @@
 # MenuAlignParams
 
-Sets the alignment between the drop-down list button and the drop-down list box.
+下拉按钮与下拉菜单间的对齐方式设置项。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Sets the alignment between the drop-down list button and the drop-down list box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+```
+
 ## alignType
 
 ```TypeScript
 alignType: MenuAlignType
 ```
 
-Alignment type. Default value: **MenuAlignType.START
+对齐方式类型。默认值：`MenuAlignType.START`。
 
-**Type:** MenuAlignType
+**Type:** [MenuAlignType](arkts-arkui-select-menualigntype-e.md)
 
 **Since:** 18
 
@@ -36,9 +42,9 @@ Alignment type. Default value: **MenuAlignType.START
 offset?: Offset
 ```
 
-Offset of the drop-down list box relative to the drop-down list button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0}
+按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。默认值：`{dx: 0, dy: 0}`。
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 18
 

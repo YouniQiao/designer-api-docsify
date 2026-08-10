@@ -1,5 +1,11 @@
 # createWebSocket
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## createWebSocket
 
 ```TypeScript
@@ -22,9 +28,9 @@ Creates a web socket connection.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the WebSocket of the createWebSocket. |
+| [WebSocket](arkts-network-websocket-websocket-i.md) | the WebSocket of the createWebSocket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let ws: webSocket.WebSocket = webSocket.createWebSocket();

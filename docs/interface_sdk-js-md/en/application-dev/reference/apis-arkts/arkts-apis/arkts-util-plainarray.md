@@ -1,18 +1,22 @@
 # @ohos.util.PlainArray
 
-PlainArray stores key-value (KV) pairs. Each key must be unique, be of the number type, and have only one value.
- PlainArray is based on generics and uses a lightweight structure. Keys in the array are searched using binary search
- and are mapped to values in other arrays.
- Both PlainArray and [LightWeightMap](arkts-util-lightweightmap.md) are used to store KV pairs in the lightweight
- structure. However, the keys of PlainArray can only be of the number type.
- **Recommended use case**: Use PlainArray when you need to store KV pairs whose keys are of the **number** type.
- This topic uses the following to identify the use of generics:
- - T: Type
- > **NOTE**
+PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。
+ PlainArray依据泛型定义，采用轻量级结构，通过二分查找算法在集合中查找key值，并映射到其他数组中的value值。
+ PlainArray和[LightWeightMap](arkts-util-lightweightmap.md)都是用来存储键值对，且均采用轻量级结构，
+ 但PlainArray的key值类型仅限于number。
+ **推荐使用场景：** 当需要存储key值为number类型的键值对时，可以使用PlainArray。
+ 文档中使用了泛型，涉及以下泛型标记符：
+ - T：Type，类型
+ > **说明**
  >
- > Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
- > not support custom properties or methods.
+ > 容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
+
+## Modules to Import
+
+```TypeScript
+import { PlainArray } from 'kits/@kit.ArkTS';
+```
 
 ## Summary
 
@@ -20,11 +24,11 @@ PlainArray stores key-value (KV) pairs. Each key must be unique, be of the numbe
 
 | Name | Description |
 | --- | --- |
-| [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md) | PlainArray stores key-value (KV) pairs. Each key must be unique, be of the number type, and have only one value.PlainArray is based on generics and uses a lightweight structure. |
+| [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md) | PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。PlainArray依据泛型定义，采用轻量级结构。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md) | The type of PlainArray callback function. |
+| [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md) | PlainArray的回调函数类型。 |
 

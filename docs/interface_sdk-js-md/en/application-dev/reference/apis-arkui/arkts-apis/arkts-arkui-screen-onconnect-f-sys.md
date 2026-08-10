@@ -1,5 +1,11 @@
 # onConnect (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## onConnect
 
 ```TypeScript
@@ -22,11 +28,11 @@ Register the callback for screen connection events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback used to return the screen ID. This parameter is callable. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the screen ID. This parameter is callable. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

@@ -1,5 +1,11 @@
 # setShortcutVisibleForSelf
 
+## 导入模块
+
+```TypeScript
+import { shortcutManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setShortcutVisibleForSelf
 
 ```TypeScript
@@ -20,7 +26,7 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 快捷方式的ID，通过\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中的shortcuts标 签下的shortcutId字段获取，取值为长度不超过63字节的字符串。 |
+| id | string | 是 | 快捷方式的ID，通过[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的shortcuts标 签下的shortcutId字段获取，取值为长度不超过63字节的字符串。 |
 | visible | boolean | 是 | 快捷方式是否显示。true：快捷方式显示；false：快捷方式不显示。 |
 
 **返回值：**
@@ -33,11 +39,9 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is not exist. |
+| 17700070 | The specified shortcut id is not exist. |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';
@@ -48,24 +52,7 @@ shortcutManager.setShortcutVisibleForSelf("shortcut_id", false)
   .then(() => {
     console.info('setShortcutVisibleForSelf success');
   }).catch((err: BusinessError) => {
-    console.error(`setShortcutVisibleForSelf errData is errCode:${err.code}  message:${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 请替换为module.json5配置文件中的shortcuts标签下实际配置的shortcutId字段
-shortcutManager.setShortcutVisibleForSelf("shortcut_id", false)
-  .then(() => {
-    console.info('setShortcutVisibleForSelf success');
-  }).catch((err: Error) => {
-    console.error(`setShortcutVisibleForSelf errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
+  console.error(`setShortcutVisibleForSelf errData is errCode:${err.code}  message:${err.message}`);
 });
 ```
 

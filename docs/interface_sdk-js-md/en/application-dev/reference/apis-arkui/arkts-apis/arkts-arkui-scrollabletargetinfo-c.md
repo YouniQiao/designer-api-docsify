@@ -1,8 +1,8 @@
 # ScrollableTargetInfo
 
-Provides the information about the scrollable container component corresponding to the gesture recognizer. It inherits from [EventTargetInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)。
 
-**Inheritance/Implementation:** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-component/gesture-eventtargetinfo-c.md)
+**Inheritance/Implementation:** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Provides the information about the scrollable container component corresponding 
 isBegin(): boolean
 ```
 
-Checks whether this scrollable container component is scrolled to the top. If it is a **Swiper** component in loop mode, **false** is returned.
+返回当前滚动类容器组件是否在顶部，如果为Swiper组件且在循环模式下返回false。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Checks whether this scrollable container component is scrolled to the top. If it
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current scrollable container component is scrolled to the top. The value **true** means that the component is scrolled to the top, and **false** means the opposite. |
+| boolean | 当前滚动类容器组件是否在顶部。true表示组件在顶部，false表示组件不在顶部。 |
 
 ## isEnd
 
@@ -44,7 +44,7 @@ Checks whether this scrollable container component is scrolled to the top. If it
 isEnd(): boolean
 ```
 
-Checks whether the current scroll container is scrolled to the bottom. If the container is a **Swiper** component and is in loop mode, **false** is returned.
+返回当前滚动类容器组件是否在底部，如果为Swiper组件且在循环模式下返回false。
 
 **Since:** 12
 
@@ -62,5 +62,5 @@ Checks whether the current scroll container is scrolled to the bottom. If the co
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current scrollable container component is scrolled to the bottom. The value **true** means that the component is scrolled to the bottom, and **false** means the opposite. |
+| boolean | 当前滚动类容器组件是否在底部。true表示组件在底部，false表示组件不在底部。 |
 

@@ -1,12 +1,13 @@
 # BlurType
 
-Enumerates the blur types of a mask filter.  
-| Name | Value| Description | Diagram |  
+定义蒙版滤镜模糊中操作类型的枚举。蒙版用于定义图像的可绘制区域，滤镜用于应用模糊等视觉效果。该枚举控制模糊效果如何应用到蒙版定义的区域内。
+
+| 名称 | 值 | 说明 | 示意图 |  
 | ------ | - | ------------------ | -------- |  
-| NORMAL | 0 | Both the outer edges and the inner solid parts are blurred.|!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_|  
-| SOLID | 1 | The inner solid part remains unchanged, while only the outer edges are blurred.|!\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_|  
-| OUTER | 2 | Only the outer edges are blurred, with the inner solid part being fully transparent.|!\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_|  
-| INNER | 3 | Only the inner solid part is blurred, while the outer edges remain sharp.|!\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_|
+| NORMAL | 0 | 全面模糊，外圈和内部实体一起模糊。 | ![NORMAL](../../../reference/apis-arkgraphics2d/figures/BlurType-Normal.png) |  
+| SOLID | 1 | 内部实体不变，只模糊外圈边缘部分。 | ![SOLID](../../../reference/apis-arkgraphics2d/figures/BlurType-Solid.png) |  
+| OUTER | 2 | 只有外圈边缘模糊，内部实体完全透明。 | ![OUTER](../../../reference/apis-arkgraphics2d/figures/BlurType-Outer.png) |  
+| INNER | 3 | 只有内部实体模糊，外圈边缘清晰。 | ![INNER](../../../reference/apis-arkgraphics2d/figures/BlurType-Inner.png) |
 
 **Since:** 12
 

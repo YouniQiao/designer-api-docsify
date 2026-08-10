@@ -1,6 +1,6 @@
 # StateStyles
 
-State-specific styles for the component.
+组件不同状态下的样式。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ State-specific styles for the component.
 clicked?: any
 ```
 
-Style of the component in the clicked state.
+组件点击状态的样式。
 
 **Type:** any
 
@@ -38,7 +38,7 @@ Style of the component in the clicked state.
 disabled?: any
 ```
 
-Style of the component in the disabled state.
+组件禁用状态的样式。
 
 **Type:** any
 
@@ -60,7 +60,7 @@ Style of the component in the disabled state.
 focused?: any
 ```
 
-Style of the component in the focused state.
+组件获焦状态的样式。
 
 **Type:** any
 
@@ -82,7 +82,7 @@ Style of the component in the focused state.
 hovered?: object
 ```
 
-Style of the component in the hovered state.
+组件悬浮状态的样式。
 
 **Type:** object
 
@@ -106,7 +106,7 @@ Style of the component in the hovered state.
 normal?: any
 ```
 
-Style of the component when being stateless.
+组件无状态时的样式。
 
 **Type:** any
 
@@ -128,7 +128,7 @@ Style of the component when being stateless.
 pressed?: any
 ```
 
-Style of the component in the pressed state.
+组件按下状态的样式。
 
 **Type:** any
 
@@ -150,7 +150,7 @@ Style of the component in the pressed state.
 selected?: object
 ```
 
-Style of the component in the selected state.
+组件选中状态的样式。
 
 **Type:** object
 

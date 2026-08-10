@@ -1,5 +1,11 @@
 # getCameraTrackingEnabled
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## getCameraTrackingEnabled
 
 ```TypeScript
@@ -26,10 +32,10 @@ function getCameraTrackingEnabled(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 console.info('Get tracking status');

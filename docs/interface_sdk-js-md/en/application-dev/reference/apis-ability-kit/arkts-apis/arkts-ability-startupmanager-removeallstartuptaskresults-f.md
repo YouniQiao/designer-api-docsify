@@ -1,12 +1,18 @@
 # removeAllStartupTaskResults
 
+## Modules to Import
+
+```TypeScript
+import { startupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## removeAllStartupTaskResults
 
 ```TypeScript
 function removeAllStartupTaskResults(): void
 ```
 
-Removes all startup task results.If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so files that have already been loaded in the cache will not be removed.
+删除所有启动任务结果。如果存在so预加载任务，则将对应so文件置为未加载状态。对于缓存中已加载的so文件，不会被移除。
 
 **Since:** 12
 
@@ -18,7 +24,7 @@ Removes all startup task results.If there are preloading tasks for .so files, th
 
 **System capability:** SystemCapability.Ability.AppStartup
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';

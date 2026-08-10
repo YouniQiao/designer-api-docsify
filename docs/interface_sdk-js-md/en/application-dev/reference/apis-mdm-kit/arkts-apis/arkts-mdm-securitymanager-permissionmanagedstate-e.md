@@ -1,6 +1,6 @@
 # PermissionManagedState
 
-Represents the management status of application permissions.
+应用权限的管理状态。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Represents the management status of application permissions.
 DENIED = -1
 ```
 
-This permission is denied silently.
+已静默拒绝。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ This permission is denied silently.
 GRANTED = 0
 ```
 
-This permission is granted silently.
+已静默授予。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ This permission is granted silently.
 DEFAULT = 1
 ```
 
-The permission is granted by the user by default.
+默认由用户授予。
 
 **Since:** 20
 

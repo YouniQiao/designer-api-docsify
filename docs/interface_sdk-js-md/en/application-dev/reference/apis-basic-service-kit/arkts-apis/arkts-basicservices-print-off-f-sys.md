@@ -1,12 +1,18 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## off('printerStateChange')
 
 ```TypeScript
 function off(type: 'printerStateChange', callback?: Callback<boolean>): void
 ```
 
-Unregisters the listener for printer state change events. This API uses a callback to return the result.
+取消注册打印机状态变化事件回调，使用callback回调。
 
 **Since:** 10
 
@@ -24,18 +30,18 @@ Unregisters the listener for printer state change events. This API uses a callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'printerStateChange' | Yes | Listening type. The value is fixed at **'printerStateChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| type | 'printerStateChange' | Yes | 表示打印机状态改变。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 表示取消注册打印机状态变化事件是否成功。true表示成功，false表示失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -52,7 +58,7 @@ print.off('printerStateChange', (data: boolean) => {
 function off(type: 'jobStateChange', callback?: Callback<boolean>): void
 ```
 
-Unregisters the listener for print job state change events. This API uses a callback to return the result.
+取消注册打印任务状态变化事件回调，使用callback回调。
 
 **Since:** 10
 
@@ -70,18 +76,18 @@ Unregisters the listener for print job state change events. This API uses a call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'jobStateChange' | Yes | Listening type. The value is fixed at **'jobStateChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| type | 'jobStateChange' | Yes | 表示打印任务状态改变。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 表示取消注册打印任务状态变化事件是否成功。true表示成功，false表示失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -98,7 +104,7 @@ print.off('jobStateChange', (data: boolean) => {
 function off(type: 'extInfoChange', callback?: Callback<boolean>): void
 ```
 
-Unregisters the listener for printer extension information change events. This API uses a callback to return the result.
+取消注册打印扩展信息变化事件回调，使用callback回调。
 
 **Since:** 10
 
@@ -116,18 +122,18 @@ Unregisters the listener for printer extension information change events. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'extInfoChange' | Yes | Listening type. The value is fixed at **'extInfoChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| type | 'extInfoChange' | Yes | 表示打印扩展信息改变。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 表示取消注册打印扩展信息变化事件是否成功。true表示成功，false表示失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

@@ -1,6 +1,6 @@
 # DownloadFileType
 
-Enumerates the download file types from the Drive Kit.
+云盘缓存文件类型的枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the download file types from the Drive Kit.
 CONTENT = 0
 ```
 
-Content file.
+content类型文件。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Content file.
 THUMBNAIL = 1
 ```
 
-Thumbnail file.
+thumbnail类型文件。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ Thumbnail file.
 LCD = 2
 ```
 
-LCD file.
+lcd类型文件。
 
 **Since:** 20
 

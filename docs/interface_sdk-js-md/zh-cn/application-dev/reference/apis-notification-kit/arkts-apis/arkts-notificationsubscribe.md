@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+```
+
 ## 汇总
 
 <!--Del-->
@@ -73,7 +79,7 @@
 | [NotificationClassification](arkts-notification-notificationsubscribe-notificationclassification-t-sys.md) | 描述通知分类信息。 |
 | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | 通知发布者的信息。 |
 | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | 作为订阅通知接口subscribe的入参，提供订阅者接收到新通知、取消通知等的回调方法。 |
-| [NotificationSwitchChangedCallback](arkts-notification-notificationsubscribe-notificationswitchchangedcallback-t-sys.md) | 注册由[notificationManager.setNotificationSwitch]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口设置的通知开关状态变化的回调函数类型。 |
+| [NotificationSwitchChangedCallback](arkts-notification-notificationsubscribe-notificationswitchchangedcallback-t-sys.md) | 注册由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch)接口设置的通知开关状态变化的回调函数类型。 |
 | [NotificationSwitchChangedCallbackData](arkts-notification-notificationsubscribe-notificationswitchchangedcallbackdata-t-sys.md) | 描述通知开关状态变化的回调数据。 |
 | [SubscribeCallbackData](arkts-notification-notificationsubscribe-subscribecallbackdata-t-sys.md) | 携带系统属性值的通知信息。 |
 | [VoiceContent](arkts-notification-notificationsubscribe-voicecontent-t-sys.md) | 通知消息中语音播报内容定义。 |

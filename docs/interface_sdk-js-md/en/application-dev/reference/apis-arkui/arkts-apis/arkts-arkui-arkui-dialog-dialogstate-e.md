@@ -1,6 +1,6 @@
 # DialogState
 
-Enum for dialog state.
+Dialog状态的枚举。
 
 **Since:** 26.1.0
 
@@ -16,7 +16,7 @@ Enum for dialog state.
 UNINITIALIZED = 0
 ```
 
-Indicates it is uninitialized.
+表示它未初始化。
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ Indicates it is uninitialized.
 INITIALIZED = 1
 ```
 
-Indicates it is initialized.
+表示已初始化。
 
 **Since:** 26.1.0
 
@@ -56,7 +56,7 @@ Indicates it is initialized.
 APPEARING = 2
 ```
 
-Indicates it is appearing.
+表示它正在出现。
 
 **Since:** 26.1.0
 
@@ -76,7 +76,7 @@ Indicates it is appearing.
 APPEARED = 3
 ```
 
-Indicates it is appeared.
+表示它出现了。
 
 **Since:** 26.1.0
 
@@ -96,7 +96,7 @@ Indicates it is appeared.
 DISAPPEARING = 4
 ```
 
-Indicates it is disappearing.
+表示它正在消失。
 
 **Since:** 26.1.0
 
@@ -116,7 +116,7 @@ Indicates it is disappearing.
 DISAPPEARED = 5
 ```
 
-Indicates it is disappeared.
+表示它消失了。
 
 **Since:** 26.1.0
 

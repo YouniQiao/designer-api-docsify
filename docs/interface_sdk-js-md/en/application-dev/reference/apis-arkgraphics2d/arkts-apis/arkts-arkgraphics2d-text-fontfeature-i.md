@@ -1,6 +1,6 @@
 # FontFeature
 
-Describes a font feature.
+文本字体特征。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes a font feature.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## name
 
 ```TypeScript
 name: string
 ```
 
-Keyword identifier in the font feature key-value pair, such as 'liga' (standard ligature), 'kern' (kerning adjustment), etc.
+字体特征键值对中的关键字标识，如'liga'（标准连字）、'kern'（字距调整）等。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Keyword identifier in the font feature key-value pair, such as 'liga' (standard 
 value: int
 ```
 
-Value in the font feature key-value pair.
+字体特征键值对的值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

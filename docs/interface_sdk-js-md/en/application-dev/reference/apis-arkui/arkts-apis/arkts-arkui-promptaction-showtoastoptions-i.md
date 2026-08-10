@@ -1,6 +1,6 @@
 # ShowToastOptions
 
-Show toast options.
+Toast的选项。
 
 **Since:** 23
 
@@ -10,15 +10,31 @@ Show toast options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## alignment
 
 ```TypeScript
 alignment?: Alignment
 ```
 
-Defines the toast alignment of the screen.
+对齐方式。
 
-**Type:** Alignment
+默认值：undefined，当未设置alignment且存在导航条或软键盘时，Toast会自动根据导航条或软键盘位置进行调整，可参考bottom的说明。
+
+**说明：**
+
+不同alignment下，Toast位置对齐效果，如下图所示。
+
+![zh-cn_image_0001](../../../reference/apis-arkui/figures/toast_alignment.PNG)
+
+Toast的文本显示默认自左向右，不支持其他对齐方式。
+
+**Type:** [Alignment](arkts-arkui-alignment-e.md)
 
 **Since:** 23
 
@@ -36,9 +52,15 @@ Defines the toast alignment of the screen.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur Style of toast.
+Toast的背板模糊材质。
 
-**Type:** BlurStyle
+默认值：BlurStyle.COMPONENT_ULTRA_THICK
+
+**说明：**
+
+设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
+
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 23
 
@@ -56,9 +78,15 @@ Background blur Style of toast.
 backgroundColor?: ResourceColor
 ```
 
-Background color of toast.
+Toast的背板颜色。
 
-**Type:** ResourceColor
+默认值：Color.Transparent
+
+**说明：**
+
+backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
+
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -76,7 +104,15 @@ Background color of toast.
 bottom?: string | double
 ```
 
-The distance between toast dialog box and the bottom of screen.
+设置Toast底部边框距离导航条的高度，软键盘拉起时，如果bottom值过小，Toast要被软键盘遮挡时，会自动避让至距离软键盘80vp处。
+
+默认值：80vp
+
+**说明：**
+
+当底部没有导航条时，bottom为设置弹窗底部边框距离窗口底部的高度。
+
+设置对齐方式alignment后，bottom不生效。
 
 **Type:** string \| double
 
@@ -96,7 +132,13 @@ The distance between toast dialog box and the bottom of screen.
 duration?: int
 ```
 
-Duration of toast dialog box. The default value is 1500.The recommended value ranges from 1500ms to 10000ms.NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000ms.
+设置Toast弹出的持续时间。
+
+默认值：1500ms
+
+取值范围：[1500, 10000]
+
+若小于1500ms则取默认值，若大于10000ms则取上限值10000ms。
 
 **Type:** int
 
@@ -116,7 +158,9 @@ Duration of toast dialog box. The default value is 1500.The recommended value ra
 enableHoverMode?: boolean
 ```
 
-Define whether to respond to the hover mode.
+是否响应悬停态，值为true时，响应悬停态。
+
+默认值：false，默认不响应。
 
 **Type:** boolean
 
@@ -138,9 +182,11 @@ Define whether to respond to the hover mode.
 hoverModeArea?: HoverModeAreaType
 ```
 
-Defines the toast's display area in hover mode.
+响应悬停态时，弹窗的显示区域。
 
-**Type:** HoverModeAreaType
+默认值：HoverModeAreaType.BOTTOM_SCREEN，默认显示在下半屏。
+
+**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -160,7 +206,11 @@ Defines the toast's display area in hover mode.
 message: string | Resource
 ```
 
-Text to display.
+显示的文本信息。
+
+**说明：**
+
+默认字体为'Harmony Sans'，不支持设置其他字体。
 
 **Type:** string \| Resource
 
@@ -180,9 +230,15 @@ Text to display.
 offset?: Offset
 ```
 
-Defines the toast offset.
+在对齐方式上的偏移。
 
-**Type:** Offset
+默认值：{ dx: 0, dy: 0 }，默认没有偏移。
+
+**说明：**
+
+仅支持设置px类型的数值。如需设置其他类型的数值，应将其他类型转换为px类型后传入。例如，若需设置vp，应将其转换为px后传入。
+
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 23
 
@@ -200,9 +256,11 @@ Defines the toast offset.
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of toast.
+Toast的背板阴影。
 
-**Type:** ShadowOptions \| ShadowStyle
+默认值：ShadowStyle.OUTER_DEFAULT_MD
+
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
 
 **Since:** 23
 
@@ -220,9 +278,11 @@ Shadow of toast.
 showMode?: ToastShowMode
 ```
 
-Determine the show mode of the toast.
+设置Toast层级。
 
-**Type:** ToastShowMode
+默认值：ToastShowMode.DEFAULT，默认显示在应用内。
+
+**Type:** [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md)
 
 **Default:** ToastShowMode.DEFAULT
 
@@ -244,7 +304,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for toast. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of toast.
 
-**Type:** SystemUiMaterial
+**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 
@@ -262,9 +322,11 @@ Set system-styled materials for toast. Different materials have different effect
 textColor?: ResourceColor
 ```
 
-Text color of toast.
+Toast的文本颜色。
 
-**Type:** ResourceColor
+默认值：Color.Black
+
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 

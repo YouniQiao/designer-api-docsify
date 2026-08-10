@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## enableCloud
 
 ```TypeScript
@@ -60,7 +66,7 @@ remainingSpace: long
 
 服务器上账号的可用空间（KB）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -80,7 +86,7 @@ totalSpace: long
 
 服务器上账号的总空间（KB）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -100,7 +106,7 @@ user: int
 
 设备的当前用户ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

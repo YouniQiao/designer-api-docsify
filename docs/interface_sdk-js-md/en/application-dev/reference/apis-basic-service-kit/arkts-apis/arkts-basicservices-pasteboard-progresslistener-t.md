@@ -4,7 +4,7 @@
 type ProgressListener = (progress: ProgressInfo) => void
 ```
 
-Defines a listener for progress data changes. If the default progress indicator is not used, you can set this API to obtain the paste progress.
+定义进度数据变化的订阅函数，当选择不使用系统默认进度显示时，可设置该项获取粘贴过程的进度。
 
 **Since:** 15
 
@@ -20,5 +20,5 @@ Defines a listener for progress data changes. If the default progress indicator 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Defines the progress information. This information is reported only when [ProgressIndicator]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ is set to **NONE**.  |
+| progress | [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md) | Yes | 定义进度上报的数据结构，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)设置为 NONE时才会上报此信息。 |
 

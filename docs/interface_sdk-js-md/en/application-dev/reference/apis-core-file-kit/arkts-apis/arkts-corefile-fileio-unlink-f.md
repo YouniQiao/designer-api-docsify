@@ -6,7 +6,7 @@
 declare function unlink(path: string): Promise<void>
 ```
 
-Removes a file. This API uses a promise to return the result.
+删除文件，使用Promise异步回调。
 
 **Since:** 6
 
@@ -24,13 +24,13 @@ Removes a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
+| path | string | Yes | 待删除文件的应用沙箱路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 
 ## unlink
@@ -39,7 +39,7 @@ Removes a file. This API uses a promise to return the result.
 declare function unlink(path: string, callback: AsyncCallback<void>): void
 ```
 
-Removes a file. This API uses an asynchronous callback to return the result.
+删除文件，使用callback异步回调。
 
 **Since:** 6
 
@@ -57,6 +57,6 @@ Removes a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the file is removed asynchronously. |
+| path | string | Yes | 待删除文件的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步删除文件之后的回调。 |
 

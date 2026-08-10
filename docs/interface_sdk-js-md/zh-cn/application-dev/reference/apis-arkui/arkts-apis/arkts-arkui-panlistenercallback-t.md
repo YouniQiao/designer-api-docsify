@@ -20,7 +20,7 @@ type PanListenerCallback = (event: GestureEvent, current: GestureRecognizer, nod
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the information of pan event  |
-| current | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the information of panRecognizer  |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | the information of frameNode  |
+| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | 是 | the information of pan event |
+| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | 是 | the information of panRecognizer |
+| node | [FrameNode](arkts-arkui-framenode-t.md) | 否 | the information of frameNode |
 

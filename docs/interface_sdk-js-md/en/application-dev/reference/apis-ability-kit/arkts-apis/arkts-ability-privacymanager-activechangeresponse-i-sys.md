@@ -1,6 +1,6 @@
 # ActiveChangeResponse (System API)
 
-Defines the detailed permission usage information.
+表示某次权限使用状态变化的详情。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Defines the detailed permission usage information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## activeStatus
 
 ```TypeScript
 activeStatus: PermissionActiveStatus
 ```
 
-Permission usage status.
+权限使用状态变化类型。
 
-**Type:** PermissionActiveStatus
+**Type:** [PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md)
 
 **Since:** 9
 
@@ -38,11 +44,11 @@ Permission usage status.
 callingTokenId?: int
 ```
 
-Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**.
+接口调用方的应用身份标识，当activeStatus为INACTIVE时该值无效。
 
-Default value: **0**.
+默认值：0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -60,7 +66,7 @@ Default value: **0**.
 deviceId: string
 ```
 
-ID of the device where the permission usage status change occurred.
+权限使用状态发生变化时所在设备的ID。
 
 **Type:** string
 
@@ -80,7 +86,7 @@ ID of the device where the permission usage status change occurred.
 enhancedIdentity?: string
 ```
 
-Extension identity, used to identify additional identity information of the caller. This field is returned when it is necessary to distinguish permission usage records from different call sources within the same application.The maximum length is 48. Default value: Empty string.
+扩展身份，用于标识调用方的附加身份信息。当需要区分同一应用下不同调用来源的权限使用记录时返回此字段。最大长度为48。默认值：空字符串。
 
 **Type:** string
 
@@ -102,9 +108,9 @@ Extension identity, used to identify additional identity information of the call
 permissionName: Permissions
 ```
 
-Name of the permission whose usage status has changed.
+权限使用状态发生变化的权限名。
 
-**Type:** Permissions
+**Type:** [Permissions](arkts-ability-permissions-t.md)
 
 **Since:** 9
 
@@ -122,9 +128,9 @@ Name of the permission whose usage status has changed.
 tokenId: int
 ```
 
-Token ID of the application whose permission usage changes are subscribed to.
+被订阅的应用身份标识。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -142,11 +148,11 @@ Token ID of the application whose permission usage changes are subscribed to.
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission usage type. This value is invalid when activeStatus is INACTIVE.
+敏感权限使用类型，当activeStatus为INACTIVE时该值无效。
 
-Default value: NORMAL\_TYPE.
+默认值：NORMAL_TYPE。
 
-**Type:** PermissionUsedType
+**Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **Since:** 18
 

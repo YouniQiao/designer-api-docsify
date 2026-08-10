@@ -1,6 +1,6 @@
 # Table (System API)
 
-Represents the table information.
+表结构信息。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents the table information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## alias
 
 ```TypeScript
 alias: string
 ```
 
-Alias of the table in the database.
+该表在服务器数据库中的别名。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Alias of the table in the database.
 fields: Array<Field>
 ```
 
-Field information in the table.
+数据库表中的字段结构信息。
 
 **Type:** Array&lt;Field&gt;
 
@@ -58,7 +64,7 @@ Field information in the table.
 name: string
 ```
 
-Table name.
+表名。
 
 **Type:** string
 

@@ -4,7 +4,7 @@
 declare type CustomBuilder = (() => any) | void
 ```
 
-Defines the CustomBuilder Type.
+定义CustomBuilder类型。
 
 **Since:** 8
 

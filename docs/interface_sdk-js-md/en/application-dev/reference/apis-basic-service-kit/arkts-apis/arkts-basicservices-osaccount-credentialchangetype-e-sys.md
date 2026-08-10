@@ -1,6 +1,6 @@
 # CredentialChangeType (System API)
 
-Enumerates the credential change types.
+表示凭据变更类型的枚举。
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Enumerates the credential change types.
 ADD_CREDENTIAL = 1
 ```
 
-A credential is added.
+表示添加凭据的变更类型。
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ A credential is added.
 UPDATE_CREDENTIAL = 2
 ```
 
-A credential is updated.
+表示更新凭据的变更类型。
 
 **Since:** 23
 
@@ -54,7 +54,7 @@ A credential is updated.
 DELETE_CREDENTIAL = 3
 ```
 
-A credential is deleted.
+表示删除凭据的变更类型。
 
 **Since:** 23
 

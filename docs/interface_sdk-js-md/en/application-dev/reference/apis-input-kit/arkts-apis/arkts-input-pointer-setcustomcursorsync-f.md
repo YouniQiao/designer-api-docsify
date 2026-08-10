@@ -1,13 +1,19 @@
 # setCustomCursorSync
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## setCustomCursorSync
 
 ```TypeScript
 function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void
 ```
 
-Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see  
-[setCustomCursor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+设置指定窗口的自定义光标样式，使用同步方式进行设置。此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅  
+[setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)。
 
 **Since:** 11
 
@@ -21,18 +27,18 @@ Sets a custom pointer style for a specified window synchronously. This API can s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Window ID. The value must be an integer greater than 0. |
-| pixelMap | image.PixelMap | Yes | Custom cursor resource. |
-| focusX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Custom pointer focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
-| focusY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Custom pointer focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口ID。取值为大于0的整数。 |
+| pixelMap | image.PixelMap | Yes | 自定义光标资源。 |
+| focusX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 自定义光标焦点x，取值范围：大于等于0，默认为0，单位为像素（px）。 |
+| focusY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 自定义光标焦点y，取值范围：大于等于0，默认为0，单位为像素（px）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -52,19 +58,23 @@ struct Index {
             $r("app.media.app_icon").id, (error: BusinessError, svgFileData: Uint8Array) => {
             const svgBuffer = svgFileData.buffer;
             let svgImageSource: image.ImageSource = image.createImageSource(svgBuffer);
+            // Width and height of the pointer image
             let svgDecodingOptions: image.DecodingOptions = { desiredSize: { width: 50, height: 50 } };
+            // Create a PixelMap
             svgImageSource.createPixelMap(svgDecodingOptions).then((pixelMap) => {
+              // Get the most recent window in the application
               window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
                 let windowId = win.getWindowProperties().id;
                 try {
+                  // Set a custom pointer synchronously
                   pointer.setCustomCursorSync(windowId, pixelMap, 25, 25);
-                  console.info(`setCustomCursorSync success`);
+                  console.info(`Succeeded in setting custom cursor sync.`);
                 } catch (error) {
-                  console.error(`setCustomCursorSync failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                  console.error(`Failed to set custom cursor sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 }
               });
             }).catch((error: BusinessError) => {
-              console.error(`createPixelMap promise error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to create pixel map promise, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             });
           });
         }

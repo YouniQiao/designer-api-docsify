@@ -1,12 +1,18 @@
 # getAllDisplay
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getAllDisplay
 
 ```TypeScript
 function getAllDisplay(callback: AsyncCallback<Array<Display>>): void
 ```
 
-Obtains all Display objects. This API uses an asynchronous callback to return the result.
+获取当前所有的Display对象，使用callback异步回调。
 
 **Since:** 7
 
@@ -24,9 +30,9 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Display&gt;&gt; | Yes | Callback used to return all the Display objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Display&gt;&gt; | Yes | 回调函数。返回当前所有的Display对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -48,7 +54,7 @@ display.getAllDisplay((err: BusinessError, data: Array<display.Display>) => {
 function getAllDisplay(): Promise<Array<Display>>
 ```
 
-Obtains all Display objects. This API uses a promise to return the result.
+获取当前所有的Display对象，使用Promise异步回调。
 
 **Since:** 7
 
@@ -66,9 +72,9 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Display&gt;&gt; | Promise used to return all the Display objects. |
+| Promise&lt;Array&lt;Display&gt;&gt; | Promise对象。返回当前所有的Display对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

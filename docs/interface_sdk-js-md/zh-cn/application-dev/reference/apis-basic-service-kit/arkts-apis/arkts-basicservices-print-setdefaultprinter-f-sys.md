@@ -1,5 +1,11 @@
 # setDefaultPrinter（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setDefaultPrinter
 
 ```TypeScript
@@ -25,7 +31,7 @@ function setDefaultPrinter(printerId: string, type: DefaultPrinterType): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printerId | string | 是 | 表示打印机ID。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示默认打印机类型。 |
+| type | [DefaultPrinterType](arkts-basicservices-print-defaultprintertype-e.md) | 是 | 表示默认打印机类型。 |
 
 **返回值：**
 
@@ -37,22 +43,22 @@ function setDefaultPrinter(printerId: string, type: DefaultPrinterType): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerId : string = '1';
 let type : print.DefaultPrinterType = print.DefaultPrinterType.DEFAULT_PRINTER_TYPE_SET_BY_USER;
 print.setDefaultPrinter(printerId, type).then(() => {
     console.info('setDefaultPrinter success');
 }).catch((error: BusinessError) => {
-    console.error('setDefaultPrinter error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to set default printer. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

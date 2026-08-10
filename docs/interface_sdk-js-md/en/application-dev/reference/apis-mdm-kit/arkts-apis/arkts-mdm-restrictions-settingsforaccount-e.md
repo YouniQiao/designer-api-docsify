@@ -1,6 +1,6 @@
 # SettingsForAccount
 
-Enumerates user setting items.
+用户设置项枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates user setting items.
 MODIFY_WALLPAPER = 0
 ```
 
-Modifies the wallpaper, including both the lock screen wallpaper and the home screen wallpaper.
+修改壁纸，包含锁屏壁纸和桌面壁纸。
 
 **Since:** 26.0.0
 

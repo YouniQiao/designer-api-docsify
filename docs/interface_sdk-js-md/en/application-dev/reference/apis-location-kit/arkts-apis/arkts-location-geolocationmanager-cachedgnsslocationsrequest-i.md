@@ -10,6 +10,12 @@ Parameters for requesting to report cache location information.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## reportingPeriodSec
 
 ```TypeScript
@@ -18,7 +24,7 @@ reportingPeriodSec: int
 
 GNSS cache location report period.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

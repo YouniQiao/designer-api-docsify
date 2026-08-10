@@ -1,6 +1,6 @@
 # AudioCapturerMicInData (System API)
 
-Describes audio capturer data that contains processed audio data and microphone input (mic-in) audio data before any processing.
+描述音频录音数据，其中包含已处理的音频数据和进行音频处理前的纯净麦克风输入（mic-in）音频数据。
 
 **Since:** 24
 
@@ -12,13 +12,19 @@ Describes audio capturer data that contains processed audio data and microphone 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## data
 
 ```TypeScript
 data: ArrayBuffer
 ```
 
-Processed audio data buffer.
+处理后的音频数据缓冲。
 
 **Type:** ArrayBuffer
 
@@ -40,7 +46,7 @@ Processed audio data buffer.
 ecData?: ArrayBuffer
 ```
 
-Echo reference audio data buffer.If capturer config does not set ecStreamInfo, this buffer will be null.See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for details.
+回声参考音频数据缓冲。如果录音配置没有设置ecStreamInfo，则此缓冲将为空。有关详细信息，请参见{@link #AudioCapturerMicInConfig}。
 
 **Type:** ArrayBuffer
 
@@ -62,7 +68,7 @@ Echo reference audio data buffer.If capturer config does not set ecStreamInfo, t
 micInData: ArrayBuffer
 ```
 
-Microphone input audio data buffer.
+麦克风输入音频数据缓冲。
 
 **Type:** ArrayBuffer
 

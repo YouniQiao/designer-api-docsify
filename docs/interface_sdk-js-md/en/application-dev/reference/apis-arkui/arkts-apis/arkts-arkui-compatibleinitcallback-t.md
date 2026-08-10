@@ -4,7 +4,7 @@
 export type CompatibleInitCallback = (parent: ESValue) => CompatibleComponentInfo
 ```
 
-Defines the callback for initializing compatible custom component.
+初始化占位组件的回调函数类型。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ Defines the callback for initializing compatible custom component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parent | ESValue | Yes | the parent of compatible custom component  |
+| parent | ESValue | Yes | the parent of compatible custom component |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the info of compatible custom component  |
+| [CompatibleComponentInfo](arkts-arkui-interop-compatiblecomponentinfo-i.md) | 占位组件的信息。 |
 

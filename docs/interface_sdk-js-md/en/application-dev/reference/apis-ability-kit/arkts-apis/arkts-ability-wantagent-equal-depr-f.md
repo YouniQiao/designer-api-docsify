@@ -6,7 +6,7 @@
 function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether two WantAgent objects are equal.
+判断两个WantAgent实例是否相等，以此来判断是否是来自同一应用的相同操作。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,11 +26,11 @@ Checks whether two WantAgent objects are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | to compare. |
-| otherAgent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | WantAgent Object. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback method for determining whether two WantAgent instances are equal. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 判断两个WantAgent实例是否相等的回调方法。返回true表示两个WantAgent实例相等；返回false表示不相等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -93,7 +93,7 @@ wantAgent.getWantAgent({
 function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 ```
 
-Checks whether two WantAgent objects are equal.
+判断两个WantAgent实例是否相等，以此来判断是否是来自同一应用的相同操作。使用Promise异步回调。
 
 **Since:** 7
 
@@ -113,16 +113,16 @@ Checks whether two WantAgent objects are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | to compare. |
-| otherAgent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | WantAgent Object. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | 以Promise形式返回获取判断两个WantAgent实例是否相等的结果。返回true表示两个WantAgent实例相等；返回false表示不相等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

@@ -1,5 +1,11 @@
 # getHash
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## getHash
 
 ```TypeScript
@@ -20,7 +26,7 @@ Get the hash code of an object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| obj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The object that need to get hash code. |
+| obj | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 是 | The object that need to get hash code. |
 
 **返回值：**
 

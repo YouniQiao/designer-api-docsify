@@ -1,12 +1,18 @@
 # queryRecommendDriversById (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## queryRecommendDriversById
 
 ```TypeScript
 function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>
 ```
 
-Query recommend printer drivers by printer ID.
+根据打印机ID查询推荐的打印机驱动程序。
 
 **Since:** 24
 
@@ -26,19 +32,19 @@ Query recommend printer drivers by printer ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Indicates the printer ID. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Indicates the printer ID. |
+| printerId | string | Yes | 打印机ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PpdInfo[]&gt; |  Promise that resolves with all ppd info of the printer. |
+| Promise&lt;PpdInfo[]&gt; | Promise that resolves with all ppd info of the printer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Can not find the printer in system. |
+| 13100005 | Can not find the printer in system. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application. |
 

@@ -2,7 +2,7 @@
 
 Provides extended methods to operate or manage Wi-Fi.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The APIs involved in this file are non-general APIs.These extended APIs are only used by some product types, such as routers.Common products should not use these APIs.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;The APIs involved in this file are non-general APIs.These extended APIs are only used by some product types, such as routers. Common products should not use these APIs.&lt;/p&gt;
 
 **Since:** 8
 
@@ -11,6 +11,12 @@ Provides extended methods to operate or manage Wi-Fi.
 <!--Device-unnamed-declare namespace wifiext--><!--Device-unnamed-declare namespace wifiext-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
+
+## Modules to Import
+
+```TypeScript
+import { wifiext } from 'kits/@kit.ConnectivityKit';
+```
 
 ## Summary
 

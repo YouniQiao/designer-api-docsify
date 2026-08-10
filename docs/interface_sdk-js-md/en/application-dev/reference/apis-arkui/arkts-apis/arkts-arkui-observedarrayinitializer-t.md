@@ -4,7 +4,7 @@
 type ObservedArrayInitializer<T> = (index: int) => T
 ```
 
-Array initializer Type.
+ObservedArray的元素初始化函数类型。
 
 **Since:** 26.0.0
 
@@ -20,11 +20,11 @@ Array initializer Type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | initializer index.  |
+| index | int | Yes | 当前初始化元素的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | array element.  |
+| T | 对应索引位置的元素值。 |
 

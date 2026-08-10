@@ -1,6 +1,6 @@
 # RelativeContainerFrameNode
 
-Define the RelativeContainer type of FrameNode.
+定义RelativeContainer类型的FrameNode。
 
 **Inheritance/Implementation:** RelativeContainerFrameNode extends [TypedFrameNode<RelativeContainerAttribute>](TypedFrameNode<RelativeContainerAttribute>)
 
@@ -18,7 +18,7 @@ Define the RelativeContainer type of FrameNode.
 abstract initialize(): RelativeContainerAttribute
 ```
 
-Initialize RelativeContainer FrameNode.
+初始化RelativeContainer类型的FrameNode。
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ Initialize RelativeContainer FrameNode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) |  |
 

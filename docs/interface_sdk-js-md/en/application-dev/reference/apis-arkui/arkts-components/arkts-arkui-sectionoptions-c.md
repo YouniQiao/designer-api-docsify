@@ -1,6 +1,6 @@
 # SectionOptions
 
-Describes the configuration of the water flow item section.
+FlowItem分组配置信息。
 
 **Since:** 12
 
@@ -16,11 +16,11 @@ Describes the configuration of the water flow item section.
 onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 ```
 
-Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width.
+瀑布流组件布局过程中获取指定index的FlowItem的主轴大小，纵向瀑布流时为高度，横向瀑布流时为宽度，单位vp。不设置时，瀑布流按FlowItem的常规测量结果确定主轴大小。
 
-**NOTE**
+**说明：**
 
-1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used,the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**,which will override the main-axis length of **FlowItem**.2. Using **onGetItemMainSizeByIndex** can improve the efficiency of jumping to a specific position or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMainSizeByIndex** with sections that do not have it set, as this can cause layout exceptions.3. If **onGetItemMainSizeByIndex** returns a negative number, the height of the water flow item is 0.
+1. 同时使用onGetItemMainSizeByIndex和FlowItem的宽高属性时，主轴大小以onGetItemMainSizeByIndex返回结果为准，onGetItemMainSizeByIndex会覆盖FlowItem的主轴长度。2. 使用onGetItemMainSizeByIndex可以提高瀑布流跳转到指定位置或index时的效率，避免混用设置onGetItemMainSizeByIndex和未设置的分组，否则会导致布局异常。3. onGetItemMainSizeByIndex返回负数时，FlowItem主轴大小为0。4. 如果FlowItem主轴大小会随数据动态变化，应保证onGetItemMainSizeByIndex返回值与数据源保持一致。使用[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)时，数据变化后应调用[onDataChange](../arkts-apis/arkts-arkui-lazyforeach-datachangelistener-i.md/arkts-arkui-lazyforeach-datachangelistener-i.md#ondatachange)、[onDataReloaded](../arkts-apis/arkts-arkui-lazyforeach-datachangelistener-i.md/arkts-arkui-lazyforeach-datachangelistener-i.md#ondatareloaded)或[onDatasetChange](../arkts-apis/arkts-arkui-lazyforeach-datachangelistener-i.md/arkts-arkui-lazyforeach-datachangelistener-i.md#ondatasetchange)等方法通知框架数据已变化；使用[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)时，应按Repeat的数据更新规则修改状态数组。
 
 **Since:** 12
 
@@ -40,9 +40,9 @@ Callback used to obtain the main axis size, in vp, of the water flow item at a s
 columnsGap?: Dimension
 ```
 
-Column gap of the section. If this parameter is not set, the [columnsGap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+该分组的列间距，不设置该参数时默认使用瀑布流的[columnsGap](WaterFlowAttribute#columnsGap)，设置非法值时使用0vp。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
 
@@ -62,11 +62,7 @@ Column gap of the section. If this parameter is not set, the [columnsGap]\_\_\_J
 crossCount?: number
 ```
 
-Number of columns (in vertical layout) or rows (in horizontal layout).
-
-Default value: **1**
-
-If the value is less than 1, the default value is used.
+纵向布局时为列数，横向布局时为行数，默认值：1。小于1的按默认值处理。
 
 **Type:** number
 
@@ -90,8 +86,7 @@ If the value is less than 1, the default value is used.
 itemsCount: number
 ```
 
-Number of **FlowItem** components in a section. The value must be a non-negative number. If the **splice**,  
-**push**, or **update** APIs receive a section whose **itemsCount** is set to a negative number, these APIs will not be executed. Do not use a section whose **itemsCount** is **0**. Otherwise, the layout calculation may be abnormal.
+分组中FlowItem数量，必须是非负数。若splice、push、update方法收到的分组中有分组的itemsCount小于0，则该方法不会生效（返回false）。避免使用itemsCount为0的分组，否则可能导致布局计算异常。
 
 **Type:** number
 
@@ -113,15 +108,15 @@ Number of **FlowItem** components in a section. The value must be a non-negative
 margin?: Margin | Dimension
 ```
 
-Margins of the section. A value of the **Length** type specifies the margins on all the four sides.
+该分组的外边距参数为Length类型时，四个方向外边距同时生效。
 
-Default value: **0**
+默认值：0
 
-Unit: vp
+单位：vp
 
-When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
+margin设置百分比时，上下左右外边距均以瀑布流的width作为基础值。
 
-**Type:** Margin \| Dimension
+**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| Dimension
 
 **Default:** {top: 0, right: 0, bottom: 0, left: 0}
 
@@ -143,10 +138,9 @@ When **margin** is set to a percentage, the width of the **WaterFlow** component
 rowsGap?: Dimension
 ```
 
-Row gap of the section. If this parameter is not set, the [rowsGap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the  
-**WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+该分组的行间距，不设置该参数时默认使用瀑布流的[rowsGap](WaterFlowAttribute#rowsGap)，设置非法值时使用0vp。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
 

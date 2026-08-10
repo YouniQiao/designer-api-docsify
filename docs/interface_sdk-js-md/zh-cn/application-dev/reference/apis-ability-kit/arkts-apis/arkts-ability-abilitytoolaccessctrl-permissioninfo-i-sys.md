@@ -20,7 +20,7 @@ authStatusInfo?: AuthStatusInfo
 
 授权状态信息。
 
-**类型：** AuthStatusInfo
+**类型：** [AuthStatusInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authstatusinfo-i-sys.md)
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,6 @@
 # SystemPanelStatus (System API)
 
-System panel status.
+系统面板状态。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ System panel status.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
+```
+
 ## inputType
 
 ```TypeScript
 inputType: InputMethodInputType
 ```
 
-The input type of the input method.
+输入法的输入类型。
 
-**Type:** InputMethodInputType
+**Type:** [InputMethodInputType](arkts-ime-inputmethodsystempanelmanager-inputmethodinputtype-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -40,7 +46,7 @@ The input type of the input method.
 isPanelRaised: boolean
 ```
 
-Whether the system panel needs to be raised.
+系统面板是否需要抬起。
 
 **Type:** boolean
 
@@ -62,7 +68,7 @@ Whether the system panel needs to be raised.
 needFuncButton: boolean
 ```
 
-Whether the system panel's function button is needed.
+系统面板的功能按钮是否需要。
 
 **Type:** boolean
 
@@ -84,9 +90,9 @@ Whether the system panel's function button is needed.
 panelFlag: PanelFlag
 ```
 
-The panel flag of the input method's soft keyboard panel.
+输入法软键盘面板的面板标志。
 
-**Type:** PanelFlag
+**Type:** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 
 **Since:** 26.0.0
 

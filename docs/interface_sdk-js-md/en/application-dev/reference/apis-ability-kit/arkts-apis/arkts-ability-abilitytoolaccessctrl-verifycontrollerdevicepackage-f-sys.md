@@ -7,7 +7,7 @@ export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], r
     Promise<boolean[]>
 ```
 
-Verifies the authorization package from the controller device.This function verifies the remote authorization package sent by the controller device.It validates the ticket and remote device information to ensure the authorization is legitimate.
+验证来自控制器设备的授权包。验证控制器设备发送的远程授权包。它验证票证和远程设备信息，以确保授权是合法的。
 
 **Since:** 26.1.0
 
@@ -25,23 +25,23 @@ Verifies the authorization package from the controller device.This function veri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ticketInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Remote authorization package list. |
-| remoteInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Remote device information. |
+| ticketInfo | [RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[] | Yes | 远程授权包列表 |
+| remoteInfo | [RemoteInfo](arkts-ability-abilitytoolaccessctrl-remoteinfo-i-sys.md) | Yes | 远端设备信息 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean[]&gt; | Promise used to return \_\_\_ESCAPED\_DOLLAR\_\_\_{boolean[]}. |
+| Promise&lt;boolean[]&gt; | Promise用于返回\\${boolean[]}。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY\_\_\_ESCAPED\_UNDERSCORE\_\_\_TOOL\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 24010000 | Invalid parameter. Format of ticketInfo or remoteInfo is invalid. |
-| 24010001 | Service is abnormal. possible cause: IPC failed. |
+| 201 | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
+| 202 | The caller is not a system application. |
 | 24010002 | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
 | 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
+| 24010000 | Invalid parameter. Format of ticketInfo or remoteInfo is invalid. |
+| 24010001 | Service is abnormal. possible cause: IPC failed. |
 

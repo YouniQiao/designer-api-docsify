@@ -18,11 +18,11 @@ export type InputKeyEventCallback = (event: InputKeyEvent) => boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | InputKeyEvent | 是 | 输入按键事件对象，包含按键编码、事件类型、触发时间等按键事件相关信息。  |
+| event | InputKeyEvent | 是 | 输入按键事件对象，包含按键编码、事件类型、触发时间等按键事件相关信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否消费该按键事件：返回true表示消费此事件，系统不再向下传递该事件；返回false表示不消费此事件，系统将继续处理该事件。  |
+| boolean | 是否消费该按键事件：返回true表示消费此事件，系统不再向下传递该事件；返回false表示不消费此事件，系统将继续处理该事件。 |
 

@@ -22,11 +22,11 @@ Create a FrameNode of Badge type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the FrameNode. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return Badge type FrameNode. |
+| [Badge](arkts-arkui-typenode-badge-t.md) | Return Badge type FrameNode. |
 

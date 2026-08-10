@@ -1,6 +1,6 @@
 # DecodingOptions
 
-Describes the image decoding options.
+图像解码设置选项。
 
 **Since:** 7
 
@@ -10,15 +10,21 @@ Describes the image decoding options.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## resolutionQuality
 
 ```TypeScript
 resolutionQuality?: ResolutionQuality
 ```
 
-Image quality.
+画质效果等级。
 
-**Type:** ResolutionQuality
+**Type:** [ResolutionQuality](../../apis-arkui/arkts-apis/arkts-arkui-resolutionquality-t-sys.md)
 
 **Since:** 12
 

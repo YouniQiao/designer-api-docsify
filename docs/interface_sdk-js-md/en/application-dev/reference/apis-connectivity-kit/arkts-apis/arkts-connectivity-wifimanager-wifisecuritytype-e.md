@@ -114,7 +114,7 @@ EAP authentication.
 WIFI_SEC_TYPE_EAP_SUITE_B = 6
 ```
 
-SUITE\_B\_192 192 bit level.
+SUITE_B_192 192 bit level.
 
 **Since:** 9
 

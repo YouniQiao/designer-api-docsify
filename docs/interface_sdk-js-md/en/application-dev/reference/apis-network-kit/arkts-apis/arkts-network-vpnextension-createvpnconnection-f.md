@@ -1,5 +1,11 @@
 # createVpnConnection
 
+## Modules to Import
+
+```TypeScript
+import { vpnExtension } from 'kits/@kit.NetworkKit';
+```
+
 ## createVpnConnection
 
 ```TypeScript
@@ -22,17 +28,17 @@ Create a VPN connection using the VpnExtensionContext.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| context | [VpnExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-vpnextensioncontext-t.md) | Yes | Indicates the context of application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the VpnConnection of the construct VpnConnection instance. |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | the VpnConnection of the construct VpnConnection instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 

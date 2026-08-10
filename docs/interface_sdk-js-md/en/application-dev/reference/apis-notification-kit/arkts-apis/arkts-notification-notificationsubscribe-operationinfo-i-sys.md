@@ -1,6 +1,6 @@
 # OperationInfo (System API)
 
-Defines cross-device collaborative operation information.
+跨设备协同操作信息。
 
 **Since:** 18
 
@@ -12,14 +12,20 @@ Defines cross-device collaborative operation information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+```
+
 ## actionName
 
 ```TypeScript
 actionName?: string
 ```
 
-Operation button displayed in the notification. The value must be the same as that of **title** in  
-[NotificationActionButton]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+描述通知中显示的操作按钮（与通知  
+[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)中title字段保持一致）。
 
 **Type:** string
 
@@ -39,9 +45,9 @@ Operation button displayed in the notification. The value must be the same as th
 buttonIndex?: int
 ```
 
-Index of the non-live view button or live view auxiliary area that the user taps.
+用户点击的非实况通知按钮序号或实况通知辅助区序号。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -59,14 +65,14 @@ Index of the non-live view button or live view auxiliary area that the user taps
 operationType?: int
 ```
 
-Operation type.
+用户点击操作类型。
 
-- **0**: The user taps the non-live view.  
-- **1**: The user taps the non-live view button.  
-- **32**: The user taps the live view.  
-- **33**: The user taps the live view auxiliary area.
+- 0：用户点击非实况通知本体。  
+- 1：用户点击非实况通知按钮。  
+- 32：用户点击实况通知本体。  
+- 33：用户点击实况通知辅助区
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -84,8 +90,8 @@ Operation type.
 userInput?: string
 ```
 
-User input, used to apply quick reply across devices. The value must be the same as that of **inputKey** in  
-[NotificationUserInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+用户输入（用于通知跨设备快捷回复场景传递用户输入，与通知  
+[NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md)中inputKey字段保持一致）。
 
 **Type:** string
 

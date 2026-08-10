@@ -1,6 +1,6 @@
 # Scope
 
-The Scope interface is used to describe the valid range of a field.
+Scope 接口用于描述字段的有效范围。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ The Scope interface is used to describe the valid range of a field.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## clamp
 
 ```TypeScript
 clamp(value: ScopeType): ScopeType
 ```
 
-Limits a value to this **Scope**.
+将一个值限制在此 **Scope** 范围内。
 
 **Since:** 8
 
@@ -38,15 +44,15 @@ Limits a value to this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果 在此 **Scope** 范围内，则返回指定值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -84,7 +90,7 @@ console.info("result = " + result);
 constructor(lowerObj: ScopeType, upperObj: ScopeType)
 ```
 
-A constructor used to create a **Scope** object with the specified upper and lower limits.
+用于创建具有指定上下限的 **Scope** 对象的构造函数。
 
 **Since:** 8
 
@@ -102,10 +108,10 @@ A constructor used to create a **Scope** object with the specified upper and low
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Lower limit of the **Scope** object. |
-| upperObj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Upper limit of the **Scope** object. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Scope** 对象的下限。 |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Scope** 对象的上限。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -141,7 +147,7 @@ console.info("range = " + range);
 contains(value: ScopeType): boolean
 ```
 
-Checks whether a value is within this **Scope**.
+判断一个值是否在此 **Scope** 范围内。
 
 **Since:** 8
 
@@ -159,15 +165,15 @@ Checks whether a value is within this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the value is within this **Scope**; otherwise, **false** is returned. |
+| boolean | 检查结果。如果值在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -205,7 +211,7 @@ console.info("result = " + result);
 contains(range: Scope): boolean
 ```
 
-Checks whether a range is within this **Scope**.
+判断一个范围是否在此 **Scope** 范围内。
 
 **Since:** 8
 
@@ -223,15 +229,15 @@ Checks whether a range is within this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scope** specified. |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | 指定的 **Scope**。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the range is within this **Scope**; otherwise, **false** is returned. |
+| boolean | 检查结果。如果范围在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -271,7 +277,7 @@ console.info("result = " + result);
 expand(lowerObj: ScopeType, upperObj: ScopeType): Scope
 ```
 
-Obtains the union set of this **Scope** and the given lower and upper limits.
+获取此 **Scope** 与给定上下限的并集。
 
 **Since:** 8
 
@@ -289,16 +295,16 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Lower limit. |
-| upperObj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 下限。 |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 上限。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Union set of this **Scope** and the given lower and upper limits. |
+| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定上下限的并集。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -337,7 +343,7 @@ console.info("result = " + result);
 expand(range: Scope): Scope
 ```
 
-Obtains the union set of this **Scope** and the given **Scope**.
+获取此 **Scope** 与给定 **Scope** 的并集。
 
 **Since:** 8
 
@@ -355,15 +361,15 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scope** specified. |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | 指定的 **Scope**。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Union set of this **Scope** and the given **Scope**. |
+| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定 **Scope** 的并集。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -403,7 +409,7 @@ console.info("result = " + result);
 expand(value: ScopeType): Scope
 ```
 
-Obtains the union set of this **Scope** and the given value.
+获取此 **Scope** 与给定值的并集。
 
 **Since:** 8
 
@@ -421,15 +427,15 @@ Obtains the union set of this **Scope** and the given value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Union set of this **Scope** and the given value. |
+| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定值的并集。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -467,7 +473,7 @@ console.info("result = " + result);
 getLower(): ScopeType
 ```
 
-Obtains the lower limit of this **Scope**.
+获取此 **Scope** 的下限。
 
 **Since:** 8
 
@@ -485,9 +491,9 @@ Obtains the lower limit of this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Lower limit of this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的下限。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -524,7 +530,7 @@ console.info("result = " + result);
 getUpper(): ScopeType
 ```
 
-Obtains the upper limit of this **Scope**.
+获取此 **Scope** 的上限。
 
 **Since:** 8
 
@@ -542,9 +548,9 @@ Obtains the upper limit of this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Upper limit of this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的上限。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -581,7 +587,7 @@ console.info("result = " + result);
 intersect(range: Scope): Scope
 ```
 
-Obtains the intersection of this **Scope** and the given **Scope**.
+获取此 **Scope** 与给定 **Scope** 的交集。
 
 **Since:** 8
 
@@ -599,15 +605,15 @@ Obtains the intersection of this **Scope** and the given **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scope** specified. |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | 指定的 **Scope**。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Intersection of this **Scope** and the given **Scope**. |
+| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定 **Scope** 的交集。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -647,7 +653,7 @@ console.info("result = " + result);
 intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 ```
 
-Obtains the intersection of this **Scope** and the given lower and upper limits.
+获取此 **Scope** 与给定上下限的交集。
 
 **Since:** 8
 
@@ -665,16 +671,16 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Lower limit. |
-| upperObj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 下限。 |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 上限。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Intersection of this **Scope** and the given lower and upper limits. |
+| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定上下限的交集。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -713,7 +719,7 @@ console.info("result = " + result);
 toString(): string
 ```
 
-Obtains a string representation that contains this **Scope**.
+获取包含此 **Scope** 的字符串表示形式。
 
 **Since:** 8
 
@@ -731,9 +737,9 @@ Obtains a string representation that contains this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| string | String representation containing the **Scope**. |
+| string | 包含此 **Scope** 的字符串表示形式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {

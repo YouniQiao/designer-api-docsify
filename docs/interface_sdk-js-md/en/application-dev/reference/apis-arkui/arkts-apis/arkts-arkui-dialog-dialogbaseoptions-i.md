@@ -1,6 +1,6 @@
 # DialogBaseOptions
 
-Base options shared by all dialog types.
+所有Dialog类型共享的基本选项。
 
 **Since:** 26.1.0
 
@@ -10,13 +10,19 @@ Base options shared by all dialog types.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## onDidAppear
 
 ```TypeScript
 onDidAppear?: VoidCallback
 ```
 
-Callback function when the dialog appears.
+对话框出现时的回调函数。
 
 **Since:** 26.1.0
 
@@ -36,7 +42,7 @@ Callback function when the dialog appears.
 onDidDisappear?: VoidCallback
 ```
 
-Callback function when the dialog disappears.
+对话框消失时的回调函数。
 
 **Since:** 26.1.0
 
@@ -56,7 +62,7 @@ Callback function when the dialog disappears.
 onWillAppear?: VoidCallback
 ```
 
-Callback function before the dialog open animation starts.
+对话框打开动画开始前的回调函数。
 
 **Since:** 26.1.0
 
@@ -76,7 +82,7 @@ Callback function before the dialog open animation starts.
 onWillDisappear?: VoidCallback
 ```
 
-Callback function before the dialog close animation starts.
+对话框关闭动画开始前的回调函数。
 
 **Since:** 26.1.0
 
@@ -96,9 +102,9 @@ Callback function before the dialog close animation starts.
 alignment?: DialogBaseAlignment
 ```
 
-Alignment of the dialog.
+对话框的对齐模式。
 
-**Type:** DialogBaseAlignment
+**Type:** [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md)
 
 **Since:** 26.1.0
 
@@ -118,7 +124,7 @@ Alignment of the dialog.
 autoCancel?: boolean
 ```
 
-Whether to allow dismissal by touching the mask or pressing the Back button.
+是否允许通过触摸面罩或按返回键退出。
 
 **Type:** boolean
 
@@ -142,9 +148,9 @@ Whether to allow dismissal by touching the mask or pressing the Back button.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Setting this parameter to BlurStyle.NONE disables the background blur.
+对话框的背景模糊样式。&lt;br&gt;设置为BlurStyle.NONE将禁用背景模糊。
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -166,9 +172,9 @@ Background blur style of the dialog box.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Setti
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Background blur style with options.
+带选项的背景模糊样式。
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
 **Since:** 26.1.0
 
@@ -188,9 +194,9 @@ Background blur style with options.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
+对话框的背景颜色。&lt;br&gt;当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
@@ -212,9 +218,9 @@ Background color of the dialog box.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_When backg
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Background effect with options.
+带选项的背景效果。
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 26.1.0
 
@@ -234,9 +240,9 @@ Background effect with options.
 borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 ```
 
-Border color of the dialog box.
+对话框的边框颜色。
 
-**Type:** ResourceColor \| EdgeColors \| LocalizedEdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
 
 **Default:** Color.Black
 
@@ -258,9 +264,9 @@ Border color of the dialog box.
 borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-Border radius of the background.
+背景的边框半径。
 
-**Type:** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -282,9 +288,9 @@ Border radius of the background.
 borderStyle?: BorderStyle | EdgeStyles
 ```
 
-Border style of the dialog box.
+对话框边框样式。
 
-**Type:** BorderStyle \| EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-enums-borderstyle-e.md) \| EdgeStyles
 
 **Default:** BorderStyle.Solid
 
@@ -306,9 +312,9 @@ Border style of the dialog box.
 borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 ```
 
-Border width of the dialog box.
+对话框边框宽度。
 
-**Type:** Dimension \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
 
 **Default:** 0
 
@@ -330,9 +336,9 @@ Border width of the dialog box.
 controller?: DialogBaseController
 ```
 
-Dialog controller.
+Dialog 控制器。
 
-**Type:** DialogBaseController
+**Type:** [DialogBaseController](arkts-arkui-arkui-dialog-dialogbasecontroller-c.md)
 
 **Since:** 26.1.0
 
@@ -352,9 +358,9 @@ Dialog controller.
 dialogTransition?: TransitionEffect
 ```
 
-Dialog transition parameters for opening/closing the dialog content area.
+用于打开/关闭对话框内容区域的对话框过渡动效参数。
 
-**Type:** TransitionEffect
+**Type:** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **Since:** 26.1.0
 
@@ -374,9 +380,9 @@ Dialog transition parameters for opening/closing the dialog content area.
 displayModeInSubWindow?: DialogDisplayMode
 ```
 
-Defines the dialog display mode when show in subwindow.
+定义在子窗口中显示时的对话框显示模式。
 
-**Type:** DialogDisplayMode
+**Type:** [DialogDisplayMode](arkts-arkui-enums-dialogdisplaymode-e.md)
 
 **Default:** DialogDisplayMode.SCREEN_BASED
 
@@ -398,7 +404,7 @@ Defines the dialog display mode when show in subwindow.
 enableHoverMode?: boolean
 ```
 
-Whether to enable the hover mode.
+是否启用悬停模式。
 
 **Type:** boolean
 
@@ -422,7 +428,7 @@ Whether to enable the hover mode.
 focusable?: boolean
 ```
 
-Whether the dialog box can get focus.
+对话框是否可以获得焦点。
 
 **Type:** boolean
 
@@ -446,9 +452,9 @@ Whether the dialog box can get focus.
 height?: Dimension
 ```
 
-Height of the dialog box.
+对话框的高度。
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 26.1.0
 
@@ -468,9 +474,9 @@ Height of the dialog box.
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box in hover mode.
+悬停模式下对话框的显示区域。
 
-**Type:** HoverModeAreaType
+**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -492,9 +498,9 @@ Display area of the dialog box in hover mode.
 immersiveMode?: ImmersiveMode
 ```
 
-Overlay effect for the page-level dialog box.
+页面级对话框蒙层效果。
 
-**Type:** ImmersiveMode
+**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -516,7 +522,7 @@ Overlay effect for the page-level dialog box.
 isModal?: boolean
 ```
 
-Whether the dialog box is a modal.
+对话框是否为模态。
 
 **Type:** boolean
 
@@ -540,9 +546,9 @@ Whether the dialog box is a modal.
 keyboardAvoidDistance?: LengthMetrics
 ```
 
-Distance between the dialog and system keyboard.
+对话框与系统键盘之间的距离。
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 26.1.0
 
@@ -562,9 +568,9 @@ Distance between the dialog and system keyboard.
 keyboardAvoidMode?: KeyboardAvoidMode
 ```
 
-Keyboard avoid mode.
+键盘避让模式。
 
-**Type:** KeyboardAvoidMode
+**Type:** [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
 
 **Default:** KeyboardAvoidMode.DEFAULT
 
@@ -586,9 +592,9 @@ Keyboard avoid mode.
 levelMode?: LevelMode
 ```
 
-Display level of the dialog box.
+对话框的显示级别。
 
-**Type:** LevelMode
+**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
@@ -610,9 +616,9 @@ Display level of the dialog box.
 levelOrder?: LevelOrder
 ```
 
-Display order of the dialog.
+对话框的显示顺序。
 
-**Type:** LevelOrder
+**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **Default:** The value returned by LevelOrder.clamp(0)
 
@@ -634,7 +640,7 @@ Display order of the dialog.
 levelUniqueId?: int
 ```
 
-Unique ID of the node under the display level for the page-level dialog box.The value should be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
+页面级对话框显示层下节点的唯一标识。取值限定为整数。&lt;br&gt;该参数仅在levelMode为LevelMode.EMBEDDED时生效。
 
 **Type:** int
 
@@ -656,9 +662,9 @@ Unique ID of the node under the display level for the page-level dialog box.The 
 maskColor?: ResourceColor
 ```
 
-Mask color of the dialog.
+对话框的蒙层颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.1.0
 
@@ -678,9 +684,9 @@ Mask color of the dialog.
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted.
+对话框的蒙层区域。
 
-**Type:** Rectangle
+**Type:** [Rectangle](arkts-arkui-common-rectangle-i.md)
 
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' }
 
@@ -702,9 +708,9 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 maskTransition?: TransitionEffect
 ```
 
-Mask transition parameters for opening/closing the mask.
+用于打开/关闭遮罩的蒙层过渡动效参数。
 
-**Type:** TransitionEffect
+**Type:** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **Since:** 26.1.0
 
@@ -724,9 +730,9 @@ Mask transition parameters for opening/closing the mask.
 offset?: Offset
 ```
 
-Offset of the dialog relative to the alignment position.
+对话框相对于对齐位置的偏移。
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 26.1.0
 
@@ -746,9 +752,9 @@ Offset of the dialog relative to the alignment position.
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-Callback for interactive closure of the dialog box.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button.The reason parameter in the callback is used to determine whether the dialog can be closed.
+对话框交互关闭的回调。&lt;br&gt;如果注册了此回调，则用户点击后对话框不会立即关闭遮罩或返回按钮。回调中的reason参数用于判断是否可以关闭对话框。
 
-**Type:** Callback&lt;DialogDismissal&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DialogDismissal&gt;
 
 **Since:** 26.1.0
 
@@ -768,9 +774,9 @@ Callback for interactive closure of the dialog box.\_\_\_HTML\_TAG\_DESC\_USD\_0
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.
+对话框的阴影。
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
 **Since:** 26.1.0
 
@@ -790,7 +796,7 @@ Shadow of the dialog box.
 showInSubWindow?: boolean
 ```
 
-Whether to display in a subwindow.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_isModal = true and showInSubWindow = true cannot be used at the same time.
+是否在子窗口中显示。&lt;br&gt;isModal = true和showInSubWindow = true不能同时使用。
 
 **Type:** boolean
 
@@ -814,9 +820,9 @@ Whether to display in a subwindow.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_isModal = t
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+为对话框设置系统样式材质。不同的材料有不同的效果，会影响背景色、边框、阴影和对话框的其他视觉属性。
 
-**Type:** SystemUiMaterial
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.1.0
 
@@ -836,9 +842,9 @@ Set system-styled materials for dialog. Different materials have different effec
 width?: Dimension
 ```
 
-Width of the dialog box.
+对话框的宽度。
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 26.1.0
 

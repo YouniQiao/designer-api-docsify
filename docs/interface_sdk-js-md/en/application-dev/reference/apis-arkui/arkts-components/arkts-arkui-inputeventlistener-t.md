@@ -6,24 +6,22 @@ declare type InputEventListener = (
 ) => InputEventInterceptResult
 ```
 
-Input event listener callback type.
-    **NOTE**  
-    
-    - **RawInputEventWrapper** is an abstract class. Developers cannot create instances using the \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ operator.  
-    
-    - The system automatically creates instances when an event is triggered and passes them to the callback through  
-    this parameter.  
-    
-    - The current callback parameter **event** only encapsulates the following raw input event types:  
-    [MouseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, [TouchEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, [KeyEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_. Developers can obtain  
-    the corresponding event objects using [asMouseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_,  
-    [asTouchEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_, and [asKeyEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_.  
-    
-    - Do not perform time-consuming operations (such as complex calculations or network requests) in the callback, as  
-    this may cause application lag.  
-    
-    - The listener executes synchronously on the UI thread, which directly blocks the event processing flow. It is  
-    recommended to only perform simple judgment and calculation.
+输入事件监听器回调函数类型。
+
+> **说明：**
+> 
+> - RawInputEventWrapper是抽象类，开发者无法使用`new`运算符创建实例。
+> 
+> - 系统会在事件触发时自动创建实例并通过此参数传递给回调函数。
+> 
+> - 当前回调参数event仅会封装以下原始输入事件类型：
+> [MouseEvent](arkts-arkui-mouseevent-i.md)、[TouchEvent](arkts-arkui-touchevent-i.md)、[KeyEvent](arkts-arkui-keyevent-i.md)。开发者可通过
+> [asMouseEvent](arkts-arkui-rawinputeventwrapper-c.md#asmouseevent)、[asTouchEvent](arkts-arkui-rawinputeventwrapper-c.md#astouchevent)、
+> [asKeyEvent](arkts-arkui-rawinputeventwrapper-c.md#askeyevent)获取对应事件对象。
+> 
+> - 请勿在回调中执行耗时操作（如复杂计算或网络请求），否则可能导致应用卡顿。
+> 
+> - 监听器在UI线程中同步执行会直接阻塞事件处理流程。建议只进行简单的判断和计算。
 
 **Since:** 26.0.0
 
@@ -41,11 +39,11 @@ Input event listener callback type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Input event wrapper. The system automatically creates and passes it. Developers do not need to create it manually.  |
+| event | [RawInputEventWrapper](arkts-arkui-rawinputeventwrapper-c.md) | Yes | 输入事件包装器，系统自动创建和传递，开发者无需手动创建。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Event interception result.  |
+| [InputEventInterceptResult](arkts-arkui-inputeventinterceptresult-i.md) | 事件拦截结果。 |
 

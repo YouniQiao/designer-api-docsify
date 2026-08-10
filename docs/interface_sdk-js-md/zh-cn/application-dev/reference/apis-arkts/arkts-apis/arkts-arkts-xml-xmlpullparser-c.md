@@ -10,6 +10,12 @@ XmlPullParser接口用于解析现有的XML文件。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { xml } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
@@ -35,7 +41,7 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 | buffer | ArrayBuffer \| DataView | 是 | 用于解析的XML文本信息。 |
 | encoding | string | 否 | 编码格式，默认'utf-8'（目前仅支持'utf-8'）。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -72,9 +78,9 @@ parse(option: ParseOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | XML解析选项。 |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 是 | XML解析选项。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -128,5 +134,5 @@ parseXml(option: ParseOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | XML解析选项。 |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 是 | XML解析选项。 |
 

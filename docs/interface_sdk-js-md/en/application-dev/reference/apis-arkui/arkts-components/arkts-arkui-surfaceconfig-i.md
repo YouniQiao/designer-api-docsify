@@ -1,6 +1,6 @@
 # SurfaceConfig
 
-Describes whether the surface held by the **XComponent** is treated as opaque during rendering.
+Surface配置。
 
 **Since:** 22
 
@@ -16,8 +16,9 @@ Describes whether the surface held by the **XComponent** is treated as opaque du
 isOpaque?: boolean
 ```
 
-Whether the surface held by the **XComponent** is treated as opaque during rendering. If this attribute is not set,the default value **false** is used, indicating that the transparency of the pixels in the content drawn on the surface will be applied during rendering.  
-**true**: yes; **false**: no.Default value: **false**.
+是否需要将XComponent所持有的surface视为不透明，即使该surface具有半透明像素。true表示需要视为不透明，false表示其他情况。
+
+默认值：**false**。
 
 **Type:** boolean
 

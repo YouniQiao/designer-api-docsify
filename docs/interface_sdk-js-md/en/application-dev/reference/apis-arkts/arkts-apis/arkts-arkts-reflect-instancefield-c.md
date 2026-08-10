@@ -34,7 +34,7 @@ Checks if the current instance field is equal to the given instance field.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Another StaticField object to compare with the current StaticField instance. |
+| other | [InstanceField](arkts-arkts-reflect-instancefield-c.md) | Yes | Another StaticField object to compare with the current StaticField instance. |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Reads the value from the instance field.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| thisObj | Object | Yes | The target object as the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ context. |
+| thisObj | Object | Yes | The target object as the `this` context. |
 
 **Return value:**
 
@@ -94,6 +94,6 @@ Writes a value to the instance field.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| thisObj | Object | Yes | The target object as the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ context. |
+| thisObj | Object | Yes | The target object as the `this` context. |
 | value | Any | Yes | The value to write. |
 

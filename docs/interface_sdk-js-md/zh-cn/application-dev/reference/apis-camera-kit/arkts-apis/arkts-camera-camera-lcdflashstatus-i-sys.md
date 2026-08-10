@@ -12,6 +12,12 @@ Describes the LCD flash information.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isLcdFlashNeeded
 
 ```TypeScript
@@ -40,7 +46,7 @@ readonly lcdCompensation: int
 
 LCD flash compensation.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

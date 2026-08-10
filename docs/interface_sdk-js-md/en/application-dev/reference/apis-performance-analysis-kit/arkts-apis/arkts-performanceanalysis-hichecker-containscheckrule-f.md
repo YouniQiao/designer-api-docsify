@@ -1,12 +1,18 @@
 # containsCheckRule
 
+## Modules to Import
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## containsCheckRule
 
 ```TypeScript
 function containsCheckRule(rule: bigint) : boolean
 ```
 
-Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this operation is performed only on the current thread.
+��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ��
 
 **Since:** 9
 
@@ -20,21 +26,21 @@ Checks whether the specified rule exists in the collection of added rules. If th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | Rule to be checked. |
+| rule | bigint | Yes | ��Ҫ��ѯ�Ĺ��� |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. If the rule exists in the collection of added rules, **true** is returned; otherwise, **false** is returned. |
+| boolean | ��ѯ�����true ��ʾ���������ӣ�false ��ʾ����δ���ӡ� |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
+| 401 | the parameter check failed, only one bigint type parameter is needed |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

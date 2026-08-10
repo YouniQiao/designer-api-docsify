@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
+
 ## extraInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ extraInfo?: Record<string, Object>
 
 额外数据。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ finalCode: int
 
 触发wantAgent的返回码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -78,7 +84,7 @@ info: WantAgent
 
 触发的wantAgent。
 
-**类型：** WantAgent
+**类型：** [WantAgent](arkts-ability-wantagent-t.md)
 
 **起始版本：** 9
 
@@ -98,7 +104,7 @@ want: Want
 
 触发wantAgent时实际使用的want信息。
 
-**类型：** Want
+**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 9
 

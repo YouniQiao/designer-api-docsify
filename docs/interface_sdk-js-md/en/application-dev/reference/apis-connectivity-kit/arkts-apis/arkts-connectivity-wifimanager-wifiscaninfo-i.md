@@ -10,6 +10,12 @@ Describes the scanned Wi-Fi information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## band
 
 ```TypeScript
@@ -18,7 +24,7 @@ band: int
 
 Frequency band, 1: 2.4G, 2: 5G
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,7 +62,7 @@ bssidType: DeviceAddressType
 
 Wi-Fi bssid type
 
-**Type:** DeviceAddressType
+**Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
 **Since:** 12
 
@@ -94,7 +100,7 @@ centerFrequency0: int
 
 Center frequency 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -112,7 +118,7 @@ centerFrequency1: int
 
 Center frequency 1.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -130,7 +136,7 @@ channelWidth: int
 
 Channel width
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -148,7 +154,7 @@ frequency: int
 
 Frequency
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -204,7 +210,7 @@ rssi: int
 
 Received signal strength indicator (RSSI)
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -224,7 +230,7 @@ securityType: WifiSecurityType
 
 Security type: reference definition of WifiSecurityType
 
-**Type:** WifiSecurityType
+**Type:** [WifiSecurityType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-wifisecuritytype-e.md)
 
 **Since:** 12
 
@@ -264,7 +270,7 @@ supportedWifiCategory: WifiCategory
 
 Supported wifi category
 
-**Type:** WifiCategory
+**Type:** [WifiCategory](arkts-connectivity-wifimanager-wificategory-e.md)
 
 **Since:** 12
 
@@ -282,7 +288,7 @@ timestamp: long
 
 Time stamp
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

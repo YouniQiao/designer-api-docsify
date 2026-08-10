@@ -1,6 +1,6 @@
 # ListFileExtOptions
 
-Defines the options used in **listFileExt**.
+可选项类型，支持listFileExt接口使用。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Defines the options used in **listFileExt**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## fileFilter
 
 ```TypeScript
 fileFilter?: FileFilter
 ```
 
-File name filtering rule. The default value is empty, indicating that no filtering is performed.
+自定义文件名过滤的规则，默认为空，表示不进行过滤。
 
-**Type:** FileFilter
+**Type:** [FileFilter](arkts-corefile-file-fs-filefilter-i.md)
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ File name filtering rule. The default value is empty, indicating that no filteri
 listNum?: long
 ```
 
-Number of file names to be listed. The default value is **0**, indicating that all files are listed.
+列出文件名数量，默认为0，表示列出所有文件。
 
 **Type:** long
 
@@ -56,11 +62,11 @@ Number of file names to be listed. The default value is **0**, indicating that a
 recursion?: boolean
 ```
 
-Whether to list all files in subfolders recursively. The default value is **false**.
+是否递归子目录下的文件名，默认为false。
 
-**false**: The names of files and directories that meet the filtering requirements in the current directory are returned.
+false：返回当前目录下满足过滤要求的文件名及目录名。
 
-**true**: Relative paths (starting with /) of all files that meet the filtering requirements in the directory are returned.
+true：返回该目录下所有符合过滤条件的文件的相对路径，相对路径以“/”开头。
 
 **Type:** boolean
 

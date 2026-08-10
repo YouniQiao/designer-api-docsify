@@ -1,6 +1,6 @@
 # AmbientTemperatureResponse
 
-Describes the ambient temperature sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+温度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** AmbientTemperatureResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the ambient temperature sensor data. It extends from [Response]\_\_\_J
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## temperature
 
 ```TypeScript
 temperature: double
 ```
 
-Ambient temperature, in degree Celsius.
+环境温度。单位：℃（摄氏度）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # FloatViewConfiguration
 
-Provides parameter configuration required for creating a float view controller.
+创建标准悬浮窗控制器时需要提供的参数配置。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Provides parameter configuration required for creating a float view controller.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## context
 
 ```TypeScript
 context: BaseContext
 ```
 
-Context environment.
+表示上下文环境。
 
-**Type:** BaseContext
+**Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
 **Since:** 26.0.0
 
@@ -36,8 +42,7 @@ Context environment.
 isConfirmOnClose?: boolean
 ```
 
-This field controls whether user confirmation is required when the close button is clicked.  
-**true** if clicking the close button requires user confirmation, otherwise no confirmation is needed.Default value: default value is false.
+控制关闭窗口时是否弹出确认对话框.如果为 true，则点击关闭按钮时需要用户确认；如果为 false，则不需要确认，直接关闭。默认值： 默认值为false。
 
 **Type:** boolean
 
@@ -57,9 +62,9 @@ This field controls whether user confirmation is required when the close button 
 templateType: FloatViewTemplateType
 ```
 
-Template type of the float view.
+标准悬浮窗的模板类型。
 
-**Type:** FloatViewTemplateType
+**Type:** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
 **Since:** 26.0.0
 

@@ -1,14 +1,20 @@
 # getInputMethodEngine
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## getInputMethodEngine
 
 ```TypeScript
 function getInputMethodEngine(): InputMethodEngine
 ```
 
-Obtains an [InputMethodEngine]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance for the input method.
+获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md)（输入法引擎）。
 
-The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event.
+输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。
 
 **Since:** 8
 
@@ -26,9 +32,9 @@ The input method can use the obtained instance to subscribe to a soft keyboard d
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | InputMethodAbility** instance. |
+| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | 输入法应用客户端。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let InputMethodEngine: inputMethodEngine.InputMethodEngine = inputMethodEngine.getInputMethodEngine();

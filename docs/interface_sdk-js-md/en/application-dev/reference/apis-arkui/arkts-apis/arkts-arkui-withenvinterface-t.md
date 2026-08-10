@@ -4,7 +4,7 @@
 export declare type WithEnvInterface = () => WithEnvAttribute
 ```
 
-Define the WithEnv component's type.
+定义WithEnv组件的类型。
 
 **Since:** 26.0.0
 

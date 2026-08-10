@@ -1,5 +1,11 @@
 # createVideoProcessor
 
+## Modules to Import
+
+```TypeScript
+import { videoProcessing } from 'kits/@kit.MediaKit';
+```
+
 ## createVideoProcessor
 
 ```TypeScript
@@ -22,13 +28,13 @@ Create a video processing instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the VideoProcessor instance if the operation is successful; returns null otherwise. |
+| [VideoProcessor](arkts-media-videoprocessing-videoprocessor-i.md) | Returns the VideoProcessor instance if the operation is successful; returns null otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function createVideoProcessor can not work correctly due to limited device capabilities. |
-| [29200003](../../apis-image-kit/errorcode-videoprocessingengine.md#29200003-creation-failure) | Failed to create video processing instance. For example, the number of instances exceeds the upper limit. |
-| [29200007](../../apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| 801 | Capability not supported. Function createVideoProcessor can not work correctly due to limited device capabilities. |
+| 29200007 | Out of memory. |
+| 29200003 | Failed to create video processing instance. For example, the number of instances exceeds the upper limit. |
 

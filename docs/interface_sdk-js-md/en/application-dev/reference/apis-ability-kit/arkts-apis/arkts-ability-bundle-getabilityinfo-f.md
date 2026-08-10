@@ -1,14 +1,20 @@
 # getAbilityInfo
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getAbilityInfo
 
 ```TypeScript
 function getAbilityInfo(bundleName: string, abilityName: string, callback: AsyncCallback<AbilityInfo>): void
 ```
 
-Obtains the ability information based on a given bundle name and ability name. This API uses an asynchronous callback to return the result.
+通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 7
 
@@ -26,9 +32,9 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| abilityName | string | Yes | Ability name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AbilityInfo&gt; | Yes | Callback used to return the ability information. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| abilityName | string | Yes | Ability名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | 程序启动作为入参的回调函数，返回Ability信息。 |
 
 
 ## getAbilityInfo
@@ -37,9 +43,9 @@ No permission is required for obtaining the caller's own information.
 function getAbilityInfo(bundleName: string, abilityName: string): Promise<AbilityInfo>
 ```
 
-Obtains the ability information based on a given bundle name and ability name. This API uses a promise to return the result.
+通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 7
 
@@ -57,12 +63,12 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| abilityName | string | Yes | Ability name. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| abilityName | string | Yes | Ability组件名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityInfo&gt; | Promise used to return the ability information. |
+| Promise&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Promise形式返回Ability信息。 |
 

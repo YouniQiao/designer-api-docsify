@@ -1,6 +1,6 @@
 # FirstMeaningfulPaint
 
-Provides detailed information about the first meaningful paint.
+提供网页绘制页面主要内容的详细信息。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Provides detailed information about the first meaningful paint.
 firstMeaningfulPaintTime?: number
 ```
 
-Paint time of first meaningful content.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+绘制页面主要内容时间，单位以毫秒表示。
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Paint time of first meaningful content.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:m
 navigationStartTime?: number
 ```
 
-Start time of navigation.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:microseconds.
+导航条加载时间，单位以微秒表示。
 
 **Type:** number
 

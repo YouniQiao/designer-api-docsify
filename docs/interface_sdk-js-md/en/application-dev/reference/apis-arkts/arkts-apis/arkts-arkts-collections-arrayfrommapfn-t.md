@@ -4,7 +4,7 @@
 type ArrayFromMapFn<FromElementType, ToElementType> = (value: FromElementType, index: number) => ToElementType
 ```
 
-Defines the ArkTS Array reduction function, which is used by the 'from' API of the Array class.
+ArkTS Array归约函数类型，被Array类的'from'接口使用。
 
 **Since:** 18
 
@@ -20,12 +20,12 @@ Defines the ArkTS Array reduction function, which is used by the 'from' API of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FromElementType | Yes | Element that is being processed.  |
-| index | number | Yes | Index of the element in the ArkTS array.  |
+| value | FromElementType | Yes | 当前正在处理的元素。 |
+| index | number | Yes | 当前遍历的ArkTS Array元素索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToElementType | The transformed value.  |
+| ToElementType | 归约函数的结果，该结果会作为数组的新元素。 |
 

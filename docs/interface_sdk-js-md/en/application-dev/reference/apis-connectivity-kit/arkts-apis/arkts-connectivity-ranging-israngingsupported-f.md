@@ -1,5 +1,11 @@
 # isRangingSupported
 
+## Modules to Import
+
+```TypeScript
+import { ranging } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isRangingSupported
 
 ```TypeScript

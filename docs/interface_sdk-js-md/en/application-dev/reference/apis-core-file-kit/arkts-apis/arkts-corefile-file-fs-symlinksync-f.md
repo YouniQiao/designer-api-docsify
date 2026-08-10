@@ -1,15 +1,22 @@
 # symlinkSync
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## symlinkSync
 
 ```TypeScript
 declare function symlinkSync(target: string, srcPath: string): void
 ```
 
-Creates a symbolic link based on the file path. This API returns the result synchronously.
-    **NOTE**  
-    
-    Since API version 11, this API cannot be used by third-party applications.
+以同步的方法基于文件路径创建符号链接。
+
+> **说明：**
+> 
+> 从API version 11开始，不支持三方应用使用。
 
 **Since:** 9
 
@@ -23,25 +30,25 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | string | Yes | Application sandbox path of the target file. |
-| srcPath | string | Yes | Application sandbox path of the symbolic link. |
+| target | string | Yes | 要链接的目标文件的应用沙箱路径。 |
+| srcPath | string | Yes | 符号链接文件的应用沙箱路径。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900018 | Not a directory |
+| 13900030 | File name too long |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900005 | I/O error |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
+| 13900008 | Bad file descriptor |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 

@@ -1,10 +1,10 @@
 # BlurStyleOptions
 
-Defines the options of blurStyle
+内容模糊选项。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare interface BlurStyleOptions--><!--Device-unnamed-declare interface BlurStyleOptions-End-->
 
@@ -16,17 +16,17 @@ Defines the options of blurStyle
 adaptiveColor?: AdaptiveColor
 ```
 
-Adaptive color mode.
+内容模糊效果使用的取色模式。
 
-Default value: **AdaptiveColor.DEFAULT
+默认值：AdaptiveColor.DEFAULT
 
-**Type:** AdaptiveColor
+**Type:** [AdaptiveColor](../arkts-apis/arkts-arkui-common-adaptivecolor-e.md)
 
 **Default:** AdaptiveColor.DEFAULT
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,17 +42,17 @@ Default value: **AdaptiveColor.DEFAULT
 blurOptions?: BlurOptions
 ```
 
-Grayscale blur parameters.
+灰阶模糊参数。
 
-Default value: **grayscale: [0,0]
+默认值：grayscale: [0,0]
 
-**Type:** BlurOptions
+**Type:** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
 **Default:** { grayScale: [0,0] }
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,17 +68,17 @@ Default value: **grayscale: [0,0]
 colorMode?: ThemeColorMode
 ```
 
-Color mode used for the foreground blur.
+内容模糊效果使用的深浅色模式。
 
-Default value: **ThemeColorMode.SYSTEM
+默认值：ThemeColorMode.SYSTEM
 
-**Type:** ThemeColorMode
+**Type:** [ThemeColorMode](arkts-arkui-themecolormode-e.md)
 
 **Default:** ThemeColorMode.SYSTEM
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,15 +94,15 @@ Default value: **ThemeColorMode.SYSTEM
 scale?: number
 ```
 
-Foreground blur scale.
+内容模糊效果程度。
 
-Default value: **1.0**
+默认值：1.0
 
-Value range: [0.0, 1.0]
+取值范围：[0.0, 1.0]
 
-**1.0** indicates the highest blur degree.
+1.0表示模糊程度最高。
 
-**0.0** indicates the lowest blur degree.
+0.0表示模糊程度最低。
 
 **Type:** number
 

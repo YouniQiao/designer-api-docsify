@@ -1,12 +1,18 @@
 # createCloudServiceStub (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## createCloudServiceStub
 
 ```TypeScript
 function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>
 ```
 
-Creates a RemoteObject instance based on a CloudService instance.The system uses this object to call the APIs of the CloudService instance.This API uses a promise to return the result.
+根据CloudService类的实例创建对应的RemoteObject对象，系统内部通过该对象调用CloudService的实现接口。使用Promise异步回调。
 
 **Since:** 11
 
@@ -22,15 +28,15 @@ Creates a RemoteObject instance based on a CloudService instance.The system uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Instance of the CloudService class. |
+| instance | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Yes | CloudService类的实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudService. |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudService的RemoteObject对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want, ServiceExtensionAbility } from '@kit.AbilityKit';

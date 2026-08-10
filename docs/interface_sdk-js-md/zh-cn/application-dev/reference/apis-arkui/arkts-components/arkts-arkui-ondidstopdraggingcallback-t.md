@@ -24,5 +24,5 @@ declare type OnDidStopDraggingCallback = (willFling: boolean) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| willFling | boolean | 是 | 结束拖拽后是否会有惯性动效。返回true代表拖拽结束后有惯性动效，返回false代表没有惯性动效。  |
+| willFling | boolean | 是 | 结束拖拽后是否会有惯性动效。返回true代表拖拽结束后有惯性动效，返回false代表没有惯性动效。 |
 

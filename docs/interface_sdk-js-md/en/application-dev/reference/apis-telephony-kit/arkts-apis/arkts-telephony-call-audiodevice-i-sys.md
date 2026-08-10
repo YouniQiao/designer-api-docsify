@@ -12,6 +12,12 @@ Indicates the audio device.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## address
 
 ```TypeScript
@@ -60,7 +66,7 @@ deviceType: AudioDeviceType
 
 Indicates the device type of the audio device.
 
-**Type:** AudioDeviceType
+**Type:** [AudioDeviceType](arkts-telephony-call-audiodevicetype-e-sys.md)
 
 **Since:** 10
 

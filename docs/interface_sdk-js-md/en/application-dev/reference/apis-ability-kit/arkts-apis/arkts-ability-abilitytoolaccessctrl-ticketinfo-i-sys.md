@@ -1,6 +1,6 @@
 # TicketInfo (System API)
 
-Ticket information.
+凭据信息。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Ticket information.
 challenge: string
 ```
 
-Challenge value.
+挑战值。
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Challenge value.
 message: string
 ```
 
-Ticket message.
+凭据消息
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Ticket message.
 ticket: string
 ```
 
-Ticket string.
+凭据字符串
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # ToastShowMode
 
-Enum for the toast showMode.
+设置Toast的显示模式，默认显示在应用内，支持显示在子窗。
 
 **Since:** 23
 
@@ -16,7 +16,9 @@ Enum for the toast showMode.
 SYSTEM_TOP_MOST = 2
 ```
 
-Toast shows in SYSTEM\_TOAST window.
+Toast显示在系统Toast窗口。
+
+**系统接口：** 该接口为系统接口。
 
 **Since:** 23
 

@@ -1,5 +1,11 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## off('wifiStateChange')
 
 ```TypeScript
@@ -8,7 +14,7 @@ function off(type: 'wifiStateChange', callback?: Callback<number>): void
 
 Unsubscribe Wi-Fi status change events.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All callback functions will be deregistered If there is no specific callback parameter.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 
@@ -29,9 +35,9 @@ Unsubscribe Wi-Fi status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiStateChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -56,7 +62,7 @@ function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 
 Unsubscribe Wi-Fi connection change events.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All callback functions will be deregistered If there is no specific callback parameter.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 
@@ -77,9 +83,9 @@ Unsubscribe Wi-Fi connection change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiConnectionChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | the callback of on, 0: disconnected, 1: connected |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: disconnected, 1: connected |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -104,7 +110,7 @@ function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 
 Unsubscribe Wi-Fi scan status change events.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All callback functions will be deregistered If there is no specific callback parameter.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 
@@ -125,9 +131,9 @@ Unsubscribe Wi-Fi scan status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiScanStateChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | the callback of on, 0: scan fail, 1: scan success |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: scan fail, 1: scan success |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -152,7 +158,7 @@ function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 
 Unsubscribe Wi-Fi rssi change events.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All callback functions will be deregistered If there is no specific callback parameter.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 
@@ -173,9 +179,9 @@ Unsubscribe Wi-Fi rssi change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiRssiChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -200,7 +206,7 @@ function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 
 Unsubscribe Wi-Fi hotspot state change events.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_All callback functions will be deregistered If there is no specific callback parameter.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;All callback functions will be deregistered If there is no specific callback parameter.&lt;/p&gt;
 
 **Since:** 7
 
@@ -221,7 +227,7 @@ Unsubscribe Wi-Fi hotspot state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStateChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
 
 
 ## off('p2pStateChange')
@@ -251,9 +257,9 @@ Unsubscribe P2P status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pStateChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | the callback of on, 1: idle, 2: starting, 3:started, 4: closing, 5: closed |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 1: idle, 2: starting, 3:started, 4: closing, 5: closed |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -297,9 +303,9 @@ Unsubscribe P2P connection change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pConnectionChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WifiP2pLinkedInfo&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | No | the callback of on |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -343,9 +349,9 @@ Unsubscribe P2P local device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pDeviceChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WifiP2pDevice&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | No | the callback of on |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -389,9 +395,9 @@ Unsubscribe P2P peer device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPeerDeviceChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WifiP2pDevice[]&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | No | the callback of on |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -435,9 +441,9 @@ Unsubscribe P2P persistent group change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPersistentGroupChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback of on |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -481,9 +487,9 @@ Unsubscribe P2P discovery events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pDiscoveryChange' | Yes | event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

@@ -28,7 +28,7 @@ Called when a indicator is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | indicator component controller.  |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) | No | indicator component controller. |
 
 ## Summary
 

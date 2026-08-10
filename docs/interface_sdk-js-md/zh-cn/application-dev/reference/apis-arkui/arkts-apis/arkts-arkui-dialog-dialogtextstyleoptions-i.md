@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## wordBreak
 
 ```TypeScript
@@ -18,7 +24,7 @@ wordBreak?: WordBreak
 
 设置分词类型。
 
-**类型：** WordBreak
+**类型：** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
 
 **起始版本：** 26.1.0
 

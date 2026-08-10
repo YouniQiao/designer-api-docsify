@@ -1,5 +1,11 @@
 # createPixelMap
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## createPixelMap
 
 ```TypeScript
@@ -29,7 +35,7 @@ Create PixelMap by data buffer.
 | --- | --- |
 | Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

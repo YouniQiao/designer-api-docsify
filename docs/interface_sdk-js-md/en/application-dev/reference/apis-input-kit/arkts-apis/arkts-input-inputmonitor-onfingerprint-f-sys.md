@@ -1,12 +1,18 @@
 # onFingerprint (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
 ## onFingerprint
 
 ```TypeScript
 function onFingerprint(receiver: Callback<FingerprintEvent>): void
 ```
 
-Enables listening for fingerprint key events.
+监听指纹手势输入事件。
 
 **Since:** 23
 
@@ -24,13 +30,13 @@ Enables listening for fingerprint key events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FingerprintEvent&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FingerprintEvent](arkts-input-multimodalinput-shortkey-fingerprintevent-i-sys.md)&gt; | Yes | 用于接收上报数据的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permit error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | SystemAPI permit error. |
 

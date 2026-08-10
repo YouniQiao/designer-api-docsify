@@ -1,5 +1,11 @@
 # onActiveSessionChanged（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## onActiveSessionChanged
 
 ```TypeScript
@@ -24,13 +30,43 @@ function onActiveSessionChanged(callback: Callback<Array<AVSessionDescriptor>>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;AVSessionDescriptor&gt;&gt; | 是 | 回调函数。参数为允许在系统控制入口显示的会话信息列表。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVSessionDescriptor&gt;&gt; | 是 | 回调函数。参数为允许在系统控制入口显示的会话信息列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. |
+
+## 示例
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+      Text(this.message)
+        .onClick(() => {
+          avSession.onActiveSessionChanged((descs: Array<avSession.AVSessionDescriptor>) => {
+            descs.forEach((desc, index) => {
+              console.info(`=== 会话 ${index + 1}/${descs.length} ===`);
+              console.info(`on onActiveSessionChanged : isActive : ${desc.isActive}`);
+              console.info(`on onActiveSessionChanged : type : ${desc.type}`);
+              console.info(`on onActiveSessionChanged : sessionTag : ${desc.sessionTag}`);
+            });
+          });
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 

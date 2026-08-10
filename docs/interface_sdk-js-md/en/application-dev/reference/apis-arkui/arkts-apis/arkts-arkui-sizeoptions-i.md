@@ -1,6 +1,6 @@
 # SizeOptions
 
-Defines the size options.
+定义尺寸选项。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Defines the size options.
 height?: Length
 ```
 
-Defines the height.
+定义高度。
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 
@@ -38,9 +38,9 @@ Defines the height.
 width?: Length
 ```
 
-Defines the width.
+定义宽度。
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 

@@ -1,5 +1,11 @@
 # getCallState
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## getCallState
 
 ```TypeScript
@@ -8,7 +14,7 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 Obtains the call state.
 
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL\_STATE\_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL\_STATE\_OFFHOOK}.In other cases, the system returns {@code CallState#CALL\_STATE\_IDLE}.
+If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
 
 **Since:** 6
 
@@ -22,9 +28,9 @@ If an incoming call is ringing or waiting, the system returns {@code CallState#C
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CallState&gt; | Yes | Indicates the callback for getting the call state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallState&gt; | Yes | Indicates the callback for getting the call state. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -47,7 +53,7 @@ function getCallState(): Promise<CallState>
 
 Obtains the call state.
 
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL\_STATE\_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL\_STATE\_OFFHOOK}.In other cases, the system returns {@code CallState#CALL\_STATE\_IDLE}.
+If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
 
 **Since:** 6
 
@@ -63,7 +69,7 @@ If an incoming call is ringing or waiting, the system returns {@code CallState#C
 | --- | --- |
 | Promise&lt;CallState&gt; | Returns the call state. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

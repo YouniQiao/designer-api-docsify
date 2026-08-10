@@ -88,7 +88,7 @@ ERROR_DEVICE_NOT_SUPPORTED = 29700004
 ERROR_NOT_COMPLY_SECURITY_POLICY = 29700005
 ```
 
-表示该操作不符合设备安全策略。例如设备不允许用户管理GLOBAL\_USER的CA证书。
+表示该操作不符合设备安全策略。例如设备不允许用户管理GLOBAL_USER的CA证书。
 
 **起始版本：** 18
 

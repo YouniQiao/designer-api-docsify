@@ -1,6 +1,6 @@
 # ProtectedResourceType
 
-Defines the accessible resource type, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+定义可访问的资源类型，与 {@link onPermissionRequest} 方法相关。
 
 **Since:** 9
 
@@ -16,9 +16,9 @@ Defines the accessible resource type, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0
 MidiSysex = "TYPE_MIDI_SYSEX"
 ```
 
-MIDI SYSEX resource.
+MIDI SYSEX资源。
 
-Currently, only permission events can be reported. MIDI devices are not yet supported.
+目前仅支持权限事件上报，MIDI设备的使用还未支持。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Currently, only permission events can be reported. MIDI devices are not yet supp
 VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"
 ```
 
-Video capture resource, such as a camera.
+视频捕获资源，例如相机。
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ Video capture resource, such as a camera.
 AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"
 ```
 
-Audio capture resource, such as a microphone.
+音频捕获资源，例如麦克风。
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ Audio capture resource, such as a microphone.
 SENSOR = 'TYPE_SENSOR'
 ```
 
-Sensor resource, such as an acceleration sensor.
+传感器资源，例如加速度传感器。
 
 **Since:** 12
 

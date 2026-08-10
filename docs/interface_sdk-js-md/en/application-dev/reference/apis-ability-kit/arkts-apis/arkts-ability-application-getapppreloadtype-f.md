@@ -1,19 +1,25 @@
 # getAppPreloadType
 
+## Modules to Import
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## getAppPreloadType
 
 ```TypeScript
 export function getAppPreloadType(): AppPreloadType
 ```
 
-Obtains the preloading type of the current application process.
-    **NOTE**  
-    
-    - This API can return the actual preloading type only if it is called before the first execution of  
-    [AbilityStage.onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    
-    - Once the AbilityStage creation finishes, the preloaded data of the application is cleared. Any subsequent calls  
-    will return **UNSPECIFIED** instead of the original preloading type.
+获取应用当前进程的预加载类型。
+
+> **说明：**
+> 
+> - 只有在进程首次执行[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)完成之前调用该接口，才可以返回真实的预
+> 加载类型。
+> 
+> - AbilityStage创建完成后，应用的预加载数据将被清除，调用该接口将返回UNSPECIFIED，无法获取到真实的预加载类型。
 
 **Since:** 22
 
@@ -29,9 +35,9 @@ Obtains the preloading type of the current application process.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Obtains the preloading type of the current application process. |
+| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) | 应用当前进程的预加载类型。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage, application } from '@kit.AbilityKit';

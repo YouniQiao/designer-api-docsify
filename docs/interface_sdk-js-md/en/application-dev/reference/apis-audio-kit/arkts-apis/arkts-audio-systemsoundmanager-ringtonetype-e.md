@@ -1,6 +1,6 @@
 # RingtoneType
 
-Enum for ringtone type.
+枚举，铃声类型。
 
 **Since:** 10
 
@@ -16,7 +16,9 @@ Enum for ringtone type.
 RINGTONE_TYPE_DEFAULT = 0
 ```
 
-Default type.
+默认铃声类型。
+
+从 API version 11 开始废弃。建议使用该枚举中的RINGTONE_TYPE_SIM_CARD_0替代。
 
 **Since:** 10
 
@@ -36,7 +38,7 @@ Default type.
 RINGTONE_TYPE_SIM_CARD_0 = 0
 ```
 
-Ringtone type for sim card 0.
+sim卡1的铃声。
 
 **Since:** 11
 
@@ -52,7 +54,9 @@ Ringtone type for sim card 0.
 RINGTONE_TYPE_MULTISIM = 1
 ```
 
-Multi-sim type.
+多SIM卡铃声类型。
+
+从 API version 11 开始废弃。建议使用该枚举中的RINGTONE_TYPE_SIM_CARD_1替代。
 
 **Since:** 10
 
@@ -72,49 +76,13 @@ Multi-sim type.
 RINGTONE_TYPE_SIM_CARD_1 = 1
 ```
 
-Ringtone type for sim card 1.
+sim卡2的铃声。
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_1 = 1--><!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_1 = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-## RINGTONE_TYPE_ESIM_CARD_0
-
-```TypeScript
-RINGTONE_TYPE_ESIM_CARD_0 = 2
-```
-
-Ringtone type for esim card 0.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RingtoneType-RINGTONE_TYPE_ESIM_CARD_0 = 2--><!--Device-RingtoneType-RINGTONE_TYPE_ESIM_CARD_0 = 2-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-## RINGTONE_TYPE_ESIM_CARD_1
-
-```TypeScript
-RINGTONE_TYPE_ESIM_CARD_1 = 3
-```
-
-Ringtone type for esim card 1.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RingtoneType-RINGTONE_TYPE_ESIM_CARD_1 = 3--><!--Device-RingtoneType-RINGTONE_TYPE_ESIM_CARD_1 = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

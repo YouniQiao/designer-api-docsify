@@ -1,6 +1,30 @@
 # ThreadWorker
 
-Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget.
+使用以下方法前，需先构造ThreadWorker实例。ThreadWorker类继承WorkerEventTarget。
+
+使用Worker模块时，API version 18及之后的版本建议在宿主线程中注册onAllErrors回调，以捕获Worker线程生命周期内的各种异常。API version 18之前的版本应注册onerror回调。如果未注册onAllErrors或onerror回调，当Worker线程出现异常时会发生崩溃问题。注意，onerror接口仅能捕获onmessage回调中的同步异常，捕获异常后，Worker线程将进入销毁流程，无法继续使用。
+
+onAllErrors接口与onerror接口之间的行为差异如下：
+
+1. 异常捕获范围
+
+ onAllErrors接口可以捕获Worker线程的onmessage回调、timer回调以及文件执行等流程中产生的全局异常。
+
+ onerror接口仅能捕获Worker线程的onmessage回调中同步方法产生的异常，无法捕获多线程回调和模块化相关异常。
+
+2. 异常捕获后的线程状态
+
+ onAllErrors接口捕获异常后，Worker线程仍然存活并可以继续使用。这使开发者可以在捕获异常后执行其他操作，无需担心线程终止。
+
+ onerror接口捕获异常后，Worker线程会进入销毁流程，无法继续使用。这意味着在onerror触发后，Worker线程将被终止，后续操作将无法进行。
+
+3. 适用场景
+
+ onAllErrors接口适用于捕获Worker线程中所有类型异常的场景，特别是确保异常发生后Worker线程仍能继续运行的复杂场景。
+
+ onerror接口适用于只需要捕获onmessage回调中同步异常的简单场景。由于捕获异常后线程会被销毁，适用于不需要继续使用Worker线程的情况。
+
+ 推荐使用onAllErrors接口，因为它提供了更全面的异常捕获能力，并且不会导致线程终止。
 
 **Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
 
@@ -12,13 +36,19 @@ Before using the following APIs, you must create a ThreadWorker instance. The Th
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## addEventListener
 
 ```TypeScript
 addEventListener(type: string, listener: WorkerEventListener): void
 ```
 
-Adds an event listener for the Worker thread. This API provides the same functionality as on9+.
+向宿主线程的Worker实例对象添加一个事件监听，该接口与on9+接口功能一致。
 
 **Since:** 9
 
@@ -34,17 +64,17 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback to invoke when an event of the specified type occurs. |
+| type | string | Yes | 监听的事件类型。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | 当指定类型的事件发生时调用的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -66,7 +96,7 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 constructor(scriptURL: string, options?: WorkerOptions)
 ```
 
-A constructor used to create a ThreadWorker instance.
+ThreadWorker构造函数。
 
 **Since:** 9
 
@@ -82,17 +112,17 @@ A constructor used to create a ThreadWorker instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scriptURL | string | Yes | URL of the Worker thread file. For details about the rules, see Precautions for File URLs. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options that can be set for the Worker instance. |
+| scriptURL | string | Yes | Worker线程文件的路径。路径规则详细参考文件路径注意事项。 |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No | Worker构造的选项。此参数不填时，对应各属性取其默认值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed. |
-| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file path is invalid. |
+| 10200003 | Worker initialization failed. |
+| 10200007 | The worker file path is invalid. |
 
-**Example**
+## Examples
 
 The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
 
@@ -110,7 +140,7 @@ const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {
 dispatchEvent(event: Event): boolean
 ```
 
-Dispatches the event defined for the Worker thread.
+分发定义在Worker线程的事件。
 
 **Since:** 9
 
@@ -126,7 +156,7 @@ Dispatches the event defined for the Worker thread.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event to dispatch. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | 需要分发的事件。 |
 
 **Return value:**
 
@@ -138,9 +168,9 @@ Dispatches the event defined for the Worker thread.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -163,7 +193,7 @@ console.info("dispatchEvent result is: ", result);
 off(type: string, listener?: WorkerEventListener): void
 ```
 
-Removes an event listener for the Worker thread. This API provides the same functionality as removeEventListener9+.
+移除宿主线程的Worker实例对象中类型为type的事件监听，该接口与removeEventListener9+接口功能一致。
 
 **Since:** 9
 
@@ -179,17 +209,17 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event for which the event listener is removed. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | listener Callback of the event listener to remove. |
+| type | string | Yes | 需要移除的事件类型。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No | listener 要移除的事件监听的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -223,7 +253,7 @@ workerInstance.off("alert");
 on(type: string, listener: WorkerEventListener): void
 ```
 
-Adds an event listener for the Worker thread. This API provides the same functionality as addEventListener9+.
+向宿主线程的Worker实例对象添加一个事件监听，该接口与addEventListener9+接口功能一致。
 
 **Since:** 9
 
@@ -239,17 +269,17 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback to invoke when an event of the specified type occurs. |
+| type | string | Yes | 监听的事件类型。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | 当指定类型的事件发生时调用的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -272,11 +302,7 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 onAllErrors?: ErrorCallback
 ```
 
-Called when an exception occurs within the lifecycle of the Worker thread.The event handler is executed in the host thread.
-
-onerror can capture only exceptions generated by synchronous methods within the onmessage callback.It cannot capture exceptions from multithreaded callbacks or modularization-related exceptions.Once an exception is captured, the Worker thread will proceed to the destruction process and cannot be used.
-
-onAllErrors can capture global exceptions generated during the onmessage callback, timer callback,and file execution of the Worker thread. After an exception is captured by onAllErrors,the Worker thread remains alive and can continue to be used.You are advised to use onAllErrors instead of onerror.
+回调函数。表示Worker线程生命周期内发生异常被调用的事件处理程序，处理程序在宿主线程中执行。
 
 **Since:** 18
 
@@ -292,8 +318,8 @@ onAllErrors can capture global exceptions generated during the onmessage callbac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## once
 
@@ -301,7 +327,7 @@ onAllErrors can capture global exceptions generated during the onmessage callbac
 once(type: string, listener: WorkerEventListener): void
 ```
 
-Adds an event listener for the Worker thread and removes the event listener after it is invoked once.
+向宿主线程的Worker实例对象添加一个事件监听，该事件监听只执行一次，执行完后会自动删除。
 
 **Since:** 9
 
@@ -317,17 +343,17 @@ Adds an event listener for the Worker thread and removes the event listener afte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | listener Callback to invoke when an event of the specified type occurs |
+| type | string | Yes | 监听的事件类型。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | listener 当指定类型的事件发生时调用的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -351,7 +377,7 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 onerror?: (err: ErrorEvent) => void
 ```
 
-Called when an exception occurs during worker execution. The event handler is executed in the host thread.In the callback function, the err type is ErrorEvent, indicating the received abnormal data.
+回调函数，用于处理onmessage回调函数中同步代码产生的异常，处理程序在宿主线程中执行。回调函数的err类型为ErrorEvent，表示收到的异常数据。默认值为undefined。
 
 **Since:** 9
 
@@ -367,14 +393,14 @@ Called when an exception occurs during worker execution. The event handler is ex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## onexit
 
@@ -382,7 +408,7 @@ Called when an exception occurs during worker execution. The event handler is ex
 onexit?: (code: number) => void
 ```
 
-Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function,the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
+回调函数。表示Worker线程销毁时被调用的事件处理程序，该处理程序在宿主线程中执行。回调函数的code参数类型为number，异常退出时code为1，正常退出时code为0。默认值为undefined。
 
 **Since:** 9
 
@@ -404,8 +430,8 @@ Called when the Worker thread exits. The event handler is executed in the host t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## onmessage
 
@@ -413,7 +439,7 @@ Called when the Worker thread exits. The event handler is executed in the host t
 onmessage?: (event: MessageEvents) => void
 ```
 
-Called when the host thread receives a message sent by the Worker thread through workerPort.postMessage.The event handler is executed in the host thread. In the callback function, the event type is MessageEvents,indicating the received message data.
+回调函数。表示宿主线程接收到来自其创建的Worker通过workerPort.postMessage或workerPort.postMessageWithSharedSendable接口发送的消息时被调用的事件处理程序，处理程序在宿主线程中执行。其中回调函数中event类型为MessageEvents，表示收到的Worker线程发送的消息数据。默认值为undefined。
 
 **Since:** 9
 
@@ -429,14 +455,14 @@ Called when the host thread receives a message sent by the Worker thread through
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## onmessageerror
 
@@ -444,7 +470,7 @@ Called when the host thread receives a message sent by the Worker thread through
 onmessageerror?: (event: MessageEvents) => void
 ```
 
-Called when the Worker thread receives a message that cannot be serialized. The event handler is executed in the host thread.In the callback function, the event type is MessageEvents, indicating the received message data.
+回调函数。用于处理Worker对象接收到的无法被序列化的消息。该处理程序在宿主线程中执行，event类型为MessageEvents，表示收到的Worker消息数据。默认值为undefined。
 
 **Since:** 9
 
@@ -460,14 +486,14 @@ Called when the Worker thread receives a message that cannot be serialized. The 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## postMessage
 
@@ -475,7 +501,7 @@ Called when the Worker thread receives a message that cannot be serialized. The 
 postMessage(message: Object, transfer: ArrayBuffer[]): void
 ```
 
-Sends a message from the host thread to the Worker thread by transferring object ownership.
+宿主线程通过转移对象所有权的方式向Worker线程发送消息。
 
 **Since:** 9
 
@@ -491,17 +517,17 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
-| transfer | ArrayBuffer[] | Yes | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread. The array cannot be null. |
+| message | Object | Yes | 发送至Worker的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
+| transfer | ArrayBuffer[] | Yes | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到Worker线程，在宿主线程中将会变为不可用，仅在Worker线程中可用。该数组不可传入null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Worker.ets
@@ -582,7 +608,7 @@ struct Index {
 postMessage(message: Object, options?: PostMessageOptions): void
 ```
 
-Sends a message from the host thread to the Worker thread by transferring object ownership or copying data.
+宿主线程可以通过转移对象所有权或拷贝数据的方式向Worker线程发送消息。
 
 **Since:** 9
 
@@ -598,17 +624,17 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | If this parameter is specified, it functions the same as ArrayBuffer[]. Specifically, the ownership of the objects in the array is transferred to the Worker thread and becomes unavailable in the host thread. The objects are available only in the Worker thread. If this parameter is not specified, the default value undefined is used, and information is transferred to the Worker thread by copying data. |
+| message | Object | Yes | 发送至Worker的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | 当填入该参数时，其作用与传入ArrayBuffer[]相同， 该数组中对象的所有权会被转移到Worker线程，在宿主线程中将变为不可用，仅在Worker线程中可用。 若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到Worker线程。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { worker } from '@kit.ArkTS';
@@ -632,7 +658,7 @@ workerInstance.postMessage(buffer);
 postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 ```
 
-Sends a message from the host thread to the Worker thread. In the message, a sendable object is passed by reference,and a non-sendable object is passed by serialization.
+宿主线程向Worker线程发送消息，消息中的Sendable对象通过引用传递，非Sendable对象通过拷贝数据的方式传递。
 
 **Since:** 12
 
@@ -648,17 +674,17 @@ Sends a message from the host thread to the Worker thread. In the message, a sen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable or sendable. For details about the supported sequenceable types, see Sequenceable Data Types. For details about the supported sendable types, see Sendable Data Types. |
-| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread. The array cannot be null. The default value is an empty array. |
+| message | Object | Yes | 发送至Worker线程的数据，该数据对象必须是可序列化或可共享。 支持的序列化类型请参考序列化支持类型。 支持的共享类型请参考Sendable支持的数据类型。 |
+| transfer | ArrayBuffer[] | No | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到Worker线程，转移后该对象仅在Worker线程中可用。该数组不可传入null。默认值为空数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -707,7 +733,7 @@ workerPort.onmessage = (e: MessageEvents) => {
 registerGlobalCallObject(instanceName: string, globalCallObject: Object): void
 ```
 
-Registers an object with the ThreadWorker instance of the host thread.In this way, the methods of the object can be called in the Worker thread through callGlobalCallObjectMethod.
+在宿主线程的ThreadWorker实例上注册一个对象，该对象的方法可在Worker线程中通过callGlobalCallObjectMethod调用。
 
 **Since:** 11
 
@@ -723,16 +749,16 @@ Registers an object with the ThreadWorker instance of the host thread.In this wa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instanceName | string | Yes | Key used for registration, based on which the registered object is identified during method calling. |
-| globalCallObject | Object | Yes | Object to register. The ThreadWorker instance holds a strong reference to the object. |
+| instanceName | string | Yes | 注册对象时使用的键，调用时通过该键值找到被注册的对象。 |
+| globalCallObject | Object | Yes | 被注册的对象，ThreadWorker实例会持有该对象的强引用。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 //Index.ets
@@ -785,7 +811,7 @@ workerPort.onmessage = (e: MessageEvents): void => {
 removeAllListener(): void
 ```
 
-Removes all event listeners for the Worker thread.
+移除宿主线程中Worker实例对象的所有事件监听。
 
 **Since:** 9
 
@@ -801,9 +827,9 @@ Removes all event listeners for the Worker thread.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -822,7 +848,7 @@ workerInstance.removeAllListener();
 removeEventListener(type: string, callback?: WorkerEventListener): void
 ```
 
-Removes an event listener for the Worker thread. This API provides the same functionality as off9+.
+移除宿主线程的Worker实例对象中类型为type的事件监听，该接口与off9+接口功能一致。
 
 **Since:** 9
 
@@ -838,16 +864,16 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event for which the event listener is to be removed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback to invoke when the listener is removed. |
+| type | string | Yes | 需要移除的事件类型。 |
+| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No | 移除监听事件后执行的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -870,7 +896,7 @@ workerInstance.removeEventListener("alert");
 terminate(): void
 ```
 
-Terminates the Worker thread to stop it from receiving messages.
+销毁Worker线程，终止Worker接收消息。
 
 **Since:** 9
 
@@ -886,9 +912,9 @@ Terminates the Worker thread to stop it from receiving messages.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -904,7 +930,7 @@ workerInstance.terminate();
 unregisterGlobalCallObject(instanceName?: string): void
 ```
 
-Unregisters an object with the ThreadWorker instance of the host thread. This API releases the strong reference between the ThreadWorker instance and the target object. No error is reported if no object is matched.
+取消在宿主线程ThreadWorker实例上注册的对象，该方法会释放ThreadWorker实例与目标对象之间的强引用。如果无匹配对象，该方法不会报错。
 
 **Since:** 11
 
@@ -920,15 +946,15 @@ Unregisters an object with the ThreadWorker instance of the host thread. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instanceName | string | No | Key used for registration. If this parameter is left blank, all registered objects registered in the ThreadWorker instance are unregistered. |
+| instanceName | string | No | 注册对象时使用的键。此参数不填时， 会释放ThreadWorker实例中所有已注册的对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets

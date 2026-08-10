@@ -20,5 +20,5 @@ type ReportExecuteAbilityEvent = (want: WantAgent) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 媒体应用页面启动信息。  |
+| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | 是 | 媒体应用页面启动信息。 |
 

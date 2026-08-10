@@ -1,5 +1,11 @@
 # sendRttMessage (System API)
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## sendRttMessage
 
 ```TypeScript
@@ -24,7 +30,7 @@ Send rtt message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
 | rttMessage | string | Yes | Indicates the message of rtt. |
 
 **Return value:**
@@ -37,10 +43,10 @@ Send rtt message.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | 8400001 | Invalid parameter value. |
 | 8400002 | Operation failed. Cannot connect to service. |
 | 8400003 | System internal error. |
 | 8400999 | Unknown error code. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 

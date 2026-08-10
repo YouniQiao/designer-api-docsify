@@ -1,12 +1,20 @@
 # scale
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## scale
 
 ```TypeScript
 function scale(options: ScaleOption): Matrix4Transit
 ```
 
-Scales this matrix object along the x, y, and z axes.
+Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。
+
+> **说明：**
 
 **Since:** 7
 
@@ -14,7 +22,7 @@ Scales this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.scale](arkts-arkui-matrix4-matrix4transit-i.md#scale)
+**Substitutes:** [matrix4.Matrix4Transit.scale](arkts-arkui-matrix4-matrix4transit-i.md#scale)
 
 <!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit--><!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit-End-->
 
@@ -24,11 +32,11 @@ Scales this matrix object along the x, y, and z axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scaling configuration. |
+| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes | 设置缩放参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Matrix object after scaling. |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 缩放后的矩阵对象。 |
 

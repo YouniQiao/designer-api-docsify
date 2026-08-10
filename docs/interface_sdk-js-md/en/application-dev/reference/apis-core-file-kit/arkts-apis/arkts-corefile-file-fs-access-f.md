@@ -1,14 +1,20 @@
 # access
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## access
 
 ```TypeScript
 declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.
+检查文件或目录是否存在，或校验操作权限，使用promise异步回调。
 
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **Since:** 9
 
@@ -24,31 +30,31 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file or directory. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file exists.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| path | string | Yes | 文件或目录应用沙箱路径。 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | 文件或目录校验的权限。不填该参数则默认校验文件是否存在。<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** means the file exists; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回布尔值。返回true，表示文件存在；返回false，表示文件不存在。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
+| 13900023 | Text file busy |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900018 | Not a directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## access
@@ -57,7 +63,7 @@ If the read, write, or read and write permission verification fails, the error c
 declare function access(path: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a file or directory exists. This API uses an asynchronous callback to return the result.
+检查文件或目录是否存在，使用callback异步回调。
 
 **Since:** 9
 
@@ -73,25 +79,25 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file or directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
+| path | string | Yes | 文件或目录应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 异步检查文件或目录是否存在的回调。如果存在，回调返回true；否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
+| 13900023 | Text file busy |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900018 | Not a directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## access
@@ -100,9 +106,9 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.
+检查文件或目录是否在本地，或校验操作权限，使用promise异步回调。
 
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **Since:** 12
 
@@ -116,28 +122,28 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file or directory. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Permission on the file or directory to check. |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Position of the file or directory to check. |
+| path | string | Yes | 文件或目录应用沙箱路径。 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | 文件或目录校验的权限。 |
+| flag | [AccessFlagType](arkts-corefile-fileio-accessflagtype-e.md) | Yes | 文件或目录校验的位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** means the file or directory is a local one and has the related permission. The value **false** means the file or directory does not exist or is on the cloud or a distributed device. |
+| Promise&lt;boolean&gt; | Promise对象。返回布尔值。返回true，表示文件或目录在本地且校验权限存在；返回false，表示文件或目录不存在或者文件或目录在云端或其他分布式设备上。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 13900020 | Invalid argument |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900005 | I/O error |
-| 13900011 | Out of memory |
+| 13900023 | Text file busy |
+| 13900033 | Too many symbolic links encountered |
+| 13900018 | Not a directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900011 | Out of memory |
 

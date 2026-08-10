@@ -32,7 +32,10 @@ DynamicComponent(options: DynamicOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | DynamicComponent的构造配置参数，用于配置要加载的Abc页面入口、运行Worker及显示选项。  |
+| options | [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md) | 是 | DynamicComponent的构造配置参数，用于配置要加载的Abc页面入口、运行Worker及显示选项。 |
 
 ## 汇总
 
+- [DynamicOptions](arkts-arkui-dynamiccomponent-dynamicoptions-i-sys.md)
+- [ErrorCallback](arkts-arkui-dynamiccomponent-errorcallback-t-sys.md)
+- [Worker](arkts-arkui-dynamiccomponent-worker-t-sys.md)

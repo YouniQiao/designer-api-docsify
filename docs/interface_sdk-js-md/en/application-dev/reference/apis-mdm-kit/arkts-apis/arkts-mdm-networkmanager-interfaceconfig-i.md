@@ -1,6 +1,6 @@
 # InterfaceConfig
 
-Enumerates Ethernet network interface configurations. Only IPv4 is supported.
+以太网的网络接口配置。仅支持IPv4。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Enumerates Ethernet network interface configurations. Only IPv4 is supported.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
+
 ## dnsServers
 
 ```TypeScript
 dnsServers?: string
 ```
 
-DNS service address. The value ranges from **0.0.0.0** to **255.255.255.255**. (This parameter is not required in DHCP mode.) Multiple addresses are separated by commas (,).
+DNS服务地址，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配置），多地址间用“,”隔开。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ DNS service address. The value ranges from **0.0.0.0** to **255.255.255.255**. (
 gateway?: string
 ```
 
-Gateway. The value ranges from **0.0.0.0** to **255.255.255.255**. (This parameter is not required in DHCP mode.)
+网关，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配置）。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Gateway. The value ranges from **0.0.0.0** to **255.255.255.255**. (This paramet
 ipAddress?: string
 ```
 
-Static IP address. The value ranges from **0.0.0.0** to **255.255.255.255**. (This parameter is not required in DHCP mode.)
+静态IP地址，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配置）。
 
 **Type:** string
 
@@ -76,9 +82,9 @@ Static IP address. The value ranges from **0.0.0.0** to **255.255.255.255**. (Th
 ipSetMode: IpSetMode
 ```
 
-Ethernet connection configuration mode.
+以太网连接配置模式。
 
-**Type:** IpSetMode
+**Type:** [IpSetMode](arkts-mdm-networkmanager-ipsetmode-e.md)
 
 **Since:** 23
 
@@ -96,7 +102,7 @@ Ethernet connection configuration mode.
 netMask?: string
 ```
 
-Subnet mask. The value ranges from **0.0.0.0** to **255.255.255.255**. (This parameter is not required in DHCP mode.)
+子网掩码，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配置）。
 
 **Type:** string
 

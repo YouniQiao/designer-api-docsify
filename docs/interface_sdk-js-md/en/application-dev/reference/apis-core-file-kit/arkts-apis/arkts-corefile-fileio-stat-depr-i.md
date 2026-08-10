@@ -1,6 +1,6 @@
 # Stat
 
-Provides detailed file information. Before calling a method of the **Stat** class, use the [stat()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_method synchronously or asynchronously to create a **Stat** instance.
+文件具体信息，在调用Stat的方法前，需要先通过[stat()](arkts-corefile-fileio-stat-f.md#stat)方法（同步或异步）来构建一个Stat实例。
 
 **Since:** 6
 
@@ -20,7 +20,7 @@ Provides detailed file information. Before calling a method of the **Stat** clas
 isBlockDevice(): boolean
 ```
 
-Checks whether this file is a block special file. A block special file supports access by block only, and it is cached when accessed.
+用于判断文件是否是块特殊文件。一个块特殊文件只能以块为粒度进行访问，且访问的时候带缓存。
 
 **Since:** 6
 
@@ -38,9 +38,9 @@ Checks whether this file is a block special file. A block special file supports 
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a block special file; returns **false** otherwise. |
+| boolean | 表示文件是否是块特殊设备。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -53,7 +53,7 @@ let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
 isCharacterDevice(): boolean
 ```
 
-Checks whether this file is a character special file. A character special file supports random access, and it is not cached when accessed.
+用于判断文件是否是字符特殊文件。一个字符特殊设备可进行随机访问，且访问的时候不带缓存。
 
 **Since:** 6
 
@@ -71,9 +71,9 @@ Checks whether this file is a character special file. A character special file s
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
+| boolean | 表示文件是否是字符特殊设备。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -86,7 +86,7 @@ let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
 isDirectory(): boolean
 ```
 
-Checks whether this file is a directory.
+用于判断文件是否是目录。
 
 **Since:** 6
 
@@ -104,9 +104,9 @@ Checks whether this file is a directory.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a directory; returns **false** otherwise. |
+| boolean | 表示文件是否是目录。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dirPath = pathDir + "/test";
@@ -119,7 +119,7 @@ let isDirectory = fileio.statSync(dirPath).isDirectory();
 isFIFO(): boolean
 ```
 
-Checks whether this file is a named pipe (or FIFO). Named pipes are used for inter-process communication.
+用于判断文件是否是命名管道（有时也称为FIFO）。命名管道通常用于进程间通信。
 
 **Since:** 6
 
@@ -137,9 +137,9 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
+| boolean | 表示文件是否是?FIFO。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -152,7 +152,7 @@ let isFIFO = fileio.statSync(filePath).isFIFO();
 isFile(): boolean
 ```
 
-Checks whether this file is a regular file.
+用于判断文件是否是普通文件。
 
 **Since:** 6
 
@@ -170,9 +170,9 @@ Checks whether this file is a regular file.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a regular file; returns **false** otherwise. |
+| boolean | 表示文件是否是普通文件。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -185,7 +185,7 @@ let isFile = fileio.statSync(filePath).isFile();
 isSocket(): boolean
 ```
 
-Checks whether this file is a socket.
+用于判断文件是否是套接字。
 
 **Since:** 6
 
@@ -203,9 +203,9 @@ Checks whether this file is a socket.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a socket; returns **false** otherwise. |
+| boolean | 表示文件是否是套接字。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -218,7 +218,7 @@ let isSocket = fileio.statSync(filePath).isSocket();
 isSymbolicLink(): boolean
 ```
 
-Checks whether this file is a symbolic link.
+用于判断文件是否是符号链接。
 
 **Since:** 6
 
@@ -236,9 +236,9 @@ Checks whether this file is a symbolic link.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
+| boolean | 表示文件是否是符号链接。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test";
@@ -251,7 +251,7 @@ let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
 readonly atime: number
 ```
 
-Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
+上次访问该文件的时间，表示距1970年1月1日0时0分0秒的秒数。
 
 **Type:** number
 
@@ -273,7 +273,7 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 readonly blocks: number
 ```
 
-Number of blocks occupied by a file. Each block is 512 bytes.
+文件占用的块数，计算时块大小按512B计算。
 
 **Type:** number
 
@@ -293,7 +293,7 @@ Number of blocks occupied by a file. Each block is 512 bytes.
 readonly ctime: number
 ```
 
-Time of the last status change of the file. The value is the number of seconds elapsed since 00:00:00 on January 1,1970.
+最近改变文件状态的时间，表示距1970年1月1日0时0分0秒的秒数。
 
 **Type:** number
 
@@ -315,7 +315,7 @@ Time of the last status change of the file. The value is the number of seconds e
 readonly dev: number
 ```
 
-Major device number.
+标识包含该文件的主设备号。
 
 **Type:** number
 
@@ -335,7 +335,7 @@ Major device number.
 readonly gid: number
 ```
 
-ID of the user group of the file.
+文件所有组的ID。
 
 **Type:** number
 
@@ -357,7 +357,7 @@ ID of the user group of the file.
 readonly ino: number
 ```
 
-File identifier, which varies with files on the same device.
+标识该文件。通常同设备上的不同文件的INO不同。
 
 **Type:** number
 
@@ -379,30 +379,27 @@ File identifier, which varies with files on the same device.
 readonly mode: number
 ```
 
-File type and permissions. The first four bits indicate the file type, and the last 12 bits indicate the permissions. The bit fields are described as follows:  
-- **0o170000**: mask used to obtain the file type.  
-- **0o140000**: The file is a socket.  
-- **0o120000**: The file is a symbolic link.  
-- **0o100000**: The file is a regular file.  
-- **0o060000**: The file is a block device.  
-- **0o040000**: The file is a directory.  
-- **0o020000**: The file is a character device.  
-- **0o010000**: The file is a named pipe (FIFO).  
-- **0o0700**: mask used to obtain the owner permissions.  
-- **0o0400**: The owner has the permission to read a regular file or a directory entry.  
-- **0o0200**: The owner has the permission to write a regular file or create and delete a directory entry.  
-- **0o0100**: The owner has the permission to execute a regular file or search for the specified path in a  
-directory.  
-- **0o0070**: mask used to obtain the user group permissions.  
-- **0o0040**: The user group has the permission to read a regular file or a directory entry.  
-- **0o0020**: The user group has the permission to write a regular file or create and delete a directory entry.  
-- **0o0010**: The user group has the permission to execute a regular file or search for the specified path in a  
-directory.  
-- **0o0007**: mask used to obtain the permissions of other users.  
-- **0o0004**: Other users have the permission to read a regular file or a directory entry.  
-- **0o0002**: Other users have the permission to write a regular file or create and delete a directory entry.  
-- **0o0001**: Other users have the permission to execute a regular file or search for the specified path in a  
-directory.
+表示文件类型及权限，其首?4?位表示文件类型，后?12?位表示权限。各特征位的含义如下：  
+-?0o170000：可用于获取文件类型的掩码。  
+-?0o140000：文件是套接字。  
+-?0o120000：文件是符号链接。  
+-?0o100000：文件是一般文件。  
+-?0o060000：文件属于块设备。  
+-?0o040000：文件是目录。  
+-?0o020000：文件是字符设备。  
+-?0o010000：文件是命名管道，即FIFO。  
+-?0o0700：可用于获取用户权限的掩码。  
+-?0o0400：用户读，对于普通文件，所有者可读取文件；对于目录，所有者可读取目录项。  
+-?0o0200：用户写，对于普通文件，所有者可写入文件；对于目录，所有者可创建/删除目录项。  
+-?0o0100：用户执行，对于普通文件，所有者可执行文件；对于目录，所有者可在目录中搜索给定路径名。  
+-?0o0070：可用于获取用户组权限的掩码。  
+-?0o0040：用户组读，对于普通文件，所有用户组可读取文件；对于目录，所有用户组可读取目录项。  
+-?0o0020：用户组写，对于普通文件，所有用户组可写入文件；对于目录，所有用户组可创建/删除目录项。  
+-?0o0010：用户组执行，对于普通文件，所有用户组可执行文件；对于目录，所有用户组是否可在目录中搜索给定路径名。  
+-?0o0007：可用于获取其他用户权限的掩码。  
+-?0o0004：其他读，对于普通文件，其余用户可读取文件；对于目录，其他用户组可读取目录项。  
+-?0o0002：其他写，对于普通文件，其余用户可写入文件；对于目录，其他用户组可创建/删除目录项。  
+-?0o0001：其他执行，对于普通文件，其余用户可执行文件；对于目录，其他用户组可在目录中搜索给定路径名。
 
 **Type:** number
 
@@ -424,7 +421,7 @@ directory.
 readonly mtime: number
 ```
 
-Time when the file content was last modified. The value is the number of seconds elapsed since 00:00:00 on January1, 1970.
+上次修改该文件的时间，表示距1970年1月1日0时0分0秒的秒数。
 
 **Type:** number
 
@@ -446,7 +443,7 @@ Time when the file content was last modified. The value is the number of seconds
 readonly nlink: number
 ```
 
-Number of hard links in the file.
+文件的硬链接数。
 
 **Type:** number
 
@@ -466,7 +463,7 @@ Number of hard links in the file.
 readonly rdev: number
 ```
 
-Minor device number.
+标识包含该文件的从设备号。
 
 **Type:** number
 
@@ -486,7 +483,7 @@ Minor device number.
 readonly size: number
 ```
 
-File size, in bytes. This parameter is valid only for regular files.
+文件的大小，单位为Byte。仅对普通文件有效。
 
 **Type:** number
 
@@ -508,7 +505,7 @@ File size, in bytes. This parameter is valid only for regular files.
 readonly uid: number
 ```
 
-ID of the file owner.
+文件所有者的ID。
 
 **Type:** number
 

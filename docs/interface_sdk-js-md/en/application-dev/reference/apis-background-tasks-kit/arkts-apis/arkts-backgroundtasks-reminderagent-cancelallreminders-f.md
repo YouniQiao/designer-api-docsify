@@ -1,12 +1,18 @@
 # cancelAllReminders
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## cancelAllReminders
 
 ```TypeScript
 function cancelAllReminders(callback: AsyncCallback<void>): void
 ```
 
-Cancels all reminders set by the current application. This API uses an asynchronous callback to return the cancellation result.
+取消当前应用所有的提醒，使用回调的方式实现异步调用。
 
 **Since:** 7
 
@@ -24,12 +30,13 @@ Cancels all reminders set by the current application. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
+import reminderAgent from '@ohos.reminderAgent';
 
 reminderAgent.cancelAllReminders((err: BusinessError, data: void) =>{
   console.info("cancelAllReminders callback")
@@ -43,7 +50,7 @@ reminderAgent.cancelAllReminders((err: BusinessError, data: void) =>{
 function cancelAllReminders(): Promise<void>
 ```
 
-Cancels all reminders set by the current application. This API uses a promise to return the cancellation result.
+取消当前应用所有的提醒，使用Promise方式实现异步调用。
 
 **Since:** 7
 
@@ -61,11 +68,13 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise类型异步回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
 reminderAgent.cancelAllReminders().then(() => {
     console.info("cancelAllReminders promise")
 })

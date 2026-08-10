@@ -1,6 +1,6 @@
 # DesktopLyricState
 
-Desktop lyric state definition.
+桌面歌词状态。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Desktop lyric state definition.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## isLocked
 
 ```TypeScript
 isLocked: boolean
 ```
 
-Desktop lyric lock state.
+桌面歌词位置是否锁定。true表示已锁定，false表示未锁定。若已锁定，桌面显示歌词后，固定当前位置，不可被拖拽。
 
 **Type:** boolean
 

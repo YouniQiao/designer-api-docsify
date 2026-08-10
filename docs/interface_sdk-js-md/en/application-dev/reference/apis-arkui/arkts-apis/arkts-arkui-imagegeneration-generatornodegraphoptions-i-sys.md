@@ -12,6 +12,12 @@ Parameters used to open the NodeGraphComponent.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## customIcons
 
 ```TypeScript
@@ -42,7 +48,7 @@ customImportIcon?: CustomImportIcon
 
 The following configuration parameters are used to customize the imported icon.
 
-**Type:** CustomImportIcon
+**Type:** [CustomImportIcon](arkts-arkui-imagegeneration-customimporticon-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ imageGenerationModel?: ImageGenerationModel
 
 Model used for AI generate image tasks.
 
-**Type:** ImageGenerationModel
+**Type:** [ImageGenerationModel](arkts-arkui-imagegeneration-imagegenerationmodel-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -86,7 +92,7 @@ liveViewInfo?: LiveViewInfo
 
 Information for LiveView in AI image generation.
 
-**Type:** LiveViewInfo
+**Type:** [LiveViewInfo](arkts-arkui-imagegeneration-liveviewinfo-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -108,7 +114,7 @@ textGenerationModel?: TextGenerationModel
 
 Text polishing model used in AI generate image tasks.
 
-**Type:** TextGenerationModel
+**Type:** [TextGenerationModel](arkts-arkui-imagegeneration-textgenerationmodel-i-sys.md)
 
 **Since:** 26.0.0
 

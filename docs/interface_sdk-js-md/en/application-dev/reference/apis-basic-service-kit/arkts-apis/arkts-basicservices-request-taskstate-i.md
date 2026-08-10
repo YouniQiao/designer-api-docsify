@@ -1,8 +1,8 @@
 # TaskState
 
-Upload task information, which is the callback parameter of the  
-[on('complete' | 'fail')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_and  
-[off('complete' | 'fail')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_APIs.
+上传任务的任务信息，是  
+[on('complete' | 'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))和  
+[off('complete' | 'fail')](request.UploadTask.off(type: 'complete' | 'fail', callback?: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))接口的回调参数。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Upload task information, which is the callback parameter of the
 
 **System capability:** SystemCapability.MiscServices.Upload
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## message
 
 ```TypeScript
 message: string
 ```
 
-Description of the upload task result.
+上传任务结果描述信息。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Description of the upload task result.
 path: string
 ```
 
-File path.
+文件路径。
 
 **Type:** string
 
@@ -54,12 +60,12 @@ File path.
 responseCode: int
 ```
 
-Return value of an upload task. The value **0** means that the task is successful, and other values means that the task fails. For details about the task result, see **message**.
+上传任务返回码。返回0表示上传任务成功，返回其它值表示上传任务失败，具体请参见message参数中的上传任务结果描述信息。
 
-You are advised to create an upload task by using  
-[request.agent.create]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_and handle exceptions based on standard error codes.
+此处推荐使用  
+[request.agent.create](arkts-basicservices-agent-create-f.md#create)创建上传任务，并获取标准错误码处理异常分支。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

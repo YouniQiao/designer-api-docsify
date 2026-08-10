@@ -1,6 +1,6 @@
 # AISessionResultType
 
-Enum representing the result states for AI session operations.
+AI会话操作的结果状态。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enum representing the result states for AI session operations.
 SUCCESS = 0
 ```
 
-Operation completed successfully.
+操作执行成功。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Operation completed successfully.
 FAILURE = 1
 ```
 
-Operation failed.
+操作执行失败。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Operation failed.
 RUNNING = 2
 ```
 
-Operation is currently in progress.
+操作正在执行中。
 
 **Since:** 26.0.0
 

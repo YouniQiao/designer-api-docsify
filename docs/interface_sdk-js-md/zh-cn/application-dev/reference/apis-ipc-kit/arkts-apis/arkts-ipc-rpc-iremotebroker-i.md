@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## asObject
 
 ```TypeScript
@@ -30,9 +36,9 @@ asObject(): IRemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 如果调用者是RemoteObject对象，则直接返回本身；如果调用者是[RemoteProxy]{ |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 如果调用者是RemoteObject对象，则直接返回本身；如果调用者是[RemoteProxy]{ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

@@ -2,9 +2,9 @@
 
 表示图片尺寸。
 
-继承自\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
 
-**继承/实现关系：** Size extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
+**继承/实现关系：** Size extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
 
 **起始版本：** 12
 
@@ -13,6 +13,12 @@
 <!--Device-sendableImage-interface Size extends lang.ISendable--><!--Device-sendableImage-interface Size extends lang.ISendable-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
+
+## 导入模块
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
 
 ## height
 

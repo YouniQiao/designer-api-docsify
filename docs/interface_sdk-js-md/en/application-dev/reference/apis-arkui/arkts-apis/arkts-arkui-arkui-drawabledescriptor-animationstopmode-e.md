@@ -1,6 +1,6 @@
 # AnimationStopMode
 
-Animation stop mode.
+动图停止模式。
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Animation stop mode.
 FIRST_FRAME = 0
 ```
 
-First frame.
+动图停止时回到首帧。
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ First frame.
 LAST_FRAME = 1
 ```
 
-Last frame.
+动图停止时停留在最后一帧。
 
 **Since:** 24
 

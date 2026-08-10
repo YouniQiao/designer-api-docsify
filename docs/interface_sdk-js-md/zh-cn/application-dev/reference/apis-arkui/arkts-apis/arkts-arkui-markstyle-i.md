@@ -18,7 +18,7 @@ size?: Length
 
 Define the size of checkbox mark.
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ strokeColor?: ResourceColor
 
 Define the stroke color of checkbox mark.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 11
 
@@ -62,7 +62,7 @@ strokeWidth?: Length
 
 Define the stroke width of checkbox mark.
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 

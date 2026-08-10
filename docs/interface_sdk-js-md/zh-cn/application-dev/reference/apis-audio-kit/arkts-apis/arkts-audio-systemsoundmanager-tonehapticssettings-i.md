@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
+
 ## hapticsUri
 
 ```TypeScript
@@ -36,7 +42,7 @@ mode: ToneHapticsMode
 
 铃音振动模式。
 
-**类型：** ToneHapticsMode
+**类型：** [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e.md)
 
 **起始版本：** 14
 

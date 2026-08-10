@@ -1,12 +1,18 @@
 # onMission (System API)
 
+## Modules to Import
+
+```TypeScript
+import { missionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onMission
 
 ```TypeScript
 function onMission(listener: MissionListener): long
 ```
 
-Register the missionListener to ams.
+注册系统任务状态监听器。
 
 **Since:** 23
 
@@ -24,18 +30,18 @@ Register the missionListener to ams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the MissionListener to be registered. |
+| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | Yes | 系统任务监听器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | Returns the index number of the MissionListener. |
+| long | 监听器的index值，由系统创建，在注册系统任务状态监听时分配，和监听器一一对应 。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

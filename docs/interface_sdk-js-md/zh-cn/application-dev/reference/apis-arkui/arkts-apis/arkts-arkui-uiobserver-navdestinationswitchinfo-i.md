@@ -10,6 +10,12 @@ Navigation组件页面切换的信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## context
 
 ```TypeScript
@@ -18,7 +24,7 @@ context: UIAbilityContext | UIContext
 
 触发页面切换的Navigation对应的上下文信息。
 
-**类型：** UIAbilityContext \| UIContext
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
 
 **起始版本：** 23
 
@@ -38,7 +44,7 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**类型：** NavDestinationInfo \| NavBar
+**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
 
 **起始版本：** 23
 
@@ -58,7 +64,7 @@ operation: NavigationOperation
 
 The operation type.
 
-**类型：** NavigationOperation
+**类型：** [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md)
 
 **起始版本：** 23
 
@@ -78,7 +84,7 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**类型：** NavDestinationInfo \| NavBar
+**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
 
 **起始版本：** 23
 

@@ -1,14 +1,20 @@
 # contains
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## contains
 
 ```TypeScript
 function contains(rule: bigint): boolean
 ```
 
-    **˵����**  
-    
-    ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.containsCheckRule]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_�����
+> **˵����**
+> 
+> ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containscheckrule)�����
 
 ��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ��
 
@@ -36,7 +42,7 @@ function contains(rule: bigint): boolean
 | --- | --- |
 | boolean | ��ѯ�����true ��ʾ���������ӣ�false ��ʾ����δ���ӡ� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 添加一条规则

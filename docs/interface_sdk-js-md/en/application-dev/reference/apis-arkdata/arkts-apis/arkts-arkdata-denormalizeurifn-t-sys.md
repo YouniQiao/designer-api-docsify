@@ -4,7 +4,7 @@
 type DenormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void
 ```
 
-Callback function called when converting the given normalized URI into a denormalized URI.
+服务端使用的URI转换为用户传入的初始URI操作的属性类型。
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ Callback function called when converting the given normalized URI into a denorma
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri to denormalize.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Returns the denormalized {@code uri} object if the denormalization is successful; returns the original {@code uri} passed to this method if there is nothing to do; returns {@code null} if the data identified by the original {@code uri} cannot be found in the current environment.  |
+| uri | string | Yes | Indicates the uri to denormalize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the denormalized {@code uri} object if the denormalization is successful; returns the original {@code uri} passed to this method if there is nothing to do; returns {@code null} if the data identified by the original {@code uri} cannot be found in the current environment. |
 

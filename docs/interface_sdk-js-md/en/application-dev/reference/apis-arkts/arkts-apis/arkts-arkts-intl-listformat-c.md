@@ -33,7 +33,7 @@ Creates a new ListFormat.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [ListFormatOptions](arkts-arkts-intl-listformatoptions-i.md) | No | the options. |
 
 ## format
 
@@ -118,7 +118,7 @@ Returns supported locales.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | Yes | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [ListFormatLocaleMatcher](arkts-arkts-intl-listformatlocalematcher-t.md) | No | the options. |
 
 **Return value:**
 

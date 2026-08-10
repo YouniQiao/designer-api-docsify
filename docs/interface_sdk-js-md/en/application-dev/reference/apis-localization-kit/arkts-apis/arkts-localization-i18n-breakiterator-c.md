@@ -1,6 +1,6 @@
 # BreakIterator
 
-The BreakIterator class is used for finding the location of break point in text.
+提供文本换行相关的能力，包括可换行点的获取、移动和识别等。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The BreakIterator class is used for finding the location of break point in text.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## current
 
 ```TypeScript
 current(): int
 ```
 
-Obtains the position of the break iterator in the text.
+获取换行迭代器在当前处理文本中的位置。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Obtains the position of the break iterator in the text.
 
 | Type | Description |
 | --- | --- |
-| int | Position of the break iterator in the text. |
+| int | 获取换行迭代器在当前处理的文本中的位置。 |
 
 ## first
 
@@ -40,7 +46,7 @@ Obtains the position of the break iterator in the text.
 first(): int
 ```
 
-Moves the break iterator to the first line break point, which is always at the beginning of the processed text.
+将换行迭代器移动到第一个可换行点。第一个可换行点总是在被处理文本的起始位置。
 
 **Since:** 23
 
@@ -56,7 +62,7 @@ Moves the break iterator to the first line break point, which is always at the b
 
 | Type | Description |
 | --- | --- |
-| int | Offset of the first line break point in the processed text. |
+| int | 被处理文本的第一个可换行点的偏移量。 |
 
 ## following
 
@@ -64,7 +70,7 @@ Moves the break iterator to the first line break point, which is always at the b
 following(offset: int): int
 ```
 
-Moves the line break iterator to the line break point after the specified position.
+将换行迭代器移动到指定位置后面一个可换行点。
 
 **Since:** 23
 
@@ -80,13 +86,13 @@ Moves the line break iterator to the line break point after the specified positi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | int | Yes | Offset of the line break point. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| offset | int | Yes | 将换行迭代器移动到文本指定位置的后面一个可换行点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Position of the break iterator in the text after movement. The value -1 is returned if the position of the break iterator is outside of the processed text after movement. |
+| int | 换行迭代器移动后的位置。若offset所指定位置的下一个可换行点超出了文本的范围，则返回-1。 |
 
 ## getLineBreakText
 
@@ -94,7 +100,7 @@ Moves the line break iterator to the line break point after the specified positi
 getLineBreakText(): string
 ```
 
-Obtains the text processed by the BreakIterator object.
+获取BreakIterator对象当前处理的文本。
 
 **Since:** 23
 
@@ -110,7 +116,7 @@ Obtains the text processed by the BreakIterator object.
 
 | Type | Description |
 | --- | --- |
-| string | Text being processed by the BreakIterator object. |
+| string | BreakIterator对象正在处理的文本。 |
 
 ## isBoundary
 
@@ -118,7 +124,7 @@ Obtains the text processed by the BreakIterator object.
 isBoundary(offset: int): boolean
 ```
 
-Checks whether the specified position is a line break point.
+判断指定位置是否为可换行点。
 
 **Since:** 23
 
@@ -134,13 +140,13 @@ Checks whether the specified position is a line break point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | int | Yes | Specified position in the text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| offset | int | Yes | 文本指定位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the specified position is a line break point. The value "true" indicates that the specified position is a line break point, and the value "false" indicates the opposite. If true is returned, the break iterator is moved to the position specified by offset. Otherwise, the break iterator is moved to the text line break point after the position specified by offset, which is equivalent to calling following. |
+| boolean | true表示offset指定的文本位置是一个可换行点，false表示offset指定的文本位置不是一个可换行点。 &lt;br&gt;返回true时，会将换行迭代器移动到offset指定的位置，否则相当于调用following。 |
 
 ## last
 
@@ -148,7 +154,7 @@ Checks whether the specified position is a line break point.
 last(): int
 ```
 
-Moves the break iterator to the last line break point, which is always the next position after the end of the processed text.
+将换行迭代器移动到最后一个可换行点。最后一个可换行点总是在被处理文本末尾的下一个位置。
 
 **Since:** 23
 
@@ -164,7 +170,7 @@ Moves the break iterator to the last line break point, which is always the next 
 
 | Type | Description |
 | --- | --- |
-| int | Offset of the last line break point in the processed text. |
+| int | 被处理文本的最后一个可换行点的偏移量。 |
 
 ## next
 
@@ -172,7 +178,7 @@ Moves the break iterator to the last line break point, which is always the next 
 next(index?: int): int
 ```
 
-Moves the break iterator backward by the specified number of line break points.
+将换行迭代器向后移动index个可换行点。
 
 **Since:** 23
 
@@ -188,13 +194,13 @@ Moves the break iterator backward by the specified number of line break points.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | No | Number of line break points for moving the break iterator. The value is an integer. A positive number means to move the break iterator backward, and a negative number means to move the break iterator forward. The default value is 1. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| index | int | No | 换行迭代器将要移动的可换行点数，取值为整数。 &lt;br&gt;正数表示向后移动index个可换行点，负数表示向前移动index个可换行点。 &lt;br&gt;默认值：1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Position of the break iterator in the text after movement. The value -1 is returned if the position of the break iterator is outside of the processed text after movement. |
+| int | 移动index个可换行点后，当前换行迭代器在文本中的位置。 &lt;br&gt;若移动index个可换行点后超出了所处理的文本的长度范围，返回-1。 |
 
 ## previous
 
@@ -202,7 +208,7 @@ Moves the break iterator backward by the specified number of line break points.
 previous(): int
 ```
 
-Moves the break iterator foreward by one line break point.
+将换行迭代器向前移动一个可换行点。
 
 **Since:** 23
 
@@ -218,7 +224,7 @@ Moves the break iterator foreward by one line break point.
 
 | Type | Description |
 | --- | --- |
-| int | Position of the break iterator in the text after movement. The value -1 is returned if the position of the break iterator is outside of the processed text after movement. |
+| int | 移动到前一个可换行点后，当前换行迭代器在文本中的位置。 &lt;br&gt;若移动后超出了所处理的文本的长度范围，返回-1。 |
 
 ## setLineBreakText
 
@@ -226,7 +232,7 @@ Moves the break iterator foreward by one line break point.
 setLineBreakText(text: string): void
 ```
 
-Sets the text to be processed by the BreakIterator object.
+设置BreakIterator对象要处理的文本。
 
 **Since:** 23
 
@@ -242,5 +248,5 @@ Sets the text to be processed by the BreakIterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Input text. |
+| text | string | Yes | 输入文本。 |
 

@@ -33,7 +33,7 @@ INTEGER = 1
 ```
 
 表示列数据类型为64位整数。可用于保存8位（包括布尔值）、16位、32位、64位整数。如果64位整数大于2^53或小于-2^53，需使用  
-[getString]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_将64位整数转换为字符串。
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)将64位整数转换为字符串。
 
 **起始版本：** 18
 
@@ -97,7 +97,7 @@ BLOB = 4
 ASSET = 5
 ```
 
-表示列类型为[Asset]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+表示列类型为[Asset](arkts-arkdata-relationalstore-asset-i.md)。
 
 **起始版本：** 18
 
@@ -113,7 +113,7 @@ ASSET = 5
 ASSETS = 6
 ```
 
-表示列类型为[Assets]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+表示列类型为[Assets](arkts-arkdata-relationalstore-assets-t.md)。
 
 **起始版本：** 18
 

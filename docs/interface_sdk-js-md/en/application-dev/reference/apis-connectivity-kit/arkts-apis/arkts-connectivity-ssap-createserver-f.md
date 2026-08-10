@@ -1,12 +1,18 @@
 # createServer
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createServer
 
 ```TypeScript
 function createServer(): Server
 ```
 
-Creates a SSAP server instance.
+创建SSAP服务端实例。
 
 **Since:** 26.0.0
 
@@ -24,14 +30,14 @@ Creates a SSAP server instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a SSAP server instance { |
+| [Server](arkts-connectivity-ssap-server-i.md) | 返回一个SSAP服务端实例{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
 

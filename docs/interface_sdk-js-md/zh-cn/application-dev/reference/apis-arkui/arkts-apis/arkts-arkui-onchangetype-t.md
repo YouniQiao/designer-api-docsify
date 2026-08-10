@@ -4,8 +4,8 @@
 export type OnChangeType<T> = (propertyName: string, newValue: T) => void
 ```
 
-注册\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_/  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中所引用属性变化事件的回调函数类型。
+注册[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
+[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性变化事件的回调函数类型。
 
 **起始版本：** 23
 
@@ -21,6 +21,6 @@ export type OnChangeType<T> = (propertyName: string, newValue: T) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| propertyName | string | 是 | property name  |
-| newValue | T | 是 | the new value of state variable  |
+| propertyName | string | 是 | property name |
+| newValue | T | 是 | the new value of state variable |
 

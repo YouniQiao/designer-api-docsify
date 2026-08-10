@@ -12,6 +12,12 @@ Defines the options for obtaining the onscreen content.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## contentUnderstand
 
 ```TypeScript
@@ -80,7 +86,7 @@ windowId?: int
 
 ID of the window whose content needs to be obtained. If this parameter is not set or is set to **undefined**, the content of the full-screen window is obtained by default.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

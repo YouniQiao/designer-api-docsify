@@ -1,12 +1,18 @@
 # getSimpleNumberFormatBySkeleton
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getSimpleNumberFormatBySkeleton
 
 ```TypeScript
 export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat
 ```
 
-Obtains a SimpleNumberFormat object based on the specified skeleton.
+通过框架字符串获取SimpleNumberFormat对象。
 
 **Since:** 23
 
@@ -22,18 +28,18 @@ Obtains a SimpleNumberFormat object based on the specified skeleton.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| locale | Intl.Locale | No | Locale object. The default value is the current system locale. |
+| skeleton | string | Yes | 合法的框架字符串，支持的字符及含义请参考 [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons)。 |
+| locale | Intl.Locale | No | 区域对象。默认值：系统区域对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SimpleNumberFormat object. |
+| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 

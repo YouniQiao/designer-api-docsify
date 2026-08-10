@@ -1,8 +1,7 @@
 # KeepAliveBundleInfo (System API)
 
-Describes the keep-alive application information, which can be obtained by calling  
-[getKeepAliveBundles]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[getKeepAliveAppServiceExtensions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+定义应用保活信息，可以通过[getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles)或  
+[getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions)获取。
 
 **Since:** 14
 
@@ -14,13 +13,19 @@ Describes the keep-alive application information, which can be obtained by calli
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## allowUserToCancel
 
 ```TypeScript
 allowUserToCancel?: boolean
 ```
 
-Whether the user can cancel the keep-alive status. **true** if yes, **false** otherwise.
+表示是否允许用户取消保活。true表示允许，false表示不允许。
 
 **Type:** boolean
 
@@ -40,7 +45,7 @@ Whether the user can cancel the keep-alive status. **true** if yes, **false** ot
 bundleName: string
 ```
 
-Bundle name.
+Bundle名称。
 
 **Type:** string
 
@@ -60,9 +65,9 @@ Bundle name.
 setter: KeepAliveSetter
 ```
 
-Type of the party that sets to keep the application alive.
+表示应用保活设置者类型。
 
-**Type:** KeepAliveSetter
+**Type:** [KeepAliveSetter](arkts-ability-appmanager-keepalivesetter-e-sys.md)
 
 **Since:** 14
 
@@ -80,9 +85,9 @@ Type of the party that sets to keep the application alive.
 setterUserId?: int
 ```
 
-ID of the user who keeps the application alive.
+应用保活设置者的用户ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -100,9 +105,9 @@ ID of the user who keeps the application alive.
 type: KeepAliveAppType
 ```
 
-Type of the application to be kept alive.
+表示被保活应用的应用类型。
 
-**Type:** KeepAliveAppType
+**Type:** [KeepAliveAppType](arkts-ability-appmanager-keepaliveapptype-e-sys.md)
 
 **Since:** 14
 

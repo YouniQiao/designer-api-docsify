@@ -1,6 +1,6 @@
 # Options
 
-Defines options used to compress or decompress a ZIP file.
+Options用于指定在压缩或解压Zip文件时的选项。
 
 **Since:** 7
 
@@ -10,27 +10,11 @@ Defines options used to compress or decompress a ZIP file.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
-## keepTopLevelFolder
+## Modules to Import
 
 ```TypeScript
-keepTopLevelFolder?: boolean
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
-
-Indicates whether to keep the top-level source folder in the compressed file.The default value is false.
-
-**Type:** boolean
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-Options-keepTopLevelFolder?: boolean--><!--Device-Options-keepTopLevelFolder?: boolean-End-->
-
-**System capability:** SystemCapability.BundleManager.Zlib
 
 ## level
 
@@ -38,9 +22,9 @@ Indicates whether to keep the top-level source folder in the compressed file.The
 level?: CompressLevel
 ```
 
-Compression level specified for compression or decompression.
+压缩或解压时指定的压缩等级。
 
-**Type:** CompressLevel
+**Type:** [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md)
 
 **Since:** 7
 
@@ -58,9 +42,9 @@ Compression level specified for compression or decompression.
 memLevel?: MemLevel
 ```
 
-Memory level specified for compression.
+压缩时指定的使用内存等级。
 
-**Type:** MemLevel
+**Type:** [MemLevel](arkts-basicservices-zlib-memlevel-e.md)
 
 **Since:** 7
 
@@ -78,9 +62,9 @@ Memory level specified for compression.
 parallel?: ParallelStrategy
 ```
 
-Serial or parallel strategy specified for compression or decompression.
+压缩策略。
 
-**Type:** ParallelStrategy
+**Type:** [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
 
 **Since:** 18
 
@@ -98,9 +82,9 @@ Serial or parallel strategy specified for compression or decompression.
 pathSeparatorStrategy?: PathSeparatorStrategy
 ```
 
-Separator strategy for the file path in the compressed package specified for decompression.
+并行策略。
 
-**Type:** PathSeparatorStrategy
+**Type:** [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
 
 **Since:** 21
 
@@ -118,9 +102,9 @@ Separator strategy for the file path in the compressed package specified for dec
 strategy?: CompressStrategy
 ```
 
-Compression strategy specified for compression.
+压缩时指定的压缩策略。
 
-**Type:** CompressStrategy
+**Type:** [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md)
 
 **Since:** 7
 

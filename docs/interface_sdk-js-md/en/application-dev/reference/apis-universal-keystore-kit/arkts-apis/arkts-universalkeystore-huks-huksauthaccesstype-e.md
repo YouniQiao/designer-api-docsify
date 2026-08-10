@@ -1,6 +1,6 @@
 # HuksAuthAccessType
 
-Enumerates the access control types.
+表示安全访问控制类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the access control types.
 HUKS_AUTH_ACCESS_INVALID_CLEAR_PASSWORD = 1 << 0
 ```
 
-The key becomes invalid after the password is cleared.
+表示安全访问控制类型为清除密码后密钥无效。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ The key becomes invalid after the password is cleared.
 HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL = 1 << 1
 ```
 
-The key becomes invalid after a new biometric feature is added.
+表示安全访问控制类型为新录入生物特征后密钥无效。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The key becomes invalid after a new biometric feature is added.
 HUKS_AUTH_ACCESS_ALWAYS_VALID = 1 << 2
 ```
 
-The key is always valid.
+表示安全访问控制类型为该密钥总是有效。
 
 **Since:** 11
 

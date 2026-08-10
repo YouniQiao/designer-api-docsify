@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## apps
 
 ```TypeScript
@@ -20,7 +26,7 @@ apps: Record<string, AppBriefInfo>
 
 简要应用信息。
 
-**类型：** Record&lt;string, AppBriefInfo&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, AppBriefInfo&gt;
 
 **起始版本：** 11
 
@@ -40,7 +46,7 @@ cloudInfo: ServiceInfo
 
 云服务信息。
 
-**类型：** ServiceInfo
+**类型：** [ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)
 
 **起始版本：** 11
 

@@ -1,5 +1,11 @@
 # getBluetoothScanMode
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getBluetoothScanMode
 
 ```TypeScript
@@ -26,9 +32,9 @@ Obtains the Bluetooth scanning mode of a device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Bluetooth scanning mode, { |
+| [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md) | Returns the Bluetooth scanning mode, { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let scanMode : bluetooth.ScanMode = bluetooth.getBluetoothScanMode();

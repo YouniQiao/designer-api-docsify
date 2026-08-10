@@ -26,7 +26,9 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | UnionEffectContainer constructor options.  |
+| options | [UnionEffectContainerOptions](../arkts-apis/arkts-arkui-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md) | No | UnionEffectContainer constructor options. |
 
 ## Summary
 
+- [UnionEffectContainerOptions](arkts-arkui-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md)
+- [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md)

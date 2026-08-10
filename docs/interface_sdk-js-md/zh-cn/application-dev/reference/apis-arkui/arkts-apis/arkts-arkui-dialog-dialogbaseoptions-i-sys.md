@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## distortionMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ distortionMode?: DistortionMode
 
 设置对话框的变形动画模式。
 
-**类型：** DistortionMode
+**类型：** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
 **默认值：** DistortionMode.DISTORTION_AUTO
 
@@ -42,7 +48,7 @@ edgeLightMode?: EdgeLightMode
 
 设置对话框的edgeLight动画模式。
 
-**类型：** EdgeLightMode
+**类型：** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 
 **默认值：** EdgeLightMode.EDGELIGHT_AUTO
 

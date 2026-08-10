@@ -1,6 +1,6 @@
 # MetadataObject
 
-Describes the camera metadata, which is the data source of [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
+相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the camera metadata, which is the data source of [CameraInput]\_\_\_JS
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## boundingBox
 
 ```TypeScript
 readonly boundingBox: Rect
 ```
 
-Metadata rectangle.
+metadata 区域框。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 10
 
@@ -36,7 +42,7 @@ Metadata rectangle.
 readonly isLockFocusTracked?: boolean
 ```
 
-Whether the focus is locked and being tracked currently.
+是否已锁定焦点跟踪。true表示已锁定，false表示未锁定。
 
 **Type:** boolean
 
@@ -58,9 +64,9 @@ Whether the focus is locked and being tracked currently.
 readonly timestamp: int
 ```
 
-Timestamp, in ns.
+当前时间戳。单位为纳秒（ns）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -78,9 +84,9 @@ Timestamp, in ns.
 readonly type: MetadataObjectType
 ```
 
-Metadata object type.
+metadata 类型。
 
-**Type:** MetadataObjectType
+**Type:** [MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)
 
 **Since:** 10
 

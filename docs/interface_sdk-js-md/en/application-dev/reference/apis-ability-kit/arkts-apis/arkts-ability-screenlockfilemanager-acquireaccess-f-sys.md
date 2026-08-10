@@ -1,14 +1,20 @@
 # acquireAccess (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screenLockFileManager } from 'kits/@kit.AbilityKit';
+```
+
 ## acquireAccess
 
 ```TypeScript
 function acquireAccess(dataType: DataType): AccessStatus
 ```
 
-Requests the permission to access a specified type of sensitive data under the lock screen synchronously. After the request is successful, the reference count of the sensitive data key increases, preventing the key from being destroyed after the screen has been locked for the system-configured duration threshold. This method must be used in pair with [releaseAccess]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+以同步方法申请锁屏下指定类型的敏感数据访问权限。申请成功后，敏感数据密钥的引用计数增加，防止密钥在锁屏达到系统配置的时长阈值后被销毁。该方法需与[releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md#releaseaccess)配对使用。
 
-Before calling this API, ensure that the app has enabled the sensitive data protection under lock screen feature and that the key state queried through the [queryAppKeyState]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API is KEY\_EXIST.
+调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并通过[queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md#queryappkeystate)接口查询密钥状态为KEY_EXIST。
 
 **Since:** 12
 
@@ -26,28 +32,28 @@ Before calling this API, ensure that the app has enabled the sensitive data prot
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of sensitive data that is accessible on the lock screen. |
+| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | 锁屏下访问的敏感数据类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Application status for access permission for sensitive data under lock screen. |
+| [AccessStatus](arkts-ability-screenlockfilemanager-accessstatus-e.md) | 锁屏下敏感数据访问权限的申请状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameter is left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found. |
-| [29300001](../errorcode-screenLockFileManager.md#29300001-invalid-parameter) | Invalid DataType. |
-| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
-| [29300003](../errorcode-screenLockFileManager.md#29300003-sensitive-data-access-management-under-lock-screen-is-not-enabled) | The application is not enabled the data protection under lock screen. |
-| [29300004](../errorcode-screenLockFileManager.md#29300004-permission-to-access-sensitive-data-on-the-lock-screen-has-been-revoked) | File access is denied. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameter is left unspecified. 2. Incorrect parameter types. |
+| 801 | The specified SystemCapability name was not found. |
+| 201 | Permission verification failed, usually returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 29300004 | File access is denied. |
+| 29300003 | The application is not enabled the data protection under lock screen. |
+| 29300002 | The system ability works abnormally. |
+| 29300001 | Invalid DataType. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Request the permission to access media data on the lock screen.
@@ -56,6 +62,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
+    // Request access permission
     let acquireStatus = screenLockFileManager.acquireAccess(screenLockFileManager.DataType.MEDIA_DATA);
     if (acquireStatus === screenLockFileManager.AccessStatus.ACCESS_GRANTED) {
         hilog.info(0x0000, 'testTag', 'acquireAccess successfully.');

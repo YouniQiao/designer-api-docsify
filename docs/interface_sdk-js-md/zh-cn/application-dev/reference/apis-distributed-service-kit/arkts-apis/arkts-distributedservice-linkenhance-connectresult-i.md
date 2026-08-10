@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -42,9 +48,9 @@ reason: int
 - 32390201：表示服务端服务未启动。  
 - 32390300：表示内部错误。
 
-更多关于错误码的详细介绍请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+更多关于错误码的详细介绍请参考[增强连接错误码](../../../reference/apis-distributedservice-kit/errorcode-link-enhance.md)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 

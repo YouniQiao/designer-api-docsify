@@ -18,7 +18,7 @@ newState: CameraCaptureState
 
 改变后的状态
 
-**类型：** CameraCaptureState
+**类型：** [CameraCaptureState](../arkts-apis/arkts-arkweb-web-cameracapturestate-e.md)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ originalState: CameraCaptureState
 
 原来的状态
 
-**类型：** CameraCaptureState
+**类型：** [CameraCaptureState](../arkts-apis/arkts-arkweb-web-cameracapturestate-e.md)
 
 **起始版本：** 23
 

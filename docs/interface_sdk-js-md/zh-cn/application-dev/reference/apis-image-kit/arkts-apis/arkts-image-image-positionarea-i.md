@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## offset
 
 ```TypeScript
@@ -18,7 +24,7 @@ offset: int
 
 偏移量。单位：字节（Byte）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -38,7 +44,7 @@ offset: int
 pixels: ArrayBuffer
 ```
 
-像素数据缓冲区。仅支持BGRA\_8888格式的像素数据。
+像素数据缓冲区。仅支持BGRA_8888格式的像素数据。
 
 **类型：** ArrayBuffer
 
@@ -62,7 +68,7 @@ region: Region
 
 区域信息，用于按区域进行图像数据的读写。写入的区域宽度加X坐标不能大于原图的宽度，写入的区域高度加Y坐标不能大于原图的高度。
 
-**类型：** Region
+**类型：** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
 
 **起始版本：** 7
 
@@ -84,7 +90,7 @@ stride: int
 
 跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride >= region.size.width * 4，不满足时数据读取异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 

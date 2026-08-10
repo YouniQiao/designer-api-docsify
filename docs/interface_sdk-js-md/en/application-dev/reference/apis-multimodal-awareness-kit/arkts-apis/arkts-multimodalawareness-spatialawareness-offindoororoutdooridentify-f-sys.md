@@ -1,5 +1,11 @@
 # offIndoorOrOutdoorIdentify (System API)
 
+## Modules to Import
+
+```TypeScript
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## offIndoorOrOutdoorIdentify
 
 ```TypeScript
@@ -27,21 +33,21 @@ Unsubscribe from the results of indoor and outdoor recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configParams | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration parameters for identification inside and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ outside the door |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DoorPositionResponse&gt; | No | Callback for identification inside and outside the door |
+| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | Yes | Configuration parameters for identification inside and &lt;br&gt; outside the door |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DoorPositionResponse&gt; | No | Callback for identification inside and outside the door |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ limited device capabilities. |
-| [35100001](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100001-service-exception) | Service exception. |
-| [35100003](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100003-unsubscription-failed) | Unsubscription failed. |
-| [35100004](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100004-invalid-parameter) | Parameter invalid. |
+| 801 | Capability not supported. Function can not work correctly due to &lt;br&gt; limited device capabilities. |
+| 35100004 | Parameter invalid. |
+| 35100003 | Unsubscription failed. |
+| 35100001 | Service exception. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { spatialAwareness } from '@kit.MultimodalAwarenessKit';

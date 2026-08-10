@@ -1,12 +1,18 @@
 # onAppForegroundStateChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onAppForegroundStateChange
 
 ```TypeScript
 function onAppForegroundStateChange(observer: AppForegroundStateObserver): void
 ```
 
-Register app foreground or background state observer.
+注册应用启动和退出的监听器，可用于系统应用监听所有应用的启动和退出。
 
 **Since:** 23
 
@@ -24,13 +30,13 @@ Register app foreground or background state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The app foreground state observer. |
+| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | Yes | 应用状态监听器，用于监听应用的启动和退出。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

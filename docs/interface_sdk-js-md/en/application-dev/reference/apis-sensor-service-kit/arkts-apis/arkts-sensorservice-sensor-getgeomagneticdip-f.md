@@ -1,12 +1,24 @@
 # getGeomagneticDip
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## getGeomagneticDip
 
 ```TypeScript
 function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void
 ```
 
-Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result.
+根据倾斜矩阵计算地磁倾斜角，使用Callback异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)
+> 替代。
 
 **Since:** 8
 
@@ -24,10 +36,10 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the magnetic dip, in radians. |
+| inclinationMatrix | Array&lt;number&gt; | Yes | 表示倾斜矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步返回地磁倾斜角，单位为弧度。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -49,7 +61,12 @@ sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data:
 function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 ```
 
-Obtains the magnetic dip based on the inclination matrix. This API uses a promise to return the result.
+根据倾斜矩阵计算地磁倾斜角，使用Promise异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)替代。
 
 **Since:** 8
 
@@ -67,15 +84,15 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
+| inclinationMatrix | Array&lt;number&gt; | Yes | 表示倾斜矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the magnetic dip, in radians. |
+| Promise&lt;number&gt; | 使用异步方式返回地磁倾斜角，单位为弧度。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

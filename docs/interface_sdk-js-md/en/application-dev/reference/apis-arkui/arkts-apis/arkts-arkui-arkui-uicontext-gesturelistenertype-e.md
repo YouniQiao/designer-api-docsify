@@ -1,6 +1,6 @@
 # GestureListenerType
 
-This is an enumeration type indicating what kind of gesture you want to monitor for.
+表示需要监听的手势类型的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ This is an enumeration type indicating what kind of gesture you want to monitor 
 TAP = 0
 ```
 
-The tap gesture.
+点击手势。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ The tap gesture.
 LONG_PRESS = 1
 ```
 
-The long press gesture.
+长按手势。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ The long press gesture.
 PAN = 2
 ```
 
-The pan gesture.
+拖动手势。
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ The pan gesture.
 PINCH = 3
 ```
 
-The pinch gesture.
+捏合手势。
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ The pinch gesture.
 SWIPE = 4
 ```
 
-The swipe gesture.
+滑动手势。
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ The swipe gesture.
 ROTATION = 5
 ```
 
-The rotation gesture.
+旋转手势。
 
 **Since:** 26.0.0
 

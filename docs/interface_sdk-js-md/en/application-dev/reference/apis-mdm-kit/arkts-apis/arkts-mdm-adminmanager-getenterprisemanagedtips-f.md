@@ -1,12 +1,18 @@
 # getEnterpriseManagedTips
 
+## Modules to Import
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## getEnterpriseManagedTips
 
 ```TypeScript
 function getEnterpriseManagedTips(): Promise<string>
 ```
 
-Gets enterprise message tips.
+查询企业定制信息
 
 **Since:** 23
 
@@ -28,5 +34,5 @@ Gets enterprise message tips.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

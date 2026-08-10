@@ -1,9 +1,10 @@
 # PathOptions
 
 用于描述Path组件绘制属性。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -19,13 +20,13 @@
 commands?: ResourceStr
 ```
 
-路径绘制的命令字符串，符合\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，单位为px。
+路径绘制的命令字符串，符合[SVG路径描述规范](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)，单位为px。
 
 默认值：空字符串
 
 异常值按照默认值处理。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 7
 
@@ -51,7 +52,7 @@ height?: Length
 
 默认单位：vp
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
 
@@ -77,7 +78,7 @@ width?: Length
 
 默认单位：vp
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
 

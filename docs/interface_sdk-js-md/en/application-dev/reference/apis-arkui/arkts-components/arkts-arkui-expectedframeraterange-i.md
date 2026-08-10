@@ -1,6 +1,6 @@
 # ExpectedFrameRateRange
 
-Sets the expected frame rate range for an animation.
+设置动画期望的帧率。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Sets the expected frame rate range for an animation.
 expected: number
 ```
 
-Expected optimal frame rate, in fps.
+期望的最优帧率，单位为帧/秒（fps）。
 
-The value range is [**min**, **max**]. When this parameter is set to **0**, the frame rate of the app is used.
+取值范围为[min, max]。设置为0时，将跟随应用的帧率。
 
 **Type:** number
 
@@ -40,9 +40,9 @@ The value range is [**min**, **max**]. When this parameter is set to **0**, the 
 max: number
 ```
 
-Expected maximum frame rate, in fps.
+期望的最大帧率，单位为帧/秒（fps）。
 
-The value range is [**min**, Maximum frame rate of the device].
+取值范围为[min, 设备最大帧率]。
 
 **Type:** number
 
@@ -64,9 +64,9 @@ The value range is [**min**, Maximum frame rate of the device].
 min: number
 ```
 
-Expected minimum frame rate, in fps.
+期望的最小帧率，单位为帧/秒（fps）。
 
-The value range is [0, Maximum frame rate of the device].
+取值范围为[0, 设备最大帧率]。
 
 **Type:** number
 

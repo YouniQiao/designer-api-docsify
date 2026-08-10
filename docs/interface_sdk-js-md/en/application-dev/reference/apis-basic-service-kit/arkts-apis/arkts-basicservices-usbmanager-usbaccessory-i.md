@@ -1,6 +1,6 @@
 # USBAccessory
 
-Describes the USB accessory information.
+USB配件信息。
 
 **Since:** 14
 
@@ -10,13 +10,19 @@ Describes the USB accessory information.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## description
 
 ```TypeScript
 description: string
 ```
 
-Description of an accessory.
+配件的描述。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Description of an accessory.
 manufacturer: string
 ```
 
-Manufacturer of an accessory.
+配件的生产厂商。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Manufacturer of an accessory.
 product: string
 ```
 
-Product type of an accessory.
+配件的产品类型。
 
 **Type:** string
 
@@ -70,7 +76,7 @@ Product type of an accessory.
 serialNumber: string
 ```
 
-SN of an accessory.
+配件的SN号。
 
 **Type:** string
 
@@ -88,7 +94,7 @@ SN of an accessory.
 version: string
 ```
 
-Version of an accessory.
+配件的版本。
 
 **Type:** string
 

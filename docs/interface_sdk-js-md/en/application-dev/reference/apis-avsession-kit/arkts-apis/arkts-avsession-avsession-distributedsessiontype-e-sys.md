@@ -1,6 +1,6 @@
 # DistributedSessionType (System API)
 
-Define different distributed session type
+表示远端分布式设备支持的会话类型枚举。
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ Define different distributed session type
 TYPE_SESSION_REMOTE = 0
 ```
 
-Remote session sensed from remote device.
+远端设备会话。
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ Remote session sensed from remote device.
 TYPE_SESSION_MIGRATE_IN = 1
 ```
 
-Migrated session from remote device to this device.
+迁移至本端的设备会话。
 
 **Since:** 18
 
@@ -54,7 +54,7 @@ Migrated session from remote device to this device.
 TYPE_SESSION_MIGRATE_OUT = 2
 ```
 
-Migrated session from this device to remote device.
+迁移至远端的设备会话。
 
 **Since:** 18
 

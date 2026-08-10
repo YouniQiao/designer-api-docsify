@@ -10,6 +10,12 @@ Component information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { componentUtils } from 'kits/@kit.ArkUI';
+```
+
 ## localOffset
 
 ```TypeScript
@@ -18,7 +24,7 @@ localOffset: Offset
 
 Obtain attribute information relative to the local coordinates.
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ rotate: RotateResult
 
 Obtain attribute information for rotate.
 
-**Type:** RotateResult
+**Type:** [RotateResult](arkts-arkui-componentutils-rotateresult-i.md)
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ scale: ScaleResult
 
 Obtain attribute information for scale.
 
-**Type:** ScaleResult
+**Type:** [ScaleResult](arkts-arkui-componentutils-scaleresult-i.md)
 
 **Since:** 23
 
@@ -78,7 +84,7 @@ screenOffset: Offset
 
 Obtain attribute information relative to the screen.
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 23
 
@@ -98,7 +104,7 @@ size: Size
 
 component size.
 
-**Type:** Size
+**Type:** [Size](arkts-arkui-window-size-i.md)
 
 **Since:** 23
 
@@ -118,7 +124,7 @@ transform: Matrix4Result
 
 Obtain attribute information of the transformation matrix.
 
-**Type:** Matrix4Result
+**Type:** [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md)
 
 **Since:** 23
 
@@ -138,7 +144,7 @@ translate: TranslateResult
 
 Obtain attribute information for translation.
 
-**Type:** TranslateResult
+**Type:** [TranslateResult](arkts-arkui-componentutils-translateresult-i.md)
 
 **Since:** 23
 
@@ -158,7 +164,7 @@ windowOffset: Offset
 
 Obtain attribute information relative to the window.
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **Since:** 23
 

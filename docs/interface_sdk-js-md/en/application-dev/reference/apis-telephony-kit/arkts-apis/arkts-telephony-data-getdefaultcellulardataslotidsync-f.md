@@ -1,5 +1,11 @@
 # getDefaultCellularDataSlotIdSync
 
+## Modules to Import
+
+```TypeScript
+import { data } from 'kits/@kit.TelephonyKit';
+```
+
 ## getDefaultCellularDataSlotIdSync
 
 ```TypeScript
@@ -20,9 +26,9 @@ Get the default cellular data card.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Returns default cellular data slot id. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns default cellular data slot id. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

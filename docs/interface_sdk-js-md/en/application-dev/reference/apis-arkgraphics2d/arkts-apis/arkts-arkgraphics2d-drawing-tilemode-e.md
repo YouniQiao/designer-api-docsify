@@ -1,6 +1,6 @@
 # TileMode
 
-Enumerates the tile modes of the shader effect.
+着色器效果平铺模式的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the tile modes of the shader effect.
 CLAMP = 0
 ```
 
-Replicates the edge color if the shader effect draws outside of its original boundary.
+如果着色器效果超出其原始边界，剩余区域使用着色器的边缘颜色填充。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Replicates the edge color if the shader effect draws outside of its original bou
 REPEAT = 1
 ```
 
-Repeats the shader effect in both horizontal and vertical directions.
+在水平和垂直方向上重复着色器效果。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Repeats the shader effect in both horizontal and vertical directions.
 MIRROR = 2
 ```
 
-Repeats the shader effect in both horizontal and vertical directions, alternating mirror images.
+在水平和垂直方向上重复着色器效果，交替镜像图像，以便相邻图像始终接合。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Repeats the shader effect in both horizontal and vertical directions, alternatin
 DECAL = 3
 ```
 
-Renders the shader effect only within the original boundary.
+仅在其原始边界内渲染着色器效果。
 
 **Since:** 12
 

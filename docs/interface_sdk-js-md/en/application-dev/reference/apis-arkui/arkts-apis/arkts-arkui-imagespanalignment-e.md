@@ -1,6 +1,6 @@
 # ImageSpanAlignment
 
-The alignment mode of the image relative to the line height.
+The alignment of ImageSpan
 
 **Since:** 10
 
@@ -13,10 +13,10 @@ The alignment mode of the image relative to the line height.
 ## BASELINE
 
 ```TypeScript
-BASELINE
+BASELINE = 0
 ```
 
-The image is bottom aligned with the text baseline.
+Indicating that the bottom of the ImageSpan should be aligned with the baseline of the surrounding text.
 
 **Since:** 10
 
@@ -26,17 +26,17 @@ The image is bottom aligned with the text baseline.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImageSpanAlignment-BASELINE--><!--Device-ImageSpanAlignment-BASELINE-End-->
+<!--Device-ImageSpanAlignment-BASELINE = 0--><!--Device-ImageSpanAlignment-BASELINE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM
 
 ```TypeScript
-BOTTOM
+BOTTOM = 1
 ```
 
-The image is bottom aligned with the line.
+Indicating that the bottom of the ImageSpan should be aligned with the bottom of the surrounding text.
 
 **Since:** 10
 
@@ -46,17 +46,17 @@ The image is bottom aligned with the line.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImageSpanAlignment-BOTTOM--><!--Device-ImageSpanAlignment-BOTTOM-End-->
+<!--Device-ImageSpanAlignment-BOTTOM = 1--><!--Device-ImageSpanAlignment-BOTTOM = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CENTER
 
 ```TypeScript
-CENTER
+CENTER = 2
 ```
 
-The image is centered aligned with the line.
+Indicating that the center of the ImageSpan should be aligned with the center of the surrounding text.
 
 **Since:** 10
 
@@ -66,17 +66,17 @@ The image is centered aligned with the line.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImageSpanAlignment-CENTER--><!--Device-ImageSpanAlignment-CENTER-End-->
+<!--Device-ImageSpanAlignment-CENTER = 2--><!--Device-ImageSpanAlignment-CENTER = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
 
 ```TypeScript
-TOP
+TOP = 3
 ```
 
-The image is top aligned with the line.
+Indicating that the top of the ImageSpan should be aligned with the top of the surrounding text.
 
 **Since:** 10
 
@@ -86,17 +86,17 @@ The image is top aligned with the line.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImageSpanAlignment-TOP--><!--Device-ImageSpanAlignment-TOP-End-->
+<!--Device-ImageSpanAlignment-TOP = 3--><!--Device-ImageSpanAlignment-TOP = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOW_PARAGRAPH
 
 ```TypeScript
-FOLLOW_PARAGRAPH
+FOLLOW_PARAGRAPH = 4
 ```
 
-The alignment mode follows the parent component of the **Text** component.
+按照段落TextVerticalAlign的对齐方式来布局
 
 **Since:** 20
 
@@ -106,7 +106,7 @@ The alignment mode follows the parent component of the **Text** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-ImageSpanAlignment-FOLLOW_PARAGRAPH--><!--Device-ImageSpanAlignment-FOLLOW_PARAGRAPH-End-->
+<!--Device-ImageSpanAlignment-FOLLOW_PARAGRAPH = 4--><!--Device-ImageSpanAlignment-FOLLOW_PARAGRAPH = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

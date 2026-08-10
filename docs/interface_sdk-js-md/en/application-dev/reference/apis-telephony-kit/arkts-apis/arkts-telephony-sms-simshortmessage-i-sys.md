@@ -12,6 +12,12 @@ Defines a SIM message.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## indexOnSim
 
 ```TypeScript
@@ -20,7 +26,7 @@ indexOnSim: int
 
 Indicates the index of SMS messages in the SIM.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -40,7 +46,7 @@ shortMessage: ShortMessage
 
 Indicates the SMS message in the SIM.
 
-**Type:** ShortMessage
+**Type:** [ShortMessage](arkts-telephony-sms-shortmessage-i.md)
 
 **Since:** 7
 
@@ -60,7 +66,7 @@ simMessageStatus: SimMessageStatus
 
 Indicates the storage status of SMS messages in the SIM.
 
-**Type:** SimMessageStatus
+**Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
 **Since:** 7
 

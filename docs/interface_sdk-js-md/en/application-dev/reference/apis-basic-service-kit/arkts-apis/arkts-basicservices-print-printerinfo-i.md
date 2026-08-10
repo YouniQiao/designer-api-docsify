@@ -1,6 +1,6 @@
 # PrinterInfo
 
-Provides the printer information.
+定义打印信息的接口。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Provides the printer information.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## capability
 
 ```TypeScript
 capability?: PrinterCapability
 ```
 
-Printer capability.
+表示打印机功能。
 
-**Type:** PrinterCapability
+**Type:** [PrinterCapability](arkts-basicservices-print-printercapability-i.md)
 
 **Since:** 24
 
@@ -34,7 +40,7 @@ Printer capability.
 description?: string
 ```
 
-Printer description.
+表示打印机说明。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Printer description.
 options?: Object
 ```
 
-Printer options. The value is a JSON object string.
+表示JSON对象字符串。
 
 **Type:** Object
 
@@ -70,9 +76,9 @@ Printer options. The value is a JSON object string.
 printerIcon?: int
 ```
 
-Resource ID of the printer icon. The default value is **-1**.
+表示打印机图标的资源ID。默认值为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -88,7 +94,7 @@ Resource ID of the printer icon. The default value is **-1**.
 printerId: string
 ```
 
-Printer ID.
+表示打印机ID。
 
 **Type:** string
 
@@ -106,7 +112,7 @@ Printer ID.
 printerName: string
 ```
 
-Printer name.
+表示打印机名称。
 
 **Type:** string
 
@@ -124,9 +130,9 @@ Printer name.
 printerState: PrinterState
 ```
 
-Printer state.
+表示当前打印机状态。
 
-**Type:** PrinterState
+**Type:** [PrinterState](arkts-basicservices-print-printerstate-e.md)
 
 **Since:** 24
 

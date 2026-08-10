@@ -10,6 +10,12 @@ Country code structure.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## country
 
 ```TypeScript
@@ -36,7 +42,7 @@ type: CountryCodeType
 
 Country code source.
 
-**Type:** CountryCodeType
+**Type:** [CountryCodeType](arkts-location-geolocationmanager-countrycodetype-e.md)
 
 **Since:** 9
 

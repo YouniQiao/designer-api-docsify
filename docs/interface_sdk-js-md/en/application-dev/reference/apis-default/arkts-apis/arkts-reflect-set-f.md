@@ -11,7 +11,7 @@ function set<T extends object, P extends PropertyKey>(
     ): boolean
 ```
 
-Sets the property of target, equivalent to \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ when \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_.
+Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -46,7 +46,7 @@ function set(target: object, propertyKey: PropertyKey, value: any, receiver?: an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| propertyKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |  |
 | value | any | Yes |  |
 | receiver | any | No |  |
 

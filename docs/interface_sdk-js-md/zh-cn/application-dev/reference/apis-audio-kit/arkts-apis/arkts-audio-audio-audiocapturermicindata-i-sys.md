@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## data
 
 ```TypeScript
@@ -40,7 +46,7 @@ data: ArrayBuffer
 ecData?: ArrayBuffer
 ```
 
-回声参考音频数据缓冲。如果录音配置没有设置ecStreamInfo，则此缓冲将为空。有关详细信息，请参见\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+回声参考音频数据缓冲。如果录音配置没有设置ecStreamInfo，则此缓冲将为空。有关详细信息，请参见{@link #AudioCapturerMicInConfig}。
 
 **类型：** ArrayBuffer
 

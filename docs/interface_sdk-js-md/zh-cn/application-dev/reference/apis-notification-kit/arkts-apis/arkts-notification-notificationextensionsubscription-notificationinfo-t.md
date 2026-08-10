@@ -5,7 +5,7 @@ export type NotificationInfo = _NotificationInfo
 ```
 
 通知订阅扩展能力中  
-[onReceiveMessage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调的通知信息。
+[onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onreceivemessage)回调的通知信息。
 
 **起始版本：** 22
 

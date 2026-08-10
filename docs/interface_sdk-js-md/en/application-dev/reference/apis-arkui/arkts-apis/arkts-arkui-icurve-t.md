@@ -4,7 +4,7 @@
 export type ICurve = curves.ICurve
 ```
 
-Interface for curve object.
+曲线对象。
 
 **Since:** 23
 

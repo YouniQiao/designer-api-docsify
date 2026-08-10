@@ -10,6 +10,12 @@ IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## callerPid
 
 ```TypeScript

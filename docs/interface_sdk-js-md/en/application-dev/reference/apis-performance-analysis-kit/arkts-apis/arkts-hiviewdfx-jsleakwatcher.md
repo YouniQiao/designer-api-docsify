@@ -1,6 +1,6 @@
 # @ohos.hiviewdfx.jsLeakWatcher
 
-This module provides the capability of monitoring whether JS objects are leaked.
+��ģ���ṩ�˼��ArkTS�����Ƿ���й©������������Ӧ�ÿ��������Խ׶η��ֲ���λArkTS������ڴ�й©���⡣
 
 **Since:** 12
 
@@ -10,28 +10,34 @@ This module provides the capability of monitoring whether JS objects are leaked.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
+## Modules to Import
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [check](arkts-performanceanalysis-jsleakwatcher-check-f.md#check) | Obtains the list of objects that are leaked and registered using **jsLeakWatcher.watch()**. Objects that are not reclaimed after GC is triggered are marked as leaked. |
-| [dump](arkts-performanceanalysis-jsleakwatcher-dump-f.md#dump) | Dumps the list of leaked objects and VM memory snapshot. |
-| [enable](arkts-performanceanalysis-jsleakwatcher-enable-f.md#enable) | Enables the detection for JS object leaks. This function is disabled by default. |
-| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md#enableleakwatcher) | Enables the detection for JS object leaks. This function is disabled by default.  This API can detect the JS object memory leak, which is simpler than the method that needs to call the **enable**,  **watch**, **check**, and **dump** functions.  If a memory leak occurs, the leaked file is returned through the callback. |
-| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md#enableleakwatcher-1) | Enables the ArkTS object leak detection.  This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs**  parameter to customize the properties of monitoring items, greatly improving the leak detection performance. |
-| [watch](arkts-performanceanalysis-jsleakwatcher-watch-f.md#watch) | Registers the object to be checked. |
+| [check](arkts-performanceanalysis-jsleakwatcher-check-f.md#check) | ��ȡ��ͨ��jsLeakWatcher.watchע�ᷢ��й©�Ķ����б�������GC��δ�����յĶ���ᱻ���Ϊй©�� |
+| [dump](arkts-performanceanalysis-jsleakwatcher-dump-f.md#dump) | ����й©�б���������ڴ���ա� |
+| [enable](arkts-performanceanalysis-jsleakwatcher-enable-f.md#enable) | ʹ��ArkTS����й©��⣬Ĭ�Ϲرա���������ռ�й©��Ϣ�������������ܿ����� |
+| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md#enableleakwatcher) | ʹ��ArkTS����й©��⡣  �˽ӿ�ͨ��һ�ε��ü��ɼ��ArkTS������ڴ�й©����֮ǰ��Ҫ�����ĸ�������enable��watch��check��dump���ķ������Ӽ�ࡣ |
+| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md#enableleakwatcher-1) | ʹ��ArkTS����й©��⡣  �˽ӿ�ͨ��һ�ε��ü��ɼ��ArkTS������ڴ�й©����֮ǰ��Ҫ�����ĸ�������enable��watch��check��dump���ķ������Ӽ�ࣻͨ��configs��������������Զ������ü��������ԣ���Ƚ�֮ǰ����������й©������ܡ�  > **ע��** >  > ��ǰjsLeakWatcherй©������ܿ����ϴ󣬻ᵼ��Ӧ�ÿ��٣�������������ʱ�䣬���ٿ���Ƶ�ʡ� |
+| [watch](arkts-performanceanalysis-jsleakwatcher-watch-f.md#watch) | ע������й©�Ķ��� |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | Defines the **LeakWatcherConfig** object, which contains multiple configurable properties for memory leak monitoring. |
+| [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | LeakWatcherConfig�������ͣ������а�����������ڴ�й©���Ŀ��������ԡ� |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md) | Enumerates the types of component objects to be monitored. |
+| [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md) | ��Ҫ��ص������������ö�١� |
 

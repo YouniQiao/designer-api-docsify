@@ -1,5 +1,11 @@
 # onTrackingStateChange
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## onTrackingStateChange
 
 ```TypeScript
@@ -20,11 +26,11 @@ Subscribes to tracking events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TrackingEventInfo&gt; | Yes | Callback used to return the tracking event information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TrackingEventInfo&gt; | Yes | Callback used to return the tracking event information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| 33300001 | Service exception. |
 

@@ -6,7 +6,7 @@
 declare function fdatasyncSync(fd: number): void
 ```
 
-Synchronizes the data of a file. This API returns the result synchronously.
+以同步方法实现文件内容数据同步。
 
 **Since:** 7
 
@@ -24,5 +24,5 @@ Synchronizes the data of a file. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to synchronize. |
+| fd | number | Yes | 待同步文件的文件描述符。 |
 

@@ -1,6 +1,6 @@
 # ExemptedAppInfo (System API)
 
-Information about an exempted application.
+豁免应用信息，未进入待机管控的应用信息。
 
 **Since:** 10
 
@@ -12,15 +12,21 @@ Information about an exempted application.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## duration
 
 ```TypeScript
 duration: int
 ```
 
-The exemption duration.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:s
+豁免时长。单位：s
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -38,7 +44,7 @@ The exemption duration.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:s
 name: string
 ```
 
-The application name.
+应用名。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ The application name.
 resourceTypes: int
 ```
 
-The set of resource types that an application requests.
+资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

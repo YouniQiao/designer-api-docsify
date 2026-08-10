@@ -1,6 +1,6 @@
 # FaultLogInfo
 
-Defines the data structure of the fault log information.
+故障信息数据结构，获取到的故障信息的数据结构。
 
 **Since:** 8
 
@@ -12,13 +12,19 @@ Defines the data structure of the fault log information.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
+## Modules to Import
+
+```TypeScript
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## fullLog
 
 ```TypeScript
 fullLog: string
 ```
 
-Full log text.
+故障日志全文。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Full log text.
 module: string
 ```
 
-Module on which the fault occurred.
+发生故障的模块。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Module on which the fault occurred.
 pid: number
 ```
 
-Process ID of the faulty process.
+故障进程的进程id。
 
 **Type:** number
 
@@ -78,7 +84,7 @@ Process ID of the faulty process.
 reason: string
 ```
 
-Reason for the fault.
+发生故障的原因。
 
 **Type:** string
 
@@ -98,7 +104,7 @@ Reason for the fault.
 summary: string
 ```
 
-Summary of the fault.
+故障的概要。
 
 **Type:** string
 
@@ -118,7 +124,7 @@ Summary of the fault.
 timestamp: number
 ```
 
-Millisecond-level timestamp when the log was generated.
+日志生成时的毫秒级时间戳。
 
 **Type:** number
 
@@ -138,9 +144,9 @@ Millisecond-level timestamp when the log was generated.
 type: FaultType
 ```
 
-Fault type.
+故障类型。
 
-**Type:** FaultType
+**Type:** [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md)
 
 **Since:** 8
 
@@ -158,7 +164,7 @@ Fault type.
 uid: number
 ```
 
-User ID of the faulty process.
+故障进程的用户id。
 
 **Type:** number
 

@@ -1,12 +1,18 @@
 # unregisterDeviceSelectCallback (System API)
 
+## Modules to Import
+
+```TypeScript
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## unregisterDeviceSelectCallback
 
 ```TypeScript
 function unregisterDeviceSelectCallback(): void
 ```
 
-Unregisters a callback for companion device selection. After the callback is unregistered, the system will no longer invoke the device selection callback registered by the application, and the device selection will fall back to the default system behavior.
+取消注册伴随设备选择回调。取消后，系统将不再调用应用注册的设备选择回调，设备选择将回退到系统默认行为。
 
 **Since:** 23
 
@@ -26,11 +32,11 @@ Unregisters a callback for companion device selection. After the callback is unr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| 32600001 | The system service is not working properly. Please try again later. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

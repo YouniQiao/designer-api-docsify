@@ -20,7 +20,8 @@
 ## 子组件
 
 支持单个子组件。
-    从API version 21开始，Scroll单个子组件的宽高最大为16777216px；API version 20及之前，Scroll单个子组件的宽高最大为1000000px。子组件超出该大小可能导致滚动或显示异常。
+
+> 从API version 21开始，Scroll单个子组件的宽高最大为16777216px；API version 20及之前，Scroll单个子组件的宽高最大为1000000px。子组件超出该大小可能导致滚动或显示异常。
 
 ## Scroll
 
@@ -44,7 +45,24 @@ Scroll(scroller?: Scroller)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| scroller | [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md) | 否 |  |
 
 ## 汇总
 
+- [OffsetOptions](arkts-arkui-scroll-offsetoptions-i.md)
+- [OffsetResult](arkts-arkui-scroll-offsetresult-i.md)
+- [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-onscrollframebeginhandlerresult-i.md)
+- [ScrollAnimationOptions](arkts-arkui-scroll-scrollanimationoptions-i.md)
+- [ScrollEdgeOptions](arkts-arkui-scroll-scrolledgeoptions-i.md)
+- [ScrollOptions](arkts-arkui-scroll-scrolloptions-i.md)
+- [ScrollPageOptions](arkts-arkui-scroll-scrollpageoptions-i.md)
+- [ScrollSnapOptions](arkts-arkui-scroll-scrollsnapoptions-i.md)
+- [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md)
+- [UIScrollEvent](arkts-arkui-scroll-uiscrollevent-i.md)
+- [OnScrollEdgeCallback](arkts-arkui-scroll-onscrolledgecallback-t.md)
+- [OnScrollFrameBeginCallback](arkts-arkui-scroll-onscrollframebegincallback-t.md)
+- [ScrollOnDidZoomCallback](arkts-arkui-scroll-scrollondidzoomcallback-t.md)
+- [ScrollOnScrollCallback](arkts-arkui-scroll-scrollonscrollcallback-t.md)
+- [ScrollOnWillScrollCallback](arkts-arkui-scroll-scrollonwillscrollcallback-t.md)
+- [ScrollAlign](arkts-arkui-scroll-scrollalign-e.md)
+- [ScrollDirection](arkts-arkui-scroll-scrolldirection-e.md)

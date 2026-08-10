@@ -1,12 +1,18 @@
 # fsync
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## fsync
 
 ```TypeScript
 declare function fsync(fd: number): Promise<void>
 ```
 
-Synchronizes the cached data of a file to storage. This API uses a promise to return the result.
+将文件系统缓存数据写入磁盘，使用promise异步回调。
 
 **Since:** 9
 
@@ -20,25 +26,25 @@ Synchronizes the cached data of a file to storage. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | FD of the file. |
+| fd | number | Yes | 已打开的文件描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
 | 13900025 | No space left on device |
-| 13900027 | Read-only file system |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900027 | Read-only file system |
 
 
 ## fsync
@@ -47,7 +53,7 @@ Synchronizes the cached data of a file to storage. This API uses a promise to re
 declare function fsync(fd: number, callback: AsyncCallback<void>): void
 ```
 
-Synchronizes the cached data of a file to storage. This API uses an asynchronous callback to return the result.
+将文件系统缓存数据写入磁盘，使用callback异步回调。
 
 **Since:** 9
 
@@ -61,18 +67,18 @@ Synchronizes the cached data of a file to storage. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | FD of the file. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| fd | number | Yes | 已打开的文件描述符。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步将文件数据同步之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
 | 13900025 | No space left on device |
-| 13900027 | Read-only file system |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900027 | Read-only file system |
 

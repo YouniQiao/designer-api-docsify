@@ -1,6 +1,6 @@
 # PopupOptions
 
-Defines the popup options.
+PopupOptions定义Popup的具体样式参数。
 
 **Since:** 23
 
@@ -9,6 +9,12 @@ Defines the popup options.
 <!--Device-unnamed-export interface PopupOptions--><!--Device-unnamed-export interface PopupOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
 
 ## buttons
 
@@ -19,9 +25,11 @@ buttons?: [
   ]
 ```
 
-The buttons of Popup. Setting undefined means that the button will not be displayed.
+设置popup操作按钮，按钮最多设置两个。 
 
-**Type:** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
+默认不显示按钮。
+
+**Type:** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
 
 **Since:** 23
 
@@ -39,9 +47,11 @@ The buttons of Popup. Setting undefined means that the button will not be displa
 direction?: Direction
 ```
 
-Indicates the attribute of the current popup direction.
+布局方向。
 
-**Type:** Direction
+默认值：Direction.Auto
+
+**Type:** [Direction](arkts-arkui-direction-e.md)
 
 **Default:** Direction.Auto
 
@@ -61,9 +71,15 @@ Indicates the attribute of the current popup direction.
 icon?: PopupIconOptions
 ```
 
-The icon of Popup.
+设置popup图标。
 
-**Type:** PopupIconOptions
+**说明：**
+
+当width和height设置异常值或0时不显示。
+
+默认不显示图标。
+
+**Type:** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
 **Since:** 23
 
@@ -81,9 +97,15 @@ The icon of Popup.
 maxWidth?: Dimension
 ```
 
-Set the max width of the popup.
+设置popup的最大宽度，通过此接口popup可以自定义宽度显示。
 
-**Type:** Dimension
+**说明：**
+
+1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。2. maxWidth是数字类型，支持float和integer，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。3. 当类型为Resource时，如果未设置单位，默认单位为px。
+
+默认值：400vp
+
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** 400.0_vp
 
@@ -103,9 +125,19 @@ Set the max width of the popup.
 message?: PopupTextOptions
 ```
 
-The message of Popup.
+设置popup内容文本。
 
-**Type:** PopupTextOptions
+**说明：**
+
+message不支持设置fontWeight。 
+
+默认不显示内容文本。
+
+**ArkTS模式：** 该接口仅适用于ArkTS-Sta。
+
+**ArkTS-Sta起始版本：** 23
+
+**Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **Since:** 23
 
@@ -123,9 +155,9 @@ The message of Popup.
 onClose?: VoidCallback
 ```
 
-The close button callback of Popup.
+设置popup关闭按钮回调函数。
 
-**Type:** VoidCallback
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **Since:** 23
 
@@ -143,7 +175,13 @@ The close button callback of Popup.
 showClose?: boolean | Resource
 ```
 
-The show close of Popup.
+设置popup关闭按钮。
+
+true：显示关闭按钮；false：不显示关闭按钮。
+
+Resource：显示对应的图标。
+
+默认值：true
 
 **Type:** boolean \| Resource
 
@@ -165,9 +203,11 @@ The show close of Popup.
 title?: PopupTextOptions
 ```
 
-The title of Popup.
+设置popup标题文本。 
 
-**Type:** PopupTextOptions
+默认不显示标题文本。
+
+**Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **Since:** 23
 

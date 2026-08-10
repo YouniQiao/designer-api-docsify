@@ -1,5 +1,11 @@
 # on（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## on('rotationAxesStatusChange')
 
 ```TypeScript
@@ -23,16 +29,16 @@ Register a listener for axis state changes.The status of the rotation axis chang
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'rotationAxesStatusChange' | 是 | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationAxesStateChangeInfo&gt; | 是 | Rotate axis state changes callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationAxesStateChangeInfo&gt; | 是 | Rotate axis state changes callback. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 console.info('Register Axis Status listener');

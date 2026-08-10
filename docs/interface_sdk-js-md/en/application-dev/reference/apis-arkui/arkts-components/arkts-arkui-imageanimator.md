@@ -1,13 +1,14 @@
 # ImageAnimator
 
-The **ImageAnimator** component enables images to be played a frame-by-frame basis. The list of images to be played
-as well as the duration of each image can be configured.
+提供帧动画组件来实现逐帧播放图片的能力，可以配置需要播放的图片列表，每张图片可以配置时长。
 
-> **NOTE**
+> **说明：**
+>
+> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
 
-## Child Components
+## 子组件
 
-Not supported
+无
 
 ## ImageAnimator
 
@@ -15,7 +16,7 @@ Not supported
 ImageAnimator()
 ```
 
-ImageAnimator is returned.
+返回ImageAnimator。
 
 **Since:** 7
 
@@ -31,3 +32,4 @@ ImageAnimator is returned.
 
 ## Summary
 
+- [ImageFrameInfo](arkts-arkui-imageanimator-imageframeinfo-i.md)

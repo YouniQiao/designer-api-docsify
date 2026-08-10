@@ -18,10 +18,10 @@ URI = 'uri'
 
 URI of the file.
 
-**Note**:
+**Note：**:
 
-Only the  
-[DataSharePredicates.equalTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_predicate can be used for this field during photo query.
+Only the   
+[DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalto)predicate can be used for this field during photo query.
 
 **Since:** 10
 
@@ -279,7 +279,7 @@ DATE_ADDED_MS = 'date_added_ms'
 
 Unix timestamp when the file was created, in milliseconds.
 
-**Note**:
+**Note：**:
 
 The photos queried cannot be sorted based on this field.
 
@@ -301,7 +301,7 @@ DATE_MODIFIED_MS = 'date_modified_ms'
 
 Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is modified, but not when the file name is modified.
 
-**Note**:
+**Note：**:
 
 The photos queried cannot be sorted based on this field.
 

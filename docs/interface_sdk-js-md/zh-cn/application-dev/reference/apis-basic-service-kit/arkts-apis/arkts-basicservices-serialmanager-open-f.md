@@ -1,5 +1,11 @@
 # open
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## open
 
 ```TypeScript
@@ -20,35 +26,36 @@ function open(portId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| portId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标设备的端口号，来自[getPortList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取的串口参数SerialPort。 |
+| portId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) | Serial port management exception. |
-| [31400002](../../apis-basic-services-kit/errorcode-usb.md#31400002-没有串口设备访问权限) | Access denied. Call requestSerialRight to request user authorization first. |
-| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) | PortId does not exist. |
-| [31400004](../../apis-basic-services-kit/errorcode-usb.md#31400004-串口设备被占用) | The serial port device is occupied. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 31400004 | The serial port device is occupied. |
+| 31400003 | PortId does not exist. |
+| 31400002 | Access denied. Call requestSerialRight to request user authorization first. |
+| 31400001 | Serial port management exception. |
 
-**示例：**
+## 示例
 
 以下示例代码只是调用open接口的必要流程，需要放入具体的方法中执行。实际调用时，设备开发者需要遵循设备相关协议进行调用。
 
 ```TypeScript
-import serialManager from '@ohos.usbManager.serial';
-import { BusinessError } from '@ohos.base';
+import { JSON } from '@kit.ArkTS';
+import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 获取串口列表
 async function openExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (portList === undefined || portList.length === 0) {
+  if (!portList || portList.length === 0) {
     console.error('usbSerial portList is empty');
     return;
   }
-  let portId: int = portList[0].portId;
+  let portId: number = portList[0].portId;
 
   // 检测设备是否可被应用访问
   if (!serialManager.hasSerialRight(portId)) {
@@ -56,6 +63,7 @@ async function openExample() {
     if (!result) {
       // 没有访问设备的权限且用户不授权则退出
       console.error('user is not granted the operation permission');
+      return;
     } else {
       console.info('grant permission successfully');
     }

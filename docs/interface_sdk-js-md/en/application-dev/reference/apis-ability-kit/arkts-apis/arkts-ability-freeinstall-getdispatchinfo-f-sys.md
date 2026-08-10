@@ -1,12 +1,18 @@
 # getDispatchInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { freeInstall } from 'kits/@kit.AbilityKit';
+```
+
 ## getDispatchInfo
 
 ```TypeScript
 function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 ```
 
-Obtains the dispatch information. This API uses an asynchronous callback to return the result.
+获取有关dispatch版本的信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,15 +30,15 @@ Obtains the dispatch information. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DispatchInfo&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**, and **data** is the [DispatchInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object obtained. otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DispatchInfo&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)。当函数调用成功，err为undefined，data 为获取到的[DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md)信息。否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
 
 ## getDispatchInfo
@@ -41,7 +47,7 @@ Obtains the dispatch information. This API uses an asynchronous callback to retu
 function getDispatchInfo(): Promise<DispatchInfo>
 ```
 
-Obtains the dispatch information. This API uses a promise to return the result.
+获取有关dispatch版本的信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -59,13 +65,13 @@ Obtains the dispatch information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DispatchInfo&gt; | Promise used to return the [DispatchInfo]{ |
+| Promise&lt;DispatchInfo&gt; | Promise对象，返回[DispatchInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 

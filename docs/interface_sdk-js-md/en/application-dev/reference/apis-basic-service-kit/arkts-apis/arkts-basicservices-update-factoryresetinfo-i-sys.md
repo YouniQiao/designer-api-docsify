@@ -1,6 +1,6 @@
 # FactoryResetInfo (System API)
 
-Describes the information of restoring factory settings.
+恢复出厂设置信息。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Describes the information of restoring factory settings.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## duration
 
 ```TypeScript
 duration: int
 ```
 
-Duration required for restoring factory settings, in minutes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
+恢复出厂设置所需持续时间。单位为min。取值范围[0, 86400]。超出范围时抛出异常。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

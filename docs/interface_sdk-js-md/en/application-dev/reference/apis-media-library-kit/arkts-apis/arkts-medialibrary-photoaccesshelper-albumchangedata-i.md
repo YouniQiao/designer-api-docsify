@@ -10,6 +10,12 @@ Describes the change data of an album.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumAfterChange
 
 ```TypeScript
@@ -18,7 +24,7 @@ albumAfterChange: AlbumChangeInfo | null
 
 Data of the album after change. In the case of album deletion, **albumAfterChange** is null.
 
-**Type:** AlbumChangeInfo \| null
+**Type:** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md) \| null
 
 **Since:** 20
 
@@ -36,7 +42,7 @@ albumBeforeChange: AlbumChangeInfo | null
 
 Data of the album before change. If an album is added, **albumBeforeChange** is null.
 
-**Type:** AlbumChangeInfo \| null
+**Type:** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md) \| null
 
 **Since:** 20
 

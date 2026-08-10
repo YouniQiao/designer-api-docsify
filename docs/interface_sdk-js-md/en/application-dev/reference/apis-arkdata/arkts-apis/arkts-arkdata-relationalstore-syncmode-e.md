@@ -1,6 +1,6 @@
 # SyncMode
 
-Defines the database synchronization mode. Use the enum name rather than the enum value.
+指数据库同步模式。请使用枚举名称而非枚举值。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Defines the database synchronization mode. Use the enum name rather than the enu
 SYNC_MODE_PUSH = 0
 ```
 
-Data is pushed from a local device to a remote device.
+表示数据从本地设备推送到远程设备。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Data is pushed from a local device to a remote device.
 SYNC_MODE_PULL = 1
 ```
 
-Data is pulled from a remote device to a local device.
+表示数据从远程设备拉至本地设备。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Data is pulled from a remote device to a local device.
 SYNC_MODE_TIME_FIRST
 ```
 
-Synchronize with the data with the latest modification time.
+表示数据从修改时间较近的一端同步到修改时间较远的一端。
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Synchronize with the data with the latest modification time.
 SYNC_MODE_NATIVE_FIRST
 ```
 
-Synchronize data from a local device to the cloud.
+表示数据从本地设备同步到云端。
 
 **Since:** 10
 
@@ -80,7 +80,7 @@ Synchronize data from a local device to the cloud.
 SYNC_MODE_CLOUD_FIRST
 ```
 
-Synchronize data from the cloud to a local device.
+表示数据从云端同步到本地设备。
 
 **Since:** 10
 

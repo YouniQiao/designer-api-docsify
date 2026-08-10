@@ -1,13 +1,12 @@
 # DecorationStyleInterface
 
-Describes the API object for text decoration line styles.
-    **NOTE**  
-    
-    When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly  
-    affecting characters like "g", "j", "y", "q", and "p."  
-    
-    If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in each  
-    line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent.
+文本装饰线样式接口对象说明。
+
+> **说明：**
+> 
+> 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见“gjyqp”等英文字符。
+> 
+> 当文本装饰线的颜色设置为Color.Transparent时，装饰线颜色设置为跟随每行第一个字的字体颜色。当文本装饰线的颜色设置为透明色16进制对应值“#00FFFFFF”时，装饰线颜色设置为透明色。
 
 **Since:** 12
 
@@ -23,11 +22,11 @@ Describes the API object for text decoration line styles.
 color?: ResourceColor
 ```
 
-Color of the text decorative line.
+装饰线颜色。
 
-Default value: **Color.Black**.
+默认值：Color.Black
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -47,11 +46,11 @@ Default value: **Color.Black**.
 style?: TextDecorationStyle
 ```
 
-Style of the text decorative line.
+装饰线样式。具体枚举及说明请参考TextDecorationStyle。
 
-Default value: **TextDecorationStyle.SOLID**.
+默认值：TextDecorationStyle.SOLID。
 
-**Type:** TextDecorationStyle
+**Type:** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
 
 **Since:** 12
 
@@ -71,13 +70,13 @@ Default value: **TextDecorationStyle.SOLID**.
 thicknessScale?: number
 ```
 
-Scale factor for the decoration line thickness.
+装饰线粗细缩放。
 
-Default value: **1.0**.
+默认值：1.0 
 
-Value range: [0, +∞).
+取值范围：[0, +∞) 
 
-Note: Negative values are treated as the default value.
+**说明：** 负值按默认值处理。
 
 **Type:** number
 
@@ -99,11 +98,11 @@ Note: Negative values are treated as the default value.
 type: TextDecorationType
 ```
 
-Type of the text decorative line.
+装饰线类型。具体枚举及说明请参考TextDecorationType。
 
-Default value: **TextDecorationType.None**.
+默认值：TextDecorationType.None。
 
-**Type:** TextDecorationType
+**Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 
 **Since:** 12
 

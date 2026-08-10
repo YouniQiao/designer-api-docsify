@@ -10,6 +10,12 @@ Configuring parameters in reverse geocode requests.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## country
 
 ```TypeScript
@@ -36,7 +42,7 @@ latitude: double
 
 Latitude for reverse geocoding query.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -72,7 +78,7 @@ longitude: double
 
 Longitude for reverse geocoding query.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -90,7 +96,7 @@ maxItems?: int
 
 Indicates the maximum number of addresses returned by reverse geocoding query.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

@@ -1,5 +1,11 @@
 # belongingDisplay
 
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## belongingDisplay
 
 ```TypeScript
@@ -26,11 +32,11 @@ Specifies the displayId to which the target Component belongs.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | this { |
+| [On](arkts-test-uitest-on-c.md) | this { |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 17000007 | Parameter verification failed. |
 

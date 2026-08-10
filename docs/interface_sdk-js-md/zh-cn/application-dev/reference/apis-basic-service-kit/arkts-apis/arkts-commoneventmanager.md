@@ -16,15 +16,15 @@
 
 **订阅流：创建订阅者 → 注册订阅 → 接收事件 → 取消订阅**
 
-1. 配置订阅者信息，声明订阅的事件名称，可选设置订阅优先级、发布方权限与包名。2. 通过\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_创建订阅者对象。3. 通过\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_注册订阅，事件发布时通过回调接收\_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_，在回调中处理事件数据。4. 不再需要时，通过\_\_\_INLINE\_CODE\_DESC\_USD\_3\_\_\_取消订阅。
+1. 配置订阅者信息，声明订阅的事件名称，可选设置订阅优先级、发布方权限与包名。2. 通过`commonEventManager.createSubscriberSync`创建订阅者对象。3. 通过`commonEventManager.subscribe`注册订阅，事件发布时通过回调接收`CommonEventData`，在回调中处理事件数据。4. 不再需要时，通过`commonEventManager.unsubscribe`取消订阅。
 
 **发布流：发布事件（可选携带数据与属性）**
 
-1. 简单发布：通过\_\_\_INLINE\_CODE\_DESC\_USD\_4\_\_\_仅指定事件名发布事件。2. 携带数据与属性发布：通过\_\_\_INLINE\_CODE\_DESC\_USD\_5\_\_\_配置code、data、parameters及\_\_\_INLINE\_CODE\_DESC\_USD\_6\_\_\_等属性，再调用\_\_\_INLINE\_CODE\_DESC\_USD\_7\_\_\_发布。
+1. 简单发布：通过`commonEventManager.publish`仅指定事件名发布事件。2. 携带数据与属性发布：通过`CommonEventPublishData`配置code、data、parameters及`isOrdered`等属性，再调用`publish`发布。
 
 **有序事件流：按优先级顺序投递 + 订阅者协作**
 
-1. 通过\_\_\_INLINE\_CODE\_DESC\_USD\_8\_\_\_将\_\_\_INLINE\_CODE\_DESC\_USD\_9\_\_\_设为\_\_\_INLINE\_CODE\_DESC\_USD\_10\_\_\_，调用\_\_\_INLINE\_CODE\_DESC\_USD\_11\_\_\_发布有序事件，事件按订阅者优先级依次投递。2. 高优先级订阅者先收到事件，可在回调中通过\_\_\_INLINE\_CODE\_DESC\_USD\_12\_\_\_等方法修改code与data数据，供后续订阅者接收。3. 处理完成后调用\_\_\_INLINE\_CODE\_DESC\_USD\_13\_\_\_，触发事件向下一优先级订阅者投递；若需中止后续投递，可调用\_\_\_INLINE\_CODE\_DESC\_USD\_14\_\_\_标记事件为中止状态。
+1. 通过`CommonEventPublishData`将`isOrdered`设为`true`，调用`publish`发布有序事件，事件按订阅者优先级依次投递。2. 高优先级订阅者先收到事件，可在回调中通过`setCodeAndData`等方法修改code与data数据，供后续订阅者接收。3. 处理完成后调用`finishCommonEvent`，触发事件向下一优先级订阅者投递；若需中止后续投递，可调用`abortCommonEvent`标记事件为中止状态。
 
 **起始版本：** 9
 
@@ -33,6 +33,12 @@
 <!--Device-unnamed-declare namespace commonEventManager--><!--Device-unnamed-declare namespace commonEventManager-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
+
+## 导入模块
+
+```TypeScript
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+```
 
 ## 汇总
 

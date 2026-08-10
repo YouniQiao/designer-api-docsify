@@ -1,12 +1,18 @@
 # offAbilityFirstFrameStateChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offAbilityFirstFrameStateChange
 
 ```TypeScript
 function offAbilityFirstFrameStateChange(observer?: AbilityFirstFrameStateObserver): void
 ```
 
-Unregister ability first frame state observer.
+取消注册监听Ability首帧绘制完成事件观察者对象。
 
 **Since:** 23
 
@@ -24,13 +30,13 @@ Unregister ability first frame state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The ability first frame state observer. |
+| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | No | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

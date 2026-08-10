@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityId
 
 ```TypeScript
@@ -18,7 +24,7 @@ abilityId: int
 
 UIAbility ID.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -54,7 +60,7 @@ appIndex?: int
 
 应用分身ID。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -70,7 +76,7 @@ appIndex?: int
 backgroundModes: string[]
 ```
 
-[长时任务类型]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[长时任务类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)。
 
 **类型：** string[]
 
@@ -88,7 +94,7 @@ backgroundModes: string[]
 backgroundSubModes: string[]
 ```
 
-[长时任务子类型]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[长时任务子类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md)。
 
 **类型：** string[]
 
@@ -126,7 +132,7 @@ continuousTaskId: int
 
 长时任务ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -162,7 +168,7 @@ notificationId: int
 
 通知 Id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -180,7 +186,7 @@ pid: int
 
 应用进程的PID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -216,7 +222,7 @@ uid: int
 
 应用的UID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -232,7 +238,7 @@ uid: int
 wantAgentAbilityName: string
 ```
 
-[WantAgent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+[WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md/arkts-app-ability-wantagent.md) 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
 
 **类型：** string
 
@@ -250,7 +256,7 @@ wantAgentAbilityName: string
 wantAgentBundleName: string
 ```
 
-[WantAgent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+[WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md/arkts-app-ability-wantagent.md) 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
 
 **类型：** string
 

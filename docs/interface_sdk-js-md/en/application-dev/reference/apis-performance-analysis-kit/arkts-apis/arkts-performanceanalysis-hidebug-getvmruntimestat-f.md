@@ -1,12 +1,18 @@
 # getVMRuntimeStat
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getVMRuntimeStat
 
 ```TypeScript
 function getVMRuntimeStat(item: string): long
 ```
 
-Obtains the specified system GC statistics based on parameters.
+���ݲ�����ȡָ����ϵͳGCͳ����Ϣ��
 
 **Since:** 12
 
@@ -20,21 +26,21 @@ Obtains the specified system GC statistics based on parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | string | Yes | Type of the statistics to obtain. The following statistics can be obtained:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **"ark.gc.gc-count"**: number of GC times of the current thread.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"ark.gc.gc-time"**: total GC duration triggered by the current thread, in milliseconds.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"ark.gc.gc-bytes-allocated"**: size of the Ark VM memory allocated to the current thread, in bytes.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"ark.gc.gc-bytes-freed"**: memory freed by GC of the current thread, in bytes.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **"ark.gc.fullgc-longtime-count"**: number of longtime full GC times triggered by the current thread. |
+| item | string | Yes | ����ͳ����Ϣ�����͡��ɻ�ȡ��ͳ����Ϣ�������£� "ark.gc.gc-count"����ǰ�̵߳�GC������ "ark.gc.gc-time"����ǰ�̴߳�����GC�ܺ�ʱ����msΪ��λ�� "ark.gc.gc-bytes-allocated"����ǰ�߳�Ark������ѷ�����ڴ��С����BΪ��λ�� "ark.gc.gc-bytes-freed"����ǰ�߳�GC�ɹ����յ��ڴ棬��BΪ��λ�� "ark.gc.fullgc-longtime-count"����ǰ�̳߳���fullGC������ |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | System GC statistics returned based on the input parameters. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | ϵͳGCͳ����Ϣ�����ݴ���Ĳ�����������Ӧ����Ϣ�� |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
+| 401 | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

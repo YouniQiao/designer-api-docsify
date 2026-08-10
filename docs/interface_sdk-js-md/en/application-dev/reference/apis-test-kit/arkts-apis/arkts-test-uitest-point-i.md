@@ -1,6 +1,6 @@
 # Point
 
-Represents the point on the device screen.
+坐标点信息。
 
 **Since:** 9
 
@@ -10,15 +10,23 @@ Represents the point on the device screen.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## displayId
 
 ```TypeScript
 displayId?: int
 ```
 
-ID of the display to which the coordinate point belongs. The value is an integer greater than or equal to 0. The default value is the default screen ID of the device.
+坐标点所属的屏幕ID，取值范围：大于等于0的整数。默认值为设备默认屏幕ID。
 
-**Type:** int
+从API version 20开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -36,9 +44,13 @@ ID of the display to which the coordinate point belongs. The value is an integer
 x: int
 ```
 
-Horizontal coordinate of a coordinate point. The value is an integer greater than 0.
+坐标点的横坐标，取值大于等于0的整数，单位：px。
 
-**Type:** int
+**说明：** 从API version 20开始，该属性不再为只读属性。
+
+从API version 11开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,9 +68,13 @@ Horizontal coordinate of a coordinate point. The value is an integer greater tha
 y: int
 ```
 
-Vertical coordinate of a coordinate point. The value is an integer greater than 0.
+坐标点的纵坐标，取值大于等于0的整数，单位：px。
 
-**Type:** int
+**说明：** 从API version 20开始，该属性不再为只读属性。
+
+从API version 11开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

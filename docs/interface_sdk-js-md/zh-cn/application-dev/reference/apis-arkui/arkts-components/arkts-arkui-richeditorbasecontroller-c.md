@@ -2,7 +2,7 @@
 
 RichEditor组件控制器基类。
 
-**继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-component/textcommon-texteditcontrollerex-i.md)
+**继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-textcommon-texteditcontrollerex-i.md/arkts-arkui-textcommon-texteditcontrollerex-i.md)
 
 **起始版本：** 12
 
@@ -108,7 +108,7 @@ getCaretRect(): RectResult | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前光标与RichEditor的相对位置。 |
+| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | 当前光标与RichEditor的相对位置。 |
 
 ## getLayoutManager
 
@@ -134,7 +134,7 @@ getLayoutManager(): LayoutManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 布局管理器对象，可用于获取组件内容的布局位置等信息。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | 布局管理器对象，可用于获取组件内容的布局位置等信息。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getPreviewText
 
@@ -160,7 +160,7 @@ getPreviewText(): PreviewText
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 预上屏文本信息，包含输入法预显示的候选文本内容及起始位置。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | 预上屏文本信息，包含输入法预显示的候选文本内容及起始位置。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getTypingStyle
 
@@ -186,7 +186,7 @@ getTypingStyle(): RichEditorTextStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 用户预设的文本输入样式对象，包含字体颜色、大小、粗细等样式属性，可用于查询当前组件的输入文本样式配置。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 用户预设的文本输入样式对象，包含字体颜色、大小、粗细等样式属性，可用于查询当前组件的输入文本样式配置。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## isEditing
 
@@ -236,7 +236,7 @@ scrollToVisible(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 &lt;br&gt;起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 &lt;br&gt;未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
 
 ## setCaretOffset
 
@@ -270,7 +270,7 @@ setCaretOffset(offset: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 光标是否设置成功。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true表示光标位置设置成功，false表示未成功。 |
+| boolean | 光标是否设置成功。&lt;br/&gt;true表示光标位置设置成功，false表示未成功。 |
 
 ## setSelection
 
@@ -306,7 +306,7 @@ selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选
 | --- | --- | --- | --- |
 | selectionStart | number | 是 | 选中开始位置。 |
 | selectionEnd | number | 是 | 选中结束位置。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 选择项配置，用于控制选中操作时的菜单弹出策略。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当需要自定义菜单弹出行为（如强制显示或隐藏菜单）时传入此参数； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_省略时默认使用MenuPolicy.DEFAULT，遵循系统默认菜单弹出策略。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_各MenuPolicy取值的适用场景请参考SelectionOptions对象说明。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | 否 | 选择项配置，用于控制选中操作时的菜单弹出策略。 &lt;br&gt;当需要自定义菜单弹出行为（如强制显示或隐藏菜单）时传入此参数； &lt;br&gt;省略时默认使用MenuPolicy.DEFAULT，遵循系统默认菜单弹出策略。 &lt;br&gt;各MenuPolicy取值的适用场景请参考SelectionOptions对象说明。<br>**起始版本：** 12 |
 
 ## setStyledPlaceholder
 
@@ -332,7 +332,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_属性设 置的提示文本。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_提示文本不支持触发属性字符串[GestureStyle]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_样式绑定的手势事件，以及[UrlStyle]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_样式的超链接跳转能力。 |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder](RichEditorAttribute#placeholder)属性设 置的提示文本。 &lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](../arkts-apis/arkts-arkui-styledstring-gesturestyle-c.md/arkts-arkui-styledstring-gesturestyle-c.md)样式绑定的手势事件，以及[UrlStyle](../arkts-apis/arkts-arkui-styledstring-urlstyle-c.md/arkts-arkui-styledstring-urlstyle-c.md)样式的超链接跳转能力。 |
 
 ## setTypingParagraphStyle
 
@@ -358,7 +358,7 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 预设段落样式。 |
+| style | [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md) | 是 | 预设段落样式。 |
 
 ## setTypingStyle
 
@@ -386,7 +386,7 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 预设的文本输入样式，包含字体颜色、大小、粗细等属性，用于设置后续输入文本的默认样式。 |
+| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 是 | 预设的文本输入样式，包含字体颜色、大小、粗细等属性，用于设置后续输入文本的默认样式。 |
 
 ## stopEditing
 

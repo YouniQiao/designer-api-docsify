@@ -1,33 +1,27 @@
-# @system.router(Page Routing)
+# @ohos.router
 
-The **Router** module provides APIs to access pages through URIs.
- > **NOTE**
- >
- > - The APIs of this module are no longer maintained since API version 8. You are advised to use
- > [@ohos.router](arkts-router.md) instead.
+**Since:** 23
 
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-declare namespace router--><!--Device-unnamed-declare namespace router-End-->
+
+**System capability:** 
+- API version 23 and later: SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 
-### Classes
+### Enums
 
 | Name | Description |
 | --- | --- |
-| [Router](arkts-arkui-router-router-c.md) | The **Router** module provides APIs to access pages through URIs. |
-
-### Interfaces
-
-| Name | Description |
-| --- | --- |
-| [BackRouterOptions](arkts-arkui-router-backrouteroptions-i.md) | Defines the parameters for routing back. |
-| [DisableAlertBeforeBackPageOptions](arkts-arkui-router-disablealertbeforebackpageoptions-i.md) | Defines the **DisableAlertBeforeBackPage** parameter. |
-| [EnableAlertBeforeBackPageOptions](arkts-arkui-router-enablealertbeforebackpageoptions-i.md) | Defines the **EnableAlertBeforeBackPage** parameter. |
-| [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Defines the page routing parameters. |
-| [RouterState](arkts-arkui-router-routerstate-i.md) | Defines the routing state. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | List of routing parameters. |
+| [RouterMode](arkts-arkui-router-routermode-e.md) | 路由跳转模式。 |
 

@@ -1,6 +1,6 @@
 # EditableTitleV2
 
-Declaration of the title configuration.
+标题配置类。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declaration of the title configuration.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(options?: EditableTitleV2Options)
 ```
 
-Constructor of EditableTitleV2.
+EditableTitleV2的构造函数。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ Constructor of EditableTitleV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of the title |
+| options | [EditableTitleV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | No | 标题配置选项。 |
 
 ## mainTitle
 
@@ -42,9 +48,11 @@ Constructor of EditableTitleV2.
 public mainTitle: ResourceStr
 ```
 
-Main title content.
+主标题内容。
 
-**Type:** ResourceStr
+默认值：''，表示标题内容为空。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Default:** ''
 
@@ -64,9 +72,9 @@ Main title content.
 public subTitle?: ResourceStr
 ```
 
-Subtitle content.
+副标题内容。需要在标题下方显示补充说明信息时传入此参数。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

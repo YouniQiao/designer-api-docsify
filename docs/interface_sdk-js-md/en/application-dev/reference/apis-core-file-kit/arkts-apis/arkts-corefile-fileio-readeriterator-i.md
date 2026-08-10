@@ -1,6 +1,6 @@
 # ReaderIterator
 
-Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to create a **ReaderIterator** instance.
+文件读取迭代器。在调用ReaderIterator的方法前，需要先通过readLines方法（同步或异步）来构建一个ReaderIterator实例。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**,
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## next
 
 ```TypeScript
 next(): ReaderIteratorResult
 ```
 
-Obtains the **ReaderIterator** result.
+获取迭代器下一项内容。
 
 **Since:** 23
 
@@ -30,7 +36,7 @@ Obtains the **ReaderIterator** result.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ReaderIteratorResult** object obtained. |
+| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
 
 **Error codes:**
 

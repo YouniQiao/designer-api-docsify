@@ -1,6 +1,6 @@
 # UIEnvAvoidAreaVP
 
-以vp为单位表示的窗口避让区域信息，在进行\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_适配时需关注。
+以vp为单位表示的窗口避让区域信息，在进行[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时需关注。
 
 **起始版本：** 23
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## bottomRect
 
 ```TypeScript
@@ -18,7 +24,7 @@ bottomRect: RectInVP
 
 中心位于窗口的两条对角线的底部的矩形区，单位为vp。
 
-**类型：** RectInVP
+**类型：** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
 **起始版本：** 23
 
@@ -36,7 +42,7 @@ leftRect: RectInVP
 
 中心位于窗口的两条对角线的左侧的矩形区，单位为vp。
 
-**类型：** RectInVP
+**类型：** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
 **起始版本：** 23
 
@@ -54,7 +60,7 @@ rightRect: RectInVP
 
 中心位于窗口的两条对角线的右侧的矩形区，单位为vp。
 
-**类型：** RectInVP
+**类型：** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
 **起始版本：** 23
 
@@ -72,7 +78,7 @@ topRect: RectInVP
 
 中心位于窗口的两条对角线的顶部的矩形区，单位为vp。
 
-**类型：** RectInVP
+**类型：** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
 **起始版本：** 23
 

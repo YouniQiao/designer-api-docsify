@@ -34,7 +34,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## displayX
 
@@ -90,7 +90,7 @@ displayY: number
 globalDisplayX?: number
 ```
 
-触摸点在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
 单位：vp
 
@@ -116,7 +116,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-点击位置在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
 
 单位：vp
 
@@ -144,7 +144,7 @@ hand?: InteractionHand
 
 表示事件是由左手点击还是右手点击触发。
 
-**类型：** InteractionHand
+**类型：** [InteractionHand](../arkts-apis/arkts-arkui-interactionhand-e.md)
 
 **起始版本：** 15
 
@@ -268,7 +268,7 @@ screenX: number
 
 **废弃版本：** 10
 
-**替代接口：** [TouchObject#windowX](../arkts-apis/arkts-arkui-component/common-touchobject-i.md#windowx)
+**替代接口：** [TouchObject#windowX](arkts-arkui-touchobject-i.md#windowx)
 
 <!--Device-TouchObject-screenX: number--><!--Device-TouchObject-screenX: number-End-->
 
@@ -292,7 +292,7 @@ screenY: number
 
 **废弃版本：** 10
 
-**替代接口：** [TouchObject#windowY](../arkts-apis/arkts-arkui-component/common-touchobject-i.md#windowy)
+**替代接口：** [TouchObject#windowY](arkts-arkui-touchobject-i.md#windowy)
 
 <!--Device-TouchObject-screenY: number--><!--Device-TouchObject-screenY: number-End-->
 
@@ -306,7 +306,7 @@ type: TouchType
 
 触摸事件的类型。
 
-**类型：** TouchType
+**类型：** [TouchType](../arkts-apis/arkts-arkui-touchtype-e.md)
 
 **起始版本：** 7
 
@@ -396,7 +396,7 @@ windowY: number
 x: number
 ```
 
-触摸点在事件响应组件为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+触摸点在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
 
 单位：vp
 
@@ -418,7 +418,7 @@ x: number
 y: number
 ```
 
-触摸点在事件响应组件为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+触摸点在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
 
 单位：vp
 

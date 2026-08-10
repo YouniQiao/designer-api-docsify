@@ -1,5 +1,11 @@
 # setWallpaper
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setWallpaper
 
 ```TypeScript
@@ -10,7 +16,7 @@ function setWallpaper(
   ): void
 ```
 
-Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file.
+将指定资源设置为指定类型的壁纸。
 
 **Since:** 7
 
@@ -28,11 +34,11 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | string \| image.PixelMap | Yes | indicates the uri path from a JPEG or PNG file or the pixel map of the PNG file. |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the wallpaper type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of setWallpaper. |
+| source | string \| image.PixelMap | Yes |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -76,7 +82,7 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>
 ```
 
-Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file.
+将指定资源设置为指定类型的壁纸。
 
 **Since:** 7
 
@@ -94,8 +100,8 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | string \| image.PixelMap | Yes | indicates the uri path from a JPEG or PNG file or the pixel map of the PNG file. |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the wallpaper type. |
+| source | string \| image.PixelMap | Yes |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
 
 **Return value:**
 
@@ -103,7 +109,7 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

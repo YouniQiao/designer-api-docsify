@@ -1,5 +1,11 @@
 # queryPrintJobList（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## queryPrintJobList
 
 ```TypeScript
@@ -24,28 +30,28 @@ function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;PrintJob&gt;&gt; | 是 | 异步查询所有打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PrintJob&gt;&gt; | 是 | 异步查询所有打印任务之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-print.queryPrintJobList((err: BusinessError, printJobs : print.PrintJob[]) => {
-    if (err) {
-        console.error('queryPrintJobList failed, because : ' + JSON.stringify(err));
+print.queryPrintJobList((error: BusinessError, printJobs : print.PrintJob[]) => {
+    if (error) {
+        console.error(`Failed to query print job list. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
     }
-})
+});
 ```
 
 
@@ -79,19 +85,19 @@ function queryPrintJobList(): Promise<Array<PrintJob>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
     console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
 }).catch((error: BusinessError) => {
-    console.error('queryPrintJobList failed, error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to query print job list. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

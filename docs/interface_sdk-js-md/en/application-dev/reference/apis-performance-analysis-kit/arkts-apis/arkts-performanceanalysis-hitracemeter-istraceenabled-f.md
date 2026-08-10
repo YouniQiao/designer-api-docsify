@@ -1,12 +1,18 @@
 # isTraceEnabled
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## isTraceEnabled
 
 ```TypeScript
 function isTraceEnabled(): boolean
 ```
 
-Checks whether application trace capture is enabled.
+判断当前是否开启应用trace捕获。
 
 **Since:** 19
 
@@ -22,15 +28,15 @@ Checks whether application trace capture is enabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** is returned when the trace capture is enabled using \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. **false** is returned when it is disabled or stopped. In this case, calling the HiTraceMeter API does not take effect. |
+| boolean | 使用[hitrace](../../../dfx/hitrace.md)命令行工具等方式开启采集时返回true。未开启采集或停止采集后返回 false，此时调用HiTraceMeter性能跟踪打点接口无效。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 if (hiTraceMeter.isTraceEnabled()) {
-    // Service flow...
+  // Service flow...
 } else {
-    // Service flow...
+  // Service flow...
 }
 ```
 

@@ -10,6 +10,12 @@ Defines TLS security options. The CA certificate is mandatory, and other paramet
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## ca
 
 ```TypeScript
@@ -126,7 +132,7 @@ protocols?: Protocol | Array<Protocol>
 
 TLS protocol version
 
-**Type:** Protocol \| Array&lt;Protocol&gt;
+**Type:** [Protocol](arkts-network-socket-protocol-e.md) \| Array&lt;Protocol&gt;
 
 **Since:** 10
 
@@ -142,7 +148,7 @@ TLS protocol version
 signatureAlgorithms?: string
 ```
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Supported signature algorithms. This string can contain summary algorithms(SHA256,MD5,etc),Public key algorithm(RSA-PSS,ECDSA,etc),Combination of the two(For example 'RSA+SHA384') or TLS v1.3 Scheme name(For example rsa\_pss\_pss\_sha512)\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;P&gt;Supported signature algorithms. This string can contain summary algorithms(SHA256,MD5,etc),Public key algorithm(RSA-PSS,ECDSA,etc),Combination of the two(For example 'RSA+SHA384') or TLS v1.3 Scheme name(For example rsa_pss_pss_sha512)&lt;/P&gt;
 
 **Type:** string
 

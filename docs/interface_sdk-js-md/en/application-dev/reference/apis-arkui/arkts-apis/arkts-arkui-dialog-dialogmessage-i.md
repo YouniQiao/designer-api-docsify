@@ -1,6 +1,6 @@
 # DialogMessage
 
-Message options for the dialog box, combining message content with text style.
+对话框的消息选项。
 
 **Inheritance/Implementation:** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md)
 
@@ -12,15 +12,21 @@ Message options for the dialog box, combining message content with text style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## content
 
 ```TypeScript
 content: ResourceStr
 ```
 
-Message content of the dialog box.
+对话框消息内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
 

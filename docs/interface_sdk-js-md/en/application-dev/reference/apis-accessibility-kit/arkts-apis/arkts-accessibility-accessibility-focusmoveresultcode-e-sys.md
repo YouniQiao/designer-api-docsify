@@ -1,6 +1,6 @@
 # FocusMoveResultCode (System API)
 
-Enumerates the result codes returned by the focusable node query.
+表示查询无障碍节点返回结果类型的枚举。
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Enumerates the result codes returned by the focusable node query.
 NOT_SUPPORTED = -1
 ```
 
-Query is not supported.
+当前节点不支持查询操作。
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ Query is not supported.
 SEARCH_SUCCESS = 0
 ```
 
-The node is queried successfully.
+节点查询成功。
 
 **Since:** 23
 
@@ -54,7 +54,7 @@ The node is queried successfully.
 SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1
 ```
 
-The node is queried successfully. Use the **bypassSelfDescendants** parameter to quickly obtain the result in the next query.
+节点查询成功，建议下一次查询使用参数bypassSelfDescendants可更快获取结果。
 
 **Since:** 23
 
@@ -72,7 +72,7 @@ The node is queried successfully. Use the **bypassSelfDescendants** parameter to
 SEARCH_FAILURE = 2
 ```
 
-Failed to query the node. The current page has no focusable node.
+节点查询失败，当前节点所在页面内无可聚焦节点。
 
 **Since:** 23
 
@@ -90,7 +90,7 @@ Failed to query the node. The current page has no focusable node.
 SEARCH_FAILURE_IN_CHILD_TREE = 3
 ```
 
-Failed to query the node. The current container has no focusable node.
+节点查询失败，当前节点所在容器内无可聚焦节点。
 
 **Since:** 23
 
@@ -108,7 +108,7 @@ Failed to query the node. The current container has no focusable node.
 SEARCH_FAILURE_LOST_NODE = 4
 ```
 
-Failed to query the node. The start node is not found.
+节点查询失败，未找到起始节点。
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ Failed to query the node. The start node is not found.
 SEARCH_NEXT = 5
 ```
 
-The returned node is not focusable. Continue to query from the returned node.
+返回节点不具备可聚焦属性，继续使用返回节点查询。
 
 **Since:** 23
 
@@ -144,7 +144,7 @@ The returned node is not focusable. Continue to query from the returned node.
 DOUBLE_CHECK_CHILD_PROPERTY = 6
 ```
 
-The returned node is not focusable. Continue to query from all descendants of the returned node.
+返回节点不具备可聚焦属性，需要使用返回节点的所有子节点继续查询。
 
 **Since:** 23
 
@@ -162,7 +162,7 @@ The returned node is not focusable. Continue to query from all descendants of th
 DOUBLE_CHECK_CHILD_PROPERTY_AND_GET_LAST = 7
 ```
 
-The returned node is not focusable. Continue to query from the last child node of the returned node.
+返回节点不具备可聚焦属性，需要使用返回节点的子节点列表中的最后一个节点继续查询。
 
 **Since:** 23
 
@@ -180,7 +180,7 @@ The returned node is not focusable. Continue to query from the last child node o
 SEARCH_FAILURE_IN_SCROLL = 8
 ```
 
-Failed to query the node in the scrollable component.
+节点在滚动组件内查询失败。
 
 **Since:** 23
 

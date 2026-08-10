@@ -1,6 +1,6 @@
 # RequestCallback
 
-Provides a callback for setting the modal dialog box request result.
+用于设置模态弹框请求结果的callback接口。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Provides a callback for setting the modal dialog box request result.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { dialogRequest } from 'kits/@kit.AbilityKit';
+```
+
 ## setRequestResult
 
 ```TypeScript
 setRequestResult(result: RequestResult): void
 ```
 
-Sets the result of the request for the modal dialog box.
+设置请求结果
 
 **Since:** 9
 
@@ -32,15 +38,15 @@ Sets the result of the request for the modal dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request result to set. |
+| result | [RequestResult](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes | 模态弹框请求结果信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';

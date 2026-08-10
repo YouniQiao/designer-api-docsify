@@ -1,6 +1,6 @@
 # KeyProcessingMode
 
-Enumerates the modes for processing key events.
+设置按键事件处理的优先级。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Enumerates the modes for processing key events.
 FOCUS_NAVIGATION = 0
 ```
 
-Default value. When the current component does not consume the key event, focus navigation using the **Tab** and arrow keys preferentially stays within the current container.
+默认值，当前组件不消费按键时，tab/方向键优先在当前容器内走焦。
 
 **Since:** 15
 
@@ -36,7 +36,7 @@ Default value. When the current component does not consume the key event, focus 
 ANCESTOR_EVENT = 1
 ```
 
-When the current component does not consume the key event, focus navigation using the **Tab** and arrow keys is bubbled up to the parent component.
+当前组件不消费按键时，tab/方向键优先冒泡给父组件。
 
 **Since:** 15
 

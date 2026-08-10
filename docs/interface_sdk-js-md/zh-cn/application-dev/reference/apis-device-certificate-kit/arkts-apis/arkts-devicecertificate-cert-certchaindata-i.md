@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## count
 
 ```TypeScript
@@ -18,7 +24,7 @@ count: int
 
 传入的数据中，包含的证书数量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -58,7 +64,7 @@ encodingFormat: EncodingFormat
 
 编码格式。
 
-**类型：** EncodingFormat
+**类型：** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 
 **起始版本：** 9
 

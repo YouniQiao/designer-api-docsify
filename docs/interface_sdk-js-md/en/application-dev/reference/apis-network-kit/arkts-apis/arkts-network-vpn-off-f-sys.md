@@ -1,5 +1,11 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { vpn } from 'kits/@kit.NetworkKit';
+```
+
 ## off('connect')
 
 ```TypeScript
@@ -25,18 +31,18 @@ Unsubscribes from vpn connect state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Indicates vpn connect state changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VpnConnectState&gt; | No | The callback of the vpn connect state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VpnConnectState&gt; | No | The callback of the vpn connect state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| 2200001 | Invalid parameter value. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Operation failed. Cannot connect to service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
 
 ## off('connectMulti')
@@ -64,14 +70,14 @@ Unsubscribes from vpn connect state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectMulti' | Yes | Indicates multi vpn connect state changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MultiVpnConnectState&gt; | No | The callback of the multi vpn connect state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiVpnConnectState&gt; | No | The callback of the multi vpn connect state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
-| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 19900002 | System internal error. |
+| 19900001 | Invalid parameter value. |
 

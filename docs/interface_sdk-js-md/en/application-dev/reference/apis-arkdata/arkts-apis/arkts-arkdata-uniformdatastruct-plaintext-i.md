@@ -1,6 +1,6 @@
 # PlainText
 
-Represents data of the plain text type.
+纯文本类型数据，用于描述和管理纯文本内容。创建PlainText对象后，可用于拖拽、复制粘贴等数据共享场景，实现跨应用的纯文本数据交互。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents data of the plain text type.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## abstract
 
 ```TypeScript
 abstract?: string
 ```
 
-Text abstract. It is an empty string by default.
+纯文本摘要，非必填字段。当需要为文本提供简短摘要时传入此参数（如用于预览、搜索结果展示等场景），不传入时默认值为空字符串，不提供摘要信息。
 
 **Type:** string
 
@@ -36,19 +42,19 @@ Text abstract. It is an empty string by default.
 details?: Record<string, string>
 ```
 
-Object of the dictionary type used to describe the attributes of the text content. Both the key and value of the object are of the string type. For example, the following is a **details** object used to describe the properties of a file:
+字典类型对象，key和value均为string类型，用于描述文本内容详细属性。非必填字段，默认值为空字典对象。例如，可生成一个details内容为
 
 {
 
-"title":"Title of the file",
+"title":"标题",
 
-"content":"Content of the file"
+"content":"内容"
 
 }
 
-By default, it is an empty dictionary object.
+的数据对象。当需要存储额外的文本属性信息时传入此参数，不传入时默认值为空字典对象，不提供额外属性。
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 12
 
@@ -66,7 +72,7 @@ By default, it is an empty dictionary object.
 textAbstract?: string
 ```
 
-Indicates the abstract of the PlainText.
+表示PlainText摘要.
 
 **Type:** string
 
@@ -86,7 +92,7 @@ Indicates the abstract of the PlainText.
 textContent: string
 ```
 
-Plaintext content.
+纯文本内容。长度限制为20MB。
 
 **Type:** string
 
@@ -106,8 +112,8 @@ Plaintext content.
 readonly uniformDataType: 'general.plain-text'
 ```
 
-Uniform data type, which has a fixed value of **general.plain-text**. For details, see  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+统一数据类型标识为纯文本类型数据，固定为“general.plain-text”，数据类型描述信息见  
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **Type:** 'general.plain-text'
 

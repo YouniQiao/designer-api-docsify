@@ -1,12 +1,18 @@
 # getAllSystemHotkeys
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## getAllSystemHotkeys
 
 ```TypeScript
 function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 ```
 
-Obtains all system shortcut keys. This API uses a promise to return the result.
+获取所有系统快捷键，使用Promise异步回调。
 
 **Since:** 14
 
@@ -20,15 +26,15 @@ Obtains all system shortcut keys. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HotkeyOptions&gt;&gt; | Promise used to return the list of all system shortcut keys. |
+| Promise&lt;Array&lt;HotkeyOptions&gt;&gt; | Promise对象，返回所有系统快捷键的列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
@@ -41,10 +47,11 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
+          // Obtains all system shortcut keys.
           inputConsumer.getAllSystemHotkeys().then((data: Array<inputConsumer.HotkeyOptions>) => {
-            console.info(`List of system hotkeys : ${JSON.stringify(data)}`);
+            console.info(`Succeeded in getting list of system hotkeys: ${JSON.stringify(data)}.`);
           }).catch((error: BusinessError) => {
-            console.error(`Get all system hotkeys failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get all system hotkeys, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           })
         })
     }

@@ -1,5 +1,11 @@
 # createChecksum
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createChecksum
 
 ```TypeScript
@@ -24,7 +30,7 @@ function createChecksum(): Promise<Checksum>
 | --- | --- |
 | Promise&lt;Checksum&gt; | Promise对象。返回校验对象实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

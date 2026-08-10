@@ -6,7 +6,7 @@
 declare function fstatSync(fd: number): Stat
 ```
 
-Obtains file status based on the file descriptor. This API returns the result synchronously.
+以同步方法基于文件描述符获取文件状态信息。
 
 **Since:** 7
 
@@ -24,11 +24,11 @@ Obtains file status based on the file descriptor. This API returns the result sy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file whose status is to be obtained. |
+| fd | number | Yes | 待获取文件状态的文件描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Detailed file status obtained. |
+| [Stat](arkts-corefile-fileio-stat-i.md) | 表示文件状态的具体信息。 |
 

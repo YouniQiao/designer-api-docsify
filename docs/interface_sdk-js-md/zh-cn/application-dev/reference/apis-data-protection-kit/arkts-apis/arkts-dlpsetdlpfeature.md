@@ -6,20 +6,29 @@
 
 - 需要满足数据安全合规要求的场景。  
 - 对机密文件进行访问控制和加密保护。
-    **说明：**  
-    
-    - 本模块首批接口从API version 26.0.0开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。  
-    - 本模块接口为系统接口。
+
+> **说明：**
+> 
+> - 本模块首批接口从API version 26.0.0开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> - 本模块接口为系统接口。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace dlpSetDlpFeature--><!--Device-unnamed-declare namespace dlpSetDlpFeature-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+```
 
 ## 汇总
 

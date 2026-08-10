@@ -22,5 +22,5 @@ Defines an OnFontWeightScaleUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeightScale | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the system's font weight  |
+| fontWeightScale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Indicates the system's font weight |
 

@@ -1,5 +1,11 @@
 # setScannerParameter
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setScannerParameter
 
 ```TypeScript
@@ -23,8 +29,8 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scannerId | string | 是 | 扫描仪的ID。 |
-| optionIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要设置的选项的索引。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要设置的值。 |
+| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要设置的选项的索引。 |
+| value | [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | 是 | 要设置的值。 |
 
 **返回值：**
 
@@ -36,9 +42,9 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';
@@ -53,7 +59,7 @@ let value: scan.ScannerOptionValue = {
 scan.setScannerParameter(scannerId, optionIndex, value).then(() => {
     console.info('set scanner parameter success');
 }).catch((error: BusinessError) => {
-    console.error('set scanner parameter failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to set scanner parameter. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

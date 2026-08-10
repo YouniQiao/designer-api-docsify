@@ -1,6 +1,18 @@
 # ScrollDirection
 
-Enumerates the scrolling directions.
+滚动方向枚举。
+
+FREE（自由滚动）模式下支持的能力：
+
+> **说明：**
+> 
+> - `edgeEffect`属性仅支持`Spring`和`None`边缘滑动效果。
+> 
+> - `onWillScroll`回调仅支持在跟手滑动阶段重载偏移量。
+> 
+> - `onScrollEdge`回调只在到达边缘时触发一次，回弹后不会重复触发。
+> 
+> - 在抛滑动画过程中切换边缘模式不会打断动画。
 
 **Since:** 7
 
@@ -16,7 +28,7 @@ Enumerates the scrolling directions.
 Vertical
 ```
 
-Only vertical scrolling is supported.
+仅支持竖直方向滚动。
 
 **Since:** 7
 
@@ -34,7 +46,7 @@ Only vertical scrolling is supported.
 Horizontal
 ```
 
-Only horizontal scrolling is supported.
+仅支持水平方向滚动。
 
 **Since:** 7
 
@@ -52,7 +64,7 @@ Only horizontal scrolling is supported.
 Free
 ```
 
-Vertical or horizontal scrolling is supported.
+支持水平和垂直方向滚动
 
 **Since:** 7
 
@@ -60,7 +72,7 @@ Vertical or horizontal scrolling is supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScrollDirection#FREE](../arkts-apis/arkts-arkui-component/scroll-scrolldirection-e.md#free)
+**Substitutes:** [ScrollDirection#FREE](arkts-arkui-scrolldirection-e.md#free)
 
 <!--Device-ScrollDirection-Free--><!--Device-ScrollDirection-Free-End-->
 
@@ -72,7 +84,7 @@ Vertical or horizontal scrolling is supported.
 None
 ```
 
-Scrolling is disabled.
+不可滚动。
 
 **Since:** 7
 
@@ -90,7 +102,7 @@ Scrolling is disabled.
 FREE = 4
 ```
 
-Free scrolling is supported.
+自由滚动。
 
 **Since:** 20
 

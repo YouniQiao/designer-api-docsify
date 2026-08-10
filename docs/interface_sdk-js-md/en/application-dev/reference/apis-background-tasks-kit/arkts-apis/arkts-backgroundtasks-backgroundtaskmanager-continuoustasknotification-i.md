@@ -1,6 +1,6 @@
 # ContinuousTaskNotification
 
-Describes the information about a continuous-task notification.
+长时任务通知信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes the information about a continuous-task notification.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## contentType
 
 ```TypeScript
 contentType: notificationManager.ContentType
 ```
 
-Content type of a continuous-task notification.
+长时任务通知的内容类型。
 
 **Type:** notificationManager.ContentType
 
@@ -36,9 +42,9 @@ Content type of a continuous-task notification.
 continuousTaskId?: int
 ```
 
-ID of a continuous task.
+长时任务 Id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -56,9 +62,9 @@ ID of a continuous task.
 notificationId: int
 ```
 
-ID of the continuous-task notification.
+长时任务通知 Id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -76,9 +82,9 @@ ID of the continuous-task notification.
 slotType: notificationManager.SlotType
 ```
 
-Slot type of a continuous-task notification.
+长时任务通知的渠道类型。
 
-Note: After a continuous task is successfully requested or updated, no prompt tone is played.
+**说明：** 长时任务申请或更新成功后不支持提示音。
 
 **Type:** notificationManager.SlotType
 

@@ -1,7 +1,7 @@
 # InsightIntentType（系统接口）
 
-表示通过意图装饰器定义的意图类型，可通过[getAllInsightIntentInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_等方法返回的  
-[LinkIntentInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取。
+表示通过意图装饰器定义的意图类型，可通过[getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo)等方法返回的  
+[LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md)获取。
 
 **起始版本：** 20
 
@@ -19,7 +19,7 @@
 LINK = '@InsightIntentLink'
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_类型装饰器。
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)类型装饰器。
 
 **起始版本：** 20
 
@@ -39,7 +39,7 @@ LINK = '@InsightIntentLink'
 PAGE = '@InsightIntentPage'
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_类型装饰器。
+[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)类型装饰器。
 
 **起始版本：** 20
 
@@ -59,7 +59,7 @@ PAGE = '@InsightIntentPage'
 ENTRY = '@InsightIntentEntry'
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_类型装饰器。
+[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)类型装饰器。
 
 **起始版本：** 20
 
@@ -79,7 +79,7 @@ ENTRY = '@InsightIntentEntry'
 FUNCTION = '@InsightIntentFunctionMethod'
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_类型装饰器。
+[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)类型装饰器。
 
 **起始版本：** 20
 
@@ -99,7 +99,7 @@ FUNCTION = '@InsightIntentFunctionMethod'
 FORM = '@InsightIntentForm'
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_类型装饰器。
+[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)类型装饰器。
 
 **起始版本：** 20
 

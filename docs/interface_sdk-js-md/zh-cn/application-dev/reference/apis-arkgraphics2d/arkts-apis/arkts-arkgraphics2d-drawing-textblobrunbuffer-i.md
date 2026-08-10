@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## glyph
 
 ```TypeScript
@@ -18,7 +24,7 @@ glyph: int
 
 存储文字的索引，该参数为整数，传入浮点类型时向下取整。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -36,7 +42,7 @@ positionX: double
 
 文本的起点x轴坐标，该参数为浮点数。单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 11
 
@@ -54,7 +60,7 @@ positionY: double
 
 文本的起点y轴坐标，该参数为浮点数。单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 11
 

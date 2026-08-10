@@ -1,5 +1,11 @@
 # rmdir
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## rmdir
 
 ```TypeScript
@@ -7,9 +13,10 @@ declare function rmdir(path: string): Promise<void>
 ```
 
 删除目录及其所有子目录和文件，使用promise异步回调。
-    **说明：**  
-    
-    该接口支持删除单个文件，但不推荐使用此方法删除单个文件，推荐使用unlink接口删除单个文件。
+
+> **说明：**
+> 
+> 该接口支持删除单个文件，但不推荐使用此方法删除单个文件，推荐使用unlink接口删除单个文件。
 
 **起始版本：** 9
 
@@ -37,18 +44,18 @@ declare function rmdir(path: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900020 | Invalid argument |
+| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900011 | Out of memory |
+| 13900018 | Not a directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900027 | Read-only file system |
 | 13900030 | File name too long |
-| 13900032 | Directory not empty |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
+| 13900027 | Read-only file system |
 
 
 ## rmdir
@@ -58,9 +65,10 @@ declare function rmdir(path: string, callback: AsyncCallback<void>): void
 ```
 
 删除目录及其所有子目录和文件，使用callback异步回调。
-    **说明：**  
-    
-    该接口支持删除单个文件，但不推荐使用此方法删除单个文件，推荐使用unlink接口删除单个文件。
+
+> **说明：**
+> 
+> 该接口支持删除单个文件，但不推荐使用此方法删除单个文件，推荐使用unlink接口删除单个文件。
 
 **起始版本：** 9
 
@@ -77,22 +85,22 @@ declare function rmdir(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 异步删除目录之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步删除目录之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 13900020 | Invalid argument |
+| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900011 | Out of memory |
+| 13900018 | Not a directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900027 | Read-only file system |
 | 13900030 | File name too long |
-| 13900032 | Directory not empty |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
+| 13900027 | Read-only file system |
 

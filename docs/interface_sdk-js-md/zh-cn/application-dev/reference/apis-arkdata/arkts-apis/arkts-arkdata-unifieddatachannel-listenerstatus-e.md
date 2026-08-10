@@ -96,7 +96,7 @@ INNER_ERROR = 200
 INVALID_PARAMETERS = 201
 ```
 
-表示 [GetDataParams]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 包含无效参数。
+表示 [GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md) 包含无效参数。
 
 **起始版本：** 15
 

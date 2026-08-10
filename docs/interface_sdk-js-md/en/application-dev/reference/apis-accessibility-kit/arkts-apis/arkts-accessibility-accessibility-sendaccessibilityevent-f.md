@@ -1,12 +1,18 @@
 # sendAccessibilityEvent
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## sendAccessibilityEvent
 
 ```TypeScript
 function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>): void
 ```
 
-Sends an accessibility event. This API uses an asynchronous callback to return the result.
+发送无障碍事件，使用callback异步回调。
 
 **Since:** 9
 
@@ -24,16 +30,16 @@ Sends an accessibility event. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | 辅助事件对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，如果发送无障碍事件失败，则 AsyncCallback中err有数据返回。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -50,7 +56,7 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
     console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
     return;
   }
-  console.info(`Succeeded in send event, eventInfo is ${eventInfo}`);
+  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
 });
 ```
 
@@ -78,7 +84,7 @@ let eventInfo: accessibility.EventInfo = ({
   type: 'requestFocusForAccessibility',
   bundleName: 'com.example.MyApplication',
   triggerAction: 'common',
-  customId: 'click' // ID of the component to be focused.
+  customId: 'click' // ID attribute value of the component to be focused.
 });
 
 accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
@@ -86,7 +92,7 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
     console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
     return;
   }
-  console.info(`Succeeded in send event, eventInfo is ${eventInfo}`);
+  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
 });
 ```
 
@@ -108,7 +114,7 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
     console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
     return;
   }
-  console.info(`Succeeded in send event, eventInfo is ${eventInfo}`);
+  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
 });
 ```
 
@@ -119,7 +125,7 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
 function sendAccessibilityEvent(event: EventInfo): Promise<void>
 ```
 
-Sends an accessibility event. This API uses a promise to return the result.
+发送无障碍事件，使用Promise异步回调。
 
 **Since:** 9
 
@@ -137,21 +143,21 @@ Sends an accessibility event. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility event. |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | 无障碍事件对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -164,7 +170,7 @@ let eventInfo: accessibility.EventInfo = ({
 });
 
 accessibility.sendAccessibilityEvent(eventInfo).then(() => {
-  console.info(`Succeeded in send event,eventInfo is ${eventInfo}`);
+  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
 }).catch((err: BusinessError) => {
   console.error(`failed to send event , Code is ${err.code}, message is ${err.message}`);
 });

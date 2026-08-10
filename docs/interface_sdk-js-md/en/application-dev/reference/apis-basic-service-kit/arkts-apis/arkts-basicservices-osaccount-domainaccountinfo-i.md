@@ -1,6 +1,6 @@
 # DomainAccountInfo
 
-Represents the domain account information.
+表示域账号信息。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ Represents the domain account information.
 
 **System capability:** SystemCapability.Account.OsAccount
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountName
 
 ```TypeScript
 accountName: string
 ```
 
-Domain account name.
+域账号名。
 
 **Type:** string
 
@@ -34,9 +40,11 @@ Domain account name.
 additionalInfo?: Record<string, Object>
 ```
 
-Additional information about the domain account.
+域账号附加信息。
 
-**Type:** Record&lt;string, Object&gt;
+此接口仅可在Stage模型下使用。
+
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 26.0.0
 
@@ -54,7 +62,7 @@ Additional information about the domain account.
 domain: string
 ```
 
-Domain name.
+域名。
 
 **Type:** string
 
@@ -72,7 +80,7 @@ Domain name.
 serverConfigId?: string
 ```
 
-Domain account configuration ID, which is an empty string by default.
+域账号配置ID，默认为空字符串。
 
 **Type:** string
 

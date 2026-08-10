@@ -1,8 +1,7 @@
 # VersionDownloadProgress
 
-Represents the download state and progress information of historical version files when the  
-[downloadHistoryVersion]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method of the  
-[FileVersion]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ class is called.
+历史版本文件下载状态和进度信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md)的  
+[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion)方法时，回调函数的入参类型。
 
 **Since:** 20
 
@@ -12,15 +11,21 @@ Represents the download state and progress information of historical version fil
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## errType
 
 ```TypeScript
 errType: DownloadErrorType
 ```
 
-Type of the error returned when the batch download fails.
+返回批量缓存任务执行失败时的错误类型。
 
-**Type:** DownloadErrorType
+**Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
 **Since:** 20
 
@@ -36,9 +41,9 @@ Type of the error returned when the batch download fails.
 progress: int
 ```
 
-Download progress, in percentage.
+下载进度，单位：百分比。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -54,9 +59,9 @@ Download progress, in percentage.
 state: State
 ```
 
-Download state of the cloud file of the selected version.
+所选版本云文件的下载状态。
 
-**Type:** State
+**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **Since:** 20
 

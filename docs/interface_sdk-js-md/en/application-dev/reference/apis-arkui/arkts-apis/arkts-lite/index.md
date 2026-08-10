@@ -1,2 +1,0 @@
-# lite/index
-

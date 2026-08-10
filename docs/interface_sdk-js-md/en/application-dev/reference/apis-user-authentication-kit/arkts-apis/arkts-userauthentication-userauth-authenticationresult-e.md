@@ -1,6 +1,6 @@
 # AuthenticationResult
 
-Enumerates the authentication results.
+表示认证结果的枚举。
 
 **Since:** 6
 
@@ -20,7 +20,7 @@ Enumerates the authentication results.
 NO_SUPPORT = -1
 ```
 
-The device does not support the current authentication mode.
+设备不支持当前的认证方式。
 
 **Since:** 6
 
@@ -40,7 +40,7 @@ The device does not support the current authentication mode.
 SUCCESS = 0
 ```
 
-The authentication is successful.
+认证成功。
 
 **Since:** 6
 
@@ -60,7 +60,7 @@ The authentication is successful.
 COMPARE_FAILURE = 1
 ```
 
-The feature comparison failed.
+比对失败。
 
 **Since:** 6
 
@@ -80,7 +80,7 @@ The feature comparison failed.
 CANCELED = 2
 ```
 
-The authentication was canceled by the user.
+用户取消认证。
 
 **Since:** 6
 
@@ -100,7 +100,7 @@ The authentication was canceled by the user.
 TIMEOUT = 3
 ```
 
-The authentication has timed out.
+认证超时。
 
 **Since:** 6
 
@@ -120,7 +120,7 @@ The authentication has timed out.
 CAMERA_FAIL = 4
 ```
 
-The camera failed to start.
+开启相机失败。
 
 **Since:** 6
 
@@ -138,7 +138,7 @@ The camera failed to start.
 BUSY = 5
 ```
 
-The authentication service is not available. Try again later.
+认证服务忙，请稍后重试。
 
 **Since:** 6
 
@@ -158,7 +158,7 @@ The authentication service is not available. Try again later.
 INVALID_PARAMETERS = 6
 ```
 
-The authentication parameters are invalid.
+认证参数无效。
 
 **Since:** 6
 
@@ -178,7 +178,7 @@ The authentication parameters are invalid.
 LOCKED = 7
 ```
 
-The user account is locked because the number of authentication failures has reached the threshold.
+认证失败次数过多，已锁定。
 
 **Since:** 6
 
@@ -198,7 +198,7 @@ The user account is locked because the number of authentication failures has rea
 NOT_ENROLLED = 8
 ```
 
-No authentication credential is registered.
+未录入认证凭据。
 
 **Since:** 6
 
@@ -218,7 +218,7 @@ No authentication credential is registered.
 GENERAL_ERROR = 100
 ```
 
-Other errors.
+其他错误。
 
 **Since:** 6
 

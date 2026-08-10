@@ -10,6 +10,12 @@ Defines the format parameters of the video thumbnail to be obtained.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## autoFlip
 
 ```TypeScript
@@ -42,7 +48,7 @@ Color format of the thumbnail.
 
 **System API**: This is a system API.
 
-**Type:** PixelFormat
+**Type:** [PixelFormat](arkts-media-media-pixelformat-e-sys.md)
 
 **Since:** 11
 

@@ -6,7 +6,7 @@
 const estimatedRemainingChargeTime: number
 ```
 
-Estimated time for fully charging the current device, in unit of milliseconds. This is a system API.
+表示当前设备充满电的预估时间，单位毫秒。此接口为系统接口。
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ Estimated time for fully charging the current device, in unit of milliseconds. T
 const remainingEnergy: number
 ```
 
-Remaining battery capacity of the device, in unit of mAh. This is a system API.
+表示当前设备电池的剩余容量，单位毫安时。此接口为系统接口。
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ Remaining battery capacity of the device, in unit of mAh. This is a system API.
 const totalEnergy: number
 ```
 
-Total battery capacity of the device, in unit of mAh. This is a system API.
+表示当前设备电池的总容量，单位毫安时。此接口为系统接口。
 
 **Since:** 9
 

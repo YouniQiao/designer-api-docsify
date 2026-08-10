@@ -1,5 +1,11 @@
 # getVMRuntimeStat
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getVMRuntimeStat
 
 ```TypeScript
@@ -26,15 +32,15 @@ function getVMRuntimeStat(item: string): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | ϵͳGCͳ����Ϣ�����ݴ���Ĳ�����������Ӧ����Ϣ�� |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | ϵͳGCͳ����Ϣ�����ݴ���Ĳ�����������Ӧ����Ϣ�� |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
+| 401 | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

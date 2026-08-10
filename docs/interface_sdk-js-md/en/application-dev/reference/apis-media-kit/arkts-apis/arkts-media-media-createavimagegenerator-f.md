@@ -1,12 +1,18 @@
 # createAVImageGenerator
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createAVImageGenerator
 
 ```TypeScript
 function createAVImageGenerator(): Promise<AVImageGenerator>
 ```
 
-Creates an AVImageGenerator instance. This API uses a promise to return the result.
+创建AVImageGenerator对象。使用Promise异步回调。
 
 **Since:** 12
 
@@ -20,15 +26,15 @@ Creates an AVImageGenerator instance. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVImageGenerator&gt; | Promise used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
+| Promise&lt;AVImageGenerator&gt; | Promise对象。异步返回AVImageGenerator实例，失败时返回null。可用于获取视频缩略图。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
+| 5400101 | No memory. Returned by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,13 +73,13 @@ Creates an **AVImageGenerator** instance. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVImageGenerator \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **undefined** is returned. The API can be used to obtain a video thumbnail. |
+| Promise&lt;AVImageGenerator \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
+| 5400101 | No memory. Returned by promise. |
 
 
 ## createAVImageGenerator
@@ -82,7 +88,7 @@ Creates an **AVImageGenerator** instance. This API uses a promise to return the 
 function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 ```
 
-Creates an AVImageGenerator instance. This API uses an asynchronous callback to return the result.
+创建AVImageGenerator实例。使用callback异步回调。
 
 **Since:** 12
 
@@ -96,15 +102,15 @@ Creates an AVImageGenerator instance. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVImageGenerator&gt; | Yes | Callback used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVImageGenerator&gt; | Yes | 回调函数。异步返回AVImageGenerator实例，失败时返回null。可用于获取视频缩略图。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
+| 5400101 | No memory. Returned by callback. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -141,11 +147,11 @@ Creates an **AVImageGenerator** instance. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVImageGenerator \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **undefined** is returned. The API can be used to obtain a video thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVImageGenerator \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
+| 5400101 | No memory. Returned by callback. |
 

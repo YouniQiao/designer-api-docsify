@@ -1,12 +1,18 @@
 # hasKeyItemAsUser (System API)
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## hasKeyItemAsUser
 
 ```TypeScript
 function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<boolean>
 ```
 
-Checks whether a key exists for the specified user. This API uses a promise to return the result.
+指定用户身份判断密钥是否存在，使用Promise回调异步返回结果。
 
 **Since:** 12
 
@@ -24,34 +30,34 @@ Checks whether a key exists for the specified user. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | User ID. |
-| keyAlias | string | Yes | Alias of the key to check. |
-| huksOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is used to specify the security level of the key to be checked,\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| userId | number | Yes | 用户ID。 |
+| keyAlias | string | Yes | 所需查找的密钥的别名。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于查询时指定密钥的属性TAG，如使用 [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，&lt;br&gt;可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the key exists, **true** is returned. Otherwise , **false** is returned. |
+| Promise&lt;boolean&gt; | Promise对象。若密钥存在，返回值为true，若密钥不存在，返回值为false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application permission is not sufficient, which may be caused by lack of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | non-system applications are not allowed to use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Feature is not supported. Possible causes: 1. The group key is not supported. 2. The crypto extension key is not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | api is not supported |
+| 12000006 | error occurred in crypto engine |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000003 | algorithm param is invalid |
+| 12000002 | algorithm param is missing |
+| 12000001 | Feature is not supported. Possible causes: 1. The group key is not supported. 2. The crypto extension key is not supported.<br>**Applicable version:** 23 and later |
+| 201 | the application permission is not sufficient, which may be caused by lack of &lt;br&gt;cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
+| 12000014 | memory is insufficient |
+| 202 | non-system applications are not allowed to use system APIs. |
+| 12000012 | Device environment or input parameter abnormal |
 
-**Example**
+## Examples
 
 Prerequisites: see Example of [generateKeyItemAsUser](#huksgeneratekeyitemasuser).
 

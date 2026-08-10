@@ -1,6 +1,6 @@
 # DialogOptions
 
-Defines the attributes specific to the dialog box and custom click actions for the user.
+设置弹框特有的属性以及提供给用户自定义的点击触发动作。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Defines the attributes specific to the dialog box and custom click actions for t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundImage
 
 ```TypeScript
 backgroundImage?: Resource
 ```
 
-The background of the dialog.
+弹框背景图片。默认为纯色背景，颜色值为#EBEEF5。
 
-**Type:** Resource
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ The background of the dialog.
 bottomOffsetType?: BottomOffset
 ```
 
-The type of the bottom offset.
+弹框距离底部偏移类型，需根据是否存在菜单栏选择对应值。默认值为BottomOffset.OFFSET_FOR_NONE。
 
-**Type:** BottomOffset
+**Type:** [BottomOffset](arkts-arkui-atomicservice-interstitialdialogaction-bottomoffset-e.md)
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ The type of the bottom offset.
 foregroundImage?: Resource
 ```
 
-The foreground of the dialog.
+弹框前景图片。默认为空，即不显示前景图片。
 
-**Type:** Resource
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 12
 
@@ -76,9 +82,9 @@ The foreground of the dialog.
 iconStyle?: IconStyle
 ```
 
-The style of the close button.
+关闭按钮图标的样式（亮调或者暗调）。默认值：IconStyle.LIGHT
 
-**Type:** IconStyle
+**Type:** [IconStyle](arkts-arkui-atomicservice-interstitialdialogaction-iconstyle-e.md)
 
 **Since:** 12
 
@@ -96,9 +102,9 @@ The style of the close button.
 onDialogClick?: Callback<void>
 ```
 
-The action after clicking dialog.
+点击弹框任意位置后触发的用户自定义动作。默认调用closeDialog方法关闭弹框。说明：点击关闭按钮区域时仅触发onDialogClose，不触发本回调；若需同时触发，请在onDialogClose中显式调用本回调逻辑。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -116,9 +122,9 @@ The action after clicking dialog.
 onDialogClose?: Callback<void>
 ```
 
-The action after clicking close button.
+点击关闭按钮后触发的用户自定义动作。默认调用closeDialog方法关闭弹框。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -136,9 +142,9 @@ The action after clicking close button.
 subtitle?: ResourceStr
 ```
 
-The subtitle of the dialog.
+弹框副标题文本。默认为空字符串。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
 
@@ -156,9 +162,9 @@ The subtitle of the dialog.
 subtitleColor?: ResourceStr | Color
 ```
 
-The color of the subtitle.
+弹框副标题文本颜色。默认为\$r('sys.color.ohos_id_color_text_secondary_contrary')。
 
-**Type:** ResourceStr \| Color
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Color
 
 **Since:** 12
 
@@ -176,9 +182,9 @@ The color of the subtitle.
 title?: ResourceStr
 ```
 
-The title of the dialog.
+弹框主标题文本。默认为空字符串。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
 
@@ -196,9 +202,9 @@ The title of the dialog.
 titleColor?: ResourceStr | Color
 ```
 
-The color of the title.
+弹框主标题文本颜色。默认为\$r('sys.color.ohos_id_color_text_primary_contrary')。
 
-**Type:** ResourceStr \| Color
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Color
 
 **Since:** 12
 
@@ -216,9 +222,9 @@ The color of the title.
 titlePosition?: TitlePosition
 ```
 
-The relative position of the title and subtitle.
+主标题在弹框中的位置，在副标题的上方或者在副标题的下方。需设置subtitle属性后本参数才生效。默认值：TitlePosition.TOP
 
-**Type:** TitlePosition
+**Type:** [TitlePosition](arkts-arkui-atomicservice-interstitialdialogaction-titleposition-e.md)
 
 **Since:** 12
 
@@ -236,9 +242,9 @@ The relative position of the title and subtitle.
 uiContext: UIContext
 ```
 
-The UIContext required by the dialog.
+UI上下文实例。
 
-**Type:** UIContext
+**Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 12
 

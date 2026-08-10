@@ -1,6 +1,6 @@
 # PageTransitionOptions
 
-Parameters of the exit or entrance animation.
+退场/进场动效的参数。
 
 **Since:** 7
 
@@ -16,16 +16,16 @@ Parameters of the exit or entrance animation.
 curve?: Curve | string | ICurve
 ```
 
-Animation curve.
+动画曲线。
 
-You are advised to specify the curve using the **Curve** or **ICurve** type.
+推荐以Curve或ICurve形式指定。
 
-For the string type, this parameter indicates an animation interpolation curve. For available values, see the  
-**curve** parameter in [AnimateParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+当类型为string时，为动画插值曲线，取值参考  
+[AnimateParam](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#animateparam对象说明)的curve参数。
 
-Default value: **Curve.Linear
+默认值：Curve.Linear
 
-**Type:** Curve \| string \| ICurve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
 
 **Default:** Curve.Linear
 
@@ -45,15 +45,15 @@ Default value: **Curve.Linear
 delay?: number
 ```
 
-Animation delay.
+动画延迟时长。
 
-Unit: ms
+单位：毫秒
 
-Default value: **0**
+默认值：0
 
-**NOTE**
+**说明：**
 
-If no match is found, the default page transition effect is used (which may vary according to the device). To disable the default page transition effect, set **duration** to **0**.
+没有匹配时使用系统默认的页面转场效果(根据设备可能会有差异)，如需禁用系统默认页面转场效果，可以指定duration为0。
 
 **Type:** number
 
@@ -75,13 +75,13 @@ If no match is found, the default page transition effect is used (which may vary
 duration?: number
 ```
 
-Animation duration.
+动画的时长。
 
-Unit: ms
+单位：毫秒
 
-Default value: **1000**
+默认值：1000
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -101,11 +101,11 @@ Value range: [0, +∞)
 type?: RouteType
 ```
 
-Route type for the page transition effect to take effect.
+页面转场效果生效的路由类型。
 
-Default value: **RouteType.None
+默认值：RouteType.None。
 
-**Type:** RouteType
+**Type:** [RouteType](arkts-arkui-routetype-e.md)
 
 **Since:** 7
 

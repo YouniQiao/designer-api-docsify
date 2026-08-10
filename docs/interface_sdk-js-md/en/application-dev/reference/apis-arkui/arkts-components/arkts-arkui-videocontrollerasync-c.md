@@ -1,6 +1,16 @@
 # VideoControllerAsync
 
-Video playback controller class for asynchronous operations.Provides methods to control video playback, timing, and display mode.
+VideoControllerAsync是VideoController的异步版本，可以通过Promise获取部分播控命令的结果。不支持同时控制多个Video。
+
+> **说明：**
+> 
+> VideoControllerAsync提供命令执行结果。与VideoController相比，[start](arkts-arkui-videocontroller-c.md#start)、
+> [pause](arkts-arkui-videocontroller-c.md#pause)、[stop](arkts-arkui-videocontroller-c.md#stop)、[reset](arkts-arkui-videocontrollerasync-c.md#reset)等播
+> 放控制命令为异步执行，请求后立即返回不阻塞当前线程，可通过Promise的then和catch方法处理命令执行结果。
+
+## 导入对象
+
+```ts let controllerAsync: VideoControllerAsync = new VideoControllerAsync();```
 
 **Since:** 26.0.0
 
@@ -16,7 +26,7 @@ Video playback controller class for asynchronous operations.Provides methods to 
 constructor()
 ```
 
-Creates a VideoControllerAsync instance.
+VideoControllerAsync的构造函数。
 
 **Since:** 26.0.0
 
@@ -36,7 +46,7 @@ Creates a VideoControllerAsync instance.
 exitFullscreen()
 ```
 
-Exits fullscreen display mode.
+退出全屏播放。
 
 **Since:** 26.0.0
 
@@ -56,7 +66,9 @@ Exits fullscreen display mode.
 pause(): Promise<void>
 ```
 
-Pauses video playback asynchronously.
+暂停播放视频，显示当前帧，再次播放时从当前位置继续播放。使用Promise异步回调。
+
+只能在正在播放的状态下调用，其他情况下调用pause()方法会失败。
 
 **Since:** 26.0.0
 
@@ -74,7 +86,7 @@ Pauses video playback asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## requestFullscreen
 
@@ -82,7 +94,11 @@ Pauses video playback asynchronously.
 requestFullscreen(value: boolean)
 ```
 
-Requests fullscreen display for the video.
+请求全屏播放。未通过该接口设置时，默认不请求全屏播放。
+
+> **说明：**
+> 
+> Video组件自带的全屏功能仅将视频内容设为全屏，显示默认控制器，无法显示自定义标题或控制器。如需其他功能，用户需自行实现全屏功能。
 
 **Since:** 26.0.0
 
@@ -100,7 +116,7 @@ Requests fullscreen display for the video.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | true to enter fullscreen, false otherwise. |
+| value | boolean | Yes | 是否全屏（填充满应用窗口）播放。 &lt;br&gt;true：请求全屏播放；false：不请求全屏播放。 |
 
 ## reset
 
@@ -108,7 +124,7 @@ Requests fullscreen display for the video.
 reset(): Promise<void>
 ```
 
-Resets the video controller asynchronously.Restores the controller to its initial state.
+重置视频播放器。显示当前帧，再次播放时从头开始播放。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -126,7 +142,7 @@ Resets the video controller asynchronously.Restores the controller to its initia
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## setCurrentTime
 
@@ -134,7 +150,11 @@ Resets the video controller asynchronously.Restores the controller to its initia
 setCurrentTime(value: double, seekMode?: SeekMode)
 ```
 
-Sets the current playback time with specified seek mode.
+指定视频播放的进度位置，可以指定跳转模式。
+
+> **说明：**
+> 
+> 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **Since:** 26.0.0
 
@@ -152,8 +172,8 @@ Sets the current playback time with specified seek mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | The target time in seconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: Seconds. The value must be greater than or equal to 0. Value constraint: The maximum value is the total duration of the video. If the duration exceeds the maximum value, the system jumps to the end of the video. |
-| seekMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The seek mode to use for time adjustment. |
+| value | double | Yes | 视频播放进度位置。 &lt;br&gt;取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] &lt;br&gt;当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 &lt;br&gt;单位：s |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | No | 跳转模式。 &lt;br&gt;异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。 &lt;br&gt;默认值：PreviousKeyframe |
 
 ## start
 
@@ -161,7 +181,9 @@ Sets the current playback time with specified seek mode.
 start(): Promise<void>
 ```
 
-Starts video playback asynchronously.
+开始播放视频。使用Promise异步回调。
+
+视频准备完成前（未收到[onPrepared](VideoAttribute#onPrepared)回调）调用start()方法会失败。
 
 **Since:** 26.0.0
 
@@ -179,7 +201,7 @@ Starts video playback asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## stop
 
@@ -187,7 +209,7 @@ Starts video playback asynchronously.
 stop(): Promise<void>
 ```
 
-Stops video playback asynchronously.
+停止播放视频，显示当前帧，再次播放时从头开始播放。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -205,5 +227,5 @@ Stops video playback asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 

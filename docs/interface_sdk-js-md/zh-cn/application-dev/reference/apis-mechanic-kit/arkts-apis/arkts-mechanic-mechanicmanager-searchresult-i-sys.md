@@ -12,6 +12,12 @@ Search result.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## targetCount
 
 ```TypeScript
@@ -20,7 +26,7 @@ targetCount: int
 
 Search result. Returns the number of targets found.0 means not found.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 21
 

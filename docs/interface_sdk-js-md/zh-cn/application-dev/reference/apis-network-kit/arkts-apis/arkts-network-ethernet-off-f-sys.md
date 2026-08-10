@@ -1,0 +1,51 @@
+# off（系统接口）
+
+## 导入模块
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
+## off('interfaceStateChange')
+
+```TypeScript
+function off(type: 'interfaceStateChange', callback?: Callback<InterfaceStateInfo>): void
+```
+
+Unregister a callback from the ethernet interface active state change.
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-ethernet-function off(type: 'interfaceStateChange', callback?: Callback<InterfaceStateInfo>): void--><!--Device-ethernet-function off(type: 'interfaceStateChange', callback?: Callback<InterfaceStateInfo>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Ethernet
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'interfaceStateChange' | 是 | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterfaceStateInfo&gt; | 否 | Including iface Indicates the ethernet interface, and active Indicates whether the interface is active. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 401 | Parameter error. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+
+## 示例
+
+```TypeScript
+import { ethernet } from '@kit.NetworkKit';
+
+ethernet.off('interfaceStateChange');
+```
+

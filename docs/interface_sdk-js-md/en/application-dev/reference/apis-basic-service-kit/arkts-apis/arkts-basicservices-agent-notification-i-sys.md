@@ -1,6 +1,6 @@
 # Notification
 
-Describes the custom information of the notification bar.
+通知栏自定义信息。
 
 **Since:** 15
 
@@ -9,6 +9,12 @@ Describes the custom information of the notification bar.
 <!--Device-agent-interface Notification--><!--Device-agent-interface Notification-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
+
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
 
 ## disable
 

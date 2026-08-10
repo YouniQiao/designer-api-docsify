@@ -1,5 +1,11 @@
 # getISOCountryCodeForNetworkSync
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## getISOCountryCodeForNetworkSync
 
 ```TypeScript
@@ -20,7 +26,7 @@ Obtains the ISO-defined country code of the country where the registered network
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
 
 **Return value:**
 
@@ -28,7 +34,7 @@ Obtains the ISO-defined country code of the country where the registered network
 | --- | --- |
 | string | Returns the country code defined in ISO 3166-2. Returns an empty string if the device is not registered with any network. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let slotId: number = 0;

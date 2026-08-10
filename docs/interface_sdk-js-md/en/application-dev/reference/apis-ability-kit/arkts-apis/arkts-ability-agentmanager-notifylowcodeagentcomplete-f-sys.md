@@ -1,12 +1,18 @@
 # notifyLowCodeAgentComplete (System API)
 
+## Modules to Import
+
+```TypeScript
+import { agentManager } from 'kits/@kit.AbilityKit';
+```
+
 ## notifyLowCodeAgentComplete
 
 ```TypeScript
 function notifyLowCodeAgentComplete(agentId: string): Promise<void>
 ```
 
-Notifies that the specified LOW\_CODE agent has completed.
+Notifies that the specified LOW_CODE agent has completed.
 
 **Since:** 26.0.0
 
@@ -38,8 +44,8 @@ Notifies that the specified LOW\_CODE agent has completed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
-| [35600001](../errorcode-ability.md#35600001-the-specified-agentid-does-not-exist) | The specified agentId does not exist. |
+| 16000050 | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 35600001 | The specified agentId does not exist. |
 

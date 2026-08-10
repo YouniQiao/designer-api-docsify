@@ -10,6 +10,12 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getIsoRange
 
 ArkTS-Dyn:
@@ -36,16 +42,16 @@ Obtains the supported ISO range.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on the bottom-layer capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on the bottom-layer capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -91,14 +97,14 @@ Get a array of supported standard ISO sensitivity values, as defined in ISO 1223
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number[]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int[] | The array of ISO sensitivity values. |
+| ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | The array of ISO sensitivity values. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config, only throw in session usage. |
 
 ## isManualIsoSupported
 
@@ -126,10 +132,10 @@ Checks whether manual ISO setting is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

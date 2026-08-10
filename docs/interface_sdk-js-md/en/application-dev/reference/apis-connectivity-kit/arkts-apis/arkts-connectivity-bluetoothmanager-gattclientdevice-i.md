@@ -1,6 +1,6 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance.
 
 **Since:** 9
 
@@ -14,6 +14,12 @@ Manages GATT client. Before calling an Gatt client method, you must use \_\_\_JS
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## close
 
 ```TypeScript
@@ -22,7 +28,7 @@ close(): void
 
 Disables a BLE peripheral device.
 
-This method unregisters the device and clears the registered callbacks and handles.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+This method unregisters the device and clears the registered callbacks and handles.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -44,13 +50,13 @@ This method unregisters the device and clears the registered callbacks and handl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -70,7 +76,7 @@ connect(): void
 
 Connects to a BLE peripheral device.
 
-The 'BLEConnectionStateChange' event is subscribed to return the connection state.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+The 'BLEConnectionStateChange' event is subscribed to return the connection state.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -92,13 +98,13 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -116,7 +122,7 @@ try {
 disconnect(): void
 ```
 
-Disconnects from or stops an ongoing connection to a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Disconnects from or stops an ongoing connection to a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -138,13 +144,13 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.On AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -162,7 +168,7 @@ try {
 getDeviceName(callback: AsyncCallback<string>): void
 ```
 
-Obtains the name of BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Obtains the name of BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -184,19 +190,19 @@ Obtains the name of BLE peripheral device.On API 10 and above, the permission re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to obtain the device name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -219,7 +225,7 @@ try {
 getDeviceName(): Promise<string>
 ```
 
-Obtains the name of BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Obtains the name of BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -247,13 +253,13 @@ Obtains the name of BLE peripheral device.On API 10 and above, the permission re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -275,7 +281,7 @@ try {
 getRssiValue(callback: AsyncCallback<number>): void
 ```
 
-Get the RSSI value of this BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Get the RSSI value of this BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -297,18 +303,18 @@ Get the RSSI value of this BLE peripheral device.On API 10 and above, the permis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -331,7 +337,7 @@ try {
 getRssiValue(): Promise<number>
 ```
 
-Get the RSSI value of this BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Get the RSSI value of this BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -359,12 +365,12 @@ Get the RSSI value of this BLE peripheral device.On API 10 and above, the permis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -385,7 +391,7 @@ try {
 getServices(callback: AsyncCallback<Array<GattService>>): void
 ```
 
-Starts discovering services.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Starts discovering services.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -407,19 +413,19 @@ Starts discovering services.On API 10 and above, the permission required by this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -451,7 +457,7 @@ try {
 getServices(): Promise<Array<GattService>>
 ```
 
-Starts discovering services.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Starts discovering services.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -479,13 +485,13 @@ Starts discovering services.On API 10 and above, the permission required by this
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -507,7 +513,7 @@ try {
 off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void
 ```
 
-Unsubscribe characteristic value changed event.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Unsubscribe characteristic value changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -530,16 +536,16 @@ Unsubscribe characteristic value changed event.On API 10 and above, the permissi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -557,7 +563,7 @@ try {
 off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState>): void
 ```
 
-Unsubscribe client connection state changed event.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Unsubscribe client connection state changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -580,16 +586,16 @@ Unsubscribe client connection state changed event.On API 10 and above, the permi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -607,7 +613,7 @@ try {
 on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 ```
 
-Subscribe characteristic value changed event.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Subscribe characteristic value changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -630,16 +636,16 @@ Subscribe characteristic value changed event.On API 10 and above, the permission
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -662,7 +668,7 @@ try {
 on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>): void
 ```
 
-Subscribe client connection state changed event.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Subscribe client connection state changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -685,16 +691,16 @@ Subscribe client connection state changed event.On API 10 and above, the permiss
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -716,7 +722,7 @@ try {
 readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void
 ```
 
-Reads the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Reads the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -738,21 +744,21 @@ Reads the characteristic of a BLE peripheral device.On API 10 and above, the per
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 | 2901000 | Read forbidden. |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -795,7 +801,7 @@ try {
 readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>
 ```
 
-Reads the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Reads the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -817,26 +823,26 @@ Reads the characteristic of a BLE peripheral device.On API 10 and above, the per
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLECharacteristic&gt; |  Promise used to return the characteristic value read. |
+| Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 | 2901000 | Read forbidden. |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -870,7 +876,7 @@ try {
 readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void
 ```
 
-Reads the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Reads the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -892,21 +898,21 @@ Reads the descriptor of a BLE peripheral device.On API 10 and above, the permiss
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 | 2901000 | Read forbidden. |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -941,7 +947,7 @@ try {
 readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>
 ```
 
-Reads the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Reads the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -963,26 +969,26 @@ Reads the descriptor of a BLE peripheral device.On API 10 and above, the permiss
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLEDescriptor&gt; |  Promise used to return the descriptor read. |
+| Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 | 2901000 | Read forbidden. |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1009,7 +1015,7 @@ try {
 setBLEMtuSize(mtu: number): void
 ```
 
-Set the mtu size of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Set the mtu size of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -1037,13 +1043,13 @@ Set the mtu size of a BLE peripheral device.On API 10 and above, the permission 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1061,7 +1067,7 @@ try {
 setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolean): void
 ```
 
-Enables or disables notification of a characteristic when value changed.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Enables or disables notification of a characteristic when value changed.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -1083,20 +1089,20 @@ Enables or disables notification of a characteristic when value changed.On API 1
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | BLE characteristic to listen for. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | BLE characteristic to listen for. |
 | enable | boolean | Yes | Specifies whether to enable notification of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that notification is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1130,7 +1136,7 @@ try {
 writeCharacteristicValue(characteristic: BLECharacteristic): void
 ```
 
-Writes the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Writes the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -1152,20 +1158,20 @@ Writes the characteristic of a BLE peripheral device.On API 10 and above, the pe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to write. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 | 2901001 | Write forbidden. |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1198,7 +1204,7 @@ try {
 writeDescriptorValue(descriptor: BLEDescriptor): void
 ```
 
-Writes the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Writes the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -1220,20 +1226,20 @@ Writes the descriptor of a BLE peripheral device.On API 10 and above, the permis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to write. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 | 2901001 | Write forbidden. |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

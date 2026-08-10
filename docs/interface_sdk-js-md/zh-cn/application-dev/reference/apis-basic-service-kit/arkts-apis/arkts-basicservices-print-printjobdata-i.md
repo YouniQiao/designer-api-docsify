@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## binaryData
 
 ```TypeScript
@@ -38,7 +44,7 @@ colorMode: PrintColorMode
 
 表示色彩模式。
 
-**类型：** PrintColorMode
+**类型：** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
 **起始版本：** 23
 
@@ -58,7 +64,7 @@ copyNumber: int
 
 表示文件列表副本数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -78,7 +84,7 @@ docFlavor: DocFlavor
 
 表示打印数据来源形式。
 
-**类型：** DocFlavor
+**类型：** [DocFlavor](arkts-basicservices-print-docflavor-e.md)
 
 **起始版本：** 23
 
@@ -98,7 +104,7 @@ documentFormat: PrintDocumentFormat
 
 表示打印数据格式。
 
-**类型：** PrintDocumentFormat
+**类型：** [PrintDocumentFormat](arkts-basicservices-print-printdocumentformat-e.md)
 
 **起始版本：** 23
 
@@ -118,7 +124,7 @@ duplexMode: PrintDuplexMode
 
 表示单双面打印模式。
 
-**类型：** PrintDuplexMode
+**类型：** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **起始版本：** 23
 
@@ -138,7 +144,7 @@ fdList?: int[]
 
 表示待打印文件fd列表。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -358,7 +364,7 @@ pageSize: PrintPageSize
 
 表示选定的页面尺寸。
 
-**类型：** PrintPageSize
+**类型：** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
 
 **起始版本：** 23
 
@@ -378,7 +384,7 @@ printQuality?: PrintQuality
 
 表示打印质量。
 
-**类型：** PrintQuality
+**类型：** [PrintQuality](arkts-basicservices-print-printquality-e.md)
 
 **起始版本：** 23
 

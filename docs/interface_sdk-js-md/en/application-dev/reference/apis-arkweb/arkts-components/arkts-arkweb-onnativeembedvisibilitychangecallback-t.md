@@ -4,7 +4,7 @@
 type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo) => void
 ```
 
-The callback of onNativeEmbedVisibilityChange.
+当同层标签可见性变化时触发该回调。
 
 **Since:** 12
 
@@ -18,5 +18,5 @@ The callback of onNativeEmbedVisibilityChange.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nativeEmbedVisibilityInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of onNativeEmbedVisibilityChange.  |
+| nativeEmbedVisibilityInfo | [NativeEmbedVisibilityInfo](../arkts-apis/arkts-arkweb-web-nativeembedvisibilityinfo-i.md) | Yes | 提供同层标签的可见性信息。 |
 

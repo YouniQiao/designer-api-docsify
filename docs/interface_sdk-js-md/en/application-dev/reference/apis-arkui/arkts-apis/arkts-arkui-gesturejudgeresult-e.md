@@ -1,6 +1,6 @@
 # GestureJudgeResult
 
-Enumerates gesture competition results.
+定义手势竞争结果。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates gesture competition results.
 CONTINUE = 0
 ```
 
-The system gesture recognition process continues.
+不影响系统手势判定流程。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ The system gesture recognition process continues.
 REJECT = 1
 ```
 
-Gesture recognition fails.
+手势判定结果为失败。
 
 **Since:** 11
 

@@ -1,0 +1,48 @@
+# GesturePriority
+
+绑定手势的优先级。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare enum GesturePriority--><!--Device-unnamed-export declare enum GesturePriority-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## NORMAL
+
+```TypeScript
+NORMAL = 0
+```
+
+普通优先级手势。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GesturePriority-NORMAL = 0--><!--Device-GesturePriority-NORMAL = 0-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## PRIORITY
+
+```TypeScript
+PRIORITY = 1
+```
+
+高优先级手势。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GesturePriority-PRIORITY = 1--><!--Device-GesturePriority-PRIORITY = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

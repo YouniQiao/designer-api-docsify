@@ -80,7 +80,7 @@ operationInfo: OperationInfo[]
 
 操作信息列表。
 
-**类型：** OperationInfo[]
+**类型：** [OperationInfo](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscribe-operationinfo-i-sys.md)[]
 
 **起始版本：** 26.0.0
 
@@ -100,7 +100,7 @@ remoteInfo?: RemoteInfo
 
 远端设备信息。
 
-**类型：** RemoteInfo
+**类型：** [RemoteInfo](arkts-ability-abilitytoolaccessctrl-remoteinfo-i-sys.md)
 
 **起始版本：** 26.1.0
 

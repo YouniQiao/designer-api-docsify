@@ -1,8 +1,10 @@
 # UIScrollEvent
 
-Defines a UIScrollableCommonEvent which is used to set different common event to target component.
+frameNode中[getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent)方法的返回值，可用于给Scroll节点设置滚动事件。
 
-**Inheritance/Implementation:** UIScrollEvent extends [UIScrollableCommonEvent](../arkts-apis/arkts-arkui-component/common-uiscrollablecommonevent-i.md)
+UIScrollEvent继承于[UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)。
+
+**Inheritance/Implementation:** UIScrollEvent extends [UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)
 
 **Since:** 19
 
@@ -18,7 +20,9 @@ Defines a UIScrollableCommonEvent which is used to set different common event to
 setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 ```
 
-Set or reset the callback which is triggered when the Scroll did scroll.
+[onDidScroll](ScrollAttribute#onDidScroll)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -36,7 +40,7 @@ Set or reset the callback which is triggered when the Scroll did scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | callback function, triggered when the Scroll did scroll. |
+| callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) \| undefined | Yes | onDidScroll事件的回调函数。 |
 
 ## setOnWillScroll
 
@@ -44,7 +48,9 @@ Set or reset the callback which is triggered when the Scroll did scroll.
 setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void
 ```
 
-Set or reset the callback which is triggered when the Scroll will scroll.
+[onWillScroll](ScrollAttribute#onWillScroll)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -62,5 +68,5 @@ Set or reset the callback which is triggered when the Scroll will scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | callback function, triggered when the Scroll will scroll. |
+| callback | [ScrollOnWillScrollCallback](../arkts-apis/arkts-arkui-scrollonwillscrollcallback-t.md) \| undefined | Yes | onWillScroll事件的回调函数。 |
 

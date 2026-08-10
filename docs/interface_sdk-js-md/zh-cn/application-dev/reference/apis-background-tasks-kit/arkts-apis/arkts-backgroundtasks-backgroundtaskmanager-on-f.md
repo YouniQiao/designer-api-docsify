@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## on('continuousTaskCancel')
 
 ```TypeScript
@@ -23,16 +29,16 @@ function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCance
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskCancel' | 是 | 事件回调类型，固定取值为'continuousTaskCancel'，表示长时任务取消。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskCancelInfo&gt; | 是 | 回调函数，返回长时任务取消原因等信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskCancelInfo&gt; | 是 | 回调函数，返回长时任务取消原因等信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Callback parameter error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Register a exist callback type; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Register a exist callback type; 3. Parameter verification failed. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -81,16 +87,16 @@ function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSusp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskSuspend' | 是 | 事件回调类型，固定取值为'continuousTaskSuspend'，表示长时任务暂停。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskSuspendInfo&gt; | 是 | 回调函数，返回长时任务暂停原因等信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskSuspendInfo&gt; | 是 | 回调函数，返回长时任务暂停原因等信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -138,16 +144,16 @@ function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskActive' | 是 | 事件回调类型，固定取值为'continuousTaskActive'，表示长时任务激活。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskActiveInfo&gt; | 是 | 回调函数，返回长时任务激活相关信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskActiveInfo&gt; | 是 | 回调函数，返回长时任务激活相关信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

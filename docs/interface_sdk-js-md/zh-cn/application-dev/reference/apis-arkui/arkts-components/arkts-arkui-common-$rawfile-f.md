@@ -30,5 +30,5 @@ global \$rawfile function
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |  |
 

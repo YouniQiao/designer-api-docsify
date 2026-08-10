@@ -1,6 +1,6 @@
 # ScannerDevice
 
-Defines the scanner.
+定义扫描仪设备的接口。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Defines the scanner.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## deviceName
 
 ```TypeScript
 deviceName: string
 ```
 
-Name of the scanner.
+扫描仪的设备名称。
 
 **Type:** string
 
@@ -34,9 +40,9 @@ Name of the scanner.
 discoveryMode: ScannerDiscoveryMode
 ```
 
-Discovery mode of the scanner.
+扫描仪的发现模式。
 
-**Type:** ScannerDiscoveryMode
+**Type:** [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
 
 **Since:** 20
 
@@ -52,7 +58,7 @@ Discovery mode of the scanner.
 manufacturer: string
 ```
 
-Manufacturer of the scanner.
+扫描仪的制造商。
 
 **Type:** string
 
@@ -70,7 +76,7 @@ Manufacturer of the scanner.
 model: string
 ```
 
-Model of the scanner.
+扫描仪的型号。
 
 **Type:** string
 
@@ -88,7 +94,7 @@ Model of the scanner.
 scannerId: string
 ```
 
-Unique identifier of the scanner.
+扫描仪的唯一标识符。
 
 **Type:** string
 
@@ -106,7 +112,7 @@ Unique identifier of the scanner.
 uniqueId: string
 ```
 
-Unique ID of the scanner.
+扫描仪的唯一ID。
 
 **Type:** string
 

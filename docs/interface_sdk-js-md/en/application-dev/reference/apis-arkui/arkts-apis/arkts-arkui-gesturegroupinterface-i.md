@@ -1,6 +1,6 @@
 # GestureGroupInterface
 
-Combined gestures integrate two or more gestures into a compound gesture, supporting sequential recognition, parallel recognition, and exclusive recognition.
+手势识别组合，即两种及以上手势组合为复合手势，支持顺序识别、并发识别和互斥识别。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 (mode: GestureMode, ...gesture: GestureType[]): GestureGroupInterface
 ```
 
-Return to Obtain GestureGroup.
+设置组合手势事件。
 
 **Since:** 7
 
@@ -32,14 +32,14 @@ Return to Obtain GestureGroup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| gesture | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes |  |
+| mode | [GestureMode](arkts-arkui-gesture-gesturemode-e.md) | Yes |  |
+| gesture | [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md)[] | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
 
 ## onCancel
 
@@ -47,7 +47,7 @@ Return to Obtain GestureGroup.
 onCancel(event: () => void): GestureGroupInterface
 ```
 
-Triggered when a tap cancellation event is received after a gesture is recognized.
+手势识别成功，接收到触摸取消事件，触发回调。
 
 **Since:** 7
 
@@ -63,11 +63,11 @@ Triggered when a tap cancellation event is received after a gesture is recognize
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | Callback for the gesture event. |
+| event | () =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
 

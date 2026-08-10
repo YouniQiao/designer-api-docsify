@@ -1,14 +1,20 @@
 # addRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addRule
 
 ```TypeScript
 function addRule(rule: bigint): void
 ```
 
-    **˵����**  
-    
-    ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.addCheckRule]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_�����
+> **˵����**
+> 
+> ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule)�����
 
 ����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м�������
 
@@ -30,7 +36,7 @@ function addRule(rule: bigint): void
 | --- | --- | --- | --- |
 | rule | bigint | 是 | ��Ҫ���ӵĹ��� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 添加一条规则

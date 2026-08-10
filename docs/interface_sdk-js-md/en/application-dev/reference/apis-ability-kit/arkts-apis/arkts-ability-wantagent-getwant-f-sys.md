@@ -1,12 +1,18 @@
 # getWant (System API)
 
+## Modules to Import
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
+
 ## getWant
 
 ```TypeScript
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want in a WantAgent object.This API uses an asynchronous callback to return the result.
+获取WantAgent对象的want。使用callback异步回调。
 
 **Since:** 9
 
@@ -22,17 +28,17 @@ Obtains the Want in a WantAgent object.This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target WantAgent object. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to return the Want. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | 回调函数。当获取WantAgent对象want成功，err中code为0，data为获取到的Want数据；否则err会返回对应的错误码和错误信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
-| [16000015](../errorcode-ability.md#16000015-service-timeout) | Service timeout. |
-| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000007 | Service busy. There are concurrent tasks. Try again later. |
+| 16000151 | Invalid wantAgent object. |
+| 16000015 | Service timeout. |
 
 
 ## getWant
@@ -41,7 +47,7 @@ Obtains the Want in a WantAgent object.This API uses an asynchronous callback to
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the Want in a WantAgent object.This API uses a promise to return the result.
+获取WantAgent对象的want。使用Promise异步回调。
 
 **Since:** 9
 
@@ -57,20 +63,20 @@ Obtains the Want in a WantAgent object.This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target WantAgent object. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the Want. |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise对象，返回WantAgent对象的want。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
-| [16000015](../errorcode-ability.md#16000015-service-timeout) | Service timeout. |
-| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000007 | Service busy. There are concurrent tasks. Try again later. |
+| 16000151 | Invalid wantAgent object. |
+| 16000015 | Service timeout. |
 

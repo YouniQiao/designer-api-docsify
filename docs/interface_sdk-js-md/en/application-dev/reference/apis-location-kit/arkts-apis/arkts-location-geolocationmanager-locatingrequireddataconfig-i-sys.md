@@ -12,6 +12,12 @@ Describes the request parameters for obtaining the data required for locating.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## arfcn
 
 ```TypeScript
@@ -20,7 +26,7 @@ arfcn?: int[]
 
 Indicates absolute radio frequency channel number (ARFCN).Querying Cell Information by Specified ARFCN.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -62,7 +68,7 @@ plmnId?: int[]
 
 Indicates PLMN number of the SIM card.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -84,7 +90,7 @@ scanInterval?: int
 
 Indicates the interval between scans. The unit is millisecond.This parameter needs to be set only when scanning information is continuously monitored.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -104,7 +110,7 @@ scanTimeout?: int
 
 Indicates the timeout period of a single scan. The unit is millisecond. The default value is 10000.This parameter needs to be set only when getLocatingRequiredData is used.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -124,7 +130,7 @@ slotId?: int
 
 Indicates SIM card slot number.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -146,7 +152,7 @@ type: LocatingRequiredDataType
 
 Indicates the type of locating required data.
 
-**Type:** LocatingRequiredDataType
+**Type:** [LocatingRequiredDataType](arkts-location-geolocationmanager-locatingrequireddatatype-e-sys.md)
 
 **Since:** 10
 

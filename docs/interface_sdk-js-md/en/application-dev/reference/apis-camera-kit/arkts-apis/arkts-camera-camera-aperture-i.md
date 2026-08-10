@@ -1,6 +1,6 @@
 # Aperture
 
-Provides the APIs for aperture settings. It inherits from [ApertureQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i.md).
 
 **Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i.md)
 
@@ -11,6 +11,12 @@ Provides the APIs for aperture settings. It inherits from [ApertureQuery]\_\_\_J
 <!--Device-camera-interface Aperture extends ApertureQuery--><!--Device-camera-interface Aperture extends ApertureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getPhysicalAperture
 
@@ -40,23 +46,15 @@ Gets current physical aperture value.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | The current physical aperture value. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The current physical aperture value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
-
-**Example**
-
-```TypeScript
-function getPhysicalAperture(session: camera.PortraitPhotoSession): number {
-  let physicalAperture: number = session.getPhysicalAperture();
-  return physicalAperture;
-}
-```
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**Applicable version:** 11 - 23 |
 
 ## getVirtualAperture
 
@@ -84,16 +82,16 @@ Obtains the virtual aperture in use.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Virtual aperture. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Virtual aperture. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function getVirtualAperture(session: camera.PortraitPhotoSession): number {
@@ -130,22 +128,15 @@ Sets physical aperture value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aperture | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | physical aperture value. The supported physical aperture range can be obtained by calling [getSupportedPhysicalApertures]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| aperture | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | physical aperture value. The supported physical aperture range can be obtained by calling [getSupportedPhysicalApertures](arkts-camera-camera-aperturequery-i.md#getsupportedphysicalapertures) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
-
-**Example**
-
-```TypeScript
-function setPhysicalAperture(session: camera.PortraitPhotoSession, physicalAperture: number): void {
-  session.setPhysicalAperture(physicalAperture);
-}
-```
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**Applicable version:** 11 - 23 |
 
 ## setVirtualAperture
 
@@ -160,7 +151,7 @@ setVirtualAperture(aperture: double): void
 ```
 
 Sets a virtual aperture. Before the setting, call  
-[getSupportedVirtualApertures]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the supported virtual apertures.
+[getSupportedVirtualApertures](arkts-camera-camera-aperturequery-i.md#getsupportedvirtualapertures) to obtain the supported virtual apertures.
 
 **Since:** 11
 
@@ -174,16 +165,16 @@ Sets a virtual aperture. Before the setting, call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aperture | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | virtual aperture value |
+| aperture | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | virtual aperture value |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function setVirtualAperture(session: camera.PortraitPhotoSession, virtualAperture: number): void {

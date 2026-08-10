@@ -1,12 +1,18 @@
 # stopScan
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.ConnectivityKit';
+```
+
 ## stopScan
 
 ```TypeScript
 function stopScan(): Promise<void>
 ```
 
-Stops scanning.
+停止扫描。
 
 **Since:** 26.0.0
 
@@ -30,8 +36,8 @@ Stops scanning.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | 权限被拒绝。 |
 

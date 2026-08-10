@@ -12,6 +12,12 @@ Defines an MMSC address.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## address
 
 ```TypeScript
@@ -40,7 +46,7 @@ charset: MmsCharSets
 
 Indicates the character set for the MMSC address.
 
-**Type:** MmsCharSets
+**Type:** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
 **Since:** 8
 

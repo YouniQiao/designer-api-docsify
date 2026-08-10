@@ -1,10 +1,10 @@
 # ScaleRingStyleOptions
 
-Options of the ring style with scales.
+环形有刻度样式选项。
 
-Inherits from [CommonProgressStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
 
-**Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](../arkts-apis/arkts-arkui-component/progress-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **Since:** 10
 
@@ -20,11 +20,13 @@ Inherits from [CommonProgressStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 scaleCount?: number
 ```
 
-Number of divisions on the ring-style process indicator.
+设置环形进度条总刻度数。
 
-Default value: **120**
+默认值：120 
 
-Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
+取值范围：[2, min(width, height)*π/scaleWidth]，超出取值范围时，样式显示为环形无刻度进度条。
+
+在scaleCount和scaleWidth都与默认值相等的情况下，设置组件宽度或高度小于77vp会显示为环形无刻度进度条。
 
 **Type:** number
 
@@ -46,11 +48,17 @@ Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside th
 scaleWidth?: Length
 ```
 
-Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used.
+设置环形进度条刻度粗细（不支持百分比设置）。
 
-Default value: **2.0vp
+默认值：2.0vp
 
-**Type:** Length
+取值范围：大于0的数值。
+
+刻度粗细大于进度条宽度时，使用系统默认粗细。
+
+在scaleCount和scaleWidth都与默认值相等的情况下，设置组件宽度或高度小于77vp会显示为环形无刻度进度条。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
 
@@ -70,11 +78,15 @@ Default value: **2.0vp
 strokeWidth?: Length
 ```
 
-Stroke width of the progress indicator. Percentage values are not supported.
+设置进度条宽度。
 
-Default value: **4.0vp
+默认值：4.0vp
 
-**Type:** Length
+取值范围：大于0的数值，不支持百分比设置。
+
+超出取值范围或设置非法值时按默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
 

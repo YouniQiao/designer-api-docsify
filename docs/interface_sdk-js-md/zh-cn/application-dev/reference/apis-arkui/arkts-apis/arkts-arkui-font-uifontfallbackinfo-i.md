@@ -8,6 +8,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## family
 
 ```TypeScript

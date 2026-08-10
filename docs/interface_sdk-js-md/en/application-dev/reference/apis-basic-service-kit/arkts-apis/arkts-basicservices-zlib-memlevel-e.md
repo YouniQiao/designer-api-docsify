@@ -1,6 +1,6 @@
 # MemLevel
 
-MemLevel
+内存等级。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ MemLevel
 MEM_LEVEL_MIN = 1
 ```
 
-Minimum memory used by the **zlib** API during compression.
+zlib接口在压缩过程中最小使用内存。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Minimum memory used by the **zlib** API during compression.
 MEM_LEVEL_MAX = 9
 ```
 
-Maximum memory used by the **zlib** API during compression.
+zlib接口在压缩过程中最大使用内存。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Maximum memory used by the **zlib** API during compression.
 MEM_LEVEL_DEFAULT = 8
 ```
 
-Default memory used by the **zlib** API during compression.
+zlib接口在压缩过程中默认使用内存。
 
 **Since:** 7
 

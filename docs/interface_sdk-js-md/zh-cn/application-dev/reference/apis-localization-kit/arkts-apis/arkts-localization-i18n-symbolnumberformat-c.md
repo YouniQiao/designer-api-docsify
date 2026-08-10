@@ -1,10 +1,10 @@
 # SymbolNumberFormat
 
 提供自定义数字符号的能力。继承自  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，支持  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_的方法。
+[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持  
+[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。
 
-**继承/实现关系：** SymbolNumberFormat extends [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md)
+**继承/实现关系：** SymbolNumberFormat extends [Intl.NumberFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformat-c.md/arkts-arkts-intl-numberformat-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,12 @@
 <!--Device-i18n-export class SymbolNumberFormat extends Intl.NumberFormat--><!--Device-i18n-export class SymbolNumberFormat extends Intl.NumberFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -39,7 +45,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
+| options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | 否 | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
 
 ## parse
 
@@ -66,7 +72,7 @@ public parse(text: string, lenientMode: boolean): double
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待解析的本地化数字字符串。 |
-| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_宽松模式下，能够识别错误的千分符，如"1,23,456"可以正确解析为"123456"。 |
+| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 &lt;br&gt;宽松模式下，能够识别错误的千分符，如"1,23,456"可以正确解析为"123456"。 |
 
 **返回值：**
 
@@ -78,7 +84,7 @@ public parse(text: string, lenientMode: boolean): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## resolvedOptions
 
@@ -104,5 +110,5 @@ public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 自定义符号数字格式化对象配置项的解析结果。 |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | 自定义符号数字格式化对象配置项的解析结果。 |
 

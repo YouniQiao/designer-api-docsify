@@ -10,6 +10,12 @@ PopupIconOptions定义图标的属性。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
+
 ## borderRadius
 
 ```TypeScript
@@ -18,9 +24,9 @@ borderRadius?: Length | BorderRadiuses
 
 设置图标圆角。
 
-默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
+默认值：`\$r('sys.float.ohos_id_corner_radius_default_s')`
 
-**类型：** Length \| BorderRadiuses
+**类型：** [Length](arkts-arkui-length-t.md) \| BorderRadiuses
 
 **默认值：** $r('sys.float.ohos_id_corner_radius_default_s')
 
@@ -40,11 +46,11 @@ borderRadius?: Length | BorderRadiuses
 fillColor?: ResourceColor
 ```
 
-设置图标填充颜色。仅针对svg图源生效。
+设置图标填充颜色。仅针对svg图源生效。 
 
 默认不改变图标颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -66,7 +72,7 @@ height?: Dimension
 
 默认值：32VP
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** 32.0_vp
 
@@ -92,7 +98,7 @@ image?: ResourceStr
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
@@ -114,7 +120,7 @@ width?: Dimension
 
 默认值：32VP
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** 32.0_vp
 

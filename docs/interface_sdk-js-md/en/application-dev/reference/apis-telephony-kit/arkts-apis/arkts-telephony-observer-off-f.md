@@ -1,5 +1,11 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## off('networkStateChange')
 
 ```TypeScript
@@ -21,19 +27,19 @@ Cancel callback when the network state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | Yes | Event type. Indicates the networkStateChange event to unsubscribe from. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetworkState&gt; | No | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | No | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callback: (data: observer.NetworkState) => void = (data: observer.NetworkState) => {
@@ -67,19 +73,19 @@ Cancel callback when the signal strength is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | Yes | Event type. Indicates the signalInfoChange event to unsubscribe from. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;SignalInformation&gt;&gt; | No | Indicates the callback to unsubscribe from the signalInfoChange event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | No | Indicates the callback to unsubscribe from the signalInfoChange event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { radio } from '@kit.TelephonyKit';
@@ -115,19 +121,19 @@ Cancel callback when the cellular data link connection state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChange event to unsubscribe from. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DataConnectionStateInfo&gt; | No | Indicates the callback to unsubscribe from the cellularDataConnectionStateChange event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataConnectionStateInfo&gt; | No | Indicates the callback to unsubscribe from the cellularDataConnectionStateChange event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callback: (data: observer.DataConnectionStateInfo) => void = (data: observer.DataConnectionStateInfo) => {
@@ -161,19 +167,19 @@ Cancel callback when the uplink and downlink data flow state of cellular data se
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | Yes | Event type. Indicates the cellularDataFlowChange event to unsubscribe from. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DataFlowType&gt; | No | Indicates the callback to unsubscribe from the cellularDataFlowChange event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | No | Indicates the callback to unsubscribe from the cellularDataFlowChange event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';
@@ -209,19 +215,19 @@ Cancel callback when the call state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | Event type. Indicates the callStateChange event to unsubscribe from. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CallStateInfo&gt; | No | Indicates the callback to unsubscribe from the callStateChange event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallStateInfo&gt; | No | Indicates the callback to unsubscribe from the callStateChange event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callback: (data: observer.CallStateInfo) => void = (data: observer.CallStateInfo) => {
@@ -255,18 +261,18 @@ Cancel callback when the telCall state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | Yes | Event type. Indicates the callStateChangeEx event to unsubscribe from. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TelCallState&gt; | No | Indicates the callback to unsubscribe from the callStateChangeEx event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | No | Indicates the callback to unsubscribe from the callStateChangeEx event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8800002](../errorcode-telephony.md#8800002-service-connection-error) | Service connection failed. |
-| [8800003](../errorcode-telephony.md#8800003-system-internal-error) | System internal error. |
-| [8800999](../errorcode-telephony.md#8800999-internal-error) | Unknown error. |
+| 8800999 | Unknown error. |
+| 8800002 | Service connection failed. |
+| 8800003 | System internal error. |
+| 8800001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { call } from '@kit.TelephonyKit';
@@ -301,19 +307,19 @@ Cancel callback when the sim state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'simStateChange' | Yes | Event type. Indicates the simStateChange event to unsubscribe from. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SimStateData&gt; | No | Indicates the callback to unsubscribe from the simStateChange event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SimStateData&gt; | No | Indicates the callback to unsubscribe from the simStateChange event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callback: (data: observer.SimStateData) => void = (data: observer.SimStateData) => {
@@ -347,19 +353,19 @@ Cancel to receive an ICC account change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'iccAccountInfoChange' | Yes | iccAccountInfoChange |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | including state Indicates the ICC account information, and reason Indicates the cause of the change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | including state Indicates the ICC account information, and reason Indicates the cause of the change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callback: () => void = () => {

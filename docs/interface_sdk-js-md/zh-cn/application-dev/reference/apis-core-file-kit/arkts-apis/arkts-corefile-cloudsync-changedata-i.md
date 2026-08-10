@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## isDirectory
 
 ```TypeScript
@@ -36,7 +42,7 @@ type: NotifyType
 
 更改的通知类型。
 
-**类型：** NotifyType
+**类型：** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
 **起始版本：** 12
 

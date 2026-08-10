@@ -1,12 +1,18 @@
 # isPowerSaveMode
 
+## Modules to Import
+
+```TypeScript
+import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## isPowerSaveMode
 
 ```TypeScript
 function isPowerSaveMode(pid: int): Promise<boolean>
 ```
 
-Queries whether the process is in power saving mode. This API uses a promise to return the result.
+查询进程是否处于能效模式，使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,23 +28,23 @@ Queries whether the process is in power saving mode. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Process ID. |
+| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 进程号。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the query result. The value **true** means that the process is in power saving mode; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回进程PID是否处于能效模式，返回true表示进程处于能效模式，返回false表示进程未处于能效模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 31800002 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

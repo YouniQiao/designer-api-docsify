@@ -1,5 +1,11 @@
 # onDeviceLogEvent（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## onDeviceLogEvent
 
 ```TypeScript
@@ -22,21 +28,13 @@ Register log event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceLogEventCode&gt; | 是 | Used to handle ('deviceLogEvent') command |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceLogEventCode&gt; | 是 | Used to handle ('deviceLogEvent') command |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-
-**示例：**
-
-```TypeScript
-avSession.onDeviceLogEvent((eventCode: avSession.DeviceLogEventCode) => {
-  console.info(`onDeviceLogEvent code : ${eventCode}`);
-});
-```
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 202 | Not System App. |
 

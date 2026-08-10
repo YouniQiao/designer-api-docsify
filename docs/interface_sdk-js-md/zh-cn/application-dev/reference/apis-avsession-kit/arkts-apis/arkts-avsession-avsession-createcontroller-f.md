@@ -1,5 +1,11 @@
 # createController
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## createController
 
 ```TypeScript
@@ -30,17 +36,18 @@ function createController(sessionId: string): Promise<AVSessionController>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVSessionController&gt; | Promise对象。返回会话控制器实例，可查看会话ID， \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
+| Promise&lt;AVSessionController&gt; | Promise对象。返回会话控制器实例，可查看会话ID， &lt;br&gt;并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 201 | Permission denied |
+| 202 | Not System App.<br>**适用版本：** 9 - 22 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
@@ -68,13 +75,5 @@ struct Index {
     .height('100%')
   }
 }
-```
-
-```TypeScript
-let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
-avSession.createController(sessionId).then((avcontroller: avSession.AVSessionController) => {
-  currentAVcontroller = avcontroller;
-  console.info('Succeeded in creating controller.');
-});
 ```
 

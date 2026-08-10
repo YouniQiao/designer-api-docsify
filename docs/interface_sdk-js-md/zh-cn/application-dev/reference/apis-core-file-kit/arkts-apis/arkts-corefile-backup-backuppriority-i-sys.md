@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## priority
 
 ```TypeScript
@@ -20,7 +26,7 @@ priority?: int
 
 应用的优先级，数值越大优先级越高。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

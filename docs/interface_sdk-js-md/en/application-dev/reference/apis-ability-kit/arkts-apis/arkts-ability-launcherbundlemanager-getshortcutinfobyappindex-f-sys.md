@@ -1,14 +1,20 @@
 # getShortcutInfoByAppIndex (System API)
 
+## Modules to Import
+
+```TypeScript
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getShortcutInfoByAppIndex
 
 ```TypeScript
 function getShortcutInfoByAppIndex(bundleName: string, appIndex: int): Array<ShortcutInfo>
 ```
 
-Obtains the [shortcut information]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the current user based on the index of an application clone.
+查询当前用户下指定分身应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)。
 
-No permission is required for obtaining the caller's own information.
+调用方获取自己的信息时不需要权限。
 
 **Since:** 20
 
@@ -26,26 +32,26 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| appIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the application clone. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 分身应用的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo]{ |
+| Array&lt;ShortcutInfo&gt; | Array形式返回当前用户下指定分身应用的[ShortcutInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not support. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+| 801 | Capability not support. |
+| 17700061 | The specified app index is invalid. |
+| 201 | Verify permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';

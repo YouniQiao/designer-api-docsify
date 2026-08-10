@@ -18,7 +18,7 @@ direction: RichEditorDeleteDirection
 
 删除操作的方向。
 
-**类型：** RichEditorDeleteDirection
+**类型：** [RichEditorDeleteDirection](arkts-arkui-richeditordeletedirection-e.md)
 
 **起始版本：** 10
 

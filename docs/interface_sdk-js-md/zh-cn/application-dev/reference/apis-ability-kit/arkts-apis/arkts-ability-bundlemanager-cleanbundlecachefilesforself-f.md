@@ -1,5 +1,11 @@
 # cleanBundleCacheFilesForSelf
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## cleanBundleCacheFilesForSelf
 
 ```TypeScript
@@ -24,7 +30,7 @@ function cleanBundleCacheFilesForSelf(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

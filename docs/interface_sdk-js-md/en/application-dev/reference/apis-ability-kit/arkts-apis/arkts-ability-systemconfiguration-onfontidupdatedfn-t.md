@@ -22,5 +22,5 @@ Defines an OnFontIdUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontId | string | Yes | Indicates the font type of the system  |
+| fontId | string | Yes | Indicates the font type of the system |
 

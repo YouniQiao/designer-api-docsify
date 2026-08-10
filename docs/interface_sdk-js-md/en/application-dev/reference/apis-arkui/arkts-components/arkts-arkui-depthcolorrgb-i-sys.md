@@ -1,6 +1,6 @@
 # DepthColorRGB (System API)
 
-RGB color in depth space.
+深度空间中的RGB颜色。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ RGB color in depth space.
 blue: int
 ```
 
-Blue component (0-255).
+蓝色分量（0-255）。
 
 **Type:** int
 
@@ -42,7 +42,7 @@ Blue component (0-255).
 green: int
 ```
 
-Green component (0-255).
+绿色分量（0-255）。
 
 **Type:** int
 
@@ -66,7 +66,7 @@ Green component (0-255).
 red: int
 ```
 
-Red component (0-255).
+红色分量（0-255）。
 
 **Type:** int
 

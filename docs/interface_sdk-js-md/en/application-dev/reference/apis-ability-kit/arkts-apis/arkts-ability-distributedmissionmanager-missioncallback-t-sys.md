@@ -4,8 +4,8 @@
 export type MissionCallback = _MissionCallback
 ```
 
-Defines the callback invoked after synchronization starts. It is used as an input parameter in  
-[registerMissionListener]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+作为可以  
+[registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener)的入参，表示开始同步后，建立的回调函数。
 
 **Since:** 10
 

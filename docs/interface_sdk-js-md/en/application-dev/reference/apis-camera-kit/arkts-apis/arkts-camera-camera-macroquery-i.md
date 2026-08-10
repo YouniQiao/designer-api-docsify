@@ -1,6 +1,6 @@
 # MacroQuery
 
-MacroQuery provides the API to check the support for macro photography.
+提供查询设备是否支持相机微距拍摄的方法。
 
 **Since:** 19
 
@@ -10,14 +10,20 @@ MacroQuery provides the API to check the support for macro photography.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isMacroSupported
 
 ```TypeScript
 isMacroSupported(): boolean
 ```
 
-Checks whether macro photography is supported in the current state. This API must be called after  
-[commitConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+检测当前状态下是否支持微距能力，需要在CaptureSession调用  
+[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之后进行调用。
 
 **Since:** 19
 
@@ -33,5 +39,11 @@ Checks whether macro photography is supported in the current state. This API mus
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of macro photography. **true** if supported, **false** otherwise. |
+| boolean | 返回是否支持微距能力。true表示支持，false表示不支持。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | Not System Application.<br>**Applicable version:** 11 - 18 |
 

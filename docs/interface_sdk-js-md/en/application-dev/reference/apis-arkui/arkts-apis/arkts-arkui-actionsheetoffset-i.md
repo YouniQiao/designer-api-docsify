@@ -1,6 +1,6 @@
 # ActionSheetOffset
 
-Alignment mode of the dialog box.
+弹窗相对alignment所在位置的偏移量。
 
 **Since:** 18
 
@@ -16,13 +16,13 @@ Alignment mode of the dialog box.
 dx: number | string | Resource
 ```
 
-Offset of the action sheet along the x-axis relative to the alignment position.
+弹窗相对于对齐位置dx的偏移量。
 
-Explicitly specify the length unit explicitly, for example, **'10px'**, or provide the length in percentage, for example, **'100%'**.
+可指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。
 
-**NOTE**
+**说明：**
 
-If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10**.
+不指定像素单位时，默认单位vp，如'10'，等同于10。
 
 **Type:** number \| string \| Resource
 
@@ -44,13 +44,13 @@ If the unit is not specified, the default unit vp is used, in which case **'10'*
 dy: number | string | Resource
 ```
 
-Offset of the action sheet along the y-axis relative to the alignment position.
+弹窗相对于对齐位置dy的偏移量。
 
-Explicitly specify the length unit explicitly, for example, **'10px'**, or provide the length in percentage, for example, **'100%'**.
+可指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。
 
-**NOTE**
+**说明：**
 
-If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10**.
+不指定像素单位时，默认单位vp，如'10'，等同于10。
 
 **Type:** number \| string \| Resource
 

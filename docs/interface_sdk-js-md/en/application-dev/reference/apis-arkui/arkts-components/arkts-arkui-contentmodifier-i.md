@@ -1,6 +1,6 @@
 # ContentModifier
 
-Defines the content modifier.
+开发者需要自定义class实现ContentModifier接口。
 
 **Since:** 12
 
@@ -16,7 +16,15 @@ Defines the content modifier.
 applyContent(): WrappedBuilder<[T]>
 ```
 
-Defining applyContent function.
+定制内容区的Builder。
+
+**T参数支持范围:**
+
+ButtonConfiguration、CheckBoxConfiguration、DataPanelConfiguration、TextClockConfiguration、ToggleConfiguration、GaugeConfiguration、LoadingProgressConfiguration、RadioConfiguration、ProgressConfiguration、RatingConfiguration、SliderConfiguration
+
+**属性支持范围:**
+
+支持通用属性enabled，contentModifier。
 
 **Since:** 12
 
@@ -34,5 +42,5 @@ Defining applyContent function.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[T]&gt; | Component attribute class, which is used to distinguish different information required by different components after content areas are customized, for example, ButtonConfiguration for the Button component and CheckBoxConfiguration of the Checkbox component. |
+| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; | 组件的属性类，用来区别不同组件自定义内容区后所需要的不同信息，比如Button组件的ButtonConfiguration，Checkbox组件的 CheckBoxConfiguration等。 |
 

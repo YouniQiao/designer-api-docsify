@@ -1,6 +1,6 @@
 # CameraStatus
 
-Enumerates the camera statuses.
+枚举，相机状态。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the camera statuses.
 CAMERA_STATUS_APPEAR = 0
 ```
 
-A camera appears.
+新的相机出现。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ A camera appears.
 CAMERA_STATUS_DISAPPEAR = 1
 ```
 
-The camera disappears.
+相机被移除。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ The camera disappears.
 CAMERA_STATUS_AVAILABLE = 2
 ```
 
-The camera is available.
+相机可用。
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ The camera is available.
 CAMERA_STATUS_UNAVAILABLE = 3
 ```
 
-The camera is unavailable.
+相机不可用。
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # PermissionUsingOptions (System API)
 
-Represents the optional parameter set for using a permission.
+权限使用可选参数集。
 
 **Since:** 26.0.0
 
@@ -12,17 +12,23 @@ Represents the optional parameter set for using a permission.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## enhancedIdentity
 
 ```TypeScript
 enhancedIdentity?: string
 ```
 
-Extension identity, used to identify additional identity information of the caller. This field is passed in when it is necessary to distinguish permission usage records from different call sources within the same application.The length must not exceed 48 characters. Passing an excessively long value when calling  
-[startUsingPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[stopUsingPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ will return error code 12100001.
+扩展身份，用于标识调用方的附加身份信息。当需要区分同一应用下不同调用来源的权限使用记录时传入此字段。长度不超过48个字符，调用  
+[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission)或  
+[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission)时传入超长值会返回错误码12100001。
 
-Default value: empty string.
+默认值：空字符串。
 
 **Type:** string
 

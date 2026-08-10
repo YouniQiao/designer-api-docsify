@@ -1,12 +1,18 @@
 # startCastDeviceDiscovery (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## startCastDeviceDiscovery
 
 ```TypeScript
 function startCastDeviceDiscovery(callback: AsyncCallback<void>): void
 ```
 
-Start device discovery.
+开始设备搜索发现。结果通过callback异步回调方式返回。
 
 **Since:** 10
 
@@ -22,25 +28,19 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.startCastDeviceDiscovery((err: BusinessError) => {
-  if (err) {
-    console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('startCastDeviceDiscovery successfully');
-  }
+avSession.startCastDeviceDiscovery(() => {
+    console.info('Succeeded in starting cast device discovery.');
 });
 ```
 
@@ -51,7 +51,7 @@ avSession.startCastDeviceDiscovery((err: BusinessError) => {
 function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): void
 ```
 
-Start device discovery.
+指定过滤条件，开始设备搜索发现。结果通过callback异步回调方式返回。
 
 **Since:** 10
 
@@ -67,28 +67,22 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | device filter when discovering, can be an union of { |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | a callback function |
+| filter | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 进行设备发现的过滤条件，由ProtocolType组合而成。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let filter = 2;
-avSession.startCastDeviceDiscovery(filter, (err: BusinessError) => {
-  if (err) {
-    console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('startCastDeviceDiscovery successfully');
-  }
+avSession.startCastDeviceDiscovery(filter, () => {
+    console.info('Succeeded in starting cast device discovery.');
 });
 ```
 
@@ -99,7 +93,7 @@ avSession.startCastDeviceDiscovery(filter, (err: BusinessError) => {
 function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Promise<void>
 ```
 
-Start device discovery.
+开始设备搜索发现。结果通过Promise异步回调方式返回。
 
 **Since:** 10
 
@@ -115,33 +109,29 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | device filter when discovering, can be an union of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
-| drmSchemes | Array&lt;string&gt; | No | filter drm-enabled devices which are represented by uuid. It is effective when protocol type is TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CAST\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLUS\_\_\_ESCAPED\_UNDERSCORE\_\_\_STREAM.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| filter | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 进行设备发现的过滤条件，由ProtocolType组合而成。<br>**Since:** 12 |
+| drmSchemes | Array&lt;string&gt; | No | 进行支持DRM资源播放的设备发现的过滤条件，由DRM uuid组合而成。 &lt;br/&gt;从API version 12开始支持该可选参 数。<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise对象。当命令发送成功并开始搜索，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 202 | Not System App.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let filter = 2;
 let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
 avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
-  console.info('startCastDeviceDiscovery successfully');
-}).catch((err: BusinessError) => {
-  console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
+  console.info('Succeeded in starting cast device discovery.');
 });
 ```
 

@@ -1,9 +1,10 @@
 # HapticFileDescriptor
 
-Describes the FD of a custom vibration configuration file. Ensure that the file is available, and the parameters in it can be obtained from the sandbox path through the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API or from the HAP resource through the  
-[getRawFd]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_API. The application scenario is as follows: The vibration sequence is stored in a file and vibration needs to be triggered based on the offset and length. For details about the storage format of the vibration sequence, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+自定义振动配置文件的描述符，必须确认资源文件可用，其参数可通过[fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen)从沙箱路径获取或者通过  
+[getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md/arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)从HAP资源获取。使用场景：振动序列被存储在一个文件中，需要根据偏移量和长度进行振动，振动序列存储格式，请参考  
+[振动效果说明](../../../device/sensor/vibrator-guidelines.md#振动效果说明)。使用时需注意以下问题：
+
+- 振动结束后建议及时关闭文件描述符，避免资源泄露。使用getRawFd获取的文件描述符需通过closeRawFd关闭，使用fileIo.open获取的需通过fileIo.close关闭。
 
 **Since:** 10
 
@@ -13,15 +14,22 @@ Describes the FD of a custom vibration configuration file. Ensure that the file 
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
+## Modules to Import
+
+```TypeScript
+import { vibrator } from 'kits/@kit.SensorServiceKit';
+```
+
 ## fd
 
 ```TypeScript
 fd: int
 ```
 
-FD of the custom vibration configuration file.
+资源文件描述符。可通过[fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen)从沙箱路径获取或通过  
+[getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md/arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)从HAP资源获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -37,9 +45,9 @@ FD of the custom vibration configuration file.
 length?: long
 ```
 
-Resource length, in bytes. The default value is the length from the offset position to the end of the file, and the value cannot exceed the valid range of the file.
+资源长度。单位：字节。默认值：从偏移位置至文件结尾的长度。取值范围：不可超出文件有效范围。使用场景：适用于振动配置文件中包含多种振动效果、需要指定特定长度振动的场景。不填写时默认读取从偏移位置至文件结尾的全部内容。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -55,9 +63,9 @@ Resource length, in bytes. The default value is the length from the offset posit
 offset?: long
 ```
 
-Offset from the start position of the file, in bytes. The default value is the start position of the file, and the value cannot exceed the valid range of the file.
+距文件起始位置的偏移量。单位：字节。默认值：文件起始位置（0）。取值范围：不可超出文件有效范围。使用场景：适用于振动配置文件中包含多种振动效果、需要指定从特定偏移位置开始振动的场景。不填写时默认从文件起始位置开始。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 

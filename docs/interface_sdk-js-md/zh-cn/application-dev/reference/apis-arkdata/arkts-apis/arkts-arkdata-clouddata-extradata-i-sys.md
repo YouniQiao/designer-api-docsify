@@ -12,13 +12,19 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## eventId
 
 ```TypeScript
 eventId: string
 ```
 
-事件标识。当前仅支持"cloud\_data\_change"，表示云数据变更，传入其他值视为无效参数。
+事件标识。当前仅支持"cloud_data_change"，表示云数据变更，传入其他值视为无效参数。
 
 **类型：** string
 

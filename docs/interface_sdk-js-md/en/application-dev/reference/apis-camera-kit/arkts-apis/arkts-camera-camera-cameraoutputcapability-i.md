@@ -1,6 +1,6 @@
 # CameraOutputCapability
 
-Describes the camera output capability.
+相机输出能力项。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the camera output capability.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## photoProfiles
 
 ```TypeScript
 readonly photoProfiles: Array<Profile>
 ```
 
-Supported photo profiles.
+支持的拍照配置信息集合。
 
 **Type:** Array&lt;Profile&gt;
 
@@ -36,7 +42,7 @@ Supported photo profiles.
 readonly previewProfiles: Array<Profile>
 ```
 
-Supported preview profiles.
+支持的预览配置信息集合。
 
 **Type:** Array&lt;Profile&gt;
 
@@ -56,7 +62,7 @@ Supported preview profiles.
 readonly supportedMetadataObjectTypes: Array<MetadataObjectType>
 ```
 
-Supported metadata object types.
+支持的metadata流类型信息集合。
 
 **Type:** Array&lt;MetadataObjectType&gt;
 
@@ -76,7 +82,7 @@ Supported metadata object types.
 readonly videoProfiles: Array<VideoProfile>
 ```
 
-Supported video profiles.
+支持的录像配置信息集合。
 
 **Type:** Array&lt;VideoProfile&gt;
 

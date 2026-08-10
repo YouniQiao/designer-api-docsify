@@ -1,12 +1,18 @@
 # getSelfManagedBrowserPolicy
 
+## Modules to Import
+
+```TypeScript
+import { browser } from 'kits/@kit.MDMKit';
+```
+
 ## getSelfManagedBrowserPolicy
 
 ```TypeScript
 function getSelfManagedBrowserPolicy(): ArrayBuffer
 ```
 
-Obtains the browser policy of the current device.
+获取当前设备浏览器策略。
 
 **Since:** 15
 
@@ -22,9 +28,9 @@ Obtains the browser policy of the current device.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Browser policy obtained. |
+| ArrayBuffer | 浏览器策略。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';

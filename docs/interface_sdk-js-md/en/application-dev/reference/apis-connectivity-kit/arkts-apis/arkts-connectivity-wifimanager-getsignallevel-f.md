@@ -1,5 +1,11 @@
 # getSignalLevel
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getSignalLevel
 
 ```TypeScript
@@ -22,25 +28,25 @@ Calculate the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rssi | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the Wi-Fi RSSI. |
-| band | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the Wi-Fi frequency band. |
+| rssi | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the Wi-Fi RSSI. |
+| band | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the Wi-Fi frequency band. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Returns Wi-Fi signal level ranging from 0 to 4. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns Wi-Fi signal level ranging from 0 to 4. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 2501000 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

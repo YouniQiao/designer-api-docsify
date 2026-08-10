@@ -1,0 +1,55 @@
+# getDisconnectedReason（系统接口）
+
+## 导入模块
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
+## getDisconnectedReason
+
+```TypeScript
+function getDisconnectedReason(): DisconnectedReason
+```
+
+Obtain the latest disconnected reason.
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
+
+<!--Device-wifiManager-function getDisconnectedReason(): DisconnectedReason--><!--Device-wifiManager-function getDisconnectedReason(): DisconnectedReason-End-->
+
+**系统能力：** SystemCapability.Communication.WiFi.STA
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | Returns the latest disconnected reason. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 2501000 | Operation failed. |
+
+## 示例
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+try {
+  let disconnectedReason = wifiManager.getDisconnectedReason();  
+    console.info("disconnectedReason:" + disconnectedReason);
+} catch (error) {
+  console.error("failed:" + JSON.stringify(error));
+}
+```
+

@@ -4,7 +4,7 @@
 export type AutoFillExtensionContext = _AutoFillExtensionContext.default
 ```
 
-Level-2 module AutoFillExtensionContext.
+AutoFillExtensionContext二级模块。
 
 **Since:** 11
 

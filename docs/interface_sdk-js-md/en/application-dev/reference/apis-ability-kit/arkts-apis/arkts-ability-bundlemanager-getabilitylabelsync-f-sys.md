@@ -1,14 +1,20 @@
 # getAbilityLabelSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAbilityLabelSync
 
 ```TypeScript
 function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string
 ```
 
-Obtains the ability label based on the given bundle name, module name, and ability name. This API returns the result synchronously.
+以同步的方法获取指定bundleName、moduleName和abilityName的label。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自身的信息时不需要权限。
 
 **Since:** 10
 
@@ -26,31 +32,31 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| moduleName | string | Yes | Module name. |
-| abilityName | string | Yes | Name of the UIAbility component. |
+| bundleName | string | Yes | 表示应用程序的bundleName。 |
+| moduleName | string | Yes | 表示Module名称。 |
+| abilityName | string | Yes | 表示UIAbility组件的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Label of the ability. |
+| string | 指定组件的label值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
-| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 17700029 | The specified ability is disabled. |
+| 17700026 | The specified bundle is disabled. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700002 | The specified moduleName is not found. |
+| 17700003 | The specified abilityName is not found. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

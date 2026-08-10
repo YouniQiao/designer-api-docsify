@@ -1,12 +1,18 @@
 # stopMoving (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## stopMoving
 
 ```TypeScript
 function stopMoving(mechId: int): Promise<void>
 ```
 
-Stops a mechanical device from moving.
+停止转动
 
 **Since:** 20
 
@@ -22,23 +28,23 @@ Stops a mechanical device from moving.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the mechanical device. |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 返回操作结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 console.info('Stop moving');

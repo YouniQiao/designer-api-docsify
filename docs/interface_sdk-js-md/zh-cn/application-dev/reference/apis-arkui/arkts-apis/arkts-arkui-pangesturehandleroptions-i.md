@@ -1,8 +1,8 @@
 # PanGestureHandlerOptions
 
-滑动手势处理器配置参数。继承自[BaseHandlerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
-**继承/实现关系：** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-component/gesture-basehandleroptions-i.md)
+**继承/实现关系：** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **起始版本：** 12
 
@@ -22,7 +22,7 @@ direction?: PanDirection
 
 默认值：PanDirection.All
 
-**类型：** PanDirection
+**类型：** [PanDirection](arkts-arkui-gesture-pandirection-e.md)
 
 **起始版本：** 12
 
@@ -48,13 +48,13 @@ distance?: number
 
 **说明：**
 
-[Tabs组件]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
+[Tabs组件](arkts-arkui-tabs-tabs-f.md#tabs)滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
 
 取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
 
 从API version 19开始，手写笔默认值为8，单位为vp。
 
-使用[gestureModifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配置该字段时，单位为px。
+使用[gestureModifier](arkts-arkui-common-commonmethod-i.md#gesturemodifier)配置该字段时，单位为px。
 
 **类型：** number
 
@@ -82,7 +82,7 @@ distanceMap?: Map<SourceTool, number>
 
 取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
 
-**类型：** Map&lt;SourceTool, number&gt;
+**类型：** Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt;
 
 **起始版本：** 19
 

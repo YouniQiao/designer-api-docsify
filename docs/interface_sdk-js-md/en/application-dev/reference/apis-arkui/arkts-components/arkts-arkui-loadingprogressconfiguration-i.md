@@ -1,7 +1,6 @@
 # LoadingProgressConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from  
-[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **Inheritance/Implementation:** LoadingProgressConfiguration extends [CommonConfiguration<LoadingProgressConfiguration>](CommonConfiguration<LoadingProgressConfiguration>)
 
@@ -19,9 +18,9 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 enableLoading: boolean
 ```
 
-Whether to show the loading animation.
+LoadingProgress动画是否显示。
 
-Default value: **true**. **true**: Show the loading animation. **false**: Do not show the loading animation.
+默认值：true，true表示显示LoadingProgress动画，false表示不显示LoadingProgress动画。
 
 **Type:** boolean
 

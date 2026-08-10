@@ -1,15 +1,16 @@
 # FaultLogExtensionContext
 
 FaultLogExtensionContext是  
-[FaultLogExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的上下文环境，继承自[ExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+[FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)。
 
 FaultLogExtensionContext模块提供访问  
-[FaultLogExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_的资源的能力，对于扩展的ExtensionAbility，可直接将ExtensionContext作为上下文环境，或者定义一个继承自ExtensionContext的类型作为上下文环境。
-    **说明：**  
-    
-    - 本模块接口从API version 21开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+[FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)的资源的能力，对于扩展的ExtensionAbility，可直接将ExtensionContext作为上下文环境，或者定义一个继承自ExtensionContext的类型作为上下文环境。
 
-**继承/实现关系：** FaultLogExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-application/extensioncontext-extensioncontext-c.md)
+> **说明：**
+> 
+> - 本模块接口从API version 21开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+**继承/实现关系：** FaultLogExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 21
 
@@ -20,4 +21,10 @@ FaultLogExtensionContext模块提供访问
 <!--Device-unnamed-export default class FaultLogExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class FaultLogExtensionContext extends ExtensionContext-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
+
+## 导入模块
+
+```TypeScript
+import { FaultLogExtensionContext } from 'kits/@kit.PerformanceAnalysisKit';
+```
 

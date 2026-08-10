@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
+## 导入模块
+
+```TypeScript
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## fullLog
 
 ```TypeScript
@@ -140,7 +146,7 @@ type: FaultType
 
 故障类型。
 
-**类型：** FaultType
+**类型：** [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md)
 
 **起始版本：** 8
 

@@ -1,5 +1,11 @@
 # @ohos.app.ability.PhotoEditorExtensionAbility
 
+## Modules to Import
+
+```TypeScript
+import { PhotoEditorExtensionAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Classes

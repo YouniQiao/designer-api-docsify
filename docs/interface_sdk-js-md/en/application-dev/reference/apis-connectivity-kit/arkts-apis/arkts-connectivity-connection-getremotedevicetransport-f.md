@@ -1,5 +1,11 @@
 # getRemoteDeviceTransport
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getRemoteDeviceTransport
 
 ```TypeScript
@@ -28,18 +34,18 @@ Get the transport of the bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The transport of bluetooth device. |
+| [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | The transport of bluetooth device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Get transport failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

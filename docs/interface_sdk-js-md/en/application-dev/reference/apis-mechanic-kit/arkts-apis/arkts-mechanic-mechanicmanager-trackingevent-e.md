@@ -1,6 +1,6 @@
 # TrackingEvent
 
-Enumerates the tracking events.
+跟踪事件
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the tracking events.
 CAMERA_TRACKING_USER_ENABLED = 0
 ```
 
-Camera tracking enabled by user.
+用户操作相机跟踪使能
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Camera tracking enabled by user.
 CAMERA_TRACKING_USER_DISABLED = 1
 ```
 
-Camera tracking disabled by user.
+用户操作相机跟踪关闭
 
 **Since:** 20
 

@@ -13,15 +13,21 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## recordCount
 
 ```TypeScript
 recordCount?: long
 ```
 
-表示期望或可提供的最大数据记录数，默认值为0，取值范围为[0, 2\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_32\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_-1]。超过取值范围时会按默认值处理。设置为浮点数时，仅使用整数部分。当用于拖拽时，会作为角标数量显示，最大支持2\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_31\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_-1，超过此数值时不显示角标。作为角标数量时，优先级低于[DragPreviewOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的numberBadge方法。
+表示期望或可提供的最大数据记录数，默认值为0，取值范围为[0, 2&lt;sup&gt;32&lt;/sup&gt;-1]。超过取值范围时会按默认值处理。设置为浮点数时，仅使用整数部分。当用于拖拽时，会作为角标数量显示，最大支持2&lt;sup&gt;31&lt;/sup&gt;-1，超过此数值时不显示角标。作为角标数量时，优先级低于[DragPreviewOptions](../../apis-arkui/arkts-apis/arkts-arkui-common-dragpreviewoptions-i.md/arkts-arkui-common-dragpreviewoptions-i.md)中的numberBadge方法。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 

@@ -1,6 +1,6 @@
 # Color4f
 
-Describes a color in ARGB format.
+ARGB格式的颜色描述。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes a color in ARGB format.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { common2D } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alpha
 
 ```TypeScript
 alpha: double
 ```
 
-Alpha component of the color. The value is a floating point number ranging from 0.0 to 1.0.
+颜色的A分量（透明度），值是0.0~1.0的浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Alpha component of the color. The value is a floating point number ranging from 
 blue: double
 ```
 
-Blue component of the color. The value is a floating point number ranging from 0.0 to 1.0.
+颜色的B分量（蓝色），值是0.0~1.0的浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -52,9 +58,9 @@ Blue component of the color. The value is a floating point number ranging from 0
 green: double
 ```
 
-Green component of the color. The value is a floating point number ranging from 0.0 to 1.0.
+颜色的G分量（绿色），值是0.0~1.0的浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -70,9 +76,9 @@ Green component of the color. The value is a floating point number ranging from 
 red: double
 ```
 
-Red component of the color. The value is a floating point number ranging from 0.0 to 1.0.
+颜色的R分量（红色），值是0.0~1.0的浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 

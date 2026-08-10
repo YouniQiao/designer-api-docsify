@@ -1,0 +1,32 @@
+# UnlitMaterial
+
+无光照材质资源
+
+**Inheritance/Implementation:** UnlitMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-unnamed-export interface UnlitMaterial extends Material--><!--Device-unnamed-export interface UnlitMaterial extends Material-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## baseColor
+
+```TypeScript
+baseColor: MaterialProperty
+```
+
+无光照材质的基础颜色因子.factor.xyzw的值定义rgba颜色.
+
+**Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-UnlitMaterial-baseColor: MaterialProperty--><!--Device-UnlitMaterial-baseColor: MaterialProperty-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+

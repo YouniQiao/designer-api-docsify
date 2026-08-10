@@ -1,12 +1,11 @@
 # DataChangeListener
 
-Listener for data changes.
-    **NOTE**  
-    
-    In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value  
-    is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside  
-    the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**,  
-    the value of **index** can equal the data source length.)
+数据变化监听器，用于在数据源发生变化时通知LazyForEach组件进行相应的渲染更新，支持数据添加、删除、改变、移动、交换、重载等多种数据变化类型的监听。
+
+> **说明：**
+> 
+> DataChangeListener除onDatasetChange以外的方法中，当参数包含index且值为负数时，会默认用0来替换。onDatasetChange中，当单个DataOperation参数包含index且值在数据源
+> 索引范围之外（DataAddOperation中index可以等于数据源长度），则可能导致渲染异常。
 
 **Since:** 7
 
@@ -22,7 +21,11 @@ Listener for data changes.
 onDataAdd(index: number): void
 ```
 
-Invoked when data is added to the position indicated by the specified index.
+通知组件index的位置有数据添加。添加数据完成后调用。
+
+> **说明：**
+> 
+> 该接口不能与onDatasetChange接口混用。
 
 **Since:** 8
 
@@ -38,7 +41,7 @@ Invoked when data is added to the position indicated by the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| index | number | Yes | 数据添加位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
 
 ## onDataAdded
 
@@ -46,11 +49,11 @@ Invoked when data is added to the position indicated by the specified index.
 onDataAdded(index: number): void
 ```
 
-Invoked when data is added to the position indicated by the specified index.
-    **NOTE**  
-    
-    This API is supported since API version 7 and deprecated since API version 8. Use  
-    [onDataAdd]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+通知组件index的位置有数据添加。添加数据完成后调用。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 8开始废弃。
 
 **Since:** 7
 
@@ -58,7 +61,7 @@ Invoked when data is added to the position indicated by the specified index.
 
 **Deprecated since:** 8
 
-**Substitutes:** [DataChangeListener.onDataAdd](../arkts-apis/arkts-arkui-component/lazyforeach-datachangelistener-i.md#ondataadd)
+**Substitutes:** [DataChangeListener.onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd)
 
 <!--Device-DataChangeListener-onDataAdded(index: number): void--><!--Device-DataChangeListener-onDataAdded(index: number): void-End-->
 
@@ -68,7 +71,7 @@ Invoked when data is added to the position indicated by the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| index | number | Yes | 数据添加位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
 
 ## onDataChange
 
@@ -76,7 +79,11 @@ Invoked when data is added to the position indicated by the specified index.
 onDataChange(index: number): void
 ```
 
-Invoked when data in the position indicated by the specified index is changed.
+通知组件index的位置有数据变化。改变数据完成后调用。
+
+> **说明：**
+> 
+> 该接口不能与onDatasetChange接口混用。
 
 **Since:** 8
 
@@ -92,7 +99,7 @@ Invoked when data in the position indicated by the specified index is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the position where data is changed. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| index | number | Yes | 数据变化位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
 
 ## onDataChanged
 
@@ -100,11 +107,11 @@ Invoked when data in the position indicated by the specified index is changed.
 onDataChanged(index: number): void
 ```
 
-Invoked when data in the position indicated by the specified index is changed.
-    **NOTE**  
-    
-    This API is supported since API version 7 and deprecated since API version 8. Use  
-    [onDataChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+通知组件index的位置有数据变化。改变数据完成后调用。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 8开始废弃。
 
 **Since:** 7
 
@@ -112,7 +119,7 @@ Invoked when data in the position indicated by the specified index is changed.
 
 **Deprecated since:** 8
 
-**Substitutes:** [DataChangeListener.onDataChange](../arkts-apis/arkts-arkui-component/lazyforeach-datachangelistener-i.md#ondatachange)
+**Substitutes:** [DataChangeListener.onDataChange](arkts-arkui-datachangelistener-i.md#ondatachange)
 
 <!--Device-DataChangeListener-onDataChanged(index: number): void--><!--Device-DataChangeListener-onDataChanged(index: number): void-End-->
 
@@ -122,7 +129,7 @@ Invoked when data in the position indicated by the specified index is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Listener for data changes. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| index | number | Yes | 数据变化位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
 
 ## onDataDelete
 
@@ -130,11 +137,13 @@ Invoked when data in the position indicated by the specified index is changed.
 onDataDelete(index: number): void
 ```
 
-Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
-    **NOTE**  
-    
-    Before **onDataDelete** is called, ensure that the corresponding data in **dataSource** has been deleted.  
-    Otherwise, undefined behavior will occur during page rendering.
+通知组件删除index位置的数据并刷新LazyForEach的展示内容。删除数据完成后调用。
+
+> **说明：**
+> 
+> - 需要保证dataSource中的对应数据已经在调用onDataDelete前删除，否则页面渲染将出现未定义的行为。
+> 
+> - 该接口不能与onDatasetChange接口混用。
 
 **Since:** 8
 
@@ -150,7 +159,7 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| index | number | Yes | 数据删除位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
 
 ## onDataDeleted
 
@@ -158,11 +167,11 @@ Invoked when data is deleted from the position indicated by the specified index.
 onDataDeleted(index: number): void
 ```
 
-Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
-    **NOTE**  
-    
-    This API is supported since API version 7 and deprecated since API version 8. Use  
-    [onDataDelete]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+通知组件删除index位置的数据并刷新LazyForEach的展示内容。删除数据完成后调用。
+
+> **说明：**
+> 
+> - 从API version 7开始支持，从API version 8开始废弃。
 
 **Since:** 7
 
@@ -170,7 +179,7 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 **Deprecated since:** 8
 
-**Substitutes:** [DataChangeListener.onDataDelete](../arkts-apis/arkts-arkui-component/lazyforeach-datachangelistener-i.md#ondatadelete)
+**Substitutes:** [DataChangeListener.onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete)
 
 <!--Device-DataChangeListener-onDataDeleted(index: number): void--><!--Device-DataChangeListener-onDataDeleted(index: number): void-End-->
 
@@ -180,7 +189,7 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| index | number | Yes | 数据删除位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
 
 ## onDataMove
 
@@ -188,11 +197,13 @@ Invoked when data is deleted from the position indicated by the specified index.
 onDataMove(from: number, to: number): void
 ```
 
-Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
-    **NOTE**  
-    
-    The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data  
-    must be called.
+通知组件数据有移动。将from和to位置的数据进行交换。数据移动起始位置与数据移动目标位置交换完成后调用。
+
+> **说明：**
+> 
+> - 数据移动前后键值要保持不变，如果键值有变化，应使用删除数据和新增数据接口。
+> 
+> - 该接口不能与onDatasetChange接口混用。
 
 **Since:** 8
 
@@ -208,8 +219,8 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | number | Yes | Original position of data. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
-| to | number | Yes | Target position of data. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| from | number | Yes | 数据移动起始位置。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| to | number | Yes | 数据移动目标位置。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
 
 ## onDataMoved
 
@@ -217,14 +228,13 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 onDataMoved(from: number, to: number): void
 ```
 
-Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
-    **NOTE**  
-    
-    - This API is supported since API version 7 and deprecated since API version 8. Use  
-    [onDataMove]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.  
-    
-    - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding  
-    data must be called.
+通知组件数据有移动。将from和to位置的数据进行交换。
+
+> **说明：**
+> 
+> - 从API version 7开始支持，从API version 8开始废弃。
+> 
+> - 数据移动前后键值要保持不变，如果键值有变化，应使用删除数据和新增数据接口。数据移动起始位置与数据移动目标位置交换完成后调用。
 
 **Since:** 7
 
@@ -232,7 +242,7 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 **Deprecated since:** 8
 
-**Substitutes:** [DataChangeListener.onDataMove](../arkts-apis/arkts-arkui-component/lazyforeach-datachangelistener-i.md#ondatamove)
+**Substitutes:** [DataChangeListener.onDataMove](arkts-arkui-datachangelistener-i.md#ondatamove)
 
 <!--Device-DataChangeListener-onDataMoved(from: number, to: number): void--><!--Device-DataChangeListener-onDataMoved(from: number, to: number): void-End-->
 
@@ -242,8 +252,8 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | number | Yes | Original position of data. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
-| to | number | Yes | Target position of data. The value range is [0, data source length - 1]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| from | number | Yes | 数据移动起始位置。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| to | number | Yes | 数据移动目标位置。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
 
 ## onDataReloaded
 
@@ -251,7 +261,11 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 onDataReloaded(): void
 ```
 
-Invoked when all data is reloaded. For data items whose key remains unchanged, the original child component is used. For data items whose key changes, a new child component is created.
+通知组件重新加载所有数据。键值没有变化的数据项会使用原先的子组件，键值发生变化的会重建子组件。重新加载数据完成后调用。
+
+> **说明：**
+> 
+> 该接口不能与onDatasetChange接口混用。
 
 **Since:** 7
 
@@ -269,7 +283,14 @@ Invoked when all data is reloaded. For data items whose key remains unchanged, t
 onDataReloaded(reuseImmediately: boolean): void
 ```
 
-Invoked when all data is reloaded. When \@Reuseable or \@ReuseableV2 is used and recycle pool is empty, old child components will be recycled and then be reused as new child components. If no old child component can be reused,new child components will be created.
+通知组件重新加载所有数据，并配置是否允许在更新过程中复用旧的子组件。需要和@Reusable/@ReusableV2配合使用。重新加载数据完成后调用。
+
+配置允许在更新过程中复用旧的子组件，并和[@Reusable](../../../ui/state-management/arkts-reusable.md)/  
+[@ReusableV2](../../../ui/state-management/arkts-new-reusableV2.md)配合使用时，优先使用复用池中的组件，若复用池中无可复用的组件，而LazyForEach的旧子组件中有可复用的组件，该组件将被回收，并复用为新的子组件。当LazyForEach的旧子组件中也没有可复用的组件时，将创建新的子组件。
+
+配置允许在更新过程中复用旧的子组件，未使用@Reusable/@ReusableV2时，键值没有变化的数据项会使用原先的子组件，键值发生变化的会重建子组件。
+
+配置不允许在更新过程中复用旧的子组件，键值没有变化的数据项会使用原先的子组件，键值发生变化的数据项，若使用了@Reusable/@ReusableV2且复用池中有可用的组件，将复用旧组件，否则将创建新的子组件。
 
 **Since:** 26.1.0
 
@@ -287,7 +308,7 @@ Invoked when all data is reloaded. When \@Reuseable or \@ReuseableV2 is used and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reuseImmediately | boolean | Yes | Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **true**: Enable the feature. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**false**: Disable the feature. |
+| reuseImmediately | boolean | Yes | 是否允许在更新过程中复用旧的子组件。&lt;br/&gt;true：允许在更新过程中复用旧的子组件。&lt;br/&gt;false：不允许在更新过程中复用旧的子组件。 |
 
 ## onDatasetChange
 
@@ -295,15 +316,13 @@ Invoked when all data is reloaded. When \@Reuseable or \@ReuseableV2 is used and
 onDatasetChange(dataOperations: DataOperation[]): void
 ```
 
-Invoked when data is processed in batches to notify the component of refreshing.
-    **NOTE**  
-    
-    This API cannot be used together with other data operation APIs of **DataChangeListener**. For example, in the  
-    same **LazyForEach**, if you have called **onDataAdd**, do not call **onDatasetChange**; if you have called  
-    **onDatasetChange**, do not call **onDataAdd** or other data operation APIs. Different **LazyForEach** instances  
-    on the page do not affect each other. When data is processed in batches within the same **onDatasetChange**  
-    callback, if multiple **DataOperation** instances target the same index, only the first **DataOperation** will  
-    take effect.
+进行批量的数据处理后，调用onDatasetChange接口通知组件按照dataOperations刷新组件。
+
+> **说明：**
+> 
+> onDatasetChange接口不能与其他DataChangeListener的更新接口混用。例如，在同一个LazyForEach中，调用过onDataAdd接口后，不能再调用onDatasetChange接口；反之，调用过
+> onDatasetChange接口后，也不能调用onDataAdd等其他更新接口。页面中不同LazyForEach之间互不影响。在同一个onDatasetChange批量处理数据时，如果多个DataOperation操作同一个
+> index，只有第一个DataOperation生效。
 
 **Since:** 12
 
@@ -321,5 +340,5 @@ Invoked when data is processed in batches to notify the component of refreshing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOperations | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Array of data operations performed. |
+| dataOperations | [DataOperation](arkts-arkui-dataoperation-t.md)[] | Yes | 一次批量处理数据的操作集合，开发者将需要处理的数据操作（添加、删除、改变、移动、交换、重载等）放入该数组，组件按照数组中的操作顺序刷新展示内 容。 |
 

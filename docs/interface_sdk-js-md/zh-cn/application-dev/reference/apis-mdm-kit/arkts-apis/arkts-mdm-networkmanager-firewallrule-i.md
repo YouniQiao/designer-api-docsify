@@ -4,7 +4,7 @@
 
 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-从API version 23开始，支持[LogType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
 **起始版本：** 12
 
@@ -13,6 +13,12 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 <!--Device-networkManager-interface FirewallRule--><!--Device-networkManager-interface FirewallRule-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
 
 ## action
 
@@ -24,9 +30,9 @@ action?: Action
 
 添加防火墙过滤规则时必填；
 
-移除防火墙时非必填，当值为空时，表示清空所有的匹配[Action]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_规则的链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
+移除防火墙时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**类型：** Action
+**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 12
 
@@ -108,9 +114,9 @@ direction?: Direction
 
 添加防火墙过滤规则时必填；
 
-移除防火墙时非必填，当值为空时，表示清空所有的[Direction]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
+移除防火墙时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**类型：** Direction
+**类型：** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **起始版本：** 12
 
@@ -156,7 +162,7 @@ logType?: LogType
 
 获取防火墙过滤规则时，仅日志生效的场景可以获取到logType字段。
 
-**类型：** LogType
+**类型：** [LogType](arkts-mdm-networkmanager-logtype-e.md)
 
 **起始版本：** 23
 
@@ -176,7 +182,7 @@ protocol?: Protocol
 
 网络协议。当值为ALL或者ICMP时，设置srcPort与destPort无效。
 
-**类型：** Protocol
+**类型：** [Protocol](../../apis-network-kit/arkts-apis/arkts-network-socket-protocol-e.md)
 
 **起始版本：** 12
 

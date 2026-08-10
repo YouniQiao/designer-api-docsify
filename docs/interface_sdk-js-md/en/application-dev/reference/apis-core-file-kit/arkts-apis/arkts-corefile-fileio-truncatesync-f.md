@@ -6,7 +6,7 @@
 declare function truncateSync(path: string, len?: number): void
 ```
 
-Truncates a file based on the file path. This API returns the result synchronously.
+以同步方法基于文件路径截断文件。
 
 **Since:** 7
 
@@ -24,6 +24,6 @@ Truncates a file based on the file path. This API returns the result synchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file to truncate. |
-| len | number | No | File length after truncation, in bytes. The default value is **0**. |
+| path | string | Yes | 待截断文件的应用沙箱路径。 |
+| len | number | No | 文件截断后的长度，单位为Byte。默认为0。 |
 

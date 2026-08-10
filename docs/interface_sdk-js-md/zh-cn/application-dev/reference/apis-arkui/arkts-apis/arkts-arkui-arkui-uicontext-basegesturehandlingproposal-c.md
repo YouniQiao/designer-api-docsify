@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
@@ -18,7 +24,7 @@ action: SmartGestureAction
 
 要执行的智能手势操作。定义手势触发的具体操作。
 
-**类型：** SmartGestureAction
+**类型：** [SmartGestureAction](arkts-arkui-smartgestureaction-e.md)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ operateIntention: OperateIntention
 
 底层的用户操作意图。表示基本的用户交互目标。
 
-**类型：** OperateIntention
+**类型：** [OperateIntention](arkts-arkui-operateintention-e.md)
 
 **起始版本：** 26.0.0
 

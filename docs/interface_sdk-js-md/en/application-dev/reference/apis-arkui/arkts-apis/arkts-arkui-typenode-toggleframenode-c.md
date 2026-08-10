@@ -1,6 +1,6 @@
 # ToggleFrameNode
 
-Define the Toggle type of FrameNode.
+定义Toggle类型的FrameNode。
 
 **Inheritance/Implementation:** ToggleFrameNode extends [TypedFrameNode<ToggleAttribute>](TypedFrameNode<ToggleAttribute>)
 
@@ -18,7 +18,7 @@ Define the Toggle type of FrameNode.
 abstract initialize(value: ToggleOptions): ToggleAttribute
 ```
 
-Initialize Toggle FrameNode.
+初始化Toggle类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Toggle FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) |  |
 

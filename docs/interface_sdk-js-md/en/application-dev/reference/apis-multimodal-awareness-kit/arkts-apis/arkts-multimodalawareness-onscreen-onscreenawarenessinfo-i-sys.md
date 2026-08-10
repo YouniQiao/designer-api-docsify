@@ -12,6 +12,12 @@ Returns the list of onscreen awareness information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## appIndex
 
 ```TypeScript
@@ -20,7 +26,7 @@ appIndex?: int
 
 Application index.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -84,9 +90,9 @@ Application bundle name.
 collectStrategy?: int
 ```
 
-Page collection policy, which is the bitwise OR operation combination of\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ [CollectStrategy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Page collection policy, which is the bitwise OR operation combination of &lt;br&gt; [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -108,7 +114,7 @@ displayId?: long
 
 Display ID.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -130,7 +136,7 @@ entityInfo?: EntityInfo[]
 
 Entity information.
 
-**Type:** EntityInfo[]
+**Type:** [EntityInfo](arkts-multimodalawareness-onscreen-entityinfo-i-sys.md)[]
 
 **Since:** 23
 
@@ -152,7 +158,7 @@ items?: AwarenessItem[]
 
 Data item information.
 
-**Type:** AwarenessItem[]
+**Type:** [AwarenessItem](arkts-multimodalawareness-onscreen-awarenessitem-i-sys.md)[]
 
 **Since:** 23
 
@@ -284,7 +290,7 @@ resultCode: int
 
 Return code. The default value **0** indicates success.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -328,7 +334,7 @@ timestamp: long
 
 Timestamp for accessing a specified page, in milliseconds.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -372,7 +378,7 @@ windowId?: int
 
 Window ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

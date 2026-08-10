@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## deviceDescriptors
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly deviceDescriptors: AudioDeviceDescriptors
 
 音频设备描述。
 
-**类型：** AudioDeviceDescriptors
+**类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ readonly rendererInfo: AudioRendererInfo
 
 音频渲染器信息。
 
-**类型：** AudioRendererInfo
+**类型：** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
 **起始版本：** 9
 
@@ -54,7 +60,7 @@ readonly streamId: int
 
 音频流唯一id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

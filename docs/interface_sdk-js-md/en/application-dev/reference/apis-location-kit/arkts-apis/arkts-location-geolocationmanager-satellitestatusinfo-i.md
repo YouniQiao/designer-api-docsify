@@ -10,6 +10,12 @@ Satellite status information.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## altitudes
 
 ```TypeScript
@@ -18,7 +24,7 @@ altitudes: Array<double>
 
 Satellite altitude array.
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 9
 
@@ -36,7 +42,7 @@ azimuths: Array<double>
 
 Satellite azimuth array.
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 9
 
@@ -54,7 +60,7 @@ carrierFrequencies: Array<double>
 
 Satellite carrier frequency array.
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 9
 
@@ -72,7 +78,7 @@ carrierToNoiseDensitys: Array<double>
 
 Carrier to noise density array.
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 9
 
@@ -90,7 +96,7 @@ satelliteAdditionalInfo?: Array<int>
 
 Satellite additional information array.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 12
 
@@ -126,7 +132,7 @@ satelliteIds: Array<int>
 
 Satellite ID array.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 9
 
@@ -144,7 +150,7 @@ satellitesNumber: int
 
 Number of satellites.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

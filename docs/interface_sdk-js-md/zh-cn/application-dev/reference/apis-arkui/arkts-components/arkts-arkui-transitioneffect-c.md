@@ -36,13 +36,13 @@ animation(value: AnimateParam): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 动画参数。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该参数只用来指定动画参数，其入参AnimateParam的onFinish回调不生效。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果通过combine进行 TransitionEffect的组合，前一TransitionEffect的动画参数也可用于后一TransitionEffect。 |
+| value | [AnimateParam](arkts-arkui-animateparam-i.md) | 是 | 动画参数。&lt;/br&gt;该参数只用来指定动画参数，其入参AnimateParam的onFinish回调不生效。&lt;/br&gt;如果通过combine进行 TransitionEffect的组合，前一TransitionEffect的动画参数也可用于后一TransitionEffect。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前动画效果。 |
+| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | 当前动画效果。 |
 
 ## asymmetric
 
@@ -54,7 +54,7 @@ static asymmetric(
 ```
 
 设置非对称的转场效果，即出现、消失为两套独立不同的动画，效果不互为逆过程。具体效果可参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[示例2](../../../reference/apis-arkui/arkui-ts/ts-transition-animation-component.md#示例2使用不同接口实现图片出现消失)。
 
 **起始版本：** 10
 
@@ -74,14 +74,14 @@ static asymmetric(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appear | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定出现的转场效果。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
-| disappear | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定消失的转场效果。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
+| appear | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | 是 | 指定出现的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
+| disappear | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | 是 | 指定消失的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;"asymmetric"&gt; | 当前动画非对称的转场效果。 |
+| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"asymmetric"&gt; | 当前动画非对称的转场效果。 |
 
 ## combine
 
@@ -109,13 +109,13 @@ combine(transitionEffect: TransitionEffect): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transitionEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被组合的过渡效果。 |
+| transitionEffect | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | 是 | 被组合的过渡效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 组合过渡效应。 |
+| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | 组合过渡效应。 |
 
 ## constructor
 
@@ -143,8 +143,8 @@ constructor(type: Type, effect: Effect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 转场类型。 |
-| effect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 转场参数。 |
+| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 是 | 转场类型。 |
+| effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | 是 | 转场参数。 |
 
 ## move
 
@@ -172,13 +172,13 @@ static move(edge: TransitionEdge): TransitionEffect<"move">
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edge | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 组件转场时从屏幕边缘滑入和滑出的效果，本质为平移效果，为插入时起点和删除时终点的值。 |
+| edge | [TransitionEdge](arkts-arkui-transitionedge-e.md) | 是 | 组件转场时从屏幕边缘滑入和滑出的效果，本质为平移效果，为插入时起点和删除时终点的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;"move"&gt; | 当前动画从屏幕边缘滑入和滑出的效果。 |
+| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"move"&gt; | 当前动画从屏幕边缘滑入和滑出的效果。 |
 
 ## opacity
 
@@ -206,13 +206,13 @@ static opacity(alpha: number): TransitionEffect<"opacity">
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alpha | number | 是 | 组件转场时的透明度效果，为插入时起点和删除时终点的值。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0, 1]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_设置小于0的非法值按0处理，大于1的非法值按1处理。 |
+| alpha | number | 是 | 组件转场时的透明度效果，为插入时起点和删除时终点的值。&lt;br/&gt;取值范围：[0, 1]&lt;br/&gt;**说明：** &lt;br/&gt;设置小于0的非法值按0处理，大于1的非法值按1处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;"opacity"&gt; | 当前动画透明度效果。 |
+| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"opacity"&gt; | 当前动画透明度效果。 |
 
 ## rotate
 
@@ -240,13 +240,13 @@ static rotate(options: RotateOptions): TransitionEffect<"rotate">
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 组件转场时的旋转效果，为插入时起点和删除时终点的值。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-x：横向的旋转向量分量。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-y：纵向的旋转向量分量。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-z：竖向的旋转向量分量。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 中心点为(0, 0)代表组件的左上角。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-centerZ指 z轴锚点，即3D旋转中心点的z轴分量，centerZ默认值是0。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-perspective指视距，不支持perspective属性做转场动画。 |
+| options | [RotateOptions](arkts-arkui-rotateoptions-i.md) | 是 | 组件转场时的旋转效果，为插入时起点和删除时终点的值。&lt;br/&gt;-x：横向的旋转向量分量。&lt;br/&gt;-y：纵向的旋转向量分量。&lt;br/&gt;-z：竖向的旋转向量分量。 &lt;br/&gt;- centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。&lt;br/&gt;- 中心点为(0, 0)代表组件的左上角。&lt;br/&gt;-centerZ指 z轴锚点，即3D旋转中心点的z轴分量，centerZ默认值是0。&lt;br/&gt;-perspective指视距，不支持perspective属性做转场动画。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;"rotate"&gt; | 当前动画旋转效果。 |
+| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"rotate"&gt; | 当前动画旋转效果。 |
 
 ## scale
 
@@ -274,13 +274,13 @@ static scale(options: ScaleOptions): TransitionEffect<"scale">
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 组件转场时的缩放效果，为插入时起点和删除时终点的值。设置的缩放值在组件当前的scale属性上进行叠加，如组件当前scale值为0.8，当转场缩放值设置为0.5时， 组件入场动画的缩放值将从0.4开始执行。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-x：横向放大倍数（或缩小比例）。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-y：纵向放大倍数（或缩小比例）。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-z：当前为二维显示，该参数无效。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- centerX、centerY指缩放 中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 中心点为(0, 0)代表组件的左上角。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_设置centerX、centerY为非法字符串 时（例如，"illegalString"），默认值为"0"。 |
+| options | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | 是 | 组件转场时的缩放效果，为插入时起点和删除时终点的值。设置的缩放值在组件当前的scale属性上进行叠加，如组件当前scale值为0.8，当转场缩放值设置为0.5时， 组件入场动画的缩放值将从0.4开始执行。&lt;br/&gt;-x：横向放大倍数（或缩小比例）。&lt;br/&gt;-y：纵向放大倍数（或缩小比例）。&lt;br/&gt;-z：当前为二维显示，该参数无效。&lt;br/&gt;- centerX、centerY指缩放 中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。&lt;br/&gt;- 中心点为(0, 0)代表组件的左上角。&lt;br&gt;**说明：** &lt;br&gt;设置centerX、centerY为非法字符串 时（例如，"illegalString"），默认值为"0"。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;"scale"&gt; | 当前动画缩放效果。 |
+| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"scale"&gt; | 当前动画缩放效果。 |
 
 ## translate
 
@@ -308,13 +308,13 @@ static translate(options: TranslateOptions): TransitionEffect<"translate">
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 组件转场时的平移效果，为插入时起点和删除时终点的值。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-x：横向的平移距离。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-y：纵向的平移距离。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-z：竖向的平移距离。 |
+| options | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | 是 | 组件转场时的平移效果，为插入时起点和删除时终点的值。&lt;br/&gt;-x：横向的平移距离。&lt;br/&gt;-y：纵向的平移距离。&lt;br/&gt;-z：竖向的平移距离。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;"translate"&gt; | 当前动画平移效果。 |
+| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"translate"&gt; | 当前动画平移效果。 |
 
 ## IDENTITY
 
@@ -324,7 +324,7 @@ static readonly IDENTITY: TransitionEffect<"identity">
 
 禁用转场效果。
 
-**类型：** TransitionEffect&lt;"identity"&gt;
+**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"identity"&gt;
 
 **起始版本：** 10
 
@@ -348,7 +348,7 @@ static readonly OPACITY: TransitionEffect<"opacity">
 
 为组件添加透明度转场效果，出现时透明度从0到1、消失时透明度从1到0，相当于TransitionEffect.opacity(0)。
 
-**类型：** TransitionEffect&lt;"opacity"&gt;
+**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"opacity"&gt;
 
 **起始版本：** 10
 
@@ -378,7 +378,7 @@ static readonly SLIDE: TransitionEffect<
 
 相当于TransitionEffect.asymmetric(TransitionEffect.move(TransitionEdge.START), TransitionEffect.move(TransitionEdge.END))。从START边滑入，END边滑出。即在LTR模式下，从左侧滑入，右侧滑出；在RTL模式下，从右侧滑入，左侧滑出。
 
-**类型：** TransitionEffect&lt;     "asymmetric",     {       appear: TransitionEffect&lt;"move", TransitionEdge&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }   &gt;
+**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"asymmetric", {       appear: TransitionEffect&lt;"move", TransitionEdge&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }&gt;
 
 **起始版本：** 10
 
@@ -402,7 +402,7 @@ static readonly SLIDE_SWITCH: TransitionEffect<"slideSwitch">
 
 指定出现时从右侧先缩小再放大滑入、消失时从左侧先缩小再放大滑出的转场效果。自带动画参数，也可覆盖动画参数，自带的动画参数时长600ms，指定动画曲线cubicBezierCurve(0.24, 0.0, 0.50, 1.0)，最小缩放比例为0.8。
 
-**类型：** TransitionEffect&lt;"slideSwitch"&gt;
+**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"slideSwitch"&gt;
 
 **起始版本：** 10
 

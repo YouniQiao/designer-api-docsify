@@ -1,6 +1,6 @@
 # BackgroundTaskStateInfo (System API)
 
-Defines the authorization information of a continuous task.
+长时任务授权信息。
 
 **Since:** 22
 
@@ -12,15 +12,21 @@ Defines the authorization information of a continuous task.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## appIndex
 
 ```TypeScript
 appIndex: int
 ```
 
-AppIndex of the application applying for special continuous task.
+应用分身ID。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -40,9 +46,9 @@ AppIndex of the application applying for special continuous task.
 authResult?: UserAuthResult
 ```
 
-Type of user authorization status.
+授权结果。
 
-**Type:** UserAuthResult
+**Type:** [UserAuthResult](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-userauthresult-i.md)
 
 **Since:** 22
 
@@ -62,7 +68,7 @@ Type of user authorization status.
 bundleName: string
 ```
 
-BundleName of the application applying for special continuous task.
+应用包名。
 
 **Type:** string
 
@@ -84,9 +90,9 @@ BundleName of the application applying for special continuous task.
 userId: int
 ```
 
-UserId of the application applying for special continuous task
+用户ID。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

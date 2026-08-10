@@ -1,6 +1,6 @@
 # ChannelStateInfo
 
-Represents the connection state information of the proxy channel.
+当代理通道状态变化时，用于表示代理通道的连接状态。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Represents the connection state information of the proxy channel.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## channelId
 
 ```TypeScript
 channelId: int
 ```
 
-Proxy channel ID.
+代理通道的channelId。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -36,9 +42,9 @@ Proxy channel ID.
 state: ChannelState
 ```
 
-Connection state of the proxy channel.
+通道的连接状态。
 
-**Type:** ChannelState
+**Type:** [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
 
 **Since:** 20
 

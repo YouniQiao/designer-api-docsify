@@ -2,7 +2,7 @@
 
 BackupExtensionAbility的上下文环境，继承自ExtensionContext。用于在备份恢复过程中获取EL1（设备级加密区）或EL2（用户级加密区）对应的临时目录。
 
-**继承/实现关系：** BackupExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-application/extensioncontext-extensioncontext-c.md)
+**继承/实现关系：** BackupExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 12
 
@@ -11,6 +11,12 @@ BackupExtensionAbility的上下文环境，继承自ExtensionContext。用于在
 <!--Device-unnamed-declare class BackupExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext extends ExtensionContext-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
+
+## 导入模块
+
+```TypeScript
+import { BackupExtensionContext } from 'kits/@kit.CoreFileKit';
+```
 
 ## backupDir
 

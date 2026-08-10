@@ -1,6 +1,6 @@
 # MediaAssetProgressHandler
 
-MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**.
+**MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**.
 
 **Since:** 15
 
@@ -9,6 +9,12 @@ MediaAssetProgressHandler** is used to obtain the media asset processing progres
 <!--Device-photoAccessHelper-interface MediaAssetProgressHandler--><!--Device-photoAccessHelper-interface MediaAssetProgressHandler-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
 
 ## onProgress
 
@@ -36,5 +42,5 @@ Called when the progress of the requested video is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Progress in percentage. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, 100] |
+| progress | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Progress in percentage. &lt;br&gt;Value range: [0, 100] |
 

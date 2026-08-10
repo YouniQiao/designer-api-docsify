@@ -1,6 +1,6 @@
 # CMErrorCode
 
-Enumerates the error codes used in the certificate management APIs.
+表示调用证书管理相关API的错误码。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Enumerates the error codes used in the certificate management APIs.
 CM_ERROR_NOT_SYSTEM_APP = 202
 ```
 
-The caller is not a system application.
+表示应用程序不是系统应用程序。 
 
-This is a system API.
+此接口为系统接口。
 
 **Since:** 11
 
@@ -36,7 +36,11 @@ This is a system API.
 CM_ERROR_PASSWORD_IS_ERR = 17500008
 ```
 
-Indicates that the password is incorrect.
+表示密码错误。
+
+此接口为系统接口。
+
+26.0.0
 
 **Since:** 26.0.0
 

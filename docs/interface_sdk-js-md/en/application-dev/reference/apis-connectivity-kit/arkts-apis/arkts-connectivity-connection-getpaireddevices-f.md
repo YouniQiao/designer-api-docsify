@@ -1,12 +1,18 @@
 # getPairedDevices
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getPairedDevices
 
 ```TypeScript
 function getPairedDevices(): Array<string>
 ```
 
-Obtains the list of Bluetooth devices that have been paired with the current device.On API 26.0.0 and above, if the application has ohos.permission.GET\_BLUETOOTH\_PEERS\_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
+Obtains the list of Bluetooth devices that have been paired with the current device.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
 
 **Since:** 10
 
@@ -34,13 +40,13 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

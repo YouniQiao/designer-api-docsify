@@ -1,6 +1,6 @@
 # SliderChangeMode
 
-Enumerates the slider states.
+滑块状态值，包括按下、拖动、离开、点击滑动条使滑块移动时。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the slider states.
 Begin
 ```
 
-The user touches or clicks the thumb.
+手势或鼠标接触/按下滑块。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ The user touches or clicks the thumb.
 Moving
 ```
 
-The user is dragging the slider.
+拖动滑块过程中。
 
 **Since:** 7
 
@@ -56,11 +56,11 @@ The user is dragging the slider.
 End
 ```
 
-The user stops dragging the slider by lifting their finger or releasing the mouse device.
+手势或鼠标离开滑块。
 
-**NOTE**
+**说明：**
 
-The trigger occurs when an invalid value is restored to the default value, that is, when the value is set to less than **min** or greater than **max**.
+异常值恢复成默认值时触发，即value设置小于min或大于max。
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ The trigger occurs when an invalid value is restored to the default value, that 
 Click
 ```
 
-The user moves the thumb by touching or clicking the track.
+点击滑动条使滑块移动。
 
 **Since:** 8
 

@@ -4,8 +4,7 @@
 export type PermissionDef = _PermissionDef
 ```
 
-Defines the detailed information about the permissions defined in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file.
+[module.json5配置文件](../../../quick-start/module-configuration-file.md)中定义的权限详细信息。
 
 **Since:** 9
 

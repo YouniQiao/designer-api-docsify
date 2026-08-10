@@ -1,9 +1,8 @@
 # AudioManager
 
-This interface implements audio volume and device management.
+音频音量和设备管理。
 
-Before calling any API in AudioManager, you must use  
-[getAudioManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an AudioManager instance.
+在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager)获取AudioManager实例。
 
 **Since:** 7
 
@@ -12,6 +11,12 @@ Before calling any API in AudioManager, you must use
 <!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## disableSafeMediaVolume
 
@@ -43,10 +48,10 @@ user disable the safe media volume state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,7 +69,7 @@ audioManager.disableSafeMediaVolume().then(() => {
 getCollaborativeManager(): AudioCollaborativeManager
 ```
 
-Obtains a collaborative playback management instance.
+获取协同播放管理实例
 
 **Since:** 20
 
@@ -80,13 +85,13 @@ Obtains a collaborative playback management instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a collaborative playback management instance. |
+| [AudioCollaborativeManager](arkts-audio-audio-audiocollaborativemanager-i-sys.md) | 协同播放管理实例 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
 ## getEffectManager
 
@@ -94,7 +99,7 @@ Obtains a collaborative playback management instance.
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
+Obtains an {@link AudioEffectManager} instance.
 
 **Since:** 18
 
@@ -110,15 +115,15 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | AudioEffectManager instance. |
+| [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) | AudioEffectManager instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -161,11 +166,11 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -177,6 +182,38 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
   console.error(`Failed to get the audio extra parameters ${err}`);
 });
 ```
+
+## getRecordingManager
+
+```TypeScript
+getRecordingManager(): AudioRecordingManager
+```
+
+获取录音管理器实例。
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioManager-getRecordingManager(): AudioRecordingManager--><!--Device-AudioManager-getRecordingManager(): AudioRecordingManager-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i-sys.md) | 返回音频记录管理器的实例。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | Caller is not a system application. |
 
 ## on('volumeChange')
 
@@ -205,9 +242,9 @@ Listens for system volume change events. This method uses a callback to get volu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VolumeEvent&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | Yes | Callback used to get the system volume change event. |
 
-**Example**
+## Examples
 
 ```TypeScript
 audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
@@ -244,9 +281,9 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | Yes | Type of the event to listen for. Only the ringerModeChange event is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRingMode&gt; | Yes | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRingMode&gt; | Yes | Callback used to get the updated ringer mode. |
 
-**Example**
+## Examples
 
 ```TypeScript
 audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
@@ -257,7 +294,7 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
 ## setAudioScene
 
 ```TypeScript
-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void
+setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void
 ```
 
 Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the result.
@@ -266,7 +303,7 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void-End-->
+<!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -276,10 +313,10 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio scene mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | Yes | Audio scene mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -315,7 +352,7 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio scene mode. |
+| scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | Yes | Audio scene mode. |
 
 **Return value:**
 
@@ -323,7 +360,7 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -360,7 +397,7 @@ Sets extra audio parameters. This method uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainKey | string | Yes | Main key of the audio parameters to set. |
-| kvpairs | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, string&gt; | Yes | Key-value pairs with subkeys and values to set. |
+| kvpairs | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | Key-value pairs with subkeys and values to set. |
 
 **Return value:**
 
@@ -372,12 +409,12 @@ Sets extra audio parameters. This method uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

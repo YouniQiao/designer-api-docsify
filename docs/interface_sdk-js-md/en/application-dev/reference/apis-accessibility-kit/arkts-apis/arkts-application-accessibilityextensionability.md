@@ -1,8 +1,13 @@
 # @ohos.application.AccessibilityExtensionAbility
 
-The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the
- ExtensionAbility framework.
+AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力，能力包括成功连接无障碍服务、断开无障碍服务、处理无障碍服务事件和无障碍按键事件等。
 
+
+## Modules to Import
+
+```TypeScript
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
+```
 
 ## Summary
 
@@ -10,56 +15,54 @@ The **AccessibilityExtensionAbility** module provides accessibility extension ca
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md) | The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework. |
+| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力。 |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md) | The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework. |
+| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Defines an accessibility event. |
+| [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | 辅助事件信息。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityEventInfo](arkts-accessibility-application-accessibilityextensionability-accessibilityeventinfo-i-sys.md) | Describes the accessibility event information. |
+| [AccessibilityEventInfo](arkts-accessibility-application-accessibilityextensionability-accessibilityeventinfo-i-sys.md) | 无障碍事件信息。 |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | Indicates an accessibility element. For details, see  [AccessibilityElement]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | Defines the context of the accessibility extension. For details, see  [AccessibilityExtensionContext]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | Describes the attribute name of  [ElementAttributeValues]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | Provides attribute names and value types of a node element. For details, see  [ElementAttributeValues]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [FocusDirection](arkts-accessibility-focusdirection-t.md) | Enumerates the focus directions. For details, see  [FocusDirection]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [FocusType](arkts-accessibility-focustype-t.md) | Enumerates the focus types. For details, see [FocusType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [GestureType](arkts-accessibility-gesturetype-t.md) | Enumerates gesture types. |
-| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md) | Enumerates the page update types. |
-| [Rect](arkts-accessibility-rect-t.md) | Defines a rectangle. For details, see [Rect]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) | Enumerates the touch guide event types. |
-| [WindowType](arkts-accessibility-windowtype-t.md) | Enumerates the window types. For details, see  [WindowType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | 表示无障碍节点元素，请参考[AccessibilityElement](arkts-accessibility-accessibilityelement-t.md)。 |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | 表示辅助功能扩展的上下文环境，请参考[AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)。 |
+| [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | 表示[ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md)的属性名称。 |
+| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | 表示节点元素具备的属性名称及属性值类型信息，请参考  [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md)。 |
+| [FocusDirection](arkts-accessibility-focusdirection-t.md) | 表示查询下一焦点元素的方向，请参考[FocusDirection](arkts-accessibility-focusdirection-t.md)。 |
+| [FocusType](arkts-accessibility-focustype-t.md) | 表示查询焦点元素的类型，请参考[FocusType](arkts-accessibility-focustype-t.md)。 |
+| [GestureType](arkts-accessibility-gesturetype-t.md) | 手势事件类型。 |
+| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md) | 页面刷新类型。 |
+| [Rect](arkts-accessibility-rect-t.md) | 表示矩形区域，请参考[Rect](arkts-accessibility-rect-t.md)。 |
+| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) | 触摸浏览事件类型。 |
+| [WindowType](arkts-accessibility-windowtype-t.md) | 表示窗口的类型，请参考[WindowType](arkts-accessibility-windowtype-t.md)。 |
 
 <!--Del-->
 ### Types（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityVirtualNode](arkts-accessibility-accessibilityvirtualnode-t-sys.md) | Indicates the accessibility virtual node. |
 | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Indicates the condition of the search focus. |
 | [FocusMoveResult](arkts-accessibility-focusmoveresult-t-sys.md) | Indicates focus move result. |
 | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Indicates the rule of the search focus. |
 | [Parameter](arkts-accessibility-parameter-t-sys.md) | Indicates executeAction parameter. |
-| [TouchPosition](arkts-accessibility-touchposition-t-sys.md) | The touch position of an accessibility virtual node. |
 <!--DelEnd-->
 

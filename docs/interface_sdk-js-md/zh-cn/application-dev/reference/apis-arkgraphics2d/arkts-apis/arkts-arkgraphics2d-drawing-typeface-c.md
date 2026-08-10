@@ -1,11 +1,12 @@
 # Typeface
 
 Typeface类用于表示和管理字体对象。支持的字体操作包括：获取字体族名、从字体文件或rawfile资源构造字体、结合字体属性构造新字体，以及检查字体的加粗、斜体状态等。
-    **说明：**  
-    
-    - 本模块使用屏幕物理像素单位px。  
-    
-    - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+
+> **说明：**
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 11
 
@@ -14,6 +15,12 @@ Typeface类用于表示和管理字体对象。支持的字体操作包括：获
 <!--Device-drawing-class Typeface--><!--Device-drawing-class Typeface-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## getFamilyName
 
@@ -123,13 +130,13 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromCurrent
 
@@ -151,13 +158,13 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromFile
 
@@ -181,19 +188,19 @@ static makeFromFile(filePath: string): Typeface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从指定字体文件加载的字体对象。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载的字体对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromFile
 
@@ -215,19 +222,19 @@ static makeFromFile(filePath: string): Typeface | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从指定字体文件加载的字体对象。创建失败时返回undefined。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载的字体对象。创建失败时返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromFileWithArguments
 
@@ -251,14 +258,14 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
+| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系)。 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromFileWithArguments
 
@@ -280,14 +287,14 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
+| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系)。 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFile
 
@@ -311,13 +318,13 @@ static makeFromRawFile(rawfile: Resource): Typeface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定字体文件对应的资源对象。当前只支持\_\_\_INLINE\_CODE\_USD\_0\_\_\_。 |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 指定字体文件对应的资源对象。当前只支持``\\$rawfile``格式引用的资源对象，对应格式写为``\\$rawfile('filePath')``，其中filePath为 指定字体文件相对于工程中resources/rawfile目录的相对路径。如将字体文件直接存放在resources/rawfile目录下，则引用格式应写为：``\\$rawfile(' HarmonyOS_Sans_Bold.ttf')``；也可以创建子目录，将字体文件存放在resources/rawfile/ttf下，则引用格式应写为：``\\$rawfile('ttf/ HarmonyOS_Sans_Bold.ttf')``。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFile
 
@@ -339,13 +346,13 @@ static makeFromRawFile(rawfile: Resource): Typeface | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定字体文件对应的资源对象。当前只支持\_\_\_INLINE\_CODE\_USD\_0\_\_\_。 |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 指定字体文件对应的资源对象。当前只支持``\\$rawfile``格式引用的资源对象，对应格式写为``\\$rawfile('filePath')``，其中filePath为 指定字体文件相对于工程中resources/rawfile目录的相对路径。如将字体文件直接存放在resources/rawfile目录下，则引用格式应写为：``\\$rawfile(' HarmonyOS_Sans_Bold.ttf')``；也可以创建子目录，将字体文件存放在resources/rawfile/ttf下，则引用格式应写为：``\\$rawfile('ttf/ HarmonyOS_Sans_Bold.ttf')``。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFileWithArguments
 
@@ -369,14 +376,14 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定字体文件对应的资源对象。当前只支持\_\_\_INLINE\_CODE\_USD\_0\_\_\_，其中filePath为指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 指定字体文件对应的资源对象。当前只支持``\\$rawfile``格式引用的资源对象，传入非``\\$rawfile``格式的资源对象时返回空指针。对应格式写为``\\$ rawfile('filePath')``，其中filePath为指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFileWithArguments
 
@@ -398,12 +405,12 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定字体文件对应的资源对象。当前只支持\_\_\_INLINE\_CODE\_USD\_0\_\_\_，其中filePath为指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 指定字体文件对应的资源对象。当前只支持``\\$rawfile``格式引用的资源对象，传入非``\\$rawfile``格式的资源对象时返回空指针。对应格式写为``\\$ rawfile('filePath')``，其中filePath为指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 

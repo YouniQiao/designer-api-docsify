@@ -1,12 +1,18 @@
 # getSystemFontFullNamesByType
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getSystemFontFullNamesByType
 
 ```TypeScript
 function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<string>>
 ```
 
-Obtains the full names of all fonts of the specified type. This API uses a promise to return the result.
+根据字体类型返回该类型对应的所有字体的字体名称，使用Promise异步回调。
 
 **Since:** 14
 
@@ -22,21 +28,21 @@ Obtains the full names of all fonts of the specified type. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font type. |
+| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | 指定的字体类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the full names of all fonts of the specified type. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回相应字体类型的所有字体的fullName。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'

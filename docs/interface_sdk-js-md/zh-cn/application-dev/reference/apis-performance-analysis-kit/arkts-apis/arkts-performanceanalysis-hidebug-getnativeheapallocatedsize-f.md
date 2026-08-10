@@ -1,5 +1,11 @@
 # getNativeHeapAllocatedSize
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getNativeHeapAllocatedSize
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getNativeHeapAllocatedSize() : bigint
 | --- | --- |
 | bigint | �����ڴ������ͳ�ƵĽ��̳��е���ʹ�õ���ͨ����ռ���ڴ��С����λΪByte�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

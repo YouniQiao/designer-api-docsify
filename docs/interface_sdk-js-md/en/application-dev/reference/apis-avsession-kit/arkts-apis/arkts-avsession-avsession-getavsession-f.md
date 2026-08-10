@@ -1,12 +1,20 @@
 # getAVSession
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## getAVSession
 
 ```TypeScript
 function getAVSession(context: Context): Promise<AVSession>
 ```
 
-Get an AVSession instance if already created.
+获取会话对象。使用Promise异步回调。
+
+该接口可将当前进程已创建过的会话对象返回，如果没有创建过会话对象，该接口调用会失败并抛出异常。
 
 **Since:** 22
 
@@ -22,26 +30,26 @@ Get an AVSession instance if already created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The context of application |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 需要使用UIAbilityContext，用于系统获取应用组件的相关信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVSession&gt; | Promise for AVSession |
+| Promise&lt;AVSession&gt; | Promise对象。回调返回会话实例对象，可用于获取会话ID、设置元数据及播放状态、发送按键事件等操作。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { avSession } from '@kit.AVSessionKit';
+
 @Entry
 @Component
 struct Index {
@@ -60,9 +68,7 @@ struct Index {
               currentAVSession = data;
               sessionId = currentAVSession.sessionId;
               sessionTag = currentAVSession.sessionTag;
-              console.info(`GetAVSession : SUCCESS : sessionId=${sessionId}, sessionTag=${sessionTag}`);
-            }).catch((err: BusinessError) => {
-              console.error(`GetAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+              console.info(`Succeeded in getting AV session, sessionId: ${sessionId}, sessionTag: ${sessionTag}`);
             });
           })
       }

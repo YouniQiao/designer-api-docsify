@@ -1,6 +1,6 @@
 # DescriptionInfo (System API)
 
-Represents information about the version description file.
+版本描述文件信息。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Represents information about the version description file.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## content
 
 ```TypeScript
 content: string
 ```
 
-Content of the description file.
+描述文件内容。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ Content of the description file.
 descriptionType: DescriptionType
 ```
 
-Description type. The value **CONTENT** indicates that the description is content, which is applicable to scenarios where the description content is short or needs to be displayed immediately. **URI** indicates that the description is a link, which is applicable to scenarios where the description content is long or needs to be obtained from external resources. Select a value based on the description length and display mode.
+描述文件类型，取值原则：CONTENT为内容，适用于描述内容较短或需要即时展示的场景；URI为链接，适用于描述内容较长或需要从外部资源获取的场景。应根据描述内容长度和展示方式选择。
 
-**Type:** DescriptionType
+**Type:** [DescriptionType](arkts-basicservices-update-descriptiontype-e-sys.md)
 
 **Since:** 9
 

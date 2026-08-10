@@ -1,8 +1,8 @@
 # CameraErrorCode
 
-Enumerates the camera error codes,
+相机错误码。
 
-which are returned when an API call is incorrect or the **on()** API is used to listen for the error status.
+接口使用不正确以及on接口监听error状态返回。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ which are returned when an API call is incorrect or the **on()** API is used to 
 INVALID_ARGUMENT = 7400101
 ```
 
-A parameter is missing or the parameter type is incorrect.
+参数缺失或者参数类型不对。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ A parameter is missing or the parameter type is incorrect.
 OPERATION_NOT_ALLOWED = 7400102
 ```
 
-The operation is not allowed.
+操作流程不对，不允许。
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ The operation is not allowed.
 SESSION_NOT_CONFIG = 7400103
 ```
 
-The session is not configured.
+session 未配置返回。
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ The session is not configured.
 SESSION_NOT_RUNNING = 7400104
 ```
 
-The session is not running.
+session 未运行返回。
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ The session is not running.
 SESSION_CONFIG_LOCKED = 7400105
 ```
 
-The session configuration is locked.
+session 配置已锁定返回。
 
 **Since:** 10
 
@@ -108,7 +108,7 @@ The session configuration is locked.
 DEVICE_SETTING_LOCKED = 7400106
 ```
 
-The device setting is locked.
+设备设置已锁定返回。
 
 **Since:** 10
 
@@ -126,7 +126,7 @@ The device setting is locked.
 CONFLICT_CAMERA = 7400107
 ```
 
-The device is already started.
+设备重复打开返回。
 
 **Since:** 10
 
@@ -144,7 +144,7 @@ The device is already started.
 DEVICE_DISABLED = 7400108
 ```
 
-The camera is disabled for security reasons.
+安全原因相机被禁用。
 
 **Since:** 10
 
@@ -162,7 +162,7 @@ The camera is disabled for security reasons.
 DEVICE_PREEMPTED = 7400109
 ```
 
-The camera is preempted.
+相机被抢占导致无法使用。
 
 **Since:** 10
 
@@ -180,7 +180,7 @@ The camera is preempted.
 UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110
 ```
 
-The configuration conflicts with the current configuration.
+与当前配置存在冲突。
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ The configuration conflicts with the current configuration.
 SERVICE_FATAL_ERROR = 7400201
 ```
 
-The camera service is abnormal.
+相机服务异常返回。
 
 **Since:** 10
 

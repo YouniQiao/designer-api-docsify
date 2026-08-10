@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { url } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
@@ -34,8 +40,8 @@ URL的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | 一个表示绝对URL或相对URL的字符串。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果 url 是绝对URL，则给定的 base 将不会生效。 |
-| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- string：字符串。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- URL：URL对象。 |
+| url | string | 是 | 一个表示绝对URL或相对URL的字符串。 &lt;br/&gt;如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 &lt;br/&gt;如果 url 是绝对URL，则给定的 base 将不会生效。 |
+| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。&lt;br/&gt;- string：字符串。&lt;br/&gt;- URL：URL对象。 |
 
 ## constructor
 
@@ -54,12 +60,6 @@ URL的无参构造函数。parseURL调用后返回一个URL对象，不单独使
 <!--Device-URL-constructor()--><!--Device-URL-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例：**
-
-```TypeScript
-let a = new url.URL();
-```
 
 ## parseURL
 
@@ -83,22 +83,22 @@ static parseURL(url: string, base?: string | URL): URL
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | 一个表示绝对URL或相对URL的字符串。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果 url 是绝对URL，则给定的 base 将不会生效。 |
-| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- string：字符串。当第一个参数是相对URL时，该参数需符合URL标准。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- URL：URL对象。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 在url是相对URL时使用，url为绝对URL时此参数不会生效。 |
+| url | string | 是 | 一个表示绝对URL或相对URL的字符串。 &lt;br/&gt;如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 &lt;br/&gt;如果 url 是绝对URL，则给定的 base 将不会生效。 |
+| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。&lt;br/&gt;- string：字符串。当第一个参数是相对URL时，该参数需符合URL标准。&lt;br/&gt;- URL：URL对象。&lt;br/&gt;- 在url是相对URL时使用，url为绝对URL时此参数不会生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回解析后的URL对象，包含URL的各组成部分（如协议、主机和路径等属性）。 |
+| [URL](arkts-arkts-url-url-c.md) | 返回解析后的URL对象，包含URL的各组成部分（如协议、主机和路径等属性）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid url string. |
+| 10200002 | Invalid url string. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let baseUrl = 'https://username:password@host:8080/test/test1/test3';
@@ -139,7 +139,7 @@ toJSON(): string
 | --- | --- |
 | string | URL对象的JSON序列化字符串。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 解析URL字符串
@@ -172,7 +172,7 @@ toString(): string
 | --- | --- |
 | string | 解析后的URL序列化字符串。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
@@ -287,7 +287,7 @@ readonly params: URLParams
 
 获取URLParams表示URL查询参数的对象。
 
-**类型：** URLParams
+**类型：** [URLParams](arkts-arkts-url-urlparams-c.md)
 
 **起始版本：** 9
 
@@ -407,7 +407,7 @@ readonly searchParams: URLSearchParams
 
 获取URLSearchParams表示URL查询参数的对象。
 
-**类型：** URLSearchParams
+**类型：** [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md)
 
 **起始版本：** 7
 

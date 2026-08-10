@@ -1,6 +1,6 @@
 # InputMethodInputType (System API)
 
-Defines the input type.
+定义输入类型。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Defines the input type.
 NONE = -1
 ```
 
-No input type, the panel is not in any input type.
+无输入类型，面板不在任何输入类型中。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ No input type, the panel is not in any input type.
 CAMERA_INPUT = 0
 ```
 
-Camera input type.
+相机输入类型。
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ Camera input type.
 SECURITY_INPUT = 1
 ```
 
-Security input type.
+安全输入类型。
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ Security input type.
 VOICE_INPUT = 2
 ```
 
-Voice input type.
+语音输入类型。
 
 **Since:** 26.0.0
 
@@ -98,7 +98,7 @@ Voice input type.
 FLOATING_VOICE_INPUT = 3
 ```
 
-Floating voice input type.
+浮动语音输入类型。
 
 **Since:** 26.0.0
 

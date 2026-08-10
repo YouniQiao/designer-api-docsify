@@ -1,12 +1,18 @@
 # getDate
 
+## Modules to Import
+
+```TypeScript
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getDate
 
 ```TypeScript
 function getDate(callback: AsyncCallback<Date>): void
 ```
 
-Obtains the current system date. This API uses an asynchronous callback to return the result.
+获取当前系统日期，使用callback异步回调。
 
 **Since:** 9
 
@@ -24,15 +30,15 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Date&gt; | Yes | Callback used to return the current system date. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | Yes | 回调函数，返回当前系统日期。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. System error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,7 +64,7 @@ try {
 function getDate(): Promise<Date>
 ```
 
-Obtains the current system date. This API uses a promise to return the result.
+获取当前系统日期，使用Promise异步回调。
 
 **Since:** 9
 
@@ -76,15 +82,15 @@ Obtains the current system date. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Date&gt; | Promise used to return the current system date. |
+| Promise&lt;Date&gt; | Promise对象，返回当前系统日期。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. System error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

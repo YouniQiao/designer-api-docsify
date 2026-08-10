@@ -1,9 +1,15 @@
 # GridCol
 
-The **GridCol** component must be used as a child component of the [GridRow]{@link GridRow} container.
-> **Child Components**
+栅格布局系统中的列组件，必须作为栅格容器组件([GridRow]{@link ./grid_row})的子组件使用。适用于响应式布局、多设备适配等需要动态调整列宽的场景。支持响应式断点配置、跨列布局、偏移和排序功能。使用GridCol
+组件可以快速实现响应式布局，简化多设备适配的开发工作。
+
+> **说明：**
 >
-> This component can contain only one child component.
+> 该组件从API version 9开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+## 子组件
+
+可以包含单个子组件。
 
 ## GridCol
 
@@ -11,7 +17,7 @@ The **GridCol** component must be used as a child component of the [GridRow]{@li
 GridCol(option?: GridColOptions)
 ```
 
-Creates a **GridCol** component.
+栅格列布局组件。创建成功后，可根据配置的span、offset、order属性进行栅格布局，作为GridRow的子组件参与栅格系统的布局计算。
 
 **Since:** 9
 
@@ -29,7 +35,9 @@ Creates a **GridCol** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| option | [GridColOptions](../arkts-apis/arkts-arkui-gridcol-gridcoloptions-i.md) | No |  |
 
 ## Summary
 
+- [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
+- [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md)

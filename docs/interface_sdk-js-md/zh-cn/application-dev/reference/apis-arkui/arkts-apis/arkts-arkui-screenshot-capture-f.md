@@ -1,5 +1,11 @@
 # capture
 
+## 导入模块
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## capture
 
 ```TypeScript
@@ -8,7 +14,7 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 获取屏幕全屏截图，使用Promise异步回调。
 
-此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口可实现区域截屏。
+此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick](arkts-arkui-screenshot-pick-f.md#pick)接口可实现区域截屏。
 
 **起始版本：** 14
 
@@ -28,7 +34,7 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 截取图像的相关信息。此参数不填时，默认截取displayId为0的屏幕截图。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 22 |
+| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | 否 | 截取图像的相关信息。此参数不填时，默认截取displayId为0的屏幕截图。<br>**起始版本：** 22 |
 
 **返回值：**
 
@@ -40,14 +46,12 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
+| 801 | Capability not supported on this device. |
+| 1400003 | This display manager service works abnormally. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,29 +72,6 @@ try {
   });
 } catch (exception) {
   console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let captureOption: screenshot.CaptureOption = {
-  "displayId": 0
-};
-try {
-  let promise = screenshot.capture(captureOption);
-  promise.then((pixelMap: image.PixelMap) => {
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
-    pixelMap.release(); // PixelMap使用完后及时释放内存
-  }).catch((err: Error) => {
-    console.error(`Failed to save screenshot. Code: ${err?.code}, message: ${err?.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to save screenshot. Code: ${error.code}, message: ${error.message}`);
-};
+}
 ```
 

@@ -28,27 +28,27 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发布此公共事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import Base from '@ohos.base';
 
 // 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
+let publishCallBack = (err:Base.BusinessError) => {
     if (err.code) {
-        console.error(`publishAsUser failed, code is ${err.code}`);
+        console.error(`Failed to publishAsUser. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.info("publishAsUser");
+        console.info('publishAsUser');
     }
 }
 
 // 指定发送的用户
-let userId = 100;
+const userId = 100;
 
 // 发布公共事件
-commonEvent.publishAsUser("event", userId, publishCB);
+commonEvent.publishAsUser('event', userId, publishCallBack);
 ```
 
 
@@ -85,27 +85,27 @@ function publishAsUser(
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发布此公共事件。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示发布公共事件的属性。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import Base from '@ohos.base';
 import CommonEventManager from '@ohos.commonEventManager';
 
 // 公共事件相关信息
-let options: CommonEventManager.CommonEventPublishData = {
+let options:CommonEventManager.CommonEventPublishData = {
     code: 0,              // 公共事件的初始代码
-    data: "initial data", // 公共事件的初始数据
-}
+    data: 'initial data', // 公共事件的初始数据
+};
 
 // 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
+let publishCallBack = (err:Base.BusinessError) => {
     if (err.code) {
-        console.error(`publishAsUser failed, code is ${err.code}`);
+        console.error(`Failed to publishAsUser. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.info("publishAsUser");
+        console.info('publishAsUser');
     }
 }
 
@@ -113,6 +113,6 @@ function publishCB(err:Base.BusinessError) {
 let userId = 100;
 
 // 发布公共事件
-commonEvent.publishAsUser("event", userId, options, publishCB);
+commonEvent.publishAsUser('event', userId, options, publishCallBack);
 ```
 

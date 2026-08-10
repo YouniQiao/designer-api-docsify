@@ -1,6 +1,6 @@
 # Portrait (System API)
 
-Portrait: inherits from [PortraitQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.Provides the APIs for portrait photo settings.
+Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md).Provides the APIs for portrait photo settings.
 
 **Inheritance/Implementation:** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md)
 
@@ -13,6 +13,12 @@ Portrait: inherits from [PortraitQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.Pro
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getPortraitEffect
 
@@ -36,16 +42,16 @@ Obtains the portrait effect in use.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Portrait effect. |
+| [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) | Portrait effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 function getPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession): camera.PortraitEffect {
@@ -61,7 +67,7 @@ setPortraitEffect(effect: PortraitEffect): void
 ```
 
 Sets a portrait effect. Before the setting, use  
-[getSupportedPortraitEffects]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the supported portrait effects and check whether the target portrait effect is supported.
+[getSupportedPortraitEffects](arkts-camera-camera-portraitquery-i-sys.md#getsupportedportraiteffects) to obtain the supported portrait effects and check whether the target portrait effect is supported.
 
 **Since:** 10
 
@@ -77,16 +83,16 @@ Sets a portrait effect. Before the setting, use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Effect Portrait effect to set. |
+| effect | [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) | Yes | Effect Portrait effect to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

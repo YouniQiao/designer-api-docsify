@@ -16,6 +16,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
+
 ## localeMatcher
 
 ```TypeScript
@@ -52,7 +58,7 @@ numeric?: string
 
 默认值：always。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表23](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -80,7 +86,7 @@ style?: string
 
 默认值：long。
 
-不同取值的显示效果请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+不同取值的显示效果请参考[附录表24](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 

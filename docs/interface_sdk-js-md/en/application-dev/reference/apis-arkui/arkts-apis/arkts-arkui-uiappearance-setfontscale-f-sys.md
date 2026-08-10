@@ -1,12 +1,18 @@
 # setFontScale (System API)
 
+## Modules to Import
+
+```TypeScript
+import { uiAppearance } from 'kits/@kit.ArkUI';
+```
+
 ## setFontScale
 
 ```TypeScript
 function setFontScale(fontScale: double): Promise<void>
 ```
 
-Set the system font-scale.
+设置系统字体大小。
 
 **Since:** 23
 
@@ -36,7 +42,7 @@ Set the system font-scale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| 500001 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

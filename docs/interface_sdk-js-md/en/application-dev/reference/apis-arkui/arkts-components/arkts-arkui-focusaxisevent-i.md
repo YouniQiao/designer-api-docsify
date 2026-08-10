@@ -1,8 +1,8 @@
 # FocusAxisEvent
 
-Describes the focus axis event object. Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+焦点轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**Inheritance/Implementation:** FocusAxisEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**Inheritance/Implementation:** FocusAxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 15
 
@@ -18,9 +18,9 @@ Describes the focus axis event object. Inherits from [BaseEvent]\_\_\_JSDOC\_LIN
 axisMap: Map<AxisModel, number>
 ```
 
-Axis value table of the focus axis event.
+焦点轴事件的轴值表。
 
-**Type:** Map&lt;AxisModel, number&gt;
+**Type:** Map&lt;[AxisModel](../arkts-apis/arkts-arkui-axismodel-e.md), number&gt;
 
 **Since:** 15
 
@@ -40,9 +40,9 @@ Axis value table of the focus axis event.
 stopPropagation: Callback<void>
 ```
 
-Blocks \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)传递。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 15
 

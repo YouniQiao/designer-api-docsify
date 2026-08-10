@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Notification.Notification
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## badgeNumberEnabled
 
 ```TypeScript

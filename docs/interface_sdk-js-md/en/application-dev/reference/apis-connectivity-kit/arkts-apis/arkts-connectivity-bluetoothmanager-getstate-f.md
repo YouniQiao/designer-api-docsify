@@ -1,12 +1,18 @@
 # getState
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getState
 
 ```TypeScript
 function getState(): BluetoothState
 ```
 
-Obtains the Bluetooth status of a device.On API 10 and above, the permission required by this interface is changed from USE\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Obtains the Bluetooth status of a device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -28,18 +34,18 @@ Obtains the Bluetooth status of a device.On API 10 and above, the permission req
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Bluetooth status, which can be { |
+| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) | Returns the Bluetooth status, which can be { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

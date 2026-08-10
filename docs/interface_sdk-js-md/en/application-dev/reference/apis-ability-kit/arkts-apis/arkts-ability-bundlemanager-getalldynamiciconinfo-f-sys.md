@@ -1,16 +1,22 @@
 # getAllDynamicIconInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAllDynamicIconInfo
 
 ```TypeScript
 function getAllDynamicIconInfo(userId?: int): Promise<Array<DynamicIconInfo>>
 ```
 
-Obtains the dynamic icon information of all applications and all application clones of a specified user. This API uses a promise to return the result.
+查询指定用户下所有应用和所有分身的动态图标信息。使用Promise异步回调。
 
-To obtain the dynamic icon information of all applications and all application clones of the current user, you must request the ohos.permission.GET\_BUNDLE\_INFO\_PRIVILEGED permission.
+查询当前用户下所有应用和所有分身的动态图标信息时需要申请权限ohos.permission.GET_BUNDLE_INFO_PRIVILEGED。
 
-To obtain the dynamic icon information of all applications and all application clones of other users or all users,you must request the ohos.permission.GET\_BUNDLE\_INFO\_PRIVILEGED and ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS permissions.
+查询其他用户或者所有用户下所有应用和所有分身的动态图标信息时需要申请权限ohos.permission.GET_BUNDLE_INFO_PRIVILEGED 和 ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。
 
 **Since:** 20
 
@@ -28,24 +34,24 @@ To obtain the dynamic icon information of all applications and all application c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | User ID. By default, the dynamic icon information of all applications and all application clones of all users is queried. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 标识用户ID。缺省时查询所有用户下所有应用和所有分身的动态图标信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise used to return the dynamic icon information. |
+| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise对象，返回查询到的动态图标信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700306](../errorcode-bundle.md#17700306-failed-to-obtain-the-dynamic-icon) | Failed to obtain the dynamic icon. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700004 | The specified user ID is not found. |
+| 17700306 | Failed to obtain the dynamic icon. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

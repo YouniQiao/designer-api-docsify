@@ -1,6 +1,6 @@
 # LeadingMarginSpanDrawInfo
 
-Provides the custom drawing information.
+自定义绘制信息。
 
 **Since:** 22
 
@@ -16,11 +16,11 @@ Provides the custom drawing information.
 baseline: number
 ```
 
-Distance from the baseline of the current line to the component's upper edge.
+当前行的基线与组件上边缘的距离。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-The value must be greater than or equal to 0.
+取值范围：大于等于0。
 
 **Type:** number
 
@@ -42,11 +42,11 @@ The value must be greater than or equal to 0.
 bottom: number
 ```
 
-Distance from the bottom of the current line to the component's upper edge.
+行底与组件上边缘的距离。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-The value must be greater than or equal to 0.
+取值范围：大于等于0。
 
 **Type:** number
 
@@ -68,9 +68,9 @@ The value must be greater than or equal to 0.
 direction: TextDirection
 ```
 
-Direction of the text content.
+文本内容的方向。
 
-**Type:** TextDirection
+**Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
 
 **Since:** 22
 
@@ -90,9 +90,9 @@ Direction of the text content.
 end: number
 ```
 
-End index of the current line.
+当前行的结束索引。
 
-The value must be greater than or equal to 0.
+取值范围：大于等于0。
 
 **Type:** number
 
@@ -114,9 +114,9 @@ The value must be greater than or equal to 0.
 first: boolean
 ```
 
-Whether the current line is the first line of the paragraph.
+当前行是否是段落的首行。
 
-**true**: first line; **false**: non-first line.
+true：首行；false：非首行。
 
 **Type:** boolean
 
@@ -138,9 +138,9 @@ Whether the current line is the first line of the paragraph.
 start: number
 ```
 
-Start index of the current line.
+当前行的起始索引。
 
-The value must be greater than or equal to 0.
+取值范围：大于等于0。
 
 **Type:** number
 
@@ -162,11 +162,11 @@ The value must be greater than or equal to 0.
 top: number
 ```
 
-Distance from the top of the current line to the component's upper edge.
+行顶与组件上边缘的距离。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-The value must be greater than or equal to 0.
+取值范围：大于等于0。
 
 **Type:** number
 
@@ -188,12 +188,11 @@ The value must be greater than or equal to 0.
 x: number
 ```
 
-Horizontal offset of the current line relative to the component. For right-to-left (RTL) scripts (direction set to  
-**RTL**), this value represents the distance between the right side of the current line and the component's right edge.
+当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-The value must be greater than or equal to 0.
+取值范围：大于等于0。
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # OrderOverlayOptions
 
-Options for opening an overlay with order.
+使用顺序打开浮层的选项。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Options for opening an overlay with order.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## levelMode
 
 ```TypeScript
 levelMode?: LevelMode
 ```
 
-The display mode of the overlay.
+浮层的显示模式。
 
-**Type:** LevelMode
+**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ The display mode of the overlay.
 levelOrder?: LevelOrder
 ```
 
-The display order of the overlay.
+浮层的显示顺序。
 
-**Type:** LevelOrder
+**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **Since:** 26.0.0
 
@@ -56,7 +62,7 @@ The display order of the overlay.
 levelUniqueId?: int
 ```
 
-The uniqueId of any node in the router or navigation page.
+路由器或导航页面中任何节点的唯一ID。
 
 **Type:** int
 

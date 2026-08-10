@@ -1,6 +1,6 @@
 # ScreenDensity
 
-Enumerates the screen density types.
+用于表示当前设备屏幕密度。
 
 **Since:** 6
 
@@ -16,7 +16,7 @@ Enumerates the screen density types.
 SCREEN_SDPI = 120
 ```
 
-Small-scale DPI.
+低屏幕密度。
 
 **Since:** 6
 
@@ -34,7 +34,7 @@ Small-scale DPI.
 SCREEN_MDPI = 160
 ```
 
-Medium-scale DPI.
+中屏幕密度。
 
 **Since:** 6
 
@@ -52,7 +52,7 @@ Medium-scale DPI.
 SCREEN_LDPI = 240
 ```
 
-Large-scale DPI.
+高屏幕密度。
 
 **Since:** 6
 
@@ -70,7 +70,7 @@ Large-scale DPI.
 SCREEN_XLDPI = 320
 ```
 
-Extra-large-scale DPI.
+特高屏幕密度。
 
 **Since:** 6
 
@@ -88,7 +88,7 @@ Extra-large-scale DPI.
 SCREEN_XXLDPI = 480
 ```
 
-Extra-extra-large-scale DPI.
+超高屏幕密度。
 
 **Since:** 6
 
@@ -106,7 +106,7 @@ Extra-extra-large-scale DPI.
 SCREEN_XXXLDPI = 640
 ```
 
-Extra-extra-extra-large-scale DPI.
+超特高屏幕密度。
 
 **Since:** 6
 

@@ -34,7 +34,16 @@ Set value.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | {     date: { year: number; month: number; day: number };     currentData: MonthData;     preData: MonthData;     nextData: MonthData;     controller?: CalendarController;   } | 是 |  |
+| value | {     date: { year: number; month: number; day: number };     currentData: MonthData;     preData: MonthData;     nextData: MonthData;     controller?: CalendarController;   } | 是 |  |
 
 ## 汇总
 
+- [CalendarDay](arkts-arkui-calendar-calendarday-i-sys.md)
+- [CalendarRequestedData](arkts-arkui-calendar-calendarrequesteddata-i-sys.md)
+- [CalendarSelectedDate](arkts-arkui-calendar-calendarselecteddate-i-sys.md)
+- [CurrentDayStyle](arkts-arkui-calendar-currentdaystyle-i-sys.md)
+- [MonthData](arkts-arkui-calendar-monthdata-i-sys.md)
+- [NonCurrentDayStyle](arkts-arkui-calendar-noncurrentdaystyle-i-sys.md)
+- [TodayStyle](arkts-arkui-calendar-todaystyle-i-sys.md)
+- [WeekStyle](arkts-arkui-calendar-weekstyle-i-sys.md)
+- [WorkStateStyle](arkts-arkui-calendar-workstatestyle-i-sys.md)

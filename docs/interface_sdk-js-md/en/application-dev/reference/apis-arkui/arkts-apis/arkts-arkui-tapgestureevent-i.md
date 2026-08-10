@@ -1,9 +1,8 @@
 # TapGestureEvent
 
-Inherits from [BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This object can be passed as the **event** parameter of  
-[onGestureJudgeBegin]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
 
-**Inheritance/Implementation:** TapGestureEvent extends [BaseGestureEvent](arkts-arkui-component/gesture-basegestureevent-i.md)
+**Inheritance/Implementation:** TapGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
 **Since:** 11
 
@@ -19,10 +18,9 @@ Inherits from [BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This obje
 tapLocation?: EventLocationInfo
 ```
 
-Coordinate information of the current tap gesture. For non-tap gestures, the return value of **tapLocation** is  
-**undefined**.
+用于点击手势中，获取当前手势的坐标信息。在非点击手势中，tapLocation返回值为undefined。
 
-**Type:** EventLocationInfo
+**Type:** [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md)
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # WorkerGlobalScope
 
-Specifies the worker thread running environment, which is isolated from the host thread environment.
+Worker线程自身的运行环境，与宿主线程环境隔离。
 
 **Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-worker-eventtarget-i.md)
 
@@ -16,13 +16,19 @@ Specifies the worker thread running environment, which is isolated from the host
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## onerror
 
 ```TypeScript
 onerror?: (ev: ErrorEvent) => void
 ```
 
-The onerror attribute of parentPort specifies the event handler to be called when an exception occurs during worker execution.The event handler is executed in the worker thread.
+onerror属性用于指定Worker在执行过程中发生异常被调用的回调函数，该回调函数在Worker线程中执行。
 
 **Since:** 7
 
@@ -40,7 +46,7 @@ The onerror attribute of parentPort specifies the event handler to be called whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |  |
 
 ## name
 
@@ -48,7 +54,7 @@ The onerror attribute of parentPort specifies the event handler to be called whe
 readonly name: string
 ```
 
-Worker name specified when there is a new worker.
+Worker的名字，new Worker时指定。
 
 **Type:** string
 
@@ -70,9 +76,9 @@ Worker name specified when there is a new worker.
 readonly self: WorkerGlobalScope & typeof globalThis
 ```
 
-Specify the type attribute for self.
+为self指定的type属性。
 
-**Type:** WorkerGlobalScope & typeof globalThis
+**Type:** [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md) & typeof globalThis
 
 **Since:** 7
 

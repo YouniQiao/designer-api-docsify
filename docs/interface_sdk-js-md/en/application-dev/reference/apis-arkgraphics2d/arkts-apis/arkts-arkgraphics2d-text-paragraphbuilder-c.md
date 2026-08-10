@@ -1,9 +1,9 @@
 # ParagraphBuilder
 
-Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[FontCollection]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to the constructor, then set the text style through  
-[pushStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, add text content through  
-[addText]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, and finally call [build()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ to generate a [Paragraph]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ object for typesetting and drawing.
+段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)和  
+[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md)初始化ParagraphBuilder，然后通过  
+[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)设置文本样式、[addText](arkts-arkgraphics2d-text-paragraphbuilder-c.md#addtext)添加文本内容，最终调用  
+[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口生成[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)对象进行排版和绘制。
 
 **Since:** 12
 
@@ -13,13 +13,19 @@ Implements a paragraph builder that uses the builder pattern to construct paragr
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## addPlaceholder
 
 ```TypeScript
 addPlaceholder(placeholderSpan: PlaceholderSpan): void
 ```
 
-Inserts a placeholder when building a text paragraph. After insertion, the placeholder occupies the corresponding space in paragraph typesetting according to the specified width, height, and alignment, and affects text line breaking and layout.
+用于构建文本段落时插入占位符。插入后，占位符将在段落排版中按照指定的宽度、高度和对齐方式占据相应空间，并影响文本的换行和布局。
 
 **Since:** 12
 
@@ -35,15 +41,12 @@ Inserts a placeholder when building a text paragraph. After insertion, the place
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| placeholderSpan | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Placeholder span, which describes the size, alignment, baseline type, and baseline offset of the placeholder. |
+| placeholderSpan | [PlaceholderSpan](arkts-arkgraphics2d-text-placeholderspan-i.md) | Yes | 定义了占位符的尺寸、对齐方式、基线类型以及基线偏移量。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
 
 function textFunc() {
   let myParagraphStyle: text.ParagraphStyle = {
@@ -87,7 +90,7 @@ ArkTS-Sta:
 addSymbol(symbolId: int): void
 ```
 
-Inserts a symbol into the paragraph being built.
+向正在构建的文本段落中插入具体符号。
 
 **Since:** 12
 
@@ -103,9 +106,9 @@ Inserts a symbol into the paragraph being built.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| symbolId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Symbol code to insert. The value is a hexadecimal number in the range 0xF0000-0xF0C97. For details about the configurable symbol codes (unicode values in the list view), see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| symbolId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要设置的symbol码位，十六进制，当前支持的取值范围为：0xF0000-0xF0C97。可设置的symbol码位（即列表视图下的unicode值）请见 [主题图标库](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol/)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -145,7 +148,7 @@ struct Index {
 addText(text: string): void
 ```
 
-Inserts a text string into the paragraph being built.
+向正在构建的文本段落中插入具体的文本字符串。
 
 **Since:** 12
 
@@ -161,15 +164,12 @@ Inserts a text string into the paragraph being built.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Exact text string inserted into the paragraph. If an invalid Unicode character is provided, it is displayed as �. |
+| text | string | Yes | 段落中插入的具体文本字符串，传入非法Unicode时会显示�。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
 
 function textFunc() {
   let myTextStyle: text.TextStyle = {
@@ -205,7 +205,7 @@ struct Index {
 build(): Paragraph
 ```
 
-Builds a paragraph and generates a paragraph object that can be used for subsequent typesetting and rendering.After build() is called, a new ParagraphBuilder instance must be created to build text again.
+用于构建段落，生成可用于后续排版渲染的段落对象。调用build()后，如需再次构建文本，必须创建新的ParagraphBuilder实例。
 
 **Since:** 12
 
@@ -221,13 +221,12 @@ Builds a paragraph and generates a paragraph object that can be used for subsequ
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Paragraph** object that can be used for subsequent rendering. |
+| [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md) | 可用于后续渲染的 Paragraph 对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { drawing, text, common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
+import { text } from '@kit.ArkGraphics2D'
 
 function textFunc() {
   let myTextStyle: text.TextStyle = {
@@ -264,7 +263,7 @@ struct Index {
 buildLineTypeset(): LineTypeset
 ```
 
-Builds a line typesetter and generates a LineTypeset object that can be used for line-by-line typesetting calculation.
+构建行排版器，生成可用于逐行排版计算的LineTypeset对象。
 
 **Since:** 18
 
@@ -280,9 +279,9 @@ Builds a line typesetter and generates a LineTypeset object that can be used for
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | LineTypeset** object that can be used for subsequent rendering. |
+| [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) | 可用于后续渲染的LineTypeset对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -317,7 +316,7 @@ struct Index {
 constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)
 ```
 
-A constructor used to create a **ParagraphBuilder** object.
+ParagraphBuilder对象的构造函数。
 
 **Since:** 12
 
@@ -333,10 +332,10 @@ A constructor used to create a **ParagraphBuilder** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paragraphStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Paragraph style. |
-| fontCollection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font collection object that provides font resources required for text typesetting, used for glyph matching and text rendering during paragraph construction. |
+| paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Yes | 段落样式。 |
+| fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | Yes | 字体集对象，提供文本排版所需的字体资源，用于在段落构建过程中进行字形匹配和文本渲染。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -374,12 +373,12 @@ struct Index {
 popStyle(): void
 ```
 
-Restores the previous text style.
-    **NOTE**  
-    
-    This method must be called after [pushStyle()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. After it is called,  
-    subsequently added text will use the text style before the pop operation. If the style stack is empty, the  
-    textStyle in [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ will be used as the default style.
+弹出当前文本样式。
+
+> **说明：**
+> 
+> 必须在调用[pushStyle()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用
+> [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中的textStyle作为默认样式。
 
 **Since:** 12
 
@@ -391,13 +390,10 @@ Restores the previous text style.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-**Example**
+## Examples
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
 
 function textFunc() {
   let myTextStyle: text.TextStyle = {
@@ -434,10 +430,11 @@ struct Index {
 pushStyle(textStyle: TextStyle): void
 ```
 
-Applies a new style to the current text blob.
-    **NOTE**  
-    
-    When you update the style of the current text blob, all text added afterward will use this new style.
+更新当前文本块的样式。
+
+> **说明：**
+> 
+> 更新当前文本块的样式，之后添加文字均采用该样式。
 
 **Since:** 12
 
@@ -453,15 +450,12 @@ Applies a new style to the current text blob.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text style, which describes various visual attributes of text, such as font, font size, color, font weight, word spacing, line spacing, decoration (such as underline and strikethrough), and text shadow. |
+| textStyle | [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | Yes | 包含了对文本的各种视觉属性的定义，如字体、字号、颜色、字重、字间距、行距、装饰（如下划线、删除线）、文本阴影等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
 
 function textFunc() {
   let myTextStyle: text.TextStyle = {

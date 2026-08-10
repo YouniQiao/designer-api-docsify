@@ -1,6 +1,6 @@
 # Config (System API)
 
-Provides APIs for setting device-cloud synergy, including enabling and disabling device-cloud synergy, clearing data, and notifying data changes.
+提供配置端云协同的方法，包括云同步打开、关闭、清除数据、数据变化通知。
 
 **Since:** 10
 
@@ -12,6 +12,12 @@ Provides APIs for setting device-cloud synergy, including enabling and disabling
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## batchQueryLastSyncInfo
 
 ```TypeScript
@@ -21,7 +27,7 @@ static batchQueryLastSyncInfo(
     ): Promise<Record<string, Record<string, SyncInfo>>>
 ```
 
-Queries the last synchronization information in batch
+批量查询上一次端云同步的信息，使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -41,23 +47,46 @@ Queries the last synchronization information in batch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | Indicates the account ID. The account ID is required by hashing cloud account. |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| bundleInfos | Array&lt;BundleInfo&gt; | Yes | 批量查询的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | Promise对象，返回应用包名以及对应数据库的上一次端云同步信息结果集。外层Record的键为应用 包名，内层Record的键为数据库名。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. the accountId is empty; 2. the bundlename is null; 3. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| 14800001 | Invalid arguments. Possible causes: 1. the accountId is empty; 2. the bundlename is null; 3. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| 801 | Capability not supported because the device does not support the device-cloud capability. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountId: string = "accountId";
+const bundleInfos: Array<cloudData.BundleInfo> = [
+  { bundleName: "bundleName1", storeId: "storeId1" },
+  { bundleName: "bundleName2" }
+];
+
+try {
+  cloudData.Config.batchQueryLastSyncInfo(accountId, bundleInfos).then((result) => {
+    console.info(`Succeeded in querying last sync info. Result is ${JSON.stringify(result)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to query last sync info. Error code is ${err.code}, message is ${err.message}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## changeAppCloudSwitch
 
@@ -70,7 +99,7 @@ static changeAppCloudSwitch(
     ): void
 ```
 
-Changes the device-cloud synergy setting for an application. This API uses an asynchronous callback to return the result.
+修改单个应用端云协同开关，使用callback异步回调。
 
 **Since:** 10
 
@@ -88,27 +117,27 @@ Changes the device-cloud synergy setting for an application. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| bundleName | string | Yes | Bundle name of the application. |
-| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloud synergy; the value **false** means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| status | boolean | Yes | 应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当修改单个应用端云协同开关成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
 try {
   cloudData.Config.changeAppCloudSwitch(account, bundleName, true, (err: BusinessError) => {
     if (err === undefined) {
@@ -129,7 +158,7 @@ try {
 static changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>
 ```
 
-Changes the device-cloud synergy setting for an application. This API uses a promise to return the result.
+修改单个应用端云协同开关，使用Promise异步回调。
 
 **Since:** 10
 
@@ -147,32 +176,32 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| bundleName | string | Yes | Bundle name of the application. |
-| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloud synergy; the value **false** means the opposite. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| status | boolean | Yes | 应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
 try {
   cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
     console.info('Succeeded in changing App cloud switch');
@@ -196,7 +225,7 @@ static changeAppCloudSwitch(
     ): Promise<void>
 ```
 
-Changes the device-cloud synergy setting for an application. This API uses a promise to return the result.
+修改单个应用端云协同开关，使用Promise异步回调。
 
 **Since:** 23
 
@@ -216,32 +245,32 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| bundleName | string | Yes | Bundle name of the application. |
-| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloud synergy; the value **false** means the opposite. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Switch configuration of a device-cloud synergy database. Device-cloud synergy priority: application        database        table. If this parameter is not set, the application-level device-cloud synergy is used by default. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| status | boolean | Yes | 应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。 |
+| config | [SwitchConfig](arkts-arkdata-clouddata-switchconfig-i-sys.md) | No | 端云协同数据库级开关配置信息。端云协同开关优先级：应用级 > 数据库级 > 表级。当未配置该参数时，默认使用应用级的开关配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
 let config: cloudData.SwitchConfig = {
   dbInfo: {
     'test_storeName1': {
@@ -275,7 +304,7 @@ static clear(
     ): void
 ```
 
-Clears the cloud data locally. This API uses an asynchronous callback to return the result.
+清除本地下载的云端数据，使用callback异步回调。
 
 **Since:** 10
 
@@ -293,20 +322,20 @@ Clears the cloud data locally. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| appActions | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, ClearAction&gt; | Yes | Information about the application whose data is to be cleared and the operation to perform.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| appActions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearAction&gt; | Yes | 要清除数据的应用信息及清除规则。<br>**Since:** 10 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当清除本地下载的云端数据成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -320,7 +349,7 @@ let appActions: dataType = {
 try {
   cloudData.Config.clear(account, appActions, (err: BusinessError) => {
     if (err === undefined) {
-      console.info('Succeeding in clearing cloud data');
+      console.info('Succeeded in clearing cloud data');
     } else {
       console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
     }
@@ -337,7 +366,7 @@ try {
 static clear(accountId: string, appActions: Record<string, ClearAction>): Promise<void>
 ```
 
-Clears the cloud data locally. This API uses a promise to return the result.
+清除本地下载的云端数据，使用Promise异步回调。
 
 **Since:** 10
 
@@ -355,25 +384,25 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| appActions | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, ClearAction&gt; | Yes | Information about the application whose data is to be cleared and the operation to perform.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| appActions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearAction&gt; | Yes | 要清除数据的应用信息及清除规则。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -386,7 +415,7 @@ let appActions: dataType = {
 };
 try {
   cloudData.Config.clear(account, appActions).then(() => {
-    console.info('Succeeding in clearing cloud data');
+    console.info('Succeeded in clearing cloud data');
   }).catch((err: BusinessError) => {
     console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
   });
@@ -406,7 +435,7 @@ static clear(
     ): Promise<void>
 ```
 
-Clears the cloud data locally. This API uses a promise to return the result.
+清除本地下载的云端数据，使用Promise异步回调。
 
 **Since:** 23
 
@@ -426,25 +455,25 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| appActions | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, ClearAction&gt; | Yes | Information about the application whose data is to be cleared and the operation to perform. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, ClearConfig&gt; | No | Clearance information of a device-cloud synergy database. The key is the application name, and the value is the database clearance rules of the application. Clearance priority: table        database        application. If this parameter is not set, the application-level data clearance mode is used by default. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| appActions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearAction&gt; | Yes | 要清除数据的应用信息及清除规则。 |
+| config | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearConfig&gt; | No | 端云协同数据库级清除配置信息。键为应用包名，值为该应用数据库清除规则。清除规则优先级：表级 > 数据库级 > 应用级。当未配置 该参数时，默认使用应用级的数据清除方式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -455,7 +484,7 @@ let appActions: Record<string, cloudData.ClearAction> = {
   'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
   'test_bundleName3': cloudData.ClearAction.CLEAR_CLOUD_NONE,
 };
-let config: Record<stringm, cloudData.ClearConfig> = {
+let config: Record<string, cloudData.ClearConfig> = {
   'test_bundleName': {
     dbInfo: {
       'test_storeName': {
@@ -470,7 +499,7 @@ let config: Record<stringm, cloudData.ClearConfig> = {
 }
 try {
   cloudData.Config.clear(account, appActions, config).then(() => {
-    console.info('Succeeding in clearing cloud data');
+    console.info('Succeeded in clearing cloud data');
   }).catch((err: BusinessError) => {
     console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
   });
@@ -491,7 +520,7 @@ static cloudSync(
     ): Promise<void>
 ```
 
-Synchronizes data of a specified application on the device to the cloud. This API uses a promise to return the result.
+对指定应用的数据进行端云同步，使用Promise异步回调。
 
 **Since:** 20
 
@@ -509,43 +538,43 @@ Synchronizes data of a specified application on the device to the cloud. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the application to sync. |
-| storeId | string | Yes | Name of the database to sync. |
-| mode | relationalStore.SyncMode | Yes | Device-cloud sync mode. |
-| progress | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| bundleName | string | Yes | 待端云同步数据的应用包名。 |
+| storeId | string | Yes | 待端云同步的数据库名。 |
+| mode | relationalStore.SyncMode | Yes | 端云同步类型。 |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | 同步进度回调。返回ProgressDetails实例对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Empty conditions; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Missing GROUP BY clause. |
+| 14800001 | Invalid arguments. Possible causes: 1. Empty conditions; &lt;br&gt;2. Missing GROUP BY clause. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, &lt;br&gt;application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { relationalStore } from '@kit.ArkData';
 
-try{
+try {
   cloudData.Config.cloudSync("bundleName", "storeId", relationalStore.SyncMode.SYNC_MODE_TIME_FIRST, (progress)=>{
     console.info('Succeeded in getting progress details.');
   }).then(() => {
-      console.info('Succeeded in syncing cloud data.');
+    console.info('Succeeded in syncing cloud data.');
   }).catch((err: BusinessError) => {
-      console.error(`Failed to sync cloud data. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to sync cloud data. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (e) {
   let error = e as BusinessError;
-  console.error(`Failed to sync cloud data. Code: ${e.code}, message: ${e.message}`);
+  console.error(`Failed to sync cloud data. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -559,7 +588,8 @@ static cloudSyncEx(
     ): Promise<void>
 ```
 
-Sync data to cloud. This API uses a promise to return the result.
+对指定应用的数据按照云同步配置信息进行端云同步，当  
+[CloudSyncConfig](../../../reference/apis-arkdata/js-apis-data-relationalStore-sys.md#cloudsyncconfig)中的downloadOnly为true时，端云同步仅把云侧数据同步到本地，使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -579,24 +609,54 @@ Sync data to cloud. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | BundleInfo configuration. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_the instance object of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| config | relationalStore.CloudSyncConfig | Yes | Indicates cloud sync configuration. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_the instance object of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| progress | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| bundleInfo | [BundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-i.md) | Yes | 应用包信息配置。BundleInfo的实例对象。 |
+| config | relationalStore.CloudSyncConfig | Yes | 云同步配置。 |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | 进度回调函数。返回ProgressDetails实例对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application is not a system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Empty conditions. |
+| 14800001 | Invalid arguments. Possible causes: 1. Empty conditions. |
+| 801 | Capability not supported because the device does not support the device-cloud capability. |
+| 201 | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application is not a system application. |
+
+## Examples
+
+```TypeScript
+import { relationalStore } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleInfo: cloudData.BundleInfo = {
+  bundleName: 'com.example.myapplication',
+  // Other BundleInfo fields
+};
+
+let config: relationalStore.CloudSyncConfig = {
+  mode: relationalStore.SyncMode.SYNC_MODE_TIME_FIRST,
+  enablePredicate: true
+};
+
+try {
+  cloudData.Config.cloudSyncEx(bundleInfo, config, (progressDetails: relationalStore.ProgressDetails) => {
+    console.info(`Cloud sync progress: ${progressDetails.schedule}, code: ${progressDetails.code}`);
+  }).then(() => {
+    console.info('Succeeded in cloud sync');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to cloud sync. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## disableCloud
 
@@ -604,7 +664,7 @@ Sync data to cloud. This API uses a promise to return the result.
 static disableCloud(accountId: string, callback: AsyncCallback<void>): void
 ```
 
-Disables device-cloud synergy. This API uses an asynchronous callback to return the result.
+关闭端云协同，使用callback异步回调。
 
 **Since:** 10
 
@@ -622,24 +682,24 @@ Disables device-cloud synergy. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当关闭端云协同成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
+let account: string = "test_id";
 try {
   cloudData.Config.disableCloud(account, (err: BusinessError) => {
     if (err === undefined) {
@@ -660,7 +720,7 @@ try {
 static disableCloud(accountId: string): Promise<void>
 ```
 
-Disables device-cloud synergy. This API uses a promise to return the result.
+关闭端云协同，使用Promise异步回调。
 
 **Since:** 10
 
@@ -678,29 +738,29 @@ Disables device-cloud synergy. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
+| accountId | string | Yes | 已登录的云账号ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
+let account: string = "test_id";
 try {
   cloudData.Config.disableCloud(account).then(() => {
     console.info('Succeeded in disabling cloud');
@@ -723,7 +783,7 @@ static enableCloud(
     ): void
 ```
 
-Enables device-cloud synergy. This API uses an asynchronous callback to return the result.
+打开端云协同开关，使用callback异步回调。
 
 **Since:** 10
 
@@ -741,25 +801,25 @@ Enables device-cloud synergy. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| switches | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, boolean&gt; | Yes | Device-cloud synergy settings for applications. The value **true** means to enable device-cloud synergy; the value **false** means the opposite.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | Yes | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当打开端云协同功能成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
+let account: string = "test_id";
 let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
 try {
   cloudData.Config.enableCloud(account, switches, (err: BusinessError) => {
@@ -781,7 +841,7 @@ try {
 static enableCloud(accountId: string, switches: Record<string, boolean>): Promise<void>
 ```
 
-Enables device-cloud synergy. This API uses a promise to return the result.
+打开端云协同开关，使用Promise异步回调。
 
 **Since:** 10
 
@@ -799,30 +859,30 @@ Enables device-cloud synergy. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| switches | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, boolean&gt; | Yes | Device-cloud synergy settings for applications. The value **true** means to enable device-cloud synergy; the value **false** means the opposite.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | Yes | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
+let account: string = "test_id";
 let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
 try {
   cloudData.Config.enableCloud(account, switches).then(() => {
@@ -848,7 +908,7 @@ ArkTS-Sta:
 static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>
 ```
 
-Notifies the data changes in the cloud. This API uses a promise to return the result. You can specify the database and tables with data changes in the **extraData** field in **extInfo**, and specify the user ID.
+通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，可通过userId指定用户ID，使用Promise异步回调。
 
 **Since:** 11
 
@@ -866,25 +926,25 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Transparently transmitted data, including information about the application that has data changes. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | User ID. This parameter is optional. The default value is the current user ID. If this parameter is specified, the value must be an existing user ID in the system. |
+| extInfo | [ExtraData](../../apis-core-file-kit/arkts-apis/arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | Yes | 透传数据，包含通知数据变更后的应用信息。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示用户账号ID。此参数是可选的，默认值是当前用户账号ID，如果指定了此参数，则该值必须是系统中现有的用户账号ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_VerifyAccessToken\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -912,7 +972,7 @@ try {
 static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 ```
 
-Notifies the data changes in the cloud with the specified information, such as the database and table names (specified by the **extraData** field in **extInfo**). This API uses an asynchronous callback to return the result.
+通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，使用callback异步回调。
 
 **Since:** 11
 
@@ -930,19 +990,19 @@ Notifies the data changes in the cloud with the specified information, such as t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Transparently transmitted data, including information about the application that has data changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| extInfo | [ExtraData](../../apis-core-file-kit/arkts-apis/arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | Yes | 透传数据，包含通知数据变更后的应用信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_VerifyAccessToken\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -977,7 +1037,7 @@ ArkTS-Sta:
 static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback<void>): void
 ```
 
-Notifies the data changes of a user in the cloud. This API uses an asynchronous callback to return the result.You can also specify the database and tables with data changes in the **extraData** field in **extInfo**, and specify the user ID.
+通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，可通过userId指定用户ID，使用callback异步回调。
 
 **Since:** 11
 
@@ -995,20 +1055,20 @@ Notifies the data changes of a user in the cloud. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Transparently transmitted data, including information about the application that has data changes. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID in the system. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| extInfo | [ExtraData](../../apis-core-file-kit/arkts-apis/arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | Yes | 透传数据，包含通知数据变更后的应用信息。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户ID，对应为系统中现有的用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_VerifyAccessToken\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1038,7 +1098,7 @@ try {
 static notifyDataChange(accountId: string, bundleName: string): Promise<void>
 ```
 
-Notifies the data changes in the cloud. This API uses a promise to return the result.
+通知云端的数据变更，使用Promise异步回调。
 
 **Since:** 10
 
@@ -1056,31 +1116,31 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| bundleName | string | Yes | Bundle name of the application. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
 try {
   cloudData.Config.notifyDataChange(account, bundleName).then(() => {
     console.info('Succeeded in notifying the change of data');
@@ -1099,7 +1159,7 @@ try {
 static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Notifies the data changes in the cloud. This API uses an asynchronous callback to return the result.
+通知云端的数据变更，使用callback异步回调。
 
 **Since:** 10
 
@@ -1117,26 +1177,26 @@ Notifies the data changes in the cloud. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| bundleName | string | Yes | Bundle name of the application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当通知云端的数据变更成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
 try {
   cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError) => {
     if (err === undefined) {
@@ -1160,7 +1220,7 @@ static offSyncInfoChanged(
     ): void
 ```
 
-Remove specified observer of specified type from the database.
+取消订阅应用同步信息变化，使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -1180,17 +1240,56 @@ Remove specified observer of specified type from the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
-| progress | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | No | Optional progress callback. |
+| bundleInfos | Array&lt;BundleInfo&gt; | Yes | 取消订阅的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。取消订阅时应用信息的storeId需要与订 阅时保持一致。 |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | No | 回调函数。如果传入此参数，则取消订阅指定的回调函数；如果不传此参数，则取消该 应用的所有订阅。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| 14800001 | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| 801 | Capability not supported because the device does not support the device-cloud capability. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const bundleInfos: Array<cloudData.BundleInfo> = [
+  { bundleName: "bundleName1", storeId: "storeId1" },
+  { bundleName: "bundleName2" }
+];
+
+const progressCallback = (result: Record<string, Record<string, cloudData.SyncInfo>>) => {
+  console.info(`Sync info changed. Result is ${JSON.stringify(result)}`);
+};
+
+// Subscribe to sync information changes.
+try {
+  cloudData.Config.onSyncInfoChanged(bundleInfos, progressCallback);
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+
+// Unsubscribe from a specified callback.
+try {
+  cloudData.Config.offSyncInfoChanged(bundleInfos, progressCallback);
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+
+// Unsubscribe from all callbacks.
+try {
+  cloudData.Config.offSyncInfoChanged(bundleInfos);
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## onSyncInfoChanged
 
@@ -1201,7 +1300,7 @@ static onSyncInfoChanged(
     ): void
 ```
 
-Subscribes to changes in the sync information of a specified application.
+订阅应用同步信息变化，使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -1221,17 +1320,37 @@ Subscribes to changes in the sync information of a specified application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
-| progress | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | Yes | progress. |
+| bundleInfos | Array&lt;BundleInfo&gt; | Yes | 订阅的应用信息数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | Yes | 回调函数。返回应用包名以及对应数据库的同步信息结果集。外层Record的键为应用 包名，内层Record的键为数据库名。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| 14800001 | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| 801 | Capability not supported because the device does not support the device-cloud capability. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const bundleInfos: Array<cloudData.BundleInfo> = [
+  { bundleName: "bundleName1", storeId: "storeId1" },
+  { bundleName: "bundleName2" }
+];
+
+try {
+  cloudData.Config.onSyncInfoChanged(bundleInfos, (result) => {
+    console.info(`Sync info changed. Result is ${JSON.stringify(result)}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## queryLastSyncInfo
 
@@ -1243,7 +1362,7 @@ static queryLastSyncInfo(
     ): Promise<Record<string, SyncInfo>>
 ```
 
-Queries information about the last device-cloud sync. This API uses a promise to return the result.
+查询上一次端云同步信息，使用Promise异步回调。
 
 **Since:** 12
 
@@ -1261,42 +1380,42 @@ Queries information about the last device-cloud sync. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| bundleName | string | Yes | Bundle name of the application. |
-| storeId | string | No | Name of the RDB store. The default value is an empty string. If the default value is used, this API queries the last device-cloud sync information of all databases of this application. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| storeId | string | No | 数据库名称。默认值为空字符串，此时查询当前应用下所有数据库上一次端云同步信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, SyncInfo&gt;&gt; | Promise used to return the database name and the result set of the last device-cloud sync. |
+| Promise&lt;Record&lt;string, SyncInfo&gt;&gt; | 返回数据库名以及上一次端云同步的信息结果集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-const accountId:string = "accountId";
-const bundleName:string = "bundleName";
-const storeId:string = "storeId";
+const accountId: string = "accountId";
+const bundleName: string = "bundleName";
+const storeId: string = "storeId";
 try {
-    cloudData.Config.queryLastSyncInfo(accountId, bundleName, storeId).then((result) => {
-    	console.info(`Succeeded in querying last syncinfo. Info is ${JSON.stringify(result)}`);
-	}).catch((err: BusinessError) => {
-    	console.error(`Failed to query last syncinfo. Error code is ${err.code}, message is ${err.message}`);
+  cloudData.Config.queryLastSyncInfo(accountId, bundleName, storeId).then((result) => {
+    console.info(`Succeeded in querying last syncinfo. Info is ${JSON.stringify(result)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to query last syncinfo. Error code is ${err.code}, message is ${err.message}`);
 	});
 } catch(e) {
-    let error = e as BusinessError;
-  	console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1310,7 +1429,7 @@ static queryStatistics(
     ): Promise<Record<string, Array<StatisticInfo>>>
 ```
 
-Queries device-cloud data statistics, which include the data not synced, data synced and consistent, and data synced but inconsistent between the device and the cloud. This API uses a promise to return the result.
+查询端云统计信息，返回未同步、已同步且端云信息一致和已同步且端云信息不一致的统计信息，使用Promise异步回调。
 
 **Since:** 12
 
@@ -1328,38 +1447,38 @@ Queries device-cloud data statistics, which include the data not synced, data sy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | ID of the cloud account. |
-| bundleName | string | Yes | Bundle name of the application. |
-| storeId | string | No | Name of the RDB store. If this parameter is not specified, all local databases of this application are queried by default. |
+| accountId | string | Yes | 已登录的云账号ID。 |
+| bundleName | string | Yes | 应用包名。 |
+| storeId | string | No | 数据库名称。默认值为空字符串，此时将查询当前应用所有的本地数据库。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, Array&lt;StatisticInfo&gt;&gt;&gt; | Promise used to return the table name and statistics. |
+| Promise&lt;Record&lt;string, Array&lt;StatisticInfo&gt;&gt;&gt; | 返回以表名为键、统计信息数组为值的结果集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-const accountId:string = "accountId";
-const bundleName:string = "bundleName";
-const storeId:string = "storeId";
+const accountId: string = "accountId";
+const bundleName: string = "bundleName";
+const storeId: string = "storeId";
 
 cloudData.Config.queryStatistics(accountId, bundleName, storeId).then((result) => {
-    console.info(`Succeeded in querying statistics. Info is ${JSON.stringify(result)}`);
+  console.info(`Succeeded in querying statistics. Info is ${JSON.stringify(result)}`);
 }).catch((err: BusinessError) => {
-    console.error(`Failed to query statistics. Error code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to query statistics. Error code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -1369,7 +1488,7 @@ cloudData.Config.queryStatistics(accountId, bundleName, storeId).then((result) =
 static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>
 ```
 
-Sets a global device-cloud sync strategy. This API uses a promise to return the result.
+设置全局云同步策略，使用Promise异步回调。
 
 **Since:** 12
 
@@ -1387,33 +1506,33 @@ Sets a global device-cloud sync strategy. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the strategy to set. |
-| param | Array&lt;commonType.ValueType&gt; | No | Strategy parameters to set. If this parameter is not specified, the strategy configuration is deleted by default. |
+| strategy | [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | Yes | 配置的策略类型。 |
+| param | Array&lt;commonType.ValueType&gt; | No | 策略参数。不填写时默认为空，默认取消所有配置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 cloudData.Config.setGlobalCloudStrategy(cloudData.StrategyType.NETWORK, [cloudData.NetWorkStrategy.WIFI]).then(() => {
-    console.info('Succeeded in setting the global cloud strategy');
+  console.info('Succeeded in setting the global cloud strategy');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to set global cloud strategy. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set global cloud strategy. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1423,7 +1542,7 @@ cloudData.Config.setGlobalCloudStrategy(cloudData.StrategyType.NETWORK, [cloudDa
 static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>
 ```
 
-Stops syncing data to the cloud.
+停止与云端的数据同步，使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -1443,20 +1562,42 @@ Stops syncing data to the cloud.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
+| bundleInfos | Array&lt;BundleInfo&gt; | Yes | 应用包信息配置数组。取值范围：数组长度为[1, 30]，超过该范围返回14800001错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | : The promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | if permission verification failed, application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| 14800001 | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| 801 | Capability not supported because the device does not support the device-cloud capability. |
+| 201 | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| 202 | if permission verification failed, application which is not a system application uses system API. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleInfos: Array<cloudData.BundleInfo> = [
+  { bundleName: 'com.example.myapplication1' },
+  { bundleName: 'com.example.myapplication2' }
+];
+
+try {
+  cloudData.Config.stopCloudSync(bundleInfos).then(() => {
+    console.info('Succeeded in stopping cloud sync');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to stop cloud sync. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 

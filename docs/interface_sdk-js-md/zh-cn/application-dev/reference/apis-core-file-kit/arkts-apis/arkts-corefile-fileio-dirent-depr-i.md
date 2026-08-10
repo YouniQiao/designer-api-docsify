@@ -1,6 +1,6 @@
 # Dirent
 
-在调用Dirent的方法前，需要先通过[dir.read()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法（同步或异步）来构建一个Dirent实例。
+在调用Dirent的方法前，需要先通过[dir.read()](arkts-corefile-fileio-read-f.md#read)方法（同步或异步）来构建一个Dirent实例。
 
 **起始版本：** 6
 
@@ -40,7 +40,7 @@ isBlockDevice(): boolean
 | --- | --- |
 | boolean | 表示当前目录项是否是块特殊设备。true为是，false为不是。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -73,7 +73,7 @@ isCharacterDevice(): boolean
 | --- | --- |
 | boolean | 表示当前目录项是否是字符特殊设备。true为是，false为不是。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -106,7 +106,7 @@ isDirectory(): boolean
 | --- | --- |
 | boolean | 表示当前目录项是否是目录。true为是，false为不是。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -139,7 +139,7 @@ isFIFO(): boolean
 | --- | --- |
 | boolean | 表示当前目录项是否是FIFO。true为是，false为不是。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -172,7 +172,7 @@ isFile(): boolean
 | --- | --- |
 | boolean | 表示当前目录项是否是普通文件。true为是，false为不是。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -205,7 +205,7 @@ isSocket(): boolean
 | --- | --- |
 | boolean | 表示当前目录项是否是套接字。true为是，false为不是。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -238,7 +238,7 @@ isSymbolicLink(): boolean
 | --- | --- |
 | boolean | 表示当前目录项是否是符号链接。true为是，false为不是。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);

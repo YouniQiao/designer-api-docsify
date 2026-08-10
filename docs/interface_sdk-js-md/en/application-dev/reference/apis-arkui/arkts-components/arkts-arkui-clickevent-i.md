@@ -1,8 +1,8 @@
 # ClickEvent
 
-Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**Inheritance/Implementation:** ClickEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-Gets the coordinates of the top-left corner of the current component based on its real-time position.
+获取点击位置相对于当前组件实时位置的左上角坐标。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  return the coordinates of the top-left corner of the current component based on its real-time position. |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## preventDefault
 
@@ -44,9 +44,9 @@ Gets the coordinates of the top-left corner of the current component based on it
 preventDefault: () => void
 ```
 
-Blocks the default event.
+阻止默认事件。
 
-Note: This API is only supported by the following components: **RichEditor** and **Hyperlink**. An exception is thrown when this API is used with unsupported components. Currently, asynchronous calls and Modifier APIs are not supported.
+**说明：** 该接口仅支持部分组件使用，当前支持组件：RichEditor、Hyperlink，不支持的组件使用时会抛出异常。暂不支持异步调用和提供Modifier接口。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Note: This API is only supported by the following components: **RichEditor** and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
+| 100017 | Component does not support prevent function. |
 
 ## displayX
 
@@ -72,9 +72,9 @@ Note: This API is only supported by the following components: **RichEditor** and
 displayX: number
 ```
 
-X coordinate of the click position in the coordinate system of the current application screen.
+点击位置在当前应用屏幕坐标系中的X坐标。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -96,9 +96,9 @@ Unit: vp
 displayY: number
 ```
 
-Y coordinate of the click position in the coordinate system of the current application screen.
+点击位置在当前应用屏幕坐标系中的Y坐标。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -120,12 +120,11 @@ Unit: vp
 globalDisplayX?: number
 ```
 
-X coordinate of the click position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
-Unit: vp
+单位：vp
 
-Value range: (-∞, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -147,12 +146,11 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the click position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
 
-Unit: vp
+单位：vp
 
-Value range: (-∞, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -174,9 +172,9 @@ Value range: (-∞, +∞).
 hand?: InteractionHand
 ```
 
-Whether the event is triggered by a left-hand or right-hand tap.
+表示事件是由左手点击还是右手点击触发。
 
-**Type:** InteractionHand
+**Type:** [InteractionHand](../arkts-apis/arkts-arkui-interactionhand-e.md)
 
 **Since:** 15
 
@@ -196,12 +194,9 @@ Whether the event is triggered by a left-hand or right-hand tap.
 screenX: number
 ```
 
-X coordinate of the click position in the coordinate system of the current application window.
+点击位置在当前应用窗口坐标系中的X坐标。
 
-Unit: vp
-
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
-**windowX** instead.
+单位：vp
 
 **Type:** number
 
@@ -211,7 +206,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [ClickEvent#windowX](../arkts-apis/arkts-arkui-component/common-clickevent-i.md#windowx)
+**Substitutes:** [ClickEvent#windowX](arkts-arkui-clickevent-i.md#windowx)
 
 <!--Device-ClickEvent-screenX: number--><!--Device-ClickEvent-screenX: number-End-->
 
@@ -223,12 +218,9 @@ Note: This API is supported since API version 7 and deprecated since API version
 screenY: number
 ```
 
-Y coordinate of the click position in the coordinate system of the current application window.
+点击位置在当前应用窗口坐标系中的Y坐标。
 
-Unit: vp
-
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
-**windowY** instead.
+单位：vp
 
 **Type:** number
 
@@ -238,7 +230,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [ClickEvent#windowY](../arkts-apis/arkts-arkui-component/common-clickevent-i.md#windowy)
+**Substitutes:** [ClickEvent#windowY](arkts-arkui-clickevent-i.md#windowy)
 
 <!--Device-ClickEvent-screenY: number--><!--Device-ClickEvent-screenY: number-End-->
 
@@ -250,9 +242,9 @@ Note: This API is supported since API version 7 and deprecated since API version
 windowX: number
 ```
 
-X coordinate of the click position in the coordinate system of the current application window. After distanceThreshold is set for **onClick**, the click position is the lift-off point.
+点击位置在当前应用窗口坐标系中的X坐标。onClick的distanceThreshold设置后，点击位置为抬手点。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -274,9 +266,9 @@ Unit: vp
 windowY: number
 ```
 
-Y coordinate of the click position in the coordinate system of the current application window. After distanceThreshold is set for **onClick**, the click position is the lift-off point.
+点击位置在当前应用窗口坐标系中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -298,10 +290,10 @@ Unit: vp
 x: number
 ```
 
-X coordinate of the click position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ based on the clicked element. After [distanceThreshold]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad device, the click position is the center of the clicked element.
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的  
+[distanceThreshold](arkts-arkui-commonmethod-c.md#onclick)设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -323,10 +315,9 @@ Unit: vp
 y: number
 ```
 
-Y coordinate of the click position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ based on the clicked element. After distanceThreshold is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad device, the click position is the center of the clicked element.
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
 
-Unit: vp
+单位：vp
 
 **Type:** number
 

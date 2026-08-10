@@ -1,9 +1,14 @@
 # Circle
 
-The **Circle** component is used to draw a circle.
-> **Child Components**
+用于绘制圆形的组件。 
+
+> **说明：**
 >
-> None.
+> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+## 子组件
+
+无
 
 ## Circle
 
@@ -29,7 +34,7 @@ use new function to set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No |  |
 
 ## Circle
 
@@ -37,7 +42,7 @@ use new function to set the value.
 Circle(value?: CircleOptions)
 ```
 
-set the value.
+用于绘制圆形的构造函数。调用后创建一个Circle对象，可设置宽高属性。
 
 **Since:** 7
 
@@ -55,7 +60,8 @@ set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | - Options of the circle.\_\_\_HTML\_TAG\_USD\_0\_\_\_The **undefined** and **null** values are treated as invalid and will not take effect.  |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | 设置圆形尺寸。当需要自定义圆形大小时传入此参数，不传入时width和height默认为0。 <br>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## Summary
 
+- [CircleOptions](arkts-arkui-circle-circleoptions-i.md)

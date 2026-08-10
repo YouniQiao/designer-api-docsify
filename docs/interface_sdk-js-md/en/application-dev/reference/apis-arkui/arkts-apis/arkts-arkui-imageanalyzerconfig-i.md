@@ -1,6 +1,6 @@
 # ImageAnalyzerConfig
 
-Provides AI image analyzer configuration.
+图像AI分析配置项。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Provides AI image analyzer configuration.
 types: ImageAnalyzerType[]
 ```
 
-AI image analysis types.
+图像AI分析类型。
 
-**Type:** ImageAnalyzerType[]
+**Type:** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
 
 **Since:** 12
 

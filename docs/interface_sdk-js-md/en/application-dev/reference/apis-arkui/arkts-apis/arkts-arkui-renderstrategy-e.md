@@ -1,6 +1,6 @@
 # RenderStrategy
 
-Enumerates rendering strategies for drawing rounded corners.
+RenderStrategy 的枚举。定义图形渲染策略。
 
 **Since:** 22
 
@@ -16,10 +16,7 @@ Enumerates rendering strategies for drawing rounded corners.
 FAST = 0
 ```
 
-Online rendering mode. The content to be rendered is clipped with rounded corners and directly rendered to the main canvas.
-
-Note: Online rendering may cause display anomalies in certain scenarios. For example, when blur effects are applied within rounded corner components, background colors may interact and create gradient overlay effects. For detailed behavior, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+当前组件及其子组件将直接绘制到画布上，并应用圆角效果。
 
 **Since:** 22
 
@@ -41,11 +38,7 @@ Note: Online rendering may cause display anomalies in certain scenarios. For exa
 OFFSCREEN = 1
 ```
 
-Offscreen rendering mode. The content to be rendered is first rendered to the offscreen canvas without rounded corners, and then clipped with rounded corners and rendered to the main canvas.
-
-**NOTE**
-
-1. Compared with online rendering, offscreen rendering requires additional performance overhead.2. In offscreen rendering, the content is first rendered on an additional canvas, and then rendered on the main canvas.3. Use offscreen rendering primarily for multi-layer components requiring rounded corners. For single components,it has effect only when the [clip]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ attribute, [background]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,or [foreground color]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is configured.
+当前组件及其子组件会先被画到一个离屏画布上，然后进行一些图形渲染操作，最后绘制到主画布上。
 
 **Since:** 22
 

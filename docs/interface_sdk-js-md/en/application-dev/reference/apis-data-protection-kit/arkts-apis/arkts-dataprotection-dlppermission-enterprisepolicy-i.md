@@ -1,6 +1,6 @@
 # EnterprisePolicy
 
-Represents an enterprise custom policy.
+表示企业定制策略。
 
 **Since:** 21
 
@@ -10,13 +10,19 @@ Represents an enterprise custom policy.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## policyString
 
 ```TypeScript
 policyString: string
 ```
 
-JSON string of an enterprise custom policy. The value contains a maximum of 4,194,304 bytes. If the value is out of range, an error log is generated.
+表示企业定制策略的JSON字符串。长度不超过2&lt;sup&gt;22&lt;/sup&gt;字节，超出此范围输出错误日志。
 
 **Type:** string
 

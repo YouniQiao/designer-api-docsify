@@ -10,14 +10,20 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 函数
 
 | 名称 | 说明 |
 | --- | --- |
-| [capture](arkts-arkui-screenshot-capture-f.md#capture) | 获取屏幕全屏截图，使用Promise异步回调。  此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口可实现区域截屏。 |
-| [pick](arkts-arkui-screenshot-pick-f.md#pick) | 获取屏幕截图，当前仅支持获取displayId为0的屏幕截图（如果需要对扩展屏截图，可以通过[capture]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口实现），使用Promise异步回调。 |
+| [capture](arkts-arkui-screenshot-capture-f.md#capture) | 获取屏幕全屏截图，使用Promise异步回调。  此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick](arkts-arkui-screenshot-pick-f.md#pick)接口可实现区域截屏。 |
+| [pick](arkts-arkui-screenshot-pick-f.md#pick) | 获取屏幕截图，当前仅支持获取displayId为0的屏幕截图（如果需要对扩展屏截图，可以通过[capture](arkts-arkui-screenshot-capture-f.md#capture)接口实现），使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -27,7 +33,7 @@
 | [save](arkts-arkui-screenshot-save-f-sys.md#save) | 获取屏幕截图，使用callback异步回调。 |
 | [save](arkts-arkui-screenshot-save-f-sys.md#save-1) | 获取屏幕截图，使用callback异步回调。 |
 | [save](arkts-arkui-screenshot-save-f-sys.md#save-2) | 获取屏幕截图，使用Promise异步回调。 |
-| [saveHdrPicture](arkts-arkui-screenshot-savehdrpicture-f-sys.md#savehdrpicture) | 获取屏幕截图，使用Promise异步回调。SDR为标准动态范围图，HDR为高动态范围图。  - 当物理屏存在HDR资源（包括HDR资源被遮挡）时，无论HDR是否开启，该接口返回一个包含SDR和HDR的PixelMap数组。  - 当物理屏不存在HDR资源时，与[save]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_  接口返回一个SDR的PixelMap不同，该接口返回包含一个SDR的PixelMap数组。同时该接口不具备  [save]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口的裁剪、拉伸、旋转功能。 |
+| [saveHdrPicture](arkts-arkui-screenshot-savehdrpicture-f-sys.md#savehdrpicture) | 获取屏幕截图，使用Promise异步回调。SDR为标准动态范围图，HDR为高动态范围图。  - 当物理屏存在HDR资源（包括HDR资源被遮挡）时，无论HDR是否开启，该接口返回一个包含SDR和HDR的PixelMap数组。  - 当物理屏不存在HDR资源时，与[save](arkts-arkui-screenshot-save-f-sys.md#save)  接口返回一个SDR的PixelMap不同，该接口返回包含一个SDR的PixelMap数组。同时该接口不具备  [save](arkts-arkui-screenshot-save-f-sys.md#save)接口的裁剪、拉伸、旋转功能。 |
 <!--DelEnd-->
 
 ### 接口

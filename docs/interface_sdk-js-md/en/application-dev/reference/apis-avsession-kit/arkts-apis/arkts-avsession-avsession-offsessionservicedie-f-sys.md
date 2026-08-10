@@ -1,5 +1,11 @@
 # offSessionServiceDie (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## offSessionServiceDie
 
 ```TypeScript
@@ -22,12 +28,12 @@ Unregister Session service death callback, notifying the application to clean up
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Used to unregister listener for ('sessionServiceDie') command. |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to unregister listener for ('sessionServiceDie') command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 6600101 | Session service exception. |
+| 202 | Not System App. |
 

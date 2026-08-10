@@ -1,6 +1,6 @@
 # AdsServiceExtensionAbility (System API)
 
-Provides the capability of integrating advertising services with vendors.
+本模块为设备厂商提供广告扩展能力，设备厂商可自主实现单广告位请求和多广告位请求的业务逻辑。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Provides the capability of integrating advertising services with vendors.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { RespCallback } from 'kits/@kit.AdsKit';
+```
+
 ## onLoadAd
 
 ```TypeScript
 onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions, respCallback: RespCallback)
 ```
 
-Called when the media application starts to load an ad.The device vendor needs to implement the ad request service logic in this API and send the result to the media application through a call back.
+单广告位请求业务实现方法，设备厂商需在该方法中实现广告请求业务逻辑并将结果回调给媒体。
 
 **Since:** 11
 
@@ -34,11 +40,11 @@ Called when the media application starts to load an ad.The device vendor needs t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParam | advertising.AdRequestParams | Yes | Ad request parameters. |
-| adOptions | advertising.AdOptions | Yes | Ad configuration options. |
-| respCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ad request callback. |
+| adParam | advertising.AdRequestParams | Yes | 广告请求参数。 |
+| adOptions | advertising.AdOptions | Yes | 广告配置参数。 |
+| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes | 广告请求回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
@@ -60,7 +66,7 @@ onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: adver
     respCallback: RespCallback)
 ```
 
-Called when the media application starts to load multiple ads.The device vendor needs to implement the ad request service logic in this API and send the result to the media application through a call back.
+多广告位请求业务实现方法，设备厂商需在该方法中实现广告请求业务逻辑并将结果回调给媒体。
 
 **Since:** 11
 
@@ -76,11 +82,11 @@ Called when the media application starts to load multiple ads.The device vendor 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParams | advertising.AdRequestParams[] | Yes | Ad request parameters. |
-| adOptions | advertising.AdOptions | Yes | Ad configuration options. |
-| respCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ad request callback. |
+| adParams | advertising.AdRequestParams[] | Yes | 广告请求参数。 |
+| adOptions | advertising.AdOptions | Yes | 广告配置参数。 |
+| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes | 广告请求回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';

@@ -10,6 +10,12 @@ HashMap底层采用数组、链表和红黑树实现，支持高效查询、插�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { HashMap } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
@@ -32,30 +38,7 @@ $_iterator(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | HashMap的迭代器。 |
-
-**示例：**
-
-```TypeScript
-let hashMap = new HashMap<string, int>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 456);
-
-// 使用方法一：
-for (let item of hashMap) {
-  console.info("key:" + item[0]);
-  console.info("value:" + item[1]);
-}
-
-// 使用方法二：
- let iter = hashMap.$_iterator();
- let temp: IteratorResult<[string, int]> = iter.next();
- while(!temp.done) {
-   console.info("key:" + temp.value![0]);
-   console.info("value:" + temp.value![1]);
-   temp = iter.next();
- }
-```
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | HashMap的迭代器。 |
 
 ## [Symbol.iterator]
 
@@ -79,15 +62,15 @@ for (let item of hashMap) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -152,11 +135,9 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -164,17 +145,6 @@ hashMap.set("squirrel", 123);
 hashMap.set("sparrow", 356);
 hashMap.clear();
 let result = hashMap.isEmpty();
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashMap: HashMap<string, int> = new HashMap<string, int>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-hashMap.clear();
-let result = hashMap.isEmpty(); 
 console.info("result:", result);  // result: true
 ```
 
@@ -200,20 +170,12 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The HashMap's constructor cannot be directly invoked. |
+| 10200012 | The HashMap's constructor cannot be directly invoked. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashMap: HashMap<string, int> = new HashMap<string, int>();
 ```
 
 ## entries
@@ -238,17 +200,15 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| 10200011 | The entries method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -271,33 +231,6 @@ for (let i = 0; i < 10; i++) {
 }
 
 for (let i = 0; i < 10; i++) {
-  hashMap.remove("sparrow" + i);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashMap = new HashMap<string, int>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let iter = hashMap.entries();
-let temp: IteratorResult<[string, int]> = iter.next();
-while(!temp.done) {
-  console.info("key:" + temp.value![0]);
-  console.info("value:" + temp.value![1]);
-  temp = iter.next();
-}
-```
-
-```TypeScript
-// 不建议在entries中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
-let hashMap = new HashMap<string, int>();
-for(let i = 0; i < 10; i++) {
-  hashMap.set("sparrow" + i, 123);
-}
-
-for(let i = 0; i < 10; i++) {
   hashMap.remove("sparrow" + i);
 }
 ```
@@ -331,9 +264,9 @@ forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -380,21 +313,7 @@ forEach(callbackFn: HashMapCbFn<K, V>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | 是 | 用于遍历容器中元素的回调函数。 |
-
-**示例：**
-
-```TypeScript
-import { HashMapCbFn } from '@kit.ArkTS';
-
-let hashMap: HashMap<string, int> = new HashMap<string, int>();
-hashMap.set("sparrow", 123);
-hashMap.set("gull", 357);
-let hashMapCb: HashMapCbFn<string, int> = (value: int, key: string, map: HashMap<string, int>) => {
-  console.info("value: " + value, " key: " + key);
-};
-hashMap.forEach(hashMapCb);
-```
+| callbackFn | [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md)&lt;K, V&gt; | 是 | 用于遍历容器中元素的回调函数。 |
 
 ## get
 
@@ -430,9 +349,9 @@ get(key: K): V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound. |
+| 10200011 | The get method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -472,16 +391,6 @@ get(key: K): V | undefined
 | --- | --- |
 | V | 值或undefined。 |
 
-**示例：**
-
-```TypeScript
-const hashMap: HashMap<string, int> = new HashMap<string, int>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let result = hashMap.get("sparrow");
-console.info("result:", result);  // result: 356
-```
-
 ## hasKey
 
 ```TypeScript
@@ -516,22 +425,12 @@ hasKey(key: K): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasKey method cannot be bound. |
+| 10200011 | The hasKey method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
-const hashMap: HashMap<string, number> = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-let result = hashMap.hasKey("squirrel");
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const hashMap = new HashMap<string, int>();
+let hashMap = new HashMap<string, number>();
 hashMap.set("squirrel", 123);
 let result = hashMap.hasKey("squirrel");
 console.info("result:", result);  // result: true
@@ -571,22 +470,12 @@ hasValue(value: V): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasValue method cannot be bound. |
+| 10200011 | The hasValue method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-let result = hashMap.hasValue(123);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const hashMap = new HashMap<string, int>();
 hashMap.set("squirrel", 123);
 let result = hashMap.hasValue(123);
 console.info("result:", result);  // result: true
@@ -620,24 +509,14 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
 let result = hashMap.isEmpty();
 console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const hashMap: HashMap<string, int> = new HashMap<string, int>();
-let result = hashMap.isEmpty();
-console.info("result = ", result) // result = true
 ```
 
 ## keys
@@ -662,17 +541,15 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;K&gt; | 返回包含此HashMap中所有key的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 返回包含此HashMap中所有key的迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
+| 10200011 | The keys method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -681,22 +558,6 @@ hashMap.set("sparrow", 356);
 let keys = hashMap.keys();
 for (let key of keys) {
   console.info("key:" + key);
-}
-// key:squirrel
-// key:sparrow
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashMap: HashMap<string, int> = new HashMap<string, int>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let iter = hashMap.keys();
-let temp = iter.next();
-while(!temp.done) {
-  console.info("value:" + temp.value);
-  temp = iter.next();
 }
 // key:squirrel
 // key:sparrow
@@ -736,9 +597,9 @@ remove(key: K): V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -778,18 +639,6 @@ remove(key: K): V | undefined
 | --- | --- |
 | V | 如果删除了指定key则返回其关联的值，否则返回undefined。 |
 
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashMap: HashMap<string, int> = new HashMap<string, int>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let result = hashMap.remove("sparrow");
-console.info("result:", result);  // result: 356
-```
-
 ## replace
 
 ```TypeScript
@@ -825,23 +674,12 @@ replace(key: K, newValue: V): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The replace method cannot be bound. |
+| 10200011 | The replace method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
-hashMap.set("sparrow", 123);
-let result = hashMap.replace("sparrow", 357);
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashMap = new HashMap<string, int>();
 hashMap.set("sparrow", 123);
 let result = hashMap.replace("sparrow", 357);
 console.info("result:", result);  // result: true
@@ -882,22 +720,12 @@ set(key: K, value: V): Object
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+| 10200011 | The set method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-console.info("result:", hashMap.get("squirrel"));  // result: 123
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashMap = new HashMap<string, int>();
 hashMap.set("squirrel", 123);
 console.info("result:", hashMap.get("squirrel"));  // result: 123
 ```
@@ -924,17 +752,15 @@ setAll(map: HashMap<K, V>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| map | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | 是 | 需要将其全部元素添加到当前HashMap的源HashMap对象。若map与当前HashMap存在重复key，map中的value将替换当前HashMap中对应key的value。 |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | 是 | 需要将其全部元素添加到当前HashMap的源HashMap对象。若map与当前HashMap存在重复key，map中的value将替换当前HashMap中对应key的value。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The setAll method cannot be bound. |
+| 10200011 | The setAll method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -944,19 +770,6 @@ let newHashMap = new HashMap<string, number>();
 newHashMap.set("newMap", 99);
 hashMap.setAll(newHashMap);
 let result = hashMap.hasKey("newMap");
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const hashMap: HashMap<string, int> = new HashMap<string, int>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let newHashMap: HashMap<string, int> = new HashMap<string, int>();
-newHashMap.set("newMap", 99);
-hashMap.setAll(newHashMap);
-let result = hashMap.hasKey("newMap"); 
 console.info("result:", result);  // result: true
 ```
 
@@ -982,17 +795,15 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;V&gt; | 返回包含此HashMap中所有value的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 返回包含此HashMap中所有value的迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| 10200011 | The values method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -1003,22 +814,6 @@ for (let value of values) {
   console.info("value:", value);
 }
 // value: 123
-// value: 356
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashMap: HashMap<string, int> = new HashMap<string, int>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let iter = hashMap.values();
-let temp = iter.next();
-while(!temp.done) {
-  console.info("value:" + temp.value);
-  temp = iter.next();
-}
-// value: 123 
 // value: 356
 ```
 

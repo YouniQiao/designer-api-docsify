@@ -4,18 +4,19 @@
 
 ## 子组件
 
-必须包含两个子组件，其中第二个子组件必须为[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    子组件个数异常时：  
-    
-    1. 有且仅有1个时，触发路由到NavDestination的能力失效。  
-    
-    2. 有且仅有1个时，且使用NavDestination场景下，不进行路由。  
-    
-    3. 大于2个时，后续的子组件不显示。  
-    
-    4. 第二个子组件不为NavDestination时，触发路由功能失效。
+必须包含两个子组件，其中第二个子组件必须为[NavDestination]{@link nav_destination}。
+
+> **说明：**
+> 
+> 子组件个数异常时：
+> 
+> 1. 有且仅有1个时，触发路由到NavDestination的能力失效。
+> 
+> 2. 有且仅有1个时，且使用NavDestination场景下，不进行路由。
+> 
+> 3. 大于2个时，后续的子组件不显示。
+> 
+> 4. 第二个子组件不为NavDestination时，触发路由功能失效。
 
 ## NavRouter
 
@@ -67,7 +68,9 @@ NavRouter(value: RouteInfo)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路由信息。  |
+| value | [RouteInfo](../../apis-network-kit/arkts-apis/arkts-network-vpnextension-routeinfo-t.md) | 是 | 路由信息。 |
 
 ## 汇总
 
+- [RouteInfo](arkts-arkui-navrouter-routeinfo-i.md)
+- [NavRouteMode](arkts-arkui-navrouter-navroutemode-e.md)

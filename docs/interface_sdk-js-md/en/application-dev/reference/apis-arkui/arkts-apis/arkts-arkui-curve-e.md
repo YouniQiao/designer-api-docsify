@@ -1,7 +1,6 @@
 # Curve
 
-Enumerates the interpolation curves. For details about the animation, see \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_.
+插值曲线，动效请参考&lt;!--RP1--&gt;[贝塞尔曲线](../../../../design/ux-design/animation-attributes.md)&lt;!--RP1End--&gt;。
 
 **Since:** 7
 
@@ -17,7 +16,7 @@ Enumerates the interpolation curves. For details about the animation, see \_\_\_
 Linear
 ```
 
-The animation maintains a constant speed throughout the process.
+表示动画在整个过程中速度保持一致。
 
 **Since:** 7
 
@@ -37,7 +36,7 @@ The animation maintains a constant speed throughout the process.
 Ease
 ```
 
-The animation starts slowly, accelerates, and then decelerates before ending. The curve is cubic-bezier(0.25, 0.1,0.25, 1.0).
+表示动画以低速开始，然后加快，在结束前减速，CubicBezier(0.25, 0.1, 0.25, 1.0)。
 
 **Since:** 7
 
@@ -57,7 +56,7 @@ The animation starts slowly, accelerates, and then decelerates before ending. Th
 EaseIn
 ```
 
-The animation starts at a low speed and then picks up speed until the end. The cubic-bezier(0.42, 0.0, 1.0, 1.0)is used.
+表示动画以低速开始，CubicBezier(0.42, 0.0, 1.0, 1.0)。
 
 **Since:** 7
 
@@ -77,7 +76,7 @@ The animation starts at a low speed and then picks up speed until the end. The c
 EaseOut
 ```
 
-The animation ends at a low speed. The cubic-bezier(0.0, 0.0, 0.58, 1.0) is used.
+表示动画以低速结束，CubicBezier(0.0, 0.0, 0.58, 1.0)。
 
 **Since:** 7
 
@@ -97,7 +96,7 @@ The animation ends at a low speed. The cubic-bezier(0.0, 0.0, 0.58, 1.0) is used
 EaseInOut
 ```
 
-The animation starts and ends at a low speed. The cubic-bezier curve(0.42, 0.0, 0.58, 1.0) is used.
+表示动画以低速开始和结束，CubicBezier(0.42, 0.0, 0.58, 1.0)。
 
 **Since:** 7
 
@@ -117,7 +116,7 @@ The animation starts and ends at a low speed. The cubic-bezier curve(0.42, 0.0, 
 FastOutSlowIn
 ```
 
-The animation uses the standard cubic-bezier curve(0.4, 0.0, 0.2, 1.0).
+标准曲线，CubicBezier(0.4, 0.0, 0.2, 1.0)。
 
 **Since:** 7
 
@@ -137,7 +136,7 @@ The animation uses the standard cubic-bezier curve(0.4, 0.0, 0.2, 1.0).
 LinearOutSlowIn
 ```
 
-The animation uses the deceleration cubic-bezier curve(0.0, 0.0, 0.2, 1.0).
+减速曲线，CubicBezier(0.0, 0.0, 0.2, 1.0)。
 
 **Since:** 7
 
@@ -157,7 +156,7 @@ The animation uses the deceleration cubic-bezier curve(0.0, 0.0, 0.2, 1.0).
 FastOutLinearIn
 ```
 
-The animation uses the acceleration cubic-bezier curve(0.4, 0.0, 1.0, 1.0).
+加速曲线，CubicBezier(0.4, 0.0, 1.0, 1.0)。
 
 **Since:** 7
 
@@ -177,7 +176,7 @@ The animation uses the acceleration cubic-bezier curve(0.4, 0.0, 1.0, 1.0).
 ExtremeDeceleration
 ```
 
-The animation uses the extreme deceleration cubic-bezier curve(0.0, 0.0, 0.0, 1.0).
+急缓曲线，CubicBezier(0.0, 0.0, 0.0, 1.0)。
 
 **Since:** 7
 
@@ -197,7 +196,7 @@ The animation uses the extreme deceleration cubic-bezier curve(0.0, 0.0, 0.0, 1.
 Sharp
 ```
 
-The animation uses the sharp cubic-bezier curve(0.33, 0.0, 0.67, 1.0).
+锐利曲线，CubicBezier(0.33, 0.0, 0.67, 1.0)。
 
 **Since:** 7
 
@@ -217,7 +216,7 @@ The animation uses the sharp cubic-bezier curve(0.33, 0.0, 0.67, 1.0).
 Rhythm
 ```
 
-The animation uses the rhythm cubic-bezier curve(0.7, 0.0, 0.2, 1.0).
+节奏曲线，CubicBezier(0.7, 0.0, 0.2, 1.0)。
 
 **Since:** 7
 
@@ -237,7 +236,7 @@ The animation uses the rhythm cubic-bezier curve(0.7, 0.0, 0.2, 1.0).
 Smooth
 ```
 
-The animation uses the smooth cubic-bezier curve(0.4, 0.0, 0.4, 1.0).
+平滑曲线，CubicBezier(0.4, 0.0, 0.4, 1.0)。
 
 **Since:** 7
 
@@ -257,7 +256,7 @@ The animation uses the smooth cubic-bezier curve(0.4, 0.0, 0.4, 1.0).
 Friction
 ```
 
-The animation uses the friction cubic-bezier curve(0.2, 0.0, 0.2, 1.0).
+阻尼曲线，CubicBezier(0.2, 0.0, 0.2, 1.0)。
 
 **Since:** 7
 

@@ -1,6 +1,6 @@
 # GyroscopeUncalibratedResponse
 
-Describes the uncalibrated gyroscope sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+未校准陀螺仪传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** GyroscopeUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the uncalibrated gyroscope sensor data. It extends from [Response]\_\_
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## biasX
 
 ```TypeScript
 biasX: double
 ```
 
-Uncalibrated angular velocity bias of rotation around the x-axis of the device, in rad/s.
+设备x轴方向未校准的旋转角速度偏量（估计的角速度偏差）。单位：rad/s（弧度/秒）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -36,9 +42,9 @@ Uncalibrated angular velocity bias of rotation around the x-axis of the device, 
 biasY: double
 ```
 
-Uncalibrated angular velocity bias of rotation around the y-axis of the device, in rad/s.
+设备y轴方向未校准的旋转角速度偏量（估计的角速度偏差）。单位：rad/s（弧度/秒）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -54,9 +60,9 @@ Uncalibrated angular velocity bias of rotation around the y-axis of the device, 
 biasZ: double
 ```
 
-Uncalibrated angular velocity bias of rotation around the z-axis of the device, in rad/s.
+设备z轴方向未校准的旋转角速度偏量（估计的角速度偏差）。单位：rad/s（弧度/秒）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -72,9 +78,9 @@ Uncalibrated angular velocity bias of rotation around the z-axis of the device, 
 x: double
 ```
 
-Uncalibrated angular velocity of rotation around the x-axis of the device, in rad/s.
+设备x轴方向未校准的旋转角速度。单位：rad/s（弧度/秒）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -90,9 +96,9 @@ Uncalibrated angular velocity of rotation around the x-axis of the device, in ra
 y: double
 ```
 
-Uncalibrated angular velocity of rotation around the y-axis of the device, in rad/s.
+设备y轴方向未校准的旋转角速度。单位：rad/s（弧度/秒）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -108,9 +114,9 @@ Uncalibrated angular velocity of rotation around the y-axis of the device, in ra
 z: double
 ```
 
-Uncalibrated angular velocity of rotation around the z-axis of the device, in rad/s.
+设备z轴方向未校准的旋转角速度。单位：rad/s（弧度/秒）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

@@ -1,0 +1,34 @@
+# CommonProgressStyleOptions
+
+进度条通用样式选项。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare interface CommonProgressStyleOptions--><!--Device-unnamed-export declare interface CommonProgressStyleOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## enableSmoothEffect
+
+```TypeScript
+enableSmoothEffect?: boolean
+```
+
+进度平滑动效的开关。开启平滑动效后设置进度，进度会从当前值渐变至设定值，页面会有进度变化的动效；否则进度从当前值突变至设定值，页面无动效。true：表示开启进度平滑动效。false：表示关闭进度平滑动效。默认值：true。
+
+**Type:** boolean
+
+**Default:** true
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CommonProgressStyleOptions-enableSmoothEffect?: boolean--><!--Device-CommonProgressStyleOptions-enableSmoothEffect?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

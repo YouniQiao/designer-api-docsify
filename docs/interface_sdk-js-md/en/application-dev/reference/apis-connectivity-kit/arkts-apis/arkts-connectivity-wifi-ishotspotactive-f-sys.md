@@ -1,5 +1,11 @@
 # isHotspotActive (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isHotspotActive
 
 ```TypeScript
@@ -30,7 +36,7 @@ Checks whether Wi-Fi hotspot is active on a device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

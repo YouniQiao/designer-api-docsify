@@ -1,12 +1,18 @@
 # getSuperAdmin
 
+## Modules to Import
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## getSuperAdmin
 
 ```TypeScript
 function getSuperAdmin(): Promise<Want>
 ```
 
-Queries the super device administrator application of this first user (u100). This API uses a promise to return the result.
+查询首用户（u100）下的超级设备管理应用。使用Promise异步回调。
 
 **Since:** 12
 
@@ -22,15 +28,15 @@ Queries the super device administrator application of this first user (u100). Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the super device administrator application obtained. If no super device administrator application is activated on the device, **bundleName** and **abilityName** in **Want** returned are empty strings. |
+| Promise&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 返回超级设备管理应用的Promise对象。当设备没有激活超级管理应用时，返回的Promise中Want的bundleName与abilityName为空串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

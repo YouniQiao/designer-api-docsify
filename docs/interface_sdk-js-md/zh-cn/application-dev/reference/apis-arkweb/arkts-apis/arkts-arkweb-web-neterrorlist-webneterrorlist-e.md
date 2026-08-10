@@ -864,7 +864,7 @@ ERR_ALPN_NEGOTIATION_FAILED = -122
 ERR_SSL_NO_RENEGOTIATION = -123
 ```
 
-对方发送了SSL no\_renegotiation警报消息。
+对方发送了SSL no_renegotiation警报消息。
 
 **起始版本：** 23
 
@@ -912,7 +912,7 @@ SSL对等端向本端发送了致命的解压失败警报。当对等方错误�
 ERR_SSL_BAD_RECORD_MAC_ALERT = -126
 ```
 
-SSL对等端向本端发送了致命的bad\_record\_mac警报。一个对DEFLATE支持有问题的服务器可能发生这个情况。
+SSL对等端向本端发送了致命的bad_record_mac警报。一个对DEFLATE支持有问题的服务器可能发生这个情况。
 
 **起始版本：** 23
 
@@ -1232,7 +1232,7 @@ ERR_CLIENT_AUTH_CERT_TYPE_UNSUPPORTED = -151
 ERR_SSL_DECRYPT_ERROR_ALERT = -153
 ```
 
-SSL对等端向本端发送了致命的decrypt\_error警报。当对等方无法正确验证签名（在CertificateVerify或ServerKeyExchange中）或验证Finished消息时，通常会发生这种情况。
+SSL对等端向本端发送了致命的decrypt_error警报。当对等方无法正确验证签名（在CertificateVerify或ServerKeyExchange中）或验证Finished消息时，通常会发生这种情况。
 
 **起始版本：** 23
 
@@ -2242,7 +2242,7 @@ ERR_NETWORK_IO_SUSPENDED = -331
 ERR_SYN_REPLY_NOT_RECEIVED = -332
 ```
 
-在流上未接收到SYN\_REPLY的情况下接收到的FLIP数据。
+在流上未接收到SYN_REPLY的情况下接收到的FLIP数据。
 
 **起始版本：** 23
 
@@ -2722,7 +2722,7 @@ ERR_PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION = -364
 ERR_HTTP_1_1_REQUIRED = -365
 ```
 
-在 HTTP/2 会话中收到 HTTP\_1\_1\_REQUIRED 错误代码。
+在 HTTP/2 会话中收到 HTTP_1_1_REQUIRED 错误代码。
 
 **起始版本：** 23
 
@@ -2738,7 +2738,7 @@ ERR_HTTP_1_1_REQUIRED = -365
 ERR_PROXY_HTTP_1_1_REQUIRED = -366
 ```
 
-在通过 HTTP/2 会话代理时收到 HTTP\_1\_1\_REQUIRED 错误代码。
+在通过 HTTP/2 会话代理时收到 HTTP_1_1_REQUIRED 错误代码。
 
 **起始版本：** 23
 
@@ -2802,7 +2802,7 @@ ERR_CONTENT_DECODING_INIT_FAILED = -371
 ERR_HTTP2_RST_STREAM_NO_ERROR_RECEIVED = -372
 ```
 
-收到带有 NO\_ERROR 错误代码的 HTTP/2 RST\_STREAM 帧。此错误应由 HTTP/2 代码内部处理，而不应超过 SpdyStream 层。
+收到带有 NO_ERROR 错误代码的 HTTP/2 RST_STREAM 帧。此错误应由 HTTP/2 代码内部处理，而不应超过 SpdyStream 层。
 
 **起始版本：** 23
 
@@ -2962,7 +2962,7 @@ ERR_QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED = -381
 ERR_TOO_MANY_ACCEPT_CH_RESTARTS = -382
 ```
 
-ACCEPT\_CH 重启已被触发太多次。
+ACCEPT_CH 重启已被触发太多次。
 
 **起始版本：** 23
 

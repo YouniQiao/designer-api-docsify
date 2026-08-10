@@ -1,6 +1,6 @@
 # StorageRequest
 
-Enumerates the storage status that triggers the deferred task callback.
+触发延迟任务回调的存储状态。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the storage status that triggers the deferred task callback.
 STORAGE_LEVEL_LOW = 0
 ```
 
-The storage space is insufficient.
+表示这个触发条件是存储空间不足。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ The storage space is insufficient.
 STORAGE_LEVEL_OKAY = 1
 ```
 
-The storage space is restored from insufficient to normal.
+表示这个触发条件是从存储空间不足恢复到正常。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The storage space is restored from insufficient to normal.
 STORAGE_LEVEL_LOW_OR_OKAY = 2
 ```
 
-The storage space is insufficient, or the storage space is restored from insufficient to normal.
+表示这个触发条件是存储空间不足或者从存储空间不足恢复到正常。
 
 **Since:** 9
 

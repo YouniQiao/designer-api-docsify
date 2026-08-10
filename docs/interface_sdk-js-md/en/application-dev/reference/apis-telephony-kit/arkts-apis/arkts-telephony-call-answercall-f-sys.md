@@ -1,5 +1,11 @@
 # answerCall (System API)
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## answerCall
 
 ```TypeScript
@@ -24,22 +30,22 @@ Answers the incoming call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the identifier of the call to answer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of answerCall. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call to answer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of answerCall. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -78,7 +84,7 @@ Answers the incoming call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Indicates the identifier of the call to answer. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Indicates the identifier of the call to answer. |
 
 **Return value:**
 
@@ -90,15 +96,15 @@ Answers the incoming call.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -135,8 +141,8 @@ Answers the incoming video call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| videoState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the answer the call with video or voice. |
-| callId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the identifier of the call to answer. |
+| videoState | [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md) | Yes | Indicates the answer the call with video or voice. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call to answer. |
 
 **Return value:**
 
@@ -148,15 +154,15 @@ Answers the incoming video call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -193,8 +199,8 @@ Answers the incoming rtt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| videoState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the answer the call with video or voice. |
-| callId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the identifier of the call to answer. |
+| videoState | [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md) | Yes | Indicates the answer the call with video or voice. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call to answer. |
 | isRtt | boolean | Yes | Indicates the call is rtt or not. |
 
 **Return value:**
@@ -207,10 +213,10 @@ Answers the incoming rtt
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | 8400001 | Invalid parameter value. |
 | 8400002 | Operation failed. Cannot connect to service. |
 | 8400003 | System internal error. |
 | 8400999 | Unknown error code. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 

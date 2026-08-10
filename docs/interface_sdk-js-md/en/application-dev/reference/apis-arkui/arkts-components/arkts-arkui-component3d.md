@@ -1,6 +1,6 @@
 # Component3D
 
-Defines Component3D component.
+定义Component3D组件.
 
 ## Component3D
 
@@ -8,7 +8,7 @@ Defines Component3D component.
 Component3D(sceneOptions?: SceneOptions)
 ```
 
-SceneOptions used by constructor
+构造函数使用的SceneOptions
 
 **Since:** 12
 
@@ -24,7 +24,10 @@ SceneOptions used by constructor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sceneOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The 3D scene controller  |
+| sceneOptions | [SceneOptions](../arkts-apis/arkts-arkui-component3d-sceneoptions-i.md) | No | 3D场景控制器 |
 
 ## Summary
 
+- [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md)
+- [Scene](arkts-arkui-component3d-scene-t.md)
+- [ModelType](arkts-arkui-component3d-modeltype-e.md)

@@ -1,12 +1,18 @@
 # getUserDesktopDir
 
+## Modules to Import
+
+```TypeScript
+import { Environment } from 'kits/@kit.CoreFileKit';
+```
+
 ## getUserDesktopDir
 
 ```TypeScript
 function getUserDesktopDir(): string
 ```
 
-Obtains the sandbox path of the pre-authorized **Desktop** directory.
+获取当前用户预授权桌面目录的沙箱路径。
 
 **Since:** 11
 
@@ -23,16 +29,17 @@ Obtains the sandbox path of the pre-authorized **Desktop** directory.
 
 | Type | Description |
 | --- | --- |
-| string | Sandbox path of the **Desktop** directory obtained. |
+| string | 返回当前用户预授权桌面目录的沙箱路径。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**Applicable version:** 11 and later |
 | 13900042 | Unknown error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## displayId
 
 ```TypeScript
@@ -20,7 +26,7 @@ displayId?: int
 
 从API version 20开始，该接口支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -38,13 +44,13 @@ displayId?: int
 x: int
 ```
 
-坐标点的横坐标，取值大于0的整数。
+坐标点的横坐标，取值大于等于0的整数，单位：px。
 
 **说明：** 从API version 20开始，该属性不再为只读属性。
 
 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -62,13 +68,13 @@ x: int
 y: int
 ```
 
-坐标点的纵坐标，取值大于0的整数。
+坐标点的纵坐标，取值大于等于0的整数，单位：px。
 
 **说明：** 从API version 20开始，该属性不再为只读属性。
 
 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

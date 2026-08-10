@@ -1,5 +1,11 @@
 # getPrimaryDisplaySync
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getPrimaryDisplaySync
 
 ```TypeScript
@@ -22,15 +28,15 @@ function getPrimaryDisplaySync(): Display
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前设备主屏幕的Display对象。 |
+| [Display](arkts-arkui-display-display-i.md) | 当前设备主屏幕的Display对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: Invalid display id. |
+| 1400001 | Invalid display or screen. Possible cause: Invalid display id. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let displayClass: display.Display | null = null;

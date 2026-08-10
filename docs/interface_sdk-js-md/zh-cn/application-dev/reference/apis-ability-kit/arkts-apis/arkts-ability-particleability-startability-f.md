@@ -1,5 +1,11 @@
 # startAbility
 
+## 导入模块
+
+```TypeScript
+import { particleAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## startAbility
 
 ```TypeScript
@@ -7,9 +13,10 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 ```
 
 启动指定的particleAbility。使用callback异步回调。
-    **说明：**  
-    
-    组件启动规则详见：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 7
 
@@ -25,10 +32,10 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示启动的ability。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当启动指定的particleAbility成功，err为undefined，否则为错误对象。 |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | 是 | 表示启动的ability。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动指定的particleAbility成功，err为undefined，否则为错误对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { particleAbility, wantConstant } from '@kit.AbilityKit';
@@ -65,9 +72,10 @@ function startAbility(parameter: StartAbilityParameter): Promise<void>
 ```
 
 启动指定的particleAbility。使用Promise异步回调。
-    **说明：**  
-    
-    组件启动规则详见：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 7
 
@@ -83,7 +91,7 @@ function startAbility(parameter: StartAbilityParameter): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示启动的ability。 |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | 是 | 表示启动的ability。 |
 
 **返回值：**
 
@@ -91,7 +99,7 @@ function startAbility(parameter: StartAbilityParameter): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { particleAbility, wantConstant } from '@kit.AbilityKit';

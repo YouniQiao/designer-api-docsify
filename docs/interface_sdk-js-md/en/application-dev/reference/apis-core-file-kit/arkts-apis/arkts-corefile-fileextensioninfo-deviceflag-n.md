@@ -1,6 +1,6 @@
 # DeviceFlag
 
-Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is used to determine whether a capability is available through the AND operation.
+组成RootInfo中的deviceFlags字段，通过与运算判断是否具备某种能力。
 
 **Since:** 9
 
@@ -8,11 +8,19 @@ Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is u
 
 **Deprecated since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-fileExtensionInfo-namespace DeviceFlag--><!--Device-fileExtensionInfo-namespace DeviceFlag-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
+```
 
 ## Summary
 
@@ -21,7 +29,7 @@ Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is u
 
 | Name | Description |
 | --- | --- |
-| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) | The device supports read. |
-| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) | The device supports write. |
+| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) | 此设备支持读。 |
+| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) | 此设备支持写。 |
 <!--DelEnd-->
 

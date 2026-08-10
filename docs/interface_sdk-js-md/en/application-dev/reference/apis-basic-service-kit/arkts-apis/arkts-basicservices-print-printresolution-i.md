@@ -1,6 +1,6 @@
 # PrintResolution
 
-Defines the resolution for printing.
+定义打印分辨率的接口。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Defines the resolution for printing.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## horizontalDpi
 
 ```TypeScript
 horizontalDpi: int
 ```
 
-Horizontal DPI.
+表示水平DPI。单位：DPI。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -34,7 +40,7 @@ Horizontal DPI.
 id: string
 ```
 
-Resolution ID.
+表示分辨率ID。
 
 **Type:** string
 
@@ -52,9 +58,9 @@ Resolution ID.
 verticalDpi: int
 ```
 
-Vertical DPI.
+表示垂直DPI。单位：DPI。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

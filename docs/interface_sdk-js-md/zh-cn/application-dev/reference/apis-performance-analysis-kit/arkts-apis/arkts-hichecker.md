@@ -10,6 +10,12 @@ HiChecker������ΪӦ�ÿ����׶�ʹ�õļ�⹤�ߣ���
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -17,12 +23,12 @@ HiChecker������ΪӦ�ÿ����׶�ʹ�õļ�⹤�ߣ���
 | 名称 | 说明 |
 | --- | --- |
 | [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule) | ����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м�������������Ӧ���򴥷�ʱ����hilog��grep HiChecker�鿴������Ϣ�� |
-| [addRule](arkts-performanceanalysis-hichecker-addrule-f.md#addrule) | **˵����**     ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.addCheckRule]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_�����  ����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м������� |
-| [contains](arkts-performanceanalysis-hichecker-contains-f.md#contains) | **˵����**     ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.containsCheckRule]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_�����  ��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ�� |
+| [addRule](arkts-performanceanalysis-hichecker-addrule-f.md#addrule) | > **˵����** >  > ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule)�����  ����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м������� |
+| [contains](arkts-performanceanalysis-hichecker-contains-f.md#contains) | > **˵����** >  > ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containscheckrule)�����  ��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ�� |
 | [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containscheckrule) | ��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ�� |
 | [getRule](arkts-performanceanalysis-hichecker-getrule-f.md#getrule) | ��ȡ��ǰ�̹߳��򡢽��̹��򡢸澯����ĺϼ��� |
 | [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule) | ɾ��һ�����������ɾ���Ĺ��������������Ч�� |
-| [removeRule](arkts-performanceanalysis-hichecker-removerule-f.md#removerule) | **˵����**     ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.removeCheckRule]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_�����  ɾ��һ�����������ɾ���Ĺ��������������Ч�� |
+| [removeRule](arkts-performanceanalysis-hichecker-removerule-f.md#removerule) | > **˵����** >  > ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule)�����  ɾ��һ�����������ɾ���Ĺ��������������Ч�� |
 
 ### 常量
 

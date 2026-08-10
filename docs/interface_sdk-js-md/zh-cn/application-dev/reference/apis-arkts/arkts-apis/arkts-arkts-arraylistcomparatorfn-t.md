@@ -22,12 +22,12 @@ ArrayList中sort方法的比较器类型。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| firstValue | T | 是 | 需要排序的前一项元素。  |
-| secondValue | T | 是 | 需要排序的后一项元素。  |
+| firstValue | T | 是 | 需要排序的前一项元素。 |
+| secondValue | T | 是 | 需要排序的后一项元素。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | number类型。  |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | number类型。 |
 

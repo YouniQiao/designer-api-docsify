@@ -1,16 +1,14 @@
 # StarStyleOptions
 
-Provides style settings for the selected, unselected, and partially selected stars in the **Rating** component.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
-    **NOTE**  
-    
-    The string type can be used to load network images and local images. When a relative path is used to reference a  
-    local image, for example, **Image("common/test.jpg")**, the **common** directory must be placed at the same level  
-    as the **pages** directory. Base64-encoded strings are also supported.
+评分组件选中、未选中以及部分选中的星级样式。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> string格式可用于加载网络图片和本地图片。当使用相对路径引用本地图片时，例如Image("common/test.jpg")，其中common目录与pages同级，同时支持Base64字符串。
 
 **Since:** 18
 
@@ -26,12 +24,12 @@ Provides style settings for the selected, unselected, and partially selected sta
 backgroundUri: ResourceStr
 ```
 
-Image path for the unselected star. You can use the default system image or a custom image.
+未选中的星级的图片路径，可由用户自定义或使用系统默认图片。
 
-Resource configuration is supported since API version 20. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+从API version 20开始，该接口支持设置Resource资源。参考  
+[示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#示例3通过resource资源设置评分的样式)代码。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
 
@@ -51,12 +49,12 @@ Resource configuration is supported since API version 20. For details, see
 foregroundUri: ResourceStr
 ```
 
-Image path for the selected star. You can use the default system image or a custom image.
+选中的星级的图片路径，可由用户自定义或使用系统默认图片。
 
-Resource configuration is supported since API version 20. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+从API version 20开始，该接口支持设置Resource资源。参考  
+[示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#示例3通过resource资源设置评分的样式)代码。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
 
@@ -76,12 +74,12 @@ Resource configuration is supported since API version 20. For details, see
 secondaryUri?: ResourceStr
 ```
 
-Image path for the partially selected star. You can use the default system image or a custom image.
+部分选中的星级的图片路径，可由用户自定义或使用系统默认图片。未设置时将优先使用backgroundUri，效果等同于仅设置foregroundUri和backgroundUri。
 
-Resource configuration is supported since API version 20. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+从API version 20开始，该接口支持设置Resource资源。参考  
+[示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#示例3通过resource资源设置评分的样式)代码。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
 

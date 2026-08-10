@@ -4,7 +4,7 @@
 declare type OnTextPickerChangeCallback = (selectItem: string | string[], index: number | number[]) => void
 ```
 
-Defines the **onChange** event callback signature.
+定义触发onChange事件的回调类型。
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ Defines the **onChange** event callback signature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectItem | string \| string[] | Yes | Text of the selected item. Use the array type for multi-column pickers.\_\_\_HTML\_TAG\_USD\_0\_\_\_ **NOTE**\_\_\_HTML\_TAG\_USD\_1\_\_\_The return value is a text value for text or mixed content, and an empty string for image-only content.  |
-| index | number \| number[] | Yes | Index of the selected item. The index is zero-based. Use the array type for multi-column pickers.  |
+| selectItem | string \| string[] | Yes | 当前选中项的文本。多列数据选择器的selectItem为数组类型。 <br>**说明：** <br>当选择器内容为文本或图文混排时，selectItem值为选中项中的文本值；当选择器内容为图片时，selectItem值为空。 |
+| index | number \| number[] | Yes | 当前选中项的索引值，索引从0开始。多列数据选择器的index为数组类型。 |
 

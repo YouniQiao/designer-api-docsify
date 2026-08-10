@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## action
 
 ```TypeScript
@@ -22,7 +28,7 @@ action: int
 
 对于API version 20及之前的版本，仅支持取值为1，表示订阅按键按下事件。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 16
 
@@ -58,18 +64,18 @@ key: int
 
 按键键值。
 
-**说明：** 从API version 26.0.0开始，新增支持[KEYCODE\_FINGERPRINT\_SLIDE\_UP]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_键和  
-[KEYCODE\_FINGERPRINT\_SLIDE\_DOWN]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_键，非设备通用键值，使用前请判断当前设备是否支持相关按键事件上报，请参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+**说明：** 从API version 26.0.0开始，新增支持[KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-multimodalinput-keycode-keycode-e.md)键和
+[KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md)键，非设备通用键值，使用前请判断当前设备是否支持相关按键事件上报，请参考  
+[优先响应系统功能键开发指导](../../../device/input/keypressed-guidelines.md)。
 
-从API version 21开始，新增支持[KEYCODE\_MEDIA\_PLAY\_PAUSE]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_键、  
-[KEYCODE\_MEDIA\_NEXT]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_键和  
-[KEYCODE\_MEDIA\_PREVIOUS]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_键。
+从API version 21开始，新增支持[KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-multimodalinput-keycode-keycode-e.md)键、  
+[KEYCODE_MEDIA_NEXT](arkts-input-multimodalinput-keycode-keycode-e.md)键和  
+[KEYCODE_MEDIA_PREVIOUS](arkts-input-multimodalinput-keycode-keycode-e.md)键。
 
-对于API version 20及之前的版本，仅支持[KEYCODE\_VOLUME\_UP]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_键和  
-[KEYCODE\_VOLUME\_DOWN]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_键。
+对于API version 20及之前的版本，仅支持[KEYCODE_VOLUME_UP](arkts-input-multimodalinput-keycode-keycode-e.md)键和  
+[KEYCODE_VOLUME_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md)键。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 16
 

@@ -24,9 +24,9 @@ function getArguments(): AbilityDelegatorArgs
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [AbilityDelegatorArgs]{ |
+| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';

@@ -1,6 +1,6 @@
 # PlaceholderStyle
 
-Style of the placeholder text.
+设置提示文本的字体样式。
 
 **Since:** 12
 
@@ -16,11 +16,11 @@ Style of the placeholder text.
 font?: Font
 ```
 
-Style of the placeholder text.
+设置提示文本样式。
 
-The default value follows the theme.
+默认值遵循主题设置。
 
-**Type:** Font
+**Type:** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
 
 **Since:** 12
 
@@ -40,11 +40,11 @@ The default value follows the theme.
 fontColor?: ResourceColor
 ```
 
-Color of the placeholder text.
+设置提示文本颜色。
 
-The default value follows the theme.
+默认值遵循主题设置。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 

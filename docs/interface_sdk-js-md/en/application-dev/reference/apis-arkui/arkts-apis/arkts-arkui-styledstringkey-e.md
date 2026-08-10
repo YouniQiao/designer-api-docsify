@@ -1,6 +1,6 @@
 # StyledStringKey
 
-Sets the style for a range styled string.
+范围属性字符串样式。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Sets the style for a range styled string.
 FONT = 0
 ```
 
-Font style key, applicable to [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+字体样式键。[TextStyle](arkts-arkui-textstyle-c.md)所属键。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Font style key, applicable to [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 DECORATION = 1
 ```
 
-Text decorative line style key, applicable to [DecorationStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+文本装饰线样式键。[DecorationStyle](arkts-arkui-decorationstyle-c.md)所属键。
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Text decorative line style key, applicable to [DecorationStyle]\_\_\_JSDOC\_LINK
 BASELINE_OFFSET = 2
 ```
 
-Text baseline offset style key, applicable to [BaselineOffsetStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+文本基线偏移量样式键。[BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md)所属键。
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ Text baseline offset style key, applicable to [BaselineOffsetStyle]\_\_\_JSDOC\_
 LETTER_SPACING = 3
 ```
 
-Text letter spacing style key, applicable to [LetterSpacingStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+文本字符间距样式键。[LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md)所属键。
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Text letter spacing style key, applicable to [LetterSpacingStyle]\_\_\_JSDOC\_LI
 TEXT_SHADOW = 4
 ```
 
-Text shadow style key, applicable to [TextShadowStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+文本阴影样式键。[TextShadowStyle](arkts-arkui-textshadowstyle-c.md)所属键。
 
 **Since:** 12
 
@@ -116,7 +116,7 @@ Text shadow style key, applicable to [TextShadowStyle]\_\_\_JSDOC\_LINK\_DESC\_U
 LINE_HEIGHT = 5
 ```
 
-Text line height style key, applicable to [LineHeightStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+文本行高样式键。[LineHeightStyle](arkts-arkui-lineheightstyle-c.md)所属键。
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ Text line height style key, applicable to [LineHeightStyle]\_\_\_JSDOC\_LINK\_DE
 BACKGROUND_COLOR = 6
 ```
 
-Text background color style key, applicable to [BackgroundColorStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+文本背景色样式键。[BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md)所属键。
 
 **Since:** 14
 
@@ -156,7 +156,7 @@ Text background color style key, applicable to [BackgroundColorStyle]\_\_\_JSDOC
 URL = 7
 ```
 
-Hyperlink style key, applicable to [UrlStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+超链接样式键。[UrlStyle](arkts-arkui-urlstyle-c.md)所属键。
 
 **Since:** 14
 
@@ -176,9 +176,7 @@ Hyperlink style key, applicable to [UrlStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 LINE_SPACING = 8
 ```
 
-Text line spacing style key, applicable to [LineSpacingStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-
-**Since**: 26.0.0
+文本行间距样式键。[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)所属键。
 
 **Since:** 26.0.0
 
@@ -198,7 +196,7 @@ Text line spacing style key, applicable to [LineSpacingStyle]\_\_\_JSDOC\_LINK\_
 GESTURE = 100
 ```
 
-Gesture key, applicable to [GestureStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+事件手势键。[GestureStyle](arkts-arkui-gesturestyle-c.md)所属键。
 
 **Since:** 12
 
@@ -218,7 +216,7 @@ Gesture key, applicable to [GestureStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 PARAGRAPH_STYLE = 200
 ```
 
-Paragraph style key, applicable to [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+段落样式键。[ParagraphStyle](arkts-arkui-paragraphstyle-c.md)所属键。
 
 **Since:** 12
 
@@ -238,7 +236,7 @@ Paragraph style key, applicable to [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\
 IMAGE = 300
 ```
 
-Image key, applicable to [ImageAttachment]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+图片键。[ImageAttachment](arkts-arkui-imageattachment-c.md)所属键。
 
 **Since:** 12
 
@@ -258,7 +256,7 @@ Image key, applicable to [ImageAttachment]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 CUSTOM_SPAN = 400
 ```
 
-Custom span key, applicable to [CustomSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+自定义绘制Span键。[CustomSpan](arkts-arkui-customspan-c.md)所属键。
 
 **Since:** 12
 
@@ -278,7 +276,7 @@ Custom span key, applicable to [CustomSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 USER_DATA = 500
 ```
 
-User data span key, applicable to [UserDataSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+UserDataSpan键。[UserDataSpan](arkts-arkui-userdataspan-c.md)所属键。
 
 **Since:** 12
 

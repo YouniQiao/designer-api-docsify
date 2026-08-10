@@ -18,7 +18,7 @@ Stretch
 
 Swiper滑动一页的宽度为Swiper组件自身的宽度。
 
-**说明**：从API version 7开始支持，从API version 10开始废弃，建议使用STRETCH替代。
+**说明：**从API version 7开始支持，从API version 10开始废弃，建议使用STRETCH替代。
 
 **起始版本：** 7
 
@@ -26,7 +26,7 @@ Swiper滑动一页的宽度为Swiper组件自身的宽度。
 
 **废弃版本：** 10
 
-**替代接口：** [SwiperDisplayMode#STRETCH](../arkts-apis/arkts-arkui-component/swiper-swiperdisplaymode-e.md#stretch)
+**替代接口：** [SwiperDisplayMode#STRETCH](arkts-arkui-swiperdisplaymode-e.md#stretch)
 
 **卡片能力：** 从API版本7开始，该接口支持在ArkTS卡片中使用。
 
@@ -88,7 +88,7 @@ AUTO_LINEAR
 
 **废弃版本：** 12
 
-**替代接口：** [Scroller#scrollTo](../arkts-apis/arkts-arkui-component/scroll-scroller-c.md#scrollto)
+**替代接口：** [Scroller#scrollTo](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrollto)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

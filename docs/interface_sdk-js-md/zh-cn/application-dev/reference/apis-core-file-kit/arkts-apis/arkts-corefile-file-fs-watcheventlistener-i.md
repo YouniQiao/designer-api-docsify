@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## [[Call]]
 
 ```TypeScript
@@ -30,5 +36,5 @@ Specifies the callback function to be invoked.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Event for the callback to invoke. |
+| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 是 | Event for the callback to invoke. |
 

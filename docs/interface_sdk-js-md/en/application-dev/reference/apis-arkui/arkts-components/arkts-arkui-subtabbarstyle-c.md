@@ -1,6 +1,6 @@
 # SubTabBarStyle
 
-Implements the subtab style. A transition animation is played when the user switches between tabs.
+子页签样式。打开后在切换页签时会播放跳转动画。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Implements the subtab style. A transition animation is played when the user swit
 board(value: BoardStyle): SubTabBarStyle
 ```
 
-Sets the background style (board style) of the selected subtab. It takes effect only in the horizontal layout.
+设置选中子页签的背板风格。子页签的背板风格仅在水平模式下有效。
 
 **Since:** 10
 
@@ -34,13 +34,13 @@ Sets the background style (board style) of the selected subtab. It takes effect 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Background style object for the selected subtab. |
+| value | [BoardStyle](arkts-arkui-boardstyle-i.md) | Yes | 选中子页签的背板风格对象，用于设置背板的圆角半径等样式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
 ## constructor
 
@@ -48,7 +48,7 @@ Sets the background style (board style) of the selected subtab. It takes effect 
 constructor(content: ResourceStr)
 ```
 
-Constructor used to create a **SubTabBarStyle** instance.
+SubTabBarStyle的构造函数。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Constructor used to create a **SubTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text for the tab. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
 
 ## constructor
 
@@ -72,7 +72,7 @@ Constructor used to create a **SubTabBarStyle** instance.
 constructor(content: ResourceStr | ComponentContent)
 ```
 
-Constructor used to create a **SubTabBarStyle** instance. You can set custom content with **ComponentContent**.
+SubTabBarStyle的构造函数。支持ComponentContent设置自定义内容。
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| ComponentContent | Yes | Content on the tab.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Custom content does not support the **labelStyle** attribute.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. If the custom content is within the content box of the tab page, it is aligned in the center.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | 页签内的内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持labelStyle属性。&lt;br /&gt;2.自定义内容超 出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
 
 ## id
 
@@ -98,7 +98,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 id(value: string): SubTabBarStyle
 ```
 
-Sets the [ID]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the subtab.
+设置子页签的id。可用于通过TabsController查找或控制指定页签，以及在状态管理和事件处理中标识不同的页签。
 
 **Since:** 11
 
@@ -116,13 +116,13 @@ Sets the [ID]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the subtab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | [ID]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the subtab. |
+| value | string | Yes | 子页签的id，用于标识和区分不同的页签。当需要通过代码控制特定页签的显示、隐藏或进行其他操作时，可设置此参数。id值需在同一Tabs组件内保持唯一。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
 ## indicator
 
@@ -130,7 +130,7 @@ Sets the [ID]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the subtab.
 indicator(value: IndicatorStyle): SubTabBarStyle
 ```
 
-Sets the indicator style of the selected subtab. It takes effect only in the horizontal layout.
+设置选中子页签的下划线风格。子页签的下划线风格仅在水平模式下有效。
 
 **Since:** 10
 
@@ -148,13 +148,13 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicator style object for the selected subtab. |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Yes | 选中子页签的下划线风格对象，用于设置下划线的颜色、高度、宽度、圆角半径等样式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
 ## indicator
 
@@ -162,8 +162,8 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-Sets the indicator style of the selected subtab. Compared with  
-[indicator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the image format is added. For details about the display effect of the image, see [ImageFit.Cover]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. It takes effect only in the horizontal layout.
+设置选中子页签的下划线风格。与[indicator](arkts-arkui-subtabbarstyle-c.md#indicator)相比，新增了图片格式的下划线风格，图片的显示效果参照  
+[ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md)。子页签的下划线风格仅在水平模式下有效。
 
 **Since:** 22
 
@@ -181,13 +181,13 @@ Sets the indicator style of the selected subtab. Compared with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| DrawableTabBarIndicator | Yes | Yes |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| DrawableTabBarIndicator | Yes | 选中子页签的下划线风格对象。&lt;br /&gt;IndicatorStyle：一般形式的下划线样式。&lt;br /&gt; DrawableTabBarIndicator：图片形式的下划线样式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
 ## labelStyle
 
@@ -195,7 +195,7 @@ Sets the indicator style of the selected subtab. Compared with
 labelStyle(value: LabelStyle): SubTabBarStyle
 ```
 
-Sets the style of the label text and font for the subtab.
+设置子页签的label文本和字体的样式。子页签的label文本和字体的样式仅在水平模式下有效。
 
 **Since:** 10
 
@@ -213,13 +213,13 @@ Sets the style of the label text and font for the subtab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Style object for the label text and font of the subtab. |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | 子页签的label文本和字体的样式对象，用于设置文字的颜色、大小、字体、行数等属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
 ## of
 
@@ -227,7 +227,7 @@ Sets the style of the label text and font for the subtab.
 static of(content: ResourceStr): SubTabBarStyle
 ```
 
-Static constructor used to create a **SubTabBarStyle** instance.
+SubTabBarStyle的静态构造函数。
 
 **Since:** 10
 
@@ -245,13 +245,13 @@ Static constructor used to create a **SubTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text for the tab. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object created. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象，用于设置子页签样式。 |
 
 ## of
 
@@ -259,8 +259,7 @@ Static constructor used to create a **SubTabBarStyle** instance.
 static of(content: ResourceStr | ComponentContent): SubTabBarStyle
 ```
 
-Static constructor used to create a **SubTabBarStyle** instance. You can set custom content with  
-**ComponentContent**.
+SubTabBarStyle的静态构造函数。支持ComponentContent设置自定义内容。
 
 **Since:** 12
 
@@ -278,13 +277,13 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Custom content does not support the **labelStyle** attribute.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. If the custom content is within the content box of the tab page, it is aligned in the center.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | 页签内的内容。支持ComponentContent设置自定义内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持 labelStyle属性。&lt;br /&gt;2.自定义内容超出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object created. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象，用于设置子页签样式。 |
 
 ## padding
 
@@ -292,7 +291,7 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 padding(value: Padding | Dimension): SubTabBarStyle
 ```
 
-Sets the padding of the subtab. It cannot be set in percentage. When the parameter is of the Dimension type, the value applies to all sides.
+设置子页签的内边距属性（不支持百分比设置）。使用Dimension时，四个方向内边距同时生效。
 
 **Since:** 10
 
@@ -310,13 +309,13 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Dimension | Yes | Padding of the subtab.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp} |
+| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Dimension | Yes | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值： {left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp}&lt;br/&gt;**说明：**&lt;br/&gt;从API version 12开始， 参数支持[LocalizedPadding](ts-types.md#localizedpadding12)类型，支持镜像能力。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
 ## padding
 
@@ -324,7 +323,7 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 padding(padding: LocalizedPadding): SubTabBarStyle
 ```
 
-Sets the padding of the subtab. This API supports mirroring but does not support percentage-based settings.
+设置子页签的内边距属性，支持镜像能力（不支持百分比设置）。
 
 **Since:** 12
 
@@ -342,13 +341,13 @@ Sets the padding of the subtab. This API supports mirroring but does not support
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Padding of the subtab.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8)**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离，支持镜像能力。 &lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值： {start:LengthMetrics.vp(8),end:LengthMetrics.vp(8),&lt;br/&gt;top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
 ## selectedMode
 
@@ -356,7 +355,7 @@ Sets the padding of the subtab. This API supports mirroring but does not support
 selectedMode(value: SelectedMode): SubTabBarStyle
 ```
 
-Sets the display mode of the selected subtab. It takes effect only in the horizontal layout.
+设置选中子页签的显示方式。子页签的显示方式仅在水平模式下有效。
 
 **Since:** 10
 
@@ -374,11 +373,11 @@ Sets the display mode of the selected subtab. It takes effect only in the horizo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Display mode of the selected subtab.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **SelectedMode.INDICATOR |
+| value | [SelectedMode](arkts-arkui-selectedmode-e.md) | Yes | 选中子页签的显示方式，用于控制子页签的选中效果样式。可选值：SelectedMode.INDICATOR（使用下划线模式，适用于需要明确指示选中状态的场景）、 SelectedMode.BOARD（使用背板模式，适用于需要突出选中页签的场景）。&lt;br /&gt;默认值：SelectedMode.INDICATOR |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SubTabBarStyle** object. |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 

@@ -1,7 +1,5 @@
 # ArkTS API<!--arkts-mdmkit-->
 
-- [@ohos.enterprise.EnterpriseAdminExtensionAbility](arkts-enterprise-enterpriseadminextensionability.md)
-  - [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)
 - [@ohos.enterprise.accountManager](arkts-enterprise-accountmanager.md)
   - [activateOsAccount](arkts-mdm-accountmanager-activateosaccount-f.md)
   - [addOsAccount](arkts-mdm-accountmanager-addosaccount-f.md)
@@ -427,5 +425,5 @@
   - [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md)
   - [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 - application<!--arkts-mdmkit-application-->
-  - [application/EnterpriseAdminExtensionContext](arkts-application/enterpriseadminextensioncontext.md)
-    - [EnterpriseAdminExtensionContext](enterpriseadminextensioncontext-enterpriseadminextensioncontext-c.md)
+  - [EnterpriseAdminExtensionContext](arkts-enterpriseadminextensioncontext.md)
+    - [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-c.md)

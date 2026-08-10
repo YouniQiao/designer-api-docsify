@@ -1,6 +1,6 @@
 # DevicePowerMode
 
-Enumerates power modes.
+表示电源模式的枚举值。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates power modes.
 MODE_NORMAL = 600
 ```
 
-Standard mode. It is the default value.
+表示标准模式，默认值。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Standard mode. It is the default value.
 MODE_POWER_SAVE
 ```
 
-Power saving mode.
+表示省电模式。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Power saving mode.
 MODE_PERFORMANCE
 ```
 
-Performance mode.
+表示性能模式。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Performance mode.
 MODE_EXTREME_POWER_SAVE
 ```
 
-Ultra power saving mode.
+表示超级省电模式。
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Ultra power saving mode.
 MODE_CUSTOM_POWER_SAVE = 650
 ```
 
-Custom power saving mode.
+表示自定义省电模式。
 
 **Since:** 20
 

@@ -12,6 +12,12 @@ Provides APIs to manage albums.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## commitModify
 
 ```TypeScript
@@ -40,10 +46,10 @@ Commits the modification on the album attributes to the database. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 | 14000011 | Internal system error |
 
-**Example**
+## Examples
 
 For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
 
@@ -96,10 +102,10 @@ Converts this Sendable album to a non-Sendable album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 | 14000011 | Internal system error |
 
-**Example**
+## Examples
 
 For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
 

@@ -36,7 +36,7 @@ Gets the text content of the selected range.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | selected range. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | selected range. |
 
 **返回值：**
 

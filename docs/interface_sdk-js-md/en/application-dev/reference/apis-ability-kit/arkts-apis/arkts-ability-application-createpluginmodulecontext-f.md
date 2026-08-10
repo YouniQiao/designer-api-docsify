@@ -1,12 +1,18 @@
 # createPluginModuleContext
 
+## Modules to Import
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## createPluginModuleContext
 
 ```TypeScript
 export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>
 ```
 
-Creates the context of a plugin under the current application based on the context, plugin bundle name, and plugin module name, so as to obtain the basic information about the plugin. This API uses a promise to return the result.
+根据入参Context、指定的插件包名和插件模块名，创建本应用下插件的Context，用于获取插件的基本信息。使用Promise异步回调。
 
 **Since:** 19
 
@@ -22,17 +28,17 @@ Creates the context of a plugin under the current application based on the conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. |
-| pluginBundleName | string | Yes | Bundle name of the plugin. |
-| pluginModuleName | string | Yes | Module name of the plugin. |
+| context | [Context](arkts-ability-context-c.md) | Yes | 表示应用上下文。 |
+| pluginBundleName | string | Yes | 表示应用的插件包名。 |
+| pluginModuleName | string | Yes | 表示应用的插件模块名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the context created. |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise对象。返回创建的Context。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';

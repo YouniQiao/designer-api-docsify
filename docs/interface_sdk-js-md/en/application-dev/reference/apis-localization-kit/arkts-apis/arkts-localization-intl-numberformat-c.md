@@ -1,14 +1,20 @@
 # NumberFormat
 
-Provides the API for formatting number strings.
+提供标准的数字格式化的能力。
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 <!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
+
+## Modules to Import
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -16,15 +22,26 @@ Provides the API for formatting number strings.
 constructor()
 ```
 
-Creates a NumberFormat object for the specified locale.
+使用当前系统区域创建数字格式化对象。
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberFormat-constructor()--><!--Device-NumberFormat-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
+
+## Examples
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a NumberFormat object using the current system locale ID.
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
 
 ## constructor
 
@@ -32,11 +49,13 @@ Creates a NumberFormat object for the specified locale.
 constructor(locale: string | Array<string>, options?: NumberOptions)
 ```
 
-Creates a NumberFormat object for the specified locale.
+根据指定的区域和配置项创建数字格式化对象。
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)--><!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)-End-->
 
@@ -46,8 +65,17 @@ Creates a NumberFormat object for the specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for creating the NumberFormat object. |
+| locale | string \| Array&lt;string&gt; | Yes | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | No | 创建数字格式化对象时可设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
+
+## Examples
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a NumberFormat object with locale ID being en-GB, style being decimal, and notation being scientific.
+let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
+```
 
 ## format
 
@@ -55,11 +83,13 @@ Creates a NumberFormat object for the specified locale.
 format(num: double): string
 ```
 
-Formats a number.
+对数字进行格式化，返回格式化后的数字字符串。
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberFormat-format(num: double): string--><!--Device-NumberFormat-format(num: double): string-End-->
 
@@ -69,13 +99,30 @@ Formats a number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| num | double | Yes | Number to be formatted. |
+| num | double | Yes | 数字对象。<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Formatted number. |
+| string | 格式化后的数字字符串。 |
+
+## Examples
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a NumberFormat object with a locale ID array. The locale ID en-GB is valid and therefore is used.
+let formatter: intl.NumberFormat = new intl.NumberFormat(['en-GB', 'zh'], { style: 'decimal', notation: 'scientific' });
+let formattedNumber: string = formatter.format(1223); // formattedNumber = 1.223E3
+let options: intl.NumberOptions = {
+  roundingPriority: 'lessPrecision',
+  maximumFractionDigits: 3,
+  maximumSignificantDigits: 3
+}
+formatter = new intl.NumberFormat('en', options);
+let result: string = formatter.format(1.23456); // result = 1.23
+```
 
 ## formatRange
 
@@ -83,11 +130,13 @@ Formats a number.
 formatRange(startRange: double, endRange: double): string
 ```
 
-Formats a number range.
+对数字范围进行格式化，返回格式化后的数字范围字符串。
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
 
@@ -97,14 +146,23 @@ Formats a number range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startRange | double | Yes | Start number. |
-| endRange | double | Yes | End number. |
+| startRange | double | Yes | 数字范围的起始值。 |
+| endRange | double | Yes | 数字范围的终止值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Formatted number range. |
+| string | 格式化后的数字范围字符串。 |
+
+## Examples
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+let formatter: intl.NumberFormat = new intl.NumberFormat('en-US', { style: 'unit', unit: 'meter' });
+let formattedRange: string = formatter.formatRange(0, 3); // formattedRange: 0–3 m
+```
 
 ## resolvedOptions
 
@@ -112,11 +170,13 @@ Formats a number range.
 resolvedOptions(): NumberOptions
 ```
 
-Obtains the options for creating a NumberFormat object.
+获取创建数字格式化对象时设置的配置项。
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberFormat-resolvedOptions(): NumberOptions--><!--Device-NumberFormat-resolvedOptions(): NumberOptions-End-->
 
@@ -126,5 +186,17 @@ Obtains the options for creating a NumberFormat object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Options for creating the NumberFormat object. |
+| [NumberOptions](arkts-localization-intl-numberoptions-i.md) | 创建数字格式化对象时设置的配置项。 |
+
+## Examples
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+let formatter: intl.NumberFormat = new intl.NumberFormat(['en-GB', 'zh'], { style: 'decimal', notation: 'scientific' });
+// Obtain the options of the NumberFormat object.
+let options: intl.NumberOptions = formatter.resolvedOptions();
+let style: string | undefined = options.style; // style = 'decimal'
+let notation: string | undefined = options.notation; // notation = 'scientific'
+```
 

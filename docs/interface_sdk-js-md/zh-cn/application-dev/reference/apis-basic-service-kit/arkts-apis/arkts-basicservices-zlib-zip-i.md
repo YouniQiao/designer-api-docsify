@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## compress
 
 ArkTS-Dyn:
@@ -40,7 +46,7 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
 
@@ -52,10 +58,10 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -106,8 +112,8 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressLevel枚举定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| sourceLen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
 
@@ -119,9 +125,9 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## compressBound
 
@@ -151,21 +157,21 @@ compressBound(sourceLen: int): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceLen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 源数据长度。 |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 源数据长度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -175,7 +181,7 @@ let arrayBufferIn = new ArrayBuffer(str.length);
 let byteArray = new Uint8Array(arrayBufferIn);
 
 for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i)
+  byteArray[i] = str.charCodeAt(i);
 }
 
 let zip = zlib.createZipSync();
@@ -209,8 +215,8 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| flush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressFlushMode定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 参考[CompressFlushMode定义](arkts-basicservices-zlib-compressflushmode-e.md)。 |
 
 **返回值：**
 
@@ -222,11 +228,11 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -287,22 +293,22 @@ deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| sourceLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 源数据长度。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| sourceLength | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 源数据长度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -357,7 +363,7 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[Zip定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | 是 | 参考[Zip定义](arkts-basicservices-zlib-zip-i.md)。 |
 
 **返回值：**
 
@@ -369,10 +375,10 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -427,7 +433,7 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -439,10 +445,10 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -502,7 +508,7 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 | dictionary | ArrayBuffer | 是 | 接收压缩字典的实际内容。 |
 
 **返回值：**
@@ -515,10 +521,10 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -578,8 +584,8 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressLevel枚举定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
 
 **返回值：**
 
@@ -591,10 +597,10 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -652,12 +658,12 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressLevel枚举定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| method | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressMethod枚举定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| windowBits | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_zlib格式：[1, 15]。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_gzip格式：大于15 。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_raw deflate格式：[-15, -1]。 |
-| memLevel | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[MemLevel枚举定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressStrategy枚举定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
+| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | 是 | 参考[CompressMethod枚举定义](arkts-basicservices-zlib-compressmethod-e.md)。 |
+| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
+| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | 是 | 参考[MemLevel枚举定义](arkts-basicservices-zlib-memlevel-e.md)。 |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md)。 |
 
 **返回值：**
 
@@ -669,10 +675,10 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -723,9 +729,9 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressLevel枚举定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressStrategy枚举定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md)。 |
 
 **返回值：**
 
@@ -737,10 +743,10 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -795,7 +801,7 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -807,10 +813,10 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -871,9 +877,9 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| bits | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要插入的位数，取值范围在0~16。 |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 与位数相对应的位值。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| bits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要插入的位数，取值范围在0~16。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 与位数相对应的位值。 |
 
 **返回值：**
 
@@ -885,10 +891,10 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -943,7 +949,7 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -955,10 +961,10 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1013,7 +1019,7 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -1025,10 +1031,10 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1083,7 +1089,7 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 | dictionary | ArrayBuffer | 是 | 字典数据。 |
 
 **返回值：**
@@ -1096,10 +1102,10 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1154,8 +1160,8 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| head | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 从压缩数据流中提取的gzip头信息。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| head | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | 是 | 从压缩数据流中提取的gzip头信息。 |
 
 **返回值：**
 
@@ -1167,10 +1173,10 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1232,11 +1238,11 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| goodLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 匹配的长度阈值。 |
-| maxLazy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 压缩算法在构建哈夫曼树时的延迟匹配策略，取值范围为0到4的整数。1到4，值越大，算法越‘懒’，匹配过程越慢，但可能生成更优的压缩结果。0：禁用懒惰匹配， 算法会尽快构建哈夫曼树，压缩速度快，但压缩率低。 |
-| niceLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 适合的延迟长度阈值。 |
-| maxChain | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 最大链条长度。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| goodLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 匹配的长度阈值。 |
+| maxLazy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 压缩算法在构建哈夫曼树时的延迟匹配策略，取值范围为0到4的整数。1到4，值越大，算法越‘懒’，匹配过程越慢，但可能生成更优的压缩结果。0：禁用懒惰匹配， 算法会尽快构建哈夫曼树，压缩速度快，但压缩率低。 |
+| niceLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 适合的延迟长度阈值。 |
+| maxChain | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 最大链条长度。 |
 
 **返回值：**
 
@@ -1248,10 +1254,10 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1308,7 +1314,7 @@ getZStream(): Promise<ZStream>
 | --- | --- |
 | Promise&lt;ZStream&gt; | Promise对象。返回ZStream流。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1366,8 +1372,8 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| flush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[CompressFlushMode定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 参考[CompressFlushMode定义](arkts-basicservices-zlib-compressflushmode-e.md)。 |
 
 **返回值：**
 
@@ -1379,11 +1385,11 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1459,10 +1465,10 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| backIn | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 一种函数，用于从末尾解压缩数据，以从输入源读取原始压缩数据。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | 是 | 一种函数，用于从末尾解压缩数据，以从输入源读取原始压缩数据。 |
 | inDesc | object | 是 | 通用对象。 |
-| backOut | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 将解压缩的数据写入目标输出。 |
+| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | 是 | 将解压缩的数据写入目标输出。 |
 | outDesc | object | 是 | 通用对象。 |
 
 **返回值：**
@@ -1475,10 +1481,10 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1637,11 +1643,11 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| backIn | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 一种函数，用于从末尾解压缩数据，以从输入源读取原始压缩数据。 |
-| inDesc | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通用对象。 |
-| backOut | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 将解压缩的数据写入目标输出。 |
-| outDesc | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通用对象。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | 是 | 一种函数，用于从末尾解压缩数据，以从输入源读取原始压缩数据。 |
+| inDesc | [RecordData](arkts-basicservices-recorddata-t.md) | 是 | 通用对象。 |
+| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | 是 | 将解压缩的数据写入目标输出。 |
+| outDesc | [RecordData](arkts-basicservices-recorddata-t.md) | 是 | 通用对象。 |
 
 **返回值：**
 
@@ -1653,8 +1659,8 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## inflateBackEnd
 
@@ -1678,7 +1684,7 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -1690,10 +1696,10 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 参考[inflateBack](#inflateback12)中的示例代码。
 
@@ -1725,8 +1731,8 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| windowBits | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_zlib格式：[1, 15]。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_gzip格式：大于1 5。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_raw deflate格式：[-15, -1]。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于1 5。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 | window | ArrayBuffer | 是 | 预设的窗口缓冲区。 |
 
 **返回值：**
@@ -1739,10 +1745,10 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 参考[inflateBack](#inflateback12)中的示例代码。
 
@@ -1774,21 +1780,21 @@ inflateCodesUsed(strm: ZStream): Promise<long>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回已使用的霍夫曼编码树的数量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回已使用的霍夫曼编码树的数量。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1838,7 +1844,7 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[Zip定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | 是 | 参考[Zip定义](arkts-basicservices-zlib-zip-i.md)。 |
 
 **返回值：**
 
@@ -1850,10 +1856,10 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1904,7 +1910,7 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -1916,10 +1922,10 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1974,7 +1980,7 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 | dictionary | ArrayBuffer | 是 | 接收解压缩字典的实际内容。 |
 
 **返回值：**
@@ -1987,10 +1993,10 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2040,8 +2046,8 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| header | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 从压缩数据流中提取的gzip头信息。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| header | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | 是 | 从压缩数据流中提取的gzip头信息。 |
 
 **返回值：**
 
@@ -2053,10 +2059,10 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2106,7 +2112,7 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -2118,9 +2124,9 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2130,7 +2136,7 @@ let arrayBufferIn = new ArrayBuffer(str.length);
 let byteArray = new Uint8Array(arrayBufferIn);
 
 for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i)
+  byteArray[i] = str.charCodeAt(i);
 }
 
 let arrayBufferOut = new ArrayBuffer(100);
@@ -2172,8 +2178,8 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| windowBits | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_zlib格式：[1, 15]。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_gzip格式：大于15 。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_raw deflate格式：[-15, -1]。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 
 **返回值：**
 
@@ -2185,10 +2191,10 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2198,7 +2204,7 @@ let arrayBufferIn = new ArrayBuffer(str.length);
 let byteArray = new Uint8Array(arrayBufferIn);
 
 for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i)
+  byteArray[i] = str.charCodeAt(i);
 }
 
 let arrayBufferOut = new ArrayBuffer(100);
@@ -2240,21 +2246,21 @@ inflateMark(strm: ZStream): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回位置信息。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回位置信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2310,9 +2316,9 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| bits | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定要写入比特缓冲区的比特数。 |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 用于填充比特缓冲区的比特值。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| bits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定要写入比特缓冲区的比特数。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 用于填充比特缓冲区的比特值。 |
 
 **返回值：**
 
@@ -2324,10 +2330,10 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2377,7 +2383,7 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -2389,10 +2395,10 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2448,8 +2454,8 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| windowBits | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_zlib格式：[1, 15]。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_gzip格式：大于15 。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_raw deflate格式：[-15, -1]。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 
 **返回值：**
 
@@ -2461,10 +2467,10 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2514,7 +2520,7 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -2526,10 +2532,10 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2579,7 +2585,7 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 | dictionary | ArrayBuffer | 是 | 字典数据。 |
 
 **返回值：**
@@ -2592,11 +2598,11 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2610,7 +2616,7 @@ async function demo() {
   }
   let arrayBufferOut = new ArrayBuffer(100);
   let zip = zlib.createZipSync();
-  let dictionary = 'hello'
+  let dictionary = 'hello';
   let dictionarybuf = new ArrayBuffer(dictionary.length);
   let dictionarybufdata = new Uint8Array(dictionarybuf);
   for (let i = 0, j = dictionary.length; i < j; i++) {
@@ -2683,7 +2689,7 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -2695,12 +2701,12 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2781,7 +2787,7 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 
 **返回值：**
 
@@ -2793,10 +2799,10 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2852,8 +2858,8 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 参考[ZStream定义]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| check | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 预期的校验和。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| check | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 预期的校验和。 |
 
 **返回值：**
 
@@ -2865,10 +2871,10 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2926,7 +2932,7 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
 
@@ -2938,11 +2944,11 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2999,7 +3005,7 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
 
@@ -3011,11 +3017,11 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -3070,9 +3076,9 @@ zlibCompileFlags(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回指示编译时选项的标志。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回指示编译时选项的标志。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -3108,7 +3114,7 @@ zlibVersion(): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象。返回当前zlib库的版本信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

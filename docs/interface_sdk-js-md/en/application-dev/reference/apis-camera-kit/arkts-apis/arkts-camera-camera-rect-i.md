@@ -1,11 +1,10 @@
 # Rect
 
-Describes a rectangle. The coordinate system for the returned detection points is based on the landscape device orientation, with the charging port on the right. In this coordinate system, the top-left corner is (0, 0), and the bottom-right corner is (1, 1). Here, **topLeftX** and **topLeftY** represent the coordinates of the top-left corner of the rectangle, whereas **width** and **height** represent the width and height of the rectangle, respectively.When cropping or selecting a face region based on specific requirements, the x and y coordinates of the rectangle must be multiplied by the width and height of the actual camera preview output stream to obtain the cropped face region.
+相机矩形。用于各类检测对象的矩形框绘制。返回的检测点坐标系以设备充电口在右侧时的横向设备方向为基准。该坐标系左上角为（0，0），右下角为（1，1），其中（topLeftX，topLeftY）表示矩形区域的左上角坐标，width和height分别表示矩形区域的宽和高。因此在实际使用中根据业务诉求需要裁剪或者选择人脸区域时，必须将矩形区域的x坐标和y坐标分别乘以实际相机预览输出流的宽和高，即可得到裁剪后的人脸矩形区域。
 
-The width and height of the actual preview stream refer to the resolution of the camera output stream. For details,see **size** in [profile]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+实际预览流的宽高指的是相机输出流的分辨率，请参考[profile](arkts-camera-camera-profile-i.md)中的size。
 
-For details about how to obtain the preview stream data, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+预览流的数据获取请参考[双路预览(ArkTs)](../../../media/camera/camera-dual-channel-preview.md)。
 
 **Since:** 10
 
@@ -15,15 +14,21 @@ For details about how to obtain the preview stream data, see
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## height
 
 ```TypeScript
 height: double
 ```
 
-Height of the rectangle, in the range of [0, 1].
+矩形高，范围[0, 1]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -41,9 +46,9 @@ Height of the rectangle, in the range of [0, 1].
 topLeftX: double
 ```
 
-X coordinate of the top-left corner of the rectangle, in the range of [0, 1].
+矩形区域左上角x坐标，范围[0, 1]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -61,9 +66,9 @@ X coordinate of the top-left corner of the rectangle, in the range of [0, 1].
 topLeftY: double
 ```
 
-Y coordinate of the top-left corner of the rectangle, in the range of [0, 1].
+矩形区域左上角y坐标，范围[0, 1]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -81,9 +86,9 @@ Y coordinate of the top-left corner of the rectangle, in the range of [0, 1].
 width: double
 ```
 
-Width of the rectangle, in the range of [0, 1].
+矩形宽，范围[0, 1]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # SwiperContentAnimatedTransition
 
-Provides the information about the custom page transition animation.
+ArcSwiper自定义切换动画相关信息。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Provides the information about the custom page transition animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+```
+
 ## timeout
 
 ```TypeScript
 timeout?: number
 ```
 
-Timeout for the custom page transition animation. The timeout timer starts when the default animation (page scrolling) reaches the point where the first frame is moved out of the viewport. If you do not call the  
-[finishTransition]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API of  
-[SwiperContentTransitionProxy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ before the timer expires, the component considers that the custom animation of the page ends and immediately removes the page node from the render tree.The unit is ms. The default value is **0**.
+ArcSwiper自定义切换动画超时时间。从页面执行默认动画（页面滑动）至移出视窗外的第一帧开始计时，如果到达该时间后，开发者仍未调用  
+[SwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md)的  
+[finishTransition](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md#finishtransition)接口通知ArcSwiper组件此页面的自定义动画已结束，组件将强制结束该页面的自定义动画，并立即在该页面节点下渲染树。单位ms，默认值为0。
 
 **Type:** number
 
@@ -40,9 +46,9 @@ Timeout for the custom page transition animation. The timeout timer starts when 
 transition: Callback<SwiperContentTransitionProxy>
 ```
 
-Content of the custom page transition animation.
+自定义切换动画具体内容。
 
-**Type:** Callback&lt;SwiperContentTransitionProxy&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;SwiperContentTransitionProxy&gt;
 
 **Since:** 18
 

@@ -1,6 +1,6 @@
 # FieldRegion
 
-Defines the area information of the particle field.
+用于设置粒子场的区域信息。
 
 **Since:** 22
 
@@ -18,7 +18,7 @@ position?: PositionT<number>
 
 The coordinates of the center position of the field. The top-left corner of the component is the origin of the coordinate system. The coordinate unit is vp.
 
-**Type:** PositionT&lt;number&gt;
+**Type:** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
 
 **Default:** {x:0,y:0}
 
@@ -42,7 +42,7 @@ shape?: DisturbanceFieldShape
 
 The shape of the field
 
-**Type:** DisturbanceFieldShape
+**Type:** [DisturbanceFieldShape](arkts-arkui-disturbancefieldshape-e.md)
 
 **Default:** DisturbanceFieldShape.RECT
 
@@ -66,7 +66,7 @@ size?: SizeT<number>
 
 The size of the field. The unit of value is vp.
 
-**Type:** SizeT&lt;number&gt;
+**Type:** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
 
 **Default:** {width:0,height:0}
 

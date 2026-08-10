@@ -1,7 +1,6 @@
 # @ohos.wantAgent
 
-The WantAgent module provides APIs for creating and comparing WantAgent objects, and obtaining the user ID and bundle
- name of a WantAgent object.
+WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取want信息、比较WantAgent实例和获取bundle名称等能力。
 
 
 ## Summary
@@ -10,11 +9,11 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 | Name | Description |
 | --- | --- |
-| [wantAgent](arkts-ability-wantagent-depr-n.md) | The WantAgent module provides APIs for creating and comparing WantAgent objects, and obtaining the user ID and bundle name of a WantAgent object. |
+| [wantAgent](arkts-ability-wantagent-depr-n.md) | WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取want信息、比较WantAgent实例和获取bundle名称等能力。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [WantAgent](arkts-ability-wantagent-depr-t.md) | Defines the WantAgent object. |
+| [WantAgent](arkts-ability-wantagent-depr-t.md) | WantAgent对象。 |
 

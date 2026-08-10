@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## manifestFd
 
 ```TypeScript
@@ -20,7 +26,7 @@ manifestFd: int
 
 清单文件的文件描述符，通过备份服务获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

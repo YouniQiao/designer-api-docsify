@@ -12,6 +12,12 @@ Defines the MMS message reading indication.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## date
 
 ```TypeScript
@@ -20,7 +26,7 @@ date?: long
 
 Indicates the date for the MMS message reading indication.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -40,7 +46,7 @@ from: MmsAddress
 
 Indicates the source address for the MMS message reading indication.
 
-**Type:** MmsAddress
+**Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ readStatus: int
 
 Indicates the read status for the MMS message reading indication.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -120,7 +126,7 @@ version: MmsVersionType
 
 Indicates the version for the MMS message reading indication.
 
-**Type:** MmsVersionType
+**Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # ResolutionLevel
 
-The defination of suggested resolution.
+枚举，设备所支持的分辨率。
 
 **Since:** 19
 
@@ -16,7 +16,7 @@ The defination of suggested resolution.
 RESOLUTION_480P = 0
 ```
 
-Defination of 480P which typically resolution is 640*480.
+分辨率为480P（640×480 px）。
 
 **Since:** 19
 
@@ -34,7 +34,7 @@ Defination of 480P which typically resolution is 640*480.
 RESOLUTION_720P = 1
 ```
 
-Defination of 720P which typically resolution is 1280*720.
+分辨率为720P（1280×720 px）。
 
 **Since:** 19
 
@@ -52,7 +52,7 @@ Defination of 720P which typically resolution is 1280*720.
 RESOLUTION_1080P = 2
 ```
 
-Defination of 1080P which typically resolution is 1920*1080.
+分辨率为1080P（1920×1080 px）。
 
 **Since:** 19
 
@@ -70,7 +70,7 @@ Defination of 1080P which typically resolution is 1920*1080.
 RESOLUTION_2K = 3
 ```
 
-Defination of 2K which typically resolution is 2560*1440.
+分辨率为2K（2560×1440 px）。
 
 **Since:** 19
 
@@ -88,7 +88,7 @@ Defination of 2K which typically resolution is 2560*1440.
 RESOLUTION_4K = 4
 ```
 
-Defination of 4K which typically resolution is 4096*3840.
+分辨率为4K（3840×2160 px）。
 
 **Since:** 19
 

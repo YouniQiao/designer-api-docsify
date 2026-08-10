@@ -1,6 +1,6 @@
 # Macro
 
-Macro继承自[MacroQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i.md)。
 
 提供使能微距能力的接口。
 
@@ -14,6 +14,12 @@ Macro继承自[MacroQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## enableMacro
 
 ```TypeScript
@@ -21,9 +27,10 @@ enableMacro(enabled: boolean): void
 ```
 
 使能当前的微距能力。
-    **说明：**  
-    
-    使用该接口前，需要先通过[isMacroSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口查询当前设备是否支持微距能力。
+
+> **说明：**
+> 
+> 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i.md#ismacrosupported)接口查询当前设备是否支持微距能力。
 
 **起始版本：** 19
 
@@ -45,6 +52,7 @@ enableMacro(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 7400102 | Operation not allowed.<br>**适用版本：** 12+ |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 11 - 18 |
 

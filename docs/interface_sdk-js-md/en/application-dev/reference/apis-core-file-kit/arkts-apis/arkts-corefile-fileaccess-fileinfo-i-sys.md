@@ -1,6 +1,6 @@
 # FileInfo (System API)
 
-Provides APIs for managing file or directory attribute information.
+表示文件(夹)属性信息和接口能力。
 
 **Since:** 9
 
@@ -14,13 +14,20 @@ Provides APIs for managing file or directory attribute information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { fileAccess } from 'kits/@kit.CoreFileKit';
+```
+
 ## listFile
 
 ```TypeScript
 listFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is returned by [next()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. Currently, only built-in storage devices support the file filter.
+以同步方法从某个目录，基于过滤器，获取下一级符合条件的文件(夹)信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
+[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
 
 **Since:** 9
 
@@ -44,54 +51,54 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the FileIterator Object. |
+| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) | Returns the FileIterator Object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -129,8 +136,8 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is returned by  
-[next()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. Currently, this API supports only built-in storage devices.
+以同步方法从某个目录，基于过滤器，递归获取符合条件的文件信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
+[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)。目前仅支持内置存储设备。
 
 **Since:** 9
 
@@ -152,54 +159,54 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the FileIterator Object. |
+| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) | Returns the FileIterator Object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 14000004 | File has been put into trash bin |
+| 13900038 | Value too large for defined data type |
+| 14000001 | Invalid display name |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 14000003 | Invalid file extension |
+| 14000002 | Invalid uri |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -237,7 +244,7 @@ try {
 fileName: string
 ```
 
-Name of the file or directory.
+文件(夹)的名称。
 
 **Type:** string
 
@@ -263,7 +270,7 @@ Name of the file or directory.
 mimeType: string
 ```
 
-Multipurpose Internet Mail Extensions (MIME) type of the file or directory.
+文件(夹)的媒体资源类型。
 
 **Type:** string
 
@@ -289,7 +296,7 @@ Multipurpose Internet Mail Extensions (MIME) type of the file or directory.
 mode: number
 ```
 
-Permissions on the file or directory.
+文件(夹)的权限信息。
 
 **Type:** number
 
@@ -315,7 +322,7 @@ Permissions on the file or directory.
 mtime: number
 ```
 
-Time when the file or directory was last modified.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: ms.
+文件(夹)的修改时间。自1970年1月1日起至目标时间的毫秒数。
 
 **Type:** number
 
@@ -341,7 +348,7 @@ Time when the file or directory was last modified.\_\_\_HTML\_TAG\_DESC\_USD\_0\
 relativePath: string
 ```
 
-Relative path of the file or directory.
+文件(夹)的相对路径。
 
 **Type:** string
 
@@ -367,7 +374,7 @@ Relative path of the file or directory.
 size: number
 ```
 
-Size of the file or directory.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+文件(夹)的大小。（单位：字节）
 
 **Type:** number
 
@@ -393,7 +400,7 @@ Size of the file or directory.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
 uri: string
 ```
 
-URI of the file or directory.
+文件(夹)的uri。
 
 **Type:** string
 

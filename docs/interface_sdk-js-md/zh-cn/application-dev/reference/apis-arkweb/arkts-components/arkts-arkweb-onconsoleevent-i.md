@@ -18,7 +18,7 @@ message: ConsoleMessage
 
 触发的控制台信息。
 
-**类型：** ConsoleMessage
+**类型：** [ConsoleMessage](arkts-arkweb-consolemessage-c.md)
 
 **起始版本：** 12
 

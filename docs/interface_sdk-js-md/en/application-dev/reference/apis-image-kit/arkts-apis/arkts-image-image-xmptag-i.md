@@ -1,6 +1,6 @@
 # XMPTag
 
-Describes XMP Tag parameters.
+表示XMP标签信息。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes XMP Tag parameters.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## name
 
 ```TypeScript
 name: string
 ```
 
-The name of XMP tag.
+XMP标签名称。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ The name of XMP tag.
 type: XMPTagType
 ```
 
-The type of XMP tag.
+XMP标签类型。
 
-**Type:** XMPTagType
+**Type:** [XMPTagType](arkts-image-image-xmptagtype-e.md)
 
 **Since:** 26.0.0
 
@@ -56,7 +62,7 @@ The type of XMP tag.
 value?: string
 ```
 
-The value of XMP tag.
+XMP标签值。
 
 **Type:** string
 
@@ -76,9 +82,9 @@ The value of XMP tag.
 xmpNamespace: XMPNamespace
 ```
 
-The namespace of XMP tag.
+XMP命名空间。
 
-**Type:** XMPNamespace
+**Type:** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
 
 **Since:** 26.0.0
 

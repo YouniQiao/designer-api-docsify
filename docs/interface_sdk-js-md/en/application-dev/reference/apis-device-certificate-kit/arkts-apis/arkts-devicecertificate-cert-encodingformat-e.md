@@ -1,6 +1,6 @@
 # EncodingFormat
 
-Enumerates the certificate encoding formats.
+表示证书编码格式的枚举。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the certificate encoding formats.
 FORMAT_DER = 0
 ```
 
-Distinguished Encoding Rules (DER) format.
+DER格式。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Distinguished Encoding Rules (DER) format.
 FORMAT_PEM = 1
 ```
 
-Privacy-Enhanced Mail (PEM) format.
+PEM格式。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Privacy-Enhanced Mail (PEM) format.
 FORMAT_PKCS7 = 2
 ```
 
-PKCS #7 format.
+PKCS7格式。
 
 **Since:** 11
 

@@ -10,6 +10,12 @@ TLS config.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## cipherSuites
 
 ```TypeScript
@@ -18,7 +24,7 @@ cipherSuites?: CipherSuite[]
 
 CipherSuites, cipherSuits must match tsl version, otherswise will set all system-supported cipherSuits.
 
-**Type:** CipherSuite[]
+**Type:** [CipherSuite](arkts-network-http-ciphersuite-t.md)[]
 
 **Since:** 18
 
@@ -38,7 +44,7 @@ tlsVersionMax: TlsVersion
 
 Maximum version num of Tls protocol.
 
-**Type:** TlsVersion
+**Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
 **Since:** 18
 
@@ -58,7 +64,7 @@ tlsVersionMin: TlsVersion
 
 Minimum version num of Tls protocol.
 
-**Type:** TlsVersion
+**Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
 **Since:** 18
 

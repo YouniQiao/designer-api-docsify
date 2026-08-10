@@ -1,6 +1,6 @@
 # ScrollType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the type of scroll.
+Enum type supplied to {@link setScrollable} for indicating the type of scroll.
 
 **Since:** 23
 

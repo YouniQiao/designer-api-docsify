@@ -4,7 +4,7 @@
 type RequestDialogInfoEvent = (actionType: DialogActionType, actionInfo?: DialogActionInfo) => Promise<DialogInfo>
 ```
 
-The request dialog info event.
+对话框信息请求事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ The request dialog info event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | action type  |
-| actionInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | action info  |
+| actionType | [DialogActionType](arkts-avsession-avmusictemplate-dialogactiontype-t.md) | Yes | 对话框操作类型。 |
+| actionInfo | [DialogActionInfo](arkts-avsession-avmusictemplate-dialogactioninfo-i.md) | No | 对话框动作结果的信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | (DialogInfo) returned through promise  |
+| Promise&lt;DialogInfo&gt; | Promise对象，返回对话框信息。 |
 

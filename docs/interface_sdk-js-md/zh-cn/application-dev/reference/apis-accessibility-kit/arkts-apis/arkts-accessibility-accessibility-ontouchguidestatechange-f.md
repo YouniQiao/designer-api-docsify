@@ -1,5 +1,11 @@
 # onTouchGuideStateChange
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## onTouchGuideStateChange
 
 ```TypeScript
@@ -24,29 +30,5 @@ Register the observe of the touchGuide state changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | Asynchronous callback interface. |
-
-**示例：**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`touch guide state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.onTouchGuideStateChange(this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Asynchronous callback interface. |
 

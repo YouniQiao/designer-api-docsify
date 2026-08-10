@@ -1,12 +1,18 @@
 # createSubscriberSync
 
+## Modules to Import
+
+```TypeScript
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createSubscriberSync
 
 ```TypeScript
 function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEventSubscriber
 ```
 
-Creates a subscriber synchronously.
+同步创建订阅者的接口。
 
 **Since:** 10
 
@@ -22,21 +28,21 @@ Creates a subscriber synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subscriber information. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Yes | 表示订阅信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Promise used to return the subscriber object. |
+| [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 返回订阅者对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -18,5 +18,5 @@ The callback reports the time required for the first screen painting of the curr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| firstScreenPaint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the first screen paint info.  |
+| firstScreenPaint | [FirstScreenPaint](../arkts-components/arkts-arkweb-firstscreenpaint-i.md) | 是 | the first screen paint info. |
 

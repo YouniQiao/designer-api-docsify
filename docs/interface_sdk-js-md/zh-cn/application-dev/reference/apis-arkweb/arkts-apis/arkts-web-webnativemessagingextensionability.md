@@ -1,5 +1,11 @@
 # @ohos.web.WebNativeMessagingExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { ConnectionInfo } from 'kits/@kit.ArkWeb';
+```
+
 ## 汇总
 
 ### 类

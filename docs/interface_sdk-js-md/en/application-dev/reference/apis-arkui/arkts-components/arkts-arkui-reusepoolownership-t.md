@@ -4,7 +4,7 @@
 declare type ReusePoolOwnership = 'shared' | 'perInstance'
 ```
 
-Defining the reuse type of a custom component.
+全局复用池的持有类型。
 
 **Since:** 26.0.0
 

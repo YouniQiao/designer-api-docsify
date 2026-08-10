@@ -1,6 +1,6 @@
 # ParseOptions
 
-Parse's options
+解析的选项，可定义处理BigInt的模式和解析结果的返回类型。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Parse's options
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## bigIntMode
 
 ```TypeScript
 bigIntMode: BigIntMode
 ```
 
-Enum defining modes for handling bigint.
+定义处理BigInt的模式。
 
-**Type:** BigIntMode
+**Type:** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Enum defining modes for handling bigint.
 parseReturnType: ParseReturnType
 ```
 
-The return types for parsing.
+定义解析结果的返回类型。
 
-**Type:** ParseReturnType
+**Type:** [ParseReturnType](arkts-arkts-ason-parsereturntype-e.md)
 
 **Since:** 12
 

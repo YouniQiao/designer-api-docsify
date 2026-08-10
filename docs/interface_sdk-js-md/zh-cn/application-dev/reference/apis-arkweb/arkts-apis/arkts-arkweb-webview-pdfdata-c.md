@@ -1,6 +1,6 @@
 # PdfData
 
-Defines the callback of createPdf, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the callback of createPdf, related to {@link createPDF} method.
 
 **起始版本：** 23
 
@@ -9,6 +9,12 @@ Defines the callback of createPdf, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\
 <!--Device-webview-class PdfData--><!--Device-webview-class PdfData-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
 
 ## pdfArrayBuffer
 

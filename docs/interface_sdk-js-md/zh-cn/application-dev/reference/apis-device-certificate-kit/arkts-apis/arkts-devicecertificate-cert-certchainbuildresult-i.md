@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certChain
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly certChain: X509CertChain
 
 生成的证书链对象。
 
-**类型：** X509CertChain
+**类型：** [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ readonly validationResult: CertChainValidationResult
 
 证书链校验结果。
 
-**类型：** CertChainValidationResult
+**类型：** [CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)
 
 **起始版本：** 12
 

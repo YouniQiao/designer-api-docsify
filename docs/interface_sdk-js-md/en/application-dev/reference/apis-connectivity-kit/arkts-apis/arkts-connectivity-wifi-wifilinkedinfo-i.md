@@ -14,6 +14,12 @@ Wi-Fi connection information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## band
 
 ```TypeScript
@@ -66,7 +72,7 @@ connState: ConnState
 
 The state of this Wi-Fi connection.
 
-**Type:** ConnState
+**Type:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
 
 **Since:** 6
 

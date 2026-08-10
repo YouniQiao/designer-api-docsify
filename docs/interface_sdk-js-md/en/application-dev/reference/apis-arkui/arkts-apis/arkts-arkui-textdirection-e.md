@@ -1,6 +1,6 @@
 # TextDirection
 
-Enumerates the text layout directions.
+文本排版方向。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the text layout directions.
 LTR = 0
 ```
 
-From left to right.
+文本排版方向从左到右。
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ From left to right.
 RTL = 1
 ```
 
-From right to left.
+文本排版方向从右到左。
 
 **Since:** 22
 
@@ -56,7 +56,7 @@ From right to left.
 DEFAULT = 2
 ```
 
-Follows the component layout direction.
+文本排版方向遵循组件布局方向。
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ Follows the component layout direction.
 AUTO = 3
 ```
 
-Follows the writing direction of the content. For example, for right-to-left (RTL) languages (such as Tibetan and Uyghur), the text is laid out from right to left. For left-to-right (LTR) languages (such as Chinese and English), the text is laid out from left to right.
+遵循自身实际文本内容的排版方向，如果文本为 RTL（Right-to-Left）类语言（如藏文、维吾尔文），文本排版方向为从右到左。如果为 LTR（Left-to-Right）类语言（如中文、英文），文本排版方向为从左到右。
 
 **Since:** 23
 

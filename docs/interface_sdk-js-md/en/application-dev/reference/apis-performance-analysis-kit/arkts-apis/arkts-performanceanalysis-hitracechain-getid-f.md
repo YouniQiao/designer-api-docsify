@@ -1,14 +1,20 @@
 # getId
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getId
 
 ```TypeScript
 function getId(): HiTraceId
 ```
 
-Obtains the trace ID. This API returns the result synchronously.
+获取跟踪标识，同步接口。用于在需要传递当前跟踪标识的场景，例如将跟踪标识传递给子线程、传递给其他进程、或者在日志中记录当前跟踪标识。
 
-Obtains the HiTrace ID in the TLS of the current thread.
+获取当前线程TLS中的HiTraceId。若当前线程TLS中不存在有效的HiTraceId，返回各属性值均为0的无效HiTraceId。
 
 **Since:** 8
 
@@ -22,9 +28,9 @@ Obtains the HiTrace ID in the TLS of the current thread.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | HiTraceId** instance. |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 当前线程TLS中的HiTraceId实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Start tracing. The tracing flag is DEFAULT.

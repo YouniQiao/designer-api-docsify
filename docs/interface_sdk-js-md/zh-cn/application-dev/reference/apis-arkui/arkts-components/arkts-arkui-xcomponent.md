@@ -32,7 +32,7 @@ XComponent(value: { id: string; type: string; libraryname?: string; controller?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { id: string; type: string; libraryname?: string; controller?: XComponentController } | 是 | 表示XComponent的选项。  |
+| value | { id: string; type: string; libraryname?: string; controller?: XComponentController } | 是 | 表示XComponent的选项。 |
 
 ## XComponent
 
@@ -42,7 +42,7 @@ XComponent(value: { id: string; type: XComponentType; libraryname?: string; cont
 
 创建**XComponent**组件，其生命周期回调可以从native侧触发。
 
-从API版本12开始，该接口不再维护。建议使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。
+从API版本12开始，该接口不再维护。建议使用[XComponent(options: XComponentOptions)](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12)替代。
 
 **起始版本：** 10
 
@@ -60,7 +60,7 @@ XComponent(value: { id: string; type: XComponentType; libraryname?: string; cont
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController } | 是 | 表示XComponent的选项。  |
+| value | { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController } | 是 | 表示XComponent的选项。 |
 
 ## XComponent
 
@@ -86,7 +86,7 @@ XComponent(options: XComponentOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示XComponent的选项。  |
+| options | [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | 是 | 表示XComponent的选项。 |
 
 ## XComponent
 
@@ -112,7 +112,14 @@ XComponent(params: NativeXComponentParameters)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示用于native开发的XComponent构造参数。  |
+| params | [NativeXComponentParameters](../arkts-apis/arkts-arkui-xcomponent-nativexcomponentparameters-i.md) | 是 | 表示用于native开发的XComponent构造参数。 |
 
 ## 汇总
 
+- [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md)
+- [SurfaceConfig](arkts-arkui-xcomponent-surfaceconfig-i.md)
+- [SurfaceRect](arkts-arkui-xcomponent-surfacerect-i.md)
+- [SurfaceRotationOptions](arkts-arkui-xcomponent-surfacerotationoptions-i.md)
+- [XComponentOptions](arkts-arkui-xcomponent-xcomponentoptions-i.md)
+- [OnNativeLoadCallback](arkts-arkui-xcomponent-onnativeloadcallback-t.md)
+- [HdrType](arkts-arkui-xcomponent-hdrtype-e.md)

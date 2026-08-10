@@ -1,15 +1,21 @@
 # setPermissionUsedRecordToggleStatus (System API)
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setPermissionUsedRecordToggleStatus
 
 ```TypeScript
 function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>
 ```
 
-Sets whether to record the permission usage of this user. Sets the permission usage record switch for this user.This API uses a promise to return the result.
+设置是否记录当前用户的权限使用情况。系统应用调用此接口，可以设置当前用户的权限使用记录开关状态。使用Promise异步回调。
 
-When **status** is **true**, the [addPermissionUsedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API can add usage records normally; when **status** is **false**, the  
-[addPermissionUsedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API does not generate permission usage records, and deletes the current user's historical records.
+status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord)接口可以正常添加使用记录；status为false时，  
+[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord)接口不产生权限使用记录，并且删除当前用户的历史记录。
 
 **Since:** 18
 
@@ -27,34 +33,35 @@ When **status** is **true**, the [addPermissionUsedRecord]\_\_\_JSDOC\_LINK\_DES
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | boolean | Yes | Setting of the permission usage record switch. The value **true** means the switch is toggled on; the value **false** means the opposite. |
+| status | boolean | Yes | 权限使用记录开关状态。true为开，false为关。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION\_\_\_ESCAPED\_UNDERSCORE\_\_\_RECORD\_\_\_ESCAPED\_UNDERSCORE\_\_\_TOGGLE". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionUsedRecordToggleStatus]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. Possible causes: 1. Database error. 2. Failed to query all applications under the user. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 12100009 | Common inner error. Possible causes: 1. Database error. 2. Failed to query all applications under the user. |
+| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_RECORD_TOGGLE". |
+| 202 | Not system app. Interface caller is not a system app. |
+| 12100006 | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus).<br>**Applicable version:** 26.1.0 and later |
+| 12100007 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Set permission usage record switch status
 privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
   console.info('setPermissionUsedRecordToggleStatus success');
-}).catch((err: BusinessError) => {
+}).catch((err: BusinessError): void => {
   console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -66,10 +73,9 @@ privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
 function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: int): Promise<void>
 ```
 
-Sets whether permission usage records are collected for a specified sub-profile. A system application can call this API to set the permission usage record switch status for the specified sub-profile. This API uses a promise to return the result.
+设置是否记录指定子身份资料的权限使用情况。系统应用调用此接口，可以设置指定子身份资料的权限使用记录开关状态。使用Promise异步回调。
 
-When **status** is **true**, the [addPermissionUsedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API can add usage records normally; when **status** is **false**, the  
-[addPermissionUsedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API does not generate permission usage records, and deletes the historical records of the specified sub-profile.
+status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord)接口可以正常添加使用记录；status为false时，addPermissionUsedRecord]{@link privacyManager.addPermissionUsedRecord}接口不产生权限使用记录，并且删除指定子身份资料的历史记录。
 
 **Since:** 26.1.0
 
@@ -89,24 +95,24 @@ When **status** is **true**, the [addPermissionUsedRecord]\_\_\_JSDOC\_LINK\_DES
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | boolean | Yes | Setting of the permission usage record switch. The value **true** means the switch is toggled on; the value **false** means the opposite. |
-| subProfileId | int | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
+| status | boolean | Yes | 权限使用记录开关状态。true为开，false为关。 |
+| subProfileId | int | Yes | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION\_\_\_ESCAPED\_UNDERSCORE\_\_\_RECORD\_\_\_ESCAPED\_UNDERSCORE\_\_\_TOGGLE". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The specified subProfileId does not exist for the current user. |
-| [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionUsedRecordToggleStatus]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. Possible causes: 1. Database error. 2. Failed to query all applications under the user. |
+| 801 | Capability not supported. |
+| 12100009 | Common inner error. Possible causes: 1. Database error. 2. Failed to query all applications under the user. |
+| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_RECORD_TOGGLE". |
+| 12100001 | Invalid parameter. The specified subProfileId does not exist for the current user. |
+| 202 | Not system app. Interface caller is not a system app. |
+| 12100006 | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus). |
+| 12100007 | Service exception. |
 

@@ -1,12 +1,18 @@
 # addProcessorFromConfig
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addProcessorFromConfig
 
 ```TypeScript
 function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>
 ```
 
-Adds the configuration information of the data processor. The configuration file contains information such as the name of the event received by the data processor. This API uses a promise to return the result.
+添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,22 +28,22 @@ Adds the configuration information of the data processor. The configuration file
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processorName | string | Yes | Name of a data processor. It can contain only letters, digits, underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and dollar signs (\_\_\_ESCAPED\_DOLLAR\_\_\_). It cannot start with a digit and cannot exceed 256 characters. |
-| configName | string | No | Name of the data processor configuration. The corresponding configuration can be loaded from the configuration file. The default value is **SDK\_\_\_ESCAPED\_UNDERSCORE\_\_\_OCG**. It can contain only letters, digits, underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and dollar signs (\_\_\_ESCAPED\_DOLLAR\_\_\_). It cannot start with a digit and cannot exceed 256 characters. |
+| processorName | string | Yes | 数据处理者的名称。名称只能包含大小写字母、数字、下划线和\\$，不能以数字开头，长度非空且不超过256个字符。 |
+| configName | string | No | 数据处理者的配置名称，支持从配置文件中加载对应配置，默认为“SDK_OCG”。只能包含大小写字母、数字、下划线和\\$，不能以数字开头，长度非空且不 超过256个字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise that returns the unique ID of the added event data processor, which can be used to remove the data processor. If the adding fails, error code **11105001** is returned. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回添加的事件数据处理者的唯一ID，可用于移除该数据处理者。 添加失败返回11105001错误码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11105001](../errorcode-hiappevent.md#11105001-invalid-parameter-value) | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
+| 11105001 | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

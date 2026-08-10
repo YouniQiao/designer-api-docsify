@@ -1,12 +1,18 @@
 # getAllLauncherAbilityResourceInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAllLauncherAbilityResourceInfo
 
 ```TypeScript
 function getAllLauncherAbilityResourceInfo(resourceFlags: int, callback: AsyncCallback<Array<LauncherAbilityResourceInfo>>): void
 ```
 
-Obtains the resource information of the entry abilities of the current application based on the given resource flags. This API uses an asynchronous callback to return the result.
+根据给定的resourceFlags获取当前所有应用的LauncherAbilityResourceInfo。使用callback异步回调。
 
 **Since:** 11
 
@@ -24,16 +30,16 @@ Obtains the resource information of the entry abilities of the current applicati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of the resource information to obtain. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the information is successfully obtained, **err** is **null** and **data** is a LauncherAbilityResourceInfo array. Otherwise, **err** is an error object. |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的LauncherAbilityResourceInfo所包含的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成 功时，err为undefined，data为获取到的LauncherAbilityResourceInfo数组；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
 
 ## getAllLauncherAbilityResourceInfo
@@ -42,7 +48,7 @@ Obtains the resource information of the entry abilities of the current applicati
 function getAllLauncherAbilityResourceInfo(resourceFlags: int): Promise<Array<LauncherAbilityResourceInfo>>
 ```
 
-Obtains the resource information of the entry abilities of the current application based on the given resource flags. This API uses a promise to return the result.
+根据给定的resourceFlags获取当前所有应用的LauncherAbilityResourceInfo。使用Promise异步回调。
 
 **Since:** 11
 
@@ -60,19 +66,19 @@ Obtains the resource information of the entry abilities of the current applicati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of the resource information to obtain. |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的LauncherAbilityResourceInfo所包含的信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Promise used to return the LauncherAbilityResourceInfo array. |
+| Promise&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Promise对象，返回LauncherAbilityResourceInfo数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 

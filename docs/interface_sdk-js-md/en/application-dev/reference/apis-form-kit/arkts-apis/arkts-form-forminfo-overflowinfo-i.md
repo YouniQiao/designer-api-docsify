@@ -10,6 +10,12 @@ Provides OverflowInfo about funInteraction or sceneAnimation form
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## area
 
 ```TypeScript
@@ -18,7 +24,7 @@ area: Rect
 
 The overflow animation area
 
-**Type:** Rect
+**Type:** [Rect](arkts-form-forminfo-rect-i.md)
 
 **Since:** 20
 
@@ -38,7 +44,7 @@ duration: int
 
 The overflow animation duration, unit is ms Unit: milliseconds, The value must be an integer within [0,3500].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

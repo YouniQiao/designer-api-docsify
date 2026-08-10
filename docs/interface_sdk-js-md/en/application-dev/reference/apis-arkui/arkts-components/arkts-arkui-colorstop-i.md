@@ -1,6 +1,6 @@
 # ColorStop
 
-Describes the gradient color stop.
+颜色断点类型，用于描述渐变色颜色断点。
 
 **Since:** 10
 
@@ -16,9 +16,9 @@ Describes the gradient color stop.
 color: ResourceColor
 ```
 
-Color value at the gradient color stop.
+渐变色断点处的颜色值。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
 
@@ -38,15 +38,15 @@ Color value at the gradient color stop.
 offset: Length
 ```
 
-Gradient color stop (proportion value between 0 and 1). A value less than 0 evaluates to the value **0**. A value greater than 1 evaluates to the value **1**.
+渐变色断点（0~1之间的比例值，若该值小于0则置为0，若该值大于1则置为1）。
 
-**NOTE**
+**说明：**
 
-If the value is a string that represents a number, it will be converted to a number.
+若传入字符串类型且内容为数字，则转换为对应的数值。
 
-For example, **'10vp'** is converted to 10, and **'10%'** is converted to 0.1.
+例如'10vp'转换为10，'10%'转换为0.1。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
 

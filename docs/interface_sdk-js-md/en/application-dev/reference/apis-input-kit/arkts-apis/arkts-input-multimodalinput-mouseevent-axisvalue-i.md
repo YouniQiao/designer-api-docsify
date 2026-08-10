@@ -1,6 +1,6 @@
 # AxisValue
 
-Defines the mouse axis type and axis value.
+鼠标轴类型和轴的值。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the mouse axis type and axis value.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
+```
+
 ## axis
 
 ```TypeScript
 axis: Axis
 ```
 
-Mouse axis type.
+鼠标轴类型。
 
-**Type:** Axis
+**Type:** [Axis](../../apis-arkui/arkts-apis/arkts-arkui-enums-axis-e.md)
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Mouse axis type.
 value: int
 ```
 
-Mouse axis value.
+鼠标轴的值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

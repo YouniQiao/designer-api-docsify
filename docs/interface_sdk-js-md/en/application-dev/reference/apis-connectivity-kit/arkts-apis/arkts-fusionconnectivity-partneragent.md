@@ -6,9 +6,17 @@ Provides APIs for managing partner agents.
 
 **ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace partnerAgent--><!--Device-unnamed-declare namespace partnerAgent-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
+
+## Modules to Import
+
+```TypeScript
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+```
 
 ## Summary
 
@@ -16,7 +24,7 @@ Provides APIs for managing partner agents.
 
 | Name | Description |
 | --- | --- |
-| [bindDevice](arkts-connectivity-partneragent-binddevice-f.md#binddevice) | Bind the partner device.After successfully binding the device, if the device meets the discovery requirements,the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the application will be launched.  - If the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in the capability variable is set to true,  the application's ability will be launched when the device is connected via Bluetooth.  - If the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in the capability variable is set to true,  the application's ability will be launched when the device is detected via Bluetooth scanning.  Note: The device must be paired first. |
+| [bindDevice](arkts-connectivity-partneragent-binddevice-f.md#binddevice) | Bind the partner device.After successfully binding the device, if the device meets the discovery requirements,the {@link PartnerAgentExtensionAbility} of the application will be launched.  - If the {@link DeviceCapability.supportBR} in the capability variable is set to true,   the application's ability will be launched when the device is connected via Bluetooth.  - If the {@link DeviceCapability.supportBleAdvertiser} in the capability variable is set to true,   the application's ability will be launched when the device is detected via Bluetooth scanning.  Note: The device must be paired first. |
 | [getBoundDevices](arkts-connectivity-partneragent-getbounddevices-f.md#getbounddevices) | Gets the list of addresses of the bound partner device for this application. |
 | [isDeviceBound](arkts-connectivity-partneragent-isdevicebound-f.md#isdevicebound) | Checks whether a device is bound to this application. |
 | [isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md#isdevicecontrolenabled) | Checks whether device control is enabled. |

@@ -1,6 +1,6 @@
 # ThreadWorkerPriority
 
-Enumerates the priorities available for Worker threads.For details about the mappings between priorities and QoS levels, see QoS Level.
+Worker线程的优先级枚举，各优先级对应关系请参考QoS等级定义。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the priorities available for Worker threads.For details about the map
 HIGH = 0
 ```
 
-High priority, corresponding to QOS\_USER\_INITIATED.
+适用于打开文档等用户触发并且可以看到进展的任务，任务在几秒钟之内完成。对应QOS_USER_INITIATED。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ High priority, corresponding to QOS\_USER\_INITIATED.
 MEDIUM = 1
 ```
 
-Medium priority, corresponding to QOS\_DEFAULT.
+任务完成需要几秒钟。是ThreadWorkerPriority的默认值。对应QOS_DEFAULT。
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ Medium priority, corresponding to QOS\_DEFAULT.
 LOW = 2
 ```
 
-Low priority, corresponding to QOS\_UTILITY.
+适用于下载等不需要立即看到响应效果的任务，任务完成需要几秒到几分钟。对应QOS_UTILITY。
 
 **Since:** 18
 
@@ -70,7 +70,7 @@ Low priority, corresponding to QOS\_UTILITY.
 IDLE = 3
 ```
 
-Background priority, corresponding to QOS\_BACKGROUND.
+适用于数据同步等用户不可见的后台任务，任务完成需要几分钟甚至几小时。对应QOS_BACKGROUND。
 
 **Since:** 18
 
@@ -88,7 +88,7 @@ Background priority, corresponding to QOS\_BACKGROUND.
 DEADLINE = 4
 ```
 
-Deadline priority, corresponding to QOS\_DEADLINE\_REQUEST.
+适用于页面加载等越快越好的关键任务，任务几乎是瞬间完成的。对应QOS_DEADLINE_REQUEST。
 
 **Since:** 20
 
@@ -106,7 +106,7 @@ Deadline priority, corresponding to QOS\_DEADLINE\_REQUEST.
 VIP = 5
 ```
 
-Vip priority, corresponding to QOS\_USER\_INTERACTIVE.
+适用于UI线程、动画渲染等用户交互任务，任务是即时的。对应QOS_USER_INTERACTIVE。
 
 **Since:** 20
 

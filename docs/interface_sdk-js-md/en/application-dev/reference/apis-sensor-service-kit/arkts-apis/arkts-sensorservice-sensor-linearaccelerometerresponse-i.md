@@ -1,6 +1,6 @@
 # LinearAccelerometerResponse
 
-Describes the linear acceleration sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+线性加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** LinearAccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the linear acceleration sensor data. It extends from [Response]\_\_\_J
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## x
 
 ```TypeScript
 x: double
 ```
 
-Linear acceleration along the x-axis of the device, in m/s?.
+施加在设备x轴方向的线性加速度（排除重力分量）。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -36,9 +42,9 @@ Linear acceleration along the x-axis of the device, in m/s?.
 y: double
 ```
 
-Linear acceleration along the y-axis of the device, in m/s?.
+施加在设备y轴方向的线性加速度（排除重力分量）。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -54,9 +60,9 @@ Linear acceleration along the y-axis of the device, in m/s?.
 z: double
 ```
 
-Linear acceleration along the z-axis of the device, in m/s?.
+施加在设备z轴方向的线性加速度（排除重力分量）。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

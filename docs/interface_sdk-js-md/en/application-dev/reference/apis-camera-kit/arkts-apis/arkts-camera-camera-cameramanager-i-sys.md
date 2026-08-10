@@ -1,7 +1,6 @@
 # CameraManager
 
-CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use  
-[getCameraManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain a **CameraManager** instance.
+相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager)接口获取相机管理实例。
 
 **Since:** 10
 
@@ -10,6 +9,12 @@ CameraManager** implements camera management. Before calling any API in **Camera
 <!--Device-camera-interface CameraManager--><!--Device-camera-interface CameraManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## createCameraInputWithTokenId
 
@@ -45,23 +50,23 @@ Before using this interface, first through the getSupportedCameras interface to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device used to create the instance. |
-| tokenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The calling token id. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md) | Yes | Camera device used to create the instance. |
+| tokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The calling token id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a CameraInput instance. Failure of an interface call returns the corresponding error code, which is of type CameraErrorCode. |
+| [CameraInput](arkts-camera-camera-camerainput-i-sys.md) | Returns a CameraInput instance. Failure of an interface call returns the corresponding error code, which is of type CameraErrorCode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 201 | Permission denied. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## createControlCenterSession
 
@@ -87,14 +92,14 @@ Create a ControlCenterSession instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the ControlCenterSession instance. |
+| [ControlCenterSession](arkts-camera-camera-controlcentersession-i-sys.md) | the ControlCenterSession instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## createDepthDataOutput
 
@@ -118,22 +123,22 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Supported preview profile, which is obtained through  [getSupportedOutputCapability]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| profile | [DepthProfile](arkts-camera-camera-depthprofile-i-sys.md) | Yes | Supported preview profile, which is obtained through  [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | DepthDataOutput instance. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [DepthDataOutput](arkts-camera-camera-depthdataoutput-i-sys.md) | DepthDataOutput instance. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -180,9 +185,9 @@ Checks whether the camera device can be muted.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 function isCameraMuteSupported(cameraManager: camera.CameraManager): boolean {
@@ -219,7 +224,7 @@ Check if the control center active.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## isPrelaunchSupported
 
@@ -243,7 +248,7 @@ Checks whether a camera device supports prelaunch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md) | Yes | Camera device. |
 
 **Return value:**
 
@@ -255,10 +260,10 @@ Checks whether a camera device supports prelaunch.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -304,7 +309,7 @@ Mutes or unmutes the camera device.
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function muteCamera(cameraManager: camera.CameraManager): void {
@@ -338,17 +343,17 @@ Mutes the camera device permanently.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Policy type. For details about the available options, see [PolicyType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md) | Yes | Policy type. For details about the available options, see [PolicyType](arkts-camera-camera-policytype-e-sys.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 201 | Permission denied. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function muteCameraPersistent(cameraManager: camera.CameraManager): void {
@@ -380,15 +385,15 @@ Unsubscribes from camera mute status events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cameraMute' | Yes | Event type. The value is fixed at **'cameraMute'**, indicating the camera mute status. The event can be listened for when a CameraManager instance is obtained. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the camera mute status. **true** if muted, **false** otherwise. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('cameraMute')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No | Callback used to return the camera mute status. **true** if muted, **false** otherwise. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('cameraMute')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -425,13 +430,13 @@ Unsubscribes control center status change event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlCenterStatusChange' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No | Callback used to get the control center status change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## offCameraMute
 
@@ -455,13 +460,13 @@ Unsubscribes from camera mute change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to get the camera mute change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No | Callback used to get the camera mute change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## offControlCenterStatusChange
 
@@ -485,13 +490,13 @@ Unsubscribes control center status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No | Callback used to get the control center status change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## on('cameraMute')
 
@@ -516,15 +521,15 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cameraMute' | Yes | Event type. The value is fixed at **'cameraMute'**, indicating the camera mute status. The event can be listened for when a CameraManager instance is obtained. This event is triggered and the status is returned when the camera device is muted or unmuted. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the camera mute status. **true** if muted, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the camera mute status. **true** if muted, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -566,13 +571,13 @@ Subscribes control center status change event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlCenterStatusChange' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to get the control center status change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## onCameraMute
 
@@ -596,13 +601,13 @@ Subscribes camera mute change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to get the camera mute change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to get the camera mute change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## onControlCenterStatusChange
 
@@ -626,13 +631,13 @@ Subscribes control center status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to get the control center status change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## preSwitchCamera
 
@@ -662,11 +667,11 @@ Pre-switches a camera device to speed up its startup.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -705,9 +710,9 @@ Prelaunches the camera device. This API is called when a user clicks the system 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
+| 202 | Not System Application.<br>**Applicable version:** 13 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -731,7 +736,7 @@ function preLaunch(context: common.BaseContext): void {
 setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void
 ```
 
-Sets prelaunch configuration.Before the setting, call [isPrelaunchSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the camera device supports prelaunch.
+Sets prelaunch configuration.Before the setting, call [isPrelaunchSupported](arkts-camera-camera-cameramanager-i-sys.md#isprelaunchsupported) to check whether the camera device supports prelaunch.
 
 **Since:** 10
 
@@ -749,18 +754,18 @@ Sets prelaunch configuration.Before the setting, call [isPrelaunchSupported]\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prelaunchConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Prelaunch configuration. |
+| prelaunchConfig | [PrelaunchConfig](arkts-camera-camera-prelaunchconfig-i-sys.md) | Yes | Prelaunch configuration. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| 202 | Not System Application.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

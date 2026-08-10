@@ -1,6 +1,6 @@
 # EffectComponentOptions (System API)
 
-Sets the construction parameters of the current EffectComponent, including the rendering layer of the EffectComponent.
+设置当前EffectComponent构造参数，包含EffectComponent的渲染层级。
 
 **Since:** 20
 
@@ -18,11 +18,11 @@ Sets the construction parameters of the current EffectComponent, including the r
 effectLayer?: EffectLayer
 ```
 
-Rendering layer of the EffectComponent.
+EffectComponent的渲染层级。
 
-Default value: EffectLayer.NONE
+默认值：EffectLayer.NONE
 
-**Type:** EffectLayer
+**Type:** [EffectLayer](arkts-arkui-effectlayer-e-sys.md)
 
 **Since:** 20
 

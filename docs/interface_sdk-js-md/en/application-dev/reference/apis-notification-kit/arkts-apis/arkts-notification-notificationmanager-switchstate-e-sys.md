@@ -1,6 +1,6 @@
 # SwitchState (System API)
 
-Describes the switch state of notifications.
+描述通知相关开关的设置状态。
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ Describes the switch state of notifications.
 USER_MODIFIED_OFF = 0
 ```
 
-Disabled state set by the user.
+表示用户设置的关闭状态。
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ Disabled state set by the user.
 USER_MODIFIED_ON = 1
 ```
 
-Enabled state set by the user.
+表示用户设置的开启状态。
 
 **Since:** 20
 
@@ -54,7 +54,7 @@ Enabled state set by the user.
 SYSTEM_DEFAULT_OFF = 2
 ```
 
-Initial disabled state before user settings.
+表示在用户设置前的初始关闭状态。
 
 **Since:** 20
 
@@ -72,7 +72,7 @@ Initial disabled state before user settings.
 SYSTEM_DEFAULT_ON = 3
 ```
 
-Initial enabled state before user settings.
+表示在用户设置前的初始开启状态。
 
 **Since:** 20
 

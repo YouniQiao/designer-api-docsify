@@ -1,12 +1,18 @@
 # bindDriverWithDeviceId
 
+## Modules to Import
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## bindDriverWithDeviceId
 
 ```TypeScript
 function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long>): Promise<RemoteDeviceDriver>
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the peripheral device list.
+根据queryDevices()返回的设备信息绑定设备。使用Promise异步回调。需要调用[deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获取设备信息列表。
 
 **Since:** 19
 
@@ -22,24 +28,24 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 设备ID，通过queryDevices获得。 |
+| onDisconnect | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RemoteDeviceDriver&gt; | Promise used to return a **RemoteDeviceDriver** object. |
+| Promise&lt;RemoteDeviceDriver&gt; | Promise对象，返回RemoteDeviceDriver对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
-| [26300002](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-binding-driver-client-to-driver-server-failed) | The driver service does not allow any client to bind. |
+| 26300001 | ExternalDeviceManager service exception. |
+| 26300002 | The driver service does not allow any client to bind. |
+| 201 | The permission check failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

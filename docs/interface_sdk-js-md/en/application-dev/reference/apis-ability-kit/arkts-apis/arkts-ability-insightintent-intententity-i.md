@@ -1,9 +1,9 @@
 # IntentEntity
 
-Defines the struct of an intent entity. It represents key information objects involved during intent execution,including intent parameters and execution results.
+意图实体结构体定义，用于定义意图执行过程中涉及的关键信息对象，包括意图参数和意图执行结果等。
 
-You can define intent entities by inheriting this class. The child class must be decorated with  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+开发者通过继承该类来定义意图实体，继承类需使用  
+[@InsightIntentEntity](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity)装饰。
 
 **Since:** 20
 
@@ -13,13 +13,19 @@ You can define intent entities by inheriting this class. The child class must be
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## entityId
 
 ```TypeScript
 entityId: string
 ```
 
-ID of the intent entity.
+意图实体的ID。
 
 **Type:** string
 

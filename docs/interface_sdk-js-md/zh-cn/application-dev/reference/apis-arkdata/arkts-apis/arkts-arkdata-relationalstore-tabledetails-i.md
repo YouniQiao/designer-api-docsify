@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## download
 
 ```TypeScript
@@ -18,7 +24,7 @@ download: Statistic
 
 表示数据库表中端云同步下载过程的统计信息。
 
-**类型：** Statistic
+**类型：** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
 **起始版本：** 10
 
@@ -36,7 +42,7 @@ upload: Statistic
 
 表示数据库表中端云同步上传过程的统计信息。
 
-**类型：** Statistic
+**类型：** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
 **起始版本：** 10
 

@@ -8,13 +8,19 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## family
 
 ```TypeScript
 family: string
 ```
 
-Font name related.
+字体集名，字体文件中指定的"family"值。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Font name related.
 language: string
 ```
 
-Language that font set support.
+字体集所支持的语言类型，语言格式为bcp47。
 
 **Type:** string
 

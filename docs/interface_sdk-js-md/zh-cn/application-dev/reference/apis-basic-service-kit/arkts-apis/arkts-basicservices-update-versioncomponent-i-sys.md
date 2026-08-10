@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## componentId
 
 ```TypeScript
@@ -40,7 +46,7 @@ componentType: ComponentType
 
 组件类型。
 
-**类型：** ComponentType
+**类型：** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ descriptionInfo: DescriptionInfo
 
 描述文件信息.
 
-**类型：** DescriptionInfo
+**类型：** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
 **起始版本：** 9
 
@@ -98,9 +104,9 @@ displayVersion: string
 effectiveMode: EffectiveMode
 ```
 
-生效模式，取值原则：COLD为冷升级，需重启设备生效；LIVE为热升级，无需重启即可生效；LIVE\_AND\_COLD为融合升级，结合两者特性。
+生效模式，取值原则：COLD为冷升级，需重启设备生效；LIVE为热升级，无需重启即可生效；LIVE_AND_COLD为融合升级，结合两者特性。
 
-**类型：** EffectiveMode
+**类型：** [EffectiveMode](arkts-basicservices-update-effectivemode-e-sys.md)
 
 **起始版本：** 9
 
@@ -138,9 +144,9 @@ innerVersion: string
 otaMode?: OtaMode
 ```
 
-升级模式。当需要指定特定的升级模式时传入此参数，适用于存储空间受限、快速升级或A/B分区设备等特殊场景。取值原则：REGULAR\_OTA为正常升级，适用于大多数常规升级场景；STREAM\_OTA为流式升级，适用于存储空间受限或需要快速升级的场景；AB\_REGULAR\_OTA为AB正常升级，适用于A/B分区设备；AB\_STREAM\_OTA为AB流式升级，适用于A/B分区设备。不传入时默认为REGULAR\_OTA，使用正常升级模式。
+升级模式。当需要指定特定的升级模式时传入此参数，适用于存储空间受限、快速升级或A/B分区设备等特殊场景。取值原则：REGULAR_OTA为正常升级，适用于大多数常规升级场景；STREAM_OTA为流式升级，适用于存储空间受限或需要快速升级的场景；AB_REGULAR_OTA为AB正常升级，适用于A/B分区设备；AB_STREAM_OTA为AB流式升级，适用于A/B分区设备。不传入时默认为REGULAR_OTA，使用正常升级模式。
 
-**类型：** OtaMode
+**类型：** [OtaMode](arkts-basicservices-update-otamode-e-sys.md)
 
 **起始版本：** 20
 
@@ -160,7 +166,7 @@ size: int
 
 升级包大小，单位为B，取值范围[0, +∞]。超出范围时抛出异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -180,7 +186,7 @@ upgradeAction: UpgradeAction
 
 升级方式，取值原则：UPGRADE为差分包，适用于增量升级场景；RECOVERY为修复包，适用于系统故障修复场景。
 
-**类型：** UpgradeAction
+**类型：** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
 **起始版本：** 9
 

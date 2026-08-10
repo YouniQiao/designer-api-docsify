@@ -1,5 +1,11 @@
 # ArcListItem
 
+## Modules to Import
+
+```TypeScript
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## ArcListItem
 
 ```TypeScript
@@ -8,7 +14,7 @@ export declare function ArcListItem(
 ): ArcListItemAttribute
 ```
 
-Defines ArcListItem Component.
+创建弧形列表子组件。
 
 **Since:** 23
 
@@ -22,13 +28,13 @@ Defines ArcListItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
 
 
 ## ArcListItem
@@ -40,11 +46,11 @@ export declare function ArcListItem(
 ): ArcListItemAttribute
 ```
 
-Defines ArcListItem Component.
+定义ArcListItem组件。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Decorator:** @Builder
 
@@ -58,12 +64,12 @@ Defines ArcListItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArcListItemAttribute&gt; | Yes | The style to create an ArcListItem. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcListItemAttribute&gt; | Yes | 创建ArcListItem的样式 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the ArcListItem. |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) | ArcListItem的属性。 |
 

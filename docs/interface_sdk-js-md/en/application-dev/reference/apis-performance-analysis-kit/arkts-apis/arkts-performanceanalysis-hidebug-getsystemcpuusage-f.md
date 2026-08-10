@@ -1,16 +1,22 @@
 # getSystemCpuUsage
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getSystemCpuUsage
 
 ```TypeScript
 function getSystemCpuUsage(): double
 ```
 
-Obtains the CPU usage of the system.
-    **NOTE**  
-    
-    This API involves cross-process communication and takes a long time. To avoid performance problems, you are  
-    advised not to call this API in the main thread.
+��ȡϵͳ��CPU��Դռ�������
+
+> **ע��**
+> 
+> ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
 
 **Since:** 12
 
@@ -24,15 +30,15 @@ Obtains the CPU usage of the system.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | CPU usage of the system. For example, if the CPU usage is **50%**, **0.5** is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | ϵͳCPU��Դռ���������ռ����Ϊ50%���򷵻�0.5�� |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | The status of the system CPU usage is abnormal. |
+| 11400104 | The status of the system CPU usage is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

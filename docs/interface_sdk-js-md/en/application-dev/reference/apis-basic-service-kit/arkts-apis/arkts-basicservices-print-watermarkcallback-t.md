@@ -4,7 +4,7 @@
 type WatermarkCallback = (jobId: string, fd: int) => void
 ```
 
-Defines the callback type used in registering to listen for watermark handling.The value of jobId indicates the print job ID.The value of fd indicates the fd.
+定义用来注册强制水印处理的监听事件时使用的回调类型。
 
 **Since:** 24
 
@@ -20,6 +20,6 @@ Defines the callback type used in registering to listen for watermark handling.T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | the print job ID \_\_\_HTML\_TAG\_USD\_0\_\_\_Print job ID in preview.  |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File Descriptor \_\_\_HTML\_TAG\_USD\_0\_\_\_File descriptor in preview.  |
+| jobId | string | Yes | 表示当前打印任务的id。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示当前文件的文件描述符。 |
 

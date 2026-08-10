@@ -1,6 +1,6 @@
 # @ohos.bundle.bundleMonitor
 
-Bundle monitor
+本模块提供监听应用安装，卸载，更新的能力。
 
 **Since:** 9
 
@@ -12,6 +12,12 @@ Bundle monitor
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { bundleMonitor } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -19,14 +25,14 @@ Bundle monitor
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-ability-bundlemonitor-off-f-sys.md#off) | Unregister to monitor the installation status |
-| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md#offadd) | Unregister installation listener. |
-| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md#offremove) | Unregister uninstallation listener. |
-| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md#offupdate) | Unregister update listener. |
-| [on](arkts-ability-bundlemonitor-on-f-sys.md#on) | Register to monitor the installation status |
-| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md#onadd) | Register installation listener. |
-| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md#onremove) | Register uninstallation listener. |
-| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md#onupdate) | Register update listener. |
+| [off](arkts-ability-bundlemonitor-off-f-sys.md#off) | 注销监听应用的安装，卸载，更新。使用callback异步回调。 |
+| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md#offadd) | 注销监听应用的安装。 |
+| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md#offremove) | 注销监听应用的卸载。 |
+| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md#offupdate) | 注销监听应用的更新。 |
+| [on](arkts-ability-bundlemonitor-on-f-sys.md#on) | 注册监听应用的安装、卸载、更新。使用callback异步回调。 |
+| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md#onadd) | 注册监听应用的安装。 |
+| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md#onremove) | 注册监听应用的卸载。 |
+| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md#onupdate) | 注册监听应用的更新。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -34,7 +40,7 @@ Bundle monitor
 
 | Name | Description |
 | --- | --- |
-| [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md) | This module defines the result information of monitoring install, update and uninstall. |
+| [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md) | 应用变更信息。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -42,6 +48,6 @@ Bundle monitor
 
 | Name | Description |
 | --- | --- |
-| [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Indicates the event type of bundle change |
+| [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | 监听的事件类型。 |
 <!--DelEnd-->
 

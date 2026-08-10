@@ -18,7 +18,7 @@ extraOffset?: LengthMetrics
 
 滚动到指定索引的额外偏移量。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 

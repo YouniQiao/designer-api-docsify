@@ -1,11 +1,10 @@
 # Watcher
 
-Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events.
-    **NOTE**  
-    
-    You are not advised to call [removeWatcher]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ in the callback. Once a watcher is  
-    removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an  
-    event occurs.
+提供事件观察者的参数选项。用于配置和管理事件的观察者，实现对特定事件的监听和处理。
+
+> **说明：**
+> 
+> 不建议在回调函数中执行[removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher)的操作，watcher一旦被移除，则其原有的订阅回调功能也会随之失效，可能会造成某些事件发生后无订阅回调情况。
 
 **Since:** 9
 
@@ -15,18 +14,23 @@ Defines parameters for a **Watcher** object. This API is used to configure and m
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## onReceive
 
 ```TypeScript
 onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
 ```
 
-Real-time subscription callback. Only this callback function is triggered if it is passed together with  
-**onTrigger**. The input arguments are described as follows:
+订阅实时回调函数，与回调函数onTrigger同时存在时，只触发此回调，函数入参说明如下：
 
-domain: domain name.
+domain：回调事件的领域名称； 
 
-appEventGroups: event group.
+appEventGroups：回调事件集合。
 
 **Since:** 11
 
@@ -57,13 +61,13 @@ ArkTS-Sta:
 onTrigger?: (curRow: int, curSize: int, holder: AppEventPackageHolder) => void
 ```
 
-Subscription callback. This parameter takes effect only when it is passed together with **triggerCondition**. The input arguments are described as follows:
+订阅回调函数，需要与回调触发条件triggerCondition一同传入才会生效，函数入参说明如下：
 
-**curRow**: total number of subscription events when the callback is triggered.
+curRow：在本次回调触发时的订阅事件总数量； 
 
-**curSize**: total size of subscribed events when the callback is triggered, in bytes.
+curSize：在本次回调触发时的订阅事件总大小，单位为byte； 
 
-**holder**: subscription data holder, which can be used to process subscribed events.
+holder：订阅数据持有者对象，可以通过其对订阅事件进行处理。
 
 **Since:** 9
 
@@ -79,9 +83,9 @@ Subscription callback. This parameter takes effect only when it is passed togeth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curRow | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
-| curSize | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| curRow | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
+| curSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
+| holder | [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | Yes |  |
 
 ## appEventFilters
 
@@ -89,9 +93,9 @@ Subscription callback. This parameter takes effect only when it is passed togeth
 appEventFilters?: AppEventFilter[]
 ```
 
-Subscription filtering condition. This parameter is passed only when subscription events need to be filtered. If this parameter is not set, events are not filtered by default.
+订阅过滤条件，在需要对订阅事件进行过滤时传入。默认不过滤事件。
 
-**Type:** AppEventFilter[]
+**Type:** [AppEventFilter](arkts-performanceanalysis-hiappevent-appeventfilter-i.md)[]
 
 **Since:** 9
 
@@ -109,8 +113,7 @@ Subscription filtering condition. This parameter is passed only when subscriptio
 name: string
 ```
 
-Unique name of a watcher. The value contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), and underscore (\_). It must start with a letter and end with a digit or letter. For example,  
-**testName1** and **crash\_Watcher**.
+观察者名称，用于唯一标识观察者。首字符必须为字母字符，中间字符必须为数字字符、字母字符或下划线字符，结尾字符必须为数字字符或字母字符，长度非空且不超过32个字符。如testName1、crash_Watcher等。
 
 **Type:** string
 
@@ -130,10 +133,9 @@ Unique name of a watcher. The value contains a maximum of 32 characters, includi
 triggerCondition?: TriggerCondition
 ```
 
-Subscription callback triggering condition. This parameter takes effect only when it is passed together with  
-**onTrigger**. If this parameter is not set, the **onTrigger** callback is not triggered by default.
+订阅回调触发条件，需要与回调函数onTrigger一同传入才会生效。默认不触发。
 
-**Type:** TriggerCondition
+**Type:** [TriggerCondition](arkts-performanceanalysis-hiappevent-triggercondition-i.md)
 
 **Since:** 9
 

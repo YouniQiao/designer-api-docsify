@@ -1,6 +1,10 @@
 # AvisPropertyKey
 
-Enumerates the properties available for the metadata of a Avis image.
+表示AVIS图片信息的枚举。
+
+> **说明：**
+> 
+> 返回字段类型具体参考[AvisMetadata](../../../reference/apis-image-kit/arkts-apis-image-AvisMetadata.md)。
 
 **Since:** 26.0.0
 
@@ -16,7 +20,9 @@ Enumerates the properties available for the metadata of a Avis image.
 DELAY_TIME = 'AvisDelayTime'
 ```
 
-Delay of each frame in milliseconds.
+AVIS图片的每帧播放时长。
+
+单位：毫秒（ms）。
 
 **Since:** 26.0.0
 

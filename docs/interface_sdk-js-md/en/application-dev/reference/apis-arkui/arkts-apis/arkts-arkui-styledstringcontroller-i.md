@@ -1,6 +1,6 @@
 # StyledStringController
 
-Defines a styled string controller.
+定义StyledString控制器。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines a styled string controller.
 getStyledString(): MutableStyledString
 ```
 
-Obtains the styled string displayed in the rich text component.
+获取富文本组件显示的属性字符串。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Obtains the styled string displayed in the rich text component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Styled string displayed in the rich text component. |
+| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。 |
 
 ## setStyledString
 
@@ -42,7 +42,7 @@ Obtains the styled string displayed in the rich text component.
 setStyledString(styledString: StyledString): void
 ```
 
-Sets the styled string displayed in the rich text component.
+设置富文本组件显示的属性字符串。
 
 **Since:** 12
 
@@ -60,5 +60,5 @@ Sets the styled string displayed in the rich text component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Styled string to set.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The child class [MutableStyledString]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of **StyledString** can also serve as the argument. |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 属性字符串。 &lt;br&gt;**说明：** &lt;br&gt;StyledString的子类[MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md)也可以作为入参值。 |
 

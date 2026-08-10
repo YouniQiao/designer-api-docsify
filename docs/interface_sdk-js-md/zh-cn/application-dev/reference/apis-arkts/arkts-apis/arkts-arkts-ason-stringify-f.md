@@ -1,5 +1,11 @@
 # stringify
 
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## stringify
 
 ```TypeScript
@@ -24,7 +30,7 @@ function stringify(value: Object | null | undefined): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | 是 | ArkTS对象数据。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 18 |
+| value | Object \| null \| undefined | 是 | ArkTS对象数据。<br>**起始版本：** 18 |
 
 **返回值：**
 

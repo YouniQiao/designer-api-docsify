@@ -20,5 +20,5 @@ type OnLazyLoadingFunc = (index: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 当前数据项对应的索引。  |
+| index | int | 是 | 当前数据项对应的索引。 |
 

@@ -1,6 +1,6 @@
 # SyncInfo (System API)
 
-Represents information about the last device-cloud sync.
+端云同步信息，包含最近一次端云同步的时间、结果和状态。
 
 **Since:** 12
 
@@ -12,13 +12,19 @@ Represents information about the last device-cloud sync.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
 code: relationalStore.ProgressCode
 ```
 
-Result of the last device-cloud sync.
+最近一次端云同步的结果。
 
 **Type:** relationalStore.ProgressCode
 
@@ -38,7 +44,7 @@ Result of the last device-cloud sync.
 finishTime: Date
 ```
 
-End time of the last device-cloud sync.
+最近一次端云同步的结束时间。
 
 **Type:** Date
 
@@ -58,7 +64,7 @@ End time of the last device-cloud sync.
 startTime: Date
 ```
 
-Start time of the last device-cloud sync.
+最近一次端云同步的开始时间。
 
 **Type:** Date
 
@@ -78,9 +84,9 @@ Start time of the last device-cloud sync.
 syncStatus?: SyncStatus
 ```
 
-Status of the last device-cloud sync. The default value is **cloudData.SyncStatus.RUNNING**.
+最近一次端云同步的状态，默认值为cloudData.SyncStatus.RUNNING。
 
-**Type:** SyncStatus
+**Type:** [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md)
 
 **Since:** 18
 

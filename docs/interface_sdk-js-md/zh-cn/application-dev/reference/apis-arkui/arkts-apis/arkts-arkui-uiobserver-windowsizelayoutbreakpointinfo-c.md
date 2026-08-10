@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## heightBreakpoint
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly heightBreakpoint: HeightBreakpoint
 
 窗口高度所在的布局断点枚举。
 
-**类型：** HeightBreakpoint
+**类型：** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
 
 **起始版本：** 22
 
@@ -40,7 +46,7 @@ readonly widthBreakpoint: WidthBreakpoint
 
 窗口宽度所在的布局断点枚举。
 
-**类型：** WidthBreakpoint
+**类型：** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 
 **起始版本：** 22
 

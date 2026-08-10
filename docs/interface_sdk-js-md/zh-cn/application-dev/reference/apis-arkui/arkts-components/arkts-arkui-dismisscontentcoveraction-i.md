@@ -18,7 +18,7 @@ dismiss: Callback<void>
 
 全屏模态页面关闭回调函数。开发者需要退出页面时调用。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ reason: DismissReason
 
 返回本次拦截全屏模态页面退出的事件原因。
 
-**类型：** DismissReason
+**类型：** [DismissReason](arkts-arkui-dismissreason-e.md)
 
 **起始版本：** 12
 

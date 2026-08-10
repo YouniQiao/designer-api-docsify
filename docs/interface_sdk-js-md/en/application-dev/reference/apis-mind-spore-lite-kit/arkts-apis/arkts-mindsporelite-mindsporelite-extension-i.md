@@ -10,6 +10,12 @@ Provides the extension information of nnrt device
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## name
 
 ```TypeScript

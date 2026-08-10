@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## completedBatches
 
 ```TypeScript
@@ -64,7 +70,7 @@ mode: ContactSyncMode
 
 联系人同步模式。
 
-**类型：** ContactSyncMode
+**类型：** [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md)
 
 **起始版本：** 26.0.0
 

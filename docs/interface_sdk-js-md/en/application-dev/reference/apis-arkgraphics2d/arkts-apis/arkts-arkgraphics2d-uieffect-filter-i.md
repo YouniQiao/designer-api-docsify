@@ -1,6 +1,6 @@
 # Filter
 
-Filter effect class, used to apply corresponding effects to specified components.Before calling Filter methods, you need to first create a Filter instance through createFilter.
+Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter)创建一个Filter实例。
 
 **Since:** 12
 
@@ -9,6 +9,12 @@ Filter effect class, used to apply corresponding effects to specified components
 <!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+## Modules to Import
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## blur
 
@@ -22,7 +28,7 @@ ArkTS-Sta:
 blur(blurRadius: double): Filter
 ```
 
-Adds a blur effect to the component.
+将模糊效果添加至组件上。
 
 **Since:** 12
 
@@ -36,27 +42,29 @@ Adds a blur effect to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in px. The value must be greater than or equal to 0. A larger blur radius results in a stronger blur effect. When the blur radius is 0, there is no blur effect. If a negative number is passed in, it is automatically corrected to 0. |
+| blurRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 模糊半径，单位为px。 取值需大于等于0，模糊半径越大，模糊效果越强。 模糊半径为0时无模糊效果。传入负数时自动修正为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回挂载了模糊效果的Filter，支持链式调用继续添加其他效果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.ts
 import { uiEffect } from '@kit.ArkGraphics2D';
 
+// Create a Filter instance
 let filter: uiEffect.Filter = uiEffect.createFilter();
+// Set the blur radius to 10px
 filter.blur(10);
 
 @Entry
 @Component
 struct UIEffectFilterExample {
-    build(){
+    build() {
         Column({ space: 15 }) {
             Text('UIEffectFilter').fontSize(20).width('75%').fontColor('#DCDCDC')
             Image($r('app.media.foreground'))
@@ -65,6 +73,7 @@ struct UIEffectFilterExample {
                 .backgroundImage($r('app.media.background'))
                 .backgroundImagePosition(Alignment.Center)
                 .backgroundImageSize({ width: 90, height: 90 })
+                // Apply the Filter effect to the component background
                 .backgroundFilter(filter)
         }
         .height('100%')
@@ -85,15 +94,15 @@ ArkTS-Sta:
 hdrBrightnessRatio(ratio: double): Filter
 ```
 
-Adds an HDR (High Dynamic Range) brightening effect to the component content.Nesting is not recommended, as forced nesting may cause overexposure.
+为组件内容添加HDR（高动态范围成像）提亮效果。不建议嵌套使用，强行嵌套使用可能造成过曝现象。
 
-The brightening effect requires the HDR rendering pipeline to be enabled to take effect.In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline,for example, when the device hardware specifications do not support HDR.
+提亮效果需要开启HDR渲染管线才能生效，某些场景下即使尝试触发HDR渲染管线也无法开启HDR，例如：设备硬件规格不支持HDR。
 
-The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
-    **NOTE**  
-    
-    Using the HDR brightening effect incurs certain performance and power consumption overhead.  
-    It is recommended to use it in scenarios where HDR images or videos already exist.
+设备当前支持最大提亮倍数为设备当前的最大亮度除以设备SDR参考白亮度得到的值。
+
+> **说明：**
+> 
+> 使用HDR提亮效果会带来一定的性能功耗开销，建议在已有HDR图片或视频的场景使用。
 
 **Since:** 24
 
@@ -110,23 +119,27 @@ The maximum supported brightness boost multiple is calculated as the device's cu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Brightening ratio. The value range is [1.0, the maximum brightening ratio supported by the current device]. Values less than 1.0 are treated as 1.0; a value equal to 1.0 means no processing; values greater than 1.0 attempt to trigger the HDR rendering pipeline; values exceeding the maximum ratio are treated as the maximum ratio. |
+| ratio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 提亮倍数，取值范围为[1.0, 设备当前支持的最大提亮倍数]。 小于1.0按1.0处理；等于1.0不做处理；大于1.0尝试触发HDR渲染管线； 超过最大倍数按最大倍数处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the HDR brightening effect attached, supporting chained calls to add other effects. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回挂载了HDR提亮效果的Filter，支持链式调用继续添加其他效果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
+| 201 | 权限校验失败，应用无权限使用该API，需要申请权限。<br>**Applicable version:** 24 and later |
+| 202 | 权限校验失败，非系统应用调用系统接口。<br>**Applicable version:** 20 - 23 |
 
-**Example**
+## Examples
 
 ```TypeScript
-filter.hdrBrightnessRatio(2.0)
+// Create a Filter instance
+let filter: uiEffect.Filter = uiEffect.createFilter();
+// Set the HDR brightness ratio to 2.0
+filter.hdrBrightnessRatio(2.0);
 ```
 

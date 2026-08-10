@@ -1,12 +1,18 @@
 # subscribe (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## subscribe
 
 ```TypeScript
 function subscribe(events: MechEventType[], callback: Callback<MechEvent>): void
 ```
 
-Subscribe to the specified events.
+订阅具身设备事件回调
 
 **Since:** 26.0.0
 
@@ -22,15 +28,15 @@ Subscribe to the specified events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Events to subscribe to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MechEvent&gt; | Yes | Callback of event. |
+| events | [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md)[] | Yes | 订阅的事件列表。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MechEvent&gt; | Yes | 事件回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
+| 33300003 | Feature not supported. |
 

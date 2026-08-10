@@ -18,7 +18,7 @@ Cipher suite which TLS1.3+ support.The framework has a built-in preference order
 
 | Type | Description |
 | --- | --- |
-| 'TLS\_AES\_128\_GCM\_SHA256' |  |
-| 'TLS\_AES\_256\_GCM\_SHA384' |  |
-| 'TLS\_CHACHA20\_POLY1305\_SHA256' |  |
+| 'TLS_AES_128_GCM_SHA256' |  |
+| 'TLS_AES_256_GCM_SHA384' |  |
+| 'TLS_CHACHA20_POLY1305_SHA256' |  |
 

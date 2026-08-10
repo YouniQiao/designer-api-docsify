@@ -1,5 +1,11 @@
 # getItemsInShapePath (System API)
 
+## Modules to Import
+
+```TypeScript
+import { componentUtils } from 'kits/@kit.ArkUI';
+```
+
 ## getItemsInShapePath
 
 ```TypeScript
@@ -24,7 +30,7 @@ Get the image objects located within the selected area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | options to get images in shapePath. |
+| value | [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | Yes | options to get images in shapePath. |
 
 **Return value:**
 

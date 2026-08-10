@@ -1,6 +1,6 @@
 # ClientAuthenticationHandler
 
-Defines the client certificate request result, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the client certificate request result, related to {@link onClientAuthenticationRequest} method.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Defines the client certificate request result, related to \_\_\_JSDOC\_LINK\_DES
 cancel(): void
 ```
 
-Cancel this certificate request.
+取消证书请求事件。同时，相同host和port服务器的请求，不重复上报该事件。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Cancel this certificate request.
 confirm(priKeyFile: string, certChainFile: string): void
 ```
 
-Confirm to use the specified private key and client certificate chain.
+确认使用指定的私钥和客户端证书链。
 
 **Since:** 9
 
@@ -59,7 +59,7 @@ Confirm to use the specified private key and client certificate chain.
 confirm(authUri: string): void
 ```
 
-Confirm to use the authUri.The authUri can be obtained from certificate management.
+使用指定的凭据(从证书管理模块获得)。
 
 **Since:** 10
 
@@ -83,7 +83,7 @@ Confirm to use the authUri.The authUri can be obtained from certificate manageme
 confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void
 ```
 
-Confirm to use the identify of the certificate. The identify can be obtained from certificate management.
+确认使用从证书管理模块获取的指定凭据和凭据类型。
 
 **Since:** 22
 
@@ -98,13 +98,13 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | identity | string | Yes | The identify of the credential. |
-| credentialTypeOrCertChainFile | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| string | Yes | The type of the credential or the file that store client certificate chain. |
+| credentialTypeOrCertChainFile | [CredentialType](../arkts-apis/arkts-arkweb-web-credentialtype-e.md) \| string | Yes | The type of the credential or the file that store client certificate chain. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
 ## constructor
 

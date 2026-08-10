@@ -1,12 +1,18 @@
 # alloc
 
+## Modules to Import
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## alloc
 
 ```TypeScript
 function alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer
 ```
 
-Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the FastBuffer will be zero-filled.
+创建指定字节长度的FastBuffer对象并初始化。调用后，FastBuffer对象的每个字节将被填充为指定的fill值，未指定fill时默认填充为0。
 
 **Since:** 20
 
@@ -22,17 +28,17 @@ Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the Fas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | The desired size (in bytes) of the new FastBuffer |
-| fill | string \| FastBuffer \| number | No | fill [fill=0] A value to pre-fill the new FastBuffer with |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | encoding [encoding='utf8'] If \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is a string, this is its encoding |
+| size | number | Yes | 指定的FastBuffer对象长度，单位：字节。取值范围：0 <= size <= UINT32_MAX。 |
+| fill | string \| FastBuffer \| number | No | 填充至新缓冲区的值，默认值：0。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式（当`fill`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return a new allocated FastBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回一个FastBuffer对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

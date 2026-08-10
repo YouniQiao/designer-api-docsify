@@ -10,6 +10,12 @@ Parameters for ranging operation.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
+## Modules to Import
+
+```TypeScript
+import { ranging } from 'kits/@kit.ConnectivityKit';
+```
+
 ## capabilityType
 
 ```TypeScript
@@ -18,7 +24,7 @@ capabilityType: RangingTypes
 
 Indicates the capability type for ranging.
 
-**Type:** RangingTypes
+**Type:** [RangingTypes](arkts-connectivity-ranging-rangingtypes-e.md)
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 export type OnLoadInterceptCallback = (event: OnLoadInterceptEvent) => boolean
 ```
 
-Represents the callback invoked when resource loading is intercepted.
+当Web组件加载url之前触发该回调，用于判断是否阻止此次访问。
 
 **Since:** 12
 
@@ -20,11 +20,11 @@ Represents the callback invoked when resource loading is intercepted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event triggered when resource loading is intercepted.  |
+| event | [OnLoadInterceptEvent](../../apis-arkweb/arkts-apis/arkts-arkweb-web-onloadinterceptevent-i.md) | Yes | 当Web组件加载url之前触发的加载拦截事件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether resource loading is intercepted. The value **true** indicates that resource loading is intercepted.  |
+| boolean | 返回资源是否被拦截，true表示被拦截，false表示不被拦截。 |
 

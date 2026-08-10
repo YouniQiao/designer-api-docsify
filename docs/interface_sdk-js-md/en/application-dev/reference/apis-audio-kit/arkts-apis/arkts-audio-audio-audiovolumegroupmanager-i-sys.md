@@ -1,12 +1,13 @@
 # AudioVolumeGroupManager
 
-This interface implements volume management for an audio group.
+管理音频组音量。
 
-Before calling any API in AudioVolumeGroupManager, you must use  
-[getVolumeGroupManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain an AudioVolumeGroupManager instance.
-    **NOTE**  
-    
-    - The initial APIs of this interface are supported since API version 9.
+在使用AudioVolumeGroupManager的接口之前，需先通过  
+[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)获取AudioVolumeGroupManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **Since:** 9
 
@@ -16,13 +17,17 @@ Before calling any API in AudioVolumeGroupManager, you must use
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## adjustSystemVolumeByStep
 
 ```TypeScript
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
-
-Adjusts system volume by step for target volume type.This method uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -40,20 +45,20 @@ Adjusts system volume by step for target volume type.This method uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| adjustType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Volume adjustment type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | Yes | Volume adjustment type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by callback. |
+| 201 | Permission denied. |
+| 6800301 | System error. Return by callback. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,8 +78,6 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType): Promise<void>
 ```
 
-Adjusts system volume by step for target volume type.This method uses a promise to return the result.
-
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
@@ -91,25 +94,25 @@ Adjusts system volume by step for target volume type.This method uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| adjustType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Volume adjustment type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | Yes | Volume adjustment type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 6800301 | System error. Return by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -127,8 +130,6 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
 
-Adjusts system volume by step, volume type is decided by system.This method uses an asynchronous callback to return the result.
-
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
@@ -145,19 +146,19 @@ Adjusts system volume by step, volume type is decided by system.This method uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adjustType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Volume adjustment type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | Yes | Volume adjustment type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by callback. |
+| 201 | Permission denied. |
+| 6800301 | System error. Return by callback. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -178,8 +179,6 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP, (er
 adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 ```
 
-Adjusts system volume by step, volume type is decided by system.This method uses a promise to return the result.
-
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
@@ -196,24 +195,24 @@ Adjusts system volume by step, volume type is decided by system.This method uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adjustType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Volume adjustment type. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | Yes | Volume adjustment type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 6800301 | System error. Return by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -253,23 +252,23 @@ Obtains the active volume type in the calling moment. This method returns in syn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The target uid's active volume type or 0 which means the global active volume type. |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The target uid's active volume type or 0 which means the global active volume type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current active volume type. |
+| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Current active volume type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let uid: number = 20010041; // Application ID.
@@ -282,8 +281,6 @@ let value = audioVolumeGroupManager.getActiveVolumeTypeSync(uid);
 ```TypeScript
 isPersistentMicMute(): boolean
 ```
-
-Checks whether the persistent microphone status is muted.
 
 **Since:** 12
 
@@ -301,16 +298,16 @@ Checks whether the persistent microphone status is muted.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns microphone persistent mute status. true: The persistent mic mute is enabled in the current system. false: The persistent mic mute is disabled in the current system. |
+| boolean |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
@@ -321,8 +318,6 @@ let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
 ```TypeScript
 mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void
 ```
-
-Mutes a stream. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -340,11 +335,11 @@ Mutes a stream. This method uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio stream type. |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the stream, and false means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -364,8 +359,6 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
 mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 ```
 
-Mutes a stream. This method uses a promise to return the result.
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -374,7 +367,9 @@ Mutes a stream. This method uses a promise to return the result.
 
 <!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
-**System capability:** SystemCapability.Multimedia.Audio.Volume
+**System capability:** 
+- SystemCapability.Multimedia.Audio.Volume
+- SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
 
@@ -382,16 +377,16 @@ Mutes a stream. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio stream type. |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the stream, and false means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
@@ -404,8 +399,6 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
 ```TypeScript
 setMicMute(mute: boolean): Promise<void>
 ```
-
-Mutes or unmutes the microphone. This method uses a promise to return the result.
 
 **Since:** 11
 
@@ -429,18 +422,18 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 audioVolumeGroupManager.setMicMute(true).then(() => {
@@ -453,8 +446,6 @@ audioVolumeGroupManager.setMicMute(true).then(() => {
 ```TypeScript
 setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 ```
-
-Mutes or unmutes the microphone. This method uses a promise to return the result.
 
 **Since:** 12
 
@@ -473,24 +464,24 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mute status to set. This value represents the caller's type such as EDM or privacy. |
+| type | [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md) | Yes | Mute status to set. This value represents the caller's type such as EDM or privacy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).then(() => {
@@ -503,8 +494,6 @@ audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).the
 ```TypeScript
 setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 ```
-
-Sets the ringer mode. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -522,10 +511,10 @@ Sets the ringer mode. This method uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ringer mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | Yes | Ringer mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -545,8 +534,6 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
 setRingerMode(mode: AudioRingMode): Promise<void>
 ```
 
-Sets the ringer mode. This method uses a promise to return the result.
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -555,7 +542,9 @@ Sets the ringer mode. This method uses a promise to return the result.
 
 <!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>--><!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>-End-->
 
-**System capability:** SystemCapability.Multimedia.Audio.Volume
+**System capability:** 
+- SystemCapability.Multimedia.Audio.Volume
+- SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
 
@@ -563,15 +552,15 @@ Sets the ringer mode. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ringer mode. |
+| mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | Yes | Ringer mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
@@ -609,11 +598,11 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream type. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio stream type. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -657,8 +646,8 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream type. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio stream type. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
 
 **Return value:**
 
@@ -666,7 +655,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
@@ -704,9 +693,9 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream type. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| flags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | volume flags used to enable different operations, can be union of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Yes | Audio stream type. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | volume flags used to enable different operations, can be union of {@link VolumeFlag} |
 
 **Return value:**
 
@@ -718,10 +707,10 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 audioVolumeGroupManager.setVolumeWithFlag(audio.AudioVolumeType.MEDIA, 10, 1).then(() => {

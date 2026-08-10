@@ -1,6 +1,6 @@
 # QueryRule (System API)
 
-Defines event query rules.
+系统事件查询规则对象接口。
 
 **Since:** 9
 
@@ -12,20 +12,25 @@ Defines event query rules.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## condition
 
 ```TypeScript
 condition?: string
 ```
 
-Additional event conditions. The value of this parameter is in the format of  
-**{"version":"V1","condition":{"and":[{"param":"*Parameter*","op":"*Operator*","value":"*Comparison value*"}]}}**.
+事件的额外参数条件，格式：{"version":"V1","condition":{"and":[{"param":"参数","op":"操作符","value":"比较值"}]}}。
 
-Parameter: key value of the specified event parameter.
+参数：指定事件参数的键值。
 
-Supported operators: **=**, **!=**, **&lt;**, **<=**, **>** and **&gt;&lt;=**, **&gt;** and **>=**.
+操作符支持：=、!=、&lt;、<=、>和&gt;&lt;=、&gt;和>=。
 
-Multiple conditions can be configured in the **"and"** array, and the intersection of the query results is used.
+支持在“and”数组中配置多个条件，查询结果取交集。
 
 **Type:** string
 
@@ -45,7 +50,7 @@ Multiple conditions can be configured in the **"and"** array, and the intersecti
 domain: string
 ```
 
-Event domain.
+查询包含的事件领域。
 
 **Type:** string
 
@@ -65,7 +70,7 @@ Event domain.
 names: string[]
 ```
 
-Array of event names. A **QueryRule** object contains multiple system event names.
+查询所包含的多个事件名称，每个查询规则对象包含多个系统事件名称。
 
 **Type:** string[]
 

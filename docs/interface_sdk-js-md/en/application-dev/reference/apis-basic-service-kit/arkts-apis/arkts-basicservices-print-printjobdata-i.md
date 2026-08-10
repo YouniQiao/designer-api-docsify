@@ -1,6 +1,6 @@
 # PrintJobData
 
-Defines a print job.
+定义打印任务的接口。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines a print job.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## binaryData
 
 ```TypeScript
 binaryData?: Uint8Array
 ```
 
-Binary data to print.
+表示待打印二进制数据。
 
 **Type:** Uint8Array
 
@@ -36,9 +42,9 @@ Binary data to print.
 colorMode: PrintColorMode
 ```
 
-Color mode.
+表示色彩模式。
 
-**Type:** PrintColorMode
+**Type:** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ Color mode.
 copyNumber: int
 ```
 
-Number of file list copies.
+表示文件列表副本数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -76,9 +82,9 @@ Number of file list copies.
 docFlavor: DocFlavor
 ```
 
-Data source type.
+表示打印数据来源形式。
 
-**Type:** DocFlavor
+**Type:** [DocFlavor](arkts-basicservices-print-docflavor-e.md)
 
 **Since:** 23
 
@@ -96,9 +102,9 @@ Data source type.
 documentFormat: PrintDocumentFormat
 ```
 
-Format of the print data.
+表示打印数据格式。
 
-**Type:** PrintDocumentFormat
+**Type:** [PrintDocumentFormat](arkts-basicservices-print-printdocumentformat-e.md)
 
 **Since:** 23
 
@@ -116,9 +122,9 @@ Format of the print data.
 duplexMode: PrintDuplexMode
 ```
 
-Simplex or duplex mode.
+表示单双面打印模式。
 
-**Type:** PrintDuplexMode
+**Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **Since:** 23
 
@@ -136,9 +142,9 @@ Simplex or duplex mode.
 fdList?: int[]
 ```
 
-FD list of files to print.
+表示待打印文件fd列表。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -156,8 +162,7 @@ FD list of files to print.
 isAutoRotate?: boolean
 ```
 
-Whether to automatically rotate the page. The value **true** means to automatically rotate the page, and  
-**false** means the opposite. Default value: **true**.
+表示是否自动旋转页面。true表示自动旋转页面，false表示不自动旋转页面。默认值为true。
 
 **Type:** boolean
 
@@ -177,7 +182,7 @@ Whether to automatically rotate the page. The value **true** means to automatica
 isBorderless?: boolean
 ```
 
-Whether to print without margins. The value **true** means to print without margins, and **false** means the opposite. Default value: **true**.
+表示是否无边框打印。true表示无边框打印，false表示有边框打印。默认值为true。
 
 **Type:** boolean
 
@@ -197,8 +202,7 @@ Whether to print without margins. The value **true** means to print without marg
 isCollate?: boolean
 ```
 
-Whether pages are printed uncollated. The value **true** means that pages are printed uncollated, and **false**  
-means the opposite. Default value: **true**.
+表示打印顺序方式。true表示逐页打印，false表示逐份打印。默认值为true。
 
 **Type:** boolean
 
@@ -218,7 +222,7 @@ means the opposite. Default value: **true**.
 isLandscape: boolean
 ```
 
-Whether pages are printed in landscape mode. The value **true** indicates that pages are printed in landscape mode, and **false** indicates that pages are printed in portrait mode. The default value is **false**.
+表示是否横向打印。true表示横向打印，false表示纵向打印。默认值为false。
 
 **Type:** boolean
 
@@ -238,8 +242,7 @@ Whether pages are printed in landscape mode. The value **true** indicates that p
 isReverse?: boolean
 ```
 
-Whether pages are printed in reverse order. The value **true** means that pages are printed in reverse order, and  
-**false** means that pages are printed in normal order. The default value is **false**.
+表示是否逆序打印。true表示逆序打印，false表示顺序打印。默认值为false。
 
 **Type:** boolean
 
@@ -259,7 +262,7 @@ Whether pages are printed in reverse order. The value **true** means that pages 
 isSequential?: boolean
 ```
 
-Whether pages are printed in sequential order.
+表示是否连续打印。true表示连续打印，false表示不连续打印。默认值为false。
 
 **Type:** boolean
 
@@ -279,7 +282,7 @@ Whether pages are printed in sequential order.
 jobId?: string
 ```
 
-Unique identifier of the print job.
+表示打印任务的唯一标识符。
 
 **Type:** string
 
@@ -299,7 +302,7 @@ Unique identifier of the print job.
 jobName: string
 ```
 
-Name of the print job.
+表示打印任务名称。
 
 **Type:** string
 
@@ -319,7 +322,7 @@ Name of the print job.
 mediaType?: string
 ```
 
-Type of the paper to print.
+表示打印纸张类型。
 
 **Type:** string
 
@@ -339,7 +342,7 @@ Type of the paper to print.
 options?: string
 ```
 
-Object stringified in JSON format.
+表示以JSON格式字符串化的对象。
 
 **Type:** string
 
@@ -359,9 +362,9 @@ Object stringified in JSON format.
 pageSize: PrintPageSize
 ```
 
-Selected page size.
+表示选定的页面尺寸。
 
-**Type:** PrintPageSize
+**Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
 
 **Since:** 23
 
@@ -379,9 +382,9 @@ Selected page size.
 printQuality?: PrintQuality
 ```
 
-Print quality.
+表示打印质量。
 
-**Type:** PrintQuality
+**Type:** [PrintQuality](arkts-basicservices-print-printquality-e.md)
 
 **Since:** 23
 
@@ -399,7 +402,7 @@ Print quality.
 printerId: string
 ```
 
-Printer ID.
+表示打印机ID。
 
 **Type:** string
 
@@ -410,26 +413,6 @@ Printer ID.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-printerId: string--><!--Device-PrintJobData-printerId: string-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-## vendorOptions
-
-```TypeScript
-vendorOptions?: string
-```
-
-Vendor-specific job options in JSON format.
-
-**Type:** string
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintJobData-vendorOptions?: string--><!--Device-PrintJobData-vendorOptions?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

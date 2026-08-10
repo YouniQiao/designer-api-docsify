@@ -1,5 +1,11 @@
 # getSupportedModes（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getSupportedModes
 
 ```TypeScript
@@ -32,9 +38,9 @@ function getSupportedModes(portId: number): PortModeType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 支持的模式列表的组合掩码。 |
+| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) | 支持的模式列表的组合掩码。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let ret = usb.getSupportedModes(0);

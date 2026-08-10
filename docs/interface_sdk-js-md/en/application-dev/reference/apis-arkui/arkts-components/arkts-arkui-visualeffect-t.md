@@ -4,7 +4,7 @@
 declare type VisualEffect = import('../api/@ohos.graphics.uiEffect').default.VisualEffect
 ```
 
-Represents a visual effect configuration object.
+导入VisualEffect类型对象。
 
 **Since:** 12
 

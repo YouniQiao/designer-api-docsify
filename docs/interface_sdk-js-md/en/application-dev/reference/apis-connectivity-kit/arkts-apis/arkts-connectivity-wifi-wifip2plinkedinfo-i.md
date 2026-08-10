@@ -14,6 +14,12 @@ P2P linked information.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## connectState
 
 ```TypeScript
@@ -22,7 +28,7 @@ connectState: P2pConnectState
 
 Connection status
 
-**Type:** P2pConnectState
+**Type:** [P2pConnectState](arkts-connectivity-wifi-p2pconnectstate-e.md)
 
 **Since:** 8
 

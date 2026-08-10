@@ -1,6 +1,6 @@
 # OnMessageEvent
 
-Represents the callback invoked when the page is navigated back or destroyed.
+定义页面返回或销毁时触发该回调。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the callback invoked when the page is navigated back or destroyed.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+```
+
 ## data
 
 ```TypeScript
 data: object[]
 ```
 
-The message data list.
+消息列表。
 
 **Type:** object[]
 

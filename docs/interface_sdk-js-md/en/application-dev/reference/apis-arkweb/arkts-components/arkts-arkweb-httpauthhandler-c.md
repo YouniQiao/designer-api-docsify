@@ -1,6 +1,6 @@
 # HttpAuthHandler
 
-Defines the http auth request result, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the http auth request result, related to {@link onHttpAuthRequest} method.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Defines the http auth request result, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0
 cancel(): void
 ```
 
-Cancels HTTP authentication as requested by the user.
+通知Web组件用户取消HTTP认证操作。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Cancels HTTP authentication as requested by the user.
 confirm(userName: string, password: string): boolean
 ```
 
-Performs HTTP authentication with the user name and password provided by the user.
+使用用户名和密码进行HTTP认证操作。
 
 **Since:** 9
 
@@ -50,8 +50,8 @@ Performs HTTP authentication with the user name and password provided by the use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userName | string | Yes | HTTP authentication user name. |
-| password | string | Yes | HTTP authentication password. |
+| userName | string | Yes | HTTP认证用户名。 |
+| password | string | Yes | HTTP认证密码。 |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ Constructor.
 isHttpAuthInfoSaved(): boolean
 ```
 
-Determine whether the credentials stored for the current host are suitable for use. If the credentials have previously been rejected by the server for the current request, they are not suitable for use.
+通知Web组件用户使用服务器缓存的账号密码认证。
 
 **Since:** 9
 

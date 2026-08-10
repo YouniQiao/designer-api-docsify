@@ -4,7 +4,7 @@
 export type ScrollOnDidZoomCallback = (scale: double) => void
 ```
 
-Called when the scaling of each frame is complete.
+Scroll每帧缩放完成时触发的回调。
 
 **Since:** 26.0.0
 
@@ -20,5 +20,5 @@ Called when the scaling of each frame is complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | double | Yes | current zoom scale.  |
+| scale | double | Yes | 当前缩放倍数。 |
 

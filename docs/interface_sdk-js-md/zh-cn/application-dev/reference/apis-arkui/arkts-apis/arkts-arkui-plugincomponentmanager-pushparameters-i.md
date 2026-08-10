@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## data
 
 ```TypeScript
@@ -18,7 +24,7 @@ data: KVObject
 
 组件数据，以键值对形式存储，用于传递给组件使用方的业务数据，键和值类型由业务定义。
 
-**类型：** KVObject
+**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 23
 
@@ -38,7 +44,7 @@ extraData: KVObject
 
 附加数据，以键值对形式存储，用于传递额外的业务信息，键和值类型由业务定义。
 
-**类型：** KVObject
+**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 23
 
@@ -98,7 +104,7 @@ want: Want
 
 组件使用方Ability信息。
 
-**类型：** Want
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
 

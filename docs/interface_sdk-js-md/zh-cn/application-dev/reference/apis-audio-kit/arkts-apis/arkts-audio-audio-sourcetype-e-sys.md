@@ -16,7 +16,7 @@
 SOURCE_TYPE_WAKEUP = 3
 ```
 
-Wakeup source type.Permission ohos.permission.MANAGE\_INTELLIGENT\_VOICE is needed when calling createAudioCapturer with this type.
+Wakeup source type.Permission ohos.permission.MANAGE_INTELLIGENT_VOICE is needed when calling createAudioCapturer with this type.
 
 **起始版本：** 10
 
@@ -34,7 +34,7 @@ Wakeup source type.Permission ohos.permission.MANAGE\_INTELLIGENT\_VOICE is need
 SOURCE_TYPE_VOICE_CALL = 4
 ```
 
-Voice call source type.Permission ohos.permission.RECORD\_VOICE\_CALL is needed when calling createAudioCapturer with this type.
+Voice call source type.Permission ohos.permission.RECORD_VOICE_CALL is needed when calling createAudioCapturer with this type.
 
 **起始版本：** 11
 

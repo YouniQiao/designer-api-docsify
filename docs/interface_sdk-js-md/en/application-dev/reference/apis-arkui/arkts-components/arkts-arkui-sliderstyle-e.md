@@ -1,21 +1,17 @@
 # SliderStyle
 
-Enumerates the display styles of the slider thumb relative to the track. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    - By default, the slider has no padding.  
-    
-    - For horizontal sliders, the default height is 40 vp, the width matches the parent container's width, and the  
-    track maintains center alignment. When **SliderStyle.OutSet** is used, it applies 9 vp (half of the  
-    [blockSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ value) margins on both left and right sides. When  
-    **SliderStyle.InSet** is used, it enforces 6 vp margins on both left and right sides. Custom padding values will be  
-    applied in addition to these default margins and will not override them.  
-    
-    - For vertical sliders, the default width is 40 vp, the height matches the parent container's height, and the track  
-    maintains center alignment. When **SliderStyle.OutSet** is used, it applies 10 vp margins on both top and bottom  
-    sides. When **SliderStyle.InSet** is used, it enforces 6 vp margins on both top and bottom sides. Custom padding  
-    values will be applied in addition to these default margins and will not override them.
+滑动条滑块在滑轨上显示的样式，样式说明请参考[Slider组件滑块与滑轨是如何对齐的](../../../ui/arkts-select-component-faq.md#slider组件滑块与滑轨是如何对齐的)。
+
+> **说明：**
+> 
+> - Slider无默认padding。
+> 
+> - 当Slider为水平滑动条时，默认高度为40vp，宽度为父容器的宽度，滑动条居中显示，当滑动条的style为SliderStyle.OutSet时，左右间距分别为9vp，即为
+> [blockSize](SliderAttribute#blockSize)宽度的一半，当滑动条的style为SliderStyle.InSet时，左右间距分别为6vp，若设置padding，padding不会覆盖左右
+> 间距。
+> 
+> - 当Slider为竖直滑动条时，默认宽度为40vp，高度为父容器的高度，滑动条居中显示，当滑动条的style为SliderStyle.OutSet时，上下间距分别为10vp，当滑动条的style为
+> SliderStyle.InSet时，上下间距分别为6vp，若设置padding，padding不会覆盖上下间距。
 
 **Since:** 7
 
@@ -31,7 +27,7 @@ Enumerates the display styles of the slider thumb relative to the track. For det
 OutSet
 ```
 
-The thumb is on the track.
+滑块在滑轨上。
 
 **Since:** 7
 
@@ -51,7 +47,7 @@ The thumb is on the track.
 InSet
 ```
 
-The thumb is in the track.
+滑块在滑轨内。
 
 **Since:** 7
 
@@ -71,7 +67,7 @@ The thumb is in the track.
 NONE
 ```
 
-There is no thumb.
+无滑块
 
 **Since:** 12
 

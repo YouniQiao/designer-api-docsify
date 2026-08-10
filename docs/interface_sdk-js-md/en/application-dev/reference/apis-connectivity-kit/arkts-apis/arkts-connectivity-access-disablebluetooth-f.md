@@ -1,5 +1,11 @@
 # disableBluetooth
 
+## Modules to Import
+
+```TypeScript
+import { access } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disableBluetooth
 
 ```TypeScript
@@ -24,12 +30,12 @@ Disables Bluetooth on a device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

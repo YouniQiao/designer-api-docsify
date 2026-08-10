@@ -1,12 +1,18 @@
 # setCameraTrackingLayout (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## setCameraTrackingLayout
 
 ```TypeScript
 function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void
 ```
 
-Sets the camera tracking layout for this mechanical device.
+设置相机跟踪布局
 
 **Since:** 20
 
@@ -22,18 +28,18 @@ Sets the camera tracking layout for this mechanical device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| trackingLayout | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera tracking layout. |
+| trackingLayout | [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | Yes | 跟踪布局 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
+| 33300003 | Feature not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 console.info('Set layout');

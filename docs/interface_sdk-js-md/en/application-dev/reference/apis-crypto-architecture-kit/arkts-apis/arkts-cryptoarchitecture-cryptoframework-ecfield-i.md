@@ -1,6 +1,6 @@
 # ECField
 
-Defines the field type of an elliptic curve. Currently, only the **Fp** field is supported.
+指定椭圆曲线的域类型。当前只支持Fp域。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Defines the field type of an elliptic curve. Currently, only the **Fp** field is
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## fieldType
 
 ```TypeScript
 fieldType: string
 ```
 
-Type of the elliptic curve field. Currently, only **Fp** is supported.
+指定椭圆曲线域的类型，当前只支持"Fp"。
 
 **Type:** string
 

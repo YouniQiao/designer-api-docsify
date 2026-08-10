@@ -1,6 +1,6 @@
 # AddressSanitizerPolicy
 
-Defines the address sanitizer event configuration policy.
+提供地址越界事件配置策略的定义。
 
 **Since:** 24
 
@@ -10,21 +10,27 @@ Defines the address sanitizer event configuration policy.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## pageSwitchLogEnable
 
 ```TypeScript
 pageSwitchLogEnable?: boolean
 ```
 
-Whether to enable the page switching log for ADDRESS\_SANITIZER event.
+是否使能地址越界事件的页面切换日志。
 
-**true**: yes.
+true：使能地址越界事件的页面切换日志。
 
-**false**: no.
+false：不使能地址越界事件的页面切换日志。
 
-The default value is **false**.
+默认值：false。
 
-Note: The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle,the enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
+**说明：**应用每次使能行为只在应用当前生命周期生效，在同一生命周期内，以最后一次成功调用的使能状态为准。应用重启后，需要重新设置使能状态。
 
 **Type:** boolean
 

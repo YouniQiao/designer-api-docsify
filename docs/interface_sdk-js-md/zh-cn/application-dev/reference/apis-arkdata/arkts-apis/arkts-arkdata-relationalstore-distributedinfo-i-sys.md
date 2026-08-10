@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## flag
 
 ```TypeScript
@@ -20,7 +26,7 @@ flag?: DistributedOrigin
 
 表示数据来源，不传入则保持原有数值。
 
-**类型：** DistributedOrigin
+**类型：** [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md)
 
 **起始版本：** 24
 

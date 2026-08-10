@@ -1,5 +1,11 @@
 # snoozeNotification（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## snoozeNotification
 
 ```TypeScript
@@ -27,7 +33,7 @@ function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hashCode | string | 是 | 需要设置稍后提醒通知的唯一标识。 |
-| delayTime | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 稍后提醒的时间间隔。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：秒。 |
+| delayTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 稍后提醒的时间间隔。&lt;br&gt;单位：秒。 |
 
 **返回值：**
 
@@ -39,16 +45,14 @@ function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [1600028](../errorcode-notification.md#1600028-当前通知不支持该接口) | This notification is not supported. |
+| 1600028 | This notification is not supported. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -60,22 +64,6 @@ notificationManager.snoozeNotification(hashCode, delayTime).then(() => {
   console.info('snoozeNotification success.')
 }).catch((err: BusinessError):void => {
   console.error(`snoozeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 此处应改为开发者需要设定稍后提醒通知的唯一标识
-let hashCode: string = 'hashCode';
-let delayTime: long = 60;
-notificationManager.snoozeNotification(hashCode, delayTime).then(() => {
-  console.info('snoozeNotification success.')
-}).catch((err: Error):void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`snoozeNotification failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

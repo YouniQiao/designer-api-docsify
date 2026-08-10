@@ -1,12 +1,18 @@
 # setUnlockWallpaper
 
+## Modules to Import
+
+```TypeScript
+import { deviceSettings } from 'kits/@kit.MDMKit';
+```
+
 ## setUnlockWallpaper
 
 ```TypeScript
 function setUnlockWallpaper(admin: Want, fd: number):  Promise<void>
 ```
 
-Sets the lock screen wallpaper. This API uses a promise to return the result. Enterprise device administrator applications can use this API to uniformly set the lock screen wallpaper for enterprise devices, for purposes such as corporate branding or security control.
+设置锁屏壁纸，使用Promise异步回调。企业设备管理应用可通过此接口统一设置企业设备的锁屏壁纸，用于企业形象展示或安全管控等场景。
 
 **Since:** 20
 
@@ -24,25 +30,25 @@ Sets the lock screen wallpaper. This API uses a promise to return the result. En
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| fd | number | Yes | File descriptor of the image to be set as the lock screen wallpaper. The file descriptor of an image in the application's sandbox directory can be obtained via the file.fs. [openSync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API. The size of the wallpaper image must not exceed 100 MB. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| fd | number | Yes | 需要设置为锁屏壁纸图片的文件描述符，可以通过file.fs的[openSync](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-opensync-f.md/arkts-corefile-file-fs-opensync-f.md#opensync)接口获取应用沙箱目录下的图片文件描述符。壁纸 图片大小不能超过100MB。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the lock screen wallpaper fails to be set. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当设置锁屏壁纸失败后会抛出错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API |
+| 9200012 | Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { deviceSettings } from '@kit.MDMKit';
@@ -66,6 +72,8 @@ deviceSettings.setUnlockWallpaper(wantTemp, fd).then(() => {
   console.info('Succeeded in setting lock wallpaper');
 }).catch((err: BusinessError) => {
   console.error(`Failed to set lock wallpaper. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fs.closeSync(fd);
 });
 ```
 

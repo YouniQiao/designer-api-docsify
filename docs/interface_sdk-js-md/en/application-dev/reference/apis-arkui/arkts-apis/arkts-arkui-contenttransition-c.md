@@ -1,6 +1,6 @@
 # ContentTransition
 
-Defines the base class for text transitions.
+文本动效基类。
 
 **Since:** 20
 

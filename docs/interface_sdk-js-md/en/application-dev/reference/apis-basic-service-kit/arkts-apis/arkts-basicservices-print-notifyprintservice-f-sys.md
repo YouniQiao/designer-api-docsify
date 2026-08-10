@@ -1,5 +1,11 @@
 # notifyPrintService (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## notifyPrintService
 
 ```TypeScript
@@ -7,7 +13,7 @@ function notifyPrintService(jobId: string, type: 'spooler_closed_for_cancelled' 
     callback: AsyncCallback<void>): void
 ```
 
-Notifies the print service of the spooler shutdown information. This API uses an asynchronous callback to return the result.
+将spooler关闭信息通知打印服务，使用callback异步回调。
 
 **Since:** 11
 
@@ -25,19 +31,19 @@ Notifies the print service of the spooler shutdown information. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
-| type | 'spooler\_closed\_for\_cancelled' \| 'spooler\_closed\_for\_started' | Yes | Spooler shutdown information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| jobId | string | Yes | 表示打印任务ID。 |
+| type | 'spooler_closed_for_cancelled' \| 'spooler_closed_for_started' | Yes | 表示spooler关闭信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步将spooler关闭信息通知打印服务之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -61,7 +67,7 @@ function notifyPrintService(jobId: string,
     type: 'spooler_closed_for_cancelled' | 'spooler_closed_for_started'): Promise<void>
 ```
 
-Notifies the print service of the spooler shutdown information. This API uses a promise to return the result.
+将spooler关闭信息通知打印服务，使用Promise异步回调。
 
 **Since:** 11
 
@@ -79,24 +85,24 @@ Notifies the print service of the spooler shutdown information. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
-| type | 'spooler\_closed\_for\_cancelled' \| 'spooler\_closed\_for\_started' | Yes | Spooler shutdown information. |
+| jobId | string | Yes | 表示打印任务ID。 |
+| type | 'spooler_closed_for_cancelled' \| 'spooler_closed_for_started' | Yes | 表示spooler关闭信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

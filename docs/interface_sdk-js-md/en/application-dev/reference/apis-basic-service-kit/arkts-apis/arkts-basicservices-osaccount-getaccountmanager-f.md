@@ -1,12 +1,18 @@
 # getAccountManager
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAccountManager
 
 ```TypeScript
 function getAccountManager(): AccountManager
 ```
 
-Obtains an **AccountManager** instance.
+获取系统账号管理对象。
 
 **Since:** 7
 
@@ -20,9 +26,9 @@ Obtains an **AccountManager** instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | AccountManager** instance obtained. |
+| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | 系统账号管理对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();

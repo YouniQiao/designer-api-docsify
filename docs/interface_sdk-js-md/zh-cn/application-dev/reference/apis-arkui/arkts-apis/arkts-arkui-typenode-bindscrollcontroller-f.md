@@ -22,12 +22,12 @@ export function bindScrollController(node: FrameNode, controller: Scroller): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 目标FrameNode。 |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the controller which is bind to 目标FrameNode。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 目标FrameNode。 |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | the controller which is bind to 目标FrameNode。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 

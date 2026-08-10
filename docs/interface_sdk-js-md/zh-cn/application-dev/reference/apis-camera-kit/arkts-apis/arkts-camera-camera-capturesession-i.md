@@ -1,9 +1,10 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，并向相机设备申请完成相机功能(录像，拍照)。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -17,16 +18,23 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## addInput
 
 ```TypeScript
 addInput(cameraInput: CameraInput): void
 ```
 
-把[CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_加入到会话。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -44,14 +52,14 @@ addInput(cameraInput: CameraInput): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cameraInput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要添加的CameraInput实例。 |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | 是 | 需要添加的CameraInput实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
 
 ## addOutput
 
@@ -59,10 +67,11 @@ addInput(cameraInput: CameraInput): void
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-把[CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_加入到会话。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -80,14 +89,14 @@ addOutput(cameraOutput: CameraOutput): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cameraOutput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要添加的CameraOutput实例。 |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | 是 | 需要添加的CameraOutput实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
 
 ## beginConfig
 
@@ -96,9 +105,10 @@ beginConfig(): void
 ```
 
 开始配置会话。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -116,7 +126,7 @@ beginConfig(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400105](../errorcode-camera.md#7400105-会话配置被锁定) | Session config locked. |
+| 7400105 | Session config locked. |
 
 ## commitConfig
 
@@ -125,9 +135,10 @@ commitConfig(callback: AsyncCallback<void>): void
 ```
 
 提交配置信息，通过注册回调函数获取结果。使用callback异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -145,14 +156,14 @@ commitConfig(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
 
 ## commitConfig
 
@@ -161,9 +172,10 @@ commitConfig(): Promise<void>
 ```
 
 提交配置信息。使用Promise异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -187,8 +199,8 @@ commitConfig(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
 
 ## getActiveVideoStabilizationMode
 
@@ -197,9 +209,10 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 ```
 
 查询当前正在使用的视频防抖模式。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -217,13 +230,13 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 视频防抖是否正在使用。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 视频防抖是否正在使用。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getExposureBiasRange
 
@@ -232,9 +245,10 @@ getExposureBiasRange(): Array<number>
 ```
 
 查询曝光补偿范围。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -258,7 +272,7 @@ getExposureBiasRange(): Array<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getExposureMode
 
@@ -267,9 +281,10 @@ getExposureMode(): ExposureMode
 ```
 
 获取当前曝光模式。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -287,13 +302,13 @@ getExposureMode(): ExposureMode
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 获取当前曝光模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 获取当前曝光模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getExposureValue
 
@@ -302,9 +317,10 @@ getExposureValue(): number
 ```
 
 查询当前的曝光值。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -328,7 +344,7 @@ getExposureValue(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getFlashMode
 
@@ -337,9 +353,10 @@ getFlashMode(): FlashMode
 ```
 
 获取当前设备的闪光灯模式。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -357,13 +374,13 @@ getFlashMode(): FlashMode
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 获取当前设备的闪光灯模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [FlashMode](arkts-camera-camera-flashmode-e.md) | 获取当前设备的闪光灯模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getFocalLength
 
@@ -372,9 +389,10 @@ getFocalLength(): number
 ```
 
 查询焦距值。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -398,7 +416,7 @@ getFocalLength(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getFocusMode
 
@@ -407,9 +425,10 @@ getFocusMode(): FocusMode
 ```
 
 获取当前的对焦模式。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -427,13 +446,13 @@ getFocusMode(): FocusMode
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 获取当前设备的焦距模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [FocusMode](arkts-camera-camera-focusmode-e.md) | 获取当前设备的焦距模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getFocusPoint
 
@@ -442,9 +461,10 @@ getFocusPoint(): Point
 ```
 
 查询焦点。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -462,13 +482,13 @@ getFocusPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 用于获取当前焦点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | 用于获取当前焦点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getMeteringPoint
 
@@ -477,9 +497,10 @@ getMeteringPoint(): Point
 ```
 
 查询曝光区域中心点。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -497,13 +518,13 @@ getMeteringPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getZoomRatio
 
@@ -512,9 +533,10 @@ getZoomRatio(): number
 ```
 
 获取当前的变焦比。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -538,7 +560,7 @@ getZoomRatio(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getZoomRatioRange
 
@@ -547,9 +569,10 @@ getZoomRatioRange(): Array<number>
 ```
 
 获取支持的变焦范围。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -573,7 +596,7 @@ getZoomRatioRange(): Array<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## hasFlash
 
@@ -582,9 +605,10 @@ hasFlash(): boolean
 ```
 
 检测是否有闪光灯。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -608,7 +632,7 @@ hasFlash(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## isExposureModeSupported
 
@@ -617,9 +641,10 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 ```
 
 查询曝光模式是否支持。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -637,7 +662,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| aeMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 曝光模式。 |
+| aeMode | [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 是 | 曝光模式。 |
 
 **返回值：**
 
@@ -649,7 +674,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## isFlashModeSupported
 
@@ -658,9 +683,10 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 ```
 
 检测闪光灯模式是否支持。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -678,7 +704,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flashMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定闪光灯模式。 |
+| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | 是 | 指定闪光灯模式。 |
 
 **返回值：**
 
@@ -690,7 +716,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## isFocusModeSupported
 
@@ -699,9 +725,10 @@ isFocusModeSupported(afMode: FocusMode): boolean
 ```
 
 查询对焦模式是否支持。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -719,7 +746,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| afMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定的焦距模式。 |
+| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | 是 | 指定的焦距模式。 |
 
 **返回值：**
 
@@ -731,7 +758,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## isVideoStabilizationModeSupported
 
@@ -740,9 +767,10 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 ```
 
 查询是否支持指定的视频防抖模式。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -760,7 +788,7 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| vsMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 视频防抖模式。传参为null或者undefined，作为0处理，超级防抖模式关闭。 |
+| vsMode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 是 | 视频防抖模式。传参为null或者undefined，作为0处理，超级防抖模式关闭。 |
 
 **返回值：**
 
@@ -772,7 +800,7 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## off('focusStateChange')
 
@@ -781,9 +809,10 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 ```
 
 注销监听相机聚焦的状态变化。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -802,7 +831,7 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session 创建成功可监听。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('error')
 
@@ -811,9 +840,10 @@ off(type: 'error', callback?: ErrorCallback): void
 ```
 
 注销监听拍照会话的错误事件，通过注册回调函数获取结果。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -832,7 +862,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## on('focusStateChange')
 
@@ -841,11 +871,12 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 ```
 
 监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。  
-    
-    当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
 
@@ -864,7 +895,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session 创建成功可监听。仅当自动对焦模式时,且相机对焦状态发生改变时可触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
 
 ## on('error')
 
@@ -873,11 +904,12 @@ on(type: 'error', callback: ErrorCallback): void
 ```
 
 监听拍照会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。
-    **说明：**  
-    
-    当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -895,8 +927,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_， [commitConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，[addInput]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_等接 口发生错误时返回错误信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](arkts-camera-camera-capturesession-i.md#beginconfig)， [commitConfig](arkts-camera-camera-capturesession-i.md#commitconfig)，[addInput](arkts-camera-camera-capturesession-i.md#addinput)等接 口发生错误时返回错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## release
 
@@ -905,9 +937,10 @@ release(callback: AsyncCallback<void>): void
 ```
 
 释放会话资源，通过注册回调函数获取结果。使用callback异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -925,13 +958,13 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## release
 
@@ -940,9 +973,10 @@ release(): Promise<void>
 ```
 
 释放会话资源。使用Promise异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -966,7 +1000,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## removeInput
 
@@ -974,10 +1008,11 @@ release(): Promise<void>
 removeInput(cameraInput: CameraInput): void
 ```
 
-移除[CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+移除[CameraInput](arkts-camera-camera-camerainput-i.md)。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -995,14 +1030,14 @@ removeInput(cameraInput: CameraInput): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cameraInput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要移除的CameraInput实例。 |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | 是 | 需要移除的CameraInput实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
 
 ## removeOutput
 
@@ -1010,10 +1045,11 @@ removeInput(cameraInput: CameraInput): void
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-从会话中移除[CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1031,14 +1067,14 @@ removeOutput(cameraOutput: CameraOutput): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cameraOutput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要移除的CameraOutput实例。 |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | 是 | 需要移除的CameraOutput实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
 
 ## setExposureBias
 
@@ -1048,10 +1084,11 @@ setExposureBias(exposureBias: number): void
 
 设置曝光补偿，曝光补偿值（EV）。
 
-进行设置之前，建议先通过方法[getExposureBiasRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_查询支持的范围。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-capturesession-i.md#getexposurebiasrange)查询支持的范围。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1069,13 +1106,13 @@ setExposureBias(exposureBias: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| exposureBias | number | 是 | 曝光补偿，[getExposureBiasRange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。传参为null或者undefined，作为0处理，曝光补偿设置0。 |
+| exposureBias | number | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。传参为null或者undefined，作为0处理，曝光补偿设置0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## setExposureMode
 
@@ -1084,10 +1121,11 @@ setExposureMode(aeMode: ExposureMode): void
 ```
 
 设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法  
-[isExposureModeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+[isExposureModeSupported](arkts-camera-camera-capturesession-i.md#isexposuremodesupported)。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1105,13 +1143,13 @@ setExposureMode(aeMode: ExposureMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| aeMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 曝光模式。 |
+| aeMode | [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 是 | 曝光模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## setFlashMode
 
@@ -1123,10 +1161,11 @@ setFlashMode(flashMode: FlashMode): void
 
 进行设置之前，需要先检查：
 
-1. 设备是否支持闪光灯，可使用方法[hasFlash]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-capturesession-i.md#hasflash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-capturesession-i.md#isflashmodesupported)。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1144,13 +1183,13 @@ setFlashMode(flashMode: FlashMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flashMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定闪光灯模式。 |
+| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | 是 | 指定闪光灯模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## setFocusMode
 
@@ -1160,10 +1199,11 @@ setFocusMode(afMode: FocusMode): void
 
 设置对焦模式。
 
-进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-capturesession-i.md#isfocusmodesupported)。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1181,13 +1221,13 @@ setFocusMode(afMode: FocusMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| afMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定的焦距模式。 |
+| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | 是 | 指定的焦距模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## setFocusPoint
 
@@ -1198,9 +1238,10 @@ setFocusPoint(point: Point): void
 设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
 
 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1218,13 +1259,13 @@ setFocusPoint(point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 焦点。x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | [Point](arkts-camera-camera-point-i.md) | 是 | 焦点。x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## setMeteringPoint
 
@@ -1235,9 +1276,10 @@ setMeteringPoint(point: Point): void
 设置曝光区域中心点，曝光点应位于0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
 
 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1255,13 +1297,13 @@ setMeteringPoint(point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 曝光点，x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | [Point](arkts-camera-camera-point-i.md) | 是 | 曝光点，x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## setVideoStabilizationMode
 
@@ -1270,10 +1312,11 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
 设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过  
-[isVideoStabilizationModeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法判断所设置的模式是否支持。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+[isVideoStabilizationModeSupported](arkts-camera-camera-capturesession-i.md#isvideostabilizationmodesupported)方法判断所设置的模式是否支持。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1291,13 +1334,13 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要设置的视频防抖模式。传参为null或者undefined，作为0处理，超级防抖模式关闭。 |
+| mode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 是 | 需要设置的视频防抖模式。传参为null或者undefined，作为0处理，超级防抖模式关闭。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## setZoomRatio
 
@@ -1306,9 +1349,10 @@ setZoomRatio(zoomRatio: number): void
 ```
 
 设置变焦比，变焦精度最高为小数点后两位，如果设置超过支持的精度范围，则只保留精度范围内数值。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1326,13 +1370,13 @@ setZoomRatio(zoomRatio: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| zoomRatio | number | 是 | 可变焦距比，通过[getZoomRatioRange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。传参为null或者undefined，作为0处理，变焦设置最小值。 |
+| zoomRatio | number | 是 | 可变焦距比，通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。传参为null或者undefined，作为0处理，变焦设置最小值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 
 ## start
 
@@ -1341,9 +1385,10 @@ start(callback: AsyncCallback<void>): void
 ```
 
 开始会话工作，通过注册回调函数获取结果。使用callback异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1361,14 +1406,14 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
 
 ## start
 
@@ -1377,9 +1422,10 @@ start(): Promise<void>
 ```
 
 开始会话工作。使用Promise异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1403,8 +1449,8 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
 
 ## stop
 
@@ -1413,9 +1459,10 @@ stop(callback: AsyncCallback<void>): void
 ```
 
 停止会话工作，通过注册回调函数获取结果。使用callback异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1433,13 +1480,13 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## stop
 
@@ -1448,9 +1495,10 @@ stop(): Promise<void>
 ```
 
 停止会话工作。使用Promise异步回调。
-    **说明：**  
-    
-    从 API version 10开始支持，从API version 11开始废弃。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1474,5 +1522,5 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 

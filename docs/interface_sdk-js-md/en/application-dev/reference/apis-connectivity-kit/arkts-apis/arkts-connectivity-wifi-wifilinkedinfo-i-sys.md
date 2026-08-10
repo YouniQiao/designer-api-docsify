@@ -14,6 +14,12 @@ Wi-Fi connection information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## chload
 
 ```TypeScript
@@ -94,7 +100,7 @@ suppState: SuppState
 
 The state of the supplicant of this Wi-Fi connection.
 
-**Type:** SuppState
+**Type:** [SuppState](arkts-connectivity-wifi-suppstate-e-sys.md)
 
 **Since:** 6
 

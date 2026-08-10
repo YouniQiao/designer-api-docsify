@@ -6,9 +6,7 @@
 const audioBalance: Config<double>
 ```
 
-Audio balance for the left and right audio channels. The value ranges from -1.0 to 1.0.
-
-Default value: **0.0
+表示左右声道音量平衡的配置。取值范围为-1.0~1.0。默认值为0.0。
 
 **Since:** 10
 
@@ -26,9 +24,7 @@ Default value: **0.0
 const audioMono: Config<boolean>
 ```
 
-Whether to enable mono audio. The value **true** indicates that mono audio is enabled, and **false** indicates the opposite.
-
-Default value: **false
+表示单声道音频的配置。true表示已启用单声道音频，false表示未启用单声道音频，默认值为false。
 
 **Since:** 10
 
@@ -46,7 +42,7 @@ Default value: **false
 const clickResponseTime: Config<ClickResponseTime>
 ```
 
-Length of time required for a click.
+表示点击持续时间功能配置。
 
 **Since:** 11
 
@@ -64,9 +60,7 @@ Length of time required for a click.
 const daltonizationState: Config<boolean>
 ```
 
-Whether to enable daltonization. It must be used with **daltonizationColorFilter**. The value **true** indicates that daltonization is enabled, and **false** indicates the opposite.
-
-Default value: **false
+表示颜色滤镜功能启动状态。配合daltonizationColorFilter使用。true表示已启用颜色滤镜功能，false表示未启用颜色滤镜功能，默认值为false。
 
 **Since:** 11
 
@@ -84,10 +78,7 @@ Default value: **false
 const ignoreRepeatClick: Config<boolean>
 ```
 
-Whether to ignore repeated clicks. This parameter must be used together with **repeatClickInterval**. The value  
-**true** indicates that the feature of ignoring repeated clicks is enabled, and **false** indicates the opposite.
-
-Default value: **false
+表示忽略重复点击功能启用状态。配合repeatClickInterval使用。true表示已启用忽略重复点击功能，false表示未启用忽略重复点击功能，默认值为false。
 
 **Since:** 11
 
@@ -105,7 +96,7 @@ Default value: **false
 const repeatClickInterval: Config<RepeatClickInterval>
 ```
 
-Interval between repeated clicks.
+表示忽略重复点击功能配置。
 
 **Since:** 11
 
@@ -141,7 +132,7 @@ Indicates the configuration of screen magnification.
 const shortkeyMultiTargets: Config<Array<string>>
 ```
 
-List of target applications for the accessibility shortcut keys. The value format is ['bundleName/abilityName'].
+表示辅助扩展快捷键的列表配置。取值为辅助应用的名称，格式为：['bundleName/abilityName']。
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # PlaybackCaptureStartState
 
-表示调用[requestPlaybackCaptureStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_后异步返回的内录启动状态的枚举。
+表示调用[requestPlaybackCaptureStart](arkts-audio-audio-audiocapturer-i.md#requestplaybackcapturestart)后异步返回的内录启动状态的枚举。
 
 **起始版本：** 26.0.0
 

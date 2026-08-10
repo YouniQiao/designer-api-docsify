@@ -10,6 +10,12 @@ Provides VPN related interfaces.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
+## Modules to Import
+
+```TypeScript
+import { vpnExtension } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions

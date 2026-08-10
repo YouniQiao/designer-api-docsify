@@ -1,12 +1,18 @@
 # onAVMusicTemplateCreate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## onAVMusicTemplateCreate
 
 ```TypeScript
 function onAVMusicTemplateCreate(callback: Callback<AVMusicTemplateDescriptor>): void
 ```
 
-Register session create event
+注册音频模板创建的监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -26,13 +32,13 @@ Register session create event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVMusicTemplateDescriptor&gt; | Yes | Used to handle 'sessionCreate' command |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMusicTemplateDescriptor&gt; | Yes | 回调函数，参数为音频模板描述。用于监听音频模板创建事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onAVMusicTemplateCreate can not work correctly due to limited device capabilities. |
+| 801 | Capability not supported.function onAVMusicTemplateCreate can not work correctly due to limited device capabilities. |
+| 201 | Permission verify failed. |
+| 202 | Not System App. |
 

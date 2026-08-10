@@ -1,6 +1,8 @@
 # RoundRectShapeOptions
 
-Interface for RectShape constructor parameters with separate radius values.
+RectShape 带有半径的构造函数参数。
+
+继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)。
 
 **Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)
 
@@ -12,13 +14,25 @@ Interface for RectShape constructor parameters with separate radius values.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## radiusHeight
 
 ```TypeScript
 radiusHeight?: double | string
 ```
 
-Defines the height of the corner radius for RectShape.
+矩形形状圆角半径的高度。
+
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。
+
+单位：vp
+
+取值为异常值时按照0vp处理。
 
 **Type:** double \| string
 
@@ -38,7 +52,13 @@ Defines the height of the corner radius for RectShape.
 radiusWidth?: double | string
 ```
 
-Defines the width of the corner radius for RectShape.
+矩形形状圆角半径的宽度。
+
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。
+
+单位：vp
+
+取值为异常值时按照0vp处理。
 
 **Type:** double \| string
 

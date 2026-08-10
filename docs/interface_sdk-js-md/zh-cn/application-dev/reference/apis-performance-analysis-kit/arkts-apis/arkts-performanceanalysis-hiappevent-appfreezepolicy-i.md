@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## pageSwitchLogEnable
 
 ```TypeScript
@@ -24,7 +30,7 @@ false：不使能应用冻屏事件的页面切换日志。
 
 默认值：false。
 
-**说明**：应用每次使能行为只在应用当前生命周期生效，在同一生命周期内，以最后一次成功调用的使能状态为准。应用重启后，需要重新设置使能状态。
+**说明：**应用每次使能行为只在应用当前生命周期生效，在同一生命周期内，以最后一次成功调用的使能状态为准。应用重启后，需要重新设置使能状态。
 
 **类型：** boolean
 

@@ -48,7 +48,7 @@ REBUILT = 1
 REPAIRED = 2
 ```
 
-表示数据库进行了修复，恢复了未损坏的数据，当前只有向量数据库（在[StoreConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中配置vector为true）具备该能力。
+表示数据库进行了修复，恢复了未损坏的数据，当前只有向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）具备该能力。
 
 **起始版本：** 12
 

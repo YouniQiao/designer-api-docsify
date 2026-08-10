@@ -1,6 +1,6 @@
 # MixMode
 
-Provides options for background color blending modes.
+背景色混合模式的可选项。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Provides options for background color blending modes.
 AVERAGE = 1
 ```
 
-Both colors are evenly mixed.
+两种颜色各占一半。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Both colors are evenly mixed.
 CROSS = 2
 ```
 
-One color passes through the other.
+一种颜色从另一种颜色中穿过。
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ One color passes through the other.
 TOWARDS = 3
 ```
 
-One color gradually blends into the other.
+一种颜色渐变为另一种颜色。
 
 **Since:** 18
 

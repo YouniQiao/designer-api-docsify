@@ -4,7 +4,7 @@
 declare type Length = string | number | Resource
 ```
 
-Defines the length property with string, number and resource unit.
+定义包含字符串、数字和资源单位的长度属性。
 
 **Since:** 11
 

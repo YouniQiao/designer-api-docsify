@@ -1,12 +1,18 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('appForegroundState')
 
 ```TypeScript
 function off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void
 ```
 
-Unregisters the observer used to listen for application start or exit events.
+注销应用启动和退出的监听器。
 
 **Since:** 11
 
@@ -24,19 +30,19 @@ Unregisters the observer used to listen for application start or exit events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appForegroundState' | Yes | Event type. It is fixed at **'appForegroundState'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Observer used to listen for application start or exit events. |
+| type | 'appForegroundState' | Yes | 调用接口类型，固定填'appForegroundState'字符串。 |
+| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | No | 取消注册的应用启动和退出监听器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -77,7 +83,7 @@ try {
 function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateObserver): void
 ```
 
-Deregisters the observer used to listen for the complete of the first frame rendering of a given ability.
+取消注册监听Ability首帧绘制完成事件观察者对象。
 
 **Since:** 12
 
@@ -95,19 +101,19 @@ Deregisters the observer used to listen for the complete of the first frame rend
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'abilityFirstFrameState' | Yes | Event type. It is fixed at **'abilityFirstFrameState'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used for deregistration. If this parameter is left blank , all subscriptions to the specified event are canceled. |
+| type | 'abilityFirstFrameState' | Yes | 调用接口类型，固定填'abilityFirstFrameState'字符串。 |
+| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | No | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

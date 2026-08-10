@@ -16,7 +16,7 @@ Enumerates USB transfer types.
 TRANSFER_TYPE_ISOCHRONOUS = 0x1
 ```
 
-Real-time transfer.
+实时传输。
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ Real-time transfer.
 TRANSFER_TYPE_BULK = 0x2
 ```
 
-Performs bulk transfer.
+批量传输。
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ Performs bulk transfer.
 TRANSFER_TYPE_INTERRUPT = 0x3
 ```
 
-Interrupt transfer.
+中断传输。
 
 **Since:** 18
 

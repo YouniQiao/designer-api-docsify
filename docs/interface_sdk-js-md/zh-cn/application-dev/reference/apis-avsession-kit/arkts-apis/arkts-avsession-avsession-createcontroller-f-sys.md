@@ -1,5 +1,11 @@
 # createController（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## createController
 
 ```TypeScript
@@ -25,25 +31,45 @@ function createController(sessionId: string, callback: AsyncCallback<AVSessionCo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 会话ID。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVSessionController&gt; | 是 | 回调函数。返回会话控制器实例，可查看会话ID， \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVSessionController&gt; | 是 | 回调函数。返回会话控制器实例，可查看会话ID， &lt;br&gt;并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 201 | permission denied |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
-let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
-avSession.createController(sessionId, (err, avcontroller: avSession.AVSessionController) => {
-  currentAVcontroller = avcontroller;
-    console.info('Succeeded in creating controller.');
-});
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            avSession.getAllSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
+              console.info(`Succeeded in getting all session descriptors, length: ${descriptors.length}`);
+              if (descriptors.length > 0 ) {
+avSession.createController(descriptors[0]?.sessionId, (avcontroller: avSession.AVSessionController) => { 
+                    console.info('Succeeded in creating controller.'); 
+                });
+              }
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 

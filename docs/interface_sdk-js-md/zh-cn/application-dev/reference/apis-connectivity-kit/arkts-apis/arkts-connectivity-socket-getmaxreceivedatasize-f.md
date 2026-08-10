@@ -1,0 +1,50 @@
+# getMaxReceiveDataSize
+
+## 导入模块
+
+```TypeScript
+import { socket } from 'kits/@kit.ConnectivityKit';
+```
+
+## getMaxReceiveDataSize
+
+```TypeScript
+function getMaxReceiveDataSize(clientSocket: int): int
+```
+
+Obtain the maximum data size that can be received through this socket channel.
+
+**起始版本：** 22
+
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为26.0.0。
+
+<!--Device-socket-function getMaxReceiveDataSize(clientSocket: int): int--><!--Device-socket-function getMaxReceiveDataSize(clientSocket: int): int-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| clientSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the client socket ID, returned by {@link sppAccept} or {@link sppConnect}. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Maximum received data size |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 入参clientNumber由sppAccept或sppConnect接口获取。
+let clientSocket = 1; 
+try {
+    let result: number = socket.getMaxReceiveDataSize(clientSocket);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+

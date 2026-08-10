@@ -1,6 +1,6 @@
 # ObscuredReasons
 
-Sets how the component content is obscured.
+ObscuredReasons.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Sets how the component content is obscured.
 PLACEHOLDER = 0
 ```
 
-The content is replaced by a placeholder.
+Displayed data should appear as generic placeholders.
 
 **Since:** 10
 

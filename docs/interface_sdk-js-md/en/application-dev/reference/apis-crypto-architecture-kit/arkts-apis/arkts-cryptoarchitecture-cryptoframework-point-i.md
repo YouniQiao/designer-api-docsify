@@ -1,6 +1,6 @@
 # Point
 
-Defines a point on the elliptic curve.
+指定椭圆曲线上的一个点。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Defines a point on the elliptic curve.
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## x
 
 ```TypeScript
 x: bigint
 ```
 
-X coordinate of the point on an elliptic curve.
+指定椭圆曲线上点的x坐标。
 
 **Type:** bigint
 
@@ -40,7 +46,7 @@ X coordinate of the point on an elliptic curve.
 y: bigint
 ```
 
-Y coordinate of the point on an elliptic curve.
+指定椭圆曲线上点的y坐标。
 
 **Type:** bigint
 

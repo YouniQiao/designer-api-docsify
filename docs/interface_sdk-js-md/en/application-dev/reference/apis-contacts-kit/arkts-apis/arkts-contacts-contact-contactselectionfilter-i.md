@@ -1,6 +1,6 @@
 # ContactSelectionFilter
 
-Defines the contact selection filter.
+联系人查询过滤器。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Defines the contact selection filter.
 
 **System capability:** SystemCapability.Applications.Contacts
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## filterClause
 
 ```TypeScript
 filterClause: FilterClause
 ```
 
-Filter criteria.
+过滤条件。
 
-**Type:** FilterClause
+**Type:** [FilterClause](arkts-contacts-contact-filterclause-i.md)
 
 **Since:** 15
 
@@ -36,9 +42,9 @@ Filter criteria.
 filterType: FilterType
 ```
 
-Filter type.
+过滤类型。
 
-**Type:** FilterType
+**Type:** [FilterType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filtertype-e.md)
 
 **Since:** 15
 

@@ -22,6 +22,6 @@ WaterFlow组件可见区域item变化事件的回调类型。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| first | number | 是 | 当前显示的瀑布流起始位置的索引值。\_\_\_HTML\_TAG\_USD\_1\_\_\_正常取值范围：[0, 子组件总数-1]。列表为空时存在特殊取值，详见 [onScrollIndex]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_事件说明。  |
-| last | number | 是 | 当前显示的瀑布流终止位置的索引值。\_\_\_HTML\_TAG\_USD\_1\_\_\_正常取值范围：[0, 子组件总数-1]。列表为空时存在特殊取值，详见 [onScrollIndex]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_事件说明。  |
+| first | number | 是 | 当前显示的瀑布流起始位置的索引值。<br/>正常取值范围：[0, 子组件总数-1]。列表为空时存在特殊取值，详见 [onScrollIndex](WaterFlowAttribute#onScrollIndex)事件说明。 |
+| last | number | 是 | 当前显示的瀑布流终止位置的索引值。<br/>正常取值范围：[0, 子组件总数-1]。列表为空时存在特殊取值，详见 [onScrollIndex](WaterFlowAttribute#onScrollIndex)事件说明。 |
 

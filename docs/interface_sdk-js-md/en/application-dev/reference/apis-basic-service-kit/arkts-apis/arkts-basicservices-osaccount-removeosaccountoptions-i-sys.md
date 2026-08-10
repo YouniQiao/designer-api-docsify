@@ -1,6 +1,6 @@
 # RemoveOsAccountOptions (System API)
 
-Represents the optional parameter used to remove an OS account.
+表示用于删除系统账号的可选参数。
 
 **Since:** 24
 
@@ -12,13 +12,19 @@ Represents the optional parameter used to remove an OS account.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## token
 
 ```TypeScript
 token?: Uint8Array
 ```
 
-Token obtained from the authentication management API. The value is left empty by default.
+表示从认证管理接口获取的token，默认为空。
 
 **Type:** Uint8Array
 

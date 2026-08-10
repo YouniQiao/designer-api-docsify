@@ -32,7 +32,12 @@ AlphabetIndexer(options: AlphabetIndexerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置索引条组件参数。 |
+| options | [AlphabetIndexerOptions](../arkts-apis/arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md) | 是 | 设置索引条组件参数。 |
 
 ## 汇总
 
+- [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md)
+- [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-alphabetindexer-onalphabetindexerpopupselectcallback-t.md)
+- [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-alphabetindexer-onalphabetindexerrequestpopupdatacallback-t.md)
+- [OnAlphabetIndexerSelectCallback](arkts-arkui-alphabetindexer-onalphabetindexerselectcallback-t.md)
+- [IndexerAlign](arkts-arkui-alphabetindexer-indexeralign-e.md)

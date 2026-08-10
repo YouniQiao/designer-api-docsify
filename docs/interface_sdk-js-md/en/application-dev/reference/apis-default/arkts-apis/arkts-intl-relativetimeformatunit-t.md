@@ -22,7 +22,7 @@ type RelativeTimeFormatUnit =
 
 Unit to use in the relative time internationalized message.
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#Parameters).
 
 **ArkTS mode:** ArkTS-Dyn only
 

@@ -1,6 +1,6 @@
 # StyledNumberFormatOptions
 
-Represents optional configuration items for the NumberFormat object.
+创建富文本显示的数字格式化对象时的可选配置项。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Represents optional configuration items for the NumberFormat object.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## decimal
 
 ```TypeScript
 decimal?: TextStyle
 ```
 
-Text style for the decimal point. The default value is the default text style.
+指定小数点的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Text style for the decimal point. The default value is the default text style.
 fraction?: TextStyle
 ```
 
-Text style for the fraction part. The default value is the default text style.
+指定小数部分的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ Text style for the fraction part. The default value is the default text style.
 integer?: TextStyle
 ```
 
-Text style for the integer part. The default value is the default text style.
+指定整数部分的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -76,9 +82,9 @@ Text style for the integer part. The default value is the default text style.
 unit?: TextStyle
 ```
 
-Text style for the unit. The default value is the default text style.
+指定单位部分的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 

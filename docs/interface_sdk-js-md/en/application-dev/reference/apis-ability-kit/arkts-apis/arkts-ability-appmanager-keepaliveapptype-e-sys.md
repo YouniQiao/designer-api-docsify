@@ -1,6 +1,6 @@
 # KeepAliveAppType (System API)
 
-Enumerates the types of applications to be kept alive.
+表示被保活应用的应用类型。
 
 **Since:** 14
 
@@ -18,8 +18,7 @@ Enumerates the types of applications to be kept alive.
 ALL = 0
 ```
 
-Third-party and system applications. This value can be called only as an input parameter of  
-[getKeepAliveBundles]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+三方应用和系统应用。此选项只能作为[getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles)接口的入参被调用。
 
 **Since:** 14
 
@@ -37,7 +36,7 @@ Third-party and system applications. This value can be called only as an input p
 THIRD_PARTY = 1
 ```
 
-Third-party application.
+三方应用。
 
 **Since:** 14
 
@@ -55,7 +54,7 @@ Third-party application.
 SYSTEM = 2
 ```
 
-System application.
+系统应用。
 
 **Since:** 14
 

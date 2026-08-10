@@ -4,7 +4,7 @@
 type OnViewportFitChangedCallback = (viewportFit: ViewportFit) => void
 ```
 
-Defines a callback invoked when the **viewport-fit** configuration in the web page's **\_\_\_ESCAPED\_UNDERSCORE\_DESC\_\_\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** tag changes.
+网页meta中viewport-fit配置项更改时触发的回调。
 
 **Since:** 12
 
@@ -20,5 +20,5 @@ Defines a callback invoked when the **viewport-fit** configuration in the web pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| viewportFit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Viewport type for **viewport-fit** in the web page **\_\_\_HTML\_TAG\_USD\_0\_\_\_** tag.  |
+| viewportFit | [ViewportFit](../arkts-apis/arkts-arkweb-web-viewportfit-e.md) | Yes | 网页meta中viewport-fit配置的视口类型。 |
 

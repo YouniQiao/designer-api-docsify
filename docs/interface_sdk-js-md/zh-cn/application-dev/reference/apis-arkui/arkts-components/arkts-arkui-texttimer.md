@@ -32,7 +32,9 @@ TextTimer(options?: TextTimerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 通过文本显示计时信息并控制其计时器状态的组件参数。当需要自定义计时器配置（如设置倒计时开关、计时时间、初始时间、控制器等）时传入此参数；不传入时使用 TextTimerOptions的默认配置。 \_\_\_HTML\_TAG\_USD\_1\_\_\_默认值继承[TextTimerOptions]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ 。  |
+| options | [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | 否 | 通过文本显示计时信息并控制其计时器状态的组件参数。当需要自定义计时器配置（如设置倒计时开关、计时时间、初始时间、控制器等）时传入此参数；不传入时使用 TextTimerOptions的默认配置。 <br>默认值继承[TextTimerOptions]{@link TextTimerOptions} 。 |
 
 ## 汇总
 
+- [TextTimerConfiguration](arkts-arkui-texttimer-texttimerconfiguration-i.md)
+- [TextTimerOptions](arkts-arkui-texttimer-texttimeroptions-i.md)

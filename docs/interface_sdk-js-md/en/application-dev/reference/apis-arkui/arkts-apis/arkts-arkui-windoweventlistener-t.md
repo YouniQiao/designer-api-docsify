@@ -4,7 +4,7 @@
 declare type WindowEventListener = (windowId: int, event: window.WindowEventType) => void
 ```
 
-Callback function for window event
+窗口生命周期事件通知的回调函数。
 
 **Since:** 26.0.0
 
@@ -20,6 +20,6 @@ Callback function for window event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The id of the window which triggers the event  |
-| event | window.WindowEventType | Yes | Window callback event type  |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 触发事件的窗口id |
+| event | window.WindowEventType | Yes | 窗口回调的事件类型 |
 

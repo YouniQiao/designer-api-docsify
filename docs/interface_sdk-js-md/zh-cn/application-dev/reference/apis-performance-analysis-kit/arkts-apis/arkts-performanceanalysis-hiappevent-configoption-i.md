@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## disable
 
 ```TypeScript

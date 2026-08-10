@@ -1,5 +1,11 @@
 # generateRandomBinaryUUID
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## generateRandomBinaryUUID
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # GridRowOptions
 
-Defines layout options of the **GridRow** container.
+设置栅格行布局容器的布局选项。
 
 **Since:** 9
 
@@ -16,17 +16,23 @@ Defines layout options of the **GridRow** container.
 breakpoints?: BreakPoints
 ```
 
-Array of breakpoint values and the corresponding reference based on the application window or container size.
+设置断点位置的单调递增数组，以及断点切换时的参照对象（基于应用窗口或容器尺寸）。
 
-Default value:
+默认值：
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+{
 
-Invalid values are treated as the default value.
+value: ["320vp", "600vp", "840vp"],
 
-Unit: vp.
+reference: BreakpointsReference.WindowSize
 
-**Type:** BreakPoints
+} 
+
+非法值：按默认值处理。
+
+单位：vp
+
+**Type:** [BreakPoints](../arkts-apis/arkts-arkui-gridrow-breakpoints-i.md)
 
 **Since:** 9
 
@@ -46,14 +52,14 @@ Unit: vp.
 columns?: number | GridRowColumnOption
 ```
 
-Number of columns in the grid layout.
+设置布局列数。
 
-The value is an integer greater than 0.
+取值为大于0的整数。
 
-- Before API version 20: The default value is 12.  
-- API version 20 or later: The default value is { xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }.
+- API version 20之前：默认值为12。  
+- API version 20及之后：默认值为{ xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 } 
 
-Invalid values are treated as the default value.
+非法值：按默认值处理。
 
 **Type:** number \| GridRowColumnOption
 
@@ -75,13 +81,13 @@ Invalid values are treated as the default value.
 direction?: GridRowDirection
 ```
 
-Arrangement direction of the grid layout.
+栅格布局排列方向。支持Row（行方向排列，适用于常规LTR布局）和RowReverse（逆序行方向排列，适用于RTL布局或需要反向排列的场景）。
 
-Default value: **GridRowDirection.Row**
+默认值：GridRowDirection.Row 
 
-Invalid values are treated as the default value.
+非法值：按默认值处理。
 
-**Type:** GridRowDirection
+**Type:** [GridRowDirection](../arkts-apis/arkts-arkui-gridrow-gridrowdirection-e.md)
 
 **Since:** 9
 
@@ -101,15 +107,15 @@ Invalid values are treated as the default value.
 gutter?: Length | GutterOption
 ```
 
-Gutter of the grid layout.
+栅格布局间距。
 
-Default value: **0**
+默认值：0vp 
 
-Invalid values are treated as the default value.
+非法值：按默认值处理。
 
-Unit: vp.
+单位：vp
 
-**Type:** Length \| GutterOption
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GutterOption
 
 **Since:** 9
 

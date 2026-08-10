@@ -1,5 +1,11 @@
 # hasHceCapability
 
+## Modules to Import
+
+```TypeScript
+import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+```
+
 ## hasHceCapability
 
 ```TypeScript
@@ -30,10 +36,10 @@ Checks whether Host Card Emulation(HCE) capability is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Applicable to devices other than lite wearables

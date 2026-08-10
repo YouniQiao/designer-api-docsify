@@ -23,7 +23,7 @@ DATA_TRANSFER = 1
 **说明：** 在数据传输时，应用需要更新进度，如果进度长时间（超过10分钟）未更新，数据传输的长时任务会被取消。
 
 更新进度的通知类型必须为实况窗，具体实现可参考  
-[startBackgroundRunning()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的示例。
+[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)中的示例。
 
 **起始版本：** 9
 
@@ -43,7 +43,7 @@ AUDIO_PLAYBACK = 2
 
 使用场景举例：音频、视频在后台播放，音视频投播。
 
-**说明：** 从API version 20开始，申请/更新AUDIO\_PLAYBACK类型长时任务但不接入AVSession，申请/更新长时任务成功后会在通知栏显示通知。
+**说明：** 从API version 20开始，申请/更新AUDIO_PLAYBACK类型长时任务但不接入AVSession，申请/更新长时任务成功后会在通知栏显示通知。
 
 接入AVSession后，后台任务模块不会发送通知栏通知，由AVSession发送通知。
 
@@ -67,9 +67,9 @@ AUDIO_RECORDING = 3
 
 录制。
 
-使用场景举例：录音、录屏退后台。\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_
+使用场景举例：录音、录屏退后台。&lt;!--Del--&gt;
 
-**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。&lt;!--DelEnd--&gt;
 
 **起始版本：** 9
 
@@ -143,9 +143,9 @@ VOIP = 8
 
 音视频通话。
 
-使用场景举例：某些聊天类应用（具有音视频业务）音频、视频通话时退后台。\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_
+使用场景举例：某些聊天类应用（具有音视频业务）音频、视频通话时退后台。&lt;!--Del--&gt;
 
-**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。&lt;!--DelEnd--&gt;
 
 **起始版本：** 13
 
@@ -165,8 +165,8 @@ TASK_KEEPING = 9
 
 使用场景举例：杀毒软件
 
-**说明：** 从API version 21开始，对PC/2in1设备、非PC/2in1设备但申请了ACL权限为  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的应用开放。 API version 20及之前版本，仅对PC/2in1设备开放。
+**说明：** 从API version 21开始，对PC/2in1设备、非PC/2in1设备但申请了ACL权限为
+[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)的应用开放。 API version 20及之前版本，仅对PC/2in1设备开放。
 
 **起始版本：** 9
 

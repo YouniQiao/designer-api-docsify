@@ -1,6 +1,6 @@
 # AudioSessionDeactivatedEvent
 
-Describes the event indicating that an audio session is deactivated.
+音频会话停用事件。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the event indicating that an audio session is deactivated.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## reason
 
 ```TypeScript
 reason: AudioSessionDeactivatedReason
 ```
 
-Reason for deactivating an audio session.
+音频会话停用原因。
 
-**Type:** AudioSessionDeactivatedReason
+**Type:** [AudioSessionDeactivatedReason](arkts-audio-audio-audiosessiondeactivatedreason-e.md)
 
 **Since:** 12
 

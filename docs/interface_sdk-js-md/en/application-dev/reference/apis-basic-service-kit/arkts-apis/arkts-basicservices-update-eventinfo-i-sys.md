@@ -1,9 +1,8 @@
 # EventInfo (System API)
 
-Defines an **EventInfo** object, which is used to receive the event details transferred by upgrade event notification. The object contains the **eventId** and **taskBody** fields. **eventId** indicates the event ID,which identifies the event type; **taskBody** indicates the task data, which contains the task status and progress.
+事件信息对象，用于接收升级事件通知时传递的事件详情。包含eventId(事件ID，标识具体事件类型)和taskBody(任务数据，包含任务状态和进度)字段。
 
-Use scenarios: After an event listener is registered by calling **on**, the callback function receives an  
-**EventInfo** object when an event occurs. The real-time status and progress of the upgrade task can be obtained by parsing **eventId** and **taskBody**, which can be used to monitor the upgrade process in real time.
+使用场景：在注册事件监听(on方法)后，事件发生时回调函数会接收到EventInfo对象，通过解析eventId和taskBody可获知升级任务的实时状态和进度，用于实时监控升级流程。
 
 **Since:** 9
 
@@ -15,19 +14,23 @@ Use scenarios: After an event listener is registered by calling **on**, the call
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## eventId
 
 ```TypeScript
 eventId: EventId
 ```
 
-Event ID, which identifies the upgrade event type. You can determine the specific event based on **eventId** and take corresponding actions. For example, **EVENT\_DOWNLOAD\_START** indicates that the download starts, and  
-**EVENT\_UPGRADE\_SUCCESS** indicates that the upgrade is successful.
+事件ID，用于标识具体的升级事件类型。通过eventId可判断当前发生的具体事件(如EVENT_DOWNLOAD_START表示开始下载、EVENT_UPGRADE_SUCCESS表示升级成功等)，从而采取相应处理。
 
-Common event types include download events (such as **EVENT\_DOWNLOAD\_START**), upgrade events (such as  
-**EVENT\_UPGRADE\_START**), and completion events (such as **EVENT\_UPGRADE\_SUCCESS** and **EVENT\_UPGRADE\_FAIL**).You are advised to execute different service logic based on **eventId** in the event callback.
+常见事件类型包括下载事件(EVENT_DOWNLOAD_START等)、升级事件(EVENT_UPGRADE_START等)、完成事件(EVENT_UPGRADE_SUCCESS、EVENT_UPGRADE_FAIL)。建议在事件回调中根据eventId执行不同的业务逻辑。
 
-**Type:** EventId
+**Type:** [EventId](arkts-basicservices-update-eventid-e-sys.md)
 
 **Since:** 9
 
@@ -45,9 +48,9 @@ Common event types include download events (such as **EVENT\_DOWNLOAD\_START**),
 taskBody: TaskBody
 ```
 
-Represents task data.
+任务数据。
 
-**Type:** TaskBody
+**Type:** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
 **Since:** 9
 

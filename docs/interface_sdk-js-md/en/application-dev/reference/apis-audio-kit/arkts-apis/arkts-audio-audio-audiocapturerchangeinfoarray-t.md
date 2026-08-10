@@ -4,7 +4,7 @@
 type AudioCapturerChangeInfoArray = Array<Readonly<AudioCapturerChangeInfo>>
 ```
 
-Defines an AudioCapturerChangeInfo array, which is read-only.
+数组类型，AudioCapturerChangeInfo数组，只读。
 
 **Since:** 9
 

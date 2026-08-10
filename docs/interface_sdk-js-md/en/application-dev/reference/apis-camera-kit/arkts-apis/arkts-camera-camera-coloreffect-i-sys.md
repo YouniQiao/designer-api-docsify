@@ -1,6 +1,6 @@
 # ColorEffect (System API)
 
-ColorEffect extends [ColorEffectQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_Provides the APIs to obtain and set the lens color effect.
+ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md)Provides the APIs to obtain and set the lens color effect.
 
 **Inheritance/Implementation:** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md)
 
@@ -13,6 +13,12 @@ ColorEffect extends [ColorEffectQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_Provi
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getColorEffect
 
@@ -36,16 +42,16 @@ Obtains the color effect in use.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Color effect. |
+| [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | Color effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function getColorEffect(session: camera.PhotoSessionForSys): camera.ColorEffectType {
@@ -61,7 +67,7 @@ setColorEffect(type: ColorEffectType): void
 ```
 
 Sets a color effect. Before the setting, call  
-[getSupportedColorEffects]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the supported color effects.
+[getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects) to obtain the supported color effects.
 
 **Since:** 11
 
@@ -77,16 +83,16 @@ Sets a color effect. Before the setting, call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The type of color effect. |
+| type | [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | Yes | The type of color effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function setColorEffect(session: camera.PhotoSessionForSys, colorEffect: camera.ColorEffectType): void {

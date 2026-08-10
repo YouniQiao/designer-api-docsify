@@ -1,6 +1,6 @@
 # TextChangeEventInfo
 
-Text change event info
+文本更改事件信息
 
 **Since:** 24
 
@@ -10,13 +10,19 @@ Text change event info
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## content
 
 ```TypeScript
 content: string
 ```
 
-Current content of text field component.
+文本字段组件的当前内容。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Current content of text field component.
 id: string
 ```
 
-The id of text field component.
+文本字段组件的ID。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ The id of text field component.
 uniqueId: int
 ```
 
-The uniqueId of the text field component.
+文本字段组件的唯一ID。
 
 **Type:** int
 

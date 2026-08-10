@@ -1,18 +1,30 @@
 # pushUrl
 
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
 ## pushUrl
 
 ```TypeScript
 function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application.
-    **NOTE**  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [Router]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated  
-    with the current UI context.
+跳转到应用内的指定页面。
+
+> **说明：**
+> 
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用
+> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
+> 替代。pushUrl需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
+> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [Router](arkts-arkui-uicontext.md)对象。
 
 **Since:** 9
 
@@ -32,22 +44,24 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page routing parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 跳转页面描述信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异常响应回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100003 | Page stack error. Too many pages are pushed. |
+| 100002 | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
-**Example**
+## Examples
 
 ```TypeScript
-class innerParams {
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -57,11 +71,11 @@ class innerParams {
 
 class RouterParams {
   data1: string;
-  data2: innerParams;
+  data2: InnerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new innerParams(tuple);
+    this.data2 = new InnerParams(tuple);
   }
 }
 
@@ -70,11 +84,11 @@ router.pushUrl({
   params: new RouterParams('message', [123, 456, 789])
 }, (err) => {
   if (err) {
-    console.error(`pushUrl failed, code is ${err.code}, message is ${err.message}`);
+    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('pushUrl success');
-})
+});
 ```
 
 
@@ -84,13 +98,19 @@ router.pushUrl({
 function pushUrl(options: RouterOptions): Promise<void>
 ```
 
-Navigates to a specified page in the application.
-    **NOTE**  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [Router]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated  
-    with the current UI context.
+跳转到应用内的指定页面。
+
+> **说明：**
+> 
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用
+> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)替代。pushUrl需先通过
+> [UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
+> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [Router](arkts-arkui-uicontext.md)对象。
 
 **Since:** 9
 
@@ -110,29 +130,31 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 跳转页面描述信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | 异常返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100003 | Page stack error. Too many pages are pushed. |
+| 100002 | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
-**Example**
+## Examples
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class innerParams {
+class InnerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -142,11 +164,11 @@ class innerParams {
 
 class RouterParams {
   data1: string;
-  data2: innerParams;
+  data2: InnerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new innerParams(tuple);
+    this.data2 = new InnerParams(tuple);
   }
 }
 
@@ -155,11 +177,11 @@ router.pushUrl({
   params: new RouterParams('message', [123, 456, 789])
 })
   .then(() => {
-    console.error(`pushUrl finish`);
+    console.info(`pushUrl finish`);
   })
-  .catch((err: ESObject) => {
-    console.error(`pushUrl failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-  })
+  .catch((err: BusinessError) => {
+    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
+  });
 ```
 
 
@@ -169,13 +191,19 @@ router.pushUrl({
 function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application.
-    **NOTE**  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [Router]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated  
-    with the current UI context.
+跳转到应用内的指定页面。
+
+> **说明：**
+> 
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用
+> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
+> 替代。pushUrl需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
+> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [Router](arkts-arkui-uicontext.md)对象。
 
 **Since:** 9
 
@@ -195,23 +223,25 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page routing parameters. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Routing mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 跳转页面描述信息。 |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | 跳转页面使用的模式。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 页面跳转结果回调函数。&lt;br/&gt;当页面跳转成功时，error为undefined。当页面跳转失败时，error为系统返回的错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100003 | Page stack error. Too many pages are pushed. |
+| 100002 | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
-**Example**
+## Examples
 
 ```TypeScript
-class innerParams {
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -221,11 +251,11 @@ class innerParams {
 
 class RouterParams {
   data1: string;
-  data2: innerParams;
+  data2: InnerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new innerParams(tuple);
+    this.data2 = new InnerParams(tuple);
   }
 }
 
@@ -234,7 +264,7 @@ router.pushUrl({
   params: new RouterParams('message', [123, 456, 789])
 }, router.RouterMode.Standard, (err) => {
   if (err) {
-    console.error(`pushUrl failed, code is ${err.code}, message is ${err.message}`);
+    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('pushUrl success');
@@ -248,13 +278,19 @@ router.pushUrl({
 function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 ```
 
-Navigates to a specified page in the application.
-    **NOTE**  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [Router]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated  
-    with the current UI context.
+跳转到应用内的指定页面。
+
+> **说明：**
+> 
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用
+> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)替代。
+> pushUrl需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
+> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [Router](arkts-arkui-uicontext.md)对象。
 
 **Since:** 9
 
@@ -274,30 +310,32 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page routing parameters. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Routing mode. |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 跳转页面描述信息。 |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | 跳转页面使用的模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | 异常返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100003 | Page stack error. Too many pages are pushed. |
+| 100002 | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
-**Example**
+## Examples
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class innerParams {
+class InnerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -307,11 +345,11 @@ class innerParams {
 
 class RouterParams {
   data1: string;
-  data2: innerParams;
+  data2: InnerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new innerParams(tuple);
+    this.data2 = new InnerParams(tuple);
   }
 }
 
@@ -320,10 +358,10 @@ router.pushUrl({
   params: new RouterParams('message', [123, 456, 789])
 }, router.RouterMode.Standard)
   .then(() => {
-    console.error(`pushUrl finish`);
+    console.info(`pushUrl finish`);
   })
-  .catch((err: ESObject) => {
-    console.error(`pushUrl failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
+  .catch((err: BusinessError) => {
+    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
   })
 ```
 

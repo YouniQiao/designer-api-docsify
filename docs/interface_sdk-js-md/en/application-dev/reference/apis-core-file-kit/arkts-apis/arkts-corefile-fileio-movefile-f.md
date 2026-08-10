@@ -1,15 +1,22 @@
 # moveFile
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## moveFile
 
 ```TypeScript
 function moveFile(src: string, dest: string, mode?: int): Promise<void>
 ```
 
-Moves a file to the target path. You can set the conflict handling mode. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API is not supported in a distributed directory.
+移动文件至目标路径，支持设置冲突处理模式。使用Promise异步回调。
+
+> **说明：**
+> 
+> 该接口不支持在分布式文件路径下操作。
 
 **Since:** 23
 
@@ -23,39 +30,39 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | Application sandbox path of the file to move. |
-| dest | string | Yes | Application sandbox path of the destination file. |
-| mode | int | No | Move mode. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| src | string | Yes | 源文件的应用沙箱路径。 |
+| dest | string | Yes | 目标文件的应用沙箱路径。 |
+| mode | int | No | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900020 | Invalid argument |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900028 | Too many links |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
+| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900028 | Too many links |
-| 13900032 | Directory not empty |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## moveFile
@@ -64,10 +71,11 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API is not supported in a distributed directory.
+移动文件。如果移动位置存在同名文件，将强制覆盖。使用callback异步回调。
+
+> **说明：**
+> 
+> 该接口不支持在分布式文件路径下操作。
 
 **Since:** 23
 
@@ -81,33 +89,33 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | Application sandbox path of the file to move. |
-| dest | string | Yes | Application sandbox path of the destination file. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| src | string | Yes | 源文件的应用沙箱路径。 |
+| dest | string | Yes | 目标文件的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900020 | Invalid argument |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900028 | Too many links |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
+| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900028 | Too many links |
-| 13900032 | Directory not empty |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## moveFile
@@ -116,10 +124,11 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void
 ```
 
-Moves a file to the target path. You can set the conflict handling mode. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API is not supported in a distributed directory.
+移动文件至目标路径，支持设置冲突处理模式。使用callback异步回调。
+
+> **说明：**
+> 
+> 该接口不支持在分布式文件路径下操作。
 
 **Since:** 23
 
@@ -133,32 +142,32 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | Application sandbox path of the file to move. |
-| dest | string | Yes | Application sandbox path of the destination file. |
-| mode | int | Yes | Move mode. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| src | string | Yes | 源文件的应用沙箱路径。 |
+| dest | string | Yes | 目标文件的应用沙箱路径。 |
+| mode | int | Yes | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900020 | Invalid argument |
+| 13900016 | Cross-device link |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900028 | Too many links |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900032 | Directory not empty |
 | 13900001 | Operation not permitted |
+| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
 | 13900015 | File exists |
-| 13900016 | Cross-device link |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900028 | Too many links |
-| 13900032 | Directory not empty |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 

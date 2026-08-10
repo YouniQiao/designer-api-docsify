@@ -1,5 +1,11 @@
 # isScreenLocked
 
+## Modules to Import
+
+```TypeScript
+import { screenLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isScreenLocked
 
 ```TypeScript
@@ -22,9 +28,9 @@ Checks whether the screen is currently locked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | the callback of isScreenLocked. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isScreenLocked. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -63,7 +69,7 @@ Checks whether the screen is currently locked.
 | --- | --- |
 | Promise&lt;boolean&gt; | the promise returned by the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

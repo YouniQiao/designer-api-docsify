@@ -1,5 +1,11 @@
 # isDoubleClickAppForSelf
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isDoubleClickAppForSelf
 
 ```TypeScript
@@ -23,4 +29,14 @@ function isDoubleClickAppForSelf(): Promise<boolean>
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Check result. { |
+
+## Examples
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+
+settings.isDoubleClickAppForSelf().then((result: boolean) => {
+  console.info(`isDoubleClickAppForSelf result: ${result}`);
+})
+```
 

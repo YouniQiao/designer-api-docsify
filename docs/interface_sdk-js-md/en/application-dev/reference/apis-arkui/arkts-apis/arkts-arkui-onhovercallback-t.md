@@ -4,7 +4,7 @@
 export type OnHoverCallback = (status: boolean, event: HoverEvent) => void
 ```
 
-callback of the on hover event.
+鼠标悬浮触发回调。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ callback of the on hover event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | boolean | Yes | The hover status  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The event info for hover.  |
+| status | boolean | Yes | 表示鼠标是否悬浮在组件上，鼠标进入组件时为true，离开组件时为false。 |
+| event | [HoverEvent](../arkts-components/arkts-arkui-hoverevent-i.md) | Yes | 设置悬浮事件。 |
 

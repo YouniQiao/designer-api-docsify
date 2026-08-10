@@ -1,12 +1,18 @@
 # isFlagEnabled
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## isFlagEnabled
 
 ```TypeScript
 function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean
 ```
 
-Checks whether the trace flag is enabled for **HiTraceId**. This API returns the result synchronously.
+判断HiTraceId是否启用了跟踪标志flag，同步接口。用于在业务逻辑中根据跟踪标志进行不同处理，例如检查是否启用了INCLUDE_ASYNC标志以决定是否等待异步操作完成、检查是否启用了TP_INFO标志以决定是否打印调试信息。
 
 **Since:** 8
 
@@ -20,16 +26,16 @@ Checks whether the trace flag is enabled for **HiTraceId**. This API returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | HiTraceId** instance to be checked. |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specified trace flag. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | 需要判断指定跟踪标志是否启用的HiTraceId实例。 |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | 指定的跟踪标志。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the flag for **HiTraceId** is enabled, and **false** indicates the opposite. |
+| boolean | true：HiTraceId已启用flag；false：HiTraceId未启用flag。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Start tracing. The tracing flag is INCLUDE_ASYNC.

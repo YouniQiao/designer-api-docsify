@@ -1,6 +1,6 @@
 # DecorButtonStyle
 
-Describes the button style of the system decoration bar.
+系统装饰栏按钮样式。
 
 **Since:** 14
 
@@ -10,15 +10,21 @@ Describes the button style of the system decoration bar.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## buttonBackgroundCornerRadius
 
 ```TypeScript
 buttonBackgroundCornerRadius? : int
 ```
 
-Radius of the button background rounded corner. The value ranges from 4 vp to 8 vp. The default value is 4 vp.
+按键背板圆角半径，取值范围4vp-8vp，默认值4vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -36,9 +42,9 @@ Radius of the button background rounded corner. The value ranges from 4 vp to 8 
 buttonBackgroundSize? : int
 ```
 
-Size of the button when it is highlighted. The value ranges from 20 vp to 40 vp. The default value is 28 vp.
+按钮高亮显示时的大小，取值范围20vp-40vp，默认值28vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 
@@ -56,9 +62,9 @@ Size of the button when it is highlighted. The value ranges from 20 vp to 40 vp.
 buttonIconSize? : int
 ```
 
-Size of the button icon. The value ranges from 16 vp to 24 vp. The default value is 20 vp.
+按键icon的大小，取值范围16vp-24vp，默认值20vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -76,9 +82,9 @@ Size of the button icon. The value ranges from 16 vp to 24 vp. The default value
 closeButtonRightMargin? : int
 ```
 
-Margin between the rightmost edge of the close button and the window. The value ranges from 6 vp to 22 vp. The default value is 20 vp.
+关闭按钮右侧距窗口边距，取值范围6vp-22vp，默认值20vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 
@@ -96,7 +102,7 @@ Margin between the rightmost edge of the close button and the window. The value 
 colorMode?: ConfigurationConstant.ColorMode
 ```
 
-Color mode. Buttons automatically adapt to light colors in dark mode and to dark colors in light mode. If this parameter is not set, they will automatically match the system color mode.
+颜色模式。深色模式下按钮颜色适配为浅色，浅色模式下按钮颜色适配为深色。未设置则默认跟随系统颜色模式。
 
 **Type:** ConfigurationConstant.ColorMode
 
@@ -116,9 +122,9 @@ Color mode. Buttons automatically adapt to light colors in dark mode and to dark
 spacingBetweenButtons? : int
 ```
 
-Spacing between buttons. The value ranges from 8 vp to 24 vp. The default value is 12 vp.
+按钮间距，取值范围8vp-24vp，默认值12vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 

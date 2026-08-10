@@ -1,6 +1,6 @@
 # ConflictFiles
 
-Defines conflicting file information used in **copyDir()** or **moveDir()**.
+冲突文件信息，支持copyDir及moveDir接口使用。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines conflicting file information used in **copyDir()** or **moveDir()**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## destFile
 
 ```TypeScript
 destFile: string
 ```
 
-Path of the destination file.
+目标冲突文件路径。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Path of the destination file.
 srcFile: string
 ```
 
-Path of the source file.
+源冲突文件路径。
 
 **Type:** string
 

@@ -1,5 +1,11 @@
 # create
 
+## 导入模块
+
+```TypeScript
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## create
 
 ```TypeScript
@@ -20,9 +26,9 @@ function create(): DisplaySync
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回DisplaySync对象实例，用于设置帧率范围、注册帧回调函数以及控制回调的启动和停止。 |
+| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | 返回DisplaySync对象实例，用于设置帧率范围、注册帧回调函数以及控制回调的启动和停止。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建DisplaySync对象

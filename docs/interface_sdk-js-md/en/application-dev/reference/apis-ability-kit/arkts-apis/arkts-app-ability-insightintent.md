@@ -1,15 +1,22 @@
 # @ohos.app.ability.insightIntent
 
-This module provides basic definitions of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+本模块提供[意图框架](../../../application-models/insight-intent-overview.md)基础定义。
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace insightIntent--><!--Device-unnamed-declare namespace insightIntent-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 
@@ -17,42 +24,42 @@ This module provides basic definitions of the
 
 | Name | Description |
 | --- | --- |
-| [AppIntentEntity](arkts-ability-insightintent-appintententity-c.md) | Define AppIntentEntity. |
+| [AppIntentEntity](arkts-ability-insightintent-appintententity-c.md) | 定义AppIntentEntity。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ExecuteResult](arkts-ability-insightintent-executeresult-i.md) | Enumerates the return results of intent execution. |
-| [IntentEntity](arkts-ability-insightintent-intententity-i.md) | Defines the struct of an intent entity. It represents key information objects involved during intent execution,including intent parameters and execution results.  You can define intent entities by inheriting this class. The child class must be decorated with  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [IntentResult](arkts-ability-insightintent-intentresult-i.md) | Defines the return result of intent execution. The  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is supported. |
-| [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | Parameter for query entity. |
+| [ExecuteResult](arkts-ability-insightintent-executeresult-i.md) | 意图执行的返回结果。 |
+| [IntentEntity](arkts-ability-insightintent-intententity-i.md) | 意图实体结构体定义，用于定义意图执行过程中涉及的关键信息对象，包括意图参数和意图执行结果等。  开发者通过继承该类来定义意图实体，继承类需使用  [@InsightIntentEntity](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity)装饰。 |
+| [IntentResult](arkts-ability-insightintent-intentresult-i.md) | 意图执行的返回结果，支持[泛型类型](../../../quick-start/introduction-to-arkts.md#泛型类和接口)。 |
+| [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | 查询实体的参数。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ExecuteResult](arkts-ability-insightintent-executeresult-i-sys.md) | Enumerates the return results of intent execution. |
-| [IntentResult](arkts-ability-insightintent-intentresult-i-sys.md) | Defines the return result of intent execution. The  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is supported. |
-| [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md) | Defines the interaction information returned after the current intent execution completes, including the next intent to be triggered and the interaction UI to be displayed. |
-| [InteractionModalUIExtension](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md) | Defines the information of the modal UIExtension to be displayed as the interaction UI after the current intent execution completes. Does not support distributed scenarios. |
-| [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md) | Defines the base information of the interaction UI to be displayed after the current intent execution completes.This is a base class. Use its subclasses such as \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in practice. |
+| [ExecuteResult](arkts-ability-insightintent-executeresult-i-sys.md) | 意图执行的返回结果。 |
+| [IntentResult](arkts-ability-insightintent-intentresult-i-sys.md) | 意图执行的返回结果，支持[泛型类型](../../../quick-start/introduction-to-arkts.md#泛型类和接口)。 |
+| [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md) | 定义当前意图执行完成后返回的交互信息，包括下一个要触发的意图和要显示的交互界面。 |
+| [InteractionModalUIExtension](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md) | 定义当意图执行完成时模态UIExtension要显示为交互界面的信息，不支持分布式。 |
+| [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md) | 定义当前意图执行完成后需要展示的交互界面的信息。 |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ExecuteMode](arkts-ability-insightintent-executemode-e.md) | Enumerates the intent execution modes. It specifies the mode of execution passed when the intent is triggered by a system entry point. The supported execution modes for each intent are defined during intent development. |
-| [QueryType](arkts-ability-insightintent-querytype-e.md) | Enum for query entity mode. |
-| [ReturnMode](arkts-ability-insightintent-returnmode-e.md) | Enumerates the modes that define how the execution result of an intent is returned to the intent initiator. |
+| [ExecuteMode](arkts-ability-insightintent-executemode-e.md) | 意图执行模式。表示系统入口触发意图执行时传递的执行模式，每个意图支持的执行模式在意图开发时定义。 |
+| [QueryType](arkts-ability-insightintent-querytype-e.md) | 查询实体模式的枚举。 |
+| [ReturnMode](arkts-ability-insightintent-returnmode-e.md) | 意图执行结果返回给意图拉起方的返回形式。 |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ExecuteMode](arkts-ability-insightintent-executemode-e-sys.md) | Enumerates the intent execution modes. It specifies the mode of execution passed when the intent is triggered by a system entry point. The supported execution modes for each intent are defined during intent development. |
+| [ExecuteMode](arkts-ability-insightintent-executemode-e-sys.md) | 意图执行模式。表示系统入口触发意图执行时传递的执行模式，每个意图支持的执行模式在意图开发时定义。 |
 <!--DelEnd-->
 

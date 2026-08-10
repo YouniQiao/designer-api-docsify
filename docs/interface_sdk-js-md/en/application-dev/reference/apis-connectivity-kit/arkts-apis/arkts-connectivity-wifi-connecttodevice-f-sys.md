@@ -1,5 +1,11 @@
 # connectToDevice (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## connectToDevice
 
 ```TypeScript
@@ -28,7 +34,7 @@ Connects to Wi-Fi network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i-sys.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
@@ -36,7 +42,7 @@ Connects to Wi-Fi network.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

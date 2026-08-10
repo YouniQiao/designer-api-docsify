@@ -16,9 +16,9 @@ Defines the Localized align rule options of relative container.
 bias?: Bias
 ```
 
-Offset of the component under the anchor constraints.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
+设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
 
-**Type:** Bias
+**Type:** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
 
 **Default:** {horizontal:0.5,vertical:0.5}
 
@@ -40,9 +40,9 @@ Offset of the component under the anchor constraints.\_\_\_HTML\_TAG\_DESC\_USD\
 bottom?: LocalizedVerticalAlignParam
 ```
 
-Bottom alignment in the vertical direction.
+设置纵向底部对齐的参数。
 
-**Type:** LocalizedVerticalAlignParam
+**Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 
 **Since:** 12
 
@@ -62,9 +62,9 @@ Bottom alignment in the vertical direction.
 center?: LocalizedVerticalAlignParam
 ```
 
-Center alignment in the vertical direction.
+设置纵向居中对齐方式的参数。
 
-**Type:** LocalizedVerticalAlignParam
+**Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 
 **Since:** 12
 
@@ -84,9 +84,9 @@ Center alignment in the vertical direction.
 end?: LocalizedHorizontalAlignParam
 ```
 
-Right alignment with left-to-right scripts and left alignment with right-to-left scripts in the horizontal direction.
+设置横向对齐方式的参数，LTR模式时为右对齐，RTL模式时为左对齐。
 
-**Type:** LocalizedHorizontalAlignParam
+**Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **Since:** 12
 
@@ -106,9 +106,9 @@ Right alignment with left-to-right scripts and left alignment with right-to-left
 middle?: LocalizedHorizontalAlignParam
 ```
 
-Center alignment in the horizontal direction.
+设置横向居中对齐方式的参数。
 
-**Type:** LocalizedHorizontalAlignParam
+**Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **Since:** 12
 
@@ -128,9 +128,9 @@ Center alignment in the horizontal direction.
 start?: LocalizedHorizontalAlignParam
 ```
 
-Left alignment with left-to-right scripts and right alignment with right-to-left scripts in the horizontal direction.
+设置横向对齐方式的参数，LTR模式时为左对齐，RTL模式时为右对齐。
 
-**Type:** LocalizedHorizontalAlignParam
+**Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **Since:** 12
 
@@ -150,9 +150,9 @@ Left alignment with left-to-right scripts and right alignment with right-to-left
 top?: LocalizedVerticalAlignParam
 ```
 
-Top alignment in the vertical direction.
+设置纵向顶部对齐的参数。
 
-**Type:** LocalizedVerticalAlignParam
+**Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 
 **Since:** 12
 

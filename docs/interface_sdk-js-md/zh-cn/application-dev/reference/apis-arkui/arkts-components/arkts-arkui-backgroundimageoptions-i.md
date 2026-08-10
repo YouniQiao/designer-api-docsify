@@ -1,9 +1,10 @@
 # BackgroundImageOptions
 
 定义背景图选项。
-    **说明：**  
-    
-    背景图片的同步加载可能会带来潜在性能问题，详情可见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中说明。
+
+> **说明：**
+> 
+> 背景图片的同步加载可能会带来潜在性能问题，详情可见[Image](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#image-1)中说明。
 
 **起始版本：** 18
 
@@ -21,7 +22,7 @@ repeat?: ImageRepeat
 
 设置背景图片的重复样式。默认值为ImageRepeat.NoRepeat。
 
-**类型：** ImageRepeat
+**类型：** [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md)
 
 **起始版本：** 18
 

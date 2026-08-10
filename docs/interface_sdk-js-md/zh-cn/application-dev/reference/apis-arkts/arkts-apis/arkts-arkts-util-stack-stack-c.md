@@ -10,6 +10,12 @@ Stack基于数组的数据结构实现，特点是先进后出，只能在一端
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { Stack } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
@@ -32,24 +38,7 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
-
-**示例：**
-
-```TypeScript
-let stack : Stack<int> = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
-
-let iter = stack.$_iterator();
-let temp = iter.next().value;
-while(temp != undefined) {
-  console.info("value:" + temp);
-  temp = iter.next().value;
-}
-```
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 ## [Symbol.iterator]
 
@@ -73,15 +62,15 @@ while(temp != undefined) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个迭代器，用于按栈的存储顺序依次遍历Stack中的所有元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于按栈的存储顺序依次遍历Stack中的所有元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -137,22 +126,14 @@ Stack的构造函数。调用后创建一个空的Stack实例对象，初始leng
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Stack's constructor cannot be directly invoked. |
+| 10200012 | The Stack's constructor cannot be directly invoked. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 // 创建Stack实例
 let stack = new Stack<number | string | Object>();
 console.info("length:", stack.length);  // length: 0
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack : Stack<int | string | Object> = new Stack<int | string | Object>();
 ```
 
 ## forEach
@@ -184,9 +165,9 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -226,28 +207,7 @@ forEach(callbackfn: StackForEachCb<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackfn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 |  |
-
-**示例：**
-
-```TypeScript
-import { StackForEachCb } from '@kit.ArkTS';
-
-let stack : Stack<int> = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
-let stackCb: StackForEachCb<int> = (value: int, index: int, stack: Stack<int>) :void => {
-  console.info("value:" + value, "index:" + index);
-};
-
-stack.forEach(stackCb);
-// value:2 index:0
-// value:4 index:1
-// value:5 index:2
-// value:4 index:3
-```
+| callbackfn | [StackForEachCb](arkts-arkts-stackforeachcb-t.md)&lt;T&gt; | 是 |  |
 
 ## isEmpty
 
@@ -277,11 +237,9 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -290,18 +248,6 @@ stack.push(4);
 stack.push(5);
 stack.push(4);
 // 判断栈是否为空
-let result = stack.isEmpty();
-console.info("result:", result);  // result: false
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
 let result = stack.isEmpty();
 console.info("result:", result);  // result: false
 ```
@@ -340,17 +286,15 @@ locate(element: T): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 对应元素下标值，查找失败则返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 对应元素下标值，查找失败则返回-1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The locate method cannot be bound. |
+| 10200011 | The locate method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -359,18 +303,6 @@ stack.push(4);
 stack.push(5);
 stack.push(2);
 // 查找元素5首次出现的下标
-let result = stack.locate(5);
-console.info("result:", result);  // result: 2
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
 let result = stack.locate(5);
 console.info("result:", result);  // result: 2
 ```
@@ -403,12 +335,10 @@ peek(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The peek method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| 10200011 | The peek method cannot be bound. |
+| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -417,18 +347,6 @@ stack.push(4);
 stack.push(5);
 stack.push(2);
 // 查看栈顶元素，但不删除
-let result = stack.peek();
-console.info("result:", result);  // result: 2
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
 let result = stack.peek();
 console.info("result:", result);  // result: 2
 ```
@@ -461,28 +379,13 @@ pop(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The pop method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| 10200011 | The pop method cannot be bound. |
+| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let stack = new Stack<number>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
-stack.push(4);
-// 删除栈顶元素并返回该元素
-let result = stack.pop();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack = new Stack<int>();
 stack.push(2);
 stack.push(4);
 stack.push(5);
@@ -527,11 +430,9 @@ push(item: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The push method cannot be bound. |
+| 10200011 | The push method cannot be bound. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class PersonInfo {
@@ -552,21 +453,6 @@ console.info("push:", stack.push(1));  //  push: 1
 let person1: PersonInfo = new PersonInfo("Dylan", "13");
 let result = stack.push(person1);
 console.info("result instanceof PersonInfo:", result instanceof PersonInfo);  // result instanceof PersonInfo: true
-console.info("length:", stack.length);  // length: 3
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class C1 {
-  name: string = ""
-  age: string = ""
-}
-let stack = new Stack<int | string | C1>();
-let result = stack.push("a");
-let result1 = stack.push(1);
-let c : C1  = {name : "Dylan", age : "13"};
-let result2 = stack.push(c);
 console.info("length:", stack.length);  // length: 3
 ```
 

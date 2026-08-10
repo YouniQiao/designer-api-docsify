@@ -1,6 +1,6 @@
 # DataObject
 
-表示一个分布式数据对象。在使用以下接口前，需调用[create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取DataObject对象。
+表示一个分布式数据对象。在使用以下接口前，需调用[create()](arkts-arkdata-distributeddataobject-create-f.md#create)获取DataObject对象。
 
 **起始版本：** 9
 
@@ -9,6 +9,12 @@
 <!--Device-distributedDataObject-interface DataObject--><!--Device-distributedDataObject-interface DataObject-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+## 导入模块
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
 
 ## bindAssetStore
 
@@ -33,19 +39,17 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assetKey | string | 是 | 待绑定的融合资产在分布式对象中的键值。 |
-| bindInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待绑定的融合资产在数据库中的信息，包含库名、表名、主键、列名及在数据库中的资产名。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 绑定数据库的回调。 |
+| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 是 | 待绑定的融合资产在数据库中的信息，包含库名、表名、主键、列名及在数据库中的资产名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 绑定数据库的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -93,61 +97,7 @@ class EntryAbility extends UIAbility {
     g_object.bindAssetStore('attachment', bindInfo, (err: BusinessError) => {
       if (err) {
         console.error(`Failed to bind asset store. Code: ${err.code}, message: ${err.message}`);
-      }
-      console.info('bindAssetStore success.');
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import commonType from '@ohos.data.commonType';
-import distributedDataObject from '@ohos.data.distributedDataObject';
-
-class Note {
-  title: string
-  text: string
-  attachment: commonType.Asset
-
-  constructor(title: string, text: string, attachment: commonType.Asset) {
-    this.title = title;
-    this.text = text;
-    this.attachment = attachment;
-  }
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let attachment: commonType.Asset = {
-      name: 'test_img.jpg',
-      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
-      path: '/dir/test_img.jpg',
-      createTime: '2024-01-02 10:00:00',
-      modifyTime: '2024-01-02 10:00:00',
-      size: '5',
-      status: commonType.AssetStatus.ASSET_NORMAL
-    }
-    let note: Note = new Note('test', 'test', attachment);
-    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
-    g_object.setSessionId('123456');
-
-    const bindInfo: distributedDataObject.BindInfo = {
-      storeName: 'notepad',
-      tableName: 'note_t',
-      primaryKey: {
-        'uuid': '00000000-0000-0000-0000-000000000000'
-      },
-      field: 'attachment',
-      assetName: attachment.name as string
-    }
-
-    g_object.bindAssetStore('attachment', bindInfo, (err: BusinessError<void> | null): void => {
-      if (err) {
-        console.error('bindAssetStore failed.');
+        return;
       }
       console.info('bindAssetStore success.');
     });
@@ -178,7 +128,7 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assetKey | string | 是 | 待绑定的融合资产在分布式对象中的键值。 |
-| bindInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待绑定的融合资产在数据库中的信息，包含库名、表名、主键、列名及在数据库中的资产名。 |
+| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 是 | 待绑定的融合资产在数据库中的信息，包含库名、表名、主键、列名及在数据库中的资产名。 |
 
 **返回值：**
 
@@ -190,12 +140,10 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -249,60 +197,6 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import commonType from '@ohos.data.commonType';
-import distributedDataObject from '@ohos.data.distributedDataObject';
-
-class Note {
-  title: string
-  text: string
-  attachment: commonType.Asset
-
-  constructor(title: string, text: string, attachment: commonType.Asset) {
-    this.title = title;
-    this.text = text;
-    this.attachment = attachment;
-  }
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let attachment: commonType.Asset = {
-      name: 'test_img.jpg',
-      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
-      path: '/dir/test_img.jpg',
-      createTime: '2024-01-02 10:00:00',
-      modifyTime: '2024-01-02 10:00:00',
-      size: '5',
-      status: commonType.AssetStatus.ASSET_NORMAL
-    }
-    let note: Note = new Note('test', 'test', attachment);
-    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
-    g_object.setSessionId('123456');
-
-    const bindInfo: distributedDataObject.BindInfo = {
-      storeName: 'notepad',
-      tableName: 'note_t',
-      primaryKey: {
-        'uuid': '00000000-0000-0000-0000-000000000000'
-      },
-      field: 'attachment',
-      assetName: attachment.name as string
-    }
-
-    g_object.bindAssetStore('attachment', bindInfo).then(() => {
-      console.info('bindAssetStore success.');
-    }).catch((err) => {
-      console.error(`bindAssetStore failed, error code = ${err.code}`);
-    });
-  }
-}
-```
-
 ## off('change')
 
 ```TypeScript
@@ -324,15 +218,15 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 否 | 需要删除的数据变更回调，若不设置则删除该对象所有的数据变更回调。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_sessionId：标识变更对象的sessionId； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_fields：标识对象变更的属性名。 |
+| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 否 | 需要删除的数据变更回调，若不设置则删除该对象所有的数据变更回调。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;fields：标识对象变更的属性名。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 删除数据变更回调
@@ -372,15 +266,15 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_sessionId：标识变更对象的sessionId； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_networkId：标识对象设备； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;networkId：标识对象设备； &lt;br&gt;status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 删除上下线回调
@@ -412,9 +306,9 @@ off(type: 'change', callback?: DataObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要删除的数据变更回调实例，若不设置则删除该对象所有的数据变更回调实例。 |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 否 | 需要删除的数据变更回调实例，若不设置则删除该对象所有的数据变更回调实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
@@ -470,9 +364,9 @@ off(type: 'status', callback?: StatusObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示数据对象状态变更事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要删除状态变更的回调实例，若不设置则删除该对象所有的状态变更回调实例。 |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 否 | 需要删除状态变更的回调实例，若不设置则删除该对象所有的状态变更回调实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
@@ -517,9 +411,9 @@ off(type: 'progressChanged', callback?: ProgressObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'progressChanged' | 是 | 事件类型，固定为'progressChanged'，表示资产传输进度变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要取消监听的回调实例，若不设置，则取消对该事件的所有监听。 |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 否 | 需要取消监听的回调实例，若不设置，则取消对该事件的所有监听。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const progressChangedCallback1: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
@@ -565,42 +459,7 @@ offChange(callback?: DataObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要删除的数据变更回调实例，若不设置则删除该对象所有的数据变更回调实例。 |
-
-**示例：**
-
-```TypeScript
-const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info('change callback1 ' + sessionId);
-  if (fields != null && fields != undefined) {
-    for (let index: int = 0; index < fields.length; index++) {
-      console.info('change !' + fields[index]);
-    }
-  }
-}
-
-const changeCallback2: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info('change callback2 ' + sessionId);
-  if (fields != null && fields != undefined) {
-    for (let index: int = 0; index < fields.length; index++) {
-      console.info('change !' + fields[index]);
-    }
-  }
-}
-
-try {
-  // 删除单个数据变更回调函数
-  g_object!.onChange(changeCallback1);
-  g_object!.offChange(changeCallback1);
-
-  // 删除所有数据变更回调函数
-  g_object!.onChange(changeCallback1);
-  g_object!.onChange(changeCallback2);
-  g_object!.offChange();
-} catch (error) {
-  console.error(`Execute failed, error code =  ${error.code}`);
-}
-```
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 否 | 需要删除的数据变更回调实例，若不设置则删除该对象所有的数据变更回调实例。 |
 
 ## offProgressChanged
 
@@ -622,33 +481,7 @@ offProgressChanged(callback?: ProgressObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要取消监听的事件回调，若不设置，则取消对该事件的所有监听。 |
-
-**示例：**
-
-```TypeScript
-const progressChangedCallback1: distributedDataObject.ProgressObserver = (sessionId: string, progress: int) => {
-  console.info('progressChanged callback1' + sessionId);
-  console.info('progressChanged callback1' + progress);
-}
-
-const progressChangedCallback2: distributedDataObject.ProgressObserver = (sessionId: string, progress: int) => {
-  console.info('progressChanged callback2' + sessionId);
-  console.info('progressChanged callback2' + progress);
-}
-try {
-  g_object!.onProgressChanged(progressChangedCallback1);
-  // 取消对资产传输进度的监听
-  g_object!.offProgressChanged(progressChangedCallback1);
-
-  g_object!.onProgressChanged(progressChangedCallback1);
-  g_object!.onProgressChanged(progressChangedCallback2);
-  // 取消对资产传输进度的所有监听
-  g_object!.offProgressChanged();
-} catch (error) {
-  console.error(`Execute failed, error code =  ${error.code}`);
-}
-```
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 否 | 需要取消监听的事件回调，若不设置，则取消对该事件的所有监听。 |
 
 ## offStatus
 
@@ -670,33 +503,7 @@ offStatus(callback?: StatusObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要删除状态变更的回调实例，若不设置则删除该对象所有的状态变更回调实例。 |
-
-**示例：**
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver =
-  (sessionId: string, networkId: string, status: string) => {
-    console.info('status callback1' + sessionId);
-  }
-
-const statusCallback2: distributedDataObject.StatusObserver =
-  (sessionId: string, networkId: string, status: string) => {
-    console.info('status callback2' + sessionId);
-  }
-try {
-  // 删除单个状态变更回调函数
-  g_object!.onStatus(statusCallback1);
-  g_object!.offStatus(statusCallback1);
-
-  // 删除所有状态变更回调函数
-  g_object!.onStatus(statusCallback1);
-  g_object!.onStatus(statusCallback2);
-  g_object!.offStatus();
-} catch (error) {
-  console.error(`Execute failed, error code =  ${error.code}`);
-}
-```
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 否 | 需要删除状态变更的回调实例，若不设置则删除该对象所有的状态变更回调实例。 |
 
 ## on('change')
 
@@ -719,15 +526,15 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 是 | 变更回调对象实例。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_sessionId：标识变更对象的sessionId； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_fields：标识对象变更的属性名。 |
+| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 是 | 变更回调对象实例。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;fields：标识对象变更的属性名。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 g_object.on('change', (sessionId: string, fields: Array<string>) => {
@@ -764,15 +571,15 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_sessionId：标识变更对象的sessionId； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_networkId：标识对象设备； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;networkId：标识对象设备； &lt;br&gt;status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
@@ -801,9 +608,9 @@ on(type: 'change', callback: DataObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示分布式对象数据变更的回调实例。 |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 是 | 表示分布式对象数据变更的回调实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
@@ -842,9 +649,9 @@ on(type: 'status', callback: StatusObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示分布式对象状态变更事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示分布式对象状态变更的回调实例。 |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 是 | 表示分布式对象状态变更的回调实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
@@ -878,9 +685,9 @@ on(type: 'progressChanged', callback: ProgressObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'progressChanged' | 是 | 事件类型，固定为'progressChanged'，表示资产传输进度变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示资产传输进度变化的回调实例。 |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 是 | 表示资产传输进度变化的回调实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const progressChangedCallback: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
@@ -914,25 +721,7 @@ onChange(callback: DataObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示分布式对象数据变更的回调实例。 |
-
-**示例：**
-
-```TypeScript
-const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info('change callback callback1 ' + sessionId);
-  if (fields != null && fields != undefined) {
-    for (let index: int = 0; index < fields.length; index++) {
-      console.info('change !' + fields[index]);
-    }
-  }
-}
-try {
-  g_object!.onChange(changeCallback1);
-} catch (error) {
-  console.error(`Execute failed, error code =  ${error.code}`);
-}
-```
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 是 | 表示分布式对象数据变更的回调实例。 |
 
 ## onProgressChanged
 
@@ -954,21 +743,7 @@ onProgressChanged(callback: ProgressObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-
-**示例：**
-
-```TypeScript
-const progressChangedCallback: distributedDataObject.ProgressObserver = (sessionId: string, progress: int) => {
-  console.info('progressChanged callback' + sessionId);
-  console.info('progressChanged callback' + progress);
-}
-try {
-  g_object!.onProgressChanged(progressChangedCallback);
-} catch (error) {
-  console.error(`Execute failed, error code =  ${error.code}`);
-}
-```
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 是 |  |
 
 ## onStatus
 
@@ -992,21 +767,7 @@ onStatus(callback: StatusObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示分布式对象状态变更的回调实例。 |
-
-**示例：**
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver =
-  (sessionId: string, networkId: string, status: string) => {
-    console.info('status callback ' + sessionId);
-  }
-try {
-  g_object!.onStatus(statusCallback1);
-} catch (error) {
-  console.error(`Execute failed, error code =  ${error.code}`);
-}
-```
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 是 | 表示分布式对象状态变更的回调实例。 |
 
 ## revokeSave
 
@@ -1032,18 +793,16 @@ revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RevokeSaveSuccessResponse&gt; | 是 | 回调函数。返回RevokeSaveSuccessResponse，包含sessionId。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RevokeSaveSuccessResponse&gt; | 是 | 回调函数。返回RevokeSaveSuccessResponse，包含sessionId。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Incorrect parameter types. |
+| 801 | Capability not supported. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 g_object.setSessionId('123456');
@@ -1066,32 +825,6 @@ g_object.revokeSave((err: BusinessError, result: distributedDataObject.RevokeSav
     }
     console.info('revokeSave callback');
     console.info('revokeSave sessionId ' + result.sessionId);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-g_object!.setSessionId('123456');
-// 持久化数据
-g_object!.save('local', (err: Error | null, result: distributedDataObject.SaveSuccessResponse): void => {
-  if (err) {
-    console.error(`save failed, error code = ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('save callback');
-  console.info('save sessionId: ' + result.sessionId);
-  console.info('save version: ' + result.version);
-  console.info('save deviceId:  ' + result.deviceId);
-});
-// 删除持久化保存的数据
-g_object!.revokeSave((err: Error, result: distributedDataObject.RevokeSaveSuccessResponse): void => {
-  if (err) {
-    console.error(`revokeSave failed, error code = ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('revokeSave callback');
-  console.info('revokeSave sessionId ' + result.sessionId);
 });
 ```
 
@@ -1125,11 +858,9 @@ revokeSave(): Promise<RevokeSaveSuccessResponse>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 g_object.setSessionId('123456');
@@ -1148,29 +879,6 @@ g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessRespo
     console.info('sessionId' + result.sessionId);
 }).catch((err: BusinessError) => {
     console.error(`Failed to revoke save. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-g_object!.setSessionId('123456');
-// 持久化数据
-g_object!.save('local').then((result: distributedDataObject.SaveSuccessResponse) => {
-  console.info('save callback');
-  console.info('save sessionId ' + result.sessionId);
-  console.info('save version ' + result.version);
-  console.info('save deviceId ' + result.deviceId);
-}).catch((err) => {
-  console.error(`save failed, error code = ${err.code}, message: ${err.message}`);
-});
-// 删除持久化保存的数据
-g_object!.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessResponse) => {
-  console.info('revokeSave callback');
-  console.info('sessionId') + result.sessionId);
-}).catch((err) => {
-  console.error(`revokeSave failed, error code = ${err.code}`);
-  console.error('revokeSave failed, error message = ' + err.message);
 });
 ```
 
@@ -1203,40 +911,22 @@ save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 存储数据的设备号，标识需要保存对象的设备。"local"表示本地设备，否则表示其他设备的设备号。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SaveSuccessResponse&gt; | 是 | 回调函数。返回SaveSuccessResponse，包含sessionId、version、deviceId等 信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SaveSuccessResponse&gt; | 是 | 回调函数。返回SaveSuccessResponse，包含sessionId、version、deviceId等 信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 g_object.setSessionId('123456');
 g_object.save('local', (err: BusinessError, result:distributedDataObject.SaveSuccessResponse) => {
     if (err) {
         console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
-        return;
-    }
-    console.info('save callback');
-    console.info('save sessionId: ' + result.sessionId);
-    console.info('save version: ' + result.version);
-    console.info('save deviceId:  ' + result.deviceId);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-g_object!.setSessionId('123456');
-g_object!.save('local', (err: Error | null, result: distributedDataObject.SaveSuccessResponse): void => {
-    if (err) {
-        console.error(`save failed, error code = ${err.code}, message: ${err.message}`);
         return;
     }
     console.info('save callback');
@@ -1286,12 +976,10 @@ save(deviceId: string): Promise<SaveSuccessResponse>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 g_object.setSessionId('123456');
@@ -1305,27 +993,13 @@ g_object.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResp
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-g_object!.setSessionId('123456');
-g_object!.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResponse) => {
-    console.info('save callback');
-    console.info('save sessionId ' + callbackInfo.sessionId);
-    console.info('save version ' + callbackInfo.version);
-    console.info('save deviceId ' + callbackInfo.deviceId);
-}).catch((err) => {
-    console.error(`save failed, error code = ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setAsset
 
 ```TypeScript
 setAsset(assetKey: string, uri: string): Promise<void>
 ```
 
-设置分布式对象中的单个资产的属性信息，该接口必须在[setSessionId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口调用前使用。使用Promise异步回调。
+设置分布式对象中的单个资产的属性信息，该接口必须在[setSessionId](arkts-arkdata-distributeddataobject-dataobject-i.md#setsessionid)接口调用前使用。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -1339,7 +1013,7 @@ setAsset(assetKey: string, uri: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetKey | string | 是 | 分布式对象中资产类型数据对应的属性名。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**使用约束：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_（1）提供的assetKey对应的文件必须已存在且类型为资产 [Asset]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，才可进行正确的设置资产。若assetKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_（2）在协同或接续场景下需要双端满足assetKey对应的文件存在且为资产类型，才可将设置的资产同步到对端设备。 |
+| assetKey | string | 是 | 分布式对象中资产类型数据对应的属性名。&lt;br/&gt;**使用约束：** &lt;br/&gt;（1）提供的assetKey对应的文件必须已存在且类型为资产 [Asset](arkts-arkdata-commontype-asset-i.md)，才可进行正确的设置资产。若assetKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。 &lt;br/&gt;（2）在协同或接续场景下需要双端满足assetKey对应的文件存在且为资产类型，才可将设置的资产同步到对端设备。 |
 | uri | string | 是 | 待设置的新资产的uri，表示该资产的存放的分布式路径。必须为真实存在的资产对应的分布式路径。 |
 
 **返回值：**
@@ -1352,12 +1026,10 @@ setAsset(assetKey: string, uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15400002](../errorcode-distributed-dataObject.md#15400002-参数错误) | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
-| [15400003](../errorcode-distributed-dataObject.md#15400003-已设置分布式对象的sessionid) | The sessionId of the distributed object has been set. |
+| 15400002 | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
+| 15400003 | The sessionId of the distributed object has been set. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1401,57 +1073,13 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kitabilityKit';
-import { window } from '@kit.ArkUI';
-import commonType from '@ohos.data.commonType';
-import distributedDataObject from '@ohos.data.distributedDataObject';
-
-class Note {
-  title: string
-  text: string
-  attachment: commonType.Asset
-
-  constructor(title: string, text: string, attachment: commonType.Asset) {
-    this.title = title;
-    this.text = text;
-    this.attachment = attachment;
-  }
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let attachment: commonType.Asset = {
-      name: 'test_img.jpg',
-      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
-      path: '/dir/test_img.jpg',
-      createTime: '2024-01-02 10:00:00',
-      modifyTime: '2024-01-02 10:00:00',
-      size: '5',
-      status: commonType.AssetStatus.ASSET_NORMAL
-    }
-    let note: Note = new Note('test', 'test', attachment);
-    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
-
-    let uri = 'file://test/test.img';
-    g_object.setAsset('attachment', uri).then(() => {
-      console.info('setAsset success.');
-    }).catch((err) => {
-      console.error(`setAsset failed, error code = ${err.code}`);
-    });
-  }
-}
-```
-
 ## setAssets
 
 ```TypeScript
 setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 ```
 
-设置分布式对象中的多个资产的属性信息，该接口必须在[setSessionId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口调用前使用。使用Promise异步回调。
+设置分布式对象中的多个资产的属性信息，该接口必须在[setSessionId](arkts-arkdata-distributeddataobject-dataobject-i.md#setsessionid)接口调用前使用。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -1465,7 +1093,7 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsKey | string | 是 | 分布式对象中资产数组类型数据对应的属性名。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**使用约束：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_（1）提供的assetsKey对应的文件已存在且类型必须为资产 [Asset]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，才可进行正确的设置资产。若assetsKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错 误。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_（2）在协同或接续场景下需要双端满足assetsKey对应的文件存在且为资产类型，才可将设置的资产数组同步到对端设备。 |
+| assetsKey | string | 是 | 分布式对象中资产数组类型数据对应的属性名。&lt;br/&gt;**使用约束：** &lt;br/&gt;（1）提供的assetsKey对应的文件已存在且类型必须为资产 [Asset](arkts-arkdata-commontype-asset-i.md)，才可进行正确的设置资产。若assetsKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错 误。&lt;br/&gt;（2）在协同或接续场景下需要双端满足assetsKey对应的文件存在且为资产类型，才可将设置的资产数组同步到对端设备。 |
 | uris | Array&lt;string&gt; | 是 | 待设置的新资产数组的uri集合，表示资产数组内每个资产存放的分布式路径。数组中元素的数量为[1, 50]，元素uri必须为真实存在的资产对应的分布式路径。 |
 
 **返回值：**
@@ -1478,12 +1106,10 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15400002](../errorcode-distributed-dataObject.md#15400002-参数错误) | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
-| [15400003](../errorcode-distributed-dataObject.md#15400003-已设置分布式对象的sessionid) | The sessionId of the distributed object has been set. |
+| 15400002 | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
+| 15400003 | The sessionId of the distributed object has been set. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1527,50 +1153,6 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import commonType from '@ohos.data.commonType';
-import distributedDataObject from '@ohos.data.distributedDataObject';
-
-class Note {
-  title: string
-  text: string
-  attachment: commonType.Asset
-
-  constructor(title: string, text: string, attachment: commonType.Asset) {
-    this.title = title;
-    this.text = text;
-    this.attachment = attachment;
-  }
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let attachment: commonType.Asset = {
-      name: 'test_img.jpg',
-      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
-      path: '/dir/test_img.jpg',
-      createTime: '2024-01-02 10:00:00',
-      modifyTime: '2024-01-02 10:00:00',
-      size: '5',
-      status: commonType.AssetStatus.ASSET_NORMAL
-    }
-    let note: Note = new Note('test', 'test', attachment);
-    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
-
-    let uris: Array<string> = ['file://test/test_1.txt', 'file://test/test_2.txt'];
-    g_object.setAssets('attachment', uris).then(() => {
-      console.info('setAssets success.');
-    }).catch((err) => {
-      console.error(`setAssets failed, error code = ${err.code}`);
-    });
-  }
-}
-```
-
 ## setSessionId
 
 ```TypeScript
@@ -1593,18 +1175,18 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | string | 是 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母数字或下划线\_\_\_ESCAPED\_UNDERSCORE\_\_\_。当传入""、null时表示退出分布式组网。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 加入session的异步回调。 |
+| sessionId | string | 是 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母数字或下划线_。当传入""、null时表示退出分布式组网。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 加入session的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and cannot exceed 128 in length. |
-| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
+| 201 | Permission verification failed. |
+| 15400001 | Failed to create the in-memory database. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // g_object加入分布式组网
@@ -1640,16 +1222,17 @@ setSessionId(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 退出所有已加入session的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 退出所有已加入session的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Incorrect parameter types. |
-| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
+| 401 | Parameter error. Incorrect parameter types. |
+| 201 | Permission verification failed.<br>**适用版本：** 9 - 19 |
+| 15400001 | Failed to create the in-memory database. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // g_object加入分布式组网
@@ -1684,7 +1267,7 @@ setSessionId(sessionId?: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | string | 否 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母数字或下划线\_\_\_ESCAPED\_UNDERSCORE\_\_\_。当传入""、null或不传入参数时表示退出分布式组网。 |
+| sessionId | string | 否 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母数字或下划线_。当传入""、null或不传入参数时表示退出分布式组网。 |
 
 **返回值：**
 
@@ -1696,13 +1279,11 @@ setSessionId(sessionId?: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and cannot exceed 128 in length. |
-| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
+| 201 | Permission verification failed. |
+| 15400001 | Failed to create the in-memory database. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 // g_object加入分布式组网
@@ -1716,23 +1297,6 @@ g_object.setSessionId().then(() => {
     console.info('leave all session.');
 }).catch((error: BusinessError) => {
     console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// g_object加入分布式组网
-g_object!.setSessionId(distributedDataObject.genSessionId()).then(() => {
-  console.info('join session.');
-}).catch((error) => {
-  console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
-});
-// 退出分布式组网
-g_object!.setSessionId().then(() => {
-  console.info('leave all session.');
-}).catch((error) => {
-  console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 

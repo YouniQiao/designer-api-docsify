@@ -1,12 +1,18 @@
 # sendPrivateCommand (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
+```
+
 ## sendPrivateCommand
 
 ```TypeScript
 function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-Send private command.
+发送私有命令。
 
 **Since:** 26.0.0
 
@@ -24,18 +30,18 @@ Send private command.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commandData | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, CommandDataType&gt; | Yes | command data which will be sent. Max size 32KB. |
+| commandData | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, CommandDataType&gt; | Yes | 将要发送的命令数据。最大大小32KB。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | 返回的Promise。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800026](../errorcode-inputmethod-framework.md#12800026-input-method-system-panel-error) | input method system panel error. Possible causes: 1. the system panel not connected. 2. ipc failed due to the large amount of data transferred or other reasons. 3. the caller is not system panel. |
+| 12800026 | input method system panel error. Possible causes: 1. the system panel not connected. 2. ipc failed due to the large amount of data transferred or other reasons. 3. the caller is not system panel. |
+| 202 | not system application. |
 

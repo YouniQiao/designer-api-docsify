@@ -1,5 +1,11 @@
 # enableBluetooth
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## enableBluetooth
 
 ```TypeScript
@@ -28,7 +34,7 @@ Enables Bluetooth on a device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let enable : boolean = bluetooth.enableBluetooth();

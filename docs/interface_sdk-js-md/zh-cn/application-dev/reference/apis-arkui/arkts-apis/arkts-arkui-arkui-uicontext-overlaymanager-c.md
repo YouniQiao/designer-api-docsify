@@ -1,17 +1,17 @@
 # OverlayManager
 
 提供绘制浮层的能力。  
-    **说明：**  
-    
-    - 本Class首批接口从API version 12开始支持。  
-    - 以下API需先使用UIContext中的[getOverlayManager()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法获取到  
-    OverlayManager对象，再通过该对象调用对应方法。  
-    
-    - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。  
-    
-    - OverlayManager上节点安全区域内外的绘制方式与Page一致，键盘避让方式与Page一致。  
-    
-    - 与OverlayManager相关的属性推荐采用AppStorage来进行应用全局存储，以免切换页面后属性值发生变化从而导致业务错误。
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> - 以下API需先使用UIContext中的[getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager)方法获取到
+> OverlayManager对象，再通过该对象调用对应方法。
+> 
+> - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。
+> 
+> - OverlayManager上节点安全区域内外的绘制方式与Page一致，键盘避让方式与Page一致。
+> 
+> - 与OverlayManager相关的属性推荐采用AppStorage来进行应用全局存储，以免切换页面后属性值发生变化从而导致业务错误。
 
 **起始版本：** 23
 
@@ -20,6 +20,12 @@
 <!--Device-unnamed-export declare class OverlayManager--><!--Device-unnamed-export declare class OverlayManager-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
 
 ## addComponentContent
 
@@ -43,7 +49,7 @@ addComponentContent<T>(content: ComponentContent<T>, index?: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 新增的节点默认处于页面居中，按层级堆叠。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 &lt;br&gt;**说明：** &lt;br/&gt; 新增的节点默认处于页面居中，按层级堆叠。 |
 | index | int | 否 |  |
 
 ## addComponentContentWithOrder
@@ -68,8 +74,8 @@ addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: Level
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 新增的节点默认处于页面居中位置，按层级堆叠。 |
-| levelOrder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 &lt;br&gt;**说明：** &lt;br/&gt; 新增的节点默认处于页面居中位置，按层级堆叠。 |
+| levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 否 |  |
 
 ## hideAllComponentContents
 
@@ -111,7 +117,7 @@ hideComponentContent<T>(content: ComponentContent<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 在OverlayManager上隐藏此content。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager上隐藏此content。 |
 
 ## openOrderOverlay
 
@@ -135,8 +141,8 @@ openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Object&gt; | 是 | 该内容将被添加到OverlayManager中。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Options for the overlay. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;Object&gt; | 是 | 该内容将被添加到OverlayManager中。 |
+| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 | Options for the overlay. |
 
 **返回值：**
 
@@ -148,7 +154,7 @@ openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOption
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [103307](../errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) | The overlay cannot be opened due to the system pop-up window. |
+| 103307 | The overlay cannot be opened due to the system pop-up window. |
 
 ## removeComponentContent
 
@@ -172,7 +178,7 @@ removeComponentContent<T>(content: ComponentContent<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 在OverlayManager上删除此content。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager上删除此content。 |
 
 ## showAllComponentContents
 
@@ -214,5 +220,5 @@ showComponentContent<T>(content: ComponentContent<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 在OverlayManager上显示此content。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager上显示此content。 |
 

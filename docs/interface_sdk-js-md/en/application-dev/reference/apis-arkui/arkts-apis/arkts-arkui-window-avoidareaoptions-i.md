@@ -1,6 +1,6 @@
 # AvoidAreaOptions
 
-Describes the new area where the window cannot be displayed. The new area is returned when the corresponding event is triggered.
+系统避让区变化后返回当前避让区域以及避让区域类型。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the new area where the window cannot be displayed. The new area is ret
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## area
 
 ```TypeScript
 area: AvoidArea
 ```
 
-New area returned.
+系统避让区变化后返回的避让区域。
 
-**Type:** AvoidArea
+**Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ New area returned.
 type: AvoidAreaType
 ```
 
-Type of the new area returned.
+系统避让区变化后返回的避让区域类型。
 
-**Type:** AvoidAreaType
+**Type:** [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)
 
 **Since:** 12
 

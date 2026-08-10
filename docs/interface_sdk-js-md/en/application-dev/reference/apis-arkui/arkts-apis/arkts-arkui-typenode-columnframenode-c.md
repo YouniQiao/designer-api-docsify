@@ -1,6 +1,6 @@
 # ColumnFrameNode
 
-Define the Column type of FrameNode.
+定义Column 类型的FrameNode。
 
 **Inheritance/Implementation:** ColumnFrameNode extends [TypedFrameNode<ColumnAttribute>](TypedFrameNode<ColumnAttribute>)
 
@@ -18,7 +18,7 @@ Define the Column type of FrameNode.
 abstract initialize(options?: ColumnOptions | ColumnOptionsV2): ColumnAttribute
 ```
 
-Initialize Column FrameNode.
+初始化Column类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Column FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| ColumnOptionsV2 | No | Column options. |
+| options | [ColumnOptions](../arkts-components/arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | No | Column节点的选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) |  |
 

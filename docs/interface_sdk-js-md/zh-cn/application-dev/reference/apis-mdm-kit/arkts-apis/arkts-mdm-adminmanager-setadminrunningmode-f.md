@@ -1,5 +1,11 @@
 # setAdminRunningMode
 
+## 导入模块
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## setAdminRunningMode
 
 ```TypeScript
@@ -24,18 +30,18 @@ function setAdminRunningMode(admin: Want, mode: RunningMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 运行模式。取值为DEFAULT表示默认用户运行模式，即应用在首次开机后的用户下运行。取值为MULTI\_\_\_ESCAPED\_UNDERSCORE\_\_\_USER表示多用户运行模式，即应用能够在多个用户下同时运行。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| mode | [RunningMode](arkts-mdm-adminmanager-runningmode-e.md) | 是 | 运行模式。取值为DEFAULT表示默认用户运行模式，即应用在首次开机后的用户下运行。取值为MULTI_USER表示多用户运行模式，即应用能够在多个用户下同时运行。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 9200001 | The application is not an administrator application of the device. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

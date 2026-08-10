@@ -10,6 +10,12 @@ Monitors telephony state updates of a device, including updates of the network s
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## Summary
 
 ### Functions

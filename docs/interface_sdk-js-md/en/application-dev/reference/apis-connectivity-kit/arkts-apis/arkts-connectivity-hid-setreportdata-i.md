@@ -1,6 +1,6 @@
 # SetReportData
 
-Describe the SET\_REPORT data is received from remote host.
+Describe the SET_REPORT data is received from remote host.
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Describe the SET\_REPORT data is received from remote host.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## data
 
 ```TypeScript
 data: Uint8Array
 ```
 
-data of SET\_REPORT data.
+data of SET_REPORT data.
 
 **Type:** Uint8Array
 
@@ -36,9 +42,9 @@ data of SET\_REPORT data.
 id: int
 ```
 
-id of SET\_REPORT data.
+id of SET_REPORT data.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ id of SET\_REPORT data.
 type: ReportType
 ```
 
-reportType of SET\_REPORT data.
+reportType of SET_REPORT data.
 
-**Type:** ReportType
+**Type:** [ReportType](arkts-connectivity-hid-reporttype-e.md)
 
 **Since:** 23
 

@@ -1,12 +1,18 @@
 # uninstallLocalPlugin
 
+## Modules to Import
+
+```TypeScript
+import { pluginBundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## uninstallLocalPlugin
 
 ```TypeScript
 function uninstallLocalPlugin(pluginBundleName: string): Promise<void>
 ```
 
-Uninstall the plugin for self application.
+卸载当前应用已通过自分发方式安装的指定插件。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -24,18 +30,18 @@ Uninstall the plugin for self application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pluginBundleName | string | Yes | Indicates the bundle name of plugin application. |
+| pluginBundleName | string | Yes | 插件的Bundle名称，表示要卸载的插件的应用包名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.kernel.SUPPORT\_\_\_ESCAPED\_UNDERSCORE\_\_\_LOCAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLUGIN'. |
-| [17700092](../errorcode-bundle.md#17700092-plugin-uninstall-failure-because-of-nonexistent-plugin-bundle-name) | Failed to uninstall the plugin because the specified plugin is not found. |
+| 17700092 | Failed to uninstall the plugin because the specified plugin is not found. |
+| 201 | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
 

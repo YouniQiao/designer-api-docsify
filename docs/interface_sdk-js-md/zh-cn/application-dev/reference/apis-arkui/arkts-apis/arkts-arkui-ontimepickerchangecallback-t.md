@@ -20,5 +20,5 @@ export type OnTimePickerChangeCallback = (result: TimePickerResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| result | [TimePickerResult](arkts-arkui-timepicker-timepickerresult-i.md) | 是 |  |
 

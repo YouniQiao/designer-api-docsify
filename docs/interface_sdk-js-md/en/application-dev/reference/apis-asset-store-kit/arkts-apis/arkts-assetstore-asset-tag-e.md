@@ -1,6 +1,11 @@
 # Tag
 
-Enumerate the keys of asset attributes ([AssetMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_), which are in key-value (KV) pairs.
+枚举，关键资产支持的属性名称类型，用作[AssetMap](arkts-assetstore-asset-assetmap-t.md)的键。
+
+> **说明：**
+> 
+> 以下为Tag类型的全量枚举值，每个接口可传的Tag枚举及对应的Value取值范围不同，详见
+> [各个场景的开发指导](../../../security/AssetStoreKit/asset-store-kit-overview.md)。
 
 **Since:** 11
 
@@ -16,7 +21,7 @@ Enumerate the keys of asset attributes ([AssetMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_
 SECRET = TagType.BYTES | 0x01
 ```
 
-Asset plaintext.
+关键资产明文。
 
 **Since:** 11
 
@@ -34,7 +39,7 @@ Asset plaintext.
 ALIAS = TagType.BYTES | 0x02
 ```
 
-Asset alias, which uniquely identifies an asset.
+关键资产别名，每条关键资产的唯一索引。
 
 **Since:** 11
 
@@ -52,7 +57,7 @@ Asset alias, which uniquely identifies an asset.
 ACCESSIBILITY = TagType.NUMBER | 0x03
 ```
 
-Access control based on the lock screen status.
+基于锁屏状态的访问控制。
 
 **Since:** 11
 
@@ -70,7 +75,7 @@ Access control based on the lock screen status.
 REQUIRE_PASSWORD_SET = TagType.BOOL | 0x04
 ```
 
-Whether the asset is accessible only when a lock screen password is set.
+是否仅在设置了锁屏密码的情况下，可访问关键资产。
 
 **Since:** 11
 
@@ -88,7 +93,7 @@ Whether the asset is accessible only when a lock screen password is set.
 AUTH_TYPE = TagType.NUMBER | 0x05
 ```
 
-Type of user authentication required for accessing the asset.
+访问关键资产所需的用户认证类型。
 
 **Since:** 11
 
@@ -106,7 +111,7 @@ Type of user authentication required for accessing the asset.
 AUTH_VALIDITY_PERIOD = TagType.NUMBER | 0x06
 ```
 
-Validity period of the user authentication.
+用户认证的有效期。
 
 **Since:** 11
 
@@ -124,7 +129,7 @@ Validity period of the user authentication.
 AUTH_CHALLENGE = TagType.BYTES | 0x07
 ```
 
-Challenge for the user authentication.
+用户认证的挑战值。
 
 **Since:** 11
 
@@ -142,7 +147,7 @@ Challenge for the user authentication.
 AUTH_TOKEN = TagType.BYTES | 0x08
 ```
 
-Authorization token obtained after the user authentication is successful.
+用户认证通过的授权令牌。
 
 **Since:** 11
 
@@ -160,7 +165,7 @@ Authorization token obtained after the user authentication is successful.
 SYNC_TYPE = TagType.NUMBER | 0x10
 ```
 
-Asset sync type.
+关键资产支持的同步类型。
 
 **Since:** 11
 
@@ -178,7 +183,7 @@ Asset sync type.
 IS_PERSISTENT = TagType.BOOL | 0x11
 ```
 
-Whether to retain the asset when the application is uninstalled.
+在应用卸载时是否保留关键资产。
 
 **Since:** 11
 
@@ -194,7 +199,7 @@ Whether to retain the asset when the application is uninstalled.
 DATA_LABEL_CRITICAL_1 = TagType.BYTES | 0x20
 ```
 
-Additional asset data customized by the service with integrity protection.
+关键资产附属信息，内容由业务自定义且**有完整性保护**。
 
 **Since:** 11
 
@@ -212,7 +217,7 @@ Additional asset data customized by the service with integrity protection.
 DATA_LABEL_CRITICAL_2 = TagType.BYTES | 0x21
 ```
 
-Additional asset data customized by the service with integrity protection.
+关键资产附属信息，内容由业务自定义且**有完整性保护**。
 
 **Since:** 11
 
@@ -230,7 +235,7 @@ Additional asset data customized by the service with integrity protection.
 DATA_LABEL_CRITICAL_3 = TagType.BYTES | 0x22
 ```
 
-Additional asset data customized by the service with integrity protection.
+关键资产附属信息，内容由业务自定义且**有完整性保护**。
 
 **Since:** 11
 
@@ -248,7 +253,7 @@ Additional asset data customized by the service with integrity protection.
 DATA_LABEL_CRITICAL_4 = TagType.BYTES | 0x23
 ```
 
-Additional asset data customized by the service with integrity protection.
+关键资产附属信息，内容由业务自定义且**有完整性保护**。
 
 **Since:** 11
 
@@ -266,7 +271,7 @@ Additional asset data customized by the service with integrity protection.
 DATA_LABEL_NORMAL_1 = TagType.BYTES | 0x30
 ```
 
-Additional asset data customized by the service without integrity protection.
+关键资产附属信息，内容由业务自定义且**无完整性保护**。
 
 **Since:** 11
 
@@ -284,7 +289,7 @@ Additional asset data customized by the service without integrity protection.
 DATA_LABEL_NORMAL_2 = TagType.BYTES | 0x31
 ```
 
-Additional asset data customized by the service without integrity protection.
+关键资产附属信息，内容由业务自定义且**无完整性保护**。
 
 **Since:** 11
 
@@ -302,7 +307,7 @@ Additional asset data customized by the service without integrity protection.
 DATA_LABEL_NORMAL_3 = TagType.BYTES | 0x32
 ```
 
-Additional asset data customized by the service without integrity protection.
+关键资产附属信息，内容由业务自定义且**无完整性保护**。
 
 **Since:** 11
 
@@ -320,7 +325,7 @@ Additional asset data customized by the service without integrity protection.
 DATA_LABEL_NORMAL_4 = TagType.BYTES | 0x33
 ```
 
-Additional asset data customized by the service without integrity protection.
+关键资产附属信息，内容由业务自定义且**无完整性保护**。
 
 **Since:** 11
 
@@ -338,7 +343,7 @@ Additional asset data customized by the service without integrity protection.
 DATA_LABEL_NORMAL_LOCAL_1 = TagType.BYTES | 0x34
 ```
 
-Local information about the asset. The value is assigned by the service without integrity protection and will not be synced.
+关键资产附属的本地信息，内容由业务自定义且**无完整性保护**，该项信息不会进行同步。
 
 **Since:** 12
 
@@ -356,7 +361,7 @@ Local information about the asset. The value is assigned by the service without 
 DATA_LABEL_NORMAL_LOCAL_2 = TagType.BYTES | 0x35
 ```
 
-Local information about the asset. The value is assigned by the service without integrity protection and will not be synced.
+关键资产附属的本地信息，内容由业务自定义且**无完整性保护**，该项信息不会进行同步。
 
 **Since:** 12
 
@@ -374,7 +379,7 @@ Local information about the asset. The value is assigned by the service without 
 DATA_LABEL_NORMAL_LOCAL_3 = TagType.BYTES | 0x36
 ```
 
-Local information about the asset. The value is assigned by the service without integrity protection and will not be synced.
+关键资产附属的本地信息，内容由业务自定义且**无完整性保护**，该项信息不会进行同步。
 
 **Since:** 12
 
@@ -392,7 +397,7 @@ Local information about the asset. The value is assigned by the service without 
 DATA_LABEL_NORMAL_LOCAL_4 = TagType.BYTES | 0x37
 ```
 
-Local information about the asset. The value is assigned by the service without integrity protection and will not be synced.
+关键资产附属的本地信息，内容由业务自定义且**无完整性保护**，该项信息不会进行同步。
 
 **Since:** 12
 
@@ -410,7 +415,7 @@ Local information about the asset. The value is assigned by the service without 
 RETURN_TYPE = TagType.NUMBER | 0x40
 ```
 
-Type of the asset query result to return.
+关键资产查询返回的结果类型。
 
 **Since:** 11
 
@@ -428,7 +433,7 @@ Type of the asset query result to return.
 RETURN_LIMIT = TagType.NUMBER | 0x41
 ```
 
-Maximum number of asset records to return.
+关键资产查询返回的结果的最大数量。
 
 **Since:** 11
 
@@ -446,9 +451,9 @@ Maximum number of asset records to return.
 RETURN_OFFSET = TagType.NUMBER | 0x42
 ```
 
-Offset of the asset query result.
+关键资产查询返回的结果偏移量。
 
-**Note**: This parameter specifies the starting asset record to return in batch asset query.
+**说明：** 用于分批查询场景，指定从第几个开始返回。
 
 **Since:** 11
 
@@ -466,9 +471,9 @@ Offset of the asset query result.
 RETURN_ORDERED_BY = TagType.NUMBER | 0x43
 ```
 
-Sorting order of the query results. Currently, the results can be sorted only by **ASSET\_TAG\_DATA\_LABEL**.
+关键资产查询返回的结果排序依据，仅支持按照附属信息排序。
 
-**Note**: By default, assets are returned in the order in which they are added.
+**说明：** 默认按照关键资产新增的顺序返回。
 
 **Since:** 11
 
@@ -486,7 +491,7 @@ Sorting order of the query results. Currently, the results can be sorted only by
 CONFLICT_RESOLUTION = TagType.NUMBER | 0x44
 ```
 
-Policy for resolving the conflict (for example, a duplicate alias).
+新增关键资产时的冲突（如：别名相同）处理策略。
 
 **Since:** 11
 
@@ -504,7 +509,7 @@ Policy for resolving the conflict (for example, a duplicate alias).
 UPDATE_TIME = TagType.BYTES | 0x45
 ```
 
-Data update time, in timestamp.
+数据的更新时间（时间戳形式）。
 
 **Since:** 12
 
@@ -522,7 +527,7 @@ Data update time, in timestamp.
 OPERATION_TYPE = TagType.NUMBER | 0x46
 ```
 
-Additional operation type.
+附加的操作类型。
 
 **Since:** 12
 
@@ -538,7 +543,7 @@ Additional operation type.
 REQUIRE_ATTR_ENCRYPTED = TagType.BOOL | 0x47
 ```
 
-Whether to encrypt the additional asset information customized by the service.
+是否加密业务自定义附属信息。
 
 **Since:** 14
 
@@ -556,7 +561,7 @@ Whether to encrypt the additional asset information customized by the service.
 GROUP_ID = TagType.BYTES | 0x48
 ```
 
-Group to which the asset belongs.
+关键资产所属群组。
 
 **Since:** 18
 
@@ -572,7 +577,7 @@ Group to which the asset belongs.
 WRAP_TYPE = TagType.NUMBER | 0x49
 ```
 
-Encrypted import/export type supported by the asset.
+关键资产支持的加密导入导出类型。
 
 **Since:** 18
 

@@ -1,5 +1,11 @@
 # getDeviceId
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getDeviceId
 
 ```TypeScript
@@ -20,7 +26,7 @@ Obtain the device id in the client socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates client socket. |
+| clientSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates client socket. |
 
 **Return value:**
 
@@ -32,9 +38,9 @@ Obtain the device id in the client socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

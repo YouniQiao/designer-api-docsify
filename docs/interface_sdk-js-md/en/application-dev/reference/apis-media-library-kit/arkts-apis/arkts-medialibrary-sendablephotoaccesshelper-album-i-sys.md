@@ -12,6 +12,12 @@ Provides APIs to manage albums.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## getFaceId
 
 ```TypeScript
@@ -36,17 +42,17 @@ Obtains the face identifier on the cover of a portrait album or group photo albu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return **tag\_\_\_ESCAPED\_UNDERSCORE\_\_\_id** of the portrait album, **group\_\_\_ESCAPED\_UNDERSCORE\_\_\_tag** of the group photo album, or an empty string if no face identifier is found. |
+| Promise&lt;string&gt; | Promise used to return **tag_id** of the portrait album, **group_tag** of the group photo album, or an empty string if no face identifier is found. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| 201 | Permission denied |
+| 202 | Called by non-system application |
 | 14000011 | Internal system error |
 
-**Example**
+## Examples
 
 For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](js-apis-sendablePhotoAccessHelper.md).
 

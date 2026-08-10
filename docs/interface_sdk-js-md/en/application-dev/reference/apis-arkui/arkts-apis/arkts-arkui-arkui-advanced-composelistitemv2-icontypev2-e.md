@@ -1,6 +1,6 @@
 # IconTypeV2
 
-Declare enum IconTypeV2
+列表左侧图标类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Declare enum IconTypeV2
 BADGE = 1
 ```
 
-Badge type.
+左侧图标为badge类型。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Badge type.
 NORMAL_ICON = 2
 ```
 
-Normal icon type.
+左侧图标为小图标类型。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Normal icon type.
 SYSTEM_ICON = 3
 ```
 
-System icon type.
+左侧图标为系统图标类型。
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ System icon type.
 HEAD_SCULPTURE = 4
 ```
 
-HeadSculpture type.
+左侧图标为头像类型。
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ HeadSculpture type.
 APP_ICON = 5
 ```
 
-App icon type.
+左侧图标为应用图标类型。
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ App icon type.
 PREVIEW = 6
 ```
 
-Preview type.
+左侧图标为预览图类型。
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ Preview type.
 LONGITUDINAL = 7
 ```
 
-Longitudinal type.
+左侧图标为横向特殊比例。
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ Longitudinal type.
 VERTICAL = 8
 ```
 
-Vertical type.
+左侧图标为竖向特殊比例。
 
 **Since:** 26.0.0
 

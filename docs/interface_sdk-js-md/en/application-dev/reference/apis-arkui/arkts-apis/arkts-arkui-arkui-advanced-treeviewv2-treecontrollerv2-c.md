@@ -1,6 +1,6 @@
 # TreeControllerV2
 
-Declare TreeControllerV2
+树视图组件的控制器，可以将此对象绑定至树视图组件，然后通过它控制树的节点信息，同一个控制器不可以控制多个树视图组件。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Declare TreeControllerV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
+
 ## addNode
 
 ```TypeScript
 addNode(nodeParam?: NodeParamV2): TreeControllerV2
 ```
 
-Initialize the interface of the tree view. This interface is used to generate ListNodeDataSource data.addNode is only designed for initialization. It can only be invoked during initialization.A maximum of 50 directory levels can be added.For details, see the comment description of NodeParam.
+点击某个节点后，调用该方法可以触发新增子节点。
 
 **Since:** 26.0.0
 
@@ -32,13 +38,13 @@ Initialize the interface of the tree view. This interface is used to generate Li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nodeParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Configuration information of the newly added node. |
+| nodeParam | [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No | 节点信息，用于指定新增节点的属性。如果不传该参数，在当前选中的节点下添加一个标题为"新建文件夹"的节点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  ListTreeNode Tree view component proxy class. |
+| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | 树视图组件的控制器。 |
 
 ## buildDone
 
@@ -46,7 +52,7 @@ Initialize the interface of the tree view. This interface is used to generate Li
 buildDone(): void
 ```
 
-After the initialization is complete by calling the addNode interface,call this interface to complete initialization.This interface must be called when you finish initializing the ListTreeViewV2 by addNode.
+建立树视图。节点增加完毕后，必须调用该方法，触发树信息的保存。
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ After the initialization is complete by calling the addNode interface,call this 
 modifyNode(): void
 ```
 
-Modify the node name.Register an ON\_ITEM\_MODIFY callback to obtain the ID, parent node ID, and node name of the modified node.
+点击某个节点后，调用该方法可以触发修改该节点，该节点进入编辑态。
 
 **Since:** 26.0.0
 
@@ -82,7 +88,7 @@ Modify the node name.Register an ON\_ITEM\_MODIFY callback to obtain the ID, par
 refreshNode(parentId: int, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void
 ```
 
-This interface is called when a secondaryTitle needs to be updated
+更新树视图。调用该方法，更新当前节点的信息。
 
 **Since:** 26.0.0
 
@@ -98,9 +104,9 @@ This interface is called when a secondaryTitle needs to be updated
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parentId | int | Yes | ID of the parent node. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:The value must be greater than or equal to -1. |
-| parentSubTitle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | secondaryTitle of parent node. |
-| currentSubtitle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | secondaryTitle of current node. |
+| parentId | int | Yes | 父节点Id。&lt;br /&gt;取值范围：大于等于-1。 |
+| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | 父节点副标题。 |
+| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | 当前节点副标题。 |
 
 ## removeNode
 
@@ -108,7 +114,7 @@ This interface is called when a secondaryTitle needs to be updated
 removeNode(): void
 ```
 
-Delete a node.Register an ON\_ITEM\_DELETE callback through the ListTreeListenerV2 mechanism to obtain the IDs of all deleted nodes.
+点击某个节点后，调用该方法可以触发删除该节点。
 
 **Since:** 26.0.0
 

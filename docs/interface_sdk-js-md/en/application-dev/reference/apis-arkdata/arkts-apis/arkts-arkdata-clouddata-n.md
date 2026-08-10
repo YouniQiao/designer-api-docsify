@@ -1,8 +1,6 @@
 # cloudData
 
-The **cloudData** module provides APIs for implementing device-cloud synergy and device-cloud sharing, and setting the device-cloud sync strategy.
-
-Device-cloud synergy enables sync of the structured data (in RDB stores) between devices and the cloud. The cloud serves as a data hub to implement data backup in the cloud and data consistency between the devices with the same account.This module also provides the capability of setting the device-cloud sync strategy.
+端云服务提供端云协同和端云共享能力。端云协同提供结构化数据（RDB Store，关系型数据库）端云同步的能力。即：云作为数据的中心节点，通过与云空间的数据同步，实现数据云备份、同账号设备间的数据一致性。端云共享是在端云协同能力基础上，实现跨账号的数据共享。其中，端云共享资源标识是指：对于应用发起共享的每一条数据记录，该条数据在进行端云同步时会生成唯一的共享资源标识（字符串类型的值），此标识作为该条数据记录共享时的识别标识。端云共享参与者是指：共享发起者根据好友列表选中的参与当前数据共享的所有人员。端云共享邀请码是指：共享发起后，在共享的服务端会生成当前共享操作的邀请码，并将该邀请码附加到当前共享邀请中，通过推送消息推送到被邀请者的设备端，被邀请者可以通过该邀请码进行邀请的确认。
 
 **Since:** 10
 
@@ -12,66 +10,72 @@ Device-cloud synergy enables sync of the structured data (in RDB stores) between
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## Summary
 
 ### Namespaces
 
 | Name | Description |
 | --- | --- |
-| [sharing](arkts-arkdata-clouddata-sharing-n.md) | Provides APIs for device-cloud data sharing, including sharing or unsharing data, exiting a share, changing the privilege on the shared data, querying participants, confirming an invitation, changing the invitation confirmation state, and querying the shared resource. |
+| [sharing](arkts-arkdata-clouddata-sharing-n.md) | 提供端云共享的方法，包括发起共享、取消共享、退出共享、更改共享数据权限、查找共享参与者、确认邀请、更改已确认的邀请、查找共享资源。 |
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [setCloudStrategy](arkts-arkdata-clouddata-setcloudstrategy-f.md#setcloudstrategy) | Sets the cloud sync strategy of an application. This API uses a promise to return the result. |
-| [onAutoSyncTrigger](arkts-arkdata-clouddata-onautosynctrigger-f.md#onautosynctrigger) | Describes the triggering method for automatic device-cloud synchronization subscription. |
-| [offAutoSyncTrigger](arkts-arkdata-clouddata-offautosynctrigger-f.md#offautosynctrigger) | Describes unsubscribing from the device-cloud automatic synchronization trigger mode. |
+| [setCloudStrategy](arkts-arkdata-clouddata-setcloudstrategy-f.md#setcloudstrategy) | 设置应用自身的云同步策略，使用Promise异步回调。 |
+| [onAutoSyncTrigger](arkts-arkdata-clouddata-onautosynctrigger-f.md#onautosynctrigger) | 在已打开端云同步且应用关闭自动同步的条件下，注册自动同步触发事件通知。当满足自动触发条件时，回调函数会被调用。 |
+| [offAutoSyncTrigger](arkts-arkdata-clouddata-offautosynctrigger-f.md#offautosynctrigger) | 取消订阅自动同步触发事件通知。 |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [Config](arkts-arkdata-clouddata-config-c-sys.md) | Provides APIs for setting device-cloud synergy, including enabling and disabling device-cloud synergy, clearing data, and notifying data changes. |
+| [Config](arkts-arkdata-clouddata-config-c-sys.md) | 提供配置端云协同的方法，包括云同步打开、关闭、清除数据、数据变化通知。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md) | Describes information about the automatic synchronization trigger mode. |
+| [AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md) | 自动同步触发信息。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ExtraData](arkts-arkdata-clouddata-extradata-i-sys.md) | Represents the transparently transmitted data, which contains information required for a data change notification. |
-| [StatisticInfo](arkts-arkdata-clouddata-statisticinfo-i-sys.md) | Represents the device-cloud sync statistics. |
-| [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md) | Represents information about the last device-cloud sync. |
-| [DBSwitchInfo](arkts-arkdata-clouddata-dbswitchinfo-i-sys.md) | Defines the switch information of a device-cloud synergy database. |
-| [SwitchConfig](arkts-arkdata-clouddata-switchconfig-i-sys.md) | Defines the switch configuration of a device-cloud synergy database. |
-| [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md) | Defines the clearance information of a device-cloud synergy database. |
-| [ClearConfig](arkts-arkdata-clouddata-clearconfig-i-sys.md) | Defines the clearance configuration of a device-cloud synergy database. |
-| [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | Bundle information configuration. |
+| [ExtraData](arkts-arkdata-clouddata-extradata-i-sys.md) | 透传数据，携带通知数据变更所需要的信息。 |
+| [StatisticInfo](arkts-arkdata-clouddata-statisticinfo-i-sys.md) | 端云同步的统计信息。 |
+| [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md) | 端云同步信息，包含最近一次端云同步的时间、结果和状态。 |
+| [DBSwitchInfo](arkts-arkdata-clouddata-dbswitchinfo-i-sys.md) | 端云协同数据库开关配置信息。 |
+| [SwitchConfig](arkts-arkdata-clouddata-switchconfig-i-sys.md) | 端云协同数据库级配置。 |
+| [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md) | 端云协同数据库级清除配置信息。 |
+| [ClearConfig](arkts-arkdata-clouddata-clearconfig-i-sys.md) | 端云协同数据库级清除配置。 |
+| [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | 端云协同应用信息。 |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | Enumerates the types of the cloud-device sync strategy. |
-| [NetWorkStrategy](arkts-arkdata-clouddata-networkstrategy-e.md) | Enumerates the network sync options. |
-| [AutoSyncTriggerMode](arkts-arkdata-clouddata-autosynctriggermode-e.md) | Indicates automatic synchronization triggering method for Device-Cloud data. |
+| [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | 云同步策略类型枚举。 |
+| [NetWorkStrategy](arkts-arkdata-clouddata-networkstrategy-e.md) | 网络策略参数枚举。 |
+| [AutoSyncTriggerMode](arkts-arkdata-clouddata-autosynctriggermode-e.md) | 自动同步触发模式枚举。 |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md) | Enumerates the operations for clearing the downloaded cloud data locally. |
-| [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md) | Enumerates the device-cloud sync task statuses. |
+| [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md) | 清除本地下载的云端数据的行为枚举。 |
+| [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md) | 端云同步任务的状态。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -79,6 +83,6 @@ Device-cloud synergy enables sync of the structured data (in RDB stores) between
 
 | Name | Description |
 | --- | --- |
-| [DATA_CHANGE_EVENT_ID](arkts-arkdata-clouddata-con-sys.md#data_change_event_id) | ID of the event, which indicates the change of the data in the cloud. |
+| [DATA_CHANGE_EVENT_ID](arkts-arkdata-clouddata-con-sys.md#data_change_event_id) | 表示云数据变更。 |
 <!--DelEnd-->
 

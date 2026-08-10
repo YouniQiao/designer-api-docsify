@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -120,7 +126,7 @@ tokenId: int
 
 使用权限的应用身份标识。分布式场景下该字段无效，需结合deviceId和deviceName识别来源设备。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

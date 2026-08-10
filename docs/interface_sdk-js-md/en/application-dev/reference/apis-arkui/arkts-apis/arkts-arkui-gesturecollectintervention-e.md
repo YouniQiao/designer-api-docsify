@@ -1,6 +1,6 @@
 # GestureCollectIntervention
 
-Define the gesture and events collection intervention operations.
+定义手势和事件收集的干预操作类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Define the gesture and events collection intervention operations.
 CONTINUE = 0
 ```
 
-Continue the normal collection process. No intervention will be applied.
+继续正常的手势和事件收集流程。不进行任何干预。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Continue the normal collection process. No intervention will be applied.
 DISCARD_LOWER = 1
 ```
 
-Discard all pending lower-priority gestures and events.This includes gestures from left sibling nodes and ancestor nodes (parent and above).Only the already collected gestures from the current node and higher-priority nodes will be retained.
+丢弃所有待收集的低优先级手势和事件。丢弃的部分包括左侧兄弟节点以及祖先节点（父节点及以上）的手势。仅保留当前节点和更高优先级节点中已收集的手势。
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ Discard all pending lower-priority gestures and events.This includes gestures fr
 DISCARD_HIGHER = 2
 ```
 
-Discard already collected higher-priority gestures and events.This removes gestures from right sibling nodes that have been collected.The collection will continue with lower-priority gestures (left siblings and ancestors).
+丢弃已经收集到的高优先级手势和事件。会丢弃已收集的右侧兄弟节点和当前节点上的手势。将继续处理低优先级手势的收集流程（左侧兄弟节点和祖先节点）。
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ Discard already collected higher-priority gestures and events.This removes gestu
 DISCARD_SELF = 3
 ```
 
-Discard gestures and events from the current node itself.The current node's gestures and events will be excluded from the gesture tree.Gestures from sibling nodes (both left and right) and ancestor nodes will still be collected.
+丢弃当前节点自身的手势和事件。当前节点的手势和事件将从手势树中排除。兄弟节点（左侧和右侧）以及祖先节点的手势仍会继续收集。
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ Discard gestures and events from the current node itself.The current node's gest
 DISCARD_LOWER_PRIORITY_SIBLINGS = 4
 ```
 
-Discard gestures and events from left sibling nodes that are pending collection.Gestures and events from the current node and already collected right sibling nodes will be retained.The collection will continue with ancestor nodes.
+丢弃左侧兄弟节点中待收集的手势和事件。当前节点以及已收集的右侧兄弟节点的手势和事件将被保留。将继续处理父节点以及祖先节点的收集流程。
 
 **Since:** 26.0.0
 

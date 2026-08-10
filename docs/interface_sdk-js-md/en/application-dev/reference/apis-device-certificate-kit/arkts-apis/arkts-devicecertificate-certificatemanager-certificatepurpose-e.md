@@ -1,6 +1,6 @@
 # CertificatePurpose
 
-Enumerates the usage of a credential.
+表示凭据用途的枚举。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the usage of a credential.
 PURPOSE_DEFAULT = 0
 ```
 
-Default usage, which is used for credential signing.
+默认用途，用于凭据签名。
 
 **Since:** 22
 
@@ -32,7 +32,7 @@ Default usage, which is used for credential signing.
 PURPOSE_ALL = 1
 ```
 
-Query of all credentials.
+用于查询所有凭据。
 
 **Since:** 22
 
@@ -48,7 +48,7 @@ Query of all credentials.
 PURPOSE_SIGN = 2
 ```
 
-Credential signing.
+用于凭据签名。
 
 **Since:** 22
 
@@ -64,7 +64,7 @@ Credential signing.
 PURPOSE_ENCRYPT = 3
 ```
 
-Credential encryption.
+用于凭据加密。
 
 **Since:** 22
 

@@ -1,9 +1,10 @@
 # @ohos.multimodalInput.inputEventClient(Input Event Injection)
 
 输入事件注入模块，提供输入按键、鼠标/触控板、触屏输入事件注入能力。
-    **说明：**  
-    
-    - 本模块接口为系统接口。
+
+> **说明：**
+> 
+> - 本模块接口为系统接口。
 
 **起始版本：** 26.0.0
 
@@ -12,6 +13,12 @@
 <!--Device-unnamed-declare namespace inputEventClient--><!--Device-unnamed-declare namespace inputEventClient-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
+
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
 
 ## 汇总
 
@@ -39,7 +46,7 @@
 | [KeyboardController](arkts-input-inputeventclient-keyboardcontroller-i.md) | 提供模拟按键操作的功能。模拟按键操作序列必须满足以下要求：  1. 按键只能在抬起状态下被按下，或者在该按键是最近按下的按键且未抬起的情况下被按下。2. 按键只能在被按下后才能抬起。3. 最多可以同时按下并保持五个按键。 |
 | [MouseController](arkts-input-inputeventclient-mousecontroller-i.md) | 提供模拟鼠标操作的功能。模拟鼠标操作序列必须满足以下要求：  1. 鼠标按键只能在抬起状态下被按下。2. 鼠标按键只能在被按下后才能抬起。3. 有效的轴事件序列必须先调用beginAxis开始事件，然后调用零次或多次updateAxis更新事件，最后调用endAxis结束事件。4. 同一时间只能有一个进行中的轴事件序列。 |
 | [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i.md) | 鼠标注入描述信息。 |
-| [TouchController](arkts-input-inputeventclient-touchcontroller-i.md) | 提供模拟触控操作的功能。模拟触控操作序列必须满足以下要求：  1. 所有触点的displayId必须相同。2. 每个触点都必须以\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_开始，以\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_结束，中间可包含多个\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| [TouchController](arkts-input-inputeventclient-touchcontroller-i.md) | 提供模拟触控操作的功能。模拟触控操作序列必须满足以下要求：  1. 所有触点的displayId必须相同。2. 每个触点都必须以`touchDown()`开始，以`touchUp()`结束，中间可包含多个`touchMove()`。 |
 | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i.md) | 触屏注入描述信息。 |
 | [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | 表示屏幕上的单个触点信息。 |
 

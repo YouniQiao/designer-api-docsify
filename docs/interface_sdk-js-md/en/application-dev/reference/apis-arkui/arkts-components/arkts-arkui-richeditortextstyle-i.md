@@ -1,6 +1,6 @@
 # RichEditorTextStyle
 
-Provides the text style information.
+文本样式信息。
 
 **Since:** 10
 
@@ -16,17 +16,17 @@ Provides the text style information.
 decoration?: DecorationStyleInterface
 ```
 
-Style, color, and thickness of the text decoration.
+设置文本装饰线的样式、颜色和粗细。
 
-Default value of **type**: **TextDecorationType.None**
+type默认值：TextDecorationType.None 
 
-Default value of **color**: same as the font color
+color默认值：跟随字体颜色。
 
-Default value of **style**: **TextDecorationStyle.SOLID**
+style默认值：TextDecorationStyle.SOLID 
 
-Default value of **thicknessScale**: **1.0
+thicknessScale默认值：1.0
 
-**Type:** DecorationStyleInterface
+**Type:** [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md)
 
 **Since:** 10
 
@@ -46,9 +46,11 @@ Default value of **thicknessScale**: **1.0
 fontColor?: ResourceColor
 ```
 
-Font color.
+文本颜色。
 
-**Type:** ResourceColor
+默认值：\$r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle优先级高于fontColor。
+
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
 
@@ -68,9 +70,9 @@ Font color.
 fontFamily?: ResourceStr
 ```
 
-Font family.
+设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md/arkts-font.md)。默认字体:'HarmonyOS Sans'。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
 
@@ -90,7 +92,21 @@ Font family.
 fontFeature?: string
 ```
 
-Font feature.
+设置文字特性效果，比如数字等宽的特性。如果未设置，默认为变宽数字。设置无效字符保持默认。
+
+格式为：normal | &lt;feature-tag-value&gt;
+
+&lt;feature-tag-value&gt;的格式为：&lt;string&gt; [ &lt;integer&gt; | on | off ]
+
+&lt;feature-tag-value&gt;的个数可以有多个，中间用','隔开。
+
+例如，使用等宽时钟数字的输入格式为："ss01" on。
+
+Font Feature当前支持的属性见[fontFeature](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#fontfeature)属性列表。
+
+设置 Font Feature 属性，Font Feature 是 OpenType 字体的高级排版能力，如支持连字、数字等宽等特性，一般用在自定义字体中，其能力需要字体本身支持。
+
+更多 Font Feature 能力介绍可参考 https://www.w3.org/TR/css-fonts-3/#font-feature-settings-prop 和 https://sparanoid.com/lab/opentype-features/
 
 **Type:** string
 
@@ -112,9 +128,9 @@ Font feature.
 fontSize?: Length | number
 ```
 
-Font size. The default unit is fp.
+设置字体大小，Length为number类型时，使用fp单位。number类型取值范围：(0, +∞)。设置为0或负值时，按默认值处理。字体默认大小为16fp。不支持设置百分比字符串。
 
-**Type:** Length \| number
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| number
 
 **Since:** 10
 
@@ -134,9 +150,11 @@ Font size. The default unit is fp.
 fontStyle?: FontStyle
 ```
 
-Font style.
+字体样式。
 
-**Type:** FontStyle
+默认值：FontStyle.Normal。
+
+**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **Since:** 10
 
@@ -156,7 +174,13 @@ Font style.
 fontWeight?: number | FontWeight | string
 ```
 
-Font weight.
+字体粗细。
+
+number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。超出范围时按默认值400生效。
+
+string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"分别对应FontWeight中相应的枚举值。
+
+默认值：FontWeight.Normal。
 
 **Type:** number \| FontWeight \| string
 
@@ -178,11 +202,11 @@ Font weight.
 halfLeading?: boolean
 ```
 
-Whether half leading is enabled.
+文本是否将行间距平分至行的顶部与底部。
 
-Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite.
+true表示将行间距平分至行的顶部与底部，false则不平分。
 
-Default value: **false
+默认值：false。
 
 **Type:** boolean
 
@@ -204,7 +228,7 @@ Default value: **false
 letterSpacing?: number | string
 ```
 
-Letter spacing. The default unit is fp.
+设置文本字符间距，默认单位为fp。默认值：0。当取值为负值时，文字会发生压缩。
 
 **Type:** number \| string
 
@@ -226,7 +250,12 @@ Letter spacing. The default unit is fp.
 lineHeight?: number | string | Resource
 ```
 
-Line height. The default unit is fp.
+设置文本的文本行高。
+
+默认值：不设置时自适应字体大小。
+
+number类型取值范围：(0, +∞)，设置值不大于0时，不限制文本行高，自适应字体大小。number类型时单位为fp，不支持设置百分比字符串。当lineHeight设置值小于当前字号下文本渲染出的实际高度时，  
+[fallbackLineSpacing](RichEditorAttribute#fallbackLineSpacing)属性将生效。
 
 **Type:** number \| string \| Resource
 
@@ -248,13 +277,13 @@ Line height. The default unit is fp.
 strokeColor?: ResourceColor
 ```
 
-Text stroke color.
+文本描边颜色。
 
-Default value: Follow the font color.
+默认值：跟随字体颜色。
 
-Sets the font color for abnormal values.
+设置异常值时跟随字体颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -274,9 +303,11 @@ Sets the font color for abnormal values.
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-The stroke join style of the text.
+文本描边拐角样式。
 
-**Type:** StrokeJoinStyle
+默认值：StrokeJoinStyle.MITER_JOIN。
+
+**Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
 
@@ -296,17 +327,19 @@ The stroke join style of the text.
 strokeWidth?: LengthMetrics | number
 ```
 
-Text stroke width. If the unit value of LengthMetrics is [PERCENT]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the current setting does not take effect and is processed as 0.
+文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md/arkts-arkui-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。
 
-If the value is less than 0, the value is an entity word. If the value is greater than 0, the value is an outline word. If the value is equal to 0, there is no stroke effect.
+值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。
 
-The default value is 0vp.
+默认值：0。
 
-Unit: LengthMetrics is followed by LengthMetrics when the type is LengthMetrics, and vp when the type is number.
+单位：LengthMetrics类型时跟随LengthMetrics，number类型时是vp。
 
-Value range: (-∞, +∞)
+取值范围：(-∞, +∞)
 
-**Type:** LengthMetrics \| number
+与[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle不生效。
+
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
 
 **Since:** 23
 
@@ -326,19 +359,13 @@ Value range: (-∞, +∞)
 textBackgroundStyle?: TextBackgroundStyle
 ```
 
-Text background style.
+文本背景样式。
 
-Default value:
+默认值：
 
-{
+{color: Color.Transparent,radius: 0}
 
-color: Color.Transparent,
-
-radius: 0
-
-}
-
-**Type:** TextBackgroundStyle
+**Type:** [TextBackgroundStyle](../arkts-apis/arkts-arkui-span-textbackgroundstyle-i.md)
 
 **Since:** 18
 
@@ -358,13 +385,17 @@ radius: 0
 textShadow?: ShadowOptions | Array<ShadowOptions>
 ```
 
-Text shadow. It supports input parameters in an array to implement multiple text shadows.
+设置文字阴影效果。
 
-**NOTE**
+默认值：undefined，不设置文字阴影效果。
 
-Only the shadow blur radius, color, and offset can be set. Smart color picking is not supported.
+该接口支持以数组形式入参，实现多重文字阴影。
 
-**Type:** ShadowOptions \| Array&lt;ShadowOptions&gt;
+**说明：**
+
+仅支持设置阴影模糊半径、颜色和偏移量，不支持智能取色。
+
+**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt;
 
 **Since:** 11
 

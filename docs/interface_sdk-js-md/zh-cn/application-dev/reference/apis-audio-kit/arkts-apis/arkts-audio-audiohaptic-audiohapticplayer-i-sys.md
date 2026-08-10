@@ -1,7 +1,7 @@
 # AudioHapticPlayer
 
 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  
-[createPlayer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建实例。
+[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。
 
 **起始版本：** 11
 
@@ -10,6 +10,12 @@
 <!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+## 导入模块
+
+```TypeScript
+import { audioHaptic } from 'kits/@kit.AudioKit';
+```
 
 ## enableHapticsInSilentMode
 
@@ -39,8 +45,8 @@ Enable haptics when the ringer mode is silent mode.这个方法只能在播放�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit in current state. |
+| 5400102 | Operate not permit in current state. |
+| 202 | Caller is not a system application. |
 
 ## isHapticsIntensityAdjustmentSupported
 
@@ -64,13 +70,13 @@ Check whether the device supports haptics intensity adjustment.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  { |
+| boolean | { |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
 ## isHapticsRampSupported
 
@@ -94,13 +100,13 @@ Check whether the device supports haptics intensity ramp effect.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  { |
+| boolean | { |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
 ## setHapticsIntensity
 
@@ -130,7 +136,7 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| intensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | Target Haptics intensity. The value ranges from 0.00 to 1.00, where 1.00 indicates the maximum intensity (100%). |
+| intensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Target Haptics intensity. The value ranges from 0.00 to 1.00, where 1.00 indicates the maximum intensity (100%). |
 
 **返回值：**
 
@@ -142,10 +148,10 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Function is not supported in current device. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit in current state. |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter out of range. |
+| 801 | Function is not supported in current device. |
+| 5400102 | Operate not permit in current state. |
+| 202 | Caller is not a system application. |
+| 5400108 | Parameter out of range. |
 
 ## setHapticsRamp
 
@@ -175,9 +181,9 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ramp duration to set, unit is milliseconds. The value should be an integer, and not less than 100. |
-| startIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | Starting intensity for Haptics ramp to set. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
-| endIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | End intensity for haptics ramp to set. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ramp duration to set, unit is milliseconds. The value should be an integer, and not less than 100. |
+| startIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Starting intensity for Haptics ramp to set. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
+| endIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | End intensity for haptics ramp to set. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
 
 **返回值：**
 
@@ -189,8 +195,8 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Function is not supported in current device. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit in current state. |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter out of range. |
+| 801 | Function is not supported in current device. |
+| 5400102 | Operate not permit in current state. |
+| 202 | Caller is not a system application. |
+| 5400108 | Parameter out of range. |
 

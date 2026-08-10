@@ -1,12 +1,18 @@
 # setShieldStatus (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## setShieldStatus
 
 ```TypeScript
 function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void
 ```
 
-Sets the system hotkey shield status.
+设置系统快捷键屏蔽类型。
 
 **Since:** 11
 
@@ -24,18 +30,18 @@ Sets the system hotkey shield status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shieldMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | System hotkey shield mode. Currently, only **FACTORY\_\_\_ESCAPED\_UNDERSCORE\_\_\_MODE** is supported, which means to shield all system hotkeys. |
-| isShield | boolean | Yes | Whether to enable shortcut key shielding. The value **true** means to enable shortcut key shielding, and the value **false** indicates the opposite. |
+| shieldMode | [ShieldMode](arkts-input-inputconsumer-shieldmode-e-sys.md) | Yes | 系统快捷键屏蔽类型，目前仅支持取值为'FACTORY_MODE'，表示屏蔽所有系统快捷键。 |
+| isShield | boolean | Yes | 屏蔽类型生效状态，true代表屏蔽类型生效，false代表不生效。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';

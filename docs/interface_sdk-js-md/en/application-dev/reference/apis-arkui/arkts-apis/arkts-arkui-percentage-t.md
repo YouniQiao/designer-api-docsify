@@ -4,7 +4,7 @@
 declare type Percentage = `${number}%`
 ```
 
-Defines the length property with number in units of Percentage.
+定义长度属性，单位为百分比。
 
 **Since:** 23
 

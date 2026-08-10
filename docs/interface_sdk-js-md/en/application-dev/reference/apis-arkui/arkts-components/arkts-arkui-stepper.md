@@ -1,13 +1,15 @@
 # Stepper
 
-The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task
-completion process.
+步骤导航器组件，适用于引导用户按照步骤完成任务的导航场景。
 
-> **NOTE**
+> **说明：**
 
-## Child Components
+> - 从API version 8开始支持，从API version 22开始废弃，建议使用[Swiper]{@link swiper}替代。详细示例请参考
+> [示例2](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-stepper.md#示例2使用swiper替代stepper)。
 
-Only the child component [StepperItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported.
+## 子组件
+
+仅能包含子组件[StepperItem]{@link stepper_item}。
 
 ## Stepper
 
@@ -15,8 +17,7 @@ Only the child component [StepperItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is s
 Stepper(value?: { index?: number })
 ```
 
-Creates a **Stepper** component.
-    **NOTE
+Called when the stepper component is used.
 
 **Since:** 8
 
@@ -36,7 +37,7 @@ Creates a **Stepper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { index?: number } | No | Index of the **StepperItem** that is currently displayed.\_\_\_HTML\_TAG\_USD\_1\_\_\_Default value: **0**\_\_\_HTML\_TAG\_USD\_2\_\_\_ Since API version 10, this parameter supports two-way binding through \_\_\_MD\_LINK\_USD\_0\_\_\_.  |
+| value | { index?: number } | No | Index of the **StepperItem** that is currently displayed.<br>Default value: **0**<br> Since API version 10, this parameter supports two-way binding through [\$\$](docroot://ui/state-management/arkts-two-way-sync.md). |
 
 ## Summary
 

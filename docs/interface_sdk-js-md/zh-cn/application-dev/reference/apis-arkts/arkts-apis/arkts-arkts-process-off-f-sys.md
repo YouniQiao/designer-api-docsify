@@ -1,5 +1,11 @@
 # off（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## off
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # CMErrorCode
 
-Enumerates the error codes used in the certificate management APIs.
+表示调用证书管理相关API的错误码。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the error codes used in the certificate management APIs.
 CM_ERROR_NO_PERMISSION = 201
 ```
 
-The application does not have the permission to call the API.
+表示应用程序无权限调用接口。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ The application does not have the permission to call the API.
 CM_ERROR_INVALID_PARAMS = 401
 ```
 
-Invalid input parameter is found.
+表示输入参数无效。
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Invalid input parameter is found.
 CM_ERROR_GENERIC = 17500001
 ```
 
-An internal error occurs when the interface is called.
+表示调用接口时发生内部错误。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ An internal error occurs when the interface is called.
 CM_ERROR_NO_FOUND = 17500002
 ```
 
-The certificate or credential does not exist.
+表示证书或凭据不存在。
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ The certificate or credential does not exist.
 CM_ERROR_INCORRECT_FORMAT = 17500003
 ```
 
-The certificate or credential is in invalid format.
+表示输入证书或凭据的数据格式无效。
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ The certificate or credential is in invalid format.
 CM_ERROR_MAX_CERT_COUNT_REACHED = 17500004
 ```
 
-The number of certificates or credentials has reached the limit.
+表示证书或凭据数量达到上限。
 
 **Since:** 12
 
@@ -112,7 +112,7 @@ The number of certificates or credentials has reached the limit.
 CM_ERROR_NO_AUTHORIZATION = 17500005
 ```
 
-The application has not obtained user authorization.
+表示应用未经用户授权。
 
 **Since:** 12
 
@@ -128,7 +128,7 @@ The application has not obtained user authorization.
 CM_ERROR_DEVICE_ENTER_ADVSECMODE = 17500007
 ```
 
-The device enters the advanced security mode. In this mode, CA certificate installation is restricted.
+表示设备进入坚盾守护模式。该模式下CA证书安装操作受限。
 
 **Since:** 18
 
@@ -144,7 +144,7 @@ The device enters the advanced security mode. In this mode, CA certificate insta
 CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009
 ```
 
-The device does not support the specified certificate storage path.
+表示不支持指定的证书存储路径。
 
 **Since:** 20
 
@@ -160,7 +160,7 @@ The device does not support the specified certificate storage path.
 CM_ERROR_ACCESS_UKEY_SERVICE_FAILED = 17500010
 ```
 
-The USB Key service fails to be accessed.
+表示访问USB Key服务失败。
 
 **Since:** 22
 
@@ -176,9 +176,9 @@ The USB Key service fails to be accessed.
 CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011
 ```
 
-The input parameter validation fails.
+表示输入参数校验失败。
 
-For example, the parameter format is incorrect or the parameter range is invalid.
+例如：参数格式不正确、参数范围无效。
 
 **Since:** 22
 

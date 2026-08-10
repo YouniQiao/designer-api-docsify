@@ -12,6 +12,12 @@ The basic data structure of the hover hand detection area.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## height
 
 ```TypeScript
@@ -20,7 +26,7 @@ height: int
 
 Height of the rectangle.Unit: px. The value must be an integer within [1,2147483647].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ left: int
 
 Left boundary of the rectangle.Unit: px. The value must be an integer within [-2147483648,2147483647].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ top: int
 
 Top boundary of the rectangle.Unit: px. The value must be an integer within [-2147483648,2147483647].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -86,7 +92,7 @@ width: int
 
 Width of the rectangle.Unit: px. The value must be an integer within [1,2147483647].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

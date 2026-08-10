@@ -1,6 +1,6 @@
 # AppDistributionType (System API)
 
-Enumerates the application \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+标识应用[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)。
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Enumerates the application \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 APP_GALLERY = 1
 ```
 
-Application installed from AppGallery.
+应用市场安装的应用。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Application installed from AppGallery.
 ENTERPRISE = 2
 ```
 
-Enterprise application that can be installed on personal devices.
+企业应用，可以安装到个人设备上。
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ Enterprise application that can be installed on personal devices.
 ENTERPRISE_NORMAL = 3
 ```
 
-Common enterprise application that can be installed on enterprise devices only through an enterprise mobile device management (MDM) application.
+普通企业应用，只能通过企业MDM应用安装在企业设备上。
 
 **Since:** 12
 
@@ -72,8 +72,8 @@ Common enterprise application that can be installed on enterprise devices only t
 ENTERPRISE_MDM = 4
 ```
 
-Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have  
-[administrator privileges]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+企业MDM应用，只能安装在企业设备上。需要被激活  
+[adminManager.enableAdmin](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f.md/arkts-mdm-adminmanager-enableadmin-f.md#enableadmin)后，才能安装普通企业应用。
 
 **Since:** 12
 
@@ -91,7 +91,7 @@ Enterprise MDM application that can be installed only on enterprise devices. To 
 OS_INTEGRATION = 5
 ```
 
-Preinstalled system application.
+系统预置应用。
 
 **Since:** 12
 
@@ -109,7 +109,7 @@ Preinstalled system application.
 CROWDTESTING = 6
 ```
 
-Application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery.
+众包测试应用，是由应用市场分发给部分用户，有一定的有效期的特定应用，系统检测到应用的有效期到期后，会通知用户到应用市场更新release版本的应用。
 
 **Since:** 12
 
@@ -127,7 +127,7 @@ Application under crowdtesting, which is distributed by AppGallery to a limited 
 NONE = 7
 ```
 
-Other.
+其他。
 
 **Since:** 12
 

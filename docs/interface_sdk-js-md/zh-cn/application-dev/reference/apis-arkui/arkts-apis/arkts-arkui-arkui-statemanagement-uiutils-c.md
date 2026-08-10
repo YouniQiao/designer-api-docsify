@@ -10,6 +10,12 @@ UIUtils状态管理相关的工具方法，包括获取代理对象的原始对�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## addMonitor
 
 ```TypeScript
@@ -17,7 +23,7 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 ```
 
 给状态管理V2的状态变量动态添加监听方法，详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **起始版本：** 20
 
@@ -35,18 +41,18 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | object | 是 | 目标对象，仅支持 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_和 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对于不支持的类型，会抛出运行时错误，错误码见表格。 |
-| path | string \| string[] | 是 | 添加监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定多个监听的变量路径。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_仅支持string和string数组，对于不支持的类型，会抛出运行时错误，错误码见表格。 |
-| monitorCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 给对应的状态变量注册的监听函数，即path路径对应的状态变量改变时，会回调对应的函数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对于不支持的类型，会抛出运行时错误，错误码见表格。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 监听函数的配置项，具体可见[MonitorOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。默认为异步回调。 |
+| target | object | 是 | 目标对象，仅支持 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)和 [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md)实例。 &lt;br&gt;对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| path | string \| string[] | 是 | 添加监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定多个监听的变量路径。 &lt;br&gt;仅支持string和string数组，对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | 是 | 给对应的状态变量注册的监听函数，即path路径对应的状态变量改变时，会回调对应的函数。 &lt;br&gt;对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | 否 | 监听函数的配置项，具体可见[MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md)。默认为异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | The target is not a custom component instance or V2 class instance. |
-| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) | The path is invalid. |
-| [130002](../errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) | monitorCallback is not a function or an anonymous function. |
+| 130001 | The path is invalid. |
+| 130000 | The target is not a custom component instance or V2 class instance. |
+| 130002 | monitorCallback is not a function or an anonymous function. |
 
 ## applySync
 
@@ -54,9 +60,9 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 static applySync<T>(task: TaskCallback): T
 ```
 
-同步刷新指定的状态变量，该接口接收一个闭包函数，仅刷新闭包函数内的修改，包括更新\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_以及重新渲染UI节点，详见  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_。
+同步刷新指定的状态变量，该接口接收一个闭包函数，仅刷新闭包函数内的修改，包括更新[@Computed计算](../../../ui/state-management/arkts-new-computed.md)、  
+[@Monitor回调](../../../ui/state-management/arkts-new-monitor.md)以及重新渲染UI节点，详见  
+[applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
 
 **起始版本：** 22
 
@@ -74,7 +80,7 @@ static applySync<T>(task: TaskCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 闭包函数，该闭包中产生的状态变量修改会同步执行。 |
+| task | [TaskCallback](arkts-arkui-taskcallback-t.md) | 是 | 闭包函数，该闭包中产生的状态变量修改会同步执行。 |
 
 **返回值：**
 
@@ -86,9 +92,9 @@ static applySync<T>(task: TaskCallback): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Computed |
+| 140001 | The function is not allowed to be called in @Computed |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -140,7 +146,7 @@ struct Index {
 static canBeObserved<T extends object>(source: T): ObservedResult
 ```
 
-判断数据对象是否为可观察对象，并返回观察结果。详见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+判断数据对象是否为可观察对象，并返回观察结果。详见[canBeObserved接口：判断对象是否为可被观察对象](../../../ui/state-management/arkts-new-canBeObserved.md)。
 
 **起始版本：** 23
 
@@ -158,15 +164,15 @@ static canBeObserved<T extends object>(source: T): ObservedResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | T | 是 | 输入一个数据对象，判断其是否可被观察。支持Array、Map、Set和Date类型数据。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_具体使用规则，详见\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| source | T | 是 | 输入一个数据对象，判断其是否可被观察。支持Array、Map、Set和Date类型数据。 &lt;br&gt;具体使用规则，详见[canBeObserved接口：判断对象是否为可被观察对象](../../../ui/state-management/arkts-new-canBeObserved.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回对象是否可被观察的结果。 |
+| [ObservedResult](arkts-arkui-arkui-statemanagement-observedresult-i.md) | 返回对象是否可被观察的结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -283,8 +289,8 @@ export struct School {
 static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void
 ```
 
-删除通过[addMonitor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_给状态管理V2的状态变量添加的监听方法，详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+删除通过[addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor)给状态管理V2的状态变量添加的监听方法，详见  
+[addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **起始版本：** 20
 
@@ -302,17 +308,17 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | object | 是 | 目标对象，仅支持 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_和 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对于不支持的类型，会抛出运行时错误，错误码见表格。 |
-| path | string \| string[] | 是 | 删除监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定删除多个状态变量的监听函数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_仅支持string和数组，对于不支持的类型，会抛出运行时错误，错误码见表格。 |
-| monitorCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 指定被删除的监听函数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当开发者不传此参数时，将删除path对应变量注册的所有监听函数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| target | object | 是 | 目标对象，仅支持 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)和 [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md)实例。 &lt;br&gt;对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| path | string \| string[] | 是 | 删除监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定删除多个状态变量的监听函数。 &lt;br&gt;仅支持string和数组，对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | 否 | 指定被删除的监听函数。 &lt;br&gt;当开发者不传此参数时，将删除path对应变量注册的所有监听函数。 &lt;br&gt;对于不支持的类型，会抛出运行时错误，错误码见表格。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | The target is not a custom component instance or V2 class instance. |
-| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) | The path is invalid. |
-| [130002](../errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) | monitorCallback is not a function or an anonymous function. |
+| 130001 | The path is invalid. |
+| 130000 | The target is not a custom component instance or V2 class instance. |
+| 130002 | monitorCallback is not a function or an anonymous function. |
 
 ## enableV2Compatibility
 
@@ -321,7 +327,7 @@ static enableV2Compatibility<T extends object>(source: T): T
 ```
 
 使V1的状态变量能够在\@ComponentV2中观察，主要应用于状态管理V1、V2混用场景。详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[状态管理V1和V2混用指导（API version 19及之后）](../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **起始版本：** 19
 
@@ -347,7 +353,7 @@ static enableV2Compatibility<T extends object>(source: T): T
 | --- | --- |
 | T | 如果数据源是V1的状态数据，则返回能够在 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -394,7 +400,7 @@ struct CompV2 {
 static flushUIUpdates(): void
 ```
 
-立即处理在调用该函数之前所有的状态变量修改，同步\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_对应的UI节点，但不会同步执行
+立即处理在调用该函数之前所有的状态变量修改，同步[标脏](../../../ui/state-management/arkts-state-management-introduce.md#触发更新)对应的UI节点，但不会同步执行
 
 **起始版本：** 22
 
@@ -412,10 +418,10 @@ static flushUIUpdates(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Computed |
-| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Monitor |
+| 140002 | The function is not allowed to be called in @Monitor |
+| 140001 | The function is not allowed to be called in @Computed |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -468,7 +474,7 @@ static flushUpdates(): void
 ```
 
 同步刷新在调用该函数之前所有的状态变量修改，包括更新@Computed计算、@Monitor回调以及重新渲染UI节点，详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
 
 **起始版本：** 22
 
@@ -486,10 +492,10 @@ static flushUpdates(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Computed |
-| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Monitor |
+| 140002 | The function is not allowed to be called in @Monitor |
+| 140001 | The function is not allowed to be called in @Computed |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -540,8 +546,8 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-返回给定@Component(V1)或@ComponentV2的[CustomComponentContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。使用它来访问组件的复用池。有关复用池的详细信息，请参阅  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅  
+[全局复用池：集中化的组件回收与复用](../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **起始版本：** 26.0.0
 
@@ -565,9 +571,9 @@ static getCustomComponentContext<T extends BaseCustomComponent>(customComponent:
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 给定组件实例的上下文对象。 |
+| [CustomComponentContext](arkts-arkui-utils-customcomponentcontext-i.md) | 给定组件实例的上下文对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -633,7 +639,7 @@ struct Index {
 static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle
 ```
 
-getLifecycle用于获取[自定义组件的生命周期]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_实例。
+getLifecycle用于获取[自定义组件的生命周期](arkts-arkui-statemanagement.md)实例。
 
 **起始版本：** 23
 
@@ -657,9 +663,9 @@ getLifecycle用于获取[自定义组件的生命周期]\_\_\_JSDOC\_LINK\_DESC\
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 自定义组件的生命周期实例。 |
+| [CustomComponentLifecycle](arkts-arkui-customcomponent-customcomponentlifecycle-i.md) | 自定义组件的生命周期实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils, ComponentAppear } from '@kit.ArkUI';
@@ -688,7 +694,7 @@ struct Index {
 static getTarget<T extends object>(source: T): T
 ```
 
-从状态管理框架包裹的代理对象中获取原始对象。详见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+从状态管理框架包裹的代理对象中获取原始对象。详见[getTarget接口：获取状态管理框架代理前的原始对象](../../../ui/state-management/arkts-new-getTarget.md)。
 
 **起始版本：** 12
 
@@ -714,7 +720,7 @@ static getTarget<T extends object>(source: T): T
 | --- | --- |
 | T | 数据源对象去除状态管理框架所加代理后的原始对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -746,7 +752,7 @@ struct Index {
 static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 ```
 
-创建只读的单向数据绑定实例，用于构建\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_函数中参数类型为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_的对应实参。
+创建只读的单向数据绑定实例，用于构建[\@Builder](../../../ui/state-management/arkts-builder.md)函数中参数类型为`Binding`的对应实参。
 
 **起始版本：** 20
 
@@ -764,15 +770,15 @@ static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| getter | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
+| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 仅包含一个\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_属性，用于获取当前绑定的值。只能读取值，不能直接修改。 |
+| [Binding](arkts-arkui-arkui-statemanagement-binding-c.md)&lt;T&gt; | 仅包含一个`value`属性，用于获取当前绑定的值。只能读取值，不能直接修改。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { Binding, UIUtils } from '@kit.ArkUI';
@@ -821,7 +827,7 @@ struct CompV2 {
 static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>
 ```
 
-创建可修改的双向数据绑定实例，用于构建\@Builder函数中参数类型为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_的对应实参。
+创建可修改的双向数据绑定实例，用于构建\@Builder函数中参数类型为`MutableBinding`的对应实参。
 
 **起始版本：** 20
 
@@ -839,19 +845,19 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| getter | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
-| setter | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 定义如何更新值，当\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_被修改时自动调用此函数。 |
+| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
+| setter | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | 是 | 定义如何更新值，当`.value`被修改时自动调用此函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 包含一个\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_属性，支持通过\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_读取和修改数据，设置值时会检查类型是否匹配泛型\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| [MutableBinding](arkts-arkui-utils-mutablebinding-c.md)&lt;T&gt; | 包含一个`value`属性，支持通过`.value`读取和修改数据，设置值时会检查类型是否匹配泛型`T`。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
+import { MutableBinding, UIUtils } from '@kit.ArkUI';
 
 @Builder
 function CustomButton(num1: MutableBinding<number>) {
@@ -901,7 +907,7 @@ struct CompV2 {
 static makeObserved<T extends object>(source: T): T
 ```
 
-将普通不可观察数据变为可观察数据。详见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+将普通不可观察数据变为可观察数据。详见[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。
 
 **起始版本：** 12
 
@@ -919,7 +925,7 @@ static makeObserved<T extends object>(source: T): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | T | 是 | 数据源对象。支持非@Observed和@ObservedV2装饰的class，JSON.parse返回的Object和@Sendable修饰的class。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_支持Array、Map、Set和Date。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_支持collections.Array、collections.Set和collections.Map。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_具体使用规则，详见\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| source | T | 是 | 数据源对象。支持非@Observed和@ObservedV2装饰的class，JSON.parse返回的Object和@Sendable修饰的class。 &lt;br&gt;支持Array、Map、Set和Date。 &lt;br&gt;支持collections.Array、collections.Set和collections.Map。 &lt;br&gt;具体使用规则，详见[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。 |
 
 **返回值：**
 
@@ -927,7 +933,7 @@ static makeObserved<T extends object>(source: T): T
 | --- | --- |
 | T | 对于支持的入参类型，返回可观察的数据。对于不支持的入参类型，返回数据源对象本身。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -949,7 +955,7 @@ struct Index {
         .onClick(() => {
           this.observedClass.name = 'Jane'; // 刷新
         })
-      Text(`observedClass: ${this.nonObservedClass.name}`)
+      Text(`nonObservedClass: ${this.nonObservedClass.name}`)
         .onClick(() => {
           this.nonObservedClass.name = 'Jane'; // 不刷新
         })
@@ -966,8 +972,8 @@ static makeV1Observed<T extends object>(source: T): T
 
 将不可观察的对象包装成状态管理V1可观察的对象，其能力等同于@Observed，可初始化@ObjectLink。
 
-该接口可搭配[enableV2Compatibility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_应用于状态管理V1和V2混用场景，详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+该接口可搭配[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)应用于状态管理V1和V2混用场景，详见  
+[状态管理V1和V2混用指导（API version 19及之后）](../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **起始版本：** 19
 
@@ -985,7 +991,7 @@ static makeV1Observed<T extends object>(source: T): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | T | 是 | 数据源。支持普通class、Array、Map、Set、Date类型。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_不支持[@arkts.collections (ArkTS容器集)]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_和 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_修饰的class。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_不支持undefined和null。不支持状态管理V2的数据和[makeObserved]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的返回值。 |
+| source | T | 是 | 数据源。支持普通class、Array、Map、Set、Date类型。 &lt;br&gt;不支持[@arkts.collections (ArkTS容器集)](../../apis-arkts/arkts-apis/arkts-collections.md/arkts-collections.md)和 [@Sendable](../../../arkts-utils/arkts-sendable.md)修饰的class。 &lt;br&gt;不支持undefined和null。不支持状态管理V2的数据和[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)的返回值。 |
 
 **返回值：**
 
@@ -993,7 +999,7 @@ static makeV1Observed<T extends object>(source: T): T
 | --- | --- |
 | T | 对于支持的入参类型，返回状态管理V1的观察数据。对于不支持的入参类型，返回数据源对象本身。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';

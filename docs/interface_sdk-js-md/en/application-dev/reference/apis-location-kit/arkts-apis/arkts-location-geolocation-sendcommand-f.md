@@ -1,5 +1,11 @@
 # sendCommand
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## sendCommand
 
 ```TypeScript
@@ -26,10 +32,10 @@ Send extended commands to location subsystem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the extended Command Message Body. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
+| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes | Indicates the extended Command Message Body. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -71,7 +77,7 @@ Send extended commands to location subsystem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the extended Command Message Body. |
+| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes | Indicates the extended Command Message Body. |
 
 **Return value:**
 
@@ -79,7 +85,7 @@ Send extended commands to location subsystem.
 | --- | --- |
 | Promise&lt;boolean&gt; | The promise returned by the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

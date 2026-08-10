@@ -18,7 +18,7 @@ result: PdfLoadResult
 
 PDF页面加载结果。
 
-**类型：** PdfLoadResult
+**类型：** [PdfLoadResult](../arkts-apis/arkts-arkweb-web-pdfloadresult-e.md)
 
 **起始版本：** 20
 

@@ -1,8 +1,8 @@
 # WorkSchedulerExtensionAbility
 
-Provides callbacks to be invoked when the scheduling conditions are met or the scheduling ends, for example,  
-[onWorkStart()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[onWorkStop()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ in WorkSchedulerExtensionAbility.
+延迟任务回调，当满足调度条件或调度结束时，系统会回调应用WorkSchedulerExtensionAbility中  
+[onWorkStart()](arkts-backgroundtasks-workschedulerextensionability-c.md#onworkstart)或  
+[onWorkStop()](arkts-backgroundtasks-workschedulerextensionability-c.md#onworkstop)的方法。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Provides callbacks to be invoked when the scheduling conditions are met or the s
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
+## Modules to Import
+
+```TypeScript
+import { WorkSchedulerExtensionContext } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## onWorkStart
 
 ```TypeScript
 onWorkStart(work: workScheduler.WorkInfo): void
 ```
 
-Called when the system starts scheduling the deferred task.
+开始延迟任务调度回调。
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Called when the system starts scheduling the deferred task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| work | workScheduler.WorkInfo | Yes | Deferred task that starts. |
+| work | workScheduler.WorkInfo | Yes | 要添加到执行队列的任务。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
@@ -56,7 +62,7 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
 onWorkStop(work: workScheduler.WorkInfo): void
 ```
 
-Called when the system stops scheduling the deferred task. This callback is triggered when the deferred task times out for 2 minutes or the [stopWork]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API is called to cancel the task.
+结束延迟任务调度回调。当延迟任务2分钟超时或应用调用[stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopwork)接口取消任务时，触发该回调。
 
 **Since:** 9
 
@@ -72,9 +78,9 @@ Called when the system stops scheduling the deferred task. This callback is trig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| work | workScheduler.WorkInfo | Yes | Deferred task that stops. |
+| work | workScheduler.WorkInfo | Yes | 执行队列中要结束回调的任务。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
@@ -94,9 +100,9 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
 context: WorkSchedulerExtensionContext
 ```
 
-Context of the WorkSchedulerExtensionAbility. This context inherits from ExtensionContext.
+WorkSchedulerExtension的上下文环境，继承自ExtensionContext。
 
-**Type:** WorkSchedulerExtensionContext
+**Type:** [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 
 **Since:** 10
 

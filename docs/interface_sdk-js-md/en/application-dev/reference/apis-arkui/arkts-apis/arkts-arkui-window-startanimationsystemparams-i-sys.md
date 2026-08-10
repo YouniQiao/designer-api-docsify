@@ -1,8 +1,8 @@
 # StartAnimationSystemParams (System API)
 
-Describes the start animation configuration. This API works only for full-screen applications.
+启动动画配置，仅对全屏应用生效。
 
-The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
+不同应用间跳转场景不生效，仍保持系统默认动效。
 
 **Since:** 20
 
@@ -14,15 +14,21 @@ The configuration does not take effect for inter-application transitions, where 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## animationConfig
 
 ```TypeScript
 animationConfig?: WindowAnimationConfig
 ```
 
-Configuration for the window animation. The default animation curve is **WindowAnimationCurve.LINEAR**, and the duration is **0**.
+窗口动画参数配置。默认动画曲线为WindowAnimationCurve.LINEAR，duration为0。
 
-**Type:** WindowAnimationConfig
+**Type:** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
 **Since:** 20
 
@@ -40,9 +46,9 @@ Configuration for the window animation. The default animation curve is **WindowA
 type: AnimationType
 ```
 
-Type of the window animation.
+窗口动画类型。
 
-**Type:** AnimationType
+**Type:** [AnimationType](arkts-arkui-window-animationtype-e-sys.md)
 
 **Since:** 20
 

@@ -1,9 +1,10 @@
 # @ohos.bundle.installer
 
 在设备上安装、升级和卸载应用。
-    **说明：**  
-    
-    本模块为系统接口。
+
+> **说明：**
+> 
+> 本模块为系统接口。
 
 **起始版本：** 9
 
@@ -14,6 +15,12 @@
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 

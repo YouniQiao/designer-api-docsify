@@ -1,5 +1,11 @@
 # errnoToString
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## errnoToString
 
 ```TypeScript

@@ -152,7 +152,7 @@ const ERROR_UNKNOWN: int
 
 下载任务错误码：未知错误。
 
-例如：API version 12及以下版本，系统仅支持串行地尝试连接域名相关IP，不支持单个IP的连接时间控制。若DNS返回的首个IP被阻塞，可能会由于握手超时导致ERROR\_UNKNOWN错误。
+例如：API version 12及以下版本，系统仅支持串行地尝试连接域名相关IP，不支持单个IP的连接时间控制。若DNS返回的首个IP被阻塞，可能会由于握手超时导致ERROR_UNKNOWN错误。
 
 **起始版本：** 7
 

@@ -1,6 +1,6 @@
 # ColorSpace
 
-Enumerates the color spaces.
+色域模式。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the color spaces.
 DEFAULT = 0
 ```
 
-Default SRGB gamut.
+默认SRGB色域模式。
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Default SRGB gamut.
 WIDE_GAMUT = 1
 ```
 
-Wide-gamut.
+广色域模式。
 
 **Since:** 8
 

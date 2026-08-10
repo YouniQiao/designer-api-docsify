@@ -1,12 +1,18 @@
 # isValid
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## isValid
 
 ```TypeScript
 function isValid(id: HiTraceId): boolean
 ```
 
-Checks whether a **HiTraceId** instance is valid. This API returns the result synchronously.
+判断HiTraceId是否有效，同步接口。
 
 **Since:** 8
 
@@ -20,15 +26,15 @@ Checks whether a **HiTraceId** instance is valid. This API returns the result sy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | HiTraceId** instance. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | 需要判断是否有效的HiTraceId实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that **HiTraceId** is valid, and **false** indicates the opposite. |
+| boolean | true：HiTraceId有效；false：HiTraceId无效。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Start tracing. The tracing flag is DEFAULT.

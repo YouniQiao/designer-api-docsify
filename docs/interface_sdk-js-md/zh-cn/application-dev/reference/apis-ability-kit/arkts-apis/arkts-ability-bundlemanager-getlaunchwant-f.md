@@ -1,12 +1,18 @@
 # getLaunchWant
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getLaunchWant
 
 ```TypeScript
 function getLaunchWant(): Want
 ```
 
-获取本应用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的Want参数。
+获取本应用[入口UIAbility](../../../quick-start/application-package-glossary.md#uiability)的Want参数。
 
 **起始版本：** 13
 
@@ -22,15 +28,15 @@ function getLaunchWant(): Want
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回仅包含bundleName和abilityName的Want对象。 |
+| [Want](arkts-ability-app-ability-want-want-c.md) | 返回仅包含bundleName和abilityName的Want对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700072](../errorcode-bundle.md#17700072-launch-want不存在) | The launch want is not found. |
+| 17700072 | The launch want is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

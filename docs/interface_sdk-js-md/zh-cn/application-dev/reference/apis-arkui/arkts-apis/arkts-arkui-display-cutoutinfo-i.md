@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## boundingRects
 
 ```TypeScript
@@ -38,7 +44,7 @@ readonly waterfallDisplayAreaRects: WaterfallDisplayAreaRects
 
 瀑布屏曲面部分显示区域。
 
-**类型：** WaterfallDisplayAreaRects
+**类型：** [WaterfallDisplayAreaRects](arkts-arkui-display-waterfalldisplayarearects-i.md)
 
 **起始版本：** 9
 

@@ -22,11 +22,11 @@ Called when the system shares the form.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the form.  |
+| formId | string | Yes | Indicates the ID of the form. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Returns the wantParams object.  |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Returns the wantParams object. |
 

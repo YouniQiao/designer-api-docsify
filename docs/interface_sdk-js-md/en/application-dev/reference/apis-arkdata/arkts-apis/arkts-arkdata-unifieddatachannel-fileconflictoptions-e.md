@@ -1,6 +1,6 @@
 # FileConflictOptions
 
-Enumerates the options for resolving file copy conflicts.
+表示文件拷贝冲突时的可选策略的枚举。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Enumerates the options for resolving file copy conflicts.
 OVERWRITE = 0
 ```
 
-Overwrite the file with the same name in the destination directory.
+目标路径存在同文件名时覆盖。
 
 **Since:** 15
 
@@ -36,7 +36,7 @@ Overwrite the file with the same name in the destination directory.
 SKIP = 1
 ```
 
-Skip the file if there is a file with the same name in the destination directory.
+目标路径存在同文件名时跳过。
 
 **Since:** 15
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## subType
 
 ```TypeScript
@@ -26,7 +32,7 @@ subType: BusinessSubType
 
 建议：系统固件升级场景使用FIRMWARE，应用升级场景使用其他类型。
 
-**类型：** BusinessSubType
+**类型：** [BusinessSubType](arkts-basicservices-update-businesssubtype-e-sys.md)
 
 **起始版本：** 9
 
@@ -52,7 +58,7 @@ vendor: BusinessVendor
 
 建议根据实际升级包来源选择对应类型，开源版本升级时使用PUBLIC。
 
-**类型：** BusinessVendor
+**类型：** [BusinessVendor](arkts-basicservices-update-businessvendor-e-sys.md)
 
 **起始版本：** 9
 

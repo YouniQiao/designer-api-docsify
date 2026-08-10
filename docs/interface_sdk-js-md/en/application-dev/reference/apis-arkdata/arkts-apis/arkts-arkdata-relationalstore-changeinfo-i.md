@@ -1,6 +1,6 @@
 # ChangeInfo
 
-Defines a struct for the details about the device-cloud sync process.
+记录端云同步过程详情。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Defines a struct for the details about the device-cloud sync process.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## deleted
 
 ```TypeScript
 deleted: Array<string> | Array<long>
 ```
 
-Location where data is deleted. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the deleted data.
+记录删除数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示删除数据的行号。
 
-**Type:** Array&lt;string&gt; \| Array&lt;long&gt;
+**Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 
 **Since:** 10
 
@@ -34,9 +40,9 @@ Location where data is deleted. If the primary key of the table is of the string
 inserted: Array<string> | Array<long>
 ```
 
-Location where data is inserted. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the inserted data.
+记录插入数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示插入数据的行号。
 
-**Type:** Array&lt;string&gt; \| Array&lt;long&gt;
+**Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 
 **Since:** 10
 
@@ -52,7 +58,7 @@ Location where data is inserted. If the primary key of the table is of the strin
 table: string
 ```
 
-Name of the table with data changes.
+表示发生变化的表的名称。
 
 **Type:** string
 
@@ -70,9 +76,9 @@ Name of the table with data changes.
 type: ChangeType
 ```
 
-Type of the data changed, which can be data or asset.
+表示发生变化的数据的类型，数据或者资产附件发生变化。
 
-**Type:** ChangeType
+**Type:** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
 
 **Since:** 10
 
@@ -88,9 +94,9 @@ Type of the data changed, which can be data or asset.
 updated: Array<string> | Array<long>
 ```
 
-Location where data is updated. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the updated data.
+记录更新数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示更新数据的行号。
 
-**Type:** Array&lt;string&gt; \| Array&lt;long&gt;
+**Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 
 **Since:** 10
 

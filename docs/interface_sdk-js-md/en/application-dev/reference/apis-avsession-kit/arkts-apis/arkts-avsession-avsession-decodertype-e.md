@@ -1,6 +1,6 @@
 # DecoderType
 
-The defination of decoder type.
+枚举，设备所支持的解码格式。
 
 **Since:** 19
 

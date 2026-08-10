@@ -1,6 +1,6 @@
 # RenderExitReason
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when onRenderExited being called.
+Enum type supplied to {@link renderExitReason} when onRenderExited being called.
 
 **起始版本：** 11
 

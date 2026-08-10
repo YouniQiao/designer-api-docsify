@@ -1,6 +1,6 @@
 # UserAuthResultCode
 
-Enumerates the authentication result codes. They include all success codes and error codes for user authentication operations. The application can determine the authentication result based on the return code and take corresponding measures.
+表示返回码的枚举。该枚举定义了用户认证操作可能返回的所有结果码，包括成功码和各类错误码。应用可根据返回码判断认证结果，并采取相应的处理措施。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the authentication result codes. They include all success codes and e
 SUCCESS = 12500000
 ```
 
-The operation is successful. It indicates that the user authentication is successful and the authentication token is valid. The application can use the returned token to perform subsequent security operations.
+执行成功。表示用户身份认证通过，认证令牌有效。应用可使用返回的token进行后续的安全操作。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ The operation is successful. It indicates that the user authentication is succes
 FAIL = 12500001
 ```
 
-The authentication fails. It indicates that the user characteristics do not match the enrolled credentials. The possible cause is that the user input is incorrect or an unenrolled credential is used. It is recommended that the user be prompted to try again.
+认证不通过。表示用户特征与已注册凭据比对不匹配，可能是用户输入错误或使用了未注册的凭据。建议提示用户重新尝试。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The authentication fails. It indicates that the user characteristics do not matc
 GENERAL_ERROR = 12500002
 ```
 
-A general operation error occurred. It indicates that an unknown error occurs during authentication. It is recommended that the user be prompted to try again later or contact the system administrator.
+操作通用错误。表示认证过程中发生未知错误，建议稍后重试或联系系统管理员。
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ A general operation error occurred. It indicates that an unknown error occurs du
 CANCELED = 12500003
 ```
 
-The authentication is canceled. It indicates that the user or the system cancels the authentication. The application can determine whether to initiate the authentication again based on the service logic.
+认证取消。表示用户主动取消了认证操作或认证被系统取消。应用可根据业务逻辑决定是否重新发起认证。
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ The authentication is canceled. It indicates that the user or the system cancels
 TIMEOUT = 12500004
 ```
 
-The authentication has timed out. It indicates that the user does not complete the authentication interaction within the specified time (for example, the user does not enter the password in time or does not look at the camera). You are advised to prompt the user to try again and pay attention to the operation time limit.
+认证超时。表示用户在规定时间内未完成认证交互（如未及时输入密码、未正视摄像头等）。建议提示用户重新尝试并注意操作时限。
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ The authentication has timed out. It indicates that the user does not complete t
 TYPE_NOT_SUPPORT = 12500005
 ```
 
-The authentication type is not supported. It indicates that the current device does not support the specified authentication type. For example, the device does not have a fingerprint sensor but the fingerprint authentication is requested. You are advised to check the device capability or change the authentication type.
+认证类型不支持。表示当前设备不支持指定的认证类型（如设备无指纹传感器却请求指纹认证）。建议检查设备能力或更换认证类型。
 
 **Since:** 9
 
@@ -124,7 +124,7 @@ The authentication type is not supported. It indicates that the current device d
 TRUST_LEVEL_NOT_SUPPORT = 12500006
 ```
 
-The authentication trust level is not supported. It indicates that the specified authentication trust level is higher than the highest level supported by the current authentication type. You are advised to lower the authentication trust level or use a more secure authentication type.
+认证等级不支持。表示指定的认证可信等级高于当前认证类型所能达到的最高等级。建议降低认证等级或使用更安全的认证类型。
 
 **Since:** 9
 
@@ -142,7 +142,7 @@ The authentication trust level is not supported. It indicates that the specified
 BUSY = 12500007
 ```
 
-The system is busy. It indicates that the authentication service is busy processing other requests. You are advised to try again later.
+系统繁忙。表示认证服务正忙于处理其他请求，建议稍后重试。
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ The system is busy. It indicates that the authentication service is busy process
 INVALID_PARAMETERS = 12500008
 ```
 
-Parameter verification failed. It indicates that the input parameter does not meet the requirements, for example,the parameter type is incorrect or the parameter value is out of range. You are advised to check the parameter and call the API again.
+参数校验失败。表示传入的参数不符合要求，如参数类型错误、参数值超出范围等。建议检查参数并重新调用。
 
 **Since:** 20
 
@@ -178,7 +178,7 @@ Parameter verification failed. It indicates that the input parameter does not me
 LOCKED = 12500009
 ```
 
-The authentication executor is locked. It indicates that the authenticator is locked due to consecutive authentication failures. The user can continue the authentication only after waiting for unlocking or using the PIN. You can call [getAuthLockState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to query the lock status.
+认证器已锁定。表示认证器因连续多次认证不通过而进入冻结状态，用户需等待冻结解除或使用PIN解锁后才能继续认证。可通过[getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getauthlockstate)查询具体冻结状态。
 
 **Since:** 9
 
@@ -196,7 +196,7 @@ The authentication executor is locked. It indicates that the authenticator is lo
 NOT_ENROLLED = 12500010
 ```
 
-The user has not enrolled the specified system identity authentication credential. It indicates that the user has not enrolled the requested authentication type. For example, the fingerprint authentication is requested but the user has not enrolled the fingerprint. You are advised to guide the user to register the corresponding credential first.
+用户未录入指定的系统身份认证凭据。表示用户未注册所请求的认证类型（如请求指纹认证但用户未录入指纹）。建议引导用户先注册相应凭据。
 
 **Since:** 9
 
@@ -214,7 +214,7 @@ The user has not enrolled the specified system identity authentication credentia
 CANCELED_FROM_WIDGET = 12500011
 ```
 
-The user cancels the system authentication and selects a custom authentication of the application. It indicates that the user taps the navigation button on the authentication screen and chooses to use the custom authentication type provided by the application. The application needs to launch the custom authentication page.
+用户取消了系统认证方式，选择应用自定义认证。表示用户点击了认证界面上的导航按钮，选择使用应用提供的自定义认证方式。应用需拉起自定义认证界面。
 
 **Since:** 10
 
@@ -232,7 +232,7 @@ The user cancels the system authentication and selects a custom authentication o
 PIN_EXPIRED = 12500013
 ```
 
-The PIN has expired. It indicates that the system PIN has expired. For example, the enterprise policy requires that the PIN be changed periodically. In this case, the user needs to change the PIN before using the authentication function.
+锁屏密码过期。表示系统锁屏口令已过期（如企业策略要求定期更换密码），用户需更新锁屏密码后才能继续使用认证功能。
 
 **Since:** 12
 

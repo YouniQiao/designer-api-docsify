@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## fill
 
 ```TypeScript
@@ -32,7 +38,7 @@ fill(color: ResourceColor): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 形状的填充区域的透明度，黑色表示完全透明，白色表示完全不透明。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 形状的填充区域的透明度，黑色表示完全透明，白色表示完全不透明。 |
 
 **返回值：**
 
@@ -62,7 +68,7 @@ offset(offset: Position): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 相对于组件布局位置的坐标偏移。 |
+| offset | [Position](arkts-arkui-position-i.md) | 是 | 相对于组件布局位置的坐标偏移。 |
 
 **返回值：**
 
@@ -92,7 +98,7 @@ position(position: Position): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置形状的位置。 |
+| position | [Position](arkts-arkui-position-i.md) | 是 | 设置形状的位置。 |
 
 **返回值：**
 

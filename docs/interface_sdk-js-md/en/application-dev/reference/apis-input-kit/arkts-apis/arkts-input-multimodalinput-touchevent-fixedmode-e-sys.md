@@ -1,6 +1,8 @@
 # FixedMode (System API)
 
-Enumerates coordinate correction modes.
+修正坐标的模式。
+
+**系统API**: 此接口为系统接口。
 
 **Since:** 19
 
@@ -18,7 +20,7 @@ Enumerates coordinate correction modes.
 NONE = 0
 ```
 
-Normal mode.
+正常模式。
 
 **Since:** 19
 
@@ -36,7 +38,7 @@ Normal mode.
 AUTO = 1
 ```
 
-One-handed mode.
+单手模式。
 
 **Since:** 19
 

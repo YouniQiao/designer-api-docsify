@@ -10,6 +10,12 @@ Defines the moving photo view options.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## dynamicRangeMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ dynamicRangeMode?: DynamicRangeMode
 
 range mode of MovingPhotoView.
 
-**Type:** DynamicRangeMode
+**Type:** [DynamicRangeMode](../../apis-arkui/arkts-apis/arkts-arkui-image-dynamicrangemode-e.md)
 
 **Since:** 14
 
@@ -38,7 +44,7 @@ movingPhotoFormat?: PixelMapFormat
 
 format of MovingPhotoView.
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md)
 
 **Since:** 14
 

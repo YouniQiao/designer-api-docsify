@@ -1,6 +1,6 @@
 # OnRefreshAccessedHistoryEvent
 
-Callback triggered when the navigation is complete.
+定义导航完成时触发。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Callback triggered when the navigation is complete.
 isMainFrame?: boolean
 ```
 
-Whether the event is triggered by the main frame.The value **true** indicates that the event is triggered by the main frame, and **false** indicates the opposite.
+是否是主文档触发。true表示是主文档触发，false表示不是主文档触发。
 
 **Type:** boolean
 
@@ -34,9 +34,7 @@ Whether the event is triggered by the main frame.The value **true** indicates th
 isRefreshed: boolean
 ```
 
-Whether the page is reloaded. The value **true** means that the page is reloaded by invoking the  
-[refresh]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API, and **false**  
-means the opposite.
+true表示该页面是被重新加载的（调用[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md/arkts-arkweb-webview-webviewcontroller-c.md#refresh)接口），false表示该页面是新加载的。
 
 **Type:** boolean
 
@@ -56,7 +54,7 @@ means the opposite.
 url: string
 ```
 
-URL to be accessed.
+访问的url。
 
 **Type:** string
 

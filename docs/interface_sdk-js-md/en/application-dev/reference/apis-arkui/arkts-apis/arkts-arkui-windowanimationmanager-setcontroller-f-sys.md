@@ -1,12 +1,20 @@
 # setController (System API)
 
+## Modules to Import
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## setController
 
 ```TypeScript
 function setController(controller: WindowAnimationController): void
 ```
 
-Set the window animation controller.
+设置窗口动画控制器。窗口动画控制器的说明请参考[WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md)。
+
+在使用windowAnimationManager的其他接口前，需要预先调用本接口设置窗口动画控制器。
 
 **Since:** 9
 
@@ -22,16 +30,16 @@ Set the window animation controller.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window animation controller. |
+| controller | [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Yes | 窗口动画的控制器。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let controller: windowAnimationManager.WindowAnimationController = {
     onStartAppFromLauncher(startingWindowTarget: windowAnimationManager.WindowAnimationTarget, finishCallback: windowAnimationManager.WindowAnimationFinishedCallback): void {
         console.info('onStartAppFromLauncher, the startingWindowTarget is: ' + startingWindowTarget);
         finishCallback.onAnimationFinish();
-      },
+    },
     onStartAppFromRecent(startingWindowTarget: windowAnimationManager.WindowAnimationTarget, finishCallback: windowAnimationManager.WindowAnimationFinishedCallback): void {
         console.info('onStartAppFromRecent, the startingWindowTarget is: ' + startingWindowTarget);
         finishCallback.onAnimationFinish();

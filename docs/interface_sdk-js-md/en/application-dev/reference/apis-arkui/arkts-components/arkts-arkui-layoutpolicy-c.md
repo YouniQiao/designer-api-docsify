@@ -1,27 +1,26 @@
 # LayoutPolicy
 
-Enumerates the layout policies for component width and height.
-    **NOTE**  
-    
-    - **LayoutPolicy** supports three layout policies: **matchParent** (adapts to the parent component's layout),  
-    **wrapContent** (adapts to content but does not exceed the parent component's size), **fixAtIdealSize**  
-    (adapts to content and may exceed the parent component's size).  
-    
-    - For **wrapContent** and **fixAtIdealSize**:  
-    If the component's size cannot be determined by its content, it uses the default size (if available);  
-    otherwise, it calculates the size as (0, 0).  
-    
-    - When a container is set to **wrapContent** and contains child components set to **matchParent**  
-    (including cases where only one side is set to **matchParent**): (1) The container is first expanded by  
-    child components with determinate sizes. (2) Child components set to **matchParent** then adapt to the  
-    container's size. (3) If no child components have determinate sizes, both the container and its child  
-    components have a zero size.  
-    
-    - **LayoutPolicy** has lower priority than **constraintSize**.  
-    
-    - Since API version 15, only the width and height attributes of **Row** and **Column** components support  
-    the **LayoutPolicy** type. Setting **LayoutPolicy** on other components produces the same behavior as having  
-    no width or height specified. Since API version 20, all basic components support the **LayoutPolicy** type.
+用于组件宽度和高度的布局策略。提供matchParent、wrapContent、fixAtIdealSize三种布局策略选项，分别用于组件自适应父组件布局、根据内容自适应但不超过父组件尺寸、根据内容自适应且可超过父组件尺寸的场景。
+
+> **说明：**
+> 
+> - LayoutPolicy支持设置三种布局策略：matchParent（自适应父组件布局）、wrapContent（根据内容自适应但不超过父组件尺寸的布局）和fixAtIdealSize（根据内容自适应，可能超过父组件尺寸的布局
+> ）。具体示例代码参见[设置布局策略](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#示例5设置布局策略)。
+> 
+> - wrapContent和fixAtIdealSize场景，组件无法通过内容确定大小时，如果组件大小有默认值，则按照默认值进行测算，组件最终以默认大小显示；如果没有默认值，则按照宽高(0,0)进行测算，组件最终以零尺寸显示。
+> 
+> - 容器设置wrapContent，并且有子组件设置matchParent时（包括仅一边设置matchParent），容器先由确定大小的子组件撑大，设置matchParent的子组件再匹配容器大小；如果没有确定大小的子组件，容器和
+> 子组件大小均为0。
+> 
+> - LayoutPolicy的设置会被constraintSize约束，即当同时设置LayoutPolicy和constraintSize时，constraintSize的约束优先生效。
+> 
+> - 从API version 15开始，仅Row和Column组件的width和height属性支持设置LayoutPolicy类型参数，其他组件设置LayoutPolicy类型参数后与不设置宽度或高度表现一致；从API
+> version 20开始，所有基础组件均支持设置LayoutPolicy类型参数。
+> 
+> - 当Row、Column、Flex组件主轴尺寸自适应子组件，且子组件A仅交叉轴设置matchParent时，API版本26.0.0之前，子组件A不参与Row、Column、Flex组件的主轴尺寸测量过程，此时Row、Column
+> 、Flex组件主轴方向不自适应子组件A的尺寸；从API版本26.0.0开始，子组件A会参与Row、Column、Flex组件的主轴尺寸测量过程，此时Row、Column、Flex组件主轴方向会自适应子组件A的尺寸。交叉轴方向同理。
+> 具体变更效果参见
+> [示例6（子组件单方向设置matchParent效果）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#示例6子组件单方向设置matchparent效果)。
 
 **Since:** 15
 
@@ -37,9 +36,9 @@ Enumerates the layout policies for component width and height.
 static readonly fixAtIdealSize: LayoutPolicy
 ```
 
-When the component adapts to its child components (content), its size equals the child components(content) and is not constrained by the parent component's content area size.
+当前组件自适应子组件（内容）时，其大小与子组件（内容）相等，并且其大小不受父组件内容区大小约束。适用于需要根据内容自动调整大小且可以超出父容器的场景，例如悬浮提示、下拉菜单等。
 
-**Type:** LayoutPolicy
+**Type:** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
 
 **Since:** 20
 
@@ -61,9 +60,9 @@ When the component adapts to its child components (content), its size equals the
 static readonly matchParent: LayoutPolicy
 ```
 
-When the component adapts to the parent component's layout, its size equals the parent component's content area (excluding the areas defined by **padding**, **border**, and **safeAreaPadding**).
+当前组件自适应父组件布局时，其大小与父组件内容区相等，不包括padding，border和safeAreaPadding。适用于需要组件填满父容器内容区的场景，例如列表项、卡片容器等。
 
-**Type:** LayoutPolicy
+**Type:** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
 
 **Since:** 15
 
@@ -85,9 +84,9 @@ When the component adapts to the parent component's layout, its size equals the 
 static readonly wrapContent: LayoutPolicy
 ```
 
-When the component adapts to its child components (content), its size equals the child components(content) and is constrained by the parent component's content area size.
+当前组件自适应子组件（内容）时，其大小与子组件（内容）相等，并且其大小受父组件内容区大小约束。适用于需要根据内容自动调整大小但不能超出父容器的场景，例如文本容器、弹窗内容区等。
 
-**Type:** LayoutPolicy
+**Type:** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
 
 **Since:** 20
 

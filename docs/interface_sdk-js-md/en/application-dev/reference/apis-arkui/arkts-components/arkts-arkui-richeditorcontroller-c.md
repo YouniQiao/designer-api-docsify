@@ -1,17 +1,18 @@
 # RichEditorController
 
-Implements the **RichEditor** component controller. Inherits from  
-[RichEditorBaseController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    When the length of the content exceeds the height of the display area of the component, the insertion interface (  
-    such as [addTextSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,  
-    [addImageSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_,  
-    [addBuilderSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ and  
-    [addSymbolSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_) is called. The component automatically scrolls the  
-    content to make the end of the inserted content visible.
+RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
-**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](../arkts-apis/arkts-arkui-component/richeditor-richeditorbasecontroller-c.md)
+> **说明：**
+> 
+> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan)、
+> [addImageSpan](arkts-arkui-richeditorcontroller-c.md#addimagespan)、[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)
+> 、[addSymbolSpan](arkts-arkui-richeditorcontroller-c.md#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
+
+## 导入对象
+
+```ts controller: RichEditorController = new RichEditorController();```
+
+**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
 
 **Since:** 10
 
@@ -27,71 +28,64 @@ Implements the **RichEditor** component controller. Inherits from
 addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): number
 ```
 
-Adds a custom layout (BuilderSpan) to **RichEditor**.
-    **NOTE**  
-    
-    - This API adds a builder span to take up space in the layout. It calls the system **measure** method to  
-    calculate the actual length, width, and position.  
-    
-    - You can use [RichEditorBuilderSpanOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_32\_\_\_ to set the index of the builder  
-    in the **RichEditor** component (with one character as the unit).  
-    
-    - This builder span is unfocusable, draggable, and equipped with certain universal attributes. It behaves  
-    similarly to an image span in terms of placeholder and deletion functionality, and it is treated as a single  
-    character in length.  
-    
-    - Custom menus can be set using [bindSelectionMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_33\_\_\_.  
-    
-    - The information about the builder span cannot be obtained through  
-    [getSpans]\_\_\_JSDOC\_LINK\_DESC\_USD\_34\_\_\_, [getSelection]\_\_\_JSDOC\_LINK\_DESC\_USD\_35\_\_\_,  
-    [onSelect]\_\_\_JSDOC\_LINK\_DESC\_USD\_36\_\_\_, or [aboutToDelete]\_\_\_JSDOC\_LINK\_DESC\_USD\_37\_\_\_.  
-    
-    - The builder span cannot be updated using [updateSpanStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_38\_\_\_ or  
-    [updateParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_39\_\_\_.  
-    
-    - Copying or pasting the builder span does not take effect.  
-    
-    - The layout constraints of the builder span are passed in from the **RichEditor** component. If the size of the  
-    outermost component in the builder span is not set, the size of the **RichEditor** is used as the value of  
-    **maxSize**.  
-    
-    - The gesture event mechanism of the builder span is the same as the universal gesture event mechanism. If  
-    transparent transmission is not set in the builder, only the child components in the builder respond.  
-    
-    - If the caret in the component is blinking, the caret position is updated to be after the inserted image span.
+在RichEditor中添加用户自定义布局（BuilderSpan）。
 
-Only the following universal attributes are supported:  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_7\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_8\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_9\_\_\_, [opacity]\_\_\_JSDOC\_LINK\_DESC\_USD\_40\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_10\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_11\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_12\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_13\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_14\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_15\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_16\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_17\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_18\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_19\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_20\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_21\_\_\_, \_\_\_MD\_LINK\_DESC\_USD\_22\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_23\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_24\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_25\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_26\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_27\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_28\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_29\_\_\_, \_\_\_MD\_LINK\_DESC\_USD\_30\_\_\_,
-
-\_\_\_MD\_LINK\_DESC\_USD\_31\_\_\_.
+> **说明：**
+> 
+> - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。
+> 
+> - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md)设置此builder在RichEditor中的index（一个文字为一个单位）。
+> 
+> - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。
+> 
+> - 支持通过[bindSelectionMenu](RichEditorAttribute#bindSelectionMenu)设置自定义菜单。
+> 
+> - 不支持通过[getSpans](arkts-arkui-richeditorcontroller-c.md#getspans)，[getSelection](arkts-arkui-richeditorcontroller-c.md#getselection)，
+> [onSelect](RichEditorAttribute#onSelect)，[aboutToDelete](RichEditorAttribute#aboutToDelete)获取
+> builderSpan信息。
+> 
+> - 不支持通过[updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle)，
+> [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle)等方式更新builder。
+> 
+> - 对此builder节点进行复制或粘贴不生效。
+> 
+> - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。
+> 
+> - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。
+> 
+> - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。
+> 
+> - 对[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)的节点文本，
+> [enableDataDetector](RichEditorAttribute#enableDataDetector)、
+> [dataDetectorConfig](RichEditorAttribute#dataDetectorConfig)、
+> [enableSelectedDataDetector](RichEditorAttribute#enableSelectedDataDetector)功能不会生效。
+> 通用属性仅支持[size](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#size)、[padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding)、[margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin)、
+> [aspectRatio](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#aspectratio)、[borderStyle](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderstyle)、
+> [borderWidth](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderwidth)、[borderColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#bordercolor)、
+> [borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius)、
+> [backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、
+> [backgroundBlurStyle](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)
+> 、[opacity](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#opacity)、
+> [blur](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#blur)、
+> [backdropBlur](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backdropblur)、
+> [shadow](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#shadow)、
+> [grayscale](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#grayscale)、
+> [brightness](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#brightness)、[saturate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#saturate)
+> 、[contrast](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#contrast)、
+> [invert](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#invert)、
+> [sepia](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#sepia)、
+> [hueRotate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#huerotate)、
+> [colorBlend](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#colorblend)、
+> [linearGradientBlur](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#lineargradientblur)、
+> [clip](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#clip)、[mask](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#mask)、
+> [foregroundBlurStyle](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#foregroundblurstyle)
+> 、[accessibilityGroup](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#accessibilitygroup)、
+> [accessibilityText](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#accessibilitytext)、
+> [accessibilityDescription](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#accessibilitydescription)、
+> [accessibilityLevel](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#accessibilitylevel)、
+> [sphericalEffect](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#sphericaleffect)、
+> [lightUpEffect](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#lightupeffect)、
+> [pixelStretchEffect](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#pixelstretcheffect)。
 
 **Since:** 11
 
@@ -109,14 +103,14 @@ Only the following universal attributes are supported:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Custom component. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Builder options. |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | 自定义布局内容，用于在RichEditor中创建BuilderSpan占位组件。 |
+| options | [RichEditorBuilderSpanOptions](../arkts-apis/arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md) | No | builder选项。当需要设置builder的偏移位置或无障碍属性时传入此参数；省略时，builder添加到所有内容末尾。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the added builder span in all spans. |
+| number | 添加完成的builderSpan在所有Span中的索引位置。 |
 
 ## addImageSpan
 
@@ -124,9 +118,9 @@ Only the following universal attributes are supported:
 addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions): number
 ```
 
-Adds an image span. If the caret in the component is blinking, the caret position is updated to be after the inserted image span.
+添加图片内容。如果组件光标闪烁，插入后光标位置更新为新插入图片的后面。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
 
-This API is a synchronous API. In a weak network environment, directly adding network images may block the UI thread and cause screen freezing. To avoid potential loading issues, do not directly add a network image.
+该接口为同步接口，在弱网环境下，直接添加网络图片可能会阻塞UI线程造成冻屏问题。不建议直接添加网络图片。
 
 **Since:** 10
 
@@ -144,14 +138,14 @@ This API is a synchronous API. In a weak network environment, directly adding ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| ResourceStr | Yes | Image content. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Image options. |
+| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr | Yes | 图片内容。 |
+| options | [RichEditorImageSpanOptions](../arkts-apis/arkts-arkui-richeditor-richeditorimagespanoptions-i.md) | No | 图片选项。 &lt;br&gt;当需要设置图片样式、偏移位置或段落样式时传入此参数；不传入时，图片将使用默认样式插入到内容末尾。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the added image span in all spans. |
+| number | 添加完成的ImageSpan在所有Span中的索引位置。 |
 
 ## addSymbolSpan
 
@@ -159,9 +153,9 @@ This API is a synchronous API. In a weak network environment, directly adding ne
 addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions ): number
 ```
 
-Adds a symbol span. If the caret in the component is blinking, the caret position is updated to be after the inserted symbol span.
+在RichEditor中添加图标小符号（SymbolSpan）。如果组件光标闪烁，插入后光标位置更新为新插入SymbolSpan的后面。
 
-Currently, gestures, copying, and dragging are not supported.
+SymbolSpan暂不支持手势、复制操作和拖拽处理。
 
 **Since:** 11
 
@@ -179,14 +173,14 @@ Currently, gestures, copying, and dragging are not supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Symbol resource object. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Symbol options. |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | SymbolSpan图标资源引用，用于指定系统预置或自定义的Symbol图标。 |
+| options | [RichEditorSymbolSpanOptions](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanoptions-i.md) | No | symbol选项。 &lt;br&gt;当需要设置SymbolSpan的偏移位置或样式时传入此参数；不传入时，SymbolSpan将使用默认样式插入到内容末尾。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the added symbol span in all spans. |
+| number | 添加完成的SymbolSpan在所有Span中的索引位置。 |
 
 ## addTextSpan
 
@@ -194,7 +188,7 @@ Currently, gestures, copying, and dragging are not supported.
 addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): number
 ```
 
-Adds a text span. If the caret in the component is blinking, the caret position is updated to be after the inserted text span.
+添加文本内容。如果组件光标闪烁，插入后光标位置更新为新插入文本的后面。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
 
 **Since:** 10
 
@@ -212,14 +206,14 @@ Adds a text span. If the caret in the component is blinking, the caret position 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text content.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The Resource type is supported since API version 20.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Text options. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 文本内容。 &lt;br&gt;从API version 20开始，支持Resource类型。<br>**Since:** 20 |
+| options | [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | No | 文本选项。 &lt;br&gt;当需要设置偏移位置、文本样式、段落样式等信息时传入此参数；不传入时，文本将使用默认样式插入到内容末尾。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the added text span in all spans. |
+| number | 添加完成的TextSpan在所有Span中的索引位置。 |
 
 ## deleteSpans
 
@@ -227,7 +221,7 @@ Adds a text span. If the caret in the component is blinking, the caret position 
 deleteSpans(value?: RichEditorRange): void
 ```
 
-Deletes the text and image spans in a specified range.
+删除指定范围内的文本和图片。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
 
 **Since:** 10
 
@@ -245,7 +239,7 @@ Deletes the text and image spans in a specified range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Range of the target spans. If this parameter is left empty, all text and image spans will be deleted. |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No | 删除范围。省略时，删除所有文本和图片。 |
 
 ## fromStyledString
 
@@ -253,7 +247,7 @@ Deletes the text and image spans in a specified range.
 fromStyledString(value: StyledString): Array<RichEditorSpan>
 ```
 
-Converts a styled string into a span.
+将属性字符串转换为span信息。
 
 **Since:** 12
 
@@ -271,19 +265,19 @@ Converts a styled string into a span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Styled string before conversion. |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | 转换前的属性字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorSpan&gt; | Text and image span information. |
+| Array&lt;RichEditorSpan&gt; | 将属性字符串解析后得到的文本和图片Span信息，可用于查询属性字符串中各Span的内容、样式和位置。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| 401 | The parameter check failed. |
 
 ## getParagraphs
 
@@ -291,7 +285,7 @@ Converts a styled string into a span.
 getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>
 ```
 
-Obtains the paragraph information within a specified range.
+获取指定范围的段落信息。
 
 **Since:** 11
 
@@ -309,13 +303,13 @@ Obtains the paragraph information within a specified range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Range of the paragraphs to obtain. |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No | 需要获取段落的范围。 &lt;br&gt;省略时，获取所有段落信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorParagraphResult&gt; | Information about the selected paragraphs. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| Array&lt;RichEditorParagraphResult&gt; | 选中范围内的段落信息，包含各段落的样式和起始结束位置，可用于查询段落排版属性或进行段落样式更新。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getSelection
 
@@ -323,7 +317,7 @@ Obtains the paragraph information within a specified range.
 getSelection(): RichEditorSelection
 ```
 
-Obtains the range and span information of the selected content. If no text is selected, this API returns the information about the span where the caret is located.
+获取选中内容的范围和span信息。未选中时，返回光标所在span信息。
 
 **Since:** 11
 
@@ -341,7 +335,7 @@ Obtains the range and span information of the selected content. If no text is se
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Provides information about the selected content. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | 选中区域起始/结束位置及选中文本和图片的详细信息。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getSpans
 
@@ -349,7 +343,7 @@ Obtains the range and span information of the selected content. If no text is se
 getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorTextSpanResult>
 ```
 
-Obtains span information.
+获取span信息。
 
 **Since:** 10
 
@@ -367,13 +361,13 @@ Obtains span information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Range of the target span. |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No | 需要获取span的范围。 &lt;br&gt;省略时，获取所有span信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorImageSpanResult \| RichEditorTextSpanResult&gt; | Text and image span information. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| Array&lt;RichEditorImageSpanResult \| RichEditorTextSpanResult&gt; | 指定范围内的文本和图片Span详细信息，包含各Span的位置、内容、样式等属性，可用 于查询和操作组件内的文本与图片内容。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## toStyledString
 
@@ -381,7 +375,7 @@ Obtains span information.
 toStyledString(value: RichEditorRange): StyledString
 ```
 
-Convert the component content within the given range into a styled string. SymbolSpan and BuilderSpan cannot be converted.
+将给定范围的组件内容转换成属性字符串，SymbolSpan和BuilderSpan不支持转换。
 
 **Since:** 12
 
@@ -399,19 +393,19 @@ Convert the component content within the given range into a styled string. Symbo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Source range. |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Yes | 需要获取的范围。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Styled string after conversion. |
+| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 组件指定范围内容转换后的属性字符串，可用于跨组件传递富文本内容或进行样式编辑操作。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| 401 | The parameter check failed. |
 
 ## updateParagraphStyle
 
@@ -419,7 +413,7 @@ Convert the component content within the given range into a styled string. Symbo
 updateParagraphStyle(value: RichEditorParagraphStyleOptions): void
 ```
 
-Updates the paragraph style.
+更新段落的样式。
 
 **Since:** 11
 
@@ -437,7 +431,7 @@ Updates the paragraph style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the paragraph style. |
+| value | [RichEditorParagraphStyleOptions](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyleoptions-i.md) | Yes | 段落的样式选项信息。 |
 
 ## updateSpanStyle
 
@@ -445,11 +439,11 @@ Updates the paragraph style.
 updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateImageSpanStyleOptions | RichEditorUpdateSymbolSpanStyleOptions): void
 ```
 
-Updates the text, image, or symbol span style.
+更新文本、图片或SymbolSpan样式。
 
-If only part of a span is updated, the span is split into multiple spans based on the updated part and the non-updated part.
+若只更新了一个Span的部分内容，则会根据更新部分、未更新部分将该Span拆分为多个Span。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
 
-Calling this API will not close the custom context menu on selection by default.
+使用该接口更新文本、图片或SymbolSpan样式时默认不会关闭自定义文本选择菜单。
 
 **Since:** 10
 
@@ -467,5 +461,5 @@ Calling this API will not close the custom context menu on selection by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| RichEditorUpdateImageSpanStyleOptions \| RichEditorUpdateSymbolSpanStyleOptions | Yes | Style options of the text, image, or symbol span.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| RichEditorUpdateImageSpanStyleOptions \| RichEditorUpdateSymbolSpanStyleOptions | Yes | 文本、图片或SymbolSpan的样式选项信息。<br>**Since:** 11 |
 

@@ -2,9 +2,9 @@
 
 文本样式选项。
 
-继承自[RichEditorRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
 
-**继承/实现关系：** RichEditorSpanStyleOptions extends [RichEditorRange](../arkts-apis/arkts-arkui-component/richeditor-richeditorrange-i.md)
+**继承/实现关系：** RichEditorSpanStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
 
 **起始版本：** 10
 

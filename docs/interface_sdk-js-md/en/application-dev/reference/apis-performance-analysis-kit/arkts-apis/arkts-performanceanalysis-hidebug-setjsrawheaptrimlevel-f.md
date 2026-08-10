@@ -1,12 +1,24 @@
 # setJsRawHeapTrimLevel
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setJsRawHeapTrimLevel
 
 ```TypeScript
 function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void
 ```
 
-Sets the raw heap snapshot trimming level for the current process.
+���õ�ǰ����ת�������ԭʼ�ѿ��յĲü�����ʹ�øýӿڲ��������TRIM_LEVEL_2��������Ч���ٶѿ��յ��ļ���С��
+
+> **ע��**
+> 
+> Ĭ�ϲü�������TRIM_LEVEL_1�����������TRIM_LEVEL_2�ü�����ʹ��API version 20֮���rawheap-translator���߲��ܽ�.rawheap�ļ�ת��Ϊ.heapsnapshot�ļ���������ܵ���ת��ʧ�ܡ�
+> 
+> �ýӿ�Ӱ��dumpJsRawHeapData�Ľ����
 
 **Since:** 20
 
@@ -20,9 +32,9 @@ Sets the raw heap snapshot trimming level for the current process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The trimming level of raw heap snapshot. |
+| level | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | Yes | ת���ѿ��յĲü�����Ĭ��ΪTRIM_LEVEL_1�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

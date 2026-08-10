@@ -1,13 +1,19 @@
 # queryContactsByEmail
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## queryContactsByEmail
 
 ```TypeScript
 function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 7
 
@@ -27,13 +33,14 @@ Queries a contact based on the specified email. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| email | string | Yes | Email address of the contact. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| email | string | Yes | 联系人的邮箱地址。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 contact.queryContactsByEmail('xxx@email.com', (err: BusinessError, data) => {
   if (err) {
@@ -51,8 +58,8 @@ contact.queryContactsByEmail('xxx@email.com', (err: BusinessError, data) => {
 function queryContactsByEmail(context: Context, email: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 10
 
@@ -68,26 +75,27 @@ Queries a contact based on the specified email. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| email | string | Yes | Email address of the contact. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| email | string | Yes | 联系人的邮箱地址。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.queryContactsByEmail(context, 'xxx@email.com', (err: BusinessError, data) => {
   if (err) {
@@ -105,8 +113,8 @@ contact.queryContactsByEmail(context, 'xxx@email.com', (err: BusinessError, data
 function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 7
 
@@ -126,19 +134,20 @@ Queries a contact based on the specified email and holder. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| email | string | Yes | Email address of the contact. |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| email | string | Yes | 联系人的邮箱地址。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | 创建联系人的应用信息类，如果传入参数为空默认使用系统联系人应用查询。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 contact.queryContactsByEmail('xxx@email.com', {
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 }, (err: BusinessError, data) => {
   if (err) {
     console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
@@ -156,8 +165,8 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 10
 
@@ -173,32 +182,33 @@ Queries a contact based on the specified email and holder. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| email | string | Yes | Email address of the contact. |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| email | string | Yes | 联系人的邮箱地址。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | 创建联系人的应用信息类，如果传入参数为空则使用系统联系人应用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.queryContactsByEmail(context, 'xxx@email.com', {
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 }, (err: BusinessError, data) => {
   if (err) {
     console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
@@ -215,8 +225,8 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 7
 
@@ -236,14 +246,15 @@ Queries a contact based on the specified email and attributes. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| email | string | Yes | Email address of the contact. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| email | string | Yes | 联系人的邮箱地址。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 contact.queryContactsByEmail('xxx@email.com', {
   attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
@@ -264,8 +275,8 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 10
 
@@ -281,27 +292,28 @@ Queries a contact based on the specified email and attributes. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| email | string | Yes | Email address of the contact. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| email | string | Yes | 联系人的邮箱地址。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.queryContactsByEmail(context, 'xxx@email.com', {
   attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
@@ -321,8 +333,8 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 7
 
@@ -342,20 +354,21 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| email | string | Yes | Email address of the contact. |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| email | string | Yes | 联系人的邮箱地址。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 contact.queryContactsByEmail('xxx@email.com', {
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 }, {
   attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
 }, (err: BusinessError, data) => {
@@ -374,8 +387,8 @@ contact.queryContactsByEmail('xxx@email.com', {
 function queryContactsByEmail(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 10
 
@@ -391,33 +404,34 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| email | string | Yes | Email address of the contact. |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| email | string | Yes | 联系人的邮箱地址。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.queryContactsByEmail(context, 'xxx@email.com', {
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 }, {
   attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
 }, (err: BusinessError, data) => {
@@ -436,8 +450,8 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-Queries a contact based on the specified email, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 7
 
@@ -457,32 +471,30 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| email | string | Yes | Email address of the contact. |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Application information for a contact. If this parameter is not specified, it is not used for contact filtering by default. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Contact attribute list. If this parameter is not specified, all contact attributes are queried by default. |
+| email | string | Yes | 联系人的邮箱地址。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | No | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No | 联系人的属性列表，不传默认查询所有联系人属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of queried contacts. |
+| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回查询到的联系人数组对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 let promise = contact.queryContactsByEmail('xxx@email.com', {
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 }, {
   attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
 });
 promise.then((data) => {
   console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -493,8 +505,8 @@ promise.then((data) => {
 function queryContactsByEmail(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-Queries a contact based on the specified email, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to query the contact based on the specified key.
+根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **Since:** 10
 
@@ -510,45 +522,42 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| email | string | Yes | Email address of the contact. |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Application information for a contact. If this parameter is not specified, it is not used for contact filtering by default. |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Contact attribute list. If this parameter is not specified, all contact attributes are queried by default. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| email | string | Yes | 联系人的邮箱地址。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | No | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No | 联系人的属性列表，不传默认查询所有联系人属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of queried contacts. |
+| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回查询到的联系人数组对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let promise = contact.queryContactsByEmail(context, 'xxx@email.com', {
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 }, {
   attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
 });
 promise.then((data) => {
   console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

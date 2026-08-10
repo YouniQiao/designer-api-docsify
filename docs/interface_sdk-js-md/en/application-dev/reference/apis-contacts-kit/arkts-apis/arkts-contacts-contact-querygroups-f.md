@@ -1,12 +1,18 @@
 # queryGroups
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## queryGroups
 
 ```TypeScript
 function queryGroups(callback: AsyncCallback<Array<Group>>): void
 ```
 
-Queries all groups of a contact. This API uses an asynchronous callback to return the result.
+查询联系人的所有群组。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,12 +32,13 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Group&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of queried groups is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Group&gt;&gt; | Yes | 回调函数。成功返回查询到的群组对象数组；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 contact.queryGroups((err: BusinessError, data) => {
   if (err) {
@@ -49,7 +56,7 @@ contact.queryGroups((err: BusinessError, data) => {
 function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void
 ```
 
-Queries all groups of a contact. This API uses an asynchronous callback to return the result.
+查询联系人的所有群组。使用callback异步回调。
 
 **Since:** 10
 
@@ -65,25 +72,26 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Group&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of queried groups is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Group&gt;&gt; | Yes | 回调函数。成功返回查询到的群组对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.queryGroups(context, (err: BusinessError, data) => {
   if (err) {
@@ -101,7 +109,7 @@ contact.queryGroups(context, (err: BusinessError, data) => {
 function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): void
 ```
 
-Queries all groups of a contact based on the specified holder. This API uses an asynchronous callback to return the result.
+根据holder查询联系人的所有群组。使用callback异步回调。
 
 **Since:** 7
 
@@ -121,18 +129,19 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Group&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of queried groups is returned. If the operation fails, an error code is returned. |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Group&gt;&gt; | Yes | 回调函数。成功返回查询到的群组对象数组；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 contact.queryGroups({
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 }, (err: BusinessError, data) => {
   if (err) {
     console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
@@ -149,7 +158,7 @@ contact.queryGroups({
 function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void
 ```
 
-Queries all groups of a contact based on the specified holder. This API uses an asynchronous callback to return the result.
+根据holder查询联系人的所有群组。使用callback异步回调。
 
 **Since:** 10
 
@@ -165,31 +174,32 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Group&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of queried groups is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Group&gt;&gt; | Yes | 回调函数。成功返回查询到的群组对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.queryGroups(context, {
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 }, (err: BusinessError, data) => {
   if (err) {
     console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
@@ -206,7 +216,7 @@ contact.queryGroups(context, {
 function queryGroups(holder?: Holder): Promise<Array<Group>>
 ```
 
-Queries all groups of a contact based on the specified holder. This API uses a promise to return the result.
+根据holder查询联系人的所有群组。使用Promise异步回调。
 
 **Since:** 7
 
@@ -226,28 +236,26 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | No | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Group&gt;&gt; | Promise used to return the result, which is an array of groups. |
+| Promise&lt;Array&lt;Group&gt;&gt; | Promise对象。返回查询到的群组对象数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 let promise = contact.queryGroups({
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 });
 promise.then((data) => {
   console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -258,7 +266,7 @@ promise.then((data) => {
 function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>
 ```
 
-Queries all groups of a contact based on the specified holder. This API uses a promise to return the result.
+根据holder查询联系人的所有群组。使用Promise异步回调。
 
 **Since:** 10
 
@@ -274,41 +282,39 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | No | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Group&gt;&gt; | Promise used to return the result, which is an array of groups. |
+| Promise&lt;Array&lt;Group&gt;&gt; | Promise对象。返回查询到的群组对象数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain UIAbilityContext, where this refers to a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
+import { contact } from '@kit.ContactsKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let promise = contact.queryGroups(context, {
   holderId: 1,
-  bundleName: "",
-  displayName: ""
+  bundleName: '',
+  displayName: ''
 });
 promise.then((data) => {
   console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

@@ -1,12 +1,18 @@
 # uptime
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## uptime
 
 ```TypeScript
 function uptime(): number
 ```
 
-Obtains the running time of the current system, in seconds.
+获取当前系统已运行的时间（以秒为单位）。
 
 **Since:** 7
 
@@ -22,9 +28,9 @@ Obtains the running time of the current system, in seconds.
 
 | Type | Description |
 | --- | --- |
-| number | Running time of the system, in seconds. |
+| number | 当前系统已运行的时间。单位：秒。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let time = process.uptime();

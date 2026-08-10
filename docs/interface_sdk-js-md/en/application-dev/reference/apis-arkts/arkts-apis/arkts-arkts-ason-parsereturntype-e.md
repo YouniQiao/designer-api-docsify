@@ -1,6 +1,6 @@
 # ParseReturnType
 
-The return types for parsing.
+定义解析结果的返回类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ The return types for parsing.
 OBJECT = 0
 ```
 
-Return type is object.
+返回 SendableObject 对象。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Return type is object.
 MAP = 1
 ```
 
-Return type is map.
+返回 SendableMap 对象。
 
 **Since:** 13
 

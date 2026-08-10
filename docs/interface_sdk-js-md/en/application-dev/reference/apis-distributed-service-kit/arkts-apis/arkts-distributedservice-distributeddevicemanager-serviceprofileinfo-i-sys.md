@@ -1,6 +1,6 @@
 # ServiceProfileInfo (System API)
 
-Defines the service profile information. It is populated based on the data returned from the cloud.
+服务配置信息。根据云端返回的数据填充。
 
 **Since:** 15
 
@@ -12,13 +12,19 @@ Defines the service profile information. It is populated based on the data retur
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## data
 
 ```TypeScript
 data?: string
 ```
 
-Service data. The value is a string of up to 1000 characters. This parameter is left unspecified by default.
+服务数据。字符长度不超过1000个字符。默认为空。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Service data. The value is a string of up to 1000 characters. This parameter is 
 deviceId: string
 ```
 
-Device ID.
+设备ID。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Device ID.
 serviceId: string
 ```
 
-Service ID.
+服务ID。
 
 **Type:** string
 
@@ -78,7 +84,7 @@ Service ID.
 serviceType: string
 ```
 
-Service type.
+服务类型。
 
 **Type:** string
 

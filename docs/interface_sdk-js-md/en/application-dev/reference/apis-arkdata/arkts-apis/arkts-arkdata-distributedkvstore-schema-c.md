@@ -1,7 +1,10 @@
 # Schema
 
-Defines the schema of a KV store. You can create a **Schema** object and pass it in  
-[Options]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when creating or opening a KV store.
+表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](arkts-arkdata-distributedkvstore-options-i.md)中。
+
+STRICT：STRICT模式要求用户插入的值必须与Schema定义严格匹配，字段数量和格式都不能有差异。如果不匹配，数据库将在插入数据时返回错误。
+
+COMPATIBLE：选择为COMPATIBLE模式时，数据库在检查Value格式时较为宽松，只要Value具有Schema描述的特征即可，允许存在额外字段。例如，定义了id、name字段时，可以插入id、name、age等多个字段。
 
 **Since:** 9
 
@@ -11,13 +14,19 @@ Defines the schema of a KV store. You can create a **Schema** object and pass it
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Defines a constructor used to create a **Schema** instance.
+用于创建Schema实例的构造函数。
 
 **Since:** 9
 
@@ -29,7 +38,7 @@ Defines a constructor used to create a **Schema** instance.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-**Example**
+## Examples
 
 ```TypeScript
 let child1 = new distributedKVStore.FieldNode('id');
@@ -55,7 +64,7 @@ schema.skip = 0;
 set indexes(indexes: Array<string>)
 ```
 
-Set the string array of json.
+设置索引字段定义
 
 **Type:** Array&lt;string&gt;
 
@@ -75,9 +84,9 @@ Set the string array of json.
 set mode(mode: int)
 ```
 
-Set the mode of schema.
+设置Schema的模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -95,9 +104,9 @@ Set the mode of schema.
 set root(root: FieldNode)
 ```
 
-Set the root json object.
+设置Value中所有字段的定义。
 
-**Type:** FieldNode
+**Type:** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
 
 **Since:** 9
 
@@ -115,9 +124,9 @@ Set the root json object.
 set skip(skip: int)
 ```
 
-Set the skip size of schema.
+设置跳过的字节数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

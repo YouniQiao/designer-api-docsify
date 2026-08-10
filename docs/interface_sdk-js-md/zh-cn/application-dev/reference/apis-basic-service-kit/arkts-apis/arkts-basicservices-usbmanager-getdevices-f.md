@@ -1,5 +1,11 @@
 # getDevices
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getDevices
 
 ```TypeScript
@@ -7,10 +13,11 @@ function getDevices(): Array<Readonly<USBDevice>>
 ```
 
 获取接入主设备的USB设备列表。
-    **说明：**  
-    
-    三方应用没有权限获取serial字段读取设备序列号，需要通过  
-    [usbManager.requestRight]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_申请权限后，自行发起控制传输获取。
+
+> **说明：**
+> 
+> 三方应用没有权限获取serial字段读取设备序列号，需要通过
+> [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)申请权限后，自行发起控制传输获取。
 
 **起始版本：** 9
 
@@ -30,15 +37,13 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
+| 801 | Capability not supported.<br>**适用版本：** 18+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-if (devicesList) {
-  console.info(`devicesList = ${JSON.stringify(devicesList)}`);
-}
+console.info(`devicesList = ${devicesList}`);
 /*
   devicesList 返回的数据结构，此处提供一个简单的示例，如下
   [

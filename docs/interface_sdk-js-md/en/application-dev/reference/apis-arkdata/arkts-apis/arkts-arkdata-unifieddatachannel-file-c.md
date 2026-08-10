@@ -1,8 +1,8 @@
 # File
 
-Represents the file data. It is a child class of [UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and a base class of the data of the file type. You are advised to use the child class of **File**, for example,  
-[Image]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, [Video]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and  
-[Folder]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, to describe data.
+File类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是文件类型数据的基类，用于描述文件类型数据，推荐开发者优先使用File的子类描述数据，如  
+[Image](arkts-arkdata-unifieddatachannel-image-c.md)、[Video](arkts-arkdata-unifieddatachannel-video-c.md)、  
+[Folder](arkts-arkdata-unifieddatachannel-folder-c.md)等具体子类。
 
 **Inheritance/Implementation:** File extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
@@ -14,25 +14,31 @@ Represents the file data. It is a child class of [UnifiedRecord]\_\_\_JSDOC\_LIN
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## details
 
 ```TypeScript
 details?: Record<string, string>
 ```
 
-A dictionary type object, where both the key and value are of the string type and are used to describe file information. For example, a data object with the following content can be created to describe a file:
+是一个字典类型对象，key和value都是string类型，用于描述文件相关信息。例如，可生成一个details内容为
 
 {
 
-"name":"File name",
+"name":"文件名",
 
-"type":"File type"
+"type":"文件类型"
 
 }
 
-The default value is an empty dictionary object.
+的数据对象，用于描述一个文件。非必填字段，默认值为空字典对象。
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 10
 
@@ -52,7 +58,7 @@ The default value is an empty dictionary object.
 set uri(value: string)
 ```
 
-Indicates the uri of file
+表示统一文件的详细信息。
 
 **Type:** string
 
@@ -74,7 +80,8 @@ Indicates the uri of file
 set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 ```
 
-Defines URI authorization policies for drag intention.
+用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权），只针对单个record使用，优先级最高，具体策略见  
+[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
 **Type:** Array&lt;UriPermission&gt;
 

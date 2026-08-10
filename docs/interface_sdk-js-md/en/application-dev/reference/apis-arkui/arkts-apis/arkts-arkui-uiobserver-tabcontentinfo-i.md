@@ -1,6 +1,6 @@
 # TabContentInfo
 
-TabContent info.
+TabContent页面的切换信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ TabContent info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## id
 
 ```TypeScript
 id: string
 ```
 
-Tabs id.
+Tabs组件的id。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Tabs id.
 index: int
 ```
 
-The index of TabContent in Tabs.The value should be an integer.
+TabContent组件的下标索引。索引从0开始。取值限定为整数。
 
 **Type:** int
 
@@ -56,7 +62,7 @@ The index of TabContent in Tabs.The value should be an integer.
 lastIndex?: int
 ```
 
-The last focus index of TabContent in Tabs.The value should be an integer.
+Tabs组件的lastIndex。取值限定为整数。
 
 **Type:** int
 
@@ -76,9 +82,9 @@ The last focus index of TabContent in Tabs.The value should be an integer.
 state: TabContentState
 ```
 
-The state of TabContent.
+TabContent组件的状态。
 
-**Type:** TabContentState
+**Type:** [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
 
 **Since:** 23
 
@@ -96,7 +102,7 @@ The state of TabContent.
 tabContentId: string
 ```
 
-TabContent id.
+TabContent组件的id。
 
 **Type:** string
 
@@ -116,7 +122,7 @@ TabContent id.
 tabContentUniqueId: int
 ```
 
-TabContent uniqueId.The value should be an integer.
+TabContent组件的uniqueId。取值限定为整数。
 
 **Type:** int
 
@@ -136,7 +142,7 @@ TabContent uniqueId.The value should be an integer.
 uniqueId: int
 ```
 
-Tabs uniqueId.The value should be an integer.
+Tabs组件的uniqueId。取值限定为整数。
 
 **Type:** int
 

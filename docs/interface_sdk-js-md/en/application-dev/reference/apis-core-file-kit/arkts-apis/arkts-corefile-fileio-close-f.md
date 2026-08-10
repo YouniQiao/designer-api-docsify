@@ -6,7 +6,7 @@
 declare function close(fd: number): Promise<void>
 ```
 
-Closes a file. This API uses a promise to return the result.
+关闭文件，使用Promise异步回调。
 
 **Since:** 7
 
@@ -24,13 +24,13 @@ Closes a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to close. |
+| fd | number | Yes | 待关闭文件的文件描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 
 ## close
@@ -39,7 +39,7 @@ Closes a file. This API uses a promise to return the result.
 declare function close(fd: number, callback: AsyncCallback<void>): void
 ```
 
-Closes a file. This API uses an asynchronous callback to return the result.
+关闭文件，使用callback异步回调。
 
 **Since:** 7
 
@@ -57,6 +57,6 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to close. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the file is closed asynchronously. |
+| fd | number | Yes | 待关闭文件的文件描述符。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步关闭文件之后的回调。 |
 

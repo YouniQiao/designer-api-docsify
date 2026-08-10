@@ -4,7 +4,7 @@
 export type UpdateOperation = dataShare.UpdateOperation
 ```
 
-Represents the batch update operation information.
+批量更新操作的参数结构。
 
 **Since:** 12
 

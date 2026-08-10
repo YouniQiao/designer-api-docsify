@@ -18,7 +18,7 @@ Enumerates USB port mode types.
 NONE = 0
 ```
 
-No function.
+没有功能。
 
 **Since:** 9
 

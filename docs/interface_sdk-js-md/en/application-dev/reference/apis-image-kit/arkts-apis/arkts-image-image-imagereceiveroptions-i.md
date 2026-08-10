@@ -1,6 +1,6 @@
 # ImageReceiverOptions
 
-Describes the initialization options for ImageReceiver.
+ImageReceiver的初始化选项。
 
 **Since:** 23
 
@@ -10,15 +10,23 @@ Describes the initialization options for ImageReceiver.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## capacity
 
 ```TypeScript
 capacity?: int
 ```
 
-Maximum number of images that can be accessed simultaneously.The value range is all integers, The value must be a positive integer less than or equal to 64.
+可同时访问的最大图像数量。该值必须为正整数，且小于或等于64张。
 
-**Type:** int
+该参数仅作为期望值，实际capacity由设备硬件决定。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -36,9 +44,11 @@ Maximum number of images that can be accessed simultaneously.The value range is 
 size?: Size
 ```
 
-Image size, with both the width and height greater than 0.
+图像的大小，包括宽与高，且值都大于0。单位：像素（px）。
 
-**Type:** Size
+该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。
+
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **Since:** 23
 

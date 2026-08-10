@@ -1,5 +1,11 @@
 # createIncrementalSource
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createIncrementalSource
 
 ```TypeScript
@@ -26,7 +32,7 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createIncrementalSource
@@ -51,11 +57,11 @@ Creates an ImageSource instance based on the buffer in incremental.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | 是 | The buffer of the image. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | The config of source. |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | 否 | The config of source. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 

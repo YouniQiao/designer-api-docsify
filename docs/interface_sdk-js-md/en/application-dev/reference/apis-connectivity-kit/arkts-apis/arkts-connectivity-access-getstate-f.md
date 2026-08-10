@@ -1,5 +1,11 @@
 # getState
 
+## Modules to Import
+
+```TypeScript
+import { access } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getState
 
 ```TypeScript
@@ -25,17 +31,18 @@ Obtains the Bluetooth status of a device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Bluetooth status. |
+| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) | Returns the Bluetooth status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied.<br>**Applicable version:** 10 - 12 |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,5 +1,11 @@
 # addPrinters（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## addPrinters
 
 ```TypeScript
@@ -25,21 +31,21 @@ function addPrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printers | Array&lt;PrinterInfo&gt; | 是 | 表示新到达的打印机列表。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 异步添加打印机之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步添加打印机之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerInfo : print.PrinterInfo = {
     printerId : '3232',
@@ -50,13 +56,13 @@ let printerInfo : print.PrinterInfo = {
     capability : undefined,
     options : 'opt'
 };
-print.addPrinters([printerInfo], (err: BusinessError) => {
-    if (err) {
-        console.error('addPrinters failed, because : ' + JSON.stringify(err));
+print.addPrinters([printerInfo], (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to add printers. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('addPrinters success');
     }
-})
+});
 ```
 
 
@@ -96,15 +102,15 @@ function addPrinters(printers: Array<PrinterInfo>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerInfo : print.PrinterInfo = {
     printerId : '3232',
@@ -118,7 +124,7 @@ let printerInfo : print.PrinterInfo = {
 print.addPrinters([printerInfo]).then(() => {
     console.info('add printers success.');
 }).catch((error: BusinessError) => {
-    console.error('add printers error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to add printers. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

@@ -1,20 +1,17 @@
 # Menu
 
-The **Menu** component is a vertical list of items presented to the user.
+以垂直列表形式显示的菜单。Menu组件支持配置菜单项、子菜单、图标、分隔线等内容，可用于展示操作选项、功能入口等场景。
 
-> **NOTE**
->
-> - This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate 
-> their 
->
-> - The **Menu** component must be used together with the 
-> [bindMenu]{@link CommonMethod#bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions)} or 
+> **说明：**
+
+> - Menu组件需和
+> [bindMenu]{@link CommonMethod#bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions)}或
 > [bindContextMenu]{@link CommonMethod#bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: ContextMenuOptions)}
-> method. It does not work when used alone.
+> 方法配合使用，不支持作为普通组件单独使用。
 
-## Child Components
+## 子组件
 
-This component contains the [MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and [MenuItemGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ child components.
+包含[MenuItem]{@link menu_item}、[MenuItemGroup]{@link menu_item_group}子组件。
 
 ## Menu
 
@@ -22,25 +19,22 @@ This component contains the [MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and 
 Menu()
 ```
 
-Creates a fixed container for a menu. This API does not have any parameters.
-    **NOTE**  
-    
-    - Rules for calculating the width of menus and menu items:  
-        
-        - During the layout, the width of each menu item is expected to be the same. If a child component has its  
-    width set, the [size calculation rule]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ prevails.  
-        
-        - If no width is set for the **Menu** component, it applies a default two-column width to the **MenuItem**  
-    and **MenuItemGroup** child components. If a menu item's content area exceeds the two-column width, the  
-    **Menu** component automatically expands the menu item's content area.  
-        
-        - When an explicit width is set for the **Menu** component, its child components **MenuItem** and  
-    **MenuItemGroup** adopt a fixed width (equal to the **Menu** component's configured width minus the padding).  
-        
-        - The minimum width is 64 vp.  
-    
-    - Universal attributes unsupported by **Menu**: [outline]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ attributes and the  
-    [shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ attribute
+作为菜单的固定容器，无参数。
+
+> **说明：**
+> 
+> - 菜单和菜单项宽度计算规则：
+> >
+> > - 布局过程中，期望每个菜单项的宽度一致。若子组件设置了宽度，则以[constraintSize]{@link CommonMethod#constraintSize}为准。
+> >
+> > - Menu不设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置默认2栅格的宽度，若菜单项内容区比2栅格宽，则会自适应撑开。
+> >
+> > - Menu设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置减去padding后的固定宽度。
+> >
+> > - Menu支持设置的最小宽度为64vp。
+> 
+> - Menu不支持的通用属性：[外描边设置]{@link common}下的属性、
+> [shadow]{@link CommonMethod#shadow(value: ShadowOptions | ShadowStyle)}。
 
 **Since:** 9
 
@@ -54,3 +48,4 @@ Creates a fixed container for a menu. This API does not have any parameters.
 
 ## Summary
 
+- [SubMenuExpandingMode](arkts-arkui-menu-submenuexpandingmode-e.md)

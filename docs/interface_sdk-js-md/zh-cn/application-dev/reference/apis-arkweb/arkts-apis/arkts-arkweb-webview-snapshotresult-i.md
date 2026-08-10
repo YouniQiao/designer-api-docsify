@@ -10,6 +10,12 @@ Represents a full drawing result.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## id
 
 ```TypeScript
@@ -54,7 +60,7 @@ size?: SizeOptions
 
 Actual size drawn on the web page.The value is of the number type, and the unit is vp.
 
-**类型：** SizeOptions
+**类型：** [SizeOptions](../../apis-arkui/arkts-apis/arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 23
 

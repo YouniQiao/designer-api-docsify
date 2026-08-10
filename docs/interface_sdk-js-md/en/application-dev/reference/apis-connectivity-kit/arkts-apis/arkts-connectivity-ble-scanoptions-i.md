@@ -10,6 +10,12 @@ Describes the parameters for scan.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## dutyMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ dutyMode?: ScanDuty
 
 Bluetooth LE scan mode
 
-**Type:** ScanDuty
+**Type:** [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
 
 **Since:** 10
 
@@ -40,7 +46,7 @@ interval?: int
 
 Time of delay for reporting the scan result
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -84,7 +90,7 @@ matchMode?: MatchMode
 
 Match mode for Bluetooth LE scan filters hardware match
 
-**Type:** MatchMode
+**Type:** [MatchMode](arkts-connectivity-ble-matchmode-e.md)
 
 **Since:** 10
 
@@ -106,7 +112,7 @@ phyType?: PhyType
 
 Physical Layer used during scan.
 
-**Type:** PhyType
+**Type:** [PhyType](arkts-connectivity-ble-phytype-e.md)
 
 **Since:** 12
 
@@ -128,7 +134,7 @@ reportMode?: ScanReportMode
 
 Report mode used during scan.
 
-**Type:** ScanReportMode
+**Type:** [ScanReportMode](arkts-connectivity-ble-scanreportmode-e.md)
 
 **Since:** 15
 

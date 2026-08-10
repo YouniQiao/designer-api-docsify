@@ -1,6 +1,6 @@
 # AccessibilityAbilityInfo
 
-Provides information about an accessibility application.
+辅助应用信息。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Provides information about an accessibility application.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## abilityTypes
 
 ```TypeScript
 readonly abilityTypes: Array<AbilityType>
 ```
 
-Accessibility application type.
+辅助应用类型。
 
 **Type:** Array&lt;AbilityType&gt;
 
@@ -38,7 +44,7 @@ Accessibility application type.
 readonly bundleName: string
 ```
 
-Bundle name.
+Bundle名称。
 
 **Type:** string
 
@@ -60,7 +66,7 @@ Bundle name.
 readonly capabilities: Array<Capability>
 ```
 
-Capabilities list of the accessibility application.
+辅助应用能力列表。
 
 **Type:** Array&lt;Capability&gt;
 
@@ -82,7 +88,7 @@ Capabilities list of the accessibility application.
 readonly description: string
 ```
 
-Description of the accessibility application.
+辅助应用描述。
 
 **Type:** string
 
@@ -104,7 +110,7 @@ Description of the accessibility application.
 readonly eventTypes: Array<EventType>
 ```
 
-List of events that the accessibility application focuses on.
+辅助应用关注的无障碍事件列表。
 
 **Type:** Array&lt;EventType&gt;
 
@@ -126,7 +132,7 @@ List of events that the accessibility application focuses on.
 readonly id: string
 ```
 
-Ability ID.
+ability id。
 
 **Type:** string
 
@@ -148,7 +154,7 @@ Ability ID.
 readonly label: string
 ```
 
-Name of the application in the extended service list.
+扩展应用在扩展服务列表中的名称。
 
 **Type:** string
 
@@ -170,7 +176,7 @@ Name of the application in the extended service list.
 readonly name: string
 ```
 
-Ability name.
+ability 名。
 
 **Type:** string
 
@@ -192,7 +198,7 @@ Ability name.
 readonly needHide: boolean
 ```
 
-Whether the auxiliary application is hidden in the list of installed extended services. The value **true** means the auxiliary application is hidden, and the value **false** means the opposite.
+辅助应用是否在已安装的扩展服务列表中被隐藏，true表示隐藏服务，false表示显示服务。
 
 **Type:** boolean
 
@@ -214,7 +220,7 @@ Whether the auxiliary application is hidden in the list of installed extended se
 readonly targetBundleNames: Array<string>
 ```
 
-Name of the target bundle.
+关注的目标Bundle名称。
 
 **Type:** Array&lt;string&gt;
 

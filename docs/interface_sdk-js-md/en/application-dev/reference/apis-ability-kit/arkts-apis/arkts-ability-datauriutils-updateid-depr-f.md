@@ -33,7 +33,7 @@ Updates the ID in the specified uri
 | --- | --- |
 | string | Returns the updated uri object. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

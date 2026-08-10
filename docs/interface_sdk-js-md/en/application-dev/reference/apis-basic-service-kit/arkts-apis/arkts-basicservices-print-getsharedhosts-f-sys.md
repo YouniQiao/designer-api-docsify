@@ -1,12 +1,18 @@
 # getSharedHosts (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getSharedHosts
 
 ```TypeScript
 function getSharedHosts(): Promise<SharedHost[]>
 ```
 
-Get all available shared hosts.
+获取所有可用的共享主机。
 
 **Since:** 24
 
@@ -32,6 +38,6 @@ Get all available shared hosts.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application. |
 

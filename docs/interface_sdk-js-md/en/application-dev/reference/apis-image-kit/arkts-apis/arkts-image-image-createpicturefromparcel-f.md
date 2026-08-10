@@ -1,15 +1,20 @@
 # createPictureFromParcel
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createPictureFromParcel
 
 ```TypeScript
 function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 ```
 
-Creates a Picture object from a MessageSequence object.
+从MessageSequence中获取Picture。
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 13
 
@@ -23,22 +28,22 @@ Images occupy a large amount of memory. When you finish using a Picture instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | MessageSequence object that stores the Picture information. |
+| sequence | rpc.MessageSequence | Yes | 保存有Picture信息的MessageSequence。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Picture object. |
+| [Picture](arkts-image-image-picture-i.md) | 返回Picture对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -52,10 +57,10 @@ class MySequence implements rpc.Parcelable {
   marshalling(messageSequence: rpc.MessageSequence) {
     if(this.picture != null) {
       this.picture.marshalling(messageSequence);
-      console.info('Marshalling success !');
+      console.info('Succeeded in marshalling.');
       return true;
     } else {
-      console.error('Marshalling failed !');
+      console.error('Failed to marshal.');
       return false;
     }
   }
@@ -70,13 +75,13 @@ class MySequence implements rpc.Parcelable {
   }
 }
 
-async function Marshalling_UnMarshalling(context: Context) {
+async function marshallingUnmarshalling(context: Context) {
   const resourceMgr = context.resourceManager;
   const rawFile = await resourceMgr.getRawFileContent("test.jpg");
-  let ops: image.SourceOptions = {
+  let opts: image.SourceOptions = {
     sourceDensity: 98,
   }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
+  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, opts);
   let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
   let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
   if (pictureObj != null) {

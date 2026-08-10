@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## anchorType
 
 ```TypeScript
@@ -20,7 +26,7 @@ anchorType: WindowAnchor
 
 一级子窗与主窗保持相对位置不变时的窗口锚点枚举。
 
-**类型：** WindowAnchor
+**类型：** [WindowAnchor](arkts-arkui-window-windowanchor-e.md)
 
 **起始版本：** 24
 
@@ -42,7 +48,7 @@ offsetX?: int
 
 一级子窗锚点与主窗锚点位置的X轴偏移量，单位为px。仅支持整数输入，浮点数向下取整，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 0
 
@@ -66,7 +72,7 @@ offsetY?: int
 
 一级子窗锚点与主窗锚点位置的Y轴偏移量，单位为px。仅支持整数输入，浮点数向下取整，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 0
 

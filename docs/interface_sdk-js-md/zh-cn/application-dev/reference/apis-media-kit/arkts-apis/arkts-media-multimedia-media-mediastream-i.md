@@ -10,6 +10,12 @@ Media Stream. AVPlayer use this for mediaData access, current version only suppo
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## bitrate
 
 ```TypeScript
@@ -18,7 +24,7 @@ bitrate: int
 
 biterate of this mediaStream.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -38,7 +44,7 @@ height: int
 
 video height.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -78,7 +84,7 @@ width: int
 
 video width.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 

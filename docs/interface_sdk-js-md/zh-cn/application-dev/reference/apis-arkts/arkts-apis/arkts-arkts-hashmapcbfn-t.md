@@ -20,7 +20,7 @@ HashMap中forEach方法的回调函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | V | 是 | 当前遍历到的元素键值对的值。  |
-| key | K | 是 | 当前遍历到的元素键值对的键。  |
-| map | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | 是 | 当前调用forEach方法的实例对象，默认值为当前实例对象。  |
+| value | V | 是 | 当前遍历到的元素键值对的值。 |
+| key | K | 是 | 当前遍历到的元素键值对的键。 |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | 是 | 当前调用forEach方法的实例对象，默认值为当前实例对象。 |
 

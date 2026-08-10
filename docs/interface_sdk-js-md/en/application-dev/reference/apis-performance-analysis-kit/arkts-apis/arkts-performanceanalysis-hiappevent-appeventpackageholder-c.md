@@ -1,6 +1,6 @@
 # AppEventPackageHolder
 
-Defines a subscription data holder for processing event information.
+订阅数据持有者类，用于对事件信息进行处理。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines a subscription data holder for processing event information.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(watcherName: string)
 ```
 
-Constructs an **AppEventPackageHolder** instance. You can call [addWatcher]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
+类构造函数，用于创建订阅数据持有者实例。先通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)添加事件观察者，再通过观察者名称关联到应用内已添加的观察者对象。
 
 **Since:** 9
 
@@ -32,9 +38,9 @@ Constructs an **AppEventPackageHolder** instance. You can call [addWatcher]\_\_\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcherName | string | Yes | Name of the event watcher added through [addWatcher]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If no watcher is added, no data is displayed by default. |
+| watcherName | string | Yes | 已通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)添加的事件观察者名称。若未通过addWatcher添加，则默认无数据。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Add the Watcher1 to subscribe to system events.
@@ -45,7 +51,7 @@ hiAppEvent.addWatcher({
       domain: hiAppEvent.domain.OS,
     }
   ],
-  });
+});
 
 // Create an AppEventPackageHolder instance. holder1 holds the event data subscribed by Watcher1 added through addWatcher.
 let holder1: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHolder("Watcher1");
@@ -63,7 +69,7 @@ ArkTS-Sta:
 setRow(size: int): void
 ```
 
-Sets the number of data records of the event package obtained each time. When **setRow()** and **setSize()** are called at the same time, only **setRow()** takes effect.
+设置每次取出的事件包的数据条数，优先级高于setSize，和setSize同时调用时仅setRow生效。
 
 **Since:** 12
 
@@ -79,16 +85,16 @@ Sets the number of data records of the event package obtained each time. When **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of events. The value range is (0, 2^31-1]. If the value is out of the range, an exception is thrown. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 事件条数，单位为条。取值范围(0, 2^31-1]，超出范围会抛异常。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 11104001 | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Create an AppEventPackageHolder instance. holder3 holds the event data subscribed by Watcher1 added through addWatcher.
@@ -109,7 +115,7 @@ ArkTS-Sta:
 setSize(size: int): void
 ```
 
-Sets the threshold for the data size of the event package obtained each time.
+设置每次取出的事件包的数据大小阈值。
 
 **Since:** 9
 
@@ -125,16 +131,16 @@ Sets the threshold for the data size of the event package obtained each time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Data size threshold, in bytes. The value range is [0, 2^31-1]. If the value is out of the range, an exception is thrown. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 数据大小阈值，单位为byte。取值范围[0, 2^31-1]，超出范围会抛异常。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 11104001 | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Create an AppEventPackageHolder instance. holder2 holds the event data subscribed by Watcher1 added through addWatcher.
@@ -149,11 +155,11 @@ holder2.setSize(1000);
 takeNext(): AppEventPackage
 ```
 
-Obtains the subscription event.
+获取订阅事件。
 
-The system obtains the subscription event data based on the data size threshold specified by **setSize** or the number of data records specified by **setRow**. By default, one subscription event data record is obtained. When all subscription event data is obtained, **null** is returned.
+系统根据setSize设置的数据大小阈值或setRow设置的条数来取出订阅事件数据，默认取1条订阅事件。当订阅事件数据全部被取出时返回null。
 
-When **setRow** and **setSize** are called at the same time, only **setRow** takes effect.
+当setRow和setSize同时调用时仅setRow生效。
 
 **Since:** 9
 
@@ -169,9 +175,9 @@ When **setRow** and **setSize** are called at the same time, only **setRow** tak
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Event package object. If all subscription event data has been retrieved, **null** is returned. |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | 取出的事件包对象，订阅事件数据被全部取出后会返回null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Create an AppEventPackageHolder instance. holder4 holds the event data subscribed by Watcher1 added through addWatcher.
@@ -186,7 +192,12 @@ let eventPkg: hiAppEvent.AppEventPackage | null = holder4.takeNext();
 takeNext(): AppEventPackage | null
 ```
 
-Obtains the subscription event.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The system obtains the subscription event data based on the data size threshold specified by setSize or the number of data records specified by setRow. By default, one subscription event data record is obtained. When all subscription event data is obtained, null is returned.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_When setRow and setSize are called at the same time, only setRow takes effect.
+获取订阅事件。
+
+&lt;br&gt;系统根据 **setSize** 设置的数据大小阈值或  
+**setRow** 设置的条数来取出订阅事件数据，默认取1条订阅事件。 当订阅事件数据全部被取出时返回null。
+
+&lt;br&gt;当 **setRow** 和 **setSize** 同时调用时仅 **setRow** 生效。
 
 **Since:** 23
 
@@ -202,5 +213,5 @@ Obtains the subscription event.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The system obt
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Event package object. If all subscription event data has been retrieved, null is returned. |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | 取出的事件包对象，订阅事件数据被全部取出后 会返回null。 |
 

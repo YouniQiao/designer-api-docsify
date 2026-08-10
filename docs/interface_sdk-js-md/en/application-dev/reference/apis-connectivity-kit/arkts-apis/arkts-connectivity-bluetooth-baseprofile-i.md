@@ -14,6 +14,12 @@ Base interface of profile.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getConnectionDevices
 
 ```TypeScript
@@ -42,7 +48,7 @@ Obtains the connected devices list of profile.
 | --- | --- |
 | Array&lt;string&gt; | Returns the address of connected devices list. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
@@ -81,9 +87,9 @@ Obtains the profile state of device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns { |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;

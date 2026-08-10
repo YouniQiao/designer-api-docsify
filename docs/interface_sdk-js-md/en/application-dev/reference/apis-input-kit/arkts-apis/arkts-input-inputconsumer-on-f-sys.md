@@ -1,18 +1,24 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## on('key')
 
 ```TypeScript
 function on(type: 'key', keyOptions: KeyOptions, callback: Callback<KeyOptions>): void
 ```
 
-Enables listening for system hotkey change events. This API uses an asynchronous callback to return the system hotkey data when a system hotkey event that meets the specified condition occurs.
-    **NOTE**  
-    
-    - You can subscribe to only the Down event of a key, or subscribe to both the Down and Up events of a key.  
-    
-    - If you subscribe to only the Up event of a key, the Down event may be consumed by the focus window, and the Up  
-    event may not be closed. In this case, check whether the design and implementation are proper.
+订阅系统快捷键，使用callback异步回调。
+
+> **说明：**
+> 
+> - 支持仅订阅按键的down事件，或者同时订阅按键的down事件和up事件。
+> 
+> - 若需要仅订阅按键的up事件，会存在down事件被焦点窗口消费，而无up事件闭环的风险，需要排查设计实现是否合理。
 
 **Since:** 8
 
@@ -28,18 +34,18 @@ Enables listening for system hotkey change events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'key' | Yes | Event type. Currently, only **key** is supported. |
-| keyOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Combination key options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyOptions&gt; | Yes | Callback used to return the combination key data when a combination key event that meets the specified condition occurs. |
+| type | 'key' | Yes | 事件类型，目前仅支持'key'。 |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | 组合键选项。从API版本26.0.0起keyOptions中新增参数 [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)，本接口无需关注此参数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | Yes | 回调函数，返回组合按键数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';

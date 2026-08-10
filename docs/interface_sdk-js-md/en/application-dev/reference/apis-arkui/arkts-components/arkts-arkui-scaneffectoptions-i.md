@@ -1,6 +1,6 @@
 # ScanEffectOptions
 
-Defines the scan effect options.
+扫光效果选项。
 
 **Since:** 10
 
@@ -16,14 +16,13 @@ Defines the scan effect options.
 enableScanEffect?: boolean
 ```
 
-Whether to enable the scan effect. Only the progress indicator of the  
-[linear, ring, and capsule]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type is supported.
+扫光效果的开关。仅支持[ProgressType](arkts-arkui-progresstype-e.md)类型为Linear、Ring、Capsule的进度条。
 
-**true**: The scan effect is enabled.
+true：表示开启扫光效果。
 
-**false**: The scan effect is disabled.
+false：表示关闭扫光效果。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 

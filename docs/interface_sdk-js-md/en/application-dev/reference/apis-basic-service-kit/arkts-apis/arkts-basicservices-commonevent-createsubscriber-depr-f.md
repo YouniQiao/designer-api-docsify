@@ -9,7 +9,7 @@ function createSubscriber(
   ): void
 ```
 
-Creates a subscriber. This API uses an asynchronous callback to return the result.
+以回调形式创建订阅者。
 
 **Since:** 7
 
@@ -27,10 +27,10 @@ Creates a subscriber. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subscriber information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommonEventSubscriber&gt; | Yes | Callback used to return the result. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | Yes | 表示订阅信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | Yes | 表示创建订阅者的回调方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import Base from '@ohos.base';
@@ -44,9 +44,9 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // Callback for subscriber creation.
-function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
+let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}`);
+        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
@@ -54,7 +54,7 @@ function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManag
 }
 
 // Create a subscriber.
-commonEvent.createSubscriber(subscribeInfo, createCB);
+commonEvent.createSubscriber(subscribeInfo, createCallBack);
 ```
 
 
@@ -64,7 +64,7 @@ commonEvent.createSubscriber(subscribeInfo, createCB);
 function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>
 ```
 
-Creates a subscriber. This API uses a promise to return the result.
+以Promise形式创建订阅者。
 
 **Since:** 7
 
@@ -82,15 +82,15 @@ Creates a subscriber. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subscriber information. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | Yes | 表示订阅信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CommonEventSubscriber&gt; | Promise used to return the subscriber object. |
+| Promise&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 返回订阅者对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import Base from '@ohos.base';
@@ -108,7 +108,7 @@ commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEv
     console.info("createSubscriber");
     subscriber = commonEventSubscriber;
 }).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}`);
+    console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 

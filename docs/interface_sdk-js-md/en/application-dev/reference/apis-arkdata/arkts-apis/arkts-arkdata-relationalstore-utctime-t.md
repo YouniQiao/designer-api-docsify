@@ -4,7 +4,7 @@
 type UTCTime = Date
 ```
 
-The time is in UTC format.
+用于表示UTC时间的数据类型。
 
 **Since:** 10
 

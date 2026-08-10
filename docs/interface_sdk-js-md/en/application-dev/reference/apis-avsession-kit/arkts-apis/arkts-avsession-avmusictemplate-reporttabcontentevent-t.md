@@ -4,7 +4,7 @@
 type ReportTabContentEvent = (tabId: string, tabContent: MediaTabContent) => void
 ```
 
-The report tab content event.
+标签页内容上报事件。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ The report tab content event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabId | string | Yes | tab id  |
-| tabContent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | tab content  |
+| tabId | string | Yes | 标签页的ID。 |
+| tabContent | [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | Yes | 标签页的内容。 |
 

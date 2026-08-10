@@ -1,6 +1,6 @@
 # TextContentAlign
 
-Enumerates the vertical alignment directions of the text content area.
+文本内容区垂直对齐方向。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates the vertical alignment directions of the text content area.
 TOP = 0
 ```
 
-Aligns the content area to the top.
+内容区顶部对齐。
 
 **Since:** 21
 
@@ -36,7 +36,7 @@ Aligns the content area to the top.
 CENTER = 1
 ```
 
-Aligns the content area to the center.
+内容区中心对齐。
 
 **Since:** 21
 
@@ -56,7 +56,7 @@ Aligns the content area to the center.
 BOTTOM = 2
 ```
 
-Aligns the content area to the bottom.
+内容区底部对齐。
 
 **Since:** 21
 

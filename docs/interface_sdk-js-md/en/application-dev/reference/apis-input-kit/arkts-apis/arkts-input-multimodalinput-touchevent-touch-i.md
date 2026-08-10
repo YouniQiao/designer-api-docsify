@@ -1,6 +1,6 @@
 # Touch
 
-Defines the touch point information.
+触屏点信息。
 
 **Since:** 9
 
@@ -10,16 +10,22 @@ Defines the touch point information.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+```
+
 ## globalX
 
 ```TypeScript
 globalX?: int
 ```
 
-X coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ When being used as an input parameter, this parameter is mandatory if the value of  
-[TouchEventData.useGlobalCoordinate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case,the X coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_When being used as an output parameter, its value is reported by the system.
+该触屏输入事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
+[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -35,10 +41,10 @@ X coordinate of the touch event in the global coordinate system with the upper-l
 globalY?: int
 ```
 
-Y coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ When being used as an input parameter, this parameter is mandatory if the value of  
-[TouchEventData.useGlobalCoordinate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case,the Y coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_When being used as an output parameter, its value is reported by the system.
+该触屏输入事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
+[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -54,9 +60,9 @@ Y coordinate of the touch event in the global coordinate system with the upper-l
 height: int
 ```
 
-Height of the touch area, in pixels. The value can only be an integer.
+触屏区域的高度，单位为像素（px）。当前仅支持整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -72,9 +78,9 @@ Height of the touch area, in pixels. The value can only be an integer.
 id: int
 ```
 
-Touch event ID.
+触屏输入事件ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -90,9 +96,9 @@ Touch event ID.
 pressedTime: long
 ```
 
-Press timestamp, in microseconds (μs) since the system starts.
+按下时间戳，表示系统启动运行至今逝去的微秒数，单位为微秒（μs）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -108,9 +114,9 @@ Press timestamp, in microseconds (μs) since the system starts.
 pressure: double
 ```
 
-Pressure value. The value range is [0.0, 1.0]. The value **0.0** indicates that the pressure is not supported.
+压力值，取值范围是[0.0, 1.0]，0.0表示不支持。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -126,9 +132,9 @@ Pressure value. The value range is [0.0, 1.0]. The value **0.0** indicates that 
 rawX: int
 ```
 
-X coordinate of the input device. Currently, only integers are supported. The unit is pixels.
+输入设备上的X坐标。当前仅支持整数，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -144,9 +150,9 @@ X coordinate of the input device. Currently, only integers are supported. The un
 rawY: int
 ```
 
-Y coordinate of the input device. Currently, only integers are supported. The unit is pixels.
+输入设备上的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -162,9 +168,9 @@ Y coordinate of the input device. Currently, only integers are supported. The un
 screenX: int
 ```
 
-X coordinate of the touch event in the relative coordinate system with the upper-left corner of the specified screen as the origin. Currently, only integers are supported. The unit is pixels.
+该触屏输入事件以指定屏幕左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -180,9 +186,9 @@ X coordinate of the touch event in the relative coordinate system with the upper
 screenY: int
 ```
 
-Y coordinate of the touch event in the relative coordinate system with the upper-left corner of the specified screen as the origin. Currently, only integers are supported. The unit is pixels.
+该触屏输入事件以指定屏幕左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -198,9 +204,9 @@ Y coordinate of the touch event in the relative coordinate system with the upper
 tiltX: int
 ```
 
-Angle relative to the YZ plane, in degrees. The value range is [-90, 90]. A positive value indicates a rightward tilt.
+相对YZ平面的角度，单位为度，取值的范围[-90, 90]，其中正值是向右倾斜。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -216,9 +222,9 @@ Angle relative to the YZ plane, in degrees. The value range is [-90, 90]. A posi
 tiltY: int
 ```
 
-Angle relative to the XZ plane, in degrees. The value range is [-90, 90]. A positive value indicates a downward tilt.
+相对XZ平面的角度，单位为度，取值的范围[-90, 90]，其中正值是向下倾斜。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -234,9 +240,9 @@ Angle relative to the XZ plane, in degrees. The value range is [-90, 90]. A posi
 toolHeight: int
 ```
 
-Height of the tool area, in pixels. The value can only be an integer.
+工具区域高度，单位为像素（px）。当前仅支持整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -252,9 +258,9 @@ Height of the tool area, in pixels. The value can only be an integer.
 toolType: ToolType
 ```
 
-Tool type.
+工具类型。
 
-**Type:** ToolType
+**Type:** [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md)
 
 **Since:** 9
 
@@ -270,9 +276,9 @@ Tool type.
 toolWidth: int
 ```
 
-Width of the tool area, in pixels. The value can only be an integer.
+工具区域宽度，单位为像素（px）。当前仅支持整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -288,9 +294,9 @@ Width of the tool area, in pixels. The value can only be an integer.
 toolX: int
 ```
 
-X coordinate of the tool area center in the relative coordinate system with the upper-left corner of the specified screen as the origin. Currently, only integers are supported. The unit is pixels.
+工具区域的中心点以指定屏幕左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -306,9 +312,9 @@ X coordinate of the tool area center in the relative coordinate system with the 
 toolY: int
 ```
 
-Y coordinate of the tool area center in the relative coordinate system with the upper-left corner of the specified screen as the origin. Currently, only integers are supported. The unit is pixels.
+工具区域的中心点以指定屏幕左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -324,9 +330,9 @@ Y coordinate of the tool area center in the relative coordinate system with the 
 width: int
 ```
 
-Width of the touch area, in pixels. The value can only be an integer.
+触屏区域的宽度，单位为像素（px）。当前仅支持整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -342,9 +348,9 @@ Width of the touch area, in pixels. The value can only be an integer.
 windowX: int
 ```
 
-X coordinate in the relative coordinate system with the upper-left corner of the window where the touch is located as the origin. Currently, only integers are supported. The unit is pixels.
+触屏所在窗口左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -360,9 +366,9 @@ X coordinate in the relative coordinate system with the upper-left corner of the
 windowY: int
 ```
 
-Y coordinate in the relative coordinate system with the upper-left corner of the window where the touch is located as the origin. Currently, only integers are supported. The unit is pixels.
+触屏所在窗口左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

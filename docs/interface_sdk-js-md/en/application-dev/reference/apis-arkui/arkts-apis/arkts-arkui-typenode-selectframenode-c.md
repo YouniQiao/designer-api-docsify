@@ -1,6 +1,6 @@
 # SelectFrameNode
 
-Define the Select type of FrameNode.
+定义Select类型的FrameNode。
 
 **Inheritance/Implementation:** SelectFrameNode extends [TypedFrameNode<SelectAttribute>](TypedFrameNode<SelectAttribute>)
 
@@ -18,7 +18,7 @@ Define the Select type of FrameNode.
 abstract initialize(value: Array<SelectOption>): SelectAttribute
 ```
 
-Initialize Select FrameNode.
+初始化Select类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Select FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Yes |  |
+| value | Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md) |  |
 

@@ -1,5 +1,11 @@
 # setUserGrantedBundleState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+```
+
 ## setUserGrantedBundleState
 
 ```TypeScript
@@ -7,7 +13,7 @@ function setUserGrantedBundleState(targetBundle: BundleOption,
     enabledBundles: BundleOption[], enabled: boolean): Promise<void>
 ```
 
-Sets the enabling state of device notification access for the specified application.This API uses a promise to return the result.
+设置指定应用中“已获取的本机通知”的应用通知开关状态。使用Promise异步回调。
 
 **Since:** 22
 
@@ -25,27 +31,27 @@ Sets the enabling state of device notification access for the specified applicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetBundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE\_\_\_ESCAPED\_UNDERSCORE\_\_\_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. Otherwise, error code 1600022 is returned. |
-| enabledBundles | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Authorized applications. |
-| enabled | boolean | Yes | Whether the device notification access for the specified application is enabled. The value **true** indicates that this functionality is enabled, and **false** indicates the opposite. |
+| targetBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 需要设置的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)， 否则返回1600022错误码。 |
+| enabledBundles | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)[] | Yes | 被授权的应用信息列表。 |
+| enabled | boolean | Yes | 表示“已获取的本机通知”的应用授权状态是否启用，true表示已启用，false表示未启用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600003 | Failed to connect to the service. |
+| 1600022 | The specified bundle is invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let targetBundle: notificationExtensionSubscription.BundleOption =
@@ -62,7 +68,7 @@ let enabledBundles: notificationExtensionSubscription.BundleOption[] = [
 notificationExtensionSubscription.setUserGrantedBundleState(targetBundle, enabledBundles, true).then(() => {
   console.info(`setUserGrantedBundleState successfully.`);
 }).catch((err: BusinessError) => {
-  console.error(`setUserGrantedBundleState fail: ${JSON.stringify(err)}`);
+  console.error(`setUserGrantedBundleState fail, code is ${err.code}, message is ${err.message}`);
 });
 ```
 

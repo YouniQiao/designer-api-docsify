@@ -1,5 +1,11 @@
 # getCachedGnssLocationsSize
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## getCachedGnssLocationsSize
 
 ```TypeScript
@@ -26,9 +32,9 @@ Obtain the number of cached GNSS locations reported at a time
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -71,7 +77,7 @@ Obtain the number of cached GNSS locations reported at a time
 | --- | --- |
 | Promise&lt;number&gt; | The promise returned by the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

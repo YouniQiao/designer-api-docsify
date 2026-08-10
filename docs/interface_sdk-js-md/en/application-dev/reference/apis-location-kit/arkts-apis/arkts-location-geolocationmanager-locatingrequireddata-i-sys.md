@@ -12,6 +12,12 @@ Describes the structure of the data required for locating.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## bluetoothData
 
 ```TypeScript
@@ -20,7 +26,7 @@ bluetoothData?: BluetoothScanInfo
 
 Bluetooth scan info.
 
-**Type:** BluetoothScanInfo
+**Type:** [BluetoothScanInfo](arkts-location-geolocationmanager-bluetoothscaninfo-i-sys.md)
 
 **Since:** 10
 
@@ -40,7 +46,7 @@ campedCellInfo?: CellInfo
 
 Indicates camped cell information.
 
-**Type:** CellInfo
+**Type:** [CellInfo](arkts-location-geolocationmanager-cellinfo-i-sys.md)
 
 **Since:** 23
 
@@ -62,7 +68,7 @@ neighboringCellInfo?: CellInfo[]
 
 Indicates neighboring cell information.
 
-**Type:** CellInfo[]
+**Type:** [CellInfo](arkts-location-geolocationmanager-cellinfo-i-sys.md)[]
 
 **Since:** 23
 
@@ -84,7 +90,7 @@ slotId?: int
 
 Indicates the card slot index number.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -106,7 +112,7 @@ wifiData?: WifiScanInfo
 
 WiFi scan info.
 
-**Type:** WifiScanInfo
+**Type:** [WifiScanInfo](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifi-wifiscaninfo-i.md)
 
 **Since:** 10
 

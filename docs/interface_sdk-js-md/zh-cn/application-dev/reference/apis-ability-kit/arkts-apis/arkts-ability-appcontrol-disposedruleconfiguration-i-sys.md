@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { appControl } from 'kits/@kit.AbilityKit';
+```
+
 ## appId
 
 ```TypeScript
@@ -23,11 +29,11 @@ appId: string
 **说明：**
 
 appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[获取应用的appId](../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appid)。
 
-[appIdentifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_也是应用的唯一标识，详情信息可参考  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_，获取方法参见  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_。
+[appIdentifier](arkts-ability-bundleinfo-signatureinfo-i.md)也是应用的唯一标识，详情信息可参考  
+[什么是appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，获取方法参见  
+[获取应用的appIdentifier](../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appidentifier)。
 
 **类型：** string
 
@@ -51,7 +57,7 @@ appIndex: int
 
 appIndex为0时，表示设置主应用的拦截规则。appIndex大于0时，表示设置指定分身应用的拦截规则。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -71,7 +77,7 @@ disposedRule: DisposedRule
 
 表示对应用的拦截规则，包括拦截时将拉起能力的类型等。
 
-**类型：** DisposedRule
+**类型：** [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md)
 
 **起始版本：** 20
 

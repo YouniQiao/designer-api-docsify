@@ -10,6 +10,12 @@ Provides network sharing related interfaces.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
+## Modules to Import
+
+```TypeScript
+import { sharing } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 <!--Del-->

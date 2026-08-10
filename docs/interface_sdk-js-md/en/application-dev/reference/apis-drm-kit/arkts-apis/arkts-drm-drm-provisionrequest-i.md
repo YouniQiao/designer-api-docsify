@@ -10,6 +10,12 @@ Provides the drm provision request definitions.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## data
 
 ```TypeScript

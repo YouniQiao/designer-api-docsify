@@ -4,7 +4,7 @@
 type SensorFrequency = 'game' | 'ui' | 'normal'
 ```
 
-Defines the reporting frequency mode of the sensor.
+传感器上报频率模式，提供预定义的频率档位，方便开发者快速设置常用的上报频率。
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ Defines the reporting frequency mode of the sensor.
 
 | Type | Description |
 | --- | --- |
-| 'game' | Game mode, which specifies a sensor data reporting frequency of 20,000,000 ns. This parameter takes effect only when the frequency is within the frequency range supported by the hardware. |
-| 'ui' | UI mode, which specifies a sensor data reporting frequency of 60,000,000 ns. This parameter takes effect only when the frequency is within the frequency range supported by the hardware. |
-| 'normal' | Normal mode, which specifies a sensor data reporting frequency of 200,000,000 ns. This parameter takes effect only when the frequency is within the frequency range supported by the hardware. |
+| 'game' | 游戏模式，用于指定传感器上报频率。频率值：20000000ns（即20ms），适用于对数据延迟敏感的游戏类应用。该频率被设置在硬件支持的频率范围内时会生效，值固定为'game'字符串。 |
+| 'ui' | UI模式，用于指定传感器上报频率。频率值：60000000ns（即60ms），适用于对数据更新有中等要求的UI交互类应用。该频率被设置在硬件支持的频率范围内时会生效，值固定为'ui'字符串。 |
+| 'normal' | 普通模式，用于指定传感器上报频率。频率值：200000000ns（即200ms），适用于对数据更新频率要求不高的常规应用。该频率被设置在硬件支持的频率范围内时会生效，值固定为'normal '字符串。 |
 

@@ -1,6 +1,6 @@
 # CameraDevice
 
-Describes the camera device information.
+相机设备信息。
 
 **Since:** 10
 
@@ -9,6 +9,12 @@ Describes the camera device information.
 <!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## isRetractable
 

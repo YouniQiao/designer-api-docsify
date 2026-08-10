@@ -1,8 +1,8 @@
 # CameraInput
 
-CameraInput** defines the camera input object.
+相机设备输入对象。
 
-It provides camera device information used in [Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
 
 **Since:** 10
 
@@ -11,6 +11,12 @@ It provides camera device information used in [Session]\_\_\_JSDOC\_LINK\_DESC\_
 <!--Device-camera-interface CameraInput--><!--Device-camera-interface CameraInput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## closeDelayed
 
@@ -40,7 +46,7 @@ Delay close camera.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | delay time for turning off camera, in units of second. |
+| time | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | delay time for turning off camera, in units of second. |
 
 **Return value:**
 
@@ -52,9 +58,9 @@ Delay close camera.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## controlAuxiliary
 
@@ -78,8 +84,8 @@ Control auxiliary.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| auxiliaryType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Auxiliary type. |
-| auxiliaryStatus | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Auxiliary status. |
+| auxiliaryType | [AuxiliaryType](arkts-camera-camera-auxiliarytype-e-sys.md) | Yes | Auxiliary type. |
+| auxiliaryStatus | [AuxiliaryStatus](arkts-camera-camera-auxiliarystatus-e-sys.md) | Yes | Auxiliary status. |
 
 **Return value:**
 
@@ -91,9 +97,9 @@ Control auxiliary.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## usedAsPosition
 
@@ -117,13 +123,13 @@ Sets the camera to be used as a camera at the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The positon used for the camera. |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | Yes | The positon used for the camera. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 

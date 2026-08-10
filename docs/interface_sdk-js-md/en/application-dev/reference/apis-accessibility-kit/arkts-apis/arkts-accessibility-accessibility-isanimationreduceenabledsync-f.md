@@ -1,12 +1,18 @@
 # isAnimationReduceEnabledSync
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isAnimationReduceEnabledSync
 
 ```TypeScript
 function isAnimationReduceEnabledSync(): boolean
 ```
 
-Checks whether animation reduction mode is enabled with a synchronous method.
+使用同步方法判断减弱动效模式是否开启。
 
 **Since:** 23
 
@@ -22,9 +28,9 @@ Checks whether animation reduction mode is enabled with a synchronous method.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether animation reduction mode is enabled. Returns **true** if animation reduction mode is enabled; returns **false** otherwise. |
+| boolean | 表示是否开启减弱动效模式。返回true表示开启减弱动效模式；返回false表示未开启减弱动效模式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

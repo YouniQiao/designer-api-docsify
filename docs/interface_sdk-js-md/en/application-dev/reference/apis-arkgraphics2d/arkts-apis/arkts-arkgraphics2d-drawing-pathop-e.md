@@ -1,6 +1,6 @@
 # PathOp
 
-Enumerates the path operation types. It is often used in path combination and clipping scenarios.
+路径操作类型枚举，可用于合并或裁剪路径等功能。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the path operation types. It is often used in path combination and cl
 DIFFERENCE = 0
 ```
 
-Difference operation.
+差集操作，保留第一条路径中不与第二条路径重叠的区域。适用于需要从路径中减去某些区域的场景。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Difference operation.
 INTERSECT = 1
 ```
 
-Intersection operation.
+交集操作，保留两条路径重叠的区域。适用于需要获取路径交集部分的场景。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Intersection operation.
 UNION = 2
 ```
 
-Union operation.
+并集操作，合并两条路径的所有区域。适用于需要合并多个路径的场景。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Union operation.
 XOR = 3
 ```
 
-XOR operation.
+异或操作，保留两条路径不重叠的区域。适用于需要获取路径非重叠部分的场景。
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ XOR operation.
 REVERSE_DIFFERENCE = 4
 ```
 
-Reverse difference operation.
+反向差集操作，保留第二条路径中不与第一条路径重叠的区域。适用于需要反向减去路径的场景。
 
 **Since:** 12
 

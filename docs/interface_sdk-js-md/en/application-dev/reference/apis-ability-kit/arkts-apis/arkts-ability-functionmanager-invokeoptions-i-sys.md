@@ -12,16 +12,22 @@ Invoke options for function execution.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { functionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## context
 
 ```TypeScript
 context?: Context
 ```
 
-Context of the caller.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Note: Currently, only  
-[UIAbilityContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported.
+Context of the caller.&lt;br&gt;Note: Currently, only  
+ [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.
 
-**Type:** Context
+**Type:** [Context](arkts-ability-context-c-sys.md)
 
 **Since:** 26.0.0
 

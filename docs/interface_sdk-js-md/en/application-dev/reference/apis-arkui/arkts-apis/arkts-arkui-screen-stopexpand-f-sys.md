@@ -1,12 +1,18 @@
 # stopExpand (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## stopExpand
 
 ```TypeScript
 function stopExpand(expandScreen:Array<long>, callback: AsyncCallback<void>): void
 ```
 
-Stops extended mode. This API uses an asynchronous callback to return the result.
+停止屏幕的扩展模式，使用callback异步回调。
 
 **Since:** 10
 
@@ -24,27 +30,28 @@ Stops extended mode. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| expandScreen | Array&lt;long&gt; | Yes | IDs of the extended screens. Each ID is an integer. The size of the **expandScreen** array cannot exceed 1000. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If extended mode is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
+| expandScreen | Array&lt;long&gt; | Yes | 扩展屏幕ID集合，其中ID为整数。 expandScreen数组大小不应超过1000。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止屏幕扩展模式成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1400001 | Invalid display or screen. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let expandScreenIds: Array<number> = [1, 2, 3];
+let expandScreenIds: Array<number> = [1, 2, 3]; // ID array of extended screens.
+// Stop the extend mode.
 screen.stopExpand(expandScreenIds, (err: BusinessError) => {
   const errCode: number = err.code;
   if (errCode) {
-    console.error(`Failed to stop expand screens. Code:${err.code}, message is ${err.message}`);
+    console.error(`Failed to stop expand screens. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('Succeeded in stopping expand screens.');
@@ -58,7 +65,7 @@ screen.stopExpand(expandScreenIds, (err: BusinessError) => {
 function stopExpand(expandScreen:Array<long>): Promise<void>
 ```
 
-Stops extended mode. This API uses a promise to return the result.
+停止屏幕的扩展模式，使用Promise异步回调。
 
 **Since:** 10
 
@@ -76,32 +83,33 @@ Stops extended mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| expandScreen | Array&lt;long&gt; | Yes | IDs of the extended screens. Each ID is an integer. The size of the **expandScreen** array cannot exceed 1000. |
+| expandScreen | Array&lt;long&gt; | Yes | 扩展屏幕ID集合，其中ID为整数。expandScreen数组大小不应超过1000。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1400001 | Invalid display or screen. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let expandScreenIds: Array<number> = [1, 2, 3];
+let expandScreenIds: Array<number> = [1, 2, 3]; // ID array of extended screens.
+// Stop the extend mode.
 screen.stopExpand(expandScreenIds).then(() => {
   console.info('Succeeded in stopping expand screens.');
 }).catch((err: BusinessError) => {
-  console.error(`Failed to stop expand screens. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to stop expand screens. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

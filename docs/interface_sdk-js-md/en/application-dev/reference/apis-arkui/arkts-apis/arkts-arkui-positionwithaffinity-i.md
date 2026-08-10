@@ -1,6 +1,6 @@
 # PositionWithAffinity
 
-Describes the position and affinity of a glyph.
+位置以及亲和度。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Describes the position and affinity of a glyph.
 affinity: Affinity
 ```
 
-Affinity of the position.
+位置亲和度，表示光标位置在字形边界处的倾向性，具体取值请参见Affinity枚举。
 
-**Type:** Affinity
+**Type:** [Affinity](arkts-arkui-affinity-t.md)
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Affinity of the position.
 position: number
 ```
 
-Index of the glyph or character to the component. The value is an integer.
+字形或字符相对于组件内容的索引，整数。
 
 **Type:** number
 

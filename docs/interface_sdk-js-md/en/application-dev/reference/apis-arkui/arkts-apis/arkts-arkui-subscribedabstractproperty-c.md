@@ -1,7 +1,11 @@
 # SubscribedAbstractProperty
 
-Represents a synchronized property from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中属性的单/双向同步绑定对象，用于与AppStorage/LocalStorage中的属性建立数据同步关系。SubscribedAbstractProperty实例需要通过[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口手动释放，以取消同步关系并无效化实例。
+
+> **说明：**
+> 
+> 从API version 12开始，AppStorage/LocalStorage支持Map、Set、Date类型，支持null、undefined以及联合类型。
 
 **Since:** 9
 
@@ -17,8 +21,9 @@ Represents a synchronized property from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or
 abstract aboutToBeDeleted(): void
 ```
 
-Cancels the synchronization relationship between the [SubscribedAbstractProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_instance and \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, whether it is a one-way or two-way binding.After **aboutToBeDeleted** is called, the **SubscribedAbstractProperty** instance is invalidated, meaning it can no longer be used to call the [set]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ or [get]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ API.
+取消[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)实例对  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)的单向或双向同步关系，并无效化SubscribedAbstractProperty实例。即调用aboutToBeDeleted方法之后，不能再使用SubscribedAbstractProperty实例调用[set](arkts-arkui-localstorage-c.md#set)或[get](arkts-arkui-localstorage-c.md#get)方法。
 
 **Since:** 10
 
@@ -35,7 +40,7 @@ Cancels the synchronization relationship between the [SubscribedAbstractProperty
 ```TypeScript
 constructor(
     /**
-     * Subscriber IPropertySubscriber.
+     * 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。
      *
      * @syscap SystemCapability.ArkUI.ArkUI.Full
      * @systemapi
@@ -44,7 +49,7 @@ constructor(
      */
     subscribeMe?: IPropertySubscriber,
     /**
-     * Subscriber info.
+     * 变量信息，用于标识该订阅关系；不传入时默认为undefined。
      *
      * @syscap SystemCapability.ArkUI.ArkUI.Full
      * @systemapi
@@ -55,13 +60,13 @@ constructor(
   )
 ```
 
-Constructor.
+构造函数。若传入了subscribeMe参数建立了订阅关系，订阅关系不再需要时，应调用[unlinkSuscriber()](arkts-arkui-subscribedabstractproperty-c.md#unlinksuscriber)解除订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取）。
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-SubscribedAbstractProperty-constructor(    /**     * Subscriber IPropertySubscriber.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    subscribeMe?: IPropertySubscriber,    /**     * Subscriber info.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    info?: string,  )--><!--Device-SubscribedAbstractProperty-constructor(    /**     * Subscriber IPropertySubscriber.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    subscribeMe?: IPropertySubscriber,    /**     * Subscriber info.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    info?: string,  )-End-->
+<!--Device-SubscribedAbstractProperty-constructor(    /**     * 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    subscribeMe?: IPropertySubscriber,    /**     * 变量信息，用于标识该订阅关系；不传入时默认为undefined。     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    info?: string,  )--><!--Device-SubscribedAbstractProperty-constructor(    /**     * 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    subscribeMe?: IPropertySubscriber,    /**     * 变量信息，用于标识该订阅关系；不传入时默认为undefined。     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    info?: string,  )-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,8 +74,8 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeMe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Variable properties. |
-| info | string | No | Variable information. |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
+| info | string | No | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
 ## createOneWaySync
 
@@ -78,7 +83,7 @@ Constructor.
 createOneWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyOneWay<T>
 ```
 
-Creates one-way synchronization.
+创建单向同步属性。数据变更仅从数据源向订阅者单向传播。订阅关系不再需要时，应调用[unlinkSuscriber()](arkts-arkui-subscribedabstractproperty-c.md#unlinksuscriber)解除订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取），或由返回的[SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md)对象的[aboutToBeDeleted()](arkts-arkui-syncedpropertyoneway-c-sys.md#abouttobedeleted)方法处理取消订阅。
 
 **Since:** 7
 
@@ -92,14 +97,14 @@ Creates one-way synchronization.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeMe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Variable properties. |
-| info | string | No | Variable information. |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
+| info | string | No | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | One-way synchronized property. |
+| [SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md)&lt;T&gt; | 返回创建的单向同步属性对象，用于接收父组件状态值的单向同步，当父组件状态变化时更新自身值。 |
 
 ## createTwoWaySync
 
@@ -107,7 +112,7 @@ Creates one-way synchronization.
 createTwoWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyTwoWay<T>
 ```
 
-Creates two-way synchronization.
+创建双向同步属性。数据变更在数据源与订阅者之间双向传播。与[createOneWaySync](arkts-arkui-subscribedabstractproperty-c.md#createonewaysync)相比，该方法支持数据源与订阅者之间的双向同步，适用于订阅者也需要反向修改数据源的场景；若仅需数据源向订阅者单向同步，请使用[createOneWaySync](arkts-arkui-subscribedabstractproperty-c.md#createonewaysync)。订阅关系不再需要时，应调用[unlinkSuscriber()](arkts-arkui-subscribedabstractproperty-c.md#unlinksuscriber)解除订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取），或由返回的[SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md)对象的[aboutToBeDeleted()](arkts-arkui-syncedpropertytwoway-c-sys.md#abouttobedeleted)方法处理取消订阅。
 
 **Since:** 7
 
@@ -121,14 +126,14 @@ Creates two-way synchronization.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeMe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Variable properties. |
-| info | string | No | Variable information. |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
+| info | string | No | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Two-way synchronized property. |
+| [SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md)&lt;T&gt; | Two-way synchronized property. |
 
 ## get
 
@@ -136,8 +141,8 @@ Creates two-way synchronization.
 abstract get(): T
 ```
 
-Reads the data of the synchronized property from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+读取[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所同步属性的数据。
 
 **Since:** 9
 
@@ -155,7 +160,7 @@ Reads the data of the synchronized property from \_\_\_MD\_LINK\_DESC\_USD\_0\_\
 
 | Type | Description |
 | --- | --- |
-| T | Data of the synchronized property in AppStorage or LocalStorage. |
+| T | AppStorage/LocalStorage同步属性的数据。 |
 
 ## id
 
@@ -163,7 +168,7 @@ Reads the data of the synchronized property from \_\_\_MD\_LINK\_DESC\_USD\_0\_\
 id(): number
 ```
 
-Called when the subscriber ID is entered.
+获取ID时调用。
 
 **Since:** 7
 
@@ -177,7 +182,7 @@ Called when the subscriber ID is entered.
 
 | Type | Description |
 | --- | --- |
-| number |  |
+| number | 返回该订阅属性的唯一标识ID。 |
 
 ## info
 
@@ -185,7 +190,8 @@ Called when the subscriber ID is entered.
 info(): string
 ```
 
-Property name.
+返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所同步属性的属性名。
 
 **Since:** 10
 
@@ -201,7 +207,7 @@ Property name.
 
 | Type | Description |
 | --- | --- |
-| string | Property name. |
+| string | AppStorage/LocalStorage中所同步属性的属性名。 |
 
 ## notifyHasChanged
 
@@ -209,7 +215,7 @@ Property name.
 protected notifyHasChanged(newValue: T): void
 ```
 
-Notifies subscribers that the value has changed.
+通知变化时调用。
 
 **Since:** 7
 
@@ -223,7 +229,7 @@ Notifies subscribers that the value has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | New value after the change. |
+| newValue | T | Yes | 更改后的新值。 |
 
 ## notifyPropertyRead
 
@@ -231,7 +237,7 @@ Notifies subscribers that the value has changed.
 protected notifyPropertyRead(): void
 ```
 
-Notifies subscribers that the property has been read.
+通知读取时调用。
 
 **Since:** 7
 
@@ -247,7 +253,7 @@ Notifies subscribers that the property has been read.
 numberOfSubscrbers(): number
 ```
 
-Obtains the number of subscribers.
+获取订阅者数量时调用。
 
 **Since:** 7
 
@@ -261,7 +267,7 @@ Obtains the number of subscribers.
 
 | Type | Description |
 | --- | --- |
-| number | Number of subscribers. |
+| number | 返回订阅者数量。 |
 
 ## set
 
@@ -269,12 +275,8 @@ Obtains the number of subscribers.
 abstract set(newValue: T): void
 ```
 
-Sets the data of the synchronized property in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_. The value of **newValue** must be of the **T**  
-type. Since API version 12, it can be **null** or **undefined**.
-    **NOTE**
-    Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,  
-    **undefined**, and union types.
+设置[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所同步属性的数据，newValue必须是T类型，从API version 12开始可以为null或undefined。
 
 **Since:** 9
 
@@ -292,7 +294,7 @@ type. Since API version 12, it can be **null** or **undefined**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | Data to set. Since API version 12, the value can be **null** or **undefined**. |
+| newValue | T | Yes | AppStorage/LocalStorage中所同步属性的新值，从API version 12开始可以为null或undefined。 |
 
 ## unlinkSuscriber
 
@@ -300,7 +302,7 @@ type. Since API version 12, it can be **null** or **undefined**.
 unlinkSuscriber(subscriberId: number): void
 ```
 
-Removes a subscriber.
+根据订阅者ID解除订阅时调用。
 
 **Since:** 7
 
@@ -314,7 +316,7 @@ Removes a subscriber.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriberId | number | Yes | ID of the subscriber to remove. |
+| subscriberId | number | Yes | 要解除订阅的订阅者ID，需为已通过[createTwoWaySync](arkts-arkui-subscribedabstractproperty-c.md#createtwowaysync) 或[createOneWaySync](arkts-arkui-subscribedabstractproperty-c.md#createonewaysync)建立订阅关系的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
 
 ## id_
 
@@ -322,7 +324,7 @@ Removes a subscriber.
 private id_
 ```
 
-Private member variable ID.
+订阅属性的唯一标识ID，用于在订阅关系管理中区分不同的订阅属性实例。
 
 **Since:** 7
 
@@ -338,7 +340,7 @@ Private member variable ID.
 private info_?
 ```
 
-Variable information.
+变量信息，用于标识该订阅关系。
 
 **Since:** 7
 
@@ -354,7 +356,7 @@ Variable information.
 protected subscribers_: Set<number>
 ```
 
-A set of subscribers.
+订阅者集合。
 
 **Type:** Set&lt;number&gt;
 

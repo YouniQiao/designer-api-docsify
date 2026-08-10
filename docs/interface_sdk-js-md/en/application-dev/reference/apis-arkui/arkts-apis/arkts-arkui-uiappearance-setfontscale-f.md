@@ -1,14 +1,18 @@
 # setFontScale
 
+## Modules to Import
+
+```TypeScript
+import { uiAppearance } from 'kits/@kit.ArkUI';
+```
+
 ## setFontScale
 
 ```TypeScript
 function setFontScale(fontScale: number): Promise<void>
 ```
 
-Sets the system font scale.
-
-**Permission required**: ohos.permission.UPDATE\_CONFIGURATION
+设置系统字体大小。
 
 **Since:** 12
 
@@ -36,28 +40,28 @@ Sets the system font scale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 500001 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let fontScale = 10;
+let fontScale = 1.5;
 
 try {
-    uiAppearance.setFontScale(fontScale).then(() => {
-      console.info('Set fontScale successfully.');
-    }).catch((error:Error) => {
-      console.error('Set fontScale failed, ' + error.message);
-    });
+  uiAppearance.setFontScale(fontScale).then(() => {
+    console.info('Set fontScale successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Set fontScale failed. Code: ${error.code}, message: ${error.message}`);
+  });
 } catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('Set fontScale failed, ' + message);
+  let err = error as BusinessError;
+  console.error(`Set fontScale failed. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

@@ -12,6 +12,12 @@ USB设备接口描述符。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## bClass
 
 ```TypeScript
@@ -20,7 +26,7 @@ bClass: int
 
 类型代码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -40,7 +46,7 @@ bInterfaceNumber: int
 
 接口编号。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -60,7 +66,7 @@ bProtocol: int
 
 协议代码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -80,7 +86,7 @@ bSubClass: int
 
 子类型代码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

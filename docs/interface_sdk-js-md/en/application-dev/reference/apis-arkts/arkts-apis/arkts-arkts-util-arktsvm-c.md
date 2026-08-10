@@ -1,6 +1,6 @@
 # ArkTSVM
 
-A class that provides VM maintenance and test capabilities for developers.
+为开发者提供虚拟机维测能力的类。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ A class that provides VM maintenance and test capabilities for developers.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## enableLocalHandleDetection
 
 ```TypeScript
 static enableLocalHandleDetection(): void
 ```
 
-Enable the local handle detection to avoid memory leakage in the event looper of Libuv or EventHandler.
+开启 local handle 检测，以避免在 Libuv 或 EventHandler 的事件循环（event looper）中出现内存泄漏。
 
 **Since:** 24
 
@@ -34,7 +40,7 @@ Enable the local handle detection to avoid memory leakage in the event looper of
 static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 ```
 
-Get all heap memory information from ArkTS-VMs and the shared heap.
+从 ArkTS-VM 和共享堆中获取所有堆内存信息。
 
 **Since:** 24
 
@@ -50,7 +56,7 @@ Get all heap memory information from ArkTS-VMs and the shared heap.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HeapMemoryInfo[]&gt; | Returns a promise containing all the heap memory information from ArkTS-VMs' local heap and the shared heap. |
+| Promise&lt;HeapMemoryInfo[]&gt; | 返回一个 promise，包含 ArkTS-VM 的 local 堆和共享堆中的所有堆内存信息。 |
 
 ## offVMHeapMemoryPressure
 
@@ -58,7 +64,7 @@ Get all heap memory information from ArkTS-VMs and the shared heap.
 static offVMHeapMemoryPressure(): void
 ```
 
-Unregister the callback that is triggered when the heap memory exceeds the critical warning threshold after a GC.
+取消注册在 GC 后堆内存超过临界预警阈值时触发的回调。
 
 **Since:** 24
 
@@ -76,9 +82,9 @@ Unregister the callback that is triggered when the heap memory exceeds the criti
 static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: HeapMemoryThreshold): boolean
 ```
 
-Register a callback that is triggered if the heap memory exceeds the critical warning threshold after a GC.It must be called on the main thread and only one callback can be registered.
+注册一个回调函数，在 GC（垃圾回收）后堆内存超过临界预警阈值时触发。必须在主线程上调用，且仅能注册一个回调。
 
-NOTE:There is no guarantee that the callback will be triggered before OOM.
+NOTE:无法保证在 OOM（内存溢出）前一定会触发该回调。
 
 **Since:** 24
 
@@ -94,14 +100,14 @@ NOTE:There is no guarantee that the callback will be triggered before OOM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
-| heapMemoryThreshold | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the percentage threshold of the heap memory to trigger the callback after a GC. The value range is [70, 95]. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 在 GC 后内存达到阈值时触发的回调。字符串参数表示内存压力事件的类型： "LocalHeapMemPressure"、"SharedHeapMemPressure" 或 "ProcessHeapMemPressure"。 |
+| heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Yes | 表示 GC 后触发回调的堆内存百分比阈值。取值范围为 [70, 95]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | 注册成功返回 { |
 
 ## setMultithreadingDetectionEnabled
 
@@ -109,7 +115,7 @@ NOTE:There is no guarantee that the callback will be triggered before OOM.
 static setMultithreadingDetectionEnabled(enabled: boolean, options?: MultithreadingDetectionOptions):void
 ```
 
-Sets whether to enable multithreading detection. When **enabled** is set to **true**, the detection is turned on,and multithreading-related details will be included in the cppcrash files generated for multithreading issues.When **enabled** is set to **false**, the detection is turned off, and no such details will be present in the corresponding cppcrash files.
+设置是否开启多线程检测。当 **enabled** 设置为 **true** 时开启检测，多线程问题的 cppcrash 文件中将包含多线程相关的详细信息。当 **enabled** 设置为 **false** 时关闭检测，相应的 cppcrash 文件中将不包含此类详细信息。
 
 **Since:** 23
 
@@ -125,8 +131,8 @@ Sets whether to enable multithreading detection. When **enabled** is set to **tr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Controls whether to enable multithreading detection. **true** means enabling the detection, and **false** means disabling it. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Optional configuration items\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 26.0.0 |
+| enabled | boolean | Yes | 控制是否开启多线程检测。**true** 表示开启检测，**false** 表示关闭检测。 |
+| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | No | 可选的配置项。<br>**Since:** 26.0.0 |
 
 ## setTrackGlobalRef
 
@@ -134,7 +140,7 @@ Sets whether to enable multithreading detection. When **enabled** is set to **tr
 static setTrackGlobalRef(enable: boolean): void
 ```
 
-Enable or disable tracking of the relationship between napi\_ref and global handle. When enabled, heap snapshot will include native reference address information. When disabled (enable is false), the tracking will be stopped and heap snapshot will not display the relationship between native reference and global handle.
+开启或关闭 napi_ref 与全局 handle 之间关联关系的追踪。开启后，堆快照将包含 native 引用地址信息。关闭后（enable 为false），将停止追踪，堆快照中不再显示 native 引用与全局 handle 之间的关联关系。
 
 **Since:** 26.0.0
 
@@ -150,5 +156,5 @@ Enable or disable tracking of the relationship between napi\_ref and global hand
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | The boolean flag enable to Indicates whether to turn on or off tracking, **true** means to turn on tracking, and **false** means to turn off it. |
+| enable | boolean | Yes | 布尔标志位，指示是开启还是关闭追踪。**true** 表示开启追踪，**false** 表示关闭追踪。 |
 

@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## dataProgressListener
 
 ```TypeScript
@@ -40,7 +46,7 @@ acceptableInfo?: DataLoadInfo
 
 定义接收方对数据类型和数据记录数量的接收能力。延迟加载场景下，发送方可根据此信息生成并返回更合适的数据内容。默认为空，不提供接收方数据接收能力。
 
-**类型：** DataLoadInfo
+**类型：** [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md)
 
 **起始版本：** 20
 
@@ -84,7 +90,7 @@ fileConflictOptions?: FileConflictOptions
 
 定义文件拷贝冲突时的选项，默认为OVERWRITE。
 
-**类型：** FileConflictOptions
+**类型：** [FileConflictOptions](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-fileconflictoptions-e.md)
 
 **起始版本：** 15
 
@@ -106,7 +112,7 @@ progressIndicator: ProgressIndicator
 
 定义进度条指示选项，可选择是否采用系统默认进度显示。
 
-**类型：** ProgressIndicator
+**类型：** [ProgressIndicator](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressindicator-e.md)
 
 **起始版本：** 15
 

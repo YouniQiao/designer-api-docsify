@@ -1,12 +1,18 @@
 # createWantData
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createWantData
 
 ```TypeScript
 function createWantData(want: Want): PasteData
 ```
 
-Creates a **PasteData** object of the Want type.
+构建一个Want剪贴板内容对象。
 
 **Since:** 7
 
@@ -24,15 +30,15 @@ Creates a **PasteData** object of the Want type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want content. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PasteData** object. |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

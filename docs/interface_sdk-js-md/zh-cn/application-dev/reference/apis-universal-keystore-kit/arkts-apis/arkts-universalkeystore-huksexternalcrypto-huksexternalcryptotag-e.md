@@ -32,7 +32,7 @@ HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYP
 HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002
 ```
 
-表示[CryptoExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的名称。
+表示[CryptoExtensionAbility](arkts-security-cryptoextensionability.md)的名称。
 
 **起始版本：** 22
 
@@ -81,7 +81,7 @@ HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE
 ```
 
 表示证书链对应密钥的使用类型，具体类型详见  
-[CertificatePurpose定义]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[CertificatePurpose定义](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)。
 
 **起始版本：** 22
 
@@ -118,9 +118,9 @@ HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG
 ```
 
 表示密钥管理扩展自定义PIN码弹窗相关Ability列表信息，在注册密钥管理扩展时，同步注册，详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。注册了自定义弹窗，则在PIN码认证时允许拉起自定义弹窗，进行PIN码认证等操作。
+[provider注册示例](../../../security/UniversalKeystoreKit/huks-extension-registration-and-unregistration-arkts.md)。注册了自定义弹窗，则在PIN码认证时允许拉起自定义弹窗，进行PIN码认证等操作。
 
-HUKS\_EXT\_CRYPTO\_TAG\_ABILITY\_NAME中的JSON列表由多个JSON对象组成，每个JSON对象包含两个字段：AbilityName和index。字段应遵循以下要求：
+HUKS_EXT_CRYPTO_TAG_ABILITY_NAME中的JSON列表由多个JSON对象组成，每个JSON对象包含两个字段：AbilityName和index。字段应遵循以下要求：
 
 1.AbilityName：长度范围为1~128字节。
 

@@ -1,14 +1,30 @@
 # @ohos.web.webNativeMessagingExtensionManager
 
-The webNativeMessagingExtensionManager module provides the capability of managing message extensions based on web standards.
+webNativeMessagingExtensionManager模块是ArkWeb提供的Web原生消息扩展管理模块，用于在应用侧（调用方）发起并管理到  
+[WebNativeMessagingExtensionAbility](arkts-web-webnativemessagingextensionability.md)的连接。开发者可通过  
+[connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md#connectnative)方法指定目标扩展Ability并建立连接，通过返回的连接ID与  
+[WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md)监听连接建立、断开及失败事件，也可通过[disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md#disconnectnative)主动释放连接。该模块适用于浏览器扩展与应用通信的场景；使用前需申请  
+[ohos.permission.WEB_NATIVE_MESSAGING](../../../reference/apis-arkweb/security/AccessToken/restricted-permissions.md#ohospermissionweb_native_messaging)权限，且仅在Stage模型下可用。
+
+> **说明：**
+> 
+> 本模块接口仅可在Stage模型下使用。
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace webNativeMessagingExtensionManager--><!--Device-unnamed-declare namespace webNativeMessagingExtensionManager-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
+```
 
 ## Summary
 
@@ -16,19 +32,19 @@ The webNativeMessagingExtensionManager module provides the capability of managin
 
 | Name | Description |
 | --- | --- |
-| [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md#connectnative) | Connects the current ability to the specified web native message extension ability. |
-| [disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md#disconnectnative) | Disconnects the connection of a specified web native message extension. |
+| [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md#connectnative) | 将当前Ability连接到指定的Web原生消息扩展Ability。 |
+| [disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md#disconnectnative) | 断开指定Web原生消息扩展连接。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Represents the information about the web native message connection. |
-| [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | As an input parameter when connecting a web native messaging extension, it is used to receive state changes during the connection. |
+| [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | 表示Web原生消息连接的连接信息。 |
+| [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | 作为连接网络原生消息扩展时的输入参数，它用于接收连接期间的状态变化。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Provides the native messaging error codes. |
+| [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Native Messaging的错误列表。 |
 

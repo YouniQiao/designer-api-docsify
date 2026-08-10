@@ -6,7 +6,9 @@
 declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback): MutableBuilder<Args>
 ```
 
-Defining mutableBuilder function.
+`mutableBuilder`是一个泛型函数，它返回一个`MutableBuilder`对象，只接受一个全局的`@Builder`函数作为其参数。
+
+`mutableBuilder`函数返回的[MutableBuilder](arkts-arkui-mutablebuilder-c.md)对象，其`builder`属性方法只能在自定义组件的`build`函数或`@Builder`装饰的函数内部被调用。
 
 **Since:** 22
 
@@ -18,17 +20,15 @@ Defining mutableBuilder function.
 
 <!--Device-unnamed-declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback): MutableBuilder<Args>--><!--Device-unnamed-declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback): MutableBuilder<Args>-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| builder | [BuilderCallback](arkts-arkui-buildercallback-t.md) | Yes | `@Builder`装饰的全局函数，作为`mutableBuilder`封装的目标构建函数。该函数需符合`BuilderCallback`类型，即 `(...args: Args) => void`，是一个无返回值的函数，其参数列表`...args`的类型由泛型`Args`指定。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Args&gt; |  |
+| [MutableBuilder](arkts-arkui-mutablebuilder-c.md)&lt;Args&gt; | `MutableBuilder&lt;Args&gt;`的实例，用于封装全局` |
 

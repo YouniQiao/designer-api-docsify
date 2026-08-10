@@ -1,12 +1,18 @@
 # getSystemInputMethodConfigAbility
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## getSystemInputMethodConfigAbility
 
 ```TypeScript
 function getSystemInputMethodConfigAbility(): ElementName
 ```
 
-Get system input method config ability
+获取系统输入法设置界面Ability信息。
 
 **Since:** 11
 
@@ -20,15 +26,15 @@ Get system input method config ability
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the information of system input method config ability. |
+| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | 系统输入法设置界面Ability的ElementName。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

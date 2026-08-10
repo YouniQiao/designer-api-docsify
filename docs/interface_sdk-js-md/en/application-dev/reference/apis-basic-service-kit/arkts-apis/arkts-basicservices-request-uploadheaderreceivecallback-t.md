@@ -18,5 +18,5 @@ The callback function for the HTTP Response Header event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | object | Yes | HTTP Response Header returned by the developer server.  |
+| header | object | Yes | HTTP Response Header returned by the developer server. |
 

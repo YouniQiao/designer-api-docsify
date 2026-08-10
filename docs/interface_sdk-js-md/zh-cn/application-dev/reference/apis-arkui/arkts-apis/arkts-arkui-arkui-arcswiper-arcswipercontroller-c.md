@@ -10,6 +10,12 @@ ArcSwiper容器组件的控制器，可以将此对象绑定至ArcSwiper组件�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
@@ -50,7 +56,7 @@ finishAnimation(handler?: FinishAnimationHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 动画结束的回调。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：不传入时无回调 |
+| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | 否 | 动画结束的回调。&lt;br&gt;默认值：不传入时无回调 |
 
 ## showNext
 
@@ -58,7 +64,7 @@ finishAnimation(handler?: FinishAnimationHandler): void
 showNext(): void
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过[duration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_指定。
+翻至下一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。
 
 **起始版本：** 26.0.0
 
@@ -76,7 +82,7 @@ showNext(): void
 showPrevious(): void
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过[duration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_指定。
+翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。
 
 **起始版本：** 26.0.0
 

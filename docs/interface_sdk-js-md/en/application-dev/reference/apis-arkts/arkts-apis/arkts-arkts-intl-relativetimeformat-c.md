@@ -33,7 +33,7 @@ Creates a new RelativeTimeFormat.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [RelativeTimeFormatOptions](arkts-arkts-intl-relativetimeformatoptions-i.md) | No | the options. |
 
 ## format
 
@@ -58,7 +58,7 @@ Formats a relative time.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | double | Yes | the value. |
-| unit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the unit. |
+| unit | [RelativeTimeFormatUnit](../../apis-default/arkts-apis/arkts-intl-relativetimeformatunit-t.md) | Yes | the unit. |
 
 **Return value:**
 
@@ -89,13 +89,13 @@ Formats a relative time to parts.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | double | Yes | the value. |
-| unit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the unit. |
+| unit | [RelativeTimeFormatUnit](../../apis-default/arkts-apis/arkts-intl-relativetimeformatunit-t.md) | Yes | the unit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | formatted parts. |
+| [RelativeTimeFormatPart](../../apis-default/arkts-apis/arkts-intl-relativetimeformatpart-t.md)[] | formatted parts. |
 
 ## resolvedOptions
 
@@ -119,7 +119,7 @@ Returns resolved options.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the resolved options. |
+| [ResolvedRelativeTimeFormatOptions](../../apis-default/arkts-apis/arkts-intl-resolvedrelativetimeformatoptions-i.md) | the resolved options. |
 
 ## supportedLocalesOf
 
@@ -144,7 +144,7 @@ Returns supported locales.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | Yes | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [RelativeTimeFormatOptions](arkts-arkts-intl-relativetimeformatoptions-i.md) | No | the options. |
 
 **Return value:**
 

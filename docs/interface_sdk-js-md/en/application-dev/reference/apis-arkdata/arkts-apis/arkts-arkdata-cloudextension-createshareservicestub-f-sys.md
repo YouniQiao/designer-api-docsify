@@ -1,12 +1,18 @@
 # createShareServiceStub (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## createShareServiceStub
 
 ```TypeScript
 function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>
 ```
 
-Creates a RemoteObject instance based on a ShareCenter instance.The system uses this object to call the APIs of the ShareCenter instance.This API uses a promise to return the result.
+根据ShareCenter类的实例创建对应的RemoteObject对象，系统内部通过该对象调用ShareCenter的实现接口，使用Promise异步回调。
 
 **Since:** 11
 
@@ -22,15 +28,15 @@ Creates a RemoteObject instance based on a ShareCenter instance.The system uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Instance of the ShareCenter class. |
+| instance | [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md) | Yes | ShareCenter类的实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

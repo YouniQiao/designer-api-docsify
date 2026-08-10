@@ -1,15 +1,20 @@
 # releaseInterface
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## releaseInterface
 
 ```TypeScript
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-Releases a USB interface.
+释放注册过的通信接口。
 
-Before you do this, ensure that you have claimed the interface by calling  
-[usb.claimInterface]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+需要调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface)先获取接口，才能使用此方法释放接口。
 
 **Since:** 8
 
@@ -27,16 +32,16 @@ Before you do this, ensure that you have claimed the interface by calling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device pipe, which is used to determine the bus number and device address. |
-| iface | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | USB interface, which is used to determine the index of the interface to release. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址。 |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | 用于确定需要释放接口的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns **0** if the USB interface is successfully released; returns an error code otherwise. |
+| number | 释放接口成功返回0；释放接口失败返回其他错误码。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let ret = usb.releaseInterface(devicepipe, interfaces);

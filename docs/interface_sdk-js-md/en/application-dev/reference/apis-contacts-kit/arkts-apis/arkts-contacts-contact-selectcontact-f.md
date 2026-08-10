@@ -1,12 +1,18 @@
 # selectContact
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## selectContact
 
 ```TypeScript
 function selectContact(callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Selects a contact. This API uses an asynchronous callback to return the result.
+调用选择联系人接口，打开选择联系人UI界面。使用callback异步回调。
 
 **Since:** 7
 
@@ -24,13 +30,15 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Open the contact selection UI.
 contact.selectContact((err: BusinessError, data) => {
   if (err) {
     console.error(`Failed to select Contact. Code: ${err.code}, message: ${err.message}`);
@@ -47,7 +55,7 @@ contact.selectContact((err: BusinessError, data) => {
 function selectContact(): Promise<Array<Contact>>
 ```
 
-Selects a contact. This API uses a promise to return the result.
+调用选择联系人接口，打开选择联系人UI界面。使用Promise异步回调。
 
 **Since:** 7
 
@@ -65,18 +73,17 @@ Selects a contact. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of selected contacts. |
+| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Open the contact selection UI.
 let promise = contact.selectContact();
 promise.then((data) => {
   console.info(`Succeeded in selecting Contact. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contact. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

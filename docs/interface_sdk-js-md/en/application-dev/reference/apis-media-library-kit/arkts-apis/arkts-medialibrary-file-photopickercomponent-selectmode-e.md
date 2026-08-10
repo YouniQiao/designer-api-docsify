@@ -1,6 +1,6 @@
 # SelectMode
 
-SelectMode. include SINGLE\_SELECT and MULTI\_SELECT
+SelectMode. include SINGLE_SELECT and MULTI_SELECT
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ SelectMode. include SINGLE\_SELECT and MULTI\_SELECT
 SINGLE_SELECT = 0
 ```
 
-SINGLE\_SELECT. single select
+SINGLE_SELECT. single select
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ SINGLE\_SELECT. single select
 MULTI_SELECT = 1
 ```
 
-MULTI\_SELECT. multi select
+MULTI_SELECT. multi select
 
 **Since:** 26.0.0
 

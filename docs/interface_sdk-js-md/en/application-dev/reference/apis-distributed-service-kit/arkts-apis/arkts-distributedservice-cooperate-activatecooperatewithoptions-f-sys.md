@@ -1,5 +1,11 @@
 # activateCooperateWithOptions (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## activateCooperateWithOptions
 
 ```TypeScript
@@ -8,7 +14,7 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: in
   ): Promise<void>
 ```
 
-Starts screen hopping based on the specified options. This API uses a promise to return the result.
+启动键鼠穿越，使用选项开始屏幕跳转。
 
 **Since:** 20
 
@@ -26,25 +32,25 @@ Starts screen hopping based on the specified options. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNetworkId | string | Yes | Descriptor of the target device for screen hopping. |
-| inputDeviceId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the input device that initiates screen hopping. |
-| cooperateOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Screen hopping options, such as the exit position. If this parameter is not set, this API works in the same way as [activateCooperate]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| targetNetworkId | string | Yes | 键鼠穿越目标设备描述符。 |
+| inputDeviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 发起穿越操作的输入设备ID。 |
+| cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | No | 穿越可选控制参数，用于控制穿出点具体位置等。不设置此参数时，本接口能力 与[cooperate.activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate) 相同。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [20900001](../../apis-input-kit/errorcode-cooperator.md#20900001-service-exception) | Service exception. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. A system error, such as null pointer, container-related exception, or IPC exception. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. N-API invocation exception or invalid N-API status. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 20900001 | Service exception. Possible causes: &lt;br&gt;1. A system error, such as null pointer, container-related exception, or IPC exception. &lt;br&gt;2. N-API invocation exception or invalid N-API status. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

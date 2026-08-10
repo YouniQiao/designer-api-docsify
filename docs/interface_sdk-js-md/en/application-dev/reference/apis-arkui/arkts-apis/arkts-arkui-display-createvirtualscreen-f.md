@@ -1,12 +1,18 @@
 # createVirtualScreen
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## createVirtualScreen
 
 ```TypeScript
 function createVirtualScreen(config: VirtualScreenConfig): Promise<long>
 ```
 
-Creates a virtual screen. This API uses a promise to return the result.
+创建虚拟屏幕，使用Promise异步回调。
 
 **Since:** 16
 
@@ -22,24 +28,24 @@ Creates a virtual screen. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Virtual screen parameters. |
+| config | [VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md) | Yes | 用于创建虚拟屏幕的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the screen ID of the created virtual screen. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回创建的虚拟屏幕的ScreenId。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function createVirtualScreen can not work correctly due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 801 | Capability not supported. Function createVirtualScreen can not work correctly due to limited device capabilities. |
+| 1400001 | Invalid display or screen. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -53,7 +59,7 @@ class VirtualScreenConfig {
   supportsFocus ?: boolean = true;
 }
 
-let config : VirtualScreenConfig = {
+let config: VirtualScreenConfig = {
   name: 'screen01',
   width: 1080,
   height: 2340,
@@ -63,9 +69,9 @@ let config : VirtualScreenConfig = {
 };
 
 display.createVirtualScreen(config).then((screenId: number) => {
-  console.info(`Succeeded in creating the virtual screen.ScreenId : ${screenId}`);
+  console.info(`Succeeded in creating the virtual screen. ScreenId: ${screenId}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code},message is ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

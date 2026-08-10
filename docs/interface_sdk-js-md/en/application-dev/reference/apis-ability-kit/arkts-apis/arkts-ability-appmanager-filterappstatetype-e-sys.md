@@ -1,7 +1,6 @@
 # FilterAppStateType (System API)
 
-Enumerates the types of application states to filter. It can be used with  
-[AppStateFilter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to filter the application state types you want to listen for.
+表示要监听的应用状态，该类型为枚举。可配合[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md)过滤想要监听的应用状态。
 
 **Since:** 21
 
@@ -19,8 +18,7 @@ Enumerates the types of application states to filter. It can be used with
 CREATE = 1 << 0
 ```
 
-The application is initializing. It corresponds to the state whose value is **0** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+应用正在初始化，对应[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#属性)中state取值为0的状态。
 
 **Since:** 21
 
@@ -38,8 +36,7 @@ The application is initializing. It corresponds to the state whose value is **0*
 FOREGROUND = 1 << 1
 ```
 
-The application is running in the foreground. It corresponds to the state whose value is **2** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+应用位于前台，对应[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#属性)中state取值为2的状态。
 
 **Since:** 21
 
@@ -57,8 +54,7 @@ The application is running in the foreground. It corresponds to the state whose 
 BACKGROUND = 1 << 2
 ```
 
-The application is running in the background. It corresponds to the state whose value is **4** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+应用位于后台，对应[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#属性)中state取值为4的状态。
 
 **Since:** 21
 
@@ -76,8 +72,7 @@ The application is running in the background. It corresponds to the state whose 
 DESTROY = 1 << 3
 ```
 
-The application has exited. It corresponds to the state whose value is **5** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+应用已退出，对应[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#属性)中state取值为5的状态。
 
 **Since:** 21
 

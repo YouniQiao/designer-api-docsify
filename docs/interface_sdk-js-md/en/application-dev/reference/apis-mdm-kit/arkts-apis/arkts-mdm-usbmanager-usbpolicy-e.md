@@ -1,6 +1,6 @@
 # UsbPolicy
 
-Enumerates the USB storage device access policies.
+USB存储设备访问策略的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the USB storage device access policies.
 READ_WRITE = 0
 ```
 
-Read and write.
+可读可写。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Read and write.
 READ_ONLY = 1
 ```
 
-Read only.
+只读。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Read only.
 DISABLED = 2
 ```
 
-Disabled.
+禁用。
 
 **Since:** 12
 

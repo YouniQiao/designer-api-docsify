@@ -1,5 +1,11 @@
 # getInspectorTree
 
+## 导入模块
+
+```TypeScript
+import { inspector } from 'kits/@kit.ArkUI';
+```
+
 ## getInspectorTree
 
 ```TypeScript
@@ -24,5 +30,5 @@ function getInspectorTree(): RecordData
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 组件树及组件属性列表的JSON对象。组件中每个字段的含义请参考getInspectorInfo的返回值说明。 |
+| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 组件树及组件属性列表的JSON对象。组件中每个字段的含义请参考getInspectorInfo的返回值说明。 |
 

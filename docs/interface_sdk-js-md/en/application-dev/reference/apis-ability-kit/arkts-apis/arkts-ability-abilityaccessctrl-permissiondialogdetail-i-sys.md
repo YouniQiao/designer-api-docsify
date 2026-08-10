@@ -1,6 +1,6 @@
 # PermissionDialogDetail (System API)
 
-Represents the permission dialog information of a single command.
+表示单条命令的权限弹窗信息。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Represents the permission dialog information of a single command.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## authResult
 
 ```TypeScript
 authResult: string
 ```
 
-Authorization result string.
+授权结果字符串。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Authorization result string.
 needPermissionDialog: boolean
 ```
 
-Whether the current CLI command requires a permission dialog. The value **true** indicates that a permission dialog is required, and **false** indicates that no permission dialog is required.
+当前CLI命令是否需要权限弹窗，true表示需要权限弹窗，false表示不需要权限弹窗。
 
 **Type:** boolean
 
@@ -62,9 +68,9 @@ Whether the current CLI command requires a permission dialog. The value **true**
 permissionNameList: Array<Permissions>
 ```
 
-List of permission names that the agent initiating CLI-related operations currently does not satisfy. If the related permissions are not satisfied, the CLI cannot be started, or the started CLI process cannot obtain the corresponding permissions.
+发起CLI相关操作的智能体当前未满足的权限名称列表。若相关权限不满足，CLI将无法拉起，或拉起后的CLI进程无法获得对应权限。
 
-**Type:** Array&lt;Permissions&gt;
+**Type:** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 
 **Since:** 26.0.0
 
@@ -84,7 +90,7 @@ List of permission names that the agent initiating CLI-related operations curren
 statusList: Array<PermissionDecisionStatus>
 ```
 
-List of permission decision statuses.
+权限决策状态列表。
 
 **Type:** Array&lt;PermissionDecisionStatus&gt;
 

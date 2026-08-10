@@ -44,9 +44,9 @@ detectionMethods?: BlankScreenDetectionMethod[]
 
 1.重复值会忽略。
 
-默认值：[BlankScreenDetectionMethod.DETECTION\_CONTENTFUL\_NODES\_SEVENTEEN]。
+默认值：[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEEN]。
 
-**类型：** BlankScreenDetectionMethod[]
+**类型：** [BlankScreenDetectionMethod](arkts-arkweb-blankscreendetectionmethod-e.md)[]
 
 **起始版本：** 22
 

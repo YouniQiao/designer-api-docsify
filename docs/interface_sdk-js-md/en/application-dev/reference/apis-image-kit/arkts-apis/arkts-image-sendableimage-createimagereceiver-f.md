@@ -1,15 +1,20 @@
 # createImageReceiver
 
+## Modules to Import
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## createImageReceiver
 
 ```TypeScript
 function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver
 ```
 
-Creates an ImageReceiver instance based on the specified image size, format, and capacity.
+通过图片大小、图片格式、容量创建ImageReceiver实例。
 
-Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 12
 
@@ -23,29 +28,29 @@ Images occupy a large amount of memory. When you finish using an ImageReceiver i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | image.Size | Yes | Default size of the image. |
-| format | image.ImageFormat | Yes | Image format, which is a constant of **image.ImageFormat**. (Currently, only **ImageFormat:JPEG** is supported.) |
-| capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
+| size | image.Size | Yes | 图像的默认大小。 |
+| format | image.ImageFormat | Yes | 图像格式，取值为image.ImageFormat常量，目前仅支持 ImageFormat:JPEG。 |
+| capacity | number | Yes | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ImageReceiver instance. |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 如果操作成功，则返回ImageReceiver实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| 401 | The parameter check failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 
-async function Demo() {
+async function CreateImageReceiver() {
     let size: image.Size = {
         height: 8192,
         width: 8

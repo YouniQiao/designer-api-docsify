@@ -14,6 +14,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## animationConfig
 
 ```TypeScript
@@ -22,7 +28,7 @@ animationConfig?: WindowAnimationConfig
 
 窗口动画参数配置。默认动画曲线为WindowAnimationCurve.LINEAR，duration为0。
 
-**类型：** WindowAnimationConfig
+**类型：** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
 **起始版本：** 20
 
@@ -42,7 +48,7 @@ type: AnimationType
 
 窗口动画类型。
 
-**类型：** AnimationType
+**类型：** [AnimationType](arkts-arkui-window-animationtype-e-sys.md)
 
 **起始版本：** 20
 

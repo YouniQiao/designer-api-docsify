@@ -1,6 +1,6 @@
 # SearchButtonParams
 
-Sets the search button located next to the search text box.
+搜索框末尾搜索按钮设置项。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Sets the search button located next to the search text box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+```
+
 ## options
 
 ```TypeScript
 options?: SearchButtonOptions
 ```
 
-Font of the search text box. Default value: **{fontSize: '16fp',fontColor: '#ff3f97e9'}
+配置搜索框文本样式。默认值：`{fontSize: '16fp',fontColor: '#ff3f97e9'}`。
 
-**Type:** SearchButtonOptions
+**Type:** [SearchButtonOptions](../arkts-components/arkts-arkui-searchbuttonoptions-i.md)
 
 **Since:** 18
 
@@ -36,9 +42,9 @@ Font of the search text box. Default value: **{fontSize: '16fp',fontColor: '#ff3
 searchButtonValue: ResourceStr
 ```
 
-Text on the search button located next to the search text box.
+搜索框末尾搜索按钮文本内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
 

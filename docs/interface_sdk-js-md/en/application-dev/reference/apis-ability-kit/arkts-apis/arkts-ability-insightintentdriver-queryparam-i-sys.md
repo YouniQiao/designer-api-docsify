@@ -1,6 +1,6 @@
 # QueryParam (System API)
 
-Param when query insight intent entity.
+查询洞察意图实体时的Param。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Param when query insight intent entity.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Indicates the bundle name.
+套餐名称。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Indicates the bundle name.
 className: string
 ```
 
-Indicates the entity class name.
+实体类名称。
 
 **Type:** string
 
@@ -62,7 +68,7 @@ Indicates the entity class name.
 intentName: string
 ```
 
-Indicates the intent name.
+意图名称。
 
 **Type:** string
 
@@ -84,7 +90,7 @@ Indicates the intent name.
 moduleName: string
 ```
 
-Indicates the module name.
+模块名称。
 
 **Type:** string
 
@@ -106,7 +112,7 @@ Indicates the module name.
 queryEntityParam: insightIntent.QueryEntityParam
 ```
 
-Indicates the param for query entity.
+查询实体的param。
 
 **Type:** insightIntent.QueryEntityParam
 
@@ -128,11 +134,9 @@ Indicates the param for query entity.
 userId?: int
 ```
 
-Indicates the target user ID.
+目标用户ID。如果调用方应用的用户ID与目标用户ID不一致，则需要申请权限：oos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。取值范围为全体整数。
 
-If the user ID of the caller application is different from the target user ID, you need to apply for permission:ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS.
-
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

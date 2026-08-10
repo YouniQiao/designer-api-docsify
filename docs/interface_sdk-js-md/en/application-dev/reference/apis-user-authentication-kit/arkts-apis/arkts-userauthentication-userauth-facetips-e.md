@@ -1,6 +1,6 @@
 # FaceTips
 
-Enumerates the tip codes used during the facial authentication process.
+表示人脸认证过程中提示码的枚举。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the tip codes used during the facial authentication process.
 FACE_AUTH_TIP_TOO_BRIGHT = 1
 ```
 
-The obtained facial image is too bright due to high illumination.
+光线太强，获取的图像太亮。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ The obtained facial image is too bright due to high illumination.
 FACE_AUTH_TIP_TOO_DARK = 2
 ```
 
-The obtained facial image is too dark due to low illumination.
+光线太暗，获取的图像太暗。
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ The obtained facial image is too dark due to low illumination.
 FACE_AUTH_TIP_TOO_CLOSE = 3
 ```
 
-The face is too close to the device.
+人脸距离设备过近。
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ The face is too close to the device.
 FACE_AUTH_TIP_TOO_FAR = 4
 ```
 
-The face is too far away from the device.
+人脸距离设备过远。
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ The face is too far away from the device.
 FACE_AUTH_TIP_TOO_HIGH = 5
 ```
 
-Only the upper part of the face is captured because the device is angled too high.
+设备太高，仅获取到人脸上部。
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ Only the upper part of the face is captured because the device is angled too hig
 FACE_AUTH_TIP_TOO_LOW = 6
 ```
 
-Only the lower part of the face is captured because the device is angled too low.
+设备太低，仅获取到人脸下部。
 
 **Since:** 8
 
@@ -126,7 +126,7 @@ Only the lower part of the face is captured because the device is angled too low
 FACE_AUTH_TIP_TOO_RIGHT = 7
 ```
 
-Only the right part of the face is captured because the device is deviated to the right.
+设备太靠右，仅获取到人脸右部。
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ Only the right part of the face is captured because the device is deviated to th
 FACE_AUTH_TIP_TOO_LEFT = 8
 ```
 
-Only the left part of the face is captured because the device is deviated to the left.
+设备太靠左，仅获取到人脸左部。
 
 **Since:** 8
 
@@ -162,7 +162,7 @@ Only the left part of the face is captured because the device is deviated to the
 FACE_AUTH_TIP_TOO_MUCH_MOTION = 9
 ```
 
-The face moves too fast during facial information collection.
+在图像采集过程中，用户人脸移动太快。
 
 **Since:** 8
 
@@ -180,7 +180,7 @@ The face moves too fast during facial information collection.
 FACE_AUTH_TIP_POOR_GAZE = 10
 ```
 
-The face is not facing the camera.
+没有正视摄像头。
 
 **Since:** 8
 
@@ -198,7 +198,7 @@ The face is not facing the camera.
 FACE_AUTH_TIP_NOT_DETECTED = 11
 ```
 
-No face is detected.
+没有检测到人脸信息。
 
 **Since:** 8
 

@@ -16,21 +16,21 @@
 hoverScale?: AnimationRange<number>
 ```
 
-在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，hoverScale用于为绑定组件的截图浮起动画设置两个参数：相对于预览原图的起始与结束缩放比例。hoverScale设置后，浮起动画和预览图之间会有切换过渡动效。
+在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，hoverScale用于为绑定组件的截图浮起动画设置两个参数：相对于预览原图的起始与结束缩放比例。hoverScale设置后，浮起动画和预览图之间会有切换过渡动效。 
 
 **说明：**
 
 倍率设置参数小于等于0时，不生效。
 
-[bindContextMenu\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_场景下，不生效。
+[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)场景下，不生效。
 
-设置transition接口时，不生效。
+设置transition接口时，不生效。 
 
 使用此接口且同时使用scale接口时，scale接口起始值不生效。
 
 为保障最佳体验，最终预览图尺寸不建议小于原组件截图尺寸。当前预览动效宽高会受组件截图和自定义预览大小影响，请根据实际使用情况自行保障展示效果。
 
-**类型：** AnimationRange&lt;number&gt;
+**类型：** [AnimationRange](arkts-arkui-animationrange-t.md)&lt;number&gt;
 
 **起始版本：** 12
 
@@ -52,7 +52,7 @@ hoverScaleInterruption?: boolean
 
 在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，且hoverScaleInterruption为true时，在触发拖拽效果前抬起手是否允许取消预览菜单弹出。true表示允许取消预览菜单弹出，false表示不允许取消预览菜单弹出。
 
-默认值：false
+默认值：false 
 
 **说明：**
 
@@ -88,7 +88,7 @@ scale?: AnimationRange<number>
 
 缩放比例需要根据实际开发场景设置，建议设置值为小于预览图宽度或布局的最大限制。
 
-**类型：** AnimationRange&lt;number&gt;
+**类型：** [AnimationRange](arkts-arkui-animationrange-t.md)&lt;number&gt;
 
 **默认值：** [0.95, 1.1] [since 11 - 11]
 
@@ -116,9 +116,9 @@ transition?: TransitionEffect
 
 在菜单退出动效过程中，横竖屏切换时，菜单会避让。二级菜单不继承自定义动效。弹出过程中可以点击二级菜单，但在退出动效执行过程中不允许点击二级菜单。
 
-详细描述见[TransitionEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对象说明。
+详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。
 
-**类型：** TransitionEffect
+**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 12
 

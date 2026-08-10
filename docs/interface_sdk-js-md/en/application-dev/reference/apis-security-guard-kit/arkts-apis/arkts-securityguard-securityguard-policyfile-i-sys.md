@@ -12,6 +12,12 @@ Provides policy file information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+```
+
 ## fd
 
 ```TypeScript

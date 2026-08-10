@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## appendBundles
 
 ArkTS-Dyn:
@@ -42,7 +48,7 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: stri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| remoteCapabilitiesFd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
+| remoteCapabilitiesFd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
 | bundlesToBackup | string[] | 是 | 需要恢复的应用名称数组。 |
 | infos | string[] | 否 | 恢复时各应用所需扩展信息的数组。 |
 
@@ -56,15 +62,15 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: stri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -187,23 +193,23 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| remoteCapabilitiesFd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
+| remoteCapabilitiesFd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
 | bundlesToBackup | string[] | 是 | 需要恢复的应用名称数组。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 添加恢复应用完成后的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 添加恢复应用完成后的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -312,17 +318,17 @@ cancel(bundleName: string): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 取消结果，0表示成功，13500011表示失败，13500012表示没有对应任务。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 取消结果，0表示成功，13500011表示失败，13500012表示没有对应任务。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -425,10 +431,10 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -518,9 +524,9 @@ constructor(callbacks: GeneralCallbacks)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbacks | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 恢复流程所需的回调。 |
+| callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | 是 | 恢复流程所需的回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -608,13 +614,13 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
+| 13900001 | Operation not permitted |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { backup } from '@kit.CoreFileKit';
@@ -720,10 +726,10 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup } from '@kit.CoreFileKit';
@@ -812,7 +818,7 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
 
 **返回值：**
 
@@ -824,12 +830,12 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
+| 13900001 | Operation not permitted |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -915,19 +921,19 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 获取文件句柄完成后的异步回调。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 获取文件句柄完成后的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
+| 13900001 | Operation not permitted |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -1012,7 +1018,7 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
 
 **返回值：**
 
@@ -1024,13 +1030,13 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
+| 13900001 | Operation not permitted |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup } from '@kit.CoreFileKit';
@@ -1135,14 +1141,14 @@ getLocalCapabilities(): Promise<FileData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
+| 13900001 | Operation not permitted |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error |
 | 13900042 | Internal error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1296,8 +1302,8 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 包含源路径和目标路径的迁移路径信息。 |
-| fileMeta | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 包含应用名称及可选文件名的文件元数据。 |
+| pathInfo | [PathInfo](arkts-corefile-backup-pathinfo-i-sys.md) | 是 | 包含源路径和目标路径的迁移路径信息。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 包含应用名称及可选文件名的文件元数据。 |
 
 **返回值：**
 
@@ -1309,13 +1315,13 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
+| 13900001 | Operation not permitted |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { backup } from '@kit.CoreFileKit';
@@ -1415,7 +1421,7 @@ publishFile(fileMeta: FileMeta): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
 
 **返回值：**
 
@@ -1427,12 +1433,12 @@ publishFile(fileMeta: FileMeta): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
+| 13900001 | Operation not permitted |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -1530,19 +1536,19 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 发布文件句柄完成后的异步回调。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发布文件句柄完成后的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
+| 13900001 | Operation not permitted |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -1648,15 +1654,15 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';

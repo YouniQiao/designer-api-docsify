@@ -1,6 +1,6 @@
 # CacheMode
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the Web cache mode.
+Enum type supplied to {@link cacheMode} for setting the Web cache mode.
 
 **起始版本：** 8
 

@@ -6,7 +6,7 @@
 const RULE_CAUTION_PRINT_LOG = 9223372036854775808n
 ```
 
-Alarm rule, which is programmed to print a log when an alarm is generated.
+�澯���򣬵��и澯ʱ��¼��־��
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ Alarm rule, which is programmed to print a log when an alarm is generated.
 const RULE_CAUTION_TRIGGER_CRASH = 4611686018427387904n
 ```
 
-Alarm rule, which is programmed to force the application to exit when an alarm is generated.
+�澯���򣬵��и澯ʱ��Ӧ���˳���
 
 **Since:** 8
 
@@ -38,7 +38,7 @@ Alarm rule, which is programmed to force the application to exit when an alarm i
 const RULE_CHECK_ABILITY_CONNECTION_LEAK = 8589934592n
 ```
 
-Caution rule, which is programmed to detect whether ability leakage has occurred.
+�����򣬼���Ƿ���abilityй¶��
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Caution rule, which is programmed to detect whether ability leakage has occurred
 const RULE_CHECK_ARKUI_PERFORMANCE = 17179869184n
 ```
 
-Caution rule, which is programmed to detect the ArkUI performance.
+�����򣬼��arkui���ܡ�
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ Caution rule, which is programmed to detect the ArkUI performance.
 const RULE_THREAD_CHECK_NETWORK_USAGE = 2n
 ```
 
-The thread rule check network usage.
+�����򣬼���߳��Ƿ���������ʱ�ӿڡ�
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ The thread rule check network usage.
 const RULE_THREAD_CHECK_SLOW_PROCESS = 1n
 ```
 
-Caution rule, which is programmed to detect whether any time-consuming function is invoked.
+�����򣬼���Ƿ��к�ʱ���������á�
 
 **Since:** 8
 

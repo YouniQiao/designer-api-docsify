@@ -4,7 +4,7 @@
 declare type Vector2T<T> = import('../api/arkui/Graphics').Vector2T<T>
 ```
 
-Defines the Vector2T type. The Vector2T type contains two attribute values: x and y.
+定义Vector2T类型。其中Vector2T类型包含x和y两个属性值。
 
 **Since:** 22
 

@@ -1,12 +1,18 @@
 # onMouse (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
 ## onMouse
 
 ```TypeScript
 function onMouse(receiver: Callback<MouseEvent>): void
 ```
 
-Listens for mouse input events.
+监听全局鼠标事件。
 
 **Since:** 23
 
@@ -24,15 +30,15 @@ Listens for mouse input events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | Yes | 回调函数，异步上报鼠标输入事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
 
 ## onMouse
@@ -41,7 +47,7 @@ Listens for mouse input events.
 function onMouse(rect: display.Rect[], receiver: Callback<MouseEvent>): void
 ```
 
-Listens for mouse input events when the mouse arrow is within the specified rectangular area.
+监听鼠标事件，当鼠标移动至指定矩形区域内时，触发回调任务。
 
 **Since:** 23
 
@@ -59,14 +65,14 @@ Listens for mouse input events when the mouse arrow is within the specified rect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | display.Rect[] | Yes | A specified rectangular area that can trigger a callback, with a maximum of two. |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to receive the reported data. |
+| rect | display.Rect[] | Yes | 可以触发回调任务的矩形区域，可传入1至2个。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | Yes | 回调函数，异步上报鼠标输入事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permit error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | SystemAPI permit error. |
 

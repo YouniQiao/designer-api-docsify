@@ -1,5 +1,11 @@
 # queryBundleStateInfoByInterval (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## queryBundleStateInfoByInterval
 
 ```TypeScript
@@ -31,15 +37,16 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;BundleStateInfo&gt;&gt; | Yes | the callback of usage information about each bundle. |
+| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
+| begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStateInfo&gt;&gt; | Yes | the callback of usage information about each bundle. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 
 bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED, 0, 20000000000000, (err: BusinessError, res: Array<bundleState.BundleStateInfo>) => {
   if (err) {
@@ -85,9 +92,9 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
+| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
+| begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 
 **Return value:**
 
@@ -95,10 +102,11 @@ Queries usage information about each bundle within a specified period at a speci
 | --- | --- |
 | Promise&lt;Array&lt;BundleStateInfo&gt;&gt; | the usage information about each bundle. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 
 bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED, 0, 20000000000000).then((res: Array<bundleState.BundleStateInfo>) => {
   console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise success.');

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alpha
 
 ```TypeScript
@@ -18,7 +24,7 @@ alpha: int
 
 透明通道分量值，取值范围为[0x0, 0xFF]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ blue: int
 
 蓝色分量值，取值范围为[0x0, 0xFF]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -62,7 +68,7 @@ green: int
 
 绿色分量值，取值范围为[0x0, 0xFF]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -84,7 +90,7 @@ red: int
 
 红色分量值，取值范围为[0x0, 0xFF]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

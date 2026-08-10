@@ -1,6 +1,6 @@
 # PublishedItem
 
-Defines the data to publish.
+指定发布的数据类型。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Defines the data to publish.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## data
 
 ```TypeScript
 data: string | ArrayBuffer
 ```
 
-Data to publish. If the data to publish exceeds 20 KB, you are advised to use the data in ArrayBuffer format.
+指定发布的数据。如果发布数据大小超过20KB，建议使用ArrayBuffer。
 
 **Type:** string \| ArrayBuffer
 
@@ -36,7 +42,7 @@ Data to publish. If the data to publish exceeds 20 KB, you are advised to use th
 key: string
 ```
 
-Key of the data to publish.
+指定发布数据的键。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Key of the data to publish.
 subscriberId: string
 ```
 
-Subscriber ID.
+指定订阅者id。
 
 **Type:** string
 

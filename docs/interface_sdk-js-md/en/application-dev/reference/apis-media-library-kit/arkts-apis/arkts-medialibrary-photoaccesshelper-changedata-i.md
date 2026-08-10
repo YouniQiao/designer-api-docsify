@@ -10,6 +10,12 @@ Defines the return value of the listener callback.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## extraUris
 
 ```TypeScript
@@ -36,7 +42,7 @@ type: NotifyType
 
 Notification type.
 
-**Type:** NotifyType
+**Type:** [NotifyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-cloudsync-notifytype-e.md)
 
 **Since:** 10
 
@@ -52,7 +58,7 @@ Notification type.
 uris: Array<string>
 ```
 
-All URIs with the same [NotifyType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which can be **PhotoAsset** or **Album**.
+All URIs with the same [NotifyType](arkts-medialibrary-photoaccesshelper-notifytype-e.md), which can be **PhotoAsset** or **Album**.
 
 **Type:** Array&lt;string&gt;
 

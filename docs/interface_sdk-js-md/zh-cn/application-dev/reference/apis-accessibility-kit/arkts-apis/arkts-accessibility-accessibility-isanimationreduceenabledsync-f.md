@@ -1,5 +1,11 @@
 # isAnimationReduceEnabledSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isAnimationReduceEnabledSync
 
 ```TypeScript
@@ -24,7 +30,7 @@ function isAnimationReduceEnabledSync(): boolean
 | --- | --- |
 | boolean | 表示是否开启减弱动效模式。返回true表示开启减弱动效模式；返回false表示未开启减弱动效模式。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

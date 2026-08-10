@@ -1,6 +1,6 @@
 # SelectionMenuOptions
 
-Sets menu options.
+菜单的选项。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Sets menu options.
 onAppear?: MenuOnAppearCallback
 ```
 
-Callback invoked when the custom context menu on selection appears.
+自定义选择菜单弹出时回调。若需在菜单弹出时执行自定义逻辑（如记录用户操作、动态调整菜单内容），可传入此参数；不传入则无额外回调触发。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Callback invoked when the custom context menu on selection appears.
 onMenuHide?: MenuCallback
 ```
 
-Callback invoked when the custom context menu on selection is hidden.
+自定义选择菜单隐藏时回调。若需在菜单隐藏时执行自定义逻辑，可传入此参数；不传入则无回调触发。
 
 **Since:** 15
 
@@ -56,7 +56,7 @@ Callback invoked when the custom context menu on selection is hidden.
 onMenuShow?: MenuCallback
 ```
 
-Callback invoked when the custom context menu on selection is shown.
+自定义选择菜单显示时回调。若需在菜单显示时执行自定义逻辑，可传入此参数；不传入则无回调触发。
 
 **Since:** 15
 
@@ -76,11 +76,11 @@ Callback invoked when the custom context menu on selection is shown.
 menuType?: MenuType
 ```
 
-Type of the custom context menu on selection.
+自定义选择菜单类型。
 
-Default value: **MenuType.SELECTION\_MENU
+默认值：MenuType.SELECTION_MENU。
 
-**Type:** MenuType
+**Type:** [MenuType](../arkts-apis/arkts-arkui-menutype-e.md)
 
 **Since:** 13
 
@@ -100,9 +100,9 @@ Default value: **MenuType.SELECTION\_MENU
 onDisappear?: Callback<void>
 ```
 
-Callback invoked when the custom context menu on selection disappears.
+自定义选择菜单关闭时回调。若需在菜单关闭时执行自定义逻辑（如恢复界面状态、清理临时数据），可传入此参数；不传入则无额外回调触发。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 10
 
@@ -122,9 +122,13 @@ Callback invoked when the custom context menu on selection disappears.
 previewMenuOptions?: PreviewMenuOptions
 ```
 
-Options of the preview menu. This parameter is valid only in **RichEditor**.
+预览菜单的选项。该参数只在RichEditor中生效。
 
-**Type:** PreviewMenuOptions
+从API版本26.0.0开始，该参数在Text组件中也生效。
+
+不传入时，预览菜单使用默认配置。
+
+**Type:** [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md)
 
 **Since:** 18
 

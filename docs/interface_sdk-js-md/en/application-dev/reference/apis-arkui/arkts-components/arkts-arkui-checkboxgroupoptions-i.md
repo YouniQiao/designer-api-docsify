@@ -1,6 +1,6 @@
 # CheckboxGroupOptions
 
-Information about the check box group.
+多选框群组的信息。
 
 **Since:** 8
 
@@ -16,11 +16,13 @@ Information about the check box group.
 group?: string
 ```
 
-Group name.
+群组名称。
 
-**NOTE**
+默认值：undefined，默认状态下管理[CheckboxOptions](../arkts-apis/arkts-arkui-checkbox-checkboxoptions-i.md/arkts-arkui-checkbox-checkboxoptions-i.md)属性group信息为undefined的节点。 
 
-Among multiple check box groups with the same group name, only the first one takes effect.
+**说明：**
+
+具有相同群组名称的多个CheckboxGroup，仅第一个CheckboxGroup生效。
 
 **Type:** string
 

@@ -1,9 +1,10 @@
 # RoundedRectOptions
 
 用于描述圆角矩形绘制组件的绘制属性。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -27,7 +28,7 @@ height?: Length
 
 异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
 
@@ -55,7 +56,7 @@ radiusHeight?: Length
 
 异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
 
@@ -83,7 +84,7 @@ radiusWidth?: Length
 
 异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
 
@@ -111,7 +112,7 @@ width?: Length
 
 异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
 

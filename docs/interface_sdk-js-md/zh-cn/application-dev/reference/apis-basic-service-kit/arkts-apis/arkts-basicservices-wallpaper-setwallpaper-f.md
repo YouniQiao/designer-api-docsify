@@ -1,5 +1,11 @@
 # setWallpaper
 
+## 导入模块
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setWallpaper
 
 ```TypeScript
@@ -29,10 +35,10 @@ function setWallpaper(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | 是 |  |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -95,7 +101,7 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | 是 |  |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
 
 **返回值：**
 
@@ -103,7 +109,7 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

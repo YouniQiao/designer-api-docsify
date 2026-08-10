@@ -1,6 +1,6 @@
 # WindowAnimationFinishedCallback (System API)
 
-Window animation finished callback.
+动画完成后的回调。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Window animation finished callback.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## onAnimationFinish
 
 ```TypeScript
 onAnimationFinish(): void
 ```
 
-The function of window animation finished callback.
+结束本次动画。
 
 **Since:** 9
 
@@ -30,7 +36,7 @@ The function of window animation finished callback.
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 

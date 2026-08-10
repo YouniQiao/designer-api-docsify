@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.MDMKit';
+```
+
 ## appSize
 
 ```TypeScript
@@ -74,7 +80,7 @@ dataSize: number
 
 /data/storage/\${el1-el5}/database
 
-**说明：**\${el1-el5}指的是\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+**说明：**\${el1-el5}指的是[el1，el2，el3，el4，el5目录](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。
 
 **类型：** number
 

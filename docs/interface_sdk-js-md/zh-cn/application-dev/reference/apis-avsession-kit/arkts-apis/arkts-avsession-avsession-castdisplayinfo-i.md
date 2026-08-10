@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height: int
 
 投播显示设备的屏幕高度，单位为px，该参数应为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ id: long
 
 投播显示设备的ID，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ state: CastDisplayState
 
 投播显示设备状态。
 
-**类型：** CastDisplayState
+**类型：** [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md)
 
 **起始版本：** 12
 
@@ -98,7 +104,7 @@ width: int
 
 投播显示设备的屏幕宽度，单位为px，该参数应为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

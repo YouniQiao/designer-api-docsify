@@ -1,6 +1,6 @@
 # BlankFrameNode
 
-Define the Blank type of FrameNode.
+定义Blank类型的FrameNode。
 
 **Inheritance/Implementation:** BlankFrameNode extends [TypedFrameNode<BlankAttribute>](TypedFrameNode<BlankAttribute>)
 
@@ -18,7 +18,7 @@ Define the Blank type of FrameNode.
 abstract initialize(min?: double | string): BlankAttribute
 ```
 
-Initialize Blank FrameNode.
+初始化Blank类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Blank FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| min | double \| string | No | Blank options. |
+| min | double \| string | No | Blank节点的选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [BlankAttribute](../arkts-components/arkts-arkui-blank-attribute.md) |  |
 

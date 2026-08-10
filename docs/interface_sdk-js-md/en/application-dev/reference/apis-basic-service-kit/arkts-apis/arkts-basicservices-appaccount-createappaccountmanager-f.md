@@ -1,12 +1,18 @@
 # createAppAccountManager
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createAppAccountManager
 
 ```TypeScript
 function createAppAccountManager(): AppAccountManager
 ```
 
-Creates an **AppAccountManager** object.
+创建应用账号管理器对象。
 
 **Since:** 7
 
@@ -20,9 +26,9 @@ Creates an **AppAccountManager** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | AppAccountManager** object created. |
+| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | 应用账号管理器对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();

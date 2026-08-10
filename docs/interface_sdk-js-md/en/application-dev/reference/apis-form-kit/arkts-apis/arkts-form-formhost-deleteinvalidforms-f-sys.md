@@ -1,5 +1,11 @@
 # deleteInvalidForms (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
 ## deleteInvalidForms
 
 ```TypeScript
@@ -25,18 +31,18 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of valid widget IDs. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. If the invalid widgets are deleted, **error** is undefined and **data** is the number of widgets deleted; otherwise, **error** is an error object. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the invalid widgets are deleted, **error** is undefined and **data** is the number of widgets deleted; otherwise, **error** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
 
 
 ## deleteInvalidForms
@@ -69,16 +75,16 @@ Deletes invalid widgets from the list. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of widgets deleted. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of widgets deleted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
 

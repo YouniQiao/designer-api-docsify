@@ -1,6 +1,6 @@
 # DividerFrameNode
 
-Define the Divider type of FrameNode.
+定义Divider类型的FrameNode。
 
 **Inheritance/Implementation:** DividerFrameNode extends [TypedFrameNode<DividerAttribute>](TypedFrameNode<DividerAttribute>)
 
@@ -18,7 +18,7 @@ Define the Divider type of FrameNode.
 abstract initialize(): DividerAttribute
 ```
 
-Initialize Divider FrameNode.
+初始化Divider类型的FrameNode。
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ Initialize Divider FrameNode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md) |  |
 

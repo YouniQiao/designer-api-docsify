@@ -1,6 +1,6 @@
 # MonitorObjectType
 
-Enumerates the types of component objects to be monitored.
+��Ҫ��ص������������ö�١�
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Enumerates the types of component objects to be monitored.
 ALL = -1
 ```
 
-All component types are monitored.
+�������������͡�
 
 **Since:** 24
 
@@ -32,7 +32,7 @@ All component types are monitored.
 CUSTOM_COMPONENT = 1 << 0
 ```
 
-Custom component types are monitored.
+����Զ���������͡�
 
 **Since:** 24
 
@@ -48,7 +48,7 @@ Custom component types are monitored.
 WINDOW = 1 << 1
 ```
 
-The **Window** component type is monitored.
+���Window������͡�
 
 **Since:** 24
 
@@ -64,7 +64,7 @@ The **Window** component type is monitored.
 NODE_CONTAINER = 1 << 2
 ```
 
-The **NodeContainer** component type is monitored.
+���NodeContainer������͡�
 
 **Since:** 24
 
@@ -80,7 +80,7 @@ The **NodeContainer** component type is monitored.
 X_COMPONENT = 1 << 3
 ```
 
-The **XComponent** component type is monitored.
+���XComponent������͡�
 
 **Since:** 24
 
@@ -96,7 +96,7 @@ The **XComponent** component type is monitored.
 ABILITY = 1 << 4
 ```
 
-The **Ability** component type is monitored.
+���Ability������͡�
 
 **Since:** 24
 

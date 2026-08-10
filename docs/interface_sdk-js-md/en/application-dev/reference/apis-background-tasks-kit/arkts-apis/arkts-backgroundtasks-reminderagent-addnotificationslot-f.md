@@ -1,12 +1,18 @@
 # addNotificationSlot
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## addNotificationSlot
 
 ```TypeScript
 function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 ```
 
-Adds a notification slot. This API uses an asynchronous callback to return the result.
+添加一个NotificationSlot，使用回调的方式实现异步调用。
 
 **Since:** 7
 
@@ -24,16 +30,18 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification slot, whose type can be set. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | notification.slot实例，仅支持设置其type属性。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import notification from '@ohos.notificationManager'
 import { BusinessError } from '@ohos.base';
+import notification from '@ohos.notification';
+import reminderAgent from '@ohos.reminderAgent';
+import { NotificationSlot } from './notification/notificationSlot';
 
-let mySlot:notification.NotificationSlot = {
+let mySlot:NotificationSlot = {
   type: notification.SlotType.SOCIAL_COMMUNICATION
 }
 reminderAgent.addNotificationSlot(mySlot, (err: BusinessError, data: void) => {
@@ -48,7 +56,7 @@ reminderAgent.addNotificationSlot(mySlot, (err: BusinessError, data: void) => {
 function addNotificationSlot(slot: NotificationSlot): Promise<void>
 ```
 
-Adds a notification slot. This API uses a promise to return the result.
+添加一个NotificationSlot，使用Promise方式实现异步调用。
 
 **Since:** 7
 
@@ -66,20 +74,22 @@ Adds a notification slot. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification slot, whose type can be set. |
+| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | notification.slot实例，仅支持设置其type属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise类型异步回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import notification from '@ohos.notificationManager'
+import notification from '@ohos.notification';
+import reminderAgent from '@ohos.reminderAgent';
+import { NotificationSlot } from './notification/notificationSlot';
 
-let mySlot:notification.NotificationSlot = {
+let mySlot:NotificationSlot = {
   type: notification.SlotType.SOCIAL_COMMUNICATION
 }
 reminderAgent.addNotificationSlot(mySlot).then(() => {

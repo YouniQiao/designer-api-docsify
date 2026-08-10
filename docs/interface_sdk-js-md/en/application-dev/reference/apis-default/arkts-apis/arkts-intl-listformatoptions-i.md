@@ -1,8 +1,8 @@
 # ListFormatOptions
 
-An object with some or all properties of the \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ constructor \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ parameter.
+An object with some or all properties of the `Intl.ListFormat` constructor `options` parameter.
 
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat#parameters).
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -14,9 +14,9 @@ An object with some or all properties of the \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\
 localeMatcher?: ListFormatLocaleMatcher | undefined
 ```
 
-The locale matching algorithm to use. For information about this option, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
 
-**Type:** ListFormatLocaleMatcher \| undefined
+**Type:** [ListFormatLocaleMatcher](../../apis-arkts/arkts-apis/arkts-arkts-intl-listformatlocalematcher-t.md) \| undefined
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -30,7 +30,7 @@ style?: ListFormatStyle | undefined
 
 The length of the internationalized message.
 
-**Type:** ListFormatStyle \| undefined
+**Type:** [ListFormatStyle](../../apis-arkts/arkts-apis/arkts-arkts-intl-listformatstyle-t.md) \| undefined
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -44,7 +44,7 @@ type?: ListFormatType | undefined
 
 The format of output message.
 
-**Type:** ListFormatType \| undefined
+**Type:** [ListFormatType](../../apis-arkts/arkts-apis/arkts-arkts-intl-listformattype-t.md) \| undefined
 
 **ArkTS mode:** ArkTS-Dyn only
 

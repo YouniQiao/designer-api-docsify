@@ -4,7 +4,9 @@
 export type DrawingLattice = drawing.Lattice
 ```
 
-Lattice for dividing an image into grids.
+type DrawingLattice = drawing.Lattice
+
+将图片按照矩形网格进行划分。
 
 **Since:** 23
 

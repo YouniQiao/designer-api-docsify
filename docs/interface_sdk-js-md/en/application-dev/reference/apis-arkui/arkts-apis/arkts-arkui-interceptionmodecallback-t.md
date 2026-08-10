@@ -4,7 +4,7 @@
 export type InterceptionModeCallback = (mode: NavigationMode) => void
 ```
 
-navigation interception callback using in navigation mode change
+Navigation单双栏显示状态发生变更时的拦截回调。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ navigation interception callback using in navigation mode change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the mode of Navigation.  |
+| mode | [NavigationMode](arkts-arkui-navigation-navigationmode-e.md) | Yes | 导航页的显示模式。 |
 

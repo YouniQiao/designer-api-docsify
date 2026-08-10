@@ -1,6 +1,6 @@
 # IDataSourcePrefetching
 
-Implement this interface to provide data prefetching for the LazyForEach component.
+用于实现具有预加载能力的LazyForEach数据源。
 
 **Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource<T>](IDataSource<T>)
 
@@ -12,13 +12,19 @@ Implement this interface to provide data prefetching for the LazyForEach compone
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from 'kits/@kit.ArkUI';
+```
+
 ## cancel
 
 ```TypeScript
 default cancel(index: int): Promise<void> | undefined
 ```
 
-Cancels prefetching data for the specified element in the data collection.This method can be either synchronous or asynchronous.
+取消指定数据项的预加载。该方法可以为同步，也可以为异步。
 
 **Since:** 23
 
@@ -34,7 +40,7 @@ Cancels prefetching data for the specified element in the data collection.This m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the item in the collection. |
+| index | int | Yes | 指定项的序号。 |
 
 **Return value:**
 
@@ -48,7 +54,7 @@ Cancels prefetching data for the specified element in the data collection.This m
 prefetch(index: int): Promise<void> | undefined
 ```
 
-Prefetches data for the specified element in the data collection.This method can be either synchronous or asynchronous.
+预加载数据源中的指定项。该方法可以为同步，也可以为异步。
 
 **Since:** 23
 
@@ -64,7 +70,7 @@ Prefetches data for the specified element in the data collection.This method can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the item in the collection. |
+| index | int | Yes | 指定项的序号。 |
 
 **Return value:**
 

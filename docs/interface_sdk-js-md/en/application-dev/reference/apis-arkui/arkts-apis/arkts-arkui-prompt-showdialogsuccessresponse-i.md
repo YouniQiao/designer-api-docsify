@@ -1,14 +1,24 @@
 # ShowDialogSuccessResponse
 
-Defines the response of ShowDialog.
+对话框的响应结果。
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-unnamed-export interface ShowDialogSuccessResponse--><!--Device-unnamed-export interface ShowDialogSuccessResponse-End-->
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.ShowDialogSuccessResponse
+
+<!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { prompt } from 'kits/@kit.ArkUI';
+```
 
 ## index
 
@@ -16,15 +26,17 @@ Defines the response of ShowDialog.
 index: number
 ```
 
-Defines the index of data.
+选中按钮在buttons数组中的索引。
 
 **Type:** number
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** 9
+
+**Substitutes:** ohos.promptAction/promptAction.ShowDialogSuccessResponse#index
 
 <!--Device-ShowDialogSuccessResponse-index: number--><!--Device-ShowDialogSuccessResponse-index: number-End-->
 

@@ -1,6 +1,6 @@
 # LineSpacingOptions
 
-Configures the line spacing of text and whether it applies only between lines.
+设置文本的行间距，是否仅在行与行之间生效。
 
 **Since:** 20
 
@@ -16,11 +16,11 @@ Configures the line spacing of text and whether it applies only between lines.
 onlyBetweenLines?: boolean
 ```
 
-Whether line spacing applies only between lines.
+文本的行间距是否仅在行与行之间生效。
 
-**true**: Line spacing applies only between lines; no extra spacing is added above the first line or below the last line. **false**: Extra line spacing is added both above the first line and below the last line.
+当设置为true时，行间距仅适用于行与行之间，首行上方和尾行下方无额外的行间距。当设置为false时，首行上方和尾行下方均会存在行间距。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 

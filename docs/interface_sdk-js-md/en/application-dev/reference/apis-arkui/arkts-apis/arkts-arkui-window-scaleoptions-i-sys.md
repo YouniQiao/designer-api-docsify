@@ -1,6 +1,6 @@
 # ScaleOptions (System API)
 
-Describes the scale parameters.
+缩放参数。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Describes the scale parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## pivotX
 
 ```TypeScript
 pivotX?: double
 ```
 
-X coordinate of the scale center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
+缩放中心点X轴坐标。该参数为浮点数，默认值为0.5， 取值范围[0.0, 1.0]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ X coordinate of the scale center. The value is a floating-point number in the ra
 pivotY?: double
 ```
 
-Y coordinate of the scale center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
+缩放中心点Y轴坐标。该参数为浮点数，默认值为0.5， 取值范围[0.0, 1.0]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Y coordinate of the scale center. The value is a floating-point number in the ra
 x?: double
 ```
 
-Scale factor along the x-axis. The value is a floating-point number, and the default value is **1.0**.
+X轴的缩放参数。该参数为浮点数，默认值为1.0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -78,9 +84,9 @@ Scale factor along the x-axis. The value is a floating-point number, and the def
 y?: double
 ```
 
-Scale factor along the y-axis. The value is a floating-point number, and the default value is **1.0**.
+Y轴的缩放参数。该参数为浮点数，默认值为1.0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 

@@ -4,7 +4,7 @@
 type EventListener = (evt: Object) => void
 ```
 
-Event to store.
+用户存储的事件信息。
 
 **Since:** 7
 
@@ -20,5 +20,5 @@ Event to store.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| evt | Object | Yes | Event. |
+| evt | Object | Yes | 用户事件。 |
 

@@ -1,6 +1,6 @@
 # RichEditorParagraphResult
 
-Describes the returned paragraph information.
+后端返回的段落信息。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Describes the returned paragraph information.
 range: [number, number]
 ```
 
-Start and end positions of the paragraph.
+段落起始和结束位置。
 
 **Type:** [number, number]
 
@@ -38,9 +38,9 @@ Start and end positions of the paragraph.
 style: RichEditorParagraphStyle
 ```
 
-Paragraph style.
+段落样式。
 
-**Type:** RichEditorParagraphStyle
+**Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
 
 **Since:** 11
 

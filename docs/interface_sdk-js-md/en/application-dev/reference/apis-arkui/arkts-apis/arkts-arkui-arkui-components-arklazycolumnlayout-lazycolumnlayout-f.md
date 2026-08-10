@@ -1,5 +1,11 @@
 # LazyColumnLayout
 
+## Modules to Import
+
+```TypeScript
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
+```
+
 ## LazyColumnLayout
 
 ```TypeScript
@@ -8,7 +14,7 @@ export declare function LazyColumnLayout(
 ): LazyColumnLayoutAttribute
 ```
 
-Defines LazyColumnLayout Component.
+定义LazyColumnLayout组件。
 
 **Since:** 26.0.0
 
@@ -24,13 +30,13 @@ Defines LazyColumnLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | content |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the LazyColumnLayout. |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | 懒加载列布局的属性 |
 
 
 ## LazyColumnLayout
@@ -42,11 +48,11 @@ export declare function LazyColumnLayout(
 ): LazyColumnLayoutAttribute
 ```
 
-Defines LazyColumnLayout Component.
+定义LazyColumnLayout组件。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Decorator:** @Builder
 
@@ -60,12 +66,12 @@ Defines LazyColumnLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LazyColumnLayoutAttribute&gt; | Yes | The style to create a LazyColumnLayout. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | content |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyColumnLayoutAttribute&gt; | Yes | The style to create a LazyColumnLayout. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the LazyColumnLayout. |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | LazyColumnLayout的属性。 |
 

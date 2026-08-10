@@ -1,6 +1,6 @@
 # GetPropertyType (System API)
 
-Enumerates the types of properties to obtain.
+表示要获取的属性类型的枚举。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the types of properties to obtain.
 AUTH_SUB_TYPE = 1
 ```
 
-Authentication credential subtype.
+认证子类型。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Authentication credential subtype.
 REMAIN_TIMES = 2
 ```
 
-Number of remaining times.
+剩余次数。
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Number of remaining times.
 FREEZING_TIME = 3
 ```
 
-Freezing time.
+冻结时间。
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Freezing time.
 ENROLLMENT_PROGRESS = 4
 ```
 
-Enrollment progress, which is left blank by default.
+指示录入进度，默认为空。
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ Enrollment progress, which is left blank by default.
 SENSOR_INFO = 5
 ```
 
-Sensor information, which is left blank by default.
+指示传感器信息，默认为空。
 
 **Since:** 10
 
@@ -108,7 +108,7 @@ Sensor information, which is left blank by default.
 NEXT_PHASE_FREEZING_TIME = 6
 ```
 
-Next freezing time.
+下次冻结时间。
 
 **Since:** 12
 
@@ -126,7 +126,7 @@ Next freezing time.
 CREDENTIAL_LENGTH = 7
 ```
 
-Credential length.
+凭据长度。
 
 **Since:** 20
 

@@ -1,13 +1,18 @@
 # getAppNativeMemInfoAsync
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppNativeMemInfoAsync
 
 ```TypeScript
 function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 ```
 
-Obtains the memory information of application processes by reading the data of the **\/proc/{pid}/smaps\_rollup** and  
-**\/proc/{pid}/statm** nodes. This API uses a promise to return the result.
+��ȡ/proc/{pid}/smaps_rollup��/proc/{pid}/statm�ڵ�������Ի�ȡӦ�ý����ڴ���Ϣ��ʹ��Promise�첽�ص���
 
 **Since:** 20
 
@@ -21,9 +26,9 @@ Obtains the memory information of application processes by reading the data of t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NativeMemInfo&gt; | Promise used to return the application process memory information. |
+| Promise&lt;NativeMemInfo&gt; | promise���󣬷���Ӧ�ý����ڴ���Ϣ�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 hidebug.getAppNativeMemInfoAsync().then((nativeMemInfo: hidebug.NativeMemInfo)=>{

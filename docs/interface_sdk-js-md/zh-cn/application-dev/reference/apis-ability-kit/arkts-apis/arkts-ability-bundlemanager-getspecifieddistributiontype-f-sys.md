@@ -1,12 +1,18 @@
 # getSpecifiedDistributionType（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getSpecifiedDistributionType
 
 ```TypeScript
 function getSpecifiedDistributionType(bundleName: string): string
 ```
 
-以同步的方法查询指定bundleName的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，该返回值是在调用install接口时传入的[InstallParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中的specifiedDistributionType字段。
+以同步的方法查询指定bundleName的[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)，该返回值是在调用install接口时传入的[InstallParam](arkts-ability-installer-installparam-i-sys.md)中的specifiedDistributionType字段。
 
 获取调用方自身的信息时不需要权限。
 
@@ -32,18 +38,18 @@ function getSpecifiedDistributionType(bundleName: string): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回指定bundleName的\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| string | 返回指定bundleName的[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

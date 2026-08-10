@@ -1,5 +1,11 @@
 # onEventData
 
+## 导入模块
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onEventData
 
 ```TypeScript
@@ -21,18 +27,5 @@ function onEventData(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EventData&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
-
-**示例：**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-// 收到eventId为"eventId"的事件后执行回调函数
-emitter.onEventData(`eventId`, callback);
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
 

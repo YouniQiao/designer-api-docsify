@@ -1,6 +1,21 @@
-# @ohos.i18n
+# @ohos.i18n(国际化-I18n)
 
-Provides international settings related APIs.
+本模块提供系统相关的以及增强的[国际化](../../../internationalization/i18n-l10n.md)能力，包括区域管理、电话号码处理、日历等，相关接口为  
+[ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/)标准中未定义的补充接口。  
+[国际化-Intl](arkts-intl.md)模块提供了ECMA 402标准定义的基础国际化接口，与本模块共同使用可提供完整的国际化能力。接口中使用的名词定义如下：
+
+- 模式字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)和单引号包裹的自定义文本自由组  
+合而成的字符串。  
+- 框架字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)自由组合而成的字符串，不支持自  
+定义文本。
+
+> **说明：**
+> 
+> - 本模块接口基于[CLDR](https://cldr.unicode.org)国际化数据库实现，随着CLDR标准的迭代演进，接口处理结果可能会相应调整。例如时间日期格式化接口，其返回值仅适用于界面展示场景，开发者请勿对返回格式
+> 进行硬编码或假设性判断，否则可能导致版本兼容问题。其中，API version 12 对应[CLDR 42](https://cldr.unicode.org/downloads/cldr-42)版本，具体数据变更详情可查阅
+> [CLDR官方文档](https://cldr.unicode.org/)。
+> 
+> - 从API version 11开始，本模块部分接口支持在ArkTS卡片中使用。
 
 **Since:** 23
 
@@ -10,103 +25,109 @@ Provides international settings related APIs.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getcalendar) | Obtains the Calendar object for the specified locale and calendar type. |
-| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getchinesecalendar) | Obtains the ChineseCalendar object for the specified locale. |
-| [getInstance](arkts-localization-i18n-getinstance-f.md#getinstance) | Creates an IndexUtil object. |
-| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getlineinstance) | Obtains a BreakIterator object. The BreakIterator object maintains an internal break iterator that can be used to access various line break points. |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) | Obtains a SimpleDateTimeFormat object based on the specified pattern string. For details about the display differences between the objects obtained by this API and getSimpleDateTimeFormatBySkeleton,see SimpleDateTimeFormat. |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) | Obtains a SimpleDateTimeFormat object based on the specified skeleton. For details about the display differences between the objects obtained by this API and getSimpleDateTimeFormatByPattern, see SimpleDateTimeFormat. |
-| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton) | Obtains a SimpleNumberFormat object based on the specified skeleton. |
-| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#gettimezone) | Obtains the TimeZone object corresponding to the specified time zone ID. |
-| [isRTL](arkts-localization-i18n-isrtl-f.md#isrtl) | Checks whether the input character is of the right to left (RTL) language. |
+| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getcalendar) | 获取指定区域和历法的日历对象。 |
+| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getchinesecalendar) | 获取指定区域的农历对象。 |
+| [getInstance](arkts-localization-i18n-getinstance-f.md#getinstance) | 创建并返回IndexUtil对象。 |
+| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getlineinstance) | 获取用于定位文本可换行点的BreakIterator对象。该对象内部维护一个换行迭代器，可以用于访问各个可换行点。 |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) | 通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton)接口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。 |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) | 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern)接口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。 |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton) | 通过框架字符串获取SimpleNumberFormat对象。 |
+| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#gettimezone) | 获取时区ID对应的时区对象。 |
+| [isRTL](arkts-localization-i18n-isrtl-f.md#isrtl) | 判断语言是否为镜像语言。在镜像语言下，UI界面需要[镜像显示](../../../internationalization/i18n-ui-design.md#界面镜像)。 |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [AdvancedMeasureFormat](arkts-localization-i18n-advancedmeasureformat-c.md) | Provides the number formatting capability, supporting automatic unit conversion based on specific application scenarios. |
-| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | The BreakIterator class is used for finding the location of break point in text. |
-| [Calendar](arkts-localization-i18n-calendar-c.md) | Provides the API for accessing Calendar name, time and date related information. |
-| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,such as leap month. |
-| [EntityRecognizer](arkts-localization-i18n-entityrecognizer-c.md) | Provide some functions to find named entity in text. |
-| [HolidayManager](arkts-localization-i18n-holidaymanager-c.md) | Provide some functions to manage holidays in a country or region. Partly follows the RFC2445 standard. |
-| [I18NUtil](arkts-localization-i18n-i18nutil-c.md) | Provides util functions. |
-| [ISO8601DateTimeFormat](arkts-localization-i18n-iso8601datetimeformat-c.md) | Provide a DateTime formatting interface which could format date to ISO 8601 standard string.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | Sequence text can be grouped under the specified area,and grouping index with different lengths can be specified. |
-| [Normalizer](arkts-localization-i18n-normalizer-c.md) | Provides the API for text encoding normalization. |
-| [PhoneNumberFormat](arkts-localization-i18n-phonenumberformat-c.md) | Provides the API for formatting phone number strings |
-| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | Provide a simple date time formatting interface. |
-| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Provide a simple number formatting interface. |
-| [StyledDateTimeFormat](arkts-localization-i18n-styleddatetimeformat-c.md) | Provide a DateTime formatting interface which could format DateTime to StyleString. |
-| [StyledNumberFormat](arkts-localization-i18n-stylednumberformat-c.md) | Provide a number formatting interface which could format number to StyleString. |
-| [SymbolDateTimeFormat](arkts-localization-i18n-symboldatetimeformat-c.md) | Provide a DateTime formatting interface that supports custom symbols.This interface formats date time values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "2:23 PM" with "2:23 afternoon"). |
-| [SymbolNumberFormat](arkts-localization-i18n-symbolnumberformat-c.md) | Provide a Number formatting interface that supports custom symbols.This interface formats number values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "null" to "NA"). |
-| [System](arkts-localization-i18n-system-c.md) | Provides system functions. |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | Provides the API for accessing TimeZone name, rawOffset and offset information. |
-| [Transliterator](arkts-localization-i18n-transliterator-c.md) | Provides the API for transliterate text from one format to another. |
-| [Unicode](arkts-localization-i18n-unicode-c.md) | Provides the API for accessing unicode character properties. For example, determine whether a character is a number. |
-| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | Provides the API for obtaining a timezone transition information. |
-| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | Provides the API for obtaining timezone offset changing rules information. |
+| [AdvancedMeasureFormat](arkts-localization-i18n-advancedmeasureformat-c.md) | 提供数字格式化能力，支持根据单位使用场景自动转换合适的单位。 |
+| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | 提供文本换行相关的能力，包括可换行点的获取、移动和识别等。 |
+| [Calendar](arkts-localization-i18n-calendar-c.md) | 提供历法相关的能力，包括历法名称获取和日期计算等。 |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | 提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。继承自[Calendar](arkts-localization-i18n-calendar-c.md)，支持[Calendar](arkts-localization-i18n-calendar-c.md)的方法。 |
+| [EntityRecognizer](arkts-localization-i18n-entityrecognizer-c.md) | 提供实体识别相关的能力，可以获取文本中实体的类型和起止位置。当前支持识别的实体包括电话号码和时间日期。 |
+| [HolidayManager](arkts-localization-i18n-holidaymanager-c.md) | 提供解析节假日数据的能力，包括节假日判断和指定年份节假日列表获取等。 |
+| [I18NUtil](arkts-localization-i18n-i18nutil-c.md) | 国际化工具类，提供单位转换、获取日期顺序、获取时段名称、区域匹配和路径本地化等能力。 |
+| [ISO8601DateTimeFormat](arkts-localization-i18n-iso8601datetimeformat-c.md) | 符合ISO 8601标准的日期格式化对象。 |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | 提供索引相关的能力，包括区域索引列表和文本索引值获取。 |
+| [Normalizer](arkts-localization-i18n-normalizer-c.md) | 提供文本标准化的能力。 |
+| [PhoneNumberFormat](arkts-localization-i18n-phonenumberformat-c.md) | 提供电话号码相关的能力，包括电话号码有效性判断、格式化和归属地获取。 |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | 提供时间日期格式化的能力。 |
+| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 基于框架字符串提供数字格式化的能力。 |
+| [StyledDateTimeFormat](arkts-localization-i18n-styleddatetimeformat-c.md) | 提供富文本时间日期格式化的能力。 |
+| [StyledNumberFormat](arkts-localization-i18n-stylednumberformat-c.md) | 提供富文本数字格式化的能力。 |
+| [SymbolDateTimeFormat](arkts-localization-i18n-symboldatetimeformat-c.md) | 提供自定义时间日期符号的能力。继承自  [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)，支持  [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)的方法。 |
+| [SymbolNumberFormat](arkts-localization-i18n-symbolnumberformat-c.md) | 提供自定义数字符号的能力。继承自  [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持  [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。 |
+| [System](arkts-localization-i18n-system-c.md) | 提供系统属性相关的能力，包括语言地区名称翻译、支持的语言地区列表获取和系统语言地区获取等。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 提供时区相关的能力，包括时区名称翻译、偏移量获取和跳变规则获取等。 |
+| [Transliterator](arkts-localization-i18n-transliterator-c.md) | 提供文本音译相关的能力，包括音译支持范围获取和文本音译等。 |
+| [Unicode](arkts-localization-i18n-unicode-c.md) | 提供字符属性相关的能力，包括判断字符是否为空格、数字和字母等。 |
+| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | 提供解析时区跳变规则的能力。 |
+| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | 提供查询时区跳变规则的能力。 |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [System](arkts-localization-i18n-system-c-sys.md) | Provides system functions. |
-| [SystemLocaleManager](arkts-localization-i18n-systemlocalemanager-c-sys.md) | Provide some functions for settings and startup guide to select language or region. |
+| [System](arkts-localization-i18n-system-c-sys.md) | 提供系统属性相关的能力，包括语言地区名称翻译、支持的语言地区列表获取和系统语言地区获取等。 |
+| [SystemLocaleManager](arkts-localization-i18n-systemlocalemanager-c-sys.md) | 提供语言、地区和时区信息排序的能力。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | Represents optional configuration items for AdvancedMeasureFormat object. |
-| [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Represents chinese calendar time element for the ChineseCalendar object. |
-| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) | Defines the detect encoding result information. |
-| [EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md) | Defines a list of entities. |
-| [HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md) | Represents the holiday information. |
-| [HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md) | Represents the name of a holiday in different languages. |
-| [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | Represents optional configuration items for the ISO8601DateTimeFormat object.These options determine which elements need to be displayed after formatting and the corresponding format. |
-| [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | Options for PhoneNumberFormat object initialization. |
-| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.Define the resolved symbol element and value that need to get. |
-| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | Represents optional element for the ResolvedSymbolNumberFormatOptions object.Define the resolved symbol element and value that need to get. |
-| [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | Represents optional configuration items for the DateTimeFormat object. |
-| [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | Represents optional configuration items for the NumberFormat object. |
-| [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | Represents optional configuration items for the SymbolDateTimeFormat object.Define the symbol element and value that need to be replaced. |
-| [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | Represents optional configuration items for the SymbolNumberFormat object.Define the symbol element and value that need to be replaced. |
-| [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Defines the measurement unit information. |
+| [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | 创建数字格式化对象时的可选配置项。 |
+| [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | 农历时间对象。 |
+| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) | 编码信息。 |
+| [EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md) | 实体信息属性。 |
+| [HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md) | 节假日信息。 |
+| [HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md) | 节假日名称在不同语言下的翻译。 |
+| [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | 符合ISO 8601标准的日期格式化对象创建时的配置项。 |
+| [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | 电话号码格式化时可设置的配置项。 |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | 自定义符号时间日期格式化对象配置项的解析结果。继承自Intl.ResolvedDateTimeFormatOptions，支持Intl.ResolvedDateTimeFormatOptions的所有配置项，并且功能与其一致。 |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | 自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions，支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。 |
+| [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | 创建富文本显示的时间日期格式化对象时的可选配置项。 |
+| [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | 创建富文本显示的数字格式化对象时的可选配置项。 |
+| [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | 创建自定义符号时间日期格式化对象时的可选配置项。继承自Intl.DateTimeFormatOptions，支持Intl.DateTimeFormatOptions的所有配置项，并且功能与其一致。 |
+| [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | 创建自定义符号数字格式化对象时的可选配置项。继承自Intl.NumberFormatOptions，支持Intl.NumberFormatOptions的所有配置项，并且功能与其一致。 |
+| [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 度量衡单位信息。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [LocaleItem](arkts-localization-i18n-localeitem-i-sys.md) | Represents the locale information, which consists of the language, script, and country/region. |
-| [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | Represents the language or country/region sorting option. |
-| [TimeZoneCityItem](arkts-localization-i18n-timezonecityitem-i-sys.md) | Represents a time zone and city combination item. |
+| [LocaleItem](arkts-localization-i18n-localeitem-i-sys.md) | 语言或国家地区的组合信息。 |
+| [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | 语言或国家地区排序选项。 |
+| [TimeZoneCityItem](arkts-localization-i18n-timezonecityitem-i-sys.md) | 时区城市的组合信息。 |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | Enumerates text normalization modes. |
-| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Enumerates temperature units. |
-| [UnitUsage](arkts-localization-i18n-unitusage-e.md) | Enumerates Scenarios for MeasureFormat. |
-| [WeekDay](arkts-localization-i18n-weekday-e.md) | Enumerates the first day of a week. The value ranges from Monday to Sunday. |
+| [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | 文本标准化范式的枚举。 |
+| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | 温度单位的枚举。 |
+| [UnitUsage](arkts-localization-i18n-unitusage-e.md) | 单位格式化使用场景的枚举。 |
+| [WeekDay](arkts-localization-i18n-weekday-e.md) | 周起始日的枚举，取值范围为周一至周日。 |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [SuggestionType](arkts-localization-i18n-suggestiontype-e-sys.md) | Represents the language or country/region suggestion type. |
+| [SuggestionType](arkts-localization-i18n-suggestiontype-e-sys.md) | 语言或国家地区的推荐类型。 |
 <!--DelEnd-->
 

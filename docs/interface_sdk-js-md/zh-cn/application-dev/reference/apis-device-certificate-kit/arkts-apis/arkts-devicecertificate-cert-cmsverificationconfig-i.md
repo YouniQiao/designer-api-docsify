@@ -10,6 +10,12 @@ CMS验签的配置。
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## contentData
 
 ```TypeScript
@@ -38,7 +44,7 @@ contentDataFormat?: CmsContentDataFormat
 
 内容数据的格式。默认为CmsContentDataFormat.BINARY。
 
-**类型：** CmsContentDataFormat
+**类型：** [CmsContentDataFormat](arkts-devicecertificate-cert-cmscontentdataformat-e.md)
 
 **默认值：** CmsContentDataFormat.BINARY
 
@@ -79,9 +85,10 @@ trustCerts: Array<X509Cert>
 ```
 
 信任证书。
-    **说明：**  
-    
-    需要配置所有签名者的信任证书。
+
+> **说明：**
+> 
+> 需要配置所有签名者的信任证书。
 
 **类型：** Array&lt;X509Cert&gt;
 

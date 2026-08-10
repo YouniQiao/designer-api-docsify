@@ -1,6 +1,6 @@
 # SyncFolderState (System API)
 
-Enumerates the states of the sync root.
+枚举，云盘的同步根的状态。
 
 **Since:** 21
 
@@ -18,7 +18,7 @@ Enumerates the states of the sync root.
 INACTIVE = 0
 ```
 
-The sync root is inactive.
+表示同步根处于未激活状态。
 
 **Since:** 21
 
@@ -36,7 +36,7 @@ The sync root is inactive.
 ACTIVE = 1
 ```
 
-The sync root is active.
+表示同步根处于激活状态。
 
 **Since:** 21
 

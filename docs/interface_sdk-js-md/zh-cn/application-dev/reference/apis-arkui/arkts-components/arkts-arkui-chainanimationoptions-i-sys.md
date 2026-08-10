@@ -76,7 +76,7 @@ edgeEffect?: ChainEdgeEffect
 
 默认值：ChainEdgeEffect.DEFAULT
 
-**类型：** ChainEdgeEffect
+**类型：** [ChainEdgeEffect](arkts-arkui-chainedgeeffect-e-sys.md)
 
 **默认值：** ChainEdgeEffect.DEFAULT
 
@@ -128,7 +128,7 @@ maxSpace: Length
 
 单位：与Length一致。小于当前列表项间距（space）时按当前列表项间距处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
 
@@ -152,7 +152,7 @@ minSpace: Length
 
 单位：与Length一致。小于0时按0处理；大于当前列表项间距（space）时按当前列表项间距处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
 

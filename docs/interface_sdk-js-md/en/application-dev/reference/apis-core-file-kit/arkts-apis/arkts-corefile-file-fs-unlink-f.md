@@ -1,12 +1,18 @@
 # unlink
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## unlink
 
 ```TypeScript
 declare function unlink(path: string): Promise<void>
 ```
 
-Removes a file. This API uses a promise to return the result.
+删除单个文件，使用promise异步回调。
 
 **Since:** 9
 
@@ -22,33 +28,33 @@ Removes a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
+| path | string | Yes | 文件的应用沙箱路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900030 | File name too long |
+| 13900027 | Read-only file system |
 | 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
+| 13900001 | Operation not permitted |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## unlink
@@ -57,7 +63,7 @@ Removes a file. This API uses a promise to return the result.
 declare function unlink(path: string, callback: AsyncCallback<void>): void
 ```
 
-Removes a file. This API uses an asynchronous callback to return the result.
+删除文件，使用callback异步回调。
 
 **Since:** 9
 
@@ -73,26 +79,26 @@ Removes a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked immediately after the file is removed. |
+| path | string | Yes | 文件的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步删除文件之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900030 | File name too long |
+| 13900027 | Read-only file system |
 | 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
+| 13900001 | Operation not permitted |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900014 | Device or resource busy |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
+```
+
 ## action
 
 ```TypeScript
@@ -20,7 +26,7 @@ action: TouchGestureAction
 
 触摸屏手势类型。
 
-**类型：** TouchGestureAction
+**类型：** [TouchGestureAction](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md)
 
 **起始版本：** 18
 
@@ -40,7 +46,7 @@ touches: Touch[]
 
 触屏点信息。
 
-**类型：** Touch[]
+**类型：** [Touch](arkts-input-multimodalinput-touchevent-touch-i-sys.md)[]
 
 **起始版本：** 18
 

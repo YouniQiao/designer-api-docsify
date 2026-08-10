@@ -1,17 +1,22 @@
 # setEventHubMultithreadingEnabled
 
+## Modules to Import
+
+```TypeScript
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setEventHubMultithreadingEnabled
 
 ```TypeScript
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-Enables the cross-thread data transfer feature of [EventHub]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ in  
-[Context]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
-    **NOTE**  
-    
-    - When multiple Context objects communicate, you need to call this API to set each Context object to support  
-    EventHub cross-thread data transfer.
+设置[Context](arkts-ability-context-t.md)中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。
+
+> **说明：**
+> 
+> - 当多个Context进行通信时，需要调用该接口设置每个Context都支持EventHub跨线程数据传递功能。
 
 **Since:** 20
 
@@ -29,10 +34,10 @@ Enables the cross-thread data transfer feature of [EventHub]\_\_\_JSDOC\_LINK\_D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context object. For details about the serialization data types supported by Eventhub, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The data size cannot exceed 16 MB. |
-| enabled | boolean | Yes | Whether to enable the cross-thread data transfer feature.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **true**: The cross-thread data transfer feature is enabled, and data is passed by reference.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **false**: The cross-thread data transfer feature is disabled. Data is passed through serialization, which means that the data of the sender thread is independent of that of the receiver thread. |
+| context | common.Context | Yes | Context对象。其中，Eventhub支持传递的序列化数据类型参见 [序列化支持的类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)，数据大小不超过16MB。 |
+| enabled | boolean | Yes | 表示是否启用Context的EventHub跨线程通信能力。true表示启用，false表示禁用。 |
 
-**Example**
+## Examples
 
 Enable the cross-thread data transfer feature of [EventHub](./js-apis-inner-application-eventHub.md) in a [Context](./js-apis-inner-application-context.md) object on the main thread, convert the Context object to a [SendableContext](js-apis-inner-application-sendableContext.md) object, and send the SendableContext object to the [Worker](../apis-arkts/js-apis-worker.md) thread.
 

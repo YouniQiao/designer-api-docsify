@@ -142,25 +142,25 @@
   - [TouchGuideType](arkts-accessibility-touchguidetype-t.md)
   - [WindowType](arkts-accessibility-windowtype-t.md)
 - application<!--arkts-accessibilitykit-application-->
-  - [application/AccessibilityExtensionContext](arkts-application/accessibilityextensioncontext.md)
-    - [AccessibilityExtensionContext](accessibilityextensioncontext-accessibilityextensioncontext-c.md)
+  - [AccessibilityExtensionContext](arkts-accessibilityextensioncontext.md)
+    - [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md)
     <!--Del-->
-    - [AccessibilityExtensionContext(系统接口)](accessibilityextensioncontext-accessibilityextensioncontext-c-sys.md)<!--DelEnd-->
+    - [AccessibilityExtensionContext(系统接口)](arkts-accessibility-accessibilityextensioncontext-c-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [Parameter(系统接口)](accessibilityextensioncontext-parameter-c-sys.md)<!--DelEnd-->
-    - [AccessibilityElement](accessibilityextensioncontext-accessibilityelement-i.md)
+    - [Parameter(系统接口)](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md)<!--DelEnd-->
+    - [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
     <!--Del-->
-    - [AccessibilityElement(系统接口)](accessibilityextensioncontext-accessibilityelement-i-sys.md)<!--DelEnd-->
+    - [AccessibilityElement(系统接口)](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [AccessibilityGrid(系统接口)](accessibilityextensioncontext-accessibilitygrid-i-sys.md)<!--DelEnd-->
+    - [AccessibilityGrid(系统接口)](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [AccessibilitySpan(系统接口)](accessibilityextensioncontext-accessibilityspan-i-sys.md)<!--DelEnd-->
-    - [ElementAttributeValues](accessibilityextensioncontext-elementattributevalues-i.md)
+    - [AccessibilitySpan(系统接口)](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)<!--DelEnd-->
+    - [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md)
     <!--Del-->
-    - [ElementAttributeValues(系统接口)](accessibilityextensioncontext-elementattributevalues-i-sys.md)<!--DelEnd-->
+    - [ElementAttributeValues(系统接口)](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [FocusMoveResult(系统接口)](accessibilityextensioncontext-focusmoveresult-i-sys.md)<!--DelEnd-->
-    - [Rect](accessibilityextensioncontext-rect-i.md)
+    - [FocusMoveResult(系统接口)](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)<!--DelEnd-->
+    - [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
     <!--Del-->
     - [FocusCondition(系统接口)](arkts-accessibility-focuscondition-t-sys.md)<!--DelEnd-->
     - [FocusDirection](arkts-accessibility-focusdirection-t.md)

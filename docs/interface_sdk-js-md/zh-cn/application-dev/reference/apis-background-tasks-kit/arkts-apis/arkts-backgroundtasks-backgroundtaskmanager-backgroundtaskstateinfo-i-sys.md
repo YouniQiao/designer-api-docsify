@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## appIndex
 
 ```TypeScript
@@ -20,7 +26,7 @@ appIndex: int
 
 应用分身ID。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -42,7 +48,7 @@ authResult?: UserAuthResult
 
 授权结果。
 
-**类型：** UserAuthResult
+**类型：** [UserAuthResult](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-userauthresult-i.md)
 
 **起始版本：** 22
 
@@ -86,7 +92,7 @@ userId: int
 
 用户ID。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 

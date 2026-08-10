@@ -34,7 +34,7 @@ constructor(lineHeight: LengthMetrics)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineHeight | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本行高设置项。如果LengthMetrics的unit值是PERCENT，当前设置不生效。LengthMetrics的value值大于0时，文本行高设置 生效，否则文本行高自适应字体大小。 |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | 文本行高设置项。如果LengthMetrics的unit值是PERCENT，当前设置不生效。LengthMetrics的value值大于0时，文本行高设置 生效，否则文本行高自适应字体大小。 |
 
 ## constructor
 
@@ -43,14 +43,15 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 ```
 
 文本行高及倍数的构造函数。
-    **说明：**  
-    
-    - lineHeightMultiple与lineHeight或[LineSpacingStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度  
-    与倍数的乘积。  
-    
-    - lineHeightMultiple小于0或undefined时不生效，使用lineHeight和[LineSpacingStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_设置行高和行间距。  
-    
-    - lineHeightMultiple等于0时等效于设置为1。
+
+> **说明：**
+> 
+> - lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度
+> 与倍数的乘积。
+> 
+> - lineHeightMultiple小于0或undefined时不生效，使用lineHeight和[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)设置行高和行间距。
+> 
+> - lineHeightMultiple等于0时等效于设置为1。
 
 **起始版本：** 26.0.0
 
@@ -68,8 +69,8 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineHeight | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本行高设置项。LengthMetrics的value值大于0时，文本行高设置生效，否则文本行高自适应字体大小。 |
-| lineHeightMultiple | number | 否 | 文本行高的倍数值。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0, +∞)，支持小数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_与lineHeight或[LineSpacingStyle]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度与倍数的乘积； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_小于0或undefined时不生效； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_等于0时等效于设置为1。 |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | 文本行高设置项。LengthMetrics的value值大于0时，文本行高设置生效，否则文本行高自适应字体大小。 |
+| lineHeightMultiple | number | 否 | 文本行高的倍数值。 &lt;br&gt;取值范围：[0, +∞)，支持小数。 &lt;br&gt;**说明：** &lt;br&gt;与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度与倍数的乘积； &lt;br&gt;小于0或undefined时不生效； &lt;br&gt;等于0时等效于设置为1。 |
 
 ## lineHeight
 
@@ -79,7 +80,7 @@ readonly lineHeight: number
 
 获取属性字符串的文本行高。
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number
 
@@ -103,7 +104,7 @@ readonly lineHeightMultiple?: number
 
 文本行高的倍数值。实际生效的行高为该行最高的字体高度与倍数的乘积。
 
-**说明：** lineHeightMultiple与lineHeight或[LineSpacingStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_同时设置时，仅lineHeightMultiple生效。lineHeightMultiple小于0或undefined时不生效。lineHeightMultiple等于0时等效于设置为1。
+**说明：** lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效。lineHeightMultiple小于0或undefined时不生效。lineHeightMultiple等于0时等效于设置为1。
 
 **类型：** number
 

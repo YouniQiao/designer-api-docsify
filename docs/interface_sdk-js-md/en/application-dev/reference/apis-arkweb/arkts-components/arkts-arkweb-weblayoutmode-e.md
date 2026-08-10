@@ -1,6 +1,6 @@
 # WebLayoutMode
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the web layout mode.
+Web布局模式的配置。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the web 
 NONE = 0
 ```
 
-Web layout follows the system.
+Web布局跟随系统。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Web layout follows the system.
 FIT_CONTENT = 1
 ```
 
-Adaptive web layout based on page size.
+Web基于页面大小的自适应网页布局。
 
 **Since:** 11
 

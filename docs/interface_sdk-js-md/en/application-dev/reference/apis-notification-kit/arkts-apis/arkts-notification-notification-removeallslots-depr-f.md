@@ -6,7 +6,7 @@
 function removeAllSlots(callback: AsyncCallback<void>): void
 ```
 
-Removes all notification slots. This API uses an asynchronous callback to return the result.
+删除所有通知通道（callback形式）。
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ Removes all notification slots. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示被指定的回调方法。 |
 
 
 ## removeAllSlots
@@ -33,7 +33,7 @@ Removes all notification slots. This API uses an asynchronous callback to return
 function removeAllSlots(): Promise<void>
 ```
 
-Removes all notification slots. This API uses a promise to return the result.
+删除所有通知通道（Promise形式）。
 
 **Since:** 7
 
@@ -51,5 +51,5 @@ Removes all notification slots. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

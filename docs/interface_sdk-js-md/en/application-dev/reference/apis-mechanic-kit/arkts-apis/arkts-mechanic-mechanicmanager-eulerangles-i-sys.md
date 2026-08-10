@@ -12,15 +12,21 @@ Absolute euler angles relative to the home position.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## pitch
 
 ```TypeScript
 pitch?: double
 ```
 
-Pitch angle, ranging from -Math.PI to Math.PI, measured in radians.
+俯仰角，范围从-π到π，以弧度为单位。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -38,9 +44,9 @@ Pitch angle, ranging from -Math.PI to Math.PI, measured in radians.
 roll?: double
 ```
 
-Roll angle, ranging from -Math.PI to Math.PI, measured in radians.
+滚动角，范围从-π到π，以弧度为单位。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -58,9 +64,9 @@ Roll angle, ranging from -Math.PI to Math.PI, measured in radians.
 yaw?: double
 ```
 
-Yaw angle, ranging from -Math.PI to Math.PI, measured in radians.
+偏航角，范围从-π到π，以弧度为单位。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 

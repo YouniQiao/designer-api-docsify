@@ -1,6 +1,6 @@
 # FloatingBallWindowInfo
 
-Describes the floating ball window information.
+闪控球窗口信息。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the floating ball window information.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatingBall } from 'kits/@kit.ArkUI';
+```
+
 ## windowId
 
 ```TypeScript
 readonly windowId: int
 ```
 
-ID of the floating ball window.The value range is all integers.
+闪控球窗口ID。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

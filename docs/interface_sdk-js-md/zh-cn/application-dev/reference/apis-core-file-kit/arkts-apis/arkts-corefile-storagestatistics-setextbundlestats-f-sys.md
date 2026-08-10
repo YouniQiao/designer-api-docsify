@@ -1,5 +1,11 @@
 # setExtBundleStats（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## setExtBundleStats
 
 ```TypeScript
@@ -7,9 +13,10 @@ function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 ```
 
 系统应用或系统服务上报自身的空间占用信息。使用Promise异步回调。
-    **说明**：  
-    
-    入参stats中的flag为false时，businessName必须为某个应用的包名。
+
+> **说明：**
+> 
+> 入参stats中的flag为false时，businessName必须为某个应用的包名。
 
 **起始版本：** 23
 
@@ -29,8 +36,8 @@ function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 用户id。 |
-| stats | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 系统应用或系统服务的空间占用详情。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 用户id。 |
+| stats | [ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md) | 是 | 系统应用或系统服务的空间占用详情。 |
 
 **返回值：**
 
@@ -42,46 +49,27 @@ function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600010 | The input parameter is invalid. |
 | 13600011 | Failed to report the specified business space usage. |
+| 13600010 | The input parameter is invalid. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userId: number = 100;
 let extBundleStats: storageStatistics.ExtBundleStats = {
-  businessName: 'com.example.storagedemo',
+  businessName: "com.example.storagedemo",
   size: 10000,
   flag: true
-}
+};
 storageStatistics.setExtBundleStats(userId, extBundleStats).then(() => {
   console.info("setExtBundleStats successfully");
 }).catch((err: BusinessError) => {
-  console.error(`setExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: int = 100;
-let extBundleStats: storageStatistics.ExtBundleStats = {
-  businessName: 'com.example.storagedemo',
-  size: 10000,
-  flag: true
-}
-storageStatistics.setExtBundleStats(userId, extBundleStats).then(() => {
-  console.info("setExtBundleStats successfully");
-}).catch((err: BusinessError): void => {
   console.error(`setExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 ```

@@ -1,6 +1,6 @@
 # DataProxyChangeInfo
 
-Defines a struct for notifying subscribers of the shared configuration changes, including data change type, URI,and content.
+通知订阅者共享配置变更的数据结构。包括数据变更类型、变化的URI、变更的数据内容。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Defines a struct for notifying subscribers of the shared configuration changes, 
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## type
 
 ```TypeScript
 type: ChangeType
 ```
 
-Data change type.
+通知变更的类型。
 
-**Type:** ChangeType
+**Type:** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
 
 **Since:** 20
 
@@ -36,7 +42,7 @@ Data change type.
 uri: string
 ```
 
-URI to change.
+通知变更指定URI。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ URI to change.
 value: ValueType
 ```
 
-Changed data.
+更新的数据。
 
-**Type:** ValueType
+**Type:** [ValueType](arkts-arkdata-valuetype-t.md)
 
 **Since:** 20
 
@@ -76,9 +82,9 @@ Changed data.
 values?: ValueType[]
 ```
 
-Changed data of the multi-value type. If the changed data is not multi-value type, the **values** is undefined.
+多值类型的变更数据。如果变更的数据类型不是多值类型，则**values**值为undefined。
 
-**Type:** ValueType[]
+**Type:** [ValueType](arkts-arkdata-valuetype-t.md)[]
 
 **Since:** 26.0.0
 

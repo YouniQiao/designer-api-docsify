@@ -1,6 +1,6 @@
 # Package
 
-Represents the details about a system update package.
+系统更新包详情。
 
 **Since:** 12
 
@@ -10,14 +10,19 @@ Represents the details about a system update package.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## fd
 
 ```TypeScript
 fd?: number
 ```
 
-File descriptor (FD) of the system update package. Currently, you cannot pass in **path** only. The **fd**  
-parameter must also be passed in.
+系统更新包文件句柄。当前不支持只传入path参数，需要传入fd。
 
 **Type:** number
 
@@ -37,7 +42,7 @@ parameter must also be passed in.
 path: string
 ```
 
-Path of the system update package. If **fd** is specified, pass in the update package name here.
+系统更新包文件路径。若传入fd参数，该参数传入更新包文件名。
 
 **Type:** string
 
@@ -57,9 +62,9 @@ Path of the system update package. If **fd** is specified, pass in the update pa
 type: PackageType
 ```
 
-Type of the system update package.
+系统更新包类型。
 
-**Type:** PackageType
+**Type:** [PackageType](arkts-mdm-systemmanager-packagetype-e.md)
 
 **Since:** 12
 

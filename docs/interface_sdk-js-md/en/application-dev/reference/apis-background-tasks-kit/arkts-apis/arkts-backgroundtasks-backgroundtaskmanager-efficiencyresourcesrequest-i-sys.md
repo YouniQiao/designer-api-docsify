@@ -1,6 +1,6 @@
 # EfficiencyResourcesRequest (System API)
 
-Describes the parameters for requesting efficiency resources.
+能效资源申请参数。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Describes the parameters for requesting efficiency resources.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## cpuLevel
 
 ```TypeScript
 cpuLevel?: EfficiencyResourcesCpuLevel
 ```
 
-CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the CPU resource size. The system allocates the specified CPU resources to the application during the idle time of load (for example, when the screen is off).
+指定CPU级别，能效资源类型resourceTypes为CPU时该参数用于指定CPU资源大小，系统会在负载空闲时间（例如灭屏场景）分配指定的CPU资源给应用。
 
-**Type:** EfficiencyResourcesCpuLevel
+**Type:** [EfficiencyResourcesCpuLevel](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcescpulevel-e-sys.md)
 
 **Since:** 23
 
@@ -40,10 +46,10 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 isApply: boolean
 ```
 
-Whether the request is used to apply for resources.
+申请或释放资源。
 
-- **true**: The request is used to apply for resources.  
-- **false**: The request is used to release resources.
+- true表示申请资源。  
+- false表示释放部分资源。
 
 **Type:** boolean
 
@@ -63,10 +69,10 @@ Whether the request is used to apply for resources.
 isPersist?: boolean
 ```
 
-Whether the resource is permanently held. The default value is **false**.
+是否永久持有资源，默认为false。
 
-- **true**: The resource is permanently held.  
-- **false**: The resource is held for a limited period of time.
+- true表示永久持有  
+- false表示有限时间内持有。
 
 **Type:** boolean
 
@@ -86,10 +92,10 @@ Whether the resource is permanently held. The default value is **false**.
 isProcess?: boolean
 ```
 
-Whether the request is initiated by a process. The default value is **false**.
+进程或应用申请，默认为false。
 
-- **true**: The request is initiated by a process.  
-- **false**: The request is initiated by an application.
+- true表示进程申请。  
+- false表示应用申请。
 
 **Type:** boolean
 
@@ -109,7 +115,7 @@ Whether the request is initiated by a process. The default value is **false**.
 reason: string
 ```
 
-Reason for requesting the resource.
+申请资源原因。
 
 **Type:** string
 
@@ -129,9 +135,9 @@ Reason for requesting the resource.
 resourceTypes: int
 ```
 
-Type of the resource to request.
+申请的资源类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -149,9 +155,9 @@ Type of the resource to request.
 timeOut: int
 ```
 
-Duration for which the resource will be used, in milliseconds.
+资源使用时间，单位：ms。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

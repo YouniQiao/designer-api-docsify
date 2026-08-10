@@ -12,6 +12,12 @@ Interface for indoor or outdoor identify result
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -42,7 +48,7 @@ doorLockCode: int
 
 indicates random code for unlocking the door
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -64,7 +70,7 @@ position: PositionRelativeToDoor
 
 indicates result inside and outside the door
 
-**Type:** PositionRelativeToDoor
+**Type:** [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md)
 
 **Since:** 23
 

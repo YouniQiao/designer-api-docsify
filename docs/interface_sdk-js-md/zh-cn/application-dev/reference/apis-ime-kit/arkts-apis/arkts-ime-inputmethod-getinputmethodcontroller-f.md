@@ -1,12 +1,18 @@
 # getInputMethodController
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## getInputMethodController
 
 ```TypeScript
 function getInputMethodController(): InputMethodController
 ```
 
-获取客户端实例[InputMethodController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
 
 **起始版本：** 6
 
@@ -24,9 +30,9 @@ function getInputMethodController(): InputMethodController
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 回调返回当前客户端实例。 |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | 回调返回当前客户端实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getInputMethodController();

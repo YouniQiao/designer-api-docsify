@@ -1,12 +1,18 @@
 # getSkillInfos
 
+## Modules to Import
+
+```TypeScript
+import { skillManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getSkillInfos
 
 ```TypeScript
 function getSkillInfos(bundleName: string, flags: int, userId?: int): Promise<Array<SkillInfo>>
 ```
 
-Obtains all SkillInfo of a specified application based on bundleName.To query information for other local accounts, the permission ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS must additionally be granted.
+获取指定应用的所有技能信息。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -26,21 +32,21 @@ Obtains all SkillInfo of a specified application based on bundleName.To query in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Indicates the bundle name of the application. |
+| bundleName | string | Yes | 指定查询应用的包名。 |
 | flags | int | Yes | { |
-| userId | int | No | Indicates the user ID. If not provided, the user ID of the caller is used. |
+| userId | int | No | 指定查询的用户ID，可以通过getOsAccountLocalId获取。默认值：调用方所在用户。取值范围：大于等于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Returns the list of SkillInfo objects. |
+| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Promise对象，返回指定应用的所有技能信息数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| 201 | Permission denied. |
+| 17700004 | The specified user ID is not found. |
+| 17700001 | The specified bundleName is not found. |
 

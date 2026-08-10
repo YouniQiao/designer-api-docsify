@@ -7,17 +7,18 @@
 ## 子组件
 
 可以包含子组件。
-    **说明：**  
-    
-    - 子组件类型：系统组件和自定义组件，不支持渲染控制类型（\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_和  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_）。  
-    
-    - 子组件个数：必须且仅包含2个子组件。  
-    
-    - 子组件个数异常时：3个或以上子组件，显示第一个和第二个。1个子组件，显示侧边栏，内容区为空白。  
-    
-    - SideBarContainer走焦时，先在内容区走焦，再在侧边栏走焦。
+
+> **说明：**
+> 
+> - 子组件类型：系统组件和自定义组件，不支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)和
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
+> 
+> - 子组件个数：必须且仅包含2个子组件。
+> 
+> - 子组件个数异常时：3个或以上子组件，显示第一个和第二个。1个子组件，显示侧边栏，内容区为空白。
+> 
+> - SideBarContainer走焦时，先在内容区走焦，再在侧边栏走焦。
 
 ## SideBarContainer
 
@@ -41,7 +42,12 @@ SideBarContainer(type?: SideBarContainerType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 设置侧边栏的显示类型。\_\_\_HTML\_TAG\_USD\_0\_\_\_默认值：SideBarContainerType.Embed  |
+| type | [SideBarContainerType](../arkts-apis/arkts-arkui-sidebar-sidebarcontainertype-e.md) | 否 | 设置侧边栏的显示类型。<br/>默认值：SideBarContainerType.Embed |
 
 ## 汇总
 
+- [ButtonIconOptions](arkts-arkui-sidebarcontainer-buttoniconoptions-i.md)
+- [ButtonStyle](arkts-arkui-sidebarcontainer-buttonstyle-i.md)
+- [DividerStyle](arkts-arkui-sidebarcontainer-dividerstyle-i.md)
+- [SideBarContainerType](arkts-arkui-sidebarcontainer-sidebarcontainertype-e.md)
+- [SideBarPosition](arkts-arkui-sidebarcontainer-sidebarposition-e.md)

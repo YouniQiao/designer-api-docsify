@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## build
 
 ```TypeScript
@@ -40,7 +46,7 @@ contentItemV2?: ContentItemV2
 
 定义左侧以及中间元素。
 
-**类型：** ContentItemV2
+**类型：** [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -62,7 +68,7 @@ operateItemV2?: OperateItemV2
 
 定义右侧元素。
 
-**类型：** OperateItemV2
+**类型：** [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 
 **起始版本：** 26.0.0
 

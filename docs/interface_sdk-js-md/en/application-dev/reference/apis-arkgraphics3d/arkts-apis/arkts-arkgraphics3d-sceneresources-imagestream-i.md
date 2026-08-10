@@ -1,0 +1,34 @@
+# ImageStream
+
+图像流资源.
+
+**Inheritance/Implementation:** ImageStream extends [Image](arkts-arkgraphics3d-sceneresources-image-i.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-unnamed-export interface ImageStream extends Image--><!--Device-unnamed-export interface ImageStream extends Image-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## surfaceId
+
+```TypeScript
+readonly surfaceId: string
+```
+
+图像流的surfaceId.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageStream-readonly surfaceId: string--><!--Device-ImageStream-readonly surfaceId: string-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+

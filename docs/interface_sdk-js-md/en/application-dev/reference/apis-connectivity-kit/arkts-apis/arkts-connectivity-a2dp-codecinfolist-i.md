@@ -10,6 +10,12 @@ Describes the codec information.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { a2dp } from 'kits/@kit.ConnectivityKit';
+```
+
 ## codecBitRateArray
 
 ```TypeScript
@@ -18,7 +24,7 @@ codecBitRateArray: CodecBitRate[]
 
 codec bit rate list.
 
-**Type:** CodecBitRate[]
+**Type:** [CodecBitRate](arkts-connectivity-a2dp-codecbitrate-e.md)[]
 
 **Since:** 19
 
@@ -36,7 +42,7 @@ codecBitsPerSampleArray: CodecBitsPerSample[]
 
 codec bits per sample list.
 
-**Type:** CodecBitsPerSample[]
+**Type:** [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md)[]
 
 **Since:** 19
 
@@ -54,7 +60,7 @@ codecChannelModeArray: CodecChannelMode[]
 
 codec channel mode list.
 
-**Type:** CodecChannelMode[]
+**Type:** [CodecChannelMode](arkts-connectivity-a2dp-codecchannelmode-e.md)[]
 
 **Since:** 19
 
@@ -72,7 +78,7 @@ codecFrameLengthArray: CodecFrameLength[]
 
 codec frame length list.
 
-**Type:** CodecFrameLength[]
+**Type:** [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md)[]
 
 **Since:** 19
 
@@ -90,7 +96,7 @@ codecSampleRateArray: CodecSampleRate[]
 
 codec sample rate list.
 
-**Type:** CodecSampleRate[]
+**Type:** [CodecSampleRate](arkts-connectivity-a2dp-codecsamplerate-e.md)[]
 
 **Since:** 19
 
@@ -108,7 +114,7 @@ codecType: CodecType
 
 codec type
 
-**Type:** CodecType
+**Type:** [CodecType](arkts-connectivity-a2dp-codectype-e.md)
 
 **Since:** 19
 

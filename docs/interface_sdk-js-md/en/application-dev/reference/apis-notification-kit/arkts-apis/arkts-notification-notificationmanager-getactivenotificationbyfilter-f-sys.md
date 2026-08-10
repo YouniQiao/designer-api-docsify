@@ -1,12 +1,18 @@
 # getActiveNotificationByFilter (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getActiveNotificationByFilter
 
 ```TypeScript
 function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest>): void
 ```
 
-Obtains information about the common live view that matches the specified filter criteria. This API uses an asynchronous callback to return the result.
+获取满足条件的普通实况通知信息。使用callback异步回调。
 
 **Since:** 11
 
@@ -24,18 +30,18 @@ Obtains information about the common live view that matches the specified filter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter criteria for querying the common live view. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NotificationRequest&gt; | Yes | Callback used to return the result. |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | Yes | 查询普通实况窗的过滤条件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest&gt; | Yes | 获取满足条件的普通实况通知信息的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600007 | The notification does not exist. |
+| 17700001 | The specified bundle name was not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,7 +76,7 @@ notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationB
 function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest|null>): void
 ```
 
-Obtains information about the common live view that matches the specified filter criteria. This API uses an asynchronous callback to return the result.
+获取满足条件的普通实况通知信息。使用callback异步回调。
 
 **Since:** 23
 
@@ -88,16 +94,16 @@ Obtains information about the common live view that matches the specified filter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter criteria for querying the common live view. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NotificationRequest \| null&gt; | Yes | Callback used to return the result. |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | Yes | 查询普通实况窗的过滤条件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest \| null&gt; | Yes | 获取满足条件的普通实况通知信息的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600007 | The notification does not exist. |
+| 17700001 | The specified bundle name was not found. |
 
 
 ## getActiveNotificationByFilter
@@ -106,7 +112,7 @@ Obtains information about the common live view that matches the specified filter
 function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>
 ```
 
-Obtains information about the common live view that matches the specified filter criteria. This API uses a promise to return the result.
+获取满足条件的普通实况通知信息。使用Promise异步回调。
 
 **Since:** 11
 
@@ -124,23 +130,23 @@ Obtains information about the common live view that matches the specified filter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter criteria for querying the common live view. |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | Yes | 查询普通实况窗的过滤条件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationRequest&gt; | Promise used to return the result. |
+| Promise&lt;NotificationRequest&gt; | 以Promise形式返回获取的满足条件的普通实况通知信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600007 | The notification does not exist. |
+| 17700001 | The specified bundle name was not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -172,7 +178,7 @@ notificationManager.getActiveNotificationByFilter(filter).then((data: notificati
 function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest|null>
 ```
 
-Obtains information about the common live view that matches the specified filter criteria. This API uses a promise to return the result.
+获取满足条件的普通实况通知信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -190,19 +196,19 @@ Obtains information about the common live view that matches the specified filter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter criteria for querying the common live view. |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | Yes | 查询普通实况窗的过滤条件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationRequest \| null&gt; | Promise used to return the result. |
+| Promise&lt;NotificationRequest \| null&gt; | 以Promise形式返回获取的满足条件的普通实况通知信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600007 | The notification does not exist. |
+| 17700001 | The specified bundle name was not found. |
 

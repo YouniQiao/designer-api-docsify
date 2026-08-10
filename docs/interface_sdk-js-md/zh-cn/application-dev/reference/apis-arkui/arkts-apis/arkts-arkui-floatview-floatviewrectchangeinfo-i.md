@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## reason
 
 ```TypeScript
@@ -18,11 +24,11 @@ reason: string
 
 标准悬浮窗矩形区域变化的原因。原因和对应含义如下：
 
-"POSITION\_CHANGE"：位置变化
+"POSITION_CHANGE"：位置变化
 
-"SIZE\_CHANGE"：大小变化
+"SIZE_CHANGE"：大小变化
 
-"RECT\_CHANGE"：位置大小同时变化
+"RECT_CHANGE"：位置大小同时变化
 
 **类型：** string
 
@@ -64,7 +70,7 @@ windowScale: double
 
 标准悬浮窗窗口缩放比例。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.0.0
 

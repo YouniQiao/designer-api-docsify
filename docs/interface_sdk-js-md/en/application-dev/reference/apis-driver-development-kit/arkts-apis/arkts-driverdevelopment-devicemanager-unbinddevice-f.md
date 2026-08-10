@@ -1,12 +1,18 @@
 # unbindDevice
 
+## Modules to Import
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## unbindDevice
 
 ```TypeScript
 function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 ```
 
-Unbinds a peripheral device.
+解除设备绑定。
 
 **Since:** 10
 
@@ -26,18 +32,18 @@ Unbinds a peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| deviceId | number | Yes | 设备ID，通过queryDevices获得。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。当解绑设备成功时，err为undefined，data为设备ID；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 201 | The permission check failed. |
+| 22900001 | ExternalDeviceManager service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';
@@ -64,7 +70,7 @@ try {
 function unbindDevice(deviceId: number): Promise<number>
 ```
 
-Unbinds a peripheral device. This API uses a promise to return the result.
+解除设备绑定。
 
 **Since:** 10
 
@@ -84,23 +90,23 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
+| deviceId | number | Yes | 设备ID，通过queryDevices获得。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the ID of the unbound device. |
+| Promise&lt;number&gt; | Promise对象，返回解除绑定的设备ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 201 | The permission check failed. |
+| 22900001 | ExternalDeviceManager service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

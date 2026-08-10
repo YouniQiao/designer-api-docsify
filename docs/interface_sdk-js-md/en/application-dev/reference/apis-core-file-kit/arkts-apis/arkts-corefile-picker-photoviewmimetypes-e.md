@@ -8,7 +8,7 @@ Enumerates the media file types that can be selected.
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 <!--Device-picker-export enum PhotoViewMIMETypes--><!--Device-picker-export enum PhotoViewMIMETypes-End-->
 
@@ -20,7 +20,7 @@ Enumerates the media file types that can be selected.
 IMAGE_TYPE = 'image/*'
 ```
 
-Image.
+图片类型。
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ Image.
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_type)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +42,7 @@ Image.
 VIDEO_TYPE = 'video/*'
 ```
 
-Video.
+视频类型。
 
 **Since:** 9
 
@@ -50,7 +50,7 @@ Video.
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#video_type)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#video_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +64,7 @@ Video.
 IMAGE_VIDEO_TYPE = '*/*'
 ```
 
-Image and video.
+图片和视频类型。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Image and video.
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_video_type)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_video_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

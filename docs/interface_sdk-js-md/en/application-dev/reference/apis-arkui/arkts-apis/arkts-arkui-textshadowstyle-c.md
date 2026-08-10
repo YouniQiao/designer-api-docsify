@@ -1,6 +1,6 @@
 # TextShadowStyle
 
-Describes the text shadow style.
+文本阴影对象说明。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Describes the text shadow style.
 constructor(value: ShadowOptions | Array<ShadowOptions>)
 ```
 
-A constructor used to create a text shadow style.
+文本阴影对象的构造函数。
 
-The **ShadowOptions** object does not support the **fill** field.
+ShadowOptions对象中不支持fill字段。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ The **ShadowOptions** object does not support the **fill** field.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Array&lt;ShadowOptions&gt; | Yes | Text shadow options. |
+| value | [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt; | Yes | 文本阴影设置项。 |
 
 ## textShadow
 
@@ -44,7 +44,7 @@ The **ShadowOptions** object does not support the **fill** field.
 readonly textShadow: Array<ShadowOptions>
 ```
 
-Text shadow of the styled string.
+获取属性字符串的文本阴影。
 
 **Type:** Array&lt;ShadowOptions&gt;
 

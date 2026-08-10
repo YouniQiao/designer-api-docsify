@@ -1,12 +1,18 @@
 # isSupported
 
+## Modules to Import
+
+```TypeScript
+import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isSupported
 
 ```TypeScript
 function isSupported(feature: number): boolean
 ```
 
-Checks whether a specified type of card emulation is supported.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This method is used to check Whether the host or secure element supports card emulation.
+Checks whether a specified type of card emulation is supported.&lt;p&gt;This method is used to check Whether the host or secure element supports card emulation.
 
 **Since:** 6
 
@@ -34,7 +40,7 @@ Checks whether a specified type of card emulation is supported.\_\_\_HTML\_TAG\_
 | --- | --- |
 | boolean | Returns true if the specified type of card emulation is supported; returns false otherwise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Applicable to devices other than lite wearables

@@ -1,6 +1,6 @@
 # BackgroundSubMode
 
-Defines the subtype of a continuous task.
+长时任务子类型。
 
 **Since:** 16
 
@@ -16,11 +16,11 @@ Defines the subtype of a continuous task.
 CAR_KEY = 1
 ```
 
-Car key.
+车钥匙。
 
-**NOTE**
+**说明：**
 
-1. The car key subtype takes effect only when a continuous task of the BLUETOOTH\_INTERACTION type is requested.2. Continuous tasks of this type cannot be updated through the [updateBackgroundRunning]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.
+1. 只有申请BLUETOOTH_INTERACTION类型的长时任务，车钥匙子类型才能生效。2. 不支持通过[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)接口更新为此类型长时任务。
 
 **Since:** 16
 

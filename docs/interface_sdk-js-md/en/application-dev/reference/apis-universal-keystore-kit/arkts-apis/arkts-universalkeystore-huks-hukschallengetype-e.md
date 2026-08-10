@@ -1,6 +1,6 @@
 # HuksChallengeType
 
-Enumerates the types of the challenges generated when a key is used.
+表示密钥使用时生成challenge的类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the types of the challenges generated when a key is used.
 HUKS_CHALLENGE_TYPE_NORMAL = 0
 ```
 
-Normal challenge, which is of 32 bytes by default.
+表示challenge为普通类型，默认32字节。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Normal challenge, which is of 32 bytes by default.
 HUKS_CHALLENGE_TYPE_CUSTOM = 1
 ```
 
-Custom challenge, which supports only one authentication for multiple keys.
+表示challenge为用户自定义类型。支持使用多个密钥仅一次认证。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Custom challenge, which supports only one authentication for multiple keys.
 HUKS_CHALLENGE_TYPE_NONE = 2
 ```
 
-Challenge is not required.
+表示免challenge类型。
 
 **Since:** 9
 

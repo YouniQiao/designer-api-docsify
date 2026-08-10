@@ -12,13 +12,19 @@ Bundle installer interface, include install uninstall recover.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## addExtResource
 
 ```TypeScript
 addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>
 ```
 
-Adds extended resources based on the specified bundle name and HSP file path. This API uses a promise to return the result.
+根据给定的bundleName和hsp文件路径添加扩展资源。使用Promise异步回调。
 
 **Since:** 12
 
@@ -36,26 +42,26 @@ Adds extended resources based on the specified bundle name and HSP file path. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application to which extended resources are to be added. |
-| filePaths | Array&lt;string&gt; | Yes | Path of the extended resources to be added. |
+| bundleName | string | Yes | 要添加扩展资源的应用名称。 |
+| filePaths | Array&lt;string&gt; | Yes | 要添加扩展资源的资源路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700301](../errorcode-bundle.md#17700301-failed-to-add-extended-resources) | AddExtResource failed due to parse file failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700301 | AddExtResource failed due to parse file failed. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -92,7 +98,7 @@ ArkTS-Sta:
 createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<int>
 ```
 
-Creates an application clone. This API uses a promise to return the result.
+创建应用分身。使用Promise异步回调。
 
 **Since:** 12
 
@@ -110,28 +116,28 @@ Creates an application clone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which a clone is to be created. |
-| createAppCloneParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Other parameters required for creating the clone. For details about the default values of these parameters, see [createAppCloneParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| bundleName | string | Yes | 待创建应用分身的包名。 |
+| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | 指定创建应用分身所需的其他参数，默认值：参照 [createAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md)的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the index of the application clone. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回创建的分身应用索引值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_CLONE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The appIndex is not in valid range or already exists. |
-| [17700069](../errorcode-bundle.md#17700069-application-clone-is-not-supported) | The app does not support the creation of an appClone instance. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700061 | The appIndex is not in valid range or already exists. |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_CLONE_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The userId is invalid. |
+| 17700069 | The app does not support the creation of an appClone instance. |
+| 17700001 | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -166,7 +172,7 @@ try {
 destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>
 ```
 
-Destroys an application clone. This API uses a promise to return the result.
+删除应用分身。使用Promise异步回调。
 
 **Since:** 12
 
@@ -184,28 +190,28 @@ Destroys an application clone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
-| appIndex | number | Yes | Index of the clone to destroy. |
-| userId | number | No | ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . The default value is the user ID of the caller. |
+| bundleName | string | Yes | 待删除应用分身的包名。 |
+| appIndex | number | Yes | 待删除应用分身的索引。 |
+| userId | number | No | 待删除应用分身所属用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。默认值：调用方所在用户。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_CLONE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700061 | AppIndex not in valid range. |
+| 201 | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The userId is invalid. |
+| 17700001 | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -238,7 +244,7 @@ try {
 destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>
 ```
 
-Destroys an application clone. This API uses a promise to return the result.
+删除应用分身。使用Promise异步回调。
 
 **Since:** 15
 
@@ -256,29 +262,29 @@ Destroys an application clone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
-| appIndex | number | Yes | Index of the clone to destroy. |
-| destroyAppCloneParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Other parameters required for destroying the clone. For details about the default values of these parameters, see [DestroyAppCloneParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| bundleName | string | Yes | 待删除应用分身的包名。 |
+| appIndex | number | Yes | 待删除应用分身的索引。 |
+| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | 指定删除应用分身所需的其他参数，默认值：参照 [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md)的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_CLONE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
-| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
+| 17700062 | Failed to uninstall the app because the app is locked. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700061 | AppIndex not in valid range. |
+| 201 | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The userId is invalid. |
+| 17700001 | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -351,12 +357,12 @@ Destroy clone instance for an application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_CLONE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
-| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
+| 17700062 | Failed to uninstall the app because the app is locked. |
+| 17700061 | AppIndex not in valid range. |
+| 201 | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The userId is invalid. |
+| 17700001 | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
 ## install
 
@@ -364,12 +370,12 @@ Destroy clone instance for an application.
 install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    To install applications of different distribution types, the appropriate permissions must be requested. For  
-    details on distribution types, see the **appDistributionType** field in  
-    [ApplicationInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+安装指定应用。使用callback异步回调。
+
+> **说明：**
+> 
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> appDistributionType字段说明。
 
 **Since:** 9
 
@@ -391,44 +397,44 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for the installation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| hapFilePaths | Array&lt;string&gt; | Yes | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签 名需要保持一致。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | 指定安装所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ' ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_MDM\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_NORMAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_INTERNALTESTING\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ('ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' and 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ALLOW\_\_\_ESCAPED\_UNDERSCORE\_\_\_DOWNGRADE'). |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system\_\_\_ESCAPED\_UNDERSCORE\_\_\_basic or system\_\_\_ESCAPED\_UNDERSCORE\_\_\_core). |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_bundle name but different signature information exists on the device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 17 and later |
-| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 17700047 | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| 17700044 | Failed to install the HAP because the isolationMode configured is not supported. |
+| 17700042 | Failed to install the HAP because of incorrect URI in the data proxy. |
+| 17700043 | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| 17700041 | Failed to install because enterprise device management disallow install. |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
+| 17700039 | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700036 | Failed to install the HSP because lacks appropriate permissions. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
+| 17700058 | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| 17700054 | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| 17700052 | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| 17700050 | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| 17700048 | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| 17700015 | Failed to install the HAPs because they have different configuration information. |
+| 17700012 | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| 17700076 | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
+| 17700077 | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| 17700010 | Failed to install the HAP because the HAP fails to be parsed. |
+| 17700011 | Failed to install the HAP because the HAP signature fails to be verified. |
+| 17700073 | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| 17700004 | The specified user ID is not found. |
+| 17700066 | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| 17700031 | Failed to install the HAP because the overlay check of the HAP is failed. |
+| 17700018 | Failed to install because the dependent module does not exist. |
+| 17700016 | Failed to install the HAP because of insufficient system disk space. |
+| 17700017 | Failed to install the HAP since the version of the HAP to install is too early. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -465,12 +471,12 @@ try {
 install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    To install applications of different distribution types, the appropriate permissions must be requested. For  
-    details on distribution types, see the **appDistributionType** field in  
-    [ApplicationInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+安装指定应用。使用callback异步回调。
+
+> **说明：**
+> 
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> appDistributionType字段说明。
 
 **Since:** 9
 
@@ -492,42 +498,42 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| hapFilePaths | Array&lt;string&gt; | Yes | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签 名需要保持一致。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ' ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_MDM\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_NORMAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_INTERNALTESTING\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ('ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' and 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ALLOW\_\_\_ESCAPED\_UNDERSCORE\_\_\_DOWNGRADE'). |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system\_\_\_ESCAPED\_UNDERSCORE\_\_\_basic or system\_\_\_ESCAPED\_UNDERSCORE\_\_\_core). |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_bundle name but different signature information exists on the device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 17 and later |
-| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 17700047 | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| 17700044 | Failed to install the HAP because the isolationMode configured is not supported. |
+| 17700042 | Failed to install the HAP because of incorrect URI in the data proxy. |
+| 17700043 | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| 17700041 | Failed to install because enterprise device management disallow install. |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
+| 17700039 | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700036 | Failed to install the HSP because lacks appropriate permissions. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700058 | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| 17700054 | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| 17700052 | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| 17700050 | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| 17700048 | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| 17700015 | Failed to install the HAPs because they have different configuration information. |
+| 17700012 | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| 17700076 | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
+| 17700077 | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| 17700010 | Failed to install the HAP because the HAP fails to be parsed. |
+| 17700011 | Failed to install the HAP because the HAP signature fails to be verified. |
+| 17700073 | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| 17700066 | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| 17700031 | Failed to install the HAP because the overlay check of the HAP is failed. |
+| 17700018 | Failed to install because the dependent module does not exist. |
+| 17700016 | Failed to install the HAP because of insufficient system disk space. |
+| 17700017 | Failed to install the HAP since the version of the HAP to install is too early. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -559,12 +565,12 @@ try {
 install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result.
-    **NOTE**  
-    
-    To install applications of different distribution types, the appropriate permissions must be requested. For  
-    details on distribution types, see the **appDistributionType** field in  
-    [ApplicationInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+安装指定应用。使用Promise异步回调。
+
+> **说明：**
+> 
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> appDistributionType字段说明。
 
 **Since:** 9
 
@@ -586,49 +592,49 @@ Installs an application. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters required for the installation. For details about their default values, see [InstallParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| hapFilePaths | Array&lt;string&gt; | Yes | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签 名需要保持一致。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | No | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值 。<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ' ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_MDM\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENTERPRISE\_\_\_ESCAPED\_UNDERSCORE\_\_\_NORMAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_INTERNALTESTING\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ('ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' and 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ALLOW\_\_\_ESCAPED\_UNDERSCORE\_\_\_DOWNGRADE'). |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system\_\_\_ESCAPED\_UNDERSCORE\_\_\_basic or system\_\_\_ESCAPED\_UNDERSCORE\_\_\_core). |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_bundle name but different signature information exists on the device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 17 and later |
-| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 17700047 | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| 17700044 | Failed to install the HAP because the isolationMode configured is not supported. |
+| 17700042 | Failed to install the HAP because of incorrect URI in the data proxy. |
+| 17700043 | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| 17700041 | Failed to install because enterprise device management disallow install. |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
+| 17700039 | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700036 | Failed to install the HSP because lacks appropriate permissions. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
+| 17700058 | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| 17700054 | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| 17700052 | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| 17700050 | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| 17700048 | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| 17700015 | Failed to install the HAPs because they have different configuration information. |
+| 17700012 | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| 17700076 | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
+| 17700077 | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| 17700010 | Failed to install the HAP because the HAP fails to be parsed. |
+| 17700011 | Failed to install the HAP because the HAP signature fails to be verified. |
+| 17700073 | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| 17700004 | The specified user ID is not found. |
+| 17700066 | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| 17700031 | Failed to install the HAP because the overlay check of the HAP is failed. |
+| 17700018 | Failed to install because the dependent module does not exist. |
+| 17700016 | Failed to install the HAP because of insufficient system disk space. |
+| 17700017 | Failed to install the HAP since the version of the HAP to install is too early. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -664,7 +670,7 @@ try {
 installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginParam?: PluginParam): Promise<void>
 ```
 
-Installs a plugin for an application. This API uses a promise to return the result.
+应用安装插件。使用Promise异步回调。
 
 **Since:** 19
 
@@ -682,40 +688,40 @@ Installs a plugin for an application. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hostBundleName | string | Yes | Bundle name of the application for which the plugin is to be installed. |
-| pluginFilePaths | Array&lt;string&gt; | Yes | Paths where the plugin package files are stored. If multiple file paths or a directory is provided, ensure that these files are HSPs of the same plugin program and their signatures are consistent. |
-| pluginParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters required for installing the plugin. For details about the default value, see [PluginParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| hostBundleName | string | Yes | 待安装插件的应用包名。 |
+| pluginFilePaths | Array&lt;string&gt; | Yes | 存储插件程序包的路径。当传入多个文件路径或者一个目录时，需确保这些文件是同一插件程序的HSP，且这些HSP的签名需要保持一致。 |
+| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | 指定安装插件所需的参数，默认值：参照 [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) 的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLUGIN\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified hostBundleName cannot be found or the bundle is not installed by the specified user. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the plugin because the plugin fails to be parsed. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the plugin because the plugin signature fails to be verified. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the plugin because the HSP path is invalid or the HSP is too large. |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the plugin because they have different configuration information. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the plugin because of insufficient system disk space. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the plugin since the version of the plugin to install is too early. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the plugin because the code signature verification is failed. |
-| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the plugin because a plugin with the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_bundle name but different signature information exists on the device. |
-| [17700087](../errorcode-bundle.md#17700087-unsupported-plugin-installation) | Failed to install the plugin because the current device does not support plugin. |
-| [17700088](../errorcode-bundle.md#17700088-plugin-installation-failure-due-to-no-permission) | Failed to install the plugin because the host application lacks ohos.permission.kernel.SUPPORT\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLUGIN. |
-| [17700089](../errorcode-bundle.md#17700089-plugin-installation-failure-because-of-plugin-id-parsing-failure) | Failed to install the plugin because the plugin id fails to be parsed. |
-| [17700090](../errorcode-bundle.md#17700090-plugin-installation-failure-because-of-plugin-id-verification-failure) | Failed to install the plugin because the plugin id fails to be verified. |
-| [17700091](../errorcode-bundle.md#17700091-plugin-installation-failure-because-of-the-same-plugin-name-and-host-bundle-name) | Failed to install the plugin because the plugin name is same as host bundle name. |
+| 17700015 | Failed to install the plugin because they have different configuration information. |
+| 17700012 | Failed to install the plugin because the HSP path is invalid or the HSP is too large. |
+| 17700010 | Failed to install the plugin because the plugin fails to be parsed. |
+| 17700011 | Failed to install the plugin because the plugin signature fails to be verified. |
+| 17700073 | Failed to install the plugin because a plugin with the same &lt;br&gt;bundle name but different signature information exists on the device. |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_PLUGIN_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The userId is invalid. |
+| 17700001 | The specified hostBundleName cannot be found or the bundle is not installed by the specified user. |
+| 17700090 | Failed to install the plugin because the plugin id fails to be verified. |
+| 17700091 | Failed to install the plugin because the plugin name is same as host bundle name. |
+| 17700088 | Failed to install the plugin because the host application lacks ohos.permission.kernel.SUPPORT_PLUGIN. |
+| 17700089 | Failed to install the plugin because the plugin id fails to be parsed. |
+| 17700087 | Failed to install the plugin because the current device does not support plugin. |
+| 17700052 | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
+| 17700016 | Failed to install the plugin because of insufficient system disk space. |
+| 17700048 | Failed to install the plugin because the code signature verification is failed. |
+| 17700017 | Failed to install the plugin since the version of the plugin to install is too early. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -756,12 +762,12 @@ ArkTS-Sta:
 installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API does not support the installation of applications whose  
-    [distribution type of the application signing certificate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    is set to **enterprise**, **enterprise\_mdm**, or **enterprise\_normal**.
+在指定用户下安装指定bundleName的应用。使用Promise异步回调。
+
+> **说明：**
+> 
+> 该接口不支持安装[签名证书的分发类型](arkts-ability-applicationinfo-i.md)为enterprise，enterprise_mdm和
+> enterprise_normal的应用。
 
 **Since:** 12
 
@@ -779,28 +785,28 @@ Installs an application. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application to install. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . The value must be greater than 0. The default value is the user ID of the caller. |
+| bundleName | string | Yes | 需要安装应用的包名。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 需要安装应用的用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，userId需要大于0。默认值：调用方所在用户。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700071](../errorcode-bundle.md#17700071-enterprise-applications-cannot-be-installed) | It is not allowed to install the enterprise bundle. |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_from being installed on this device or by specified users.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 14 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700058 | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE'. |
+| 17700071 | It is not allowed to install the enterprise bundle. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The userId is invalid. |
+| 17700001 | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -832,7 +838,7 @@ try {
 recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Rolls back an application to the initial installation state. This API uses an asynchronous callback to return the result.
+回滚应用到初次安装时的状态。使用callback异步回调。
 
 **Since:** 9
 
@@ -850,23 +856,23 @@ Rolls back an application to the initial installation state. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for the installation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| bundleName | string | Yes | 待恢复应用的包名。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | 指定安装所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，回滚应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ' ohos.permission.RECOVER\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_bundle name but different signature information exists on the device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_from being installed on this device or by specified users.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 14 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700058 | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+| 17700073 | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The specified user ID is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -903,7 +909,7 @@ try {
 recover(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Rolls back an application to the initial installation state. This API uses an asynchronous callback to return the result.
+回滚应用到初次安装时的状态。使用callback异步回调。
 
 **Since:** 9
 
@@ -921,21 +927,21 @@ Rolls back an application to the initial installation state. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| bundleName | string | Yes | 待恢复应用的包名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，回滚应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ' ohos.permission.RECOVER\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_bundle name but different signature information exists on the device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_from being installed on this device or by specified users.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 14 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700058 | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+| 17700073 | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -967,7 +973,7 @@ try {
 recover(bundleName: string, installParam?: InstallParam): Promise<void>
 ```
 
-Rolls back an application to the initial installation state. This API uses a promise to return the result.
+回滚应用到初次安装时的状态。使用Promise异步回调。
 
 **Since:** 9
 
@@ -985,28 +991,28 @@ Rolls back an application to the initial installation state. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters required for the installation. For details about their default values, see [InstallParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| bundleName | string | Yes | 待卸载应用的包名。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | No | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE' or ' ohos.permission.RECOVER\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_bundle name but different signature information exists on the device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_from being installed on this device or by specified users.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 14 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700058 | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+| 17700073 | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The specified user ID is not found. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1042,7 +1048,7 @@ try {
 removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>
 ```
 
-Removes extended resources based on the specified bundle name and module names. This API uses a promise to return the result.
+根据给定的bundleName和moduleNames删除扩展资源。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1060,26 +1066,26 @@ Removes extended resources based on the specified bundle name and module names. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which extended resources are to be removed. |
-| moduleNames | Array&lt;string&gt; | Yes | Names of the modules whose extended resources are to be removed. |
+| bundleName | string | Yes | 要删除扩展资源的应用名称。 |
+| moduleNames | Array&lt;string&gt; | Yes | 要删除扩展资源的moduleNames。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700302](../errorcode-bundle.md#17700302-failed-to-delete-extended-resources) | RemoveExtResource failed due to module does not exist. |
+| 17700302 | RemoveExtResource failed due to module does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1110,7 +1116,7 @@ try {
 uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application. This API uses an asynchronous callback to return the result.
+卸载应用。使用callback异步回调。
 
 **Since:** 9
 
@@ -1128,27 +1134,27 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for the installation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| bundleName | string | Yes | 待卸载应用的包名。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | 指定安装所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 15 and later |
+| 17700062 | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700060 | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| 17700045 | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
+| 17700040 | The specified bundle is a shared bundle and cannot be uninstalled. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The specified user ID is not found. |
+| 17700020 | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| 17700067 | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1185,7 +1191,7 @@ try {
 uninstall(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application. This API uses an asynchronous callback to return the result.
+卸载应用。使用callback异步回调。
 
 **Since:** 9
 
@@ -1203,24 +1209,24 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| bundleName | string | Yes | 待卸载应用的包名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700060 | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| 17700045 | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
+| 17700040 | The specified bundle is a shared bundle and cannot be uninstalled. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700020 | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| 17700067 | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1252,7 +1258,7 @@ try {
 uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 ```
 
-Uninstalls an application. This API uses a promise to return the result.
+卸载应用。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1270,32 +1276,32 @@ Uninstalls an application. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters required for the installation. For details about their default values, see [InstallParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 15 |
+| bundleName | string | Yes | 待卸载应用的包名。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | No | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值 。<br>**Since:** 15 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 15 and later |
+| 17700062 | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700060 | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| 17700045 | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
+| 17700040 | The specified bundle is a shared bundle and cannot be uninstalled. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The specified user ID is not found. |
+| 17700020 | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| 17700067 | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1331,7 +1337,7 @@ try {
 uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls a shared package. This API uses an asynchronous callback to return the result.
+卸载一个共享包。使用callback异步回调。
 
 **Since:** 10
 
@@ -1349,21 +1355,21 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uninstallParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for the uninstall. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| uninstallParam | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Yes | 共享包卸载需指定的参数信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
-| [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700038 | The specified shared bundle does not exist. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700020 | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| 17700037 | The version of shared bundle is dependent on other applications. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1397,7 +1403,7 @@ try {
 uninstall(uninstallParam: UninstallParam): Promise<void>
 ```
 
-Uninstalls a shared package. This API uses a promise to return the result.
+卸载一个共享包。使用Promise异步回调。
 
 **Since:** 10
 
@@ -1415,26 +1421,26 @@ Uninstalls a shared package. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uninstallParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for the uninstall. |
+| uninstallParam | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Yes | 共享包卸载需指定的参数信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
-| [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700038 | The specified shared bundle does not exist. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700020 | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| 17700037 | The version of shared bundle is dependent on other applications. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1468,7 +1474,7 @@ try {
 uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>
 ```
 
-Uninstall new preinstalled applications.Only supports uninstalling pre installed applications added during device OTA upgrade. Asynchronous execution of application uninstallation tasks, the interface return value only indicates successful interface invocation and does not return uninstallation results.
+批量卸载新增的预置应用。使用Promise异步回调。
 
 **Since:** 24
 
@@ -1488,20 +1494,20 @@ Uninstall new preinstalled applications.Only supports uninstalling pre installed
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleNames | Array&lt;string&gt; | Yes | Indicates the bundle name list to be uninstalled. |
+| bundleNames | Array&lt;string&gt; | Yes | 待卸载的应用的包名列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象。无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
 ## uninstallPlugin
 
@@ -1509,7 +1515,7 @@ Uninstall new preinstalled applications.Only supports uninstalling pre installed
 uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: PluginParam): Promise<void>
 ```
 
-Uninstalls a plugin for an application. This API uses a promise to return the result.
+应用卸载插件。使用Promise异步回调。
 
 **Since:** 19
 
@@ -1527,27 +1533,27 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hostBundleName | string | Yes | Bundle name of the application for which the plugin is to be uninstalled. |
-| pluginBundleName | string | Yes | Bundle name of the plugin. |
-| pluginParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters required for uninstalling the plugin. For details about the default value, see [PluginParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| hostBundleName | string | Yes | 待卸载插件的应用包名。 |
+| pluginBundleName | string | Yes | 插件的包名。 |
+| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | 指定卸载插件所需的参数，默认值：参照 [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) 的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLUGIN\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The user id is invalid. |
-| [17700092](../errorcode-bundle.md#17700092-plugin-uninstall-failure-because-of-nonexistent-plugin-bundle-name) | Failed to uninstall the plugin because the specified plugin is not found. |
+| 17700092 | Failed to uninstall the plugin because the specified plugin is not found. |
+| 201 | Calling interface without permission 'ohos.permission.UNINSTALL_PLUGIN_BUNDLE'. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The user id is invalid. |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1582,7 +1588,7 @@ try {
 uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 ```
 
-Uninstalls and updates a preinstalled application and restores it to the initial installation status. This API uses a promise to return the result.
+对预置应用进行卸载更新，恢复到初次安装时的状态。使用Promise异步回调。
 
 **Since:** 12
 
@@ -1600,30 +1606,30 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
+| bundleName | string | Yes | 待卸载更新应用的包名。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | No | 指定卸载更新所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。其中 userId无法指定，调用本接口将对所有已安装相应应用的用户进行卸载更新操作。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall because enterprise device management disallow uninstall. |
-| [17700057](../errorcode-bundle.md#17700057-specified-application-is-not-a-preset-application) | Failed to uninstall updates because the HAP is not pre-installed. |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_bundle name but different signature information exists on the device.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 13 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700060 | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| 17700045 | Failed to uninstall because enterprise device management disallow uninstall. |
+| 17700057 | Failed to uninstall updates because the HAP is not pre-installed. |
+| 17700073 | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700067 | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 13 and later |
+| 17700001 | The specified bundle name is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1658,7 +1664,7 @@ try {
 updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Updates the current bundle. This API can be called only by enterprise MDM applications on enterprise devices, and the HAPs in **hapFilePaths** must belong to the current application. This API uses an asynchronous callback to return the result.
+更新当前应用，仅限企业设备上的企业MDM应用调用，且传入的hapFilePaths中的hap必须都属于当前应用。使用callback异步回调。
 
 **Since:** 10
 
@@ -1676,37 +1682,37 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for the installation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| hapFilePaths | Array&lt;string&gt; | Yes | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签 名需要保持一致。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | 指定安装所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_SELF\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system\_\_\_ESCAPED\_UNDERSCORE\_\_\_basic or system\_\_\_ESCAPED\_UNDERSCORE\_\_\_core). |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
-| [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise\_\_\_ESCAPED\_UNDERSCORE\_\_\_mdm. |
+| 17700015 | Failed to install the HAPs because they have different configuration information. |
+| 17700047 | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| 17700012 | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| 17700044 | Failed to install the HAP because the isolationMode configured is not supported. |
+| 17700010 | Failed to install the HAP because the HAP fails to be parsed. |
+| 17700042 | Failed to install the HAP because of incorrect URI in the data proxy. |
+| 17700011 | Failed to install the HAP because the HAP signature fails to be verified. |
+| 17700043 | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| 17700041 | Failed to install because enterprise device management disallow install. |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
+| 17700039 | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The specified user ID is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
+| 17700018 | Failed to install because the dependent module does not exist. |
+| 17700050 | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
+| 17700051 | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
+| 17700016 | Failed to install the HAP because of insufficient system disk space. |
+| 17700048 | Failed to install the HAP because the code signature verification is failed. |
+| 17700017 | Failed to install the HAP since the version of the HAP to install is too early. |
+| 17700049 | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1743,7 +1749,7 @@ try {
 updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Updates the current bundle. This API can be called only by enterprise MDM applications on enterprise devices, and the HAPs in **hapFilePaths** must belong to the current application. This API uses an asynchronous callback to return the result.
+更新当前应用，仅限企业设备上的企业MDM应用调用，且传入的hapFilePaths中的hap必须都属于当前应用。使用callback异步回调。
 
 **Since:** 10
 
@@ -1761,35 +1767,35 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| hapFilePaths | Array&lt;string&gt; | Yes | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签 名需要保持一致。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_SELF\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system\_\_\_ESCAPED\_UNDERSCORE\_\_\_basic or system\_\_\_ESCAPED\_UNDERSCORE\_\_\_core). |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
-| [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise\_\_\_ESCAPED\_UNDERSCORE\_\_\_mdm. |
+| 17700015 | Failed to install the HAPs because they have different configuration information. |
+| 17700047 | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| 17700012 | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| 17700044 | Failed to install the HAP because the isolationMode configured is not supported. |
+| 17700010 | Failed to install the HAP because the HAP fails to be parsed. |
+| 17700042 | Failed to install the HAP because of incorrect URI in the data proxy. |
+| 17700011 | Failed to install the HAP because the HAP signature fails to be verified. |
+| 17700043 | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| 17700041 | Failed to install because enterprise device management disallow install. |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
+| 17700039 | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 17700018 | Failed to install because the dependent module does not exist. |
+| 17700050 | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
+| 17700051 | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
+| 17700016 | Failed to install the HAP because of insufficient system disk space. |
+| 17700048 | Failed to install the HAP because the code signature verification is failed. |
+| 17700017 | Failed to install the HAP since the version of the HAP to install is too early. |
+| 17700049 | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1821,7 +1827,7 @@ try {
 updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Updates the current bundle. This API can be called only by enterprise MDM applications on enterprise devices, and the HAPs in **hapFilePaths** must belong to the current application. This API uses a promise to return the result.
+更新当前应用，仅限企业设备上的企业MDM应用调用，且传入的hapFilePaths中的hap必须都属于当前应用。使用Promise异步回调。
 
 **Since:** 10
 
@@ -1839,42 +1845,42 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters required for the installation. For details about their default values, see [InstallParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| hapFilePaths | Array&lt;string&gt; | Yes | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签 名需要保持一致。 |
+| installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | No | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_SELF\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system\_\_\_ESCAPED\_UNDERSCORE\_\_\_basic or system\_\_\_ESCAPED\_UNDERSCORE\_\_\_core). |
-| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
-| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
-| [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise\_\_\_ESCAPED\_UNDERSCORE\_\_\_mdm. |
+| 17700015 | Failed to install the HAPs because they have different configuration information. |
+| 17700047 | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| 17700012 | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| 17700044 | Failed to install the HAP because the isolationMode configured is not supported. |
+| 17700010 | Failed to install the HAP because the HAP fails to be parsed. |
+| 17700042 | Failed to install the HAP because of incorrect URI in the data proxy. |
+| 17700011 | Failed to install the HAP because the HAP signature fails to be verified. |
+| 17700043 | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| 17700041 | Failed to install because enterprise device management disallow install. |
+| 201 | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
+| 17700039 | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17700004 | The specified user ID is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
+| 17700018 | Failed to install because the dependent module does not exist. |
+| 17700050 | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
+| 17700051 | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
+| 17700016 | Failed to install the HAP because of insufficient system disk space. |
+| 17700048 | Failed to install the HAP because the code signature verification is failed. |
+| 17700017 | Failed to install the HAP since the version of the HAP to install is too early. |
+| 17700049 | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';

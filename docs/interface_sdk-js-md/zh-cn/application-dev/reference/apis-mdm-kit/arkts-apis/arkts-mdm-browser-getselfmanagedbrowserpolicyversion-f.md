@@ -1,5 +1,11 @@
 # getSelfManagedBrowserPolicyVersion
 
+## 导入模块
+
+```TypeScript
+import { browser } from 'kits/@kit.MDMKit';
+```
+
 ## getSelfManagedBrowserPolicyVersion
 
 ```TypeScript
@@ -24,7 +30,7 @@ function getSelfManagedBrowserPolicyVersion(): string
 | --- | --- |
 | string | 浏览器策略版本。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';

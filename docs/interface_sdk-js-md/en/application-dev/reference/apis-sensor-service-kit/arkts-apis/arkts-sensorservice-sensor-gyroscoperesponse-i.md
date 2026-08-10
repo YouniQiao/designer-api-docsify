@@ -1,96 +1,80 @@
 # GyroscopeResponse
 
-Defines a **GyroscopeResponse** object.
+陀螺仪传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**Since:** 6
+**Inheritance/Implementation:** GyroscopeResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
+**Since:** 8
 
-**Deprecated since:** 8
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Substitutes:** ohos.sensor/sensor#GyroscopeResponse
+<!--Device-sensor-interface GyroscopeResponse extends Response--><!--Device-sensor-interface GyroscopeResponse extends Response-End-->
 
-**Required permissions:** ohos.permission.GYROSCOPE
+**System capability:** SystemCapability.Sensors.Sensor
 
-<!--Device-unnamed-export interface GyroscopeResponse--><!--Device-unnamed-export interface GyroscopeResponse-End-->
+## Modules to Import
 
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
 
 ## x
 
 ```TypeScript
-x: number
+x: double
 ```
 
-Rotation angular velocity of the X axis.
+设备x轴方向的旋转角速度。单位：rad/s（弧度/秒）；取值为实际上报物理量。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 6
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Substitutes:** ohos.sensor/sensor#GyroscopeResponse.x
+<!--Device-GyroscopeResponse-x: double--><!--Device-GyroscopeResponse-x: double-End-->
 
-**Required permissions:** ohos.permission.GYROSCOPE
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GyroscopeResponse-x: number--><!--Device-GyroscopeResponse-x: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 
 ## y
 
 ```TypeScript
-y: number
+y: double
 ```
 
-Rotation angular velocity of the Y axis.
+设备y轴方向的旋转角速度。单位：rad/s（弧度/秒）；取值为实际上报物理量。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 6
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Substitutes:** ohos.sensor/sensor#GyroscopeResponse.y
+<!--Device-GyroscopeResponse-y: double--><!--Device-GyroscopeResponse-y: double-End-->
 
-**Required permissions:** ohos.permission.GYROSCOPE
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GyroscopeResponse-y: number--><!--Device-GyroscopeResponse-y: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 
 ## z
 
 ```TypeScript
-z: number
+z: double
 ```
 
-Rotation angular velocity of the Z axis.
+设备z轴方向的旋转角速度。单位：rad/s（弧度/秒）；取值为实际上报物理量。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 6
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Substitutes:** ohos.sensor/sensor#GyroscopeResponse.z
+<!--Device-GyroscopeResponse-z: double--><!--Device-GyroscopeResponse-z: double-End-->
 
-**Required permissions:** ohos.permission.GYROSCOPE
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GyroscopeResponse-z: number--><!--Device-GyroscopeResponse-z: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 

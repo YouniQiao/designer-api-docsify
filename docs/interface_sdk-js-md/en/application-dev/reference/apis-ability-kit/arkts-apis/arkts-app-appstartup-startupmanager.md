@@ -1,18 +1,26 @@
 # @ohos.app.appstartup.startupManager
 
-The module provides the capability to manage startup tasks in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. The APIs of this module can be called only on the main thread.
-    **NOTE**  
-    
-    This module supports .so file preloading since API version 18.
+本模块提供[应用启动框架](../../../application-models/app-startup.md)管理启动任务的能力，只能在主线程调用。
+
+> **说明：**
+> 
+> 本模块从API version 18开始支持so预加载。
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace startupManager--><!--Device-unnamed-declare namespace startupManager-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
+
+## Modules to Import
+
+```TypeScript
+import { startupManager } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 
@@ -20,11 +28,11 @@ The module provides the capability to manage startup tasks in
 
 | Name | Description |
 | --- | --- |
-| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md#getstartuptaskresult) | Obtains the execution result of a startup task or .so file preloading task. |
-| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md#getstartuptaskresult-1) | Obtains specific startup task result. |
-| [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md#isstartuptaskinitialized) | Checks whether a startup task or .so file preloading task is initialized. |
-| [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md#removeallstartuptaskresults) | Removes all startup task results.If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so files that have already been loaded in the cache will not be removed. |
-| [removeStartupTaskResult](arkts-ability-startupmanager-removestartuptaskresult-f.md#removestartuptaskresult) | Removes the initialization result of a startup task or .so file preloading task.  - If a startup task name is passed, the initialization result of that startup task is removed.  - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not  removed. |
-| [run](arkts-ability-startupmanager-run-f.md#run) | Runs startup tasks or loads .so files. |
-| [run](arkts-ability-startupmanager-run-f.md#run-1) | Runs startup tasks or loads .so files. You can specify  [AbilityStageContext]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for loading startup tasks. This API uses a promise to return the result. |
+| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md#getstartuptaskresult) | 获取指定启动任务或so预加载任务的执行结果。 |
+| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md#getstartuptaskresult-1) | 获取指定启动任务或so预加载任务的执行结果。 |
+| [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md#isstartuptaskinitialized) | 获取指定启动任务或so预加载任务是否已初始化。 |
+| [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md#removeallstartuptaskresults) | 删除所有启动任务结果。如果存在so预加载任务，则将对应so文件置为未加载状态。对于缓存中已加载的so文件，不会被移除。 |
+| [removeStartupTaskResult](arkts-ability-startupmanager-removestartuptaskresult-f.md#removestartuptaskresult) | 删除指定启动任务或so预加载任务的初始化结果。  - 输入为启动任务名时，删除指定启动任务的初始化结果。  - 输入为so文件时，将该so文件置为未加载，缓存中已加载的so文件不会被移除。 |
+| [run](arkts-ability-startupmanager-run-f.md#run) | 执行启动框架启动任务或加载so文件。 |
+| [run](arkts-ability-startupmanager-run-f.md#run-1) | 执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md)用于启动任务的加载。使用Promise异步回调。 |
 

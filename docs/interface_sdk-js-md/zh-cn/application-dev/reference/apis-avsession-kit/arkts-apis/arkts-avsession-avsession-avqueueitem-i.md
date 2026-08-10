@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## description
 
 ```TypeScript
@@ -18,7 +24,7 @@ description?: AVMediaDescription
 
 播放列表中单项的媒体元数据。
 
-**类型：** AVMediaDescription
+**类型：** [AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md)
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ itemId: int
 
 播放列表中单项的ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

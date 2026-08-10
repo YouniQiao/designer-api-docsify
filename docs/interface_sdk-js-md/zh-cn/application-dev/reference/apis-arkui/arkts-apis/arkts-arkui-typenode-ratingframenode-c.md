@@ -34,11 +34,11 @@ abstract initialize(options?: RatingOptions): RatingAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| options | [RatingOptions](../arkts-components/arkts-arkui-ratingoptions-i.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md) |  |
 

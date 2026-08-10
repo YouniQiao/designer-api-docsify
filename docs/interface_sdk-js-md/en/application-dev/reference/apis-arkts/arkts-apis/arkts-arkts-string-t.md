@@ -4,7 +4,7 @@
 export type string = String
 ```
 
-\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ is an alias for type \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_
+`string` is an alias for type `String`
 
 **Since:** 26.0.0
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## flushCmdBuffer
 
 ```TypeScript
@@ -30,15 +36,15 @@ static flushCmdBuffer(object: IRemoteObject): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| object | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定的RemoteProxy。 |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 | 指定的RemoteProxy。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -89,7 +95,7 @@ static flushCommands(object: IRemoteObject): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| object | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定的RemoteProxy。 |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 | 指定的RemoteProxy。 |
 
 **返回值：**
 
@@ -97,7 +103,7 @@ static flushCommands(object: IRemoteObject): number
 | --- | --- |
 | number | 如果操作成功，返回0；如果输入对象为空或RemoteObject，或者操作失败，返回错误代码。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -146,7 +152,7 @@ static getCallingDeviceID(): string
 | --- | --- |
 | string | 返回调用者进程所在的设备ID。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -178,8 +184,8 @@ ArkTS-Sta:
 static getCallingPid(): int
 ```
 
-静态方法，获取调用者的PID。此方法由[RemoteObject]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对象在IPC上下文环境（  
-[onRemoteMessageRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_）中使用，否则直接返回。
+静态方法，获取调用者的PID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（  
+[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
 
 **起始版本：** 7
 
@@ -193,11 +199,9 @@ static getCallingPid(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回调用者的PID。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回调用者的PID。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -205,31 +209,6 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 
 class Stub extends rpc.RemoteObject {
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callerPid = rpc.IPCSkeleton.getCallingPid();
-      hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid result: ' + callerPid);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class Stub extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     try {
       let callerPid = rpc.IPCSkeleton.getCallingPid();
@@ -268,11 +247,9 @@ static getCallingTokenId(): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 返回调用者的TokenId。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回调用者的TokenId。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -280,31 +257,6 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 
 class Stub extends rpc.RemoteObject {
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callerTokenId = rpc.IPCSkeleton.getCallingTokenId();
-      hilog.info(0x0000, 'testTag', 'RpcServer: getCallingTokenId result: ' + callerTokenId);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class Stub extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     try {
       let callerTokenId = rpc.IPCSkeleton.getCallingTokenId();
@@ -329,8 +281,8 @@ ArkTS-Sta:
 static getCallingUid(): int
 ```
 
-静态方法，获取调用者的UID。此方法由[RemoteObject]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对象在IPC上下文环境（  
-[onRemoteMessageRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_）中使用，否则直接返回。
+静态方法，获取调用者的UID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（  
+[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
 
 **起始版本：** 7
 
@@ -344,11 +296,9 @@ static getCallingUid(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回调用者的UID。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回调用者的UID。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -356,31 +306,6 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 
 class Stub extends rpc.RemoteObject {
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callerUid = rpc.IPCSkeleton.getCallingUid();
-      hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid result: ' + callerUid);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class Stub extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     try {
       let callerUid = rpc.IPCSkeleton.getCallingUid();
@@ -413,9 +338,9 @@ static getContextObject(): IRemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回系统能力管理者。 |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 返回系统能力管理者。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -451,7 +376,7 @@ static getLocalDeviceID(): string
 | --- | --- |
 | string | 返回本地设备的ID。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -493,7 +418,7 @@ static isLocalCalling(): boolean
 | --- | --- |
 | boolean | true：调用在同一台设备，false：调用未在同一台设备。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -535,7 +460,7 @@ static resetCallingIdentity(): string
 | --- | --- |
 | string | 返回包含远程用户的UID和PID的字符串。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -562,7 +487,7 @@ static restoreCallingIdentity(identity: string): void
 ```
 
 静态方法，将UID和PID恢复为远程用户的UID和PID。它通常在使用resetCallingIdentity后调用，需要resetCallingIdentity返回的远程用户的UID和PID。该接口仅支持在IPC上下文（  
-[onRemoteMessageRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）中使用，否则直接返回。
+[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
 
 **起始版本：** 9
 
@@ -582,9 +507,9 @@ static restoreCallingIdentity(identity: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -637,7 +562,7 @@ static setCallingIdentity(identity: string): boolean
 | --- | --- |
 | boolean | true：设置成功，false：设置失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

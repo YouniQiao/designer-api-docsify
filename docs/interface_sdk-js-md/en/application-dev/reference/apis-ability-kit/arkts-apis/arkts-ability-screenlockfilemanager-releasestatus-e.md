@@ -1,6 +1,6 @@
 # ReleaseStatus
 
-Enumerates the statuses for releasing access permissions for sensitive data under the lock screen.
+表示锁屏下敏感数据访问权限释放状态的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the statuses for releasing access permissions for sensitive data unde
 RELEASE_DENIED = -1
 ```
 
-Release of access permission for sensitive data under lock screen is denied.
+释放锁屏下敏感数据访问权限被拒绝。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Release of access permission for sensitive data under lock screen is denied.
 RELEASE_GRANTED = 0
 ```
 
-Release of access permission for sensitive data under lock screen is granted.
+释放锁屏下敏感数据访问权限被允许。
 
 **Since:** 12
 

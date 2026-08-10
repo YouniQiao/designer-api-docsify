@@ -10,6 +10,12 @@ UI事件的相关信息。
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -38,11 +44,11 @@ readonly bundleName: string
 readonly componentEventType?: ComponentEventType
 ```
 
-控件操作事件类型，若非控件操作事件返回ComponentEventType.COMPONENT\_UNDEFINED。
+控件操作事件类型，若非控件操作事件返回ComponentEventType.COMPONENT_UNDEFINED。
 
 从API version 22开始，该接口支持在原子化服务中使用。
 
-**类型：** ComponentEventType
+**类型：** [ComponentEventType](arkts-test-uitest-componenteventtype-e.md)
 
 **起始版本：** 22
 
@@ -86,7 +92,7 @@ readonly componentRect?: Rect
 
 从API version 22开始，该接口支持在原子化服务中使用。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 22
 
@@ -146,11 +152,11 @@ readonly type: string
 readonly windowChangeType?: WindowChangeType
 ```
 
-窗口变化事件类型，若非窗口变化事件返回WindowChangeType.WINDOW\_UNDEFINED。
+窗口变化事件类型，若非窗口变化事件返回WindowChangeType.WINDOW_UNDEFINED。
 
 从API version 22开始，该接口支持在原子化服务中使用。
 
-**类型：** WindowChangeType
+**类型：** [WindowChangeType](arkts-test-uitest-windowchangetype-e.md)
 
 **起始版本：** 22
 
@@ -172,7 +178,7 @@ readonly windowId?: int
 
 从API version 22开始，该接口支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 

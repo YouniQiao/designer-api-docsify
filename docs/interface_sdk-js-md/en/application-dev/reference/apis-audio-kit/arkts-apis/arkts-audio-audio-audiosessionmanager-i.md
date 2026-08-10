@@ -1,12 +1,12 @@
 # AudioSessionManager
 
-This interface implements audio session management.
+音频会话管理。
 
-Before calling any API in AudioSessionManager, you must use  
-[getSessionManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an AudioSessionManager instance.
-    **NOTE**  
-    
-    - The initial APIs of this interface are supported since API version 12.
+在使用AudioSessionManager的接口之前，需先通过[getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager)获取AudioSessionManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 12开始支持。
 
 **Since:** 12
 
@@ -16,13 +16,19 @@ Before calling any API in AudioSessionManager, you must use
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## activateAudioSession
 
 ```TypeScript
 activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
 ```
 
-Activates an audio session. This API uses a promise to return the result.
+激活音频会话。使用Promise异步回调。
 
 **Since:** 12
 
@@ -38,21 +44,21 @@ Activates an audio session. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio session strategy. |
+| strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | Yes | 音频会话策略。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
 
 ## clearSelectedMediaInputDevice
 
@@ -60,8 +66,7 @@ Activates an audio session. This API uses a promise to return the result.
 clearSelectedMediaInputDevice(): Promise<void>
 ```
 
-Clears the media input device set by calling  
-[selectMediaInputDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+清空通过[selectMediaInputDevice](arkts-audio-audio-audiosessionmanager-i.md#selectmediainputdevice)设置的媒体输入设备。使用Promise异步回调。
 
 **Since:** 21
 
@@ -75,13 +80,13 @@ Clears the media input device set by calling
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## deactivateAudioSession
 
@@ -89,7 +94,7 @@ Clears the media input device set by calling
 deactivateAudioSession(): Promise<void>
 ```
 
-Deactivates this audio session. This API uses a promise to return the result.
+停用音频会话。使用Promise异步回调。
 
 **Since:** 12
 
@@ -105,13 +110,13 @@ Deactivates this audio session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
+| 6800301 | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
 
 ## enableMuteSuggestionWhenMixWithOthers
 
@@ -119,19 +124,15 @@ Deactivates this audio session. This API uses a promise to return the result.
 enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 ```
 
-Enables mute suggestion notifications for mixed playback.
+启用混音播放下接收静音播放建议通知功能。
 
-Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience.
+通常，当使用混音模式时，如果其他应用同时播放音频，会和其他应用进行混音播放。但在某些场景下（如游戏或广播），应用自身会通过静音自身的音频以给用户提供更好的体验。
 
-If this feature is enabled, mute and unmute suggestions will be sent through the  
-[AudioSessionStateChangedEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.
+如果启用此功能，当订阅音频会话状态更改事件后静音建议和取消静音建议提示将通过[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)回调发送。收到静音建议表示其他应用程序开始播放音频，且播放的音频和本应用的音频不能混音。
 
-This feature can be used only by audio sessions for which  
-[AudioSessionScene]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ has been set and the  
-**CONCURRENCY\_MIX\_WITH\_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.
+此功能仅支持已设置[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)并激活模式模式为CONCURRENCY_MIX_WITH_OTHERS的音频会话使用。并且仅在激活音频会话期间生效一次，每次激活音频会话前都必须重新启用。
 
-For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+详细说明请参考[启用混音播放下静音建议通知](../../../media/audio/audio-session-management.md#启用混音播放下静音建议通知)。
 
 **Since:** 23
 
@@ -147,14 +148,14 @@ For details, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable mute suggestion notifications for mixed playback. **true** to enable, **false** otherwise. |
+| enable | boolean | Yes | 是否启用混音播放下接收静音播放建议通知功能。true表示启用，false表示不启用。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Function is called without setting \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or called after audio session activation. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, system internal error. |
+| 6800103 | Function is called without setting {@link #AudioSessionScene} or called after audio session activation. |
+| 6800301 | Audio client call audio service error, system internal error. |
 
 ## getAvailableDevices
 
@@ -162,7 +163,7 @@ For details, see
 getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 ```
 
-Obtains the available audio devices.
+获取音频可选设备列表。
 
 **Since:** 21
 
@@ -176,20 +177,20 @@ Obtains the available audio devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device type (classified by usage). |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | 音频设备类型（根据用途分类）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Device list. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回设备列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## getBluetoothAndNearlinkPreferredRecordCategory
 
@@ -197,8 +198,8 @@ Obtains the available audio devices.
 getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory
 ```
 
-Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling  
-[setBluetoothAndNearlinkPreferredRecordCategory]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取通过  
+[setBluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-audiosessionmanager-i.md#setbluetoothandnearlinkpreferredrecordcategory)设置的在使用蓝牙或星闪进行录音时的设备偏好分类。
 
 **Since:** 21
 
@@ -212,13 +213,13 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Preferred device category for recording with Bluetooth or NearLink. |
+| [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | 在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## getDefaultOutputDevice
 
@@ -226,8 +227,7 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 getDefaultOutputDevice(): DeviceType
 ```
 
-Obtains the default audio output device set by calling  
-[setDefaultOutputDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取通过[setDefaultOutputDevice](arkts-audio-audio-audiosessionmanager-i.md#setdefaultoutputdevice)设置的默认发声设备。
 
 **Since:** 20
 
@@ -241,14 +241,14 @@ Obtains the default audio output device set by calling
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Device type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+| [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | 设备类型。 &lt;br&gt;仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
+| 6800103 | Operation not permit at current state. Return by promise. |
+| 6800101 | Parameter verification failed. |
 
 ## getSelectedMediaInputDevice
 
@@ -256,8 +256,7 @@ Obtains the default audio output device set by calling
 getSelectedMediaInputDevice(): AudioDeviceDescriptor
 ```
 
-Obtains the media input device set by calling  
-[selectMediaInputDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
+获得通过[selectMediaInputDevice](arkts-audio-audio-audiosessionmanager-i.md#selectmediainputdevice)设置的媒体输入设备。如果没有设置，返回一个deviceType属性为INVALID的设备。
 
 **Since:** 21
 
@@ -271,13 +270,13 @@ Obtains the media input device set by calling
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Media input device. |
+| [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 媒体输入设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## isAudioSessionActivated
 
@@ -285,7 +284,7 @@ Obtains the media input device set by calling
 isAudioSessionActivated(): boolean
 ```
 
-Checks whether this audio session is activated.
+检查音频会话是否已激活。
 
 **Since:** 12
 
@@ -301,7 +300,7 @@ Checks whether this audio session is activated.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the audio session is activated. **true** if activated, **false** otherwise. |
+| boolean | 音频会话是否处于激活状态。true表示已激活，false表示已停用。 |
 
 ## isOtherMediaPlaying
 
@@ -309,8 +308,7 @@ Checks whether this audio session is activated.
 isOtherMediaPlaying(): boolean
 ```
 
-Check whether any other application is currently playing audio of the four media types: **MUSIC**, **MOVIE**,  
-**AUDIOBOOK**, and **GAME**. Audio sessions that have activated these media types will also be checked.
+检查是否有其他应用正在播放MUSIC、MOVIE、AUDIOBOOK、GAME四种媒体类型的音频，已激活媒体类型的音频会话也将会被检查。
 
 **Since:** 23
 
@@ -326,7 +324,7 @@ Check whether any other application is currently playing audio of the four media
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether another application is playing audio of certain media types. **true** means yes; **false** otherwise. |
+| boolean | 是否有其他应用正在播放媒体类型的音频。true表示有，false表示没有。 |
 
 ## off('audioSessionDeactivated')
 
@@ -334,7 +332,7 @@ Check whether any other application is currently playing audio of the four media
 off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Unsubscribes from the audio session deactivation event. This API uses an asynchronous callback to return the result.
+取消监听音频会话停用事件。使用callback异步回调。
 
 **Since:** 12
 
@@ -350,15 +348,15 @@ Unsubscribes from the audio session deactivation event. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionDeactivatedEvent&gt; | No | Callback used to return the reason why the audio session is deactivated. |
+| type | 'audioSessionDeactivated' | Yes | 事件回调类型，支持的事件为'audioSessionDeactivated'，当取消监听音频会话停用事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionDeactivatedEvent&gt; | No | 回调函数，返回音频会话停用原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('audioSessionStateChanged')
 
@@ -366,7 +364,7 @@ Unsubscribes from the audio session deactivation event. This API uses an asynchr
 off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Unsubscribes from the audio session state change event. This API uses an asynchronous callback to return the result.
+取消监听音频会话状态变更事件。使用callback异步回调。
 
 **Since:** 20
 
@@ -380,15 +378,15 @@ Unsubscribes from the audio session state change event. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionStateChangedEvent&gt; | No | Callback used to return the audio session change information. |
+| type | 'audioSessionStateChanged' | Yes | 事件回调类型，支持的事件为'audioSessionStateChanged'，当音频会话状态变更时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionStateChangedEvent&gt; | No | 回调函数，返回音频会话变更提示信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## off('currentOutputDeviceChanged')
 
@@ -396,7 +394,7 @@ Unsubscribes from the audio session state change event. This API uses an asynchr
 off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void
 ```
 
-Unsubscribes from the current output device change event. This API uses an asynchronous callback to return the result.
+取消监听当前输出设备的变化事件，并使用callback进行异步回调。
 
 **Since:** 20
 
@@ -410,15 +408,15 @@ Unsubscribes from the current output device change event. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentOutputDeviceChangedEvent&gt; | No | Callback used to return the information about the current output device. |
+| type | 'currentOutputDeviceChanged' | Yes | 事件回调类型，支持的事件为'currentOutputDeviceChanged'，当前输出设备发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentOutputDeviceChangedEvent&gt; | No | 回调函数，用于返回当前输出设备变化的信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## off('availableDeviceChange')
 
@@ -426,7 +424,7 @@ Unsubscribes from the current output device change event. This API uses an async
 off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void
 ```
 
-Unsubscribes from the event indicating that the connection status of an available audio device is changed.
+取消监听音频可选设备连接状态变化事件。
 
 **Since:** 21
 
@@ -440,14 +438,14 @@ Unsubscribes from the event indicating that the connection status of an availabl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | No | Callback used to return the available device change details. |
+| type | 'availableDeviceChange' | Yes | 事件回调类型，支持的事件为'availableDeviceChange'，当取消监听音频可选设备连接变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | No | 回调函数，返回可选设备更新详情。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## off('currentInputDeviceChanged')
 
@@ -455,7 +453,7 @@ Unsubscribes from the event indicating that the connection status of an availabl
 off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void
 ```
 
-Unsubscribes from the current input device change event.
+取消监听当前输入设备的变化事件。
 
 **Since:** 21
 
@@ -469,14 +467,14 @@ Unsubscribes from the current input device change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentInputDeviceChangedEvent&gt; | No | Callback used to return the information about the current input device. |
+| type | 'currentInputDeviceChanged' | Yes | 事件回调类型，支持的事件为'currentInputDeviceChanged'，当前输入设备发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentInputDeviceChangedEvent&gt; | No | 回调函数，用于返回当前输入设备变化的信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## offAudioSessionDeactivated
 
@@ -484,7 +482,7 @@ Unsubscribes from the current input device change event.
 offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Unsubscribes to audio session deactivated event.
+取消订阅音频会话去激活事件。
 
 **Since:** 23
 
@@ -501,13 +499,13 @@ Unsubscribes to audio session deactivated event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionDeactivatedEvent&gt; | No | Callback invoked for the audio session deactivated event.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 23 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionDeactivatedEvent&gt; | No | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 6800101 | Parameter verification failed.<br>**Applicable version:** 23 and later |
 
 ## offAudioSessionStateChanged
 
@@ -529,14 +527,14 @@ Unsubscribes to audio session deactivated event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionStateChangedEvent&gt; | No | Callback invoked for the audio session state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionStateChangedEvent&gt; | No | Callback invoked for the audio session state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## offAvailableDeviceChange
 
@@ -558,13 +556,13 @@ Unsubscribes to available device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## offCurrentInputDeviceChanged
 
@@ -586,13 +584,13 @@ Unsubscribes current input device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentInputDeviceChangedEvent&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentInputDeviceChangedEvent&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## offCurrentOutputDeviceChanged
 
@@ -600,7 +598,7 @@ Unsubscribes current input device change events.
 offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void
 ```
 
-UnSubscribes output device change event callback.
+Unsubscribes output device change event callback.
 
 **Since:** 23
 
@@ -614,14 +612,14 @@ UnSubscribes output device change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentOutputDeviceChangedEvent&gt; | No | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentOutputDeviceChangedEvent&gt; | No | Callback used to listen device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## on('audioSessionDeactivated')
 
@@ -629,7 +627,7 @@ UnSubscribes output device change event callback.
 on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Subscribes to the audio session deactivation event, which is triggered when an audio session is deactivated. This API uses an asynchronous callback to return the result.
+监听音频会话停用事件（当音频会话停用时触发）。使用callback异步回调。
 
 **Since:** 12
 
@@ -645,15 +643,15 @@ Subscribes to the audio session deactivation event, which is triggered when an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionDeactivatedEvent&gt; | Yes | Callback used to return the reason why the audio session is deactivated. |
+| type | 'audioSessionDeactivated' | Yes | 事件回调类型，支持的事件为'audioSessionDeactivated'，当音频会话停用时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionDeactivatedEvent&gt; | Yes | 回调函数，返回音频会话停用原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('audioSessionStateChanged')
 
@@ -661,7 +659,7 @@ Subscribes to the audio session deactivation event, which is triggered when an a
 on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Subscribes to the audio session state change event, which is triggered when the audio session focus is changed.This API uses an asynchronous callback to return the result.
+监听音频会话状态变更事件（当音频会话焦点变更时触发）。使用callback异步回调。
 
 **Since:** 20
 
@@ -675,16 +673,16 @@ Subscribes to the audio session state change event, which is triggered when the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionStateChangedEvent&gt; | Yes | Callback used to return the audio session change information. |
+| type | 'audioSessionStateChanged' | Yes | 事件回调类型，支持的事件为'audioSessionStateChanged'，当音频会话状态变更时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionStateChangedEvent&gt; | Yes | 回调函数，返回音频会话变更提示信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800102 | Allocate memory failed. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## on('currentOutputDeviceChanged')
 
@@ -692,7 +690,7 @@ Subscribes to the audio session state change event, which is triggered when the 
 on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void
 ```
 
-Subscribes to the current output device change event, which is triggered when the current output device is changed. This API uses an asynchronous callback to return the result.
+监听当前输出设备变化事件（当前输出设备发生变化时触发）。使用callback异步回调。
 
 **Since:** 20
 
@@ -706,16 +704,16 @@ Subscribes to the current output device change event, which is triggered when th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentOutputDeviceChangedEvent&gt; | Yes | Callback used to return the information about the current output device. |
+| type | 'currentOutputDeviceChanged' | Yes | 事件回调类型，支持的事件为'currentOutputDeviceChanged'，当前输出设备变更时触发。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentOutputDeviceChangedEvent&gt; | Yes | 回调函数，返回当前输出设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800102 | Allocate memory failed. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## on('availableDeviceChange')
 
@@ -723,7 +721,7 @@ Subscribes to the current output device change event, which is triggered when th
 on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to the event indicating that the connection status of an available audio device is changed.
+监听音频可选设备连接状态变化事件（当音频可选设备连接状态发生变化时触发）。
 
 **Since:** 21
 
@@ -737,16 +735,16 @@ Subscribes to the event indicating that the connection status of an available au
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
-| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device type (classified by usage). |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | Yes | Callback used to return the available device change details. |
+| type | 'availableDeviceChange' | Yes | 事件回调类型，支持的事件为'availableDeviceChange'，当音频可选设备连接状态发生变化时，触发该事件。 |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | 音频设备类型（根据用途分类）。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | Yes | 回调函数，返回设备更新详情。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## on('currentInputDeviceChanged')
 
@@ -754,7 +752,7 @@ Subscribes to the event indicating that the connection status of an available au
 on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void
 ```
 
-Subscribes to the current input device change event, which is triggered when the current input device is changed.
+监听当前输入设备变化事件（当前输入设备发生变化时触发）。
 
 **Since:** 21
 
@@ -768,15 +766,15 @@ Subscribes to the current input device change event, which is triggered when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentInputDeviceChangedEvent&gt; | Yes | Callback used to return the information about the current input device. |
+| type | 'currentInputDeviceChanged' | Yes | 事件回调类型，支持的事件为'currentInputDeviceChanged'，当前输入设备发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentInputDeviceChangedEvent&gt; | Yes | 回调函数，返回当前输入设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## onAudioSessionDeactivated
 
@@ -801,13 +799,13 @@ Listens for audio session deactivated event. When the audio session is deactivat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionDeactivatedEvent&gt; | Yes | Callback invoked for the audio session deactivated event.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 23 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionDeactivatedEvent&gt; | Yes | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 6800101 | Parameter verification failed.<br>**Applicable version:** 23 and later |
 
 ## onAudioSessionStateChanged
 
@@ -829,15 +827,15 @@ Listens for audio session state change event. When the audio session state chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionStateChangedEvent&gt; | Yes | Callback invoked for the audio session state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionStateChangedEvent&gt; | Yes | Callback invoked for the audio session state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800102 | Allocate memory failed. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## onAvailableDeviceChange
 
@@ -859,15 +857,15 @@ Subscribes to available device change events. When a device is connected/disconn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device usage to filter available devices. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | Yes | Callback used to obtain the device update details. |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device usage to filter available devices. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | Yes | Callback used to obtain the device update details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## onCurrentInputDeviceChanged
 
@@ -889,14 +887,14 @@ Subscribes input device change event callback. The event is triggered when curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentInputDeviceChangedEvent&gt; | Yes | Callback used to listen input device change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentInputDeviceChangedEvent&gt; | Yes | Callback used to listen input device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## onCurrentOutputDeviceChanged
 
@@ -918,15 +916,15 @@ Subscribes output device change event callback.The event is triggered when devic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentOutputDeviceChangedEvent&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentOutputDeviceChangedEvent&gt; | Yes | Callback used to listen device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800102 | Allocate memory failed. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## selectMediaInputDevice
 
@@ -934,21 +932,20 @@ Subscribes output device change event callback.The event is triggered when devic
 selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-Selects a media input device. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where  
-    [SourceType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **SOURCE\_TYPE\_VOICE\_COMMUNICATION**.  
-    
-    - Before calling this API, call [getAvailableDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to  
-    query the list of available input devices and select an input device from the list.  
-    
-    - If there are recording streams of other applications with higher priorities in the system, the actual input  
-    device used will follow the input device selected by these applications.  
-    
-    - Applications can listen for the  
-    [currentInputDeviceChanged]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    event to find out the actual input device being used.
+设置媒体输入设备。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 本接口不适用于VoIP通话录音，即[SourceType](arkts-audio-audio-sourcetype-e.md)为SOURCE_TYPE_VOICE_COMMUNICATION的场景不适用。
+> 
+> - 本接口调用前需要先调用[getAvailableDevices](arkts-audio-audio-audiosessionmanager-i.md#getavailabledevices)接口查询到当前可用输入设备列表，从列表中选择输入
+> 设备。
+> 
+> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。
+> 
+> - 应用程序可以监听
+> [currentInputDeviceChanged](audio.AudioSessionManager.on(type: 'currentInputDeviceChanged', callback: Callback&lt;CurrentInputDeviceChangedEvent&gt;))
+> 事件来获得实际的输入设备。
 
 **Since:** 21
 
@@ -962,20 +959,20 @@ Selects a media input device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputAudioDevice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Media input device. |
+| inputAudioDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | 媒体输入设备。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device does not exist. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed, for example, the selected device does not exist. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## setAudioSessionBehavior
 
@@ -989,12 +986,11 @@ ArkTS-Sta:
 setAudioSessionBehavior(behavior: int): void
 ```
 
-Sets audio session behavior parameters. (Multiple flags can be combined.)
-    **NOTE**  
-    
-    If this API is called while an audio session is active, you must call the  
-    [activateAudioSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API again  
-    for the settings to take effect.
+设置音频会话行为参数，支持多种标志位的组合使用。
+
+> **说明：**
+> 
+> 当音频会话在激活状态时调用此接口后，必须重新调用接口[activateAudioSession](arkts-audio-audio-audiosessionmanager-i.md#activateaudiosession)使其生效。
 
 **Since:** 24
 
@@ -1010,14 +1006,14 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| behavior | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Specifies the audio session behavior.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This can be a single flag or a bitwise OR combination of multiple flags.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| behavior | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用于设置音频会话行为。 &lt;br&gt;该参数可以是单个标志，也可以是多个标志的按位OR组合。 &lt;br&gt;当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in the current state. |
+| 6800103 | Operation not permitted in the current state. |
+| 6800101 | Parameter verification failed. |
 
 ## setAudioSessionScene
 
@@ -1025,7 +1021,7 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 setAudioSessionScene(scene: AudioSessionScene): void
 ```
 
-Sets an audio session scene.
+设置音频会话场景参数。
 
 **Since:** 20
 
@@ -1039,15 +1035,15 @@ Sets an audio session scene.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio session scene. |
+| scene | [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) | Yes | 音频会话场景。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800103 | Operation not permit at current state. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## setBluetoothAndNearlinkPreferredRecordCategory
 
@@ -1055,18 +1051,17 @@ Sets an audio session scene.
 setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>
 ```
 
-Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system  
-    prioritizes using the device for recording when the device is connected.  
-    
-    - If there are recording streams of other applications with higher priorities in the system, the actual input  
-    device used will follow the input device selected by these applications.  
-    
-    - Applications can listen for the  
-    [currentInputDeviceChanged]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    event to find out the actual input device being used.
+设置在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 应用程序可以在蓝牙或星闪连接之前设置此分类，系统将在设备连接时优先使用蓝牙或星闪进行录音。
+> 
+> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。
+> 
+> - 应用程序可以监听
+> [currentInputDeviceChanged](audio.AudioSessionManager.on(type: 'currentInputDeviceChanged', callback: Callback&lt;CurrentInputDeviceChangedEvent&gt;))
+> 事件来获得实际的输入设备。
 
 **Since:** 21
 
@@ -1080,20 +1075,20 @@ Sets the preferred device category for recording with Bluetooth or NearLink. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| category | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Preferred device category for recording with Bluetooth or NearLink. |
+| category | [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | Yes | 在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## setCapturerMuteHint
 
@@ -1101,7 +1096,15 @@ Sets the preferred device category for recording with Bluetooth or NearLink. Thi
 setCapturerMuteHint(mute: boolean): Promise<void>
 ```
 
-Set mute hint for all capturer streams in the current audio session. It dose not mute the recording stream, only affects internal processing strategy.
+应用将当前音频会话内录音流的自身静音状态传递给系统音频模块。&lt;!--RP1--&gt;该接口不会触发录音流静音，当前仅在部分PC/2in1设备上用于优化设备功耗。&lt;!--RP1End--&gt;使用Promise异步回调。
+
+> **说明：**
+> 
+> - 该接口用于向系统音频模块上报当前音频会话内录音流的静音状态，不会改变录音流的实际静音状态。
+> 
+> - 该接口仅在当前音频会话存在运行中的录音流时允许调用，否则返回错误码6800103。
+> 
+> - 若某条录音流同时调用了流级接口[AudioCapturer.setMuteHint](arkts-audio-audio-audiocapturer-i.md#setmutehint)和本接口，流级接口设置优先级更高，以流级接口设置值为准。
 
 **Since:** 24
 
@@ -1117,19 +1120,19 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mute | boolean | Yes | Use true if application recording stream muted by application if self. |
+| mute | boolean | Yes | 应用自身给系统音频模块上报的静音状态。true表示应用将当前流静音，false表示取消静音。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state, there is no audio capturer running. |
+| 6800103 | Operation not permitted at current state, there is no audio capturer running. |
 
 ## setDefaultOutputDevice
 
@@ -1137,21 +1140,16 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Sets the default audio output device. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - This API applies to the following scenario: When  
-    [AudioSessionScene]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **VoIP**, the setting takes  
-    effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take  
-    effect upon AudioSession activation. Instead, the setting applies when  
-    [StreamUsage]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ for playback is voice message, VoIP voice call,  
-    or VoIP video call. Supported devices include the earpiece, speaker, and system default device.  
-    
-    - This API can be called at any time after an AudioSessionManager instance is created. The system records the  
-    device set by the application. However, the setting takes effect only after the AudioSession is activated. When  
-    the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected,  
-    the system prioritizes audio output through the external device. Otherwise, the system uses the device set by  
-    the application.
+设置默认发声设备。使用Promise方式进行异步回调。
+
+> **说明：**
+> 
+> - 本接口适用于以下情况：当设置的[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为VoIP场景时，激活AudioSession后立即生效。若
+> [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为非VoIP场景，激活AudioSession时不会生效，仅在启动播放的
+> [StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或VoIP视频通话时才生效。支持听筒、扬声器和系统默认设备。
+> 
+> - 本接口允许在AudioSessionManager创建后随时调用，系统会记录应用设置的默认本机内置发声设备。但只有激活AudioSession后才能生效。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从
+> 外接设备发声。否则，系统遵循应用设置的默认本机内置发声设备。
 
 **Since:** 20
 
@@ -1165,21 +1163,21 @@ Sets the default audio output device. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+| deviceType | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes | 设备类型。 &lt;br&gt;仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| 6800102 | Allocate memory failed. Return by promise. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 6800301 | Audio client call audio service error, System error. |
 
 ## setMediaOutputDevice
 
@@ -1187,7 +1185,16 @@ Sets the default audio output device. This API uses a promise to return the resu
 setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Set the audio output device to the built-in speaker, when other audio peripherals are connected, such as bluetooth headphones or wired headsets. It should be noted that this interface only applies to media streams.In scenarios where there are concurrent playback streams with higher priority or user selects the output device through system UI, the actual output device used by the application may differ from the selected one. The application can obtain currently active output device by subscribing to the currentOutputDeviceChanged event.
+当连接其他音频外设（如蓝牙耳机或有线耳机）时，将媒体输出设备切换为内置扬声器。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 本接口仅适用于媒体播放场景，并且会作用于应用内发起的所有媒体流。
+> 
+> - 若存在更高优先级的并发播放流或用户手动选择输出设备，则应用程序实际使用的输出设备将与本接口设置的设备不同。应用程序可通过监听
+> [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)事件获取当前活跃的输出设备。
+> 
+> - 当应用程序需要清除之前通过接口设置的扬声器输出配置时，可通过调用接口将媒体输出设备设置为DEFAULT（系统默认设备）来实现。该设置仅在应用程序运行期间有效，当应用程序退出时，此接口的设置将自动清除。
 
 **Since:** 26.0.0
 
@@ -1203,18 +1210,18 @@ Set the audio output device to the built-in speaker, when other audio peripheral
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the available deviceTypes are SPEAKER: Built-in speaker DEFAULT: Restore to system default output device |
+| deviceType | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes | 设备类型。 &lt;br&gt;仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device type is not supported. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Internal variable memory allocation failed. 2.Audio server process died. 3.Speaker device is not available. |
+| 6800101 | Parameter verification failed, for example, the selected device type is not supported. |
+| 6800301 | System error. Possible causes: 1.Internal variable memory allocation failed. 2.Audio server process died. 3.Speaker device is not available. |
 

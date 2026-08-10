@@ -6,7 +6,7 @@
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void
 ```
 
-Sets the notification slot for a specified application.This API uses an asynchronous callback to return the result.
+设定指定应用的通知通道（Callback形式）。
 
 **Since:** 7
 
@@ -28,9 +28,9 @@ Sets the notification slot for a specified application.This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| slot | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification slot. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | Yes | 通知通道。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 设定通知通道回调函数。 |
 
 
 ## setSlotByBundle
@@ -39,7 +39,7 @@ Sets the notification slot for a specified application.This API uses an asynchro
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>
 ```
 
-Sets the notification slot for a specified application. This API uses a promise to return the result.
+设定指定应用的通知通道（Promise形式）。
 
 **Since:** 7
 
@@ -61,12 +61,12 @@ Sets the notification slot for a specified application. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| slot | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification slot. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | Yes | 通知通道。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

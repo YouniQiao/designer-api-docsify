@@ -1,6 +1,6 @@
 # SkillInfoFlag
 
-Enumeration of flags used to control what content is populated in a SkillInfo.Multiple flags can be combined using bitwise OR, for example GET\_SKILL\_INFO\_WITH\_SRC\_ENTRIES | GET\_SKILL\_INFO\_WITH\_DESCRIPTION.
+技能信息标志，指示需要获取的技能信息的内容。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumeration of flags used to control what content is populated in a SkillInfo.Mu
 GET_SKILL_INFO_DEFAULT = 0x00000000
 ```
 
-Used to obtain the default SkillInfo.
+获取默认技能信息，不包含description、srcEntries、permissions和requestPermissions。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Used to obtain the default SkillInfo.
 GET_SKILL_INFO_WITH_DESCRIPTION = 0x00000001
 ```
 
-Used to obtain the SkillInfo containing description.
+用于获取包含description的技能信息。
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ Used to obtain the SkillInfo containing description.
 GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002
 ```
 
-Used to obtain the SkillInfo containing srcEntries.
+用于获取包含srcEntries的技能信息。
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ Used to obtain the SkillInfo containing srcEntries.
 GET_SKILL_INFO_WITH_PERMISSIONS = 0x00000004
 ```
 
-Used to obtain the SkillInfo containing permissions.
+用于获取包含permissions的技能信息。
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ Used to obtain the SkillInfo containing permissions.
 GET_SKILL_INFO_WITH_REQUEST_PERMISSIONS = 0x00000008
 ```
 
-Used to obtain the permissions declared under requestPermissions in the module manifest.
+用于获取包含requestPermissions的技能信息。
 
 **Since:** 26.0.0
 

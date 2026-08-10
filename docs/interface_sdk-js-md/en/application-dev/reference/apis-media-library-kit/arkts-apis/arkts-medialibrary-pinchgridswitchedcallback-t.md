@@ -22,5 +22,5 @@ Callback to be invoked when a user pinches a grid component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gridLevel | photoAccessHelper.GridLevel | Yes | Number of columns in the grid.  |
+| gridLevel | photoAccessHelper.GridLevel | Yes | Number of columns in the grid. |
 

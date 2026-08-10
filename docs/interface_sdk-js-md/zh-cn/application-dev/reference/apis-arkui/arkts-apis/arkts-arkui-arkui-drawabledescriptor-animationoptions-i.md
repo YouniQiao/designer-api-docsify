@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+```
+
 ## autoPlay
 
 ```TypeScript
@@ -110,9 +116,9 @@ stopMode?: AnimationStopMode
 
 设置动图的停止模式。
 
-默认值：AnimationStopMode.FIRST\_FRAME，表示动图停止时回到首帧。
+默认值：AnimationStopMode.FIRST_FRAME，表示动图停止时回到首帧。
 
-**类型：** AnimationStopMode
+**类型：** [AnimationStopMode](arkts-arkui-arkui-drawabledescriptor-animationstopmode-e.md)
 
 **默认值：** AnimationStopMode.FIRST_FRAME
 

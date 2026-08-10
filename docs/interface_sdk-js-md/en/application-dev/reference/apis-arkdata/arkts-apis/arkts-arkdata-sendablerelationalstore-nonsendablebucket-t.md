@@ -4,7 +4,7 @@
 type NonSendableBucket = relationalStore.ValuesBucket
 ```
 
-Represents the KV pair that cannot be passed across threads.
+用于存储键值对的类型。不支持跨线程传递。
 
 **Since:** 12
 

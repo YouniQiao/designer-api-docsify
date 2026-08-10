@@ -12,6 +12,12 @@ Defines the moving photo view attribute functions.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## setPlaybackStrategy
 
 ```TypeScript
@@ -42,15 +48,15 @@ Sets playback strategy.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i-sys.md) |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
-**Example**
+## Examples
 
 The system application can set the decoding format, HDR effect format, and strategy for processing a moving photo while playing it.
 

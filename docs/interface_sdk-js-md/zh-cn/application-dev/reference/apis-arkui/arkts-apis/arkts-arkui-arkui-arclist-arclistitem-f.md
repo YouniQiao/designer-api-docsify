@@ -1,5 +1,11 @@
 # ArcListItem
 
+## 导入模块
+
+```TypeScript
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## ArcListItem
 
 ```TypeScript
@@ -22,13 +28,13 @@ export declare function ArcListItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
 
 
 ## ArcListItem
@@ -58,12 +64,12 @@ export declare function ArcListItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArcListItemAttribute&gt; | 是 | 创建ArcListItem的样式 |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcListItemAttribute&gt; | 是 | 创建ArcListItem的样式 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ArcListItem的属性。 |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) | ArcListItem的属性。 |
 

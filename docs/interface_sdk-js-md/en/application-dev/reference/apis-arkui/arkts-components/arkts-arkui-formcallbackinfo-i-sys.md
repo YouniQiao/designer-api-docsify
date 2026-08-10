@@ -20,10 +20,9 @@ id: number
 
 Widget ID of the number type.
 
-**NOTE**
+**NOTE：**
 
-If the obtained ID is **-1**, the ID is greater than or equal to 2^53. In this case, you need to use **idString**  
-to obtain the ID.
+If the obtained ID is **-1**, the ID is greater than or equal to 2^53. In this case, you need to use **idString** to obtain the ID.
 
 **Type:** number
 

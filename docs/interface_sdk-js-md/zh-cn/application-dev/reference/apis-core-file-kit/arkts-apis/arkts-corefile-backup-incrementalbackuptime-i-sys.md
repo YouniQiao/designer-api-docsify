@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -40,7 +46,7 @@ lastIncrementalTime: long
 
 最后一次增量备份时间。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 

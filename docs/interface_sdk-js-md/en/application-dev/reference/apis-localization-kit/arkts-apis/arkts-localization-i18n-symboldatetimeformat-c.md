@@ -1,8 +1,10 @@
 # SymbolDateTimeFormat
 
-Provide a DateTime formatting interface that supports custom symbols.This interface formats date time values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "2:23 PM" with "2:23 afternoon").
+提供自定义时间日期符号的能力。继承自  
+[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)，支持  
+[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)的方法。
 
-**Inheritance/Implementation:** SymbolDateTimeFormat extends [Intl.DateTimeFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-datetimeformat-c.md)
+**Inheritance/Implementation:** SymbolDateTimeFormat extends [Intl.DateTimeFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-datetimeformat-c.md/arkts-arkts-intl-datetimeformat-c.md)
 
 **Since:** 26.0.0
 
@@ -12,13 +14,19 @@ Provide a DateTime formatting interface that supports custom symbols.This interf
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 ```
 
-A constructor used to create a SymbolDateTimeFormat object.
+创建使用自定义符号的时间日期格式化对象。
 
 **Since:** 26.0.0
 
@@ -36,14 +44,14 @@ A constructor used to create a SymbolDateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
+| locale | Intl.Locale | No | 区域对象。默认值：系统区域对象。 |
+| options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | No | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## parse
 
@@ -51,7 +59,7 @@ A constructor used to create a SymbolDateTimeFormat object.
 public parse(text: string, lenientMode: boolean): long
 ```
 
-Parse a date time localized string to Unix timestamp.Unix timestamp, indicating the number of milliseconds elapsed since 00:00:00 on January 1, 1970 GMT.
+解析本地化时间日期字符串，返回对应的时间戳。
 
 **Since:** 26.0.0
 
@@ -69,20 +77,20 @@ Parse a date time localized string to Unix timestamp.Unix timestamp, indicating 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Localized string to be parse. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Text to be parsed |
-| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings. For example, "2023/02-25" is a invalid separator date string, it will parse failure when lenientMode is false, and will parse success with value (2023, 02, 25) when lenientMode is true. it's better set to false, ensure the data is not polluted. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Whether to use loose parsing rules |
+| text | string | Yes | 待解析的本地化时间日期字符串。 |
+| lenientMode | boolean | Yes | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 &lt;br&gt;宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
+| long | 时间日期字符串解析后对应的时间戳，单位为毫秒（ms）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## resolvedOptions
 
@@ -90,7 +98,7 @@ Parse a date time localized string to Unix timestamp.Unix timestamp, indicating 
 public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 ```
 
-Obtains the options for creating a SymbolDateTimeFormat object.This will allow us to check the current config symbols.
+解析自定义时间日期符号的配置项。
 
 **Since:** 26.0.0
 
@@ -108,5 +116,5 @@ Obtains the options for creating a SymbolDateTimeFormat object.This will allow u
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Symbol options for SymbolDateTimeFormat. |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | 自定义符号时间日期格式化对象配置项的解析结果。 |
 

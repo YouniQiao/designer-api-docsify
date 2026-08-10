@@ -1,6 +1,6 @@
 # PushParameters
 
-Plugin component push parameters.
+使用pluginComponentManager.push方法时需要传递的参数。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Plugin component push parameters.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## data
 
 ```TypeScript
 data: KVObject
 ```
 
-Defines data.
+组件数据，以键值对形式存储，用于传递给组件使用方的业务数据，键和值类型由业务定义。
 
-**Type:** KVObject
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Defines data.
 extraData: KVObject
 ```
 
-Defines extraData.
+附加数据，以键值对形式存储，用于传递额外的业务信息，键和值类型由业务定义。
 
-**Type:** KVObject
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -56,7 +62,7 @@ Defines extraData.
 jsonPath?: string
 ```
 
-Defines jsonPath.
+存放模板路径的external.json文件的路径。当需要通过外部配置文件直接加载模板而非通过push通信发送时传入此参数；当jsonPath字段不为空时不触发push通信，直接从external.json中读取模板路径进行加载。不传入或为空时，触发push通信向组件使用方推送组件和数据。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ Defines jsonPath.
 name: string
 ```
 
-Defines name.
+组件名称。
 
 **Type:** string
 
@@ -96,9 +102,9 @@ Defines name.
 want: Want
 ```
 
-Defines want.
+组件使用方Ability信息。
 
-**Type:** Want
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # GetDomainAccessTokenOptions (System API)
 
-Defines the options for obtaining a domain access token.
+表示获取域访问令牌的选项。
 
 **Since:** 10
 
@@ -12,15 +12,21 @@ Defines the options for obtaining a domain access token.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## businessParams
 
 ```TypeScript
 businessParams: Record<string, Object>
 ```
 
-Service parameters customized by the service party based on the request protocol.
+业务参数，由业务方根据请求协议自定义。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 10
 
@@ -38,9 +44,9 @@ Service parameters customized by the service party based on the request protocol
 callerUid: int
 ```
 
-Unique identifier of the caller.
+调用方唯一标识符。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -58,9 +64,9 @@ Unique identifier of the caller.
 domainAccountInfo: DomainAccountInfo
 ```
 
-Domain account information.
+域账号的信息。
 
-**Type:** DomainAccountInfo
+**Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md)
 
 **Since:** 10
 
@@ -78,7 +84,7 @@ Domain account information.
 domainAccountToken: Uint8Array
 ```
 
-Token of the domain account.
+域账号的令牌。
 
 **Type:** Uint8Array
 

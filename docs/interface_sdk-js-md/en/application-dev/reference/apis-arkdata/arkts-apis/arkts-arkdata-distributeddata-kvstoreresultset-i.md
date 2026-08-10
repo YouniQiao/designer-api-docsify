@@ -1,7 +1,7 @@
 # KvStoreResultSet
 
-Provides APIs to obtain the KV store result sets, and query and move the data read position.Before calling any method in **KvStoreResultSet**, you must use  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain a **KVStore** object.
+提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。在调用KvStoreResultSet的方法前，需要先通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个KVStore实例。
 
 **Since:** 7
 
@@ -21,7 +21,7 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 getCount(): number
 ```
 
-Obtains the total number of rows in the result set.
+获取结果集中的总行数。
 
 **Since:** 8
 
@@ -39,9 +39,9 @@ Obtains the total number of rows in the result set.
 
 | Type | Description |
 | --- | --- |
-| number | Total number of rows obtained. |
+| number | 返回数据的总行数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -66,7 +66,7 @@ try {
 getEntry(): Entry
 ```
 
-Obtains the KV pair from the current position.
+从当前位置获取对应的键值对。
 
 **Since:** 8
 
@@ -84,9 +84,9 @@ Obtains the KV pair from the current position.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | KV pair obtained. |
+| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 返回键值对。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -111,7 +111,7 @@ try {
 getPosition(): number
 ```
 
-Obtains the current data read position (position from which data is read) in the result set.
+获取结果集中当前的读取位置。
 
 **Since:** 8
 
@@ -129,9 +129,9 @@ Obtains the current data read position (position from which data is read) in the
 
 | Type | Description |
 | --- | --- |
-| number | Current data read position obtained. |
+| number | 返回当前读取位置。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -156,7 +156,7 @@ try {
 isAfterLast(): boolean
 ```
 
-Checks whether the data read position is after the last row.
+检查读取位置是否在最后一行之后。
 
 **Since:** 8
 
@@ -174,9 +174,9 @@ Checks whether the data read position is after the last row.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data read position is after the last row; returns **false** otherwise. |
+| boolean | 返回true表示读取位置在最后一行之后；返回false表示读取位置不在最后一行之后。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -201,7 +201,7 @@ try {
 isBeforeFirst(): boolean
 ```
 
-Checks whether the data read position is before the first row.
+检查读取位置是否在第一行之前。
 
 **Since:** 8
 
@@ -219,9 +219,9 @@ Checks whether the data read position is before the first row.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data read position is before the first row; returns **false** otherwise. |
+| boolean | 返回true表示读取位置在第一行之前；返回false表示读取位置不在第一行之前。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -246,7 +246,7 @@ try {
 isFirst(): boolean
 ```
 
-Checks whether the data read position is the first row.
+检查读取位置是否为第一行。
 
 **Since:** 8
 
@@ -264,9 +264,9 @@ Checks whether the data read position is the first row.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the first row is being read; returns **false** otherwise. |
+| boolean | 返回true表示读取位置为第一行；返回false表示读取位置不是第一行。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -291,7 +291,7 @@ try {
 isLast(): boolean
 ```
 
-Checks whether the data read position is the last row.
+检查读取位置是否为最后一行。
 
 **Since:** 8
 
@@ -309,9 +309,9 @@ Checks whether the data read position is the last row.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the last row is being read; returns **false** otherwise. |
+| boolean | 返回true表示读取位置为最后一行；返回false表示读取位置不是最后一行。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -336,7 +336,7 @@ try {
 move(offset: number): boolean
 ```
 
-Moves the data read position with the specified offset from the current position.
+将读取位置移动到当前位置的相对偏移量。
 
 **Since:** 8
 
@@ -354,15 +354,15 @@ Moves the data read position with the specified offset from the current position
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Offset to move the data read position. A negative value means to move backward, and a positive value means to move forward. |
+| offset | number | Yes | 表示与当前位置的相对偏移量，负偏移表示向后移动，正偏移表示向前移动。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -387,7 +387,7 @@ try {
 moveToFirst(): boolean
 ```
 
-Moves the data read position to the first row. If the result set is empty, **false** will be returned.
+将读取位置移动到第一行。如果结果集为空，则返回false。
 
 **Since:** 8
 
@@ -405,9 +405,9 @@ Moves the data read position to the first row. If the result set is empty, **fal
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -432,7 +432,7 @@ try {
 moveToLast(): boolean
 ```
 
-Moves the data read position to the last row. If the result set is empty, **false** will be returned.
+将读取位置移动到最后一行。如果结果集为空，则返回false。
 
 **Since:** 8
 
@@ -450,9 +450,9 @@ Moves the data read position to the last row. If the result set is empty, **fals
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -477,7 +477,7 @@ try {
 moveToNext(): boolean
 ```
 
-Moves the data read position to the next row. If the result set is empty, **false** will be returned.
+将读取位置移动到下一行。如果结果集为空，则返回false。
 
 **Since:** 8
 
@@ -495,9 +495,9 @@ Moves the data read position to the next row. If the result set is empty, **fals
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -522,7 +522,7 @@ try {
 moveToPosition(position: number): boolean
 ```
 
-Moves the data read position from 0 to an absolute position.
+将读取位置从 0 移动到绝对位置。
 
 **Since:** 8
 
@@ -540,15 +540,15 @@ Moves the data read position from 0 to an absolute position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Absolute position to move to. |
+| position | number | Yes | 表示绝对位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -573,7 +573,7 @@ try {
 moveToPrevious(): boolean
 ```
 
-Moves the data read position to the previous row. If the result set is empty, **false** will be returned.
+将读取位置移动到上一行。如果结果集为空，则返回false。
 
 **Since:** 8
 
@@ -591,9 +591,9 @@ Moves the data read position to the previous row. If the result set is empty, **
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;

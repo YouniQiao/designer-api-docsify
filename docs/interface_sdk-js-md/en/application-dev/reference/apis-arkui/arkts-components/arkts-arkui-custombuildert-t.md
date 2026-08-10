@@ -4,7 +4,7 @@
 declare type CustomBuilderT<T> = (t: T) => void
 ```
 
-Defines the CustomBuilder type with parameter.
+定义带参数的CustomBuilder类型
 
 **Since:** 23
 
@@ -24,5 +24,5 @@ Defines the CustomBuilder type with parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| t | T | Yes | the parameter  |
+| t | T | Yes | 函数参数 |
 

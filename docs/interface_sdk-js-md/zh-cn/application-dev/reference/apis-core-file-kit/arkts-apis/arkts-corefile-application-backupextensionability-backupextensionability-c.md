@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
+## 导入模块
+
+```TypeScript
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
+```
+
 ## onBackup
 
 ```TypeScript
@@ -28,7 +34,7 @@ Extension生命周期回调，在执行备份数据时回调，由开发者实�
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
-**示例：**
+## 示例
 
 ```TypeScript
 class BackupExt extends BackupExtensionAbility {
@@ -68,7 +74,7 @@ onBackupEx(backupInfo: string): string | Promise<string>
 | --- | --- |
 | string | 应用执行自定义备份操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BackupExtensionAbility } from '@kit.CoreFileKit';
@@ -169,7 +175,7 @@ onProcess(): string
 | --- | --- |
 | string | 应用处理数据的进度信息，返回值为JSON格式字符串。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BackupExtensionAbility } from '@kit.CoreFileKit';
@@ -276,7 +282,7 @@ onRelease(scenario: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scenario | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 当前操作场景，值为1表示备份，值为2表示恢复。 |
+| scenario | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 当前操作场景，值为1表示备份，值为2表示恢复。 |
 
 **返回值：**
 
@@ -284,7 +290,7 @@ onRelease(scenario: int): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 以清理文件为例
@@ -341,9 +347,9 @@ Extension生命周期回调，在执行恢复数据时回调，由开发者提�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleVersion | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 恢复时应用数据所在的版本信息。 |
+| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | 是 | 恢复时应用数据所在的版本信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -377,7 +383,7 @@ Extension生命周期回调，在执行恢复数据时回调，由开发者实�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleVersion | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 恢复时应用数据所在的版本信息。 |
+| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | 是 | 恢复时应用数据所在的版本信息。 |
 | restoreInfo | string | 是 | 恢复时框架传递给应用的扩展信息，参数为JSON格式字符串。 |
 
 **返回值：**
@@ -386,7 +392,7 @@ Extension生命周期回调，在执行恢复数据时回调，由开发者实�
 | --- | --- |
 | string | 应用执行自定义恢复操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -471,7 +477,7 @@ context: BackupExtensionContext
 
 BackupExtensionAbility的上下文环境，继承自ExtensionContext。
 
-**类型：** BackupExtensionContext
+**类型：** [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
 
 **起始版本：** 12
 

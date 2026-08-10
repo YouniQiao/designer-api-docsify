@@ -4,7 +4,7 @@
 type AudioDeviceDescriptors = Array<Readonly<AudioDeviceDescriptor>>
 ```
 
-Defines an [AudioDeviceDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ array, which is read-only.
+设备属性数组类型，为[AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)的数组，只读。
 
 **Since:** 7
 

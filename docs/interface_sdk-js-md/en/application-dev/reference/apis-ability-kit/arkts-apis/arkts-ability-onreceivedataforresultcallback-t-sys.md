@@ -4,7 +4,7 @@
 export type OnReceiveDataForResultCallback = (data: Record<string, RecordData>) => Record<string, RecordData>
 ```
 
-Sets the callback with return value for the ui extension to receive data from an ui extension component.
+从UIExtensionComponent控件接收数据带返回值的回调方法。
 
 **Since:** 23
 
@@ -22,11 +22,11 @@ Sets the callback with return value for the ui extension to receive data from an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Indicates the receive data callback to set.  |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 回调函数，返回带返回值的接收的数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Returns the custom data.  |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 返回的数据对象。 |
 

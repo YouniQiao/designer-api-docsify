@@ -1,6 +1,6 @@
 # ComposeListItemV2
 
-Declare ComposeListItemV2
+列表组件，可自定义列表左侧、中间元素以及右侧显示内容。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declare ComposeListItemV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## build
 
 ```TypeScript
 build(): void
 ```
 
-The method to build component.
+构建组件的方法。
 
 **Since:** 26.0.0
 
@@ -38,9 +44,9 @@ The method to build component.
 contentItemV2?: ContentItemV2
 ```
 
-The ContentItem.
+定义左侧以及中间元素。
 
-**Type:** ContentItemV2
+**Type:** [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
 **Since:** 26.0.0
 
@@ -60,9 +66,9 @@ The ContentItem.
 operateItemV2?: OperateItemV2
 ```
 
-The OperateItem.
+定义右侧元素。
 
-**Type:** OperateItemV2
+**Type:** [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 
 **Since:** 26.0.0
 

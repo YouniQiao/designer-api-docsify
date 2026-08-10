@@ -1,5 +1,11 @@
 # getMaxRotationTime (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## getMaxRotationTime
 
 ```TypeScript
@@ -22,23 +28,23 @@ Obtains the maximum continuous rotation duration of a mechanical device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the mechanical device. |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Maximum rotation duration. Unit: millisecond. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Maximum rotation duration. Unit: millisecond. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 console.info('Query maximum rotation time');

@@ -1,12 +1,18 @@
 # isConcurrent
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## isConcurrent
 
 ```TypeScript
 function isConcurrent(func: Function): boolean
 ```
 
-Checks whether a function is a concurrent function.
+检查函数是否为并发函数。
 
 **Since:** 12
 
@@ -22,15 +28,15 @@ Checks whether a function is a concurrent function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | Function to check. |
+| func | Function | Yes | 需要检查的函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the function is a concurrent function, that is , a function decorated with [ |
+| boolean | 检查结果。如果被检查函数标注了 [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent

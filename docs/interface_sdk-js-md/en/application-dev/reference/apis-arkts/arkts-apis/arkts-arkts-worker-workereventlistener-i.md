@@ -1,6 +1,6 @@
 # WorkerEventListener
 
-Implements event listening.
+事件监听类。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Implements event listening.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## [[Call]]
 
 ```TypeScript
 (event: Event): void | Promise<void>
 ```
 
-Specifies the callback function to be invoked.
+指定要调用的回调函数。
 
 **Since:** 9
 
@@ -32,16 +38,16 @@ Specifies the callback function to be invoked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event class for the callback to invoke. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | 回调的事件类。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets

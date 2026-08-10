@@ -1,6 +1,6 @@
 # NavigationCommonTitle
 
-Defines a general title for the **Navigation** component.
+Navigation通用标题。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Defines a general title for the **Navigation** component.
 main: string | Resource
 ```
 
-Main title.
+设置主标题。
 
 **Type:** string \| Resource
 
@@ -36,7 +36,7 @@ Main title.
 sub: string | Resource
 ```
 
-Subtitle.
+设置副标题。
 
 **Type:** string \| Resource
 

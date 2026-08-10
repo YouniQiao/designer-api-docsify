@@ -1,12 +1,18 @@
 # createRemoteDevice
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createRemoteDevice
 
 ```TypeScript
 function createRemoteDevice(address: string): RemoteDevice
 ```
 
-Creates a remote device instance.
+创建远端设备实例。
 
 **Since:** 26.0.0
 
@@ -22,18 +28,18 @@ Creates a remote device instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the device address. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
+| address | string | Yes | 设备地址。例如，“11:22:33:AA:BB:FF” &lt;br&gt;长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a near link remote device instance. |
+| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | 返回近链路远程设备实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100041 | Invalid address. |
 

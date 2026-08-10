@@ -1,9 +1,10 @@
 # SearchOptions
 
 Search初始化参数。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -21,7 +22,7 @@ controller?: SearchController
 
 设置Search组件控制器。当需要通过控制器操作搜索框（如设置光标位置、停止编辑等）时传入此参数，不传入时无法使用控制器相关方法。
 
-**类型：** SearchController
+**类型：** [SearchController](arkts-arkui-searchcontroller-c.md)
 
 **起始版本：** 8
 
@@ -43,7 +44,7 @@ icon?: string
 
 **说明：**
 
-icon的数据源支持\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_和网络图片。
+icon的数据源支持[使用相对路径显示图片](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例25使用相对路径显示图片)和网络图片。
 
 - 支持的图片格式包括png、jpg、bmp、svg、gif、pixelmap和heif。
 
@@ -73,7 +74,7 @@ placeholder?: ResourceStr
 
 设置无输入时的提示文本。当需要自定义提示文本时传入此参数，不传入时不显示提示文本。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 8
 

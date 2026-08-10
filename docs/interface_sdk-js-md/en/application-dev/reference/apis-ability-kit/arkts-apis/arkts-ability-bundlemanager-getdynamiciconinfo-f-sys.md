@@ -1,12 +1,18 @@
 # getDynamicIconInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getDynamicIconInfo
 
 ```TypeScript
 function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>
 ```
 
-Obtains the dynamic icon information of all users and all application clones based on the given bundle name. This API uses a promise to return the result.
+根据指定的bundleName获取所有用户和所有分身下的动态图标信息。使用Promise异步回调。
 
 **Since:** 20
 
@@ -24,24 +30,24 @@ Obtains the dynamic icon information of all users and all application clones bas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which the dynamic icon information is to be queried. |
+| bundleName | string | Yes | 要查询动态图标的应用包名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise used to return the dynamic icon information. |
+| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise对象，返回查询到的动态图标信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700306](../errorcode-bundle.md#17700306-failed-to-obtain-the-dynamic-icon) | Failed to obtain the dynamic icon. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700306 | Failed to obtain the dynamic icon. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -52,7 +58,7 @@ let bundleName: string = 'com.ohos.demo';
 
 try {
   bundleManager.getDynamicIconInfo(bundleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getDynamicIconInfo successfully %s', JSON.stringify(data));
+    hilog.info(0x0000, 'testTag', 'getDynamicIconInfo successfully %{public}s', JSON.stringify(data));
   }).catch((err: BusinessError) => {
     hilog.error(0x0000, 'testTag', 'getDynamicIconInfo failed. Cause: %{public}s', err.message);
   });

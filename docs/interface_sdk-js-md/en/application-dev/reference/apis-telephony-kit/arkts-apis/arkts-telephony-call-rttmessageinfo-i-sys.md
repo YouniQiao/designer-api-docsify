@@ -12,6 +12,12 @@ Indicates the info of the rtt message.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## callId
 
 ```TypeScript
@@ -20,7 +26,7 @@ callId: int
 
 Indicates the id of rtt.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

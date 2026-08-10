@@ -1,12 +1,18 @@
 # selectContacts
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## selectContacts
 
 ```TypeScript
 function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Selects a contact. This API uses an asynchronous callback to return the result.
+调用选择联系人接口，打开选择联系人UI界面。使用callback异步回调。
 
 **Since:** 10
 
@@ -22,19 +28,21 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Open the contact selection UI.
 contact.selectContacts((err: BusinessError, data) => {
   if (err) {
     console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
@@ -51,7 +59,7 @@ contact.selectContacts((err: BusinessError, data) => {
 function selectContacts(): Promise<Array<Contact>>
 ```
 
-Selects a contact. This API uses a promise to return the result.
+调用选择联系人接口，打开选择联系人UI界面。使用Promise异步回调。
 
 **Since:** 10
 
@@ -67,18 +75,17 @@ Selects a contact. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of selected contacts. |
+| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Open the contact selection UI.
 let promise = contact.selectContacts();
 promise.then((data) => {
   console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -89,7 +96,7 @@ promise.then((data) => {
 function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses an asynchronous callback to return the result.
+调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入[筛选条件](arkts-contacts-contact-contactselectionoptions-i.md)）。使用callback异步回调。
 
 **Since:** 10
 
@@ -105,20 +112,22 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Contact selection options, which specifies whether one contact or multiple contacts can be selected. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
+| options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | Yes | 选择联系人时的筛选条件，表示单选或多选。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Open the contact selection UI and select a contact.
 contact.selectContacts({
   isMultiSelect:false
 }, (err: BusinessError, data) => {
@@ -137,7 +146,7 @@ contact.selectContacts({
 function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>
 ```
 
-Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses a promise to return the result.
+调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入筛选条件）。使用Promise异步回调。
 
 **Since:** 10
 
@@ -153,30 +162,29 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Contact selection options, which specifies whether one contact or multiple contacts can be selected. |
+| options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | Yes | 选择联系人时的筛选条件，用于指定是单选还是多选。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of selected contacts. |
+| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Open the contact selection UI to select a contact.
 let promise = contact.selectContacts({isMultiSelect:false});
 promise.then((data) => {
   console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

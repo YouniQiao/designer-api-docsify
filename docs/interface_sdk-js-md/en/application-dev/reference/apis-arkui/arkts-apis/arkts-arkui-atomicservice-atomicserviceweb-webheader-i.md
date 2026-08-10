@@ -1,6 +1,6 @@
 # WebHeader
 
-Describes the request/response header returned by the **AtomicServiceWeb** component.
+Web组件返回的请求/响应头对象。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes the request/response header returned by the **AtomicServiceWeb** compo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+```
+
 ## headerKey
 
 ```TypeScript
 headerKey: string
 ```
 
-Key of the request/response header.
+请求/响应头的key。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Key of the request/response header.
 headerValue: string
 ```
 
-Value of the request/response header.
+请求/响应头的value。
 
 **Type:** string
 

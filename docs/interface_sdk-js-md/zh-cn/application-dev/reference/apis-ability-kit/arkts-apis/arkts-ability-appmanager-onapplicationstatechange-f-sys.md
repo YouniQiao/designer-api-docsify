@@ -1,5 +1,11 @@
 # onApplicationStateChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onApplicationStateChange
 
 ```TypeScript
@@ -24,8 +30,8 @@ function onApplicationStateChange(observer: ApplicationStateObserver, filter: Ap
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用生命周期变化事件的过滤器。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
+| filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | 是 | 应用生命周期变化事件的过滤器。 |
 
 **返回值：**
 
@@ -37,7 +43,7 @@ function onApplicationStateChange(observer: ApplicationStateObserver, filter: Ap
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

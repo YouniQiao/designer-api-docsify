@@ -1,6 +1,6 @@
 # AuxiliaryPictureInfo
 
-Describes the auxiliary picture information.
+表示辅助图的图像信息。
 
 **Since:** 13
 
@@ -10,15 +10,21 @@ Describes the auxiliary picture information.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## auxiliaryPictureType
 
 ```TypeScript
 auxiliaryPictureType: AuxiliaryPictureType
 ```
 
-Auxiliary picture type.
+辅助图的图像类型。
 
-**Type:** AuxiliaryPictureType
+**Type:** [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)
 
 **Since:** 13
 
@@ -34,7 +40,7 @@ Auxiliary picture type.
 colorSpace: colorSpaceManager.ColorSpaceManager
 ```
 
-Color space.
+目标色彩空间。
 
 **Type:** colorSpaceManager.ColorSpaceManager
 
@@ -52,9 +58,9 @@ Color space.
 pixelFormat: PixelMapFormat
 ```
 
-Pixel format.
+像素格式。
 
-**Type:** PixelMapFormat
+**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **Since:** 13
 
@@ -70,9 +76,9 @@ Pixel format.
 rowStride: int
 ```
 
-Row stride.
+行跨距。单位：字节（Byte）。应大于或等于图像每行像素数据所占的字节数，不满足时数据读取异常。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -88,9 +94,9 @@ Row stride.
 size: Size
 ```
 
-Image size.
+图片大小。
 
-**Type:** Size
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **Since:** 13
 

@@ -6,7 +6,7 @@
 declare function opendirSync(path: string): Dir
 ```
 
-Opens a directory. This API returns the result synchronously.
+以同步方法打开文件目录。
 
 **Since:** 6
 
@@ -24,11 +24,11 @@ Opens a directory. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory to open. |
+| path | string | Yes | 待打开文件目录的应用沙箱路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Dir** object opened. |
+| [Dir](arkts-corefile-fileio-dir-depr-i.md) | 返回Dir对象。 |
 

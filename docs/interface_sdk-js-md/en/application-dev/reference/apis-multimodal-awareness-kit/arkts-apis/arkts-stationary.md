@@ -1,9 +1,10 @@
 # @ohos.stationary
 
 The **stationary** module provides APIs to report the device status, including absolute still and relative still.
-    **NOTE**  
-    
-    This module does not support x86 emulators.
+
+> **NOTE：**
+> 
+> This module does not support x86 emulators.
 
 **Since:** 9
 
@@ -12,6 +13,12 @@ The **stationary** module provides APIs to report the device status, including a
 <!--Device-unnamed-declare namespace stationary--><!--Device-unnamed-declare namespace stationary-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
+
+## Modules to Import
+
+```TypeScript
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
+```
 
 ## Summary
 

@@ -1,5 +1,11 @@
 # readNdefTag
 
+## Modules to Import
+
+```TypeScript
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## readNdefTag
 
 ```TypeScript
@@ -28,7 +34,7 @@ Reads the NDEF Data.
 | --- | --- |
 | Promise&lt;string&gt; | Returns the NDEF Data. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connectedTag } from '@kit.ConnectivityKit';
@@ -68,9 +74,9 @@ Reads the NDEF Data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connectedTag } from '@kit.ConnectivityKit';

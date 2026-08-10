@@ -18,7 +18,7 @@ bottom?: ResourceColor
 
 bottom property.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ end?: ResourceColor
 
 end property.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ start?: ResourceColor
 
 start property.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ top?: ResourceColor
 
 top property.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 

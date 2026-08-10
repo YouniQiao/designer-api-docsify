@@ -1,6 +1,6 @@
 # AutoSyncTriggerMode
 
-Indicates automatic synchronization triggering method for Device-Cloud data.
+自动同步触发模式枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Indicates automatic synchronization triggering method for Device-Cloud data.
 ACCOUNT_LOGIN = 0
 ```
 
-Indicates account login trigger method.
+账号登录触发模式。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Indicates account login trigger method.
 CLOUD_SWITCH_ON = 1
 ```
 
-Indicates the synchronization switch trigger mode.
+同步开关触发模式。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Indicates the synchronization switch trigger mode.
 NETWORK_RECOVER = 2
 ```
 
-Indicates the trigger mode for network reconnection after recovery.
+网络恢复后的触发模式。
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Indicates the trigger mode for network reconnection after recovery.
 CLOUD_DATA_CHANGE = 3
 ```
 
-Indicates the cloud-side data change trigger mode.
+云端数据变更触发模式。
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ Indicates the cloud-side data change trigger mode.
 USER_CHANGE = 4
 ```
 
-Indicates the user change trigger method.
+用户变更触发模式。
 
 **Since:** 26.0.0
 

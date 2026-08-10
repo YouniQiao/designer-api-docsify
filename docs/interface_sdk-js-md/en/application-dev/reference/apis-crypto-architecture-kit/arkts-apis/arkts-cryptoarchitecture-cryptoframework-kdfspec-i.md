@@ -1,6 +1,6 @@
 # KdfSpec
 
-Defines the parameters of the key derivation function. When the key derivation function is used to derive a key,you need to construct and pass in a child class object of **KdfSpec**.
+密钥派生函数参数，使用密钥派生函数进行密钥派生时，需要构建其子类对象并作为输入。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Defines the parameters of the key derivation function. When the key derivation f
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Kdf
 - API version 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## algName
 
 ```TypeScript
 algName: string
 ```
 
-Algorithm of the key derivation function, for example, **PBKDF2**.
+指明密钥派生函数的算法名，如"PBKDF2"。
 
 **Type:** string
 

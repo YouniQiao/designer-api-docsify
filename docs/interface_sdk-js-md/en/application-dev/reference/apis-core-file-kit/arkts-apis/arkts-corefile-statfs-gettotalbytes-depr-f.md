@@ -6,7 +6,7 @@
 function getTotalBytes(path: string, callback: AsyncCallback<number>): void
 ```
 
-Obtains the total size of the specified file system, in bytes. This API uses an asynchronous callback to return the result.
+异步方法获取指定文件系统总字节数，使用callback形式返回结果。
 
 **Since:** 8
 
@@ -24,10 +24,10 @@ Obtains the total size of the specified file system, in bytes. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the file system. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the total size obtained, in bytes. |
+| path | string | Yes | 需要查询的文件系统的文件路径 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步获取总字节数之后的回调 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import common from '@ohos.app.ability.common';
@@ -50,7 +50,7 @@ statfs.getTotalBytes(path, (err: BusinessError, totalBytes:Number) => {
 function getTotalBytes(path: string): Promise<number>
 ```
 
-Obtains the total size of the specified file system, in byte. This API uses a promise to return the result.
+异步方法获取指定文件系统总字节数，以Promise形式返回结果。
 
 **Since:** 8
 
@@ -68,15 +68,15 @@ Obtains the total size of the specified file system, in byte. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the file system. |
+| path | string | Yes | 需要查询的文件系统的文件路径 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the total size obtained, in bytes. |
+| Promise&lt;number&gt; | 返回总字节数 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

@@ -1,6 +1,10 @@
 # AVMusicTemplateController
 
-The definition of the AVMusicTemplateController.
+音频模板控制器，可以获得音频模板控制器唯一的标识，用于与接入音频模板的媒体应用数据交互。
+
+> **说明：**
+> 
+> - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **Since:** 23
 
@@ -10,13 +14,19 @@ The definition of the AVMusicTemplateController.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## clearSearchHistory
 
 ```TypeScript
 clearSearchHistory(): Promise<OperResult>
 ```
 
-Clear search history.
+清除搜索历史。使用Promise异步回调。
 
 **Since:** 23
 
@@ -32,16 +42,16 @@ Clear search history.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| Promise&lt;OperResult&gt; | Promise对象，返回清除搜索历史的操作结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## destroy
 
@@ -49,7 +59,7 @@ Clear search history.
 destroy(): Promise<void>
 ```
 
-Destroy the controller.
+销毁音频模板控制器。使用Promise异步回调。
 
 **Since:** 23
 
@@ -65,13 +75,13 @@ Destroy the controller.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| 801 | capability not supported. |
 
 ## downloadMediaEntity
 
@@ -79,7 +89,7 @@ Destroy the controller.
 downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity): Promise<OperResult>
 ```
 
-Download media entity.
+下载媒体实体。使用Promise异步回调。
 
 **Since:** 23
 
@@ -95,23 +105,23 @@ Download media entity.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | control type |
-| mediaEntity | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | media entity |
+| controlType | [DownloadControlType](arkts-avsession-avmusictemplate-downloadcontroltype-t.md) | Yes | 下载的控制类型。 |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | 媒体实体。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| Promise&lt;OperResult&gt; | Promise对象，返回下载媒体实体的操作结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## executeAction
 
@@ -119,7 +129,7 @@ Download media entity.
 executeAction(actionType: string, params: string): Promise<string>
 ```
 
-Execute action.
+执行动作。使用Promise异步回调。
 
 **Since:** 23
 
@@ -135,23 +145,23 @@ Execute action.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | string | Yes | action type |
-| params | string | Yes | params |
+| actionType | string | Yes | 动作类型。 |
+| params | string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise for the result |
+| Promise&lt;string&gt; | Promise对象，返回执行动作的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## favoriteMediaEntity
 
@@ -159,7 +169,7 @@ Execute action.
 favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Promise<OperResult>
 ```
 
-Favorite media entity.
+收藏媒体。使用Promise异步回调。
 
 **Since:** 23
 
@@ -175,23 +185,23 @@ Favorite media entity.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | action type |
-| mediaEntity | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | media entity |
+| actionType | [MediaFavoriteType](arkts-avsession-avmusictemplate-mediafavoritetype-t.md) | Yes | 媒体收藏的类型。 |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | 媒体实体。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| Promise&lt;OperResult&gt; | Promise对象，返回收藏媒体的操作结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## handleMemberPurchase
 
@@ -199,7 +209,7 @@ Favorite media entity.
 handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>
 ```
 
-Handle member purchase.
+处理购买会员情况。使用Promise异步回调。
 
 **Since:** 23
 
@@ -215,22 +225,22 @@ Handle member purchase.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | info |
+| info | [MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | Promise for the result |
+| Promise&lt;DialogInfo&gt; | Promise对象，返回对话框信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## login
 
@@ -238,7 +248,7 @@ Handle member purchase.
 login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>
 ```
 
-Login.
+登录。使用Promise异步回调。
 
 **Since:** 23
 
@@ -254,23 +264,23 @@ Login.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | control type |
-| id | string | No | id |
+| controlType | [LoginType](arkts-avsession-avmusictemplate-logintype-t.md) | Yes | 登录类型。 |
+| id | string | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;QrCodeInfo[]&gt; | Promise for the result |
+| Promise&lt;QrCodeInfo[]&gt; | Promise对象，返回二维码信息的数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## offCurrentSingleChange
 
@@ -278,7 +288,7 @@ Login.
 offCurrentSingleChange(callback?: Callback<Single>): void
 ```
 
-Unregister report current single callback.
+注销当前单曲改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -294,14 +304,14 @@ Unregister report current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Single&gt; | No | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | No | 回调函数，返回当前单曲的信息。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offCustomElementsChange
@@ -310,7 +320,7 @@ Unregister report current single callback.
 offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void
 ```
 
-Unregister report custom elements change callback.
+注销上报自定义元素改变的回调。
 
 **Since:** 23
 
@@ -326,14 +336,14 @@ Unregister report custom elements change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('reportCustomElementsChange') event. |
+| callback | [ReportCustomElementsChangeEvent](arkts-avsession-avmusictemplate-reportcustomelementschangeevent-t.md) | No | 上报自定义元素改变事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offDialogCommandChange
@@ -342,7 +352,7 @@ Unregister report custom elements change callback.
 offDialogCommandChange(callback?: ReportDialogCommandEvent): void
 ```
 
-Unregister report dialog command callback.
+注销对话框命令改变的回调。
 
 **Since:** 23
 
@@ -358,14 +368,14 @@ Unregister report dialog command callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('reportDialogCommand') event. |
+| callback | [ReportDialogCommandEvent](arkts-avsession-avmusictemplate-reportdialogcommandevent-t.md) | No | 上报对话框命令事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offDownloadMediaEntityStatusChange
@@ -374,7 +384,7 @@ Unregister report dialog command callback.
 offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void
 ```
 
-Unregister report download media entity status callback.
+注销上报下载媒体状态改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -390,14 +400,14 @@ Unregister report download media entity status callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MediaEntity&gt; | No | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity&gt; | No | 回调函数，返回媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offExtensionAbilityChange
@@ -406,7 +416,7 @@ Unregister report download media entity status callback.
 offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void
 ```
 
-Unregister report extension ability callback.
+注销回调，用于停止监听拉起指定媒体应用的请求。
 
 **Since:** 23
 
@@ -422,14 +432,14 @@ Unregister report extension ability callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('setExtensionAbility') event. |
+| callback | [ReportExecuteAbilityEvent](arkts-avsession-avmusictemplate-reportexecuteabilityevent-t.md) | No | 通知音频模板控制方拉起指定的媒体应用界面的事件回调。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offMediaEntitiesChange
@@ -438,7 +448,7 @@ Unregister report extension ability callback.
 offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void
 ```
 
-Unregister report media entities change callback.
+注销媒体实体改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -454,14 +464,14 @@ Unregister report media entities change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MediaEntity[]&gt; | No | The callback used to handle ('reportMediaEntitiesChange') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity[]&gt; | No | 回调函数，返回媒体实体数组。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offPlaylistChange
@@ -470,7 +480,7 @@ Unregister report media entities change callback.
 offPlaylistChange(callback?: Callback<PageMediaEntity>): void
 ```
 
-Unregister report playlist callback.
+注销上报播放列表改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -486,14 +496,14 @@ Unregister report playlist callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PageMediaEntity&gt; | No | The callback used to handle ('reportPlaylist') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PageMediaEntity&gt; | No | 回调函数，返回标签页媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offReportExecuteAction
@@ -502,7 +512,7 @@ Unregister report playlist callback.
 offReportExecuteAction(callback?: ReportExecuteActionEvent): void
 ```
 
-Unregister report execute action callback.
+注销上报执行动作的回调。
 
 **Since:** 23
 
@@ -518,14 +528,14 @@ Unregister report execute action callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('reportExecuteAction') event. |
+| callback | [ReportExecuteActionEvent](arkts-avsession-avmusictemplate-reportexecuteactionevent-t.md) | No | 上报执行动作的事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offSettingsChange
@@ -534,7 +544,7 @@ Unregister report execute action callback.
 offSettingsChange(callback?: Callback<SettingItem[]>): void
 ```
 
-Unregister report settings callback.
+注销上报设置改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -550,14 +560,14 @@ Unregister report settings callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SettingItem[]&gt; | No | The callback used to handle ('reportSettings') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SettingItem[]&gt; | No | 回调函数，用于接收并处理设置项数组。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offTabContentChange
@@ -566,7 +576,7 @@ Unregister report settings callback.
 offTabContentChange(callback?: ReportTabContentEvent): void
 ```
 
-Unregister report tab content callback.
+注销标签页内容改变的回调。
 
 **Since:** 23
 
@@ -582,14 +592,14 @@ Unregister report tab content callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback used to handle ('reportTabContent') event. |
+| callback | [ReportTabContentEvent](arkts-avsession-avmusictemplate-reporttabcontentevent-t.md) | No | 上报标签页内容事件。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## offUserInfoChange
@@ -598,7 +608,7 @@ Unregister report tab content callback.
 offUserInfoChange(callback?: Callback<UserInfo>): void
 ```
 
-Unregister report user info callback.
+注销用户信息改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -614,14 +624,14 @@ Unregister report user info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UserInfo&gt; | No | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | No | 回调函数，返回用户信息。不填该参数则注销该类型对应的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onCurrentSingleChange
@@ -630,7 +640,7 @@ Unregister report user info callback.
 onCurrentSingleChange(callback: Callback<Single>): void
 ```
 
-Register report current single callback.
+注册当前单曲改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -646,14 +656,14 @@ Register report current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Single&gt; | Yes | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | Yes | 回调函数，返回当前单曲的信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onCustomElementsChange
@@ -662,7 +672,7 @@ Register report current single callback.
 onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void
 ```
 
-Register report custom elements change callback.
+注册上报自定义元素改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -678,14 +688,14 @@ Register report custom elements change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('reportCustomElementsChange') event. |
+| callback | [ReportCustomElementsChangeEvent](arkts-avsession-avmusictemplate-reportcustomelementschangeevent-t.md) | Yes | 回调函数，上报自定义元素改变事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onDialogCommandChange
@@ -694,7 +704,7 @@ Register report custom elements change callback.
 onDialogCommandChange(callback: ReportDialogCommandEvent): void
 ```
 
-Register report dialog command callback.
+注册对话框命令改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -710,14 +720,14 @@ Register report dialog command callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('reportDialogCommand') event. |
+| callback | [ReportDialogCommandEvent](arkts-avsession-avmusictemplate-reportdialogcommandevent-t.md) | Yes | 回调函数，上报对话框命令事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onDownloadMediaEntityStatusChange
@@ -726,7 +736,7 @@ Register report dialog command callback.
 onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void
 ```
 
-Register report download media entity status callback.
+注册上报下载媒体状态改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -742,14 +752,14 @@ Register report download media entity status callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MediaEntity&gt; | Yes | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity&gt; | Yes | 回调函数，返回媒体实体信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onExtensionAbilityChange
@@ -758,7 +768,7 @@ Register report download media entity status callback.
 onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void
 ```
 
-Register report extension ability callback.
+注册回调，当需要拉起指定媒体应用界面时触发。使用callback异步回调。
 
 **Since:** 23
 
@@ -774,14 +784,14 @@ Register report extension ability callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('setExtensionAbility') event. |
+| callback | [ReportExecuteAbilityEvent](arkts-avsession-avmusictemplate-reportexecuteabilityevent-t.md) | Yes | 回调函数，通知音频模板控制方拉起指定三方应用界面的事件，包含应用包名和界面名称等信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onMediaEntitiesChange
@@ -790,7 +800,7 @@ Register report extension ability callback.
 onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void
 ```
 
-Register report media entities change callback.
+注册媒体实体改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -806,14 +816,14 @@ Register report media entities change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MediaEntity[]&gt; | Yes | The callback used to handle ('reportMediaEntitiesChange') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity[]&gt; | Yes | 回调函数，返回媒体实体数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onPlaylistChange
@@ -822,7 +832,7 @@ Register report media entities change callback.
 onPlaylistChange(callback: Callback<PageMediaEntity>): void
 ```
 
-Register report playlist callback.
+注册上报播放列表改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -838,14 +848,14 @@ Register report playlist callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PageMediaEntity&gt; | Yes | The callback used to handle ('reportPlaylist') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PageMediaEntity&gt; | Yes | 回调函数，返回标签页媒体实体信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onReportExecuteAction
@@ -854,7 +864,7 @@ Register report playlist callback.
 onReportExecuteAction(callback: ReportExecuteActionEvent): void
 ```
 
-Register report execute action callback.
+注册上报执行动作的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -870,14 +880,14 @@ Register report execute action callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('reportExecuteAction') event. |
+| callback | [ReportExecuteActionEvent](arkts-avsession-avmusictemplate-reportexecuteactionevent-t.md) | Yes | 回调函数，上报对应按钮动作的事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onSettingsChange
@@ -886,7 +896,7 @@ Register report execute action callback.
 onSettingsChange(callback: Callback<SettingItem[]>): void
 ```
 
-Register report settings callback.
+注册上报设置改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -902,14 +912,14 @@ Register report settings callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SettingItem[]&gt; | Yes | The callback used to handle ('reportSettings') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SettingItem[]&gt; | Yes | 回调函数，返回设置项数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onTabContentChange
@@ -918,7 +928,7 @@ Register report settings callback.
 onTabContentChange(callback: ReportTabContentEvent): void
 ```
 
-Register report tab content callback.
+注册标签页内容改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -934,14 +944,14 @@ Register report tab content callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback used to handle ('reportTabContent') event. |
+| callback | [ReportTabContentEvent](arkts-avsession-avmusictemplate-reporttabcontentevent-t.md) | Yes | 回调函数，上报标签页内容事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## onUserInfoChange
@@ -950,7 +960,7 @@ Register report tab content callback.
 onUserInfoChange(callback: Callback<UserInfo>): void
 ```
 
-Register report user info callback.
+注册用户信息改变的回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -966,14 +976,14 @@ Register report user info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UserInfo&gt; | Yes | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | Yes | 回调函数，参数为用户信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
 | 35000012 | AVMusicTemplate error. |
 
 ## playForSearch
@@ -982,7 +992,7 @@ Register report user info callback.
 playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperResult>
 ```
 
-Play for search.
+搜播，支持音视频，示例仅以音频为例。使用Promise异步回调。
 
 **Since:** 23
 
@@ -998,23 +1008,23 @@ Play for search.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | command |
-| args | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | args |
+| command | [SearchPlayInfoType](arkts-avsession-avmusictemplate-searchplayinfotype-e.md) | Yes |  |
+| args | [SearchPlayInfo](arkts-avsession-avmusictemplate-searchplayinfo-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| Promise&lt;OperResult&gt; | Promise对象，返回操作结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## playMediaEntity
 
@@ -1022,7 +1032,7 @@ Play for search.
 playMediaEntity(mediaEntity: MediaEntity): Promise<void>
 ```
 
-Play media entity.
+播放媒体。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1038,22 +1048,22 @@ Play media entity.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaEntity | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | media entity |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | 包含标题、作者等元数据的媒体实体对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryCompilation
 
@@ -1067,7 +1077,7 @@ ArkTS-Sta:
 queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity>
 ```
 
-Query compilation.
+查询合集。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1083,23 +1093,23 @@ Query compilation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compilationId | string | Yes | compilation id |
-| pageIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | page index |
+| compilationId | string | Yes | 合集的ID。 |
+| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 页索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise for the result |
+| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的合集的分页对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryCompilationByKeyword
 
@@ -1107,7 +1117,7 @@ Query compilation.
 queryCompilationByKeyword(keyword: string): Promise<Compilation[]>
 ```
 
-Query compilation by keyword.
+按关键字查询合集。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1123,22 +1133,22 @@ Query compilation by keyword.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyword | string | Yes | keyword |
+| keyword | string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Compilation[]&gt; | Promise for the result |
+| Promise&lt;Compilation[]&gt; | Promise对象，返回合集数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryCurrentSingle
 
@@ -1146,7 +1156,7 @@ Query compilation by keyword.
 queryCurrentSingle(): Promise<Single>
 ```
 
-Query current single.
+查询当前单曲。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1162,16 +1172,16 @@ Query current single.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Single&gt; | Promise for the result |
+| Promise&lt;Single&gt; | Promise对象，返回当前单曲。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryCustomContent
 
@@ -1179,7 +1189,7 @@ Query current single.
 queryCustomContent(queryType: CustomType[]): Promise<CustomElement>
 ```
 
-Query custom content.
+查询自定义内容。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1195,22 +1205,22 @@ Query custom content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryType | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | query type |
+| queryType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md)[] | Yes | 自定义类型数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CustomElement&gt; | Promise for the result |
+| Promise&lt;CustomElement&gt; | Promise对象，返回查询的自定义元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryHotWords
 
@@ -1218,7 +1228,7 @@ Query custom content.
 queryHotWords(): Promise<string[]>
 ```
 
-Query hot words.
+查询热词。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1234,16 +1244,16 @@ Query hot words.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise for the result |
+| Promise&lt;string[]&gt; | Promise对象，返回热词数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryMainTabs
 
@@ -1251,7 +1261,7 @@ Query hot words.
 queryMainTabs(): Promise<MediaTab[]>
 ```
 
-Query main tabs.
+查询主标签。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1267,16 +1277,16 @@ Query main tabs.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaTab[]&gt; | Promise for the result |
+| Promise&lt;MediaTab[]&gt; | Promise对象，返回查询的主标签页数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryMediaEntity
 
@@ -1284,7 +1294,7 @@ Query main tabs.
 queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>
 ```
 
-Query media entity.
+查询媒体实体。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1300,22 +1310,22 @@ Query media entity.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | query params |
+| params | [QueryMediaEntityParam](arkts-avsession-avmusictemplate-querymediaentityparam-i.md) | Yes | 查询媒体实体参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise for the result |
+| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的媒体实体分页对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryMediaEntityByKeyword
 
@@ -1329,7 +1339,7 @@ ArkTS-Sta:
 queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: int): Promise<PageMediaEntity>
 ```
 
-Query media entity by keyword.
+按关键字查询媒体实体。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1345,24 +1355,24 @@ Query media entity by keyword.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyword | string | Yes | keyword |
-| searchType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | search type |
-| pageIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | page index |
+| keyword | string | Yes |  |
+| searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Yes | 媒体资源类型。 |
+| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 页索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise for the result |
+| Promise&lt;PageMediaEntity&gt; | Promise对象，返回与该关键字相关的媒体实体分页对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryMediaTabContent
 
@@ -1370,7 +1380,7 @@ Query media entity by keyword.
 queryMediaTabContent(tabId: string): Promise<MediaTabContent>
 ```
 
-Query media tab content.
+查询媒体标签内容。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1386,22 +1396,22 @@ Query media tab content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabId | string | Yes | tab id |
+| tabId | string | Yes | 标签页ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaTabContent&gt; | Promise for the result |
+| Promise&lt;MediaTabContent&gt; | Promise对象，返回媒体标签页内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryMemberPurchase
 
@@ -1409,7 +1419,7 @@ Query media tab content.
 queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurchaseInfo[]>
 ```
 
-Query member purchase.
+查询购买会员的情况。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1425,22 +1435,22 @@ Query member purchase.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| memberPurchaseType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | memberPurchase type |
+| memberPurchaseType | [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md) | Yes | 会员购买类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MemberPurchaseInfo[]&gt; | Promise for the result |
+| Promise&lt;MemberPurchaseInfo[]&gt; | Promise对象，返回购买会员信息的数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryPlaylist
 
@@ -1454,7 +1464,7 @@ ArkTS-Sta:
 queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>
 ```
 
-Query playlist.
+查询播放列表。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1470,23 +1480,23 @@ Query playlist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | page index |
-| sort | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | sort type |
+| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 页索引。 |
+| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Yes | 查询到的播放列表数据的排序类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise for the result |
+| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的播放列表的分页对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## queryRecommendMediaEntityList
 
@@ -1494,7 +1504,7 @@ Query playlist.
 queryRecommendMediaEntityList(): Promise<MediaEntity[]>
 ```
 
-Query recommend media entity list.
+查询推荐的媒体实体列表。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1510,16 +1520,16 @@ Query recommend media entity list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaEntity[]&gt; | Promise for the result |
+| Promise&lt;MediaEntity[]&gt; | Promise对象，返回推荐的媒体实体数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## querySearchHistory
 
@@ -1527,7 +1537,7 @@ Query recommend media entity list.
 querySearchHistory(): Promise<string[]>
 ```
 
-Query search history.
+查询搜索历史。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1543,16 +1553,16 @@ Query search history.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise for the result |
+| Promise&lt;string[]&gt; | Promise对象，返回历史搜索词数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## reportProblemAndAdvice
 
@@ -1560,7 +1570,7 @@ Query search history.
 reportProblemAndAdvice(advice: string): Promise<OperResult>
 ```
 
-Report problem and advice.
+报告问题和建议。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1576,22 +1586,22 @@ Report problem and advice.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advice | string | Yes | advice |
+| advice | string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| Promise&lt;OperResult&gt; | Promise对象，返回报告问题和建议的操作结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## requestDialogInfo
 
@@ -1599,7 +1609,7 @@ Report problem and advice.
 requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): Promise<DialogInfo>
 ```
 
-Request dialog info.
+请求对话框信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1615,62 +1625,23 @@ Request dialog info.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | action type |
-| actionInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | action info |
+| actionType | [DialogActionType](arkts-avsession-avmusictemplate-dialogactiontype-t.md) | Yes | 对话框操作类型。 |
+| actionInfo | [DialogActionInfo](arkts-avsession-avmusictemplate-dialogactioninfo-i.md) | No | 对话框操作的信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | Promise for the result |
+| Promise&lt;DialogInfo&gt; | Promise对象，返回对话框信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
-
-## sendCustomCommand
-
-```TypeScript
-sendCustomCommand(command: string, args: string): Promise<OperResult>
-```
-
-Send custom commands to AVMusicTemplate
-
-**Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVMusicTemplateController-sendCustomCommand(command: string, args: string): Promise<OperResult>--><!--Device-AVMusicTemplateController-sendCustomCommand(command: string, args: string): Promise<OperResult>-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| command | string | Yes | The command name to be sent. |
-| args | string | Yes | The parameters of command event. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;OperResult&gt; | Promise used to return OperResult. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## updateSettings
 
@@ -1678,7 +1649,7 @@ Send custom commands to AVMusicTemplate
 updateSettings(settingItem: SettingItem): Promise<SettingItem>
 ```
 
-Report settings change.
+更新设置信息。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1694,22 +1665,22 @@ Report settings change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settingItem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | setting item |
+| settingItem | [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md) | Yes | 待更新的设置项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SettingItem&gt; | Promise for the result |
+| Promise&lt;SettingItem&gt; | Promise对象，返回更新后的设置项。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+| 35000006 | AVMusicTemplateController does not exist. |
+| 801 | capability not supported. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000003 | Template listener not registered. |
 
 ## isDestroy
 
@@ -1717,7 +1688,7 @@ Report settings change.
 isDestroy: boolean
 ```
 
-Mark the controller is or not destroy.
+音频模板控制器是否销毁。true表示已经销毁，false表示没有销毁。无默认值。
 
 **Type:** boolean
 
@@ -1737,7 +1708,7 @@ Mark the controller is or not destroy.
 sessionId: string
 ```
 
-Unique id of the AVMusicTemplateController.
+音频模板控制器唯一的标识。
 
 **Type:** string
 

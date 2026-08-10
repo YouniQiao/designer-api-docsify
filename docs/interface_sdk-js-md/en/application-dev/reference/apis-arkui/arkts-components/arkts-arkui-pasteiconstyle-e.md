@@ -1,6 +1,6 @@
 # PasteIconStyle
 
-Enumerates icon styles of the **PasteButton** component.
+粘贴控件的图标风格。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates icon styles of the **PasteButton** component.
 LINES = 0
 ```
 
-Line style icon.
+粘贴控件展示线条样式图标。
 
 **Since:** 10
 

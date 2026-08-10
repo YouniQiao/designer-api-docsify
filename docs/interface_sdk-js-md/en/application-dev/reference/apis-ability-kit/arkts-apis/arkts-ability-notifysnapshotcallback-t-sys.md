@@ -4,7 +4,7 @@
 type NotifySnapshotCallback = (deviceId: string, mission: int) => void
 ```
 
-Callback function on snapshot changed.
+快照更改时的回调函数。
 
 **Since:** 9
 
@@ -22,6 +22,6 @@ Callback function on snapshot changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Indicates the deviceId snapshot changed.  |
-| mission | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the id of mission.  |
+| deviceId | string | Yes | Indicates the deviceId snapshot changed. |
+| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the id of mission. |
 

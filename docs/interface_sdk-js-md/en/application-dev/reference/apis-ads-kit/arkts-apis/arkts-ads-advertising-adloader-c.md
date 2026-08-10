@@ -1,6 +1,6 @@
 # AdLoader
 
-Provides the APIs for loading ads.
+提供加载广告的功能。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Provides the APIs for loading ads.
 
 **System capability:** SystemCapability.Advertising.Ads
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(context: common.Context)
 ```
 
-Constructor.
+构造函数。
 
 **Since:** 11
 
@@ -32,9 +38,9 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context of the ability or application. |
+| context | common.Context | Yes | ability或application的上下文环境。 |
 
-**Example**
+## Examples
 
 For details about how to obtain the context, see [Acquisition of Various Contexts](../../application-models/application-context-stage.md#acquisition-of-context).
 
@@ -54,7 +60,7 @@ function createAdLoader(context: common.Context): void {
 loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void
 ```
 
-Loads an ad.
+请求单广告位广告。
 
 **Since:** 11
 
@@ -70,20 +76,20 @@ Loads an ad.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ad request parameters. |
-| adOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ad configuration parameters. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback listener for ad requests. |
+| adParam | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md) | Yes | 广告请求参数。 |
+| adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes | 广告配置参数。 |
+| listener | [AdLoadListener](arkts-ads-advertising-adloadlistener-i.md) | Yes | 请求广告回调监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| 801 | Device not supported.<br>**Applicable version:** 12 and later |
+| 21800001 | System internal error. |
+| 21800003 | Failed to load the ad request. |
 
-**Example**
+## Examples
 
 For details about how to obtain the context, see [Acquisition of Various Contexts](../../application-models/application-context-stage.md#acquisition-of-context).
 
@@ -120,7 +126,7 @@ function loadAd(context: common.Context, adRequestParams: advertising.AdRequestP
 loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void
 ```
 
-Loads multiple ads.
+请求多广告位广告。
 
 **Since:** 11
 
@@ -136,20 +142,20 @@ Loads multiple ads.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParams | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Ad request parameters. |
-| adOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ad configuration parameters. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback listener for ad requests. |
+| adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | Yes | 广告请求参数。 |
+| adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes | 广告配置参数。 |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes | 请求广告回调监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| 801 | Device not supported.<br>**Applicable version:** 12 and later |
+| 21800001 | System internal error. |
+| 21800003 | Failed to load the ad request. |
 
-**Example**
+## Examples
 
 For details about how to obtain the context, see [Acquisition of Context](../../application-models/application-context-stage.md#acquisition-of-context).
 

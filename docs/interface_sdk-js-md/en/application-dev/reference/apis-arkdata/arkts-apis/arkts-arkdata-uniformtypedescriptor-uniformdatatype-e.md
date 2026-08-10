@@ -1,8 +1,8 @@
 # UniformDataType
 
-Enumerates the uniform data types. Some data types are related. For example, the JPEG type belongs to the IMAGE type. For more preset data types, see [Preset UTD List].
+标准化数据类型之间存在归属关系，例如JPEG图片类型归属于IMAGE类型。更多预置数据类型参考[UTD预置列表](../../../database/uniform-data-type-list.md)。
 
-The following table lists the common uniform data types.
+下表以枚举形式，列举了常用的标准化数据类型定义。
 
 **Since:** 10
 
@@ -18,9 +18,7 @@ The following table lists the common uniform data types.
 ENTITY = 'general.entity'
 ```
 
-Generic physical storage type.
-
-This type is uncategorized.
+所有表示物理存储类型的基类型，无归属类型。
 
 **Since:** 11
 
@@ -38,9 +36,7 @@ This type is uncategorized.
 OBJECT = 'general.object'
 ```
 
-Generic logical content type.
-
-This type is uncategorized.
+所有表示逻辑内容类型的基类型，无归属类型。
 
 **Since:** 11
 
@@ -58,9 +54,7 @@ This type is uncategorized.
 COMPOSITE_OBJECT = 'general.composite-object'
 ```
 
-Generic composite content type. For example, a PDF file that contains text and image.
-
-This type belongs to **OBJECT**.
+所有组合内容类型（例如PDF文件类型混合了文本和图片类数据）的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -78,9 +72,7 @@ This type belongs to **OBJECT**.
 TEXT = 'general.text'
 ```
 
-Generic text type.
-
-This type belongs to **OBJECT**.
+所有文本的基类型，归属类型为OBJECT。
 
 **Since:** 10
 
@@ -100,9 +92,7 @@ This type belongs to **OBJECT**.
 PLAIN_TEXT = 'general.plain-text'
 ```
 
-Text without specific encoding or identifier.
-
-This type belongs to **TEXT**.
+未指定编码的文本类型，没有标识符，归属类型为TEXT。
 
 **Since:** 10
 
@@ -122,9 +112,7 @@ This type belongs to **TEXT**.
 HTML = 'general.html'
 ```
 
-HTML.
-
-This type belongs to **TEXT**.
+HTML文本类型，归属类型为TEXT。
 
 **Since:** 10
 
@@ -144,9 +132,7 @@ This type belongs to **TEXT**.
 HYPERLINK = 'general.hyperlink'
 ```
 
-Hyperlink.
-
-This type belongs to **TEXT**.
+超链接类型，归属类型为TEXT。
 
 **Since:** 10
 
@@ -166,9 +152,7 @@ This type belongs to **TEXT**.
 XML = 'general.xml'
 ```
 
-XML.
-
-This type belongs to **TEXT**.
+XML文本类型，归属类型为TEXT。
 
 **Since:** 11
 
@@ -186,9 +170,7 @@ This type belongs to **TEXT**.
 XHTML = 'general.xhtml'
 ```
 
-XHTML.
-
-This type belongs to **XML**.
+XHTML文本类型，归属类型为XML。
 
 **Since:** 12
 
@@ -206,9 +188,7 @@ This type belongs to **XML**.
 RSS = 'general.rss'
 ```
 
-RSS.
-
-This type belongs to **XML**.
+RSS文本类型，归属类型为XML。
 
 **Since:** 12
 
@@ -226,9 +206,7 @@ This type belongs to **XML**.
 SMIL = 'com.real.smil'
 ```
 
-Synchronized Multimedia Integration Language (SMIL).
-
-This type belongs to **XML**.
+同步多媒体集成语言类型，归属类型为XML。
 
 **Since:** 12
 
@@ -246,9 +224,7 @@ This type belongs to **XML**.
 SOURCE_CODE = 'general.source-code'
 ```
 
-Generic source code type.
-
-This type belongs to **TEXT**.
+所有源代码的基类型，归属类型为TEXT。
 
 **Since:** 11
 
@@ -266,9 +242,7 @@ This type belongs to **TEXT**.
 SCRIPT = 'general.script'
 ```
 
-Source code in any scripting language.
-
-This type belongs to **SOURCE\_CODE**.
+所有脚本语言源代码的基类型，归属类型为SOURCE_CODE。
 
 **Since:** 11
 
@@ -286,9 +260,7 @@ This type belongs to **SOURCE\_CODE**.
 SHELL_SCRIPT = 'general.shell-script'
 ```
 
-Shell script.
-
-This type belongs to **SCRIPT**.
+shell脚本类型，归属类型为SCRIPT。
 
 **Since:** 11
 
@@ -306,9 +278,7 @@ This type belongs to **SCRIPT**.
 CSH_SCRIPT = 'general.csh-script'
 ```
 
-C shell script.
-
-This type belongs to **SHELL\_SCRIPT**.
+C-shell脚本类型，归属类型为SHELL_SCRIPT。
 
 **Since:** 11
 
@@ -326,9 +296,7 @@ This type belongs to **SHELL\_SCRIPT**.
 PERL_SCRIPT = 'general.perl-script'
 ```
 
-Perl script.
-
-This type belongs to **SHELL\_SCRIPT**.
+Perl脚本类型，归属类型为SHELL_SCRIPT。
 
 **Since:** 11
 
@@ -346,9 +314,7 @@ This type belongs to **SHELL\_SCRIPT**.
 PHP_SCRIPT = 'general.php-script'
 ```
 
-PHP script.
-
-This type belongs to **SHELL\_SCRIPT**.
+PHP脚本类型，归属类型为SHELL_SCRIPT。
 
 **Since:** 11
 
@@ -366,9 +332,7 @@ This type belongs to **SHELL\_SCRIPT**.
 PYTHON_SCRIPT = 'general.python-script'
 ```
 
-Python script.
-
-This type belongs to **SHELL\_SCRIPT**.
+Python脚本类型，归属类型为SHELL_SCRIPT。
 
 **Since:** 11
 
@@ -386,9 +350,7 @@ This type belongs to **SHELL\_SCRIPT**.
 RUBY_SCRIPT = 'general.ruby-script'
 ```
 
-Ruby script.
-
-This type belongs to **SHELL\_SCRIPT**.
+Ruby脚本类型，归属类型为SHELL_SCRIPT。
 
 **Since:** 11
 
@@ -406,9 +368,7 @@ This type belongs to **SHELL\_SCRIPT**.
 TYPE_SCRIPT = 'general.type-script'
 ```
 
-TypeScript source code.
-
-This type belongs to **SOURCE\_CODE**.
+TypeScript源代码类型，归属类型为SOURCE_CODE。
 
 **Since:** 11
 
@@ -426,9 +386,7 @@ This type belongs to **SOURCE\_CODE**.
 JAVA_SCRIPT = 'general.java-script'
 ```
 
-JavaScript source code.
-
-This type belongs to **SOURCE\_CODE**.
+JavaScript源代码类型，归属类型为SOURCE_CODE。
 
 **Since:** 11
 
@@ -446,9 +404,7 @@ This type belongs to **SOURCE\_CODE**.
 CSS = 'general.css'
 ```
 
-CSS.
-
-This type belongs to **SCRIPT**.
+CSS样式表类型，归属类型为SCRIPT。
 
 **Since:** 12
 
@@ -466,9 +422,7 @@ This type belongs to **SCRIPT**.
 C_HEADER = 'general.c-header'
 ```
 
-Header file in C.
-
-This type belongs to **SOURCE\_CODE**.
+C头文件类型，归属类型为SOURCE_CODE。
 
 **Since:** 11
 
@@ -486,9 +440,7 @@ This type belongs to **SOURCE\_CODE**.
 C_SOURCE = 'general.c-source'
 ```
 
-Source code in C.
-
-This type belongs to **SOURCE\_CODE**.
+C源代码类型，归属类型为SOURCE_CODE。
 
 **Since:** 11
 
@@ -506,9 +458,7 @@ This type belongs to **SOURCE\_CODE**.
 C_PLUS_PLUS_HEADER = 'general.c-plus-plus-header'
 ```
 
-Header file in C++.
-
-This type belongs to **SOURCE\_CODE**.
+C++头文件类型，归属类型为SOURCE_CODE。
 
 **Since:** 11
 
@@ -526,9 +476,7 @@ This type belongs to **SOURCE\_CODE**.
 C_PLUS_PLUS_SOURCE = 'general.c-plus-plus-source'
 ```
 
-Source code in C++.
-
-This type belongs to **SOURCE\_CODE**.
+C++源代码类型，归属类型为SOURCE_CODE。
 
 **Since:** 11
 
@@ -546,9 +494,7 @@ This type belongs to **SOURCE\_CODE**.
 JAVA_SOURCE = 'general.java-source'
 ```
 
-Source code in Java.
-
-This type belongs to **SOURCE\_CODE**.
+Java源代码类型，归属类型为SOURCE_CODE。
 
 **Since:** 11
 
@@ -566,9 +512,7 @@ This type belongs to **SOURCE\_CODE**.
 TEX = 'general.tex'
 ```
 
-Source code in TEX format.
-
-This type belongs to **SOURCE\_CODE**.
+TEX源代码类型，归属类型为SOURCE_CODE。
 
 **Since:** 12
 
@@ -586,9 +530,7 @@ This type belongs to **SOURCE\_CODE**.
 MARKDOWN = 'general.markdown'
 ```
 
-Markdown.
-
-This type belongs to **TEXT**.
+标记语言文本类型，归属类型为TEXT。
 
 **Since:** 12
 
@@ -606,9 +548,7 @@ This type belongs to **TEXT**.
 ASC_TEXT = 'general.asc-text'
 ```
 
-ASCII.
-
-This type belongs to **TEXT**.
+ASCII文本类型，归属类型为TEXT。
 
 **Since:** 12
 
@@ -626,9 +566,7 @@ This type belongs to **TEXT**.
 RICH_TEXT = 'general.rich-text'
 ```
 
-Rich text.
-
-This type belongs to **TEXT**.
+富文本类型，归属类型为TEXT。
 
 **Since:** 12
 
@@ -646,9 +584,7 @@ This type belongs to **TEXT**.
 DELIMITED_VALUES_TEXT = 'general.delimited-values-text'
 ```
 
-Generic type of all delimited value texts.
-
-This type belongs to **TEXT**.
+所有分隔值文本的基类型，归属类型为TEXT。
 
 **Since:** 12
 
@@ -666,9 +602,7 @@ This type belongs to **TEXT**.
 COMMA_SEPARATED_VALUES_TEXT = 'general.comma-separated-values-text'
 ```
 
-Comma-separated values (CSV).
-
-This type belongs to **DELIMITED\_VALUES\_TEXT**.
+CSV文本类型，归属类型为DELIMITED_VALUES_TEXT。
 
 **Since:** 12
 
@@ -686,9 +620,7 @@ This type belongs to **DELIMITED\_VALUES\_TEXT**.
 TAB_SEPARATED_VALUES_TEXT = 'general.tab-separated-values-text'
 ```
 
-Tab-separated values (TSV).
-
-This type belongs to **DELIMITED\_VALUES\_TEXT**.
+TSV文本类型，归属类型为DELIMITED_VALUES_TEXT。
 
 **Since:** 12
 
@@ -706,9 +638,7 @@ This type belongs to **DELIMITED\_VALUES\_TEXT**.
 EBOOK = 'general.ebook'
 ```
 
-Generic eBook file format type.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+所有电子书文件格式的基类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 11
 
@@ -726,9 +656,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 EPUB = 'general.epub'
 ```
 
-Electronic publication (EPUB).
-
-This type belongs to **EBOOK**.
+电子出版物（EPUB）文件格式类型，归属类型为EBOOK。
 
 **Since:** 11
 
@@ -746,9 +674,7 @@ This type belongs to **EBOOK**.
 AZW = 'com.amazon.azw'
 ```
 
-AZW.
-
-This type belongs to **EBOOK**.
+AZW电子书文件格式类型，归属类型为EBOOK。
 
 **Since:** 11
 
@@ -766,9 +692,7 @@ This type belongs to **EBOOK**.
 AZW3 = 'com.amazon.azw3'
 ```
 
-AZW3.
-
-This type belongs to **EBOOK**.
+AZW3电子书文件格式类型，归属类型为EBOOK。
 
 **Since:** 11
 
@@ -786,9 +710,7 @@ This type belongs to **EBOOK**.
 KFX = 'com.amazon.kfx'
 ```
 
-KFX.
-
-This type belongs to **EBOOK**.
+KFX电子书文件格式类型，归属类型为EBOOK。
 
 **Since:** 11
 
@@ -806,9 +728,7 @@ This type belongs to **EBOOK**.
 MOBI = 'com.amazon.mobi'
 ```
 
-MOBI.
-
-This type belongs to **EBOOK**.
+MOBI电子书文件格式类型，归属类型为EBOOK。
 
 **Since:** 11
 
@@ -826,9 +746,7 @@ This type belongs to **EBOOK**.
 MEDIA = 'general.media'
 ```
 
-Generic media type.
-
-This type belongs to **OBJECT**.
+所有媒体的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -846,9 +764,7 @@ This type belongs to **OBJECT**.
 IMAGE = 'general.image'
 ```
 
-Image.
-
-This type belongs to **MEDIA**.
+所有图片的基类型，归属类型为MEDIA。
 
 **Since:** 10
 
@@ -868,9 +784,7 @@ This type belongs to **MEDIA**.
 JPEG = 'general.jpeg'
 ```
 
-JPEG.
-
-This type belongs to **IMAGE**.
+JPEG图片类型，归属类型为IMAGE。
 
 **Since:** 11
 
@@ -888,9 +802,7 @@ This type belongs to **IMAGE**.
 PNG = 'general.png'
 ```
 
-PNG.
-
-This type belongs to **IMAGE**.
+PNG图片类型，归属类型为IMAGE。
 
 **Since:** 11
 
@@ -908,9 +820,7 @@ This type belongs to **IMAGE**.
 RAW_IMAGE = 'general.raw-image'
 ```
 
-Raw image.
-
-This type belongs to **IMAGE**.
+所有原始图像格式的基类型，归属类型为IMAGE。
 
 **Since:** 11
 
@@ -928,9 +838,7 @@ This type belongs to **IMAGE**.
 TIFF = 'general.tiff'
 ```
 
-TIFF.
-
-This type belongs to **IMAGE**.
+TIFF图片类型，归属类型为IMAGE。
 
 **Since:** 11
 
@@ -948,9 +856,7 @@ This type belongs to **IMAGE**.
 BMP = 'com.microsoft.bmp'
 ```
 
-BMP.
-
-This type belongs to **IMAGE**.
+WINDOWS位图图像类型，归属类型为IMAGE。
 
 **Since:** 11
 
@@ -968,9 +874,7 @@ This type belongs to **IMAGE**.
 ICO = 'com.microsoft.ico'
 ```
 
-Windows icon.
-
-This type belongs to **IMAGE**.
+WINDOWS图标图像类型，归属类型为IMAGE。
 
 **Since:** 11
 
@@ -988,9 +892,7 @@ This type belongs to **IMAGE**.
 PHOTOSHOP_IMAGE = 'com.adobe.photoshop-image'
 ```
 
-Adobe Photoshop image.
-
-This type belongs to **IMAGE**.
+Adobe Photoshop图片类型，归属类型为IMAGE。
 
 **Since:** 11
 
@@ -1008,9 +910,7 @@ This type belongs to **IMAGE**.
 AI_IMAGE = 'com.adobe.illustrator.ai-image'
 ```
 
-Adobe Illustrator image (.ai).
-
-This type belongs to **IMAGE**.
+Adobe Illustrator图片类型，归属类型为IMAGE。
 
 **Since:** 11
 
@@ -1028,9 +928,7 @@ This type belongs to **IMAGE**.
 FAX = 'general.fax'
 ```
 
-Generic type of the fax.
-
-This type belongs to **IMAGE**.
+传真图像的基本类型，归属类型为IMAGE。
 
 **Since:** 12
 
@@ -1048,9 +946,7 @@ This type belongs to **IMAGE**.
 JFX_FAX = 'com.j2.jfx-fax'
 ```
 
-J2 jConnect fax file format.
-
-This type belongs to **FAX**.
+J2 jConnect传真文件类型，归属类型为FAX。
 
 **Since:** 12
 
@@ -1068,9 +964,7 @@ This type belongs to **FAX**.
 EFX_FAX = 'com.js.efx-fax'
 ```
 
-EFX file format.
-
-This type belongs to **FAX**.
+电子传真文件类型，归属类型为FAX。
 
 **Since:** 12
 
@@ -1088,9 +982,7 @@ This type belongs to **FAX**.
 XBITMAP_IMAGE = 'general.xbitmap-image'
 ```
 
-X BitMAP (XBM) used in the X Window system (X11).
-
-This type belongs to **IMAGE**.
+X Window系统（X11）中使用的位图图像格式，归属类型为IMAGE。
 
 **Since:** 12
 
@@ -1108,9 +1000,7 @@ This type belongs to **IMAGE**.
 GIF = 'general.gif'
 ```
 
-GIF.
-
-This type belongs to **IMAGE**.
+GIF图像类型，归属类型为IMAGE。
 
 **Since:** 12
 
@@ -1128,9 +1018,7 @@ This type belongs to **IMAGE**.
 TGA_IMAGE = 'com.truevision.tga-image'
 ```
 
-Tagged Graphics (TGA) format.
-
-This type belongs to **IMAGE**.
+标签图形（TaggedGraphics）图像类型，归属类型为IMAGE。
 
 **Since:** 12
 
@@ -1148,9 +1036,7 @@ This type belongs to **IMAGE**.
 SGI_IMAGE = 'com.sgi.sgi-image'
 ```
 
-Silicon Graphics image (SGI) format.
-
-This type belongs to **IMAGE**.
+硅图（Silicon Graphics）图像类型，归属类型为IMAGE。
 
 **Since:** 12
 
@@ -1168,9 +1054,7 @@ This type belongs to **IMAGE**.
 OPENEXR_IMAGE = 'com.ilm.openexr-image'
 ```
 
-OpenXR image format.
-
-This type belongs to **IMAGE**.
+开放标准的高动态范围图像格式类型，归属类型为IMAGE。
 
 **Since:** 12
 
@@ -1188,9 +1072,7 @@ This type belongs to **IMAGE**.
 FLASHPIX_IMAGE = 'com.kodak.flashpix.image'
 ```
 
-FlashPix image format.
-
-This type belongs to **IMAGE**.
+FlashPix 图像文件类型，归属类型为IMAGE。
 
 **Since:** 12
 
@@ -1208,9 +1090,7 @@ This type belongs to **IMAGE**.
 WORD_DOC = 'com.microsoft.word.doc'
 ```
 
-Microsoft Word.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+Microsoft Word数据类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 11
 
@@ -1228,9 +1108,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 EXCEL = 'com.microsoft.excel.xls'
 ```
 
-Microsoft Excel.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+Microsoft Excel数据类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 11
 
@@ -1248,9 +1126,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 PPT = 'com.microsoft.powerpoint.ppt'
 ```
 
-Microsoft PowerPoint presentation format.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+Microsoft PowerPoint演示文稿类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 11
 
@@ -1268,9 +1144,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 WORD_DOT = 'com.microsoft.word.dot'
 ```
 
-Microsoft Word template.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+Microsoft Word模板类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -1288,9 +1162,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 POWERPOINT_PPS = 'com.microsoft.powerpoint.pps'
 ```
 
-Microsoft PowerPoint slide show format.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+Microsoft PowerPoint演示文稿幻灯片放映类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -1308,9 +1180,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 POWERPOINT_POT = 'com.microsoft.powerpoint.pot'
 ```
 
-Microsoft PowerPoint template.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+Microsoft PowerPoint演示文稿模板类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -1328,9 +1198,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 EXCEL_XLT = 'com.microsoft.excel.xlt'
 ```
 
-Microsoft Excel template.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+Microsoft Excel模板类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -1348,9 +1216,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 VISIO_VSD = 'com.microsoft.visio.vsd'
 ```
 
-Microsoft Visio.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+Microsoft Visio数据类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -1368,9 +1234,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 PDF = 'com.adobe.pdf'
 ```
 
-PDF.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+PDF数据类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 11
 
@@ -1388,9 +1252,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 POSTSCRIPT = 'com.adobe.postscript'
 ```
 
-PostScript.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+PostScript数据类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 11
 
@@ -1408,9 +1270,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 ENCAPSULATED_POSTSCRIPT = 'com.adobe.encapsulated-postscript'
 ```
 
-Encapsulated PostScript.
-
-This type belongs to **POSTSCRIPT**.
+Encapsulated PostScript类型，归属类型为POSTSCRIPT。
 
 **Since:** 11
 
@@ -1428,9 +1288,7 @@ This type belongs to **POSTSCRIPT**.
 VIDEO = 'general.video'
 ```
 
-Generic video type.
-
-This type belongs to **MEDIA**.
+所有视频的基类型，归属类型为MEDIA。
 
 **Since:** 10
 
@@ -1450,9 +1308,7 @@ This type belongs to **MEDIA**.
 AVI = 'general.avi'
 ```
 
-AVI.
-
-This type belongs to **VIDEO**.
+AVI视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1470,9 +1326,7 @@ This type belongs to **VIDEO**.
 MPEG = 'general.mpeg'
 ```
 
-MPEG-1 or MPEG-2.
-
-This type belongs to **VIDEO**.
+MPEG-1或MPEG-2视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1490,9 +1344,7 @@ This type belongs to **VIDEO**.
 MPEG4 = 'general.mpeg-4'
 ```
 
-MPEG-4.
-
-This type belongs to **VIDEO**.
+MPEG-4视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1510,9 +1362,7 @@ This type belongs to **VIDEO**.
 VIDEO_3GPP = 'general.3gpp'
 ```
 
-3GP (3GPP file format).
-
-This type belongs to **VIDEO**.
+3GPP视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1530,9 +1380,7 @@ This type belongs to **VIDEO**.
 VIDEO_3GPP2 = 'general.3gpp2'
 ```
 
-3G2 (3GPP2 file format).
-
-This type belongs to **VIDEO**.
+3GPP2视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1550,9 +1398,7 @@ This type belongs to **VIDEO**.
 TS = 'general.ts'
 ```
 
-MPEG-TS.
-
-This type belongs to **VIDEO**.
+MPEG-TS类型，归属类型为VIDEO。
 
 **Since:** 12
 
@@ -1570,9 +1416,7 @@ This type belongs to **VIDEO**.
 MPEGURL_VIDEO = 'general.mpegurl-video'
 ```
 
-MPEG video playlist format.
-
-This type belongs to **VIDEO**.
+MPEG视频播放列表文件类型，归属类型为VIDEO。
 
 **Since:** 12
 
@@ -1590,9 +1434,7 @@ This type belongs to **VIDEO**.
 WINDOWS_MEDIA_WM = 'com.microsoft.windows-media-wm'
 ```
 
-Windows WM format.
-
-This type belongs to **VIDEO**.
+WINDOWS WM视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1610,9 +1452,7 @@ This type belongs to **VIDEO**.
 WINDOWS_MEDIA_WMV = 'com.microsoft.windows-media-wmv'
 ```
 
-Windows WMV format.
-
-This type belongs to **VIDEO**.
+WINDOWS WMV视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1630,9 +1470,7 @@ This type belongs to **VIDEO**.
 WINDOWS_MEDIA_WMP = 'com.microsoft.windows-media-wmp'
 ```
 
-Windows WMP format.
-
-This type belongs to **VIDEO**.
+WINDOWS WMP视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1650,9 +1488,7 @@ This type belongs to **VIDEO**.
 WINDOWS_MEDIA_WVX = 'com.microsoft.windows-media-wvx'
 ```
 
-Windows WVX format.
-
-This type belongs to **VIDEO**.
+WINDOWS WVX视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1670,9 +1506,7 @@ This type belongs to **VIDEO**.
 WINDOWS_MEDIA_WMX = 'com.microsoft.windows-media-wmx'
 ```
 
-Windows WMX format.
-
-This type belongs to **VIDEO**.
+WINDOWS WMX视频类型，归属类型为VIDEO。
 
 **Since:** 11
 
@@ -1690,9 +1524,7 @@ This type belongs to **VIDEO**.
 REALMEDIA = 'com.real.realmedia'
 ```
 
-RealMedia format.
-
-This type belongs to **VIDEO**.
+流媒体视频类型，归属类型为VIDEO。
 
 **Since:** 12
 
@@ -1710,9 +1542,7 @@ This type belongs to **VIDEO**.
 MATROSKA_VIDEO = 'org.matroska.mkv'
 ```
 
-MKV.
-
-This type belongs to **VIDEO**.
+MKV视频类型，归属类型为VIDEO。
 
 **Since:** 12
 
@@ -1730,9 +1560,7 @@ This type belongs to **VIDEO**.
 FLASH = 'com.adobe.flash'
 ```
 
-Flash.
-
-This type belongs to **VIDEO**.
+FLASH视频类型，归属类型为VIDEO。
 
 **Since:** 12
 
@@ -1750,9 +1578,7 @@ This type belongs to **VIDEO**.
 AUDIO = 'general.audio'
 ```
 
-Generic audio type.
-
-This type belongs to **MEDIA**.
+所有音频的基类型，归属类型为MEDIA。
 
 **Since:** 10
 
@@ -1772,9 +1598,7 @@ This type belongs to **MEDIA**.
 AAC = 'general.aac'
 ```
 
-AAC.
-
-This type belongs to **AUDIO**.
+AAC音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1792,9 +1616,7 @@ This type belongs to **AUDIO**.
 AIFF = 'general.aiff'
 ```
 
-AIFF.
-
-This type belongs to **AUDIO**.
+AIFF音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1812,9 +1634,7 @@ This type belongs to **AUDIO**.
 ALAC = 'general.alac'
 ```
 
-ALAC.
-
-This type belongs to **AUDIO**.
+ALAC音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1832,9 +1652,7 @@ This type belongs to **AUDIO**.
 FLAC = 'general.flac'
 ```
 
-FLAC.
-
-This type belongs to **AUDIO**.
+FLAC音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1852,9 +1670,7 @@ This type belongs to **AUDIO**.
 MP3 = 'general.mp3'
 ```
 
-MP3.
-
-This type belongs to **AUDIO**.
+MP3音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1872,9 +1688,7 @@ This type belongs to **AUDIO**.
 OGG = 'general.ogg'
 ```
 
-OGG.
-
-This type belongs to **AUDIO**.
+OGG音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1892,9 +1706,7 @@ This type belongs to **AUDIO**.
 PCM = 'general.pcm'
 ```
 
-PCM.
-
-This type belongs to **AUDIO**.
+PCM音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1912,9 +1724,7 @@ This type belongs to **AUDIO**.
 WINDOWS_MEDIA_WMA = 'com.microsoft.windows-media-wma'
 ```
 
-Windows WMA.
-
-This type belongs to **AUDIO**.
+WINDOWS WMA音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1932,9 +1742,7 @@ This type belongs to **AUDIO**.
 WAVEFORM_AUDIO = 'com.microsoft.waveform-audio'
 ```
 
-Windows Waveform.
-
-This type belongs to **AUDIO**.
+WINDOWS波形音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1952,9 +1760,7 @@ This type belongs to **AUDIO**.
 WINDOWS_MEDIA_WAX = 'com.microsoft.windows-media-wax'
 ```
 
-Windows WAX.
-
-This type belongs to **AUDIO**.
+WINDOWS WAX音频类型，归属类型为AUDIO。
 
 **Since:** 11
 
@@ -1972,9 +1778,7 @@ This type belongs to **AUDIO**.
 AU_AUDIO = 'general.au-audio'
 ```
 
-AU format.
-
-This type belongs to **AUDIO**.
+Au数据格式，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -1992,9 +1796,7 @@ This type belongs to **AUDIO**.
 AIFC_AUDIO = 'general.aifc-audio'
 ```
 
-AIFC.
-
-This type belongs to **AUDIO**.
+音频交换数据类型，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2012,9 +1814,7 @@ This type belongs to **AUDIO**.
 MPEGURL_AUDIO = 'general.mpegurl-audio'
 ```
 
-MPEG audio playlist format.
-
-This type belongs to **AUDIO**.
+MPEG音频播放列表文件类型，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2032,9 +1832,7 @@ This type belongs to **AUDIO**.
 MPEG_4_AUDIO = 'general.mpeg-4-audio'
 ```
 
-MPEG-4.
-
-This type belongs to **AUDIO**.
+MPEG-4音频类型，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2052,9 +1850,7 @@ This type belongs to **AUDIO**.
 MP2 = 'general.mp2'
 ```
 
-MP2.
-
-This type belongs to **AUDIO**.
+MP2音频类型，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2072,9 +1868,7 @@ This type belongs to **AUDIO**.
 MPEG_AUDIO = 'general.mpeg-audio'
 ```
 
-MPEG audio format.
-
-This type belongs to **AUDIO**.
+MPEG音频类型，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2092,9 +1886,7 @@ This type belongs to **AUDIO**.
 ULAW_AUDIO = 'general.ulaw-audio'
 ```
 
-ULAW.
-
-This type belongs to **AUDIO**.
+ULAW音频类型，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2112,9 +1904,7 @@ This type belongs to **AUDIO**.
 SD2_AUDIO = 'com.digidesign.sd2-audio'
 ```
 
-Digidesign Sound Designer II (SDII).
-
-This type belongs to **AUDIO**.
+单声道/立体声音频类型（Digidesign Sound Designer II），归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2132,9 +1922,7 @@ This type belongs to **AUDIO**.
 REALAUDIO = 'com.real.realaudio'
 ```
 
-RealAudio.
-
-This type belongs to **AUDIO**.
+RealMedia音频类型，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2152,9 +1940,7 @@ This type belongs to **AUDIO**.
 MATROSKA_AUDIO = 'org.matroska.mka'
 ```
 
-MKA.
-
-This type belongs to **AUDIO**.
+MKA音频类型，归属类型为AUDIO。
 
 **Since:** 12
 
@@ -2172,9 +1958,7 @@ This type belongs to **AUDIO**.
 FILE = 'general.file'
 ```
 
-Generic file type.
-
-This type belongs to **ENTITY**.
+所有文件的基类型，归属类型为ENTITY。
 
 **Since:** 10
 
@@ -2194,9 +1978,7 @@ This type belongs to **ENTITY**.
 DIRECTORY = 'general.directory'
 ```
 
-Generic directory type.
-
-This type belongs to **ENTITY**.
+所有目录的基类型，归属类型为ENTITY。
 
 **Since:** 11
 
@@ -2214,9 +1996,7 @@ This type belongs to **ENTITY**.
 FOLDER = 'general.folder'
 ```
 
-Generic folder type.
-
-This type belongs to **DIRECTORY**.
+所有文件夹的基类型，归属类型为DIRECTORY。
 
 **Since:** 10
 
@@ -2236,9 +2016,7 @@ This type belongs to **DIRECTORY**.
 SYMLINK = 'general.symlink'
 ```
 
-Generic symbolic type.
-
-This type belongs to **ENTITY**.
+所有符号链接的基类型，归属类型为ENTITY。
 
 **Since:** 11
 
@@ -2256,9 +2034,7 @@ This type belongs to **ENTITY**.
 ARCHIVE = 'general.archive'
 ```
 
-Generic archive file type.
-
-This type belongs to **OBJECT**.
+所有文件和目录存档文件的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -2276,9 +2052,7 @@ This type belongs to **OBJECT**.
 BZ2_ARCHIVE = 'general.bz2-archive'
 ```
 
-BZ2.
-
-This type belongs to **ARCHIVE**.
+BZ2存档文件类型，归属类型为ARCHIVE。
 
 **Since:** 11
 
@@ -2296,9 +2070,7 @@ This type belongs to **ARCHIVE**.
 OPG = 'general.opg'
 ```
 
-OPG.
-
-This type belongs to **ARCHIVE**.
+OPG存档文件类型，归属类型为ARCHIVE。
 
 **Since:** 12
 
@@ -2316,9 +2088,7 @@ This type belongs to **ARCHIVE**.
 TAZ_ARCHIVE = 'general.taz-archive'
 ```
 
-TAR.
-
-This type belongs to **TAR\_ARCHIVE**.
+TAR压缩文件类型，归属类型为TAR_ARCHIVE。
 
 **Since:** 12
 
@@ -2336,9 +2106,7 @@ This type belongs to **TAR\_ARCHIVE**.
 WEB_ARCHIVE = 'general.web-archive'
 ```
 
-MHTML format for web page archiving.
-
-This type belongs to **ARCHIVE**.
+MHTML网页归档文件类型，归属类型为ARCHIVE。
 
 **Since:** 12
 
@@ -2356,9 +2124,7 @@ This type belongs to **ARCHIVE**.
 DISK_IMAGE = 'general.disk-image'
 ```
 
-Generic type of any file that can be mounted as a volume.
-
-This type belongs to **ARCHIVE**.
+所有可作为卷挂载项的文件类型的基类型，归属类型为ARCHIVE。
 
 **Since:** 11
 
@@ -2376,9 +2142,7 @@ This type belongs to **ARCHIVE**.
 ISO = 'general.iso'
 ```
 
-ISO image (optical disk image) format.
-
-This type belongs to **DISK\_IMAGE**.
+光盘映像文件类型，归属类型为DISK_IMAGE。
 
 **Since:** 12
 
@@ -2396,9 +2160,7 @@ This type belongs to **DISK\_IMAGE**.
 TAR_ARCHIVE = 'general.tar-archive'
 ```
 
-TAR.
-
-This type belongs to ARCHIVE.
+TAR存档文件类型，归属类型为ARCHIVE。
 
 **Since:** 11
 
@@ -2416,9 +2178,7 @@ This type belongs to ARCHIVE.
 ZIP_ARCHIVE = 'general.zip-archive'
 ```
 
-ZIP.
-
-This type belongs to **ARCHIVE**.
+ZIP存档文件类型，归属类型为ARCHIVE。
 
 **Since:** 11
 
@@ -2436,9 +2196,7 @@ This type belongs to **ARCHIVE**.
 JAVA_ARCHIVE = 'com.sun.java-archive'
 ```
 
-JAR (Java archive).
-
-This type belongs to **ARCHIVE** and **EXECUTABLE**.
+JAVA存档文件类型，归属类型为ARCHIVE和EXECUTABLE。
 
 **Since:** 11
 
@@ -2456,9 +2214,7 @@ This type belongs to **ARCHIVE** and **EXECUTABLE**.
 GNU_TAR_ARCHIVE = 'org.gnu.gnu-tar-archive'
 ```
 
-GNU.
-
-This type belongs to **ARCHIVE**.
+GNU存档文件类型，归属类型为ARCHIVE。
 
 **Since:** 11
 
@@ -2476,9 +2232,7 @@ This type belongs to **ARCHIVE**.
 GNU_ZIP_ARCHIVE = 'org.gnu.gnu-zip-archive'
 ```
 
-GZIP archive.
-
-This type belongs to **ARCHIVE**.
+GZIP存档文件类型，归属类型为ARCHIVE。
 
 **Since:** 11
 
@@ -2496,9 +2250,7 @@ This type belongs to **ARCHIVE**.
 GNU_ZIP_TAR_ARCHIVE = 'org.gnu.gnu-zip-tar-archive'
 ```
 
-GZIP TAR.
-
-This type belongs to **ARCHIVE**.
+GZIP TAR存档文件类型，归属类型为ARCHIVE。
 
 **Since:** 11
 
@@ -2516,9 +2268,7 @@ This type belongs to **ARCHIVE**.
 OPENXML = 'org.openxmlformats.openxml'
 ```
 
-OpenXML base type.
-
-This type belongs to **ARCHIVE**.
+开源XML基类型，归属类型为ARCHIVE。
 
 **Since:** 12
 
@@ -2536,9 +2286,7 @@ This type belongs to **ARCHIVE**.
 WORDPROCESSINGML_DOCUMENT = 'org.openxmlformats.wordprocessingml.document'
 ```
 
-WordProcessingML format.
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML文档类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2556,9 +2304,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 SPREADSHEETML_SHEET = 'org.openxmlformats.spreadsheetml.sheet'
 ```
 
-SpreadsheetML format.
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML电子表格类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2576,9 +2322,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 PRESENTATIONML_PRESENTATION = 'org.openxmlformats.presentationml.presentation'
 ```
 
-PresentationML format.
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML演示文稿类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2596,9 +2340,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 DRAWINGML_VISIO = 'org.openxmlformats.drawingml.visio'
 ```
 
-DrawingML file format of Office Open XML (OOXML).
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML绘图文件类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2616,9 +2358,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 DRAWINGML_TEMPLATE = 'org.openxmlformats.drawingml.template'
 ```
 
-DrawingML template format of OOXML.
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML绘图模板类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2636,9 +2376,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 WORDPROCESSINGML_TEMPLATE = 'org.openxmlformats.wordprocessingml.template'
 ```
 
-WordProcessingML template format of OOXML.
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML文档模板类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2656,9 +2394,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 PRESENTATIONML_TEMPLATE = 'org.openxmlformats.presentationml.template'
 ```
 
-PresentationML template format of OOXML.
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML演示文稿模板类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2676,9 +2412,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 PRESENTATIONML_SLIDESHOW = 'org.openxmlformats.presentationml.slideshow'
 ```
 
-PresentationML slide show format of OOXML.
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML演示文稿幻灯片放映类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2696,9 +2430,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 SPREADSHEETML_TEMPLATE = 'org.openxmlformats.spreadsheetml.template'
 ```
 
-SpreadsheetML template format of OOXML.
-
-This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
+开源XML电子表格模板类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2716,9 +2448,7 @@ This type belongs to **OPENXML** and **COMPOSITE\_OBJECT**.
 OPENDOCUMENT = 'org.oasis.opendocument'
 ```
 
-OpenDocument format for Office applications.
-
-This type belongs to **ARCHIVE**.
+Office应用程序的开源文档类型，归属类型为ARCHIVE。
 
 **Since:** 12
 
@@ -2736,9 +2466,7 @@ This type belongs to **ARCHIVE**.
 OPENDOCUMENT_TEXT = 'org.oasis.opendocument.text'
 ```
 
-OpenDocument format for word processing (text) documents.
-
-This type belongs to **OPENDOCUMENT** and **COMPOSITE\_OBJECT**.
+开源文档类型，归属类型为OPENDOCUMENT和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2756,9 +2484,7 @@ This type belongs to **OPENDOCUMENT** and **COMPOSITE\_OBJECT**.
 OPENDOCUMENT_SPREADSHEET = 'org.oasis.opendocument.spreadsheet'
 ```
 
-OpenDocument format for spreadsheets.
-
-This type belongs to **OPENDOCUMENT** and **COMPOSITE\_OBJECT**.
+开源文档电子表格类型，归属类型为OPENDOCUMENT和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2776,9 +2502,7 @@ This type belongs to **OPENDOCUMENT** and **COMPOSITE\_OBJECT**.
 OPENDOCUMENT_PRESENTATION = 'org.oasis.opendocument.presentation'
 ```
 
-OpenDocument format for presentations.
-
-This type belongs to **OPENDOCUMENT** and **COMPOSITE\_OBJECT**.
+开源文档演示类型，归属类型为OPENDOCUMENT和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2796,9 +2520,7 @@ This type belongs to **OPENDOCUMENT** and **COMPOSITE\_OBJECT**.
 OPENDOCUMENT_GRAPHICS = 'org.oasis.opendocument.graphics'
 ```
 
-OpenDocument format for graphics.
-
-This type belongs to **OPENDOCUMENT** and **COMPOSITE\_OBJECT**.
+开源文档图形类型，归属类型为OPENDOCUMENT和COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -2816,9 +2538,7 @@ This type belongs to **OPENDOCUMENT** and **COMPOSITE\_OBJECT**.
 OPENDOCUMENT_FORMULA = 'org.oasis.opendocument.formula'
 ```
 
-OpenDocument format for formula.
-
-This type belongs to **OPENDOCUMENT**.
+开源文档公式集类型，归属类型为OPENDOCUMENT。
 
 **Since:** 12
 
@@ -2836,9 +2556,7 @@ This type belongs to **OPENDOCUMENT**.
 STUFFIT_ARCHIVE = 'com.allume.stuffit-archive'
 ```
 
-Stuffit compression format (stuffit archive).
-
-This type belongs to **ARCHIVE**.
+Stuffit压缩格式类型（Stuffit archive），归属类型为ARCHIVE。
 
 **Since:** 12
 
@@ -2856,9 +2574,7 @@ This type belongs to **ARCHIVE**.
 RAR_ARCHIVE = 'com.rarlab.rar-archive'
 ```
 
-WinRAR.
-
-This type belongs to **ARCHIVE**.
+WinRAR压缩格式类型，归属类型为ARCHIVE。
 
 **Since:** 12
 
@@ -2876,9 +2592,7 @@ This type belongs to **ARCHIVE**.
 SEVEN_ZIP_ARCHIVE = 'org.7-zip.7-zip-archive'
 ```
 
-7-Zip.
-
-This type belongs to **ARCHIVE**.
+7-zip压缩格式类型，归属类型为ARCHIVE。
 
 **Since:** 12
 
@@ -2896,9 +2610,7 @@ This type belongs to **ARCHIVE**.
 CALENDAR = 'general.calendar'
 ```
 
-Generic calendar type.
-
-This type belongs to **OBJECT**.
+所有日程类数据的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -2916,9 +2628,7 @@ This type belongs to **OBJECT**.
 VCS = 'general.vcs'
 ```
 
-VCalendar (VCS) format.
-
-This type belongs to **CALENDAR** and **TEXT**.
+VCalendar日历数据类型，归属类型为CALENDAR和TEXT。
 
 **Since:** 12
 
@@ -2936,9 +2646,7 @@ This type belongs to **CALENDAR** and **TEXT**.
 ICS = 'general.ics'
 ```
 
-Internet Calendaring and Scheduling (ICS) format.
-
-This type belongs to **CALENDAR** and **TEXT**.
+ICalendar日历数据类型，归属类型为CALENDAR和TEXT。
 
 **Since:** 12
 
@@ -2956,9 +2664,7 @@ This type belongs to **CALENDAR** and **TEXT**.
 CONTACT = 'general.contact'
 ```
 
-Generic contact type.
-
-This type belongs to **OBJECT**.
+所有联系人类数据的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -2976,9 +2682,7 @@ This type belongs to **OBJECT**.
 DATABASE = 'general.database'
 ```
 
-Generic database file type.
-
-This type belongs to **OBJECT**.
+所有数据库文件的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -2996,9 +2700,7 @@ This type belongs to **OBJECT**.
 MESSAGE = 'general.message'
 ```
 
-Generic message type.
-
-This type belongs to **OBJECT**.
+所有消息类数据的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -3016,9 +2718,7 @@ This type belongs to **OBJECT**.
 EXECUTABLE = 'general.executable'
 ```
 
-Generic type of all executable files.
-
-This type belongs to **OBJECT**.
+所有可执行文件的基类型，归属类型为OBJECT。
 
 **Since:** 12
 
@@ -3036,9 +2736,7 @@ This type belongs to **OBJECT**.
 PORTABLE_EXECUTABLE = 'com.microsoft.portable-executable'
 ```
 
-Microsoft Windows portable executable format.
-
-This type belongs to **EXECUTABLE**.
+Microsoft Windows应用程序类型，归属类型为EXECUTABLE。
 
 **Since:** 12
 
@@ -3056,9 +2754,7 @@ This type belongs to **EXECUTABLE**.
 SUN_JAVA_CLASS = 'com.sun.java-class'
 ```
 
-Java class file format.
-
-This type belongs to **EXECUTABLE**.
+Java类文件类型，归属类型为EXECUTABLE。
 
 **Since:** 12
 
@@ -3076,9 +2772,7 @@ This type belongs to **EXECUTABLE**.
 VCARD = 'general.vcard'
 ```
 
-Generic electronic business card type.
-
-This type belongs to **OBJECT**.
+所有电子名片类数据的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -3096,9 +2790,7 @@ This type belongs to **OBJECT**.
 NAVIGATION = 'general.navigation'
 ```
 
-Generic navigation data type.
-
-This type belongs to **OBJECT**.
+所有导航类数据的基类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -3116,9 +2808,7 @@ This type belongs to **OBJECT**.
 LOCATION = 'general.location'
 ```
 
-Location data.
-
-This type belongs to **NAVIGATION**.
+导航定位类型，归属类型为NAVIGATION。
 
 **Since:** 11
 
@@ -3136,9 +2826,7 @@ This type belongs to **NAVIGATION**.
 FONT = 'general.font'
 ```
 
-Basic type of fonts.
-
-This type belongs to **OBJECT**.
+所有字体数据类型的基础类型，归属类型为OBJECT。
 
 **Since:** 12
 
@@ -3156,9 +2844,7 @@ This type belongs to **OBJECT**.
 TRUETYPE_FONT = 'general.truetype-font'
 ```
 
-TrueType font format.
-
-This type belongs to **FONT**.
+TrueType字体类型，归属类型为FONT。
 
 **Since:** 12
 
@@ -3176,9 +2862,7 @@ This type belongs to **FONT**.
 TRUETYPE_COLLECTION_FONT = 'general.truetype-collection-font'
 ```
 
-TrueType Collection font format.
-
-This type belongs to **FONT**.
+TrueType collection字体类型，归属类型为FONT。
 
 **Since:** 12
 
@@ -3196,9 +2880,7 @@ This type belongs to **FONT**.
 OPENTYPE_FONT = 'general.opentype-font'
 ```
 
-OpenType font format.
-
-This type belongs to **FONT**.
+OpenType 字体类型，归属类型为FONT。
 
 **Since:** 12
 
@@ -3216,9 +2898,7 @@ This type belongs to **FONT**.
 POSTSCRIPT_FONT = 'com.adobe.postscript-font'
 ```
 
-PostScript font format.
-
-This type belongs to **FONT**.
+PostScript 字体类型，归属类型为FONT。
 
 **Since:** 12
 
@@ -3236,9 +2916,7 @@ This type belongs to **FONT**.
 POSTSCRIPT_PFB_FONT = 'com.adobe.postscript-pfb-font'
 ```
 
-PostScript Font Binary font format.
-
-This type belongs to **FONT**.
+PostScript Font Binary字体类型，归属类型为FONT。
 
 **Since:** 12
 
@@ -3256,9 +2934,7 @@ This type belongs to **FONT**.
 POSTSCRIPT_PFA_FONT = 'com.adobe.postscript-pfa-font'
 ```
 
-Adobe Type 1 font format.
-
-This type belongs to **FONT**.
+Adobe Type 1 字体类型，归属类型为FONT。
 
 **Since:** 12
 
@@ -3276,9 +2952,7 @@ This type belongs to **FONT**.
 OPENHARMONY_FORM = 'openharmony.form'
 ```
 
-Widget defined for the system.
-
-This type belongs to **OBJECT**.
+系统定义的卡片类型，归属类型为OBJECT。
 
 **Since:** 10
 
@@ -3298,9 +2972,7 @@ This type belongs to **OBJECT**.
 OPENHARMONY_APP_ITEM = 'openharmony.app-item'
 ```
 
-Home screen icon defined for the system.
-
-This type belongs to **OBJECT**.
+系统定义的桌面图标类型，归属类型为OBJECT。
 
 **Since:** 10
 
@@ -3320,9 +2992,7 @@ This type belongs to **OBJECT**.
 OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'
 ```
 
-Pixel map defined for the system.
-
-This type belongs to **IMAGE**.
+系统定义的像素图类型，归属类型为IMAGE。
 
 **Since:** 10
 
@@ -3342,9 +3012,7 @@ This type belongs to **IMAGE**.
 OPENHARMONY_ATOMIC_SERVICE = 'openharmony.atomic-service'
 ```
 
-Atomic service type defined for the system.
-
-This type belongs to **OBJECT**.
+系统定义的原子化服务类型，归属类型为OBJECT。
 
 **Since:** 11
 
@@ -3362,9 +3030,7 @@ This type belongs to **OBJECT**.
 OPENHARMONY_PACKAGE = 'openharmony.package'
 ```
 
-Package (compressed folder) defined for the system.
-
-This type belongs to **DIRECTORY**.
+系统定义的包（即目录的打包文件），归属类型为DIRECTORY。
 
 **Since:** 11
 
@@ -3382,9 +3048,7 @@ This type belongs to **DIRECTORY**.
 OPENHARMONY_HAP = 'openharmony.hap'
 ```
 
-Ability package defined for the system.
-
-This type belongs to **OPENHARMONY\_PACKAGE**.
+系统定义的能力包，归属类型为OPENHARMONY_PACKAGE。
 
 **Since:** 11
 
@@ -3402,9 +3066,7 @@ This type belongs to **OPENHARMONY\_PACKAGE**.
 OPENHARMONY_HDOC = 'openharmony.hdoc'
 ```
 
-Memo format defined for the system.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+系统定义的备忘录数据类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -3422,9 +3084,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 OPENHARMONY_HINOTE = 'openharmony.hinote'
 ```
 
-Note format defined for the system.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+系统定义的笔记数据类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -3442,9 +3102,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 OPENHARMONY_STYLED_STRING = 'openharmony.styled-string'
 ```
 
-Style string type defined for the system.
-
-This type belongs to **COMPOSITE\_OBJECT**.
+系统定义的样式字符串类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -3462,9 +3120,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 OPENHARMONY_WANT = 'openharmony.want'
 ```
 
-Want defined for the system.
-
-This type belongs to **OBJECT**.
+系统定义的Want类型，归属类型为OBJECT。
 
 **Since:** 12
 
@@ -3482,9 +3138,7 @@ This type belongs to **OBJECT**.
 OFD = 'general.ofd'
 ```
 
-Open Fixed-layout Document (OFD).
-
-This type belongs to **COMPOSITE\_OBJECT**.
+开放版式文档类型，归属类型为COMPOSITE_OBJECT。
 
 **Since:** 12
 
@@ -3502,9 +3156,7 @@ This type belongs to **COMPOSITE\_OBJECT**.
 CAD = 'general.cad'
 ```
 
-Generic type of all computer-aided design types.
-
-This type belongs to **OBJECT**.
+所有计算机辅助设计类型的基类型，归属类型为OBJECT。
 
 **Since:** 12
 
@@ -3522,9 +3174,7 @@ This type belongs to **OBJECT**.
 OCTET_STREAM = 'general.octet-stream'
 ```
 
-Any binary data type.
-
-This type belongs to **OBJECT**.
+任意二进制数据类型，归属类型为OBJECT。
 
 **Since:** 12
 
@@ -3542,9 +3192,7 @@ This type belongs to **OBJECT**.
 FILE_URI = 'general.file-uri'
 ```
 
-File address type.
-
-This type belongs to **TEXT**.
+文件地址类型，归属类型为TEXT。
 
 **Since:** 15
 
@@ -3562,9 +3210,7 @@ This type belongs to **TEXT**.
 CONTENT_FORM = 'general.content-form'
 ```
 
-Content widget type.
-
-This type belongs to **OBJECT**.
+内容卡片类型，归属类型为OBJECT。
 
 **Since:** 15
 

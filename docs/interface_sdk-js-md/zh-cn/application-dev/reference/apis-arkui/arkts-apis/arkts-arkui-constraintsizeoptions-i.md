@@ -18,7 +18,7 @@ maxHeight?: Length
 
 Defines the max height.
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ maxWidth?: Length
 
 Defines the max width.
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 
@@ -62,7 +62,7 @@ minHeight?: Length
 
 Defines the min height.
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 
@@ -84,7 +84,7 @@ minWidth?: Length
 
 Defines the min width.
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 

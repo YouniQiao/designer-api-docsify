@@ -1,5 +1,11 @@
 # onStateChange
 
+## 导入模块
+
+```TypeScript
+import { manager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## onStateChange
 
 ```TypeScript
@@ -22,12 +28,12 @@ function onStateChange(callback: Callback<NearlinkState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NearlinkState&gt; | 是 | 用于监听状态改变事件的回调 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NearlinkState&gt; | 是 | 用于监听状态改变事件的回调 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 801 | Capability not supported because the chip does not support it. |
+| 36100099 | Operation failed. |
 

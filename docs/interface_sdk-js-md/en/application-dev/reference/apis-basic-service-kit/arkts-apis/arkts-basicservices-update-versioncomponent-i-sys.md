@@ -1,6 +1,6 @@
 # VersionComponent (System API)
 
-Represents a version component.
+版本组件。
 
 **Since:** 9
 
@@ -12,14 +12,19 @@ Represents a version component.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## componentId
 
 ```TypeScript
 componentId: string
 ```
 
-Component ID, which uniquely identifies a component in the upgrade package. The value is obtained from the  
-**versionComponents** array in the version check result and is used for subsequent description query or component information display.
+组件标识，用于唯一标识升级包中的组件。从版本检查结果的versionComponents数组中获取，用于后续描述信息查询或组件信息展示等场景。
 
 **Type:** string
 
@@ -39,9 +44,9 @@ Component ID, which uniquely identifies a component in the upgrade package. The 
 componentType: ComponentType
 ```
 
-Component type.
+组件类型。
 
-**Type:** ComponentType
+**Type:** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
 **Since:** 9
 
@@ -59,9 +64,9 @@ Component type.
 descriptionInfo: DescriptionInfo
 ```
 
-Information about the version description file.
+描述文件信息.
 
-**Type:** DescriptionInfo
+**Type:** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
 **Since:** 9
 
@@ -79,7 +84,7 @@ Information about the version description file.
 displayVersion: string
 ```
 
-Display version number.
+显示版本号。
 
 **Type:** string
 
@@ -99,11 +104,9 @@ Display version number.
 effectiveMode: EffectiveMode
 ```
 
-Effective mode. The value **COLD** indicates the cold upgrade, which takes effect after the device is restarted;  
-**LIVE** indicates the hot upgrade, which does not require restarting the device to take effect;  
-**LIVE\_AND\_COLD** indicates the integrated upgrade, which combines the characteristics of **COLD** and **LIVE**.
+生效模式，取值原则：COLD为冷升级，需重启设备生效；LIVE为热升级，无需重启即可生效；LIVE_AND_COLD为融合升级，结合两者特性。
 
-**Type:** EffectiveMode
+**Type:** [EffectiveMode](arkts-basicservices-update-effectivemode-e-sys.md)
 
 **Since:** 9
 
@@ -121,7 +124,7 @@ Effective mode. The value **COLD** indicates the cold upgrade, which takes effec
 innerVersion: string
 ```
 
-Internal version number.
+版本号。
 
 **Type:** string
 
@@ -141,12 +144,9 @@ Internal version number.
 otaMode?: OtaMode
 ```
 
-OTA mode. Pass this parameter to specify a specific upgrade mode, which is applicable to special scenarios such as the upgrade with limited storage space, fast upgrade, and A/B partition device upgrade. The value  
-**REGULAR\_OTA** indicates a regular upgrade, which is applicable to most common upgrade scenarios. **STREAM\_OTA**  
-indicates a streaming upgrade, which is applicable to scenarios where the storage space is limited or a fast upgrade is required. **AB\_REGULAR\_OTA** indicates the normal A/B upgrade and applies to the A/B partition device.  
-**AB\_STREAM\_OTA** indicates the A/B streaming upgrade and applies to the A/B partition device. If this parameter is not specified, the default value **REGULAR\_OTA** is used, indicating that the regular upgrade mode is used.
+升级模式。当需要指定特定的升级模式时传入此参数，适用于存储空间受限、快速升级或A/B分区设备等特殊场景。取值原则：REGULAR_OTA为正常升级，适用于大多数常规升级场景；STREAM_OTA为流式升级，适用于存储空间受限或需要快速升级的场景；AB_REGULAR_OTA为AB正常升级，适用于A/B分区设备；AB_STREAM_OTA为AB流式升级，适用于A/B分区设备。不传入时默认为REGULAR_OTA，使用正常升级模式。
 
-**Type:** OtaMode
+**Type:** [OtaMode](arkts-basicservices-update-otamode-e-sys.md)
 
 **Since:** 20
 
@@ -164,9 +164,9 @@ indicates a streaming upgrade, which is applicable to scenarios where the storag
 size: int
 ```
 
-Size of the upgrade package, in bytes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
+升级包大小，单位为B，取值范围[0, +∞]。超出范围时抛出异常。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -184,9 +184,9 @@ Size of the upgrade package, in bytes. The value range is [0, +∞]. An exceptio
 upgradeAction: UpgradeAction
 ```
 
-Upgrade action. The value **UPGRADE** indicates that the upgrade package is a differential package, which applies to incremental upgrade. The value **RECOVERY** indicates that the upgrade package is a repair package, which applies to system failure repair.
+升级方式，取值原则：UPGRADE为差分包，适用于增量升级场景；RECOVERY为修复包，适用于系统故障修复场景。
 
-**Type:** UpgradeAction
+**Type:** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
 **Since:** 9
 

@@ -1,12 +1,18 @@
 # isDomainAccountSupported
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isDomainAccountSupported
 
 ```TypeScript
 function isDomainAccountSupported(): Promise<boolean>
 ```
 
-Checks whether this domain account is supported. This API uses a promise to return the result.
+检查是否支持域账号。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -22,15 +28,15 @@ Checks whether this domain account is supported. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means this domain account is supported; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示支持域账号；返回false表示不支持。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| 12300001 | The system service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,24 +1,20 @@
 # GridRowDirection
 
-Grid element arrangement direction.
-    **NOTE**  
-    
-    - Grid elements can be arranged only in the **Row** or **RowReverse** direction, but not in the **Column** or  
-    **ColumnReverse** direction.  
-    
-    - The location and size of a grid child component can be calculated only based on **span** and **offset**. If the  
-    **span** values of child components add up to a number greater than the allowed number of columns, the grid will  
-    automatically wrap lines.  
-    
-    - If the **span** value of a single child component exceeds the maximum number of columns, the maximum number of  
-    columns is used.  
-    
-    - If a child component takes up more than the total number of columns according to its **offset** and **span**  
-    settings, it will be placed in a new row.  
-    
-    - Example: Item1: GridCol({ span: 6 }), Item2: GridCol({ span: 8, offset:11 })  
-        
-        !\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+栅格元素排列方向。
+
+> **说明：**
+> 
+> - 栅格元素仅支持Row/RowReverse排列，不支持Column/ColumnReverse方向排列。
+> 
+> - 栅格子组件仅能通过span、offset计算子组件位置与大小。多个子组件span超过规定列数时自动换行。
+> 
+> - 单个元素span大小超过最大列数时后台默认span为最大列数。
+> 
+> - 新一行的offset加上子组件的span超过总列数时，将下一个子组件放在新一行。
+> 
+> - 例：Item1: GridCol({ span: 6 })， Item2: GridCol({ span: 8, offset:11 })。
+> 
+> ![figures/gridRowOffsetToNextLine.png](../../../reference/apis-arkui/arkui-ts/figures/gridRowOffsetToNextLine.png)
 
 **Since:** 9
 
@@ -31,10 +27,10 @@ Grid element arrangement direction.
 ## Row
 
 ```TypeScript
-Row
+Row = 0
 ```
 
-Grid elements are arranged in the row direction.
+栅格元素按照行方向排列。适用于常规LTR（从左到右）布局场景。
 
 **Since:** 9
 
@@ -44,17 +40,17 @@ Grid elements are arranged in the row direction.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-GridRowDirection-Row--><!--Device-GridRowDirection-Row-End-->
+<!--Device-GridRowDirection-Row = 0--><!--Device-GridRowDirection-Row = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RowReverse
 
 ```TypeScript
-RowReverse
+RowReverse = 1
 ```
 
-Grid elements are arranged in the reverse row direction.
+栅格元素按照逆序行方向排列，适用于RTL（从右到左）语言布局或需要反向排列的场景。
 
 **Since:** 9
 
@@ -64,7 +60,7 @@ Grid elements are arranged in the reverse row direction.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-GridRowDirection-RowReverse--><!--Device-GridRowDirection-RowReverse-End-->
+<!--Device-GridRowDirection-RowReverse = 1--><!--Device-GridRowDirection-RowReverse = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

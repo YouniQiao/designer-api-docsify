@@ -1,12 +1,18 @@
 # getStartupTaskResult
 
+## Modules to Import
+
+```TypeScript
+import { startupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getStartupTaskResult
 
 ```TypeScript
 function getStartupTaskResult(startupTask: string): Object
 ```
 
-Obtains the execution result of a startup task or .so file preloading task.
+获取指定启动任务或so预加载任务的执行结果。
 
 **Since:** 12
 
@@ -22,21 +28,21 @@ Obtains the execution result of a startup task or .so file preloading task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or name of the .so file to be preloaded. |
+| startupTask | string | Yes | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Execution result of [init]{ |
+| Object | 输入为启动任务名时，返回指定的启动任务 [init]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
@@ -81,7 +87,7 @@ export default class EntryAbility extends UIAbility {
 function getStartupTaskResult(startupTask: string): Any
 ```
 
-Obtains specific startup task result.
+获取指定启动任务或so预加载任务的执行结果。
 
 **Since:** 23
 
@@ -97,7 +103,7 @@ Obtains specific startup task result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Indicates name of specific startup task. |
+| startupTask | string | Yes | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
 
 **Return value:**
 

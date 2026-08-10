@@ -1,6 +1,6 @@
 # ButtonOptions
 
-Describes the button style.
+按钮的样式。
 
 **Since:** 7
 
@@ -16,17 +16,17 @@ Describes the button style.
 buttonStyle?: ButtonStyleMode
 ```
 
-Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the  
-[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and [role]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+按钮的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
+[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
 
-Default value: **ButtonStyleMode.EMPHASIZED**
+默认值：ButtonStyleMode.EMPHASIZED 
 
-**NOTE**
+**说明：**
 
-The button primacy is as follows, from high to low: emphasized button, normal button, text button.
+按钮重要程度：强调按钮>普通按钮>文字按钮。
 
-**Type:** ButtonStyleMode
+**Type:** [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md)
 
 **Default:** ButtonStyleMode.EMPHASIZED
 
@@ -50,11 +50,11 @@ The button primacy is as follows, from high to low: emphasized button, normal bu
 controlSize?: ControlSize
 ```
 
-Button size.
+按钮的尺寸。
 
-Default value: **ControlSize.NORMAL
+默认值：ControlSize.NORMAL
 
-**Type:** ControlSize
+**Type:** [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md)
 
 **Default:** ControlSize.NORMAL
 
@@ -78,13 +78,13 @@ Default value: **ControlSize.NORMAL
 role?: ButtonRole
 ```
 
-Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the  
-[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and [buttonStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+按钮的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
+[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。
 
-Default value: **ButtonRole.NORMAL
+默认值：ButtonRole.NORMAL
 
-**Type:** ButtonRole
+**Type:** [ButtonRole](arkts-arkui-buttonrole-e.md)
 
 **Default:** ButtonRole.NORMAL
 
@@ -108,15 +108,15 @@ Default value: **ButtonRole.NORMAL
 stateEffect?: boolean
 ```
 
-Whether to enable the pressed state effect when the button is clicked.
+按钮按下时是否开启按压态显示效果。
 
-**true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled.
+true：开启按压效果；false：关闭按压效果。
 
-Default value: **true**
+默认值：true
 
-**NOTE**
+**说明：**
 
-When the pressed state effect is enabled and a custom pressed state style is configured, the resulting color displayed after pressing is a composite blend of the original background color and the newly defined pressed state color.
+当开启按压态显示效果，且开发者设置状态样式时，会基于状态样式设置完成后的背景色再进行颜色叠加。
 
 **Type:** boolean
 
@@ -138,13 +138,13 @@ When the pressed state effect is enabled and a custom pressed state style is con
 type?: ButtonType
 ```
 
-Button display style.
+按钮显示样式。
 
-Default value: **ButtonType.ROUNDED\_RECTANGLE**
+默认值：ButtonType.ROUNDED_RECTANGLE
 
-API version 18 and later: The default value is **ButtonType.ROUNDED\_RECTANGLE**. Versions earlier than API version 18: The default value is **ButtonType.Capsule**.
+API version 18及之后，ButtonType的默认值修改为ButtonType.ROUNDED_RECTANGLE。API version 18之前的版本，ButtonType的默认值为ButtonType.Capsule。
 
-**Type:** ButtonType
+**Type:** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
 
 **Since:** 7
 

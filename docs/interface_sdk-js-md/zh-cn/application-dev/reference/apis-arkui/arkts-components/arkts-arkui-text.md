@@ -4,12 +4,13 @@ Text组件用于显示文本内容，支持设置字体样式、文本对齐、�
 
 ## 子组件
 
-可以包含[Span]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、[ImageSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[SymbolSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_和  
-[ContainerSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_子组件。
-    **说明：**  
-    
-    使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_实现  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_场景。
+可以包含[Span]{@link ./span}、[ImageSpan]{@link ./image_span}、[SymbolSpan]{@link ./symbol_span}和  
+[ContainerSpan]{@link ./container_span}子组件。
+
+> **说明：**
+> 
+> 使用[子组件](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-text.md#子组件)实现
+> [图文混排](docroot://ui/arkts-text-image-layout.md)场景。
 
 ## Text
 
@@ -35,8 +36,16 @@ Text(content?: string | Resource, value?: TextOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string \| Resource | 否 | 文本内容。当需要直接显示文本内容时传入此参数。包含子组件[Span]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_或设置了 [属性字符串]\_\_\_JSDOC\_LINK\_USD\_1\_\_\_时，该参数不生效。 \_\_\_HTML\_TAG\_USD\_2\_\_\_默认值：' ' \_\_\_HTML\_TAG\_USD\_3\_\_\_**说明：** \_\_\_HTML\_TAG\_USD\_4\_\_\_显示内容的优先级：属性字符串>Span>Text的文本内容。  |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 文本组件初始化选项，用于配置文本控制器。当需要使用TextController的功能控制文本内容和选择时，传入此参数。 \_\_\_HTML\_TAG\_USD\_0\_\_\_默认值：不设置时，不使用文本控制器。 \_\_\_HTML\_TAG\_USD\_1\_\_\_ |
+| content | string \| Resource | 否 | 文本内容。当需要直接显示文本内容时传入此参数。包含子组件[Span]{@link ./span}或设置了 [属性字符串]{@link ./styled_string}时，该参数不生效。 <br>默认值：' ' <br>**说明：** <br>显示内容的优先级：属性字符串>Span>Text的文本内容。 |
+| value | [TextOptions](arkts-arkui-textoptions-i.md) | 否 | 文本组件初始化选项，用于配置文本控制器。当需要使用TextController的功能控制文本内容和选择时，传入此参数。 <br>默认值：不设置时，不使用文本控制器。 <br> |
 
 ## 汇总
 
+- [TextMarqueeOptions](arkts-arkui-text-textmarqueeoptions-i.md)
+- [TextOptions](arkts-arkui-text-textoptions-i.md)
+- [TextOverflowOptions](arkts-arkui-text-textoverflowoptions-i.md)
+- [MarqueeStartPolicy](arkts-arkui-text-marqueestartpolicy-e.md)
+- [MarqueeState](arkts-arkui-text-marqueestate-e.md)
+- [MarqueeUpdatePolicy](arkts-arkui-text-marqueeupdatepolicy-e.md)
+- [TextResponseType](arkts-arkui-text-textresponsetype-e.md)
+- [TextSpanType](arkts-arkui-text-textspantype-e.md)

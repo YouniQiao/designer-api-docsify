@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -40,7 +46,7 @@ versionCode?: int
 
 指示共享包的版本号。默认值：如果不填写versionCode，则卸载该包名的所有共享包。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

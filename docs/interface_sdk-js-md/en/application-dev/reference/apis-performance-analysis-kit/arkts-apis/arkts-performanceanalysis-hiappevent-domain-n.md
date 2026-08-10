@@ -1,10 +1,10 @@
 # domain
 
-Provides domain name constants.
+提供域名常量。
 
-| Name| Type | Read Only | Description |  
+|名称|类型|只读|描述|  
 | --- | ------ | ------ | ---------- |  
-| OS | string | Yes| System domain.|
+| OS | string |是|系统域|
 
 **Since:** 11
 
@@ -14,11 +14,17 @@ Provides domain name constants.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## Summary
 
 ### Constants
 
 | Name | Description |
 | --- | --- |
-| [OS](arkts-performanceanalysis-domain-con.md#os) | System domain. |
+| [OS](arkts-performanceanalysis-domain-con.md#os) | 系统领域。 |
 

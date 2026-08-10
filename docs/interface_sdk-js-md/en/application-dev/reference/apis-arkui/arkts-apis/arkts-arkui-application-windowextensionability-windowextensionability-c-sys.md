@@ -1,6 +1,6 @@
 # WindowExtensionAbility (System API)
 
-class of window extension ability.
+WindowExtensionAbility类。
 
 **Since:** 9
 
@@ -14,13 +14,19 @@ class of window extension ability.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { WindowExtensionContext } from 'kits/@kit.ArkUI';
+```
+
 ## onConnect
 
 ```TypeScript
 onConnect(want: Want): void
 ```
 
-Called back when a window extension is first connected to an ability.
+当窗口扩展组件第一次连接ability时回调。
 
 **Since:** 9
 
@@ -40,9 +46,9 @@ Called back when a window extension is first connected to an ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates connection information about the Window ability. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 当前ability的Want类型信息，包括ability名称、bundle名称等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { WindowExtensionAbility } from '@kit.ArkUI';
@@ -61,7 +67,7 @@ export default class MyWindowExtensionAbility extends WindowExtensionAbility {
 onDisconnect(want: Want): void
 ```
 
-Called back when all abilities connected to a window extension are disconnected.
+当所有连接到窗口扩展组件的ability断开连接时回调。
 
 **Since:** 9
 
@@ -81,9 +87,9 @@ Called back when all abilities connected to a window extension are disconnected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates disconnection information about the window extension. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 当前Ability的Want类型信息，包括ability名称、bundle名称等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { WindowExtensionAbility } from '@kit.ArkUI';
@@ -102,7 +108,7 @@ export default class MyWindowExtensionAbility extends WindowExtensionAbility {
 onWindowReady(window: window.Window): void
 ```
 
-Called back when window is created.
+当窗口被创建时回调。
 
 **Since:** 9
 
@@ -122,9 +128,9 @@ Called back when window is created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| window | window.Window | Yes | Current Window instance. |
+| window | window.Window | Yes | 当前窗口实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { WindowExtensionAbility, window } from '@kit.ArkUI';
@@ -149,7 +155,7 @@ context: WindowExtensionContext
 
 Indicates window extension ability context.
 
-**Type:** WindowExtensionContext
+**Type:** [WindowExtensionContext](arkts-arkui-windowextensioncontext-t-sys.md)
 
 **Since:** 9
 

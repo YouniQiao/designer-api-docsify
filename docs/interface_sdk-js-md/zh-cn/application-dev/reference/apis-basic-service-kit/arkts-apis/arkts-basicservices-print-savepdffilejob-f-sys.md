@@ -1,5 +1,11 @@
 # savePdfFileJob（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## savePdfFileJob
 
 ```TypeScript
@@ -27,7 +33,7 @@ function savePdfFileJob(jobId: string, fd: int): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 打印作业ID。 |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 文件描述符。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。 |
 
 **返回值：**
 
@@ -39,8 +45,8 @@ function savePdfFileJob(jobId: string, fd: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
-| [13100006](../../apis-basic-services-kit/errorcode-print.md#13100006-无效的打印任务) | Invalid job ID. |
 | 13100007 | Save file failed. |
+| 13100006 | Invalid job ID. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application. |
 

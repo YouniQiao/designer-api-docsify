@@ -1,5 +1,11 @@
 # disableHotspot (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disableHotspot
 
 ```TypeScript
@@ -8,7 +14,7 @@ function disableHotspot(): boolean
 
 Disables a Wi-Fi hotspot.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This method is asynchronous. If Wi-Fi is enabled after the Wi-Fi hotspot is disabled, Wi-Fi may be re-enabled.
+&lt;p&gt;This method is asynchronous. If Wi-Fi is enabled after the Wi-Fi hotspot is disabled, Wi-Fi may be re-enabled.
 
 **Since:** 7
 
@@ -32,7 +38,7 @@ Disables a Wi-Fi hotspot.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

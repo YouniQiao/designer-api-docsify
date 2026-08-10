@@ -1,12 +1,12 @@
 # KeyEncodingConfig
 
-Represents the RSA private key encoding parameters. You can use it to generate an encoded private key string with the specified algorithm and password.
-    **NOTE**  
-    
-    - **password** specifies the password used for encoding the private key. It is mandatory.  
-    
-    - **cipherName** specifies the algorithm used for encoding. It is mandatory. Currently, only **AES-128-CBC**,  
-    **AES-192-CBC**, **AES-256-CBC**, and **DES-EDE3-CBC** are supported.
+RSA私钥编码参数，使用获取私钥字符串时，可以添加此参数，生成指定算法、密码的编码后的私钥字符串。
+
+> **说明：**
+> 
+> - password是必选参数，表示编码用到的密码。
+> 
+> - cipherName是必选参数，指定编码用到的算法。当前仅支持AES-128-CBC、AES-192-CBC、AES-256-CBC、DES-EDE3-CBC。
 
 **Since:** 18
 
@@ -16,13 +16,19 @@ Represents the RSA private key encoding parameters. You can use it to generate a
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## cipherName
 
 ```TypeScript
 cipherName: string
 ```
 
-Symmetric cipher algorithm used for encoding the private key.
+用于编码私钥的对称密码算法。
 
 **Type:** string
 
@@ -42,7 +48,7 @@ Symmetric cipher algorithm used for encoding the private key.
 password: string
 ```
 
-Password used for encoding the private key.
+密码。
 
 **Type:** string
 

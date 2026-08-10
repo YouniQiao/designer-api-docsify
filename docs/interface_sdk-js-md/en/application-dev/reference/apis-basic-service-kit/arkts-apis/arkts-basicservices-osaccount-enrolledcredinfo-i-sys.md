@@ -1,6 +1,6 @@
 # EnrolledCredInfo (System API)
 
-Defines enrolled credential information.
+表示已注册凭据的信息。
 
 **Since:** 8
 
@@ -12,15 +12,21 @@ Defines enrolled credential information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authSubType
 
 ```TypeScript
 authSubType: AuthSubType
 ```
 
-Authentication credential subtype.
+指示认证凭据子类型。
 
-**Type:** AuthSubType
+**Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
 **Since:** 8
 
@@ -38,9 +44,9 @@ Authentication credential subtype.
 authType: AuthType
 ```
 
-Authentication credential type.
+身份验证凭据类型。
 
-**Type:** AuthType
+**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **Since:** 8
 
@@ -58,7 +64,7 @@ Authentication credential type.
 credentialId: Uint8Array
 ```
 
-Credential ID, which is left blank by default.
+指示凭据索引，默认为空。
 
 **Type:** Uint8Array
 
@@ -78,7 +84,7 @@ Credential ID, which is left blank by default.
 isAbandoned?: boolean
 ```
 
-Whether the credential is abandoned. The abandoned credential may be stored as a backup credential for a period of time. The value **true** indicates that the credential is abandoned, and the value **false** indicates the opposite. The default value is **undefined**.
+指示凭据是否废弃。废弃后的凭据可能作为备份凭据保存一段时间。true表示已废弃，false表示未废弃。默认为undefined，表示是否废弃未定义。
 
 **Type:** boolean
 
@@ -98,7 +104,7 @@ Whether the credential is abandoned. The abandoned credential may be stored as a
 templateId: Uint8Array
 ```
 
-Authentication credential template ID.
+指示凭据模板ID。
 
 **Type:** Uint8Array
 
@@ -118,9 +124,9 @@ Authentication credential template ID.
 validityPeriod?: long
 ```
 
-Credential validity period, in milliseconds. The default value is **undefined**.
+指示凭据有效期，单位为ms。默认为undefined，表示有效期未定义。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 

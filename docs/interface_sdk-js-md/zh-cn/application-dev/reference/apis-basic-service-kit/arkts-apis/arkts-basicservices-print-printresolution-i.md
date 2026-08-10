@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## horizontalDpi
 
 ```TypeScript
@@ -18,7 +24,7 @@ horizontalDpi: int
 
 表示水平DPI。单位：DPI。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -54,7 +60,7 @@ verticalDpi: int
 
 表示垂直DPI。单位：DPI。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 

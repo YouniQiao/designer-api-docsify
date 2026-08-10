@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## current
 
 ```TypeScript
@@ -18,7 +24,7 @@ current: GestureRecognizer
 
 手势识别器对象。可从中获取手势的详细信息，但请勿在本地保留此对象，因为当节点释放后该对象可能失效。
 
-**类型：** GestureRecognizer
+**类型：** [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ currentPhase: GestureActionPhase
 
 手势动作回调阶段。
 
-**类型：** GestureActionPhase
+**类型：** [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)
 
 **起始版本：** 26.0.0
 
@@ -58,7 +64,7 @@ event: GestureEvent
 
 手势事件对象。
 
-**类型：** GestureEvent
+**类型：** [GestureEvent](arkts-arkui-gestureevent-i.md)
 
 **起始版本：** 26.0.0
 
@@ -78,7 +84,7 @@ node?: FrameNode
 
 触发手势的节点。默认值为null，表示没有触发手势的节点。
 
-**类型：** FrameNode
+**类型：** [FrameNode](arkts-arkui-framenode-t.md)
 
 **起始版本：** 26.0.0
 

@@ -1,12 +1,18 @@
 # getSubscribeInfo
 
+## Modules to Import
+
+```TypeScript
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+```
+
 ## getSubscribeInfo
 
 ```TypeScript
 function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 ```
 
-Obtains the subscription information about the notification extension of this application. This API uses a promise to return the result.
+获取当前应用的通知扩展订阅信息。使用Promise异步回调。
 
 **Since:** 22
 
@@ -22,23 +28,23 @@ Obtains the subscription information about the notification extension of this ap
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise used to return the [NotificationExtensionSubscriptionInfo[]]{ |
+| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise对象，返回一个 [NotificationExtensionSubscriptionInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied or current device not supported. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 201 | Permission denied or current device not supported. |
+| 1600001 | Internal error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 notificationExtensionSubscription.getSubscribeInfo().then((data: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[]) => {
   console.info(`getSubscribeInfo successfully. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`getSubscribeInfo fail: ${JSON.stringify(err)}`);
+  console.error(`getSubscribeInfo fail, code is ${err.code}, message is ${err.message}`);
 });
 ```
 

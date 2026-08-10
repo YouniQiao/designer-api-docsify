@@ -1,6 +1,10 @@
 # locks
 
-Asynchronous lock.
+为了解决多并发实例间的数据竞争问题，ArkTS语言基础库引入了异步锁能力。为了开发者的开发效率，AsyncLock对象支持跨并发实例引用传递。
+
+由于ArkTS语言支持异步操作，阻塞锁容易产生死锁问题，因此我们在ArkTS中仅支持异步锁（非阻塞式锁）。
+
+使用异步锁的方法需要标记为async，调用方需要await修饰调用，才能保证时序正确。因此会导致外层调用函数全部标记成async。
 
 **Since:** 12
 
@@ -10,28 +14,34 @@ Asynchronous lock.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## Summary
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | Class to execute an asynchronous operation under lock. |
-| [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md) | Lock operation's options |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | Information about all lock operations on the AsyncLock instance. |
-| [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md) | Information about a lock. |
-| [AbortSignal](arkts-arkts-locks-abortsignal-c.md) | Object used to abort an async operation.An instance of this class must be accessed in the same thread where the instance is created.Access to fields of this class from another thread is undefined behaviour. |
-| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | Object used for thread synchronization. |
+| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | 实现异步锁功能的类，允许在锁下执行异步操作。该类使用@Sendable装饰器装饰。 |
+| [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md) | 表示锁操作选项的类。 |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | 用于存储异步锁实例上当前执行的所有锁操作的信息的类。 |
+| [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md) | 关于锁的信息。 |
+| [AbortSignal](arkts-arkts-locks-abortsignal-c.md) | 用于终止异步操作的对象。该类的实例必须在其创建的同一线程中访问。从其他线程访问此类的字段会导致未定义的行为。 |
+| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | 实现异步等待功能的类，支持异步等待通知操作。该类使用@Sendable装饰器装饰。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Mode of lock operations. |
+| [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 锁操作对应的模式枚举。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md) | Type of callback for asyncLock operation. |
+| [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md) | 这是一个补充类型别名，表示lockAsync函数所有重载中的回调。 |
 

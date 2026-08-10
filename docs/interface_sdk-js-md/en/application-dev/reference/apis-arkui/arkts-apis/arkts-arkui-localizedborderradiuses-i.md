@@ -18,7 +18,7 @@ bottomEnd?: LengthMetrics
 
 bottom-end property.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ bottomStart?: LengthMetrics
 
 bottom-start property.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ topEnd?: LengthMetrics
 
 top-end property.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ topStart?: LengthMetrics
 
 top-start property.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 

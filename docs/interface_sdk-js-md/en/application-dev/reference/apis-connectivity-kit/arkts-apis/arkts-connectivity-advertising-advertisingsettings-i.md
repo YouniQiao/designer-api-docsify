@@ -1,6 +1,6 @@
 # AdvertisingSettings
 
-Describes the settings for advertising.
+广播设置。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes the settings for advertising.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## interval
 
 ```TypeScript
 interval?: int
 ```
 
-Indicates the advertising interval.The minimum number of slots is 160, and the corresponding time is 20 ms (160 * 0.125 ms = 20 ms).The maximum number of slots is 16777215, and the corresponding time is 2097151.875 ms.Unit: Slots, The value must be an integer within [160,16777215], each slot is 125 microseconds.Default value: 5000.
+广播时间间隔，单位为slot。最小的slot数是160，对应的时间是160*0.125=20ms。最大slot数为16777215，对应的时间为2097151.875 ms。如果不设置“interval”，则默认值为5000，对应的时间为625 ms。单位为： 时隙，取值应为[160,16777215]内的整数，每个时隙为125微秒，。 默认值： 5000。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ Indicates the advertising interval.The minimum number of slots is 160, and the c
 isConnectable?: boolean
 ```
 
-Indicates whether the advertising is connectable.Default value: true.
+广播是否可连接。如果不设置“isConnectable”，则默认值为true。默认值： 默认值：true。
 
 **Type:** boolean
 
@@ -56,9 +62,9 @@ Indicates whether the advertising is connectable.Default value: true.
 power?: TxPowerMode
 ```
 
-Indicates the advertising power mode.Default value: ADV\_TX\_POWER\_LOW.
+广播功率模式。如果不设置“power”，则默认值为“ADV_TX_POWER_LOW”。默认值： ADV_TX_POWER_LOW。
 
-**Type:** TxPowerMode
+**Type:** [TxPowerMode](arkts-connectivity-advertising-txpowermode-e.md)
 
 **Since:** 26.0.0
 

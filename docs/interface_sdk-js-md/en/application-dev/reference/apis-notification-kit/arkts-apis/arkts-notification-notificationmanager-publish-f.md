@@ -1,14 +1,20 @@
 # publish
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## publish
 
 ```TypeScript
 function publish(request: NotificationRequest, callback: AsyncCallback<void>): void
 ```
 
-Publishes a notification. This API uses an asynchronous callback to return the result.
+发布通知。使用callback异步回调。
 
-After a notification is published, it will be displayed as a notification widget in the device's notification center, status bar, etc. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
+发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。
 
 **Since:** 9
 
@@ -22,30 +28,30 @@ After a notification is published, it will be displayed as a notification widget
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Content and related configuration of the notification to publish. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | 设置发布通知的内容和相关配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当发布通知成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled. |
-| [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) | No permission.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 2300007 | Network unreachable.<br>**Applicable version:** 11 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| 1600016 | The notification version for this update is too low.<br>**Applicable version:** 11 and later |
+| 1600020 | The application is not allowed to send notifications due to permission settings.<br>**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600009 | The notification sending frequency reaches the upper limit. |
+| 1600012 | No memory space. |
+| 1600014 | No permission.<br>**Applicable version:** 11 and later |
+| 1600015 | The current notification status does not support duplicate configurations.<br>**Applicable version:** 11 and later |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled. |
+| 1600005 | Notification slot disabled. |
+| 1600007 | The notification does not exist.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -80,9 +86,9 @@ notificationManager.publish(notificationRequest, publishCallback);
 function publish(request: NotificationRequest): Promise<void>
 ```
 
-Publishes a notification. This API uses a promise to return the result.
+发布通知。使用Promise异步回调。
 
-After a notification is published, it will be displayed as a notification card in the device's notification center, status bar, and other locations. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
+发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。
 
 **Since:** 9
 
@@ -96,35 +102,35 @@ After a notification is published, it will be displayed as a notification card i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Content and related configuration of the notification to publish. |
+| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | 设置发布通知的内容和相关配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled. |
-| [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) | No permission.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 2300007 | Network unreachable.<br>**Applicable version:** 11 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| 1600016 | The notification version for this update is too low.<br>**Applicable version:** 11 and later |
+| 1600020 | The application is not allowed to send notifications due to permission settings.<br>**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600009 | The notification sending frequency reaches the upper limit. |
+| 1600012 | No memory space. |
+| 1600014 | No permission.<br>**Applicable version:** 11 and later |
+| 1600015 | The current notification status does not support duplicate configurations.<br>**Applicable version:** 11 and later |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled. |
+| 1600005 | Notification slot disabled. |
+| 1600007 | The notification does not exist.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

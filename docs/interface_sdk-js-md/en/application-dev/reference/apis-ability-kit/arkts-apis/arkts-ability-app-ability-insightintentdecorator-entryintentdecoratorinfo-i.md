@@ -1,7 +1,7 @@
 # EntryIntentDecoratorInfo
 
-Inherits from [IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and is used to describe the parameters supported by the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_decorator.
+EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述  
+[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)装饰器支持的参数。
 
 **Inheritance/Implementation:** EntryIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -13,13 +13,19 @@ Inherits from [IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and is 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Name of the ability bound to the intent.
+表示与意图绑定的Ability名称。
 
 **Type:** string
 
@@ -38,10 +44,10 @@ Name of the ability bound to the intent.
 ## executeMode
 
 ```TypeScript
-executeMode: insightIntent.ExecuteMode[]
+executeMode?: insightIntent.ExecuteMode[]
 ```
 
-Execution mode of the intent call, that is, execution mode supported when the bound ability is started.
+The execute mode of the intent.For UIAbility, the parameter can be set to insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND or insightIntent.ExecuteMode.UI_ABILITY_UI_ABILITY_BACKGROUND or both of them.
 
 **Type:** insightIntent.ExecuteMode[]
 
@@ -53,7 +59,7 @@ Execution mode of the intent call, that is, execution mode supported when the bo
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-EntryIntentDecoratorInfo-executeMode: insightIntent.ExecuteMode[]--><!--Device-EntryIntentDecoratorInfo-executeMode: insightIntent.ExecuteMode[]-End-->
+<!--Device-EntryIntentDecoratorInfo-executeMode?: insightIntent.ExecuteMode[]--><!--Device-EntryIntentDecoratorInfo-executeMode?: insightIntent.ExecuteMode[]-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -10,6 +10,12 @@ SelectionContainer自定义编辑菜单选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## onMenuItemClick
 
 ```TypeScript
@@ -36,7 +42,7 @@ onCreateMenu?: OnCreateMenuCallback
 
 每次菜单显示前触发，传入默认菜单项并返回处理后的菜单项。默认值为空，不触发该回调。
 
-**类型：** OnCreateMenuCallback
+**类型：** [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md)
 
 **起始版本：** 26.0.0
 
@@ -56,7 +62,7 @@ onPrepareMenu?: OnPrepareMenuCallback
 
 文本选中内容变化后、菜单显示前触发，可在该回调中调整菜单数据。默认值为空，不触发该回调。
 
-**类型：** OnPrepareMenuCallback
+**类型：** [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md)
 
 **起始版本：** 26.0.0
 

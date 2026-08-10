@@ -1,5 +1,11 @@
 # execCmd (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cliManager } from 'kits/@kit.AbilityKit';
+```
+
 ## execCmd
 
 ```TypeScript
@@ -27,7 +33,7 @@ Execute a command. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | cmd | string | Yes | The command to execute. |
-| execCmdOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of this action. |
+| execCmdOptions | [ExecCmdOptions](arkts-ability-climanager-execcmdoptions-i-sys.md) | No | The options of this action. |
 
 **Return value:**
 
@@ -39,8 +45,8 @@ Execute a command. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | 35600031 | Maximum number of processes has been reached. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 | 35600050 | System Error. 1. Failed to connect to the system service; 2. The system service failed to communicate with the dependent module. |
 

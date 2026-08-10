@@ -1,6 +1,6 @@
 # MaxCountType
 
-MaxCountType. include TOTAL\_MAX\_COUNT, PHOTO\_MAX\_COUNT and VIDEO\_MAX\_COUNT
+MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ MaxCountType. include TOTAL\_MAX\_COUNT, PHOTO\_MAX\_COUNT and VIDEO\_MAX\_COUNT
 TOTAL_MAX_COUNT = 0
 ```
 
-TOTAL\_MAX\_COUNT. total max count
+TOTAL_MAX_COUNT. total max count
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ TOTAL\_MAX\_COUNT. total max count
 PHOTO_MAX_COUNT = 1
 ```
 
-PHOTO\_MAX\_COUNT. photo max count
+PHOTO_MAX_COUNT. photo max count
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ PHOTO\_MAX\_COUNT. photo max count
 VIDEO_MAX_COUNT = 2
 ```
 
-VIDEO\_MAX\_COUNT. video max count
+VIDEO_MAX_COUNT. video max count
 
 **Since:** 26.0.0
 

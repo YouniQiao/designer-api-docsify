@@ -1,6 +1,6 @@
 # MoveParams (System API)
 
-Parameters for moving the target.
+设备移动参数
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Parameters for moving the target.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## angle
 
 ```TypeScript
 angle: double
 ```
 
-Turning angle, unit degree.
+转动角度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -38,9 +44,9 @@ Turning angle, unit degree.
 distance: int
 ```
 
-Moving distance, unit cm.The value should be an integer.
+移动距离。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -58,9 +64,9 @@ Moving distance, unit cm.The value should be an integer.
 mode?: MarchingMode
 ```
 
-Movement mode.
+行进方式。
 
-**Type:** MarchingMode
+**Type:** [MarchingMode](arkts-mechanic-mechanicmanager-marchingmode-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -78,9 +84,9 @@ Movement mode.
 speedGear?: SpeedGear
 ```
 
-Speed gear.
+速度档位。
 
-**Type:** SpeedGear
+**Type:** [SpeedGear](arkts-mechanic-mechanicmanager-speedgear-e-sys.md)
 
 **Since:** 26.0.0
 

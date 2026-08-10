@@ -34,11 +34,11 @@ abstract initialize(options?: CheckboxOptions): CheckboxAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| options | [CheckboxOptions](../arkts-components/arkts-arkui-checkboxoptions-i.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) |  |
 

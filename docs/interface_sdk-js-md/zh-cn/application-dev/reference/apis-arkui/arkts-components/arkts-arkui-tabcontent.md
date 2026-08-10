@@ -9,11 +9,12 @@
 ## 子组件
 
 支持单个子组件。
-    **说明：**  
-    
-    可内置系统组件和自定义组件，支持渲染控制类型（\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_和  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_）。
+
+> **说明：**
+> 
+> 可内置系统组件和自定义组件，支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)和
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
 
 ## TabContent
 
@@ -22,9 +23,10 @@ TabContent()
 ```
 
 创建TabContent页签和内容。
-    **说明：**  
-    
-    TabContent组件仅能作为Tabs组件的子组件使用，否则会导致组件无法正常显示。
+
+> **说明：**
+> 
+> TabContent组件仅能作为Tabs组件的子组件使用，否则会导致组件无法正常显示。
 
 **起始版本：** 7
 
@@ -38,3 +40,12 @@ TabContent()
 
 ## 汇总
 
+- [BoardStyle](arkts-arkui-tabcontent-boardstyle-i.md)
+- [DrawableTabBarIndicator](arkts-arkui-tabcontent-drawabletabbarindicator-i.md)
+- [IndicatorStyle](arkts-arkui-tabcontent-indicatorstyle-i.md)
+- [LabelStyle](arkts-arkui-tabcontent-labelstyle-i.md)
+- [TabBarIconStyle](arkts-arkui-tabcontent-tabbariconstyle-i.md)
+- [TabBarOptions](arkts-arkui-tabcontent-tabbaroptions-i.md)
+- [DrawableDescriptor](arkts-arkui-tabcontent-drawabledescriptor-t.md)
+- [LayoutMode](arkts-arkui-tabcontent-layoutmode-e.md)
+- [SelectedMode](arkts-arkui-tabcontent-selectedmode-e.md)

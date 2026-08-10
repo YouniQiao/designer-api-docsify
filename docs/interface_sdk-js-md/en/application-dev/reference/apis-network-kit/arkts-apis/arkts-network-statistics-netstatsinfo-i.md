@@ -10,6 +10,12 @@ Detailed information of statistics.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { statistics } from 'kits/@kit.NetworkKit';
+```
+
 ## rxBytes
 
 ```TypeScript
@@ -18,7 +24,7 @@ rxBytes: long
 
 Bytes of received.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 22
 
@@ -36,7 +42,7 @@ rxPackets: long
 
 Packets of received.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 22
 
@@ -54,7 +60,7 @@ txBytes: long
 
 Bytes of send.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 22
 
@@ -72,7 +78,7 @@ txPackets: long
 
 Packets of send.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 22
 

@@ -74,7 +74,7 @@ config配置的是变化差值的取值范围，差值的最大最小值没有�
 
 例如：opacity的取值范围[0.0,1.0]则当当前属性值叠加差值超过1.0，则取1.0。
 
-**类型：** ParticleTuple&lt;T, T&gt;
+**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;T, T&gt;
 
 **起始版本：** 10
 

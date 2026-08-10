@@ -1,5 +1,11 @@
 # isNfcAvailable
 
+## Modules to Import
+
+```TypeScript
+import { nfcController } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isNfcAvailable
 
 ```TypeScript

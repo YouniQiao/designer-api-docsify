@@ -1,18 +1,19 @@
 # Portrait
 
 联系人的头像类。
-    **说明：**  
-    
-    从API version 22开始，支持通过uri和[PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_格式设置联系人头像资源(暂不支持通过  
-    [addContactViaUI]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-    [saveToExistingContactViaUI]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口设置)。  
-    
-    uri为可访问的联系人头像文件地址，[PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_为通过联系人头像资源生成的  
-    [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_对象。  
-    
-    从API version 22开始，支持通过uri格式读取联系人头像资源，该格式仅支持以  
-    [fs.open]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_方式打开，无法直接在Image组件内显示，需读取后转换为  
-    [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_格式显示。
+
+> **说明：**
+> 
+> 从API version 22开始，支持通过uri和[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)格式设置联系人头像资源(暂不支持通过
+> [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md#addcontactviaui)、
+> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui)接口设置)。
+> 
+> uri为可访问的联系人头像文件地址，[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)为通过联系人头像资源生成的
+> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)对象。
+> 
+> 从API version 22开始，支持通过uri格式读取联系人头像资源，该格式仅支持以
+> [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md/arkts-corefile-file-fs-open-f.md#open)方式打开，无法直接在Image组件内显示，需读取后转换为
+> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)格式显示。
 
 **起始版本：** 7
 
@@ -21,6 +22,12 @@
 <!--Device-contact-class Portrait--><!--Device-contact-class Portrait-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
 
 ## photo
 

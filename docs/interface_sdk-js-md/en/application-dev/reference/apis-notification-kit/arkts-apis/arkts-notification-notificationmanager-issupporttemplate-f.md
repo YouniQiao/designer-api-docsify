@@ -1,13 +1,18 @@
 # isSupportTemplate
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## isSupportTemplate
 
 ```TypeScript
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified template is supported before using  
-[NotificationTemplate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to publish a notification.This API uses an asynchronous callback to return the result.
+在使用[通知模板](arkts-notification-notificationmanager-notificationtemplate-t.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
 
 **Since:** 9
 
@@ -21,19 +26,19 @@ Checks whether a specified template is supported before using
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the template is supported, and **false** indicates the opposite. If this API call fails, an error object is returned. |
+| templateName | string | Yes | 模板名称。当前仅支持'downloadTemplate'。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示支持该模板；返回false表示不支持该模板；调用失败返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,8 +61,7 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-Checks whether a specified template is supported before using  
-[NotificationTemplate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to publish a notification.This API uses a promise to return the result.
+在使用[通知模板](arkts-notification-notificationmanager-notificationtemplate-t.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
 
 **Since:** 9
 
@@ -71,24 +75,24 @@ Checks whether a specified template is supported before using
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
+| templateName | string | Yes | 模板名称。当前仅支持'downloadTemplate'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the specified template is supported, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示支持该模板；返回false表示不支持该模板。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

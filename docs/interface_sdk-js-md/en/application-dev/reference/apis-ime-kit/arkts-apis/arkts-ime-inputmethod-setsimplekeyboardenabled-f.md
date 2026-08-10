@@ -1,12 +1,18 @@
 # setSimpleKeyboardEnabled
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## setSimpleKeyboardEnabled
 
 ```TypeScript
 function setSimpleKeyboardEnabled(enable: boolean): void
 ```
 
-Set simple keyboard mode.
+编辑框应用设置简单键盘标志。
 
 **Since:** 20
 
@@ -20,9 +26,9 @@ Set simple keyboard mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | indicates enable simple keyboard or not. |
+| enable | boolean | Yes | 简单键盘是否使能标志，true标识简单键盘使能，false标识简单键盘去使能。&lt;br/&gt; 原生编辑框组件在下一次点击获焦时生效；自绘控件在下一次调用 [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) 绑定输入法时生效。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let enable: boolean = false;

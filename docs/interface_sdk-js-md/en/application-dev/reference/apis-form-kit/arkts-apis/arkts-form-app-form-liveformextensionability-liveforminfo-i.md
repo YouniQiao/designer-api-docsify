@@ -10,6 +10,12 @@ Provides information about a live form.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { LiveFormInfo } from 'kits/@kit.FormKit';
+```
+
 ## borderRadius
 
 ```TypeScript
@@ -18,7 +24,7 @@ borderRadius: double
 
 The form border radius.Unit: vp, The value must be greater than or equal to 0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 

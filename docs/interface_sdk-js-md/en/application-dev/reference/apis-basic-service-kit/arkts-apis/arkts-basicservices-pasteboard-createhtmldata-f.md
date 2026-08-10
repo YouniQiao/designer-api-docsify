@@ -1,12 +1,18 @@
 # createHtmlData
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createHtmlData
 
 ```TypeScript
 function createHtmlData(htmlText: string): PasteData
 ```
 
-Creates a **PasteData** object of the HTML type.
+构建一个HTML剪贴板内容对象。
 
 **Since:** 7
 
@@ -24,15 +30,15 @@ Creates a **PasteData** object of the HTML type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| htmlText | string | Yes | HTML content. |
+| htmlText | string | Yes | HTML内容，需符合标准HTML格式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PasteData** object. |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";

@@ -1,5 +1,11 @@
 # getDeviceConfigs (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getDeviceConfigs
 
 ```TypeScript
@@ -8,7 +14,7 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 Obtains the list of all existing Wi-Fi configurations.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can obtain only the Wi-Fi configurations you created on your own application.
+&lt;p&gt;You can obtain only the Wi-Fi configurations you created on your own application.
 
 **Since:** 7
 
@@ -32,7 +38,7 @@ Obtains the list of all existing Wi-Fi configurations.
 | --- | --- |
 | Array&lt;WifiDeviceConfig&gt; | sReturns the list of all existing Wi-Fi configurations you created on your application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

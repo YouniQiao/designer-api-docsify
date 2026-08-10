@@ -1,6 +1,6 @@
 # MenuPosition
 
-Position definition of one component on which the menu will bind and popup.
+定义可弹出菜单的组件的位置。
 
 **Since:** 22
 
@@ -10,15 +10,21 @@ Position definition of one component on which the menu will bind and popup.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Component height, uint is vp.
+组件高度。单位为vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -36,9 +42,9 @@ Component height, uint is vp.
 width: int
 ```
 
-Component width, uint is vp.
+组件宽度。单位为vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -56,9 +62,9 @@ Component width, uint is vp.
 x: int
 ```
 
-Coordinate x of the position of the component, uint is vp.
+组件在X轴上的位置坐标。单位为vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -76,9 +82,9 @@ Coordinate x of the position of the component, uint is vp.
 y: int
 ```
 
-Coordinate y of the position of the component, uint is vp.
+组件在y轴上的位置坐标。单位为vp。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

@@ -1,6 +1,6 @@
 # SystemBarTintState (System API)
 
-Describes the callback for the current system bar.
+当前系统栏回调信息集合。
 
 **Since:** 8
 
@@ -12,15 +12,21 @@ Describes the callback for the current system bar.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
 displayId: long
 ```
 
-ID of the screen where the window is located. The value must be an integer.
+当前窗口所在屏幕id，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -38,7 +44,7 @@ ID of the screen where the window is located. The value must be an integer.
 regionTint: Array<SystemBarRegionTint>
 ```
 
-All system bar information that has been changed.
+当前已改变的所有系统栏信息。
 
 **Type:** Array&lt;SystemBarRegionTint&gt;
 

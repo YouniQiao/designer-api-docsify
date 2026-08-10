@@ -1,5 +1,11 @@
 # isHotspotDualBandSupported (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isHotspotDualBandSupported
 
 ```TypeScript
@@ -30,7 +36,7 @@ Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

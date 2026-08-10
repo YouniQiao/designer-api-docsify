@@ -1,6 +1,6 @@
 # WebResourceResponse
 
-Defines the Web resource response.
+Web组件资源响应对象。
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Constructor.
 getReasonMessage(): string
 ```
 
-Gets the reason message.
+获取资源响应的状态码描述。
 
 **Since:** 8
 
@@ -50,7 +50,7 @@ Gets the reason message.
 
 | Type | Description |
 | --- | --- |
-| string | Return the reason message. |
+| string | 返回资源响应的状态码描述。 |
 
 ## getResponseCode
 
@@ -58,7 +58,7 @@ Gets the reason message.
 getResponseCode(): number
 ```
 
-Gets the response code.
+获取资源响应的状态码。
 
 **Since:** 8
 
@@ -74,7 +74,7 @@ Gets the response code.
 
 | Type | Description |
 | --- | --- |
-| number | Return the response code. |
+| number | 返回资源响应的状态码。 |
 
 ## getResponseData
 
@@ -82,7 +82,7 @@ Gets the response code.
 getResponseData(): string
 ```
 
-Gets the response data.
+获取资源响应数据。
 
 **Since:** 8
 
@@ -98,7 +98,7 @@ Gets the response data.
 
 | Type | Description |
 | --- | --- |
-| string | Return the response data. |
+| string | 返回资源响应数据。 |
 
 ## getResponseDataEx
 
@@ -106,7 +106,7 @@ Gets the response data.
 getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 ```
 
-Gets the response data.
+获取资源响应数据，支持多种数据类型。
 
 **Since:** 13
 
@@ -120,7 +120,7 @@ Gets the response data.
 
 | Type | Description |
 | --- | --- |
-| string | Return the response data. string type indicate string in HTML format. number type indicate file handle. Resource type indicate \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile resource. ArrayBuffer type indicate binary data. |
+| string | Return the response data. string type indicate string in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data. |
 
 ## getResponseEncoding
 
@@ -128,7 +128,7 @@ Gets the response data.
 getResponseEncoding(): string
 ```
 
-Gets the response encoding.
+获取资源响应的编码。
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ Gets the response encoding.
 
 | Type | Description |
 | --- | --- |
-| string | Return the response encoding. |
+| string | 返回资源响应的编码。 |
 
 ## getResponseHeader
 
@@ -152,7 +152,7 @@ Gets the response encoding.
 getResponseHeader(): Array<Header>
 ```
 
-Gets the response headers.
+获取资源响应头。
 
 **Since:** 8
 
@@ -168,7 +168,7 @@ Gets the response headers.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | Return the response headers. |
+| Array&lt;Header&gt; | 返回资源响应头。 |
 
 ## getResponseIsReady
 
@@ -176,7 +176,7 @@ Gets the response headers.
 getResponseIsReady(): boolean
 ```
 
-Gets whether the response is ready.
+获取响应数据是否已准备就绪。
 
 **Since:** 13
 
@@ -190,7 +190,7 @@ Gets whether the response is ready.
 
 | Type | Description |
 | --- | --- |
-| boolean | True indicates the response data is ready and false is not ready. |
+| boolean | `true`表示响应数据已准备好，`false`表示未准备好。 |
 
 ## getResponseMimeType
 
@@ -198,7 +198,7 @@ Gets whether the response is ready.
 getResponseMimeType(): string
 ```
 
-Gets the response MIME type.
+获取资源响应的媒体（MIME）类型。
 
 **Since:** 8
 
@@ -214,7 +214,7 @@ Gets the response MIME type.
 
 | Type | Description |
 | --- | --- |
-| string | Return the response MIME type. |
+| string | 返回资源响应的媒体（MIME）类型。 |
 
 ## setReasonMessage
 
@@ -222,7 +222,7 @@ Gets the response MIME type.
 setReasonMessage(reason: string): void
 ```
 
-Sets the reason message.
+设置资源响应的状态码描述。
 
 **Since:** 9
 
@@ -238,7 +238,7 @@ Sets the reason message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | string | Yes | the reason message. |
+| reason | string | Yes | 要设置的资源响应的状态码描述。 |
 
 ## setResponseCode
 
@@ -246,7 +246,7 @@ Sets the reason message.
 setResponseCode(code: number): void
 ```
 
-Sets the response code.
+设置资源响应的状态码。
 
 **Since:** 9
 
@@ -262,7 +262,7 @@ Sets the response code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | the response code. |
+| code | number | Yes | 要设置的资源响应的状态码。 |
 
 ## setResponseData
 
@@ -270,7 +270,7 @@ Sets the response code.
 setResponseData(data: string | number | Resource | ArrayBuffer): void
 ```
 
-Sets the response data.
+设置资源响应数据。
 
 **Since:** 9
 
@@ -286,7 +286,7 @@ Sets the response data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| number \| Resource \| ArrayBuffer | Yes | the response data. string type indicate strings in HTML format. number type indicate file handle. Resource type indicate \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile resource. ArrayBuffer type indicate binary data.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| data | string \| number \| Resource \| ArrayBuffer | Yes | 要设置的资源响应数据。 string表示HTML格式的字符串。 number表示文件句柄，此句柄由系统的Web组件负责关闭。 Resource表示应用rawfile目录下文件资源.<br>**Since:** 9 - 10 |
 
 ## setResponseEncoding
 
@@ -294,7 +294,7 @@ Sets the response data.
 setResponseEncoding(encoding: string): void
 ```
 
-Sets the response encoding.
+设置资源响应的编码。
 
 **Since:** 9
 
@@ -310,7 +310,7 @@ Sets the response encoding.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | Yes | the response encoding. |
+| encoding | string | Yes | 要设置的资源响应的编码。 |
 
 ## setResponseHeader
 
@@ -318,7 +318,7 @@ Sets the response encoding.
 setResponseHeader(header: Array<Header>): void
 ```
 
-Sets the response headers.
+设置资源响应头。
 
 **Since:** 9
 
@@ -334,7 +334,7 @@ Sets the response headers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | Array&lt;Header&gt; | Yes | the response headers. |
+| header | Array&lt;Header&gt; | Yes | 要设置的资源响应头。 |
 
 ## setResponseIsReady
 
@@ -342,7 +342,7 @@ Sets the response headers.
 setResponseIsReady(IsReady: boolean): void
 ```
 
-Sets the response is ready or not.
+设置资源响应数据是否已经就绪。
 
 **Since:** 9
 
@@ -358,7 +358,7 @@ Sets the response is ready or not.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| IsReady | boolean | Yes | whether the response is ready. |
+| IsReady | boolean | Yes | 资源响应数据是否已经就绪。 |
 
 ## setResponseMimeType
 
@@ -366,7 +366,7 @@ Sets the response is ready or not.
 setResponseMimeType(mimeType: string): void
 ```
 
-Sets the response MIME type.
+设置资源响应的媒体（MIME）类型。
 
 **Since:** 9
 
@@ -382,5 +382,5 @@ Sets the response MIME type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | the response MIME type. |
+| mimeType | string | Yes | 要设置的资源响应的媒体（MIME）类型。 |
 

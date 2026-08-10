@@ -1,6 +1,6 @@
 # DistributedExtensionAbility
 
-The **DistributedExtensionAbility** module provides distributed extension capabilities and lifecycle callbacks for distributed ability creation, destruction, and connection.
+DistributedExtensionAbility模块提供分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ The **DistributedExtensionAbility** module provides distributed extension capabi
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { DistributedExtensionAbility } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## onCollaborate
 
 ```TypeScript
 onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult
 ```
 
-Callback invoked to return the collaboration result in multi-device collaboration scenarios.
+多设备协作场景下返回协作结果的回调。
 
 **Since:** 20
 
@@ -32,15 +38,15 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **" ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该key值可以获 取到调用方传输的数据并进行相应的处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.CollaborateResult | Collaboration result, that is, whether the target application accepts the collaboration request. |
+| AbilityConstant.CollaborateResult | 协同方应用是否接受协同。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager, DistributedExtensionAbility } from '@kit.DistributedServiceKit';
@@ -66,7 +72,7 @@ export default class DistributedExtension extends DistributedExtensionAbility {
 onCreate(want: Want): void
 ```
 
-Callback invoked to initialize the service logic when a **DistributedExtensionAbility** instance is created.
+Extension生命周期回调，在创建时回调，执行初始化业务逻辑操作。
 
 **Since:** 20
 
@@ -82,9 +88,9 @@ Callback invoked to initialize the service logic when a **DistributedExtensionAb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want information related to the **DistributedExtensionAbility** instance, including the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -105,7 +111,7 @@ export default class DistributedExtension extends DistributedExtensionAbility {
 onDestroy(): void
 ```
 
-Callback invoked to clear resources when a **ServiceExtensionAbility** instance is destroyed.
+Extension生命周期回调，在销毁时回调，执行资源清理等操作。
 
 **Since:** 20
 
@@ -117,7 +123,7 @@ Callback invoked to clear resources when a **ServiceExtensionAbility** instance 
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
-**Example**
+## Examples
 
 ```TypeScript
 import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
@@ -135,9 +141,9 @@ export default class DistributedExtension extends DistributedExtensionAbility {
 context: DistributedExtensionContext
 ```
 
-Context of the **DistributedExtension**. This context inherits from **ExtensionContext**.
+DistributedExtension的上下文环境，继承自ExtensionContext。
 
-**Type:** DistributedExtensionContext
+**Type:** [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 
 **Since:** 20
 

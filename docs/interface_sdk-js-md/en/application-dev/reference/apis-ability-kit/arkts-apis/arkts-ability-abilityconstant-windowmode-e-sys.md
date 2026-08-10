@@ -1,7 +1,7 @@
 # WindowMode
 
-Enumerates the window modes in which a UIAbility can be displayed at startup. It can be used in  
-[startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+启动UIAbility时窗口的创建模式，类型为枚举。可配合  
+[startAbility](arkts-ability-uiabilitycontext-c.md#startability)方法使用。
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ Enumerates the window modes in which a UIAbility can be displayed at startup. It
 WINDOW_MODE_UNDEFINED = 0
 ```
 
-Undefined window mode.
+未定义窗口模式。
 
 **Since:** 12
 
@@ -37,7 +37,7 @@ Undefined window mode.
 WINDOW_MODE_FLOATING = 102
 ```
 
-The ability is displayed in a floating window.
+自由悬浮形式窗口模式。
 
 **Since:** 12
 

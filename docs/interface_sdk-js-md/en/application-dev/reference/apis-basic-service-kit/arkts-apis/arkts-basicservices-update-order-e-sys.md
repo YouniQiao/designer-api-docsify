@@ -1,6 +1,6 @@
 # Order (System API)
 
-Enumerates update commands.
+升级指令。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates update commands.
 DOWNLOAD = 1
 ```
 
-Download. This command is applicable to the scenario where only the upgrade package is downloaded.
+下载。适合仅下载升级包场景。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Download. This command is applicable to the scenario where only the upgrade pack
 INSTALL = 2
 ```
 
-Install. This command is applicable to the scenario where the downloaded upgrade package is directly installed.
+安装。适合直接安装已下载的升级包场景。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Install. This command is applicable to the scenario where the downloaded upgrade
 DOWNLOAD_AND_INSTALL = 3
 ```
 
-Download and install. This command is applicable to the scenario where the upgrade package is downloaded and installed.
+下载并安装。适合下载并安装场景。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Download and install. This command is applicable to the scenario where the upgra
 APPLY = 4
 ```
 
-Apply. This command is applicable only to the scenario where the installed upgrade package takes effect. The device will restart to apply the new version. This command is applicable to the scenario where the installation is complete and the device needs to be restarted for the installation to take effect.
+生效。仅生效已安装的升级包，设备将重启以应用新版本，适用于已安装完成需重启生效的场景。
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ Apply. This command is applicable only to the scenario where the installed upgra
 INSTALL_AND_APPLY = 6
 ```
 
-Install and apply. After the installation, the device restarts to apply the new version. This command is applicable to the scenario where the system upgrade needs to be completed quickly and take effect immediately.
+安装并生效，执行安装后设备将重启以应用新版本。适用于需要快速完成系统更新并立即生效的场景。
 
 **Since:** 9
 

@@ -2,7 +2,7 @@
 
 菜单项的信息。
 
-**表1：同时设置offset与placement时菜单的偏移位置**
+**表1：同时设置offset与placement时菜单的偏移位置** 
 
 | placement设置的值 | 菜单的偏移量说明 |  
 | ------------------------------------------------------------ | ------------------------------------------------------------ |  
@@ -10,7 +10,7 @@
 | Placement.BottomLeft、Placement.Bottom、Placement.BottomRight | offset的x为正数，菜单相对组件向左进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 |  
 | Placement.RightTop、Placement.Right、Placement.RightBottom | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 |
 
-**表2：同时设置arrowOffset与placement时菜单箭头的默认位置**
+**表2：同时设置arrowOffset与placement时菜单箭头的默认位置** 
 
 | placement设置的值 | 菜单箭头的位置说明 |  
 | ------------------------------------------- | ------------------------------------------------------------ |  
@@ -21,14 +21,14 @@
 | Placement.LeftTop、Placement.RightTop | 箭头默认显示在垂直方向，且距离菜单上侧距离为箭头安全距离。 |  
 | Placement.LeftBottom、Placement.RightBottom | 箭头默认显示在垂直方向，且距离菜单下侧距离为箭头安全距离。 |
 
-**表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置**  
+**表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置**   
 | 接口 | 菜单默认位置 |  
 |------|-------------|  
-| [bindMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ | Placement.BottomLeft |  
-| [bindMenu\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_11+\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ | Placement.BottomLeft |  
-| [bindContextMenu\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_8+\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ | Placement.Top |  
-| [bindContextMenu\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ | Placement.BottomLeft |  
-| [bindContextMenuWithResponse\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ | Placement.Top |
+| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
+| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
+| [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top |  
+| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft |  
+| [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
 
 **起始版本：** 10
 
@@ -132,7 +132,7 @@ anchorPosition?: Position
 
 1. 当菜单处于预览状态时，设定的偏移量将无法生效。2. 预设的placement对齐参数将不再生效。3. 叠加offset参数的偏移量，最终确定菜单的精确弹出位置。4. 当水平与垂直偏移量均设为负值时，菜单重置到Placement.BottomLeft进行显示。5. 当水平或垂直偏移量存在undefined或null时，效果等同于不设置anchorPosition，此时预设的placement对齐参数可以生效。
 
-**类型：** Position
+**类型：** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
 **默认值：** { x: 0, y: 0 }
 
@@ -174,7 +174,7 @@ arrowOffset?: Length
 
 bindContextMenu从API version 10开始支持该属性；bindMenu从API version 12开始支持该属性。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0vp
 
@@ -200,9 +200,9 @@ availableLayoutArea?: AvailableLayoutArea
 
 **说明：**
 
-未设置或设置为undefined时，百分比依据窗口大小计算。若设置为AvailableLayoutArea.SAFE\_AREA，预览图的可布局区域为窗口大小减去上下左右的安全边距。
+未设置或设置为undefined时，百分比依据窗口大小计算。若设置为AvailableLayoutArea.SAFE_AREA，预览图的可布局区域为窗口大小减去上下左右的安全边距。
 
-**类型：** AvailableLayoutArea
+**类型：** [AvailableLayoutArea](../arkts-apis/arkts-arkui-common-availablelayoutarea-e.md)
 
 **起始版本：** 20
 
@@ -224,9 +224,9 @@ backgroundBlurStyle?: BlurStyle
 
 菜单背板模糊材质。
 
-默认值：BlurStyle.COMPONENT\_ULTRA\_THICK。
+默认值：BlurStyle.COMPONENT_ULTRA_THICK。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -250,7 +250,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 背景模糊效果。
 
-**类型：** BackgroundBlurStyleOptions
+**类型：** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 18
 
@@ -274,7 +274,7 @@ backgroundColor?: ResourceColor
 
 默认值：Color.Transparent。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
@@ -298,7 +298,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数。
 
-**类型：** BackgroundEffectOptions
+**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 18
 
@@ -332,7 +332,7 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 当设置BorderRadiuses或LocalizedBorderRadiuses类型且传参为异常值时，菜单默认没有圆角。
 
-**类型：** Length \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **默认值：** 8vp for 2-in-1 devices and 20vp for other devices
 
@@ -356,13 +356,13 @@ colorMode?: AnchoredColorMode
 
 设置菜单深浅色模式，默认跟随绑定组件深浅色模式。
 
-默认值：AnchoredColorMode.FOLLOW\_TARGET
+默认值：AnchoredColorMode.FOLLOW_TARGET
 
 **说明：**
 
-1. 仅当绑定组件使用了\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW\_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
+1. 仅当绑定组件使用了[WithTheme](../../../reference/apis-arkui/arkui-ts/ts-container-with-theme.md#接口)标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
 
-**类型：** AnchoredColorMode
+**类型：** [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md)
 
 **默认值：** AnchoredColorMode.FOLLOW_TARGET
 
@@ -384,7 +384,7 @@ colorMode?: AnchoredColorMode
 enableArrow?: boolean
 ```
 
-是否显示箭头。如果菜单的大小和位置不足以放置箭头时，不会显示箭头。
+是否显示箭头。如果菜单的大小和位置不足以放置箭头时，不会显示箭头。 
 
 默认值：false，不显示箭头。
 
@@ -445,12 +445,12 @@ gridStyle?: MenuGridStyleOptions
 ```
 
 设置菜单的栅格样式。仅固定样式菜单生效，例如在  
-[bindMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[bindContextMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[bindContextMenuByResponseType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[bindContextMenuByIsShow]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-[bindContextMenuWithResponse]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_中使用[MenuElement]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_或在[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_中使用MenuItemOptions。
+[bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)、  
+[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)、[bindContextMenuByResponseType](arkts-arkui-commonmethod-c.md#bindcontextmenubyresponsetype)、  
+[bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow)、  
+[bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)中使用[MenuElement](arkts-arkui-menuelement-i.md)或在[MenuItem](menu_item)中使用MenuItemOptions。
 
-**类型：** MenuGridStyleOptions
+**类型：** [MenuGridStyleOptions](arkts-arkui-menugridstyleoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -478,11 +478,11 @@ hapticFeedbackMode?: HapticFeedbackMode
 
 只有一级菜单可配置弹出时振动效果。
 
-仅当用户启用系统触感反馈且在工程的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置requestPermissions字段开启ohos.permission.VIBRATE振动权限时，方可生效。配置如下：
+仅当用户启用系统触感反馈且在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启ohos.permission.VIBRATE振动权限时，方可生效。配置如下：
 
-!\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+![menuEnableHapticFeedback](../../../reference/apis-arkui/arkui-ts/figures/menuEnableHapticFeedback.png)
 
-**类型：** HapticFeedbackMode
+**类型：** [HapticFeedbackMode](../arkts-apis/arkts-arkui-common-hapticfeedbackmode-e.md)
 
 **默认值：** HapticFeedbackMode.DISABLED
 
@@ -510,7 +510,7 @@ keyboardAvoidMode?: MenuKeyboardAvoidMode
 
 未设置或设置为undefined时，按照MenuKeyboardAvoidMode.NONE处理。
 
-**类型：** MenuKeyboardAvoidMode
+**类型：** [MenuKeyboardAvoidMode](../arkts-apis/arkts-arkui-common-menukeyboardavoidmode-e.md)
 
 **默认值：** MenuKeyboardAvoidMode.NONE
 
@@ -550,7 +550,7 @@ layoutRegionMargin?: Margin
 
 边距默认值为左右边距16vp，上边距16vp, 下边距为4vp。
 
-**类型：** Margin
+**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **默认值：** 12vp for left and right, 16vp for top and bottom
 
@@ -614,7 +614,7 @@ maxHeight?: LengthMetrics
 
 如果菜单所有选项的实际高度之和小于设定的高度，菜单的高度按实际高度显示。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 26.0.0
 
@@ -640,7 +640,7 @@ minKeyboardAvoidDistance?: LengthMetrics
 
 未设置、设置为负数或undefined时，按照8vp处理。仅在keyboardAvoidMode设置为避让软键盘时生效。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -666,7 +666,7 @@ modalMode?: ModalMode
 
 默认值：ModalMode.AUTO
 
-**类型：** ModalMode
+**类型：** [ModalMode](../arkts-apis/arkts-arkui-common-modalmode-e.md)
 
 **默认值：** ModalMode.AUTO
 
@@ -702,7 +702,7 @@ offset最终取值与placement设置值的关系参见表1：同时设置offset�
 
 如果菜单调整了显示位置（与placement初始值主方向不一致），则偏移值 (offset) 失效。
 
-**类型：** Position
+**类型：** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
 **默认值：** - [since 10 - 10] @default {x:0,y:0} - Percentage values are not supported. [since 11]
 
@@ -732,7 +732,7 @@ onDidAppear?: Callback<void>
 
 4.onAppear和onDidAppear触发时机相同，onDidAppear在onAppear后生效。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 20
 
@@ -758,7 +758,7 @@ onDidDisappear?: Callback<void>
 
 1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。2. onDisappear和onDidDisappear触发时机相同，onDidDisappear在onDisappear后生效。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 20
 
@@ -784,7 +784,7 @@ onWillAppear?: Callback<void>
 
 1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。2. aboutToAppear是初始化时触发调用，onWillAppear是在动画执行前触发调用，onWillAppear在aboutToAppear之后执行。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 20
 
@@ -810,7 +810,7 @@ onWillDisappear?: Callback<void>
 
 1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。3. aboutToDisappear和onWillDisappear触发时机相同，onWillDisappear在aboutToDisappear后生效。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 20
 
@@ -836,7 +836,7 @@ outlineColor?: ResourceColor | EdgeColors
 
 默认值：'#19ffffff'
 
-**类型：** ResourceColor \| EdgeColors
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
 **默认值：** '#19ffffff'
 
@@ -866,7 +866,7 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 
 不支持百分比，若需要外描边效果，outlineWidth为必填项。
 
-**类型：** Dimension \| EdgeOutlineWidths
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
 
 **默认值：** 0vp - Percentage values are not supported.
 
@@ -892,9 +892,9 @@ placement?: Placement
 
 **说明：**
 
-1. 作为[bindMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_入参时，默认值为Placement.BottomLeft。2. 作为[bindContextMenu\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_8+\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_或[bindContextMenuWithResponse\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_23+\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_入参时，默认效果为菜单跟随点击位置弹出。3. 作为[bindContextMenu\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_入参时，默认值为Placement.BottomLeft。4. placement值设置为undefined、null或缺省时，按默认值处理。
+1. 作为[bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)入参时，默认值为Placement.BottomLeft。2. 作为[bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)或[bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)入参时，默认效果为菜单跟随点击位置弹出。3. 作为[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)入参时，默认值为Placement.BottomLeft。4. placement值设置为undefined、null或缺省时，按默认值处理。
 
-**类型：** Placement
+**类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **默认值：** - [since 10 - 10] @default Placement.BottomLeft [since 11]
 
@@ -917,7 +917,7 @@ preview?: MenuPreviewMode | CustomBuilder
 ```
 
 长按悬浮菜单或使用  
-[bindContextMenu\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_显示菜单的预览内容样式，可以为目标组件的截图，也可以为用户自定义的内容。
+[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)显示菜单的预览内容样式，可以为目标组件的截图，也可以为用户自定义的内容。
 
 默认值：MenuPreviewMode.NONE，无预览内容。
 
@@ -927,7 +927,7 @@ preview?: MenuPreviewMode | CustomBuilder
 - 当未设置preview参数或preview参数设置为MenuPreviewMode.NONE时，enableArrow参数生效。  
 - 当preview参数设置为MenuPreviewMode.IMAGE或CustomBuilder时，enableArrow为true时也不显示箭头。
 
-**类型：** MenuPreviewMode \| CustomBuilder
+**类型：** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| CustomBuilder
 
 **默认值：** MenuPreviewMode.NONE
 
@@ -957,7 +957,7 @@ previewAnimationOptions?: ContextMenuAnimationOptions
 
 倍率设置参数小于等于0时，不生效。
 
-**类型：** ContextMenuAnimationOptions
+**类型：** [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)
 
 **默认值：** { scale: [0.95, 1.1], transition: undefined, hoverScale: undefined } [since 12]
 
@@ -981,7 +981,7 @@ previewBorderRadius?: BorderRadiusType
 
 设置预览图边框圆角半径。
 
-默认值：16vp
+默认值：16vp 
 
 **说明：**
 
@@ -989,7 +989,7 @@ previewBorderRadius?: BorderRadiusType
 
 圆角设置越大，圆角动画变化越快。
 
-**类型：** BorderRadiusType
+**类型：** [BorderRadiusType](../arkts-apis/arkts-arkui-borderradiustype-t.md)
 
 **默认值：** 16vp
 
@@ -1021,7 +1021,7 @@ previewScaleMode?: PreviewScaleMode
 
 预览图的最大宽高不会超过预览图最大可布局区域（窗口大小减去上下左右的安全边距）。
 
-**类型：** PreviewScaleMode
+**类型：** [PreviewScaleMode](../arkts-apis/arkts-arkui-common-previewscalemode-e.md)
 
 **默认值：** PreviewScaleMode.AUTO
 
@@ -1043,13 +1043,13 @@ previewScaleMode?: PreviewScaleMode
 scrollBar?: BarState
 ```
 
-设置菜单滚动条状态。
+设置菜单滚动条状态。 
 
-默认值：BarState.Auto
+默认值：BarState.Auto 
 
 未设置或者设置为undefined时，按照BarState.Auto处理。
 
-**类型：** BarState
+**类型：** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
 
 **默认值：** BarState.Auto
 
@@ -1071,12 +1071,12 @@ scrollBar?: BarState
 systemMaterial?: SystemUiMaterial
 ```
 
-设置菜单的系统材质。不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、边框颜色[borderColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、边框宽度[borderWidth]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、阴影  
-[shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_，不建议与上述接口一起使用。材质设置为非法值、undefined时，按照不设置系统材质处理。
+设置菜单的系统材质。不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。材质设置为非法值、undefined时，按照不设置系统材质处理。
 
 默认值： undefined
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 
@@ -1107,7 +1107,7 @@ targetSpace?: LengthMetrics
 - anchorPosition的优先级要高于targetSpace。  
 - 不支持设置百分比。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 26.0.0
 
@@ -1133,13 +1133,13 @@ transition?: TransitionEffect
 
 菜单退出动效过程中，进行横竖屏切换，菜单会避让。二级菜单不继承自定义动效。弹出过程可以点击二级菜单，退出动效执行过程不允许点击二级菜单。
 
-详细描述见[TransitionEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对象说明。
+详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。 
 
 动效曲线使用弹簧曲线，在动效退出时，由于弹簧曲线的回弹震荡，菜单消失后有较长的拖尾，使得其他事件无法响应。
 
 当设置transition自定义动效时，菜单的默认显示和退出动效不生效。
 
-**类型：** TransitionEffect
+**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 12
 

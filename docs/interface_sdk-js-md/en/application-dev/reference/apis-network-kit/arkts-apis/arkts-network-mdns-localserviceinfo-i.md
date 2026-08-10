@@ -10,6 +10,12 @@ Defines the mDNS service information.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
+## Modules to Import
+
+```TypeScript
+import { mdns } from 'kits/@kit.NetworkKit';
+```
+
 ## host
 
 ```TypeScript
@@ -18,7 +24,7 @@ host?: NetAddress
 
 IP address of the host.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 11
 
@@ -96,7 +102,7 @@ Service name.
 serviceType: string
 ```
 
-Service type. Use an underscore (\_) as the prefix, for example, \_http.\_tcp.
+Service type. Use an underscore (_) as the prefix, for example, _http._tcp.
 
 **Type:** string
 

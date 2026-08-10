@@ -1,12 +1,18 @@
 # stopJsCpuProfiling
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## stopJsCpuProfiling
 
 ```TypeScript
 function stopJsCpuProfiling() : void
 ```
 
-Stops the VM profiling method. **stopJsCpuProfiling()** and **startJsCpuProfiling(filename: string)** are called in pairs. **startJsCpuProfiling()** always occurs before **stopJsCpuProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur.
+ֹͣ�����Profiling�������٣�`stopJsCpuProfiling()`�����ĵ�����Ҫ��`startJsCpuProfiling(filename: string)`�����ĵ���һһ��Ӧ���ȿ�����رգ�������ظ��������ظ��رյĵ��÷�ʽ�������ӿڵ����쳣��
 
 **Since:** 9
 
@@ -16,7 +22,7 @@ Stops the VM profiling method. **stopJsCpuProfiling()** and **startJsCpuProfilin
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

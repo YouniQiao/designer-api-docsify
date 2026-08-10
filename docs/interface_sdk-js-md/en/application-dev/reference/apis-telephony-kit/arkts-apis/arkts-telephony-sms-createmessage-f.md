@@ -1,5 +1,11 @@
 # createMessage
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## createMessage
 
 ```TypeScript
@@ -8,7 +14,7 @@ function createMessage(pdu: Array<int>, specification: string, callback: AsyncCa
 
 Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol.
+&lt;p&gt;After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol.
 
 **Since:** 6
 
@@ -22,21 +28,21 @@ Creates an SMS message instance based on the protocol data unit (PDU) and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pdu | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | Yes | Indicates the original data, which is obtained from the received SMS. |
+| pdu | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Indicates the original data, which is obtained from the received SMS. |
 | specification | string | Yes | Indicates the SMS protocol type. The value {@code 3gpp} indicates GSM/UMTS/LTE SMS, and the value {@code 3gpp2} indicates CDMA/LTE SMS. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ShortMessage&gt; | Yes | Indicates the callback for getting an SMS message instance; returns {@code null} if {@code pdu} is empty or {@code specification} is not supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShortMessage&gt; | Yes | Indicates the callback for getting an SMS message instance; returns {@code null} if {@code pdu} is empty or {@code specification} is not supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error code. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -59,7 +65,7 @@ function createMessage(pdu: Array<int>, specification: string): Promise<ShortMes
 
 Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol.
+&lt;p&gt;After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol.
 
 **Since:** 6
 
@@ -73,7 +79,7 @@ Creates an SMS message instance based on the protocol data unit (PDU) and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pdu | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | Yes | Indicates the original data, which is obtained from the received SMS. |
+| pdu | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Indicates the original data, which is obtained from the received SMS. |
 | specification | string | Yes | Indicates the SMS protocol type. The value {@code 3gpp} indicates GSM/UMTS/LTE SMS, and the value {@code 3gpp2} indicates CDMA/LTE SMS. |
 
 **Return value:**
@@ -86,13 +92,13 @@ Creates an SMS message instance based on the protocol data unit (PDU) and the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error code. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

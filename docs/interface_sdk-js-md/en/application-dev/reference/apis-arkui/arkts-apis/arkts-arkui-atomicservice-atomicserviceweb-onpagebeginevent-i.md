@@ -1,6 +1,6 @@
 # OnPageBeginEvent
 
-Represents the callback invoked when the web page loading begins.
+定义网页加载开始时触发该回调。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the callback invoked when the web page loading begins.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+```
+
 ## url
 
 ```TypeScript
 url: string
 ```
 
-The url of page.
+页面的URL地址。
 
 **Type:** string
 

@@ -10,6 +10,12 @@ Returns child class objects specific to the network type.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## dBm
 
 ```TypeScript
@@ -18,7 +24,7 @@ dBm: int
 
 rsrp for LTE and NR; dbm for CDMA and EVDO; rscp for WCDMA; rssi for GSM.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,7 +42,7 @@ signalLevel: int
 
 Obtains the signal level of the current network.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 6
 
@@ -54,7 +60,7 @@ signalType: NetworkType
 
 Obtains the network type corresponding to the signal.
 
-**Type:** NetworkType
+**Type:** [NetworkType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workscheduler-networktype-e.md)
 
 **Since:** 6
 

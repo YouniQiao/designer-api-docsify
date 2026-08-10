@@ -1,15 +1,20 @@
 # getSlotByBundle (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getSlotByBundle
 
 ```TypeScript
 function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<NotificationSlot>
 ```
 
-Obtains a notification slot of a specified application. This API uses a promise to return the result.
+获取指定应用指定类型的通知渠道。使用Promise异步回调。
 
-Before obtaining the notification slot, create a slot through  
-[addSlot]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md#addslot)创建通知渠道。
 
 **Since:** 12
 
@@ -27,30 +32,30 @@ Before obtaining the notification slot, create a slot through
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| slotType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Yes | 渠道类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationSlot&gt; | Promise used to return the result. |
+| Promise&lt;NotificationSlot&gt; | 以Promise形式返回获取指定应用指定类型的通知渠道。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 17700001 | The specified bundle name was not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,10 +80,9 @@ notificationManager.getSlotByBundle(bundle, slotType).then((data: notificationMa
 function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<NotificationSlot|null>
 ```
 
-Obtains a notification slot of a specified application. This API uses a promise to return the result.
+获取指定应用指定类型的通知渠道。使用Promise异步回调。
 
-Before obtaining the notification slot, create a slot through  
-[addSlot]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md#addslot)创建通知渠道。
 
 **Since:** 23
 
@@ -96,26 +100,26 @@ Before obtaining the notification slot, create a slot through
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| slotType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Yes | 渠道类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationSlot \| null&gt; | Promise used to return the result. |
+| Promise&lt;NotificationSlot \| null&gt; | 以Promise形式返回获取指定应用指定类型的通知渠道。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 17700001 | The specified bundle name was not found. |
 

@@ -1,8 +1,8 @@
 # DataPanelShadowOptions
 
-Inherits from [MultiShadowOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and has all properties of **MultiShadowOptions**.
+DataPanelShadowOptions继承自[MultiShadowOptions](../arkts-apis/arkts-arkui-common-multishadowoptions-i.md/arkts-arkui-common-multishadowoptions-i.md)，具有MultiShadowOptions的全部属性。
 
-**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](../arkts-apis/arkts-arkui-component/common-multishadowoptions-i.md)
+**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](../arkts-apis/arkts-arkui-common-multishadowoptions-i.md/arkts-arkui-common-multishadowoptions-i.md)
 
 **Since:** 10
 
@@ -18,15 +18,15 @@ Inherits from [MultiShadowOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and has 
 colors?: Array<ResourceColor | LinearGradient>
 ```
 
-Array of shadow colors for data segments.
+各数据段投影的颜色。
 
-Default value: same as the value of **valueColors**
+默认值：与valueColors值相同
 
-**NOTE**
+**说明：**
 
-If the number of the set shadow colors is less than that of the data segments, the number of the displayed shadow colors is the same as the former.
+若设置的投影颜色的个数少于数据段个数时，则显示的投影颜色的个数和设置的投影颜色个数一致。
 
-If the number of the set shadow colors is greater than that of the data segments, the number of the displayed shadow colors is the same as the latter.
+若设置的投影颜色的个数多于数据段个数时，则显示的投影颜色的个数和数据段个数一致。
 
 **Type:** Array&lt;ResourceColor \| LinearGradient&gt;
 

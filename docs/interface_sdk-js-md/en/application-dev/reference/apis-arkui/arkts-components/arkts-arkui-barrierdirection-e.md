@@ -1,6 +1,6 @@
 # BarrierDirection
 
-Defines the direction of a barrier.
+定义屏障线的方向。
 
 **Since:** 12
 
@@ -13,11 +13,10 @@ Defines the direction of a barrier.
 ## LEFT
 
 ```TypeScript
-LEFT
+LEFT = 0
 ```
 
-The barrier is on the left side of all the referenced components specified by  
-[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最左侧。
 
 **Since:** 12
 
@@ -27,18 +26,17 @@ The barrier is on the left side of all the referenced components specified by
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-LEFT--><!--Device-BarrierDirection-LEFT-End-->
+<!--Device-BarrierDirection-LEFT = 0--><!--Device-BarrierDirection-LEFT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RIGHT
 
 ```TypeScript
-RIGHT
+RIGHT = 1
 ```
 
-The barrier is on the right side of all the referenced components specified by  
-[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最右侧。
 
 **Since:** 12
 
@@ -48,18 +46,17 @@ The barrier is on the right side of all the referenced components specified by
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-RIGHT--><!--Device-BarrierDirection-RIGHT-End-->
+<!--Device-BarrierDirection-RIGHT = 1--><!--Device-BarrierDirection-RIGHT = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
 
 ```TypeScript
-TOP
+TOP = 2
 ```
 
-The barrier is at the top of all the referenced components specified by  
-[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最上方。
 
 **Since:** 12
 
@@ -69,18 +66,17 @@ The barrier is at the top of all the referenced components specified by
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-TOP--><!--Device-BarrierDirection-TOP-End-->
+<!--Device-BarrierDirection-TOP = 2--><!--Device-BarrierDirection-TOP = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM
 
 ```TypeScript
-BOTTOM
+BOTTOM = 3
 ```
 
-The barrier is at the bottom of all the referenced components specified by  
-[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最下方。
 
 **Since:** 12
 
@@ -90,7 +86,7 @@ The barrier is at the bottom of all the referenced components specified by
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-BOTTOM--><!--Device-BarrierDirection-BOTTOM-End-->
+<!--Device-BarrierDirection-BOTTOM = 3--><!--Device-BarrierDirection-BOTTOM = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,6 +1,6 @@
 # ControlCenter
 
-ControlCenter继承自[ControlCenterQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md)。
 
 控制中心类，用于使能相机控制器。
 
@@ -13,6 +13,12 @@ ControlCenter继承自[ControlCenterQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_�
 <!--Device-camera-interface ControlCenter extends ControlCenterQuery--><!--Device-camera-interface ControlCenter extends ControlCenterQuery-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## enableControlCenter
 
@@ -42,5 +48,5 @@ enableControlCenter(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
 

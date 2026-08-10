@@ -1,6 +1,6 @@
 # TouchOptions
 
-Common options for touch operations.
+触摸操作的通用选项。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Common options for touch operations.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## duration
 
 ```TypeScript
 duration?: int
 ```
 
-Duration of the operation in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range: The value should be >= 1500\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Unit: ms\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Default value: 1500
+操作持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Duration of the operation in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Val
 pressure?: double
 ```
 
-The pressure of the touch.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range:[0.0, 1.0]\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Default value: 1.0
+触摸的压力值，取值范围为[0, 1]，包含0和1，默认值为0。取值为null或undefined时按照默认值处理，其他超出取值范围情况时抛出17000007错误码。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ The pressure of the touch.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range:[0.0, 1
 speed?: int
 ```
 
-Speed of touch action.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range:[200, 40000]\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Unit: px/s.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Throws error code 17000007 if negative.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Default value: 600
+操作速度（每秒像素数），取值范围为 200 到 40000。 如果超出范围或为 null 或未定义，则默认设置为 600。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

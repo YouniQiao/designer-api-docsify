@@ -6,11 +6,19 @@
 
 **ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace distributedMissionManager--><!--Device-unnamed-declare namespace distributedMissionManager-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 
@@ -62,8 +70,8 @@
 | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | 注册用于通知迁移结果的回调。 |
 | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | 迁移任务所需的参数。 |
 | [ContinueMissionInfo](arkts-ability-distributedmissionmanager-continuemissioninfo-t-sys.md) | 迁移任务所需的参数。 |
-| [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | 作为可以  [registerMissionListener]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的入参，表示开始同步后，建立的回调函数。 |
-| [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | 可以作为  [registerMissionListener]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的入参，表示注册监听时所需参数的枚举。 |
-| [MissionParameter](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md) | 作为  [startSyncRemoteMissions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的入参，表示同步时所需参数的枚举。 |
+| [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | 作为可以  [registerMissionListener](registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback, callback: AsyncCallback&lt;void&gt;))的入参，表示开始同步后，建立的回调函数。 |
+| [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | 可以作为  [registerMissionListener](registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback, callback: AsyncCallback&lt;void&gt;))的入参，表示注册监听时所需参数的枚举。 |
+| [MissionParameter](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md) | 作为  [startSyncRemoteMissions](startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback&lt;void&gt;))的入参，表示同步时所需参数的枚举。 |
 <!--DelEnd-->
 

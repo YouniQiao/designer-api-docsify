@@ -1,6 +1,6 @@
 # BackgroundTaskSubmode
 
-长时任务子类型。通常与长时任务主类型[BackgroundTaskMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的申请、更新长时任务接口入参，用于指定长时任务类型。
+长时任务子类型。通常与长时任务主类型[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的申请、更新长时任务接口入参，用于指定长时任务类型。
 
 **起始版本：** 21
 
@@ -66,7 +66,7 @@ SUBMODE_LIVE_VIEW_NOTIFICATION = 3
 SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION = 4
 ```
 
-音视频播放，通知类型为普通文本通知。根据实际场景选择是否接入\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+音视频播放，通知类型为普通文本通知。根据实际场景选择是否接入[AVSession](../../../media/avsession/avsession-overview.md)。
 
 **起始版本：** 22
 
@@ -84,7 +84,7 @@ SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION = 4
 SUBMODE_AVSESSION_AUDIO_PLAYBACK = 5
 ```
 
-已接入\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的音视频播放场景，不发送通知。
+已接入[AVSession](../../../media/avsession/avsession-overview.md)的音视频播放场景，不发送通知。
 
 **起始版本：** 22
 

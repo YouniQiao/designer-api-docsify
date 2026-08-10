@@ -4,7 +4,7 @@
 export type GetTextIndexAtCursorCallback = () => int
 ```
 
-The callback of 'getTextIndexAtCursor' event.
+当光标处文本索引变化时触发的回调函数
 
 **Since:** 23
 

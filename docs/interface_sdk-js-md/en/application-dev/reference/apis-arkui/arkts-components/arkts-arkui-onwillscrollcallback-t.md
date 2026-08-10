@@ -23,13 +23,13 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scrollOffset | number | Yes | offset this frame will scroll, which may or may not be reached.  |
-| scrollState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | current scroll state.  |
-| scrollSource | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | source of current scroll.  |
+| scrollOffset | number | Yes | offset this frame will scroll, which may or may not be reached. |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | current scroll state. |
+| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-scrollsource-e.md) | Yes | source of current scroll. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| void \| ScrollResult | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned.  |
+| void \| ScrollResult | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned. |
 

@@ -18,7 +18,7 @@ range: ParticleTuple<TYPE, TYPE>
 
 粒子初始属性值区间，粒子发射器生成粒子的属性值在range区间随机取值。
 
-**说明**
+**说明：**
 
 各项属性的非法输入取默认值，当最大值小于最小值的时候取默认区间。TYPE为number。
 
@@ -34,7 +34,7 @@ range: ParticleTuple<TYPE, TYPE>
 
 5、spin属性：range:[0.0,0.0]，取值范围为[-10000, 10000]，默认值为0.0。
 
-**类型：** ParticleTuple&lt;TYPE, TYPE&gt;
+**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;TYPE, TYPE&gt;
 
 **起始版本：** 10
 
@@ -56,18 +56,18 @@ updater?: ParticleUpdaterOptions<TYPE, UPDATER>
 
 属性变化配置。属性变化类型type有三类：
 
-1、当type为ParticleUpdater.NONE，表示无变化，则config类型为[ParticlePropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
+1、当type为ParticleUpdater.NONE，表示无变化，则config类型为[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)  
 [ParticleUpdater.NONE]。
 
 2、当type为ParticleUpdater.RANDOM，表示变化类型为随机变化，则config类型为  
-[ParticlePropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_[ParticleUpdater.RANDOM]。
+[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。
 
 3、当type为ParticleUpdater.CURVE，表示变化类型为曲线变化，则config类型为  
-[ParticlePropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_[ParticleUpdater.CURVE]
+[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE] 
 
 默认值：type默认为ParticleUpdater.NONE。
 
-**类型：** ParticleUpdaterOptions&lt;TYPE, UPDATER&gt;
+**类型：** [ParticleUpdaterOptions](arkts-arkui-particleupdateroptions-i.md)&lt;TYPE, UPDATER&gt;
 
 **默认值：** {type:UPDATER.NONE;config:ParticlePropertyUpdaterConfigs<UPDATER.NONE>[UPDATER.NONE]}
 

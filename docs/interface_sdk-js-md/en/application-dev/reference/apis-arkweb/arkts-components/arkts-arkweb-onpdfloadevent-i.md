@@ -1,6 +1,6 @@
 # OnPdfLoadEvent
 
-Defines the function triggered when the PDF loading is successful or fails.
+定义PDF加载成功或失败时触发的函数。
 
 **Since:** 20
 
@@ -16,9 +16,9 @@ Defines the function triggered when the PDF loading is successful or fails.
 result: PdfLoadResult
 ```
 
-The PDF page loading result.
+PDF页面加载结果。
 
-**Type:** PdfLoadResult
+**Type:** [PdfLoadResult](../arkts-apis/arkts-arkweb-web-pdfloadresult-e.md)
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ The PDF page loading result.
 url: string
 ```
 
-URL of the page.
+页面的URL地址。
 
 **Type:** string
 

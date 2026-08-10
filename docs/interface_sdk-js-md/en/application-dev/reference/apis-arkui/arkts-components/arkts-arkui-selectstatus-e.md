@@ -1,6 +1,6 @@
 # SelectStatus
 
-Enumerates the selection states of check boxes in the check box group.
+多选框群组的选中状态。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the selection states of check boxes in the check box group.
 All
 ```
 
-All check boxes in the group are selected.
+群组多选框全部被选中。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ All check boxes in the group are selected.
 Part
 ```
 
-Some check boxes in the group are selected.
+群组多选框部分被选中。
 
 **Since:** 8
 
@@ -56,7 +56,7 @@ Some check boxes in the group are selected.
 None
 ```
 
-None of the check boxes in the group are selected.
+群组多选框全部未被选中。
 
 **Since:** 8
 

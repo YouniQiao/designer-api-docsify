@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## parameters
 
 ```TypeScript
@@ -18,7 +24,7 @@ parameters?: Record<string, Object>
 
 根据属性查询实体时的参数。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 26.0.0
 
@@ -40,7 +46,7 @@ queryType: QueryType
 
 查询类型。
 
-**类型：** QueryType
+**类型：** [QueryType](arkts-ability-insightintent-querytype-e.md)
 
 **起始版本：** 26.0.0
 

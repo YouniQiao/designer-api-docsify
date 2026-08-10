@@ -32,7 +32,7 @@ Obtains the ID attached to the end of the path component of the given uri.
 | --- | --- |
 | number | Returns the ID attached to the end of the path component; |
 
-**Example**
+## Examples
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

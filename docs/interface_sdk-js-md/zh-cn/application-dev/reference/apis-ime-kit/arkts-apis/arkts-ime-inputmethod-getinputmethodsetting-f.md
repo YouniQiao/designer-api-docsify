@@ -1,12 +1,18 @@
 # getInputMethodSetting
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## getInputMethodSetting
 
 ```TypeScript
 function getInputMethodSetting(): InputMethodSetting
 ```
 
-获取客户端设置实例[InputMethodSetting]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。
 
 **起始版本：** 8
 
@@ -24,9 +30,9 @@ function getInputMethodSetting(): InputMethodSetting
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前客户端设置实例。 |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | 返回当前客户端设置实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getInputMethodSetting();

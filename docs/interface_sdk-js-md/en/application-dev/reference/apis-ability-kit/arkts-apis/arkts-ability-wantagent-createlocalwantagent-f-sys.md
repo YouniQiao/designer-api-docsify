@@ -1,12 +1,22 @@
 # createLocalWantAgent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
+
 ## createLocalWantAgent
 
 ```TypeScript
 function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 ```
 
-Create a local WantAgent object.The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer.If this WantAgent object is passed across processes,its contained data will be serialized and transmitted to the target process.
+创建本地WantAgent实例。
+
+> **说明：**
+> 本接口创建的本地WantAgent实例仅存储于WantAgent客户端，不受WantAgent服务端管理。使用该本地实例时，需要校验实例，以保证安全性。
+> 本地WantAgent实例创建后，触发方法参见[wantAgent.triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync)接口说明。
 
 **Since:** 20
 
@@ -24,21 +34,21 @@ Create a local WantAgent object.The WantAgent created by this interface stores d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the local WantAgent object to create. |
+| info | [LocalWantAgentInfo](arkts-ability-wantagentinfo-localwantagentinfo-i-sys.md) | Yes | Information about the local WantAgent object to create. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the created WantAgent. |
+| [WantAgent](arkts-ability-wantagent-t.md) | Returns the created WantAgent. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| 202 | Not System App. Interface caller is not a system app. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';

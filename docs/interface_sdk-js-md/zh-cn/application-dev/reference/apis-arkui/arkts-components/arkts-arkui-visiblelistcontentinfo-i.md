@@ -40,7 +40,7 @@ itemGroupArea?: ListItemGroupArea
 
 表示处于ListItemGroup的哪一个区域。
 
-**类型：** ListItemGroupArea
+**类型：** [ListItemGroupArea](../arkts-apis/arkts-arkui-list-listitemgrouparea-e.md)
 
 **起始版本：** 12
 

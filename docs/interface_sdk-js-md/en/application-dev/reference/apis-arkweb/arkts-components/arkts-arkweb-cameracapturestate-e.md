@@ -1,6 +1,6 @@
 # CameraCaptureState
 
-Enumerates the camera capture states.
+定义摄像头使用状态的值。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the camera capture states.
 NONE = 0
 ```
 
-The camera is not working.
+摄像头未工作。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ The camera is not working.
 PAUSED = 1
 ```
 
-The camera is paused.
+摄像头暂停中。
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ The camera is paused.
 ACTIVE = 2
 ```
 
-The camera is active.
+摄像头捕获中。
 
 **Since:** 23
 

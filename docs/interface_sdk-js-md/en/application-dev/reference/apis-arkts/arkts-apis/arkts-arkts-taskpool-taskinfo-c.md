@@ -1,6 +1,6 @@
 # TaskInfo
 
-Describes the internal information about a task.
+任务的内部信息。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the internal information about a task.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## duration
 
 ```TypeScript
 duration?: number
 ```
 
-Duration that the task has been executed, in ms. The default value is **0**. If the return value is **0**, the task is not running. If the return value is empty, no task is running. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 11.
+任务执行至当前所用的时间，默认为0，单位为ms。当返回为0时，表示任务未执行；返回为空时，表示没有任务执行。不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ Duration that the task has been executed, in ms. The default value is **0**. If 
 name: string
 ```
 
-Task name. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 12.
+任务的名字，不建议修改此值。&lt;br/&gt;从API version 12开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ Task name. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0
 state: State
 ```
 
-Task state. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 11.
+任务的状态。state标识任务的当前状态，不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
-**Type:** State
+**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **Default:** State::WAITING
 
@@ -78,7 +84,7 @@ Task state. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_
 taskId: number
 ```
 
-Task ID, which is globally unique by default. You are advised not to change the value.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API can be used in atomic services since API version 11.
+任务的ID。任务的标识符，系统默认提供全局唯一值，不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 

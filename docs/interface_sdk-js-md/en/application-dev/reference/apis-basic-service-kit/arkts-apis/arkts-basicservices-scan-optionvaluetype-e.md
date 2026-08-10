@@ -1,6 +1,6 @@
 # OptionValueType
 
-Enumerates the option value types.
+定义选项值类型的枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the option value types.
 SCAN_TYPE_BOOL = 0
 ```
 
-Boolean.
+布尔类型。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Boolean.
 SCAN_TYPE_INT = 1
 ```
 
-Integer.
+整数类型。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ Integer.
 SCAN_TYPE_FIXED = 2
 ```
 
-Fixed-point number.
+定点数类型。
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ Fixed-point number.
 SCAN_TYPE_STRING = 3
 ```
 
-String.
+字符串类型。
 
 **Since:** 20
 

@@ -6,9 +6,9 @@
 const ADDRESS_SANITIZER: string
 ```
 
-Application address sanitizer event. This is a system event name constant.
+应用地址越界事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 12.
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **Since:** 12
 
@@ -26,9 +26,9 @@ Application address sanitizer event. This is a system event name constant.
 const APP_CRASH: string
 ```
 
-Application crash event. This is a system event name constant.
+应用崩溃事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **Since:** 11
 
@@ -46,9 +46,9 @@ Application crash event. This is a system event name constant.
 const APP_FREEZE: string
 ```
 
-Application freeze event. This is a system event name constant.
+应用冻屏事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **Since:** 11
 
@@ -66,9 +66,9 @@ Application freeze event. This is a system event name constant.
 const APP_HICOLLIE: string
 ```
 
-Application task execution timeout event. This is a system event name constant.
+应用任务执行超时事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 21.
+**原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。
 
 **Since:** 21
 
@@ -86,9 +86,9 @@ Application task execution timeout event. This is a system event name constant.
 const APP_KILLED: string
 ```
 
-Application killed event. This is a system event name constant.
+应用终止事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 20.
+**原子化服务API：** 从API version 20开始，该参数支持在原子化服务中使用。
 
 **Since:** 20
 
@@ -106,9 +106,9 @@ Application killed event. This is a system event name constant.
 const APP_LAUNCH: string
 ```
 
-Event indicating the application launch duration. This is a system event name constant.
+应用启动耗时事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 12.
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **Since:** 12
 
@@ -126,9 +126,9 @@ Event indicating the application launch duration. This is a system event name co
 const AUDIO_JANK_FRAME: string
 ```
 
-Audio jank event. This is a system event name constant.
+应用音频卡顿事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 21.
+**原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。
 
 **Since:** 21
 
@@ -146,9 +146,9 @@ Audio jank event. This is a system event name constant.
 const BATTERY_USAGE: string
 ```
 
-Event indicating battery usage statistics. This is a system event name constant.
+应用24h功耗器件分解统计事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 12.
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **Since:** 12
 
@@ -166,9 +166,9 @@ Event indicating battery usage statistics. This is a system event name constant.
 const CPU_USAGE_HIGH: string
 ```
 
-Event indicating a high CPU usage. This is a system event name constant.
+应用CPU高负载事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 12.
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **Since:** 12
 
@@ -186,9 +186,9 @@ Event indicating a high CPU usage. This is a system event name constant.
 const DISTRIBUTED_SERVICE_START: string
 ```
 
-Distributed service startup event. This is a reserved application event name constant.
+分布式服务启动事件。预留的应用事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **Since:** 9
 
@@ -206,9 +206,9 @@ Distributed service startup event. This is a reserved application event name con
 const MAIN_THREAD_JANK: string
 ```
 
-Main thread jank event. This is a system event name constant.
+应用主线程超时事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 12.
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **Since:** 12
 
@@ -226,9 +226,9 @@ Main thread jank event. This is a system event name constant.
 const RESOURCE_OVERLIMIT: string
 ```
 
-Application resource leak event. This is a system event name constant.
+应用资源泄漏事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 12.
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **Since:** 12
 
@@ -246,9 +246,9 @@ Application resource leak event. This is a system event name constant.
 const SCROLL_ARKWEB_FLING_JANK: string
 ```
 
-ArkWeb fling jank event. This is a system event name constant.
+ArkWeb抛滑丢帧事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 23.
+**原子化服务API：** 从API version 23开始，该参数支持在原子化服务中使用。
 
 **Since:** 23
 
@@ -266,9 +266,9 @@ ArkWeb fling jank event. This is a system event name constant.
 const SCROLL_JANK: string
 ```
 
-Event indicating frame loss during swiping. This is a system event name constant.
+应用滑动丢帧事件。系统事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 12.
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **Since:** 12
 
@@ -286,9 +286,9 @@ Event indicating frame loss during swiping. This is a system event name constant
 const USER_LOGIN: string
 ```
 
-User login event. This is a reserved application event name constant.
+用户登录事件。预留的应用事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **Since:** 9
 
@@ -306,9 +306,9 @@ User login event. This is a reserved application event name constant.
 const USER_LOGOUT: string
 ```
 
-User logout event. This is a reserved application event name constant.
+用户登出事件。预留的应用事件名称常量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **Since:** 9
 
@@ -326,10 +326,13 @@ User logout event. This is a reserved application event name constant.
 const appFreezeWarning: string
 ```
 
-Application freeze warning event. This is a system event name constant.
+应用冻屏告警事件。系统事件名称常量。
 
-**Model restriction**: This API can be used only in the stage model.  
-**Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **Since:** 26.0.0
 

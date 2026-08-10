@@ -14,6 +14,12 @@ Describes the spp parameters.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## secure
 
 ```TypeScript
@@ -42,9 +48,9 @@ Indicates secure channel or not
 type: SppType
 ```
 
-Spp link type \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+Spp link type {@link SppType}
 
-**Type:** SppType
+**Type:** [SppType](arkts-connectivity-socket-spptype-e.md)
 
 **Since:** 8
 

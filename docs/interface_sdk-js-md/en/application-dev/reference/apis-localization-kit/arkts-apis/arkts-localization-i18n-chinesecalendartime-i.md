@@ -1,6 +1,6 @@
 # ChineseCalendarTime
 
-Represents chinese calendar time element for the ChineseCalendar object.
+农历时间对象。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,21 @@ Represents chinese calendar time element for the ChineseCalendar object.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## cyclicalYear
 
 ```TypeScript
 cyclicalYear: int
 ```
 
-The cyclical year of date.If you need to convert between the chinese calendar and the Gregorian calendar,the year range must be set from 1 to 60.The value range is all integers.
+农历的干支年。
+
+取值范围：[1, 60]。
 
 **Type:** int
 
@@ -38,7 +46,7 @@ The cyclical year of date.If you need to convert between the chinese calendar an
 date: int
 ```
 
-Date of the chinese calendar time.
+农历的日。
 
 **Type:** int
 
@@ -60,7 +68,9 @@ Date of the chinese calendar time.
 gregorianYear: int
 ```
 
-The gregorian year of date.If you need to convert between the chinese calendar and the Gregorian calendar,the year range must be set from 1900 to 2100.
+公历的年。
+
+取值范围：[1900, 2100]。
 
 **Type:** int
 
@@ -82,7 +92,7 @@ The gregorian year of date.If you need to convert between the chinese calendar a
 hour?: int
 ```
 
-Hour of the chinese calendar time.
+农历的时。默认值：0。
 
 **Type:** int
 
@@ -104,7 +114,7 @@ Hour of the chinese calendar time.
 isLeapMonth?: boolean
 ```
 
-Determines whether the input month is a leap month.
+是否是闰月。默认值：false。
 
 **Type:** boolean
 
@@ -126,7 +136,7 @@ Determines whether the input month is a leap month.
 minute?: int
 ```
 
-Minute of the chinese calendar time.
+农历的分。默认值：0。
 
 **Type:** int
 
@@ -148,7 +158,11 @@ Minute of the chinese calendar time.
 month: int
 ```
 
-Month of the chinese calendar time. Note: The month starts from 0. For example, 0 indicates January.
+农历的月。
+
+**说明：**
+
+月份从0开始计数，0表示一月。
 
 **Type:** int
 
@@ -170,7 +184,7 @@ Month of the chinese calendar time. Note: The month starts from 0. For example, 
 second?: int
 ```
 
-Second of the chinese calendar time.
+农历的秒。默认值：0。
 
 **Type:** int
 

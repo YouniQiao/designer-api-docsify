@@ -1,5 +1,11 @@
 # setAbilityFileTypesForSelf（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setAbilityFileTypesForSelf
 
 ```TypeScript
@@ -26,19 +32,19 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 表示模块的名称。 |
 | abilityName | string | 是 | 表示UIAbility组件的名称。 |
-| fileTypes | Array&lt;string&gt; | 是 | 表示文件类型。fileTypes数组长度不能超过1024，每个元素不能超过512个字符，元素取值为 [UniformDataType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中的值，元素不能为空、通配符、 general.object。 |
+| fileTypes | Array&lt;string&gt; | 是 | 表示文件类型。fileTypes数组长度不能超过1024，每个元素不能超过512个字符，元素取值为 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中的值，元素不能为空、通配符、 general.object。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not found. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
-| [17700351](../errorcode-bundle.md#17700351-无效的文件类型) | Invalid fileTypes. Possible causes: 1. The array length exceeds 1024; 2. The array contains an empty item; 3. An item exceeds 512 characters; 4. The array contains wildcard or general.object. |
+| 17700351 | Invalid fileTypes. Possible causes: 1. The array length exceeds 1024; 2. The array contains an empty item; 3. An item exceeds 512 characters; 4. The array contains wildcard or general.object. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700002 | The specified moduleName is not found. |
+| 17700003 | The specified abilityName is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

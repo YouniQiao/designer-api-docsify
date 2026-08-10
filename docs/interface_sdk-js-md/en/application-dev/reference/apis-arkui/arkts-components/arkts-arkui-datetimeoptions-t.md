@@ -4,7 +4,7 @@
 declare type DateTimeOptions = import('../api/@ohos.intl').default.DateTimeOptions
 ```
 
-Defines the options for a **DateTimeOptions** object.
+时间、日期格式化时可设置的配置项。
 
 **Since:** 12
 

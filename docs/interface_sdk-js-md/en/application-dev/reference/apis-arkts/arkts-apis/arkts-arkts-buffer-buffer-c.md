@@ -1,6 +1,6 @@
 # Buffer
 
-The Buffer object is a method of handling buffers dedicated to binary data.
+Buffer对象是处理二进制数据的缓冲区。
 
 **Since:** 9
 
@@ -9,6 +9,12 @@ The Buffer object is a method of handling buffers dedicated to binary data.
 <!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
+
+## Modules to Import
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
 
 ## compare
 
@@ -22,7 +28,7 @@ compare(
     ): -1 | 0 | 1
 ```
 
-Compares this **Buffer** object with another object.
+比较当前Buffer对象与目标Buffer对象，并返回Buffer在排序中的结果。
 
 **Since:** 9
 
@@ -38,25 +44,25 @@ Compares this **Buffer** object with another object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | Target **Buffer** object to compare. |
-| targetStart | number | No | Offset to the start of the data to compare in the target **Buffer** object. The default value is **0**. |
-| targetEnd | number | No | Offset to the end of the data to compare in the target **Buffer** object (not inclusive). The default value is the length of the target **Buffer** object. |
-| sourceStart | number | No | Offset to the start of the data to compare in this **Buffer** object. The default value is **0**. |
-| sourceEnd | number | No | Offset to the end of the data to compare in this **Buffer** object (not inclusive ). The default value is the length of this **Buffer** object. |
+| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 要比较的实例对象。 |
+| targetStart | number | No | target实例中开始的偏移量。默认值：0。 |
+| targetEnd | number | No | target实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。 |
+| sourceStart | number | No | this实例中开始的偏移量。默认值：0。 |
+| sourceEnd | number | No | this实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same ; **1** is returned if this object comes after the target object when sorted; **-1** is returned if this object comes before the target object when sorted. |
+| -1 | 比较结果。如果两个Buffer对象相同，则返回0；如果当前对象在排序时位于目标对象之后，则返回1； 如果当前对象在排序时位于目标对象之前，则返回-1。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| 10200001 | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -84,7 +90,7 @@ compare(
     ): int
 ```
 
-Compares buf with target and returns a number indicating whether buf comes before, after,or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each Buffer.
+比较当前Buffer对象与目标Buffer对象，并返回Buffer在排序中的结果。
 
 **Since:** 23
 
@@ -100,23 +106,23 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | The buffer to compare with this buffer |
-| targetStart | int | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
-| targetEnd | int | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
-| sourceStart | int | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
-| sourceEnd | int | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to end comparison (not inclusive) |
+| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 要比较的实例对象。 |
+| targetStart | int | No | `target`实例中开始的偏移量。默认值：0。 |
+| targetEnd | int | No | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。 |
+| sourceStart | int | No | `this`实例中开始的偏移量。默认值：0。 |
+| sourceEnd | int | No | `this`实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | number is returned if target is the same as buf |
+| int | 返回比较结果。-1：当前排列在目标前，0：当前与目标相同，1：当前排列在目标后。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| 10200001 | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
 ## copy
 
@@ -130,8 +136,7 @@ ArkTS-Sta:
 copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int
 ```
 
-Copies data at the specified position in this **Buffer** object to the specified position in another **Buffer**  
-object.
+将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
 
 **Since:** 9
 
@@ -147,24 +152,24 @@ object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | Buffer** or **Uint8Array** object to which data is copied. |
-| targetStart | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the start position in the target object where data is copied. The default value is **0**. |
-| sourceStart | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is copied. The default value is **0**. |
-| sourceEnd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 要复制到的Buffer或Uint8Array实例。 |
+| targetStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | `target`实例中开始写入的偏移量。默认值：0。 |
+| sourceStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | `this`实例中开始复制的偏移量。默认值: 0。 |
+| sourceEnd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Total length of the data copied, in bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 复制的字节总长度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
+| 10200001 | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -193,7 +198,7 @@ ArkTS-Sta:
 entries(): IterableIterator<[int, long]>
 ```
 
-Creates and returns an iterator that contains key-value pairs of this **Buffer** object.
+返回一个包含key和value的迭代器。
 
 **Since:** 9
 
@@ -209,10 +214,10 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of the number type.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 9 - 10 |
-| ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[number, number]&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;[int, long]&gt; | \_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**Applicable version:** 9 - 10 |
+| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, long]&gt; | <br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -229,7 +234,7 @@ while (!next.done) {
            buffer: 3,102
            buffer: 4,101
            buffer: 5,114
-  */
+   */
   next = pair.next();
 }
 ```
@@ -240,7 +245,7 @@ while (!next.done) {
 equals(otherBuffer: Uint8Array | Buffer): boolean
 ```
 
-Checks whether this **Buffer** object is the same as another **Buffer** object.
+比较`this`实例和otherBuffer实例是否相等。
 
 **Since:** 9
 
@@ -256,15 +261,15 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| Buffer | Yes | Buffer** object to compare. |
+| otherBuffer | Uint8Array \| Buffer | Yes | 比较的目标对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the two objects are the same; otherwise, **false** is returned. |
+| boolean | 相等则返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -301,7 +306,7 @@ fill(
     ): Buffer
 ```
 
-Fills this **Buffer** object at the specified position. By default, data is filled cyclically.
+使用value填充当前对象指定位置的数据，默认为循环填充，并返回填充后的Buffer对象。
 
 **Since:** 9
 
@@ -317,22 +322,22 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| Buffer \| Uint8Array \| number \| number \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| Buffer \| Uint8Array \| int \| double \| long | Yes | Value to fill.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is filled. The default value is **0**. |
-| end | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| value | ArkTS-Dyn: string \| Buffer \| Uint8Array \| number \| number \| number  <br>ArkTS-Sta：string \| Buffer \| Uint8Array \| int \| double \| long | Yes | 用于填充的值。<br>**Since:** 11 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 起始偏移量。默认值：0。 |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Buffer** object filled with the specified value. |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回填充后的Buffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/end]" is out of range. It must be >= 0 and <= [right range]. Received value is: [offset/end] |
+| 10200001 | The value of "[offset/end]" is out of range. It must be >= 0 and <= [right range]. Received value is: [offset/end] |
 
 ## includes
 
@@ -346,7 +351,7 @@ ArkTS-Sta:
 includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean
 ```
 
-Checks whether this **Buffer** object contains the specified value.
+检查Buffer对象是否包含value值。
 
 **Since:** 9
 
@@ -362,15 +367,15 @@ Checks whether this **Buffer** object contains the specified value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| byteOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | 要搜索的内容。<br>**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the object contains the specified value; otherwise, **false** is returned. |
+| boolean | 存在返回true，否则返回false。 |
 
 ## indexOf
 
@@ -384,8 +389,7 @@ ArkTS-Sta:
 indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int
 ```
 
-Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found,  
-**-1** is returned.
+返回当前对象中首次出现value的索引，如果不包含value，则返回-1。
 
 **Since:** 9
 
@@ -401,15 +405,15 @@ Obtains the index of the first occurrence of the specified value in this **Buffe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| byteOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | 要查找的内容。<br>**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Index obtained. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 第一次出现位置。 |
 
 ## keys
 
@@ -423,7 +427,7 @@ ArkTS-Sta:
 keys(): IterableIterator<int>
 ```
 
-Creates and returns an iterator that contains the keys of this **Buffer** object.
+返回包含key值的迭代器。
 
 **Since:** 9
 
@@ -439,9 +443,9 @@ Creates and returns an iterator that contains the keys of this **Buffer** object
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Iterator created. |
+| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | 返回一个包含key值的迭代器。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -458,7 +462,7 @@ Output: 0
         3
         4
         5
-*/
+ */
 ```
 
 ## lastIndexOf
@@ -473,8 +477,7 @@ ArkTS-Sta:
 lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int
 ```
 
-Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found,  
-**-1** is returned.
+返回this实例中最后一次出现value的索引，如果对象不包含value，则返回-1。
 
 **Since:** 9
 
@@ -490,15 +493,15 @@ Obtains the index of the last occurrence of the specified value in this **Buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
-| byteOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is the length of this **Buffer** object. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | 要搜索的内容。<br>**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：Buffer.length。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Index obtained. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 最后一次出现value值的索引。 |
 
 ## readBigInt64BE
 
@@ -512,7 +515,7 @@ ArkTS-Sta:
 readBigInt64BE(offset?: int): bigint
 ```
 
-Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取有符号的大端序64位整数。
 
 **Since:** 9
 
@@ -528,21 +531,21 @@ Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | Data read. |
+| bigint | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -570,7 +573,7 @@ ArkTS-Sta:
 readBigInt64LE(offset?: int): bigint
 ```
 
-Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取有符号的小端序64位整数。
 
 **Since:** 9
 
@@ -586,21 +589,21 @@ Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | Data read. |
+| bigint | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -628,7 +631,7 @@ ArkTS-Sta:
 readBigUInt64BE(offset?: int): bigint
 ```
 
-Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取无符号的大端序64位整数。
 
 **Since:** 9
 
@@ -644,21 +647,21 @@ Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | Data read. |
+| bigint | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -685,7 +688,7 @@ ArkTS-Sta:
 readBigUInt64LE(offset?: int): bigint
 ```
 
-Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取无符号的小端序64位整数。
 
 **Since:** 9
 
@@ -701,21 +704,21 @@ Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | Data read. |
+| bigint | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -743,7 +746,7 @@ ArkTS-Sta:
 readDoubleBE(offset?: int): double
 ```
 
-Reads a 64-bit, big-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
+从指定的`offset`处读取64位大端序双精度值。
 
 **Since:** 9
 
@@ -759,21 +762,21 @@ Reads a 64-bit, big-endian, double-precision floating-point number from this **B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -799,7 +802,7 @@ ArkTS-Sta:
 readDoubleLE(offset?: int): double
 ```
 
-Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
+从指定的`offset`处读取64位小端序双精度值。
 
 **Since:** 9
 
@@ -815,21 +818,21 @@ Reads a 64-bit, little-endian, double-precision floating-point number from this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -855,7 +858,7 @@ ArkTS-Sta:
 readFloatBE(offset?: int): double
 ```
 
-Reads a 32-bit, big-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
+从指定的`offset`处读取32位大端序浮点数。
 
 **Since:** 9
 
@@ -871,21 +874,21 @@ Reads a 32-bit, big-endian, single-precision floating-point number from this **B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -911,7 +914,7 @@ ArkTS-Sta:
 readFloatLE(offset?: int): double
 ```
 
-Reads a 32-bit, little-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
+从指定的`offset`处读取32位小端序浮点数。
 
 **Since:** 9
 
@@ -927,21 +930,21 @@ Reads a 32-bit, little-endian, single-precision floating-point number from this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -967,7 +970,7 @@ ArkTS-Sta:
 readInt16BE(offset?: int): long
 ```
 
-Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取有符号的大端序16位整数。
 
 **Since:** 9
 
@@ -983,21 +986,21 @@ Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 2，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1023,7 +1026,7 @@ ArkTS-Sta:
 readInt16LE(offset?: int): long
 ```
 
-Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取有符号的小端序16位整数。
 
 **Since:** 9
 
@@ -1039,21 +1042,21 @@ Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 2，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1079,7 +1082,7 @@ ArkTS-Sta:
 readInt32BE(offset?: int): long
 ```
 
-Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取有符号的大端序32位整数。
 
 **Since:** 9
 
@@ -1095,21 +1098,21 @@ Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1135,7 +1138,7 @@ ArkTS-Sta:
 readInt32LE(offset?: int): long
 ```
 
-Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取有符号的小端序32位整数。
 
 **Since:** 9
 
@@ -1151,21 +1154,21 @@ Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1191,7 +1194,7 @@ ArkTS-Sta:
 readInt8(offset?: int): long
 ```
 
-Reads an 8-bit signed integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取有符号的8位整数。
 
 **Since:** 9
 
@@ -1207,21 +1210,21 @@ Reads an 8-bit signed integer from this **Buffer** object at the specified offse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 1，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1249,7 +1252,7 @@ ArkTS-Sta:
 readIntBE(offset: int, byteLength: int): long
 ```
 
-Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as a big-endian, two's complement signed value that supports up to 48 bits of precision.
+从指定的`offset`处读取byteLength个字节，并将结果解释为支持最高48位精度的大端序、二进制补码有符号值。
 
 **Since:** 9
 
@@ -1265,22 +1268,22 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
-| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取的内容。当offset为小数时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1307,7 +1310,7 @@ ArkTS-Sta:
 readIntLE(offset: int, byteLength: int): long
 ```
 
-Reads the specified number of bytes from this **Buffer** object at the specified offset and interprets the result as a little-endian, two's complement signed value that supports up to 48 bits of precision.
+从指定的`offset`处读取`byteLength`个字节，并将结果解释为支持最高48位精度的小端序、二进制补码有符号值。
 
 **Since:** 9
 
@@ -1323,22 +1326,22 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
-| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。当offset为小数时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1364,7 +1367,7 @@ ArkTS-Sta:
 readUInt16BE(offset?: int): long
 ```
 
-Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
+从指定的`offset`处读取无符号的大端序16位整数。
 
 **Since:** 9
 
@@ -1380,21 +1383,21 @@ Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 2，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1422,7 +1425,7 @@ ArkTS-Sta:
 readUInt16LE(offset?: int): long
 ```
 
-Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
+从指定的`offset`处的buf读取无符号的小端序16位整数。
 
 **Since:** 9
 
@@ -1438,21 +1441,21 @@ Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 2，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1480,7 +1483,7 @@ ArkTS-Sta:
 readUInt32BE(offset?: int): long
 ```
 
-Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
+从指定的`offset`处的buf读取无符号的大端序32位整数。
 
 **Since:** 9
 
@@ -1496,21 +1499,21 @@ Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1536,7 +1539,7 @@ ArkTS-Sta:
 readUInt32LE(offset?: int): long
 ```
 
-Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
+从指定的`offset`处的buf读取无符号的小端序32位整数。
 
 **Since:** 9
 
@@ -1552,21 +1555,21 @@ Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1592,7 +1595,7 @@ ArkTS-Sta:
 readUInt8(offset?: int): long
 ```
 
-Reads an 8-bit unsigned integer from this **Buffer** object at the specified offset.
+从`offset`处读取8位无符号整型数。
 
 **Since:** 9
 
@@ -1608,21 +1611,21 @@ Reads an 8-bit unsigned integer from this **Buffer** object at the specified off
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 1，默认值：0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1650,7 +1653,7 @@ ArkTS-Sta:
 readUIntBE(offset: int, byteLength: int): long
 ```
 
-Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, big-endian integer that supports up to 48 bits of precision.
+从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
 
 **Since:** 9
 
@@ -1666,22 +1669,22 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
-| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要读取的字节数。读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。当offset为小数时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1707,7 +1710,7 @@ ArkTS-Sta:
 readUIntLE(offset: int, byteLength: int): long
 ```
 
-Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, little-endian integer that supports up to 48 bits of precision.
+从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号小端序整数。
 
 **Since:** 9
 
@@ -1723,22 +1726,22 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
-| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。当offset为小数时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1764,7 +1767,7 @@ ArkTS-Sta:
 subarray(start?: int, end?: int): Buffer
 ```
 
-Truncates this **Buffer** object from the specified position to create a new **Buffer** object.
+截取当前对象指定位置的数据并返回。
 
 **Since:** 9
 
@@ -1780,16 +1783,16 @@ Truncates this **Buffer** object from the specified position to create a new **B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is truncated. The default value is **0**. |
-| end | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 截取开始位置。默认值：0。 |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 截取结束位置（不包含结束位置）。默认值：当前对象的字节长度。在传入null时返回空Buffer。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回新的Buffer对象。当start < 0或end < 0时返回空Buffer。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1810,7 +1813,7 @@ console.info(buf2.toString('ascii', 0, buf2.length));
 swap16(): Buffer
 ```
 
-Converts this **Buffer** object into an array of unsigned 16-bit integers and swaps the byte order in place.
+将当前对象转换为无符号的16位整数数组，并交换字节顺序。
 
 **Since:** 9
 
@@ -1826,15 +1829,15 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Buffer** object swapped. |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 交换之后的Buffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 16-bits |
+| 10200009 | The buffer size must be a multiple of 16-bits |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1853,7 +1856,7 @@ console.info(buf1.toString('hex'));
 swap32(): Buffer
 ```
 
-Converts this **Buffer** object into an array of unsigned 32-bit integers and swaps the byte order in place.
+将当前对象转换为无符号的32位整数数组，并交换字节顺序。
 
 **Since:** 9
 
@@ -1869,15 +1872,15 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Buffer** object swapped. |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 交换之后的Buffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 32-bits |
+| 10200009 | The buffer size must be a multiple of 32-bits |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1896,7 +1899,7 @@ console.info(buf1.toString('hex'));
 swap64(): Buffer
 ```
 
-Converts this **Buffer** object into an array of unsigned 64-bit integers and swaps the byte order in place.
+将当前对象转换为无符号的64位整数数组，并交换字节顺序。
 
 **Since:** 9
 
@@ -1912,15 +1915,15 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Buffer** object swapped. |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 交换之后的Buffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 64-bits |
+| 10200009 | The buffer size must be a multiple of 64-bits |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1939,7 +1942,7 @@ console.info(buf1.toString('hex'));
 toJSON(): Object
 ```
 
-Converts this **Buffer** object into a JSON object.
+将Buffer转为JSON并返回。
 
 **Since:** 9
 
@@ -1955,9 +1958,9 @@ Converts this **Buffer** object into a JSON object.
 
 | Type | Description |
 | --- | --- |
-| Object | JSON object. |
+| Object | JSON对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1974,7 +1977,7 @@ console.info(JSON.stringify(obj));
 toJSON(): jsonx.JsonElement
 ```
 
-Converts this Buffer instance into a JsonElement.
+将此Buffer实例转换为JsonElement。
 
 **Since:** 23
 
@@ -1990,7 +1993,7 @@ Converts this Buffer instance into a JsonElement.
 
 | Type | Description |
 | --- | --- |
-| jsonx.JsonElement | A new JsonElement containing the Buffer |
+| jsonx.JsonElement | 新的JsonElement对象，包含此Buffer的内容。 |
 
 ## toString
 
@@ -1998,7 +2001,7 @@ Converts this Buffer instance into a JsonElement.
 toString(encoding?: string, start?: number, end?: number): string
 ```
 
-Converts the data at the specified position in this **Buffer** object into a string in the specified encoding format.
+将当前对象中指定位置的数据转成指定编码格式的字符串并返回。
 
 **Since:** 9
 
@@ -2014,17 +2017,17 @@ Converts the data at the specified position in this **Buffer** object into a str
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
-| start | number | No | Offset to the start position of the data to convert. The default value is **0**. |
-| end | number | No | Offset to the end position of data. The default value is the length of this **Buffer** object. |
+| encoding | string | No | 字符编码格式。默认值：'utf8'。 |
+| start | number | No | 开始位置。默认值：0。 |
+| end | number | No | 结束位置。默认值：Buffer.length。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | String. When the value of **start** is greater than or equal to **Buffer.length** or **start** is greater than **end**, an empty string is returned. |
+| string | 字符串。当start >= Buffer.length或start > end时返回空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2043,7 +2046,7 @@ console.info(buf1.toString('utf-8'));
 toString(): string
 ```
 
-Decodes buf to a string according to the specified character encoding in encoding
+按照encoding指定的字符编码将buf解码为字符串。
 
 **Since:** 24
 
@@ -2061,7 +2064,7 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | 解码后的字符串。 |
 
 ## toString
 
@@ -2069,7 +2072,7 @@ Decodes buf to a string according to the specified character encoding in encodin
 toString(encoding?: BufferEncoding, start?: int, end?: int): string
 ```
 
-Decodes buf to a string according to the specified character encoding in encoding
+按照encoding指定的字符编码将buf解码为字符串。
 
 **Since:** 23
 
@@ -2087,15 +2090,15 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | encoding [encoding='utf8'] The character encoding to use |
-| start | int | No | start [start = 0] The byte offset to start decoding at The value should be an integer. |
-| end | int | No | end [end = buf.length] The byte offset to stop decoding at (not inclusive) The value should be an integer. |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] 使用的字符编码。 |
+| start | int | No | start [start = 0] 开始解码的字节偏移量。 该值应为整数。 |
+| end | int | No | end [end = buf.length] 结束解码的字节偏移量（不包含结束位置）。 该值应为整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | 解码后的字符串。 |
 
 ## values
 
@@ -2109,7 +2112,7 @@ ArkTS-Sta:
 values(): IterableIterator<long>
 ```
 
-Creates and returns an iterator that contains the values of this **Buffer** object.
+返回一个包含value的迭代器。
 
 **Since:** 9
 
@@ -2125,9 +2128,9 @@ Creates and returns an iterator that contains the values of this **Buffer** obje
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long&gt; | Iterator. |
+| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;long&gt; | 迭代器。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2144,7 +2147,7 @@ while (!next.done) {
            102
            101
            114
-  */
+   */
   next = pair.next();
 }
 ```
@@ -2161,7 +2164,7 @@ ArkTS-Sta:
 write(str: string, offset?: int, length?: int, encoding?: string): int
 ```
 
-Writes a string of the specified length to this **Buffer** object at the specified position in the given encoding format.
+在Buffer对象的offset偏移处写入指定编码的字符串，写入的字节长度为length。
 
 **Since:** 9
 
@@ -2177,24 +2180,24 @@ Writes a string of the specified length to this **Buffer** object at the specifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| str | string | Yes | String to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Maximum number of bytes to write. The default value is **Buffer.length** minus **offset**. |
-| encoding | string | No | Encoding format of the string. The default value is **'utf8'**. |
+| str | string | Yes | 要写入Buffer的字符串。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。 |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 最大字节长度。默认值：（Buffer.length - offset）。 |
+| encoding | string | No | 字符编码。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of bytes written. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/length]" is out of range. It must be >= 0 and <= buf.length. Received value is: [offset/length] |
+| 10200001 | The value of "[offset/length]" is out of range. It must be >= 0 and <= buf.length. Received value is: [offset/length] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2222,7 +2225,7 @@ ArkTS-Sta:
 writeBigInt64BE(value: bigint, offset?: int): int
 ```
 
-Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入有符号的大端序64位BigInt型数据。
 
 **Since:** 9
 
@@ -2238,22 +2241,22 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| value | bigint | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2276,7 +2279,7 @@ ArkTS-Sta:
 writeBigInt64LE(value: bigint, offset?: int): int
 ```
 
-Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入有符号的小端序64位BigInt型数据。
 
 **Since:** 9
 
@@ -2292,22 +2295,22 @@ Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| value | bigint | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2330,7 +2333,7 @@ ArkTS-Sta:
 writeBigUInt64BE(value: bigint, offset?: int): int
 ```
 
-Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入无符号的大端序64位BigUInt型数据。
 
 **Since:** 9
 
@@ -2346,22 +2349,22 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| value | bigint | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2384,7 +2387,7 @@ ArkTS-Sta:
 writeBigUInt64LE(value: bigint, offset?: int): int
 ```
 
-Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入无符号的小端序64位BigUInt型数据。
 
 **Since:** 9
 
@@ -2400,22 +2403,22 @@ Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| value | bigint | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2438,7 +2441,7 @@ ArkTS-Sta:
 writeDoubleBE(value: double, offset?: int): int
 ```
 
-Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入大端序的64位双浮点型数据。
 
 **Since:** 9
 
@@ -2454,22 +2457,22 @@ Writes a 64-bit, big-endian, double-precision floating-point number to this **Bu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2492,7 +2495,7 @@ ArkTS-Sta:
 writeDoubleLE(value: double, offset?: int): int
 ```
 
-Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入小端序的64位双浮点型数据。
 
 **Since:** 9
 
@@ -2508,22 +2511,22 @@ Writes a 64-bit, little-endian, double-precision floating-point number to this *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2546,7 +2549,7 @@ ArkTS-Sta:
 writeFloatBE(value: double, offset?: int): int
 ```
 
-Writes a 32-bit, big-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入大端序的32位浮点型数据。
 
 **Since:** 9
 
@@ -2562,22 +2565,22 @@ Writes a 32-bit, big-endian, single-precision floating-point number to this **Bu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2600,7 +2603,7 @@ ArkTS-Sta:
 writeFloatLE(value: double, offset?: int): int
 ```
 
-Writes a 32-bit, little-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入小端序的32位浮点型数据。
 
 **Since:** 9
 
@@ -2616,22 +2619,22 @@ Writes a 32-bit, little-endian, single-precision floating-point number to this *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2654,7 +2657,7 @@ ArkTS-Sta:
 writeInt16BE(value: long, offset?: int): int
 ```
 
-Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入大端序的16位有符号整型数据。
 
 **Since:** 9
 
@@ -2670,22 +2673,22 @@ Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2708,7 +2711,7 @@ ArkTS-Sta:
 writeInt16LE(value: long, offset?: int): int
 ```
 
-Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入小端序的16位有符号整型数据。
 
 **Since:** 9
 
@@ -2724,22 +2727,22 @@ Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2762,7 +2765,7 @@ ArkTS-Sta:
 writeInt32BE(value: long, offset?: int): int
 ```
 
-Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入大端序的32位有符号整型数据。
 
 **Since:** 9
 
@@ -2778,22 +2781,22 @@ Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2816,7 +2819,7 @@ ArkTS-Sta:
 writeInt32LE(value: long, offset?: int): int
 ```
 
-Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入小端序的32位有符号整型数据。
 
 **Since:** 9
 
@@ -2832,22 +2835,22 @@ Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2870,7 +2873,7 @@ ArkTS-Sta:
 writeInt8(value: long, offset?: int): int
 ```
 
-Writes an 8-bit signed integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入8位有符号整型数据。
 
 **Since:** 9
 
@@ -2886,22 +2889,22 @@ Writes an 8-bit signed integer to this **Buffer** object at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2927,7 +2930,7 @@ ArkTS-Sta:
 writeIntBE(value: long, offset: int, byteLength: int): int
 ```
 
-Writes a big-endian signed value of the specified length to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入大端序的有符号数据，字节长度为byteLength。
 
 **Since:** 9
 
@@ -2943,23 +2946,23 @@ Writes a big-endian signed value of the specified length to this **Buffer** obje
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
-| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to write. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - byteLength。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的字节数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2982,7 +2985,7 @@ ArkTS-Sta:
 writeIntLE(value: long, offset: int, byteLength: int): int
 ```
 
-Writes a little-endian signed value of the specified length to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入小端序的有符号数据，字节长度为byteLength。
 
 **Since:** 9
 
@@ -2998,23 +3001,23 @@ Writes a little-endian signed value of the specified length to this **Buffer** o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
-| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to write. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - byteLength。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的字节数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3037,7 +3040,7 @@ ArkTS-Sta:
 writeUInt16BE(value: long, offset?: int): int
 ```
 
-Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入大端序的16位无符号整型数据。
 
 **Since:** 9
 
@@ -3053,22 +3056,22 @@ Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值为0。取值范围：0 <= offset <= Buffer.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3094,7 +3097,7 @@ ArkTS-Sta:
 writeUInt16LE(value: long, offset?: int): int
 ```
 
-Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入小端序的16位无符号整型数据。
 
 **Since:** 9
 
@@ -3110,22 +3113,22 @@ Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3151,7 +3154,7 @@ ArkTS-Sta:
 writeUInt32BE(value: long, offset?: int): int
 ```
 
-Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入大端序的32位无符号整型数据。
 
 **Since:** 9
 
@@ -3167,22 +3170,22 @@ Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3205,7 +3208,7 @@ ArkTS-Sta:
 writeUInt32LE(value: long, offset?: int): int
 ```
 
-Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入小端序的32位无符号整型数据。
 
 **Since:** 9
 
@@ -3221,22 +3224,22 @@ Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer对象的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3259,7 +3262,7 @@ ArkTS-Sta:
 writeUInt8(value: long, offset?: int): int
 ```
 
-Writes an 8-bit unsigned integer to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入8位无符号整型数据。
 
 **Since:** 9
 
@@ -3275,22 +3278,22 @@ Writes an 8-bit unsigned integer to this **Buffer** object at the specified offs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3322,7 +3325,7 @@ ArkTS-Sta:
 writeUIntBE(value: long, offset: int, byteLength: int): int
 ```
 
-Writes an unsigned big-endian value of the specified length to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入大端序的无符号数据，字节长度为byteLength。
 
 **Since:** 9
 
@@ -3338,23 +3341,23 @@ Writes an unsigned big-endian value of the specified length to this **Buffer** o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
-| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to write. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - byteLength。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的字节数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3377,7 +3380,7 @@ ArkTS-Sta:
 writeUIntLE(value: long, offset: int, byteLength: int): int
 ```
 
-Writes an unsigned little-endian value of the specified length to this **Buffer** object at the specified offset.
+在Buffer对象的offset偏移处写入小端序的无符号数据，字节长度为byteLength。
 
 **Since:** 9
 
@@ -3393,23 +3396,23 @@ Writes an unsigned little-endian value of the specified length to this **Buffer*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
-| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to write. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - byteLength。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的字节数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3426,7 +3429,7 @@ console.info("result = " + result);
 [index: int]: long
 ```
 
-Returns the item at that index.
+返回指定索引处的元素。
 
 **Type:** long
 
@@ -3446,7 +3449,7 @@ Returns the item at that index.
 buffer: ArrayBuffer
 ```
 
-ArrayBuffer** object.
+ArrayBuffer对象。
 
 **Type:** ArrayBuffer
 
@@ -3466,7 +3469,8 @@ ArrayBuffer** object.
 byteOffset: number
 ```
 
-Offset of the **Buffer** object in the memory pool.
+当前Buffer所在内存池的偏移量。&lt;br&gt;- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool)创建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。&lt;br&gt;- 当Buffer直接分配内存时（如使用  
+[alloc](arkts-arkts-buffer-alloc-f.md#alloc)），返回值为0。
 
 **Type:** number
 
@@ -3486,7 +3490,7 @@ Offset of the **Buffer** object in the memory pool.
 length: number
 ```
 
-Length of the **Buffer** object, in bytes.
+Buffer对象的字节长度。
 
 **Type:** number
 

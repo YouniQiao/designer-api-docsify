@@ -1,5 +1,11 @@
 # stopCasting（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## stopCasting
 
 ```TypeScript
@@ -22,18 +28,18 @@ function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 会话令牌。SessionToken表示单个token。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当成功结束投播，err为undefined，否则返回错误对象。 |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | 是 | 会话令牌。SessionToken表示单个token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功结束投播，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600109 | The remote connection is not established |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let myToken: avSession.SessionToken = {
@@ -67,7 +73,7 @@ function stopCasting(session: SessionToken): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 会话令牌。SessionToken表示单个token。 |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | 是 | 会话令牌。SessionToken表示单个token。 |
 
 **返回值：**
 
@@ -79,18 +85,18 @@ function stopCasting(session: SessionToken): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600109 | The remote connection is not established |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
 avSession.stopCasting(myToken).then(() => {
-  console.info('stopCasting successfully');
+  console.info('Succeeded in stopping casting.');
 });
 ```
 

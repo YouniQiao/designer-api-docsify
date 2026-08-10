@@ -1,6 +1,6 @@
 # InputEvent
 
-The **inputEvent** module provides the basic events reported by the device.
+设备上报的基本事件。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ The **inputEvent** module provides the basic events reported by the device.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { InputEvent } from 'kits/@kit.InputKit';
+```
+
 ## actionTime
 
 ```TypeScript
 actionTime: long
 ```
 
-Time when an input event is reported, in microseconds (μs) since the system starts.
+上报输入事件的时间，表示系统启动运行至今逝去的微秒数，单位为微秒（μs）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Time when an input event is reported, in microseconds (μs) since the system sta
 deviceId: int
 ```
 
-Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change.
+输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,9 +62,9 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 id: int
 ```
 
-Enumerates event IDs.
+事件ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -76,9 +82,9 @@ Enumerates event IDs.
 screenId: int
 ```
 
-Target screen ID.
+目标屏幕ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -96,9 +102,9 @@ Target screen ID.
 windowId: int
 ```
 
-Target window ID.
+目标窗口ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

@@ -1,14 +1,20 @@
 # NumberOptions
 
-Options for creating the NumberFormat object. Since API version 9, the NumberOptions attribute is changed from mandatory to optional.
+创建数字格式化对象时可设置的配置项。从API version 9开始，NumberOptions的属性由必填改为可选。
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 <!--Device-intl-export interface NumberOptions--><!--Device-intl-export interface NumberOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
+
+## Modules to Import
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
 
 ## compactDisplay
 
@@ -16,13 +22,19 @@ Options for creating the NumberFormat object. Since API version 9, the NumberOpt
 compactDisplay?: string
 ```
 
-Compact display format. The value can be "long" or "short". The default value is "short".
+紧凑显示格式，取值包括："long", "short"。
+
+默认值：short。
+
+不同取值的显示效果请参考[附录表18](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-compactDisplay?: string--><!--Device-NumberOptions-compactDisplay?: string-End-->
 
@@ -34,13 +46,17 @@ Compact display format. The value can be "long" or "short". The default value is
 currency?: string
 ```
 
-Currency unit. The value must comply with the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_,for example, "EUR", "CNY", and "USD". From API version 12, a three-digit number is supported, for example, "978","156", or "840".
+货币单位（需设置style为currency）， 取值符合[ISO-4217标准](https://www.iso.org/iso-4217-currency-codes.html)，如："EUR"，"CNY"，"USD"等。
+
+从API version 12开始支持三位数字代码，如："978"，"156"，"840"等。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-currency?: string--><!--Device-NumberOptions-currency?: string-End-->
 
@@ -52,13 +68,19 @@ Currency unit. The value must comply with the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
 currencyDisplay?: string
 ```
 
-Currency display mode. The value can be "symbol", "narrowSymbol", "code", or "name".The default value is "symbol".
+货币的显示方式（需设置style为currency），取值包括："symbol", "narrowSymbol", "code", "name"。
+
+默认值：symbol。
+
+不同取值的显示效果请参考[附录表20](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-currencyDisplay?: string--><!--Device-NumberOptions-currencyDisplay?: string-End-->
 
@@ -70,13 +92,19 @@ Currency display mode. The value can be "symbol", "narrowSymbol", "code", or "na
 currencySign?: string
 ```
 
-urrency unit symbol. The value can be "standard" or "accounting". The default value is "standard".
+货币单位的符号显示（需设置style为currency），取值包括： "standard"，"accounting"。
+
+默认值：standard。
+
+不同取值的显示效果请参考[附录表19](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-currencySign?: string--><!--Device-NumberOptions-currencySign?: string-End-->
 
@@ -88,13 +116,17 @@ urrency unit symbol. The value can be "standard" or "accounting". The default va
 locale?: string
 ```
 
-Valid locale ID, for example, "zh-Hans-CN". The default value is the current system locale.
+合法的区域ID， 如："zh-Hans-CN"。
+
+默认值：系统当前区域ID。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-locale?: string--><!--Device-NumberOptions-locale?: string-End-->
 
@@ -106,13 +138,17 @@ Valid locale ID, for example, "zh-Hans-CN". The default value is the current sys
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be "lookup" or "best fit". The default value is "best fit".
+要使用的区域匹配算法，取值包括："lookup", "best fit"。
+
+默认值：best fit。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-localeMatcher?: string--><!--Device-NumberOptions-localeMatcher?: string-End-->
 
@@ -124,13 +160,19 @@ Locale matching algorithm. The value can be "lookup" or "best fit". The default 
 maximumFractionDigits?: int
 ```
 
-Maximum number of digits in the fraction part of a number. The value ranges from 1 to 21.The default value is 3.
+表示要使用的最大分数位数，取值范围：[1, 21]。
+
+默认值：3。
+
+不同取值的显示效果请参考[附录表13](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** int
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-maximumFractionDigits?: int--><!--Device-NumberOptions-maximumFractionDigits?: int-End-->
 
@@ -142,13 +184,19 @@ Maximum number of digits in the fraction part of a number. The value ranges from
 maximumSignificantDigits?: int
 ```
 
-Maximum number of the least significant digits. The value ranges from 1 to 21. The default value is 21.
+表示要使用的最大有效位数，取值范围：[1, 21]。
+
+默认值：21。
+
+不同取值的显示效果请参考[附录表15](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** int
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-maximumSignificantDigits?: int--><!--Device-NumberOptions-maximumSignificantDigits?: int-End-->
 
@@ -160,13 +208,19 @@ Maximum number of the least significant digits. The value ranges from 1 to 21. T
 minimumFractionDigits?: int
 ```
 
-Minimum number of digits in the fraction part of a number. The value ranges from 0 to 20.The default value is 0.
+表示要使用的最小分数位数，取值范围：[0, 20]。
+
+默认值：0。
+
+不同取值的显示效果请参考[附录表12](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** int
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-minimumFractionDigits?: int--><!--Device-NumberOptions-minimumFractionDigits?: int-End-->
 
@@ -178,13 +232,19 @@ Minimum number of digits in the fraction part of a number. The value ranges from
 minimumIntegerDigits?: int
 ```
 
-Minimum number of digits allowed in the integer part of a number. The value ranges from 1 to 21.The default value is 1.
+表示要使用的最小整数位数，取值范围：[1, 21]。
+
+默认值：1。
+
+不同取值的显示效果请参考[附录表11](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** int
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-minimumIntegerDigits?: int--><!--Device-NumberOptions-minimumIntegerDigits?: int-End-->
 
@@ -196,13 +256,19 @@ Minimum number of digits allowed in the integer part of a number. The value rang
 minimumSignificantDigits?: int
 ```
 
-Minimum number of the least significant digits. The value ranges from 1 to 21. The default value is 1.
+表示要使用的最小有效位数，取值范围：[1, 21]。
+
+默认值：1。
+
+不同取值的显示效果请参考[附录表14](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** int
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-minimumSignificantDigits?: int--><!--Device-NumberOptions-minimumSignificantDigits?: int-End-->
 
@@ -214,13 +280,19 @@ Minimum number of the least significant digits. The value ranges from 1 to 21. T
 notation?: string
 ```
 
-Number notation. The value can be: "standard", "scientific", "engineering", or "compact".The default value is "standard".
+数字的表示方法，取值包括："standard", "scientific", "engineering", "compact"。
+
+默认值：standard。
+
+不同取值的显示效果请参考[附录表17](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-notation?: string--><!--Device-NumberOptions-notation?: string-End-->
 
@@ -232,13 +304,19 @@ Number notation. The value can be: "standard", "scientific", "engineering", or "
 numberingSystem?: string
 ```
 
-Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks","brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp","java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl","mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng","newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund","takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", or "wcho".
+数字系统，取值包括：
+
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
+
+默认值：区域的默认数字系统。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-numberingSystem?: string--><!--Device-NumberOptions-numberingSystem?: string-End-->
 
@@ -250,13 +328,17 @@ Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "
 roundingIncrement?: int
 ```
 
-Rounding increment. The value can be: 1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 2500, or 5000.The default value is 1.
+表示舍入增量，取值范围：1，2，5，10，20，25，50，100，200，250，500，1000，2000，2500，5000。
+
+默认值：1。
 
 **Type:** int
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NumberOptions-roundingIncrement?: int--><!--Device-NumberOptions-roundingIncrement?: int-End-->
 
@@ -268,13 +350,35 @@ Rounding increment. The value can be: 1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 50
 roundingMode?: string
 ```
 
-Rounding mode. The value can be:"ceil": rounding up."floor": rounding down."expand": rounding away from 0."trunc": rounding toward 0."halfCeil": half-rounding up; that is, rounding up when the decimal number is greater than or equal to half of the increment, and rounding down otherwise."halfFloor": half-rounding down; that is, rounding up when the decimal number is greater than half of the increment, and rounding down otherwise."halfExpand": half-rounding away from 0; that is, rounding away from 0 when the decimal number is greater than or equal to half of the increment, and rounding toward 0 otherwise."halfTrunc": half-rounding toward 0; that is, rounding away from 0 when the decimal number is greater than half of the increment, and rounding toward 0 otherwise."halfEven": half-rounding to the nearest even number; that is, rounding away from 0 when the decimal number is greater than half of the increment, rounding toward 0 when the decimal number is less than half of the increment, and rounding to the nearest even number when the decimal number is exactly half of the increment.The default value is "halfExpand".
+表示舍入模式，取值包括：
+
+"ceil"：向上取整。
+
+"floor"：向下取整。
+
+"expand"：远离零取整。
+
+"trunc"：向零取整。
+
+"halfCeil"：半向上取整，大于等于增量的一半时向上取整，小于增量的一半时向下取整。
+
+"halfFloor"：半向下取整，大于增量的一半时向上取整，小于等于增量的一半时向下取整。
+
+"halfExpand"：半远离零取整，大于等于增量的一半时远离零取整，小于增量的一半时向零取整。
+
+"halfTrunc"：半向零取整，大于增量的一半时远离零取整，小于等于增量的一半时向零取整。
+
+"halfEven"：半向偶数取整，大于增量的一半时 远离零取整，小于增量的一半时向零取整，等于增量的一半时向最近的偶数位舍入。
+
+默认值：halfExpand。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NumberOptions-roundingMode?: string--><!--Device-NumberOptions-roundingMode?: string-End-->
 
@@ -286,13 +390,17 @@ Rounding mode. The value can be:"ceil": rounding up."floor": rounding down."expa
 roundingPriority?: string
 ```
 
-Rounding priority used when both the maximum number of fraction digits and the maximum number of valid digits are set. The value can be: "auto", "morePrecision", or "lessPrecision". The value "morePrecision" indicates that the maximum number of fraction digits is used. The value "lessPrecision" indicates that the maximum number of valid digits is used. The default value is "auto".
+最大分数位数和最大有效位数同时设置时的舍入优先级，取值包括："auto" 选择区域默认的最大分数位数或最大有效位数，"morePrecision" 取最大分数位数，"lessPrecision" 取最大有效位数。
+
+默认值：auto。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NumberOptions-roundingPriority?: string--><!--Device-NumberOptions-roundingPriority?: string-End-->
 
@@ -304,13 +412,25 @@ Rounding priority used when both the maximum number of fraction digits and the m
 signDisplay?: string
 ```
 
-Number sign display format. The value can be:"auto": automatically determines whether to display the plus or minus sign."never": do not display the plus or minus sign."always": always displays the plus or minus sign."exceptZero": displays the plus or minus sign for all values except 0.Default value: "auto".
+数字符号的显示格式，取值包括：
+
+"auto"：自动判断是否显示正负符号。
+
+"never"：不显示正负号。
+
+"always"：总是显示正负号。
+
+"exceptZero"：除了0都显示正负号。
+
+默认值："auto"。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-signDisplay?: string--><!--Device-NumberOptions-signDisplay?: string-End-->
 
@@ -322,13 +442,17 @@ Number sign display format. The value can be:"auto": automatically determines wh
 style?: string
 ```
 
-Number display format. The value can be "decimal", "currency", "percent", or "unit".The default value is "decimal".
+数字的显示格式，取值包括："decimal", "currency", "percent", "unit"。
+
+默认值：decimal。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-style?: string--><!--Device-NumberOptions-style?: string-End-->
 
@@ -340,13 +464,17 @@ Number display format. The value can be "decimal", "currency", "percent", or "un
 unit?: string
 ```
 
-Unit name, for example, "meter", "inch", or "hectare". The combination units supported since API version 18 are as follows: "beat-per-minute", "body-weight-per-second", "breath-per-minute", "foot-per-hour","jump-rope-per-minute", "meter-per-hour", "milliliter-per-minute-per-kilogram", "rotation-per-minute","step-per-minute", and "stroke-per-minute".
+单位名称（需设置style为unit），如："meter"，"inch"，“hectare”等。
+
+从API version 18开始新增支持的组合单位有： "beat-per-minute", "body-weight-per-second", "breath-per-minute", "foot-per-hour","jump-rope-per-minute", "meter-per-hour", "milliliter-per-minute-per-kilogram", "rotation-per-minute", "step-per-minute","stroke-per-minute"。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-unit?: string--><!--Device-NumberOptions-unit?: string-End-->
 
@@ -358,13 +486,19 @@ Unit name, for example, "meter", "inch", or "hectare". The combination units sup
 unitDisplay?: string
 ```
 
-Display format of units. The value can be "long", "short", or "narrow". The default value is "short".
+单位的显示格式（需设置style为unit），取值包括："long", "short", "narrow"。
+
+默认值：short。
+
+不同取值的显示效果请参考[附录表21](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-unitDisplay?: string--><!--Device-NumberOptions-unitDisplay?: string-End-->
 
@@ -376,13 +510,19 @@ Display format of units. The value can be "long", "short", or "narrow". The defa
 unitUsage?: string
 ```
 
-Application scenario of units. The value can be any of the following: "default", "area-land-agricult","area-land-commercl", "area-land-residntl", "length-person", "length-person-small", "length-rainfall","length-road", "length-road-small", "length-snowfall", "length-vehicle", "length-visiblty","length-visiblty-small", "length-person-informal", "length-person-small-informal", "length-road-informal","speed-road-travel", "speed-wind", "temperature-person", "temperature-weather", "volume-vehicle-fuel","elapsed-time-second", "size-file-byte", or "size-shortfile-byte". The default value is "default".
+单位的使用场景（需设置style为unit），取值包括："default", "area-land-agricult", "area-land-commercl", "area-land-residntl","length-person", "length-person-small", "length-rainfall", "length-road", "length-road-small", "length-snowfall","length-vehicle", "length-visiblty", "length-visiblty-small", "length-person-informal", "length-person-small-informal","length-road-informal", "speed-road-travel", "speed-wind", "temperature-person", "temperature-weather","volume-vehicle-fuel", "elapsed-time-second", "size-file-byte", "size-shortfile-byte"。
+
+默认值：default。
+
+不同取值的显示效果请参考[附录表22](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-unitUsage?: string--><!--Device-NumberOptions-unitUsage?: string-End-->
 
@@ -394,13 +534,19 @@ Application scenario of units. The value can be any of the following: "default",
 useGrouping?: boolean
 ```
 
-Whether to enable grouping for display. The value "true" means to enable grouping for display, and the value"false" means the opposite. The default value is "true".
+true表示分组显示，false表示不分组显示。
+
+默认值：true。
+
+不同取值的显示效果请参考[附录表16](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-useGrouping?: boolean--><!--Device-NumberOptions-useGrouping?: boolean-End-->
 

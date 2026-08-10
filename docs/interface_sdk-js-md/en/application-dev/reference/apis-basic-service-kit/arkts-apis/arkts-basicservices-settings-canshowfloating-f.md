@@ -1,5 +1,11 @@
 # canShowFloating
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## canShowFloating
 
 ```TypeScript
@@ -22,9 +28,9 @@ Checks whether a specified application can show as a floating window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 settings.canShowFloating((err:Error, status: boolean) => {
@@ -61,7 +67,7 @@ Checks whether a specified application can show as a floating window.
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 settings.canShowFloating().then((status:boolean) => {

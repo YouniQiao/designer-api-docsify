@@ -1,6 +1,6 @@
 # AttachOptions
 
-Attach options.
+绑定输入法的附加选项。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Attach options.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## requestKeyboardReason
 
 ```TypeScript
 requestKeyboardReason?: RequestKeyboardReason
 ```
 
-The reason for request keyboard.
+请求键盘输入的原因。
 
-**Type:** RequestKeyboardReason
+**Type:** [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
 
 **Default:** RequestKeyboardReason.NONE
 
@@ -38,7 +44,10 @@ The reason for request keyboard.
 showKeyboard?: boolean
 ```
 
-Whether to show the keyboard when attaching.
+绑定输入法成功后，是否拉起输入法键盘。
+
+- true表示拉起。  
+- false表示不拉起。
 
 **Type:** boolean
 

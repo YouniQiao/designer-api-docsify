@@ -4,7 +4,7 @@
 export type PluginBundleInfo = _PluginBundleInfo
 ```
 
-Indicates the information about a plugin.
+插件信息。
 
 **Since:** 26.0.0
 

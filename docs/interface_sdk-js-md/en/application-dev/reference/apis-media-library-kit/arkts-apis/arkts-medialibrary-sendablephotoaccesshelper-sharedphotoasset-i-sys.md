@@ -2,7 +2,7 @@
 
 Defines the shared photo asset
 
-**Inheritance/Implementation:** SharedPhotoAsset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
+**Inheritance/Implementation:** SharedPhotoAsset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
 
 **Since:** 14
 
@@ -13,6 +13,12 @@ Defines the shared photo asset
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
 
 ## cameraShotKey
 
@@ -302,7 +308,7 @@ dynamicRangeType: DynamicRangeType
 
 Dynamic range type of the asset
 
-**Type:** DynamicRangeType
+**Type:** [DynamicRangeType](arkts-medialibrary-photoaccesshelper-dynamicrangetype-e.md)
 
 **Since:** 14
 
@@ -422,7 +428,7 @@ mediaType: PhotoType
 
 Media type of photo asset
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
 
 **Since:** 14
 
@@ -442,7 +448,7 @@ movingPhotoEffectMode: MovingPhotoEffectMode
 
 Effect mode of moving photo
 
-**Type:** MovingPhotoEffectMode
+**Type:** [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md)
 
 **Since:** 14
 
@@ -502,7 +508,7 @@ position: PositionType
 
 Position of photo asset
 
-**Type:** PositionType
+**Type:** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **Since:** 14
 
@@ -542,7 +548,7 @@ subtype: PhotoSubtype
 
 Subtype of photo asset
 
-**Type:** PhotoSubtype
+**Type:** [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md)
 
 **Since:** 14
 
@@ -622,7 +628,7 @@ thumbnailVisible: ThumbnailVisibility
 
 visibility of thumbnails
 
-**Type:** ThumbnailVisibility
+**Type:** [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **Since:** 14
 

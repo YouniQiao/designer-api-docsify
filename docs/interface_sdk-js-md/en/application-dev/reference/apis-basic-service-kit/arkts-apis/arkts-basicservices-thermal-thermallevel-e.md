@@ -1,6 +1,6 @@
 # ThermalLevel
 
-Enumerates thermal levels.
+热档位信息。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates thermal levels.
 COOL = 0
 ```
 
-The device is cool, and services are not restricted.
+表明设备处于清凉状态，业务执行不受热控的限制。
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ The device is cool, and services are not restricted.
 NORMAL = 1
 ```
 
-The device is in the normal temperature range but it is getting warm. You need to downgrade or reduce the load of imperceptible services.
+表明设备温度正常，但邻近温热状态，无感知业务应降低规格和负载。
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ The device is in the normal temperature range but it is getting warm. You need t
 WARM = 2
 ```
 
-The device is warm. You need to stop or delay some imperceptible services.
+表明设备进入温热状态，无感知业务应暂停或延迟运行。
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ The device is warm. You need to stop or delay some imperceptible services.
 HOT = 3
 ```
 
-The device is heating up. You need to stop all imperceptible services and downgrade or reduce the load of non-critical services.
+表明设备发热明显，无感知业务应停止，非关键业务应降低规格及负载。
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ The device is heating up. You need to stop all imperceptible services and downgr
 OVERHEATED = 4
 ```
 
-The device is overheated. You need to stop all imperceptible services and downgrade or reduce the load of major foreground services.
+表明设备发热严重，无感知业务与非关键业务应停止，前台关键业务应降低规格及负载。
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ The device is overheated. You need to stop all imperceptible services and downgr
 WARNING = 5
 ```
 
-The device is overheated and is about to enter the emergency state. You need to stop all imperceptible services and downgrade major foreground services to the maximum extent.
+表明设备过热即将进入紧急状态，整机资源供给大幅降低，停止所有非关键业务，前台关键业务应降低至最低规格。
 
 **Since:** 8
 
@@ -112,7 +112,7 @@ The device is overheated and is about to enter the emergency state. You need to 
 EMERGENCY = 6
 ```
 
-The device has entered the emergency state. You need to stop all services except those for fundamental use.
+表明设备已经进入过热紧急状态，整机资源供给降至最低，设备功能受限，仅保留基础功能可用。
 
 **Since:** 8
 
@@ -128,7 +128,9 @@ The device has entered the emergency state. You need to stop all services except
 ESCAPE = 7
 ```
 
-The device is about to enter the escape state. You need to stop all services and take necessary emergency measures such as data backup.
+表明设备即将进入热逃生状态，所有业务将被强制停止，业务需做好逃生措施，例如保存重要数据等。 
+
+**说明：**: 从API version 11开始支持。
 
 **Since:** 11
 

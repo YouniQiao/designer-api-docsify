@@ -10,6 +10,12 @@ Define offline resource's content and info.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## resource
 
 ```TypeScript
@@ -54,7 +60,7 @@ type: OfflineResourceType
 
 Resource type
 
-**类型：** OfflineResourceType
+**类型：** [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md)
 
 **起始版本：** 23
 

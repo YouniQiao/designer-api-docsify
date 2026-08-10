@@ -1,6 +1,6 @@
 # AudioSessionStateChangedEvent
 
-Describes the event indicating that the audio session state changes.
+音频会话状态变更事件。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the event indicating that the audio session state changes.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## stateChangeHint
 
 ```TypeScript
 stateChangeHint: AudioSessionStateChangeHint
 ```
 
-Hint for the audio session state change.
+音频会话状态变更提示。
 
-**Type:** AudioSessionStateChangeHint
+**Type:** [AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md)
 
 **Since:** 20
 

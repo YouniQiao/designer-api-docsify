@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## elapsedTime
 
 ```TypeScript
@@ -18,7 +24,7 @@ elapsedTime: long
 
 已用时间，单位毫秒（ms）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ updateTime: long
 
 更新时间，单位毫秒（ms）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 

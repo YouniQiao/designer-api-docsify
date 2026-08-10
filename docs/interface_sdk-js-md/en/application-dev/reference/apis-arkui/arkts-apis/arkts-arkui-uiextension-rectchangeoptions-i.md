@@ -1,7 +1,6 @@
 # RectChangeOptions
 
-Provides the values and reasons returned when the rectangle (position and size) of the component (  
-**EmbeddedComponent** or **UIExtensionComponent**) changes.
+组件（EmbeddedComponent或UIExtensionComponent）矩形（位置及尺寸）变化返回的值及变化原因。
 
 **Since:** 14
 
@@ -11,15 +10,21 @@ Provides the values and reasons returned when the rectangle (position and size) 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiExtension } from 'kits/@kit.ArkUI';
+```
+
 ## reason
 
 ```TypeScript
 reason: RectChangeReason
 ```
 
-Reason for the rectangle change.
+组件矩形变化的原因。
 
-**Type:** RectChangeReason
+**Type:** [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
 
 **Since:** 14
 
@@ -39,7 +44,7 @@ Reason for the rectangle change.
 rect: window.Rect
 ```
 
-New values of the rectangle of the component after the change.
+组件矩形变化后的值。
 
 **Type:** window.Rect
 

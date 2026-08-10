@@ -1,6 +1,6 @@
 # CertAlgorithm
 
-Enumerates the certificate algorithms.
+表示证书的算法类型。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the certificate algorithms.
 INTERNATIONAL = 1
 ```
 
-International cryptographic algorithm, such as RSA and NIST ECC.
+表示国际密码算法，如RSA、NIST ECC等。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ International cryptographic algorithm, such as RSA and NIST ECC.
 SM = 2
 ```
 
-Indicates the commercial cryptographic algorithm, such as SM2 and SM4.Devices outside China do not support certificates using this algorithm.
+表示商用密码算法，如SM2、SM4等。海外设备不支持使用该算法的证书。
 
 **Since:** 20
 

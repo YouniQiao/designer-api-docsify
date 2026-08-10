@@ -1,12 +1,18 @@
 # requestPrintPreview (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## requestPrintPreview
 
 ```TypeScript
 function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void
 ```
 
-Requests print preview data. This API uses a callback to return the result.
+请求预览打印数据，使用callback回调。
 
 **Since:** 10
 
@@ -24,18 +30,18 @@ Requests print preview data. This API uses a callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the print job. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. |
+| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | 打印任务信息。 |
+| callback | ArkTS-Dyn: [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 请求预览打印数据之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -70,7 +76,7 @@ print.requestPrintPreview(jobInfo, (num : number) => {
 function requestPrintPreview(jobInfo: PrintJob): Promise<int>
 ```
 
-Requests print preview data. This API uses a promise to return the result.
+请求预览打印数据，使用Promise异步回调。
 
 **Since:** 10
 
@@ -88,23 +94,23 @@ Requests print preview data. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the print job. |
+| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | 打印任务信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the preview result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回预览结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

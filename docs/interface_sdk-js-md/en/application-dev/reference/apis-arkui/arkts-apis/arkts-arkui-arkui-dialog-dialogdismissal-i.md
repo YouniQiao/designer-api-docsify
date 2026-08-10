@@ -1,6 +1,6 @@
 # DialogDismissal
 
-Provides information about the action to dismiss the dialog box.
+提供有关关闭对话框的操作的信息。
 
 **Since:** 26.1.0
 
@@ -10,13 +10,19 @@ Provides information about the action to dismiss the dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## dismiss
 
 ```TypeScript
 dismiss: VoidCallback
 ```
 
-Callback for dismissing the dialog box. This API is called only when the dialog box needs to be exited.
+关闭对话框的回调。只有当需要退出对话框时，才会调用此接口。
 
 **Since:** 26.1.0
 
@@ -36,9 +42,9 @@ Callback for dismissing the dialog box. This API is called only when the dialog 
 reason: DismissReason
 ```
 
-Reason why the dialog box cannot be dismissed.
+无法关闭对话框的原因。
 
-**Type:** DismissReason
+**Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 
 **Since:** 26.1.0
 

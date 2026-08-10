@@ -1,5 +1,11 @@
 # finishTrace
 
+## 导入模块
+
+```TypeScript
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## finishTrace
 
 ```TypeScript
@@ -8,10 +14,10 @@ function finishTrace(name: string, taskId: int): void
 
 标记一个异步跟踪耗时任务的结束。调用成功后，完成该任务的跟踪。
 
-finishTrace的name和taskId必须与流程开始的[startTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对应参数值一致。
+finishTrace的name和taskId必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace)对应参数值一致。
 
-从API version 19开始，建议使用[finishAsyncTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口（需与  
-[startAsyncTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口配套使用）。
+从API version 19开始，建议使用[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishasynctrace)接口（需与  
+[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)接口配套使用）。
 
 **起始版本：** 8
 
@@ -27,10 +33,10 @@ finishTrace的name和taskId必须与流程开始的[startTrace()]\_\_\_JSDOC\_LI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 要跟踪的任务名称，必须与流程开始的[startTrace()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对应参数值一致。 |
-| taskId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 任务id，必须与流程开始的[startTrace()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对应参数值一致。 |
+| name | string | 是 | 要跟踪的任务名称，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace)对应参数值一致。 |
+| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 任务id，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace)对应参数值一致。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 跟踪并行执行的同名任务

@@ -1,6 +1,6 @@
 # UpgradeOptions (System API)
 
-Defines the upgrade options, which are used to specify the upgrade operation type.
+升级选项，包含升级指令等配置，用于指定升级操作类型。
 
 **Since:** 9
 
@@ -12,16 +12,21 @@ Defines the upgrade options, which are used to specify the upgrade operation typ
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## order
 
 ```TypeScript
 order: Order
 ```
 
-Upgrade command, which specifies the execution mode of the upgrade operation. The options are as follows:  
-**DOWNLOAD**: download the upgrade package, which needs to be manually installed later; **INSTALL**: install the upgrade package that has been downloaded; **DOWNLOAD\_AND\_INSTALL**: download and install the upgrade package,which is the complete upgrade process; **APPLY**: apply the upgrade package that has been installed by restarting device; **INSTALL\_AND\_APPLY**: install the upgrade package and apply it immediately by restarting the device.Select a proper value based on the current upgrade status and service requirements.
+升级指令。用于指定升级操作的执行方式。取值原则：DOWNLOAD仅下载升级包，适用于需要先下载后手动安装的场景；INSTALL仅安装已下载的升级包，适用于已下载完成需直接安装的场景；DOWNLOAD_AND_INSTALL下载并安装，适用于完整升级流程；APPLY仅生效，适用于已安装需重启生效的场景；INSTALL_AND_APPLY安装并生效，适用于安装后立即重启生效的场景。应根据当前升级状态和业务需求选择合适的指令。
 
-**Type:** Order
+**Type:** [Order](arkts-basicservices-update-order-e-sys.md)
 
 **Since:** 9
 

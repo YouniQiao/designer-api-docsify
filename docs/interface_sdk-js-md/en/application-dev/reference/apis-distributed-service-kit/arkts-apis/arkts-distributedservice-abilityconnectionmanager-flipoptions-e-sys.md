@@ -1,6 +1,6 @@
 # FlipOptions (System API)
 
-Flip option.
+翻转选项。
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ Flip option.
 HORIZONTAL = 0
 ```
 
-Horizontal Flip
+水平翻转。
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ Horizontal Flip
 VERTICAL = 1
 ```
 
-Vertical Flip
+垂直翻转。
 
 **Since:** 18
 

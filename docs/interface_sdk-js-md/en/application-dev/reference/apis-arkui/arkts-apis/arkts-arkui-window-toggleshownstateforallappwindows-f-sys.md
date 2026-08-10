@@ -1,12 +1,18 @@
 # toggleShownStateForAllAppWindows (System API)
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## toggleShownStateForAllAppWindows
 
 ```TypeScript
 function toggleShownStateForAllAppWindows(callback: AsyncCallback<void>): void
 ```
 
-Hides or restores the application's windows during quick multi-window switching. This API uses an asynchronous callback to return the result.
+多窗口快速切换时隐藏或者恢复应用窗口。
 
 **Since:** 9
 
@@ -22,17 +28,17 @@ Hides or restores the application's windows during quick multi-window switching.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities.<br>**Applicable version:** 12 and later |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -54,7 +60,7 @@ window.toggleShownStateForAllAppWindows((err: BusinessError) => {
 function toggleShownStateForAllAppWindows(): Promise<void>
 ```
 
-Hides or restores the application's windows during quick multi-window switching. This API uses a promise to return the result.
+多窗口快速切换时隐藏或者恢复应用窗口，使用Promise异步回调。
 
 **Since:** 9
 
@@ -70,17 +76,17 @@ Hides or restores the application's windows during quick multi-window switching.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities.<br>**Applicable version:** 12 and later |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

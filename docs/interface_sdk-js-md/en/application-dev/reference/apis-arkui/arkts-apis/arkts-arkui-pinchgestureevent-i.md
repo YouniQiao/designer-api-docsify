@@ -1,9 +1,8 @@
 # PinchGestureEvent
 
-Inherits from [BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This object can be passed as the **event** parameter of  
-[onGestureJudgeBegin]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
 
-**Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-component/gesture-basegestureevent-i.md)
+**Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
 **Since:** 11
 
@@ -19,7 +18,7 @@ Inherits from [BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This obje
 pinchCenterX: number
 ```
 
-X-coordinate of the center of the pinch gesture, in vp, relative to the original area of the current component.
+捏合手势中心点相对于当前组件元素原始区域左上角x轴坐标，单位为vp。
 
 **Type:** number
 
@@ -41,7 +40,7 @@ X-coordinate of the center of the pinch gesture, in vp, relative to the original
 pinchCenterY: number
 ```
 
-Y-coordinate of the center of the pinch gesture, in vp, relative to the original area of the current component.
+捏合手势中心点相对于当前组件元素原始区域左上角y轴坐标，单位为vp。
 
 **Type:** number
 
@@ -63,7 +62,7 @@ Y-coordinate of the center of the pinch gesture, in vp, relative to the original
 scale: number
 ```
 
-Scale factor.
+缩放比例。
 
 **Type:** number
 

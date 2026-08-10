@@ -1,12 +1,18 @@
 # getAllVolumes (System API)
 
+## Modules to Import
+
+```TypeScript
+import { volumeManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## getAllVolumes
 
 ```TypeScript
 function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void
 ```
 
-Obtains information about all volumes of this external storage device. This API uses an asynchronous callback to return the result.
+获取当前外置存储中所有卷设备信息，使用callback异步回调。
 
 **Since:** 9
 
@@ -24,15 +30,15 @@ Obtains information about all volumes of this external storage device. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Volume&gt;&gt; | Yes | Callback used to return information about all available volumes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Volume&gt;&gt; | Yes | 获取当前所有可获得的卷设备信息之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| 401 | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
@@ -43,7 +49,7 @@ Obtains information about all volumes of this external storage device. This API 
 function getAllVolumes(): Promise<Array<Volume>>
 ```
 
-Obtains information about all volumes of this external storage device. This API uses a promise to return the result.
+获取当前外置存储中所有卷设备信息，使用Promise异步回调。
 
 **Since:** 9
 
@@ -61,15 +67,15 @@ Obtains information about all volumes of this external storage device. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Volume&gt;&gt; | Promise used to return the information about all available volume devices. |
+| Promise&lt;Array&lt;Volume&gt;&gt; | Promise对象，返回当前所有可获得的卷设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| 401 | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

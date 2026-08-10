@@ -1,6 +1,6 @@
 # IncrementalBackupData (System API)
 
-Corresponds to an incremental application, including its last incremental time and incremental list.
+一次增量备份对象，包含最后一次增量备份时间和增量清单。
 
 **Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md), [BackupParams](arkts-corefile-backup-backupparams-i-sys.md), [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md)
 
@@ -13,4 +13,10 @@ Corresponds to an incremental application, including its last incremental time a
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
 

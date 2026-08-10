@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## error
 
 ```TypeScript
@@ -18,7 +24,7 @@ error: DownloadErrorType
 
 下载的错误类型。
 
-**类型：** DownloadErrorType
+**类型：** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
 **起始版本：** 11
 
@@ -36,7 +42,7 @@ processed: long
 
 已下载数据大小，取值范围[0，9223372036854775807]（单位：Byte）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -54,7 +60,7 @@ size: long
 
 当前云文件大小，取值范围[0，9223372036854775807]（单位：Byte）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -72,7 +78,7 @@ state: State
 
 枚举值，云文件下载状态。
 
-**类型：** State
+**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **起始版本：** 11
 

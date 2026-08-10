@@ -20,5 +20,5 @@ export type MonitorCallback = (iMonitor: IMonitor) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iMonitor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存触发监听前后的值以及路径。  |
+| iMonitor | [IMonitor](arkts-arkui-decorator-imonitor-i.md) | 是 | 保存触发监听前后的值以及路径。 |
 

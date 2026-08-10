@@ -1,12 +1,18 @@
 # getPrinterInformationById
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPrinterInformationById
 
 ```TypeScript
 function getPrinterInformationById(printerId: string): Promise<PrinterInformation>
 ```
 
-Obtains printer information based on the printer ID. This API uses a promise to return the result.
+根据打印机id获取打印机信息，使用Promise异步回调。
 
 **Since:** 14
 
@@ -22,22 +28,22 @@ Obtains printer information based on the printer ID. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Printer ID used to obtain information. |
+| printerId | string | Yes | 表示待获取信息的打印机id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrinterInformation&gt; | Promise used to return the printer information. |
+| Promise&lt;PrinterInformation&gt; | Promise对象，返回打印机信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

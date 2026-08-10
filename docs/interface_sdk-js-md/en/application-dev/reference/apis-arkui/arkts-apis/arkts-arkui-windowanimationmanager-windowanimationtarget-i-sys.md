@@ -1,6 +1,6 @@
 # WindowAnimationTarget (System API)
 
-Window animation target.
+动画目标窗口，用来实现动画。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Window animation target.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## abilityName
 
 ```TypeScript
 readonly abilityName: string
 ```
 
-/* The ability name of the window animation target.
+/* 动画目标窗口所对应的Ability名称。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ readonly abilityName: string
 readonly bundleName: string
 ```
 
-The bundle name of the window animation target.
+动画目标窗口所对应的包名。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ The bundle name of the window animation target.
 readonly missionId: int
 ```
 
-/* The mission id of the window animation target.
+/* 任务ID，多任务中用于与ability进行匹配。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -78,9 +84,9 @@ readonly missionId: int
 readonly windowBounds: RRect
 ```
 
-/* The window bounds of the window animation target.
+/* 动画目标窗口所对应的实际大小。
 
-**Type:** RRect
+**Type:** [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md)
 
 **Since:** 9
 

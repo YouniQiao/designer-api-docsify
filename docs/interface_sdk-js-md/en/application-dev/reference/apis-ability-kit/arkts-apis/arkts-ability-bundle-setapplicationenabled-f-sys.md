@@ -1,12 +1,18 @@
 # setApplicationEnabled (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## setApplicationEnabled
 
 ```TypeScript
 function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable an application. This API uses an asynchronous callback to return the result.
+设置是否启用指定的应用程序，使用callback异步回调。
 
 **Since:** 8
 
@@ -28,9 +34,9 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| bundleName | string | Yes | 指示需要启用或禁用的应用Bundle名称。 |
+| isEnable | boolean | Yes | 指定是否启用应用程序。true表示启用，false表示禁用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 
 ## setApplicationEnabled
@@ -39,7 +45,7 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 function setApplicationEnabled(bundleName: string, isEnable: boolean): Promise<void>
 ```
 
-Sets whether to enable an application. This API uses a promise to return the result.
+设置是否启用指定的应用程序，使用Promise异步回调。
 
 **Since:** 8
 
@@ -61,12 +67,12 @@ Sets whether to enable an application. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
+| bundleName | string | Yes | 指示需要启用或禁用的应用Bundle名称。 |
+| isEnable | boolean | Yes | 指定是否启用应用程序。true表示启用，false禁用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
 

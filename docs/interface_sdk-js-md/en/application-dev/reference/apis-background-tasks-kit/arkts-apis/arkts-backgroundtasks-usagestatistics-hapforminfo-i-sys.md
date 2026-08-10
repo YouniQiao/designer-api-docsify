@@ -1,5 +1,7 @@
 # HapFormInfo (System API)
 
+FA模型的使用信息属性集合。
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -10,15 +12,21 @@
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## count
 
 ```TypeScript
 count: int
 ```
 
-The click count of module.
+卡片的点击次数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,9 +44,9 @@ The click count of module.
 formDimension: int
 ```
 
-The form dimension.
+卡片尺寸。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,9 +64,9 @@ The form dimension.
 formId: long
 ```
 
-The form id.
+卡片Id。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -76,9 +84,9 @@ The form id.
 formLastUsedTime: long
 ```
 
-The last time when the form was accessed, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+卡片的上一次点击时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -96,7 +104,7 @@ The last time when the form was accessed, in milliseconds.\_\_\_HTML\_TAG\_DESC\
 formName: string
 ```
 
-The form name.
+卡片名称。
 
 **Type:** string
 

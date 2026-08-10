@@ -21,6 +21,6 @@ type DomainPluginGetAccountInfoFunc = (options: GetDomainAccountInfoPluginOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示域账号信息。  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DomainAccountInfo&gt; | 是 | 表示查询结果回调。  |
+| options | [GetDomainAccountInfoPluginOptions](arkts-basicservices-osaccount-getdomainaccountinfopluginoptions-i-sys.md) | 是 | 表示域账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DomainAccountInfo&gt; | 是 | 表示查询结果回调。 |
 

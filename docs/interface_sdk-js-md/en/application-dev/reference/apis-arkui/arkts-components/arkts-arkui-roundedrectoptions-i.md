@@ -1,11 +1,10 @@
 # RoundedRectOptions
 
-Describes the options of the rounded rectangle.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer  
-    element's @since version number is higher than inner elements'. This does not affect interface usability.
+用于描述圆角矩形绘制组件的绘制属性。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,10 +20,15 @@ Describes the options of the rounded rectangle.
 height?: Length
 ```
 
-Height. The value must be greater than or equal to 0.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and  
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+高度，取值范围≥0。
 
-**Type:** Length
+默认值：0
+
+默认单位：vp。
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 
@@ -44,9 +48,15 @@ Height. The value must be greater than or equal to 0.Unit: vp, The value must be
 radiusHeight?: Length
 ```
 
-Height of the rounded corner. The value must be greater than or equal to 0.Unit: vp, Invalid values are treated as the default value. Default value: **0**.
+圆角高度，取值范围≥0。
 
-**Type:** Length
+默认值：0
+
+默认单位：vp。
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 
@@ -66,9 +76,15 @@ Height of the rounded corner. The value must be greater than or equal to 0.Unit:
 radiusWidth?: Length
 ```
 
-Width of the rounded corner. The value must be greater than or equal to 0.Unit: vp, Invalid values are treated as the default value.Default value: **0**.
+圆角宽度，取值范围≥0。
 
-**Type:** Length
+默认值：0
+
+默认单位：vp。
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 
@@ -88,10 +104,15 @@ Width of the rounded corner. The value must be greater than or equal to 0.Unit: 
 width?: Length
 ```
 
-Width. The value must be greater than or equal to 0Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity**  
-values are invalid and treated as the default value. Default value: **0**.
+宽度，取值范围≥0。
 
-**Type:** Length
+默认值：0
+
+默认单位：vp。
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 

@@ -12,6 +12,12 @@ Search suggestion result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## count
 
 ```TypeScript
@@ -20,7 +26,7 @@ count: int
 
 Number of photos in the scenario where a recommendation word is searched.The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ type: SearchSuggestionType
 
 Search Suggestion Type
 
-**Type:** SearchSuggestionType
+**Type:** [SearchSuggestionType](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md)
 
 **Since:** 26.0.0
 

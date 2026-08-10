@@ -1,28 +1,24 @@
 # NodeContainer
 
-**NodeContainer** is a basic component for mounting custom nodes (such as [FrameNode]{@link ../../../arkui/FrameNode}
-or [BuilderNode]{@link ../../../arkui/BuilderNode}) and dynamically managing node attachment and detachment through
-[NodeController]{@link ../../../arkui/NodeController:NodeController}. This component does not support adding trailing
-child components and requires a [NodeController]{@link ../../../arkui/NodeController:NodeController} instance for
-operation. It must be used in combination with **NodeController**.
+基础组件，用于挂载自定义节点（如[FrameNode]{@link ../../../arkui/FrameNode}或[BuilderNode]{@link ../../../arkui/BuilderNode}中获取的根节点
+FrameNode），并通过[NodeController]{@link ../../../arkui/NodeController:NodeController}动态控制节点的上树和下树，适用于需要在组件树中动态插入、移除自定义节点
+以实现UI按需加载与节点复用的场景，可提升页面渲染效率并降低节点创建开销。组件不支持尾随添加子节点，接受一个
+[NodeController]{@link ../../../arkui/NodeController:NodeController}实例，需与NodeController组合使用。
 
-> **NOTE**
+> **说明：**
 >
-> Only custom [FrameNodes]{@link ../../../arkui/FrameNode} or the root FrameNode obtained from a
-> [BuilderNode]{@link ../../../arkui/BuilderNode} can be attached to this component.
+> - 该组件下仅支持挂载自定义节点[FrameNode]{@link ../../../arkui/FrameNode}或者是[BuilderNode]{@link ../../../arkui/BuilderNode}中获取的根节
+> 点FrameNode。
 >
-> [Proxy nodes]{@link ../../../arkui/FrameNode:FrameNode#isModifiable} of built-in system components obtained through
-> querying cannot be attached to this component.
+> - 不支持挂载查询获得的系统组件代理节点，请参见[isModifiable]{@link ../../../arkui/FrameNode:FrameNode#isModifiable}。
 >
-> This component does not work with the [attribute modifier]{@link ./common}.
+> - 当前不支持使用[动态属性设置]{@link ./common}。
 >
-> A [UIContext]{@link @ohos.arkui.UIContext} instance is used to construct the node tree for this component. During
-> instance switching, the input parameter of the
-> [makeNode]{@link ../../../arkui/NodeController:NodeController#makeNode} callback method of the bound
-> [NodeController]{@link ../../../arkui/NodeController:NodeController} may be **undefined** due to instance mismatch.
-> Therefore, this component does not support cross-instance node reuse.
+> - 该组件下的节点树构建时会使用UI实例[UIContext]{@link @ohos.arkui.UIContext}，实例切换时可能会因实例不匹配，导致所绑定
+> [NodeController]{@link ../../../arkui/NodeController:NodeController}的
+> [makeNode]{@link ../../../arkui/NodeController:NodeController#makeNode}回调方法的入参为undefined，因此该组件当前不支持跨实例的节点复用。
 >
-> When this component is not destroyed, the unmounting of its mounted child nodes will not be triggered.
+> - 该组件未销毁时，不会主动触发挂载节点的下树。
 
 ## NodeContainer
 
@@ -30,7 +26,7 @@ operation. It must be used in combination with **NodeController**.
 NodeContainer(controller: import('../api/@ohos.arkui.node').NodeController)
 ```
 
-Creates a **NodeContainer** component.
+创建一个**NodeContainer**组件。
 
 **Since:** 11
 
@@ -48,7 +44,7 @@ Creates a **NodeContainer** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | import('../api/@ohos.arkui.node').NodeController | Yes | **NodeController** instance used to control the upper and lower tree nodes in the **NodeContainer**. It represents the lifecycle of the **NodeContainer**.  |
+| controller | import('../api/@ohos.arkui.node').NodeController | Yes | NodeController用于控制NodeContainer中的节点的上树和下树， 反映NodeContainer容器的生命周期。 |
 
 ## Summary
 

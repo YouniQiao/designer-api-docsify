@@ -20,8 +20,8 @@ Shape组件的两种使用方式：
 
 ## 子组件
 
-包含[Rect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[Path]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Circle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、[Ellipse]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[Polyline]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、  
-[Polygon]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、[Image]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、[Column]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、[Row]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_和Shape子组件。
+包含[Rect]{@link rect}、[Path]{@link path}、[Circle]{@link circle}、[Ellipse]{@link ellipse}、[Polyline]{@link polyline}、  
+[Polygon]{@link polygon}、[Image]{@link image}、[Text]{@link text}、[Column]{@link column}、[Row]{@link row}和Shape子组件。
 
 ## Shape
 
@@ -45,7 +45,7 @@ Use the new function to create Shape.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) | 否 |  |
 
 ## Shape
 
@@ -53,7 +53,7 @@ Use the new function to create Shape.
 Shape(value: PixelMap)
 ```
 
-用于绘制Shape组件的构造函数。
+用于绘制Shape组件的构造函数。 
 
 从API version 9开始，该接口支持在ArkTS卡片中使用，卡片中不支持使用PixelMap对象。
 
@@ -71,7 +71,7 @@ Shape(value: PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 绘制目标，可将图形绘制在指定的PixelMap对象中，若未设置，则默认在当前绘制目标中进行绘制。\_\_\_HTML\_TAG\_USD\_0\_\_\_异常值undefined和null按照无效值处理，本次设置不生效。  |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) | 是 | 绘制目标，可将图形绘制在指定的PixelMap对象中，若未设置，则默认在当前绘制目标中进行绘制。<br/>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## Shape
 
@@ -95,3 +95,4 @@ Called when a component is drawn.
 
 ## 汇总
 
+- [ViewportRect](arkts-arkui-shape-viewportrect-i.md)

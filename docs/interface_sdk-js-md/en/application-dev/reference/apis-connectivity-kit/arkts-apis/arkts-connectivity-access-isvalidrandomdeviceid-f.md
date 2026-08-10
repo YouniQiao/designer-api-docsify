@@ -1,5 +1,11 @@
 # isValidRandomDeviceId
 
+## Modules to Import
+
+```TypeScript
+import { access } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isValidRandomDeviceId
 
 ```TypeScript
@@ -36,13 +42,13 @@ Determine whether the randomized device address application can still be used.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Check persistent device address failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,10 +1,10 @@
 # InvertOptions
 
-Describes the options for inverting the foreground color.
+前景智能取反色。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 <!--Device-unnamed-declare interface InvertOptions--><!--Device-unnamed-declare interface InvertOptions-End-->
 
@@ -16,15 +16,15 @@ Describes the options for inverting the foreground color.
 high: number
 ```
 
-Value when the background color is less than the grayscale threshold.
+背景颜色灰度值小于阈值区间时的取值。
 
-Value range: [0, 1].
+取值范围：[0, 1]
 
 **Type:** number
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +40,15 @@ Value range: [0, 1].
 low: number
 ```
 
-Value when the background color is greater than the grayscale threshold.
+背景颜色灰度值大于阈值区间时的取值。
 
-Value range: [0, 1].
+取值范围：[0, 1]
 
 **Type:** number
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,15 +64,15 @@ Value range: [0, 1].
 threshold: number
 ```
 
-Grayscale threshold.
+灰度阈值。
 
-Value range: [0, 1].
+取值范围：[0, 1]
 
 **Type:** number
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,19 +88,19 @@ Value range: [0, 1].
 thresholdRange: number
 ```
 
-Threshold value range.
+阈值范围。
 
-Value range: [0, 1].
+取值范围：[0, 1]
 
-**NOTE**
+**说明：**
 
-This range defines the upper and lower bounds of the grayscale threshold. The grayscale value changes linearly from high to low within the range.
+灰度阈值上下偏移thresholdRange构成阈值区间，背景颜色灰度值在区间内取值由high线性渐变到low。
 
 **Type:** number
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

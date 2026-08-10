@@ -36,7 +36,7 @@ constructor(options?: RotationGestureHandlerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 旋转手势处理器配置参数。 |
+| options | [RotationGestureHandlerOptions](arkts-arkui-gesture-rotationgesturehandleroptions-i.md) | 否 | 旋转手势处理器配置参数。 |
 
 ## onActionCancel
 
@@ -62,13 +62,13 @@ onActionCancel(event: Callback<void>): RotationGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 旋转手势处理器取消回调。不返回手势事件信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 旋转手势处理器取消回调。不返回手势事件信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前旋转手势处理器对象。 |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 
 ## onActionCancel
 
@@ -77,7 +77,7 @@ onActionCancel(event: Callback<GestureEvent>): RotationGestureHandler
 ```
 
 设置旋转手势处理器取消回调。旋转手势处理器识别成功后，接收到触摸取消事件时触发回调。与  
-[onActionCancel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相比，此接口返回手势事件信息。
+[onActionCancel](arkts-arkui-rotationgesturehandler-c.md#onactioncancel)相比，此接口返回手势事件信息。
 
 **起始版本：** 18
 
@@ -95,13 +95,13 @@ onActionCancel(event: Callback<GestureEvent>): RotationGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | 是 | 旋转手势处理器取消回调。返回手势事件信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 旋转手势处理器取消回调。返回手势事件信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前旋转手势处理器对象。 |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 
 ## onActionEnd
 
@@ -127,13 +127,13 @@ onActionEnd(event: Callback<GestureEvent>): RotationGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | 是 | 旋转手势处理器结束回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 旋转手势处理器结束回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前旋转手势处理器对象。 |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 
 ## onActionStart
 
@@ -159,13 +159,13 @@ onActionStart(event: Callback<GestureEvent>): RotationGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | 是 | 旋转手势处理器识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 旋转手势处理器识别成功回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前旋转手势处理器对象。 |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 
 ## onActionUpdate
 
@@ -191,11 +191,11 @@ onActionUpdate(event: Callback<GestureEvent>): RotationGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | 是 | 旋转手势处理器更新回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 旋转手势处理器更新回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前旋转手势处理器对象。 |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 

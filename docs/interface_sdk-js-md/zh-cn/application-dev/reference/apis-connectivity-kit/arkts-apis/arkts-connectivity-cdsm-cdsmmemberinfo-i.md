@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { cdsm } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -38,7 +44,7 @@ state: CdsmConnectionState
 
 成员的连接状态。
 
-**类型：** CdsmConnectionState
+**类型：** [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md)
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,6 @@
 # SearchPlayInfo
 
-The definition of SearchPlayInfo.
+搜播信息的定义。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ The definition of SearchPlayInfo.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## musicInfo
 
 ```TypeScript
 musicInfo?: SearchPlayMusicInfo
 ```
 
-The musicInfo of SearchPlayInfo.
+搜播的音频信息。
 
-**Type:** SearchPlayMusicInfo
+**Type:** [SearchPlayMusicInfo](arkts-avsession-avmusictemplate-searchplaymusicinfo-i.md)
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ The musicInfo of SearchPlayInfo.
 videoInfo?: SearchPlayVideoInfo
 ```
 
-The videoInfo of SearchPlayInfo.
+搜播的视频信息。
 
-**Type:** SearchPlayVideoInfo
+**Type:** [SearchPlayVideoInfo](arkts-avsession-avmusictemplate-searchplayvideoinfo-i.md)
 
 **Since:** 23
 

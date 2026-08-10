@@ -1,12 +1,18 @@
 # getCertificateStorePath
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## getCertificateStorePath
 
 ```TypeScript
 function getCertificateStorePath(property: CertStoreProperty): string
 ```
 
-Obtains the certificate storage path.
+表示获取证书的存储路径。
 
 **Since:** 18
 
@@ -20,23 +26,23 @@ Obtains the certificate storage path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Storage information about the target certificate. |
+| property | [CertStoreProperty](arkts-devicecertificate-certificatemanager-certstoreproperty-i.md) | Yes | 表示获取证书存储路径的参数集合。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Certificate storage path. |
+| string | 表示证书的存储路径。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. For example, CertStoreProperty.certType is set to CA\_\_\_ESCAPED\_UNDERSCORE\_\_\_CERT\_\_\_ESCAPED\_UNDERSCORE\_\_\_USER, but CertStoreProperty.certScope is not specified. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
-| [17500009](../errorcode-certManager.md#17500009-specified-certificate-storage-path-not-supported) | The device does not support the specified certificate storage path, For example, the device outside China does not support the certificate that uses SM algorithm.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. For example, CertStoreProperty.certType is set to CA_CERT_USER, but CertStoreProperty.certScope is not specified. |
+| 17500009 | The device does not support the specified certificate storage path, For example, the device outside China does not support the certificate that uses SM algorithm.<br>**Applicable version:** 20 and later |
+| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

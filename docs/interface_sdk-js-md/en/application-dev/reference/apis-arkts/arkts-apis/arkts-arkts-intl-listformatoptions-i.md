@@ -18,7 +18,7 @@ localeMatcher?: ListFormatLocaleMatcher | undefined
 
 Locale matcher option.
 
-**Type:** ListFormatLocaleMatcher \| undefined
+**Type:** [ListFormatLocaleMatcher](arkts-arkts-intl-listformatlocalematcher-t.md) \| undefined
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ style?: ListFormatStyle | undefined
 
 Style option.
 
-**Type:** ListFormatStyle \| undefined
+**Type:** [ListFormatStyle](arkts-arkts-intl-listformatstyle-t.md) \| undefined
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ type?: ListFormatType | undefined
 
 Type option.
 
-**Type:** ListFormatType \| undefined
+**Type:** [ListFormatType](arkts-arkts-intl-listformattype-t.md) \| undefined
 
 **Since:** 26.0.0
 

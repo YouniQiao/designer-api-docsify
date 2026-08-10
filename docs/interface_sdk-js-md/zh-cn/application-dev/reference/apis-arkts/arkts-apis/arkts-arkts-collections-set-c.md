@@ -1,12 +1,13 @@
 # Set
 
 一种存储唯一值的非线性数据结构，能够高效地进行元素存在性检测和去重操作。
-    **说明**  
-    
-    - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。  
-    本节使用以下标识来表示泛型的使用：
 
-- T：Type，支持\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> 本节使用以下标识来表示泛型的使用：
+
+- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。  
 **装饰器类型：** \@Sendable
 
 **起始版本：** 12
@@ -18,6 +19,12 @@
 <!--Device-collections-class Set<T>--><!--Device-collections-class Set<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { collections } from 'kits/@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -41,13 +48,13 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
 ## add
 
@@ -83,8 +90,8 @@ add(value: T): Set<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The add method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## clear
 
@@ -108,8 +115,8 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The clear method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## constructor
 
@@ -139,7 +146,7 @@ constructor(values?: readonly T[] | null)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Set's constructor cannot be directly invoked. |
+| 10200012 | The ArkTS Set's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -169,7 +176,7 @@ constructor(iterable: Iterable<T>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Set's constructor cannot be directly invoked. |
+| 10200012 | The ArkTS Set's constructor cannot be directly invoked. |
 
 ## delete
 
@@ -205,8 +212,8 @@ delete(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The delete method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The delete method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## entries
 
@@ -230,14 +237,14 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The entries method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## forEach
 
@@ -267,8 +274,8 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The forEach method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## has
 
@@ -304,8 +311,8 @@ has(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The has method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## keys
 
@@ -329,14 +336,14 @@ keys(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The keys method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## values
 
@@ -360,14 +367,14 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The values method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## size
 

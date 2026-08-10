@@ -10,6 +10,12 @@ Define configuration of the VPN network.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
+## Modules to Import
+
+```TypeScript
+import { vpnExtension } from 'kits/@kit.NetworkKit';
+```
+
 ## addresses
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # Orientation (System API)
 
-Enumerates the screen orientations.
+屏幕方向枚举。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates the screen orientations.
 UNSPECIFIED = 0
 ```
 
-Unspecified. The screen orientation is determined by the system.
+表示未指定屏幕方向，由系统指定。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Unspecified. The screen orientation is determined by the system.
 VERTICAL = 1
 ```
 
-Vertical.
+表示指定屏幕为垂直方向。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Vertical.
 HORIZONTAL = 2
 ```
 
-Horizontal.
+表示指定屏幕为水平方向。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Horizontal.
 REVERSE_VERTICAL = 3
 ```
 
-Reverse vertical.
+表示指定屏幕为反向垂直方向。
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ Reverse vertical.
 REVERSE_HORIZONTAL = 4
 ```
 
-Reverse horizontal.
+表示指定屏幕为反向水平方向。
 
 **Since:** 9
 

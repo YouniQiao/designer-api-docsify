@@ -1,8 +1,8 @@
 # DateOptions
 
-DateOptions defines options for the date picker.
+DateOptions定义日期选择器的选项。
 
-Inherits from [CommonOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
 
 **Inheritance/Implementation:** DateOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
@@ -14,22 +14,28 @@ Inherits from [CommonOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
+
 ## lunar
 
 ```TypeScript
 lunar?: boolean
 ```
 
-Specifies whether to display as lunar calendar.
+指定是否显示农历。
 
-- true: Display as lunar calendar.  
-- false: Do not display as lunar calendar.
+- true：显示为农历。  
+- false：不显示为农历。
 
-Default value: false
+默认值：false
 
-**Description**:
+**说明：**
 
-This only takes effect in Simplified Chinese and Traditional Chinese language environments. In other language environments, setting this property has no effect.
+仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
 **Type:** boolean
 
@@ -51,11 +57,11 @@ This only takes effect in Simplified Chinese and Traditional Chinese language en
 mode?: DateMode
 ```
 
-Defines the mode of the date picker.
+定义日期选择器的模式。
 
-Default value: DateMode.DATE
+默认值：DateMode.DATE
 
-**Type:** DateMode
+**Type:** [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
 
 **Default:** DateMode.DATE
 

@@ -1,6 +1,6 @@
 # CustomSpanMeasureInfo
 
-Defines the CustomSpanMeasureInfo interface.
+定义自定义绘制Span的测量信息接口。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines the CustomSpanMeasureInfo interface.
 fontSize: number
 ```
 
-Text font size.
+设置文本字体大小。
 
-Unit: [fp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -40,13 +40,13 @@ Unit: [fp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 layoutPolicy?: LayoutPolicy
 ```
 
-Width layout policy of the parent component of the custom span.
+自定义span所在父组件的宽度布局策略。
 
-**NOTE**
+**说明：**
 
-When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
+当值为null或undefined时，表示父组件没有设置宽度布局策略。
 
-**Type:** LayoutPolicy
+**Type:** [LayoutPolicy](arkts-arkui-common-layoutpolicy-c.md)
 
 **Since:** 26.0.0
 
@@ -66,9 +66,11 @@ When the value is **null** or **undefined**, the parent component does not have 
 maxWidth?: number
 ```
 
-Maximum width constraint of the custom span within the parent component's content area.
+自定义span所在父组件的内容区的最大宽度约束。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+默认值：使用自身宽度。
+
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 

@@ -12,6 +12,12 @@ Parameters for configuring the location simulation function.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## locations
 
 ```TypeScript
@@ -40,7 +46,7 @@ timeInterval: int
 
 Interval for reporting simulated locations.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

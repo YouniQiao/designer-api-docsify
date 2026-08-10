@@ -10,6 +10,12 @@ Provides methods to accessing bluetooth HID(Human Interface Device)-related capa
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions
@@ -23,13 +29,13 @@ Provides methods to accessing bluetooth HID(Human Interface Device)-related capa
 
 | Name | Description |
 | --- | --- |
-| [GetReportData](arkts-connectivity-hid-getreportdata-i.md) | Describe the GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_REPORT data is received from remote host. |
+| [GetReportData](arkts-connectivity-hid-getreportdata-i.md) | Describe the GET_REPORT data is received from remote host. |
 | [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md) | Manager HID device profile. |
 | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Represents the Quality of Service (QoS) settings for a bluetooth hid device application. |
 | [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md) | Describe the HID device capability fields of this endpoint being queried. |
 | [InterruptData](arkts-connectivity-hid-interruptdata-i.md) | Describe the interrupt data is received from remote host. |
 | [ProtocolData](arkts-connectivity-hid-protocoldata-i.md) | Describe the protocol data is received from remote host. |
-| [SetReportData](arkts-connectivity-hid-setreportdata-i.md) | Describe the SET\_\_\_ESCAPED\_UNDERSCORE\_\_\_REPORT data is received from remote host. |
+| [SetReportData](arkts-connectivity-hid-setreportdata-i.md) | Describe the SET_REPORT data is received from remote host. |
 
 <!--Del-->
 ### Interfaces（系统接口）

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## keyCode
 
 ```TypeScript
@@ -18,7 +24,7 @@ keyCode: KeyCode
 
 按键编码。
 
-**类型：** KeyCode
+**类型：** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
 
 **起始版本：** 23
 
@@ -38,7 +44,7 @@ keyPolicy: KeyPolicy
 
 按键策略。
 
-**类型：** KeyPolicy
+**类型：** [KeyPolicy](arkts-mdm-systemmanager-keypolicy-e.md)
 
 **起始版本：** 23
 

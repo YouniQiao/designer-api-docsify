@@ -1,6 +1,6 @@
 # RequestInfo
 
-Defines the request information, which is used as an input parameter for binding the modal dialog box.
+表示发起方请求信息，作为窗口绑定模态弹框的入参。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the request information, which is used as an input parameter for binding
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { dialogRequest } from 'kits/@kit.AbilityKit';
+```
+
 ## windowRect
 
 ```TypeScript
 windowRect?: WindowRect
 ```
 
-Location attributes of a modal dialog box.
+表示模态弹框的位置属性。
 
-**Type:** WindowRect
+**Type:** [WindowRect](arkts-ability-dialogrequest-windowrect-i.md)
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # FileSync
 
-Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit.Before using the APIs of this class, you need to create a **FileSync** instance.
+云盘同步对象，用于支撑文件管理器应用完成云盘文件的端云同步流程。在使用前，需要先创建FileSync实例。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(bundleName: string)
 ```
 
-A constructor used to create a **FileSync** instance.
+端云同步流程的构造函数，用于获取FileSync类的实例。
 
 **Since:** 12
 
@@ -32,16 +38,16 @@ A constructor used to create a **FileSync** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 应用包名。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let fileSync = new cloudSync.FileSync("com.ohos.demo")
@@ -53,7 +59,7 @@ let fileSync = new cloudSync.FileSync("com.ohos.demo")
 getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 ```
 
-Query the upload state of the cloud file list.
+获取文件上传列表和进度信息。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -73,22 +79,22 @@ Query the upload state of the cloud file list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | uris of queryed files. |
+| uris | Array&lt;string&gt; | Yes | 待查询上传进度的文件URI数组，数组长度取值范围[1,100]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UploadProgress&gt;&gt; |  Return Promise. |
+| Promise&lt;Array&lt;UploadProgress&gt;&gt; | Promise对象，返回上传进度信息数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. &lt;br&gt;3.The input parameter contains an invalid uri. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13900010 | Try again. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.The input parameter contains an invalid uri. |
 
 ## pauseUpload
 
@@ -96,7 +102,7 @@ Query the upload state of the cloud file list.
 pauseUpload(uri: string): void
 ```
 
-Pause the upload of the cloud file.
+暂停云文件上传。
 
 **Since:** 26.0.0
 
@@ -116,17 +122,17 @@ Pause the upload of the cloud file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | uri of file. |
+| uri | string | Yes | 待暂停的文件URI。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900002 | No such file or directory. |
-| 13900010 | Try again. |
 | 14000002 | Invalid uri. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13900010 | Try again. |
 
 ## registerUploadProgress
 
@@ -134,7 +140,7 @@ Pause the upload of the cloud file.
 registerUploadProgress(callback: Callback<UploadProgress>): void
 ```
 
-Registers to cloud file upload progress change. This method uses a callback to get upload progress changes.
+注册上传进度回调函数，用于监听文件上传进度变化。使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -154,16 +160,16 @@ Registers to cloud file upload progress change. This method uses a callback to g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UploadProgress&gt; | Yes | Callback function. The callback will be triggered when the upload progress changes, including state updates, processed size changes, and error occurrences. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UploadProgress&gt; | Yes | 回调函数，监听文件上传进度变化。当文件上传进度发生变化时触发回调，返回上传进度信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameter are left unspecified. &lt;br&gt;2.The number of instances registered at the same time exceeds the upper limit. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13900010 | Try again. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameter are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.The number of instances registered at the same time exceeds the upper limit. |
 
 ## resumeUpload
 
@@ -171,7 +177,7 @@ Registers to cloud file upload progress change. This method uses a callback to g
 resumeUpload(uri: string): void
 ```
 
-Resume the upload of the cloud file.
+恢复云文件上传。
 
 **Since:** 26.0.0
 
@@ -191,17 +197,17 @@ Resume the upload of the cloud file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | uri of file. |
+| uri | string | Yes | 待恢复上传的文件URI。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900002 | No such file or directory. |
-| 13900010 | Try again. |
 | 14000002 | Invalid uri. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13900010 | Try again. |
 
 ## unregisterUploadProgress
 
@@ -209,7 +215,7 @@ Resume the upload of the cloud file.
 unregisterUploadProgress(): void
 ```
 
-Unregisters from cloud file upload progress change.
+取消注册上传进度回调函数。
 
 **Since:** 26.0.0
 
@@ -229,7 +235,7 @@ Unregisters from cloud file upload progress change.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13900010 | Try again. |
 

@@ -1,6 +1,6 @@
 # BoardStyle
 
-Represents a board style object.
+背板风格对象。
 
 **Since:** 10
 
@@ -16,15 +16,15 @@ Represents a board style object.
 borderRadius?: Length
 ```
 
-Rounded corner radius of the board. It cannot be set in percentage.
+背板的圆角半径（不支持百分比设置）。
 
-Default value: **8.0**
+默认值：8.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 8.0vp [since 11]
 

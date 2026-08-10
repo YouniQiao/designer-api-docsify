@@ -1,6 +1,6 @@
 # DataProxyMaxValueLength
 
-[共享配置]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的值允许的最大长度的枚举值。
+[共享配置](arkts-arkdata-datashare-proxydata-i.md)的值允许的最大长度的枚举值。
 
 **起始版本：** 26.0.0
 

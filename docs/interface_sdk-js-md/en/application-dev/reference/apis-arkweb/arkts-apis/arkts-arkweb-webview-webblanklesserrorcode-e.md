@@ -1,6 +1,6 @@
 # WebBlanklessErrorCode
 
-Enumerates the error codes of blankless. For details, see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+Enumerates the error codes of blankless. For details, see {@link setBlanklessLoadingWithKey} or {@link BlanklessInfo}.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # CmsKeyTransRecipientInfo
 
-Represents KeyTrans recipient information for CMS enveloped data.
+CMS封装数据的KeyTrans接收方信息。
 
 **Since:** 22
 
@@ -10,15 +10,21 @@ Represents KeyTrans recipient information for CMS enveloped data.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## cert
 
 ```TypeScript
 cert: X509Cert
 ```
 
-RSA certificate.
+RSA证书。
 
-**Type:** X509Cert
+**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
 **Since:** 22
 

@@ -1,6 +1,6 @@
 # CooperateMsg (System API)
 
-Represents a screen hopping message notification.
+键鼠穿越的消息通知。
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ Represents a screen hopping message notification.
 COOPERATE_PREPARE = 0
 ```
 
-The preparation for screen hopping is finished.
+表示准备键鼠穿越。
 
 **Since:** 10
 
@@ -44,7 +44,7 @@ The preparation for screen hopping is finished.
 COOPERATE_UNPREPARE = 1
 ```
 
-The preparation for screen hopping is cancelled.
+表示取消键鼠穿越准备。
 
 **Since:** 10
 
@@ -66,7 +66,7 @@ The preparation for screen hopping is cancelled.
 COOPERATE_ACTIVATE = 2
 ```
 
-Screen hopping starts.
+表示启动键鼠穿越。
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ Screen hopping starts.
 COOPERATE_ACTIVATE_SUCCESS = 3
 ```
 
-Starting screen hopping succeeds.
+表示键鼠穿越启动成功。
 
 **Since:** 10
 
@@ -110,7 +110,7 @@ Starting screen hopping succeeds.
 COOPERATE_ACTIVATE_FAIL = 4
 ```
 
-Starting screen hopping fails.
+表示键鼠穿越启动失败。
 
 **Since:** 10
 
@@ -132,7 +132,7 @@ Starting screen hopping fails.
 COOPERATE_DEACTIVATE_SUCCESS = 5
 ```
 
-Stopping screen hopping succeeds.
+表示键鼠穿越停止成功。
 
 **Since:** 10
 
@@ -154,7 +154,7 @@ Stopping screen hopping succeeds.
 COOPERATE_DEACTIVATE_FAIL = 6
 ```
 
-Stopping screen hopping fails.
+表示键鼠穿越停止失败。
 
 **Since:** 10
 
@@ -176,7 +176,7 @@ Stopping screen hopping fails.
 COOPERATE_SESSION_DISCONNECTED = 7
 ```
 
-The screen hopping session is disconnected.
+表示键鼠穿越会话断开。
 
 **Since:** 10
 

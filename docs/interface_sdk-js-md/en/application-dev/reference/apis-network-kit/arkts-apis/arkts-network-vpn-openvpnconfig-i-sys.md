@@ -14,6 +14,12 @@ Define configuration of the open VPN network.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { vpn } from 'kits/@kit.NetworkKit';
+```
+
 ## askpass
 
 ```TypeScript

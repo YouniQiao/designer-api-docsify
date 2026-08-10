@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## 导入模块
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## type
 
 ```TypeScript
@@ -18,7 +24,7 @@ type: ChangeType
 
 通知变更的类型。
 
-**类型：** ChangeType
+**类型：** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ values: Array<ValuesBucket>
 
 更新的数据。
 
-**类型：** Array&lt;ValuesBucket&gt;
+**类型：** Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt;
 
 **起始版本：** 12
 

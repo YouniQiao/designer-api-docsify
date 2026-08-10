@@ -2,7 +2,7 @@
 
 TimeOptions定义时间选择器的选项。
 
-继承于[CommonOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
 
 **继承/实现关系：** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
@@ -14,6 +14,12 @@ TimeOptions定义时间选择器的选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
+
 ## format
 
 ```TypeScript
@@ -22,9 +28,9 @@ format?: TimeFormat
 
 定义时间选择器的格式。
 
-默认值：TimeFormat.HOUR\_MINUTE
+默认值：TimeFormat.HOUR_MINUTE
 
-**类型：** TimeFormat
+**类型：** [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
 
 **默认值：** TimeFormat.HOUR_MINUTE
 

@@ -1,12 +1,12 @@
 # Slider
 
-The **Slider** component is used to quickly adjust settings, such as the volume and brightness.
+滑动条组件，通常用于快速调节设置值，如音量调节、亮度调节等应用场景。支持样式定制、方向配置、交互方式和无障碍功能，能解决UI一致性问题，提升开发效率，从而改善用户体验并降低开发成本。
 
-> **NOTE**
+> **说明：**
 
-## Child Components
+## 子组件
 
-Not supported
+无
 
 ## Slider
 
@@ -30,7 +30,22 @@ Slider(options?: SliderOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the slider.  |
+| options | [SliderOptions](arkts-arkui-slideroptions-i.md) | No | 配置滑动条的参数。若不传入，则使用SliderOptions中各属性的默认值。 |
 
 ## Summary
 
+- [ColorMetricsStop](arkts-arkui-slider-colormetricsstop-i.md)
+- [SlideRange](arkts-arkui-slider-sliderange-i.md)
+- [SliderBlockStyle](arkts-arkui-slider-sliderblockstyle-i.md)
+- [SliderConfiguration](arkts-arkui-slider-sliderconfiguration-i.md)
+- [SliderCustomContentOptions](arkts-arkui-slider-slidercustomcontentoptions-i.md)
+- [SliderOptions](arkts-arkui-slider-slideroptions-i.md)
+- [SliderPrefixOptions](arkts-arkui-slider-sliderprefixoptions-i.md)
+- [SliderShowStepOptions](arkts-arkui-slider-slidershowstepoptions-i.md)
+- [SliderStepItemAccessibility](arkts-arkui-slider-sliderstepitemaccessibility-i.md)
+- [SliderSuffixOptions](arkts-arkui-slider-slidersuffixoptions-i.md)
+- [SliderTriggerChangeCallback](arkts-arkui-slider-slidertriggerchangecallback-t.md)
+- [SliderBlockType](arkts-arkui-slider-sliderblocktype-e.md)
+- [SliderChangeMode](arkts-arkui-slider-sliderchangemode-e.md)
+- [SliderInteraction](arkts-arkui-slider-sliderinteraction-e.md)
+- [SliderStyle](arkts-arkui-slider-sliderstyle-e.md)

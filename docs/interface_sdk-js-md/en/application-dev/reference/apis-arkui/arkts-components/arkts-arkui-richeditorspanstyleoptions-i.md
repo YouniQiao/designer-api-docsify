@@ -1,10 +1,10 @@
 # RichEditorSpanStyleOptions
 
-Defines the text span style options.
+文本样式选项。
 
-Inherits [RichEditorRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
 
-**Inheritance/Implementation:** RichEditorSpanStyleOptions extends [RichEditorRange](../arkts-apis/arkts-arkui-component/richeditor-richeditorrange-i.md)
+**Inheritance/Implementation:** RichEditorSpanStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
 
 **Since:** 10
 

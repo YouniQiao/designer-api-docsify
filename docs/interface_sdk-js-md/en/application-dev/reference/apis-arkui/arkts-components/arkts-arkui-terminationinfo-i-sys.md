@@ -1,6 +1,6 @@
 # TerminationInfo (System API)
 
-Indicates the information when the provider of the embedded UI is terminated.
+用于表示被拉起的UIExtensionAbility通过调用terminateSelfWithResult或者terminateSelf正常退出时的返回结果。
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Indicates the information when the provider of the embedded UI is terminated.
 code: number
 ```
 
-Defines the termination code.
+被拉起的UIExtensionAbility退出时返回的结果码，返回的结果码由terminateSelfWithResult或者terminateSelf被调用时传入的数据决定。若通过terminateSelf退出，code取默认值0。
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Defines the termination code.
 want?: import('../api/@ohos.app.ability.Want').default
 ```
 
-Defines the additional termination information.
+被拉起的UIExtensionAbility退出时返回的数据。默认值为undefined。
 
 **Type:** import('../api/@ohos.app.ability.Want').default
 

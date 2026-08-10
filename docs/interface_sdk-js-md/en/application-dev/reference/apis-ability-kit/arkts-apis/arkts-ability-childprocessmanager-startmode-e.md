@@ -1,6 +1,6 @@
 # StartMode
 
-Enumerates the child process start modes.
+子进程启动模式枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the child process start modes.
 SELF_FORK = 0
 ```
 
-The child process is forked from the application process. The child process started in this mode inherits the resources of the parent process and cannot use Binder IPC to communicate with other processes. Otherwise, the child process will crash.
+从App自身进程Fork子进程。以该模式启动的子进程会继承父进程资源，不能使用Binder IPC和其他进程通信，否则会导致子进程崩溃退出。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ The child process is forked from the application process. The child process star
 APP_SPAWN_FORK = 1
 ```
 
-The child process is forked from AppSpawn. The child process started in this mode does not inherit the resources of the parent process and can use Binder IPC to communicate with other processes.
+从AppSpawn Fork子进程。以该模式启动的子进程不会继承父进程资源，可以使用Binder IPC和其他进程通信。
 
 **Since:** 11
 

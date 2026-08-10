@@ -1,16 +1,15 @@
 # BundleFlag
 
-    **NOTE**  
-    
-    This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
-    [bundleManager.BundleFlag]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)替代。
 
-Enumerates the bundle flags, which indicate the type of bundle information to obtain.
+包信息标志，指示需要获取的包信息的内容。
 
-If an API does not match the flag, the flag is ignored. For example, using **GET\_ABILITY\_INFO\_WITH\_PERMISSION** to obtain the application information does not affect the result.
+当接口与标志不匹配时，该标志会被忽略，例如获取application时使用GET_ABILITY_INFO_WITH_PERMISSION对结果不会产生影响。
 
-Flags can be used together. For example, you can use the combination of **GET\_APPLICATION\_INFO\_WITH\_PERMISSION**  
-and **GET\_APPLICATION\_INFO\_WITH\_DISABLE** to obtain the result that contains both application permission information and disabled application information.
+标志可以叠加使用，例如使用GET_APPLICATION_INFO_WITH_PERMISSION + GET_APPLICATION_INFO_WITH_DISABLE可以使结果同时包含应用权限信息和被禁用的应用信息。
 
 **Since:** 7
 
@@ -30,7 +29,7 @@ and **GET\_APPLICATION\_INFO\_WITH\_DISABLE** to obtain the result that contains
 GET_BUNDLE_DEFAULT = 0x00000000
 ```
 
-Obtains the default application information.
+获取默认的应用信息。
 
 **Since:** 7
 
@@ -50,7 +49,7 @@ Obtains the default application information.
 GET_BUNDLE_WITH_ABILITIES = 0x00000001
 ```
 
-Obtains the bundle information with the ability information.
+获取包括Ability信息的包信息。
 
 **Since:** 7
 
@@ -70,7 +69,7 @@ Obtains the bundle information with the ability information.
 GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002
 ```
 
-Obtains the ability information with the permission information.
+获取包括权限的Ability信息。
 
 **Since:** 7
 
@@ -90,7 +89,7 @@ Obtains the ability information with the permission information.
 GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004
 ```
 
-Obtains the ability information with the application information.
+获取包括Application的ability信息。
 
 **Since:** 7
 
@@ -110,7 +109,7 @@ Obtains the ability information with the application information.
 GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000008
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -128,7 +127,7 @@ Installation conflict. (The basic information of the application to update is in
 GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010
 ```
 
-Obtains the bundle information with the information about the required permissions.
+获取包括所需权限的包信息。
 
 **Since:** 7
 
@@ -148,7 +147,7 @@ Obtains the bundle information with the information about the required permissio
 GET_ALL_APPLICATION_INFO = 0xFFFF0000
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -166,7 +165,7 @@ Installation conflict. (The basic information of the application to update is in
 GET_ABILITY_INFO_WITH_METADATA = 0x00000020
 ```
 
-Obtains the ability metadata information.
+获取ability的元数据信息。
 
 **Since:** 8
 
@@ -186,7 +185,7 @@ Obtains the ability metadata information.
 GET_APPLICATION_INFO_WITH_METADATA = 0x00000040
 ```
 
-No uninstallation permission.
+缺少卸载权限。
 
 **Since:** 8
 
@@ -204,7 +203,7 @@ No uninstallation permission.
 GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080
 ```
 
-Obtains the ability information of system applications.
+获取仅包括系统应用的ability信息。
 
 **Since:** 8
 
@@ -224,7 +223,7 @@ Obtains the ability information of system applications.
 GET_ABILITY_INFO_WITH_DISABLE = 0x00000100
 ```
 
-Obtains information about disabled abilities.
+获取包括被禁用的ability信息。
 
 **Since:** 8
 
@@ -244,7 +243,7 @@ Obtains information about disabled abilities.
 GET_APPLICATION_INFO_WITH_DISABLE = 0x00000200
 ```
 
-No uninstallation permission.
+缺少卸载权限。
 
 **Since:** 8
 

@@ -18,5 +18,5 @@ Callback with the selected text after the text selection content changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionText | string | Yes | the selected text after the text selection content changes.  |
+| selectionText | string | Yes | the selected text after the text selection content changes. |
 

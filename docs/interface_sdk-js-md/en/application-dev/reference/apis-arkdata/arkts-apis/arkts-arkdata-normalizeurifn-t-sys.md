@@ -4,7 +4,7 @@
 type NormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void
 ```
 
-Callback function called when converting the given URI into a normalized URI.
+用户给定的URI转换为服务端使用的URI操作的属性类型。
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ Callback function called when converting the given URI into a normalized URI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri to normalize.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Returns the normalized uri if the data share supports URI normalization.  |
+| uri | string | Yes | Indicates the uri to normalize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the normalized uri if the data share supports URI normalization. |
 

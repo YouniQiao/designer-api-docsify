@@ -1,9 +1,10 @@
 # MarqueeOptions
 
 Marquee初始化参数。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -21,7 +22,7 @@ delay?: number
 
 设置两轮滚动之间的延迟时间。
 
-默认值：0
+默认值：0 
 
 取值范围：[0, +∞)，设置的值小于0时等价于设置0。
 
@@ -111,7 +112,7 @@ spacing?: LengthMetrics
 
 默认值：跑马灯组件宽度。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 23
 
@@ -187,9 +188,9 @@ step?: number
 
 取值范围：[0, 文本宽度]，当step大于Marquee的文本宽度时，取默认值。
 
-默认值：6
+默认值：6 
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number
 

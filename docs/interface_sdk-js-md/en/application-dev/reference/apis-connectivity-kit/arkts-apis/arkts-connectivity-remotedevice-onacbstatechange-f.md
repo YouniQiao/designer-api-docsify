@@ -1,14 +1,24 @@
 # onAcbStateChange
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## onAcbStateChange
 
 ```TypeScript
 function onAcbStateChange(callback: Callback<AcbStateParam>): void
 ```
 
-Subscribes to the NearLink ACB connection status change event.
+订阅NearLink ACB连接状态变化事件。ACB采用异步双向链路。  
+> **说明：**
+> 如果该用户具有ohos.permission.GET_NEARLINK_PEER_MAC权限，则真实设备地址为
+> 返回。
+> 否则，将返回一个随机的设备地址。
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK\_ACCESS permission.If the application is granted the ohos.permission.GET\_NEARLINK\_PEER\_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
 
 **Since:** 26.0.0
 
@@ -24,12 +34,12 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AcbStateParam&gt; | Yes | Callback of the event to be listened to. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AcbStateParam&gt; | Yes | 要监听的事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

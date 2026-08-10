@@ -1,6 +1,6 @@
 # FileMeta (System API)
 
-Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.
+文件的元数据，包含应用名称及文件URI，在与备份服务进行IPC时使用。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Corresponding to a file's metadata. FileMeta is useful when doing IPC with the b
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Indicates the name of a bundle.
+应用名称。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Indicates the name of a bundle.
 uri: string
 ```
 
-Indicates a uri to a file.
+应用沙箱内待传输文件的名称。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Indicates a uri to a file.
 uris?: Array<string>
 ```
 
-Indicates uris to files.
+应用沙箱内待传输文件的名称数组。
 
 **Type:** Array&lt;string&gt;
 

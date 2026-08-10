@@ -1,5 +1,11 @@
 # resetProcessPriority
 
+## 导入模块
+
+```TypeScript
+import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## resetProcessPriority
 
 ```TypeScript
@@ -20,7 +26,7 @@ function resetProcessPriority(pid: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 子进程的进程号， \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 接口创建子进程后的pid参数，即为子进程进程号。 |
+| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 子进程的进程号， [OH_Ability_StartNativeChildProcess](../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess) 接口创建子进程后的pid参数，即为子进程进程号。 |
 
 **返回值：**
 
@@ -28,7 +34,7 @@ function resetProcessPriority(pid: int): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

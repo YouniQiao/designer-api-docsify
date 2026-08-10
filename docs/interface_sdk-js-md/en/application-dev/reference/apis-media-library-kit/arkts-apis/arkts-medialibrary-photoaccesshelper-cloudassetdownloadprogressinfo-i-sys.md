@@ -12,6 +12,12 @@ Describes the progress information about a batch download.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## autoPauseReason
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly autoPauseReason: int
 
 Reason for automatic pause.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -40,7 +46,7 @@ readonly downloadEventType: CloudAssetDownloadNotifyType
 
 Type of event that triggers this update.
 
-**Type:** CloudAssetDownloadNotifyType
+**Type:** [CloudAssetDownloadNotifyType](arkts-medialibrary-photoaccesshelper-cloudassetdownloadnotifytype-e-sys.md)
 
 **Since:** 21
 
@@ -60,7 +66,7 @@ readonly fileId: int
 
 ID of the file being downloaded.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -80,7 +86,7 @@ readonly percent: int
 
 Download completion percentage.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 

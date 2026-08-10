@@ -1,8 +1,6 @@
 # CaptionsManager
 
-Implements configuration management for captions. Before calling any API of **CaptionsManager**, you must use the  
-[accessibility.getCaptionsManager()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API to obtain a **CaptionsManager**  
-instance.
+字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager)获取 CaptionsManager实例。
 
 **Since:** 8
 
@@ -12,13 +10,19 @@ instance.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## off('enableChange')
 
 ```TypeScript
 off(type: 'enableChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the state changes of captions configuration. This API uses an asynchronous callback to return the result.
+取消监听字幕配置启用状态变化事件，使用callback异步回调。
 
 **Since:** 8
 
@@ -34,16 +38,16 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| type | 'enableChange' | Yes | 取消监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数，取消指定callback对象的事件响应。需与 [on('enableChange')](accessibility.CaptionsManager.on(type: 'enableChange', callback: Callback&lt;boolean&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -79,7 +83,7 @@ struct Index {
 off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 ```
 
-Unsubscribes from the captions style changes. This API uses an asynchronous callback to return the result.
+取消字幕风格变化监听事件，使用callback异步回调。
 
 **Since:** 8
 
@@ -95,16 +99,16 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptionsStyle&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| type | 'styleChange' | Yes | 取消监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | No | 回调函数，取消指定callback对象的事件响应。需与 [on('styleChange')](accessibility.CaptionsManager.on(type: 'styleChange', callback: Callback&lt;CaptionsStyle&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -154,7 +158,7 @@ Unregister the observe of the enable state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |  |
 
 ## offStyleChange
 
@@ -176,7 +180,7 @@ Unregister the observer of the style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptionsStyle&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | No |  |
 
 ## on('enableChange')
 
@@ -184,15 +188,15 @@ Unregister the observer of the style.
 on(type: 'enableChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
-    Otherwise, a new underlying object is created each time the function is called, causing memory leakage.  
-    
-    - After calling this method, you must use  
-    [off('enableChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
+监听字幕配置启用状态变化事件，使用callback异步回调。
+
+> **说明：**
+> 
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> 
+> - 调用此方法后，务必在对象生命周期结束前使用
+> [off('enableChange')](accessibility.CaptionsManager.off(type: 'enableChange', callback?: Callback&lt;boolean&gt;))
+> 取消监听，否则可能会导致崩溃。
 
 **Since:** 8
 
@@ -208,16 +212,16 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback invoked when the enabled status of captions configuration changes. The value **true** indicates that the subtitle configuration is enabled, and the value **false** indicates that the subtitle configuration is disabled. |
+| type | 'enableChange' | Yes | 监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数，在启用状态变化时将状态通过此函数进行通知。返回true表示字幕配置开启，返回false表示字幕配置关闭。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -248,15 +252,15 @@ struct Index {
 on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 ```
 
-Subscribes to captions style changes. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
-    Otherwise, a new underlying object is created each time the function is called, causing memory leakage.  
-    
-    - After calling this method, you must use  
-    [off('styleChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
+监听字幕风格变化事件，使用callback异步回调。
+
+> **说明：**
+> 
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> 
+> - 调用此方法后，务必在对象生命周期结束前使用
+> [off('styleChange')](accessibility.CaptionsManager.off(type: 'styleChange', callback?: Callback&lt;CaptionsStyle&gt;))
+> 取消监听，否则可能会导致崩溃。
 
 **Since:** 8
 
@@ -272,16 +276,16 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptionsStyle&gt; | Yes | Callback invoked when the style of captions changes. |
+| type | 'styleChange' | Yes | 监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | Yes | 回调函数，在字幕风格变化时通过此函数进行通知。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -326,7 +330,7 @@ Register the observe of the enable state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |  |
 
 ## onStyleChange
 
@@ -348,7 +352,7 @@ Register the observer of the style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptionsStyle&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | Yes |  |
 
 ## enabled
 
@@ -356,7 +360,7 @@ Register the observer of the style.
 enabled: boolean
 ```
 
-Whether to enable captions configuration. The value **true** indicates that the caption configuration is enabled,and **false** indicates the opposite.
+表示是否启用字幕配置。true表示字幕配置开启，false表示字幕配置关闭。
 
 **Type:** boolean
 
@@ -378,9 +382,9 @@ Whether to enable captions configuration. The value **true** indicates that the 
 style: CaptionsStyle
 ```
 
-Style of captions.
+表示字幕风格。
 
-**Type:** CaptionsStyle
+**Type:** [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)
 
 **Since:** 8
 

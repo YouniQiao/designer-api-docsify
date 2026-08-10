@@ -1,6 +1,6 @@
 # PageMediaEntity
 
-The definition of pagination object.
+标签页媒体的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
 
 **Inheritance/Implementation:** PageMediaEntity extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -12,15 +12,21 @@ The definition of pagination object.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## elements
 
 ```TypeScript
 elements: MediaEntity[]
 ```
 
-Query data content (pass corresponding structure data according to the type).
+查询数据内容（根据类型传递相应的结构数据）。
 
-**Type:** MediaEntity[]
+**Type:** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
 **Since:** 23
 
@@ -38,9 +44,9 @@ Query data content (pass corresponding structure data according to the type).
 episodeRange?: EpisodeRange
 ```
 
-Episode Range
+剧集区间。
 
-**Type:** EpisodeRange
+**Type:** [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md)
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ Episode Range
 hasMoreData: boolean
 ```
 
-Have next page data.
+是否有下一页。true表示有，false表示没有。无默认值。
 
 **Type:** boolean
 
@@ -78,9 +84,9 @@ Have next page data.
 memberMediaType: EntityType
 ```
 
-Media type.
+媒体资源类型。
 
-**Type:** EntityType
+**Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **Since:** 23
 
@@ -98,9 +104,9 @@ Media type.
 pageIndex: int
 ```
 
-Pagination query page number.
+分页查询页码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -118,9 +124,9 @@ Pagination query page number.
 pageSize: int
 ```
 
-Size of per page.
+页面的大小。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -138,9 +144,9 @@ Size of per page.
 sort?: Sort
 ```
 
-Data Sorting
+数据排序。
 
-**Type:** Sort
+**Type:** [Sort](arkts-avsession-avmusictemplate-sort-e.md)
 
 **Since:** 23
 
@@ -158,9 +164,9 @@ Data Sorting
 totalSize: int
 ```
 
-Total size of data.
+数据总大小。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # KeyItem
 
-Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ event occurs.
+其他按键信息。当前[KeyCode](arkts-mdm-systemmanager-keycode-e.md)事件发生时，其他已被按下的按键信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Enumerates other key information. This refers to the information of other keys t
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## downTime
 
 ```TypeScript
 downTime: number
 ```
 
-Time when the key action occurs. The value is a microsecond-level timestamp after the system is powered on.Navigation keys do not support combination expansion, so their occurrence time is displayed as 0.
+按键动作发生时间，系统开机后微秒级时间戳。导航按键不支持组合扩展，发生时间显示为0。
 
 **Type:** number
 
@@ -36,9 +42,9 @@ Time when the key action occurs. The value is a microsecond-level timestamp afte
 keyCode: KeyCode
 ```
 
-Key code.
+按键编码。
 
-**Type:** KeyCode
+**Type:** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
 
 **Since:** 23
 
@@ -56,7 +62,7 @@ Key code.
 pressed: boolean
 ```
 
-Key action. It indicates whether the key is pressed: **true** for pressed; **false** for released.
+按键动作。按键是否被按下。true：按下；false：抬起
 
 **Type:** boolean
 

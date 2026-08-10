@@ -1,12 +1,18 @@
 # onAclStateChange
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## onAclStateChange
 
 ```TypeScript
 function onAclStateChange(callback: Callback<AclStateResult>): void
 ```
 
-Subscribe the event of acl state changed from a remote device.If the application has ohos.permission.GET\_BLUETOOTH\_PEERS\_MAC, the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
+Subscribe the event of acl state changed from a remote device.If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
 
 **Since:** 26.0.0
 
@@ -24,13 +30,26 @@ Subscribe the event of acl state changed from a remote device.If the application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AclStateResult&gt; | Yes | Callback used to listen. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AclStateResult&gt; | Yes | Callback used to listen. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 801 | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 201 | Permission denied. |
 | 2900099 | Internal system error. For example, IPC error. Detailed error messages can be used to assist in locating the problem. |
+
+## Examples
+
+```TypeScript
+function AclStateChangeEvent(aclStateResult: connection.AclStateResult) {
+    console.info('acl state changed:'+ JSON.stringify(aclStateResult));
+}
+try {
+    connection.onAclStateChange(AclStateChangeEvent);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
 

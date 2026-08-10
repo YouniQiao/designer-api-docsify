@@ -18,7 +18,7 @@ colorFilter?: ColorFilterType
 
 获取属性字符串的图片颜色滤镜效果。
 
-**类型：** ColorFilterType
+**类型：** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
 **起始版本：** 15
 
@@ -40,7 +40,7 @@ layoutStyle?: ImageAttachmentLayoutStyle
 
 设置图片布局。
 
-**类型：** ImageAttachmentLayoutStyle
+**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
 **起始版本：** 15
 
@@ -64,7 +64,7 @@ objectFit?: ImageFit
 
 默认值：ImageFit.Cover。
 
-**类型：** ImageFit
+**类型：** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **起始版本：** 15
 
@@ -86,7 +86,7 @@ resourceValue: Optional<ResourceStr>
 
 设置图片数据源。
 
-**类型：** Optional&lt;ResourceStr&gt;
+**类型：** [Optional](arkts-arkui-optional-t.md)&lt;ResourceStr&gt;
 
 **起始版本：** 15
 
@@ -110,7 +110,7 @@ size?: SizeOptions
 
 size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。
 
-**类型：** SizeOptions
+**类型：** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
 
 **起始版本：** 15
 
@@ -130,7 +130,7 @@ size的默认值与objectFit的值有关，不同的objectFit的值对应size的
 supportSvg2?: boolean
 ```
 
-获取属性字符串是否开启\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
 
 true：支持SVG解析新能力；false：保持原有SVG解析能力。
 
@@ -186,7 +186,7 @@ verticalAlign?: ImageSpanAlignment
 
 默认值：ImageSpanAlignment.BOTTOM。
 
-**类型：** ImageSpanAlignment
+**类型：** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
 
 **起始版本：** 15
 

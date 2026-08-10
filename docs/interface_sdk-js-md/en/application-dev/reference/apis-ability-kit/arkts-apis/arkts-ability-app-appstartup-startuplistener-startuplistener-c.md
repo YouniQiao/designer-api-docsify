@@ -1,6 +1,6 @@
 # StartupListener
 
-The module defines the task listener used in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+本模块提供[应用启动框架](../../../application-models/app-startup.md)任务监听器的定义。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ The module defines the task listener used in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 
 **System capability:** SystemCapability.Ability.AppStartup
 
+## Modules to Import
+
+```TypeScript
+import { StartupListener } from 'kits/@kit.AbilityKit';
+```
+
 ## onCompleted
 
 ```TypeScript
 onCompleted?(error: BusinessError<void>): void
 ```
 
-Called when all startup tasks complete.
+在所有启动任务完成时调用。
 
 **Since:** 12
 
@@ -32,9 +38,9 @@ Called when all startup tasks complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Indicates the error during execution. |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | 错误信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { StartupConfig, StartupConfigEntry, StartupListener } from '@kit.AbilityKit';
@@ -71,7 +77,7 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
 onCompleted?: OnCompletedFn
 ```
 
-Called when all startup tasks complete.
+所有启动任务完成时的回调函数。
 
 **Since:** 23
 

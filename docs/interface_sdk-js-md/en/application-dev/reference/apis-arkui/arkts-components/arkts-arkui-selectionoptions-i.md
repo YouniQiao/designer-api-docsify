@@ -16,9 +16,9 @@ Defines the selection options.
 menuPolicy?: MenuPolicy
 ```
 
-Menu display policy.Default value: MenuPolicy.DEFAULT.
+Menu pop-up policy.
 
-**Type:** MenuPolicy
+**Type:** [MenuPolicy](../arkts-apis/arkts-arkui-common-menupolicy-e.md)
 
 **Since:** 12
 

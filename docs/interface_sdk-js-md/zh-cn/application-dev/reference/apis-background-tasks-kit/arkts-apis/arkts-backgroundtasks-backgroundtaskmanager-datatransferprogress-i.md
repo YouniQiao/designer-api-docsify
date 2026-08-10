@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## continuousTaskId
 
 ```TypeScript
@@ -18,7 +24,7 @@ continuousTaskId: int
 
 长时任务ID。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.1.0
 
@@ -38,7 +44,7 @@ progressInfo: ProgressInfo
 
 通知进度信息。
 
-**类型：** ProgressInfo
+**类型：** [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md)
 
 **起始版本：** 26.1.0
 
@@ -58,7 +64,7 @@ wantAgent?: WantAgent
 
 通知参数，用于指定点击长时任务通知后跳转的界面。
 
-**类型：** WantAgent
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 26.1.0
 

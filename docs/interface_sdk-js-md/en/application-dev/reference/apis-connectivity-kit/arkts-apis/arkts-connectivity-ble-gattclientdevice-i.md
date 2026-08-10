@@ -1,6 +1,6 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance.
 
 **Since:** 10
 
@@ -9,6 +9,12 @@ Manages GATT client. Before calling an Gatt client method, you must use \_\_\_JS
 <!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
 
 ## close
 
@@ -38,13 +44,13 @@ This method unregisters the device and clears the registered callbacks and handl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -84,13 +90,13 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -128,13 +134,13 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -170,19 +176,19 @@ Get the connection status of a specific device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Connection state. |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Connection state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -220,19 +226,19 @@ Obtains the name of BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to obtain the device name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ble, constant } from '@kit.ConnectivityKit';
@@ -288,13 +294,13 @@ Obtains the name of BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ble, constant } from '@kit.ConnectivityKit';
@@ -350,19 +356,20 @@ Get the RSSI value of this BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 - 21 |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -411,19 +418,20 @@ Get the RSSI value of this BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Returns the RSSI value. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns the RSSI value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 - 21 |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -464,19 +472,19 @@ Starts discovering services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ble, constant } from '@kit.ConnectivityKit';
@@ -541,13 +549,13 @@ Starts discovering services.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ble, constant } from '@kit.ConnectivityKit';
@@ -597,17 +605,17 @@ Unsubscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -646,17 +654,17 @@ Unsubscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEConnectionChangeState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectionChangeState&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -695,17 +703,17 @@ Unsubscribe mtu changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEMtuChange' | Yes | Type of the mtu changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | No | Callback used to listen for the mtu changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to listen for the mtu changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -742,16 +750,16 @@ Unsubscribe to GATT service changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the service changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to listen for the service changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for the service changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -790,14 +798,14 @@ Unsubscribe client connection state changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEConnectionChangeState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectionChangeState&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## offBLEMtuChange
 
@@ -823,14 +831,14 @@ Unsubscribe mtu changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | No | Callback used to listen for the mtu changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to listen for the mtu changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## offBlePhyUpdate
 
@@ -856,16 +864,16 @@ Unsubscribe phy updated event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PhyValue&gt; | No | Callback used to listen for the phy updated event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PhyValue&gt; | No | Callback used to listen for the phy updated event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function BlePhyCallback(data:ble.PhyValue) {
@@ -903,14 +911,14 @@ Unsubscribe to GATT service changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to listen for the service changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for the service changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## on('BLECharacteristicChange')
 
@@ -939,17 +947,17 @@ Subscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -993,17 +1001,17 @@ Subscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEConnectionChangeState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectionChangeState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1046,17 +1054,17 @@ Subscribe mtu changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEMtuChange' | Yes | Type of the mtu changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Callback used to listen for the mtu changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the mtu changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1095,16 +1103,16 @@ Subscribe to GATT service changed event. Receiving this event indicates that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the service changed event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to listen for the service changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for the service changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1145,14 +1153,14 @@ Subscribe client connection state changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEConnectionChangeState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectionChangeState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## onBLEMtuChange
 
@@ -1176,14 +1184,14 @@ Subscribe mtu changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Callback used to listen for the mtu changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the mtu changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## onBlePhyUpdate
 
@@ -1209,16 +1217,16 @@ Subscribe phy updated event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PhyValue&gt; | Yes | Callback used to listen for the phy updated event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PhyValue&gt; | Yes | Callback used to listen for the phy updated event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function BlePhyCallback(data:ble.PhyValue) {
@@ -1256,14 +1264,14 @@ Subscribe to GATT service changed event. Receiving this event indicates that the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to listen for the service changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for the service changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
 ## readCharacteristicValue
 
@@ -1291,27 +1299,27 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
+| 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
+| 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
 | 2901000 | Read forbidden. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901004 | The connection is congested.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901005 | The connection is not encrypted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901006 | The connection is not authenticated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901007 | The connection is not authorized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1372,32 +1380,32 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to read. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLECharacteristic&gt; |  Promise used to return the characteristic value read. |
+| Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
+| 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
+| 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
 | 2901000 | Read forbidden. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901004 | The connection is congested.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901005 | The connection is not encrypted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901006 | The connection is not authenticated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901007 | The connection is not authorized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1449,27 +1457,27 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to read. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
+| 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
+| 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
 | 2901000 | Read forbidden. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901004 | The connection is congested.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901005 | The connection is not encrypted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901006 | The connection is not authenticated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901007 | The connection is not authorized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1523,32 +1531,32 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to read. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BLEDescriptor&gt; |  Promise used to return the descriptor read. |
+| Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
+| 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
+| 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
 | 2901000 | Read forbidden. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901004 | The connection is congested.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901005 | The connection is not encrypted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901006 | The connection is not authenticated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901007 | The connection is not authorized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1599,13 +1607,13 @@ Read the phy associated with the connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2901003 | The connection is not established. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -1650,23 +1658,23 @@ Asynchronous interface for setting the mtu size of a BLE peripheral device.The A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mtu | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The maximum transmission unit. |
+| mtu | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The maximum transmission unit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the mtu size that takes effect. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the mtu size that takes effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 | 2900011 | The operation is busy. The last operation is not complete. |
-| 2900099 | Operation failed. |
 | 2901003 | The connection is not established. |
+| 201 | Permission denied. |
+| 2900099 | Operation failed. |
 
 ## setBLEMtuSize
 
@@ -1700,19 +1708,19 @@ Set the mtu size of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mtu | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The maximum transmission unit. |
+| mtu | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The maximum transmission unit. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1754,23 +1762,23 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to indicate. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of setCharacteristicChangeIndication. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeIndication. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1826,7 +1834,7 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to indicate. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
 
 **Return value:**
@@ -1839,15 +1847,15 @@ Enables or disables indication of a characteristic when value changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1901,23 +1909,23 @@ Enables or disables notification of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to indicate. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that indication is disabled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of setCharacteristicChangeNotification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeNotification. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -1973,7 +1981,7 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to indicate. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
 
 **Return value:**
@@ -1986,15 +1994,15 @@ Enables or disables indication of a characteristic when value changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -2042,7 +2050,7 @@ Set the preferred phy associated with the connection.Whether the phy value will 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phyValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the phy to set. |
+| phyValue | [PhyValue](arkts-connectivity-ble-phyvalue-i.md) | Yes | Indicates the phy to set. |
 
 **Return value:**
 
@@ -2054,13 +2062,13 @@ Set the preferred phy associated with the connection.Whether the phy value will 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2901003 | The connection is not established. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -2099,7 +2107,7 @@ Update the connection parameters of the current GATT link to save power or impro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | GATT connection parameters. |
+| param | [ConnectionParam](arkts-connectivity-ble-connectionparam-e.md) | Yes | GATT connection parameters. |
 
 **Return value:**
 
@@ -2111,14 +2119,14 @@ Update the connection parameters of the current GATT link to save power or impro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2901003 | The connection is not established. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| 2901003 | The connection is not established. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2160,28 +2168,28 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to write. |
-| writeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Write type of the characteristic. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
+| 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
+| 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
 | 2901001 | Write forbidden. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901004 | The connection is congested.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901005 | The connection is not encrypted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901006 | The connection is not authenticated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901007 | The connection is not authorized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -2240,8 +2248,8 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the characteristic to write. |
-| writeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Write type of the characteristic. |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. |
 
 **Return value:**
 
@@ -2253,20 +2261,20 @@ Writes the characteristic of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
+| 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
+| 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
 | 2901001 | Write forbidden. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901004 | The connection is congested.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901005 | The connection is not encrypted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901006 | The connection is not authenticated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901007 | The connection is not authorized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -2319,27 +2327,27 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to write. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
+| 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
+| 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
 | 2901001 | Write forbidden. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901004 | The connection is congested.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901005 | The connection is not encrypted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901006 | The connection is not authenticated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901007 | The connection is not authorized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -2392,7 +2400,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to write. |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
 
 **Return value:**
 
@@ -2404,20 +2412,20 @@ Writes the descriptor of a BLE peripheral device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900011 | The operation is busy. The last operation is not complete.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
+| 2901004 | The connection is congested.<br>**Applicable version:** 20 and later |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2901005 | The connection is not encrypted.<br>**Applicable version:** 20 and later |
+| 2901006 | The connection is not authenticated.<br>**Applicable version:** 20 and later |
+| 2901007 | The connection is not authorized.<br>**Applicable version:** 20 and later |
 | 2901001 | Write forbidden. |
-| 2901003 | The connection is not established.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901004 | The connection is congested.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901005 | The connection is not encrypted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901006 | The connection is not authenticated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| 2901007 | The connection is not authorized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 2900011 | The operation is busy. The last operation is not complete.<br>**Applicable version:** 20 and later |
+| 2901003 | The connection is not established.<br>**Applicable version:** 20 and later |
+| 201 | Permission denied. |
+| 2900001 | Service stopped. |
+| 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';

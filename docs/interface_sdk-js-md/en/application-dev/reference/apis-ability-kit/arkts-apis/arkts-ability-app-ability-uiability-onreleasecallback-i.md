@@ -1,6 +1,6 @@
 # OnReleaseCallback
 
-Defines the callback that is invoked when the stub on the target UIAbility is disconnected.
+注册通用组件服务端Stub（桩）断开监听通知的回调函数类型。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines the callback that is invoked when the stub on the target UIAbility is di
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## Modules to Import
+
+```TypeScript
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## [[Call]]
 
 ```TypeScript
 (msg: string): void
 ```
 
-Defines the callback of OnRelease.
+定义OnRelease的回调函数。
 
 **Since:** 9
 
@@ -32,5 +38,5 @@ Defines the callback of OnRelease.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | Message used for disconnection. |
+| msg | string | Yes | 用于传递释放消息。 |
 

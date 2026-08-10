@@ -1,4 +1,10 @@
-# @ohos.advertising.AdComponent(Ad Component)
+# @ohos.advertising.AdComponent(广告展示组件)
+
+## Modules to Import
+
+```TypeScript
+import { AdComponent } from 'kits/@kit.AdsKit';
+```
 
 ## Summary
 
@@ -6,5 +12,5 @@
 
 | Name | Description |
 | --- | --- |
-| [AdComponent](arkts-ads-advertising-adcomponent-adcomponent-s.md) | This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles. |
+| [AdComponent](arkts-ads-advertising-adcomponent-adcomponent-s.md) | 本模块提供展示广告的能力，覆盖了原生、贴片、开屏等广告样式。 |
 

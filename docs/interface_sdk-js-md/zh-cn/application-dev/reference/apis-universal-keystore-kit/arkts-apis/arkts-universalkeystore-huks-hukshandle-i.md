@@ -1,9 +1,10 @@
 # HuksHandle
 
 huks Handle结构体。
-    **说明：**  
-    
-    从API version 9开始废弃，建议使用[HuksSessionHandle\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 9开始废弃，建议使用[HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md)替代。
 
 **起始版本：** 8
 
@@ -16,6 +17,12 @@ huks Handle结构体。
 <!--Device-huks-export interface HuksHandle--><!--Device-huks-export interface HuksHandle-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
+
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
 
 ## errorCode
 

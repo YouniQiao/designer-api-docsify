@@ -1,6 +1,6 @@
 # MicStateChangeEvent
 
-Describes the event received by the application when the microphone mute status is changed.
+麦克风状态变化时，应用接收到的事件。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Describes the event received by the application when the microphone mute status 
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## mute
 
 ```TypeScript
 mute: boolean
 ```
 
-Mute status of the microphone **true** if muted, **false** otherwise.
+系统麦克风是否为静音状态。true表示静音，false表示非静音。
 
 **Type:** boolean
 

@@ -1,8 +1,8 @@
 # Macro
 
-Macro** inherits from [MacroQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i.md)。
 
-It provides the API to enable macro photography.
+提供使能微距能力的接口。
 
 **Inheritance/Implementation:** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i.md)
 
@@ -14,17 +14,23 @@ It provides the API to enable macro photography.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## enableMacro
 
 ```TypeScript
 enableMacro(enabled: boolean): void
 ```
 
-Enables or disables macro photography.
-    **NOTE**  
-    
-    Before calling this API, call [isMacroSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the  
-    current device supports macro photography.
+使能当前的微距能力。
+
+> **说明：**
+> 
+> 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i.md#ismacrosupported)接口查询当前设备是否支持微距能力。
 
 **Since:** 19
 
@@ -40,12 +46,13 @@ Enables or disables macro photography.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable macro photography. **true** to enable, **false** otherwise. |
+| enabled | boolean | Yes | 是否开启微距能力。true表示开启微距能力，false表示关闭微距能力。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**Applicable version:** 11 - 18 |
 

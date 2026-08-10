@@ -4,7 +4,7 @@
 export type QueueForEachCb<T> = (value: T, index: int, queue: Queue<T>) => void
 ```
 
-The type of Queue callback function.
+Queue的回调函数类型。
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ The type of Queue callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | The value of current element  |
-| index | int | Yes | The key of current element The value should be an integer.  |
-| queue | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | The Queue instance being traversed  |
+| value | T | Yes | 当前遍历到的元素。 |
+| index | int | Yes | 当前遍历到的下标值。 该值为整数。 |
+| queue | [Queue](arkts-arkts-util-queue-queue-c.md)&lt;T&gt; | Yes | 当前正在遍历的Queue实例。 |
 

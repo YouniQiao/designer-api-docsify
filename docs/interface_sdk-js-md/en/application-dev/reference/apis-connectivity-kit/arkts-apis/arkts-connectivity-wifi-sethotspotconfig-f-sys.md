@@ -1,5 +1,11 @@
 # setHotspotConfig (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## setHotspotConfig
 
 ```TypeScript
@@ -8,7 +14,7 @@ function setHotspotConfig(config: HotspotConfig): boolean
 
 Sets the hotspot for a device.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Only OPEN and WPA2 PSK hotspot can be configured.
+&lt;p&gt;Only OPEN and WPA2 PSK hotspot can be configured.
 
 **Since:** 7
 
@@ -30,7 +36,7 @@ Sets the hotspot for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| config | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | Yes |  |
 
 **Return value:**
 
@@ -38,7 +44,7 @@ Sets the hotspot for a device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

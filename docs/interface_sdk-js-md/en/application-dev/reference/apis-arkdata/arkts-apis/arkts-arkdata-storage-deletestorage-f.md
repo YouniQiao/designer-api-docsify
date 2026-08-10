@@ -6,7 +6,7 @@
 function deleteStorage(path: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses an asynchronous callback to return the result.
+从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题，使用callback方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -22,8 +22,8 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the target file. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| path | string | Yes | 应用程序内部数据存储路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 
 ## deleteStorage
@@ -32,7 +32,7 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 function deleteStorage(path: string): Promise<void>
 ```
 
-Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses a promise to return the result.
+从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题，使用Promise方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -48,11 +48,11 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the target file. |
+| path | string | Yes | 应用程序内部数据存储路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise实例，用于异步获取结果。 |
 

@@ -1,5 +1,11 @@
 # writeNdefTag
 
+## Modules to Import
+
+```TypeScript
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## writeNdefTag
 
 ```TypeScript
@@ -34,7 +40,7 @@ Writes the NDEF Data.
 | --- | --- |
 | Promise&lt;void&gt; | The void. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connectedTag } from '@kit.ConnectivityKit';
@@ -76,9 +82,9 @@ Writes the NDEF Data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string | Yes | The Data to write. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connectedTag } from '@kit.ConnectivityKit';

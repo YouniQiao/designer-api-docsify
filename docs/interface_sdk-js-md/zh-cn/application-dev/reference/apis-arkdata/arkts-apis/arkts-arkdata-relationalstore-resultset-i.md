@@ -5,9 +5,9 @@
 ResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
 
 下列API示例中，都需先使用  
-[query]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[querySql]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[remoteQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、[queryLockedRow]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_等query类方法中任一方法获取到ResultSet实例，再通过此实例调用对应方法。
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)、  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)、  
+[remoteQuery](arkts-arkdata-relationalstore-rdbstore-i.md#remotequery)、[queryLockedRow](arkts-arkdata-relationalstore-rdbstore-i.md#querylockedrow)等query类方法中任一方法获取到ResultSet实例，再通过此实例调用对应方法。
 
 **起始版本：** 9
 
@@ -16,6 +16,12 @@ ResultSet实例不会实时刷新。使用结果集后，如果数据库中的�
 <!--Device-relationalStore-interface ResultSet--><!--Device-relationalStore-interface ResultSet-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
 
 ## close
 
@@ -37,8 +43,8 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
 
 ## getAsset
 
@@ -52,7 +58,7 @@ ArkTS-Sta:
 getAsset(columnIndex: int): Asset
 ```
 
-以[Asset]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_形式获取当前行中指定列的值，如果当前列的数据类型为Asset类型，会以Asset类型返回指定值，如果当前列中的值为null时，会返回null，其他类型则抛出错误码14800000。
+以[Asset](arkts-arkdata-relationalstore-asset-i.md)形式获取当前行中指定列的值，如果当前列的数据类型为Asset类型，会以Asset类型返回指定值，如果当前列中的值为null时，会返回null，其他类型则抛出错误码14800000。
 
 **起始版本：** 10
 
@@ -66,38 +72,38 @@ getAsset(columnIndex: int): Asset
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 以Asset形式返回指定列的值。 |
+| [Asset](arkts-arkdata-commontype-asset-i.md) | 以Asset形式返回指定列的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getAssets
 
@@ -111,7 +117,7 @@ ArkTS-Sta:
 getAssets(columnIndex: int): Assets
 ```
 
-以[Assets]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_形式获取当前行中指定列的值，如果当前列的数据类型为Assets类型，会以Assets类型返回指定值，如果当前列中的值为null时，会返回null，其他类型则抛出14800000。
+以[Assets](arkts-arkdata-relationalstore-assets-t.md)形式获取当前行中指定列的值，如果当前列的数据类型为Assets类型，会以Assets类型返回指定值，如果当前列中的值为null时，会返回null，其他类型则抛出14800000。
 
 **起始版本：** 10
 
@@ -125,38 +131,38 @@ getAssets(columnIndex: int): Assets
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 以Assets形式返回指定列的值。 |
+| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | 以Assets形式返回指定列的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getBlob
 
@@ -184,7 +190,7 @@ getBlob(columnIndex: int): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -196,26 +202,26 @@ getBlob(columnIndex: int): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getColumnIndex
 
@@ -249,32 +255,32 @@ getColumnIndex(columnName: string): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回指定列的索引。当结果集中包含重名列时，返回值会不符合预期。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定列的索引。当结果集中包含重名列时，返回值会不符合预期。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800019 | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getColumnName
 
@@ -302,7 +308,7 @@ getColumnName(columnIndex: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -314,26 +320,26 @@ getColumnName(columnIndex: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800019 | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getColumnNames
 
@@ -365,14 +371,14 @@ getColumnNames(): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800019 | The SQL must be a query statement. |
+| 14800021 | SQLite: Generic error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800014 | The target instance is already closed. |
+| 14800030 | SQLite: Unable to open the database file. |
 
 ## getColumnType
 
@@ -400,7 +406,7 @@ getColumnType(columnIdentifier: int | string): Promise<ColumnType>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIdentifier | ArkTS-Dyn: number \| string  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int \| string | 是 | 表示结果集中指定列的索引或列名。索引必须是非负整数，且必须小于属性columnNames的长度。列名必须是属性columnNames内的名 称。 |
+| columnIdentifier | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string | 是 | 表示结果集中指定列的索引或列名。索引必须是非负整数，且必须小于属性columnNames的长度。列名必须是属性columnNames内的名 称。 |
 
 **返回值：**
 
@@ -412,27 +418,27 @@ getColumnType(columnIdentifier: int | string): Promise<ColumnType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800034 | SQLite: Library used incorrectly. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800019 | The SQL must be a query statement. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800022 | SQLite: Callback routine requested an abort. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
+| 14800030 | SQLite: Unable to open the database file. |
 
 ## getColumnTypeSync
 
@@ -460,39 +466,39 @@ getColumnTypeSync(columnIdentifier: int | string): ColumnType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIdentifier | ArkTS-Dyn: number \| string  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int \| string | 是 | 表示结果集中指定列的索引或名称。索引必须是非负整数，最大不能超过属性columnNames的长度。列名必须是属性columnNames内的名 称。 |
+| columnIdentifier | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string | 是 | 表示结果集中指定列的索引或名称。索引必须是非负整数，最大不能超过属性columnNames的长度。列名必须是属性columnNames内的名 称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回指定列的数据类型。当结果集中包含重名列时，通过列名获取的结果会不符合预期，建议使用列索引形式获取。 |
+| [ColumnType](arkts-arkdata-relationalstore-columntype-e.md) | 返回指定列的数据类型。当结果集中包含重名列时，通过列名获取的结果会不符合预期，建议使用列索引形式获取。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800034 | SQLite: Library used incorrectly. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800019 | The SQL must be a query statement. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800022 | SQLite: Callback routine requested an abort. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
+| 14800030 | SQLite: Unable to open the database file. |
 
 ## getCurrentRowData
 
@@ -516,21 +522,21 @@ getCurrentRowData(): RowData
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前行所有列的值。支持获取包含重名列的值。 |
+| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | 返回当前行所有列的值。支持获取包含重名列的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800019 | The SQL must be a query statement. |
+| 14800021 | SQLite: Generic error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800014 | The target instance is already closed. |
+| 14800030 | SQLite: Unable to open the database file. |
 
 ## getDouble
 
@@ -558,38 +564,38 @@ getDouble(columnIndex: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 以double形式返回指定列的值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 以double形式返回指定列的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getLong
 
@@ -603,9 +609,9 @@ ArkTS-Sta:
 getLong(columnIndex: int): long
 ```
 
-以Long形式获取当前行中指定列的值，如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类型，会转成Long类型返回指定值，如果该列内容为空时，会返回0，其他类型则抛出错误码14800000。如果当前列的数据类型为INTEGER，值大于 Number.MAX\_SAFE\_INTEGER 或小于 Number.MIN\_SAFE\_INTEGER 且不希望丢失精度，建议使用  
-[getString]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口获取。如果当前列的数据类型为DOUBLE且不希望丢失精度，建议使用  
-[getDouble]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口获取。
+以Long形式获取当前行中指定列的值，如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类型，会转成Long类型返回指定值，如果该列内容为空时，会返回0，其他类型则抛出错误码14800000。如果当前列的数据类型为INTEGER，值大于 Number.MAX_SAFE_INTEGER 或小于 Number.MIN_SAFE_INTEGER 且不希望丢失精度，建议使用  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)接口获取。如果当前列的数据类型为DOUBLE且不希望丢失精度，建议使用  
+[getDouble](arkts-arkdata-relationalstore-resultset-i.md#getdouble)接口获取。
 
 **起始版本：** 9
 
@@ -619,38 +625,38 @@ getLong(columnIndex: int): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 以Long形式返回指定列的值。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_该接口支持的精度范围是：Number.MIN\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAFE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INTEGER ~ Number.MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAFE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INTEGER，若超出该范围，建议对于DOUBLE类型的值使用 [getDouble]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 以Long形式返回指定列的值。 &lt;br&gt;该接口支持的精度范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议对于DOUBLE类型的值使用 [getDouble]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getRow
 
@@ -672,31 +678,31 @@ getRow(): ValuesBucket
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用 [getCurrentRowData]{ |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用 [getCurrentRowData]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error. |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds.<br>**适用版本：** 12+ |
+| 14800012 | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getRows
 
@@ -710,7 +716,7 @@ ArkTS-Sta:
 getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 ```
 
-从结果集中获取指定数量的数据，使用Promise异步回调。禁止与[ResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的其他接口并发调用，否则获取的数据可能非预期。
+从结果集中获取指定数量的数据，使用Promise异步回调。禁止与[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)的其他接口并发调用，否则获取的数据可能非预期。
 
 **起始版本：** 18
 
@@ -724,8 +730,8 @@ getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 正整数，指定要从结果集中获取数据的条数。不为正整数则参数非法，抛出错误码401。 |
-| position | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。不为非负整数则参数非法，抛出错误码401。 |
+| maxCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 正整数，指定要从结果集中获取数据的条数。不为正整数则参数非法，抛出错误码401。 |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。不为非负整数则参数非法，抛出错误码401。 |
 
 **返回值：**
 
@@ -737,23 +743,23 @@ getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800022 | SQLite: Callback routine requested an abort. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## getRowsData
 
@@ -767,7 +773,7 @@ ArkTS-Sta:
 getRowsData(maxCount: int, position?: int): Promise<RowsData>
 ```
 
-从指定位置position开始，最多获取maxCount行数据。使用Promise异步回调。禁止与[ResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的其他接口并发调用，否则获取的数据可能非预期。
+从指定位置position开始，最多获取maxCount行数据。使用Promise异步回调。禁止与[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)的其他接口并发调用，否则获取的数据可能非预期。
 
 **起始版本：** 23
 
@@ -783,8 +789,8 @@ getRowsData(maxCount: int, position?: int): Promise<RowsData>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 正整数，指定从结果集中获取数据的条数。不为正整数则参数非法，抛出错误码14800001。 |
-| position | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。不为非负整数则参数非法，抛出错误码1480000 1。 |
+| maxCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 正整数，指定从结果集中获取数据的条数。不为正整数则参数非法，抛出错误码14800001。 |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。不为非负整数则参数非法，抛出错误码1480000 1。 |
 
 **返回值：**
 
@@ -796,16 +802,16 @@ getRowsData(maxCount: int, position?: int): Promise<RowsData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800019 | The SQL must be a query statement. |
+| 14800021 | SQLite: Generic error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
+| 14800014 | The target instance is already closed. |
+| 14800030 | SQLite: Unable to open the database file. |
 
 ## getSendableRow
 
@@ -833,25 +839,25 @@ getSendableRow(): sendableRelationalStore.ValuesBucket
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800034 | SQLite: Library used incorrectly. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800022 | SQLite: Callback routine requested an abort. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
+| 14800030 | SQLite: Unable to open the database file. |
 
 ## getString
 
@@ -865,7 +871,7 @@ ArkTS-Sta:
 getString(columnIndex: int): string
 ```
 
-以字符串形式获取当前行中指定列的值，如果当前列中的值为INTEGER、DOUBLE、TEXT、BLOB类型，会以字符串形式返回指定值，如果是当前列中的值为INTEGER，并且为空，则会返回空字符串""，其他类型则抛出错误码14800000。如果当前列中的值为DOUBLE类型，可能存在精度的丢失，建议使用[getDouble]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口获取。
+以字符串形式获取当前行中指定列的值，如果当前列中的值为INTEGER、DOUBLE、TEXT、BLOB类型，会以字符串形式返回指定值，如果是当前列中的值为INTEGER，并且为空，则会返回空字符串""，其他类型则抛出错误码14800000。如果当前列中的值为DOUBLE类型，可能存在精度的丢失，建议使用[getDouble](arkts-arkdata-relationalstore-resultset-i.md#getdouble)接口获取。
 
 **起始版本：** 9
 
@@ -879,7 +885,7 @@ getString(columnIndex: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -891,26 +897,26 @@ getString(columnIndex: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## getValue
 
@@ -924,7 +930,7 @@ ArkTS-Sta:
 getValue(columnIndex: int): ValueType
 ```
 
-获取当前行中指定列的值，如果值类型是ValueType中指定的任意类型，返回指定类型的值，否则抛出错误码14800000。如果值类型为INTEGER，值大于 Number.MAX\_SAFE\_INTEGER 或小于Number.MIN\_SAFE\_INTEGER 且不希望丢失精度，建议使用[getString]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口获取。
+获取当前行中指定列的值，如果值类型是ValueType中指定的任意类型，返回指定类型的值，否则抛出错误码14800000。如果值类型为INTEGER，值大于 Number.MAX_SAFE_INTEGER 或小于 Number.MIN_SAFE_INTEGER 且不希望丢失精度，建议使用[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)接口获取。
 
 **起始版本：** 12
 
@@ -938,38 +944,38 @@ getValue(columnIndex: int): ValueType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 表示允许的数据字段类型。 |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 表示允许的数据字段类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800034 | SQLite: Library used incorrectly. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800022 | SQLite: Callback routine requested an abort. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
+| 14800030 | SQLite: Unable to open the database file. |
 
 ## goTo
 
@@ -997,7 +1003,7 @@ goTo(offset: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示相对当前结果集指针位置的偏移量，正值表示向后移动，负值表示向前移动。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示相对当前结果集指针位置的偏移量，正值表示向后移动，负值表示向前移动。 |
 
 **返回值：**
 
@@ -1009,26 +1015,26 @@ goTo(offset: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800019 | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## goToFirstRow
 
@@ -1056,25 +1062,25 @@ goToFirstRow(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 14800019 | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## goToLastRow
 
@@ -1102,25 +1108,25 @@ goToLastRow(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 14800019 | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## goToNextRow
 
@@ -1148,25 +1154,25 @@ goToNextRow(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 14800019 | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## goToPreviousRow
 
@@ -1194,25 +1200,25 @@ goToPreviousRow(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 14800019 | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## goToRow
 
@@ -1240,7 +1246,7 @@ goToRow(position: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示要移动到的指定位置。 |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示要移动到的指定位置。 |
 
 **返回值：**
 
@@ -1252,26 +1258,26 @@ goToRow(position: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800019 | The SQL must be a query statement.<br>**适用版本：** 12+ |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## isColumnNull
 
@@ -1299,7 +1305,7 @@ isColumnNull(columnIndex: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -1311,26 +1317,26 @@ isColumnNull(columnIndex: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| 14800000 | Inner error.<br>**适用版本：** 12+ |
+| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds.<br>**适用版本：** 12+ |
+| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
+| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
+| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## columnCount
 
@@ -1342,7 +1348,7 @@ columnCount: int
 
 获取结果集中列的数量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -1360,7 +1366,7 @@ columnNames: Array<string>
 
 columnNames: Array\&lt;string\&gt;
 
-获取结果集中所有列的名称。当结果集中包含重名列时，获取的列名会不符合预期，建议使用[getColumnNames]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口获取。
+获取结果集中所有列的名称。当结果集中包含重名列时，获取的列名会不符合预期，建议使用[getColumnNames](arkts-arkdata-relationalstore-resultset-i.md#getcolumnnames)接口获取。
 
 **类型：** Array&lt;string&gt;
 
@@ -1482,7 +1488,7 @@ rowCount: int
 
 获取结果集中行的数量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -1502,7 +1508,7 @@ rowIndex: int
 
 获取结果集当前行的索引位置，默认值为-1。索引位置下标从0开始。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

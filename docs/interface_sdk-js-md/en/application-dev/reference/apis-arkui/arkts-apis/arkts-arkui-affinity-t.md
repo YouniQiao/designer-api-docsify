@@ -4,7 +4,7 @@
 declare type Affinity = import('../api/@ohos.graphics.text').default.Affinity
 ```
 
-Enumerates the affinity modes.
+位置亲和度枚举。
 
 **Since:** 12
 

@@ -1,15 +1,14 @@
 # @ohos.PiPWindow
 
-The module provides basic APIs for manipulating Picture in Picture (PiP). For example, you can use the APIs to check whether the PiP feature is supported and create a PiP controller to start or stop a PiP window. PiP is mainly used in video playback, video calls, or video meetings.
-    **NOTE**  
-    
-    - Before \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_OpenHarmony 6.0\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_, the PiP feature was supported only on phones and tablets. Starting  
-    from \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_OpenHarmony 6.0\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_, the PiP feature is supported on phones, PCs/2-in-1 devices, tablets,  
-    but is unavailable on all other devices.  
-    
-    - For the system capability SystemCapability.Window.SessionManager, use  
-    [canIUse()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the device supports this system  
-    capability and the corresponding APIs.
+该模块提供画中画基础功能，包括判断当前系统是否支持画中画功能，以及创建画中画控制器用于启动或停止画中画等。适用于视频播放、视频通话或视频会议场景下，以小窗（画中画）模式呈现内容。
+
+> **说明：**
+> 
+> - 在&lt;!--RP2--&gt;OpenHarmony 6.0&lt;!--RP2End--&gt;之前，支持在Phone、Tablet设备使用画中画功能，其他设备不可用；从&lt;!--RP2--&gt;OpenHarmony 6.0&lt;!--RP2End--
+&gt; >开始，支持在Phone、PC/2in1、Tablet设备使用画中画功能，其他设备不可用。
+> 
+> - 针对系统能力SystemCapability.Window.SessionManager，请先使用
+> [canIUse()](arkts-arkui-global-caniuse-f.md#caniuse)接口判断当前设备是否支持此syscap及对应接口。
 
 **Since:** 11
 
@@ -19,65 +18,63 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { PiPWindow } from 'kits/@kit.ArkUI';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [create](arkts-arkui-pipwindow-create-f.md#create) | Creates a PiP controller. This API uses a promise to return the result. |
-| [create](arkts-arkui-pipwindow-create-f.md#create-1) | Creates a PiP controller. This API uses **typeNode** to add a custom UI node for PiP. This API uses a promise to return the result. |
-| [isPiPEnabled](arkts-arkui-pipwindow-ispipenabled-f.md#ispipenabled) | Checks whether the current device supports the PiP feature. |
+| [create](arkts-arkui-pipwindow-create-f.md#create) | 创建画中画控制器，使用Promise异步回调。 |
+| [create](arkts-arkui-pipwindow-create-f.md#create-1) | 创建画中画控制器，使用typeNode为画中画添加自定义UI节点。使用Promise异步回调。 |
+| [isPiPEnabled](arkts-arkui-pipwindow-ispipenabled-f.md#ispipenabled) | 判断当前设备是否支持画中画功能。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md) | Describes the parameters in the callback of the action event of the PiP controller. |
-| [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) | Defines the parameters for creating a PiP controller. |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.  Before calling any of the following APIs, you must use  [PiPWindow.create()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to create a PiPController instance. |
-| [PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md) | Describes the PiP window information. |
-| [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md) | Describes the size of a PiP window. |
+| [ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md) | 画中画控制面板控件动作回调的参数。 |
+| [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) | 创建画中画控制器时的参数。 |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) | 画中画控制器实例。用于启动、停止画中画以及更新回调注册等。  下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create)方法获取到PiPController实例，再通过此实例调用对应方法。 |
+| [PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md) | 画中画窗口信息。 |
+| [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md) | 画中画窗口大小。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.  Before calling any of the following APIs, you must use  [PiPWindow.create()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to create a PiPController instance. |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) | 画中画控制器实例。用于启动、停止画中画以及更新回调注册等。  下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create)方法获取到PiPController实例，再通过此实例调用对应方法。 |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) | Enumerates the statuses of components displayed on the PiP controller. |
-| [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | Enumerates the types of components displayed on the PiP controller. |
-| [PiPState](arkts-arkui-pipwindow-pipstate-e.md) | Enumerates the PiP states. |
-| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) | Enumerates the PiP template types. |
-| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) | Enumerates the video call component groups. They are used only when  [PiPTemplateType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is set to **VIDEO\_\_\_ESCAPED\_UNDERSCORE\_\_\_CALL**. |
-| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) | Enumerates the live video component groups. They are used only when  [PiPTemplateType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is set to **VIDEO\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIVE**. |
-| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) | Enumerates the video meeting component groups. They are used only when  [PiPTemplateType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is set to **VIDEO\_\_\_ESCAPED\_UNDERSCORE\_\_\_MEETING**. |
-| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) | Enumerates the video playback component groups. They are used only when  [PiPTemplateType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is set to **VIDEO\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLAY**. |
-
-<!--Del-->
-### Enums（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e-sys.md) | Enumerates the PiP template types. |
-<!--DelEnd-->
+| [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) | 控制面板控件状态枚举。 |
+| [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | 控制面板控件类型枚举。 |
+| [PiPState](arkts-arkui-pipwindow-pipstate-e.md) | 画中画生命周期状态枚举。 |
+| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) | 画中画模板类型枚举。 |
+| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) | 视频通话控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_CALL时使用。 |
+| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) | 视频直播控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_LIVE时使用。 |
+| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) | 视频会议控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_MEETING时使用。 |
+| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) | 视频播放控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)为VIDEO_PLAY时使用。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Describes the action event callback of the PiP controller. |
-| [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) | Enumerates the types of action events of the PiP controller. |
-| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) | Defines the PiP action event in a video call. |
-| [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md) | Describes the optional component groups of the PiP controller. An application can configure whether to display these optional components. This API must match [PiPTemplateType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ when being used.Otherwise, the [create]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API returns error code 401. |
-| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) | Defines the PiP action event in a live. |
-| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) | Defines the PiP action event in a video meeting. |
-| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) | Defines the PiP action event during video playback. |
-| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | Describe picture-in-picture stage change event callback. |
+| [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 描述画中画控制面板控件动作事件回调。 |
+| [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) | 画中画控制面板控件动作事件类型，支持以下四种。 |
+| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) | 视频通话控制事件类型。 |
+| [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md) | 画中画控制面板的可选控件组列表，应用可以配置是否显示可选控件。使用时必须和[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)对应，否则  [create](arkts-arkui-pipwindow-create-f.md#create)接口抛出401错误码。 |
+| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) | 直播控制事件类型。 |
+| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) | 视频会议控制事件类型。 |
+| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) | 视频播放控制事件类型。 |
+| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | 描述画中画生命周期状态变化事件回调。 |
 

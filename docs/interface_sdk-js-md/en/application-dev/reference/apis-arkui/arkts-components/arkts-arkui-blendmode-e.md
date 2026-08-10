@@ -1,15 +1,14 @@
 # BlendMode
 
-Blend mode.
-    **NOTE**  
-    
-    In the **blendMode** enums, **s** indicates the source pixel, **d** indicates the target pixel, **sa** indicates  
-    the opacity of the source pixel, **da** indicates the opacity of the target pixel, **r** indicates the pixel after  
-    blending, and **ra** indicates the opacity of the pixel after blending.
+混合模式。
 
-**Since:** 11
+> **说明：**
+> 
+> blendMode枚举中，s表示源像素，d表示目标像素，sa表示源像素透明度，da表示目标像素透明度，r表示混合后像素，ra表示混合后像素透明度。
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 <!--Device-unnamed-declare enum BlendMode--><!--Device-unnamed-declare enum BlendMode-End-->
 
@@ -21,17 +20,17 @@ Blend mode.
 NONE = 0
 ```
 
-The top image is superimposed on the bottom image without any blending.
+将上层图像直接覆盖到下层图像上，不进行任何混合操作。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-NONE = 0--><!--Device-BlendMode-NONE = 0-End-->
 
@@ -43,17 +42,17 @@ The top image is superimposed on the bottom image without any blending.
 CLEAR = 1
 ```
 
-The target pixels covered by the source pixels are erased by being turned to completely transparent.
+将源像素覆盖的目标像素清除为完全透明。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-CLEAR = 1--><!--Device-BlendMode-CLEAR = 1-End-->
 
@@ -65,17 +64,17 @@ The target pixels covered by the source pixels are erased by being turned to com
 SRC = 2
 ```
 
-r = s: Only the source pixels are displayed.
+r = s，只显示源像素。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-SRC = 2--><!--Device-BlendMode-SRC = 2-End-->
 
@@ -87,17 +86,17 @@ r = s: Only the source pixels are displayed.
 DST = 3
 ```
 
-r = d: Only the target pixels are displayed.
+r = d，只显示目标像素。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-DST = 3--><!--Device-BlendMode-DST = 3-End-->
 
@@ -109,17 +108,17 @@ r = d: Only the target pixels are displayed.
 SRC_OVER = 4
 ```
 
-r = s + (1 - sa) * d: The source pixels are blended based on opacity and cover the target pixels.
+r = s + (1 - sa) * d，将源像素按照透明度进行混合，覆盖在目标像素上。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-SRC_OVER = 4--><!--Device-BlendMode-SRC_OVER = 4-End-->
 
@@ -131,17 +130,17 @@ r = s + (1 - sa) * d: The source pixels are blended based on opacity and cover t
 DST_OVER = 5
 ```
 
-r = d + (1 - da) * s: The target pixels are blended based on opacity and cover on the source pixels.
+r = d + (1 - da) * s，将目标像素按照透明度进行混合，覆盖在源像素上。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-DST_OVER = 5--><!--Device-BlendMode-DST_OVER = 5-End-->
 
@@ -153,17 +152,17 @@ r = d + (1 - da) * s: The target pixels are blended based on opacity and cover o
 SRC_IN = 6
 ```
 
-r = s * da: Only the part of the source pixels that overlap with the target pixels is displayed.
+r = s * da，只显示源像素中与目标像素重叠的部分。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-SRC_IN = 6--><!--Device-BlendMode-SRC_IN = 6-End-->
 
@@ -175,17 +174,17 @@ r = s * da: Only the part of the source pixels that overlap with the target pixe
 DST_IN = 7
 ```
 
-r = d * sa: Only the part of the target pixels that overlap with the source pixels is displayed.
+r = d * sa，只显示目标像素中与源像素重叠的部分。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-DST_IN = 7--><!--Device-BlendMode-DST_IN = 7-End-->
 
@@ -197,17 +196,17 @@ r = d * sa: Only the part of the target pixels that overlap with the source pixe
 SRC_OUT = 8
 ```
 
-r = s * (1 - da): Only the part of the source pixels that do not overlap with the target pixels is displayed.
+r = s * (1 - da)，只显示源像素中与目标像素不重叠的部分。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-SRC_OUT = 8--><!--Device-BlendMode-SRC_OUT = 8-End-->
 
@@ -219,17 +218,17 @@ r = s * (1 - da): Only the part of the source pixels that do not overlap with th
 DST_OUT = 9
 ```
 
-r = d * (1 - sa): Only the part of the target pixels that do not overlap with the source pixels is displayed.
+r = d * (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-DST_OUT = 9--><!--Device-BlendMode-DST_OUT = 9-End-->
 
@@ -241,17 +240,17 @@ r = d * (1 - sa): Only the part of the target pixels that do not overlap with th
 SRC_ATOP = 10
 ```
 
-r = s * da + d * (1 - sa): The part of the source pixels that overlap with the target pixels is displayed and the part of the target pixels that do not overlap with the source pixels are displayed.
+r = s * da + d * (1 - sa)，在源像素和目标像素重叠的地方绘制源像素，在源像素和目标像素不重叠的地方绘制目标像素。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-SRC_ATOP = 10--><!--Device-BlendMode-SRC_ATOP = 10-End-->
 
@@ -265,15 +264,15 @@ DST_ATOP = 11
 
 r = d * sa + s * (1 - da): The part of the target pixels that overlap with the source pixels and the part of the source pixels that do not overlap with the target pixels are displayed.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-DST_ATOP = 11--><!--Device-BlendMode-DST_ATOP = 11-End-->
 
@@ -285,17 +284,17 @@ r = d * sa + s * (1 - da): The part of the target pixels that overlap with the s
 XOR = 12
 ```
 
-r = s * (1 - da) + d * (1 - sa). The pixel is not displayed where the source pixel overlaps the target pixel, and the source pixel and target pixel are displayed where the source pixel does not overlap the target pixel.
+r = s * (1 - da) + d * (1 - sa)，在源像素和目标像素重叠的地方不显示像素，不重叠的地方显示源像素和目标像素。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-XOR = 12--><!--Device-BlendMode-XOR = 12-End-->
 
@@ -307,17 +306,17 @@ r = s * (1 - da) + d * (1 - sa). The pixel is not displayed where the source pix
 PLUS = 13
 ```
 
-r = min(s + d, 1): New pixels resulting from adding the source pixels to the target pixels are displayed.
+r = min(s + d, 1):New pixels resulting from adding the source pixels to the target pixels are displayed.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-PLUS = 13--><!--Device-BlendMode-PLUS = 13-End-->
 
@@ -329,17 +328,17 @@ r = min(s + d, 1): New pixels resulting from adding the source pixels to the tar
 MODULATE = 14
 ```
 
-r = s * d: New pixels resulting from multiplying the source pixels with the target pixels are displayed.
+r = s * d，将源像素与目标像素进行乘法运算，并将结果作为新的像素值。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-MODULATE = 14--><!--Device-BlendMode-MODULATE = 14-End-->
 
@@ -351,17 +350,17 @@ r = s * d: New pixels resulting from multiplying the source pixels with the targ
 SCREEN = 15
 ```
 
-r = s + d - s * d: Pixels are blended by adding the source pixels to the target pixels and subtracting the product of their multiplication.
+r = s + d - s * d，将两个图像的像素值相加，然后减去它们的乘积来实现混合。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-SCREEN = 15--><!--Device-BlendMode-SCREEN = 15-End-->
 
@@ -373,17 +372,17 @@ r = s + d - s * d: Pixels are blended by adding the source pixels to the target 
 OVERLAY = 16
 ```
 
-The MULTIPLY or SCREEN mode is used based on the target pixels.
+根据目标像素来决定使用MULTIPLY混合模式还是SCREEN混合模式。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-OVERLAY = 16--><!--Device-BlendMode-OVERLAY = 16-End-->
 
@@ -395,17 +394,17 @@ The MULTIPLY or SCREEN mode is used based on the target pixels.
 DARKEN = 17
 ```
 
-rc = s + d - max(s * da, d * sa), ra = kSrcOver: When two colors overlap, whichever is darker is used.
+rc = s + d - max(s * da, d * sa), ra = kSrcOver，当两个颜色重叠时，较暗的颜色会覆盖较亮的颜色。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-DARKEN = 17--><!--Device-BlendMode-DARKEN = 17-End-->
 
@@ -417,17 +416,17 @@ rc = s + d - max(s * da, d * sa), ra = kSrcOver: When two colors overlap, whiche
 LIGHTEN = 18
 ```
 
-rc = s + d - min(s * da, d * sa), ra = kSrcOver: The darker of the pixels (source and target) is used.
+rc = s + d - min(s * da, d * sa), ra = kSrcOver，将源图像和目标图像中的像素进行比较，选取两者中较亮的像素作为最终的混合结果。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-LIGHTEN = 18--><!--Device-BlendMode-LIGHTEN = 18-End-->
 
@@ -439,17 +438,17 @@ rc = s + d - min(s * da, d * sa), ra = kSrcOver: The darker of the pixels (sourc
 COLOR_DODGE = 19
 ```
 
-The colors of the target pixels are lightened to reflect the source pixels.
+使目标像素变得更亮来反映源像素。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-COLOR_DODGE = 19--><!--Device-BlendMode-COLOR_DODGE = 19-End-->
 
@@ -461,17 +460,17 @@ The colors of the target pixels are lightened to reflect the source pixels.
 COLOR_BURN = 20
 ```
 
-The colors of the target pixels are darkened to reflect the source pixels.
+使目标像素变得更暗来反映源像素。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-COLOR_BURN = 20--><!--Device-BlendMode-COLOR_BURN = 20-End-->
 
@@ -483,17 +482,17 @@ The colors of the target pixels are darkened to reflect the source pixels.
 HARD_LIGHT = 21
 ```
 
-The MULTIPLY or SCREEN mode is used, depending on the source pixels.
+根据源像素的值来决定目标像素变得更亮或者更暗。根据源像素来决定使用MULTIPLY混合模式还是SCREEN混合模式。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-HARD_LIGHT = 21--><!--Device-BlendMode-HARD_LIGHT = 21-End-->
 
@@ -505,17 +504,17 @@ The MULTIPLY or SCREEN mode is used, depending on the source pixels.
 SOFT_LIGHT = 22
 ```
 
-The LIGHTEN or DARKEN mode is used, depending on the source pixels.
+根据源像素来决定使用LIGHTEN混合模式还是DARKEN混合模式。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-SOFT_LIGHT = 22--><!--Device-BlendMode-SOFT_LIGHT = 22-End-->
 
@@ -529,15 +528,15 @@ DIFFERENCE = 23
 
 rc = s + d - 2 * (min(s * da, d * sa)), ra = kSrcOver: The final pixel is the result of subtracting the darker of the two pixels (source and target) from the lighter one.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-DIFFERENCE = 23--><!--Device-BlendMode-DIFFERENCE = 23-End-->
 
@@ -549,17 +548,17 @@ rc = s + d - 2 * (min(s * da, d * sa)), ra = kSrcOver: The final pixel is the re
 EXCLUSION = 24
 ```
 
-rc = s + d - two(s * d), ra = kSrcOver: The final pixel is similar to **DIFFERENCE**, but with less contrast.
+rc = s + d - 2 * (s * d), ra = kSrcOver，对比源像素和目标像素，亮度更高的像素减去亮度更低的像素，产生柔和的效果。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-EXCLUSION = 24--><!--Device-BlendMode-EXCLUSION = 24-End-->
 
@@ -571,17 +570,17 @@ rc = s + d - two(s * d), ra = kSrcOver: The final pixel is similar to **DIFFEREN
 MULTIPLY = 25
 ```
 
-r = s * (1 - da) + d * (1 - sa) + s * d: The final pixel is the result of multiplying the source pixel by the target pixel.
+r = s * (1 - da) + d * (1 - sa) + s * d，将源图像与目标图像进行乘法混合，得到一张新的图像。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-MULTIPLY = 25--><!--Device-BlendMode-MULTIPLY = 25-End-->
 
@@ -593,17 +592,17 @@ r = s * (1 - da) + d * (1 - sa) + s * d: The final pixel is the result of multip
 HUE = 26
 ```
 
-The resultant image is created with the luminance and saturation of the source image and the hue of the target image.
+保留源图像的亮度和饱和度，但会使用目标图像的色调来替换源图像的色调。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-HUE = 26--><!--Device-BlendMode-HUE = 26-End-->
 
@@ -615,17 +614,17 @@ The resultant image is created with the luminance and saturation of the source i
 SATURATION = 27
 ```
 
-The resultant image is created with the luminance and hue of the target image and the saturation of the source image.
+保留目标像素的亮度和色调，但会使用源像素的饱和度来替换目标像素的饱和度。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-SATURATION = 27--><!--Device-BlendMode-SATURATION = 27-End-->
 
@@ -637,17 +636,17 @@ The resultant image is created with the luminance and hue of the target image an
 COLOR = 28
 ```
 
-The resultant image is created with the saturation and hue of the source image and the luminance of the target image.
+保留源像素的饱和度和色调，但会使用目标像素的亮度来替换源像素的亮度。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-COLOR = 28--><!--Device-BlendMode-COLOR = 28-End-->
 
@@ -659,17 +658,17 @@ The resultant image is created with the saturation and hue of the source image a
 LUMINOSITY = 29
 ```
 
-The resultant image is created with the saturation and hue of the target image and the luminance of the source image.
+保留目标像素的色调和饱和度，但会用源像素的亮度替换目标像素的亮度。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-BlendMode-LUMINOSITY = 29--><!--Device-BlendMode-LUMINOSITY = 29-End-->
 

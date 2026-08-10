@@ -1,8 +1,8 @@
 # TouchEvent
 
-Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**.
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可能不同。
 
-**Inheritance/Implementation:** TouchEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**Inheritance/Implementation:** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 7
 
@@ -18,9 +18,9 @@ Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. In non-event inj
 getHistoricalPoints(): Array<HistoricalPoint>
 ```
 
-Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device.This API can be called only in [TouchEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API is only available within  
-[TouchEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ during [onTouch]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ invocations. Typically,  
-[onTouch]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is invoked once per frame. If multiple [TouchEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
+获取当前帧的所有历史点。不同设备每帧的触摸事件频率不同，且该接口仅能在[TouchEvent](arkts-arkui-touchevent-i.md)中调用，用于获取触发  
+[onTouch](arkts-arkui-commonmethod-c.md#ontouch)时当前帧历史点的相关信息。[onTouch](arkts-arkui-commonmethod-c.md#ontouch)一帧通常只会调用一次，如果当前帧收到的  
+[TouchEvent](arkts-arkui-touchevent-i.md)数目大于1，会将该帧最后一个点通过[onTouch](arkts-arkui-commonmethod-c.md#ontouch)返回，其余点作为历史点。如果多指在同一帧上报事件，可能触发多次onTouch。
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ Obtains all historical touch points for the current frame. The touch event frequ
 
 | Type | Description |
 | --- | --- |
-| Array&lt;HistoricalPoint&gt; | Array of historical points. |
+| Array&lt;HistoricalPoint&gt; | 由历史点组成的数组。 |
 
 ## preventDefault
 
@@ -46,11 +46,9 @@ Obtains all historical touch points for the current frame. The touch event frequ
 preventDefault: () => void
 ```
 
-Blocks the default event.
+阻止默认事件。
 
-**NOTE**
-
-This API is only supported by the [Hyperlink]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ component. Using it with unsupported components throws an exception. Asynchronous calls and **Modifier** API integration are not yet supported.
+**说明：** 该接口仅支持部分组件使用，当前支持组件：[Hyperlink](../arkts-apis/arkts-arkui-hyperlink-hyperlink-f.md/arkts-arkui-hyperlink-hyperlink-f.md#hyperlink)，不支持的组件在使用时会抛出异常。暂不支持异步调用和提供Modifier接口。
 
 **Since:** 12
 
@@ -68,7 +66,7 @@ This API is only supported by the [Hyperlink]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
+| 100017 | Component does not support prevent function. |
 
 ## stopPropagation
 
@@ -76,7 +74,7 @@ This API is only supported by the [Hyperlink]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 stopPropagation: () => void
 ```
 
-Disables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
 **Since:** 7
 
@@ -94,9 +92,9 @@ Disables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
 changedTouches: TouchObject[]
 ```
 
-Information about touch points that changed and triggered the event. When using this property, you need to check whether it is empty.
+发生变化而产生事件的手指信息。在使用该属性时，需要校验是否为空。
 
-**Type:** TouchObject[]
+**Type:** [TouchObject](../arkts-apis/arkts-arkui-common-touchobject-i.md)[]
 
 **Since:** 7
 
@@ -114,16 +112,13 @@ Information about touch points that changed and triggered the event. When using 
 eventHandleId?: number
 ```
 
-Unique identifier for event processing.
+用于事件处理的唯一标识。
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
-**NOTE**
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
-This field is used when dispatching events using the  
-[postInputEventWithStrategy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API. Each time an event is dispatched, this field is increased by 100000.
-
-Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
 **Type:** number
 
@@ -145,9 +140,9 @@ Using the same **eventHandleId** for multiple event dispatches will cause abnorm
 touches: TouchObject[]
 ```
 
-Information about all touch points (for multi-touch). Each element represents one touch point. When using this property, you need to check whether it is empty.
+全部屏幕触点（多指）的信息，每个元素代表一个触点。在使用该属性时，需要校验是否为空。
 
-**Type:** TouchObject[]
+**Type:** [TouchObject](../arkts-apis/arkts-arkui-common-touchobject-i.md)[]
 
 **Since:** 7
 
@@ -165,9 +160,9 @@ Information about all touch points (for multi-touch). Each element represents on
 type: TouchType
 ```
 
-Type of the touch event.
+触摸事件的类型。
 
-**Type:** TouchType
+**Type:** [TouchType](../arkts-apis/arkts-arkui-touchtype-e.md)
 
 **Since:** 7
 

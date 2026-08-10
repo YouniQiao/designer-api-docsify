@@ -1,6 +1,6 @@
 # BatteryStatsInfo (System API)
 
-Describes the device power consumption information.
+设备的耗电信息。
 
 **Since:** 8
 
@@ -12,15 +12,21 @@ Describes the device power consumption information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
+```
+
 ## power
 
 ```TypeScript
 power: double
 ```
 
-The power consumption, in unit of mAh.
+耗电的值，单位毫安时。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -38,9 +44,9 @@ The power consumption, in unit of mAh.
 type: ConsumptionType
 ```
 
-The power consumption type.
+耗电信息相关的类型。
 
-**Type:** ConsumptionType
+**Type:** [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md)
 
 **Since:** 8
 
@@ -58,9 +64,9 @@ The power consumption type.
 uid: int
 ```
 
-The uid related with the power consumption info.
+耗电信息相关的UID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

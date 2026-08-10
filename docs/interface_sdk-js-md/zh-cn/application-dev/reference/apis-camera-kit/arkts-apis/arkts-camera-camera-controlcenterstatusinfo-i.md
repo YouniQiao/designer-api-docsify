@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## effectType
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly effectType: ControlCenterEffectType
 
 相机控制器效果类型。
 
-**类型：** ControlCenterEffectType
+**类型：** [ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)
 
 **起始版本：** 20
 

@@ -1,12 +1,18 @@
 # remove
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## remove
 
 ```TypeScript
 function remove(query: AssetMap): Promise<void>
 ```
 
-Removes one or more assets. This API uses a promise to return the result.
+删除符合条件的一条或多条关键资产。使用Promise异步回调。
 
 **Since:** 11
 
@@ -22,31 +28,31 @@ Removes one or more assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. |
+| query | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | 待删除关键资产的搜索条件，如别名、访问控制属性、自定义数据等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
-| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000002](../errorcode-asset.md#24000002-asset-not-found) | The asset is not found. |
-| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
-| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
-| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
-| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
-| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) | Getting the system time failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| 24000015 | Getting the system time failed. |
+| 24000012 | Calling the OS Account service failed. |
+| 24000013 | Calling the Access Token service failed. |
+| 24000010 | IPC failed. |
+| 24000011 | Calling the Bundle Manager service failed. |
+| 24000008 | The database operation failed. |
+| 24000006 | Insufficient memory. |
+| 24000007 | The asset is corrupted. |
+| 24000002 | The asset is not found. |
+| 24000001 | The ASSET service is unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

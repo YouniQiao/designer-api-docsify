@@ -1,7 +1,7 @@
 # KeyboardController
 
-In the following API examples, you must first use  
-[getKeyboardDelegate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+下列API均需使用  
+[on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))获取到KeyboardController实例后，通过实例调用。
 
 **Since:** 8
 
@@ -11,13 +11,19 @@ In the following API examples, you must first use
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## exitCurrentInputType
 
 ```TypeScript
 exitCurrentInputType(callback: AsyncCallback<void>): void
 ```
 
-Exits this input type. This API can be called only by the preconfigured default input method. This API uses an asynchronous callback to return the result.
+退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用callback异步回调。
 
 **Since:** 11
 
@@ -31,16 +37,16 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当退出当前输入类型成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| 12800010 | not the preconfigured default input method. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -60,7 +66,7 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
 exitCurrentInputType(): Promise<void>
 ```
 
-Exits this input type. This API can be called only by the preconfigured default input method. This API uses a promise to return the result.
+退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用promise异步回调。
 
 **Since:** 11
 
@@ -74,16 +80,16 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| 12800010 | not the preconfigured default input method. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -101,7 +107,7 @@ keyboardController.exitCurrentInputType().then(() => {
 hide(callback: AsyncCallback<void>): void
 ```
 
-Hides the keyboard. This API uses an asynchronous callback to return the result.
+隐藏输入法。使用callback异步回调。
 
 **Since:** 9
 
@@ -115,15 +121,15 @@ Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当输入法隐藏成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -143,7 +149,7 @@ keyboardController.hide((err: BusinessError) => {
 hide(): Promise<void>
 ```
 
-Hides the keyboard. This API uses a promise to return the result.
+隐藏输入法。使用promise异步回调。
 
 **Since:** 9
 
@@ -157,15 +163,15 @@ Hides the keyboard. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -183,7 +189,7 @@ keyboardController.hide().then(() => {
 hideKeyboard(callback: AsyncCallback<void>): void
 ```
 
-Hides the keyboard. This API uses an asynchronous callback to return the result.
+隐藏输入法。使用callback异步回调。
 
 **Since:** 8
 
@@ -201,9 +207,9 @@ Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当输入法隐藏成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -223,7 +229,7 @@ keyboardController.hideKeyboard((err: BusinessError) => {
 hideKeyboard(): Promise<void>
 ```
 
-Hides the keyboard. This API uses a promise to return the result.
+隐藏输入法。使用promise异步回调。
 
 **Since:** 8
 
@@ -241,9 +247,9 @@ Hides the keyboard. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,7 +4,7 @@
 export type ConstructorT<T> = (() => T)
 ```
 
-Defines the object constructor type.
+定义对象构造器类型
 
 **Since:** 26.0.0
 

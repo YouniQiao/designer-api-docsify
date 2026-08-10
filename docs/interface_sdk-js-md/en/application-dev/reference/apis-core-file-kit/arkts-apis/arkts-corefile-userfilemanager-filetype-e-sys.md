@@ -8,7 +8,7 @@ Enumerates media file types.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md/arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 <!--Device-userFileManager-enum FileType--><!--Device-userFileManager-enum FileType-End-->
 
@@ -30,7 +30,7 @@ Image.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoType.IMAGE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#image)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoType.IMAGE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md/arkts-medialibrary-photoaccesshelper-phototype-e.md#image)
 
 <!--Device-FileType-IMAGE = 1--><!--Device-FileType-IMAGE = 1-End-->
 
@@ -52,7 +52,7 @@ Video.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoType.VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#video)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoType.VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md/arkts-medialibrary-photoaccesshelper-phototype-e.md#video)
 
 <!--Device-FileType-VIDEO--><!--Device-FileType-VIDEO-End-->
 

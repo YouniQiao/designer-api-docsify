@@ -1,6 +1,6 @@
 # AbilityLifecycleState
 
-Enumerates the ability lifecycle states.
+Ability生命周期状态。
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ Enumerates the ability lifecycle states.
 UNINITIALIZED = 0
 ```
 
-The ability is in an invalid state.
+表示无效状态。
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ The ability is in an invalid state.
 CREATE = 1
 ```
 
-The ability is created.
+表示Ability处于已创建状态。
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ The ability is created.
 FOREGROUND = 2
 ```
 
-The ability is running in the foreground.
+表示Ability处于前台状态。
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ The ability is running in the foreground.
 BACKGROUND = 3
 ```
 
-The ability is running in the background.
+表示Ability处于后台状态。
 
 **Since:** 8
 
@@ -100,7 +100,7 @@ The ability is running in the background.
 DESTROY = 4
 ```
 
-The ability is destroyed.
+表示Ability处于已销毁状态。
 
 **Since:** 8
 

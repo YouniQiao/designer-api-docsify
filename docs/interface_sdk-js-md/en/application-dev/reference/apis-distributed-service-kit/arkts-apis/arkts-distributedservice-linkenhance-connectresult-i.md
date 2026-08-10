@@ -1,6 +1,6 @@
 # ConnectResult
 
-Represents the connection result, which is returned after the client calls **connect()**.
+客户端调用connect()后，返回的连接结果。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Represents the connection result, which is returned after the client calls **con
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
 deviceId: string
 ```
 
-ID of the peer device. If the connection is successful, the device ID of the peer device is returned. If the connection fails, an empty string is returned.
+对端设备ID，成功返回对端设备的deviceId，失败返回空字符串。
 
 **Type:** string
 
@@ -36,16 +42,15 @@ ID of the peer device. If the connection is successful, the device ID of the pee
 reason: int
 ```
 
-Number indicating the result code. If the connection is successful, **0** is returned. If the connection fails,an error code is returned:
+连接成功返回0，连接失败返回错误码：
 
-- 32390200: The client connection times out.  
-- 32390201: The server service is not started.  
-- 32390300: Internal error.
+- 32390200：表示客户端连接超时。  
+- 32390201：表示服务端服务未启动。  
+- 32390300：表示内部错误。
 
-For details about the error codes, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+更多关于错误码的详细介绍请参考[增强连接错误码](../../../reference/apis-distributedservice-kit/errorcode-link-enhance.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -63,8 +68,7 @@ For details about the error codes, see
 success: boolean
 ```
 
-Connection result. The value **true** indicates that the connection is successful, and the value **false**  
-indicates the opposite.
+连接结果，true表示连接成功，false表示连接失败。
 
 **Type:** boolean
 

@@ -1,12 +1,18 @@
 # onAbilityFirstFrameStateChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onAbilityFirstFrameStateChange
 
 ```TypeScript
 function onAbilityFirstFrameStateChange(observer: AbilityFirstFrameStateObserver, bundleName?: string): void
 ```
 
-Register ability first frame state observe.
+注册监听Ability首帧绘制完成事件观察者对象，可用于系统应用监听Ability首帧绘制事件。
 
 **Since:** 23
 
@@ -24,14 +30,14 @@ Register ability first frame state observe.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The ability first frame state observer. |
-| bundleName | string | No | The target bundle name. |
+| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | Yes | 表示待注册的Ability首帧绘制完成事件观察者对象。 |
+| bundleName | string | No | 表示待监听的Ability的应用bundleName，不填表示注册监听所有应用ability首帧绘制完成事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

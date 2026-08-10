@@ -4,7 +4,7 @@
 declare type PromptActionDialogController = import('../api/@ohos.promptAction').promptAction.DialogController
 ```
 
-Import the DialogController type from promptAction.
+从promptAction导入弹出框控制器类型
 
 **Since:** 18
 

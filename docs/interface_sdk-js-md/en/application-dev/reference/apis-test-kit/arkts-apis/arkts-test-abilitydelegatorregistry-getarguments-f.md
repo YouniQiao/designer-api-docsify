@@ -1,12 +1,18 @@
 # getArguments
 
+## Modules to Import
+
+```TypeScript
+import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
+```
+
 ## getArguments
 
 ```TypeScript
 function getArguments(): AbilityDelegatorArgs
 ```
 
-Obtains an [AbilityDelegatorArgs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object.
+获取单元测试参数[AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md)对象。
 
 **Since:** 9
 
@@ -22,14 +28,16 @@ Obtains an [AbilityDelegatorArgs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [AbilityDelegatorArgs]{ |
+| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 
+// Obtain the AbilityDelegatorArgs object of the application.
 let args = abilityDelegatorRegistry.getArguments();
+// Print the test parameter information.
 console.info(`getArguments bundleName: ${args.bundleName}`);
 console.info(`getArguments parameters: ${JSON.stringify(args.parameters)}`);
 console.info(`getArguments testCaseNames: ${args.testCaseNames}`);

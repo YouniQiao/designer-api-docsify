@@ -1,12 +1,18 @@
 # resourceToSendableResource
 
+## Modules to Import
+
+```TypeScript
+import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## resourceToSendableResource
 
 ```TypeScript
 export function resourceToSendableResource(resource: Resource): SendableResource
 ```
 
-Converts a \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ object to a \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ object that can be used for cross-thread transmission.
+将Resource对象转换为可用于跨线程传输的SendableResource对象。
 
 **Since:** 12
 
@@ -22,21 +28,21 @@ Converts a \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ object to a \_\_\_INLINE\_CODE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Resource** object. |
+| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SendableResource** object after conversion. |
+| [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | 转换后的SendableResource对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json

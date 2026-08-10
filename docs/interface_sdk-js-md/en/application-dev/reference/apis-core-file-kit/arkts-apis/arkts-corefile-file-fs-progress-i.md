@@ -1,6 +1,6 @@
 # Progress
 
-Defines the copy progress information.
+拷贝进度回调数据
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Defines the copy progress information.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## processedSize
 
 ```TypeScript
 readonly processedSize: number
 ```
 
-Size of the copied data, in bytes.
+已拷贝的数据大小，单位为Byte。
 
 **Type:** number
 
@@ -34,7 +40,7 @@ Size of the copied data, in bytes.
 readonly totalSize: number
 ```
 
-Total size of the data to be copied, in bytes.
+待拷贝的数据总大小，单位为Byte。
 
 **Type:** number
 

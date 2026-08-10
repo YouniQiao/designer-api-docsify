@@ -1,6 +1,6 @@
 # FunctionIntentDecoratorInfo
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)。
 
 **继承/实现关系：** FunctionIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -15,4 +15,10 @@
 <!--Device-unnamed-declare interface FunctionIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface FunctionIntentDecoratorInfo extends IntentDecoratorInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+```
 

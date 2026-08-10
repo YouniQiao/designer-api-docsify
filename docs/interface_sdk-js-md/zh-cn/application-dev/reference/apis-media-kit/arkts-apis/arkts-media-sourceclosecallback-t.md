@@ -5,9 +5,10 @@ type SourceCloseCallback = (uuid: long) => void
 ```
 
 由应用实现此回调函数，应用应释放相关资源。
-    **注意：**  
-    
-    客户端在处理完请求后应立刻返回。
+
+> **注意：**
+> 
+> 客户端在处理完请求后应立刻返回。
 
 **起始版本：** 18
 
@@ -23,5 +24,5 @@ type SourceCloseCallback = (uuid: long) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uuid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 资源句柄的标识。  |
+| uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 资源句柄的标识。 |
 

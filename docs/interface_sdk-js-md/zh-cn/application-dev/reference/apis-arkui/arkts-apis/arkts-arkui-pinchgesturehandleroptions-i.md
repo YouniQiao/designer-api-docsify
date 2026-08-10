@@ -1,8 +1,8 @@
 # PinchGestureHandlerOptions
 
-捏合手势处理器配置参数。继承自[BaseHandlerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+捏合手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
-**继承/实现关系：** PinchGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-component/gesture-basehandleroptions-i.md)
+**继承/实现关系：** PinchGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ distance?: number
 
 最小识别距离，单位为vp。
 
-默认值：5
+默认值：5 
 
 **说明：**
 
@@ -48,7 +48,7 @@ fingers?: number
 
 触发捏合的最少手指数，最小为2指，最大为5指。
 
-默认值：2
+默认值：2 
 
 取值范围：[2, 5]
 

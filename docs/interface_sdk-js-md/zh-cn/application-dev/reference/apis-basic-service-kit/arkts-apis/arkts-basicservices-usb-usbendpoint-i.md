@@ -1,6 +1,6 @@
 # USBEndpoint
 
-通过USB发送和接收数据的端口。通过[USBInterface]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取。
+通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usb-usbinterface-i.md)获取。
 
 **起始版本：** 8
 
@@ -13,6 +13,12 @@
 <!--Device-usb-interface USBEndpoint--><!--Device-usb-interface USBEndpoint-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
+
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
 
 ## address
 
@@ -66,7 +72,7 @@ direction: USBRequestDirection
 
 端点的方向。
 
-**类型：** USBRequestDirection
+**类型：** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
 
 **起始版本：** 8
 

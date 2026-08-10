@@ -1,6 +1,6 @@
 # DataTransferProgress
 
-Information about continuousTask notification progress.
+长时任务通知进度信息。
 
 **Since:** 26.1.0
 
@@ -10,15 +10,21 @@ Information about continuousTask notification progress.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## continuousTaskId
 
 ```TypeScript
 continuousTaskId: int
 ```
 
-Continuous task ID.The value should be an integer.
+长时任务ID。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.1.0
 
@@ -36,9 +42,9 @@ Continuous task ID.The value should be an integer.
 progressInfo: ProgressInfo
 ```
 
-Notify progress data.
+通知进度信息。
 
-**Type:** ProgressInfo
+**Type:** [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md)
 
 **Since:** 26.1.0
 
@@ -56,9 +62,9 @@ Notify progress data.
 wantAgent?: WantAgent
 ```
 
-Notification parameters, which are used to specify the target page that is redirected to when a continuous task notification is clicked.
+通知参数，用于指定点击长时任务通知后跳转的界面。
 
-**Type:** WantAgent
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 26.1.0
 

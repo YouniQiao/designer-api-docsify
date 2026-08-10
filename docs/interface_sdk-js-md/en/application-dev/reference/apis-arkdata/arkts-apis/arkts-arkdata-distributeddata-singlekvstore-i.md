@@ -1,10 +1,7 @@
 # SingleKVStore
 
-Provides APIs to query and synchronize data in a single KV store. This class inherits from  
-[KVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-
-Data is not distinguished by device in a single KV store. The data written to different devices using the same key will be overwritten. For example, a single KV store can be used to synchronize a user's calendar and contact data between different devices.Before calling any method in **SingleKVStore**, you must use  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_to obtain a **SingleKVStore** instance.
+单版本数据库，继承自[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)数据库，提供查询数据和同步数据的方法。单版本数据库，不对数据所属设备进行区分，不同设备使用相同键写入数据会互相覆盖。比如，可以使用单版本数据库实现个人日历、联系人数据在不同设备间的数据同步。在调用SingleKVStore的方法前，需要先通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个SingleKVStore实例。
 
 **Inheritance/Implementation:** SingleKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md)
 
@@ -26,8 +23,8 @@ Data is not distinguished by device in a single KV store. The data written to di
 closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KvStoreResultSet** object obtained by  
-[SingleKVStore.getResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses an asynchronous callback to return the result.
+关闭由  
+[SingleKVStore.getResultSet](arkts-arkdata-distributeddata-singlekvstore-i.md#getresultset)返回的KvStoreResultSet对象，使用callback异步回调。
 
 **Since:** 8
 
@@ -45,10 +42,10 @@ Closes the **KvStoreResultSet** object obtained by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KvStoreResultSet** object to close. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | 表示要关闭的KvStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -72,8 +69,8 @@ try {
 closeResultSet(resultSet: KvStoreResultSet): Promise<void>
 ```
 
-Closes the **KvStoreResultSet** object obtained by  
-[SingleKVStore.getResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+关闭由  
+[SingleKVStore.getResultSet](arkts-arkdata-distributeddata-singlekvstore-i.md#getresultset)返回的KvStoreResultSet对象，使用Promise异步回调。
 
 **Since:** 8
 
@@ -91,15 +88,15 @@ Closes the **KvStoreResultSet** object obtained by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KvStoreResultSet** object to close. |
+| resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | 表示要关闭的KvStoreResultSet对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -121,7 +118,7 @@ try {
 get(key: string, callback: AsyncCallback<Uint8Array | string | boolean | number>): void
 ```
 
-Obtains the value of the specified key. This API uses an asynchronous callback to return the result.
+获取指定键的值，使用callback异步回调。
 
 **Since:** 7
 
@@ -139,10 +136,10 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Uint8Array \| string \| boolean \| number&gt; | Yes | Callback used to return the value obtained. |
+| key | string | Yes | 要查询数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array \| string \| boolean \| number&gt; | Yes | 回调函数。返回获取查询的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -170,7 +167,7 @@ try {
 get(key: string): Promise<Uint8Array | string | boolean | number>
 ```
 
-Obtains the value of the specified key. This API uses a promise to return the result.
+获取指定键的值，使用Promise异步回调。
 
 **Since:** 7
 
@@ -188,15 +185,15 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| key | string | Yes | 要查询数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array \| string \| boolean \| number&gt; | Promise used to return the value obtained. |
+| Promise&lt;Uint8Array \| string \| boolean \| number&gt; | Promise对象。返回获取查询的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -224,7 +221,7 @@ try {
 getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains all KV pairs that match the specified key prefix. This API uses an asynchronous callback to return the result.
+获取匹配指定键前缀的所有键值对，使用callback异步回调。
 
 **Since:** 8
 
@@ -242,10 +239,10 @@ Obtains all KV pairs that match the specified key prefix. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
+| keyPrefix | string | Yes | 表示要匹配的键前缀。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数。返回匹配指定前缀的键值对列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -281,7 +278,7 @@ try {
 getEntries(keyPrefix: string): Promise<Entry[]>
 ```
 
-Obtains all KV pairs that match the specified key prefix. This API uses a promise to return the result.
+获取匹配指定键前缀的所有键值对，使用Promise异步回调。
 
 **Since:** 8
 
@@ -299,15 +296,15 @@ Obtains all KV pairs that match the specified key prefix. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. |
+| keyPrefix | string | Yes | 表示要匹配的键前缀。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
+| Promise&lt;Entry[]&gt; | Promise对象。返回匹配指定前缀的键值对列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -350,7 +347,7 @@ try {
 getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的键值对列表，使用callback异步回调。
 
 **Since:** 8
 
@@ -368,10 +365,10 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Key prefix to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示要匹配的键前缀。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数。返回与指定Query对象匹配的键值对列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -412,7 +409,7 @@ try {
 getEntries(query: Query): Promise<Entry[]>
 ```
 
-Obtains the KV pairs that match the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的键值对列表，使用Promise异步回调。
 
 **Since:** 8
 
@@ -430,15 +427,15 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified **Query** object. |
+| Promise&lt;Entry[]&gt; | Promise对象。返回与指定Query对象匹配的键值对列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -481,7 +478,7 @@ try {
 getResultSet(keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void
 ```
 
-Obtains the result set with the specified prefix. This API uses an asynchronous callback to return the result.
+从KvStore数据库中获取具有指定前缀的结果集，使用callback异步回调。
 
 **Since:** 8
 
@@ -499,10 +496,10 @@ Obtains the result set with the specified prefix. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KvStoreResultSet&gt; | Yes | Callback used to return the result set with the specified prefix. |
+| keyPrefix | string | Yes | 表示要匹配的键前缀。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KvStoreResultSet&gt; | Yes | 回调函数。返回具有指定前缀的结果集。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -541,7 +538,7 @@ try {
 getResultSet(keyPrefix: string): Promise<KvStoreResultSet>
 ```
 
-Obtains the result set with the specified prefix. This API uses a promise to return the result.
+从KVStore数据库中获取具有指定前缀的结果集，使用Promise异步回调。
 
 **Since:** 8
 
@@ -559,15 +556,15 @@ Obtains the result set with the specified prefix. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. |
+| keyPrefix | string | Yes | 表示要匹配的键前缀。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KvStoreResultSet&gt; | Promise used to return the result set with the specified prefix. |
+| Promise&lt;KvStoreResultSet&gt; | Promise对象。返回具有指定前缀的结果集。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -612,7 +609,7 @@ try {
 getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的KvStoreResultSet对象，使用callback异步回调。
 
 **Since:** 8
 
@@ -630,10 +627,10 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KvStoreResultSet&gt; | Yes | Callback used to return the **KvStoreResultSet** object obtained. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KvStoreResultSet&gt; | Yes | 回调函数，获取与指定Query对象匹配的KvStoreResultSet对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -671,7 +668,7 @@ try {
 getResultSet(query: Query): Promise<KvStoreResultSet>
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的KvStoreResultSet对象，使用Promise异步回调。
 
 **Since:** 8
 
@@ -689,15 +686,15 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KvStoreResultSet&gt; | Promise used to return the **KvStoreResultSet** object obtained. |
+| Promise&lt;KvStoreResultSet&gt; | Promise对象。获取与指定Query对象匹配的KvStoreResultSet对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -739,7 +736,7 @@ try {
 getResultSize(query: Query, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的结果数，使用callback异步回调。
 
 **Since:** 8
 
@@ -757,10 +754,10 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the number of results that match the specified **Query** object. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回与指定Query对象匹配的结果数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -796,7 +793,7 @@ try {
 getResultSize(query: Query): Promise<number>
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的结果数，使用Promise异步回调。
 
 **Since:** 8
 
@@ -814,15 +811,15 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of results obtained. |
+| Promise&lt;number&gt; | Promise对象。获取与指定Query对象匹配的结果数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -862,7 +859,7 @@ try {
 getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void
 ```
 
-Obtains the security level of this KV store. This API uses an asynchronous callback to return the result.
+获取数据库的安全级别，使用callback异步回调。
 
 **Since:** 8
 
@@ -880,9 +877,9 @@ Obtains the security level of this KV store. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SecurityLevel&gt; | Yes | Callback used to return the security level of the KV store. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SecurityLevel&gt; | Yes | 回调函数。返回数据库的安全级别。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -901,7 +898,7 @@ try {
 getSecurityLevel(): Promise<SecurityLevel>
 ```
 
-Obtains the security level of this KV store. This API uses a promise to return the result.
+获取数据库的安全级别，使用Promise异步回调。
 
 **Since:** 8
 
@@ -919,9 +916,9 @@ Obtains the security level of this KV store. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SecurityLevel&gt; | Promise used to return the security level of the KV store. |
+| Promise&lt;SecurityLevel&gt; | Promise对象。返回数据库的安全级别。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -942,7 +939,7 @@ try {
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 ```
 
-Unsubscribes from data changes.
+取消订阅数据变更通知。
 
 **Since:** 8
 
@@ -960,10 +957,10 @@ Unsubscribes from data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| event | 'dataChange' | Yes | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -990,7 +987,7 @@ class KvstoreModel {
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
 ```
 
-Unsubscribes from sync completion events.
+取消订阅同步完成事件回调通知。
 
 **Since:** 8
 
@@ -1008,10 +1005,10 @@ Unsubscribes from sync completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| event | 'syncComplete' | Yes | 取消订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1038,7 +1035,7 @@ class KvstoreModel {
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
 ```
 
-Subscribes to data changes of the specified type.
+订阅指定类型的数据变更通知。
 
 **Since:** 8
 
@@ -1056,11 +1053,11 @@ Subscribes to data changes of the specified type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of data change. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
+| event | 'dataChange' | Yes | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 表示订阅的类型。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1075,7 +1072,7 @@ kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, fun
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 ```
 
-Subscribes to sync completion events.
+订阅同步完成事件回调通知。
 
 **Since:** 8
 
@@ -1093,10 +1090,10 @@ Subscribes to sync completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
+| event | 'syncComplete' | Yes | 订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | 回调函数。用于向调用方发送同步结果的回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1122,14 +1119,14 @@ try {
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of a device. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+删除指定设备的数据，使用callback异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -1147,10 +1144,10 @@ Deletes data of a device. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| deviceId | string | Yes | 表示要删除设备的名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1182,14 +1179,14 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of a device. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+删除指定设备的数据，使用Promise异步回调。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -1207,15 +1204,15 @@ Deletes data of a device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the target device. |
+| deviceId | string | Yes | 表示要删除设备的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1249,7 +1246,7 @@ try {
 setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the default delay allowed for KV store sync. This API uses an asynchronous callback to return the result.
+设置数据库同步允许的默认延迟，使用callback异步回调。
 
 **Since:** 8
 
@@ -1267,10 +1264,10 @@ Sets the default delay allowed for KV store sync. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| defaultAllowedDelayMs | number | Yes | Default delay allowed for database sync, in ms. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| defaultAllowedDelayMs | number | Yes | 表示数据库同步允许的默认延迟，以毫秒为单位。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1290,7 +1287,7 @@ try {
 setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 ```
 
-Sets the default delay allowed for KV store sync. This API uses a promise to return the result.
+设置数据库同步允许的默认延迟，使用Promise异步回调。
 
 **Since:** 8
 
@@ -1308,15 +1305,15 @@ Sets the default delay allowed for KV store sync. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| defaultAllowedDelayMs | number | Yes | Default delay allowed for database sync, in ms. |
+| defaultAllowedDelayMs | number | Yes | 表示数据库同步允许的默认延迟，以毫秒为单位。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1338,14 +1335,14 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Synchronizes the KV store manually.
-    **NOTE**  
-    
-    **deviceIds** is **networkId** in \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [DeviceInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which can be obtained by  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.
+在手动同步方式下，触发数据库同步。
+
+> **说明：**
+> 
+> 其中deviceIds为&lt;!--RP2--&gt;[DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)中的
+> networkId, 通过调用
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP2End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **Since:** 7
 
@@ -1365,11 +1362,11 @@ Synchronizes the KV store manually.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Sync mode. |
-| delayMs | number | No | Delay time allowed, in milliseconds. The default value is **0**. |
+| deviceIds | string[] | Yes | 同一组网环境下，需要同步的设备的networkId列表。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 同步模式。 |
+| delayMs | number | No | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';

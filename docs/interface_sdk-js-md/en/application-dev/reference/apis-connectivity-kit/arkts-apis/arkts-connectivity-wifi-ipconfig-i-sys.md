@@ -16,6 +16,12 @@ Wi-Fi IP configuration information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## dnsServers
 
 ```TypeScript

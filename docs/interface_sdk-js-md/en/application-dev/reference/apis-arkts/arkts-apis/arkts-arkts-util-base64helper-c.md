@@ -1,6 +1,6 @@
 # Base64Helper
 
-Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 array using the Base64 encoding scheme.
+使用Base64编码方案将Base64编码的字符串或输入的u8数组解码为新分配的u8数组。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 arra
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Constructor for creating base64 encoding and decoding
+用于创建base64编码和解码的构造函数。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Constructor for creating base64 encoding and decoding
 decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>
 ```
 
-Use the Base64 encoding scheme to asynchronously decode a Base64-encoded string or input u8 array into a newly allocated u8 array.
+使用Base64编码方案将Base64编码的字符串或输入的u8数组异步解码为新分配的u8数组。
 
 **Since:** 23
 
@@ -46,14 +52,14 @@ Use the Base64 encoding scheme to asynchronously decode a Base64-encoded string 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | A Uint8Array value or a string value |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | one of the Type enumeration |
+| src | Uint8Array \| string | Yes | Uint8Array值或字符串值 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Type枚举之一 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Return the decoded asynchronous Uint8Array. |
+| Promise&lt;Uint8Array&gt; | 返回异步解码的Uint8Array。 |
 
 ## decodeSync
 
@@ -61,7 +67,7 @@ Use the Base64 encoding scheme to asynchronously decode a Base64-encoded string 
 decodeSync(src: Uint8Array | string, options?: Type): Uint8Array
 ```
 
-Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 array using the Base64 encoding scheme.
+使用Base64编码方案将Base64编码的字符串或输入的u8数组解码为新分配的u8数组。
 
 **Since:** 23
 
@@ -75,14 +81,14 @@ Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | A Uint8Array value or a string value |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | one of the Type enumeration |
+| src | Uint8Array \| string | Yes | Uint8Array值或字符串值 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Type枚举之一 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Return the decoded Uint8Array. |
+| Uint8Array | 返回解码后的Uint8Array。 |
 
 ## encode
 
@@ -90,7 +96,7 @@ Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 arra
 encode(src: Uint8Array, options?: Type): Promise<Uint8Array>
 ```
 
-Asynchronously encodes all bytes in the specified u8 array into the newly allocated u8 array using the Base64 encoding scheme.
+使用Base64编码方案将指定u8数组中的所有字节异步编码为新分配的u8数组。
 
 **Since:** 23
 
@@ -104,14 +110,14 @@ Asynchronously encodes all bytes in the specified u8 array into the newly alloca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | A Uint8Array value |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Enumerating input parameters includes two encoding formats: BASIC and BASIC\_\_\_ESCAPED\_UNDERSCORE\_\_\_URL\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAFE |
+| src | Uint8Array | Yes | Uint8Array值 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | 枚举输入参数包含两种编码格式：BASIC和BASIC_URL_SAFE |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Return the encodes asynchronous new Uint8Array. |
+| Promise&lt;Uint8Array&gt; | 返回异步编码的新Uint8Array。 |
 
 ## encodeSync
 
@@ -119,7 +125,7 @@ Asynchronously encodes all bytes in the specified u8 array into the newly alloca
 encodeSync(src: Uint8Array, options?: Type): Uint8Array
 ```
 
-Encodes all bytes from the specified u8 array into a newly-allocated u8 array using the Base64 encoding scheme.
+使用Base64编码方案将指定u8数组中的所有字节编码为新分配的u8数组。
 
 **Since:** 23
 
@@ -133,14 +139,14 @@ Encodes all bytes from the specified u8 array into a newly-allocated u8 array us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | A Uint8Array value |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Enumerating input parameters includes two encoding formats: BASIC and BASIC\_\_\_ESCAPED\_UNDERSCORE\_\_\_URL\_\_\_ESCAPED\_UNDERSCORE\_\_\_SAFE |
+| src | Uint8Array | Yes | Uint8Array值 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | 枚举输入参数包含两种编码格式：BASIC和BASIC_URL_SAFE |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Return the encoded new Uint8Array. |
+| Uint8Array | 返回编码后的新Uint8Array。 |
 
 ## encodeToString
 
@@ -148,7 +154,7 @@ Encodes all bytes from the specified u8 array into a newly-allocated u8 array us
 encodeToString(src: Uint8Array, options?: Type): Promise<string>
 ```
 
-Asynchronously encodes the specified byte array into a String using the Base64 encoding scheme.
+使用Base64编码方案将指定的字节数组异步编码为字符串。
 
 **Since:** 23
 
@@ -162,14 +168,14 @@ Asynchronously encodes the specified byte array into a String using the Base64 e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | A Uint8Array value |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | one of the Type enumeration |
+| src | Uint8Array | Yes | Uint8Array值 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Type枚举之一 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the encoded asynchronous string. |
+| Promise&lt;string&gt; | 返回异步编码的字符串。 |
 
 ## encodeToStringSync
 
@@ -177,7 +183,7 @@ Asynchronously encodes the specified byte array into a String using the Base64 e
 encodeToStringSync(src: Uint8Array, options?: Type): string
 ```
 
-Encodes the specified byte array into a String using the Base64 encoding scheme.
+使用Base64编码方案将指定的字节数组编码为字符串。
 
 **Since:** 23
 
@@ -191,12 +197,12 @@ Encodes the specified byte array into a String using the Base64 encoding scheme.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | A Uint8Array value |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | one of the Type enumeration |
+| src | Uint8Array | Yes | Uint8Array值 |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Type枚举之一 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return the encoded string. |
+| string | 返回编码后的字符串。 |
 

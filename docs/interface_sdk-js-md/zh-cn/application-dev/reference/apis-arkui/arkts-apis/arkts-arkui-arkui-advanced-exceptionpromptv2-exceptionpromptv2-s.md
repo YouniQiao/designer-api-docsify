@@ -12,6 +12,12 @@ Declare struct ExceptionPromptV2 higher-order component.The exception prompt com
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from 'kits/@kit.ArkUI';
+```
+
 ## build
 
 ```TypeScript
@@ -76,7 +82,7 @@ options: PromptOptionsV2
 
 ExceptionPromptV2 configuration.
 
-**类型：** PromptOptionsV2
+**类型：** [PromptOptionsV2](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
 
 **起始版本：** 26.0.0
 

@@ -10,6 +10,12 @@ Provides the VideoProcessor type, including AIHDR related functions.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
+## Modules to Import
+
+```TypeScript
+import { videoProcessing } from 'kits/@kit.MediaKit';
+```
+
 ## getStatus
 
 ```TypeScript
@@ -38,7 +44,7 @@ Gets the current status of video processor features.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
 ## offStatusChange
 
@@ -62,15 +68,15 @@ Unregisters a listener for video processor status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback function to remove. If not provided, all callbacks for this event type will be removed. |
+| callback | [VideoProcessorStatusCallback](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) | No | The callback function to remove. If not provided, all callbacks for this event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [29200006](../../apis-image-kit/errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
-| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
+| 801 | Capability not supported. |
+| 29200009 | Input value is invalid. |
+| 29200006 | The operation is not permitted. This may be caused by incorrect status. |
 
 ## onStatusChange
 
@@ -94,13 +100,13 @@ Registers a listener for video processor status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function to invoke when status changes. |
+| callback | [VideoProcessorStatusCallback](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) | Yes | The callback function to invoke when status changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [29200007](../../apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../../apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. |
+| 801 | Capability not supported. |
+| 29200009 | Input value is invalid. |
+| 29200007 | Out of memory. |
 

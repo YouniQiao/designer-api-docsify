@@ -10,6 +10,12 @@ Manager OPP server profile.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { opp } from 'kits/@kit.ConnectivityKit';
+```
+
 ## cancelTransfer
 
 ```TypeScript
@@ -42,17 +48,17 @@ cancel the current file transfer action.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2903002 | Current Transfer Information is busy. |
+| 2900004 | Profile is not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth switch is off. |
-| 2900004 | Profile is not supported. |
 | 2900099 | Failed to cancel the current transfer. |
-| 2903002 | Current Transfer Information is busy. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,7 +79,7 @@ try {
 getCurrentTransferInformation(): Promise<OppTransferInformation>
 ```
 
-Obtains the information about the file that is being transferred.On API 26.0.0 and above, if the application has ohos.permission.GET\_BLUETOOTH\_PEERS\_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Obtains the information about the file that is being transferred.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 16
 
@@ -101,15 +107,15 @@ Obtains the information about the file that is being transferred.On API 26.0.0 a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 2903004 | Current Transfer Information is empty. |
+| 801 | Capability not supported. |
+| 2900004 | Profile is not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth switch is off. |
-| 2900004 | Profile is not supported. |
 | 2900099 | Failed to obtain the current transmission information. |
-| 2903004 | Current Transfer Information is empty. |
 
 ## off('transferStateChange')
 
@@ -138,22 +144,22 @@ Unsubscribe the event reported when the file transfer status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'transferStateChange' | Yes | Type of transport state change event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -195,22 +201,22 @@ Unsubscribe to the event of receiving a file transfer request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'receiveIncomingFile' | Yes | Type of the event for receiving a file request to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -250,19 +256,19 @@ Unsubscribe to the event of receiving a file transfer request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
 ## offTransferStateChange
 
@@ -290,19 +296,19 @@ Unsubscribe the event reported when the file transfer status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
 ## on('transferStateChange')
 
@@ -310,7 +316,7 @@ Unsubscribe the event reported when the file transfer status changes.
 on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void
 ```
 
-Subscribe the event reported when the file transfer status changes.On API 26.0.0 and above, if the application has ohos.permission.GET\_BLUETOOTH\_PEERS\_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Subscribe the event reported when the file transfer status changes.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 16
 
@@ -333,21 +339,22 @@ Subscribe the event reported when the file transfer status changes.On API 26.0.0
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'transferStateChange' | Yes | Type of transport state change event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 16 - 24 |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -376,7 +383,7 @@ try {
 on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): void
 ```
 
-Subscribe to the event of receiving a file transfer request.On API 26.0.0 and above, if the application has ohos.permission.GET\_BLUETOOTH\_PEERS\_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Subscribe to the event of receiving a file transfer request.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 16
 
@@ -399,21 +406,22 @@ Subscribe to the event of receiving a file transfer request.On API 26.0.0 and ab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'receiveIncomingFile' | Yes | Type of the event for receiving a file request to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 16 - 24 |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -442,7 +450,7 @@ try {
 onReceiveIncomingFile(callback: Callback<OppTransferInformation>): void
 ```
 
-Subscribe to the event of receiving a file transfer request.If the application has ohos.permission.GET\_BLUETOOTH\_PEERS\_MAC, the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
+Subscribe to the event of receiving a file transfer request.If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
 
 **Since:** 26.0.0
 
@@ -462,19 +470,19 @@ Subscribe to the event of receiving a file transfer request.If the application h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
 ## onTransferStateChange
 
@@ -482,7 +490,7 @@ Subscribe to the event of receiving a file transfer request.If the application h
 onTransferStateChange(callback: Callback<OppTransferInformation>): void
 ```
 
-Subscribe the event reported when the file transfer status changes.If the application has ohos.permission.GET\_BLUETOOTH\_PEERS\_MAC, the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
+Subscribe the event reported when the file transfer status changes.If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
 
 **Since:** 26.0.0
 
@@ -502,19 +510,19 @@ Subscribe the event reported when the file transfer status changes.If the applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
 ## sendFile
 
@@ -555,20 +563,20 @@ Send files to the remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth switch is off. |
-| 2900004 | Profile is not supported. |
-| 2900099 | Failed to send file. |
+| 401 | Invalid parameter. |
+| 801 | Capability not supported. |
 | 2903001 | The file type is not supported. |
 | 2903002 | Current Transfer Information is busy. |
 | 2903003 | The file is not accessible. |
+| 2900004 | Profile is not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
+| 2900001 | Service stopped. |
+| 2900003 | Bluetooth switch is off. |
+| 2900099 | Failed to send file. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -632,7 +640,7 @@ Set the user confirmation information for incoming files.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accept | boolean | Yes | Indicates whether to accept the incoming file, {@code true} indicates accept or {@code false} otherwise. |
-| fileFd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | : the receive file fd to receive need contains open when accepting. |
+| fileFd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | : the receive file fd to receive need contains open when accepting. |
 
 **Return value:**
 
@@ -644,19 +652,19 @@ Set the user confirmation information for incoming files.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth switch is off. |
-| 2900004 | Profile is not supported. |
-| 2900099 | Failed to confirm the received file information. |
+| 401 | Invalid parameter. |
+| 801 | Capability not supported. |
 | 2903002 | Current Transfer Information is busy. |
 | 2903003 | The file is not accessible. |
+| 2900004 | Profile is not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
+| 2900001 | Service stopped. |
+| 2900003 | Bluetooth switch is off. |
+| 2900099 | Failed to confirm the received file information. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -717,17 +725,17 @@ Set the URI of the last received file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 2900004 | Profile not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | This function is prohibited by enterprise management policies. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 | 2900099 | Failed to set the URI of the last file. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

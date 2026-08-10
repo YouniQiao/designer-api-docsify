@@ -1,5 +1,11 @@
 # reportAVScreenCaptureUserChoice (System API)
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## reportAVScreenCaptureUserChoice
 
 ```TypeScript
@@ -22,7 +28,7 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
 | choice | string | Yes | User choice, including whether screen capture is agreed, selected display ID, and window ID. For details, see JsonData in the example below. |
 
 **Return value:**
@@ -35,10 +41,10 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 5400101 | No memory. Return by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

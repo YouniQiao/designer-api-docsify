@@ -1,6 +1,6 @@
 # WindowAnimationTarget (System API)
 
-Window animation target.
+目标窗口，用来远程控制实现动画。
 
 **Since:** 9
 
@@ -17,6 +17,8 @@ Window animation target.
 ```TypeScript
 readonly abilityName: string
 ```
+
+动画窗口所对应的Ability
 
 **Type:** string
 
@@ -36,6 +38,8 @@ readonly abilityName: string
 readonly bundleName: string
 ```
 
+动画窗口所对应的进程。
+
 **Type:** string
 
 **Since:** 9
@@ -53,6 +57,8 @@ readonly bundleName: string
 ```TypeScript
 readonly missionId: number
 ```
+
+任务ID。
 
 **Type:** number
 
@@ -72,7 +78,9 @@ readonly missionId: number
 readonly windowBounds: RRect
 ```
 
-**Type:** RRect
+动画窗口实际大小。
+
+**Type:** [RRect](../arkts-apis/arkts-arkui-windowanimationmanager-rrect-i-sys.md)
 
 **Since:** 9
 

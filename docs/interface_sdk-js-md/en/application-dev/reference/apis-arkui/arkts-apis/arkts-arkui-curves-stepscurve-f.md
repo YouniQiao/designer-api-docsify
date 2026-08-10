@@ -1,12 +1,18 @@
 # stepsCurve
 
+## Modules to Import
+
+```TypeScript
+import { curves } from 'kits/@kit.ArkUI';
+```
+
 ## stepsCurve
 
 ```TypeScript
 export function stepsCurve(count: int, end: boolean): ICurve
 ```
 
-Creates a step curve.
+构造阶梯曲线对象。
 
 **Since:** 23
 
@@ -22,12 +28,12 @@ Creates a step curve.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | int | Yes | Number of steps. The value must be a positive integer.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [1, INT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A value less than 1 evaluates to the value **1**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| end | boolean | Yes | Whether jumping occurs when the interpolation ends. **true**: Jumping occurs when the interpolation ends. **false**: Jumping occurs when the interpolation starts. |
+| count | int | Yes | 阶梯的数量，需要为正整数。&lt;br/&gt;取值范围：[1, +∞)&lt;br/&gt;**说明：** &lt;br/&gt;设置小于1的值时，按值为1处理。 |
+| end | boolean | Yes | 在每个间隔的起点或终点发生阶跃变化。&lt;br&gt;-true：在终点发生阶跃变化。&lt;br&gt;-false：在起点发生阶跃变化。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Interpolation curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线的插值对象。 |
 

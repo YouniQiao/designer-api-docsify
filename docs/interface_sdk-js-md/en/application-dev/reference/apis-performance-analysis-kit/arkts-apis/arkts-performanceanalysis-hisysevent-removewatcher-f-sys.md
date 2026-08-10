@@ -1,12 +1,18 @@
 # removeWatcher (System API)
 
+## Modules to Import
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## removeWatcher
 
 ```TypeScript
 function removeWatcher(watcher: Watcher): void
 ```
 
-Removes a watcher used for event subscription.
+取消订阅系统事件，接收[Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md)类型的对象作为事件参数。
 
 **Since:** 9
 
@@ -24,18 +30,18 @@ Removes a watcher used for event subscription.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Watcher for event subscription. |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes | 系统事件订阅者对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_DFX\_\_\_ESCAPED\_UNDERSCORE\_\_\_SYSEVENT. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [11200201](../errorcode-hisysevent-sys.md#11200201-event-watcher-not-exist) | The watcher does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 11200201 | The watcher does not exist. |
+| 201 | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| 202 | System API is not allowed called by Non-system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';

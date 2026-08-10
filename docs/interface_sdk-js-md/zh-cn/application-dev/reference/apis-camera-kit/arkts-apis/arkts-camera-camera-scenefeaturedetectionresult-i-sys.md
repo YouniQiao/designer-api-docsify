@@ -12,6 +12,12 @@ Describes the scene feature detection result.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## detected
 
 ```TypeScript
@@ -40,7 +46,7 @@ readonly featureType: SceneFeatureType
 
 Scene feature type.
 
-**类型：** SceneFeatureType
+**类型：** [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md)
 
 **起始版本：** 12
 

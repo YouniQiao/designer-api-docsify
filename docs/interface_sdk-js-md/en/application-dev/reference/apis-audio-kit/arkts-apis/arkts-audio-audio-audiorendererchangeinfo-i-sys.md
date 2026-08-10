@@ -1,6 +1,6 @@
 # AudioRendererChangeInfo
 
-Describes the audio renderer change event.
+描述音频渲染器更改信息。
 
 **Since:** 9
 
@@ -10,6 +10,12 @@ Describes the audio renderer change event.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## clientUid
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly clientUid: int
 
 Uid for audio renderer client application.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,9 +42,7 @@ Uid for audio renderer client application.
 readonly rendererState: AudioState
 ```
 
-Audio state.
-
-**Type:** AudioState
+**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
 
 **Since:** 9
 

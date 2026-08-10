@@ -6,7 +6,7 @@
 function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Obtains whether an application supports distributed notifications based on the bundle.This API uses an asynchronous callback to return the result.
+根据应用的包获取应用程序是否支持分布式通知（Callback形式）。
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ Obtains whether an application supports distributed notifications based on the b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application bundle. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 应用的包。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 查询指定应用是否支持分布式通知的回调函数。 |
 
 
 ## isDistributedEnabledByBundle
@@ -38,7 +38,7 @@ Obtains whether an application supports distributed notifications based on the b
 function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 ```
 
-Checks whether a specified application supports distributed notifications.This API uses an asynchronous callback to return the result.
+查询指定应用是否支持分布式通知（Promise形式）。
 
 **Since:** 8
 
@@ -60,11 +60,11 @@ Checks whether a specified application supports distributed notifications.This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application bundle. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 应用的包。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise方式返回指定应用是否支持分布式通知的结果。 |
 

@@ -1,12 +1,18 @@
 # startAdvertising
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## startAdvertising
 
 ```TypeScript
 function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 ```
 
-Starts advertising.
+开始广播。
 
 **Since:** 26.0.0
 
@@ -24,22 +30,22 @@ Starts advertising.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the param for advertising. |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes | 表示广播参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Returns the promise object advertise handle. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 返回广播句柄promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
-| 36100040 | Integer out of range. |
-| 36100043 | Invalid UUID. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 36100043 | Invalid UUID. |
+| 36100040 | Integer out of range. |
 

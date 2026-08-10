@@ -12,6 +12,12 @@ Defines the SMS message segment information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## encodeCount
 
 ```TypeScript
@@ -20,7 +26,7 @@ encodeCount: int
 
 Indicates the encoding count for the SMS message segment information.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -40,7 +46,7 @@ encodeCountRemaining: int
 
 Indicates the remaining encoding count for the SMS message segment information.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ scheme: SmsEncodingScheme
 
 Indicates the encoding scheme for the SMS message segment information.
 
-**Type:** SmsEncodingScheme
+**Type:** [SmsEncodingScheme](arkts-telephony-sms-smsencodingscheme-e-sys.md)
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ splitCount: int
 
 Indicates the split count for the SMS message segment information.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

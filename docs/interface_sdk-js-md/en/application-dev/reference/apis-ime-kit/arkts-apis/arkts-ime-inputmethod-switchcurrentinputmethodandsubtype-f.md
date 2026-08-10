@@ -1,5 +1,11 @@
 # switchCurrentInputMethodAndSubtype
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## switchCurrentInputMethodAndSubtype
 
 ```TypeScript
@@ -10,7 +16,7 @@ function switchCurrentInputMethodAndSubtype(
   ): void
 ```
 
-Switch input method and subtype. The caller must be the current inputmethod.
+切换至指定输入法的指定子类型，适用于跨输入法切换子类型。使用callback异步回调。
 
 **Since:** 9
 
@@ -27,19 +33,20 @@ Switch input method and subtype. The caller must be the current inputmethod.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the target input method. |
-| inputMethodSubtype | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the target input method subtype. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | the callback of switchCurrentInputMethodAndSubtype. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | 目标输入法。 |
+| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | 目标输入法子类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当输入法和子类型切换成功，err为undefined，data为获取到的切换子类型结果true；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800005](../errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) | configuration persistence error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800005 | configuration persistence error. |
+| 201 | permissions check fails.<br>**Applicable version:** 9 - 10 |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
@@ -70,7 +77,7 @@ function switchCurrentInputMethodAndSubtype(
   ): Promise<boolean>
 ```
 
-Switch input method and subtype. The caller must be the current inputmethod.
+切换至指定输入法的指定子类型，适用于跨输入法切换子类型。使用promise异步回调。
 
 **Since:** 9
 
@@ -87,24 +94,25 @@ Switch input method and subtype. The caller must be the current inputmethod.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the target input method. |
-| inputMethodSubtype | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the target input method subtype. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | 目标输入法。 |
+| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | 目标输入法子类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示切换至指定输入法的指定子类型成功，返回false表示切换至指定输入法的指定子类型失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800005](../errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) | configuration persistence error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800005 | configuration persistence error. |
+| 201 | permissions check fails.<br>**Applicable version:** 9 - 10 |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';

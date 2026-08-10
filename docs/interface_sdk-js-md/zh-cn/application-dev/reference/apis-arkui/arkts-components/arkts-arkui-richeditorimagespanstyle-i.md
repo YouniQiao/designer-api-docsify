@@ -18,7 +18,7 @@ layoutStyle?: RichEditorLayoutStyle
 
 图片布局样式。默认值：{"borderRadius":"","margin":""}
 
-**类型：** RichEditorLayoutStyle
+**类型：** [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md)
 
 **起始版本：** 11
 
@@ -42,7 +42,7 @@ objectFit?: ImageFit
 
 默认值：ImageFit.Cover。
 
-**类型：** ImageFit
+**类型：** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
 
 **起始版本：** 10
 
@@ -88,7 +88,7 @@ verticalAlign?: ImageSpanAlignment
 
 默认值：ImageSpanAlignment.BOTTOM
 
-**类型：** ImageSpanAlignment
+**类型：** [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md)
 
 **起始版本：** 10
 

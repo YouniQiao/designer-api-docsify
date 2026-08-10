@@ -1,6 +1,6 @@
 # AuthEvent
 
-Provides an asynchronous callback to return the authentication event information.
+认证接口的异步回调对象。
 
 **Since:** 9
 
@@ -14,13 +14,19 @@ Provides an asynchronous callback to return the authentication event information
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## callback
 
 ```TypeScript
 callback(result: EventInfo): void
 ```
 
-Called to return the authentication result or authentication tip information.
+通过该回调获取认证结果信息或认证过程中的提示信息。
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Called to return the authentication result or authentication tip information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication result or tip information. |
+| result | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | 返回的认证结果信息或提示信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -53,16 +59,13 @@ try {
   let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
   auth.on('result', {
     callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`authV9 result ${result.result}`);
-      console.info(`authV9 token ${result.token}`);
-      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
-      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
+      console.info(`result: ${result.result}`);
     }
   } as userAuth.AuthEvent);
   auth.start();
-  console.info('authV9 start success');
+  console.info('auth start successfully.');
 } catch (error) {
-  console.error(`authV9 error = ${error}`);
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
   // do error.
 }
 // Obtain the authentication tip information via a callback.
@@ -83,9 +86,9 @@ try {
     }
   } as userAuth.AuthEvent);
   auth.start();
-  console.info('authV9 start success');
+  console.info('auth start successfully.');
 } catch (error) {
-  console.error(`authV9 error = ${error}`);
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
   // do error.
 }
 ```

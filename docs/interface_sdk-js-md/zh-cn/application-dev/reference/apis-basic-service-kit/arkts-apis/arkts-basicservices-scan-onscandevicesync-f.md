@@ -1,5 +1,11 @@
 # onScanDeviceSync
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onScanDeviceSync
 
 ```TypeScript
@@ -22,21 +28,11 @@ Register event callback for scanner device sync.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScannerSyncDevice&gt; | 是 | Callback for device sync event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerSyncDevice&gt; | 是 | Callback for device sync event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-
-**示例：**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.onScanDeviceSync((device: scan.ScannerSyncDevice) => {
-    console.info('scan device sync: ' + JSON.stringify(device));
-})
-```
+| 201 | Permission denied. |
 

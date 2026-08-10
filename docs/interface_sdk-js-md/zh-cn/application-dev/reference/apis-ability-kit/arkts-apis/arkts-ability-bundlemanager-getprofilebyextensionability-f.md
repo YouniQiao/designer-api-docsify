@@ -1,5 +1,11 @@
 # getProfileByExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getProfileByExtensionAbility
 
 ```TypeScript
@@ -7,7 +13,7 @@ function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: 
 ```
 
 根据给定的moduleName、extensionAbilityName和metadataName（module.json5中  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_下的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。
+[metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -25,19 +31,19 @@ function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: 
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 表示Module名称。 |
 | extensionAbilityName | string | 是 | 表示ExtensionAbility组件的名称。 |
-| metadataName | string | 是 | 表示ExtensionAbility组件的元信息名称，即module.json5配置文件中 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_下的metadata标签的 name。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | 是 | [AsyncCallback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，当获取成功时，err为 undefined，data为获取到的Array\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_；否则为错误对象。 |
+| metadataName | string | 是 | 表示ExtensionAbility组件的元信息名称，即module.json5配置文件中 [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)下的metadata标签的 name。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not existed. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbilityName not existed. |
-| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because there is no profile in the HAP. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700024 | Failed to get the profile because there is no profile in the HAP. |
+| 17700002 | The specified moduleName is not existed. |
+| 17700003 | The specified extensionAbilityName not existed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -70,7 +76,7 @@ function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: 
 ```
 
 根据给定的moduleName、extensionAbilityName和metadataName（module.json5中  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_下的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。
+[metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -88,26 +94,24 @@ function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: 
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 表示Module名称。 |
 | extensionAbilityName | string | 是 | 表示ExtensionAbility组件的名称。 |
-| metadataName | string | 否 | 表示ExtensionAbility组件的元信息名称，即module.json5配置文件中 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_下的metadata标签的 name，默认值为空。 |
+| metadataName | string | 否 | 表示ExtensionAbility组件的元信息名称，即module.json5配置文件中 [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)下的metadata标签的 name，默认值为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回Array\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_对象。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回Array&lt;string&gt;对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not existed. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbilityName not existed. |
-| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because there is no profile in the HAP. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700024 | Failed to get the profile because there is no profile in the HAP. |
+| 17700002 | The specified moduleName is not existed. |
+| 17700003 | The specified extensionAbilityName not existed. |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -134,42 +138,6 @@ try {
     hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbility successfully. Data: %{public}s', JSON.stringify(data));
   }).catch((err: BusinessError) => {
     hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 开发者需根据实际工程更新moduleName、extensionAbilityName和metadataName。
-let moduleName = 'entry';
-let extensionAbilityName = 'com.example.myapplication.extension';
-let metadataName = 'ability_metadata';
-
-try {
-  bundleManager.getProfileByExtensionAbility(moduleName, extensionAbilityName).then((data: Array<string>) => {
-    hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbility successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', message);
-}
-
-try {
-  bundleManager.getProfileByExtensionAbility(moduleName, extensionAbilityName, metadataName).then((data: Array<string>) => {
-    hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbility successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', (err as BusinessError).message);
   });
 } catch (err) {
   let message = (err as BusinessError).message;

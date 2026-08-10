@@ -12,6 +12,12 @@ Indicates GNSS fence information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## circularFence
 
 ```TypeScript
@@ -20,7 +26,7 @@ circularFence?: Geofence
 
 Indicates circular fence.
 
-**Type:** Geofence
+**Type:** [Geofence](arkts-location-geolocation-geofence-i.md)
 
 **Since:** 26.0.0
 
@@ -40,9 +46,9 @@ Indicates circular fence.
 gnssFenceType: int
 ```
 
-Indicates GNSS fence type.The value range of this field is as follows: [GnssFenceType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.The value range is all integers.
+Indicates GNSS fence type.The value range of this field is as follows: [GnssFenceType](arkts-location-geolocationmanager-gnssfencetype-e-sys.md).The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

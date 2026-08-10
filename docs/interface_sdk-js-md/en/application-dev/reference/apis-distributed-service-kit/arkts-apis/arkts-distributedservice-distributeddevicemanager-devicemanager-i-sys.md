@@ -1,8 +1,6 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in  
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,  
-**dmInstance**.
+设备管理实例，用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
 
 **Since:** 10
 
@@ -12,13 +10,19 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## getDeviceIconInfo
 
 ```TypeScript
 getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIconInfo>
 ```
 
-Obtains the device icon. This API uses a promise to return the result.
+获取设备图标，使用Promise异步回调。
 
 **Since:** 18
 
@@ -36,25 +40,25 @@ Obtains the device icon. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filterOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter options. |
+| filterOptions | [DeviceIconInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceiconinfofilteroptions-i-sys.md) | Yes | 查询过程中使用的过滤条件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceIconInfo&gt; | Promise used to return the device icon information. |
+| Promise&lt;DeviceIconInfo&gt; | Promise实例，返回设备图标信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600106 | Get data from cloud fail. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -90,7 +94,7 @@ try {
 getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<string>>
 ```
 
-Obtains the list of network devices according to the specified filter options.
+获取符合条件的网络设备ID列表。使用Promise异步回调。
 
 **Since:** 18
 
@@ -108,25 +112,25 @@ Obtains the list of network devices according to the specified filter options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filterOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter options. |
+| filterOptions | [NetworkIdQueryFilter](arkts-distributedservice-distributeddevicemanager-networkidqueryfilter-i-sys.md) | Yes | 查询过程中使用的过滤条件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the device list. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise实例，返回设备网络ID的列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600107 | A login account is required. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -155,7 +159,7 @@ try {
 getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise<Array<DeviceProfileInfo>>
 ```
 
-Obtains the list of devices under the same account. This API uses a promise to return the result.
+获取同账号下全部的设备列表，使用Promise异步回调。
 
 **Since:** 15
 
@@ -173,26 +177,26 @@ Obtains the list of devices under the same account. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filterOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter options. |
+| filterOptions | [DeviceProfileInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceprofileinfofilteroptions-i-sys.md) | Yes | 查询过程中使用的过滤条件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceProfileInfo&gt;&gt; | Promise used to return the device list. |
+| Promise&lt;Array&lt;DeviceProfileInfo&gt;&gt; | Promise实例，返回设备列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600107 | A login account is required. |
+| 11600106 | Get data from cloud fail. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -217,7 +221,7 @@ try {
 getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentification>
 ```
 
-Query device identification by device IDs.
+根据设备ID查询设备标识。
 
 **Since:** 24
 
@@ -237,24 +241,24 @@ Query device identification by device IDs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | Array&lt;string&gt; | Yes | A list of device IDs that could be obtained by the application, with a maximum list size of 50. |
+| deviceIds | Array&lt;string&gt; | Yes | 应用程序可以获取的设备ID列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceIdentification&gt; |  Returns a list of DeviceIdentification. |
+| Array&lt;DeviceIdentification&gt; | DeviceIdentification列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 11600101 | Failed to execute the function. |
+| 201 | User permission verify failed. |
+| 202 | The caller is not a system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit'
@@ -293,7 +297,7 @@ ArkTS-Sta:
 getLocalDisplayDeviceName(maxNameLength: int): Promise<string>
 ```
 
-Obtains the local device's display name with the specified length. This API uses a promise to return the result.
+获取本机指定长度（字节数）的显示名，使用Promise异步回调。
 
 **Since:** 18
 
@@ -311,24 +315,24 @@ Obtains the local device's display name with the specified length. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxNameLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Length of the local device's display name, in bytes. The value range is [18, 100]. If the value is **0**, the length is not limited. |
+| maxNameLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 可显示的设备名称长度（字节数），取值范围为[18，100]，为0时表示不限制。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Maximum number of bytes in the local device's display name. |
+| Promise&lt;string&gt; | 指定名称长度最大字节数的本机设备显示名。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -360,7 +364,7 @@ ArkTS-Sta:
 getOsTypeByNetworkId(networkId: string): int
 ```
 
-Query the device operating system type by device network ID.
+通过设备网络ID查询设备操作系统类型。
 
 **Since:** 26.1.0
 
@@ -386,15 +390,15 @@ Query the device operating system type by device network ID.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int |  Returns the device operating system type. Possible return: 1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the device operating system type. Possible return: 1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| 11600102 | Failed to obtain service. |
+| 201 | User permission verify failed. |
+| 202 | The caller is not a system application. |
 | 11600110 | Invalid network ID. |
 
 ## off('replyResult')
@@ -403,7 +407,7 @@ Query the device operating system type by device network ID.
 off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 ```
 
-Unsubscribes from the reply to the UI operation result.
+取消回复UI操作结果回调。使用callback异步回调。
 
 **Since:** 10
 
@@ -421,18 +425,18 @@ Unsubscribes from the reply to the UI operation result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ param: string; }&gt; | No |  |
+| type | 'replyResult' | Yes | 取消注册的设备管理器 UI 状态回调，固定为replyResult。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -453,7 +457,7 @@ try {
 offReplyResult(callback?: Callback<ReplyResult>): void
 ```
 
-Unregister uiStateChange, this interface can only be used by devicemanager ui.
+取消回复UI操作结果回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -471,14 +475,14 @@ Unregister uiStateChange, this interface can only be used by devicemanager ui.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ReplyResult&gt; | No | Indicates the devicemanager ui state to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ReplyResult&gt; | No | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## on('replyResult')
 
@@ -486,7 +490,7 @@ Unregister uiStateChange, this interface can only be used by devicemanager ui.
 on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 ```
 
-Subscribes to the reply to the UI operation result.
+回复UI操作结果回调。使用callback异步回调。
 
 **Since:** 10
 
@@ -504,18 +508,18 @@ Subscribes to the reply to the UI operation result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ param: string; }&gt; | Yes |  |
+| type | 'replyResult' | Yes | 注册的设备管理器 UI 状态回调，以便在状态改变时通知应用，固定为replyResult。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -549,7 +553,7 @@ try {
 onReplyResult(callback: Callback<ReplyResult>): void
 ```
 
-Register a callback from deviceManager service so that the devicemanager ui can be notified when uiStateChanges.
+回复UI操作结果回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -567,14 +571,14 @@ Register a callback from deviceManager service so that the devicemanager ui can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ReplyResult&gt; | Yes | Indicates the devicemanager ui state to register. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ReplyResult&gt; | Yes | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## putDeviceProfileInfoList
 
@@ -588,7 +592,7 @@ ArkTS-Sta:
 putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<int>
 ```
 
-Updates the device list. This API uses a promise to return the result.
+业务调用更新设备列表，使用Promise异步回调。
 
 **Since:** 18
 
@@ -606,24 +610,24 @@ Updates the device list. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceProfileInfoList | Array&lt;DeviceProfileInfo&gt; | Yes | Device list. |
+| deviceProfileInfoList | Array&lt;DeviceProfileInfo&gt; | Yes | 需要更新的设备列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 500. |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -655,7 +659,7 @@ ArkTS-Sta:
 replyUiAction(action: int, actionResult: string): void
 ```
 
-Replies to the user's UI operation. This API can be used only by the PIN HAP of the **deviceManager**.
+回复用户UI操作行为。此接口只能被devicemanager的PIN码hap使用。
 
 **Since:** 10
 
@@ -673,18 +677,18 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User operation. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: Grant the permission. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**. Remove the permission. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-**2**: Time out the user operation in the permission request dialog. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **3**: Cancel the display of the PIN box. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **4**: Cancel the display of the PIN input box. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **5**: Confirm the input in the PIN input box. |
-| actionResult | string | Yes | User operation result. The value is a string of 1 to 255 characters. |
+| action | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户操作动作。 &lt;br /&gt;- 0：允许授权。 &lt;br /&gt;- 1：取消授权。 &lt;br /&gt;- 2：授权框用户操作超时。 &lt;br /&gt;- 3：取消pin码框展示。 &lt;br /&gt;- 4：取消pin码输入框展示。 &lt;br /&gt;- 5：pin码输入框确定操作。 |
+| actionResult | string | Yes | 表示用户操作结果，长度范围1~255字符。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified actionResult is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -714,7 +718,7 @@ try {
 restoreLocalDeivceName(): void
 ```
 
-Restores the local device name by resetting the network settings.
+系统重置还原网络设置时，还原本机设备名。
 
 **Since:** 18
 
@@ -736,11 +740,11 @@ Restores the local device name by resetting the network settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
+| 11600102 | Failed to obtain the service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -761,7 +765,7 @@ try {
 restoreLocalDeviceName(): void
 ```
 
-Restores the local device name.
+系统重置还原网络设置时，还原本机设备名。
 
 **Since:** 24
 
@@ -781,11 +785,11 @@ Restores the local device name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
+| 11600102 | Failed to obtain the service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -812,7 +816,7 @@ ArkTS-Sta:
 setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: int): void
 ```
 
-Sets the heartbeat broadcast policy.
+设置心跳广播策略。
 
 **Since:** 15
 
@@ -830,19 +834,19 @@ Sets the heartbeat broadcast policy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Heartbeat broadcast policy. |
-| delayTime | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Duration for temporarily disabling heartbeat broadcast. The value ranges from 1000 to 15000, in milliseconds. |
+| policy | [StrategyForHeartbeat](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md) | Yes | 心跳广播策略。 |
+| delayTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 临时关闭心跳广播的时长，单位为：ms，取值范围1000ms到15000ms。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -871,7 +875,7 @@ ArkTS-Sta:
 setLocalDeviceName(deviceName: string): Promise<int>
 ```
 
-Sets the local device name. This API uses a promise to return the result.
+修改本机设备名称，使用Promise异步回调。
 
 **Since:** 18
 
@@ -889,27 +893,27 @@ Sets the local device name. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | Device name to set. The value is a string of 1 to 255 characters. |
+| deviceName | string | Yes | 自定义设备名称。字符串长度范围1~255。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
-| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600107 | A login account is required. |
+| 11600106 | Failed to get data from the cloud. |
+| 11600108 | The device name contains non-compliant content. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -941,7 +945,7 @@ ArkTS-Sta:
 setRemoteDeviceName(deviceId: string, deviceName: string): Promise<int>
 ```
 
-Sets the remote device name. This API uses a promise to return the result.
+设置配件设备名称，使用Promise异步回调。
 
 **Since:** 18
 
@@ -959,28 +963,28 @@ Sets the remote device name. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | UDID of the remote device. If the device does not have a UDID, the MAC address or SN of the device is used as the device ID. The SN is used preferentially. |
-| deviceName | string | Yes | Device name to set. The value is a string of 1 to 255 characters. |
+| deviceId | string | Yes | 配件设备的UDID，没有UDID的设备取MAC或SN，优先取SN。 |
+| deviceName | string | Yes | 自定义设备名称。字符串长度范围1~255。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Operation result. The value **0** indicates that the operation is successful. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 操作结果，0表示本次调用成功。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
-| [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
-| [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
-| [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; |
+| 11600102 | Failed to obtain service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 11600107 | A login account is required. |
+| 11600106 | Failed to get data from the cloud. |
+| 11600108 | The device name contains non-compliant content. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';

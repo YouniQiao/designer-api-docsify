@@ -10,6 +10,12 @@ Reader represents the SE readers supported by this device.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
+## Modules to Import
+
+```TypeScript
+import { omapi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## closeSessions
 
 ```TypeScript
@@ -30,10 +36,10 @@ Close all the sessions opened on this reader. All the channels opened by all the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| 801 | Capability not supported. |
+| 3300101 | IllegalStateError, service state exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -91,9 +97,9 @@ Returns the name of this reader.If this reader is a SIM reader, then its name mu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -138,10 +144,10 @@ Checks if a SE is present in this reader.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| 801 | Capability not supported. |
+| 3300101 | IllegalStateError, service state exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -180,17 +186,17 @@ Connects to a SE in this reader.This method prepares (initializes) the SE for co
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A Session object to be used to create channels. |
+| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) | A Session object to be used to create channels. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| 801 | Capability not supported. |
+| 3300101 | IllegalStateError, service state exception. |
+| 3300104 | IOError, there is a communication problem to the reader or the SE. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

@@ -124,9 +124,9 @@ marqueeStartPolicy?: MarqueeStartPolicy
 
 设置跑马灯启动策略，该属性值生效需将start设置为true。
 
-默认值：TV设备上默认值为MarqueeStartPolicy.ON\_FOCUS，其他设备默认值为MarqueeStartPolicy.DEFAULT
+默认值：TV设备上默认值为MarqueeStartPolicy.ON_FOCUS，其他设备默认值为MarqueeStartPolicy.DEFAULT
 
-**类型：** MarqueeStartPolicy
+**类型：** [MarqueeStartPolicy](arkts-arkui-marqueestartpolicy-e.md)
 
 **起始版本：** 18
 
@@ -152,7 +152,7 @@ marqueeUpdatePolicy?: MarqueeUpdatePolicy
 
 默认值：MarqueeUpdatePolicy.DEFAULT
 
-**类型：** MarqueeUpdatePolicy
+**类型：** [MarqueeUpdatePolicy](../arkts-apis/arkts-arkui-text-marqueeupdatepolicy-e.md)
 
 **起始版本：** 23
 
@@ -176,7 +176,7 @@ spacing?: LengthMetrics
 
 默认值：48.0vp
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 23
 

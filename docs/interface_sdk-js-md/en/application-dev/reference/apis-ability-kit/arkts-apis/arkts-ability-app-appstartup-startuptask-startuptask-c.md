@@ -1,7 +1,7 @@
 # StartupTask
 
 The module provides capabilities related to startup tasks in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[AppStartup](../../../application-models/app-startup.md).
 
 **Since:** 23
 
@@ -11,13 +11,19 @@ The module provides capabilities related to startup tasks in
 
 **System capability:** SystemCapability.Ability.AppStartup
 
+## Modules to Import
+
+```TypeScript
+import { StartupTask } from 'kits/@kit.AbilityKit';
+```
+
 ## init
 
 ```TypeScript
 init(context: AbilityStageContext): Promise<Any> | Promise<void>
 ```
 
-Initializes current startup task.A developer could override this function to init current task and return a result for other tasks.
+启动任务执行的初始化业务。
 
 **Since:** 23
 
@@ -33,13 +39,13 @@ Initializes current startup task.A developer could override this function to ini
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates ability stage context. |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | AbilityStage的上下文环境。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Any&gt; | The result of initialization. |
+| Promise&lt;Any&gt; | Promise对象，返回启动任务执行结果对象。 |
 
 ## onDependencyCompleted
 
@@ -47,7 +53,7 @@ Initializes current startup task.A developer could override this function to ini
 onDependencyCompleted(dependency: string, result: Any): void
 ```
 
-Called when specific dependent task complete.
+当依赖的启动任务执行完成时该方法将会被调用。
 
 **Since:** 23
 
@@ -63,6 +69,6 @@ Called when specific dependent task complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dependency | string | Yes | Indicates name of specific dependent startup task. |
-| result | Any | Yes | Indicates result of specific dependent startup task. |
+| dependency | string | Yes | 依赖的启动任务名称。 |
+| result | Any | Yes | 依赖启动任务执行的结果。 |
 

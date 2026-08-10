@@ -1,6 +1,6 @@
 # GestureType
 
-Enumerates gesture recognizer types.
+定义手势类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates gesture recognizer types.
 TAP_GESTURE = 0
 ```
 
-Tap gesture.
+点击手势。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Tap gesture.
 LONG_PRESS_GESTURE = 1
 ```
 
-Long press gesture.
+长按手势。
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ Long press gesture.
 PAN_GESTURE = 2
 ```
 
-Pan gesture.
+滑动手势。
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ Pan gesture.
 PINCH_GESTURE = 3
 ```
 
-Pinch gesture.
+捏合手势。
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ Pinch gesture.
 SWIPE_GESTURE = 4
 ```
 
-Swipe gesture.
+快滑手势。
 
 **Since:** 11
 
@@ -106,7 +106,7 @@ Swipe gesture.
 ROTATION_GESTURE = 5
 ```
 
-Rotation gesture.
+旋转手势。
 
 **Since:** 11
 
@@ -124,7 +124,7 @@ Rotation gesture.
 DRAG = 6
 ```
 
-Drag.
+拖拽。
 
 **Since:** 11
 
@@ -142,7 +142,7 @@ Drag.
 CLICK = 7
 ```
 
-Click.
+点击。
 
 **Since:** 11
 
@@ -160,7 +160,7 @@ Click.
 BOX_SELECT_GESTURE = 8
 ```
 
-Swipe gesture used to create a selection area by dragging with the mouse within a scroll container,enabling the batch selection of multiple elements.
+滚动类容器鼠标框选手势，是一种特殊的滑动手势，用于在滚动容器中通过鼠标拖拽创建选择区域，批量选择多个元素。
 
 **Since:** 23
 
@@ -180,7 +180,7 @@ Swipe gesture used to create a selection area by dragging with the mouse within 
 WEB_SCROLL_GESTURE = 9
 ```
 
-Swipe gesture used to control the scrolling behavior of a **Web** component.
+Web组件滚动手势，是一种特殊的滑动手势，用于控制Web组件内的滚动行为。
 
 **Since:** 23
 
@@ -200,7 +200,7 @@ Swipe gesture used to control the scrolling behavior of a **Web** component.
 TEXT_FIELD_SELECT_GESTURE = 10
 ```
 
-Swipe gesture used to select text content by dragging within an input box component.
+文本选择手势，是一种特殊的滑动手势，用于在输入框组件中通过拖拽选择文本内容。
 
 **Since:** 23
 
@@ -220,8 +220,8 @@ Swipe gesture used to select text content by dragging within an input box compon
 CONTEXT_MENU_HOVER_GESTURE = 11
 ```
 
-Context menu hover gesture. It is a special type of long-press gesture and triggers the **hoverScale** animation effect of the menu during the long-press process (this behavior requires enabling the **hoverScaleInterruption**  
-attribute of [ContextMenuAnimationOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for support).
+上下文菜单悬停手势是一种特殊的长按手势，用于在长按过程中触发菜单的hoverScale动画效果（需启用  
+[ContextMenuAnimationOptions](arkts-arkui-common-contextmenuanimationoptions-i.md)的hoverScaleInterruption属性以支持该行为）。
 
 **Since:** 23
 

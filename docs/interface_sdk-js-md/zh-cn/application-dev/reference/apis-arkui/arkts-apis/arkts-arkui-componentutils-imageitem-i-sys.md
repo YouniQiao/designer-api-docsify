@@ -1,10 +1,10 @@
 # ImageItem（系统接口）
 
-带有布局信息的图像对象。
+Image object with layout information.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 <!--Device-componentUtils-interface ImageItem--><!--Device-componentUtils-interface ImageItem-End-->
 
@@ -12,19 +12,25 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { componentUtils } from 'kits/@kit.ArkUI';
+```
+
 ## image
 
 ```TypeScript
 image: image.PixelMap
 ```
 
-图像解码信息。
+Image Decoding Information.
 
 **类型：** image.PixelMap
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,13 +46,13 @@ image: image.PixelMap
 rect: common2D.Rect
 ```
 
-显示图像的框的位置和大小信息。
+Information about the position and size of the box which displays the image.
 
 **类型：** common2D.Rect
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,13 +68,13 @@ rect: common2D.Rect
 rotation?: Rotation2D
 ```
 
-显示图像的框的旋转信息。
+Information about the rotation of the box which displays the image.
 
-**类型：** Rotation2D
+**类型：** [Rotation2D](arkts-arkui-componentutils-rotation2d-i-sys.md)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,13 +90,13 @@ rotation?: Rotation2D
 zIndex: int
 ```
 
-图像渲染层次结构信息。
+Information about image rendering hierarchy.
 
 **类型：** int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

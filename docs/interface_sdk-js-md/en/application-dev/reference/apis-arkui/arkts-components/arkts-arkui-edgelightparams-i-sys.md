@@ -1,6 +1,6 @@
 # EdgeLightParams (System API)
 
-Defines the parameters of the edge light effect.
+定义边缘流光效果参数。
 
 **Since:** 26.0.0
 
@@ -18,9 +18,11 @@ Defines the parameters of the edge light effect.
 color?: ResourceColor
 ```
 
-The color of the light effect.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If not specified, the default color is white (#FFFFFF).
+边缘流光颜色。
 
-**Type:** ResourceColor
+默认值：#FFFFFF，显示为白色。
+
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** #FFFFFF
 
@@ -42,7 +44,21 @@ The color of the light effect.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If not specifie
 intensity?: double
 ```
 
-The luminous intensity of the Edge Streamer effect.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Valid range: [0.0, 1.0].Default value is 1.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Value 0.0 means the light effect is completely invisible.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Value 1.0 means the light effect is at maximum brightness.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Values exceeding 1.0 will be clamped to 1.0.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_Negative values are treated as 0.0.
+边缘流光效果的发光强度。
+
+取值范围：[0, 1]
+
+默认值：1
+
+**说明：**
+
+值为0时，流光效果完全不可见。
+
+值为1时，流光效果达到最大亮度。
+
+设置大于1的值时，按值为1处理。
+
+设置小于0的值时，按值为0处理。
 
 **Type:** double
 
@@ -64,9 +80,17 @@ The luminous intensity of the Edge Streamer effect.\_\_\_HTML\_TAG\_DESC\_USD\_0
 length: Length
 ```
 
-Projection length of the edge streamer along the flow direction.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Negative values are treated as 0.
+沿流动方向的边缘流光的投影长度（不支持百分比）。
 
-**Type:** Length
+取值范围：[0, +∞)
+
+单位：vp
+
+**说明：**
+
+设置小于0的值时，按值为0处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 26.0.0
 
@@ -86,9 +110,9 @@ Projection length of the edge streamer along the flow direction.\_\_\_HTML\_TAG\
 position: EdgeLightPosition
 ```
 
-The location of the edge light effect.
+边缘流光位置。
 
-**Type:** EdgeLightPosition
+**Type:** [EdgeLightPosition](../arkts-apis/arkts-arkui-edgelightposition-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -108,9 +132,19 @@ The location of the edge light effect.
 thickness?: Length
 ```
 
-The thickness (width) of the light effect line.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Negative values are treated as 0.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_If not specified, the default value is 0vp.
+边缘流光线条粗细（不支持百分比）。
 
-**Type:** Length
+取值范围：[0, +∞)
+
+单位：vp
+
+默认值：0
+
+**说明：**
+
+设置小于0的值时，按值为0处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0vp
 

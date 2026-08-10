@@ -18,7 +18,7 @@ captureMode: WebCaptureMode
 
 Web屏幕捕获模式。
 
-**类型：** WebCaptureMode
+**类型：** [WebCaptureMode](../arkts-apis/arkts-arkweb-web-webcapturemode-e.md)
 
 **起始版本：** 10
 

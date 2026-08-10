@@ -1,5 +1,11 @@
 # getStatusMonitor（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## getStatusMonitor
 
 ```TypeScript
@@ -28,24 +34,24 @@ function getStatusMonitor(localUserId: int): StatusMonitor
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| localUserId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 本地用户ID。主设备上的用户标识，为非负整数，用于获取该用户对应的伴随设备状态监听器。传入不存在的用户ID时抛出异常，错误码为32600002。 |
+| localUserId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 本地用户ID。主设备上的用户标识，为非负整数，用于获取该用户对应的伴随设备状态监听器。传入不存在的用户ID时抛出异常，错误码为32600002。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 状态监听器对象。可用于查询模板状态（ [getTemplateStatus]{ |
+| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | 状态监听器对象。可用于查询模板状态（ [getTemplateStatus]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
-| [32600002](../errorcode-useriam.md#32600002-模板未找到) | The local user is not found. |
+| 32600001 | The system service is not working properly. Please try again later. |
+| 32600002 | The local user is not found. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

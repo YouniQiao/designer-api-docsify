@@ -1,12 +1,18 @@
 # moveMissionToFront (System API)
 
+## Modules to Import
+
+```TypeScript
+import { missionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## moveMissionToFront
 
 ```TypeScript
 function moveMissionToFront(missionId: int, callback: AsyncCallback<void>): void
 ```
 
-Switches a given mission to the foreground. This API uses an asynchronous callback to return the result.
+把指定任务ID的任务切到前台。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,19 +30,19 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mission ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 执行结果回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -65,7 +71,7 @@ try {
 function moveMissionToFront(missionId: int, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses an asynchronous callback to return the result.
+把指定任务ID的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用callback异步回调。
 
 **Since:** 9
 
@@ -83,20 +89,20 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mission ID. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务ID。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | Yes | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 执行结果回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -125,7 +131,7 @@ try {
 function moveMissionToFront(missionId: int, options?: StartOptions): Promise<void>
 ```
 
-Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses a promise to return the result.
+把指定任务ID的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用Promise异步回调。
 
 **Since:** 9
 
@@ -143,25 +149,25 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mission ID. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. By default, no value is passed in, indicating that the default startup parameters are used. |
+| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务ID。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。默认为空，表示按照默认启动参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';

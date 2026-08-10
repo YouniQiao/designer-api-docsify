@@ -1,12 +1,18 @@
 # getAllNewPreinstalledApplicationInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAllNewPreinstalledApplicationInfo
 
 ```TypeScript
 function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>
 ```
 
-Obtains PreinstalledApplicationInfo of all newly added preinstalled applications during device OTA upgrade.
+获取设备OTA升级期间当前用户下新增的所有预置应用信息。使用Promise异步回调。
 
 **Since:** 24
 
@@ -26,12 +32,31 @@ Obtains PreinstalledApplicationInfo of all newly added preinstalled applications
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Returns a list of PreinstalledApplicationInfo objects. |
+| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Promise对象，设备OTA升级期间当前用户下新增的所有预置应用信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+
+## Examples
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  bundleManager.getAllNewPreinstalledApplicationInfo().then((data) => {
+    hilog.info(0x0000, 'testTag', 'getAllNewPreinstalledApplicationInfo success, Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getAllNewPreinstalledApplicationInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAllNewPreinstalledApplicationInfo failed: %{public}s', message);
+}
+```
 

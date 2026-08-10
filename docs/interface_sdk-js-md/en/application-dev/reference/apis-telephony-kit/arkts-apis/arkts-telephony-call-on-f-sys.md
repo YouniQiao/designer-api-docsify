@@ -1,5 +1,11 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## on('callDetailsChange')
 
 ```TypeScript
@@ -25,21 +31,21 @@ Subscribe to the callDetailsChange event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callDetailsChange' | Yes | Event type. Indicates the callDetailsChange event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CallAttributeOptions&gt; | Yes | Indicates the callback for getting the result of call details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallAttributeOptions&gt; | Yes | Indicates the callback for getting the result of call details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 call.on('callDetailsChange', (data: call.CallAttributeOptions) => {
@@ -73,21 +79,21 @@ Subscribe to the callEventChange event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callEventChange' | Yes | Event type. Indicates the callEventChange event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CallEventOptions&gt; | Yes | Indicates the callback for getting the call event id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallEventOptions&gt; | Yes | Indicates the callback for getting the call event id. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 call.on('callEventChange', (data: call.CallEventOptions) => {
@@ -121,21 +127,21 @@ Subscribe to the callDisconnectedCause event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callDisconnectedCause' | Yes | Event type. Indicates the callDisconnectedCause event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DisconnectedDetails&gt; | Yes | Indicates the callback for getting the call disconnection reason. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DisconnectedDetails&gt; | Yes | Indicates the callback for getting the call disconnection reason. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 call.on('callDisconnectedCause', (data: call.DisconnectedDetails) => {
@@ -169,21 +175,21 @@ Subscribe to the mmiCodeResult event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mmiCodeResult' | Yes | Event type. Indicates the mmiCodeResult event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MmiCodeResults&gt; | Yes | Indicates the callback for getting the result of MMI code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MmiCodeResults&gt; | Yes | Indicates the callback for getting the result of MMI code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 call.on('mmiCodeResult', (data: call.MmiCodeResults) => {
@@ -217,21 +223,21 @@ Subscribe to the audioDeviceChange event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioDeviceChange' | Yes | Event type. Indicates the audioDeviceChange event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceCallbackInfo&gt; | Yes | Indicates the callback for getting the result of Current AudioDevice. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceCallbackInfo&gt; | Yes | Indicates the callback for getting the result of Current AudioDevice. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 call.on('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
@@ -265,21 +271,21 @@ Subscribe to the postDialDelay event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'postDialDelay' | Yes | Event type. Indicates the postDialDelay event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Indicates the callback for getting the result of post-dial string. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of post-dial string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 call.on('postDialDelay', (data: string) => {
@@ -313,21 +319,21 @@ Subscribe to the imsCallModeChange event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imsCallModeChange' | Yes | Event type. Indicates the imsCallModeChange event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ImsCallModeInfo&gt; | Yes | Indicates the callback for getting the result of ImsCallModeInfo details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ImsCallModeInfo&gt; | Yes | Indicates the callback for getting the result of ImsCallModeInfo details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -363,21 +369,21 @@ Subscribe to the callSessionEvent.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callSessionEvent' | Yes | Event type. Indicates the callSessionEvent event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CallSessionEvent&gt; | Yes | Indicates the callback for getting the result of CallSessionEvent. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallSessionEvent&gt; | Yes | Indicates the callback for getting the result of CallSessionEvent. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -413,21 +419,21 @@ Subscribe to the peerDimensionsChange event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'peerDimensionsChange' | Yes | Event type. Indicates the peerDimensionsChange event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PeerDimensionsDetail&gt; | Yes | Indicates the callback for getting the result of PeerDimensionsDetail details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PeerDimensionsDetail&gt; | Yes | Indicates the callback for getting the result of PeerDimensionsDetail details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -463,21 +469,21 @@ Subscribe to the cameraCapabilitiesChange event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cameraCapabilitiesChange' | Yes | Event type. Indicates the cameraCapabilitiesChange event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraCapabilities&gt; | Yes | Indicates the callback for getting the result of CameraCapabilities details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CameraCapabilities&gt; | Yes | Indicates the callback for getting the result of CameraCapabilities details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 201 | Permission denied. |
+| 8300999 | Unknown error code. |
+| 202 | Non-system applications use system APIs. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 call.on('cameraCapabilitiesChange', (data: call.CameraCapabilities) => {

@@ -16,10 +16,10 @@
 static readonly ORIGIN: ColorContent
 ```
 
-重置[fillColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，效果上与不设置  
-[fillColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_一致。
+重置[fillColor](ImageAttribute#fillColor(value: ResourceColor))接口，效果上与不设置  
+[fillColor](ImageAttribute#fillColor(value: ResourceColor))一致。
 
-**类型：** ColorContent
+**类型：** [ColorContent](../arkts-apis/arkts-arkui-image-colorcontent-c.md)
 
 **起始版本：** 15
 

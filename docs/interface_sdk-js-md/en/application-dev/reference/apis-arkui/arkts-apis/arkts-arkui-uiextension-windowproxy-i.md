@@ -1,6 +1,6 @@
 # WindowProxy
 
-The proxy of the UIExtension window.
+UIExtension窗口代理。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ The proxy of the UIExtension window.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiExtension } from 'kits/@kit.ArkUI';
+```
+
 ## createSubWindowWithOptions
 
 ```TypeScript
 createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>
 ```
 
-Creates a subwindow for this window proxy. This API uses a promise to return the result.
+创建该WindowProxy实例下的子窗口，使用Promise异步回调。
 
 **Since:** 12
 
@@ -34,8 +40,8 @@ Creates a subwindow for this window proxy. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the subwindow. |
-| subWindowOptions | window.SubWindowOptions | Yes | Parameters used for creating the subwindow. |
+| name | string | Yes | 子窗口的名字。 |
+| subWindowOptions | window.SubWindowOptions | Yes | 子窗口参数。 |
 
 **Return value:**
 
@@ -47,15 +53,15 @@ Creates a subwindow for this window proxy. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 | 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -106,7 +112,7 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
         followCreatorLifecycle: boolean): Promise<window.Window>
 ```
 
-Create subwindow.
+创建该WindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或UIExtensionComponent）的生命周期，使用Promise异步回调。
 
 **Since:** 23
 
@@ -122,9 +128,9 @@ Create subwindow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the subwindow. |
-| subWindowConfig | window.SubWindowOptions | Yes | Configuration parameters for creating the subwindow. |
-| followCreatorLifecycle | boolean | Yes | Whether the lifecycle of the subwindow follows creator of subwindow. If true, when the creator goes to background, the subwindow will also go to background, when the creator returns to foreground, the subwindow will also return to foreground. If false, the subwindow will not change when the creator goes to background or returns to foreground. |
+| name | string | Yes | 子窗口的名字。 |
+| subWindowConfig | window.SubWindowOptions | Yes | 子窗口参数。 |
+| followCreatorLifecycle | boolean | Yes | 子窗生命周期是否跟组件（EmbeddedComponent或UIExtensionComponent）保持同步。true表示该组件隐藏时， 子窗隐藏，该组件显示时子窗显示，false表示子窗的显隐不跟随该组件变化。 |
 
 **Return value:**
 
@@ -136,14 +142,14 @@ Create subwindow.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 | 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -193,7 +199,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area,and soft keyboard area.
+获取宿主应用窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与宿主窗口内容重叠时，需要宿主窗口内容避让的区域。
 
 **Since:** 12
 
@@ -211,7 +217,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | window.AvoidAreaType | Yes | Type of the avoidance area. |
+| type | window.AvoidAreaType | Yes | 表示避让区类型。 |
 
 **Return value:**
 
@@ -223,12 +229,12 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 
@@ -254,7 +260,7 @@ ArkTS-Sta:
 occupyEvents(eventFlags: int): Promise<void>
 ```
 
-Sets the events that the component (**EmbeddedComponent** or **UIExtensionComponent**) will occupy, preventing the host from responding to these events within the component's area.
+设置组件（EmbeddedComponent或UIExtensionComponent）占用事件，宿主将不响应组件区域内被占用的事件。
 
 **Since:** 18
 
@@ -272,26 +278,26 @@ Sets the events that the component (**EmbeddedComponent** or **UIExtensionCompon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of events to occupy. For details about the available values, see [EventFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| eventFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 占用的事件类型，具体取值可见[EventFlag](arkts-arkui-uiextension-eventflag-e.md)枚举值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { uiExtension } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -323,7 +329,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaInfo>): void
 ```
 
-Unsubscribes from events of system avoidance area changes.
+注销系统避让区变化的监听。
 
 **Since:** 12
 
@@ -341,20 +347,20 @@ Unsubscribes from events of system avoidance area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidAreaInfo&gt; | No | Callback used for unsubscription. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'avoidAreaChange' | Yes | 注销的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidAreaInfo&gt; | No | 回调函数：如果传入该参数，则关闭该监听。如果未传入参数，则关闭所有系统避让区变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
 
 export default class EntryAbility extends EmbeddedUIExtensionAbility {
@@ -372,7 +378,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 ```
 
-Unsubscribes from size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
+注销组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
 
 **Since:** 12
 
@@ -390,20 +396,20 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;window.Size&gt; | No | Callback used to return the size of the current component ( **EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowSizeChange' | Yes | 注销的事件类型，固定值：'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸 变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该 监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
 
 export default class EntryAbility extends EmbeddedUIExtensionAbility {
@@ -421,8 +427,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 off(type: 'rectChange', callback?: Callback<RectChangeOptions>): void
 ```
 
-Unsubscribes from position and size change events of the component (**EmbeddedComponent** or  
-**UIExtensionComponent**).
+注销组件（EmbeddedComponent或UIExtensionComponent）位置及尺寸变化的监听。
 
 **Since:** 14
 
@@ -440,21 +445,21 @@ Unsubscribes from position and size change events of the component (**EmbeddedCo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rectChange' | Yes | Event type. The value is fixed at **'rectChange'**, indicating the rectangle change event for the component (**EmbeddedComponent** or **UIExtensionComponent**). |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | No | Callback used to return the current rectangle change values and the reason for the change of the component (**EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'rectChange' | Yes | 监听事件，固定为'rectChange'，即组件（EmbeddedComponent或UIExtensionComponent）矩形变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | No | 回调函数。返回当前组件（EmbeddedComponent或UIExtensionComponent）矩形变化值及变化原因。如 果传入参数，则关闭该监听。如果未传入参数，则关闭所有组件（EmbeddedComponent或UIExtensionComponent）矩形变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
 
 export default class EntryAbility extends EmbeddedUIExtensionAbility {
@@ -488,13 +493,13 @@ Unsubscribes from the event indicating changes to the area where the window cann
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidAreaInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidAreaInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## offRectChange
 
@@ -502,7 +507,7 @@ Unsubscribes from the event indicating changes to the area where the window cann
 offRectChange(callback?: Callback<RectChangeOptions>): void
 ```
 
-Unsubscribes from changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent).This API can be used only on 2-in-1 devices.
+Unsubscribes from changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent). This API can be used only on 2-in-1 devices.
 
 **Since:** 23
 
@@ -518,14 +523,14 @@ Unsubscribes from changes in the position and size of the component (EmbeddedCom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## offWindowSizeChange
 
@@ -549,13 +554,13 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;window.Size&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## on('avoidAreaChange')
 
@@ -563,7 +568,7 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 on(type: 'avoidAreaChange', callback: Callback<AvoidAreaInfo>): void
 ```
 
-Subscribes to events of system avoidance area changes.
+注册系统避让区变化的监听。
 
 **Since:** 12
 
@@ -581,20 +586,20 @@ Subscribes to events of system avoidance area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidAreaInfo&gt; | Yes | Callback function that receives the information about the current avoidance area. |
+| type | 'avoidAreaChange' | Yes | 监听的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidAreaInfo&gt; | Yes | 回调函数：入参用于接收当前避让区的信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { uiExtension } from '@kit.ArkUI';
 
@@ -615,7 +620,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 ```
 
-Subscribes to size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
+注册组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
 
 **Since:** 12
 
@@ -633,20 +638,20 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
+| type | 'windowSizeChange' | Yes | 监听的事件类型，固定为'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变 化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 
@@ -655,7 +660,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
     const extensionWindow = session.getUIExtensionWindowProxy();
     // Subscribe to size change events of the component (EmbeddedComponent or UIExtensionComponent).
     extensionWindow.on('windowSizeChange', (size: window.Size) => {
-      console.info(`The avoid area of the host window is: ${JSON.stringify(size)}.`);
+      console.info(`The size of the component is: ${JSON.stringify(size)}.`);
     });
   }
 }
@@ -667,8 +672,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 on(type: 'rectChange', reasons: number, callback: Callback<RectChangeOptions>): void
 ```
 
-Subscribes to position and size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**  
-).
+注册组件（EmbeddedComponent或UIExtensionComponent）位置及尺寸变化的监听。
 
 **Since:** 14
 
@@ -686,22 +690,22 @@ Subscribes to position and size change events of the component (**EmbeddedCompon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rectChange' | Yes | Event type. The value is fixed at **'rectChange'**, indicating the rectangle change event for the component (**EmbeddedComponent** or **UIExtensionComponent**). |
-| reasons | number | Yes | Reason why the position and size of the component (**EmbeddedComponent** or **UIExtensionComponent**) change. For details about the values, see [RectChangeReason]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | Yes | Callback used to return the current rectangle change values and the reason for the change of the component (**EmbeddedComponent** or **UIExtensionComponent**). |
+| type | 'rectChange' | Yes | 监听事件，固定为'rectChange'，即组件（EmbeddedComponent或UIExtensionComponent）矩形变化事件。 |
+| reasons | number | Yes | 触发组件（EmbeddedComponent或UIExtensionComponent）位置及尺寸变化的原因，具体取值可参考 [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)枚举值。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | Yes | 回调函数。返回当前组件（EmbeddedComponent或UIExtensionComponent）矩形变化值及变化原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
-// ExtensionProvider.ts
+// ExtensionProvider.ets
 import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { uiExtension } from '@kit.ArkUI';
 
@@ -738,13 +742,13 @@ Subscribes to the event indicating changes to the area where the window cannot b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidAreaInfo&gt; | Yes | Callback used to return the avoid area information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidAreaInfo&gt; | Yes | Callback used to return the avoid area information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## onRectChange
 
@@ -752,7 +756,7 @@ Subscribes to the event indicating changes to the area where the window cannot b
 onRectChange(reasons: int, callback: Callback<RectChangeOptions>): void
 ```
 
-Subscribes to changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent).This API can be used only on 2-in-1 devices.
+Subscribes to changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent). This API can be used only on 2-in-1 devices.
 
 **Since:** 23
 
@@ -768,15 +772,15 @@ Subscribes to changes in the position and size of the component (EmbeddedCompone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reasons | int | Yes | The reasons of component rect change. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | Yes | Callback used to return the RectChangeOptions. |
+| reasons | int | Yes | The reasons of component rect change. &lt;br&gt;取值范围为全体整数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | Yes | Callback used to return the RectChangeOptions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. The listening type is not supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. The listener has been registered. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. The UIExtension window proxy is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | Abnormal state. Possible causes: &lt;br&gt; 1. The listening type is not supported. &lt;br&gt; 2. The listener has been registered. &lt;br&gt; 3. The UIExtension window proxy is abnormal. |
 
 ## onWindowSizeChange
 
@@ -800,13 +804,13 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;window.Size&gt; | Yes | Callback used to return the window size. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback used to return the window size. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## properties
 
@@ -814,13 +818,13 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 properties: WindowProxyProperties
 ```
 
-Information about the component (**EmbeddedComponent** or **UIExtensionComponent**).
+组件（EmbeddedComponent或UIExtensionComponent）的信息。
 
-Note: Due to architecture restrictions, avoid obtaining the value in  
-[onSessionCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Instead, when possible, obtain the value after receiving the  
-[on('windowSizeChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_callback.
+**约束：** 由于架构约束，不建议在  
+[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到  
+[on('windowSizeChange')](@ohos.arkui.uiExtension:uiExtension.WindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))回调之后获取。
 
-**Type:** WindowProxyProperties
+**Type:** [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md)
 
 **Since:** 14
 

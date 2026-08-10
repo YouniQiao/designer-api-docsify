@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getSupportedColorSpaces
 
 ```TypeScript
@@ -33,4 +39,10 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;colorSpaceManager.ColorSpace&gt; | 支持的色彩空间列表。若接口调用失败，返回undefined。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 7400103 | Session not config, only throw in session usage.<br>**适用版本：** 12 - 17 |
 

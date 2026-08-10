@@ -1,5 +1,11 @@
 # getNativeHeapFreeSize
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getNativeHeapFreeSize
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getNativeHeapFreeSize() : bigint
 | --- | --- |
 | bigint | �����ڴ������ͳ�ƵĽ��̳��еĿ��е���ͨ����ռ���ڴ��С����λΪByte�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

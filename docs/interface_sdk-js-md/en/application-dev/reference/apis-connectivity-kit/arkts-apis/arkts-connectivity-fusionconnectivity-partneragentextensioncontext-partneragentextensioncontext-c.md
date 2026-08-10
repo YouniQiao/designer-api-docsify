@@ -2,7 +2,7 @@
 
 Class for the context of the PartnerAgentExtensionAbility.
 
-**Inheritance/Implementation:** PartnerAgentExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-application/extensioncontext-extensioncontext-c.md)
+**Inheritance/Implementation:** PartnerAgentExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
 **Since:** 23
 
@@ -13,4 +13,10 @@ Class for the context of the PartnerAgentExtensionAbility.
 <!--Device-unnamed-export default class PartnerAgentExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class PartnerAgentExtensionContext extends ExtensionContext-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
+
+## Modules to Import
+
+```TypeScript
+import { PartnerAgentExtensionContext } from 'kits/@kit.ConnectivityKit';
+```
 

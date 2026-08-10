@@ -1,12 +1,18 @@
 # isEmbeddedOpenAllowed (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## isEmbeddedOpenAllowed
 
 ```TypeScript
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-Checks whether the [EmbeddableUIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can be started in embedded mode. This API uses a promise to return the result.
+判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。使用Promise异步回调。
 
 **Since:** 12
 
@@ -24,23 +30,23 @@ Checks whether the [EmbeddableUIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the caller. |
-| appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
+| context | [Context](arkts-ability-context-c-sys.md) | Yes | 嵌入式拉起EmbeddableUIAbility的调用方Context。 |
+| appId | string | Yes | 应用的唯一标识，由云端统一分配。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if embedded startup is allowed, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示允许嵌入式启动；返回false表示不允许嵌入式启动。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityManager, UIAbility } from '@kit.AbilityKit';

@@ -14,6 +14,12 @@ HEIF序列图像元数据类，用于存储图像的元数据。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## clone
 
 ```TypeScript
@@ -36,7 +42,7 @@ clone(): Promise<HeifsMetadata>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise对象，成功返回Heifs元数据实例。 |
+| Promise&lt;[HeifsMetadata](arkts-image-image-heifsmetadata-c.md)&gt; | Promise对象，成功返回Heifs元数据实例。 |
 
 ## createInstance
 
@@ -44,7 +50,7 @@ clone(): Promise<HeifsMetadata>
 static createInstance(): HeifsMetadata
 ```
 
-创建一个空的[HeifsMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_实例。
+创建一个空的[HeifsMetadata](arkts-image-image-heifsmetadata-c.md)实例。
 
 **起始版本：** 23
 
@@ -60,7 +66,7 @@ static createInstance(): HeifsMetadata
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回HeifsMetadata的空实例。 |
+| [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) | 返回HeifsMetadata的空实例。 |
 
 ## getAllProperties
 
@@ -70,7 +76,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 获取图片中所有元数据的属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[HeifsPropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 23
 
@@ -120,7 +126,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 获取图像元数据的属性值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[HeifsPropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 23
 
@@ -148,7 +154,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type |
 
 ## setBlob
 
@@ -184,7 +190,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| 7600206 | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -194,7 +200,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 批量设置图片元数据中的指定属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[HeifsPropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 23
 
@@ -210,7 +216,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | 是 | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
 
 **返回值：**
 
@@ -222,7 +228,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## heifsCanvasHeight
 
@@ -236,7 +242,7 @@ HEIF序列图片的画布高度。
 
 该值为正整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -260,7 +266,7 @@ HEIF序列图片的画布宽度。
 
 该值为正整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -280,7 +286,7 @@ readonly heifsDelayTime?: int
 
 HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -304,7 +310,7 @@ HEIF序列图片每帧未钳制的延迟时长。
 
 该值为正整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

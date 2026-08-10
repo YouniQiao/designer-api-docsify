@@ -1,6 +1,6 @@
 # ChineseCalendar
 
-Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,such as leap month.
+提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。继承自[Calendar](arkts-localization-i18n-calendar-c.md)，支持[Calendar](arkts-localization-i18n-calendar-c.md)的方法。
 
 **Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md)
 
@@ -12,13 +12,19 @@ Provide a ChineseCalendar interface which could handle unique characteristics of
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## checkLeapMonth
 
 ```TypeScript
 public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean
 ```
 
-Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
+判断指定年份某月是否存在闰月。
 
 **Since:** 26.0.0
 
@@ -36,21 +42,21 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gregorianYear | int | Yes | Gregorian year to check, supported range is from 1900 to 2100 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value range is all integers. |
-| cyclicalYear | int | Yes | Cyclical year to check, supported range is from 1 to 60 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value range is all integers. |
-| month | int | Yes | Month to check. Note: The month starts from 0. For example, 0 indicates January \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value range is all integers. |
+| gregorianYear | int | Yes | 公历的年。 &lt;br&gt;取值范围：[1900, 2100]。 |
+| cyclicalYear | int | Yes | 农历的干支年。 &lt;br&gt;取值范围：[1, 60]。 |
+| month | int | Yes | 农历的月。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check whether the input month is a leap month. |
+| boolean | 是否存在闰月。true表示该月存在闰月，false表示该月不存在闰月。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setChineseCalendarTime
 
@@ -58,7 +64,7 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 ```
 
-Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCalendar object.
+设置农历对象的时间日期。
 
 **Since:** 26.0.0
 
@@ -76,5 +82,5 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chineseCalendarTime | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the time element used to set for ChineseCalendar. |
+| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes | 农历时间对象。 |
 

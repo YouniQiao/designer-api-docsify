@@ -20,5 +20,5 @@ SSL错误事件的回调函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sslErrorEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | callback information of onSslErrorEvent.  |
+| sslErrorEvent | [SslErrorEvent](../arkts-apis/arkts-arkweb-web-sslerrorevent-i.md) | 是 | callback information of onSslErrorEvent. |
 

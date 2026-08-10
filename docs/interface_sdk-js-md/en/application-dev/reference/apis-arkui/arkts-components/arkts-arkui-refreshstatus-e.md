@@ -1,6 +1,6 @@
 # RefreshStatus
 
-Enumerates the states of a refresh operation.
+RefreshStatus刷新状态枚举。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the states of a refresh operation.
 Inactive
 ```
 
-The component is not pulled down. This is the default value.
+默认未下拉状态。
 
 **Since:** 8
 
@@ -34,9 +34,9 @@ The component is not pulled down. This is the default value.
 Drag
 ```
 
-The component is being pulled down, but the pull-down distance is shorter than the refresh threshold.
+下拉中，下拉距离小于刷新距离。
 
-If you release the component, it enters the **Inactive** state. If you continue to pull down the component and the pull-down distance exceeds the refresh threshold, the component enters the **OverDrag** state.
+若此时松手，组件进入Inactive状态；若此时继续下拉使下拉距离超过刷新距离，组件进入OverDrag状态。
 
 **Since:** 8
 
@@ -54,9 +54,9 @@ If you release the component, it enters the **Inactive** state. If you continue 
 OverDrag
 ```
 
-The component is being pulled down, and the pull-down distance exceeds the refresh threshold.
+下拉中，下拉距离超过刷新距离。
 
-If you release the component, the component enters the **Refresh** state. If you swipe upward and the pull-down distance is less than the refresh threshold, the component enters the **Drag** state.
+若此时松手，组件进入Refresh状态；若此时上滑使下拉距离小于刷新距离，组件进入Drag状态。
 
 **Since:** 8
 
@@ -74,7 +74,7 @@ If you release the component, the component enters the **Refresh** state. If you
 Refresh
 ```
 
-The pull-down ends, and the component rebounds to the minimum length required to trigger the refresh and enters the refreshing state.
+After the pull-down, it rebounds to the refresh distance and enters the refresh state.
 
 **Since:** 8
 
@@ -92,7 +92,7 @@ The pull-down ends, and the component rebounds to the minimum length required to
 Done
 ```
 
-The refresh is complete, and the component returns to the initial state (at the top).
+刷新结束，返回初始状态（顶部）。
 
 **Since:** 8
 

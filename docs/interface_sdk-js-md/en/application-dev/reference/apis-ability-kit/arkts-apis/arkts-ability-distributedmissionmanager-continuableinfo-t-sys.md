@@ -4,7 +4,7 @@
 export type ContinuableInfo = _ContinuableInfo
 ```
 
-Continuable information corresponding to ability.
+应用任务对应的可迁移信息。
 
 **Since:** 10
 

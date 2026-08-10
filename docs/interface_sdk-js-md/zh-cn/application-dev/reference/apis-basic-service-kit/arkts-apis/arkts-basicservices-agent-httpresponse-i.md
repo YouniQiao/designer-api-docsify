@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## headers
 
 ```TypeScript
@@ -58,7 +64,7 @@ readonly statusCode: int
 
 Http响应状态码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

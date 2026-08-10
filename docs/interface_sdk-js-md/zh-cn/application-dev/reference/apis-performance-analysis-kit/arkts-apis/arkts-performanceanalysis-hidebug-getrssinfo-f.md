@@ -1,5 +1,11 @@
 # getRssInfo
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getRssInfo
 
 ```TypeScript
@@ -7,9 +13,10 @@ function getRssInfo(): RssInfo
 ```
 
 ��ȡӦ�ó�����̵������ڴ�ʹ����Ϣ����ȡ/proc/{pid}/status�ڵ�����ݡ�
-    **ע��**  
-    
-    ��ȡ/proc/{pid}/status��ʱ�̣ܶ���hidebug.getAppNativeMemInfo�ӿ��л�ȡ��\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ֵ��ȴ���һ�������ýӿڸ���������Ϊ����Ӧ�ö�֡�򿨶��Ƽ�ʹ�øýӿڡ�
+
+> **ע��**
+> 
+> ��ȡ/proc/{pid}/status��ʱ�̣ܶ���hidebug.getAppNativeMemInfo�ӿ��л�ȡ��`rss`ֵ��ȴ���һ�������ýӿڸ���������Ϊ����Ӧ�ö�֡�򿨶��Ƽ�ʹ�øýӿڡ�
 
 **起始版本：** 24
 
@@ -25,9 +32,9 @@ function getRssInfo(): RssInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Ӧ�ý��̵������ڴ���Ϣ�� |
+| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | Ӧ�ý��̵������ڴ���Ϣ�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

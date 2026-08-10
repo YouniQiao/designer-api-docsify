@@ -1,6 +1,6 @@
 # PrintJob
 
-Defines a print job.
+定义打印任务的接口。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Defines a print job.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## colorMode
 
 ```TypeScript
 colorMode: int
 ```
 
-Color mode.
+表示色彩模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -34,9 +40,9 @@ Color mode.
 copyNumber: int
 ```
 
-Copy of the file list.
+表示文件列表副本。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -52,9 +58,9 @@ Copy of the file list.
 duplexMode: int
 ```
 
-Simplex or duplex mode.
+表示单双面打印模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -70,9 +76,9 @@ Simplex or duplex mode.
 fdList: Array<int>
 ```
 
-FD list of files to print.
+表示待打印文件fd列表。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 24
 
@@ -88,7 +94,7 @@ FD list of files to print.
 isLandscape: boolean
 ```
 
-Whether pages are printed in landscape mode. The value **true** indicates that pages are printed in landscape mode, and **false** indicates that pages are printed in portrait mode. The default value is **false**.
+表示是否横向打印。true表示横向打印，false表示纵向打印。默认值为false。
 
 **Type:** boolean
 
@@ -106,7 +112,7 @@ Whether pages are printed in landscape mode. The value **true** indicates that p
 isSequential: boolean
 ```
 
-Whether the printing is sequential. The value **true** means that the printing is sequential, and **false** means the opposite. The default value is **false**.
+表示是否连续打印。true表示连续打印，false表示不连续打印。默认值为false。
 
 **Type:** boolean
 
@@ -124,7 +130,7 @@ Whether the printing is sequential. The value **true** means that the printing i
 jobId: string
 ```
 
-ID of the print job.
+表示打印任务ID。
 
 **Type:** string
 
@@ -142,9 +148,9 @@ ID of the print job.
 jobState: PrintJobState
 ```
 
-State of the print job.
+表示当前打印任务状态。
 
-**Type:** PrintJobState
+**Type:** [PrintJobState](arkts-basicservices-print-printjobstate-e.md)
 
 **Since:** 24
 
@@ -160,9 +166,9 @@ State of the print job.
 jobSubstate: PrintJobSubState
 ```
 
-Substate of the print job.
+表示当前打印任务子状态。
 
-**Type:** PrintJobSubState
+**Type:** [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md)
 
 **Since:** 24
 
@@ -178,9 +184,9 @@ Substate of the print job.
 margin?: PrintMargin
 ```
 
-Current page margin.
+表示当前页边距设置。
 
-**Type:** PrintMargin
+**Type:** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
 **Since:** 24
 
@@ -196,7 +202,7 @@ Current page margin.
 options?: Object
 ```
 
-Printer options. The value is a JSON object string.
+表示JSON对象字符串。
 
 **Type:** Object
 
@@ -214,9 +220,9 @@ Printer options. The value is a JSON object string.
 pageRange: PrinterRange
 ```
 
-Print range.
+表示打印范围大小。
 
-**Type:** PrinterRange
+**Type:** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
 **Since:** 24
 
@@ -232,9 +238,9 @@ Print range.
 pageSize: PrintPageSize
 ```
 
-Selected page size.
+表示选定的页面尺寸。
 
-**Type:** PrintPageSize
+**Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
 
 **Since:** 24
 
@@ -250,9 +256,9 @@ Selected page size.
 preview?: PreviewAttribute
 ```
 
-Preview settings.
+表示预览设置。
 
-**Type:** PreviewAttribute
+**Type:** [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md)
 
 **Since:** 24
 
@@ -268,7 +274,7 @@ Preview settings.
 printerId: string
 ```
 
-ID of the printer used for printing.
+表示负责打印的打印机ID。
 
 **Type:** string
 
@@ -277,26 +283,6 @@ ID of the printer used for printing.
 **ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 <!--Device-PrintJob-printerId: string--><!--Device-PrintJob-printerId: string-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-## vendorOptions
-
-```TypeScript
-vendorOptions?: string
-```
-
-Vendor-specific job options in JSON format.
-
-**Type:** string
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintJob-vendorOptions?: string--><!--Device-PrintJob-vendorOptions?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

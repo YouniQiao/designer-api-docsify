@@ -1,6 +1,6 @@
 # OrientationExecutionResult
 
-Type of execution result of setting preferred orientation
+窗口显示方向的执行结果枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Type of execution result of setting preferred orientation
 ORIENTATION_APPLIED = 0
 ```
 
-Orientation policy is applied.
+设置的方向已生效。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Orientation policy is applied.
 ORIENTATION_IGNORED = 1
 ```
 
-Orientation policy is ignored.
+设置的方向不生效。
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ Orientation policy is ignored.
 ORIENTATION_PENDING = 2
 ```
 
-Orientation policy is pending and will be applied soon.
+设置的方向被挂起，等系统动画结束后，将生效。
 
 **Since:** 26.0.0
 

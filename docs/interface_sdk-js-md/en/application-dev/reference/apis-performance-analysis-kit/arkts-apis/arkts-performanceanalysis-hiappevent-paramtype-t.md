@@ -4,7 +4,7 @@
 type ParamType = int | long | double | string | boolean | Array<string>
 ```
 
-Enumerates the types of custom event parameter values.
+事件自定义参数值的类型。
 
 **Since:** 12
 
@@ -18,10 +18,10 @@ Enumerates the types of custom event parameter values.
 
 | Type | Description |
 | --- | --- |
-| int | Int. |
-| long | Long. |
-| double | Double. |
-| string | String. |
-| boolean | The value is true or false. |
-| Array&lt;string&gt; | The value is an array of strings. |
+| int | 表示值类型为整数值。 |
+| long | 表示值类型为长整数值。 |
+| double | 表示值类型为双浮点数。 |
+| string | 表示值类型为字符串。 |
+| boolean | 表示值类型为布尔值。 |
+| Array&lt;string&gt; | 表示值类型为字符串类型的数组。 |
 

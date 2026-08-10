@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isReused
 
 ```TypeScript
@@ -66,7 +72,7 @@ resultCode: AuthorizationResultCode
 
 授权结果码。
 
-**类型：** AuthorizationResultCode
+**类型：** [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md)
 
 **起始版本：** 24
 
@@ -110,7 +116,7 @@ validityPeriod?: int
 
 授权的有效期，默认值为300，单位为s。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 

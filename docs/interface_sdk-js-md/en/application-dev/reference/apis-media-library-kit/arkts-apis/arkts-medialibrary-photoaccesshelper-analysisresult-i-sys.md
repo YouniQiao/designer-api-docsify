@@ -12,6 +12,12 @@ Defines the asset analysis result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## result
 
 ```TypeScript
@@ -20,7 +26,7 @@ result: int
 
 Result code of asset analysis.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

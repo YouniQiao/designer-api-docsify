@@ -1,7 +1,6 @@
 # DataPanelConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from  
-[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **Inheritance/Implementation:** DataPanelConfiguration extends [CommonConfiguration<DataPanelConfiguration>](CommonConfiguration<DataPanelConfiguration>)
 
@@ -19,13 +18,13 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 maxValue: number
 ```
 
-Maximum value displayed in the data panel.
+DataPanel显示的最大值。
 
-Default value: **100**
+默认值：100。
 
-**NOTE**
+**说明：**
 
-If the value is less than or equal to 0, **maxValue** is set to the sum of all items in the **values** array and displayed proportionally.
+如果小于或等于0，maxValue将被设为values数组中所有项的总和，并按比例显示。
 
 **Type:** number
 
@@ -47,13 +46,13 @@ If the value is less than or equal to 0, **maxValue** is set to the sum of all i
 values: number[]
 ```
 
-Current values of the data panel.
+当前DataPanel的数据值。
 
-The length of the array should be within the range of [0, 9].
+数组长度范围是[0, 9]。
 
-**NOTE**
+**说明：**
 
-If the array length is greater than 9, the first nine items are used.
+如果数组长度大于9，则取前9项。
 
 **Type:** number[]
 

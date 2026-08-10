@@ -1,6 +1,6 @@
 # NetWorkStrategy
 
-Enumerates the network sync options.
+网络策略参数枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the network sync options.
 WIFI = 1
 ```
 
-Sync over Wi-Fi.
+WIFI网络策略。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Sync over Wi-Fi.
 CELLULAR = 2
 ```
 
-Sync over the cellular network.
+蜂窝网络策略。
 
 **Since:** 12
 

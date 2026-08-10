@@ -4,7 +4,10 @@
 export type ImageErrorCallback = (error: ImageError) => void
 ```
 
-ImageErrorCallback
+图片加载异常时触发此回调。
+
+当组件的参数类型为  
+[AnimatedDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
 
 **Since:** 23
 
@@ -20,5 +23,5 @@ ImageErrorCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| error | [ImageError](arkts-arkui-image-imageerror-i.md) | Yes |  |
 

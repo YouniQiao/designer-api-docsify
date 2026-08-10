@@ -1,6 +1,6 @@
 # EditableTitleBarStyleV2
 
-Declaration of the title bar style configuration.
+标题栏样式配置类，使用@ObservedV2装饰器，支持状态观察。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declaration of the title bar style configuration.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(options?: EditableTitleBarStyleV2Options)
 ```
 
-Constructor of EditableTitleBarStyleV2.
+EditableTitleBarStyleV2的构造函数。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ Constructor of EditableTitleBarStyleV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The style options of the title bar |
+| options | [EditableTitleBarStyleV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | No | 标题栏样式配置选项。 |
 
 ## backgroundBlurStyle
 
@@ -42,9 +48,11 @@ Constructor of EditableTitleBarStyleV2.
 public backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style.
+标题栏背景模糊样式。
 
-**Type:** BlurStyle
+默认值：BlurStyle.NONE，表示无模糊效果。
+
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Since:** 26.0.0
 
@@ -62,9 +70,11 @@ Background blur style.
 public backgroundColor?: ResourceColor
 ```
 
-Background color.
+标题栏背景色。
 
-**Type:** ResourceColor
+默认值：'#00000000'，表示背景透明。
+
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.0.0
 
@@ -82,9 +92,19 @@ Background color.
 public contentMargin?: LocalizedMargin
 ```
 
-Content margin, supports RTL layout.
+标题栏外边距，不支持设置负数。
 
-**Type:** LocalizedMargin
+默认值：
+
+{
+
+start: LengthMetrics.resource(\$r('sys.float.margin_left')),
+
+end: LengthMetrics.resource(\$r('sys.float.margin_right'))
+
+}。
+
+**Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
 **Since:** 26.0.0
 
@@ -102,9 +122,11 @@ Content margin, supports RTL layout.
 public safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-Indicates the edges of the safe area.
+扩展安全区域的方向。
 
-**Type:** Array&lt;SafeAreaEdge&gt;
+默认值：[SafeAreaEdge.TOP]。
+
+**Type:** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
 
 **Since:** 26.0.0
 
@@ -122,9 +144,11 @@ Indicates the edges of the safe area.
 public safeAreaTypes?: Array<SafeAreaType>
 ```
 
-Indicates the types of the safe area.
+扩展安全区域的类型。
 
-**Type:** Array&lt;SafeAreaType&gt;
+默认值：[SafeAreaType.SYSTEM]。
+
+**Type:** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
 
 **Since:** 26.0.0
 

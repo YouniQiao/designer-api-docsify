@@ -1,6 +1,6 @@
 # TransferStopReason (System API)
 
-Describes the state type of transfer stop reason.
+搬迁停止原因的枚举。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Describes the state type of transfer stop reason.
 SWITCH_OFF = 0
 ```
 
-Indicates that the transfer task stopped by switch off.
+搬迁过程中，云服务开关关闭。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Indicates that the transfer task stopped by switch off.
 ACCOUNT_LOGOUT = 1
 ```
 
-Indicates that the transfer task stopped by account logout.
+搬迁过程中，账户登出。
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ Indicates that the transfer task stopped by account logout.
 OTHER_REASON = 2
 ```
 
-Indicates that the transfer task stopped by other reason.
+搬迁过程中，其他原因导致停止。
 
 **Since:** 26.0.0
 

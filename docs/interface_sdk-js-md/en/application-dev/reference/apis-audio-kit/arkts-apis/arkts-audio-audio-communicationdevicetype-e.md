@@ -1,6 +1,6 @@
 # CommunicationDeviceType
 
-Enumerates the available device types for communication.
+表示用于通信的可用设备类型的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the available device types for communication.
 SPEAKER = 2
 ```
 
-Speaker.
+扬声器。
 
 **Since:** 12
 

@@ -1,14 +1,20 @@
 # cleanSandboxAppConfig
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## cleanSandboxAppConfig
 
 ```TypeScript
 function cleanSandboxAppConfig(): Promise<void>
 ```
 
-Clears the sandbox application configuration. After the API is successfully called, the sandbox application configuration is cleared and the default state is restored. This API uses a promise to return the result.
+清理沙箱应用配置信息。调用成功后，沙箱应用配置将被清除，恢复默认状态。使用Promise异步回调。
 
-This API clears the sandbox application configuration and restores the default state to prevent residual configurations from affecting subsequent use. This API can be called only in non-sandbox applications.
+该接口用于清理沙箱应用的配置信息，恢复默认状态以防止配置残留影响后续使用。仅支持在非DLP沙箱应用中调用。
 
 **Since:** 11
 
@@ -22,28 +28,26 @@ This API clears the sandbox application configuration and restores the default s
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
+| 19100018 | The application is not authorized. |
+| 19100001 | Invalid parameter value. |
+| 19100007 | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  dlpPermission.cleanSandboxAppConfig(); // Clean sandbox application configuration.
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
+dlpPermission.cleanSandboxAppConfig().then(() => { // Clear sandbox application configuration.
+  console.info('cleanSandboxAppConfig success');
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
 ```
 

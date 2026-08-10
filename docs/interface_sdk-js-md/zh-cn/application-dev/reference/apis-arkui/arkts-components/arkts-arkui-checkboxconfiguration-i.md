@@ -1,6 +1,6 @@
 # CheckBoxConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **继承/实现关系：** CheckBoxConfiguration extends [CommonConfiguration<CheckBoxConfiguration>](CommonConfiguration<CheckBoxConfiguration>)
 
@@ -40,7 +40,7 @@ name: string
 selected: boolean
 ```
 
-指示多选框是否被选中，值为true时，多选框被选中。值为false时，多选框未选中。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_如果select属性没有设置默认值是false。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_如果设置select属性，此值与设置select属性的值相同。
+指示多选框是否被选中，值为true时，多选框被选中。值为false时，多选框未选中。&lt;/br&gt;如果select属性没有设置默认值是false。&lt;/br&gt;如果设置select属性，此值与设置select属性的值相同。
 
 **类型：** boolean
 
@@ -64,7 +64,7 @@ triggerChange: Callback<boolean>
 
 触发多选框选中状态变化的回调函数。调用时传入true，多选框被设置为选中状态；传入false，多选框被设置为未选中状态。
 
-**类型：** Callback&lt;boolean&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 
 **起始版本：** 12
 

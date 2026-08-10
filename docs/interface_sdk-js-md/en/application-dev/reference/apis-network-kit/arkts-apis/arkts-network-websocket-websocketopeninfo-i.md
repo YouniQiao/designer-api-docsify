@@ -10,6 +10,12 @@ The result for open info of a WebSocket connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## message
 
 ```TypeScript
@@ -58,7 +64,7 @@ status: int
 
 result status.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

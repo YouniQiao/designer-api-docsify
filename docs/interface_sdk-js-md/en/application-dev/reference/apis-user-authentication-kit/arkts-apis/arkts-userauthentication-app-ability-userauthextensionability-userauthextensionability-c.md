@@ -1,8 +1,8 @@
 # UserAuthExtensionAbility (System API)
 
-The class of user authentication extension ability.
+用户认证扩展能力组件
 
-**Inheritance/Implementation:** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
+**Inheritance/Implementation:** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
 **Since:** 10
 
@@ -15,4 +15,10 @@ The class of user authentication extension ability.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { UserAuthExtensionAbility } from 'kits/@kit.UserAuthenticationKit';
+```
 

@@ -9,14 +9,15 @@
 ## 子组件
 
 可以包含单个子组件。
-    **说明：**  
-    
-    - 支持的子组件类型：系统组件和自定义组件，支持条件渲染控制\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，不支持循环渲染控制  
-    [ForEach]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和[LazyForEach]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_。  
-    
-    - 建议使用文本组件构建当前数值文本和辅助文本。  
-    
-    - 若子组件宽高为百分比形式，则百分比基准为以外圆作为内切圆的矩形的宽和高。
+
+> **说明：**
+> 
+> - 支持的子组件类型：系统组件和自定义组件，支持条件渲染控制[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)，不支持循环渲染控制
+> [ForEach]{@link ./for_each}和[LazyForEach]{@link ./lazy_for_each}。
+> 
+> - 建议使用文本组件构建当前数值文本和辅助文本。
+> 
+> - 若子组件宽高为百分比形式，则百分比基准为以外圆作为内切圆的矩形的宽和高。
 
 ## Gauge
 
@@ -42,7 +43,11 @@ Gauge(options: GaugeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 数据量规图表组件参数。 |
+| options | [GaugeOptions](../arkts-apis/arkts-arkui-gauge-gaugeoptions-i.md) | 是 | 数据量规图表组件参数。 |
 
 ## 汇总
 
+- [GaugeConfiguration](arkts-arkui-gauge-gaugeconfiguration-i.md)
+- [GaugeIndicatorOptions](arkts-arkui-gauge-gaugeindicatoroptions-i.md)
+- [GaugeOptions](arkts-arkui-gauge-gaugeoptions-i.md)
+- [GaugeShadowOptions](arkts-arkui-gauge-gaugeshadowoptions-i.md)

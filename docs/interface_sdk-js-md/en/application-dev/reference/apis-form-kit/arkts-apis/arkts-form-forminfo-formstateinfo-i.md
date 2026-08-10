@@ -10,6 +10,12 @@ Provides state information about a form.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## formState
 
 ```TypeScript
@@ -18,7 +24,7 @@ formState: FormState
 
 Obtains the form state.
 
-**Type:** FormState
+**Type:** [FormState](arkts-form-forminfo-formstate-e.md)
 
 **Since:** 9
 
@@ -38,7 +44,7 @@ want: Want
 
 Obtains the want form .
 
-**Type:** Want
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 9
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { cameraPicker } from 'kits/@kit.CameraKit';
+```
+
 ## mediaType
 
 ```TypeScript
@@ -18,7 +24,7 @@ mediaType: PickerMediaType
 
 返回的媒体类型。
 
-**类型：** PickerMediaType
+**类型：** [PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md)
 
 **起始版本：** 11
 
@@ -38,7 +44,7 @@ resultCode: int
 
 处理的结果，成功返回0，失败返回-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

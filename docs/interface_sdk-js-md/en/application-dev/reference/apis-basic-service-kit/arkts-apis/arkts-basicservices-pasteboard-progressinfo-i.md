@@ -1,7 +1,6 @@
 # ProgressInfo
 
-Defines the progress information. This information is reported only when  
-[ProgressIndicator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **NONE**.
+定义进度上报的数据结构，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)设置为NONE时才会上报此信息。
 
 **Since:** 15
 
@@ -11,15 +10,21 @@ Defines the progress information. This information is reported only when
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## progress
 
 ```TypeScript
 progress: int
 ```
 
-If the progress indicator provided by the system is not used, the system reports the progress percentage of the paste task.
+不使用系统提供的进度条时，系统上报拷贝粘贴任务进度百分比，单位：%。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 

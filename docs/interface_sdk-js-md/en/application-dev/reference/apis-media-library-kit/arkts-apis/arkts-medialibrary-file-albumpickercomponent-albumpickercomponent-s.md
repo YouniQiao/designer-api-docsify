@@ -12,6 +12,12 @@ AlbumPickerComponent: can select a certain album and display the images in that 
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## build
 
 ```TypeScript
@@ -76,7 +82,7 @@ albumPickerController?: AlbumPickerController
 
 AlbumPickerController
 
-**Type:** AlbumPickerController
+**Type:** [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
 
 **Since:** 26.0.0
 
@@ -96,7 +102,7 @@ albumPickerOptions?: AlbumPickerOptions
 
 AlbumPickerOptions
 
-**Type:** AlbumPickerOptions
+**Type:** [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
 
 **Since:** 26.0.0
 

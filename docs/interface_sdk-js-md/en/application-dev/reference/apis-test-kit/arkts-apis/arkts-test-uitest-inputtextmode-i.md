@@ -1,6 +1,6 @@
 # InputTextMode
 
-Describes the text input mode.
+输入文本的方式。
 
 **Since:** 20
 
@@ -10,14 +10,19 @@ Describes the text input mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## addition
 
 ```TypeScript
 addition?: boolean
 ```
 
-Whether to input text in addition mode. The value **true** means to input text in addition mode, and **false**  
-means the opposite. Default value: **false
+输入文本时是否以追加的方式进行输入。true：以追加方式输入。false：不以追加方式输入。默认为false。
 
 **Type:** boolean
 
@@ -37,9 +42,9 @@ means the opposite. Default value: **false
 paste?: boolean
 ```
 
-Whether to copy and paste text. The value **true** means to copy and paste text, and **false** means to type text.Default value: **false**
+输入文本时是否指定以复制粘贴方式输入。true：指定以复制粘贴方式输入。false：指定以逐字键入方式输入。默认为false。
 
-**Note**: If the input text contains Chinese characters, special characters, or the text length exceeds 200characters, the text is copied and pasted regardless of the value of this parameter.
+**说明：** 当输入文本中包含中文、特殊字符或文本长度超过200字符时，无论该参数取值为何，均以复制粘贴方式输入。
 
 **Type:** boolean
 

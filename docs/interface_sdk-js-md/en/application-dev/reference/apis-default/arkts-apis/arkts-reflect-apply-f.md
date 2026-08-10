@@ -22,7 +22,7 @@ Calls the function with the specified object as the this value and the elements 
 | --- | --- | --- | --- |
 | target | (this: T, ...args: A) =&gt; R | Yes |  |
 | thisArgument | T | Yes |  |
-| argumentsList | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;A&gt; | Yes |  |
+| argumentsList | [Readonly](arkts-readonly-t.md)&lt;A&gt; | Yes |  |
 
 **Return value:**
 
@@ -45,7 +45,7 @@ function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any
 | --- | --- | --- | --- |
 | target | Function | Yes |  |
 | thisArgument | any | Yes |  |
-| argumentsList | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;any&gt; | Yes |  |
+| argumentsList | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;any&gt; | Yes |  |
 
 **Return value:**
 

@@ -1,12 +1,18 @@
 # getDistributedSessionController (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## getDistributedSessionController
 
 ```TypeScript
 function getDistributedSessionController(distributedSessionType: DistributedSessionType): Promise<Array<AVSessionController>>
 ```
 
-Get distributed avsession controller
+根据远端会话类型，获取远端分布式会话控制器。结果通过Promise异步回调方式返回。
 
 **Since:** 18
 
@@ -24,33 +30,30 @@ Get distributed avsession controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distributedSessionType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the distributed session type. |
+| distributedSessionType | [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) | Yes | 远端会话类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AVSessionController&gt;&gt; | Promise for AVSessionController. |
+| Promise&lt;Array&lt;AVSessionController&gt;&gt; | Promise对象。返回对应类型的会话控制器实例列表，可查看会话ID，并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 6600109 | The remote connection is not established. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { avSession } from '@kit.AVSessionKit';
 
 avSession.getDistributedSessionController(avSession.DistributedSessionType.TYPE_SESSION_REMOTE).then((sessionControllers: Array<avSession.AVSessionController>) => {
-  console.info(`getDistributedSessionController : SUCCESS : sessionControllers.length : ${sessionControllers.length}`);
-}).catch((err: BusinessError) => {
-  console.error(`getDistributedSessionController BusinessError: code: ${err.code}, message: ${err.message}`);
+  console.info(`Succeeded in getting distributed session controller, length: ${sessionControllers.length}`);
 });
 ```
 

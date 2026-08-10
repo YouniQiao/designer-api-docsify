@@ -1,12 +1,18 @@
 # getInsightIntentInfoByFilter (System API)
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## getInsightIntentInfoByFilter
 
 ```TypeScript
 function getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array<InsightIntentInfo>>
 ```
 
-Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS permission.
+Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.&lt;br&gt;If the user ID of the calling application is different from the user ID of the intent, the
 
 **Since:** 23
 
@@ -26,7 +32,7 @@ Obtains the intent information on the current device based on the given intent f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Intent filter, which specifies the criteria for selecting a target intent. It is used to filter intents on the device that meet these criteria. |
+| filter | [InsightIntentInfoFilter](arkts-ability-insightintentdriver-insightintentinfofilter-i-sys.md) | Yes | Intent filter, which specifies the criteria for selecting a target intent. It is used to filter intents on the device that meet these criteria. |
 
 **Return value:**
 
@@ -38,12 +44,12 @@ Obtains the intent information on the current device based on the given intent f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';

@@ -1,6 +1,6 @@
 # CalendarAccount
 
-Describes the calendar account information.
+日历账户信息。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the calendar account information.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
+## Modules to Import
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## displayName
 
 ```TypeScript
 displayName?: string
 ```
 
-Account name displayed on the calendar application (defined by users). If this parameter is not specified, the default value is an empty string with a maximum of 64 characters.
+账户显示在日历应用上的名称（面向用户）。不填时，默认为空字符串，长度限制为[0,64]字符，长度超限制会导致日历应用上账户名显示不全，被截断。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Account name displayed on the calendar application (defined by users). If this p
 readonly name: string
 ```
 
-Account name (defined by developers), with a maximum of 5,000 characters.
+账户名称（面向开发者），长度建议为[0,5000]字符。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ Account name (defined by developers), with a maximum of 5,000 characters.
 type: CalendarType
 ```
 
-Account type.
+账户类型。
 
-**Type:** CalendarType
+**Type:** [CalendarType](arkts-calendar-calendarmanager-calendartype-e.md)
 
 **Since:** 10
 

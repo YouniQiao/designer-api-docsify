@@ -1,6 +1,6 @@
 # SymbolEffectStrategy
 
-Enumerates symbol effect types. Once applied, the symbol effect becomes active instantly, eliminating the need for triggering.
+动效类型的枚举值。设置动效后，动效启动即生效，无需触发。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates symbol effect types. Once applied, the symbol effect becomes active i
 NONE = 0
 ```
 
-No effect (default value).
+无动效（默认值）。
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ No effect (default value).
 SCALE = 1
 ```
 
-Scale effect as a whole.
+整体缩放动效。
 
 **Since:** 11
 
@@ -60,7 +60,7 @@ Scale effect as a whole.
 HIERARCHICAL = 2
 ```
 
-Hierarchical effect.
+层级动效。
 
 **Since:** 11
 

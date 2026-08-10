@@ -1,6 +1,6 @@
 # Normalizer
 
-Provides the API for text encoding normalization.
+提供文本标准化的能力。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides the API for text encoding normalization.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getInstance
 
 ```TypeScript
 static getInstance(mode: NormalizerMode): Normalizer
 ```
 
-Obtains a Normalizer object.
+获取文本标准化对象。
 
 **Since:** 23
 
@@ -32,19 +38,19 @@ Obtains a Normalizer object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text normalization mode. |
+| mode | [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | Yes | 文本标准化范式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Normalizer object for text normalization. |
+| [Normalizer](arkts-localization-i18n-normalizer-c.md) | 返回指定范式的文本标准化对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## normalize
 
@@ -52,7 +58,7 @@ Obtains a Normalizer object.
 normalize(text: string): string
 ```
 
-Normalizes input strings.
+对字符串进行标准化处理。
 
 **Since:** 23
 
@@ -68,17 +74,17 @@ Normalizes input strings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Input strings. |
+| text | string | Yes | 输入文本。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Normalized strings. |
+| string | 标准化处理后的字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 

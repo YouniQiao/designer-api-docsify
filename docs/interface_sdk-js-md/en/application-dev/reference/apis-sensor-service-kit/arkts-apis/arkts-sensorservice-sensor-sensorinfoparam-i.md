@@ -1,6 +1,6 @@
 # SensorInfoParam
 
-Defines sensor parameters, including **deviceId** and **sensorIndex**.
+传感器传入设置参数，多传感器情况下通过deviceId、sensorIndex控制指定传感器。
 
 **Since:** 19
 
@@ -10,17 +10,22 @@ Defines sensor parameters, including **deviceId** and **sensorIndex**.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
 deviceId?: int
 ```
 
-Device ID. The default value is -1, indicating the local device. You can use  
-[getSensorList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[sensorStatusChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the device ID.
+指定目标传感器所属设备的ID。默认值：-1（表示本地设备）。可通过[sensor.on('sensorStatusChange')](arkts-sensorservice-sensor-on-f.md#on)或  
+[getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist)获取远程设备ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 
@@ -38,11 +43,11 @@ Device ID. The default value is -1, indicating the local device. You can use
 sensorIndex?: int
 ```
 
-Sensor index. The default value is **0**, indicating the default sensor on the device. You can use  
-[getSensorList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[sensorStatusChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the sensor index.
+指定目标传感器的索引，同一类型传感器可能有多个实例。默认值：0（表示设备上的默认传感器）。其它传感器索引需通过  
+[getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist)或  
+[sensor.on('sensorStatusChange')](arkts-sensorservice-sensor-on-f.md#on)获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 

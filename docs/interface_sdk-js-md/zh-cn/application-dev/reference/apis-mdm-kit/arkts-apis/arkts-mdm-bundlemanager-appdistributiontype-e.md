@@ -1,6 +1,6 @@
 # AppDistributionType
 
-应用程序签名证书的分发类型。详细介绍请参见[ApplicationInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的appDistributionType属性。
+应用程序签名证书的分发类型。详细介绍请参见[ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md)的appDistributionType属性。
 
 **起始版本：** 20
 

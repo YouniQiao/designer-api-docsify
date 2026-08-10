@@ -10,6 +10,12 @@ Network policies that limit the specified UID of application to access the netwo
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## allowCellular
 
 ```TypeScript

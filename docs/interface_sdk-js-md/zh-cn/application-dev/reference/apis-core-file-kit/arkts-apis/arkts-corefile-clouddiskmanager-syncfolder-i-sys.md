@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -60,7 +66,7 @@ displayNameResId?: int
 
 资源ID，可以映射到文管列表显示的别名。默认值为undefined。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 21
 
@@ -100,7 +106,7 @@ state: SyncFolderState
 
 同步根对应的状态信息。
 
-**类型：** SyncFolderState
+**类型：** [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)
 
 **起始版本：** 21
 

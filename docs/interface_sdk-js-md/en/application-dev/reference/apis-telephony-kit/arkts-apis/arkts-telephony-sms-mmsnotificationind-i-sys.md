@@ -12,6 +12,12 @@ Defines an MMS notification indication.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## contentClass
 
 ```TypeScript
@@ -20,7 +26,7 @@ contentClass?: int
 
 Indicates the content class for the MMS notification indication.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ deliveryReport?: int
 
 Indicates the status report for the MMS notification indication.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ expiry: int
 
 Indicates the expiration for the MMS notification indication.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -100,7 +106,7 @@ from?: MmsAddress
 
 Indicates the source address for the MMS notification indication.
 
-**Type:** MmsAddress
+**Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
 **Since:** 8
 
@@ -120,7 +126,7 @@ messageClass: int
 
 Indicates the message class for the MMS notification indication.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -140,7 +146,7 @@ messageSize: long
 
 Indicates the message size for the MMS notification indication.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -200,7 +206,7 @@ version: MmsVersionType
 
 Indicates the version for the MMS notification indication.
 
-**Type:** MmsVersionType
+**Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 8
 

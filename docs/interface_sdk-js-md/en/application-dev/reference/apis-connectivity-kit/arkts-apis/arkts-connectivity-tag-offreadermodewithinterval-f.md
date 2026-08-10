@@ -1,5 +1,11 @@
 # offReaderModeWithInterval
 
+## Modules to Import
+
+```TypeScript
+import { tag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offReaderModeWithInterval
 
 ```TypeScript
@@ -22,15 +28,15 @@ Disable foreground reader mode settings explicitly.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The element name of application, must include the bundleName and abilityName. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TagInfo&gt; | No | The callback to dispatched the TagInfo object for application. |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of application, must include the bundleName and abilityName. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TagInfo&gt; | No | The callback to dispatched the TagInfo object for application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100203](../errorcode-nfc.md#3100203-incorrect-api-call-sequence) | The off() API can be called only when the on() has been called. |
+| 801 | Capability not supported. |
+| 3100203 | The off() API can be called only when the on() has been called. |
+| 3100201 | The tag running state is abnormal in the service. |
+| 201 | Permission denied. |
 

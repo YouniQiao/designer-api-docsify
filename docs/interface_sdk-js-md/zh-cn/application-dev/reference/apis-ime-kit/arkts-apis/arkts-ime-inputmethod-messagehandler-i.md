@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## onMessage
 
 ```TypeScript
@@ -49,7 +55,7 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 | msgId | string | 是 | 接收到的自定义通信数据的标识符。 |
 | msgParam | ArrayBuffer | 否 | 接收到的自定义通信数据的消息体。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
@@ -81,7 +87,7 @@ onTerminated(): void
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-**示例：**
+## 示例
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
@@ -107,7 +113,7 @@ onTerminated(): void
 
 监听对象终止回调函数。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 23
 

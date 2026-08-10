@@ -1,5 +1,11 @@
 # getAutoStartupStatusForSelf
 
+## 导入模块
+
+```TypeScript
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAutoStartupStatusForSelf
 
 ```TypeScript
@@ -28,10 +34,10 @@ function getAutoStartupStatusForSelf(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
+| 801 | Capability not supported. |
+| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { autoStartupManager, UIAbility } from '@kit.AbilityKit';

@@ -12,6 +12,12 @@ Defines the SIM message options.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## pdu
 
 ```TypeScript
@@ -40,7 +46,7 @@ slotId: int
 
 Indicates the card slot ID for the SIM message options.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -80,7 +86,7 @@ status: SimMessageStatus
 
 Indicates the status for the SIM message options.
 
-**Type:** SimMessageStatus
+**Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
 **Since:** 7
 

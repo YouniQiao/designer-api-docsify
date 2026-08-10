@@ -22,5 +22,5 @@ Change the mouse cursor style by param: 'PointerStyle'.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Cursor style. |
+| value | [PointerStyle](../arkts-components/arkts-arkui-pointerstyle-t.md) | 是 | Cursor style. |
 

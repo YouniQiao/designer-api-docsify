@@ -18,5 +18,5 @@ The callback of ViewportFit Changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| viewportFit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | details of OnViewportFitChangedCallback.  |
+| viewportFit | [ViewportFit](arkts-arkweb-web-viewportfit-e.md) | 是 | details of OnViewportFitChangedCallback. |
 

@@ -1,9 +1,9 @@
 # DataShareUpdate (System API)
 
-Defines the parameter information used to update the database.
+更新数据库需要的参数信息。
 
-The data provider needs to set the ID, read/write permissions, and basic information of the table to be shared under **proxyData** in the **module.json5** file. For details about the configuration method, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+数据提供方需要在module.json5中的proxyData节点定义要共享的表的标识，读写权限和基本信息。配置方式请见  
+[数据提供方应用的开发](../../../database/share-data-by-silent-access-sys.md#数据提供方应用的开发)。
 
 **Since:** 11
 
@@ -15,15 +15,21 @@ The data provider needs to set the ID, read/write permissions, and basic informa
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## equalTo
 
 ```TypeScript
 equalTo: Record<string, double | string | boolean>
 ```
 
-Filter criteria. Currently, only **equalTo** is supported.
+指示筛选条件，当前仅支持通过等于筛选。
 
-**Type:** Record&lt;string, double \| string \| boolean&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double \| string \| boolean&gt;
 
 **Since:** 11
 
@@ -41,7 +47,7 @@ Filter criteria. Currently, only **equalTo** is supported.
 uri: string
 ```
 
-URI of the data, which is the unique identifier for cross-application data access.
+数据使用的URI，是跨应用数据访问的唯一标识。
 
 **Type:** string
 
@@ -61,9 +67,9 @@ URI of the data, which is the unique identifier for cross-application data acces
 value: ValuesBucket
 ```
 
-New data.
+指示要更新的数据。
 
-**Type:** ValuesBucket
+**Type:** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
 **Since:** 11
 

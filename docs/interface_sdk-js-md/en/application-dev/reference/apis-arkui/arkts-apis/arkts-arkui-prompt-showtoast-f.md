@@ -1,12 +1,18 @@
 # showToast
 
+## Modules to Import
+
+```TypeScript
+import { prompt } from 'kits/@kit.ArkUI';
+```
+
 ## showToast
 
 ```TypeScript
 function showToast(options: ShowToastOptions): void
 ```
 
-Displays the notification text.
+创建并显示文本提示框。
 
 **Since:** 8
 
@@ -24,9 +30,9 @@ Displays the notification text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
+| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | 文本弹窗选项。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import prompt from '@ohos.prompt'

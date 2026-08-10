@@ -1,6 +1,6 @@
 # FloatingBallConfiguration
 
-Describes the parameters for creating a floating ball controller.
+创建闪控球控制器时需要提供的参数配置。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the parameters for creating a floating ball controller.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatingBall } from 'kits/@kit.ArkUI';
+```
+
 ## context
 
 ```TypeScript
 context: BaseContext
 ```
 
-Context environment.
+表示上下文环境。
 
-**Type:** BaseContext
+**Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
 **Since:** 20
 

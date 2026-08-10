@@ -1,6 +1,6 @@
 # TagInfo
 
-Provides tag information.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
+Provides tag information.&lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
 
 **Since:** 12
 
@@ -9,6 +9,12 @@ Provides tag information.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This class provides 
 <!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
+
+## Modules to Import
+
+```TypeScript
+import { tag } from 'kits/@kit.ConnectivityKit';
+```
 
 ## supportedProfiles
 
@@ -42,7 +48,7 @@ technology: int[]
 
 The supported technology list of this tag.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 12
 
@@ -64,7 +70,7 @@ uid: int[]
 
 The uid of this tag, it.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 12
 

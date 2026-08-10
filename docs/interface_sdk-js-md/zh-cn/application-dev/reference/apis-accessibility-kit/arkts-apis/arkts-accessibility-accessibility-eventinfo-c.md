@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -36,12 +42,12 @@ constructor(jsonObject: Object)
 | --- | --- | --- | --- |
 | jsonObject | Object | 是 | 包含 type、bundleName 和 triggerAction 三个字段的 JSON对象，详见示例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
 
-let eventInfo: accessibility.EventInfo = ({
+let eventInfo = new accessibility.EventInfo({
   type: 'click',
   bundleName: 'com.example.MyApplication',
   triggerAction: 'click',
@@ -68,18 +74,6 @@ A constructor used to create a EventInfo object.
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-**示例：**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'click',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'click',
-});
-```
-
 ## constructor
 
 ```TypeScript
@@ -104,11 +98,11 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 无障碍事件类型。 |
+| type | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | 是 | 无障碍事件类型。 |
 | bundleName | string | 是 | 目标应用名。 |
-| triggerAction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 触发事件的 Action。 |
+| triggerAction | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | 是 | 触发事件的 Action。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -125,7 +119,7 @@ beginIndex?: int
 
 画面显示条目的开始序号，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -218,7 +212,7 @@ currentIndex?: int
 
 当前条目序号，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -284,7 +278,7 @@ elementId?: int
 
 组件elementId，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -306,7 +300,7 @@ endIndex?: int
 
 画面显示条目的结束序号，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -328,7 +322,7 @@ itemCount?: int
 
 条目总数，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -372,7 +366,7 @@ pageId ?: int
 
 事件源的页面ID，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -416,7 +410,7 @@ textMoveUnit?: TextMoveUnit
 
 文本移动粒度，默认值为char。
 
-**类型：** TextMoveUnit
+**类型：** [TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
 
 **起始版本：** 7
 
@@ -438,7 +432,7 @@ textResourceAnnouncedForAccessibility?: Resource
 
 主动播报的内容支持传入Resource类型，且只能传入string。
 
-**类型：** Resource
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 18
 
@@ -460,7 +454,7 @@ triggerAction: Action
 
 触发事件的Action，不可缺省。
 
-**类型：** Action
+**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 7
 
@@ -482,7 +476,7 @@ type: EventType
 
 无障碍事件类型，不可缺省。
 
-**类型：** EventType
+**类型：** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
 
 **起始版本：** 7
 
@@ -504,7 +498,7 @@ windowUpdateType?: WindowUpdateType
 
 窗口变化类型。
 
-**类型：** WindowUpdateType
+**类型：** [WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md)
 
 **起始版本：** 7
 

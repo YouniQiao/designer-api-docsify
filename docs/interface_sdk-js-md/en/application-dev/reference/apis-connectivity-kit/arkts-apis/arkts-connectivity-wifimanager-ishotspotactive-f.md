@@ -1,5 +1,11 @@
 # isHotspotActive
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isHotspotActive
 
 ```TypeScript
@@ -28,11 +34,11 @@ Check whether Wi-Fi hotspot is active on a device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 2601000 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

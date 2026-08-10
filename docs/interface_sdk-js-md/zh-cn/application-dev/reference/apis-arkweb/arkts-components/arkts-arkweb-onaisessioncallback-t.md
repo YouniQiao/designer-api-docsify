@@ -20,6 +20,6 @@ AI会话操作结果回调函数类型。用于报告会话创建或执行的结
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The current result state.  |
-| content | string | 是 | The detailed result or response content.  |
+| state | [AISessionResultType](../arkts-apis/arkts-arkweb-web-aisessionresulttype-e.md) | 是 | The current result state. |
+| content | string | 是 | The detailed result or response content. |
 

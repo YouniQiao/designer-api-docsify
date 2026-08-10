@@ -1,8 +1,8 @@
 # AutoExposure
 
-AutoExposure** inherits from [AutoExposureQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。
 
-It provides APIs related to auto exposure.
+自动曝光类，对设备自动曝光（AE）操作。
 
 **Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
 
@@ -14,13 +14,19 @@ It provides APIs related to auto exposure.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getExposureMeteringMode
 
 ```TypeScript
 getExposureMeteringMode(): ExposureMeteringMode
 ```
 
-Obtains the exposure metering mode in use.
+获取当前曝光测光模式。
 
 **Since:** 24
 
@@ -36,32 +42,15 @@ Obtains the exposure metering mode in use.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Exposure metering mode obtained. |
+| [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) | 当前曝光测光模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getExposureMeteringMode(professionalPhotoSession: camera.ProfessionalPhotoSession): camera.ExposureMeteringMode | undefined {
-  let exposureMeteringMode: camera.ExposureMeteringMode | undefined = undefined;
-  try {
-    exposureMeteringMode = professionalPhotoSession.getExposureMeteringMode();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getExposureMeteringMode call failed. error code: ${err.code}`);
-  }
-  return exposureMeteringMode;
-}
-```
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 23 |
 
 ## getExposureMode
 
@@ -69,11 +58,11 @@ function getExposureMeteringMode(professionalPhotoSession: camera.ProfessionalPh
 getExposureMode(): ExposureMode
 ```
 
-Obtains the exposure mode in use.
-    **NOTE**  
-    
-    This API directly returns an invalid value if you have not set the exposure mode using  
-    [setExposureMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取当前曝光模式。
+
+> **说明：**
+> 
+> 若未通过[setExposureMode](arkts-camera-camera-autoexposure-i.md#setexposuremode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
 
 **Since:** 11
 
@@ -89,13 +78,13 @@ Obtains the exposure mode in use.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Exposure mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 获取当前曝光模式。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getExposureValue
 
@@ -109,7 +98,7 @@ ArkTS-Sta:
 getExposureValue(): double
 ```
 
-Obtains the exposure value in use.
+查询当前曝光值。
 
 **Since:** 11
 
@@ -125,13 +114,13 @@ Obtains the exposure value in use.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the operation fails, an error code defined in [CameraErrorCode]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 获取曝光值。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。 &lt;br&gt;接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
 
 ## getMeteringPoint
 
@@ -139,7 +128,7 @@ Obtains the exposure value in use.
 getMeteringPoint(): Point
 ```
 
-Obtains the metering point of the camera device.
+查询曝光区域中心点。
 
 **Since:** 11
 
@@ -155,13 +144,13 @@ Obtains the metering point of the camera device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
 
 ## offExposureStateChange
 
@@ -169,7 +158,7 @@ Obtains the metering point of the camera device.
 offExposureStateChange(callback?: Callback<ExposureState>): void
 ```
 
-Unregisters the listener for exposure state change events. This API uses an asynchronous callback to return the result.
+注销监听曝光状态事件变更。使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -187,7 +176,7 @@ Unregisters the listener for exposure state change events. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ExposureState&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. If the callback object is null or an anonymous function, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExposureState&gt; | No | 回调函数，如果指定参数则取消对应callback，callback对象如果为空或为匿名函数，则取消所有callback。 |
 
 ## onExposureStateChange
 
@@ -195,7 +184,7 @@ Unregisters the listener for exposure state change events. This API uses an asyn
 onExposureStateChange(callback: Callback<ExposureState>): void
 ```
 
-Listens to exposure state change events. This API uses an asynchronous callback to return the result.
+监听曝光状态事件变更。使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -213,7 +202,7 @@ Listens to exposure state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ExposureState&gt; | Yes | Callback used to return the exposure state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExposureState&gt; | Yes | 回调函数，返回当前曝光状态。 |
 
 ## setExposureBias
 
@@ -227,10 +216,9 @@ ArkTS-Sta:
 setExposureBias(exposureBias: double): void
 ```
 
-Sets an exposure compensation value (EV).
+设置曝光补偿，曝光补偿值（EV）。
 
-Before the setting, you are advised to use  
-[getExposureBiasRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the supported values.
+进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)查询支持的范围。
 
 **Since:** 11
 
@@ -246,14 +234,14 @@ Before the setting, you are advised to use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If the value passed is not within the supported range, the nearest critical point is used. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Exposure compensation is adjusted in steps, and the step size may vary across devices due to hardware differences. For example, if the step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation value of 1.0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the operation fails, an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is returned. |
+| exposureBias | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。 &lt;br&gt;曝光补偿存在步长，由于设备差异，步长也存在差异。例如步长为0.5，则设置1.2时，获取到实际生效曝光补偿为1.0。 &lt;br&gt;接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400103 | Session not config. |
 
 ## setExposureMeteringMode
 
@@ -261,7 +249,7 @@ Before the setting, you are advised to use
 setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void
 ```
 
-Sets exposure metering mode.
+设置曝光测光模式。
 
 **Since:** 24
 
@@ -277,30 +265,16 @@ Sets exposure metering mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMeteringMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Exposure metering mode. |
+| aeMeteringMode | [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) | Yes | 曝光测光模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setExposureMeteringMode(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
-  try {
-    professionalPhotoSession.setExposureMeteringMode(camera.ExposureMeteringMode.CENTER);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setExposureMeteringMode call failed. error code: ${err.code}`);
-  }
-}
-```
+| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 23 |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 23 |
 
 ## setExposureMode
 
@@ -308,8 +282,8 @@ function setExposureMeteringMode(professionalPhotoSession: camera.ProfessionalPh
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-Sets an exposure mode. Before the setting, call  
-[isExposureModeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the exposure mode is supported.
+设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法  
+[isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isexposuremodesupported)。
 
 **Since:** 11
 
@@ -325,14 +299,14 @@ Sets an exposure mode. Before the setting, call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Exposure mode. If the input parameter is null or undefined, it is treated as 0 and exposure is locked. |
+| aeMode | [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Yes | 曝光模式。传参为null或者undefined，作为0处理，曝光锁定。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 19 and later |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 19 and later |
+| 7400103 | Session not config. |
 
 ## setMeteringPoint
 
@@ -340,9 +314,9 @@ Sets an exposure mode. Before the setting, call
 setMeteringPoint(point: Point): void
 ```
 
-Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
+设置曝光区域中心点，曝光点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
 
-The coordinate system is based on the horizontal device direction with the device's charging port on the right.If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触摸点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
 
 **Since:** 11
 
@@ -358,11 +332,11 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Metering point. The value range of x and y must be within [0, 1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes | 曝光点，x、y设置范围应在[0，1]之内，超过范围，如果小于0设置0，大于1设置1。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
 

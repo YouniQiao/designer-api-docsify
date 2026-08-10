@@ -1,5 +1,11 @@
 # getPageContent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## getPageContent
 
 ```TypeScript
@@ -24,7 +30,7 @@ Obtains the onscreen content when a window is displayed on the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for obtaining the onscreen screen content. By default, the window ID is not specified, and other options are **False**. |
+| options | [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) | No | Options for obtaining the onscreen screen content. By default, the window ID is not specified, and other options are **False**. |
 
 **Return value:**
 
@@ -36,12 +42,12 @@ Obtains the onscreen content when a window is displayed on the screen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get page content forbidden by \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ permission: ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_SCREEN\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONTENT. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ device capabilities. |
-| [34000001](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-service-exception) | Service exception. |
-| [34000002](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000002-unsupported-application-or-page) | The application or page is not supported. |
-| [34000003](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000003-invalid-window-id) | The window ID is invalid. Possible causes: 1. window id is not passed \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ when screen is splited. 2. passed window id is not on screen or floating. |
-| [34000004](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000004-page-not-ready) | The page is not ready. |
-| [34000006](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000006-request-timeout) | The request timed out. |
+| 34000006 | The request timed out. |
+| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| 34000004 | The page is not ready. |
+| 34000002 | The application or page is not supported. |
+| 34000003 | The window ID is invalid. Possible causes: 1. window id is not passed &lt;br&gt; when screen is splited. 2. passed window id is not on screen or floating. |
+| 34000001 | Service exception. |
+| 201 | Permission denied. An attempt was made to get page content forbidden by &lt;br&gt; permission: ohos.permission.GET_SCREEN_CONTENT. |
+| 202 | Permission check failed. A non-system application uses the system API. |
 

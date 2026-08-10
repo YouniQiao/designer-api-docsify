@@ -18,7 +18,7 @@ type WallpaperChangeObserver = (wallpaperType: WallpaperType, resourceType: Wall
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 壁纸类型。  |
-| resourceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 壁纸资源类型。  |
-| uri | string | 否 | 壁纸资源地址。  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
+| resourceType | [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | 是 | 壁纸资源类型。 |
+| uri | string | 否 | 壁纸资源地址。 |
 

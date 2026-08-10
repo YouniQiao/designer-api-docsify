@@ -1,6 +1,6 @@
 # AVControlCommand
 
-The definition of command to be sent to the session
+会话接受的命令的对象描述。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ The definition of command to be sent to the session
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## command
 
 ```TypeScript
 command: AVControlCommandType
 ```
 
-The command value \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+命令（不同命令对应不同参数）。
 
-**Type:** AVControlCommandType
+**Type:** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ The command value \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 commandInfo?: CommandInfo
 ```
 
-The command value \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+命令信息。
 
-**Type:** CommandInfo
+**Type:** [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
 **Since:** 22
 
@@ -54,9 +60,9 @@ The command value \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 parameter?: LoopMode | string | double
 ```
 
-parameter of the command. Whether this command requires parameters, see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ parameter.toggleFavorite command requires assetId \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ parameter other commands need no parameter
+命令对应的参数。
 
-**Type:** LoopMode \| string \| double
+**Type:** ArkTS-Dyn: [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number  <br>ArkTS-Sta：[LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
 
 **Since:** 10
 

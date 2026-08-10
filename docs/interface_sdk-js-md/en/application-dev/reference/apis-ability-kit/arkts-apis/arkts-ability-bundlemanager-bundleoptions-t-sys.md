@@ -4,7 +4,7 @@
 export type BundleOptions = _BundleInfo.BundleOptions
 ```
 
-Describes the bundle options used to set or query application information.
+应用包选项，用于设置或查询应用相关信息。
 
 **Since:** 20
 

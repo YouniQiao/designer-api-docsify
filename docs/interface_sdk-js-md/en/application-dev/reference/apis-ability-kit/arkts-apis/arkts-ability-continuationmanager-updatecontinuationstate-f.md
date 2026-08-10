@@ -1,5 +1,11 @@
 # updateContinuationState
 
+## Modules to Import
+
+```TypeScript
+import { continuationManager } from 'kits/@kit.AbilityKit';
+```
+
 ## updateContinuationState
 
 ```TypeScript
@@ -11,7 +17,7 @@ function updateContinuationState(
   ): void
 ```
 
-Instructs the device selection module to update the device connection state. This API uses an asynchronous callback to return the result.
+通知设备选择模块，更新当前的连接状态，使用AsyncCallback方式作为异步方法。
 
 **Since:** 9
 
@@ -33,21 +39,21 @@ Instructs the device selection module to update the device connection state. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
-| deviceId | string | Yes | Device ID. |
-| status | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device connection state. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
+| token | number | Yes | 注册后的token。 |
+| deviceId | string | Yes | 设备ID。 |
+| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | 设备连接状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当通知设备成功，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 16600001 | The system ability works abnormally. |
+| 16600002 | The specified token or callback is not registered. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -74,7 +80,7 @@ try {
 function updateContinuationState(token: number, deviceId: string, status: DeviceConnectState): Promise<void>
 ```
 
-Instructs the device selection module to update the device connection state. This API uses a promise to return the result.
+通知设备选择模块，更新当前的连接状态，使用Promise方式作为异步方法。
 
 **Since:** 9
 
@@ -96,26 +102,26 @@ Instructs the device selection module to update the device connection state. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
-| deviceId | string | Yes | Device ID. |
-| status | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device connection state. |
+| token | number | Yes | 注册后的token。 |
+| deviceId | string | Yes | 设备ID。 |
+| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | 设备连接状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 16600001 | The system ability works abnormally. |
+| 16600002 | The specified token or callback is not registered. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

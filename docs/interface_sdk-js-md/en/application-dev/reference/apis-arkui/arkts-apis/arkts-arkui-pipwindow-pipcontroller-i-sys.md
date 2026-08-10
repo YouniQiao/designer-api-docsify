@@ -1,9 +1,8 @@
 # PiPController
 
-Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
+画中画控制器实例。用于启动、停止画中画以及更新回调注册等。
 
-Before calling any of the following APIs, you must use  
-[PiPWindow.create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a PiPController instance.
+下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create)方法获取到PiPController实例，再通过此实例调用对应方法。
 
 **Since:** 11
 
@@ -13,13 +12,19 @@ Before calling any of the following APIs, you must use
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { PiPWindow } from 'kits/@kit.ArkUI';
+```
+
 ## isPiPSupported
 
 ```TypeScript
 isPiPSupported(): boolean
 ```
 
-Returns a Boolean value that indicates whether picture-in-picture is supported
+判断当前设备是否支持画中画功能。
 
 **Since:** 18
 
@@ -35,12 +40,12 @@ Returns a Boolean value that indicates whether picture-in-picture is supported
 
 | Type | Description |
 | --- | --- |
-| boolean |  True if picture-in-picture is supported, otherwise false |
+| boolean | 当前设备是否支持画中画功能。true表示支持，false表示不支持。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 1300014 | PiP internal error. |
 

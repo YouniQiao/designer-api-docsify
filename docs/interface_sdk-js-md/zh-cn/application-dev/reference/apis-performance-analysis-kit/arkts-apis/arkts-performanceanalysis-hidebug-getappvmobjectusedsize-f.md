@@ -1,5 +1,11 @@
 # getAppVMObjectUsedSize
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppVMObjectUsedSize
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getAppVMObjectUsedSize(): bigint
 | --- | --- |
 | bigint | ��ǰ�������ArkTS������ռ�õ��ڴ��С����λΪKB�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

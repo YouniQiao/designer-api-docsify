@@ -1,6 +1,6 @@
 # CutEvent
 
-Defines a custom cut event.
+定义用户剪切事件。
 
 **Since:** 12
 
@@ -16,9 +16,11 @@ Defines a custom cut event.
 preventDefault?: Callback<void>
 ```
 
-Prevents the default cut event.
+阻止系统默认剪切事件。
 
-**Type:** Callback&lt;void&gt;
+省略时，执行系统默认剪切行为。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 

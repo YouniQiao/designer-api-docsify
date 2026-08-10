@@ -1,5 +1,11 @@
 # queryExtensionAbilityInfoSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## queryExtensionAbilityInfoSync
 
 ```TypeScript
@@ -7,9 +13,9 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
     extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags,and user ID. This API returns the result synchronously.
+以同步方法根据给定的want、extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自身的信息时不需要权限。
 
 **Since:** 10
 
@@ -27,30 +33,30 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want containing the bundle name to query. |
-| extensionAbilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the ExtensionAbility. |
-| extensionAbilityFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of the ExtensionAbility information to obtain. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | User ID, which can be obtained by calling [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 表示包含要查询的应用Bundle名称的Want。 |
+| extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | Yes | 标识extensionAbility的类型。 |
+| extensionAbilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考 [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information. |
+| Array&lt;ExtensionAbilityInfo&gt; | Array&lt;ExtensionAbilityInfo&gt;信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
+| 17700026 | The specified bundle is disabled. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700004 | The specified userId is invalid. |
+| 17700003 | The specified extensionAbility is not found. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -67,9 +73,9 @@ let want: Want = {
 };
 
 try {
-  let extenInfos = bundleManager.queryExtensionAbilityInfoSync(want, extensionAbilityType, extensionFlags, userId);
+  let extensionAbilityInfos = bundleManager.queryExtensionAbilityInfoSync(want, extensionAbilityType, extensionFlags, userId);
   hilog.info(0x0000, 'testTag', 'queryExtensionAbilityInfoSync successfully. Data: %{public}s',
-    JSON.stringify(extenInfos));
+    JSON.stringify(extensionAbilityInfos));
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'queryExtensionAbilityInfoSync failed. Cause: %{public}s', message);
@@ -90,9 +96,9 @@ let want: Want = {
 };
 
 try {
-  let extenInfos = bundleManager.queryExtensionAbilityInfoSync(want, extensionAbilityType, extensionFlags);
+  let extensionAbilityInfos = bundleManager.queryExtensionAbilityInfoSync(want, extensionAbilityType, extensionFlags);
   hilog.info(0x0000, 'testTag', 'queryExtensionAbilityInfoSync successfully. Data: %{public}s',
-    JSON.stringify(extenInfos));
+    JSON.stringify(extensionAbilityInfos));
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'queryExtensionAbilityInfoSync failed. Cause: %{public}s', message);
@@ -107,9 +113,9 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
     extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags,and user ID. This API returns the result synchronously.
+根据给定的want、extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo，使用同步方式返回结果。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自身的信息时不需要权限。
 
 **Since:** 11
 
@@ -127,30 +133,30 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want containing the bundle name to query. |
-| extensionAbilityType | string | Yes | Type of the custom ExtensionAbility. |
-| extensionAbilityFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Information flags to be contained in the returned ExtensionAbilityInfo object. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | User ID, which can be obtained by calling [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 表示包含要查询的应用Bundle名称的Want。 |
+| extensionAbilityType | string | Yes | 表示自定义extensionAbility的类型。 |
+| extensionAbilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示返回的ExtensionInfo对象中需要包含的信息标志，具体取值及不同含义参考 [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information obtained. |
+| Array&lt;ExtensionAbilityInfo&gt; | 同步返回Array&lt;ExtensionAbilityInfo&gt;。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
+| 17700026 | The specified bundle is disabled. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700004 | The specified userId is invalid. |
+| 17700003 | The specified extensionAbility is not found. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Call the API with the userId parameter specified.
@@ -207,9 +213,9 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
     userId?: int): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user ID.
+根据给定的extensionAbilityType、extensionAbilityFlags和userId获取ExtensionAbilityInfo。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自身的信息时不需要权限。
 
 **Since:** 11
 
@@ -227,27 +233,27 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionAbilityType | string | Yes | Type of the custom ExtensionAbility. |
-| extensionAbilityFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Information flags to be contained in the returned ExtensionAbilityInfo object. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | User ID, which can be obtained by calling [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| extensionAbilityType | string | Yes | 表示自定义extensionAbility的类型。 |
+| extensionAbilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示返回的ExtensionInfo对象中需要包含的信息标志，具体取值及不同含义参考 [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户ID。取值范围：大于等于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information obtained. |
+| Array&lt;ExtensionAbilityInfo&gt; | 同步返回Array&lt;ExtensionAbilityInfo&gt;。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter extensionAbilityType is empty. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter extensionAbilityType is empty. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700004 | The specified userId is invalid. |
+| 17700003 | The specified extensionAbility is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Call the API with the userId parameter specified.

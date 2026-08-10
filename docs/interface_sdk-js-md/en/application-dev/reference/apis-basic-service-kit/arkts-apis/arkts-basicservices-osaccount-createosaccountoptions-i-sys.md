@@ -1,6 +1,6 @@
 # CreateOsAccountOptions (System API)
 
-Represents the optional parameter used to create an OS account.
+表示用于创建系统账号的可选参数。
 
 **Since:** 12
 
@@ -12,13 +12,19 @@ Represents the optional parameter used to create an OS account.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## allowedPreinstalledBundles
 
 ```TypeScript
 allowedPreinstalledBundles?: Array<string>
 ```
 
-Trustlist of the preinstalled applications, which can be installed on the device. The default value is **std::nullopt**.
+表示预置应用允许名单，仅名单中的应用可以被安装在设备上，默认为std::nullopt。
 
 **Type:** Array&lt;string&gt;
 
@@ -38,7 +44,7 @@ Trustlist of the preinstalled applications, which can be installed on the device
 disallowedPreinstalledBundles?: Array<string>
 ```
 
-Forbidden list of the preinstalled applications, which cannot be installed on the device. The value is left empty by default.
+表示预置应用禁止名单，名单中的应用不可被安装在设备上，默认为空列表。
 
 **Type:** Array&lt;string&gt;
 
@@ -58,11 +64,11 @@ Forbidden list of the preinstalled applications, which cannot be installed on th
 shortName: string
 ```
 
-Short name of the account (used as the name of the personal folder).
+表示账号短名称（用作个人文件夹目录）。 
 
-**The short name cannot**:
+**约束：** 
 
-1. Contain any of the following characters: &lt; &gt;| : " * ? / \2. Contain any of the following: . or ..3. Exceed 255 characters.
+1. 不允许出现的字符：&lt; &gt; | : " * ? / \2. 不允许独立出现的字符串：.或..3. 长度不超过255个字符。
 
 **Type:** string
 
@@ -82,7 +88,7 @@ Short name of the account (used as the name of the personal folder).
 token?: Uint8Array
 ```
 
-Token obtained from the authentication management API. The value is left empty by default.
+表示从认证管理接口获取的token，默认为空。
 
 **Type:** Uint8Array
 

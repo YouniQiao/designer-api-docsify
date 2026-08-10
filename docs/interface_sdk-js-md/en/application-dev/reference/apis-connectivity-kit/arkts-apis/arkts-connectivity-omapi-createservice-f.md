@@ -1,5 +1,11 @@
 # createService
 
+## Modules to Import
+
+```TypeScript
+import { omapi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createService
 
 ```TypeScript
@@ -26,9 +32,9 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';

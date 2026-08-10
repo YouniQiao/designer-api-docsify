@@ -1,5 +1,11 @@
 # createBleScanner
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createBleScanner
 
 ```TypeScript
@@ -24,9 +30,9 @@ Create a ble scanner instance. Each ble scanner instance can be independently st
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the promise object. |
+| [BleScanner](arkts-connectivity-ble-blescanner-i.md) | Returns the promise object. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';

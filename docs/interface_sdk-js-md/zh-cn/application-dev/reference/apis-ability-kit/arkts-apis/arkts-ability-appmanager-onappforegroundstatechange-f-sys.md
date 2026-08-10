@@ -1,5 +1,11 @@
 # onAppForegroundStateChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onAppForegroundStateChange
 
 ```TypeScript
@@ -24,38 +30,13 @@ function onAppForegroundStateChange(observer: AppForegroundStateObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用状态监听器，用于监听应用的启动和退出。 |
+| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | 是 | 应用状态监听器，用于监听应用的启动和退出。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class AppForegroundStateObserverCustom implements appManager.AppForegroundStateObserver {
-  onAppStateChanged(appStateData: appManager.AppStateData) {
-    console.info(`[appManager] onAppStateChanged: ${JSON.stringify(appStateData)}`);
-  }
-}
-
-try {
-  let observer = new AppForegroundStateObserverCustom();
-  appManager.onAppForegroundStateChange(observer);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

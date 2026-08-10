@@ -1,12 +1,18 @@
 # getPermissionDef (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getPermissionDef
 
 ```TypeScript
 function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void
 ```
 
-Obtains the permission details by permission name. This API uses an asynchronous callback to return the result.
+按权限名称获取权限的详细信息，使用callback异步回调。
 
 **Since:** 8
 
@@ -28,8 +34,8 @@ Obtains the permission details by permission name. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | string | Yes | Name of the permission. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionDef&gt; | Yes | Callback used to return the permission details. |
+| permissionName | string | Yes | 需要查询的权限的名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Yes | 程序启动作为入参的回调函数，返回定义的权限信息。 |
 
 
 ## getPermissionDef
@@ -38,7 +44,7 @@ Obtains the permission details by permission name. This API uses an asynchronous
 function getPermissionDef(permissionName: string): Promise<PermissionDef>
 ```
 
-Obtains the permission details by permission name. This API uses a promise to return the result.
+按权限名称获取权限的详细信息，使用promise异步回调。
 
 **Since:** 8
 
@@ -60,11 +66,11 @@ Obtains the permission details by permission name. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | string | Yes | Name of the permission. |
+| permissionName | string | Yes | 需要查询的权限的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PermissionDef&gt; | Promise used to return the permission details. |
+| Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Promise对象，获取成功时返回权限详细信息。 |
 

@@ -6,7 +6,7 @@
 function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this device supports distributed notifications.This API uses an asynchronous callback to return the result.
+设置设备是否支持分布式通知（Callback形式）。
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ Sets whether this device supports distributed notifications.This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether the device supports distributed notifications. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| enable | boolean | Yes | 是否支持。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 设置设备是否支持分布式通知的回调函数。 |
 
 
 ## enableDistributed
@@ -38,7 +38,7 @@ Sets whether this device supports distributed notifications.This API uses an asy
 function enableDistributed(enable: boolean): Promise<void>
 ```
 
-Sets whether this device supports distributed notifications. This API uses a promise to return the result.
+设置设备是否支持分布式通知（Promise形式）。
 
 **Since:** 8
 
@@ -60,11 +60,11 @@ Sets whether this device supports distributed notifications. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether the device supports distributed notifications. |
+| enable | boolean | Yes | 是否支持。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

@@ -4,7 +4,7 @@
 export type IMAInputStartCallback = (kbController: KeyboardController, inputClient: InputClient) => void
 ```
 
-The callback of 'inputStart' event.
+输入法绑定成功事件的回调函数类型，用于定义inputStart事件触发时执行的回调函数格式。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ The callback of 'inputStart' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kbController | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | keyboard controller.  |
-| inputClient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | input client.  |
+| kbController | [KeyboardController](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyboardcontroller-i.md) | Yes | 回调函数，返回输入法操作相关实例。 |
+| inputClient | [InputClient](arkts-ime-inputmethodengine-inputclient-i.md) | Yes | 输入法操作相关实例。 |
 

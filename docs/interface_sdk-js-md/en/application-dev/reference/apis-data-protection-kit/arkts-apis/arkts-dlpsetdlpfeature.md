@@ -1,25 +1,34 @@
-# @ohos.dlpSetDlpFeature(DLP)
+# @ohos.dlpSetDlpFeature(设置数据防泄漏入口)
 
-This module provides APIs for controlling the Data Loss Prevention (DLP) feature, including enabling or disabling the DLP feature and returning the DLP status. It helps enterprises meet data security compliance requirements and implement access control and encryption protection for confidential files.
+本模块提供数据防泄漏（Data Loss Prevention，简称为DLP）特性开关的控制能力，包括开启和关闭DLP特性开关、返回特性开关设置结果等，帮助企业满足数据安全合规要求，实现机密文件的访问控制和加密保护。
 
-**Use scenarios**
+**使用场景**：
 
-- Data security compliance requirements must be met.  
-- Access control and encryption protection are provided for confidential files.
-    **NOTE**  
-    - The initial APIs of this module are supported since API version 26.0.0. Newly added APIs will be marked with a  
-    - superscript to indicate their earliest API version.  
-    - The APIs provided by this module are system APIs.
+- 需要满足数据安全合规要求的场景。  
+- 对机密文件进行访问控制和加密保护。
+
+> **说明：**
+> 
+> - 本模块首批接口从API version 26.0.0开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> - 本模块接口为系统接口。
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace dlpSetDlpFeature--><!--Device-unnamed-declare namespace dlpSetDlpFeature-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+```
 
 ## Summary
 
@@ -28,7 +37,7 @@ This module provides APIs for controlling the Data Loss Prevention (DLP) feature
 
 | Name | Description |
 | --- | --- |
-| [setDlpFeature](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md#setdlpfeature) | Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP protection function based on the DLP status specified using this API.  When this feature is enabled, right-click the file to be encrypted, and the encryption option is displayed in the shortcut menu. Files in .txt, .pdf, .xls, .xlsx, .ppt, .pptx, .doc, and .docx formats can be encrypted.  This API is used to enable or disable the DLP function in enterprise policies. |
+| [setDlpFeature](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md#setdlpfeature) | 设置DLP特性开关状态。使用Promise异步回调。调用成功后，DLP特性开关将设置为指定状态，系统将根据该状态启用或禁用DLP保护功能。  当特性开关处于开启状态时，右键单击支持加密的文件，右键菜单中会显示“加密保护”选项。可加密类型包括：.txt，.pdf，.xls，.xlsx，.ppt，.pptx，.doc，.docx。  企业策略开启或关闭数据防泄漏功能时使用此接口。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -36,8 +45,8 @@ This module provides APIs for controlling the Data Loss Prevention (DLP) feature
 
 | Name | Description |
 | --- | --- |
-| [DLPFeatureInfo](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) | Sets the DLP status. |
-| [StatusInfoResult](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) | Describes the DLP settings. |
+| [DLPFeatureInfo](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) | DLP特性开关的状态信息。 |
+| [StatusInfoResult](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) | DLP特性开关状态设置的结果信息。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -45,6 +54,6 @@ This module provides APIs for controlling the Data Loss Prevention (DLP) feature
 
 | Name | Description |
 | --- | --- |
-| [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | Enumerates DLP statuses. |
+| [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | DLP特性开关状态的枚举。 |
 <!--DelEnd-->
 

@@ -1,6 +1,6 @@
 # NavDestinationActiveReason
 
-Enumerates reasons for the activation state changes of the **NavDestination** component.
+NavDestination激活态或者非激活态变化的原因。
 
 **Since:** 17
 
@@ -16,7 +16,7 @@ Enumerates reasons for the activation state changes of the **NavDestination** co
 TRANSITION = 0
 ```
 
-Activation state changes due to page navigation.
+通过页面跳转的方式使NavDestination激活态发生变化。
 
 **Since:** 17
 
@@ -36,7 +36,7 @@ Activation state changes due to page navigation.
 CONTENT_COVER = 1
 ```
 
-Activation state changes due to the opening or closing of a modal page.
+通过全模态的开启和关闭使NavDestination激活态发生变化。
 
 **Since:** 17
 
@@ -56,7 +56,7 @@ Activation state changes due to the opening or closing of a modal page.
 SHEET = 2
 ```
 
-Activation state changes due to the opening or closing of a sheet.
+通过半模态的开启或关闭使NavDestination激活态发生变化。
 
 **Since:** 17
 
@@ -76,7 +76,7 @@ Activation state changes due to the opening or closing of a sheet.
 DIALOG = 3
 ```
 
-Activation state changes due to the opening or closing of a custom dialog box.
+通过自定义Dialog开启或关闭使NavDestination激活态发生变化。
 
 **Since:** 17
 
@@ -96,7 +96,7 @@ Activation state changes due to the opening or closing of a custom dialog box.
 OVERLAY = 4
 ```
 
-Activation state changes due to the opening or closing of an overlay using **OverlayManager**.
+通过OverlayManager开启或者关闭Overlay使NavDestination激活态发生变化。
 
 **Since:** 17
 
@@ -116,7 +116,7 @@ Activation state changes due to the opening or closing of an overlay using **Ove
 APP_STATE = 5
 ```
 
-Activation state changes due to switching between foreground and background states of the application.
+通过前后台切换使NavDestination激活态发生变化。
 
 **Since:** 17
 

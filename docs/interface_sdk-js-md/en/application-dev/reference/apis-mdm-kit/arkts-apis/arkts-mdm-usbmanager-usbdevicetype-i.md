@@ -1,9 +1,8 @@
 # UsbDeviceType
 
-Represents the USB device type information.
+USB设备类型信息。
 
-You can obtain the list of USB devices connected to the host device through the  
-[getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API, and then find the type of the current device in the returned list.
+可通过[getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md/arkts-basicservices-usbmanager-getdevices-f.md#getdevices)接口获取已接入主设备的USB设备列表，并从返回值列表中查找当前设备的类型信息。
 
 **Since:** 14
 
@@ -13,22 +12,27 @@ You can obtain the list of USB devices connected to the host device through the
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.MDMKit';
+```
+
 ## baseClass
 
 ```TypeScript
 baseClass: number
 ```
 
-Type code.
+类型编码。
 
-First, determine the type of descriptor to pass in based on this value. If the descriptor is **DEVICE**, this field takes the value of the **USBDevice.clazz** field; if the descriptor is **INTERFACE**, this field takes the value of the **USBDevice.configs.interfaces.clazz** field.
+先根据此值确定descriptor应该传入的类型。若descriptor为DEVICE，则本字段取USBDevice.clazz字段值，若descriptor为INTERFACE，则本字段取USBDevice.configs.interfaces.clazz字段值。
 
-If the field value is 255 (indicating the device's type code is a vendor-defined code), calling the  
-[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or  
-[removeDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API to enable or disable the device will not take effect. If the field value is not defined in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, calling the  
-[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ or  
-[removeDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ API to enable or disable the device will also not take effect.
+若字段值为255，表示此设备的类型编码是厂商自定义编码，则使用[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)/  
+[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices)接口禁用/解禁该设备不生效；若字段值未在  
+[defined-class-codes](https://www.usb.org/defined-class-codes)中定义，则使用  
+[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)/  
+[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices)接口禁用/解禁该设备不生效。
 
 **Type:** number
 
@@ -48,19 +52,15 @@ If the field value is 255 (indicating the device's type code is a vendor-defined
 descriptor: Descriptor
 ```
 
-USB descriptor.
+USB描述符。
 
-If the value of **USBDevice.clazz** is **0**, you need to find the value of  
-**USBDevice.configs.interfaces.clazz** in the Base Class column in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. The Descriptor Usage column in the row where the search result is located indicates the descriptor type to be transferred. If the value of Descriptor Usage is  
-**Both**, both types can be transferred. If device-level disabling is required, transfer **DEVICE**. If interface  
--level disabling is required, transfer **INTERFACE**.
+若此值USBDevice.clazz字段值为0，则须在[defined-class-codes](https://www.usb.org/defined-class-codes)中的Base Class列查找此值USBDevice.configs.interfaces.clazz字段值，查找结果所在行所对应的Descriptor Usage列就表示当前应该传入的descriptor类型（若Descriptor Usage列为Both，表示两种类型都可以传入，需要设备级禁用时传入DEVICE，需要接口级禁用时传入INTERFACE）;
 
-If the value of **USBDevice.clazz** is **255** (indicating the device's type code is a vendor-defined code),calling the [addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ or  
-[removeDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API to enable or disable the device will not take effect. If the value of **USBDevice.clazz** is another value, search for the value in the Base Class column of \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_. The Descriptor Usage column in the row where the search result is located indicates the descriptor type to be transferred. If the value of Descriptor Usage is **Both**, both types can be transferred. If device-level disabling is required, transfer  
-**DEVICE**. If interface-level disabling is required, transfer **INTERFACE**.
+若此值USBDevice.clazz字段值为255，表示此设备的类型编码是厂商自定义编码，则使用  
+[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)/  
+[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices)接口禁用/解禁该设备不生效；若此值USBDevice.clazz字段值为其他值，则须在[defined-class-codes](https://www.usb.org/defined-class-codes)中的Base Class列查找该值，查找结果所在行所对应的Descriptor Usage列就表示当前应该传入的descriptor类型（若Descriptor Usage列为Both，表示两种类型都可以传入，需要设备级禁用时传入DEVICE，需要接口级禁用时传入INTERFACE）。
 
-**Type:** Descriptor
+**Type:** [Descriptor](arkts-mdm-usbmanager-descriptor-e.md)
 
 **Since:** 14
 
@@ -78,17 +78,15 @@ If the value of **USBDevice.clazz** is **255** (indicating the device's type cod
 protocol: number
 ```
 
-Protocol code.
+协议编码。
 
-First, determine the type of descriptor to pass in based on the value of baseClass. If the descriptor is  
-**DEVICE**, this field takes the value of the **USBDevice.protocol** field; if the descriptor is **INTERFACE**,this field takes the value of the **USBDevice.configs.interfaces.protocol** field.
+先根据baseClass的值确定descriptor应该传入的类型。若descriptor为DEVICE，则本字段取USBDevice.protocol字段值，若descriptor为INTERFACE，则本字段取USBDevice.configs.interfaces.protocol字段值。
 
-If the field value is 255 (indicating the device's protocol code is a vendor-defined code), calling the  
-[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or  
-[removeDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API to enable or disable the device will not take effect. If the field value is not defined in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, calling the  
-[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ or  
-[removeDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ API to enable or disable the device will also not take effect.
+若字段值为255，表示此设备的协议编码是厂商自定义编码，则使用[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)/  
+[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices)接口禁用/解禁该设备不生效；若字段值未在  
+[defined-class-codes](https://www.usb.org/defined-class-codes)中定义，则使用  
+[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)/  
+[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices)接口禁用/解禁该设备不生效。
 
 **Type:** number
 
@@ -108,17 +106,15 @@ If the field value is 255 (indicating the device's protocol code is a vendor-def
 subClass: number
 ```
 
-Subtype code.
+子类型编码。
 
-First, determine the type of descriptor to pass in based on the value of baseClass. If the descriptor is  
-**DEVICE**, this field takes the value of the **USBDevice.subClass** field; if the descriptor is **INTERFACE**,this field takes the value of the **USBDevice.configs.interfaces.subClass** field.
+先根据baseClass的值确定descriptor应该传入的类型。若descriptor为DEVICE，则本字段取USBDevice.subClass字段值，若descriptor为INTERFACE，则本字段取USBDevice.configs.interfaces.subClass字段值。
 
-If the field value is 255 (indicating that the subtype code of the device is a vendor-defined code), calling the  
-[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or  
-[removeDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API to enable or disable the device will not take effect. If the field value is not defined in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, calling the  
-[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ or  
-[removeDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ API to enable or disable the device will also not take effect.
+若字段值为255，表示此设备的子类型编码是厂商自定义编码，则使用[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)/  
+[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices)接口禁用/解禁该设备不生效；若字段值未在  
+[defined-class-codes](https://www.usb.org/defined-class-codes)中定义，则使用  
+[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)/  
+[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices)接口禁用/解禁该设备不生效。
 
 **Type:** number
 

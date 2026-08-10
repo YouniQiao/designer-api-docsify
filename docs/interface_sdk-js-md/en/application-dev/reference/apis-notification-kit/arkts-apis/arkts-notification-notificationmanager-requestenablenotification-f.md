@@ -1,12 +1,18 @@
 # requestEnableNotification
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## requestEnableNotification
 
 ```TypeScript
 function requestEnableNotification(callback: AsyncCallback<void>): void
 ```
 
-Requests notification to be enabled for this application. This API uses an asynchronous callback to return the result.
+当前应用请求通知使能。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,20 +30,20 @@ Requests notification to be enabled for this application. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当应用请求通知使能成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600013](../errorcode-notification.md#1600013-notification-popup-window-displayed) | A notification dialog box is already displayed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600013 | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -46,7 +52,7 @@ let requestEnableNotificationCallback = (err: BusinessError): void => {
   if (err) {
     console.error(`requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("requestEnableNotification success");
+    console.info(`requestEnableNotification success`);
   }
 };
 notificationManager.requestEnableNotification(requestEnableNotificationCallback);
@@ -59,17 +65,17 @@ notificationManager.requestEnableNotification(requestEnableNotificationCallback)
 function requestEnableNotification(context: UIAbilityContext, callback: AsyncCallback<void>): void
 ```
 
-Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    - This API can be called only after the application UI is loaded (that is,  
-    [loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is  
-    successfully called).  
-    
-    - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization  
-    and the user rejects the authorization, the application cannot use this API to open the dialog box again. However  
-    , it can call [openNotificationSettingsWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    to open the notification management dialog box.
+应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用callback异步回调。
+
+> **说明：**
+> 
+> - 仅当应用界面加载完成后（即调用
+> [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)成功），方可使用该接口
+> 。
+> 
+> - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用
+> [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#opennotificationsettingswithresult)二次申请授权，拉起通知管理弹窗
+> 。
 
 **Since:** 10
 
@@ -85,21 +91,21 @@ Requests notification to be enabled for this application. You can call this API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability context bound to the notification dialog box. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | 通知弹窗绑定Ability的上下文。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当应用通过弹窗获取用户授权成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600013](../errorcode-notification.md#1600013-notification-popup-window-displayed) | A notification dialog box is already displayed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600013 | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -136,7 +142,7 @@ class MyAbility extends UIAbility {
 function requestEnableNotification(): Promise<void>
 ```
 
-Requests notification to be enabled for this application. This API uses a promise to return the result.
+当前应用请求通知使能。使用Promise异步回调。
 
 **Since:** 9
 
@@ -154,25 +160,25 @@ Requests notification to be enabled for this application. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600013](../errorcode-notification.md#1600013-notification-popup-window-displayed) | A notification dialog box is already displayed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 1600013 | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 notificationManager.requestEnableNotification().then(() => {
-  console.info("requestEnableNotification success");
+  console.info(`requestEnableNotification success`);
 }).catch((err: BusinessError) => {
   console.error(`requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -185,17 +191,17 @@ notificationManager.requestEnableNotification().then(() => {
 function requestEnableNotification(context: UIAbilityContext): Promise<void>
 ```
 
-Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - This API can be called only after the application UI is loaded (that is,  
-    [loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is  
-    successfully called).  
-    
-    - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization  
-    and the user rejects the authorization, the application cannot use this API to open the dialog box again. However  
-    , it can call [openNotificationSettingsWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    to open the notification management dialog box.
+应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 仅当应用界面加载完成后（即调用
+> [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)成功），方可使用该接口
+> 。
+> 
+> - 在使用该接口拉起通知授权弹窗后，如果用户拒绝授权，将无法使用该接口再次拉起弹窗。开发者可以调用
+> [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#opennotificationsettingswithresult)二次申请授权，拉起通知管理弹窗
+> 。
 
 **Since:** 10
 
@@ -211,26 +217,26 @@ Requests notification to be enabled for this application. You can call this API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability context bound to the notification dialog box. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | 通知弹窗绑定的Ability上下文。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [1600013](../errorcode-notification.md#1600013-notification-popup-window-displayed) | A notification dialog box is already displayed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600013 | A notification dialog box is already displayed.<br>**Applicable version:** 11 and later |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600004 | Notification disabled.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

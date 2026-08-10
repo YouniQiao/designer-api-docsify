@@ -1,6 +1,6 @@
 # SyncProgress
 
-Represents information about the device-cloud sync progress.
+端云同步过程。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents information about the device-cloud sync progress.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## error
 
 ```TypeScript
 error: ErrorType
 ```
 
-Sync error.
+枚举值，同步失败错误类型。
 
-**Type:** ErrorType
+**Type:** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
 
 **Since:** 12
 
@@ -34,9 +40,9 @@ Sync error.
 state: SyncState
 ```
 
-Device-cloud sync state.
+枚举值，端云同步状态。
 
-**Type:** SyncState
+**Type:** [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
 
 **Since:** 12
 

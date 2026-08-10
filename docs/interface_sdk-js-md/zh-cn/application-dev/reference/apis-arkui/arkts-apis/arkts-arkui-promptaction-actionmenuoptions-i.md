@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## buttons
 
 ```TypeScript
@@ -19,7 +25,7 @@ buttons: PromptActionSingleButton | PromptActionDoubleButtons | PromptActionTrip
 
 菜单中菜单项按钮的数组，结构为： {text:'button', color: '#666666'}.支持1-6个按钮。按钮数量大于6个时，仅显示前6个按钮，之后的按钮不显示。
 
-**类型：** PromptActionSingleButton \| PromptActionDoubleButtons \| PromptActionTripleButtons \| PromptActionQuadrupleButtons \| PromptActionQuintupleButtons \| PromptActionSextupleButtons
+**类型：** [PromptActionSingleButton](arkts-arkui-promptaction-promptactionsinglebutton-t.md) \| PromptActionDoubleButtons \| PromptActionTripleButtons \| PromptActionQuadrupleButtons \| PromptActionQuintupleButtons \| PromptActionSextupleButtons
 
 **起始版本：** 23
 
@@ -37,9 +43,9 @@ buttons: PromptActionSingleButton | PromptActionDoubleButtons | PromptActionTrip
 immersiveMode?: ImmersiveMode
 ```
 
-设置页面内菜单蒙层效果。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_- 默认值：ImmersiveMode.DEFAULT \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面内菜单蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** ImmersiveMode
+**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -59,7 +65,7 @@ immersiveMode?: ImmersiveMode
 isModal?: boolean
 ```
 
-菜单是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与菜单周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与菜单周围其他控件进行交互。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值：true
+菜单是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与菜单周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与菜单周围其他控件进行交互。&lt;br/&gt;默认值：true
 
 **类型：** boolean
 
@@ -81,9 +87,9 @@ isModal?: boolean
 levelMode?: LevelMode
 ```
 
-设置菜单显示层级。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_- 默认值：LevelMode.OVERLAY \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_- 当且仅当showInSubWindow属性设置为false时生效。
+设置菜单显示层级。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
 
-**类型：** LevelMode
+**类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
@@ -103,7 +109,7 @@ levelMode?: LevelMode
 levelUniqueId?: int
 ```
 
-设置页面级菜单需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取。取值范围：大于等于0的数字。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级菜单需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)获取。取值范围：大于等于0的数字。&lt;br /&gt;**说明：**&lt;br/&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** int
 
@@ -123,9 +129,9 @@ levelUniqueId?: int
 onDidAppear?: VoidCallback
 ```
 
-菜单弹出后的事件回调。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_2.快速点击弹出，关闭菜单时，onWillDisappear在onDidAppear前生效。
+菜单弹出后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.快速点击弹出，关闭菜单时，onWillDisappear在onDidAppear前生效。
 
-**类型：** VoidCallback
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **起始版本：** 23
 
@@ -143,9 +149,9 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-菜单消失后的事件回调。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
+菜单消失后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** VoidCallback
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **起始版本：** 23
 
@@ -163,9 +169,9 @@ onDidDisappear?: VoidCallback
 onWillAppear?: VoidCallback
 ```
 
-菜单显示动效前的事件回调。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
+菜单显示动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** VoidCallback
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **起始版本：** 23
 
@@ -183,9 +189,9 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-菜单退出动效前的事件回调。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
+菜单退出动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** VoidCallback
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **起始版本：** 23
 
@@ -207,8 +213,8 @@ showInSubWindow?: boolean
 
 默认值：false，在子窗口不显示菜单。
 
-**说明：** - showInSubWindow为true的菜单无法触发显示另一个showInSubWindow为true的菜单。  
- - 若在UIExtension中设置showInSubWindow为true, 菜单将基于UIExtension的宿主窗口对齐。
+**说明：** - showInSubWindow为true的菜单无法触发显示另一个showInSubWindow为true的菜单。
+- 若在UIExtension中设置showInSubWindow为true, 菜单将基于UIExtension的宿主窗口对齐。
 
 **类型：** boolean
 
@@ -230,7 +236,7 @@ showInSubWindow?: boolean
 systemMaterial?: uiMaterial.Material
 ```
 
-设置弹窗的系统材质。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值：ImmersiveOptions的style为ImmersiveStyle.ULTRA\_THICK的ImmersiveMaterial对象。设置undefined时与默认值保持一致。不同的材质具有不同的效果，可以影响弹窗的背景色、边框、阴影等视觉属性。
+设置弹窗的系统材质。&lt;br/&gt;默认值：ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象。设置undefined时与默认值保持一致。不同的材质具有不同的效果，可以影响弹窗的背景色、边框、阴影等视觉属性。
 
 **类型：** uiMaterial.Material
 
@@ -250,7 +256,7 @@ systemMaterial?: uiMaterial.Material
 title?: string | Resource
 ```
 
-标题文本。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值：undefined，取值为undefined默认不显示标题。
+标题文本。&lt;br/&gt;默认值：undefined，取值为undefined默认不显示标题。
 
 **类型：** string \| Resource
 

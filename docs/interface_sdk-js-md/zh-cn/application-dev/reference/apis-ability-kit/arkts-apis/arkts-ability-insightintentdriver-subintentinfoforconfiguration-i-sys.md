@@ -1,6 +1,6 @@
 # SubIntentInfoForConfiguration（系统接口）
 
-用于描述\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的特有信息。
+用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)的特有信息。
 
 **起始版本：** 23
 
@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## entities
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly entities?: Record<string, Object>
 
 表示意图包含的实体信息。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 23
 
@@ -42,7 +48,7 @@ readonly form?: FormIntentInfo
 
 表示意图绑定的卡片信息。
 
-**类型：** FormIntentInfo
+**类型：** [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md)
 
 **起始版本：** 23
 
@@ -108,7 +114,7 @@ readonly serviceExtension?: ServiceExtensionIntentInfo
 
 表示意图绑定的ServiceExtensionAbility组件信息。
 
-**类型：** ServiceExtensionIntentInfo
+**类型：** [ServiceExtensionIntentInfo](arkts-ability-insightintentdriver-serviceextensionintentinfo-i-sys.md)
 
 **起始版本：** 23
 
@@ -152,7 +158,7 @@ readonly uiAbility?: UIAbilityIntentInfo
 
 表示意图绑定的UIAbility组件信息，包含"ability"字段和"executeMode"字段。
 
-**类型：** UIAbilityIntentInfo
+**类型：** [UIAbilityIntentInfo](arkts-ability-insightintentdriver-uiabilityintentinfo-i-sys.md)
 
 **起始版本：** 23
 
@@ -174,7 +180,7 @@ readonly uiExtension?: UIExtensionIntentInfo
 
 表示意图绑定的UIExtensionAbility组件信息。
 
-**类型：** UIExtensionIntentInfo
+**类型：** [UIExtensionIntentInfo](arkts-ability-insightintentdriver-uiextensionintentinfo-i-sys.md)
 
 **起始版本：** 23
 

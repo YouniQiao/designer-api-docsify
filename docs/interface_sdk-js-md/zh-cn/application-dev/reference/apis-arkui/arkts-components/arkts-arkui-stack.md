@@ -20,12 +20,13 @@ Stack(options?: StackOptions)
 ```
 
 堆叠容器，子组件按照顺序依次入栈，后一个子组件覆盖前一个子组件。堆叠顺序基于子组件在父容器中的声明顺序，后声明的子组件具有更高的渲染层级，在视觉上覆盖前面的子组件。
-    **说明：**  
-    
-    组件嵌套层数过多会导致性能下降。在可通过组件属性或系统API实现相同布局效果的场景中，使用这些替代方法可以减少嵌套层数，从而优化性能。最佳实践请参考组件嵌套优化-优先使用组件属性代替嵌套组件。  
-    
-    该接口的alignContent参数与[align]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_同时设置时，后设置的属性值会覆盖先设置的属性值。该接口的alignContent参数与  
-    alignContent属性同时设置时，以属性设置的值为准。
+
+> **说明：**
+> 
+> 组件嵌套层数过多会导致性能下降。在可通过组件属性或系统API实现相同布局效果的场景中，使用这些替代方法可以减少嵌套层数，从而优化性能。最佳实践请参考组件嵌套优化-优先使用组件属性代替嵌套组件。
+> 
+> 该接口的alignContent参数与[align]{@link CommonMethod#align(value: Alignment)}同时设置时，后设置的属性值会覆盖先设置的属性值。该接口的alignContent参数与
+> alignContent属性同时设置时，以属性设置的值为准。
 
 **起始版本：** 7
 
@@ -43,7 +44,8 @@ Stack(options?: StackOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 设置子组件在容器内的对齐方式。当需要将子组件对齐到特定位置（如顶部、底部、左上角等）而非默认居中时传入此参数；如果不传入此参数，则使用StackOptions的 默认配置，其中alignContent默认为Alignment.Center。 |
+| options | [StackOptions](arkts-arkui-stackoptions-i.md) | 否 | 设置子组件在容器内的对齐方式。当需要将子组件对齐到特定位置（如顶部、底部、左上角等）而非默认居中时传入此参数；如果不传入此参数，则使用StackOptions的 默认配置，其中alignContent默认为Alignment.Center。 |
 
 ## 汇总
 
+- [StackOptions](arkts-arkui-stack-stackoptions-i.md)

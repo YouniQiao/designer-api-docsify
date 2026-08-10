@@ -1,6 +1,6 @@
 # ConnectCallback（系统接口）
 
-通过[enableAbilityWithCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口启用辅助扩展应用时提供的回调函数。辅助扩展应用连接断开时，回调函数将被调用。
+通过[enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback)接口启用辅助扩展应用时提供的回调函数。辅助扩展应用连接断开时，回调函数将被调用。
 
 **起始版本：** 23
 
@@ -11,6 +11,12 @@
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { config } from 'kits/@kit.AccessibilityKit';
+```
 
 ## onDisconnect
 

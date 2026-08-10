@@ -1,6 +1,6 @@
 # AxisModel
 
-Enumerates the axis types for focus axis events.
+定义焦点轴事件的轴类型。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Enumerates the axis types for focus axis events.
 ABS_X = 0
 ```
 
-Game controller x-axis.
+游戏手柄X轴。
 
 **Since:** 15
 
@@ -36,7 +36,7 @@ Game controller x-axis.
 ABS_Y = 1
 ```
 
-Game controller y-axis.
+游戏手柄Y轴。
 
 **Since:** 15
 
@@ -56,7 +56,7 @@ Game controller y-axis.
 ABS_Z = 2
 ```
 
-Game controller z-axis.
+游戏手柄Z轴。
 
 **Since:** 15
 
@@ -76,7 +76,7 @@ Game controller z-axis.
 ABS_RZ = 3
 ```
 
-Game controller rz-axis.
+游戏手柄RZ轴。
 
 **Since:** 15
 
@@ -96,7 +96,7 @@ Game controller rz-axis.
 ABS_GAS = 4
 ```
 
-Game controller GAS-axis.
+游戏手柄GAS轴。
 
 **Since:** 15
 
@@ -116,7 +116,7 @@ Game controller GAS-axis.
 ABS_BRAKE = 5
 ```
 
-Game controller BRAKE-axis.
+游戏手柄BRAKE轴。
 
 **Since:** 15
 
@@ -136,7 +136,7 @@ Game controller BRAKE-axis.
 ABS_HAT0X = 6
 ```
 
-Game controller HAT0X-axis.
+游戏手柄HAT0X轴。
 
 **Since:** 15
 
@@ -156,7 +156,7 @@ Game controller HAT0X-axis.
 ABS_HAT0Y = 7
 ```
 
-Game controller HAT0Y-axis.
+游戏手柄HAT0Y轴。
 
 **Since:** 15
 
@@ -176,7 +176,7 @@ Game controller HAT0Y-axis.
 ABS_RX = 8
 ```
 
-Game controller RX-axis.
+游戏手柄RX轴。
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ Game controller RX-axis.
 ABS_RY = 9
 ```
 
-Game controller RY-axis.
+游戏手柄RY轴。
 
 **Since:** 23
 
@@ -216,7 +216,7 @@ Game controller RY-axis.
 ABS_THROTTLE = 10
 ```
 
-Game controller THROTTLE-axis.
+游戏手柄THROTTLE轴。
 
 **Since:** 23
 
@@ -236,7 +236,7 @@ Game controller THROTTLE-axis.
 ABS_RUDDER = 11
 ```
 
-Game controller RUDDER-axis.
+游戏手柄RUDDER轴。
 
 **Since:** 23
 
@@ -256,7 +256,7 @@ Game controller RUDDER-axis.
 ABS_WHEEL = 12
 ```
 
-Game controller WHEEL-axis.
+游戏手柄WHEEL轴。
 
 **Since:** 23
 
@@ -276,7 +276,7 @@ Game controller WHEEL-axis.
 ABS_HAT1X = 13
 ```
 
-Game controller HAT1X-axis.
+游戏手柄HAT1X轴。
 
 **Since:** 23
 
@@ -296,7 +296,7 @@ Game controller HAT1X-axis.
 ABS_HAT1Y = 14
 ```
 
-Game controller HAT1Y-axis.
+游戏手柄HAT1Y轴。
 
 **Since:** 23
 
@@ -316,7 +316,7 @@ Game controller HAT1Y-axis.
 ABS_HAT2X = 15
 ```
 
-Game controller HAT2X-axis.
+游戏手柄HAT2X轴。
 
 **Since:** 23
 
@@ -336,7 +336,7 @@ Game controller HAT2X-axis.
 ABS_HAT2Y = 16
 ```
 
-Game controller HAT2Y-axis.
+游戏手柄HAT2Y轴。
 
 **Since:** 23
 
@@ -356,7 +356,7 @@ Game controller HAT2Y-axis.
 ABS_HAT3X = 17
 ```
 
-Game controller HAT3X-axis.
+游戏手柄HAT3X轴。
 
 **Since:** 23
 
@@ -376,7 +376,7 @@ Game controller HAT3X-axis.
 ABS_HAT3Y = 18
 ```
 
-Game controller HAT3Y-axis.
+游戏手柄HAT3Y轴。
 
 **Since:** 23
 

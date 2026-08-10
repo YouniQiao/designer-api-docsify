@@ -1,6 +1,6 @@
 # InteractionUI (System API)
 
-Defines the base information of the interaction UI to be displayed after the current intent execution completes.This is a base class. Use its subclasses such as \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ in practice.
+定义当前意图执行完成后需要展示的交互界面的信息。
 
 **Since:** 26.1.0
 
@@ -12,13 +12,19 @@ Defines the base information of the interaction UI to be displayed after the cur
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## interactionUIType
 
 ```TypeScript
 interactionUIType: string
 ```
 
-Type of the interaction UI.
+交互界面的类型。
 
 **Type:** string
 

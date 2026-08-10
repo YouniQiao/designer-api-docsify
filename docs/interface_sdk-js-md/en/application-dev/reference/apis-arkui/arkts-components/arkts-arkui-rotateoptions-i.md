@@ -1,6 +1,6 @@
 # RotateOptions
 
-Defines component rotation parameters.
+组件旋转参数。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Defines component rotation parameters.
 angle: number | string
 ```
 
-Angle to rotate. A positive angle indicates a clockwise rotation, and a negative angle indicates a counterclockwise rotation. The value can be of the string type, for example, **'90deg'**.
+旋转角度。取值为正时相对于旋转轴方向顺时针转动，取值为负时相对于旋转轴方向逆时针转动。取值可为string类型，如'90deg'。
 
 **Type:** number \| string
 
@@ -38,10 +38,9 @@ Angle to rotate. A positive angle indicates a clockwise rotation, and a negative
 centerX?: number | string
 ```
 
-X coordinate of the transformation center point (anchor). The value can be of the string type, for example,  
-**'50'** and **'50%'**.
+变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。取值可为string类型，如'50'，'50%'。
 
-Unit: vp
+单位：vp
 
 **Type:** number \| string
 
@@ -63,10 +62,9 @@ Unit: vp
 centerY?: number | string
 ```
 
-Y coordinate of the transformation center point (anchor). The value can be of the string type, for example,  
-**'50'** and **'50%'**.
+变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。取值可为string类型，如'50'，'50%'。
 
-Unit: vp
+单位：vp
 
 **Type:** number \| string
 
@@ -88,11 +86,11 @@ Unit: vp
 centerZ?: number
 ```
 
-Z-axis anchor, that is, the z-component of the 3D rotation center point.
+z轴锚点，即3D旋转中心点的z轴分量。
 
-Default value: **0**.
+默认值：0
 
-Unit: px
+单位：px
 
 **Type:** number
 
@@ -118,14 +116,13 @@ Unit: px
 perspective?: number
 ```
 
-Z-axis coordinate of the camera. The value indicates the viewing distance, that is, the distance between the camera and the z=0 plane. The positive and negative values of the parameter determine the camera observation direction.When perspective is set to 0, the system automatically calculates a proper camera Z-axis position. The value is negative.
+相机放置的z轴坐标。数值大小表示视距，即相机到z=0平面的距离。取值的正负决定了相机观察的方向。当perspective=0，系统会自动计算适合的相机z轴位置，取值为负数。
 
-The rotation axis and center point are defined based on the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. When the component moves, the coordinate system does not follow it.
+旋转轴和旋转中心点都基于[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)设定，组件发生位移时，坐标系不会随之移动。
 
-Default value: **0**.
+默认值：0
 
-Unit: px
+单位：px
 
 **Type:** number
 
@@ -151,7 +148,7 @@ Unit: px
 x?: number
 ```
 
-X coordinate of the rotation axis vector.
+旋转轴向量x坐标。
 
 **Type:** number
 
@@ -173,7 +170,7 @@ X coordinate of the rotation axis vector.
 y?: number
 ```
 
-Y coordinate of the rotation axis vector.
+旋转轴向量y坐标。
 
 **Type:** number
 
@@ -195,7 +192,7 @@ Y coordinate of the rotation axis vector.
 z?: number
 ```
 
-Z coordinate of the rotation axis vector.
+旋转轴向量z坐标。
 
 **Type:** number
 

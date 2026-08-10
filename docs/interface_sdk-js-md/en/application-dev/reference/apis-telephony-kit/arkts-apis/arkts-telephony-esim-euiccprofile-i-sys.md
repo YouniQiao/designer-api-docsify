@@ -12,6 +12,12 @@ Information about an embedded profile (subscription) on an eUICC.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## accessRules
 
 ```TypeScript
@@ -80,7 +86,7 @@ operatorId: OperatorId
 
 The operator Id of the profile.
 
-**Type:** OperatorId
+**Type:** [OperatorId](arkts-telephony-esim-operatorid-i-sys.md)
 
 **Since:** 18
 
@@ -100,7 +106,7 @@ policyRules: PolicyRules
 
 The policy rules of the profile.
 
-**Type:** PolicyRules
+**Type:** [PolicyRules](arkts-telephony-esim-policyrules-e-sys.md)
 
 **Since:** 18
 
@@ -120,7 +126,7 @@ profileClass: ProfileClass
 
 Profile class for the profile.
 
-**Type:** ProfileClass
+**Type:** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
 **Since:** 18
 
@@ -180,7 +186,7 @@ state: ProfileState
 
 The profile state.
 
-**Type:** ProfileState
+**Type:** [ProfileState](arkts-telephony-esim-profilestate-e-sys.md)
 
 **Since:** 18
 

@@ -1,6 +1,6 @@
 # SettingContent
 
-The definition of setting content
+设置内容的定义（音频模板里有定义设置页面，设置内容用于设置页的填充）。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of setting content
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## imageTags
 
 ```TypeScript
 imageTags?: image.PixelMap[]
 ```
 
-Tag descriptions of the setting content.
+设置内容的图片标签数组。
 
 **Type:** image.PixelMap[]
 
@@ -36,7 +42,7 @@ Tag descriptions of the setting content.
 isSelected: boolean
 ```
 
-Is selected the setting content.
+是否选择设置项内容。true表示选择，false表示不选择。无默认值。
 
 **Type:** boolean
 
@@ -56,7 +62,7 @@ Is selected the setting content.
 textTags?: string[]
 ```
 
-Text descriptions of the setting content.
+设置内容的描述的数组。
 
 **Type:** string[]
 
@@ -76,7 +82,7 @@ Text descriptions of the setting content.
 value: string
 ```
 
-Value of the setting content.
+设置的内容。
 
 **Type:** string
 

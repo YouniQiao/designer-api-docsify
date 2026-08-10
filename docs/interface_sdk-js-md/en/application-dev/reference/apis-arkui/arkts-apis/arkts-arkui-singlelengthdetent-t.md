@@ -6,7 +6,7 @@ export type SingleLengthDetent = [
 ]
 ```
 
-Defines the detent array of a single length.
+定义了单个高度的挡位。
 
 **Since:** 23
 

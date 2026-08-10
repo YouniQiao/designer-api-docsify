@@ -1,6 +1,6 @@
 # BackgroundMode
 
-Defines the type of a continuous task.
+长时任务类型。
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ Defines the type of a continuous task.
 DATA_TRANSFER = 1
 ```
 
-Data transfer.
+数据传输。
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ Data transfer.
 AUDIO_PLAYBACK = 2
 ```
 
-Audio playback.
+音频播放。
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ Audio playback.
 AUDIO_RECORDING = 3
 ```
 
-Audio recording.
+录音。
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Audio recording.
 LOCATION = 4
 ```
 
-Positioning and navigation.
+定位导航。
 
 **Since:** 8
 
@@ -100,7 +100,7 @@ Positioning and navigation.
 BLUETOOTH_INTERACTION = 5
 ```
 
-Bluetooth-related task.
+蓝牙相关。
 
 **Since:** 8
 
@@ -120,7 +120,7 @@ Bluetooth-related task.
 MULTI_DEVICE_CONNECTION = 6
 ```
 
-Multi-device connection.
+多设备互联。
 
 **Since:** 8
 
@@ -140,7 +140,7 @@ Multi-device connection.
 TASK_KEEPING = 9
 ```
 
-Computing task (effective only for specific devices).
+计算任务（仅在特定设备生效）。
 
 **Since:** 8
 

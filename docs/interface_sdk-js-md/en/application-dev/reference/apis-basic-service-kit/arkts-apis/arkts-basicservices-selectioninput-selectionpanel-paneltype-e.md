@@ -1,6 +1,6 @@
 # PanelType
 
-Enumerates the word selection panel types, which defines the two-level architecture of the panel: menu panel (level 1) and main panel (level 2).
+划词面板类型枚举，定义面板的两级架构：菜单面板（一级）和主面板（二级）。
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Enumerates the word selection panel types, which defines the two-level architect
 MENU_PANEL = 1
 ```
 
-Menu panel, which serves as the level-1 panel to display the functions that the current app can provide, such as translation and search.
+菜单面板为一级面板，显示当前应用可以提供的功能，如翻译、搜索等。
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Menu panel, which serves as the level-1 panel to display the functions that the 
 MAIN_PANEL = 2
 ```
 
-Main panel, which serves as the level-2 panel and is displayed when a user taps a function button on the menu panel. It displays specific content such as translation or search results.
+主面板为二级面板，当用户点击菜单面板中的功能按钮时弹出，展示具体的翻译或搜索结果等内容。
 
 **Since:** 24
 

@@ -1,16 +1,20 @@
 # cancel
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## cancel
 
 ```TypeScript
 function cancel(id: int, callback: AsyncCallback<void>): void
 ```
 
-Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result.
+根据指定的通知ID取消已发布的通知。使用callback异步回调。
 
-After cancellation, the corresponding notification will be removed from the notification center, status bar, etc., and will no longer be visible to the user.
-
-Compared with notificationManager.cancel(id, label, callback), which includes the label parameter,this API does not pass in a label and will cancel the notification matching the specified ID.When a notification is published with a non-empty label, the\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ API must be used to cancel it.
+取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。与带label参数的notificationManager.cancel(id, label, callback)相比，此接口不传入label，将取消与指定ID匹配的通知。当发布通知，label不为空时，则需使用接口notificationManager.cancel(id, label, callback)取消通知。
 
 **Since:** 9
 
@@ -24,20 +28,20 @@ Compared with notificationManager.cancel(id, label, callback), which includes th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 通知ID，用于标识目标通知。该值由发布通知时NotificationRequest的id字段指定。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当取消已发布的通知成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -60,11 +64,9 @@ notificationManager.cancel(0, cancelCallback);
 function cancel(id: int, label: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels a published notification based on the notification ID and label. This API uses an asynchronous callback to return the result.
+根据通知ID和标签取消已发布的通知。使用callback异步回调。
 
-After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios where a specific notification with a particular tag needs to be precisely canceled.
-
-Compared with notificationManager.cancel(id, callback), which requires only the notification ID, this API additionally has the **label** parameter, allowing precise cancellation of notifications with the same ID but different labels.
+取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。适用于需要精确取消某一条带有特定标签的通知的场景。与仅传入通知ID的notificationManager.cancel(id, callback)相比，此接口额外传入label参数，可精确取消同一ID，不同标签的通知。
 
 **Since:** 9
 
@@ -78,21 +80,21 @@ Compared with notificationManager.cancel(id, callback), which requires only the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
-| label | string | Yes | Notification label. This value is specified by the **label** field of NotificationRequest during the notification publishment. If the **label** field is empty, the published notification that matches the specified notification ID and has an empty label is canceled. If the **label** field is not empty, the published notification that matches both the specified notification ID and label is canceled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 通知ID，用于标识目标通知。该值由发布通知时NotificationRequest的id字段指定。 |
+| label | string | Yes | 通知标签。该值由发布通知时NotificationRequest的label字段指定。 - 若标签为空，则取消与指定通知ID匹配，标签为空的已发布通知。 - 若标签不为空，则取消与指定通知ID和标签同时匹配的已发布通知。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。根据通知ID和标签取消已发布的通知成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -115,9 +117,9 @@ notificationManager.cancel(0, "label", cancelCallback);
 function cancel(id: int, label?: string): Promise<void>
 ```
 
-Cancels a published notification based on the notification ID and label. This API uses a promise to return the result.
+根据通知ID和标签label取消已发布的通知。使用Promise异步回调。
 
-After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user.
+取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。
 
 **Since:** 9
 
@@ -131,26 +133,26 @@ After cancellation, the corresponding notification will be removed from the noti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Notification ID, used to identify the target notification. This value is specified by the id field of NotificationRequest when publishing a notification. |
-| label | string | No | Notification label. The default value is empty. This value is specified by the **label** field of NotificationRequest during the notification publishment. If the **label** field is empty, the published notification that matches the specified notification ID and has an empty label is canceled. If the **label** field is not empty, the published notification that matches both the specified notification ID and label is canceled. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 通知ID，用于标识目标通知。该值由发布通知时NotificationRequest的id字段指定。 |
+| label | string | No | 通知标签，默认为空。该值由发布通知时NotificationRequest的label字段指定。 - 若标签为空，则取消与指定通知ID匹配，标签为空的已发布通知。 - 若标签不为空，则取消与指定通知ID和标签同时匹配的已发布通知。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

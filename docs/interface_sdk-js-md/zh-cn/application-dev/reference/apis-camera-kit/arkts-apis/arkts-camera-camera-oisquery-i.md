@@ -10,6 +10,12 @@ OIS (Optical Image Stabilization) query interface.
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getCurrentCustomOISBias
 
 ArkTS-Dyn:
@@ -40,20 +46,20 @@ Gets the current custom bias value for the specified OIS axis.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oisAxis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The OIS axis |
+| oisAxis | [OISAxes](arkts-camera-camera-oisaxes-e.md) | 是 | The OIS axis |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | The current bias value. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The current bias value. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## getCurrentOISMode
 
@@ -79,14 +85,14 @@ Gets the current OIS mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The current OIS mode. |
+| [OISMode](arkts-camera-camera-oismode-e.md) | The current OIS mode. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## getSupportedOISBiasRange
 
@@ -118,20 +124,20 @@ Gets the supported bias range for the specified OIS axis.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oisAxis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The OIS axis. |
+| oisAxis | [OISAxes](arkts-camera-camera-oisaxes-e.md) | 是 | The OIS axis. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | The bias range. |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | The bias range. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## getSupportedOISBiasStep
 
@@ -163,20 +169,20 @@ Gets the bias step for the specified OIS axis.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oisAxis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The OIS axis. |
+| oisAxis | [OISAxes](arkts-camera-camera-oisaxes-e.md) | 是 | The OIS axis. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | The bias step value. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The bias step value. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## isOISModeSupported
 
@@ -202,7 +208,7 @@ Checks if the specified OIS mode is supported.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The OIS mode to check. |
+| mode | [OISMode](arkts-camera-camera-oismode-e.md) | 是 | The OIS mode to check. |
 
 **返回值：**
 
@@ -214,6 +220,6 @@ Checks if the specified OIS mode is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 

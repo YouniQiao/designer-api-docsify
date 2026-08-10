@@ -4,7 +4,7 @@
 export type DistributedOptions = _DistributedOptions
 ```
 
-Describes distributed notification options.
+分布式选项。
 
 **Since:** 9
 

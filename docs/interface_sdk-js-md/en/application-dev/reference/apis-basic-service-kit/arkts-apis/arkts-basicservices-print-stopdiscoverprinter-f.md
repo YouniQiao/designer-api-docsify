@@ -1,12 +1,18 @@
 # stopDiscoverPrinter
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## stopDiscoverPrinter
 
 ```TypeScript
 function stopDiscoverPrinter(callback: AsyncCallback<void>): void
 ```
 
-Stops discovering printers. This API uses an asynchronous callback to return the result.
+停止发现打印机，使用callback异步回调。
 
 **Since:** 20
 
@@ -24,15 +30,16 @@ Stops discovering printers. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback to be invoked when printer discovery is stopped. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 停止发现打印机的异步回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 10 - 19 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -54,7 +61,7 @@ print.stopDiscoverPrinter((err: BusinessError) => {
 function stopDiscoverPrinter(): Promise<void>
 ```
 
-Stops discovering printers. This API uses a promise to return the result.
+停止发现打印机，使用Promise异步回调。
 
 **Since:** 20
 
@@ -72,15 +79,16 @@ Stops discovering printers. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 10 - 19 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

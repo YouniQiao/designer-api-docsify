@@ -1,12 +1,18 @@
 # deleteContact
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## deleteContact
 
 ```TypeScript
 function deleteContact(key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a contact. This API uses an asynchronous callback to return the result.
+删除联系人。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,15 +32,16 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the deleted contact is returned. If the operation fails, an error code is returned. |
+| key | string | Yes | 联系人的唯一查询键key，一个联系人对应一个key，可以通过[queryKey](contact.queryKey(context: Context, id: number, callback: AsyncCallback&lt;string&gt;): void)获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。成功返回删除的联系人id；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
-// Select a contact via selectContacts.
+// Select a contact through the selectContacts API.
 contact.selectContacts().then((data) => {
   // Obtain the context within the component.
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
@@ -46,8 +53,6 @@ contact.selectContacts().then((data) => {
     }
     console.info('Succeeded in deleting Contact.');
   });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -58,7 +63,7 @@ contact.selectContacts().then((data) => {
 function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a contact. This API uses an asynchronous callback to return the result.
+删除联系人。使用callback异步回调。
 
 **Since:** 10
 
@@ -74,26 +79,27 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the deleted contact is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| key | string | Yes | 联系人的唯一查询键key，一个联系人对应一个key，可以通过[queryKey](contact.queryKey(context: Context, id: number, callback: AsyncCallback&lt;string&gt;): void)获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。成功返回删除的联系人id；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+  import { contact } from '@kit.ContactsKit';
   import { common } from '@kit.AbilityKit';
 
- // Select a contact via selectContacts.
+ // Select a contact through the selectContacts API.
   contact.selectContacts().then((data) => {
     // Obtain the context within the component.
     let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
@@ -105,8 +111,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
       }
       console.info('Succeeded in deleting Contact.');
     });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
   });
 ```
 
@@ -117,7 +121,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 function deleteContact(key: string): Promise<void>
 ```
 
-Deletes a contact. This API uses a promise to return the result.
+删除联系人。使用Promise异步回调。
 
 **Since:** 7
 
@@ -137,30 +141,26 @@ Deletes a contact. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| key | string | Yes | 联系人的唯一查询键key，一个联系人对应一个key，可以通过[queryKey](contact.queryKey(context: Context, id: number, callback: AsyncCallback&lt;string&gt;): void)获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
-// Select a contact via selectContacts.
+// Select a contact via the selectContacts API.
 contact.selectContacts().then((data) => {
   // Pass the key of the selected contact as the first parameter.
   let promise = contact.deleteContact(data[0].key);
   promise.then(() => {
     console.info(`Succeeded in deleting Contact.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to delete Contact. Code: ${err.code}, message: ${err.message}`);
   });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -171,7 +171,7 @@ contact.selectContacts().then((data) => {
 function deleteContact(context: Context, key: string): Promise<void>
 ```
 
-Deletes a contact. This API uses a promise to return the result.
+删除联系人。使用Promise异步回调。
 
 **Since:** 10
 
@@ -187,43 +187,39 @@ Deletes a contact. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| key | string | Yes | 联系人的唯一查询键key，一个联系人对应一个key，可以通过[queryKey](contact.queryKey(context: Context, id: number, callback: AsyncCallback&lt;string&gt;): void)获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
+import { contact } from '@kit.ContactsKit';
 
-// Select a contact via selectContacts.
+// Select a contact through the selectContacts API.
 contact.selectContacts().then((data) => {
-  // Obtain the context within the component.
+  // Obtain the context in the component.
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
   // Pass the key of the selected contact as the second parameter.
   let promise = contact.deleteContact(context, data[0].key);
   promise.then(() => {
     console.info(`Succeeded in deleting Contact.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to delete Contact. Code: ${err.code}, message: ${err.message}`);
   });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

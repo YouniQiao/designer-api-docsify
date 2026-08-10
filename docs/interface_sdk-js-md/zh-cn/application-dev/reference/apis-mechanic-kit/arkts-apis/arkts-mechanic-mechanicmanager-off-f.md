@@ -1,5 +1,11 @@
 # off
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## off('attachStateChange')
 
 ```TypeScript
@@ -21,15 +27,15 @@ Unsubscribes from device attachment state change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachStateChange' | 是 | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachStateChangeInfo&gt; | 否 | Callback used to return the state change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachStateChangeInfo&gt; | 否 | Callback used to return the state change. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| 33300001 | Service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 定义连接状态变化回调函数
@@ -65,15 +71,15 @@ function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trackingStateChange' | 是 | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TrackingEventInfo&gt; | 否 | Callback used to return the tracking event information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TrackingEventInfo&gt; | 否 | Callback used to return the tracking event information. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| 33300001 | Service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 定义跟踪状态变化回调函数

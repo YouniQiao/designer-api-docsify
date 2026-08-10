@@ -1,6 +1,6 @@
 # AccessibilityEvent
 
-Defines an accessibility event.
+辅助事件信息。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines an accessibility event.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
+## Modules to Import
+
+```TypeScript
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
+```
+
 ## elementId
 
 ```TypeScript
 elementId?: long
 ```
 
-Component ID for auto-focusing. The default value is **0**.
+主动聚焦的组件ID。默认值为0。
 
 **Type:** long
 
@@ -35,17 +41,17 @@ eventType: accessibility.EventType | accessibility.WindowUpdateType |
         TouchGuideType | GestureType | PageUpdateType
 ```
 
-Event type.
+具体事件类型。
 
-**EventType**: accessibility event type.
+EventType：无障碍事件类型；
 
-**WindowUpdateType**: window update type.
+WindowUpdateType：窗口变化类型；
 
-**TouchGuideType**: touch guide type.
+TouchGuideType：触摸浏览事件类型；
 
-**GestureType**: gesture type.
+GestureType：手势事件类型；
 
-**PageUpdateType**: page update type.
+PageUpdateType：页面刷新类型。
 
 **Type:** accessibility.EventType \| accessibility.WindowUpdateType \| TouchGuideType \| GestureType \| PageUpdateType
 
@@ -63,8 +69,7 @@ Event type.
 extraInfo?: string
 ```
 
-Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit**  
-component. Set this parameter based on site requirements. No special restrictions.
+针对TextArea、TextInput、SearchField、RichEdit组件，当文本内容有新增或删除时，携带的文本内容。根据实际场景设置，无特殊限制。
 
 **Type:** string
 
@@ -82,9 +87,9 @@ component. Set this parameter based on site requirements. No special restriction
 target?: AccessibilityElement
 ```
 
-Target component where the event occurs.
+发生事件的目标组件。
 
-**Type:** AccessibilityElement
+**Type:** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
 **Since:** 9
 
@@ -100,7 +105,7 @@ Target component where the event occurs.
 textAnnouncedForAccessibility?: string
 ```
 
-Content for auto-broadcasting. Set the broadcast content based on the actual scenario. No special restrictions.
+主动播报的内容。当应用需要主动播报时根据实际场景设置播报内容，无特殊限制。
 
 **Type:** string
 
@@ -118,7 +123,7 @@ Content for auto-broadcasting. Set the broadcast content based on the actual sce
 timeStamp?: long
 ```
 
-Timestamp of the event, in milliseconds. The default value is **0**.
+事件时间戳，单位是毫秒。默认值为0。
 
 **Type:** long
 

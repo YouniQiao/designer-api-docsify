@@ -4,7 +4,7 @@
 export type NotificationBasicContent = _NotificationBasicContent
 ```
 
-Describes the normal text notification.
+普通文本通知。
 
 **Since:** 9
 

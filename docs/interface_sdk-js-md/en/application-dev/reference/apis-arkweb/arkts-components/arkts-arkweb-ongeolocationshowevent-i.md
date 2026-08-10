@@ -1,6 +1,6 @@
 # OnGeolocationShowEvent
 
-Represents the callback invoked when a request to obtain the geolocation information is received.
+Defines the triggered function when requesting to show the geolocation permission.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents the callback invoked when a request to obtain the geolocation informa
 geolocation: JsGeolocation
 ```
 
-User operation.
+Defines the js geolocation request.
 
-**Type:** JsGeolocation
+**Type:** [JsGeolocation](../arkts-apis/arkts-arkweb-web-jsgeolocation-c.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ User operation.
 origin: string
 ```
 
-Index of the origin.
+Origin of the page.
 
 **Type:** string
 

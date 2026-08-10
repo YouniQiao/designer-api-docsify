@@ -4,7 +4,7 @@
 export type SelectionMenuOnPasteCallback = (event?: EditorEventInfo) => void
 ```
 
-Defines a SelectionMenu callback when onPaste.
+替代内置系统菜单粘贴项的事件回调。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Defines a SelectionMenu callback when onPaste.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the event info.  |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No | 事件信息。 |
 

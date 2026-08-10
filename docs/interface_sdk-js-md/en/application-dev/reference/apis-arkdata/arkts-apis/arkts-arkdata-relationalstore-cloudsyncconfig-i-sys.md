@@ -1,6 +1,6 @@
 # CloudSyncConfig
 
-Cloud sync configuration.
+云同步配置信息。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Cloud sync configuration.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## downloadOnly
 
 ```TypeScript
 downloadOnly?: boolean
 ```
 
-Indicates whether the sync operation should be download‑only.
+是否仅下行云端数据到本地。true表示仅下行云端数据到本地，false表示先下行云端数据到本地，再上行本地数据到云侧的同步流程。默认值为false。
 
 **Type:** boolean
 

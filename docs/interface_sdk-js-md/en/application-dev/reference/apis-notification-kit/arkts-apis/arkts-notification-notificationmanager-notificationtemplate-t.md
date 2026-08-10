@@ -4,7 +4,7 @@
 export type NotificationTemplate = _NotificationTemplate
 ```
 
-Describes the notification template.
+通知模板。
 
 **Since:** 9
 

@@ -4,7 +4,7 @@
 declare type AttachmentType = ImageAttachmentInterface | ResourceImageAttachmentOptions
 ```
 
-Defines the image attachment type, which is used to set images of PixelMap or [ResourceStr]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type for styled strings.
+图片设置项类型，用于设置属性字符串PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片。
 
 **Since:** 15
 
@@ -20,6 +20,6 @@ Defines the image attachment type, which is used to set images of PixelMap or [R
 
 | Type | Description |
 | --- | --- |
-| ImageAttachmentInterface | Settings for images of the PixelMap type. |
-| ResourceImageAttachmentOptions | Settings for images of the ResourceStr type. |
+| ImageAttachmentInterface | PixelMap类型图片设置项。 |
+| ResourceImageAttachmentOptions | ResourceStr类型图片设置项。 |
 

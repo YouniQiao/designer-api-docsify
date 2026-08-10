@@ -1,6 +1,6 @@
 # AcbStateParam
 
-ACB connection status parameter.
+ACB连接状态参数。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ ACB connection status parameter.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the device address.The length must be 17, The value consists of hexade
 state: AcbState
 ```
 
-ACB connection status.
+ACB连接状态
 
-**Type:** AcbState
+**Type:** [AcbState](arkts-connectivity-remotedevice-acbstate-t.md)
 
 **Since:** 26.0.0
 

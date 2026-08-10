@@ -1,5 +1,11 @@
 # clearData
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## clearData
 
 ```TypeScript
@@ -18,7 +24,7 @@ function clearData(): void
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
-**示例：**
+## 示例
 
 ```TypeScript
 hiAppEvent.clearData();

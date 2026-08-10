@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
 ## name
 
 ```TypeScript
@@ -40,7 +46,7 @@ name: string
 params?: Object
 ```
 
-表示路由跳转时要同时传递到目标页面的数据。跳转到目标页面后，使用router.getParams()获取传递的参数，此外，在类web范式中，参数也可以在页面中直接使用，如this.keyValue(keyValue为跳转时params参数中的key值)，如果目标页面中已有该字段，则其值会被传入的字段值覆盖。
+表示路由跳转时要同时传递到目标页面的数据。跳转到目标页面后，使用router.getParams()获取传递的参数，此外，在类web范式中，参数也可以在页面中直接使用，如this.keyValue(keyValue为跳转时params参数中的key值)，如果目标页面中已有该字段，则其值会被传入的字段值覆盖。 
 
 **说明：**
 
@@ -73,7 +79,7 @@ recoverable?: boolean
 **说明：**
 
 当应用退到后台，并且在未来的某个时间点，由于系统资源限制等原因被系统杀死，如果某个页面被设置成可恢复，那么该应用再次被拉到前台后系统可以恢复出页面，详细说明请参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。
 
 **类型：** boolean
 

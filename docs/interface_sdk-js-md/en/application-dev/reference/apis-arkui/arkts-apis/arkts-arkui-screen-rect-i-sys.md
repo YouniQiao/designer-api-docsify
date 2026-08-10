@@ -1,6 +1,6 @@
 # Rect (System API)
 
-Describes the rectangle information.
+矩形信息。
 
 **Since:** 19
 
@@ -12,15 +12,21 @@ Describes the rectangle information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: long
 ```
 
-Height of the rectangle, in px. The value must be an integer.
+矩形的高度，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 
@@ -38,9 +44,9 @@ Height of the rectangle, in px. The value must be an integer.
 left: long
 ```
 
-X coordinate of the vertex in the top-left corner of the rectangle, in px. The value must be an integer.
+矩形左上角顶点的X轴坐标，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 
@@ -58,9 +64,9 @@ X coordinate of the vertex in the top-left corner of the rectangle, in px. The v
 top: long
 ```
 
-Y coordinate of the vertex in the top-left corner of the rectangle, in px. The value must be an integer.
+矩形左上角顶点的Y轴坐标，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 
@@ -78,9 +84,9 @@ Y coordinate of the vertex in the top-left corner of the rectangle, in px. The v
 width: long
 ```
 
-Width of the rectangle, in px. The value must be an integer.
+矩形的宽度，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 

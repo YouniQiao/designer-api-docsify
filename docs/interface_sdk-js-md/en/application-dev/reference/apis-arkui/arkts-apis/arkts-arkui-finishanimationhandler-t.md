@@ -4,7 +4,7 @@
 export type FinishAnimationHandler = () => void
 ```
 
-Handler of swiper controller, used in finishAnimation.
+停止播放动画时，告知应用。
 
 **Since:** 26.0.0
 

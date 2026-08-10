@@ -10,6 +10,12 @@ Describes the bond key param.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## pinType
 
 ```TypeScript
@@ -18,7 +24,7 @@ pinType: PinType
 
 Indicates the pairing type to a peer device.
 
-**Type:** PinType
+**Type:** [PinType](arkts-connectivity-connection-pintype-e-sys.md)
 
 **Since:** 10
 

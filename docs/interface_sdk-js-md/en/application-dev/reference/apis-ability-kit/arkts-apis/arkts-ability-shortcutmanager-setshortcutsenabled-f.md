@@ -1,12 +1,18 @@
 # setShortcutsEnabled
 
+## Modules to Import
+
+```TypeScript
+import { shortcutManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setShortcutsEnabled
 
 ```TypeScript
 function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: boolean): Promise<void>
 ```
 
-Enables or disables the specified static shortcuts. This API uses a promise to return the result.
+设置启用或禁用传入的静态快捷方式。使用Promise异步回调。
 
 **Since:** 23
 
@@ -22,26 +28,26 @@ Enables or disables the specified static shortcuts. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutsInfo | Array&lt;ShortcutInfo&gt; | Yes | Array of static shortcuts.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This API does not distinguish between the main application and the cloned application, and only takes effect for static shortcuts. Therefore, the **appIndex** and **sourceType** fields in **ShortcutInfo** do not take effect. |
-| isEnabled | boolean | Yes | Whether to enable the static shortcuts. **true** to enable, **false** otherwise. |
+| shortcutsInfo | Array&lt;ShortcutInfo&gt; | Yes | 待启用或禁用的静态快捷方式。&lt;br&gt;**说明：**&lt;br&gt;本接口不区分主应用和分身应用，且仅对静态快捷方式生效，所以 ShortcutInfo中的appIndex和sourceType设置不生效。 |
+| isEnabled | boolean | Yes | 快捷方式是否启用。true：快捷方式启用；false：快捷方式禁用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
-| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is illegal. |
+| 801 | Capability not supported. |
+| 17700070 | The specified shortcut id is illegal. |
+| 201 | Permission denied. |
+| 202 | Permission denied. A non-system application is not allowed to call a system API. |
+| 17700001 | The specified bundle is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';

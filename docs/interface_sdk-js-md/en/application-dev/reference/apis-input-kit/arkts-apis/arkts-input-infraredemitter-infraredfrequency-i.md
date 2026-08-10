@@ -1,6 +1,6 @@
 # InfraredFrequency
 
-Defines the frequency range of IR signals.
+红外信号的频率范围。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Defines the frequency range of IR signals.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
+## Modules to Import
+
+```TypeScript
+import { infraredEmitter } from 'kits/@kit.InputKit';
+```
+
 ## max
 
 ```TypeScript
 max: long
 ```
 
-Maximum frequency, in Hz.
+最大支持频率，单位：Hz。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 15
 
@@ -34,9 +40,9 @@ Maximum frequency, in Hz.
 min: long
 ```
 
-Minimum frequency, in Hz.
+最小支持频率，单位：Hz。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 15
 

@@ -1,0 +1,48 @@
+# Scenario
+
+Enumerates the scenarios of the onscreen content.
+
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
+<!--Device-onScreen-export enum Scenario--><!--Device-onScreen-export enum Scenario-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
+
+## UNKNOWN
+
+```TypeScript
+UNKNOWN = 0
+```
+
+Unknown scenario.
+
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
+<!--Device-Scenario-UNKNOWN = 0--><!--Device-Scenario-UNKNOWN = 0-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
+
+**系统接口：** 此接口为系统接口。
+
+## ARTICLE
+
+```TypeScript
+ARTICLE = 1
+```
+
+Article scenario.
+
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
+<!--Device-Scenario-ARTICLE = 1--><!--Device-Scenario-ARTICLE = 1-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
+
+**系统接口：** 此接口为系统接口。
+

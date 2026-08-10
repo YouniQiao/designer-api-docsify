@@ -1,5 +1,11 @@
 # getPixelMap（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPixelMap
 
 ```TypeScript
@@ -7,9 +13,10 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 ```
 
 获取壁纸图片的像素图。
-    **说明：**  
-    
-    从 API version 7开始支持，从API version 9开始废弃。
+
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -29,10 +36,10 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 壁纸类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | 是 | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -55,9 +62,10 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 ```
 
 获取壁纸图片的像素图。
-    **说明：**  
-    
-    从 API version 7开始支持，从API version 9开始废弃。
+
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -77,7 +85,7 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 壁纸类型。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**
 
@@ -85,7 +93,7 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 | --- | --- |
 | Promise&lt;image.PixelMap&gt; | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

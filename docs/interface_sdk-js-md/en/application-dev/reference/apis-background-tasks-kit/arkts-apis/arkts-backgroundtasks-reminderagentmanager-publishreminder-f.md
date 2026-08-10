@@ -1,18 +1,25 @@
 # publishReminder
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## publishReminder
 
 ```TypeScript
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void
 ```
 
-Publishes a reminder. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API can be called only after the  
-    [notificationManager.requestEnableNotification]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    permission is obtained.  
-    
+发布后台代理提醒。使用callback异步回调。
+
+> **说明：**
+> 
+> 该接口需要申请通知弹窗权限
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)
+> 后调用。
+> 
 
 **Since:** 9
 
@@ -28,19 +35,19 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request used for publishing the reminder. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Yes | 需要发布的代理提醒实例。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。 当代理提醒发布成功，err为undefined，data为当前发布提醒的id；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
-| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
+| 401 | If the input parameter is not valid parameter. |
+| 1700001 | Notification is not enabled. |
+| 201 | Permission denied. |
+| 1700002 | The number of reminders exceeds the limit. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,13 +74,14 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 function publishReminder(reminderReq: ReminderRequest): Promise<int>
 ```
 
-Publishes a reminder. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API can be called only after the  
-    [notificationManager.requestEnableNotification]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    permission is obtained.  
-    
+发布后台代理提醒。使用Promise异步回调。
+
+> **说明：**
+> 
+> 该接口需要申请通知弹窗权限
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)
+> 后调用。
+> 
 
 **Since:** 9
 
@@ -89,24 +97,24 @@ Publishes a reminder. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request used for publishing the reminder. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Yes | 需要发布的代理提醒实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the published reminder ID. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回当前发布提醒的id。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
-| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
+| 401 | If the input parameter is not valid parameter. |
+| 1700001 | Notification is not enabled. |
+| 201 | Permission denied. |
+| 1700002 | The number of reminders exceeds the limit. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

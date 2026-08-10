@@ -1,6 +1,6 @@
 # FormType
 
-Enumerates the form card types.
+内容卡片类型枚举，提供了大、中、小三种尺寸。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the form card types.
 TYPE_BIG = 0
 ```
 
-Big form card, with fixed size of 4 x 4.
+表示 4 x 4 的尺寸。默认卡片宽度为200，默认高度为200。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Big form card, with fixed size of 4 x 4.
 TYPE_MID = 1
 ```
 
-Medium-sized form card, with fixed size of 4 x 2.
+表示 4 x 2 的尺寸。默认卡片宽度为200，默认高度为100。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Medium-sized form card, with fixed size of 4 x 2.
 TYPE_SMALL = 2
 ```
 
-Small form card, with fixed size of 2 x 1.
+表示 2 x 1 的尺寸。默认卡片宽度为137， 默认高度为83。
 
 **Since:** 23
 

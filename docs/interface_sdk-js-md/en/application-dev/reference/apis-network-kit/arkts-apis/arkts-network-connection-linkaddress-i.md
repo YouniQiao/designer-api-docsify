@@ -10,6 +10,12 @@ Defines network link information.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## address
 
 ```TypeScript
@@ -18,7 +24,7 @@ address: NetAddress
 
 Link address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 8
 
@@ -36,7 +42,7 @@ prefixLength: int
 
 The length of the link address prefix.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

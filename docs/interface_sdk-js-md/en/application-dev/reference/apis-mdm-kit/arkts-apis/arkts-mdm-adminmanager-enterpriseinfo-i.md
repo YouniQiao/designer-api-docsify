@@ -1,6 +1,6 @@
 # EnterpriseInfo
 
-Represents the enterprise information of a device administrator application.
+设备管理应用的企业信息。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Represents the enterprise information of a device administrator application.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## description
 
 ```TypeScript
 description: string
 ```
 
-Description of the enterprise.
+表示设备管理应用所属企业的描述。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Description of the enterprise.
 name: string
 ```
 
-Name of the enterprise.
+表示设备管理应用所属企业的名称。
 
 **Type:** string
 

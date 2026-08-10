@@ -4,8 +4,7 @@
 export type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => void
 ```
 
-注册应用通知静默提醒使能状态变化的回调函数类型。type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) =  
-    void
+注册应用通知静默提醒使能状态变化的回调函数类型。type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => void
 
 **起始版本：** 24
 
@@ -23,5 +22,5 @@ export type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentR
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackData | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调返回监听到的静默提醒使能状态信息。  |
+| callbackData | [EnabledSilentReminderCallbackData](arkts-notification-notificationsubscriber-enabledsilentremindercallbackdata-i-sys.md) | 是 | 回调返回监听到的静默提醒使能状态信息。 |
 

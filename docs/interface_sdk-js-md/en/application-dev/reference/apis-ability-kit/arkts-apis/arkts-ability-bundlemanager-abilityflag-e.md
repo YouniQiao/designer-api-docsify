@@ -1,6 +1,6 @@
 # AbilityFlag
 
-Enumerates the ability flags, which indicate the type of ability information to obtain.
+Ability组件信息标志，指示需要获取的Ability组件信息的内容。
 
 **Since:** 20
 
@@ -16,9 +16,9 @@ Enumerates the ability flags, which indicate the type of ability information to 
 GET_ABILITY_INFO_DEFAULT = 0x00000000
 ```
 
-Used to obtain the default [ability information]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which does not contain permissions, metadata, or ability information of disabled abilities. \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_You can use  
-[setAbilityEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_to set the ability enabling status and use  
-[isAbilityEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to obtain the ability enabling status.\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_
+获取默认[AbilityInfo](arkts-abilityinfo.md)，获取的AbilityInfo不包含permissions、metadata、被禁用Ability对应的AbilityInfo。&lt;!--Del--&gt;通过  
+[setAbilityEnabled接口](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setabilityenabled)可设置Ability禁用状态、通过  
+[isAbilityEnabled接口](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled)可获取Ability禁用状态。&lt;!--DelEnd--&gt;
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ Used to obtain the default [ability information]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\
 GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001
 ```
 
-Used to obtain the ability information containing permissions.
+获取包含permissions的AbilityInfo。
 
 **Since:** 20
 
@@ -54,7 +54,7 @@ Used to obtain the ability information containing permissions.
 GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
 ```
 
-Used to obtain the ability information containing application information.
+获取包含applicationInfo的AbilityInfo。
 
 **Since:** 20
 
@@ -72,7 +72,7 @@ Used to obtain the ability information containing application information.
 GET_ABILITY_INFO_WITH_METADATA = 0x00000004
 ```
 
-Used to obtain the ability information containing metadata.
+获取包含metadata的AbilityInfo。
 
 **Since:** 20
 
@@ -90,7 +90,7 @@ Used to obtain the ability information containing metadata.
 GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
 ```
 
-Used to obtain the ability information of disabled abilities.
+获取被禁用Ability对应的AbilityInfo。
 
 **Since:** 20
 
@@ -108,7 +108,7 @@ Used to obtain the ability information of disabled abilities.
 GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010
 ```
 
-Used to obtain the ability information of system applications.
+获取系统应用对应的AbilityInfo。
 
 **Since:** 20
 
@@ -126,8 +126,7 @@ Used to obtain the ability information of system applications.
 GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040
 ```
 
-Used to obtain the ability information that passes \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_.
+获取通过&lt;!--RP3--&gt;[域名校验](../../../application-models/app-linking-startup.md#实现原理)&lt;!--RP3End--&gt;筛选的AbilityInfo。
 
 **Since:** 20
 
@@ -145,7 +144,7 @@ Used to obtain the ability information that passes \_\_\_MD\_COMMENT\_DESC\_USD\
 GET_ABILITY_INFO_WITH_SKILL = 0x00000080
 ```
 
-Used to obtain the ability information containing skills.
+获取包含skills的AbilityInfo。
 
 **Since:** 20
 

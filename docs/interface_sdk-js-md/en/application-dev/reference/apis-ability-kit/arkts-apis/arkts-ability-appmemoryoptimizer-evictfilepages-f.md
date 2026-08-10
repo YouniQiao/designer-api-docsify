@@ -1,12 +1,18 @@
 # evictFilePages
 
+## Modules to Import
+
+```TypeScript
+import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
+```
+
 ## evictFilePages
 
 ```TypeScript
 function evictFilePages(fileNames: Array<string>): Promise<void>
 ```
 
-Sends a request to the system to release file page cache of specified files. The system determines whether to actually perform the release based on the current memory status, and success is not guaranteed.
+向系统发出释放指定文件的文件页缓存请求，系统会根据当前内存状况决定是否真正执行释放，不保证一定释放成功。
 
 **Since:** 26.0.0
 
@@ -22,17 +28,17 @@ Sends a request to the system to release file page cache of specified files. The
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileNames | Array&lt;string&gt; | Yes | Array of file names for which file page cache needs to be released. File names must end with .so, .hap, or .hsp. |
+| fileNames | Array&lt;string&gt; | Yes | 需要释放文件页缓存的文件名数组，文件名必须以.so、.hap 或.hsp结尾。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000163 | File type error. File name does not end with .so, .hap, or .hsp. |
+| 16000163 | 文件类型错误。文件名未以.so、.hap或.hsp结尾。 |
 

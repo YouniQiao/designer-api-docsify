@@ -1,6 +1,6 @@
 # AttendeeType
 
-Enumerates the types of attendees invited to a conference event.
+会议日程参与者受邀类型枚举。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the types of attendees invited to a conference event.
 REQUIRED = 1
 ```
 
-Required attendee.
+会议日程主送者。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Required attendee.
 OPTIONAL = 2
 ```
 
-Optional attendee.
+会议日程抄送者。
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ Optional attendee.
 RESOURCE = 3
 ```
 
-Resources (such as TVs or projectors) used in a conference.
+会议中使用的资源（电视或投影仪等）。
 
 **Since:** 18
 

@@ -1,6 +1,6 @@
 # PolicyType
 
-Indicates the policy type of the path.
+枚举所查询策略信息对应的授权模式。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Indicates the policy type of the path.
 TEMPORARY_TYPE = 0
 ```
 
-Indicates that the policy is temporary.
+临时授权。
 
 **Since:** 15
 
@@ -32,7 +32,7 @@ Indicates that the policy is temporary.
 PERSISTENT_TYPE = 1
 ```
 
-Indicates that the policy is persistent.
+持久化授权。
 
 **Since:** 15
 

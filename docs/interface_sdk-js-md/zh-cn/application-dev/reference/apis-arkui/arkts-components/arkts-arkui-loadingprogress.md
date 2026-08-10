@@ -36,3 +36,5 @@ LoadingProgress()
 
 ## 汇总
 
+- [LoadingProgressConfiguration](arkts-arkui-loadingprogress-loadingprogressconfiguration-i.md)
+- [LoadingProgressStyle](arkts-arkui-loadingprogress-loadingprogressstyle-e.md)

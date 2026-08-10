@@ -1,6 +1,6 @@
 # Range
 
-Describes a left-closed and right-open interval.
+描述左闭右开区间。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes a left-closed and right-open interval.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## end
 
 ```TypeScript
 end: int
 ```
 
-Index of the rightmost point of the interval. The value is an integer.
+区间右侧端点索引，整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Index of the rightmost point of the interval. The value is an integer.
 start: int
 ```
 
-Index of the leftmost point of the interval. The value is an integer.
+区间左侧端点索引，整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

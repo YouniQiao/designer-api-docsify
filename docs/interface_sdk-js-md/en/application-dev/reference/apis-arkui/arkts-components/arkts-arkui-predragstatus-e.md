@@ -1,6 +1,6 @@
 # PreDragStatus
 
-Defines the states before the drag gesture is triggered.
+定义拖拽手势触发前的各阶段状态。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the states before the drag gesture is triggered.
 ACTION_DETECTING_STATUS = 0
 ```
 
-A drag gesture is being detected. (Triggered when the component is long pressed for 50 ms.)
+拖拽手势启动阶段。(按下50ms时触发)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ A drag gesture is being detected. (Triggered when the component is long pressed 
 READY_TO_TRIGGER_DRAG_ACTION = 1
 ```
 
-The component is ready to be dragged. (Triggered when the component is long pressed for 500 ms.)
+拖拽准备完成，可发起拖拽阶段。(按下500ms时触发)
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ The component is ready to be dragged. (Triggered when the component is long pres
 PREVIEW_LIFT_STARTED = 2
 ```
 
-A lift animation is started. (Triggered when the component is long pressed for 800 ms.)
+拖拽浮起动效发起阶段。(按下800ms时触发)
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ A lift animation is started. (Triggered when the component is long pressed for 8
 PREVIEW_LIFT_FINISHED = 3
 ```
 
-A lift animation is finished. (Triggered at the completion of the lift animation.)
+拖拽浮起动效结束阶段。(浮起动效完全结束时触发)
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ A lift animation is finished. (Triggered at the completion of the lift animation
 PREVIEW_LANDING_STARTED = 4
 ```
 
-A drop animation is started. (Triggered when the drop animation starts.)
+拖拽落回动效发起阶段。(落回动效发起时触发)
 
 **Since:** 12
 
@@ -116,7 +116,7 @@ A drop animation is started. (Triggered when the drop animation starts.)
 PREVIEW_LANDING_FINISHED = 5
 ```
 
-A drop animation is finished. (Triggered when the drop animation ends.)
+拖拽落回动效结束阶段。(落回动效结束时触发)
 
 **Since:** 12
 
@@ -136,8 +136,7 @@ A drop animation is finished. (Triggered when the drop animation ends.)
 ACTION_CANCELED_BEFORE_DRAG = 6
 ```
 
-A drop animation is terminated. (Triggered when the finger is lifted off the screen after the component enters the  
-**READY\_TO\_TRIGGER\_DRAG\_ACTION** state.)
+拖拽浮起落位动效中断。(已满足READY_TO_TRIGGER_DRAG_ACTION状态后，未达到动效阶段，手指抬手时触发)
 
 **Since:** 12
 
@@ -157,7 +156,7 @@ A drop animation is terminated. (Triggered when the finger is lifted off the scr
 PREPARING_FOR_DRAG_DETECTION = 7
 ```
 
-The component is ready to be dragged. (Triggered when the component is long pressed for 350 ms.)
+拖拽准备完成，可发起拖拽阶段。(按下350ms时触发)
 
 **Since:** 18
 

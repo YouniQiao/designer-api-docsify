@@ -1,14 +1,20 @@
 # getAbilityIcon
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getAbilityIcon
 
 ```TypeScript
 function getAbilityIcon(bundleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the icon corresponding to a given bundle name and ability name. This API uses an asynchronous callback to return the result.
+通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)，使用callback异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 8
 
@@ -28,9 +34,9 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| abilityName | string | Yes | Ability name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | Yes | Callback used to return the [PixelMap]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| bundleName | string | Yes | 要查询的应用Bundle名称。 |
+| abilityName | string | Yes | 要查询的Ability组件名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | 程序启动作为入参的回调函数，返回指定 [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)。 |
 
 
 ## getAbilityIcon
@@ -39,9 +45,9 @@ No permission is required for obtaining the caller's own information.
 function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-Obtains the [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the icon corresponding to a given bundle name and ability name. This API uses a promise to return the result.
+通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)，使用Promise异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 8
 
@@ -61,8 +67,8 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| abilityName | string | Yes | Ability name. |
+| bundleName | string | Yes | 要查询的应用Bundle名称。 |
+| abilityName | string | Yes | 要查询的Ability组件名。 |
 
 **Return value:**
 

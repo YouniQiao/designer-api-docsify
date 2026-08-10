@@ -16,6 +16,12 @@ Provides information about geographic locations
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## accuracy
 
 ```TypeScript

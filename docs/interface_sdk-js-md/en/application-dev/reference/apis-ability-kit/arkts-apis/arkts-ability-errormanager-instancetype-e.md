@@ -1,6 +1,6 @@
 # InstanceType
 
-Enumerates the VM instance types.
+虚拟机的实例类型。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the VM instance types.
 TASKPOOL = 2
 ```
 
-TaskPool VM instance.
+表示任务池虚拟机实例。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ TaskPool VM instance.
 WORKER = 1
 ```
 
-Worker VM instance.
+表示工作虚拟机实例。
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ Worker VM instance.
 MAIN = 0
 ```
 
-Main VM instance.
+表示主虚拟机实例。
 
 **Since:** 18
 
@@ -70,8 +70,7 @@ Main VM instance.
 CUSTOM = 3
 ```
 
-VM instance created from the local code using  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示用户通过[napi_create_ark_runtime](../../../reference/native-lib/napi.md#napi_create_ark_runtime)从本机代码创建的虚拟机实例。
 
 **Since:** 18
 

@@ -1,12 +1,18 @@
 # getMissionSnapShot (System API)
 
+## Modules to Import
+
+```TypeScript
+import { missionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getMissionSnapShot
 
 ```TypeScript
 function getMissionSnapShot(deviceId: string, missionId: int, callback: AsyncCallback<MissionSnapshot>): void
 ```
 
-Obtains the snapshot of a given mission. This API uses an asynchronous callback to return the result.
+获取任务快照。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,19 +30,19 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
-| missionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mission ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MissionSnapshot&gt; | Yes | Callback used to return the snapshot information obtained. |
+| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
+| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;MissionSnapshot&gt; | Yes | 执行结果回调函数，返回任务快照信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -65,7 +71,7 @@ try {
 function getMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>
 ```
 
-Obtains the snapshot of a given mission. This API uses a promise to return the result.
+获取任务快照。使用Promise异步回调。
 
 **Since:** 9
 
@@ -83,24 +89,24 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
-| missionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mission ID. |
+| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
+| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MissionSnapshot&gt; | Promise used to return the snapshot information obtained. |
+| Promise&lt;MissionSnapshot&gt; | Promise对象，返回任务快照信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';

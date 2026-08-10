@@ -6,11 +6,19 @@ Provide methods to access BAS(Battery Service)-related capabilities.
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace bas--><!--Device-unnamed-declare namespace bas-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { bas } from 'kits/@kit.ConnectivityKit';
+```
 
 ## Summary
 

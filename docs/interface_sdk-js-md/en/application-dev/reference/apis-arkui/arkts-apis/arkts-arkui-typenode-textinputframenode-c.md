@@ -1,6 +1,6 @@
 # TextInputFrameNode
 
-Define the TextInput type of FrameNode.
+定义TextInput类型的FrameNode。
 
 **Inheritance/Implementation:** TextInputFrameNode extends [TypedFrameNode<TextInputAttribute>](TypedFrameNode<TextInputAttribute>)
 
@@ -18,7 +18,7 @@ Define the TextInput type of FrameNode.
 abstract initialize(value?: TextInputOptions): TextInputAttribute
 ```
 
-Initialize TextInput FrameNode.
+初始化TextInput类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize TextInput FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| value | [TextInputOptions](../arkts-components/arkts-arkui-textinputoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) |  |
 

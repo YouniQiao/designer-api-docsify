@@ -1,6 +1,6 @@
 # TranslateOption
 
-Set translation parameters
+平移参数。
 
 **Since:** 23
 
@@ -10,13 +10,25 @@ Set translation parameters
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## x
 
 ```TypeScript
 x?: double
 ```
 
-Indicates the translation distance of the x-axis, in px.
+x轴的平移距离。
+
+单位：px
+
+默认值：0
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -36,7 +48,13 @@ Indicates the translation distance of the x-axis, in px.
 y?: double
 ```
 
-Indicates the translation distance of the y-axis, in px.
+y轴的平移距离。
+
+单位：px
+
+默认值：0
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -56,7 +74,13 @@ Indicates the translation distance of the y-axis, in px.
 z?: double
 ```
 
-Indicates the translation distance of the z-axis, in px.
+z轴的平移距离。
+
+单位：px
+
+默认值：0
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 

@@ -66,7 +66,7 @@ colorMode: ColorMode
 
 Color mode of the widget.
 
-**Type:** ColorMode
+**Type:** [ColorMode](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-colormode-e.md)
 
 **Since:** 8
 
@@ -356,7 +356,7 @@ type: FormType
 
 Type of the widget. Currently, only JS widgets are supported.
 
-**Type:** FormType
+**Type:** [FormType](../../apis-arkdata/arkts-apis/arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **Since:** 8
 

@@ -4,7 +4,7 @@
 export type MonitorValueCallback = () => Any
 ```
 
-Defines IMonitor value callback function.
+监听状态变量的回调类型。
 
 **Since:** 23
 
@@ -13,6 +13,4 @@ Defines IMonitor value callback function.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type MonitorValueCallback = () => Any--><!--Device-unnamed-export type MonitorValueCallback = () => Any-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # @ohos.multimedia.avVolumePanel(音量面板)
 
+## 导入模块
+
+```TypeScript
+import { AVVolumePanelParameter, AVVolumePanel } from 'kits/@kit.AudioKit';
+```
+
 ## 汇总
 
 ### 类

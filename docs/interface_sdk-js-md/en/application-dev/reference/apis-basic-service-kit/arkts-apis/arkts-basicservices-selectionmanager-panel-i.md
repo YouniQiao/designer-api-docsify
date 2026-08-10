@@ -1,6 +1,6 @@
 # Panel
 
-Describes a Panel object, which is created using [createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete.
+划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。
 
 **Since:** 24
 
@@ -10,14 +10,19 @@ Describes a Panel object, which is created using [createPanel]\_\_\_JSDOC\_LINK\
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
+## Modules to Import
+
+```TypeScript
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## hide
 
 ```TypeScript
 hide(): Promise<void>
 ```
 
-Hides the word selection panel. This API is used together with [show]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API can be called only after a Panel instance is obtained by calling  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API uses a promise to return the result. If this API is not called proactively, the panel is automatically hidden when it loses focus.
+隐藏当前划词面板，与[show](arkts-basicservices-selectionmanager-panel-i.md#show)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。如不主动调用，面板在失焦时会自动隐藏。
 
 **Since:** 24
 
@@ -31,39 +36,25 @@ Hides the word selection panel. This API is used together with [show]\_\_\_JSDOC
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**Example**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-selectionPanel.hide().then(() => {
-  console.info('Succeeded in hiding the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide panel: ${err.code}, error message: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
 
-selectionPanel?.hide().then(() => {
+// Hide the word selection panel. selectionPanel is a Panel instance created by createPanel.
+selectionPanel.hide().then(() => {
   console.info('Succeeded in hiding the panel.');
-}).catch((err) => {
-  console.error(`Failed to hide panel: ${err.code}, error message: ${err.message}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide panel. Error code: ${err.code}, error message: ${err.message}`);
 });
 ```
 
@@ -73,7 +64,11 @@ selectionPanel?.hide().then(() => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-Moves the word selection panel to the specified coordinates in the global coordinate system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 20开始支持，从API version 24开始废弃。
 
 **Since:** 20
 
@@ -91,35 +86,36 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | int | Yes | X-coordinate of the target position in the global coordinate system of the screen, in px. The upper left corner of the main screen is the origin of the global coordinate system, and the positive direction of the X axis is rightward. The x-coordinate of an extended screen may be negative, depending on the screen layout. |
-| y | int | Yes | Y-coordinate of the target position in the global coordinate system of the screen, in px. The upper left corner of the main screen is the origin of the global coordinate system, and the positive direction of the Y axis is downward. The y-coordinate of an extended screen may be negative, depending on the screen layout. |
+| x | int | Yes | 目标位置在屏幕全局坐标系下的x轴坐标，单位为px。全局坐标系以主屏幕左上角为原点，x轴正方向向右；扩展屏的x坐标视屏幕布局可能为负值。 |
+| y | int | Yes | 目标位置在屏幕全局坐标系下的y轴坐标，单位为px。全局坐标系以主屏幕左上角为原点，y轴正方向向下；扩展屏的y坐标视屏幕布局可能为负值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // Move the word selection panel to the specified coordinates on the screen. selectionPanel is a Panel instance created by createPanel.
   selectionPanel.moveTo(200, 200).then(() => {
     console.info('Succeeded in moving the panel.');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
+    console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
   });
 } catch (err) {
-  console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
+  console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
 }
 ```
 
@@ -135,7 +131,7 @@ ArkTS-Sta:
 moveToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
-Moves the word selection panel to the specified coordinates in the global coordinates system of the screen. The panel can be moved to an extended screen. This API can be called only after a Panel instance is obtained by calling [createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **Since:** 24
 
@@ -151,54 +147,36 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | X-coordinate of the target position in the global coordinate system of the screen, in px. The upper left corner of the main screen is the origin of the global coordinate system, and the positive direction of the X axis is rightward. The x-coordinate of an extended screen may be negative, depending on the screen layout. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Y-coordinate of the target position in the global coordinate system of the screen, in px. The upper left corner of the main screen is the origin of the global coordinate system, and the positive direction of the Y axis is downward. The y-coordinate of an extended screen may be negative, depending on the screen layout. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标位置在屏幕全局坐标系下的x轴坐标，单位为px。全局坐标系以主屏幕左上角为原点，x轴正方向向右；扩展屏的x坐标视屏幕布局可能为负值。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标位置在屏幕全局坐标系下的y轴坐标，单位为px。全局坐标系以主屏幕左上角为原点，y轴正方向向下；扩展屏的y坐标视屏幕布局可能为负值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**Example**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  selectionPanel.moveToGlobalDisplay(200, 200).then(() => {
-    console.info('Succeeded in moving the panel.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
-}
-```
-
-ArkTS-Sta example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
 
 try {
-  selectionPanel?.moveToGlobalDisplay(200, 200).then(() => {
+  // Move the word selection panel to the specified coordinates on the screen. selectionPanel is a Panel instance created by createPanel.
+  selectionPanel.moveToGlobalDisplay(200, 200).then(() => {
     console.info('Succeeded in moving the panel.');
-  }).catch((err) => {
-    console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
   });
 } catch (err) {
-  console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
+  console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
 }
 ```
 
@@ -208,8 +186,7 @@ try {
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the word selection panel destruction event. This API is used together with  
-[on('destroyed')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API can be called only after a **Panel** instance is obtained by calling [createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+取消订阅划词面板销毁事件，与[on('destroyed')](selectionManager.Panel.on(type: 'destroyed', callback: Callback&lt;void&gt;))搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **Since:** 24
 
@@ -223,18 +200,17 @@ Unsubscribes from the word selection panel destruction event. This API is used t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'destroyed' | Yes | Type of the event to unsubscribe from. The value is fixed to **'destroyed'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback to be unregistered (that is, the callback instance registered using **on**). If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'destroyed' | Yes | 取消订阅的事件类型，固定取值为'destroyed'。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
 try {
+  // Unsubscribe from the word selection panel destruction event. selectionPanel is a Panel instance created by createPanel.
   selectionPanel.off('destroyed');
 } catch (err) {
-  console.error(`Failed to unregister destroyed: ${err.code}, error message: ${err.message}`);
+  console.error(`Failed to unregister destroyed. Error code: ${err.code}, error message: ${err.message}`);
 }
 ```
 
@@ -244,8 +220,8 @@ try {
 off(type: 'hidden', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the word selection panel hiding event. This API is used together with  
-[on('hidden')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API can be called only after a **Panel** instance is obtained by calling [createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+取消订阅划词面板隐藏事件，与[on('hidden')](selectionManager.Panel.on(type: 'hidden', callback: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **Since:** 24
 
@@ -259,18 +235,17 @@ Unsubscribes from the word selection panel hiding event. This API is used togeth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hidden' | Yes | Type of the event to unsubscribe from. The value is fixed to **'hidden'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback to be unregistered (that is, the callback instance registered using **on**). If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'hidden' | Yes | 取消订阅的事件类型，固定取值为'hidden'。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
 try {
+  // // Unsubscribe from the word selection panel hiding event. selectionPanel is a Panel instance created by createPanel.
   selectionPanel.off('hidden');
 } catch (err) {
-  console.error(`Failed to unregister hidden: ${err.code}, error message: ${err.message}`);
+  console.error(`Failed to unregister hidden. Error code: ${err.code}, error message: ${err.message}`);
 }
 ```
 
@@ -280,9 +255,8 @@ try {
 offDestroy(callback?: Callback<void>): void
 ```
 
-Unregisters the callback used to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result.
-
-**ArkTS mode:** This API applies only to ArkTS-Sta.
+取消订阅划词面板销毁事件，与[onDestroy](selectionManager.Panel.onDestroy(callback: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **Since:** 24
 
@@ -298,20 +272,7 @@ Unregisters the callback used to listen for the destroy event of the word select
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.offDestroy();
-} catch (err) {
-  console.error(`Failed to unregister destroyed: ${err.code}, error message: ${err.message}`);
-}
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 需要取消的回调函数（即之前通过onDestroy方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
 ## offHide
 
@@ -319,9 +280,8 @@ try {
 offHide(callback?: Callback<void>): void
 ```
 
-Unregisters the callback used to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result.
-
-**ArkTS mode:** This API applies only to ArkTS-Sta.
+取消订阅划词面板隐藏事件，与[onHide](selectionManager.Panel.onHide(callback: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **Since:** 24
 
@@ -337,20 +297,7 @@ Unregisters the callback used to listen for the hide event of the word selection
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.offHide();
-} catch (err) {
-  console.error(`Failed to unregister hide: ${err.code}, error message: ${err.message}`);
-}
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 需要取消的回调函数（即之前通过onHide方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
 ## on('destroyed')
 
@@ -358,9 +305,7 @@ try {
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-Subscribes to the word selection panel destruction event. This API is used together with  
-[off('destroyed')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API can be called only after a **Panel** instance is obtained by calling  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+订阅划词面板销毁事件，与[off('destroyed')](selectionManager.Panel.off(type: 'destroyed', callback?: Callback&lt;void&gt;))搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **Since:** 24
 
@@ -374,20 +319,19 @@ Subscribes to the word selection panel destruction event. This API is used toget
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'destroyed' | Yes | Event type, which is **'destroyed'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result, which is triggered when [destroyPanel]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is called to destroy the panel. |
+| type | 'destroyed' | Yes | 设置监听类型，固定取值为'destroyed'。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel)销毁面板时触发。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
 try {
+  // Subscribe to the word selection panel destruction event. selectionPanel is a Panel instance created by createPanel.
   selectionPanel.on('destroyed', () => {
     console.info('Panel has been destroyed.');
   });
 } catch (err) {
-  console.error(`Failed to register destroyed callback: ${err.code}, error message: ${err.message}`);
+  console.error(`Failed to register destroyed callback. Error code: ${err.code}, error message: ${err.message}`);
 }
 ```
 
@@ -397,9 +341,8 @@ try {
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-Subscribes to the word selection panel hiding event. This API is used together with  
-[off('hidden')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This event is triggered when the panel is hidden by calling [hide]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+订阅划词面板隐藏事件，与[off('hidden')](selectionManager.Panel.off(type: 'hidden', callback?: Callback&lt;void&gt;))搭配使用。面板调用  
+[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **Since:** 24
 
@@ -413,20 +356,19 @@ Subscribes to the word selection panel hiding event. This API is used together w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hidden' | Yes | Event type, which is **'hidden'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result, which is triggered when the panel is hidden. The panel can be hidden by calling [hide]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or automatically hidden when it loses focus. |
+| type | 'hidden' | Yes | 设置监听类型，固定取值为'hidden'。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)主动隐藏，或在失焦时自动隐藏。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
 try {
+  // Subscribe to the word selection panel hiding event. selectionPanel is a Panel instance created by createPanel.
   selectionPanel.on('hidden', () => {
     console.info('Panel has been hidden.');
   });
 } catch (err) {
-  console.error(`Failed to register hidden callback: ${err.code}, error message: ${err.message}`);
+  console.error(`Failed to register hidden callback. Error code: ${err.code}, error message: ${err.message}`);
 }
 ```
 
@@ -436,9 +378,8 @@ try {
 onDestroy(callback: Callback<void>): void
 ```
 
-Registers a callback to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result.
-
-**ArkTS mode:** This API applies only to ArkTS-Sta.
+订阅划词面板销毁事件，与[offDestroy](selectionManager.Panel.offDestroy(callback?: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **Since:** 24
 
@@ -454,22 +395,7 @@ Registers a callback to listen for the destroy event of the word selection panel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.onDestroy(() => {
-    console.info('Panel has been destroyed.');
-  });
-} catch (err) {
-  console.error(`Failed to register destroy callback: ${err.code}, error message: ${err.message}`);
-}
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel)销毁面板时触发。 |
 
 ## onHide
 
@@ -477,9 +403,8 @@ try {
 onHide(callback: Callback<void>): void
 ```
 
-Registers a callback to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result.
-
-**ArkTS mode:** This API applies only to ArkTS-Sta.
+订阅划词面板隐藏事件，与[offHide](selectionManager.Panel.offHide(callback?: Callback&lt;void&gt;))搭配使用。需通过  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
 
 **Since:** 24
 
@@ -495,22 +420,7 @@ Registers a callback to listen for the hide event of the word selection panel. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback function that returns no value. |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.onHide(() => {
-    console.info('Panel has been hidden.');
-  });
-} catch (err) {
-  console.error(`Failed to register hide callback: ${err.code}, error message: ${err.message}`);
-}
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)主动隐藏，或在失焦时自动隐藏。 |
 
 ## setUiContent
 
@@ -518,7 +428,7 @@ try {
 setUiContent(path: string): Promise<void>
 ```
 
-Sets the UI content for the current word selection panel, for example, to display translation results, search suggestions, or custom action buttons. This API can be called only after a **Panel** instance is obtained by calling [createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+为当前的划词面板设置界面内容，例如展示翻译结果、搜索建议或自定义操作按钮等。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **Since:** 24
 
@@ -534,53 +444,35 @@ Sets the UI content for the current word selection panel, for example, to displa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page content to be set. This path is configured in the **resources/base/profile/main\_\_\_ESCAPED\_UNDERSCORE\_\_\_pages.json** file of the project in the stage model. The FA model is not supported. |
+| path | string | Yes | 要加载到面板中的页面内容的路径，Stage模型下该路径需添加到工程的resources/base/profile/main_pages.json文件中，不支持FA模型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**Example**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  selectionPanel.setUiContent('pages/Index').then(() => {
-    console.info('Succeeded in setting the content.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to setUiContent: ${err.code}, error message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to setUiContent: ${err.code}, error message: ${err.message}`);
-}
-```
-
-ArkTS-Sta example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
 
 try {
-  selectionPanel?.setUiContent('pages/Index').then(() => {
+  // Load page content for the word selection panel. selectionPanel is a Panel instance created by createPanel.
+  selectionPanel.setUiContent('pages/Index').then(() => {
     console.info('Succeeded in setting the content.');
-  }).catch((err) => {
-    console.error(`Failed to setUiContent: ${err.code}, error message: ${err.message}}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to setUiContent. Error code: ${err.code}, error message: ${err.message}`);
   });
 } catch (err) {
-  console.error(`Failed to setUiContent: ${err.code}, error message: ${err.message}}`);
+  console.error(`Failed to setUiContent. Error code: ${err.code}, error message: ${err.message}`);
 }
 ```
 
@@ -590,8 +482,7 @@ try {
 show(): Promise<void>
 ```
 
-Shows the word selection panel. This API is used together with [hide]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API can be called only after a Panel instance is obtained by calling  
-[createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API uses a promise to return the result.
+显示划词面板，与[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **Since:** 24
 
@@ -607,39 +498,25 @@ Shows the word selection panel. This API is used together with [hide]\_\_\_JSDOC
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**Example**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-selectionPanel.show().then(() => {
-  console.info('Succeeded in showing the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show panel: ${err.code}, error message: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
 
-selectionPanel?.show().then(() => {
+// Show the word selection panel. selectionPanel is a Panel instance created by createPanel.
+selectionPanel.show().then(() => {
   console.info('Succeeded in showing the panel.');
-}).catch((err) => {
-  console.error(`Failed to show panel: ${err.code}, error message: ${err.message}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show panel. Error code: ${err.code}, error message: ${err.message}`);
 });
 ```
 
@@ -649,7 +526,7 @@ selectionPanel?.show().then(() => {
 startMoving(): Promise<void>
 ```
 
-Sets whether the word selection panel can be dragged along with the mouse, touchpad, or touchscreen. The panel automatically stops moving after the pointer is released. This API can be called only after a **Panel** instance is obtained by calling [createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result. This API must be called in the **onTouch** callback, and the event type must be **TouchType.Down**.
+设置划词面板可随鼠标、触控板或触屏拖动移动位置，指针释放后自动停止移动。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。该接口需在onTouch的回调函数中调用，并且事件类型为TouchType.Down。
 
 **Since:** 24
 
@@ -665,46 +542,21 @@ Sets whether the word selection panel can be dragged along with the mouse, touch
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
+| 33600001 | Selection service exception. |
+| 33600002 | This selection window has been destroyed. |
 
-**Example**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-RelativeContainer() {
-  /* 
-   * Page layout content, which should be defined based on your actual needs.
-   */
-}
-.onTouch((event: TouchEvent) => {
-  if (event.type === TouchType.Down) {
-    if (selectionPanel !== undefined) {
-      selectionPanel.startMoving().then(() => {   // selectionPanel is the panel instance created by createPanel.
-        console.info('Succeeded in startMoving the panel.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to startMoving panel: ${err.code}, error message: ${err.message}`);
-      });
-    }
-  }
-})
-```
-
-ArkTS-Sta example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
 
+// This code must be placed in build() of the ArkUI page component. RelativeContainer is a built-in component of ArkUI. TouchEvent and TouchType are built-in types of ArkUI.
 RelativeContainer() {
   /* 
    * Page layout content, which should be defined based on your actual needs.
@@ -713,10 +565,11 @@ RelativeContainer() {
 .onTouch((event: TouchEvent) => {
   if (event.type === TouchType.Down) {
     if (selectionPanel !== undefined) {
-      selectionPanel?.startMoving().then(() => {   // selectionPanel is the panel instance created by createPanel.
+      // Enable the word selection panel to be dragged and moved with the mouse, touchpad, or touchscreen. selectionPanel is the panel instance created by createPanel.
+      selectionPanel.startMoving().then(() => {
         console.info('Succeeded in startMoving the panel.');
-      }).catch((err) => {
-        console.error(`Failed to startMoving panel: ${err.code}, error message: ${err.message}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to startMoving panel. Error code: ${err.code}, error message: ${err.message}`);
       });
     }
   }

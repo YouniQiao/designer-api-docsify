@@ -11,15 +11,15 @@
 
 ## 核心枚举类型</li>
 
-\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_**[SaveIconStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_：** 保存控件图标风格枚举，用于指定控件展示的图标风格。\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_**[SaveDescription]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_：** 保存控件文本描述枚举，用于指定控件展示的文本描述。\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_**[SaveButtonOnClickResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_：** 保存控件点击结果枚举，用于表示点击后授权是否成功。\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_
+&lt;li&gt;&lt;/li&gt;&lt;li&gt;**[SaveIconStyle]{@link SaveIconStyle}：** 保存控件图标风格枚举，用于指定控件展示的图标风格。&lt;/li&gt;&lt;li&gt;**[SaveDescription]{@link SaveDescription}：** 保存控件文本描述枚举，用于指定控件展示的文本描述。&lt;/li&gt;&lt;li&gt;**[SaveButtonOnClickResult]{@link SaveButtonOnClickResult}：** 保存控件点击结果枚举，用于表示点击后授权是否成功。&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;
 
 ## 核心接口类型</li>
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_**[SaveButtonOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_：** 保存控件配置对象，用于指定图标、文字和按钮类型等元素属性。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_**[SaveButtonCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_：** 保存控件点击回调类型，用于返回点击事件、授权结果和错误信息。\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_
+&lt;li&gt;&lt;/li&gt;&lt;li&gt;**[SaveButtonOptions]{@link SaveButtonOptions}：** 保存控件配置对象，用于指定图标、文字和按钮类型等元素属性。&lt;/li&gt;&lt;li&gt;**[SaveButtonCallback]{@link SaveButtonCallback}：** 保存控件点击回调类型，用于返回点击事件、授权结果和错误信息。&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;
 
 ## 子组件</li>
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_不支持。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;li&gt;&lt;/li&gt;&lt;li&gt;不支持。&lt;/li&gt;&lt;/ul&gt;
 
 ## SaveButton
 
@@ -27,7 +27,7 @@
 SaveButton()
 ```
 
-默认创建带有图标、文本、背景的保存控件。用户首次使用保存控件时会展示弹窗，在点击允许后自动授权，应用会获取访问媒体库接口的临时授权。后续使用无需弹窗授权。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_在API version 19及之前的版本中，授权持续时间为10秒。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_在API version 20及之后的版本中，授权持续时间为1分钟。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_**说明**\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_为避免控件样式不合法导致授权失败，请开发者先了解安全控件样式的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_
+默认创建带有图标、文本、背景的保存控件。用户首次使用保存控件时会展示弹窗，在点击允许后自动授权，应用会获取访问媒体库接口的临时授权。后续使用无需弹窗授权。&lt;br&gt;在API version 19及之前的版本中，授权持续时间为10秒。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。&lt;br&gt;在API version 20及之后的版本中，授权持续时间为1分钟。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。&lt;br&gt;**说明：**&lt;/br&gt;&lt;ul&gt;&lt;li&gt;为避免控件样式不合法导致授权失败，请开发者先了解安全控件样式的[约束与限制](docroot://security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt;&lt;/ul&gt;
 
 **起始版本：** 10
 
@@ -47,7 +47,7 @@ SaveButton()
 SaveButton(options: SaveButtonOptions)
 ```
 
-创建包含指定图标、文本或按钮类型的保存控件。用户首次使用保存控件时会展示弹窗，在点击允许后自动授权，应用会获取访问媒体库接口的临时授权。后续使用无需弹窗授权。在API version 19及之前的版本中，授权持续时间为10秒。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。在API version 20及之后的版本中，授权持续时间为1分钟。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**说明**\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_为避免控件样式不合法导致授权失败，请开发者先了解安全控件样式的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_
+创建包含指定图标、文本或按钮类型的保存控件。用户首次使用保存控件时会展示弹窗，在点击允许后自动授权，应用会获取访问媒体库接口的临时授权。后续使用无需弹窗授权。在API version 19及之前的版本中，授权持续时间为10秒。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。在API version 20及之后的版本中，授权持续时间为1分钟。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。&lt;br&gt;**说明：**&lt;/br&gt;&lt;ul&gt;&lt;li&gt;为避免控件样式不合法导致授权失败，请开发者先了解安全控件样式的[约束与限制](docroot://security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt;&lt;/ul&gt;
 
 **起始版本：** 10
 
@@ -65,7 +65,12 @@ SaveButton(options: SaveButtonOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存控件的配置选项，用于指定图标、文本和按钮类型等元素属性。 \_\_\_HTML\_TAG\_USD\_0\_\_\_建议至少显式设置 icon 或 text 中的一项，以确保用户能明确理解控件用途；若两者都不传，控件显示为默认样式。  |
+| options | [SaveButtonOptions](arkts-arkui-savebuttonoptions-i.md) | 是 | 保存控件的配置选项，用于指定图标、文本和按钮类型等元素属性。 <br>建议至少显式设置 icon 或 text 中的一项，以确保用户能明确理解控件用途；若两者都不传，控件显示为默认样式。 |
 
 ## 汇总
 
+- [SaveButtonOptions](arkts-arkui-savebutton-savebuttonoptions-i.md)
+- [SaveButtonCallback](arkts-arkui-savebutton-savebuttoncallback-t.md)
+- [SaveButtonOnClickResult](arkts-arkui-savebutton-savebuttononclickresult-e.md)
+- [SaveDescription](arkts-arkui-savebutton-savedescription-e.md)
+- [SaveIconStyle](arkts-arkui-savebutton-saveiconstyle-e.md)

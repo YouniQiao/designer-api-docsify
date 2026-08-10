@@ -90,8 +90,8 @@ No data masking is applied.
 DEFAULT = 4
 ```
 
-Applies data masking based on the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_permission. The specifications are as follows:
+Applies data masking based on the   
+[ohos.permission.MEDIA_LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionmedia_location)permission. The specifications are as follows:
 
 - If this permission is available, no masking is applied.  
 - If this permission is unavailable, geographic location is masked.

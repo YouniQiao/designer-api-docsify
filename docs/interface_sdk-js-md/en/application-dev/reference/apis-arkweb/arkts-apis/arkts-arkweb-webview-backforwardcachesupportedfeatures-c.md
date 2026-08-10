@@ -10,6 +10,12 @@ This class is used to enable back forward cache supported features.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## constructor
 
 ```TypeScript

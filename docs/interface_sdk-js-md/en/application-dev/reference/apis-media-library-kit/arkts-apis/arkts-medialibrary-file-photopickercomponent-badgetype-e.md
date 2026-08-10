@@ -16,7 +16,7 @@ BadgeType.
 BADGE_UPLOADED = 0
 ```
 
-BADGE\_UPLOADED. Asset uploaded.
+BADGE_UPLOADED. Asset uploaded.
 
 **Since:** 26.0.0
 

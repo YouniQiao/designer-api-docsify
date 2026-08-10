@@ -1,6 +1,6 @@
 # PermissionInfo (System API)
 
-Permission information.
+权限信息。
 
 **Since:** 26.0.0
 
@@ -18,9 +18,9 @@ Permission information.
 authStatusInfo?: AuthStatusInfo
 ```
 
-Authorization status information.
+授权状态信息。
 
-**Type:** AuthStatusInfo
+**Type:** [AuthStatusInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authstatusinfo-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Authorization status information.
 permission: string
 ```
 
-Permission name.
+权限名称。
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Permission name.
 permissionStatus: abilityAccessCtrl.PermissionStatus
 ```
 
-Permission status.
+权限状态。
 
 **Type:** abilityAccessCtrl.PermissionStatus
 

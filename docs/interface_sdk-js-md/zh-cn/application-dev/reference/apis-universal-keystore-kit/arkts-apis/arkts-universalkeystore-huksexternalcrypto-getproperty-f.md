@@ -1,5 +1,11 @@
 # getProperty
 
+## 导入模块
+
+```TypeScript
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## getProperty
 
 ```TypeScript
@@ -10,10 +16,10 @@ function getProperty(resourceId: string, propertyId: string, params?: Array<Huks
 
 propertyId表示查询属性的ID信息，当前仅支持GMT 0016-2023中定义的SKF接口名作为属性ID，支持的ID包括如下：
 
-- SKF\_EnumDev  
-- SKF\_GetDevInfo  
-- SKF\_EnumApplication  
-- SKF\_EnumContainer
+- SKF_EnumDev  
+- SKF_GetDevInfo  
+- SKF_EnumApplication  
+- SKF_EnumContainer
 
 **起始版本：** 22
 
@@ -29,9 +35,9 @@ propertyId表示查询属性的ID信息，当前仅支持GMT 0016-2023中定义�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceId | string | 是 | 资源ID，可通过 [导出证书的接口]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 获取，该接口的返回结果中附带resourceId。 |
+| resourceId | string | 是 | 资源ID，可通过 [导出证书的接口](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) 获取，该接口的返回结果中附带resourceId。 |
 | propertyId | string | 是 | 查找操作的属性名称，是GMT 0016-2023中定义的SKF接口名，应用开发者需要针对接口名进行适配。 |
-| params | Array&lt;HuksExternalCryptoParam&gt; | 否 | 需要传递给 [Extension Ability]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的输入参数。非系统应用传入 [HUKS\_\_\_ESCAPED\_UNDERSCORE\_\_\_EXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_CRYPTO\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_UID]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_是非法参数。 |
+| params | Array&lt;HuksExternalCryptoParam&gt; | 否 | 需要传递给 [Extension Ability](arkts-security-cryptoextensionability.md)的输入参数。非系统应用传入 [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)是非法参数。 |
 
 **返回值：**
 
@@ -43,19 +49,19 @@ propertyId表示查询属性的ID信息，当前仅支持GMT 0016-2023中定义�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | API is not supported. |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | If the UKey driver operation failed. Possible causes: 1. Error reported when the provider accesses the SKF interface of UKey. |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | If the cached resource ID is not found. |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | If the memory is insufficient. |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | Input parameter is invalid. Possible causes: 1. The resourceId or propertyId length is invalid. 2. The params contains invalid tags or invalid value types. |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | If the provider operation failed. Possible causes: 1. The provider experienced an internal processing error. |
-| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | The UKey PIN is locked. |
-| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | The UKey PIN is not authenticated. |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | If the provider or UKey is busy. |
+| 12000023 | The UKey PIN is not authenticated. |
+| 801 | API is not supported. |
+| 12000006 | If the UKey driver operation failed. Possible causes: 1. Error reported when the provider accesses the SKF interface of UKey. |
+| 12000005 | IPC communication failed. |
+| 12000021 | The UKey PIN is locked. |
+| 12000020 | If the provider operation failed. Possible causes: 1. The provider experienced an internal processing error. |
+| 12000018 | Input parameter is invalid. Possible causes: 1. The resourceId or propertyId length is invalid. 2. The params contains invalid tags or invalid value types. |
+| 12000014 | If the memory is insufficient. |
+| 12000012 | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
+| 12000011 | If the cached resource ID is not found. |
+| 12000024 | If the provider or UKey is busy. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';

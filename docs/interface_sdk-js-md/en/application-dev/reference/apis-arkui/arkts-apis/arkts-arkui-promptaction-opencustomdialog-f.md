@@ -1,23 +1,34 @@
 # openCustomDialog
 
+## Modules to Import
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## openCustomDialog
 
 ```TypeScript
 function openCustomDialog(options: CustomDialogOptions): Promise<number>
 ```
 
-Opens a custom dialog box. This API uses a promise to return the result.
+打开自定义弹窗。通过Promise返回结果。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_8\_\_\_This API cannot be used in **ServiceExtension**.\_\_\_MD\_COMMENT\_DESC\_USD\_9\_\_\_
+&lt;!--Del--&gt;不支持在ServiceExtension中使用。&lt;!--DelEnd--&gt;
 
-By default, the width of the dialog box in portrait mode is the width of the window where it is located minus the left and right margins (40 vp for 2-in-1 devices and 16 vp for other devices), and the maximum width is 400 vp.
-    **NOTE**  
-    
-    - This API is supported since API version 11 and deprecated since API version 18.  
-You are advised to use \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ instead.Before calling this API, you need to obtain the \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ object using the \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ method in \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_.Directly using **openCustomDialog** can lead to the issue of \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_.  
-    
-    - Since API version 12, you can use the \_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_ API  
-in \_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_ to obtain the \_\_\_MD\_LINK\_DESC\_USD\_7\_\_\_object associated with the current UI context.
+弹窗宽度在设备竖屏时默认为 所在窗口宽度 - 左右margin（16vp，设备为2in1时为40vp），最大默认宽度为400vp。
+
+> **说明：**
+> 
+> - 从API version 11开始支持，从API version 18开始废弃，建议使用[openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1)替代。
+openCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
+[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取  
+[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用openCustomDialog可能导致  
+[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> 
+> - 从API version 12开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
+[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
+[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
 
 **Since:** 11
 
@@ -39,22 +50,22 @@ in \_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_ to obtain the \_\_\_MD\_LINK\_DESC\_USD\_7
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Content of the custom dialog box. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note: If both \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | 自定义弹窗的内容。 &lt;br&gt;**说明：** 如果BaseDialogOptions中的[isModal](js-apis-promptAction.md#basedialogoptions11)与 [showInSubWindow](js-apis-promptAction.md#basedialogoptions11)同时设置为true， 则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | ID of the custom dialog box, which can be used in **closeCustomDialog**. |
+| Promise&lt;number&gt; | 返回供closeCustomDialog使用的对话框id。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

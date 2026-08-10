@@ -1,7 +1,7 @@
 # KeyEvent
 
 按键事件。  
-[EnterpriseAdminExtensionAbility.onKeyEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_按键事件回调触发时，传递当前按键事件信息。
+[EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)按键事件回调触发时，传递当前按键事件信息。
 
 **起始版本：** 23
 
@@ -10,6 +10,12 @@
 <!--Device-systemManager-interface KeyEvent--><!--Device-systemManager-interface KeyEvent-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
 
 ## actionTime
 
@@ -39,7 +45,7 @@ keyAction: KeyAction
 
 按键动作。
 
-**类型：** KeyAction
+**类型：** [KeyAction](arkts-mdm-systemmanager-keyaction-e.md)
 
 **起始版本：** 23
 
@@ -59,7 +65,7 @@ keyCode: KeyCode
 
 按键编码。
 
-**类型：** KeyCode
+**类型：** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
 
 **起始版本：** 23
 

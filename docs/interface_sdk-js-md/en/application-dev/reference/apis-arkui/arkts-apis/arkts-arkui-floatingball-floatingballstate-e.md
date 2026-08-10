@@ -1,6 +1,6 @@
 # FloatingBallState
 
-Enumerates the lifecycle states of the floating ball.
+闪控球生命周期状态的枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the lifecycle states of the floating ball.
 STARTED = 1
 ```
 
-The floating ball is started.
+表示闪控球启动。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ The floating ball is started.
 STOPPED = 2
 ```
 
-The floating ball is stopped.
+表示闪控球停止。
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # ApplicationFlag (System API)
 
-Enumerates the application flags, which indicate the type of application information to obtain.
+应用信息标志，指示需要获取的应用信息的内容。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates the application flags, which indicate the type of application informa
 GET_APPLICATION_INFO_DEFAULT = 0x00000000
 ```
 
-Used to obtain the default application information. The obtained information does not contain the permission information or metadata.
+用于获取默认的applicationInfo，获取的applicationInfo不包含permission和metadata信息。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Used to obtain the default application information. The obtained information doe
 GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000001
 ```
 
-Used to obtain the application information with permission information.
+用于获取包含permission的applicationInfo。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Used to obtain the application information with permission information.
 GET_APPLICATION_INFO_WITH_METADATA = 0x00000002
 ```
 
-Used to obtain the application information with metadata.
+用于获取包含metadata的applicationInfo。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Used to obtain the application information with metadata.
 GET_APPLICATION_INFO_WITH_DISABLE = 0x00000004
 ```
 
-Used to obtain the application information of disabled bundles.
+用于获取包含禁用应用程序的applicationInfo。
 
 **Since:** 9
 

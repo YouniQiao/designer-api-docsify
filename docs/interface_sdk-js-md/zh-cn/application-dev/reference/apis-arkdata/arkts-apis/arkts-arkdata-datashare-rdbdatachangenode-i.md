@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## 导入模块
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## data
 
 ```TypeScript
@@ -38,7 +44,7 @@ templateId: TemplateId
 
 处理回调的templateId。
 
-**类型：** TemplateId
+**类型：** [TemplateId](arkts-arkdata-datashare-templateid-i.md)
 
 **起始版本：** 10
 

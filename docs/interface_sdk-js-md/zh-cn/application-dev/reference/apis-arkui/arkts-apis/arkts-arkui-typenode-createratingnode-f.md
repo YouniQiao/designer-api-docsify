@@ -22,11 +22,11 @@ Create a FrameNode of Rating type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the FrameNode. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return Rating type FrameNode. |
+| [Rating](arkts-arkui-typenode-rating-t.md) | Return Rating type FrameNode. |
 

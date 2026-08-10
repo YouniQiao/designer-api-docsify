@@ -18,11 +18,11 @@ The function with one parameter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | T | 是 | the first param.  |
+| param | T | 是 | the first param. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| V | The return value.  |
+| V | The return value. |
 

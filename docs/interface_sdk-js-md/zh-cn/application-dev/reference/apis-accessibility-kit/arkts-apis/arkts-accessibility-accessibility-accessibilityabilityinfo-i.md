@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## abilityTypes
 
 ```TypeScript

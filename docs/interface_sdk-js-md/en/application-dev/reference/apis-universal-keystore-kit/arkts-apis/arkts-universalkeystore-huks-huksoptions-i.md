@@ -1,6 +1,6 @@
 # HuksOptions
 
-Defines **options** used in the APIs.
+调用接口使用的options。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ Defines **options** used in the APIs.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## inData
 
 ```TypeScript
 inData?: Uint8Array
 ```
 
-Tag.
+标签。
 
 **Type:** Uint8Array
 
@@ -36,7 +42,7 @@ Tag.
 properties?: Array<HuksParam>
 ```
 
-Tag.
+标签。
 
 **Type:** Array&lt;HuksParam&gt;
 

@@ -18,6 +18,6 @@ type StateChangeCallback = (state: PiPState, reason: string) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 画中画窗口状态。  |
-| reason | string | 是 | 当前生命周期的切换原因。  |
+| state | [PiPState](arkts-arkui-pipwindow-pipstate-e.md) | 是 | 画中画窗口状态。 |
+| reason | string | 是 | 当前生命周期的切换原因。 |
 

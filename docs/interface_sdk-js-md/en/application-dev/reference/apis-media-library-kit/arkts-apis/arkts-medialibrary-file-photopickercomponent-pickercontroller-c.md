@@ -12,6 +12,12 @@ The class for PickerController
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## addData
 
 ```TypeScript
@@ -34,7 +40,7 @@ Add data to picker component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | data type |
+| dataType | [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | data type |
 | data | Object | Yes | data |
 
 ## completed
@@ -59,7 +65,7 @@ Call this method to obtain the complete data after a selection operation has fin
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CompletedResult&gt; | Promise\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| Promise&lt;CompletedResult&gt; | Promise&lt;CompletedResult&gt; |
 
 ## deleteData
 
@@ -83,7 +89,7 @@ Delete data to picker component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | data type |
+| dataType | [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | data type |
 | data | Object | Yes | data |
 
 ## exitPhotoBrowser
@@ -128,7 +134,7 @@ Display the photo after edit.
 | --- | --- | --- | --- |
 | originalUri | string | Yes | Original uri |
 | newUri | string | Yes | New uri after replacement |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Returns void |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns void |
 
 ## saveTrustedPhotoAssets
 
@@ -154,9 +160,9 @@ Save the photo assets of uris.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | trustedUris | string[] | Yes | Uris need to be saved |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | Yes | Returns the uri list |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Returns the uri list |
 | configs | photoAccessHelper.PhotoCreationConfig[] | No | Photo asset creation configs |
-| saveMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Mode of save |
+| saveMode | [SaveMode](arkts-medialibrary-file-photopickercomponent-savemode-e.md) | No | Mode of save |
 
 ## setData
 
@@ -180,7 +186,7 @@ Set data to picker component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | data type |
+| dataType | [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | data type |
 | data | Object | Yes | data |
 
 ## setMaxSelected
@@ -189,7 +195,7 @@ Set data to picker component
 public setMaxSelected(maxSelected: MaxSelected): void
 ```
 
-Set max select count to picker component, include max\_total\_count, max\_photo\_count and max\_video\_count.
+Set max select count to picker component, include max_total_count, max_photo_count and max_video_count.
 
 **Since:** 26.0.0
 
@@ -205,7 +211,7 @@ Set max select count to picker component, include max\_total\_count, max\_photo\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSelected | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | max select count data |
+| maxSelected | [MaxSelected](arkts-medialibrary-file-photopickercomponent-maxselected-c.md) | Yes | max select count data |
 
 ## setPhotoBrowserItem
 
@@ -230,7 +236,7 @@ Set photo browser item to picker component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | specify image uri for photo browsing |
-| photoBrowserRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | photo browser slide range |
+| photoBrowserRange | [PhotoBrowserRange](arkts-medialibrary-file-photopickercomponent-photobrowserrange-e.md) | No | photo browser slide range |
 
 ## setPhotoBrowserUIElementVisibility
 
@@ -254,6 +260,6 @@ Sets whether other elements on the photo browser page are visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | other elements on the photo browser page |
+| elements | [PhotoBrowserUIElement](arkts-medialibrary-file-photopickercomponent-photobrowseruielement-e.md)[] | Yes | other elements on the photo browser page |
 | isVisible | boolean | Yes | visible or not |
 

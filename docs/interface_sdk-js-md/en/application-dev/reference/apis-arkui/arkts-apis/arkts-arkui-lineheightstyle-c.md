@@ -1,6 +1,6 @@
 # LineHeightStyle
 
-Describes the text line height style.
+文本行高对象说明。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Describes the text line height style.
 constructor(lineHeight: LengthMetrics)
 ```
 
-A constructor used to create a text line height style.
+文本行高的构造函数。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ A constructor used to create a text line height style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本行高设置项。如果LengthMetrics的unit值是PERCENT，当前设置不生效。LengthMetrics的value值大于0时，文本行高设置 生效，否则文本行高自适应字体大小。 |
 
 ## constructor
 
@@ -42,19 +42,16 @@ A constructor used to create a text line height style.
 constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 ```
 
-A constructor used to create a text line height and multiple.
-    **NOTE**  
-    
-    - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-    only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line  
-    and the multiplier.  
-    
-    - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect. Use **lineHeight** and  
-    [LineSpacingStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to set the line height and line spacing.  
-    
-    - When **lineHeightMultiple** is set to 0, it is equivalent to setting it to 1.
+文本行高及倍数的构造函数。
 
-**Since**: 26.0.0
+> **说明：**
+> 
+> - lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度
+> 与倍数的乘积。
+> 
+> - lineHeightMultiple小于0或undefined时不生效，使用lineHeight和[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)设置行高和行间距。
+> 
+> - lineHeightMultiple等于0时等效于设置为1。
 
 **Since:** 26.0.0
 
@@ -72,8 +69,8 @@ A constructor used to create a text line height and multiple.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
-| lineHeightMultiple | number | No | Multiplier for the text line height.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞). Decimals are supported. |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本行高设置项。LengthMetrics的value值大于0时，文本行高设置生效，否则文本行高自适应字体大小。 |
+| lineHeightMultiple | number | No | 文本行高的倍数值。 &lt;br&gt;取值范围：[0, +∞)，支持小数。 &lt;br&gt;**说明：** &lt;br&gt;与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度与倍数的乘积； &lt;br&gt;小于0或undefined时不生效； &lt;br&gt;等于0时等效于设置为1。 |
 
 ## lineHeight
 
@@ -81,9 +78,9 @@ A constructor used to create a text line height and multiple.
 readonly lineHeight: number
 ```
 
-Text line height of the styled string.
+获取属性字符串的文本行高。
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -105,9 +102,9 @@ Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 readonly lineHeightMultiple?: number
 ```
 
-Multiplier for the text line height. The effective line height is the product of the highest font height in the line and the multiplier.
+文本行高的倍数值。实际生效的行高为该行最高的字体高度与倍数的乘积。
 
-**Since**: 26.0.0
+**说明：** lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效。lineHeightMultiple小于0或undefined时不生效。lineHeightMultiple等于0时等效于设置为1。
 
 **Type:** number
 

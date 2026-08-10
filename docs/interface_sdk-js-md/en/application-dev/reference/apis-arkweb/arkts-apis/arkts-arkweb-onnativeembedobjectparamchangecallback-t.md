@@ -18,5 +18,5 @@ The callback when the param element which is a child item of the object element 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of param element.  |
+| event | [NativeEmbedParamDataInfo](arkts-arkweb-web-nativeembedparamdatainfo-i.md) | Yes | callback information of param element. |
 

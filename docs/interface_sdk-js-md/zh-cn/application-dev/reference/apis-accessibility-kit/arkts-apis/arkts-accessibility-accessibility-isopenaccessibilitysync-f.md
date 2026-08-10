@@ -1,5 +1,11 @@
 # isOpenAccessibilitySync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isOpenAccessibilitySync
 
 ```TypeScript
@@ -7,7 +13,7 @@ function isOpenAccessibilitySync(): boolean
 ```
 
 查询当前系统内是否存在已开启的辅助应用。如需获取系统内辅助应用信息，推荐使用  
-[accessibility.getAccessibilityExtensionListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。
 
 **起始版本：** 10
 
@@ -27,7 +33,7 @@ function isOpenAccessibilitySync(): boolean
 | --- | --- |
 | boolean | 表示当前系统内是否有辅助应用开启。true表示启用了一个或多个辅助应用，false表示未启用任何辅助应用。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

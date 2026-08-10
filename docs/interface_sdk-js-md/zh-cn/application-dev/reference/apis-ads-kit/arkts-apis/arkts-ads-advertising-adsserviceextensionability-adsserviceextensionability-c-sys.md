@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { RespCallback } from 'kits/@kit.AdsKit';
+```
+
 ## onLoadAd
 
 ```TypeScript
@@ -36,9 +42,9 @@ onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions,
 | --- | --- | --- | --- |
 | adParam | advertising.AdRequestParams | 是 | 广告请求参数。 |
 | adOptions | advertising.AdOptions | 是 | 广告配置参数。 |
-| respCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 广告请求回调。 |
+| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 | 广告请求回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
@@ -78,9 +84,9 @@ onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: adver
 | --- | --- | --- | --- |
 | adParams | advertising.AdRequestParams[] | 是 | 广告请求参数。 |
 | adOptions | advertising.AdOptions | 是 | 广告配置参数。 |
-| respCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 广告请求回调。 |
+| respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 | 广告请求回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';

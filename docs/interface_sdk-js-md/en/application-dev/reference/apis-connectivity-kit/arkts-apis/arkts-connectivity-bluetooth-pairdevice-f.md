@@ -1,5 +1,11 @@
 # pairDevice
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## pairDevice
 
 ```TypeScript
@@ -34,7 +40,7 @@ Starts pairing with a remote Bluetooth device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The address can be scanned.

@@ -14,6 +14,12 @@ P2P config.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceAddress
 
 ```TypeScript
@@ -44,7 +50,7 @@ goBand: GroupOwnerBand
 
 Group owner band
 
-**Type:** GroupOwnerBand
+**Type:** [GroupOwnerBand](arkts-connectivity-wifi-groupownerband-e.md)
 
 **Since:** 8
 

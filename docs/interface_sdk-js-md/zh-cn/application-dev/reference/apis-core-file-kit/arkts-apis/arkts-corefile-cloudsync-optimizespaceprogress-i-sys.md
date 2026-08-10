@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## progress
 
 ```TypeScript
@@ -20,7 +26,7 @@ progress: int
 
 优化进度百分比，范围[0,100]，单位：百分比。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 17
 
@@ -42,7 +48,7 @@ state: OptimizeState
 
 枚举值，优化空间状态。
 
-**类型：** OptimizeState
+**类型：** [OptimizeState](arkts-corefile-cloudsync-optimizestate-e-sys.md)
 
 **起始版本：** 17
 

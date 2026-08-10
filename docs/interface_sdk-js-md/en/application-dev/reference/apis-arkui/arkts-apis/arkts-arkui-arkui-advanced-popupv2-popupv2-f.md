@@ -1,12 +1,16 @@
 # PopupV2
 
+## Modules to Import
+
+```TypeScript
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+```
+
 ## PopupV2
 
 ```TypeScript
 export declare function PopupV2(options: PopupV2InitInfo): void
 ```
-
-Build function of PopupV2. This component is implemented based on state management V2Compared with Popup, PopupV2 offers a higher level of observation and management over data objects.
 
 **Since:** 26.0.0
 
@@ -24,5 +28,5 @@ Build function of PopupV2. This component is implemented based on state manageme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | popup option. |
+| options | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | Yes | 定义PopupV2组件的配置参数。 |
 

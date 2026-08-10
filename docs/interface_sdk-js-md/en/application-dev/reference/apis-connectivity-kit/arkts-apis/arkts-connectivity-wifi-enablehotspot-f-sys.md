@@ -1,5 +1,11 @@
 # enableHotspot (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## enableHotspot
 
 ```TypeScript
@@ -8,7 +14,7 @@ function enableHotspot(): boolean
 
 Enables a Wi-Fi hotspot.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
+&lt;p&gt;This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
 
 **Since:** 7
 
@@ -32,7 +38,7 @@ Enables a Wi-Fi hotspot.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

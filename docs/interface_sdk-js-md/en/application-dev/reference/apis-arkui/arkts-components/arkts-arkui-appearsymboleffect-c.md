@@ -1,8 +1,8 @@
 # AppearSymbolEffect
 
-Defines AppearSymbolEffect class, which inherits from **SymbolEffect**.
+AppearSymbolEffect继承自父类SymbolEffect。
 
-**Inheritance/Implementation:** AppearSymbolEffect extends [SymbolEffect](../arkts-apis/arkts-arkui-component/symbolglyph-symboleffect-c.md)
+**Inheritance/Implementation:** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Defines AppearSymbolEffect class, which inherits from **SymbolEffect**.
 constructor(scope?: EffectScope)
 ```
 
-A constructor used to create an **AppearSymbolEffect** instance, which comes with an appear animation effect.
+AppearSymbolEffect的构造函数，出现动效。
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Effect scope.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **EffectScope.LAYER |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 &lt;br&gt;默认值：EffectScope.LAYER |
 
 ## scope
 
@@ -46,11 +46,11 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 scope?: EffectScope
 ```
 
-Effect scope.
+动效范围。具体枚举值及说明请参考EffectScope枚举说明。
 
-Default value: **EffectScope.LAYER
+默认值：EffectScope.LAYER
 
-**Type:** EffectScope
+**Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
 

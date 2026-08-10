@@ -4,6 +4,12 @@ The **shortKey** module provides APIs to set the delay for starting an ability u
  can set the delay to 3 seconds so that a screenshot is taken when you press and hold the shortcut key for 3 seconds.
 
 
+## 导入模块
+
+```TypeScript
+import { shortKey } from 'kits/@kit.InputKit';
+```
+
 ## 汇总
 
 ### 命名空间

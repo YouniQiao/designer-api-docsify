@@ -1,5 +1,11 @@
 # queryKey
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## queryKey
 
 ```TypeScript
@@ -27,9 +33,9 @@ function queryKey(id: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 联系人对象的id属性。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,18 +73,18 @@ function queryKey(context: Context, id: number, callback: AsyncCallback<string>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 | id | number | 是 | 联系人对象的id属性，是联系人对象在数据库中的唯一标识符。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -126,10 +132,10 @@ function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 联系人对象的id属性。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -171,19 +177,19 @@ function queryKey(context: Context, id: number, holder: Holder, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 | id | number | 是 | 联系人对象的id属性。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -235,7 +241,7 @@ function queryKey(id: number, holder?: Holder): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 联系人对象的id属性。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 否 | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
 
 **返回值：**
 
@@ -243,7 +249,7 @@ function queryKey(id: number, holder?: Holder): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象。返回查询到的联系人对应的key。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';
@@ -281,9 +287,9 @@ function queryKey(context: Context, id: number, holder?: Holder): Promise<string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 | id | number | 是 | 联系人对象的id属性。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 否 | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
 
 **返回值：**
 
@@ -295,10 +301,10 @@ function queryKey(context: Context, id: number, holder?: Holder): Promise<string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 

@@ -1,6 +1,6 @@
 # MessageLevel
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for receiving the console log level of JavaScript.
+Enum type supplied to {@link getMessageLevel} for receiving the console log level of JavaScript.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for receiving the co
 Debug = 1
 ```
 
-Debug level.
+调试级别。
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Debug level.
 Info = 2
 ```
 
-Info level.
+消息级别。
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Info level.
 Warn = 3
 ```
 
-Warn level.
+警告级别。
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Warn level.
 Error = 4
 ```
 
-Error level.
+错误级别。
 
 **Since:** 8
 
@@ -88,7 +88,7 @@ Error level.
 Log = 5
 ```
 
-Log level.
+日志级别。
 
 **Since:** 8
 

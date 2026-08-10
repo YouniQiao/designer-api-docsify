@@ -1,6 +1,6 @@
 # BaseEvent
 
-Basic event type.
+基础事件类型。
 
 **Since:** 8
 
@@ -16,10 +16,11 @@ Basic event type.
 getModifierKeyState?(keys: Array<string>): boolean
 ```
 
-Obtains the pressed status of modifier keys. For details about the error message, see the following error codes.The Ctrl, Alt, and Shift keys are supported.
-    **NOTE**  
-    
-    This API is not supported in stylus scenarios.
+获取功能键按压状态。报错信息请参考以下错误码。支持功能键'Ctrl'\|'Alt'\|'Shift'。
+
+> **说明：**
+> 
+> 此接口不支持在手写笔场景下使用。
 
 **Since:** 12
 
@@ -37,33 +38,35 @@ Obtains the pressed status of modifier keys. For details about the error message
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Modifier key list. |
+| keys | Array&lt;string&gt; | Yes | 功能键列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Pressed status of modifier keys. Returns **true** if all modifier keys are pressed; returns **false** otherwise. |
+| boolean | 返回功能键按压状态。当功能键均处于按压状态时返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 
 ```TypeScript
-axisHorizontal?: number
+axisHorizontal ?: number
 ```
 
-Horizontal axis value.
+水平轴值。
 
-Default value: **0**
+默认值：0
 
-**NOTE**
+**说明：**
 
-This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
+当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。
+
+对于Shift+鼠标滚轮触发的横向滚动场景，axisHorizontal为0，滚动值体现在axisVertical中。
 
 **Type:** number
 
@@ -77,7 +80,7 @@ This value is available only when the pan gesture is triggered by mouse wheel sc
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-BaseEvent-axisHorizontal?: number--><!--Device-BaseEvent-axisHorizontal?: number-End-->
+<!--Device-BaseEvent-axisHorizontal ?: number--><!--Device-BaseEvent-axisHorizontal ?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,17 +90,17 @@ This value is available only when the pan gesture is triggered by mouse wheel sc
 axisPinch?: number
 ```
 
-Two-finger pinch scaling ratio.
+双指缩放比例。
 
-Default value: **0**
+默认值：0
 
-**NOTE**
+**说明：**
 
-This value is available only when a pinch gesture is triggered by a two-finger scaling operation on a touchpad or during axis events.
+仅在触控板上通过双指缩放操作触发的Pinch手势，或在轴事件中，可以获取该值；在其他场景下，获取到的将是默认值。
 
-In other scenarios, the default value is returned. The scaling ratio represents the ratio of the current two-finger distance to the initial two-finger distance when first pressed during a pinch gesture.
+缩放比例是指在双指缩放事件触发过程中，双指当前距离与最初按下时距离的比值。
 
-Value range: [0, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -118,16 +121,18 @@ Value range: [0, +∞).
 ## axisVertical
 
 ```TypeScript
-axisVertical?: number
+axisVertical ?: number
 ```
 
-Vertical axis value.
+垂直轴值。
 
-Default value: **0**
+默认值：0
 
-**NOTE**
+**说明：**
 
-This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
+当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。
+
+对于Shift+鼠标滚轮触发的横向滚动场景，滚动值体现在axisVertical中。
 
 **Type:** number
 
@@ -141,7 +146,7 @@ This value is available only when the pan gesture is triggered by mouse wheel sc
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-BaseEvent-axisVertical?: number--><!--Device-BaseEvent-axisVertical?: number-End-->
+<!--Device-BaseEvent-axisVertical ?: number--><!--Device-BaseEvent-axisVertical ?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,11 +156,11 @@ This value is available only when the pan gesture is triggered by mouse wheel sc
 deviceId?: number
 ```
 
-ID of the input device that triggers the event.
+触发当前事件的输入设备ID。
 
-Default value: **0**
+默认值：0
 
-Value range: [0, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -177,11 +182,11 @@ Value range: [0, +∞).
 pressure: number
 ```
 
-Press pressure.
+按压的压力大小。
 
-Default value: **0**
+默认值：0
 
-Value range: [0, 1], typical value 0.913168, where higher values indicate greater pressure. On some devices, the return value may be greater than 1 due to different hardware parameter configurations.
+取值范围：[0,1]，典型值0.913168，压感大小与数值正相关。在部分设备中，由于设备的硬件参数配置不同，可能会返回大于1的值。
 
 **Type:** number
 
@@ -203,9 +208,9 @@ Value range: [0, 1], typical value 0.913168, where higher values indicate greate
 rollAngle?: number
 ```
 
-Angle between the stylus and the device's surface.
+手写笔与设备平面的夹角。
 
-Unit: deg
+单位：deg
 
 **Type:** number
 
@@ -229,9 +234,9 @@ Unit: deg
 source: SourceType
 ```
 
-Type of the event input device.
+事件输入设备的类型。
 
-**Type:** SourceType
+**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **Since:** 8
 
@@ -251,9 +256,9 @@ Type of the event input device.
 sourceTool: SourceTool
 ```
 
-Event input source type.
+事件输入源的类型。
 
-**Type:** SourceTool
+**Type:** [SourceTool](../arkts-apis/arkts-arkui-common-sourcetool-e.md)
 
 **Since:** 9
 
@@ -273,9 +278,9 @@ Event input source type.
 target: EventTarget
 ```
 
-Object that triggers the gesture event.
+触发手势事件的元素对象。
 
-**Type:** EventTarget
+**Type:** [EventTarget](../../apis-arkts/arkts-apis/arkts-arkts-worker-eventtarget-i.md)
 
 **Since:** 8
 
@@ -295,11 +300,11 @@ Object that triggers the gesture event.
 targetDisplayId?: number
 ```
 
-ID of the screen where the event occurs.
+事件发生的屏幕ID。 
 
-Default value: **0**
+默认值：0
 
-Value range: [0, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -321,11 +326,11 @@ Value range: [0, +∞).
 tiltX: number
 ```
 
-Angle between the projection of the stylus on the device plane and the x-axis.
+手写笔在设备平面上的投影与设备平面X轴的夹角。
 
-Unit: deg
+单位：deg
 
-Default value: **0
+默认值：0
 
 **Type:** number
 
@@ -347,11 +352,11 @@ Default value: **0
 tiltY: number
 ```
 
-Angle between the projection of the stylus on the device plane and the y-axis.
+手写笔在设备平面上的投影与设备平面Y轴的夹角。
 
-Unit: deg
+单位：deg
 
-Default value: **0
+默认值：0
 
 **Type:** number
 
@@ -373,9 +378,9 @@ Default value: **0
 timestamp: number
 ```
 
-Timestamp of the event. It is the interval between the time when the event is triggered and the time when the system starts.
+事件时间戳，触发事件时距离系统启动的时间间隔。
 
-Unit: ns
+单位：ns
 
 **Type:** number
 

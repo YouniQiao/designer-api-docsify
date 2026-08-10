@@ -6,7 +6,7 @@
 function getArguments(): AbilityDelegatorArgs
 ```
 
-Obtains the **AbilityDelegatorArgs** object of the application.
+获取单元测试参数AbilityDelegatorArgs对象。
 
 **Since:** 8
 
@@ -24,9 +24,9 @@ Obtains the **AbilityDelegatorArgs** object of the application.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [AbilityDelegatorArgs]{ |
+| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';

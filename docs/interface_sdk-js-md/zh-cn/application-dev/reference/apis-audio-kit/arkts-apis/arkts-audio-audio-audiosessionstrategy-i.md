@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## concurrencyMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ concurrencyMode: AudioConcurrencyMode
 
 音频并发模式。
 
-**类型：** AudioConcurrencyMode
+**类型：** [AudioConcurrencyMode](arkts-audio-audio-audioconcurrencymode-e.md)
 
 **起始版本：** 12
 

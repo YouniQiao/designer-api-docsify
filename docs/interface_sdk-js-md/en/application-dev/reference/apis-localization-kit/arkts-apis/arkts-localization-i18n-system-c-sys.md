@@ -1,6 +1,6 @@
 # System
 
-Provides system functions.
+提供系统属性相关的能力，包括语言地区名称翻译、支持的语言地区列表获取和系统语言地区获取等。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides system functions.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## addPreferredLanguage
 
 ```TypeScript
 static addPreferredLanguage(language: string, index?: int): void
 ```
 
-Adds a preferred language to the specified position on the preferred language list.
+在系统偏好语言列表的指定位置添加偏好语言。
 
 **Since:** 23
 
@@ -34,17 +40,17 @@ Adds a preferred language to the specified position on the preferred language li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | Valid ID of the language to be added as a preferred language. |
-| index | int | No | Position to which the preferred language is added. The default value is the length of the preferred language list. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| language | string | Yes | 待添加的偏好语言，要求是合法的语言ID。 |
+| index | int | No | 偏好语言的添加位置。 &lt;br&gt;取值范围：[0, 系统偏好语言列表长度]，小于0时取值为0，大于系统偏好语言列表长度时取值为系统偏好语言列表长度。 &lt;br&gt;默认值：系统偏好语言列表长度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getSystemCollations
 
@@ -52,7 +58,7 @@ Adds a preferred language to the specified position on the preferred language li
 static getSystemCollations(): Map<string, string>
 ```
 
-Gets collations supported by system locale.
+获取系统支持的排序方式及名称。如系统语言为英文时，可以支持大写在前或小写在前的排序方式。
 
 **Since:** 23
 
@@ -68,13 +74,13 @@ Gets collations supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | The map will containing the collation's identifier and name. If the map is empty of the collation for given locale does not need to be set. |
+| Map&lt;string, string&gt; | 系统支持的排序方式及名称。其中Map的key为表示排序方式的字符串，value为表示排序方式对应名称的字符串。 支持的范围和系统语言相关。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getSystemMeasurements
 
@@ -82,7 +88,7 @@ Gets collations supported by system locale.
 static getSystemMeasurements(): Map<string, string>
 ```
 
-Gets measurements supported by system locale.
+获取系统支持的度量衡及其名称。
 
 **Since:** 23
 
@@ -98,13 +104,13 @@ Gets measurements supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map will containing identifier and name of measurements supported by system locale. |
+| Map&lt;string, string&gt; | 系统支持的度量衡及其名称。其中Map的key表示度量衡的标识，value表示度量衡的名称。支持的度量衡如下： - metric：公制。 - uksystem：英制。 - ussystem：美制。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getSystemNumberPatterns
 
@@ -112,7 +118,7 @@ Gets measurements supported by system locale.
 static getSystemNumberPatterns(): Map<string, string>
 ```
 
-Gets commonly used number patterns for system locale.
+获取系统支持的数字格式及示例。数字格式指数字中的千分符和小数分隔符的格式。
 
 **Since:** 23
 
@@ -128,13 +134,13 @@ Gets commonly used number patterns for system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map containing the used number patterns and example of system locale. |
+| Map&lt;string, string&gt; | 系统支持的数字格式及示例。 其中Map的key表示数字格式，是千分符和小数分隔符的unicode编码，value表示数字格式对应的示例。支持的范围和系统语言地区相关。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getSystemNumberingSystems
 
@@ -142,7 +148,7 @@ Gets commonly used number patterns for system locale.
 static getSystemNumberingSystems(): Map<string, string>
 ```
 
-Gets numbering systems supported by system locale.
+获取系统支持的数字系统及示例。示例为数字0~9在对应数字系统下的显示。
 
 **Since:** 23
 
@@ -158,13 +164,13 @@ Gets numbering systems supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map will containing the numbering system 's identifier and sample. If the map is empty, there is no local digit for given locale. |
+| Map&lt;string, string&gt; | 系统支持的数字系统及示例。其中Map的key为表示数字系统的字符串，value为表示数字系统对应的示例。 支持的范围和系统语言相关。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getSystemNumericalDatePatterns
 
@@ -172,7 +178,7 @@ Gets numbering systems supported by system locale.
 static getSystemNumericalDatePatterns(): Map<string, string>
 ```
 
-Gets numerical date patterns and examples supported by system locale.
+获取系统支持的数字日期格式及其示例。
 
 **Since:** 23
 
@@ -188,13 +194,13 @@ Gets numerical date patterns and examples supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map containing the date patterns and examples |
+| Map&lt;string, string&gt; | 获取系统支持的数字日期格式及其示例。 其中Map的key表示数字日期格式，形如dd/MM/y；value表示数字日期示例，形如18/07/2025。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getUsingCollation
 
@@ -202,7 +208,7 @@ Gets numerical date patterns and examples supported by system locale.
 static getUsingCollation(): string
 ```
 
-Gets collation currently used by system locale.
+获取系统当前使用的排序方式。
 
 **Since:** 23
 
@@ -218,13 +224,13 @@ Gets collation currently used by system locale.
 
 | Type | Description |
 | --- | --- |
-| string | The identifier of the collation model used by system locale will be return. |
+| string | 系统当前使用的排序方式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getUsingMeasurement
 
@@ -232,7 +238,7 @@ Gets collation currently used by system locale.
 static getUsingMeasurement(): string
 ```
 
-Gets measurement currently used by system locale.
+获取系统当前使用的度量衡。
 
 **Since:** 23
 
@@ -248,13 +254,13 @@ Gets measurement currently used by system locale.
 
 | Type | Description |
 | --- | --- |
-| string | The identifier of measurement system using by system locale |
+| string | 系统当前使用的度量衡，取值及对应含义如下： - metric：公制。 - uksystem：英制。 - ussystem：美制。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getUsingNumberPattern
 
@@ -262,7 +268,7 @@ Gets measurement currently used by system locale.
 static getUsingNumberPattern(): string
 ```
 
-Gets number pattern used by system locale.
+获取系统当前使用的数字格式。
 
 **Since:** 23
 
@@ -278,13 +284,13 @@ Gets number pattern used by system locale.
 
 | Type | Description |
 | --- | --- |
-| string | The number pattern identifier used by system locale |
+| string | 系统当前使用的数字格式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getUsingNumberingSystem
 
@@ -292,7 +298,7 @@ Gets number pattern used by system locale.
 static getUsingNumberingSystem(): string
 ```
 
-Gets numbering system currently used by system locale.
+获取系统当前使用的数字系统。
 
 **Since:** 23
 
@@ -308,13 +314,13 @@ Gets numbering system currently used by system locale.
 
 | Type | Description |
 | --- | --- |
-| string | the numbering systems's identifier. |
+| string | 系统支持的数字系统。支持的范围可以通过getSystemNumberingSystems获取。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## getUsingNumericalDatePattern
 
@@ -322,7 +328,7 @@ Gets numbering system currently used by system locale.
 static getUsingNumericalDatePattern(): string
 ```
 
-Gets numerical date pattern currently used by system locale.
+获取系统当前使用的数字日期格式。
 
 **Since:** 23
 
@@ -338,13 +344,13 @@ Gets numerical date pattern currently used by system locale.
 
 | Type | Description |
 | --- | --- |
-| string | The numerical date pattern used by system locale |
+| string | 系统当前使用的数字日期格式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## removePreferredLanguage
 
@@ -352,7 +358,7 @@ Gets numerical date pattern currently used by system locale.
 static removePreferredLanguage(index: int): void
 ```
 
-Removes a preferred language from the specified position on the preferred language list.
+从系统偏好语言列表中移除指定位置的偏好语言。
 
 **Since:** 23
 
@@ -370,15 +376,16 @@ Removes a preferred language from the specified position on the preferred langua
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Position of the preferred language to delete. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| index | int | Yes | 待删除偏好语言在系统偏好语言列表中的位置。 &lt;br&gt;取值范围：[0, 系统偏好语言列表长度]，小于0时取值为0，大于系统偏好语言列表长度时取值为系统偏好语言列表长度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed.<br>**Applicable version:** 23 - 24 |
 
 ## set24HourClock
 
@@ -386,7 +393,7 @@ Removes a preferred language from the specified position on the preferred langua
 static set24HourClock(option: boolean): void
 ```
 
-Sets whether to use the 24-hour clock.
+设置系统时制是否为24小时制。
 
 **Since:** 23
 
@@ -404,15 +411,16 @@ Sets whether to use the 24-hour clock.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | boolean | Yes | Whether to use the 24-hour clock. The value "true" means to use the 24-hour clock, the the value "false" means the opposite. |
+| option | boolean | Yes | true表示设置系统时制为24小时制，false表示设置系统时制为12小时制。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed.<br>**Applicable version:** 23 - 24 |
 
 ## setFirstDayOfWeek
 
@@ -420,7 +428,7 @@ Sets whether to use the 24-hour clock.
 static setFirstDayOfWeek(type: WeekDay): void
 ```
 
-Sets the first day of a week.
+设置系统的周起始日。
 
 **Since:** 23
 
@@ -438,15 +446,15 @@ Sets the first day of a week.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Start day of a week. |
+| type | [WeekDay](arkts-localization-i18n-weekday-e.md) | Yes | 周期起始日。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setSystemCollation
 
@@ -454,7 +462,7 @@ Sets the first day of a week.
 static setSystemCollation(identifier: string): void
 ```
 
-Sets the system collation mode.
+设置系统的排序方式。
 
 **Since:** 23
 
@@ -472,15 +480,15 @@ Sets the system collation mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identifier | string | Yes | Identifier of the collation mode. |
+| identifier | string | Yes | 系统支持的排序方式。支持的范围可以通过getSystemCollations获取。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## setSystemLanguage
 
@@ -488,7 +496,9 @@ Sets the system collation mode.
 static setSystemLanguage(language: string): void
 ```
 
-Sets the system language.
+设置系统语言。若要监听系统语言变化，可以监听  
+[公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考  
+[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。 &lt;br&gt;**说明：**  &lt;br&gt;可以通过[i18n.System.getSystemLanguage()](../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemlanguage9)接口获取系统语言。 &lt;br&gt;从API version 21开始，也可以使用[param工具](../../../tools/param-tool.md#获取系统参数的值)的“param get persist.global.language”命令获取系统语言。
 
 **Since:** 23
 
@@ -506,16 +516,16 @@ Sets the system language.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | Valid language ID. |
+| language | string | Yes | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setSystemMeasurement
 
@@ -523,7 +533,7 @@ Sets the system language.
 static setSystemMeasurement(identifier: string): void
 ```
 
-Sets the measurement system used by the system locale.
+设置系统的度量衡。
 
 **Since:** 23
 
@@ -541,15 +551,15 @@ Sets the measurement system used by the system locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identifier | string | Yes | Identifier of the measurement system. |
+| identifier | string | Yes | 系统支持的度量衡。支持的范围可以通过getSystemMeasurements获取。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## setSystemNumberPattern
 
@@ -557,7 +567,7 @@ Sets the measurement system used by the system locale.
 static setSystemNumberPattern(pattern: string): void
 ```
 
-Sets the number pattern used by the system locale.
+设置系统的数字格式。
 
 **Since:** 23
 
@@ -575,15 +585,15 @@ Sets the number pattern used by the system locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pattern | string | Yes | Identifier of the number pattern. |
+| pattern | string | Yes | 系统支持的数字格式。支持的范围可以通过getSystemNumberPatterns获取。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## setSystemNumberingSystem
 
@@ -591,7 +601,7 @@ Sets the number pattern used by the system locale.
 static setSystemNumberingSystem(identifier: string): void
 ```
 
-Sets the numbering system used by the system locale.
+设置系统的数字系统。
 
 **Since:** 23
 
@@ -609,15 +619,15 @@ Sets the numbering system used by the system locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identifier | string | Yes | Identifier of the numbering system. |
+| identifier | string | Yes | 系统支持的数字系统。支持的范围可以通过getSystemNumberingSystems获取。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## setSystemNumericalDatePattern
 
@@ -625,7 +635,7 @@ Sets the numbering system used by the system locale.
 static setSystemNumericalDatePattern(identifier : string): void
 ```
 
-Sets the numerical date pattern used by the system locale.
+设置系统的数字日期格式。
 
 **Since:** 23
 
@@ -643,15 +653,15 @@ Sets the numerical date pattern used by the system locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identifier | string | Yes | Identifier of the numerical date pattern. |
+| identifier | string | Yes | 系统支持的数字日期格式。支持的范围可以通过getSystemNumericalDatePatterns获取。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
 ## setSystemRegion
 
@@ -659,7 +669,9 @@ Sets the numerical date pattern used by the system locale.
 static setSystemRegion(region: string): void
 ```
 
-Sets the system region.
+设置系统地区。若要监听系统地区变化，可以监听  
+[公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考  
+[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。 &lt;br&gt;**说明：**  &lt;br&gt;可以通过[i18n.System.getSystemRegion()](../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemregion9)接口获取系统地区。
 
 **Since:** 23
 
@@ -677,16 +689,16 @@ Sets the system region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | string | Yes | Valid region ID. |
+| region | string | Yes | [合法的地区ID](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setTemperatureType
 
@@ -694,7 +706,7 @@ Sets the system region.
 static setTemperatureType(type: TemperatureType): void
 ```
 
-Sets the temperature unit of the system.
+设置系统的温度单位。
 
 **Since:** 23
 
@@ -712,15 +724,15 @@ Sets the temperature unit of the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Temperature unit. |
+| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes | 温度单位。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setUsingLocalDigit
 
@@ -728,7 +740,7 @@ Sets the temperature unit of the system.
 static setUsingLocalDigit(flag: boolean): void
 ```
 
-Specifies whether to enable use of local digits.
+设置系统是否使用本地数字。
 
 **Since:** 23
 
@@ -746,13 +758,13 @@ Specifies whether to enable use of local digits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | boolean | Yes | Whether to turn on the local digit switch. The value "true" means to turn on the local digit switch, and the value "false" indicates the opposite. |
+| flag | boolean | Yes | true表示打开本地数字开关，false表示关闭本地数字开关。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
 

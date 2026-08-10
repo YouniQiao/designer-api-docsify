@@ -4,7 +4,7 @@
 declare type OnSwiperAnimationStartCallback = (index: number, targetIndex: number, extraInfo: SwiperAnimationEvent) => void
 ```
 
-Defines the callback triggered when the page transition animation starts.
+切换动画开始时触发的回调。
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ Defines the callback triggered when the page transition animation starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the currently displayed element. If there are multiple columns, **index** indicates the index of the leftmost component.  |
-| targetIndex | number | Yes | Index of the target element to switch to.  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extra information of the animation, including the offset of the currently displayed element and target element relative to the start position of the **Swiper** along the main axis, and the hands-off velocity.  |
+| index | number | Yes | 当前显示元素的索引。多列Swiper时，index为最左侧组件的索引。 |
+| targetIndex | number | Yes | 切换动画目标元素的索引。 |
+| extraInfo | [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Yes | 动画相关信息，包括主轴方向上当前显示元素和目标元素相对Swiper起始位置的位移，以及离手速度。 |
 

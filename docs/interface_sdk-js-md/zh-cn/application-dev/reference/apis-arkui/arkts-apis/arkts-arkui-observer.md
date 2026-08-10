@@ -6,9 +6,17 @@ Register callbacks to observe ArkUI behavior.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace uiObserver--><!--Device-unnamed-declare namespace uiObserver-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
 
 ## 汇总
 
@@ -16,18 +24,18 @@ Register callbacks to observe ArkUI behavior.
 
 | 名称 | 说明 |
 | --- | --- |
-| [offDensityUpdate](arkts-arkui-uiobserver-offdensityupdate-f.md#offdensityupdate) | Removes a callback function that was previously registered with \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [offDidLayout](arkts-arkui-uiobserver-offdidlayout-f.md#offdidlayout) | Removes a callback function that was previously registered with \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [offDensityUpdate](arkts-arkui-uiobserver-offdensityupdate-f.md#offdensityupdate) | Removes a callback function that was previously registered with `on()`. |
+| [offDidLayout](arkts-arkui-uiobserver-offdidlayout-f.md#offdidlayout) | Removes a callback function that was previously registered with `on()`. |
 | [offNavDestinationSwitch](arkts-arkui-uiobserver-offnavdestinationswitch-f.md#offnavdestinationswitch) | 取消监听Navigation的页面切换事件。 |
 | [offNavDestinationSwitch](arkts-arkui-uiobserver-offnavdestinationswitch-f.md#offnavdestinationswitch-1) | 取消监听Navigation的页面切换事件。 |
 | [offNavDestinationUpdate](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate) | 取消监听NavDestination组件的状态变化。 |
 | [offNavDestinationUpdate](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate-1) | 取消监听NavDestination组件的状态变化。 |
 | [offRouterPageUpdate](arkts-arkui-uiobserver-offrouterpageupdate-f.md#offrouterpageupdate) | 取消监听router中page页面的状态变化。 |
-| [offScrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md#offscrollevent) | Removes a callback function that was previously registered with \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [offScrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md#offscrollevent-1) | Removes a callback function that was previously registered with \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [offScrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md#offscrollevent) | Removes a callback function that was previously registered with `onScrollEvent()`. |
+| [offScrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md#offscrollevent-1) | Removes a callback function that was previously registered with `onScrollEvent()`. |
 | [offTabContentUpdate](arkts-arkui-uiobserver-offtabcontentupdate-f.md#offtabcontentupdate) | 取消监听TabContent页面的切换事件。 |
 | [offTabContentUpdate](arkts-arkui-uiobserver-offtabcontentupdate-f.md#offtabcontentupdate-1) | 取消监听TabContent页面的切换事件。 |
-| [offWillDraw](arkts-arkui-uiobserver-offwilldraw-f.md#offwilldraw) | Removes a callback function that was previously registered with \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [offWillDraw](arkts-arkui-uiobserver-offwilldraw-f.md#offwilldraw) | Removes a callback function that was previously registered with `on()`. |
 | [onDensityUpdate](arkts-arkui-uiobserver-ondensityupdate-f.md#ondensityupdate) | Registers a callback function to be called when the screen density is updated. |
 | [onDidLayout](arkts-arkui-uiobserver-ondidlayout-f.md#ondidlayout) | Registers a callback function to be called when the layout is done. |
 | [onNavDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md#onnavdestinationswitch) | 监听Navigation的页面切换事件。 |

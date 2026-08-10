@@ -1,12 +1,18 @@
 # requestAutoSave
 
+## Modules to Import
+
+```TypeScript
+import { autoFillManager } from 'kits/@kit.AbilityKit';
+```
+
 ## requestAutoSave
 
 ```TypeScript
 export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback): void
 ```
 
-Requests to automatically save the widget data. This API uses an asynchronous callback to return the result.If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete.
+请求保存表单数据。使用callback异步回调。如果当前表单没有提供表单切换的功能，可以通过此接口保存历史表单输入数据，保存请求完成时会触发该回调。
 
 **Since:** 11
 
@@ -24,17 +30,17 @@ Requests to automatically save the widget data. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI context in which the auto-save operation will be performed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Implements callbacks triggered when auto-save is complete. |
+| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context in which the auto-save operation will be performed. |
+| callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No | Implements callbacks triggered when auto-save is complete. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Get instance id failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Parse instance id failed; 3. The second parameter is not of type callback. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | The parameter check failed. Possible causes: 1. Get instance id failed; &lt;br&gt;2. Parse instance id failed; 3. The second parameter is not of type callback. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -116,39 +122,4 @@ struct Index {
   }
 }
 ```
-
-
-## requestAutoSave
-
-```TypeScript
-export function requestAutoSave(context: UIContext, request: SaveRequest, callback?: AutoSaveCallback): void
-```
-
-Trigger an auto save request.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-autoFillManager-export function requestAutoSave(context: UIContext, request: SaveRequest, callback?: AutoSaveCallback): void--><!--Device-autoFillManager-export function requestAutoSave(context: UIContext, request: SaveRequest, callback?: AutoSaveCallback): void-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the ui context where the save operation will be performed. |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the struct of automatic save request. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the callback that used to receive the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 

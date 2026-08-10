@@ -1,6 +1,6 @@
 # Hyperlink
 
-[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，用于描述超链接类型数据。
+[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超链接类型数据。
 
 **继承/实现关系：** Hyperlink extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
@@ -11,6 +11,12 @@
 <!--Device-unifiedDataChannel-class Hyperlink extends Text--><!--Device-unifiedDataChannel-class Hyperlink extends Text-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
 
 ## description
 

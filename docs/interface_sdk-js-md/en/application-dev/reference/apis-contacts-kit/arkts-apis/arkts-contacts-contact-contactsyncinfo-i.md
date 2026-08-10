@@ -1,6 +1,6 @@
 # ContactSyncInfo
 
-Information about contact synchronization for the calling application.
+调用应用程序相关的联系人同步的信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Information about contact synchronization for the calling application.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## completedBatches
 
 ```TypeScript
 completedBatches: Array<int>
 ```
 
-Indicates the array of batch identifiers for contacts that have been synchronized successfully.
+表示已成功同步的联系人的批处理标识符数组。
 
-The range of values is from 1 to totalBatches.
+值的范围是从1到totalBatches。
 
 **Type:** Array&lt;int&gt;
 
@@ -40,7 +46,7 @@ The range of values is from 1 to totalBatches.
 lastSyncTime: int
 ```
 
-Indicates the latest timestamp the contacts were synchronized in milliseconds.
+指示联系人同步的最新时间戳（毫秒）。
 
 **Type:** int
 
@@ -62,9 +68,9 @@ Indicates the latest timestamp the contacts were synchronized in milliseconds.
 mode: ContactSyncMode
 ```
 
-The contact synchronization mode.
+联系人同步模式。
 
-**Type:** ContactSyncMode
+**Type:** [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md)
 
 **Since:** 26.0.0
 
@@ -84,7 +90,7 @@ The contact synchronization mode.
 syncId: int
 ```
 
-Indicates the sync identifier used for synchronizing all contacts.
+表示用于同步所有联系人的同步标识符。
 
 **Type:** int
 
@@ -106,7 +112,7 @@ Indicates the sync identifier used for synchronizing all contacts.
 totalBatches: int
 ```
 
-Indicates the total number of batches of contacts to be synchronized.
+指示要同步的联系人批次总数。
 
 **Type:** int
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -27,8 +33,8 @@
 | [offPrinterChange](arkts-basicservices-print-offprinterchange-f.md#offprinterchange) | Unregister event callback for the change of printer. |
 | [on](arkts-basicservices-print-on-f.md#on-3) | 注册打印机变动事件回调，使用callback回调。 |
 | [onPrinterChange](arkts-basicservices-print-onprinterchange-f.md#onprinterchange) | Register event callback for the change of printer. |
-| [print](arkts-basicservices-print-f.md#print) | 打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口，传入context。 |
-| [print](arkts-basicservices-print-f.md#print-1) | 打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口，传入context。 |
+| [print](arkts-basicservices-print-f.md#print) | 打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md#print)接口，传入context。 |
+| [print](arkts-basicservices-print-f.md#print-1) | 打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md#print)接口，传入context。 |
 | [print](arkts-basicservices-print-f.md#print-2) | 打印接口，传入文件进行打印，使用callback异步回调。 |
 | [print](arkts-basicservices-print-f.md#print-3) | 打印接口，传入文件进行打印，使用Promise异步回调。 |
 | [print](arkts-basicservices-print-f.md#print-4) | 打印接口，传入文件进行打印，三方应用需要更新打印文件，使用Promise异步回调。当前支持的文件类型：".pdf"。 |
@@ -43,7 +49,7 @@
 | [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate) | 更新打印任务状态，使用callback异步回调。 |
 | [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate-1) | 更新打印任务状态，使用Promise异步回调。 |
 | [updatePrinterInDiscovery](arkts-basicservices-print-updateprinterindiscovery-f.md#updateprinterindiscovery) | 更新打印机能力到系统打印机发现列表，使用Promise异步回调。 |
-| [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md#updateprinterinformation) | 更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的alias和options字段。 |
+| [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md#updateprinterinformation) | 更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)的alias和options字段。 |
 
 <!--Del-->
 ### 函数（系统接口）

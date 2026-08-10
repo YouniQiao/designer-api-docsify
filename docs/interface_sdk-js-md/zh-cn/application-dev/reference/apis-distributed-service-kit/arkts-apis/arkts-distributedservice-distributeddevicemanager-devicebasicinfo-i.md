@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
+## 导入模块
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -52,7 +58,7 @@ deviceName: string
 deviceType: string
 ```
 
-[设备类型]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[设备类型](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicetype)。
 
 **类型：** string
 

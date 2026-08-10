@@ -1,6 +1,6 @@
 # SearchPlayInfoType
 
-Enumeration of SearchPlayInfoType.
+表示搜播信息类型的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumeration of SearchPlayInfoType.
 PLAY_MUSIC = 'playMusic'
 ```
 
-playMusic.
+播放音乐。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ playMusic.
 PLAY_VIDEO = 'playVideo'
 ```
 
-playVideo.
+播放视频。
 
 **Since:** 23
 
@@ -43,42 +43,6 @@ playVideo.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayInfoType-PLAY_VIDEO = 'playVideo'--><!--Device-SearchPlayInfoType-PLAY_VIDEO = 'playVideo'-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-## PLAY_MUSIC_LIST
-
-```TypeScript
-PLAY_MUSIC_LIST = 'playMusicList'
-```
-
-play music list.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SearchPlayInfoType-PLAY_MUSIC_LIST = 'playMusicList'--><!--Device-SearchPlayInfoType-PLAY_MUSIC_LIST = 'playMusicList'-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-## PLAY_VIDEO_LIST
-
-```TypeScript
-PLAY_VIDEO_LIST = 'playVideoList'
-```
-
-play video list.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SearchPlayInfoType-PLAY_VIDEO_LIST = 'playVideoList'--><!--Device-SearchPlayInfoType-PLAY_VIDEO_LIST = 'playVideoList'-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

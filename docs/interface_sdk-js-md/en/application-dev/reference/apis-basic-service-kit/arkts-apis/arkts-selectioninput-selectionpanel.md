@@ -1,21 +1,20 @@
-# @ohos.selectionInput.SelectionPanel(Word Selection Panel)
+# @ohos.selectionInput.SelectionPanel(划词面板)
 
-The text selection panel is an operation panel that pops up after a user selects text. This module is applicable when
- quick operations such as translation and search need to be provided for the selected text. This helps developers
- quickly integrate the text selection capability and improve user interaction experience. The panel adopts a two-level
- architecture design. The menu panel (**MENU_PANEL**) is the level-1 panel, which displays the function entries (such
- as translation and search) provided by the current app. The main panel (**MAIN_PANEL**) is the level-2 panel, which
- pops up after a user taps a function button on the menu panel and displays the specific function result. This module
- provides the attributes and types of the word selection panel. You can use [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) to set the
- position and size of the panel and use [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) to specify the panel type.
- [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel) and
- [show](arkts-basicservices-selectionmanager-panel-i.md#show) are used to create and display the
- word selection panel.
- > **NOTE**
+划词面板是用户选中文本后弹出的操作面板，适用于需要为选中文本提供翻译、搜索等快捷操作功能的场景，帮助开发者快速集成划词操作能力，提升用户交互体验。面板采用两级架构设计：菜单面板（MENU_PANEL）为一级面板，展示当前应用可提供的功
+ 能入口（如翻译、搜索等）；主面板（MAIN_PANEL）为二级面板，在用户点击菜单面板中的功能按钮后弹出，展示具体的功能结果。本模块提供划词面板的属性信息和类型，开发者可通过[PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md)设定
+ 面板的位置和尺寸，通过[PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)指定面板类型。划词面板的创建与显示接口请参见
+ [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)、
+ [show](arkts-basicservices-selectionmanager-panel-i.md#show)。
+ > **说明：**
  >
- > - This module is supported only on PCs/2-in-1 devices. You can use canIUse('
- > SystemCapability.SelectionInput.Selection') to check whether the current device supports this function.
+ > - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
 
+
+## Modules to Import
+
+```TypeScript
+import { PanelInfo, PanelType } from 'kits/@kit.BasicServicesKit';
+```
 
 ## Summary
 
@@ -23,11 +22,11 @@ The text selection panel is an operation panel that pops up after a user selects
 
 | Name | Description |
 | --- | --- |
-| [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Defines attributes of the word selection panel, including its type, position, and size. You can specify the panel type (menu panel or main panel) using **panelType**, set the coordinates of the upper left corner of the panel using  **x** and **y**, and set the panel size using **width** and **height**. These attributes collectively define the display form of the panel. |
+| [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 划词面板属性信息，包含面板类型、位置和宽高。开发者通过panelType指定面板类型（菜单面板或主面板），通过x、y设定面板左上角坐标，通过width、height设定面板尺寸，各项属性共同定义面板的呈现形态。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | Enumerates the word selection panel types, which defines the two-level architecture of the panel: menu panel (level 1) and main panel (level 2). |
+| [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | 划词面板类型枚举，定义面板的两级架构：菜单面板（一级）和主面板（二级）。 |
 

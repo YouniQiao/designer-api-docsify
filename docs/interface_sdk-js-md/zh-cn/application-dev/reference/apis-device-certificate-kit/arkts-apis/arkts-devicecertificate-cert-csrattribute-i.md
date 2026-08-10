@@ -2,7 +2,7 @@
 
 定义CSR属性表示。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_CSR属性字段，当前仅支持字符串类型的属性字段，属性值添加到CSR中编码为utf-8。常见的type为challengePassword。
+&lt;br&gt;CSR属性字段，当前仅支持字符串类型的属性字段，属性值添加到CSR中编码为utf-8。常见的type为challengePassword。
 
 **起始版本：** 18
 
@@ -11,6 +11,12 @@
 <!--Device-cert-interface CsrAttribute--><!--Device-cert-interface CsrAttribute-End-->
 
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
 
 ## type
 

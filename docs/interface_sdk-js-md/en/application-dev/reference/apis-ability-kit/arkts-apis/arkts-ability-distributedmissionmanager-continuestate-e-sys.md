@@ -1,6 +1,6 @@
 # ContinueState (System API)
 
-Enumerates the mission continuation states.
+当前任务流转状态的枚举。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Enumerates the mission continuation states.
 ACTIVE = 0
 ```
 
-Continuation is activated for the current mission.
+表示当前任务流转处于激活状态。
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ Continuation is activated for the current mission.
 INACTIVE = 1
 ```
 
-Continuation is not activated for the current mission.
+表示当前任务流转处于未激活状态。
 
 **Since:** 10
 

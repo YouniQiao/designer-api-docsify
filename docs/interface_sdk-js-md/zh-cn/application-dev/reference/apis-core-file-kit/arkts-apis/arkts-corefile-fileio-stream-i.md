@@ -1,7 +1,7 @@
 # Stream
 
-文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过[fileIo.createStream]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法或者  
-[fileIo.fdopenStream]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_（同步或异步）来构建一个Stream实例。
+文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过[fileIo.createStream](arkts-corefile-fileio-createstream-f.md#createstream)方法或者  
+[fileIo.fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream)（同步或异步）来构建一个Stream实例。
 
 **起始版本：** 23
 
@@ -10,6 +10,12 @@
 <!--Device-fileIo-interface Stream--><!--Device-fileIo-interface Stream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
 
 ## close
 
@@ -64,7 +70,7 @@ close(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当关闭文件流成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭文件流成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -130,17 +136,17 @@ flush(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## flush
@@ -163,23 +169,23 @@ flush(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当刷新文件流成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当刷新文件流成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## flushSync
@@ -202,17 +208,17 @@ flushSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## read
@@ -239,7 +245,7 @@ read(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 支持如下选项：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。 |
 
 **返回值：**
 
@@ -252,15 +258,15 @@ read(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900044 | Network is unreachable |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable |
 
 ## read
 
@@ -283,20 +289,20 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | 是 | 回调函数，返回读取的结果，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数，返回读取的结果，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
 
 ## read
@@ -324,21 +330,21 @@ read(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 支持如下选项：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | 是 | 回调函数，返回读取的结果，单位为Byte。 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 是 | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数，返回读取的结果，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
 
 ## readSync
@@ -365,7 +371,7 @@ readSync(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 支持如下选项：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。&lt;br/&gt; |
 
 **返回值：**
 
@@ -378,15 +384,15 @@ readSync(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900044 | Network is unreachable |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable |
 
 ## write
 
@@ -412,7 +418,7 @@ write(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 支持如下选项：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- encoding，string类型，当数据是string类型时有效， 表示数据的编码方式，默认 'utf-8'。仅支持 'utf-8'。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效， 表示数据的编码方式，默认 'utf-8'。仅支持 'utf-8'。 |
 
 **返回值：**
 
@@ -424,17 +430,17 @@ write(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## write
@@ -458,23 +464,23 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | 是 | 回调函数，返回实际写入的数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数，返回实际写入的数据长度，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## write
@@ -502,24 +508,24 @@ write(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 支持如下选项：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- encoding，string类型，当数据是string类型时有效，表示数据的编码方式， 默认 'utf-8'。仅支持 'utf-8'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | 是 | 回调函数，返回实际写入的数据长度，单位为Byte。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 是 | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式， 默认 'utf-8'。仅支持 'utf-8'。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数，返回实际写入的数据长度，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 
 ## writeSync
@@ -546,7 +552,7 @@ writeSync(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 支持如下选项：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- encoding，string类型，当数据是string类型时有效，表示数据的编码方式， 默认 'utf-8'。仅支持 'utf-8'。 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式， 默认 'utf-8'。仅支持 'utf-8'。 |
 
 **返回值：**
 
@@ -558,16 +564,16 @@ writeSync(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
+| 13900034 | Operation would block |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
-| 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
+| 13900010 | Try again |
 | 13900042 | Unknown error |
 

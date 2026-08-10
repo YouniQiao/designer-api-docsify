@@ -1,12 +1,18 @@
 # cancelApplicationAutoStartup
 
+## Modules to Import
+
+```TypeScript
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## cancelApplicationAutoStartup
 
 ```TypeScript
 function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallback<void>): void
 ```
 
-Cancels the auto-startup setting for an application component. This API uses an asynchronous callback to return the result.Starting from API version 21, this API can be properly called only on phones, 2-in-1 devices, tablets, and wearables. On other devices, it returns the error code 16000050.Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned.For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
+取消应用组件开机自启动。使用callback异步回调。从API version 18开始，该接口仅在2in1和Wearable设备中可正常调用，在其他设备上返回16000050错误码。对于API version 18之前版本，该接口仅在2in1设备中可正常调用，在其他设备上返回16000050错误码。
 
 **Since:** 11
 
@@ -24,19 +30,19 @@ Cancels the auto-startup setting for an application component. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the target application component. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the cancellation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | 要取消的开机自启动应用组件信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当取消应用组件开机自启动成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_BOOT". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| 16000050 | Failed to connect to the system service. |
+| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| 16000013 | The application is controlled by EDM. |
+| 202 | Permission denied, non-system app called system api. |
 
 
 ## cancelApplicationAutoStartup
@@ -45,7 +51,7 @@ Cancels the auto-startup setting for an application component. This API uses an 
 function cancelApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 ```
 
-Cancels the auto-startup setting for an application component. This API uses a promise to return the result.Starting from API version 21, this API can be properly called only on phones, 2-in-1 devices, tablets, and wearables. On other devices, it returns the error code 16000050.Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned.For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
+取消应用组件开机自启动。使用Promise异步回调。从API version 18开始，该接口仅在2in1和Wearable设备中可正常调用，在其他设备上返回16000050错误码。对于API version 18之前版本，该接口仅在2in1设备中可正常调用，在其他设备上返回16000050错误码。
 
 **Since:** 11
 
@@ -63,22 +69,22 @@ Cancels the auto-startup setting for an application component. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the target application component. |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | 要取消的开机自启动应用组件信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_BOOT". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| 16000050 | Failed to connect to the system service. |
+| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| 16000013 | The application is controlled by EDM. |
+| 202 | Permission denied, non-system app called system api. |
 

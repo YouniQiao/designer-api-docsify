@@ -10,6 +10,12 @@ Describes the information about a media asset.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumChangeInfos
 
 ```TypeScript
@@ -40,7 +46,7 @@ assetSourceType?: AssetSourceType
 
 The asset source type.Default value: 0.
 
-**Type:** AssetSourceType
+**Type:** [AssetSourceType](arkts-medialibrary-photoaccesshelper-assetsourcetype-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -62,7 +68,7 @@ dateAddedMs: long
 
 Unix timestamp when the media asset was created, in milliseconds.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -100,9 +106,9 @@ Date when the media asset was created.
 dateModifiedMs?: long
 ```
 
-The modified time of asset.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+The modified time of asset.&lt;br&gt;Unit:milliseconds.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -124,7 +130,7 @@ dateTakenMs: long
 
 Unix timestamp when the media asset was captured, in milliseconds.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -144,7 +150,7 @@ dateTrashedMs: long
 
 Unix timestamp when the media asset was deleted, in milliseconds.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -184,7 +190,7 @@ fileId: int
 
 ID of the media asset.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -202,9 +208,9 @@ ID of the media asset.
 hiddenTime?: long
 ```
 
-The hidden time of asset.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:milliseconds.
+The hidden time of asset.&lt;br&gt;Unit:milliseconds.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -246,7 +252,7 @@ position?: PositionType
 
 Position of the media asset.
 
-**Type:** PositionType
+**Type:** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **Since:** 23
 
@@ -266,7 +272,7 @@ size?: long
 
 File size of the media asset, in bytes. The size of a moving photo includes the total size of the image and video.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -286,7 +292,7 @@ strongAssociation: StrongAssociationType
 
 Strong association type of the media asset.
 
-**Type:** StrongAssociationType
+**Type:** [StrongAssociationType](arkts-medialibrary-photoaccesshelper-strongassociationtype-e-sys.md)
 
 **Since:** 20
 
@@ -306,7 +312,7 @@ thumbnailVisible: ThumbnailVisibility
 
 Accessibility status of the thumbnail.
 
-**Type:** ThumbnailVisibility
+**Type:** [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **Since:** 20
 

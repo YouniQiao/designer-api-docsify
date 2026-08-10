@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## taskInfos
 
 ```TypeScript
@@ -18,7 +24,7 @@ taskInfos: TaskInfo[]
 
 任务的内部信息。不建议修改此值。
 
-**类型：** TaskInfo[]
+**类型：** [TaskInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md)[]
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ threadInfos: ThreadInfo[]
 
 工作线程的内部信息。不建议修改此值。
 
-**类型：** ThreadInfo[]
+**类型：** [ThreadInfo](arkts-arkts-taskpool-threadinfo-c.md)[]
 
 **起始版本：** 10
 

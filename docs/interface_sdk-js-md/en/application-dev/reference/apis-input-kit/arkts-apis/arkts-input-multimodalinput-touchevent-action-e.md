@@ -1,6 +1,6 @@
 # Action
 
-Enumerates the touch event types.
+触屏输入事件类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the touch event types.
 CANCEL = 0
 ```
 
-Touch canceled. The **DOWN** event of the touchscreen is interrupted unexpectedly and does not close normally. For example, the **CANCEL** event is triggered when the finger is pressed but not lifted, the screen is rotated or folded, or a new hover occurs.
+触屏取消。触屏down事件异常打断，未正常闭环，例如：手指按下后未抬起，屏幕发生旋转、折叠或有新hover等场景时触发cancel事件。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Touch canceled. The **DOWN** event of the touchscreen is interrupted unexpectedl
 DOWN = 1
 ```
 
-Touch down.
+触屏按下。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Touch down.
 MOVE = 2
 ```
 
-Touch moved.
+触屏移动。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Touch moved.
 UP = 3
 ```
 
-Touch up.
+触屏抬起。
 
 **Since:** 9
 
@@ -80,9 +80,7 @@ Touch up.
 PULL_DOWN = 4
 ```
 
-Drag started.
-
-**Since**: 26.0.0
+触屏开始拖拽。
 
 **Since:** 26.0.0
 
@@ -100,9 +98,7 @@ Drag started.
 PULL_MOVE = 5
 ```
 
-Dragging.
-
-**Since**: 26.0.0
+触屏拖拽移动。
 
 **Since:** 26.0.0
 
@@ -120,9 +116,7 @@ Dragging.
 PULL_UP = 6
 ```
 
-Drag ended.
-
-**Since**: 26.0.0
+触屏结束拖拽。
 
 **Since:** 26.0.0
 

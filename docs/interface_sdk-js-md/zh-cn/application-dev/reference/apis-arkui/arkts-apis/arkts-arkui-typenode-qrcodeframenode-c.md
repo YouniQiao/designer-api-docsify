@@ -40,5 +40,5 @@ abstract initialize(value: string): QRCodeAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [QRCodeAttribute](../arkts-components/arkts-arkui-qrcode-attribute.md) |  |
 

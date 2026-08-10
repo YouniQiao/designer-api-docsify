@@ -4,7 +4,7 @@
 declare type InterceptionModeCallback = (mode: NavigationMode) => void
 ```
 
-Implements an interception callback invoked when the display mode of the **Navigation** component switches between single-column and split-column.
+Navigation单双栏显示状态发生变更时的拦截回调。
 
 **Since:** 12
 
@@ -22,5 +22,5 @@ Implements an interception callback invoked when the display mode of the **Navig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Display mode of the navigation page.  |
+| mode | [NavigationMode](../arkts-apis/arkts-arkui-navigation-navigationmode-e.md) | Yes | 导航页的显示模式。 |
 

@@ -1,5 +1,11 @@
 # getStartRealtime
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getStartRealtime
 
 ```TypeScript
@@ -24,7 +30,7 @@ function getStartRealtime(): number
 | --- | --- |
 | number | 返回经过的实时时间。单位：毫秒。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let realtime = process.getStartRealtime();

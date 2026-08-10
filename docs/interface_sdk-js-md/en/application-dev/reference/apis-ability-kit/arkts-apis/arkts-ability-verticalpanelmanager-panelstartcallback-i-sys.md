@@ -12,6 +12,12 @@ The callback of start vertical panel.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { verticalPanelManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onError
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # AccessibilityAction
 
-Enum for accessibility action type
+辅助功能操作类型的枚举
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enum for accessibility action type
 UNDEFINED_ACTION = 0
 ```
 
-undefined action type
+未定义的操作类型
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ undefined action type
 ACCESSIBILITY_CLICK = 1
 ```
 
-accessibility click action
+辅助功能单击操作
 
 **Since:** 20
 

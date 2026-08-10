@@ -1,5 +1,11 @@
 # @ohos.FusionConnectivity.PartnerAgentExtensionAbility
 
+## Modules to Import
+
+```TypeScript
+import { PartnerAgentExtensionAbility } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Classes

@@ -34,7 +34,7 @@ abstract initialize(): ButtonAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
 
 ## initialize
 
@@ -58,13 +58,13 @@ abstract initialize(value: ButtonOptions): ButtonAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| value | [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
 
 ## initialize
 
@@ -88,12 +88,12 @@ abstract initialize(label: ResourceStr, options?: ButtonOptions): ButtonAttribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| label | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| label | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 |  |
+| options | [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
 

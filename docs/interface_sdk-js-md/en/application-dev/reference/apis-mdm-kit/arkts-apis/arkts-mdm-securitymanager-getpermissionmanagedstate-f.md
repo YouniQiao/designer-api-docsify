@@ -1,5 +1,11 @@
 # getPermissionManagedState
 
+## Modules to Import
+
+```TypeScript
+import { securityManager } from 'kits/@kit.MDMKit';
+```
+
 ## getPermissionManagedState
 
 ```TypeScript
@@ -10,7 +16,7 @@ function getPermissionManagedState(
   ): PermissionManagedState
 ```
 
-Obtains the management policy for the [user\_grant permission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of a specified application.
+获取指定应用的指定[user_grant权限](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md/arkts-ability-permissions-t.md)的管理策略。
 
 **Since:** 20
 
@@ -28,26 +34,26 @@ Obtains the management policy for the [user\_grant permission]\_\_\_JSDOC\_LINK\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstance | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application instance. |
-| permission | string | Yes | Name of the permission required for obtaining the management policy. Only the **user\_\_\_ESCAPED\_UNDERSCORE\_\_\_grant** permission is supported. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| applicationInstance | [ApplicationInstance](arkts-mdm-securitymanager-applicationinstance-i.md) | Yes | 指定应用实例。 |
+| permission | string | Yes | 需要获取管理策略的权限名称，仅支持user_grant权限。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Management policy for application permissions. |
+| [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md) | 应用权限的管理策略。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200012 | Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -59,17 +65,17 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 let appInstanceTemp: securityManager.ApplicationInstance = {
-      // Replace with actual values.
-      appIdentifier: '736498586',
-      appIndex: 0,
-      accountId: 100
+  // Replace with actual values.
+  appIdentifier: '736498586',
+  appIndex: 0,
+  accountId: 100
 };
 let permissionTemp: string = 'ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION';
 try {
-    let result: securityManager.PermissionManagedState = securityManager.getPermissionManagedState(wantTemp, appInstanceTemp, permissionTemp);
-    console.info(`Succeeded in getting permission managed state, result : ${result}`);
+  let result: securityManager.PermissionManagedState = securityManager.getPermissionManagedState(wantTemp, appInstanceTemp, permissionTemp);
+  console.info(`Succeeded in getting permission managed state, result : ${result}`);
 } catch(err) {
-    console.error(`Failed to get permission managed state. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to get permission managed state. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

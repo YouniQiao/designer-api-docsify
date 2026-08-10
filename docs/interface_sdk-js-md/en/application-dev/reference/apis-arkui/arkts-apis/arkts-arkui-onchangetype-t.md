@@ -4,7 +4,8 @@
 export type OnChangeType<T> = (propertyName: string, newValue: T) => void
 ```
 
-Defines the callback that is called when state variable with value is change
+注册[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
+[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性变化事件的回调函数类型。
 
 **Since:** 23
 
@@ -20,6 +21,6 @@ Defines the callback that is called when state variable with value is change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propertyName | string | Yes | property name  |
-| newValue | T | Yes | the new value of state variable  |
+| propertyName | string | Yes | property name |
+| newValue | T | Yes | the new value of state variable |
 

@@ -1,5 +1,11 @@
 # sendData
 
+## 导入模块
+
+```TypeScript
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## sendData
 
 ```TypeScript
@@ -24,7 +30,7 @@ function sendData(channelId: int, data: ArrayBuffer): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| channelId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 打开代理通道时获取的channelId。 |
+| channelId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 打开代理通道时获取的channelId。 |
 | data | ArrayBuffer | 是 | 向对端发送的字节消息，长度最大为4096个字节。 |
 
 **返回值：**
@@ -37,20 +43,21 @@ function sendData(channelId: int, data: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because bluetooth proxy function has been trimmed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
-| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-通道id非法或者不可用) | ChannelId is invalid or unavailable. |
-| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-参数错误) | Parameter error. |
-| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-内部异常) | Internal error. |
-| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-调用受限) | Call is restricted. |
-| [32390103](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390103-发送数据超长) | Data too long. |
-| [32390104](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390104-发送数据失败) | Send failed. |
+| 801 | Capability not supported because bluetooth proxy function has been trimmed.<br>**适用版本：** 26.0.0+ |
+| 32390104 | Send failed. |
+| 32390006 | Parameter error. |
+| 201 | Permission denied. |
+| 32390103 | Data too long. |
+| 32390004 | ChannelId is invalid or unavailable. |
+| 32390100 | Internal error. |
+| 32390101 | Call is restricted. |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import proxyChannelManager from '@ohos.distributedsched.proxyChannelManager';
-import { BusinessError } from '@ohos.base';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 @Entry
 @Component
 struct Index {

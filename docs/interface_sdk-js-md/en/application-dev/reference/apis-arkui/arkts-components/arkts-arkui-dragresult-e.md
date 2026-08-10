@@ -1,6 +1,6 @@
 # DragResult
 
-Defines the result of a drag operation and the drop-selection state of a component.
+定义拖拽操作的结果及组件的落入选定状态。
 
 **Since:** 10
 
@@ -16,7 +16,9 @@ Defines the result of a drag operation and the drop-selection state of a compone
 UNKNOWN = -1
 ```
 
-If the drag is not finished and the result is not set by receiver, return DragResult.UNKNOWN.
+拖拽结果尚未设置，在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)，[onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter)，  
+[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove)，[onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave)，  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中使用。
 
 **Since:** 24
 
@@ -36,8 +38,7 @@ If the drag is not finished and the result is not set by receiver, return DragRe
 DRAG_SUCCESSFUL = 0
 ```
 
-The drag is successful. This value applies to  
-[onDrop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+拖拽成功，在[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中使用。
 
 **Since:** 10
 
@@ -57,8 +58,7 @@ The drag is successful. This value applies to
 DRAG_FAILED = 1
 ```
 
-The drag fails. This value applies to  
-[onDrop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+拖拽失败，在[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中使用。
 
 **Since:** 10
 
@@ -78,8 +78,7 @@ The drag fails. This value applies to
 DRAG_CANCELED = 2
 ```
 
-The drag is canceled. This value applies to  
-[onDrop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+拖拽取消，在[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中使用。
 
 **Since:** 10
 
@@ -99,8 +98,8 @@ The drag is canceled. This value applies to
 DROP_ENABLED = 3
 ```
 
-The component allows dropping. This value applies to [onDragEnter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[onDragMove]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and [onDragLeave]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+组件允许落入，在[onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter)，[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove)，  
+[onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave)中使用。
 
 **Since:** 10
 
@@ -120,8 +119,8 @@ The component allows dropping. This value applies to [onDragEnter]\_\_\_JSDOC\_L
 DROP_DISABLED = 4
 ```
 
-The component does not allow dropping. This value applies to [onDragEnter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[onDragMove]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and [onDragLeave]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+组件不允许落入，在[onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter)，[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove)，  
+[onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave)中使用。
 
 **Since:** 10
 

@@ -1,9 +1,10 @@
 # LinearGradientOptions
 
 线性渐变的参数。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -73,7 +74,7 @@ Defines the direction of linear gradient.
 
 Anonymous Object Rectification.
 
-**类型：** GradientDirection
+**类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **默认值：** GradientDirection.Bottom
 

@@ -1,12 +1,18 @@
 # getSelfManagedBrowserPolicyVersion
 
+## Modules to Import
+
+```TypeScript
+import { browser } from 'kits/@kit.MDMKit';
+```
+
 ## getSelfManagedBrowserPolicyVersion
 
 ```TypeScript
 function getSelfManagedBrowserPolicyVersion(): string
 ```
 
-Obtains the browser policy version of the current device.
+获取当前设备浏览器策略版本。
 
 **Since:** 15
 
@@ -22,9 +28,9 @@ Obtains the browser policy version of the current device.
 
 | Type | Description |
 | --- | --- |
-| string | Browser policy version. |
+| string | 浏览器策略版本。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';

@@ -16,7 +16,7 @@
 customRender(uri: ResourceStr, selfRenderUpdate: boolean)
 ```
 
-Set render pipeline of 3D scene render.
+设置3D场景渲染的渲染管线.
 
 **Since:** 12
 
@@ -32,8 +32,8 @@ Set render pipeline of 3D scene render.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The path of Render pipeline config file |
-| selfRenderUpdate | boolean | Yes | Trigger rendering every frame |
+| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 渲染管线配置文件的路径 |
+| selfRenderUpdate | boolean | Yes | 每帧触发动效渲染 |
 
 ## environment
 
@@ -41,7 +41,7 @@ Set render pipeline of 3D scene render.
 environment(uri: ResourceStr)
 ```
 
-Load 3D model environment resource.
+加载3D模型环境资源.
 
 **Since:** 12
 
@@ -57,7 +57,7 @@ Load 3D model environment resource.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The path of 3D environment resource |
+| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 3D环境资源的路径 |
 
 ## renderHeight
 
@@ -65,7 +65,7 @@ Load 3D model environment resource.
 renderHeight(value: Dimension)
 ```
 
-Set render height resolution.
+设置渲染高度分辨率.
 
 **Since:** 12
 
@@ -81,7 +81,7 @@ Set render height resolution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Height of gpu render target, target would upscale or downscale to view's height. |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | GPU渲染目标的高度，目标将上采样或下采样到视图高度. |
 
 ## renderWidth
 
@@ -89,7 +89,7 @@ Set render height resolution.
 renderWidth(value: Dimension)
 ```
 
-Set render width resolution.
+设置渲染宽度分辨率.
 
 **Since:** 12
 
@@ -105,7 +105,7 @@ Set render width resolution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Width of gpu render target, target would upscale or downscale to view's width. |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | GPU渲染目标的宽度，目标将上采样或下采样到视图宽度. |
 
 ## shader
 
@@ -113,7 +113,7 @@ Set render width resolution.
 shader(uri: ResourceStr)
 ```
 
-Load shader uri.
+加载着色器URI.
 
 **Since:** 12
 
@@ -129,7 +129,7 @@ Load shader uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The path of custom shader |
+| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 自定义着色器的路径 |
 
 ## shaderImageTexture
 
@@ -137,7 +137,7 @@ Load shader uri.
 shaderImageTexture(uri: ResourceStr)
 ```
 
-Load shader texture uri.
+加载着色器纹理URI.
 
 **Since:** 12
 
@@ -153,7 +153,7 @@ Load shader texture uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The path of texture used by shader |
+| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 着色器所用纹理的路径 |
 
 ## shaderInputBuffer
 
@@ -161,7 +161,7 @@ Load shader texture uri.
 shaderInputBuffer(buffer: Array<number>)
 ```
 
-Buffer input for shader animation
+着色器动画的缓冲区输入
 
 **Since:** 12
 
@@ -177,5 +177,5 @@ Buffer input for shader animation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | Array&lt;number&gt; | Yes | The uniform buffer of shader input |
+| buffer | Array&lt;number&gt; | Yes | 着色器输入的统一缓冲区 |
 

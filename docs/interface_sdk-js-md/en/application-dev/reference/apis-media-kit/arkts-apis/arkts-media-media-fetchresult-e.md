@@ -1,6 +1,6 @@
 # FetchResult
 
-Enumerates the results of obtaining thumbnails in batches.
+表示批量获取缩略图操作结果的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the results of obtaining thumbnails in batches.
 FETCH_FAILED = 0
 ```
 
-Failed to obtain the thumbnail from the video.
+从视频中获取该缩略图失败。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Failed to obtain the thumbnail from the video.
 FETCH_SUCCEEDED = 1
 ```
 
-Succeeded in obtaining the thumbnail from the video.
+从视频中获取该缩略图成功。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Succeeded in obtaining the thumbnail from the video.
 FETCH_CANCELED = 2
 ```
 
-The operation of obtaining the thumbnail from the video is canceled.
+从视频中获取该缩略图操作被取消。
 
 **Since:** 23
 

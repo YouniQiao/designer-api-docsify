@@ -1,5 +1,11 @@
 # constructTLSSocketServerInstance
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## constructTLSSocketServerInstance
 
 ```TypeScript
@@ -20,9 +26,9 @@ Creates a TLSSocketServer object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the TLSSocketServer of the constructTLSSocketServerInstance. |
+| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) | the TLSSocketServer of the constructTLSSocketServerInstance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

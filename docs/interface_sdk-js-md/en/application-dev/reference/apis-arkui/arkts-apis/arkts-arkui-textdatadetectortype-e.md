@@ -1,6 +1,6 @@
 # TextDataDetectorType
 
-Defines the text data detector type.
+定义文本数据检测类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Defines the text data detector type.
 PHONE_NUMBER = 0
 ```
 
-Phone number.
+电话号码
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Phone number.
 URL = 1
 ```
 
-URL.
+链接
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ URL.
 EMAIL = 2
 ```
 
-Email address.
+邮箱
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ Email address.
 ADDRESS = 3
 ```
 
-Address.
+地址
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ Address.
 DATE_TIME = 4
 ```
 
-Time.
+日期时间
 
 **Since:** 12
 

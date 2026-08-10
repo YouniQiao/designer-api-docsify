@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { appControl } from 'kits/@kit.AbilityKit';
+```
+
 ## priority
 
 ```TypeScript
@@ -20,7 +26,7 @@ priority: int
 
 拦截规则的优先级，用于规则列表查询结果排序。取值为整数，数值越小，优先级越高，排序越靠前。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 15
 
@@ -40,7 +46,7 @@ uninstallComponentType: UninstallComponentType
 
 拦截时将拉起能力的类型。
 
-**类型：** UninstallComponentType
+**类型：** [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md)
 
 **起始版本：** 15
 
@@ -60,7 +66,7 @@ want: Want
 
 指定应用被拦截时，跳转到的组件。
 
-**类型：** Want
+**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 15
 

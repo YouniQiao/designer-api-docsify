@@ -228,7 +228,7 @@ Gets network cookie manager
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [WebCookie](arkts-arkweb-webcookie-c.md) |  |
 
 ## getHitTest
 
@@ -236,7 +236,7 @@ Gets network cookie manager
 getHitTest(): HitTestType
 ```
 
-Gets the type of HitTest.
+获取点击测试类型。
 
 **Since:** 8
 
@@ -244,7 +244,7 @@ Gets the type of HitTest.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.web.webview:webview.WebviewController#getHitTest](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#gethittest)
+**Substitutes:** ohos.web.webview.webview.WebviewController#getHitTest
 
 <!--Device-WebController-getHitTest(): HitTestType--><!--Device-WebController-getHitTest(): HitTestType-End-->
 
@@ -254,7 +254,7 @@ Gets the type of HitTest.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The type of HitTest. |
+| [HitTestType](arkts-arkweb-hittesttype-e.md) | 点击测试类型。 |
 
 ## loadData
 
@@ -314,8 +314,7 @@ Loads the given URL.
 onActive(): void
 ```
 
-Called when the **Web** component enters the active state.This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-[onActive\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+Let the Web active.It is no longer maintained since API version 9, and it is recommended to use {@link onActive} instead.
 
 **Since:** 8
 
@@ -335,8 +334,7 @@ Called when the **Web** component enters the active state.This API is supported 
 onInactive(): void
 ```
 
-Called when the **Web** component enters the inactive state.This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-[onInactive\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+Let the Web inactive.It is no longer maintained since API version 9, and it is recommended to use {@link onInactive} instead.
 
 **Since:** 8
 
@@ -422,7 +420,7 @@ Gets the request focus.
 runJavaScript(options: { script: string, callback?: (result: string) => void })
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.&lt;p&gt;
 
 **Since:** 8
 
@@ -468,7 +466,7 @@ Stops the current load.
 zoom(factor: number): void
 ```
 
-Let the Web zoom by.
+对网页进行缩放。
 
 **Since:** 8
 
@@ -476,7 +474,7 @@ Let the Web zoom by.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.web.webview:webview.WebviewController#zoom](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoom)
+**Substitutes:** ohos.web.webview.webview.WebviewController#zoom
 
 <!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 
@@ -486,5 +484,5 @@ Let the Web zoom by.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factor | number | Yes | The zoom factor. |
+| factor | number | Yes | 缩放系数。 |
 

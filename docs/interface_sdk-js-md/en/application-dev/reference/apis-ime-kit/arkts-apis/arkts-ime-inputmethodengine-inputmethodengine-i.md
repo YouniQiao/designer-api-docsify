@@ -1,7 +1,6 @@
 # InputMethodEngine
 
-In the following API examples, you must first use  
-[getInputMethodEngine]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an **InputMethodEngine** instance,and then call the APIs using the obtained instance.
+下列API均需使用[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine)获取到InputMethodEngine实例后，通过实例调用。
 
 **Since:** 8
 
@@ -15,6 +14,12 @@ In the following API examples, you must first use
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## off('inputStart')
 
 ```TypeScript
@@ -24,7 +29,7 @@ off(
     ): void
 ```
 
-Disables listening for the input method binding event.
+取消订阅输入法绑定成功事件。
 
 **Since:** 8
 
@@ -42,10 +47,10 @@ Disables listening for the input method binding event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'inputStart' | Yes | 设置监听类型，固定取值为'inputStart'。 |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine()
@@ -61,7 +66,7 @@ inputMethodEngine.getInputMethodEngine()
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 8
 
@@ -79,10 +84,10 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardShow'** indicates the keyboard display event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | 要取消监听的输入法软键盘事件类型。&lt;br/&gt;-'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;-' keyboardHide'表示隐藏输入法软键盘。 |
+| callback | () =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine().off('keyboardShow');
@@ -95,7 +100,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 8
 
@@ -113,10 +118,10 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardShow'** indicates the keyboard display event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | 要取消监听的输入法软键盘事件类型。&lt;br/&gt;-'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;-' keyboardHide'表示隐藏输入法软键盘。 |
+| callback | () =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine().off('keyboardShow');
@@ -132,7 +137,7 @@ on(
     ): void
 ```
 
-Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
+订阅输入法绑定成功事件。使用callback异步回调。
 
 **Since:** 8
 
@@ -150,10 +155,10 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | Yes | Callback used to return the **KeyboardController** and **TextInputClient** instances. |
+| type | 'inputStart' | Yes | 设置监听类型，固定取值为'inputStart'。 |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | Yes | 回调函数，返回订阅输入法的KeyboardController和TextInputClient实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine()
@@ -170,7 +175,7 @@ inputMethodEngine.getInputMethodEngine()
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 8
 
@@ -188,10 +193,10 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardShow'** indicates the keyboard display event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | 设置监听类型。&lt;br/&gt;-'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;-'keyboardHide'表示隐藏输 入法软键盘。 |
+| callback | () =&gt; void | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
@@ -208,7 +213,7 @@ inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 8
 
@@ -226,10 +231,10 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardShow'** indicates the keyboard display event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | 设置监听类型。&lt;br/&gt;-'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;-'keyboardHide'表示隐藏输 入法软键盘。 |
+| callback | () =&gt; void | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
+## 导入模块
+
+```TypeScript
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityName
 
 ```TypeScript
@@ -38,7 +44,7 @@ stopCode: StopCode
 
 停止码
 
-**类型：** StopCode
+**类型：** [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md)
 
 **起始版本：** 26.1.0
 
@@ -78,7 +84,7 @@ taskId: int
 
 任务id。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.1.0
 

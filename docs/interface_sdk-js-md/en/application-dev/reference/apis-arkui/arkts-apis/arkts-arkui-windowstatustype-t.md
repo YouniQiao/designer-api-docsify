@@ -4,7 +4,7 @@
 export type WindowStatusType = window.WindowStatusType
 ```
 
-Import the WindowStatusType type object for onHoverStatusChange.
+窗口模式枚举。
 
 **Since:** 23
 

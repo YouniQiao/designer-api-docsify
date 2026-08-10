@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## defaultDensityEnabled
 
 ```TypeScript
@@ -19,12 +25,12 @@ defaultDensityEnabled?: boolean
 是否使用系统默认Density，使用系统默认Density之后，窗口不会跟随系统显示大小变化重新布局。
 
 当创建的系统窗口设置此参数为true时，表示当前窗口使用系统默认Density，且不会受到  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_和\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_设置的主窗口以及  
-[setDefaultDensityEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_设置的本窗口的相关影响。
+[setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)设置的主窗口以及  
+[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setdefaultdensityenabled)设置的本窗口的相关影响。
 
 当创建的系统窗口设置此参数为false时，表示当前窗口不使用系统默认Density，且会受到  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_和\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_设置的主窗口以及  
-[setDefaultDensityEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_设置的本窗口的相关影响。
+[setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)设置的主窗口以及  
+[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setdefaultdensityenabled)设置的本窗口的相关影响。
 
 默认为false。
 
@@ -46,9 +52,9 @@ defaultDensityEnabled?: boolean
 zIndex?: int
 ```
 
-当前系统窗口的层级，仅在[WindowType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为TYPE\_DYNAMIC时生效。
+当前系统窗口的层级，仅在[WindowType](arkts-arkui-window-windowtype-e.md)为TYPE_DYNAMIC时生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 

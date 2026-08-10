@@ -1,5 +1,11 @@
 # @ohos.arkui.advanced.DownloadFileButton
 
+## Modules to Import
+
+```TypeScript
+import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from 'kits/@kit.ArkUI';
+```
+
 ## Summary
 
 ### Structs

@@ -4,7 +4,7 @@
 type OnAbilityWillBackgroundFn = (ability: UIAbility) => void
 ```
 
-Defines a onAbilityWillBackground function.
+注册监听应用上下文的生命周期后，在UIAbility的onBackground触发前回调。
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ Defines a onAbilityWillBackground function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the ability to register for listening.  |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 当前Ability对象。 |
 

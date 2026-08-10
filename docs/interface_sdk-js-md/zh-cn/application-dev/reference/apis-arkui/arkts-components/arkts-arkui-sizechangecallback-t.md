@@ -28,6 +28,6 @@ newValue表示目标元素变化之后的宽高。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oldValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| newValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| oldValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |  |
+| newValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |  |
 

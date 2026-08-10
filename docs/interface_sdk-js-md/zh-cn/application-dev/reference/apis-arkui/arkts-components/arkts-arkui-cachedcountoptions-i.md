@@ -16,7 +16,7 @@
 independent?: boolean
 ```
 
-[cachedCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_是否按实际子组件个数计算。
+[cachedCount](SwiperAttribute#cachedCount(count: number, options: CachedCountOptions))是否按实际子组件个数计算。
 
 设置为true时，cachedCount按实际子组件个数计算，不按组计算。
 

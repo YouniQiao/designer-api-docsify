@@ -1,13 +1,18 @@
 # has
 
+## Modules to Import
+
+```TypeScript
+import { JSON } from 'kits/@kit.ArkTS';
+```
+
 ## has
 
 ```TypeScript
 function has(obj: object, property: string): boolean
 ```
 
-Checks whether an ArkTS object contains a key. This API can be used for related operations after  
-[JSON.parse]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets).
+检查ArkTS对象是否包含某种属性，可用于[JSON.parse](arkts-arkts-json-parse-f.md#parse)解析JSON字符串之后。has接口仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串，传入非字典形式的对象时无法正确判断属性是否存在。
 
 **Since:** 12
 
@@ -23,12 +28,12 @@ Checks whether an ArkTS object contains a key. This API can be used for related 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | object | Yes | ArkTS object. |
-| property | string | Yes | Key to check. |
+| obj | object | Yes | ArkTS对象，仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串解析后的对象。 |
+| property | string | Yes | 要检查的属性名称，用于指定需在ArkTS对象中查找是否存在的属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Return true if the key is in the object, otherwise return false. |
+| boolean | 返回ArkTS对象是否包含指定属性的结果。true表示对象包含指定属性；false表示对象不包含指定属性。 |
 

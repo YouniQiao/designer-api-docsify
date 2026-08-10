@@ -1,6 +1,6 @@
 # SubscribeType
 
-Describes the type that enables notification extension subscription.
+表示通知扩展订阅的类型。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Describes the type that enables notification extension subscription.
 BLUETOOTH = 0
 ```
 
-Bluetooth.
+通过蓝牙订阅通知。
 
 **Since:** 22
 

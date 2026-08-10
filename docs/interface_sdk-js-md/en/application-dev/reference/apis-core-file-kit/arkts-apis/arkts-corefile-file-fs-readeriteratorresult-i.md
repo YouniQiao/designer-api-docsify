@@ -1,6 +1,6 @@
 # ReaderIteratorResult
 
-Represents the information obtained by the **ReaderIterator** object.
+文件读取迭代器返回结果，支持ReaderIterator接口使用。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Represents the information obtained by the **ReaderIterator** object.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## done
 
 ```TypeScript
 done: boolean
 ```
 
-Whether the iteration is complete. The value **true** means the iteration is complete; the value **false** means the opposite.
+迭代器是否已完成迭代。true：已完成迭代；false：未完成迭代。
 
 **Type:** boolean
 
@@ -34,7 +40,7 @@ Whether the iteration is complete. The value **true** means the iteration is com
 value: string
 ```
 
-File text content read line by line.
+逐行读取的文件文本内容。
 
 **Type:** string
 

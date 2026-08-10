@@ -1,5 +1,11 @@
 # requestRebuildHyperSnap
 
+## Modules to Import
+
+```TypeScript
+import { hyperSnapManager } from 'kits/@kit.AbilityKit';
+```
+
 ## requestRebuildHyperSnap
 
 ```TypeScript
@@ -12,10 +18,10 @@ When compatibility issues arise with an existing snapshot, this method triggers 
 
 **Notes:**  
 - The system ultimately determines whether and when to recreate the snapshot. Invoking this method only submits  
-a request; actual snapshot recreation depends on system policies and resource availability.  
+ a request; actual snapshot recreation depends on system policies and resource availability.  
 - Recreation occurs during optimal system idle periods to minimize performance impact.  
 - Primarily for resolving specific compatibility issues identified after initial snapshot creation.  
-Most applications don't require manual intervention for snapshot management.
+ Most applications don't require manual intervention for snapshot management.
 
 **Since:** 24
 

@@ -1,6 +1,6 @@
 # event
 
-Provides event name constants, including system event name constants and application event name constants.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The application event name constants are optional custom event names reserved when you call Write for application event logging.
+提供事件名称常量，包括系统事件名称常量和应用事件名称常量。&lt;br&gt;应用事件名称常量是为开发者在调用Write接口进行应用事件打点时预留的可选自定义事件名称。
 
 **Since:** 9
 
@@ -10,27 +10,33 @@ Provides event name constants, including system event name constants and applica
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## Summary
 
 ### Constants
 
 | Name | Description |
 | --- | --- |
-| [USER_LOGIN](arkts-performanceanalysis-event-con.md#user_login) | User login event. This is a reserved application event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 11. |
-| [USER_LOGOUT](arkts-performanceanalysis-event-con.md#user_logout) | User logout event. This is a reserved application event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 11. |
-| [DISTRIBUTED_SERVICE_START](arkts-performanceanalysis-event-con.md#distributed_service_start) | Distributed service startup event. This is a reserved application event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 11. |
-| [APP_CRASH](arkts-performanceanalysis-event-con.md#app_crash) | Application crash event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 11. |
-| [APP_FREEZE](arkts-performanceanalysis-event-con.md#app_freeze) | Application freeze event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 11. |
-| [APP_LAUNCH](arkts-performanceanalysis-event-con.md#app_launch) | Event indicating the application launch duration. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 12. |
-| [SCROLL_JANK](arkts-performanceanalysis-event-con.md#scroll_jank) | Event indicating frame loss during swiping. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 12. |
-| [CPU_USAGE_HIGH](arkts-performanceanalysis-event-con.md#cpu_usage_high) | Event indicating a high CPU usage. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 12. |
-| [BATTERY_USAGE](arkts-performanceanalysis-event-con.md#battery_usage) | Event indicating battery usage statistics. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 12. |
-| [RESOURCE_OVERLIMIT](arkts-performanceanalysis-event-con.md#resource_overlimit) | Application resource leak event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 12. |
-| [ADDRESS_SANITIZER](arkts-performanceanalysis-event-con.md#address_sanitizer) | Application address sanitizer event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 12. |
-| [MAIN_THREAD_JANK](arkts-performanceanalysis-event-con.md#main_thread_jank) | Main thread jank event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 12. |
-| [APP_KILLED](arkts-performanceanalysis-event-con.md#app_killed) | Application killed event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 20. |
-| [APP_HICOLLIE](arkts-performanceanalysis-event-con.md#app_hicollie) | Application task execution timeout event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 21. |
-| [AUDIO_JANK_FRAME](arkts-performanceanalysis-event-con.md#audio_jank_frame) | Audio jank event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 21. |
-| [SCROLL_ARKWEB_FLING_JANK](arkts-performanceanalysis-event-con.md#scroll_arkweb_fling_jank) | ArkWeb fling jank event. This is a system event name constant.  **Atomic service API**: This parameter can be used in atomic services since API version 23. |
-| [appFreezeWarning](arkts-performanceanalysis-event-con.md#appfreezewarning) | Application freeze warning event. This is a system event name constant.  **Model restriction**: This API can be used only in the stage model.  **Atomic service API**: This parameter can be used in atomic services since API version 26.0.0. |
+| [USER_LOGIN](arkts-performanceanalysis-event-con.md#user_login) | 用户登录事件。预留的应用事件名称常量。  **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。 |
+| [USER_LOGOUT](arkts-performanceanalysis-event-con.md#user_logout) | 用户登出事件。预留的应用事件名称常量。  **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。 |
+| [DISTRIBUTED_SERVICE_START](arkts-performanceanalysis-event-con.md#distributed_service_start) | 分布式服务启动事件。预留的应用事件名称常量。  **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。 |
+| [APP_CRASH](arkts-performanceanalysis-event-con.md#app_crash) | 应用崩溃事件。系统事件名称常量。  **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。 |
+| [APP_FREEZE](arkts-performanceanalysis-event-con.md#app_freeze) | 应用冻屏事件。系统事件名称常量。  **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。 |
+| [APP_LAUNCH](arkts-performanceanalysis-event-con.md#app_launch) | 应用启动耗时事件。系统事件名称常量。  **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。 |
+| [SCROLL_JANK](arkts-performanceanalysis-event-con.md#scroll_jank) | 应用滑动丢帧事件。系统事件名称常量。  **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。 |
+| [CPU_USAGE_HIGH](arkts-performanceanalysis-event-con.md#cpu_usage_high) | 应用CPU高负载事件。系统事件名称常量。  **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。 |
+| [BATTERY_USAGE](arkts-performanceanalysis-event-con.md#battery_usage) | 应用24h功耗器件分解统计事件。系统事件名称常量。  **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。 |
+| [RESOURCE_OVERLIMIT](arkts-performanceanalysis-event-con.md#resource_overlimit) | 应用资源泄漏事件。系统事件名称常量。  **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。 |
+| [ADDRESS_SANITIZER](arkts-performanceanalysis-event-con.md#address_sanitizer) | 应用地址越界事件。系统事件名称常量。  **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。 |
+| [MAIN_THREAD_JANK](arkts-performanceanalysis-event-con.md#main_thread_jank) | 应用主线程超时事件。系统事件名称常量。  **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。 |
+| [APP_KILLED](arkts-performanceanalysis-event-con.md#app_killed) | 应用终止事件。系统事件名称常量。  **原子化服务API：** 从API version 20开始，该参数支持在原子化服务中使用。 |
+| [APP_HICOLLIE](arkts-performanceanalysis-event-con.md#app_hicollie) | 应用任务执行超时事件。系统事件名称常量。  **原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。 |
+| [AUDIO_JANK_FRAME](arkts-performanceanalysis-event-con.md#audio_jank_frame) | 应用音频卡顿事件。系统事件名称常量。  **原子化服务API：** 从API version 21开始，该参数支持在原子化服务中使用。 |
+| [SCROLL_ARKWEB_FLING_JANK](arkts-performanceanalysis-event-con.md#scroll_arkweb_fling_jank) | ArkWeb抛滑丢帧事件。系统事件名称常量。  **原子化服务API：** 从API version 23开始，该参数支持在原子化服务中使用。 |
+| [appFreezeWarning](arkts-performanceanalysis-event-con.md#appfreezewarning) | 应用冻屏告警事件。系统事件名称常量。  26.0.0  **模型约束：** 此接口仅可在Stage模型下使用。  **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。 |
 

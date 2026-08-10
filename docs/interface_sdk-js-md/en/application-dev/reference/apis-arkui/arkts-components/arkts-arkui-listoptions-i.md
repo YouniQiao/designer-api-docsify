@@ -1,11 +1,10 @@
 # ListOptions
 
-Defines the options of the **List** component.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
+用于设置List组件参数。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,9 +20,19 @@ Defines the options of the **List** component.
 initialIndex?: number
 ```
 
-Index of the item to be displayed at the start when the list is initially loaded.Anonymous Object Rectification.
+设置当前List初次加载时显示区域起始位置的item索引值。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_If the set value is a negative number or is greater than the index of the last item in the list,the value is invalid. In this case, the default value will be used.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+默认值：0。当stackFromEnd为true时，默认值为总item个数-1。
+
+**说明：**
+
+设置为负数或超过了当前List最后一个item的索引值时视为无效取值，无效取值按默认值显示。
+
+从API version 14开始，如果在List组件创建完成后首次布局前（如List的[onAttach](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onattach)事件中），调用Scroller滚动控制器中不带动画的scrollToIndex或scrollEdge方法，会覆盖initialIndex设置的值。
+
+设置了initialIndex后，List从initialIndex对应的子组件开始布局，在这之前的子组件未参与布局，无法计算准确大小，因此通过  
+[currentOffset](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#currentoffset)接口获取到的List的滚动总偏移量通过估算得出，可能会有误差。可通过设置  
+[childrenMainSize](ListAttribute#childrenMainSize)确保List的滚动总偏移量的准确性。
 
 **Type:** number
 
@@ -47,11 +56,14 @@ Index of the item to be displayed at the start when the list is initially loaded
 scroller?: Scroller
 ```
 
-Scroller, which can be bound to scrollable components.Anonymous Object Rectification.
+可滚动组件的控制器。与List绑定后，可以通过它控制List的滚动。默认不绑定滚动控制器。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The scroller cannot be bound to other scrollable components.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+**说明：**
 
-**Type:** Scroller
+不允许和其他滚动类组件，如：[ArcList](../arkts-apis/arkts-arkui-arclist.md/arkts-arkui-arclist.md)、[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、[Grid](../arkts-apis/arkts-arkui-grid-grid-f.md/arkts-arkui-grid-grid-f.md#grid)、  
+[Scroll](../arkts-apis/arkts-arkui-scroll-scroll-f.md/arkts-arkui-scroll-scroll-f.md#scroll)和[WaterFlow](./water_flow)绑定同一个滚动控制对象。
+
+**Type:** [Scroller](arkts-arkui-scroller-c.md)
 
 **Since:** 7
 
@@ -71,10 +83,21 @@ Scroller, which can be bound to scrollable components.Anonymous Object Rectifica
 space?: number | string
 ```
 
-Spacing between list items along the main axis.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value: **0**  
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_If the parameter type is number, the unit is vp.Anonymous Object Rectification.
+子组件主轴方向的间隔。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing.\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_ Child components of \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_ whose \_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_visibility\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_ attribute is set to \_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_None\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_ are not displayed, but the spacing above and below them still takes effect.\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_
+默认值：0
+
+参数类型为number时单位为vp。
+
+**说明：**
+
+设置为负数或者大于等于List内容区长度时，按默认值显示。
+
+space参数值小于List分割线宽度时，子组件主轴方向的间隔取分割线宽度。
+
+List子组件的visibility属性设置为None时不显示，但该子组件上下的space还是会生效。
+
+如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
 
 **Type:** number \| string
 
@@ -98,11 +121,23 @@ Spacing between list items along the main axis.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_
 spaceWidth?: Dimension
 ```
 
-Spacing between list items along the main axis.
+子组件主轴方向的间隔。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_ Child components of \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_ListItemGroup\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_ whose \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_visibility\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_ attribute is set to \_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_None\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_are not displayed, but the spacing above and below them still takes effect.\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_ If both spaceWidth and space are set, spaceWidth will take precedence.\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_
+默认值：0
 
-**Type:** Dimension
+参数类型为number时单位为vp。
+
+**说明：**
+
+设置为负数或者大于等于List内容区长度时，按默认值显示。
+
+spaceWidth参数值小于List分割线宽度时，子组件主轴方向的间隔取分割线宽度。
+
+List子组件的visibility属性设置为None时不显示，但该子组件上下的spaceWidth间隔还是会生效。如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
+
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 0
 

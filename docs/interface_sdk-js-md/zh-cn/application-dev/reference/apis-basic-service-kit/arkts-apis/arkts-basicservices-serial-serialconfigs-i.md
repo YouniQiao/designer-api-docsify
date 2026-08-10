@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.BusManager.Serial
 
+## 导入模块
+
+```TypeScript
+import { serial } from 'kits/@kit.BasicServicesKit';
+```
+
 ## baudRate
 
 ```TypeScript
 baudRate?: int
 ```
 
-波特率取值限定为整数。取值约束:标准波特率。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_单位:bps。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_默认值:115200。
+波特率取值限定为整数。取值约束:标准波特率。&lt;br&gt;单位:bps。&lt;br&gt;默认值:115200。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 115200
 
@@ -38,9 +44,9 @@ baudRate?: int
 dataBits?: DataBits
 ```
 
-数据位\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值:EIGHT。
+数据位&lt;br&gt;默认值:EIGHT。
 
-**类型：** DataBits
+**类型：** [DataBits](arkts-basicservices-serial-databits-e.md)
 
 **默认值：** EIGHT
 
@@ -60,9 +66,9 @@ dataBits?: DataBits
 parity?: Parity
 ```
 
-校验位\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值:NONE。
+校验位&lt;br&gt;默认值:NONE。
 
-**类型：** Parity
+**类型：** [Parity](arkts-basicservices-serialmanager-parity-e.md)
 
 **默认值：** NONE
 
@@ -82,7 +88,7 @@ parity?: Parity
 rtscts?: boolean
 ```
 
-是否开启硬件自动流控\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值:false。
+是否开启硬件自动流控&lt;br&gt;默认值:false。
 
 **类型：** boolean
 
@@ -106,9 +112,9 @@ stopBits?: StopBits
 
 停止位
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值:ONE。
+&lt;br&gt;默认值:ONE。
 
-**类型：** StopBits
+**类型：** [StopBits](arkts-basicservices-serial-stopbits-e.md)
 
 **默认值：** ONE
 
@@ -128,7 +134,7 @@ stopBits?: StopBits
 xany?: boolean
 ```
 
-是否启用XANY软件流控\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值:false。
+是否启用XANY软件流控&lt;br&gt;默认值:false。
 
 **类型：** boolean
 
@@ -150,7 +156,7 @@ xany?: boolean
 xoff?: boolean
 ```
 
-是否启用XOFF软件流控接收\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值:false。
+是否启用XOFF软件流控接收&lt;br&gt;默认值:false。
 
 **类型：** boolean
 
@@ -172,7 +178,7 @@ xoff?: boolean
 xon?: boolean
 ```
 
-是否启用XON软件流控发送\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值:false。
+是否启用XON软件流控发送&lt;br&gt;默认值:false。
 
 **类型：** boolean
 

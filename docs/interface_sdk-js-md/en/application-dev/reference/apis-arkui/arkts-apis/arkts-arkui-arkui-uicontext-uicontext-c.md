@@ -1,6 +1,6 @@
 # UIContext
 
-class UIContext
+UIContext类
 
 **Since:** 23
 
@@ -10,25 +10,19 @@ class UIContext
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## addLocalInputEventMonitor
 
 ```TypeScript
 addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor
 ```
 
-Registers a local input event monitor.
-
-The "Local" in the interface name indicates that the monitor is only valid within the current UIContext,and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors.
-
-Performance Warning: Do not perform time-consuming operations in the callback!
-
-Monitor Object Notes:  
-- The returned Monitor object is a unique identifier created by the system.  
-- Developers cannot actively construct or forge this object.  
-- Must save the returned monitor object reference for subsequent cancellation.  
-- It is recommended to use a variable to save it to avoid losing the reference.
-
-Usage Examples:\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+注册本地输入事件监视器。接口名中的“Local”表示监视器只在当前UIContext内有效。并且不影响其他UIContext实例。每个UIContext都维护自己独立的监视器列表。
 
 **Since:** 26.0.0
 
@@ -44,14 +38,14 @@ Usage Examples:\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventMask | int | Yes | Event type mask, specifying the types of events to monitor through bitwise operations. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event listener callback function. |
+| eventMask | int | Yes | 事件类型掩码，指定要监视的事件类型 位运算。 |
+| listener | [InputEventListener](../arkts-components/arkts-arkui-inputeventlistener-t.md) | Yes | 事件监听器回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Unique identifier object for the monitor, used for subsequent cancellation of registration. |
+| [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | Unique identifier object for the monitor, used for subsequent cancellation of registration. |
 
 ## animateTo
 
@@ -75,7 +69,7 @@ Defining animation function
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | parameters for animation. |
+| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | parameters for animation. |
 | event | () =&gt; void | Yes | the closure base on which, the system will create animation automatically |
 
 ## animateToImmediately
@@ -84,7 +78,7 @@ Defining animation function
 animateToImmediately(param: AnimateParam, processor: VoidCallback): void
 ```
 
-Define animation functions for immediate distribution.
+通过 **UIContext** 对象提供提供显式动画立即下发功能。当多个属性动画同时加载时，您可以调用此 API 来立即执行由处理函数引起的视图状态变化的过渡动画。
 
 **Since:** 23
 
@@ -100,8 +94,8 @@ Define animation functions for immediate distribution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Set animation effect parameters. |
-| processor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specify the closure function that displays dynamic effects, and the system will automatically insert transition animations for state changes caused by the closure function. |
+| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | 设置动画效果相关参数 |
+| processor | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | 指定显示动画的处理函数，在该函数中导致的状态变化系统会自动插入过渡动画。 |
 
 ## bindTabsToNestedScrollable
 
@@ -125,9 +119,9 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabsController | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the tabs. |
-| parentScroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the parent scrollable container component. |
-| childScroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the child scrollable container component. |
+| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | Yes | The controller of the tabs. |
+| parentScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the parent scrollable container component. |
+| childScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the child scrollable container component. |
 
 ## bindTabsToScrollable
 
@@ -151,8 +145,8 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabsController | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the tabs. |
-| scroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the scrollable container component. |
+| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | Yes | The controller of the tabs. |
+| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the scrollable container component. |
 
 ## closeBindSheet
 
@@ -160,7 +154,7 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>
 ```
 
-Close the BindSheet.
+关闭BindSheet半模态.
 
 **Since:** 23
 
@@ -176,7 +170,7 @@ Close the BindSheet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The content of BindSheet. |
+| bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | BindSheet半模态的内容 |
 
 **Return value:**
 
@@ -188,9 +182,9 @@ Close the BindSheet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
+| 120001 | The bindSheetContent is incorrect. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 120003 | The bindSheetContent cannot be found. |
 
 ## constructor
 
@@ -198,7 +192,7 @@ Close the BindSheet.
 constructor()
 ```
 
-UIContext constructor
+UIContext 构造函数
 
 **Since:** 24
 
@@ -232,25 +226,24 @@ Create an animator object for custom animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| SimpleAnimatorOptions | Yes | Options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| SimpleAnimatorOptions | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
 ```TypeScript
-static createUIContextWithoutWindow(
-    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined
+static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined
 ```
 
 Create a UI instance singleton without window and get its UIContext object.
@@ -261,7 +254,7 @@ Create a UI instance singleton without window and get its UIContext object.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-static createUIContextWithoutWindow(    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined--><!--Device-UIContext-static createUIContextWithoutWindow(    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined-End-->
+<!--Device-UIContext-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined--><!--Device-UIContext-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -275,14 +268,14 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object UIContext, or undefined when failed. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | object UIContext, or undefined when failed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. The number of parameters is incorrect. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Invalid parameter type of context. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. @static |
+| 100001 | Internal error. @static |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
 
 ## destroyUIContextWithoutWindow
 
@@ -325,7 +318,7 @@ Dispach keyboard event to the frameNode with inspector key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | node | int \| string | Yes | The uniqueId or inspector key of the target FrameNode. |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The keyboard event. |
+| event | [KeyEvent](../arkts-components/arkts-arkui-keyevent-i.md) | Yes | The keyboard event. |
 
 **Return value:**
 
@@ -339,7 +332,7 @@ Dispach keyboard event to the frameNode with inspector key.
 enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventType): void
 ```
 
-Whether to enable or disable event passthrough.
+是否启用或禁用事件直通。
 
 **Since:** 26.0.0
 
@@ -355,8 +348,8 @@ Whether to enable or disable event passthrough.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | enable or disable event passthrough. The default value is false. |
-| eventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the type of raw input event. |
+| enabled | boolean \| undefined | Yes | 启用或禁用事件直通。默认值为false。 |
+| eventType | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | Yes | 原始输入事件的类型。 |
 
 ## enableSwipeBack
 
@@ -364,7 +357,7 @@ Whether to enable or disable event passthrough.
 enableSwipeBack(enabled: boolean | undefined): void
 ```
 
-whether to enable or disable swipe to back event.
+设置是否支持应用内横向滑动返回上一级。
 
 **Since:** 23
 
@@ -380,7 +373,7 @@ whether to enable or disable swipe to back event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | enable or disable swipe to back event. |
+| enabled | boolean \| undefined | Yes | 是否支持应用内横向滑动返回，默认值为true。&lt;br&gt;当值为true时，支持应用内横向滑动返回。 &lt;br&gt;当值为false时，不支持应用内横向滑动返回。 |
 
 ## fp2px
 
@@ -418,7 +411,7 @@ Converts a value in fp units to a value in px.
 static getAllUIContexts(): UIContext[]
 ```
 
-Gets all currently active UIContext instances.
+获取所有当前活跃的 UIContext 实例。
 
 **Since:** 24
 
@@ -434,7 +427,7 @@ Gets all currently active UIContext instances.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] |  An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
 
 ## getAtomicServiceBar
 
@@ -442,7 +435,7 @@ Gets all currently active UIContext instances.
 getAtomicServiceBar(): Nullable<AtomicServiceBar>
 ```
 
-Get AtomicServiceBar.
+获取AtomicServiceBar。
 
 **Since:** 23
 
@@ -458,7 +451,7 @@ Get AtomicServiceBar.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AtomicServiceBar&gt; | The atomic service bar. |
+| [Nullable](arkts-arkui-nullable-t.md)&lt;AtomicServiceBar&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -466,7 +459,7 @@ Get AtomicServiceBar.
 getAttachedFrameNodeById(id: string): FrameNode | null
 ```
 
-Get the FrameNode attached to current window by id.
+通过组件id获取当前窗口上的FrameNode。
 
 **Since:** 23
 
@@ -488,7 +481,7 @@ Get the FrameNode attached to current window by id.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-t.md) | The instance of FrameNode. |
 
 ## getCallingScopeUIContext
 
@@ -496,7 +489,7 @@ Get the FrameNode attached to current window by id.
 static getCallingScopeUIContext(): UIContext | undefined
 ```
 
-Gets the UIContext associated with the current calling scope.
+获取与当前调用作用域关联的 UIContext
 
 **Since:** 24
 
@@ -512,7 +505,7 @@ Gets the UIContext associated with the current calling scope.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
 
 ## getComponentSnapshot
 
@@ -520,7 +513,7 @@ Gets the UIContext associated with the current calling scope.
 getComponentSnapshot(): ComponentSnapshot
 ```
 
-Get ComponentSnapshot.
+获取ComponentSnapshot对象。
 
 **Since:** 23
 
@@ -536,7 +529,7 @@ Get ComponentSnapshot.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the ComponentSnapshot |
+| [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
 
 ## getComponentUtils
 
@@ -560,7 +553,7 @@ get object ComponentUtils.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object ComponentUtils. |
+| [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
 
 ## getContextMenuController
 
@@ -568,7 +561,7 @@ get object ComponentUtils.
 getContextMenuController(): ContextMenuController
 ```
 
-Get object context menu controller.
+获取ContextMenuController对象。
 
 **Since:** 23
 
@@ -584,7 +577,7 @@ Get object context menu controller.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object context menu controller. |
+| [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
 
 ## getCursorController
 
@@ -592,7 +585,7 @@ Get object context menu controller.
 getCursorController(): CursorController
 ```
 
-Get object cursor controller.
+获取CursorController对象。
 
 **Since:** 23
 
@@ -608,7 +601,31 @@ Get object cursor controller.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object cursor controller. |
+| [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+
+## getDialogPresenter
+
+```TypeScript
+getDialogPresenter(): DialogPresenter
+```
+
+获取Dialog对象。
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIContext-getDialogPresenter(): DialogPresenter--><!--Device-UIContext-getDialogPresenter(): DialogPresenter-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DialogPresenter](arkts-arkui-arkui-uicontext-dialogpresenter-c.md) | Dialog object. |
 
 ## getDragController
 
@@ -616,7 +633,7 @@ Get object cursor controller.
 getDragController(): DragController
 ```
 
-Get DragController.
+获取DragController对象。
 
 **Since:** 23
 
@@ -632,7 +649,7 @@ Get DragController.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the DragController |
+| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) | the DragController |
 
 ## getFilteredInspectorTree
 
@@ -640,7 +657,7 @@ Get DragController.
 getFilteredInspectorTree(filters?: Array<string>): string
 ```
 
-Obtains the component tree and component attributes. This API has a long processing time and is intended for\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_testing scenarios only.
+获取组件树和组件属性。该接口处理时间较长，适用于&lt;br&gt;testing scenarios only.
 
 **Since:** 23
 
@@ -656,7 +673,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"id"**: unique ID of the component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"src"**: source of the resource. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"content"**: information or data contained in the element, component, or object. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"editable"**: whether the component is editable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"scrollable"**: whether the component is scrollable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"selectable"**: whether the component is selectable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"focusable"**: whether the component is focusable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"focused"**: whether the component is currently focused. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **filters** includes one or more fields, unspecified fields will be filtered out from the results. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -668,7 +685,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
+| 100023 | Unable to obtain current ui context. |
 
 ## getFilteredInspectorTreeById
 
@@ -676,7 +693,7 @@ Obtains the component tree and component attributes. This API has a long process
 getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): string
 ```
 
-Obtains the attributes of the specified component and its child components. This API has a long processing time\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_and is intended for testing scenarios only.
+获取指定组件及其子组件的属性。该接口处理时间较长，&lt;br&gt;and is intended for testing scenarios only.
 
 **Since:** 23
 
@@ -692,9 +709,9 @@ Obtains the attributes of the specified component and its child components. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | [ID]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the target component. |
-| depth | int | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_the specified component are obtained. If the value is **2**, the attributes of the specified component and its \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"id"**: unique ID of the component. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"src"**: source of the resource. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"content"**: information or data contained in the element, component, or object. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"editable"**: whether the component is editable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"scrollable"**: whether the component is scrollable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"selectable"**: whether the component is selectable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"focusable"**: whether the component is focusable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**"focused"**: whether the component is currently focused. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **filters** includes one or more fields, unspecified fields will be filtered out from the results. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Other filter fields are used only in testing scenarios. |
+| id | string | Yes | [ID](arkts-arkui-common-commonmethod-i.md#id) of the target component. |
+| depth | int | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of &lt;br&gt;the specified component are obtained. If the value is **2**, the attributes of the specified component and its &lt;br&gt;level-1 child components are obtained. The rest can be deduced by analogy. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -706,8 +723,8 @@ Obtains the attributes of the specified component and its child components. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
-| [100024](../errorcode-node.md#100024-no-common-ancestor-node-between-nodes) | The parameter depth must be greater than 0. |
+| 100023 | Unable to obtain current ui context. |
+| 100024 | The parameter depth must be greater than 0. |
 
 ## getFocusController
 
@@ -715,7 +732,7 @@ Obtains the attributes of the specified component and its child components. This
 getFocusController(): FocusController
 ```
 
-Get FocusController.
+获取FocusController对象。
 
 **Since:** 23
 
@@ -731,7 +748,7 @@ Get FocusController.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the FocusController |
+| [FocusController](arkts-arkui-arkui-uicontext-focuscontroller-c.md) | the FocusController |
 
 ## getFont
 
@@ -755,7 +772,7 @@ get object font.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object Font. |
+| [Font](arkts-arkui-arkui-uicontext-font-c.md) | object Font. |
 
 ## getFrameNodeById
 
@@ -763,7 +780,7 @@ get object font.
 getFrameNodeById(id: string): FrameNode | null
 ```
 
-Get FrameNode by id.
+通过组件id获取FrameNode。
 
 **Since:** 23
 
@@ -785,7 +802,7 @@ Get FrameNode by id.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-t.md) | The instance of FrameNode. |
 
 ## getFrameNodeByUniqueId
 
@@ -793,7 +810,7 @@ Get FrameNode by id.
 getFrameNodeByUniqueId(id: int): FrameNode | null
 ```
 
-Get FrameNode by uniqueId.
+通过uniqueId获取FrameNode。
 
 **Since:** 23
 
@@ -815,7 +832,7 @@ Get FrameNode by uniqueId.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| [FrameNode](arkts-arkui-framenode-t.md) | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getHostContext
 
@@ -823,7 +840,7 @@ Get FrameNode by uniqueId.
 getHostContext(): Context | undefined
 ```
 
-Obtains context of the ability.
+获取ability的上下文。
 
 **Since:** 23
 
@@ -839,7 +856,7 @@ Obtains context of the ability.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) |  |
 
 ## getId
 
@@ -847,7 +864,7 @@ Obtains context of the ability.
 getId(): int
 ```
 
-Get id of the UI instance.
+获取UI实例的id。
 
 **Since:** 23
 
@@ -871,7 +888,7 @@ Get id of the UI instance.
 getKeyboardAvoidMode(): KeyboardAvoidMode
 ```
 
-Get KeyboardAvoidMode.
+获取KeyboardAvoidMode。
 
 **Since:** 23
 
@@ -887,7 +904,7 @@ Get KeyboardAvoidMode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The mode of keyboard avoid. |
+| [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | The mode of keyboard avoid. |
 
 ## getLastFocusedUIContext
 
@@ -895,7 +912,7 @@ Get KeyboardAvoidMode.
 static getLastFocusedUIContext(): UIContext | undefined
 ```
 
-Gets the UIContext of the last focused UI instance if one exists.
+获取最后获焦的 UI 实例的 UIContext（如果存在）。
 
 **Since:** 24
 
@@ -911,7 +928,7 @@ Gets the UIContext of the last focused UI instance if one exists.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  The UIContext of the last focused UI instance or undefined if no one exists. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
 
 ## getLastForegroundUIContext
 
@@ -919,7 +936,7 @@ Gets the UIContext of the last focused UI instance if one exists.
 static getLastForegroundUIContext(): UIContext | undefined
 ```
 
-Gets the UIContext of the last foregrounded UI instance if one exists.
+获取最后处于前台的 UI 实例的 UIContext（如果存在）。
 
 **Since:** 24
 
@@ -935,7 +952,7 @@ Gets the UIContext of the last foregrounded UI instance if one exists.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  The UIContext of the last foregrounded UI instance or undefined if no one exists |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
 
 ## getMagnifier
 
@@ -943,7 +960,7 @@ Gets the UIContext of the last foregrounded UI instance if one exists.
 getMagnifier(): Magnifier
 ```
 
-Obtains the Magnifier object.
+获取放大镜对象。
 
 **Since:** 23
 
@@ -959,7 +976,7 @@ Obtains the Magnifier object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Magnifier instance obtained. |
+| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier instance obtained. |
 
 ## getMaxFontScale
 
@@ -967,7 +984,7 @@ Obtains the Magnifier object.
 getMaxFontScale(): double
 ```
 
-Get the max font scale.
+获取字体最大缩放比例。
 
 **Since:** 23
 
@@ -991,7 +1008,7 @@ Get the max font scale.
 getMeasureUtils(): MeasureUtils
 ```
 
-Get MeasureUtils.
+获取MeasureUtils对象。
 
 **Since:** 23
 
@@ -1007,7 +1024,7 @@ Get MeasureUtils.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the MeasureUtils |
+| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
 
 ## getMediaQuery
 
@@ -1031,7 +1048,7 @@ get object mediaQuery.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object MediaQuery. |
+| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1039,7 +1056,7 @@ get object mediaQuery.
 getNavigationInfoByUniqueId(id: int): observer.NavigationInfo | undefined
 ```
 
-Get navigation information of the frameNode with uniqueId.
+通过uniqueId获取frameNode的navigation信息。
 
 **Since:** 23
 
@@ -1061,7 +1078,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| observer.NavigationInfo |  The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| observer.NavigationInfo | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1069,7 +1086,7 @@ Get navigation information of the frameNode with uniqueId.
 getOverlayManager(): OverlayManager
 ```
 
-Get object OverlayManager.
+获取OverlayManager对象。
 
 **Since:** 23
 
@@ -1085,7 +1102,7 @@ Get object OverlayManager.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object OverlayManager. |
+| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | object OverlayManager. |
 
 ## getOverlayManagerOptions
 
@@ -1093,7 +1110,7 @@ Get object OverlayManager.
 getOverlayManagerOptions(): OverlayManagerOptions
 ```
 
-Get object OverlayManagerOptions.
+获取OverlayManagerOptions对象。
 
 **Since:** 23
 
@@ -1109,7 +1126,7 @@ Get object OverlayManagerOptions.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object OverlayManagerOptions. |
+| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
 
 ## getPageInfoByUniqueId
 
@@ -1117,7 +1134,7 @@ Get object OverlayManagerOptions.
 getPageInfoByUniqueId(id: int): PageInfo
 ```
 
-Get page information of the frameNode with uniqueId.
+通过uniqueId获取frameNode的页面信息。
 
 **Since:** 23
 
@@ -1139,7 +1156,7 @@ Get page information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -1147,7 +1164,7 @@ Get page information of the frameNode with uniqueId.
 getPageRootNode(): FrameNode | null
 ```
 
-Retrieve the root node of the corresponding page of the UIContext.
+获取UIContext对应页面的根节点。
 
 **Since:** 24
 
@@ -1163,13 +1180,13 @@ Retrieve the root node of the corresponding page of the UIContext.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The root node of the corresponding page of the UIContext, or null if no root node exists. |
+| [FrameNode](arkts-arkui-framenode-t.md) | The root node of the corresponding page of the UIContext, or null if no root node exists. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120007](../errorcode-uicontext.md#120007-instance-not-exist) | The UIContext is not available. |
+| 120007 | The UIContext is not available. |
 
 ## getPixelRoundMode
 
@@ -1177,7 +1194,7 @@ Retrieve the root node of the corresponding page of the UIContext.
 getPixelRoundMode(): PixelRoundMode
 ```
 
-Get the pixel round mode of the system.
+获取系统的像素取整模式。
 
 **Since:** 23
 
@@ -1193,7 +1210,7 @@ Get the pixel round mode of the system.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the mode of pixel round. |
+| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | the mode of pixel round. |
 
 ## getPromptAction
 
@@ -1217,7 +1234,7 @@ get object PromptAction.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object PromptAction. |
+| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | object PromptAction. |
 
 ## getRouter
 
@@ -1241,7 +1258,7 @@ get object router.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object Router. |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) | object Router. |
 
 ## getSharedLocalStorage
 
@@ -1249,7 +1266,7 @@ get object router.
 getSharedLocalStorage(): LocalStorage | undefined
 ```
 
-Get current LocalStorage shared from stage.
+获取当前stage共享的LocalStorage实例。
 
 **Since:** 23
 
@@ -1265,7 +1282,7 @@ Get current LocalStorage shared from stage.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LocalStorage](arkts-arkui-localstorage-c.md) |  |
 
 ## getSmartGestureController
 
@@ -1273,7 +1290,7 @@ Get current LocalStorage shared from stage.
 getSmartGestureController(): SmartGestureController
 ```
 
-Get object smart gesture controller.
+获取智能手势控制器。
 
 **Since:** 26.0.0
 
@@ -1289,7 +1306,7 @@ Get object smart gesture controller.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object smart gesture controller. |
+| [SmartGestureController](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
 
 ## getTextMenuController
 
@@ -1297,7 +1314,7 @@ Get object smart gesture controller.
 getTextMenuController(): TextMenuController
 ```
 
-Get object text menu controller.
+获取TextMenuController对象。
 
 **Since:** 23
 
@@ -1313,7 +1330,7 @@ Get object text menu controller.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | object text menu controller. |
+| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
 
 ## getUIInspector
 
@@ -1321,7 +1338,7 @@ Get object text menu controller.
 getUIInspector(): UIInspector
 ```
 
-Obtains the **UIInspector** object.
+获取**UIInspector**对象。
 
 **Since:** 23
 
@@ -1337,7 +1354,7 @@ Obtains the **UIInspector** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | UIInspector** object. |
+| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
 
 ## getUIObserver
 
@@ -1345,7 +1362,7 @@ Obtains the **UIInspector** object.
 getUIObserver(): UIObserver
 ```
 
-Get the UI observer.
+获取UIObserver对象。
 
 **Since:** 23
 
@@ -1361,7 +1378,7 @@ Get the UI observer.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The UI observer. |
+| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | The UI observer. |
 
 ## getWindowHeightBreakpoint
 
@@ -1369,7 +1386,7 @@ Get the UI observer.
 getWindowHeightBreakpoint(): HeightBreakpoint
 ```
 
-Get the height breakpoint of current window.
+获取当前实例所在窗口的高度断点。
 
 **Since:** 23
 
@@ -1385,7 +1402,7 @@ Get the height breakpoint of current window.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The height breakpoint of current window. |
+| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | The height breakpoint of current window. |
 
 ## getWindowId
 
@@ -1393,8 +1410,7 @@ Get the height breakpoint of current window.
 getWindowId(): int | undefined
 ```
 
-Get window id to which the current UIContext belongs.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**:  
-If the current UIContext is in a UIExtensionAbility running within the host process,this method returns the top-level window ID of the host application.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+获取当前UIContext所属的窗口ID。&lt;p&gt;**注意**：如果当前UIContext处于宿主进程中运行的UIExtensionAbility内，此方法将返回宿主应用程序的顶层窗口ID。&lt;/p&gt;
 
 **Since:** 23
 
@@ -1410,7 +1426,7 @@ If the current UIContext is in a UIExtensionAbility running within the host proc
 
 | Type | Description |
 | --- | --- |
-| int |  Window id. If the current UIContext is unavailable, return undefined. |
+| int | Window id. If the current UIContext is unavailable, return undefined. |
 
 ## getWindowName
 
@@ -1418,7 +1434,7 @@ If the current UIContext is in a UIExtensionAbility running within the host proc
 getWindowName(): string | undefined
 ```
 
-Get the name of current window.
+获取当前实例所在窗口的名称。
 
 **Since:** 23
 
@@ -1442,7 +1458,7 @@ Get the name of current window.
 getWindowWidthBreakpoint(): WidthBreakpoint
 ```
 
-Get the width breakpoint of current window.
+获取当前实例所在窗口的宽度断点。
 
 **Since:** 23
 
@@ -1458,7 +1474,7 @@ Get the width breakpoint of current window.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The width breakpoint of current window. |
+| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | The width breakpoint of current window. |
 
 ## isAvailable
 
@@ -1466,7 +1482,7 @@ Get the width breakpoint of current window.
 isAvailable(): boolean
 ```
 
-Check whether the UIContext object is available.
+检查UIContext对象是否可用。
 
 **Since:** 23
 
@@ -1482,7 +1498,7 @@ Check whether the UIContext object is available.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the UIContext object is available. |
+| boolean | Returns true if the UIContext is available, otherwise false. |
 
 ## isEasySplit
 
@@ -1490,7 +1506,7 @@ Check whether the UIContext object is available.
 isEasySplit(): boolean
 ```
 
-Checks whether the current UI instance is in easy split mode.
+检查当前UI实例是否处于分栏模式。
 
 **Since:** 24
 
@@ -1554,8 +1570,8 @@ Defining keyframe animation function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | overall animation parameters |
-| keyframes | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Yes | all keyframe states |
+| param | [KeyframeAnimateParam](../arkts-components/arkts-arkui-keyframeanimateparam-i.md) | Yes | overall animation parameters |
+| keyframes | Array&lt;[KeyframeState](../arkts-components/arkts-arkui-keyframestate-i.md)&gt; | Yes | all keyframe states |
 
 ## lpx2px
 
@@ -1590,8 +1606,7 @@ Converts a value in lpx units to a value in px.
 ## openBindSheet
 
 ```TypeScript
-openBindSheet(bindSheetContent: ComponentContentBase,
-    sheetOptions?: SheetOptions, targetId?: int): Promise<void>
+openBindSheet(bindSheetContent: ComponentContentBase, sheetOptions?: SheetOptions, targetId?: int): Promise<void>
 ```
 
 Open the BindSheet.
@@ -1602,7 +1617,7 @@ Open the BindSheet.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions?: SheetOptions, targetId?: int): Promise<void>--><!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions?: SheetOptions, targetId?: int): Promise<void>-End-->
+<!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase, sheetOptions?: SheetOptions, targetId?: int): Promise<void>--><!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase, sheetOptions?: SheetOptions, targetId?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1610,9 +1625,9 @@ Open the BindSheet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The content of BindSheet. |
-| sheetOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of sheet. |
-| targetId | int | No | The uniqueId of the FrameNode to which BindSheet is attached. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:(0, +∞) |
+| bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | The options of sheet. |
+| targetId | int | No | The uniqueId of the FrameNode to which BindSheet is attached. &lt;br&gt;Value range:(0, +∞) |
 
 **Return value:**
 
@@ -1624,12 +1639,12 @@ Open the BindSheet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
-| [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
-| [120005](../errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
-| [120006](../errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) | The node of targetId is not a child of the page node or NavDestination node. |
+| 120001 | The bindSheetContent is incorrect. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 120002 | The bindSheetContent already exists. |
+| 120005 | The node of targetId is not in the component tree. |
+| 120004 | The targetId does not exist. |
+| 120006 | The node of targetId is not a child of the page node or NavDestination node. |
 
 ## postDelayedFrameCallback
 
@@ -1653,7 +1668,7 @@ Post a frame callback to run on the next frame after the specified delay.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
 | delayTime | long | Yes | The delay time in milliseconds, |
 
 ## postFrameCallback
@@ -1678,7 +1693,7 @@ Post a frame callback to run on the next frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
 
 ## px2fp
 
@@ -1776,12 +1791,11 @@ Converts a value in px units to a value in vp.
 removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 ```
 
-Removes a local input event monitor.
-
-**Important Notes**:  
-- Only Monitor objects returned by addLocalInputEventMonitor can be removed.  
-- Cannot unregister a monitor by manually constructing an object.  
-- If an invalid object is passed, the system silently ignores it.
+删除本地输入事件监视器。  
+**重要说明**：  
+-只能移除addLocalInputEventMonitor返回的Monitor对象。  
+-无法通过手动构造对象来注销监视器。  
+-如果传递了一个无效的对象，系统会默默地忽略它。
 
 **Since:** 26.0.0
 
@@ -1797,7 +1811,7 @@ Removes a local input event monitor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Monitor identifier object (returned by addLocalInputEventMonitor). |
+| monitor | [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | Yes | 监控标识对象（由addLocalInputEventMonitor返回）。 |
 
 ## requireDynamicSyncScene
 
@@ -1835,9 +1849,7 @@ Require DynamicSyncScene by id.
 static resolveUIContext(): ResolvedUIContext
 ```
 
-Resolves a UIContext using priority strategy.
-
-Resolves and returns a UIContext instance following a predefined priority sequence.resolution rules in order:\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_1. the UIContext with current calling scope\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_2. Returns the unique UIContext if only one UI instance exists.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_3. Returns the UIContext of the last focused UI instance if one exists.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_4. Returns the UIContext of the last foregrounded UI instance if one exists.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_5. Returns the UIContext of the most recently created UI instance if any UI instance exists.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_6. Returns an invalid UIContext instance if none of the above conditions are met.
+使用优先级策略解析UIContext按照预定义优先级顺序解析并返回UIContext实例。解析规则按顺序如下：&lt;br&gt;1. 返回当前调用作用域对应的UIContext&lt;br&gt;2. 当仅存在单个UI实例时，返回该唯一实例的UIContext&lt;br&gt;3. 若存在最后获得焦点的UI实例，返回其UIContext&lt;br&gt;4. 若存在最后进入前台的UI实例，返回其UIContext&lt;br&gt;5. 若存在任何UI实例，返回最大实例ID的UIContext&lt;br&gt;6. 当不满足上述所有条件时，返回未定义调用作用域内的UIContext实例
 
 **Since:** 23
 
@@ -1853,7 +1865,7 @@ Resolves and returns a UIContext instance following a predefined priority sequen
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  ResolvedUIContext instance |
+| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext实例 |
 
 ## runScopedTask
 
@@ -1885,7 +1897,7 @@ Run custom functions inside the UIContext scope.
 setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 ```
 
-Set custom keyboard continue feature.
+设置自定义键盘接续特性。
 
 **Since:** 23
 
@@ -1901,7 +1913,7 @@ Set custom keyboard continue feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| feature | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The custom keyboard continue feature. |
+| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | 自定义键盘接续特性。 |
 
 ## setImageCacheCount
 
@@ -1909,7 +1921,7 @@ Set custom keyboard continue feature.
 setImageCacheCount(value: int): void
 ```
 
-Set image cache capacity of decoded image count.if not set, the application will not cache any decoded image.
+设置内存中缓存解码后图片的数量上限。if not set, the application will not cache any decoded image.
 
 **Since:** 23
 
@@ -1933,7 +1945,7 @@ Set image cache capacity of decoded image count.if not set, the application will
 setImageRawDataCacheSize(value: int): void
 ```
 
-Set image cache capacity of raw image data size in bytes before decode.if not set, the application will not cache any raw image data.
+设置内存中缓存解码前图片数据的大小上限，单位为字节。if not set, the application will not cache any raw image data.
 
 **Since:** 23
 
@@ -1957,7 +1969,7 @@ Set image cache capacity of raw image data size in bytes before decode.if not se
 setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 ```
 
-Set KeyboardAvoidMode. The default mode is KeyboardAvoidMode.OFFSET
+设置KeyboardAvoidMode。默认模式为KeyboardAvoidMode.OFFSET。
 
 **Since:** 23
 
@@ -1973,7 +1985,7 @@ Set KeyboardAvoidMode. The default mode is KeyboardAvoidMode.OFFSET
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The mode of keyboard avoid. |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | The mode of keyboard avoid. |
 
 ## setOverlayManagerOptions
 
@@ -1997,7 +2009,7 @@ Init OverlayManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
+| options | [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | Yes | Options. |
 
 **Return value:**
 
@@ -2011,7 +2023,7 @@ Init OverlayManager.
 setPixelRoundMode(mode: PixelRoundMode): void
 ```
 
-Set the pixel round mode of the system. The default mode is PixelRoundMode.PIXEL\_ROUND\_ON\_LAYOUT\_FINISH.
+设置系统的像素取整模式。默认模式为PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH。
 
 **Since:** 23
 
@@ -2027,7 +2039,7 @@ Set the pixel round mode of the system. The default mode is PixelRoundMode.PIXEL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The mode of pixel round. |
+| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Yes | The mode of pixel round. |
 
 ## setResourceManagerCacheMaxCountForHSP
 
@@ -2035,9 +2047,9 @@ Set the pixel round mode of the system. The default mode is PixelRoundMode.PIXEL
 static setResourceManagerCacheMaxCountForHSP(count: int): void
 ```
 
-Set the upper limit for the cache count of HSP resource management objects.
+设置HSP资源管理对象的缓存数量上限。
 
-If the upper limit of the cache is set too high, there is a risk of excessive memory overhead.It is recommended to configure it according to actual needs.
+如果缓存上限设置过高，存在内存开销过大的风险。建议根据实际需要进行配置。
 
 **Since:** 26.0.0
 
@@ -2053,15 +2065,15 @@ If the upper limit of the cache is set too high, there is a risk of excessive me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | int | Yes | The cache limit of resource manager for HSP, must be non negative integers. |
+| count | int | Yes | The cache limit of resource manager for HSP, must be non-negative integers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100101](../errorcode-uicontext.md#100101-invalid-negative-parameter-value) | The parameter is less than 0. |
-| [100102](../errorcode-uicontext.md#100102-incorrect-parameter-type) | The parameter value cannot be a floating point number. |
-| [100103](../errorcode-uicontext.md#100103-invalid-thread-context) | The function cannot be called from a non main thread. @static |
+| 100101 | The parameter is less than 0. |
+| 100103 | The function cannot be called from a non-main thread. @static |
+| 100102 | The parameter value cannot be a floating-point number. |
 
 ## setTextSelectionClearPolicy
 
@@ -2069,7 +2081,7 @@ If the upper limit of the cache is set too high, there is a risk of excessive me
 setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 ```
 
-Sets the text selection clear policy for text component.Default policy: **TextSelectionClearPolicy.KEEP\_SELECTED\_TEXT\_ON\_EXTERNAL\_TOUCH
+设置文本组件的文本选择清除策略。默认策略：**TextSelectionClearPolicy.KEEP_ON_EXTERNAL_CLICK**。
 
 **Since:** 26.0.0
 
@@ -2085,7 +2097,7 @@ Sets the text selection clear policy for text component.Default policy: **TextSe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The text selection clear policy. |
+| policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | 文本选择清除策略。 |
 
 ## setUIStates
 
@@ -2093,7 +2105,7 @@ Sets the text selection clear policy for text component.Default policy: **TextSe
 setUIStates(callback: VoidCallback): void
 ```
 
-Thread-safe UI state variables updates interface.
+线程安全的UI状态变量更新接口。
 
 **Since:** 23
 
@@ -2109,7 +2121,7 @@ Thread-safe UI state variables updates interface.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function to be executed in the UI thread. |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | 在UI线程中执行的回调函数。 |
 
 ## showActionSheet
 
@@ -2133,13 +2145,12 @@ actionSheet display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
+| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | Yes | Options. |
 
 ## showAlertDialog
 
 ```TypeScript
-showAlertDialog(
-    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void
+showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void
 ```
 
 alertDialog display.
@@ -2150,7 +2161,7 @@ alertDialog display.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-showAlertDialog(    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void--><!--Device-UIContext-showAlertDialog(    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void-End-->
+<!--Device-UIContext-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void--><!--Device-UIContext-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2158,7 +2169,7 @@ alertDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | Yes | Options. |
+| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | Yes | Options. |
 
 ## showDatePickerDialog
 
@@ -2182,7 +2193,7 @@ datePickerDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
+| options | [DatePickerDialogOptions](../arkts-components/arkts-arkui-datepickerdialogoptions-i.md) | Yes | Options. |
 
 ## showTextPickerDialog
 
@@ -2206,7 +2217,7 @@ textPickerDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| TextPickerDialogOptionsExt | Yes | Dialog style. |
+| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) \| TextPickerDialogOptionsExt | Yes | Dialog style. |
 
 ## showTimePickerDialog
 
@@ -2230,13 +2241,12 @@ timePickerDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
+| options | [TimePickerDialogOptions](../arkts-components/arkts-arkui-timepickerdialogoptions-i.md) | Yes | Options. |
 
 ## unbindTabsFromNestedScrollable
 
 ```TypeScript
-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,
-    childScroller: Scroller): void
+unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void
 ```
 
 Unbind tabs from nested scrollable container components.
@@ -2247,7 +2257,7 @@ Unbind tabs from nested scrollable container components.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,    childScroller: Scroller): void--><!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,    childScroller: Scroller): void-End-->
+<!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void--><!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2255,9 +2265,9 @@ Unbind tabs from nested scrollable container components.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabsController | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the tabs. |
-| parentScroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the parent scrollable container component. |
-| childScroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the child scrollable container component. |
+| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | Yes | The controller of the tabs. |
+| parentScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the parent scrollable container component. |
+| childScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the child scrollable container component. |
 
 ## unbindTabsFromScrollable
 
@@ -2281,14 +2291,13 @@ Unbind tabs from scrollable container component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabsController | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the tabs. |
-| scroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The controller of the scrollable container component. |
+| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | Yes | The controller of the tabs. |
+| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the scrollable container component. |
 
 ## updateBindSheet
 
 ```TypeScript
-updateBindSheet(bindSheetContent: ComponentContentBase,
-    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>
+updateBindSheet(bindSheetContent: ComponentContentBase, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>
 ```
 
 Update the BindSheet with sheetOptions.
@@ -2299,7 +2308,7 @@ Update the BindSheet with sheetOptions.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>--><!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>-End-->
+<!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>--><!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2307,8 +2316,8 @@ Update the BindSheet with sheetOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The content of BindSheet. |
-| sheetOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The update options of sheet. |
+| bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | Yes | The update options of sheet. |
 | partialUpdate | boolean | No | If true, only the specified properties in the sheetOptions are updated, otherwise the rest of the properties are overwritten with the default values. Default value is false. |
 
 **Return value:**
@@ -2321,9 +2330,9 @@ Update the BindSheet with sheetOptions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
+| 120001 | The bindSheetContent is incorrect. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 120003 | The bindSheetContent cannot be found. |
 
 ## vp2px
 

@@ -30,9 +30,9 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget to update. |
 | formBindingData | formBindingData.FormBindingData | Yes | Data to be used for the update. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -86,7 +86,7 @@ Updates a widget. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

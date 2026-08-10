@@ -4,7 +4,7 @@
 declare type Value = boolean | number | Uint8Array
 ```
 
-Represents the value of each attribute in [AssetMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+关键资产属性的内容，用作[AssetMap](arkts-assetstore-asset-assetmap-t.md)的值。
 
 **Since:** 11
 

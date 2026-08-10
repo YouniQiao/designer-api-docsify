@@ -1,5 +1,11 @@
 # @ohos.app.ability.InteropAbilityLifecycleCallback
 
+## Modules to Import
+
+```TypeScript
+import { InteropAbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Interfaces

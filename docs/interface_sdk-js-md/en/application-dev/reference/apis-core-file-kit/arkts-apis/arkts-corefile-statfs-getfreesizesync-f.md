@@ -1,12 +1,18 @@
 # getFreeSizeSync
 
+## Modules to Import
+
+```TypeScript
+import { statfs } from 'kits/@kit.CoreFileKit';
+```
+
 ## getFreeSizeSync
 
 ```TypeScript
 function getFreeSizeSync(path: string): long
 ```
 
-Obtains the free size of the specified file system, in bytes. This API returns the result synchronously.
+以同步方法获取指定文件系统空闲字节数。
 
 **Since:** 10
 
@@ -20,33 +26,33 @@ Obtains the free size of the specified file system, in bytes. This API returns t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | File path of the file system. |
+| path | string | Yes | 需要查询的文件系统的文件路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Free size obtained, in bytes. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回空闲字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
 | 13900018 | Not a directory |
 | 13900030 | File name too long |
 | 13900031 | Function not implemented |
-| 13900033 | Too many symbolic links encountered |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
 | 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

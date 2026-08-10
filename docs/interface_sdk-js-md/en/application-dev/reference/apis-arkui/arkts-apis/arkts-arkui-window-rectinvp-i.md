@@ -1,6 +1,6 @@
 # RectInVP
 
-Describes the rectangular area of the window, in vp.
+窗口矩形区域，单位为vp。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Describes the rectangular area of the window, in vp.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: double
 ```
 
-Height of the rectangle, in vp.
+矩形区域的高度，单位为vp。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Height of the rectangle, in vp.
 left: double
 ```
 
-Left boundary of the rectangle, in vp.
+矩形区域的左边界值，单位为vp。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ Left boundary of the rectangle, in vp.
 top: double
 ```
 
-Top boundary of the rectangle, in vp.
+矩形区域的上边界值，单位为vp。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -76,9 +82,9 @@ Top boundary of the rectangle, in vp.
 width: double
 ```
 
-Width of the rectangle, in vp.
+矩形区域的宽度，单位为vp。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 

@@ -4,7 +4,7 @@
 declare type NavBar = 'navBar'
 ```
 
-Defines the name of the navigation home page.
+Navigation首页名字。
 
 **Since:** 12
 

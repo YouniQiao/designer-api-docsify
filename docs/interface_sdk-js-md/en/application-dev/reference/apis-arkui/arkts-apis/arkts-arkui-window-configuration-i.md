@@ -1,6 +1,6 @@
 # Configuration
 
-Defines the parameters for creating a child window or system window.
+创建子窗口或系统窗口时的参数。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the parameters for creating a child window or system window.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## ctx
 
 ```TypeScript
 ctx?: BaseContext
 ```
 
-Indicates window context.
+当前应用上下文信息。不设置，则默认为空。&lt;br&gt;FA模型下不需要使用该参数，即可创建子窗口，使用该参数时会报错。&lt;br&gt;Stage模型必须使用该参数，用于创建全局悬浮窗、模态窗或系统窗口。 &lt;br&gt;
 
-**Type:** BaseContext
+**Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
 **Since:** 9
 
@@ -36,7 +42,7 @@ Indicates window context.
 decorEnabled?: boolean
 ```
 
-Indicates whether enable window decor, only support dialog, The default value is false.
+是否显示窗口装饰，仅在windowType为TYPE_DIALOG时生效。true表示显示，false表示不显示。此参数默认值为false。
 
 **Type:** boolean
 
@@ -56,9 +62,9 @@ Indicates whether enable window decor, only support dialog, The default value is
 displayId?: long
 ```
 
-Screen ID of the current window. If it is not set, the screen ID of the parent window is used by default.The value is a non-negative integer and must correspond to an existing screen.In scenarios involving extended screens or heterogeneous virtual screens, a global floating window can be displayed on a specified screen by setting the screen ID.For modal windows and system windows, this parameter takes no effect, and the parent window's screen ID is used by default.
+当前屏幕ID。不设置，则默认为父窗口屏幕ID。&lt;br&gt;该参数应为非负整数，且对应屏幕ID存在。&lt;br&gt;扩展屏、异源虚拟屏场景下，全局悬浮窗可通过设置屏幕ID显示在指定屏幕上。&lt;br&gt;模态窗、系统窗设置屏幕ID无效，默认为父窗口屏幕ID。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -76,7 +82,7 @@ Screen ID of the current window. If it is not set, the screen ID of the parent w
 name: string
 ```
 
-Indicates window id.
+窗口名称。
 
 **Type:** string
 
@@ -96,9 +102,9 @@ Indicates window id.
 parentId?: int
 ```
 
-Indicates Parent window id
+父窗口ID。不设置，则默认为-1，默认父窗为当前应用上下文对应主窗。&lt;br&gt;FA模型下，该参数应为非负整数，且对应父窗口ID存在。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -116,7 +122,7 @@ Indicates Parent window id
 title?: string
 ```
 
-Indicates dialog window title when decor enabled.
+`decorEnabled`属性设置为true时，窗口的标题内容。标题显示区域最右端不超过系统三键区域最左端，超过部分以省略号表示。不设置，则默认为空字符串。
 
 **Type:** string
 
@@ -136,9 +142,9 @@ Indicates dialog window title when decor enabled.
 windowType: WindowType
 ```
 
-Indicates window type
+窗口类型。
 
-**Type:** WindowType
+**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
 
 **Since:** 9
 

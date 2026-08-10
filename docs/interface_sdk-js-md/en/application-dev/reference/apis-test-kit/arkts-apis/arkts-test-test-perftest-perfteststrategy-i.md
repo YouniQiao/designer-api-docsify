@@ -1,12 +1,11 @@
 # PerfTestStrategy
 
-Represents the performance test strategy.
-    **NOTE**  
-    
-    The input parameter type of the **actionCode** and **resetCode** attributes is the **Callback\_\_\_ESCAPED\_UNDERSCORE\_DESC\_\_\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**.  
-You need to call this callback in the code segment to notify the framework that the code segment execution is complete.Otherwise, the code segment execution times out.  
-    The callback parameter is of the **Boolean** type.  
-The value **true** indicates that the code segment execution meets the expectation, and false indicates the opposite.
+性能测试执行策略。
+
+> **说明：**
+> 
+> 属性actionCode和resetCode的入参类型为回调函数"Callback\&lt;boolean&gt;"。在代码段中需要主动调用此回调函数，通知框架代码段执行完成，否则会导致代码段执行超时。
+> > 其中，回调函数的参数为boolean类型，true代表代码段执行符合预期，false代表代码段执行不符合预期。[代码示例](arkts-test-test-perftest-perftest-c.md#create)。
 
 **Since:** 20
 
@@ -16,15 +15,21 @@ The value **true** indicates that the code segment execution meets the expectati
 
 **System capability:** SystemCapability.Test.PerfTest
 
+## Modules to Import
+
+```TypeScript
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
+```
+
 ## actionCode
 
 ```TypeScript
 actionCode: Callback<Callback<boolean>>
 ```
 
-Code segment for performance testing.The input parameter type of actionCode is \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. As actionCode can be defined as asynchronous function,developers need to invoke this callback function when the execution of actionCode is complete,to help PerfTest identify the time when the execution of the actionCode is complete.For example, the input parameter callback function of actionCode is defined as "(finish: Callback\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_)".When actionCode is executed completely, "finish(true)" should be invoked, the value true indicates actionCode is successfully executed.When an exception occurs, "finish(false)" should be invoked, the value false indicates actionCode is unsuccessfully executed.
+测试代码段。
 
-**Type:** Callback&lt;Callback&lt;boolean&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Callback&lt;boolean&gt;&gt;
 
 **Since:** 20
 
@@ -42,7 +47,7 @@ Code segment for performance testing.The input parameter type of actionCode is \
 bundleName?: string
 ```
 
-Bundle name of the application to test.The default value is "". The framework tests the performance data of the current application.
+被测应用包名。默认为""，框架运行时测试当前测试应用的性能数据。
 
 **Type:** string
 
@@ -62,9 +67,9 @@ Bundle name of the application to test.The default value is "". The framework te
 iterations?: int
 ```
 
-Number of test iterations. The default value is 5.
+测试迭代执行次数，取值范围为大于0的整数，默认值为5。超出范围时抛出异常。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -82,7 +87,7 @@ Number of test iterations. The default value is 5.
 metrics: Array<PerfMetric>
 ```
 
-List of performance metrics to be collected.
+被测性能指标列表，列表为空则不采集任何性能指标数据。
 
 **Type:** Array&lt;PerfMetric&gt;
 
@@ -102,9 +107,9 @@ List of performance metrics to be collected.
 resetCode?: Callback<Callback<boolean>>
 ```
 
-Code segment for resetting the environment after the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. is complete. The default value is empty.Data collection is not performed during this execution.The input parameter type of resetCode is \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. As resetCode can be defined as asynchronous function,developers need to invoke this callback function when the execution of resetCode is complete,to help PerfTest identify the time when the execution of the resetCode is complete.For example, the input parameter callback function of resetCode is defined as "(finish: Callback\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_)".When resetCode is executed completely, "finish(true)" should be invoked, the value true indicates resetCode is successfully executed.When an exception occurs, "finish(false)" should be invoked, the value false indicates resetCode is unsuccessfully executed.
+测试结束环境重置代码段。默认为空，框架运行时不执行此代码段。
 
-**Type:** Callback&lt;Callback&lt;boolean&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Callback&lt;boolean&gt;&gt;
 
 **Since:** 20
 
@@ -122,9 +127,9 @@ Code segment for resetting the environment after the \_\_\_JSDOC\_LINK\_DESC\_US
 timeout?: int
 ```
 
-Timeout interval for executing a code segment (\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_) at a time.The default value is 10,000 ms.
+单次代码段（actionCode/resetCode）执行的超时时间，取值范围为大于0的整数，单位：ms，默认值为10000ms。当测试代码段执行耗时较长时，可适当增大此值以避免超时，超时后将触发异常，并终止测试执行。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

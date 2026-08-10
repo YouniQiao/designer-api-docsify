@@ -1,14 +1,20 @@
 # getBadgeNumber
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getBadgeNumber
 
 ```TypeScript
 function getBadgeNumber(): Promise<long>
 ```
 
-Obtains the badge number of this application. This API uses a promise to return the result.
+获取当前应用角标数量。使用Promise异步回调。
 
-This API is used to query the badge number displayed on the current application's desktop icon.
+用于查询当前应用桌面图标上显示的角标数字。
 
 **Since:** 22
 
@@ -22,17 +28,17 @@ This API is used to query the badge number displayed on the current application'
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the badge number. (The value is irrelevant to whether notifications and home-screen badges of this application are enabled.) |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回当前应用角标数量。（查询的角标数量与当前应用通知开关，桌面角标开关是否开启无关） |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

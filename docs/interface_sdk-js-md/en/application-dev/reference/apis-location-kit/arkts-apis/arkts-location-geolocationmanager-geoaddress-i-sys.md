@@ -10,6 +10,12 @@ Data struct describes geographic locations.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## isFromMock
 
 ```TypeScript

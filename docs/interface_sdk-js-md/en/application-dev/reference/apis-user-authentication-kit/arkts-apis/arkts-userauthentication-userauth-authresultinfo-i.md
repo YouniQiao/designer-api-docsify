@@ -1,6 +1,6 @@
 # AuthResultInfo
 
-Represents the authentication result.
+表示认证结果信息，用于描述认证结果。
 
 **Since:** 9
 
@@ -14,13 +14,19 @@ Represents the authentication result.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## lockoutDuration
 
 ```TypeScript
 lockoutDuration?: number
 ```
 
-Lock duration of the authentication operation, in ms.
+认证操作的锁定时长，时间单位为毫秒ms。
 
 **Type:** number
 
@@ -42,7 +48,7 @@ Lock duration of the authentication operation, in ms.
 remainAttempts?: number
 ```
 
-Number of remaining authentication attempts.
+剩余的认证尝试次数。
 
 **Type:** number
 
@@ -64,7 +70,7 @@ Number of remaining authentication attempts.
 result: number
 ```
 
-Authentication result.
+认证结果。
 
 **Type:** number
 
@@ -86,7 +92,7 @@ Authentication result.
 token?: Uint8Array
 ```
 
-Token that has passed the user identity authentication.
+用户身份认证通过的凭证。
 
 **Type:** Uint8Array
 

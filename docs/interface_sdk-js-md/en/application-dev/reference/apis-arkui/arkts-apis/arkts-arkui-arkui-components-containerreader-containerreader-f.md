@@ -1,5 +1,11 @@
 # ContainerReader
 
+## Modules to Import
+
+```TypeScript
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## ContainerReader
 
 ```TypeScript
@@ -25,14 +31,14 @@ Defines ContainerReader Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ContainerReader options. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | container |
+| value | [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | ContainerReader options. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md) |  |
 
 
 ## ContainerReader
@@ -62,12 +68,12 @@ Defines ContainerReader Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContainerReaderInfo&gt; | Yes | The custom builder function for container content. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The configuration options for containerreader. |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContainerReaderInfo&gt; | Yes | The custom builder function for container content. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | The configuration options for containerreader. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the containerreader |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md) | The attribute of the containerreader |
 

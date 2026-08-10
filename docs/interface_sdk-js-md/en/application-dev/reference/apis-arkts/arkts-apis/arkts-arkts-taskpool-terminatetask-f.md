@@ -1,12 +1,18 @@
 # terminateTask
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## terminateTask
 
 ```TypeScript
 function terminateTask(longTask: LongTask): void
 ```
 
-Terminates a continuous task in the task pool. It is called after the continuous task is complete. After the task is terminated, the thread that executes the task may be reclaimed.
+中止任务池中的长时任务，在长时任务执行完成后调用。中止后，执行长时任务的线程可能会被回收。
 
 **Since:** 12
 
@@ -22,9 +28,9 @@ Terminates a continuous task in the task pool. It is called after the continuous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| longTask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Continuous task to terminate. |
+| longTask | [LongTask](arkts-arkts-taskpool-longtask-c.md) | Yes | 需要中止的长时任务。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent

@@ -1,5 +1,11 @@
 # loadModelFromFd
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## loadModelFromFd
 
 ```TypeScript
@@ -24,8 +30,8 @@ Creates a Model instance file description
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | context indicates model context information |
+| model | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
+| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | No | context indicates model context information |
 
 **Return value:**
 
@@ -37,10 +43,10 @@ Creates a Model instance file description
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 | 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';
@@ -50,11 +56,15 @@ let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
 mindSporeLite.loadModelFromFd(file.fd).then((mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
   if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Result: null`);
+  } else if (modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Input count: 0`);
   } else {
-    console.info(modelInputs[0].name);
+    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
   }
-})
+}).catch((error: Error) => {
+  console.error(`Failed to load model from file descriptor. Model file: ${modelFile}, File descriptor: ${file.fd}, Error: ${error.message}`);
+});
 ```
 
 
@@ -81,17 +91,17 @@ Create a Model instance from file description
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Model&gt; | Yes | the callback of model |
+| model | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Model&gt; | Yes | the callback of model |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 | 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';
@@ -101,9 +111,11 @@ let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
 mindSporeLite.loadModelFromFd(file.fd, (mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
   if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Result: null`);
+  } else if (modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Input count: 0`);
   } else {
-    console.info(modelInputs[0].name);
+    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
   }
 })
 ```
@@ -133,18 +145,18 @@ Create a Model instance from file description
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | context indicates model context information |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Model&gt; | Yes | the callback of model |
+| model | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | model indicates model file description to be loaded |
+| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | Yes | context indicates model context information |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Model&gt; | Yes | the callback of model |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 | 1000007 | Failed to create native model from file descriptor (fd). Possible causes: 1. The file descriptor (fd) is incorrect; 2. The model file is damaged.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';
@@ -156,9 +168,11 @@ let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
 mindSporeLite.loadModelFromFd(file.fd, context, (mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
   if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Context: ${JSON.stringify(context)}, Result: null`);
+  } else if (modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Context: ${JSON.stringify(context)}, Input count: 0`);
   } else {
-    console.info(modelInputs[0].name);
+    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
   }
 })
 ```

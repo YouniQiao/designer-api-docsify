@@ -1,5 +1,11 @@
 # off
 
+## 导入模块
+
+```TypeScript
+import { continueManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('prepareContinue')
 
 ```TypeScript
@@ -23,16 +29,16 @@ function off(type: 'prepareContinue', context: Context, callback?: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'prepareContinue' | 是 | 固定值：prepareContinue。 |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Ability的Context。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinueResultInfo&gt; | 否 | 回调函数。当回调函数注销成功，err为undefined，ContinueResultInfo为获回调函数注销结果。否则为错误对 象。 |
+| context | [Context](arkts-ability-context-c.md) | 是 | Ability的Context。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | 否 | 回调函数。当回调函数注销成功，err为undefined，ContinueResultInfo为获回调函数注销结果。否则为错误对 象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | the system ability work abnormally. |
+| 16300501 | the system ability work abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, continueManager } from '@kit.AbilityKit';
@@ -42,7 +48,7 @@ const TAG: string = '[MigrationAbility]';
 const DOMAIN_NUMBER: number = 0xFF00;
 
 export default class MigrationAbility extends UIAbility {
-
+    
     onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
         hilog.info(DOMAIN_NUMBER, TAG, '%{public}s', 'Ability onCreate');
 
@@ -52,13 +58,13 @@ export default class MigrationAbility extends UIAbility {
             try {
               continueManager.off('prepareContinue', this.context, (err, continueResultInfo) => {
                 if (err.code != 0) {
-                  console.error('unregister failed, cause: ' + JSON.stringify(err));
+                  hilog.error(DOMAIN_NUMBER, TAG, 'unregister failed, cause: %{public}s', JSON.stringify(err));
                   return;
                 }
-                console.info('unregister finished, ' + JSON.stringify(continueResultInfo));
+                hilog.info(DOMAIN_NUMBER, TAG, 'unregister finished, %{public}s', JSON.stringify(continueResultInfo));
               });
             } catch (e) {
-              console.error('unregister failed, cause: ' + JSON.stringify(e));
+              hilog.error(DOMAIN_NUMBER, TAG, 'unregister failed, cause: %{public}s', JSON.stringify(e));
             }
             // 若应用迁移数据较大，可在此处添加加载页面(页面中显示loading等)
             // 可处理应用自定义跳转、时序等问题

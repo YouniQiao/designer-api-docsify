@@ -1,6 +1,6 @@
 # TreeMap
 
-TreeMap stores key-value (KV) pairs. Each key must be unique and have only one value.TreeMap is implemented using a red-black tree, which is a binary search tree where keys are stored in sorted order for efficient insertion and removal.
+TreeMap可用于存储具有关联关系的key-value键值对集合，存储元素中key值唯一，每个key对应一个value。TreeMap底层使用红黑树实现，可以利用二叉树特性查找键值对，查找、插入和删除操作的时间复杂度为O(log n)。key值有序存储，可以实现高效的有序遍历。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ TreeMap stores key-value (KV) pairs. Each key must be unique and have only one v
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { TreeMap } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
 $_iterator(): IterableIterator<[K, V]>
 ```
 
-returns an ES6 iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，每一项都是一个JavaScript对象。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[K, V]&gt; | an iterator for the TreeMap |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | TreeMap的迭代器。 |
 
 ## [Symbol.iterator]
 
@@ -40,7 +46,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-returns an ES6 iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，迭代器的每一项是一个包含键和值的[K, V]数组。
 
 **Since:** 8
 
@@ -56,15 +62,15 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[K, V]&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回一个迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -111,7 +117,7 @@ while(!temp.done) {
 clear(): void
 ```
 
-Clear all element groups in the map
+清除容器中的所有元素，并将length置为0。
 
 **Since:** 8
 
@@ -127,9 +133,9 @@ Clear all element groups in the map
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -146,7 +152,7 @@ console.info("result:", result); // result: true
 constructor(comparator?: (firstValue: K, secondValue: K) => boolean)
 ```
 
-A constructor used to create a TreeMap object.
+TreeMap的构造函数，支持通过比较函数使元素按照自定义规则排序。当key为自定义类型时，必须提供比较函数，否则自定义类型的key无法正常排序和比较。
 
 **Since:** 8
 
@@ -162,15 +168,15 @@ A constructor used to create a TreeMap object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | (firstValue: K, secondValue: K) =&gt; boolean | No | comparator comparator (Optional) User-defined comparison functions. firstValue (required) previous element. secondValue (required) next element. |
+| comparator | (firstValue: K, secondValue: K) =&gt; boolean | No | 比较函数。 comparator（可选）用户自定义的比较函数。 firstValue（必填）前一项元素。 secondValue（必填）后一项元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The TreeMap's constructor cannot be directly invoked. |
+| 10200012 | The TreeMap's constructor cannot be directly invoked. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Default constructor.
@@ -222,7 +228,7 @@ console.info("length:", ts1.length); // length: 2
 constructor(comparator?: TreeMapComparator<K>)
 ```
 
-A constructor used to create a TreeMap object.
+TreeMap的构造函数，支持通过比较函数使元素按照自定义规则排序。当key为自定义类型时，必须提供比较函数，否则自定义类型的key无法正常排序和比较。
 
 **Since:** 23
 
@@ -238,7 +244,7 @@ A constructor used to create a TreeMap object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K&gt; | No | comparator comparator (Optional) User-defined comparison functions. |
+| comparator | [TreeMapComparator](arkts-arkts-treemapcomparator-t.md)&lt;K&gt; | No | 比较函数。 comparator（可选）用户自定义的比较函数。 |
 
 ## entries
 
@@ -246,7 +252,7 @@ A constructor used to create a TreeMap object.
 entries(): IterableIterator<[K, V]>
 ```
 
-Returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion order
+返回包含此映射中键值对的新迭代器对象。
 
 **Since:** 8
 
@@ -262,15 +268,15 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[K, V]&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| 10200011 | The entries method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -304,7 +310,7 @@ while(!t.done) {
 forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void
 ```
 
-Executes the given callback function once for each real key in the map.It does not perform functions on deleted keys
+通过回调函数来遍历实例对象上的元素及其下标。不会对已删除的key执行回调。
 
 **Since:** 8
 
@@ -320,16 +326,16 @@ Executes the given callback function once for each real key in the map.It does n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: TreeMap&lt;K, V&gt;) =&gt; void | Yes | callbackFn callbackFn (required) A function that accepts up to three arguments. The function to be called for each element. |
-| thisArg | Object | No | thisArg thisArg (Optional) The value to be used as this value for when callbackFn is called. If thisArg is omitted, undefined is used as the this value. |
+| callbackFn | (value?: V, key?: K, map?: TreeMap&lt;K, V&gt;) =&gt; void | Yes | 回调函数。 callbackFn（必填）接受最多三个参数的函数。 对每个元素调用的函数。 |
+| thisArg | Object | No | this值。 thisArg（可选）当callbackFn被调用时作为this值使用的对象。 如果省略thisArg，则使用undefined作为this值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -360,7 +366,7 @@ treeMap.forEach((value: number, key: string): void => {
 forEach(callbackFn: TreeMapForEachCb<K, V>): void
 ```
 
-Executes the given callback function once for each real key in the map.It does not perform functions on deleted keys
+通过回调函数来遍历实例对象上的元素及其下标。不会对已删除的key执行回调。
 
 **Since:** 23
 
@@ -376,7 +382,7 @@ Executes the given callback function once for each real key in the map.It does n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | Yes | callbackFn |
+| callbackFn | [TreeMapForEachCb](arkts-arkts-treemapforeachcb-t.md)&lt;K, V&gt; | Yes | 回调函数。 |
 
 ## get
 
@@ -384,7 +390,7 @@ Executes the given callback function once for each real key in the map.It does n
 get(key: K): V
 ```
 
-Returns a specified element in a Map object, or undefined if there is no corresponding element
+获取指定key所对应的value，若指定key不存在则返回undefined。
 
 **Since:** 8
 
@@ -400,21 +406,21 @@ Returns a specified element in a Map object, or undefined if there is no corresp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to look up in the map |
+| key | K | Yes | 指定需要获取对应value的key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | value or undefined |
+| V | 返回key映射的value值，指定key不存在时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
+| 10200011 | The get method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -430,7 +436,7 @@ console.info("result:", result); // result: 356
 get(key: K): V | undefined
 ```
 
-Returns a specified element in a Map object, or undefined if there is no corresponding element
+获取指定key所对应的value，若为空则返回undefined。
 
 **Since:** 23
 
@@ -446,13 +452,13 @@ Returns a specified element in a Map object, or undefined if there is no corresp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to look up in the map |
+| key | K | Yes | 指定key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | value if associated with key presents, undefined otherwise |
+| V | 如果存在与key关联的值则返回该值，否则返回undefined。 |
 
 ## getFirstKey
 
@@ -460,7 +466,7 @@ Returns a specified element in a Map object, or undefined if there is no corresp
 getFirstKey(): K
 ```
 
-Obtains the first sorted key in the treemap.Or returns undefined if tree map is empty
+获取容器中排序第一的key，若容器为空则返回undefined。
 
 **Since:** 8
 
@@ -476,16 +482,16 @@ Obtains the first sorted key in the treemap.Or returns undefined if tree map is 
 
 | Type | Description |
 | --- | --- |
-| K | value or undefined |
+| K | 返回排序第一的key，容器为空时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The getFirstKey method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -501,7 +507,7 @@ console.info("result:", result); // result: sparrow
 getHigherKey(key: K): K
 ```
 
-Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
+获取容器中大于对比key值的最小键，如果不存在大于对比key值的键，则返回undefined。
 
 **Since:** 8
 
@@ -517,21 +523,21 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to compare |
+| key | K | Yes | 对比的key值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| K | key or undefined |
+| K | 返回排序中大于对比key值的最小键，若不存在则返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherKey method cannot be bound. |
+| 10200011 | The getHigherKey method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<number, string>();
@@ -549,7 +555,7 @@ console.info("result:", result); // result: 4
 getHigherKey(key: K): K | undefined
 ```
 
-Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
+获取容器中大于对比key值的最小键，如果key不存在，则返回undefined。
 
 **Since:** 23
 
@@ -565,20 +571,20 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to compare |
+| key | K | Yes | 对比的key值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| K | key or undefined |
+| K | 返回值或undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherKey method cannot be bound. |
+| 10200011 | The getHigherKey method cannot be bound. |
+| 10200010 | Container is empty. |
 
 ## getLastKey
 
@@ -586,7 +592,7 @@ Returns the least element greater than or equal to the specified key if the key 
 getLastKey(): K
 ```
 
-Obtains the last sorted key in the treemap.Or returns undefined if tree map is empty
+获取容器中排序最后的key，若容器为空则返回undefined。
 
 **Since:** 8
 
@@ -602,16 +608,16 @@ Obtains the last sorted key in the treemap.Or returns undefined if tree map is e
 
 | Type | Description |
 | --- | --- |
-| K | value or undefined |
+| K | 返回排序最后的key，容器为空时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The getLastKey method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -627,7 +633,7 @@ console.info("result:", result); // result: squirrel
 getLowerKey(key: K): K
 ```
 
-Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
+获取容器中小于对比key值的最大键，如果不存在小于对比key值的键，则返回undefined。
 
 **Since:** 8
 
@@ -643,21 +649,21 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to compare |
+| key | K | Yes | 对比的key值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| K | key or undefined |
+| K | 返回排序中小于对比key值的最大键，若不存在则返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerKey method cannot be bound. |
+| 10200011 | The getLowerKey method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<number, string>();
@@ -675,7 +681,7 @@ console.info("result:", result); // result: 2
 getLowerKey(key: K): K | undefined
 ```
 
-Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
+获取容器中小于对比key值的最大键，如果key不存在，则返回undefined。
 
 **Since:** 23
 
@@ -691,20 +697,20 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to compare |
+| key | K | Yes | 对比的key值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| K | key or undefined |
+| K | 返回值或undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerKey method cannot be bound. |
+| 10200011 | The getLowerKey method cannot be bound. |
+| 10200010 | Container is empty. |
 
 ## hasKey
 
@@ -712,7 +718,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 hasKey(key: K): boolean
 ```
 
-Returns whether a key is contained in this map
+判断容器中是否包含指定key。
 
 **Since:** 8
 
@@ -728,21 +734,21 @@ Returns whether a key is contained in this map
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to check if it exists in the map |
+| key | K | Yes | 需要判断是否存在于容器中的键。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | the boolean type |
+| boolean | 包含指定key返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
+| 10200011 | The hasKey method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -757,7 +763,7 @@ console.info("result:", result);  // result: true
 hasValue(value: V): boolean
 ```
 
-Returns whether a value is contained in this map
+判断容器中是否包含指定value。
 
 **Since:** 8
 
@@ -773,21 +779,21 @@ Returns whether a value is contained in this map
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | V | Yes | The value to check if it exists in the map |
+| value | V | Yes | 需要判断是否存在于容器中的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | the boolean type |
+| boolean | 包含指定value返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
+| 10200011 | The hasValue method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -802,7 +808,7 @@ console.info("result:", result);  // result: true
 isEmpty(): boolean
 ```
 
-Returns whether the Map object contains elements
+判断容器是否为空。
 
 **Since:** 8
 
@@ -818,15 +824,15 @@ Returns whether the Map object contains elements
 
 | Type | Description |
 | --- | --- |
-| boolean | the boolean type |
+| boolean | 为空返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<number, number>();
@@ -840,7 +846,7 @@ console.info("result:", result);  // result: true
 keys(): IterableIterator<K>
 ```
 
-Returns a new Iterator object that contains the keys contained in this map
+返回包含此映射中所有键的新迭代器对象。
 
 **Since:** 8
 
@@ -856,15 +862,15 @@ Returns a new Iterator object that contains the keys contained in this map
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
+| 10200011 | The keys method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -885,7 +891,7 @@ for (let key of keys) {
 remove(key: K): V
 ```
 
-Remove a specified element from a Map object
+删除指定key对应的元素并返回其value值，若指定key不存在则返回undefined。
 
 **Since:** 8
 
@@ -901,21 +907,21 @@ Remove a specified element from a Map object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to remove from the map |
+| key | K | Yes | 指定需要删除元素对应的key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | Target mapped value |
+| V | 返回删除元素的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -931,7 +937,7 @@ console.info("result = " + result); // result = 356
 remove(key: K): V | undefined
 ```
 
-Remove a specified element from a Map object
+删除指定key对应的元素。
 
 **Since:** 23
 
@@ -947,13 +953,13 @@ Remove a specified element from a Map object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to remove from the map |
+| key | K | Yes | 指定key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | the value of the removed element, undefined otherwise |
+| V | 如果删除了元素则返回该元素的值，否则返回undefined。 |
 
 ## replace
 
@@ -961,7 +967,7 @@ Remove a specified element from a Map object
 replace(key: K, newValue: V): boolean
 ```
 
-Replace the old value by new value corresponding to the specified key
+对容器中指定key对应的键值对进行更新（替换）。
 
 **Since:** 8
 
@@ -977,22 +983,22 @@ Replace the old value by new value corresponding to the specified key
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to look up in the map |
-| newValue | V | Yes | The new value to set for the key |
+| key | K | Yes | 指定需要替换的key。 |
+| newValue | V | Yes | 替换的新值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | the boolean type(Is there a target pointed to by the key) |
+| boolean | 替换成功返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replace method cannot be bound. |
+| 10200011 | The replace method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1007,7 +1013,7 @@ console.info("sparrow:", treeMap.get("sparrow")); // sparrow: 357
 set(key: K, value: V): Object
 ```
 
-Adds or updates a(new) key-value pair with a key and value specified for the Map object
+向容器中添加一组键值对数据，若key已存在则更新对应value值，若key不存在则新增键值对。
 
 **Since:** 8
 
@@ -1023,22 +1029,22 @@ Adds or updates a(new) key-value pair with a key and value specified for the Map
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | The key to add or update |
-| value | V | Yes | The value to add or update |
+| key | K | Yes | 添加成员数据的键名。 |
+| value | V | Yes | 添加成员数据的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | the map object after set |
+| Object | 返回添加后的TreeMap。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
+| 10200011 | The set method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1052,7 +1058,7 @@ console.info("squirrel:", treeMap.get("squirrel")); // squirrel: 123
 setAll(map: TreeMap<K, V>): void
 ```
 
-Adds all element groups in one map to another map
+将一个TreeMap中的所有元素添加到另一个TreeMap中。
 
 **Since:** 8
 
@@ -1068,15 +1074,15 @@ Adds all element groups in one map to another map
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;K, V&gt; | Yes | map map the Map object to add members |
+| map | [TreeMap](arkts-arkts-util-treemap-treemap-c.md)&lt;K, V&gt; | Yes | 将参数map中的所有元素添加到调用setAll方法的TreeMap对象中。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
+| 10200011 | The setAll method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1100,7 +1106,7 @@ map.forEach((value ?: number, key ?: string) : void => {
 values(): IterableIterator<V>
 ```
 
-Returns a new Iterator object that contains the values contained in this map
+返回包含此映射中键值的新迭代器对象。
 
 **Since:** 8
 
@@ -1116,15 +1122,15 @@ Returns a new Iterator object that contains the values contained in this map
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;V&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| 10200011 | The values method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1144,7 +1150,7 @@ for (let value of values) {
 length: number
 ```
 
-Gets the element number of the TreeMap.
+TreeMap的元素个数。
 
 **Type:** number
 

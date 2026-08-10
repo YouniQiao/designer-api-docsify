@@ -12,6 +12,12 @@ Obtains LTE cell information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## bandwidth
 
 ```TypeScript
@@ -20,7 +26,7 @@ bandwidth: int
 
 Indicates the bandwidth.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -40,7 +46,7 @@ cgi: long
 
 Indicates the cell global identification.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ earfcn: int
 
 Indicates the E-UTRA Absolute Radio Frequency Channel Number.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -78,7 +84,7 @@ Indicates the E-UTRA Absolute Radio Frequency Channel Number.
 isSupportEndc: boolean
 ```
 
-Support for New Radio\_Dual Connectivity.
+Support for New Radio_Dual Connectivity.
 
 **Type:** boolean
 
@@ -140,7 +146,7 @@ pci: int
 
 Indicates the physical cell identification.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -160,7 +166,7 @@ tac: int
 
 Indicates the tracking area code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

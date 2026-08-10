@@ -10,6 +10,12 @@ Configuring parameters in geocode requests.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## country
 
 ```TypeScript
@@ -72,7 +78,7 @@ maxItems?: int
 
 Indicates the maximum number of geocode query results.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -90,7 +96,7 @@ maxLatitude?: double
 
 Indicates the maximum latitude for geocoding query results.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -108,7 +114,7 @@ maxLongitude?: double
 
 Indicates the maximum longitude for geocoding query results.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -126,7 +132,7 @@ minLatitude?: double
 
 Indicates the minimum latitude for geocoding query results.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -144,7 +150,7 @@ minLongitude?: double
 
 Indicates the minimum longitude for geocoding query results.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 

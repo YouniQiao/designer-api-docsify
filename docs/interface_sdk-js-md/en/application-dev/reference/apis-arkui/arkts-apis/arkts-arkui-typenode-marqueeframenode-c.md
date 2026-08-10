@@ -1,6 +1,6 @@
 # MarqueeFrameNode
 
-Define the Marquee type of FrameNode.
+定义Marquee类型的FrameNode。
 
 **Inheritance/Implementation:** MarqueeFrameNode extends [TypedFrameNode<MarqueeAttribute>](TypedFrameNode<MarqueeAttribute>)
 
@@ -18,7 +18,7 @@ Define the Marquee type of FrameNode.
 abstract initialize(value: MarqueeOptions): MarqueeAttribute
 ```
 
-Initialize Marquee FrameNode.
+初始化Marquee类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Marquee FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [MarqueeOptions](../arkts-components/arkts-arkui-marqueeoptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) |  |
 

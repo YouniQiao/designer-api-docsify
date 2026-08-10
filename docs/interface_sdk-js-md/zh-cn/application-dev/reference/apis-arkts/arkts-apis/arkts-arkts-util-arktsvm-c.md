@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## enableLocalHandleDetection
 
 ```TypeScript
@@ -28,7 +34,7 @@ static enableLocalHandleDetection(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 // napi_init.cpp C++侧示例代码
@@ -127,7 +133,7 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 | --- | --- |
 | Promise&lt;HeapMemoryInfo[]&gt; | 返回一个 promise，包含 ArkTS-VM 的 local 堆和共享堆中的所有堆内存信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -162,7 +168,7 @@ static offVMHeapMemoryPressure(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -194,8 +200,8 @@ NOTE:无法保证在 OOM（内存溢出）前一定会触发该回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 在 GC 后内存达到阈值时触发的回调。字符串参数表示内存压力事件的类型： "LocalHeapMemPressure"、"SharedHeapMemPressure" 或 "ProcessHeapMemPressure"。 |
-| heapMemoryThreshold | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示 GC 后触发回调的堆内存百分比阈值。取值范围为 [70, 95]。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 在 GC 后内存达到阈值时触发的回调。字符串参数表示内存压力事件的类型： "LocalHeapMemPressure"、"SharedHeapMemPressure" 或 "ProcessHeapMemPressure"。 |
+| heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | 是 | 表示 GC 后触发回调的堆内存百分比阈值。取值范围为 [70, 95]。 |
 
 **返回值：**
 
@@ -203,7 +209,7 @@ NOTE:无法保证在 OOM（内存溢出）前一定会触发该回调。
 | --- | --- |
 | boolean | 注册成功返回 { |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -245,9 +251,9 @@ static setMultithreadingDetectionEnabled(enabled: boolean, options?: Multithread
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 控制是否开启多线程检测。**true** 表示开启检测，**false** 表示关闭检测。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 可选的配置项。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 26.0.0 |
+| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 否 | 可选的配置项。<br>**起始版本：** 26.0.0 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -276,7 +282,7 @@ util.ArkTSVM.setMultithreadingDetectionEnabled(true, {
 static setTrackGlobalRef(enable: boolean): void
 ```
 
-开启或关闭 napi\_ref 与全局 handle 之间关联关系的追踪。开启后，堆快照将包含 native 引用地址信息。关闭后（enable 为false），将停止追踪，堆快照中不再显示 native 引用与全局 handle 之间的关联关系。
+开启或关闭 napi_ref 与全局 handle 之间关联关系的追踪。开启后，堆快照将包含 native 引用地址信息。关闭后（enable 为false），将停止追踪，堆快照中不再显示 native 引用与全局 handle 之间的关联关系。
 
 **起始版本：** 26.0.0
 
@@ -294,7 +300,7 @@ static setTrackGlobalRef(enable: boolean): void
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 布尔标志位，指示是开启还是关闭追踪。**true** 表示开启追踪，**false** 表示关闭追踪。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // napi_init.cpp C++侧示例代码

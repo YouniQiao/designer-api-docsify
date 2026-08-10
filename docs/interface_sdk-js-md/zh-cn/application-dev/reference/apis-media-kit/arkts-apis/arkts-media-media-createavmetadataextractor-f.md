@@ -1,5 +1,11 @@
 # createAVMetadataExtractor
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createAVMetadataExtractor
 
 ```TypeScript
@@ -26,9 +32,9 @@ function createAVMetadataExtractor(): Promise<AVMetadataExtractor>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by promise. |
+| 5400101 | No memory. Returned by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,7 +79,7 @@ Creates an **AVMetadataExtractor** instance. This API uses a promise to return t
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by promise. |
+| 5400101 | No memory. Returned by promise. |
 
 
 ## createAVMetadataExtractor
@@ -96,15 +102,15 @@ function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVMetadataExtractor&gt; | 是 | 回调函数。当创建AVMetadataExtractor实例成功，err为undefined，data为获取到的 AVMetadataExtractor实例，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadataExtractor&gt; | 是 | 回调函数。当创建AVMetadataExtractor实例成功，err为undefined，data为获取到的 AVMetadataExtractor实例，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by callback. |
+| 5400101 | No memory. Returned by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -141,11 +147,11 @@ Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVMetadataExtractor \| undefined&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadataExtractor \| undefined&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by callback. |
+| 5400101 | No memory. Returned by callback. |
 

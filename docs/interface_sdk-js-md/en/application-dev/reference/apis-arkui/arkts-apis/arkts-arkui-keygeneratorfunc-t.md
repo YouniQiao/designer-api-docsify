@@ -4,7 +4,7 @@
 type KeyGeneratorFunc<T> = (item: T, index: int) => string
 ```
 
-Defines key generator function.
+键值生成函数类型。
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ Defines key generator function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | data item.  |
-| index | int | Yes | data index in array.  |
+| item | T | Yes | `arr`数组中的数据项。 |
+| index | int | Yes | `arr`数组中的数据项索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | key value.  |
+| string | key value. |
 

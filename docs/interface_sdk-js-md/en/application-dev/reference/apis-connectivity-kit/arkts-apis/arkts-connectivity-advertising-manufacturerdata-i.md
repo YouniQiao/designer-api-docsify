@@ -1,6 +1,6 @@
 # ManufacturerData
 
-Describes the manufacturer data.
+描述制造商数据。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the manufacturer data.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## manufacturerData
 
 ```TypeScript
 manufacturerData: ArrayBuffer
 ```
 
-Indicates the manufacturer data.
+制造商数据。
 
 **Type:** ArrayBuffer
 
@@ -36,9 +42,9 @@ Indicates the manufacturer data.
 manufacturerId: int
 ```
 
-Indicates the manufacturer ID.
+厂商ID。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

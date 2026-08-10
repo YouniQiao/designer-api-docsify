@@ -1,6 +1,6 @@
 # UserAuthResult (System API)
 
-User authorization result.
+用户授权结果。
 
 **Since:** 26.0.0
 
@@ -18,9 +18,9 @@ User authorization result.
 permissionInfo: PermissionInfo[]
 ```
 
-Permission information list.
+权限信息列表。
 
-**Type:** PermissionInfo[]
+**Type:** [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md)[]
 
 **Since:** 26.0.0
 
@@ -38,9 +38,9 @@ Permission information list.
 permissionQuery: PermissionQuery
 ```
 
-Permission query information.
+权限查询信息。
 
-**Type:** PermissionQuery
+**Type:** [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)
 
 **Since:** 26.0.0
 

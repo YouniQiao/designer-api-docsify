@@ -1,6 +1,6 @@
 # USBPortStatus (System API)
 
-Enumerates USB port roles.
+USB设备端口角色信息。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Enumerates USB port roles.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## currentDataRole
 
 ```TypeScript
 currentDataRole: int
 ```
 
-Current data role.
+当前设备数据传输模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Current data role.
 currentMode: int
 ```
 
-Current USB mode.
+当前的USB模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Current USB mode.
 currentPowerRole: int
 ```
 
-Current power role.
+当前设备充电模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

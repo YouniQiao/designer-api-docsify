@@ -1,6 +1,6 @@
 # WearDetectionResponse
 
-佩戴检测传感器数据，继承于[Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+佩戴检测传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **继承/实现关系：** WearDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## value
 
 ```TypeScript
@@ -20,7 +26,7 @@ value: double
 
 设备佩戴状态。取值范围：0（未佩戴）或1（已佩戴）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 

@@ -4,9 +4,8 @@
 type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' | 'completed' | 'stopped' | 'released' | 'error'
 ```
 
-Describes the state of the [AVPlayer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. Your application can proactively obtain the AVPlayer state through the **state** property or obtain the reported AVPlayer state by subscribing to the  
-[stateChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_event. For details about the rules for state transition, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[AVPlayer](arkts-media-media-n.md)的状态机，可通过state属性主动获取当前状态，也可通过监听  
+[stateChange](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))事件上报当前状态，状态机之间的切换规则，可参考[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)。
 
 **Since:** 9
 
@@ -21,10 +20,10 @@ Describes the state of the [AVPlayer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. Your
 | Type | Description |
 | --- | --- |
 | 'idle' | The AVPlayer enters this state after [createAVPlayer()]{ |
-| 'initialized' | The AVPlayer enters this state after **url\_\_\_HTML\_TAG\_USD\_0\_\_\_9+\_\_\_HTML\_TAG\_USD\_1\_\_\_** or **fdSrc\_\_\_HTML\_TAG\_USD\_2\_\_\_9+\_\_\_HTML\_TAG\_USD\_3\_\_\_** property is set in the idle state. In this case, you can configure static properties such as the window and audio. |
+| 'initialized' | 资源初始化，在idle 状态设置 url<sup>9+</sup> 或 fdSrc<sup>9+</sup>属性，AVPlayer会进入initialized状态，此时 可以配置窗口、音频等静态属性。 |
 | 'prepared' | The AVPlayer enters this state when [prepare()]{ |
 | 'playing' | The AVPlayer enters this state when [play()]{ |
-| 'paused' | The AVPlayer enters this state when **pause()** is called in the playing state. |
+| 'paused' | 暂停状态，在playing状态调用pause方法，AVPlayer会进入paused状态。 |
 | 'completed' | The AVPlayer enters this state when a media asset finishes playing and loop playback is not set (no **loop = true**). In this case, if [play()]{ |
 | 'stopped' | The AVPlayer enters this state when [stop()]{ |
 | 'released' | The AVPlayer enters this state when [release()]{ |

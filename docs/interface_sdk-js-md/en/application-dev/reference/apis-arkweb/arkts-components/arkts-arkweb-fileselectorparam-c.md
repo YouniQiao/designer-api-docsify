@@ -1,6 +1,6 @@
 # FileSelectorParam
 
-Encompassed message information as parameters to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+封装消息信息，作为 {@link onFileSelectorShow} 方法的入参。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Encompassed message information as parameters to \_\_\_JSDOC\_LINK\_DESC\_USD\_0
 constructor()
 ```
 
-Constructor.
+FileSelectorParam的构造函数。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Constructor.
 getAcceptType(): Array<string>
 ```
 
-Gets an array of acceptable MIME type.
+获取可接受的MIME类型数组。
 
 **Since:** 9
 
@@ -58,7 +58,7 @@ Gets an array of acceptable MIME type.
 getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 ```
 
-Gets an array of selected types for web page files.
+获取网页文件的已选类型数组。
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ Gets an array of selected types for web page files.
 getDefaultPath(): string
 ```
 
-Get the default path opened when pulling up the selector.
+获取拉起选择器时默认打开的路径。
 
 **Since:** 23
 
@@ -102,7 +102,7 @@ Get the default path opened when pulling up the selector.
 getDescriptions(): Array<string>
 ```
 
-Gets a description array of file types.
+获取文件类型的描述信息数组。
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ Gets a description array of file types.
 getMimeTypes(): Array<string>
 ```
 
-Gets an array of raw acceptable MIME type.
+获取原始可接受 MIME 类型数组。
 
 **Since:** 18
 
@@ -146,7 +146,7 @@ Gets an array of raw acceptable MIME type.
 getMode(): FileSelectorMode
 ```
 
-Gets the FileSelectorMode of this file selector.
+获取当前文件选择器的选择模式。
 
 **Since:** 9
 
@@ -162,7 +162,7 @@ Gets the FileSelectorMode of this file selector.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the FileSelectorMode of this file selector. |
+| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) | Return the FileSelectorMode of this file selector. |
 
 ## getSuggestedName
 
@@ -170,7 +170,7 @@ Gets the FileSelectorMode of this file selector.
 getSuggestedName(): string
 ```
 
-Gets suggested file names.
+获取推荐文件名列表。
 
 **Since:** 23
 
@@ -192,7 +192,7 @@ Gets suggested file names.
 getTitle(): string
 ```
 
-Gets the title of this file selector.
+获取此文件选择器的标题。
 
 **Since:** 9
 
@@ -216,7 +216,7 @@ Gets the title of this file selector.
 isAcceptAllOptionExcluded(): boolean
 ```
 
-Gets whether to filter fully matching file types.
+获取是否过滤完全匹配的文件类型。
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ Gets whether to filter fully matching file types.
 isCapture(): boolean
 ```
 
-Gets whether this file selector use a live media captured value.
+获取此文件选择器是否使用实时媒体拍摄所得内容。
 
 **Since:** 9
 

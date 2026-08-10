@@ -1,6 +1,6 @@
 # OnShowFileSelectorEvent
 
-Represents the callback invoked to notify the file selector result.
+定义文件选择器结果。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents the callback invoked to notify the file selector result.
 fileSelector: FileSelectorParam
 ```
 
-Information about the file selector.
+文件选择器的相关信息。
 
-**Type:** FileSelectorParam
+**Type:** [FileSelectorParam](arkts-arkweb-fileselectorparam-c.md)
 
 **Since:** 12
 
@@ -36,9 +36,9 @@ Information about the file selector.
 result: FileSelectorResult
 ```
 
-File selection result to be sent to the **Web** component.
+用于通知Web组件文件选择的结果。
 
-**Type:** FileSelectorResult
+**Type:** [FileSelectorResult](../arkts-apis/arkts-arkweb-web-fileselectorresult-c.md)
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # DistributedAccountStatus
 
-Enumerates the statuses of a distributed account.
+表示分布式账号状态枚举。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the statuses of a distributed account.
 NOT_LOGGED_IN = 0
 ```
 
-The account has not logged in.
+未登录状态。
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ The account has not logged in.
 LOGGED_IN = 1
 ```
 
-The account has logged in.
+已登录状态。
 
 **Since:** 10
 

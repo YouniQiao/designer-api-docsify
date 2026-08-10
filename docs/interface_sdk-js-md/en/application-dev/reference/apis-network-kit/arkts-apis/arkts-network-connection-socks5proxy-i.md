@@ -10,6 +10,12 @@ Socks5 Proxy Configuration Information.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## dnsStrategy
 
 ```TypeScript
@@ -18,7 +24,7 @@ dnsStrategy?: Socks5DnsStrategy
 
 DNS resolution strategy.Determines whether the client or the proxy server resolves the domain name.
 
-**Type:** Socks5DnsStrategy
+**Type:** [Socks5DnsStrategy](arkts-network-connection-socks5dnsstrategy-e.md)
 
 **Since:** 26.0.0
 
@@ -98,7 +104,7 @@ port: int
 
 Host port.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

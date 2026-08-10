@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## onComplete
 
 ArkTS-Dyn:
@@ -24,8 +30,7 @@ ArkTS-Sta:
 onComplete: (reason: int, total: int) => void
 ```
 
-查询结果统计的回调方法(reason: int, total: int) =  
-    void。
+查询结果统计的回调方法(reason: int, total: int) => void。
 
 **起始版本：** 9
 
@@ -41,8 +46,8 @@ onComplete: (reason: int, total: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reason | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 |  |
-| total | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 |  |
+| reason | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
+| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
 
 ## onQuery
 
@@ -50,8 +55,7 @@ onComplete: (reason: int, total: int) => void
 onQuery: (infos: SysEventInfo[]) => void
 ```
 
-返回查询到的系统事件的回调方法(infos: [SysEventInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_[]) =  
-    void。
+返回查询到的系统事件的回调方法(infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) => void。
 
 **起始版本：** 9
 
@@ -67,5 +71,5 @@ onQuery: (infos: SysEventInfo[]) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| infos | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 是 |  |
+| infos | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[] | 是 |  |
 

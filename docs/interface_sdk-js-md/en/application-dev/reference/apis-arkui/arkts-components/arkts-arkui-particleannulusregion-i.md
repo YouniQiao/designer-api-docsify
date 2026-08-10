@@ -1,18 +1,16 @@
 # ParticleAnnulusRegion
 
-Configures the annular emitter area.
-    **NOTE**  
-    
-    - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as  
-    0.  
-    
-    - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius  
-    and the larger value is used as the new outer radius.  
-    
-    - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and  
-    the larger value is used as the new end angle.  
-    
-    ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
+用于设置环形发射器区域的配置信息。
+
+> **说明：**
+> 
+> - outerRadius、innerRadius小于零或使用百分比单位时，会按零进行处理。
+> 
+> - 当outerRadius小于innerRadius时（即外圆半径小于内圆半径时），会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。
+> 
+> - 当endAngle小于startAngle时（即结束角度小于起始角度时），会将当前较小的值作为新的起始角度，将较大的值作为新的结束角度。
+> 
+> ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
 
 **Since:** 20
 
@@ -30,7 +28,7 @@ center?: PositionT<LengthMetrics>
 
 The coordinates of the center of the annulus
 
-**Type:** PositionT&lt;LengthMetrics&gt;
+**Type:** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;[LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **Default:** {x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}
 
@@ -78,7 +76,7 @@ innerRadius: LengthMetrics
 
 The inner radius of the annulus
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 20
 
@@ -100,7 +98,7 @@ outerRadius: LengthMetrics
 
 The outer radius of the annulus
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 20
 

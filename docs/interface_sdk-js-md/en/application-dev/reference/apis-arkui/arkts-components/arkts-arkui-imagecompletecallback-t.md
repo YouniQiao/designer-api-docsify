@@ -4,7 +4,7 @@
 type ImageCompleteCallback = (result: ImageLoadResult) => void
 ```
 
-Defines the callback triggered when the image is successfully loaded or decoded.
+图片加载成功和解码成功时均触发的回调。
 
 **Since:** 12
 
@@ -22,5 +22,5 @@ Defines the callback triggered when the image is successfully loaded or decoded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Object returned after the callback is triggered when an image is successfully loaded or decoded.  |
+| result | [ImageLoadResult](../arkts-apis/arkts-arkui-imagespan-imageloadresult-i.md) | Yes | 图片数据加载成功和解码成功触发回调时返回的对象。 |
 

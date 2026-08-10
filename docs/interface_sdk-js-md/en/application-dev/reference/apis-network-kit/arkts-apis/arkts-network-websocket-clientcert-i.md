@@ -1,6 +1,6 @@
 # ClientCert
 
-The clientCert field of the client certificate, which includes three attributes:client certificate (certPath) and only support PEM format, certificate private key (keyPath),and passphrase (keyPassword).
+The clientCert field of the client certificate, which includes three attributes:client certificate (certPath) and only support PEM format, certificate private key (keyPath), and passphrase (keyPassword).
 
 **Since:** 12
 
@@ -9,6 +9,12 @@ The clientCert field of the client certificate, which includes three attributes:
 <!--Device-webSocket-export interface ClientCert--><!--Device-webSocket-export interface ClientCert-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
+
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
 
 ## certPath
 

@@ -1,6 +1,6 @@
 # GestureGroupHandler
 
-Defines a gesture group handler object.
+手势组处理器对象类型。
 
 **Inheritance/Implementation:** GestureGroupHandler extends [GestureHandler<GestureGroupHandler>](GestureHandler<GestureGroupHandler>)
 
@@ -18,7 +18,7 @@ Defines a gesture group handler object.
 constructor(options?: GestureGroupGestureHandlerOptions)
 ```
 
-Constructor used to create a gesture group handler instance.
+手势组处理器的构造函数。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Constructor used to create a gesture group handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the gesture group handler. |
+| options | [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | No | 手势组处理器配置参数。 |
 
 ## onCancel
 
@@ -44,8 +44,7 @@ Constructor used to create a gesture group handler instance.
 onCancel(event: Callback<void>): GestureGroupHandler
 ```
 
-Sets the cancellation callback for the gesture group handler. The callback is triggered when a sequence gesture (  
-[GestureMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.Sequence) is cancelled.
+设置手势组处理器取消回调。顺序组合手势（[GestureMode](arkts-arkui-gesturemode-e.md).Sequence）取消后触发回调。
 
 **Since:** 12
 
@@ -63,11 +62,11 @@ Sets the cancellation callback for the gesture group handler. The callback is tr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the gesture group is cancelled. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | 手势组处理器取消回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current gesture group handler object. |
+| [GestureGroupHandler](arkts-arkui-gesturegrouphandler-c.md) | 返回当前手势组处理器对象。 |
 

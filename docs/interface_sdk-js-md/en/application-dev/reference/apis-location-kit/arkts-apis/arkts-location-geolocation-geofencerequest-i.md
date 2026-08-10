@@ -16,13 +16,19 @@ Configuring parameters in geo fence requests
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## geofence
 
 ```TypeScript
 geofence: Geofence
 ```
 
-**Type:** Geofence
+**Type:** [Geofence](arkts-location-geolocation-geofence-i.md)
 
 **Since:** 8
 
@@ -42,7 +48,7 @@ geofence: Geofence
 priority: LocationRequestPriority
 ```
 
-**Type:** LocationRequestPriority
+**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
 
 **Since:** 8
 
@@ -62,7 +68,7 @@ priority: LocationRequestPriority
 scenario: LocationRequestScenario
 ```
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **Since:** 8
 

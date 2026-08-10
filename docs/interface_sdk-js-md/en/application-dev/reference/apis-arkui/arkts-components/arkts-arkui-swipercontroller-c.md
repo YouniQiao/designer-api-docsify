@@ -1,6 +1,6 @@
 # SwiperController
 
-Implements the controller for the **Swiper** component. Bind this object to a **Swiper** component to control page turning and other functionalities.
+Swiper容器组件的控制器，可以将此对象绑定至Swiper组件，实现控制Swiper翻页等功能。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Implements the controller for the **Swiper** component. Bind this object to a **
 changeIndex(index: number, useAnimation?: boolean)
 ```
 
-Goes to a specified page.
+翻至指定页面。
 
 **Since:** 12
 
@@ -36,8 +36,8 @@ Goes to a specified page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target page in the **Swiper** component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
-| useAnimation | boolean | No | Whether to use an animation for when the target page is reached. The value **true** means to use an animation, and **false** means the opposite.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false |
+| index | number | Yes | 指定页面在Swiper中的索引值。&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0或大于最大页面索引时，取0。 |
+| useAnimation | boolean | No | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;默认值：false。 |
 
 ## changeIndex
 
@@ -45,12 +45,12 @@ Goes to a specified page.
 changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 ```
 
-Moves to a specific page.
-    **NOTE**  
-    
-    This API itself supports jumping without animation (set **animationMode** to **false** or  
-    **SwiperAnimationMode.NO\_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it  
-    with **finishAnimation** to achieve animation-free jumping.
+翻页至指定页面。翻页带动效切换过程，时长通过Swiper的[duration](#duration)属性设置。
+
+> **说明：**
+
+> 该接口本身提供了不带动画跳转页面的能力（animationMode设置为false或者SwiperAnimationMode.NO_ANIMATION），不建议使用changeIndex接口启动动画后，直接使用
+> finishAnimation接口打断来实现页面不带动画跳转。
 
 **Since:** 15
 
@@ -70,8 +70,8 @@ Moves to a specific page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target page in the **Swiper** component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
-| animationMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| boolean | No | Animation mode for moving to the specified page.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **SwiperAnimationMode.NO\_\_\_ESCAPED\_UNDERSCORE\_\_\_ANIMATION**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **true** is equivalent to **SwiperAnimationMode.DEFAULT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ANIMATION**, which means to use the default animation. The value **false** is equivalent to **SwiperAnimationMode.NO\_\_\_ESCAPED\_UNDERSCORE\_\_\_ANIMATION**, which means to use no animation. |
+| index | number | Yes | 指定页面在Swiper中的索引值。&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0或大于最大页面索引时，取0。 |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | No | 设置翻页到指定页面的动效模式。&lt;br/&gt;默认值： SwiperAnimationMode.NO_ANIMATION&lt;br/&gt; **说明：** &lt;br/&gt;当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入 false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。 |
 
 ## constructor
 
@@ -79,7 +79,7 @@ Moves to a specific page.
 constructor()
 ```
 
-A constructor used to create a **SwiperController** object.
+SwiperController的构造函数。
 
 **Since:** 7
 
@@ -99,23 +99,19 @@ A constructor used to create a **SwiperController** object.
 fakeDragBy(offset: number): boolean
 ```
 
-Sets the drag distance of drag simulation.
-    **NOTE**  
-    
-    - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout,  
-    so that the drag effect can be displayed after the current frame layout. If this API is called multiple times  
-    before the layout, only the drag distance passed in the last call takes effect during the current frame layout.  
-    
-    - In the loop scenario where [loop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **true**, if the drag distance of drag  
-    simulation is greater than the total layout length, the drag distance will be adjusted to the distance required  
-    to drag just far enough to display the first child node (when dragging toward the start of the layout) or the  
-    last child node (when dragging toward the end of the layout).  
-    
-    - The [onGestureSwipe]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and  
-    [onContentWillScroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ events are not triggered during the drag. The  
-    [customContentTransition]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ event is triggered before the layout.  
-    Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the  
-    returned node display information may be inconsistent with the layout result when the event is triggered.
+设置模拟拖拽的拖拽距离。
+
+> **说明：**
+
+> - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
+> 
+> - 在[loop](SwiperAttribute#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
+> 节点（向布局终点方向拖拽）的距离。
+> 
+> - [onGestureSwipe](SwiperAttribute#onGestureSwipe)事件、
+> [onContentWillScroll](SwiperAttribute#onContentWillScroll)事件在拖拽过程中不触发。
+> [customContentTransition](SwiperAttribute#customContentTransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
+> 件时的返回的节点显示信息可能与布局结果不一致。
 
 **Since:** 23
 
@@ -135,13 +131,13 @@ Sets the drag distance of drag simulation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | The drag distance to simulate the drag. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ A positive number indicates that the layout is dragged to the start point. A negative number indicates dragging towards the end point of the layout. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp. - Drag distance of drag simulation.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A positive number indicates dragging towards the start point of the layout, and a negative number indicates dragging towards the end point of the layout. |
+| offset | number | Yes | 需要模拟拖拽的拖拽距离。&lt;br/&gt;正数表示向布局起点拖拽；负数表示向布局终点方向拖拽。 &lt;br&gt;单位为：vp。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to consume the passed drag distance. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** means to consume any passed drag distance; **false** means not to consume the passed drag distance because it is not in the drag simulation or has been dragged to the boundary. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the drag distance is set to **0**, it cannot be consumed. |
+| boolean | 是否消费传入的拖拽距离。&lt;br/&gt;true表示消费任意传入的拖拽距离；false表示当前没有在模拟拖拽中，或者已经拖拽到边界，没有消费传入的拖拽距离。&lt;br/&gt;设置0为不可消费的拖拽距离。 |
 
 ## finishAnimation
 
@@ -149,7 +145,7 @@ Sets the drag distance of drag simulation.
 finishAnimation(callback?: VoidCallback)
 ```
 
-Stops an animation.
+停止播放动画。
 
 **Since:** 7
 
@@ -167,7 +163,7 @@ Stops an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback invoked when the animation stops.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| callback | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | No | 动画结束的回调。<br>**Since:** 18 |
 
 ## isFakeDragging
 
@@ -175,7 +171,7 @@ Stops an animation.
 isFakeDragging(): boolean
 ```
 
-Obtains whether drag simulation is enabled.
+获取是否在模拟拖拽中的状态。
 
 **Since:** 23
 
@@ -195,7 +191,7 @@ Obtains whether drag simulation is enabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the drag simulation is enabled. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** indicates that drag simulation is enabled; **false** indicates the opposite. |
+| boolean | 是否处在模拟拖拽状态。&lt;br/&gt;true表示当前处在模拟拖拽状态；false表示当前不处在模拟拖拽状态。 |
 
 ## preloadItems
 
@@ -203,16 +199,16 @@ Obtains whether drag simulation is enabled.
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-Preloads child nodes for **Swiper**. After this API is called, all specified child nodes will be loaded at once.Therefore, for performance considerations, it is recommended that you load child nodes in batches. This API uses a promise to return the result.
+控制Swiper预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。使用Promise异步回调。
 
-If the **SwiperController** object is not bound to any **Swiper** component, any attempt to call APIs on it will result in a JavaScript exception, together with the error code 100004. Therefore, you are advised to use  
-**try-catch** to handle potential exceptions when calling APIs on **SwiperController**.
+如果SwiperController对象未绑定任何Swiper组件，直接调用该接口，会抛出JS异常，并返回错误码100004。因此使用该接口时，建议通过try-catch捕获异常。
 
-When combining with \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ and custom components, be aware that \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ only retains custom components within the cache range. Components outside this range are removed. Therefore, make sure the indexes of nodes to be preloaded via this API are within the cache range to avoid issues.
-    **NOTE**  
-    
-    **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the  
-    first preloading in the [onAppear]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ lifecycle of **Swiper**.
+与[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和自定义组件结合使用时，由于  
+[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)只会保留缓存范围内的自定义组件，在缓存范围外的会被删除，因此需要开发者保证通过该接口预加载的节点index在缓存范围内。
+
+> **说明：**
+
+> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的[onAppear](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onappear)生命周期中去控制。
 
 **Since:** 18
 
@@ -232,20 +228,20 @@ When combining with \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ and custom components, be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indices | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload. |
+| indices | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes | 需预加载的子节点的下标数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. The parameter type is not Array\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. The parameter is an empty array. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. The parameter contains an invalid index. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to component. |
+| 401 | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| 100004 | Controller not bound to component. |
 
 ## showNext
 
@@ -253,8 +249,7 @@ When combining with \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ and custom components, be
 showNext()
 ```
 
-Turns to the next page. The page turning includes a transition animation, with the duration set by the  
-[duration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ attribute of the **Swiper** component.
+翻至下一页。翻页带动效切换过程，时长通过Swiper的[duration](SwiperAttribute#duration)属性设置。
 
 **Since:** 7
 
@@ -274,8 +269,7 @@ Turns to the next page. The page turning includes a transition animation, with t
 showPrevious()
 ```
 
-Turns to the previous page. The page turning includes a transition animation, with the duration set by the  
-[duration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ attribute of the **Swiper** component.
+翻至上一页。翻页带动效切换过程，时长通过Swiper的[duration](SwiperAttribute#duration)属性设置。
 
 **Since:** 7
 
@@ -295,13 +289,13 @@ Turns to the previous page. The page turning includes a transition animation, wi
 startFakeDrag(): boolean
 ```
 
-Enables drag simulation.
-    **NOTE**  
-    
-    - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns  
-    **false**, indicating that the operation fails.  
-    
-    - Simulated drag cannot trigger nested scrolling.
+开启模拟拖拽功能。
+
+> **说明：**
+
+> - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。
+> 
+> - 模拟拖拽无法触发嵌套滚动。
 
 **Since:** 23
 
@@ -321,7 +315,7 @@ Enables drag simulation.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to enable drag simulation. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** if enabled; **false** the opposite |
+| boolean | 是否开启模拟拖拽功能。&lt;br/&gt;true表示开启模拟拖拽功能成功；false表示开启模拟拖拽功能失败。 |
 
 ## stopFakeDrag
 
@@ -329,10 +323,11 @@ Enables drag simulation.
 stopFakeDrag(): boolean
 ```
 
-Disables drag simulation.
-    **NOTE**  
-    
-    After drag simulation is enabled, it will end if a real drag gesture is received.
+关闭模拟拖拽功能。
+
+> **说明：**
+
+> 在开启模拟拖拽后，如果接收到真实拖拽手势，模拟拖拽会结束。
 
 **Since:** 23
 
@@ -352,5 +347,5 @@ Disables drag simulation.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether drag simulation is disabled. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** indicates that drag simulation is disabled successfully; **false** indicates the opposite. |
+| boolean | 是否关闭模拟拖拽功能。&lt;br/&gt;true表示关闭模拟拖拽功能成功；false表示关闭模拟拖拽功能失败。 |
 

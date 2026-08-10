@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## destLength
 
 ```TypeScript
@@ -18,7 +24,7 @@ destLength: long
 
 目标缓冲区的总长度。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ sourceLength: long
 
 源缓冲区的长度。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -56,9 +62,9 @@ sourceLength: long
 status: ReturnStatus
 ```
 
-参考[ReturnStatus枚举定义]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md)。
 
-**类型：** ReturnStatus
+**类型：** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **起始版本：** 12
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { appControl } from 'kits/@kit.AbilityKit';
+```
+
 ## componentType
 
 ```TypeScript
@@ -20,7 +26,7 @@ componentType: ComponentType
 
 拦截时将提升的能力的类型。
 
-**类型：** ComponentType
+**类型：** [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md)
 
 **起始版本：** 11
 
@@ -40,7 +46,7 @@ controlType: ControlType
 
 拦截指定应用程序的不同策略。
 
-**类型：** ControlType
+**类型：** [ControlType](arkts-ability-appcontrol-controltype-e-sys.md)
 
 **起始版本：** 11
 
@@ -60,7 +66,7 @@ disposedType: DisposedType
 
 对应用的拦截规则。
 
-**类型：** DisposedType
+**类型：** [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md)
 
 **起始版本：** 11
 
@@ -80,7 +86,7 @@ elementList: Array<ElementName>
 
 拦截指定应用程序能力的列表。
 
-**类型：** Array&lt;ElementName&gt;
+**类型：** Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt;
 
 **起始版本：** 11
 
@@ -100,7 +106,7 @@ priority: int
 
 拦截规则的优先级，用于规则列表查询结果排序。取值为整数，数值越小，优先级越高，排序越靠前。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -120,7 +126,7 @@ want: Want
 
 指定应用被拦截时，跳转到的页面。
 
-**类型：** Want
+**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 11
 

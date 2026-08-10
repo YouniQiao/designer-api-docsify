@@ -1,6 +1,6 @@
 # MaxLinesOptions
 
-Configures the display effect of the **TextArea** component when the text exceeds the maximum number of lines.
+配置TextArea组件，文本超长时的显示效果。
 
 **Since:** 20
 
@@ -16,10 +16,10 @@ Configures the display effect of the **TextArea** component when the text exceed
 overflowMode?: MaxLinesMode
 ```
 
-overflowMode** can be used to set the non-inline mode for the [TextArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ component. When the text exceeds the set value of **maxLines** (maximum number of lines), a scroll effect is enabled. This requires configuration of [textOverflow]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and **MaxLinesMode** takes effect only when  
-**textOverflow** is set to **None** or **Clip**. The default value of **MaxLinesMode** is **Clip**, indicating that text is truncated when it exceeds the value of **maxLines**.
+`overflowMode`可配置[TextArea](./text_area)组件的非内联模式。当超出设置的`maxLines`最大行数时，会启用滚动效果。需同时配置  
+[textOverflow](arkts-arkui-textarea-textareaattribute-i.md#textoverflow)，且仅当`textOverflow`为None或Clip时，`MaxLinesMode`才能生效。默认情况下，`MaxLinesMode`的值为Clip，超出`maxLines`后文本会被截断。
 
-**Type:** MaxLinesMode
+**Type:** [MaxLinesMode](arkts-arkui-maxlinesmode-e.md)
 
 **Since:** 20
 

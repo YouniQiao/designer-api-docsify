@@ -10,6 +10,12 @@ Describes the settings for Wi-Fi connection.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## addNetworkToSystem
 
 ```TypeScript
@@ -40,7 +46,7 @@ networkId: int
 
 The ID (uniquely identifies) of a Wi-Fi connection.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -62,7 +68,7 @@ userActionTimeout?: int
 
 User action timeout threshold(unit is seconds).The maximum value cannot exceed 30, and default is 10.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

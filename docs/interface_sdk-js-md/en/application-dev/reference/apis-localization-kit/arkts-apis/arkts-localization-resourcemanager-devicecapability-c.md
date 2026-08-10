@@ -1,6 +1,6 @@
 # DeviceCapability
 
-Defines the device capability.
+表示设备支持的能力。
 
 **Since:** 6
 
@@ -10,15 +10,21 @@ Defines the device capability.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+## Modules to Import
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## deviceType
 
 ```TypeScript
 deviceType: DeviceType
 ```
 
-Device type.
+当前设备类型。
 
-**Type:** DeviceType
+**Type:** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
 **Since:** 6
 
@@ -36,9 +42,9 @@ Device type.
 screenDensity: ScreenDensity
 ```
 
-Screen density of the device.
+当前设备屏幕密度。
 
-**Type:** ScreenDensity
+**Type:** [ScreenDensity](../../apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-screendensity-e.md)
 
 **Since:** 6
 

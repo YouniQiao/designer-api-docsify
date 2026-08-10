@@ -1,6 +1,6 @@
 # DialogButtonDirection
 
-Enumerates the alignment modes of the buttons in the alert dialog box.
+警告弹窗中按钮的对齐方式。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the alignment modes of the buttons in the alert dialog box.
 AUTO = 0
 ```
 
-Buttons are laid out horizontally when there are two or fewer buttons and vertically otherwise.
+两个及以下按钮水平排布，两个以上为竖直排布。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Buttons are laid out horizontally when there are two or fewer buttons and vertic
 HORIZONTAL = 1
 ```
 
-Buttons are laid out horizontally.
+按钮水平布局。
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ Buttons are laid out horizontally.
 VERTICAL = 2
 ```
 
-Buttons are laid out vertically.
+按钮竖直布局。
 
 **Since:** 10
 

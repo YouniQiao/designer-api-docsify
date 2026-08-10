@@ -1,12 +1,18 @@
 # isPointerVisible
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## isPointerVisible
 
 ```TypeScript
 function isPointerVisible(callback: AsyncCallback<boolean>): void
 ```
 
-Obtains the visible status of the mouse pointer. This API uses an asynchronous callback to return the result.
+获取鼠标光标显示状态，使用callback异步回调。
 
 **Since:** 9
 
@@ -20,15 +26,15 @@ Obtains the visible status of the mouse pointer. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the visible status of the mouse pointer (**true** if visible and **false** if invisible). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当获取鼠标光标显示状态成功，err为undefined，data为鼠标光标状态（true为显示，false为隐藏）；否则为错误对 象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -42,15 +48,16 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Checks whether the mouse pointer is visible
             pointer.isPointerVisible((error: BusinessError, visible: boolean) => {
               if (error) {
-                console.error(`Get pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to get pointer visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 return;
               }
-              console.info(`Get pointer visible success, visible: ${JSON.stringify(visible)}`);
+              console.info(`Succeeded in getting pointer visible, visible: ${JSON.stringify(visible)}.`);
             });
           } catch (error) {
-            console.error(`Get pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get pointer visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -65,7 +72,7 @@ struct Index {
 function isPointerVisible(): Promise<boolean>
 ```
 
-Obtains the visible status of the mouse pointer. This API uses a promise to return the result.
+获取鼠标光标显示状态，使用Promise异步回调。
 
 **Since:** 9
 
@@ -79,9 +86,9 @@ Obtains the visible status of the mouse pointer. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the mouse pointer is visible; **false** is returned if the mouse pointer is hidden. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示鼠标光标为显示状态；返回false表示鼠标光标为隐藏状态。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -95,13 +102,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Checks whether the mouse pointer is visible
             pointer.isPointerVisible().then((visible: boolean) => {
-              console.info(`Get pointer visible success, visible: ${JSON.stringify(visible)}`);
+              console.info(`Succeeded in getting pointer visible, visible: ${JSON.stringify(visible)}.`);
             }).catch((error: BusinessError) => {
-              console.error(`Get pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to get pointer, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`Get pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get pointer visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

@@ -12,6 +12,12 @@ Configuration parameter options for AI-generated image tasks.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## imageCount
 
 ```TypeScript

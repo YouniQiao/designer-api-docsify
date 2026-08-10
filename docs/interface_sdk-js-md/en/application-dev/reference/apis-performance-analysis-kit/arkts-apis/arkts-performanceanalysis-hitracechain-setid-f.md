@@ -1,14 +1,20 @@
 # setId
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setId
 
 ```TypeScript
 function setId(id: HiTraceId): void
 ```
 
-Sets a trace ID. This API returns the result synchronously.
+设置跟踪标识，同步接口。用于在需要将外部跟踪标识设置到当前线程的场景，例如从父线程继承跟踪标识、从其他进程接收跟踪标识、从设备间通信获取跟踪标识。
 
-Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace ID is invalid, no operation is performed.
+将给定的HiTraceId设置到当前线程TLS中。若给定的HiTraceId无效，则不执行任何操作。
 
 **Since:** 8
 
@@ -22,9 +28,9 @@ Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | HiTraceId** instance. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Obtain the trace ID of the current call chain.

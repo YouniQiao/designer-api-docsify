@@ -10,6 +10,12 @@ Drag and drop information
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
+
 ## event
 
 ```TypeScript
@@ -18,7 +24,7 @@ event: DragEvent
 
 The information containing the drag event.
 
-**Type:** DragEvent
+**Type:** [DragEvent](../arkts-components/arkts-arkui-dragevent-i.md)
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ status: DragStatus
 
 The drag status.
 
-**Type:** DragStatus
+**Type:** [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md)
 
 **Since:** 23
 

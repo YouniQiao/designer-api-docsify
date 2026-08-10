@@ -4,7 +4,7 @@
 export type AlternateIconInfo = _BundleInfo.AlternateIconInfo
 ```
 
-Describes the alternate icon information of an application.
+应用备用图标信息。
 
 **Since:** 26.0.0
 

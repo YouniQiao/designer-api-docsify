@@ -1,24 +1,26 @@
 # ImageSmoothingQuality
 
 ```TypeScript
-export type ImageSmoothingQuality = 'high' | 'low' | 'medium'
+declare type ImageSmoothingQuality = "high" | "low" | "medium"
 ```
 
-Sets the image smoothness attribute. The options are as follows:'high': height'low': (default)low'medium': medium
+定义图片平滑度类型。取值类型为下表类型中的并集。
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-export type ImageSmoothingQuality = 'high' | 'low' | 'medium'--><!--Device-unnamed-export type ImageSmoothingQuality = 'high' | 'low' | 'medium'-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-unnamed-declare type ImageSmoothingQuality = "high" | "low" | "medium"--><!--Device-unnamed-declare type ImageSmoothingQuality = "high" | "low" | "medium"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |
 | --- | --- |
-| 'high' |  |
-| 'low' |  |
-| 'medium' |  |
+| "high" | 高画质 |
+| "low" | 低画质 |
+| "medium" | 中画质 |
 

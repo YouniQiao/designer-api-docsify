@@ -1,6 +1,6 @@
 # DescriptionType (System API)
 
-Enumerates description file types.
+描述文件类型。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates description file types.
 CONTENT = 0
 ```
 
-Content. This type indicates that the description content is directly provided, which is applicable to scenarios where the description content is short or needs to be displayed immediately.
+内容。表示直接提供描述文本内容，适用于描述内容较短或需要即时展示的场景。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Content. This type indicates that the description content is directly provided, 
 URI = 1
 ```
 
-Link. This type indicates that the description is provided through a link, which is applicable to scenarios where the description content is long or needs to be obtained from external resources.
+链接。表示提供描述内容的链接地址，适用于描述内容较长或需要从外部资源获取的场景。
 
 **Since:** 9
 

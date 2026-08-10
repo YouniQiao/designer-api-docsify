@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## authAccount
 
 ```TypeScript
@@ -36,7 +42,7 @@ authAccountType: AccountType
 
 表示被授权用户账号类型。
 
-**类型：** AccountType
+**类型：** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
 
 **起始版本：** 21
 
@@ -54,7 +60,7 @@ dlpFileAccess: DLPFileAccess
 
 表示被授予的权限。
 
-**类型：** DLPFileAccess
+**类型：** [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)
 
 **起始版本：** 21
 

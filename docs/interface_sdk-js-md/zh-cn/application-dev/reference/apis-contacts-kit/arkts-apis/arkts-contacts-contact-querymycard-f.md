@@ -1,5 +1,11 @@
 # queryMyCard
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## queryMyCard
 
 ```TypeScript
@@ -26,9 +32,9 @@ function queryMyCard(callback: AsyncCallback<Contact>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Contact&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,17 +73,17 @@ function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Contact&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -124,10 +130,10 @@ function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Contact&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -168,18 +174,18 @@ function queryMyCard(context: Context, attrs: ContactAttributes, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Contact&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -228,7 +234,7 @@ function queryMyCard(attrs?: ContactAttributes): Promise<Contact>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 否 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
 
 **返回值：**
 
@@ -236,7 +242,7 @@ function queryMyCard(attrs?: ContactAttributes): Promise<Contact>
 | --- | --- |
 | Promise&lt;Contact&gt; | Promise对象。返回“我的名片”联系人对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';
@@ -273,8 +279,8 @@ function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Conta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 否 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
 
 **返回值：**
 
@@ -286,10 +292,10 @@ function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Conta
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 

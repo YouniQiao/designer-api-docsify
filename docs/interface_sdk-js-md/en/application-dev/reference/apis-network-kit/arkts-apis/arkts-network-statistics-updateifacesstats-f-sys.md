@@ -1,5 +1,11 @@
 # updateIfacesStats (System API)
 
+## Modules to Import
+
+```TypeScript
+import { statistics } from 'kits/@kit.NetworkKit';
+```
+
 ## updateIfacesStats
 
 ```TypeScript
@@ -27,9 +33,9 @@ Updates network interface statistics data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Network interface name. |
-| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Start timestamp for the statistics data to update. |
-| end | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | End timestamp for the statistics data to update. |
-| stats | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Network statistics information. |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start timestamp for the statistics data to update. |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | End timestamp for the statistics data to update. |
+| stats | [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md) | Yes | Network statistics information. |
 
 **Return value:**
 
@@ -41,9 +47,9 @@ Updates network interface statistics data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 2100001 | Invalid parameter value. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 

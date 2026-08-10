@@ -1,5 +1,11 @@
 # convertToApplicationContext
 
+## 导入模块
+
+```TypeScript
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
+```
+
 ## convertToApplicationContext
 
 ```TypeScript
@@ -24,7 +30,7 @@ function convertToApplicationContext(sendableContext: SendableContext): common.A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sendableContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | 是 |  |
 
 **返回值：**
 
@@ -36,9 +42,9 @@ function convertToApplicationContext(sendableContext: SendableContext): common.A
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| 401 | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
-**示例：**
+## 示例
 
 主线程传递Context：
 

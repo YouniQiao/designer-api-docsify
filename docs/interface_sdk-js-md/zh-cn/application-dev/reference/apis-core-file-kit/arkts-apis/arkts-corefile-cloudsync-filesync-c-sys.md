@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -38,10 +44,10 @@ constructor(bundleName: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let fileSync = new cloudSync.FileSync("com.ohos.demo")
@@ -79,20 +85,18 @@ getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;UploadProgress&gt;&gt; |  Promise对象，返回上传进度信息数组。 |
+| Promise&lt;Array&lt;UploadProgress&gt;&gt; | Promise对象，返回上传进度信息数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. &lt;br&gt;3.The input parameter contains an invalid uri. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13900010 | Try again. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.The input parameter contains an invalid uri. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -106,25 +110,6 @@ fileSync.getUploadList(uris).then((progressList: cloudSync.UploadProgress[]) => 
     console.info("file uri: " + progressList[i].uri + ", state: " + progressList[i].state);
   }
 }).catch((error: BusinessError) => {
-  console.error("get upload list failed with error message: " + error.message + ", error code: " + error.code);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync: cloudSync.FileSync = new cloudSync.FileSync("com.ohos.demo");
-let uris: Array<string> = ["file:///data/storage/el2/cloud/1.txt", "file:///data/storage/el2/cloud/2.jpg"];
-
-fileSync.getUploadList(uris).then((progressList: Array<cloudSync.UploadProgress>): void => {
-  console.info("get upload list successfully, count: " + progressList.length);
-  for (let i = 0; i < progressList.length; i++) {
-    console.info("file uri: " + progressList[i].uri + ", state: " + progressList[i].state);
-  }
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
   console.error("get upload list failed with error message: " + error.message + ", error code: " + error.code);
 });
 ```
@@ -161,15 +146,13 @@ pauseUpload(uri: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900002 | No such file or directory. |
-| 13900010 | Try again. |
 | 14000002 | Invalid uri. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13900010 | Try again. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -178,25 +161,6 @@ import { fileUri } from '@kit.CoreFileKit';
 let fileSync = new cloudSync.FileSync("com.ohos.demo");
 let path = "/data/storage/el2/cloud/1.txt";
 let uri = fileUri.getUriFromPath(path);
-
-try {
-  fileSync.pauseUpload(uri);
-  console.info("pause upload successfully.");
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("pause upload failed with error message: " + error.message + ", error code: " + error.code);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileSync: cloudSync.FileSync = new cloudSync.FileSync("com.ohos.demo");
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
 
 try {
   fileSync.pauseUpload(uri);
@@ -233,20 +197,18 @@ registerUploadProgress(callback: Callback<UploadProgress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UploadProgress&gt; | 是 | 回调函数，监听文件上传进度变化。当文件上传进度发生变化时触发回调，返回上传进度信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UploadProgress&gt; | 是 | 回调函数，监听文件上传进度变化。当文件上传进度发生变化时触发回调，返回上传进度信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameter are left unspecified. &lt;br&gt;2.The number of instances registered at the same time exceeds the upper limit. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13900010 | Try again. |
-| 13900020 | Invalid argument. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameter are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.The number of instances registered at the same time exceeds the upper limit. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -263,26 +225,6 @@ try {
 } catch (err) {
   let error: BusinessError = err as BusinessError;
   console.error(`register upload progress failed with error message: ${error.message}, error code: ${error.code}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync: cloudSync.FileSync = new cloudSync.FileSync("com.ohos.demo");
-
-try {
-  fileSync.registerUploadProgress((progress: cloudSync.UploadProgress): void => {
-    console.info("upload progress - uri: " + progress.uri + ", state: " + progress.state);
-    console.info("processed: " + progress.processed + ", size: " + progress.size);
-    console.info("error: " + progress.error);
-  });
-  console.info("register upload progress successfully");
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("register upload progress failed with error message: " + error.message + ", error code: " + error.code);
 }
 ```
 
@@ -318,15 +260,13 @@ resumeUpload(uri: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900002 | No such file or directory. |
-| 13900010 | Try again. |
 | 14000002 | Invalid uri. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13900010 | Try again. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -335,25 +275,6 @@ import { fileUri } from '@kit.CoreFileKit';
 let fileSync = new cloudSync.FileSync("com.ohos.demo");
 let path = "/data/storage/el2/cloud/1.txt";
 let uri = fileUri.getUriFromPath(path);
-
-try {
-  fileSync.resumeUpload(uri);
-  console.info("resume upload successfully.");
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("resume upload failed with error message: " + error.message + ", error code: " + error.code);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileSync: cloudSync.FileSync = new cloudSync.FileSync("com.ohos.demo");
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
 
 try {
   fileSync.resumeUpload(uri);
@@ -390,34 +311,16 @@ unregisterUploadProgress(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
 | 13900010 | Try again. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let fileSync = new cloudSync.FileSync("com.ohos.demo");
-
-try {
-  fileSync.unregisterUploadProgress();
-  console.info("unregister upload progress successfully");
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("unregister upload progress failed with error message: " + error.message + ", error code: " + error.code);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync: cloudSync.FileSync = new cloudSync.FileSync("com.ohos.demo");
 
 try {
   fileSync.unregisterUploadProgress();

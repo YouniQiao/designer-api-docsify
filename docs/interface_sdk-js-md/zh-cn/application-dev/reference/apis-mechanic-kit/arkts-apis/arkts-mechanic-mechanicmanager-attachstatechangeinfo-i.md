@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Mechanic.Core
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## mechInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ mechInfo: MechInfo
 
 Mechanical device information.
 
-**类型：** MechInfo
+**类型：** [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)
 
 **起始版本：** 20
 
@@ -36,7 +42,7 @@ state: AttachState
 
 吸附状态
 
-**类型：** AttachState
+**类型：** [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
 
 **起始版本：** 20
 

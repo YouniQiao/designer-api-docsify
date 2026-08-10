@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## adler
 
 ```TypeScript
@@ -18,7 +24,7 @@ adler?: long
 
 未压缩数据的Adler-32或CRC-32值。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ availableIn?: int
 
 nextIn可用的字节数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ availableOut?: int
 
 nextOut的剩余可用字节数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ dataType?: int
 
 关于数据类型的最佳猜测：deflate的二进制或文本，或inflate的解码状态。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -138,7 +144,7 @@ totalIn?: long
 
 到目前为止读取的输入字节总数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -158,7 +164,7 @@ totalOut?: long
 
 到目前为止输出字节总数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 

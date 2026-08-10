@@ -1,6 +1,6 @@
 # ContextType
 
-Context type
+上下文类型
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Context type
 SERVICE_EXTENSION_CONTEXT = 5
 ```
 
-Service extension context type.
+业务扩展上下文类型。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Service extension context type.
 UI_SERVICE_EXTENSION_CONTEXT = 6
 ```
 
-UI service extension context type.
+UI服务扩展上下文类型。
 
 **Since:** 26.0.0
 
@@ -50,7 +50,7 @@ UI service extension context type.
 
 <!--Device-ContextType-UI_SERVICE_EXTENSION_CONTEXT = 6--><!--Device-ContextType-UI_SERVICE_EXTENSION_CONTEXT = 6-End-->
 
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core\
 
 **System API:** This is a system API.
 
@@ -60,7 +60,7 @@ UI service extension context type.
 AUTO_FILL_EXTENSION_CONTEXT = 7
 ```
 
-Auto fill extension context type.
+自动填充扩展上下文类型。
 
 **Since:** 26.0.0
 

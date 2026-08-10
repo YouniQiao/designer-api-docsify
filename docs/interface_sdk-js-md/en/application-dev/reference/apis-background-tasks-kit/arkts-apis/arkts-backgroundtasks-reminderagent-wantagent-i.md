@@ -1,6 +1,6 @@
 # WantAgent
 
-Sets the package and ability that are redirected to when the reminder notification is clicked.
+点击提醒通知后跳转的目标ability信息。
 
 **Since:** 7
 
@@ -14,13 +14,19 @@ Sets the package and ability that are redirected to when the reminder notificati
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Name of the ability that is redirected to when the reminder notification is clicked.
+指明点击提醒通知栏后跳转的目标ability名称。
 
 **Type:** string
 
@@ -42,7 +48,7 @@ Name of the ability that is redirected to when the reminder notification is clic
 pkgName: string
 ```
 
-Name of the HAP that is redirected to when the reminder notification is clicked.
+指明点击提醒通知栏后跳转的目标HAP名。
 
 **Type:** string
 

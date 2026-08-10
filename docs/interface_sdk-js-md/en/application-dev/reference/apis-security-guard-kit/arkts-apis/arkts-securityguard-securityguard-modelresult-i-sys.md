@@ -12,6 +12,12 @@ Provides the ModelResult type.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+```
+
 ## result
 
 ```TypeScript

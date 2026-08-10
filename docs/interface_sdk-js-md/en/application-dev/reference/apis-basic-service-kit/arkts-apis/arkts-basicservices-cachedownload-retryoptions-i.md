@@ -10,6 +10,12 @@ Task retry configuration.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## maxRetryCount
 
 ```TypeScript
@@ -18,7 +24,7 @@ maxRetryCount?: int
 
 Maximum number of retry attempts.The default value is 1.The minimum value is 0.The maximum value is 10.When set to 0, no retries will be performed.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

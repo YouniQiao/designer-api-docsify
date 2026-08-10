@@ -1,12 +1,18 @@
 # updateConfiguration (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## updateConfiguration
 
 ```TypeScript
 function updateConfiguration(config: Configuration, callback: AsyncCallback<void>): void
 ```
 
-Updates the configuration. This API uses an asynchronous callback to return the result.
+通过传入修改的配置项来更新配置。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,17 +30,17 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | New configuration. You only need to configure the items to be updated. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
+| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | 新的配置项，仅需配置需要更新的项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当更新配置成功，err为undefined；否则为错误对象。可进行错误处理或其他自定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
 
 ## updateConfiguration
@@ -43,7 +49,7 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 function updateConfiguration(config: Configuration): Promise<void>
 ```
 
-Updates the configuration. This API uses a promise to return the result.
+通过修改配置来更新配置。使用Promise异步回调。
 
 **Since:** 9
 
@@ -61,20 +67,20 @@ Updates the configuration. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | New configuration. You only need to configure the items to be updated. |
+| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | 新的配置项，仅需配置需要更新的项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. You can perform error handling or other custom processing. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。开发者可在此进行错误处理或其他自定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

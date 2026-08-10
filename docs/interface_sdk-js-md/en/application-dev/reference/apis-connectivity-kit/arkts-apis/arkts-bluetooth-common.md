@@ -10,6 +10,12 @@ Provide common Bluetooth interfaces and types.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { common } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Interfaces
@@ -23,5 +29,5 @@ Provide common Bluetooth interfaces and types.
 | Name | Description |
 | --- | --- |
 | [BluetoothAddressType](arkts-connectivity-common-bluetoothaddresstype-e.md) | Enum for the type of Bluetooth address. |
-| [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md) | Enum for the type of Bluetooth raw address.The enum is used only when the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md) | Enum for the type of Bluetooth raw address.The enum is used only when the {@link BluetoothAddress#addressType} is {@link BluetoothAddressType#REAL}. |
 

@@ -10,6 +10,12 @@ Defines the network capability set.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## bearerTypes
 
 ```TypeScript
@@ -38,7 +44,7 @@ linkDownBandwidthKbps?: int
 
 Downstream (network-to-device) bandwidth.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -56,7 +62,7 @@ linkUpBandwidthKbps?: int
 
 Uplink (device-to-network) bandwidth.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

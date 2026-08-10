@@ -1,6 +1,6 @@
 # AbilityLifecycleCallback
 
-The lifecycle of a [UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ dynamically changes from creation to destruction.The AbilityLifecycleCallback module provides the capability to listen for these lifecycle changes, which can be used for scenarios such as tracking the runtime duration of each UIAbility and performing data loading decoupled from the service logic of UIAbility.
+[UIAbility](arkts-app-ability-uiability.md)从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听[UIAbility](arkts-app-ability-uiability.md)生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ The lifecycle of a [UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ dynamically 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## Modules to Import
+
+```TypeScript
+import { AbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## onAbilityBackground
 
 ```TypeScript
 onAbilityBackground(ability: UIAbility): void
 ```
 
-Called after the [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发后回调。
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Called after the [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -46,7 +52,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityContinue(ability: UIAbility): void
 ```
 
-Called after the [onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发后回调。
 
 **Since:** 9
 
@@ -64,9 +70,9 @@ Called after the [onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -76,7 +82,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityCreate(ability: UIAbility): void
 ```
 
-Called after the [onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发后回调。
 
 **Since:** 9
 
@@ -94,9 +100,9 @@ Called after the [onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -106,7 +112,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityDestroy(ability: UIAbility): void
 ```
 
-Called after the [onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发后回调。
 
 **Since:** 9
 
@@ -124,9 +130,9 @@ Called after the [onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -136,7 +142,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityForeground(ability: UIAbility): void
 ```
 
-Called after the [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发后回调。
 
 **Since:** 9
 
@@ -154,9 +160,9 @@ Called after the [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -166,7 +172,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilitySaveState?(ability: UIAbility): void
 ```
 
-Called after the [onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发后回调。
 
 **Since:** 12
 
@@ -184,9 +190,9 @@ Called after the [onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -196,7 +202,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilitySaveState?: OnAbilitySaveStateFn
 ```
 
-Called after the [onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发后回调。
 
 **Since:** 23
 
@@ -214,7 +220,7 @@ Called after the [onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of 
 onAbilityWillBackground?(ability: UIAbility): void
 ```
 
-Called before the [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发前回调。
 
 **Since:** 12
 
@@ -232,9 +238,9 @@ Called before the [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -244,7 +250,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillBackground?: OnAbilityWillBackgroundFn
 ```
 
-Called before the [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发前回调。
 
 **Since:** 23
 
@@ -262,7 +268,7 @@ Called before the [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback o
 onAbilityWillContinue?(ability: UIAbility): void
 ```
 
-Called before the [onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发前回调。
 
 **Since:** 12
 
@@ -280,9 +286,9 @@ Called before the [onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -292,7 +298,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillContinue?: OnAbilityWillContinueFn
 ```
 
-Called before the [onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发前回调。
 
 **Since:** 23
 
@@ -310,7 +316,7 @@ Called before the [onContinue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of 
 onAbilityWillCreate?(ability: UIAbility): void
 ```
 
-Called before the [onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发前回调。
 
 **Since:** 12
 
@@ -328,9 +334,9 @@ Called before the [onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -340,7 +346,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillCreate?: OnAbilityWillCreateFn
 ```
 
-Called before the [onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发前回调。
 
 **Since:** 23
 
@@ -358,7 +364,7 @@ Called before the [onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of th
 onAbilityWillDestroy?(ability: UIAbility): void
 ```
 
-Called before the [onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发前回调。
 
 **Since:** 12
 
@@ -376,9 +382,9 @@ Called before the [onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -388,7 +394,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillDestroy?: OnAbilityWillDestroyFn
 ```
 
-Called before the [onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发前回调。
 
 **Since:** 23
 
@@ -406,7 +412,7 @@ Called before the [onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of t
 onAbilityWillForeground?(ability: UIAbility): void
 ```
 
-Called before the [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发前回调。
 
 **Since:** 12
 
@@ -424,9 +430,9 @@ Called before the [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -436,7 +442,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillForeground?: OnAbilityWillForegroundFn
 ```
 
-Called before the [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发前回调。
 
 **Since:** 23
 
@@ -454,7 +460,7 @@ Called before the [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback o
 onAbilityWillSaveState?(ability: UIAbility): void
 ```
 
-Called before the [onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发前回调。
 
 **Since:** 12
 
@@ -472,9 +478,9 @@ Called before the [onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -484,7 +490,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillSaveState?: OnAbilityWillSaveStateFn
 ```
 
-Called before the [onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发前回调。
 
 **Since:** 23
 
@@ -502,7 +508,7 @@ Called before the [onSaveState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of
 onNewWant?(ability: UIAbility): void
 ```
 
-Called after the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发后回调。
 
 **Since:** 12
 
@@ -520,9 +526,9 @@ Called after the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -532,7 +538,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onNewWant?: OnNewWantFn
 ```
 
-Called after the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发后回调。
 
 **Since:** 23
 
@@ -550,7 +556,7 @@ Called after the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of th
 onWillNewWant?(ability: UIAbility): void
 ```
 
-Called before the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发前回调。
 
 **Since:** 12
 
@@ -568,9 +574,9 @@ Called before the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -580,7 +586,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWillNewWant?: OnWillNewWantFn
 ```
 
-Called before the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发前回调。
 
 **Since:** 23
 
@@ -598,7 +604,7 @@ Called before the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of t
 onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called when the main window of the UIAbility gains focus.
+在UIAbility主窗获焦时触发回调。
 
 **Since:** 9
 
@@ -616,10 +622,10 @@ Called when the main window of the UIAbility gains focus.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | Yes | 回调事件对应的UIAbility主窗管理器。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -629,7 +635,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发后回调。
 
 **Since:** 9
 
@@ -647,10 +653,10 @@ Called after the [onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | Yes | 回调事件对应的UIAbility主窗管理器。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -660,7 +666,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发后回调。
 
 **Since:** 9
 
@@ -678,10 +684,10 @@ Called after the [onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象 |
+| windowStage | window.WindowStage | Yes | 回调事件对应的UIAbility主窗管理器。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -691,7 +697,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called when the main window of the UIAbility loses focus.
+在UIAbility主窗失焦时触发回调。
 
 **Since:** 9
 
@@ -709,10 +715,10 @@ Called when the main window of the UIAbility loses focus.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | Yes | 回调事件对应的UIAbility主窗管理器。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -722,7 +728,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发后回调。
 
 **Since:** 12
 
@@ -740,10 +746,10 @@ Called after the [onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | Yes | 回调事件对应的UIAbility主窗管理器。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -753,7 +759,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageRestore?: OnWindowStageRestoreFn
 ```
 
-Called after the [onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发后回调。
 
 **Since:** 23
 
@@ -771,7 +777,7 @@ Called after the [onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_call
 onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发前回调。
 
 **Since:** 12
 
@@ -789,10 +795,10 @@ Called before the [onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | Yes | 回调事件对应的UIAbility主窗管理器。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -802,7 +808,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageWillCreate?: OnWindowStageWillCreateFn
 ```
 
-Called before the [onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发前回调。
 
 **Since:** 23
 
@@ -820,7 +826,7 @@ Called before the [onWindowStageCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_call
 onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发前回调。
 
 **Since:** 12
 
@@ -838,10 +844,10 @@ Called before the [onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | Yes | 回调事件对应的UIAbility主窗管理器。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -851,7 +857,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageWillDestroy?: OnWindowStageWillDestroyFn
 ```
 
-Called before the [onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发前回调。
 
 **Since:** 23
 
@@ -869,7 +875,7 @@ Called before the [onWindowStageDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_cal
 onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发前回调。
 
 **Since:** 12
 
@@ -887,10 +893,10 @@ Called before the [onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIAbility object associated with the callback event. |
-| windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 回调事件对应的UIAbility对象。 |
+| windowStage | window.WindowStage | Yes | 回调事件对应的UIAbility主窗管理器。 |
 
-**Example**
+## Examples
 
 For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallback-usage-example).
 
@@ -900,7 +906,7 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageWillRestore?: OnWindowStageWillRestoreFn
 ```
 
-Called before the [onWindowStageRestore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback of the UIAbility is triggered.
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发前回调。
 
 **Since:** 23
 

@@ -1,5 +1,11 @@
 # setSurfaceId (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## setSurfaceId
 
 ```TypeScript
@@ -24,18 +30,18 @@ Sets the transmission surface.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the ID of a transport stream. |
+| streamId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of a transport stream. |
 | surfaceId | string | Yes | Surface ID. |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Surface Parameters |
+| param | [SurfaceParam](arkts-distributedservice-abilityconnectionmanager-surfaceparam-i-sys.md) | Yes | Surface Parameters |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

@@ -1,12 +1,18 @@
 # setPriorityEnabledByBundles (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## setPriorityEnabledByBundles
 
 ```TypeScript
 function setPriorityEnabledByBundles(switches: Map<BundleOption, boolean>): Promise<void>
 ```
 
-Sets whether priority notifications are enabled for applications in batches. This API uses a promise to return the result.
+批量设置应用通知优先级开关状态。使用Promise异步回调。
 
 **Since:** 23
 
@@ -26,26 +32,26 @@ Sets whether priority notifications are enabled for applications in batches. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| switches | Map&lt;BundleOption, boolean&gt; | Yes | Key-value pair set of the application notification priority enabling status. |
+| switches | Map&lt;BundleOption, boolean&gt; | Yes | 应用通知优先级开关状态的键值对集合。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600003 | Failed to connect to the service. |
+| 17700001 | The specified bundle name was not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

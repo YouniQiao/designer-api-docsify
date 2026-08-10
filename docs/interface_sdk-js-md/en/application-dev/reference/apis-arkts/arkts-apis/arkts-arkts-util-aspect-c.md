@@ -1,6 +1,6 @@
 # Aspect
 
-Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be used to perform instrumentation or replacement on class methods.
+提供支持面向切面编程（AOP）的 API。这些 API 可用于对类方法进行插桩或替换。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## addAfter
 
 ```TypeScript
 static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void
 ```
 
-Inserts a function after a method of a class object. The final return value is the return value of the function inserted.
+在类对象的方法后插入一个函数。最终的返回值为被插入函数的返回值。
 
 **Since:** 11
 
@@ -32,12 +38,12 @@ Inserts a function after a method of a class object. The final return value is t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
-| methodName | string | Yes | Name of the method. Read-only methods are not supported. |
-| isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
-| after | Function | Yes | Function to insert. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; the second parameter is the return value of the original method (**undefined** if the original method does not have a return value); other parameters are the parameters carried by the original method. If the function does not carry any parameter, no processing is performed. |
+| targetClass | Object | Yes | 目标类对象。 |
+| methodName | string | Yes | 方法名。不支持只读方法。 |
+| isStatic | boolean | Yes | 该方法是否为静态方法。值为 **true** 表示静态方法，值为 **false** 表示实例方法。 |
+| after | Function | Yes | 要插入的函数。如果该函数携带参数，则第一个参数为 **this** 对象：当 **isStatic** 为 **true** 时为目标类对象（由 **targetClass** 指定），当 **isStatic** 为 **false** 时为该方法的实例对象； 第二个参数为原方法的返回值（如果原方法没有返回值则为 **undefined**）；其余参数为原方法携带的参数。如果该函数 不携带任何参数，则不执行任何处理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyClass {
@@ -99,7 +105,7 @@ util.Aspect.addAfter(AroundTest, 'foo', false, () => {
 static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void
 ```
 
-Inserts a function before a method of a class object. The inserted function is executed in prior to the original method of the class object.
+在类对象的方法前插入一个函数。被插入的函数会先于类对象的原方法执行。
 
 **Since:** 11
 
@@ -115,12 +121,12 @@ Inserts a function before a method of a class object. The inserted function is e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
-| methodName | string | Yes | Name of the method. Read-only methods are not supported. |
-| isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
-| before | Function | Yes | Function to insert. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parameters are the parameters carried in the original method. If the function does not carry any parameter, no processing is performed. |
+| targetClass | Object | Yes | 目标类对象。 |
+| methodName | string | Yes | 方法名。不支持只读方法。 |
+| isStatic | boolean | Yes | 该方法是否为静态方法。值为 **true** 表示静态方法，值为 **false** 表示实例方法。 |
+| before | Function | Yes | 要插入的函数。如果该函数携带参数，则第一个参数为 **this** 对象：当 **isStatic** 为 **true** 时为目标类对象（由 **targetClass** 指定），当 **isStatic** 为 **false** 时为该方法的实例对象； 其余参数为原方法携带的参数。如果该函数不携带任何参数，则不执行任何处理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyClass {
@@ -191,7 +197,7 @@ console.info('MyClass.data is ' + MyClass.data);
 static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void
 ```
 
-Replaces a method of a class object with another function. After the replacement, only the new function logic is executed. The final return value is the return value of the new function.
+使用另一个函数替换类对象的方法。替换后，仅执行新函数的逻辑。最终的返回值为新函数的返回值。
 
 **Since:** 11
 
@@ -207,12 +213,12 @@ Replaces a method of a class object with another function. After the replacement
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
-| methodName | string | Yes | Name of the method. Read-only methods are not supported. |
-| isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
-| instead | Function | Yes | Function to be used replacement. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parameters are the parameters carried in the original method. If the function does not carry any parameter, no processing is performed. |
+| targetClass | Object | Yes | 目标类对象。 |
+| methodName | string | Yes | 方法名。不支持只读方法。 |
+| isStatic | boolean | Yes | 该方法是否为静态方法。值为 **true** 表示静态方法，值为 **false** 表示实例方法。 |
+| instead | Function | Yes | 用于替换的函数。如果该函数携带参数，则第一个参数为 **this** 对象：当 **isStatic** 为 **true** 时为目标类对象（由 **targetClass** 指定），当 **isStatic** 为 **false** 时为该方法的实例对象； 其余参数为原方法携带的参数。如果该函数不携带任何参数，则不执行任何处理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyClass {

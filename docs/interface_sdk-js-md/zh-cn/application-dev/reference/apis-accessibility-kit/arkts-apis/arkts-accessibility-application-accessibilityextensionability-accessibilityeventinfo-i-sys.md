@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
+```
+
 ## eventType
 
 ```TypeScript
@@ -20,7 +26,7 @@ eventType: AccessibilityEventType
 
 无障碍事件类型。
 
-**类型：** AccessibilityEventType
+**类型：** [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md)
 
 **起始版本：** 20
 
@@ -60,7 +66,7 @@ target?: AccessibilityElement
 
 发生事件的目标组件。
 
-**类型：** AccessibilityElement
+**类型：** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)
 
 **起始版本：** 20
 
@@ -80,7 +86,7 @@ timestamp?: long
 
 事件时间戳，单位是毫秒。默认值为0。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 

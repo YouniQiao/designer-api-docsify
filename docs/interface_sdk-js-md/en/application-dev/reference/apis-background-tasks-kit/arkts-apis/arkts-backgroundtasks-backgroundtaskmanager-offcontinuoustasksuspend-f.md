@@ -1,12 +1,18 @@
 # offContinuousTaskSuspend
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## offContinuousTaskSuspend
 
 ```TypeScript
 function offContinuousTaskSuspend(callback?: Callback<ContinuousTaskSuspendInfo>): void
 ```
 
-Unregister continuous task suspend callback.
+取消长时任务暂停的监听，使用callback异步回调。
 
 **Since:** 23
 
@@ -22,12 +28,12 @@ Unregister continuous task suspend callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskSuspendInfo&gt; | No | the callback of continuous task suspend. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskSuspendInfo&gt; | No | the callback of continuous task suspend. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 

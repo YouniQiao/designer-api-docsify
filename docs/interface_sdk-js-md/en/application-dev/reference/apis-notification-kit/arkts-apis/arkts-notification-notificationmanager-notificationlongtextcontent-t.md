@@ -4,7 +4,7 @@
 export type NotificationLongTextContent = _NotificationLongTextContent
 ```
 
-Describes the long text notification.
+长文本通知。
 
 **Since:** 9
 

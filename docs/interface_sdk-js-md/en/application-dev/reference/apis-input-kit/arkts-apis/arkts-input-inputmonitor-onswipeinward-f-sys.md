@@ -1,12 +1,18 @@
 # onSwipeInward (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
 ## onSwipeInward
 
 ```TypeScript
 function onSwipeInward(receiver: Callback<SwipeInward>): void
 ```
 
-Enables listening touchPad swipe inward events.
+监听向内滑动事件。
 
 **Since:** 23
 
@@ -24,13 +30,13 @@ Enables listening touchPad swipe inward events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SwipeInward&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwipeInward](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md)&gt; | Yes | 用于接收上报数据的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permit error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
+| 201 | Permission denied. |
+| 202 | SystemAPI permit error. |
 

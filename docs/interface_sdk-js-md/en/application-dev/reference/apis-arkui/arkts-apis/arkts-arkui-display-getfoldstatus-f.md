@@ -1,12 +1,18 @@
 # getFoldStatus
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getFoldStatus
 
 ```TypeScript
 function getFoldStatus(): FoldStatus
 ```
 
-Obtains the fold status of this foldable device.
+获取可折叠设备当前的折叠状态。
 
 **Since:** 10
 
@@ -22,19 +28,17 @@ Obtains the fold status of this foldable device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Fold status of the device. |
+| [FoldStatus](arkts-arkui-enums-foldstatus-e.md) | FoldStatus对象，返回当前可折叠设备的折叠状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
-
 let data: display.FoldStatus = display.getFoldStatus();
 console.info(`Succeeded in obtaining fold status. Data: ${data}`);
 ```

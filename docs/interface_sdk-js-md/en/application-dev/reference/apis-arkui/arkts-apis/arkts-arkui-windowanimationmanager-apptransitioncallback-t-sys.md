@@ -5,7 +5,7 @@ type AppTransitionCallback = (fromWindowTarget: WindowAnimationTarget, toWindowT
     finishCallback: WindowAnimationFinishedCallback) => void
 ```
 
-Callback function on application transition.
+应用转场时的回调。
 
 **Since:** 23
 
@@ -21,7 +21,7 @@ Callback function on application transition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window target of the source application.  |
-| toWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window target of the destination application.  |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback.  |
+| fromWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 转场前的动画窗口。 |
+| toWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 转场后的动画窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
 

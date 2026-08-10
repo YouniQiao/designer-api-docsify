@@ -20,7 +20,7 @@ Flex容器交叉轴上相邻行之间的间距。设置后，交叉轴方向相�
 
 默认值：LengthMetrics.px(0)
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 12
 
@@ -44,7 +44,7 @@ Flex容器主轴上相邻子组件之间的间距。设置后，主轴方向相�
 
 默认值：LengthMetrics.px(0)
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 12
 

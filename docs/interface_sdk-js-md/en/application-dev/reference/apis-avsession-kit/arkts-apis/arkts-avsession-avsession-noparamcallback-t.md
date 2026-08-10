@@ -4,7 +4,7 @@
 type NoParamCallback = () => void
 ```
 
-Defines the basic callback.
+定义无参数的回调函数类型。
 
 **Since:** 22
 

@@ -4,8 +4,7 @@
 export type NotificationSwitchChangedCallback = _NotificationSwitchChangedCallback
 ```
 
-Register the callback function type for notification switch state changes set by the interface of  
-[notificationManager.setNotificationSwitch]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+注册由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch)接口设置的通知开关状态变化的回调函数类型。
 
 **Since:** 26.0.0
 

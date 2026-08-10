@@ -1,6 +1,6 @@
 # ReturnType
 
-Enumerates the type of information returned by an asset query operation.
+枚举，关键资产查询返回的结果类型。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Enumerates the type of information returned by an asset query operation.
 ALL = 0
 ```
 
-The query result contains the asset in plaintext and its attributes.
+返回关键资产明文及属性。
 
-**Note**: Use this option when you need to query the plaintext of a single asset.
+**说明：** 查询单条关键资产明文时，需设置此类型。
 
 **Since:** 11
 
@@ -36,9 +36,9 @@ The query result contains the asset in plaintext and its attributes.
 ATTRIBUTES = 1
 ```
 
-The query result contains only the asset attributes.
+返回关键资产属性，不含关键资产明文。
 
-**Note**: Use this option when you need to query attributes of multiple assets.
+**说明：** 批量查询关键资产属性时，需设置此类型。
 
 **Since:** 11
 

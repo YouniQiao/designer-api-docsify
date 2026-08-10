@@ -12,6 +12,12 @@ Describes wakeup intelligent voice engine callback information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+```
+
 ## context
 
 ```TypeScript
@@ -40,7 +46,7 @@ eventId: WakeupIntelligentVoiceEventType
 
 Wakeup event id.
 
-**Type:** WakeupIntelligentVoiceEventType
+**Type:** [WakeupIntelligentVoiceEventType](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceeventtype-e-sys.md)
 
 **Since:** 10
 

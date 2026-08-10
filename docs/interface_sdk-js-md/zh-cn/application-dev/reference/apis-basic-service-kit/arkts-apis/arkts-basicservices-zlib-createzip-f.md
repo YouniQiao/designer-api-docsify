@@ -1,5 +1,11 @@
 # createZip
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createZip
 
 ```TypeScript
@@ -24,7 +30,7 @@ function createZip(): Promise<Zip>
 | --- | --- |
 | Promise&lt;Zip&gt; | Promise对象。返回压缩解压缩对象实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';

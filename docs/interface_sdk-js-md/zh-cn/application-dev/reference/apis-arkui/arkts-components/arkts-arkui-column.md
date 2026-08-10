@@ -19,9 +19,10 @@ Column(options?: ColumnOptions)
 ```
 
 创建垂直方向线性布局容器，可以设置子组件的间距。
-    **说明：**  
-    
-    在复杂界面中使用多组件嵌套时，若布局组件的嵌套层数过深或嵌套的组件数量过多，将会产生额外开销。建议通过移除冗余节点、利用布局边界减少布局计算、合理采用渲染控制语法及布局组件方法来优化性能。最佳实践请参考布局优化指导。
+
+> **说明：**
+> 
+> 在复杂界面中使用多组件嵌套时，若布局组件的嵌套层数过深或嵌套的组件数量过多，将会产生额外开销。建议通过移除冗余节点、利用布局边界减少布局计算、合理采用渲染控制语法及布局组件方法来优化性能。最佳实践请参考布局优化指导。
 
 **起始版本：** 7
 
@@ -39,7 +40,7 @@ Column(options?: ColumnOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 \_\_\_HTML\_TAG\_USD\_0\_\_\_ |
+| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 <br> |
 
 ## Column
 
@@ -48,9 +49,10 @@ Column(options?: ColumnOptions | ColumnOptionsV2)
 ```
 
 创建垂直方向线性布局容器，可以设置子组件的间距。
-    **说明：**  
-    
-    在复杂界面中使用多组件嵌套时，若布局组件的嵌套层数过深或嵌套的组件数量过多，将会产生额外开销。建议通过移除冗余节点、利用布局边界减少布局计算、合理采用渲染控制语法及布局组件方法来优化性能。最佳实践请参考布局优化指导。
+
+> **说明：**
+> 
+> 在复杂界面中使用多组件嵌套时，若布局组件的嵌套层数过深或嵌套的组件数量过多，将会产生额外开销。建议通过移除冗余节点、利用布局边界减少布局计算、合理采用渲染控制语法及布局组件方法来优化性能。最佳实践请参考布局优化指导。
 
 **起始版本：** 18
 
@@ -70,7 +72,10 @@ Column(options?: ColumnOptions | ColumnOptionsV2)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| ColumnOptionsV2 | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距，space支持设置number、 string或Resource类型。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。  |
+| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距，space支持设置number、 string或Resource类型。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 |
 
 ## 汇总
 
+- [ColumnOptions](arkts-arkui-column-columnoptions-i.md)
+- [ColumnOptionsV2](arkts-arkui-column-columnoptionsv2-i.md)
+- [SpaceType](arkts-arkui-column-spacetype-t.md)

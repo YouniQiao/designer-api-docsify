@@ -1,6 +1,6 @@
 # FocusPriority
 
-Sets the focus priority of a component.
+设置组件焦点的优先级。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Sets the focus priority of a component.
 AUTO = 0
 ```
 
-Default priority, that is, the focus priority assigned by default.
+默认的优先级，缺省时组件的获焦优先级。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Default priority, that is, the focus priority assigned by default.
 PRIOR = 2000
 ```
 
-Priority that indicates the component is prioritized in the container. This level is higher than **AUTO**.
+容器内优先获焦的优先级。优先级高于AUTO。
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Priority that indicates the component is prioritized in the container. This leve
 PREVIOUS = 3000
 ```
 
-Priority of a previously focused node in the container. This level is higher than **PRIOR**.
+上一次容器整体失焦时获焦节点的优先级。优先级高于PRIOR。
 
 **Since:** 12
 

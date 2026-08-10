@@ -1,11 +1,11 @@
 # BottomOffset
 
-Defines the distance between the popup and the bottom in different scenario modes, based on the presence or absence of a menu bar, with the default being the distance when there is no menu bar.
+设置不同情景模式下弹框距离底部的距离，判断依据为是否存在菜单栏，默认显示为不存在菜单栏情况下的距离。
 
-| Name| Value| Description|  
+| 名称 | 值 | 说明 |  
 | - | - | - |  
-| OFFSET\_FOR\_BAR | 0 | Distance from the bottom of the window when there is a menu bar.It sets the dialog box 88 vp away from the bottom of the window.|  
-| OFFSET\_FOR\_NONE | 1 | Distance from the bottom of the window when there is no menu bar.Default value. It sets the dialog box 44 vp away from the bottom of the window.|
+| OFFSET_FOR_BAR | 0 | 存在菜单栏情况下与窗口底部的距离。设置后弹框距离底部88vp。 |  
+| OFFSET_FOR_NONE | 1 | 不存在菜单栏情况下与窗口底部的距离。默认值，设置后弹框距离底部44vp。 |
 
 **Since:** 12
 
@@ -21,7 +21,7 @@ Defines the distance between the popup and the bottom in different scenario mode
 OFFSET_FOR_BAR = 0
 ```
 
-dialog distance relative to the bottom in the presence of tabs.
+存在菜单栏情况下与窗口底部的距离。设置后弹框距离底部88vp。
 
 **Since:** 12
 
@@ -39,7 +39,7 @@ dialog distance relative to the bottom in the presence of tabs.
 OFFSET_FOR_NONE = 1
 ```
 
-dialog is the distance relative to the bottom without tabs.
+不存在菜单栏情况下与窗口底部的距离。默认值，设置后弹框距离底部44vp。
 
 **Since:** 12
 

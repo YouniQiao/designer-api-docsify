@@ -4,7 +4,7 @@
 type AssetMap = Map<Tag, Value>
 ```
 
-Represents a set of asset attributes in the form of KV pairs.
+关键资产属性的键-值对集合。
 
 **Since:** 11
 

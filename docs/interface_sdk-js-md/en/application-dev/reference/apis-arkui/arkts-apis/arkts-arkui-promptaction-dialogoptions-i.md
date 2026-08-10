@@ -1,6 +1,6 @@
 # DialogOptions
 
-Dialog options
+自定义弹窗的内容，继承自[BaseDialogOptions](../../../reference/apis-arkui/js-apis-promptAction copy.md#basedialogoptions11)。
 
 **Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
 
@@ -12,15 +12,21 @@ Dialog options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundBlurStyle
 
 ```TypeScript
 backgroundBlurStyle?: BlurStyle
 ```
 
-Defines the dialog's background blur Style
+弹窗背板模糊材质。&lt;br/&gt;默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。&lt;br/&gt;**说明：** &lt;br/&gt;设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -40,9 +46,9 @@ Defines the dialog's background blur Style
 backgroundColor?: ResourceColor
 ```
 
-Defines the dialog's background color.
+设置弹窗背板颜色。&lt;br/&gt;默认值：Color.Transparent&lt;br/&gt;**说明：** &lt;br/&gt;backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -60,9 +66,9 @@ Defines the dialog's background color.
 borderColor?: DialogOptionsBorderColor
 ```
 
-Defines the dialog's border color.
+设置弹窗背板的边框颜色。&lt;br/&gt;默认值：Color.Black &lt;br/&gt; 如果使用borderColor属性，需要和borderWidth属性一起使用。
 
-**Type:** DialogOptionsBorderColor
+**Type:** [DialogOptionsBorderColor](arkts-arkui-promptaction-dialogoptionsbordercolor-t.md)
 
 **Since:** 23
 
@@ -80,9 +86,9 @@ Defines the dialog's border color.
 borderStyle?: DialogOptionsBorderStyle
 ```
 
-Defines the dialog's border style.
+设置弹窗背板的边框样式。&lt;br/&gt;默认值：BorderStyle.Solid。&lt;br/&gt; 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**Type:** DialogOptionsBorderStyle
+**Type:** [DialogOptionsBorderStyle](arkts-arkui-promptaction-dialogoptionsborderstyle-t.md)
 
 **Since:** 23
 
@@ -100,9 +106,9 @@ Defines the dialog's border style.
 borderWidth?: DialogOptionsBorderWidth
 ```
 
-Defines the dialog's border width.
+设置弹窗背板的边框宽度。&lt;br /&gt;可分别设置4个边框宽度。&lt;br /&gt;默认值：0 &lt;br /&gt;单位：vp &lt;br /&gt; 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。&lt;br /&gt;当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
 
-**Type:** DialogOptionsBorderWidth
+**Type:** [DialogOptionsBorderWidth](arkts-arkui-promptaction-dialogoptionsborderwidth-t.md)
 
 **Since:** 23
 
@@ -120,9 +126,9 @@ Defines the dialog's border width.
 cornerRadius?: DialogOptionsCornerRadius
 ```
 
-Defines the dialog's corner radius.
+设置弹窗背板的圆角半径。&lt;br /&gt;可分别设置4个圆角的半径。&lt;br /&gt;默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }&lt;br /&gt; 圆角大小受组件尺寸限制，最大值为组件宽或高的一半，若值为负，则按照默认值处理。 &lt;br /&gt; 百分比参数方式：以父元素弹窗宽和高的百分比来设置弹窗的圆角。
 
-**Type:** DialogOptionsCornerRadius
+**Type:** [DialogOptionsCornerRadius](arkts-arkui-promptaction-dialogoptionscornerradius-t.md)
 
 **Since:** 23
 
@@ -140,9 +146,9 @@ Defines the dialog's corner radius.
 height?: Dimension
 ```
 
-Defines the dialog's height.
+设置弹窗背板的高度。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认最大值：0.9 *（窗口高度 - 安全区域）。&lt;br /&gt;- 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 23
 
@@ -160,9 +166,9 @@ Defines the dialog's height.
 shadow?: DialogOptionsShadow
 ```
 
-Defines the dialog's shadow.
+设置弹窗背板的阴影。&lt;br /&gt;当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**Type:** DialogOptionsShadow
+**Type:** [DialogOptionsShadow](arkts-arkui-promptaction-dialogoptionsshadow-t.md)
 
 **Since:** 23
 
@@ -180,9 +186,9 @@ Defines the dialog's shadow.
 width?: Dimension
 ```
 
-Defines the dialog's width.
+设置弹窗背板的宽度。&lt;br /&gt;**说明：**&lt;br&gt;- 默认最大值：400vp &lt;br /&gt;- 百分比参数方式：弹窗参考宽度基于所在窗口宽度调整。
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 23
 

@@ -1,12 +1,18 @@
 # isIsolatedProcess
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## isIsolatedProcess
 
 ```TypeScript
 function isIsolatedProcess(): boolean
 ```
 
-Checks whether this process is isolated.
+检查进程是否已被隔离。
 
 **Since:** 8
 
@@ -22,9 +28,9 @@ Checks whether this process is isolated.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the process is isolated; otherwise, **false** is returned. |
+| boolean | 返回判断结果。如果进程被隔离则返回 true；否则， 返回 false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let result = process.isIsolatedProcess();

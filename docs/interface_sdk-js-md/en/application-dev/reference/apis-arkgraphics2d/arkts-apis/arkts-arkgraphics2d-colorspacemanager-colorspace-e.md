@@ -1,6 +1,6 @@
 # ColorSpace
 
-Enumerates the color space types.
+色域类型枚举。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the color space types.
 UNKNOWN = 0
 ```
 
-Unknown type.
+未知的色域类型。
 
 **Since:** 9
 
@@ -34,11 +34,11 @@ Unknown type.
 ADOBE_RGB_1998 = 1
 ```
 
-Adobe RGB (1998).
+RGB色域为Adobe RGB(1998)类型。
 
-The conversion function is of the Adobe RGB (1998) type.
+转换函数为Adobe RGB(1998)类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 9
 
@@ -56,11 +56,11 @@ The encoding range is of the Full type.
 DCI_P3 = 2
 ```
 
-DCI-P3.
+RGB色域为DCI-P3类型。
 
-The conversion function is of the Gamma 2.6 type.
+转换函数为Gamma 2.6类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 9
 
@@ -78,11 +78,11 @@ The encoding range is of the Full type.
 DISPLAY_P3 = 3
 ```
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the SRGB type.
+转换函数为SRGB类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 9
 
@@ -100,13 +100,13 @@ The encoding range is of the Full type.
 SRGB = 4
 ```
 
-SRGB.
+RGB色域为SRGB类型。
 
-The conversion function is of the SRGB type.
+转换函数为SRGB类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
-This is the default color space type.
+系统默认色域类型。
 
 **Since:** 9
 
@@ -124,11 +124,11 @@ This is the default color space type.
 BT709 = 6
 ```
 
-BT709.
+RGB色域为BT709类型。
 
-The conversion function is of the BT709 type.
+转换函数为BT709类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -146,11 +146,11 @@ The encoding range is of the Full type.
 BT601_EBU = 7
 ```
 
-BT601\_P.
+RGB色域为BT601_P类型。
 
-The conversion function is of the BT709 type.
+转换函数为BT709类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -168,11 +168,11 @@ The encoding range is of the Full type.
 BT601_SMPTE_C = 8
 ```
 
-BT601\_N.
+RGB色域为BT601_N类型。
 
-The conversion function is of the BT709 type.
+转换函数为BT709类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -190,11 +190,11 @@ The encoding range is of the Full type.
 BT2020_HLG = 9
 ```
 
-BT2020.
+RGB色域为BT2020类型。
 
-The conversion function is of the HLG type.
+转换函数为HLG类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -212,11 +212,11 @@ The encoding range is of the Full type.
 BT2020_PQ = 10
 ```
 
-BT2020.
+RGB色域为BT2020类型。
 
-The conversion function is of the PQ type.
+转换函数为PQ类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -234,11 +234,11 @@ The encoding range is of the Full type.
 P3_HLG = 11
 ```
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the HLG type.
+转换函数为HLG类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -256,11 +256,11 @@ The encoding range is of the Full type.
 P3_PQ = 12
 ```
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the PQ type.
+转换函数为PQ类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -278,11 +278,11 @@ The encoding range is of the Full type.
 ADOBE_RGB_1998_LIMIT = 13
 ```
 
-Adobe RGB (1998).
+RGB色域为Adobe RGB(1998)类型。
 
-The conversion function is of the Adobe RGB (1998) type.
+转换函数为Adobe RGB(1998)类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -300,11 +300,11 @@ The encoding range is of the Limit type.
 DISPLAY_P3_LIMIT = 14
 ```
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the SRGB type.
+转换函数为SRGB类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -322,11 +322,11 @@ The encoding range is of the Limit type.
 SRGB_LIMIT = 15
 ```
 
-SRGB.
+RGB色域为SRGB类型。
 
-The conversion function is of the SRGB type.
+转换函数为SRGB类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -344,11 +344,11 @@ The encoding range is of the Limit type.
 BT709_LIMIT = 16
 ```
 
-BT709.
+RGB色域为BT709类型。
 
-The conversion function is of the BT709 type.
+转换函数为BT709类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -366,11 +366,11 @@ The encoding range is of the Limit type.
 BT601_EBU_LIMIT = 17
 ```
 
-BT601\_P.
+RGB色域为BT601_P类型。
 
-The conversion function is of the BT709 type.
+转换函数为BT709类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -388,11 +388,11 @@ The encoding range is of the Limit type.
 BT601_SMPTE_C_LIMIT = 18
 ```
 
-BT601\_N.
+RGB色域为BT601_N类型。
 
-The conversion function is of the BT709 type.
+转换函数为BT709类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -410,11 +410,11 @@ The encoding range is of the Limit type.
 BT2020_HLG_LIMIT = 19
 ```
 
-BT2020.
+RGB色域为BT2020类型。
 
-The conversion function is of the HLG type.
+转换函数为HLG类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -432,11 +432,11 @@ The encoding range is of the Limit type.
 BT2020_PQ_LIMIT = 20
 ```
 
-BT2020.
+RGB色域为BT2020类型。
 
-The conversion function is of the PQ type.
+转换函数为PQ类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -454,11 +454,11 @@ The encoding range is of the Limit type.
 P3_HLG_LIMIT = 21
 ```
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the HLG type.
+转换函数为HLG类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -476,11 +476,11 @@ The encoding range is of the Limit type.
 P3_PQ_LIMIT = 22
 ```
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the PQ type.
+转换函数为PQ类型。
 
-The encoding range is of the Limit type.
+编码范围为Limit类型。
 
 **Since:** 11
 
@@ -498,9 +498,9 @@ The encoding range is of the Limit type.
 LINEAR_P3 = 23
 ```
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the Linear type.
+转换函数为Linear类型。
 
 **Since:** 11
 
@@ -518,9 +518,9 @@ The conversion function is of the Linear type.
 LINEAR_SRGB = 24
 ```
 
-SRGB.
+RGB色域为SRGB类型。
 
-The conversion function is of the Linear type.
+转换函数为Linear类型。
 
 **Since:** 11
 
@@ -538,11 +538,11 @@ The conversion function is of the Linear type.
 LINEAR_BT709 = LINEAR_SRGB
 ```
 
-Same as that of LINEAR\_SRGB.
+与LINEAR_SRGB相同。
 
-BT709.
+RGB色域为BT709类型。
 
-The conversion function is of the Linear type.
+转换函数为Linear类型。
 
 **Since:** 11
 
@@ -560,9 +560,9 @@ The conversion function is of the Linear type.
 LINEAR_BT2020 = 25
 ```
 
-BT2020.
+RGB色域为BT2020类型。
 
-The conversion function is of the Linear type.
+转换函数为Linear类型。
 
 **Since:** 11
 
@@ -580,13 +580,13 @@ The conversion function is of the Linear type.
 DISPLAY_SRGB = SRGB
 ```
 
-Same as that of SRGB.
+与SRGB相同。
 
-SRGB.
+RGB色域为SRGB类型。
 
-The conversion function is of the SRGB type.
+转换函数为SRGB类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -604,13 +604,13 @@ The encoding range is of the Full type.
 DISPLAY_P3_SRGB = DISPLAY_P3
 ```
 
-Same as that of DISPLAY\_P3.
+与DISPLAY_P3相同。
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the SRGB type.
+转换函数为SRGB类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -628,13 +628,13 @@ The encoding range is of the Full type.
 DISPLAY_P3_HLG = P3_HLG
 ```
 
-Same as that of P3\_HLG.
+与P3_HLG相同。
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the HLG type.
+转换函数为HLG类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -652,13 +652,13 @@ The encoding range is of the Full type.
 DISPLAY_P3_PQ = P3_PQ
 ```
 
-Same as that of P3\_PQ.
+与P3_PQ相同。
 
-Display P3.
+RGB色域为Display P3类型。
 
-The conversion function is of the PQ type.
+转换函数为PQ类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 11
 
@@ -676,9 +676,9 @@ The encoding range is of the Full type.
 H_LOG = 26
 ```
 
-BT2020.
+RGB色域为BT2020类型。
 
-The conversion function is of the LOG type.
+转换函数为LOG类型。
 
 **Since:** 18
 
@@ -694,11 +694,11 @@ The conversion function is of the LOG type.
 DISPLAY_BT2020_SRGB = 27
 ```
 
-DISPLAY BT2020.
+RGB色域为DISPLAY BT2020类型。
 
-The conversion function is of the SRGB type.
+转换函数为SRGB类型。
 
-The encoding range is of the Full type.
+编码范围为Full类型。
 
 **Since:** 20
 
@@ -714,7 +714,7 @@ The encoding range is of the Full type.
 CUSTOM = 5
 ```
 
-Custom type.
+用户自定义色域类型。
 
 **Since:** 9
 

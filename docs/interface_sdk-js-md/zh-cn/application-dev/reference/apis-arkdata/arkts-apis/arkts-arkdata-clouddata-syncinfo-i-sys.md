@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
@@ -80,7 +86,7 @@ syncStatus?: SyncStatus
 
 最近一次端云同步的状态，默认值为cloudData.SyncStatus.RUNNING。
 
-**类型：** SyncStatus
+**类型：** [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md)
 
 **起始版本：** 18
 

@@ -1,6 +1,6 @@
 # DialogInfo
 
-The definition of dialog information.
+对话框信息的定义。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ The definition of dialog information.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## buttons
 
 ```TypeScript
 buttons?: DialogButtonInfo[]
 ```
 
-Buttons of the dialog.
+对话框按钮的数组。
 
-**Type:** DialogButtonInfo[]
+**Type:** [DialogButtonInfo](arkts-avsession-avmusictemplate-dialogbuttoninfo-i.md)[]
 
 **Since:** 23
 
@@ -36,7 +42,7 @@ Buttons of the dialog.
 description?: string
 ```
 
-Other message of the dialog.
+对话框的其他信息。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Other message of the dialog.
 dialogId: string
 ```
 
-Unique id of the dialog.
+对话框的唯一ID。
 
 **Type:** string
 
@@ -76,9 +82,9 @@ Unique id of the dialog.
 dialogType: DialogType
 ```
 
-Type of the dialog.
+对话框的类型。
 
-**Type:** DialogType
+**Type:** [DialogType](arkts-avsession-avmusictemplate-dialogtype-e.md)
 
 **Since:** 23
 
@@ -96,9 +102,11 @@ Type of the dialog.
 qrCodes?: QrCodeInfo[]
 ```
 
-QR code of the dialog.Once the QR code information is set,this pop-up will be recognized as a QR code pop-up and will display the QR code information with priority.A maximum of two can be set.
+对话框二维码的数组。
 
-**Type:** QrCodeInfo[]
+当设置了二维码信息时，此对话框将被识别为二维码对话框，并将优先显示二维码信息。最多可以设置两个。
+
+**Type:** [QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]
 
 **Since:** 23
 
@@ -116,7 +124,7 @@ QR code of the dialog.Once the QR code information is set,this pop-up will be re
 text?: string
 ```
 
-Text content of the dialog.
+对话框的内容。
 
 **Type:** string
 
@@ -136,7 +144,7 @@ Text content of the dialog.
 title?: string
 ```
 
-Title of the dialog.
+对话框的标题。
 
 **Type:** string
 

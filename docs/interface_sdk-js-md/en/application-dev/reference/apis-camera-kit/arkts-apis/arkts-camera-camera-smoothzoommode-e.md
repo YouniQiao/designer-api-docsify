@@ -1,6 +1,6 @@
 # SmoothZoomMode
 
-Enumerates the smooth zoom modes.
+平滑变焦模式。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the smooth zoom modes.
 NORMAL = 0
 ```
 
-Bessel curve mode.
+贝塞尔曲线模式。
 
 **Since:** 11
 

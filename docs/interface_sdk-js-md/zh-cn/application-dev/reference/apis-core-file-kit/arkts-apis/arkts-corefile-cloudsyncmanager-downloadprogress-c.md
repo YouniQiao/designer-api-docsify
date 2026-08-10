@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## downloadedSize
 
 ```TypeScript
 downloadedSize: long
 ```
 
-已下载数据大小，取值范围[0, INT64\_MAX)，单位：Byte。进度异常时返回INT64\_MAX。
+已下载数据大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 
@@ -34,9 +40,9 @@ downloadedSize: long
 failedCount: int
 ```
 
-下载失败的文件个数，取值范围[0, INT32\_MAX]，单位：个。进度异常时返回-1。
+下载失败的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -54,7 +60,7 @@ state: DownloadState
 
 下载任务的状态。
 
-**类型：** DownloadState
+**类型：** [DownloadState](arkts-corefile-cloudsyncmanager-downloadstate-e.md)
 
 **起始版本：** 20
 
@@ -72,7 +78,7 @@ stopReason: DownloadStopReason
 
 下载停止的原因。
 
-**类型：** DownloadStopReason
+**类型：** [DownloadStopReason](arkts-corefile-cloudsyncmanager-downloadstopreason-e.md)
 
 **起始版本：** 20
 
@@ -88,9 +94,9 @@ stopReason: DownloadStopReason
 successfulCount: int
 ```
 
-已下载的文件个数，取值范围[0, INT32\_MAX]，单位：个。进度异常时返回-1。
+已下载的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -106,9 +112,9 @@ successfulCount: int
 totalCount: int
 ```
 
-待下载文件总个数，取值范围[0, INT32\_MAX]，单位：个。进度异常时返回-1。
+待下载文件总个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -124,9 +130,9 @@ totalCount: int
 totalSize: long
 ```
 
-需要下载文件的总大小，取值范围[0, INT64\_MAX)，单位：Byte。进度异常时返回INT64\_MAX。
+需要下载文件的总大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 

@@ -1,5 +1,11 @@
 # openFormEditAbility
 
+## Modules to Import
+
+```TypeScript
+import { formProvider } from 'kits/@kit.FormKit';
+```
+
 ## openFormEditAbility
 
 ```TypeScript
@@ -22,20 +28,20 @@ Opens the widget editing page.
 | --- | --- | --- | --- |
 | abilityName | string | Yes | Ability name on the editing page. |
 | formId | string | Yes | Widget ID. |
-| isMainPage | boolean | No | Whether the page is the main editing page.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **true**: The page is the main editing page.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **false**: The page is not the main editing page.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **true**. |
+| isMainPage | boolean | No | Whether the page is the main editing page.&lt;br&gt;- **true**: The page is the main editing page.&lt;br&gt;- **false**: The page is not the main editing page.&lt;br&gt;Default value: **true**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function openFormEditAbility cannot work correctly due to limited device capabilities. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
-| [16501007](../errorcode-form.md#16501007-untrusted-widget) | Form is not trust. |
+| 16501003 | The form cannot be operated by the current application. |
+| 801 | Capability not supported.function openFormEditAbility cannot work correctly due to limited device capabilities. |
+| 16501000 | An internal functional error occurred. |
+| 16501007 | Form is not trust. |
+| 16500050 | IPC connection error. |
+| 16500100 | Failed to obtain the configuration information. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formProvider } from '@kit.FormKit';

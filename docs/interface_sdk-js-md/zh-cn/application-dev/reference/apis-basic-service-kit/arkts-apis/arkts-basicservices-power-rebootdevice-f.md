@@ -1,5 +1,11 @@
 # rebootDevice
 
+## 导入模块
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## rebootDevice
 
 ```TypeScript
@@ -28,7 +34,7 @@ function rebootDevice(reason: string): void
 | --- | --- | --- | --- |
 | reason | string | 是 | 重启原因。例如，“updater”表示重启后进入更新模式。如果未指定该参数，系统将在重启后进入正常模式。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 power.rebootDevice('reboot_test');

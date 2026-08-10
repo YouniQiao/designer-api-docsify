@@ -1,6 +1,6 @@
 # DisplaySync
 
-An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback.Before calling any of the following APIs, you must use [displaySync.create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a **DisplaySync** instance.
+期望帧率和回调函数设置实例。用于设置期望帧率范围、注册帧回调函数，以及启动和停止帧回调。下列API示例中都需先使用displaySync.create()方法获取到DisplaySync实例，再通过此实例调用对应方法。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ An object that implements the setting of the frame rate and callback. It provide
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## off('frame')
 
 ```TypeScript
 off(type: 'frame', callback?: Callback<IntervalInfo>): void
 ```
 
-Unsubscribes from change events of each frame.
+取消订阅每一帧的变化。与on('frame')方法配对使用。取消成功后，将不再触发回调函数。
 
 **Since:** 11
 
@@ -30,10 +36,10 @@ Unsubscribes from change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IntervalInfo&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'frame' | Yes | 设置回调的类型（只能是'frame'类型）。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IntervalInfo&gt; | No | 传入调用on('frame')时注册的回调函数，用于取消订阅该回调函数。必须在已通过on('frame')注册回调后使用。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callback = (frameInfo: displaySync.IntervalInfo) => {
@@ -52,7 +58,7 @@ backDisplaySync?.off("frame", callback)
 offFrame(callback?: Callback<IntervalInfo>): void
 ```
 
-Unsubscribes from change events of each frame.
+取消订阅每一帧的变化。
 
 **Since:** 23
 
@@ -66,7 +72,7 @@ Unsubscribes from change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IntervalInfo&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IntervalInfo&gt; | No | 订阅函数，参数不填时，默认取消全部订阅函数。 |
 
 ## on('frame')
 
@@ -74,7 +80,7 @@ Unsubscribes from change events of each frame.
 on(type: 'frame', callback: Callback<IntervalInfo>): void
 ```
 
-Subscribes to change events of each frame.
+订阅每一帧的变化。注册回调函数后，还需调用start方法启动DisplaySync，系统才会在每一帧触发该回调。和off('frame')方法配对使用，用于取消注册回调函数。字段需为非负整数，取值范围为[0, 设备最大帧率]，且满足min <= expected <= max。超出有效范围时参数校验失败。
 
 **Since:** 11
 
@@ -88,10 +94,10 @@ Subscribes to change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IntervalInfo&gt; | Yes | Callback used for subscription. |
+| type | 'frame' | Yes | 设置回调的类型（只能是'frame'类型）。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IntervalInfo&gt; | Yes | 订阅帧变化的回调函数。IntervalInfo包含timestamp（当前帧到达时间）和targetTimestamp（下一帧预期到达时间）两个属性，单位均为纳秒。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callback = (frameInfo: displaySync.IntervalInfo) => {
@@ -108,7 +114,7 @@ backDisplaySync?.on("frame", callback)
 onFrame(callback: Callback<IntervalInfo>): void
 ```
 
-Subscribes to change events of each frame.
+订阅每一帧的变化。
 
 **Since:** 23
 
@@ -122,7 +128,7 @@ Subscribes to change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IntervalInfo&gt; | Yes | Callback used for subscription. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IntervalInfo&gt; | Yes | 订阅函数。 |
 
 ## setExpectedFrameRateRange
 
@@ -130,7 +136,7 @@ Subscribes to change events of each frame.
 setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 ```
 
-Sets the expected frame rate range.
+设置期望的帧率范围。设置的期望帧率范围将作为系统调度的参考，系统会尽量在此范围内调整绘制帧率。未调用该方法或传入ExpectedFrameRateRange(0, 0, 0)时将跟随应用当前运行的帧率。建议在调用start前设置，以便立即生效；调用start之后设置也可生效但可能存在延迟。
 
 **Since:** 11
 
@@ -144,15 +150,15 @@ Sets the expected frame rate range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Expected frame rate range. |
+| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | 设置DisplaySync期望的帧率范围，包含expected、min和max三个字段，单位为帧/秒（fps）， 字段需为非负整数，取值范围为[0, 设备最大帧率]，且满足min <= expected <= max。超出有效范围时会抛出401错误码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {
@@ -171,7 +177,7 @@ backDisplaySync?.setExpectedFrameRateRange(range)
 start(): void
 ```
 
-Starts callback for each frame.
+使通过setExpectedFrameRateRange设置的期望帧率范围生效；如果通过on('frame')注册了回调函数，则开始请求VSync信号，触发已注册的回调，每帧执行一次。和stop方法配对使用。
 
 **Since:** 11
 
@@ -181,7 +187,7 @@ Starts callback for each frame.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Example**
+## Examples
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {
@@ -234,7 +240,7 @@ struct Index {
 stop(): void
 ```
 
-Stops callback for each frame.
+关闭期望帧率范围并且停止每帧回调。需在调用start后使用，停止后DisplaySync的配置（如期望帧率范围、回调函数）仍然保留，可随时通过start重新启动。stop方法会解除DisplaySync与UI上下文和窗口的关联，通常无需特定的UI上下文。
 
 **Since:** 11
 
@@ -244,7 +250,7 @@ Stops callback for each frame.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Example**
+## Examples
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {

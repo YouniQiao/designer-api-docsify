@@ -1,5 +1,11 @@
 # revokeQuickFix（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { quickFixManager } from 'kits/@kit.AbilityKit';
+```
+
 ## revokeQuickFix
 
 ```TypeScript
@@ -25,19 +31,19 @@ function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 需要撤销补丁的应用Bundle名称。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当撤销快速修复成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当撤销快速修复成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [18500001](../errorcode-ability.md#18500001-指定的包名无效) | The bundle does not exist or no patch has been applied. |
-| [18500009](../errorcode-ability.md#18500009-该应用当前有正在处理的快速修复任务) | The application has an ongoing quick fix task. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 18500009 | The application has an ongoing quick fix task. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
+| 18500001 | The bundle does not exist or no patch has been applied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';
@@ -88,13 +94,13 @@ function revokeQuickFix(bundleName: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [18500001](../errorcode-ability.md#18500001-指定的包名无效) | The bundle does not exist or no patch has been applied. |
-| [18500009](../errorcode-ability.md#18500009-该应用当前有正在处理的快速修复任务) | The application has an ongoing quick fix task. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 18500009 | The application has an ongoing quick fix task. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
+| 18500001 | The bundle does not exist or no patch has been applied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';

@@ -1,6 +1,6 @@
 # USBInterface
 
-Represents a USB interface. One [USBConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can contain multiple **USBInterface** instances,each providing a specific function.
+一个[USBConfig](arkts-basicservices-usb-usbconfig-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ Represents a USB interface. One [USBConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## alternateSetting
 
 ```TypeScript
 alternateSetting: number
 ```
 
-Settings for alternating between descriptors of the same USB interface.
+在同一个接口中的多个描述符中进行切换设置。
 
 **Type:** number
 
@@ -42,7 +48,7 @@ Settings for alternating between descriptors of the same USB interface.
 clazz: number
 ```
 
-Device type.
+设备类型。
 
 **Type:** number
 
@@ -64,7 +70,7 @@ Device type.
 endpoints: Array<USBEndpoint>
 ```
 
-Endpoints that belong to the USB interface.
+当前接口所包含的端点。
 
 **Type:** Array&lt;USBEndpoint&gt;
 
@@ -86,7 +92,7 @@ Endpoints that belong to the USB interface.
 id: number
 ```
 
-Unique ID of the USB interface.
+接口的唯一标识。
 
 **Type:** number
 
@@ -108,7 +114,7 @@ Unique ID of the USB interface.
 name: string
 ```
 
-Interface name.
+接口名称。
 
 **Type:** string
 
@@ -130,7 +136,7 @@ Interface name.
 protocol: number
 ```
 
-Interface protocol.
+接口的协议。
 
 **Type:** number
 
@@ -152,7 +158,7 @@ Interface protocol.
 subClass: number
 ```
 
-Device subclass.
+设备子类。
 
 **Type:** number
 

@@ -1,13 +1,13 @@
 # ConcatArray
 
-An array-like object that can be concatenated. This API extends **ISendable**.
-    **NOTE**  
-    
-    - This module can be imported only to ArkTS files (with the file name extension .ets).  
-    This section uses the following to identify the use of generics:
+该接口定义了支持数组连接操作的对象，并继承了`ISendable`接口，使其兼具高效数组拼接和跨线程传递能力。
 
-- T: type, which can be any of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> 文档中存在泛型的使用，涉及以下泛型标记符：
+
+- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
 
 **Inheritance/Implementation:** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md)
 
@@ -19,13 +19,19 @@ An array-like object that can be concatenated. This API extends **ISendable**.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { collections } from 'kits/@kit.ArkTS';
+```
+
 ## join
 
 ```TypeScript
 join(separator?: string): string
 ```
 
-Concatenates all elements in this array into a string, with a given separator.
+将ConcatArray的所有元素连接成一个字符串，元素之间可以用指定的分隔符分隔。
 
 **Since:** 12
 
@@ -41,13 +47,13 @@ Concatenates all elements in this array into a string, with a given separator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
+| separator | string | No | 用于分隔ConcatArray元素的字符串。如果省略，则使用逗号分隔。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | String obtained. If the array is empty, an empty string is returned. |
+| string | 包含所有ConcatArray元素连接成的字符串。如果ConcatArray为空，则返回空字符串。 |
 
 ## slice
 
@@ -55,7 +61,7 @@ Concatenates all elements in this array into a string, with a given separator.
 slice(start?: number, end?: number): ConcatArray<T>
 ```
 
-Selects a range of elements in this array to create an array.
+返回一个新的ConcatArray，该ConcatArray是原始ConcatArray的切片。
 
 **Since:** 12
 
@@ -71,14 +77,14 @@ Selects a range of elements in this array to create an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of 'start + array.length' The default value is '0'. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of 'end + array.length'. The default value is the length of the ArkTS array. |
+| start | number | No | 开始索引。如果`start < 0`，则会从`start + array.length`位置开始。默认值为0。 |
+| end | number | No | 结束索引（不包括该元素）。如果`end < 0`，则会到`end + array.length`位置结束。默认为ArkTS Array的长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | New array containing the selected elements. |
+| [ConcatArray](arkts-arkts-concatarray-i.md)&lt;T&gt; | 包含原始ConcatArray切片的新ConcatArray。 |
 
 ## [index: number]
 
@@ -86,7 +92,7 @@ Selects a range of elements in this array to create an array.
 readonly [index: number]: T
 ```
 
-Returns the element at a given index in this ConcatArray.
+返回ConcatArray指定索引位置的元素。
 
 **Type:** T
 
@@ -104,7 +110,7 @@ Returns the element at a given index in this ConcatArray.
 readonly length: number
 ```
 
-Number of elements in a ConcatArray.
+ConcatArray的元素个数。
 
 **Type:** number
 

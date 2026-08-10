@@ -1,12 +1,18 @@
 # isFlashReminderEnabled
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isFlashReminderEnabled
 
 ```TypeScript
 function isFlashReminderEnabled(): Promise<boolean>
 ```
 
-Checks whether flash alerts mode is enabled. This API uses a promise to return the result.
+判断闪烁提醒模式是否开启。使用Promise异步回调。
 
 **Since:** 23
 
@@ -22,9 +28,9 @@ Checks whether flash alerts mode is enabled. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if flash alerts mode is enabled; returns **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示闪烁提醒模式已开启；返回false表示闪烁提醒模式已关闭。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

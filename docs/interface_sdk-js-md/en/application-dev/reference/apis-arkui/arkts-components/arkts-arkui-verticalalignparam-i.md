@@ -1,6 +1,6 @@
 # VerticalAlignParam
 
-Defines the vertical align rule of relative container.
+定义相对容器的垂直对齐规则。
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Sets the vertical alignment relative to the anchor component.
 
 Anonymous Object Rectification
 
-**Type:** VerticalAlign
+**Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
 **Since:** 23
 

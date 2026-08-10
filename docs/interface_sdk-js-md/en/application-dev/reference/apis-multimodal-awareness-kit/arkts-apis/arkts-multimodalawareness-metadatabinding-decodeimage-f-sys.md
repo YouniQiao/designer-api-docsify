@@ -1,5 +1,11 @@
 # decodeImage (System API)
 
+## Modules to Import
+
+```TypeScript
+import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## decodeImage
 
 ```TypeScript
@@ -34,11 +40,11 @@ Decodes the information carried in the image. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
-| [32100003](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100003-decoding-failed) | Decode process fail. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Image is not an encoded Image. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Image destroyed, decoding failed. |
+| 32100001 | Internal handling failed. |
+| 202 | Permission check failed. A non-system application uses the system API. |
+| 32100003 | Decode process fail. Possible causes: &lt;br&gt;1. Image is not an encoded Image. &lt;br&gt;2. Image destroyed, decoding failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

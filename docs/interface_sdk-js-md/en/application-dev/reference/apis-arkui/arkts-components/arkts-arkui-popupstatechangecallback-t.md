@@ -4,7 +4,7 @@
 declare type PopupStateChangeCallback = (event: PopupStateChangeParam) => void
 ```
 
-Represents the callback invoked when the popup state changes.
+气泡状态变化事件回调。
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ Represents the callback invoked when the popup state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Display state of the popup.  |
+| event | [PopupStateChangeParam](../arkts-apis/arkts-arkui-common-popupstatechangeparam-i.md) | Yes | 气泡当前的显示状态。 |
 

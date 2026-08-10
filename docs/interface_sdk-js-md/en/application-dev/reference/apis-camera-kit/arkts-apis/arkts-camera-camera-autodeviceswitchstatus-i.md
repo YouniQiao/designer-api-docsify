@@ -1,6 +1,6 @@
 # AutoDeviceSwitchStatus
 
-Describes the information about the automatic camera switch status.
+自动切换镜头状态信息。
 
 **Since:** 13
 
@@ -10,14 +10,19 @@ Describes the information about the automatic camera switch status.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isDeviceCapabilityChanged
 
 ```TypeScript
 readonly isDeviceCapabilityChanged: boolean
 ```
 
-Whether the camera capability is changed after the camera is automatically switched. **true** if changed,  
-**false** otherwise.
+自动切换镜头成功后，其镜头能力值是否发生改变。true表示发生变化，false表示未发生变化。
 
 **Type:** boolean
 
@@ -37,7 +42,7 @@ Whether the camera capability is changed after the camera is automatically switc
 readonly isDeviceSwitched: boolean
 ```
 
-Whether the camera is automatically switched. **true** if auto-switched, **false** otherwise.
+自动切换镜头是否成功。true表示成功，false表示失败。
 
 **Type:** boolean
 

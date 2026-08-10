@@ -1,6 +1,6 @@
 # SystemSoundError
 
-Error enum for system sound.
+枚举，系统声音错误类型。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Error enum for system sound.
 ERROR_IO = 5400103
 ```
 
-IO error.
+IO错误。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ IO error.
 ERROR_OK = 20700000
 ```
 
-No error.
+无错误。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ No error.
 ERROR_TYPE_MISMATCH = 20700001
 ```
 
-Type mismatch.
+类型不匹配错误。
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ Type mismatch.
 ERROR_UNSUPPORTED_OPERATION = 20700003
 ```
 
-Unsupported operation.
+不支持的操作错误。
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ Unsupported operation.
 ERROR_DATA_TOO_LARGE = 20700004
 ```
 
-Data size exceeds the limit.
+数据大小超限错误。
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ Data size exceeds the limit.
 ERROR_TOO_MANY_FILES = 20700005
 ```
 
-The number of files exceeds the limit.
+文件个数超过限制错误。
 
 **Since:** 20
 
@@ -112,7 +112,7 @@ The number of files exceeds the limit.
 ERROR_INSUFFICIENT_ROM = 20700006
 ```
 
-Insufficient ROM space.
+ROM空间不足错误。
 
 **Since:** 20
 
@@ -128,7 +128,7 @@ Insufficient ROM space.
 ERROR_INVALID_PARAM = 20700007
 ```
 
-Invalid parameter.
+参数非法错误。
 
 **Since:** 20
 

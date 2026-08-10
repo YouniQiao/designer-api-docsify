@@ -66,7 +66,7 @@ styledKey: StyledStringKey
 
 样式类型的枚举值。
 
-**类型：** StyledStringKey
+**类型：** [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)
 
 **起始版本：** 12
 
@@ -88,7 +88,7 @@ styledValue: StyledStringValue
 
 用于设置属性字符串样式的样式对象。
 
-**类型：** StyledStringValue
+**类型：** [StyledStringValue](arkts-arkui-styledstringvalue-t.md)
 
 **起始版本：** 12
 

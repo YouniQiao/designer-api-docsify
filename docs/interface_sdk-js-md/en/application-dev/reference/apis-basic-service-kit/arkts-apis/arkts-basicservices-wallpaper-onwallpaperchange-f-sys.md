@@ -1,12 +1,18 @@
 # onWallpaperChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onWallpaperChange
 
 ```TypeScript
 function onWallpaperChange(callback: WallpaperChangeObserver): void
 ```
 
-Registers a listener for wallpaper changes to receive notifications about the changes.
+订阅壁纸变化通知事件。不支持多线程并发调用。
 
 **Since:** 23
 
@@ -22,11 +28,11 @@ Registers a listener for wallpaper changes to receive notifications about the ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The observer of wallpaper change. |
+| callback | [WallpaperChangeObserver](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| 202 | permission verification failed, application which is not a system application uses system API. |
 

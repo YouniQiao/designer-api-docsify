@@ -1,12 +1,18 @@
 # getStartRealtime
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getStartRealtime
 
 ```TypeScript
 function getStartRealtime(): number
 ```
 
-Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts.
+获取系统启动到进程启动的实时时间（以毫秒为单位，不包含系统休眠时间）。
 
 **Since:** 8
 
@@ -22,9 +28,9 @@ Obtains the duration (excluding the system sleep time), in milliseconds, from th
 
 | Type | Description |
 | --- | --- |
-| number | Duration obtained, in milliseconds. |
+| number | 返回经过的实时时间。单位：毫秒。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let realtime = process.getStartRealtime();

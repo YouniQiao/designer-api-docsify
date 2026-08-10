@@ -18,9 +18,9 @@ backgroundBlurStyle?: BlurStyle
 
 设置蒙层模糊材质。
 
-默认值：BlurStyle.BACKGROUND\_THIN
+默认值：BlurStyle.BACKGROUND_THIN
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.BACKGROUND_THIN
 
@@ -44,9 +44,9 @@ color?: ResourceColor
 
 设置蒙层颜色。
 
-默认值：\$r('sys.color.ohos\_id\_color\_mask\_thin')
+默认值：\$r('sys.color.ohos_id_color_mask_thin')
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 20
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
+## 导入模块
+
+```TypeScript
+import { fileUri } from 'kits/@kit.CoreFileKit';
+```
+
 ## 汇总
 
 ### 函数

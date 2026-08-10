@@ -20,6 +20,6 @@ type WatermarkCallback = (jobId: string, fd: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobId | string | 是 | 表示当前打印任务的id。  |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示当前文件的文件描述符。  |
+| jobId | string | 是 | 表示当前打印任务的id。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示当前文件的文件描述符。 |
 

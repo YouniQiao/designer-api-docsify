@@ -1,6 +1,6 @@
 # ScrollState
 
-Enumerates the scrolling states.
+滑动状态枚举。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the scrolling states.
 Idle
 ```
 
-Idle state. Triggered when the scroll state returns to idle, and when the controller's non-animated methods are used to control the scroll.
+空闲状态。滚动状态回归空闲时触发，控制器提供的无动画方法控制滚动时触发。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Idle state. Triggered when the scroll state returns to idle, and when the contro
 Scroll
 ```
 
-Scrolling state. Triggered when the list is dragged with the finger, when the scrollbar is dragged, or when the mouse scroll wheel is used.
+滚动状态。手指拖动List，拖动滚动条和滚动鼠标滚轮时触发。
 
 **Since:** 7
 
@@ -56,11 +56,11 @@ Scrolling state. Triggered when the list is dragged with the finger, when the sc
 Fling
 ```
 
-Inertial scrolling state. Triggered by all animated scroll actions. This includes: Inertial scrolling that occurs after a fling;
+惯性滚动状态。动画控制的滚动都会触发。包括快速划动松手后的惯性滚动，
 
-Bounce-back scrolling when the swipe reaches the edge; Inertial scrolling after quickly dragging the built-in scrollbar and releasing;
+划动到边缘回弹的滚动，快速拖动内置滚动条松手后的惯性滚动，
 
-Scrolling controlled by the animated methods provided by the scroller.
+使用滚动控制器提供的带动画的方法控制的滚动。
 
 **Since:** 7
 

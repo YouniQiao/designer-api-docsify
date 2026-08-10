@@ -1,7 +1,6 @@
 # Dirent
 
-Provides information about files and directories. Before calling an API of the **Dirent** class, use  
-[dir.read()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ synchronously or asynchronously to create a **Dirent** instance.
+在调用Dirent的方法前，需要先通过[dir.read()](arkts-corefile-fileio-read-f.md#read)方法（同步或异步）来构建一个Dirent实例。
 
 **Since:** 6
 
@@ -21,7 +20,7 @@ Provides information about files and directories. Before calling an API of the *
 isBlockDevice(): boolean
 ```
 
-Checks whether this directory entry is a block special file. A block special file supports access by block only,and it is cached when accessed.
+用于判断当前目录项是否是块特殊文件。一个块特殊文件只能以块为粒度进行访问，且访问的时候带缓存。
 
 **Since:** 6
 
@@ -39,9 +38,9 @@ Checks whether this directory entry is a block special file. A block special fil
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a block special file; returns **false** otherwise. |
+| boolean | 表示当前目录项是否是块特殊设备。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -54,7 +53,7 @@ let isBLockDevice = dir.readSync().isBlockDevice();
 isCharacterDevice(): boolean
 ```
 
-Checks whether this directory entry is a character special file. A character special file supports random access,and it is not cached when accessed.
+用于判断当前目录项是否是字符特殊设备。一个字符特殊设备可进行随机访问，且访问的时候不带缓存。
 
 **Since:** 6
 
@@ -72,9 +71,9 @@ Checks whether this directory entry is a character special file. A character spe
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
+| boolean | 表示当前目录项是否是字符特殊设备。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -87,7 +86,7 @@ let isCharacterDevice = dir.readSync().isCharacterDevice();
 isDirectory(): boolean
 ```
 
-Checks whether this directory entry is a directory.
+用于判断当前目录项是否是目录。
 
 **Since:** 6
 
@@ -105,9 +104,9 @@ Checks whether this directory entry is a directory.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a directory; returns **false** otherwise. |
+| boolean | 表示当前目录项是否是目录。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -120,7 +119,7 @@ let isDirectory = dir.readSync().isDirectory();
 isFIFO(): boolean
 ```
 
-Checks whether this directory entry is a named pipe (also called FIFO). Named pipes are used for inter-process communication.
+用于判断当前目录项是否是命名管道（有时也称为FIFO）。命名管道通常用于进程间通信。
 
 **Since:** 6
 
@@ -138,9 +137,9 @@ Checks whether this directory entry is a named pipe (also called FIFO). Named pi
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
+| boolean | 表示当前目录项是否是FIFO。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -153,7 +152,7 @@ let isFIFO = dir.readSync().isFIFO();
 isFile(): boolean
 ```
 
-Checks whether this directory entry is a regular file.
+用于判断当前目录项是否是普通文件。
 
 **Since:** 6
 
@@ -171,9 +170,9 @@ Checks whether this directory entry is a regular file.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a regular file; returns **false** otherwise. |
+| boolean | 表示当前目录项是否是普通文件。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -186,7 +185,7 @@ let isFile = dir.readSync().isFile();
 isSocket(): boolean
 ```
 
-Checks whether this directory entry is a socket.
+用于判断当前目录项是否是套接字。
 
 **Since:** 6
 
@@ -204,9 +203,9 @@ Checks whether this directory entry is a socket.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a socket; returns **false** otherwise. |
+| boolean | 表示当前目录项是否是套接字。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -219,7 +218,7 @@ let isSocket = dir.readSync().isSocket();
 isSymbolicLink(): boolean
 ```
 
-Checks whether this directory entry is a symbolic link.
+用于判断当前目录项是否是符号链接。
 
 **Since:** 6
 
@@ -237,9 +236,9 @@ Checks whether this directory entry is a symbolic link.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
+| boolean | 表示当前目录项是否是符号链接。true为是，false为不是。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -252,7 +251,7 @@ let isSymbolicLink = dir.readSync().isSymbolicLink();
 readonly name: string
 ```
 
-Directory entry name.
+目录项的名称。
 
 **Type:** string
 

@@ -1,12 +1,18 @@
 # addWatcher
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addWatcher
 
 ```TypeScript
 function addWatcher(watcher: Watcher): AppEventPackageHolder
 ```
 
-Adds an event watcher. You can use the callback of the event watcher to subscribe to events.
+添加事件观察者。可通过事件观察者的回调函数监听事件。
 
 **Since:** 9
 
@@ -22,26 +28,26 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event watcher. |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes | 事件观察者。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Subscription data holder. If the subscription fails, **null** is returned. |
+| [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | 订阅数据持有者。订阅失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [11102001](../errorcode-hiappevent.md#11102001-invalid-watcher-name) | Invalid watcher name. Possible causes: 1. Contain invalid characters; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Length is invalid. |
-| [11102002](../errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) | Invalid filtering event domain. Possible causes: 1. Contain invalid characters; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Length is invalid. |
-| [11102003](../errorcode-hiappevent.md#11102003-invalid-event-number) | Invalid row value. Possibly caused by the row value is less than zero. |
-| [11102004](../errorcode-hiappevent.md#11102004-invalid-event-size) | Invalid size value. Possibly caused by the size value is less than zero. |
-| [11102005](../errorcode-hiappevent.md#11102005-invalid-timeout-value) | Invalid timeout value. Possibly caused by the timeout value is less than zero. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| 11102001 | Invalid watcher name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| 11102003 | Invalid row value. Possibly caused by the row value is less than zero. |
+| 11102002 | Invalid filtering event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| 11102005 | Invalid timeout value. Possibly caused by the timeout value is less than zero. |
+| 11102004 | Invalid size value. Possibly caused by the size value is less than zero. |
 
-**Example**
+## Examples
 
 Method 1: Set triggerCondition to implement the onTrigger() callback. When the callback conditions are met, the system automatically triggers the callback.
 
@@ -132,7 +138,7 @@ hiAppEvent.addWatcher({
     for (const eventGroup of appEventGroups) {
       hilog.info(0x0000, 'hiAppEvent', `eventName=${eventGroup.name}`);
       for (const eventInfo of eventGroup.appEventInfos) {
-        hilog.info(0x0000, 'hiAppEvent', `event=${JSON.stringify(eventInfo)}`, );
+        hilog.info(0x0000, 'hiAppEvent', `event=${JSON.stringify(eventInfo)}`);
       }
     }
   }

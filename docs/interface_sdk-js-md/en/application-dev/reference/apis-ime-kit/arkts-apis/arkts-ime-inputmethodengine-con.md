@@ -6,7 +6,7 @@
 const CURSOR_DOWN: int
 ```
 
-The caret moves downward.
+光标下移。
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ The caret moves downward.
 const CURSOR_LEFT: int
 ```
 
-The caret moves leftward.
+光标左移。
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ The caret moves leftward.
 const CURSOR_RIGHT: int
 ```
 
-The caret moves rightward.
+光标右移。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ The caret moves rightward.
 const CURSOR_UP: int
 ```
 
-The caret moves upward.
+光标上移。
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ The caret moves upward.
 const DISPLAY_MODE_FULL: int
 ```
 
-The edit box is displayed in full screen.
+编辑框显示为全屏。
 
 **Since:** 8
 
@@ -86,7 +86,7 @@ The edit box is displayed in full screen.
 const DISPLAY_MODE_PART: int
 ```
 
-The edit box is displayed in half-screen mode.
+编辑框显示为半屏。
 
 **Since:** 8
 
@@ -102,7 +102,7 @@ The edit box is displayed in half-screen mode.
 const ENTER_KEY_TYPE_DONE: int
 ```
 
-Key that indicates that a task or input is complete.
+“回车”功能键。
 
 **Since:** 8
 
@@ -118,7 +118,7 @@ Key that indicates that a task or input is complete.
 const ENTER_KEY_TYPE_GO: int
 ```
 
-Key that executes a command or navigates to a specific location.
+“前往”功能键。
 
 **Since:** 8
 
@@ -134,7 +134,7 @@ Key that executes a command or navigates to a specific location.
 const ENTER_KEY_TYPE_NEWLINE: int
 ```
 
-Key that inserts a new line.
+“换行”功能键。
 
 **Since:** 12
 
@@ -150,7 +150,7 @@ Key that inserts a new line.
 const ENTER_KEY_TYPE_NEXT: int
 ```
 
-Key that moves the focus to the next item in a sequence.
+“下一个”功能键。
 
 **Since:** 8
 
@@ -166,7 +166,7 @@ Key that moves the focus to the next item in a sequence.
 const ENTER_KEY_TYPE_PREVIOUS: int
 ```
 
-Key that moves the focus to the previous item in a sequence.
+“前一个”功能键。
 
 **Since:** 8
 
@@ -182,7 +182,7 @@ Key that moves the focus to the previous item in a sequence.
 const ENTER_KEY_TYPE_SEARCH: int
 ```
 
-Key that initiates a search operation.
+“搜索”功能键。
 
 **Since:** 8
 
@@ -198,7 +198,7 @@ Key that initiates a search operation.
 const ENTER_KEY_TYPE_SEND: int
 ```
 
-Key that sends the text to its target.
+“发送”功能键。
 
 **Since:** 8
 
@@ -214,7 +214,7 @@ Key that sends the text to its target.
 const ENTER_KEY_TYPE_UNSPECIFIED: int
 ```
 
-No function is specified for the key.
+无功能键。
 
 **Since:** 8
 
@@ -230,7 +230,7 @@ No function is specified for the key.
 const FLAG_SELECTING: int
 ```
 
-The edit box is being selected.
+编辑框处于选择状态。
 
 **Since:** 8
 
@@ -246,7 +246,7 @@ The edit box is being selected.
 const FLAG_SINGLE_LINE: int
 ```
 
-The edit box allows only single-line input.
+编辑框为单行。
 
 **Since:** 8
 
@@ -262,7 +262,7 @@ The edit box allows only single-line input.
 const OPTION_ASCII: int
 ```
 
-ASCII values are allowed.
+允许输入ASCII值。
 
 **Since:** 8
 
@@ -278,7 +278,7 @@ ASCII values are allowed.
 const OPTION_AUTO_CAP_CHARACTERS: int
 ```
 
-Characters are allowed.
+允许输入字符。
 
 **Since:** 8
 
@@ -294,7 +294,7 @@ Characters are allowed.
 const OPTION_AUTO_CAP_SENTENCES: int
 ```
 
-Sentences are allowed.
+允许输入句子。
 
 **Since:** 8
 
@@ -310,7 +310,7 @@ Sentences are allowed.
 const OPTION_AUTO_WORDS: int
 ```
 
-Words are allowed.
+允许输入单词。
 
 **Since:** 8
 
@@ -326,7 +326,7 @@ Words are allowed.
 const OPTION_MULTI_LINE: int
 ```
 
-Multiple lines are allowed.
+允许输入多行。
 
 **Since:** 8
 
@@ -342,7 +342,7 @@ Multiple lines are allowed.
 const OPTION_NONE: int
 ```
 
-No input attribute is specified.
+不指定编辑框输入属性。
 
 **Since:** 8
 
@@ -358,7 +358,7 @@ No input attribute is specified.
 const OPTION_NO_FULLSCREEN: int
 ```
 
-Half-screen style.
+半屏样式。
 
 **Since:** 8
 
@@ -374,7 +374,7 @@ Half-screen style.
 const PATTERN_DATETIME: int
 ```
 
-Date edit box.
+日期编辑框。
 
 **Since:** 8
 
@@ -390,7 +390,7 @@ Date edit box.
 const PATTERN_EMAIL: int
 ```
 
-Email edit box.
+邮件编辑框。
 
 **Since:** 8
 
@@ -403,10 +403,10 @@ Email edit box.
 ## PATTERN_NEW_PASSWORD
 
 ```TypeScript
-const PATTERN_NEW_PASSWORD: int
+const PATTERN_NEW_PASSWORD = 11
 ```
 
-New password edit box. The value is fixed at 11.
+新密码编辑框。
 
 **Since:** 20
 
@@ -414,7 +414,7 @@ New password edit box. The value is fixed at 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD: int-End-->
+<!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD = 11--><!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD = 11-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -424,7 +424,7 @@ New password edit box. The value is fixed at 11.
 const PATTERN_NULL: int
 ```
 
-Any type of edit box.
+无特殊性编辑框。
 
 **Since:** 8
 
@@ -440,7 +440,7 @@ Any type of edit box.
 const PATTERN_NUMBER: int
 ```
 
-Number edit box.
+数字编辑框。
 
 **Since:** 8
 
@@ -453,10 +453,10 @@ Number edit box.
 ## PATTERN_NUMBER_DECIMAL
 
 ```TypeScript
-const PATTERN_NUMBER_DECIMAL: int
+const PATTERN_NUMBER_DECIMAL = 12
 ```
 
-Edit box for numbers with decimal points. The value is fixed at 12.
+带小数点的数字编辑框。
 
 **Since:** 20
 
@@ -464,17 +464,17 @@ Edit box for numbers with decimal points. The value is fixed at 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL: int-End-->
+<!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL = 12--><!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL = 12-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_ONE_TIME_CODE
 
 ```TypeScript
-const PATTERN_ONE_TIME_CODE: int
+const PATTERN_ONE_TIME_CODE = 13
 ```
 
-Verification code edit box. The value is fixed at 13.
+验证码编辑框。
 
 **Since:** 20
 
@@ -482,7 +482,7 @@ Verification code edit box. The value is fixed at 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE: int--><!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE: int-End-->
+<!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE = 13--><!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE = 13-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -492,7 +492,7 @@ Verification code edit box. The value is fixed at 13.
 const PATTERN_PASSWORD: int
 ```
 
-Password edit box.
+密码编辑框。
 
 **Since:** 8
 
@@ -508,7 +508,7 @@ Password edit box.
 const PATTERN_PASSWORD_NUMBER: int
 ```
 
-Numeric password edit box.
+数字密码编辑框。
 
 **Since:** 11
 
@@ -524,7 +524,7 @@ Numeric password edit box.
 const PATTERN_PASSWORD_SCREEN_LOCK: int
 ```
 
-Screen lock password edit box.
+锁屏密码编辑框。
 
 **Since:** 11
 
@@ -540,7 +540,7 @@ Screen lock password edit box.
 const PATTERN_PHONE: int
 ```
 
-Phone number edit box.
+电话号码编辑框。
 
 **Since:** 8
 
@@ -556,7 +556,7 @@ Phone number edit box.
 const PATTERN_TEXT: int
 ```
 
-Text edit box.
+文本编辑框。
 
 **Since:** 8
 
@@ -572,7 +572,7 @@ Text edit box.
 const PATTERN_URI: int
 ```
 
-URI edit box.
+超链接编辑框。
 
 **Since:** 8
 
@@ -585,10 +585,10 @@ URI edit box.
 ## PATTERN_USER_NAME
 
 ```TypeScript
-const PATTERN_USER_NAME: int
+const PATTERN_USER_NAME = 10
 ```
 
-User name edit box. The value is fixed at 10.
+用户名编辑框。
 
 **Since:** 20
 
@@ -596,7 +596,7 @@ User name edit box. The value is fixed at 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-inputMethodEngine-const PATTERN_USER_NAME: int--><!--Device-inputMethodEngine-const PATTERN_USER_NAME: int-End-->
+<!--Device-inputMethodEngine-const PATTERN_USER_NAME = 10--><!--Device-inputMethodEngine-const PATTERN_USER_NAME = 10-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -606,7 +606,7 @@ User name edit box. The value is fixed at 10.
 const WINDOW_TYPE_INPUT_METHOD_FLOAT: int
 ```
 
-The input method is displayed in a floating window.
+输入法应用窗口风格标识。
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # SearchButtonOptions
 
-Defines the SearchButton options.
+定义搜索按钮选项。
 
 **Since:** 10
 
@@ -16,11 +16,11 @@ Defines the SearchButton options.
 autoDisable?: Boolean
 ```
 
-Whether to disable the search button when there is no text input.
+Search无文本内容时按钮置灰且不可点击。
 
-Default value: **false**
+默认值：false 
 
-**true**: The search button is disabled when there is no text input. **false**: The search button remains enabled regardless of the text input.
+true表示开启按钮置灰功能，false表示不开启。
 
 **Type:** Boolean
 
@@ -44,9 +44,9 @@ Default value: **false**
 fontColor?: ResourceColor
 ```
 
-Font color of the button.
+文本按钮字体颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
 
@@ -66,9 +66,11 @@ Font color of the button.
 fontSize?: Length
 ```
 
-Font size of the button. It cannot be set in percentage.
+文本按钮字体大小，不传入单位时默认单位为vp，不支持百分比。传入百分比时，不生效。
 
-**Type:** Length
+默认值：跟随主题。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
 

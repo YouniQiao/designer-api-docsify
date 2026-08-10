@@ -4,7 +4,9 @@
 type AVSessionType = 'audio' | 'video' | 'voice_call' | 'video_call' | 'photo'
 ```
 
-Session type supports audio & video, voice\_call, video\_call, photo
+当前会话支持的会话类型。
+
+该类型可取的值为下表字符串。
 
 **Since:** 10
 
@@ -18,9 +20,9 @@ Session type supports audio & video, voice\_call, video\_call, photo
 
 | Type | Description |
 | --- | --- |
-| 'audio' | audio type [since 10] |
-| 'video' | video type [since 10] |
-| 'voice\_call' | voice call type [since 11] |
-| 'video\_call' | video call type [since 12] |
-| 'photo' | photo type [since 22] |
+| 'audio' | 音频 |
+| 'video' | 视频 |
+| 'voice_call' | 音频通话。 [since 11] |
+| 'video_call' | 视频通话。 [since 12] |
+| 'photo' | 图片。 [since 22] |
 

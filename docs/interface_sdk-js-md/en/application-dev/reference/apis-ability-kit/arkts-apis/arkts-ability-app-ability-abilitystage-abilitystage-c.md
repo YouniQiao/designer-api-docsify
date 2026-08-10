@@ -1,14 +1,11 @@
 # AbilityStage
 
-AbilityStage is a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_-level component manager. It is used for initializing operations such as resource preloading and thread creation at the module level, as well as maintaining the application state under the module. An AbilityStage instance corresponds to a module.
+AbilityStage是一个[Module](../../../quick-start/application-package-overview.md#应用的多module设计机制)级别的组件管理器，用于进行Module级别的资源预加载、线程创建等初始化操作，以及维护Module下的应用状态。AbilityStage与Module一一对应，即一个Module拥有一个AbilityStage。
 
-When the \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ or \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ of an application is first loaded, an AbilityStage instance is created. If a module contains both AbilityStage and other components (like UIAbility or ExtensionAbility), the AbilityStage instance is created before the other component instances.
+应用的[HAP](../../../quick-start/hap-package.md)/[HSP](../../../quick-start/in-app-hsp.md)在首次加载时会创建一个AbilityStage实例。当一个Module中存在AbilityStage和其他组件（UIAbility/ExtensionAbility组件），AbilityStage实例会早于其他组件实例创建。
 
-An AbilityStage has the lifecycle callbacks [onCreate()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ and  
-[onDestroy()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_, and the event callbacks  
-[onAcceptWant()]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_,  
-[onConfigurationUpdate()]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_, and  
-[onMemoryLevel()]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_.
+AbilityStage拥有[onCreate()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)、[onDestroy()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#ondestroy)生命周期回调和  
+[onAcceptWant()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)、[onConfigurationUpdate()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onconfigurationupdate)、[onMemoryLevel()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onmemorylevel)事件回调等。
 
 **Since:** 9
 
@@ -18,13 +15,19 @@ An AbilityStage has the lifecycle callbacks [onCreate()]\_\_\_JSDOC\_LINK\_DESC\
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { AbilityStage } from 'kits/@kit.AbilityKit';
+```
+
 ## onAboutToCreateAbility
 
 ```TypeScript
 onAboutToCreateAbility(): void
 ```
 
-Called when the ability stage is about to create the first ability.If both this method and \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ are overridden,only \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+无
 
 **Since:** 24
 
@@ -36,44 +39,19 @@ Called when the ability stage is about to create the first ability.If both this 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## onAboutToCreateAbilityAsync
-
-```TypeScript
-onAboutToCreateAbilityAsync(): Promise<void>
-```
-
-Called when the ability stage is about to create the first ability. This API uses a promise to return the result.Subsequent lifecycle callbacks will be suspended until the returned Promise is resolved.If both \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and this method are overridden, only this method takes effect.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AbilityStage-onAboutToCreateAbilityAsync(): Promise<void>--><!--Device-AbilityStage-onAboutToCreateAbilityAsync(): Promise<void>-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
 ## onAcceptWant
 
 ```TypeScript
 onAcceptWant(want: Want): string
 ```
 
-Called when a UIAbility with the launch mode set to  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is launched. This API returns a string representing the unique ID of the UIAbility instance. This API returns the result synchronously and does not support asynchronous callbacks.
+当启动模式配置为[specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility被拉起时，会触发该回调，并返回一个string作为待启动的UIAbility实例的唯一标识。同步接口，不支持异步回调。
 
-If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
-    **NOTE**  
-    
-    Starting from API version 20, this callback is not triggered when  
-    [AbilityStage.onAcceptWantAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is implemented.
+如果系统中已经有相同标识的UIAbility实例存在，则复用已有实例，否则创建新的实例。
+
+> **说明：**
+> 
+> 从API version 20开始，当[AbilityStage.onAcceptWantAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwantasync)实现时，本回调函数将不会被触发。
 
 **Since:** 9
 
@@ -91,15 +69,15 @@ If a UIAbility instance with the same ID already exists in the system, that inst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the ability name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want类型参数，此处表示调用方传入的启动参数，如Ability名称，Bundle名称等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | ID of the UIAbility. If a UIAbility with the same ID has been launched, that UIAbility is reused. Otherwise, a new instance is created and launched. |
+| string | 返回开发者自定义的UIAbility标识。如果已经启动了相同标识的UIAbility，则复用该UIAbility，否则创建新的实例并启动。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage, Want } from '@kit.AbilityKit';
@@ -118,10 +96,9 @@ export default class MyAbilityStage extends AbilityStage {
 onAcceptWantAsync(want: Want): Promise<string>
 ```
 
-Called when a UIAbility with the launch mode set to  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is launched. This API returns a string representing the unique ID of the UIAbility instance. This API uses a promise to return the result.
+当启动模式配置为[specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility被拉起时，会触发该回调，并返回一个string作为待启动的UIAbility实例的唯一标识。使用Promise异步回调。
 
-If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
+如果系统中已经有相同标识的UIAbility实例存在，则复用已有实例，否则创建新的实例。
 
 **Since:** 20
 
@@ -139,15 +116,15 @@ If a UIAbility instance with the same ID already exists in the system, that inst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want information about the target UIAbility, such as the UIAbility name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want类型参数，传入需要启动的UIAbility的信息，如UIAbility名称、Bundle名称等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a string that uniquely identifies the UIAbility instance launched. If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created. |
+| Promise&lt;string&gt; | Promise对象，返回一个string作为待启动的UIAbility实例的唯一标识。如果系统中已经有该标识的UIAbility实例存在，则复用已有实例，否则创建新的实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -168,13 +145,13 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_class. This API returns the result synchronously and does not support asynchronous callbacks.
-    **NOTE**  
-    
-    There are certain restrictions when this callback is actually triggered. For example, if you set the application  
-    language by calling [setLanguage]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, the  
-    system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details,  
-    see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+当系统全局配置（例如系统语言、深浅色等）发生变更时，会触发该回调。配置项均定义在[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)类中。同步接口，不支持异步回调。
+
+> **说明：**
+> 
+> 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口
+> 设置应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见
+> [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
 **Since:** 9
 
@@ -192,9 +169,9 @@ Called when the system global configuration (such as the system language and dar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback invoked when the global configuration is updated. The global configuration indicates the configuration of the environment where the application is running and includes the language and color mode. |
+| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | 发生全局配置变更时触发回调，当前全局配置包括系统语言、深浅色模式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage, Configuration } from '@kit.AbilityKit';
@@ -212,9 +189,9 @@ export default class MyAbilityStage extends AbilityStage {
 onCreate(): void
 ```
 
-Called when an AbilityStage instance is created. Such an instance is automatically created by the system before it loads the first Ability instance of the module.
+在加载Module的第一个Ability实例前，系统会先创建对应的AbilityStage实例，并在AbilityStage创建完成后，自动触发该回调。
 
-You can initialize the module (for example, preload resources or create threads) in this callback. This API returns the result synchronously and does not support asynchronous callbacks.
+开发者可以在该回调中执行Module的初始化操作（如资源预加载、线程创建等）。同步接口，不支持异步回调。
 
 **Since:** 9
 
@@ -228,7 +205,7 @@ You can initialize the module (for example, preload resources or create threads)
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -246,7 +223,7 @@ export default class MyAbilityStage extends AbilityStage {
 onDestroy(): void
 ```
 
-Called when the last Ability instance of the corresponding module exits. This API is called during the normal lifecycle. If the application exits abnormally or is terminated, this API is not called. This API returns the result synchronously and does not support asynchronous callbacks.
+在对应Module的最后一个Ability实例退出后会触发该回调。此方法将在正常的调度生命周期中调用，当应用程序异常退出或被终止时，将不会调用此方法。同步接口，不支持异步回调。
 
 **Since:** 12
 
@@ -260,7 +237,7 @@ Called when the last Ability instance of the corresponding module exits. This AP
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -278,7 +255,7 @@ export default class MyAbilityStage extends AbilityStage {
 onLaunchFromHyperSnap(): void
 ```
 
-Called when the process is launched from HyperSnap.
+进程从镜像启动时调用
 
 **Since:** 24
 
@@ -296,13 +273,13 @@ Called when the process is launched from HyperSnap.
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-Listens for changes in the system memory level status. Called when the available memory of the entire device changes to a specified level. You can implement this callback to promptly release non-essential resources (such as cached data or temporary objects) upon receiving a memory shortage event, thereby preventing the application process from being forcibly terminated by the system.
+该接口用于监听系统内存状态变化。当整机可用内存变化到指定程度时，系统会触发该回调。开发者可通过实现此接口，在收到内存紧张事件时，及时释放非必要资源（如缓存数据、临时对象等），以避免应用进程被系统强制终止。
 
-This API returns the result synchronously and does not support asynchronous callbacks.
-    **NOTE**  
-    
-    Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process.  
-    Therefore, you are advised not to release UI components in this callback.
+同步接口，不支持异步回调。
+
+> **说明：**
+> 
+> onMemoryLevel回调运行在当前进程的主线程中，如果在该回调中做耗时的UI组件释放，会阻塞主线程任务，因此不建议在该回调中释放UI组件。
 
 **Since:** 9
 
@@ -320,9 +297,9 @@ This API returns the result synchronously and does not support asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- A callback with value 2 is triggered when available memory falls below 1600 MB. |
+| level | AbilityConstant.MemoryLevel | Yes | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage, AbilityConstant } from '@kit.AbilityKit';
@@ -340,22 +317,26 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequest(want: Want): string
 ```
 
-Called when a UIAbility\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_ or UIExtensionAbility\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_, which is configured to run in an independent process (with **isolationProcess** set to **true** in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks.
+如果UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;配置了在独立进程中运行（即  
+[module.json5配置文件](../../../quick-start/module-configuration-file.md)中UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;的isolationProcess字段取值为true），当该UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;被拉起时，会触发该回调，并返回一个string作为进程唯一标识。同步接口，不支持异步回调。
 
-If the application already has a process with the same ID, the UIAbility\_\_\_MD\_COMMENT\_DESC\_USD\_6\_\_\_ or UIExtensionAbility\_\_\_MD\_COMMENT\_DESC\_USD\_7\_\_\_
+如果该应用已有相同标识的进程存在，则待启动的UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;运行在此进程中，否则创建新的进程。
 
-The **isolationProcess** field can be set to **true** in the  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ file, but only for the UIExtensionAbility of the sys/commonUI type.
+如果开发者同时实现onNewProcessRequest和[onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)，将先收到onNewProcessRequest回调，再收到onAcceptWant回调。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_8\_\_\_
-    **NOTE**  
-    
-    - In API version 19 and earlier, only a UIAbility can be launched in the specified process. \_\_\_MD\_COMMENT\_DESC\_USD\_9\_\_\_Starting  
-    from API version 20, a UIExtensionAbility can also be launched in the specified process.\_\_\_MD\_COMMENT\_DESC\_USD\_10\_\_\_  
-    
-    - Starting from API version 20, this callback is not executed when  
-    [AbilityStage.onNewProcessRequestAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is implemented.
+&lt;!--Del--&gt;
+
+仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)配置文件中配置isolationProcess字段为true。
+
+&lt;!--DelEnd--&gt;
+
+> **说明：**
+> 
+> - 在API version 19及之前版本，仅支持在指定进程中启动UIAbility。&lt;!--Del--&gt;从API version 20开始，新增支持在指定进程中启动UIExtensionAbility。&lt;!--DelEnd
+&gt; -->
+> 
+> - 从API version 20开始，当[AbilityStage.onNewProcessRequestAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequestasync)实现时，本回调函
+> 数将不执行。
 
 **Since:** 11
 
@@ -371,15 +352,15 @@ The **isolationProcess** field can be set to **true** in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or UIExtensionAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want类型参数，此处表示调用方传入的启动参数，如UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;名称、Bundle名称等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Custom process identifier. If the process with this identifier has been created, the ability runs in the process. Otherwise, a new process is created and the ability runs in it. |
+| string | 返回一个由开发者自行决定的进程字符串标识，如果之前此标识对应的进程已被创建，就让ability在此进程中运行，否则创建新的进程。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage, Want } from '@kit.AbilityKit';
@@ -398,15 +379,16 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequestAsync(want: Want): Promise<string>
 ```
 
-Called when a UIAbility\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_ or UIExtensionAbility\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_, which is configured to run in an independent process (with **isolationProcess** set to **true** in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file), is launched. This API returns a string representing the unique process ID. This API uses a promise to return the result.
+如果UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;配置了在独立进程中运行（即  
+[module.json5配置文件](../../../quick-start/module-configuration-file.md)中UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;的isolationProcess字段取值为true），当该UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;被拉起时，会触发该回调，并返回一个string作为进程唯一标识。使用Promise异步回调。
 
-If the application already has a process with the same ID, the UIAbility\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_ or UIExtensionAbility\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_
+如果该应用已有相同标识的进程存在，则待启动的UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;运行在此进程中，否则创建新的进程。
 
-The **isolationProcess** field can be set to **true** in the  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ file, but only for the UIExtensionAbility of the sys/commonUI type.
+&lt;!--Del--&gt;
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_6\_\_\_
+仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置isolationProcess字段为true。
+
+&lt;!--DelEnd--&gt;
 
 **Since:** 20
 
@@ -424,15 +406,15 @@ The **isolationProcess** field can be set to **true** in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or UIExtensionAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want类型参数，此处表示调用方传入的启动参数，如UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;名称、Bundle名称等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a string representing the process ID. If the application already has a process with the same ID, the UIAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or UIExtensionAbility\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ runs in that process. Otherwise, a new process is created. |
+| Promise&lt;string&gt; | Promise对象，返回一个由开发者自定义的进程字符串标识。如果该应用已有相同标识的进程存在，则UIAbility&lt;!--Del--&gt;或UIExtensionAbility &lt;!--DelEnd--&gt;在此进程中运行，否则创建新的进程。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -453,15 +435,13 @@ class MyAbilityStage extends AbilityStage {
 onPrepareTermination(): AbilityConstant.PrepareTermination
 ```
 
-Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API returns the result synchronously and does not support asynchronous callbacks.
-    **NOTE**  
-    
-    - The API is called only when the application exits under normal circumstances (for example, when the application  
-    is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be  
-    called if the application is terminated forcibly.  
-    
-    - This API is not executed when  
-    [AbilityStage.onPrepareTerminationAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is implemented.
+当应用被用户关闭时调用，可用于询问用户选择立即执行操作还是取消操作。同步接口，不支持异步回调。
+
+> **说明：**
+> 
+> - 仅当应用正常退出（例如，通过doc栏/托盘关闭应用，或者应用随设备关机而退出）时会调用该接口。如果应用被强制关闭，则不会调用该接口。
+> 
+> - 当[AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)实现时，本回调函数将不执行。
 
 **Since:** 15
 
@@ -483,7 +463,7 @@ Called when the application is closed by the user, allowing the user to choose b
 | --- | --- |
 | AbilityConstant.PrepareTermination | The user's choice. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
@@ -502,15 +482,13 @@ export default class MyAbilityStage extends AbilityStage {
 onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 ```
 
-Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - The API is called only when the application exits under normal circumstances (for example, when the application  
-    is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be  
-    called if the application is terminated forcibly.  
-    
-    - If an asynchronous callback crashes, it will be handled as a timeout. If the application does not respond  
-    within 10 seconds, it will be terminated forcibly.
+当应用被用户关闭时调用，可用于询问用户选择立即执行操作还是取消操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 仅当应用正常退出（例如，通过doc栏/托盘关闭应用，或者应用随设备关机而退出）时会调用该接口。如果应用被强制关闭，则不会调用该接口。
+> 
+> - 若异步回调内发生crash，按超时处理，执行等待超过10秒未响应，应用将被强制关闭。
 
 **Since:** 15
 
@@ -532,7 +510,7 @@ Called when the application is closed by the user, allowing the user to choose b
 | --- | --- |
 | Promise&lt;AbilityConstant.PrepareTermination&gt; | Promise used to return the user's choice. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
@@ -553,9 +531,9 @@ export default class MyAbilityStage extends AbilityStage {
 context: AbilityStageContext
 ```
 
-Context of an AbilityStage.
+AbilityStage上下文。
 
-**Type:** AbilityStageContext
+**Type:** [AbilityStageContext](arkts-ability-abilitystagecontext-c.md)
 
 **Since:** 9
 

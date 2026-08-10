@@ -12,6 +12,12 @@ Batch operation options
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## countProgressListener
 
 ```TypeScript
@@ -80,7 +86,7 @@ mode?: int
 
 the mode of Automatic renaming.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -102,7 +108,7 @@ taskSignal?: TaskSignal
 
 interrupting of batch operations.
 
-**Type:** TaskSignal
+**Type:** [TaskSignal](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-tasksignal-c.md)
 
 **Since:** 26.0.0
 

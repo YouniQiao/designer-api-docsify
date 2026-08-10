@@ -20,6 +20,6 @@ The callback of onRecentPhotoCheckInfo event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recentPhotoExists | boolean | Yes | Does the recent photo exist?  |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the recent photo info  |
+| recentPhotoExists | boolean | Yes | Does the recent photo exist? |
+| info | [RecentPhotoInfo](arkts-medialibrary-photoaccesshelper-recentphotoinfo-c.md) | Yes | the recent photo info |
 

@@ -1,12 +1,18 @@
 # abort
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## abort
 
 ```TypeScript
 function abort(): void
 ```
 
-Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method.
+该方法会导致进程立即退出并生成一个核心文件，谨慎使用。
 
 **Since:** 7
 
@@ -18,7 +24,7 @@ Aborts a process and generates a core file. This method will cause a process to 
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 process.abort();

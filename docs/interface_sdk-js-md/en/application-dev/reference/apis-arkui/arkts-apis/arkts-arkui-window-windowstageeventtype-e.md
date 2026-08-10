@@ -1,6 +1,6 @@
 # WindowStageEventType
 
-Enumerates the lifecycle event types of a WindowStage.
+WindowStage生命周期状态枚举。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the lifecycle event types of a WindowStage.
 SHOWN = 1
 ```
 
-The WindowStage is shown in the foreground, for example, when launching from the application icon, triggered whether it is the first launch or resuming from the background.
+前台状态，例如点击应用图标启动，无论是首次启动还是从后台启动均会触发。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ The WindowStage is shown in the foreground, for example, when launching from the
 ACTIVE = 2
 ```
 
-The WindowStage gains focus, for example, the state of the application window after handling a click event, or the state after the application is launched.
+获焦状态，例如应用窗口处理点击事件后的状态、应用启动后的状态。
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ The WindowStage gains focus, for example, the state of the application window af
 INACTIVE = 3
 ```
 
-The WindowStage loses focus, for example, the state of the window that was in focus when a new application is opened or another window is clicked.
+失焦状态，例如打开新应用或点击其他窗口后，原获焦窗口的状态。
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ The WindowStage loses focus, for example, the state of the window that was in fo
 HIDDEN = 4
 ```
 
-The WindowStage is running in the background, for example, when the application exists after swiping up or the application window is closed.
+后台状态，例如应用上滑退出、应用窗口关闭。
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ The WindowStage is running in the background, for example, when the application 
 RESUMED = 5
 ```
 
-The WindowStage is in the foreground and interactive, for example, when the application is open and can interact with the user.
+前台可交互状态，例如打开应用后，应用处于前台，且可以与用户交互的状态。
 
 **Since:** 11
 
@@ -116,7 +116,7 @@ The WindowStage is in the foreground and interactive, for example, when the appl
 PAUSED = 6
 ```
 
-The WindowStage is in the foreground but not interactive, for example, when the application is in the foreground and is entering the multitasking screen.
+前台不可交互状态，例如应用在前台时，进入多任务界面，应用依然处于前台但不可以与用户交互的状态。
 
 **Since:** 11
 

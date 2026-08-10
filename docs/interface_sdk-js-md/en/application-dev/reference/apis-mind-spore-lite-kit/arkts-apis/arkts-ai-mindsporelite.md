@@ -4,9 +4,17 @@
 
 **ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace mindSporeLite--><!--Device-unnamed-declare namespace mindSporeLite-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
+
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
 
 ## Summary
 

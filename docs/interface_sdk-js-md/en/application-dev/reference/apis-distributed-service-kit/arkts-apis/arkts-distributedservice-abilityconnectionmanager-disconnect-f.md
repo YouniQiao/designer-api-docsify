@@ -1,12 +1,18 @@
 # disconnect
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## disconnect
 
 ```TypeScript
 function disconnect(sessionId: int): void
 ```
 
-Disconnects the UIAbility connection to end the collaboration session.
+当协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接，结束协同状态。
 
 **Since:** 18
 
@@ -22,9 +28,9 @@ Disconnects the UIAbility connection to end the collaboration session.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the collaboration session. |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 协同会话ID |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Advertising.Ads
 
+## 导入模块
+
+```TypeScript
+import { RespCallback } from 'kits/@kit.AdsKit';
+```
+
 ## [[Call]]
 
 ```TypeScript

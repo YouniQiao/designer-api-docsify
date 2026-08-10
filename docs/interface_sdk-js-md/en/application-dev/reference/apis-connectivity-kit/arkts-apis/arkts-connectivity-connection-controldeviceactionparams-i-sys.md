@@ -12,6 +12,12 @@ Describes information about controlling the Bluetooth peripheral.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## controlObject
 
 ```TypeScript
@@ -20,7 +26,7 @@ controlObject: ControlObject
 
 Indicates the control object.
 
-**Type:** ControlObject
+**Type:** [ControlObject](arkts-connectivity-connection-controlobject-e-sys.md)
 
 **Since:** 15
 
@@ -64,7 +70,7 @@ type: ControlType
 
 Indicates the control type.
 
-**Type:** ControlType
+**Type:** [ControlType](../../apis-ability-kit/arkts-apis/arkts-ability-appcontrol-controltype-e-sys.md)
 
 **Since:** 15
 
@@ -86,7 +92,7 @@ typeValue: ControlTypeValue
 
 Indicates the control value.
 
-**Type:** ControlTypeValue
+**Type:** [ControlTypeValue](arkts-connectivity-connection-controltypevalue-e-sys.md)
 
 **Since:** 15
 

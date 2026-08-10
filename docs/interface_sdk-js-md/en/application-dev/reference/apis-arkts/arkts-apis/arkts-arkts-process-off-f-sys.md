@@ -1,12 +1,18 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## off
 
 ```TypeScript
 function off(type: string): boolean
 ```
 
-Remove registered event
+移除已注册的事件。
 
 **Since:** 7
 
@@ -22,11 +28,11 @@ Remove registered event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Remove the type of registered event. |
+| type | string | Yes | 要移除的已注册事件类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Return removed result. |
+| boolean | 返回移除结果。 |
 

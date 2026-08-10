@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## isWindowLimitsForcible
 
 ```TypeScript
@@ -44,7 +50,7 @@ systemAnimationParams?: StartAnimationSystemParams
 
 不同应用间跳转场景不生效，仍保持系统默认动效。
 
-**类型：** StartAnimationSystemParams
+**类型：** [StartAnimationSystemParams](arkts-arkui-window-startanimationsystemparams-i-sys.md)
 
 **起始版本：** 20
 

@@ -1,5 +1,11 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { tag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## off('readerMode')
 
 ```TypeScript
@@ -25,18 +31,18 @@ Disable foreground reader mode settings explicitly.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'readerMode' | Yes | The callback type to be unregistered. |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The element name of application, must include the bundleName and abilityName. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TagInfo&gt; | No | The callback to dispatched the TagInfo object for application. |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of application, must include the bundleName and abilityName. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TagInfo&gt; | No | The callback to dispatched the TagInfo object for application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100203](../errorcode-nfc.md#3100203-incorrect-api-call-sequence) | The off() API can be called only when the on() has been called. |
+| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 3100203 | The off() API can be called only when the on() has been called. |
+| 3100201 | The tag running state is abnormal in the service. |
+| 201 | Permission denied. |
 
 
 ## off('readerModeWithInterval')
@@ -64,19 +70,19 @@ Disable foreground reader mode settings explicitly.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'readerModeWithInterval' | Yes | The callback type to be unregistered. |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The element name of application, must include the bundleName and abilityName. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TagInfo&gt; | No | The callback to dispatched the TagInfo object for application. |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of application, must include the bundleName and abilityName. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TagInfo&gt; | No | The callback to dispatched the TagInfo object for application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100203](../errorcode-nfc.md#3100203-incorrect-api-call-sequence) | The off() API can be called only when the on() has been called. |
+| 801 | Capability not supported. |
+| 3100203 | The off() API can be called only when the on() has been called. |
+| 3100201 | The tag running state is abnormal in the service. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -87,13 +93,12 @@ let discTech : number[] = [tag.NFC_A, tag.NFC_B]; // Specify the technology requ
 let elementName : bundleManager.ElementName;
 let interval : number = 200;
 
-function readerModeCb(err : BusinessError, tagInfo : tag.TagInfo) {
-    if (!err) {
-        console.info("offCallback: tag found tagInfo = ", JSON.stringify(tagInfo));
-    } else {
-        console.error("offCallback err: " + err.message);
-        return;
+function readerModeCb(tagInfo: tag.TagInfo) {
+    if (tagInfo == null) {
+      console.error('readerModeWithInterval tagInfo is invalid');
+      return;
     }
+    console.info("readerModeWithInterval: tag found tagInfo = ", JSON.stringify(tagInfo));
   // Other operations on taginfo
 }
 

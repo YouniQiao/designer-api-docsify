@@ -1,6 +1,6 @@
 # CertReference
 
-Represents the reference information of the credential.
+表示证书凭据的引用信息。
 
 **Since:** 22
 
@@ -10,15 +10,21 @@ Represents the reference information of the credential.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
+## Modules to Import
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certType
 
 ```TypeScript
 certType: CertificateType
 ```
 
-Certificate type.
+表示证书类型。
 
-**Type:** CertificateType
+**Type:** [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)
 
 **Since:** 22
 
@@ -36,7 +42,7 @@ Certificate type.
 keyUri: string
 ```
 
-Unique identifier of the credential. The value contains up to 256 bytes.
+表示证书凭据的唯一标识符，长度限制256字节以内。
 
 **Type:** string
 

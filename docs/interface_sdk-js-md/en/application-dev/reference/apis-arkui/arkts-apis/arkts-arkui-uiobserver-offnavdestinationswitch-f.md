@@ -1,5 +1,11 @@
 # offNavDestinationSwitch
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## offNavDestinationSwitch
 
 ```TypeScript
@@ -9,7 +15,7 @@ export function offNavDestinationSwitch(
   ): void
 ```
 
-Removes a callback function that was previously registered with \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+取消监听Navigation的页面切换事件。
 
 **Since:** 23
 
@@ -25,8 +31,8 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| UIContext | Yes | The context scope of the observer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | 上下文信息，用以指定监听页面切换事件的范围。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | No | 需要被注销的回调函数。 |
 
 
 ## offNavDestinationSwitch
@@ -39,7 +45,7 @@ export function offNavDestinationSwitch(
   ): void
 ```
 
-Removes a callback function that was previously registered with \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+取消监听Navigation的页面切换事件。
 
 **Since:** 23
 
@@ -55,7 +61,7 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| UIContext | Yes | The context scope of the observer. |
-| observerOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | 上下文信息，用以指定监听页面切换事件的范围。 |
+| observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | 监听选项。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | No | 需要被注销的回调函数。 |
 

@@ -1,6 +1,13 @@
 # AudioSpatializationManager
 
-Implements audio spatialization management.
+空间音频管理。
+
+在使用AudioSpatializationManager的接口之前，需先通过  
+[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取AudioSpatializationManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 18开始支持。
 
 **Since:** 18
 
@@ -10,13 +17,19 @@ Implements audio spatialization management.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## downloadPersonalizedHRTF
 
 ```TypeScript
 downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<void>
 ```
 
-Downloads personalized HRTF data from anonymous file descriptor.
+从匿名文件描述符下载个性化HRTF数据。
 
 **Since:** 26.0.0
 
@@ -36,24 +49,24 @@ Downloads personalized HRTF data from anonymous file descriptor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hrtfDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Personalized HRTF data descriptor. |
+| hrtfDescriptor | [AudioHRTFAnonymousDescriptor](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md) | Yes | 要下载的个性化HRTF数据描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | 201 - 权限被拒绝。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on the device. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, fd or length wrong. |
-| [6800105](../errorcode-audio.md#6800105-processing-timeout) | Time out when saving HRTF on disk. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error, fail to save HRTF on disk. |
+| 801 | Capability is not supported in this device. |
+| 6800101 | Parameter verification failed, hrtfDescriptor is invalid. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | System internal error, fail to save HRTF on disk, like service died. |
+| 6800105 | Time out when saving HRTF on disk. |
 
 ## getCurrentSpatialAudioSourceType
 
@@ -61,7 +74,7 @@ Downloads personalized HRTF data from anonymous file descriptor.
 getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 ```
 
-Gets the current spatial audio source type.
+查询当前空间音频源类型。
 
 **Since:** 24
 
@@ -79,13 +92,13 @@ Gets the current spatial audio source type.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The spatial audio source type on the current device. |
+| [SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md) | The spatial audio source type on the current device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
 ## getSpatializationSceneType
 
@@ -109,15 +122,15 @@ Get spatialization rendering scene type.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current spatialization rendering scene type. |
+| [AudioSpatializationSceneType](arkts-audio-audio-audiospatializationscenetype-e-sys.md) | Current spatialization rendering scene type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -154,7 +167,7 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The target device to be check whether the adaptive spatial rendering is enabled. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | The target device to be check whether the adaptive spatial rendering is enabled. |
 
 **Return value:**
 
@@ -166,8 +179,8 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## isHeadTrackingEnabled
 
@@ -201,9 +214,9 @@ Checks whether the head tracking is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -240,7 +253,7 @@ Checks whether the head tracking is enabled by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -252,11 +265,11 @@ Checks whether the head tracking is enabled by the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -314,9 +327,9 @@ Checks whether head tracking is supported by system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -353,7 +366,7 @@ Checks whether head tracking is supported by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -365,11 +378,11 @@ Checks whether head tracking is supported by the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -405,7 +418,7 @@ try {
 isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean
 ```
 
-Checks whether the personalized spatialization is enabled by the specified device.
+检查指定设备是否启用了个性化空间。
 
 **Since:** 26.0.0
 
@@ -423,20 +436,20 @@ Checks whether the personalized spatialization is enabled by the specified devic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedAudioDevice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device description. |
+| selectedAudioDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | 音频设备描述。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the Personalized spatialization is successfully enabled; returns false otherwise. |
+| boolean | Returns true if the personalized spatialization is successfully enabled, otherwise returns false. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
 
 ## isPersonalizedSpatializationSupported
 
@@ -444,7 +457,7 @@ Checks whether the personalized spatialization is enabled by the specified devic
 isPersonalizedSpatializationSupported(): boolean
 ```
 
-Checks whether personalized spatialization is supported by system.
+检查系统是否支持个性化空间化。
 
 **Since:** 26.0.0
 
@@ -468,7 +481,7 @@ Checks whether personalized spatialization is supported by system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
 ## isSpatializationEnabled
 
@@ -502,9 +515,9 @@ Checks whether the spatialization is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -541,7 +554,7 @@ Checks whether the spatialization is enabled by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -553,11 +566,11 @@ Checks whether the spatialization is enabled by the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -615,9 +628,9 @@ Checks whether spatialization is supported by system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -653,7 +666,7 @@ Checks whether spatialization is supported by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -665,11 +678,11 @@ Checks whether spatialization is supported by the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -726,17 +739,17 @@ Unsubscribes to the spatialization enable state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | Yes | Type of the event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Cancel all subscriptions to the event.
@@ -775,17 +788,17 @@ Unsubscribes to the spatialization enable state change events by the specified d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -831,17 +844,17 @@ Unsubscribes to the head tracking enable state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | Yes | Type of the event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to get the head tracking enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -882,17 +895,17 @@ Unsubscribes to the head tracking enable state change events by the specified de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -917,7 +930,7 @@ audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice', headTrac
 offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Unsubscribes to the adaptive spatial rendering enable state change events by the specified device.
+Unsubscribes to the adaptive spatial rendering enable state change events.
 
 **Since:** 24
 
@@ -933,14 +946,14 @@ Unsubscribes to the adaptive spatial rendering enable state change events by the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## offHeadTrackingEnabledChangeForAnyDevice
 
@@ -964,23 +977,23 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## offPersonalizedSpatializationEnabledChangeForAnyDevice
 
 ```TypeScript
 offPersonalizedSpatializationEnabledChangeForAnyDevice(
-        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
+      callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-Unsubscribes to the personalized spatialization enable state change events by the specified device.
+取消订阅指定设备的个性化空间启用状态更改事件。当状态发生变化时，已注册的客户端将收到回调。
 
 **Since:** 26.0.0
 
@@ -988,7 +1001,7 @@ Unsubscribes to the personalized spatialization enable state change events by th
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
+<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(      callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(      callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -998,13 +1011,13 @@ Unsubscribes to the personalized spatialization enable state change events by th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioPersonalizedSpatialEnabledChangeForAnyDevice&gt; | No | Callback used to get the personalized spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioPersonalizedSpatialEnabledChangeForAnyDevice&gt; | No | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Caller is not a system application. |
 
 ## offSpatialAudioSourceTypeChange
 
@@ -1012,7 +1025,7 @@ Unsubscribes to the personalized spatialization enable state change events by th
 offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void
 ```
 
-Unsubscribes from the spatial audio source type change events.
+取消订阅空间音频源类型变更事件。
 
 **Since:** 24
 
@@ -1030,14 +1043,14 @@ Unsubscribes from the spatial audio source type change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SpatialAudioSourceType&gt; | No | Callback used to receive the current spatial audio source type change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SpatialAudioSourceType&gt; | No | 回调用于 接收当前空间音频源类型变化 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## offSpatializationEnabledChangeForAnyDevice
 
@@ -1061,14 +1074,14 @@ Unsubscribes to the spatialization enable state change events by the specified d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## on('spatializationEnabledChange')
 
@@ -1097,17 +1110,17 @@ Subscribes to the spatialization enable state change events. When the spatializa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | Yes | Type of the event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1140,17 +1153,17 @@ Subscribes to the spatialization enable state change events by the specified dev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1188,17 +1201,17 @@ Subscribes to the head tracking enable state change events. When the head tracki
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | Yes | Type of the event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to get the head tracking enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1231,17 +1244,17 @@ Subscribes to the head tracking enable state change events by the specified devi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1258,7 +1271,7 @@ audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpa
 onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the adaptive spatial rendering enable state change events by the specified device.When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+Subscribes to the adaptive spatial rendering enable state change events.When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
 
 **Since:** 24
 
@@ -1274,14 +1287,14 @@ Subscribes to the adaptive spatial rendering enable state change events by the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## onHeadTrackingEnabledChangeForAnyDevice
 
@@ -1305,23 +1318,23 @@ Subscribes to the head tracking enable state change events by the specified devi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## onPersonalizedSpatializationEnabledChangeForAnyDevice
 
 ```TypeScript
 onPersonalizedSpatializationEnabledChangeForAnyDevice(
-        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
+      callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-Subscribes to the personalized spatialization enable state change events by the specified device.When the state changes, registered clients will receive the callback.
+指定设备订阅个性化空间化使能状态变更事件。当状态发生变化时，已注册的客户端将收到回调。
 
 **Since:** 26.0.0
 
@@ -1329,7 +1342,7 @@ Subscribes to the personalized spatialization enable state change events by the 
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
+<!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(      callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(      callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1339,13 +1352,13 @@ Subscribes to the personalized spatialization enable state change events by the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioPersonalizedSpatialEnabledChangeForAnyDevice&gt; | Yes | Callback used to get the personalized spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioPersonalizedSpatialEnabledChangeForAnyDevice&gt; | Yes | 回调用于 通过所述指定设备获取所述个性化空间化使能状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
 ## onSpatialAudioSourceTypeChange
 
@@ -1353,7 +1366,7 @@ Subscribes to the personalized spatialization enable state change events by the 
 onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 ```
 
-Subscribes to the spatial audio source type change events. When the current spatial audio source type changes,registered clients will receive callbacks.
+订阅空间音源类型变化事件。当当前空间音源类型发生变化时，注册的客户端将收到回调。
 
 **Since:** 24
 
@@ -1371,14 +1384,14 @@ Subscribes to the spatial audio source type change events. When the current spat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SpatialAudioSourceType&gt; | Yes | Callback used to receive the current spatial audio source type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SpatialAudioSourceType&gt; | Yes | 回调用于 接收所述当前空间音源类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## onSpatializationEnabledChangeForAnyDevice
 
@@ -1402,14 +1415,14 @@ Subscribes to the spatialization enable state change events by the specified dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
 ## setAdaptiveSpatialRenderingEnabled
 
@@ -1417,7 +1430,7 @@ Subscribes to the spatialization enable state change events by the specified dev
 setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the adaptive spatial rendering enabled or disabled by the specified device.This method uses a promise to return the result.When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
+Sets the adaptive spatial rendering enabled or disabled by the specified device. This method uses a promise to return the result. When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
 
 **Since:** 24
 
@@ -1435,7 +1448,7 @@ Sets the adaptive spatial rendering enabled or disabled by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The target device to be set adaptive spatial rendering enabled. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | The target device to be set adaptive spatial rendering enabled. |
 | enabled | boolean | Yes | Adaptive spatial rendering enable state. |
 
 **Return value:**
@@ -1448,10 +1461,10 @@ Sets the adaptive spatial rendering enabled or disabled by the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on the device. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 801 | Capability not supported on the device. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. Return by promise. |
+| 202 | Not system App. |
 
 ## setHeadTrackingEnabled
 
@@ -1482,18 +1495,18 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Head tracking enable state. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. Return by callback. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1550,11 +1563,11 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission denied. Return by promise. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1593,7 +1606,7 @@ Sets the head tracking enabled or disabled by the specified device.This method u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 | enabled | boolean | Yes | Head tracking enable state. |
 
 **Return value:**
@@ -1606,12 +1619,12 @@ Sets the head tracking enabled or disabled by the specified device.This method u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. Return by promise. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1643,10 +1656,11 @@ audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then
 ## setPersonalizedSpatializationEnabled
 
 ```TypeScript
-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor, enable: boolean): Promise<void>
+setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
+      enable: boolean): Promise<void>
 ```
 
-Set the personalized spatialization enabled or disabled by the specified device.
+设置由指定设备启用或禁用的个性化空间化。
 
 **Since:** 26.0.0
 
@@ -1656,7 +1670,7 @@ Set the personalized spatialization enabled or disabled by the specified device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor, enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor, enable: boolean): Promise<void>-End-->
+<!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,      enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,      enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1666,22 +1680,22 @@ Set the personalized spatialization enabled or disabled by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedAudioDevice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device description. |
-| enable | boolean | Yes | Whether to enable personalized spatialization. |
+| selectedAudioDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | 音频设备描述。 |
+| enable | boolean | Yes | 是否开启个性化空间化。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise用于返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on the device. |
+| 801 | Capability is not supported in this device. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
 
 ## setSpatializationEnabled
 
@@ -1712,18 +1726,18 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Spatialization enable state. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by callback. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. Return by callback. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1780,11 +1794,11 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission denied. Return by promise. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1823,7 +1837,7 @@ Sets the spatialization enabled or disabled by the specified device.This method 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 | enabled | boolean | Yes | Spatialization enable state. |
 
 **Return value:**
@@ -1836,12 +1850,12 @@ Sets the spatialization enabled or disabled by the specified device.This method 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. Return by promise. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1894,18 +1908,18 @@ Set spatialization rendering scene type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spatializationSceneType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Spatialization scene type. |
+| spatializationSceneType | [AudioSpatializationSceneType](arkts-audio-audio-audiospatializationscenetype-e-sys.md) | Yes | Spatialization scene type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -1944,18 +1958,18 @@ Updates the spatial device state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spatialDeviceState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Spatial device state. |
+| spatialDeviceState | [AudioSpatialDeviceState](arkts-audio-audio-audiospatialdevicestate-i-sys.md) | Yes | Spatial device state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';

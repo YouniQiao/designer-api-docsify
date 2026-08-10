@@ -10,6 +10,12 @@ Indicates request parameters for obtaining the district information.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## locale
 
 ```TypeScript
@@ -40,7 +46,7 @@ timeoutMs?: int
 
 Indicates the timeout period.The default value is 5000 ms.The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

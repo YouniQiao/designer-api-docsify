@@ -1,6 +1,6 @@
 # XMPEnumerateOptions
 
-Describes XMP enumerate option parameters.
+表示XMP枚举选项。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,21 @@ Describes XMP enumerate option parameters.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## isRecursive
 
 ```TypeScript
 isRecursive?: boolean
 ```
 
-The option that controls recursive enabling.
+表示是否进行递归遍历。
+
+true表示进行递归遍历。false表示仅遍历直接子节点。默认为false。
 
 **Type:** boolean
 
@@ -36,7 +44,9 @@ The option that controls recursive enabling.
 onlyQualifier?: boolean
 ```
 
-Whether to return only qualifier data.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:false.
+表示是否仅遍历限定符节点。
+
+true表示仅遍历限定符节点。false表示遍历所有节点。默认为false。
 
 **Type:** boolean
 

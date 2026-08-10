@@ -1,6 +1,6 @@
 # RequestTraceConfig
 
-Describes the trace request configuration.
+�ṩtrace�ɼ��Ĳ���ѡ�
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Describes the trace request configuration.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## bufferSizeKb
 
 ```TypeScript
 bufferSizeKb: int
 ```
 
-Buffer size of the trace file, in KB.
+trace�ļ��Ļ����С����KBΪ��λ����ֵΪ32λ�޷����������֣�������Ч��Χ��������ֵ�����ȡֵ��ΧΪ[1024, 15360]�������������ȡֵ��Χ��������������Ϊ����ı߽�ֵ��
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -38,9 +44,9 @@ Buffer size of the trace file, in KB.
 durationMs: int
 ```
 
-Duration of the trace, in ms.
+trace�ɼ�ʱ������msΪ��λ����ֵΪ32λ�޷����������֣�������Ч��Χ��������ֵ�����ȡֵ��ΧΪ[1000, 15000]�������������ȡֵ��Χ��������������Ϊ����ı߽�ֵ��
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -60,7 +66,7 @@ Duration of the trace, in ms.
 identifier: string
 ```
 
-Identifier used as the prefix of the output trace file name.
+�ɼ�trace������ļ���ǰ׺���ļ���ǰ׺ֻȡ�ַ���ǰ20���ַ����������ֽ�������ǰ20���ַ�ֻ������Сд��ĸ���»��ߣ�����������Ĭ��Ϊ���ַ�����
 
 **Type:** string
 
@@ -82,9 +88,9 @@ Identifier used as the prefix of the output trace file name.
 reserved: int
 ```
 
-Reserved field for future use. Set to 0.
+Ԥ���ֶΣ���������Ϊ0��
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

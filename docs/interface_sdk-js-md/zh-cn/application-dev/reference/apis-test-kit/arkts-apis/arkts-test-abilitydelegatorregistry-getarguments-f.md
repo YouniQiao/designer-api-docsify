@@ -1,12 +1,18 @@
 # getArguments
 
+## 导入模块
+
+```TypeScript
+import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
+```
+
 ## getArguments
 
 ```TypeScript
 function getArguments(): AbilityDelegatorArgs
 ```
 
-获取单元测试参数[AbilityDelegatorArgs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对象。
+获取单元测试参数[AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md)对象。
 
 **起始版本：** 9
 
@@ -22,9 +28,9 @@ function getArguments(): AbilityDelegatorArgs
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [AbilityDelegatorArgs]{ |
+| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';

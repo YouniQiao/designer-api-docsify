@@ -1,6 +1,6 @@
 # EventTarget
 
-Specific event features.
+用于管理Worker的监听事件。
 
 **Since:** 7
 
@@ -14,13 +14,19 @@ Specific event features.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## addEventListener
 
 ```TypeScript
 addEventListener(type: string, listener: EventListener): void
 ```
 
-Adds an event listener to the worker.
+向Worker添加一个事件监听。
 
 **Since:** 7
 
@@ -38,10 +44,10 @@ Adds an event listener to the worker.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | listener Callback to invoke when an event of the specified type occurs. |
+| type | string | Yes | 监听的事件类型。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener 当指定类型的事件发生时调用的回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // worker.ets
@@ -60,7 +66,7 @@ workerPort.addEventListener("alert", () => {
 dispatchEvent(event: Event): boolean
 ```
 
-Dispatches the event defined for the worker.
+分发定义在Worker的事件。
 
 **Since:** 7
 
@@ -78,7 +84,7 @@ Dispatches the event defined for the worker.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event to dispatch. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | 需要分发的事件。 |
 
 **Return value:**
 
@@ -86,7 +92,7 @@ Dispatches the event defined for the worker.
 | --- | --- |
 | boolean |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 // worker.ets
@@ -135,7 +141,7 @@ workerPort.onmessage = (event: MessageEvents) => {
 removeAllListener(): void
 ```
 
-Removes all event listeners for the worker.
+移除Worker所有的事件监听。
 
 **Since:** 7
 
@@ -149,7 +155,7 @@ Removes all event listeners for the worker.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 // worker.ets
@@ -170,7 +176,7 @@ workerPort.removeAllListener();
 removeEventListener(type: string, callback?: EventListener): void
 ```
 
-Removes an event defined for the worker.
+移除Worker的事件监听。
 
 **Since:** 7
 
@@ -188,10 +194,10 @@ Removes an event defined for the worker.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event for which the event listener is removed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback of the event listener to remove. |
+| type | string | Yes | 需要移除的事件类型。 |
+| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No | 要移除的事件监听的回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // worker.ets

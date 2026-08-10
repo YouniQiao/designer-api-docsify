@@ -1,5 +1,11 @@
 # parseUUID
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## parseUUID
 
 ```TypeScript
@@ -32,5 +38,5 @@ Parse a UUID from the string standard representation as described in the RFC 412
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid uuid string. |
+| 10200002 | Invalid uuid string. |
 

@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## callback
 
 ```TypeScript
@@ -38,9 +44,9 @@ callback(result: EventInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 返回的认证结果信息或提示信息。 |
+| result | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | 是 | 返回的认证结果信息或提示信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';

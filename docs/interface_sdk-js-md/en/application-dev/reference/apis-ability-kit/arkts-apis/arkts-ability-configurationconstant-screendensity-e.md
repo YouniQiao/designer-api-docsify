@@ -1,9 +1,8 @@
 # ScreenDensity
 
-Enumerates the pixel densities of the screen, which are used in the  
-[Configuration.screenDensity]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ field. You can use these predefined enumerated values to set or obtain the pixel density of the screen.
+表示屏幕像素密度的枚举，用于[Configuration.screenDensity](arkts-ability-app-ability-configuration-configuration-i.md)字段。开发者可以使用这些预置枚举设置或获取屏幕的像素密度。
 
-The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect.
+字体显示大小与屏幕像素密度呈正相关关系。通过监听屏幕像素密度变化，可以感知字体显示大小的调整。通常情况下，对于相同的物理尺寸，屏幕像素密度越高，字体显示效果越大。
 
 **Since:** 9
 
@@ -19,7 +18,7 @@ The font size is positively correlated with the screen pixel density. By monitor
 SCREEN_DENSITY_NOT_SET = 0
 ```
 
-The screen pixel density is not set.
+表示未设置屏幕像素密度。
 
 **Since:** 9
 
@@ -37,7 +36,7 @@ The screen pixel density is not set.
 SCREEN_DENSITY_SDPI = 120
 ```
 
-The pixel density of the screen is 'SDPI'.
+表示屏幕像素密度为'SDPI'。
 
 **Since:** 9
 
@@ -55,7 +54,7 @@ The pixel density of the screen is 'SDPI'.
 SCREEN_DENSITY_MDPI = 160
 ```
 
-The pixel density of the screen is 'MDPI'.
+表示屏幕像素密度为'MDPI'。
 
 **Since:** 9
 
@@ -73,7 +72,7 @@ The pixel density of the screen is 'MDPI'.
 SCREEN_DENSITY_LDPI = 240
 ```
 
-The pixel density of the screen is 'LDPI'.
+表示屏幕像素密度为'LDPI'。
 
 **Since:** 9
 
@@ -91,7 +90,7 @@ The pixel density of the screen is 'LDPI'.
 SCREEN_DENSITY_XLDPI = 320
 ```
 
-The pixel density of the screen is 'XLDPI'.
+表示屏幕像素密度为'XLDPI'。
 
 **Since:** 9
 
@@ -109,7 +108,7 @@ The pixel density of the screen is 'XLDPI'.
 SCREEN_DENSITY_XXLDPI = 480
 ```
 
-The pixel density of the screen is 'XXLDPI'.
+表示屏幕像素密度为'XXLDPI'。
 
 **Since:** 9
 
@@ -127,7 +126,7 @@ The pixel density of the screen is 'XXLDPI'.
 SCREEN_DENSITY_XXXLDPI = 640
 ```
 
-The pixel density of the screen is 'XXXLDPI'.
+表示屏幕像素密度为'XXXLDPI'。
 
 **Since:** 9
 

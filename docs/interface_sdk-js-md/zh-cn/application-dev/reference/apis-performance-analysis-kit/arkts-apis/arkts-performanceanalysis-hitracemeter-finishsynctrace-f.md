@@ -1,5 +1,11 @@
 # finishSyncTrace
 
+## 导入模块
+
+```TypeScript
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## finishSyncTrace
 
 ```TypeScript
@@ -8,7 +14,7 @@ function finishSyncTrace(level: HiTraceOutputLevel): void
 
 标记一个同步跟踪耗时任务的结束，分级控制跟踪输出。
 
-finishSyncTrace的level必须与流程开始的[startSyncTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对应参数值一致。
+finishSyncTrace的level必须与流程开始的[startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startsynctrace)对应参数值一致。
 
 **起始版本：** 19
 
@@ -24,9 +30,9 @@ finishSyncTrace的level必须与流程开始的[startSyncTrace()]\_\_\_JSDOC\_LI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 跟踪输出级别。 |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | 是 | 跟踪输出级别。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;

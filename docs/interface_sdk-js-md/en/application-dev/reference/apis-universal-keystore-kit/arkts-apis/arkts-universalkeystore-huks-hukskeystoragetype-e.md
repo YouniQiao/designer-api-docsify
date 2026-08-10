@@ -1,6 +1,6 @@
 # HuksKeyStorageType
 
-Enumerates the key storage modes.
+表示密钥存储方式。
 
 **Since:** 8
 
@@ -16,10 +16,9 @@ Enumerates the key storage modes.
 HUKS_STORAGE_TEMP = 0
 ```
 
-The key is managed locally.
+表示通过本地直接管理密钥。
 
-Note: This tag is supported since API version 8 and deprecated since API version 10. No substitute is provided because this tag is not used in key management. In key derivation scenarios, use  
-**HUKS\_STORAGE\_ONLY\_USED\_IN\_HUKS** or **HUKS\_STORAGE\_KEY\_EXPORT\_ALLOWED**.
+**说明：** 从API version 8开始支持，从API version 10开始废弃，由于开发者正常使用密钥管理过程中并不需要使用此TAG，故无替代接口。针对密钥派生场景，可使用HUKS_STORAGE_ONLY_USED_IN_HUKS 与 HUKS_STORAGE_KEY_EXPORT_ALLOWED。
 
 **Since:** 8
 
@@ -37,10 +36,9 @@ Note: This tag is supported since API version 8 and deprecated since API version
 HUKS_STORAGE_PERSISTENT = 1
 ```
 
-The key is managed by the HUKS service.
+表示通过HUKS service管理密钥。
 
-Note: This tag is supported since API version 8 and deprecated since API version 10. No substitute is provided because this tag is not used in key management. In key derivation scenarios, use  
-**HUKS\_STORAGE\_ONLY\_USED\_IN\_HUKS** or **HUKS\_STORAGE\_KEY\_EXPORT\_ALLOWED**.
+**说明：** 从API version 8开始支持，从API version 10开始废弃，由于开发者正常使用密钥管理过程中并不需要使用此TAG，故无替代接口。针对密钥派生场景，可使用HUKS_STORAGE_ONLY_USED_IN_HUKS 与 HUKS_STORAGE_KEY_EXPORT_ALLOWED。
 
 **Since:** 8
 
@@ -58,7 +56,7 @@ Note: This tag is supported since API version 8 and deprecated since API version
 HUKS_STORAGE_ONLY_USED_IN_HUKS = 2
 ```
 
-The key derived from the master key is stored in the HUKS and managed by the HUKS.
+表示主密钥派生的密钥存储于huks中，由HUKS进行托管。
 
 **Since:** 10
 
@@ -78,7 +76,7 @@ The key derived from the master key is stored in the HUKS and managed by the HUK
 HUKS_STORAGE_KEY_EXPORT_ALLOWED = 3
 ```
 
-The key derived from the master key is exported to the service, and not managed by the HUKS.
+表示主密钥派生的密钥直接导出给业务方，HUKS不对其进行托管服务。
 
 **Since:** 10
 

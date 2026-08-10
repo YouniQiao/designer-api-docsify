@@ -5,7 +5,7 @@ type AVMediaCenterControlType = 'playNext' | 'playPrevious' | 'fastForward' | 'r
     'toggleFavorite'
 ```
 
-The type of media center control command, which can be used to determine the button displayed on the media center.
+应用可选择设置优先级的播控组件类型
 
 **Since:** 26.0.0
 

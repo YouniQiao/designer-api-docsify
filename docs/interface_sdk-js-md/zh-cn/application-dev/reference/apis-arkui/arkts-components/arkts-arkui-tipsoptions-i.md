@@ -42,7 +42,7 @@ appearingTime?: number
 appearingTimeWithContinuousOperation?: number
 ```
 
-多个组件连续弹出悬浮气泡时，悬浮气泡的显示时延。显示时延的最大值为4000ms，设置超过4000ms的值以4000ms为准。
+多个组件连续弹出悬浮气泡时，悬浮气泡的显示时延。显示时延的最大值为4000ms，设置超过4000ms的值以4000ms为准。 
 
 默认值：300
 
@@ -70,7 +70,7 @@ arrowHeight?: Dimension
 
 The height of the arrow.
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 8.0_vp.
 
@@ -96,7 +96,7 @@ arrowPointPosition?: ArrowPointPosition
 
 默认值：ArrowPointPosition.CENTER
 
-**类型：** ArrowPointPosition
+**类型：** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
 
 **起始版本：** 19
 
@@ -118,7 +118,7 @@ arrowWidth?: Dimension
 
 The width of the arrow.
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 16.0_vp.
 
@@ -166,7 +166,7 @@ disappearingTime?: number
 disappearingTimeWithContinuousOperation?: number
 ```
 
-多个组件连续弹出悬浮气泡时，悬浮气泡的隐藏时延。隐藏时延的最大值为4000ms，设置超过4000ms的值以4000ms为准。
+多个组件连续弹出悬浮气泡时，悬浮气泡的隐藏时延。隐藏时延的最大值为4000ms，设置超过4000ms的值以4000ms为准。 
 
 默认值：0
 
@@ -232,7 +232,7 @@ showAtAnchor?: TipsAnchorType
 
 Tips的跟随类型为TipsAnchorType.CURSOR时，Tips不显示箭头。
 
-**类型：** TipsAnchorType
+**类型：** [TipsAnchorType](../arkts-apis/arkts-arkui-tipsanchortype-e.md)
 
 **起始版本：** 20
 
@@ -254,15 +254,15 @@ systemMaterial?: SystemUiMaterial
 
 设置组件的系统材质。
 
-默认值：undefined，会清除由该接口设置的材质效果。
+默认值：undefined，会清除由该接口设置的材质效果。 
 
 **说明：**
 
-不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、边框颜色  
-[borderColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、边框宽度[borderWidth]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、阴影  
-[shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_，不建议与上述接口一起使用。
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 

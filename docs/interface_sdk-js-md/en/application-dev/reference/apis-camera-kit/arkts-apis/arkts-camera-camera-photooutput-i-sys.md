@@ -1,7 +1,6 @@
 # PhotoOutput
 
-PhotoOutput implements output information used in a photo session. It inherits from  
-[CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 **Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -13,6 +12,12 @@ PhotoOutput implements output information used in a photo session. It inherits f
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## burstCapture
 
 ```TypeScript
@@ -20,7 +25,7 @@ burstCapture(setting: PhotoCaptureSetting): Promise<void>
 ```
 
 Starts the burst mode, in which users can capture a series of photos in quick succession. This API is generally used in photo mode. After the burst mode starts, the bottom layer continues displaying photos. You can call  
-[confirmCapture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to cancel the burst mode. This API uses a promise to return the result.
+[confirmCapture](arkts-camera-camera-photooutput-i-sys.md#confirmcapture) to cancel the burst mode. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -36,7 +41,7 @@ Starts the burst mode, in which users can capture a series of photos in quick su
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Shooting parameters. The input of **undefined** is processed as if no parameters were passed. |
+| setting | [PhotoCaptureSetting](arkts-camera-camera-photocapturesetting-i.md) | Yes | Shooting parameters. The input of **undefined** is processed as if no parameters were passed. |
 
 **Return value:**
 
@@ -48,12 +53,12 @@ Starts the burst mode, in which users can capture a series of photos in quick su
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -85,7 +90,7 @@ confirmCapture(): void
 ```
 
 Confirms photo capture. This API is generally used in night photo mode when users need to stop the exposure countdown and take a photo in advance.This API is used to end the burst mode, which is started by calling  
-[burstCapture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[burstCapture](arkts-camera-camera-photooutput-i-sys.md#burstcapture).
 
 **Since:** 11
 
@@ -101,11 +106,11 @@ Confirms photo capture. This API is generally used in night photo mode when user
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -142,18 +147,18 @@ Enables deferred delivery of a certain type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Deferred delivery image type. |
+| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | Yes | Deferred delivery image type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function deferImageDelivery(photoOutput: camera.PhotoOutput, type: camera.DeferredDeliveryImageType): void {
@@ -189,9 +194,9 @@ Enable auto cloud image enhancement
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## enableAutoHighQualityPhoto
 
@@ -200,7 +205,7 @@ enableAutoHighQualityPhoto(enabled: boolean): void
 ```
 
 Enables automatic high quality for photos. Before using this API, call  
-[isAutoHighQualityPhotoSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether automatic high quality is supported.
+[isAutoHighQualityPhotoSupported](arkts-camera-camera-photooutput-i-sys.md#isautohighqualityphotosupported) to check whether automatic high quality is supported.
 
 **Since:** 13
 
@@ -222,12 +227,12 @@ Enables automatic high quality for photos. Before using this API, call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | session is not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -265,10 +270,10 @@ Enable depth data delivery.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## enableOffline
 
@@ -292,9 +297,9 @@ Enable offline processing.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | session is not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## enableOriginalImageGeneration
 
@@ -326,8 +331,8 @@ Enable original image generation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## enableQuickThumbnail
 
@@ -335,9 +340,9 @@ Enable original image generation.
 enableQuickThumbnail(enabled: boolean): void
 ```
 
-Enables or disables the quick thumbnail feature.This API takes effect after [addOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[addInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and before  
-[commitConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+Enables or disables the quick thumbnail feature.This API takes effect after [addOutput](arkts-camera-camera-session-i.md#addoutput) and  
+[addInput](arkts-camera-camera-session-i.md#addinput) and before  
+[commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
 **Since:** 10
 
@@ -359,12 +364,12 @@ Enables or disables the quick thumbnail feature.This API takes effect after [add
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
+| 7400104 | session is not running. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| 202 | Not System Application.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -427,10 +432,10 @@ Enable raw image image delivery.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## isAutoCloudImageEnhancementSupported
 
@@ -460,8 +465,8 @@ Confirm if the auto cloud image enhancement is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## isAutoHighQualityPhotoSupported
 
@@ -491,11 +496,11 @@ Checks whether automatic high quality is supported for photos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | session is not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -527,7 +532,7 @@ Checks whether deferred delivery of a certain type is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Deferred delivery image type. |
+| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | Yes | Deferred delivery image type. |
 
 **Return value:**
 
@@ -539,12 +544,12 @@ Checks whether deferred delivery of a certain type is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function isDeferredImageDeliveryEnabled(photoOutput: camera.PhotoOutput, type: camera.DeferredDeliveryImageType): boolean {
@@ -576,7 +581,7 @@ Checks whether deferred delivery of a certain type is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Deferred delivery image type. |
+| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | Yes | Deferred delivery image type. |
 
 **Return value:**
 
@@ -588,12 +593,12 @@ Checks whether deferred delivery of a certain type is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function isDeferredImageDeliverySupported(photoOutput: camera.PhotoOutput, type: camera.DeferredDeliveryImageType): boolean {
@@ -631,9 +636,9 @@ Check if the depth data delivery is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## isOfflineSupported
 
@@ -663,8 +668,8 @@ Confirm if offline processing is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## isOriginalImageGenerationSupported
 
@@ -696,8 +701,8 @@ Confirm if original image generation supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## isQuickThumbnailSupported
 
@@ -705,9 +710,9 @@ Confirm if original image generation supported.
 isQuickThumbnailSupported(): boolean
 ```
 
-Checks whether the quick thumbnail feature is supported.This API takes effect after [addOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[addInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and before  
-[commitConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+Checks whether the quick thumbnail feature is supported.This API takes effect after [addOutput](arkts-camera-camera-session-i.md#addoutput) and  
+[addInput](arkts-camera-camera-session-i.md#addinput) and before  
+[commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
 **Since:** 10
 
@@ -729,10 +734,10 @@ Checks whether the quick thumbnail feature is supported.This API takes effect af
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400104 | session is not running. |
+| 202 | Not System Application.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -795,9 +800,9 @@ Confirm if the raw image delivery is supported
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## off('deferredPhotoProxyAvailable')
 
@@ -822,15 +827,15 @@ Unsubscribes from events indicating available thumbnail proxies.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredPhotoProxyAvailable' | Yes | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeferredPhotoProxy&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredPhotoProxy&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -874,9 +879,9 @@ Unsubscribes from quick thumbnail output events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'quickThumbnail' | Yes | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
-**Example**
+## Examples
 
 ```TypeScript
 function unregisterQuickThumbnail(photoOutput: camera.PhotoOutput): void {
@@ -907,13 +912,13 @@ Unsubscribes offline Delivery finished events.This method is valid only after en
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'offlineDeliveryFinished' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## offDeferredPhotoProxyAvailable
 
@@ -937,13 +942,13 @@ Unsubscribes deferred photo proxy available event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeferredPhotoProxy&gt; | No | Callback used to get the DeferredPhotoProxy. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredPhotoProxy&gt; | No | Callback used to get the DeferredPhotoProxy. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## offOfflineDeliveryFinished
 
@@ -967,13 +972,13 @@ Unsubscribes offline Delivery finished events.This method is valid only after en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## offQuickThumbnail
 
@@ -997,7 +1002,7 @@ Unsubscribes from camera thumbnail events.This method is valid only after enable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | No | Callback used to get the quick thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | No | Callback used to get the quick thumbnail. |
 
 ## on('deferredPhotoProxyAvailable')
 
@@ -1022,15 +1027,15 @@ Subscribes to events indicating available thumbnail proxies. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredPhotoProxyAvailable' | Yes | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeferredPhotoProxy&gt; | Yes | Callback used to return the thumbnail proxy. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredPhotoProxy&gt; | Yes | Callback used to return the thumbnail proxy. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1074,9 +1079,9 @@ Subscribes to quick thumbnail output events. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'quickThumbnail' | Yes | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | Yes | Callback that returns a PixelMap instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback that returns a PixelMap instance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -1146,13 +1151,13 @@ Subscribes offline Delivery finished events.This method is valid only after enab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'offlineDeliveryFinished' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## onDeferredPhotoProxyAvailable
 
@@ -1176,13 +1181,13 @@ Subscribes deferred photo proxy available event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeferredPhotoProxy&gt; | Yes | Callback used to get the DeferredPhotoProxy. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredPhotoProxy&gt; | Yes | Callback used to get the DeferredPhotoProxy. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## onOfflineDeliveryFinished
 
@@ -1206,13 +1211,13 @@ Subscribes offline Delivery finished events.This method is valid only after enab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## onQuickThumbnail
 
@@ -1236,7 +1241,7 @@ Subscribes to camera thumbnail events.This method is valid only after enableQuic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | Yes | Callback used to get the quick thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to get the quick thumbnail. |
 
 ## setEditData
 
@@ -1268,6 +1273,6 @@ Set edit data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 

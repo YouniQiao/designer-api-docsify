@@ -18,7 +18,7 @@ bottom?: ResourceColor
 
 bottom property.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ end?: ResourceColor
 
 end property.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -66,7 +66,7 @@ start?: ResourceColor
 
 start property.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -90,7 +90,7 @@ top?: ResourceColor
 
 top property.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 

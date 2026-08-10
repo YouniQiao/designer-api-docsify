@@ -1,8 +1,8 @@
 # DynamicLayoutAttribute
 
-支持[通用属性]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
 
-支持[通用事件]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
 
 **继承/实现关系：** DynamicLayoutAttribute extends [CommonMethod<DynamicLayoutAttribute>](CommonMethod<DynamicLayoutAttribute>)
 
@@ -19,4 +19,10 @@
 <!--Device-unnamed-export declare class DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>--><!--Device-unnamed-export declare class DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
+```
 

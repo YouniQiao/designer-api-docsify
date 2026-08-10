@@ -1,5 +1,11 @@
 # unbind
 
+## Modules to Import
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## unbind
 
 ```TypeScript
@@ -7,9 +13,8 @@ function unbind(floatViewController: FloatViewController,
     floatingBallController: floatingBall.FloatingBallController): Promise<void>
 ```
 
-Unbinds the float view and floating ball. The unbinding can be performed only after both the  
-[float view controller]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[floating ball controller]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ are stopped. This API uses a promise to return the result.
+解绑标准悬浮窗和闪控球。需要在[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和  
+[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)均停止后才可解绑。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -25,20 +30,52 @@ Unbinds the float view and floating ball. The unbinding can be performed only af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| floatViewController | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Float view controller. |
-| floatingBallController | floatingBall.FloatingBallController | Yes | Floating ball controller. |
+| floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | Yes | 标准悬浮窗控制器。 |
+| floatingBallController | floatingBall.FloatingBallController | Yes | 闪控球控制器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on this device. Possible cause: Call api on unsupported device. |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floatingBallController has not been bound. |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The floatViewController has not been bound. 3. The floatViewController and the floatingBallController are not bound together. |
+| 801 | Capability not supported on this device. Possible cause: Call api on unsupported device. |
+| 1300025 | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floatingBallController has not been bound. |
+| 1300031 | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The floatViewController has not been bound. 3. The floatViewController and the floatingBallController are not bound together. |
+
+## Examples
+
+```TypeScript
+// Entry.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+import { floatingBall, floatView } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  private floatingBallController: floatingBall.FloatingBallController | undefined = undefined;
+  private floatViewController: floatView.FloatViewController | undefined = undefined;
+  // Create a controller.
+  // ...
+  public unbindController(): void {
+    try {
+      // Use the float view controller and floating ball controller passed during the binding.
+      if (this.floatViewController && this.floatingBallController) {
+        // Unbind the float view and the floating ball.
+        floatView.unbind(this.floatViewController!, this.floatingBallController!).then(() => {
+          console.info('Succeeded in unbinding float view and floating ball.');
+        }).catch((err: BusinessError): void => {
+          console.error(`Failed to unbind float view and floating ball. Cause:${err.code}, message:${err.message}`);
+        });
+      }
+    } catch (e) {
+      console.error(`Failed to unbind float view and floating ball. Cause:${e.code}, message:${e.message}`);
+    }
+  }
+}
+```
 

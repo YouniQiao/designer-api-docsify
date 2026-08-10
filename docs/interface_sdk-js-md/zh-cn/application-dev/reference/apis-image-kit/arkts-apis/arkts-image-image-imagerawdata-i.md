@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## bitsPerPixel
 
 ```TypeScript
@@ -18,7 +24,7 @@ bitsPerPixel: int
 
 每个像素在缓冲区数据中实际占用的位数。单位：比特（bit）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 

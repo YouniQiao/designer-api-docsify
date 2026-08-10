@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## buttonId
 
 ```TypeScript
@@ -58,7 +64,7 @@ buttonType: ButtonType
 
 按钮的类型。
 
-**类型：** ButtonType
+**类型：** [ButtonType](../../apis-arkui/arkts-apis/arkts-arkui-button-buttontype-e.md)
 
 **起始版本：** 23
 

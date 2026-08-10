@@ -1,5 +1,11 @@
 # getDistanceBetweenLocations
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## getDistanceBetweenLocations
 
 ```TypeScript
@@ -22,16 +28,16 @@ Obtains the distance between two locations.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location1 | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates first location. |
-| location2 | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates second location. |
+| location1 | [Location](arkts-location-geolocationmanager-location-i.md) | Yes | Indicates first location. |
+| location2 | [Location](arkts-location-geolocationmanager-location-i.md) | Yes | Indicates second location. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Returns the distance between two locations. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Returns the distance between two locations. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

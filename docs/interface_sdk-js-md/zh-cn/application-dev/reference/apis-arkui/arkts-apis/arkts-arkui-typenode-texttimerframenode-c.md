@@ -34,11 +34,11 @@ abstract initialize(options?: TextTimerOptions): TextTimerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| options | [TextTimerOptions](../arkts-components/arkts-arkui-texttimeroptions-i.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextTimerAttribute](../arkts-components/arkts-arkui-texttimer-attribute.md) |  |
 

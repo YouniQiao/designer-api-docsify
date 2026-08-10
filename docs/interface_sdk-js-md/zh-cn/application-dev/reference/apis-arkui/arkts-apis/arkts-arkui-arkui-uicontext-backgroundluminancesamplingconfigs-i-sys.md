@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## brightThreshold
 
 ```TypeScript
@@ -74,7 +80,7 @@ region?: Edges<LengthMetrics>
 
 默认使用组件自身区域
 
-**类型：** Edges&lt;LengthMetrics&gt;
+**类型：** [Edges](arkts-arkui-edges-i.md)&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
 
 **起始版本：** 23
 

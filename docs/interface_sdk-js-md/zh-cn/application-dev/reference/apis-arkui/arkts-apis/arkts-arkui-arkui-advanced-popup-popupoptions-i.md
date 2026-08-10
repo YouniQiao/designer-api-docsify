@@ -10,6 +10,12 @@ PopupOptions定义Popup的具体样式参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
+
 ## buttons
 
 ```TypeScript
@@ -19,11 +25,11 @@ buttons?: [
   ]
 ```
 
-设置popup操作按钮，按钮最多设置两个。
+设置popup操作按钮，按钮最多设置两个。 
 
 默认不显示按钮。
 
-**类型：** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
+**类型：** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
 
 **起始版本：** 23
 
@@ -45,7 +51,7 @@ direction?: Direction
 
 默认值：Direction.Auto
 
-**类型：** Direction
+**类型：** [Direction](arkts-arkui-direction-e.md)
 
 **默认值：** Direction.Auto
 
@@ -73,7 +79,7 @@ icon?: PopupIconOptions
 
 默认不显示图标。
 
-**类型：** PopupIconOptions
+**类型：** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
 **起始版本：** 23
 
@@ -95,11 +101,11 @@ maxWidth?: Dimension
 
 **说明：**
 
-1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。2. maxWidth是数字类型，支持float和integer，例如\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_。3. 当类型为Resource时，如果未设置单位，默认单位为px。
+1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。2. maxWidth是数字类型，支持float和integer，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。3. 当类型为Resource时，如果未设置单位，默认单位为px。
 
 默认值：400vp
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** 400.0_vp
 
@@ -123,7 +129,7 @@ message?: PopupTextOptions
 
 **说明：**
 
-message不支持设置fontWeight。
+message不支持设置fontWeight。 
 
 默认不显示内容文本。
 
@@ -131,7 +137,7 @@ message不支持设置fontWeight。
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** PopupTextOptions
+**类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 23
 
@@ -151,7 +157,7 @@ onClose?: VoidCallback
 
 设置popup关闭按钮回调函数。
 
-**类型：** VoidCallback
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **起始版本：** 23
 
@@ -197,11 +203,11 @@ Resource：显示对应的图标。
 title?: PopupTextOptions
 ```
 
-设置popup标题文本。
+设置popup标题文本。 
 
 默认不显示标题文本。
 
-**类型：** PopupTextOptions
+**类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 23
 

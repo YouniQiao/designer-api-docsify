@@ -1,12 +1,18 @@
 # getAuthorizationManager (System API)
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAuthorizationManager
 
 ```TypeScript
 function getAuthorizationManager(): AuthorizationManager
 ```
 
-Obtains this OS account authorization manager.
+获取系统账号授权管理器。
 
 **Since:** 24
 
@@ -24,15 +30,15 @@ Obtains this OS account authorization manager.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Instance object of the OS account authorization manager. |
+| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) | 返回系统账号授权管理的实例对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();

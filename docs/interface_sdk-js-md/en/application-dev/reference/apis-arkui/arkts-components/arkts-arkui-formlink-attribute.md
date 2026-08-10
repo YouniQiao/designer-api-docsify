@@ -1,8 +1,8 @@
 # FormLink properties/events
 
-The [universal attributes]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ are supported.
+The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are supported.
 
-The [universal events]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ are not supported.
+The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are not supported.
 
 **Inheritance/Implementation:** FormLinkAttribute extends [CommonMethod<FormLinkAttribute>](CommonMethod<FormLinkAttribute>)
 

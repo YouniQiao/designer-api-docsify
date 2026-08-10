@@ -1,6 +1,6 @@
 # Orientation
 
-Enumerates the orientations of a display.
+显示设备当前显示的方向枚举。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the orientations of a display.
 PORTRAIT = 0
 ```
 
-The display is in portrait mode.
+表示设备当前以竖屏方式显示。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ The display is in portrait mode.
 LANDSCAPE = 1
 ```
 
-The display is in landscape mode.
+表示设备当前以横屏方式显示。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ The display is in landscape mode.
 PORTRAIT_INVERTED = 2
 ```
 
-The display is in reverse portrait mode.
+表示设备当前以反向竖屏方式显示。
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ The display is in reverse portrait mode.
 LANDSCAPE_INVERTED = 3
 ```
 
-The display is in reverse landscape mode.
+表示设备当前以反向横屏方式显示。
 
 **Since:** 10
 

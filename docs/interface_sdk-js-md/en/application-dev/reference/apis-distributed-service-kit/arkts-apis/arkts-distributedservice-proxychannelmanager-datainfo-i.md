@@ -1,6 +1,6 @@
 # DataInfo
 
-Represents the received data, including the channel ID and data.
+存放接收的数据信息，包括通道Id和数据。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Represents the received data, including the channel ID and data.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## channelId
 
 ```TypeScript
 channelId: int
 ```
 
-Proxy channel ID.
+代理通道的channelId。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -36,7 +42,7 @@ Proxy channel ID.
 data: ArrayBuffer
 ```
 
-Received byte array.
+接收到的字节数据。
 
 **Type:** ArrayBuffer
 

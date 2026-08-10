@@ -1,6 +1,6 @@
 # PropertyWriteType
 
-The enum of property write type.
+属性写入类型的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of property write type.
 WRITE = 1
 ```
 
-Writes property and waits for response.
+写入属性并等待响应。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Writes property and waits for response.
 WRITE_NO_RESPONSE = 2
 ```
 
-Writes property without response.
+写入属性且没有响应。
 
 **Since:** 26.0.0
 

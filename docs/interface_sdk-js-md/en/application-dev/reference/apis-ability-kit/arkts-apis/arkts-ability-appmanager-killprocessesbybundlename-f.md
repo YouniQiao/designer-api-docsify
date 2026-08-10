@@ -1,12 +1,18 @@
 # killProcessesByBundleName
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## killProcessesByBundleName
 
 ```TypeScript
 function killProcessesByBundleName(bundleName: string, clearPageStack: boolean, appIndex?: int): Promise<void>
 ```
 
-Kills a process by bundle name. This API uses a promise to return the result.
+终止指定应用包名的应用进程。使用Promise异步回调。
 
 **Since:** 14
 
@@ -22,25 +28,25 @@ Kills a process by bundle name. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| clearPageStack | boolean | Yes | Whether to clear the page stack. **true** to clear, **false** otherwise. |
-| appIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | ID of an application clone. The default value is **0**. If the value is **0**, all processes of the main application are terminated. If the value is greater than 0, all processes of the specified application clone are terminated. |
+| bundleName | string | Yes | 表示需要终止进程的应用包名。 |
+| clearPageStack | boolean | Yes | 表示是否清除页面堆栈。true表示清除，false表示不清除。 |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 应用分身Id，默认值为0。取值为0时，表示终止主应用的所有进程。取值大于0时，表示终止指定分身应用的所有进程。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | If the input parameter is not valid parameter. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

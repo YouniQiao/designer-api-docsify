@@ -1,5 +1,11 @@
 # offInstalledAccessibilityListChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { config } from 'kits/@kit.AccessibilityKit';
+```
+
 ## offInstalledAccessibilityListChange
 
 ```TypeScript
@@ -24,12 +30,12 @@ Unregister listener that watches for changes in the installed status of accessib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Indicates the listener. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Indicates the listener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

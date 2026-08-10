@@ -1,6 +1,6 @@
 # HostDeviceType
 
-Enumerates the remote camera types.
+枚举，远端相机设备类型。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Enumerates the remote camera types.
 UNKNOWN_TYPE = 0
 ```
 
-Unknown type.
+未知设备类型。
 
 **Since:** 15
 
@@ -34,7 +34,7 @@ Unknown type.
 PHONE = 0x0E
 ```
 
-Mobile phone.
+手机设备。
 
 **Since:** 15
 
@@ -52,7 +52,7 @@ Mobile phone.
 TABLET = 0x11
 ```
 
-Tablet.
+平板设备。
 
 **Since:** 15
 

@@ -1,6 +1,6 @@
 # FocusState
 
-Enumerates the focus states.
+枚举，焦距状态。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the focus states.
 FOCUS_STATE_SCAN = 0
 ```
 
-Focusing.
+触发对焦。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ Focusing.
 FOCUS_STATE_FOCUSED = 1
 ```
 
-Focused.
+对焦成功。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ Focused.
 FOCUS_STATE_UNFOCUSED = 2
 ```
 
-Unfocused.
+未完成对焦。
 
 **Since:** 10
 

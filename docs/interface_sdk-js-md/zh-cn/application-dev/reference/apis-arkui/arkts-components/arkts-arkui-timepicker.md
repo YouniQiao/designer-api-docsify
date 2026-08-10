@@ -16,8 +16,8 @@ TimePicker是用于滑动选择时间的组件，支持12/24小时制、多种�
 
 ## 子组件
 
-    
-    该组件为基础组件，不建议包含子组件。
+> 
+> 该组件为基础组件，不建议包含子组件。
 
 ## TimePicker
 
@@ -41,7 +41,13 @@ TimePicker(options?: TimePickerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 配置时间选择组件的参数。当需要自定义初始选中时间、时间格式、时间范围等配置时传入此参数， 不传入时使用默认配置（初始选中时间为当前系统时间，时间格式默认为小时和分钟，时间范围默认为00:00-23:59（默认结束时间为23:59:59））。  |
+| options | [TimePickerOptions](../arkts-apis/arkts-arkui-timepicker-timepickeroptions-i.md) | 否 | 配置时间选择组件的参数。当需要自定义初始选中时间、时间格式、时间范围等配置时传入此参数， 不传入时使用默认配置（初始选中时间为当前系统时间，时间格式默认为小时和分钟，时间范围默认为00:00-23:59（默认结束时间为23:59:59））。 |
 
 ## 汇总
 
+- [TimePickerDialogOptions](arkts-arkui-timepicker-timepickerdialogoptions-i.md)
+- [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)
+- [TimePickerResult](arkts-arkui-timepicker-timepickerresult-i.md)
+- [DateTimeOptions](arkts-arkui-timepicker-datetimeoptions-t.md)
+- [OnTimePickerChangeCallback](arkts-arkui-timepicker-ontimepickerchangecallback-t.md)
+- [TimePickerFormat](arkts-arkui-timepicker-timepickerformat-e.md)

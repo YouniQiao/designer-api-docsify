@@ -1,6 +1,6 @@
 # EditableTextChangeValue
 
-Provides detailed information of text changes, including preview text.
+文本变化的详细信息，包括预上屏。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Provides detailed information of text changes, including preview text.
 content: string
 ```
 
-Current text content.
+当前的文本内容。
 
 **Type:** string
 
@@ -38,9 +38,11 @@ Current text content.
 options?: TextChangeOptions
 ```
 
-Information about the text change.
+变化的文本内容信息。
 
-**Type:** TextChangeOptions
+默认值：undefined。
+
+**Type:** [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md)
 
 **Since:** 15
 
@@ -60,9 +62,11 @@ Information about the text change.
 previewText?: PreviewText
 ```
 
-Preview text.
+预上屏的内容信息。
 
-**Type:** PreviewText
+默认值：undefined，表示无预上屏内容。
+
+**Type:** [PreviewText](arkts-arkui-previewtext-i.md)
 
 **Since:** 15
 

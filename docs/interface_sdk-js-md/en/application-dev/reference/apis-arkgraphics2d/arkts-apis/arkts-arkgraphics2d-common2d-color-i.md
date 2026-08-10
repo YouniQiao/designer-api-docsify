@@ -1,6 +1,6 @@
 # Color
 
-Describes a color in ARGB format.
+ARGB格式的颜色描述。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Describes a color in ARGB format.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { common2D } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alpha
 
 ```TypeScript
 alpha: int
 ```
 
-Alpha component of the color. The value is an integer ranging from 0 to 255.
+颜色的A分量（透明度），值是0~255的整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -36,9 +42,9 @@ Alpha component of the color. The value is an integer ranging from 0 to 255.
 blue: int
 ```
 
-Blue component of the color. The value is an integer ranging from 0 to 255.
+颜色的B分量（蓝色），值是0~255的整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -56,9 +62,9 @@ Blue component of the color. The value is an integer ranging from 0 to 255.
 green: int
 ```
 
-Green component of the color. The value is an integer ranging from 0 to 255.
+颜色的G分量（绿色），值是0~255的整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -76,9 +82,9 @@ Green component of the color. The value is an integer ranging from 0 to 255.
 red: int
 ```
 
-Red component of the color. The value is an integer ranging from 0 to 255.
+颜色的R分量（红色），值是0~255的整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

@@ -1,12 +1,18 @@
 # hasWindowFocus
 
+## Modules to Import
+
+```TypeScript
+import { featureAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## hasWindowFocus
 
 ```TypeScript
 function hasWindowFocus(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the main window of this ability has the focus. This API uses an asynchronous callback to return the result.
+检查Ability的主窗口是否具有窗口焦点。使用callback异步回调。
 
 **Since:** 7
 
@@ -22,9 +28,9 @@ Checks whether the main window of this ability has the focus. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。&lt;br&gt;如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
@@ -45,7 +51,7 @@ featureAbility.hasWindowFocus((error, data) => {
 function hasWindowFocus(): Promise<boolean>
 ```
 
-Checks whether the main window of this ability has the focus. This API uses a promise to return the result.
+检查Ability的主窗口是否具有窗口焦点。使用Promise异步回调。
 
 **Since:** 7
 
@@ -61,9 +67,9 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+| Promise&lt;boolean&gt; | Promise对象。如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

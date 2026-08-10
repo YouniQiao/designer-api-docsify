@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.MDMKit';
+```
+
 ## accessTokenId
 
 ```TypeScript
@@ -17,7 +23,7 @@ readonly accessTokenId: number
 ```
 
 应用程序的accessTokenId，应用的身份标识，在程序访问控制校验接口  
-[checkAccessToken]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中使用。
+[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md/arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)中使用。
 
 **类型：** number
 
@@ -37,7 +43,7 @@ readonly accessTokenId: number
 readonly appDistributionType: string
 ```
 
-应用程序签名证书的分发类型，详细信息请参考[ApplicationInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的appProvisionType字段。
+应用程序签名证书的分发类型，详细信息请参考[ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md)的appProvisionType字段。
 
 **类型：** string
 
@@ -157,7 +163,7 @@ readonly debug: boolean
 readonly description: string
 ```
 
-标识应用的描述信息，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的description字段。关于description的详细信息详见本表中的descriptionResource字段说明。
+标识应用的描述信息，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的description字段。关于description的详细信息详见本表中的descriptionResource字段说明。
 
 **类型：** string
 
@@ -199,7 +205,7 @@ readonly descriptionResource: Resource
 
 应用程序的描述资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** Resource
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 20
 
@@ -237,7 +243,7 @@ readonly enabled: boolean
 readonly icon: string
 ```
 
-应用程序的图标，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的icon字段。关于icon的详细信息详见本表中的iconResource字段说明。
+应用程序的图标，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的icon字段。关于icon的详细信息详见本表中的iconResource字段说明。
 
 **类型：** string
 
@@ -299,7 +305,7 @@ readonly iconResource: Resource
 
 应用程序的图标资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** Resource
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 20
 
@@ -385,7 +391,7 @@ readonly labelResource: Resource
 
 应用程序的标签资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** Resource
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 20
 
@@ -403,7 +409,7 @@ readonly labelResource: Resource
 readonly name: string
 ```
 
-应用包的名称，对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置的bundleName字段。
+应用包的名称，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的bundleName字段。
 
 **类型：** string
 
@@ -463,7 +469,7 @@ readonly process: string
 readonly releaseType: string
 ```
 
-标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）来判断兼容性。
+标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md)）来判断兼容性。
 
 **类型：** string
 

@@ -1,14 +1,20 @@
 # DialogPresenter
 
-Provides unified dialog APIs.
+提供统一的对话框接口。
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 <!--Device-unnamed-export class DialogPresenter--><!--Device-unnamed-export class DialogPresenter-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
 
 ## dismiss
 
@@ -20,11 +26,9 @@ Dismisses a dialog box.Accepts either the dialog ID (returned by present) or the
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DialogPresenter-dismiss(target: int | ComponentContent<Object>): Promise<void>--><!--Device-DialogPresenter-dismiss(target: int | ComponentContent<Object>): Promise<void>-End-->
 
@@ -46,8 +50,8 @@ Dismisses a dialog box.Accepts either the dialog ID (returned by present) or the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
+| 103301 | Dialog content error. The ComponentContent is incorrect. |
+| 103303 | Dialog content not found. The ComponentContent cannot be found. |
 
 ## present
 
@@ -59,11 +63,9 @@ Presents a fixed-style dialog box.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DialogPresenter-present(options?: dialog.DialogStyleOptions): Promise<DialogResult>--><!--Device-DialogPresenter-present(options?: dialog.DialogStyleOptions): Promise<DialogResult>-End-->
 
@@ -96,7 +98,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 Presents a custom-style dialog box with the provided content.
 
-The content parameter accepts CustomBuilder or ComponentContent via union type:  
+content参数支持CustomBuilder或ComponentContent联合类型：  
 - CustomBuilder: Builder function for custom dialog content.  
 - ComponentContent: ComponentContent supporting state-driven updates.
 
@@ -104,11 +106,9 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DialogPresenter-present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>--><!--Device-DialogPresenter-present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>-End-->
 
@@ -118,7 +118,7 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| CustomBuilderWithId \| ComponentContent&lt;Object&gt; | Yes | Custom dialog content. |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| CustomBuilderWithId \| ComponentContent&lt;Object&gt; | Yes | Custom dialog content. |
 | options | dialog.DialogCustomOptions | No | Custom dialog options. |
 
 **Return value:**
@@ -131,8 +131,8 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
-| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
+| 103301 | Dialog content error. The ComponentContent is incorrect. |
+| 103302 | Dialog content already exist. The ComponentContent has already been opened. |
 | 103306 | The dialog cannot be opened due to node mount failure. |
 | 103308 | The dialog cannot be opened due to subwindow create failure. |
 
@@ -146,11 +146,9 @@ Updates a presented custom dialog box.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DialogPresenter-update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): Promise<void>--><!--Device-DialogPresenter-update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): Promise<void>-End-->
 
@@ -160,7 +158,7 @@ Updates a presented custom dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Object&gt; | Yes | The content used to identify the dialog. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;Object&gt; | Yes | The content used to identify the dialog. |
 | options | dialog.DialogBaseOptions | No | Options to update. |
 
 **Return value:**
@@ -173,6 +171,6 @@ Updates a presented custom dialog box.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
+| 103301 | Dialog content error. The ComponentContent is incorrect. |
+| 103303 | Dialog content not found. The ComponentContent cannot be found. |
 

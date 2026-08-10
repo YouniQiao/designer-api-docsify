@@ -1,10 +1,10 @@
 # AdaptiveColor
 
-Enumerates the adaptive color modes used for the background blur effect.
+取色模式。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum AdaptiveColor--><!--Device-unnamed-declare enum AdaptiveColor-End-->
 
@@ -16,12 +16,11 @@ Enumerates the adaptive color modes used for the background blur effect.
 DEFAULT = 0
 ```
 
-Adaptive color mode is not used. The default color is used as the mask color. Using a mode other than **DEFAULT**  
-can be more time-consuming.
+不使用取色模糊。使用默认的颜色作为蒙版颜色。采用非DEFAULT方式较耗时。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,11 +36,11 @@ can be more time-consuming.
 AVERAGE = 1
 ```
 
-Adaptive color mode is used. The average color value of the color picking area is used as the mask color.
+使用取色模糊。将取色区域的颜色平均值作为蒙版颜色。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

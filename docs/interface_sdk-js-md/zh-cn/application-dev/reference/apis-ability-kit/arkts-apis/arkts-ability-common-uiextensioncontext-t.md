@@ -4,7 +4,7 @@
 export type UIExtensionContext = _UIExtensionContext.default
 ```
 
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_组件上下文，继承自Context。
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件上下文，继承自Context。
 
 **起始版本：** 10
 

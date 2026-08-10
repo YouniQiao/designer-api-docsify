@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
+## 导入模块
+
+```TypeScript
+import { dataAbility } from 'kits/@kit.ArkData';
+```
+
 ## and
 
 ```TypeScript
@@ -30,9 +36,9 @@ and(): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回带有和条件的DataAbility谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有和条件的DataAbility谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "Lisa")
@@ -46,7 +52,7 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 beginWrap(): DataAbilityPredicates
 ```
 
-在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_一起使用。
+在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap](arkts-arkdata-dataability-dataabilitypredicates-c.md#endwrap)一起使用。
 
 **起始版本：** 7
 
@@ -60,9 +66,9 @@ beginWrap(): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回带有左括号的DataAbility谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有左括号的DataAbility谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "lisi")
@@ -102,9 +108,9 @@ beginsWith(field: string, value: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.beginsWith("NAME", "os")
@@ -131,16 +137,16 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示与谓词匹配的最小值。 |
-| high | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示与谓词匹配的最大值。 |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.between("AGE", 10, 50)
@@ -173,9 +179,9 @@ contains(field: string, value: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.contains("NAME", "os")
@@ -201,9 +207,9 @@ distinct(): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回可用于过滤重复记录的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
@@ -215,7 +221,7 @@ dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
 endWrap(): DataAbilityPredicates
 ```
 
-在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_一起使用。
+在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap](arkts-arkdata-dataability-dataabilitypredicates-c.md#beginwrap)一起使用。
 
 **起始版本：** 7
 
@@ -229,9 +235,9 @@ endWrap(): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回带有右括号的DataAbility谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有右括号的DataAbility谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "lisi")
@@ -271,9 +277,9 @@ endsWith(field: string, value: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.endsWith("NAME", "se")
@@ -302,15 +308,15 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "lisi")
@@ -343,9 +349,9 @@ glob(field: string, value: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.glob("NAME", "?h*g")
@@ -378,15 +384,15 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.greaterThan("AGE", 18)
@@ -413,15 +419,15 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18)
@@ -453,9 +459,9 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回分组查询列的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回分组查询列的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.groupBy(["AGE", "NAME"])
@@ -488,9 +494,9 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.in("AGE", [18, 20])
@@ -522,9 +528,9 @@ indexedBy(field: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回具有指定索引列的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回具有指定索引列的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -595,9 +601,9 @@ isNotNull(field: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.isNotNull("NAME")
@@ -629,9 +635,9 @@ isNull(field: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.isNull("NAME")
@@ -658,15 +664,15 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.lessThan("AGE", 20)
@@ -693,15 +699,15 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
@@ -736,9 +742,9 @@ like(field: string, value: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.like("NAME", "%os%")
@@ -770,9 +776,9 @@ limitAs(value: number): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回可用于设置最大数据记录数的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3)
@@ -799,16 +805,16 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示与谓词匹配的最小值。 |
-| high | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示与谓词匹配的最大值。 |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.notBetween("AGE", 10, 50)
@@ -837,15 +843,15 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.notEqualTo("NAME", "lisi")
@@ -878,9 +884,9 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
@@ -892,8 +898,8 @@ dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): DataAbilityPredicates
 ```
 
-设置谓词查询结果的起始位置。需要同步调用[limitAs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，  
-[limitAs]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口需传入参数-1。
+设置谓词查询结果的起始位置。需要同步调用[limitAs](arkts-arkdata-dataability-dataabilitypredicates-c.md#limitas)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，  
+[limitAs](arkts-arkdata-dataability-dataabilitypredicates-c.md#limitas)接口需传入参数-1。
 
 **起始版本：** 7
 
@@ -913,9 +919,9 @@ offsetAs(rowOffset: number): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回具有指定返回结果起始位置的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 跳过前三条数据，显示后续三条数据
@@ -944,9 +950,9 @@ or(): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回带有或条件的DataAbility谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有或条件的DataAbility谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "Lisa")
@@ -980,9 +986,9 @@ orderByAsc(field: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 先按"NAME"字段排序，相同时按"AGE"字段排序，其次按"SALARY"排序
@@ -1015,9 +1021,9 @@ orderByDesc(field: string): DataAbilityPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 优先按"AGE"排序，相同时按"SALARY"排序

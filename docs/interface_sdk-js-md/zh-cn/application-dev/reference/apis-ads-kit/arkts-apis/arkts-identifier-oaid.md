@@ -1,10 +1,11 @@
 # @ohos.identifier.oaid(开放匿名设备标识服务)
 
 本模块提供开放匿名设备标识符（Open Anonymous Device Identifier, OAID）的获取和重置能力。
-    **说明：**  
-    
-    使用获取开放匿名设备标识符接口，需\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    （默认开启权限）：ohos.permission.APP\_TRACKING\_CONSENT。
+
+> **说明：**
+> 
+> 使用获取开放匿名设备标识符接口，需[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)
+> （默认开启权限）：ohos.permission.APP_TRACKING_CONSENT。
 
 **起始版本：** 10
 
@@ -13,6 +14,12 @@
 <!--Device-unnamed-declare namespace identifier--><!--Device-unnamed-declare namespace identifier-End-->
 
 **系统能力：** SystemCapability.Advertising.OAID
+
+## 导入模块
+
+```TypeScript
+import { identifier } from 'kits/@kit.AdsKit';
+```
 
 ## 汇总
 

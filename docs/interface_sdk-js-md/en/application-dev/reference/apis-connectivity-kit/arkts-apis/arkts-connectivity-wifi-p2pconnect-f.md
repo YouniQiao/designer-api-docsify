@@ -1,5 +1,11 @@
 # p2pConnect
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## p2pConnect
 
 ```TypeScript
@@ -26,7 +32,7 @@ Initiates a P2P connection to a device with the specified configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the configuration for connecting to a specific group. |
+| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | Yes | Indicates the configuration for connecting to a specific group. |
 
 **Return value:**
 
@@ -34,7 +40,7 @@ Initiates a P2P connection to a device with the specified configuration.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

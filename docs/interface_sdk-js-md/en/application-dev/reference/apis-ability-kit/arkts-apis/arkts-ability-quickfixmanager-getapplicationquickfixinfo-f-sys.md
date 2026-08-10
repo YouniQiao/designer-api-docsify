@@ -1,12 +1,18 @@
 # getApplicationQuickFixInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { quickFixManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getApplicationQuickFixInfo
 
 ```TypeScript
 function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<ApplicationQuickFixInfo>): void
 ```
 
-Obtains the quick fix information of the application. This API uses an asynchronous callback to return the result.
+获取应用的快速修复信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,20 +30,20 @@ Obtains the quick fix information of the application. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ApplicationQuickFixInfo&gt; | Yes | Callback used to return the quick fix information. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ApplicationQuickFixInfo&gt; | Yes | 回调函数。返回应用的快速修复信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
-| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 18500008 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 18500001 | The bundle does not exist or no patch has been applied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';
@@ -64,7 +70,7 @@ try {
 function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuickFixInfo>
 ```
 
-Obtains the quick fix information of the application. This API uses a promise to return the result.
+获取应用的快速修复信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -82,25 +88,25 @@ Obtains the quick fix information of the application. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 应用Bundle名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ApplicationQuickFixInfo&gt; | Promise used to return the quick fix information. |
+| Promise&lt;ApplicationQuickFixInfo&gt; | Promise对象。返回应用的快速修复信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
-| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 18500008 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 18500001 | The bundle does not exist or no patch has been applied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';

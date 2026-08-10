@@ -1,6 +1,6 @@
-# @ohos.systemTimer(System Timer)
+# @ohos.systemTimer(系统定时器)
 
-The **systemTimer** module provides system timer features. You can use the APIs of this module to implement the alarm clock and other timer services.
+本模块主要由系统定时器功能组成。开发者可以使用定时功能实现定时服务，如闹钟等。
 
 **Since:** 7
 
@@ -12,6 +12,12 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { systemTimer } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -19,14 +25,14 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 
 | Name | Description |
 | --- | --- |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer) | Creates a timer. This API uses an asynchronous callback to return the result. |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer-1) | Creates a timer. This API uses a promise to return the timer ID. |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer) | Destroys a timer. This API uses an asynchronous callback to return the result. |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-1) | Destroys a timer. This API uses a promise to return the result. |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer) | Starts a timer. This API uses an asynchronous callback to return the result. |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer-1) | Starts a timer. This API uses a promise to return the result. |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer) | Stops the timer. This API uses an asynchronous callback to return the result. |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer-1) | Stops a timer. This API uses a promise to return the result. |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer) | 创建定时器，使用callback异步回调。  > **注意：** >  > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer)结合使用，否则会造 > 成内存泄漏 |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer-1) | 创建定时器，使用Promise异步回调返回定时器的ID。  > **注意：** >  > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer)结合使用，否则会造 > 成内存泄漏 |
+| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer) | 销毁定时器，使用callback异步回调。 |
+| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-1) | 销毁定时器，使用Promise进行异步回调。 |
+| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer) | 开启定时器，使用callback异步回调。 |
+| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer-1) | 开启定时器，使用Promise进行异步回调。 |
+| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer) | 该方法停止定时器，并使用callback进行异步回调。 |
+| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer-1) | 此方法用于停止定时器，并使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -34,7 +40,7 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 
 | Name | Description |
 | --- | --- |
-| [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | Defines the initialization options for the system timer. |
+| [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | 创建系统定时器的初始化选项。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -42,9 +48,9 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 
 | Name | Description |
 | --- | --- |
-| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#timer_type_exact) | Exact type. (If the system time is changed, the offset may be 1s at most.) |
-| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#timer_type_idle) | Idle timer type (supported only for system services). |
-| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#timer_type_realtime) | CPU time type. (The start time of the timer cannot be later than the current system time.) |
-| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#timer_type_wakeup) | Wakeup type. (If the wakeup type is not set, the system does not wake up until it exits the sleep state.) |
+| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#timer_type_exact) | 精准定时器（系统时间修改的情况下，可能会出现最多1s的前后偏移误差）。 |
+| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#timer_type_idle) | IDLE模式定时器（仅支持系统服务配置，不支持应用配置）。 |
+| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#timer_type_realtime) | 系统启动时间定时器（定时器启动时间不能晚于当前设置的系统时间）。 |
+| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#timer_type_wakeup) | 唤醒定时器（如果未配置为唤醒定时器，则系统处于休眠状态下不会触发，直到退出休眠状态）。 |
 <!--DelEnd-->
 

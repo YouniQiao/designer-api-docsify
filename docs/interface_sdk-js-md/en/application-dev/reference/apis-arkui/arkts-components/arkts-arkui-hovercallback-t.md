@@ -4,7 +4,7 @@
 declare type HoverCallback = (isHover: boolean, event: HoverEvent) => void
 ```
 
-Defines the callback type for hover events.
+hover事件的回调类型。
 
 **Since:** 12
 
@@ -22,6 +22,6 @@ Defines the callback type for hover events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isHover | boolean | Yes | Whether the element is in the hover state. **true**: yes; **false**: no.  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Position coordinates of the hovered mouse or stylus.  |
+| isHover | boolean | Yes | 是否处于hover状态，true表示处于hover状态，false表示不在hover状态。 |
+| event | [HoverEvent](../arkts-apis/arkts-arkui-common-hoverevent-i.md) | Yes | 获取鼠标或手写笔悬浮的位置坐标。 |
 

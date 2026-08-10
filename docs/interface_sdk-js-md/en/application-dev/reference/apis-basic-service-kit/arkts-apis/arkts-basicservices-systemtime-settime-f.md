@@ -1,12 +1,18 @@
 # setTime
 
+## Modules to Import
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setTime
 
 ```TypeScript
 function setTime(time: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the system time. This API uses an asynchronous callback to return the result.
+设置系统时间，使用callback异步回调。
 
 **Since:** 7
 
@@ -26,8 +32,8 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | number | Yes | Timestamp to set, in milliseconds. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| time | number | Yes | 目标时间戳（ms）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
@@ -35,7 +41,7 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -45,7 +51,7 @@ let time = 1611081385000;
 try {
   systemTime.setTime(time, (error: BusinessError) => {
     if (error) {
-      console.info(`Failed to setting time. message: ${error.message}, code: ${error.code}`);
+      console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
       return;
     }
     console.info(`Succeeded in setting time`);
@@ -63,7 +69,7 @@ try {
 function setTime(time: number): Promise<void>
 ```
 
-Sets the system time. This API uses a promise to return the result.
+设置系统时间，使用Promise异步回调。
 
 **Since:** 7
 
@@ -83,13 +89,13 @@ Sets the system time. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | number | Yes | Timestamp to set, in milliseconds. |
+| time | number | Yes | 目标时间戳（ms）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
@@ -97,7 +103,7 @@ Sets the system time. This API uses a promise to return the result.
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -108,7 +114,7 @@ try {
   systemTime.setTime(time).then(() => {
     console.info(`Succeeded in setting time.`);
   }).catch((error: BusinessError) => {
-    console.info(`Failed to setting time. message: ${error.message}, code: ${error.code}`);
+    console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;

@@ -1,12 +1,18 @@
 # snoozeNotification (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## snoozeNotification
 
 ```TypeScript
 function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 ```
 
-Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The notification will be deleted after the setting.
+设置通知稍后提醒。该通知在指定时间后再次提醒，每次设置只会提醒一次，提醒方式与该通知相同。设置后该通知被删除。
 
 **Since:** 26.0.0
 
@@ -26,23 +32,38 @@ Snoozes a notification. The notification will be reminded again after the specif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCode | string | Yes | Unique ID of the notification to be snoozed. |
-| delayTime | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Interval for the snoozed notification. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: second. |
+| hashCode | string | Yes | 需要设置稍后提醒通知的唯一标识。 |
+| delayTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 稍后提醒的时间间隔。&lt;br&gt;单位：秒。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
-| [1600028](../errorcode-notification.md#1600028-current-notification-does-not-support-this-api) | This notification is not supported. |
+| 1600028 | This notification is not supported. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Replace it with the unique ID of the notification to be snoozed.
+let hashCode: string = "hashCode";
+let delayTime: number = 60;
+notificationManager.snoozeNotification(hashCode, delayTime).then(() => {
+  console.info("snoozeNotification success.")
+}).catch((err: BusinessError):void => {
+  console.error(`snoozeNotification failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 

@@ -1,5 +1,11 @@
 # isApplicationEnabled
 
+## 导入模块
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## isApplicationEnabled
 
 ```TypeScript
@@ -23,9 +29,9 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 回调函数，返回boolean代表是否启用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回boolean代表是否启用。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import bundle from '@ohos.bundle';
@@ -72,7 +78,7 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise形式返回boolean代表是否启用。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import bundle from '@ohos.bundle';

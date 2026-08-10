@@ -1,9 +1,8 @@
 # Paragraph
 
-Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.
+保存文本内容及样式的载体，支持排版与绘制操作。
 
-Before calling any of the following APIs, you must use [build()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the  
-[ParagraphBuilder]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ class to create a **Paragraph** object.
+下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到Paragraph对象实例，再通过此实例调用对应方法。
 
 **Since:** 12
 
@@ -13,13 +12,19 @@ Before calling any of the following APIs, you must use [build()]\_\_\_JSDOC\_LIN
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## didExceedMaxLines
 
 ```TypeScript
 didExceedMaxLines(): boolean
 ```
 
-Checks whether the number of lines in the paragraph exceeds the maximum.
+返回段落是否超过最大行数。
 
 **Since:** 12
 
@@ -35,9 +40,9 @@ Checks whether the number of lines in the paragraph exceeds the maximum.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the number of lines exceeds the maximum, and **false** means the opposite. |
+| boolean | true表示段落超出了最大行限制，false则表示没有超出最大行限制。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let didExceed = paragraph.didExceedMaxLines();
@@ -49,10 +54,10 @@ let didExceed = paragraph.didExceedMaxLines();
 forceReuseRasterResult(isForce: boolean): void
 ```
 
-Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default.
+设置是否强制复用光栅化结果。不调用此接口时，系统默认允许更新光栅化结果。
 
-This API is suitable for scenarios where the text content remains unchanged but  
-[paint]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is called for drawing.
+适用于文本内容未发生变化但需要多次调用[paint](arkts-arkgraphics2d-text-paragraph-c.md#paint)绘制的场景，通过复用光栅化结果可避免重复光栅化计算以提升绘制性能。设置后，在下次调用  
+[paint](arkts-arkgraphics2d-text-paragraph-c.md#paint)绘制时生效。
 
 **Since:** 26.0.0
 
@@ -70,7 +75,54 @@ This API is suitable for scenarios where the text content remains unchanged but
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isForce | boolean | Yes | Whether to force reuse of the rasterization result. The value **true** means to force reuse of the rasterization result, and **false** means to allow updating the rasterization result. |
+| isForce | boolean | Yes | 是否强制复用光栅化结果。true表示强制复用光栅化结果，false表示允许更新光栅化结果。 |
+
+## Examples
+
+```TypeScript
+// Index.ets
+import { text, drawing } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+ 
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  let textData = "Hello World";
+  let myTextStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle: myTextStyle
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.addText(textData);
+  let paragraph = paragraphBuilder.build();
+  paragraph.layoutSync(200);
+  paragraph.forceReuseRasterResult(true);
+  paragraph.paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("Click").onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
 
 ## getActualTextRange
 
@@ -84,7 +136,7 @@ ArkTS-Sta:
 getActualTextRange(lineNumber: int, includeSpaces: boolean): Range
 ```
 
-Obtains the actually visible text range in the specified line, excluding any overflow ellipsis.
+获取指定行的实际可见文本范围，不包括溢出的省略号。
 
 **Since:** 12
 
@@ -100,16 +152,16 @@ Obtains the actually visible text range in the specified line, excluding any ove
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Line number of the text range, starting from 0. This API can only be used to obtain the bounds of existing lines. That is, the line number must start from 0, and the maximum line index is the number of text lines – 1. The number of text lines can be obtained via the [getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API. |
-| includeSpaces | boolean | Yes | Whether spaces are included. The value **true** means that spaces are contained, and **false** means the opposite. |
+| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要获取文本范围的行索引，行索引从0开始。该接口只能获取已有行的边界，即输入行索引从0开始。最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)接口获取。 |
+| includeSpaces | boolean | Yes | 表示是否应包含空白字符。true表示包含空白字符，false表示不包含空白字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let rang = paragraph.getActualTextRange(0, true);
@@ -127,7 +179,7 @@ ArkTS-Sta:
 getAlphabeticBaseline(): double
 ```
 
-Obtains the alphabetic baseline.
+获取拉丁字母基线位置。
 
 **Since:** 12
 
@@ -143,9 +195,9 @@ Obtains the alphabetic baseline.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Alphabetic baseline, in units of px. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 拉丁字母下的基线位置，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let alphabeticBaseline = paragraph.getAlphabeticBaseline();
@@ -163,7 +215,7 @@ ArkTS-Sta:
 getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEncoding): PositionWithAffinity
 ```
 
-Obtains the character position information closest to the given coordinates.
+获取与给定坐标最接近的字符位置信息。
 
 **Since:** 24
 
@@ -181,21 +233,57 @@ Obtains the character position information closest to the given coordinates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Horizontal coordinate in the text layout area, in physical pixels (px). X offset relative to the top-left corner of the text layout area, with the right direction as positive. Supports floating-point values and accepts negative values, which indicate positions to the left of the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Vertical coordinate in the text layout area, in physical pixels (px). Y offset relative to the top-left corner of the text layout area, with the downward direction as positive. Supports floating-point values and accepts negative values, which indicate positions above the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character position indicates the byte offset. For UTF-16 encoding, the returned character position indicates the UTF-16 encoding unit offset. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 文本排版区域内的水平坐标，单位为物理像素（px）。相对于文本排版区域左上角的x偏移量，向右为正方向。支持浮点数，可取负值（表示在文本区域左侧）。坐标超出文本区域范围时，将返回最近的字 符位置。可通过触摸事件或点击事件获取。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 文本排版区域内的垂直坐标，单位为物理像素（px）。相对于文本排版区域左上角的y偏移量，向下为正方向。支持浮点数，可取负值（表示在文本区域上方）。坐标超出文本区域范围时，将返回最近的字 符位置。可通过触摸事件或点击事件获取。 |
+| encoding | drawing.TextEncoding | Yes | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符位置表示字节偏移量。对于UTF-16编码，返回的字符 位置表示UTF-16编码单元偏移量。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Character position. |
+| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | 字符位置信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
+
+## Examples
+
+```TypeScript
+import { drawing, text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("get character position")
+        .onClick(() => {
+          let encoding: drawing.TextEncoding = drawing.TextEncoding.TEXT_ENCODING_UTF8;
+          let textData = "Heน้ำl👨‍👩‍👧lo1️⃣World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle,
+            align: text.TextAlign.END,
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          paragraph.layoutSync(200);
+          let x = 10;
+          let y = 5;
+          let position = paragraph.getCharacterPositionAtCoordinate(x, y, encoding);
+        })
+    }
+  }
+}
+```
 
 ## getCharacterRangeForGlyphRange
 
@@ -203,7 +291,7 @@ Obtains the character position information closest to the given coordinates.
 getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding): Array<Range>
 ```
 
-Obtains the character range corresponding to the specified glyph range.
+获取指定字形范围对应的字符范围。
 
 **Since:** 24
 
@@ -221,20 +309,55 @@ Obtains the character range corresponding to the specified glyph range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Glyph range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
+| glyphRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 字形范围。 |
+| encoding | drawing.TextEncoding | Yes | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符范围表示字节范围。对于UTF-16编码，返回的字符范 围表示UTF-16编码单元范围。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Character range. If the array contains one element, it indicates the character range. If the array contains two elements, the first element indicates the character range, and the second element indicates the actual glyph range. |
+| Array&lt;Range&gt; | 字符范围。如果数组包含一个元素，它表示字符范围。如果包含两个元素，第一个是字符范围，第二个是实际的字形范围。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
+
+## Examples
+
+```TypeScript
+import { drawing, text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("get character range")
+        .onClick(() => {
+          let glyphRange: text.Range = { start: 0, end: 5 };
+          let encoding: drawing.TextEncoding = drawing.TextEncoding.TEXT_ENCODING_UTF8;
+          let textData = "Heน้ำl👨‍👩‍👧lo1️⃣World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle,
+            align: text.TextAlign.END,
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          paragraph.layoutSync(200);
+          let ranges = paragraph.getCharacterRangeForGlyphRange(glyphRange, encoding);
+        })
+    }
+  }
+}
+```
 
 ## getGlyphPositionAtCoordinate
 
@@ -248,7 +371,7 @@ ArkTS-Sta:
 getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity
 ```
 
-Obtains the position of a glyph closest to the given coordinates.
+获取与给定坐标最接近的字形位置信息。
 
 **Since:** 12
 
@@ -264,16 +387,16 @@ Obtains the position of a glyph closest to the given coordinates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Horizontal coordinate, which is a floating-point value in physical pixels (px). |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Vertical coordinate, which is a floating-point value in physical pixels (px). |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 横坐标，浮点数，单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 纵坐标，浮点数，单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Position of the glyph. |
+| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | 字形位置信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let positionWithAffinity = paragraph.getGlyphPositionAtCoordinate(0, 0);
@@ -285,7 +408,7 @@ let positionWithAffinity = paragraph.getGlyphPositionAtCoordinate(0, 0);
 getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEncoding): Array<Range>
 ```
 
-Obtains the glyph range corresponding to the specified character range.
+获取指定字符范围对应的字形范围。
 
 **Since:** 24
 
@@ -303,20 +426,55 @@ Obtains the glyph range corresponding to the specified character range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characterRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Character range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16 encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
+| characterRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 字符范围。 |
+| encoding | drawing.TextEncoding | Yes | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的实际字符范围表示字节范围。对于UTF-16编码，返回的实 际字符范围表示UTF-16编码单元范围。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Glyph range. The array contains two elements. The first element indicates the glyph range, and the second element indicates the actual character range. |
+| Array&lt;Range&gt; | 字形范围。数组包含两个元素，第一个是字形范围，第二个是实际的字符范围。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
+
+## Examples
+
+```TypeScript
+import { drawing, text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("get glyph range")
+        .onClick(() => {
+          let characterRange: text.Range = { start: 0, end: 5 };
+          let encoding: drawing.TextEncoding = drawing.TextEncoding.TEXT_ENCODING_UTF8;
+          let textData = "Heน้ำl👨‍👩‍👧lo1️⃣World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle,
+            align: text.TextAlign.END,
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          paragraph.layoutSync(200);
+          let ranges = paragraph.getGlyphRangeForCharacterRange(characterRange, encoding);
+        })
+    }
+  }
+}
+```
 
 ## getHeight
 
@@ -330,7 +488,7 @@ ArkTS-Sta:
 getHeight(): double
 ```
 
-Obtains the total height of the text.
+获取文本总高度。
 
 **Since:** 12
 
@@ -346,9 +504,9 @@ Obtains the total height of the text.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Total height, in units of px. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 总高度，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let height = paragraph.getHeight();
@@ -366,7 +524,7 @@ ArkTS-Sta:
 getIdeographicBaseline(): double
 ```
 
-Obtains the ideographic baseline.
+获取表意字（如CJK（中文，日文，韩文））下的基线位置。
 
 **Since:** 12
 
@@ -382,9 +540,9 @@ Obtains the ideographic baseline.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Baseline position under ideographic characters, a floating point number in physical pixels ( px). |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 表意字下的基线位置，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let ideographicBaseline = paragraph.getIdeographicBaseline();
@@ -402,7 +560,7 @@ ArkTS-Sta:
 getLineCount(): int
 ```
 
-Obtains the number of text lines.
+返回文本行数。
 
 **Since:** 12
 
@@ -418,9 +576,9 @@ Obtains the number of text lines.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of text lines. The value is an integer. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 文本行数量，整数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let lineCount = paragraph.getLineCount();
@@ -438,7 +596,7 @@ ArkTS-Sta:
 getLineHeight(line: int): double
 ```
 
-Obtains the height of a given line.
+返回指定行的行高。
 
 **Since:** 12
 
@@ -454,15 +612,15 @@ Obtains the height of a given line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the text line, which is an integer ranging from 0 to [getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1. |
+| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本行索引，整数，范围为0~[getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)-1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Line height, in physical pixels (px). |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 行高，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let lineHeight = paragraph.getLineHeight(0);
@@ -474,7 +632,7 @@ let lineHeight = paragraph.getLineHeight(0);
 getLineMetrics(): Array<LineMetrics>
 ```
 
-Obtains an array of line measurement information.
+获取文本行的行度量数组。
 
 **Since:** 12
 
@@ -490,9 +648,9 @@ Obtains an array of line measurement information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LineMetrics&gt; | Array of line measurement information. |
+| Array&lt;LineMetrics&gt; | 文本行的行度量数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let arrLineMetric =  paragraph.getLineMetrics();
@@ -510,7 +668,7 @@ ArkTS-Sta:
 getLineMetrics(lineNumber: int): LineMetrics | undefined
 ```
 
-Obtains the line measurement information of a line.
+获取特定行号的行度量信息。
 
 **Since:** 12
 
@@ -526,15 +684,15 @@ Obtains the line measurement information of a line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of the line for which metric information is to be queried. Line numbers start from 0, and the maximum line index is the number of text lines minus 1. The number of text lines can be obtained through the [getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API. |
+| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要查询度量信息的行的编号，行号从0开始，最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)接口获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
+| [LineMetrics](../../apis-arkui/arkts-apis/arkts-arkui-linemetrics-t.md) | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let lineMetrics =  paragraph.getLineMetrics(0);
@@ -552,7 +710,7 @@ ArkTS-Sta:
 getLineWidth(line: int): double
 ```
 
-Obtains the width of a given line.
+返回指定行的行宽。
 
 **Since:** 12
 
@@ -568,15 +726,15 @@ Obtains the width of a given line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text line index, which is an integer ranging from 0 to [getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1. |
+| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本行索引，整数，范围为0~[getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)-1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Line width, in physical pixels (px). |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 行宽，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let lineWidth = paragraph.getLineWidth(0);
@@ -594,7 +752,7 @@ ArkTS-Sta:
 getLongestLine(): double
 ```
 
-Obtains the longest line in the text.
+获取文本最长行宽。
 
 **Since:** 12
 
@@ -610,9 +768,9 @@ Obtains the longest line in the text.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Longest line, in units of px. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 最长一行的宽度，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let longestLine = paragraph.getLongestLine();
@@ -630,7 +788,7 @@ ArkTS-Sta:
 getLongestLineWithIndent(): double
 ```
 
-Obtains the width of the longest line, including its indentation, in the text. You are advised to round up the return value. If the text content is empty, **0** is returned.
+获取文本最长一行的宽度（包含缩进），建议向上取整。文本内容为空时返回0。
 
 **Since:** 13
 
@@ -646,9 +804,9 @@ Obtains the width of the longest line, including its indentation, in the text. Y
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Width of the longest line, including its indentation. The value is a floating point number, in px. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 最长一行的宽度（该宽度包含当前行缩进的宽度），浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let longestLineWithIndent = paragraph.getLongestLineWithIndent();
@@ -666,7 +824,7 @@ ArkTS-Sta:
 getMaxIntrinsicWidth(): double
 ```
 
-Obtains the maximum intrinsic width of the paragraph.
+获取段落最大固有宽度。
 
 **Since:** 12
 
@@ -682,9 +840,9 @@ Obtains the maximum intrinsic width of the paragraph.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Maximum intrinsic width, in units of px. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 该段落所占水平空间的最大固有宽度，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let maxIntrinsicWidth = paragraph.getMaxIntrinsicWidth();
@@ -702,7 +860,7 @@ ArkTS-Sta:
 getMaxWidth(): double
 ```
 
-Obtains the maximum width of the line in the text.
+获取文本最大行宽。
 
 **Since:** 12
 
@@ -718,9 +876,9 @@ Obtains the maximum width of the line in the text.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Maximum line width, in units of px. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 最大的行宽，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let maxWidth = paragraph.getMaxWidth();
@@ -738,7 +896,7 @@ ArkTS-Sta:
 getMinIntrinsicWidth(): double
 ```
 
-Obtains the minimum intrinsic width of the paragraph.
+获取段落最小固有宽度。
 
 **Since:** 12
 
@@ -754,9 +912,9 @@ Obtains the minimum intrinsic width of the paragraph.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Minimum intrinsic width, in units of px. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 该段落所占水平空间的最小固有宽度，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let minIntrinsicWidth = paragraph.getMinIntrinsicWidth();
@@ -768,7 +926,7 @@ let minIntrinsicWidth = paragraph.getMinIntrinsicWidth();
 getParagraphStyle(): ParagraphStyle
 ```
 
-Obtains the style configuration of a paragraph.
+获取段落的样式配置。
 
 **Since:** 26.0.0
 
@@ -786,7 +944,55 @@ Obtains the style configuration of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Style configuration of the paragraph. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ properties return a 32-bit unsigned integer color value. Example: The return value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ corresponds to the pure black hexadecimal color value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, which is equivalent to the [common2D.Color]{ |
+| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 段落的样式配置。 &lt;br&gt;其中`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
+
+## Examples
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click")
+        .onClick(() => {
+          let textData = "Hello World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          paragraph.layoutSync(200);
+          let paragraphStyle = paragraph.getParagraphStyle();
+          if (paragraphStyle.textStyle != undefined) {
+            console.info("Print fontSize: " + paragraphStyle.textStyle?.fontSize);
+            if (paragraphStyle.textStyle?.color != undefined && typeof paragraphStyle.textStyle?.color == 'number') {
+              let textColor: common2D.Color = numberToRGBA(paragraphStyle.textStyle?.color);
+              console.info(`Print text color ARGB: ${textColor.alpha}, ${textColor.red}, ${textColor.green}, ${textColor.blue}`);
+            }
+          }
+        })
+    }
+  }
+}
+
+function numberToRGBA(colorNum: number): common2D.Color {
+  const a = (colorNum >>> 24) & 0xFF;
+  const r = (colorNum >>> 16) & 0xFF;
+  const g = (colorNum >>> 8) & 0xFF;
+  const b = colorNum & 0xFF;
+  return { alpha: a, red: r, green: g, blue: b };
+}
+```
 
 ## getProcessState
 
@@ -794,7 +1000,7 @@ Obtains the style configuration of a paragraph.
 getProcessState(): TextProcessState
 ```
 
-Obtains the text processing status of a paragraph.
+获取段落的文本处理状态。
 
 **Since:** 26.0.0
 
@@ -812,7 +1018,42 @@ Obtains the text processing status of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Text processing status of a paragraph. |
+| [TextProcessState](arkts-arkgraphics2d-text-textprocessstate-e.md) | 段落的文本处理状态。 |
+
+## Examples
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click")
+        .onClick(() => {
+          let textData = "Hello World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          let processState = paragraph.getProcessState(); // Now it is INIT
+          console.info("Print state: " + processState);
+          paragraph.layoutSync(200);
+          processState = paragraph.getProcessState(); // Now it is FORMATTED
+          console.info("Print state: " + processState);
+        })
+    }
+  }
+}
+```
 
 ## getRectsForPlaceholders
 
@@ -820,7 +1061,7 @@ Obtains the text processing status of a paragraph.
 getRectsForPlaceholders(): Array<TextBox>
 ```
 
-Obtains the rectangles occupied by all placeholders in the text.
+获取文本中所有占位符所占的矩形区域。
 
 **Since:** 12
 
@@ -836,9 +1077,9 @@ Obtains the rectangles occupied by all placeholders in the text.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextBox&gt; | Array holding the rectangles obtained. |
+| Array&lt;TextBox&gt; | 矩形区域数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let placeholderRects = paragraph.getRectsForPlaceholders();
@@ -850,7 +1091,7 @@ let placeholderRects = paragraph.getRectsForPlaceholders();
 getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>
 ```
 
-Obtains the rectangles occupied by the characters in the range of the text under the given rectangle width and height.
+获取给定的矩形区域宽度以及矩形区域高度的规格下，文本中该区间范围内的字符所占的矩形区域。
 
 **Since:** 12
 
@@ -866,17 +1107,17 @@ Obtains the rectangles occupied by the characters in the range of the text under
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Range of the text. |
-| widthStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Width of the rectangle. |
-| heightStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Height of the rectangle. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 需要获取的区域的文本区间。 |
+| widthStyle | [RectWidthStyle](../../apis-arkui/arkts-apis/arkts-arkui-rectwidthstyle-t.md) | Yes | 返回的矩形区域的宽度的规格。 |
+| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | Yes | 返回的矩形区域的高度的规格。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextBox&gt; | Array holding the rectangles obtained. |
+| Array&lt;TextBox&gt; | 矩形区域数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let range: text.Range = { start: 0, end: 1};
@@ -889,7 +1130,7 @@ let rects = paragraph.getRectsForRange(range, text.RectWidthStyle.TIGHT, text.Re
 getTextDisplayState(): TextDisplayState
 ```
 
-Obtains the text display status of a paragraph.
+获取段落的文本显示状态。
 
 **Since:** 26.0.0
 
@@ -907,7 +1148,42 @@ Obtains the text display status of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Text display status of a paragraph. |
+| [TextDisplayState](arkts-arkgraphics2d-text-textdisplaystate-e.md) | 段落的文本显示状态。 |
+
+## Examples
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click")
+        .onClick(() => {
+          let textData = "Hello World";
+          let myTextStyle: text.TextStyle = {
+            color: { alpha: 255, red: 255, green: 0, blue: 0 },
+            fontSize: 33,
+          };
+          let myParagraphStyle: text.ParagraphStyle = {
+            textStyle: myTextStyle
+          };
+          let fontCollection = new text.FontCollection();
+          let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+          paragraphBuilder.addText(textData);
+          let paragraph = paragraphBuilder.build();
+          let displayState = paragraph.getTextDisplayState(); // Now it is UNKNOWN
+          console.info("Print state: " + displayState);
+          paragraph.layoutSync(200);
+          displayState = paragraph.getTextDisplayState(); // Now it is CLIP
+          console.info("Print state: " + displayState);
+        })
+    }
+  }
+}
+```
 
 ## getTextLines
 
@@ -915,7 +1191,7 @@ Obtains the text display status of a paragraph.
 getTextLines(): Array<TextLine>
 ```
 
-Obtains all the text lines.
+返回所有的文本行。
 
 **Since:** 12
 
@@ -931,9 +1207,9 @@ Obtains all the text lines.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextLine&gt; | Array of text lines. |
+| Array&lt;TextLine&gt; | 文本行载体数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let lines = paragraph.getTextLines();
@@ -945,21 +1221,21 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_)or replacement in ellipsis mode ([EllipsisMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_).
+获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)的maxLines属性）截断或省略号模式（  
+[EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)）替换而未显示的文本。
 
-**NOTE**
+**说明：**
 
-The returned range depends on the specific truncation of the paragraph(for example, whether the maximum number of lines or ellipsis is set):
-
-| Scenario| Description|  
+返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）：  
+| 场景 | 说明 |  
 |---|---|  
-| Text is not truncated.| The range includes all typeset text.|  
-| Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.|  
-| EllipsisMode.END| The range is the text before the ellipsis.|  
-| EllipsisMode.START| The value is the text after the ellipsis.|  
-| EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.|  
-| EllipsisMode.MULTILINE\_START| the text range before and after the ellipsis is returned.|  
-| EllipsisMode.MULTILINE\_MIDDLE| the text range before and after the ellipsis is returned.|
+| 文本未被截断 | 范围包含全部已排版文本 |  
+| 仅设置maxLines截断（未设置省略号） | 范围为实际显示的文本，即第一行至第maxLines行末尾的文本。 |  
+| 尾部省略（EllipsisMode.END） | 范围为省略号之前的文本。 |  
+| 头部省略（EllipsisMode.START） | 范围为省略号之后的文本。 |  
+| 中部省略（EllipsisMode.MIDDLE） | 第一个范围为省略号之前的文本，第二个范围为省略号之后的文本。 |  
+| 多行头部省略（EllipsisMode.MULTILINE_START） | 同中部省略，返回省略号前后的文本范围。 |  
+| 多行中部省略（EllipsisMode.MULTILINE_MIDDLE） | 同中部省略，返回省略号前后的文本范围。 |
 
 **Since:** 26.0.0
 
@@ -977,7 +1253,13 @@ The returned range depends on the specific truncation of the paragraph(for examp
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Array of the visible text range of a paragraph. The range is the index of the UTF-16 encoding unit. |
+| Array&lt;Range&gt; | 段落可见文本范围数组，范围为UTF-16编码单元索引。 |
+
+## Examples
+
+```TypeScript
+let visibleRanges = paragraph.getVisibleTextRanges();
+```
 
 ## getWordBoundary
 
@@ -991,7 +1273,7 @@ ArkTS-Sta:
 getWordBoundary(offset: int): Range
 ```
 
-Obtains the range of the word where the glyph with a given offset is located.
+返回给定offset的字形所在单词的索引区间。
 
 **Since:** 12
 
@@ -1007,15 +1289,15 @@ Obtains the range of the word where the glyph with a given offset is located.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset of the glyph. The value is an integer. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 字形的偏移量，整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Range of the word. |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 单词的索引区间。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let wordRange = paragraph.getWordBoundary(0);
@@ -1033,7 +1315,7 @@ ArkTS-Sta:
 layout(width: double): Promise<void>
 ```
 
-Performs layout and calculates the positions of all glyphs. This API uses a promise to return the result.
+进行排版并计算所有字形位置，使用Promise异步回调。
 
 **Since:** 18
 
@@ -1049,21 +1331,21 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Maximum width of a single line, in units of px. The value is a floating point number. |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 单行的最大宽度，浮点数，单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { drawing, text } from '@kit.ArkGraphics2D'
@@ -1101,13 +1383,14 @@ struct Index {
   @State pixelmap?: PixelMap = undefined;
   fun: Function = textFunc;
 
-  async prepareLayoutPromise() {
-    // Calculate the layout of the paragraph object.
-    paragraph.layout(200).then((data) => {
-      console.info(`Succeeded in doing layout,  ${JSON.stringify(data)}`);
-    }).catch((error: Error) => {
-      console.error(`Failed to do layout, error: ${JSON.stringify(error)} message: ${error.message}`);
-    });
+async prepareLayoutPromise() {
+    try {
+      await paragraph.layout(200);
+      console.info('Succeeded in doing layout');
+    } catch (error) {
+      let e: Error = error as Error;
+      console.error(`Failed to do layout, error: ${JSON.stringify(e)} message: ${e.message}`);
+    }
   }
 
   aboutToAppear() {
@@ -1147,7 +1430,7 @@ ArkTS-Sta:
 layoutSync(width: double): void
 ```
 
-Performs layout and calculates the positions of all glyphs.
+进行排版并计算所有字形位置。
 
 **Since:** 12
 
@@ -1163,9 +1446,9 @@ Performs layout and calculates the positions of all glyphs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Maximum width of a single line, in units of px. The value is a floating point number. |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 单行的最大宽度，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 paragraph.layoutSync(100);
@@ -1177,7 +1460,7 @@ paragraph.layoutSync(100);
 layoutWithConstraints(size: TextRectSize): TextLayoutResult
 ```
 
-Performs layout with the given height and width and calculates the positions of all glyphs.
+使用给定的高度和宽度进行排版并计算所有字形的位置。
 
 **Since:** 24
 
@@ -1195,13 +1478,24 @@ Performs layout with the given height and width and calculates the positions of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Constrained height and width, in physical pixels (px). |
+| size | [TextRectSize](arkts-arkgraphics2d-text-textrectsize-i.md) | Yes | 约束的高度和宽度，单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Actual size after layout and character range after typesetting. |
+| [TextLayoutResult](arkts-arkgraphics2d-text-textlayoutresult-i.md) | 布局后的实际尺寸和排版后容下的字符范围。 |
+
+## Examples
+
+```TypeScript
+let size: text.TextRectSize = { width: 200, height: 100 };
+let result = paragraph.layoutWithConstraints(size); // Enhanced layoutSync
+console.info('Width: ' + result.correctRect.width + ', Height: ' + result.correctRect.height);
+for (let i = 0; i < result.fitStrRange.length; ++i) {
+  console.info('fitRange: [' + result.fitStrRange[i].start + ', ' + result.fitStrRange[i].end + ']');
+}
+```
 
 ## paint
 
@@ -1215,8 +1509,7 @@ ArkTS-Sta:
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
-Draws text on the canvas with (x, y) as the upper-left corner. You must call  
-[layout()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
+在画布上以 (x, y) 为左上角绘制文本。调用前必须先调用[layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout)接口进行排版，否则无法正确显示文本内容。
 
 **Since:** 12
 
@@ -1232,11 +1525,11 @@ Draws text on the canvas with (x, y) as the upper-left corner. You must call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| canvas | drawing.Canvas | Yes | 绘制的目标画布。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 const color: ArrayBuffer = new ArrayBuffer(160000);
@@ -1258,7 +1551,7 @@ ArkTS-Sta:
 paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void
 ```
 
-Draws text along a path on the canvas. You must call [layout()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
+在画布上沿路径绘制文本。调用前必须先调用[layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout)接口进行排版，否则无法正确显示文本内容。
 
 **Since:** 12
 
@@ -1274,12 +1567,12 @@ Draws text along a path on the canvas. You must call [layout()]\_\_\_JSDOC\_LINK
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | Target canvas. |
-| path | drawing.Path | Yes | Path along which the text is drawn. |
-| hOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Offset along the path direction. Positive values extend forward from the path start point, and negative values extend backward. Unit: physical pixels (px). |
-| vOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Offset along the vertical direction of the path. Positive values extend to the right along the path, and negative values extend to the left. Unit: physical pixels (px). |
+| canvas | drawing.Canvas | Yes | 绘制的目标画布。 |
+| path | drawing.Path | Yes | 确认文字位置的路径。 |
+| hOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 沿路径方向偏置，从路径起点向前为正，向后为负，单位为物理像素px。 |
+| vOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 沿路径垂直方向偏置，沿路径方向左侧为负，右侧为正，单位为物理像素px。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 const color: ArrayBuffer = new ArrayBuffer(160000);
@@ -1297,7 +1590,7 @@ paragraph.paintOnPath(canvas, path, 0, 0);
 updateColor(color: common2D.Color): void
 ```
 
-Updates the color of the entire text span. This API call also updates the decoration color if it hasn't been set yet.
+更新整个文本段落的颜色。如果当前装饰线未设置颜色，使用该接口也会同时更新装饰线的颜色。
 
 **Since:** 20
 
@@ -1313,9 +1606,9 @@ Updates the color of the entire text span. This API call also updates the decora
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Updated font color. |
+| color | common2D.Color | Yes | 更新后的字体色。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 paragraph.updateColor({ alpha: 255, red: 255, green: 0, blue: 0 });
@@ -1327,7 +1620,7 @@ paragraph.updateColor({ alpha: 255, red: 255, green: 0, blue: 0 });
 updateDecoration(decoration: Decoration): void
 ```
 
-Updates the decoration line of the entire text span.
+更新整个文本段落的装饰线。
 
 **Since:** 20
 
@@ -1343,9 +1636,9 @@ Updates the decoration line of the entire text span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decoration | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Updated decoration line. |
+| decoration | [Decoration](arkts-arkgraphics2d-text-decoration-i.md) | Yes | 更新后的装饰线。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 paragraph.updateDecoration({

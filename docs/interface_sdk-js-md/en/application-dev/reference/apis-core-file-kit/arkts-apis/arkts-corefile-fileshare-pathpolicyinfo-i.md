@@ -1,6 +1,6 @@
 # PathPolicyInfo
 
-Policy information to manager permissions on a path.
+需要查询的文件或目录的信息。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Policy information to manager permissions on a path.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
+## Modules to Import
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## operationMode
 
 ```TypeScript
 operationMode: OperationMode
 ```
 
-Indicates the mode of operation for the path.
+需要查询的文件或目录访问模式。
 
-**Type:** OperationMode
+**Type:** [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
 
 **Since:** 15
 
@@ -34,7 +40,7 @@ Indicates the mode of operation for the path.
 path: string
 ```
 
-Indicates the path of the policy information.
+需要查询的文件或目录路径。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # BreakStrategy
 
-Enumerates the text break strategies.
+断行策略枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the text break strategies.
 GREEDY = 0
 ```
 
-Fills the current line as much as possible without adding hyphens.
+尽可能将当前行填满，不会自动添加连词符。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Fills the current line as much as possible without adding hyphens.
 HIGH_QUALITY = 1
 ```
 
-Optimizes layout and may add hyphens when necessary.
+布局优化，必要时会自动添加连词符。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Optimizes layout and may add hyphens when necessary.
 BALANCED = 2
 ```
 
-Ensures consistent line width in a paragraph, adding hyphens if needed.
+保证一个段落的每一行的宽度相同，必要时会添加连词符。
 
 **Since:** 12
 

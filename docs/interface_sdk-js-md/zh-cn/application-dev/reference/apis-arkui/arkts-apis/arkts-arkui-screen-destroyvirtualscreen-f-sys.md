@@ -1,5 +1,11 @@
 # destroyVirtualScreen（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## destroyVirtualScreen
 
 ```TypeScript
@@ -22,21 +28,19 @@ function destroyVirtualScreen(screenId:long, callback: AsyncCallback<void>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 屏幕的id，该参数仅支持整数输入。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当销毁虚拟屏幕成功，err为undefined，否则为错误对象。 |
+| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕的id，该参数仅支持整数输入。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当销毁虚拟屏幕成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [1400002](../errorcode-display.md#1400002-无权限操作) | Unauthorized operation. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400001 | Invalid display or screen. |
+| 1400002 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -48,22 +52,6 @@ screen.destroyVirtualScreen(screenId, (err: BusinessError) => {
   const errCode: number = err.code;
   if (errCode) {
     console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying the virtual screen.');
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenId: long = 1;
-screen.destroyVirtualScreen(screenId, (err: BusinessError | null) => {
-  const errCode = err?.code;
-  if (errCode) {
-    console.error(`Failed to destroy the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
     return;
   }
   console.info('Succeeded in destroying the virtual screen.');
@@ -93,7 +81,7 @@ function destroyVirtualScreen(screenId:long): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 屏幕的id，该参数仅支持整数输入。 |
+| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕的id，该参数仅支持整数输入。 |
 
 **返回值：**
 
@@ -105,14 +93,12 @@ function destroyVirtualScreen(screenId:long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [1400002](../errorcode-display.md#1400002-无权限操作) | Unauthorized operation. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400001 | Invalid display or screen. |
+| 1400002 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -124,19 +110,6 @@ screen.destroyVirtualScreen(screenId).then(() => {
   console.info('Succeeded in destroying the virtual screen.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenId: long = 1;
-screen.destroyVirtualScreen(screenId).then(() => {
-  console.info('Succeeded in destroying the virtual screen.');
-}).catch((err: Error) => {
-  console.error(`Failed to destroy the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 

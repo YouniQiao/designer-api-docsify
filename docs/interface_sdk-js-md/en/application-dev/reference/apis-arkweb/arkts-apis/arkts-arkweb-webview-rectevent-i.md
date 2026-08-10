@@ -1,6 +1,6 @@
 # RectEvent
 
-Defines a rectangle.
+矩形定义。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Defines a rectangle.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## height
 
 ```TypeScript
 height: double
 ```
 
-Height of the rectangle.
+矩形的高度。
 
-Unit: px.
+单位：px。
 
 **Type:** double
 
@@ -36,9 +42,9 @@ Unit: px.
 width: double
 ```
 
-Width of the rectangle.
+矩形的宽度。
 
-Unit: px.
+单位：px。
 
 **Type:** double
 
@@ -56,7 +62,9 @@ Unit: px.
 x: double
 ```
 
-X-axis coordinate of the upper left corner of the rectangle.
+矩形区域左上角x坐标。
+
+单位：px。
 
 **Type:** double
 
@@ -74,7 +82,9 @@ X-axis coordinate of the upper left corner of the rectangle.
 y: double
 ```
 
-Y-axis coordinate of the upper left corner of the rectangle.
+矩形区域左上角y坐标。
+
+单位：px。
 
 **Type:** double
 

@@ -1,6 +1,6 @@
 # DrawableTabBarIndicator
 
-Uses an image resource as the indicator.
+使用图片资源作为下划线的对象。
 
 **Since:** 22
 
@@ -16,15 +16,15 @@ Uses an image resource as the indicator.
 borderRadius?: Length
 ```
 
-Rounded corner radius of the indicator. It cannot be set in percentage.
+下划线的圆角半径（不支持百分比设置）。
 
-Default value: **0.0**
+默认值：0.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
@@ -46,12 +46,12 @@ Value range: [0, +∞)
 drawable?: DrawableDescriptor
 ```
 
-Image resource of the indicator.Supported types: [DrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[PixelMapDrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,  
-[LayeredDrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and  
-[AnimatedDrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_. If an invalid image resource is passed, the default solid indicator is displayed.
+下划线的图源。支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、  
+[PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、  
+[LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和  
+[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划线。
 
-**Type:** DrawableDescriptor
+**Type:** [DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **Since:** 22
 
@@ -71,15 +71,15 @@ Image resource of the indicator.Supported types: [DrawableDescriptor]\_\_\_JSDOC
 height?: Length
 ```
 
-Height of the indicator. It cannot be set in percentage.
+下划线的高度（不支持百分比设置）。
 
-Default value: **2.0**
+默认值：2.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 2vp
 
@@ -101,15 +101,15 @@ Value range: [0, +∞)
 marginTop?: Length
 ```
 
-Spacing between the indicator and text. It cannot be set in percentage.
+下划线与文字的间距（不支持百分比设置）。
 
-Default value: **8.0**
+默认值：8.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 8vp
 
@@ -131,17 +131,17 @@ Value range: [0, +∞)
 width?: Length
 ```
 
-Width of the indicator. It cannot be set in percentage.
+下划线的宽度（不支持百分比设置）。
 
-Default value: **0.0**
+默认值：0.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-If this parameter is set to **0**, the tab text width will be used instead.
+宽度设置为0时，按页签文本宽度显示。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 

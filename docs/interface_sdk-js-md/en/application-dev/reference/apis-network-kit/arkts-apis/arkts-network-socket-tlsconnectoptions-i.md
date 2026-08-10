@@ -10,6 +10,12 @@ Defines TLS connection options.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## ALPNProtocols
 
 ```TypeScript
@@ -36,7 +42,7 @@ address: NetAddress
 
 Gateway address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 10
 
@@ -54,7 +60,7 @@ proxy?: ProxyOptions
 
 Set this option for the proxy feature.
 
-**Type:** ProxyOptions
+**Type:** [ProxyOptions](arkts-network-socket-proxyoptions-i.md)
 
 **Since:** 18
 
@@ -72,7 +78,7 @@ secureOptions: TLSSecureOptions
 
 Protocol http2TLS security related operations.
 
-**Type:** TLSSecureOptions
+**Type:** [TLSSecureOptions](arkts-network-socket-tlssecureoptions-i.md)
 
 **Since:** 10
 
@@ -108,7 +114,7 @@ timeout?: int
 
 Timeout duration of the TLSSocket connection, in milliseconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

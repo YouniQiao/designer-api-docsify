@@ -1,20 +1,20 @@
 # TextInputController
 
-TextInput组件的控制器继承自[TextContentControllerBase]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，涉及的接口有  
-[getTextContentRect]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[getTextContentLineCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[getCaretOffset]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[addText]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、  
-[deleteText]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、[getSelection]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、[clearPreviewText]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、  
-[setStyledPlaceholder]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、  
-[deleteBackward]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、  
-[scrollToVisible]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_12\_\_\_以及系统接口  
-[getText]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_13\_\_\_。
+TextInput组件的控制器继承自[TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md)，涉及的接口有  
+[getTextContentRect](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentrect)、  
+[getTextContentLineCount](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentlinecount)、  
+[getCaretOffset](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getcaretoffset)、[addText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#addtext)、  
+[deleteText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletetext)、[getSelection](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getselection)、[clearPreviewText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#clearpreviewtext)、  
+[setStyledPlaceholder](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#setstyledplaceholder)、  
+[deleteBackward](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletebackward)、  
+[scrollToVisible](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#scrolltovisible)&lt;!--Del--&gt;以及系统接口  
+[getText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c-sys.md/arkts-arkui-common-textcontentcontrollerbase-c-sys.md#gettext)&lt;!--DelEnd--&gt;。
 
 ## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts controller: TextInputController = new TextInputController();```
 
-**继承/实现关系：** TextInputController extends [TextContentControllerBase](../arkts-apis/arkts-arkui-component/common-textcontentcontrollerbase-c.md)
+**继承/实现关系：** TextInputController extends [TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md)
 
 **起始版本：** 8
 
@@ -93,7 +93,7 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 | --- | --- | --- | --- |
 | selectionStart | number | 是 | 文本选择区域起始位置，文本框中文字的起始位置为0。当selectionStart<0时，按照0处理；当selectionStart大于文本长度时，按照文本长度处 理。 |
 | selectionEnd | number | 是 | 文本选择区域结束位置。当selectionEnd<0时，按照0处理；当selectionEnd大于文本长度时，按照文本长度处理。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 选中文字时的配置，用于控制文本选择菜单的显示策略。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_配置项包括menuPolicy，用于指定菜单显示方式：MenuPolicy.DEFAULT表示按系统默认行为显示菜单；MenuPolicy.SHOW表示强制显示菜单；MenuPolicy.HIDE表示强制隐藏菜单。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值MenuPolicy.DEFAULT \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_从API version 12开始，该接口中的options参数支持在原子化服务中使用。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | 否 | 选中文字时的配置，用于控制文本选择菜单的显示策略。 &lt;br&gt;配置项包括menuPolicy，用于指定菜单显示方式：MenuPolicy.DEFAULT表示按系统默认行为显示菜单；MenuPolicy.SHOW表示强制显示菜单；MenuPolicy.HIDE表示强制隐藏菜单。 &lt;br&gt;默认值MenuPolicy.DEFAULT &lt;br&gt;从API version 12开始，该接口中的options参数支持在原子化服务中使用。<br>**起始版本：** 12 |
 
 ## stopEditing
 

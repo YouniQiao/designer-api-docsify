@@ -1,6 +1,6 @@
 # TextBaseline
 
-Enumerates the text baseline types.
+文本基线类型枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the text baseline types.
 ALPHABETIC = 0
 ```
 
-Alphabetic baseline, where the letters in Latin alphabets sit on.
+用于拉丁字母的文本基线对齐。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Alphabetic baseline, where the letters in Latin alphabets sit on.
 IDEOGRAPHIC = 1
 ```
 
-Ideographic baseline, where the baseline is at the bottom of the text area. It is usually used for CJK text.
+用于CJK（中文，日文，韩文）的文本基线对齐。
 
 **Since:** 12
 

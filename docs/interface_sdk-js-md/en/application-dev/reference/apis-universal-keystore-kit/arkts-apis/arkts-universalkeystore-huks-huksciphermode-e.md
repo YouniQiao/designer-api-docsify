@@ -1,6 +1,6 @@
 # HuksCipherMode
 
-Enumerates the cipher modes.
+表示加密模式。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the cipher modes.
 HUKS_MODE_ECB = 1
 ```
 
-Electronic Code Block (ECB) mode.
+表示使用ECB加密模式。
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Electronic Code Block (ECB) mode.
 HUKS_MODE_CBC = 2
 ```
 
-Cipher Block Chaining (CBC) mode.
+表示使用CBC加密模式。
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Cipher Block Chaining (CBC) mode.
 HUKS_MODE_CTR = 3
 ```
 
-Counter (CTR) mode.
+表示使用CTR加密模式。
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Counter (CTR) mode.
 HUKS_MODE_OFB = 4
 ```
 
-Output Feedback (OFB) mode.
+表示使用OFB加密模式。
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ Output Feedback (OFB) mode.
 HUKS_MODE_CFB = 5
 ```
 
-Ciphertext Feedback (CFB) mode.
+表示使用CFB加密模式。
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ Ciphertext Feedback (CFB) mode.
 HUKS_MODE_CCM = 31
 ```
 
-Counter with CBC-MAC (CCM) mode.
+表示使用CCM加密模式。
 
 **Since:** 8
 
@@ -128,7 +128,7 @@ Counter with CBC-MAC (CCM) mode.
 HUKS_MODE_GCM = 32
 ```
 
-Galois/Counter (GCM) mode.
+表示使用GCM加密模式。
 
 **Since:** 8
 

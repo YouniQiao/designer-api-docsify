@@ -1,6 +1,6 @@
 # TemplateStatus (System API)
 
-Describes the complete status information about a registered companion device authentication template, including the template ID, data confirmation status, validity, user ID, time when the template is added, supported services,and associated device status.
+用于描述已注册的伴随设备认证模板的完整状态信息，包括模板ID、数据确认状态、有效性、用户ID、添加时间、支持的业务范围以及关联的设备状态等。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Describes the complete status information about a registered companion device au
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## addedTime
 
 ```TypeScript
 addedTime: Date
 ```
 
-Template adding time. Timestamp when the template is created. The value is a Unix timestamp, that is, the number of milliseconds elapsed since 00:00:00 on January 1, 1970.
+模板添加时间，类型为Date对象。
 
 **Type:** Date
 
@@ -40,9 +46,9 @@ Template adding time. Timestamp when the template is created. The value is a Uni
 deviceStatus: DeviceStatus
 ```
 
-Device status information. It specifies the current status of the companion device associated with the template,including the online status and device name.
+设备状态信息。与该模板关联的伴随设备的当前状态，包括在线状态、设备名等。
 
-**Type:** DeviceStatus
+**Type:** [DeviceStatus](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md)
 
 **Since:** 23
 
@@ -62,10 +68,9 @@ Device status information. It specifies the current status of the companion devi
 enabledBusinessIds: int[]
 ```
 
-List of supported service IDs. It specifies the service scenarios where the template is enabled. You can update the service scenarios by calling the  
-[updateEnabledBusinessIds]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.
+支持的业务ID列表。该模板已启用的业务场景范围，可通过[updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateenabledbusinessids)接口更新。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -85,7 +90,7 @@ List of supported service IDs. It specifies the service scenarios where the temp
 isConfirmed: boolean
 ```
 
-Data confirmation status. The value **true** indicates that the data is real-time data and has been confirmed and synchronized with the device. The value **false** indicates that the data is cached data, which may be different from the actual device status.
+数据确认状态。true表示数据是实时数据，已与设备确认同步；false表示数据是缓存数据，可能与设备实际状态存在差异。
 
 **Type:** boolean
 
@@ -107,7 +112,7 @@ Data confirmation status. The value **true** indicates that the data is real-tim
 isValid: boolean
 ```
 
-Template validity. The value **true** indicates that the template is valid and can be used for authentication.The value **false** indicates that the template is invalid, may have been deleted or expired, and cannot be used for authentication.
+模板有效性。true表示模板有效，可用于认证；false表示模板无效，可能已被删除或失效，无法用于认证。
 
 **Type:** boolean
 
@@ -129,9 +134,9 @@ Template validity. The value **true** indicates that the template is valid and c
 localUserId: int
 ```
 
-Local user ID. It specifies the user ID associated with the template on the primary device. The value is a positive integer greater than or equal to 0.
+本地用户ID。主设备上与该模板关联的用户标识，为非负整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -151,7 +156,7 @@ Local user ID. It specifies the user ID associated with the template on the prim
 templateId: Uint8Array
 ```
 
-Template ID. Unique ID of a companion device authentication template, which is used to specify the target template when the service scope is updated or the authentication status is subscribed to.
+模板ID。伴随设备认证模板的唯一标识，用于在更新业务范围或订阅认证状态时指定目标模板。
 
 **Type:** Uint8Array
 

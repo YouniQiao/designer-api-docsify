@@ -10,6 +10,12 @@ Provides the callback for the SMS message sending result.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## isLastPart
 
 ```TypeScript
@@ -36,7 +42,7 @@ result: SendSmsResult
 
 Indicates the SMS message sending result.
 
-**Type:** SendSmsResult
+**Type:** [SendSmsResult](arkts-telephony-sms-sendsmsresult-e.md)
 
 **Since:** 6
 

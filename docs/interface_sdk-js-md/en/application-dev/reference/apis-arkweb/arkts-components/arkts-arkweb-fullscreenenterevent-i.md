@@ -1,6 +1,6 @@
 # FullScreenEnterEvent
 
-Provides details about the event that the **Web** component to enter the full-screen mode.
+Web组件进入全屏回调事件的详情。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Provides details about the event that the **Web** component to enter the full-sc
 handler: FullScreenExitHandler
 ```
 
-Function handle for exiting full screen mode.
+用于退出全屏模式的函数句柄。
 
-**Type:** FullScreenExitHandler
+**Type:** [FullScreenExitHandler](arkts-arkweb-fullscreenexithandler-c.md)
 
 **Since:** 12
 
@@ -36,15 +36,15 @@ Function handle for exiting full screen mode.
 videoHeight?: number
 ```
 
-Video height, in px. If the element that enters fulls screen mode is a **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** element, the value represents its height; if the element that enters fulls screen mode contains a **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_** element, the value represents the height of the first sub-video element; in other cases, the value is **0**.
+视频的高度，单位：px。如果进入全屏的是 `&lt;video&gt;` 元素，表示其高度；如果进入全屏的子元素中包含 `&lt;video&gt;` 元素，表示第一个子视频元素的高度；其他情况下，为0。
 
 **Type:** number
 
-**Since:** 12
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-FullScreenEnterEvent-videoHeight?: number--><!--Device-FullScreenEnterEvent-videoHeight?: number-End-->
 
@@ -56,7 +56,7 @@ Video height, in px. If the element that enters fulls screen mode is a **\_\_\_H
 videoWidth?: number
 ```
 
-Video width, in px. If the element that enters fulls screen mode is a **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** element, the value represents its width; if the element that enters fulls screen mode contains a **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_** element, the value represents the width of the first sub-video element; in other cases, the value is **0**.
+视频的宽度，单位：px。如果进入全屏的是 `&lt;video&gt;` 元素，表示其宽度；如果进入全屏的子元素中包含 `&lt;video&gt;` 元素，表示第一个子视频元素的宽度；其他情况下，为0。
 
 **Type:** number
 

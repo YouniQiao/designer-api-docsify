@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## direction
 
 ```TypeScript
@@ -18,7 +24,7 @@ direction: TextDirection
 
 文本方向。
 
-**类型：** TextDirection
+**类型：** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
 
 **起始版本：** 12
 

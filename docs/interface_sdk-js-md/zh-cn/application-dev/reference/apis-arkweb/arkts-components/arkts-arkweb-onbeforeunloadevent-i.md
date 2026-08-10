@@ -16,7 +16,7 @@ Defines the triggered function when the web page wants to confirm navigation fro
 isReload?: boolean
 ```
 
-页面是否刷新。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_当页面因刷新即将离开时，isReload参数被设置为true；当页面因关闭即将离开时，isReload参数被设置为false。
+页面是否刷新。&lt;br&gt;当页面因刷新即将离开时，isReload参数被设置为true；当页面因关闭即将离开时，isReload参数被设置为false。
 
 **类型：** boolean
 
@@ -56,7 +56,7 @@ result: JsResult
 
 通知Web组件用户操作行为。
 
-**类型：** JsResult
+**类型：** [JsResult](../arkts-apis/arkts-arkweb-web-jsresult-c.md)
 
 **起始版本：** 12
 

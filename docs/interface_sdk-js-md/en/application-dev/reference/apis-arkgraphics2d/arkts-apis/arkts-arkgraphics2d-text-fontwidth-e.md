@@ -1,6 +1,6 @@
 # FontWidth
 
-Enumerates the font widths.
+字体宽度的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the font widths.
 ULTRA_CONDENSED = 1
 ```
 
-Ultra condensed.
+超窄字宽。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Ultra condensed.
 EXTRA_CONDENSED = 2
 ```
 
-Extra condensed.
+特窄字宽。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Extra condensed.
 CONDENSED = 3
 ```
 
-Condensed.
+窄的字宽。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Condensed.
 SEMI_CONDENSED = 4
 ```
 
-Semi condensed.
+半窄字宽。
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ Semi condensed.
 NORMAL = 5
 ```
 
-Normal.
+常规样式。
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ Normal.
 SEMI_EXPANDED = 6
 ```
 
-Semi expanded.
+半宽字宽。
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ Semi expanded.
 EXPANDED = 7
 ```
 
-Expanded.
+宽的字宽。
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ Expanded.
 EXTRA_EXPANDED = 8
 ```
 
-Extra expanded.
+特宽字宽。
 
 **Since:** 12
 
@@ -160,7 +160,7 @@ Extra expanded.
 ULTRA_EXPANDED = 9
 ```
 
-Ultra expanded.
+超宽的字宽。
 
 **Since:** 12
 

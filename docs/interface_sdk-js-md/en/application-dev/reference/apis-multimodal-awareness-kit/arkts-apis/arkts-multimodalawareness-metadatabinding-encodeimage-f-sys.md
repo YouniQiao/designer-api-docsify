@@ -1,5 +1,11 @@
 # encodeImage (System API)
 
+## Modules to Import
+
+```TypeScript
+import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## encodeImage
 
 ```TypeScript
@@ -35,11 +41,11 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
-| [32100002](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100002-encoding-failed) | Encode process fail. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Image processing error. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Channel coding error. |
+| 32100001 | Internal handling failed. |
+| 202 | Permission check failed. A non-system application uses the system API. |
+| 32100002 | Encode process fail. Possible causes: &lt;br&gt;1. Image processing error. &lt;br&gt;2. Channel coding error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

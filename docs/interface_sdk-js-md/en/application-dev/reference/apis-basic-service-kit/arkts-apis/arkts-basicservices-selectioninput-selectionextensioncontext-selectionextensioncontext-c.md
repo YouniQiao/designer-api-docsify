@@ -1,17 +1,17 @@
 # SelectionExtensionContext
 
-SelectionExtensionContext** is the context of  
-[SelectionExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, which inherits from [ExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+SelectionExtensionContext是  
+[SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)的上下文，继承自  
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)。
 
-When a **SelectionExtensionAbility** component is instantiated, the system automatically creates the corresponding  
-**SelectionExtensionContext**. You can call the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in SelectionExtensionContext to start other abilities in the same app. This is applicable when you need to redirect to another ability in the same app in word selection extension, helping users quickly obtain the functions or information associated with the selected word.
-    **NOTE**  
-    
-    - This module is supported only on PCs/2-in-1 devices. You can use  
-    **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports this  
-    function.
+每个SelectionExtensionAbility组件实例化时，系统都会自动创建对应的SelectionExtensionContext。开发者可以通过SelectionExtensionContext调用  
+[startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability)接口拉起同应用内其他Ability。适用于在划词扩展场景中需要跳转至应用内其他Ability的情况，帮助用户在划词操作后快速获取与划词内容关联的功能或信息。
 
-**Inheritance/Implementation:** SelectionExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-application/extensioncontext-extensioncontext-c.md)
+> **说明：**
+> 
+> - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
+
+**Inheritance/Implementation:** SelectionExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
 **Since:** 24
 
@@ -21,15 +21,19 @@ When a **SelectionExtensionAbility** component is instantiated, the system autom
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
+## Modules to Import
+
+```TypeScript
+import { SelectionExtensionContext } from 'kits/@kit.BasicServicesKit';
+```
+
 ## startAbility
 
 ```TypeScript
 startAbility(want: Want): Promise<void>
 ```
 
-Starts the target ability in the same app. This method is applicable when you need to redirect to another ability in the app in word selection extension. The system matches and starts the target ability based on the values of  
-**bundleName** and **abilityName** specified in the **Want** object. This API uses a promise to return the result.For details about the ability startup mechanism, see  
-[ExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+拉起同应用内的目标Ability，适用于在划词扩展场景中需要跳转至应用内其他Ability的情况。系统根据Want对象中指定的bundleName和abilityName匹配并调度启动目标Ability。使用Promise异步回调。关于Ability启动机制，请参见[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)。
 
 **Since:** 24
 
@@ -45,40 +49,40 @@ Starts the target ability in the same app. This method is applicable when you ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the target app to start. The main fields include **bundleName** (bundle name of the target app) and **abilityName** (name of the target ability). After this parameter is set, the system searches for and starts the corresponding ability based on the specified bundle name and ability name. Only abilities within the same app can be started. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 需要拉起的目标应用信息。主要字段包括bundleName（目标应用的Bundle名称）和abilityName（目标Ability名称）。设置后系统将根据其中指定的bundleName 和abilityName查找并拉起对应的Ability。仅支持拉起同应用内的Ability。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| [16000061](../../apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
-| [16000069](../../apis-ability-kit/errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application. |
-| [16000070](../../apis-ability-kit/errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service. |
-| [16000083](../../apis-ability-kit/errorcode-ability.md#16000083-specified-ability-cannot-be-started-by-this-type-of-extensionability) | The ExtensionAbility cannot start the ability due to system control. |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 16000019 | No matching ability is found. |
+| 16000083 | The ExtensionAbility cannot start the ability due to system control. |
+| 16000061 | Operation not supported. |
+| 16000004 | Cannot start an invisible component. |
+| 16000005 | The specified process does not have the permission. |
+| 16000069 | The extension cannot start the third party application. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000070 | The extension cannot start the service. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { SelectionExtensionAbility, BusinessError } from '@kit.BasicServicesKit';
@@ -86,8 +90,8 @@ import { rpc } from '@kit.IPCKit';
 import { Want } from '@kit.AbilityKit';
 
 class SelectionAbilityStub extends rpc.RemoteObject {
-  constructor(des: string) {
-    super(des);
+  constructor(descriptor: string) {
+    super(descriptor);
   }
   onRemoteMessageRequest(
     code: number,
@@ -103,17 +107,19 @@ class SelectionAbilityStub extends rpc.RemoteObject {
 class SelectionExtAbility extends SelectionExtensionAbility {
   onConnect(want: Want): rpc.RemoteObject {
     try {
+      // Construct a Want object to specify the target ability to start.
       let wantAbility: Want = {
-        bundleName: "com.selection.selectionapplication",
-        abilityName: "EntryAbility",
+        bundleName: 'com.selection.selectionapplication',
+        abilityName: 'EntryAbility',
       };
+      // Start the target ability. this.context is automatically provided by the SelectionExtensionAbility instance and does not need to be obtained separately.
       this.context.startAbility(wantAbility).then(() => {
         console.info(`startAbility success`);
       }).catch((err: BusinessError) => {
-        console.error(`startAbility error: ${err.code}, errormessage: ${err.message}`);
-      })
+        console.error(`Failed to startAbility. Error code: ${err.code}, error message: ${err.message}`);
+      });
     } catch (err) {
-      console.error(`startAbility error: ${err.code}, errormessage: ${err.message}`);
+      console.error(`Failed to startAbility. Error code: ${err.code}, error message: ${err.message}`);
     }
     return new SelectionAbilityStub('remote');
   }

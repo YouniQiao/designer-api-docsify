@@ -1,12 +1,18 @@
 # onDownloadSuccess
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onDownloadSuccess
 
 ```TypeScript
 function onDownloadSuccess(url: string, callback: Callback<void>): void
 ```
 
-Subscribes to the pre-download completion events. This API uses an asynchronous callback to return the result.
+订阅预下载的完成事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -20,10 +26,10 @@ Subscribes to the pre-download completion events. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| url | string | Yes | 待注册回调的url，url字符串的最大长度为8192字节。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cacheDownload } from '@kit.BasicServicesKit';

@@ -1,5 +1,11 @@
 # isDomainAccountSupported
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isDomainAccountSupported
 
 ```TypeScript
@@ -28,40 +34,20 @@ function isDomainAccountSupported(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 12300001 | The system service works abnormally. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
-import { BusinessError, osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   osAccount.isDomainAccountSupported().then((isSupported: boolean) => {
     console.info('isDomainAccountSupported successfully, isSupported: ' + isSupported);
   }).catch((err: BusinessError) => {
-    console.error(`isDomainAccountSupported failed, code is ${err.code}, message is ${err.message}`);
+    console.error(`isDomainAccountSupported failed, code is ${err.code}, message is: ${err.message}`);
   });
 } catch (e) {
-  const err = e as BusinessError;
-  console.error(`isDomainAccountSupported exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError, osAccount } from '@kit.BasicServicesKit';
-
-try {
-  osAccount.isDomainAccountSupported().then((isSupported: boolean) => {
-    console.info('isDomainAccountSupported successfully, isSupported: ' + isSupported);
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`isDomainAccountSupported failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`isDomainAccountSupported exception: code is ${err.code}, message is ${err.message}`);
 }

@@ -1,14 +1,20 @@
 # getAbilityLabel
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getAbilityLabel
 
 ```TypeScript
 function getAbilityLabel(bundleName: string, abilityName: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the application name based on a given bundle name and ability name. This API uses an asynchronous callback to return the result.
+通过Bundle名称和Ability组件名获取应用名称，使用callback异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 8
 
@@ -26,9 +32,9 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| abilityName | string | Yes | Ability name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the application name. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| abilityName | string | Yes | Ability名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 程序启动作为入参的回调函数，返回应用名称信息。 |
 
 
 ## getAbilityLabel
@@ -37,9 +43,9 @@ No permission is required for obtaining the caller's own information.
 function getAbilityLabel(bundleName: string, abilityName: string): Promise<string>
 ```
 
-Obtains the application name based on a given bundle name and ability name. This API uses a promise to return the result.
+通过Bundle名称和ability名称获取应用名称，使用Promise异步回调。
 
-No permission is required for obtaining the caller's own information.
+获取调用方自己的信息时不需要权限。
 
 **Since:** 8
 
@@ -57,12 +63,12 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| abilityName | string | Yes | Ability name. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| abilityName | string | Yes | Ability名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the application name. |
+| Promise&lt;string&gt; | Promise形式返回应用名称信息。 |
 

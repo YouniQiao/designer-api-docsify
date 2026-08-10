@@ -1,6 +1,6 @@
 # ToolbarItemStatus
 
-Enumerates the toolbar item states.
+工具栏单个选项的状态。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the toolbar item states.
 NORMAL = 0
 ```
 
-Normal state. In this state, the toolbar item takes on the default style and can switch to another state-specific style by responding to the hover, press, and focus events.
+设置工具栏单个选项为NORMAL态，该选项显示默认样式，可以触发Hover，Press，Focus事件并显示对应的多态样式。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Normal state. In this state, the toolbar item takes on the default style and can
 DISABLED = 1
 ```
 
-Disabled state. In this state, the toolbar item is disabled and does not allow for user interactions.
+设置工具栏单个选项为DISABLED态， 该选项显示DISABLED态样式，并且不可交互。
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ Disabled state. In this state, the toolbar item is disabled and does not allow f
 ACTIVE = 2
 ```
 
-Active state. In this state, the toolbar item can update its icon to the one specified by **activeIcon** by responding to a click event.
+设置工具栏单个选项为ACTIVE态， 该选项通过点击事件可以将icon图标更新为activeIcon对应的图片资源。
 
 **Since:** 10
 

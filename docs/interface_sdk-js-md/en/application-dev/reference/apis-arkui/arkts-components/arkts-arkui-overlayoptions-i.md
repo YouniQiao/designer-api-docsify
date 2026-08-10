@@ -1,14 +1,12 @@
 # OverlayOptions
 
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 12.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
-    **NOTE**  
-    
-    When both **align** and **offset** are set, the effects are combined. The overlay is first aligned relative to the  
-    component and then offset from its current upper left corner.
+浮层的定位。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 12版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> 
+> align和offset都设置时，效果重叠，浮层相对于组件方位定位后，再基于当前位置的左上角进行偏移。
 
 **Since:** 12
 
@@ -24,11 +22,11 @@
 align?: Alignment
 ```
 
-Alignment of the overlay relative to the component.
+设置浮层相对于组件的方位。
 
-Default value: **TopStart
+默认值：TopStart
 
-**Type:** Alignment
+**Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **Since:** 7
 
@@ -48,9 +46,9 @@ Default value: **TopStart
 offset?: OverlayOffset
 ```
 
-Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component.
+设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。
 
-**Type:** OverlayOffset
+**Type:** [OverlayOffset](arkts-arkui-overlayoffset-i.md)
 
 **Since:** 7
 

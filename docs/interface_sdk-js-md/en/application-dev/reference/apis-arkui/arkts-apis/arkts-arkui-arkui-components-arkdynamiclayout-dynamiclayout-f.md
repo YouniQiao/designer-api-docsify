@@ -1,15 +1,21 @@
 # DynamicLayout
 
+## Modules to Import
+
+```TypeScript
+import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
+```
+
 ## DynamicLayout
 
 ```TypeScript
 export declare function DynamicLayout (
-    algorithm: LayoutAlgorithm, 
+    algorithm: LayoutAlgorithm,
     content_: CustomBuilder,
 ): DynamicLayoutAttribute
 ```
 
-Defines DynamicLayout Component.
+动态布局容器。
 
 **Since:** 24
 
@@ -17,7 +23,7 @@ Defines DynamicLayout Component.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function DynamicLayout (    algorithm: LayoutAlgorithm,     content_: CustomBuilder,): DynamicLayoutAttribute--><!--Device-unnamed-export declare function DynamicLayout (    algorithm: LayoutAlgorithm,     content_: CustomBuilder,): DynamicLayoutAttribute-End-->
+<!--Device-unnamed-export declare function DynamicLayout (    algorithm: LayoutAlgorithm,    content_: CustomBuilder,): DynamicLayoutAttribute--><!--Device-unnamed-export declare function DynamicLayout (    algorithm: LayoutAlgorithm,    content_: CustomBuilder,): DynamicLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,12 +31,12 @@ Defines DynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes | 指定动态布局组件的布局算法。 取非法值时，按照堆叠布局算法[StackLayoutAlgorithm](../../../reference/apis-arkui/js-apis-arkui-layoutAlgorithm.md#stacklayoutalgorithm)布局子组件，子组件堆叠排列。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |
 

@@ -1,6 +1,6 @@
 # HuksCryptoExtensionParams
 
-Defines options used in the APIs.
+定义API中使用的选项。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines options used in the APIs.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
+## Modules to Import
+
+```TypeScript
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## inData
 
 ```TypeScript
 inData?: Uint8Array
 ```
 
-The input data of the operation.
+操作的输入数据。
 
 **Type:** Uint8Array
 
@@ -36,9 +42,9 @@ The input data of the operation.
 properties: HuksCryptoExtensionParam[]
 ```
 
-The properties of the operation.
+操作的属性。
 
-**Type:** HuksCryptoExtensionParam[]
+**Type:** [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[]
 
 **Since:** 26.0.0
 

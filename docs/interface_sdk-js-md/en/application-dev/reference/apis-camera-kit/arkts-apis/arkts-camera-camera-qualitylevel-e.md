@@ -1,6 +1,6 @@
 # QualityLevel
 
-Enumerates the image quality levels.
+枚举，图片质量。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the image quality levels.
 QUALITY_LEVEL_HIGH = 0
 ```
 
-High image quality.
+图片质量高。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ High image quality.
 QUALITY_LEVEL_MEDIUM = 1
 ```
 
-Medium image quality.
+图片质量中等。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ Medium image quality.
 QUALITY_LEVEL_LOW = 2
 ```
 
-Low image quality.
+图片质量差。
 
 **Since:** 10
 

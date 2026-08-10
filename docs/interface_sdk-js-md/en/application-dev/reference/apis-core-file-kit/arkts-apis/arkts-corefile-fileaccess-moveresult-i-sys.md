@@ -1,6 +1,6 @@
 # MoveResult (System API)
 
-Represents the information returned when the move operation fails. If the operation is successful, no information is returned.
+表示移动操作失败时的返回信息，移动成功时则没有返回信息。
 
 **Since:** 11
 
@@ -14,13 +14,19 @@ Represents the information returned when the move operation fails. If the operat
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { fileAccess } from 'kits/@kit.CoreFileKit';
+```
+
 ## destUri
 
 ```TypeScript
 destUri: string
 ```
 
-URI of the conflicting file. If the error is not caused by a file conflict, **destUri** is empty.
+产生冲突的目标文件的 uri。如果非冲突导致的错误，则为空。
 
 **Type:** string
 
@@ -46,8 +52,7 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 errCode: number
 ```
 
-Error code. For details about the error codes, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+错误码。接口抛出错误码的详细介绍请参见[文件管理错误码](../../../reference/apis-core-file-kit/errorcode-filemanagement.md)。
 
 **Type:** number
 
@@ -73,7 +78,7 @@ Error code. For details about the error codes, see
 errMsg: string
 ```
 
-Error message.
+错误信息。
 
 **Type:** string
 
@@ -99,7 +104,7 @@ Error message.
 sourceUri: string
 ```
 
-URI of the source file or directory.
+源文件(夹) uri。
 
 **Type:** string
 

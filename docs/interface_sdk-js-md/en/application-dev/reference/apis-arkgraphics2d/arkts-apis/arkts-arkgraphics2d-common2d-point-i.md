@@ -1,6 +1,6 @@
 # Point
 
-Describes a coordinate point.
+坐标点。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes a coordinate point.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { common2D } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## x
 
 ```TypeScript
 x: double
 ```
 
-Horizontal coordinate. The value is a floating point number.
+横坐标，浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Horizontal coordinate. The value is a floating point number.
 y: double
 ```
 
-Vertical coordinate. The value is a floating point number.
+纵坐标，浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

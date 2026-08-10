@@ -1,6 +1,6 @@
 # ExchangeIndex
 
-Defines position of exchange data.
+定义交换数据的位置。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines position of exchange data.
 end: number
 ```
 
-Second position for the exchange. The value range is [0, data source length - 1].
+第二个交换位置。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Second position for the exchange. The value range is [0, data source length - 1]
 start: number
 ```
 
-First position for the exchange. The value range is [0, data source length - 1].
+第一个交换位置。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
 
 **Type:** number
 

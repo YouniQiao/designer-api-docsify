@@ -1,16 +1,22 @@
 # getGraphicsMemorySync
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getGraphicsMemorySync
 
 ```TypeScript
 function getGraphicsMemorySync(): int
 ```
 
-Obtains the total GPU memory size (GL + graph) of an application in synchronous mode.
-    **NOTE**  
-    
-    This API involves multiple cross-process communications, which may take seconds. To avoid performance problems,  
-    you are advised to use the asynchronous API **getGraphicsMemory** instead of this API in the main thread.
+ʹ��ͬ����ʽ��ȡӦ���Դ��ܴ�С��gl + graph����
+
+> **ע��**
+> 
+> ���ڸýӿ��漰��ο����ͨ�ţ����ʱ���ܴﵽ�뼶��Ϊ�˱��������������⣬���鲻Ҫ�����̵߳��øýӿڣ��Ƽ�ʹ���첽�ӿ�`getGraphicsMemory`��
 
 **Since:** 14
 
@@ -26,15 +32,15 @@ Obtains the total GPU memory size (GL + graph) of an application in synchronous 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Total size of the application's GPU memory, in KB. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Ӧ���Դ��ܴ�С����λΪKB�� |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
+| 11400104 | Failed to get the application memory due to a remote exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

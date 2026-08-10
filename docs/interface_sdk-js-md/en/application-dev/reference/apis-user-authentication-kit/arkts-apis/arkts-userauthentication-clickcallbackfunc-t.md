@@ -4,7 +4,7 @@
 type ClickCallbackFunc = () => void
 ```
 
-Callback after user clicks.
+用户点击图标后触发的回调。
 
 **Since:** 23
 

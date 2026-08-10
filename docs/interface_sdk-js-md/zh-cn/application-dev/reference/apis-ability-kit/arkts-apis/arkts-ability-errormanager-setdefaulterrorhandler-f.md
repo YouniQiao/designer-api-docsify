@@ -1,12 +1,18 @@
 # setDefaultErrorHandler
 
+## 导入模块
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setDefaultErrorHandler
 
 ```TypeScript
 function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 ```
 
-发生JS\_CRASH异常时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。
+发生JS_CRASH异常时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。
 
 如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
 
@@ -26,21 +32,21 @@ function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| defaultHandler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 新注册的错误处理器，缺省时默认值为空。 |
+| defaultHandler | [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | 否 | 新注册的错误处理器，缺省时默认值为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回上一次注册的错误处理器。 |
+| [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | 返回上一次注册的错误处理器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) | API未在主线程中调用。 |
+| 16000205 | API未在主线程中调用。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

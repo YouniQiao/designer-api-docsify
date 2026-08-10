@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## distributedInfo
 
 ```TypeScript
@@ -42,7 +48,7 @@ id: int
 
 系统账号子profile的标识符。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -64,7 +70,7 @@ index: int
 
 系统账号子profile的位置索引，取值范围：0~子profile个数减1。该索引在每个系统账号下唯一，由系统在创建子Profile时自动分配。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -86,7 +92,7 @@ osAccountLocalId: int
 
 子profile所属系统账号的本地标识符。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

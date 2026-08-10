@@ -1,6 +1,6 @@
 # AttachOptions
 
-Defines additional options for binding an input method.
+绑定输入法时的附加选项。
 
 **Since:** 19
 
@@ -10,16 +10,21 @@ Defines additional options for binding an input method.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## isSimpleKeyboardEnabled
 
 ```TypeScript
 isSimpleKeyboardEnabled?: boolean
 ```
 
-Whether to enable the simple keyboard. This attribute is set by the edit box application. The value **true**  
-means that the simple keyboard is enabled, and the value **false** means the opposite.
+是否使能简单键盘，该属性由编辑框应用设置，true表示使能简单键盘，false表示不使能简单键盘。
 
-If this attribute is not set or is set to an invalid value, the simple keyboard is disabled by default.
+如果没有设置或设置非法值，则默认不使能简单键盘。
 
 **Type:** boolean
 
@@ -37,9 +42,9 @@ If this attribute is not set or is set to an invalid value, the simple keyboard 
 requestKeyboardReason?: RequestKeyboardReason
 ```
 
-Reason for requesting the keyboard. This attribute is set by the edit box application. If this attribute is not set or is set to an invalid value, the keyboard will not be triggered by default.
+该属性由编辑框应用设置，如果没有设置或设置非法值，则默认没有特定的原因触发键盘请求。
 
-**Type:** RequestKeyboardReason
+**Type:** [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
 
 **Since:** 19
 

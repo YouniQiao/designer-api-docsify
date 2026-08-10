@@ -1,12 +1,18 @@
 # queryAppKeyState
 
+## Modules to Import
+
+```TypeScript
+import { screenLockFileManager } from 'kits/@kit.AbilityKit';
+```
+
 ## queryAppKeyState
 
 ```TypeScript
 function queryAppKeyState(): KeyStatus
 ```
 
-Queries the status of the caller app's sensitive data key under the lock screen in synchronous mode.
+以同步方法查询调用方应用锁屏下敏感数据密钥的状态。
 
 **Since:** 18
 
@@ -20,16 +26,16 @@ Queries the status of the caller app's sensitive data key under the lock screen 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Status of the key for sensitive data under lock screen. |
+| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) | 锁屏下敏感数据密钥的状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found. |
-| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
+| 801 | The specified SystemCapability name was not found. |
+| 29300002 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Obtain the state of access permissions for sensitive data on the lock screen.
@@ -38,7 +44,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
+    // Query the key status
     let keyStatus = screenLockFileManager.queryAppKeyState();
+    // Determine the key status and handle different situations
     if (keyStatus === screenLockFileManager.KeyStatus.KEY_NOT_EXIST) {
         hilog.info(0x0000, 'testTag', 'Key does not exist.');
     } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_RELEASED) {

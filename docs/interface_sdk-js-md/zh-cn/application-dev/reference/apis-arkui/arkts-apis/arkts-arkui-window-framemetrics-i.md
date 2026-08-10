@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## firstDrawFrame
 
 ```TypeScript
@@ -36,7 +42,7 @@ inputHandlingDuration: long
 
 一帧中的手势处理耗时（单位：纳秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 22
 
@@ -54,7 +60,7 @@ layoutMeasureDuration: long
 
 一帧中的布局测量耗时（单位：纳秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 22
 
@@ -72,7 +78,7 @@ vsyncTimestamp: long
 
 当前帧的开始时间戳（单位：纳秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 22
 

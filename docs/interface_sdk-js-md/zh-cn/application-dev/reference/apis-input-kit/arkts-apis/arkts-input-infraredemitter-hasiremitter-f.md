@@ -1,5 +1,11 @@
 # hasIrEmitter
 
+## 导入模块
+
+```TypeScript
+import { infraredEmitter } from 'kits/@kit.InputKit';
+```
+
 ## hasIrEmitter
 
 ```TypeScript
@@ -28,12 +34,10 @@ function hasIrEmitter(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 3800001 | Input service exception. |
+| 201 | Permission denied. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { infraredEmitter } from '@kit.InputKit';
@@ -51,31 +55,6 @@ struct Index {
               console.info(`Succeeded in querying infrared emitter: ${JSON.stringify(result)}.`);
             }).catch((error: BusinessError) => {
               console.error(`Failed to query infrared emitter, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`)})
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { infraredEmitter } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-            // 查询是否有红外发射器
-            infraredEmitter.hasIrEmitter().then((result: boolean) => {
-              console.info(`Succeeded in querying infrared emitter: ${JSON.stringify(result)}.`);
-            }).catch((error)=> {
-              console.error(`Failed to query infrared emitter, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);})
         })
     }
   }

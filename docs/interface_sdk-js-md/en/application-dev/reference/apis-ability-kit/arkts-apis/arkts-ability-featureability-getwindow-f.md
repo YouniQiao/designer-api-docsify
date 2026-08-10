@@ -1,12 +1,18 @@
 # getWindow
 
+## Modules to Import
+
+```TypeScript
+import { featureAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## getWindow
 
 ```TypeScript
 function getWindow(callback: AsyncCallback<window.Window>): void
 ```
 
-Obtains the window corresponding to this ability. This API uses an asynchronous callback to return the result.
+获取当前Ability对应的窗口。使用callback异步回调。
 
 **Since:** 7
 
@@ -22,9 +28,9 @@ Obtains the window corresponding to this ability. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;window.Window&gt; | Yes | Callback used to return the window. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | Yes | 回调函数，返回当前Ability对应的窗口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
@@ -47,7 +53,7 @@ featureAbility.getWindow((error: BusinessError, data: window.Window) => {
 function getWindow(): Promise<window.Window>
 ```
 
-Obtains the window corresponding to this ability. This API uses a promise to return the result.
+获取当前Ability对应的窗口。使用Promise异步回调。
 
 **Since:** 7
 
@@ -63,9 +69,9 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the window. |
+| Promise&lt;window.Window&gt; | Promise对象，返回当前Ability对应的窗口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

@@ -1,6 +1,6 @@
 # DataAbilityOperationType
 
-Enumerates the operation types of a DataAbility. The DataAbility can use an enumerated value to specify the operation type when operating data in batches.
+表示数据的操作类型。DataAbility批量操作数据时可以通过该枚举值指定操作类型。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the operation types of a DataAbility. The DataAbility can use an enum
 TYPE_INSERT = 1
 ```
 
-Insert operation.
+插入类型。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Insert operation.
 TYPE_UPDATE = 2
 ```
 
-Update operation.
+修改类型。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Update operation.
 TYPE_DELETE = 3
 ```
 
-Deletion operation.
+删除类型。
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Deletion operation.
 TYPE_ASSERT = 4
 ```
 
-Assert operation.
+声明类型。
 
 **Since:** 7
 

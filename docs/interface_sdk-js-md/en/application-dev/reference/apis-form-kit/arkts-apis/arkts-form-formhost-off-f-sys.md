@@ -1,5 +1,11 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
 ## off("formUninstall")
 
 ```TypeScript
@@ -7,10 +13,11 @@ function off(type: "formUninstall", callback?: Callback<string>): void
 ```
 
 Unsubscribes from widget uninstall events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget  
-    is automatically uninstalled.
+
+> **NOTE：**
+> 
+> Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget
+> is automatically uninstalled.
 
 **Since:** 9
 
@@ -27,14 +34,14 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "formUninstall" | Yes | Event type. The value **"formUninstall"** indicates a widget uninstall event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | No | Callback used to return the widget ID. If it is left unspecified, it indicates the callback for all the events that have been subscribed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ To cancel the subscription with a given callback, this parameter must be set to the same value as **callback** in **on("formUninstall")**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to return the widget ID. If it is left unspecified, it indicates the callback for all the events that have been subscribed. &lt;br&gt; To cancel the subscription with a given callback, this parameter must be set to the same value as **callback** in **on("formUninstall")**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 202 | The application is not a system application. |
 
 
 ## off('formOverflow')
@@ -43,7 +50,7 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 function off(type: 'formOverflow', callback?: Callback<formInfo.OverflowRequest>): void
 ```
 
-Unsubscribes from the interactive widget animation request event. This API uses an asynchronous callback to return the result.
+Unsubscribes from the interactive widget animation request event. This API uses an asynchronous callback to return  the result.
 
 **Since:** 20
 
@@ -60,15 +67,15 @@ Unsubscribes from the interactive widget animation request event. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'formOverflow' | Yes | Event callback. The supported event is **'formOverflow'**, indicating the interactive widget animation request. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.OverflowRequest&gt; | No | Callback function, which corresponds to the subscribed interactive widget animation request. By default, all registered interactive widget animation request events are deregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.OverflowRequest&gt; | No | Callback function, which corresponds to the subscribed interactive widget animation request. By default, all registered interactive widget animation request events are deregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| 202 | The application is not a system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formHost, formInfo } from '@kit.FormKit';
@@ -108,15 +115,15 @@ Unsubscribes from the event of switching the interactive widget state. An intera
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'changeSceneAnimationState' | Yes | Event type. The event **'changeSceneAnimationState'** is triggered when the interactive widget state is switched. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | No | Callback function, which corresponds to the request for switching the state of a subscribed interactive widget. By default, all registered interactive widget state switching events are deregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | No | Callback function, which corresponds to the request for switching the state of a subscribed interactive widget. By default, all registered interactive widget state switching events are deregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| 202 | The application is not a system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formHost, formInfo } from '@kit.FormKit';
@@ -161,9 +168,9 @@ Unsubscribes from the event of requesting widget position and dimension. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| 202 | The application is not a system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formHost } from '@kit.FormKit';
@@ -207,5 +214,5 @@ Cancels Listening to the event of get live form status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| 202 | The application is not a system application. |
 

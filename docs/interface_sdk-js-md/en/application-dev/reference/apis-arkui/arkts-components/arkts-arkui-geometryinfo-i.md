@@ -1,8 +1,8 @@
 # GeometryInfo
 
-Provides layout geometry information of the parent component (a custom component).Inherits from [SizeResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+父组件（自定义组件）布局信息，继承自[SizeResult](arkts-arkui-sizeresult-i.md)。
 
-**Inheritance/Implementation:** GeometryInfo extends [SizeResult](../arkts-apis/arkts-arkui-component/common-sizeresult-i.md)
+**Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md)
 
 **Since:** 10
 
@@ -18,9 +18,9 @@ Provides layout geometry information of the parent component (a custom component
 borderWidth: EdgeWidth
 ```
 
-Width of the parent component's border.Unit: vp.
+父组件（自定义组件）边框宽度。单位为： vp。
 
-**Type:** EdgeWidth
+**Type:** [EdgeWidth](../arkts-apis/arkts-arkui-edgewidth-t.md)
 
 **Since:** 10
 
@@ -40,9 +40,9 @@ Width of the parent component's border.Unit: vp.
 margin: Margin
 ```
 
-Margin values of the parent component.Unit: vp.
+父组件（自定义组件）margin信息。单位为： vp。
 
-**Type:** Margin
+**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 10
 
@@ -62,9 +62,9 @@ Margin values of the parent component.Unit: vp.
 padding: Padding
 ```
 
-Padding values of the parent component.Unit: vp.
+父组件（自定义组件）padding信息。单位为： vp。
 
-**Type:** Padding
+**Type:** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
 
 **Since:** 10
 

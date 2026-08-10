@@ -6,7 +6,7 @@
 export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): Promise<boolean[]>
 ```
 
-Verifies the authorization package from the controlled device.This function verifies the remote authorization package sent by the controlled device.It validates the ticket to ensure the authorization is legitimate.
+对受控设备的授权包进行校验。对被控设备发送的远程授权包进行校验。它验证票证以确保授权是合法的。
 
 **Since:** 26.1.0
 
@@ -24,22 +24,22 @@ Verifies the authorization package from the controlled device.This function veri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ticketInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Remote authorization package list. |
+| ticketInfo | [RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[] | Yes | 远程授权包列表 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean[]&gt; | Promise used to return \_\_\_ESCAPED\_DOLLAR\_\_\_{boolean[]}. |
+| Promise&lt;boolean[]&gt; | Promise用于返回\\${boolean[]}。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY\_\_\_ESCAPED\_UNDERSCORE\_\_\_TOOL\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 24010000 | Invalid parameter. Format of ticketInfo is invalid. |
-| 24010001 | Service is abnormal. possible cause: IPC failed. |
+| 201 | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
+| 202 | The caller is not a system application. |
 | 24010002 | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
 | 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
+| 24010000 | Invalid parameter. Format of ticketInfo is invalid. |
+| 24010001 | Service is abnormal. possible cause: IPC failed. |
 

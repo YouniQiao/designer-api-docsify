@@ -1,8 +1,8 @@
 # HuksKeyPurpose
 
-Enumerates the key purposes.
+表示密钥用途。
 
-A key can be used only for a single purpose. You cannot use the same key for both encryption/decryption and signature verification.
+一个密钥仅能用于单类用途，不能既用于加解密又用于签名验签。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ A key can be used only for a single purpose. You cannot use the same key for bot
 HUKS_KEY_PURPOSE_ENCRYPT = 1
 ```
 
-Used to encrypt the plaintext.
+表示密钥用于对明文进行加密操作。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Used to encrypt the plaintext.
 HUKS_KEY_PURPOSE_DECRYPT = 2
 ```
 
-Used to decrypt the cipher text.
+表示密钥用于对密文进行解密操作。
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Used to decrypt the cipher text.
 HUKS_KEY_PURPOSE_SIGN = 4
 ```
 
-Used for signing.
+表示密钥用于对数据进行签名。
 
 **Since:** 8
 
@@ -74,7 +74,7 @@ Used for signing.
 HUKS_KEY_PURPOSE_VERIFY = 8
 ```
 
-Used to verify the signature.
+表示密钥用于验证签名后的数据。
 
 **Since:** 8
 
@@ -94,7 +94,7 @@ Used to verify the signature.
 HUKS_KEY_PURPOSE_DERIVE = 16
 ```
 
-Used to derive a key.
+表示密钥用于派生密钥。
 
 **Since:** 8
 
@@ -114,7 +114,7 @@ Used to derive a key.
 HUKS_KEY_PURPOSE_WRAP = 32
 ```
 
-Used for an encrypted export.
+表示密钥用于加密导出。
 
 **Since:** 8
 
@@ -134,7 +134,7 @@ Used for an encrypted export.
 HUKS_KEY_PURPOSE_UNWRAP = 64
 ```
 
-Used for a secure import.
+表示密钥用于安全导入。
 
 **Since:** 8
 
@@ -154,7 +154,7 @@ Used for a secure import.
 HUKS_KEY_PURPOSE_MAC = 128
 ```
 
-Used to generate a message authentication code.
+表示密钥用于生成消息验证码。
 
 **Since:** 8
 
@@ -174,7 +174,7 @@ Used to generate a message authentication code.
 HUKS_KEY_PURPOSE_AGREE = 256
 ```
 
-Used for key agreement.
+表示密钥用于进行密钥协商。
 
 **Since:** 8
 

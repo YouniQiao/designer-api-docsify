@@ -1,12 +1,18 @@
 # getLocalCapabilities (System API)
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## getLocalCapabilities
 
 ```TypeScript
 function getLocalCapabilities(): Promise<FileData>
 ```
 
-Obtain a Json file that describes local capabilities.
+获取描述本地能力的JSON文件。
 
 **Since:** 10
 
@@ -24,30 +30,30 @@ Obtain a Json file that describes local capabilities.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| Promise&lt;FileData&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600001 | IPC error |
 | 13900005 | I/O error |
-| 13900011 | Out of memory |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, backup } from '@kit.CoreFileKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
 
 async function getLocalCapabilities() {
   try {
     let fileData = await backup.getLocalCapabilities();
     console.info('getLocalCapabilities success');
     console.info('fileData info:' + fileData.fd);
-    fs.closeSync(fileData.fd);
+    fileIo.closeSync(fileData.fd);
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
@@ -81,7 +87,7 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 ```
 
-Obtain a Json file that describes local capabilities.
+获取描述本地能力的JSON文件。
 
 **Since:** 10
 
@@ -99,23 +105,23 @@ Obtain a Json file that describes local capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FileData&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileData&gt; | Yes | 回调函数，返回包含本地能力文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600001 | IPC error |
 | 13900005 | I/O error |
-| 13900011 | Out of memory |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, backup } from '@kit.CoreFileKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
 
 try {
   backup.getLocalCapabilities((err: BusinessError, fileData: backup.FileData) => {
@@ -125,7 +131,7 @@ try {
     }
     console.info('getLocalCapabilities success');
     console.info('fileData info:' + fileData.fd);
-    fs.closeSync(fileData.fd);
+    fileIo.closeSync(fileData.fd);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
@@ -159,7 +165,7 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>
 ```
 
-Obtain a json file that describes local capabilities.
+获取描述本地能力的JSON文件。
 
 **Since:** 12
 
@@ -177,32 +183,32 @@ Obtain a json file that describes local capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataList | Array&lt;IncrementalBackupTime&gt; | Yes |  |
+| dataList | Array&lt;IncrementalBackupTime&gt; | Yes | 增量备份数据列表，包含待查询应用及其最后一次增量备份时间。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| Promise&lt;FileData&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13600001 | IPC error |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| 13900011 | Out of memory |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, backup } from '@kit.CoreFileKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
 
 async function getLocalCapabilities() {
   try {
@@ -213,7 +219,7 @@ async function getLocalCapabilities() {
     let fileData = await backup.getLocalCapabilities(backupApps);
     console.info('getLocalCapabilities success');
     console.info('fileData info:' + fileData.fd);
-    fs.closeSync(fileData.fd);
+    fileIo.closeSync(fileData.fd);
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);

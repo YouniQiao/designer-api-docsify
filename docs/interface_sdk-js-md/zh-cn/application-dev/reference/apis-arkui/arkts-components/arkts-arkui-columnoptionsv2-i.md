@@ -18,7 +18,7 @@ space?: SpaceType
 
 设置纵向布局元素垂直方向间距。
 
-space为负数或者[justifyContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
+space为负数或者[justifyContent](ColumnAttribute#justifyContent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
 
 取值范围：[0, +∞)
 
@@ -32,7 +32,7 @@ space为负数或者[justifyContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置�
 
 space取值是大于等于0的数字，或者可以转换为非负数字的字符串，或者可以转换为数字的Resource类型数据。
 
-**类型：** SpaceType
+**类型：** [SpaceType](../arkts-apis/arkts-arkui-spacetype-t.md)
 
 **起始版本：** 18
 

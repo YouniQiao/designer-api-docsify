@@ -1,7 +1,6 @@
 # ChildProcessArgs
 
-The module describes the parameters transferred to the child process. When starting a child process through  
-[childProcessManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, you can transfer parameters to the child process through **ChildProcessArgs**.
+传递到子进程的参数。[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，可以通过ChildProcessArgs传递参数到子进程中。
 
 **Since:** 12
 
@@ -11,14 +10,19 @@ The module describes the parameters transferred to the child process. When start
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { ChildProcessArgs } from 'kits/@kit.AbilityKit';
+```
+
 ## entryParams
 
 ```TypeScript
 entryParams?: string
 ```
 
-Custom parameters to be transparently transmitted to the child process. The parameters can be obtained through  
-**args.entryParams** in [ChildProcess.onStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The maximum data volume supported by **entryParams** is 150 KB.
+开发者自定义参数，透传到子进程中。可以在[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)方法中通过args.entryParams获取，entryParams支持传输的最大数据量为150KB。
 
 **Type:** string
 
@@ -38,15 +42,15 @@ Custom parameters to be transparently transmitted to the child process. The para
 fds?: Record<string, int>
 ```
 
-File Descriptor (FD) handles, which are used for communication between the main process and child process. They are passed to the child process in the form of key-value pairs, where **key** is a custom string and **value** is a DF handle. The FD handles can be obtained through **args.fds** in  
-[ChildProcess.onStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+文件描述符句柄集合，用于主进程和子进程通信，通过key-value的形式传入到子进程中，其中key为自定义字符串，value为文件描述符句柄。可以在  
+[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)方法中通过args.fds获取fd句柄。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_
+&lt;b&gt;说明：&lt;/b&gt; 
 
-- **fds** supports a maximum of 16 groups. In each group, **key** contains a maximum of 20 characters.  
-- The ID of a handle passed to the child process may change, but the handle always points to the same file.
+- fds最多支持16组，每组key的最大长度为20字符。  
+- 传递到子进程中句柄数字可能会变，但是指向的文件是一致的。
 
-**Type:** Record&lt;string, int&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int&gt;
 
 **Since:** 12
 

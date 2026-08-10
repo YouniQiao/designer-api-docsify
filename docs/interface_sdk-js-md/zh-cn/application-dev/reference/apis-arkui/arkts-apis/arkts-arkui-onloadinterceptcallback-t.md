@@ -20,11 +20,11 @@ export type OnLoadInterceptCallback = (event: OnLoadInterceptEvent) => boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当Web组件加载url之前触发的加载拦截事件。  |
+| event | [OnLoadInterceptEvent](../../apis-arkweb/arkts-apis/arkts-arkweb-web-onloadinterceptevent-i.md) | 是 | 当Web组件加载url之前触发的加载拦截事件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回资源是否被拦截，true表示被拦截，false表示不被拦截。  |
+| boolean | 返回资源是否被拦截，true表示被拦截，false表示不被拦截。 |
 

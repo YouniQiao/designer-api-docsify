@@ -1,6 +1,6 @@
 # ContentItemV2Options
 
-Declare interface ContentItemV2Options
+声明接口ContentItemV2Options
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Declare interface ContentItemV2Options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## description
 
 ```TypeScript
 description?: ResourceStr
 ```
 
-Sets the description.
+设置描述内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Sets the description.
 icon?: ResourceStr
 ```
 
-Sets the icon.
+设置图标
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ Sets the icon.
 iconStyle?: IconTypeV2
 ```
 
-The type of icon.
+图标样式。
 
-**Type:** IconTypeV2
+**Type:** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **Since:** 26.0.0
 
@@ -76,9 +82,9 @@ The type of icon.
 primaryText?: ResourceStr
 ```
 
-Sets the primaryText.
+设置标题内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -96,9 +102,9 @@ Sets the primaryText.
 secondaryText?: ResourceStr
 ```
 
-Sets the secondaryText.
+设置副标题内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -116,9 +122,9 @@ Sets the secondaryText.
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Sets the symbol.
+设置Symbol图标。
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

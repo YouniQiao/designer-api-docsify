@@ -1,5 +1,11 @@
 # offNotifyInvisible (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formObserver } from 'kits/@kit.FormKit';
+```
+
 ## offNotifyInvisible
 
 ```TypeScript
@@ -9,7 +15,7 @@ function offNotifyInvisible(
   ): void
 ```
 
-Cancels listening to the event of notifyInvisible type change.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use this method to cancel listening to the event of notifyInvisible type change.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Cancels listening to the event of notifyInvisible type change.&lt;p&gt;You can use this method to cancel listening to the event of notifyInvisible type change.&lt;/p&gt;
 
 **Since:** 23
 
@@ -28,13 +34,13 @@ Cancels listening to the event of notifyInvisible type change.\_\_\_HTML\_TAG\_D
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 201 | Permissions denied. |
+| 202 | The application is not a system application. |
 

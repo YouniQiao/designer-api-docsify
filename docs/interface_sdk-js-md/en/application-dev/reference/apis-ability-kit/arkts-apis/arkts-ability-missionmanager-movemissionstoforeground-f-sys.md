@@ -1,12 +1,18 @@
 # moveMissionsToForeground (System API)
 
+## Modules to Import
+
+```TypeScript
+import { missionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## moveMissionsToForeground
 
 ```TypeScript
 function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallback<void>): void
 ```
 
-Switches a batch of missions to the foreground. This API uses an asynchronous callback to return the result.
+将指定任务批量切到前台。使用callback异步回调。
 
 **Since:** 10
 
@@ -24,19 +30,19 @@ Switches a batch of missions to the foreground. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | Yes | Array holding the mission IDs. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| missionIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | 任务ID数组。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 执行结果回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityManager, missionManager } from '@kit.AbilityKit';
@@ -80,7 +86,7 @@ try {
 function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void
 ```
 
-Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API uses an asynchronous callback to return the result.
+将指定任务批量切换到前台，并将任务ID等于topMission的任务移动到最顶层。使用callback异步回调。
 
 **Since:** 10
 
@@ -98,20 +104,20 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | Yes | Array holding the mission IDs. |
-| topMission | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the mission to be moved to the top. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| missionIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | 任务ID数组。 |
+| topMission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 待移动到最顶层的任务ID |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 执行结果回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityManager, missionManager } from '@kit.AbilityKit';
@@ -155,7 +161,7 @@ try {
 function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>
 ```
 
-Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API uses a promise to return the result.
+将指定任务批量切到前台，并将任务ID等于topMission的任务移动到最顶层。使用Promise异步回调。
 
 **Since:** 10
 
@@ -173,25 +179,25 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | Yes | Array holding the mission IDs. |
-| topMission | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | ID of the mission to be moved to the top. The default value is **-1**, indicating that the default mission is moved to the top. |
+| missionIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | 任务ID数组。 |
+| topMission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 待移动到最顶层的任务ID。默认值为-1，表示将默认任务移动到最顶层。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityManager, missionManager } from '@kit.AbilityKit';

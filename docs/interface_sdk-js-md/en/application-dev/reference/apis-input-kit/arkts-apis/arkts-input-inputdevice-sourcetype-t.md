@@ -4,7 +4,7 @@
 type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick' | 'trackball'
 ```
 
-Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
+输入设备的输入能力。包括键盘、鼠标、触摸屏、轨迹球、触控板、操纵杆等。
 
 **Since:** 9
 
@@ -16,10 +16,10 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 
 | Type | Description |
 | --- | --- |
-| 'keyboard' | The input device is a keyboard. |
-| 'mouse' | The input device is a mouse. |
-| 'touchpad' | The input device is a touchpad. |
-| 'touchscreen' | The input device is a touchscreen. |
-| 'joystick' | The input device is a joystick. |
-| 'trackball' | The input device is a trackball. |
+| 'keyboard' | 表示输入设备是键盘。 |
+| 'mouse' | 表示输入设备是鼠标。 |
+| 'touchpad' | 表示输入设备是触控板。 |
+| 'touchscreen' | 表示输入设备是触摸屏。 |
+| 'joystick' | 表示输入设备是操纵杆。 |
+| 'trackball' | 表示输入设备是轨迹球。 |
 

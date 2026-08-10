@@ -1,6 +1,6 @@
 # AuthToken (System API)
 
-Defines the authentication token data. It indicates the parsed **AuthToken** data returned after the verification is successful, including detailed authentication information such as the challenge value, authentication trust level, authentication type, and user ID.
+认证令牌数据。表示校验通过后返回解析后的AuthToken数据，包含认证的详细信息，如挑战值、认证信任等级、认证类型、用户ID等。
 
 **Since:** 18
 
@@ -12,13 +12,19 @@ Defines the authentication token data. It indicates the parsed **AuthToken** dat
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## authTrustLevel
 
 ```TypeScript
 authTrustLevel: userAuth.AuthTrustLevel
 ```
 
-Authentication trust level. It indicates the security strength level of the current authentication. The value can be **ATL1 (10000)**, **ATL2 (20000)**, **ATL3 (30000)**, or **ATL4 (40000)**. A higher level indicates a stronger liveness detection capability and more accurate identity recognition.
+认证信任等级。表示本次认证达到的安全强度等级，值为ATL1（10000）、ATL2（20000）、ATL3（30000）或ATL4（40000）。等级越高，表示活体检测能力越强、身份识别越精确。
 
 **Type:** userAuth.AuthTrustLevel
 
@@ -38,7 +44,7 @@ Authentication trust level. It indicates the security strength level of the curr
 authType: userAuth.UserAuthType
 ```
 
-Credential type for the identity authentication. It indicates the authentication mode used for the current authentication, such as **PIN (1)**, **FACE (2)**, and **FINGERPRINT (4)**.
+身份认证的凭据类型。表示本次认证使用的认证方式，如PIN（1）、FACE（2）、FINGERPRINT（4）等。
 
 **Type:** userAuth.UserAuthType
 
@@ -58,7 +64,7 @@ Credential type for the identity authentication. It indicates the authentication
 challenge: Uint8Array
 ```
 
-Random challenge value for the authentication. It is used to prevent replay attacks. The challenge value passed during authentication is included in the **AuthToken**. The service can verify this field to confirm the validity of the authentication result.
+认证随机挑战值。用于防重放攻击，认证时传入的挑战值会被包含在AuthToken中，业务可通过验证此字段确认认证结果的有效性。
 
 **Type:** Uint8Array
 
@@ -78,7 +84,7 @@ Random challenge value for the authentication. It is used to prevent replay atta
 credentialId?: bigint
 ```
 
-Credential ID. It indicates the ID of the credential that is successfully matched in the current authentication.It is used to associate with the specific authentication credential.
+凭据ID。表示本次认证匹配成功的凭据标识，用于关联具体的认证凭据。
 
 **Type:** bigint
 
@@ -98,7 +104,7 @@ Credential ID. It indicates the ID of the credential that is successfully matche
 enrolledId?: bigint
 ```
 
-Credential enrollment ID. It indicates the original value of **credentialDigest** in **enrolledState**, which reflects the credential change.
+凭据注册ID。enrolledState中credentialDigest的原始值，反映了凭据的变更情况。
 
 **Type:** bigint
 
@@ -118,7 +124,7 @@ Credential enrollment ID. It indicates the original value of **credentialDigest*
 secureUid?: bigint
 ```
 
-Secure user ID. It indicates the security ID of a user, which is used internally by the system and returned only in specific authentication scenarios.
+安全用户ID。系统内部用于标识用户的安全标识，仅在特定认证场景下返回。
 
 **Type:** bigint
 
@@ -138,7 +144,7 @@ Secure user ID. It indicates the security ID of a user, which is used internally
 timeInterval: bigint
 ```
 
-Time elapsed since the **AuthToken** was issued, in milliseconds.
+AuthToken签发后经过的时间。自AuthToken签发至当前的时间间隔，单位为毫秒。
 
 **Type:** bigint
 
@@ -158,9 +164,9 @@ Time elapsed since the **AuthToken** was issued, in milliseconds.
 tokenType: AuthTokenType
 ```
 
-Authentication token type. It identifies the source of the token, such as local authentication, reuse authentication, or collaborative authentication.
+认证令牌类型。标识令牌的签发来源，如本地认证、复用认证或协同认证。
 
-**Type:** AuthTokenType
+**Type:** [AuthTokenType](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md)
 
 **Since:** 18
 
@@ -178,9 +184,9 @@ Authentication token type. It identifies the source of the token, such as local 
 userId: int
 ```
 
-User ID. It indicates the ID of the user who has completed authentication. The value is a non-negative integer.
+用户ID。表示完成认证的用户标识，取值为非负整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 

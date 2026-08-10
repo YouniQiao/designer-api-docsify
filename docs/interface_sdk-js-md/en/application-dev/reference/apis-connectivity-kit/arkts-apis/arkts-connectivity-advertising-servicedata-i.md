@@ -1,6 +1,6 @@
 # ServiceData
 
-Describes the service data.
+服务数据。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the service data.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## serviceData
 
 ```TypeScript
 serviceData: ArrayBuffer
 ```
 
-Indicates the service data.
+服务数据。
 
 **Type:** ArrayBuffer
 
@@ -36,7 +42,7 @@ Indicates the service data.
 serviceUuid: string
 ```
 
-Indicates the service UUID.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
+服务UUID。
 
 **Type:** string
 

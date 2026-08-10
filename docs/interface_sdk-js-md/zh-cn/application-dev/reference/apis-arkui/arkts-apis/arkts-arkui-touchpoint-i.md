@@ -18,7 +18,7 @@ x: Dimension
 
 跟手点X轴坐标。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ y: Dimension
 
 跟手点Y轴坐标。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 

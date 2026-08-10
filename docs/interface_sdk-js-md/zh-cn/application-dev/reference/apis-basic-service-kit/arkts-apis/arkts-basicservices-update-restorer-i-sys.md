@@ -1,11 +1,12 @@
 # Restorer（系统接口）
 
 提供清除用户数据分区、深度清除用户数据和操作系统分区、同步清除文件密钥等恢复出厂设置功能的工具类。
-    **恢复出厂设置流程**：
+
+> **恢复出厂设置流程**：
 
 - 开发者调用getRestorer方法获取Restorer对象。  
 - 开发者根据需求选择恢复出厂方式：  
-1. factoryReset：普通恢复出厂，仅清除用户数据分区。2. forceFactoryReset：强制恢复出厂，清除用户数据分区并同步清除文件密钥。3. deepFactoryReset：深度恢复出厂，可通过scope参数指定清除范围：DATA仅清除用户数据分区，DATA\_AND\_OS同时清除用户数据和操作系统分区。  
+ 1. factoryReset：普通恢复出厂，仅清除用户数据分区。 2. forceFactoryReset：强制恢复出厂，清除用户数据分区并同步清除文件密钥。 3. deepFactoryReset：深度恢复出厂，可通过scope参数指定清除范围：DATA仅清除用户数据分区，DATA_AND_OS同时清除用户数据和操作系统分区。  
 - 开发者调用相应的恢复出厂方法执行恢复出厂操作，设备将清除数据并恢复到出厂状态。
 
 选取建议：日常维护场景优先选择factoryReset；涉及敏感数据或设备交接场景选择forceFactoryReset；设备报废或需要物理销毁数据场景选择deepFactoryReset。
@@ -24,6 +25,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## deepFactoryReset
 
 ```TypeScript
@@ -36,12 +43,12 @@ deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 
 **原理说明**：
 
-该方法提供最高安全级别的数据清除。与factoryReset（仅清除数据分区）和forceFactoryReset（清除数据分区和密钥）不同，deepFactoryReset通过多次覆盖写入（如多次写入随机数据）物理销毁数据，防止数据恢复工具提取残留数据。清除范围可配置：DATA仅清除用户数据分区，DATA\_AND\_OS同时清除用户数据和操作系统分区。
+该方法提供最高安全级别的数据清除。与factoryReset（仅清除数据分区）和forceFactoryReset（清除数据分区和密钥）不同，deepFactoryReset通过多次覆盖写入（如多次写入随机数据）物理销毁数据，防止数据恢复工具提取残留数据。清除范围可配置：DATA仅清除用户数据分区，DATA_AND_OS同时清除用户数据和操作系统分区。
 
 **约束和限制**：
 
 - 数据销毁不可逆，无法通过任何技术手段恢复，执行前必须获得用户明确授权。  
-- 需要系统权限ohos.permission.FACTORY\_RESET。  
+- 需要系统权限ohos.permission.FACTORY_RESET。  
 - 深度清除耗时较长(可能数小时)，必须确保设备电量充足(建议电量>50%)。  
 - 仅可在Stage模型下使用。  
 - 适用于设备报废、高安全销毁等极端场景，不建议普通恢复出厂场景使用。  
@@ -68,7 +75,7 @@ deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| factoryResetStrategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 恢复出厂设置策略(FactoryResetStrategy)，包含scope(重置范围)和strategy(重置策略 描述)字段，用于控制恢复出厂设置的范围和方式。scope指定清除范围(DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA\_\_\_ESCAPED\_UNDERSCORE\_\_\_AND\_\_\_ESCAPED\_UNDERSCORE\_\_\_OS同时清除用户数据和操作系统分区，适用于同时清除系统和数据的场景)。 strategy为重置操作的自定义描述文本，长度范围[0，64]，单位：字符。有效字符包括字母、数字、下划线、连字符和空格。超出范围或包含无效字符时抛出异常。 |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-update-factoryresetstrategy-i-sys.md) | 是 | 恢复出厂设置策略(FactoryResetStrategy)，包含scope(重置范围)和strategy(重置策略 描述)字段，用于控制恢复出厂设置的范围和方式。scope指定清除范围(DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA_AND_OS同时清除用户数据和操作系统分区，适用于同时清除系统和数据的场景)。 strategy为重置操作的自定义描述文本，长度范围[0，64]，单位：字符。有效字符包括字母、数字、下划线、连字符和空格。超出范围或包含无效字符时抛出异常。 |
 
 **返回值：**
 
@@ -80,28 +87,31 @@ deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 203 | This function is prohibited by enterprise management policies. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
-  let restorer = update.getRestorer();
+  // 获取恢复出厂设置对象
+  let factoryRestorer = update.getRestorer();
+  // 创建恢复出厂设置策略对象
   let factoryResetStrategy: update.FactoryResetStrategy = {
-    scope: update.FactoryResetScope.DATA,
-    strategy: "deepFactoryReset test"
+    scope: update.FactoryResetScope.DATA, // 重置范围为用户数据
+    strategy: 'deepFactoryReset test' // 重置范围描述
   };
-  restorer.deepFactoryReset(factoryResetStrategy).then(() => {
+  // 执行深度恢复出厂设置
+  factoryRestorer.deepFactoryReset(factoryResetStrategy).then(() => {
     console.info(`deepFactoryReset success`);
-  }).catch((err: BusinessError) => {
-    console.error(`deepFactoryReset error ${JSON.stringify(err)}`);
+  }).catch((deepResetError: BusinessError) => {
+    console.error(`deepFactoryReset error, code:${deepResetError.code}, message:${deepResetError.message}.`);
   });
-} catch(error) {
-  console.error(`Fail to get restorer: ${error}`);
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
 }
 ```
 
@@ -122,7 +132,7 @@ factoryReset(callback: AsyncCallback<void>): void
 **约束和限制**：
 
 - 操作不可逆，需提醒用户备份重要数据并获得明确确认。  
-- 需要系统权限ohos.permission.FACTORY\_RESET。  
+- 需要系统权限ohos.permission.FACTORY_RESET。  
 - 操作过程中设备会自动重启，应用需做好状态保存。  
 - 建议仅在用户明确确认后执行恢复出厂操作。
 
@@ -142,27 +152,36 @@ factoryReset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，用于接收恢复出厂结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复出厂结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 203 | This function is prohibited by enterprise management policies. |
 
-**示例：**
+## 示例
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 try {
-  let restorer = update.getRestorer();
-  restorer.factoryReset((err) => {
-    console.info(`factoryReset error ${JSON.stringify(err)}`);
+  // 获取恢复出厂设置对象
+  let factoryRestorer = update.getRestorer();
+  // 执行恢复出厂设置
+  factoryRestorer.factoryReset((resetError: BusinessError) => {
+    if (resetError) {
+      console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
+      return;
+    }
+    console.info(`factoryReset success`);
   });
-} catch(error) {
-  console.error(`Fail to get restorer: ${error}`);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Fail to get factoryRestorer. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
 
@@ -183,7 +202,7 @@ factoryReset(): Promise<void>
 **约束和限制**：
 
 - 操作不可逆，需提醒用户备份重要数据并获得明确确认。  
-- 需要系统权限ohos.permission.FACTORY\_RESET。  
+- 需要系统权限ohos.permission.FACTORY_RESET。  
 - 操作过程中设备会自动重启，应用需做好状态保存。  
 - 建议仅在用户明确确认后执行恢复出厂操作。
 
@@ -209,24 +228,27 @@ factoryReset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 203 | This function is prohibited by enterprise management policies. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+
 try {
-  let restorer = update.getRestorer();
-  restorer.factoryReset().then(() => {
+  // 获取恢复出厂设置对象
+  let factoryRestorer = update.getRestorer();
+  // 执行恢复出厂设置
+  factoryRestorer.factoryReset().then(() => {
     console.info(`factoryReset success`);
-  }).catch((err: BusinessError) => {
-    console.error(`factoryReset error ${JSON.stringify(err)}`);
+  }).catch((resetError: BusinessError) => {
+    console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
   });
-} catch(error) {
-  console.error(`Fail to get restorer: ${error}`);
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
 }
 ```
 
@@ -247,7 +269,7 @@ forceFactoryReset(): Promise<void>
 **约束和限制**：
 
 - 操作不可逆，将永久删除所有用户数据和加密密钥，需提前提醒用户备份重要数据，无法恢复。  
-- 需要系统权限ohos.permission.FORCE\_FACTORY\_RESET。  
+- 需要系统权限ohos.permission.FORCE_FACTORY_RESET。  
 - 执行前必须明确提醒用户备份重要数据并确认操作。  
 - 建议仅在用户明确确认后执行恢复出厂操作。  
 - 适用于敏感数据销毁、设备交接等高安全场景。  
@@ -275,24 +297,26 @@ forceFactoryReset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 203 | This function is prohibited by enterprise management policies. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
-  let restorer = update.getRestorer();
-  restorer.forceFactoryReset().then(() => {
+  // 获取恢复出厂设置对象
+  let factoryRestorer = update.getRestorer();
+  // 执行强制恢复出厂设置
+  factoryRestorer.forceFactoryReset().then(() => {
     console.info(`forceFactoryReset success`);
-  }).catch((err: BusinessError) => {
-    console.error(`forceFactoryReset error ${JSON.stringify(err)}`);
+  }).catch((forceResetError: BusinessError) => {
+    console.error(`forceFactoryReset error, code:${forceResetError.code}, message:${forceResetError.message}.`);
   });
-} catch(error) {
-  console.error(`Fail to get restorer: ${error}`);
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
 }
 ```
 
@@ -302,18 +326,18 @@ try {
 getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<FactoryResetInfo>
 ```
 
-获取深度恢复出厂设置信息，用于预估恢复操作耗时。调用此方法后，系统根据清除范围（DATA或DATA\_AND\_OS）和设备存储容量计算深度清除所需时间，返回包含预计持续时间的FactoryResetInfo对象。使用Promise异步回调。
+获取深度恢复出厂设置信息，用于预估恢复操作耗时。调用此方法后，系统根据清除范围（DATA或DATA_AND_OS）和设备存储容量计算深度清除所需时间，返回包含预计持续时间的FactoryResetInfo对象。使用Promise异步回调。
 
 使用场景：执行深度恢复出厂前向用户提示等待时长、规划操作时间、确保电量充足。
 
 **原理说明**：
 
-该方法通过分析清除范围和存储介质特性计算耗时。深度清除通过多次覆盖写入销毁数据，耗时与清除范围成正比：DATA仅清除用户数据分区耗时较短，DATA\_AND\_OS清除用户数据和操作系统分区耗时较长。系统根据存储容量、覆盖次数、写入速度等因素计算预计时间。
+该方法通过分析清除范围和存储介质特性计算耗时。深度清除通过多次覆盖写入销毁数据，耗时与清除范围成正比：DATA仅清除用户数据分区耗时较短，DATA_AND_OS清除用户数据和操作系统分区耗时较长。系统根据存储容量、覆盖次数、写入速度等因素计算预计时间。
 
 **约束和限制**：
 
 - 仅可在Stage模型下使用。  
-- 需要系统权限ohos.permission.FACTORY\_RESET。  
+- 需要系统权限ohos.permission.FACTORY_RESET。  
 - 返回的时间为预估值，实际耗时可能因设备状态略有差异。  
 - 当设备电量不足（建议电量高于50%）时，不应执行深度恢复出厂操作，以避免中途断电导致操作失败。  
 - 必须在执行deepFactoryReset前调用，帮助用户做好时间和电量准备。
@@ -336,7 +360,7 @@ getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<Fac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| factoryResetStrategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 恢复出厂设置策略(FactoryResetStrategy)，包含scope(重置范围)和strategy(重置策略 描述)字段，用于控制恢复出厂设置的范围和方式。scope指定清除范围(DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA\_\_\_ESCAPED\_UNDERSCORE\_\_\_AND\_\_\_ESCAPED\_UNDERSCORE\_\_\_OS同时清除用户数据和操作系统分区，适用于同时清除系统和数据的场景)。 strategy为重置操作的自定义描述文本，长度范围[0，64]，单位：字符。有效字符包括字母、数字、下划线、连字符和空格。超出范围或包含无效字符时抛出异常。 |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-update-factoryresetstrategy-i-sys.md) | 是 | 恢复出厂设置策略(FactoryResetStrategy)，包含scope(重置范围)和strategy(重置策略 描述)字段，用于控制恢复出厂设置的范围和方式。scope指定清除范围(DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA_AND_OS同时清除用户数据和操作系统分区，适用于同时清除系统和数据的场景)。 strategy为重置操作的自定义描述文本，长度范围[0，64]，单位：字符。有效字符包括字母、数字、下划线、连字符和空格。超出范围或包含无效字符时抛出异常。 |
 
 **返回值：**
 
@@ -348,28 +372,31 @@ getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<Fac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// 创建恢复出厂设置策略对象
 let factoryResetStrategy: update.FactoryResetStrategy = {
-  scope: update.FactoryResetScope.DATA,
-  strategy: "deepFactoryReset"
+  scope: update.FactoryResetScope.DATA, // 重置范围为用户数据 
+  strategy: 'getDeepFactoryResetInfo test' // 重置范围描述
 };
 try {
-  let restorer = update.getRestorer();
-  restorer.getDeepFactoryResetInfo(factoryResetStrategy).then((info: update.FactoryResetInfo) => {
+  // 获取恢复出厂设置对象
+  let factoryRestorer = update.getRestorer();
+  // 查询深度恢复出厂策略信息
+  factoryRestorer.getDeepFactoryResetInfo(factoryResetStrategy).then((deepResetInfo: update.FactoryResetInfo) => {
     console.info(`getDeepFactoryResetInfo success`);
-  }).catch((err: BusinessError) => {
-    console.error(`getDeepFactoryResetInfo promise error ${JSON.stringify(err)}`);
+  }).catch((resetInfoError: BusinessError) => {
+    console.error(`getDeepFactoryResetInfo promise error, code:${resetInfoError.code}, message:${resetInfoError.message}.`);
   });
-} catch(error) {
-  console.error(`Fail to get restorer: ${error}`);
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
 }
 ```
 

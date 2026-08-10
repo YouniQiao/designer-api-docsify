@@ -1,6 +1,6 @@
 # HuksReturnResult
 
-Represents the result returned.
+调用接口返回的result。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Represents the result returned.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## certChains
 
 ```TypeScript
 certChains?: Array<string>
 ```
 
-Certificate chain information. The default value is **undefined**.
+表示证书链数据。默认为undefined。
 
 **Type:** Array&lt;string&gt;
 
@@ -36,8 +42,8 @@ Certificate chain information. The default value is **undefined**.
 outData?: Uint8Array
 ```
 
-Challenge obtained after the  
-[initSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_operation. The default value is **undefined**.
+表示  
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)操作之后获取到的challenge信息。默认为undefined。
 
 **Type:** Uint8Array
 
@@ -57,8 +63,8 @@ Challenge obtained after the
 properties?: Array<HuksParam>
 ```
 
-Challenge obtained after the  
-[initSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_operation. The default value is **undefined**.
+表示  
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)操作之后获取到的challenge信息。默认为undefined。
 
 **Type:** Array&lt;HuksParam&gt;
 
@@ -78,7 +84,7 @@ Challenge obtained after the
 sharedSecret?: Uint8Array
 ```
 
-Shared key.
+定义共享密钥。
 
 **Type:** Uint8Array
 

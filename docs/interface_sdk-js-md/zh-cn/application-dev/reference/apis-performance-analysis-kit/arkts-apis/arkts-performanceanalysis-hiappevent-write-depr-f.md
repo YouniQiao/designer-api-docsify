@@ -25,7 +25,7 @@ function write(eventName: string, eventType: EventType, keyValues: object): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventName | string | 是 | 事件名称。 |
-| eventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 事件类型。 |
+| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | 是 | 事件类型。 |
 | keyValues | object | 是 | 事件参数。 |
 
 **返回值：**
@@ -34,7 +34,7 @@ function write(eventName: string, eventType: EventType, keyValues: object): Prom
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，可以在其then()、catch()方法中分别对事件写入成功、写入异常的情况进行异步处理。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -79,11 +79,11 @@ function write(eventName: string, eventType: EventType, keyValues: object, callb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventName | string | 是 | 事件名称。 |
-| eventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 事件类型。 |
+| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | 是 | 事件类型。 |
 | keyValues | object | 是 | 事件参数。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 事件回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 事件回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

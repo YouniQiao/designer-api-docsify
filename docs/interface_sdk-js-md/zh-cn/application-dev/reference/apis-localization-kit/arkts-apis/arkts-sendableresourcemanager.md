@@ -1,8 +1,8 @@
 # @ohos.sendableResourceManager
 
-本模块提供[Resource]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_对象与  
-[SendableResource]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_对象之间的相互转换功能。SendableResource实现了  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_接口，支持跨线程传输。跨线程传输后，SendableResource对象可以再转换为Resource对象，作为参数传递给[资源管理]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_接口以获取资源。
+本模块提供[Resource](arkts-localization-sendableresourcemanager-resource-t.md)对象与  
+[SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md)对象之间的相互转换功能。SendableResource实现了  
+[ISendable](../../../arkts-utils/arkts-sendable.md#isendable)接口，支持跨线程传输。跨线程传输后，SendableResource对象可以再转换为Resource对象，作为参数传递给[资源管理](arkts-resourcemanager.md)接口以获取资源。
 
 **起始版本：** 12
 
@@ -11,6 +11,12 @@
 <!--Device-unnamed-declare namespace sendableResourceManager--><!--Device-unnamed-declare namespace sendableResourceManager-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+## 导入模块
+
+```TypeScript
+import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
+```
 
 ## 汇总
 

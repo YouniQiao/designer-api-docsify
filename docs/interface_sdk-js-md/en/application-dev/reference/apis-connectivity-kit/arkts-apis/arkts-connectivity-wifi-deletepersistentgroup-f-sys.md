@@ -1,5 +1,11 @@
 # deletePersistentGroup (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deletePersistentGroup
 
 ```TypeScript
@@ -36,7 +42,7 @@ Deletes the persistent P2P group with the specified network ID.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

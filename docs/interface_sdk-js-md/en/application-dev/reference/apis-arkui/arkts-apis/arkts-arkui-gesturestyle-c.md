@@ -1,6 +1,6 @@
 # GestureStyle
 
-Describes the event gesture style.
+事件手势对象说明。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Describes the event gesture style.
 constructor(value?: GestureStyleInterface)
 ```
 
-A constructor used to create a gesture style.
+事件手势的构造函数。
 
 **Since:** 12
 
@@ -34,5 +34,5 @@ A constructor used to create a gesture style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Event options. |
+| value | [GestureStyleInterface](arkts-arkui-styledstring-gesturestyleinterface-i.md) | No | 事件手势设置项。 &lt;br&gt;默认值：不传入时不绑定任何手势事件。 |
 

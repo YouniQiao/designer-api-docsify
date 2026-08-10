@@ -5,7 +5,7 @@ type TypedArrayPredicateFn<ElementType, ArrayType> =
     (value: ElementType, index: number, array: ArrayType) => boolean
 ```
 
-Describes the assertion function of the ArkTS typed array.
+ArkTS TypedArray断言测试函数类型。
 
 **Since:** 12
 
@@ -21,13 +21,13 @@ Describes the assertion function of the ArkTS typed array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ElementType | Yes | Element that is being traversed in the ArkTS typed array.  |
-| index | number | Yes | Index of the element.  |
-| array | ArrayType | Yes | ArkTS typed array that is being traversed.  |
+| value | ElementType | Yes | 当前遍历的ArkTS TypedArray元素。 |
+| index | number | Yes | 当前遍历的ArkTS TypedArray元素索引，从0开始。 |
+| array | ArrayType | Yes | 当前遍历的ArkTS TypedArray实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the value meets the predicate, otherwise false.  |
+| boolean | 如果值符合条件，则为true，否则为false。 |
 

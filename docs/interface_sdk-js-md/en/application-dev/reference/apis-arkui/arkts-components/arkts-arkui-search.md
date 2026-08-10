@@ -1,14 +1,14 @@
 # Search
 
-The **Search** component provides an area for users to enter search queries.
+搜索框组件，支持搜索图标、清除按钮、搜索按钮、placeholder提示文本、自定义键盘等功能配置，适用于浏览器的搜索内容输入框、应用内搜索等场景。
 
-> **NOTE**
+> **说明：**
 >
-> This component supports plain text only. For rich text, use the [RichEditor]{@link ./rich_editor} component.
+> 该组件仅支持单文本样式，若需实现富文本样式，建议使用[RichEditor]{@link ./rich_editor}组件。
 
-## Child Components
+## 子组件
 
-Not supported
+无
 
 ## Search
 
@@ -16,7 +16,7 @@ Not supported
 Search(options?: SearchOptions)
 ```
 
-Defines the constructor of Search.
+定义搜索组件构造函数。
 
 **Since:** 8
 
@@ -32,7 +32,15 @@ Defines the constructor of Search.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Initialization options of the **Search** component. |
+| options | [SearchOptions](arkts-arkui-searchoptions-i.md) | No | 搜索框组件初始化选项。当需要设置搜索框的初始值、提示文本、图标或控制器时传入此参数，不传入时使用默认配置。 |
 
 ## Summary
 
+- [CancelButtonOptions](arkts-arkui-search-cancelbuttonoptions-i.md)
+- [CancelButtonSymbolOptions](arkts-arkui-search-cancelbuttonsymboloptions-i.md)
+- [IconOptions](arkts-arkui-search-iconoptions-i.md)
+- [SearchButtonOptions](arkts-arkui-search-searchbuttonoptions-i.md)
+- [SearchOptions](arkts-arkui-search-searchoptions-i.md)
+- [SearchSubmitCallback](arkts-arkui-search-searchsubmitcallback-t.md)
+- [CancelButtonStyle](arkts-arkui-search-cancelbuttonstyle-e.md)
+- [SearchType](arkts-arkui-search-searchtype-e.md)

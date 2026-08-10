@@ -1,6 +1,6 @@
 # HuksRsaPssSaltLenType
 
-Enumerates the **salt\_len** types to set when PSS padding is used in RSA signing or signature verification.
+表示Rsa在签名验签、padding为pss时需指定的salt_len类型。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Enumerates the **salt\_len** types to set when PSS padding is used in RSA signin
 HUKS_RSA_PSS_SALT_LEN_DIGEST = 0
 ```
 
-salt\_len** is set to the digest length.
+表示以摘要长度设置salt_len。
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ salt\_len** is set to the digest length.
 HUKS_RSA_PSS_SALT_LEN_MAX = 1
 ```
 
-salt\_len** is set to the maximum length.
+表示以最大长度设置salt_len。
 
 **Since:** 10
 

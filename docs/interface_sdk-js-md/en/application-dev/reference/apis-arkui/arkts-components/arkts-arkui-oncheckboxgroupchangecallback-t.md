@@ -4,7 +4,7 @@
 declare type OnCheckboxGroupChangeCallback = (value: CheckboxGroupResult) => void
 ```
 
-Information about the check box group.
+多选框群组的信息。
 
 **Since:** 18
 
@@ -24,5 +24,5 @@ Information about the check box group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the check box group.  |
+| value | [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md) | Yes | 多选框群组的信息。 |
 

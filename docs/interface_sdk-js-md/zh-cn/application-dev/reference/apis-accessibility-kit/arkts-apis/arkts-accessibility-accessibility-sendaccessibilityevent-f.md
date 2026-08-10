@@ -1,5 +1,11 @@
 # sendAccessibilityEvent
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## sendAccessibilityEvent
 
 ```TypeScript
@@ -24,18 +30,16 @@ function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助事件对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数，如果发送无障碍事件失败，则 AsyncCallback中err有数据返回。 |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | 是 | 辅助事件对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，如果发送无障碍事件失败，则 AsyncCallback中err有数据返回。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -56,28 +60,7 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'click',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'click',
-});
-
-accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError | null) => {
-  if (err?.code) {
-    console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in sending event, eventInfo is ${eventInfo}`);
-});
-```
-
-ArkTS-Dyn示例：
+主动聚焦示例：
 
 ```TypeScript
 @Entry
@@ -113,43 +96,7 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-
-  build() {
-    Column() {
-      // 待聚焦组件添加id属性，id唯一性由使用者保证。
-      Button('待聚焦组件').id('click')
-    }
-  }
-}
-```
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'requestFocusForAccessibility',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'common',
-  customId: 'click' // 对应待聚焦组件id属性值。
-});
-
-accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError | null) => {
-  if (err?.code) {
-    console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in sending event, eventInfo is ${eventInfo}`);
-});
-```
-
-ArkTS-Dyn示例：
+主动播报支持Resource示例18+：
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -168,28 +115,6 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
     return;
   }
   console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'announceForAccessibility',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'common',
-  textResourceAnnouncedForAccessibility: $r('app.string.ResourceName'),
-});
-
-accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError | null) => {
-  if (err?.code) {
-    console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in sending event, eventInfo is ${eventInfo}`);
 });
 ```
 
@@ -218,7 +143,7 @@ function sendAccessibilityEvent(event: EventInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 无障碍事件对象。 |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | 是 | 无障碍事件对象。 |
 
 **返回值：**
 
@@ -230,9 +155,9 @@ function sendAccessibilityEvent(event: EventInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

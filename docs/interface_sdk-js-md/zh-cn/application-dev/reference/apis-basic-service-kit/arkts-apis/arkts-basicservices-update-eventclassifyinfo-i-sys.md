@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## eventClassify
 
 ```TypeScript
@@ -20,7 +26,7 @@ eventClassify: EventClassify
 
 事件类型，用于指定要监听的事件分类。可取值：TASK（任务事件）。
 
-**类型：** EventClassify
+**类型：** [EventClassify](arkts-basicservices-update-eventclassify-e-sys.md)
 
 **起始版本：** 9
 

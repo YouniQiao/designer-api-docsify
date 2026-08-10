@@ -4,7 +4,7 @@
 type OnPrepareMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuItem>
 ```
 
-Triggered before the menu is displayed after the text selection area changes. Menu data can be configured within this callback. Both the input parameter and return value contain only level-1 menu items; level-2 menu items are not included.
+当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行菜单数据设置。入参和返回值只包含一级菜单项，不包含二级菜单项。
 
 **Since:** 20
 
@@ -22,11 +22,11 @@ Triggered before the menu is displayed after the text selection area changes. Me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;TextMenuItem&gt; | Yes | Menu items to be displayed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**NOTE**\_\_\_HTML\_TAG\_USD\_1\_\_\_Modifications to the name, icon, or shortcut hint of default menu items do not take effect.  |
+| menuItems | Array&lt;TextMenuItem&gt; | Yes | 将要显示的菜单项。 <br>**说明：** <br>对默认菜单项的名称、图标、快捷键提示修改不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextMenuItem&gt; | Menu items after the processing.  |
+| Array&lt;TextMenuItem&gt; | 处理后的菜单项。 |
 

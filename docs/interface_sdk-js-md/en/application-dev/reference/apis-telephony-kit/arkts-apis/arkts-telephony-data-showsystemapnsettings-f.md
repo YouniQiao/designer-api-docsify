@@ -1,5 +1,11 @@
 # showSystemApnSettings
 
+## Modules to Import
+
+```TypeScript
+import { data } from 'kits/@kit.TelephonyKit';
+```
+
 ## showSystemApnSettings
 
 ```TypeScript
@@ -22,7 +28,7 @@ Open the system APN selection menu, which is presented in a semi-modal form and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates Context instance. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates Context instance. |
 
 **Return value:**
 

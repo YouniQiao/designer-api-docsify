@@ -1,6 +1,6 @@
 # RecurrenceRule
 
-Describes the recurrence rule of a recurring event.
+重复日程重复规则。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the recurrence rule of a recurring event.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
+## Modules to Import
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## count
 
 ```TypeScript
 count?: number
 ```
 
-Number of times that an event recurs. The value is a non-negative integer. If the value is a floating point number,it is rounded down. If this parameter is left empty, the default value is 0, indicating that the number of recurrence times is not limited and the event will continuously recur. If the value is negative, the effect is the same as that of 0.If count, interval, and expire are set at the same time, the restriction that is reached first prevails.
+重复日程的重复次数，取值为非负整数，浮点数输入将向下取整，不填时默认为0，表示不会限定重复次数，会一直重复。取值为负时，效果等同于取值为0。当count与interval和expire同时设置时，以先到达的限制条件及效果为准。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ Number of times that an event recurs. The value is a non-negative integer. If th
 daysOfMonth?: number[]
 ```
 
-Repeats by day of a month. If this parameter is not set, the default value is empty, indicating that there is no recurrence rule. The value range is [1, 31], corresponding to the first to the last days of each month.Other values are invalid and have the same effect as the empty value. The value 29, 30, or 31 is invalid if the corresponding date does not exist in the current month. The relevant field arrays are in one-to-one mapping.For example, if the values of monthsOfYear and daysOfMonth are [1, 2, 3], the event recurs on January 1,February 2, and March 3.
+按照一个月第几天重复。不填时，默认为空，表示没有一个月第几天重复的规则。范围为[1, 31]，[1, 31]对应1到31号，其他值为无效值，与空值效果相同。若当月没有29号、30号或31号，则29、30、31也为无效值。该字段数组与其相关字段数组为一一对应关系，如monthsOfYear为[1, 2, 3]，daysOfMonth为[1, 2, 3]，则表示按照一月一号，二月二号，三月三号进行重复。
 
 **Type:** number[]
 
@@ -56,7 +62,7 @@ Repeats by day of a month. If this parameter is not set, the default value is em
 daysOfWeek?: number[]
 ```
 
-Repeats by day of a week. If this parameter is not set, the default value is empty, indicating that there is no recurrence rule.The value range is [1, 7], corresponding to Monday to Sunday. Other values are invalid and have the same effect as the empty value.The relevant field arrays are in one-to-one mapping. For example, if the values of weeksOfMonth and daysOfWeek are [1, 2, 3],the event recurs on Monday of the first week, Tuesday of the second week, and Wednesday of the third week of each month.
+按照一周第几天重复。不填时，默认为空，表示没有一周第几天重复的规则。范围为[1, 7]，对应周一到周日，其他值为无效值，与空值效果相同。该字段数组与其相关字段数组为一一对应关系，如weeksOfMonth为[1, 2, 3]，daysOfWeek为[1, 2, 3]，则表示按照每月的第一周的周一，第二周的周二，第三周的周三进行重复。
 
 **Type:** number[]
 
@@ -76,7 +82,7 @@ Repeats by day of a week. If this parameter is not set, the default value is emp
 daysOfYear?: number[]
 ```
 
-Repeats by day of a year. If this parameter is not set, the default value is empty, indicating that there is no recurrence rule. The value range is [1, 366], corresponding to the first to the last days of each year. Other values are invalid and have the same effect as the empty value. If this year only has 365 days, the value 366 is invalid.
+按照一年第几天重复。不填时，默认为空，表示没有一年第几天重复的规则。范围为[1, 366]，[1, 366]表示一年的1到366天，其他值为无效值，与空值效果相同。若当年没有366天，366也为无效值。
 
 **Type:** number[]
 
@@ -96,7 +102,7 @@ Repeats by day of a year. If this parameter is not set, the default value is emp
 excludedDates?: number[]
 ```
 
-Excluded dates set for a duplicate calendar event, in timestamp format. The value must be exactly the same as the start time (hour, minute, and second) of the event.Otherwise, the setting does not take effect. This parameter is not specified by default. If the value is 0 or a negative number, it is treated as an empty value.
+重复日程的排除日期，参数取值为时间戳格式，不填时，默认为空，表示没有排除的日期，0或负数为无效值，与空值效果相同。
 
 **Type:** number[]
 
@@ -116,9 +122,9 @@ Excluded dates set for a duplicate calendar event, in timestamp format. The valu
 expire?: number
 ```
 
-End date of the recurrence period. The value is a 13-digit timestamp. If this parameter is not specified, the event has no end date.
+重复周期截止日。格式为13位时间戳，不填时则日程无截止日期。 
 
-If **expire**, **count**, and **interval** are set at the same time, the restriction that is reached first prevails.
+当expire与count和interval同时设置时，以先到达的限制条件及效果为准。
 
 **Type:** number
 
@@ -138,7 +144,7 @@ If **expire**, **count**, and **interval** are set at the same time, the restric
 interval?: number
 ```
 
-Recurrence interval of a recurring event. The value is a non-negative integer. If the value is a floating point number, it is rounded down.If this parameter is not specified, the default value is 0. If the value is 0, 1, or negative, the event recurs every day, week, month, or year.If interval, count, and expire are set at the same time, the restriction that is reached first prevails.This property is related to the recurrenceFrequency rule. The recurrence interval varies according to the recurrence rule. For example, if the interval value is 2, the following situations occur:Daily recurrence: The event recurs every two days. Weekly recurrence: The event recurs every two weeks.Monthly recurrence: The event recurs every two months. Yearly recurrence: The event recurs every two years.
+重复日程的重复周期，取值为非负整数，浮点数输入将向下取整。不填时默认为0，当取值为0、1或负值时，表示日程每天/周/月/年重复一次。当interval与count和expire同时设置时，以先到达的限制条件及效果为准。此属性与recurrenceFrequency重复规则相关，不同的重复规则下，表示的重复周期不同，以interval取2为例，分为以下几种情况：每天重复时：表示日程每两天重复一次。每周重复时：表示日程每两周重复一次。每月重复时：表示日程每两月重复一次。每年重复时：表示日程每两年重复一次。
 
 **Type:** number
 
@@ -158,7 +164,7 @@ Recurrence interval of a recurring event. The value is a non-negative integer. I
 monthsOfYear?: number[]
 ```
 
-Repeats by month of a year. If this parameter is not set, the default value is empty, indicating that there is no recurrence rule. The value range is [1, 12],corresponding to the first to the last months of each year. Other values are invalid and have the same effect as the empty value.
+按照一年中第几个月重复。不填时，默认为空，表示没有一年第几个月重复的规则。范围为[1, 12]，[1, 12]为每年的1到12月，其他值为无效值，与空值效果相同。
 
 **Type:** number[]
 
@@ -178,9 +184,9 @@ Repeats by month of a year. If this parameter is not set, the default value is e
 recurrenceFrequency: RecurrenceFrequency
 ```
 
-Type of the event recurrence rule.
+日程重复规则类型。
 
-**Type:** RecurrenceFrequency
+**Type:** [RecurrenceFrequency](arkts-calendar-calendarmanager-recurrencefrequency-e.md)
 
 **Since:** 10
 
@@ -198,7 +204,7 @@ Type of the event recurrence rule.
 weeksOfMonth?: number[]
 ```
 
-Repeats by week of a month. If this parameter is not set, the default value is empty, indicating that there is no recurrence rule.The value range is [1, 5], corresponding to the first to the last weeks of each month. Other values are invalid and have the same effect as the empty value.If this month only has four weeks, the value 5 is invalid.
+按照一个月第几周重复。不填时，默认为空，表示没有一个月第几周重复的规则。范围为[1, 5]，[1, 5]为每月的第1到第5周，其他值为无效值，与空值效果相同。若当月没有第五周，5也为无效值。
 
 **Type:** number[]
 
@@ -218,7 +224,7 @@ Repeats by week of a month. If this parameter is not set, the default value is e
 weeksOfYear?: number[]
 ```
 
-Repeats by week of a year. If this parameter is not set, the default value is empty, indicating that there is no recurrence rule. The value range is [1, 53],corresponding to the first to the last weeks of each year. Other values are invalid and have the same effect as the empty value.
+按照一年中第几周重复。不填时，默认为空，表示没有一年第几周重复的规则。范围为[1, 53]，[1, 53]为每年的第1到第53周，其他值为无效值，与空值效果相同。
 
 **Type:** number[]
 

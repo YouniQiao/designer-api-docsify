@@ -1,12 +1,18 @@
 # stopCastDeviceDiscovery (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## stopCastDeviceDiscovery
 
 ```TypeScript
 function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void
 ```
 
-Stop device discovery.
+结束设备搜索发现。结果通过callback异步回调方式返回。
 
 **Since:** 10
 
@@ -22,25 +28,19 @@ Stop device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当成功停止搜索，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.stopCastDeviceDiscovery((err: BusinessError) => {
-  if (err) {
-    console.error(`stopCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('stopCastDeviceDiscovery successfully');
-  }
+avSession.stopCastDeviceDiscovery(() => {
+    console.info('Succeeded in stopping cast device discovery.');
 });
 ```
 
@@ -51,7 +51,7 @@ avSession.stopCastDeviceDiscovery((err: BusinessError) => {
 function stopCastDeviceDiscovery(): Promise<void>
 ```
 
-Stop device discovery.
+结束设备搜索发现。结果通过Promise异步回调方式返回。
 
 **Since:** 10
 
@@ -67,23 +67,19 @@ Stop device discovery.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise对象。当成功停止搜索，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 avSession.stopCastDeviceDiscovery().then(() => {
-  console.info('stopCastDeviceDiscovery successfully');
-}).catch((err: BusinessError) => {
-  console.error(`stopCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
+  console.info('Succeeded in stopping cast device discovery.');
 });
 ```
 

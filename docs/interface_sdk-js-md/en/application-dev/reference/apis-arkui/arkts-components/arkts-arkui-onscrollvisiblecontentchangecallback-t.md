@@ -4,15 +4,15 @@
 declare type OnScrollVisibleContentChangeCallback = (start: VisibleListContentInfo, end: VisibleListContentInfo) => void
 ```
 
-Triggered when a child component enters or leaves the list display area.
+有子组件划入或划出List显示区域时触发。
 
-When the **List** component changes from having child components to being empty, the values of the reported **start**  
-and **end** parameters remain the same as those when the component had child components last time.
+API版本26.0.0开始，List从有子组件变成空的List时，上报的start和end参数的index成员为-1，itemGroupArea和itemIndexInGroup成员为undefined。API版本26.0.0以前，List从有子组件变成空的List时，上报的start和end参数会保留上次有子组件时的值。
 
-If the values of **start** and **end** are both **0**, the **List** component contains only one child component.
-    **NOTE**  
-    
-    This API can be called within [attributeModifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ since API version 14.
+start和end的index同时返回0，代表List内只有一个子组件。
+
+> **说明：**
+> 
+> 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **Since:** 12
 
@@ -30,6 +30,6 @@ If the values of **start** and **end** are both **0**, the **List** component co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | 1. Index of the first child component in the list display area.\_\_\_HTML\_TAG\_USD\_0\_\_\_2. If the first child component in the list display area is **ListItemGroup**, you can obtain the area where the first child component belongs.\_\_\_HTML\_TAG\_USD\_1\_\_\_3. If the first child component in the list display area is **ListItem** in **ListItemGroup**, you can obtain the index of **ListItem** in **ListItemGroup**.  |
-| end | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | 1. Index of the last child component in the list display area.\_\_\_HTML\_TAG\_USD\_0\_\_\_2. If the last child component in the list display area is **ListItemGroup**, you can obtain the area where the last child component belongs.\_\_\_HTML\_TAG\_USD\_1\_\_\_3. If the last child component in the list display area is **ListItem** in **ListItemGroup**, you can obtain the index of **ListItem** in **ListItemGroup**.  |
+| start | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Yes | 1. 通过该参数获取List显示区域第一个子组件在List中的索引值。<br/>2. 如果当前List显示区域第一个子组件是ListItemGroup，可 以获取当前List显示区域第一个组件属于该ListItemGroup的哪一区域。<br/>3. 如果当前List显示区域第一个组件是ListItemGroup内的ListItem，可以获取该ListItem在 ListItemGroup内的索引值。 |
+| end | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Yes | 1. 通过该参数获取List显示区域最后一个子组件在List中的索引值。<br/>2. 如果当前List显示区域最后一个子组件是ListItemGroup，可 以获取当前List显示区域最后一个组件属于该ListItemGroup的哪一区域。<br/>3. 如果当前List显示区域最后一个组件是ListItemGroup内的ListItem，可以获取该ListItem在 ListItemGroup内的索引值。 |
 

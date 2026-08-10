@@ -12,6 +12,12 @@ Worker线程用于与宿主线程通信的类。其中postMessage接口用于向
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## callGlobalCallObjectMethod
 
 ```TypeScript
@@ -36,7 +42,7 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 | --- | --- | --- | --- |
 | instanceName | string | 是 | 注册对象时使用的键，用于在宿主线程中查找对象。 |
 | methodName | string | 是 | 在已注册对象上调用的方法名。该方法不能使用async修饰， 也不能基于底层异步机制返回结果，否则会抛出异常。 |
-| timeout | number | 是 | 表示从Worker线程发起调用开始到在主线程中执行目标方法的最大等待时间， 单位为ms，取整数，取值范围为[1-5000]。也可取特殊值0，此时表示本次调用等待时间为5000ms。 该值应为整数。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：ms。 |
+| timeout | number | 是 | 表示从Worker线程发起调用开始到在主线程中执行目标方法的最大等待时间， 单位为ms，取整数，取值范围为[1-5000]。也可取特殊值0，此时表示本次调用等待时间为5000ms。 该值应为整数。 &lt;br&gt;单位：ms。 |
 | args | Object[] | 是 | 注册对象上所调用方法的参数数组。 |
 
 **返回值：**
@@ -49,13 +55,13 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200019](../errorcode-utils.md#10200019-调用未注册对象的方法错误) | The globalCallObject is not registered. |
-| [10200020](../errorcode-utils.md#10200020-调用注册对象上的方法类型错误) | The method to be called is not callable or is an async method or a generator. |
-| [10200021](../errorcode-utils.md#10200021-全局调用等待超时错误) | The global call exceeds the timeout. |
+| 10200019 | The globalCallObject is not registered. |
+| 10200006 | An exception occurred during serialization. |
+| 10200021 | The global call exceeds the timeout. |
+| 10200004 | The Worker instance is not running. |
+| 10200020 | The method to be called is not callable or is an async method or a generator. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -124,9 +130,9 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -168,15 +174,15 @@ onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| this | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| this | [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md) | 是 |  |
+| ev | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## onmessageerror
 
@@ -200,15 +206,15 @@ onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| this | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| this | [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md) | 是 |  |
+| ev | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## postMessage
 
@@ -239,10 +245,10 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -289,16 +295,16 @@ Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | messageObject | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 当填入该参数时，其作用与传入ArrayBuffer[]相同， 该数组中对象的所有权会被转移到宿主线程，在Worker线程中将变为不可用，仅在宿主线程中可用。 若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到宿主线程。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 当填入该参数时，其作用与传入ArrayBuffer[]相同， 该数组中对象的所有权会被转移到宿主线程，在Worker线程中将变为不可用，仅在宿主线程中可用。 若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到宿主线程。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -346,17 +352,17 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | message | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化或可共享。 支持的序列化类型请参考序列化支持类型。 支持的共享类型请参考Sendable支持的数据类型。 |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Worker EventHandler的优先级。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 是 | Worker EventHandler的优先级。 |
 | transfer | ArrayBuffer[] | 否 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到主线程，转移后该对象仅在主线程中可用。该数组不可传入null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker文件路径为：entry/src/main/ets/workers/Worker.ets
@@ -467,10 +473,10 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker文件路径为：entry/src/main/ets/workers/Worker.ets

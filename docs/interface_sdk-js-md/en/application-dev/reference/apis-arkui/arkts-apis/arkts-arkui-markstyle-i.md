@@ -18,7 +18,7 @@ size?: Length
 
 Define the size of checkbox mark.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ strokeColor?: ResourceColor
 
 Define the stroke color of checkbox mark.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
 
@@ -62,7 +62,7 @@ strokeWidth?: Length
 
 Define the stroke width of checkbox mark.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 

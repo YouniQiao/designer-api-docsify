@@ -1,5 +1,11 @@
 # transformCoordinateSystem
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## transformCoordinateSystem
 
 ```TypeScript
@@ -8,12 +14,13 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 ```
 
 旋转提供的旋转矩阵，使其可以以不同的方式表示坐标系，使用Callback异步方式返回结果。
-    **说明**：  
-    
-    从API version 8 开始支持，从API version 9 开始废弃，建议使用  
-    [sensor.transformRotationMatrix]  
-    \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.transformRotationMatrix]
+> {@link sensor.transformRotationMatrix(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions, callback: AsyncCallback&lt;Array<double>&gt;&lt;double&gt;>)}
+> 替代。
 
 **起始版本：** 8
 
@@ -32,10 +39,10 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inRotationVector | Array&lt;number&gt; | 是 | 表示旋转矩阵。 |
-| coordinates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示坐标系方向。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt; | 是 | 异步返回转换后的旋转矩阵。 |
+| coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 | 表示坐标系方向。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回转换后的旋转矩阵。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -62,11 +69,12 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 ```
 
 旋转提供的旋转矩阵，使其可以以不同的方式表示坐标系，使用Promise异步方式返回结果。
-    **说明**：  
-    
-    从API version 8 开始支持，从API version 9 开始废弃，建议使用  
-    [sensor.transformRotationMatrix]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix)
+> 替代。
 
 **起始版本：** 8
 
@@ -85,7 +93,7 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inRotationVector | Array&lt;number&gt; | 是 | 表示旋转矩阵。 |
-| coordinates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示坐标系方向。 |
+| coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 | 表示坐标系方向。 |
 
 **返回值：**
 
@@ -93,7 +101,7 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 | --- | --- |
 | Promise&lt;Array&lt;number&gt;&gt; | 使用异步方式返回转换后的旋转矩阵。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

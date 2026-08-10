@@ -4,7 +4,7 @@
 declare type IntentionCode = import('../api/@ohos.multimodalInput.intentionCode').IntentionCode
 ```
 
-Intention corresponding to the key.
+按键对应的意图。
 
 **Since:** 10
 

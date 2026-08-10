@@ -1,6 +1,6 @@
 # ConnectOptions
 
-Defines the parameter type for **globalConnect**.
+globalConnect参数类型。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Defines the parameter type for **globalConnect**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## defaultCreator
 
 ```TypeScript
 defaultCreator?: StorageDefaultCreator<T>
 ```
 
-Default constructor. You are advised to pass this parameter. If **globalConnect** is connected to the key for the first time, an error is reported if this parameter is not passed in.
+默认数据的构造器，建议传递，如果globalConnect是第一次连接key，不传会报错。
 
 **Since:** 18
 
@@ -36,8 +42,7 @@ Default constructor. You are advised to pass this parameter. If **globalConnect*
 areaMode?: contextConstant.AreaMode
 ```
 
-Encryption level, ranging from EL1 to EL5 (corresponding to the value from 0 to 4). For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.If no value is passed in, EL2 is used by default. Storage paths vary based on the encryption levels. If the input value of encryption level is not in the range of **0** to **4**, a crash occurs.
+加密级别：EL1-EL5，对应数值：0-4，详见[加密级别](../../../application-models/application-context-stage.md#获取和修改加密分区)。不传时默认为EL2，不同加密级别对应不同的加密分区，即不同的存储路径，传入的加密级别数值不在0-4会直接运行crash。同一个key使用不同的加密级别时，以第一次globalConnect的加密级别为准。
 
 **Type:** contextConstant.AreaMode
 
@@ -59,7 +64,7 @@ Encryption level, ranging from EL1 to EL5 (corresponding to the value from 0 to 
 key?: string
 ```
 
-Input key. If no value is passed in, the type name is used as the key.
+传入的key，不传则使用type的名字作为key。
 
 **Type:** string
 
@@ -81,9 +86,9 @@ Input key. If no value is passed in, the type name is used as the key.
 type: TypeConstructorWithArgs<T>
 ```
 
-Specified type.
+指定的类型。
 
-**Type:** TypeConstructorWithArgs&lt;T&gt;
+**Type:** [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt;
 
 **Since:** 18
 

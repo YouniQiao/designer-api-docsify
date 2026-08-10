@@ -20,11 +20,11 @@ export type GetItemMainSizeByIndex = (index: int) => double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | FlowItem在WaterFlow中的索引。\_\_\_HTML\_TAG\_USD\_0\_\_\_。 \_\_\_HTML\_TAG\_USD\_1\_\_\_取值范围：[0, 子节点总数-1]。  |
+| index | int | 是 | FlowItem在WaterFlow中的索引。<br/>。 <br>取值范围：[0, 子节点总数-1]。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 指定index的FlowItem的主轴大小，纵向瀑布流时为高度，横向瀑布流时为宽度，单位vp。  |
+| double | 指定index的FlowItem的主轴大小，纵向瀑布流时为高度，横向瀑布流时为宽度，单位vp。 |
 

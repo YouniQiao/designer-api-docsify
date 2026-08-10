@@ -1,6 +1,6 @@
 # MechEventType (System API)
 
-Mechanic event definition.
+具身设备事件定义
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Mechanic event definition.
 DEVICE_ADSORBED = 0
 ```
 
-Mechanic device attached on base.
+吸附事件
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Mechanic device attached on base.
 DEVICE_UNADSORBED = 1
 ```
 
-Mechanic device detached from the base.
+未吸附事件
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ Mechanic device detached from the base.
 REACH_CLIFF = 2
 ```
 
-Mechanic device hits a cliff while moving.
+移动中遇到悬崖
 
 **Since:** 26.0.0
 
@@ -72,7 +72,7 @@ Mechanic device hits a cliff while moving.
 REACH_OBSTACLE = 3
 ```
 
-Mechanic device hits an obstacle while moving.
+移动中遇到障碍
 
 **Since:** 26.0.0
 
@@ -90,7 +90,7 @@ Mechanic device hits an obstacle while moving.
 LOW_POWER = 4
 ```
 
-Mechanic device is low on power.
+设备低电量
 
 **Since:** 26.0.0
 

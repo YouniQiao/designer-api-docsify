@@ -1,12 +1,18 @@
 # create
 
+## Modules to Import
+
+```TypeScript
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## create
 
 ```TypeScript
 function create(): DisplaySync
 ```
 
-Creates a **DisplaySync** object, through which you can set the frame rate of the custom UI content.
+创建DisplaySync对象，通过此对象设置UI自绘制内容帧率。
 
 **Since:** 11
 
@@ -20,9 +26,9 @@ Creates a **DisplaySync** object, through which you can set the frame rate of th
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | DisplaySync** object created. |
+| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | 返回DisplaySync对象实例，用于设置帧率范围、注册帧回调函数以及控制回调的启动和停止。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let backDisplaySync: displaySync.DisplaySync = displaySync.create();

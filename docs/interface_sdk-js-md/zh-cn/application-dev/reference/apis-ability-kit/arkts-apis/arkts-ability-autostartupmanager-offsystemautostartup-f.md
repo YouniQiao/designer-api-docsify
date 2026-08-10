@@ -1,5 +1,11 @@
 # offSystemAutoStartup
 
+## 导入模块
+
+```TypeScript
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offSystemAutoStartup
 
 ```TypeScript
@@ -24,13 +30,13 @@ function offSystemAutoStartup(callback?: AutoStartupCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 监听应用组件开机自启动状态变化的回调对象。 |
+| callback | [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | 否 | 监听应用组件开机自启动状态变化的回调对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_BOOT". |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
+| 16000050 | Connect to system server failed. |
+| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| 202 | Permission denied, non-system app called system api. |
 

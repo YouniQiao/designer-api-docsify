@@ -1,18 +1,26 @@
 # TimePickerOptions
 
-Describes the parameters of the time picker.
+时间选择器组件的参数说明。
 
-Property modifications made to **TimePickerOptions** during the **TimePicker** scrolling process may not take effect.
+在TimePicker组件滑动过程中修改TimePickerOptions中的属性，会导致这些属性无法生效。
 
-The **Date** object is used to handle dates and time. It can be used in the following ways:
+> Date对象用于处理日期和时间，使用方式如下。
+> 
+> - 方式1：new Date()
+> 获取系统当前日期和时间。
+> 
+> - 方式2：new Date(value: number | string)
+> 
+> - 方式3：new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number,
+> seconds?: number, ms?: number)
 
-**Method 1**: new Date()
-
-Obtains the current system date and time.
-
-**Method 2**: new Date(value: number | string)
-
-**Method 3**: new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?:number, ms?: number)
+> **起始时间和结束时间的异常情形说明：**
+> - 起始时间晚于结束时间：起始时间、结束时间都为默认值。
+> - 选中时间早于起始时间：选中时间为起始时间。
+> - 选中时间晚于结束时间：选中时间为结束时间。
+> - 起始时间晚于当前系统时间，选中时间未设置：选中时间为起始时间。
+> - 结束时间早于当前系统时间，选中时间未设置：选中时间为结束时间。
+> - 时间格式不符合规范，如'01:61:61'：取默认值。
 
 **Since:** 8
 
@@ -28,13 +36,14 @@ Obtains the current system date and time.
 end?: Date
 ```
 
-End time of the time picker.
+指定时间选择组件的结束时间。
 
-Default value: **Date(0, 0, 0, 23, 59, 59)**.
+默认值：结束时间为23:59:59（小时=23，分钟=59）
 
-**NOTE**
-
-1. Only the hour and minute values take effect.2. If **end** is set and is not the default value, **loop** does not take effect.
+> **说明：**
+> 
+> 1. 仅设置的小时和分钟生效。
+> 2. 设置了start或end且为非默认值的场景下，loop不生效。
 
 **Type:** Date
 
@@ -56,11 +65,11 @@ Default value: **Date(0, 0, 0, 23, 59, 59)**.
 format?: TimePickerFormat
 ```
 
-Time format.
+指定需要显示的TimePicker的格式。
 
-Default value: **TimePickerFormat.HOUR\_MINUTE
+默认值：TimePickerFormat.HOUR_MINUTE
 
-**Type:** TimePickerFormat
+**Type:** [TimePickerFormat](../arkts-apis/arkts-arkui-timepicker-timepickerformat-e.md)
 
 **Default:** HOUR_MINUTE
 
@@ -82,12 +91,11 @@ Default value: **TimePickerFormat.HOUR\_MINUTE
 selected?: Date
 ```
 
-Time of the selected item.
+设置选中项的时间。
 
-Default value: current system time
+默认值：当前系统时间
 
-Since API version 10, this parameter supports two-way binding through  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **Type:** Date
 
@@ -107,13 +115,14 @@ Since API version 10, this parameter supports two-way binding through
 start?: Date
 ```
 
-Start time of the time picker.
+指定时间选择组件的起始时间。
 
-Default value: **Date(0, 0, 0, 0, 0, 0)**
+默认值：起始时间为00:00:00（小时=0，分钟=0）
 
-**NOTE**
-
-1. Only the hour and minute values take effect.2. If **start** is set and is not the default value, **loop** does not take effect.
+> **说明：**
+> 
+> 1. 仅设置的小时和分钟生效。
+> 2. 设置了start或end且为非默认值的场景下，loop不生效。
 
 **Type:** Date
 

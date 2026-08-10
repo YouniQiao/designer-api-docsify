@@ -10,6 +10,12 @@ Provides the CPU device info
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## precisionMode
 
 ```TypeScript
@@ -38,7 +44,7 @@ threadAffinityCoreList?: int[]
 
 The thread affinity core list
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 10
 
@@ -58,7 +64,7 @@ threadAffinityMode?: ThreadAffinityMode
 
 The thread affinity mode
 
-**Type:** ThreadAffinityMode
+**Type:** [ThreadAffinityMode](arkts-mindsporelite-mindsporelite-threadaffinitymode-e.md)
 
 **Since:** 10
 
@@ -78,7 +84,7 @@ threadNum?: int
 
 The thread num
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

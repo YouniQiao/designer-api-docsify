@@ -1,11 +1,10 @@
 # ParticleColorOptions
 
-The color changes randomly, with the per-second change difference being a value randomly generated from the range.The target color is obtained by applying the change difference to the current color value of each of the R, G, B, A channels.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
+颜色变化方式为均匀变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,9 +20,9 @@ The color changes randomly, with the per-second change difference being a value 
 a: ParticleTuple<number, number>
 ```
 
-Difference value for the alpha (transparency) channel.
+a颜色通道的差值。
 
-**Type:** ParticleTuple&lt;number, number&gt;
+**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 
@@ -43,9 +42,9 @@ Difference value for the alpha (transparency) channel.
 b: ParticleTuple<number, number>
 ```
 
-Difference value for the blue color channel.
+b颜色通道的差值。
 
-**Type:** ParticleTuple&lt;number, number&gt;
+**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 
@@ -65,9 +64,9 @@ Difference value for the blue color channel.
 g: ParticleTuple<number, number>
 ```
 
-Difference value for the green color channel.
+g颜色通道的差值。
 
-**Type:** ParticleTuple&lt;number, number&gt;
+**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 
@@ -87,9 +86,9 @@ Difference value for the green color channel.
 r: ParticleTuple<number, number>
 ```
 
-Difference value for the red color channel.
+r颜色通道的差值。
 
-**Type:** ParticleTuple&lt;number, number&gt;
+**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 

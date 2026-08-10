@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { AbilityConstant } from 'kits/@kit.AbilityKit';
+```
+
 ## exitMsg
 
 ```TypeScript
@@ -40,7 +46,7 @@ exitSubReason: int
 
 Ability上次退出的子原因。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -60,7 +66,7 @@ Ability上次退出的子原因。
 killReason?: string
 ```
 
-Ability上次退出时的原因，取值详见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+Ability上次退出时的原因，取值详见[应用终止事件reason字段说明](../../../dfx/hiappevent-watcher-app-killed-events.md#reason字段说明)。
 
 **类型：** string
 
@@ -84,7 +90,7 @@ pid: int
 
 Ability上次退出所在进程的进程号。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -150,7 +156,7 @@ pss: int
 
 Ability上次退出时所在进程实际使用的物理内存大小，单位KB。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -172,7 +178,7 @@ rss: int
 
 Ability上次退出时所在进程实际占用内存大小，单位KB。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -194,7 +200,7 @@ timestamp: long
 
 Ability上次退出时的时间戳。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 18
 
@@ -216,7 +222,7 @@ uid: int
 
 Ability上次退出所在应用的UID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

@@ -1,24 +1,21 @@
 # Transaction
 
-Provides APIs for managing databases in transaction mode. A transaction object is created by using  
-[createTransaction]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Operations on different transaction objects are isolated. For details about the transaction types, see  
-[TransactionType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+提供以事务方式管理数据库的方法。事务对象是通过[createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction)接口创建的，不同事务对象之间的操作是隔离的，不同类型事务的区别见[TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md) 。
 
-Currently, an RDB store supports only one write transaction at a time. If the current  
-[RdbStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ has a write transaction that is not released, creating an **IMMEDIATE** or **EXCLUSIVE** transaction object will return error 14800024. If a **DEFERRED** transaction object is created, error 14800024 may be returned when it is used to invoke a write operation for the first time.After a write transaction is created using **IMMEDIATE** or **EXCLUSIVE**, or a **DEFERRED** transaction is upgraded to a write transaction, write operations in the  
-[RdbStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ will also return error 14800024.
+当前关系型数据库同一时刻仅支持一个写事务，所以如果当前[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)存在写事务未释放，创建IMMEDIATE或EXCLUSIVE事务会返回14800024错误码。如果是创建的DEFERRED事务，则可能在首次使用DEFERRED事务调用写操作时返回14800024错误码。通过IMMEDIATE或EXCLUSIVE创建写事务或者DEFERRED事务升级到写事务之后，  
+[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)的写操作也会返回14800024错误码。
 
-When the number of concurrent transactions is large and the write transaction duration is long, the frequency of returning error 14800024 may increase. You can reduce the occurrence of error 14800024 by shortening the transaction duration or by handling the error 14800024 through retries.
+当事务并发量较高且写事务持续时间较长时，返回14800024错误码的次数可能会变多，开发者可以通过减少事务占用时长减少14800024出现的次数，也可以通过重试的方式处理14800024错误码。
 
-Before using the following APIs, you should obtain a **Transaction** instance by calling the  
-[createTransaction]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ method and then call the corresponding method through the instance.
+在使用以下API前，请先通过[createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction)方法获取Transaction实例，再通过此实例调用对应方法。
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+> **说明：**
+> 
+> - 本Interface首批接口从API version 14开始支持。
 
-**Example**:
+**示例：**
 
-For details about the definition of **this.context** in the sample code, see the application  
-[context]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ of the stage model.
+示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。
 
 **Since:** 14
 
@@ -27,6 +24,12 @@ For details about the definition of **this.context** in the sample code, see the
 <!--Device-relationalStore-interface Transaction--><!--Device-relationalStore-interface Transaction-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
 
 ## batchInsert
 
@@ -40,12 +43,21 @@ ArkTS-Sta:
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>
 ```
 
-Inserts data into a table in batches. This API uses a promise to return the result.
+向目标表中插入一组数据，使用Promise异步回调。
 
-Data is written in batches of up to 32,766 parameters each with the  
-[ConflictResolution.ON\_CONFLICT\_REPLACE]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+
+按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
 
 **Since:** 14
 
@@ -59,34 +71,34 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Name of the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
+| table | string | Yes | 指定的目标表名，不能为空字符串。 |
+| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回批量插入的数据个数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## batchInsertSync
 
@@ -100,12 +112,21 @@ ArkTS-Sta:
 batchInsertSync(table: string, values: Array<ValuesBucket>): long
 ```
 
-Inserts data into a table in batches. This API returns the result synchronously.
+向目标表中插入一组数据。
 
-Data is written in batches of up to 32,766 parameters each with the  
-[ConflictResolution.ON\_CONFLICT\_REPLACE]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+
+按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
 
 **Since:** 14
 
@@ -119,34 +140,34 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Name of the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
+| table | string | Yes | 指定的目标表名，不能为空字符串。 |
+| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回批量插入的数据个数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## batchInsertWithConflictResolution
 
@@ -168,14 +189,25 @@ batchInsertWithConflictResolution(
     ): Promise<long>
 ```
 
-Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify  
-[ConflictResolution]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用Promise异步回调。
 
-A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 32760).
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
-Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+
+单次插入参数的最大数量限制为32766，超出上限会返回14800000错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
+
+例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
+
+请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
 
 **Since:** 18
 
@@ -189,38 +221,38 @@ Ensure that your application complies with this constraint when calling this API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Name of the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Resolution used to resolve the conflict. If **ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ROLLBACK** is used, the transaction will be rolled back when a conflict occurs. |
+| table | string | Yes | 指定的目标表名，不能为空字符串。 |
+| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | 指定冲突解决模式。如果是ON_CONFLICT_ROLLBACK模式，当发生冲突时会回滚整个事务。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回批量插入的数据个数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800034 | SQLite: Library used incorrectly. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800022 | SQLite: Callback routine requested an abort. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## batchInsertWithConflictResolutionSync
 
@@ -236,16 +268,25 @@ batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>
       conflict: ConflictResolution): long
 ```
 
-Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify  
-[ConflictResolution]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)。
 
-A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 32760).
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
-Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
 
-A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+
+单次插入参数的最大数量限制为32766，超出上限会返回14800000错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
+
+例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
+
+请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
 
 **Since:** 18
 
@@ -259,38 +300,38 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Name of the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Resolution used to resolve the conflict. If **ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ROLLBACK** is used, the transaction will be rolled back when a conflict occurs. |
+| table | string | Yes | 指定的目标表名，不能为空字符串。 |
+| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | 指定冲突解决模式。如果是ON_CONFLICT_ROLLBACK模式，当发生冲突时会回滚整个事务。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回批量插入的数据个数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800034 | SQLite: Library used incorrectly. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800022 | SQLite: Callback routine requested an abort. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## batchInsertWithReturning
 
@@ -299,19 +340,28 @@ batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-Inserts data into a table in batches. You can use the **conflict** parameter to specify  
-[ConflictResolution]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, and  
-[Result]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is returned. This API uses a promise to return the result.
+向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回  
+[Result](arkts-arkdata-relationalstore-result-i.md)。使用Promise异步回调。
 
-A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 32760).
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
-Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
 
-It is not recommended to use the **ON\_CONFLICT\_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
-A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+单次插入参数的最大数量限制为32766，超出上限会返回14800001错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
+
+例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
+
+请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
+
+conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
 
 **Since:** 23
 
@@ -327,32 +377,32 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Name of the target table for data insertion. Note: A valid table name must not contain spaces ( ), commas (,), or asterisks (*), and must not start or end with a dot (.). Otherwise, a parameter error will be thrown. |
-| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. Note: An empty array or data containing duplicate asset records will trigger a parameter error. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration information of the return value. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Resolution used to resolve the conflict. Default value: **ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_NONE**. |
+| table | string | Yes | 要插入的目标表名。注意：正确的表名不应包含空格、逗号和星号，不能以点开头和结尾等，否则会抛出参数错误。 |
+| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。注意：空数组、含有重复资产数据会抛出参数错误。 |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认为ON_CONFLICT_NONE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise used to return the result. If the operation is successful, the affected dataset is returned. |
+| Promise&lt;Result&gt; | Promise对象。返回受影响的数据集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## batchInsertWithReturningSync
 
@@ -361,19 +411,28 @@ batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config:
       conflict?: ConflictResolution): Result
 ```
 
-Inserts data into a table in batches. You can use the **conflict** parameter to specify  
-[ConflictResolution]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, and  
-[Result]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is returned.
+向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回  
+[Result](arkts-arkdata-relationalstore-result-i.md)。
 
-A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 32760).
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
-Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
 
-It is not recommended to use the **ON\_CONFLICT\_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
-A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+单次插入参数的最大数量限制为32766，超出上限会返回14800001错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
+
+例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
+
+请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
+
+conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
 
 **Since:** 23
 
@@ -389,32 +448,32 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Name of the target table for data insertion. Note: A valid table name must not contain spaces ( ), commas (,), or asterisks (*), and must not start or end with a dot (.). Otherwise, a parameter error will be thrown. |
-| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. Note: An empty array or data containing duplicate asset records will trigger a parameter error. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration information of the return value. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Resolution used to resolve the conflict. Default value: **ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_NONE**. |
+| table | string | Yes | 要插入的目标表名。注意：正确的表名不应包含空格、逗号和星号，不能以点开头和结尾等，否则会抛出参数错误。 |
+| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。注意：空数组、含有重复资产数据会抛出参数错误。 |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认为ON_CONFLICT_NONE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If the operation is successful, the affected dataset is returned. |
+| [Result](arkts-arkdata-relationalstore-result-i.md) | 返回受影响的数据集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## commit
 
@@ -422,8 +481,7 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 commit(): Promise<void>
 ```
 
-Commits this executed SQL statement. This API uses a promise to return the result. When using asynchronous APIs to execute SQL statements, ensure that **commit()** is called after the asynchronous API execution is completed.Otherwise, the SQL operations may be lost. After **commit()** is called, the transaction object and the created  
-**ResultSet** object will be closed.
+提交已执行的SQL语句，使用Promise异步回调。如果是使用异步接口执行SQL语句，请确保异步接口执行完成之后再调用commit接口，否则可能会丢失SQL操作。调用commit接口之后，该Transaction对象及创建的ResultSet对象都将被关闭。
 
 **Since:** 14
 
@@ -437,21 +495,21 @@ Commits this executed SQL statement. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| 14800000 | Inner error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800014 | The target instance is already closed. |
 
 ## delete
 
@@ -465,7 +523,7 @@ ArkTS-Sta:
 delete(predicates: RdbPredicates): Promise<long>
 ```
 
-Deletes data from the RDB store based on the specified **RdbPredicates** object. This API uses a promise to return the result.
+根据RdbPredicates的指定实例对象从数据库中删除数据，使用Promise异步回调。
 
 **Since:** 14
 
@@ -479,33 +537,33 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Deletion conditions specified by the **RdbPredicates** object. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the number of rows deleted. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回受影响的行数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## deleteSync
 
@@ -519,7 +577,7 @@ ArkTS-Sta:
 deleteSync(predicates: RdbPredicates): long
 ```
 
-Deletes data from the RDB store based on the specified **RdbPredicates** object. This API returns the result synchronously.
+根据RdbPredicates的指定实例对象从数据库中删除数据。
 
 **Since:** 14
 
@@ -533,33 +591,33 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Deletion conditions specified by the **RdbPredicates** object. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Number of rows deleted. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回受影响的行数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## deleteWithReturning
 
@@ -567,8 +625,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>
 ```
 
-Deletes data from the RDB store based on the specified **RdbPredicates** object and returns  
-[Result]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+根据RdbPredicates的实例对象从数据库中删除数据，返回[Result](arkts-arkdata-relationalstore-result-i.md)，使用Promise异步回调。
 
 **Since:** 23
 
@@ -584,30 +641,30 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Deletion conditions specified by the **RdbPredicates** object. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration information of the return value. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise used to return the result. If the operation is successful, the affected dataset is returned. |
+| Promise&lt;Result&gt; | Promise对象。返回受影响的数据集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## deleteWithReturningSync
 
@@ -615,8 +672,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result
 ```
 
-Deletes data from the RDB store based on the specified **RdbPredicates** object and returns  
-[Result]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+根据RdbPredicates的实例对象从数据库中删除数据，返回[Result](arkts-arkdata-relationalstore-result-i.md)。
 
 **Since:** 23
 
@@ -632,30 +688,30 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Deletion conditions specified by the **RdbPredicates** object. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration information of the return value. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If the operation is successful, the affected dataset is returned. |
+| [Result](arkts-arkdata-relationalstore-result-i.md) | 返回受影响的数据集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## execute
 
@@ -663,14 +719,17 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 ```
 
-Executes an SQL statement that contains parameters but does not return data. This API returns the result synchronously. The SQL statement can be used to create, delete, query, and modify a table. The type of the return value varies, depending on the execution result.
+执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，返回值类型为ValueType，使用Promise异步回调。
 
-This API does not support query, database attachment, and transaction operations. You can use  
-[querySql]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [query]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to query data, and use [attach]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to attach a database.
+该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。
 
-Statements separated by semicolons (\;) are not supported.
+此接口不支持执行查询、附加数据库和事务操作，查询可以使用[querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql)、  
+[query](arkts-arkdata-relationalstore-transaction-i.md#query)接口代替、附加数据库可以使用  
+[attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)接口代替。
 
-Statements starting with comments are not supported.
+不支持分号分隔的多条语句。
+
+不支持开头包含注释的语句。
 
 **Since:** 14
 
@@ -684,35 +743,35 @@ Statements starting with comments are not supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | SQL statement to run. |
-| args | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
+| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
+| args | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。<br>**Since:** 20 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise used to return the SQL execution result. |
+| Promise&lt;ValueType&gt; | Promise对象，返回sql执行后的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported the sql(attach,begin,commit,rollback etc.). |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 801 | Capability not supported the sql(attach,begin,commit,rollback etc.). |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## executeSync
 
@@ -720,17 +779,17 @@ Statements starting with comments are not supported.
 executeSync(sql: string, args?: Array<ValueType>): ValueType
 ```
 
-Executes an SQL statement that contains specified arguments. The number of relational operators between expressions and operators in the statement cannot exceed 1,000. This API returns a value of the **ValueType**  
-type.
+执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，返回值类型为ValueType。
 
-This API can be used to add, delete, and modify data, run SQL statements of the PRAGMA syntax, and create,delete, and modify a table. The type of the return value varies, depending on the execution result.
+该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。
 
-This API does not support query, database attachment, and transaction operations. You can use  
-[querySql]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [query]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to query data, and use [attach]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to attach a database.
+此接口不支持执行查询、附加数据库和事务操作，查询可以使用[querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql)、  
+[query](arkts-arkdata-relationalstore-transaction-i.md#query)接口代替、附加数据库可以使用  
+[attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)接口代替。
 
-Statements separated by semicolons (\;) are not supported.
+不支持分号分隔的多条语句。
 
-Statements starting with comments are not supported.
+不支持开头包含注释的语句。
 
 **Since:** 14
 
@@ -744,35 +803,35 @@ Statements starting with comments are not supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | SQL statement to run. |
-| args | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If this parameter is left blank or set to **null** or **undefined**, the SQL statement is complete. The default value is null. |
+| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
+| args | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。该参数不填，或者填null或undefined，都认为是sql参数语句完整。默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SQL execution result. |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 返回sql执行后的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported the sql(attach,begin,commit,rollback etc.). |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 801 | Capability not supported the sql(attach,begin,commit,rollback etc.). |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## insert
 
@@ -786,12 +845,19 @@ ArkTS-Sta:
 insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Promise<long>
 ```
 
-Inserts a row of data into a table. This API uses a promise to return the result. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get**  
-methods such as [getValue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[getString]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ after **ResultSet** is obtained through the [query]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_or [querySql]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API of  
-**RdbStore**. As a result, the operation may fail or an exception may be thrown.
+向目标表中插入一行数据，使用Promise异步回调。
 
-A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
+
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **Since:** 14
 
@@ -805,35 +871,35 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Name of the target table. |
-| values | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Row of data to insert. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Resolution used to resolve the conflict. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **relationalStore.ConflictResolution.ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_NONE**. |
+| table | string | Yes | 指定的目标表名，不能为空字符串，不应包含空格、逗号和星号，不能以点开头和结尾等，否则会抛出401错误码。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | 表示要插入到表中的数据行。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回插入数据的行ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## insertSync
 
@@ -842,12 +908,19 @@ insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesB
       conflict?: ConflictResolution): number
 ```
 
-Inserts a row of data into a table. This API returns the result synchronously. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get**  
-methods such as [getValue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[getString]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ after **ResultSet** is obtained through the [query]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_or [querySql]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API of  
-**RdbStore**. As a result, the operation may fail or an exception may be thrown.
+向目标表中插入一行数据。
 
-A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
+
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **Since:** 14
 
@@ -861,35 +934,35 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Name of the target table. |
-| values | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| sendableRelationalStore.ValuesBucket | Yes | Row of data to insert. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Resolution used to resolve the conflict. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **relationalStore.ConflictResolution.ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_NONE**. |
+| table | string | Yes | 指定的目标表名，不能为空字符串。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) \| sendableRelationalStore.ValuesBucket | Yes | 表示要插入到表中的数据行。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
+| number | 返回插入数据的行ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## insertSync
 
@@ -897,7 +970,7 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): long
 ```
 
-Inserts a row of data into the target table with sync interface, just use in TaskPool or Worker.
+向目标表中插入一行数据。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，在后续通过RdbStore的query或querySql接口获取ResultSet后，调用getValue、getString等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。如需读取超过2MB的数据，请使用queryByStep接口。单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **Since:** 23
 
@@ -912,8 +985,8 @@ Inserts a row of data into the target table with sync interface, just use in Tas
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the row of data \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to be inserted into the table. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to insert data into the table. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data {@link ValuesBucket} to be inserted into the table. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Indicates the {@link ConflictResolution} to insert data into the table. |
 
 **Return value:**
 
@@ -925,21 +998,21 @@ Inserts a row of data into the target table with sync interface, just use in Tas
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## query
 
@@ -947,7 +1020,7 @@ Inserts a row of data into the target table with sync interface, just use in Tas
 query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 ```
 
-Queries data from the RDB store based on specified conditions. This API uses a promise to return the result.
+根据指定条件查询数据库中的数据，使用Promise异步回调。
 
 **Since:** 14
 
@@ -961,29 +1034,29 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query conditions specified by the **RdbPredicates** object. |
-| columns | Array&lt;string&gt; | No | Columns to query. If null is passed in, all columns are queried. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
+| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
+| Promise&lt;ResultSet&gt; | Promise对象。返回ResultSet对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800000 | Inner error. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## querySql
 
@@ -991,7 +1064,7 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 querySql(sql: string, args?: Array<ValueType>): Promise<ResultSet>
 ```
 
-Queries data in the RDB store using the specified SQL statement. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. This API uses a promise to return the result.
+根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。
 
 **Since:** 14
 
@@ -1005,30 +1078,30 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | SQL statement to run. |
-| args | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
+| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
+| args | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
+| Promise&lt;ResultSet&gt; | Promise对象。返回ResultSet对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800000 | Inner error. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## querySqlSync
 
@@ -1036,7 +1109,7 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 ```
 
-Queries data in the RDB store using the specified SQL statement. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ thread.
+根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
 
 **Since:** 14
 
@@ -1050,30 +1123,30 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | SQL statement to run. |
-| args | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. The default value is null. |
+| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
+| args | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If the operation is successful, a **ResultSet** object will be returned. |
+| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | 返回ResultSet对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800000 | Inner error. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## querySqlWithoutRowCount
 
@@ -1081,8 +1154,7 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. This API uses a promise to return the result and delivers better performance than the  
-[querySql]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000.
+根据指定条件查询数据库中的数据，查询时不计算行数。使用Promise异步回调。性能优于[querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql)接口。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。
 
 **Since:** 23
 
@@ -1098,21 +1170,21 @@ Queries data from the RDB store based on specified conditions without calculatin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | SQL statement to run. |
-| bindArgs | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
+| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
+| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LiteResultSet&gt; | Promise used to return the result. If the operation is successful, a **LiteResultSet** object will be returned. |
+| Promise&lt;LiteResultSet&gt; | Promise对象。返回LiteResultSet对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800014 | The target instance is already closed. |
 
 ## querySqlWithoutRowCountSync
 
@@ -1120,9 +1192,7 @@ Queries data from the RDB store based on specified conditions without calculatin
 querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet
 ```
 
-Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by  
-**querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the  
-[taskpool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ thread.
+根据指定SQL语句查询数据库中的数据，查询时不计算行数。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对querySqlWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
 
 **Since:** 23
 
@@ -1138,21 +1208,21 @@ Queries data from the RDB store based on specified SQL statements without calcul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | SQL statement to run. |
-| bindArgs | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. The default value is null. |
+| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
+| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If the operation is successful, a **LiteResultSet** object will be returned. |
+| [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md) | 返回LiteResultSet对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800014 | The target instance is already closed. |
 
 ## querySync
 
@@ -1160,8 +1230,8 @@ Queries data from the RDB store based on specified SQL statements without calcul
 querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 ```
 
-Queries data in a database based on specified conditions. This API returns the result synchronously. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**,the freeze problem may occur. You are advised to perform this operation in the  
-[taskpool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ thread.
+根据指定条件查询数据库中的数据。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到  
+[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
 
 **Since:** 14
 
@@ -1175,30 +1245,30 @@ Queries data in a database based on specified conditions. This API returns the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query conditions specified by the **RdbPredicates** object. |
-| columns | Array&lt;string&gt; | No | Columns to query. If null is passed in, all columns are queried. The default value is null. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
+| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If the operation is successful, a **ResultSet** object will be returned. |
+| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | 返回ResultSet对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800000 | Inner error. |
+| 14800021 | SQLite: Generic error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## queryWithoutRowCount
 
@@ -1206,7 +1276,7 @@ Queries data in a database based on specified conditions. This API returns the r
 queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. This API delivers better performance than the [query]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API. This API uses a promise to return the result.
+根据指定条件查询数据库中的数据，查询时不计算行数，性能优于[query](arkts-arkdata-relationalstore-transaction-i.md#query)接口。使用Promise异步回调。
 
 **Since:** 23
 
@@ -1222,20 +1292,20 @@ Queries data from the RDB store based on specified conditions without calculatin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query conditions specified by the **RdbPredicates** object. |
-| columns | Array&lt;string&gt; | No | Columns to query. If null is passed in, all columns are queried. The default value is null. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
+| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LiteResultSet&gt; | If the operation is successful, a **LiteResultSet** object will be returned. |
+| Promise&lt;LiteResultSet&gt; | 返回LiteResultSet对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| 14800014 | The target instance is already closed. |
 
 ## queryWithoutRowCountSync
 
@@ -1243,9 +1313,8 @@ Queries data from the RDB store based on specified conditions without calculatin
 queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by  
-**queryWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the  
-[taskpool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ thread.
+根据指定条件查询数据库中的数据，查询时不计算行数。对queryWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到  
+[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
 
 **Since:** 23
 
@@ -1261,20 +1330,20 @@ Queries data from the RDB store based on specified conditions without calculatin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query conditions specified by the **RdbPredicates** object. |
-| columns | Array&lt;string&gt; | No | Columns to query. If null is passed in, all columns are queried. The default value is null. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
+| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If the operation is successful, a **LiteResultSet** object will be returned. |
+| [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md) | 返回LiteResultSet对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| 14800014 | The target instance is already closed. |
 
 ## rollback
 
@@ -1282,7 +1351,7 @@ Queries data from the RDB store based on specified conditions without calculatin
 rollback(): Promise<void>
 ```
 
-Rolls back this executed SQL statement. This API uses a promise to return the result. After **rollback()** is called, the transaction object and the created **ResultSet** object will be closed.
+回滚已经执行的SQL语句，使用Promise异步回调。调用rollback接口之后，该Transaction对象及创建的ResultSet对象都会被关闭。
 
 **Since:** 14
 
@@ -1296,21 +1365,21 @@ Rolls back this executed SQL statement. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| 14800000 | Inner error. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800014 | The target instance is already closed. |
 
 ## update
 
@@ -1324,10 +1393,19 @@ ArkTS-Sta:
 update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): Promise<long>
 ```
 
-Updates data based on the specified **RdbPredicates** object. This API uses a promise to return the result. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get** methods such as  
-[getValue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[getString]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ after **ResultSet** is obtained through the [query]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_or [querySql]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API of  
-**RdbStore**. As a result, the operation may fail or an exception may be thrown.
+根据RdbPredicates的指定实例对象更新数据库中的数据，使用Promise异步回调。
+
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
+
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **Since:** 14
 
@@ -1341,35 +1419,35 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Update conditions specified by the **RdbPredicates** object. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Resolution used to resolve the conflict. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **relationalStore.ConflictResolution.ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_NONE**. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the number of rows updated. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回受影响的行数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## updateSync
 
@@ -1383,10 +1461,19 @@ ArkTS-Sta:
 updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long
 ```
 
-Updates data in the RDB store based on the specified **RdbPredicates** object. This API returns the result synchronously. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB.Otherwise, data cannot be obtained using the **get** methods such as  
-[getValue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[getString]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ after **ResultSet** is obtained through the [query]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_or [querySql]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API of  
-**RdbStore**. As a result, the operation may fail or an exception may be thrown.
+根据RdbPredicates的指定实例对象更新数据库中的数据。
+
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
+
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **Since:** 14
 
@@ -1400,35 +1487,35 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Update conditions specified by the **RdbPredicates** object. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Resolution used to resolve the conflict. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **relationalStore.ConflictResolution.ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_NONE**. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Number of rows updated. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回受影响的行数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800000 | Inner error. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800023 | SQLite: Access permission denied. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800027 | SQLite: Attempt to write a readonly database. |
+| 14800026 | SQLite: The database is out of memory. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
 
 ## updateWithReturning
 
@@ -1437,12 +1524,22 @@ updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the  
-**conflict** parameter to specify  
-[ConflictResolution]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, and  
-[Result]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is returned. This API uses a promise to return the result.
+根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式  
+[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)，使用Promise异步回调。
 
-It is not recommended to use the **ON\_CONFLICT\_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
+
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+
+conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
 
 **Since:** 23
 
@@ -1458,32 +1555,32 @@ It is not recommended to use the **ON\_CONFLICT\_FAIL** policy for the **conflic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Update conditions specified by the **RdbPredicates** object. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration information of the return value. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Resolution used to resolve the conflict. Default value: **ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_NONE**. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认为ON_CONFLICT_NONE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise used to return the result. If the operation is successful, the affected dataset is returned. |
+| Promise&lt;Result&gt; | Promise对象。返回受影响的数据集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 
 ## updateWithReturningSync
 
@@ -1492,12 +1589,22 @@ updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config:
       conflict?: ConflictResolution): Result
 ```
 
-Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the  
-**conflict** parameter to specify  
-[ConflictResolution]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, and  
-[Result]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is returned.
+根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式  
+[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)。
 
-It is not recommended to use the **ON\_CONFLICT\_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
+由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
+
+如果单条数据超过此限制，在后续通过RdbStore的  
+[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+
+如需读取超过2MB的数据，请使用  
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+
+单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+
+conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
 
 **Since:** 23
 
@@ -1513,30 +1620,30 @@ It is not recommended to use the **ON\_CONFLICT\_FAIL** policy for the **conflic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
-| predicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Update conditions specified by the **RdbPredicates** object. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration information of the return value. |
-| conflict | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Resolution used to resolve the conflict. Default value: **ON\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFLICT\_\_\_ESCAPED\_UNDERSCORE\_\_\_NONE**. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认为ON_CONFLICT_NONE。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If the operation is successful, the affected dataset is returned. |
+| [Result](arkts-arkdata-relationalstore-result-i.md) | 返回受影响的数据集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| 14800033 | SQLite: Data type mismatch. |
+| 14800032 | SQLite: Abort due to constraint violation. |
+| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| 14800025 | SQLite: A table in the database is locked. |
+| 14800024 | SQLite: The database file is locked. |
+| 14800011 | The current operation failed because the database is corrupted. |
+| 14800029 | SQLite: The database is full. |
+| 14800028 | SQLite: Some kind of disk I/O error occurred. |
+| 14800047 | The WAL file size exceeds the default limit. |
+| 14800014 | The target instance is already closed. |
 

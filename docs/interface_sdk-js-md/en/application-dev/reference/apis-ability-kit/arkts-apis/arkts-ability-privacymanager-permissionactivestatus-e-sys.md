@@ -1,7 +1,6 @@
 # PermissionActiveStatus (System API)
 
-Enumerates the types of permission usage status changes. It is used to describe the change type of permission usage status, returned in the callback of subscribing to permission usage status change events (via  
-[on('activeStateChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_), helping system applications sense the status switch of a permission from unused to foreground use and background use.
+表示权限使用状态变化类型的枚举。用于描述权限使用[on)](privacyManager.on)）的回调中返回，帮助应用感知权限从未使用到前台使用、后台使用的状态切换。
 
 **Since:** 9
 
@@ -19,7 +18,7 @@ Enumerates the types of permission usage status changes. It is used to describe 
 PERM_INACTIVE = 0
 ```
 
-The permission is not used.
+表示未使用权限。
 
 **Since:** 9
 
@@ -37,7 +36,7 @@ The permission is not used.
 PERM_ACTIVE_IN_FOREGROUND = 1
 ```
 
-The permission is being used by an application running in the foreground.
+表示前台使用权限。
 
 **Since:** 9
 
@@ -55,7 +54,7 @@ The permission is being used by an application running in the foreground.
 PERM_ACTIVE_IN_BACKGROUND = 2
 ```
 
-The permission is being used by an application running in the background.
+表示后台使用权限。
 
 **Since:** 9
 

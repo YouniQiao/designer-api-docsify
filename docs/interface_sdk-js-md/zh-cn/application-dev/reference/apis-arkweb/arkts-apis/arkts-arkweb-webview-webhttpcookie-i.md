@@ -1,6 +1,6 @@
 # WebHttpCookie
 
-Defines the Web's HTTPCookie.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The maximum length allowed for each attribute value in a cookie string is 1024.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+Defines the Web's HTTPCookie.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The maximum length allowed for each attribute value in a cookie string is 1024.&lt;/p&gt;
 
 **起始版本：** 23
 
@@ -9,6 +9,12 @@ Defines the Web's HTTPCookie.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\
 <!--Device-webview-interface WebHttpCookie--><!--Device-webview-interface WebHttpCookie-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
 
 ## domain
 
@@ -144,7 +150,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 Gets the cookie's samesite policy.
 
-**类型：** WebHttpCookieSameSitePolicy
+**类型：** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
 
 **起始版本：** 23
 

@@ -8,6 +8,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## family
 
 ```TypeScript
@@ -189,7 +195,7 @@ weight: int
 系统字体的字重。
 
 取值范围：[100,900]，取值间隔为100，分别对应  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_枚举中的值。
+[FontWeight](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#fontweight)枚举中的值。
 
 默认值：100
 
@@ -213,7 +219,7 @@ width: int
 
 系统字体的宽度。
 
-取值范围：[1,9]，取值间隔为1，分别对应\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_枚举中的值。
+取值范围：[1,9]，取值间隔为1，分别对应[FontWidth](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#fontwidth)枚举中的值。
 
 **类型：** int
 

@@ -1,6 +1,6 @@
 # AppEventPackage
 
-Defines parameters of an **AppEventPackage** object. This API is used to obtain detail information about an event package, which is obtained using the [takeNext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.
+提供订阅返回的事件包的参数定义。可用于获取事件包的详细信息，事件包由[takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takenext)接口获得。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines parameters of an **AppEventPackage** object. This API is used to obtain 
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## appEventInfos
 
 ```TypeScript
 appEventInfos: Array<AppEventInfo>
 ```
 
-Event object group.
+事件对象集合。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 12.
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **Type:** Array&lt;AppEventInfo&gt;
 
@@ -38,9 +44,9 @@ Event object group.
 data: string[]
 ```
 
-Event data in the event package.
+事件包的事件信息。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **Type:** string[]
 
@@ -60,11 +66,11 @@ Event data in the event package.
 packageId: int
 ```
 
-Event package ID, which is named from **0** in ascending order.
+事件包ID，从0开始自动递增。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -82,11 +88,11 @@ Event package ID, which is named from **0** in ascending order.
 row: int
 ```
 
-Number of events in the event package.
+事件包的事件数量。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -104,11 +110,11 @@ Number of events in the event package.
 size: int
 ```
 
-Event size of the event package, in bytes.
+事件包的事件大小，单位为byte。
 
-**Atomic service API**: This parameter can be used in atomic services since API version 11.
+**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

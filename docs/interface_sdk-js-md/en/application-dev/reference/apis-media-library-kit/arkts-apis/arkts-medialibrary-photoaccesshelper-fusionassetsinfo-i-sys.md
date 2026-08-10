@@ -12,6 +12,12 @@ Fusion assets information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## assetsCount
 
 ```TypeScript
@@ -20,7 +26,7 @@ assetsCount: int
 
 Assets count.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -60,7 +66,7 @@ assetsType: FusionAssetType
 
 Assets type.
 
-**Type:** FusionAssetType
+**Type:** [FusionAssetType](arkts-medialibrary-photoaccesshelper-fusionassettype-e-sys.md)
 
 **Since:** 22
 

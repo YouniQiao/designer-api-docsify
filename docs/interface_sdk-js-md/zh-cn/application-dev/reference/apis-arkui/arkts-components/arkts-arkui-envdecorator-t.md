@@ -22,11 +22,11 @@ declare type EnvDecorator = (value: SystemProperties) => PropertyDecorator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 环境变量属性名，用于指定要获取的系统环境变量。  |
+| value | [SystemProperties](arkts-arkui-systemproperties-e.md) | 是 | 环境变量属性名，用于指定要获取的系统环境变量。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PropertyDecorator | 属性装饰器，开发者无需关注该返回值。  |
+| PropertyDecorator | 属性装饰器，开发者无需关注该返回值。 |
 

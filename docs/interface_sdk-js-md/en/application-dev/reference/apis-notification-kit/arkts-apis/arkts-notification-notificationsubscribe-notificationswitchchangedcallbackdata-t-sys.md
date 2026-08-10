@@ -4,7 +4,7 @@
 export type NotificationSwitchChangedCallbackData = _NotificationSwitchChangedCallbackData
 ```
 
-Describes the notification switch state changes callback data.
+描述通知开关状态变化的回调数据。
 
 **Since:** 26.0.0
 

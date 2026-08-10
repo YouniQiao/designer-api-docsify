@@ -1,6 +1,6 @@
 # NativeMediaPlayerConfig
 
-用于[开启应用接管网页媒体播放功能]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的配置信息。
+用于[开启应用接管网页媒体播放功能](web:WebAttribute.enableNativeMediaPlayer)的配置信息。
 
 **起始版本：** 12
 

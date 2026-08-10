@@ -6,7 +6,7 @@ export type PromptActionSingleButton = [
     ]
 ```
 
-Defines the one-button array.
+菜单中的菜单项按钮，仅支持1个按钮。
 
 **Since:** 23
 

@@ -2,7 +2,7 @@
 
 Defines the moving photo view attribute functions.
 
-**Inheritance/Implementation:** MovingPhotoViewAttribute extends [CommonMethod](../../apis-arkui/arkts-apis/arkts-arkui-component/common-commonmethod-i.md)
+**Inheritance/Implementation:** MovingPhotoViewAttribute extends [CommonMethod](../../apis-arkui/arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md)
 
 **Since:** 26.0.0
 
@@ -42,11 +42,11 @@ Sets playback strategy.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i-sys.md) |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 

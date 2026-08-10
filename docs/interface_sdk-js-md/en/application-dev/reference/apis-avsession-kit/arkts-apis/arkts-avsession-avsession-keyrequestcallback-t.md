@@ -4,7 +4,7 @@
 type KeyRequestCallback = (assetId: string, requestData: Uint8Array) => void
 ```
 
-The callback of key request.
+许可证请求事件的回调函数。
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ The callback of key request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetId | string | Yes | request key for current assetId  |
-| requestData | Uint8Array | Yes | media key request data sent to media key server  |
+| assetId | string | Yes | 媒体ID。 |
+| requestData | Uint8Array | Yes | 媒体许可证请求数据。 |
 

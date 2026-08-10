@@ -10,6 +10,12 @@ Defines the trace route information structure.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## address
 
 ```TypeScript
@@ -38,7 +44,7 @@ jumpNo: int
 
 Number of jumps.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -58,7 +64,7 @@ rtt: int[]
 
 RTT in microseconds, min/avg/max/std.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 26.0.0
 

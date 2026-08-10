@@ -1,12 +1,18 @@
 # offSystemBarTintChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## offSystemBarTintChange
 
 ```TypeScript
 function offSystemBarTintChange(callback?: Callback<SystemBarTintState>): void
 ```
 
-Unsubscribes from the property change event of the status bar and navigation bar.
+关闭状态栏、导航栏属性变化的监听。
 
 **Since:** 23
 
@@ -22,11 +28,11 @@ Unsubscribes from the property change event of the status bar and navigation bar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemBarTintState&gt; | No | Callback used to return the properties of the system bar. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SystemBarTintState&gt; | No | 回调函数。返回当前的状态栏、导航栏信息集合。如果传入参数， 则关闭该监听。如果未传入参数，则关闭所有状态栏、导航栏属性变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

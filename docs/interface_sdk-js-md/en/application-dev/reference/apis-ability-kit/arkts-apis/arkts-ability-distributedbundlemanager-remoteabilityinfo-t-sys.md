@@ -4,7 +4,7 @@
 export type RemoteAbilityInfo = _RemoteAbilityInfo
 ```
 
-Defines the remote ability information.
+包含远程的ability信息。
 
 **Since:** 9
 

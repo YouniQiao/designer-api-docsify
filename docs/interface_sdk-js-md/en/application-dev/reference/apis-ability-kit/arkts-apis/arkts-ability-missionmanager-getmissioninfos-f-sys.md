@@ -1,12 +1,18 @@
 # getMissionInfos (System API)
 
+## Modules to Import
+
+```TypeScript
+import { missionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getMissionInfos
 
 ```TypeScript
 function getMissionInfos(deviceId: string, numMax: int, callback: AsyncCallback<Array<MissionInfo>>): void
 ```
 
-Obtains information about all missions. This API uses an asynchronous callback to return the result.
+获取所有任务信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,19 +30,19 @@ Obtains information about all missions. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
-| numMax | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Maximum number of missions whose information can be obtained. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;MissionInfo&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
+| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
+| numMax | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务信息数量上限。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;MissionInfo&gt;&gt; | Yes | 执行结果回调函数，返回任务信息数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -65,7 +71,7 @@ try {
 function getMissionInfos(deviceId: string, numMax: int): Promise<Array<MissionInfo>>
 ```
 
-Obtains information about all missions. This API uses a promise to return the result.
+获取所有任务信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -83,24 +89,24 @@ Obtains information about all missions. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
-| numMax | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Maximum number of missions whose information can be obtained. |
+| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
+| numMax | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务信息数量上限。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MissionInfo&gt;&gt; | Promise used to return the array of mission information obtained. |
+| Promise&lt;Array&lt;MissionInfo&gt;&gt; | Promise对象，返回所有任务信息的数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';

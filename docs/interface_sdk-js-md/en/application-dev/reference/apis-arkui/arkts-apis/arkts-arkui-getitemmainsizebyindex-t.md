@@ -4,7 +4,7 @@
 export type GetItemMainSizeByIndex = (index: int) => double
 ```
 
-function that returns item main size by index.
+根据index获取指定Item的主轴大小。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ function that returns item main size by index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the target water flow item. \_\_\_HTML\_TAG\_USD\_0\_\_\_Value range: [0, total number of child nodes - 1].  |
+| index | int | Yes | FlowItem在WaterFlow中的索引。<br/>。 <br>取值范围：[0, 子节点总数-1]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double | main size of the FlowItem at index  |
+| double | 指定index的FlowItem的主轴大小，纵向瀑布流时为高度，横向瀑布流时为宽度，单位vp。 |
 

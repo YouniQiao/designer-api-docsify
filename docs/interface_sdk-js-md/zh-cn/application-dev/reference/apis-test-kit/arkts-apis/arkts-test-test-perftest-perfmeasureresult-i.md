@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+## 导入模块
+
+```TypeScript
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
+```
+
 ## average
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly average: double
 
 各轮测量数据平均值（剔除为-1的数据后计算）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -38,7 +44,7 @@ readonly maximum: double
 
 各轮测量数据最大值（剔除为-1的数据后计算）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -58,7 +64,7 @@ readonly metric: PerfMetric
 
 被测性能指标。
 
-**类型：** PerfMetric
+**类型：** [PerfMetric](arkts-test-test-perftest-perfmetric-e.md)
 
 **起始版本：** 20
 
@@ -78,7 +84,7 @@ readonly minimum: double
 
 各轮测量数据最小值（剔除为-1的数据后计算）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -96,9 +102,9 @@ readonly minimum: double
 readonly roundValues: Array<double>
 ```
 
-被测性能指标的各轮测量数据值。当数据采集失败时返回-1。
+被测性能指标的各轮测量数据值，单位与对应PerfMetric指标一致。当数据采集失败时返回-1。
 
-**类型：** Array&lt;double&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **起始版本：** 20
 

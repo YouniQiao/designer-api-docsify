@@ -1,6 +1,6 @@
 # ImAddress
 
-Enumerates IM addresses.
+联系人的即时消息地址。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Enumerates IM addresses.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## CUSTOM_LABEL
 
 ```TypeScript
 static readonly CUSTOM_LABEL: -1
 ```
 
-Custom mailbox type, the default value is **0**.
+自定义邮箱类型，默认值为0。
 
 **Type:** -1
 
@@ -36,7 +42,7 @@ Custom mailbox type, the default value is **0**.
 static readonly IM_AIM: 0
 ```
 
-AIM, the default value is **0**.
+AIM即时消息类型，默认值为0。
 
 **Type:** 0
 
@@ -56,7 +62,7 @@ AIM, the default value is **0**.
 static readonly IM_ICQ: 6
 ```
 
-ICQ, the default value is **6**.
+ICQ即时消息类型，默认值为6。
 
 **Type:** 6
 
@@ -76,7 +82,7 @@ ICQ, the default value is **6**.
 static readonly IM_JABBER: 7
 ```
 
-JABBER, the default value is **7**.
+JABBER即时消息类型，默认值为7。
 
 **Type:** 7
 
@@ -96,7 +102,7 @@ JABBER, the default value is **7**.
 static readonly IM_MSN: 1
 ```
 
-MSN, the default value is **1**.
+MSN即时消息类型，默认值为1。
 
 **Type:** 1
 
@@ -116,7 +122,7 @@ MSN, the default value is **1**.
 static readonly IM_QQ: 4
 ```
 
-QQ, the default value is **4**.
+QQ即时消息类型，默认值为4。
 
 **Type:** 4
 
@@ -136,7 +142,7 @@ QQ, the default value is **4**.
 static readonly IM_SKYPE: 3
 ```
 
-Skype, the default value is **3**.
+SKYPE即时消息类型，默认值为3。
 
 **Type:** 3
 
@@ -156,7 +162,7 @@ Skype, the default value is **3**.
 static readonly IM_YAHOO: 2
 ```
 
-Yahoo, the default value is **2**.
+YAHOO即时消息类型，默认值为2。
 
 **Type:** 2
 
@@ -176,7 +182,7 @@ Yahoo, the default value is **2**.
 static readonly INVALID_LABEL_ID: -2
 ```
 
-Invalid mailbox, the default value is **-1**.
+无效邮箱类型，默认值为-1。
 
 **Type:** -2
 
@@ -196,7 +202,7 @@ Invalid mailbox, the default value is **-1**.
 imAddress: string
 ```
 
-IM address.
+即时消息地址。
 
 **Type:** string
 
@@ -216,7 +222,7 @@ IM address.
 labelId?: number
 ```
 
-Mailbox type.
+邮箱的类型。
 
 **Type:** number
 
@@ -236,7 +242,7 @@ Mailbox type.
 labelName?: string
 ```
 
-Name of the mailbox type.
+邮箱的类型名称。
 
 **Type:** string
 

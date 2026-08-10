@@ -10,6 +10,12 @@ Configuring parameters in current location requests.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## maxAccuracy
 
 ```TypeScript
@@ -18,7 +24,7 @@ maxAccuracy?: double
 
 Accuracy requirements for reporting locations.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -38,7 +44,7 @@ priority?: LocationRequestPriority
 
 Priority of the location request.
 
-**Type:** LocationRequestPriority
+**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
 
 **Since:** 9
 
@@ -58,7 +64,7 @@ scenario?: LocationRequestScenario
 
 User scenario of the location request.
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **Since:** 9
 
@@ -78,7 +84,7 @@ timeoutMs?: int
 
 Timeout interval of a single location request.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

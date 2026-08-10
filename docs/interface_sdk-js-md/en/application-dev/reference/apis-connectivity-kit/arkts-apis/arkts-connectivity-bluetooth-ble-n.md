@@ -14,6 +14,12 @@ Provides methods to operate or manage Bluetooth.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

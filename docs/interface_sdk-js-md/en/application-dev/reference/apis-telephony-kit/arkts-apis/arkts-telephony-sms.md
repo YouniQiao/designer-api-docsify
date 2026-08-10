@@ -10,22 +10,28 @@ Provides the capabilities and methods for obtaining Short Message Service (SMS) 
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage) | Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol. |
-| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage-1) | Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol. |
+| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage) | Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.  &lt;p&gt;After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol. |
+| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage-1) | Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.  &lt;p&gt;After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol. |
 | [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid) | Obtains the default SIM ID for sending SMS messages. |
 | [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid-1) | Obtains the default SIM ID for sending SMS messages. |
 | [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid) | Obtains the default SIM card for sending SMS messages. |
 | [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid-1) | Obtains the default SIM card for sending SMS messages. |
 | [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md#hassmscapability) | Returns whether a device is capable of sending and receiving SMS messages. |
-| [sendMessage](arkts-telephony-sms-sendmessage-f.md#sendmessage) | Sends a text or data SMS message.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
-| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage) | Sends a text or data SMS message.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
-| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage-1) | Sends a text or data SMS message.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
+| [sendMessage](arkts-telephony-sms-sendmessage-f.md#sendmessage) | Sends a text or data SMS message.  &lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
+| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage) | Sends a text or data SMS message.  &lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
+| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage-1) | Sends a text or data SMS message.  &lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
 
 <!--Del-->
 ### Functions（系统接口）
@@ -62,8 +68,8 @@ Provides the capabilities and methods for obtaining Short Message Service (SMS) 
 | [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid-1) | Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}. |
 | [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr) | Sets the address for the Short Message Service Center (SMSC) based on a specified slot ID. |
 | [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr-1) | Sets the address for the Short Message Service Center (SMSC) based on a specified slot ID. |
-| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage) | Splits a long SMS message into multiple fragments.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing. |
-| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage-1) | Splits a long SMS message into multiple fragments.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing. |
+| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage) | Splits a long SMS message into multiple fragments.  &lt;p&gt;If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing. |
+| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage-1) | Splits a long SMS message into multiple fragments.  &lt;p&gt;If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing. |
 | [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updatesimmessage) | Update a SIM SMS of SIM card. |
 | [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updatesimmessage-1) | Update a SIM SMS of SIM card. |
 <!--DelEnd-->

@@ -12,6 +12,12 @@ Intercepted record page information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## data
 
 ```TypeScript

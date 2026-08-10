@@ -1,6 +1,6 @@
 # ColorMode
 
-Enumerates system color modes.
+系统当前深浅色模式。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates system color modes.
 LIGHT = 0
 ```
 
-Light mode.
+浅色模式。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Light mode.
 DARK
 ```
 
-Dark mode.
+深色模式。
 
 **Since:** 7
 

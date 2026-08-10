@@ -1,5 +1,11 @@
 # initCurve
 
+## 导入模块
+
+```TypeScript
+import { curves } from 'kits/@kit.ArkUI';
+```
+
 ## initCurve
 
 ```TypeScript
@@ -22,11 +28,11 @@ export function initCurve(curve?: Curve): ICurve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| curve | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 曲线类型。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：Curve.Linear |
+| curve | [Curve](arkts-arkui-curve-e.md) | 否 | 曲线类型。&lt;br/&gt;默认值：Curve.Linear |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 曲线的插值对象。 |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线的插值对象。 |
 

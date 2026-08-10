@@ -1,5 +1,11 @@
 # getFreeSizeSync
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getFreeSizeSync
 
 ```TypeScript
@@ -23,42 +29,27 @@ function getFreeSizeSync(): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 返回内置存储的可用空间大小（单位为Byte）。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回内置存储的可用空间大小（单位为Byte）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| 201 | Permission verification failed.<br>**适用版本：** 10 - 14 |
+| 202 | The caller is not a system application.<br>**适用版本：** 10 - 14 |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
 try {
   let freeSize = storageStatistics.getFreeSizeSync();
   console.info('getFreeSizeSync successfully:' + freeSize);
 } catch (err) {
   let error: BusinessError = err as BusinessError;
   console.error(`getFreeSizeSync failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let freeSize = storageStatistics.getFreeSizeSync();
-  console.info('getFreeSizeSync successfully:' + freeSize);
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`getFreeSizeSync failed. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

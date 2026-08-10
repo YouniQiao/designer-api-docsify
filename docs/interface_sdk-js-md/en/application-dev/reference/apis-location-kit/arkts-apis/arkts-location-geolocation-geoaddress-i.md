@@ -16,6 +16,12 @@ Data struct describes geographic locations.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## addressUrl
 
 ```TypeScript

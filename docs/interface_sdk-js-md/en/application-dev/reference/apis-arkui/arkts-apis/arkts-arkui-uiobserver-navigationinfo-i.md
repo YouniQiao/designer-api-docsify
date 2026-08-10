@@ -1,6 +1,6 @@
 # NavigationInfo
 
-Navigation info.
+Navigation组件信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Navigation info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## navigationId
 
 ```TypeScript
 navigationId: string
 ```
 
-Navigation id.
+包含NavDestination组件的Navigation组件的id。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Navigation id.
 pathStack: NavPathStack
 ```
 
-Navigation path stack.
+Navigation组件的导航控制器。
 
-**Type:** NavPathStack
+**Type:** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **Since:** 23
 
@@ -56,7 +62,7 @@ Navigation path stack.
 uniqueId?: int
 ```
 
-The uniqueId of the navigation.The value should be an integer.
+The uniqueId of the navigation.
 
 **Type:** int
 

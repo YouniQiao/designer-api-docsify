@@ -18,7 +18,7 @@ layoutStyle?: RichEditorLayoutStyle
 
 图片布局样式。
 
-**类型：** RichEditorLayoutStyle
+**类型：** [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ objectFit: ImageFit
 
 图片缩放类型。
 
-**类型：** ImageFit
+**类型：** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
 
 **起始版本：** 10
 
@@ -84,7 +84,7 @@ verticalAlign: ImageSpanAlignment
 
 图片垂直对齐方式。
 
-**类型：** ImageSpanAlignment
+**类型：** [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md)
 
 **起始版本：** 10
 

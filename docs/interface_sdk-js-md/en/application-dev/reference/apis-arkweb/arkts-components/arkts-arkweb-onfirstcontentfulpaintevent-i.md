@@ -1,6 +1,6 @@
 # OnFirstContentfulPaintEvent
 
-Represents the callback invoked when the first content paint occurs on the web page.
+定义网页首次内容绘制回调函数。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Represents the callback invoked when the first content paint occurs on the web p
 firstContentfulPaintMs: number
 ```
 
-Time between navigation and when the content is first rendered.Unit: milliseconds.
+从启动页面加载开始到第一次绘制内容的时间，单位是以毫秒表示。
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Time between navigation and when the content is first rendered.Unit: millisecond
 navigationStartTick: number
 ```
 
-Navigation start time, in microseconds.Unit: microseconds.
+启动页面加载开始的时间，单位以微秒表示。
 
 **Type:** number
 

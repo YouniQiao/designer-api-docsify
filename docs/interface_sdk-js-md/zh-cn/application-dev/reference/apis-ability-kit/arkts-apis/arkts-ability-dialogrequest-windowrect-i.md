@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { dialogRequest } from 'kits/@kit.AbilityKit';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height: int
 
 弹框的高度，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ left: int
 
 弹框边框的左上角的X坐标。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -58,7 +64,7 @@ top: int
 
 弹框边框的左上角的Y坐标。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -78,7 +84,7 @@ width: int
 
 弹框的宽度，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

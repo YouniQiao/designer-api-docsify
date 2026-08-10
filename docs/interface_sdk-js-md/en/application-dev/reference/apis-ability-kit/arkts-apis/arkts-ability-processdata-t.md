@@ -4,7 +4,7 @@
 export type ProcessData = _ProcessData
 ```
 
-The process data.
+进程数据信息。
 
 **Since:** 23
 

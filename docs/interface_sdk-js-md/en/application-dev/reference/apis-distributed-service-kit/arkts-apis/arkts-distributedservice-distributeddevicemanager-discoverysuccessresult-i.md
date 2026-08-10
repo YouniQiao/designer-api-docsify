@@ -1,6 +1,6 @@
 # DiscoverySuccessResult
 
-Discovery successful result.
+设备发现成功，发现的设备信息。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Discovery successful result.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## device
 
 ```TypeScript
 device: DeviceBasicInfo
 ```
 
-Basic description information of a distributed device.
+分布式设备基本信息。
 
-**Type:** DeviceBasicInfo
+**Type:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 
 **Since:** 23
 

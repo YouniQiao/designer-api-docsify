@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## levelMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ levelMode?: LevelMode
 
 浮层的显示模式。
 
-**类型：** LevelMode
+**类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ levelOrder?: LevelOrder
 
 浮层的显示顺序。
 
-**类型：** LevelOrder
+**类型：** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **起始版本：** 26.0.0
 

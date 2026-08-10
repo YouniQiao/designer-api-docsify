@@ -1,6 +1,6 @@
 # PhoneNumberFormatOptions
 
-Options for PhoneNumberFormat object initialization.
+电话号码格式化时可设置的配置项。
 
 **Since:** 23
 
@@ -10,13 +10,27 @@ Options for PhoneNumberFormat object initialization.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## type
 
 ```TypeScript
 type?: string
 ```
 
-Type of the phone number. The value can be "E164", "INTERNATIONAL", "NATIONAL", "RFC3966", or "TYPING".In API version 8, type is mandatory. In API version 9 or later, type is optional.In API version 12 or later, "TYPING" is supported, which indicates that the dialed number is formatted in real time.
+表示对电话号码格式化的类型，取值包括：'E164', 'INTERNATIONAL', 'NATIONAL', 'RFC3966', 'TYPING'。
+
+-在API version 8版本，type为必填项。 
+
+-API version 9版本开始，type为选填项。
+
+-API version 12版本开始支持TYPING，表示对拨号中的电话号码实时格式化。
+
+-API version 23版本开始，TYPING支持实时获取拨号中的电话号码的归属地。
 
 **Type:** string
 

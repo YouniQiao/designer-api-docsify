@@ -1,6 +1,6 @@
 # PublishInfo (System API)
 
-Defines published device information.
+发布设备参数
 
 **Since:** 9
 
@@ -14,15 +14,21 @@ Defines published device information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## freq
 
 ```TypeScript
 freq: ExchangeFreq
 ```
 
-Frequency of device discovery.
+发现频率。
 
-**Type:** ExchangeFreq
+**Type:** [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)
 
 **Since:** 9
 
@@ -42,9 +48,9 @@ Frequency of device discovery.
 mode: DiscoverMode
 ```
 
-Device discovery mode.
+发现模式。
 
-**Type:** DiscoverMode
+**Type:** [DiscoverMode](arkts-distributedservice-devicemanager-discovermode-e-sys.md)
 
 **Since:** 9
 
@@ -64,7 +70,7 @@ Device discovery mode.
 publishId: number
 ```
 
-ID used to identify a publication period.
+发布设备标识，用于标识不同的发布周期。
 
 **Type:** number
 
@@ -86,8 +92,7 @@ ID used to identify a publication period.
 ranging: boolean
 ```
 
-Whether the device supports ranging. The value **true** indicates that the device supports ranging and the value  
-**false** indicates the opposite.
+发布的设备是否支持测距能力，true表示支持测距能力，false表示不支持测距能力。
 
 **Type:** boolean
 

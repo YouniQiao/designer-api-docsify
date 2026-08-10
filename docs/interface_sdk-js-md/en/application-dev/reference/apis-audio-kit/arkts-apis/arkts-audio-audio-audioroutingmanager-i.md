@@ -1,12 +1,12 @@
 # AudioRoutingManager
 
-This interface implements audio routing management.
+音频路由管理。
 
-Before calling any API in AudioRoutingManager, you must use  
-[getRoutingManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an AudioRoutingManager instance.
-    **NOTE**  
-    
-    - The initial APIs of this interface are supported since API version 9.
+在使用AudioRoutingManager的接口之前，需先通过[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **Since:** 9
 
@@ -16,13 +16,25 @@ Before calling any API in AudioRoutingManager, you must use
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## declareDeviceTypesCompatibility
 
 ```TypeScript
 declareDeviceTypesCompatibility(deviceTypes: DeviceTypeArray): void
 ```
 
-Declares the original device types that the application has adapted to.By default, the system returns anonymous device types. This method allows applications to declare which specific device types they have explicitly adapted to. Once declared, the system will return the original device types to the application instead of the anonymous ones.Note: This method only supports device types introduced from API 20 onwards (such as hearing aids and nearlink devices). If this interface is not called for these new device types, the application will only be able to obtain anonymous device types.Legacy device types prior to API 20 do not need this declaration.
+声明应用需要兼容的设备类型。
+
+> **说明：**
+> 
+> 对于API version 20及以上版本新增的设备类型，应用调用获取设备的相关接口时（例如
+> [getAvailableDevices](arkts-audio-audio-audiosessionmanager-i.md#getavailabledevices)），默认返回的设备类型为匿名类型。如需获取具体设备类型，需先调用该方法进行
+> 设备类型兼容声明。
 
 **Since:** 26.0.0
 
@@ -38,13 +50,13 @@ Declares the original device types that the application has adapted to.By defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceTypes | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Array of original device types the application has adapted to. |
+| deviceTypes | [DeviceTypeArray](arkts-audio-audio-devicetypearray-t.md) | Yes | [DeviceType](arkts-audio-audio-devicetype-e.md)数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, the param deviceTypes contains value that is invalid enum or is not device type introduced in API 20 onwards. |
+| 6800101 | Parameter verification failed, the param deviceTypes contains value that is invalid enum or is not a device type introduced in API 20 onwards. |
 
 ## getAvailableDevices
 
@@ -52,7 +64,7 @@ Declares the original device types that the application has adapted to.By defaul
 getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 ```
 
-Obtains the available audio devices. This API returns the result synchronously.
+获取音频可选设备列表。同步返回结果。
 
 **Since:** 12
 
@@ -66,20 +78,20 @@ Obtains the available audio devices. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device type (classified by usage). |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | 音频设备类型（根据用途分类）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Device list. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回设备列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## getDevices
 
@@ -87,7 +99,7 @@ Obtains the available audio devices. This API returns the result synchronously.
 getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void
 ```
 
-Obtains the audio devices with a specific flag. This API uses an asynchronous callback to return the result.
+获取音频设备列表。使用callback异步回调。
 
 **Since:** 9
 
@@ -101,8 +113,8 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceFlag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device flag. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
+| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | 音频设备类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | 回调函数。当获取音频设备列表成功，err为undefined，data为获取到的音频设备列表；否则为错误对 象。 |
 
 ## getDevices
 
@@ -110,7 +122,7 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 ```
 
-Obtains the audio devices with a specific flag. This API uses a promise to return the result.
+获取音频设备列表。使用Promise异步回调。
 
 **Since:** 9
 
@@ -124,13 +136,13 @@ Obtains the audio devices with a specific flag. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceFlag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device flag. |
+| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | 音频设备类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; | Promise used to return the device list. |
+| Promise&lt;AudioDeviceDescriptors&gt; | Promise对象，返回设备列表。 |
 
 ## getDevicesSync
 
@@ -138,7 +150,7 @@ Obtains the audio devices with a specific flag. This API uses a promise to retur
 getDevicesSync(deviceFlag: DeviceFlag): AudioDeviceDescriptors
 ```
 
-Obtains the audio devices with a specific flag. This API returns the result synchronously.
+获取音频设备列表。同步返回结果。
 
 **Since:** 10
 
@@ -152,20 +164,20 @@ Obtains the audio devices with a specific flag. This API returns the result sync
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceFlag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device flag. |
+| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | 音频设备类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Device list. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回设备列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## getPreferOutputDeviceForRendererInfo
 
@@ -173,7 +185,7 @@ Obtains the audio devices with a specific flag. This API returns the result sync
 getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo, callback: AsyncCallback<AudioDeviceDescriptors>): void
 ```
 
-Obtains the output device with the highest priority based on the audio renderer information. This API uses an asynchronous callback to return the result.
+根据音频信息，返回优先级最高的输出设备。使用callback异步回调。
 
 **Since:** 10
 
@@ -187,16 +199,16 @@ Obtains the output device with the highest priority based on the audio renderer 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rendererInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio renderer information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the output device with the highest priority obtained; otherwise, **err** is an error object. |
+| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | 音频渲染器信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | 回调函数。当获取优先级最高的输出设备成功，err为undefined，data为获取到的优先级最高的输出设 备信息；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by callback. |
+| 6800301 | System error. Return by callback. |
 
 ## getPreferOutputDeviceForRendererInfo
 
@@ -204,7 +216,7 @@ Obtains the output device with the highest priority based on the audio renderer 
 getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo): Promise<AudioDeviceDescriptors>
 ```
 
-Obtains the output device with the highest priority based on the audio renderer information. This API uses a promise to return the result.
+根据音频信息，返回优先级最高的输出设备。使用Promise异步回调。
 
 **Since:** 10
 
@@ -218,21 +230,21 @@ Obtains the output device with the highest priority based on the audio renderer 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rendererInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio renderer information. |
+| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | 音频渲染器信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; | Promise used to return the information about the output device with the highest priority. |
+| Promise&lt;AudioDeviceDescriptors&gt; | Promise对象，返回优先级最高的输出设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 6800301 | System error. Return by promise. |
 
 ## getPreferredInputDeviceForCapturerInfo
 
@@ -240,7 +252,7 @@ Obtains the output device with the highest priority based on the audio renderer 
 getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: AsyncCallback<AudioDeviceDescriptors>): void
 ```
 
-Obtains the input device with the highest priority based on the audio capturer information. This API uses an asynchronous callback to return the result.
+根据音频信息，返回优先级最高的输入设备。使用callback异步回调。
 
 **Since:** 10
 
@@ -254,16 +266,16 @@ Obtains the input device with the highest priority based on the audio capturer i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capturerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio capturer information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the input device with the highest priority obtained; otherwise, **err** is an error object. |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | 音频采集器信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | 回调函数。当获取优先级最高的输入设备成功，err为undefined，data为获取到的优先级最高的输入设 备信息；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by callback. |
+| 6800301 | System error. Return by callback. |
 
 ## getPreferredInputDeviceForCapturerInfo
 
@@ -271,7 +283,7 @@ Obtains the input device with the highest priority based on the audio capturer i
 getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo): Promise<AudioDeviceDescriptors>
 ```
 
-Obtains the input device with the highest priority based on the audio capturer information. This API uses a promise to return the result.
+根据音频信息，返回优先级最高的输入设备。使用Promise异步回调。
 
 **Since:** 10
 
@@ -285,21 +297,21 @@ Obtains the input device with the highest priority based on the audio capturer i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capturerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio capturer information. |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | 音频采集器信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; | Promise used to return the information about the input device with the highest priority. |
+| Promise&lt;AudioDeviceDescriptors&gt; | Promise对象，返回优先级最高的输入设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 6800301 | System error. Return by promise. |
 
 ## getPreferredInputDeviceForCapturerInfoSync
 
@@ -307,7 +319,7 @@ Obtains the input device with the highest priority based on the audio capturer i
 getPreferredInputDeviceForCapturerInfoSync(capturerInfo: AudioCapturerInfo): AudioDeviceDescriptors
 ```
 
-Gets preferred input device for target audio capturer info.
+根据音频信息，返回优先级最高的输入设备。同步返回结果。
 
 **Since:** 10
 
@@ -321,20 +333,20 @@ Gets preferred input device for target audio capturer info.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capturerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio capturer information. |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | 音频采集器信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Information about the input device with the highest priority. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回优先级最高的输入设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## getPreferredOutputDeviceForRendererInfoSync
 
@@ -342,7 +354,7 @@ Gets preferred input device for target audio capturer info.
 getPreferredOutputDeviceForRendererInfoSync(rendererInfo: AudioRendererInfo): AudioDeviceDescriptors
 ```
 
-Obtains the output device with the highest priority based on the audio renderer information. This API returns the result synchronously.
+根据音频信息，返回优先级最高的输出设备。同步返回结果。
 
 **Since:** 10
 
@@ -356,20 +368,20 @@ Obtains the output device with the highest priority based on the audio renderer 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rendererInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio renderer information. |
+| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | 音频渲染器信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Information about the output device with the highest priority. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回优先级最高的输出设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## isCommunicationDeviceActive
 
@@ -377,7 +389,7 @@ Obtains the output device with the highest priority based on the audio renderer 
 isCommunicationDeviceActive(deviceType: CommunicationDeviceType, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a communication device is active. This API uses an asynchronous callback to return the result.
+获取指定通信设备的激活状态。使用callback异步回调。
 
 **Since:** 9
 
@@ -391,8 +403,8 @@ Checks whether a communication device is active. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Active audio device type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the device is active or **false** if not active; otherwise, **err** is an error object. |
+| deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | 活跃音频设备类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当获取指定通信设备的激活状态成功，err为undefined，data为true表示激活，false表示未激活；否则为错误对 象。 |
 
 ## isCommunicationDeviceActive
 
@@ -400,7 +412,7 @@ Checks whether a communication device is active. This API uses an asynchronous c
 isCommunicationDeviceActive(deviceType: CommunicationDeviceType): Promise<boolean>
 ```
 
-Checks whether a communication device is active. This API uses a promise to return the result.
+获取指定通信设备的激活状态。使用Promise异步回调。
 
 **Since:** 9
 
@@ -414,13 +426,13 @@ Checks whether a communication device is active. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Active audio device type. |
+| deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | 活跃音频设备类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the device is active. **true** if active, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示设备已激活；返回false表示设备未激活。 |
 
 ## isCommunicationDeviceActiveSync
 
@@ -428,7 +440,7 @@ Checks whether a communication device is active. This API uses a promise to retu
 isCommunicationDeviceActiveSync(deviceType: CommunicationDeviceType): boolean
 ```
 
-Checks whether a communication device is active. This API returns the result synchronously.
+获取指定通信设备的激活状态。同步返回结果。
 
 **Since:** 10
 
@@ -442,20 +454,20 @@ Checks whether a communication device is active. This API returns the result syn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Active audio device type. |
+| deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | 活跃音频设备类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the device is active. **true** if active, **false** otherwise. |
+| boolean | 设备是否处于激活状态。true表示处于激活状态，false表示处于未激活状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## isMicBlockDetectionSupported
 
@@ -463,7 +475,7 @@ Checks whether a communication device is active. This API returns the result syn
 isMicBlockDetectionSupported():Promise<boolean>
 ```
 
-Checks whether the current device supports microphone blocking detection. This API uses a promise to return the result.
+获取当前设备是否支持麦克风状态检测。使用Promise异步回调。
 
 **Since:** 13
 
@@ -477,7 +489,7 @@ Checks whether the current device supports microphone blocking detection. This A
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result, indicating the support for microphone blocking detection. **true** if supported, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示支持；返回false表示不支持。 |
 
 ## off('deviceChange')
 
@@ -485,7 +497,7 @@ Checks whether the current device supports microphone blocking detection. This A
 off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 ```
 
-Unsubscribes from the event indicating that the connection status of an audio device is changed. This API uses an asynchronous callback to return the result.
+取消监听音频设备连接状态变化事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -499,15 +511,15 @@ Unsubscribes from the event indicating that the connection status of an audio de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | No | Callback used to return the device change details. |
+| type | 'deviceChange' | Yes | 事件回调类型，支持的事件为'deviceChange'，当取消监听音频设备连接变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | No | 回调函数，返回设备更新详情。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('availableDeviceChange')
 
@@ -515,7 +527,7 @@ Unsubscribes from the event indicating that the connection status of an audio de
 off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void
 ```
 
-Unsubscribes from the event indicating that the connection status of an available audio device is changed. This API uses an asynchronous callback to return the result.
+取消监听音频可选设备连接状态变化事件。使用callback异步回调。
 
 **Since:** 12
 
@@ -529,15 +541,15 @@ Unsubscribes from the event indicating that the connection status of an availabl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | No | Callback used to return the available device change details. |
+| type | 'availableDeviceChange' | Yes | 事件回调类型，支持的事件为'availableDeviceChange'，当取消监听音频可选设备连接变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | No | 回调函数，返回可选设备更新详情。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('preferOutputDeviceChangeForRendererInfo')
 
@@ -545,7 +557,7 @@ Unsubscribes from the event indicating that the connection status of an availabl
 off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes from the change event of the output device with the highest priority. This API uses an asynchronous callback to return the result.
+取消监听最高优先级输出音频设备变化事件。使用callback异步回调。
 
 **Since:** 10
 
@@ -559,15 +571,15 @@ Unsubscribes from the change event of the output device with the highest priorit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'preferOutputDeviceChangeForRendererInfo' | Yes | Event type. The event **'preferOutputDeviceChangeForRendererInfo'** is triggered when the output device with the highest priority is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | No | Callback used to return the information about the output device with the highest priority. |
+| type | 'preferOutputDeviceChangeForRendererInfo' | Yes | 事件回调类型，支持的事件为'preferOutputDeviceChangeForRendererInfo '，当取消监听最高优先级输出音频设备变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No | 回调函数，返回优先级最高的输出设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('preferredInputDeviceChangeForCapturerInfo')
 
@@ -575,7 +587,7 @@ Unsubscribes from the change event of the output device with the highest priorit
 off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes from the change event of the input device with the highest priority. This API uses an asynchronous callback to return the result.
+取消监听最高优先级输入音频设备变化事件。使用callback异步回调。
 
 **Since:** 10
 
@@ -589,15 +601,15 @@ Unsubscribes from the change event of the input device with the highest priority
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'preferredInputDeviceChangeForCapturerInfo' | Yes | Event type. The event **'preferredInputDeviceChangeForCapturerInfo'** is triggered when the input device with the highest priority is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | No | Callback used to return the information about the input device with the highest priority. |
+| type | 'preferredInputDeviceChangeForCapturerInfo' | Yes | 事件回调类型，支持的事件为' preferredInputDeviceChangeForCapturerInfo'，当取消监听最高优先级输入音频设备变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No | 回调函数，返回优先级最高的输入设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## off('micBlockStatusChanged')
 
@@ -605,7 +617,7 @@ Unsubscribes from the change event of the input device with the highest priority
 off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): void
 ```
 
-Unsubscribes from the microphone blocked status change event. This API uses an asynchronous callback to return the result.
+取消监听麦克风堵塞状态变化事件。使用callback异步回调。
 
 **Since:** 13
 
@@ -619,15 +631,15 @@ Unsubscribes from the microphone blocked status change event. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'micBlockStatusChanged' | Yes | Event type. The event **'micBlockStatusChanged'** is triggered when the microphone blocked status is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceBlockStatusInfo&gt; | No | Callback used to return the microphone blocked status and device information. |
+| type | 'micBlockStatusChanged' | Yes | 事件回调类型，支持的事件为'micBlockStatusChanged'，当取消监听音频麦克风是否被堵塞变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceBlockStatusInfo&gt; | No | 回调函数，返回麦克风被堵塞状态和设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## offAvailableDeviceChange
 
@@ -635,7 +647,7 @@ Unsubscribes from the microphone blocked status change event. This API uses an a
 offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
 ```
 
-UnSubscribes to available device change events.
+Unsubscribes to available device change events.
 
 **Since:** 23
 
@@ -649,13 +661,13 @@ UnSubscribes to available device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | No | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | No | Callback used to obtain the device update details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offDeviceChange
 
@@ -677,13 +689,13 @@ UnSubscribes to device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | No | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | No | Callback used to obtain the device update details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offMicBlockStatusChanged
 
@@ -705,13 +717,13 @@ Unsubscribes microphone blocked events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceBlockStatusInfo&gt; | No | Callback used to obtain the microphone block status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceBlockStatusInfo&gt; | No | Callback used to obtain the microphone block status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offPreferOutputDeviceChangeForRendererInfo
 
@@ -719,7 +731,7 @@ Unsubscribes microphone blocked events.
 offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-UnSubscribes to prefer output device change events.
+Unsubscribes to prefer output device change events.
 
 **Since:** 23
 
@@ -733,13 +745,13 @@ UnSubscribes to prefer output device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | No | Callback used to obtain the changed prefer devices in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No | Callback used to obtain the changed prefer devices in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offPreferredInputDeviceChangeForCapturerInfo
 
@@ -761,13 +773,13 @@ Unsubscribes to preferred input device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | No | Callback used to obtain the changed preferred devices in subscribe. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No | Callback used to obtain the changed preferred devices in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## on('deviceChange')
 
@@ -775,7 +787,7 @@ Unsubscribes to preferred input device change events.
 on(type: 'deviceChange', deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to the event indicating that the connection status of an audio device is changed. This API uses an asynchronous callback to return the result.
+监听音频设备连接状态变化事件（当音频设备连接状态发生变化时触发）。使用callback异步回调。
 
 **Since:** 9
 
@@ -789,16 +801,16 @@ Subscribes to the event indicating that the connection status of an audio device
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
-| deviceFlag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device flag. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | Yes | Callback used to return the device change details. |
+| type | 'deviceChange' | Yes | 事件回调类型，支持的事件为'deviceChange'，当音频设备连接状态发生变化时，触发该事件。 |
+| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | 音频设备类型。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | Yes | 回调函数，返回设备更新详情。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('availableDeviceChange')
 
@@ -806,7 +818,7 @@ Subscribes to the event indicating that the connection status of an audio device
 on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to the event indicating that the connection status of an available audio device is changed. This API uses an asynchronous callback to return the result.
+监听音频可选设备连接状态变化事件（当音频可选设备连接状态发生变化时触发）。使用callback异步回调。
 
 **Since:** 12
 
@@ -820,16 +832,16 @@ Subscribes to the event indicating that the connection status of an available au
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
-| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device type (classified by usage). |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | Yes | Callback used to return the device change details. |
+| type | 'availableDeviceChange' | Yes | 事件回调类型，支持的事件为'availableDeviceChange'，当音频可选设备连接状态发生变化时，触发该事件。 |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | 音频设备类型（根据用途分类）。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | Yes | 回调函数，返回设备更新详情。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('preferOutputDeviceChangeForRendererInfo')
 
@@ -837,7 +849,7 @@ Subscribes to the event indicating that the connection status of an available au
 on(type: 'preferOutputDeviceChangeForRendererInfo', rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to the change event of the output device with the highest priority, which is triggered when the output device with the highest priority is changed. This API uses an asynchronous callback to return the result.
+监听最高优先级输出设备变化事件（当最高优先级输出设备发生变化时触发）。使用callback异步回调。
 
 **Since:** 10
 
@@ -851,16 +863,16 @@ Subscribes to the change event of the output device with the highest priority, w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'preferOutputDeviceChangeForRendererInfo' | Yes | Event type. The event **'preferOutputDeviceChangeForRendererInfo'** is triggered when the output device with the highest priority is changed. |
-| rendererInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio renderer information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the information about the output device with the highest priority. |
+| type | 'preferOutputDeviceChangeForRendererInfo' | Yes | 事件回调类型，支持的事件为'preferOutputDeviceChangeForRendererInfo '，当最高优先级输出设备发生变化时，触发该事件。 |
+| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | 音频渲染器信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | 回调函数，返回优先级最高的输出设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('preferredInputDeviceChangeForCapturerInfo')
 
@@ -868,7 +880,7 @@ Subscribes to the change event of the output device with the highest priority, w
 on(type: 'preferredInputDeviceChangeForCapturerInfo', capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to the change event of the input device with the highest priority, which is triggered when the input device with the highest priority is changed. This API uses an asynchronous callback to return the result.
+监听最高优先级输入设备变化事件（当最高优先级输入设备发生变化时触发）。使用callback异步回调。
 
 **Since:** 10
 
@@ -882,16 +894,16 @@ Subscribes to the change event of the input device with the highest priority, wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'preferredInputDeviceChangeForCapturerInfo' | Yes | Event type. The event **'preferredInputDeviceChangeForCapturerInfo'** is triggered when the input device with the highest priority is changed. |
-| capturerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio capturer information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the information about the input device with the highest priority. |
+| type | 'preferredInputDeviceChangeForCapturerInfo' | Yes | 事件回调类型，支持的事件为' preferredInputDeviceChangeForCapturerInfo'，当最高优先级输入设备发生变化时，触发该事件。 |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | 音频采集器信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | 回调函数，返回优先级最高的输入设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('micBlockStatusChanged')
 
@@ -899,9 +911,9 @@ Subscribes to the change event of the input device with the highest priority, wh
 on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): void
 ```
 
-Subscribes to the microphone blocked status change event. This API uses an asynchronous callback to return the result.
+监听麦克风堵塞状态变化事件。使用callback异步回调。
 
-Before using this API, check whether the current device supports microphone blocking detection. This event is triggered when the microphone blocked status changes during recording. Currently, this API takes effect only for the microphone on the local device.
+使用此功能前，请使用[isMicBlockDetectionSupported](arkts-audio-audio-audioroutingmanager-i.md#ismicblockdetectionsupported)查询设备是否支持检测。应用在使用麦克风录音时，若麦克风堵塞状态发生变化，将触发该事件。目前此检测功能仅支持麦克风位于本地设备上。
 
 **Since:** 13
 
@@ -915,15 +927,15 @@ Before using this API, check whether the current device supports microphone bloc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'micBlockStatusChanged' | Yes | Event type. The event **'micBlockStatusChanged'** is triggered when the microphone blocked status is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceBlockStatusInfo&gt; | Yes | Callback used to return the microphone blocked status and device information. |
+| type | 'micBlockStatusChanged' | Yes | 事件回调类型，支持的事件为'micBlockStatusChanged'，当麦克风堵塞状态发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceBlockStatusInfo&gt; | Yes | 回调函数，返回麦克风被堵塞状态和设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## onAvailableDeviceChange
 
@@ -945,14 +957,14 @@ Subscribes to available device change events. When a device is connected/disconn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device usage. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | Yes | Callback used to obtain the device update details. |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device usage. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | Yes | Callback used to obtain the device update details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onDeviceChange
 
@@ -974,14 +986,14 @@ Subscribes to device change events. When a device is connected/disconnected, reg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceFlag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device flag. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | Yes | Callback used to obtain the device update details. |
+| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | Audio device flag. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | Yes | Callback used to obtain the device update details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onMicBlockStatusChanged
 
@@ -1003,13 +1015,13 @@ Subscribes microphone blocked events. Before subscribing, users should query whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceBlockStatusInfo&gt; | Yes | Callback used to obtain the microphone block status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceBlockStatusInfo&gt; | Yes | Callback used to obtain the microphone block status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onPreferOutputDeviceChangeForRendererInfo
 
@@ -1031,14 +1043,14 @@ Subscribes to prefer output device change events. When prefer device for target 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rendererInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio renderer information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed prefer devices information. |
+| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Audio renderer information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed prefer devices information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onPreferredInputDeviceChangeForCapturerInfo
 
@@ -1060,14 +1072,14 @@ Subscribes to preferred input device change events. When preferred device for ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capturerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio capturer information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed preferred devices information. |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | Audio capturer information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed preferred devices information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## setCommunicationDevice
 
@@ -1075,11 +1087,11 @@ Subscribes to preferred input device change events. When preferred device for ta
 setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets a communication device to the active state. This API uses an asynchronous callback to return the result.
+设置通信设备激活状态。使用callback异步回调。
 
-This API will be deprecated in a later version due to function design is changed. You are not advised to use it.
+该接口由于功能设计变化，将在后续版本废弃，不建议开发者使用。
 
-You are advised to use the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_provided by AVSession to switch between call devices.
+推荐使用AVSession提供的[设备切换组件](../../../media/avsession/using-switch-call-devices.md)，实现通话设备切换。
 
 **Since:** 9
 
@@ -1093,9 +1105,9 @@ You are advised to use the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_provided by AVSessi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device flag. |
-| active | boolean | Yes | Active state to set. **true** to set the device to the active state, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | 音频设备类型。 |
+| active | boolean | Yes | 是否设置设备为激活状态。true表示激活，false表示未激活。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置通信设备激活状态成功，err为undefined，否则为错误对象。 |
 
 ## setCommunicationDevice
 
@@ -1103,11 +1115,11 @@ You are advised to use the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_provided by AVSessi
 setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Promise<void>
 ```
 
-Sets a communication device to the active state. This API uses a promise to return the result.
+设置通信设备激活状态。使用Promise异步回调。
 
-This API will be deprecated in a later version due to function design is changed. You are not advised to use it.
+该接口由于功能设计变化，将在后续版本废弃，不建议开发者使用。
 
-You are advised to use the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_provided by AVSession to switch between call devices.
+推荐开发者使用AVSession提供的[设备切换组件](../../../media/avsession/using-switch-call-devices.md)，实现通话设备切换。
 
 **Since:** 9
 
@@ -1121,12 +1133,12 @@ You are advised to use the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_provided by AVSessi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Active audio device type. |
-| active | boolean | Yes | Active state to set. **true** to set the device to the active state, **false** otherwise. |
+| deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | 活跃音频设备类型。 |
+| active | boolean | Yes | 是否设置设备为激活状态。true表示激活，false表示未激活。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 

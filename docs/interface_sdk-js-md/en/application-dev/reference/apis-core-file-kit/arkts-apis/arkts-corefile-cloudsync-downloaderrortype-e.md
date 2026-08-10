@@ -1,6 +1,6 @@
 # DownloadErrorType
 
-Enumerates the device-cloud download error types.
+端云下载错误类型，为枚举类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the device-cloud download error types.
 NO_ERROR = 0
 ```
 
-No error.
+没有错误。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ No error.
 UNKNOWN_ERROR = 1
 ```
 
-Unknown error.
+未知错误。
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Unknown error.
 NETWORK_UNAVAILABLE = 2
 ```
 
-The network is unavailable.
+网络不可用。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ The network is unavailable.
 LOCAL_STORAGE_FULL = 3
 ```
 
-The local space is insufficient.
+本地空间不足。
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ The local space is insufficient.
 CONTENT_NOT_FOUND = 4
 ```
 
-The file is not found in the cloud space.
+云端空间未找到对应文件。
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ The file is not found in the cloud space.
 FREQUENT_USER_REQUESTS = 5
 ```
 
-The user requests are too frequent to respond.
+用户请求过于频繁。
 
 **Since:** 11
 

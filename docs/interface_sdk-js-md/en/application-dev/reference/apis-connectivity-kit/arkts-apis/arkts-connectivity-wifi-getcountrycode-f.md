@@ -1,5 +1,11 @@
 # getCountryCode
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getCountryCode
 
 ```TypeScript
@@ -28,16 +34,16 @@ Obtains the country code of this device.
 | --- | --- |
 | string | Returns the country code of this device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	let code = wifi.getCountryCode();
-	console.info("code:" + code);
+  let code = wifi.getCountryCode();
+  console.info("code:" + code);
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

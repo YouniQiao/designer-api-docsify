@@ -2,9 +2,9 @@
 
 ArrowPointPosition enumeration description
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 <!--Device-unnamed-declare enum ArrowPointPosition--><!--Device-unnamed-declare enum ArrowPointPosition-End-->
 
@@ -18,9 +18,9 @@ START = 'Start'
 
 Target start position
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,9 +38,9 @@ CENTER = 'Center'
 
 Target center position
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,9 +58,9 @@ END = 'End'
 
 Target end position
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

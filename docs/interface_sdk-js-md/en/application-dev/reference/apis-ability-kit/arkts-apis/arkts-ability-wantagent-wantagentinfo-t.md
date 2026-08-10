@@ -4,7 +4,7 @@
 export type WantAgentInfo = _WantAgentInfo
 ```
 
-Defines the WantAgentInfo object.
+WantAgentInfo对象。
 
 **Since:** 9
 

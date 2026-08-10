@@ -1,7 +1,6 @@
 # RestartFlag
 
-Enumerates the application restart flags. This enum is used as an input parameter of  
-[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+应用重启标志，[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口重启选项参数，该类型为枚举。
 
 **Since:** 9
 
@@ -17,7 +16,7 @@ Enumerates the application restart flags. This enum is used as an input paramete
 ALWAYS_RESTART = 0
 ```
 
-The application is restarted in all cases.
+总是重启应用。
 
 **Since:** 9
 
@@ -35,7 +34,7 @@ The application is restarted in all cases.
 RESTART_WHEN_JS_CRASH = 0x0001
 ```
 
-The application is restarted in the case of JS\_CRASH.
+发生JS_CRASH时重启应用。
 
 **Since:** 9
 
@@ -53,7 +52,7 @@ The application is restarted in the case of JS\_CRASH.
 RESTART_WHEN_APP_FREEZE = 0x0002
 ```
 
-The application is restarted in the case of APP\_FREEZE.
+发生APP_FREEZE时重启应用。
 
 **Since:** 9
 
@@ -71,7 +70,7 @@ The application is restarted in the case of APP\_FREEZE.
 NO_RESTART = 0xFFFF
 ```
 
-The application is not restarted in any case.
+总是不重启应用。
 
 **Since:** 9
 
@@ -89,7 +88,9 @@ The application is not restarted in any case.
 RESTART_WHEN_CPP_CRASH = 0x0004
 ```
 
-Restart if the current app process encounters a cppcrash
+发生CPP_CRASH时重启应用。
+
+**模型约束**：此接口仅可在Stage模型下使用。
 
 **Since:** 24
 

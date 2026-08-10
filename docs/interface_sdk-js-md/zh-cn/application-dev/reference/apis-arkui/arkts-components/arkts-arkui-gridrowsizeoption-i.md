@@ -24,7 +24,7 @@ lg?: Length
 
 非法值：按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 9
 
@@ -52,7 +52,7 @@ md?: Length
 
 非法值：按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 9
 
@@ -80,7 +80,7 @@ sm?: Length
 
 非法值：按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 9
 
@@ -108,7 +108,7 @@ xl?: Length
 
 非法值：按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 9
 
@@ -136,7 +136,7 @@ xs?: Length
 
 非法值：按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 9
 
@@ -164,7 +164,7 @@ xxl?: Length
 
 非法值：按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 9
 

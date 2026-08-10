@@ -1,5 +1,11 @@
 # getUserFileMgr (System API)
 
+## Modules to Import
+
+```TypeScript
+import { userFileManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## getUserFileMgr
 
 ```TypeScript
@@ -14,7 +20,7 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,15 +34,15 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the ability instance. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c-sys.md) | Yes | Context of the ability instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | UserFileManager** instance obtained. |
+| [UserFileManager](arkts-corefile-userfilemanager-userfilemanager-i-sys.md) | UserFileManager** instance obtained. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The userFileManager instance obtained is a global object. It is used by default in subsequent operations. If the code snippet is not added, an error will be reported indicating that mgr is not defined.

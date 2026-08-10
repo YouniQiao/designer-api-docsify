@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## finalKey
 
 ```TypeScript
@@ -22,7 +28,7 @@ finalKey: int
 
 如组合按键Ctrl+Alt+A中，A称为最终按键。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -46,7 +52,7 @@ finalKeyDownDuration: int
 
 当finalKeyDownDuration大于0时，isFinalKeyDown为true，则最终按键按下超过设置时长后触发回调函数；isFinalKeyDown为false，则最终按键按下到抬起时间小于设置时长时触发回调函数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -110,7 +116,7 @@ preKeys: Array<int>
 
 如组合按键Ctrl+Alt+A中，Ctrl+Alt称为前置按键。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 8
 
@@ -128,11 +134,11 @@ preKeys: Array<int>
 triggerType?: KeyCommandTriggerType
 ```
 
-触发模式。取值为PRESSED(1)、REPEAT\_PRESSED(2)或ALL\_RELEASED(3)。启用命令触发模式。一旦设置此值，isFinalKeyDown和isRepeat将被忽略。对于  
-[inputConsumer.on('key')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口该参数是可选参数，对于  
-[inputConsumer.onKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口该参数是必填参数。
+触发模式。取值为PRESSED(1)、REPEAT_PRESSED(2)或ALL_RELEASED(3)。启用命令触发模式。一旦设置此值，isFinalKeyDown和isRepeat将被忽略。对于  
+[inputConsumer.on('key')](inputConsumer.on(type: 'key', keyOptions: KeyOptions, callback: Callback&lt;KeyOptions&gt;))接口该参数是可选参数，对于  
+[inputConsumer.onKey](inputConsumer.onKey(keyOptions: KeyOptions, callback:KeyCommandCallback))接口该参数是必填参数。
 
-**类型：** KeyCommandTriggerType
+**类型：** [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)
 
 **起始版本：** 26.0.0
 

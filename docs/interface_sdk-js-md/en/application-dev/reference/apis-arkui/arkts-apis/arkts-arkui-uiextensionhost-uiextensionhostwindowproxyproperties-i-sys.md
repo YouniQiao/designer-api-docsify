@@ -1,6 +1,6 @@
 # UIExtensionHostWindowProxyProperties (System API)
 
-Defines information about the host application window and **UIExtensionComponent**.
+用于表示宿主应用窗口和UIExtensionComponent组件的信息。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Defines information about the host application window and **UIExtensionComponent
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { uiExtensionHost } from 'kits/@kit.ArkUI';
+```
+
 ## uiExtensionHostWindowProxyRect
 
 ```TypeScript
 uiExtensionHostWindowProxyRect: window.Rect
 ```
 
-Position, width, and height of the **UIExtensionComponent**.
+UIExtensionComponent的位置和宽高。
 
 **Type:** window.Rect
 

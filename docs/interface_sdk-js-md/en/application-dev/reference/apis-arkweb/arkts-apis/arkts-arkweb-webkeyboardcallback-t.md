@@ -18,11 +18,11 @@ The callback of onInterceptKeyboardAttach event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyboardCallbackInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of onInterceptKeyboardAttach.  |
+| keyboardCallbackInfo | [WebKeyboardCallbackInfo](../arkts-components/arkts-arkweb-webkeyboardcallbackinfo-i.md) | Yes | callback information of onInterceptKeyboardAttach. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the web keyboard options of this web component.  |
+| [WebKeyboardOptions](../arkts-components/arkts-arkweb-webkeyboardoptions-i.md) | Return the web keyboard options of this web component. |
 

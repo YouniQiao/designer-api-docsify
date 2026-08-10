@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from 'kits/@kit.MDMKit';
+```
+
 ## additionalDescription
 
 ```TypeScript
@@ -58,7 +64,7 @@ passwordAlgs?: PasswordAlgs
 
 处理口令数据使用的加密算法。设置后，PC/2in1设备上将原始口令处理成口令凭据会使用该参数指定的加密算法，其他设备无效果。
 
-**类型：** PasswordAlgs
+**类型：** [PasswordAlgs](arkts-mdm-securitymanager-passwordalgs-e.md)
 
 **起始版本：** 26.0.0
 
@@ -78,7 +84,7 @@ validityPeriod?: long
 
 密码有效期（单位：毫秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 

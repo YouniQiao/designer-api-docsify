@@ -20,7 +20,7 @@ The callback of onPhotoBrowserChanged event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| browserItemInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| browserItemInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes |  |
 
 **Return value:**
 

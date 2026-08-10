@@ -1,12 +1,18 @@
 # getAllEfficiencyResources (System API)
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## getAllEfficiencyResources
 
 ```TypeScript
 function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 ```
 
-Obtains all information about the requested efficiency resources, including the resource type. This API uses a promise to return the result.
+获取已申请的所有能效资源信息，如能效资源类型等，使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,18 +28,18 @@ Obtains all information about the requested efficiency resources, including the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EfficiencyResourcesInfo[]&gt; | Promise used to return all information about efficiency resources. |
+| Promise&lt;EfficiencyResourcesInfo[]&gt; | Promise对象，返回所有能效资源信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed for an energy resource request. |
-| [18700002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Failed to apply for memory. |
-| [18700004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700004-system-service-failure) | System service operation failed. |
+| 18700004 | System service operation failed. |
+| 202 | Not System App. |
+| 18700001 | Caller information verification failed for an energy resource request. |
+| 18700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

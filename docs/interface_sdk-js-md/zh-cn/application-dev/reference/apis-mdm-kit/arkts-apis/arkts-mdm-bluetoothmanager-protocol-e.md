@@ -16,7 +16,7 @@
 GATT = 0
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[GATT协议](../../../connectivity/terminology.md#gatt)。
 
 **起始版本：** 20
 
@@ -34,7 +34,7 @@ GATT = 0
 SPP = 1
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[SPP协议](../../../connectivity/terminology.md#spp)。
 
 **起始版本：** 20
 
@@ -52,7 +52,7 @@ SPP = 1
 OPP = 2
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[OPP协议](../../../connectivity/terminology.md#opp)。
 
 **起始版本：** 20
 

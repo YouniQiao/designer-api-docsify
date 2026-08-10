@@ -1,10 +1,17 @@
 # LayoutManager
 
-Implements a layout manager object.
-    **NOTE**  
-    
-    After the text content is changed, you must wait for the layout to be completed before you can obtain the most up-  
-    to-date layout information.
+布局管理器对象。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
+
+## 导入对象
+
+以Text组件为例，完整示例请参考Text组件的  
+[示例10（获取文本信息）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例10获取文本信息)。
+
+```ts controller: TextController = new TextController();let layoutManager: LayoutManager = this.controller.getLayoutManager();```
 
 **Since:** 12
 
@@ -20,7 +27,14 @@ Implements a layout manager object.
 getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | undefined
 ```
 
-Obtains the position of the character nearest to the specified coordinate.
+获取距离指定坐标最近的字符的位置信息。
+
+> **说明：**
+> 
+> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用
+> [getGlyphPositionAtCoordinate](arkts-arkui-layoutmanager-i.md#getglyphpositionatcoordinate)方法。
+> 
+> - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **Since:** 24
 
@@ -38,14 +52,14 @@ Obtains the position of the character nearest to the specified coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: [px]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| y | number | Yes | Y coordinate relative to the component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: [px]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| x | number | Yes | 相对于组件的横坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | Yes | 相对于组件的纵坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Character position. Returns **undefined** when [LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | 字符的位置信息。当[LayoutManager]{ |
 
 ## getCharacterPositionAtCoordinate
 
@@ -54,7 +68,7 @@ getCharacterPositionAtCoordinate(
     x: number, y: number, encoding?: TextEncoding): PositionWithAffinity | undefined
 ```
 
-Obtains the position of the character nearest to the specified coordinate based on the specified encoding type.
+根据指定编码类型，获取距离指定坐标最近的字符位置信息。
 
 **Since:** 26.0.0
 
@@ -72,15 +86,15 @@ Obtains the position of the character nearest to the specified coordinate based 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: [px]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| y | number | Yes | Y coordinate relative to the component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: [px]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding type used for the character position. The default value is **TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8**. |
+| x | number | Yes | 相对于组件的横坐标。&lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | Yes | 相对于组件的纵坐标。&lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | No | 字符位置使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Character position. Returns **undefined** when [LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | 字符的位置信息。当[LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -88,7 +102,19 @@ Obtains the position of the character nearest to the specified coordinate based 
 getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefined
 ```
 
-Obtains the character range and the actual glyph range based on the specified glyph range. If a text contains two Chinese characters and five letters, the glyph index range of the text is [0, 7]. A Chinese character occupies three characters, so the corresponding character index range is [0, 11]. If the specified index range is [0, 11],but there are only seven glyphs, the actual glyph index range is [0, 7].
+根据给定的文本字形范围来获取范围内的字符范围，以及实际的字形范围。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的字符范围信息。
+> 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
+
+| 文本 | 世 | 界 | H | e | l | l | o |  
+|---|---|---|---|---|---|---|---|  
+| 字形索引范围 | [0, 1] | [1, 2] | [2, 3] | [3, 4] | [4, 5] | [5, 6] | [6, 7] |  
+| 字符索引范围 | [0, 3] | [3, 6] | [6, 7] | [7, 8] | [8, 9] | [9, 10] | [10, 11] |
+
+其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 11]。如果指定的字形索引范围是[0, 11]，但字形一共只有7个，所以实际的字形索引范围是[0, 7]。
 
 **Since:** 24
 
@@ -106,13 +132,13 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Glyph range of the text. |
+| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | 文本的字形范围。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -120,7 +146,7 @@ Obtains the character range and the actual glyph range based on the specified gl
 getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined
 ```
 
-Obtains the character range and the actual glyph range based on the specified glyph range and encoding type.
+根据指定编码类型和文本字形范围，获取字符范围以及实际的字形范围。
 
 **Since:** 26.0.0
 
@@ -138,14 +164,14 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Glyph range of the text. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding type used for the character range. The default value is **TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8**. |
+| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | 文本的字形范围。 |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | No | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getGlyphPositionAtCoordinate
 
@@ -153,7 +179,14 @@ Obtains the character range and the actual glyph range based on the specified gl
 getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 ```
 
-Obtains the position of a glyph close to a given coordinate.
+获取较为接近给定坐标的字形的位置信息。
+
+> **说明：**
+> 
+> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用
+> [getCharacterPositionAtCoordinate](arkts-arkui-layoutmanager-i.md#getcharacterpositionatcoordinate)方法。
+> 
+> - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **Since:** 12
 
@@ -171,14 +204,14 @@ Obtains the position of a glyph close to a given coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: [px]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| y | number | Yes | Y coordinate relative to the component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: [px]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| x | number | Yes | 相对于组件的横坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | Yes | 相对于组件的纵坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Glyph position. |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | 字形位置信息。当[LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -186,7 +219,19 @@ Obtains the position of a glyph close to a given coordinate.
 getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefined
 ```
 
-Obtains the glyph range and the actual character range based on the specified character range. If the first glyph is a Chinese character, the glyph index range of the character is [0, 1]. A Chinese character occupies three characters, so the corresponding character index range is [0, 3]. If the specified character index range is [0, 1],one third of a Chinese character cannot be parsed, so the actual character index range is [0, 3].
+根据给定的文本字符范围来获取范围内的字形范围，以及实际的字符范围。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的字形范围信息。
+> 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
+
+| 文本 | 世 | 界 | H | e | l | l | o |  
+|---|---|---|---|---|---|---|---|  
+| 字形索引范围 | [0, 1] | [1, 2] | [2, 3] | [3, 4] | [4, 5] | [5, 6] | [6, 7] |  
+| 字符索引范围 | [0, 3] | [3, 6] | [6, 7] | [7, 8] | [8, 9] | [9, 10] | [10, 11] |
+
+其中文本“世”的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是[0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。
 
 **Since:** 24
 
@@ -204,13 +249,13 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| charRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Character range of the text. |
+| charRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | 文本的字符范围。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -218,7 +263,7 @@ Obtains the glyph range and the actual character range based on the specified ch
 getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined
 ```
 
-Obtains the glyph range and the actual character range based on the specified character range and encoding type.
+根据指定编码类型和文本字符范围，获取字形范围以及实际的字符范围。
 
 **Since:** 26.0.0
 
@@ -236,14 +281,14 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| charRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Character range of the text. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding type used for the character range. The default value is **TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8**. |
+| charRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | 文本的字符范围。 |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | No | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getLineCount
 
@@ -251,7 +296,11 @@ Obtains the glyph range and the actual character range based on the specified ch
 getLineCount(): number
 ```
 
-Obtains the total number of lines in the component.
+获取组件内容的总行数。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的总行数。
 
 **Since:** 12
 
@@ -269,7 +318,7 @@ Obtains the total number of lines in the component.
 
 | Type | Description |
 | --- | --- |
-| number | Total number of lines in the component. |
+| number | 组件内容的总行数。当[LayoutManager]{ |
 
 ## getLineMetrics
 
@@ -277,7 +326,11 @@ Obtains the total number of lines in the component.
 getLineMetrics(lineNumber: number): LineMetrics
 ```
 
-Obtains the information about the specified line, including line metrics, text style information, and font properties.
+获取指定行的行信息、文本样式信息、以及字体属性信息。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的行信息。
 
 **Since:** 12
 
@@ -295,13 +348,13 @@ Obtains the information about the specified line, including line metrics, text s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | number | Yes | Line number, which is zero-based. |
+| lineNumber | number | Yes | 行号，取值范围[0, 实际行数-1]，从0开始。当行号小于0或超出实际行数时，返回无效值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Information about the specified line, including line metrics, text style information, and font properties. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Returns an invalid value if the line number is less than 0 or exceeds the actual number of lines. |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) | 行信息、文本样式信息、以及字体属性信息。 &lt;br&gt;当行号小于0或超出实际行，返回无效值。当[LayoutManager]{ |
 
 ## getRectsForRange
 
@@ -309,7 +362,11 @@ Obtains the information about the specified line, including line metrics, text s
 getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>
 ```
 
-Obtains the drawing area information of the characters or placeholders within any range of the text, based on the specified rectangle width and height styles.
+根据给定的矩形区域宽度样式和高度样式，获取文本中任意区间范围内的字符或占位符所占的绘制区域信息。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的绘制区域信息。
 
 **Since:** 14
 
@@ -327,13 +384,13 @@ Obtains the drawing area information of the characters or placeholders within an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text range for which the drawing area is to be obtained. |
-| widthStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Width style of the rectangle. |
-| heightStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Height style of the rectangle. |
+| range | [TextRange](arkts-arkui-textrange-i.md) | Yes | 需要获取的区域的文本区间。 |
+| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | Yes | 返回的矩形区域的宽度规格，用于控制返回矩形的宽度计算方式，不同规格值会影响矩形的宽度边界。 |
+| heightStyle | [RectHeightStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectheightstyle-e.md) | Yes | 返回的矩形区域的高度规格，用于控制返回矩形的高度计算方式，不同规格值会影响矩形的高度边界。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextBox&gt; | Array of drawing rectangles. |
+| Array&lt;TextBox&gt; | 矩形区域数组。当[LayoutManager]{ |
 

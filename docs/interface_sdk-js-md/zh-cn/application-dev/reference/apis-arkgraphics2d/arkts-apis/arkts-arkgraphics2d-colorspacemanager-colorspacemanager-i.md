@@ -2,7 +2,7 @@
 
 当前色域对象实例。
 
-下列API示例中都需先使用[create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取到ColorSpaceManager实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
 
 **起始版本：** 9
 
@@ -11,6 +11,12 @@
 <!--Device-colorSpaceManager-interface ColorSpaceManager--><!--Device-colorSpaceManager-interface ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
+
+## 导入模块
+
+```TypeScript
+import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## getColorSpaceName
 
@@ -32,9 +38,15 @@ getColorSpaceName(): ColorSpace
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回色域类型枚举值。 |
+| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | 返回色域类型枚举值。 |
 
-**示例：**
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 18600001 | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+
+## 示例
 
 ```TypeScript
 try {
@@ -72,9 +84,15 @@ getGamma(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 返回色域gamma值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回色域gamma值。 |
 
-**示例：**
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 18600001 | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+
+## 示例
 
 ```TypeScript
 try {
@@ -112,9 +130,15 @@ getWhitePoint(): Array<double>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 返回色域白点值[x, y]。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 返回色域白点值[x, y]。 |
 
-**示例：**
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 18600001 | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+
+## 示例
 
 ```TypeScript
 try {

@@ -1,6 +1,6 @@
 # Compilation
 
-合集的定义。继承自[OperResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
 
 **继承/实现关系：** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -11,6 +11,12 @@
 <!--Device-avMusicTemplate-interface Compilation extends OperResult--><!--Device-avMusicTemplate-interface Compilation extends OperResult-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
 
 ## hasMoreData
 
@@ -60,7 +66,7 @@ memberMediaType: EntityType
 
 合集的媒体资源类型。
 
-**类型：** EntityType
+**类型：** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **起始版本：** 23
 
@@ -100,7 +106,7 @@ topElements: MediaEntity[]
 
 合集的内容。
 
-**类型：** MediaEntity[]
+**类型：** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
 **起始版本：** 23
 
@@ -120,7 +126,7 @@ totalSize: int
 
 合集的总个数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

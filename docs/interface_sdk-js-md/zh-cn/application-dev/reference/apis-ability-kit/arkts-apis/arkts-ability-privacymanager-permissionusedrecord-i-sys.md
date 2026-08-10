@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## accessCount
 
 ```TypeScript
@@ -20,7 +26,7 @@ accessCount: int
 
 该权限访问总次数，表示在查询时间窗口内成功使用该权限的累计次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ accessCount: int
 accessRecords: Array<UsedRecordDetail>
 ```
 
-访问记录集合，仅当flag为FLAG\_PERMISSION\_USAGE\_DETAIL时生效。
+访问记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。
 
 默认值：查询最近10条成功访问记录。
 
@@ -84,7 +90,7 @@ lastAccessDuration: long
 
 最后一次访问时长。单位为：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -104,7 +110,7 @@ lastAccessTime: long
 
 最后一次访问时间。单位为：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -124,7 +130,7 @@ lastRejectTime: long
 
 最后一次拒绝时间。单位为：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -144,7 +150,7 @@ permissionName: Permissions
 
 权限名，用于标识当前统计记录对应的敏感权限。
 
-**类型：** Permissions
+**类型：** [Permissions](arkts-ability-permissions-t.md)
 
 **起始版本：** 9
 
@@ -164,7 +170,7 @@ rejectCount: int
 
 该权限拒绝总次数，表示在查询时间窗口内权限访问失败或被拒绝的累计次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -182,7 +188,7 @@ rejectCount: int
 rejectRecords: Array<UsedRecordDetail>
 ```
 
-拒绝记录集合，仅当flag为FLAG\_PERMISSION\_USAGE\_DETAIL时生效。
+拒绝记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。
 
 默认值：查询最近10条失败或拒绝记录。
 

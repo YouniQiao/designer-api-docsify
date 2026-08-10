@@ -18,7 +18,7 @@ Enumerates the color formats supported by the video thumbnail.
 RGB_565 = 2
 ```
 
-RGB\_565.
+RGB_565.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ RGB\_565.
 RGBA_8888 = 3
 ```
 
-RGBA\_8888.
+RGBA_8888.
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ RGBA\_8888.
 RGB_888 = 5
 ```
 
-RGB\_888.
+RGB_888.
 
 **Since:** 11
 

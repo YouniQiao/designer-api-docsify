@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## on('colorChange')
 
 ```TypeScript
@@ -25,7 +31,7 @@ function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperT
 | type | 'colorChange' | 是 |  |
 | callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | 是 |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {

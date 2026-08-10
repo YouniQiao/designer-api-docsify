@@ -4,8 +4,7 @@
 export type AccessibilityExtensionContext = _AccessibilityExtensionContext.default
 ```
 
-Defines the context of the accessibility extension. For details, see  
-[AccessibilityExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示辅助功能扩展的上下文环境，请参考[AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)。
 
 **Since:** 10
 

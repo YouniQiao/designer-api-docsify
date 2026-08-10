@@ -11,6 +11,12 @@
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -25,9 +31,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | 管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_创建实例。 |
-| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 管理铃声属性。在调用ToneAttrs\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_12+\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的接口前，需要先通过  [createCustomizedToneAttrs]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_或  [getDefaultRingtoneAttrs]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、  [getRingtoneAttrList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_等方法获取实例。 |
-| [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i.md) | 系统铃音的振动属性。在调用ToneHapticsAttrs\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_14+\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的接口前，需要先通过  [getToneHapticsList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_或  [getHapticsAttrsSyncedWithTone]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_方法获取实例。 |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | 管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f.md#getsystemsoundmanager)创建实例。 |
+| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 管理铃声属性。在调用ToneAttrs&lt;sup&gt;12+&lt;/sup&gt;的接口前，需要先通过  [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createcustomizedtoneattrs)或  [getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getdefaultringtoneattrs)、  [getRingtoneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneattrlist)等方法获取实例。 |
+| [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i.md) | 系统铃音的振动属性。在调用ToneHapticsAttrs&lt;sup&gt;14+&lt;/sup&gt;的接口前，需要先通过  [getToneHapticsList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gettonehapticslist)或  [getHapticsAttrsSyncedWithTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gethapticsattrssyncedwithtone)方法获取实例。 |
 | [ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i.md) | 系统铃音的振动设置。 |
 
 ### 枚举
@@ -41,7 +47,7 @@
 | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | 枚举，系统铃声类型。 |
 | [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e.md) | 枚举，铃声自定义类型。 |
 | [ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e.md) | 枚举，系统振动风格定义。  \| 名称 \| 值 \| 说明 \|  \| ----------------------------- \| -- \| -------------------- \|  \| STANDARD\| 0 \| 标准振动风格。 \|  \| GENTLE \| 1 \| 轻柔振动风格。 \| |
-| [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e.md) | 枚举，系统铃音场景的振动模式。  \| 名称 \| 值 \| 说明 \|  \| ----------------------------- \| -- \| -------------------- \|  \| NONE \| 0 \| 无振动模式。 \|  \| SYNC \| 1 \| 与铃音同步模式。 \|  \| NON\_\_\_ESCAPED\_UNDERSCORE\_\_\_SYNC \| 2 \| 非同步模式。 \| |
+| [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e.md) | 枚举，系统铃音场景的振动模式。  \| 名称 \| 值 \| 说明 \|  \| ----------------------------- \| -- \| -------------------- \|  \| NONE \| 0 \| 无振动模式。 \|  \| SYNC \| 1 \| 与铃音同步模式。 \|  \| NON_SYNC \| 2 \| 非同步模式。 \| |
 | [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e.md) | 枚举，系统铃音的振动类型。 |
 
 ### 类型

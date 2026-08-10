@@ -24,7 +24,7 @@ decoration: DecorationStyleResult
 
 文本装饰线样式信息。
 
-**类型：** DecorationStyleResult
+**类型：** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
 
 **起始版本：** 10
 
@@ -46,7 +46,7 @@ fontColor: ResourceColor
 
 文本颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
 
@@ -134,7 +134,7 @@ fontStyle: FontStyle
 
 字体样式。
 
-**类型：** FontStyle
+**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **起始版本：** 10
 
@@ -248,7 +248,7 @@ strokeColor?: ResourceColor
 
 文本描边颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -270,9 +270,9 @@ strokeJoinStyle?: StrokeJoinStyle
 
 文本描边拐角样式。
 
-默认值：StrokeJoinStyle.MITER\_JOIN。
+默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** StrokeJoinStyle
+**类型：** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
@@ -294,7 +294,7 @@ strokeWidth?: number
 
 文本描边宽度。
 
-单位为\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
 
 **类型：** number
 
@@ -318,7 +318,7 @@ textBackgroundStyle?: TextBackgroundStyle
 
 文本背景样式。
 
-**类型：** TextBackgroundStyle
+**类型：** [TextBackgroundStyle](../arkts-apis/arkts-arkui-span-textbackgroundstyle-i.md)
 
 **起始版本：** 18
 

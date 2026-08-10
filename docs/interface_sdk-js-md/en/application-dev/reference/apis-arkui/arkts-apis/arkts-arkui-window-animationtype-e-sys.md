@@ -1,6 +1,6 @@
 # AnimationType
 
-Enumerates the types of window animations.
+窗口动画类型枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the types of window animations.
 FADE_IN = 1
 ```
 
-Fade-in animation, which takes effect during window display.
+表示窗口动画类型为淡入。淡入动画在窗口显示过程中生效。
 
 **Since:** 20
 

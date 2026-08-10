@@ -1,6 +1,6 @@
 # FrameMetrics
 
-Enumerates the metrics for frame performance.
+帧率指标。
 
 **Since:** 22
 
@@ -10,13 +10,19 @@ Enumerates the metrics for frame performance.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## firstDrawFrame
 
 ```TypeScript
 firstDrawFrame: boolean
 ```
 
-Whether the frame is the first frame. **true** for first frame, **false** otherwise.
+是否是首帧。true表示首帧，false表示非首帧。
 
 **Type:** boolean
 
@@ -34,9 +40,9 @@ Whether the frame is the first frame. **true** for first frame, **false** otherw
 inputHandlingDuration: long
 ```
 
-Duration of gesture handling in a frame, in nanoseconds.
+一帧中的手势处理耗时（单位：纳秒）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 22
 
@@ -52,9 +58,9 @@ Duration of gesture handling in a frame, in nanoseconds.
 layoutMeasureDuration: long
 ```
 
-Duration of layout measurement in a frame, in nanoseconds.
+一帧中的布局测量耗时（单位：纳秒）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 22
 
@@ -70,9 +76,9 @@ Duration of layout measurement in a frame, in nanoseconds.
 vsyncTimestamp: long
 ```
 
-Timestamp marking the start of the current frame, in nanoseconds.
+当前帧的开始时间戳（单位：纳秒）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 22
 

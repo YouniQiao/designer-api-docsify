@@ -10,6 +10,12 @@ The **motion** module provides the user motion awareness capabilities, including
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
+## Modules to Import
+
+```TypeScript
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## Summary
 
 ### Functions

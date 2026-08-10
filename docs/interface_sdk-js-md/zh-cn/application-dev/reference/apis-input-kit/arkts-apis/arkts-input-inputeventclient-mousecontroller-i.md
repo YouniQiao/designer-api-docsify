@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## beginAxis
 
 ArkTS-Dyn:
@@ -42,8 +48,8 @@ beginAxis(axis: Axis, value: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 轴类型。 |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 轴值。 |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 轴值。 |
 
 **返回值：**
 
@@ -55,11 +61,11 @@ beginAxis(axis: Axis, value: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 4300001 | The axis event is in progress. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { inputEventClient, Axis } from '@kit.InputKit';
@@ -120,7 +126,7 @@ endAxis(axis: Axis): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 轴类型。 |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
 
 **返回值：**
 
@@ -132,11 +138,11 @@ endAxis(axis: Axis): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 4300001 | The axis event is not in progress. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 参见[beginAxis](#beginaxis)示例。
 
@@ -170,9 +176,9 @@ moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标显示器ID。 |
-| displayX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标位置相对于显示器左边缘的X坐标，单位为像素（px）。若超出显示器有效范围，则实际坐标值会规约到有效范围[0, 显示器宽度-1]。 |
-| displayY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标位置相对于显示器上边缘的Y坐标，单位为像素（px）。若超出显示器有效范围，则实际坐标值会规约到有效范围[0, 显示器高度-1]。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标显示器ID。 |
+| displayX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标位置相对于显示器左边缘的X坐标，单位为像素（px）。若超出显示器有效范围，则实际坐标值会规约到有效范围[0, 显示器宽度-1]。 |
+| displayY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标位置相对于显示器上边缘的Y坐标，单位为像素（px）。若超出显示器有效范围，则实际坐标值会规约到有效范围[0, 显示器高度-1]。 |
 
 **返回值：**
 
@@ -184,11 +190,11 @@ moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) | The display does not exist. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 4300002 | The display does not exist. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
@@ -241,7 +247,7 @@ pressButton(button: Button): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| button | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要按下的鼠标按键。 |
+| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 | 要按下的鼠标按键。 |
 
 **返回值：**
 
@@ -253,11 +259,11 @@ pressButton(button: Button): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is already pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 4300001 | The mouse button is already pressed. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { inputEventClient, Button } from '@kit.InputKit';
@@ -314,7 +320,7 @@ releaseButton(button: Button): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| button | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要抬起的鼠标按键。 |
+| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 | 要抬起的鼠标按键。 |
 
 **返回值：**
 
@@ -326,11 +332,11 @@ releaseButton(button: Button): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is not pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 4300001 | The mouse button is not pressed. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 参见[pressButton](#pressbutton)示例。
 
@@ -364,8 +370,8 @@ updateAxis(axis: Axis, value: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 轴类型。 |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 轴值。 |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 轴值。 |
 
 **返回值：**
 
@@ -377,11 +383,11 @@ updateAxis(axis: Axis, value: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 4300001 | The axis event is not in progress. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 参见[beginAxis](#beginaxis)示例。
 

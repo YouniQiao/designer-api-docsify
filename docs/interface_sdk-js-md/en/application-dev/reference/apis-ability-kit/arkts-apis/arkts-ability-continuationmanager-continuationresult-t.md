@@ -4,7 +4,7 @@
 export type ContinuationResult = _ContinuationResult
 ```
 
-Defines the device information returned by the continuation management entry.
+流转管理入口返回的设备信息。
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Defines the device information returned by the continuation management entry.
 
 **Deprecated since:** 22
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
+**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 
 **Model restriction:** This API can be used only in the stage model.
 

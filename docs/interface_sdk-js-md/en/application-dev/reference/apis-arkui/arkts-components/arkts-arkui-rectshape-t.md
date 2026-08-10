@@ -4,7 +4,7 @@
 declare type RectShape = import('../api/@ohos.arkui.shape').RectShape
 ```
 
-Defines the RectShape type.
+导入RectShape类型对象。
 
 **Since:** 12
 

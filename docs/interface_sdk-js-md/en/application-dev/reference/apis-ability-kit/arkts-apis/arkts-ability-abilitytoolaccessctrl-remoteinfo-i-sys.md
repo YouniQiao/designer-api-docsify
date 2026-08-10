@@ -1,6 +1,6 @@
 # RemoteInfo (System API)
 
-Remote device information.
+远端设备信息。
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ Remote device information.
 domainId: string
 ```
 
-Domain ID.
+域ID。
 
 **Type:** string
 
@@ -38,9 +38,9 @@ Domain ID.
 remoteControlParams?: RemoteControlParams
 ```
 
-interaction params in remote control.
+远程控制中的交互参数。
 
-**Type:** RemoteControlParams
+**Type:** [RemoteControlParams](arkts-ability-abilitytoolaccessctrl-remotecontrolparams-i-sys.md)
 
 **Since:** 26.1.0
 
@@ -58,7 +58,7 @@ interaction params in remote control.
 remoteId: string
 ```
 
-Remote device ID.
+远端设备ID。
 
 **Type:** string
 
@@ -78,9 +78,9 @@ Remote device ID.
 role: Role
 ```
 
-Device role.
+设备角色。
 
-**Type:** Role
+**Type:** [Role](arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
 
 **Since:** 26.1.0
 

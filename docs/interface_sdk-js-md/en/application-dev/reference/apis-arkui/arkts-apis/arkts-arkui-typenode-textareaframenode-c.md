@@ -1,6 +1,6 @@
 # TextAreaFrameNode
 
-Define the TextArea type of FrameNode.
+定义TextArea类型的FrameNode。
 
 **Inheritance/Implementation:** TextAreaFrameNode extends [TypedFrameNode<TextAreaAttribute>](TypedFrameNode<TextAreaAttribute>)
 
@@ -18,7 +18,7 @@ Define the TextArea type of FrameNode.
 abstract initialize(value?: TextAreaOptions): TextAreaAttribute
 ```
 
-Initialize TextArea FrameNode.
+初始化TextArea类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize TextArea FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| value | [TextAreaOptions](../arkts-components/arkts-arkui-textareaoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) |  |
 

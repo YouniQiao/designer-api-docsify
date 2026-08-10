@@ -4,13 +4,11 @@
 type OnResultFn = (parameter: AbilityResult) => void
 ```
 
-Called when the UIExtensionAbility is terminated.
+拉起UIExtensionAbility终止时的回调。
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-type OnResultFn = (parameter: AbilityResult) => void--><!--Device-unnamed-type OnResultFn = (parameter: AbilityResult) => void-End-->
 
@@ -20,5 +18,5 @@ Called when the UIExtensionAbility is terminated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Result returned when [terminateSelfWithResult]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ is called to terminate the UIExtensionAbility.  |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | 当调用 [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateselfwithresult) 方法终止UIExtensionAbility时返回的结果。 |
 

@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## off('accessibilityStateChange')
 
 ```TypeScript
 function off(type: 'accessibilityStateChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the state changes of the accessibility application. This API uses an asynchronous callback to return the result.
+取消监听辅助应用启用状态变化事件，使用callback异步回调。
 
 **Since:** 7
 
@@ -24,16 +30,16 @@ Unsubscribes from the state changes of the accessibility application. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'accessibilityStateChange' | Yes | Event type, which is set to **'accessibilityStateChange'** in this API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [accessibility.on('accessibilityStateChange')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
+| type | 'accessibilityStateChange' | Yes | 取消监听的事件名，固定为‘accessibilityStateChange’，即辅助应用启用状态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数，取消指定callback对象的事件响应。需与 [accessibility.on('accessibilityStateChange')](accessibility.on(type: 'accessibilityStateChange', callback: Callback&lt;boolean&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -50,7 +56,7 @@ accessibility.off('accessibilityStateChange', (data: boolean) => {
 function off(type: 'touchGuideStateChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the state changes in touch guide mode. This API uses an asynchronous callback to return the result.
+取消监听触摸浏览启用状态变化事件，使用callback异步回调。
 
 **Since:** 7
 
@@ -68,16 +74,16 @@ Unsubscribes from the state changes in touch guide mode. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'touchGuideStateChange' | Yes | Event type, which is set to **'touchGuideStateChange'** in this API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [accessibility.on('touchGuideStateChange')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| type | 'touchGuideStateChange' | Yes | 取消监听的事件名，固定为‘touchGuideStateChange’，即触摸浏览启用状态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数，取消指定callback对象的事件响应。需与 [accessibility.on('touchGuideStateChange')](accessibility.on(type: 'touchGuideStateChange', callback: Callback&lt;boolean&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -94,7 +100,7 @@ accessibility.off('touchGuideStateChange', (data: boolean) => {
 function off(type: 'screenReaderStateChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the state changes of the screen reader. This API uses an asynchronous callback to return the result.
+取消监听屏幕朗读启用状态变化事件，使用callback异步回调。
 
 **Since:** 18
 
@@ -112,16 +118,16 @@ Unsubscribes from the state changes of the screen reader. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'screenReaderStateChange' | Yes | Event type, which is set to **'screenReaderStateChange'** in this API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [accessibility.on('screenReaderStateChange')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| type | 'screenReaderStateChange' | Yes | 取消监听的事件名，固定为‘screenReaderStateChange’，即屏幕朗读启用状态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数，取消指定callback对象的事件响应。需与 [accessibility.on('screenReaderStateChange')](accessibility.on(type: 'screenReaderStateChange', callback: Callback&lt;boolean&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -138,7 +144,7 @@ accessibility.off('screenReaderStateChange', (data: boolean) => {
 function off(type: 'touchModeChange', callback?: Callback<string>): void
 ```
 
-Unsubscribes from the single- or double-touch event changes in touch guide mode. This API uses an asynchronous callback to return the result.
+取消监听触摸浏览功能下的单击/双击操作模式变化事件，使用callback异步回调。
 
 **Since:** 20
 
@@ -156,16 +162,16 @@ Unsubscribes from the single- or double-touch event changes in touch guide mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'touchModeChange' | Yes | Event type, which is set to **'touchModeChange'** in this API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | No | Callback used to unregister. The value must be the same as the value of callback in [accessibility.on('touchModeChange')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| type | 'touchModeChange' | Yes | 取消监听的事件名，固定为‘touchModeChange’，即触摸浏览功能下的单击/双击操作模式变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 回调函数，取消指定callback对象的事件响应。需与 [accessibility.on('touchModeChange')](accessibility.on(type: 'touchModeChange', callback: Callback&lt;string&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

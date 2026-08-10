@@ -1,6 +1,6 @@
 # AvoidAreaInfo
 
-Represents the information about the avoidance area of the window.
+用于表示窗口避让区的信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the information about the avoidance area of the window.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiExtension } from 'kits/@kit.ArkUI';
+```
+
 ## area
 
 ```TypeScript
 area: window.AvoidArea
 ```
 
-Avoidance area for the content of the window.
+窗口内容避让区域。
 
 **Type:** window.AvoidArea
 
@@ -38,7 +44,7 @@ Avoidance area for the content of the window.
 type: window.AvoidAreaType
 ```
 
-Type of the avoidance area of the window.
+窗口避让区类型。
 
 **Type:** window.AvoidAreaType
 

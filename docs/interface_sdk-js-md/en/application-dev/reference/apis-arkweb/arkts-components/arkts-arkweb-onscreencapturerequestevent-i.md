@@ -1,6 +1,6 @@
 # OnScreenCaptureRequestEvent
 
-Represents the callback invoked when a screen capture request is received.
+定义通知收到屏幕捕获请求。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents the callback invoked when a screen capture request is received.
 handler: ScreenCaptureHandler
 ```
 
-User operation.
+通知Web组件用户操作行为。
 
-**Type:** ScreenCaptureHandler
+**Type:** [ScreenCaptureHandler](../arkts-apis/arkts-arkweb-web-screencapturehandler-c.md)
 
 **Since:** 12
 

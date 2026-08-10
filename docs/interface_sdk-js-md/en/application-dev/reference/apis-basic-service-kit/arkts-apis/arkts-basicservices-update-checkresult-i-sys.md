@@ -1,6 +1,6 @@
 # CheckResult (System API)
 
-Indicates the version check result.
+版本检查结果。
 
 **Since:** 9
 
@@ -12,14 +12,19 @@ Indicates the version check result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isExistNewVersion
 
 ```TypeScript
 isExistNewVersion: boolean
 ```
 
-Whether a new version is available. The value **true** indicates that a new version is available, and the value  
-**false** indicates the opposite.
+是否有新版本。true表示有新版本，false表示没有新版本。
 
 **Type:** boolean
 
@@ -39,9 +44,9 @@ Whether a new version is available. The value **true** indicates that a new vers
 newVersionInfo: NewVersionInfo
 ```
 
-Information about the new version.
+新版本数据。
 
-**Type:** NewVersionInfo
+**Type:** [NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)
 
 **Since:** 9
 

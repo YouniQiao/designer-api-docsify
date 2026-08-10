@@ -12,14 +12,19 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## onEvent
 
 ```TypeScript
 onEvent: (info: SysEventInfo) => void
 ```
 
-订阅事件的回调方法(info: [SysEventInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) =  
-    void。
+订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void。
 
 **起始版本：** 9
 
@@ -35,7 +40,7 @@ onEvent: (info: SysEventInfo) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | 是 |  |
 
 ## onServiceDied
 
@@ -43,8 +48,7 @@ onEvent: (info: SysEventInfo) => void
 onServiceDied: () => void
 ```
 
-系统事件服务关闭的回调方法() =  
-    void。
+系统事件服务关闭的回调方法() => void。
 
 **起始版本：** 9
 
@@ -64,7 +68,7 @@ rules: WatchRule[]
 
 订阅对象数组，每个订阅者对象包含多个订阅规则。
 
-**类型：** WatchRule[]
+**类型：** [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)[]
 
 **起始版本：** 9
 

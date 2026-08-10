@@ -80,7 +80,7 @@ SLIDE_DOWN = 3
 
 **说明：**
 
-该接口仅支持在[半模态转场]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中使用。
+该接口仅支持在[半模态转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中使用。
 
 **起始版本：** 12
 

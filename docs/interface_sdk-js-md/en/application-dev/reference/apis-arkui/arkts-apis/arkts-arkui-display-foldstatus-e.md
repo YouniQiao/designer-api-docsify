@@ -1,11 +1,14 @@
 # FoldStatus
 
-Enumerates the fold statuses of a foldable device. For dual-fold axis devices, when oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively.
-    **NOTE**
-    Devices with only one fold axis can be in the **FOLD\_STATUS\_EXPANDED**, **FOLD\_STATUS\_FOLDED**, or  
-    **FOLD\_STATUS\_HALF\_FOLDED** state.
-    Devices with two fold axes can be in any of the states provided in the table above, except for  
-    **FOLD\_STATUS\_UNKNOWN**, which indicates an unusable fold status.
+当前可折叠设备的折叠状态枚举。如果是双折轴设备，则在充电口朝下的状态下，从右到左分别是折轴一和折轴二。
+
+> **说明：**
+
+> 只有一个折轴的产品包含FOLD_STATUS_EXPANDED、FOLD_STATUS_FOLDED、FOLD_STATUS_HALF_FOLDED三种折叠状态。
+
+> 具有两个折轴的产品包含上表除FOLD_STATUS_UNKNOWN以外的九种折叠状态。
+
+> FOLD_STATUS_UNKNOWN是一种不可用的折叠状态。
 
 **Since:** 10
 
@@ -21,7 +24,7 @@ Enumerates the fold statuses of a foldable device. For dual-fold axis devices, w
 FOLD_STATUS_UNKNOWN = 0
 ```
 
-The fold status of the device is unknown or the device cannot be folded.
+表示设备当前折叠状态无法确定或设备本身不可折叠。
 
 **Since:** 10
 
@@ -39,7 +42,7 @@ The fold status of the device is unknown or the device cannot be folded.
 FOLD_STATUS_EXPANDED = 1
 ```
 
-The device is fully open. For dual-fold axis devices, the first fold axis is fully open, and the second fold axis is folded.
+表示设备当前折叠状态为完全展开。如果是双折轴设备，则表示折轴一折叠状态为完全展开，折轴二折叠状态为折叠。
 
 **Since:** 10
 
@@ -57,7 +60,7 @@ The device is fully open. For dual-fold axis devices, the first fold axis is ful
 FOLD_STATUS_FOLDED = 2
 ```
 
-The device is folded (completely closed). For dual-fold axis devices, both the first and second fold axes are folded.
+表示设备当前折叠状态为折叠。如果是双折轴设备，则表示折轴一和折轴二的折叠状态均为折叠。
 
 **Since:** 10
 
@@ -75,7 +78,7 @@ The device is folded (completely closed). For dual-fold axis devices, both the f
 FOLD_STATUS_HALF_FOLDED = 3
 ```
 
-The device is half-folded, somehow between fully open and completely closed. For dual-fold axis devices, the first fold axis is half-folded, and the second fold axis is folded.
+表示设备当前折叠状态为半折叠。半折叠指完全展开和折叠之间的状态。如果是双折轴设备，则表示折轴一折叠状态为半折叠，折轴二折叠状态为折叠。
 
 **Since:** 10
 
@@ -93,7 +96,7 @@ The device is half-folded, somehow between fully open and completely closed. For
 FOLD_STATUS_EXPANDED_WITH_SECOND_EXPANDED = 11
 ```
 
-For dual-fold axis devices, both the first and second fold axes are fully open.
+表示双折轴设备折轴一和折轴二的折叠状态均为完全展开。
 
 **Since:** 15
 
@@ -111,7 +114,7 @@ For dual-fold axis devices, both the first and second fold axes are fully open.
 FOLD_STATUS_EXPANDED_WITH_SECOND_HALF_FOLDED = 21
 ```
 
-For dual-fold axis devices, the first fold axis is fully open, and the second fold axis is half-folded.
+表示双折轴设备折轴一折叠状态为完全展开，折轴二折叠状态为半折叠。
 
 **Since:** 15
 
@@ -129,7 +132,7 @@ For dual-fold axis devices, the first fold axis is fully open, and the second fo
 FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22
 ```
 
-For dual-fold axis devices, the first fold axis is folded, and the second fold axis is fully folded.
+表示双折轴设备折轴一折叠状态为折叠，折轴二折叠状态为半折叠。
 
 **Since:** 15
 
@@ -147,7 +150,7 @@ For dual-fold axis devices, the first fold axis is folded, and the second fold a
 FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23
 ```
 
-For dual-fold axis devices, both the first and second fold axes are half-folded.
+表示双折轴设备折轴一和折轴二的折叠状态均为半折叠。
 
 **Since:** 15
 
@@ -165,7 +168,7 @@ For dual-fold axis devices, both the first and second fold axes are half-folded.
 FOLD_STATUS_FOLDED_WITH_SECOND_EXPANDED = 12
 ```
 
-For dual-fold axis devices, the first fold axis is folded, and the second fold axis is fully open.
+表示双折轴设备折轴一折叠状态为折叠，折轴二折叠状态为完全展开。
 
 **Since:** 15
 
@@ -183,7 +186,7 @@ For dual-fold axis devices, the first fold axis is folded, and the second fold a
 FOLD_STATUS_HALF_FOLDED_WITH_SECOND_EXPANDED = 13
 ```
 
-For dual-fold axis devices, the first fold axis is half-folded, and the second fold axis is fully open.
+表示双折轴设备折轴一折叠状态为半折叠，折轴二折叠状态为完全展开。
 
 **Since:** 15
 

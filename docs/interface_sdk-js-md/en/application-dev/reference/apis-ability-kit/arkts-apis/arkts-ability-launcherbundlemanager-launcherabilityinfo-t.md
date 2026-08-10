@@ -4,7 +4,7 @@
 export type LauncherAbilityInfo = _LauncherAbilityInfo
 ```
 
-Defines the information about the launcher ability.
+LauncherAbilityInfo信息。
 
 **Since:** 18
 

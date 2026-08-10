@@ -1,7 +1,6 @@
 # ChildProcess
 
-ChildProcess is the base class for you to customize child processes. When starting a child process through  
-[childProcessManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, you must inherit this class and override the entrypoint method.
+开发者自定义子进程的基类。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，需要继承此类并重写入口方法。
 
 **Since:** 11
 
@@ -11,14 +10,19 @@ ChildProcess is the base class for you to customize child processes. When starti
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { ChildProcess } from 'kits/@kit.AbilityKit';
+```
+
 ## onStart
 
 ```TypeScript
 onStart(args?: ChildProcessArgs): void
 ```
 
-Entrypoint method of the child process. This callback is triggered when the child process is started through  
-[childProcessManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+子进程的入口方法，通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程后调用。
 
 **Since:** 11
 
@@ -34,9 +38,9 @@ Entrypoint method of the child process. This callback is triggered when the chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters transferred to the child process. |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | No | 传递到子进程的参数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';

@@ -1,7 +1,6 @@
 # DescriptionOptions (System API)
 
-Defines the description options, which specifies the format and language of the description file. The object contains the **format** and **language** fields. **format** indicates the description file format, which can be  
-**STANDARD** or **SIMPLIFIED**. **language** indicates the language code, which can be **zh-cn**.
+描述文件选项，用于指定描述文件的格式和语言。对象包含format(描述文件格式，可选STANDARD或SIMPLIFIED)和language(语言代码，如'zh-cn')字段。
 
 **Since:** 9
 
@@ -13,15 +12,21 @@ Defines the description options, which specifies the format and language of the 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## format
 
 ```TypeScript
 format: DescriptionFormat
 ```
 
-Format of the description file. The value **STANDARD** is applicable to the scenario where complete description is required; **SIMPLIFIED** is applicable to the scenario where only simplified description is required.
+描述文件格式。取值原则：STANDARD适合需要完整描述信息的场景，SIMPLIFIED适合仅需精简描述信息的场景。
 
-**Type:** DescriptionFormat
+**Type:** [DescriptionFormat](arkts-basicservices-update-descriptionformat-e-sys.md)
 
 **Since:** 9
 
@@ -39,8 +44,7 @@ Format of the description file. The value **STANDARD** is applicable to the scen
 language: string
 ```
 
-Language of the description file. The value is a string of 2 to 10 characters, for example, **zh-cn** (Chinese),  
-**en-us** (English), and **ja-jp** (Japanese). Valid characters include letters (case sensitive) and hyphens (-).Lowercase letters are recommended. An exception is thrown if the value is out of range or contains invalid characters.
+描述文件语言，格式如'zh-cn'(中文)、'en-us'(英文)、'ja-jp'(日文)等，长度范围[2，10]，单位：字符。有效字符包括字母（区分大小写）和连字符（-），建议使用小写格式。超出范围或包含无效字符时抛出异常。
 
 **Type:** string
 

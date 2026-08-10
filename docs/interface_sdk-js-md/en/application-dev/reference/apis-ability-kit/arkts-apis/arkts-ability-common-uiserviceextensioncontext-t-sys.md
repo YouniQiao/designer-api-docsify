@@ -4,7 +4,7 @@
 export type UIServiceExtensionContext = _UIServiceExtensionContext.default
 ```
 
-Level-2 module UIServiceExtensionContext.
+UIServiceExtensionContext二级模块。
 
 **Since:** 14
 

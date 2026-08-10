@@ -12,6 +12,12 @@ Indicates IMS registration information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## imsRegState
 
 ```TypeScript
@@ -20,7 +26,7 @@ imsRegState: ImsRegState
 
 Indicates the registration status of the ims service.
 
-**Type:** ImsRegState
+**Type:** [ImsRegState](arkts-telephony-radio-imsregstate-e-sys.md)
 
 **Since:** 9
 
@@ -40,7 +46,7 @@ imsRegTech: ImsRegTech
 
 Indicates the mode of ims radio technology.
 
-**Type:** ImsRegTech
+**Type:** [ImsRegTech](arkts-telephony-radio-imsregtech-e-sys.md)
 
 **Since:** 9
 

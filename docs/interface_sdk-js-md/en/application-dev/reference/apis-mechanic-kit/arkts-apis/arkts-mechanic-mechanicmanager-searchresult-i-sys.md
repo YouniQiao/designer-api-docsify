@@ -12,6 +12,12 @@ Search result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## targetCount
 
 ```TypeScript
@@ -20,7 +26,7 @@ targetCount: int
 
 Search result. Returns the number of targets found.0 means not found.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 

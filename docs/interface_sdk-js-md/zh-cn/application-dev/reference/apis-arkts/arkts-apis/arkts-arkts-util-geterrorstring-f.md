@@ -1,5 +1,11 @@
 # getErrorString
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## getErrorString
 
 ```TypeScript
@@ -32,7 +38,7 @@ function getErrorString(errno: number): string
 | --- | --- |
 | string | 错误码的详细信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let errnum = -1; // -1 : a system error number

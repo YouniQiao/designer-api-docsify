@@ -1,5 +1,11 @@
 # unlockScreen
 
+## Modules to Import
+
+```TypeScript
+import { screenLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## unlockScreen
 
 ```TypeScript
@@ -22,9 +28,9 @@ Unlock the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of unlockScreen. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of unlockScreen. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -63,7 +69,7 @@ Unlock the screen.
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

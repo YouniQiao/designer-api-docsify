@@ -1,12 +1,22 @@
 # cubicBezier
 
+## Modules to Import
+
+```TypeScript
+import { curves } from 'kits/@kit.ArkUI';
+```
+
 ## cubicBezier
 
 ```TypeScript
 function cubicBezier(x1: number, y1: number, x2: number, y2: number): string
 ```
 
-Creates a cubic Bézier curve. The curve values must be between 0 and 1.
+构造三阶贝塞尔曲线对象，曲线的值必须处于0-1之间。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves.cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md#cubicbeziercurve)替代。
 
 **Since:** 7
 
@@ -14,7 +24,7 @@ Creates a cubic Bézier curve. The curve values must be between 0 and 1.
 
 **Deprecated since:** 9
 
-**Substitutes:** [cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md#cubicbeziercurve)
+**Substitutes:** [curves.cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md#cubicbeziercurve)
 
 <!--Device-curves-function cubicBezier(x1: number, y1: number, x2: number, y2: number): string--><!--Device-curves-function cubicBezier(x1: number, y1: number, x2: number, y2: number): string-End-->
 
@@ -33,5 +43,5 @@ Creates a cubic Bézier curve. The curve values must be between 0 and 1.
 
 | Type | Description |
 | --- | --- |
-| string | Cubic Bézier curve object. |
+| string | 返回三阶贝塞尔曲线对象。 |
 

@@ -1,6 +1,6 @@
 # ManagedEvent
 
-Enumerates the system management events that can be subscribed to.
+可订阅的系统管理事件。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the system management events that can be subscribed to.
 MANAGED_EVENT_BUNDLE_ADDED = 0
 ```
 
-An application is installed.
+应用安装事件。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ An application is installed.
 MANAGED_EVENT_BUNDLE_REMOVED = 1
 ```
 
-An application is uninstalled.
+应用卸载事件。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ An application is uninstalled.
 MANAGED_EVENT_APP_START = 2
 ```
 
-An application is started.
+应用启动事件。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ An application is started.
 MANAGED_EVENT_APP_STOP = 3
 ```
 
-An application is stopped.
+应用停止事件。
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ An application is stopped.
 MANAGED_EVENT_SYSTEM_UPDATE = 4
 ```
 
-The system is updated.
+系统更新事件。
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ The system is updated.
 MANAGED_EVENT_ACCOUNT_ADDED = 5
 ```
 
-An account is created.
+账号新增事件。
 
 **Since:** 18
 
@@ -112,7 +112,7 @@ An account is created.
 MANAGED_EVENT_ACCOUNT_SWITCHED = 6
 ```
 
-An account is switched.
+账号切换事件。
 
 **Since:** 18
 
@@ -128,7 +128,7 @@ An account is switched.
 MANAGED_EVENT_ACCOUNT_REMOVED = 7
 ```
 
-An account is removed.
+账号删除事件。
 
 **Since:** 18
 
@@ -144,7 +144,7 @@ An account is removed.
 MANAGED_EVENT_STARTUP_GUIDE_COMPLETED = 8
 ```
 
-The startup wizard is complete.
+开机向导完成事件。
 
 **Since:** 24
 
@@ -162,7 +162,7 @@ The startup wizard is complete.
 MANAGED_EVENT_BOOT_COMPLETED = 9
 ```
 
-Device startup is complete.
+设备启动完成事件。
 
 **Since:** 24
 
@@ -180,7 +180,9 @@ Device startup is complete.
 MANAGED_EVENT_BUNDLE_UPDATED = 10
 ```
 
-Application update event.
+应用更新事件。
+
+**起始版本**：26.0.0
 
 **Since:** 26.0.0
 
@@ -198,7 +200,9 @@ Application update event.
 MANAGED_EVENT_POLICIES_CHANGED = 11
 ```
 
-Policy change event. Only super device administrator applications can subscribe to this event. If other types of device administrator applications attempt to subscribe, error code 9200002 is returned.
+策略变更事件。仅支持超级设备管理应用订阅该事件，其他类型设备管理应用订阅该事件时返回9200002错误码。
+
+**起始版本**：26.0.0
 
 **Since:** 26.0.0
 

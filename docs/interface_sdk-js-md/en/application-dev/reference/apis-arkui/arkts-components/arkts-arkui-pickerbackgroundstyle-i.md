@@ -1,6 +1,6 @@
 # PickerBackgroundStyle
 
-Defines the background style configuration for selected picker items.
+选择器选中项的背景样式，包括选中项的背景颜色和边框圆角半径。
 
 **Since:** 20
 
@@ -16,15 +16,20 @@ Defines the background style configuration for selected picker items.
 borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-Border radius of the selected item.
+选中项的边框圆角半径。
 
-Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corners.
+> 默认值：{ value:24, unit:LengthUnit.VP }，即四个圆角半径均为24vp。
 
-**NOTE**
+> 单位：默认为vp，可通过LengthMetrics或LocalizedBorderRadiuses类型指定单位。
 
-1. [LengthMetrics]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: uniform radius with a customizable unit2. [BorderRadiuses]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_: per-corner radius values (vp units only)3. [LocalizedBorderRadiuses]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_: per-corner radius values with individual units
+> **说明：**
+> 
+> 1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md/arkts-arkui-graphics-lengthmetrics-c.md)类型的value参数同时作用于四个圆角半径大小，
+> unit参数用于设置单位。
+> 2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md/arkts-arkui-borderradiuses-t.md)类型可以设置四个不同值的圆角半径，所有单位固定为vp。
+> 3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-units-localizedborderradiuses-i.md/arkts-arkui-units-localizedborderradiuses-i.md)类型可以设置四个不同值的圆角半径，并且可以单独设置每个圆角的单位。
 
-**Type:** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** { value:24, unit:LengthUnit.VP }
 
@@ -46,11 +51,15 @@ Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corne
 color?: ResourceColor
 ```
 
-Background color of the selected item.
+选中项的背景颜色。
 
-Default value: 'sys.color.comp\_background\_tertiary'
+> 默认值：
+> 
+> 'sys.color.comp_background_tertiary'
 
-**Type:** ResourceColor
+> **说明：**未设置该属性时，使用默认值。
+
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** 'sys.color.comp_background_tertiary'
 

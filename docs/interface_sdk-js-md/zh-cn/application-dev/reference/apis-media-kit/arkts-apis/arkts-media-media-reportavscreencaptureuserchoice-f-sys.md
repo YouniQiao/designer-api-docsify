@@ -1,5 +1,11 @@
 # reportAVScreenCaptureUserChoice（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## reportAVScreenCaptureUserChoice
 
 ```TypeScript
@@ -22,7 +28,7 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Session ID of the AVScreenCapture service, which is sent to the application when the AVScreenCapture server starts the privacy dialog box. |
 | choice | string | 是 | User choice, including whether screen capture is agreed, selected display ID, and window ID. For details, see JsonData in the example below. |
 
 **返回值：**
@@ -35,10 +41,10 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 5400101 | No memory. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

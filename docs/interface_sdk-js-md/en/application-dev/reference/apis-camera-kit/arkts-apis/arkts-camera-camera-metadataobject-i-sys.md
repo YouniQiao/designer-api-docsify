@@ -1,6 +1,6 @@
 # MetadataObject
 
-Describes the camera metadata, which is the data source of [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
+相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。
 
 **Since:** 10
 
@@ -10,6 +10,12 @@ Describes the camera metadata, which is the data source of [CameraInput]\_\_\_JS
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## confidence
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly confidence: double
 
 Confidence of the detection, with a value range of [0, 1].
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 13
 
@@ -38,7 +44,7 @@ readonly objectId: int
 
 Metadata object ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 

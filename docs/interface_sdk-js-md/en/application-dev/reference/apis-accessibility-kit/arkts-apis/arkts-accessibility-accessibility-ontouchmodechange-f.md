@@ -1,5 +1,11 @@
 # onTouchModeChange
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## onTouchModeChange
 
 ```TypeScript
@@ -24,5 +30,5 @@ Register the observe of the touch mode changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | callback Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | callback Asynchronous callback interface. |
 

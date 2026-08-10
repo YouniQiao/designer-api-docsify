@@ -64,7 +64,7 @@ transitionProxy：自定义转场动画代理对象。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transitionProxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| transitionProxy | [NavigationTransitionProxy](arkts-arkui-navigationtransitionproxy-i.md) | 是 |  |
 
 ## isInteractive
 

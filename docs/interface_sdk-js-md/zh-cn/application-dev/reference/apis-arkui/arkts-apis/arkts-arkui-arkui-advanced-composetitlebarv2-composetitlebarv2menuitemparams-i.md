@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
@@ -38,7 +44,7 @@ accessibilityDescription?: ResourceStr
 
 默认值："单指双击即可执行"。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -94,7 +100,7 @@ accessibilityText?: ResourceStr
 
 默认值：有label默认值为当前项label属性内容，没有设置label时，默认值为" "。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -142,7 +148,7 @@ label?: ResourceStr
 
 图标标签描述。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -162,7 +168,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol图标资源，优先级大于value，item左侧头像不支持设置该属性。
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 
@@ -182,7 +188,7 @@ value: ResourceStr
 
 图标资源。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 

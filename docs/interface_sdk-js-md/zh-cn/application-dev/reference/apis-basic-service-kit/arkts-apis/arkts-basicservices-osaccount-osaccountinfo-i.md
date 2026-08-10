@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Account.OsAccount
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## constraints
 
 ```TypeScript
 constraints: Array<string>
 ```
 
-系统账号\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，默认为空。
+系统账号[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)，默认为空。
 
 **类型：** Array&lt;string&gt;
 
@@ -36,7 +42,7 @@ createTime: long
 
 系统账号创建时间，以Unix时间戳格式表示，单位为s。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 8
 
@@ -72,7 +78,7 @@ domainInfo: DomainAccountInfo
 
 域账号信息，默认为空。
 
-**类型：** DomainAccountInfo
+**类型：** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
 **起始版本：** 8
 
@@ -192,7 +198,7 @@ lastLoginTime: long
 
 系统账号最后一次登录时间，以Unix时间戳格式表示，单位为s。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 8
 
@@ -210,7 +216,7 @@ localId: int
 
 系统账号ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -264,7 +270,7 @@ serialNumber: long
 
 系统账号SN码。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 8
 
@@ -282,7 +288,7 @@ type: OsAccountType
 
 系统账号类型。
 
-**类型：** OsAccountType
+**类型：** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 
 **起始版本：** 7
 

@@ -1,6 +1,6 @@
 # AudioLoopbackEqualizerPreset
 
-Enumerates the equalizer types of audio loopback.
+表示返听均衡器类型的枚举。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates the equalizer types of audio loopback.
 FLAT = 1
 ```
 
-Maintains the original sound without equalization.
+保持原始声音，不进行均衡调节。
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ Maintains the original sound without equalization.
 FULL = 2
 ```
 
-Enhances the fullness of vocals (default).
+使人声更饱满（默认的均衡器类型）。
 
 **Since:** 21
 
@@ -48,7 +48,7 @@ Enhances the fullness of vocals (default).
 BRIGHT = 3
 ```
 
-Enhances the brightness of vocals.
+使人声更明亮。
 
 **Since:** 21
 

@@ -20,6 +20,6 @@ export type AnimationEndHandler = (index: int, event: SwiperAnimationEvent) => v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 当前显示元素的索引。  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 动画相关信息，只返回主轴方向上当前显示元素相对于ArcSwiper起始位置的位移。  |
+| index | int | 是 | 当前显示元素的索引。 |
+| event | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | 是 | 动画相关信息，只返回主轴方向上当前显示元素相对于ArcSwiper起始位置的位移。 |
 

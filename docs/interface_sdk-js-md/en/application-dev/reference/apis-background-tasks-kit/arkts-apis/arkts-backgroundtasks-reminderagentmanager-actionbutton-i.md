@@ -1,6 +1,6 @@
 # ActionButton
 
-Describes the button displayed for a reminder.
+弹出的提醒中按钮的类型和标题。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Describes the button displayed for a reminder.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## title
 
 ```TypeScript
 title: string
 ```
 
-Text on the button.
+按钮显示的标题。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Text on the button.
 titleResource?: string
 ```
 
-Resource ID of the title. This parameter is used to read the title information after the system language is switched.
+标题的资源ID，用于切换系统语言后读取对应标题信息。
 
 **Type:** string
 
@@ -52,9 +58,9 @@ Resource ID of the title. This parameter is used to read the title information a
 type: ActionButtonType
 ```
 
-Button type.
+按钮的类型。
 
-**Type:** ActionButtonType
+**Type:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
 **Since:** 9
 

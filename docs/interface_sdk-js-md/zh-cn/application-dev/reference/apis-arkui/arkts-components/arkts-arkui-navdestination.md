@@ -19,13 +19,13 @@
 
 ## 子组件
 
-    **说明：**  
-    
-    - 子组件类型：系统组件和自定义组件，支持渲染控制类型（\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_和  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_）。  
-    
-    - 子组件个数：多个。
+> **说明：**
+> 
+> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)和
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
+> 
+> - 子组件个数：多个。
 
 ## NavDestination
 
@@ -33,7 +33,7 @@
 NavDestination()
 ```
 
-创建[Navigation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_子页面的根容器。
+创建[Navigation]{@link navigation}子页面的根容器。
 
 **起始版本：** 9
 
@@ -47,3 +47,17 @@ NavDestination()
 
 ## 汇总
 
+- [NavDestinationCommonTitle](arkts-arkui-navdestination-navdestinationcommontitle-i.md)
+- [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md)
+- [NavDestinationCustomTitle](arkts-arkui-navdestination-navdestinationcustomtitle-i.md)
+- [NavDestinationTransition](arkts-arkui-navdestination-navdestinationtransition-i.md)
+- [NestedScrollInfo](arkts-arkui-navdestination-nestedscrollinfo-i.md)
+- [RouteMapConfig](arkts-arkui-navdestination-routemapconfig-i.md)
+- [NavDestinationTransitionDelegate](arkts-arkui-navdestination-navdestinationtransitiondelegate-t.md)
+- [Orientation](arkts-arkui-navdestination-orientation-t.md)
+- [RestoreStateCallback](arkts-arkui-navdestination-restorestatecallback-t.md)
+- [SaveStateCallback](arkts-arkui-navdestination-savestatecallback-t.md)
+- [NavDestinationActiveReason](arkts-arkui-navdestination-navdestinationactivereason-e.md)
+- [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md)
+- [NavigationSystemTransitionType](arkts-arkui-navdestination-navigationsystemtransitiontype-e.md)
+- [VisibilityChangeReason](arkts-arkui-navdestination-visibilitychangereason-e.md)

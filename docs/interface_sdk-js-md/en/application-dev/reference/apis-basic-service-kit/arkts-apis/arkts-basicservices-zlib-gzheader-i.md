@@ -1,6 +1,6 @@
 # GzHeader
 
-Gzip header information passed to and from zlib routines.
+传递从zlib例程中获取的Gzip头部信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Gzip header information passed to and from zlib routines.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## comment
 
 ```TypeScript
 comment?: ArrayBuffer
 ```
 
-Comment.
+注释。
 
 **Type:** ArrayBuffer
 
@@ -36,7 +42,7 @@ Comment.
 done?: boolean
 ```
 
-Returns **True** after reading the gzip file header.
+读取gzip标头后为True。
 
 **Type:** boolean
 
@@ -56,7 +62,7 @@ Returns **True** after reading the gzip file header.
 extra?: ArrayBuffer
 ```
 
-Extra field.
+额外字段。
 
 **Type:** ArrayBuffer
 
@@ -76,9 +82,9 @@ Extra field.
 extraLen?: int
 ```
 
-Length of the extra field.
+额外字段的长度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -96,7 +102,7 @@ Length of the extra field.
 hcrc?: boolean
 ```
 
-Returns **True** if the **crc** header exists.
+如果存在crc标头，则为True。
 
 **Type:** boolean
 
@@ -116,7 +122,7 @@ Returns **True** if the **crc** header exists.
 isText?: boolean
 ```
 
-Returns **True** if the compressed data is considered text.
+如果压缩数据被认为是文本，则为True。
 
 **Type:** boolean
 
@@ -136,7 +142,7 @@ Returns **True** if the compressed data is considered text.
 name?: ArrayBuffer
 ```
 
-File name.
+文件名。
 
 **Type:** ArrayBuffer
 
@@ -156,9 +162,9 @@ File name.
 os?: int
 ```
 
-Operating system.
+操作系统。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -176,9 +182,9 @@ Operating system.
 time?: long
 ```
 
-Modification time.
+修改时间。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -196,9 +202,9 @@ Modification time.
 xflags?: int
 ```
 
-Extra flag.
+额外标志。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

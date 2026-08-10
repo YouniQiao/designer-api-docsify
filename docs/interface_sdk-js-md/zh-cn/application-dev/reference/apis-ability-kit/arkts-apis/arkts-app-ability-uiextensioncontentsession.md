@@ -6,6 +6,12 @@ UIExtensionContentSession是[UIExtensionAbility](arkts-ability-app-ability-uiext
  UIExtensionAbility组件对应一个UIExtensionContentSession对象，每个UIExtensionAbility组件的UIExtensionContentSession对象之间互不影响。
 
 
+## 导入模块
+
+```TypeScript
+import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 类

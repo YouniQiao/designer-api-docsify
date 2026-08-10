@@ -10,6 +10,12 @@ class FocusController
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## activate
 
 ```TypeScript
@@ -105,9 +111,9 @@ request focus to the specific component.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [150001](../errorcode-focus.md#150001-节点无法获得焦点) | the component cannot be focused. |
-| [150002](../errorcode-focus.md#150002-祖先节点无法获得焦点) | This component has an unfocusable ancestor. |
-| [150003](../errorcode-focus.md#150003-节点不存在) | the component is not on tree or does not exist. |
+| 150002 | This component has an unfocusable ancestor. |
+| 150003 | the component is not on tree or does not exist. |
+| 150001 | the component cannot be focused. |
 
 ## setAutoFocusTransfer
 
@@ -155,5 +161,5 @@ setKeyProcessingMode(mode: KeyProcessingMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Key processing mode. |
+| mode | [KeyProcessingMode](arkts-arkui-keyprocessingmode-e.md) | 是 | Key processing mode. |
 

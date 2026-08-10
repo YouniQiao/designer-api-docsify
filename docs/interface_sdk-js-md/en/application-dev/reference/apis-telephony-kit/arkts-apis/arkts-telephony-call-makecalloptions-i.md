@@ -10,6 +10,12 @@ Indicates the options of make call.
 
 **System capability:** SystemCapability.Applications.Contacts
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## isCustomAccessibility
 
 ```TypeScript
@@ -36,7 +42,7 @@ Whether the third-party app supports custom accessibility features.Default value
 isHideDialScreen?: boolean
 ```
 
-Whether to hide the dialer screen after call ends.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value: false.
+Whether to hide the dialer screen after call ends.&lt;br&gt;Default value: false.
 
 **Type:** boolean
 

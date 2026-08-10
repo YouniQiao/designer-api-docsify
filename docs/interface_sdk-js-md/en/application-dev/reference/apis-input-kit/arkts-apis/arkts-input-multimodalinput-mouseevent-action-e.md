@@ -1,6 +1,6 @@
 # Action
 
-Enumerates mouse event types.
+鼠标事件类型。
 
 **Since:** 9
 
@@ -16,8 +16,7 @@ Enumerates mouse event types.
 CANCEL = 0
 ```
 
-Canceled. The down event of the mouse is interrupted unexpectedly and does not close normally. For example, the  
-**CANCEL** event is triggered when the mouse button is pressed but not released, the window transitions to the background, or an abnormal destruction occurs.
+取消。鼠标down事件异常打断，未正常闭环，例如：按下鼠标按键后未抬起，窗口退后台或被异常销毁时触发cancel事件。
 
 **Since:** 9
 
@@ -33,7 +32,7 @@ Canceled. The down event of the mouse is interrupted unexpectedly and does not c
 MOVE = 1
 ```
 
-Moving of the mouse pointer.
+鼠标移动。
 
 **Since:** 9
 
@@ -49,7 +48,7 @@ Moving of the mouse pointer.
 BUTTON_DOWN = 2
 ```
 
-Mouse button press.
+鼠标按键按下。
 
 **Since:** 9
 
@@ -65,7 +64,7 @@ Mouse button press.
 BUTTON_UP = 3
 ```
 
-Mouse button release.
+鼠标按键抬起。
 
 **Since:** 9
 
@@ -81,7 +80,7 @@ Mouse button release.
 AXIS_BEGIN = 4
 ```
 
-Beginning of the mouse axis event.
+鼠标轴事件开始。
 
 **Since:** 9
 
@@ -97,7 +96,7 @@ Beginning of the mouse axis event.
 AXIS_UPDATE = 5
 ```
 
-Updating of the mouse axis event.
+鼠标轴事件更新。
 
 **Since:** 9
 
@@ -113,7 +112,7 @@ Updating of the mouse axis event.
 AXIS_END = 6
 ```
 
-Mouse axis event ended.
+鼠标轴事件结束。
 
 **Since:** 9
 
@@ -129,7 +128,7 @@ Mouse axis event ended.
 ACTION_DOWN = 7
 ```
 
-Touchpad press.
+触控板按下。
 
 **Since:** 11
 
@@ -145,7 +144,7 @@ Touchpad press.
 ACTION_UP = 8
 ```
 
-Touchpad release.
+触控板抬起。
 
 **Since:** 11
 

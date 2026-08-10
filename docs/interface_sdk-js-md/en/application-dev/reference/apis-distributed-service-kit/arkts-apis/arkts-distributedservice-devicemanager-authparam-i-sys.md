@@ -1,6 +1,6 @@
 # AuthParam (System API)
 
-Defines the authentication parameters.
+认证参数。
 
 **Since:** 7
 
@@ -14,13 +14,19 @@ Defines the authentication parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## authType
 
 ```TypeScript
 authType: number
 ```
 
-Authentication type.
+认证类型。
 
 **Type:** number
 
@@ -42,7 +48,7 @@ Authentication type.
 extraInfo: { [key: string]: any }
 ```
 
-Extended field. Optional. The default value is **undefined**.
+认证参数可扩展字段。可选，默认为undefined。
 
 **Type:** { [key: string]: any }
 

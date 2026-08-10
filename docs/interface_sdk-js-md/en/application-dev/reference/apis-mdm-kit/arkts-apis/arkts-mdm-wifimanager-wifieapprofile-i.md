@@ -1,6 +1,6 @@
 # WifiEapProfile
 
-Represents EAP profile (configuration) information.
+可扩展身份验证协议配置信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents EAP profile (configuration) information.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.MDMKit';
+```
+
 ## altSubjectMatch
 
 ```TypeScript
 altSubjectMatch: string
 ```
 
-A string to match the alternate subject. In addition to checking the primary domain name of the certificate, the system checks whether the alternate subject name of the certificate matches the certificate.
+替代主题匹配。证书验证中，除了检查证书主域名，还检查证书的主题备用名称是否匹配。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ A string to match the alternate subject. In addition to checking the primary dom
 anonymousIdentity: string
 ```
 
-Anonymous identity.
+匿名身份。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Anonymous identity.
 caCertAliases: string
 ```
 
-CA certificate alias.
+CA 证书别名。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ CA certificate alias.
 caPath: string
 ```
 
-CA certificate path.
+CA 证书路径。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ CA certificate path.
 certEntry: Uint8Array
 ```
 
-Client certificate content. When **eapMethod** is set to **EAP\_TLS**, if this field is empty, the client certificate alias cannot be empty.
+客户端证书内容。当eapMethod为EAP_TLS时，如果该字段为空，则客户端证书别名不能为空。
 
 **Type:** Uint8Array
 
@@ -116,7 +122,7 @@ Client certificate content. When **eapMethod** is set to **EAP\_TLS**, if this f
 certPassword: string
 ```
 
-CA certificate password.
+CA证书密码。
 
 **Type:** string
 
@@ -136,7 +142,7 @@ CA certificate password.
 clientCertAliases: string
 ```
 
-Client certificate alias. When the client certificate content is empty, the client certificate must be installed first via the certificate management API before passing in the alias.
+客户端证书别名。当客户端证书内容为空时，客户端证书需先调用证书管理接口安装后传入别名。
 
 **Type:** string
 
@@ -156,7 +162,7 @@ Client certificate alias. When the client certificate content is empty, the clie
 domainSuffixMatch: string
 ```
 
-A string to match the domain suffix.
+域后缀匹配。
 
 **Type:** string
 
@@ -176,9 +182,9 @@ A string to match the domain suffix.
 eapMethod: EapMethod
 ```
 
-EAP authentication method.
+EAP认证方式。
 
-**Type:** EapMethod
+**Type:** [EapMethod](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-eapmethod-e.md)
 
 **Since:** 12
 
@@ -196,7 +202,7 @@ EAP authentication method.
 eapSubId: number
 ```
 
-Sub-ID of the SIM card.
+SIM卡的子ID。
 
 **Type:** number
 
@@ -216,7 +222,7 @@ Sub-ID of the SIM card.
 identity: string
 ```
 
-Identity Information. This parameter cannot be empty when **eapMethod** is **TLS**.
+身份信息。当eapMethod为TLS时，该字段不能为空。
 
 **Type:** string
 
@@ -236,7 +242,7 @@ Identity Information. This parameter cannot be empty when **eapMethod** is **TLS
 password: string
 ```
 
-Password Authentication (PWD). It enables password-based authentication and does not require a server certificate.
+PWD类型，密码认证。无需服务器证书。
 
 **Type:** string
 
@@ -256,10 +262,9 @@ Password Authentication (PWD). It enables password-based authentication and does
 phase2Method: Phase2Method
 ```
 
-Phase 2 authentication method. This parameter is mandatory only when **eapMethod** is **EAP\_PEAP** or  
-**EAP\_TTLS**.
+第二阶段认证方式。只有eapMethod为EAP_PEAP或EAP_TTLS时需要填写。
 
-**Type:** Phase2Method
+**Type:** [Phase2Method](../../apis-network-kit/arkts-apis/arkts-network-eap-phase2method-e.md)
 
 **Since:** 12
 
@@ -277,7 +282,7 @@ Phase 2 authentication method. This parameter is mandatory only when **eapMethod
 plmn: string
 ```
 
-Credential provider.
+凭证提供商。
 
 **Type:** string
 
@@ -297,7 +302,7 @@ Credential provider.
 realm: string
 ```
 
-Realm for the passpoint credential.
+通行证凭证的领域。
 
 **Type:** string
 

@@ -1,9 +1,10 @@
 # DatePickerComponent
 
-DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second).
-    **Description:**  
-    
-    - This component interface can only be used in Stage model.
+DatePickerComponent组件用于选择日期（年月日）和时间（时分秒）。
+
+> **说明：**
+> 
+> - 该组件接口仅可在Stage模型下使用。
 
 **Since:** 26.0.0
 
@@ -15,13 +16,19 @@ DatePickerComponent component is used to select date (year, month, day) and time
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
+
 ## build
 
 ```TypeScript
 build(): void
 ```
 
-The method to build component.
+构建组件的方法。
 
 **Since:** 26.0.0
 
@@ -41,9 +48,9 @@ The method to build component.
 options: DatePickerComponentOptions
 ```
 
-Defines options for the date time picker component.
+定义日期时间选择器组件的选项。
 
-**Type:** DatePickerComponentOptions
+**Type:** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **Since:** 26.0.0
 

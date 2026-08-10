@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## unitConvert
 
 ```TypeScript
@@ -36,8 +42,8 @@ unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fromUnit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要被转换的单位。 |
-| toUnit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要转换为的单位。 |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 要被转换的单位。 |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 要转换为的单位。 |
 | value | double | 是 | 要被转换的单位的数量值。 |
 | locale | string | 是 | 格式化时使用的区域ID，如：zh-Hans-CN。 |
 | style | string | 否 | 格式化使用的风格，取值包括：'long', 'short', 'narrow'。默认值：short。 |

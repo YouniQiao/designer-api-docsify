@@ -1,6 +1,6 @@
 # ServerResponse
 
-Describes the parameters of a response send by the server to a specified read or write request.
+服务端对指定读或写请求的响应的参数。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the parameters of a response send by the server to a specified read or
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the device address.The length must be 17, The value consists of hexade
 requestId: int
 ```
 
-The request ID.The value range is all integers.
+请求ID。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -56,7 +62,7 @@ The request ID.The value range is all integers.
 value: ArrayBuffer
 ```
 
-Indicates the response data.
+响应数据。
 
 **Type:** ArrayBuffer
 

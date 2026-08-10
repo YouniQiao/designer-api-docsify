@@ -1,14 +1,20 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## on('error')
 
 ```TypeScript
 function on(type: 'error', observer: ErrorObserver): number
 ```
 
-Registers an error observer. Once registered, it can capture JavaScript crashes occurring within the application,which are a type of application crash. When the observer captures such an exception, the application will not exit automatically. You are advised to add a synchronous exit operation after the callback function completes.
+注册错误观测器。注册后可以捕获到应用产生的js crash，属于应用崩溃的一种。观测器捕获到该异常时应用不退出，建议在回调函数执行完后，增加同步退出操作。
 
-This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **Since:** 9
 
@@ -24,23 +30,23 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. It is fixed at **'error'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Error observer instance. |
+| type | 'error' | Yes | 填写'error'，表示错误观测器。 |
+| observer | [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | Yes | 错误观测器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Unique index of the observer, which corresponds one-to-one with the observer. This value can be used as the **observerId** parameter in the **errorManager.off** function. There is no specific unit. the returned result is observerId. |
+| number | 观测器的索引值，与观测器一一对应。可用于`errorManager.off`函数中的`observerId`参数。 没有具体的单位。结果返回值是observerId。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16000003 | 指定的ID不存在。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -76,9 +82,9 @@ try {
 function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 ```
 
-Registers an observer for the message processing duration of the main thread. After the registration, the execution time of a message processed by the main thread of the application can be captured.
+注册主线程消息处理耗时监听器。注册后可以捕获到应用主线程处理消息的具体执行时间。
 
-This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **Since:** 12
 
@@ -94,17 +100,17 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'loopObserver' | Yes | Event type. It is fixed at **'loopObserver'**, indicating an observer for the message processing duration of the main thread. |
-| timeout | number | Yes | Event execution threshold, in milliseconds. The value must be greater than **0**.The unit is milliseconds(ms). |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Observer to register. |
+| type | 'loopObserver' | Yes | 填写'loopObserver'，表示注册主线程消息处理耗时监听器。 |
+| timeout | number | Yes | 表示事件执行阈值（单位：毫秒）。 阈值必须大于0。 单位为毫秒（ms）。 |
+| observer | [LoopObserver](arkts-ability-loopobserver-i.md) | Yes | 注册主线程消息处理耗时监听器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -125,9 +131,9 @@ errorManager.on("loopObserver", 1, observer);
 function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): void
 ```
 
-Registers an observer for the promise rejection. After the registration, a rejected promise that is not captured in the current thread of the application can be captured.
+注册被拒绝promise监听器。注册后可以捕获到当前线程中未被捕获到的promise rejection。
 
-This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **Since:** 12
 
@@ -143,17 +149,17 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'unhandledRejection' | Yes | Event type. It is fixed at **'unhandledRejection'**, indicating an observer for the promise rejection. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Observer to register. |
+| type | 'unhandledRejection' | Yes | 填写'unhandledRejection'，表示注册被拒绝promise监听器。 |
+| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | Yes | 注册被拒绝promise监听器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 请在主线程中调用。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -183,7 +189,7 @@ let promise1 = new Promise<void>(() => {}).then(() => {
 function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver): void
 ```
 
-Registers a rejected promise observer with any thread in the process. Once registered, it can capture a rejected promise that is not captured in the current thread of the application.
+在进程中任意线程注册被拒绝promise监听器，注册后可以捕获到当前进程中未被捕获到的promise rejection。
 
 **Since:** 18
 
@@ -199,17 +205,17 @@ Registers a rejected promise observer with any thread in the process. Once regis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'globalUnhandledRejectionDetected' | Yes | Event type. It is fixed at **'globalUnhandledRejectionDetected'**, indicating an observer for the promise rejection. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Observer to register. |
+| type | 'globalUnhandledRejectionDetected' | Yes | 填写'globalUnhandledRejectionDetected'，表示注册被拒绝promise监听器。 |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | Yes | 注册被拒绝promise的callback。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 调用者无效。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -240,17 +246,14 @@ let promise1 = new Promise<void>(() => {}).then(() => {
 function on(type: 'freeze', observer: FreezeObserver): void
 ```
 
-Registers an observer for the main thread freeze event of the application. If the observer is registered multiple times, only the last one takes effect.
+注册应用主线程freeze监听。多次注册情况下，取最后一次注册的结果。
 
-This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
-    **NOTE**  
-    
-    If the callback function runs for more than 1 second, the  
-    [AppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ feature may not work. The execution duration can  
-    be calculated by parsing the time difference between **begin** and **Freeze callback execution completed** in  
-    HiLogs. If the execution duration exceeds 1 second, you can optimize the callback logic by using methods such as  
-    asynchronous processing, reducing operations that block other tasks, and optimizing the data structures to reduce  
-    the execution duration.
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+
+> **注意**：
+> 
+> 如果该回调函数执行时间超过1s，可能导致[AppRecovery](arkts-app-ability-apprecovery.md)功能不可用。通过解析hilog日志中的begin与Freeze
+> callback execution completed两者的时间差可以计算回调函数执行时长，如果超过1秒，可以尝试采用异步处理、减少阻塞操作、优化数据结构等方法优化回调逻辑，降低执行时长。
 
 **Since:** 18
 
@@ -266,16 +269,16 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'freeze' | Yes | Event type. It is fixed at **'freeze'**, indicating an observer for the freeze event of the main thread. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Observer to register. |
+| type | 'freeze' | Yes | 填写'freeze'，表示应用主线程freeze观测器。 |
+| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | Yes | 由on接口注册的freeze监听的callback。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -293,7 +296,7 @@ errorManager.on("freeze", freezeCallback);
 function on(type: 'globalErrorOccurred', observer: GlobalObserver): void
 ```
 
-Registers a global error observer via the **errorManager.on** API within any thread of a process. Once registered,it can capture exceptions occurring in any thread across the entire process. When the observer captures such an exception, the application will not exit automatically. You are advised to add a synchronous exit operation after the callback function completes.
+在进程中的任意线程中注册 `errormanager.on` 接口，监听整个进程中任意线程的异常。观测器捕获到该异常时应用不退出，建议在回调函数执行完后，增加同步退出操作。
 
 **Since:** 18
 
@@ -309,17 +312,17 @@ Registers a global error observer via the **errorManager.on** API within any thr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'globalErrorOccurred' | Yes | Event type. It is fixed at **'globalErrorOccurred'**. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Customized callback function for exception handling. |
+| type | 'globalErrorOccurred' | Yes | 填写'globalErrorOccurred'，表示错误观测器。 |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | Yes | 自定义异常处理回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 调用者无效。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

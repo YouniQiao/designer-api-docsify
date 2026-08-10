@@ -1,8 +1,7 @@
 # EntryIntentInfo (System API)
 
-Describes the parameters supported by the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_decorator, such as the widget name. It also describes the widget information bound to the  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+FormIntentInfo用于描述  
+[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)装饰器支持的参数，例如卡片名称。同时，该接口也可用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的卡片信息。
 
 **Since:** 20
 
@@ -14,13 +13,19 @@ Describes the parameters supported by the
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## abilityName
 
 ```TypeScript
 readonly abilityName: string
 ```
 
-Ability name.
+Ability名称。
 
 **Type:** string
 
@@ -42,7 +47,7 @@ Ability name.
 readonly executeMode: insightIntent.ExecuteMode[]
 ```
 
-Intent execution mode. that is, execution mode supported when the bound ability is started.
+意图调用执行模式。即拉起绑定的Ability时支持的执行模式。
 
 **Type:** insightIntent.ExecuteMode[]
 

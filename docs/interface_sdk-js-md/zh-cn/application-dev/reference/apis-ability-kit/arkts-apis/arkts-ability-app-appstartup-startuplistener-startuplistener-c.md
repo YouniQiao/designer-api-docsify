@@ -1,6 +1,6 @@
 # StartupListener
 
-本模块提供\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_任务监听器的定义。
+本模块提供[应用启动框架](../../../application-models/app-startup.md)任务监听器的定义。
 
 **起始版本：** 12
 
@@ -9,6 +9,12 @@
 <!--Device-unnamed-declare class StartupListener--><!--Device-unnamed-declare class StartupListener-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
+
+## 导入模块
+
+```TypeScript
+import { StartupListener } from 'kits/@kit.AbilityKit';
+```
 
 ## onCompleted
 
@@ -32,9 +38,9 @@ onCompleted?(error: BusinessError<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 错误信息。 |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | 是 | 错误信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { StartupConfig, StartupConfigEntry, StartupListener } from '@kit.AbilityKit';

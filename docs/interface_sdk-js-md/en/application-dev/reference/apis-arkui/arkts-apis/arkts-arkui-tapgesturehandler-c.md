@@ -1,6 +1,6 @@
 # TapGestureHandler
 
-Defines a type of gesture handler object for tap gestures.
+点击手势处理器对象类型。
 
 **Inheritance/Implementation:** TapGestureHandler extends [GestureHandler<TapGestureHandler>](GestureHandler<TapGestureHandler>)
 
@@ -18,7 +18,7 @@ Defines a type of gesture handler object for tap gestures.
 constructor(options?: TapGestureHandlerOptions)
 ```
 
-Constructor used to create a tap gesture handler instance.
+点击手势处理器的构造函数。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Constructor used to create a tap gesture handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the tap gesture handler. |
+| options | [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | No | 点击手势处理器配置参数。 |
 
 ## onAction
 
@@ -44,7 +44,7 @@ Constructor used to create a tap gesture handler instance.
 onAction(event: Callback<GestureEvent>): TapGestureHandler
 ```
 
-Sets the callback for successful tap gesture recognition.
+设置点击手势处理器识别成功回调。
 
 **Since:** 12
 
@@ -62,11 +62,11 @@ Sets the callback for successful tap gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback invoked upon successful tap gesture recognition. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 点击手势处理器识别成功回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Tap gesture handler object. |
+| [TapGestureHandler](arkts-arkui-gesture-tapgesturehandler-c.md) | 返回当前点击手势处理器对象。 |
 

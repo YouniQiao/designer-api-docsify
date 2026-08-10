@@ -1,12 +1,18 @@
 # getDisplayLanguage
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getDisplayLanguage
 
 ```TypeScript
 export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string
 ```
 
-Obtains the localized script for the specified language.
+获取指定语言的本地化显示文本。
 
 **Since:** 7
 
@@ -24,13 +30,13 @@ Obtains the localized script for the specified language.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | Specified language. |
-| locale | string | Yes | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, which consists of the language, script, and country/region. |
-| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means to display the text in title case format, and the value **false** means to display the text in the default case format of the locale. The default value is **true**. |
+| language | string | Yes | 指定语言。 |
+| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 |
+| sentenceCase | boolean | No | true表示按照首字母大写的格式显示文本，false表示按照区域默认的大小写格式显示文本。默认值：true。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Localized script for the specified language. |
+| string | 指定语言的本地化显示文本。 |
 

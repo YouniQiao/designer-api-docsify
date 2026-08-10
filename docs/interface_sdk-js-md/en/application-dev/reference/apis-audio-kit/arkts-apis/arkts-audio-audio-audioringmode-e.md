@@ -1,6 +1,6 @@
 # AudioRingMode
 
-Enumerates the audio ring modes.
+表示铃声模式的枚举。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the audio ring modes.
 RINGER_MODE_SILENT = 0
 ```
 
-Silent mode.
+静音模式。
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Silent mode.
 RINGER_MODE_VIBRATE = 1
 ```
 
-Vibration mode.
+震动模式。
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ Vibration mode.
 RINGER_MODE_NORMAL = 2
 ```
 
-Normal mode.
+响铃模式。
 
 **Since:** 7
 

@@ -1,5 +1,11 @@
 # Chip
 
+## 导入模块
+
+```TypeScript
+import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, AccessibilitySelectedType, LabelMarginOptions, LabelOptions, PrefixIconOptions, IconCommonOptions, ChipOptions, ChipSuffixSymbolGlyphOptions, ChipSize, AccessibilityOptions } from 'kits/@kit.ArkUI';
+```
+
 ## Chip
 
 ```TypeScript
@@ -22,5 +28,5 @@ export declare function Chip(options: ChipOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 定义Chip组件的参数。 |
+| options | [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | 是 | 定义Chip组件的参数。 |
 

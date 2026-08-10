@@ -1,5 +1,11 @@
 # getPublishedFormInfos
 
+## Modules to Import
+
+```TypeScript
+import { formProvider } from 'kits/@kit.FormKit';
+```
+
 ## getPublishedFormInfos
 
 ```TypeScript
@@ -7,10 +13,11 @@ function getPublishedFormInfos(): Promise<Array<formInfo.FormInfo>>
 ```
 
 Obtains the information of all widgets that have been added to the home screen on the device. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This field is supported since API version 18 and deprecated since API version 20. You are advised to use  
-    [getPublishedRunningFormInfos]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+
+> **NOTE：**
+> 
+> This field is supported since API version 18 and deprecated since API version 20. You are advised to use
+> [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getpublishedrunningforminfos) instead.
 
 **Since:** 18
 
@@ -36,11 +43,11 @@ Obtains the information of all widgets that have been added to the home screen o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| 16501000 | An internal functional error occurred. |
+| 16500050 | IPC connection error. |
+| 16500100 | Failed to obtain the configuration information. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formInfo, formProvider } from '@kit.FormKit';
@@ -50,10 +57,10 @@ try {
   formProvider.getPublishedFormInfos().then((data: formInfo.FormInfo[]) => {
     console.info(`formProvider getPublishedFormInfos, data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
   });
 } catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
 

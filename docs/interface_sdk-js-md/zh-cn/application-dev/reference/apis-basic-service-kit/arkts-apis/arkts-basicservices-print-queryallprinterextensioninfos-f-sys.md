@@ -1,5 +1,11 @@
 # queryAllPrinterExtensionInfos（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## queryAllPrinterExtensionInfos
 
 ```TypeScript
@@ -24,28 +30,28 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;PrinterExtensionInfo&gt;&gt; | 是 | 异步查询所有已安装的打印机扩展服务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PrinterExtensionInfo&gt;&gt; | 是 | 异步查询所有已安装的打印机扩展服务之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-print.queryAllPrinterExtensionInfos((err: BusinessError, extensionInfos: print.PrinterExtensionInfo[]) => {
-    if (err) {
-        console.error('queryAllPrinterExtensionInfos err ' + JSON.stringify(err));
+print.queryAllPrinterExtensionInfos((error: BusinessError, extensionInfos: print.PrinterExtensionInfo[]) => {
+    if (error) {
+        console.error(`Failed to query all printer extension infos. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
     }
-})
+});
 ```
 
 
@@ -79,20 +85,20 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
     console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
     // ...
 }).catch((error: BusinessError) => {
-    console.error('failed to get AllPrinterExtension because ' + JSON.stringify(error));
-})
+    console.error(`Failed to query all printer extension infos. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

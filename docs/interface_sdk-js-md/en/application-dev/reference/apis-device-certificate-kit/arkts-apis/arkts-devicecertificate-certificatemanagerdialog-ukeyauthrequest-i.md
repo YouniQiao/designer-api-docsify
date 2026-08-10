@@ -1,6 +1,6 @@
 # UkeyAuthRequest
 
-USB key PIN authentication request.
+USB Key PIN码认证请求。
 
 **Since:** 22
 
@@ -10,14 +10,19 @@ USB key PIN authentication request.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
+## Modules to Import
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## keyUri
 
 ```TypeScript
 keyUri: string
 ```
 
-Unique identifier of the USB Key credential. The value contains up to 256 bytes.The value of this parameter can be obtained from the CertReference returned by invoking the  
-[openAuthorizeDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ interface.
+表示USB Key证书凭据的唯一标识符，长度限制256字节以内。该参数值可通过调用[openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog)接口返回的CertReference中获取。
 
 **Type:** string
 

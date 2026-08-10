@@ -1,6 +1,6 @@
 # RotationInfoType
 
-Enumerates the types of rotation information.
+旋转信息类型枚举。
 
 **Since:** 23
 
@@ -16,10 +16,9 @@ Enumerates the types of rotation information.
 WINDOW_ORIENTATION = 0
 ```
 
-Window's screen orientation, based on how the Window module defines landscape/portrait modes.
+窗口所在屏幕的显示方向，以窗口模块对横竖屏的定义方式表示。
 
-Note that it maps to the **orientation** parameter in  
-[RotationChangeInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+开发者在使用时，需要注意该方向表示[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)中的orientation参数。
 
 **Since:** 23
 
@@ -35,9 +34,9 @@ Note that it maps to the **orientation** parameter in
 DISPLAY_ORIENTATION = 1
 ```
 
-Physical screen orientation, based on how the Display module defines landscape/portrait modes.
+屏幕显示方向，以屏幕模块对横竖屏的定义方式表示。
 
-It maps to the **orientation** property of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object.
+开发者在使用时，需要注意该方向表示[display](arkts-arkui-display-displaystate-e.md)对象的orientation属性。
 
 **Since:** 23
 
@@ -53,9 +52,9 @@ It maps to the **orientation** property of the [display]\_\_\_JSDOC\_LINK\_DESC\
 DISPLAY_ROTATION = 2
 ```
 
-Physical rotation angle of the device's screen (in degrees, clockwise).
+设备的屏幕顺时针旋转角度。
 
-It maps to the **rotation** property of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object.
+开发者在使用时，需要注意该方向表示[display](arkts-arkui-display-displaystate-e.md)对象的rotation属性。
 
 **Since:** 23
 

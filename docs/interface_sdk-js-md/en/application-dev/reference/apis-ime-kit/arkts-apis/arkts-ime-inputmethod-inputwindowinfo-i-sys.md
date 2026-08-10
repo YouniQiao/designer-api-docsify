@@ -1,6 +1,6 @@
 # InputWindowInfo
 
-Information of input window.
+输入法软键盘的窗口信息。
 
 **Since:** 10
 
@@ -10,15 +10,23 @@ Information of input window.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## userId
 
 ```TypeScript
 userId?: int
 ```
 
-Indicates the ID of the user whose input window is shown.
+显示输入法窗口的用户ID。
 
-**Type:** int
+该属性仅系统应用可以使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

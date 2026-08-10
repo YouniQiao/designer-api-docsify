@@ -1,12 +1,18 @@
 # obtainAllWorks
 
+## Modules to Import
+
+```TypeScript
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## obtainAllWorks
 
 ```TypeScript
 function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>
 ```
 
-Obtains all the deferred tasks. This API uses an asynchronous callback to return the result.
+获取当前应用所有的延迟任务，使用Callback异步回调。
 
 **Since:** 9
 
@@ -26,22 +32,22 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If all the deferred tasks are obtained, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，获取成功时，err为undefined，否则为错误对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WorkInfo&gt; | List of deferred tasks. If deferred tasks have been added to the execution queue, the list of all deferred tasks in the current application is returned. Otherwise, an empty list is returned. |
+| Array&lt;WorkInfo&gt; | 延迟任务列表，如果已添加延迟任务到执行队列，则返回当前应用所有的延迟任务列表；否则返回空列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
-| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| 9700001 | Memory operation failed. |
+| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| 9700003 | System service operation failed. |
 
 
 ## obtainAllWorks
@@ -50,7 +56,7 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void
 ```
 
-Obtains all the deferred tasks. This API uses an asynchronous callback to return the result.
+获取当前应用所有的延迟任务，使用Callback异步回调。
 
 **Since:** 10
 
@@ -66,18 +72,18 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;WorkInfo&gt;&gt; | Yes | Callback used to return the list of all deferred tasks in the current application. If the list fails to be obtained, an exception is thrown. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WorkInfo&gt;&gt; | Yes | 回调函数，获取成功时，返回当前应用所有的延迟任务列表，否则抛出异常。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
-| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| 9700001 | Memory operation failed. |
+| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| 9700003 | System service operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -99,7 +105,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 function obtainAllWorks(): Promise<Array<WorkInfo>>
 ```
 
-Obtains all the deferred tasks. This API uses a promise to return the result.
+获取当前应用所有的延迟任务，使用Promise异步回调。
 
 **Since:** 9
 
@@ -115,18 +121,18 @@ Obtains all the deferred tasks. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WorkInfo&gt;&gt; | Promise used to return all the deferred tasks. |
+| Promise&lt;Array&lt;WorkInfo&gt;&gt; | Promise对象，返回当前应用所有的延迟任务。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
-| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| 9700001 | Memory operation failed. |
+| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| 9700003 | System service operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,6 +1,6 @@
 # DomainServerConfig
 
-Represents the configuration of a domain server.
+域服务器配置。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Represents the configuration of a domain server.
 
 **System capability:** SystemCapability.Account.OsAccount
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## domain
 
 ```TypeScript
 domain: string
 ```
 
-Domain to which the server belongs.
+服务器所属的域。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Domain to which the server belongs.
 id: string
 ```
 
-Server configuration ID.
+服务器配置标识。
 
 **Type:** string
 
@@ -52,9 +58,9 @@ Server configuration ID.
 parameters: Record<string, Object>
 ```
 
-Server configuration parameters.
+服务器配置参数。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 18
 

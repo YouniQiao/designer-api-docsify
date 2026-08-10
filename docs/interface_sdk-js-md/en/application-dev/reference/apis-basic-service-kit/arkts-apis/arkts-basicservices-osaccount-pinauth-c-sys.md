@@ -1,6 +1,6 @@
 # PINAuth (System API)
 
-Provides APIs for PIN authentication.
+PIN码认证基类。
 
 **Since:** 8
 
@@ -12,13 +12,19 @@ Provides APIs for PIN authentication.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Creates a PIN authentication instance.
+创建PIN码认证的实例。
 
 **Since:** 8
 
@@ -34,9 +40,9 @@ Creates a PIN authentication instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
@@ -48,7 +54,7 @@ let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
 registerInputer(inputer: IInputer): void
 ```
 
-Registers a PIN inputer.
+注册PIN码输入器。
 
 **Since:** 8
 
@@ -66,20 +72,20 @@ Registers a PIN inputer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | PIN inputer, which is used to obtain the PIN. |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | PIN码输入器，用于获取PIN码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid inputer. |
-| [12300103](../../apis-basic-services-kit/errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 12300002 | Invalid inputer. |
+| 202 | Not system application. |
+| 12300001 | The system service works abnormally. |
+| 12300103 | The credential inputer already exists. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -105,7 +111,7 @@ try {
 unregisterInputer(): void
 ```
 
-Unregisters this PIN inputer.
+解注册PIN码输入器。
 
 **Since:** 8
 
@@ -123,10 +129,10 @@ Unregisters this PIN inputer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();

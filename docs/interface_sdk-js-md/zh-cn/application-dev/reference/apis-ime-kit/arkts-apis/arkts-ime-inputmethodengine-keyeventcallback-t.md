@@ -18,11 +18,11 @@ export type KeyEventCallback = (event: KeyEvent) => boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 按键事件对象，包含按键码、按键类型、事件时间等按键相关信息。  |
+| event | [KeyEvent](arkts-ime-inputmethodengine-keyevent-i.md) | 是 | 按键事件对象，包含按键码、按键类型、事件时间等按键相关信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否消费该按键事件：返回true表示消费，系统不再向下传递该事件；返回false表示不消费，系统继续处理该事件。  |
+| boolean | 是否消费该按键事件：返回true表示消费，系统不再向下传递该事件；返回false表示不消费，系统继续处理该事件。 |
 

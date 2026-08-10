@@ -6,7 +6,7 @@
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-Obtains the **AbilityDelegator** object of the application.
+获取应用程序的AbilityDelegator对象。
 
 **Since:** 8
 
@@ -24,9 +24,9 @@ Obtains the **AbilityDelegator** object of the application.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [AbilityDelegator]{ |
+| [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) | [AbilityDelegator]{ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';

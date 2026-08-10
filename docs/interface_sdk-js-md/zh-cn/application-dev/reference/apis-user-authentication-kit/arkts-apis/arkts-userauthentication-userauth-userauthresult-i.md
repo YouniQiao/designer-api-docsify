@@ -1,6 +1,6 @@
 # UserAuthResult
 
-用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的onResult回调获取此结果。
+用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)的onResult回调获取此结果。
 
 **起始版本：** 10
 
@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## authType
 
 ```TypeScript
 authType?: UserAuthType
 ```
 
-认证通过时，返回实际使用的认证类型。当[AuthParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的authType指定了多种认证类型时，此字段标识用户实际选择并完成认证的类型。
+认证通过时，返回实际使用的认证类型。当[AuthParam](arkts-userauthentication-userauth-authparam-i.md)的authType指定了多种认证类型时，此字段标识用户实际选择并完成认证的类型。
 
-**类型：** UserAuthType
+**类型：** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ enrolledState?: EnrolledState
 
 认证通过时，返回注册凭据的状态。包含当前认证类型的凭据摘要和数量。应用可通过对比此值与之前保存的值，判断用户凭据是否发生变化。若启用了认证结果复用且之前认证使用的凭据已被删除（人脸或指纹），返回的enrolledState中credentialCount和credentialDigest均为0。
 
-**类型：** EnrolledState
+**类型：** [EnrolledState](arkts-userauthentication-userauth-enrolledstate-i.md)
 
 **起始版本：** 12
 
@@ -62,12 +68,12 @@ result: int
 - CANCELED(12500003)：认证取消。  
 - TIMEOUT(12500004)：认证超时。  
 - LOCKED(12500009)：认证器锁定。  
-- NOT\_ENROLLED(12500010)：未注册凭据。  
-- PIN\_EXPIRED(12500013)：锁屏密码过期。
+- NOT_ENROLLED(12500010)：未注册凭据。  
+- PIN_EXPIRED(12500013)：锁屏密码过期。
 
-完整错误码列表参见[UserAuthResultCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+完整错误码列表参见[UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

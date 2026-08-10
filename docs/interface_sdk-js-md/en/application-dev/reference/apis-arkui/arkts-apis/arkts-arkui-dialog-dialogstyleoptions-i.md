@@ -1,6 +1,6 @@
 # DialogStyleOptions
 
-Options for the fixed-style dialog.
+固定样式对话框的选项。
 
 **Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
 
@@ -12,15 +12,21 @@ Options for the fixed-style dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## buttonDirection
 
 ```TypeScript
 buttonDirection?: DialogButtonOrientation
 ```
 
-The arrangement of buttons.
+按钮的排列。
 
-**Type:** DialogButtonOrientation
+**Type:** [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md)
 
 **Default:** DialogButtonOrientation.AUTO
 
@@ -42,7 +48,7 @@ The arrangement of buttons.
 buttons?: Array<DialogButton>
 ```
 
-Array of buttons in the dialog box.When provided, the dialog displays as an alert-style dialog with buttons.When used together with sheets, buttons are displayed below the sheet list.
+对话框中的按钮数组。提供时，对话框显示为带有按钮的警报样式对话框。与图纸一起使用时，按钮显示在图纸列表下方。
 
 **Type:** Array&lt;DialogButton&gt;
 
@@ -64,7 +70,7 @@ Array of buttons in the dialog box.When provided, the dialog displays as an aler
 gridCount?: int
 ```
 
-Grid count of dialog.The value should be an integer.
+对话框的网格计数。取值限定为整数。
 
 **Type:** int
 
@@ -86,9 +92,9 @@ Grid count of dialog.The value should be an integer.
 message?: DialogMessage
 ```
 
-Message content and text style of the dialog box.
+对话框的消息内容和文字样式。
 
-**Type:** DialogMessage
+**Type:** [DialogMessage](arkts-arkui-dialog-dialogmessage-i.md)
 
 **Since:** 26.1.0
 
@@ -108,7 +114,7 @@ Message content and text style of the dialog box.
 sheets?: Array<DialogSheet>
 ```
 
-Array of sheet items for action-sheet style.When provided, the dialog displays sheet items for user selection.
+action-sheet样式的表单项数组。提供时，对话框将显示供用户选择的工作表项目。
 
 **Type:** Array&lt;DialogSheet&gt;
 
@@ -130,9 +136,9 @@ Array of sheet items for action-sheet style.When provided, the dialog displays s
 subtitle?: ResourceStr
 ```
 
-Subtitle of the dialog box.
+对话框的副标题。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
 
@@ -152,9 +158,9 @@ Subtitle of the dialog box.
 title?: ResourceStr
 ```
 
-Title of the dialog box.
+对话框标题。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
 

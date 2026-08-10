@@ -1,12 +1,23 @@
 # replace
 
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
 ## replace
 
 ```TypeScript
 function replace(options: RouterOptions): void
 ```
 
-Replaces the current page with another one in the application and destroys the current page.
+用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)替代。
 
 **Since:** 8
 
@@ -24,11 +35,13 @@ Replaces the current page with another one in the application and destroys the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Description of the new page. |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 替换页面描述信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 class RouterParams {
   data1: string;
 
@@ -44,6 +57,8 @@ router.replace({
 ```
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 class RouterParams {
   data1: string;
 

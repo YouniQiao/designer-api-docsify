@@ -4,11 +4,12 @@
 
 该模块提供以下关系型数据库相关的常用功能：
 
-- [RdbPredicates]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_：数据库中用来代表数据实体的性质、特征或者数据实体之间关系的词项，主要用来定义数据库的操作条件。  
-- [RdbStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_：提供管理关系数据库（RDB）方法的接口。
-    **说明：**  
-    
-    - 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.data.relationalStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_。
+- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md)：数据库中用来代表数据实体的性质、特征或者数据实体之间关系的词项，主要用来定义数据库的操作条件。  
+- [RdbStore](arkts-arkdata-rdb-rdbstore-i.md)：提供管理关系数据库（RDB）方法的接口。
+
+> **说明：**
+> 
+> - 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.data.relationalStore](arkts-data-relationalstore.md)。
 
 **起始版本：** 7
 
@@ -43,7 +44,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | 提供管理关系数据库（RDB）方法的接口。  在使用以下相关接口前，请使用  [executeSql]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口初始化数据库表结构和相关数据。 |
+| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | 提供管理关系数据库（RDB）方法的接口。  在使用以下相关接口前，请使用  [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)接口初始化数据库表结构和相关数据。 |
 | [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) | 管理关系数据库配置。 |
 
 ### 枚举

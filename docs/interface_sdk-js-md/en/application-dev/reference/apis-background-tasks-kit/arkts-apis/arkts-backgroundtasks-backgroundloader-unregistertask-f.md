@@ -1,16 +1,22 @@
 # unregisterTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## unregisterTask
 
 ```TypeScript
 function unregisterTask(taskInfo: TaskInfo): void
 ```
 
-Unregister background load task.
+取消注册后台加载任务。
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -24,13 +30,13 @@ Unregister background load task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| taskInfo | [TaskInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md) | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | No permission. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
-| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |
+| 9700004 | Check on taskInfo failed. |
+| 9700003 | System service operation failed. |
+| 201 | Permission denied. |
 

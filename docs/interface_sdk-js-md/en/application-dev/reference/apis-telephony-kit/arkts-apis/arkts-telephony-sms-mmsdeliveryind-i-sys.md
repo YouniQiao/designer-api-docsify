@@ -12,6 +12,12 @@ Defines an MMS message delivery indication.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## date
 
 ```TypeScript
@@ -20,7 +26,7 @@ date: long
 
 Indicates the date for the MMS message delivery indication.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ status: int
 
 Indicates the status for the MMS message delivery indication.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -100,7 +106,7 @@ version: MmsVersionType
 
 Indicates the version for the MMS message delivery indication.
 
-**Type:** MmsVersionType
+**Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 8
 

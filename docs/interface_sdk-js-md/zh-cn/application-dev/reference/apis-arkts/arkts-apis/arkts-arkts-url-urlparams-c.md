@@ -10,6 +10,12 @@ URLParams是一个用于解析、构造和操作URL参数的实用类。该类�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { url } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
@@ -32,16 +38,7 @@ $_iterator(): IterableIterator<[string, string]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
-
-**示例：**
-
-```TypeScript
-let paramsObject = new url.URLParams('fod=bay&edg=bap');
-for (let pair of paramsObject) {
-	console.info( pair[0] + ', ' + pair[1]);
-}
-```
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
 
 ## [Symbol.iterator]
 
@@ -65,9 +62,9 @@ for (let pair of paramsObject) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | 返回一个ES6迭代器。迭代器的每一项都是一个JavaScript Array。 Array的第一项是name，第二项是value。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6迭代器。迭代器的每一项都是一个JavaScript Array。 Array的第一项是name，第二项是value。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 构造URLParams对象
@@ -88,7 +85,7 @@ for (let pair of iter) {
 append(name: string, value: string): void
 ```
 
-将新的键值对插入到查询字符串。与[set]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
+将新的键值对插入到查询字符串。与[set](arkts-arkts-url-urlparams-c.md#set)方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
 
 **起始版本：** 9
 
@@ -107,7 +104,7 @@ append(name: string, value: string): void
 | name | string | 是 | 需要插入搜索参数的键名。 |
 | value | string | 是 | 需要插入搜索参数的值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 解析URL字符串
@@ -142,11 +139,9 @@ URLParams的构造函数，用于创建URL参数对象，适用于需要解析�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | 否 | 入参对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- string[][]：字符串二维数组。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Record&lt;string, string&gt;：对象列表。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- string：URL查询参数字符串。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- URLParams：URLParams实例对象。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 默认值：null。 |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | 否 | 入参对象。 &lt;br/&gt;- string[][]：字符串二维数组。 &lt;br/&gt;- Record&lt;string, string&gt;：对象列表。 &lt;br/&gt;- string：URL查询参数字符串。 &lt;br/&gt;- URLParams：URLParams实例对象。 &lt;br/&gt;- 默认值：null。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 // 通过string[][]方式构造URLParams对象：
@@ -161,24 +156,6 @@ let objectParams3 = new url.URLParams(urlObject.search);
 // 通过url对象的params属性获取URLParams对象：
 let secondUrlObj = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
 let objectParams4 = secondUrlObj.params;
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 通过string[][]方式构造URLParams对象：
-let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-// 通过Record<string, string>方式构造URLParams对象：
-let record: Record<string, string> = { "fod": '1', "bard": '2' }
-let objectParams1 = new url.URLParams(record);
-// 通过string方式构造URLParams对象：
-let objectParams2 = new url.URLParams('?fod=1&bard=2');
-// 通过url对象的search属性构造URLParams对象：
-let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams3 = new url.URLParams(urlObject.search);
-// 通过url对象的params属性获取URLParams对象：
-let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams4 = urlObject1.params;
 ```
 
 ## constructor
@@ -229,7 +206,7 @@ delete(name: string): void
 | --- | --- | --- | --- |
 | name | string | 是 | 需要删除的键值名称。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 解析URL字符串
@@ -262,11 +239,9 @@ entries(): IterableIterator<[string, string]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 // 构造URLParams对象
@@ -279,23 +254,6 @@ for (let item of pair) {
 }
 // keyName1=valueName1
 // keyName2=valueName2
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let params = new url.URLParams("key1=value1&key2=value2");
-
-let i = 0;
-let arr = new Array<string>();
-for (let pair of params.entries()) {
-  arr.push(pair[0]);
-  i++;
-  arr.push(pair[1]);
-  i++;
-}
-
-console.info(arr[1]); // value1
 ```
 
 ## forEach
@@ -323,7 +281,7 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => voi
 | callbackFn | (value: string, key: string, searchParams: URLParams) =&gt; void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值是本对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 解析URL
@@ -356,23 +314,7 @@ forEach(callbackFn: UrlCbFn): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数。 |
-
-**示例：**
-
-```TypeScript
-let params = new url.URLParams("key1=value1&key2=value2")
-let arr = new Array<string>();
-let i = 0;
-let urlCB: url.UrlCbFn = (value: string, key: string, searchParams:url.URLParams) => {
-  arr.push(value + " " + key + " " + (params == searchParams));
-  i++
-}
-
-params.forEach(urlCB);
-
-console.info(arr[0]); // value1 key1 true
-```
+| callbackFn | [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) | 是 | 回调函数。 |
 
 ## get
 
@@ -404,7 +346,7 @@ get(name: string): string | null
 | --- | --- |
 | string | 返回第一个值，如果没找到，返回 null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let paramsObject = new url.URLParams('name=Jonathan&age=18');
@@ -473,7 +415,7 @@ getAll(name: string): string[]
 | --- | --- |
 | string[] | 返回指定名称的所有键对应值的集合。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 解析URL并构造URLParams对象
@@ -514,7 +456,7 @@ has(name: string): boolean
 | --- | --- |
 | boolean | 是否存在相对应的key值，存在返回true，否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 解析URL字符串
@@ -547,9 +489,9 @@ keys(): IterableIterator<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;string&gt; | 返回一个包含所有键值对的name的ES6迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个包含所有键值对的name的ES6迭代器。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 构造URLParams对象
@@ -591,7 +533,7 @@ set(name: string, value: string): void
 | name | string | 是 | 将要设置的参数的键值名。 |
 | value | string | 是 | 所要设置的参数值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -617,7 +559,7 @@ sort(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 let paramsObject = new url.URLParams("c=3&a=9&b=4&d=2"); // Create a test URLParams object
@@ -649,7 +591,7 @@ toString(): string
 | --- | --- |
 | string | 返回序列化为字符串的搜索参数，必要时对字符进行百分比编码。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 解析URL字符串
@@ -684,9 +626,9 @@ values(): IterableIterator<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;string&gt; | 返回一个包含所有键值对的value的ES6迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个包含所有键值对的value的ES6迭代器。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 构造URLParams对象

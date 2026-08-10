@@ -1,7 +1,6 @@
 # USBConfiguration
 
-Represents the USB configuration. One [USBDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can contain multiple **USBConfig**  
-instances.
+USB配置，一个[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)中可以含有多个配置。
 
 **Since:** 9
 
@@ -11,15 +10,21 @@ instances.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## attributes
 
 ```TypeScript
 attributes: int
 ```
 
-Configuration attributes.
+配置的属性。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -35,9 +40,9 @@ Configuration attributes.
 id: int
 ```
 
-Unique ID of the USB configuration.
+配置的唯一标识。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -53,7 +58,7 @@ Unique ID of the USB configuration.
 interfaces: Array<USBInterface>
 ```
 
-Supported interface attributes.
+配置支持的接口属性。
 
 **Type:** Array&lt;USBInterface&gt;
 
@@ -71,8 +76,7 @@ Supported interface attributes.
 isRemoteWakeup: boolean
 ```
 
-Whether remote wakeup is supported. The value **true** indicates that the remote wakeup is supported, and **false  
-** indicates the opposite.
+检查当前配置是否支持远程唤醒。true表示支持，false表示不支持。
 
 **Type:** boolean
 
@@ -90,7 +94,7 @@ Whether remote wakeup is supported. The value **true** indicates that the remote
 isSelfPowered: boolean
 ```
 
-Whether an independent power supply is supported. The value **true** indicates that an independent power supply is supported, and **false** indicates the opposite.
+检查当前配置是否支持独立电源。true表示支持，false表示不支持。
 
 **Type:** boolean
 
@@ -108,9 +112,9 @@ Whether an independent power supply is supported. The value **true** indicates t
 maxPower: int
 ```
 
-Maximum power consumption.Unit: mA.
+最大功耗。（单位：毫安）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -126,7 +130,7 @@ Maximum power consumption.Unit: mA.
 name: string
 ```
 
-Configuration name, which can be left empty.
+配置的名称，可以为空。
 
 **Type:** string
 

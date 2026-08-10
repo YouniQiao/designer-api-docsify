@@ -6,7 +6,7 @@
 const TONE_CATEGORY_ALARM: int
 ```
 
-Define the alarm tone category.
+闹钟铃声类别。
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ Define the alarm tone category.
 const TONE_CATEGORY_CONTACTS: 16
 ```
 
-Define the contact tone category.
+联系人铃声类别。
 
 **Since:** 20
 
@@ -40,7 +40,7 @@ Define the contact tone category.
 const TONE_CATEGORY_NOTIFICATION: int
 ```
 
-Define the notification tone category.
+通知铃声类别。
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Define the notification tone category.
 const TONE_CATEGORY_NOTIFICATION_APP: int
 ```
 
-Define the app notification tone category.
+应用级通知铃声类别。
 
 **Since:** 22
 
@@ -72,7 +72,7 @@ Define the app notification tone category.
 const TONE_CATEGORY_RINGTONE: int
 ```
 
-Define the ringtone category.
+铃声类别。
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ Define the ringtone category.
 const TONE_CATEGORY_TEXT_MESSAGE: int
 ```
 
-Define the text message tone category.
+短信铃声类别。
 
 **Since:** 12
 

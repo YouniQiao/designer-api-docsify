@@ -10,6 +10,12 @@ Describes the capability of a partner device.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
+## Modules to Import
+
+```TypeScript
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+```
+
 ## supportBR
 
 ```TypeScript

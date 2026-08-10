@@ -4,7 +4,7 @@
 export type OnContentScrollCallback = (totalOffsetX: double, totalOffsetY: double) => void
 ```
 
-Defines a TextInput callback when onContentScroll.Anonymous Object Rectification.
+文本内容滚动回调。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ Defines a TextInput callback when onContentScroll.Anonymous Object Rectification
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffsetX | double | Yes | The text is offset in px on the horizontal axis of the content area.  |
-| totalOffsetY | double | Yes | The text is offset in px on the vertical axis of the content area.  |
+| totalOffsetX | double | Yes | 文本在内容区的横坐标偏移，单位px。 |
+| totalOffsetY | double | Yes | 文本在内容区的纵坐标偏移，单位px。 |
 

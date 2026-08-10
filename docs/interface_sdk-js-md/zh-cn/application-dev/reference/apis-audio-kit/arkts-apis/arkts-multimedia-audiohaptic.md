@@ -11,6 +11,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
+## 导入模块
+
+```TypeScript
+import { audioHaptic } from 'kits/@kit.AudioKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -23,9 +29,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) | 描述音振文件描述符。  **注意：**     开发者需要确保fd是可用的文件描述符，且offset和length的值都是正确的。 |
-| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | 管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_创建实例。 |
-| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) | 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  [createPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_创建实例。 |
+| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) | 描述音振文件描述符。  > **注意：** >  > 开发者需要确保fd是可用的文件描述符，且offset和length的值都是正确的。 |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | 管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getaudiohapticmanager)创建实例。 |
+| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) | 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。 |
 | [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) | 音振播放器选项。 |
 
 <!--Del-->
@@ -33,7 +39,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i-sys.md) | 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  [createPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_创建实例。 |
+| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i-sys.md) | 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。 |
 <!--DelEnd-->
 
 ### 枚举

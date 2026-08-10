@@ -1,6 +1,6 @@
 # AuthResult
 
-Defines the authentication result.
+表示认证结果信息。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the authentication result.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## account
 
 ```TypeScript
 account?: AppAccountInfo
 ```
 
-Information about the account to which the token belongs. By default, no value is passed in.
+令牌所属的账号信息，默认为空。
 
-**Type:** AppAccountInfo
+**Type:** [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Information about the account to which the token belongs. By default, no value i
 tokenInfo?: AuthTokenInfo
 ```
 
-Token information. By default, no value is passed in.
+令牌信息，默认为空。
 
-**Type:** AuthTokenInfo
+**Type:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
 
 **Since:** 9
 

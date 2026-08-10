@@ -4,7 +4,7 @@
 type RingtoneOptions = _RingtoneOptions
 ```
 
-Interface for ringtone options.
+系统铃音播放器配置项。
 
 **Since:** 10
 

@@ -12,6 +12,12 @@ quickFixManager模块提供快速修复的能力，快速修复是系统提供�
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { quickFixManager } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 <!--Del-->

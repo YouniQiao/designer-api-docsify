@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -38,7 +44,7 @@ requestId: int
 
 请求ID。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

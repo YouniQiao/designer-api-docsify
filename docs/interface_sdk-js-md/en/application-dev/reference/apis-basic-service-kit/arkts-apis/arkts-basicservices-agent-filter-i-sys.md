@@ -1,6 +1,6 @@
 # Filter
 
-Defines the filter criteria.
+过滤条件。
 
 **Since:** 10
 
@@ -9,6 +9,12 @@ Defines the filter criteria.
 <!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
+
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
 
 ## bundle
 

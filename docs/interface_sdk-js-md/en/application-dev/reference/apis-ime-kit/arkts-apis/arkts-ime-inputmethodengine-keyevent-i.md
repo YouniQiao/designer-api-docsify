@@ -1,7 +1,6 @@
 # KeyEvent
 
-In the following API examples, you must first use  
-[getKeyboardDelegate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+按键属性值。
 
 **Since:** 8
 
@@ -11,18 +10,24 @@ In the following API examples, you must first use
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## keyAction
 
 ```TypeScript
 readonly keyAction: int
 ```
 
-Key event type.
+按键事件类型。
 
-- **2**: keydown event.  
-- **3**: keyup event.
+- 当值为2时，表示按下事件；  
+- 当值为3时，表示抬起事件。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -38,9 +43,9 @@ Key event type.
 readonly keyCode: int
 ```
 
-Key value. For details, see [KeyCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+按键的键值。键码值说明参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

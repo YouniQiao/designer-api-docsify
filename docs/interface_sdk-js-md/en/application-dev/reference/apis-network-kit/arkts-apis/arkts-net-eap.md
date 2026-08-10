@@ -10,6 +10,12 @@ Provides interfaces to manage ethernet.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
+## Modules to Import
+
+```TypeScript
+import { eap } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions

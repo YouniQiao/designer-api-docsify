@@ -10,6 +10,12 @@ Return encoded text.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## read
 
 ```TypeScript

@@ -1,7 +1,7 @@
 # FocusTrackingInfo (System API)
 
 Describes the focus tracking information, which is obtained by calling VideoSessionForSys.  
-[on('focusTrackingInfoAvailable')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[on('focusTrackingInfoAvailable')](camera.VideoSession.on(type: 'focusTrackingInfoAvailable', callback: Callback&lt;FocusTrackingInfo&gt;)).
 
 **Since:** 15
 
@@ -13,6 +13,12 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## trackingMode
 
 ```TypeScript
@@ -21,7 +27,7 @@ trackingMode: FocusTrackingMode
 
 Tracing mode.
 
-**Type:** FocusTrackingMode
+**Type:** [FocusTrackingMode](arkts-camera-camera-focustrackingmode-e-sys.md)
 
 **Since:** 15
 
@@ -41,7 +47,7 @@ trackingRegion: Rect
 
 Tracking region.
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 15
 

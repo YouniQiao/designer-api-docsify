@@ -18,7 +18,7 @@ bottom?: LengthMetrics
 
 bottom property.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ end?: LengthMetrics
 
 end property.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -66,7 +66,7 @@ start?: LengthMetrics
 
 start property.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -90,7 +90,7 @@ top?: LengthMetrics
 
 top property.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 

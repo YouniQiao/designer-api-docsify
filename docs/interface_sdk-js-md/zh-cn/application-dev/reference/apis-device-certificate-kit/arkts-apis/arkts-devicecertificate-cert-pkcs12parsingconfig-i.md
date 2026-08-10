@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## needsCert
 
 ```TypeScript
@@ -105,11 +111,12 @@ privateKeyFormat?: EncodingBaseFormat
 ```
 
 表示获取私钥的格式，当前支持PEM和DER格式。参数缺省时，默认为PEM格式。
-    **说明：**  
-    
-    当needsPrivateKey值为true时，该参数生效。
 
-**类型：** EncodingBaseFormat
+> **说明：**
+> 
+> 当needsPrivateKey值为true时，该参数生效。
+
+**类型：** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)
 
 **默认值：** EncodingBaseFormat.PEM
 

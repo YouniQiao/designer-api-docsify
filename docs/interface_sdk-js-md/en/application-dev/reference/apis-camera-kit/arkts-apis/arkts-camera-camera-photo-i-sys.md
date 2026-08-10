@@ -1,6 +1,6 @@
 # Photo
 
-Photo defines a full-quality image object.
+全质量图对象。
 
 **Since:** 11
 
@@ -10,6 +10,12 @@ Photo defines a full-quality image object.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## depthData
 
 ```TypeScript
@@ -18,7 +24,7 @@ depthData?: DepthData
 
 Depth data.
 
-**Type:** DepthData
+**Type:** [DepthData](arkts-camera-camera-depthdata-i-sys.md)
 
 **Since:** 13
 

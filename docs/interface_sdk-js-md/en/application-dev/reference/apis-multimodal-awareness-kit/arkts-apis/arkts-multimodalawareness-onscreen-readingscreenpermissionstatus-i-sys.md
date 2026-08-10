@@ -12,6 +12,12 @@ Returns the status of the permission for reading screen information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## readingCode
 
 ```TypeScript
@@ -20,7 +26,7 @@ readingCode?: int
 
 If the screen information cannot be read, the corresponding status code will be returned.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -42,7 +48,7 @@ readingState: int
 
 Whether screen reading is allowed. **0**: no; **1**: yes.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

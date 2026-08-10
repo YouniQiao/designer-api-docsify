@@ -12,13 +12,19 @@ Implements audio collaborative management.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## isCollaborativePlaybackEnabledForDevice
 
 ```TypeScript
 isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-Checks whether collaborative playback is enabled for the specified device.
+检查指定设备的协同播放状态
 
 **Since:** 20
 
@@ -34,22 +40,22 @@ Checks whether collaborative playback is enabled for the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device descriptor. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns the check result. The value true means that collaborative playback is enabled for the specified device, and false means the opposite. |
+| boolean | 是否已经使能与指定的设备协同播放 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -107,9 +113,9 @@ Checks whether the collaborative playback is supported by system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -130,7 +136,7 @@ try {
 isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-Checks whether the collaborative playback is supported for the specified device.
+检查指定设备是否支持协同播放。
 
 **Since:** 24
 
@@ -148,7 +154,7 @@ Checks whether the collaborative playback is supported for the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device descriptor to check. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | 用于查询的音频设备描述符。 |
 
 **Return value:**
 
@@ -160,7 +166,7 @@ Checks whether the collaborative playback is supported for the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 202 | Not system application. |
 
 ## setCollaborativePlaybackEnabledForDevice
 
@@ -168,7 +174,7 @@ Checks whether the collaborative playback is supported for the specified device.
 setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Enables or disables collaborative playback for the specified device.Currently, only A2DP audio devices support collaborative playback.If the system is using the specified device for audio output,the audio will be played from both the local speaker and the specified device after this API is called.
+设置使能或者关闭与指定设备协同播放。当前仅A2DP音频设备支持协同播放。如果系统当前正在使用指定的设备发声，调用此接口后，声音将从本地speaker和指定的设备上协同播放出来。
 
 **Since:** 20
 
@@ -184,24 +190,24 @@ Enables or disables collaborative playback for the specified device.Currently, o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device descriptor. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device descriptor. |
 | enabled | boolean | Yes | Whether to enable or disable collaborative playback. The value true means to enable it, and false means to disable it. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | 设置结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Possible causes: 1. The specified device is not an A2DP device. 2. The specified device is not connected. |
+| 801 | Capability not supported. |
+| 6800101 | Parameter verification failed. Possible causes: 1. The specified device is not an A2DP device. 2. The specified device is not connected. |
+| 202 | Not system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';

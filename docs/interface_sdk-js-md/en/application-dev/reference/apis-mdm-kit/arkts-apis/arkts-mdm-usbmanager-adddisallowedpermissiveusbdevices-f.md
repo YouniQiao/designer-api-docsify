@@ -1,16 +1,23 @@
 # addDisallowedPermissiveUsbDevices
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.MDMKit';
+```
+
 ## addDisallowedPermissiveUsbDevices
 
 ```TypeScript
 function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<PermissiveUsbDeviceType>): void
 ```
 
-Adds disallowed USB device types. Unlike the [addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_API, this API does not require matching based on the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_standard. This API takes effect immediately on connected USB devices without requiring re-plugging. For example, if a USB wired headset is in normal use and this API is called to disable it, the headset will become unavailable immediately.
+添加禁止使用的USB设备类型。与[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)接口不同的是，本接口可以不按照  
+[defined-class-codes](https://www.usb.org/defined-class-codes)标准进行匹配。对已连接的USB设备热生效，无需重新插拔，例如USB线控耳机正常使用时，调用本接口禁用该耳机，会导致耳机不可用。
 
-A policy conflict is reported when this API is called in the following scenarios:
+以下情况下，调用本接口会报策略冲突：
 
-1. Disallowed USB device types have been added using the [addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API.2. The USB capability of the device has been disabled via [setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.3. The available USB devices have been added through [addAllowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.4. The USB storage write capability has been disabled for specific users via [setDisallowedPolicyForAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_.
+1. 已经通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)接口添加了禁止使用的USB设备类型。2. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了设备USB能力。3. 已经通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices)接口添加了USB设备可用名单。4. 已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口禁用了某用户USB存储设备写入能力。
 
 **Since:** 26.0.0
 
@@ -28,16 +35,57 @@ A policy conflict is reported when this API is called in the following scenarios
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| usbDevices | Array&lt;PermissiveUsbDeviceType&gt; | Yes | Array of USB device types to be added. Partial field matching is supported. The array can have a maximum of 1000 elements. If there are already 500 USB device IDs in the array, only 500 more can be added. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| usbDevices | Array&lt;PermissiveUsbDeviceType&gt; | Yes | 要添加的USB设备类型的数组，支持部分字段匹配。USB设备禁用名单数组长度上限为1000，若当前禁用名单中已有500个 USB设备ID，则只允许再添加500个。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200012 | Parameter verification failed. |
+| 9200010 | A conflict policy has been configured. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
+
+```TypeScript
+import { usbManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // Disable USB storage devices (use the actual USB device type parameter).
+  let usbDevices1: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 8
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices1);
+
+  // Disable USB wired headsets (use the actual USB device type parameter).
+  let usbDevices2: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 0,
+    subClass: 0,
+    protocol: 0,
+    descriptor: usbManager.Descriptor.DEVICE
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices2);
+
+  // Disable USB wired keyboard input (use the actual USB device type parameter).
+  let usbDevices3: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 3,
+    subClass: 1,
+    protocol: 1,
+    descriptor: usbManager.Descriptor.INTERFACE
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices3);
+  console.info(`Succeeded in adding disallowed permissive USB devices.`);
+} catch (err) {
+  console.error(`Failed to add disallowed permissive USB devices. Code: ${err.code}, message: ${err.message}`);
+}
+```
 

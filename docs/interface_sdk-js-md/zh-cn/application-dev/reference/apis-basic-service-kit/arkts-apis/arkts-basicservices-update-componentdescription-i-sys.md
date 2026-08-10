@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## componentId
 
 ```TypeScript
@@ -44,7 +50,7 @@ descriptionInfo: DescriptionInfo
 
 描述文件信息。
 
-**类型：** DescriptionInfo
+**类型：** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
 **起始版本：** 9
 

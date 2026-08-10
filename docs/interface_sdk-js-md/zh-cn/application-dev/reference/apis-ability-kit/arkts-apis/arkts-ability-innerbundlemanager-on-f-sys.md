@@ -1,5 +1,11 @@
 # on（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## on('BundleStatusChange')
 
 ```TypeScript
@@ -8,11 +14,12 @@ function on(type: 'BundleStatusChange',
 ```
 
 注册Callback。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [on](@ohos.bundle.bundleMonitor:bundleMonitor.on(type: BundleChangedEvent, callback: Callback&lt;BundleChangedInfo&gt;))
+> 替代。
 
 **起始版本：** 8
 
@@ -35,8 +42,8 @@ function on(type: 'BundleStatusChange',
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BundleStatusChange' | 是 | 指示应执行命令，只支持BundleStatusChange。 |
-| bundleStatusCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要注册的回调。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回正确结果或错误信息。 |
+| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | 是 | 指示要注册的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回正确结果或错误信息。 |
 
 
 ## on('BundleStatusChange')
@@ -46,11 +53,12 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 ```
 
 注册Callback。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [on](@ohos.bundle.bundleMonitor:bundleMonitor.on(type: BundleChangedEvent, callback: Callback&lt;BundleChangedInfo&gt;))
+> 替代。
 
 **起始版本：** 8
 
@@ -73,11 +81,11 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BundleStatusChange' | 是 | 指示应执行命令，只支持BundleStatusChange。 |
-| bundleStatusCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要注册的回调。 |
+| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | 是 | 指示要注册的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise形式返回正确结果或错误信息。 |
+| Promise&lt;string&gt; | Promise形式返回正确结果或错误信息。 |
 

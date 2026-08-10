@@ -1,5 +1,11 @@
 # enableGwpAsanGrayscale
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## enableGwpAsanGrayscale
 
 ```TypeScript
@@ -20,16 +26,16 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | GWP-ASan����ʱ�䣬��λΪ�죬Ĭ��ֵΪ7���贫�����0���������� |
+| options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | GWP-ASan����ʱ�䣬��λΪ�죬Ĭ��ֵΪ7���贫�����0���������� |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) | The number of GWP-ASAN applications of this device overflowed after last boot. |
+| 11400114 | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
@@ -76,16 +82,16 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
+| options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
 | duration | number | 否 | GWP-ASan����ʱ�䣬��λΪ�죬Ĭ��ֵΪ7���贫�����0���������� |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) | The number of GWP-ASAN applications of this device overflowed after last boot. |
+| 11400114 | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

@@ -1,6 +1,6 @@
 # ConditionVariable
 
-Object used for thread synchronization.
+实现异步等待功能的类，支持异步等待通知操作。该类使用@Sendable装饰器装饰。
 
 **Since:** 18
 
@@ -12,13 +12,19 @@ Object used for thread synchronization.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Default constructor.
+默认构造函数。创建一个异步等待通知操作的对象。
 
 **Since:** 18
 
@@ -36,7 +42,7 @@ Default constructor.
 notifyAll(): void
 ```
 
-Notify all waiting promise.
+通知所有等待的线程。
 
 **Since:** 18
 
@@ -54,7 +60,7 @@ Notify all waiting promise.
 notifyOne(): void
 ```
 
-Notify one waiting promise.
+通知第一个等待的线程。
 
 **Since:** 18
 
@@ -72,7 +78,7 @@ Notify one waiting promise.
 static request(name: string): ConditionVariable
 ```
 
-Find or create an instance of ConditionVariable using the specified name.
+使用指定的名称查找或创建（如果未找到）异步等待通知操作的对象。
 
 **Since:** 18
 
@@ -88,13 +94,13 @@ Find or create an instance of ConditionVariable using the specified name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the ConditionVariable to find or create. |
+| name | string | Yes | 按指定名称查找或创建等待通知操作的对象名称，字符串无特别限制。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns an instance of ConditionVariable. |
+| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | 返回查找到或创建后的异步等待通知操作的实例。 |
 
 ## wait
 
@@ -102,7 +108,7 @@ Find or create an instance of ConditionVariable using the specified name.
 wait(): Promise<void>
 ```
 
-Waits for the ConditionVariable to be notified.
+异步调用进入等待中，将在被唤醒后继续执行。使用Promise异步回调。
 
 **Since:** 18
 
@@ -118,7 +124,7 @@ Waits for the ConditionVariable to be notified.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise will be resolved once the ConditionVariable is notified.. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## waitFor
 
@@ -126,7 +132,7 @@ Waits for the ConditionVariable to be notified.
 waitFor(timeout: number): Promise<void>
 ```
 
-Waits for the ConditionVariable to be notified, or until the specified time limit is reached.
+异步调用进入等待中，将在被唤醒或者等待时间结束后继续执行。使用Promise异步回调。
 
 **Since:** 18
 
@@ -142,11 +148,11 @@ Waits for the ConditionVariable to be notified, or until the specified time limi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | The maximum time to wait. The value should be an integer. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms. |
+| timeout | number | Yes | 等待时间，单位为毫秒，正整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise that will be resolved once the ConditionVariable is notified or the specified time limit is reached. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

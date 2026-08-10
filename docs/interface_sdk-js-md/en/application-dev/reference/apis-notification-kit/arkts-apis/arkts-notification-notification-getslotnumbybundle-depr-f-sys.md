@@ -6,7 +6,7 @@
 function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of notification slots of a specified application.This API uses an asynchronous callback to return the result.
+获取指定应用的通知通道数量（Callback形式）。
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ Obtains the number of notification slots of a specified application.This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 获取通知通道数量回调函数。 |
 
 
 ## getSlotNumByBundle
@@ -38,7 +38,7 @@ Obtains the number of notification slots of a specified application.This API use
 function getSlotNumByBundle(bundle: BundleOption): Promise<number>
 ```
 
-Obtains the number of notification slots of a specified application. This API uses a promise to return the result.
+获取指定应用的通知通道数量（Promise形式）。
 
 **Since:** 7
 
@@ -60,11 +60,11 @@ Obtains the number of notification slots of a specified application. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | 以Promise形式返回获取指定应用的通知通道数量。 |
 

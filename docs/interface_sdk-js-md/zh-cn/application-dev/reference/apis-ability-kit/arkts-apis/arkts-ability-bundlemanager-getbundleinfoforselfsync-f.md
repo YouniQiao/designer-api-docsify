@@ -1,5 +1,11 @@
 # getBundleInfoForSelfSync
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleInfoForSelfSync
 
 ```TypeScript
@@ -22,21 +28,21 @@ function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定返回的BundleInfo所包含的信息。 |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定返回的BundleInfo所包含的信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回BundleInfo对象。 |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回BundleInfo对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

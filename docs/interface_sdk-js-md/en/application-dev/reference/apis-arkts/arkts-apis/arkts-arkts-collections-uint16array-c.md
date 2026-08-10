@@ -1,10 +1,11 @@
 # Uint16Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    - This module can be imported only to ArkTS files (with the file name extension .ets).  
-    **Decorator**: \@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md)实现。
+
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> **装饰器类型**：\@Sendable
 
 **Since:** 12
 
@@ -16,13 +17,19 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer]\_\_\_JSDOC\_L
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { collections } from 'kits/@kit.ArkTS';
+```
+
 ## [Symbol.iterator]
 
 ```TypeScript
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-Returns an iterator that iterates over numbers.
+返回一个迭代器，迭代器的每一项都是一个数字。
 
 **Since:** 12
 
@@ -38,13 +45,13 @@ Returns an iterator that iterates over numbers.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Iterator object that yields numbers. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -52,7 +59,7 @@ Returns an iterator that iterates over numbers.
 at(index: number): number | undefined
 ```
 
-Returns the element at the given index. If no element is found, **undefined** is returned.
+返回指定下标的元素，如果不存在，则返回**undefined**。
 
 **Since:** 12
 
@@ -68,20 +75,20 @@ Returns the element at the given index. If no element is found, **undefined** is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | The zero-based index of the desired code unit.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ A negative index will count back from the last item. |
+| index | number | Yes | 要返回的Array元素的索引（从零开始），取值为整数。&lt;br/&gt;如果`index < 0`，则会访问`index + Uint16Array.length`位置的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Element obtained. If no element is found, **undefined** is returned. |
+| number | 指定下标的元素；如果不存在，则返回**undefined**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The at method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The at method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## constructor
 
@@ -89,7 +96,7 @@ Returns the element at the given index. If no element is found, **undefined** is
 constructor()
 ```
 
-A constructor used to create an empty ArkTS Uint16Array.
+构造函数，用于创建一个空ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -105,7 +112,7 @@ A constructor used to create an empty ArkTS Uint16Array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint16Array's constructor cannot be directly invoked. |
+| 10200012 | The Uint16Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -113,7 +120,7 @@ A constructor used to create an empty ArkTS Uint16Array.
 constructor(length: number)
 ```
 
-A constructor used to create an ArkTS Uint16Array of a given length.
+构造函数，用于创建一个指定长度的ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -129,13 +136,13 @@ A constructor used to create an ArkTS Uint16Array of a given length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | Length of the ArkTS Uint16Array. |
+| length | number | Yes | 用于指定ArkTS Uint16Array的长度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint16Array's constructor cannot be directly invoked. |
+| 10200012 | The Uint16Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -143,7 +150,7 @@ A constructor used to create an ArkTS Uint16Array of a given length.
 constructor(elements: Iterable<number>)
 ```
 
-A constructor that creates an ArkTS Uint16Array from an iterable object.
+构造函数，以Iterable创建一个ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -159,13 +166,13 @@ A constructor that creates an ArkTS Uint16Array from an iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Iterable&lt;number&gt; | Yes | An iterable collection of numbers used to construct an ArkTS Uint16Array object. |
+| elements | Iterable&lt;number&gt; | Yes | 可迭代数字集合，用于构造ArkTS Uint16Array对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint16Array's constructor cannot be directly invoked. |
+| 10200012 | The Uint16Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -173,7 +180,7 @@ A constructor that creates an ArkTS Uint16Array from an iterable object.
 constructor(array: ArrayLike<number> | ArrayBuffer)
 ```
 
-A constructor that creates an ArkTS Uint16Array from an array-like object or ArkTS ArrayBuffer.
+构造函数，以ArrayLike或ArkTS ArrayBuffer创建一个ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -189,13 +196,13 @@ A constructor that creates an ArkTS Uint16Array from an array-like object or Ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Uint16Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
+| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | Yes | 用于构造ArkTS Uint16Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数须是4的整数倍。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint16Array's constructor cannot be directly invoked. |
+| 10200012 | The Uint16Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -203,7 +210,7 @@ A constructor that creates an ArkTS Uint16Array from an array-like object or Ark
 constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 ```
 
-A constructor that creates an ArkTS Uint16Array from an ArrayBuffer.
+构造函数，以ArrayBuffer创建一个ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -219,15 +226,15 @@ A constructor that creates an ArkTS Uint16Array from an ArrayBuffer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | ArrayBuffer object used to construct the ArkTS Uint16Array. The number of bytes occupied by the buffer must be an integer multiple of 4. |
-| byteOffset | number | No | Byte offset of the buffer, beginning at 0. The default value is **0**. |
-| length | number | No | Length of the ArkTS Uint16Array. The default value is **0**. |
+| buffer | ArrayBuffer | Yes | 用于构造ArkTS Uint16Array的ArrayBuffer对象。buffer所占的字节数须是4的整数倍。 |
+| byteOffset | number | No | 指定buffer的字节偏移，从0开始。默认值为**0**。 |
+| length | number | No | 指定ArkTS Uint16Array的长度。默认值为**0**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint16Array's constructor cannot be directly invoked. |
+| 10200012 | The Uint16Array's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -235,7 +242,7 @@ A constructor that creates an ArkTS Uint16Array from an ArrayBuffer.
 copyWithin(target: number, start: number, end?: number): Uint16Array
 ```
 
-Copies elements within a given range from this ArkTS Uint16Array to another position in sequence.
+从ArkTS Uint16Array指定范围内的元素依次拷贝到目标位置。
 
 **Since:** 12
 
@@ -251,22 +258,22 @@ Copies elements within a given range from this ArkTS Uint16Array to another posi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| start | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is the length of the ArkTS Uint16Array. |
+| target | number | Yes | 目标起始位置的下标，如果`target < 0`，则会从`target + array.length`位置开始。 |
+| start | number | Yes | 源起始位置下标，如果`start < 0`，则会从`start + Uint16Array.length`位置开始。 |
+| end | number | No | 源终止位置下标（不包含end位置的元素），如果`end < 0`，则会从`end + Uint16Array.length`位置终止。默认为ArkTS Uint16Array的长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | ArkTS Uint16Array after being modified. |
+| Uint16Array | 修改后的ArkTS Uint16Array。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The copyWithin method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The copyWithin method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## entries
 
@@ -274,7 +281,7 @@ Copies elements within a given range from this ArkTS Uint16Array to another posi
 entries(): IterableIterator<[number, number]>
 ```
 
-Returns an iterator object that contains the key-value pair of each element in this ArkTS Float32Array.
+返回一个新的迭代器对象，该对象包含ArkTS Uint16Array中每个元素的键值对。
 
 **Since:** 12
 
@@ -290,14 +297,14 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[number, number]&gt; | Iterator object. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 新的迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The entries method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## every
 
@@ -305,7 +312,7 @@ Returns an iterator object that contains the key-value pair of each element in t
 every(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean
 ```
 
-Checks whether all elements in this ArkTS Uint16Array meet a given condition.
+测试ArkTS Uint16Array中的所有元素是否满足指定条件。
 
 **Since:** 12
 
@@ -321,20 +328,20 @@ Checks whether all elements in this ArkTS Uint16Array meet a given condition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, Uint16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint16Array&gt; | Yes | 用于测试的断言函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if all elements meet the given condition; otherwise, **false** is returned. |
+| boolean | 如果所有元素都满足指定条件则返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The every method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The every method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## fill
 
@@ -342,7 +349,7 @@ Checks whether all elements in this ArkTS Uint16Array meet a given condition.
 fill(value: number, start?: number, end?: number): Uint16Array
 ```
 
-Fills all elements in a given range in this ArkTS Uint16Array with a value.
+使用特定值填充ArkTS Uint16Array指定范围的全部元素。
 
 **Since:** 12
 
@@ -358,22 +365,22 @@ Fills all elements in a given range in this ArkTS Uint16Array with a value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value to fill in. |
-| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is the length of the ArkTS Uint16Array. |
+| value | number | Yes | 待填充的值。 |
+| start | number | No | 开始填充的索引，如果`start < 0`，则会从`start + Uint16Array.length`位置开始。默认值为**0**。 |
+| end | number | No | 结束填充的索引（不包括该元素），如果`end < 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | Filled ArkTS Uint16Array. |
+| Uint16Array | 填充后的ArkTS Uint16Array。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The fill method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The fill method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## filter
 
@@ -381,7 +388,7 @@ Fills all elements in a given range in this ArkTS Uint16Array with a value.
 filter(predicate: TypedArrayPredicateFn<number, Uint16Array>): Uint16Array
 ```
 
-Returns a new ArkTS Uint16Array that contains all elements that meet the given condition.
+返回一个新ArkTS Uint16Array，其包含满足指定条件的所有元素。
 
 **Since:** 12
 
@@ -397,20 +404,20 @@ Returns a new ArkTS Uint16Array that contains all elements that meet the given c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, Uint16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint16Array&gt; | Yes | 用于元素过滤的断言函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | Filtered ArkTS Uint16Array. |
+| Uint16Array | 过滤后的ArkTS Uint16Array对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The filter method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The filter method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## find
 
@@ -418,7 +425,7 @@ Returns a new ArkTS Uint16Array that contains all elements that meet the given c
 find(predicate: TypedArrayPredicateFn<number, Uint16Array>): number | undefined
 ```
 
-Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
+返回ArkTS Uint16Array中第一个满足指定条件的元素的值，如果所有元素都不满足，则返回**undefined**。
 
 **Since:** 12
 
@@ -434,20 +441,20 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, Uint16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint16Array&gt; | Yes | 用于元素查找的断言函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
+| number | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The find method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The find method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## findIndex
 
@@ -455,7 +462,7 @@ Returns the value of the first element that passes a test provided by a callback
 findIndex(predicate: TypedArrayPredicateFn<number, Uint16Array>): number
 ```
 
-Returns the index of the first element that passes a test provided by a callback function. If none of the elements pass the test, **-1** is returned.
+返回ArkTS Uint16Array中第一个满足指定条件的元素索引，如果所有元素都不满足，则返回**-1**。
 
 **Since:** 12
 
@@ -471,20 +478,20 @@ Returns the index of the first element that passes a test provided by a callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, Uint16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint16Array&gt; | Yes | 用于元素查找的断言函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the first element that passes the test. If none of the elements pass the test, **-1** is returned. |
+| number | 第一个满足条件的元素索引；如果所有元素都不满足条件，则返回**-1**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The findIndex method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The findIndex method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## forEach
 
@@ -492,7 +499,7 @@ Returns the index of the first element that passes a test provided by a callback
 forEach(callbackFn: TypedArrayForEachCallback<number, Uint16Array>): void
 ```
 
-Calls a callback function for each element in this ArkTS Uint16Array.
+对ArkTS Uint16Array中的每个元素执行提供的回调函数。
 
 **Since:** 12
 
@@ -508,14 +515,14 @@ Calls a callback function for each element in this ArkTS Uint16Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, Uint16Array&gt; | Yes | Callback function to run for each element. |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Uint16Array&gt; | Yes | 用于对每个元素执行的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The forEach method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## from
 
@@ -523,7 +530,7 @@ Calls a callback function for each element in this ArkTS Uint16Array.
 static from(arrayLike: ArrayLike<number>): Uint16Array
 ```
 
-Creates an ArkTS Uint16Array from an array-like or iterator object.
+从一个ArrayLike或者可迭代对象中创建一个ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -539,13 +546,13 @@ Creates an ArkTS Uint16Array from an array-like or iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Uint16Array. |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes | 用于构造ArkTS Uint16Array的ArrayLike对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | New ArkTS Uint16Array generated. |
+| Uint16Array | 新创建的ArkTS Uint16Array对象。 |
 
 ## from
 
@@ -553,7 +560,7 @@ Creates an ArkTS Uint16Array from an array-like or iterator object.
 static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Uint16Array
 ```
 
-Creates an ArkTS Uint16Array from an array-like object.
+从一个ArrayLike中创建一个ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -569,14 +576,14 @@ Creates an ArkTS Uint16Array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | An array-like object to convert to an Uint16Array. |
-| mapFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T, number&gt; | Yes | A mapping function to call on every element of the array. |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | 用于构造ArrayLike对象。 |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | Yes | 映射函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | New ArkTS Uint16Array generated. |
+| Uint16Array | 新创建的ArkTS Uint16Array对象。 |
 
 ## from
 
@@ -584,7 +591,7 @@ Creates an ArkTS Uint16Array from an array-like object.
 static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint16Array
 ```
 
-Creates an ArkTS Uint16Array from an iterator object.
+从一个可迭代对象中创建一个ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -600,14 +607,14 @@ Creates an ArkTS Uint16Array from an iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | Iterable&lt;number&gt; | Yes | An iterable object to convert to an Uint16Array. |
-| mapFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, number&gt; | No | A mapping function to call on every element of the array. |
+| arrayLike | Iterable&lt;number&gt; | Yes | 用于构造的可迭代对象。 |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | No | 映射函数。如果省略，则不对元素进行加工处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | New ArkTS Uint16Array generated. |
+| Uint16Array | 新创建的ArkTS Uint16Array对象。 |
 
 ## includes
 
@@ -615,7 +622,7 @@ Creates an ArkTS Uint16Array from an iterator object.
 includes(searchElement: number, fromIndex?: number): boolean
 ```
 
-Checks whether elements are contained in this ArkTS Float32Array.
+判断ArkTS Uint16Array是否包含特定元素。
 
 **Since:** 12
 
@@ -631,21 +638,21 @@ Checks whether elements are contained in this ArkTS Float32Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | number | Yes | The element to search for. |
-| fromIndex | number | No | The position in this array at which to begin searching for searchElement. |
+| searchElement | number | Yes | 待搜索的元素。 |
+| fromIndex | number | No | 开始搜索的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** is returned. |
+| boolean | 如果ArkTS Uint16Array包含指定的元素，则返回true；否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The includes method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The includes method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## indexOf
 
@@ -653,8 +660,7 @@ Checks whether elements are contained in this ArkTS Float32Array.
 indexOf(searchElement: number, fromIndex?: number): number
 ```
 
-Returns the index of the first occurrence of a value in this ArkTS Float32Array. If the value is not found,  
-**-1** is returned.
+返回在ArkTS Uint16Array中给定元素的第一个索引，如果不存在，则返回**-1**。
 
 **Since:** 12
 
@@ -670,21 +676,21 @@ Returns the index of the first occurrence of a value in this ArkTS Float32Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | number | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Float32Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Float32Array. |
+| searchElement | number | Yes | 待索引的值。 |
+| fromIndex | number | No | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Uint16Array的长度，则返回**-1**。 如果提供的下标值是负数，则被当做距离数组尾部的偏移，从前到后搜索。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the first occurrence of the value. If the value is not found, **-1** is returned. |
+| number | 数组中元素的第一个索引；没有找到，则返回**-1**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The indexOf method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The indexOf method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## join
 
@@ -692,7 +698,7 @@ Returns the index of the first occurrence of a value in this ArkTS Float32Array.
 join(separator?: string): string
 ```
 
-Concatenates all elements in this ArkTS Float32Array into a string, with a given separator.
+将ArkTS Uint16Array的所有元素拼接成一个字符串，元素之间使用指定的分隔符分隔。
 
 **Since:** 12
 
@@ -708,20 +714,20 @@ Concatenates all elements in this ArkTS Float32Array into a string, with a given
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
+| separator | string | No | 分隔字符串。如果省略，则使用逗号（,）分隔。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | String obtained. If the array is empty, an empty string is returned. |
+| string | 包含所有元素拼接成的字符串。如果ArkTS Uint16Array为空，则返回空字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The join method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The join method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## keys
 
@@ -729,7 +735,7 @@ Concatenates all elements in this ArkTS Float32Array into a string, with a given
 keys(): IterableIterator<number>
 ```
 
-Returns an iterator object that contains the key (index) of each element in this ArkTS Float32Array.
+返回一个新的迭代器对象，该对象包含ArkTS Uint16Array中每个元素的键（下标）。
 
 **Since:** 12
 
@@ -745,14 +751,14 @@ Returns an iterator object that contains the key (index) of each element in this
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Iterator object. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The keys method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -760,7 +766,7 @@ Returns an iterator object that contains the key (index) of each element in this
 lastIndexOf(searchElement: number, fromIndex?: number): number
 ```
 
-Obtains the index of the last occurrence of the specified value in this ArkTS Uint16Array.
+返回ArkTS Uint16Array实例中最后一次出现searchElement的索引，如果对象不包含，则为-1。
 
 **Since:** 18
 
@@ -776,21 +782,21 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Ui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | number | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Uint16Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Uint16Array. |
+| searchElement | number | Yes | 待索引的值。 |
+| fromIndex | number | No | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Uint16Array的长度，则返回**-1**。 如果提供的下标值是负数，则被当做距离数组尾部的偏移，从后到前搜索。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the last occurrence of the value. If the value is not found, **-1** is returned. |
+| number | 数组中给定元素的最后一个索引；没有找到，则返回**-1**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The lastIndexOf method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The lastIndexOf method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## map
 
@@ -798,7 +804,7 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Ui
 map(callbackFn: TypedArrayMapCallback<number, Uint16Array>): Uint16Array
 ```
 
-Applies a callback function to each element in this ArkTS Uint16Array and uses the result to create an ArkTS Uint16Array.
+对ArkTS Uint16Array中的每个元素应用指定的回调函数，并使用结果创建一个新的ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -814,20 +820,20 @@ Applies a callback function to each element in this ArkTS Uint16Array and uses t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, Uint16Array&gt; | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Uint16Array&gt; | Yes | 回调函数。map方法会对数组中的每个元素调用一次callbackFn函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | New ArkTS Uint16Array. |
+| Uint16Array | 新ArkTS Uint16Array对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The map method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The map method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## of
 
@@ -835,7 +841,7 @@ Applies a callback function to each element in this ArkTS Uint16Array and uses t
 static of(...items: number[]): Uint16Array
 ```
 
-Creates an ArkTS Uint16Array with a variable number of parameters.
+通过可变数量的参数创建一个新的ArkTS Uint16Array对象，参数个数可以是0个、1个或者多个。
 
 **Since:** 18
 
@@ -851,13 +857,13 @@ Creates an ArkTS Uint16Array with a variable number of parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | number[] | Yes | Array of elements used to create the array. The number of elements can be zero, one, or more. |
+| items | number[] | Yes | 用于创建数组的元素，参数个数可以是0个、1个或者多个。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | New ArkTS Uint16Array instance. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| Uint16Array | 新的ArkTS Uint16Array实例。可能的异常原因：1.必填参数未指定； &lt;br&gt;2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -865,7 +871,7 @@ Creates an ArkTS Uint16Array with a variable number of parameters.
 reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): number
 ```
 
-Applies a reduce function on each element in this ArkTS Uint16Array and returns the final reduction result.
+对ArkTS Uint16Array中的每个元素执行归约函数，并返回最终的归约结果。
 
 **Since:** 12
 
@@ -881,20 +887,20 @@ Applies a reduce function on each element in this ArkTS Uint16Array and returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, number, Uint16Array&gt; | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint16Array&gt; | Yes | 归约函数。reduce方法会对数组中的每个元素调用一次callbackFn函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Final result obtained from the last call of the reduce function. |
+| number | 由最后一次调用归约函数返回的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The reduce method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## reduce
 
@@ -902,7 +908,7 @@ Applies a reduce function on each element in this ArkTS Uint16Array and returns 
 reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>, initialValue: number): number
 ```
 
-Applies a reduce function for each element in this ArkTS Uint16Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
+对ArkTS Uint16Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **Since:** 12
 
@@ -918,21 +924,21 @@ Applies a reduce function for each element in this ArkTS Uint16Array, receives a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, number, Uint16Array&gt; | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
-| initialValue | number | Yes | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint16Array&gt; | Yes | 归约函数。reduce方法会对数组中的每个元素调用一次callbackFn函数。 |
+| initialValue | number | Yes | 如果指定了initialValue，则将其作为初始值开始累加。 首次调用callbackFn函数时会将该值作为参数传入，而不是使用数组元素值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Final result obtained from the last call of the reduce function. |
+| number | 由最后一次调用归约函数返回的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The reduce method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## reduce
 
@@ -940,7 +946,7 @@ Applies a reduce function for each element in this ArkTS Uint16Array, receives a
 reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Array>, initialValue: U): U
 ```
 
-Applies a reduce function for each element in this ArkTS Uint16Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
+对ArkTS Uint16Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **Since:** 12
 
@@ -956,21 +962,21 @@ Applies a reduce function for each element in this ArkTS Uint16Array, receives a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;U, number, Uint16Array&gt; | Yes | Reduce function. |
-| initialValue | U | Yes | Initial value. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint16Array&gt; | Yes | 归约函数。 |
+| initialValue | U | Yes | 初始值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| U | Final result obtained from the last call of the reduce function. |
+| U | 由最后一次调用归约函数返回的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The reduce method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## reduceRight
 
@@ -978,7 +984,7 @@ Applies a reduce function for each element in this ArkTS Uint16Array, receives a
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Array>, initialValue: U): U
 ```
 
-Reversely traverses this ArkTS Uint16Array, applies a reduce function for each element in the array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
+反向遍历ArkTS Uint16Array，对ArkTS Uint16Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **Since:** 18
 
@@ -994,21 +1000,21 @@ Reversely traverses this ArkTS Uint16Array, applies a reduce function for each e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;U, number, Uint16Array&gt; | Yes | A function that is called for each element in the Uint16Array. |
-| initialValue | U | Yes | A value to use as the first argument to the first call of the callback. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no initial value is provided, the last element of the Uint16Array will be used, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_and the callback will start with the second-to-last element. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint16Array&gt; | Yes | 对Uint16Array中每个元素调用的函数。 |
+| initialValue | U | Yes | 作为首次调用callbackFn函数第一个参数的值。 &lt;br&gt;若未提供初始值，则会使用Uint16Array的最后一个元素作为初始值， &lt;br&gt;并从倒数第二个元素开始调用callback。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| U | Final result obtained from the last call of the reduce function. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| U | 由最后一次调用归约函数返回的结果。可能的异常原因： 1.必填参数未指定。 2.参数类型不正确。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The reduceRight method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1016,7 +1022,7 @@ Reversely traverses this ArkTS Uint16Array, applies a reduce function for each e
 reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): number
 ```
 
-Reversely traverses this ArkTS Uint16Array, applies a reduce function on each element in the array, and returns the final reduction result.
+反向遍历ArkTS Uint16Array，对ArkTS Uint16Array中的每个元素执行归约函数，并返回最终的归约结果。
 
 **Since:** 18
 
@@ -1032,20 +1038,20 @@ Reversely traverses this ArkTS Uint16Array, applies a reduce function on each el
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, number, Uint16Array&gt; | Yes | A function that is called for each element in the Uint16Array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint16Array&gt; | Yes | 对Uint16Array中每个元素调用的函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Final result obtained from the last call of the reduce function. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| number | 由最后一次调用归约函数返回的结果。可能的异常原因： 1.必填参数未指定。 2.参数类型不正确。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The reduceRight method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## reverse
 
@@ -1053,7 +1059,7 @@ Reversely traverses this ArkTS Uint16Array, applies a reduce function on each el
 reverse(): Uint16Array
 ```
 
-Reverses this ArkTS Uint16Array.
+反转ArkTS Uint16Array。
 
 **Since:** 12
 
@@ -1069,14 +1075,14 @@ Reverses this ArkTS Uint16Array.
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | Reversed ArkTS Uint16Array. |
+| Uint16Array | 反转后的ArkTS Uint16Array对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reverse method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The reverse method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## set
 
@@ -1084,7 +1090,7 @@ Reverses this ArkTS Uint16Array.
 set(array: ArrayLike<number>, offset?: number): void
 ```
 
-Writes the elements in an array-like object to the given start position in sequence.
+将传入的ArrayLike元素依次写入到指定的起始位置。
 
 **Since:** 12
 
@@ -1100,15 +1106,15 @@ Writes the elements in an array-like object to the given start position in seque
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | A typed or untyped array of values to set. |
-| offset | number | No | The index in the current array at which the values are to be written. |
+| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes | 用于设置的ArrayLike对象。 |
+| offset | number | No | 写入的起始位置。默认为0。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The set method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## slice
 
@@ -1116,7 +1122,7 @@ Writes the elements in an array-like object to the given start position in seque
 slice(start?: number, end?: number): Uint16Array
 ```
 
-Selects a range of elements in this ArkTS Uint16Array to create an ArkTS Uint16Array.
+返回一个新的ArkTS Uint16Array对象，其包含原ArkTS Uint16Array指定范围的内容。
 
 **Since:** 12
 
@@ -1132,21 +1138,21 @@ Selects a range of elements in this ArkTS Uint16Array to create an ArkTS Uint16A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is the length of the ArkTS Uint16Array. |
+| start | number | No | 开始索引，如果`start < 0`，则会从`start + Uint16Array.length`位置开始。默认值为**0**。 |
+| end | number | No | 结束索引（不包括该元素），如果`end < 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | New ArkTS Uint16Array. |
+| Uint16Array | 新的ArkTS Uint16Array对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The slice method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## some
 
@@ -1154,7 +1160,7 @@ Selects a range of elements in this ArkTS Uint16Array to create an ArkTS Uint16A
 some(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean
 ```
 
-Checks whether any element in this ArkTS Uint16Array meets a given condition.
+测试ArkTS Uint16Array中的是否存在元素满足指定条件。
 
 **Since:** 12
 
@@ -1170,20 +1176,20 @@ Checks whether any element in this ArkTS Uint16Array meets a given condition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number, Uint16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint16Array&gt; | Yes | 用于测试的断言函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if an element meeting the given condition exists; otherwise, **false** is returned. |
+| boolean | 如果存在元素满足指定条件返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The some method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The some method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## sort
 
@@ -1191,7 +1197,7 @@ Checks whether any element in this ArkTS Uint16Array meets a given condition.
 sort(compareFn?: TypedArrayCompareFn<number>): Uint16Array
 ```
 
-Sorts elements in this ArkTS Uint16Array and returns the sorted ArkTS Uint16Array.
+对ArkTS Uint16Array进行排序，并返回排序后的ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -1207,20 +1213,20 @@ Sorts elements in this ArkTS Uint16Array and returns the sorted ArkTS Uint16Arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | Function that determines the sort order. By default, elements are sorted in ascending order. |
+| compareFn | [TypedArrayCompareFn](arkts-arkts-collections-typedarraycomparefn-t.md)&lt;number&gt; | No | 用于确定元素顺序的函数。默认使用升序排序。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | Sorted ArkTS Uint16Array. |
+| Uint16Array | 排序后的ArkTS Uint16Array对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The sort method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## subarray
 
@@ -1228,7 +1234,7 @@ Sorts elements in this ArkTS Uint16Array and returns the sorted ArkTS Uint16Arra
 subarray(begin?: number, end?: number): Uint16Array
 ```
 
-Truncates an array from a specified position and returns a new ArkTS Uint16Array based on the same ArkTS ArrayBuffer.
+从指定的位置截取数组，返回一个新的、基于相同ArkTS ArrayBuffer的ArkTS Uint16Array对象。
 
 **Since:** 12
 
@@ -1244,21 +1250,21 @@ Truncates an array from a specified position and returns a new ArkTS Uint16Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | No | Start index of the range. If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is the length of the ArkTS Uint16Array. |
+| begin | number | No | 开始索引，如果`begin < 0`，则会从`begin + Uint16Array.length`位置开始。默认值为**0**。 |
+| end | number | No | 结束索引（不包括该元素），如果`end < 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint16Array | New ArkTS Uint16Array. |
+| Uint16Array | 新的ArkTS Uint16Array对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subarray method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The subarray method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1266,7 +1272,7 @@ Truncates an array from a specified position and returns a new ArkTS Uint16Array
 toLocaleString(): string
 ```
 
-Generates a string of digits that matches the cultural conventions of the current system locale. Each element converts its digits to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
+根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，让每个元素调用自己的toLocaleString方法把数字转换为字符串，然后使用逗号将每个元素的结果字符串按照顺序拼接成字符串。
 
 **Since:** 18
 
@@ -1282,14 +1288,14 @@ Generates a string of digits that matches the cultural conventions of the curren
 
 | Type | Description |
 | --- | --- |
-| string | A string that contains all elements of the array. |
+| string | 一个包含数组所有元素的字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toLocaleString method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The toLocaleString method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## toString
 
@@ -1297,7 +1303,7 @@ Generates a string of digits that matches the cultural conventions of the curren
 toString(): string
 ```
 
-Converts an ArkTS Uint16Array into a string.
+ArkTS Uint16Array转换为字符串。
 
 **Since:** 18
 
@@ -1313,14 +1319,14 @@ Converts an ArkTS Uint16Array into a string.
 
 | Type | Description |
 | --- | --- |
-| string | A string that contains all elements of the array. |
+| string | 一个包含数组所有元素的字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The toString method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## values
 
@@ -1328,7 +1334,7 @@ Converts an ArkTS Uint16Array into a string.
 values(): IterableIterator<number>
 ```
 
-Returns an iterator object that contains the value of each element in this ArkTS Float32Array.
+返回一个新的迭代器对象，该对象包含ArkTS Uint16Array中每个元素的值。
 
 **Since:** 12
 
@@ -1344,14 +1350,14 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Iterator object. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The values method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## BYTES_PER_ELEMENT
 
@@ -1359,7 +1365,7 @@ Returns an iterator object that contains the value of each element in this ArkTS
 static readonly BYTES_PER_ELEMENT: number
 ```
 
-Number of bytes occupied by each element in the ArkTS Float32Array.
+ArkTS Uint16Array中每个元素所占用的字节数。
 
 **Type:** number
 
@@ -1379,7 +1385,7 @@ Number of bytes occupied by each element in the ArkTS Float32Array.
 [index: number]: number
 ```
 
-Returns the item at that index.
+返回Uint16Array指定索引位置的元素。
 
 **Type:** number
 
@@ -1399,7 +1405,7 @@ Returns the item at that index.
 readonly buffer: ArrayBuffer
 ```
 
-Bottom-layer buffer used by an ArkTS Float32Array.
+ArkTS Uint16Array底层使用的buffer。
 
 **Type:** ArrayBuffer
 
@@ -1419,7 +1425,7 @@ Bottom-layer buffer used by an ArkTS Float32Array.
 readonly byteLength: number
 ```
 
-Number of bytes occupied by an ArkTS Float32Array.
+ArkTS Uint16Array的所占的字节数。
 
 **Type:** number
 
@@ -1439,7 +1445,7 @@ Number of bytes occupied by an ArkTS Float32Array.
 readonly byteOffset: number
 ```
 
-Offset between the ArkTS Float32Array and the start position of the ArrayBuffer.
+ArkTS Uint16Array距离其ArrayBuffer起始位置的偏移。
 
 **Type:** number
 
@@ -1459,7 +1465,7 @@ Offset between the ArkTS Float32Array and the start position of the ArrayBuffer.
 readonly length: number
 ```
 
-Number of elements in an ArkTS Float32Array.
+ArkTS Uint16Array元素个数。
 
 **Type:** number
 

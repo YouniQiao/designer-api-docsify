@@ -1,9 +1,11 @@
 # PersistentStorage
 
-For details about how to use PersistentStorage on the UI, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**
-    Since API version 12, PersistentStorage supports **null** and **undefined**.
+PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStorage属性持久化到文件中，在应用重启时从文件中恢复这些属性值并写入到AppStorage。具体UI使用说明，详见  
+[PersistentStorage：持久化存储UI状态](../../../ui/state-management/arkts-persiststorage.md)。
+
+> **说明：**
+> 
+> 从API version 12开始，PersistentStorage支持null、undefined。
 
 **Since:** 7
 
@@ -19,9 +21,10 @@ For details about how to use PersistentStorage on the UI, see
 static DeleteProp(key: string): void
 ```
 
-Performs the reverse operation of [PersistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. Specifically, this API deletes the property corresponding to the specified key from  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. Subsequent operations on  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ do not affect data in PersistentStorage.
+是[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从  
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用  
+[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
 
 **Since:** 7
 
@@ -39,7 +42,7 @@ Performs the reverse operation of [PersistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Property name in PersistentStorage. |
+| key | string | Yes | PersistentStorage中的属性名。 |
 
 ## Keys
 
@@ -47,7 +50,7 @@ Performs the reverse operation of [PersistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_
 static Keys(): Array<string>
 ```
 
-Returns an array of all persisted property names.
+返回所有持久化属性的属性名的数组。
 
 **Since:** 7
 
@@ -65,7 +68,7 @@ Returns an array of all persisted property names.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Returns an array of all persisted property names. |
+| Array&lt;string&gt; | 返回所有持久化属性的属性名的数组。 |
 
 ## PersistProp
 
@@ -73,19 +76,17 @@ Returns an array of all persisted property names.
 static PersistProp<T>(key: string, defaultValue: T): void
 ```
 
-Persists the property corresponding to **key** from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_to a file. This API is usually called before access to AppStorage.
+将[AppStorage](../../../ui/state-management/arkts-appstorage.md)中key对应的属性持久化到文件中。该接口应在访问AppStorage之前调用。
 
-The order for determining the type and value of a property is as follows:
+确定属性的类型和值的顺序如下：
 
-1. If the property with the specified key is found in the  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
+1. 如果[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)文件中存在key对应的属性，在AppStorage中创建对应的key，并用在PersistentStorage中找到的key的属性初始化。
 
-2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted.
+2. 如果PersistentStorage文件中没有查询到key对应的属性，则在AppStorage中查找key对应的属性。如果找到key对应的属性，则将该属性持久化。
 
-3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
-**defaultValue**, and persisted.
+3. 如果AppStorage也没查找到key对应的属性，则在AppStorage中创建key对应的属性。用defaultValue初始化其值，并将该属性持久化。
 
-According to the preceding initialization process, if the property exists in AppStorage, its value will be used,overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+根据上述的初始化流程，如果AppStorage中有该属性，则会使用其值覆盖PersistentStorage文件中的值。由于AppStorage是内存中的数据，这种操作会使持久化文件中的数据被内存数据覆盖，导致持久化数据失去意义。
 
 **Since:** 7
 
@@ -103,8 +104,8 @@ According to the preceding initialization process, if the property exists in App
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Property name. |
-| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. The value cannot be **null** or **undefined**. |
+| key | string | Yes | 要持久化的属性名。 |
+| defaultValue | T | Yes | 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。默认值不允许为null或undefined。 |
 
 ## PersistProps
 
@@ -117,7 +118,7 @@ static PersistProps(
   ): void
 ```
 
-Persists multiple properties. This API is similar to [PersistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+行为与[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据。该接口应在访问AppStorage之前调用，适合在应用启动时初始化。
 
 **Since:** 7
 
@@ -143,10 +144,10 @@ Persists multiple properties. This API is similar to [PersistProp]\_\_\_JSDOC\_L
 static deleteProp(key: string): void
 ```
 
-Performs the reverse operation of [persistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. Specifically, this API deletes the property corresponding to the specified **key** from  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. Subsequent operations on  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ do not affect data in PersistentStorage. This operation removes the corresponding key from the persistence file. To persist the property again, you can call the  
-[persistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API.
+是[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从  
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用  
+[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
 
 **Since:** 10
 
@@ -162,7 +163,7 @@ Performs the reverse operation of [persistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Property name in PersistentStorage. |
+| key | string | Yes | PersistentStorage中的属性名。 |
 
 ## keys
 
@@ -170,7 +171,7 @@ Performs the reverse operation of [persistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_
 static keys(): Array<string>
 ```
 
-Returns an array of all persisted property names.
+返回所有持久化属性的属性名的数组。
 
 **Since:** 10
 
@@ -186,7 +187,7 @@ Returns an array of all persisted property names.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Returns an array of all persisted property names. |
+| Array&lt;string&gt; | 返回所有持久化属性的属性名的数组。 |
 
 ## persistProp
 
@@ -194,19 +195,17 @@ Returns an array of all persisted property names.
 static persistProp<T>(key: string, defaultValue: T): void
 ```
 
-Persists the property corresponding to **key** from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_to a file. This API is usually called before access to AppStorage.
+将[AppStorage](../../../ui/state-management/arkts-appstorage.md)中key对应的属性持久化到文件中。该接口通常在访问AppStorage之前调用。
 
-The order for determining the type and value of a property is as follows:
+确定属性的类型和值的顺序如下：
 
-1. If the property with the specified key is found in the  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
+1. 如果[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)文件中存在key对应的属性，在AppStorage中创建对应的key，并用在PersistentStorage中找到的key的属性初始化。
 
-2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted.
+2. 如果PersistentStorage文件中没有查询到key对应的属性，则在AppStorage中查找key对应的属性。如果找到key对应的属性，则将该属性持久化。
 
-3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
-**defaultValue**, and persisted.
+3. 如果AppStorage中也没查找到key对应的属性，则在AppStorage中创建key对应的属性。用defaultValue初始化其值，并将该属性持久化。
 
-According to the preceding initialization process, if the property exists in AppStorage, its value will be used,overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+根据上述的初始化流程，如果AppStorage中有该属性，则会使用其值覆盖PersistentStorage文件中的值。由于AppStorage是内存中的数据，这种操作会使持久化文件中的数据被内存数据覆盖，导致持久化数据失去意义。
 
 **Since:** 10
 
@@ -222,8 +221,8 @@ According to the preceding initialization process, if the property exists in App
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Property name. |
-| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. Since API version 12, the value can be **null** or **undefined**. |
+| key | string | Yes | 要持久化的属性名。 |
+| defaultValue | T | Yes | 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。从API version 12开始可以为null或undefined。 |
 
 ## persistProps
 
@@ -231,7 +230,7 @@ According to the preceding initialization process, if the property exists in App
 static persistProps(props: PersistPropsOptions[]): void
 ```
 
-Persists multiple properties. This API is similar to [persistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+行为与[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据。该接口通常在访问AppStorage之前调用，适合在应用启动时初始化。
 
 **Since:** 10
 
@@ -247,5 +246,5 @@ Persists multiple properties. This API is similar to [persistProp]\_\_\_JSDOC\_L
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| props | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Array of properties to persist. |
+| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes | 持久化数组，每项包含属性名和默认值。 |
 

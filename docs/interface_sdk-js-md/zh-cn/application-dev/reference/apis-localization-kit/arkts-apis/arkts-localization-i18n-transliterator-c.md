@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getAvailableIDs
 
 ```TypeScript
@@ -62,7 +68,7 @@ static getInstance(id: string): Transliterator
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 音译对象。 |
+| [Transliterator](arkts-localization-i18n-transliterator-c.md) | 音译对象。 |
 
 ## transform
 

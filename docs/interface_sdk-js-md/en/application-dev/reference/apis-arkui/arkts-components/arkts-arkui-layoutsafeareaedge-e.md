@@ -1,6 +1,6 @@
 # LayoutSafeAreaEdge
 
-Define the edges for expanding the safe area in layout.
+扩展安全区域的边缘。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Define the edges for expanding the safe area in layout.
 TOP = 0
 ```
 
-Top edge.
+上方区域。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Top edge.
 BOTTOM = 1
 ```
 
-Bottom edge.
+下方区域。
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Bottom edge.
 START = 2
 ```
 
-Start edge. This represents the left edge in LTR mode and the right edge in RTL mode.
+前部区域。LTR模式时表示左侧区域，RTL模式表示右侧区域。
 
 **Since:** 20
 
@@ -76,7 +76,7 @@ Start edge. This represents the left edge in LTR mode and the right edge in RTL 
 END = 3
 ```
 
-End edge. This represents the right edge in LTR mode and the left edge in RTL mode.
+尾部区域。LTR模式时表示右侧区域，RTL模式表示左侧区域。
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ End edge. This represents the right edge in LTR mode and the left edge in RTL mo
 VERTICAL = 4
 ```
 
-Vertical edge of the safe area.
+垂直区域。
 
 **Since:** 20
 
@@ -116,7 +116,7 @@ Vertical edge of the safe area.
 HORIZONTAL = 5
 ```
 
-Horizontal edge of the safe area.
+水平区域。
 
 **Since:** 20
 
@@ -136,7 +136,7 @@ Horizontal edge of the safe area.
 ALL = 6
 ```
 
-All edges of the safe area.
+全部区域。
 
 **Since:** 20
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## address
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly address: string
 
 设备静态MAC地址。
 
-如果是蓝牙设备，需要申请权限ohos.permission.USE\_BLUETOOTH。
+如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
 
 **类型：** string
 
@@ -58,7 +64,7 @@ readonly channelCounts: Array<int>
 
 支持的通道数。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 9
 
@@ -78,7 +84,7 @@ readonly channelMasks: Array<int>
 
 支持的通道掩码。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 9
 
@@ -98,7 +104,7 @@ readonly deviceRole: DeviceRole
 
 设备角色。
 
-**类型：** DeviceRole
+**类型：** [DeviceRole](arkts-audio-audio-devicerole-e.md)
 
 **起始版本：** 7
 
@@ -118,7 +124,7 @@ readonly deviceType: DeviceType
 
 设备类型。
 
-**类型：** DeviceType
+**类型：** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
 **起始版本：** 7
 
@@ -178,7 +184,7 @@ readonly id: int
 
 唯一的设备id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -216,7 +222,7 @@ readonly name: string
 
 设备名称。
 
-如果是蓝牙设备，需要申请权限ohos.permission.USE\_BLUETOOTH。
+如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
 
 **类型：** string
 
@@ -238,7 +244,7 @@ readonly sampleRates: Array<int>
 
 支持的采样率。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 9
 

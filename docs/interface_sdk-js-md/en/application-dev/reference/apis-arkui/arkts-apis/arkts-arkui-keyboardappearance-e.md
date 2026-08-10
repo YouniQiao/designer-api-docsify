@@ -1,6 +1,6 @@
 # KeyboardAppearance
 
-Enumerates the appearance modes of the keyboard.
+键盘外观。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Enumerates the appearance modes of the keyboard.
 NONE_IMMERSIVE = 0
 ```
 
-Default appearance mode, not using immersive style.
+默认外观模式，不采用沉浸式风格。
 
 **Since:** 15
 
@@ -36,7 +36,7 @@ Default appearance mode, not using immersive style.
 IMMERSIVE = 1
 ```
 
-Immersive mode, following the system.
+沉浸式模式，跟随系统。
 
 **Since:** 15
 
@@ -56,7 +56,7 @@ Immersive mode, following the system.
 LIGHT_IMMERSIVE = 2
 ```
 
-Immersive style in light mode.
+浅色沉浸式风格。
 
 **Since:** 15
 
@@ -76,7 +76,7 @@ Immersive style in light mode.
 DARK_IMMERSIVE = 3
 ```
 
-Immersive style in dark mode.
+深色沉浸式风格。
 
 **Since:** 15
 

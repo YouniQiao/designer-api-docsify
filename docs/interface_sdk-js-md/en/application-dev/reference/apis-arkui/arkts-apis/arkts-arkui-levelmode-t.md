@@ -4,7 +4,7 @@
 declare type LevelMode = import('../api/@ohos.promptAction').LevelMode
 ```
 
-Defines the display level mode for the dialog box.
+弹窗的显示层级。
 
 **Since:** 15
 

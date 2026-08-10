@@ -1,6 +1,6 @@
 # DismissDialogAction
 
-Provides information about the action to dismiss the dialog box.
+Dialog关闭的信息。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Provides information about the action to dismiss the dialog box.
 dismiss: Callback<void>
 ```
 
-Callback for dismissing the dialog box. This API is called only when the dialog box needs to be exited.
+Dialog关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -38,9 +38,9 @@ Callback for dismissing the dialog box. This API is called only when the dialog 
 reason: DismissReason
 ```
 
-Reason why the dialog box cannot be dismissed. You must specify whether to close the dialog box for each of the listed actions.
+Dialog无法关闭原因。根据开发者需要选择不同操作下，Dialog是否需要关闭。
 
-**Type:** DismissReason
+**Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 
 **Since:** 12
 

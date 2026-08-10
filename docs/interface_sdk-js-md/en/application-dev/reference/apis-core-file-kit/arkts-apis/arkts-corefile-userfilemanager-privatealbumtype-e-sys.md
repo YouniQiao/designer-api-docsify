@@ -2,8 +2,8 @@
 
 Enumerates the system album types.
 
-This API will be deprecated. Use [AlbumType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[AlbumSubType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ instead.
+This API will be deprecated. Use [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md) and   
+[AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) instead.
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ This API will be deprecated. Use [AlbumType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 <!--Device-userFileManager-enum PrivateAlbumType--><!--Device-userFileManager-enum PrivateAlbumType-End-->
 
@@ -33,7 +33,7 @@ Favorites.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#favorite)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#favorite)
 
 <!--Device-PrivateAlbumType-TYPE_FAVORITE--><!--Device-PrivateAlbumType-TYPE_FAVORITE-End-->
 
@@ -55,7 +55,7 @@ Trash.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#trash)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#trash)
 
 <!--Device-PrivateAlbumType-TYPE_TRASH--><!--Device-PrivateAlbumType-TYPE_TRASH-End-->
 

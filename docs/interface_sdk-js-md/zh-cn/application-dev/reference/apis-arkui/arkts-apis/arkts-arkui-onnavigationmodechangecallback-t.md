@@ -20,5 +20,5 @@ declare type OnNavigationModeChangeCallback = (mode: NavigationMode) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当回调触发时的NavigationMode。  |
+| mode | [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md) | 是 | 当回调触发时的NavigationMode。 |
 

@@ -4,7 +4,7 @@
 declare type OnHoverStatusChangeCallback = (param: HoverEventParam) => void
 ```
 
-Defines the current callback invoked when the hover state of the device changes.
+当前设备的悬停状态改变时触发的回调。
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ Defines the current callback invoked when the hover state of the device changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters related to the hover state of the device, including the fold state, hover state, application orientation, and window mode enumeration of the device.  |
+| param | [HoverEventParam](arkts-arkui-hovereventparam-i.md) | Yes | 当前设备与悬停状态相关的参数，包括设备的折叠状态、悬停状态、应用方向以及窗口模式枚举。 |
 

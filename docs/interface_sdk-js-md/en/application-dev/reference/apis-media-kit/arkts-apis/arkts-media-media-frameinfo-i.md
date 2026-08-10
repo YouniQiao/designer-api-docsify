@@ -10,6 +10,12 @@ Defines the frame info when fetch picture form a video.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## actualTimeUs
 
 ```TypeScript
@@ -18,7 +24,7 @@ actualTimeUs?: long
 
 The actual frame time.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ requestedTimeUs: long
 
 The requested frame time.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -78,7 +84,7 @@ result: FetchResult
 
 The fetch result code - succeed, failed or cancelled.
 
-**Type:** FetchResult
+**Type:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)
 
 **Since:** 23
 

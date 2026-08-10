@@ -1,6 +1,6 @@
 # AppBriefInfo (System API)
 
-Represents the brief application information.
+简要应用信息。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents the brief application information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## appId
 
 ```TypeScript
 appId: string
 ```
 
-Application ID.
+应用程序ID。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Application ID.
 bundleName: string
 ```
 
-Bundle name of the application.
+应用包名。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Bundle name of the application.
 cloudSwitch: boolean
 ```
 
-Whether the cloud service is enabled for the application.The value true means the cloud service is enabled; the value false means the opposite.
+应用程序的云开关。true表示启用云，false表示不启用云。
 
 **Type:** boolean
 
@@ -78,9 +84,9 @@ Whether the cloud service is enabled for the application.The value true means th
 instanceId: int
 ```
 
-Application twin ID.The value 0 indicates the application itself, and the twin ID increases in ascending order.
+应用分身ID，0表示应用本身，分身ID依次递增。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

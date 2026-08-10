@@ -1,9 +1,10 @@
 # HuksErrorCode
 
 表示错误码的枚举。
-    **说明：**  
-    
-    从API version 9开始废弃，建议使用[HuksExceptionErrCode\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 9开始废弃，建议使用[HuksExceptionErrCode&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksexceptionerrcode-e.md)替代。
 
 **起始版本：** 8
 

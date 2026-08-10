@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## businessType
 
 ```TypeScript
@@ -20,7 +26,7 @@ businessType: BusinessType
 
 升级业务类型。
 
-**类型：** BusinessType
+**类型：** [BusinessType](arkts-basicservices-update-businesstype-i-sys.md)
 
 **起始版本：** 9
 

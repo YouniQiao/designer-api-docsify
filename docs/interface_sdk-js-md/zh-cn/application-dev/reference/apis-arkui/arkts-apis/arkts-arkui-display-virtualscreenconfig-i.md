@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## density
 
 ```TypeScript
@@ -18,7 +24,7 @@ density: double
 
 指定虚拟屏幕的密度，单位为px，该参数为浮点数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 16
 
@@ -36,7 +42,7 @@ height: long
 
 指定虚拟屏幕的高度，单位为px，该参数应为正整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 16
 
@@ -108,7 +114,7 @@ width: long
 
 指定虚拟屏幕的宽度，单位为px，该参数应为正整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 16
 

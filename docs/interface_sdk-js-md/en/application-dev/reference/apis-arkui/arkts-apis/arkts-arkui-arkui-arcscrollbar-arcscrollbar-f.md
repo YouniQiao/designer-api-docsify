@@ -1,21 +1,27 @@
 # ArcScrollBar
 
+## Modules to Import
+
+```TypeScript
+import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
+```
+
 ## ArcScrollBar
 
 ```TypeScript
 export declare function ArcScrollBar(
-    options: ArcScrollBarOptions,
+    options: ArcScrollBarOptions, 
     content_?: CustomBuilder,
 ): ArcScrollBarAttribute
 ```
 
-Defines ArcScrollBar Component.
+定义ArcScrollBar组件。
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare function ArcScrollBar(    options: ArcScrollBarOptions,    content_?: CustomBuilder,): ArcScrollBarAttribute--><!--Device-unnamed-export declare function ArcScrollBar(    options: ArcScrollBarOptions,    content_?: CustomBuilder,): ArcScrollBarAttribute-End-->
+<!--Device-unnamed-export declare function ArcScrollBar(    options: ArcScrollBarOptions,     content_?: CustomBuilder,): ArcScrollBarAttribute--><!--Device-unnamed-export declare function ArcScrollBar(    options: ArcScrollBarOptions,     content_?: CustomBuilder,): ArcScrollBarAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -23,14 +29,14 @@ Defines ArcScrollBar Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
 
 
 ## ArcScrollBar
@@ -42,11 +48,11 @@ export declare function ArcScrollBar(
 ): ArcScrollBarAttribute
 ```
 
-Defines ArcScrollBar Component.
+定义ArcScrollBar组件。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Decorator:** @Builder
 
@@ -60,12 +66,12 @@ Defines ArcScrollBar Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArcScrollBarAttribute&gt; | Yes | The style to create an ArcScrollBar. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcScrollBarAttribute&gt; | Yes | 用于创建ArcScrollBar的样式 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the ArcScrollBar. |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) | ArcScrollBar的属性。 |
 

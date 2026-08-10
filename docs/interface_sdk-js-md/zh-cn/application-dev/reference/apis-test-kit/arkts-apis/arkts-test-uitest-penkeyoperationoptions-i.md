@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## point
 
 ```TypeScript
 point?: Point
 ```
 
-空鼠模式操作的坐标点。当按键为 AIR\_MOUSE 并处于空鼠模式时，该坐标点是必需的。
+空鼠模式操作的坐标点。当按键为 AIR_MOUSE 并处于空鼠模式时，该坐标点是必需的。
 
-**类型：** Point
+**类型：** [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md)
 
 **起始版本：** 26.0.0
 

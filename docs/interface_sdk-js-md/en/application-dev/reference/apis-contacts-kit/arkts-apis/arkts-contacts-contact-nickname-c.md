@@ -1,6 +1,6 @@
 # NickName
 
-Defines a contact's nickname.
+联系人的昵称类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's nickname.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## nickName
 
 ```TypeScript
 nickName: string
 ```
 
-Contact nickname.
+联系人的昵称。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # ProgressInfo
 
-Represents the progress information.
+定义进度上报的数据。
 
 **Since:** 15
 
@@ -10,17 +10,21 @@ Represents the progress information.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## progress
 
 ```TypeScript
 progress: int
 ```
 
-Progress of the drag task, in percentage.
+系统上报拖拽任务进度百分比。取值范围为[-1-100]的整数，其中-1时代表本次获取数据失败，100时表示本次获取数据完成。
 
-The value is an integer ranging from -1 to 100. The value **-1** indicates a failure to obtain data, and the value **100** indicates data is obtained.
-
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -40,9 +44,9 @@ The value is an integer ranging from -1 to 100. The value **-1** indicates a fai
 status: ListenerStatus
 ```
 
-Status code of the drag task reported by the system.
+系统上报拖拽任务的状态码。
 
-**Type:** ListenerStatus
+**Type:** [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md)
 
 **Since:** 15
 

@@ -1,6 +1,6 @@
 # KeyEvent
 
-Key event.
+按键事件。
 
 **Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
@@ -12,15 +12,21 @@ Key event.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
+```
+
 ## action
 
 ```TypeScript
 action: Action
 ```
 
-Key event type.
+按键事件类型。
 
-**Type:** Action
+**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Key event type.
 altKey: boolean
 ```
 
-Whether altKey is being pressed.
+当前altKey是否处于按下状态。 
 
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+true表示处于按下状态，false表示处于抬起状态。
 
 **Type:** boolean
 
@@ -60,9 +66,9 @@ The value **true** indicates that the key is pressed, and the value **false** in
 capsLock: boolean
 ```
 
-Whether capsLock is enabled.
+当前capsLock是否处于使能状态。 
 
-The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
+true表示处于使能状态，false表示处于未使能状态。
 
 **Type:** boolean
 
@@ -82,9 +88,9 @@ The value **true** indicates that capsLock is enabled, and the value **false** i
 ctrlKey: boolean
 ```
 
-Whether ctrlKey is being pressed.
+当前ctrlKey是否处于按下状态。 
 
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+true表示处于按下状态，false表示处于抬起状态。
 
 **Type:** boolean
 
@@ -104,9 +110,9 @@ The value **true** indicates that the key is pressed, and the value **false** in
 fnKey: boolean
 ```
 
-Whether fnKey is being pressed.
+当前fnKey是否处于按下状态。 
 
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+true表示处于按下状态，false表示处于抬起状态。
 
 **Type:** boolean
 
@@ -126,9 +132,9 @@ The value **true** indicates that the key is pressed, and the value **false** in
 key: Key
 ```
 
-Defines a key.
+按键。
 
-**Type:** Key
+**Type:** [Key](arkts-input-multimodalinput-keyevent-key-i.md)
 
 **Since:** 9
 
@@ -146,9 +152,9 @@ Defines a key.
 keys: Key[]
 ```
 
-List of pressed keys.
+当前处于按下状态的按键列表。
 
-**Type:** Key[]
+**Type:** [Key](arkts-input-multimodalinput-keyevent-key-i.md)[]
 
 **Since:** 9
 
@@ -166,9 +172,9 @@ List of pressed keys.
 logoKey: boolean
 ```
 
-Whether logoKey is being pressed.
+当前logoKey是否处于按下状态。 
 
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+true表示处于按下状态，false表示处于抬起状态。
 
 **Type:** boolean
 
@@ -188,9 +194,9 @@ The value **true** indicates that the key is pressed, and the value **false** in
 numLock: boolean
 ```
 
-Whether numLock is enabled.
+当前numLock是否处于使能状态。 
 
-The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
+true表示处于使能状态，false表示处于未使能状态。
 
 **Type:** boolean
 
@@ -210,9 +216,9 @@ The value **true** indicates that numLock is enabled, and the value **false** in
 scrollLock: boolean
 ```
 
-Whether scrollLock is enabled.
+当前scrollLock是否处于使能状态。 
 
-The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
+true表示处于使能状态，false表示处于未使能状态。
 
 **Type:** boolean
 
@@ -232,9 +238,9 @@ The value **true** indicates that scrollLock is enabled, and the value **false**
 shiftKey: boolean
 ```
 
-Whether shiftKey is being pressed.
+当前shiftKey是否处于按下状态。 
 
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+true表示处于按下状态，false表示处于抬起状态。
 
 **Type:** boolean
 
@@ -254,9 +260,9 @@ The value **true** indicates that the key is pressed, and the value **false** in
 unicodeChar: int
 ```
 
-Unicode character corresponding to the key.
+按键对应的unicode字符。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

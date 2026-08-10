@@ -1,6 +1,6 @@
 # AuthTrustLevel (System API)
 
-Enumerates the trust levels of the authentication result.
+表示认证结果的受信任级别的枚举。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the trust levels of the authentication result.
 ATL1 = 10000
 ```
 
-Trust level 1.
+信任级别 1。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Trust level 1.
 ATL2 = 20000
 ```
 
-Trust level 2.
+信任级别 2。
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Trust level 2.
 ATL3 = 30000
 ```
 
-Trust level 3.
+信任级别 3。
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Trust level 3.
 ATL4 = 40000
 ```
 
-Trust level 4.
+信任级别 4。
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # FavoriteData
 
-The definition of Favorite/Subscribe.
+收藏/订阅的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of Favorite/Subscribe.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## favCounts
 
 ```TypeScript
 favCounts: string
 ```
 
-Favorite counts.
+收藏/订阅的数量。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Favorite counts.
 isFavorite: boolean
 ```
 
-Is favorite.
+是否已收藏/订阅。true表示已收藏/订阅，false表示未收藏/订阅。无默认值。
 
 **Type:** boolean
 
@@ -56,7 +62,7 @@ Is favorite.
 isSupportFav: boolean
 ```
 
-Is supported favorite.
+是否支持收藏/订阅。true表示支持，false表示不支持。无默认值。
 
 **Type:** boolean
 

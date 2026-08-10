@@ -4,7 +4,7 @@
 type ValueType = number | string | boolean
 ```
 
-Defines the data types allowed.
+用于表示允许的数据字段类型。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Defines the data types allowed.
 
 | Type | Description |
 | --- | --- |
-| number | Number. |
-| string | String. |
-| boolean | Boolean. |
+| number | 表示值类型为数字。 |
+| string | 表示值类型为字符串。 |
+| boolean | 表示值类型为布尔值。 |
 

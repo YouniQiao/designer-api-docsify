@@ -1,12 +1,18 @@
 # getContext
 
+## Modules to Import
+
+```TypeScript
+import { featureAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## getContext
 
 ```TypeScript
 function getContext(): Context
 ```
 
-Obtains the application context.
+获取应用上下文。
 
 **Since:** 6
 
@@ -22,9 +28,9 @@ Obtains the application context.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Application context. |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 返回应用程序上下文。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

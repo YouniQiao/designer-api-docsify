@@ -1,5 +1,11 @@
 # getSystemMemInfo
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getSystemMemInfo
 
 ```TypeScript
@@ -20,9 +26,9 @@ function getSystemMemInfo(): SystemMemInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ϵͳ�ڴ���Ϣ�� |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | ϵͳ�ڴ���Ϣ�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

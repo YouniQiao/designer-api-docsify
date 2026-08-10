@@ -1,5 +1,11 @@
 # disableGwpAsanGrayscale
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## disableGwpAsanGrayscale
 
 ```TypeScript
@@ -16,7 +22,7 @@ function disableGwpAsanGrayscale(): void
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

@@ -1,6 +1,6 @@
 # RotationGestureHandler
 
-Defines a rotation gesture handler object.
+旋转手势处理器对象类型。
 
 **Inheritance/Implementation:** RotationGestureHandler extends [GestureHandler<RotationGestureHandler>](GestureHandler<RotationGestureHandler>)
 
@@ -18,7 +18,7 @@ Defines a rotation gesture handler object.
 constructor(options?: RotationGestureHandlerOptions)
 ```
 
-Constructor used to create a rotation gesture handler instance.
+旋转手势处理器的构造函数。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Constructor used to create a rotation gesture handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the rotation gesture handler. |
+| options | [RotationGestureHandlerOptions](arkts-arkui-gesture-rotationgesturehandleroptions-i.md) | No | 旋转手势处理器配置参数。 |
 
 ## onActionCancel
 
@@ -44,7 +44,7 @@ Constructor used to create a rotation gesture handler instance.
 onActionCancel(event: Callback<void>): RotationGestureHandler
 ```
 
-Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
+设置旋转手势处理器取消回调。旋转手势处理器识别成功后，接收到触摸取消事件时触发回调。不返回手势事件信息。
 
 **Since:** 12
 
@@ -62,13 +62,13 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the rotation gesture is cancelled. No gesture event information is returned. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | 旋转手势处理器取消回调。不返回手势事件信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rotation gesture handler object. |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 
 ## onActionCancel
 
@@ -76,8 +76,8 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 onActionCancel(event: Callback<GestureEvent>): RotationGestureHandler
 ```
 
-Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with  
-[onActionCancel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, this API returns gesture event information.
+设置旋转手势处理器取消回调。旋转手势处理器识别成功后，接收到触摸取消事件时触发回调。与  
+[onActionCancel](arkts-arkui-rotationgesturehandler-c.md#onactioncancel)相比，此接口返回手势事件信息。
 
 **Since:** 18
 
@@ -95,13 +95,13 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback invoked when the rotation gesture is cancelled. Gesture event information is returned. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 旋转手势处理器取消回调。返回手势事件信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rotation gesture handler object. |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 
 ## onActionEnd
 
@@ -109,7 +109,7 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 onActionEnd(event: Callback<GestureEvent>): RotationGestureHandler
 ```
 
-Sets the callback for rotation gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
+设置旋转手势处理器结束回调。旋转手势处理器识别成功后，手指抬起时触发回调。
 
 **Since:** 12
 
@@ -127,13 +127,13 @@ Sets the callback for rotation gesture recognition completion. This callback is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback invoked when rotation gesture recognition completes. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 旋转手势处理器结束回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rotation gesture handler object. |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 
 ## onActionStart
 
@@ -141,7 +141,7 @@ Sets the callback for rotation gesture recognition completion. This callback is 
 onActionStart(event: Callback<GestureEvent>): RotationGestureHandler
 ```
 
-Sets the callback for successful rotation gesture recognition.
+设置旋转手势处理器识别成功回调。
 
 **Since:** 12
 
@@ -159,13 +159,13 @@ Sets the callback for successful rotation gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback invoked upon successful rotation gesture recognition. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 旋转手势处理器识别成功回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rotation gesture handler object. |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 
 ## onActionUpdate
 
@@ -173,7 +173,7 @@ Sets the callback for successful rotation gesture recognition.
 onActionUpdate(event: Callback<GestureEvent>): RotationGestureHandler
 ```
 
-Sets the callback for rotation gesture movement updates. The callback is triggered when the rotation gesture moves.
+设置旋转手势处理器更新回调。旋转手势处理器移动过程中触发回调。
 
 **Since:** 12
 
@@ -191,11 +191,11 @@ Sets the callback for rotation gesture movement updates. The callback is trigger
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback invoked during rotation gesture movement. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 旋转手势处理器更新回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rotation gesture handler object. |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
 

@@ -1,12 +1,18 @@
 # unmount (System API)
 
+## Modules to Import
+
+```TypeScript
+import { volumeManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## unmount
 
 ```TypeScript
 function unmount(volumeId: string, callback: AsyncCallback<void>): void
 ```
 
-Unmounts a volume. This API uses an asynchronous callback to return the result.
+卸载指定卷设备，使用callback异步回调。
 
 **Since:** 9
 
@@ -24,21 +30,21 @@ Unmounts a volume. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeId | string | Yes | Volume ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the specified volume is unmounted. |
+| volumeId | string | Yes | 卷设备id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 卸载指定卷设备之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
-| 13600002 | Not supported filesystem. |
-| 13600004 | Failed to unmount. |
-| 13600005 | Incorrect volume state. |
+| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600005 | Incorrect volume state. |
+| 13600004 | Failed to unmount. |
+| 13600002 | Not supported filesystem. |
+| 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
 
@@ -48,7 +54,7 @@ Unmounts a volume. This API uses an asynchronous callback to return the result.
 function unmount(volumeId: string): Promise<void>
 ```
 
-Unmounts a volume. This API uses a promise to return the result.
+卸载指定卷设备，使用Promise异步回调。
 
 **Since:** 9
 
@@ -66,25 +72,25 @@ Unmounts a volume. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeId | string | Yes | Volume ID. |
+| volumeId | string | Yes | 卷设备id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
-| 13600002 | Not supported filesystem. |
-| 13600004 | Failed to unmount. |
-| 13600005 | Incorrect volume state. |
+| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600005 | Incorrect volume state. |
+| 13600004 | Failed to unmount. |
+| 13600002 | Not supported filesystem. |
+| 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

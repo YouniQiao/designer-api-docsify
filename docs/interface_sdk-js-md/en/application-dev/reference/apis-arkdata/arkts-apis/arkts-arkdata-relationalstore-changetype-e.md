@@ -1,6 +1,6 @@
 # ChangeType
 
-Enumerates data change types. Use the enum name rather than the enum value.
+描述数据变更类型的枚举。请使用枚举名称而非枚举值。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates data change types. Use the enum name rather than the enum value.
 DATA_CHANGE = 0
 ```
 
-Data change.
+表示是数据发生变更。
 
 **Since:** 10
 
@@ -35,7 +35,7 @@ Data change.
 ASSET_CHANGE = 1
 ```
 
-Asset change.
+表示是资产附件发生了变更。
 
 **Since:** 10
 

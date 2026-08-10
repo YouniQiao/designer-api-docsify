@@ -1,6 +1,6 @@
 # AudioState
 
-Enumerates the audio states.
+表示音频状态的枚举。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the audio states.
 STATE_INVALID = -1
 ```
 
-Invalid state.
+无效状态。
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Invalid state.
 STATE_NEW = 0
 ```
 
-Creating instance state.
+创建新实例状态。
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Creating instance state.
 STATE_PREPARED = 1
 ```
 
-Prepared.
+准备状态。
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Prepared.
 STATE_RUNNING = 2
 ```
 
-Running.
+运行状态。
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Running.
 STATE_STOPPED = 3
 ```
 
-Stopped.
+停止状态。
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ Stopped.
 STATE_RELEASED = 4
 ```
 
-Released.
+释放状态。
 
 **Since:** 8
 
@@ -112,7 +112,7 @@ Released.
 STATE_PAUSED = 5
 ```
 
-Paused.
+暂停状态。
 
 **Since:** 8
 

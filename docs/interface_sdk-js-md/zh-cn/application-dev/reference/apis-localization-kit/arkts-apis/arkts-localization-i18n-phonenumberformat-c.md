@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -32,8 +38,8 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| country | string | 是 | 表示电话号码所属的国家地区代码，要求是 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
+| country | string | 是 | 表示电话号码所属的国家地区代码，要求是 [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
+| options | [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | 否 | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
 
 ## format
 
@@ -42,9 +48,10 @@ format(phoneNumber: string): string
 ```
 
 对电话号码进行格式化。
-    **说明**  
-    
-    从API version 12开始，支持对拨号中的电话号码进行格式化。
+
+> **说明：**
+> 
+> 从API version 12开始，支持对拨号中的电话号码进行格式化。
 
 **起始版本：** 23
 
@@ -75,9 +82,10 @@ getLocationName(phoneNumber: string, locale: string): string
 ```
 
 获取电话号码归属地。
-    **说明**  
-    
-    从API version 23开始，支持对拨号中的电话号码实时获取归属地。
+
+> **说明：**
+> 
+> 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
 
 **起始版本：** 23
 
@@ -94,7 +102,7 @@ getLocationName(phoneNumber: string, locale: string): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。获取其他地区电话号码的归属地时，需要在电话号码前加00+国际区号。 |
-| locale | string | 是 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，由语言、脚本、国家地区组 成。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
 
 **返回值：**
 

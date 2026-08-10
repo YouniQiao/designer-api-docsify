@@ -4,7 +4,7 @@
 declare type ShouldBuiltInRecognizerParallelWithCallback = (current: GestureRecognizer, others: Array<GestureRecognizer>) => GestureRecognizer
 ```
 
-Represents the callback used to set the parallel relationship between built-in gestures and gestures of other components in the response chain.
+系统内置手势与响应链上其他组件的手势设置并行关系的回调事件类型。
 
 **Since:** 12
 
@@ -22,12 +22,12 @@ Represents the callback used to set the parallel relationship between built-in g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| current | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Built-in gesture recognizer of the current component. Currently only a built- in gesture recognizer of the [GestureType]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_.PAN\_GESTURE type is supported.  |
-| others | Array&lt;GestureRecognizer&gt; | Yes | Gesture recognizers of the same type from other components with higher priority in the response chain.  |
+| current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Yes | 当前组件的系统内置手势识别器，当前版本只提供内置的[GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md/arkts-arkui-gesturecontrol-gesturetype-e.md).PAN_GESTURE类型的手势识别器。 |
+| others | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | 响应链上更高优先级的其他组件相同类别的手势识别器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Gesture recognizer that is bound in parallel with the current recognizer.  |
+| [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | 与current识别器绑定并行关系的某个手势识别器。 |
 

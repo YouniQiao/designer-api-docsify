@@ -1,5 +1,11 @@
 # getStations (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getStations
 
 ```TypeScript
@@ -8,7 +14,7 @@ function getStations(): Array<StationInfo>
 
 Obtains the list of clients that are connected to a Wi-Fi hotspot.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This method can only be used on a device that serves as a Wi-Fi hotspot.
+&lt;p&gt;This method can only be used on a device that serves as a Wi-Fi hotspot.
 
 **Since:** 7
 
@@ -32,7 +38,7 @@ Obtains the list of clients that are connected to a Wi-Fi hotspot.
 | --- | --- |
 | Array&lt;StationInfo&gt; | Returns the list of clients that are connected to the Wi-Fi hotspot. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

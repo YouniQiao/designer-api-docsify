@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+```
+
 ## fixedMode
 
 ```TypeScript
@@ -20,7 +26,7 @@ fixedMode?: FixedMode
 
 修正坐标的模式。
 
-**类型：** FixedMode
+**类型：** [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md)
 
 **起始版本：** 19
 
@@ -39,7 +45,7 @@ isInject?: boolean
 ```
 
 表示该触屏输入事件是否为注入事件。注入事件详细介绍可参考  
-[@ohos.multimodalInput.inputEventClient]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md)。
 
 **类型：** boolean
 

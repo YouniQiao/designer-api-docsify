@@ -1,5 +1,11 @@
 # queryDriverInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## queryDriverInfo
 
 ```TypeScript
@@ -36,12 +42,12 @@ function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application cannot call a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types. |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
+| 26300001 | ExternalDeviceManager service exception. |
+| 401 | Parameter error. Possible causes: 1.Incorrect parameter types. |
+| 201 | The permission check failed. |
+| 202 | Permission denied. A non-system application cannot call a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

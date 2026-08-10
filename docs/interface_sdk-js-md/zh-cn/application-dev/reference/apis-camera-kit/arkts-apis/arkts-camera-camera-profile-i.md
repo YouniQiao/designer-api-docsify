@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## format
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly format: CameraFormat
 
 输出格式。
 
-**类型：** CameraFormat
+**类型：** [CameraFormat](arkts-camera-camera-cameraformat-e.md)
 
 **起始版本：** 10
 
@@ -40,7 +46,7 @@ readonly size: Size
 
 设置的是相机的分辨率宽度和高度，而非实际输出图像的宽度和高度。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 10
 

@@ -144,7 +144,7 @@ AUDIO = 1 << 6
 RUNNING_LOCK = 1 << 7
 ```
 
-RUNNING\_LOCK资源，申请后挂起状态不会代理RUNNING\_BACKGROUND锁。
+RUNNING_LOCK资源，申请后挂起状态不会代理RUNNING_BACKGROUND锁。
 
 **起始版本：** 10
 

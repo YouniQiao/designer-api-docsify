@@ -1,12 +1,18 @@
 # reject
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## reject
 
 ```TypeScript
 function reject(token: string, reason: string): void
 ```
 
-Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer application is rejected, a rejection reason is returned.
+在跨端应用协同过程中，在拒绝对端的连接请求后，向对端发送拒绝原因。
 
 **Since:** 18
 
@@ -22,16 +28,16 @@ Rejects a connection request in a cross-device collaboration session. After a co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | string | Yes | Token used for application collaboration management. |
-| reason | string | Yes | Reason why the connection is rejected. |
+| token | string | Yes | 用于协作服务管理的令牌。 |
+| reason | string | Yes | 连接被拒绝的原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want} from '@kit.AbilityKit';

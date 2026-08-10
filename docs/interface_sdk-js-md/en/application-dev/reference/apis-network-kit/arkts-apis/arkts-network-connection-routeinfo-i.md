@@ -10,6 +10,12 @@ Defines network route information.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## destination
 
 ```TypeScript
@@ -18,7 +24,7 @@ destination: LinkAddress
 
 Destination Address
 
-**Type:** LinkAddress
+**Type:** [LinkAddress](arkts-network-vpn-linkaddress-t.md)
 
 **Since:** 8
 
@@ -36,7 +42,7 @@ gateway: NetAddress
 
 Gateway address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 8
 

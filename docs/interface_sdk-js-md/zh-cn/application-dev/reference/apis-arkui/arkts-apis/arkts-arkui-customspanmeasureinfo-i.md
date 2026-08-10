@@ -18,7 +18,7 @@ fontSize: number
 
 设置文本字体大小。
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number
 
@@ -46,7 +46,7 @@ layoutPolicy?: LayoutPolicy
 
 当值为null或undefined时，表示父组件没有设置宽度布局策略。
 
-**类型：** LayoutPolicy
+**类型：** [LayoutPolicy](arkts-arkui-common-layoutpolicy-c.md)
 
 **起始版本：** 26.0.0
 
@@ -70,7 +70,7 @@ maxWidth?: number
 
 默认值：使用自身宽度。
 
-单位：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number
 

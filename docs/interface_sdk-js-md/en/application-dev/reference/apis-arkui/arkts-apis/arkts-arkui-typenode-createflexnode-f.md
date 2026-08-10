@@ -6,7 +6,7 @@
 export function createFlexNode(context: UIContext, options?: FrameNodeOptions): Flex
 ```
 
-Create a FrameNode of Flex type.On API 26.0.0 and above, It can also create a FrameNode of Flex type with options.
+创建 Flex 类型的 FrameNode
 
 **Since:** 23
 
@@ -22,12 +22,12 @@ Create a FrameNode of Flex type.On API 26.0.0 and above, It can also create a Fr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | uiContext used to create the FrameNode. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for configuring FrameNode creation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 26.0.0 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建 FrameNode 的 UI 上下文 |
+| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 24 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return Flex type FrameNode. |
+| [Flex](arkts-arkui-typenode-flex-t.md) | 返回 Flex 类型的 FrameNode |
 

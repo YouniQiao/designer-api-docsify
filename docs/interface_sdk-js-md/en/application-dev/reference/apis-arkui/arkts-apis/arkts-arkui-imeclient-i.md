@@ -1,6 +1,6 @@
 # IMEClient
 
-Defines the input method client type bound to an input component.
+输入控件绑定输入法客户端类型。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Defines the input method client type bound to an input component.
 setExtraConfig(config: InputMethodExtraConfig): void
 ```
 
-Sets the extension configuration of an input method.
+设置输入法扩展信息。
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ Sets the extension configuration of an input method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extension configuration of an input method. |
+| config | [InputMethodExtraConfig](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Yes | 输入法扩展信息。 |
 
 ## nodeId
 
@@ -42,7 +42,7 @@ Sets the extension configuration of an input method.
 nodeId: number
 ```
 
-Unique ID of the current input component. The value must be greater than or equal to 0.
+当前输入控件的组件UniqueId。取值范围大于等于0。
 
 **Type:** number
 

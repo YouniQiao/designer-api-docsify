@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## enhancedIdentity
 
 ```TypeScript
@@ -19,8 +25,8 @@ enhancedIdentity?: string
 ```
 
 扩展身份，用于标识调用方的附加身份信息。当需要区分同一应用下不同调用来源的权限使用记录时传入此字段。长度不超过48个字符，调用  
-[startUsingPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或  
-[stopUsingPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_时传入超长值会返回错误码12100001。
+[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission)或  
+[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission)时传入超长值会返回错误码12100001。
 
 默认值：空字符串。
 

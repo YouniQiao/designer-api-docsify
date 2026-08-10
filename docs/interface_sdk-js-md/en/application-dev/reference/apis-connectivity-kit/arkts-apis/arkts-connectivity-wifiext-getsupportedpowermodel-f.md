@@ -1,5 +1,11 @@
 # getSupportedPowerModel
 
+## Modules to Import
+
+```TypeScript
+import { wifiext } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getSupportedPowerModel
 
 ```TypeScript
@@ -55,5 +61,5 @@ Obtains the supported power model.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;PowerModel&gt;&gt; | Yes | callback function, no return value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PowerModel&gt;&gt; | Yes | callback function, no return value. |
 

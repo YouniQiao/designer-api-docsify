@@ -1,6 +1,6 @@
 # OperationParams
 
-Sets initialization parameters of the function area.
+AtomicServiceSearch中“功能区”的初始化参数。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Sets initialization parameters of the function area.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+```
+
 ## auxiliaryItem
 
 ```TypeScript
 auxiliaryItem?: OperationOption
 ```
 
-Auxiliary item on the right of the search area. Default value: **undefined**.
+附属于搜索区（右侧）的功能位。默认值为`undefined`。
 
-**Type:** OperationOption
+**Type:** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
 
 **Since:** 18
 
@@ -36,9 +42,9 @@ Auxiliary item on the right of the search area. Default value: **undefined**.
 independentItem?: OperationOption
 ```
 
-Independent item on the right of the search area. Default value: **undefined**.
+独立于搜索区（右侧）的功能位。默认值为`undefined`。
 
-**Type:** OperationOption
+**Type:** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
 
 **Since:** 18
 

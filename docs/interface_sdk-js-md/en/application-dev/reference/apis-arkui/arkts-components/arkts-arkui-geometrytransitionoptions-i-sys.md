@@ -1,7 +1,5 @@
 # GeometryTransitionOptions
 
-Defines the options of geometry transition.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
@@ -16,13 +14,15 @@ Defines the options of geometry transition.
 hierarchyStrategy?: TransitionHierarchyStrategy
 ```
 
-Strategy for the hierarchical position movement of **in** / **out** components in the component tree during the shared element transition process. Default value: **TransitionHierarchyStrategy.ADAPTIVE**.
+决定共享元素动画过程中in/out组件在组件树上层级位置的移动策略，默认值：TransitionHierarchyStrategy.ADAPTIVE。
 
-The setting significantly affects the front-to-back overlap relationship of the **in** / **out** components in comparison to other components. Exercise caution with it under normal conditions.
+实际影响绑定的in/out组件相对其他组件的前后重叠关系，常规情况下慎重修改。
 
-You are advised to adjust this setting only when there is an error in the component overlap relationship observed during the shared element transition process.
+建议在发现共享元素动画过程中出现组件前后重叠关系错误时需要调整再设置此参数。
 
-**Type:** TransitionHierarchyStrategy
+**系统接口：** 此接口为系统接口。
+
+**Type:** [TransitionHierarchyStrategy](../arkts-apis/arkts-arkui-common-transitionhierarchystrategy-e-sys.md)
 
 **Default:** TransitionHierarchyStrategy.ADAPTIVE
 

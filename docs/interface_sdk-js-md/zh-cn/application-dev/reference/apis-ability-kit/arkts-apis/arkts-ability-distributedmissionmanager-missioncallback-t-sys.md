@@ -5,7 +5,7 @@ export type MissionCallback = _MissionCallback
 ```
 
 作为可以  
-[registerMissionListener]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的入参，表示开始同步后，建立的回调函数。
+[registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener)的入参，表示开始同步后，建立的回调函数。
 
 **起始版本：** 10
 

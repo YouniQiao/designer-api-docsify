@@ -1,5 +1,11 @@
 # setDoNotDisturbDate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## setDoNotDisturbDate
 
 ```TypeScript
@@ -24,52 +30,28 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 免打扰时间选项。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let setDoNotDisturbDateCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setDoNotDisturbDate success');
-    }
-}
-
-let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
-    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-
-notificationManager.setDoNotDisturbDate(doNotDisturbDate, setDoNotDisturbDateCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDoNotDisturbDateCallback = (err: BusinessError | null): void => {
     if (err) {
         console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
     } else {
@@ -111,7 +93,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 免打扰时间选项。 |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
 
 **返回值：**
 
@@ -123,18 +105,16 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -148,24 +128,6 @@ notificationManager.setDoNotDisturbDate(doNotDisturbDate).then(() => {
     console.info('setDoNotDisturbDate success');
 }).catch((err: BusinessError) => {
     console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
-    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-notificationManager.setDoNotDisturbDate(doNotDisturbDate).then(() => {
-    console.info('setDoNotDisturbDate success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setDoNotDisturbDate failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
 
@@ -194,27 +156,25 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int, callback: Asyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 免打扰时间选项。 |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 设置免打扰时间的用户ID。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 设置免打扰时间的用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+| 1600008 | The user does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -235,31 +195,6 @@ let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
 
 // 用户ID，使用时需替换为真实的userId。
 let userId: number = 1;
-
-notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId, setDoNotDisturbDateCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDoNotDisturbDateCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setDoNotDisturbDate success');
-    }
-}
-
-let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
-    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
 
 notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId, setDoNotDisturbDateCallback);
 ```
@@ -289,8 +224,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 免打扰时间选项。 |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 设置免打扰时间的用户ID。 |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 设置免打扰时间的用户ID。 |
 
 **返回值：**
 
@@ -302,19 +237,17 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+| 1600008 | The user does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -332,28 +265,6 @@ notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
     console.info('setDoNotDisturbDate success');
 }).catch((err: BusinessError) => {
     console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
-    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-
-notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
-    console.info('setDoNotDisturbDate success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setDoNotDisturbDate failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

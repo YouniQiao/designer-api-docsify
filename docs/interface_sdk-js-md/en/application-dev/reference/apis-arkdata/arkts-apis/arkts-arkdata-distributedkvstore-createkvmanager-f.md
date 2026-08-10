@@ -1,12 +1,18 @@
 # createKVManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## createKVManager
 
 ```TypeScript
 function createKVManager(config: KVManagerConfig): KVManager
 ```
 
-Creates a **KVManager** instance for KV store management.
+创建一个KVManager对象实例，用于管理数据库对象。
 
 **Since:** 9
 
@@ -22,21 +28,21 @@ Creates a **KVManager** instance for KV store management.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot be empty) of the caller and user information. |
+| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | 提供KVManager实例的配置信息，包括应用的上下文和调用方的包名（不能为空）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | KVManager** instance created. |
+| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | 返回创建的KVManager对象实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 Stage model:
 
@@ -49,7 +55,7 @@ let appId: string = 'com.example.datamanagertest';
 
 export default class EntryAbility extends UIAbility {
   onCreate() {
-    console.info("MyAbilityStage onCreate");
+    console.info('MyAbilityStage onCreate');
     let context = this.context;
     const kvManagerConfig: distributedKVStore.KVManagerConfig = {
       context: context,
@@ -57,10 +63,10 @@ export default class EntryAbility extends UIAbility {
     }
     try {
       kvManager = distributedKVStore.createKVManager(kvManagerConfig);
-      console.info("Succeeded in creating KVManager");
-    } catch (e) {
-      let error = e as BusinessError;
-      console.error(`Failed to create KVManager.code is ${error.code},message is ${error.message}`);
+      console.info('Succeeded in creating KVManager');
+    } catch (err) {
+      let error = err as BusinessError;
+      console.error(`Failed to create KVManager. Code: ${error.code}, message: ${error.message}`);
     }
     if (kvManager !== undefined) {
       // Perform subsequent operations such as creating a KV store.
@@ -85,10 +91,10 @@ const kvManagerConfig: distributedKVStore.KVManagerConfig = {
 }
 try {
   kvManager = distributedKVStore.createKVManager(kvManagerConfig);
-  console.info("Succeeded in creating KVManager");
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to create KVManager.code is ${error.code},message is ${error.message}`);
+  console.info('Succeeded in creating KVManager');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to create KVManager. Code: ${error.code}, message: ${error.message}`);
 }
 if (kvManager !== undefined) {
   kvManager = kvManager as distributedKVStore.KVManager;

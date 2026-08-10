@@ -1,8 +1,8 @@
 # PinchRecognizer
 
-Implements a pinch gesture recognizer. Inherits from [GestureRecognizer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+捏合手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
-**Inheritance/Implementation:** PinchRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
+**Inheritance/Implementation:** PinchRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ Implements a pinch gesture recognizer. Inherits from [GestureRecognizer]\_\_\_JS
 getDistance(): number
 ```
 
-Obtains the minimum distance required for the pinch gesture to be recognized.
+返回预设捏合手势识别器最小识别距离阈值。
 
 **Since:** 18
 
@@ -36,5 +36,5 @@ Obtains the minimum distance required for the pinch gesture to be recognized.
 
 | Type | Description |
 | --- | --- |
-| number | Minimum distance required for the pinch gesture to be recognized, in vp. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞) |
+| number | 预设捏合手势识别器最小识别距离阈值，单位为vp。&lt;br/&gt;取值范围：[0, +∞) |
 

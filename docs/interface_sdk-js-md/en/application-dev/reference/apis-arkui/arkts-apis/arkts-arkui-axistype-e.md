@@ -1,6 +1,6 @@
 # AxisType
 
-Enumerates the axis types for axis events.
+定义轴事件的轴类型。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the axis types for axis events.
 VERTICAL_AXIS = 0
 ```
 
-Vertical scroll axis.
+垂直滚动轴。
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ Vertical scroll axis.
 HORIZONTAL_AXIS = 1
 ```
 
-Horizontal scroll axis.
+水平滚动轴。
 
 **Since:** 22
 
@@ -56,7 +56,7 @@ Horizontal scroll axis.
 PINCH_AXIS = 2
 ```
 
-Pinch axis.
+捏合轴。
 
 **Since:** 22
 

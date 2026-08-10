@@ -1,6 +1,6 @@
 # ProgressType
 
-Enumerates progress indicator types.
+进度条类型。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates progress indicator types.
 Linear = 0
 ```
 
-Linear type. Since API version 9, the progress indicator adapts to vertical display when its height is greater than its width.
+线性样式。从API version 9开始，当高度大于宽度时，自适应垂直显示。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Linear type. Since API version 9, the progress indicator adapts to vertical disp
 Ring = 1
 ```
 
-The ring is gradually displayed until completely filled.
+环形无刻度样式，环形圆环逐渐显示直至完全填充。
 
 **Since:** 8
 
@@ -56,7 +56,7 @@ The ring is gradually displayed until completely filled.
 Eclipse = 2
 ```
 
-Eclipse type, which visualizes the progress in a way similar to the moon waxing from new to full.
+圆形样式，显示类似月圆月缺的进度展示效果，从月牙逐渐变化至满月。
 
 **Since:** 8
 
@@ -76,7 +76,7 @@ Eclipse type, which visualizes the progress in a way similar to the moon waxing 
 ScaleRing = 3
 ```
 
-Ring style with scales, which is similar to the clock scale style.
+环形有刻度样式，显示类似时钟刻度形式的进度展示效果。从API version 9开始，刻度外圈出现重叠时自动转换为环形无刻度进度条。
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ Ring style with scales, which is similar to the clock scale style.
 Capsule = 4
 ```
 
-Capsule style. At both ends, the progress indicator works in the same manner as the eclipse style. In the middle part of the capsule, the progress indicator works in the same manner as the linear style. When the height is greater than the width, the progress indicator adapts to vertical display.
+胶囊样式，头尾两端圆弧处的进度展示效果与Eclipse相同，中段的进度展示效果与Linear相同。从API version 9开始，当高度大于宽度时，自适应垂直显示。
 
 **Since:** 8
 

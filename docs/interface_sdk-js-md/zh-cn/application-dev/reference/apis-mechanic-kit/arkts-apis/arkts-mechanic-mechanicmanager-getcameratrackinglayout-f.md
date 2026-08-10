@@ -1,5 +1,11 @@
 # getCameraTrackingLayout
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## getCameraTrackingLayout
 
 ```TypeScript
@@ -20,16 +26,16 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前布局 |
+| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | 返回当前布局 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 console.info('Query layout');

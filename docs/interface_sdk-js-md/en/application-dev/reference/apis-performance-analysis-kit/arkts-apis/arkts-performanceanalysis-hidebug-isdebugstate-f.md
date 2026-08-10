@@ -1,12 +1,18 @@
 # isDebugState
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## isDebugState
 
 ```TypeScript
 function isDebugState(): boolean
 ```
 
-Obtains the debugging state of an application process.
+��ȡӦ�ý��̵ĵ���״̬��
 
 **Since:** 12
 
@@ -20,9 +26,9 @@ Obtains the debugging state of an application process.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the Ark or native layer of the application process is in the debugging state. The value **true** indicates that the layer is in the debugging state, and **false** indicates the opposite. |
+| boolean | Ӧ�ý��̵�Ark���Native���Ƿ��ڵ���״̬��true�����ڵ���״̬��false��δ���ڵ���״̬�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

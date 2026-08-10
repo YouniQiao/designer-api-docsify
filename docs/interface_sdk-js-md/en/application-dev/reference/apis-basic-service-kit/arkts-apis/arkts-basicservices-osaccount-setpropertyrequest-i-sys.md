@@ -1,6 +1,6 @@
 # SetPropertyRequest (System API)
 
-Defines the request for setting property information.
+提供设置属性请求的信息。
 
 **Since:** 8
 
@@ -12,15 +12,21 @@ Defines the request for setting property information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authType
 
 ```TypeScript
 authType: AuthType
 ```
 
-Authentication credential type.
+身份验证凭据类型。
 
-**Type:** AuthType
+**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **Since:** 8
 
@@ -38,9 +44,9 @@ Authentication credential type.
 key: SetPropertyType
 ```
 
-Type of the property to set.
+指示要设置的属性类型。
 
-**Type:** SetPropertyType
+**Type:** [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md)
 
 **Since:** 8
 
@@ -58,7 +64,7 @@ Type of the property to set.
 setInfo: Uint8Array
 ```
 
-Information to set.
+指示要设置的信息。
 
 **Type:** Uint8Array
 

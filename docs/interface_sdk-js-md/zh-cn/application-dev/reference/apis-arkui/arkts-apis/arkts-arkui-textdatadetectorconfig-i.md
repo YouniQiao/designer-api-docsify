@@ -1,6 +1,6 @@
 # TextDataDetectorConfig
 
-该配置只支持[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_组件和[RichEditor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_组件。
+该配置只支持[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件和[RichEditor](./rich_editor)组件。
 
 **起始版本：** 11
 
@@ -20,7 +20,7 @@ color?: ResourceColor
 
 默认值：'#ff0a59f7'，表示蓝色（不透明度为100%）
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -54,7 +54,7 @@ decoration?: DecorationStyleInterface
 
 }
 
-**类型：** DecorationStyleInterface
+**类型：** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
 
 **起始版本：** 12
 
@@ -78,7 +78,7 @@ enablePreviewMenu?: boolean
 
 默认值：false
 
-当[copyOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
+当[copyOptions](arkts-arkui-richeditor-richeditorattribute-i.md#copyoptions)设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
 
 本接口实际支持的设备类型范围（Phone、Tablet）小于其所属系统能力支持的设备类型范围（Phone、PC/2in1、Tablet、TV、Car、Wearable）。因硬件形态限制，该接口在PC/2in1、TV、Car、Wearable设备中调用功能不生效。
 
@@ -106,7 +106,7 @@ onDetectResultUpdate?: Callback<string>
 
 默认值：undefined，不触发回调。
 
-**类型：** Callback&lt;string&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
 
 **起始版本：** 11
 
@@ -128,7 +128,7 @@ types: TextDataDetectorType[]
 
 设置文本识别的实体类型。设置types为null或者[]时，识别所有类型的实体，否则只识别指定类型的实体。
 
-**类型：** TextDataDetectorType[]
+**类型：** [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md)[]
 
 **起始版本：** 11
 

@@ -10,6 +10,12 @@ Defines the dynamic range mode used for current snapshot taking.By default, the 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
+
 ## dynamicRangeMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ dynamicRangeMode?: DynamicRangeMode
 
 Set one specific dynamic range mode that you want to use.
 
-**Type:** DynamicRangeMode
+**Type:** [DynamicRangeMode](../arkts-components/arkts-arkui-dynamicrangemode-e.md)
 
 **Since:** 23
 

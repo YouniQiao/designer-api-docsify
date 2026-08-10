@@ -16,9 +16,9 @@ Defines the localized vertical align param of relative container.
 align: VerticalAlign
 ```
 
-Vertical alignment mode relative to the anchor component.
+The align of localized align param.
 
-**Type:** VerticalAlign
+**Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Vertical alignment mode relative to the anchor component.
 anchor: string
 ```
 
-ID of the component that serves as the anchor.
+The anchor of localized align param.
 
 **Type:** string
 

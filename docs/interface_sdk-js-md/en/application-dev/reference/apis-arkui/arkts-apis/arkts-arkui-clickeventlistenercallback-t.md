@@ -4,7 +4,7 @@
 type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) => void
 ```
 
-Defines the callback type used in UIObserver watch click event.The value of event indicates the information of ClickEvent.The value of node indicates the frameNode which will receive the event.
+定义UIObserver监听点击事件时使用的回调类型。event表示点击事件的信息。node表示接收事件的frameNode。
 
 **Since:** 26.0.0
 
@@ -20,6 +20,6 @@ Defines the callback type used in UIObserver watch click event.The value of even
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the information of ClickEvent  |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the information of frameNode  |
+| event | [ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md) | Yes | the information of ClickEvent |
+| node | [FrameNode](arkts-arkui-framenode-t.md) | No | the information of frameNode |
 

@@ -12,6 +12,12 @@ Result of downloadable Profile list.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## downloadableProfiles
 
 ```TypeScript
@@ -40,7 +46,7 @@ responseResult: ResultCode
 
 Gets the result of the operation.
 
-**Type:** ResultCode
+**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
 
 **Since:** 18
 

@@ -6,7 +6,7 @@
 function lockMission(missionId: number, callback: AsyncCallback<void>): void
 ```
 
-Locks a given mission. This API uses an asynchronous callback to return the result.
+锁定指定任务id的任务。使用callback异步回调。
 
 **Since:** 8
 
@@ -28,10 +28,10 @@ Locks a given mission. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the mission is locked, **err** is **undefined**. Otherwise, **err** is an error object. |
+| missionId | number | Yes | 任务ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当锁定指定任务id的任务成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -57,7 +57,7 @@ try {
 function lockMission(missionId: number): Promise<void>
 ```
 
-Locks a given mission. This API uses a promise to return the result.
+锁定指定任务id的任务。使用Promise异步回调。
 
 **Since:** 8
 
@@ -79,15 +79,15 @@ Locks a given mission. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID. |
+| missionId | number | Yes | 任务ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

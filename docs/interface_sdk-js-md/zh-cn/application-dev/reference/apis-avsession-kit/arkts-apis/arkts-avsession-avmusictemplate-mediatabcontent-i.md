@@ -1,6 +1,6 @@
 # MediaTabContent
 
-媒体标签页内容的定义。继承自[OperResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+媒体标签页内容的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
 
 **继承/实现关系：** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## compilations
 
 ```TypeScript
@@ -20,7 +26,7 @@ compilations: Compilation[]
 
 页面内容的合集数组。
 
-**类型：** Compilation[]
+**类型：** [Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]
 
 **起始版本：** 23
 

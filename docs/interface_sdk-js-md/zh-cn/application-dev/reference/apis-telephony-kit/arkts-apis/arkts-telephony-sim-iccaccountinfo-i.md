@@ -10,6 +10,12 @@ Defines the ICC account information.
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## iccId
 
 ```TypeScript
@@ -108,7 +114,7 @@ simId: int
 
 Indicates the sim Id for card.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -126,7 +132,7 @@ slotIndex: int
 
 Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

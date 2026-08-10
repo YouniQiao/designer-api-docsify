@@ -12,6 +12,12 @@ Indicates the options for call rejection message.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## messageContent
 
 ```TypeScript

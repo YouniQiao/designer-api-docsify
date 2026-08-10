@@ -1,6 +1,6 @@
 # PlaybackState
 
-Enumeration of play state.
+表示媒体资源的播放状态的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,9 @@ Enumeration of play state.
 PLAYBACK_STATE_PREPARE = 0
 ```
 
-Preparing state. Indicates that the media file is not ready to play,the media is loading or buffering
+准备中状态。
+
+表示媒体文件尚未准备好播放，媒体正在加载或缓冲中。
 
 **Since:** 23
 
@@ -34,7 +36,7 @@ Preparing state. Indicates that the media file is not ready to play,the media is
 PLAYBACK_STATE_PLAY = 1
 ```
 
-Playing state.
+正在播放状态。
 
 **Since:** 23
 
@@ -52,7 +54,7 @@ Playing state.
 PLAYBACK_STATE_PAUSE = 2
 ```
 
-Paused state.
+暂停状态。
 
 **Since:** 23
 
@@ -70,7 +72,7 @@ Paused state.
 PLAYBACK_STATE_STOP = 3
 ```
 
-Stopped state.The server will clear the media playback position and other information.
+停止状态。
 
 **Since:** 23
 
@@ -88,7 +90,7 @@ Stopped state.The server will clear the media playback position and other inform
 PLAYBACK_STATE_COMPLETED = 4
 ```
 
-Completed state.
+播放完成状态。
 
 **Since:** 23
 
@@ -106,7 +108,7 @@ Completed state.
 PLAYBACK_STATE_ERROR = 5
 ```
 
-error state.
+播放错误状态。
 
 **Since:** 23
 
@@ -124,7 +126,7 @@ error state.
 PLAYBACK_STATE_BUFFERING = 6
 ```
 
-Buffering state.
+缓冲状态。
 
 **Since:** 23
 

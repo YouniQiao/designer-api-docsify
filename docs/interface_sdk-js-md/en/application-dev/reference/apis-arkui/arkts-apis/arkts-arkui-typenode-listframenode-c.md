@@ -1,6 +1,6 @@
 # ListFrameNode
 
-Define the List type of FrameNode.
+定义List类型的FrameNode。
 
 **Inheritance/Implementation:** ListFrameNode extends [TypedFrameNode<ListAttribute>](TypedFrameNode<ListAttribute>)
 
@@ -18,7 +18,7 @@ Define the List type of FrameNode.
 abstract initialize(options?: ListOptions): ListAttribute
 ```
 
-Initialize List FrameNode.
+初始化List类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize List FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | list options |
+| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | No | list节点的选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) |  |
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## remainingQuota
 
 ```TypeScript
@@ -18,7 +24,7 @@ remainingQuota: int
 
 应用当日所剩余总配额，单位：ms。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -36,7 +42,7 @@ transientTasks: DelaySuspendInfo[]
 
 当前已申请的所有短时任务信息。
 
-**类型：** DelaySuspendInfo[]
+**类型：** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)[]
 
 **起始版本：** 20
 

@@ -1,12 +1,18 @@
 # isLoggable
 
+## Modules to Import
+
+```TypeScript
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## isLoggable
 
 ```TypeScript
 function isLoggable(domain: int, tag: string, level: LogLevel): boolean
 ```
 
-Checks whether logs are printable based on the specified service domain, log tag, and log level.
+在打印日志前调用该接口，用于检查指定领域标识、日志标识和级别的日志是否可以打印。
 
 **Since:** 7
 
@@ -22,17 +28,17 @@ Checks whether logs are printable based on the specified service domain, log tag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domain | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Service domain of logs. The value ranges from **0x0** to **0xFFFF**. If the value exceeds the range, logs cannot be printed.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_You can define the value as required. |
-| tag | string | Yes | Log tag in the string format. You are advised to use this parameter to identify a particular service behavior or the class holding the ongoing method. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Log level. |
+| domain | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 日志对应的领域标识，范围是0x0~0xFFFF，超出范围则日志无法打印。&lt;br/&gt;建议开发者在应用内根据需要自定义划分。 |
+| tag | string | Yes | 指定日志标识，可以为任意字符串，建议用于标识调用所在的类或者业务行为。tag长度最多为31字节，超出后会截断，不建议使用中文字符，可能出现乱码或者对齐问题。 |
+| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | 日志级别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** logs are printable based on the specified service domain, log tag, and log level; returns **false** otherwise. |
+| boolean | 如果返回true，则该领域标识、日志标识和级别的日志可以打印，否则不能打印。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 hilog.isLoggable(0x0001, "testTag", hilog.LogLevel.INFO);

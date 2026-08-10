@@ -2,13 +2,19 @@
 
 This parameter is used to define the input of each filtering dimension.
 
-**Since:** 22
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 <!--Device-unnamed-export declare class FilterParams--><!--Device-unnamed-export declare class FilterParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { FilterType, Filter, FilterParams, FilterResult } from 'kits/@kit.ArkUI';
+```
 
 ## name
 
@@ -16,17 +22,21 @@ This parameter is used to define the input of each filtering dimension.
 name: ResourceStr
 ```
 
-filter item name.
+筛选项维度名称。
 
-**Type:** ResourceStr
+默认值：空字符串。
 
-**Since:** 22
+**说明：**如果文本大于列宽时，文本被截断。
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FilterParams-name: ResourceStr--><!--Device-FilterParams-name: ResourceStr-End-->
 
@@ -38,17 +48,21 @@ filter item name.
 options: Array<ResourceStr>
 ```
 
-filter options.
+筛选项维度可选项列表。
 
-**Type:** Array&lt;ResourceStr&gt;
+默认值：空数组。
 
-**Since:** 22
+**说明：**文本超长显示省略号。
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**Type:** Array&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FilterParams-options: Array<ResourceStr>--><!--Device-FilterParams-options: Array<ResourceStr>-End-->
 

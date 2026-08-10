@@ -1,6 +1,6 @@
 # AnimationController
 
-Define the data structure for PixelMap animations.
+动画控制器对象。包含控制动画播放、停止、恢复、暂停和状态查询等方法。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Define the data structure for PixelMap animations.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+```
+
 ## getStatus
 
 ```TypeScript
 getStatus(): AnimationStatus
 ```
 
-Get animtion status of the current component.
+获取当前动图播放的状态。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Get animtion status of the current component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return the status of animation. |
+| [AnimationStatus](arkts-arkui-animationstatus-e.md) | 动图的播放状态。包含4种状态：初始态、播放态、暂停态、停止态。 |
 
 ## pause
 
@@ -40,7 +46,7 @@ Get animtion status of the current component.
 pause(): void
 ```
 
-Pause animation playback, and keep it to the current frame.
+暂停动图的播放，保持在当前帧。
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ Pause animation playback, and keep it to the current frame.
 resume(): void
 ```
 
-Resume animation playback from the current frame.
+在当前帧恢复播放动图。
 
 **Since:** 23
 
@@ -76,7 +82,7 @@ Resume animation playback from the current frame.
 start(): void
 ```
 
-Start animtion playback.
+从首帧开始播放。
 
 **Since:** 23
 
@@ -94,7 +100,7 @@ Start animtion playback.
 stop(): void
 ```
 
-Stop animation playback, and reset to first frame.
+停止动图的播放并回到首帧。
 
 **Since:** 23
 

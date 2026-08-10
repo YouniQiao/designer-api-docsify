@@ -1,27 +1,29 @@
 # createCipher
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## createCipher
 
 ```TypeScript
 function createCipher(transformation: string): Cipher
 ```
 
-Creates a **Cipher** instance.
+创建加解密实例。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_For details about the supported specifications, see\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding  
-    length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding  
-    is applied in 16-byte blocks. **NoPadding** means no padding is applied.  
-    You need to understand the differences between different block cipher modes and use the correct parameter  
-    specifications. For example, padding is required for ECB and CBC. Otherwise, ensure that the plaintext  
-    length is an integer multiple of the block size. No padding is recommended for other modes. In this case,  
-    the ciphertext length is the same as the plaintext length.  
-    2. When RSA or SM2 is used for asymmetric encryption and decryption, two **Cipher** objects must be created  
-    to perform encryption and decryption separately. This is not required for symmetric encryption and  
-    decryption. If the algorithm specifications are the same, the same **Cipher** object can be used for  
-    encryption and decryption.
+&lt;br&gt;支持的规格详见[加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
+
+> **说明：**
+> 
+> 1. 在对称加解密中，PKCS #5和PKCS #7的实现方式相同，即补位长度和块大小保持一致。3DES补位为8字节，AES补位为16字节。**NoPadding**
+> 表示不进行补位。
+> 需要了解不同分组模式的区别，使用正确的参数规格。例如，ECB和CBC模式需要补位，否则需保证明文长度为块大小的整数倍。其他模式建议不补位，
+> 此时密文长度和明文长度一致。
+> 2. 使用RSA或SM2进行非对称加解密时，需要创建两个**Cipher**对象分别进行加密和解密。对称加解密不需要如此，算法规格相同时，可以使用同
+> 一个**Cipher**对象进行加解密。
 
 **Since:** 9
 
@@ -39,23 +41,23 @@ Creates a **Cipher** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the supported specifications, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| transformation | string | Yes | 待生成Cipher的算法名称（含密钥长度）、加密模式以及填充方法的组合。&lt;br&gt;支持的规格详见 [对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)和 [非对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the **Cipher** instance corresponding to the specified algorithm. |
+| [Cipher](arkts-cryptoarchitecture-system-cipher-cipher-c.md) | 返回对应算法的Cipher实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| 801 | 该操作不支持。 |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

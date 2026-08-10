@@ -1,12 +1,18 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## on('continueStateChange')
 
 ```TypeScript
 function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo>): void
 ```
 
-Subscribes to continuation state change events of the current mission.
+注册当前任务流转状态的监听。
 
 **Since:** 10
 
@@ -26,17 +32,17 @@ Subscribes to continuation state change events of the current mission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continueStateChange' | Yes | Event type. The value **'continueStateChange'** indicates the continuation state change event of the current mission. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinueCallbackInfo&gt; | Yes | Callback used to return the continuation state and information of the current mission.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| type | 'continueStateChange' | Yes | 当前任务流转状态，取值为'continueStateChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinueCallbackInfo&gt; | Yes | 回调函数，返回当前任务的流转状态和流转信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';

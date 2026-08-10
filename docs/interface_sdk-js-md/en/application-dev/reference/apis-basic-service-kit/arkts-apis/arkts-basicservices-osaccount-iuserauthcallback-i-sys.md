@@ -1,6 +1,6 @@
 # IUserAuthCallback (System API)
 
-Provides callbacks for user authentication.
+表示用户认证回调类。
 
 **Since:** 8
 
@@ -11,6 +11,12 @@ Provides callbacks for user authentication.
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
 
 ## onAcquireInfo
 
@@ -24,7 +30,7 @@ ArkTS-Sta:
 onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void
 ```
 
-Called to acquire identity authentication information.
+身份认证信息获取回调函数。
 
 **Since:** 8
 
@@ -40,11 +46,11 @@ Called to acquire identity authentication information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| module | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
-| acquire | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
+| module | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
+| acquire | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
 | extraInfo | Uint8Array | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 let authCallback: osAccount.IUserAuthCallback = {
@@ -72,7 +78,7 @@ ArkTS-Sta:
 onResult: (result: int, extraInfo: AuthResult) => void
 ```
 
-Called to return the result code and authentication result.
+身份认证结果回调函数，返回结果码和认证结果信息。
 
 **Since:** 8
 
@@ -88,10 +94,10 @@ Called to return the result code and authentication result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
+| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 let authCallback: osAccount.IUserAuthCallback = {

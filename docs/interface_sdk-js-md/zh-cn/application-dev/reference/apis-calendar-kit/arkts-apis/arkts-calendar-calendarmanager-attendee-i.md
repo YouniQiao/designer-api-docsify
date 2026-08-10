@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
+## 导入模块
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## email
 
 ```TypeScript
 email: string
 ```
 
-会议日程参与者的邮箱，邮箱格式为“用户名@域名.后缀”，用户名部分只能包含字母、数字、下划线“\_”、点 “.”、连字符 “-”。不能以点 “.” 开头或结尾。 不能连续出现两个点（即“..”）。长度建议为[0,5000]字符。
+会议日程参与者的邮箱，邮箱格式为“用户名@域名.后缀”，用户名部分只能包含字母、数字、下划线“_”、点 “.”、连字符 “-”。不能以点 “.” 开头或结尾。 不能连续出现两个点（即“..”）。长度建议为[0,5000]字符。
 
 **类型：** string
 
@@ -58,7 +64,7 @@ role?: AttendeeRole
 
 会议日程参与者的角色，不填时默认为空。
 
-**类型：** AttendeeRole
+**类型：** [AttendeeRole](arkts-calendar-calendarmanager-attendeerole-e.md)
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ status?: AttendeeStatus
 
 会议日程参与者的状态，不填时默认为空。
 
-**类型：** AttendeeStatus
+**类型：** [AttendeeStatus](arkts-calendar-calendarmanager-attendeestatus-e.md)
 
 **起始版本：** 18
 
@@ -98,7 +104,7 @@ type?: AttendeeType
 
 会议日程参与者的类型，不填时默认为空。
 
-**类型：** AttendeeType
+**类型：** [AttendeeType](arkts-calendar-calendarmanager-attendeetype-e.md)
 
 **起始版本：** 18
 

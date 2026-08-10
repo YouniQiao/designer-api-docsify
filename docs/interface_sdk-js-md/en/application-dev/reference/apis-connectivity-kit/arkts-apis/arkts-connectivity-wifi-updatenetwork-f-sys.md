@@ -1,5 +1,11 @@
 # updateNetwork (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## updateNetwork
 
 ```TypeScript
@@ -28,7 +34,7 @@ Updates the specified Wi-Fi configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the Wi-Fi configuration to update. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i-sys.md) | Yes | Indicates the Wi-Fi configuration to update. |
 
 **Return value:**
 
@@ -36,7 +42,7 @@ Updates the specified Wi-Fi configuration.
 | --- | --- |
 | number | Returns the network ID in the updated Wi-Fi configuration if the update is successful; returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

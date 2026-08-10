@@ -40,7 +40,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; |  |
 
 ## dirty
 
@@ -48,7 +48,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 dirty: Array<string>
 ```
 
-被监听的状态变量中发生变化的属性路径数组，路径格式与@Monitor装饰器指定的状态变量名路径一致，支持点号分隔的嵌套属性路径（如'a.b.c'）。从API版本26.0.0开始，当通配符能力开启时，该数组中可能包含通配符路径，通过[value]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_()方法查询通配符路径将返回undefined。
+被监听的状态变量中发生变化的属性路径数组，路径格式与@Monitor装饰器指定的状态变量名路径一致，支持点号分隔的嵌套属性路径（如'a.b.c'）。从API版本26.0.0开始，当通配符能力开启时，该数组中可能包含通配符路径，通过[value](arkts-arkui-imonitor-i.md#value)()方法查询通配符路径将返回undefined。
 
 **类型：** Array&lt;string&gt;
 

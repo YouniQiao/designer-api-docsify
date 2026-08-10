@@ -1,6 +1,6 @@
 # HuksTag
 
-Enumerates the tags used to invoke parameters.
+表示调用参数的Tag。
 
 **Since:** 8
 
@@ -16,9 +16,9 @@ Enumerates the tags used to invoke parameters.
 HUKS_TAG_INVALID = HuksTagType.HUKS_TAG_TYPE_INVALID | 0
 ```
 
-Invalid tag.
+表示非法的Tag。
 
-Note: This parameter is supported since API version 8 and deprecated since API version 9.
+**说明：** 从API version 8开始使用，从API version 9开始废弃。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 HUKS_TAG_ALGORITHM = HuksTagType.HUKS_TAG_TYPE_UINT | 1
 ```
 
-Algorithm.
+表示算法的Tag。
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Algorithm.
 HUKS_TAG_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 2
 ```
 
-Purpose of the key.
+表示密钥用途的Tag。
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Purpose of the key.
 HUKS_TAG_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 3
 ```
 
-Key size, in bits.
+表示密钥长度的Tag，单位：bit。
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ Key size, in bits.
 HUKS_TAG_DIGEST = HuksTagType.HUKS_TAG_TYPE_UINT | 4
 ```
 
-Digest algorithm.
+表示摘要算法的Tag。
 
 **Since:** 8
 
@@ -110,7 +110,7 @@ Digest algorithm.
 HUKS_TAG_PADDING = HuksTagType.HUKS_TAG_TYPE_UINT | 5
 ```
 
-Padding mode.
+表示填充模式的Tag。
 
 **Since:** 8
 
@@ -128,7 +128,7 @@ Padding mode.
 HUKS_TAG_BLOCK_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 6
 ```
 
-Cipher mode.
+表示加密模式的Tag。
 
 **Since:** 8
 
@@ -146,7 +146,7 @@ Cipher mode.
 HUKS_TAG_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 7
 ```
 
-Key type.
+表示密钥类型的Tag。
 
 **Since:** 8
 
@@ -164,7 +164,7 @@ Key type.
 HUKS_TAG_ASSOCIATED_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 8
 ```
 
-Associated authentication data.
+表示附加身份验证数据的Tag。
 
 **Since:** 8
 
@@ -182,7 +182,7 @@ Associated authentication data.
 HUKS_TAG_NONCE = HuksTagType.HUKS_TAG_TYPE_BYTES | 9
 ```
 
-Nonce for key encryption and decryption.
+表示密钥加解密的NONCE字段。
 
 **Since:** 8
 
@@ -200,7 +200,7 @@ Nonce for key encryption and decryption.
 HUKS_TAG_IV = HuksTagType.HUKS_TAG_TYPE_BYTES | 10
 ```
 
-IV.
+表示密钥初始化的向量。
 
 **Since:** 8
 
@@ -218,7 +218,7 @@ IV.
 HUKS_TAG_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 11
 ```
 
-Information generated during key derivation.
+表示密钥派生时的info。
 
 **Since:** 8
 
@@ -236,7 +236,7 @@ Information generated during key derivation.
 HUKS_TAG_SALT = HuksTagType.HUKS_TAG_TYPE_BYTES | 12
 ```
 
-Salt value used for key derivation.
+表示密钥派生时的盐值。
 
 **Since:** 8
 
@@ -256,9 +256,9 @@ Salt value used for key derivation.
 HUKS_TAG_PWD = HuksTagType.HUKS_TAG_TYPE_BYTES | 13
 ```
 
-OS patch level.
+表示操作系统补丁级别的Tag。
 
-Note: This parameter is supported since API version 8 and deprecated since API version 9.
+**说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **Since:** 8
 
@@ -276,7 +276,7 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 HUKS_TAG_ITERATION = HuksTagType.HUKS_TAG_TYPE_UINT | 14
 ```
 
-Number of iterations for key derivation.
+表示密钥派生时的迭代次数。
 
 **Since:** 8
 
@@ -296,7 +296,7 @@ Number of iterations for key derivation.
 HUKS_TAG_KEY_GENERATE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 15
 ```
 
-Key generation type.
+表示生成密钥类型的Tag。
 
 **Since:** 8
 
@@ -314,9 +314,9 @@ Key generation type.
 HUKS_TAG_DERIVE_MAIN_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 16
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -334,9 +334,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_DERIVE_FACTOR = HuksTagType.HUKS_TAG_TYPE_BYTES | 17
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -354,9 +354,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_DERIVE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 18
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -374,7 +374,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_AGREE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 19
 ```
 
-Type of the algorithm used for key agreement.
+表示密钥协商时的算法类型。
 
 **Since:** 8
 
@@ -394,7 +394,7 @@ Type of the algorithm used for key agreement.
 HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 20
 ```
 
-Public key alias used in key agreement.
+表示密钥协商时的公钥别名。
 
 **Since:** 8
 
@@ -414,7 +414,7 @@ Public key alias used in key agreement.
 HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 21
 ```
 
-Private key alias used in key agreement.
+表示密钥协商时的私钥别名。
 
 **Since:** 8
 
@@ -434,7 +434,7 @@ Private key alias used in key agreement.
 HUKS_TAG_AGREE_PUBLIC_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 22
 ```
 
-Public key used in key agreement.
+表示密钥协商时的公钥。
 
 **Since:** 8
 
@@ -454,7 +454,7 @@ Public key used in key agreement.
 HUKS_TAG_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 23
 ```
 
-Key alias.
+表示密钥别名。
 
 **Since:** 8
 
@@ -472,7 +472,7 @@ Key alias.
 HUKS_TAG_DERIVE_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 24
 ```
 
-Size of the derived key, in bytes.
+表示派生密钥的大小，单位：byte。
 
 **Since:** 8
 
@@ -492,7 +492,7 @@ Size of the derived key, in bytes.
 HUKS_TAG_IMPORT_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 25
 ```
 
-Type of the imported key.
+表示导入的密钥类型。
 
 **Since:** 9
 
@@ -512,7 +512,7 @@ Type of the imported key.
 HUKS_TAG_UNWRAP_ALGORITHM_SUITE = HuksTagType.HUKS_TAG_TYPE_UINT | 26
 ```
 
-Suite for securely importing a key.
+表示安全导入密钥的套件。
 
 **Since:** 9
 
@@ -532,7 +532,7 @@ Suite for securely importing a key.
 HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 29
 ```
 
-Storage type of the derived key or agreed key.
+表示派生密钥/协商密钥的存储类型。
 
 **Since:** 10
 
@@ -552,7 +552,7 @@ Storage type of the derived key or agreed key.
 HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 30
 ```
 
-Type of the **rsa\_pss\_salt\_length**.
+表示rsa_pss_salt_length的类型。
 
 **Since:** 10
 
@@ -572,9 +572,9 @@ Type of the **rsa\_pss\_salt\_length**.
 HUKS_TAG_ACTIVE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 201
 ```
 
-Parameter originally reserved for certificate management. It is deprecated because certificate management is no longer implemented in this module.
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -592,9 +592,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ORIGINATION_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 202
 ```
 
-Parameter originally reserved for certificate management. It is deprecated because certificate management is no longer implemented in this module.
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -612,9 +612,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_USAGE_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 203
 ```
 
-Parameter originally reserved for certificate management. It is deprecated because certificate management is no longer implemented in this module.
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -632,9 +632,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_CREATION_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 204
 ```
 
-Parameter originally reserved for certificate management. It is deprecated because certificate management is no longer implemented in this module.
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -652,7 +652,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ALL_USERS = HuksTagType.HUKS_TAG_TYPE_BOOL | 301
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -672,7 +672,7 @@ Reserved.
 HUKS_TAG_USER_ID = HuksTagType.HUKS_TAG_TYPE_UINT | 302
 ```
 
-ID of the user to which the key belongs.
+表示当前密钥属于哪个userID。
 
 **Since:** 8
 
@@ -692,7 +692,7 @@ ID of the user to which the key belongs.
 HUKS_TAG_NO_AUTH_REQUIRED = HuksTagType.HUKS_TAG_TYPE_BOOL | 303
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -712,9 +712,7 @@ Reserved.
 HUKS_TAG_USER_AUTH_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 304
 ```
 
-User authentication type. For details, see [HuksUserAuthType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This parameter must be set together with [HuksAuthAccessType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. You can set a maximum of two user authentication types at a time. For example, if **HuksAuthAccessType** is  
-**HUKS\_AUTH\_ACCESS\_INVALID\_NEW\_BIO\_ENROLL**, you can set two of **HUKS\_USER\_AUTH\_TYPE\_FACE**,  
-**HUKS\_USER\_AUTH\_TYPE\_FINGERPRINT**, and **HUKS\_USER\_AUTH\_TYPE\_FACE | HUKS\_USER\_AUTH\_TYPE\_FINGERPRINT**.
+表示用户认证类型。从[HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md)中选择，需要与安全访问控制类型同时设置。支持同时指定两种用户认证类型，如：安全访问控制类型指定为HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL时，密钥访问认证类型可以指定以下三种： HUKS_USER_AUTH_TYPE_FACE 、HUKS_USER_AUTH_TYPE_FINGERPRINT、HUKS_USER_AUTH_TYPE_FACE | HUKS_USER_AUTH_TYPE_FINGERPRINT
 
 **Since:** 8
 
@@ -732,7 +730,7 @@ User authentication type. For details, see [HuksUserAuthType]\_\_\_JSDOC\_LINK\_
 HUKS_TAG_AUTH_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 305
 ```
 
-One-time validity period of the authentication token, in seconds.
+表示auth token单次有效期，单位：秒。
 
 **Since:** 8
 
@@ -750,7 +748,7 @@ One-time validity period of the authentication token, in seconds.
 HUKS_TAG_AUTH_TOKEN = HuksTagType.HUKS_TAG_TYPE_BYTES | 306
 ```
 
-Authentication token.
+用于传入authToken的字段。
 
 **Since:** 8
 
@@ -768,7 +766,7 @@ Authentication token.
 HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307
 ```
 
-Access control type. For details, see [HuksAuthAccessType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This parameter must be set together with [HuksUserAuthType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+表示安全访问控制类型。从[HuksAuthAccessType](arkts-universalkeystore-huks-huksauthaccesstype-e.md)中选择，需要和用户认证类型同时设置。
 
 **Since:** 9
 
@@ -786,7 +784,7 @@ Access control type. For details, see [HuksAuthAccessType]\_\_\_JSDOC\_LINK\_DES
 HUKS_TAG_KEY_SECURE_SIGN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 308
 ```
 
-Signature type of the key generated or imported.
+表示生成或导入密钥时，指定该密钥的签名类型。
 
 **Since:** 9
 
@@ -804,7 +802,7 @@ Signature type of the key generated or imported.
 HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309
 ```
 
-Type of the challenge generated for a key. For details, see [HuksChallengeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示密钥使用时生成的challenge类型。从[HuksChallengeType](arkts-universalkeystore-huks-hukschallengetype-e.md)中选择。
 
 **Since:** 9
 
@@ -822,8 +820,7 @@ Type of the challenge generated for a key. For details, see [HuksChallengeType]\
 HUKS_TAG_CHALLENGE_POS = HuksTagType.HUKS_TAG_TYPE_UINT | 310
 ```
 
-Position of the 8-byte valid value in a custom challenge. For details, see  
-[HuksChallengePosition]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示challenge类型为用户自定义类型时，huks产生的challenge有效长度仅为8字节连续的数据。从[HuksChallengePosition](arkts-universalkeystore-huks-hukschallengeposition-e.md)中选择。
 
 **Since:** 9
 
@@ -841,7 +838,7 @@ Position of the 8-byte valid value in a custom challenge. For details, see
 HUKS_TAG_KEY_AUTH_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 311
 ```
 
-Key authentication purpose.
+表示密钥认证用途的tag。
 
 **Since:** 10
 
@@ -859,7 +856,7 @@ Key authentication purpose.
 HUKS_TAG_AUTH_STORAGE_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 316
 ```
 
-Key storage security level, which is a value of [HuksAuthStorageLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示密钥存储安全等级的tag。从[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md)中选择。
 
 **Since:** 11
 
@@ -877,7 +874,7 @@ Key storage security level, which is a value of [HuksAuthStorageLevel]\_\_\_JSDO
 HUKS_TAG_USER_AUTH_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 319
 ```
 
-User authentication mode. It is a value of [HuksUserAuthMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示用户认证模式。从[HuksUserAuthMode](arkts-universalkeystore-huks-huksuserauthmode-e.md)中选择。
 
 **Since:** 12
 
@@ -895,7 +892,7 @@ User authentication mode. It is a value of [HuksUserAuthMode]\_\_\_JSDOC\_LINK\_
 HUKS_TAG_ATTESTATION_CHALLENGE = HuksTagType.HUKS_TAG_TYPE_BYTES | 501
 ```
 
-Challenge value used in the attestation.
+表示attestation时的挑战值。
 
 **Since:** 8
 
@@ -913,7 +910,7 @@ Challenge value used in the attestation.
 HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502
 ```
 
-Application ID used in the attestation.
+表示attestation时拥有该密钥的application的Id。
 
 **Since:** 8
 
@@ -931,9 +928,9 @@ Application ID used in the attestation.
 HUKS_TAG_ATTESTATION_ID_BRAND = HuksTagType.HUKS_TAG_TYPE_BYTES | 503
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -951,9 +948,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_DEVICE = HuksTagType.HUKS_TAG_TYPE_BYTES | 504
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -971,9 +968,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_PRODUCT = HuksTagType.HUKS_TAG_TYPE_BYTES | 505
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -991,9 +988,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_SERIAL = HuksTagType.HUKS_TAG_TYPE_BYTES | 506
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1011,9 +1008,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_IMEI = HuksTagType.HUKS_TAG_TYPE_BYTES | 507
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1031,9 +1028,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_MEID = HuksTagType.HUKS_TAG_TYPE_BYTES | 508
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1051,9 +1048,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_MANUFACTURER = HuksTagType.HUKS_TAG_TYPE_BYTES | 509
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1071,9 +1068,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_MODEL = HuksTagType.HUKS_TAG_TYPE_BYTES | 510
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1091,7 +1088,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 511
 ```
 
-Key alias used in the attestation.
+表示attestation时的密钥别名。
 
 **Since:** 8
 
@@ -1109,9 +1106,9 @@ Key alias used in the attestation.
 HUKS_TAG_ATTESTATION_ID_SOCID = HuksTagType.HUKS_TAG_TYPE_BYTES | 512
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1129,9 +1126,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_UDID = HuksTagType.HUKS_TAG_TYPE_BYTES | 513
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1149,7 +1146,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 514
 ```
 
-Security level used in the attestation.
+表示attestation时的安全凭据。
 
 **Since:** 8
 
@@ -1167,7 +1164,7 @@ Security level used in the attestation.
 HUKS_TAG_ATTESTATION_ID_VERSION_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 515
 ```
 
-Version information used in the attestation.
+表示attestation时的版本号。
 
 **Since:** 8
 
@@ -1185,7 +1182,7 @@ Version information used in the attestation.
 HUKS_TAG_KEY_OVERRIDE = HuksTagType.HUKS_TAG_TYPE_BOOL | 520
 ```
 
-Whether to overwrite the key with the same name.
+表示是否覆写同名密钥。
 
 **Since:** 20
 
@@ -1203,7 +1200,7 @@ Whether to overwrite the key with the same name.
 HUKS_TAG_AE_TAG_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 521
 ```
 
-Length of the specified AEAD tag, in bytes.
+表示指定的AEAD标签长度，单位：byte。
 
 **Since:** 22
 
@@ -1221,7 +1218,7 @@ Length of the specified AEAD tag, in bytes.
 HUKS_TAG_KEY_CLASS = HuksTagType.HUKS_TAG_TYPE_UINT | 522
 ```
 
-Key source.
+表示密钥来源。
 
 **Since:** 22
 
@@ -1237,7 +1234,7 @@ Key source.
 HUKS_TAG_KEY_ACCESS_GROUP = HuksTagType.HUKS_TAG_TYPE_BYTES | 523
 ```
 
-Information about the specified group.
+表示指定的分组信息。
 
 **Since:** 23
 
@@ -1255,7 +1252,13 @@ Information about the specified group.
 HUKS_TAG_KEY_SECURITY_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 526
 ```
 
-Security level of the key.
+表示密钥安全级别。
+
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **Since:** 26.0.0
 
@@ -1273,7 +1276,9 @@ Security level of the key.
 HUKS_TAG_AAD = HuksTagType.HUKS_TAG_TYPE_BYTES | 527
 ```
 
-Additional verification data indicating the GCM or CCM mode.
+标记指示GCM或CCM模式的附加验证数据。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Since:** 24
 
@@ -1291,7 +1296,7 @@ Additional verification data indicating the GCM or CCM mode.
 HUKS_TAG_CONTEXT = HuksTagType.HUKS_TAG_TYPE_BYTES | 528
 ```
 
-The tag indicates the context for crypto operations, such as ML-DSA, etc.
+标记指示加密操作的上下文，例如ML-DSA等。
 
 **Since:** 26.0.0
 
@@ -1309,7 +1314,7 @@ The tag indicates the context for crypto operations, such as ML-DSA, etc.
 HUKS_TAG_IS_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1001
 ```
 
-Whether to use the alias passed in during key generation.
+表示是否使用生成key时传入的别名的Tag。
 
 **Since:** 8
 
@@ -1327,7 +1332,7 @@ Whether to use the alias passed in during key generation.
 HUKS_TAG_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1002
 ```
 
-Key storage mode.
+表示密钥存储方式的Tag。
 
 **Since:** 8
 
@@ -1345,7 +1350,7 @@ Key storage mode.
 HUKS_TAG_IS_ALLOWED_WRAP = HuksTagType.HUKS_TAG_TYPE_BOOL | 1003
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1365,7 +1370,7 @@ Reserved.
 HUKS_TAG_KEY_WRAP_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 1004
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1385,7 +1390,7 @@ Reserved.
 HUKS_TAG_KEY_AUTH_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1005
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1403,7 +1408,7 @@ Reserved.
 HUKS_TAG_KEY_ROLE = HuksTagType.HUKS_TAG_TYPE_UINT | 1006
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1423,7 +1428,7 @@ Reserved.
 HUKS_TAG_KEY_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1007
 ```
 
-Flag of the key.
+表示密钥标志的Tag。
 
 **Since:** 8
 
@@ -1441,7 +1446,7 @@ Flag of the key.
 HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1461,9 +1466,9 @@ Reserved.
 HUKS_TAG_SECURE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1009
 ```
 
-OS patch level.
+表示操作系统补丁级别的Tag。
 
-Note: This parameter is supported since API version 8 and deprecated since API version 9.
+**说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **Since:** 8
 
@@ -1481,9 +1486,9 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 HUKS_TAG_SECURE_KEY_UUID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1010
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1501,7 +1506,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_KEY_DOMAIN = HuksTagType.HUKS_TAG_TYPE_UINT | 1011
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1519,7 +1524,7 @@ Reserved.
 HUKS_TAG_IS_DEVICE_PASSWORD_SET = HuksTagType.HUKS_TAG_TYPE_BOOL | 1012
 ```
 
-Whether the key is accessible only when the user sets a lock screen password.
+表示密钥锁屏密码访问控制字段，可限制密钥只有在用户设置了锁屏密码时可用。
 
 **Since:** 11
 
@@ -1537,9 +1542,9 @@ Whether the key is accessible only when the user sets a lock screen password.
 HUKS_TAG_PROCESS_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10001
 ```
 
-OS patch level.
+表示操作系统补丁级别的Tag。
 
-Note: This parameter is supported since API version 8 and deprecated since API version 9.
+**说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **Since:** 8
 
@@ -1557,9 +1562,9 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 HUKS_TAG_PACKAGE_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10002
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1577,9 +1582,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ACCESS_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10003
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1597,9 +1602,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_USES_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10004
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1617,9 +1622,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_CRYPTO_CTX = HuksTagType.HUKS_TAG_TYPE_ULONG | 10005
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1637,7 +1642,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1655,9 +1660,9 @@ Reserved.
 HUKS_TAG_KEY_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10007
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1675,9 +1680,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_PAYLOAD_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 10008
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Since:** 8
 
@@ -1695,7 +1700,7 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_AE_TAG = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009
 ```
 
-Used to pass in the AEAD in GCM mode.
+用于传入GCM模式中的AEAD数据的字段。
 
 **Since:** 8
 
@@ -1713,9 +1718,9 @@ Used to pass in the AEAD in GCM mode.
 HUKS_TAG_IS_KEY_HANDLE = HuksTagType.HUKS_TAG_TYPE_ULONG | 10010
 ```
 
-OS patch level.
+表示操作系统补丁级别的Tag。
 
-Note: This parameter is supported since API version 8 and deprecated since API version 9.
+**说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **Since:** 8
 
@@ -1733,9 +1738,9 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 HUKS_TAG_OS_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10101
 ```
 
-OS version.
+表示操作系统版本的Tag。
 
-Note: This parameter is supported since API version 8 and deprecated since API version 9.
+**说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **Since:** 8
 
@@ -1753,9 +1758,9 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 HUKS_TAG_OS_PATCHLEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 10102
 ```
 
-OS patch level.
+表示操作系统补丁级别的Tag。
 
-Note: This parameter is supported since API version 8 and deprecated since API version 9.
+**说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **Since:** 8
 
@@ -1773,7 +1778,7 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 HUKS_TAG_SYMMETRIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20001
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1791,7 +1796,7 @@ Reserved.
 HUKS_TAG_ASYMMETRIC_PUBLIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20002
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 
@@ -1811,7 +1816,7 @@ Reserved.
 HUKS_TAG_ASYMMETRIC_PRIVATE_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20003
 ```
 
-Reserved.
+预留。
 
 **Since:** 8
 

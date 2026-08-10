@@ -1,11 +1,12 @@
 # AVCastPicker
 
 本模块提供创建投播组件AVCastPicker的功能，提供设备发现连接的统一入口。
-    **说明：**  
-    
-    - 示例效果请以真机为准，当前DevEco Studio预览器无实际投播功能。\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_  
-    
-    - 当前组件的使用，依赖于设备支持“设备选择界面”。当前暂无OpenHarmony设备支持，需要OEM厂商实现具体的“设备选择界面”。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+
+> **说明：**
+> 
+> - 示例效果请以真机为准，当前DevEco Studio预览器无实际投播功能。&lt;!--Del--&gt;
+> 
+> - 当前组件的使用，依赖于设备支持“设备选择界面”。当前暂无OpenHarmony设备支持，需要OEM厂商实现具体的“设备选择界面”。&lt;!--DelEnd--&gt;
 
 **起始版本：** 23
 
@@ -16,6 +17,12 @@
 <!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+## 导入模块
+
+```TypeScript
+import { AVCastPicker } from 'kits/@kit.AVSessionKit';
+```
 
 ## build
 
@@ -61,7 +68,7 @@ activeColor?: Color | int | string
 
 未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
 
-**类型：** Color \| int \| string
+**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-color-e.md) \| int \| string
 
 **起始版本：** 23
 
@@ -82,7 +89,7 @@ colorMode?: AVCastPickerColorMode
 - 当colorMode设置为AUTO时，跟随系统的深浅色模式的默认色值。  
 - 当colorMode设置为DARK、LIGHT时，使用对应模式的系统预设色值。
 
-**类型：** AVCastPickerColorMode
+**类型：** [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
 
 **起始版本：** 23
 
@@ -102,7 +109,7 @@ customPicker?: CustomBuilder
 
 If not set, system will show the default appearance for different device type.
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -124,7 +131,7 @@ normalColor?: Color | int | string
 
 未设置时，将采用colorMode下的颜色设置。
 
-**类型：** Color \| int \| string
+**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-color-e.md) \| int \| string
 
 **起始版本：** 23
 
@@ -142,10 +149,10 @@ pickerStyle?: AVCastPickerStyle
 
 投播样式。
 
-- 当sessionType是audio或者video时，默认值为STYLE\_PANEL。  
-- 当sessionType是voice\_call或者video\_call时，默认值为STYLE\_MENU，且不可修改为STYLE\_PANEL。
+- 当sessionType是audio或者video时，默认值为STYLE_PANEL。  
+- 当sessionType是voice_call或者video_call时，默认值为STYLE_MENU，且不可修改为STYLE_PANEL。
 
-**类型：** AVCastPickerStyle
+**类型：** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
 **起始版本：** 23
 
@@ -161,7 +168,7 @@ pickerStyle?: AVCastPickerStyle
 sessionType?: string
 ```
 
-会话类型，可参考[AVSessionType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。默认值为当前应用创建的AVSessionType。
+会话类型，可参考[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)。默认值为当前应用创建的AVSessionType。
 
 **类型：** string
 

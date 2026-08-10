@@ -1,6 +1,6 @@
 # AccelerometerUncalibratedResponse
 
-Describes the uncalibrated acceleration sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+未校准加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the uncalibrated acceleration sensor data. It extends from [Response]\
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## biasX
 
 ```TypeScript
 biasX: double
 ```
 
-Uncalibrated acceleration bias along the x-axis of the device, in m/s?.
+施加在设备x轴方向未校准的加速度偏量（估计的加速度偏差）。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -36,9 +42,9 @@ Uncalibrated acceleration bias along the x-axis of the device, in m/s?.
 biasY: double
 ```
 
-Uncalibrated acceleration bias along the y-axis of the device, in m/s?.
+施加在设备y轴方向未校准的加速度偏量（估计的加速度偏差）。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -54,9 +60,9 @@ Uncalibrated acceleration bias along the y-axis of the device, in m/s?.
 biasZ: double
 ```
 
-Uncalibrated acceleration bias along the z-axis of the device, in m/s?.
+施加在设备z轴方向未校准的加速度偏量（估计的加速度偏差）。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -72,9 +78,9 @@ Uncalibrated acceleration bias along the z-axis of the device, in m/s?.
 x: double
 ```
 
-Uncalibrated acceleration along the x-axis of the device, in m/s?.
+施加在设备x轴方向未校准的加速度。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -90,9 +96,9 @@ Uncalibrated acceleration along the x-axis of the device, in m/s?.
 y: double
 ```
 
-Uncalibrated acceleration along the y-axis of the device, in m/s?.
+施加在设备y轴方向未校准的加速度。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -108,9 +114,9 @@ Uncalibrated acceleration along the y-axis of the device, in m/s?.
 z: double
 ```
 
-Uncalibrated acceleration along the z-axis of the device, in m/s?.
+施加在设备z轴方向未校准的加速度。单位：m/s²。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

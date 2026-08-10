@@ -1,9 +1,10 @@
 # LazyForEachCustomComponentFreezeMode
 
 选择是否使能自定义组件冻结。
-    **说明：**  
-    
-    该配置仅在LazyForEach下直接使用自定义组件时添加，其他情况不适用。
+
+> **说明：**
+> 
+> 该配置仅在LazyForEach下直接使用自定义组件时添加，其他情况不适用。
 
 **起始版本：** 26.0.0
 

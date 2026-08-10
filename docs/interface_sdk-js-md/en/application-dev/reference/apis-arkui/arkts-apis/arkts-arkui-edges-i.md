@@ -18,7 +18,7 @@ bottom?: Dimension
 
 bottom property.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ left?: Dimension
 
 left property.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ right?: Dimension
 
 right property.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ top?: Dimension
 
 top property.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
 

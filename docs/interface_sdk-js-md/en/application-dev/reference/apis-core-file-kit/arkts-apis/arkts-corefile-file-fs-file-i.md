@@ -1,6 +1,6 @@
 # File
 
-Represents a **File** object opened by **open()**.
+由open接口打开的File对象。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Represents a **File** object opened by **open()**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## getParent
 
 ```TypeScript
 getParent(): string
 ```
 
-Obtains the parent directory of this file object.
+获取File对象对应文件父目录。
 
 **Since:** 11
 
@@ -30,24 +36,23 @@ Obtains the parent directory of this file object.
 
 | Type | Description |
 | --- | --- |
-| string | Parent directory obtained. |
+| string | 返回父目录路径。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900005 | I/O error |
-| 13900042 | Unknown error |
 | 14300002 | Invalid URI |
+| 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
-console.info('The parent path is: ' + file.getParent());
-fs.closeSync(file);
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+console.info(`Succeeded in getting parent path, the parent path is: ${file.getParent()}`);
+fileIo.closeSync(file);
 ```
 
 ## lock
@@ -56,7 +61,7 @@ fs.closeSync(file);
 lock(exclusive?: boolean): Promise<void>
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses a promise to return the result.
+对文件阻塞式施加共享锁或独占锁，使用promise异步回调。
 
 **Since:** 9
 
@@ -70,37 +75,38 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | No | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+
 let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
 file.lock(true).then(() => {
-  console.info("lock file succeed");
+  console.info(`Succeeded in locking file.`);
 }).catch((err: BusinessError) => {
-  console.error("lock file failed with error message: " + err.message + ", error code: " + err.code);
+  console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
-  fs.closeSync(file);
+  fileIo.closeSync(file);
 });
 ```
 
@@ -110,7 +116,7 @@ file.lock(true).then(() => {
 lock(callback: AsyncCallback<void>): void
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
+对文件阻塞式施加共享锁或独占锁，使Callback异步回调。
 
 **Since:** 9
 
@@ -124,18 +130,35 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步文件上锁之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+file.lock((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in locking file.`);
+  }
+  fileIo.closeSync(file);
+});
+```
 
 ## lock
 
@@ -143,7 +166,7 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 lock(exclusive: boolean, callback: AsyncCallback<void>): void
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
+对文件阻塞式施加共享锁或独占锁，使Callback异步回调。
 
 **Since:** 9
 
@@ -157,19 +180,36 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | Yes | Lock to apply.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| exclusive | boolean | Yes | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步文件上锁之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+file.lock(true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in locking file.`);
+  }
+  fileIo.closeSync(file);
+});
+```
 
 ## tryLock
 
@@ -177,7 +217,7 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 tryLock(exclusive?: boolean): void
 ```
 
-Applies an exclusive lock or a shared lock on this file in non-blocking mode.
+文件非阻塞式施加共享锁或独占锁。
 
 **Since:** 9
 
@@ -191,27 +231,27 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | No | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
 file.tryLock(true);
-console.info("lock file succeed");
-fs.closeSync(file);
+console.info(`Succeeded in locking file.`);
+fileIo.closeSync(file);
 ```
 
 ## unlock
@@ -220,7 +260,7 @@ fs.closeSync(file);
 unlock(): void
 ```
 
-Unlocks a file. This API returns the result synchronously.
+以同步方式解锁文件。
 
 **Since:** 9
 
@@ -235,21 +275,21 @@ Unlocks a file. This API returns the result synchronously.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
 file.tryLock(true);
 file.unlock();
-console.info("unlock file succeed");
-fs.closeSync(file);
+console.info(`Succeeded in unlocking file.`);
+fileIo.closeSync(file);
 ```
 
 ## fd
@@ -258,7 +298,7 @@ fs.closeSync(file);
 readonly fd: number
 ```
 
-FD of the file.
+打开的文件描述符。
 
 **Type:** number
 
@@ -278,7 +318,7 @@ FD of the file.
 readonly name: string
 ```
 
-Name of the file.
+文件名。
 
 **Type:** string
 
@@ -296,7 +336,7 @@ Name of the file.
 readonly path: string
 ```
 
-Path of the file.
+文件路径。
 
 **Type:** string
 

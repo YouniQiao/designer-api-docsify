@@ -1,6 +1,6 @@
 # ParallelOption
 
-Describe the options for the ParallelizeUI.
+使用ParallelizeUI并行化创建UI时的可选参数。
 
 **Since:** 23
 
@@ -16,7 +16,13 @@ Describe the options for the ParallelizeUI.
 enable?: boolean
 ```
 
-Whether ParallelizeUI create is enabled.
+是否开启UI创建并行化。
+
+true：开启并行化创建；false：不开启并行化创建。
+
+默认值：true
+
+取值为undefined时，按默认值true处理。
 
 **Type:** boolean
 

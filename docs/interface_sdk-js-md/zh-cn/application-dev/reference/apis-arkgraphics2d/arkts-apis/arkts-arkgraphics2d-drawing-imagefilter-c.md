@@ -1,13 +1,14 @@
 # ImageFilter
 
 图像滤波器，用于对图像应用各种滤波效果，支持创建模糊、颜色混合、级联组合、偏移、基于着色器等多种图像滤波器。
-    **说明：**  
-    
-    - 本Class首批接口从API version 12开始支持。  
-    
-    - 本模块使用屏幕物理像素单位px。  
-    
-    - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 12
 
@@ -16,6 +17,12 @@
 <!--Device-drawing-class ImageFilter--><!--Device-drawing-class ImageFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## createBlendImageFilter
 
@@ -37,21 +44,21 @@ static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foregrou
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 颜色混合模式。 |
-| background | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在混合模式中作为目标色的滤波器。 |
-| foreground | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在混合模式中作为源色的滤波器。 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 | 颜色混合模式。 |
+| background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为目标色的滤波器。 |
+| foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为源色的滤波器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回按照指定混合模式叠加后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回按照指定混合模式叠加后的图像滤波器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createBlendImageFilter
 
@@ -73,21 +80,21 @@ static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foregrou
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 颜色混合模式。 |
-| background | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在混合模式中作为目标色的滤波器。 |
-| foreground | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在混合模式中作为源色的滤波器。 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 | 颜色混合模式。 |
+| background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为目标色的滤波器。 |
+| foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为源色的滤波器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回按照指定混合模式叠加后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回按照指定混合模式叠加后的图像滤波器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createBlurImageFilter
 
@@ -112,20 +119,20 @@ static createBlurImageFilter(sigmaX: number, sigmaY: number,
 | --- | --- | --- | --- |
 | sigmaX | number | 是 | 表示沿x轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
 | sigmaY | number | 是 | 表示沿y轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
-| tileMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示在边缘处应用的平铺模式。 |
-| imageFilter | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 | 表示在边缘处应用的平铺模式。 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的模糊图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回创建的模糊图像滤波器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlurImageFilter
 
@@ -150,20 +157,20 @@ static createBlurImageFilter(sigmaX: double, sigmaY: double,
 | --- | --- | --- | --- |
 | sigmaX | double | 是 | 表示沿x轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
 | sigmaY | double | 是 | 表示沿y轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
-| tileMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示在边缘处应用的平铺模式。 |
-| imageFilter | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 | 表示在边缘处应用的平铺模式。 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的模糊图像滤波器。创建失败时返回undefined。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回创建的模糊图像滤波器。创建失败时返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createComposeImageFilter
 
@@ -185,14 +192,14 @@ static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): Image
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cOuter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在级联中，作为第二级的滤波器，处理第一级滤波器的输出。如果第二级滤波器为空，第一级滤波器不为空，最后输出第一级滤波器的结果。两级滤波器不能同时为空。 |
-| cInner | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在级联中，作为第一级的滤波器，直接处理图像的原始内容。如果第一级滤波器为空，第二级滤波器不为空，最后输出第二级滤波器的结果。两级滤波器不能同时为空。 |
+| cOuter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在级联中，作为第二级的滤波器，处理第一级滤波器的输出。如果第二级滤波器为空，第一级滤波器不为空，最后输出第一级滤波器的结果。两级滤波器不能同时为空。 |
+| cInner | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在级联中，作为第一级的滤波器，直接处理图像的原始内容。如果第一级滤波器为空，第二级滤波器不为空，最后输出第二级滤波器的结果。两级滤波器不能同时为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回级联后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回级联后的图像滤波器。 |
 
 ## createComposeImageFilter
 
@@ -214,14 +221,14 @@ static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): Image
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cOuter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在级联中，作为第二级的滤波器，处理第一级滤波器的输出。如果第二级滤波器为空，第一级滤波器不为空，最后输出第一级滤波器的结果。两级滤波器不能同时为空。 |
-| cInner | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在级联中，作为第一级的滤波器，直接处理图像的原始内容。如果第一级滤波器为空，第二级滤波器不为空，最后输出第二级滤波器的结果。两级滤波器不能同时为空。 |
+| cOuter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在级联中，作为第二级的滤波器，处理第一级滤波器的输出。如果第二级滤波器为空，第一级滤波器不为空，最后输出第一级滤波器的结果。两级滤波器不能同时为空。 |
+| cInner | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在级联中，作为第一级的滤波器，直接处理图像的原始内容。如果第一级滤波器为空，第二级滤波器不为空，最后输出第二级滤波器的结果。两级滤波器不能同时为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回级联后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回级联后的图像滤波器。 |
 
 ## createFromColorFilter
 
@@ -243,20 +250,20 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorFilter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示颜色滤波器。 |
-| imageFilter | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 20 |
+| colorFilter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 是 | 表示颜色滤波器。 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。<br>**起始版本：** 20 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回颜色滤波器叠加后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回颜色滤波器叠加后的图像滤波器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createFromColorFilter
 
@@ -278,20 +285,20 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorFilter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示颜色滤波器。 |
-| imageFilter | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 要与当前图像滤波器叠加的输入滤波器。 当不传该参数，或者imageFilter传入undefined时，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
+| colorFilter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 是 | 表示颜色滤波器。 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器。 当不传该参数，或者imageFilter传入undefined时，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回颜色滤波器叠加后的图像滤波器。创建失败时返回undefined。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回颜色滤波器叠加后的图像滤波器。创建失败时返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createFromImage
 
@@ -321,7 +328,7 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于图像创建的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于图像创建的图像滤波器。 |
 
 ## createFromImage
 
@@ -351,7 +358,7 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于图像创建的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于图像创建的图像滤波器。 |
 
 ## createFromShaderEffect
 
@@ -373,13 +380,13 @@ static createFromShaderEffect(shader: ShaderEffect): ImageFilter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shader | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示应用于图像的着色器效果。 |
+| shader | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 | 表示应用于图像的着色器效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于着色器创建的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于着色器创建的图像滤波器。 |
 
 ## createFromShaderEffect
 
@@ -401,13 +408,13 @@ static createFromShaderEffect(shader: ShaderEffect): ImageFilter | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shader | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示应用于图像的着色器效果。 |
+| shader | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 | 表示应用于图像的着色器效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于着色器创建的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于着色器创建的图像滤波器。 |
 
 ## createOffsetImageFilter
 
@@ -431,13 +438,13 @@ static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | nul
 | --- | --- | --- | --- |
 | dx | number | 是 | 水平方向的平移距离，该参数为浮点数。单位为物理像素px。 |
 | dy | number | 是 | 竖直方向的平移距离，该参数为浮点数。单位为物理像素px。 |
-| input | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 需要进行平移的滤波器。默认为null，如果为null，则将无滤波效果的绘制结果进行平移。 |
+| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 需要进行平移的滤波器。默认为null，如果为null，则将无滤波效果的绘制结果进行平移。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回偏移后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回偏移后的图像滤波器。 |
 
 ## createOffsetImageFilter
 
@@ -461,11 +468,11 @@ static createOffsetImageFilter(dx: double, dy: double, input?: ImageFilter | nul
 | --- | --- | --- | --- |
 | dx | double | 是 | 水平方向的平移距离，该参数为浮点数。单位为物理像素px。 |
 | dy | double | 是 | 竖直方向的平移距离，该参数为浮点数。单位为物理像素px。 |
-| input | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 需要进行平移的滤波器。默认为null，如果为null，则将无滤波效果的绘制结果进行平移。 |
+| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 需要进行平移的滤波器。默认为null，如果为null，则将无滤波效果的绘制结果进行平移。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回偏移后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回偏移后的图像滤波器。 |
 

@@ -34,7 +34,7 @@ MD_KEY_TRACK_INDEX = 'track_index'
 MD_KEY_TRACK_TYPE = 'track_type'
 ```
 
-表示轨道类型，其对应键值类型为number，参考[MediaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+表示轨道类型，其对应键值类型为number，参考[MediaType](media.MediaType)。
 
 **起始版本：** 8
 
@@ -52,7 +52,7 @@ MD_KEY_TRACK_TYPE = 'track_type'
 MD_KEY_CODEC_MIME = 'codec_mime'
 ```
 
-表示codec\_mime类型，其对应键值类型为string。
+表示codec_mime类型，其对应键值类型为string。
 
 **起始版本：** 8
 
@@ -304,7 +304,7 @@ MD_KEY_ORIGINAL_HEIGHT = 'original_height'
 MD_KEY_MIME_TYPE = 'mime_type'
 ```
 
-表示轨道的mime\_type类型，其对应键值类型为string。对于音视频轨道，该值与MD\_KEY\_CODEC\_MIME相同。
+表示轨道的mime_type类型，其对应键值类型为string。对于音视频轨道，该值与MD_KEY_CODEC_MIME相同。
 
 **起始版本：** 23
 

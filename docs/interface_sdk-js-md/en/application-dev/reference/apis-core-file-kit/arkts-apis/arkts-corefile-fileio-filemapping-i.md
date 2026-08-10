@@ -1,6 +1,6 @@
 # FileMapping
 
-Defines a file mapping object. Before calling the **FileMapping** method,construct a **FileMapping** instance using [mmap()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [mmapSync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-corefile-fileio-mmap-f.md#mmap)或方法[mmapSync()](arkts-corefile-fileio-mmapsync-f.md#mmapsync)构建一个FileMapping实例。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines a file mapping object. Before calling the **FileMapping** method,constru
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## capacity
 
 ```TypeScript
 capacity(): int
 ```
 
-Obtains the capacity of the file mapping area.
+获取文件映射区的容量。
 
 **Since:** 26.0.0
 
@@ -32,15 +38,15 @@ Obtains the capacity of the file mapping area.
 
 | Type | Description |
 | --- | --- |
-| int | Capacity of the file mapping area, in bytes. |
+| int | 文件映射区的容量，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## flip
 
@@ -48,10 +54,11 @@ Obtains the capacity of the file mapping area.
 flip(): void
 ```
 
-Flips the file mapping area to switch from the write-ready state to the read-ready state.After this API is called, **limit** is set to the value of **position**, and **position** is reset to **0**.
+翻转文件映射区，将写入准备状态切换为读取准备状态。调用后，limit被设置为当前position的值，position被重置为0。
 
-It is recommended that this API be called to prepare for subsequent  
-[read()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_operations after the[write()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ operations are complete.
+推荐在一系列  
+[write()](arkts-corefile-fileio-stream-i.md#write)操作完成后，调用此方法准备后续的  
+[read()](arkts-corefile-fileio-stream-i.md#read)操作。
 
 **Since:** 26.0.0
 
@@ -68,8 +75,8 @@ It is recommended that this API be called to prepare for subsequent
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## getLimit
 
@@ -77,7 +84,7 @@ It is recommended that this API be called to prepare for subsequent
 getLimit(): int
 ```
 
-Obtains the upper bound of the readable and writable area of the file mapping area.
+获取文件映射区可读写区域的上界。
 
 **Since:** 26.0.0
 
@@ -93,15 +100,15 @@ Obtains the upper bound of the readable and writable area of the file mapping ar
 
 | Type | Description |
 | --- | --- |
-| int | Upper bound of the current readable and writable area, in bytes. |
+| int | 当前可读写区域上界值，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## getPosition
 
@@ -109,7 +116,7 @@ Obtains the upper bound of the readable and writable area of the file mapping ar
 getPosition(): int
 ```
 
-Gets the current location of the file mapping area.
+获取文件映射区的当前位置。
 
 **Since:** 26.0.0
 
@@ -125,15 +132,15 @@ Gets the current location of the file mapping area.
 
 | Type | Description |
 | --- | --- |
-| int | Current position of the file mapping area, in bytes. |
+| int | 文件映射区的当前位置，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## msync
 
@@ -141,11 +148,11 @@ Gets the current location of the file mapping area.
 msync(): Promise<void>
 ```
 
-Synchronizes data of the entire file mapping area to the disk file synchronously.This API uses a promise to return the result.
-    **NOTE**  
-    
-    If the file is not stored on the local device, calling this API does not ensure that all changes are stored  
-    persistently.
+将整个文件映射区的数据同步到磁盘文件。使用Promise异步回调。
+
+> **说明：**
+> 
+> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **Since:** 26.0.0
 
@@ -161,18 +168,18 @@ Synchronizes data of the entire file mapping area to the disk file synchronously
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
 ## msync
 
@@ -180,11 +187,11 @@ Synchronizes data of the entire file mapping area to the disk file synchronously
 msync(position: int, length: int): Promise<void>
 ```
 
-Synchronizes data in the specified range of the file mapping area to the disk file synchronously. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If the file is not stored on the local device, calling this API does not ensure that all changes are stored  
-    persistently.
+将文件映射区指定范围内的数据同步到磁盘文件。使用Promise异步回调。
+
+> **说明：**
+> 
+> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **Since:** 26.0.0
 
@@ -200,25 +207,25 @@ Synchronizes data in the specified range of the file mapping area to the disk fi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | Start position to synchronize, in bytes. |
-| length | int | Yes | Length of the data to synchronize, in bytes. |
+| position | int | Yes | 期望同步的起始位置，单位为Byte。 |
+| length | int | Yes | 期望同步的数据长度，单位为Byte。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
 ## msyncSync
 
@@ -226,11 +233,11 @@ Synchronizes data in the specified range of the file mapping area to the disk fi
 msyncSync(): void
 ```
 
-Synchronizes data of the entire file mapping area to the disk file synchronously.
-    **NOTE**  
-    
-    If the file is not stored on the local device, calling this API does not ensure that all changes are stored  
-    persistently.
+以同步方法将整个文件映射区的数据同步到磁盘文件。
+
+> **说明：**
+> 
+> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **Since:** 26.0.0
 
@@ -246,12 +253,12 @@ Synchronizes data of the entire file mapping area to the disk file synchronously
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
 ## msyncSync
 
@@ -259,11 +266,11 @@ Synchronizes data of the entire file mapping area to the disk file synchronously
 msyncSync(position: int, length: int): void
 ```
 
-Synchronizes data in the specified range of the file mapping area to the disk file synchronously.
-    **NOTE**  
-    
-    If the file is not stored on the local device, calling this API does not ensure that all changes are stored  
-    persistently.
+以同步方法将文件映射区指定范围内的数据同步到磁盘文件。
+
+> **说明：**
+> 
+> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **Since:** 26.0.0
 
@@ -279,19 +286,19 @@ Synchronizes data in the specified range of the file mapping area to the disk fi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | Start position to synchronize, in bytes. |
-| length | int | Yes | Length of the data to synchronize, in bytes. |
+| position | int | Yes | 期望同步的起始位置，单位为Byte。 |
+| length | int | Yes | 期望同步的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
 ## read
 
@@ -299,7 +306,7 @@ Synchronizes data in the specified range of the file mapping area to the disk fi
 read(buffer: ArrayBuffer, length?: int): int
 ```
 
-Reads data from the current position and moves the position backward by the number of bytes actually read.
+从当前位置读取数据，并将位置后移实际读取的字节数。
 
 **Since:** 26.0.0
 
@@ -315,24 +322,24 @@ Reads data from the current position and moves the position backward by the numb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
-| length | int | No | Length of the data to read, in bytes. The default value is the buffer length. |
+| buffer | ArrayBuffer | Yes | 用于保存读取到的文件数据的缓冲区。 |
+| length | int | No | 期望读取数据的长度，单位为Byte。默认缓冲区长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Length of the data read, in bytes. |
+| int | 返回实际读取的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
 ## read
 
@@ -340,7 +347,7 @@ Reads data from the current position and moves the position backward by the numb
 read(position: int, buffer: ArrayBuffer, length?: int): int
 ```
 
-Reads data from the specified position. The current position does not move.
+从指定位置读取数据，当前位置不会发生移动。
 
 **Since:** 26.0.0
 
@@ -356,25 +363,25 @@ Reads data from the specified position. The current position does not move.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | Start position to read the data, in bytes. |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
-| length | int | No | Length of the data to read, in bytes. The default value is the buffer length. |
+| position | int | Yes | 期望读取的起始位置，单位为Byte。 |
+| buffer | ArrayBuffer | Yes | 用于保存读取到的文件数据的缓冲区。 |
+| length | int | No | 期望读取数据的长度，单位为Byte。默认缓冲区长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Length of the data read, in bytes. |
+| int | 返回实际读取的数据长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
 ## remaining
 
@@ -382,7 +389,7 @@ Reads data from the specified position. The current position does not move.
 remaining(): int
 ```
 
-Obtains the number of remaining bytes between the current position (**position**) and the upper bound (**limit**)of the readable and writable area.
+获取从当前位置（position）到可读写区域的上界（limit）之间的剩余字节数。
 
 **Since:** 26.0.0
 
@@ -398,15 +405,15 @@ Obtains the number of remaining bytes between the current position (**position**
 
 | Type | Description |
 | --- | --- |
-| int | Number of remaining readable or writable bytes. |
+| int | 剩余可读或可写的字节数，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## setLimit
 
@@ -414,7 +421,7 @@ Obtains the number of remaining bytes between the current position (**position**
 setLimit(limit: int): void
 ```
 
-Sets the upper bound of the readable and writable area of the file mapping area.
+设置文件映射区可读写区域的上界。
 
 **Since:** 26.0.0
 
@@ -430,15 +437,15 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| limit | int | Yes | Upper bound of the readable and writable area to set, in bytes. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value is greater than or equal to 0 and less than or equal to the value of [capacity]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If the value of **limit** is smaller than that of **position** in the file mapping area, the value of **position** is automatically adjusted to that of **limit**. |
+| limit | int | Yes | 要设置的可读写区域上界值，单位为Byte。 &lt;br&gt;取值需大于等于0，且小于等于当前[capacity](arkts-corefile-fileio-filemapping-i.md#capacity)。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## setPosition
 
@@ -446,7 +453,7 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 setPosition(position: int): void
 ```
 
-Sets the current location of the file mapping area.
+设置文件映射区的当前位置。
 
 **Since:** 26.0.0
 
@@ -462,15 +469,15 @@ Sets the current location of the file mapping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | Target position to set, in bytes. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value must be a non-negative number and cannot be greater than the upper bound (**limit**) of the readable and writable area. You can obtain the value of **limit** by calling [getLimit()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| position | int | Yes | 期望设置的目标位置，单位为Byte。 &lt;br&gt;必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](arkts-corefile-fileio-filemapping-i.md#getlimit)获得可读写上界的limit。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## unmap
 
@@ -478,9 +485,7 @@ Sets the current location of the file mapping area.
 unmap(): Promise<void>
 ```
 
-Releases the file mapping area. This API uses a promise to return the result. After this API is called,  
-**position**, **limit**, and **capacity** are all reset to **0**, and no operation can be performed on the  
-**FileMapping** object.
+释放文件映射区。使用Promise异步回调。调用后，position、limit和capacity均被重置为0，FileMapping对象不可再进行任何操作。
 
 **Since:** 26.0.0
 
@@ -496,7 +501,7 @@ Releases the file mapping area. This API uses a promise to return the result. Af
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
@@ -511,8 +516,7 @@ Releases the file mapping area. This API uses a promise to return the result. Af
 unmapSync(): void
 ```
 
-Releases the file mapping area synchronously. After this API is called, **position**, **limit**, and **capacity**  
-are all reset to **0**, and no operation can be performed on the **FileMapping** object.
+以同步方法释放文件映射区。调用后，position、limit和capacity均被重置为0，FileMapping对象不可再进行任何操作。
 
 **Since:** 26.0.0
 
@@ -537,7 +541,7 @@ are all reset to **0**, and no operation can be performed on the **FileMapping**
 write(data: ArrayBuffer, length?: int): int
 ```
 
-Writes data from the current position and moves the position backward by the number of bytes actually written.
+从当前位置写入数据，并将位置后移实际写入的字节数。
 
 **Since:** 26.0.0
 
@@ -553,25 +557,25 @@ Writes data from the current position and moves the position backward by the num
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
-| length | int | No | Length of the data to write, in bytes. The default value is the buffer length. |
+| data | ArrayBuffer | Yes | 待写入文件的缓冲区数据。 |
+| length | int | No | 期望写入数据的长度，单位为Byte。默认缓冲区长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | return the length of the data written, in bytes. |
+| int | 返回实际写入的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
 ## write
 
@@ -579,7 +583,7 @@ Writes data from the current position and moves the position backward by the num
 write(position: int, data: ArrayBuffer, length?: int): int
 ```
 
-Writes data to the specified position. The current position does not move.
+从指定位置写入数据，当前位置不会发生移动。
 
 **Since:** 26.0.0
 
@@ -595,24 +599,24 @@ Writes data to the specified position. The current position does not move.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | Start position to write, in bytes. |
-| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
-| length | int | No | Length of the data to write, in bytes. This parameter is optional. The default value is the buffer length. |
+| position | int | Yes | 期望写入的起始位置，单位为Byte。 |
+| data | ArrayBuffer | Yes | 待写入文件的缓冲区数据。 |
+| length | int | No | 期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | return the length of the data written, in bytes. |
+| int | 返回实际写入的长度，单位为Byte。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 

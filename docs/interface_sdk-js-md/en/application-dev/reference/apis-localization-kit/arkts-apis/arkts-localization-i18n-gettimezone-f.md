@@ -1,12 +1,18 @@
 # getTimeZone
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getTimeZone
 
 ```TypeScript
 export function getTimeZone(zoneID?: string): TimeZone
 ```
 
-Obtains the TimeZone object corresponding to the specified time zone ID.
+获取时区ID对应的时区对象。
 
 **Since:** 23
 
@@ -22,11 +28,11 @@ Obtains the TimeZone object corresponding to the specified time zone ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoneID | string | No | Time zone ID. The default value is the system time zone. |
+| zoneID | string | No | 时区ID。默认值：系统时区。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TimeZone object corresponding to the time zone ID. |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区ID对应的时区对象。 |
 

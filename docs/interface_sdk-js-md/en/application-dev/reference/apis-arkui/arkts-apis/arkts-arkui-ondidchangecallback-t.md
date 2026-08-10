@@ -4,7 +4,7 @@
 declare type OnDidChangeCallback = (rangeBefore: TextRange, rangeAfter: TextRange) => void
 ```
 
-Represents the callback invoked after text changes.
+文本变换后回调。
 
 **Since:** 12
 
@@ -22,6 +22,6 @@ Represents the callback invoked after text changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rangeBefore | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Range of the text to be changed.  |
-| rangeAfter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Range of the text added.  |
+| rangeBefore | [TextRange](arkts-arkui-textrange-i.md) | Yes | Range of the text to be changed. |
+| rangeAfter | [TextRange](arkts-arkui-textrange-i.md) | Yes | Range of the text added. |
 

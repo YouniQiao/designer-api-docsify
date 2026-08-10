@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.MDMKit';
+```
+
 ## altSubjectMatch
 
 ```TypeScript
@@ -96,7 +102,7 @@ CA 证书路径。
 certEntry: Uint8Array
 ```
 
-客户端证书内容。当eapMethod为EAP\_TLS时，如果该字段为空，则客户端证书别名不能为空。
+客户端证书内容。当eapMethod为EAP_TLS时，如果该字段为空，则客户端证书别名不能为空。
 
 **类型：** Uint8Array
 
@@ -178,7 +184,7 @@ eapMethod: EapMethod
 
 EAP认证方式。
 
-**类型：** EapMethod
+**类型：** [EapMethod](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-eapmethod-e.md)
 
 **起始版本：** 12
 
@@ -256,9 +262,9 @@ PWD类型，密码认证。无需服务器证书。
 phase2Method: Phase2Method
 ```
 
-第二阶段认证方式。只有eapMethod为EAP\_PEAP或EAP\_TTLS时需要填写。
+第二阶段认证方式。只有eapMethod为EAP_PEAP或EAP_TTLS时需要填写。
 
-**类型：** Phase2Method
+**类型：** [Phase2Method](../../apis-network-kit/arkts-apis/arkts-network-eap-phase2method-e.md)
 
 **起始版本：** 12
 

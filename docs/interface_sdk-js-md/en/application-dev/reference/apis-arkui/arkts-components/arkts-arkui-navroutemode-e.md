@@ -1,7 +1,6 @@
 # NavRouteMode
 
-Defines the routing policy.
-    **NOTE
+路由模式。
 
 **Since:** 10
 
@@ -21,7 +20,7 @@ Defines the routing policy.
 PUSH_WITH_RECREATE
 ```
 
-The new navigation destination page replaces the current one. The current page is destroyed, but the information about this page is retained in the navigation stack.
+跳转到新的NavDestination页面时，替换当前显示的NavDestination页面，页面销毁，但该页面信息仍保留在路由栈中。
 
 **Since:** 10
 
@@ -45,8 +44,6 @@ The new navigation destination page replaces the current one. The current page i
 PUSH
 ```
 
-The new navigation destination page overwrites the current one. The current page is not destroyed, and the information about this page is retained in the navigation stack.
-
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
@@ -68,8 +65,6 @@ The new navigation destination page overwrites the current one. The current page
 ```TypeScript
 REPLACE
 ```
-
-The new navigation destination page replaces the current one. The current page is destroyed, and the information about this page is removed from the navigation stack.
 
 **Since:** 10
 

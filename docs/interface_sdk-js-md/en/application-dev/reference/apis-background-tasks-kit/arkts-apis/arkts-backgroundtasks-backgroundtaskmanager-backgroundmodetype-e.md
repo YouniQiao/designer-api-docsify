@@ -1,6 +1,6 @@
 # BackgroundModeType
 
-Defines the type of a continuous task.
+长时任务类型类别。
 
 **Since:** 16
 
@@ -16,7 +16,7 @@ Defines the type of a continuous task.
 SUB_MODE = 'subMode'
 ```
 
-Subtype.
+子类型。
 
 **Since:** 16
 

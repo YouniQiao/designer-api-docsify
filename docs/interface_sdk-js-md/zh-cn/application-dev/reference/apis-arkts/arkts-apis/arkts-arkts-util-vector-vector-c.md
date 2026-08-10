@@ -1,13 +1,14 @@
 # Vector
 
-Vector是一种线性数据结构，底层基于数组实现，解决了需要动态扩容、高效随机访问的数据存储问题。当Vector的内存用尽时，会自动分配更大的连续内存区，将原先的元素复制到新的内存区，并释放旧的内存区。使用Vector能够高效快速地访问元素，其2倍扩容策略减少了频繁的内存重分配，同时丰富的操作接口提供了更灵活的数据管理能力。Vector和[ArrayList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相似，都是基于数组实现，但Vector提供了更多操作数组的接口。它们都可以动态调整容量，但Vector每次扩容增加1倍，ArrayList只扩容0.5倍。  
+Vector是一种线性数据结构，底层基于数组实现，解决了需要动态扩容、高效随机访问的数据存储问题。当Vector的内存用尽时，会自动分配更大的连续内存区，将原先的元素复制到新的内存区，并释放旧的内存区。使用Vector能够高效快速地访问元素，其2倍扩容策略减少了频繁的内存重分配，同时丰富的操作接口提供了更灵活的数据管理能力。Vector和[ArrayList](arkts-util-arraylist.md)相似，都是基于数组实现，但Vector提供了更多操作数组的接口。它们都可以动态调整容量，但Vector每次扩容增加1倍，ArrayList只扩容0.5倍。  
 **推荐使用场景：** 当需要频繁按索引随机访问元素且数据量较大时，推荐使用Vector来存取数据。文档中使用了泛型，涉及以下泛型标记符：
 
 - T：Type，类
-    **说明**  
-    
-    - 此模块提供的接口从API version 9开始废弃。建议使用  
-    [@ohos.util.ArrayList]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> - 此模块提供的接口从API version 9开始废弃。建议使用
+> [@ohos.util.ArrayList](arkts-util-arraylist.md)。
 
 **起始版本：** 8
 
@@ -20,6 +21,12 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 <!--Device-unnamed-declare class Vector<T>--><!--Device-unnamed-declare class Vector<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { Vector } from 'kits/@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -43,9 +50,9 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个迭代器，用于遍历Vector实例中的元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Vector实例中的元素。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例并添加元素
@@ -99,7 +106,7 @@ add(element: T): boolean
 | --- | --- |
 | boolean | 成功添加元素返回true，否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 定义自定义类PersonInfo
@@ -139,7 +146,7 @@ clear(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -172,9 +179,9 @@ clone(): Vector<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 返回新的Vector实例。 |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回新的Vector实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -203,7 +210,7 @@ Vector的构造函数。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<string | number | Array<number>> = new Vector();
@@ -233,7 +240,7 @@ convertToArray(): Array<T>
 | --- | --- |
 | Array&lt;T&gt; | 返回数组。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -293,7 +300,7 @@ forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, this
 | callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例并添加元素
@@ -338,7 +345,7 @@ get(index: number): T
 | --- | --- |
 | T | 返回指定下标对应的元素。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -373,7 +380,7 @@ getCapacity(): number
 | --- | --- |
 | number | 返回Vector的容量。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -408,7 +415,7 @@ getFirstElement(): T
 | --- | --- |
 | T | 返回Vector实例中的第一个元素。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -450,7 +457,7 @@ getIndexFrom(element: T, index: number): number
 | --- | --- |
 | number | 返回该元素的下标，如果查找失败，则返回 -1。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -491,7 +498,7 @@ getIndexOf(element: T): number
 | --- | --- |
 | number | 返回指定元素第一次出现时的下标值，查找失败返回-1。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -529,7 +536,7 @@ getLastElement(): T
 | --- | --- |
 | T | 返回Vector实例中的最后一个元素。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -571,7 +578,7 @@ getLastIndexFrom(element: T, index: number): number
 | --- | --- |
 | number | 返回该元素的下标，如果查找失败，则返回-1。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -612,7 +619,7 @@ getLastIndexOf(element: T): number
 | --- | --- |
 | number | 返回指定元素最后一次出现时的下标值，查找失败返回-1。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -656,7 +663,7 @@ has(element: T): boolean
 | --- | --- |
 | boolean | 如果包含指定元素返回true，否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例
@@ -693,7 +700,7 @@ increaseCapacityTo(newCapacity: number): void
 | --- | --- | --- | --- |
 | newCapacity | number | 是 | 新容量，需大于或等于当前Vector中的元素个数。传入值小于元素个数时不生效。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例并添加元素
@@ -733,7 +740,7 @@ insert(element: T, index: number): void
 | element | T | 是 | 被插入的元素。 |
 | index | number | 是 | 被插入的位置索引，取值范围为[0, length]。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例
@@ -770,7 +777,7 @@ isEmpty(): boolean
 | --- | --- |
 | boolean | 为空返回true，不为空返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -811,7 +818,7 @@ remove(element: T): boolean
 | --- | --- |
 | boolean | 成功删除元素返回true，否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -852,7 +859,7 @@ removeByIndex(index: number): T
 | --- | --- |
 | T | 返回被删除的元素。Vector为空时返回undefined，下标越界时抛出异常。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -889,7 +896,7 @@ removeByRange(fromIndex: number, toIndex: number): void
 | fromIndex | number | 是 | 起始下标，包含该下标对应的元素。 |
 | toIndex | number | 是 | 终止下标，不包含该下标对应的元素。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例并添加元素
@@ -927,7 +934,7 @@ replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) =>
 | callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例并添加元素
@@ -998,7 +1005,7 @@ setLength(newSize: number): void
 | --- | --- | --- | --- |
 | newSize | number | 是 | 设置的新长度，取值原则：newSize ≥ 0。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1034,7 +1041,7 @@ sort(comparator?: (firstValue: T, secondValue: T) => number): void
 | --- | --- | --- | --- |
 | comparator | (firstValue: T, secondValue: T) =&gt; number | 否 | 排序的回调函数。默认值为当前实例对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例并添加元素
@@ -1080,9 +1087,9 @@ subVector(fromIndex: number, toIndex: number): Vector<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 返回新的Vector实例。 |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回新的Vector实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建Vector实例并添加元素
@@ -1123,7 +1130,7 @@ toString(): string
 | --- | --- |
 | string | 返回对应字符串。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1152,7 +1159,7 @@ trimToCurrentLength(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 let vector : Vector<number> = new Vector();

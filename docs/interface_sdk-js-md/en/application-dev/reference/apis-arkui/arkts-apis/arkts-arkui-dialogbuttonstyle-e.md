@@ -2,9 +2,9 @@
 
 The Button Style of dialog,
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum DialogButtonStyle--><!--Device-unnamed-declare enum DialogButtonStyle-End-->
 
@@ -18,9 +18,9 @@ DEFAULT = 0
 
 Default Style.
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,9 +38,9 @@ HIGHLIGHT = 1
 
 Highlight Style.
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

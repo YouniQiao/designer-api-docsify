@@ -1,12 +1,18 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## on('receiveData')
 
 ```TypeScript
 function on(type: 'receiveData', channelId: number, callback: Callback<DataInfo>): void
 ```
 
-Subscribes to data receiving events. This API returns the result asynchronously through a callback.
+订阅数据接收事件，使用异步回调。
 
 **Since:** 20
 
@@ -24,21 +30,21 @@ Subscribes to data receiving events. This API returns the result asynchronously 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveData' | Yes | Event type. The value **receiveData** indicates the data receiving event. |
-| channelId | number | Yes | Channel ID obtained when the proxy channel is opened. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DataInfo&gt; | Yes | Callback used to return the received data. If the callback function is registered multiple times, only the last registered one takes effect. |
+| type | 'receiveData' | Yes | 设置订阅类型，固定取值为'receiveData'。 |
+| channelId | number | Yes | 打开代理通道时获取的channelId。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataInfo&gt; | Yes | 回调函数，返回接收到的数据。多次注册回调函数，最后一次注册的回调函数生效。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
-| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
-| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
-| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
+| 32390006 | Parameter error. |
+| 201 | Permission denied. |
+| 32390004 | ChannelId is invalid or unavailable. |
+| 32390100 | Internal error. |
+| 32390101 | Call is restricted. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { proxyChannelManager } from '@kit.DistributedServiceKit';
@@ -49,15 +55,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 struct Index {
   build() {
     RelativeContainer() {
-      Button ('Test')
+      Button('Test')
         .onClick(() => {
           const receiveDataCallback = (dataInfo: proxyChannelManager.DataInfo) => {
           };
           try {
-            proxyChannelManager.on('receiveData', 1, receiveDataCallback); // Assume that the channel ID is 1.
+            proxyChannelManager.on('receiveData', channelId, receiveDataCallback); // Obtain channelId from the Promise return value of the openProxyChannel API.
           } catch (err) {
             let error = err as BusinessError;
-            console.error(`register receiveData error: ${error.code} ${error.message}`);
+            console.error(`Failed to register receiveData callback. Code: ${error.code}, message: ${error.message}`);
           }
         })
     }
@@ -74,7 +80,7 @@ struct Index {
 function on(type: 'channelStateChange', channelId: number, callback: Callback<ChannelStateInfo>): void
 ```
 
-Subscribes to channel state change events. This API returns the result asynchronously through a callback.
+订阅通道状态事件，使用callback进行异步回调。
 
 **Since:** 20
 
@@ -92,21 +98,21 @@ Subscribes to channel state change events. This API returns the result asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'channelStateChange' | Yes | Event type. The value **channelStateChange** indicates the channel state change event. |
-| channelId | number | Yes | Channel ID obtained when the proxy channel is opened. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChannelStateInfo&gt; | Yes | Callback used to return the received channel state. If the callback function is registered multiple times, only the last registered one takes effect. |
+| type | 'channelStateChange' | Yes | 设置订阅类型，固定取值为'channelStateChange'。 |
+| channelId | number | Yes | 打开代理通道时获取的channelId。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChannelStateInfo&gt; | Yes | 回调函数，返回接收到的通道状态。多次注册callback， 最后一次注册的callback生效 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
-| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
-| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
-| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
+| 32390006 | Parameter error. |
+| 201 | Permission denied. |
+| 32390004 | ChannelId is invalid or unavailable. |
+| 32390100 | Internal error. |
+| 32390101 | Call is restricted. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { proxyChannelManager } from '@kit.DistributedServiceKit';
@@ -117,15 +123,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 struct Index {
   build() {
     RelativeContainer() {
-      Button ('Test')
+      Button('Test')
         .onClick(() => {
-          const receiveStatusCallback = (channelStateInfo: proxyChannelManager.ChannelStateInfo) => {
+          const channelStateChangeCallback = (channelStateInfo: proxyChannelManager.ChannelStateInfo) => {
           };
           try {
-            proxyChannelManager.on ('channelStateChange', 1, receiveStatusCallback); // Assume that the channel ID is 1.
+            proxyChannelManager.on('channelStateChange', channelId, channelStateChangeCallback); // channelId is obtained through the Promise return value of the openProxyChannel API.
           } catch (err) {
             let error = err as BusinessError;
-            console.error(`getErr: ${error.code} ${error.message}`);
+            console.error(`Failed to register channelStateChange callback. Code: ${error.code}, message: ${error.message}`);
           }
         })
     }

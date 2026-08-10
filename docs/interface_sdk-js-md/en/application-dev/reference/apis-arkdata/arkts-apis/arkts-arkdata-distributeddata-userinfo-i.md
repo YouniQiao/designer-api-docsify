@@ -1,6 +1,6 @@
 # UserInfo
 
-Defines user information.
+用户信息。
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ Defines user information.
 userId?: string
 ```
 
-User ID. The default value is **0**.
+指示要设置的用户ID，默认为'0'。
 
 **Type:** string
 
@@ -38,9 +38,9 @@ User ID. The default value is **0**.
 userType?: UserType
 ```
 
-User type. The default value is **0**.
+指示要设置的用户类型，默认为0。
 
-**Type:** UserType
+**Type:** [UserType](arkts-arkdata-distributeddata-usertype-e.md)
 
 **Since:** 7
 

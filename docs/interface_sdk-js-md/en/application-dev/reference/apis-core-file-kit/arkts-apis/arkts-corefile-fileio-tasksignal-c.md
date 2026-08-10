@@ -1,6 +1,6 @@
 # TaskSignal
 
-Provides APIs for interrupting a copy task.
+拷贝中断信号。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides APIs for interrupting a copy task.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## cancel
 
 ```TypeScript
 cancel(): void
 ```
 
-Cancels a copy task.
+取消拷贝任务。
 
 **Since:** 23
 
@@ -30,7 +36,7 @@ Cancels a copy task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900010 | Try again |
 | 13900012 | Permission denied by the file system |
+| 13900010 | Try again |
 | 13900043 | No task can be canceled. |
 

@@ -1,6 +1,6 @@
 # DataType (System API)
 
-Enumerates the data types.
+数据类型枚举。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates the data types.
 TYPE_NULL = 0
 ```
 
-Null.
+表示值类型为空。
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ Null.
 TYPE_LONG = 1
 ```
 
-Long integer.
+表示值类型为长整数值。
 
 **Since:** 9
 
@@ -58,7 +58,7 @@ Long integer.
 TYPE_DOUBLE = 2
 ```
 
-Double-precision floating-point number.
+表示值类型为双浮点数。
 
 **Since:** 9
 
@@ -78,7 +78,7 @@ Double-precision floating-point number.
 TYPE_STRING = 3
 ```
 
-String.
+表示值类型为字符串。
 
 **Since:** 9
 
@@ -98,7 +98,7 @@ String.
 TYPE_BLOB = 4
 ```
 
-Byte array.
+表示值类型为字节数组。
 
 **Since:** 9
 

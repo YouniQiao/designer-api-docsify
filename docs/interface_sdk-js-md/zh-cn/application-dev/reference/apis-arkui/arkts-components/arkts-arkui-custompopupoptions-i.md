@@ -53,7 +53,7 @@ onStateChange?: (event: {
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | {     /**      * is Visible.      *      * @type { boolean }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @stagemodelonly      * @crossplatform      * @since 10      */     /**      * is Visible.      *      * @type { boolean }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @stagemodelonly      * @crossplatform      * @atomicservice      * @since 11      */     isVisible: boolean   } | 是 |  |
+| event | {     /**      * is Visible.      *      * @type { boolean }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @stagemodelonly      * @crossplatform      * @since 10      */     /**      * is Visible.      *      * @type { boolean }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @stagemodelonly      * @crossplatform      * @atomicservice      * @since 11      */     isVisible: boolean   } | 是 |  |
 
 ## arrowHeight
 
@@ -71,7 +71,7 @@ arrowHeight?: Dimension
 
 不支持设置百分比。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 8.0_vp. [since 11 - 11] @default 8.0_vp. <p><strong>NOTE</strong>: <br>This parameter cannot be set in percentage. </p>
 
@@ -107,7 +107,7 @@ Popup箭头在气泡处的偏移。
 
 1. 没设置arrowOffset的情况下，气泡箭头与四个角的距离不能小于圆角半径。2. 只有arrowPointPosition不设置或者设置为null、undefined时，arrowOffset属性才生效。3. 不支持设置百分比。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 9
 
@@ -129,7 +129,7 @@ arrowPointPosition?: ArrowPointPosition
 
 默认值：ArrowPointPosition.CENTER
 
-**类型：** ArrowPointPosition
+**类型：** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
 
 **起始版本：** 11
 
@@ -159,7 +159,7 @@ arrowWidth?: Dimension
 
 不支持设置百分比。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 16.0_vp. [since 11 - 11] @default 16.0_vp. <p><strong>NOTE</strong>: <br>This parameter cannot be set in percentage. </p> [since 12]
 
@@ -213,9 +213,9 @@ avoidTarget?: AvoidanceMode
 
 设置Popup避让时是否覆盖指向组件。
 
-默认值：AvoidanceMode.COVER\_TARGET
+默认值：AvoidanceMode.COVER_TARGET
 
-**类型：** AvoidanceMode
+**类型：** [AvoidanceMode](arkts-arkui-avoidancemode-e.md)
 
 **默认值：** AvoidanceMode.COVER_TARGET
 
@@ -239,9 +239,9 @@ backgroundBlurStyle?: BlurStyle
 
 设置气泡模糊背景参数。
 
-默认值：BlurStyle.COMPONENT\_ULTRA\_THICK
+默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -265,7 +265,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 定义Popup的背景模糊样式选项。
 
-**类型：** BackgroundBlurStyleOptions
+**类型：** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -287,7 +287,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 定义Popup的背景效果选项。
 
-**类型：** BackgroundEffectOptions
+**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -313,7 +313,7 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 1. borderLinearGradient不设置或者设置为null、undefined时，内描边没有线性渐变效果。2. borderLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
 
-**类型：** PopupBorderLinearGradient
+**类型：** [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
 
 **起始版本：** 20
 
@@ -335,7 +335,7 @@ borderWidth?: Dimension
 
 设置Popup组件内描边的宽度。
 
-默认值：1
+默认值：1 
 
 单位：vp
 
@@ -343,7 +343,7 @@ borderWidth?: Dimension
 
 1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件内描边的情况下，该接口需要和borderLinearGradient配合使用。3. 当设置双描边时，建议内描边宽度不超过10vp。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 20
 
@@ -367,9 +367,9 @@ builder: CustomBuilder
 
 **说明：**
 
-1. Popup为通用属性，自定义Popup中不支持再次弹出Popup。对builder下的第一层容器组件不支持使用position属性，如果使用将导致气泡不显示。2. builder中若使用自定义组件，自定义组件的aboutToAppear和aboutToDisappear生命周期与Popup气泡的显隐无关，不能使用其生命周期判断Popup气泡的显隐。3. 该构造器的builder仅支持定义在UI组件中，例如可以定义在Builder函数、方法或者\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_方法里。
+1. Popup为通用属性，自定义Popup中不支持再次弹出Popup。对builder下的第一层容器组件不支持使用position属性，如果使用将导致气泡不显示。2. builder中若使用自定义组件，自定义组件的aboutToAppear和aboutToDisappear生命周期与Popup气泡的显隐无关，不能使用其生命周期判断Popup气泡的显隐。3. 该构造器的builder仅支持定义在UI组件中，例如可以定义在Builder函数、方法或者[build](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#build)方法里。
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 8
 
@@ -389,13 +389,13 @@ colorMode?: AnchoredColorMode
 
 设置气泡深浅色模式，默认跟随绑定组件深浅色模式。
 
-默认值：AnchoredColorMode.FOLLOW\_TARGET
+默认值：AnchoredColorMode.FOLLOW_TARGET
 
 **说明：**
 
-1. 仅当绑定组件使用了\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW\_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
+1. 仅当绑定组件使用了[WithTheme](../../../reference/apis-arkui/arkui-ts/ts-container-with-theme.md#接口)标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
 
-**类型：** AnchoredColorMode
+**类型：** [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md)
 
 **默认值：** AnchoredColorMode.FOLLOW_TARGET
 
@@ -535,7 +535,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 默认值：KeyboardAvoidMode.NONE
 
-**类型：** KeyboardAvoidMode
+**类型：** [KeyboardAvoidMode](../arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
 
 **默认值：** KeyboardAvoidMode.NONE
 
@@ -561,7 +561,7 @@ levelMode?: LevelMode
 
 默认值：LevelMode.OVERLAY
 
-**类型：** LevelMode
+**类型：** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **起始版本：** 26.0.0
 
@@ -607,9 +607,9 @@ maskColor?: Color | string | Resource | number
 
 **说明：**
 
-从 API version 10 开始废弃，建议使用\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_替代。
+从 API version 10 开始废弃，建议使用`mask`替代。
 
-**类型：** Color \| string \| Resource \| number
+**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource \| number
 
 **起始版本：** 8
 
@@ -617,7 +617,7 @@ maskColor?: Color | string | Resource | number
 
 **废弃版本：** 10
 
-**替代接口：** [CustomPopupOptions#mask](../arkts-apis/arkts-arkui-component/common-custompopupoptions-i.md#mask)
+**替代接口：** [CustomPopupOptions#mask](arkts-arkui-custompopupoptions-i.md#mask)
 
 <!--Device-CustomPopupOptions-maskColor?: Color | string | Resource | number--><!--Device-CustomPopupOptions-maskColor?: Color | string | Resource | number-End-->
 
@@ -639,7 +639,7 @@ offset?: Position
 
 不支持设置百分比。
 
-**类型：** Position
+**类型：** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
 **默认值：** { x: 0, y: 0 } [since 11]
 
@@ -663,7 +663,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 设置Popup交互式关闭拦截开关及拦截回调函数，默认值为true，Popup响应点击、侧滑（左滑/右滑）、三键back。
 
-1. 当为boolean类型时，如果设置为false，则不响应点击、侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC退出事件，仅当设置“气泡显示状态”参数show值为false时才退出；如果设置为true，则正常响应退出事件；2. 如果设置为函数类型，则拦截退出事件且执行回调函数。侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC在回调函数中返回的reason为PRESS\_BACK，点击为TOUCH\_OUTSIDE。
+1. 当为boolean类型时，如果设置为false，则不响应点击、侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC退出事件，仅当设置“气泡显示状态”参数show值为false时才退出；如果设置为true，则正常响应退出事件；2. 如果设置为函数类型，则拦截退出事件且执行回调函数。侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC在回调函数中返回的reason为PRESS_BACK，点击为TOUCH_OUTSIDE。
 
 **说明：**
 
@@ -697,7 +697,7 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 1. outlineLinearGradient不设置或者设置为null、undefined时，外描边没有线性渐变效果。2. outlineLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
 
-**类型：** PopupBorderLinearGradient
+**类型：** [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
 
 **起始版本：** 20
 
@@ -719,7 +719,7 @@ outlineWidth?: Dimension
 
 设置Popup组件外描边的宽度。
 
-默认值：1
+默认值：1 
 
 单位：vp
 
@@ -727,7 +727,7 @@ outlineWidth?: Dimension
 
 1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件外描边的情况下，该接口需要和outlineLinearGradient配合使用。3. 当设置双描边时，建议外描边宽度不超过10vp。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 20
 
@@ -751,7 +751,7 @@ placement?: Placement
 
 默认值：Placement.Bottom
 
-**类型：** Placement
+**类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **默认值：** Placement.Bottom
 
@@ -775,9 +775,9 @@ popupColor?: Color | string | Resource | number
 
 API version 10，默认值：'#4d4d4d'
 
-API version 11及以后，默认值：透明色[TRANSPARENT]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_加模糊背景填充效果[COMPONENT\_ULTRA\_THICK]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+API version 11及以后，默认值：透明色[TRANSPARENT](../arkts-apis/arkts-arkui-enums-color-e.md/arkts-arkui-enums-color-e.md)加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
-**类型：** Color \| string \| Resource \| number
+**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource \| number
 
 **默认值：** '#4d4d4d' [since 10 - 10] @default TRANSPARENT plus COMPONENT_ULTRA_THICK [since 11]
 
@@ -803,7 +803,7 @@ radius?: Dimension
 
 单位：vp
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 20.0_vp.
 
@@ -827,9 +827,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 设置气泡阴影。
 
-默认值：ShadowStyle.OUTER\_DEFAULT\_MD
+默认值：ShadowStyle.OUTER_DEFAULT_MD
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
 **默认值：** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -879,15 +879,15 @@ systemMaterial?: SystemUiMaterial
 
 设置组件的系统材质。
 
-默认值：undefined，会清除由该接口设置的材质效果。
+默认值：undefined，会清除由该接口设置的材质效果。 
 
 **说明：**
 
-不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、边框颜色  
-[borderColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、边框宽度[borderWidth]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、阴影  
-[shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_，不建议与上述接口一起使用。
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 
@@ -913,7 +913,7 @@ targetSpace?: Length
 
 单位：vp
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
 
@@ -939,7 +939,7 @@ transition?: TransitionEffect
 
 1. 如果不设置，则使用默认的显示/退出动效。2. 显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。3. 退出动效中按back键，不会打断退出动效，退出动效继续执行，back键不被响应。
 
-**类型：** TransitionEffect
+**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 12
 
@@ -963,7 +963,7 @@ width?: Dimension
 
 单位：vp
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 

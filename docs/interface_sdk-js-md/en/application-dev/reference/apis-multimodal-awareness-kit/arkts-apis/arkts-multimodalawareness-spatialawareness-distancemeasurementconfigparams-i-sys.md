@@ -12,6 +12,12 @@ Configuration parameters for the distance measurement interface
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## deviceList
 
 ```TypeScript
@@ -42,7 +48,7 @@ reportFrequency: int
 
 distance measurement result reporting frequency
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -64,7 +70,7 @@ reportMode: ReportingMode
 
 distance measurement result reporting mode
 
-**Type:** ReportingMode
+**Type:** [ReportingMode](arkts-multimodalawareness-spatialawareness-reportingmode-e-sys.md)
 
 **Since:** 23
 
@@ -86,7 +92,7 @@ techType: TechnologyType
 
 distance measurement technology type
 
-**Type:** TechnologyType
+**Type:** [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md)
 
 **Since:** 23
 

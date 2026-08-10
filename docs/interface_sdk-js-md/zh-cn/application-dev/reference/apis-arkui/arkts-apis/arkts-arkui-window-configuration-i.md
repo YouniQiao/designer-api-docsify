@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## ctx
 
 ```TypeScript
 ctx?: BaseContext
 ```
 
-当前应用上下文信息。不设置，则默认为空。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_FA模型下不需要使用该参数，即可创建子窗口，使用该参数时会报错。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Stage模型必须使用该参数，用于创建全局悬浮窗、模态窗或系统窗口。 \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_
+当前应用上下文信息。不设置，则默认为空。&lt;br&gt;FA模型下不需要使用该参数，即可创建子窗口，使用该参数时会报错。&lt;br&gt;Stage模型必须使用该参数，用于创建全局悬浮窗、模态窗或系统窗口。 &lt;br&gt;
 
-**类型：** BaseContext
+**类型：** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ ctx?: BaseContext
 decorEnabled?: boolean
 ```
 
-是否显示窗口装饰，仅在windowType为TYPE\_DIALOG时生效。true表示显示，false表示不显示。此参数默认值为false。
+是否显示窗口装饰，仅在windowType为TYPE_DIALOG时生效。true表示显示，false表示不显示。此参数默认值为false。
 
 **类型：** boolean
 
@@ -56,9 +62,9 @@ decorEnabled?: boolean
 displayId?: long
 ```
 
-当前屏幕ID。不设置，则默认为父窗口屏幕ID。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_该参数应为非负整数，且对应屏幕ID存在。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_扩展屏、异源虚拟屏场景下，全局悬浮窗可通过设置屏幕ID显示在指定屏幕上。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_模态窗、系统窗设置屏幕ID无效，默认为父窗口屏幕ID。
+当前屏幕ID。不设置，则默认为父窗口屏幕ID。&lt;br&gt;该参数应为非负整数，且对应屏幕ID存在。&lt;br&gt;扩展屏、异源虚拟屏场景下，全局悬浮窗可通过设置屏幕ID显示在指定屏幕上。&lt;br&gt;模态窗、系统窗设置屏幕ID无效，默认为父窗口屏幕ID。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -96,9 +102,9 @@ name: string
 parentId?: int
 ```
 
-父窗口ID。不设置，则默认为-1，默认父窗为当前应用上下文对应主窗。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_FA模型下，该参数应为非负整数，且对应父窗口ID存在。
+父窗口ID。不设置，则默认为-1，默认父窗为当前应用上下文对应主窗。&lt;br&gt;FA模型下，该参数应为非负整数，且对应父窗口ID存在。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -116,7 +122,7 @@ parentId?: int
 title?: string
 ```
 
-\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_属性设置为true时，窗口的标题内容。标题显示区域最右端不超过系统三键区域最左端，超过部分以省略号表示。不设置，则默认为空字符串。
+`decorEnabled`属性设置为true时，窗口的标题内容。标题显示区域最右端不超过系统三键区域最左端，超过部分以省略号表示。不设置，则默认为空字符串。
 
 **类型：** string
 
@@ -138,7 +144,7 @@ windowType: WindowType
 
 窗口类型。
 
-**类型：** WindowType
+**类型：** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
 
 **起始版本：** 9
 

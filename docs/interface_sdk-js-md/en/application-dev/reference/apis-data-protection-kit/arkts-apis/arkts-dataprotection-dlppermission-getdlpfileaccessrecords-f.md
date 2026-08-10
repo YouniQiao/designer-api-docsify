@@ -1,14 +1,20 @@
 # getDLPFileAccessRecords
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## getDLPFileAccessRecords
 
 ```TypeScript
 function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 ```
 
-Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result.
+查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。仅支持在非DLP沙箱应用中调用。使用Promise异步回调。
 
-This API is used to obtain the list of DLP files that are accessed recently, which can be used to track and manage file usage.
+该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **Since:** 10
 
@@ -22,31 +28,26 @@ This API is used to obtain the list of DLP files that are accessed recently, whi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AccessedDLPFileInfo&gt;&gt; | Promise used to return the list of recently accessed DLP files obtained. |
+| Promise&lt;Array&lt;AccessedDLPFileInfo&gt;&gt; | Promise对象。返回最近访问的DLP文件列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 19100001 | Invalid parameter value. |
+| 19100007 | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-async function ExampleFunction() {
-  try {
-    let res:Array<dlpPermission.AccessedDLPFileInfo> = await dlpPermission.getDLPFileAccessRecords(); // Obtain the list of recently accessed DLP files.
-    console.info('res', JSON.stringify(res))
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  }
-}
+dlpPermission.getDLPFileAccessRecords().then((accessRecords) => { // Obtain the list of recently accessed DLP files.
+  console.info('accessRecords', JSON.stringify(accessRecords));
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
 ```
 
 
@@ -56,9 +57,9 @@ async function ExampleFunction() {
 function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void
 ```
 
-Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API uses an asynchronous callback to return the result.
+查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。使用callback异步回调。
 
-This API is used to obtain the list of DLP files that are accessed recently, which can be used to track and manage file usage.
+该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **Since:** 10
 
@@ -72,34 +73,28 @@ This API is used to obtain the list of DLP files that are accessed recently, whi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;AccessedDLPFileInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessedDLPFileInfo&gt;&gt; | Yes | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100007 | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  dlpPermission.getDLPFileAccessRecords((err, res) => {
-    if (err != undefined) {
-      console.error('getDLPFileAccessRecords error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the list of recently accessed DLP files.
-} catch (err) {
-  console.error('getDLPFileAccessRecords error,', (err as BusinessError).code, (err as BusinessError).message);
-}
+dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
+  if (err) {
+    console.error(`Failed to get DLP file access records. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('accessRecords', JSON.stringify(accessRecords));
+  }
+}); // Obtain the list of recently accessed DLP files.
 ```
 

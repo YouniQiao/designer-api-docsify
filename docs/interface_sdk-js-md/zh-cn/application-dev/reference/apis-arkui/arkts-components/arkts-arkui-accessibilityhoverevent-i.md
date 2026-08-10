@@ -2,7 +2,7 @@
 
 The accessibility hover action triggers this method invocation.
 
-**继承/实现关系：** AccessibilityHoverEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**继承/实现关系：** AccessibilityHoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 12
 
@@ -84,7 +84,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标位置在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
 
 单位：vp
 
@@ -112,7 +112,7 @@ type: AccessibilityHoverType
 
 Type of the accessibility hover event.
 
-**类型：** AccessibilityHoverType
+**类型：** [AccessibilityHoverType](../arkts-apis/arkts-arkui-accessibilityhovertype-e.md)
 
 **起始版本：** 12
 

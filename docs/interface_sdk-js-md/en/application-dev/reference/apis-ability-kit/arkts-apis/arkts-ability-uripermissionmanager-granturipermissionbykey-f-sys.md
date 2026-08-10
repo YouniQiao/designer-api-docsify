@@ -1,13 +1,19 @@
 # grantUriPermissionByKey (System API)
 
+## Modules to Import
+
+```TypeScript
+import { uriPermissionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## grantUriPermissionByKey
 
 ```TypeScript
 function grantUriPermissionByKey(key: string, flag: wantConstant.Flags, targetTokenId: int): Promise<void>
 ```
 
-Grants the URI access permission of the current application to the target application through the unique key of the Unified Data Management Framework (UDMF) data. The permission will be revoked after the target application exits.This API uses a promise to return the result.This API can be properly called only on phones, 2-in-1 devices, and tablets. If it is called on other device types,error code 801 is returned.  
-**System API**: This is a system API.
+通过UDMF数据唯一标识key，将当前应用的文件URI访问权限授权给目标应用，权限将在目标应用退出后回收。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。  
+**系统接口**：此接口为系统接口。
 
 **Since:** 20
 
@@ -23,30 +29,30 @@ Grants the URI access permission of the current application to the target applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Unique key of the target UDMF data. The key must be created by the caller using [unifiedDataChannel.insertData]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ , and the written data must be the URIs of the authorized files.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Currently, only the keys of the [UDMF data channels]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the **SYSTEM\_\_\_ESCAPED\_UNDERSCORE\_\_\_SHARE**, **PICKER**, and **MENU** types are supported. For details about how to create and use a key, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. The options are as follows:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **FLAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_AUTH\_\_\_ESCAPED\_UNDERSCORE\_\_\_READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_URI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSION**: read permission.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **FLAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_AUTH\_\_\_ESCAPED\_UNDERSCORE\_\_\_WRITE\_\_\_ESCAPED\_UNDERSCORE\_\_\_URI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PERMISSION**: write permission. |
-| targetTokenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Identity of the target application, which can be obtained through [bundleManager.getApplicationInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| key | string | Yes | 目标UDMF数据唯一标识。key必须由调用方通过 [unifiedDataChannel.insertData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-insertdata-f.md/arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata) 创建，且写入的数据均为有权限授权的文件URI。&lt;br&gt;当前仅支持SYSTEM_SHARE、PICKER和MENU类型的 [UDMF数据通路](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-intention-e.md/arkts-arkdata-unifieddatachannel-intention-e.md)的key。key的创建与使用方法详见 [标准化数据通路实现数据共享](../../../database/unified-data-channels.md)。 |
+| flag | wantConstant.Flags | Yes | URI的读权限或写权限。支持的取值如下：&lt;br&gt;- FLAG_AUTH_READ_URI_PERMISSION：读权限。&lt;br&gt;- FLAG_AUTH_WRITE_URI_PERMISSION：写权限。 |
+| targetTokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标应用的身份标识，可以通过 [bundleManager.getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getapplicationinfo) 获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
-| [16000091](../errorcode-ability.md#16000091-failed-to-obtain-a-file-uri-by-key) | Failed to get the file URI from the key. |
-| [16000092](../errorcode-ability.md#16000092-no-permission-to-authorize-uri) | No permission to authorize the URI. |
-| [16000094](../errorcode-ability.md#16000094-invalid-target-token-id) | The target token ID is invalid. |
+| 801 | Capability not supported. |
+| 16000050 | Internal error. |
+| 16000060 | A sandbox application cannot grant URI permission. |
+| 16000092 | No permission to authorize the URI. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000094 | The target token ID is invalid. |
+| 16000058 | Invalid URI flag. |
+| 16000091 | Failed to get the file URI from the key. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The bundle name of the API caller is com.example.test.

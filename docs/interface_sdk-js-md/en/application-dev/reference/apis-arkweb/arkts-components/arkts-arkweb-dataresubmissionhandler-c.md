@@ -1,6 +1,6 @@
 # DataResubmissionHandler
 
-Defines the onDataResubmission callback, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the onDataResubmission callback, related to {@link onDataResubmission} method.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Defines the onDataResubmission callback, related to \_\_\_JSDOC\_LINK\_DESC\_USD
 cancel(): void
 ```
 
-Do not resend related form data.
+取消重新发送表单数据。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Constructor.
 resend(): void
 ```
 
-Resend related form data.
+重新发送表单数据。
 
 **Since:** 9
 

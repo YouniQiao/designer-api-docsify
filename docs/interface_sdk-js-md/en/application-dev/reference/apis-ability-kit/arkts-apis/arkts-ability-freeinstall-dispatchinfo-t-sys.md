@@ -4,7 +4,7 @@
 export type DispatchInfo = _DispatchInfo
 ```
 
-Defines the installation-free structure and API version information.
+免安装结构体和接口版本信息类。
 
 **Since:** 9
 

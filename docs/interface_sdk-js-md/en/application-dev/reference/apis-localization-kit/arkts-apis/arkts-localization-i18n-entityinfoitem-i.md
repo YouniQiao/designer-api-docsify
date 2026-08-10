@@ -1,6 +1,6 @@
 # EntityInfoItem
 
-Defines a list of entities.
+实体信息属性。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines a list of entities.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## begin
 
 ```TypeScript
 begin: int
 ```
 
-Start position of the entity in the input string.The value should be an integer.
+实体在输入字符串中的起始位置。
 
 **Type:** int
 
@@ -36,7 +42,7 @@ Start position of the entity in the input string.The value should be an integer.
 end: int
 ```
 
-End position of the entity the input string.The value should be an integer.
+实体在输入字符串中的终止位置。
 
 **Type:** int
 
@@ -56,7 +62,7 @@ End position of the entity the input string.The value should be an integer.
 type: string
 ```
 
-Entity type. The value can be "phone\_number" or "date". "phone\_number" indicates that the entity is a phone number, and "date" indicates that the entity is a date.
+实体的类型，当前支持phone_number和date类型。phone_number表示实体类型是电话号码，date表示实体类型是时间日期。
 
 **Type:** string
 

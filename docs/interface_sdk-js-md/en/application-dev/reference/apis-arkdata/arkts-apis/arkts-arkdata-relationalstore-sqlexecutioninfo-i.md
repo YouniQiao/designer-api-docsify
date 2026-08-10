@@ -1,6 +1,6 @@
 # SqlExecutionInfo
 
-Represents statistics about SQL statements executed by the database.
+描述数据库执行的SQL语句的统计信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents statistics about SQL statements executed by the database.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## executeTime
 
 ```TypeScript
 executeTime: long
 ```
 
-Time used to execute the SQL statements, in μs.
+表示执行SQL语句的时间，单位为μs。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -34,9 +40,9 @@ Time used to execute the SQL statements, in μs.
 prepareTime: long
 ```
 
-Time used to get the SQL statements ready and bind parameters, in μs.
+表示准备SQL和绑定参数的时间，单位为μs。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -52,7 +58,8 @@ Time used to get the SQL statements ready and bind parameters, in μs.
 sql: Array<string>
 ```
 
-SQL statements executed. If the value of [batchInsert]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is too large, multiple SQL statements may be executed.
+表示执行的SQL语句的数组。当  
+[batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)的参数太大时，可能有多个SQL。
 
 **Type:** Array&lt;string&gt;
 
@@ -70,9 +77,9 @@ SQL statements executed. If the value of [batchInsert]\_\_\_JSDOC\_LINK\_DESC\_U
 totalTime: long
 ```
 
-Total time used to execute the SQL statements, in μs.
+表示执行SQL语句的总时间，单位为μs。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -88,9 +95,9 @@ Total time used to execute the SQL statements, in μs.
 waitTime: long
 ```
 
-Time used to obtain the handle, in μs.
+表示获取句柄的时间，单位为μs。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 

@@ -18,8 +18,8 @@ The function of the rect of video tag has changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | double | 是 | The x position of video tag in web component.  |
-| y | double | 是 | The y position of video tag in web component.  |
-| width | double | 是 | The width of video tag.  |
-| height | double | 是 | The height of video tag.  |
+| x | double | 是 | The x position of video tag in web component. |
+| y | double | 是 | The y position of video tag in web component. |
+| width | double | 是 | The width of video tag. |
+| height | double | 是 | The height of video tag. |
 

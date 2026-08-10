@@ -14,6 +14,12 @@ Control center session object.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## enableAutoFraming
 
 ```TypeScript
@@ -42,9 +48,9 @@ Enable auto-framing effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## getAutoFramingStatus
 
@@ -74,7 +80,7 @@ Gets the status of auto-framing effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## getControlCenterHeight
 
@@ -106,13 +112,13 @@ Gets the control center height.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | the control center height, in units of vp. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the control center height, in units of vp. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## getCurrentDevice
 
@@ -138,14 +144,14 @@ Gets the current camera device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the current camera device. |
+| [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md) | the current camera device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
+| 7400104 | Session not running. |
+| 202 | Not System Application. |
 
 ## isAutoFramingSupported
 
@@ -175,7 +181,7 @@ Checks whether auto-framing is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## release
 
@@ -205,7 +211,7 @@ Release control center session object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
 ## usedAsPosition
 
@@ -231,13 +237,13 @@ Sets the camera to be used as a camera at the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The positon used for the camera. |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | Yes | The positon used for the camera. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 

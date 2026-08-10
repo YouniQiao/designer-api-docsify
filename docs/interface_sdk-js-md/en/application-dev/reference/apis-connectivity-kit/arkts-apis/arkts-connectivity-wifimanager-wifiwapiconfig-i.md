@@ -10,6 +10,12 @@ Wi-Fi WAPI config.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## wapiAsCert
 
 ```TypeScript
@@ -36,7 +42,7 @@ wapiPskType: WapiPskType
 
 WAPI pre-shared key type.
 
-**Type:** WapiPskType
+**Type:** [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md)
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # ActionType (System API)
 
-Enumerates the input event type.
+用户场景（通常为具有动效的场景）触发模式枚举。
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Enumerates the input event type.
 LAST_DOWN = 0
 ```
 
-The user presses the finger on the screen.
+用户按压事件触发。
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ The user presses the finger on the screen.
 LAST_UP = 1
 ```
 
-The user lifts up the finger from the screen.
+用户离手事件触发。
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ The user lifts up the finger from the screen.
 FIRST_MOVE = 2
 ```
 
-The user first moves the finger after pressing down the screen.
+用户首次滑动事件触发。
 
 **Since:** 23
 

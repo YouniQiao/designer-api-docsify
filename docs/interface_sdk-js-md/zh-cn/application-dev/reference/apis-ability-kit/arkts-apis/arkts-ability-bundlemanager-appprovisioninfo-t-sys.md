@@ -4,7 +4,7 @@
 export type AppProvisionInfo = _AppProvisionInfo.AppProvisionInfo
 ```
 
-应用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的信息。
+应用[HarmonyAppProvision配置文件](../../../security/app-provision-structure.md)中的信息。
 
 **起始版本：** 10
 

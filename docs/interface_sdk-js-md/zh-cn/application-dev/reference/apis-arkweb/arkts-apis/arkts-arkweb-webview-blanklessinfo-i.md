@@ -10,6 +10,12 @@ Defines the blankless information.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## errCode
 
 ```TypeScript
@@ -18,7 +24,7 @@ errCode: WebBlanklessErrorCode
 
 Defines the error codes of blankless.
 
-**类型：** WebBlanklessErrorCode
+**类型：** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 
 **起始版本：** 23
 

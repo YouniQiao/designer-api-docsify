@@ -1,11 +1,10 @@
 # TabBarOptions
 
-Defines the options for configuring images and text content on the tabs.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
+设置页签内的图片和文字内容。
+
+> **说明：**
+
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,7 +20,7 @@ Defines the options for configuring images and text content on the tabs.
 icon?: string | Resource
 ```
 
-Image for the tab. If this parameter is not set, no image is displayed.
+TabBar icon.
 
 **Type:** string \| Resource
 
@@ -41,7 +40,7 @@ Image for the tab. If this parameter is not set, no image is displayed.
 text?: string | Resource
 ```
 
-Text for the tab. If this parameter is not set, no text is displayed.
+TabBar text.
 
 **Type:** string \| Resource
 

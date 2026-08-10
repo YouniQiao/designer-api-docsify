@@ -1,6 +1,6 @@
 # NotifyDescription
 
-Represents the update notification defined by an enterprise.
+企业自定义更新通知说明。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the update notification defined by an enterprise.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## installTips
 
 ```TypeScript
 installTips?: string
 ```
 
-Update tips provided by the enterprise.
+企业自定义更新提示。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Update tips provided by the enterprise.
 installTipsDetail?: string
 ```
 
-Details about the update tips customized by the enterprise.
+企业自定义更新提示详情。
 
 **Type:** string
 

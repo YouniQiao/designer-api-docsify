@@ -1,6 +1,6 @@
 # RenderFit
 
-Enumerates the modes in which the final state of the component's content is rendered during its width and height animation process.
+表示宽高动画过程中组件内容的填充方式。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the modes in which the final state of the component's content is rend
 CENTER = 0
 ```
 
-The component's content stays at the final size and always aligned with the center of the component.
+保持动画终态的内容大小，并且内容始终与组件保持中心对齐。
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ The component's content stays at the final size and always aligned with the cent
 TOP = 1
 ```
 
-The component's content stays at the final size and always aligned with the top center of the component.
+保持动画终态的内容大小，并且内容始终与组件保持顶部中心对齐。
 
 **Since:** 10
 
@@ -60,7 +60,7 @@ The component's content stays at the final size and always aligned with the top 
 BOTTOM = 2
 ```
 
-The component's content stays at the final size and always aligned with the bottom center of the component.
+保持动画终态的内容大小，并且内容始终与组件保持底部中心对齐。
 
 **Since:** 10
 
@@ -82,7 +82,7 @@ The component's content stays at the final size and always aligned with the bott
 LEFT = 3
 ```
 
-The component's content stays at the final size and always aligned with the left of the component.
+保持动画终态的内容大小，并且内容始终与组件保持左侧对齐。
 
 **Since:** 10
 
@@ -104,7 +104,7 @@ The component's content stays at the final size and always aligned with the left
 RIGHT = 4
 ```
 
-The component's content stays at the final size and always aligned with the right of the component.
+保持动画终态的内容大小，并且内容始终与组件保持右侧对齐。
 
 **Since:** 10
 
@@ -126,7 +126,7 @@ The component's content stays at the final size and always aligned with the righ
 TOP_LEFT = 5
 ```
 
-The component's content stays at the final size and always aligned with the upper left corner of the component.
+保持动画终态的内容大小，并且内容始终与组件保持左上角对齐。
 
 **Since:** 10
 
@@ -148,7 +148,7 @@ The component's content stays at the final size and always aligned with the uppe
 TOP_RIGHT = 6
 ```
 
-The component's content stays at the final size and always aligned with the upper right corner of the component.
+保持动画终态的内容大小，并且内容始终与组件保持右上角对齐。
 
 **Since:** 10
 
@@ -170,7 +170,7 @@ The component's content stays at the final size and always aligned with the uppe
 BOTTOM_LEFT = 7
 ```
 
-The component's content stays at the final size and always aligned with the lower left corner of the component.
+保持动画终态的内容大小，并且内容始终与组件保持左下角对齐。
 
 **Since:** 10
 
@@ -192,7 +192,7 @@ The component's content stays at the final size and always aligned with the lowe
 BOTTOM_RIGHT = 8
 ```
 
-The component's content stays at the final size and always aligned with the lower right corner of the component.
+保持动画终态的内容大小，并且内容始终与组件保持右下角对齐。
 
 **Since:** 10
 
@@ -214,7 +214,7 @@ The component's content stays at the final size and always aligned with the lowe
 RESIZE_FILL = 9
 ```
 
-The component's content is always resized to fill the component's content box, without considering its aspect ratio in the final state.
+不考虑动画终态内容的宽高比，并且内容始终缩放到组件的大小。
 
 **Since:** 10
 
@@ -236,7 +236,7 @@ The component's content is always resized to fill the component's content box, w
 RESIZE_CONTAIN = 10
 ```
 
-While maintaining its aspect ratio in the final state, the component's content is scaled to fit within the component's content box. It is always aligned with the center of the component.
+保持动画终态内容的宽高比进行缩小或放大，使内容完整显示在组件内，且与组件保持中心对齐。
 
 **Since:** 10
 
@@ -258,9 +258,7 @@ While maintaining its aspect ratio in the final state, the component's content i
 RESIZE_CONTAIN_TOP_LEFT = 11
 ```
 
-While maintaining its aspect ratio in the final state, the component's content is scaled to fit within the component's content box. When there is remaining space in the width direction of the component, the content is left  
--aligned with the component. When there is remaining space in the height direction of the component, the content is  
-top-aligned with the component.
+保持动画终态内容的宽高比进行缩小或放大，使内容完整显示在组件内。当组件宽方向有剩余时，内容与组件保持左侧对齐，当组件高方向有剩余时，内容与组件保持顶部对齐。
 
 **Since:** 10
 
@@ -282,7 +280,7 @@ top-aligned with the component.
 RESIZE_CONTAIN_BOTTOM_RIGHT = 12
 ```
 
-While maintaining its aspect ratio in the final state, the component's content is scaled to fit within the component's content box. When there is remaining space in the width direction of the component, the content is right-aligned with the component. When there is remaining space in the height direction of the component, the content is bottom-aligned with the component.
+保持动画终态内容的宽高比进行缩小或放大，使内容完整显示在组件内。当组件宽方向有剩余时，内容与组件保持右侧对齐，当组件高方向有剩余时，内容与组件保持底部对齐。
 
 **Since:** 10
 
@@ -304,7 +302,7 @@ While maintaining its aspect ratio in the final state, the component's content i
 RESIZE_COVER = 13
 ```
 
-While maintaining its aspect ratio in the final state, the component's content is scaled to cover the component's entire content box. It is always aligned with the center of the component, so that its middle part is displayed.
+保持动画终态内容的宽高比进行缩小或放大，使内容两边都大于或等于组件两边，且与组件保持中心对齐，显示内容的中间部分。
 
 **Since:** 10
 
@@ -326,7 +324,7 @@ While maintaining its aspect ratio in the final state, the component's content i
 RESIZE_COVER_TOP_LEFT = 14
 ```
 
-While maintaining its aspect ratio in the final state, the component's content is scaled to cover the component's entire content box. When there is remaining space in the width direction, the content is left-aligned with the component, so that its left part is displayed. When there is remaining space in the height direction, the content is top-aligned with the component, so that its top part is displayed.
+保持动画终态内容的宽高比进行缩小或放大，使内容的两边都恰好大于或等于组件两边。当内容宽方向有剩余时，内容与组件保持左侧对齐，显示内容的左侧部分。当内容高方向有剩余时，内容与组件保持顶部对齐，显示内容的顶侧部分。
 
 **Since:** 10
 
@@ -348,7 +346,7 @@ While maintaining its aspect ratio in the final state, the component's content i
 RESIZE_COVER_BOTTOM_RIGHT = 15
 ```
 
-While maintaining its aspect ratio in the final state, the component's content is scaled to cover the component's entire content box. When there is remaining space in the width direction, the content is right-aligned with the component, so that its right part is displayed. When there is remaining space in the height direction, the content is bottom-aligned with the component, so that its bottom part is displayed.
+保持动画终态内容的宽高比进行缩小或放大，使内容的两边都恰好大于或等于组件两边。当内容宽方向有剩余时，内容与组件保持右侧对齐，显示内容的右侧部分。当内容高方向有剩余时，内容与组件保持底部对齐，显示内容的底侧部分。
 
 **Since:** 10
 

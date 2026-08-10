@@ -1,5 +1,11 @@
 # onDeviceOffline（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## onDeviceOffline
 
 ```TypeScript
@@ -22,21 +28,11 @@ Register device offline callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | Used to returns the device info |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Used to returns the device info |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-
-**示例：**
-
-```TypeScript
-let castDeviceId: string;
-avSession.onDeviceOffline((deviceId: string) => {
-  castDeviceId = deviceId;
-  console.info(`onDeviceOffline  : ${deviceId} `);
-});
-```
+| 202 | Not System App. |
 

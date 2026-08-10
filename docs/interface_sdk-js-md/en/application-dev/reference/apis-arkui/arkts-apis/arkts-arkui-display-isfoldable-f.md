@@ -1,12 +1,18 @@
 # isFoldable
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## isFoldable
 
 ```TypeScript
 function isFoldable(): boolean
 ```
 
-Checks whether this device is foldable.
+判断设备是否可折叠。
 
 **Since:** 10
 
@@ -22,19 +28,17 @@ Checks whether this device is foldable.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the device is foldable. **true** if foldable, **false** otherwise. For small-screen foldable devices where the outer screen serves only as an auxiliary display (and cannot be customized by applications), the return value is always **false**. For other foldable devices, the return value is always **true**. |
+| boolean | boolean对象，返回当前设备是否可折叠的结果。false表示不可折叠，true表示可折叠。对于外屏只有简单辅助显示作用的小折叠设备，应用无法自定义外屏界面，故其返回值为false。其他 可折叠设备的返回值均为true。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
-
 let ret: boolean = false;
 ret = display.isFoldable();
 ```

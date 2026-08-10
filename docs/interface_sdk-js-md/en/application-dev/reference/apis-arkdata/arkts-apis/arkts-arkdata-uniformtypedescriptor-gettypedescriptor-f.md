@@ -1,12 +1,18 @@
 # getTypeDescriptor
 
+## Modules to Import
+
+```TypeScript
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+```
+
 ## getTypeDescriptor
 
 ```TypeScript
 function getTypeDescriptor(typeId: string): TypeDescriptor
 ```
 
-Obtains the **TypeDescriptor** object based on the uniform data type ID.
+按给定的标准化数据类型ID查询并返回对应的标准化数据类型描述类对象。
 
 **Since:** 11
 
@@ -22,21 +28,21 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeId | string | Yes | [Uniform data type ID]. |
+| typeId | string | Yes | [标准化数据类型ID]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TypeDescriptor** object obtained. If the uniform data type does not exist, **null** is returned. |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
@@ -69,7 +75,7 @@ try {
 function getTypeDescriptor(typeId: string): TypeDescriptor | null
 ```
 
-Queries and returns the uniform type descriptor by the given uniform data type ID.
+按给定的标准化数据类型ID查询并返回对应的标准化数据类型描述类对象。
 
 **Since:** 23
 
@@ -85,17 +91,17 @@ Queries and returns the uniform type descriptor by the given uniform data type I
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeId | string | Yes | Uniform data type ID. |
+| typeId | string | Yes | [标准化数据类型ID]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the uniform type descriptor corresponding to the uniform data type ID or null if the uniform data type does not exist. |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 

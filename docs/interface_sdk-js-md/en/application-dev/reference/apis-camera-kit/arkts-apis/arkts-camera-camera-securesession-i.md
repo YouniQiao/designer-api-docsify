@@ -1,13 +1,14 @@
 # SecureSession
 
-SecureSession** inherits from [Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, [Flash]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,  
-[AutoExposure]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, [WhiteBalance]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, [Focus]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_,and [Zoom]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_.
+SecureSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts-camera-camera-flash-i.md)、  
+[AutoExposure](arkts-camera-camera-autoexposure-i.md)、[WhiteBalance](arkts-camera-camera-whitebalance-i.md)、[Focus](arkts-camera-camera-focus-i.md)、  
+[Zoom](arkts-camera-camera-zoom-i.md)。
 
-It implements a secure session, which provides operations on the flash, exposure, white balance, focus, and zoom.
+安全模式会话类，提供了对闪光灯、曝光、白平衡、对焦、变焦的操作。
 
-You can call [createSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ with [SceneMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ set to **SECURE\_PHOTO** to create a session in secure mode. The secure mode is designed for applications with high security requirements, such as facial recognition systems and banking services. It must be used together with the \_\_\_MD\_COMMENT\_DESC\_USD\_8\_\_\_security TA\_\_\_MD\_COMMENT\_DESC\_USD\_9\_\_\_ to support service scenarios where both standard preview streams and security streams are output.\_\_\_MD\_COMMENT\_DESC\_USD\_10\_\_\_
+通过[createSession](arkts-camera-camera-cameramanager-i.md#createsession)接口传入[SceneMode](arkts-camera-camera-scenemode-e.md)为SECURE_PHOTO模式创建一个安全模式的会话。该模式开放给人脸识别、银行等有安全诉求的应用，需要结合&lt;!--RP1--&gt;安全TA&lt;!--RP1End--&gt;使用，支持同时输出普通预览流和安全流的业务场景。&lt;!--RP2--&gt;
 
-The security TA can verify the signature of data delivered by the server, sign images, parse and assemble TLV logic, and read, create, and operate keys. It applies to image processing.\_\_\_MD\_COMMENT\_DESC\_USD\_11\_\_\_
+安全TA：可用于图片处理，它具备验证服务器下发数据的验签能力、图片签名、解析及组装tlv逻辑的能力，还具备密钥读取、创建及操作能力。&lt;!--RP2End--&gt;
 
 **Inheritance/Implementation:** SecureSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md)
 
@@ -19,13 +20,19 @@ The security TA can verify the signature of data delivered by the server, sign i
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## addSecureOutput
 
 ```TypeScript
 addSecureOutput(previewOutput: PreviewOutput): void
 ```
 
-Marks a [PreviewOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ stream as secure output.
+将其中一条[PreviewOutput](arkts-camera-camera-previewoutput-i.md)标记成安全输出。
 
 **Since:** 12
 
@@ -41,14 +48,15 @@ Marks a [PreviewOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ stream as secure ou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| previewOutput | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Preview output stream. An error code is returned if the input parameter is invalid. |
+| previewOutput | [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | Yes | 需要标记成安全输出的预览流，传参异常时，会返回错误码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config.<br>**Applicable version:** 12 - 17 |
 
 ## off('error')
 
@@ -56,7 +64,7 @@ Marks a [PreviewOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ stream as secure ou
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from SecureSession error events.
+注销监听安全相机会话的错误事件，通过注册回调函数获取结果。
 
 **Since:** 12
 
@@ -72,8 +80,8 @@ Unsubscribes from SecureSession error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'error' | Yes | 监听事件，固定为'error'，session创建成功之后可监听该接口。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('focusStateChange')
 
@@ -81,7 +89,7 @@ Unsubscribes from SecureSession error events.
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 ```
 
-Unsubscribes from focus state change events.
+注销监听相机聚焦的状态变化。
 
 **Since:** 12
 
@@ -97,8 +105,8 @@ Unsubscribes from focus state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'focusStateChange' | Yes | 监听事件，固定为'focusStateChange'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## offError
 
@@ -120,7 +128,7 @@ Unsubscribes from error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the capture session errors. |
 
 ## offFocusStateChange
 
@@ -142,7 +150,7 @@ Unsubscribes from focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | No | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | No | Callback used to get the focus state change. |
 
 ## on('error')
 
@@ -150,10 +158,11 @@ Unsubscribes from focus state change event callback.
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to SecureSession error events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听安全相机会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 12
 
@@ -169,8 +178,8 @@ Subscribes to SecureSession error events. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [commitConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and [addInput]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to return an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | 'error' | Yes | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](arkts-camera-camera-session-i.md#beginconfig)，[commitConfig](arkts-camera-camera-session-i.md#commitconfig)， [addInput](arkts-camera-camera-session-i.md#addinput)等接口发生错误时返回错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## on('focusStateChange')
 
@@ -178,10 +187,11 @@ Subscribes to SecureSession error events. This API uses an asynchronous callback
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 ```
 
-Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 12
 
@@ -197,8 +207,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | Yes | Callback used to return the focus state change. |
+| type | 'focusStateChange' | Yes | 监听事件，固定为'focusStateChange'，session创建成功可监听。仅当自动对焦模式时，且相机对焦状态发生改变时可触发该事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | Yes | 回调函数，用于获取当前对焦状态。 |
 
 ## onError
 
@@ -220,7 +230,7 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the capture session errors. |
 
 ## onFocusStateChange
 
@@ -242,5 +252,5 @@ Subscribes focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | Yes | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | Yes | Callback used to get the focus state change. |
 

@@ -1,12 +1,18 @@
 # connectPrinterByIpAndPpd (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## connectPrinterByIpAndPpd
 
 ```TypeScript
 function connectPrinterByIpAndPpd(printerIp: string, protocol: string, ppdName: string): Promise<void>
 ```
 
-Connect a printer by the printer IP and ppd.
+通过打印机IP和ppd连接打印机。
 
 **Since:** 24
 
@@ -26,9 +32,9 @@ Connect a printer by the printer IP and ppd.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIp | string | Yes | Indicates the printer IP. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_IP of the printer to be connected. |
-| protocol | string | Yes | Indicates the protocol. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Protocol of the printer to be connected. |
-| ppdName | string | Yes | Indicates the ppd name. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Ppd name of the printer to be connected. |
+| printerIp | string | Yes | 打印机IP。 |
+| protocol | string | Yes | 协议类型。 |
+| ppdName | string | Yes | ppd名称。 |
 
 **Return value:**
 
@@ -40,7 +46,7 @@ Connect a printer by the printer IP and ppd.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Invalid printer IP. |
+| 13100005 | Invalid printer IP. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application. |
 

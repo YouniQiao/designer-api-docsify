@@ -1,6 +1,6 @@
 # IAuthWidgetCallback (System API)
 
-Defines the callback of the authentication widget. The authentication widget uses this callback to obtain commands sent by the user authentication framework and perform corresponding authentication operations based on the command content.
+身份认证组件回调接口。认证组件通过该回调接口获取用户认证框架发送的命令，并根据命令内容执行相应的认证操作。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Defines the callback of the authentication widget. The authentication widget use
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## sendCommand
 
 ```TypeScript
 sendCommand(cmdData: string): void
 ```
 
-Triggered to receive commands from the user authentication framework. The user authentication framework uses this callback to send commands to the identity authentication widget. The widget needs to parse the command content and perform corresponding operations.
+回调函数，用于接收来自用户认证框架的命令。用户认证框架通过此回调向身份认证组件发送命令，控件需解析命令内容并执行相应操作。
 
 **Since:** 10
 
@@ -34,9 +40,9 @@ Triggered to receive commands from the user authentication framework. The user a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cmdData | string | Yes | Command data, which is a JSON string containing the command content sent by the user authentication framework to the authentication widget. The JSON structure includes corresponding fields based on different command types. Common fields include: **commandType** (string, command type), **authType** ( array, list of authentication types), **result** (number, authentication result code), etc. The widget must parse this data and perform corresponding operations based on the command type. |
+| cmdData | string | Yes | 命令数据。JSON格式的字符串，包含用户认证框架向身份认证控件发送的具体命令内容。JSON结构根据不同的命令类型包含相应字段，常见字段包括：commandType（ string，命令类型）、authType（array，认证类型列表）、result（number，认证结果码）等。控件需解析此数据并根据命令类型执行相应操作。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -45,16 +51,16 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const userAuthWidgetMgrVersion = 1;
 try {
   let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
-  console.info('get userAuthWidgetMgr instance success');
+  console.info('get userAuthWidgetMgr instance successfully.');
   userAuthWidgetMgr.on('command', {
-    sendCommand(cmdData) {
+    sendCommand: (cmdData) => {
       console.info(`The cmdData is ${cmdData}`);
     }
   })
-  console.info('subscribe authentication event success');
+  console.info('subscribe authentication event successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`userAuth widgetMgr catch error: Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 
@@ -64,7 +70,7 @@ try {
 sendCommand: AuthWidgetCallbackSendCommandFunc
 ```
 
-Called to return the command sent from the user authentication framework to the user authentication widget.
+回调函数，用于用户认证框架向组件发送命令。
 
 **Since:** 23
 

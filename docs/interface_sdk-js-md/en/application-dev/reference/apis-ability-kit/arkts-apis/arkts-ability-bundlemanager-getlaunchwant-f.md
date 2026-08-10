@@ -1,13 +1,18 @@
 # getLaunchWant
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getLaunchWant
 
 ```TypeScript
 function getLaunchWant(): Want
 ```
 
-Obtains the **Want** parameters of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of the current application.
+获取本应用[入口UIAbility](../../../quick-start/application-package-glossary.md#uiability)的Want参数。
 
 **Since:** 13
 
@@ -23,15 +28,15 @@ Obtains the **Want** parameters of the
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Want object that contains only the bundle name and ability name. |
+| [Want](arkts-ability-app-ability-want-want-c.md) | 返回仅包含bundleName和abilityName的Want对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700072](../errorcode-bundle.md#17700072-launch-want-does-not-exist) | The launch want is not found. |
+| 17700072 | The launch want is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

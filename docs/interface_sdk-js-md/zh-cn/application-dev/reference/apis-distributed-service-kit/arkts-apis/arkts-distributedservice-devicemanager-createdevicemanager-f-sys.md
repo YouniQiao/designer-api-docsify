@@ -1,5 +1,11 @@
 # createDeviceManager（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## createDeviceManager
 
 ```TypeScript
@@ -27,16 +33,16 @@ function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceM
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指示应用程序的Bundle名称。长度范围1~255字符。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceManager&gt; | 是 | DeviceManager实例创建时调用的回调，返回设备管理器对象实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceManager&gt; | 是 | DeviceManager实例创建时调用的回调，返回设备管理器对象实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';

@@ -1,6 +1,6 @@
 # ReadTextOptions
 
-Defines the options used in **readText()**. It inherits from [ReadOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions](arkts-corefile-file-fs-readoptions-i.md)。
 
 **Inheritance/Implementation:** ReadTextOptions extends [ReadOptions](arkts-corefile-file-fs-readoptions-i.md)
 
@@ -12,13 +12,19 @@ Defines the options used in **readText()**. It inherits from [ReadOptions]\_\_\_
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## encoding
 
 ```TypeScript
 encoding?: string
 ```
 
-Format of the data to be encoded. This parameter is valid only when the data type is string.The default value is 'utf-8', which is the only value supported.
+当数据是 string 类型时有效，表示数据的编码方式，默认 'utf-8'，仅支持 'utf-8'。
 
 **Type:** string
 

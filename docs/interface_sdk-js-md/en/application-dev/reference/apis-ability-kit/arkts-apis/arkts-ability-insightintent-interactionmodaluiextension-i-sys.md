@@ -1,6 +1,6 @@
 # InteractionModalUIExtension (System API)
 
-Defines the information of the modal UIExtension to be displayed as the interaction UI after the current intent execution completes. Does not support distributed scenarios.
+定义当意图执行完成时模态UIExtension要显示为交互界面的信息，不支持分布式。
 
 **Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
 
@@ -14,13 +14,19 @@ Defines the information of the modal UIExtension to be displayed as the interact
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Ability name of the target UIExtension ability.
+目标UIExtension能力的Ability名称。
 
 **Type:** string
 
@@ -42,7 +48,7 @@ Ability name of the target UIExtension ability.
 bundleName: string
 ```
 
-Bundle name of the target UIExtension ability.
+目标UIExtension能力的Bundle名称。
 
 **Type:** string
 
@@ -64,9 +70,9 @@ Bundle name of the target UIExtension ability.
 interactionUIType: 'MODAL_UIEXTENSION'
 ```
 
-Type of the interaction UI. The value is fixed to 'MODAL\_UIEXTENSION'.
+交互界面的类型，固定为'MODAL_UIEXTENSION'。
 
-**Type:** 'MODAL\_UIEXTENSION'
+**Type:** 'MODAL_UIEXTENSION'
 
 **Since:** 26.1.0
 
@@ -86,7 +92,7 @@ Type of the interaction UI. The value is fixed to 'MODAL\_UIEXTENSION'.
 moduleName: string
 ```
 
-Module name of the target UIExtension ability.
+目标UIExtension能力的模块名称。
 
 **Type:** string
 
@@ -108,9 +114,9 @@ Module name of the target UIExtension ability.
 parameters: Record<string, Object>
 ```
 
-Parameters passed to the target UIExtension ability.
+传递给目标UIExtension的参数。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 26.1.0
 
@@ -130,7 +136,7 @@ Parameters passed to the target UIExtension ability.
 uiExtensionType: string
 ```
 
-Type of the UIExtension ability.
+UIExtension的类型。
 
 **Type:** string
 
@@ -152,7 +158,7 @@ Type of the UIExtension ability.
 uri: string
 ```
 
-URI information passed to the target UIExtension ability for data processing.
+传递给目标UIExtension的URI信息。
 
 **Type:** string
 

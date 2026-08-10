@@ -12,6 +12,12 @@ Obtains CDMA cell information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## baseId
 
 ```TypeScript
@@ -20,7 +26,7 @@ baseId: int
 
 Indicates the base station Id.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -40,7 +46,7 @@ latitude: int
 
 Indicates the latitude.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ longitude: int
 
 Indicates the longitude.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ nid: int
 
 Indicates the network identification code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -100,7 +106,7 @@ sid: int
 
 Indicates the system identification code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

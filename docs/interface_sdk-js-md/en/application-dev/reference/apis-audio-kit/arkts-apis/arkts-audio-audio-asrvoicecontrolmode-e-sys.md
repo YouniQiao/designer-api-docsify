@@ -54,7 +54,7 @@ Send both output stream and MIC input to TX.
 AUDIO_2_VOICE_TX_EX = 2
 ```
 
-Based on the AUDIO\_2\_VOICE\_TX, Send output stream to voice call record.
+Based on the AUDIO_2_VOICE_TX, Send output stream to voice call record.
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ Based on the AUDIO\_2\_VOICE\_TX, Send output stream to voice call record.
 AUDIO_MIX_2_VOICE_TX_EX = 3
 ```
 
-Based on the AUDIO\_MIX\_2\_VOICE\_TX, Send output stream to voice call record.
+Based on the AUDIO_MIX_2_VOICE_TX, Send output stream to voice call record.
 
 **Since:** 12
 

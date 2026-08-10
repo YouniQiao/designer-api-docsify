@@ -1,12 +1,18 @@
 # saveAppState
 
+## 导入模块
+
+```TypeScript
+import { appRecovery } from 'kits/@kit.AbilityKit';
+```
+
 ## saveAppState
 
 ```TypeScript
 function saveAppState(): boolean
 ```
 
-保存当前App状态，可以配合[errorManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相关接口使用。
+保存当前App状态，可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
 
 **起始版本：** 9
 
@@ -26,7 +32,7 @@ function saveAppState(): boolean
 | --- | --- |
 | boolean | 保存成功与否。true：保存成功，false：保存失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { appRecovery, errorManager } from '@kit.AbilityKit';
@@ -53,7 +59,7 @@ try {
 function saveAppState(context?: UIAbilityContext): boolean
 ```
 
-主动保存Ability的状态，这个状态将在下次恢复启动时使用。可以配合[errorManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相关接口使用。
+主动保存Ability的状态，这个状态将在下次恢复启动时使用。可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
 
 **起始版本：** 10
 
@@ -71,7 +77,7 @@ function saveAppState(context?: UIAbilityContext): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 需要保存状态的UIAbility所对应的context。 |
+| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | 否 | 需要保存状态的UIAbility所对应的context。 |
 
 **返回值：**
 
@@ -79,7 +85,7 @@ function saveAppState(context?: UIAbilityContext): boolean
 | --- | --- |
 | boolean | 保存成功与否。true：保存成功，false：保存失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { appRecovery, errorManager } from '@kit.AbilityKit';
@@ -88,6 +94,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let observer: errorManager.ErrorObserver = {
   onUnhandledException(errorMsg) {
     console.error('onUnhandledException, errorMsg: ', errorMsg);
+    // context为UIAbility实例的context，需使用箭头函数或在回调外预先保存。
     appRecovery.saveAppState(this.context);
   }
 };

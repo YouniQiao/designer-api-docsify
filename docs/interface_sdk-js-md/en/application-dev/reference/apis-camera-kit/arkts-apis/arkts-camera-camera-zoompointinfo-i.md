@@ -1,6 +1,6 @@
 # ZoomPointInfo
 
-Describes the equivalent focal length information.
+等效焦距信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes the equivalent focal length information.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## equivalentFocalLength
 
 ```TypeScript
 readonly equivalentFocalLength: int
 ```
 
-Equivalent focal length corresponding to the current focal length ratio.
+当前焦距比对应的等效焦距值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Equivalent focal length corresponding to the current focal length ratio.
 readonly zoomRatio: double
 ```
 
-Zoom ratio.
+可变焦距比。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 

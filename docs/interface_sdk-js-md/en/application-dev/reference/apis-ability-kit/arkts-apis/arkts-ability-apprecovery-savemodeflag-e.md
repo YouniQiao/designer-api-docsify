@@ -1,7 +1,6 @@
 # SaveModeFlag
 
-Enumerates the application state saving modes. This enum is used as an input parameter of  
-[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+状态保存标志，[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口状态保存方式的参数，该类型为枚举。
 
 **Since:** 9
 
@@ -17,7 +16,7 @@ Enumerates the application state saving modes. This enum is used as an input par
 SAVE_WITH_FILE = 0x0001
 ```
 
-The application state is saved and written to the local file cache.
+每次状态保存都会写入到本地文件缓存。
 
 **Since:** 9
 
@@ -35,7 +34,7 @@ The application state is saved and written to the local file cache.
 SAVE_WITH_SHARED_MEMORY = 0x0002
 ```
 
-The application state is saved in the memory. When the application exits due to a fault, it is written to the local file cache.
+状态先保存在内存中，应用故障退出时写入到本地文件缓存。
 
 **Since:** 9
 

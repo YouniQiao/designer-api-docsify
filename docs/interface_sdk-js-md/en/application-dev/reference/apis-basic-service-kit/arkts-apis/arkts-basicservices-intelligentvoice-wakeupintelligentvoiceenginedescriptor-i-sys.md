@@ -12,6 +12,12 @@ Describes wakeup intelligent voice engine.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+```
+
 ## needReconfirm
 
 ```TypeScript

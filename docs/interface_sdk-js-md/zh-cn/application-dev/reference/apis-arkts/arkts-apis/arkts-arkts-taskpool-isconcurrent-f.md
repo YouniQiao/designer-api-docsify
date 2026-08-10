@@ -1,5 +1,11 @@
 # isConcurrent
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## isConcurrent
 
 ```TypeScript
@@ -30,7 +36,7 @@ function isConcurrent(func: Function): boolean
 | --- | --- |
 | boolean | 检查结果。如果被检查函数标注了 [ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent

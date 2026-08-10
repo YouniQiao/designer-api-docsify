@@ -1,14 +1,23 @@
 # @ohos.app.ability.AbilityConstant
 
-AbilityConstant provides enums related to abilities, including the window mode.
+AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)、上次退出原因  
+[LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md)、迁移结果[OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md)等。
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace AbilityConstant--><!--Device-unnamed-declare namespace AbilityConstant-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Modules to Import
+
+```TypeScript
+import { AbilityConstant } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 
@@ -16,35 +25,35 @@ AbilityConstant provides enums related to abilities, including the window mode.
 
 | Name | Description |
 | --- | --- |
-| [LastExitDetailInfo](arkts-ability-abilityconstant-lastexitdetailinfo-i.md) | Describes the key runtime information of the process where the ability last exited. |
-| [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) | Describes the launch parameters, which mainly include the ability launch reasons and reasons for the last exit. The parameter values are automatically passed in by the system when the ability is launched. You do not need to change the values. |
+| [LastExitDetailInfo](arkts-ability-abilityconstant-lastexitdetailinfo-i.md) | 记录Ability所在进程上次退出时的关键运行信息。 |
+| [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) | 启动参数，主要包括Ability启动原因以及上次退出原因。Ability启动时由系统自动传入，开发者无需修改。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CollaborateResult](arkts-ability-abilityconstant-collaborateresult-e.md) | Enumerates the collaboration request results. You can use it in multi-device collaboration scenarios to specify whether the target application accepts the collaboration request from the caller application. You can use it in  [onCollaborate()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the UIAbility. |
-| [ContinueState](arkts-ability-abilityconstant-continuestate-e.md) | Enumerates the mission continuation states of the application. It is used in the  [setMissionContinueState]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_API of [UIAbilityContext]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md) | Enumerates the reasons for the last exit of the ability. You can use it together with the value of  **launchParam.lastExitReason** in [onCreate()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the UIAbility to complete different operations. |
-| [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md) | Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in  [onCreate(want, launchParam)]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the UIAbility to complete different operations. |
-| [MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | Enumerates the memory levels of the entire device. You can use it in  [onMemoryLevel()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the UIAbility to complete different operations. |
-| [OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) | Enumerates the ability continuation results. You can use it in  [onContinue()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the UIAbility to complete different operations. |
-| [OnSaveResult](arkts-ability-abilityconstant-onsaveresult-e.md) | Enumerates the result types for the operation of saving application data. You can use it in  [onSaveState()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_of the UIAbility to complete  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [PrepareTermination](arkts-ability-abilityconstant-preparetermination-e.md) | Enumerates the actions triggered when an application is closed by the user. You can use it in  [onPrepareTermination]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or  [onPrepareTerminationAsync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of  [AbilityStage]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [StateType](arkts-ability-abilityconstant-statetype-e.md) | Enumerates the scenarios for saving application data. You can use it in  [onSaveState()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_of the UIAbility to complete  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [WindowMode](arkts-ability-abilityconstant-windowmode-e.md) | Enumerates the window modes in which a UIAbility can be displayed at startup. It can be used in  [startAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [CollaborateResult](arkts-ability-abilityconstant-collaborateresult-e.md) | 应用协同状态，该类型为枚举。用于多设备场景下，调用方应用拉起协同方应用时，协同方应用是否接受协同。需要配合UIAbility的  [onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate)方法进行设置。 |
+| [ContinueState](arkts-ability-abilityconstant-continuestate-e.md) | 流转状态枚举值。用于表示当前应用任务流转的状态。可配合[UIAbilityContext](arkts-ability-uiabilitycontext-c.md)的  [setMissionContinueState](arkts-ability-uiabilitycontext-c.md#setmissioncontinuestate)方法进行设置。 |
+| [LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md) | Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.lastExitReason的不同类型执行相应操作。 |
+| [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md) | Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.launchReason的不同类型执行相应操作。 |
+| [MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | 整机可用内存级别，该类型为枚举，可配合UIAbility的[onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel)方法根据level执行不同内存级别的相应操作。 |
+| [OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) | Ability迁移结果，该类型为枚举，可配合UIAbility的[onContinue()](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)方法完成相应的返回。 |
+| [OnSaveResult](arkts-ability-abilityconstant-onsaveresult-e.md) | 保存应用数据的结果，该类型为枚举。配合UIAbility的  [onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)方法使用，可以实现[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。 |
+| [PrepareTermination](arkts-ability-abilityconstant-preparetermination-e.md) | 应用准备关闭时返回的动作，该类型为枚举。需要配合[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的  [onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)或者  [onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)方法使用。 |
+| [StateType](arkts-ability-abilityconstant-statetype-e.md) | 保存应用数据场景原因，该类型为枚举。配合UIAbility的  [onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)方法使用，可以实现[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。 |
+| [WindowMode](arkts-ability-abilityconstant-windowmode-e.md) | 启动UIAbility时窗口的创建模式，类型为枚举。可配合  [startAbility](arkts-ability-uiabilitycontext-c.md#startability)方法使用。 |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [WindowMode](arkts-ability-abilityconstant-windowmode-e-sys.md) | Enumerates the window modes in which a UIAbility can be displayed at startup. It can be used in  [startAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [WindowMode](arkts-ability-abilityconstant-windowmode-e-sys.md) | 启动UIAbility时窗口的创建模式，类型为枚举。可配合  [startAbility](arkts-ability-uiabilitycontext-c.md#startability)方法使用。 |
 <!--DelEnd-->
 
 ### Constants
 
 | Name | Description |
 | --- | --- |
-| [REASON_MESSAGE_DESKTOP_SHORTCUT](arkts-ability-abilityconstant-con.md#reason_message_desktop_shortcut) | The UIAbility is launched via a home screen shortcut. If this string is obtained from the **launchReasonMessage**  property in [LaunchParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, the UIAbility is initiated by touching a shortcut on the home screen. |
+| [REASON_MESSAGE_DESKTOP_SHORTCUT](arkts-ability-abilityconstant-con.md#reason_message_desktop_shortcut) | 通过桌面快捷方式启动。开发者如果从[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md)的launchReasonMessage属性中获取到该字符串，表示UIAbility是通过点击桌面快捷方式启动的。 |
 

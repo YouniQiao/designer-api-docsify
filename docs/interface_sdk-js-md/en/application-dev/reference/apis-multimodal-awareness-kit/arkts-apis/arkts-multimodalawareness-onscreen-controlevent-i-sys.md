@@ -12,6 +12,12 @@ Defines a control event.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## eventType
 
 ```TypeScript
@@ -20,7 +26,7 @@ eventType: EventType
 
 Control event type.
 
-**Type:** EventType
+**Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
 
 **Since:** 20
 
@@ -38,10 +44,10 @@ Control event type.
 hookId?: long
 ```
 
-Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from  
-[PageContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of a session.
+Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from   
+[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -59,10 +65,10 @@ Hook ID corresponding to the control event. The hook ID and the session ID can b
 sessionId: long
 ```
 
-ID of the session to be operated. The hook ID and the session ID can be obtained from  
-[PageContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of a session.
+ID of the session to be operated. The hook ID and the session ID can be obtained from   
+[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -82,7 +88,7 @@ windowId: int
 
 ID of the window to be operated.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

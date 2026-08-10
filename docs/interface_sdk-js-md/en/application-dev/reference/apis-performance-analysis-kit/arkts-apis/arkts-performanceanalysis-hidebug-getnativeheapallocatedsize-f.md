@@ -1,13 +1,18 @@
 # getNativeHeapAllocatedSize
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getNativeHeapAllocatedSize
 
 ```TypeScript
 function getNativeHeapAllocatedSize() : bigint
 ```
 
-Obtains the total number of bytes occupied by the total allocated space (**uordblks**, which is obtained from  
-**mallinfo**) held by a process, which is measured by the memory allocator.
+��ȡ�ڴ������ͳ�ƵĽ��̳��е���ʹ�õ���ͨ����ռ�õ����ֽ�����
 
 **Since:** 8
 
@@ -21,13 +26,14 @@ Obtains the total number of bytes occupied by the total allocated space (**uordb
 
 | Type | Description |
 | --- | --- |
-| bigint | Size of the memory occupied by the total allocated space held by the process, in bytes. |
+| bigint | �����ڴ������ͳ�ƵĽ��̳��е���ʹ�õ���ͨ����ռ���ڴ��С����λΪByte�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let nativeHeapAllocatedSize: bigint = hidebug.getNativeHeapAllocatedSize();
+console.info(`nativeHeapAllocatedSize = ${nativeHeapAllocatedSize}`);
 ```
 

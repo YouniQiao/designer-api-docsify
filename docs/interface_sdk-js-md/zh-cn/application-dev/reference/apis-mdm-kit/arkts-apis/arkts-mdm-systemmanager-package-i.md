@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## fd
 
 ```TypeScript
@@ -58,7 +64,7 @@ type: PackageType
 
 系统更新包类型。
 
-**类型：** PackageType
+**类型：** [PackageType](arkts-mdm-systemmanager-packagetype-e.md)
 
 **起始版本：** 12
 

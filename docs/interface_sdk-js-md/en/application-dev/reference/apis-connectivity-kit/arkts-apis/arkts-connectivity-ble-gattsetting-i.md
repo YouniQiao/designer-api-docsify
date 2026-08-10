@@ -10,6 +10,12 @@ Describes the setting for Gatt Connection.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## autoConnect
 
 ```TypeScript
@@ -38,9 +44,9 @@ Indicates whether to automatically connect to the remote device, default is {@co
 transport?: BluetoothTransport
 ```
 
-Transport of the connection, default is {@code TRANSPORT\_LE}
+Transport of the connection, default is {@code TRANSPORT_LE}
 
-**Type:** BluetoothTransport
+**Type:** [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md)
 
 **Since:** 26.0.0
 

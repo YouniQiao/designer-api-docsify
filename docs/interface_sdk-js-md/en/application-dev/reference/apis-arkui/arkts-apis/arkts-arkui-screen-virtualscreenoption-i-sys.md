@@ -1,6 +1,6 @@
 # VirtualScreenOption (System API)
 
-Defines virtual screen parameters.
+创建虚拟屏幕的参数。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Defines virtual screen parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## density
 
 ```TypeScript
 density: double
 ```
 
-Density of the virtual screen, in px. The value must be a floating-point number.
+指定虚拟屏幕的密度，该参数为浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Density of the virtual screen, in px. The value must be a floating-point number.
 height: long
 ```
 
-Height of the virtual screen, in px. The value must be an integer.
+指定虚拟屏幕的高度，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -58,7 +64,7 @@ Height of the virtual screen, in px. The value must be an integer.
 name: string
 ```
 
-Name of a virtual screen.
+指定虚拟屏幕的名称。
 
 **Type:** string
 
@@ -78,8 +84,7 @@ Name of a virtual screen.
 supportsFocus?: boolean
 ```
 
-Whether the virtual screen is focusable. **true** if focusable; **false** otherwise. The default value is  
-**true**.
+指定虚拟屏幕是否可获得焦点。true表示可获焦，false表示不可获焦，默认值为true。
 
 **Type:** boolean
 
@@ -99,7 +104,7 @@ Whether the virtual screen is focusable. **true** if focusable; **false** otherw
 surfaceId: string
 ```
 
-Surface ID of the virtual screen.
+指定虚拟屏幕的surfaceId。
 
 **Type:** string
 
@@ -119,9 +124,9 @@ Surface ID of the virtual screen.
 userId?: int
 ```
 
-User ID of the virtual screen, which is an integer. The default value is **-1**.
+指定虚拟屏幕的用户ID，该参数为整数。默认值为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -141,9 +146,9 @@ User ID of the virtual screen, which is an integer. The default value is **-1**.
 width: long
 ```
 
-Width of the virtual screen, in px. The value must be an integer.
+指定虚拟屏幕的宽度，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

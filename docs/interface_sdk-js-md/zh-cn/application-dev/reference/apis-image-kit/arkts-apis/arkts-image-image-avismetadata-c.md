@@ -10,15 +10,21 @@ Avis metadata.
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## delayTime
 
 ```TypeScript
 readonly delayTime?: int
 ```
 
-Delay of each frame. Unit: ms, The value should be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:ms.
+Delay of each frame. Unit: ms, The value should be an integer.&lt;br&gt;Unit:ms.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

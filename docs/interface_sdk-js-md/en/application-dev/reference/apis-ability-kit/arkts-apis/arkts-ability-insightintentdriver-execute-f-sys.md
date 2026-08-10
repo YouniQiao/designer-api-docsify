@@ -1,13 +1,18 @@
 # execute (System API)
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## execute
 
 ```TypeScript
 function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.ExecuteResult>): void
 ```
 
-Executes a call to an intent. This API uses an asynchronous callback to return the result.When the caller is in the background, the ohos.permission.START\_ABILITIES\_FROM\_BACKGROUND permission is required.When [ExecuteMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the intent call is set to  
-**UI\_ABILITY\_BACKGROUND**, the ohos.permission.ABILITY\_BACKGROUND\_COMMUNICATION permission is required.On API 26.0.0 and above, intent can be executed across devices. When the intent call is cross-device,the ohos.permission.EXECUTE\_DISTRIBUTED\_INTENT permission is required.
+执行意图调用的接口。使用callback异步回调。当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。当意图调用执行模式[ExecuteMode](arkts-ability-insightintent-executemode-e.md)取值为UI_ABILITY_BACKGROUND时，需要申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。
 
 **Since:** 11
 
@@ -27,34 +32,34 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameter used to execute the intent call. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;insightIntent.ExecuteResult&gt; | Yes | Callback used to return the intent call execution result. |
+| param | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | Yes | 执行意图调用的参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;insightIntent.ExecuteResult&gt; | Yes | 回调函数，返回意图调用执行结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| 16000137 | Cross-device execution failed due to a connection error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| 16000138 | Device disconnected during cross-device intent execution.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000137 | Cross-device execution failed due to a connection error.<br>**Applicable version:** 26.0.0 and later |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000138 | Device disconnected during cross-device intent execution.<br>**Applicable version:** 26.0.0 and later |
+| 16000011 | The context does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
@@ -95,8 +100,7 @@ import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
 function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 ```
 
-Executes a call to an intent. This API uses a promise to return the result.When the caller is in the background, the ohos.permission.START\_ABILITIES\_FROM\_BACKGROUND permission is required.When [ExecuteMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the intent call is set to  
-**UI\_ABILITY\_BACKGROUND**, the ohos.permission.ABILITY\_BACKGROUND\_COMMUNICATION permission is required.When the intent call is cross-device, the ohos.permission.EXECUTE\_DISTRIBUTED\_INTENT permission is required.On API 26.0.0 and above, intent can be executed across devices. When the intent call is cross-device,the ohos.permission.EXECUTE\_DISTRIBUTED\_INTENT permission is required.
+执行意图调用的接口。使用Promise异步回调。当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。当意图调用执行模式[ExecuteMode](arkts-ability-insightintent-executemode-e.md)取值为UI_ABILITY_BACKGROUND时，需要申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。
 
 **Since:** 11
 
@@ -116,7 +120,7 @@ Executes a call to an intent. This API uses a promise to return the result.When 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameter used to execute the intent call. |
+| param | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | Yes | 执行意图调用的参数。 |
 
 **Return value:**
 
@@ -128,27 +132,27 @@ Executes a call to an intent. This API uses a promise to return the result.When 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| 16000137 | Cross-device execution failed due to a connection error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| 16000138 | Device disconnected during cross-device intent execution.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000137 | Cross-device execution failed due to a connection error.<br>**Applicable version:** 26.0.0 and later |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000138 | Device disconnected during cross-device intent execution.<br>**Applicable version:** 26.0.0 and later |
+| 16000011 | The context does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';

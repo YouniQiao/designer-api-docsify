@@ -1,12 +1,18 @@
 # dump
 
+## Modules to Import
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## dump
 
 ```TypeScript
 function dump(filePath: string): Array<string>
 ```
 
-Dumps the list of leaked objects and VM memory snapshot.
+����й©�б���������ڴ���ա�
 
 **Since:** 12
 
@@ -20,15 +26,15 @@ Dumps the list of leaked objects and VM memory snapshot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | Path for storing exported information files. |
+| filePath | string | Yes | ������Ϣ���ɵ��ļ���ŵ�·����&lt;br&gt;**˵��**����API version 24��ʼ���������������ڣ����������µ�һ�ݿ�����Ϣ�� |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Export result. The file name extension is **.jsleaklist** for the list of leaked objects and **.heapsnapshot** for the VM memory snapshot. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note: If the dump is successful, the path of the leaked object list file and the VM memory snapshot path are returned. Otherwise, an empty array is returned. |
+| Array&lt;string&gt; | ����������ֱ�Ϊ�ļ�����׺Ϊ.jsleaklist��й©�б����ļ�����׺Ϊ.heapsnapshot������ڴ�����ļ��� &lt;br&gt;**˵��**��dump�ɹ�������й©�б��ļ�·����������ڴ����·����dumpʧ�ܣ����ؿ����顣 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let context = this.getUIContext().getHostContext();

@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('applicationState')
 
 ```TypeScript
 function off(type: 'applicationState', observerId: int, callback: AsyncCallback<void>): void
 ```
 
-Unregisters the observer used to listen for application state changes. This API uses an asynchronous callback to return the result.
+注销应用状态监听器。使用callback异步回调。
 
 **Since:** 15
 
@@ -22,19 +28,19 @@ Unregisters the observer used to listen for application state changes. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observerId | int | Yes | ID of the observer registered, which is the listener ID returned by [on('applicationState')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the application state observer is deregistered, **err** is undefined; otherwise, **error** is an error object. |
+| type | 'applicationState' | Yes | 调用接口类型，固定填'applicationState'字符串。 |
+| observerId | int | Yes | 注册的应用状态监听器ID，即 [on('applicationState')](appManager.on(type: 'applicationState', observer: ApplicationStateObserver))返回的监听器ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当取消注册应用程序状态观测器成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -101,7 +107,7 @@ try {
 function off(type: 'applicationState', observerId: int): Promise<void>
 ```
 
-Unregisters the observer used to listen for application state changes. This API uses a promise to return the result.
+注销应用状态监听器。使用Promise异步回调。
 
 **Since:** 14
 
@@ -117,24 +123,24 @@ Unregisters the observer used to listen for application state changes. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observerId | int | Yes | ID of the observer registered, which is the listener ID returned by [on('applicationState')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | 'applicationState' | Yes | 调用接口类型，固定填'applicationState'字符串。 |
+| observerId | int | Yes | 注册的应用状态监听器ID，即 [on('applicationState')](appManager.on(type: 'applicationState', observer: ApplicationStateObserver))返回的监听器ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

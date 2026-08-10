@@ -27,7 +27,7 @@ function traceByValue(name: string, count: number): void
 | name | string | 是 | 数值变量的名称。 |
 | count | number | 是 | 数值变量的值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let traceCount = 3;

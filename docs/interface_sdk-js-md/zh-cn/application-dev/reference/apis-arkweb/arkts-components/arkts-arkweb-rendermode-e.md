@@ -1,6 +1,6 @@
 # RenderMode
 
-Defines the web render mode, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Defines the web render mode, related to {@link RenderMode}.
 
 **起始版本：** 12
 

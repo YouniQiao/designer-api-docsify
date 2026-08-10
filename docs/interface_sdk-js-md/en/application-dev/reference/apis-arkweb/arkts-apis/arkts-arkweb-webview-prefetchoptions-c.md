@@ -10,6 +10,12 @@ Defines the PrefetchOptions class.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## constructor
 
 ```TypeScript
@@ -32,7 +38,7 @@ Constructor for PrefetchOptions.
 ignoreCacheControlNoStore: boolean
 ```
 
-Set whether to ignore Cache-Control: no-store‌.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_This setting controls whether prefetch operations bypass the HTTP Cache-Control: no-store directive.Important‌: Default behavior (false) aligns with HTTP security standards. Overriding (true) requires explicit risk assessment for non-sensitive resources.
+Set whether to ignore Cache-Control: no-store‌.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;This setting controls whether prefetch operations bypass the HTTP Cache-Control: no-store directive.Important‌: Default behavior (false) aligns with HTTP security standards. Overriding (true) requires explicit risk assessment for non-sensitive resources.
 
 **Type:** boolean
 
@@ -50,7 +56,7 @@ Set whether to ignore Cache-Control: no-store‌.\_\_\_HTML\_TAG\_DESC\_USD\_0\_
 minTimeBetweenPrefetchesMs: int
 ```
 
-‌Set prefetch page interval limit.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Unit: ms. Default 500ms (ensures only one successful prefetch within 500ms).The interval throttles prefetch frequency to balance performance and resource usage.
+‌Set prefetch page interval limit.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;Unit: ms. Default 500ms (ensures only one successful prefetch within 500ms).The interval throttles prefetch frequency to balance performance and resource usage.
 
 **Type:** int
 

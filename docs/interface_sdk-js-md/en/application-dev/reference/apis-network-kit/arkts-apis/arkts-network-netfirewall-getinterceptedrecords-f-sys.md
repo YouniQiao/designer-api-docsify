@@ -1,5 +1,11 @@
 # getInterceptedRecords (System API)
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## getInterceptedRecords
 
 ```TypeScript
@@ -25,7 +31,7 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
-| requestParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Paging query input parameters. |
+| requestParam | [RequestParam](arkts-network-netfirewall-requestparam-i.md) | Yes | Paging query input parameters. |
 
 **Return value:**
 
@@ -37,15 +43,15 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) | The specified user does not exist. |
+| 29400000 | The specified user does not exist. |
+| 401 | Parameter error. |
+| 2100001 | Invalid parameter value. |
+| 2100002 | Operation failed. Cannot connect to service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { netFirewall } from '@kit.NetworkKit';

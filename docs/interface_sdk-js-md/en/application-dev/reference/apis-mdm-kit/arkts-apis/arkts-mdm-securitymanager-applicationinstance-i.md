@@ -1,6 +1,6 @@
 # ApplicationInstance
 
-Application instance
+应用实例。
 
 **Since:** 20
 
@@ -10,15 +10,20 @@ Application instance
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { securityManager } from 'kits/@kit.MDMKit';
+```
+
 ## accountId
 
 ```TypeScript
 accountId: number
 ```
 
-User ID, which must be greater than or equal to 0. You can call  
-[getOsAccountLocalId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of  
-**@ohos.account.osAccount** to obtain the user ID.
+用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的  
+[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。
 
 **Type:** number
 
@@ -38,9 +43,8 @@ User ID, which must be greater than or equal to 0. You can call
 appIdentifier: string
 ```
 
-The [unique identifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an application. If an application does not have **appIdentifier**, **appId** can be used instead. Both **bundleInfo.signatureInfo.appIdentifier** and  
-**bundleInfo.signatureInfo.appId** can be obtained via the  
-[bundleManager.getBundleInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API.
+应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md/arkts-ability-bundleinfo-signatureinfo-i.md)，如果应用没有appIdentifier可使用appId代替，可以通过接口  
+[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md/arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)获取bundleInfo.signatureInfo.appIdentifier和bundleInfo.signatureInfo.appId。
 
 **Type:** string
 
@@ -60,9 +64,9 @@ The [unique identifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an application. 
 appIndex: number
 ```
 
-Index of the application clone. The default value is **0**.
+表示分身应用的索引，默认值为0。
 
-If **appIndex** is set to **0**, the main application is used. If **appIndex** is set to a value greater than 0,the application clone with the specified index is used.
+appIndex为0时，表示主应用。appIndex大于0时，表示指定的分身应用。
 
 **Type:** number
 

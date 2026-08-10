@@ -10,6 +10,12 @@ Describes the configuration for file type filtering.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## mimeTypeArray
 
 ```TypeScript

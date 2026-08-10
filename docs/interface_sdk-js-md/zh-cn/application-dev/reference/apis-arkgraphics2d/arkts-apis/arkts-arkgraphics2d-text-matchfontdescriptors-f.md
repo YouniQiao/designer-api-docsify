@@ -1,5 +1,11 @@
 # matchFontDescriptors
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## matchFontDescriptors
 
 ```TypeScript
@@ -22,7 +28,7 @@ function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescripto
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| desc | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定需要用来做匹配的字体描述符。如果不指定任何字段，则返回系统的所有字体描述符。如果填写了指定字段，则按照指定字段进行匹配。如果匹配失败，返回空数组。 |
+| desc | [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) | 是 | 指定需要用来做匹配的字体描述符。如果不指定任何字段，则返回系统的所有字体描述符。如果填写了指定字段，则按照指定字段进行匹配。如果匹配失败，返回空数组。 |
 
 **返回值：**
 
@@ -34,11 +40,9 @@ function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescripto
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -60,49 +64,10 @@ struct Index {
             let promise = text.matchFontDescriptors({
               weight: text.FontWeight.W400,
             })
-            promise.then((data: Array<text.FontDescriptor>) => {
-              console.info(`Font descriptor array size: ${data.length}`);
-              for (let i = 0; i < data.length; i++) {
-                console.info(`Font descriptor result: ${JSON.stringify(data[i])}`)
-              }
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to match the font descriptor, error: ${JSON.stringify(error)}`);
-            });
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, Row, FontWeight} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D"
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button("font descriptor")
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .width(300)
-          .height(80)
-          .onClick(() => {
-            console.info(`Get font descriptor start`)
-            let promise = text.matchFontDescriptors({
-              weight: text.FontWeight.W400,
-            })
             promise.then((data) => {
               console.info(`Font descriptor array size: ${data.length}`);
               console.info(`Font descriptor result: ${JSON.stringify(data)}`)
-            }).catch((error: Error) => {
+            }).catch((error: BusinessError) => {
               console.error(`Failed to match the font descriptor, error: ${JSON.stringify(error)}`);
             });
           })

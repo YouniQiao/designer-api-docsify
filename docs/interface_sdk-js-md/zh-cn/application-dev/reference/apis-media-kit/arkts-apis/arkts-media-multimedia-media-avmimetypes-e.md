@@ -1,6 +1,6 @@
 # AVMimeTypes
 
-媒体MIME类型，通过[setMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置。
+媒体MIME类型，通过[setMimeType](@ohos.multimedia.media:media.MediaSource.setMimeType)设置。
 
 **起始版本：** 12
 

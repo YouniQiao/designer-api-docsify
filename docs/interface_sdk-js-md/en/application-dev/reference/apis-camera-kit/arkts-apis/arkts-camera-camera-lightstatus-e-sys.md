@@ -1,7 +1,7 @@
 # LightStatus (System API)
 
 Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys.  
-[on('lightStatusChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[on('lightStatusChange')](camera.VideoSession.on(type: 'lightStatusChange', callback: AsyncCallback&lt;LightStatus&gt;)).
 
 **Since:** 18
 

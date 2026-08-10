@@ -4,7 +4,7 @@
 export type NotificationActionButton = _NotificationActionButton
 ```
 
-Describes the operation button displayed in the notification.
+通知中显示的操作按钮。
 
 **Since:** 9
 

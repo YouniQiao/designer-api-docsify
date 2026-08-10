@@ -1,6 +1,6 @@
 # DeviceChangeAction
 
-Describes the device connection status and device information.
+描述设备连接状态变化和设备信息。
 
 **Since:** 7
 
@@ -10,15 +10,21 @@ Describes the device connection status and device information.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## deviceDescriptors
 
 ```TypeScript
 deviceDescriptors: AudioDeviceDescriptors
 ```
 
-Device information.
+设备信息。
 
-**Type:** AudioDeviceDescriptors
+**Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **Since:** 7
 
@@ -34,9 +40,9 @@ Device information.
 type: DeviceChangeType
 ```
 
-Device change type.
+设备连接状态变化。
 
-**Type:** DeviceChangeType
+**Type:** [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md)
 
 **Since:** 7
 

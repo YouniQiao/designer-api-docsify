@@ -1,6 +1,6 @@
 # UiWindow
 
-UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
+UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类对象可通过{@link Driver#findWindow}接口获取。该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
 **起始版本：** 9
 
@@ -9,6 +9,12 @@ UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口�
 <!--Device-unnamed-declare class UiWindow--><!--Device-unnamed-declare class UiWindow-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
+
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
 
 ## close
 
@@ -32,17 +38,17 @@ close(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000005 | This operation is not supported. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -50,10 +56,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    await window.close();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.close();
 }
 ```
 
@@ -79,16 +83,16 @@ focus(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -96,10 +100,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    await window.focus();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.focus();
 }
 ```
 
@@ -125,27 +127,28 @@ getBounds(): Promise<Rect>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Rect&gt; |  Promise对象，返回窗口的边框信息。 |
+| Promise&lt;Rect&gt; | Promise对象，返回窗口的边框信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
+  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let rect = await window.getBounds();
-  }
+  // 查找当前活跃窗口。
+  let window: UiWindow = await driver.findWindow({ active: true });
+  // 获取窗口的边框信息。
+  let rect = await window.getBounds();
 }
 ```
 
@@ -171,27 +174,28 @@ getBundleName(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise对象，返回窗口归属应用的包名信息。 |
+| Promise&lt;string&gt; | Promise对象，返回窗口归属应用的包名信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
+  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let name: string = await window.getBundleName();
-  }
+  // 查找当前活跃窗口。
+  let window: UiWindow = await driver.findWindow({ active: true });
+  // 获取窗口归属应用的包名。
+  let name: string = await window.getBundleName();
 }
 ```
 
@@ -223,16 +227,16 @@ getDisplayId(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; |  Promise对象，返回窗口所属的屏幕ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回窗口所属的屏幕ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -240,10 +244,8 @@ import { UiWindow, Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let id = await window.getDisplayId();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let id = await window.getDisplayId();
 }
 ```
 
@@ -269,16 +271,16 @@ getTitle(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise对象，返回窗口的标题信息。 |
+| Promise&lt;string&gt; | Promise对象，返回窗口的标题信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -286,10 +288,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let title = await window.getTitle();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let title = await window.getTitle();
 }
 ```
 
@@ -315,16 +315,16 @@ getWindowMode(): Promise<WindowMode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WindowMode&gt; |  Promise对象，返回窗口的窗口模式信息。 |
+| Promise&lt;WindowMode&gt; | Promise对象，返回窗口的窗口模式信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -332,10 +332,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let mode = await window.getWindowMode();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let mode = await window.getWindowMode();
 }
 ```
 
@@ -361,16 +359,16 @@ isActive(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise对象，返回窗口对象是否为用户正在交互窗口。true：交互窗口。false：非交互窗口。 |
+| Promise&lt;boolean&gt; | Promise对象，返回窗口对象是否为用户正在交互窗口。true：交互窗口。false：非交互窗口。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -378,10 +376,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let focused = await window.isActive();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let focused = await window.isActive();
 }
 ```
 
@@ -392,9 +388,10 @@ isActived(): Promise<boolean>
 ```
 
 判断窗口是否为用户正在交互窗口。使用Promise异步回调。
-    **说明：**  
-    
-    从API version 9开始支持，从API version 11开始废弃，建议使用[isActive\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_11+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](arkts-test-uitest-uiwindow-c.md#isactive)替代。
 
 **起始版本：** 9
 
@@ -412,16 +409,16 @@ isActived(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise对象，返回窗口对象是否为用户正在交互窗口。true表示是交互窗口。false表示非交互窗口。 |
+| Promise&lt;boolean&gt; | Promise对象，返回窗口对象是否为用户正在交互窗口。true表示是交互窗口。false表示非交互窗口。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -429,10 +426,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let focused = await window.isActived();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let focused = await window.isActived();
 }
 ```
 
@@ -458,16 +453,16 @@ isFocused(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise对象，返回窗口对象是否获取获焦状态。true：获焦。false：未获焦。 |
+| Promise&lt;boolean&gt; | Promise对象，返回窗口对象是否获取获焦状态。true：获焦。false：未获焦。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -475,10 +470,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let focused = await window.isFocused();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let focused = await window.isFocused();
 }
 ```
 
@@ -504,17 +497,17 @@ maximize(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000005 | This operation is not supported. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -522,10 +515,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    await window.maximize();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.maximize();
 }
 ```
 
@@ -551,17 +542,17 @@ minimize(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000005 | This operation is not supported. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -569,10 +560,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    await window.minimize();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.minimize();
 }
 ```
 
@@ -604,25 +593,25 @@ moveTo(x: int, y: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000005 | This operation is not supported. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -630,10 +619,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    await window.moveTo(100, 100);
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.moveTo(100, 100);
 }
 ```
 
@@ -665,24 +652,24 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wide | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 以number的形式传入调整后窗口的宽度，取值范围：大于等于0的整数。 |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 以number的形式传入调整后窗口的高度，取值范围：大于等于0的整数。 |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 以[ResizeDirection]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的形式传入窗口调整的方向。 |
+| wide | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 以number的形式传入调整后窗口的宽度，取值范围：大于等于0的整数。 |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 以number的形式传入调整后窗口的高度，取值范围：大于等于0的整数。 |
+| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | 是 | 以[ResizeDirection](arkts-test-uitest-resizedirection-e.md)的形式传入窗口调整的方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000005 | This operation is not supported. |
+| 17000004 | The window or component is invisible or destroyed. |
 
 ## resume
 
@@ -706,17 +693,17 @@ resume(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000005 | This operation is not supported. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -724,10 +711,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    await window.resume();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.resume();
 }
 ```
 
@@ -753,17 +738,17 @@ split(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000005 | This operation is not supported. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.test.ets
@@ -771,10 +756,8 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    await window.split();
-  }
+  let window: UiWindow = await driver.findWindow({ active: true });
+  await window.split();
 }
 ```
 

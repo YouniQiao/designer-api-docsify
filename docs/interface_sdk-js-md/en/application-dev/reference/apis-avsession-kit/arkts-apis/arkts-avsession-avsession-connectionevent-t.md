@@ -18,6 +18,6 @@ The connection event supplied by system to indicate device state and information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | device connection state  |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | device information  |
+| state | [ConnectionState](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-connectionstate-t.md) | Yes | 设备连接状态。 |
+| device | [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | Yes | device information |
 

@@ -1,12 +1,18 @@
 # @ohos.app.ability.CompletionHandler
 
+## 导入模块
+
+```TypeScript
+import { CompletionHandler } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 类
 
 | 名称 | 说明 |
 | --- | --- |
-| [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md) | CompletionHandler提供了  [onRequestSuccess]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_和  [onRequestFailure]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_两个回调函数，分别用来处理拉起应用成功和失败时的结果。 |
+| [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md) | CompletionHandler提供了  [onRequestSuccess](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestsuccess)和  [onRequestFailure](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestfailure)两个回调函数，分别用来处理拉起应用成功和失败时的结果。 |
 
 ### 类型
 

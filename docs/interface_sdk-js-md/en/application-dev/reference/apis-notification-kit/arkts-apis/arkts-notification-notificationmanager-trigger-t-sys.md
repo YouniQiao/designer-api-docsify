@@ -4,7 +4,7 @@
 export type Trigger = _Trigger
 ```
 
-Defines the details for triggering a geofence.
+触发条件的具体信息。
 
 **Since:** 23
 

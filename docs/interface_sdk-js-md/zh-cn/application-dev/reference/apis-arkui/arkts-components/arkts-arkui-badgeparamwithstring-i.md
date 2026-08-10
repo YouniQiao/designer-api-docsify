@@ -1,8 +1,8 @@
 # BadgeParamWithString
 
-BadgeParamWithNumber继承自[BadgeParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，具有BadgeParam的全部属性。
+BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。
 
-**继承/实现关系：** BadgeParamWithString extends [BadgeParam](../arkts-apis/arkts-arkui-component/badge-badgeparam-i.md)
+**继承/实现关系：** BadgeParamWithString extends [BadgeParam](arkts-arkui-badgeparam-i.md)
 
 **起始版本：** 7
 
@@ -26,7 +26,7 @@ value为空字符串时不显示文本，仅显示圆点标记。
 
 从API version 20开始，支持ResourceStr类型。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 7
 

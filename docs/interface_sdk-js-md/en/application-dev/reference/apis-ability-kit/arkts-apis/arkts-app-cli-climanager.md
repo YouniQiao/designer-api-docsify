@@ -6,11 +6,19 @@ The module provides the capability to interact with cli tools in the system.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace cliManager--><!--Device-unnamed-declare namespace cliManager-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { cliManager } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 

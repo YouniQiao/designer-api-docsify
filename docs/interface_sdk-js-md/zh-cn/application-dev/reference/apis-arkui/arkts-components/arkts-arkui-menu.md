@@ -11,7 +11,7 @@
 
 ## 子组件
 
-包含[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[MenuItemGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_子组件。
+包含[MenuItem]{@link menu_item}、[MenuItemGroup]{@link menu_item_group}子组件。
 
 ## Menu
 
@@ -20,20 +20,21 @@ Menu()
 ```
 
 作为菜单的固定容器，无参数。
-    **说明：**  
-    
-    - 菜单和菜单项宽度计算规则：  
-        
-        - 布局过程中，期望每个菜单项的宽度一致。若子组件设置了宽度，则以[constraintSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为准。  
-        
-        - Menu不设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置默认2栅格的宽度，若菜单项内容区比2栅格宽，则会自适应撑开。  
-        
-        - Menu设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置减去padding后的固定宽度。  
-        
-        - Menu支持设置的最小宽度为64vp。  
-    
-    - Menu不支持的通用属性：[外描边设置]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_下的属性、  
-    [shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_。
+
+> **说明：**
+> 
+> - 菜单和菜单项宽度计算规则：
+> >
+> > - 布局过程中，期望每个菜单项的宽度一致。若子组件设置了宽度，则以[constraintSize]{@link CommonMethod#constraintSize}为准。
+> >
+> > - Menu不设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置默认2栅格的宽度，若菜单项内容区比2栅格宽，则会自适应撑开。
+> >
+> > - Menu设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置减去padding后的固定宽度。
+> >
+> > - Menu支持设置的最小宽度为64vp。
+> 
+> - Menu不支持的通用属性：[外描边设置]{@link common}下的属性、
+> [shadow]{@link CommonMethod#shadow(value: ShadowOptions | ShadowStyle)}。
 
 **起始版本：** 9
 
@@ -47,3 +48,4 @@ Menu()
 
 ## 汇总
 
+- [SubMenuExpandingMode](arkts-arkui-menu-submenuexpandingmode-e.md)

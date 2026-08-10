@@ -1,5 +1,11 @@
 # addPrinterToDiscovery
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## addPrinterToDiscovery
 
 ```TypeScript
@@ -22,7 +28,7 @@ function addPrinterToDiscovery(printerInformation: PrinterInformation): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerInformation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示新发现的打印机。 |
+| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | 是 | 表示新发现的打印机。 |
 
 **返回值：**
 
@@ -34,14 +40,14 @@ function addPrinterToDiscovery(printerInformation: PrinterInformation): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerInformation : print.PrinterInformation = {
     printerId : 'testPrinterId',
@@ -55,7 +61,7 @@ let printerInformation : print.PrinterInformation = {
 print.addPrinterToDiscovery(printerInformation).then(() => {
     console.info('addPrinterToDiscovery success');
 }).catch((error: BusinessError) => {
-    console.error('addPrinterToDiscovery error : ' + JSON.stringify(error));
+    console.error(`Failed to addPrinterToDiscovery. Code: ${error.code}, message: ${error.message}`);
 })
 ```
 

@@ -1,5 +1,11 @@
 # cancelRetentionState
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## cancelRetentionState
 
 ```TypeScript
@@ -34,11 +40,11 @@ function cancelRetentionState(docUris: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100011 | The system ability works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -75,17 +81,17 @@ function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | docUris | Array&lt;string&gt; | 是 | 表示需要取消保留状态的文件uri列表。不对Array长度进行限制，每个string长度不超过4095字节，超出此范围抛出错误码401。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。err为undefined时表示设置成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。err为undefined时表示设置成功；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100011 | The system ability works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

@@ -12,6 +12,12 @@ Absolute euler angles relative to the home position.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## pitch
 
 ```TypeScript
@@ -20,7 +26,7 @@ pitch?: double
 
 俯仰角，范围从-π到π，以弧度为单位。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -40,7 +46,7 @@ roll?: double
 
 滚动角，范围从-π到π，以弧度为单位。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -60,7 +66,7 @@ yaw?: double
 
 偏航角，范围从-π到π，以弧度为单位。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 

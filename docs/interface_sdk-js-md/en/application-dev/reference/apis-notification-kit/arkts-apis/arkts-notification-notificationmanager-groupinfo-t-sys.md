@@ -4,7 +4,7 @@
 export type GroupInfo = _GroupInfo
 ```
 
-Defines the custom group notification information.
+组通知定制信息。
 
 **Since:** 26.0.0
 

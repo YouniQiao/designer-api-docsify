@@ -1,6 +1,6 @@
 # CaretStyle
 
-Defines the cursor style.
+定义光标样式。
 
 **Since:** 10
 
@@ -16,11 +16,11 @@ Defines the cursor style.
 color?: ResourceColor
 ```
 
-Caret color.
+光标颜色。
 
-Default value: **'#ff007dff'
+默认值：'#ff007dff'，表示蓝色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
 
@@ -40,11 +40,11 @@ Default value: **'#ff007dff'
 width?: Length
 ```
 
-Caret size. It cannot be set in percentage.
+光标尺寸，不支持百分比。
 
-Default value: **'2vp'
+默认值：'2vp'
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 10
 

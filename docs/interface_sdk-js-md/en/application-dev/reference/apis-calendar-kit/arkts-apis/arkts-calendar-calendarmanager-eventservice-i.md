@@ -1,6 +1,6 @@
 # EventService
 
-Describes the event service.
+日程服务。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the event service.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
+## Modules to Import
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## description
 
 ```TypeScript
 description?: string
 ```
 
-Description of the service, with a maximum of 5,000 characters. If this parameter is not specified, the default value is an empty string.
+服务辅助描述。长度建议为[0,5000]字符，不填时，默认为空字符串。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Description of the service, with a maximum of 5,000 characters. If this paramete
 type: ServiceType
 ```
 
-Service type.
+服务类型。
 
-**Type:** ServiceType
+**Type:** [ServiceType](arkts-calendar-calendarmanager-servicetype-e.md)
 
 **Since:** 10
 
@@ -56,7 +62,7 @@ Service type.
 uri: string
 ```
 
-Service URI, in the DeepLink format. The URI can then redirect the user to the corresponding third-party application page. The value is a string with a maximum of 5,000 characters.
+服务的uri，格式为DeepLink类型。可以跳转到三方应用相应界面。长度建议为[0,5000]字符。
 
 **Type:** string
 

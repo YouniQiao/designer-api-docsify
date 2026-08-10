@@ -1,6 +1,6 @@
 # TransactionOptions
 
-Represents the configuration of a transaction object.
+事务对象的配置信息。
 
 **Since:** 14
 
@@ -10,17 +10,21 @@ Represents the configuration of a transaction object.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## transactionType
 
 ```TypeScript
 transactionType?: TransactionType
 ```
 
-Transaction object type.
+事务类型。默认为DEFERRED。
 
-Default value: **DEFERRED**.
-
-**Type:** TransactionType
+**Type:** [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md)
 
 **Since:** 14
 

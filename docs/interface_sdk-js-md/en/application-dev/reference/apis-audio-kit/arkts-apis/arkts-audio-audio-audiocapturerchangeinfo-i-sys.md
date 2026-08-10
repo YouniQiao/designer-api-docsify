@@ -1,6 +1,6 @@
 # AudioCapturerChangeInfo
 
-Describes the audio capturer change event.
+描述音频采集器更改信息。
 
 **Since:** 9
 
@@ -10,15 +10,19 @@ Describes the audio capturer change event.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerState
 
 ```TypeScript
 readonly capturerState: AudioState
 ```
 
-Audio state.
-
-**Type:** AudioState
+**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
 
 **Since:** 9
 
@@ -38,7 +42,7 @@ readonly clientUid: int
 
 Uid for audio capturer client application.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

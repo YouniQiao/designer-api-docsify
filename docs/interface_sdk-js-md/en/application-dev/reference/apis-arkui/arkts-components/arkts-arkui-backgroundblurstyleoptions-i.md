@@ -1,8 +1,8 @@
 # BackgroundBlurStyleOptions
 
-Defines the options of backgroundBlurStyle
+继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)。
 
-**Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](../arkts-apis/arkts-arkui-component/common-blurstyleoptions-i.md)
+**Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)
 
 **Since:** 10
 
@@ -18,10 +18,9 @@ Defines the options of backgroundBlurStyle
 inactiveColor?: ResourceColor
 ```
 
-Background color when the blur effect does not take effect. This parameter must be used together with the  
-**policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
+模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，控件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为控件背景色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
@@ -43,9 +42,11 @@ Background color when the blur effect does not take effect. This parameter must 
 policy?: BlurStyleActivePolicy
 ```
 
-Blur activation policy.
+模糊激活策略。
 
-**Type:** BlurStyleActivePolicy
+默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
+
+**Type:** [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md)
 
 **Default:** BlurStyleActivePolicy.ALWAYS_ACTIVE
 

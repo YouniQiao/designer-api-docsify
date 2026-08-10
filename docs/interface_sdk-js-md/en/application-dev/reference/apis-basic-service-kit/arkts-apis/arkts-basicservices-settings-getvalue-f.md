@@ -1,5 +1,11 @@
 # getValue
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getValue
 
 ```TypeScript
@@ -26,11 +32,11 @@ Obtains the value of a specified character string in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the {@link ohos.aafwk.ability.DataAbilityHelper} used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;object&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getValue result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -73,7 +79,7 @@ Obtains the value of a specified character string in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the {@link ohos.aafwk.ability.DataAbilityHelper} used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
 
 **Return value:**
@@ -82,7 +88,7 @@ Obtains the value of a specified character string in the database.
 | --- | --- |
 | Promise&lt;object&gt; | Returns the value of the character string in the domain if any is found; returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -117,11 +123,11 @@ Get value from settingsdata
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback of getValue result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -161,7 +167,7 @@ Get value from settingsdata
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 
 **Return value:**
@@ -170,7 +176,7 @@ Get value from settingsdata
 | --- | --- |
 | Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -191,7 +197,7 @@ function getValue(context: Context, name: string, domainName: string): Promise<s
 ```
 
 Get value from settingsdata  
-[USER\_SECURE] domain need ohos.permission.MANAGE\_SECURE\_SETTINGS permission.
+[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
@@ -207,7 +213,7 @@ Get value from settingsdata
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |
 
@@ -217,7 +223,7 @@ Get value from settingsdata
 | --- | --- |
 | Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

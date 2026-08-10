@@ -16,7 +16,7 @@
 INITIALIZED = 0x00
 ```
 
-表示通过配置信息（[Config]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）创建的任务已初始化。
+表示通过配置信息（[Config](arkts-basicservices-agent-config-i.md)）创建的任务已初始化。
 
 **起始版本：** 10
 

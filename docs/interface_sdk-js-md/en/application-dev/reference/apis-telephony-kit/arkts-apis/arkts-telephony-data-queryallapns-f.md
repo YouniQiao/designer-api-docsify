@@ -1,5 +1,11 @@
 # queryAllApns
 
+## Modules to Import
+
+```TypeScript
+import { data } from 'kits/@kit.TelephonyKit';
+```
+
 ## queryAllApns
 
 ```TypeScript
@@ -28,9 +34,9 @@ Query all APN info.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

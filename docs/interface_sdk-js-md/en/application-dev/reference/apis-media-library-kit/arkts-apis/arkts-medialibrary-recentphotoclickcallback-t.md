@@ -20,7 +20,7 @@ The callback of onRecentPhotoClick event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recentPhotoInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The item information of recent photo  |
+| recentPhotoInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes | The item information of recent photo |
 
 **Return value:**
 

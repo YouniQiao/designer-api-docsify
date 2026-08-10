@@ -1,6 +1,6 @@
 # DragPreviewMode
 
-Sets the display mode of the drag preview.
+设置拖拽预览图的显示模式。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Sets the display mode of the drag preview.
 AUTO = 1
 ```
 
-Enables the system to automatically change the position of the dragged point based on the scenario and apply scaling transformations to the drag preview based on set rules.
+系统根据拖拽场景自动改变跟手点位置，根据规则自动对拖拽背板图进行缩放变换等。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Enables the system to automatically change the position of the dragged point bas
 DISABLE_SCALE = 2
 ```
 
-Disables the system's scaling behavior for the drag preview.
+禁用系统对拖拽背板图的缩放行为。
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ Disables the system's scaling behavior for the drag preview.
 ENABLE_DEFAULT_SHADOW = 3
 ```
 
-Enables the default shadow effect for non-text components.
+启用非文本类组件默认阴影效果。
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ Enables the default shadow effect for non-text components.
 ENABLE_DEFAULT_RADIUS = 4
 ```
 
-Enables a unified rounded corner effect for non-text components, with the default value of 12 vp. If the custom rounded corner value set by the application is greater than the default value or the value set by **modifier**, the custom value is used.
+启用非文本类组件统一圆角效果，默认值12vp。当应用自身设置的圆角值大于默认值或modifier设置的圆角时，则显示应用自定义圆角效果。
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Enables a unified rounded corner effect for non-text components, with the defaul
 ENABLE_DRAG_ITEM_GRAY_EFFECT = 5
 ```
 
-Enables the grayscale effect for the original drag item, which does not apply to text content dragging. When the user starts dragging, the original item displays a grayscale effect. When released, the original item returns to its original appearance. After enabling the default grayscale effect, avoid manually modifying the opacity after dragging starts. Otherwise, the grayscale effect will be overridden, and the original opacity will not be correctly restored when dragging ends.
+启用支持原拖拽对象灰显（透明度）效果，对文本内容拖拽不生效。用户拖起时原对象显示灰显效果，释放时原对象恢复原有效果。 开启默认灰显效果后，不建议在拖拽开始后自行修改透明度，如果开发者在拖拽发起后自行修改应用透明度，则灰显效果将被覆盖， 且在结束拖拽时无法正确恢复原始透明度效果。
 
 **Since:** 18
 
@@ -116,7 +116,7 @@ Enables the grayscale effect for the original drag item, which does not apply to
 ENABLE_MULTI_TILE_EFFECT = 6
 ```
 
-Enables multi-tile display for mouse-dragged multi-selected objects, with each drag preview maintaining its original relative position. Requires multi-select mode with **isMultiSelectionEnabled** set to **true**. Takes precedence over [dragPreview]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Does not support secondary dragging, rounded corners, or scaling effects.
+启用支持多选对象鼠标拖拽不聚拢效果，各拖拽图显示在其原始位置的相对位置，当满足多选的情况下且 isMultiSelectionEnabled为true时该参数才生效。不聚拢效果优先级高于dragPreview。 不支持二次拖拽、圆角和缩放设置。
 
 **Since:** 18
 
@@ -136,7 +136,7 @@ Enables multi-tile display for mouse-dragged multi-selected objects, with each d
 ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW = 7
 ```
 
-Enables touch point calculation based on the initial drag preview size. Used when the floating image differs from the drag preview. Incompatible with mouse dragging and **DragPreviewMode.ENABLE\_MULTI\_TILE\_EFFECT**.
+启用支持以拖拽预览图初始尺寸计算跟手点位置，长按浮起图和拖拽图不一致时使用。 鼠标拖拽，设置DragPreviewMode.ENABLE_MULTI_TILE_EFFECT时不生效。
 
 **Since:** 19
 

@@ -4,7 +4,7 @@
 type PrinterInfoQueryCallback = (printerInfo: PrinterInformation, ppdInfo: PpdInfo[]) => void
 ```
 
-Defines the callback type used in registering to listen for printerInfoQuery event.The value of printerInfo indicates the printer info.The value of ppdInfo indicates all the printer ppd info.
+定义注册监听printInfoQuery事件的回调类型。printInfo的值表示打印机信息。ppdInfo的值表示所有打印机的ppd信息。
 
 **Since:** 24
 
@@ -22,6 +22,6 @@ Defines the callback type used in registering to listen for printerInfoQuery eve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the printer info \_\_\_HTML\_TAG\_USD\_0\_\_\_Printer Information.  |
-| ppdInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | all the printer ppd info \_\_\_HTML\_TAG\_USD\_0\_\_\_All the printer ppd info.  |
+| printerInfo | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Yes | 打印机信息 <br>打印机信息。 |
+| ppdInfo | [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)[] | Yes | 所有打印机ppd信息 <br>所有打印机ppd信息。 |
 

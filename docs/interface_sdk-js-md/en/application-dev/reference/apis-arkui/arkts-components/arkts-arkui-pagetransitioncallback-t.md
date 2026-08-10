@@ -4,7 +4,7 @@
 declare type PageTransitionCallback = (type: RouteType, progress: number) => void
 ```
 
-Represents the callback for page transition events.
+页面转场事件回调。
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ Represents the callback for page transition events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | transition route type  |
-| progress | number | Yes | transition progess  |
+| type | [RouteType](arkts-arkui-routetype-e.md) | Yes | transition route type |
+| progress | number | Yes | transition progess |
 

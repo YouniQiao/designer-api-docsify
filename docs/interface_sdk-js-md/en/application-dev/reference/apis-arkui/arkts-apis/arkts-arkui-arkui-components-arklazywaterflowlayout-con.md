@@ -6,7 +6,7 @@
 export declare const LazyVWaterFlowLayout: LazyVWaterFlowLayoutInterface
 ```
 
-Defines LazyVWaterFlowLayout Component.
+定义LazyVWaterFlowLayout组件。
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Defines LazyVWaterFlowLayout Component.
 export declare const LazyVWaterFlowLayoutInstance: LazyVWaterFlowLayoutAttribute
 ```
 
-Defines LazyVWaterFlowLayout Component instance.
+定义LazyVWaterFlowLayout组件实例。
 
 **Since:** 26.0.0
 

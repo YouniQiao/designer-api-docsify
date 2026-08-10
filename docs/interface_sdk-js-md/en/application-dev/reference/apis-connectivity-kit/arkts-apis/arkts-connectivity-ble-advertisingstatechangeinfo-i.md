@@ -10,6 +10,12 @@ Advertising state change information.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## advertisingId
 
 ```TypeScript
@@ -18,7 +24,7 @@ advertisingId: int
 
 Indicates the ID of current advertising.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -38,7 +44,7 @@ state: AdvertisingState
 
 Indicates the advertising state.
 
-**Type:** AdvertisingState
+**Type:** [AdvertisingState](arkts-connectivity-ble-advertisingstate-e.md)
 
 **Since:** 11
 

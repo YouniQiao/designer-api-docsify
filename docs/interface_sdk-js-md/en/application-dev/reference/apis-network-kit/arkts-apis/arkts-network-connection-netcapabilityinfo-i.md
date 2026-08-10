@@ -10,6 +10,12 @@ Receive information about changes in network capabilities.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## netCap
 
 ```TypeScript
@@ -18,7 +24,7 @@ netCap: NetCapabilities
 
 Defines the network capability set.
 
-**Type:** NetCapabilities
+**Type:** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
 **Since:** 11
 
@@ -38,7 +44,7 @@ netHandle: NetHandle
 
 Defines the handle of the data network.
 
-**Type:** NetHandle
+**Type:** [NetHandle](arkts-network-connection-nethandle-i.md)
 
 **Since:** 11
 

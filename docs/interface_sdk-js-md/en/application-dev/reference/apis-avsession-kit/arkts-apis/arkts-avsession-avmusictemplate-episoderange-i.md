@@ -1,6 +1,6 @@
 # EpisodeRange
 
-The definition of EpisodeRange.
+剧集的范围的定义。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ The definition of EpisodeRange.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## end
 
 ```TypeScript
 end: int
 ```
 
-End Index.
+结束的索引。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ End Index.
 start: int
 ```
 
-Start Index.
+开始的索引。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

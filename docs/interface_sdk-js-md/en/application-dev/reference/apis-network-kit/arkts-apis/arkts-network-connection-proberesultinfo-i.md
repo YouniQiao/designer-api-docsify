@@ -10,6 +10,12 @@ Defines the probe result information.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## lossRate
 
 ```TypeScript
@@ -18,7 +24,7 @@ lossRate: int
 
 Packet loss rate. The value 100 indicates 100% packet loss, and 50 indicates 50% packet loss.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -38,7 +44,7 @@ rtt: int[]
 
 RTT in microseconds, min/avg/max/std.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 26.0.0
 

@@ -1,10 +1,11 @@
 # AVScreenCaptureRecorder
 
 屏幕录制管理类，用于进行屏幕录制。在调用AVScreenCaptureRecorder的方法前，需要先通过  
-[createAVScreenCaptureRecorder()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建一个AVScreenCaptureRecorder实例。
-    **说明：**  
-    
-    - 本Interface首批接口从API version 12开始支持。
+[createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder)创建一个AVScreenCaptureRecorder实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 12
 
@@ -13,6 +14,12 @@
 <!--Device-unnamed-interface AVScreenCaptureRecorder--><!--Device-unnamed-interface AVScreenCaptureRecorder-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
 
 ## excludePickerWindows
 
@@ -40,7 +47,7 @@ excludePickerWindows(excludedWindows: Array<int>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| excludedWindows | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | 是 | 需要在Picker中隐藏的窗口列表，窗口属性获取方法可以参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| excludedWindows | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 是 | 需要在Picker中隐藏的窗口列表，窗口属性获取方法可以参考 [getWindowProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)。 |
 
 **返回值：**
 
@@ -52,9 +59,9 @@ excludePickerWindows(excludedWindows: Array<int>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## init
 
@@ -76,7 +83,7 @@ init(config: AVScreenCaptureRecordConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 配置屏幕录制的相关参数。 |
+| config | [AVScreenCaptureRecordConfig](arkts-media-multimedia-media-avscreencapturerecordconfig-i.md) | 是 | 配置屏幕录制的相关参数。 |
 
 **返回值：**
 
@@ -88,9 +95,9 @@ init(config: AVScreenCaptureRecordConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## off('stateChange')
 
@@ -113,7 +120,7 @@ off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 状态切换事件回调类型，支持的事件：'stateChange'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVScreenCaptureStateCode&gt; | 否 | 状态切换事件回调方法， [AVScreenCaptureStateCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_表示切换到的状态，不填此参数则会取消最后一次 订阅事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVScreenCaptureStateCode&gt; | 否 | 状态切换事件回调方法， [AVScreenCaptureStateCode](@ohos.multimedia.media:media.AVScreenCaptureStateCode)表示切换到的状态，不填此参数则会取消最后一次 订阅事件。 |
 
 ## off('error')
 
@@ -136,7 +143,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 状态切换事件回调类型，支持的事件：'error'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 录屏错误事件回调方法，不填此参数则会取消最后一次订阅事件。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 录屏错误事件回调方法，不填此参数则会取消最后一次订阅事件。 |
 
 ## offError
 
@@ -158,7 +165,7 @@ Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
 
 ## offStateChange
 
@@ -180,7 +187,7 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVScreenCaptureStateCode&gt; | 否 | Callback used for unsubscription. AVScreenCaptureStateCode indicates the new state. If this parameter is not specified, the last subscription is canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVScreenCaptureStateCode&gt; | 否 | Callback used for unsubscription. AVScreenCaptureStateCode indicates the new state. If this parameter is not specified, the last subscription is canceled. |
 
 ## on('stateChange')
 
@@ -203,7 +210,7 @@ on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 状态切换事件回调类型，支持的事件：'stateChange'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVScreenCaptureStateCode&gt; | 是 | 状态切换事件回调方法， [AVScreenCaptureStateCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_表示切换到的状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVScreenCaptureStateCode&gt; | 是 | 状态切换事件回调方法， [AVScreenCaptureStateCode](@ohos.multimedia.media:media.AVScreenCaptureStateCode)表示切换到的状态。 |
 
 ## on('error')
 
@@ -226,15 +233,15 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 错误事件回调类型，支持的事件：'error'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 录屏错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 录屏错误事件回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by ErrorCallback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by ErrorCallback. |
+| 5400103 | IO error. Return by ErrorCallback. |
+| 201 | permission denied. |
+| 5400105 | Service died. Return by ErrorCallback. |
 
 ## onError
 
@@ -256,15 +263,15 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback invoked when the event is triggered. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by ErrorCallback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by ErrorCallback. |
+| 5400103 | IO error. Return by ErrorCallback. |
+| 201 | permission denied. |
+| 5400105 | Service died. Return by ErrorCallback. |
 
 ## onStateChange
 
@@ -286,7 +293,7 @@ Subscribes to screen capture state changes. An application can subscribe to only
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVScreenCaptureStateCode&gt; | 是 | Callback invoked when the event is triggered. AVScreenCaptureStateCode indicates the new state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVScreenCaptureStateCode&gt; | 是 | Callback invoked when the event is triggered. AVScreenCaptureStateCode indicates the new state. |
 
 ## pauseRecording
 
@@ -316,9 +323,9 @@ pauseRecording(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not be permitted. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not be permitted. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## presentPicker
 
@@ -327,11 +334,12 @@ presentPicker(): Promise<void>
 ```
 
 录屏开始后，调用该接口再次弹出Picker，可动态更新录制源（窗口、屏幕）。使用Promise异步回调。
-    **说明：**  
-    
-    - 更新录制源过程中，原录制流程不中断。  
-    
-    - 通过picker动态更新录制源后，按照新的录制源进行录制。
+
+> **说明：**
+> 
+> - 更新录制源过程中，原录制流程不中断。
+> 
+> - 通过picker动态更新录制源后，按照新的录制源进行录制。
 
 **起始版本：** 22
 
@@ -351,9 +359,9 @@ presentPicker(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## release
 
@@ -381,8 +389,8 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## resumeRecording
 
@@ -412,9 +420,9 @@ resumeRecording(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not be permitted. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not be permitted. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## setMicEnabled
 
@@ -448,8 +456,8 @@ setMicEnabled(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## setPickerMode
 
@@ -471,7 +479,7 @@ setPickerMode(pickerMode: PickerMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 选择Picker模式。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_定义了在Picker中显示的内容类型：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- SCREEN\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY：仅显示屏幕列表。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- WINDOW\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY： 仅显示窗口列表。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- SCREEN\_\_\_ESCAPED\_UNDERSCORE\_\_\_AND\_\_\_ESCAPED\_UNDERSCORE\_\_\_WINDOW：同时显示屏幕列表和窗口列表（默认值）。 |
+| pickerMode | [PickerMode](arkts-media-multimedia-media-pickermode-e.md) | 是 | 选择Picker模式。&lt;br&gt;定义了在Picker中显示的内容类型：&lt;br&gt;- SCREEN_ONLY：仅显示屏幕列表。&lt;br&gt;- WINDOW_ONLY： 仅显示窗口列表。&lt;br&gt;- SCREEN_AND_WINDOW：同时显示屏幕列表和窗口列表（默认值）。 |
 
 **返回值：**
 
@@ -483,9 +491,9 @@ setPickerMode(pickerMode: PickerMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## skipPrivacyMode
 
@@ -515,7 +523,7 @@ skipPrivacyMode(windowIDs: Array<int>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowIDs | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | 是 | 需要豁免隐私的窗口列表，包括主窗口id和子窗口id，窗口属性获取方法可以参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| windowIDs | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 是 | 需要豁免隐私的窗口列表，包括主窗口id和子窗口id，窗口属性获取方法可以参考 [getWindowProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)。 |
 
 **返回值：**
 
@@ -527,8 +535,8 @@ skipPrivacyMode(windowIDs: Array<int>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## startRecording
 
@@ -536,7 +544,7 @@ skipPrivacyMode(windowIDs: Array<int>): Promise<void>
 startRecording(): Promise<void>
 ```
 
-开始录屏，在使用前需要先调用[init]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口。使用Promise异步回调。
+开始录屏，在使用前需要先调用[init](@ohos.multimedia.media:media.AVScreenCaptureRecorder.init)接口。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -556,8 +564,8 @@ startRecording(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 
 ## stopRecording
 
@@ -585,6 +593,6 @@ stopRecording(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400103 | IO error. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 

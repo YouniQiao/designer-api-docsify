@@ -6,10 +6,11 @@
 function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>
 ```
 
-Obtains information about the running processes. This API uses a promise to return the result.
-    This API is deprecated since API version 9. You are advised to use  
-    [appManager.getRunningProcessInformation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+获取有关运行进程的信息。使用Promise异步回调。
+
+> 从 API Version 9 开始废弃，建议使用
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+> 替代。
 
 **Since:** 8
 
@@ -29,9 +30,9 @@ Obtains information about the running processes. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessRunningInfo&gt;&gt; | Promise used to return the information about the running processes. |
+| Promise&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Promise对象，返回有关运行进程的信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -51,10 +52,11 @@ appManager.getProcessRunningInfos().then((data) => {
 function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo>>): void
 ```
 
-Obtains information about the running processes. This API uses an asynchronous callback to return the result.
-    This API is deprecated since API version 9. You are advised to use  
-    [appManager.getRunningProcessInformation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+获取有关运行进程的信息。使用callback异步回调。
+
+> 从 API Version 9 开始废弃，建议使用
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+> 替代。
 
 **Since:** 8
 
@@ -74,9 +76,9 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;ProcessRunningInfo&gt;&gt; | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Yes | 回调函数，返回有关运行进程的信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

@@ -1,13 +1,12 @@
 # FoldDisplayMode
 
-Enumerates the display modes of a foldable device.
-    **NOTE**
-    For foldable devices where both the inner and outer screens can serve as the primary screen �� like large or wide-  
-    folding models �� the inner screen's display mode is **FOLD\_DISPLAY\_MODE\_FULL**, and the outer screen's display  
-    mode is **FOLD\_DISPLAY\_MODE\_MAIN**.
-    For foldable devices where the outer screen serves only as an auxiliary display �� like small-folding models �� the  
-    inner screen's display mode is **FOLD\_DISPLAY\_MODE\_MAIN**, and the outer screen's display mode is  
-    **FOLD\_DISPLAY\_MODE\_SUB**.
+可折叠设备的显示模式枚举。
+
+> **说明：**
+
+> 对于内外屏均可作为主屏幕使用的折叠产品，例如大折叠、阔折叠，内屏显示状态为FOLD_DISPLAY_MODE_FULL，外屏显示状态为FOLD_DISPLAY_MODE_MAIN。
+
+> 对于外屏只有简单的辅助显示作用的折叠产品，例如小折叠，内屏显示状态为FOLD_DISPLAY_MODE_MAIN，外屏显示状态为FOLD_DISPLAY_MODE_SUB。
 
 **Since:** 10
 
@@ -23,7 +22,7 @@ Enumerates the display modes of a foldable device.
 FOLD_DISPLAY_MODE_UNKNOWN = 0
 ```
 
-The display mode of the device is unknown.
+表示设备当前折叠显示模式未知。
 
 **Since:** 10
 
@@ -41,7 +40,7 @@ The display mode of the device is unknown.
 FOLD_DISPLAY_MODE_FULL = 1
 ```
 
-The device is displayed in full screen.
+表示设备当前全屏显示。
 
 **Since:** 10
 
@@ -59,7 +58,7 @@ The device is displayed in full screen.
 FOLD_DISPLAY_MODE_MAIN = 2
 ```
 
-The primary screen of the device is displayed.
+表示设备当前主屏幕显示。
 
 **Since:** 10
 
@@ -77,7 +76,7 @@ The primary screen of the device is displayed.
 FOLD_DISPLAY_MODE_SUB = 3
 ```
 
-The secondary screen of the device is displayed.
+表示设备当前子屏幕显示。
 
 **Since:** 10
 
@@ -95,7 +94,7 @@ The secondary screen of the device is displayed.
 FOLD_DISPLAY_MODE_COORDINATION
 ```
 
-Both screens of the device are displayed in collaborative mode.
+表示设备当前双屏协同显示。
 
 **Since:** 10
 

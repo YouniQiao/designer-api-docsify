@@ -1,5 +1,11 @@
 # connectToNetwork (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## connectToNetwork
 
 ```TypeScript
@@ -36,7 +42,7 @@ Connects to Wi-Fi network.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

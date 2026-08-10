@@ -26,10 +26,10 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WantAgent信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WantAgent&gt; | 是 | 创建WantAgent的回调方法。 |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | 是 | WantAgent信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | 是 | 创建WantAgent的回调方法。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -99,7 +99,7 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WantAgent信息。 |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | 是 | WantAgent信息。 |
 
 **返回值：**
 
@@ -107,7 +107,7 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 | --- | --- |
 | Promise&lt;WantAgent&gt; | 以Promise形式返回WantAgent。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

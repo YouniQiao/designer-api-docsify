@@ -1,6 +1,6 @@
 # SubMenuExpandingMode
 
-Enumerates the submenu expanding modes.
+Menu子菜单展开样式枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the submenu expanding modes.
 SIDE_EXPAND = 0
 ```
 
-Default mode. Submenus are expanded on the side on the same plane.
+默认展开样式，子菜单位于同一平面侧边展开。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Default mode. Submenus are expanded on the side on the same plane.
 EMBEDDED_EXPAND = 1
 ```
 
-Embedded mode. Submenus are expanded while embedded within the main menu.
+直接展开样式，子菜单嵌于主菜单内展开。
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Embedded mode. Submenus are expanded while embedded within the main menu.
 STACK_EXPAND = 2
 ```
 
-Stack mode. Submenus are expanded above the main menu.
+堆叠样式，子菜单浮于主菜单上方展开。
 
 **Since:** 12
 

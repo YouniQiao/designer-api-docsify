@@ -1,12 +1,18 @@
 # isParticipant
 
+## Modules to Import
+
+```TypeScript
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## isParticipant
 
 ```TypeScript
 function isParticipant(): boolean
 ```
 
-Query if the app is participating the HiRetrieval project.
+查询此设备是否正在参与应用灰度活动。
 
 **Since:** 26.0.0
 
@@ -22,5 +28,5 @@ Query if the app is participating the HiRetrieval project.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if this app is participating HiRetrieval project, false otherwise. |
+| boolean | 标识此设备现在是否正在参与应用灰度活动，true表示正在参与，false表示未参与。 |
 

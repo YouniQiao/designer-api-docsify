@@ -12,15 +12,21 @@ Surface configuration parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## flip
 
 ```TypeScript
 flip?: FlipOptions
 ```
 
-This value indicates whether the video is reversed.
+视频是否翻转。
 
-**Type:** FlipOptions
+**Type:** [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md)
 
 **Since:** 18
 
@@ -40,9 +46,9 @@ This value indicates whether the video is reversed.
 format?: VideoPixelFormat
 ```
 
-Video PixelFormat, this option must be configured on the sender.Must be set before stream starts and cannot update once set.
+视频像素格式，此选项必须在发送端配置。必须在流启动前设置，设置后不可更新。
 
-**Type:** VideoPixelFormat
+**Type:** [VideoPixelFormat](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md)
 
 **Since:** 18
 
@@ -62,9 +68,9 @@ Video PixelFormat, this option must be configured on the sender.Must be set befo
 height: int
 ```
 
-Encoding length. Must be set before stream starts and cannot update once set.
+编码长度。必须在流启动前设置，设置后不可更新。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -84,9 +90,9 @@ Encoding length. Must be set before stream starts and cannot update once set.
 rotation?: int
 ```
 
-This value identifies the rotation angle of the video.the range of rotation angle should be {0, 90, 180, 270}, default is 0
+视频旋转角度。旋转角度范围为{0, 90, 180, 270}，默认为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -106,9 +112,9 @@ This value identifies the rotation angle of the video.the range of rotation angl
 width: int
 ```
 
-Encoding width. Must be set before stream starts and cannot update once set.
+编码宽度。必须在流启动前设置，设置后不可更新。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 

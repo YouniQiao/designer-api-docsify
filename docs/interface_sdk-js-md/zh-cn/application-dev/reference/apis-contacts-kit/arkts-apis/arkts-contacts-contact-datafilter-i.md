@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.Contacts
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## field
 
 ```TypeScript
@@ -18,7 +24,7 @@ field: DataField
 
 联系人数据字段。
 
-**类型：** DataField
+**类型：** [DataField](arkts-contacts-contact-datafield-e.md)
 
 **起始版本：** 15
 

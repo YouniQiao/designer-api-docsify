@@ -10,6 +10,12 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { PlainArray } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
@@ -32,23 +38,7 @@ $_iterator(): IterableIterator<[int, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[int, T]&gt; |  |
-
-**示例：**
-
-```TypeScript
-let plainArray: PlainArray<string> = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-
-let iter = plainArray.$_iterator();
-let temp: IteratorResult<[int, string]> = iter.next();
-while(!temp.done) {
-  console.info("key:" + temp.value![0]);
-  console.info("value:" + temp.value![1]);
-  temp = iter.next();
-}
-```
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, T]&gt; |  |
 
 ## [Symbol.iterator]
 
@@ -72,15 +62,15 @@ while(!temp.done) {
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[number, T]&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, T]&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -134,16 +124,16 @@ add(key: int, value: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 添加成员数据的键名。取值范围为[-2147483648, 2147483647]，即int32范围。 |
+| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 添加成员数据的键名。取值范围为[-2147483648, 2147483647]，即int32范围。 |
 | value | T | 是 | 添加成员数据的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
+| 10200011 | The add method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -173,9 +163,9 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
+| 10200011 | The clear method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -208,15 +198,15 @@ clone(): PlainArray<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 返回新的对象的克隆实例。 |
+| [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | 返回新的对象的克隆实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clone method cannot be bound. |
+| 10200011 | The clone method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -248,9 +238,9 @@ PlainArray的构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The PlainArray's constructor cannot be directly invoked. |
+| 10200012 | The PlainArray's constructor cannot be directly invoked. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -285,9 +275,9 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -334,21 +324,7 @@ forEach(callbackFn: PlainArrayForEachCb<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 回调函数。 |
-
-**示例：**
-
-```TypeScript
-import { PlainArrayForEachCb } from '@kit.ArkTS';
-
-let plainArray: PlainArray<string> = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let plainArrayCb: PlainArrayForEachCb<string> = (value: string, key: int, PlainArray: PlainArray<string>) => {
-  console.info("value: " + value, " key: " + key);
-}
-plainArray.forEach(plainArrayCb);
-```
+| callbackFn | [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md)&lt;T&gt; | 是 | 回调函数。 |
 
 ## get
 
@@ -384,9 +360,9 @@ get(key: number): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound. |
+| 10200011 | The get method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -430,16 +406,7 @@ get(key: int): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
-
-**示例：**
-
-```TypeScript
-let plainArray: PlainArray<string> = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.get(1);
-```
+| 10200001 | The value of index is out of range. |
 
 ## getIndexOfKey
 
@@ -469,21 +436,21 @@ getIndexOfKey(key: int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定key。需要小于等于int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max即2147483647。 |
+| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定key。需要小于等于int32_max即2147483647。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回指定key对应的下标值，查找失败返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定key对应的下标值，查找失败返回-1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOfKey method cannot be bound. |
+| 10200011 | The getIndexOfKey method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -527,15 +494,15 @@ getIndexOfValue(value: T): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回指定value元素第一次出现时的下标值，查找失败返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定value元素第一次出现时的下标值，查找失败返回-1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOfValue method cannot be bound. |
+| 10200011 | The getIndexOfValue method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -573,21 +540,21 @@ getKeyAt(index: int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定下标。需要小于等于int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定下标。需要小于等于int32_max即2147483647。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回该下标元素键值对中的key值，失败返回undefined。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回该下标元素键值对中的key值，失败返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getKeyAt method cannot be bound. |
+| 10200011 | The getKeyAt method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -625,7 +592,7 @@ getValueAt(index: int): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定下标。需要小于等于int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定下标。需要小于等于int32_max即2147483647。 |
 
 **返回值：**
 
@@ -637,10 +604,10 @@ getValueAt(index: int): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getValueAt method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
+| 10200011 | The getValueAt method cannot be bound. |
+| 10200001 | The value of index is out of range. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -678,7 +645,7 @@ has(key: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定key。取值范围为[-2147483648, 2147483647]，即int32范围。 |
+| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定key。取值范围为[-2147483648, 2147483647]，即int32范围。 |
 
 **返回值：**
 
@@ -690,9 +657,9 @@ has(key: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
+| 10200011 | The has method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -729,9 +696,9 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+| 10200011 | The isEmpty method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -761,7 +728,7 @@ remove(key: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | number | 是 | 指定key。需要小于等于int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max即2147483647。 |
+| key | number | 是 | 指定key。需要小于等于int32_max即2147483647。 |
 
 **返回值：**
 
@@ -773,9 +740,9 @@ remove(key: number): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+| 10200011 | The remove method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -819,16 +786,7 @@ remove(key: int): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
-
-**示例：**
-
-```TypeScript
-let plainArray: PlainArray<string> = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.remove(2);
-```
+| 10200001 | The value of index is out of range. |
 
 ## removeAt
 
@@ -852,7 +810,7 @@ removeAt(index: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 指定元素下标。需要小于等于int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max即2147483647。 |
+| index | number | 是 | 指定元素下标。需要小于等于int32_max即2147483647。 |
 
 **返回值：**
 
@@ -864,9 +822,9 @@ removeAt(index: number): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeAt method cannot be bound. |
+| 10200011 | The removeAt method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -910,16 +868,7 @@ removeAt(index: int): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
-
-**示例：**
-
-```TypeScript
-let plainArray: PlainArray<string> = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.removeAt(1);
-```
+| 10200001 | The value of index is out of range. |
 
 ## removeRangeFrom
 
@@ -949,23 +898,23 @@ removeRangeFrom(index: int, size: int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 删除元素的起始下标。取值范围为[0, PlainArray.length-1]，且需要小于等于int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max即2147483647。 |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 期望删除元素个数。需要大于0，小于等于int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 删除元素的起始下标。取值范围为[0, PlainArray.length-1]，且需要小于等于int32_max即2147483647。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 期望删除元素个数。需要大于0，小于等于int32_max即2147483647。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 实际删除元素个数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 实际删除元素个数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeRangeFrom method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
+| 10200011 | The removeRangeFrom method cannot be bound. |
+| 10200001 | The value of index is out of range. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -1004,19 +953,17 @@ setValueAt(index: int, value: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定替换数据下标。取值范围为[0, PlainArray.length-1]，且需要小于等于int32\_\_\_ESCAPED\_UNDERSCORE\_\_\_max即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定替换数据下标。取值范围为[0, PlainArray.length-1]，且需要小于等于int32_max即2147483647。 |
 | value | T | 是 | 替换键值对中的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The setValueAt method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
+| 10200011 | The setValueAt method cannot be bound. |
+| 10200001 | The value of index is out of range. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string | number>();
@@ -1026,17 +973,6 @@ plainArray.add(2, "sparrow");
 plainArray.setValueAt(1, 3546);
 // 获取并打印plainArray中下标为1的键值对中的value值
 let result = plainArray.getValueAt(1);
-console.info("result:", result);  // result: 3546
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let plainArray: PlainArray<string | int> = new PlainArray<string | int>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-plainArray.setValueAt(1, 3546);
-let result = plainArray.getValueAt(1); 
 console.info("result:", result);  // result: 3546
 ```
 
@@ -1068,9 +1004,9 @@ toString(): String
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
+| 10200011 | The toString method cannot be bound. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let plainArray = new PlainArray<string>();

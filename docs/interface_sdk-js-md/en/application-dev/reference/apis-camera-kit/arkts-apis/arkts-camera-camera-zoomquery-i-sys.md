@@ -1,12 +1,10 @@
 # ZoomQuery
 
-ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range.
-    **NOTE**  
-    
-    - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
-    preserved the initial version information of inner elements. As a result, you might see outer element's @since  
-    version number being higher than that of the inner elements. However, this discrepancy does not affect the  
-    functionality of the interface.
+提供了与设备的缩放相关的查询功能，包括获取支持的缩放比例范围。
+
+> **说明：**
+> 
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **Since:** 12
 
@@ -15,6 +13,12 @@ ZoomQuery provides APIs to query the zoom feature of a device camera, including 
 <!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## isZoomCenterPointSupported
 
@@ -44,6 +48,6 @@ Checks whether zoom center point is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 

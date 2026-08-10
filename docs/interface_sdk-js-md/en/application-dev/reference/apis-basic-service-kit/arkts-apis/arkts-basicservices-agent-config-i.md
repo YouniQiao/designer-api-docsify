@@ -1,6 +1,6 @@
 # Config
 
-Provides the configuration information of an upload or download task.
+上传/下载任务的配置信息。
 
 **Since:** 10
 
@@ -10,18 +10,24 @@ Provides the configuration information of an upload or download task.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## action
 
 ```TypeScript
 action: Action
 ```
 
-Task action.
+任务操作选项。
 
-- **UPLOAD**: Upload tasks.  
-- **DOWNLOAD**: Download tasks.
+- UPLOAD表示上传任务。  
+- DOWNLOAD表示下载任务。
 
-**Type:** Action
+**Type:** [Action](arkts-basicservices-agent-action-e.md)
 
 **Since:** 10
 
@@ -39,13 +45,12 @@ Task action.
 begins?: long
 ```
 
-File start point of the task, in bytes. It is usually used for resumable transfers. The default value is **0**.The value is a closed interval.
+文件起点，单位为字节（B），通常情况下用于断点续传。默认值为0，取值为闭区间，表示从头开始传输。
 
-- For the download task, the value is obtained by sending an HTTP range request to read the start position when  
-the server starts to download files.  
-- For the upload task, the value is obtained at the start position of the upload.
+- 下载时，请求读取服务器开始下载文件时的起点位置（HTTP协议中设置"Range"选项）。  
+- 上传时，读取需上传的文件的起点位置。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -63,10 +68,9 @@ the server starts to download files.
 data?: string | Array<FormItem>
 ```
 
- For the download task, the value is a string, typically in JSON format (an object will be converted to a JSON  
-string); the default value is null.  
-- For the upload task, the value is Array&lt;  
-[FormItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_&gt;. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
+- 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。  
+- 上传时，data是表单项数组Array&lt;  
+[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;。从API version15开始，创建单个任务可以上传最多100个文件。默认为空。
 
 **Type:** string \| Array&lt;FormItem&gt;
 
@@ -86,7 +90,7 @@ string); the default value is null.
 description?: string
 ```
 
-Task description. The value contains a maximum of 1024 characters. The default value is a null string.
+任务的详细信息，其最大长度为1024个字符，默认值为空字符串。
 
 **Type:** string
 
@@ -106,13 +110,12 @@ Task description. The value contains a maximum of 1024 characters. The default v
 ends?: long
 ```
 
-File end point of the task, in bytes. It is usually used for resumable transfers. The default value is **-1**.The value is a closed interval.
+文件终点，单位为字节（B），通常情况下用于断点续传。默认值为-1，取值为闭区间，表示传输到整个文件末尾结束。
 
-- For the download task, the value is obtained by sending an HTTP range request to read the end position when  
-the server starts to download files.  
-- For the upload task, the value is obtained at the end position of the upload.
+- 下载时，请求读取服务器开始下载文件时的结束位置（HTTP协议中设置"Range"选项）。  
+- 上传时，读取需上传的文件的结束位置。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -130,7 +133,7 @@ the server starts to download files.
 extras?: object
 ```
 
-Additional information of the task. This parameter is left empty by default.
+配置的附加功能，默认为空。
 
 **Type:** object
 
@@ -150,12 +153,10 @@ Additional information of the task. This parameter is left empty by default.
 gauge?: boolean
 ```
 
-Whether to send progress notifications. This parameter applies only to background tasks. The default value is  
-**false**.
+后台任务的过程进度通知策略，仅应用于后台任务，默认值为false。
 
-- **false**: Progress notifications are not sent. This means that a notification is sent only to indicate the  
-result of the total task.  
-- **true**: Progress notifications are sent to indicate the result of each file.
+- false：代表仅完成或失败的通知。  
+- true：发出每个进度已完成或失败的通知。
 
 **Type:** boolean
 
@@ -175,10 +176,10 @@ result of the total task.
 headers?: object
 ```
 
-HTTP headers to be included in the task.
+添加要包含在任务中的HTTP协议标志头。
 
-- For the upload task, the default **Content-Type** is **multipart/form-data**.  
-- For the download task, the default **Content-Type** is **application/json**.
+- 上传请求，默认的Content-Type为"multipart/form-data"。  
+- 下载请求，默认的Content-Type为"application/json"。
 
 **Type:** object
 
@@ -198,9 +199,9 @@ HTTP headers to be included in the task.
 index?: int
 ```
 
-Path index of the task. It is usually used for resumable transfers. The default value is **0**.
+任务的路径索引，通常情况下用于任务断点续传，默认为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -218,10 +219,10 @@ Path index of the task. It is usually used for resumable transfers. The default 
 metered?: boolean
 ```
 
-Whether the task is allowed on a metered network. The default value is **false**.
+是否允许在按流量计费的网络中工作，默认为false。
 
-- **true**: allowed  
-- **false**: not allowed
+- true：是   
+- false：否
 
 **Type:** boolean
 
@@ -243,10 +244,10 @@ Whether the task is allowed on a metered network. The default value is **false**
 method?: string
 ```
 
-Standard HTTP method for the task. The value can be **GET**, **POST**, or **PUT**, which is case-insensitive.
+上传或下载HTTP的标准方法，包括GET、POST和PUT，不区分大小写。
 
-- For the upload task, use **PUT** or **POST**. The default value is **PUT**.  
-- For the download task, use **GET** or **POST**. The default value is **GET**.
+- 上传时，使用PUT或POST，默认值为PUT。  
+- 下载时，使用GET或POST，默认值为GET。
 
 **Type:** string
 
@@ -266,9 +267,9 @@ Standard HTTP method for the task. The value can be **GET**, **POST**, or **PUT*
 minSpeed?: MinSpeed
 ```
 
-Minimum speed, which is disabled by default.
+最低限速自定义设置，默认不启用最低限速。
 
-**Type:** MinSpeed
+**Type:** [MinSpeed](arkts-basicservices-agent-minspeed-i.md)
 
 **Since:** 20
 
@@ -284,9 +285,9 @@ Minimum speed, which is disabled by default.
 mode?: Mode
 ```
 
-Task mode. The default mode is background. Since API version 20, the task mode for downloading files to the user file folder must be set to **request.agent.Mode.FOREGROUND**.
+任务模式，默认为后台任务。从API version 20开始，下载到用户文件场景必须为request.agent.Mode.FOREGROUND。
 
-**Type:** Mode
+**Type:** [Mode](arkts-basicservices-agent-mode-e.md)
 
 **Since:** 10
 
@@ -304,12 +305,12 @@ Task mode. The default mode is background. Since API version 20, the task mode f
 multipart?: boolean
 ```
 
-Whether to use a single request to upload multiple files. If yes, **multipart/form-data** must be used.
+是否使用单个请求进行上传，单个请求上传时必定使用multipart/form-data。
 
-- **false**: A single request is used to upload one file.  
-- **true**: A single request is used to upload multiple files.
+- false：每个文件使用一个请求传输。   
+- true：使用多文件单请求上传。 
 
-The default value is **false**.
+默认值为false。
 
 **Type:** boolean
 
@@ -327,9 +328,9 @@ The default value is **false**.
 network?: Network
 ```
 
-Network used for the task. The default value is **ANY** (Wi-Fi or cellular).
+网络选项，当前支持无线网络WIFI和蜂窝数据网络CELLULAR，默认为ANY（WIFI或CELLULAR）。
 
-**Type:** Network
+**Type:** [Network](arkts-basicservices-agent-network-e.md)
 
 **Default:** Network.ANY
 
@@ -349,9 +350,9 @@ Network used for the task. The default value is **ANY** (Wi-Fi or cellular).
 notification?: Notification
 ```
 
-Custom settings for the notification bar. The default value is **{}**.
+通知栏自定义设置。默认值为`{}`。
 
-**Type:** Notification
+**Type:** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **Since:** 15
 
@@ -367,14 +368,14 @@ Custom settings for the notification bar. The default value is **{}**.
 overwrite?: boolean
 ```
 
-Whether to overwrite an existing file during the download. The default value is **false**.
+下载过程中路径已存在时的解决方案选择，默认为false。
 
-- **true**: Overwrite the existing file.  
-- **false**: Do not overwrite the existing file. In this case, the download fails.
+- true，覆盖已存在的文件。  
+- false，下载失败。
 
-Since API version 20, the overwrite mode for downloading files to the user file folder must be set to **true**.
+从API version 20开始，下载到用户文件场景必须为true。
 
-In this case, do not create multiple tasks to download content to the same file at a time. Otherwise, the file content will be disordered.
+设置为 `true` 时，不建议创建多个任务同时往同一个文件下载内容，会导致文件内容混乱。
 
 **Type:** boolean
 
@@ -394,10 +395,10 @@ In this case, do not create multiple tasks to download content to the same file 
 precise?: boolean
 ```
 
- If this parameter is set to **true**, the task fails when the file size cannot be obtained.  
-- If this parameter is set to **false**, the task continues when the file size is set to **-1**.
+- 如果设置为true，在上传/下载无法获取文件大小时任务失败。  
+- 如果设置为false，将文件大小设置为-1时任务继续。
 
-The default value is **false**.
+默认值为false。
 
 **Type:** boolean
 
@@ -417,11 +418,9 @@ The default value is **false**.
 priority?: int
 ```
 
-Priority of the task. The priority of a foreground task is higher than that of a background task. For tasks in the same mode, a smaller value indicates a higher priority.
+任务的优先级。前台任务的优先级比后台任务高。任务模式相同的情况下，该配置项的数字越小优先级越高，默认值为0。
 
-Default value: **0
-
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -437,9 +436,9 @@ Default value: **0
 proxy?: string
 ```
 
-Proxy address. The value contains a maximum of 512 characters.
+设置代理地址，其最大长度为512个字符，默认为空。
 
-It is in the format of **http://&lt;***domain or address***&gt;:&lt;***port***&gt;**. By default, this parameter is left empty.
+代理地址格式:"http://&lt;domain or address&gt;:&lt;port&gt;"
 
 **Type:** string
 
@@ -457,10 +456,10 @@ It is in the format of **http://&lt;***domain or address***&gt;:&lt;***port***&g
 redirect?: boolean
 ```
 
-Whether redirection is allowed. The default value is **true**.
+是否允许重定向，默认为true。
 
-- **true**: allowed  
-- **false**: not allowed
+- true：是   
+- false：否
 
 **Type:** boolean
 
@@ -480,10 +479,10 @@ Whether redirection is allowed. The default value is **true**.
 retry?: boolean
 ```
 
-Whether automatic retry is enabled for the task. This parameter is only applicable to background tasks. The default value is **true**.
+是否为后台任务启用自动重试，仅应用于后台任务，默认为true。
 
-- **true**: enabled  
-- **false**: not allowed
+- true：是   
+- false：否
 
 **Type:** boolean
 
@@ -503,10 +502,10 @@ Whether automatic retry is enabled for the task. This parameter is only applicab
 roaming?: boolean
 ```
 
-Whether the task is allowed on a roaming network. The default value is **true**.
+是否允许在漫游网络中工作，默认为true。
 
-- **true**: allowed  
-- **false**: not allowed
+- true：是   
+- false：否
 
 **Type:** boolean
 
@@ -526,20 +525,16 @@ Whether the task is allowed on a roaming network. The default value is **true**.
 saveas?: string
 ```
 
-Path for storing downloaded files. The options are as follows:
+保存下载文件的路径，包括如下几种：
 
-- Relative path, which is in the cache directory of the caller, for example, **./xxx/yyy/zzz.html** or  
-**xxx/yyy/zzz.html**.  
-- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache  
-directory of the caller (that is, the input **context**), and **internal://cache** corresponds to  
-**context.cacheDir**, for example, **internal://cache/path/to/file.txt**.  
-- Application sandbox path. Only the **base** directory and its subdirectories are supported, for example,  
-**./data/storage/el1/base/path/to/file.txt**.  
-- File protocol path, which can be the path of an application file or a user file. For the application file,  
-the application bundle name must be matched and only the **base** directory and its subdirectories are supported, for example, **file://com.example.test/data/storage/el2/base/file.txt**. For the user file, its path must be the user file URI created by the caller.
+- 相对路径，位于调用方的缓存路径下，如"./xxx/yyy/zzz.html"、"xxx/yyy/zzz.html"。  
+- internal协议路径，支持"internal://"及其子路径，internal为调用方（传入的context）对应路径，"internal://cache"对应context.cacheDir。如"  
+internal://cache/path/to/file.txt"。  
+- 应用沙箱目录，只支持到base及其子目录下，如"/data/storage/el1/base/path/to/file.txt"。  
+- file协议路径，支持应用文件和用户文件，应用文件必须匹配应用包名，只支持到base及其子目录下，如"file://com.example.test/data/storage/el2/base/file.txt"。用户  
+文件必须为调用方创建好的用户文件uri。
 
-Since API version 20, the default file path can be the cache path of the caller (that is, the passed context),except for  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. The default file name is the part truncated from the last slash (/) in the URL.
+从API version 20开始，除[下载网络资源文件至用户文件](../../../basic-services/request/app-file-upload-download.md#下载网络资源文件至用户文件)外，其他可默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。
 
 **Type:** string
 
@@ -561,13 +556,12 @@ Since API version 20, the default file path can be the cache path of the caller 
 timeout?: Timeout
 ```
 
-Custom timeout interval. The default connection timeout interval is 60 seconds, and the default total timeout interval is 604800 seconds (one week). If retry is set to **true**, the  
-[timeout]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ event triggers immediate retry, which will obscure the timeout event itself. As a result, the internal  
-[timeout]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ condition has been triggered but the  
-[timeout]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ event is not observable. Set **retry** to **false** to explicitly observe the  
-[timeout]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ event.
+超时时间自定义设置，连接超时时间默认60秒，总超时时间默认604800秒（1周）。当retry参数为true时，  
+[timeout](arkts-basicservices-agent-timeout-i.md)事件会触发立即重试，导致  
+[timeout](arkts-basicservices-agent-timeout-i.md)在外部观察中被重试动作所掩盖，但内部[timeout](arkts-basicservices-agent-timeout-i.md)条件已实际触发。若需显性观察  
+[timeout](arkts-basicservices-agent-timeout-i.md)事件，需关闭retry参数。
 
-**Type:** Timeout
+**Type:** [Timeout](arkts-basicservices-agent-timeout-i.md)
 
 **Since:** 20
 
@@ -583,7 +577,7 @@ Custom timeout interval. The default connection timeout interval is 60 seconds, 
 title?: string
 ```
 
-Task title. The value contains a maximum of 256 characters. The default value is **upload** or **download** in lowercase. Set the value to that of **action**.
+任务标题，其最大长度为256个字符，默认值为小写的 upload 或 download，与上面的 action 保持一致。
 
 **Type:** string
 
@@ -603,8 +597,8 @@ Task title. The value contains a maximum of 256 characters. The default value is
 token?: string
 ```
 
-Task token. To query a task with a token, you need to provide the token and use  
-[request.agent.touch]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.Otherwise, the specified task cannot be queried. The value contains 8 to 2048 bytes. This parameter is left empty by default.
+任务令牌。查询带有token的任务需提供token并通过  
+[request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)查询，否则无法查询到指定任务。其最小为8个字节，最大为2048个字节。默认为空。
 
 **Type:** string
 
@@ -624,8 +618,8 @@ Task token. To query a task with a token, you need to provide the token and use
 url: string
 ```
 
-Resource URL. From API version 6 to 14, the value contains a maximum of 2048 characters; since API version 15,the value contains a maximum of 8192 characters.  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is supported.
+资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持  
+[HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
 
 **Type:** string
 

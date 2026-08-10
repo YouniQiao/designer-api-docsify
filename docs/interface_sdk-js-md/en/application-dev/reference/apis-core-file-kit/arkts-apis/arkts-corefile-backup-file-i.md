@@ -1,6 +1,6 @@
 # File (System API)
 
-Corresponds to a file, including its metadata and data and the file's manifest data.Files are useful as IPC and backup services.
+文件对象，包含文件元数据、文件数据和清单文件信息。用于客户端与备份服务进行IPC。
 
 **Inheritance/Implementation:** File extends [FileMeta](arkts-corefile-backup-filemeta-i-sys.md), [FileData](arkts-corefile-backup-filedata-i-sys.md), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md)
 
@@ -13,4 +13,10 @@ Corresponds to a file, including its metadata and data and the file's manifest d
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
 

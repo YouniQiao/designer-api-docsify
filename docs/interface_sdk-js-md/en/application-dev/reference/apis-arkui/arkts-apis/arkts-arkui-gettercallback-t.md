@@ -4,7 +4,7 @@
 export declare type GetterCallback<T> = () => T
 ```
 
-Getter callback type. It is used to get value.
+获取绑定值的回调方法。
 
 **Since:** 23
 
@@ -13,6 +13,4 @@ Getter callback type. It is used to get value.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare type GetterCallback<T> = () => T--><!--Device-unnamed-export declare type GetterCallback<T> = () => T-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

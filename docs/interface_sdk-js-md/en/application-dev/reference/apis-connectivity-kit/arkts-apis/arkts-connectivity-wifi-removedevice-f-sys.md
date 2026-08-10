@@ -1,5 +1,11 @@
 # removeDevice (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## removeDevice
 
 ```TypeScript
@@ -8,7 +14,7 @@ function removeDevice(id: number): boolean
 
 Deletes a Wi-Fi network with a specified ID.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_After a Wi-Fi network is deleted, its configuration will be deleted from the list of Wi-Fi configurations.If the Wi-Fi network is being connected, the connection will be interrupted.The application can only delete Wi-Fi networks it has created.
+&lt;p&gt;After a Wi-Fi network is deleted, its configuration will be deleted from the list of Wi-Fi configurations.If the Wi-Fi network is being connected, the connection will be interrupted.The application can only delete Wi-Fi networks it has created.
 
 **Since:** 7
 
@@ -38,7 +44,7 @@ Deletes a Wi-Fi network with a specified ID.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

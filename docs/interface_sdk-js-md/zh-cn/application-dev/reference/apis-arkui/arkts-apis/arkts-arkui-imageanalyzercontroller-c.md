@@ -54,5 +54,5 @@ getImageAnalyzerSupportTypes(): ImageAnalyzerType[]
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 对应组件支持的AI分析类型。 |
+| [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[] | 对应组件支持的AI分析类型。 |
 

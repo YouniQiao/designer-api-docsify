@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height: long
 
 矩形区域的高度，单位为px，该参数为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ left: long
 
 矩形区域的左边界，单位为px，该参数为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -58,7 +64,7 @@ top: long
 
 矩形区域的上边界，单位为px，该参数为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -78,7 +84,7 @@ width: long
 
 矩形区域的宽度，单位为px，该参数为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

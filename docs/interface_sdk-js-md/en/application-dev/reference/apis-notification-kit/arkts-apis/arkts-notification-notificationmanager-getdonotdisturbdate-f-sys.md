@@ -1,14 +1,18 @@
 # getDoNotDisturbDate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getDoNotDisturbDate
 
 ```TypeScript
 function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
-Obtains the DND time. This API uses an asynchronous callback to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
+查询免打扰时间。使用callback异步回调。
 
 **Since:** 9
 
@@ -26,22 +30,22 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | 查询免打扰时间回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,9 +68,7 @@ notificationManager.getDoNotDisturbDate(getDoNotDisturbDateCallback);
 function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 ```
 
-Obtains the DND time. This API uses a promise to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
+查询免打扰时间。使用Promise异步回调。
 
 **Since:** 9
 
@@ -84,21 +86,21 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回获取查询到的免打扰时间。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -117,9 +119,7 @@ notificationManager.getDoNotDisturbDate().then((data: notificationManager.DoNotD
 function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
-Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
+查询指定用户的免打扰时间。使用callback异步回调。
 
 **Since:** 9
 
@@ -137,24 +137,24 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | 查询免打扰时间回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 1600008 | The user does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -180,9 +180,7 @@ notificationManager.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
 function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>
 ```
 
-Obtains the DND time of a specified user. This API uses a promise to return the result.
-
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
+查询指定用户的免打扰时间。使用Promise异步回调。
 
 **Since:** 9
 
@@ -200,29 +198,29 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回获取查询到的免打扰时间。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 1600008 | The user does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

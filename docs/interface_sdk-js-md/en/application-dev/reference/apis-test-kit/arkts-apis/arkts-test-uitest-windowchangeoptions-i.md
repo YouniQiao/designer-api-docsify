@@ -1,6 +1,6 @@
 # WindowChangeOptions
 
-Describes the extended configuration of window change event listening,which is used to specify the listening process configuration and event filtering conditions.
+窗口变化事件监听的扩展配置，用于指定监听过程配置及事件筛选条件。
 
 **Since:** 22
 
@@ -10,13 +10,19 @@ Describes the extended configuration of window change event listening,which is u
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName?: string
 ```
 
-Bundle name of the window to be listened for. By default, all windows are listened for.
+监听窗口对应包名，缺省时默认监听所有窗口。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Bundle name of the window to be listened for. By default, all windows are listen
 timeout?: int
 ```
 
-Listening timeout interval, to prevent listening failures casued by event notification delay.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range: The value should be >= 500\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Default value: 10000\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Unit: ms
+监听超时时间，取值范围：大于等于500的整数，默认值为10000，单位：ms。传入不在范围内的值抛出错误码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

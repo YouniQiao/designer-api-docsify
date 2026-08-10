@@ -10,6 +10,12 @@ ACB连接状态参数。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -38,7 +44,7 @@ state: AcbState
 
 ACB连接状态
 
-**类型：** AcbState
+**类型：** [AcbState](arkts-connectivity-remotedevice-acbstate-t.md)
 
 **起始版本：** 26.0.0
 

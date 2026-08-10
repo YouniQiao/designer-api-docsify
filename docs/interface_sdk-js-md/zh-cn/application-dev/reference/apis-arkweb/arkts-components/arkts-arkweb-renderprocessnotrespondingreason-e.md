@@ -1,6 +1,6 @@
 # RenderProcessNotRespondingReason
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when onRenderProcessNotResponding is called.
+Enum type supplied to {@link RenderProcessNotRespondingData} when onRenderProcessNotResponding is called.
 
 **起始版本：** 12
 

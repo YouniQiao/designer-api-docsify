@@ -10,6 +10,12 @@ Provides preferred playback settings for player.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## enableCameraPostprocessing
 
 ```TypeScript

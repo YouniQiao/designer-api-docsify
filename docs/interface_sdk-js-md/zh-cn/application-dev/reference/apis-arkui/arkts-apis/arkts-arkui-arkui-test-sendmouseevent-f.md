@@ -24,7 +24,7 @@ export declare function sendMouseEvent(event: MouseEvent): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 鼠标事件，event参数见[MouseEvent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_介绍。 |
+| event | [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) | 是 | 鼠标事件，event参数见[MouseEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-mouseevent-i.md/arkts-input-multimodalinput-mouseevent-mouseevent-i.md)介绍。 |
 
 **返回值：**
 

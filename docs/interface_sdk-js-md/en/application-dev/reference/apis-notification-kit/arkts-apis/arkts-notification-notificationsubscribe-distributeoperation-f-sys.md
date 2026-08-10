@@ -1,12 +1,18 @@
 # distributeOperation (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+```
+
 ## distributeOperation
 
 ```TypeScript
 function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>
 ```
 
-Triggers a notification for cross-device operations, such as tap-to-redirect and quick reply. This API uses a promise to return the result.
+触发指定通知的跨设备协同操作（例如通知跨设备点击跳转、通知跨设备快捷回复等）。使用Promise异步回调。
 
 **Since:** 18
 
@@ -24,26 +30,26 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashcode | string | Yes | Unique notification ID. |
-| operationInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Cross-device operation information. This parameter is left empty by default. |
+| hashcode | string | Yes | 通知唯一ID。 |
+| operationInfo | [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | No | 跨设备协同操作信息，默认为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) | Distributed operation failed. |
-| [1600021](../errorcode-notification.md#1600021-crossdevice-communication-timeout) | Distributed operation timed out. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600010 | Distributed operation failed. |
+| 201 | Permission denied. |
+| 202 | Not system application to call the interface. |
+| 1600021 | Distributed operation timed out. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,7 +64,7 @@ let operationInfo: notificationSubscribe.OperationInfo = {
 notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
   console.info("distributeOperation success");
 }).catch((err: BusinessError) => {
-  console.error(`distributeOperation fail: ${JSON.stringify(err)}`);
+  console.error(`distributeOperation fail, code is ${err.code}, message is ${err.message}`);
 });
 ```
 

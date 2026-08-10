@@ -12,6 +12,12 @@ Defines the camera prelaunch configuration.Currently, the configuration is used 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## activeTime
 
 ```TypeScript
@@ -20,7 +26,7 @@ activeTime?: int
 
 Activation time, in minutes.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -40,7 +46,7 @@ cameraDevice: CameraDevice
 
 Camera device.
 
-**Type:** CameraDevice
+**Type:** [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md)
 
 **Since:** 10
 
@@ -60,7 +66,7 @@ restoreParamType?: RestoreParamType
 
 Type of the parameter used for prelaunch.
 
-**Type:** RestoreParamType
+**Type:** [RestoreParamType](arkts-camera-camera-restoreparamtype-e-sys.md)
 
 **Since:** 11
 
@@ -80,7 +86,7 @@ settingParam?: SettingParam
 
 Setting parameter.
 
-**Type:** SettingParam
+**Type:** [SettingParam](arkts-camera-camera-settingparam-i-sys.md)
 
 **Since:** 11
 

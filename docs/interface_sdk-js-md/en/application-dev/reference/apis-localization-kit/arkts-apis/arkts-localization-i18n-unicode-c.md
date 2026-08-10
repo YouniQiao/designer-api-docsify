@@ -1,6 +1,6 @@
 # Unicode
 
-Provides the API for accessing unicode character properties. For example, determine whether a character is a number.
+提供字符属性相关的能力，包括判断字符是否为空格、数字和字母等。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides the API for accessing unicode character properties. For example, determ
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## detectEncoding
 
 ```TypeScript
 static detectEncoding(bytes: Uint8Array): EncodingInfo
 ```
 
-Detects the encoding information of the input byte stream.
+识别输入字节流的编码信息。
 
 **Since:** 26.0.0
 
@@ -34,13 +40,13 @@ Detects the encoding information of the input byte stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bytes | Uint8Array | Yes | Input byte stream. To detect the encoding of a text string, convert the text to a byte stream first while preserving its original format. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Byte stream to be identified and encoded |
+| bytes | Uint8Array | Yes | 输入字节流。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | An object containing the detected encoding name and detection confidence level. |
+| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) | 编码信息，包含编码名称和置信度。 |
 
 ## getType
 
@@ -48,7 +54,7 @@ Detects the encoding information of the input byte stream.
 static getType(ch: string): string
 ```
 
-Obtains the type of the input character.
+获取输入的字符的一般类别值。
 
 **Since:** 23
 
@@ -64,13 +70,13 @@ Obtains the type of the input character.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Type of the input character. |
+| string | 输入字符的一般类别值。取值包括： &lt;br&gt;U_UNASSIGNED： 表示未分配和非字符代码点对应类别。 &lt;br&gt;U_GENERAL_OTHER_TYPES： 与 U_UNASSIGNED 一致。 &lt;br&gt;U_UPPERCASE_LETTER： 表示大写字母。 &lt;br&gt;U_LOWERCASE_LETTER： 表示小写字母。 &lt;br&gt;U_TITLECASE_LETTER： 表示首字母大写。 &lt;br&gt;U_MODIFIER_LETTER： 表示字母修饰符。 &lt;br&gt;U_OTHER_LETTER： 表示其它字母，不属于大写字母、小写字母、首字母大写或修饰符字母的字母。 &lt;br&gt;U_NON_SPACING_MARK： 表示非间距标记，例如重音符号'，变音符号#。 &lt;br&gt;U_ENCLOSING_MARK： 表示封闭标记和能围住其它字符的标记，如圆圈、方框等。 &lt;br&gt;U_COMBINING_SPACING_MARK： 表示间距标记，例如元音符号[ ]。 &lt;br&gt;U_DECIMAL_DIGIT_NUMBER： 表示十进制数字。 &lt;br&gt;U_LETTER_NUMBER： 表示字母数字，罗马数字。 &lt;br&gt;U_OTHER_NUMBER： 表示其它作为加密符号和记号的数字，非阿拉伯数字的数字表示符，例如 |
 
 ## isDigit
 
@@ -78,7 +84,7 @@ Obtains the type of the input character.
 static isDigit(ch: string): boolean
 ```
 
-Checks whether the input character is a digit.
+判断输入的字符是否是数字。
 
 **Since:** 23
 
@@ -94,13 +100,13 @@ Checks whether the input character is a digit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is a digit, and false otherwise. |
+| boolean | true表示输入的字符是数字，false表示输入的字符不是数字。 |
 
 ## isIdeograph
 
@@ -108,7 +114,7 @@ Checks whether the input character is a digit.
 static isIdeograph(ch: string): boolean
 ```
 
-Checks whether the input character is an ideographic character.
+判断输入的字符是否是表意文字。
 
 **Since:** 23
 
@@ -124,13 +130,13 @@ Checks whether the input character is an ideographic character.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character an ideographic character, and false otherwise. |
+| boolean | true表示输入的字符是表意文字，false表示输入的字符不是表意文字。 |
 
 ## isLetter
 
@@ -138,7 +144,7 @@ Checks whether the input character is an ideographic character.
 static isLetter(ch: string): boolean
 ```
 
-Checks whether the input character is a letter.
+判断输入的字符是否是字母。
 
 **Since:** 23
 
@@ -154,13 +160,13 @@ Checks whether the input character is a letter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character a letter, and false otherwise. |
+| boolean | true表示输入的字符是字母，false表示输入的字符不是字母。 |
 
 ## isLowerCase
 
@@ -168,7 +174,7 @@ Checks whether the input character is a letter.
 static isLowerCase(ch: string): boolean
 ```
 
-Checks whether the input character is a lowercase letter.
+判断输入的字符是否是小写字母。
 
 **Since:** 23
 
@@ -184,13 +190,13 @@ Checks whether the input character is a lowercase letter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character a lowercase letter, and false otherwise. |
+| boolean | true表示输入的字符是小写字母，false表示输入的字符不是小写字母。 |
 
 ## isRTL
 
@@ -198,7 +204,7 @@ Checks whether the input character is a lowercase letter.
 static isRTL(ch: string): boolean
 ```
 
-Checks whether the input character is of the right to left (RTL) language.
+判断输入的字符是否是从右到左语言的字符。
 
 **Since:** 23
 
@@ -214,13 +220,13 @@ Checks whether the input character is of the right to left (RTL) language.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is of the RTL language, and false otherwise. |
+| boolean | true表示输入的字符是从右到左语言的字符，false表示输入的字符不是从右到左语言的字符。 |
 
 ## isSpaceChar
 
@@ -228,7 +234,7 @@ Checks whether the input character is of the right to left (RTL) language.
 static isSpaceChar(ch: string): boolean
 ```
 
-Checks whether the input character is a space.
+判断输入的字符是否是空格符。
 
 **Since:** 23
 
@@ -244,13 +250,13 @@ Checks whether the input character is a space.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is a space, and false otherwise. |
+| boolean | true表示输入的字符是空格符，false表示输入的字符不是空格符。 |
 
 ## isUpperCase
 
@@ -258,7 +264,7 @@ Checks whether the input character is a space.
 static isUpperCase(ch: string): boolean
 ```
 
-Checks whether the input character is an uppercase letter.
+判断输入的字符是否是大写字母。
 
 **Since:** 23
 
@@ -274,13 +280,13 @@ Checks whether the input character is an uppercase letter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character an uppercase letter, and false otherwise. |
+| boolean | true表示输入的字符是大写字母，false表示输入的字符不是大写字母。 |
 
 ## isWhitespace
 
@@ -288,7 +294,7 @@ Checks whether the input character is an uppercase letter.
 static isWhitespace(ch: string): boolean
 ```
 
-Checks whether the input character is a whitespace.
+判断输入的字符是否是空白符。
 
 **Since:** 23
 
@@ -304,11 +310,11 @@ Checks whether the input character is a whitespace.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| ch | string | Yes | 输入的字符。如果输入的是字符串，则只判断首字符的类别。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is a white space, and false otherwise. |
+| boolean | true表示输入的字符是空白符，false表示输入的字符不是空白符。 |
 

@@ -1,5 +1,11 @@
 # isPowerSaveMode
 
+## 导入模块
+
+```TypeScript
+import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## isPowerSaveMode
 
 ```TypeScript
@@ -22,7 +28,7 @@ function isPowerSaveMode(pid: int): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 进程号。 |
+| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 进程号。 |
 
 **返回值：**
 
@@ -34,11 +40,11 @@ function isPowerSaveMode(pid: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-参数错误) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 801 | Capability not supported. |
+| 31800002 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,6 +1,6 @@
 # DatePickerDialog
 
-Defines DatePickerDialog which uses show method to show DatePicker dialog.
+根据指定的日期范围创建日期滑动选择器并展示在弹窗上。
 
 **Since:** 8
 
@@ -16,13 +16,12 @@ Defines DatePickerDialog which uses show method to show DatePicker dialog.
 static show(options?: DatePickerDialogOptions)
 ```
 
-Shows a date picker dialog box.
-    **NOTE**  
-    
-    Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API  
-    in [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, which ensures that the date picker dialog box is shown in the  
-    intended UI instance.
+定义日期滑动选择器弹窗并弹出。
+
+> **说明：**
+> 
+> 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md)中的
+> [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#showdatepickerdialog)来明确UI的执行上下文。
 
 **Since:** 8
 
@@ -42,5 +41,5 @@ Shows a date picker dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the date picker dialog box. |
+| options | [DatePickerDialogOptions](../arkts-apis/arkts-arkui-datepicker-datepickerdialogoptions-i.md) | No | 配置日期选择器弹窗的参数，缺省时不弹出弹窗。 |
 

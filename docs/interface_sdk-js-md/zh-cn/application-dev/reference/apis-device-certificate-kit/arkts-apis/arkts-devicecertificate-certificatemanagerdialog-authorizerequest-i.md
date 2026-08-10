@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
+## 导入模块
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certPurpose
 
 ```TypeScript
 certPurpose?: certificateManager.CertificatePurpose
 ```
 
-表示证书用途。若certTypes参数中存在CertificateType.CREDENTIAL\_UKEY类型，则certPurpose参数生效，表示根据指定的证书用途筛选USB Key的证书凭据。
+表示证书用途。若certTypes参数中存在CertificateType.CREDENTIAL_UKEY类型，则certPurpose参数生效，表示根据指定的证书用途筛选USB Key的证书凭据。
 
 **类型：** certificateManager.CertificatePurpose
 

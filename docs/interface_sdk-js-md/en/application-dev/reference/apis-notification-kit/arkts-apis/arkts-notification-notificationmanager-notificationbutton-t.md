@@ -4,7 +4,7 @@
 export type NotificationButton = _NotificationButton
 ```
 
-Describes the notification button.
+通知按钮。
 
 **Since:** 11
 

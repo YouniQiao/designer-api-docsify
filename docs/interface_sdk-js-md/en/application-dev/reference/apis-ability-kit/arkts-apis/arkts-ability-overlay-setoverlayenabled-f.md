@@ -1,12 +1,18 @@
 # setOverlayEnabled
 
+## Modules to Import
+
+```TypeScript
+import { overlay } from 'kits/@kit.AbilityKit';
+```
+
 ## setOverlayEnabled
 
 ```TypeScript
 function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result.
+设置当前应用中overlay module的禁用使能状态。使用callback异步回调。
 
 **Since:** 10
 
@@ -20,19 +26,19 @@ Enables or disables a module with the overlay feature in the current application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Name of the module with the overlay feature. |
-| isEnabled | boolean | Yes | Whether to enable the module with the overlay feature. **true** to enable, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| moduleName | string | Yes | overlay特征module的名称。 |
+| isEnabled | boolean | Yes | 值为true表示使能，值为false表示禁用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当设置指定module的overlay禁用使能状态成功时，err为 undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
-| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700002 | The specified module name is not found. |
+| 17700033 | The specified module is not an overlay module. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -63,7 +69,7 @@ try {
 function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 ```
 
-Enables or disables a module with the overlay feature in the current application. This API uses a promise to return the result.
+设置当前应用中overlay特征module的禁用使能状态。使用Promise异步回调。
 
 **Since:** 10
 
@@ -77,24 +83,24 @@ Enables or disables a module with the overlay feature in the current application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Name of the module with the overlay feature. |
-| isEnabled | boolean | Yes | Whether to enable the module with the overlay feature. **true** to enable, **false** otherwise. |
+| moduleName | string | Yes | overlay特征module的名称。 |
+| isEnabled | boolean | Yes | 值为true表示使能，值为false表示禁用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
-| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700002 | The specified module name is not found. |
+| 17700033 | The specified module is not an overlay module. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';

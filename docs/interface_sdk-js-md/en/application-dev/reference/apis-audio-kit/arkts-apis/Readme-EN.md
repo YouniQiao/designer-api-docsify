@@ -74,8 +74,6 @@
   - [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md)
   <!--Del-->
   - [AudioRendererOptions(system api)](arkts-audio-audio-audiorendereroptions-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AudioRendererTargetParams(system api)](arkts-audio-audio-audiorenderertargetparams-i-sys.md)<!--DelEnd-->
   - [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md)
   <!--Del-->
   - [AudioRoutingManager(system api)](arkts-audio-audio-audioroutingmanager-i-sys.md)<!--DelEnd-->
@@ -163,8 +161,6 @@
   - [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md)
   - [AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)
   - [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md)
-  <!--Del-->
-  - [AudioPlaybackCaptureMode(system api)](arkts-audio-audio-audioplaybackcapturemode-e-sys.md)<!--DelEnd-->
   - [AudioPrivacyType](arkts-audio-audio-audioprivacytype-e.md)
   - [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)
   - [AudioRingMode](arkts-audio-audio-audioringmode-e.md)
@@ -174,8 +170,6 @@
   <!--Del-->
   - [AudioSeparationVolumeType(system api)](arkts-audio-audio-audioseparationvolumetype-e-sys.md)<!--DelEnd-->
   - [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)
-  <!--Del-->
-  - [AudioSessionBehaviorFlags(system api)](arkts-audio-audio-audiosessionbehaviorflags-e-sys.md)<!--DelEnd-->
   - [AudioSessionDeactivatedReason](arkts-audio-audio-audiosessiondeactivatedreason-e.md)
   - [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)
   - [AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md)
@@ -282,15 +276,15 @@
   - [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e.md)
   - [Constants](arkts-audio-systemsoundmanager-con-sys.md)
 - multimedia<!--arkts-audiokit-multimedia-->
-  - [multimedia/SystemSoundPlayer](arkts-multimedia/systemsoundplayer.md)
-    - [SystemSoundPlayer](systemsoundplayer-systemsoundplayer-i.md)
-  - [multimedia/ringtonePlayer](arkts-multimedia/ringtoneplayer.md)
+  - [SystemSoundPlayer](arkts-systemsoundplayer.md)
+    - [SystemSoundPlayer](arkts-audio-systemsoundplayer-i.md)
+  - [ringtonePlayer](arkts-ringtoneplayer.md)
     <!--Del-->
-    - [RingtoneOptions(system api)](ringtoneplayer-ringtoneoptions-i-sys.md)<!--DelEnd-->
+    - [RingtoneOptions(system api)](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [RingtonePlayer(system api)](ringtoneplayer-ringtoneplayer-i-sys.md)<!--DelEnd-->
-  - [multimedia/systemTonePlayer](arkts-multimedia/systemtoneplayer.md)
+    - [RingtonePlayer(system api)](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md)<!--DelEnd-->
+  - [systemTonePlayer](arkts-systemtoneplayer.md)
     <!--Del-->
-    - [SystemToneOptions(system api)](systemtoneplayer-systemtoneoptions-i-sys.md)<!--DelEnd-->
+    - [SystemToneOptions(system api)](arkts-audio-systemtoneplayer-systemtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [SystemTonePlayer(system api)](systemtoneplayer-systemtoneplayer-i-sys.md)<!--DelEnd-->
+    - [SystemTonePlayer(system api)](arkts-audio-systemtoneplayer-systemtoneplayer-i-sys.md)<!--DelEnd-->

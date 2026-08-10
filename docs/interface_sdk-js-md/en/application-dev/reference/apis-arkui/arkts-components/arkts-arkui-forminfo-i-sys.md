@@ -60,9 +60,9 @@ dimension?: FormDimension
 
 Dimensions of the widget. The 2 x 2, 4 x 4, 4 x 2, and more options are available.
 
-Default value: **Dimension\_2\_2
+Default value: **Dimension_2_2**
 
-**Type:** FormDimension
+**Type:** [FormDimension](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formdimension-e.md)
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ id: number | string
 
 Widget ID. Set this parameter to **0** for a new widget.
 
-**NOTE**
+**NOTE：**
 
 Different widget hosts cannot use the same ID.
 
@@ -168,18 +168,18 @@ Widget name.
 renderingMode?: FormRenderingMode
 ```
 
-Widget rendering mode. Default value: **FULL\_COLOR**. The options are as follows:
+Widget rendering mode. Default value: **FULL_COLOR**. The options are as follows:
 
-- **FULL\_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that  
+- **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that   
 the widget is displayed in the effect as you set it.  
-- **SINGLE\_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In  
+- **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In   
 this mode you need to set the widget style based on the best practices.
 
-**NOTE**
+**NOTE：**
 
 If the system does not support unified rendering, the widget framework does not set the widget background to transparent in single color mode.
 
-**Type:** FormRenderingMode
+**Type:** [FormRenderingMode](../arkts-apis/arkts-arkui-formcomponent-formrenderingmode-e-sys.md)
 
 **Since:** 12
 
@@ -199,7 +199,7 @@ shape?: FormShape
 
 The shape of the form.
 
-**Type:** FormShape
+**Type:** [FormShape](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formshape-e.md)
 
 **Since:** 12
 

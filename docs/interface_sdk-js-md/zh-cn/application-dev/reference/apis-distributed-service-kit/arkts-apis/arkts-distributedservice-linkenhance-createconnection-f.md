@@ -1,5 +1,11 @@
 # createConnection
 
+## 导入模块
+
+```TypeScript
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## createConnection
 
 ```TypeScript
@@ -24,24 +30,24 @@ function createConnection(deviceId: string, name: string): Connection
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | 连接的目标设备的deviceId，即对端设备的BLE MAC地址。BLE MAC的获取方法，请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| deviceId | string | 是 | 连接的目标设备的deviceId，即对端设备的BLE MAC地址。BLE MAC的获取方法，请参考 [查找设备](../../../connectivity/bluetooth/ble-development-guide.md)。 |
 | name | string | 是 | 连接的目标设备的服务名，非空字符串，最大长度255字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 创建成功的连接对象。 |
+| [Connection](arkts-distributedservice-linkenhance-connection-i.md) | 创建成功的连接对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the linkEnhance function has been trimmed\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| 32390206 | Invalid parameter. |
+| 801 | Capability not supported because the linkEnhance function has been trimmed<br>**适用版本：** 26.0.0+ |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在客户端设备上，应用需要主动调用createConnection()接口创建连接对象。
 

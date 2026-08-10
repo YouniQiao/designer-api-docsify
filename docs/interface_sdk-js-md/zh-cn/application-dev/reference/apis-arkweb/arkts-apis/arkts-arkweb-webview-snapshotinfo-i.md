@@ -10,6 +10,12 @@ Defines the snapshot info.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## id
 
 ```TypeScript
@@ -36,7 +42,7 @@ size?: SizeOptions
 
 Size for web rendering.The maximum size is 16000 px × 16000 px. The length unit can be px, vp, or %.The length unit must be the consistent across parameters. The default unit is vp.If the size exceeds the specifications, the maximum size is returned.(Example: width: '100px', height: '200px' or width: '20%', height'30%'. If only digits are written, the unit is vp.)
 
-**类型：** SizeOptions
+**类型：** [SizeOptions](../../apis-arkui/arkts-apis/arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 23
 

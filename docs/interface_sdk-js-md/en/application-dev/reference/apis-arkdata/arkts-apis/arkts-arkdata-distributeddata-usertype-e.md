@@ -1,6 +1,6 @@
 # UserType
 
-Enumerates the user types.
+用户类型枚举。
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ Enumerates the user types.
 SAME_USER_ID = 0
 ```
 
-User who logs in to different devices using the same account.
+使用同一账号登录不同设备的用户。
 
 **Since:** 7
 

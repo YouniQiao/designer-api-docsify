@@ -1,12 +1,18 @@
 # createAVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## createAVMusicTemplate
 
 ```TypeScript
 function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate
 ```
 
-Create an AVMusicTemplate instance.
+创建音频模板，返回音频模板实例。
 
 **Since:** 23
 
@@ -22,18 +28,18 @@ Create an AVMusicTemplate instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | type of access, default is 'smartCar' |
+| accessType | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Yes | 音频模板类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | an AVMusicTemplate instance |
+| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | 音频模板对象，可用于获取会话ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
-| [35000001](../errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) | Failed to create the AVMusicTemplate. |
+| 801 | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
+| 35000001 | Failed to create the AVMusicTemplate. |
 

@@ -1,6 +1,6 @@
 # NavDestinationCustomTitle
 
-Defines a custom title for the **NavDestination** component.
+NavDestination自定义标题。
 
 **Since:** 9
 
@@ -16,9 +16,9 @@ Defines a custom title for the **NavDestination** component.
 builder: CustomBuilder
 ```
 
-Content of the title bar.
+设置标题栏内容。
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
 
@@ -36,11 +36,11 @@ Content of the title bar.
 height: TitleHeight | Length
 ```
 
-Height of the title bar.
+设置标题栏高度。
 
-Value range: [0, +��)
+取值范围：[0, +∞)。
 
-**Type:** TitleHeight \| Length
+**Type:** [TitleHeight](../arkts-apis/arkts-arkui-enums-titleheight-e.md) \| Length
 
 **Since:** 9
 

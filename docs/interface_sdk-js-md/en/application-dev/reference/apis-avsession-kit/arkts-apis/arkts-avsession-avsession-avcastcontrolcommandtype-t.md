@@ -5,8 +5,6 @@ type AVCastControlCommandType = 'play' | 'pause' | 'stop' | 'playNext' | 'playPr
   'seek' | 'setVolume' | 'setSpeed' | 'setLoopMode' | 'toggleFavorite' | 'toggleMute'
 ```
 
-The type of control command
-
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.

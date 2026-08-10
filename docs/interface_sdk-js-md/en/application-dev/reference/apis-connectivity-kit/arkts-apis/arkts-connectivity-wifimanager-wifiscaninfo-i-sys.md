@@ -10,6 +10,12 @@ Describes the scanned Wi-Fi information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isHiLinkProNetwork
 
 ```TypeScript

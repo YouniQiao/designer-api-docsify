@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## height
 
 ```TypeScript
@@ -20,7 +26,7 @@ Height
 
 Unit:px.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 6
 
@@ -44,7 +50,7 @@ Width
 
 Unit:px.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 6
 

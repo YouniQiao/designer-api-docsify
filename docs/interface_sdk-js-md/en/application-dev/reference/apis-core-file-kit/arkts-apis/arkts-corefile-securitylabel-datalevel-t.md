@@ -4,7 +4,7 @@
 type DataLevel = 's0' | 's1' | 's2' | 's3' | 's4'
 ```
 
-Represents the data security level.
+数据安全等级。
 
 **Since:** 9
 

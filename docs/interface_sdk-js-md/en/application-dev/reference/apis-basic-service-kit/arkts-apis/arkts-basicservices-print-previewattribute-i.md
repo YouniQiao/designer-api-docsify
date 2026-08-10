@@ -1,6 +1,6 @@
 # PreviewAttribute
 
-Defines the print preview attributes.
+定义打印预览属性的接口。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Defines the print preview attributes.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## previewRange
 
 ```TypeScript
 previewRange: PrinterRange
 ```
 
-Preview page range.
+表示预览页面范围。
 
-**Type:** PrinterRange
+**Type:** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
 **Since:** 24
 
@@ -34,9 +40,9 @@ Preview page range.
 result?: int
 ```
 
-Print preview result. The default value is **-1**.
+表示预览文件结果。默认值为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

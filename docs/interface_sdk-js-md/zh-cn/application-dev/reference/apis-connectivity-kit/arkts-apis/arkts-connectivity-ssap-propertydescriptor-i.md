@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## descriptorType
 
 ```TypeScript
@@ -18,7 +24,7 @@ descriptorType: PropertyDescriptorType
 
 属性描述符实例的类型。
 
-**类型：** PropertyDescriptorType
+**类型：** [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md)
 
 **起始版本：** 26.0.0
 
@@ -56,7 +62,7 @@ isWriteable?: boolean
 propertyUuid: string
 ```
 
-描述符所属的属性实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_禁止使用星闪标准服务UUID。
+描述符所属的属性实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;禁止使用星闪标准服务UUID。
 
 **类型：** string
 
@@ -76,7 +82,7 @@ propertyUuid: string
 serviceUuid: string
 ```
 
-描述符所属属性所属的服务实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_不允许使用NearLink标准UUID。
+描述符所属属性所属的服务实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **类型：** string
 

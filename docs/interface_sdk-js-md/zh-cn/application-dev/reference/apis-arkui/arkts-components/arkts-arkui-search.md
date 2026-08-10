@@ -32,7 +32,15 @@ Search(options?: SearchOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 搜索框组件初始化选项。当需要设置搜索框的初始值、提示文本、图标或控制器时传入此参数，不传入时使用默认配置。 |
+| options | [SearchOptions](arkts-arkui-searchoptions-i.md) | 否 | 搜索框组件初始化选项。当需要设置搜索框的初始值、提示文本、图标或控制器时传入此参数，不传入时使用默认配置。 |
 
 ## 汇总
 
+- [CancelButtonOptions](arkts-arkui-search-cancelbuttonoptions-i.md)
+- [CancelButtonSymbolOptions](arkts-arkui-search-cancelbuttonsymboloptions-i.md)
+- [IconOptions](arkts-arkui-search-iconoptions-i.md)
+- [SearchButtonOptions](arkts-arkui-search-searchbuttonoptions-i.md)
+- [SearchOptions](arkts-arkui-search-searchoptions-i.md)
+- [SearchSubmitCallback](arkts-arkui-search-searchsubmitcallback-t.md)
+- [CancelButtonStyle](arkts-arkui-search-cancelbuttonstyle-e.md)
+- [SearchType](arkts-arkui-search-searchtype-e.md)

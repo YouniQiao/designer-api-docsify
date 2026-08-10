@@ -1,6 +1,6 @@
 # GaugeOptions
 
-Provides gauge options.
+数据量规图表选项。
 
 **Since:** 18
 
@@ -16,15 +16,17 @@ Provides gauge options.
 max?: number
 ```
 
-Maximum value of the current data segment.
+当前数据段最大值。
 
-Default value: **100**
+默认值：100
 
-**NOTE**
+**说明：**
 
-If the value of **max** is less than that of **min**, the default values **0** and **100** are used.
+不传入时默认最大值为100。
 
-The values of **max** and **min** can be negative numbers.
+min大于max时使用默认值0和100。
+
+max和min支持负数。
 
 **Type:** number
 
@@ -46,9 +48,17 @@ The values of **max** and **min** can be negative numbers.
 min?: number
 ```
 
-Minimum value of the current data segment.
+当前数据段最小值。
 
-Default value: **0
+默认值：0
+
+**说明：**
+
+不传入时默认最小值为0。
+
+min大于max时使用默认值0和100。
+
+max和min支持负数。
 
 **Type:** number
 
@@ -70,13 +80,13 @@ Default value: **0
 value: number
 ```
 
-Current value of the gauge, that is, the position to which the indicator points in the gauge. It is used as the initial value of the gauge when it is created.
+量规图的当前数据值，即图中指针指向位置。用于组件创建时量规图初始值的预置。
 
-Default value: **0**
+默认值：0
 
-**NOTE**
+**说明：**
 
-If the value is not within the range defined by the **min** and **max** parameters, the value of **min** is used.
+value不在min和max范围内时使用min作为默认值。
 
 **Type:** number
 

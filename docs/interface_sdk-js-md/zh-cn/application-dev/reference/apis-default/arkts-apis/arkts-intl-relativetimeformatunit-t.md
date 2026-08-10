@@ -1,0 +1,49 @@
+# RelativeTimeFormatUnit
+
+```TypeScript
+type RelativeTimeFormatUnit =
+        | "year"
+        | "years"
+        | "quarter"
+        | "quarters"
+        | "month"
+        | "months"
+        | "week"
+        | "weeks"
+        | "day"
+        | "days"
+        | "hour"
+        | "hours"
+        | "minute"
+        | "minutes"
+        | "second"
+        | "seconds"
+```
+
+Unit to use in the relative time internationalized message.
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#Parameters).
+
+**ArkTS模式：** 仅支持ArkTS-Dyn
+
+<!--Device-Intl-type RelativeTimeFormatUnit =        | "year"        | "years"        | "quarter"        | "quarters"        | "month"        | "months"        | "week"        | "weeks"        | "day"        | "days"        | "hour"        | "hours"        | "minute"        | "minutes"        | "second"        | "seconds"--><!--Device-Intl-type RelativeTimeFormatUnit =        | "year"        | "years"        | "quarter"        | "quarters"        | "month"        | "months"        | "week"        | "weeks"        | "day"        | "days"        | "hour"        | "hours"        | "minute"        | "minutes"        | "second"        | "seconds"-End-->
+
+| 类型 | 说明 |
+| --- | --- |
+| "year" |  |
+| "years" |  |
+| "quarter" |  |
+| "quarters" |  |
+| "month" |  |
+| "months" |  |
+| "week" |  |
+| "weeks" |  |
+| "day" |  |
+| "days" |  |
+| "hour" |  |
+| "hours" |  |
+| "minute" |  |
+| "minutes" |  |
+| "second" |  |
+| "seconds" |  |
+

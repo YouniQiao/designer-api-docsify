@@ -1,10 +1,10 @@
 # DatePickerDialogOptions
 
-Defines the configuration options of the date picker dialog box.
+日期选择器弹窗选项。
 
-Inherited from [DatePickerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md)。
 
-**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](../arkts-apis/arkts-arkui-component/datepicker-datepickeroptions-i.md)
+**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
 
 **Since:** 8
 
@@ -20,12 +20,11 @@ Inherited from [DatePickerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 onAccept?: (value: DatePickerResult) => void
 ```
 
-Callback invoked when the OK button in the dialog box is clicked.
+点击弹窗中的“确定”按钮时触发该回调。回调参数value为当前选中的日期，包含年、月、日信息。
 
-**NOTE**
-
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use  
-**onDateAccept** instead.
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 10开始废弃。建议使用onDateAccept。
 
 **Since:** 8
 
@@ -43,7 +42,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [DatePickerResult](../arkts-apis/arkts-arkui-datepicker-datepickerresult-i.md) | Yes |  |
 
 ## onCancel
 
@@ -51,7 +50,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 onCancel?: VoidCallback
 ```
 
-Callback invoked when the Cancel button in the dialog box is clicked.
+点击弹窗中的“取消”按钮时触发该回调。回调签名：() => void，无参数和返回值。
 
 **Since:** 8
 
@@ -69,12 +68,11 @@ Callback invoked when the Cancel button in the dialog box is clicked.
 onChange?: (value: DatePickerResult) => void
 ```
 
-Callback invoked when the selected item in the picker changes.
+滑动弹窗中的滑动选择器使当前选中项改变时触发该回调。回调参数value为当前选中的日期，包含年、月、日信息。
 
-**NOTE**
-
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use  
-**onDateChange** instead.
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 10开始废弃。建议使用onDateChange。
 
 **Since:** 8
 
@@ -92,7 +90,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [DatePickerResult](../arkts-apis/arkts-arkui-datepicker-datepickerresult-i.md) | Yes |  |
 
 ## onDidAppear
 
@@ -100,16 +98,17 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 onDidAppear?: VoidCallback
 ```
 
-Event callback after the dialog box appears.
+弹窗弹出后的事件回调。
 
-**NOTE**
-
-1. The normal timing sequence is as follows: onWillAppear   
-    onDidAppear   
-    (onDateAccept/onCancel/onDateChange) >  
-onWillDisappear   
-    onDidDisappear.  
-2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.The settings take effect next time the dialog box appears.3. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
+> **说明：**
+> 
+> 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。
+> 
+> 2. 在onDidAppear内设置改变弹窗显示效果的回调事件，再次调用showDatePickerDialog时生效。
+> 
+> 3. 快速连续触发弹出与关闭时，存在onWillDisappear在onDidAppear前生效。
+> 
+> 4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
 
 **Since:** 12
 
@@ -129,15 +128,15 @@ onWillDisappear
 onDidDisappear?: VoidCallback
 ```
 
-Event callback after the dialog box disappears.
+弹窗消失后的事件回调。
 
-**NOTE**
-
-1. The normal timing sequence is as follows: onWillAppear   
-    onDidAppear   
-    (onDateAccept/onCancel/onDateChange) >  
-onWillDisappear   
-    onDidDisappear.
+> **说明：**
+> 
+> 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。
+> 
+> 2. 快速连续触发弹出与关闭时，存在onWillDisappear在onDidAppear前生效。
+> 
+> 3. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
 
 **Since:** 12
 
@@ -157,16 +156,17 @@ onWillDisappear
 onWillAppear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to appear.
+弹窗显示动效前的事件回调。
 
-**NOTE**
-
-1. The normal timing sequence is as follows: onWillAppear   
-    onDidAppear   
-    (onDateAccept/onCancel/onDateChange) >  
-onWillDisappear   
-    onDidDisappear.  
-2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.The settings take effect next time the dialog box appears.
+> **说明：**
+> 
+> 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。
+> 
+> 2. 在onWillAppear内设置改变弹窗显示效果的回调事件，再次调用showDatePickerDialog时生效。
+> 
+> 3. 快速连续触发弹出与关闭时，存在onWillDisappear在onDidAppear前生效。
+> 
+> 4. 当弹窗入场动效未完成时关闭弹窗，onDidAppear和后续回调不会触发。
 
 **Since:** 12
 
@@ -186,16 +186,15 @@ onWillDisappear
 onWillDisappear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to disappear.
+弹窗退出动效前的事件回调。
 
-**NOTE**
-
-1. The normal timing sequence is as follows: onWillAppear   
-    onDidAppear   
-    (onDateAccept/onCancel/onDateChange) >  
-onWillDisappear   
-    onDidDisappear.  
-2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear.
+> **说明：**
+> 
+> 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。
+> 
+> 2. 快速连续触发弹出与关闭时，存在onWillDisappear在onDidAppear前生效。
+> 
+> 3. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
 
 **Since:** 12
 
@@ -215,13 +214,17 @@ onWillDisappear
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the accept button.
+设置确认按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。当需要自定义确认按钮外观或行为时传入此参数。不传入时使用系统默认按钮样式。
 
-**NOTE**
+> **说明：**
+> 
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
+> 保持默认值false。
+> 
+> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
+> [ROUNDED_RECTANGLE](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#rounded_rectangle)，呈现效果依然是胶囊型按钮[Capsule](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#capsule)。
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.In addition, even if the button style is set to [ROUNDED\_RECTANGLE]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,the displayed effect is still a capsule button ([Capsule]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_).
-
-**Type:** PickerDialogButtonStyle
+**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 12
 
@@ -241,11 +244,11 @@ Style of the accept button.
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.
+弹窗在竖直方向上的对齐方式。
 
-Default value: **DialogAlignment.Default
+> 默认值：DialogAlignment.Default
 
-**Type:** DialogAlignment
+**Type:** [DialogAlignment](../arkts-apis/arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **Default:** DialogAlignment.Default [since 11]
 
@@ -267,15 +270,16 @@ Default value: **DialogAlignment.Default
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.
+弹窗背板模糊材质。
 
-Default value: **BlurStyle.COMPONENT\_ULTRA\_THICK**
+> 默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
-**NOTE**
+> **说明：**
+> 
+> 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
+> 否则显示的颜色将不符合预期效果。
 
-Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
-
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -297,9 +301,13 @@ Setting this parameter to **BlurStyle.NONE** disables the background blur. When 
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for customizing the background blur style.
+背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。默认值请参考BackgroundBlurStyleOptions类型说明。
 
-**Type:** BackgroundBlurStyleOptions
+> **说明：**
+> 
+> 未设置时沿用backgroundBlurStyle的默认效果（BlurStyle.COMPONENT_ULTRA_THICK）。
+
+**Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
 
@@ -319,16 +327,15 @@ Options for customizing the background blur style.
 backgroundColor?: ResourceColor
 ```
 
-Backplane color of the dialog box.
+弹窗背板颜色。
 
-Default value: **Color.Transparent**
+> 默认值：Color.Transparent
 
-**NOTE**
+> **说明：**
+> 
+> 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则显示的颜色将不符合预期效果。
 
-When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to  
-**BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
-
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
@@ -350,9 +357,14 @@ When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyl
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Options for customizing the background effect.
+背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。默认值请参考BackgroundEffectOptions类型说明。
 
-**Type:** BackgroundEffectOptions
+> **说明：**
+> 
+> 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
+> 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
+
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
 
@@ -372,15 +384,12 @@ Options for customizing the background effect.
 canLoop?: boolean
 ```
 
-Whether to enable cyclic scrolling.
+设置是否可循环滚动。
 
-Default value: **true**
+- true：可循环，年份随着月份的循环滚动进行联动加减，月份随着日的循环滚动进行联动加减。  
+- false：不可循环，年、月、日到达本列的顶部或底部时，无法再进行滚动，年、月、日之间也无法再联动加减。
 
-**NOTE**
-
-**true**: Cyclic scrolling is enabled, where the year values increment or decrement with month cycling, and month values increment or decrement with day cycling.
-
-**false**: Cyclic scrolling is disabled, preventing out-of-bounds scrolling in year, month, and day columns and cross-column value synchronization.
+> 默认值：true
 
 **Type:** boolean
 
@@ -404,13 +413,17 @@ Default value: **true**
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the cancel button.
+设置取消按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。当需要自定义取消按钮外观或行为时传入此参数。不传入时使用系统默认按钮样式。
 
-**NOTE**
+> **说明：**
+> 
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
+> 保持默认值false。
+> 
+> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
+> [ROUNDED_RECTANGLE](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#rounded_rectangle)，呈现效果依然是胶囊型按钮[Capsule](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#capsule)。
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**.If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.In addition, even if the button style is set to [ROUNDED\_RECTANGLE]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,the displayed effect is still a capsule button ([Capsule]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_).
-
-**Type:** PickerDialogButtonStyle
+**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 12
 
@@ -430,16 +443,16 @@ Style of the cancel button.
 dateTimeOptions?: DateTimeOptions
 ```
 
-Whether to display a leading zero for the hours and minutes. Currently only the configuration of the **hour** and  
-**minute** parameters is supported.
+设置时分是否显示前导0，目前只支持设置hour和minute参数，仅当showTime为true时生效。
 
-Default value:
+> 默认值：
+> 
+> - hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"；
+> 12小时制默认为"numeric"，即没有前导0。可选值为"numeric"或"2-digit"，传入其他值时按默认值处理。
+> - minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
+> 可选值为"numeric"或"2-digit"，传入其他值时按默认值处理。
 
-**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format,the default value is **"numeric"**, meaning no leading zero.
-
-**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
-
-**Type:** DateTimeOptions
+**Type:** [DateTimeOptions](../../apis-default/arkts-apis/arkts-intl-datetimeoptions-i.md)
 
 **Default:** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
 
@@ -461,11 +474,19 @@ Default value:
 disappearTextStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of edge items (the second item above or below the selected item).
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。
 
-Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
+> 默认值：
+> 
+> &lt;br&gt;{
+> &lt;br&gt;color: '#ff182431',
+> &lt;br&gt;font: {
+> &lt;br&gt;size: '14fp',
+> &lt;br&gt;weight: FontWeight.Regular
+> &lt;br&gt;}
+> &lt;br&gt;}
 
-**Type:** PickerTextStyle
+**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Default:** { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } [since 11]
 
@@ -487,19 +508,19 @@ Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Re
 enableHapticFeedback?: boolean
 ```
 
-Whether to enable haptic feedback.
+设置是否开启触控反馈。
 
-- **true**: Enable haptic feedback.  
-- **false**: Disable haptic feedback.
+- true：开启触控反馈（当需要为用户提供操作反馈时选择）。  
+- false：不开启触控反馈（当不需要触控反馈或设备不支持时选择）。
 
-Default value: **true**
+> 默认值：true
 
-**NOTE**
-
-1. Whether this parameter takes effect after being set to **true** depends on hardware support.2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module**  
-in **src/main/module.json5** of the project:
-
-"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
+> **说明：**
+> 
+> 1. 设置为true后，其生效情况取决于系统的硬件是否支持。
+> 2. 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
+> 
+> "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **Type:** boolean
 
@@ -523,12 +544,12 @@ in **src/main/module.json5** of the project:
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode.
+是否响应悬停态。悬停态指折叠屏等设备处于悬停折叠状态时的交互模式，而非鼠标悬停。
 
-- **true**: Respond when the device is in semi-folded mode.  
-- **false**: Do not respond when the device is in semi-folded mode.
+- true：响应悬停态。  
+- false：不响应悬停态。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -552,11 +573,11 @@ Default value: **false
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box when the device is in semi-folded mode.
+设置悬停态下弹窗默认展示区域，仅在enableHoverMode为true时生效。
 
-Default value: **HoverModeAreaType.BOTTOM\_SCREEN
+默认值：HoverModeAreaType.BOTTOM_SCREEN
 
-**Type:** HoverModeAreaType
+**Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -578,16 +599,16 @@ Default value: **HoverModeAreaType.BOTTOM\_SCREEN
 lunar?: boolean
 ```
 
-Whether to display dates in lunar calendar format.
+日期是否显示为农历。
 
-- **true**: Display dates in lunar calendar format.  
-- **false**: Do not display dates in lunar calendar format.
+- true：显示为农历。  
+- false：不显示为农历。
 
-Default value: **false**
+> 默认值：false
 
-**NOTE**
-
-This attribute takes effect only in Simplified Chinese and Traditional Chinese locales; it has no effect in other locales.
+> **说明：**
+> 
+> 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
 **Type:** boolean
 
@@ -609,16 +630,16 @@ This attribute takes effect only in Simplified Chinese and Traditional Chinese l
 lunarSwitch?: boolean
 ```
 
-Whether to display the lunar calendar switch.
+是否展示切换农历的开关。
 
-- **true**: Display the lunar calendar switch.  
-- **false**: Do not display the lunar calendar switch.
+- true：展示切换农历的开关。  
+- false：不展示切换农历的开关。
 
-Default value: **false**
+> 默认值：false
 
-**NOTE**
-
-After being enabled, this attribute takes effect only in Simplified Chinese and Traditional Chinese; it has no effect in other locales. Therefore, you are advised to set this attribute to **false** in other locales.
+> **说明：**
+> 
+> 开关打开后，仅在简体中文和繁体中文环境下生效，在其他语言环境农历不生效，因此建议在其他语言环境设置为不展示开关。
 
 **Type:** boolean
 
@@ -642,19 +663,16 @@ After being enabled, this attribute takes effect only in Simplified Chinese and 
 lunarSwitchStyle?: LunarSwitchStyle
 ```
 
-Style of the lunar calendar switch.
+设置农历开关的颜色样式。仅当lunarSwitch为true时生效。
 
-Default value: {
+> 默认值：
+> &lt;br&gt;{
+> &lt;br&gt;selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`,
+> &lt;br&gt;unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`,
+> &lt;br&gt;strokeColor: Color.White
+> &lt;br&gt;}
 
-selectedColor: \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_,
-
-unselectedColor: \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_,
-
-strokeColor: Color.White
-
-}
-
-**Type:** LunarSwitchStyle
+**Type:** [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md)
 
 **Default:** { selectedColor: $r('sys.color.ohos_id_color_text_primary_actived'), unselectedColor: $r('sys.color.ohos_id_color_switch_outline_off'), strokeColor: Color.White }.
 
@@ -676,11 +694,11 @@ strokeColor: Color.White
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.
+弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。
 
-Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }
+> 默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
-**Type:** Rectangle
+**Type:** [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md)
 
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
 
@@ -702,11 +720,11 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }
 offset?: Offset
 ```
 
-Offset of the dialog box based on the **alignment** settings.
+弹窗相对alignment所在位置的偏移量。当需要微调弹窗位置时设置此参数（如与alignment配合实现精确位置控制），不设置时弹窗按alignment对齐位置显示。
 
-Default value: **{ dx: 0 , dy: 0 }
+> 默认值：{ dx: 0 , dy: 0 }
 
-**Type:** Offset
+**Type:** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
 
 **Default:** { dx: 0 , dy: 0 } [since 11]
 
@@ -728,13 +746,13 @@ Default value: **{ dx: 0 , dy: 0 }
 onDateAccept?: Callback<Date>
 ```
 
-Callback invoked when the OK button in the dialog box is clicked.
+点击弹窗中的“确定”按钮时触发该回调。回调签名：(value: Date) => void，其中value为用户选择的日期，包含年月日信息；当showTime为true时，还包含时和分信息。开发者可在此回调中保存用户选择的日期或执行后续业务逻辑。
 
-**NOTE**
+> **说明：**
+> 
+> 当showTime设置为true时，value中时和分为选择器选择的时和分。否则，value中时和分为系统时间的时和分。
 
-When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
-
-**Type:** Callback&lt;Date&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Date&gt;
 
 **Since:** 10
 
@@ -754,13 +772,13 @@ When **showTime** is set to **true**, the hour and minute in the value returned 
 onDateChange?: Callback<Date>
 ```
 
-Callback triggered when date selection changes through scrolling in the dialog box.
+滑动弹窗中的日期使当前选中项改变时触发该回调。回调签名：(value: Date) => void，其中value为当前选中的日期，包含年月日信息；当showTime为true时，还包含时和分信息。此回调在用户滑动选择器过程中实时触发，与onDateAccept仅在点击确定后触发的时机不同。
 
-**NOTE**
+> **说明：**
+> 
+> 当showTime设置为true时，value中时和分为选择器选择的时和分。否则，value中时和分为系统时间的时和分。
 
-When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
-
-**Type:** Callback&lt;Date&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Date&gt;
 
 **Since:** 10
 
@@ -780,11 +798,19 @@ When **showTime** is set to **true**, the hour and minute in the value returned 
 selectedTextStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of the selected item.
+设置选中项的文本颜色、字号、字体粗细。
 
-Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
+> 默认值：
+> 
+> &lt;br&gt;{
+> &lt;br&gt;color: '#ff007dff',
+> &lt;br&gt;font: {
+> &lt;br&gt;size: '20fp',
+> &lt;br&gt;weight: FontWeight.Medium
+> &lt;br&gt;}
+> &lt;br&gt;}
 
-**Type:** PickerTextStyle
+**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Default:** { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium } [since 11]
 
@@ -806,12 +832,11 @@ Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Me
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.
+设置弹窗背板的阴影。
 
-Default value on 2-in-1 devices: **ShadowStyle.OUTER\_FLOATING\_MD** when the dialog box is focused and  
-**ShadowStyle.OUTER\_FLOATING\_SM** otherwise
+当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
 **Since:** 12
 
@@ -831,16 +856,17 @@ Default value on 2-in-1 devices: **ShadowStyle.OUTER\_FLOATING\_MD** when the di
 showTime?: boolean
 ```
 
-Whether to display the time picker in the dialog box.
+是否在弹窗内展示时间选择器。
 
-- **true**: Display the time picker.  
-- **false**: Do not display the time picker.
+- true：展示时间选择器。  
+- false：不展示时间选择器。
 
-Default value: **false**
+> 默认值：false
 
-**NOTE**
-
-1. When showTime is true, clicking the date in the dialog box header toggles between date-only and date+time views.2. When showTime is true, the mode parameter is ignored, meaning the date picker always shows year, month,and day columns.
+> **说明：**
+> 
+> 1. 当showTime为true时，点击弹窗的标题日期可以在"日期选择器"和"日期选择器+时间选择器"两个页面中切换。
+> 2. 当showTime为true时，mode参数不生效，此时纯日期选择页面固定显示年、月、日三列。
 
 **Type:** boolean
 
@@ -864,9 +890,20 @@ Default value: **false**
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects,which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+设置弹窗的系统材质。
 
-**Type:** SystemUiMaterial
+> **说明：**
+> 
+> - 默认值为ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象，设置undefined时与默认值保持一致。
+> 不同的材质具有不同的效果。关于ImmersiveMaterial的详细说明，请参考[SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md/arkts-arkui-systemuimaterial-t.md)类型定义。
+> - 该接口影响背景色[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、背景模糊
+> [backgroundBlurStyle](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)
+> 、背景模糊效果[backgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md/arkts-arkui-common-backgroundblurstyleoptions-i.md)、背景效果
+> [backgroundEffect](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundeffect)、边框颜色
+> [borderColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#bordercolor)、边框宽度[borderWidth](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderwidth)、阴影
+> [shadow](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#shadow)，当设置系统材质时，上述接口不生效。
+
+**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 
@@ -886,11 +923,19 @@ Set system-styled materials for dialog. Different materials have different effec
 textStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of candidate items (the first item immediately above or below the selected item).
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。
 
-Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
+> 默认值：
+> 
+> &lt;br&gt;{
+> &lt;br&gt;color: '#ff182431',
+> &lt;br&gt;font: {
+> &lt;br&gt;size: '16fp',
+> &lt;br&gt;weight: FontWeight.Regular
+> &lt;br&gt;}
+> &lt;br&gt;}
 
-**Type:** PickerTextStyle
+**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Default:** { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } [since 11]
 
@@ -912,17 +957,16 @@ Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Re
 useMilitaryTime?: boolean
 ```
 
-Whether the time picker in the dialog box is in 24-hour format. This parameter has effect only when **showTime** is  
-**true**.
+弹窗内展示的时间选择器是否为24小时制，仅当showTime为true时生效。
 
-- **true**: 24-hour format.  
-- **false**: 12-hour format.
+- true：显示24小时制。  
+- false：显示12小时制。
 
-Default value: **false**
+> 默认值：false
 
-**NOTE**
-
-When 12-hour format is used in the time picker, the AM/PM indicator does not automatically update when the hour value changes.
+> **说明：**
+> 
+> 当展示的时间选择器为12小时制时，上午和下午的标识不会根据小时数自动切换。
 
 **Type:** boolean
 

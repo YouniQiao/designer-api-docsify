@@ -1,12 +1,18 @@
 # setPriorityStrategyByBundles (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## setPriorityStrategyByBundles
 
 ```TypeScript
 function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>
 ```
 
-Sets the application priority notification strategies in batches. This API uses a promise to return the result.
+批量设置应用通知优先策略。使用Promise异步回调。
 
 **Since:** 23
 
@@ -26,26 +32,26 @@ Sets the application priority notification strategies in batches. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategies | ArkTS-Dyn: Map&lt;BundleOption, number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Map&lt;BundleOption, long&gt; | Yes | Key-value pair set of the application notification priority strategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of [PriorityStrategyStatus]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| strategies | ArkTS-Dyn: Map&lt;BundleOption, number&gt;  <br>ArkTS-Sta：Map&lt;BundleOption, long&gt; | Yes | 应用通知优先策略的键值对集合。与 PriorityStrategyStatus的枚举进行按位或运算得到值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600003 | Failed to connect to the service. |
+| 17700001 | The specified bundle name was not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

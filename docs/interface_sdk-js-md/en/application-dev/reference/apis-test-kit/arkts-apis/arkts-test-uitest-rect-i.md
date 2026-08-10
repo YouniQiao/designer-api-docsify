@@ -1,6 +1,6 @@
 # Rect
 
-Represents the rectangle area on the device screen.
+控件的边框信息。
 
 **Since:** 9
 
@@ -10,15 +10,25 @@ Represents the rectangle area on the device screen.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## bottom
 
 ```TypeScript
 bottom: int
 ```
 
-Y coordinate of the lower right corner of the component border. The value is an integer greater than 0.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: px
+控件边框的右下角的Y坐标，取值大于等于0的整数，单位：px。
 
-**Type:** int
+**说明：** 从API version 20开始，该属性不再为只读属性。
+
+从API version 11开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,9 +46,11 @@ Y coordinate of the lower right corner of the component border. The value is an 
 displayId?: int
 ```
 
-ID of the display to which the component border belongs. The value is an integer greater than or equal to 0.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value: the default screen ID of the device.
+控件边框所属的屏幕ID，取值大于或等于0的整数。默认值为设备默认屏幕ID。
 
-**Type:** int
+从API version 20开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -56,9 +68,13 @@ ID of the display to which the component border belongs. The value is an integer
 left: int
 ```
 
-X coordinate of the upper left corner of the component border. The value is an integer greater than 0.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: px
+控件边框的左上角的X坐标，取值大于等于0的整数，单位：px。
 
-**Type:** int
+**说明：** 从API version 20开始，该属性不再为只读属性。
+
+从API version 11开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -76,9 +92,13 @@ X coordinate of the upper left corner of the component border. The value is an i
 right: int
 ```
 
-X coordinate of the lower right corner of the component border. The value is an integer greater than 0.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: px
+控件边框的右下角的X坐标，取值大于等于0的整数，单位：px。
 
-**Type:** int
+**说明：** 从API version 20开始，该属性不再为只读属性。
+
+从API version 11开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -96,9 +116,13 @@ X coordinate of the lower right corner of the component border. The value is an 
 top: int
 ```
 
-Y coordinate of the upper left corner of the component border. The value is an integer greater than 0.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: px
+控件边框的左上角的Y坐标，取值大于等于0的整数，单位：px。
 
-**Type:** int
+**说明：** 从API version 20开始，该属性不再为只读属性。
+
+从API version 11开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

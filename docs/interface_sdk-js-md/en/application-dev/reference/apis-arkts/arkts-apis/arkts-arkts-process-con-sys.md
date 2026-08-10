@@ -6,7 +6,7 @@
 const egid: number
 ```
 
-Returns the numeric valid group ID of the process
+返回进程的有效组 ID（数值形式）。
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ Returns the numeric valid group ID of the process
 const euid: number
 ```
 
-Return the numeric valid user identity of the process
+返回进程的有效用户标识（数值形式）。
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ Return the numeric valid user identity of the process
 const gid: number
 ```
 
-Returns the numeric group id of the process
+返回进程的组 ID（数值形式）。
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ Returns the numeric group id of the process
 const groups: number[]
 ```
 
-Return an array with supplementary group id
+返回包含补充组 ID 的数组。
 
 **Since:** 7
 
@@ -78,7 +78,7 @@ Return an array with supplementary group id
 const ppid: number
 ```
 
-Return ppid is The pid of the current child process
+返回 ppid 表示当前子进程的 pid。
 
 **Since:** 7
 

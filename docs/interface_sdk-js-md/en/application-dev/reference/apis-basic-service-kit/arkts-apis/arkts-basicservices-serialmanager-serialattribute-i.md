@@ -1,6 +1,6 @@
 # SerialAttribute
 
-Represents the configuration parameters of a serial port.
+串口的配置参数。
 
 **Since:** 19
 
@@ -10,15 +10,21 @@ Represents the configuration parameters of a serial port.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
+## Modules to Import
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## baudRate
 
 ```TypeScript
 baudRate: BaudRates
 ```
 
-Baud rate.
+串口波特率。
 
-**Type:** BaudRates
+**Type:** [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
 
 **Since:** 19
 
@@ -34,9 +40,9 @@ Baud rate.
 dataBits?: DataBits
 ```
 
-Data bits. The default value is **8**.
+串口数据位，默认值为8位。
 
-**Type:** DataBits
+**Type:** [DataBits](arkts-basicservices-serial-databits-e.md)
 
 **Default:** DATABIT_8
 
@@ -54,9 +60,9 @@ Data bits. The default value is **8**.
 parity?: Parity
 ```
 
-Parity check. The default value is **None**, indicating that no parity check is performed.
+串口奇偶校验，默认值为None，无奇偶校验。
 
-**Type:** Parity
+**Type:** [Parity](arkts-basicservices-serialmanager-parity-e.md)
 
 **Default:** NONE
 
@@ -74,9 +80,9 @@ Parity check. The default value is **None**, indicating that no parity check is 
 stopBits?: StopBits
 ```
 
-Stop bits. The default value is **1**.
+串口停止位，默认值为1位。
 
-**Type:** StopBits
+**Type:** [StopBits](arkts-basicservices-serial-stopbits-e.md)
 
 **Default:** STOPBIT_1
 

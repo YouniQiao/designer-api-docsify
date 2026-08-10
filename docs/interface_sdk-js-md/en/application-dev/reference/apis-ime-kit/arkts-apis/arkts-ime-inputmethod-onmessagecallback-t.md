@@ -18,6 +18,6 @@ Callback function on receiving a custom message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | the identifier of the message.  |
-| msgParam | ArrayBuffer | No | the parameter of the custom message.  |
+| msgId | string | Yes | the identifier of the message. |
+| msgParam | ArrayBuffer | No | the parameter of the custom message. |
 

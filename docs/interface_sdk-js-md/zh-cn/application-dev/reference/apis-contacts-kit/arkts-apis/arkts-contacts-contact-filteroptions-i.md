@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.Contacts
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## filterCondition
 
 ```TypeScript
@@ -18,7 +24,7 @@ filterCondition: FilterCondition
 
 过滤条件。
 
-**类型：** FilterCondition
+**类型：** [FilterCondition](arkts-contacts-contact-filtercondition-e.md)
 
 **起始版本：** 15
 

@@ -1,12 +1,8 @@
 # ReadStream
 
-Defines a readable stream. You need to use  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to create a **ReadStream** instance, which is inherited from  
-[stream.Readable]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+文件可读流，需要先通过fileIo.createReadStream方法来构建一个ReadStream实例。ReadStream继承自数据流基类stream.Readable。ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
 
-The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
-
-**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)
+**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md)
 
 **Since:** 12
 
@@ -16,13 +12,19 @@ The data obtained by **ReadStream** is a decoded string. Currently, only the UTF
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Closes this readable stream.
+关闭可读流。
 
 **Since:** 12
 
@@ -43,11 +45,11 @@ Closes this readable stream.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const rs = fs.createReadStream(filePath);
+const rs = fileIo.createReadStream(filePath);
 rs.close();
 ```
 
@@ -57,7 +59,7 @@ rs.close();
 constructor()
 ```
 
-The ReadStream constructor.
+构造一个文件可读流.
 
 **Since:** 12
 
@@ -73,7 +75,7 @@ The ReadStream constructor.
 seek(offset: number, whence?: WhenceType): number
 ```
 
-Adjusts the position of the readable stream offset pointer.
+调整可读流偏移指针位置。
 
 **Since:** 12
 
@@ -88,7 +90,7 @@ Adjusts the position of the readable stream offset pointer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Relative offset, in bytes. |
-| whence | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Where to start the offset. The default value is **SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_SET**, which indicates the beginning of the file. |
+| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | Where to start the offset. The default value is **SEEK_SET**, which indicates the beginning of the file. |
 
 **Return value:**
 
@@ -100,18 +102,18 @@ Adjusts the position of the readable stream offset pointer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900020 | Invalid argument |
+| 401 | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const rs = fs.createReadStream(filePath);
-const curOff = rs.seek(5, fs.WhenceType.SEEK_SET);
-console.info(`current offset is ${curOff}`);
+const rs = fileIo.createReadStream(filePath);
+const curOff = rs.seek(5, fileIo.WhenceType.SEEK_SET);
+console.info(`Succeeded in seeking, current offset is ${curOff}`);
 rs.close();
 ```
 
@@ -121,7 +123,7 @@ rs.close();
 readonly bytesRead: number
 ```
 
-Number of bytes read by the readable stream.
+可读流已经读取的字节数。
 
 **Type:** number
 
@@ -139,7 +141,7 @@ Number of bytes read by the readable stream.
 readonly path: string
 ```
 
-Path of the file corresponding to the readable stream.
+当前可读流对应的文件路径。
 
 **Type:** string
 

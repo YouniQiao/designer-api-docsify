@@ -1,12 +1,18 @@
 # queryPrinterCapabilityByUri (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## queryPrinterCapabilityByUri
 
 ```TypeScript
 function queryPrinterCapabilityByUri(printerUri: string, printerId: string): Promise<PrinterCapabilities>
 ```
 
-Query printer capabilityies by printer uri.
+使用打印机的uri查询打印机能力，使用Promise异步回调。
 
 **Since:** 24
 
@@ -26,20 +32,20 @@ Query printer capabilityies by printer uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerUri | string | Yes | Indicates the printer uri. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Printer URI in the process of connecting. |
-| printerId | string | Yes | Indicates the printer ID. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Printer ID in the process of connecting. |
+| printerUri | string | Yes | 表示打印机uri。 |
+| printerId | string | Yes | 表示打印机ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrinterCapabilities&gt; |  Promise that resolves with the printer capabilityies. |
+| Promise&lt;PrinterCapabilities&gt; | Promise对象，返回打印机能力。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Can not find the printer in system. |
+| 13100005 | Can not find the printer in system. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application. |
 

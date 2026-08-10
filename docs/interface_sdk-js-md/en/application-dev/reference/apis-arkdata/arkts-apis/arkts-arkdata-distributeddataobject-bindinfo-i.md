@@ -1,6 +1,6 @@
 # BindInfo
 
-Represents the information about the joint asset in the RDB store to bind. Currently, only the RDB stores are supported.
+数据库的绑定信息。当前版本只支持关系型数据库的绑定。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Represents the information about the joint asset in the RDB store to bind. Curre
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
+
 ## assetName
 
 ```TypeScript
 assetName: string
 ```
 
-Name of the target asset in the RDB store.
+待绑定资产在所属的数据库中的资产名。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Name of the target asset in the RDB store.
 field: string
 ```
 
-Column in which the target asset is located in the RDB store.
+待绑定资产在所属的数据库中的列名。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Column in which the target asset is located in the RDB store.
 primaryKey: commonType.ValuesBucket
 ```
 
-Primary key of the target asset in the RDB store.
+待绑定资产在所属的数据库中的主键。
 
 **Type:** commonType.ValuesBucket
 
@@ -70,7 +76,7 @@ Primary key of the target asset in the RDB store.
 storeName: string
 ```
 
-RDB store to which the target asset (asset to bind) belongs.
+待绑定资产在所属的数据库中的库名。
 
 **Type:** string
 
@@ -88,7 +94,7 @@ RDB store to which the target asset (asset to bind) belongs.
 tableName: string
 ```
 
-Table to which the target asset is located in the RDB store.
+待绑定资产在所属的数据库中的表名。
 
 **Type:** string
 

@@ -20,14 +20,14 @@ Defines the callback type used in onGestureRecognizerJudgeBegin.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the event information  |
-| current | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the current gesture recognizer of the component  |
-| recognizers | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | 是 | the gesture recognizers of the component on the response chain  |
-| touchRecognizers | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | 否 | the touch recognizers of the component on the response chain  |
+| event | [BaseGestureEvent](arkts-arkui-basegestureevent-i.md) | 是 | the event information |
+| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | 是 | the current gesture recognizer of the component |
+| recognizers | Array&lt;[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)&gt; | 是 | the gesture recognizers of the component on the response chain |
+| touchRecognizers | Array&lt;[TouchRecognizer](arkts-arkui-touchrecognizer-c.md)&gt; | 否 | the touch recognizers of the component on the response chain |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the gesture judge result  |
+| [GestureJudgeResult](arkts-arkui-gesturejudgeresult-e.md) | the gesture judge result |
 

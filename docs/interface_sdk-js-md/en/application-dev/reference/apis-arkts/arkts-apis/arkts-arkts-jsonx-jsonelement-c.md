@@ -32,13 +32,13 @@ Gets a JSON element from an array by index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index to look up. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| index | int | Yes | The index to look up. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The JSON element associated with the index. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | The JSON element associated with the index. |
 
 ## $_get
 
@@ -68,7 +68,7 @@ Gets a JSON element from an object by key.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The JSON element associated with the key. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | The JSON element associated with the key. |
 
 ## $_iterator
 
@@ -76,7 +76,7 @@ Gets a JSON element from an object by key.
 $_iterator(): IterableIterator<[string, JsonElement]>
 ```
 
-Iterator over object properties if jsonType == JsonType.JsonObject.on type error \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ is raised.
+Iterator over object properties if jsonType == JsonType.JsonObject.on type error `JsonTypeError` is raised.
 
 **Since:** 26.0.0
 
@@ -92,7 +92,7 @@ Iterator over object properties if jsonType == JsonType.JsonObject.on type error
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[string, JsonElement]&gt; | An iterator over the object properties. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, JsonElement]&gt; | An iterator over the object properties. |
 
 ## asArray
 
@@ -116,7 +116,7 @@ Gets an array value from the element.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | The array value. |
+| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | The array value. |
 
 ## asBigInt
 
@@ -326,7 +326,7 @@ Copy constructor (deep copy).Creates a new JSON element by copying the values fr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The JSON element to copy from. |
+| other | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | Yes | The JSON element to copy from. |
 
 ## constructor
 
@@ -350,7 +350,7 @@ Creates a new JSON element from a key-value structure.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, \_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | The key-value structure to create from. |
+| elements | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The key-value structure to create from. |
 
 ## createArray
 
@@ -374,13 +374,13 @@ Creates a new JSON element containing an array of JSON elements.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Yes | The array of JSON elements to store. |
+| elements | Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The array of JSON elements to store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing the array. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the array. |
 
 ## createBigInt
 
@@ -410,7 +410,7 @@ Creates a new JSON element containing a bigint value.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing the bigint value. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the bigint value. |
 
 ## createBoolean
 
@@ -440,7 +440,7 @@ Creates a new JSON element containing a boolean value.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing the boolean value. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the boolean value. |
 
 ## createDouble
 
@@ -470,7 +470,7 @@ Creates a new JSON element containing a double value.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing the double value. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the double value. |
 
 ## createInteger
 
@@ -494,13 +494,13 @@ Creates a new JSON element containing an integer value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | The integer value to store. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| value | int | Yes | The integer value to store. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing the integer value. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the integer value. |
 
 ## createLong
 
@@ -530,7 +530,7 @@ Creates a new JSON element containing a long value.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing the long value. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the long value. |
 
 ## createNull
 
@@ -554,7 +554,7 @@ Creates a new JSON element containing a null value.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing null. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing null. |
 
 ## createObject
 
@@ -578,13 +578,13 @@ Creates a new JSON element containing an object with key-value pairs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | Map&lt;string, \_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Yes | The map of key-value pairs to store. |
+| map | Map&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The map of key-value pairs to store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing the object. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the object. |
 
 ## createString
 
@@ -614,7 +614,7 @@ Creates a new JSON element containing a string value.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing the string value. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the string value. |
 
 ## createUndefined
 
@@ -638,7 +638,7 @@ Creates a new JSON element containing an undefined value.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new JsonElement containing undefined. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing undefined. |
 
 ## getArray
 
@@ -668,7 +668,7 @@ Gets a JSON element from an object by key and ensures it is an array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | The JSON element associated with the key. |
+| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | The JSON element associated with the key. |
 
 ## getBigInt
 
@@ -788,7 +788,7 @@ Gets a JSON element from an object by key.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The JSON element associated with the key. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | The JSON element associated with the key. |
 
 ## getInteger
 
@@ -962,7 +962,7 @@ Sets the current JsonElement to an array value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Yes | The array value to set. |
+| value | Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The array value to set. |
 
 ## setBigInt
 
@@ -1059,7 +1059,7 @@ Sets a JSON element in an object by key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | The key to set. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The JSON element to set. |
+| value | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | Yes | The JSON element to set. |
 
 ## setInteger
 
@@ -1083,7 +1083,7 @@ Sets the current JsonElement to an integer value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | The integer value to set. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| value | int | Yes | The integer value to set. &lt;br&gt;The value should be an integer. |
 
 ## setLong
 
@@ -1191,7 +1191,7 @@ Attempts to get an array value from the element.Returns undefined if the value i
 
 | Type | Description |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | The array value if found, undefined otherwise. |
+| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | The array value if found, undefined otherwise. |
 
 ## tryAsBigInt
 
@@ -1389,7 +1389,7 @@ Attempts to get a JSON element from an object by key and ensures it is an array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | The JSON element if found, an empty array otherwise. |
+| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | The JSON element if found, an empty array otherwise. |
 
 ## tryGetBigInt
 
@@ -1512,7 +1512,7 @@ Attempts to get a JSON element from an object by key.Returns undefined if the ke
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The JSON element if found, undefined otherwise. |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | The JSON element if found, undefined otherwise. |
 
 ## tryGetInteger
 
@@ -1537,7 +1537,7 @@ Attempts to get an integer value from an object by key.Returns the fallback valu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | The key to look up. |
-| fallback | int | Yes | The fallback value to return if the key is not found. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| fallback | int | Yes | The fallback value to return if the key is not found. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
@@ -1665,7 +1665,7 @@ get jsonType(): JsonType
 
 Gets the type of the JSON element.
 
-**Type:** JsonType
+**Type:** [JsonType](arkts-arkts-jsonx-jsontype-e.md)
 
 **Since:** 26.0.0
 

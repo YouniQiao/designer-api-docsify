@@ -16,7 +16,7 @@ Enum for DownloadIconStyle
 FULL_FILLED = 1
 ```
 
-FULL\_FILLED type.
+FULL_FILLED type.
 
 **Since:** 23
 

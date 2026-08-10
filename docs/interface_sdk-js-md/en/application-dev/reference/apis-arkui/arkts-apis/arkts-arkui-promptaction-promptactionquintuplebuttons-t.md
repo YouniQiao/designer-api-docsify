@@ -10,7 +10,7 @@ export type PromptActionQuintupleButtons = [
     ]
 ```
 
-Defines the five-buttons array.
+菜单中的菜单项按钮，仅支持5个按钮。
 
 **Since:** 23
 

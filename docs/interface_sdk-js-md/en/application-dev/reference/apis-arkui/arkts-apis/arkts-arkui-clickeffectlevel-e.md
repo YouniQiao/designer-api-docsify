@@ -1,6 +1,6 @@
 # ClickEffectLevel
 
-Enum of click effect level.
+定义点击效果的级别及对应动效参数。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enum of click effect level.
 LIGHT = 0
 ```
 
-Small area (light)
+小面积（轻盈）
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Small area (light)
 MIDDLE = 1
 ```
 
-Medium area (stable)
+中面积（稳定）
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ Medium area (stable)
 HEAVY = 2
 ```
 
-Large area (heavy)
+大面积（厚重）
 
 **Since:** 10
 

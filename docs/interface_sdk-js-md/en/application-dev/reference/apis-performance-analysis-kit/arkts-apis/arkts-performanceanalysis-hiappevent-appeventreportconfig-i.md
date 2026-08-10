@@ -1,6 +1,6 @@
 # AppEventReportConfig
 
-Defines the event configuration for the data processor to report.
+数据处理者可以上报事件的描述配置。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Defines the event configuration for the data processor to report.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## domain
 
 ```TypeScript
 domain?: string
 ```
 
-Event domain. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters(a to z)(A to Z), and underscore (\_). It must start with a letter and cannot end with an underscore (\_). The default value is an empty string.
+事件领域。默认为空字符串，事件领域名称支持数字、字母、下划线字符，需要以字母开头且不能以下划线结尾，长度非空且不超过32个字符。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Event domain. The value is a string that contains a maximum of 32 characters, in
 isRealTime?: boolean
 ```
 
-Whether to report events in real time. The value **true** indicates that events are reported in real time, and the value **false** indicates the opposite. The default value is **false**.
+是否实时上报事件。默认值为false，配置值为true表示实时上报事件，false表示不实时上报事件。
 
 **Type:** boolean
 
@@ -56,7 +62,7 @@ Whether to report events in real time. The value **true** indicates that events 
 name?: string
 ```
 
-Event name. The value is string that contains a maximum of 48 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (\_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter. The default value is an empty string.
+事件名称。默认为空字符串，首字符必须为字母字符或\$字符，中间字符必须为数字字符、字母字符或下划线字符，结尾字符必须为数字字符或字母字符，长度非空且不超过48个字符。
 
 **Type:** string
 

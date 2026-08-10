@@ -64,7 +64,7 @@ icon?: ResourceStr
 
 菜单项图标。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 
@@ -86,7 +86,7 @@ symbolIcon?: SymbolGlyphModifier
 
 设置菜单项图标。通过Modifier配置菜单项图标，若同时配置symbolIcon和icon的情况下，icon图标不显示。
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 12
 
@@ -108,7 +108,7 @@ value: ResourceStr
 
 菜单项文本。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 7
 

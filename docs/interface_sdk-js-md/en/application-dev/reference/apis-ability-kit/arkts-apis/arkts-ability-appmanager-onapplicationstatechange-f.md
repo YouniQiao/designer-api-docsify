@@ -1,12 +1,18 @@
 # onApplicationStateChange
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onApplicationStateChange
 
 ```TypeScript
 function onApplicationStateChange(observer: ApplicationStateObserver): int
 ```
 
-Register application state observer.
+注册所有应用程序的状态监听器。
 
 **Since:** 23
 
@@ -22,20 +28,20 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The application state observer. |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Returns the number code of the observer. |
+| int | 已注册监听器ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 
 
 ## onApplicationStateChange
@@ -44,7 +50,7 @@ Register application state observer.
 function onApplicationStateChange(observer: ApplicationStateObserver, bundleNameList: Array<string>): int
 ```
 
-Register application state observer.
+注册指定应用程序的状态监听器。
 
 **Since:** 23
 
@@ -60,19 +66,19 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The application state observer. |
-| bundleNameList | Array&lt;string&gt; | Yes | The list of bundleName. The max length is 128. |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
+| bundleNameList | Array&lt;string&gt; | Yes | 表示需要注册监听的bundleName数组。最大值128。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Returns the number code of the observer. |
+| int | 已注册监听器ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 

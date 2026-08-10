@@ -21,6 +21,6 @@ type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| domainAccountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示域账号信息。  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示认证结果回调。  |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | 是 | 表示域账号信息。 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 表示认证结果回调。 |
 

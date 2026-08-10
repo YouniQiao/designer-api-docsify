@@ -1,6 +1,6 @@
 # MechEvent (System API)
 
-Definition of Mechanic device event.
+具身设备事件定义
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Definition of Mechanic device event.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## event
 
 ```TypeScript
 event: MechEventType
 ```
 
-Event type of this event.
+事件类型
 
-**Type:** MechEventType
+**Type:** [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -38,9 +44,9 @@ Event type of this event.
 mechId: int
 ```
 
-ID of the mechanical device.The value should be an integer.
+具身设备ID。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

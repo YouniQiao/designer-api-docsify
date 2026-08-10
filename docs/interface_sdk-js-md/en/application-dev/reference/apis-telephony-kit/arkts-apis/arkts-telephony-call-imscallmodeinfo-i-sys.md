@@ -12,6 +12,12 @@ Indicates the ims call mode info of a video call.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## callId
 
 ```TypeScript
@@ -20,7 +26,7 @@ callId: int
 
 Indicates the id of call.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -40,7 +46,7 @@ imsCallMode: ImsCallMode
 
 Indicates the ImsCallMode of call.
 
-**Type:** ImsCallMode
+**Type:** [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md)
 
 **Since:** 11
 
@@ -80,7 +86,7 @@ result: VideoRequestResultType
 
 Indicates the request result.
 
-**Type:** VideoRequestResultType
+**Type:** [VideoRequestResultType](arkts-telephony-call-videorequestresulttype-e-sys.md)
 
 **Since:** 11
 

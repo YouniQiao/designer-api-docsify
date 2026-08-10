@@ -10,13 +10,19 @@ Defines the ICC account information.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## operatorName
 
 ```TypeScript
 operatorName?: string
 ```
 
-Indicates the operatorName for card.
+表示卡的操作员名称。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ Indicates the operatorName for card.
 simLabelIndex?: int
 ```
 
-Indicates the simLabelIndex for card.The value should be an integer.
+卡的simLabelIndex。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

@@ -1,16 +1,22 @@
 # getAuthInstance
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## getAuthInstance
 
 ```TypeScript
 function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance
 ```
 
-Obtains an **AuthInstance** instance for user authentication.
-    **NOTE**  
-    
-    Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new  
-    **AuthInstance**.
+获取AuthInstance对象，用于执行用户身份认证。
+
+> **说明：**
+> 
+> 每个AuthInstance只能进行一次认证，若需要再次进行认证则需重新获取AuthInstance。
 
 **Since:** 9
 
@@ -28,26 +34,26 @@ Obtains an **AuthInstance** instance for user authentication.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value. It cannot exceed 32 bytes and can be passed in Uint8Array([]) format. |
-| authType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication trust level. |
+| challenge | Uint8Array | Yes | 挑战值，最大长度为32字节，可以传Uint8Array([])。 |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | 认证类型，当前支持FACE和FINGERPRINT。 |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | 认证信任等级。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | AuthInstance** instance obtained. |
+| [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) | 认证器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
+| 401 | Parameter error. |
+| 12500006 | The authentication trust level is not supported. |
+| 12500005 | The authentication type is not supported. |
+| 12500002 | General operation error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -58,9 +64,9 @@ let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
 
 try {
   let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  console.info('let auth instance success');
+  console.info('get auth instance successfully.');
 } catch (error) {
-  console.error(`get auth instance success failed, error = ${error}`);
+  console.error(`get auth instance failed. Code: ${error?.code}, message: ${error?.message}`);
 }
 ```
 

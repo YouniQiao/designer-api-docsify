@@ -6,9 +6,17 @@ KioskManager模块提供Kiosk模式管理能力，包括系统进入/退出Kiosk
 
 **ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace kioskManager--><!--Device-unnamed-declare namespace kioskManager-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { kioskManager } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 

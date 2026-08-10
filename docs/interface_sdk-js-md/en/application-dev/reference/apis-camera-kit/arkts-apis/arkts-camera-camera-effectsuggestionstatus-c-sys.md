@@ -12,6 +12,12 @@ Effect suggestion status
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## status
 
 ```TypeScript
@@ -40,7 +46,7 @@ type: EffectSuggestionType
 
 Effect Suggestion type.
 
-**Type:** EffectSuggestionType
+**Type:** [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)
 
 **Since:** 12
 

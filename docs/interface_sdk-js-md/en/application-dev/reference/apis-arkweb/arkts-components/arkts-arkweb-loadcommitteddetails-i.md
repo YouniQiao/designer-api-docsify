@@ -1,6 +1,6 @@
 # LoadCommittedDetails
 
-Defines the load committed details.
+提供已提交跳转的网页的详细信息。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Defines the load committed details.
 didReplaceEntry: boolean
 ```
 
-True if the committed entry has replaced the existing one. Note that in case of subframes, the NavigationEntry and FrameNavigationEntry objects don't actually get replaced - they're reused, but with updated attributes.
+true表示提交的新节点替换了已有的节点。另外在一些子文档跳转的场景，虽然没有实际替换已有节点，但是有一些属性发生了变更。
 
 **Type:** boolean
 
@@ -36,7 +36,7 @@ True if the committed entry has replaced the existing one. Note that in case of 
 isMainFrame: boolean
 ```
 
-Check whether the request is for getting the main frame.
+是否是主文档。
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ Check whether the request is for getting the main frame.
 isSameDocument: boolean
 ```
 
-Whether the navigation happened without changing document. Examples of same document navigations are:1. reference fragment navigations.2. pushState/replaceState.3. same page history navigation
+是否在不更改文档的情况下进行的网页跳转。在同文档跳转的示例：1.参考片段跳转；2.pushState或replaceState触发的跳转；3.同一页面历史跳转。
 
 **Type:** boolean
 
@@ -76,9 +76,9 @@ Whether the navigation happened without changing document. Examples of same docu
 navigationType: WebNavigationType
 ```
 
-The type of the navigation.
+网页跳转的类型。
 
-**Type:** WebNavigationType
+**Type:** [WebNavigationType](arkts-arkweb-webnavigationtype-e.md)
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ The type of the navigation.
 url: string
 ```
 
-The url to navigate.
+当前跳转网页的URL。
 
 **Type:** string
 

@@ -4,7 +4,7 @@
 type RowData = Array<ValueType>
 ```
 
-Indicates a row of data with an array.
+用于表示数据库表中的某一行数据。
 
 **Since:** 23
 

@@ -318,12 +318,12 @@
   - [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md)
   - [updateForm](arkts-form-formprovider-updateform-depr-f.md)
 - application<!--arkts-formkit-application-->
-  - [application/FormEditExtensionContext](arkts-application/formeditextensioncontext.md)
-    - [FormEditExtensionContext](formeditextensioncontext-formeditextensioncontext-c.md)
-  - [application/FormExtensionContext](arkts-application/formextensioncontext.md)
+  - [FormEditExtensionContext](arkts-formeditextensioncontext.md)
+    - [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
+  - [FormExtensionContext](arkts-formextensioncontext.md)
     <!--Del-->
-    - [FormExtensionContext(system api)](formextensioncontext-formextensioncontext-c-sys.md)<!--DelEnd-->
-  - [application/LiveFormExtensionContext](arkts-application/liveformextensioncontext.md)
-    - [LiveFormExtensionContext](liveformextensioncontext-liveformextensioncontext-c.md)
+    - [FormExtensionContext(system api)](arkts-form-formextensioncontext-c-sys.md)<!--DelEnd-->
+  - [LiveFormExtensionContext](arkts-liveformextensioncontext.md)
+    - [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
     <!--Del-->
-    - [LiveFormExtensionContext(system api)](liveformextensioncontext-liveformextensioncontext-c-sys.md)<!--DelEnd-->
+    - [LiveFormExtensionContext(system api)](arkts-form-liveformextensioncontext-c-sys.md)<!--DelEnd-->

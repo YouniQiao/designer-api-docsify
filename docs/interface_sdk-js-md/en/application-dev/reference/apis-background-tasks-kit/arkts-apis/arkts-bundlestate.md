@@ -1,6 +1,6 @@
-# @ohos.bundleState(Device Usage Statistics)
+# @ohos.bundleState(设备使用信息统计)
 
-This module provides APIs for collecting statistics on device usage.
+本模块提供设备使用信息统计能力。
 
 **Since:** 7
 
@@ -12,14 +12,20 @@ This module provides APIs for collecting statistics on device usage.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
+## Modules to Import
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isidlestate) | Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACTIVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO permission. This API uses an asynchronous callback to return the result. |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isidlestate-1) | Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACTIVE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO permission. This API uses a promise to return the result. |
+| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isidlestate) | 判断指定bundleName的应用当前是否是空闲状态，三方应用只能查询自身的空闲状态。系统应用支持查询其他应用的空闲状态，查询前需要申请权限ohos.permission.BUNDLE_ACTIVE_INFO。使用Callback异步回调。 |
+| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md#isidlestate-1) | 判断指定bundleName的应用当前是否是空闲状态，三方应用只能查询自身的空闲状态。系统应用支持查询其他应用的空闲状态，查询前需要申请权限ohos.permission.BUNDLE_ACTIVE_INFO，使用Promise异步回调。 |
 | [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryappusageprioritygroup) | Queries the usage priority group of the calling application.  The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks. |
 | [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md#queryappusageprioritygroup-1) | Queries the usage priority group of the calling application.  The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks. |
 | [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md#querycurrentbundleactivestates) | Queries state data of the current bundle within a specified period. |
@@ -34,8 +40,8 @@ This module provides APIs for collecting statistics on device usage.
 | [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#querybundleactivestates-1) | Queries state data of all bundles within a specified period identified by the start and end time. |
 | [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#querybundlestateinfobyinterval) | Queries usage information about each bundle within a specified period at a specified interval. |
 | [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#querybundlestateinfobyinterval-1) | Queries usage information about each bundle within a specified period at a specified interval. |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos) | Queries usage information about each bundle within a specified period.  This method queries usage information at the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ interval by default. |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos-1) | Queries usage information about each bundle within a specified period.  This method queries usage information at the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ interval by default. |
+| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos) | Queries usage information about each bundle within a specified period.  This method queries usage information at the {@link #BY_OPTIMIZED} interval by default. |
+| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos-1) | Queries usage information about each bundle within a specified period.  This method queries usage information at the {@link #BY_OPTIMIZED} interval by default. |
 <!--DelEnd-->
 
 ### Interfaces

@@ -1,6 +1,6 @@
 # TextBackgroundStyle
 
-Define the background style of span.
+定义Span的背景样式。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Define the background style of span.
 color?: ResourceColor
 ```
 
-Text background color.
+文本背景色。默认为透明，无背景色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
 
@@ -38,9 +38,9 @@ Text background color.
 radius?: Dimension | BorderRadiuses
 ```
 
-Rounded corner radius of the text background.
+文本背景圆角。默认无圆角。
 
-**Type:** Dimension \| BorderRadiuses
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses
 
 **Since:** 11
 

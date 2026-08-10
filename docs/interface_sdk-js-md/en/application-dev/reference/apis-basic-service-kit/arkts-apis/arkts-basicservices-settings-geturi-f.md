@@ -1,5 +1,11 @@
 # getURI
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getURI
 
 ```TypeScript
@@ -23,9 +29,9 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of the setting to set. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;object&gt; | Yes | The callback of getURI result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getURI result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS, (uri:string) => {
@@ -64,7 +70,7 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 | --- | --- |
 | Promise&lt;object&gt; | Returns the corresponding URI; returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS).then((uri:string) => {

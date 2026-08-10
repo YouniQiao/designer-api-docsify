@@ -12,6 +12,12 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { missionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 <!--Del-->

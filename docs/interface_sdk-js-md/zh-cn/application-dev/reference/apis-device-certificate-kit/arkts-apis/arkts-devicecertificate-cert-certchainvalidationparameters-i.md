@@ -10,14 +10,20 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## allowDownloadIntermediateCa
 
 ```TypeScript
 allowDownloadIntermediateCa?: boolean
 ```
 
-表示是否允许尝试从网络下载缺失的中间CA证书。 true表示允许；false表示不允许。默认值为false。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_下载地址将从证书AIA扩展中获取，仅支持http，如需使用网络下载，需申请ohos.permission.INTERNET权限。配置方式请参见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+表示是否允许尝试从网络下载缺失的中间CA证书。 true表示允许；false表示不允许。默认值为false。&lt;br&gt;下载地址将从证书AIA扩展中获取，仅支持http，如需使用网络下载，需申请ohos.permission.INTERNET权限。配置方式请参见  
+[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 **类型：** boolean
 
@@ -101,7 +107,7 @@ policy?: ValidationPolicyType
 
 表示需要校验证书的策略类型。
 
-**类型：** ValidationPolicyType
+**类型：** [ValidationPolicyType](arkts-devicecertificate-cert-validationpolicytype-e.md)
 
 **起始版本：** 12
 
@@ -121,7 +127,7 @@ revocationCheckParam?: RevocationCheckParameter
 
 表示需要校验证书吊销状态的参数对象。
 
-**类型：** RevocationCheckParameter
+**类型：** [RevocationCheckParameter](arkts-devicecertificate-cert-revocationcheckparameter-i.md)
 
 **起始版本：** 12
 

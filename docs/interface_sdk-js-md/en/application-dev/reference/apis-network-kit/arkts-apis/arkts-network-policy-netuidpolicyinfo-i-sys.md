@@ -12,6 +12,12 @@ Callback function for registering network UID policy changes.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## policy
 
 ```TypeScript
@@ -20,7 +26,7 @@ policy: NetUidPolicy
 
 Uid Specifies the Internet access policy in background mode.
 
-**Type:** NetUidPolicy
+**Type:** [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md)
 
 **Since:** 11
 
@@ -38,7 +44,7 @@ Uid Specifies the Internet access policy in background mode.
 uid: number
 ```
 
-The warning threshold of traffic, default: DATA\_USAGE\_UNKNOWN.
+The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
 
 **Type:** number
 

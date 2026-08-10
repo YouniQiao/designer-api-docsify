@@ -1,6 +1,6 @@
 # PanelType
 
-Enumerates the types of the input method panel.
+输入法面板类型枚举。定义面板的类别，决定面板是软键盘还是状态栏。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the types of the input method panel.
 SOFT_KEYBOARD = 0
 ```
 
-Soft keyboard.
+软键盘类型。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Soft keyboard.
 STATUS_BAR
 ```
 
-Status bar.
+状态栏类型。
 
 **Since:** 11
 

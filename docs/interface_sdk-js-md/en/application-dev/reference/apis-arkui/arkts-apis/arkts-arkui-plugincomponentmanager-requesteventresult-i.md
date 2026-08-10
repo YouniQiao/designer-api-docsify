@@ -1,6 +1,6 @@
 # RequestEventResult
 
-Plugin component request event result value.
+注册request监听方法后，接收到请求事件时回应请求的数据类型。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Plugin component request event result value.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## data
 
 ```TypeScript
 data?: KVObject
 ```
 
-Defines data.
+组件数据，以键值对形式存储，用于回应请求时传递的业务数据，键和值类型由业务定义。该字段为可选字段，不提供时默认不包含在返回结果中。
 
-**Type:** KVObject
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Defines data.
 extraData?: KVObject
 ```
 
-Defines extraData.
+request事件中传递的附加数据。该字段为可选字段，不提供时默认不包含在返回结果中。
 
-**Type:** KVObject
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -56,7 +62,7 @@ Defines extraData.
 template?: string
 ```
 
-Defines template.
+组件模板。该字段为可选字段，不提供时默认不包含在返回结果中。当需要返回组件模板信息时设置此字段；不需要返回模板时可省略。
 
 **Type:** string
 

@@ -12,6 +12,12 @@ Describes a rotation in 2D, which can be defined by rotation angle and rotation 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { componentUtils } from 'kits/@kit.ArkUI';
+```
+
 ## angle
 
 ```TypeScript

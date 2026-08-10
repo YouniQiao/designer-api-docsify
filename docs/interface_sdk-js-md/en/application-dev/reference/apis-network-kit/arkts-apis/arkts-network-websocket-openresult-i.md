@@ -10,6 +10,12 @@ The result for connect status a WebSocket connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## message
 
 ```TypeScript

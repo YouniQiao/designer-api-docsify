@@ -1,6 +1,6 @@
 # BundleUsedRecord (System API)
 
-Represents the access records of an application or device.
+某个应用或设备的访问记录。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Represents the access records of an application or device.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name of the application using the permission. In local scenarios, it can be used to directly locate the target application; this field is invalid in distributed scenarios.
+使用权限的应用包名。在本端场景下可用于直接定位目标应用；分布式场景下该字段无效。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Bundle name of the application using the permission. In local scenarios, it can 
 deviceId: string
 ```
 
-ID of the device where the application using the permission is located. Mainly used to identify the source of a remote device in distributed scenarios; this field can usually be ignored in local scenarios.
+使用权限的应用所在设备ID。主要在分布式场景下用于识别远端设备来源；本端场景下通常可忽略该字段。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ ID of the device where the application using the permission is located. Mainly u
 deviceName?: string
 ```
 
-Name of the device where the application using the permission is located, used only in distributed scenarios.It can be used to display a more understandable device identifier in the UI.Default value: Empty string.
+使用权限的应用所在设备名称，仅用于分布式场景。可用于在界面中展示更易理解的设备标识。默认值：空字符串。
 
 **Type:** string
 
@@ -78,7 +84,7 @@ Name of the device where the application using the permission is located, used o
 isRemote: boolean
 ```
 
-Whether it is an access record in a distributed scenario. false indicates a local application record, and true indicates a permission usage record on a remote device.
+是否是分布式场景的访问记录。false表示本端应用记录，true表示远端设备上的权限使用记录。
 
 **Type:** boolean
 
@@ -98,7 +104,7 @@ Whether it is an access record in a distributed scenario. false indicates a loca
 permissionRecords: Array<PermissionUsedRecord>
 ```
 
-Collection of permission usage records under the current application or device. Each element corresponds to a specific permission, allowing further viewing of access count, rejection count, last access time, and detailed records.
+当前应用或设备下的权限使用记录集合。每个元素对应一个具体权限，可进一步查看访问次数、拒绝次数、最后访问时间及明细记录。
 
 **Type:** Array&lt;PermissionUsedRecord&gt;
 
@@ -118,9 +124,9 @@ Collection of permission usage records under the current application or device. 
 tokenId: int
 ```
 
-Application identity identifier for using the permission. This field is invalid in distributed scenarios; the source device must be identified using deviceId and deviceName.
+使用权限的应用身份标识。分布式场景下该字段无效，需结合deviceId和deviceName识别来源设备。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

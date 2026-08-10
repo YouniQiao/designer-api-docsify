@@ -1,8 +1,8 @@
 # HashStream
 
-HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 接口获得。
+HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md#createhash) 接口获得。
 
-**继承/实现关系：** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md)
+**继承/实现关系：** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md/arkts-arkts-stream-transform-c.md)
 
 **起始版本：** 12
 
@@ -11,6 +11,12 @@ HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createH
 <!--Device-hash-class HashStream extends stream.Transform--><!--Device-hash-class HashStream extends stream.Transform-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { hash } from 'kits/@kit.CoreFileKit';
+```
 
 ## digest
 
@@ -38,10 +44,10 @@ digest(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
+| 401 | Parameter error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建哈希流
@@ -79,10 +85,10 @@ update(data: ArrayBuffer): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
+| 401 | Parameter error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建哈希流

@@ -1,5 +1,11 @@
 # enableAbility（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { config } from 'kits/@kit.AccessibilityKit';
+```
+
 ## enableAbility
 
 ```TypeScript
@@ -37,13 +43,13 @@ function enableAbility(name: string, capability: Array<accessibility.Capability>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) | Invalid bundle name or ability name. |
-| [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) | Target ability already enabled. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 9300001 | Invalid bundle name or ability name. |
+| 9300002 | Target ability already enabled. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility, config } from '@kit.AccessibilityKit';
@@ -90,21 +96,19 @@ function enableAbility(
 | --- | --- | --- | --- |
 | name | string | 是 | 辅助应用的名称，格式为：'bundleName/abilityName'。 |
 | capability | Array&lt;accessibility.Capability&gt; | 是 | 辅助应用的能力属性。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) | Invalid bundle name or ability name. |
-| [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) | Target ability already enabled. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 9300001 | Invalid bundle name or ability name. |
+| 9300002 | Target ability already enabled. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { accessibility, config } from '@kit.AccessibilityKit';
@@ -119,24 +123,6 @@ config.enableAbility(name, capability, (err: BusinessError) => {
     return;
   }
   console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`); 
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability, (err: BusinessError | null) => {
-  if (err?.code) {
-    console.error(`failed to enable ability, Code is ${err?.code}, message is ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in enable ability, name is ${name}, capability is ${capability}`); 
 });
 ```
 

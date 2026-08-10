@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
+## 导入模块
+
+```TypeScript
+import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## blueX
 
 ```TypeScript
@@ -18,7 +24,7 @@ blueX: double
 
 标准蓝色在色彩空间的x坐标值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ blueY: double
 
 标准蓝色在色彩空间的y坐标值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -54,7 +60,7 @@ greenX: double
 
 标准绿色在色彩空间的x坐标值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -72,7 +78,7 @@ greenY: double
 
 标准绿色在色彩空间的y坐标值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -90,7 +96,7 @@ redX: double
 
 标准红色在色彩空间的x坐标值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -108,7 +114,7 @@ redY: double
 
 标准红色在色彩空间的y坐标值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -126,7 +132,7 @@ whitePointX: double
 
 标准白色在色彩空间的x坐标值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -144,7 +150,7 @@ whitePointY: double
 
 标准白色在色彩空间的y坐标值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 

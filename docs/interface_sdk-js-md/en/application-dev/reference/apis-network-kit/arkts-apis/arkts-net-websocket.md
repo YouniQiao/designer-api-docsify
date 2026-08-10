@@ -10,6 +10,12 @@ Provides WebSocket APIs.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions
@@ -23,17 +29,17 @@ Provides WebSocket APIs.
 
 | Name | Description |
 | --- | --- |
-| [ClientCert](arkts-network-websocket-clientcert-i.md) | The clientCert field of the client certificate, which includes three attributes:client certificate (certPath) and only support PEM format, certificate private key (keyPath),and passphrase (keyPassword). |
+| [ClientCert](arkts-network-websocket-clientcert-i.md) | The clientCert field of the client certificate, which includes three attributes:client certificate (certPath) and only support PEM format, certificate private key (keyPath), and passphrase (keyPassword). |
 | [CloseResult](arkts-network-websocket-closeresult-i.md) | The result for closing a WebSocket connection. |
 | [OpenResult](arkts-network-websocket-openresult-i.md) | The result for connect status a WebSocket connection. |
 | [ServerCert](arkts-network-websocket-servercert-i.md) | The serverCert field of the server certificate, which includes two attributes:File paths of server certificate (certPath) and certificate private key (keyPath). Only support PEM format. |
-| [WebSocket](arkts-network-websocket-websocket-i.md) | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Defines a WebSocket object. Before invoking WebSocket APIs,you need to call webSocket.createWebSocket to create a WebSocket object.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| [WebSocket](arkts-network-websocket-websocket-i.md) | &lt;p&gt;Defines a WebSocket object. Before invoking WebSocket APIs,you need to call webSocket.createWebSocket to create a WebSocket object.&lt;/p&gt; |
 | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | Defines the optional parameters carried in the request for closing a WebSocket connection. |
 | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Info about the connection from each specific client. |
 | [WebSocketMessage](arkts-network-websocket-websocketmessage-i.md) | Info about the message received from a specific client. |
 | [WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md) | The result for open info of a WebSocket connection. |
 | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | Defines the optional parameters carried in the request for establishing a WebSocket connection. |
-| [WebSocketServer](arkts-network-websocket-websocketserver-i.md) | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Defines a WebSocketServer object. Before invoking WebSocketServer APIs,you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| [WebSocketServer](arkts-network-websocket-websocketserver-i.md) | &lt;p&gt;Defines a WebSocketServer object. Before invoking WebSocketServer APIs,you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.&lt;/p&gt; |
 | [WebSocketServerConfig](arkts-network-websocket-websocketserverconfig-i.md) | Defines parameters for a WebSocket Server. |
 
 ### Enums

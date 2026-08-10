@@ -1,6 +1,6 @@
 # MaterialOptions
 
-Define the interface containing various material parameters.
+系统材质选项。
 
 **Since:** 23
 
@@ -10,15 +10,23 @@ Define the interface containing various material parameters.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiMaterial } from 'kits/@kit.ArkUI';
+```
+
 ## type
 
 ```TypeScript
 type?: MaterialType
 ```
 
-The type of the material.
+材质类型。
 
-**Type:** MaterialType
+默认值：MaterialType.NONE
+
+**Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 
 **Default:** uiMaterial.MaterialType.NONE
 

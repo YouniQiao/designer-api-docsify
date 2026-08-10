@@ -1,6 +1,6 @@
 # SystemDefinedForm
 
-系统定义的桌面卡片类型数据，是[SystemDefinedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类。
+系统定义的桌面卡片类型数据，是[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类。
 
 **继承/实现关系：** SystemDefinedForm extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
@@ -11,6 +11,12 @@
 <!--Device-unifiedDataChannel-class SystemDefinedForm extends SystemDefinedRecord--><!--Device-unifiedDataChannel-class SystemDefinedForm extends SystemDefinedRecord-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
 
 ## abilityName
 
@@ -64,7 +70,7 @@ set formId(value: int)
 
 卡片id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

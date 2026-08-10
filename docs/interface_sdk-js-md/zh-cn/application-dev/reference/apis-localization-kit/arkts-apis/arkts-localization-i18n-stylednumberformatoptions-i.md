@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## decimal
 
 ```TypeScript
@@ -18,7 +24,7 @@ decimal?: TextStyle
 
 指定小数点的文本样式。默认值：StyledString默认的文本样式。
 
-**类型：** TextStyle
+**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +44,7 @@ fraction?: TextStyle
 
 指定小数部分的文本样式。默认值：StyledString默认的文本样式。
 
-**类型：** TextStyle
+**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **起始版本：** 23
 
@@ -58,7 +64,7 @@ integer?: TextStyle
 
 指定整数部分的文本样式。默认值：StyledString默认的文本样式。
 
-**类型：** TextStyle
+**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **起始版本：** 23
 
@@ -78,7 +84,7 @@ unit?: TextStyle
 
 指定单位部分的文本样式。默认值：StyledString默认的文本样式。
 
-**类型：** TextStyle
+**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **起始版本：** 23
 

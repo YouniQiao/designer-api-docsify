@@ -18,7 +18,7 @@ handler: ControllerHandler
 
 Lets you set the WebviewController instance for creating a new window.
 
-**类型：** ControllerHandler
+**类型：** [ControllerHandler](arkts-arkweb-controllerhandler-c.md)
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ navigationPolicy: NavigationPolicy
 
 The navigation policy causing the new web view to be created.
 
-**类型：** NavigationPolicy
+**类型：** [NavigationPolicy](arkts-arkweb-navigationpolicy-e.md)
 
 **起始版本：** 23
 
@@ -118,7 +118,7 @@ windowFeatures: WindowFeatures
 
 Contains the attributes that a webpage requests from its containing web view, the parameters of window.open.
 
-**类型：** WindowFeatures
+**类型：** [WindowFeatures](arkts-arkweb-windowfeatures-i.md)
 
 **起始版本：** 23
 

@@ -10,6 +10,12 @@ Describes the POI information struct.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## poiArray
 
 ```TypeScript
@@ -38,7 +44,7 @@ timestamp: long
 
 Indicates the timestamp when the POI information is obtained.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 

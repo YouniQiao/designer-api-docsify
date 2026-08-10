@@ -1,5 +1,11 @@
 # getScannerCurrentSetting
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getScannerCurrentSetting
 
 ```TypeScript
@@ -23,7 +29,7 @@ function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scannerId | string | 是 | 扫描仪的ID。 |
-| optionIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要获取的选项的索引。 |
+| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要获取的选项的索引。 |
 
 **返回值：**
 
@@ -35,9 +41,9 @@ function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';
@@ -48,7 +54,7 @@ let optionIndex: number = 1;
 scan.getScannerCurrentSetting(scannerId, optionIndex).then((value: scan.ScannerOptionValue) => {
     console.info('get scanner current setting success: ' + JSON.stringify(value));
 }).catch((error: BusinessError) => {
-    console.error('get scanner current setting failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to get scanner current setting. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

@@ -1,5 +1,11 @@
 # getAbilityLists
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## getAbilityLists
 
 ```TypeScript
@@ -10,7 +16,7 @@ function getAbilityLists(
   ): void
 ```
 
-Obtains the accessibility application list. This API uses an asynchronous callback to return the result.
+查询辅助应用列表，使用callback异步回调。
 
 **Since:** 7
 
@@ -28,11 +34,11 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility application type. |
-| stateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility application status. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Yes | Callback used to return the accessibility application list. If the operation is successful, **err** is **undefined** and **data** is the accessibility application list. Otherwise, it is an error object. |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | 辅助应用的状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Yes | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信 息列表；否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -46,7 +52,7 @@ accessibility.getAbilityLists(abilityType, abilityState, (err: BusinessError, da
     console.error(`failed to get accessibility extension list because ${JSON.stringify(err)}`);
     return;
   }
-  console.info(`Succeeded in get accessibility extension list, ${JSON.stringify(data)}`);
+  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
 })
 ```
 
@@ -57,7 +63,7 @@ accessibility.getAbilityLists(abilityType, abilityState, (err: BusinessError, da
 function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>
 ```
 
-Obtains the accessibility application list. This API uses a promise to return the result.
+查询辅助应用列表，使用Promise异步回调。
 
 **Since:** 7
 
@@ -75,16 +81,16 @@ Obtains the accessibility application list. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility application type. |
-| stateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility application status. |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | 辅助应用的状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Promise used to return the accessibility application list. |
+| Promise&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Promise对象，返回辅助应用信息列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -94,7 +100,7 @@ let abilityType: accessibility.AbilityType = 'spoken';
 let abilityState: accessibility.AbilityState = 'enable';
 
 accessibility.getAbilityLists(abilityType, abilityState).then((data: accessibility.AccessibilityAbilityInfo[]) => {
-  console.info(`Succeeded in get accessibility extension list, ${JSON.stringify(data)}`);
+  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
   console.error(`failed to get accessibility extension list because ${JSON.stringify(err)}`);
 });

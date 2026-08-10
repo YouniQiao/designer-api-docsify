@@ -1,6 +1,6 @@
 # PositionArea
 
-Describes area information in an image.
+表示图片指定区域内的数据。
 
 **Since:** 7
 
@@ -10,15 +10,21 @@ Describes area information in an image.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## offset
 
 ```TypeScript
 offset: int
 ```
 
-Offset for data reading, in bytes.
+偏移量。单位：字节（Byte）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -38,7 +44,7 @@ Offset for data reading, in bytes.
 pixels: ArrayBuffer
 ```
 
-Pixels of the image. Only pixel data in BGRA\_8888 format is supported.
+像素数据缓冲区。仅支持BGRA_8888格式的像素数据。
 
 **Type:** ArrayBuffer
 
@@ -60,9 +66,9 @@ Pixels of the image. Only pixel data in BGRA\_8888 format is supported.
 region: Region
 ```
 
-Region to read or write. The width of the region to write plus the X coordinate cannot be greater than the width of the original image. The height of the region to write plus the Y coordinate cannot be greater than the height of the original image.
+区域信息，用于按区域进行图像数据的读写。写入的区域宽度加X坐标不能大于原图的宽度，写入的区域高度加Y坐标不能大于原图的高度。
 
-**Type:** Region
+**Type:** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
 
 **Since:** 7
 
@@ -82,10 +88,9 @@ Region to read or write. The width of the region to write plus the X coordinate 
 stride: int
 ```
 
-Number of bytes from one row of pixels in memory to the next row of pixels in memory. The value of **stride**  
-must be greater than or equal to the value of **region.size.width** multiplied by 4.
+跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride >= region.size.width * 4，不满足时数据读取异常。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 

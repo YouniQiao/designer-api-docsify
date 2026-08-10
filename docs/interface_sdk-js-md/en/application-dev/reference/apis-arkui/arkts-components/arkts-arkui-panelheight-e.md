@@ -1,10 +1,10 @@
 # PanelHeight
 
-Enum for custom content display area.
+自定义内容显示区域的枚举。
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 12
 
@@ -18,11 +18,11 @@ Enum for custom content display area.
 WRAP_CONTENT = 'wrapContent'
 ```
 
-The Panel adapts to the content height.
+PanelType的类型为CUSTOM时，自适应内容高度。
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 12
 

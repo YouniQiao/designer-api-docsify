@@ -1,10 +1,10 @@
 # ControllerHandler
 
-Defines the onWindowNew callback, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the onWindowNew callback, related to {@link onWindowNew} method.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare class ControllerHandler--><!--Device-unnamed-declare class ControllerHandler-End-->
 
@@ -16,11 +16,11 @@ Defines the onWindowNew callback, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 constructor()
 ```
 
-Constructs a **ControllerHandler** API.
+Constructor.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,11 +34,11 @@ Constructs a **ControllerHandler** API.
 setWebController(controller: WebviewController): void
 ```
 
-Sets a **WebviewController** object. If opening a new window is not needed, set the parameter to **null**.
+Set WebController object.
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,5 +50,5 @@ Sets a **WebviewController** object. If opening a new window is not needed, set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| controller | [WebviewController](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md) | Yes |  |
 

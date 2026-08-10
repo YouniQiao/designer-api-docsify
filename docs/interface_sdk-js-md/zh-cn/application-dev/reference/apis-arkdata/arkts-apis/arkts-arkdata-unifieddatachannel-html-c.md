@@ -1,6 +1,6 @@
 # HTML
 
-HTML类型数据，是[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，用于描述超文本标记语言数据。
+HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超文本标记语言数据。
 
 **继承/实现关系：** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
@@ -11,6 +11,12 @@ HTML类型数据，是[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，用
 <!--Device-unifiedDataChannel-class HTML extends Text--><!--Device-unifiedDataChannel-class HTML extends Text-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
 
 ## htmlContent
 
@@ -63,7 +69,7 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 ```
 
 用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见  
-[UriPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
 **类型：** Array&lt;UriPermission&gt;
 

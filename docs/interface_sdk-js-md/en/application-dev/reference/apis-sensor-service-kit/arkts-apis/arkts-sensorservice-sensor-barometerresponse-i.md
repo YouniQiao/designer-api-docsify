@@ -1,40 +1,38 @@
 # BarometerResponse
 
-Defines a **BarometerResponse** object.
+气压计传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**Since:** 3
+**Inheritance/Implementation:** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**Since:** 8
 
-**Deprecated since:** 8
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Substitutes:** ohos.sensor/sensor#BarometerResponse
+<!--Device-sensor-interface BarometerResponse extends Response--><!--Device-sensor-interface BarometerResponse extends Response-End-->
 
-<!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
+**System capability:** SystemCapability.Sensors.Sensor
 
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
 
 ## pressure
 
 ```TypeScript
-pressure: number
+pressure: double
 ```
 
-Pressure, in pascal.
+大气压力值。单位：hPa（百帕）。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+<!--Device-BarometerResponse-pressure: double--><!--Device-BarometerResponse-pressure: double-End-->
 
-**Substitutes:** ohos.sensor/sensor#BarometerResponse.pressure
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-BarometerResponse-pressure: number--><!--Device-BarometerResponse-pressure: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 

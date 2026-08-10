@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-默认模式，会根据各配置层级下的followx\_file\_list.cfg文件配置的跟随规则进行文件查找。
+默认模式，会根据各配置层级下的followx_file_list.cfg文件配置的跟随规则进行文件查找。
 
 **起始版本：** 11
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 NO_RULE_FOLLOWED = 1
 ```
 
-不跟随模式，不会使用任何跟随规则，即使存在followx\_file\_list.cfg文件。
+不跟随模式，不会使用任何跟随规则，即使存在followx_file_list.cfg文件。
 
 **起始版本：** 11
 
@@ -106,7 +106,7 @@ SIM_2 = 12
 USER_DEFINED = 100
 ```
 
-用户自定义模式，会根据入参extra提供的跟随规则进行配置文件获取，忽略各配置层级下的followx\_file\_list.cfg文件。
+用户自定义模式，会根据入参extra提供的跟随规则进行配置文件获取，忽略各配置层级下的followx_file_list.cfg文件。
 
 **起始版本：** 11
 

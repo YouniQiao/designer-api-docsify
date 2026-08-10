@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## off('scanDeviceFound')
 
 ```TypeScript
 function off(type: 'scanDeviceFound', callback?: Callback<ScannerDevice>): void
 ```
 
-Unregisters a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result.
+取消注册扫描仪设备发现事件回调。使用callback异步回调。
 
 **Since:** 20
 
@@ -22,16 +28,16 @@ Unregisters a callback used to listen for the scanner discovery event. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scanDeviceFound' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScannerDevice&gt; | No | Callback to unregister. |
+| type | 'scanDeviceFound' | Yes | 事件类型。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | No | 回调函数，返回扫描仪设备发现信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';
@@ -51,7 +57,7 @@ scan.off('scanDeviceFound', callback);
 function off(type: 'scanDeviceSync', callback?: Callback<ScannerSyncDevice>): void
 ```
 
-Unregisters a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result.
+取消注册扫描仪设备同步事件回调。使用callback异步回调。
 
 **Since:** 20
 
@@ -67,16 +73,16 @@ Unregisters a callback used to listen for the scanner sync event. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scanDeviceSync' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScannerSyncDevice&gt; | No | Callback to unregister. |
+| type | 'scanDeviceSync' | Yes | 事件类型。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerSyncDevice&gt; | No | 回调函数，返回扫描仪设备同步信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

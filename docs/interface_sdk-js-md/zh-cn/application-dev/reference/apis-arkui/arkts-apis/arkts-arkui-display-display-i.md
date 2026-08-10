@@ -2,8 +2,8 @@
 
 屏幕实例。描述Display对象的属性和方法。
 
-下列API示例中都需先使用[getAllDisplays()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[getDefaultDisplaySync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中的任一方法获取到Display实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays)、  
+[getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)中的任一方法获取到Display实例，再通过此实例调用对应方法。
 
 **起始版本：** 7
 
@@ -12,6 +12,12 @@
 <!--Device-display-interface Display--><!--Device-display-interface Display-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
 
 ## getAvailableArea
 
@@ -43,12 +49,10 @@ getAvailableArea(): Promise<Rect>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400001 | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,27 +68,6 @@ try {
   })
 } catch (exception) {
   console.error(`Failed to obtain the default display object. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  let promise = displayClass.getAvailableArea();
-  promise.then((data: display.Rect) => {
-    console.info(`Succeeded get the available area in this display. data: ${JSON.stringify(data)}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to get the available area in this display. Code: ${err?.code}, message: ${err?.message}`);
-  })
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to obtain the default display object. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -110,17 +93,15 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CutoutInfo&gt; | 是 | 回调函数。返回不可用屏幕区域对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CutoutInfo&gt; | 是 | 回调函数。返回不可用屏幕区域对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| 1400001 | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -135,19 +116,6 @@ displayClass.getCutoutInfo((err: BusinessError, data: display.CutoutInfo) => {
     return;
   }
   console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-
-displayClass.getCutoutInfo().then((data: display.CutoutInfo) => {
-  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-}).catch((err: Error) => {
-  console.error(`Failed to get cutoutInfo. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 
@@ -179,11 +147,9 @@ getCutoutInfo(): Promise<CutoutInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| 1400001 | Invalid display or screen. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -195,21 +161,6 @@ promise.then((data: display.CutoutInfo) => {
   console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to get cutoutInfo. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-let promise: Promise<display.CutoutInfo> = displayClass.getCutoutInfo();
-promise.then((data: display.CutoutInfo) => {
-  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-}).catch((err: Error) => {
-  console.error(`Failed to obtain all the display objects. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 
@@ -241,9 +192,9 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 801 | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
+| 1400001 | Invalid display or screen. |
+| 1400003 | This display manager service works abnormally. |
 
 ## getLiveCreaseRegion
 
@@ -265,18 +216,16 @@ getLiveCreaseRegion(): FoldCreaseRegion
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回设备在当前显示模式下的折叠折痕区域。 |
+| [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | 返回设备在当前显示模式下的折叠折痕区域。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400003 | This display manager service works abnormally. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let displayClass: display.Display | null = null;
@@ -286,22 +235,6 @@ try {
   console.info(`Succeeded in getting the live crease region. Data: ${JSON.stringify(data)}`);
 } catch (exception) {
   console.error(`Failed to get the live crease region. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  let data: display.FoldCreaseRegion = displayClass.getLiveCreaseRegion();
-  console.info(`Succeeded in getting the live crease region. Data: ${JSON.stringify(data)}`);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to get the live crease region. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -333,11 +266,11 @@ getRoundedCorner(): Array<RoundedCorner>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 801 | Capability not supported. |
+| 1400001 | Invalid display or screen. |
+| 1400003 | This display manager service works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -375,17 +308,17 @@ off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | 是 | 监听事件，固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Rect&gt; | 否 | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 否 | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400003 | This display manager service works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -422,33 +355,14 @@ Unregister the callback for available area changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Rect&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例：**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let callback: Callback<display.Rect> = (data: display.Rect) => {
-  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
-};
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  displayClass.offAvailableAreaChange(callback);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to unregister callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400003 | This display manager service works abnormally. |
 
 ## on('availableAreaChange')
 
@@ -473,17 +387,17 @@ on(type: 'availableAreaChange', callback: Callback<Rect>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | 是 | 监听事件。固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Rect&gt; | 是 | 回调函数。返回改变后的可用区域。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 是 | 回调函数。返回改变后的可用区域。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400003 | This display manager service works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -520,33 +434,14 @@ Register the callback for available area changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Rect&gt; | 是 | Callback used to return the available area |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 是 | Callback used to return the available area |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例：**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let callback: Callback<display.Rect> = (data: display.Rect) => {
-  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
-};
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  displayClass.onAvailableAreaChange(callback);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400003 | This display manager service works abnormally. |
 
 ## alive
 
@@ -582,7 +477,7 @@ SystemCapability.WindowManager.WindowManager.Core
 
 该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过height属性获取当前设备屏幕的可用区域高度。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -606,7 +501,7 @@ SystemCapability.WindowManager.WindowManager.Core
 
 该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过width属性获取当前设备屏幕的可用区域宽度。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -650,7 +545,7 @@ densityDPI: double
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 7
 
@@ -668,13 +563,13 @@ SystemCapability.WindowManager.WindowManager.Core
 densityPixels: double
 ```
 
-显示设备逻辑像素的密度，代表物理像素与逻辑像素的缩放系数，计算方式为：!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+显示设备逻辑像素的密度，代表物理像素与逻辑像素的缩放系数，计算方式为：![densityPixels](../../../reference/apis-arkui/figures/densityPixels.jpg)
 
 该参数为浮点数，受densityDPI范围限制，取值范围在[0.5，4.0]。一般取值1.0、3.0等，实际取值取决于不同设备提供的densityDPI。
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 7
 
@@ -718,7 +613,7 @@ height: long
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 7
 
@@ -740,7 +635,7 @@ id: long
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 7
 
@@ -784,7 +679,7 @@ orientation: Orientation
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** Orientation
+**类型：** [Orientation](arkts-arkui-window-orientation-e.md)
 
 **起始版本：** 10
 
@@ -806,7 +701,7 @@ refreshRate: int
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -836,7 +731,7 @@ rotation: int
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -858,7 +753,7 @@ scaledDensity: double
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 7
 
@@ -880,7 +775,7 @@ screenShape?: ScreenShape
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ScreenShape
+**类型：** [ScreenShape](arkts-arkui-display-screenshape-e.md)
 
 **起始版本：** 18
 
@@ -902,7 +797,7 @@ sourceMode?: DisplaySourceMode
 
 SystemCapability.Window.SessionManager
 
-**类型：** DisplaySourceMode
+**类型：** [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md)
 
 **起始版本：** 19
 
@@ -924,7 +819,7 @@ state: DisplayState
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** DisplayState
+**类型：** [DisplayState](arkts-arkui-display-displaystate-e.md)
 
 **起始版本：** 7
 
@@ -946,7 +841,7 @@ supportedRefreshRates?: Array<int>
 
 SystemCapability.Window.SessionManager
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 20
 
@@ -968,7 +863,7 @@ width: long
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 7
 
@@ -990,7 +885,7 @@ x?: long
 
 SystemCapability.Window.SessionManager
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 
@@ -1012,7 +907,7 @@ x轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 7
 
@@ -1034,7 +929,7 @@ y?: long
 
 SystemCapability.Window.SessionManager
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 
@@ -1056,7 +951,7 @@ y轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。
 
 SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 7
 

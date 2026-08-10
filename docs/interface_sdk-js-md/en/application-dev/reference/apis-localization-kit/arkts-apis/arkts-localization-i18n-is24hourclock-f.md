@@ -1,12 +1,18 @@
 # is24HourClock
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## is24HourClock
 
 ```TypeScript
 export function is24HourClock(): boolean
 ```
 
-Checks whether the 24-hour clock is used.
+判断系统时间是否为24小时制。
 
 **Since:** 7
 
@@ -24,5 +30,5 @@ Checks whether the 24-hour clock is used.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the 24-hour clock is used, and **false** otherwise. |
+| boolean | true表示系统24小时开关开启，false表示系统24小时开关关闭。 |
 

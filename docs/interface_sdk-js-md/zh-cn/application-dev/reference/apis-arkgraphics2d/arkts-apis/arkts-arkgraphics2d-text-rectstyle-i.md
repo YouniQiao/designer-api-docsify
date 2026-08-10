@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## color
 
 ```TypeScript
@@ -38,7 +44,7 @@ leftBottomRadius: double
 
 矩形框的左下半径，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ leftTopRadius: double
 
 矩形框的左上半径，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ rightBottomRadius: double
 
 矩形框的右下半径，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -98,7 +104,7 @@ rightTopRadius: double
 
 矩形框的右上半径，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 

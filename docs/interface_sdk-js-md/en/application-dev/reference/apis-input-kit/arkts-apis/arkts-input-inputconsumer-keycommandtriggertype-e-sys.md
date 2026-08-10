@@ -1,6 +1,6 @@
 # KeyCommandTriggerType (System API)
 
-KeyCommandTriggerType
+按键命令触发类型枚举，用于指定组合按键的触发时机。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ KeyCommandTriggerType
 PRESSED = 1
 ```
 
-Triggered when pressed.
+首次按下触发。当最终按键首次按下时触发回调，自动重复按下不触发。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Triggered when pressed.
 REPEAT_PRESSED = 2
 ```
 
-Triggered when pressed repeatedly.
+重复按下触发。当最终按键每次按下时都触发回调，包括自动重复按下。
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ Triggered when pressed repeatedly.
 ALL_RELEASED = 3
 ```
 
-Continuous triggering, from pressing until all keys are released.
+按下按键或抬起按键时均会触发回调。包括自动重复按下的按键。
 
 **Since:** 26.0.0
 

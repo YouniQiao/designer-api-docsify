@@ -1,6 +1,6 @@
 # WindowSizeLayoutBreakpointInfo
 
-Provides information about window size layout breakpoint changes.
+窗口尺寸布局断点变化回调的信息。
 
 **Since:** 22
 
@@ -10,15 +10,21 @@ Provides information about window size layout breakpoint changes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## heightBreakpoint
 
 ```TypeScript
 readonly heightBreakpoint: HeightBreakpoint
 ```
 
-Layout breakpoint for window height.
+窗口高度所在的布局断点枚举。
 
-**Type:** HeightBreakpoint
+**Type:** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
 
 **Since:** 22
 
@@ -38,9 +44,9 @@ Layout breakpoint for window height.
 readonly widthBreakpoint: WidthBreakpoint
 ```
 
-Layout breakpoint for window width.
+窗口宽度所在的布局断点枚举。
 
-**Type:** WidthBreakpoint
+**Type:** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 
 **Since:** 22
 

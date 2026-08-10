@@ -4,7 +4,7 @@
 export type TriggerType = _TriggerType
 ```
 
-Enumerates the trigger types.
+触发条件的事件类型的枚举。
 
 **Since:** 23
 

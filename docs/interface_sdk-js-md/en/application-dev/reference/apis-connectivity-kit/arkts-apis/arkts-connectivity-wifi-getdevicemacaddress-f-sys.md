@@ -1,5 +1,11 @@
 # getDeviceMacAddress (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getDeviceMacAddress
 
 ```TypeScript
@@ -8,7 +14,7 @@ function getDeviceMacAddress(): string[]
 
 Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The MAC address is unique and cannot be changed.
+&lt;p&gt;The MAC address is unique and cannot be changed.
 
 **Since:** 7
 
@@ -32,7 +38,7 @@ Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.
 | --- | --- |
 | string[] | Returns the MAC address of the Wi-Fi device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## contextId
 
 ```TypeScript
@@ -38,7 +44,7 @@ mode: AsyncLockMode
 
 锁的模式。
 
-**类型：** AsyncLockMode
+**类型：** [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md)
 
 **起始版本：** 12
 

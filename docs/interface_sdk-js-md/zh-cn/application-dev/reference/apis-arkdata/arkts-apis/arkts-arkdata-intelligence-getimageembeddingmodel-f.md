@@ -1,5 +1,11 @@
 # getImageEmbeddingModel
 
+## 导入模块
+
+```TypeScript
+import { intelligence } from 'kits/@kit.ArkData';
+```
+
 ## getImageEmbeddingModel
 
 ```TypeScript
@@ -20,7 +26,7 @@ function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 嵌入模型的配置信息。 |
+| config | [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | 是 | 嵌入模型的配置信息。 |
 
 **返回值：**
 
@@ -32,13 +38,11 @@ function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 31300000 | Inner error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -57,27 +61,6 @@ intelligence.getImageEmbeddingModel(imageConfig)
     imageEmbedding = data;
   })
   .catch((err: BusinessError) => {
-    console.error(`Failed to get ImageModel. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let imageConfig: intelligence.ModelConfig = {
-  version: intelligence.ModelVersion.BASIC_MODEL,
-  isNpuAvailable: false,
-  cachePath: "/data"
-}
-let imageEmbedding: intelligence.ImageEmbedding | null = null;
-
-intelligence.getImageEmbeddingModel(imageConfig)
-  .then((data: intelligence.ImageEmbedding) => {
-    console.info("Succeeded in getting ImageModel");
-    // 保存图像嵌入模型对象供后续使用
-    imageEmbedding = data;
-  })
-  .catch((err) => {
     console.error(`Failed to get ImageModel. Code: ${err.code}, message: ${err.message}`);
   })
 ```

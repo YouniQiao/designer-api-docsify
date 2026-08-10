@@ -4,7 +4,7 @@
 export type ApplicationInfo = _ApplicationInfo
 ```
 
-Defines the application information.
+应用程序信息。
 
 **Since:** 9
 

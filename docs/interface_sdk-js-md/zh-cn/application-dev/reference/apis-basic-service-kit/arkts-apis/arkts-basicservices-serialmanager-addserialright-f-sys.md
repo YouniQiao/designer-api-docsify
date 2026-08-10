@@ -1,5 +1,11 @@
 # addSerialRight（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## addSerialRight
 
 ```TypeScript
@@ -24,29 +30,30 @@ function addSerialRight(tokenId: int, portId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 需要访问权限的tokenId。 |
-| portId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 目标设备的端口号，来自[getPortList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取的串口参数SerialPort。 |
+| tokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 需要访问权限的tokenId。 |
+| portId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-数据库操作异常) | Database operation exception. |
-| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) | Serial port management exception. |
-| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) | PortId does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 31400003 | PortId does not exist. |
+| 14400005 | Database operation exception. |
+| 31400001 | Serial port management exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { JSON } from '@kit.ArkTS';
-import serialManager from '@ohos.usbManager.serial';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 
-// 获取串口列表
+
 function addSerialRight() {
+  // 获取串口列表
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('portList: ', JSON.stringify(portList));
   if (portList === undefined || portList.length === 0) {
@@ -54,20 +61,22 @@ function addSerialRight() {
     return;
   }
 
-  let portId: int = portList[0].portId;
-  // 串口增加权限
+  let portId: number = portList[0].portId;
   let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
+
   bundleManager.getBundleInfoForSelf(bundleFlags).then((bundleInfo) => {
     console.info('getBundleInfoForSelf successfully. Data: %{public}s', JSON.stringify(bundleInfo));
     let tokenId = bundleInfo.appInfo.accessTokenId;
     try {
+      // 串口增加权限
       serialManager.addSerialRight(tokenId, portId);
       console.info('addSerialRight success, portId: ' + portId);
     } catch (error) {
-      console.error('addSerialRight error, ' + JSON.stringify(error));
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to add serial right. Code: ${err.code}, message: ${err.message}`);
     }
-  }).catch((error) => {
-    console.error('getBundleInfoForSelf failed, error = ' + JSON.stringify(error));
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get bundle info for self. Code: ${error.code}, message: ${error.message}`);
   });
 }
 ```

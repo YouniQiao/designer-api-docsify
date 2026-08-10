@@ -1,6 +1,6 @@
 # LocationPolicy
 
-Enumerates the location service policies.
+位置服务策略值。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the location service policies.
 DEFAULT_LOCATION_SERVICE = 0
 ```
 
-Default policy. The location service is not restricted and can be controlled by the user.
+默认策略，不限制位置服务开关，允许用户自行控制。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Default policy. The location service is not restricted and can be controlled by 
 DISALLOW_LOCATION_SERVICE = 1
 ```
 
-The location service is disabled. This policy applies to scenarios where the location service needs to be disabled, such as confidential areas and conference rooms.
+禁用位置服务策略。适用于涉密区域、保密会议室等需要禁止位置服务的场景。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ The location service is disabled. This policy applies to scenarios where the loc
 FORCE_OPEN_LOCATION_SERVICE = 2
 ```
 
-The location service is forcibly enabled. This policy applies to scenarios where the location service needs to be available, such as logistics tracking and field management.
+强制开启位置服务策略。适用于物流追踪、外勤管理等需要确保位置服务可用的场景。
 
 **Since:** 12
 

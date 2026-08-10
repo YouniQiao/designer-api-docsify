@@ -1,12 +1,18 @@
 # createRdbPredicates
 
+## Modules to Import
+
+```TypeScript
+import { dataAbility } from 'kits/@kit.ArkData';
+```
+
 ## createRdbPredicates
 
 ```TypeScript
 function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates
 ```
 
-Creates an **RdbPredicates** object with a table name and **DataAbilityPredicates** object.
+通过表名和DataAbility谓词对象创建Rdb谓词对象。
 
 **Since:** 7
 
@@ -20,16 +26,16 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of a database table. |
-| dataAbilityPredicates | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | DataAbilityPredicates** object. |
+| name | string | Yes | 数据库表中的表名，不能为空字符串。 |
+| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | DataAbility谓词。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| rdb.RdbPredicates | RdbPredicates** object created. |
+| rdb.RdbPredicates | 返回RdbPredicates对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()

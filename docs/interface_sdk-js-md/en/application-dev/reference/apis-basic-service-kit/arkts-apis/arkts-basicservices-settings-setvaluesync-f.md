@@ -1,5 +1,11 @@
 # setValueSync
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setValueSync
 
 ```TypeScript
@@ -28,7 +34,7 @@ Set settingsdata value(synchronous method)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates dataAbilityHelper instance. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates dataAbilityHelper instance. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
 
@@ -38,7 +44,7 @@ Set settingsdata value(synchronous method)
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -74,7 +80,7 @@ Set settingsdata value(synchronous method)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
 
@@ -84,7 +90,7 @@ Set settingsdata value(synchronous method)
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -104,8 +110,8 @@ function setValueSync(context: Context, name: string, value: string, domainName:
 ```
 
 Set settingsdata value(synchronous method).  
-[DEVICE\_SHARED, USER\_PROPERTY] domain need ohos.permission.MANAGE\_SETTINGS permission.  
-[USER\_SECURE] domain need ohos.permission.MANAGE\_SECURE\_SETTINGS permission.
+[DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.  
+[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
@@ -123,7 +129,7 @@ Set settingsdata value(synchronous method).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |
@@ -138,9 +144,9 @@ Set settingsdata value(synchronous method).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

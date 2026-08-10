@@ -1,12 +1,18 @@
 # offDensityUpdate
 
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## offDensityUpdate
 
 ```TypeScript
 export function offDensityUpdate(context: UIContext, callback?: Callback<DensityInfo>): void
 ```
 
-Removes a callback function that was previously registered with \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+Removes a callback function that was previously registered with `on()`.
 
 **起始版本：** 23
 
@@ -22,6 +28,6 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The context scope of the observer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DensityInfo&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | The context scope of the observer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DensityInfo&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 

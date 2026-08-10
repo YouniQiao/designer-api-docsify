@@ -1,5 +1,11 @@
 # getAbilityLists
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## getAbilityLists
 
 ```TypeScript
@@ -28,11 +34,11 @@ function getAbilityLists(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的类型。 |
-| stateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的状态。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | 是 | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信 息列表；否则为错误对象。 |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | 是 | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信 息列表；否则为错误对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -75,8 +81,8 @@ function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的类型。 |
-| stateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的状态。 |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
 
 **返回值：**
 
@@ -84,7 +90,7 @@ function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Pro
 | --- | --- |
 | Promise&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Promise对象，返回辅助应用信息列表。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

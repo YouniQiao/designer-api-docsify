@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## resolutionQuality
 
 ```TypeScript
@@ -18,7 +24,7 @@ resolutionQuality?: ResolutionQuality
 
 画质效果等级。
 
-**类型：** ResolutionQuality
+**类型：** [ResolutionQuality](../../apis-arkui/arkts-apis/arkts-arkui-resolutionquality-t-sys.md)
 
 **起始版本：** 12
 

@@ -33,7 +33,7 @@ Creates a new NumberFormat.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | Intl.BCP47LanguageTag \| Intl.BCP47LanguageTag[] | No | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [NumberFormatOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-numberformatoptions-i.md) | No | the options. |
 
 ## format
 
@@ -185,7 +185,7 @@ Formats a range to parts.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | formatted range parts. |
+| [NumberRangeFormatPart](arkts-arkts-intl-numberrangeformatpart-c.md)[] | formatted range parts. |
 
 ## formatToParts
 
@@ -215,7 +215,7 @@ Formats a number to parts.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | formatted parts. |
+| [NumberFormatPart](arkts-arkts-intl-numberformatpart-c.md)[] | formatted parts. |
 
 ## resolvedOptions
 
@@ -239,7 +239,7 @@ Returns resolved options.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the resolved options. |
+| [ResolvedNumberFormatOptions](arkts-arkts-intl-resolvednumberformatoptions-i.md) | the resolved options. |
 
 ## supportedLocalesOf
 
@@ -264,7 +264,7 @@ Returns supported locales.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | Yes | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [NumberFormatOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-numberformatoptions-i.md) | No | the options. |
 
 **Return value:**
 

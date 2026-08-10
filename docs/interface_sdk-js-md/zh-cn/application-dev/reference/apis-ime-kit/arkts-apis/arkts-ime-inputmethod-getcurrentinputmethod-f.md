@@ -1,5 +1,11 @@
 # getCurrentInputMethod
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## getCurrentInputMethod
 
 ```TypeScript
@@ -26,9 +32,9 @@ function getCurrentInputMethod(): InputMethodProperty
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前输入法属性对象。 |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 返回当前输入法属性对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();

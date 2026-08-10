@@ -4,9 +4,7 @@
 export type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
 ```
 
-type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =  
-    void  
-注册应用角标使能状态变化的回调函数类型。
+type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void注册应用角标使能状态变化的回调函数类型。
 
 **起始版本：** 23
 
@@ -24,5 +22,5 @@ type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调返回监听到的角标使能状态信息。  |
+| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscribe-enablednotificationcallbackdata-t-sys.md) | 是 | 回调返回监听到的角标使能状态信息。 |
 

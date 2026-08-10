@@ -1,6 +1,6 @@
 # ElementInfo
 
-Defines information about the components associated with the observable object, including system components and custom components.
+可被观察对象关联的组件信息，包含系统组件和自定义组件。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines information about the components associated with the observable object, 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## elementId
 
 ```TypeScript
 elementId: number
 ```
 
-Component ID.
+组件的ID。
 
 **Type:** number
 
@@ -38,7 +44,7 @@ Component ID.
 elementName: string
 ```
 
-Component name.
+组件的名称。
 
 **Type:** string
 

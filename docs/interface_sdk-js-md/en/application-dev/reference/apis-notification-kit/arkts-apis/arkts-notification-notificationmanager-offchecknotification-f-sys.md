@@ -1,5 +1,11 @@
 # offCheckNotification (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## offCheckNotification
 
 ```TypeScript
@@ -8,7 +14,7 @@ function offCheckNotification(
   ): void
 ```
 
-Unsubscribe the callback for check notifications.
+通知监听回调。
 
 **Since:** 23
 
@@ -26,13 +32,13 @@ Unsubscribe the callback for check notifications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | No | callback - The callback of check notifications. |
+| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | No | 消息验证函数指针。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
 

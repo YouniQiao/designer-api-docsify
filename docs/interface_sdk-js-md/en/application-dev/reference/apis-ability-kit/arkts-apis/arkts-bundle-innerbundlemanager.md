@@ -10,19 +10,25 @@ The module provides APIs for the Home Screen application.
  > The APIs provided by this module are system APIs.
 
 
+## Modules to Import
+
+```TypeScript
+import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Namespaces
 
 | Name | Description |
 | --- | --- |
-| [innerBundleManager](arkts-ability-innerbundlemanager-n.md) | The module provides APIs for the Home Screen application. |
+| [innerBundleManager](arkts-ability-innerbundlemanager-n.md) | 本模块提供launcher应用使用的接口。 |
 
 <!--Del-->
 ### Types（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | Contains basic Ability information, which uniquely identifies a launcher StatusCallback. |
+| [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | 应用状态发生变化时回调的信息。 |
 <!--DelEnd-->
 

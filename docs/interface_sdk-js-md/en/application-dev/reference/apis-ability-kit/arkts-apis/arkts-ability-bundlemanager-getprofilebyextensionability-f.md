@@ -1,13 +1,19 @@
 # getProfileByExtensionAbility
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getProfileByExtensionAbility
 
 ```TypeScript
 function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of the **module.json5** file). This API uses an asynchronous callback to return the result.
+根据给定的moduleName、extensionAbilityName和metadataName（module.json5中  
+[metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。
 
 **Since:** 9
 
@@ -23,21 +29,21 @@ Obtains the JSON string array of the current application's configuration file ba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name. |
-| extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
-| metadataName | string | Yes | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in the **module.json5** file. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**. Otherwise, **err** is an error object. |
+| moduleName | string | Yes | 表示Module名称。 |
+| extensionAbilityName | string | Yes | 表示ExtensionAbility组件的名称。 |
+| metadataName | string | Yes | 表示ExtensionAbility组件的元信息名称，即module.json5配置文件中 [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)下的metadata标签的 name。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbilityName not existed. |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700024 | Failed to get the profile because there is no profile in the HAP. |
+| 17700002 | The specified moduleName is not existed. |
+| 17700003 | The specified extensionAbilityName not existed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -69,8 +75,8 @@ try {
 function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: string, metadataName?: string): Promise<Array<string>>
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of the **module.json5** file). This API uses a promise to return the result.
+根据给定的moduleName、extensionAbilityName和metadataName（module.json5中  
+[metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。
 
 **Since:** 9
 
@@ -86,26 +92,26 @@ Obtains the JSON string array of the current application's configuration file ba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name. |
-| extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
-| metadataName | string | No | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in the **module.json5** file. The default value is null. |
+| moduleName | string | Yes | 表示Module名称。 |
+| extensionAbilityName | string | Yes | 表示ExtensionAbility组件的名称。 |
+| metadataName | string | No | 表示ExtensionAbility组件的元信息名称，即module.json5配置文件中 [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)下的metadata标签的 name，默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the array of JSON strings obtained. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回Array&lt;string&gt;对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbilityName not existed. |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700024 | Failed to get the profile because there is no profile in the HAP. |
+| 17700002 | The specified moduleName is not existed. |
+| 17700003 | The specified extensionAbilityName not existed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -1,10 +1,10 @@
 # DlpConnManager
 
-Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA.
-    **NOTE**  
-    
-    **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback  
-    capabilities from the SA.
+用于调用registerPlugin和unregisterPlugin接口，在SA（System Ability）中注册或注销回调能力。
+
+> **说明：**
+> 
+> registerPlugin接口将回调能力注册进SA（System Ability），而unregisterPlugin接口将回调能力从SA（System Ability）中注销。
 
 **Since:** 21
 
@@ -14,13 +14,19 @@ Calls **registerPlugin** and **unregisterPlugin** to register or unregister call
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Represents a constructor for instantiating [DlpConnManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[DlpConnManager](arkts-dataprotection-dlppermission-dlpconnmanager-c.md) 实例化时的构造函数。
 
 **Since:** 21
 
@@ -38,8 +44,15 @@ Represents a constructor for instantiating [DlpConnManager]\_\_\_JSDOC\_LINK\_DE
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let dlpConnManager: dlpPermission.DlpConnManager = new dlpPermission.DlpConnManager();
+```
 
 ## registerPlugin
 
@@ -47,10 +60,11 @@ Represents a constructor for instantiating [DlpConnManager]\_\_\_JSDOC\_LINK\_DE
 static registerPlugin(plugin: DlpConnPlugin): number
 ```
 
-Registers a callback with the SA.
-    **NOTE**  
-    
-    **registerPlugin** registers the callback with the SA.
+该接口提供将回调注册到SA（System Ability）侧的功能。
+
+> **说明：**
+> 
+> registerPlugin将plugin注册到SA（System Ability）侧，待SA（System Ability）调用。
 
 **Since:** 21
 
@@ -68,24 +82,48 @@ Registers a callback with the SA.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plugin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback plugin object, which is used to register the callback capability with the SA. The **DlpConnPlugin** API needs to be inherited and the **connectServer** method needs to be implemented so that the processing result can be returned using a callback when the API is called on the SA. |
+| plugin | [DlpConnPlugin](arkts-dataprotection-dlppermission-dlpconnplugin-i.md) | Yes | 回调插件对象，用于注册回调能力到SA（System Ability）侧。需要继承DlpConnPlugin接口并实现connectServer方法，以 便SA侧调用时能够通过回调返回处理结果。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Registration result. The unique ID of the callback is returned. The value range is [0, 2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_53\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1]. |
+| number | 注册结果，返回该回调的唯一标识ID。取值范围为[0, 2&lt;sup&gt;53&lt;/sup&gt;-1]。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| 19100003 | Credential task time out. |
+| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
+| 19100001 | Invalid parameter value. |
+| 19100004 | Credential service error. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { Callback } from '@kit.BasicServicesKit';
+
+export default class DataCapsulePlugin implements dlpPermission.DlpConnPlugin {
+  private accountId: string;
+  private accountName: string;
+  constructor() {
+    this.accountId = 'accountId'; // Initialize account information.
+    this.accountName = 'accountName';
+  }
+
+  connectServer(requestId: string, requestData: string, callback: Callback<string>): void {
+    let callbackJson = JSON.stringify({
+      'requestId': requestId,
+    });
+    callback(callbackJson);
+  }
+}
+  
+let pluginId: number = dlpPermission.DlpConnManager.registerPlugin(new DataCapsulePlugin());
+```
 
 ## unregisterPlugin
 
@@ -93,12 +131,13 @@ Registers a callback with the SA.
 static unregisterPlugin(): void
 ```
 
-Unregisters a callback from the SA.
+提供将回调从SA（System Ability）侧注销的能力。
 
-This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released.
-    **NOTE**  
-    
-    **unregisterPlugin** unregisters a plug-in from the SA.
+该接口可用于应用退出时注销回调释放资源，确保回调能力正确释放。
+
+> **说明：**
+> 
+> unregisterPlugin将plugin从SA（System Ability）侧注销。
 
 **Since:** 21
 
@@ -116,10 +155,17 @@ This API unregisters a callback and releases resources when an application exits
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| 19100003 | Credential task time out. |
+| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
+| 19100001 | Invalid parameter value. |
+| 19100004 | Credential service error. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.DlpConnManager.unregisterPlugin();
+```
 

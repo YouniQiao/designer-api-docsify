@@ -4,7 +4,7 @@
 declare type DepthComponentCompleteCallback = (event: DepthComponentCompleteEvent) => void
 ```
 
-Callback invoked when the background resource is loaded successfully.
+背景资源加载成功的回调函数。使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -24,5 +24,5 @@ Callback invoked when the background resource is loaded successfully.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| event | [DepthComponentCompleteEvent](../arkts-apis/arkts-arkui-depthcomponent-depthcomponentcompleteevent-i-sys.md) | Yes | 背景资源加载成功的事件信息。 |
 

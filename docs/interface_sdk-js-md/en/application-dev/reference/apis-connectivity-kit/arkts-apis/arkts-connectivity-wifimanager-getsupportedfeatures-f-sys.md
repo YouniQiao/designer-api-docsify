@@ -1,5 +1,11 @@
 # getSupportedFeatures (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getSupportedFeatures
 
 ```TypeScript
@@ -24,18 +30,18 @@ Obtain the features supported by the device.To check whether this device support
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Returns the features supported by this device. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Returns the features supported by this device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | System API is not allowed called by Non-system application. |
+| 2401000 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

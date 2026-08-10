@@ -1,6 +1,6 @@
 # IUserAuthCallback
 
-Provides callbacks to return the authentication result.
+返回认证结果的回调对象。
 
 **Since:** 8
 
@@ -14,17 +14,23 @@ Provides callbacks to return the authentication result.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## onAcquireInfo
 
 ```TypeScript
 onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void
 ```
 
-Called to acquire authentication tip information. This API is optional.
+回调函数，返回认证过程中的提示信息，非必须实现。
 
-- **module**: ID of the module that sends the tip information.  
-- **acquire**: Authentication tip information.  
-- **extraInfo**: Reserved field.
+- **module**: 发送提示信息的模块标识。  
+- **acquire**: 认证执过程中的提示信息。  
+- **extraInfo**: 预留字段。
 
 **Since:** 8
 
@@ -46,7 +52,7 @@ Called to acquire authentication tip information. This API is optional.
 | acquire | number | Yes |  |
 | extraInfo | any | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -57,23 +63,20 @@ auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
   onResult: (result, extraInfo) => {
     try {
       console.info(`auth onResult result = ${result}`);
-      console.info(`auth onResult extraInfo = ${JSON.stringify(extraInfo)}`);
       if (result == userAuth.ResultCode.SUCCESS) {
         // Add the logic to be executed when the authentication is successful.
       }  else {
         // Add the logic to be executed when the authentication fails.
       }
     } catch (error) {
-      console.error(`auth onResult error = ${error}`);
+      console.error(`auth onResult failed. Code: ${error?.code}, message: ${error?.message}`);
     }
   },
   onAcquireInfo: (module, acquire, extraInfo : userAuth.AuthResult) => {
     try {
-      console.info(`auth onAcquireInfo module = ${module}`);
-      console.info(`auth onAcquireInfo acquire = ${acquire}`);
-      console.info(`auth onAcquireInfo extraInfo = ${JSON.stringify(extraInfo)}`);
+      console.info('auth onAcquireInfo successfully.');
     } catch (error) {
-      console.error(`auth onAcquireInfo error = ${error}`);
+      console.error(`auth onAcquireInfo failed. Code: ${error?.code}, message: ${error?.message}`);
     }
   }
 });
@@ -85,11 +88,11 @@ auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
 onResult: (result: number, extraInfo: AuthResult) => void
 ```
 
-Called to return the authentication result.
+回调函数，返回认证结果。
 
-- **result**: Authentication result. For details, see [ResultCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-- **extraInfo**: Extended information, which varies depending on the authentication result. If the authentication  
-is successful, the user authentication token will be returned in **extraInfo**. If the authentication fails, the remaining number of authentication times will be returned in **extraInfo**. If the authentication executor is locked, the freeze time will be returned in **extraInfo**.
+- **result**: 认证结果，参见[ResultCode](arkts-userauthentication-userauth-resultcode-e.md)。  
+- **extraInfo**: 扩展信息，不同情况下的具体信息。如果身份验证通过，则在extraInfo中返回用户认证令牌；如果身份验证失败，则在extraInfo中返回剩余的用户认证次数；如果身份验证执行器被锁定，则在  
+extraInfo中返回冻结时间，类型为[AuthResult](arkts-userauthentication-userauth-authresult-i.md)。
 
 **Since:** 8
 
@@ -108,9 +111,9 @@ is successful, the user authentication token will be returned in **extraInfo**. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | number | Yes |  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| extraInfo | [AuthResult](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-authresult-i.md) | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -121,14 +124,13 @@ auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
   onResult: (result, extraInfo) => {
     try {
       console.info(`auth onResult result = ${result}`);
-      console.info(`auth onResult extraInfo = ${JSON.stringify(extraInfo)}`);
       if (result == userAuth.ResultCode.SUCCESS) {
         // Add the logic to be executed when the authentication is successful.
       }  else {
         // Add the logic to be executed when the authentication fails.
       }
     } catch (error) {
-      console.error(`auth onResult error = ${error}`);
+      console.error(`auth onResult failed. Code: ${error?.code}, message: ${error?.message}`);
     }
   }
 });

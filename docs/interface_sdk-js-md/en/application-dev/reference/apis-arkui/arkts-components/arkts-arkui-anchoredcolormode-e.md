@@ -1,5 +1,7 @@
 # AnchoredColorMode
 
+配置组件主题跟随的颜色模式。
+
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
@@ -14,7 +16,7 @@
 FOLLOW_SYSTEM = 0
 ```
 
-Defines the mode which is follow up with system.
+颜色模式跟随系统
 
 **Since:** 26.0.0
 
@@ -34,7 +36,7 @@ Defines the mode which is follow up with system.
 FOLLOW_TARGET = 1
 ```
 
-Defines the mode which is follow up with target.
+颜色模式跟随目标组件
 
 **Since:** 26.0.0
 

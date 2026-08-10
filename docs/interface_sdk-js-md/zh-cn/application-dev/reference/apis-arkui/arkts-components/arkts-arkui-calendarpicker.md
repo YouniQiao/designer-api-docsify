@@ -13,8 +13,8 @@
 
 ## 子组件
 
-    
-    无
+> 
+> 无
 
 ## CalendarPicker
 
@@ -40,7 +40,10 @@ CalendarPicker(options?: CalendarOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 配置日历选择器组件的参数。未设置该参数时使用默认配置。  |
+| options | [CalendarOptions](arkts-arkui-calendaroptions-i.md) | 否 | 配置日历选择器组件的参数。未设置该参数时使用默认配置。 |
 
 ## 汇总
 
+- [CalendarDialogOptions](arkts-arkui-calendarpicker-calendardialogoptions-i.md)
+- [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)
+- [CalendarAlign](arkts-arkui-calendarpicker-calendaralign-e.md)

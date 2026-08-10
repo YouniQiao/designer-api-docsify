@@ -1,6 +1,6 @@
 # GlobalWindowMode
 
-Enumerates the window modes.
+窗口模式。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the window modes.
 FULLSCREEN = 1
 ```
 
-Full-screen window. The first binary bit from right to left is 1.
+全屏窗口，二进制从右往左，第一个二进制位为1。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ Full-screen window. The first binary bit from right to left is 1.
 SPLIT = 1 << 1
 ```
 
-Split-screen window. The second binary bit from right to left is 1.
+分屏窗口，二进制从右往左，第二个二进制位为1。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ Split-screen window. The second binary bit from right to left is 1.
 FLOAT = 1 << 2
 ```
 
-Floating window. The third binary bit from right to left is 1.
+悬浮窗，二进制从右往左，第三个二进制位为1。
 
 **Since:** 20
 
@@ -70,7 +70,7 @@ Floating window. The third binary bit from right to left is 1.
 PIP = 1 << 3
 ```
 
-PiP window. The fourth binary bit from right to left is 1.
+画中画，二进制从右往左，第四个二进制位为1。
 
 **Since:** 20
 

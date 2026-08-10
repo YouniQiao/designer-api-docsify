@@ -6,7 +6,7 @@
 declare function symlinkSync(target: string, srcPath: string): void
 ```
 
-Creates a symbolic link based on the file path. This API returns the result synchronously.
+以同步的方法基于文件路径创建符号链接。
 
 **Since:** 7
 
@@ -24,6 +24,6 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | string | Yes | Application sandbox path of the target file. |
-| srcPath | string | Yes | Application sandbox path of the symbolic link. |
+| target | string | Yes | 目标文件的应用沙箱路径。 |
+| srcPath | string | Yes | 符号链接文件的应用沙箱路径。 |
 

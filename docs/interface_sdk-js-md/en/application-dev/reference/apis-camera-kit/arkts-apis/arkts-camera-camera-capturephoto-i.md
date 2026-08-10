@@ -1,6 +1,6 @@
 # CapturePhoto
 
-CapturePhoto** provides APIs for obtaining the objects of the full-quality image and the uncompressed image.
+获取全质量图和未压缩图的对象。
 
 **Since:** 23
 
@@ -9,6 +9,12 @@ CapturePhoto** provides APIs for obtaining the objects of the full-quality image
 <!--Device-camera-interface CapturePhoto--><!--Device-camera-interface CapturePhoto-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## release
 
@@ -44,7 +50,7 @@ main: ImageType
 
 Object of the full-quality image and the uncompressed image.
 
-**Type:** ImageType
+**Type:** [ImageType](arkts-camera-camera-imagetype-t.md)
 
 **Since:** 23
 

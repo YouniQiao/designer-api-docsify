@@ -1,6 +1,6 @@
 # Relation
 
-Defines a contact's relationship.
+联系人的关系类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's relationship.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## CUSTOM_LABEL
 
 ```TypeScript
 static readonly CUSTOM_LABEL: 0
 ```
 
-Custom relationship, the default value is **0**.
+自定义关系类型，默认值为0。
 
 **Type:** 0
 
@@ -36,7 +42,7 @@ Custom relationship, the default value is **0**.
 static readonly INVALID_LABEL_ID: -1
 ```
 
-Invalid relationship, the default value is **-1**.
+无效的关系类型，默认值为-1。
 
 **Type:** -1
 
@@ -56,7 +62,7 @@ Invalid relationship, the default value is **-1**.
 static readonly RELATION_ASSISTANT: 1
 ```
 
-Assistant, the default value is **1**.
+助手关系类型，默认值为1。
 
 **Type:** 1
 
@@ -76,7 +82,7 @@ Assistant, the default value is **1**.
 static readonly RELATION_BROTHER: 2
 ```
 
-Sibling, the default value is **2**.
+兄弟关系类型，默认值为2。
 
 **Type:** 2
 
@@ -96,7 +102,7 @@ Sibling, the default value is **2**.
 static readonly RELATION_CHILD: 3
 ```
 
-Child, the default value is **3**.
+子女关系类型，默认值为3。
 
 **Type:** 3
 
@@ -116,7 +122,7 @@ Child, the default value is **3**.
 static readonly RELATION_DOMESTIC_PARTNER: 4
 ```
 
-Domestic partner, the default value is **4**.
+同居同伴关系类型，默认值为4。
 
 **Type:** 4
 
@@ -136,7 +142,7 @@ Domestic partner, the default value is **4**.
 static readonly RELATION_FATHER: 5
 ```
 
-Father, the default value is **5**.
+父亲关系类型，默认值为5。
 
 **Type:** 5
 
@@ -156,7 +162,7 @@ Father, the default value is **5**.
 static readonly RELATION_FRIEND: 6
 ```
 
-Friend, the default value is **6**.
+朋友关系类型，默认值为6。
 
 **Type:** 6
 
@@ -176,7 +182,7 @@ Friend, the default value is **6**.
 static readonly RELATION_MANAGER: 7
 ```
 
-Manager, the default value is **7**.
+管理者关系类型，默认值为7。
 
 **Type:** 7
 
@@ -196,7 +202,7 @@ Manager, the default value is **7**.
 static readonly RELATION_MOTHER: 8
 ```
 
-Mother, the default value is **8**.
+母亲关系类型，默认值为8。
 
 **Type:** 8
 
@@ -216,7 +222,7 @@ Mother, the default value is **8**.
 static readonly RELATION_PARENT: 9
 ```
 
-Parent, the default value is **9**.
+父母关系类型，默认值为9。
 
 **Type:** 9
 
@@ -236,7 +242,7 @@ Parent, the default value is **9**.
 static readonly RELATION_PARTNER: 10
 ```
 
-Parent, the default value is **9**.
+父母关系类型，默认值为9。
 
 **Type:** 10
 
@@ -256,7 +262,7 @@ Parent, the default value is **9**.
 static readonly RELATION_REFERRED_BY: 11
 ```
 
-Referrer, the default value is **11**.
+推荐人关系类型，默认值为11。
 
 **Type:** 11
 
@@ -276,7 +282,7 @@ Referrer, the default value is **11**.
 static readonly RELATION_RELATIVE: 12
 ```
 
-Relative, the default value is **12**.
+亲属关系类型，默认值为12。
 
 **Type:** 12
 
@@ -296,7 +302,7 @@ Relative, the default value is **12**.
 static readonly RELATION_SISTER: 13
 ```
 
-Relative, the default value is **12**.
+亲属关系类型，默认值为12。
 
 **Type:** 13
 
@@ -316,7 +322,7 @@ Relative, the default value is **12**.
 static readonly RELATION_SPOUSE: 14
 ```
 
-Spouse, the default value is **14**.
+配偶关系类型，默认值为14。
 
 **Type:** 14
 
@@ -336,7 +342,7 @@ Spouse, the default value is **14**.
 labelId?: number
 ```
 
-Mailbox type.
+邮箱的类型。
 
 **Type:** number
 
@@ -356,7 +362,7 @@ Mailbox type.
 labelName?: string
 ```
 
-Name of the mailbox type.
+邮箱的类型名称。
 
 **Type:** string
 
@@ -376,7 +382,7 @@ Name of the mailbox type.
 relationName: string
 ```
 
-Relationship name.
+关系名称。
 
 **Type:** string
 

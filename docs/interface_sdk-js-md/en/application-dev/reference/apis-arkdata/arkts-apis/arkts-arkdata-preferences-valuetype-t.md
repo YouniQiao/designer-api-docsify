@@ -4,7 +4,7 @@
 type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint
 ```
 
-Enumerates the value types.
+表示支持的值类型。
 
 **Since:** 9
 
@@ -18,13 +18,13 @@ Enumerates the value types.
 
 | Type | Description |
 | --- | --- |
-| number | The value is a number. |
-| string | The value is a string. |
-| boolean | The value is true or false. |
-| Array&lt;number&gt; | The value is an array of numbers. |
-| Array&lt;string&gt; | The value is an array of strings. |
-| Array&lt;boolean&gt; | The value is a boolean array. |
-| Uint8Array | The value is an array of 8-bit unsigned integers. [since 11] |
-| object | The value is an object. [since 12] |
-| bigint | The value is an integer in any format. [since 12] |
+| number | 表示值类型为数字。 |
+| string | 表示值类型为字符串。 |
+| boolean | 表示值类型为布尔值。 |
+| Array&lt;number&gt; | 表示值类型为数字类型的数组。 |
+| Array&lt;string&gt; | 表示值类型为字符串类型的数组。 |
+| Array&lt;boolean&gt; | 表示值类型为布尔类型的数组。 |
+| Uint8Array | 表示值类型为8位无符号整型的数组。 [since 11] |
+| object | 表示值类型为对象。 [since 12] |
+| bigint | 表示值类型为任意精度格式的整数。 [since 12] |
 

@@ -20,6 +20,6 @@ type OnVideoSizeChangeHandler = (width: int, height: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 视频宽度，单位为像素（px）。  |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 视频高度，单位为像素（px）。  |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 视频宽度，单位为像素（px）。 |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 视频高度，单位为像素（px）。 |
 

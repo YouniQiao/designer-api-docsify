@@ -1,6 +1,6 @@
 # AppIntentEntity
 
-Define AppIntentEntity.
+定义AppIntentEntity。
 
 **Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md)
 
@@ -12,13 +12,19 @@ Define AppIntentEntity.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## onQueryEntity
 
 ```TypeScript
 abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 ```
 
-Called when query entity execute.
+在查询实体执行时调用。
 
 **Since:** 26.0.0
 
@@ -36,13 +42,13 @@ Called when query entity execute.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The params of query entity. |
+| params | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | Yes | 查询实体的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; |  Returns an array of subclasses of the AppIntentEntity class, support promise. |
+| Promise&lt;Array&lt;T&gt;&gt; | Returns an array of subclasses of the AppIntentEntity class, support promise. |
 
 ## displayName
 
@@ -50,7 +56,7 @@ Called when query entity execute.
 displayName: string
 ```
 
-The display name of entity.
+实体的显示名称。
 
 **Type:** string
 

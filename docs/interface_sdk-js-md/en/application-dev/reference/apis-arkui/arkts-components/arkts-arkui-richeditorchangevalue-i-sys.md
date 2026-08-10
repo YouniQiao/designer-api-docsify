@@ -1,6 +1,6 @@
 # RichEditorChangeValue
 
-Image and text change information.
+图文变化信息。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Image and text change information.
 changeReason?: TextChangeReason
 ```
 
-Reason why the component content changes.
+组件内容变化的原因，用于标识触发内容变化的操作类型（如用户输入、粘贴、剪切等），需通过注册onWillChange回调获取。开发者可根据changeReason的值在onWillChange回调中针对不同变化原因做出相应处理决策。字段缺省值为undefined。
 
-**Type:** TextChangeReason
+**Type:** [TextChangeReason](../arkts-apis/arkts-arkui-textcommon-textchangereason-e-sys.md)
 
 **Since:** 20
 

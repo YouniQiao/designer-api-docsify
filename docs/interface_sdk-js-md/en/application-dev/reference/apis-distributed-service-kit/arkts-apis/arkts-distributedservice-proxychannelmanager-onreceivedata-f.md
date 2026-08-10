@@ -1,12 +1,18 @@
 # onReceiveData
 
+## Modules to Import
+
+```TypeScript
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## onReceiveData
 
 ```TypeScript
 function onReceiveData(channelId: int, callback: Callback<DataInfo>): void
 ```
 
-Subscribes to data receiving events. This API returns the result asynchronously through a callback.
+订阅数据接收事件，使用异步回调。
 
 **Since:** 23
 
@@ -24,16 +30,16 @@ Subscribes to data receiving events. This API returns the result asynchronously 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| channelId | int | Yes | Channel ID obtained when the proxy channel is opened. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DataInfo&gt; | Yes | Callback used to return the received data. If the callback function is registered multiple times, only the last registered one takes effect. |
+| channelId | int | Yes | 打开代理通道时获取的channelId。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataInfo&gt; | Yes | 回调函数，返回接收到的数据。多次注册回调函数，最后一次注册的回调函数生效。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
-| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
-| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
-| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
+| 32390006 | Parameter error. |
+| 201 | Permission denied. |
+| 32390004 | ChannelId is invalid or unavailable. |
+| 32390100 | Internal error. |
+| 32390101 | Call is restricted. |
 

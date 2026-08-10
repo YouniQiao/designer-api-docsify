@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## align
 
 ```TypeScript
@@ -18,7 +24,7 @@ align: PlaceholderAlignment
 
 相对于周围文本的纵向对齐方式。
 
-**类型：** PlaceholderAlignment
+**类型：** [PlaceholderAlignment](arkts-arkgraphics2d-text-placeholderalignment-e.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ baseline: TextBaseline
 
 基线类型。
 
-**类型：** TextBaseline
+**类型：** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ baselineOffset: double
 
 基线偏移量，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ height: double
 
 占位符的高度，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -98,7 +104,7 @@ width: double
 
 占位符的宽度，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 

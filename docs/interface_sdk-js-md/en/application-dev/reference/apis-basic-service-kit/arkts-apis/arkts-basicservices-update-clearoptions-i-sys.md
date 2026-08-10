@@ -1,6 +1,6 @@
 # ClearOptions (System API)
 
-Defines the clearing options, which specify the errors to be cleared.
+清除异常选项，用于指定要清除的异常状态类型。
 
 **Since:** 9
 
@@ -12,21 +12,25 @@ Defines the clearing options, which specify the errors to be cleared.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## status
 
 ```TypeScript
 status: UpgradeStatus
 ```
 
-Exception status, which is used to specify the status to be cleared. This parameter can be set to  
-**UPGRADE\_FAIL** only when the **upgrade** method fails to be executed and its status is **UPGRADE\_FAIL**.
+异常状态，用于指定要清除的状态。仅当upgrade方法执行失败(状态为UPGRADE_FAIL)后才能设置此参数为UPGRADE_FAIL。
 
-Use scenarios: If the upgrade fails (with the status of **UPGRADE\_FAIL**), the system retains the error state to prevent the upgrade from being performed again. In this case, you need to call **status** passed by  
-**clearError** so that errors can be cleared, and the system can be restored to the initial state to restart the upgrade process.
+使用场景：当升级失败(状态为UPGRADE_FAIL)后，系统会保留异常状态阻止重新升级，此时需要调用clearError传入status参数清除异常状态，使系统恢复到初始状态以便重新开始升级流程。
 
-A common value is **UPGRADE\_FAIL**, including upgrade failure. Note: Only the **UPGRADE\_FAIL** status can be cleared.
+常用值：UPGRADE_FAIL(升级失败状态)。注意事项：仅支持清除UPGRADE_FAIL状态。
 
-**Type:** UpgradeStatus
+**Type:** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
 **Since:** 9
 

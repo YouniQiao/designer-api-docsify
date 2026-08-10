@@ -1,12 +1,18 @@
 # addContact
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## addContact
 
 ```TypeScript
 function addContact(contact: Contact, callback: AsyncCallback<number>): void
 ```
 
-Adds a contact. This API uses an asynchronous callback to return the result.
+添加联系人。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,16 +32,17 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
+import { contact } from '@kit.ContactsKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.addContact(context, {
   name: {
@@ -60,7 +67,7 @@ contact.addContact(context, {
 function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void
 ```
 
-Adds a contact. This API uses an asynchronous callback to return the result.
+添加联系人。使用callback异步回调。
 
 **Since:** 10
 
@@ -78,24 +85,25 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
   import { common } from '@kit.AbilityKit';
+  import { contact } from '@kit.ContactsKit';
 
   // Obtain the context within the component.
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
@@ -122,7 +130,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 function addContact(contact: Contact): Promise<number>
 ```
 
-Adds a contact. This API uses a promise to return the result.
+添加联系人。使用Promise异步回调。
 
 **Since:** 7
 
@@ -142,19 +150,20 @@ Adds a contact. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the ID of the added contact. |
+| Promise&lt;number&gt; | Promise对象，返回添加的联系人id。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
+// Returns the data after the contact is added successfully.
 let promise = contact.addContact({
   name: {
     fullName: 'xxx'
@@ -163,10 +172,9 @@ let promise = contact.addContact({
     phoneNumber: '138xxxxxxxx'
   }]
 });
+// Callback invoked when the promise is resolved.
 promise.then((data) => {
   console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add Contact. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -177,7 +185,7 @@ promise.then((data) => {
 function addContact(context: Context, contact: Contact): Promise<number>
 ```
 
-Adds a contact. This API uses a promise to return the result.
+添加联系人。使用Promise异步回调。
 
 **Since:** 10
 
@@ -195,28 +203,28 @@ Adds a contact. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| contact | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the contact information. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the ID of the added contact. |
+| Promise&lt;number&gt; | Promise对象，返回添加的联系人id。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a UI page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
   import { common } from '@kit.AbilityKit';
 
   // Obtain the context within the component.
@@ -231,8 +239,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
   });
   promise.then((data) => {
     console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to add Contact. Code: ${err.code}, message: ${err.message}`);
   });
 ```
 

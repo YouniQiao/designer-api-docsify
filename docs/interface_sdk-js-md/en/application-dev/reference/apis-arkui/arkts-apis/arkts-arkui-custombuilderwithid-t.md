@@ -4,7 +4,7 @@
 declare type CustomBuilderWithId = (id: int) => void
 ```
 
-Defines the custom builder with id.
+定义带id的自定义构建器。
 
 **Since:** 23
 

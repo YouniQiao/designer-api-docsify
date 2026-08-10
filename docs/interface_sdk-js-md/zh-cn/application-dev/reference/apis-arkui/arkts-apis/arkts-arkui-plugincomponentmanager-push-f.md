@@ -1,5 +1,11 @@
 # push
 
+## 导入模块
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## push
 
 ```TypeScript
@@ -22,6 +28,6 @@ export function push(param: PushParameters, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 推送组件的详细参数。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 此次接口调用的异步回调。 |
+| param | [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | 是 | 推送组件的详细参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 此次接口调用的异步回调。 |
 

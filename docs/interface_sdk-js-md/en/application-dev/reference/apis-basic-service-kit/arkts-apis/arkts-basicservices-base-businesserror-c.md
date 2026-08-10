@@ -1,8 +1,8 @@
 # BusinessError
 
-Defines the error parameter.
+错误参数。
 
-**Inheritance/Implementation:** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-static/error-error-c.md)
+**Inheritance/Implementation:** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Defines the error parameter.
 
 **System capability:** SystemCapability.Base
 
+## Modules to Import
+
+```TypeScript
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Defines a constructor used to create a BusinessError object.
+BusinessError的构造函数。
 
 **Since:** 23
 
@@ -34,7 +40,7 @@ Defines a constructor used to create a BusinessError object.
 constructor(code: int, error: Error)
 ```
 
-Defines a constructor used to create a **BusinessError** object.
+BusinessError的构造函数。
 
 **Since:** 23
 
@@ -48,8 +54,8 @@ Defines a constructor used to create a **BusinessError** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | Common error information about the API invoking failure. |
-| error | Error | Yes | Defines the error parameter. |
+| code | int | Yes | 接口调用失败返回的错误码信息。 |
+| error | Error | Yes | 错误参数。 |
 
 ## constructor
 
@@ -57,7 +63,7 @@ Defines a constructor used to create a **BusinessError** object.
 constructor(code: int, data: T, error: Error)
 ```
 
-Defines a constructor used to create a **BusinessError** object.
+BusinessError的构造函数。
 
 **Since:** 23
 
@@ -71,9 +77,9 @@ Defines a constructor used to create a **BusinessError** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | Common error information about the API invoking failure. |
-| data | T | Yes | Common callback information. |
-| error | Error | Yes | Defines the error parameter. |
+| code | int | Yes | 接口调用失败返回的错误码信息。 |
+| data | T | Yes | 接口调用时的公共回调信息。 |
+| error | Error | Yes | 错误参数。 |
 
 ## constructor
 
@@ -81,7 +87,7 @@ Defines a constructor used to create a **BusinessError** object.
 constructor(code: int, message: string, data?: T)
 ```
 
-Defines a constructor used to create a **BusinessError** object.
+BusinessError的构造函数。
 
 **Since:** 23
 
@@ -95,9 +101,9 @@ Defines a constructor used to create a **BusinessError** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | Common error information about the API invoking failure. |
-| message | string | Yes | Error message returned when the API call fails. |
-| data | T | No | Common callback information. |
+| code | int | Yes | 接口调用失败返回的错误码信息。 |
+| message | string | Yes | 接口调用失败返回描述信息。 |
+| data | T | No | 接口调用时的公共回调信息。 |
 
 ## data
 
@@ -105,7 +111,7 @@ Defines a constructor used to create a **BusinessError** object.
 public data?: T
 ```
 
-Common callback information. If this parameter is left empty, no related information is returned.
+接口调用时的公共回调信息。如果不填，则回调不返回相关信息。
 
 **Type:** T
 

@@ -12,6 +12,12 @@ Manager HID device profile.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## connect
 
 ```TypeScript
@@ -36,20 +42,20 @@ Initiate an HID connection to a remote HID host device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the address of the remote Bluetooth device. |
+| deviceId | [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md) | Yes | Indicates the address of the remote Bluetooth device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 2900003 | Bluetooth disabled. |
+| 2903052 | App not register. |
+| 801 | Capability not supported. |
 | 2900004 | Remote Device profile not supported. |
+| 201 | Permission denied. |
+| 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.ConnectivityKit';
@@ -90,13 +96,13 @@ Disconnect the HID connection with the remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 2903052 | App not register. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -113,7 +119,7 @@ try {
 offGetReport(callback?: Callback<GetReportData>): void
 ```
 
-Unsubscribe from the event that a GET\_REPORT message is received from the peer device.
+Unsubscribe from the event that a GET_REPORT message is received from the peer device.
 
 **Since:** 23
 
@@ -131,16 +137,16 @@ Unsubscribe from the event that a GET\_REPORT message is received from the peer 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GetReportData&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GetReportData&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(callback: hid.GetReportData) {
@@ -179,16 +185,16 @@ Unsubscribe from the event reported when InterruptData is received from the remo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;InterruptData&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterruptData&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(callback: hid.InterruptData) {
@@ -209,7 +215,7 @@ try {
 offSetProtocol(callback?: Callback<ProtocolData>): void
 ```
 
-Unsubscribe from the event that a SET\_PROTOCOL message is received from the peer device.
+Unsubscribe from the event that a SET_PROTOCOL message is received from the peer device.
 
 **Since:** 23
 
@@ -227,16 +233,16 @@ Unsubscribe from the event that a SET\_PROTOCOL message is received from the pee
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ProtocolData&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProtocolData&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(callback: hid.ProtocolData) {
@@ -257,7 +263,7 @@ try {
 offSetReport(callback?: Callback<SetReportData>): void
 ```
 
-Unsubscribe from the event that a SET\_REPORT message is received from the peer device.
+Unsubscribe from the event that a SET_REPORT message is received from the peer device.
 
 **Since:** 23
 
@@ -275,16 +281,16 @@ Unsubscribe from the event that a SET\_REPORT message is received from the peer 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SetReportData&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SetReportData&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(callback: hid.SetReportData) {
@@ -323,16 +329,16 @@ Unsubscribe from the event reported when virtual Cable is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent() {
@@ -353,7 +359,7 @@ try {
 onGetReport(callback: Callback<GetReportData>): void
 ```
 
-Subscribe to the event reported when GET\_REPORT message is received from the remote.
+Subscribe to the event reported when GET_REPORT message is received from the remote.
 
 **Since:** 23
 
@@ -371,16 +377,16 @@ Subscribe to the event reported when GET\_REPORT message is received from the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GetReportData&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GetReportData&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(callback: hid.GetReportData) {
@@ -418,16 +424,16 @@ Subscribe to the event reported when InterruptData is received from the remote.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;InterruptData&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterruptData&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(callback: hid.InterruptData) {
@@ -447,7 +453,7 @@ try {
 onSetProtocol(callback: Callback<ProtocolData>): void
 ```
 
-Subscribe to the event reported when SET\_PROTOCOL message is received from the remote.
+Subscribe to the event reported when SET_PROTOCOL message is received from the remote.
 
 **Since:** 23
 
@@ -465,16 +471,16 @@ Subscribe to the event reported when SET\_PROTOCOL message is received from the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ProtocolData&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProtocolData&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(callback: hid.ProtocolData) {
@@ -494,7 +500,7 @@ try {
 onSetReport(callback: Callback<SetReportData>): void
 ```
 
-Subscribe to the event reported when SET\_REPORT message is received from the remote.
+Subscribe to the event reported when SET_REPORT message is received from the remote.
 
 **Since:** 23
 
@@ -512,16 +518,16 @@ Subscribe to the event reported when SET\_REPORT message is received from the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SetReportData&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SetReportData&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent(callback: hid.SetReportData) {
@@ -559,16 +565,16 @@ Subscribe to the event reported when virtual Cable is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function onReceiveEvent() {
@@ -606,23 +612,23 @@ Application registers the HID Device capability.The application will only succes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sdp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Describe the hid device capability fields of this endpoint being queried. |
-| inQos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Describe the In Quality of Service (QoS) settings for the Bluetooth HID device application. |
-| outQos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Describe the Out Quality of Service (QoS) settings for the Bluetooth HID device application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
+| sdp | [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md) | Yes | Describe the hid device capability fields of this endpoint being queried. |
+| inQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the In Quality of Service (QoS) settings for the Bluetooth HID device application. |
+| outQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the Out Quality of Service (QoS) settings for the Bluetooth HID device application. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 2903050 | Application is not in the foreground. |
+| 2903051 | Any app has been registered. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| [2903050](../errorcode-bluetoothManager.md#2903050-hid-is-not-in-the-foreground) | Application is not in the foreground. |
-| [2903051](../errorcode-bluetoothManager.md#2903051-hid-has-been-registered) | Any app has been registered. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let descriptors: Uint8Array = new Uint8Array([
@@ -703,22 +709,22 @@ Reply report to a remote HID host device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Report type for reply |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Report Id, as defined in descriptor. It can be 0 in case Report Id are not defined in descriptor. |
+| type | [ReportType](arkts-connectivity-hid-reporttype-e.md) | Yes | Report type for reply |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Report Id, as defined in descriptor. It can be 0 in case Report Id are not defined in descriptor. |
 | reportData | Uint8Array | Yes | Report Data send to host. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 2903052 | App not register. |
+| 801 | Capability not supported. |
+| 2903053 | Device not connected. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
-| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let type = hid.ReportType.REPORT_TYPE_INPUT;
@@ -756,20 +762,20 @@ Report error to a remote HID host device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | error reason to send. |
+| error | [ErrorReason](arkts-connectivity-hid-errorreason-e.md) | Yes | error reason to send. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 2903052 | App not register. |
+| 801 | Capability not supported. |
+| 2903053 | Device not connected. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
-| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let error = hid.ErrorReason.RSP_SUCCESS;
@@ -811,21 +817,21 @@ Send report to a remote HID host device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Report ID defined in the descriptor. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Report ID defined in the descriptor. |
 | reportData | Uint8Array | Yes | Report data sent to the host device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 2903052 | App not register. |
+| 801 | Capability not supported. |
+| 2903053 | Device not connected. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
-| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let reportData: Uint8Array = new Uint8Array([0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77]);
@@ -862,12 +868,12 @@ Application unregisters the HID Device capability.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

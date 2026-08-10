@@ -1,6 +1,6 @@
 # ButtonOptions (System API)
 
-Provides the button information of the notification.
+描述触发按钮信息。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Provides the button information of the notification.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## buttonName
 
 ```TypeScript
 buttonName: string
 ```
 
-Button name.
+按钮名称。
 
 **Type:** string
 

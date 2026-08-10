@@ -1,6 +1,6 @@
 # PinVerifyResult
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when VerifyPinHandler#confirm being called.
+Enum type supplied to {@link PinVerifyResult} when VerifyPinHandler#confirm being called.
 
 **Since:** 22
 

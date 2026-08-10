@@ -6,7 +6,7 @@
 const ISO_DEP = 3
 ```
 
-Indicates an ISO\_DEP tag.
+Indicates an ISO_DEP tag.
 
 **Since:** 12
 

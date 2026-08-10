@@ -1,10 +1,10 @@
 # TimePickerDialogOptions
 
-Defines the configuration options of the time picker dialog box.
+时间选择器弹窗选项。
 
-Inherited from [TimePickerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
 
-**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](../arkts-apis/arkts-arkui-component/timepicker-timepickeroptions-i.md)
+**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
 
 **Since:** 8
 
@@ -20,9 +20,18 @@ Inherited from [TimePickerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation mode for the dialog.
+设置系统材质下弹窗的非线性动画模式。
 
-**Type:** DistortionMode
+> **默认值：** DistortionMode.DISTORTION_AUTO
+
+> **系统接口：** 此接口为系统接口。
+
+> **说明：** 当取值为 DISTORTION_AUTO 时，需设置
+> [ImmersiveMaterial](ImmersiveMaterial) 类型材质方可生效，并依据设备算力档位自动生效非线性效果（高中档算力设备生效，
+> 低档算力设备不生效）。非线性动画会增加渲染开销，建议在低端设备上谨慎使用。
+> 各枚举取值含义请参见[DistortionMode](../arkts-apis/arkts-arkui-common-distortionmode-e-sys.md/arkts-arkui-common-distortionmode-e-sys.md)。
+
+**Type:** [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
@@ -44,9 +53,17 @@ Sets the distortion animation mode for the dialog.
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edge light animation mode for the dialog.
+设置系统材质下弹窗的流光动画模式。
 
-**Type:** EdgeLightMode
+> **默认值：** EdgeLightMode.EDGELIGHT_AUTO
+
+> **系统接口：** 此接口为系统接口。
+
+> **说明：** 当取值为 EDGELIGHT_AUTO 时，需设置
+> [ImmersiveMaterial](ImmersiveMaterial) 类型材质方可生效，并依据设备算力档位自动生效流光效果（高档算力设备生效，
+> 中低档算力设备不生效）。流光动画会增加渲染开销，建议在低端设备上谨慎使用。各枚举取值含义请参见[EdgeLightMode](../arkts-apis/arkts-arkui-common-edgelightmode-e-sys.md/arkts-arkui-common-edgelightmode-e-sys.md)。
+
+**Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 

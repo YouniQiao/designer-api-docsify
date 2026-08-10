@@ -1,12 +1,18 @@
 # offPairingRequest (System API)
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offPairingRequest
 
 ```TypeScript
 function offPairingRequest(callback?: Callback<PairingRequestParam>): void
 ```
 
-Unsubscribes from pairing request events from remote NearLink devices.
+取消订阅来自远端星闪设备的配对请求事件。
 
 **Since:** 26.0.0
 
@@ -24,12 +30,12 @@ Unsubscribes from pairing request events from remote NearLink devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PairingRequestParam&gt; | No | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PairingRequestParam&gt; | No | 用于监听配对请求事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

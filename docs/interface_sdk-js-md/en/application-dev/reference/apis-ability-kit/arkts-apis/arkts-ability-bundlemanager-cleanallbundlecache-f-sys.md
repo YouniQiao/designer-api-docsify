@@ -1,12 +1,18 @@
 # cleanAllBundleCache (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## cleanAllBundleCache
 
 ```TypeScript
 function cleanAllBundleCache(): Promise<void>
 ```
 
-Clears the global cache. This API uses a promise to return the result.
+清理全局缓存。使用Promise异步回调。
 
 **Since:** 15
 
@@ -24,16 +30,16 @@ Clears the global cache. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

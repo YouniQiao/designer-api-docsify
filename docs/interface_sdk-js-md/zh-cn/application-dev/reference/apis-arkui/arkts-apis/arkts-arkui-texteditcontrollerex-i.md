@@ -2,9 +2,9 @@
 
 文本扩展编辑控制器。
 
-继承自[TextBaseController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[TextBaseController](arkts-arkui-textbasecontroller-i.md)。
 
-**继承/实现关系：** TextEditControllerEx extends [TextBaseController](arkts-arkui-component/textcommon-textbasecontroller-i.md)
+**继承/实现关系：** TextEditControllerEx extends [TextBaseController](arkts-arkui-textbasecontroller-i.md)
 
 **起始版本：** 12
 
@@ -64,7 +64,7 @@ getPreviewText?(): PreviewText
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 预上屏信息，包含预上屏起始位置索引和预上屏文本内容。 |
+| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息，包含预上屏起始位置索引和预上屏文本内容。 |
 
 ## isEditing
 
@@ -122,7 +122,7 @@ setCaretOffset(offset: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 光标是否设置成功。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true表示光标设置成功，false表示设置失败。 |
+| boolean | 光标是否设置成功。 &lt;br&gt;true表示光标设置成功，false表示设置失败。 |
 
 ## stopEditing
 

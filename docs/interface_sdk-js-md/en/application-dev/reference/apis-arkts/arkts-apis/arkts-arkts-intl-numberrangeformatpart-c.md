@@ -32,7 +32,7 @@ The constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| type | [NumberFormatPartTypes](arkts-arkts-intl-numberformatparttypes-t.md) | Yes |  |
 | value | string | Yes |  |
 | source | 'startRange' \| 'endRange' \| 'shared' | Yes |  |
 

@@ -1,5 +1,11 @@
 # destroyAbilityConnectionSession
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## destroyAbilityConnectionSession
 
 ```TypeScript
@@ -22,26 +28,13 @@ function destroyAbilityConnectionSession(sessionId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 待销毁的协同会话ID。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围是大于100的整数。 |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 待销毁的协同会话ID。&lt;br /&gt;取值范围是大于100的整数。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hilog.info(0x0000, 'testTag', 'destroyAbilityConnectionSession called');
-let sessionId = 100;
-abilityConnectionManager.destroyAbilityConnectionSession(sessionId);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
-import hilog from '@ohos.hilog';
 
 hilog.info(0x0000, 'testTag', 'destroyAbilityConnectionSession called');
 let sessionId = 100;

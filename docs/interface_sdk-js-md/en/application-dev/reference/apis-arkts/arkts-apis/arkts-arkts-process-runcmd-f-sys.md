@@ -1,5 +1,11 @@
 # runCmd (System API)
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## runCmd
 
 ```TypeScript
@@ -9,7 +15,7 @@ function runCmd(
   ): ChildProcess
 ```
 
-Returns a child process object and spawns a new ChildProcess to run the command.
+返回一个子进程对象，并 spawn 一个新的 ChildProcess 来运行命令。
 
 **Since:** 7
 
@@ -25,12 +31,12 @@ Returns a child process object and spawns a new ChildProcess to run the command.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | string | Yes | String of the shell commands executed by the child process. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | This is an object. The object contains three parameters. Timeout is the running time of the child process, killSignal is the signal sent when the child process reaches timeout, and maxBuffer is the size of the maximum buffer area for standard input and output. |
+| command | string | Yes | 子进程执行的 shell 命令字符串。 |
+| options | [ConditionType](arkts-arkts-process-conditiontype-i-sys.md) | No | 是一个对象，包含三个参数。timeout 是子进程的运行时间，killSignal 是子进程达到 timeout 时发送的信号，maxBuffer 是标准输入和输出的最大缓冲区大小。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a child process object. |
+| [ChildProcess](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-childprocess-childprocess-c.md) | 返回一个子进程对象。 |
 

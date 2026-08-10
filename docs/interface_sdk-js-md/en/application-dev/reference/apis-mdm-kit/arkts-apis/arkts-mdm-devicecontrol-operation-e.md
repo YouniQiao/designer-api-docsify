@@ -1,6 +1,6 @@
 # Operation
 
-Defines the device operation.
+设备操作。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines the device operation.
 DISK_ERASURE = 0
 ```
 
-Disk erasure. After this API is called, the device immediately performs a disk erasure operation. Once completed,all data on the device will be erased and cannot be recovered. To protect against data loss caused by potential application attacks, enterprises should implement robust security measures for their applications. It is support only on PCs/2-in-1 devices.
+磁盘擦除。接口调用后，设备将立即执行磁盘擦除操作。磁盘擦除完成后，整机设备数据将全部被擦除且无法恢复。企业需要做好应用的安全设计，防止应用被攻击导致企业数据丢失。仅支持PC/2in1设备。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Disk erasure. After this API is called, the device immediately performs a disk e
 RESET_FACTORY = 1
 ```
 
-Restore device factory settings..
+设备恢复出厂设置。接口调用后，设备将立即恢复出厂设置。恢复完成后，整机设备数据将全部被擦除且无法恢复。企业需要做好应用的安全设计，防止应用被攻击导致企业数据丢失。已经通过[restrictions.setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了恢复出厂，需要先解除禁用。
 
 **Since:** 26.1.0
 
@@ -52,7 +52,7 @@ Restore device factory settings..
 REBOOT = 2
 ```
 
-Restart devices.
+设备重启。
 
 **Since:** 26.1.0
 
@@ -70,7 +70,7 @@ Restart devices.
 SHUT_DOWN = 3
 ```
 
-Shut down devices.
+设备关机。
 
 **Since:** 26.1.0
 
@@ -88,7 +88,7 @@ Shut down devices.
 LOCK_SCREEN = 4
 ```
 
-Lock device screens.
+设备锁屏。
 
 **Since:** 26.1.0
 
@@ -106,7 +106,7 @@ Lock device screens.
 LOCK_DEVICE = 5
 ```
 
-Lock devices.
+设备锁定。该能力使用后设备屏幕无法使用，按键无响应，仅支持锁屏文案定制，不支持在锁屏界面定制交互功能。在开发过程中，下发设备锁定策略前一定要预留逃生通道，并且确保逃生通道正常。建议开发时保留hdc能力与远程通信能力，通过hdc命令或者远程push能力能触发设备解锁定功能。&lt;br&gt;如果需要实现在屏幕锁定的情况下支持自定义行为的能力，建议使用[applicationManager.setAllowedKioskApps](arkts-mdm-applicationmanager-setallowedkioskapps-f.md#setallowedkioskapps)接口配置支持Kiosk模式，使用[applicationManager.enterKioskMode](../../apis-ability-kit/arkts-apis/arkts-ability-kioskmanager-enterkioskmode-f.md/arkts-ability-kioskmanager-enterkioskmode-f.md#enterkioskmode))接口进入Kiosk模式。
 
 **Since:** 26.1.0
 
@@ -124,7 +124,7 @@ Lock devices.
 UNLOCK_DEVICE = 6
 ```
 
-Unlock devices.
+设备解锁定。接口调用后，设备将被解锁，用户可正常操作设备。
 
 **Since:** 26.1.0
 

@@ -1,12 +1,18 @@
 # createRandom
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## createRandom
 
 ```TypeScript
 function createRandom(): Random
 ```
 
-Creates a **Random** instance.
+创建随机数实例。
 
 **Since:** 9
 
@@ -28,15 +34,15 @@ Creates a **Random** instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the **Random** instance created. |
+| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | 返回Random实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| 17620001 | 内存操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

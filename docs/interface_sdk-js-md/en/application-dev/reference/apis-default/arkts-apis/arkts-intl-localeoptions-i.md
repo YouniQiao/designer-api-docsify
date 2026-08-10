@@ -38,7 +38,7 @@ caseFirst?: LocaleCollationCaseFirst
 
 Flag that defines whether case is taken into account for the locale's collation rules.
 
-**Type:** LocaleCollationCaseFirst
+**Type:** [LocaleCollationCaseFirst](../../apis-arkts/arkts-apis/arkts-arkts-intl-localecollationcasefirst-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -66,7 +66,7 @@ hourCycle?: LocaleHourCycleKey
 
 The time keeping format convention used by the locale.
 
-**Type:** LocaleHourCycleKey
+**Type:** [LocaleHourCycleKey](../../apis-arkts/arkts-apis/arkts-arkts-intl-localehourcyclekey-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

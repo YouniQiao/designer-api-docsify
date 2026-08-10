@@ -1,6 +1,6 @@
 # CallMetadata
 
-The metadata of the current call.
+通话会话元数据相关属性。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ The metadata of the current call.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## avatar
 
 ```TypeScript
 avatar?: image.PixelMap
 ```
 
-The displayed picture that represents a particular user.
+来电人头像。
 
 **Type:** image.PixelMap
 
@@ -36,7 +42,7 @@ The displayed picture that represents a particular user.
 name?: string
 ```
 
-The displayed user name of current call.
+来电人姓名（别名）。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ The displayed user name of current call.
 phoneNumber?: string
 ```
 
-The phone number of current call.
+来电电话号码。
 
 **Type:** string
 

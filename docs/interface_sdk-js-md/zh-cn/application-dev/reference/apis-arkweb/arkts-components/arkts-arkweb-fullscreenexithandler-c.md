@@ -1,6 +1,6 @@
 # FullScreenExitHandler
 
-Define the handler to exit the full screen mode, related to the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ event.
+Define the handler to exit the full screen mode, related to the {@link onFullScreenEnter} event.
 
 **起始版本：** 18
 

@@ -1,6 +1,6 @@
 # ListItemGroupStyle
 
-Enumerates the card styles of the **ListItemGroup** component.
+ListItemGroup组件卡片样式枚举。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the card styles of the **ListItemGroup** component.
 NONE = 0
 ```
 
-No style.
+无样式。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ No style.
 CARD = 1
 ```
 
-Default card style.
+显示默认卡片样式。
 
 **Since:** 10
 

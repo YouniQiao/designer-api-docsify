@@ -5,7 +5,7 @@ export type OnPushEventCallback = (source: Want, template: PluginComponentTempla
     extraData: KVObject) => void
 ```
 
-Plugin component push event callback.
+对应push事件的监听回调函数。
 
 **Since:** 23
 
@@ -21,8 +21,8 @@ Plugin component push event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Push request sender's relevant information.  |
-| template | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request component template name.  |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | data info.  |
-| extraData | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | extra data info.  |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | push事件发送方相关信息。 |
+| template | [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | Yes | 组件模板。 |
+| data | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Yes | push事件中传递的数据内容，以键值对形式存储，键和值类型由业务定义。 |
+| extraData | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Yes | push事件中传递的附加数据，以键值对形式存储，键和值类型由业务定义。 |
 

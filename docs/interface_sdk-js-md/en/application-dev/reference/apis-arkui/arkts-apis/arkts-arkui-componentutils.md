@@ -6,9 +6,17 @@ This module provides functionality for component coordinates and sizes.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace componentUtils--><!--Device-unnamed-declare namespace componentUtils-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { componentUtils } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 

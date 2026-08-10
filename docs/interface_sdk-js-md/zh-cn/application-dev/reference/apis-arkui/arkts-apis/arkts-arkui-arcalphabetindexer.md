@@ -1,5 +1,11 @@
 # @ohos.arkui.ArcAlphabetIndexer
 
+## 导入模块
+
+```TypeScript
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 函数
@@ -18,5 +24,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | 定义[onSelect]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中使用的回调类型。 |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | 定义[onSelect](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#onselect)中使用的回调类型。 |
 

@@ -6,7 +6,7 @@
 const VISIBILITY_COMPLETION: 1
 ```
 
-[通知栏]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 展示类型：显示完成通知
+[通知栏](arkts-basicservices-agent-notification-i.md) 展示类型：显示完成通知
 
 **起始版本：** 21
 
@@ -22,7 +22,7 @@ const VISIBILITY_COMPLETION: 1
 const VISIBILITY_PROGRESS: 2
 ```
 
-[通知栏]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 展示类型：显示进度通知
+[通知栏](arkts-basicservices-agent-notification-i.md) 展示类型：显示进度通知
 
 **起始版本：** 21
 

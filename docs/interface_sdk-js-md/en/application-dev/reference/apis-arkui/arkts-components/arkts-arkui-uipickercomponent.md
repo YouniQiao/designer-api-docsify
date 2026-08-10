@@ -1,68 +1,59 @@
 # UIPickerComponent
 
-The **UIPickerComponent** container is used to implement user selection operations. It supports single selection from
-a limited set of options and can be applied to various scenarios such as time selection, date selection, region
-selection, and status selection. Its display effect is a three-dimensional wheel style, supporting customizable
-options including text type, image type, and text-image combination type.
+UIPickerComponent容器是用于实现用户选择操作的组件。它支持从一组有限的选项中让用户进行单选，采用立体滚轮样式提供直观的视觉反馈和流畅的滑动
+体验。该组件支持选项按需定制，包括文本类型、图片类型和图文组合类型，可根据业务需求提供更丰富的信息展示，可广泛应用于时间选择、日期选择、地区选
+择、状态选择等多种场景。
 
-NOTE
+> **说明：**
+>
+> - UIPickerComponent容器默认选项行高为40vp，默认显示7个选项。可通过[itemHeight]{@link UIPickerComponentAttribute#itemHeight}
+> 和[displayedItemCount]{@link UIPickerComponentAttribute#displayedItemCount}属性进行配置。由于显示效果为立体滚轮样式，因此除
+> 选中项外的其他选项会进行不同角度的旋转，实际的可视高度会小于选项行高。
+>
+> - UIPickerComponent容器的[height]{@link CommonMethod#height(value: Length)}建议设置为200vp。当设置的高度大于等于该建议值时，
+> 可完整显示默认的7个选项；若通过[displayedItemCount]{@link UIPickerComponentAttribute#displayedItemCount}或
+> [itemHeight]{@link UIPickerComponentAttribute#itemHeight}配置了更多可见项或更大选项高度，建议相应增大组件高度。设置高度小于建议
+> 值时，显示范围会从上下边缘向中间裁剪，可显示的选项数量也会相应减少，始终保持选中项垂直居中。
+>
+> - 当UIPickerComponent容器未设置[width]{@link CommonMethod#width(value: Length)}时，取当前视图中可见子组件的最大宽度作为容器宽
+> 度。建议为UIPickerComponent容器设置宽度，或为每个子组件设置相同宽度，以避免滑动过程中容器宽度动态发生变化，影响显示效果。
+>
+> - UIPickerComponent容器的子组件的对齐方式固定为居中对齐，不支持通过[align]{@link CommonMethod#align(value: Alignment)}属性改
+> 变子组件的对齐方式。
+>
+> - UIPickerComponent容器当前不支持智能手表设备。开发者可通过deviceInfo.deviceType获取设备类型，判断是否为智能手表设备。
+>
+> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
 
-- The height of the **UIPickerComponent** container options is fixed at 40 vp, and a maximum of seven options can
- be displayed. Due to the three-dimensional wheel display effect, options other than the selected one will be
- rotated at different angles, so the actual visible height will be less than 40 vp.
+>
 
-- It is recommended that the [height]{@link CommonMethod#height(value: Length)} of the **UIPickerComponent**
- container be set to 200 vp. When the set height is greater than or equal to this recommended value, all 7 options
- can be fully displayed. Otherwise, the display area will be cropped from the top and bottom edges towards the
- center, and the number of displayed options will be reduced accordingly, always keeping the selected item
- vertically centered.
+## 子组件
 
-- When the **UIPickerComponent** container's [width]{@link CommonMethod#width(value: Length)} is not set, the
- maximum width of the visible child components in the current view is taken as the container width. You are advised
- to set the width of the **UIPickerComponent** container or set the same width for each child component to avoid
- dynamic changes in container width during sliding, which affects the display effect.
+> 
+> - 支持多个子组件。
+> - 支持子组件类型：[Text]{@link ./text}、[Image]{@link ./image}、[Row]{@link ./row}和[SymbolGlyph]{@link ./symbolglyph}。
+> - 支持渲染控制类型：[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)和
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)。
 
-- The alignment mode of child components in the **UIPickerComponent** container is fixed to center alignment, and
- cannot be changed via the [align]{@link CommonMethod#align(value: Alignment)} attribute.
-
-- Currently, the **UIPickerComponent** container does not support wearables.
-
-- This component supports [WithTheme]{@link with_theme} since API version 26.0.0.
-
-Child Components
-
-- Multiple child components are supported.
-- Supported child component types: [Text]{@link text}, [Image]{@link image}, [Row]{@link row}, and
- [SymbolGlyph]{@link symbolglyph}
-- Supported rendering control types: [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md) and
- [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)
-
-NOTE
-
-- When the Row **container** is used as a child component, the **Row** container can contain only the **Text**,
- **Image**, and **SymbolGlyph** basic components. Including other container components may affect the display effect
- or cause sliding functionality abnormalities.
-
-- When counting the number of child components, the **Row** container and its child components are counted as one
- child component.
-
-- When the child component is **Text**, **Image**, or **SymbolGlyph**, the
- [height]{@link CommonMethod#height(value: Length)} attribute does not take effect and is fixed at 40 vp.
-
-- When the child component is a **Row** container, its [height]{@link CommonMethod#height(value: Length)} attribute
- does not take effect and is fixed at 40 vp. The [height]{@link CommonMethod#height(value: Length)} attribute of the
- child components in the **Row** container takes effect. The final display effect is determined by the **Row**
- container.
-
-- The text-image combination option requires that the **Row** container contain the **Text** and **Image**
- components. When using the text-image combination option, you are advised to set the image's
- [height]{@link CommonMethod#height(value: Length)} to 40 vp or below to avoid cropping when images are large.
-
-- The **fontSize** attribute of all text components (including the **Text** components in the **Row** container) in
- the **UIPickerComponent** container is 20 fp by default. User settings will override the default value, and
- abnormal values will be processed according to the result of handling the text component's
- [fontSize]{@link TextAttribute#fontSize}. You are advised to set the **fontSize** attribute to a unified value or
- not to set it to ensure a good display effect.
+> **说明：**
+> 
+> - 开发者在使用Row容器作为子组件时，Row容器中仅支持包含Text、Image、SymbolGlyph基础组件，
+> 包含其他容器组件可能会影响显示效果或滑动功能异常。
+> 
+> - 统计子组件的个数时，不包含Row容器内的子组件，Row容器及其子组件共同视为1个子组件。
+> 
+> - 子组件为Text、Image、SymbolGlyph时，[height]{@link CommonMethod#height(value: Length)}属性不生效，实际高度由
+> [itemHeight]{@link UIPickerComponentAttribute#itemHeight}属性决定（默认40vp）。子组件内容会在选项区域内显示。
+> 
+> - 子组件为Row容器时，Row容器的[height]{@link CommonMethod#height(value: Length)}属性不生效，实际高度由
+> [itemHeight]{@link UIPickerComponentAttribute#itemHeight}属性决定（默认40vp）。Row容器内的子组件
+> [height]{@link CommonMethod#height(value: Length)}属性能正常生效，最终显示效果由Row容器决定。
+> 
+> - 图文组合类型选项需要使用Row容器包含图片和文本组件。使用图文组合类型选项时，
+> 建议将图片的[height]{@link CommonMethod#height(value: Length)}设置为40vp及以下，避免图片较大时被裁剪。
+> 
+> - UIPickerComponent容器内所有文本组件（包括Row容器内的文本组件）的fontSize属性默认为20fp。用户设置将覆盖默认值，
+> 设置异常值时以文本组件[fontSize]{@link TextAttribute#fontSize}处理的结果为准。建议统一设置或不设置fontSize以保证良好的显示效果。
 
 ## UIPickerComponent
 
@@ -70,7 +61,7 @@ NOTE
 UIPickerComponent(options?: UIPickerComponentOptions)
 ```
 
-Creates a **UIPickerComponent** container, whose selected item is determined by the **selectedIndex** attribute in the **options** parameter.
+创建UIPickerComponent容器，其选中项由options参数中的selectedIndex属性值决定。
 
 **Since:** 22
 
@@ -88,7 +79,11 @@ Creates a **UIPickerComponent** container, whose selected item is determined by 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the **UIPickerComponent** container. If the parameter is left empty, the component is a placeholder but the content is empty.  |
+| options | [UIPickerComponentOptions](arkts-arkui-uipickercomponentoptions-i.md) | No | 配置UIPickerComponent容器的参数，用于自定义初始选中项等配置。参数缺省时组件占 位，但内容显示为空。当需要设置初始选中项时传入此参数。 |
 
 ## Summary
 
+- [PickerIndicatorStyle](arkts-arkui-uipickercomponent-pickerindicatorstyle-i.md)
+- [UIPickerComponentOptions](arkts-arkui-uipickercomponent-uipickercomponentoptions-i.md)
+- [OnUIPickerComponentCallback](arkts-arkui-uipickercomponent-onuipickercomponentcallback-t.md)
+- [PickerIndicatorType](arkts-arkui-uipickercomponent-pickerindicatortype-e.md)

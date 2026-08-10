@@ -1,9 +1,10 @@
 # AudioInterrupt
 
 音频监听事件传入的参数。
-    **说明：**  
-    
-    从API version 7开始支持，从API version 9开始废弃，无替代接口。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，无替代接口。
 
 **起始版本：** 7
 
@@ -17,6 +18,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## contentType
 
 ```TypeScript
@@ -25,7 +32,7 @@ contentType: ContentType
 
 音频打断媒体类型。
 
-**类型：** ContentType
+**类型：** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
 
 **起始版本：** 7
 
@@ -69,7 +76,7 @@ streamUsage: StreamUsage
 
 音频流使用类型。
 
-**类型：** StreamUsage
+**类型：** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **起始版本：** 7
 

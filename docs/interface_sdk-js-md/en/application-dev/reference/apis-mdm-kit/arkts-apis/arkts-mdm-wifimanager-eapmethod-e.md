@@ -1,9 +1,10 @@
 # EapMethod
 
-Enumerates the EAP authentication methods.
-    **NOTE**  
-    
-    Currently, only the EAP\_PEAP and EAP\_TLS authentication methods are supported.
+表示EAP认证方式的枚举。
+
+> **说明：**
+> 
+> 当前仅支持使用EAP_PEAP、EAP_TLS两种认证方式，其他暂不支持。
 
 **Since:** 12
 
@@ -19,7 +20,7 @@ Enumerates the EAP authentication methods.
 EAP_NONE = 0
 ```
 
-Not specified.
+未指定。
 
 **Since:** 12
 
@@ -37,7 +38,7 @@ Not specified.
 EAP_PEAP = 1
 ```
 
-Protected Extensible Authentication Protocol (PEAP). It first establishes a secure TLS tunnel, followed by performing simple authentication within the tunnel.
+PEAP类型，受保护的可扩展认证协议。先建立安全的TLS隧道、然后进行简单认证。
 
 **Since:** 12
 
@@ -55,7 +56,7 @@ Protected Extensible Authentication Protocol (PEAP). It first establishes a secu
 EAP_TLS = 2
 ```
 
-Transport Layer Security (TLS). It implements mutual certificate authentication.
+TLS类型，传输层安全协议。双向证书认证。
 
 **Since:** 12
 
@@ -73,7 +74,7 @@ Transport Layer Security (TLS). It implements mutual certificate authentication.
 EAP_TTLS = 3
 ```
 
-Tunnel Transport Layer Security (TTLS). It is similar to PEAP, but supports a more diverse set of authentication methods inside the tunnel.
+TTLS类型，隧道传输层安全协议。与PEAP类似，但后续隧道内部认证方法更加丰富。
 
 **Since:** 12
 
@@ -91,7 +92,7 @@ Tunnel Transport Layer Security (TTLS). It is similar to PEAP, but supports a mo
 EAP_PWD = 4
 ```
 
-Password Authentication (PWD). It enables password-based authentication and does not require a server certificate.
+PWD类型，密码认证。无需服务器证书。
 
 **Since:** 12
 
@@ -109,7 +110,7 @@ Password Authentication (PWD). It enables password-based authentication and does
 EAP_SIM = 5
 ```
 
-Subscriber Identity Module (SIM). It performs authentication using the keys and algorithms stored in the SIM card of a smartphone.
+SIM类型，使用手机SIM卡中的密钥和算法进行认证。
 
 **Since:** 12
 
@@ -127,7 +128,7 @@ Subscriber Identity Module (SIM). It performs authentication using the keys and 
 EAP_AKA = 6
 ```
 
-Authentication and Key Agreement (AKA). It performs authentication using enhanced keys and algorithms stored in a USIM card (applicable to 3G/4G/5G SIM cards).
+AKA类型，使用USIM卡（3G/4G/5G SIM卡）中的增强密钥和算法进行认证。
 
 **Since:** 12
 
@@ -145,7 +146,7 @@ Authentication and Key Agreement (AKA). It performs authentication using enhance
 EAP_AKA_PRIME = 7
 ```
 
-AKA Prime. It is an enhanced version of EAP-AKA and binds the network name during key derivation.
+AKA Prime类型，EAP-AKA增强版，在密钥派生中绑定网络名称。
 
 **Since:** 12
 
@@ -163,7 +164,7 @@ AKA Prime. It is an enhanced version of EAP-AKA and binds the network name durin
 EAP_UNAUTH_TLS = 8
 ```
 
-Unauthenticated TLS (UNAUTH TLS). It implements one-way authentication (client authentication only) while establishing an encrypted communication channel.
+UNAUTH TLS类型，单向认证（仅认证客户端）和加密通道。
 
 **Since:** 12
 

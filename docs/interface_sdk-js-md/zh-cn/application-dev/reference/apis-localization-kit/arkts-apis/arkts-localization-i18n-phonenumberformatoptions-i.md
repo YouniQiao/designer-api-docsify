@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## type
 
 ```TypeScript
@@ -18,7 +24,7 @@ type?: string
 
 表示对电话号码格式化的类型，取值包括：'E164', 'INTERNATIONAL', 'NATIONAL', 'RFC3966', 'TYPING'。
 
--在API version 8版本，type为必填项。
+-在API version 8版本，type为必填项。 
 
 -API version 9版本开始，type为选填项。
 

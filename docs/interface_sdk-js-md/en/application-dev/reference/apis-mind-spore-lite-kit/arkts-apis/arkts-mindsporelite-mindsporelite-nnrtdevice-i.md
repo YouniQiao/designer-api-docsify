@@ -10,6 +10,12 @@ Provides the NNRT device info
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## deviceID
 
 ```TypeScript
@@ -38,7 +44,7 @@ extensions?: Extension[]
 
 NNRT device extension array.
 
-**Type:** Extension[]
+**Type:** [Extension](arkts-mindsporelite-mindsporelite-extension-i.md)[]
 
 **Since:** 12
 
@@ -58,7 +64,7 @@ performanceMode?: PerformanceMode
 
 NNRT device performance mode.
 
-**Type:** PerformanceMode
+**Type:** [PerformanceMode](arkts-mindsporelite-mindsporelite-performancemode-e.md)
 
 **Since:** 12
 
@@ -78,7 +84,7 @@ priority?: Priority
 
 NNRT device priority.
 
-**Type:** Priority
+**Type:** [Priority](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-priority-e.md)
 
 **Since:** 12
 

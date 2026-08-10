@@ -1,5 +1,11 @@
 # transcode
 
+## 导入模块
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
+
 ## transcode
 
 ```TypeScript
@@ -22,17 +28,17 @@ function transcode(source: Buffer | Uint8Array, fromEnc: string, toEnc: string):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | 是 | 待转码的Buffer或Uint8Array实例，提供需要重新编码的源数据。 |
-| fromEnc | string | 是 | 当前编码。 支持的格式范围为[BufferEncoding]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| toEnc | string | 是 | 目标编码。 支持的格式范围为[BufferEncoding]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| source | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待转码的Buffer或Uint8Array实例，提供需要重新编码的源数据。 |
+| fromEnc | string | 是 | 当前编码。 支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
+| toEnc | string | 是 | 目标编码。 支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 将当前编码转换成目标编码，并返回一个新的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | 将当前编码转换成目标编码，并返回一个新的Buffer对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

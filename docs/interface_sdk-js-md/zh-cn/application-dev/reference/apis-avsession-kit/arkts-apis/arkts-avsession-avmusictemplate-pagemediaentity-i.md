@@ -1,6 +1,6 @@
 # PageMediaEntity
 
-标签页媒体的定义。继承自[OperResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+标签页媒体的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
 
 **继承/实现关系：** PageMediaEntity extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## elements
 
 ```TypeScript
@@ -20,7 +26,7 @@ elements: MediaEntity[]
 
 查询数据内容（根据类型传递相应的结构数据）。
 
-**类型：** MediaEntity[]
+**类型：** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
 **起始版本：** 23
 
@@ -40,7 +46,7 @@ episodeRange?: EpisodeRange
 
 剧集区间。
 
-**类型：** EpisodeRange
+**类型：** [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md)
 
 **起始版本：** 23
 
@@ -80,7 +86,7 @@ memberMediaType: EntityType
 
 媒体资源类型。
 
-**类型：** EntityType
+**类型：** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **起始版本：** 23
 
@@ -100,7 +106,7 @@ pageIndex: int
 
 分页查询页码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -120,7 +126,7 @@ pageSize: int
 
 页面的大小。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -140,7 +146,7 @@ sort?: Sort
 
 数据排序。
 
-**类型：** Sort
+**类型：** [Sort](arkts-avsession-avmusictemplate-sort-e.md)
 
 **起始版本：** 23
 
@@ -160,7 +166,7 @@ totalSize: int
 
 数据总大小。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

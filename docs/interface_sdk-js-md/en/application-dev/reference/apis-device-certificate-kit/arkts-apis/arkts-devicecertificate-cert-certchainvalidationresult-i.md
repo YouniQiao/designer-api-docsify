@@ -1,6 +1,6 @@
 # CertChainValidationResult
 
-Represents the return value of certificate chain validation.
+表示证书链校验的返回值。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Represents the return value of certificate chain validation.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## entityCert
 
 ```TypeScript
 readonly entityCert: X509Cert
 ```
 
-Entity certificate.
+表示实体证书。
 
-**Type:** X509Cert
+**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
 **Since:** 11
 
@@ -36,9 +42,9 @@ Entity certificate.
 readonly trustAnchor: X509TrustAnchor
 ```
 
-Trust anchor.
+表示信任锚。
 
-**Type:** X509TrustAnchor
+**Type:** [X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)
 
 **Since:** 11
 

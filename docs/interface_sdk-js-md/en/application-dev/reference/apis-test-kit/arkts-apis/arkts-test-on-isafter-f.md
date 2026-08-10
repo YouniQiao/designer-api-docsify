@@ -1,12 +1,18 @@
 # isAfter
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## isAfter
 
 ```TypeScript
 export function isAfter(on: On): On
 ```
 
-Requires that the target Component which is after another Component that specified by the given \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_object,used to locate Component relatively.
+Requires that the target Component which is after another Component that specified by the given {@link On}object,used to locate Component relatively.
 
 **Since:** 23
 
@@ -20,11 +26,11 @@ Requires that the target Component which is after another Component that specifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | describes the attribute requirements of Component which the target one is in back of. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | describes the attribute requirements of Component which the target one is in back of. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | this { |
+| [On](arkts-test-uitest-on-c.md) | this { |
 

@@ -1,6 +1,6 @@
 # Rect
 
-Describes a rectangle on the display.
+矩形区域。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Describes a rectangle on the display.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: long
 ```
 
-Height of the rectangle, in px. The value is an integer.
+矩形区域的高度，单位为px，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Height of the rectangle, in px. The value is an integer.
 left: long
 ```
 
-Left boundary of the rectangle, in px. The value is an integer.
+矩形区域的左边界，单位为px，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -56,9 +62,9 @@ Left boundary of the rectangle, in px. The value is an integer.
 top: long
 ```
 
-Top boundary of the rectangle, in px. The value is an integer.
+矩形区域的上边界，单位为px，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -76,9 +82,9 @@ Top boundary of the rectangle, in px. The value is an integer.
 width: long
 ```
 
-Width of the rectangle, in px. The value is an integer.
+矩形区域的宽度，单位为px，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

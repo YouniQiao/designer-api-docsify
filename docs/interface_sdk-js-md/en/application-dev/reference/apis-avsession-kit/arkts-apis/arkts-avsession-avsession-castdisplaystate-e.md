@@ -1,6 +1,6 @@
 # CastDisplayState
 
-Enumerates the cast display states.
+投播显示设备状态的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the cast display states.
 STATE_OFF = 1
 ```
 
-Screen off.
+设备断开，扩展屏不再显示内容。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Screen off.
 STATE_ON = 2
 ```
 
-Screen on.
+设备连接成功，扩展屏可用。
 
 **Since:** 12
 

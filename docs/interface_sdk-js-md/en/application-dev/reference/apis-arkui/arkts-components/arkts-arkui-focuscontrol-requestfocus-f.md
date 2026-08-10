@@ -6,9 +6,9 @@
 function requestFocus(value: string): boolean
 ```
 
-Requests focus transfer to the specified component during the next frame rendering. This global API provides asynchronous focus control.
+方法语句中可使用的全局接口，调用此接口可以主动让焦点在下一帧渲染时转移至参数指定的组件上。
 
-For scenarios requiring immediate focus changes, it is recommended that you use the focus synchronization transfer API [requestFocus]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ in **FocusController**.
+如果需要指定组件立刻获焦，推荐使用FocusController中的焦点同步转移接口[requestFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md/arkts-arkui-arkui-uicontext-focuscontroller-c.md#requestfocus)。
 
 **Since:** 9
 
@@ -24,11 +24,11 @@ For scenarios requiring immediate focus changes, it is recommended that you use 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | String bound to the target component using **key(value: string)** or **id(value: string)**. |
+| value | string | Yes | 目标组件使用接口key(value: string)或id(value: string)绑定的字符串。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns whether focus transfer is successfully requested for the target component. If the target component pointed to by the parameter exists, is mounted to the component tree, and is focusable, **true** is returned. Otherwise, **false** is returned. |
+| boolean | 返回值表示是否成功给目标组件申请到焦点。若参数指向的目标组件存在且已挂载组件树，并具备获焦能力，则返回true，否则返回false。 |
 

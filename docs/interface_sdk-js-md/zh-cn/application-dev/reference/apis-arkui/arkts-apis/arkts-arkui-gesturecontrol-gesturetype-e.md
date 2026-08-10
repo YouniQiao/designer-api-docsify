@@ -221,7 +221,7 @@ CONTEXT_MENU_HOVER_GESTURE = 11
 ```
 
 上下文菜单悬停手势是一种特殊的长按手势，用于在长按过程中触发菜单的hoverScale动画效果（需启用  
-[ContextMenuAnimationOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的hoverScaleInterruption属性以支持该行为）。
+[ContextMenuAnimationOptions](arkts-arkui-common-contextmenuanimationoptions-i.md)的hoverScaleInterruption属性以支持该行为）。
 
 **起始版本：** 23
 

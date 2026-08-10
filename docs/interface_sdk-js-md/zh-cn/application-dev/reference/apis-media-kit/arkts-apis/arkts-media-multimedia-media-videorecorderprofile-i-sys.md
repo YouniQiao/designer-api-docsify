@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## audioBitrate
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly audioBitrate: int
 
 音频比特率，单位为bit/s。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ readonly audioChannels: int
 
 音频声道数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ readonly audioCodec: CodecMimeType
 
 音频编码格式。
 
-**类型：** CodecMimeType
+**类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 9
 
@@ -80,7 +86,7 @@ readonly audioSampleRate: int
 
 音频采样率，单位为Hz。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -100,7 +106,7 @@ readonly fileFormat: ContainerFormatType
 
 输出文件格式。
 
-**类型：** ContainerFormatType
+**类型：** [ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)
 
 **起始版本：** 9
 
@@ -120,7 +126,7 @@ readonly videoBitrate: int
 
 视频比特率，单位为bit/s。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -140,7 +146,7 @@ readonly videoCodec: CodecMimeType
 
 视频编码格式。
 
-**类型：** CodecMimeType
+**类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 9
 
@@ -160,7 +166,7 @@ readonly videoFrameHeight: int
 
 视频高度，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -180,7 +186,7 @@ readonly videoFrameRate: int
 
 视频帧率，单位为fps。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -200,7 +206,7 @@ readonly videoFrameWidth: int
 
 视频宽度，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

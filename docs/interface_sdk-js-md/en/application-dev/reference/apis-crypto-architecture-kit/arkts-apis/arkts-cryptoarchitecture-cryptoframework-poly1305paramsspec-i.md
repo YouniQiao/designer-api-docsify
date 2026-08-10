@@ -1,23 +1,23 @@
 # Poly1305ParamsSpec
 
-Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly1305 AEAD mode, which requires a nonce, AAD, and an authentication tag. It is a child class of  
-[ParamsSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and used as a parameter in  
-[init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ for symmetric encryption or decryption.
+加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用ChaCha20-Poly1305 AEAD模式进行加密或解密的参数，需要nonce、AAD和认证标签。它是  
+[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_Applicable to \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    Before passing a value to  
-    [init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, specify  
-    **algName** for its parent class [ParamsSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.  
-    
-    When the Poly1305 mode is used for encryption, you need to extract the last 16 bytes from the  
-    [DataBlob]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ returned by  
-    [doFinal()]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ or  
-    [doFinalSync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ and use them as **authTag** in  
-    [Poly1305ParamsSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_ for  
-    [init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_ or  
-    [initSync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_ during decryption.
+&lt;br&gt;适用于[ChaCha20-Poly1305](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20)。
+
+> **说明：**
+> 
+> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要
+> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
+> 
+> 在ChaCha20-Poly1305加密时，需从
+> [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)或
+> [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync)输出的
+> [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)末尾提取16字节，作为解密时
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)或
+> [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync)方法的参数
+> [Poly1305ParamsSpec](arkts-cryptoarchitecture-cryptoframework-poly1305paramsspec-i.md)中的authTag。
 
 **Inheritance/Implementation:** Poly1305ParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
@@ -29,15 +29,21 @@ Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## aad
 
 ```TypeScript
 aad: DataBlob
 ```
 
-Additional authenticated data.
+指明加解密参数aad。
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 22
 
@@ -55,9 +61,9 @@ Additional authenticated data.
 authTag: DataBlob
 ```
 
-Authentication tag, which is of 16 bytes.
+指定加解密参数authTag，长度为16字节。
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 22
 
@@ -75,9 +81,9 @@ Authentication tag, which is of 16 bytes.
 iv: DataBlob
 ```
 
-Nonce (passed as the **iv** field), which is of 12 bytes.
+Nonce（通过iv字段传入），长度为12字节。
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 22
 

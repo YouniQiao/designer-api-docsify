@@ -1,12 +1,18 @@
 # getAllAVMusicTemplateDescriptors (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## getAllAVMusicTemplateDescriptors
 
 ```TypeScript
 function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescriptor[]
 ```
 
-Get all AVMusicTemplate descriptors.
+获取所有的音频模板描述，返回音频模板描述的集合。
 
 **Since:** 23
 
@@ -26,19 +32,19 @@ Get all AVMusicTemplate descriptors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | user id |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用户ID。以用户传递为准，可为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | an AVMusicTemplate descriptor array |
+| [AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)[] | 音频模板描述的集合。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |
+| 801 | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |
+| 201 | Permission verify failed. |
+| 202 | Not System App. |
 

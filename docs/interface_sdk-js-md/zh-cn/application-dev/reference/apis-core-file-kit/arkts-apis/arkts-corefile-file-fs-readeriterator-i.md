@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## next
 
 ```TypeScript
@@ -30,7 +36,7 @@ next(): ReaderIteratorResult
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 文件读取迭代器返回结果。 |
+| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
 
 **错误码：**
 
@@ -40,9 +46,7 @@ next(): ReaderIteratorResult
 | 13900037 | No data available |
 | 13900042 | Unknown error |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -57,26 +61,6 @@ fileIo.readLines(filePath, options).then((readerIterator: fileIo.ReaderIterator)
     console.info(`Succeeded in reading lines, content: ${it.value}`);
   }
 }).catch((err: BusinessError) => {
-  console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-fileIo.readLines(filePath, options).then((readerIterator:fileIo.ReaderIterator) => {
-  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-    console.info(`Succeeded in reading lines, content: ${it.value}`);
-  }
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
   console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
 });
 ```

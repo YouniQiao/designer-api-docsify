@@ -1,7 +1,7 @@
 # KvStoreResultSet
 
 提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。在调用KvStoreResultSet的方法前，需要先通过  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构建一个KVStore实例。
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个KVStore实例。
 
 **起始版本：** 7
 
@@ -41,7 +41,7 @@ getCount(): number
 | --- | --- |
 | number | 返回数据的总行数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -84,9 +84,9 @@ getEntry(): Entry
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回键值对。 |
+| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 返回键值对。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -131,7 +131,7 @@ getPosition(): number
 | --- | --- |
 | number | 返回当前读取位置。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -176,7 +176,7 @@ isAfterLast(): boolean
 | --- | --- |
 | boolean | 返回true表示读取位置在最后一行之后；返回false表示读取位置不在最后一行之后。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -221,7 +221,7 @@ isBeforeFirst(): boolean
 | --- | --- |
 | boolean | 返回true表示读取位置在第一行之前；返回false表示读取位置不在第一行之前。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -266,7 +266,7 @@ isFirst(): boolean
 | --- | --- |
 | boolean | 返回true表示读取位置为第一行；返回false表示读取位置不是第一行。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -311,7 +311,7 @@ isLast(): boolean
 | --- | --- |
 | boolean | 返回true表示读取位置为最后一行；返回false表示读取位置不是最后一行。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -362,7 +362,7 @@ move(offset: number): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -407,7 +407,7 @@ moveToFirst(): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -452,7 +452,7 @@ moveToLast(): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -497,7 +497,7 @@ moveToNext(): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -548,7 +548,7 @@ moveToPosition(position: number): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;
@@ -593,7 +593,7 @@ moveToPrevious(): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let kvStore;

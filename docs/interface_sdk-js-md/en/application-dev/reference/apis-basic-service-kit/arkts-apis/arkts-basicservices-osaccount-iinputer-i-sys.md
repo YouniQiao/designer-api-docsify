@@ -1,6 +1,6 @@
 # IInputer (System API)
 
-Provides callbacks for credential inputers.
+凭据输入器回调。
 
 **Since:** 8
 
@@ -12,13 +12,19 @@ Provides callbacks for credential inputers.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onGetData
 
 ```TypeScript
 onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) => void
 ```
 
-Called to notify the caller that data is obtained.
+通知调用者获取数据的回调函数。
 
 **Since:** 8
 
@@ -34,11 +40,11 @@ Called to notify the caller that data is obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authSubType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| authSubType | [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md) | Yes |  |
+| callback | [IInputData](arkts-basicservices-osaccount-iinputdata-i-sys.md) | Yes |  |
+| options | [GetInputDataOptions](arkts-basicservices-osaccount-getinputdataoptions-i-sys.md) | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);

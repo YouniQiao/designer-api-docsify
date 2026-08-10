@@ -4,7 +4,7 @@
 export type SignatureInfo = _BundleInfo.SignatureInfo
 ```
 
-Defines the signature information of the bundle.
+应用包的签名信息。
 
 **Since:** 9
 

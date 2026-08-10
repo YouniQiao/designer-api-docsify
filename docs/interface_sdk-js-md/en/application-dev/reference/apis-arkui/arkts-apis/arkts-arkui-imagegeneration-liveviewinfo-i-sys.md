@@ -12,6 +12,12 @@ Information for LiveView in AI image generation.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## getLongTermTaskId
 
 ```TypeScript
@@ -62,7 +68,7 @@ Get the Want object for LiveView.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Want object. |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Returns the Want object. |
 
 ## isLiveViewNeeded
 

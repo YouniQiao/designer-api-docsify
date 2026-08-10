@@ -18,15 +18,15 @@ decoration?: DecorationStyleInterface
 
 设置文本装饰线的样式、颜色和粗细。
 
-type默认值：TextDecorationType.None
+type默认值：TextDecorationType.None 
 
 color默认值：跟随字体颜色。
 
-style默认值：TextDecorationStyle.SOLID
+style默认值：TextDecorationStyle.SOLID 
 
 thicknessScale默认值：1.0
 
-**类型：** DecorationStyleInterface
+**类型：** [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md)
 
 **起始版本：** 10
 
@@ -48,9 +48,9 @@ fontColor?: ResourceColor
 
 文本颜色。
 
-默认值：\$r('sys.color.font\_primary')。当[shaderStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_同时设置时，shaderStyle优先级高于fontColor。
+默认值：\$r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle优先级高于fontColor。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
 
@@ -70,9 +70,9 @@ fontColor?: ResourceColor
 fontFamily?: ResourceStr
 ```
 
-设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。默认字体:'HarmonyOS Sans'。
+设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md/arkts-font.md)。默认字体:'HarmonyOS Sans'。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 
@@ -96,13 +96,13 @@ fontFeature?: string
 
 格式为：normal | &lt;feature-tag-value&gt;
 
-&lt;feature-tag-value&gt;的格式为：\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ [ \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_ | on | off ]
+&lt;feature-tag-value&gt;的格式为：&lt;string&gt; [ &lt;integer&gt; | on | off ]
 
 &lt;feature-tag-value&gt;的个数可以有多个，中间用','隔开。
 
 例如，使用等宽时钟数字的输入格式为："ss01" on。
 
-Font Feature当前支持的属性见[fontFeature]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_属性列表。
+Font Feature当前支持的属性见[fontFeature](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#fontfeature)属性列表。
 
 设置 Font Feature 属性，Font Feature 是 OpenType 字体的高级排版能力，如支持连字、数字等宽等特性，一般用在自定义字体中，其能力需要字体本身支持。
 
@@ -130,7 +130,7 @@ fontSize?: Length | number
 
 设置字体大小，Length为number类型时，使用fp单位。number类型取值范围：(0, +∞)。设置为0或负值时，按默认值处理。字体默认大小为16fp。不支持设置百分比字符串。
 
-**类型：** Length \| number
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| number
 
 **起始版本：** 10
 
@@ -154,7 +154,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal。
 
-**类型：** FontStyle
+**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **起始版本：** 10
 
@@ -255,7 +255,7 @@ lineHeight?: number | string | Resource
 默认值：不设置时自适应字体大小。
 
 number类型取值范围：(0, +∞)，设置值不大于0时，不限制文本行高，自适应字体大小。number类型时单位为fp，不支持设置百分比字符串。当lineHeight设置值小于当前字号下文本渲染出的实际高度时，  
-[fallbackLineSpacing]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_属性将生效。
+[fallbackLineSpacing](RichEditorAttribute#fallbackLineSpacing)属性将生效。
 
 **类型：** number \| string \| Resource
 
@@ -283,7 +283,7 @@ strokeColor?: ResourceColor
 
 设置异常值时跟随字体颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -305,9 +305,9 @@ strokeJoinStyle?: StrokeJoinStyle
 
 文本描边拐角样式。
 
-默认值：StrokeJoinStyle.MITER\_JOIN。
+默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** StrokeJoinStyle
+**类型：** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
@@ -327,7 +327,7 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics | number
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是[PERCENT]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，当前设置不生效，作为0处理。
+文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md/arkts-arkui-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。
 
 值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。
 
@@ -337,9 +337,9 @@ strokeWidth?: LengthMetrics | number
 
 取值范围：(-∞, +∞)
 
-与[shaderStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_同时设置时，shaderStyle不生效。
+与[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle不生效。
 
-**类型：** LengthMetrics \| number
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
 
 **起始版本：** 23
 
@@ -365,7 +365,7 @@ textBackgroundStyle?: TextBackgroundStyle
 
 {color: Color.Transparent,radius: 0}
 
-**类型：** TextBackgroundStyle
+**类型：** [TextBackgroundStyle](../arkts-apis/arkts-arkui-span-textbackgroundstyle-i.md)
 
 **起始版本：** 18
 
@@ -395,7 +395,7 @@ textShadow?: ShadowOptions | Array<ShadowOptions>
 
 仅支持设置阴影模糊半径、颜色和偏移量，不支持智能取色。
 
-**类型：** ShadowOptions \| Array&lt;ShadowOptions&gt;
+**类型：** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt;
 
 **起始版本：** 11
 

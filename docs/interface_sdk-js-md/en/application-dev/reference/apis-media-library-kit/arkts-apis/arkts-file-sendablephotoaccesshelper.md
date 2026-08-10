@@ -1,6 +1,6 @@
 # @ohos.file.sendablePhotoAccessHelper(Helper functions to access image and video assets)
 
-The module provides APIs for album management, including creating an album and accessing and modifying media data in an album, based on a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ object.
+The module provides APIs for album management, including creating an album and accessing and modifying media data in an album, based on a [Sendable](../../../arkts-utils/arkts-sendable.md) object.
 
 **Since:** 12
 
@@ -9,6 +9,12 @@ The module provides APIs for album management, including creating an album and a
 <!--Device-unnamed-declare namespace sendablePhotoAccessHelper--><!--Device-unnamed-declare namespace sendablePhotoAccessHelper-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## Modules to Import
+
+```TypeScript
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
 
 ## Summary
 
@@ -55,7 +61,7 @@ The module provides APIs for album management, including creating an album and a
 | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | Enumerate the album subtypes. |
 | [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md) | Enumerates the album types. |
 | [DynamicRangeType](arkts-medialibrary-sendablephotoaccesshelper-dynamicrangetype-e.md) | Enumerates the dynamic range types of media assets. |
-| [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ types. |
+| [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) types. |
 | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Enumerates media file types. |
 
 <!--Del-->
@@ -66,7 +72,7 @@ The module provides APIs for album management, including creating an album and a
 | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e-sys.md) | Enumerate the album subtypes. |
 | [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md) | Enumerates the album types. |
 | [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md) | Enumeration of moving photo effect mode. |
-| [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ types. |
+| [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) types. |
 | [PositionType](arkts-medialibrary-sendablephotoaccesshelper-positiontype-e-sys.md) | Photo asset position |
 | [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md) | Ability to access thumbnail |
 <!--DelEnd-->

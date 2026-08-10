@@ -10,6 +10,12 @@ Describes the contents of the bluetooth scan results.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## connectable
 
 ```TypeScript
@@ -90,7 +96,7 @@ rssi: int
 
 RSSI of the scanned device
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 16
 

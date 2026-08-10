@@ -1,5 +1,11 @@
 # decomposeToPicture（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## decomposeToPicture
 
 ```TypeScript
@@ -24,8 +30,8 @@ function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hdrPixelMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | HDR PixelMap，像素格式需为RGBA\_\_\_ESCAPED\_UNDERSCORE\_\_\_F16、RGBA\_\_\_ESCAPED\_UNDERSCORE\_\_\_1010102、YCBCR\_\_\_ESCAPED\_UNDERSCORE\_\_\_P010或YCRCB\_\_\_ESCAPED\_UNDERSCORE\_\_\_P010。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | HDR分解配置选项，包含增益图尺寸和像素格式设置。 |
+| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | HDR PixelMap，像素格式需为RGBA_F16、RGBA_1010102、YCBCR_P010或YCRCB_P010。 |
+| options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | 否 | HDR分解配置选项，包含增益图尺寸和像素格式设置。 |
 
 **返回值：**
 
@@ -37,13 +43,13 @@ function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOption
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. hdrPixelMap's PixelMapFormat is not RGBA\_\_\_ESCAPED\_UNDERSCORE\_\_\_F16\RGBA\_\_\_ESCAPED\_UNDERSCORE\_\_\_1010102\YCBCR\_\_\_ESCAPED\_UNDERSCORE\_\_\_P010\YCRCB\_\_\_ESCAPED\_UNDERSCORE\_\_\_P010. |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: hdrPixelMap is empty. |
-| [7600208](../errorcode-image.md#7600208-hdr图片分解失败) | HDR image decomposition failed. Possible causes: 1. Decomposition processing is not supported. 2. Processing error occurs. |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) | Alloc memory failed. |
+| 7600208 | HDR image decomposition failed. Possible causes: 1. Decomposition processing is not supported. 2. Processing error occurs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 7600201 | Unsupported operation. hdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
+| 7600206 | Invalid parameter. Possible cause: hdrPixelMap is empty. |
+| 7600301 | Alloc memory failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

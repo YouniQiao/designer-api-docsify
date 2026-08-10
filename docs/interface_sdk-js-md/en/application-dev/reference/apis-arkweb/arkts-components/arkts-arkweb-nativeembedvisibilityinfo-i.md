@@ -1,6 +1,6 @@
 # NativeEmbedVisibilityInfo
 
-Provides visibility information about the same-layer tag.
+提供同层标签的可见性信息。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Provides visibility information about the same-layer tag.
 embedId: string
 ```
 
-ID of the same-layer rendered tag.
+同层渲染标签的唯一id。
 
 **Type:** string
 
@@ -34,9 +34,9 @@ ID of the same-layer rendered tag.
 visibility: boolean
 ```
 
-Whether the same-layer tag is visible.
+可见性。
 
-The value **true** indicates that the same-layer tag is visible, and **false** indicates the opposite.
+true表示可见，false表示不可见。
 
 **Type:** boolean
 

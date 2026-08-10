@@ -1,8 +1,8 @@
 # PulseSymbolEffect
 
-Defines PulseSymbolEffect class, which inherits from **SymbolEffect**.
+PulseSymbolEffect继承自父类SymbolEffect，脉冲动效。
 
-**Inheritance/Implementation:** PulseSymbolEffect extends [SymbolEffect](../arkts-apis/arkts-arkui-component/symbolglyph-symboleffect-c.md)
+**Inheritance/Implementation:** PulseSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **Since:** 12
 

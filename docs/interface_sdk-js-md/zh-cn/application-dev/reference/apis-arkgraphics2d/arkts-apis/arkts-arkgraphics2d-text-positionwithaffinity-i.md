@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## affinity
 
 ```TypeScript
@@ -18,7 +24,7 @@ affinity: Affinity
 
 位置亲和度。
 
-**类型：** Affinity
+**类型：** [Affinity](../../apis-arkui/arkts-apis/arkts-arkui-affinity-t.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ position: int
 
 字形相对于段落的索引，整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

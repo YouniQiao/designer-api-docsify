@@ -1,6 +1,6 @@
 # CacheDownloadOptions
 
-Provides configuration options for download and cache, including HTTP options, transmission options, and task options.
+缓存下载的配置选项。包括HTTP选项、传输选项和任务选项。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Provides configuration options for download and cache, including HTTP options, t
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## caPath
 
 ```TypeScript
 caPath?: string
 ```
 
-CA certificate path. Currently, only the .pem certificate is supported. The CA certificate preset by the system is used by default.
+CA证书路径。目前仅支持.pem格式证书，默认使用系统预设的CA证书。
 
 **Type:** string
 
@@ -34,9 +40,9 @@ CA certificate path. Currently, only the .pem certificate is supported. The CA c
 cacheStrategy?: CacheStrategy
 ```
 
-Cache update strategies, including **FORCE** or **LAZY**. The **FORCE** policy is used by default.
+使用缓存刷新策略FORCE或LAZY，默认使用FORCE。
 
-**Type:** CacheStrategy
+**Type:** [CacheStrategy](arkts-basicservices-cachedownload-cachestrategy-e.md)
 
 **Since:** 23
 
@@ -52,9 +58,9 @@ Cache update strategies, including **FORCE** or **LAZY**. The **FORCE** policy i
 headers?: Record<string, string>
 ```
 
-Request header used by a download task during HTTP transfer. The default value is empty.
+缓存下载任务在HTTP传输时使用的请求头。默认值为空。
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 18
 
@@ -72,7 +78,7 @@ retry?: RetryOptions
 
 Task retry configuration.
 
-**Type:** RetryOptions
+**Type:** [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -90,9 +96,9 @@ Task retry configuration.
 sslType?: SslType
 ```
 
-Secure communication protocol, such as TSL or TLCP. TLS is used by default. Currently, TLS and TLCP do not support two-way authentication.
+使用安全通信协议TLS或TLCP，默认使用TLS。当前TLS和TLCP均不支持双向认证。
 
-**Type:** SslType
+**Type:** [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
 
 **Since:** 21
 
@@ -110,7 +116,7 @@ timeout?: TimeoutOptions
 
 Task timeout configuration.
 
-**Type:** TimeoutOptions
+**Type:** [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md)
 
 **Since:** 26.0.0
 

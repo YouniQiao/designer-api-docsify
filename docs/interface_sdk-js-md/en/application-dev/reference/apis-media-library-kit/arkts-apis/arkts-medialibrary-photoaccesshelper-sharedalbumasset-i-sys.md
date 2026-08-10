@@ -12,6 +12,12 @@ Defines the shared album asset
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumId
 
 ```TypeScript
@@ -20,7 +26,7 @@ albumId: int
 
 album id of album asset
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 
@@ -60,7 +66,7 @@ albumSubType: AlbumSubtype
 
 subtype of album asset
 
-**Type:** AlbumSubtype
+**Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md)
 
 **Since:** 14
 
@@ -80,7 +86,7 @@ albumType: AlbumType
 
 type of album asset
 
-**Type:** AlbumType
+**Type:** [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md)
 
 **Since:** 14
 
@@ -100,7 +106,7 @@ count: int
 
 number of assets in this album
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 
@@ -140,7 +146,7 @@ imageCount: int
 
 number of photo assets in this album
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 
@@ -160,7 +166,7 @@ videoCount: int
 
 number of video assets in this album
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 

@@ -4,7 +4,7 @@
 export type OnRemoteStateChangeCallback = (msg: string) => void
 ```
 
-Defines the callback that is invoked when the remote UIAbility state changes in the collaboration scenario.
+注册协同场景下跨设备组件状态变化监听通知的回调函数类型。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Defines the callback that is invoked when the remote UIAbility state changes in 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | Message used for disconnection.  |
+| msg | string | Yes | 用于传递释放消息。 |
 

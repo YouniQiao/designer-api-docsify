@@ -1,5 +1,11 @@
 # setDeviceName (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## setDeviceName
 
 ```TypeScript
@@ -36,7 +42,7 @@ Sets the name of the Wi-Fi P2P device.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

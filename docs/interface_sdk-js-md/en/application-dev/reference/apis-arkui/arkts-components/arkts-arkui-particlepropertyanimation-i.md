@@ -1,6 +1,6 @@
 # ParticlePropertyAnimation
 
-Defines the particle property lifecycle.
+设置粒子属性生命周期。
 
 **Since:** 10
 
@@ -16,11 +16,11 @@ Defines the particle property lifecycle.
 curve?: Curve | ICurve
 ```
 
-Animation curve.
+设置动画曲线。
 
-Default value: **Curve.Linear
+默认值：Curve.Linear
 
-**Type:** Curve \| ICurve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| ICurve
 
 **Default:** Curve.Linear
 
@@ -42,11 +42,11 @@ Default value: **Curve.Linear
 endMillis: number
 ```
 
-End time of the animation.
+动画结束时间。
 
-Unit: ms.
+单位：毫秒。
 
-Value range: [0, +∞).
+取值范围：[0, +∞)。
 
 **Type:** number
 
@@ -68,7 +68,7 @@ Value range: [0, +∞).
 from: T
 ```
 
-Initial value of the property. If the value is invalid, the default value will be used.
+属性起始值。非法输入取对应属性的默认值。
 
 **Type:** T
 
@@ -90,11 +90,11 @@ Initial value of the property. If the value is invalid, the default value will b
 startMillis: number
 ```
 
-Start time of the animation.
+动画开始时间。
 
-Unit: ms.
+单位：毫秒。
 
-Value range: [0, +∞).
+取值范围：[0, +∞)。
 
 **Type:** number
 
@@ -116,7 +116,7 @@ Value range: [0, +∞).
 to: T
 ```
 
-Target value of the property. If the value is invalid, the default value will be used.
+属性目标值。非法输入取对应属性的默认值。
 
 **Type:** T
 

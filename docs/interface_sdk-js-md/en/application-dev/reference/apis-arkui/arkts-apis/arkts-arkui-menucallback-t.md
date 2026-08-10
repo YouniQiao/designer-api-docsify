@@ -4,7 +4,7 @@
 export type MenuCallback = (start: int, end: int) => void
 ```
 
-Callback function when the selection menu show or hide.
+自定义选择菜单显示或隐藏时触发的回调事件。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ Callback function when the selection menu show or hide.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | Start offset of the selected content in rich editor.  |
-| end | int | Yes | End offset of the selected content in rich editor.  |
+| start | int | Yes | 选中内容的起始位置。 |
+| end | int | Yes | 选中内容的终止位置。 |
 

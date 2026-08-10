@@ -1,6 +1,6 @@
 # PhotoSelectOptions
 
-Defines the options for selecting images or videos.
+图库选择选项。
 
 **Since:** 9
 
@@ -8,11 +8,17 @@ Defines the options for selecting images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
 
 <!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
+
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 
 ## MIMEType
 
@@ -20,11 +26,9 @@ Defines the options for selecting images or videos.
 MIMEType?: PhotoViewMIMETypes
 ```
 
-Media file types to select. If this parameter is not specified, **IMAGE\_VIDEO\_TYPE** is used by default.
+可选择的媒体文件类型。若无此参数，则默认为图片和视频类型。
 
-**Note**: This API is supported since API version 9 and deprecated since API version 18.
-
-**Type:** PhotoViewMIMETypes
+**Type:** [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
 
 **Since:** 9
 
@@ -46,7 +50,7 @@ Media file types to select. If this parameter is not specified, **IMAGE\_VIDEO\_
 maxSelectNumber?: number
 ```
 
-Maximum number of media files that can be selected. The default value is **50**,and the maximum value is **500**.
+选择媒体文件数量的最大值，默认值为50，最大值为500。
 
 **Type:** number
 

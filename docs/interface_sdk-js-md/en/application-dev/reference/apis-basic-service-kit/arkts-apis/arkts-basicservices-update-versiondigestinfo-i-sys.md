@@ -1,6 +1,6 @@
 # VersionDigestInfo (System API)
 
-Represents version digest information.
+版本摘要。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Represents version digest information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## versionDigest
 
 ```TypeScript
 versionDigest: string
 ```
 
-Version digest information. The value is a string of 1 to 128 characters. The value is obtained from the version check result and is used to identify a specific version. An exception is thrown if the value is out of range.
+版本摘要。长度范围[1，128]，单位：字符。从版本检查结果中获取，用于标识具体版本。超出范围时抛出异常。
 
 **Type:** string
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## 导入模块
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## predicates
 
 ```TypeScript
@@ -38,7 +44,7 @@ values: ValuesBucket
 
 要更新的数据。
 
-**类型：** ValuesBucket
+**类型：** [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
 
 **起始版本：** 12
 

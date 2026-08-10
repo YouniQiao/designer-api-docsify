@@ -1,12 +1,12 @@
 # SelectionType
 
-Enumerates the word selection types.
+定义划词方式枚举值。
 
-| Name | Value| Description |  
+| 名称 | 值 | 说明 |  
 | ------------ | -- | ------------------ |  
-| MOUSE\_MOVE | 1 | Word selection by sliding the mouse or touchpad. |  
-| DOUBLE\_CLICK | 2 | Word selection by double-clicking the mouse or touchpad. |  
-| TRIPLE\_CLICK | 3 | Word selection by triple-clicking the mouse or touchpad. |
+| MOUSE_MOVE | 1 | 鼠标或触控板滑动划词。 |  
+| DOUBLE_CLICK | 2 | 鼠标或触控板双击划词。 |  
+| TRIPLE_CLICK | 3 | 鼠标或触控板三击划词。 |
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ Enumerates the word selection types.
 MOUSE_MOVE = 1
 ```
 
-Move the cursor to select words.
+鼠标或触控板滑动划词。
 
 **Since:** 24
 
@@ -40,7 +40,7 @@ Move the cursor to select words.
 DOUBLE_CLICK = 2
 ```
 
-Double-click to select words.
+鼠标或触控板双击划词。
 
 **Since:** 24
 
@@ -58,7 +58,7 @@ Double-click to select words.
 TRIPLE_CLICK = 3
 ```
 
-Triple-click to select words.
+鼠标或触控板三击划词。
 
 **Since:** 24
 

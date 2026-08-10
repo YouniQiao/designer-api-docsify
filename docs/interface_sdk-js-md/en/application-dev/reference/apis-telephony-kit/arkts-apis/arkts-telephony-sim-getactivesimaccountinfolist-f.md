@@ -1,5 +1,11 @@
 # getActiveSimAccountInfoList
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getActiveSimAccountInfoList
 
 ```TypeScript
@@ -22,20 +28,20 @@ Get the list of active SIM card account information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;IccAccountInfo&gt;&gt; | Yes | The callback is used to return the array of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The ICCID and phone number will be null if has no ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_TELEPHONY\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;IccAccountInfo&gt;&gt; | Yes | The callback is used to return the array of {@link IccAccountInfo}. The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | No SIM card found. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300999 | Unknown error. |
+| 8300004 | No SIM card found. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,12 +81,12 @@ Get the list of active SIM card account information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | No SIM card found. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| 8300999 | Unknown error. |
+| 8300004 | No SIM card found. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

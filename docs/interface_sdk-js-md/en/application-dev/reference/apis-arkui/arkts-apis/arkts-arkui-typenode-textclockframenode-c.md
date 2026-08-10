@@ -1,6 +1,6 @@
 # TextClockFrameNode
 
-Define the TextClock type of FrameNode.
+定义TextClock类型的FrameNode。
 
 **Inheritance/Implementation:** TextClockFrameNode extends [TypedFrameNode<TextClockAttribute>](TypedFrameNode<TextClockAttribute>)
 
@@ -18,7 +18,7 @@ Define the TextClock type of FrameNode.
 abstract initialize(options?: TextClockOptions): TextClockAttribute
 ```
 
-Initialize TextClock FrameNode.
+初始化TextClock类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize TextClock FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [TextClockOptions](../arkts-components/arkts-arkui-textclockoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextClockAttribute](../arkts-components/arkts-arkui-textclock-attribute.md) |  |
 

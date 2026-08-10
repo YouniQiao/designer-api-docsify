@@ -1,0 +1,93 @@
+# RowLayoutAlgorithmOptions
+
+设置水平方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-unnamed-interface RowLayoutAlgorithmOptions--><!--Device-unnamed-interface RowLayoutAlgorithmOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## alignItems
+
+```TypeScript
+alignItems?: VerticalAlign
+```
+
+所有子组件在垂直方向上的对齐格式。非法值：按默认值处理。
+
+**Type:** [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
+
+**Default:** VerticalAlign.Center
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-RowLayoutAlgorithmOptions-alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithmOptions-alignItems?: VerticalAlign-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## isReverse
+
+```TypeScript
+isReverse?: boolean
+```
+
+子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性  
+[direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction)影响，如果[direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction)属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。非法值：按默认值处理。
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-RowLayoutAlgorithmOptions-isReverse?: boolean--><!--Device-RowLayoutAlgorithmOptions-isReverse?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## justifyContent
+
+```TypeScript
+justifyContent?: FlexAlign
+```
+
+所有子组件在水平方向上的对齐格式。非法值：按默认值处理。
+
+**Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
+
+**Default:** FlexAlign.Start
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-RowLayoutAlgorithmOptions-justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithmOptions-justifyContent?: FlexAlign-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## space
+
+```TypeScript
+space?: LengthMetrics
+```
+
+横向布局元素水平方向间距。非法值：按默认值处理。
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+
+**Default:** LengthMetrics.vp(0)
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-RowLayoutAlgorithmOptions-space?: LengthMetrics--><!--Device-RowLayoutAlgorithmOptions-space?: LengthMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

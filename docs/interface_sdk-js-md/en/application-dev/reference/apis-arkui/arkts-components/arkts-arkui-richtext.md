@@ -1,6 +1,6 @@
 # RichText
 
-Defines RichText Component.
+定义RichText组件。
 
 ## RichText
 
@@ -8,7 +8,7 @@ Defines RichText Component.
 RichText(content: string | Resource)
 ```
 
-Set value.
+设置值。
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ Set value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| Resource | Yes | [since 20] { string } content [since 8 - 19]  |
+| content | string \| Resource | Yes | [since 20] { string } content [since 8 - 19] |
 
 ## Summary
 

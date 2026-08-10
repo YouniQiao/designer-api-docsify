@@ -1,12 +1,18 @@
 # confirmInvitation (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## confirmInvitation
 
 ```TypeScript
 function confirmInvitation(invitationCode: string, state: State, callback: AsyncCallback<Result<string>>): void
 ```
 
-Confirms the invitation based on the sharing invitation code and obtains the shared resource ID.This API uses an asynchronous callback to return the result.
+被邀请者根据共享邀请码确认当前邀请，并获取当前邀请的共享资源标识，使用callback异步回调。
 
 **Since:** 11
 
@@ -22,19 +28,19 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| invitationCode | string | Yes | Invitation code of the share. |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Confirmation state. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Result&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| invitationCode | string | Yes | 端云共享的邀请码。 |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | Yes | 确认邀请的状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;string&gt;&gt; | Yes | 回调函数。返回确认邀请的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -57,7 +63,7 @@ cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sh
 function confirmInvitation(invitationCode: string, state: State): Promise<Result<string>>
 ```
 
-Confirms the invitation based on the sharing invitation code and obtains the shared resource ID.This API uses a promise to return the result.
+被邀请者根据共享邀请码确认当前邀请，并获取当前邀请的共享资源标识，使用Promise异步回调。
 
 **Since:** 11
 
@@ -73,24 +79,24 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| invitationCode | string | Yes | Invitation code of the share. |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Confirmation state. |
+| invitationCode | string | Yes | 端云共享的邀请码。 |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | Yes | 确认邀请的状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;string&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;string&gt;&gt; | Promise对象，返回确认共享邀请的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

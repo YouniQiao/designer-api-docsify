@@ -1,6 +1,6 @@
 # UIExtensionOptions (System API)
 
-Describes the optional construction parameters during **UIExtensionComponent** construction.
+该接口用于在构造时设置UIExtensionComponentAttribute的选项。
 
 **Since:** 11
 
@@ -18,10 +18,9 @@ Describes the optional construction parameters during **UIExtensionComponent** c
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-Placeholder for size changes, displayed when the UIExtensionComponent's size changes and the internal rendering of  
-**UIExtension** is not completed. The key value can be **FOLD\_TO\_EXPAND** (size change for folding and expanding)or **UNDEFINED** (default size change).
+设置尺寸变化占位符，在UIExtensionComponent尺寸发生变化并且UIExtensionAbility内部渲染未完成时显示。key值仅支持"FOLD_TO_EXPAND"（折叠展开尺寸变化）、"UNDEFINED"（默认尺寸变化），传入其他key值时不生效。不设置时默认不显示尺寸变化占位内容。
 
-**Type:** Record&lt;string, ComponentContent&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
 
 **Since:** 14
 
@@ -41,11 +40,11 @@ Placeholder for size changes, displayed when the UIExtensionComponent's size cha
 dpiFollowStrategy?: DpiFollowStrategy
 ```
 
-Whether the DPI settings follow the host or UIExtensionAbility.
+设置UIExtensionComponent内容的DPI跟随策略。
 
-Default value: **FOLLOW\_UI\_EXTENSION\_ABILITY\_DPI
+默认值：**FOLLOW_UI_EXTENSION_ABILITY_DPI**
 
-**Type:** DpiFollowStrategy
+**Type:** [DpiFollowStrategy](../arkts-apis/arkts-arkui-uiextensioncomponent-dpifollowstrategy-e-sys.md)
 
 **Default:** DpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
@@ -67,9 +66,9 @@ Default value: **FOLLOW\_UI\_EXTENSION\_ABILITY\_DPI
 isTransferringCaller?: boolean
 ```
 
-Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting.
+在使用UIExtensionComponent嵌套时，设置当前UIExtensionComponent是否转发上一级的Caller信息。true表示转发上一级的Caller信息，false表示不转发上一级的Caller信息。
 
-Default value: **false
+默认值：**false**
 
 **Type:** boolean
 
@@ -93,9 +92,9 @@ Default value: **false
 placeholder?: ComponentContent
 ```
 
-Placeholder to be displayed before the UIExtensionComponent establishes a connection with the UIExtensionAbility.
+设置占位符。如果设置了占位ComponentContent，则在连接未建立时显示占位节点。
 
-**Type:** ComponentContent
+**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
 **Since:** 12
 
@@ -115,11 +114,11 @@ Placeholder to be displayed before the UIExtensionComponent establishes a connec
 windowModeFollowStrategy?: WindowModeFollowStrategy
 ```
 
-Following strategy of the window mode.
+设置UIExtensionComponent内容的窗口模式跟随策略。
 
-Default value: **FOLLOW\_UI\_EXTENSION\_ABILITY\_WINDOW\_MODE
+默认值：**FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE**
 
-**Type:** WindowModeFollowStrategy
+**Type:** [WindowModeFollowStrategy](arkts-arkui-windowmodefollowstrategy-e-sys.md)
 
 **Default:** WindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 

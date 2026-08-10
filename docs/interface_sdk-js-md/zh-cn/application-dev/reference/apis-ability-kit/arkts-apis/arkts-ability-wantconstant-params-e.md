@@ -56,7 +56,7 @@ CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 
 表示原子化服务分享的标题。
 
-在跨端分享的[onShare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调中，开发者可通过该字段设置分享的标题。
+在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的标题。
 
 **起始版本：** 10
 
@@ -76,7 +76,7 @@ SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 
 表示原子化服务分享的内容摘要。
 
-在跨端分享的[onShare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调中，开发者可通过该字段设置分享的摘要。
+在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的摘要。
 
 **起始版本：** 10
 
@@ -96,7 +96,7 @@ SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 
 表示原子化服务分享的URL链接。
 
-在跨端分享的[onShare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调中，开发者可通过该字段设置分享的URL链接。
+在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的URL链接。
 
 **起始版本：** 10
 
@@ -150,8 +150,8 @@ SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceEx
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-表示[EmbeddableUIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的显示模式，值为枚举类型  
-[ShowMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+表示[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)的显示模式，值为枚举类型  
+[ShowMode](arkts-ability-wantconstant-showmode-e.md)
 
 **起始版本：** 12
 
@@ -169,7 +169,7 @@ SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-表示授权给目标方的文件URI列表。对应的value必须是string类型的文件URI数组。文件URI的获取参考[fileUri]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。该字段需要与文件URI读写[Flags]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配合使用。
+表示授权给目标方的文件URI列表。对应的value必须是string类型的文件URI数组。文件URI的获取参考[fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) 。该字段需要与文件URI读写[Flags](arkts-ability-wantconstant-flags-e.md)配合使用。
 
 **起始版本：** 12
 
@@ -207,8 +207,8 @@ CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 
 表示应用拉起的请求码。
 
-当调用[startAbilityForResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或  
-[openLink]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_拉起目标方Ability时，需要目标方返回结果。为了确保目标方能够将结果准确返回到调用方，系统会自动生成唯一的requestCode，以标识本次调用。
+当调用[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult)或  
+[openLink](arkts-ability-uiabilitycontext-c.md#openlink)拉起目标方Ability时，需要目标方返回结果。为了确保目标方能够将结果准确返回到调用方，系统会自动生成唯一的requestCode，以标识本次调用。
 
 **起始版本：** 12
 
@@ -228,7 +228,7 @@ PAGE_PATH = 'ohos.param.atomicservice.pagePath'
 
 表示原子化服务的页面路径。
 
-如果原子化服务的页面跳转是通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_实现的，可以使用该参数指定跳转的页面，例如"library/ets/pages/menu"。
+如果原子化服务的页面跳转是通过[router](../../../ui/arkts-routing.md)实现的，可以使用该参数指定跳转的页面，例如"library/ets/pages/menu"。
 
 **起始版本：** 12
 
@@ -248,7 +248,7 @@ ROUTER_NAME = 'ohos.param.atomicservice.routerName'
 
 表示原子化服务的页面路由名称，即进行页面跳转时指定的页面名称。
 
-如果原子化服务的页面跳转是通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_实现的，可以通过ROUTER\_NAME、PAGE\_SOURCE\_FILE及BUILD\_FUNCTION联合使用指定跳转的页面。
+如果原子化服务的页面跳转是通过[Navigation](../../../ui/arkts-navigation-architecture.md)实现的，可以通过ROUTER_NAME、PAGE_SOURCE_FILE及BUILD_FUNCTION联合使用指定跳转的页面。
 
 **起始版本：** 12
 
@@ -268,7 +268,7 @@ PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'
 
 表示原子化服务的页面源文件。
 
-如果原子化服务的页面跳转是通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_实现的，可以通过ROUTER\_NAME、PAGE\_SOURCE\_FILE及BUILD\_FUNCTION联合使用指定跳转的页面。
+如果原子化服务的页面跳转是通过[Navigation](../../../ui/arkts-navigation-architecture.md)实现的，可以通过ROUTER_NAME、PAGE_SOURCE_FILE及BUILD_FUNCTION联合使用指定跳转的页面。
 
 **起始版本：** 12
 
@@ -288,7 +288,7 @@ BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
 
 表示原子化服务的生成函数。
 
-如果原子化服务的页面跳转是通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_实现的，可以通过ROUTER\_NAME、PAGE\_SOURCE\_FILE及BUILD\_FUNCTION联合使用指定跳转的页面。
+如果原子化服务的页面跳转是通过[Navigation](../../../ui/arkts-navigation-architecture.md)实现的，可以通过ROUTER_NAME、PAGE_SOURCE_FILE及BUILD_FUNCTION联合使用指定跳转的页面。
 
 **起始版本：** 12
 
@@ -328,7 +328,7 @@ APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'
 
 表示具体的应用实例。
 
-在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_时，系统会为每个实例分配唯一的标识。应用跳转时，开发者可以通过设置该参数指定希望跳转到的已创建的应用实例。
+在[应用创建多实例](../../../quick-start/multiInstance.md)时，系统会为每个实例分配唯一的标识。应用跳转时，开发者可以通过设置该参数指定希望跳转到的已创建的应用实例。
 
 **起始版本：** 14
 
@@ -346,7 +346,7 @@ CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'
 
 表示是否创建新应用实例。默认为false，表示不创建新应用实例。
 
-开发者可以通过设置该参数为true拉起新的应用实例。需要注意的是，被拉起的应用需要支持多实例，参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+开发者可以通过设置该参数为true拉起新的应用实例。需要注意的是，被拉起的应用需要支持多实例，参考[应用创建多实例](../../../quick-start/multiInstance.md)。
 
 **起始版本：** 14
 
@@ -396,7 +396,7 @@ APP_LAUNCH_TRUSTLIST = 'ohos.params.appLaunchTrustList'
 
 表示隐式启动时的应用过滤列表。
 
-隐式启动时仅匹配列表中的应用，值为string类型的[AppIdentifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_数组，过滤列表最多支持50个应用，传入空数组不生效。
+隐式启动时仅匹配列表中的应用，值为string类型的[AppIdentifier](./bundleManager/BundleInfo:BundleInfo.AppIdentifier)数组，过滤列表最多支持50个应用，传入空数组不生效。
 
 **起始版本：** 17
 
@@ -436,13 +436,13 @@ LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 
 表示应用拉起的原因。
 
-调用方必须为系统应用，且需要申请ohos.permission.SET\_LAUNCH\_REASON\_MESSAGE权限。当前取值支持：
+调用方必须为系统应用，且需要申请ohos.permission.SET_LAUNCH_REASON_MESSAGE权限。当前取值支持：
 
-"ReasonMessage\_SystemShare"：表示系统分享拉起。
+"ReasonMessage_SystemShare"：表示系统分享拉起。
 
-"ReasonMessage\_DesktopShortcut"：表示桌面快捷方式拉起。
+"ReasonMessage_DesktopShortcut"：表示桌面快捷方式拉起。
 
-"ReasonMessage\_Notification"：表示通知拉起。
+"ReasonMessage_Notification"：表示通知拉起。
 
 **起始版本：** 18
 
@@ -460,9 +460,9 @@ LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-表示基于[UDMF]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。
+表示基于[UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md/arkts-data-unifieddatachannel.md)进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。
 
-当Want中存在URI授权Flag字段（即[FLAG\_AUTH\_READ\_URI\_PERMISSION]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_或[FLAG\_AUTH\_WRITE\_URI\_PERMISSION]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_），且同时存在PARAMS\_STREAM字段时，该字段将不生效。
+当Want中存在URI授权Flag字段（即[FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)或[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)），且同时存在PARAMS_STREAM字段时，该字段将不生效。
 
 **起始版本：** 20
 

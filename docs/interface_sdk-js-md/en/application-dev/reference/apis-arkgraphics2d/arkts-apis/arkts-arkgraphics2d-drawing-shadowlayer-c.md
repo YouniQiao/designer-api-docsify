@@ -1,14 +1,14 @@
 # ShadowLayer
 
-Implements a shadow layer.
-    **NOTE**  
-    
-    - The initial APIs of this class are supported since API version 12.  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+阴影层对象，通过设置模糊半径、偏移量和颜色，可为图形、文本等绘制内容添加阴影渲染效果。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 12
 
@@ -18,13 +18,19 @@ Implements a shadow layer.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## create
 
 ```TypeScript
 static create(blurRadius: number, x: number, y: number, color: common2D.Color): ShadowLayer
 ```
 
-Creates a **ShadowLayer** object.
+创建阴影层对象。
 
 **Since:** 12
 
@@ -38,22 +44,22 @@ Creates a **ShadowLayer** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
-| x | number | Yes | Offset on the X axis. The value is a floating point number. |
-| y | number | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| blurRadius | number | Yes | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
+| x | number | Yes | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
+| y | number | Yes | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
+| color | common2D.Color | Yes | ARGB格式的颜色。每个颜色通道的值是[0, 255]的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShadowLayer** object created. |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | 返回创建的阴影层对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## create
 
@@ -61,7 +67,7 @@ Creates a **ShadowLayer** object.
 static create(blurRadius: double, x: double, y: double, color: common2D.Color): ShadowLayer | undefined
 ```
 
-Creates a ShadowLayer object.
+创建阴影层对象。
 
 **Since:** 23
 
@@ -75,22 +81,22 @@ Creates a ShadowLayer object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | double | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
-| x | double | Yes | Offset on the X axis. The value is a floating point number. |
-| y | double | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| blurRadius | double | Yes | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
+| x | double | Yes | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
+| y | double | Yes | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
+| color | common2D.Color | Yes | ARGB格式的颜色。每个颜色通道的值是[0, 255]的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShadowLayer object. |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | 返回创建的阴影层对象。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## create
 
@@ -98,7 +104,7 @@ Creates a ShadowLayer object.
 static create(blurRadius: number, x: number, y: number, color: common2D.Color | number): ShadowLayer
 ```
 
-Creates a **ShadowLayer** object.
+创建阴影层对象。
 
 **Since:** 18
 
@@ -112,22 +118,22 @@ Creates a **ShadowLayer** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
-| x | number | Yes | Offset on the X axis. The value is a floating point number. |
-| y | number | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| blurRadius | number | Yes | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
+| x | number | Yes | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
+| y | number | Yes | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
+| color | common2D.Color \| number | Yes | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，必须是16进制ARGB格式的无符 号整数，取值范围为[0, 0xFFFFFFFF]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShadowLayer** object created. |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | 返回创建的阴影层对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## create
 
@@ -135,7 +141,7 @@ Creates a **ShadowLayer** object.
 static create(blurRadius: double, x: double, y: double, color: common2D.Color | int): ShadowLayer | undefined
 ```
 
-Creates a ShadowLayer object.
+创建阴影层对象。
 
 **Since:** 23
 
@@ -149,20 +155,20 @@ Creates a ShadowLayer object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | double | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
-| x | double | Yes | Offset on the X axis. The value is a floating point number. |
-| y | double | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color \| int | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| blurRadius | double | Yes | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
+| x | double | Yes | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
+| y | double | Yes | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
+| color | common2D.Color \| int | Yes | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，必须是16进制ARGB格式的无符 号整数，取值范围为[0, 0xFFFFFFFF]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShadowLayer object. |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | 返回创建的阴影层对象。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

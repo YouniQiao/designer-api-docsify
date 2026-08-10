@@ -1,6 +1,6 @@
 # AuthorizeRequest
 
-Represents the authorization request information of the credentials.
+证书凭据授权请求信息。
 
 **Since:** 22
 
@@ -10,14 +10,19 @@ Represents the authorization request information of the credentials.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
+## Modules to Import
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certPurpose
 
 ```TypeScript
 certPurpose?: certificateManager.CertificatePurpose
 ```
 
-Certificate usage.If the **certTypes** parameter contains the **CertificateType.CREDENTIAL\_UKEY** type, the **certPurpose**  
-parameter takes effect , indicating that the certificate credentials of the USB key are filtered based on the specified certificate usage.
+表示证书用途。若certTypes参数中存在CertificateType.CREDENTIAL_UKEY类型，则certPurpose参数生效，表示根据指定的证书用途筛选USB Key的证书凭据。
 
 **Type:** certificateManager.CertificatePurpose
 
@@ -37,7 +42,7 @@ parameter takes effect , indicating that the certificate credentials of the USB 
 certTypes: Array<CertificateType>
 ```
 
-List of certificate types.
+表示证书类型的列表。
 
 **Type:** Array&lt;CertificateType&gt;
 
@@ -57,7 +62,13 @@ List of certificate types.
 issuers?: Array<Uint8Array>
 ```
 
-Indicates the certificate issuer, which is encoded in DER format. This parameter is used to filter the list of certificates that can be selected by users in the Authorization dialog box. Only the certificates that match the certificate issuer are displayed.
+表示以DER格式编码的证书颁发者，用于筛选凭据授权对话框中的证书列表，仅显示匹配的证书。
+
+如果issuers数组中存在长度为0的元素，则issuers筛选器不会生效。
+
+数组最大长度为20。
+
+26.0.0
 
 **Type:** Array&lt;Uint8Array&gt;
 
@@ -77,7 +88,7 @@ Indicates the certificate issuer, which is encoded in DER format. This parameter
 keyAlgIDs?: Array<string>
 ```
 
-Indicates the algorithm type of the public key of the certificate. It is used to filter the list of certificates that can be selected in the authorization dialog box. Only the certificates that match the public key algorithm are displayed.The value can only be RSA, EC, or ECDSA (case sensitive). If this parameter is not specified, certificates are not filtered by algorithm type.If the keyAlgIDs array contains an unsupported algorithm type,the keyAlgIDs filter does not take effect.The maximum length is 20.
+表示证书公钥的算法类型，用于筛选凭据授权对话框中的证书列表，仅显示匹配的证书。支持的取值为RSA、EC或ECDSA（区分大小写）。若不传此参数，则不按算法类型筛选证书。若 keyAlgIDs包含不支持的算法，则该筛选器无效。最大长度为20，26.0.0。
 
 **Type:** Array&lt;string&gt;
 
@@ -97,7 +108,7 @@ Indicates the algorithm type of the public key of the certificate. It is used to
 uri?: string
 ```
 
-This URI is displayed in the authorization dialog box and is used to provide the user with more context about requesting authorization to use certificate credentials.
+该URI在授权对话框中进行显示，用于为用户提供更多有关申请授权使用证书凭据的上下文。
 
 **Type:** string
 

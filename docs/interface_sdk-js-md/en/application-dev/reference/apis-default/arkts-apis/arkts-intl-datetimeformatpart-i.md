@@ -8,7 +8,7 @@
 type: DateTimeFormatPartTypes
 ```
 
-**Type:** DateTimeFormatPartTypes
+**Type:** [DateTimeFormatPartTypes](../../apis-arkts/arkts-apis/arkts-arkts-intl-datetimeformatparttypes-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

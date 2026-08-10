@@ -10,6 +10,12 @@ Navigation组件信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## navigationId
 
 ```TypeScript
@@ -38,7 +44,7 @@ pathStack: NavPathStack
 
 Navigation组件的导航控制器。
 
-**类型：** NavPathStack
+**类型：** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **起始版本：** 23
 

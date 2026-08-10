@@ -4,7 +4,7 @@
 type OnMicrophoneCaptureStateChangeCallback = (event: MicrophoneCaptureStateChangeInfo) => void
 ```
 
-Defines a callback triggered when the microphone state of the page changes.
+当页面麦克风状态发生改变时触发此回调。
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ Defines a callback triggered when the microphone state of the page changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Original and new microphone state.  |
+| event | [MicrophoneCaptureStateChangeInfo](arkts-arkweb-microphonecapturestatechangeinfo-i.md) | Yes | 网页麦克风状态发生改变时，返回原来的状态和改变后的状态。 |
 

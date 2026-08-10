@@ -1,6 +1,6 @@
 # Support
 
-System common events are events published by system services or system apps. Subscribing to these common events requires specific permissions and event values.
+系统公共事件是指由系统服务或系统应用发布的事件，订阅这些公共事件需要特定的权限，并使用相应的事件值。
 
 **Since:** 9
 
@@ -16,9 +16,9 @@ System common events are events published by system services or system apps. Sub
 COMMON_EVENT_USER_LOCKING = 'usual.event.USER_LOCKING'
 ```
 
-Indicates that a user is about to be locked.
+表示用户即将被锁定的公共事件的动作。
 
-Before a user is locked, the common event service is triggered to publish this event carrying the system account ID.
+锁定用户前将会触发事件通知服务发布该系统公共事件，事件携带系统账号ID。
 
 **Since:** 20
 
@@ -36,9 +36,9 @@ Before a user is locked, the common event service is triggered to publish this e
 COMMON_EVENT_USER_LOCKED = 'usual.event.USER_LOCKED'
 ```
 
-Indicates that a user is locked.
+表示用户锁定完成的公共事件的动作。
 
-After a user is locked, the common event service is triggered to publish this event carrying the system account ID.
+完成锁定用户将会触发事件通知服务发布该系统公共事件，事件携带系统账号ID。
 
 **Since:** 20
 
@@ -56,9 +56,9 @@ After a user is locked, the common event service is triggered to publish this ev
 COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_CREATED = 'usual.event.OS_ACCOUNT_SUB_PROFILE_CREATED'
 ```
 
-Indicates an OS account sub-profile is created.
+表示创建系统账号子身份。
 
-After an OS account sub-profile is created, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
+系统账号子身份创建成功时，会触发公共事件服务发布该事件，携带系统账号ID和子身份ID。
 
 **Since:** 26.0.0
 
@@ -78,9 +78,9 @@ After an OS account sub-profile is created, the common event service is triggere
 COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_DELETED = 'usual.event.OS_ACCOUNT_SUB_PROFILE_DELETED'
 ```
 
-Indicates an OS account sub-profile is deleted.
+表示删除系统账号子身份。
 
-After an OS account sub-profile is deleted, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
+系统账号子身份被删除时，触发公共事件服务发布该事件，携带系统账号ID和子身份ID。
 
 **Since:** 26.0.0
 
@@ -100,9 +100,9 @@ After an OS account sub-profile is deleted, the common event service is triggere
 COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_SWITCHING = 'usual.event.OS_ACCOUNT_SUB_PROFILE_SWITCHING'
 ```
 
-Indicates an OS account sub-profile is switching.
+表示系统账号子身份开始切换。
 
-After an OS account sub-profile is switching, the common event service is triggered to publish this event carrying the OS account local ID, the sub-profile ID switching to and the previous sub-profile ID switching from.
+系统账号子身份开始切换时，触发公共事件服务发布该事件，携带系统账号ID、切换到的子身份ID和切换前的子身份ID。
 
 **Since:** 26.0.0
 
@@ -122,9 +122,9 @@ After an OS account sub-profile is switching, the common event service is trigge
 COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_SWITCHED = 'usual.event.OS_ACCOUNT_SUB_PROFILE_SWITCHED'
 ```
 
-Indicates an OS account sub-profile is switched.
+表示系统账号子身份切换完成。
 
-After an OS account sub-profile is switched, the common event service is triggered to publish this event carrying the OS account local ID, the sub-profile ID switched to and the previous sub-profile ID switched from.
+系统账号子身份切换完成时，触发公共事件服务发布此事件，携带系统账号ID、切换到的子身份ID和切换前的子身份ID。
 
 **Since:** 26.0.0
 
@@ -144,9 +144,9 @@ After an OS account sub-profile is switched, the common event service is trigger
 COMMON_EVENT_DISTRIBUTED_ACCOUNT_BOUND = 'usual.event.DISTRIBUTED_ACCOUNT_BOUND'
 ```
 
-Indicates a distributed account is bound.
+表示绑定分布式账号。
 
-After a distributed account is bound, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
+分布式账号绑定时，会触发公共事件服务发布该事件，携带系统账号ID和子身份ID。
 
 **Since:** 26.0.0
 
@@ -166,9 +166,9 @@ After a distributed account is bound, the common event service is triggered to p
 COMMON_EVENT_DISTRIBUTED_ACCOUNT_UNBOUND = 'usual.event.DISTRIBUTED_ACCOUNT_UNBOUND'
 ```
 
-Indicates a distributed account is unbound.
+表示已解绑分布式账号。
 
-After a distributed account is unbound, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
+分布式账号解绑时，会触发公共事件服务发布该事件，携带系统账号ID和子身份ID。
 
 **Since:** 26.0.0
 
@@ -188,9 +188,9 @@ After a distributed account is unbound, the common event service is triggered to
 COMMON_EVENT_CHARGE_TYPE_CHANGED = 'usual.event.CHARGE_TYPE_CHANGED'
 ```
 
-Indicates that the system charging type has changed.
+表示系统充电类型改变的公共事件的动作。
 
-When the system charging type changes, the common event service is triggered to publish this event.
+当系统充电类型改变时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -208,13 +208,13 @@ When the system charging type changes, the common event service is triggered to 
 COMMON_EVENT_DEVICE_IDLE_EXEMPTION_LIST_UPDATED = 'usual.event.DEVICE_IDLE_EXEMPTION_LIST_UPDATED'
 ```
 
-Indicates that the exemption list for resource usage restrictions has been updated in idle mode.
+表示待机状态下解除资源使用限制的豁免名单出现变化，触发公共事件发布动作。
 
-When the exemption list for resource usage restrictions is updated, the common event service is triggered to publish this event.
+待机状态下后台应用程序CPU和网络访问被限制，系统应用可以申请解除资源使用限制，将会触发公共事件服务发布该系统公共事件。
 
-Resources include application network access, Timer usage, and WorkScheduler task usage.
+资源包括应用网络访问、Timer使用、WorkScheduler任务使用等。
 
-System applications can call JavaScript APIs to apply for removing resource usage restrictions.
+系统应用可以调用JS API接口申请解除资源使用限制。
 
 **Since:** 10
 
@@ -226,37 +226,17 @@ System applications can call JavaScript APIs to apply for removing resource usag
 
 **System API:** This is a system API.
 
-## COMMON_EVENT_USB_CONTROL_DATA
-
-```TypeScript
-COMMON_EVENT_USB_CONTROL_DATA = 'usual.event.hardware.usb.action.USB_CONTROL_DATA'
-```
-
-Indicates that the local host receives a user-defined control transmission request from the USB host.This is a protected common event that can only be sent by system.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Support-COMMON_EVENT_USB_CONTROL_DATA = 'usual.event.hardware.usb.action.USB_CONTROL_DATA'--><!--Device-Support-COMMON_EVENT_USB_CONTROL_DATA = 'usual.event.hardware.usb.action.USB_CONTROL_DATA'-End-->
-
-**System capability:** SystemCapability.Notification.CommonEvent
-
-**System API:** This is a system API.
-
 ## COMMON_EVENT_DISK_VOLUME_STATE_CHANGE
 
 ```TypeScript
 COMMON_EVENT_DISK_VOLUME_STATE_CHANGE = 'usual.event.data.DISK_VOLUME_STATE_CHANGE'
 ```
 
-Indicates that the state of a system data disk volume has changed.
+表示系统数据盘卷状态发生变化的公共事件。
 
-This common event is triggered when the state of a system data disk volume changes,such as during format or repair operations (started, succeeded, or failed).
+当系统数据盘卷在格式化或修复等操作过程中状态发生变化（如操作开始、成功或失败）时，会发送此公共事件。
 
-To subscribe to this common event, your application must have the **ohos.permission.STORAGE\_MANAGER** permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **Since:** 26.0.0
 
@@ -276,11 +256,11 @@ To subscribe to this common event, your application must have the **ohos.permiss
 COMMON_EVENT_APP_FIRST_LAUNCH = 'usual.event.APP_FIRST_LAUNCH'
 ```
 
-Indicates that when the application is launched for the first time after installation, the common event service is triggered to publish this system common event.
+在应用安装后首次启动时，事件通知服务将触发并发布系统公共事件。
 
-Model constraint: This API can be used only in the stage model.
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-To subscribe to this common event, your application must have the ohos.permission.INSTALL\_BUNDLE permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.INSTALL_BUNDLE权限（该权限仅系统应用可申请）
 
 **Since:** 24
 
@@ -300,11 +280,11 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_SMS_RECEIVE_COMPLETED = 'usual.event.SMS_RECEIVE_COMPLETED'
 ```
 
-Indicates that an SMS message is received.
+提示短信接收完成。
 
-When the device receives an SMS message, the common event service is triggered to publish this event.
+在设备接收到短信时，将会触发事件通知服务发布该系统公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE\_SMS permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **Since:** 10
 
@@ -322,11 +302,11 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_SMS_EMERGENCY_CB_RECEIVE_COMPLETED = 'usual.event.SMS_EMERGENCY_CB_RECEIVE_COMPLETED'
 ```
 
-Indicates that an emergency cell broadcast message is received.
+提示紧急小区广播短信接收完成。
 
-When the device receives an emergency cell broadcast message, the common event service is triggered to publish this event.
+在设备接收到紧急小区广播短信时，将会触发事件通知服务发布该系统公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE\_SMS permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **Since:** 10
 
@@ -344,11 +324,11 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_SMS_CB_RECEIVE_COMPLETED = 'usual.event.SMS_CB_RECEIVE_COMPLETED'
 ```
 
-Indicates that a cell broadcast message is received.
+提示小区广播短信接收完成。
 
-When the device receives a cell broadcast message, the common event service is triggered to publish this event.
+在设备接收到小区广播短信时，将会触发事件通知服务发布该系统公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE\_SMS permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **Since:** 10
 
@@ -366,9 +346,9 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_STK_COMMAND = 'usual.event.STK_COMMAND'
 ```
 
-(Reserved, not supported yet) Indicates that an STK command is sent.
+（预留事件，暂未支持）提示STK命令。
 
-When an STK command is sent, the common event service is triggered to publish this event.
+在发送STK命令时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -386,9 +366,9 @@ When an STK command is sent, the common event service is triggered to publish th
 COMMON_EVENT_STK_SESSION_END = 'usual.event.STK_SESSION_END'
 ```
 
-(Reserved, not supported yet) Indicates that an STK session has ended.
+（预留事件，暂未支持）提示STK会话结束。
 
-When an STK session ends, the common event service is triggered to publish this event.
+在STK会话结束时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -406,9 +386,9 @@ When an STK session ends, the common event service is triggered to publish this 
 COMMON_EVENT_STK_CARD_STATE_CHANGED = 'usual.event.STK_CARD_STATE_CHANGED'
 ```
 
-(Reserved, not supported yet) Indicates that the STK card state has been updated.
+（预留事件，暂未支持）提示STK卡状态已更新。
 
-When the STK card state is updated, the common event service is triggered to publish this event.
+在STK卡状态更新时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -426,9 +406,9 @@ When the STK card state is updated, the common event service is triggered to pub
 COMMON_EVENT_STK_ALPHA_IDENTIFIER = 'usual.event.STK_ALPHA_IDENTIFIER'
 ```
 
-(Reserved, not supported yet) Indicates that an STK Alpha identifier is sent.
+（预留事件，暂未支持）提示STK ALPHA标识符。
 
-When an STK Alpha identifier is sent, the common event service is triggered to publish this event.
+在发送STK ALPHA标识符时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -446,11 +426,11 @@ When an STK Alpha identifier is sent, the common event service is triggered to p
 COMMON_EVENT_SMS_WAPPUSH_RECEIVE_COMPLETED = 'usual.event.SMS_WAPPUSH_RECEIVE_COMPLETED'
 ```
 
-(Reserved, not supported yet) Indicates that a WAP push message is received.
+（预留事件，暂未支持）提示服务信息短信接收完成。
 
-When the device receives a WAP push message, the common event service is triggered to publish this event.
+在设备接收服务信息短信完成时，将会触发事件通知服务发布该系统公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE\_SMS permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **Since:** 10
 
@@ -468,9 +448,9 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_OPERATOR_CONFIG_CHANGED = 'usual.event.OPERATOR_CONFIG_CHANGED'
 ```
 
-Indicates that the carrier configuration has been updated.
+提示运营商配置已更新。
 
-When the carrier configuration of the device is updated, the common event service is triggered to publish this event.
+在设备运营商配置更新时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -488,9 +468,9 @@ When the carrier configuration of the device is updated, the common event servic
 COMMON_EVENT_SIM_CARD_DEFAULT_SMS_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_SMS_SUBSCRIPTION_CHANGED'
 ```
 
-Indicates that the default primary SIM card for the SMS service has been updated.
+提示SIM卡默认短信主卡已更新。
 
-When the default primary SIM card for the SMS service is updated, the common event service is triggered to publish this event.
+在设备SIM卡默认短信主卡更新时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -508,9 +488,9 @@ When the default primary SIM card for the SMS service is updated, the common eve
 COMMON_EVENT_SIM_CARD_DEFAULT_DATA_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_DATA_SUBSCRIPTION_CHANGED'
 ```
 
-Indicates that the default primary SIM card for the data service has been updated.
+提示SIM卡默认数据主卡已更新。
 
-When the default primary SIM card for the data service is updated, the common event service is triggered to publish this event.
+在设备SIM卡默认数据主卡更新时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -528,9 +508,9 @@ When the default primary SIM card for the data service is updated, the common ev
 COMMON_EVENT_SIM_CARD_DEFAULT_MAIN_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_MAIN_SUBSCRIPTION_CHANGED'
 ```
 
-Indicates that the default primary SIM card of the device has been updated.
+提示SIM卡默认主卡已更新。
 
-When the default primary SIM card of the device is updated, the common event service is triggered to publish this event.
+在设备SIM卡默认主卡更新时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -548,9 +528,9 @@ When the default primary SIM card of the device is updated, the common event ser
 COMMON_EVENT_SET_PRIMARY_SLOT_STATUS = 'usual.event.SET_PRIMARY_SLOT_STATUS'
 ```
 
-Indicates that the status of the action for setting the primary SIM card changes.
+提示设置SIM卡默认主卡的动作，其状态更新为执行中或已完成。
 
-When the status of the action for setting the primary SIM card changes (for example, when the status is updated to executing or completed), the common event service is triggered to publish this event.
+在设备上设置SIM卡默认主卡时，当执行状态发生变化（比如状态更新到执行中或已完成），将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 11
 
@@ -568,9 +548,9 @@ When the status of the action for setting the primary SIM card changes (for exam
 COMMON_EVENT_PRIMARY_SLOT_ROAMING = 'usual.event.PRIMARY_SLOT_ROAMING'
 ```
 
-Indicates that the roaming status of the default primary SIM card is updated.
+提示SIM卡默认主卡的漫游状态已更新。
 
-When the roaming status of the default primary SIM card changes, the common event service is triggered to publish this event.
+在设备SIM卡默认主卡的漫游状态发生变化时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 11
 
@@ -588,9 +568,9 @@ When the roaming status of the default primary SIM card changes, the common even
 COMMON_EVENT_SIM_CARD_DEFAULT_VOICE_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_VOICE_SUBSCRIPTION_CHANGED'
 ```
 
-Indicates that the default primary SIM card for the voice service has been updated.
+提示SIM卡默认语音主卡已更新。
 
-When the default primary SIM card for the voice service is updated, the common event service is triggered to publish this event.
+在设备SIM卡默认语音主卡更新时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -608,9 +588,9 @@ When the default primary SIM card for the voice service is updated, the common e
 COMMON_EVENT_CELLULAR_DATA_STATE_CHANGED = 'usual.event.CELLULAR_DATA_STATE_CHANGED'
 ```
 
-Indicates that the cellular data state has been updated.
+提示蜂窝数据状态更新。
 
-When the cellular data state of the device is updated, the common event service is triggered to publish this event.
+在设备蜂窝数据状态更新时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -628,11 +608,11 @@ When the cellular data state of the device is updated, the common event service 
 COMMON_EVENT_INCOMING_CALL_MISSED = 'usual.event.INCOMING_CALL_MISSED'
 ```
 
-Indicates that an incoming call is missed.
+提示未接来电。
 
-When an incoming call is missed on the device, the common event service is triggered to publish this event.
+在设备有未接来电时，将会触发事件通知服务发布该系统公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.GET\_TELEPHONY\_STATE permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.GET_TELEPHONY_STATE权限（该权限仅系统应用可申请）
 
 **Since:** 10
 
@@ -650,9 +630,9 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_RADIO_STATE_CHANGE = 'usual.event.RADIO_STATE_CHANGE'
 ```
 
-Indicates that the radio state of the device modem has changed.
+提示设备modem上下电状态变化。
 
-When there is a change in the radio state of the device modem, the common event service is triggered to publish this event.
+在设备modem上下电状态变化时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -670,15 +650,14 @@ When there is a change in the radio state of the device modem, the common event 
 COMMON_EVENT_DOMAIN_ACCOUNT_STATUS_CHANGED = 'usual.event.DOMAIN_ACCOUNT_STATUS_CHANGED'
 ```
 
-Indicates that domain account status changes.
+表示域账号状态发生变化。
 
-When a domain user account is authenticated, deleted, or has the token updated, the common event service is triggered to publish this event carrying the system account ID, domain name, and account status.
+域账号认证、删除、令牌更新、令牌失效将会触发事件通知服务发布该系统公共事件，事件携带域账号名、域名、域账号状态等信息。
 
-The system APIs related to this common event are **removeOsAccount**, **DomainAccountManager.auth**, and  
-**updateAccountToken**. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+与这个公共事件相关的接口：removeOsAccount、DomainAccountManager.auth、updateAccountToken, 这些为系统API，具体参看  
+[@ohos.account.osAccount](../../../reference/js-apis-osAccount.md)。
 
-To subscribe to this common event, your application must have the ohos.permission.GET\_LOCAL\_ACCOUNTS permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.GET_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）
 
 **Since:** 10
 
@@ -690,35 +669,15 @@ To subscribe to this common event, your application must have the ohos.permissio
 
 **System API:** This is a system API.
 
-## COMMON_EVENT_SCREEN_LOCK_EXITING
-
-```TypeScript
-COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'
-```
-
-This commonEvent means when the screen lock is exiting.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Support-COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'--><!--Device-Support-COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'-End-->
-
-**System capability:** SystemCapability.Notification.CommonEvent
-
-**System API:** This is a system API.
-
 ## COMMON_EVENT_SPECIAL_CODE
 
 ```TypeScript
 COMMON_EVENT_SPECIAL_CODE = 'common.event.SPECIAL_CODE'
 ```
 
-Indicates that a secret code is sent successfully.
+提示暗码发送成功。
 
-When a secret code is successfully sent on the device, the common event service is triggered to publish this event.
+在设备上发送暗码成功时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -736,9 +695,9 @@ When a secret code is successfully sent on the device, the common event service 
 COMMON_EVENT_AUDIO_QUALITY_CHANGE = 'usual.event.AUDIO_QUALITY_CHANGE'
 ```
 
-Indicates that the audio quality has changed.
+提示音频质量发生变化。
 
-When there is a change in the audio quality of the device, the common event service is triggered to publish this event.
+在设备音频质量发送变化时，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 10
 
@@ -756,9 +715,9 @@ When there is a change in the audio quality of the device, the common event serv
 COMMON_EVENT_PRIVACY_STATE_CHANGED = 'usual.event.PRIVACY_STATE_CHANGED'
 ```
 
-Indicates the privacy state has been changed.
+表示隐私签署结果的公共事件。
 
-When a user taps the agree button in the privacy statement dialog box, the event notification service is triggered to publish this event.
+隐私弹框场景下，用户点击同意，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 11
 
@@ -776,9 +735,9 @@ When a user taps the agree button in the privacy statement dialog box, the event
 COMMON_EVENT_PACKAGE_INSTALLATION_STARTED = 'usual.event.PACKAGE_INSTALLATION_STARTED'
 ```
 
-Indicates that a package is sent by the system verifier when the package is verified.
+当一个包被验证时，由系统包验证者发送。
 
-When a new application starts to be installed by a specified user on the device, the common event service is triggered to publish this event.
+在设备上指定用户下开始安装应用程序，将会触发事件通知服务发布该系统公共事件。
 
 **Since:** 12
 
@@ -796,7 +755,9 @@ When a new application starts to be installed by a specified user on the device,
 COMMON_EVENT_DYNAMIC_ICON_CHANGED = 'usual.event.DYNAMIC_ICON_CHANGED'
 ```
 
-This common event means an application package enables or disables a dynamic icon.This is a protected common event that can only be sent by system.
+表示应用动态图标发生变化的公共事件。
+
+在应用的动态图标发生变更时，会发送此公共事件。
 
 **Since:** 12
 
@@ -814,11 +775,11 @@ This common event means an application package enables or disables a dynamic ico
 COMMON_EVENT_BUNDLE_RESOURCES_CHANGED = 'usual.event.BUNDLE_RESOURCES_CHANGED'
 ```
 
-Indicates that the bundle management resource data has updated.
+表示包管理资源数据刷新的公共事件。
 
-This common event is sent when the bundle management resource data is updated in scenarios such as language or theme switching.
+在切换语言、切换主题等场景，包管理资源数据刷新完成时，会发送此公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.GET\_BUNDLE\_RESOURCES permission.
+要订阅此事件，您的应用必须具备ohos.permission.GET_BUNDLE_RESOURCES权限
 
 **Since:** 15
 
@@ -836,9 +797,9 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_VPN_CONNECTION_STATUS_CHANGED = 'usual.event.VPN_CONNECTION_STATUS_CHANGED'
 ```
 
-Indicates the common event that the VPN connection status has changed.
+表示VPN连接状态的公共事件。
 
-This common event is sent when a VPN connection is established or disconnected.
+当VPN连接或者断开时会发送此公共事件。
 
 **Since:** 12
 
@@ -856,11 +817,11 @@ This common event is sent when a VPN connection is established or disconnected.
 COMMON_EVENT_RESTORE_START = 'usual.event.RESTORE_START'
 ```
 
-Indicates that an application starts to be restored.
+表示某个应用开始恢复的公共事件。
 
-When a data migration application starts the backup and restore framework to perform a restoration task, the common event service is triggered to publish this event.
+当数据迁移相关应用拉起备份恢复框架进行恢复任务，某个应用恢复开始时会发送此公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.START\_RESTORE\_NOTIFICATION permission.
+要订阅此事件，您的应用必须具备ohos.permission.START_RESTORE_NOTIFICATION权限
 
 **Since:** 13
 
@@ -878,11 +839,11 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_DEFAULT_APPLICATION_CHANGED = 'usual.event.DEFAULT_APPLICATION_CHANGED'
 ```
 
-Indicates that the default application for opening a file has changed.
+表示文件默认打开应用发生变更的公共事件。
 
-This common event is sent when the default application for opening a file changes.
+在文件默认打开应用发生变更时，会发送此公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.CHANGE\_DEFAULT\_APPLICATION permission.
+要订阅此事件，您的应用必须具备ohos.permission.CHANGE_DEFAULT_APPLICATION权限
 
 **Since:** 19
 
@@ -900,12 +861,12 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'
 ```
 
-Indicates that the application shortcut has changed.
+表示应用快捷方式发生变化的公共事件。
 
-This common event is sent when the shortcut is changed (for example, when  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_of the shortcutManager module is successfully called).
+在应用快捷方式的更改设置完成时（例如调用shortcutManager模块的  
+[setShortcutVisibleForSelf](../../../apis-ability-kit/js-apis-shortcutManager.md#shortcutmanagersetshortcutvisibleforself)成功时），会发送此公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.MANAGE\_SHORTCUTS permission.
+要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SHORTCUTS权限
 
 **Since:** 20
 
@@ -923,9 +884,9 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_CUSTOM_CONFIG_POLICY_UPDATED = 'usual.event.CUSTOM_CONFIG_POLICY_UPDATED'
 ```
 
-Indicates that the configuration directory level and system parameters of a device are updated.
+表示设备的配置目录层级与系统参数发生变化的公共事件。
 
-This common event is sent when the system updates the device configuration directory level and system parameters after identifying the home area and roaming area of the device.
+在系统对设备的归属区域和漫游区域识别完成后，会对设备的配置目录层级与系统参数进行刷新，刷新完成后会发送此公共事件。
 
 **Since:** 20
 
@@ -943,9 +904,9 @@ This common event is sent when the system updates the device configuration direc
 COMMON_EVENT_CUSTOM_ROAMING_REGION_UPDATED = 'usual.event.CUSTOM_ROAMING_REGION_UPDATED'
 ```
 
-Indicates that the roaming area of a device is updated.
+表示设备漫游区域发生变化的公共事件。
 
-When the attributes such as network injection, persistent connection, and GPS location of a device change, the system identifies the roaming area and updates the parameters if the roaming area changes. After the update is complete, this common event is sent.
+在设备注入网络、驻留网络、GPS定位等属性变化时，系统服务会进行漫游区域识别。当识别到漫游区域发生变化，则会更新设备漫游区域参数，在更新完成后会发送此公共事件。
 
 **Since:** 20
 
@@ -963,11 +924,11 @@ When the attributes such as network injection, persistent connection, and GPS lo
 COMMON_EVENT_SCREEN_SHARE = 'usual.event.SCREEN_SHARE'
 ```
 
-Indicates that a screen sharing event has occurred in the system.
+表示系统中发生了屏幕共享事件。
 
-This is a protected common event and can be sent only by the system.
+这是一个受保护的公共事件，只能由系统发送。
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE\_SMS permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **Since:** 20
 
@@ -985,9 +946,11 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_RESTORE_END = 'usual.event.RESTORE_END'
 ```
 
-Represents the common event indicating the restore is complete for an application.When a data migration application starts the backup and restore framework to perform a restoration task, this common event is sent when the restore is complete.
+表示某个应用结束恢复的公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.RESTORE\_END\_NOTIFICATION permission.(This permission is available only for system applications.)
+当数据迁移相关应用拉起备份恢复框架进行恢复任务，某个应用恢复结束后会发送此公共事件。
+
+要订阅此事件，您的应用必须具备ohos.permission.RESTORE_END_NOTIFICATION权限（该权限仅系统应用可申请）
 
 **Since:** 23
 
@@ -1005,11 +968,11 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_CLOUD_DISK_STATE_CHANGED = 'usual.event.CLOUD_DISK_STATE_CHANGED'
 ```
 
-Indicates that the sync root of the cloud disk has been updated.
+提示云盘同步根已更新。
 
-When the sync root update is complete, the common event service is triggered to publish this event.
+在同步根更新完成时，将会触发事件通知服务发布该系统公共事件。
 
-To subscribe to this common event, your application must have the ohos.permission.ACCESS\_CLOUD\_DISK\_INFO permission.(This permission is available only for system applications.)
+要订阅此事件，您的应用必须具备ohos.permission.ACCESS_CLOUD_DISK_INFO权限（该权限仅系统应用可申请）
 
 **Since:** 21
 
@@ -1021,13 +984,33 @@ To subscribe to this common event, your application must have the ohos.permissio
 
 **System API:** This is a system API.
 
+## COMMON_EVENT_SCREEN_LOCK_EXITING
+
+```TypeScript
+COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'
+```
+
+表示锁屏退出的事件。
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Support-COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'--><!--Device-Support-COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'-End-->
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+**System API:** This is a system API.
+
 ## COMMON_EVENT_SANDBOX_BUNDLE_ADDED
 
 ```TypeScript
 COMMON_EVENT_SANDBOX_BUNDLE_ADDED = 'usual.event.SANDBOX_BUNDLE_ADDED'
 ```
 
-Indicates that the sandbox application has been installed on the device.
+表示设备上已安装新的沙箱应用的公共事件.
 
 **Since:** 26.0.0
 
@@ -1047,7 +1030,7 @@ Indicates that the sandbox application has been installed on the device.
 COMMON_EVENT_SANDBOX_BUNDLE_REMOVED = 'usual.event.SANDBOX_BUNDLE_REMOVED'
 ```
 
-Indicates that the sandbox application has been uninstalled on the device.
+表示设备上安装的沙箱应用被卸载的公共事件.
 
 **Since:** 26.0.0
 

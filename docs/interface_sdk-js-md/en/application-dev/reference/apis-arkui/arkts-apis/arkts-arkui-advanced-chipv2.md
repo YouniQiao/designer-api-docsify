@@ -1,16 +1,22 @@
 # @ohos.arkui.advanced.ChipV2
 
+## Modules to Import
+
+```TypeScript
+import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig, IChipV2OptionsConfig, ChipV2SymbolIcon, ChipV2SuffixImageIconConfig, ChipV2LocalizedLabelMarginConfig, ChipV2SymbolIconConfig, ChipV2LabelConfig, ChipV2SuffixSymbolIcon, ChipV2AccessibilityConfig, ChipV2Icon, ChipV2Size, ChipV2CloseConfig, ChipV2SuffixImageIcon, ChipV2Accessibility, ChipV2Options, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2PrefixImageIcon, ChipV2LabelMarginConfig, ChipV2PrefixSymbolIcon, ChipV2, ChipV2CloseIcon, ChipV2PrefixImageIconConfig, ChipV2AccessibilitySelectedType } from 'kits/@kit.ArkUI';
+```
+
 ## Summary
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [ChipV2Options](arkts-arkui-arkui-advanced-chipv2-chipv2options-c.md) | Defines chip options class. |
+| [ChipV2Options](arkts-arkui-arkui-advanced-chipv2-chipv2options-c.md) | 定义Chip选项类。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Defines ChipV2 options interface. |
+| [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | 定义ChipV2选项接口。 |
 

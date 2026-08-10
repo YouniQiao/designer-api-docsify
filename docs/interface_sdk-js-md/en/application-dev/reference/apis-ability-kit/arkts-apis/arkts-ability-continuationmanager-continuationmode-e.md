@@ -1,6 +1,6 @@
 # ContinuationMode
 
-Enumerates the continuation modes provided by the device selection module.
+设备选择模块连接模式。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the continuation modes provided by the device selection module.
 COLLABORATION_SINGLE = 0
 ```
 
-Single-choice mode.
+设备选择模块单选模式。
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ Single-choice mode.
 COLLABORATION_MULTIPLE = 1
 ```
 
-Multi-choice mode.
+设备选择模块多选模式。
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # ShowWindowOptions
 
-Describes the parameters for displaying a child window or system window.
+显示子窗口或系统窗口时的参数。
 
 **Since:** 20
 
@@ -10,14 +10,19 @@ Describes the parameters for displaying a child window or system window.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## focusOnShow
 
 ```TypeScript
 focusOnShow?: boolean
 ```
 
-Whether the window automatically gains focus when  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is called. The default value is **true**. This parameter does not take effect for the main window, modal window, and dialog boxes.
+窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)显示时是否自动获焦，默认为true。该参数对主窗、模态窗、dialog窗口不生效。
 
 **Type:** boolean
 

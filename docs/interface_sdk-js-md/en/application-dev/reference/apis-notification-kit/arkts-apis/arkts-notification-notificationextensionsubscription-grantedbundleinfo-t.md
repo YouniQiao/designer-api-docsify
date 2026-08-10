@@ -4,7 +4,7 @@
 export type GrantedBundleInfo = _GrantedBundleInfo
 ```
 
-Describes the bundle information of the authorized application.
+授权应用的包信息。
 
 **Since:** 22
 

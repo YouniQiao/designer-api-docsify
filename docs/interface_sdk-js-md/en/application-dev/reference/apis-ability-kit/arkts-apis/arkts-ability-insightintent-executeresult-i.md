@@ -1,6 +1,6 @@
 # ExecuteResult
 
-Enumerates the return results of intent execution.
+意图执行的返回结果。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Enumerates the return results of intent execution.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## code
 
 ```TypeScript
 code: int
 ```
 
-Error code returned by the intent execution, defined by the developer.
+意图执行返回的错误码，由开发者定义。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -38,14 +44,13 @@ Error code returned by the intent execution, defined by the developer.
 flags?: int
 ```
 
-Permissions to be granted to the system entry point for the URI list returned by the intent execution.
+意图执行返回给系统入口的URI列表的授权权限。
 
-**NOTE**
+**说明：**
 
-This parameter supports only FLAG\_AUTH\_READ\_URI\_PERMISSION, FLAG\_AUTH\_WRITE\_URI\_PERMISSION, and FLAG\_AUTH\_READ\_URI\_PERMISSION|FLAG\_AUTH\_WRITE\_URI\_PERMISSION. For details about the permissions, see  
-[Flags]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION|FLAG_AUTH_WRITE_URI_PERMISSION。权限介绍见[Flags](arkts-ability-wantconstant-flags-e.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -65,9 +70,9 @@ This parameter supports only FLAG\_AUTH\_READ\_URI\_PERMISSION, FLAG\_AUTH\_WRIT
 result?: Record<string, Object>
 ```
 
-Result data returned by the intent execution, typically containing information to be passed back to the system entry point.
+意图执行返回的结果，通常会包含需要返回给系统入口的数据。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 11
 
@@ -87,7 +92,7 @@ Result data returned by the intent execution, typically containing information t
 uris?: Array<string>
 ```
 
-List of URIs returned by the intent execution. This field must be used together with the **flags** field to grant the corresponding permissions for the URI list to the system entry point.
+意图执行返回的URI列表。该字段需要与flags字段配合使用，根据URI列表将flags字段的相应权限授权给系统入口。
 
 **Type:** Array&lt;string&gt;
 

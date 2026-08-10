@@ -1,5 +1,11 @@
 # queryTraceRoute
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## queryTraceRoute
 
 ```TypeScript
@@ -25,7 +31,7 @@ Query a network trace route.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | destination | string | Yes | the destination domain or address. |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the trace route option. |
+| option | [TraceRouteOptions](arkts-network-connection-tracerouteoptions-i.md) | No | the trace route option. |
 
 **Return value:**
 
@@ -37,7 +43,26 @@ Query a network trace route.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | Internal error. |
+| 2100001 | Invalid parameter value. |
+| 2100003 | Internal error. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dest: string = "www.example.com";
+let options: connection.TraceRouteOptions = {
+    maxJumpNumber: 30,
+    packetsType: connection.PacketsType.NETCONN_PACKETS_ICMP
+};
+
+connection.queryTraceRoute(dest, options).then((data: connection.TraceRouteInfo[]) => {
+    console.info(JSON.stringify(data));
+}).catch((err: BusinessError) => {
+    console.error(JSON.stringify(err));
+});
+```
 

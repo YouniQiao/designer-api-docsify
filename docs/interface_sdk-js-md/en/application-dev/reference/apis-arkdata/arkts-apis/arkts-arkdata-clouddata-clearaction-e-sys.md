@@ -1,6 +1,6 @@
 # ClearAction (System API)
 
-Enumerates the operations for clearing the downloaded cloud data locally.
+清除本地下载的云端数据的行为枚举。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Enumerates the operations for clearing the downloaded cloud data locally.
 CLEAR_CLOUD_INFO = 0
 ```
 
-Clear the cloud identifier of the data downloaded from the cloud and retain the data locally.
+清除从云端下载的数据的云标识（即数据来源于云端的标记信息），相关数据作为本地数据保存。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Clear the cloud identifier of the data downloaded from the cloud and retain the 
 CLEAR_CLOUD_DATA_AND_INFO = 1
 ```
 
-Clear the data downloaded from the cloud, excluding the cloud data that has been modified locally.
+清除从云端下载的数据，不包括本地已修改的云端数据。
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ Clear the data downloaded from the cloud, excluding the cloud data that has been
 CLEAR_CLOUD_NONE = 2
 ```
 
-Does not clear any data.
+不执行任何清除操作。
 
 **Since:** 23
 

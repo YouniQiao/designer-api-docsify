@@ -18,7 +18,7 @@ height?: Length
 
 定义高度。
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ width?: Length
 
 定义宽度。
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 11
 

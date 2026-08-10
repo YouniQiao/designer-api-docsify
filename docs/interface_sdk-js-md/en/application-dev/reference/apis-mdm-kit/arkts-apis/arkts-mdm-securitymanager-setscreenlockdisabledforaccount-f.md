@@ -1,24 +1,28 @@
 # setScreenLockDisabledForAccount
 
+## Modules to Import
+
+```TypeScript
+import { securityManager } from 'kits/@kit.MDMKit';
+```
+
 ## setScreenLockDisabledForAccount
 
 ```TypeScript
 function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void
 ```
 
-Disables or enables swipe-to-unlock for the current user. When enabled, the user must swipe on the screen after the screen is turned on to access the home screen. When disabled, the screen goes directly to the home screen after being turned on. This API is suitable for enterprise device management scenarios, such as disabling swipe-to-unlock in specific security environments to simplify operations, or enabling it in general scenarios as a basic security measure.
-    **NOTE**  
-    
-    1. This API takes effect only when no lock screen password is set on the device.  
-    
-    2. By default, swipe-to-unlock is enabled on the device.  
-    
-    3. If a lock screen password exists on the device, attempting to disable swipe-to-unlock will fail and return  
-    error code 9201021.  
-    
-    4. After a policy to disable swipe-to-unlock is applied, if the user subsequently sets a device password, the  
-    password will take effect and the device will require password verification before entering the home screen. In  
-    this case, the previously applied policy will no longer take effect.
+禁用/启用当前用户的滑动解锁能力。启用时：设备灭屏后再亮屏，用户需要在屏幕上滑动后才能进入桌面。禁用时：设备灭屏后再亮屏会直接进入桌面。适用于企业设备管理场景，如在特定安全环境下禁用滑动解锁简化操作，或在通用场景下启用滑动解锁作为基础安全措施。
+
+> **说明：**
+> 
+> 1.该接口能力仅在设备无锁屏密码时生效。
+> 
+> 2.设备默认属于启用滑动解锁的状态。
+> 
+> 3.设备上存在密码时，设置禁用滑动解锁会失败，抛出9201021错误码。
+> 
+> 4.下发禁用滑动解锁的策略后，用户输入了设备密码，此时密码会生效，设备需要验证密码后才能进入桌面，之前下发的策略失效。
 
 **Since:** 26.0.0
 
@@ -36,16 +40,35 @@ Disables or enables swipe-to-unlock for the current user. When enabled, the user
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| disable | boolean | Yes | Whether to disable swipe-to-unlock for the current user. The value **true** indicates yes, and the value **false** indicates no. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| disable | boolean | Yes | 是否禁用当前用户的滑动解锁能力。true表示禁用，false表示不禁用。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9201021](../errorcode-enterpriseDeviceManager.md#9201021-the-device-has-a-screen-lock-password) | A lock screen password has been set for the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 9201021 | A lock screen password has been set for the device. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  securityManager.setScreenLockDisabledForAccount(wantTemp, true);
+  console.info(`Succeeded in setting screen lock disabled for account.`);
+} catch(err) {
+  console.error(`Failed to set screen lock disabled for account. Code: ${err.code}, message: ${err.message}`);
+}
+```
 

@@ -1,12 +1,18 @@
 # dataMigration (System API)
 
+## Modules to Import
+
+```TypeScript
+import { fontManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## dataMigration
 
 ```TypeScript
 function dataMigration(callback: DataMigrationCallback): int
 ```
 
-Data migration API used during device upgrades to start a migration task, providing real-time feedback on migration progress and results through a callback function.
+设备升级时使用的数据迁移接口，用于启动迁移任务，通过回调函数实时反馈迁移进度和结果。
 
 **Since:** 23
 
@@ -24,20 +30,20 @@ Data migration API used during device upgrades to start a migration task, provid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback function for data migration. |
+| callback | [DataMigrationCallback](arkts-localization-fontmanager-datamigrationcallback-i-sys.md) | Yes | 数据迁移的回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Result of the migration task startup. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: The migration task is started successfully. The migration task will be executed in the background and the progress and result will be notified through the callback. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Other values: The migration task failed to start. Troubleshoot based on the error code. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 迁移任务启动结果。 &lt;br&gt;- 0：迁移任务启动成功，迁移任务将在后台执行并通过回调通知进度和结果。 &lt;br&gt;- 其他值：迁移任务启动失败，请根据错误码排查原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system application. |
-| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) | Call failed due to system error. |
-| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) | Data migration is in progress. |
+| 31100110 | Call failed due to system error. |
+| 31100111 | Data migration is in progress. |
+| 201 | Permission denied. |
+| 202 | Non-system application. |
 

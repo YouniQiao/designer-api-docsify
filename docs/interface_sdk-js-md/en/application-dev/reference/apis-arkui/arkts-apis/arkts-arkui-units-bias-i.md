@@ -1,0 +1,72 @@
+# Bias
+
+设置组件在锚点约束下的偏移参数。
+
+以水平方向Bias为例，其值为组件到左锚点的距离 D&lt;sub&gt;start&lt;/sub&gt;与组件到水平方向锚点间总距离 D&lt;sub&gt;start&lt;/sub&gt; + D&lt;sub&gt;end&lt;/sub&gt;的比值。镜像语言下，D&lt;sub&gt;start&lt;/sub&gt;为组件到右锚点的距离。下图中D&lt;sub&gt;width&lt;/sub&gt;表示组件宽度。
+
+![bias_horizontal_example.png](../../../reference/apis-arkui/arkui-ts/figures/bias_horizontal_example.png)
+
+竖直方向同理，其值为组件到上锚点的距离D&lt;sub&gt;top&lt;/sub&gt;与组件到竖直方向锚点间总距离D&lt;sub&gt;top&lt;/sub&gt; + D&lt;sub&gt;bottom&lt;/sub&gt;的比值。下图中D&lt;sub&gt;height&lt;/sub&gt;表示组件高度。
+
+![bias_vertical_example.png](../../../reference/apis-arkui/arkui-ts/figures/bias_vertical_example.png)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare interface Bias--><!--Device-unnamed-export declare interface Bias-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## horizontal
+
+```TypeScript
+horizontal?: double
+```
+
+水平方向上的bias值。
+
+当子组件的width属性有正确值并且有2个水平方向的锚点时生效，设置的值必须大于等于0。
+
+默认值： 0.5
+
+**Type:** double
+
+**Default:** 0.5
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Bias-horizontal?: double--><!--Device-Bias-horizontal?: double-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## vertical
+
+```TypeScript
+vertical?: double
+```
+
+垂直方向上的bias值。
+
+当子组件的height属性有正确值并且有2个垂直方向的锚点时生效，设置的值必须大于等于0。
+
+默认值： 0.5
+
+**Type:** double
+
+**Default:** 0.5
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Bias-vertical?: double--><!--Device-Bias-vertical?: double-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

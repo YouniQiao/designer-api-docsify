@@ -1,18 +1,17 @@
 # SurfaceRect
 
-Describes the rectangle of the surface held by the **XComponent**.
-    **NOTE**
-    The **surfaceWidth** and **surfaceHeight** attributes default to the size of the **XComponent** if the  
-    [setXComponentSurfaceRect]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API is not called and neither  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ nor  
-    [padding]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is set.  
-    
-    Make sure the values of **surfaceWidth** and **surfaceHeight** do not exceed 8192 px. Exceeding this limit may  
-    lead to rendering issues.  
-    
-    In immersive scenarios, the default layout of **SurfaceRect** does not include the safe area. To achieve an  
-    immersive effect, you must set the surface display area using the  
-    [setXComponentSurfaceRect]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API.
+描述XComponent所持有的surface的矩形。
+
+> **说明：**
+
+> 如果未调用[setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口，且未设置
+> [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border)和
+> [padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding)，则**surfaceWidth**和**surfaceHeight**属性默认为**XComponent**的尺寸。
+> 
+> 请确保**surfaceWidth**和**surfaceHeight**的值不超过8192 px。超过此限制可能导致渲染问题。
+> 
+> 在沉浸式场景中，**SurfaceRect**的默认布局不包含安全区域。要实现沉浸式效果，必须使用
+> [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口设置surface显示区域。
 
 **Since:** 12
 
@@ -28,9 +27,9 @@ Describes the rectangle of the surface held by the **XComponent**.
 offsetX?: number
 ```
 
-X-coordinate of the surface rectangle relative to the upper-left corner of the **XComponent**.
+surface矩形相对于XComponent左上角的X坐标。
 
-Unit: px
+单位：px。
 
 **Type:** number
 
@@ -52,9 +51,9 @@ Unit: px
 offsetY?: number
 ```
 
-Y-coordinate of the surface rectangle relative to the upper left corner of the **XComponent**.
+surface矩形相对于XComponent左上角的Y坐标。
 
-Unit: px
+单位：px。
 
 **Type:** number
 
@@ -76,9 +75,9 @@ Unit: px
 surfaceHeight: number
 ```
 
-Height of the surface rectangle.
+surface矩形的高度。
 
-Unit: px.
+单位：px。
 
 **Type:** number
 
@@ -100,9 +99,9 @@ Unit: px.
 surfaceWidth: number
 ```
 
-Width of the surface rectangle.
+surface矩形的宽度。
 
-Unit: px.
+单位：px。
 
 **Type:** number
 

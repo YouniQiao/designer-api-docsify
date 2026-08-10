@@ -18,7 +18,7 @@ start?: LengthMetrics
 
 Coordinate start of the Position.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ top?: LengthMetrics
 
 Coordinate top of the Position.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 

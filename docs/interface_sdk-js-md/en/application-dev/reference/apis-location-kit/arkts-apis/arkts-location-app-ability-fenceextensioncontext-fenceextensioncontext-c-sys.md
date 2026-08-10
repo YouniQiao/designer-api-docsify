@@ -2,7 +2,7 @@
 
 class of static subscriber extension context.
 
-**Inheritance/Implementation:** FenceExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-application/extensioncontext-extensioncontext-c.md)
+**Inheritance/Implementation:** FenceExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
 **Since:** 14
 
@@ -12,13 +12,19 @@ class of static subscriber extension context.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { FenceExtensionContext } from 'kits/@kit.LocationKit';
+```
+
 ## startAbility
 
 ```TypeScript
 startAbility(want: Want): Promise<void>
 ```
 
-Starts a new service extension ability.If the target service extension ability is visible, you can start the target service extension ability;If the target service extension ability is invisible,you need to apply for permission:ohos.permission.START\_INVISIBLE\_ABILITY to start target invisible service extension ability.If the target service extension ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED\_DATASYNC.
+Starts a new service extension ability.If the target service extension ability is visible, you can start the target service extension ability;If the target service extension ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible service extension ability.If the target service extension ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 14
 
@@ -36,7 +42,7 @@ Starts a new service extension ability.If the target service extension ability i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the want info to start. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want info to start. |
 
 **Return value:**
 
@@ -48,22 +54,22 @@ Starts a new service extension ability.If the target service extension ability i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| 16000050 | Internal error. |
+| 16000019 | No matching ability is found. |
+| 202 | The application is not system-app, can not use system-api. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000011 | The context does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FenceExtensionAbility, geoLocationManager } from '@kit.LocationKit';

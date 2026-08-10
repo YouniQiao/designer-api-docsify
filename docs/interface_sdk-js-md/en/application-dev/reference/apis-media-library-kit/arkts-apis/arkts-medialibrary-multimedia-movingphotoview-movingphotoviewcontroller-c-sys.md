@@ -10,6 +10,12 @@ Defines the MovingPhotoView controller.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## enableAutoPlay
 
 ```TypeScript
@@ -40,7 +46,7 @@ Dynamically refresh the autoplay property, which will force to play after moving
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## enableTransition
 
@@ -72,7 +78,7 @@ Enable or disable the zoom transition effect and can be set during initializatio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## notifyMovingPhotoTransition
 
@@ -96,7 +102,7 @@ Notify the component to execute the picture transition animation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## pausePlayback
 
@@ -122,7 +128,7 @@ Pause moving photo and show current frame, start playing from the current frame 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## reset
 
@@ -148,7 +154,7 @@ Reset moving photo playback options as default.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## restart
 
@@ -174,7 +180,7 @@ Restart to play the video with current options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setPlaybackPeriod
 
@@ -207,5 +213,5 @@ Set moving photo playback period
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 

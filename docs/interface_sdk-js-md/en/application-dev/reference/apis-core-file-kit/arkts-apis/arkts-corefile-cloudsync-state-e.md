@@ -1,6 +1,6 @@
 # State
 
-Enumerates the download states of a cloud file.
+云文件下载状态，为枚举类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the download states of a cloud file.
 RUNNING = 0
 ```
 
-The cloud file is being downloaded.
+云文件正在下载中。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ The cloud file is being downloaded.
 COMPLETED = 1
 ```
 
-The cloud file download is complete.
+云文件下载完成。
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ The cloud file download is complete.
 FAILED = 2
 ```
 
-The cloud file download failed.
+云文件下载失败。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ The cloud file download failed.
 STOPPED = 3
 ```
 
-The cloud file download is stopped.
+云文件下载已停止。
 
 **Since:** 11
 

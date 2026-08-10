@@ -12,6 +12,12 @@ Parameters for obtaining detailed information on network interface traffic usage
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { statistics } from 'kits/@kit.NetworkKit';
+```
+
 ## endTime
 
 ```TypeScript
@@ -20,7 +26,7 @@ endTime: int
 
 End time for querying traffic.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -60,7 +66,7 @@ startTime: int
 
 Start time for querying traffic.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

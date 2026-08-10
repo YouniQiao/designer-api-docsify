@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -38,7 +44,7 @@ preState: PairingState
 
 上一个配对状态。
 
-**类型：** PairingState
+**类型：** [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
 
 **起始版本：** 26.0.0
 
@@ -58,7 +64,7 @@ reason: PairingReason
 
 配对状态原因。
 
-**类型：** PairingReason
+**类型：** [PairingReason](arkts-connectivity-remotedevice-pairingreason-e.md)
 
 **起始版本：** 26.0.0
 
@@ -98,7 +104,7 @@ state: PairingState
 
 当前配对状态。
 
-**类型：** PairingState
+**类型：** [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
 
 **起始版本：** 26.0.0
 

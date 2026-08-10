@@ -18,9 +18,9 @@ checkedBackgroundColor?: ResourceColor
 
 开启状态底板颜色。
 
-默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
+默认值：`\$r('sys.color.ohos_id_color_text_primary_activated')`
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** #007DFF
 
@@ -44,9 +44,9 @@ indicatorColor?: ResourceColor
 
 开启状态内部圆饼颜色。从API version 12开始，indicatorType设置为RadioIndicatorType.TICK和RadioIndicatorType.DOT时，支持修改内部颜色。indicatorType设置为RadioIndicatorType.CUSTOM时，不支持修改内部颜色。
 
-默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
+默认值：`\$r('sys.color.ohos_id_color_foreground_contrary')`
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** #FFFFFF
 
@@ -70,9 +70,9 @@ uncheckedBorderColor?: ResourceColor
 
 关闭状态描边颜色。
 
-默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
+默认值：`\$r('sys.color.ohos_id_color_switch_outline_off')`
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** #182431
 

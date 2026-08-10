@@ -1,10 +1,10 @@
 # SheetOptions
 
-继承自[BindOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[BindOptions](arkts-arkui-bindoptions-i.md)。
 
 半模态页面内容选项。
 
-**继承/实现关系：** SheetOptions extends [BindOptions](../arkts-apis/arkts-arkui-component/common-bindoptions-i.md)
+**继承/实现关系：** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
 
 **起始版本：** 10
 
@@ -30,7 +30,7 @@ shouldDismiss?: (sheetDismiss: SheetDismiss) => void
 
 侧拉关闭又包含侧滑（左滑/右滑）、三键back、键盘ESC关闭。
 
-建议在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_场景使用。
+建议在[二次确认](../../../ui/arkts-sheet-page.md#二次确认能力)场景使用。
 
 **起始版本：** 11
 
@@ -48,7 +48,7 @@ shouldDismiss?: (sheetDismiss: SheetDismiss) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sheetDismiss | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| sheetDismiss | [SheetDismiss](../arkts-apis/arkts-arkui-common-sheetdismiss-i.md) | 是 |  |
 
 ## blurStyle
 
@@ -58,7 +58,7 @@ blurStyle?: BlurStyle
 
 半模态面板的模糊背景。默认无模糊背景。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.NONE
 
@@ -84,13 +84,13 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 默认值：Color.Black
 
-如果使用borderColor属性，需要和borderWidth属性一起使用。
+如果使用borderColor属性，需要和borderWidth属性一起使用。 
 
 **说明：**
 
 底部弹窗时，底部边框颜色设置无效。
 
-**类型：** ResourceColor \| EdgeColors \| LocalizedEdgeColors
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
 
 **起始版本：** 12
 
@@ -114,13 +114,13 @@ borderStyle?: BorderStyle | EdgeStyles
 
 默认值：BorderStyle.Solid
 
-如果使用borderStyle属性，需要和borderWidth属性一起使用。
+如果使用borderStyle属性，需要和borderWidth属性一起使用。 
 
 **说明：**
 
 底部弹窗时，底部边框样式设置无效。
 
-**类型：** BorderStyle \| EdgeStyles
+**类型：** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
 **起始版本：** 12
 
@@ -154,7 +154,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 底部弹窗时，底部边框宽度设置无效。
 
-**类型：** Dimension \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
 
 **起始版本：** 12
 
@@ -180,9 +180,9 @@ detentSelection?: SheetSize | Length
 
 **说明：**
 
-1. 该接口取值范围为detents数组范围，若设值非detents范围，该接口无效。2. 当设置SheetSize.FIT\_CONTENT时，该接口无效。3. 不建议手势切换挡位与该接口切换挡位同时生效使用。
+1. 该接口取值范围为detents数组范围，若设值非detents范围，该接口无效。2. 当设置SheetSize.FIT_CONTENT时，该接口无效。3. 不建议手势切换挡位与该接口切换挡位同时生效使用。
 
-**类型：** SheetSize \| Length
+**类型：** [SheetSize](../arkts-apis/arkts-arkui-common-sheetsize-e.md) \| Length
 
 **默认值：** detents[0]
 
@@ -236,7 +236,7 @@ dragBar?: boolean
 
 是否显示控制条。
 
-默认值：true
+默认值：true 
 
 true：显示控制条。
 
@@ -270,11 +270,11 @@ effectEdge?: number
 
 设置半模态面板内容区边缘回弹效果，支持单边生效。
 
-**默认值**：默认双边生效，即[EffectEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.START | [EffectEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.END（即数值3）。
+**默认值**：默认双边生效，即[EffectEdge](arkts-arkui-effectedge-e.md).START | [EffectEdge](arkts-arkui-effectedge-e.md).END（即数值3）。
 
 **说明：**
 
-1. 仅上边缘生效：[EffectEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.START。2. 仅下边缘生效：[EffectEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.END。3. 双边生效：[EffectEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.START | [EffectEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_.END（即数值3）。4. 双边不生效：[EffectEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_.START & [EffectEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_.END（即数值0）。
+1. 仅上边缘生效：[EffectEdge](arkts-arkui-effectedge-e.md).START。2. 仅下边缘生效：[EffectEdge](arkts-arkui-effectedge-e.md).END。3. 双边生效：[EffectEdge](arkts-arkui-effectedge-e.md).START | [EffectEdge](arkts-arkui-effectedge-e.md).END（即数值3）。4. 双边不生效：[EffectEdge](arkts-arkui-effectedge-e.md).START & [EffectEdge](arkts-arkui-effectedge-e.md).END（即数值0）。
 
 **类型：** number
 
@@ -300,13 +300,13 @@ enableFloatingDragBar?: boolean
 
 控制条是否悬浮显示，true为悬浮显示，false为不悬浮显示。
 
-默认值：false
+默认值：false 
 
 **说明：**
 
 悬浮效果只在控制条显示的场景生效，且控制条不占位。
 
-title传入\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_时enableFloatingDragBar始终为false。
+title传入[CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)时enableFloatingDragBar始终为false。
 
 **类型：** boolean
 
@@ -334,7 +334,7 @@ enableHoverMode?: boolean
 
 默认值：false，默认不响应。
 
-2in1设备默认值：true
+2in1设备默认值：true 
 
 true：响应悬停态。
 
@@ -398,9 +398,9 @@ height?: SheetSize | Length
 
 **说明：**
 
-1. API version 14开始，底部弹窗横屏时，无状态栏则最大高度为距离屏幕顶部8vp，有状态栏则最大高度为距离状态栏8vp。2. 底部弹窗时，当设置detents时，该属性设置无效。3. 底部弹窗竖屏时，最大高度为距离状态栏8vp。4. 居中弹窗和跟手弹窗设置类型为SheetSize.LARGE和SheetSize.MEDIUM无效，显示默认高度560vp。5. 居中弹窗和跟手弹窗最小高度为320vp，最大高度为窗口短边的90%。6. 居中弹窗和跟手弹窗当使用Length设置的高度时，高度大于最大高度，则显示最大高度，小于最小高度，则显示最小高度。7. 如果半模态使用SheetSize.FIT\_CONTENT自适应模式，且类型设置为居中弹窗或跟手弹窗，API version 22及之前版本，高度大于最大高度时显示最大高度，高度小于最小高度时显示最小高度。从API version 23开始，高度大于最大高度时显示最大高度，高度小于最小高度时按照实际自适应高度生效。
+1. API version 14开始，底部弹窗横屏时，无状态栏则最大高度为距离屏幕顶部8vp，有状态栏则最大高度为距离状态栏8vp。2. 底部弹窗时，当设置detents时，该属性设置无效。3. 底部弹窗竖屏时，最大高度为距离状态栏8vp。4. 居中弹窗和跟手弹窗设置类型为SheetSize.LARGE和SheetSize.MEDIUM无效，显示默认高度560vp。5. 居中弹窗和跟手弹窗最小高度为320vp，最大高度为窗口短边的90%。6. 居中弹窗和跟手弹窗当使用Length设置的高度时，高度大于最大高度，则显示最大高度，小于最小高度，则显示最小高度。7. 如果半模态使用SheetSize.FIT_CONTENT自适应模式，且类型设置为居中弹窗或跟手弹窗，API version 22及之前版本，高度大于最大高度时显示最大高度，高度小于最小高度时显示最小高度。从API version 23开始，高度大于最大高度时显示最大高度，高度小于最小高度时按照实际自适应高度生效。
 
-**类型：** SheetSize \| Length
+**类型：** [SheetSize](../arkts-apis/arkts-arkui-common-sheetsize-e.md) \| Length
 
 **默认值：** SheetSize.LARGE
 
@@ -424,11 +424,11 @@ hoverModeArea?: HoverModeAreaType
 
 悬停态下弹窗默认展示区域。
 
-默认值：HoverModeAreaType.BOTTOM\_SCREEN
+默认值：HoverModeAreaType.BOTTOM_SCREEN 
 
-2in1设备默认值：HoverModeAreaType.TOP\_SCREEN
+2in1设备默认值：HoverModeAreaType.TOP_SCREEN
 
-**类型：** HoverModeAreaType
+**类型：** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -452,9 +452,9 @@ keyboardAvoidMode?: SheetKeyboardAvoidMode
 
 设置半模态激活输入法时对软键盘的避让方式。
 
-**默认值：** TRANSLATE\_AND\_SCROLL
+**默认值：** TRANSLATE_AND_SCROLL
 
-**类型：** SheetKeyboardAvoidMode
+**类型：** [SheetKeyboardAvoidMode](arkts-arkui-sheetkeyboardavoidmode-e.md)
 
 **默认值：** SheetKeyboardAvoidMode.TRANSLATE_AND_SCROLL
 
@@ -478,9 +478,9 @@ maskColor?: ResourceColor
 
 半模态页面的背景蒙层颜色。
 
-默认值：\$r('sys.color.ohos\_id\_color\_mask\_thin')。
+默认值：\$r('sys.color.ohos_id_color_mask_thin')。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
 
@@ -504,7 +504,7 @@ bindSheet全屏模态样式的系统转场方式。
 
 默认值：ModalTransition.DEFAULT
 
-**类型：** ModalTransition
+**类型：** [ModalTransition](arkts-arkui-modaltransition-e.md)
 
 **默认值：** ModalTransition.DEFAULT
 
@@ -532,9 +532,9 @@ mode?: SheetMode
 
 **说明：**
 
-1. 半模态显示期间mode属性不支持动态切换，两种模式的显示层级完全不同，无法做到显示期间同一个半模态从一个层级变换到另一个层级。建议在使用时明确诉求固定mode值。2. 设置SheetMode.EMBEDDED时不支持设置UIContext属性，两者对应的半模态显示层级效果互相冲突。3. 使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_启动半模态页面，若未传入有效的targetId，则不支持设置为SheetMode.EMBEDDED，默认为SheetMode.OVERLAY。
+1. 半模态显示期间mode属性不支持动态切换，两种模式的显示层级完全不同，无法做到显示期间同一个半模态从一个层级变换到另一个层级。建议在使用时明确诉求固定mode值。  2. 设置SheetMode.EMBEDDED时不支持设置UIContext属性，两者对应的半模态显示层级效果互相冲突。3. 使用[openBindSheet](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#openbindsheet12)启动半模态页面，若未传入有效的targetId，则不支持设置为SheetMode.EMBEDDED，默认为SheetMode.OVERLAY。
 
-**类型：** SheetMode
+**类型：** [SheetMode](arkts-arkui-sheetmode-e.md)
 
 **默认值：** SheetMode.OVERLAY
 
@@ -564,7 +564,7 @@ onDetentsDidChange?: Callback<number>
 
 返回值为px。
 
-**类型：** Callback&lt;number&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
 **起始版本：** 12
 
@@ -592,7 +592,7 @@ onHeightDidChange?: Callback<number>
 
 返回值为px。
 
-**类型：** Callback&lt;number&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
 **起始版本：** 12
 
@@ -618,7 +618,7 @@ onTypeDidChange?: Callback<SheetType>
 
 形态变化时返回最后的形态。
 
-**类型：** Callback&lt;SheetType&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SheetType&gt;
 
 **起始版本：** 12
 
@@ -646,7 +646,7 @@ onWidthDidChange?: Callback<number>
 
 返回值为px。
 
-**类型：** Callback&lt;number&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
 **起始版本：** 12
 
@@ -670,7 +670,7 @@ onWillDismiss?: Callback<DismissSheetAction>
 
 **说明：**
 
-当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，若已注册回调函数，则不会立即关闭页面，而是由开发者通过回调函数[DismissSheetAction]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中的reason参数判断关闭操作的类型，进而根据具体原因自主选择是否关闭半模态页面。
+当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，若已注册回调函数，则不会立即关闭页面，而是由开发者通过回调函数[DismissSheetAction](arkts-arkui-dismisssheetaction-i.md)中的reason参数判断关闭操作的类型，进而根据具体原因自主选择是否关闭半模态页面。
 
 如果不注册该回调函数，则用户执行关闭操作时，正常关闭半模态，无其他行为。
 
@@ -678,9 +678,9 @@ onWillDismiss?: Callback<DismissSheetAction>
 
 在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-建议在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_场景使用。
+建议在[二次确认](../../../ui/arkts-sheet-page.md#二次确认能力)场景使用。
 
-**类型：** Callback&lt;DismissSheetAction&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DismissSheetAction&gt;
 
 **起始版本：** 12
 
@@ -712,7 +712,7 @@ onWillSpringBackWhenDismiss?: Callback<SpringBackAction>
 
 侧边弹窗样式则是在侧拉关闭场景生效springBack。
 
-**类型：** Callback&lt;SpringBackAction&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SpringBackAction&gt;
 
 **起始版本：** 12
 
@@ -744,7 +744,7 @@ placement?: Placement
 
 2）若属性值为false，则在四个方向中，选择能够完全展示弹窗宽度且剩余高度最大的方向，通过调整半模态高度以适应当前方向，确保弹窗能够放下，同时保持预设placement对应的对齐方式不变。
 
-**类型：** Placement
+**类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **默认值：** Placement.Bottom
 
@@ -768,7 +768,7 @@ placementOnTarget?: boolean
 
 半模态popup样式弹窗在当前窗口下，四个方向均无法容纳该弹窗大小时，设置是否允许其覆盖在目标节点上。
 
-默认值：true
+默认值：true 
 
 true：允许其覆盖在目标节点上。
 
@@ -802,9 +802,9 @@ preferType?: SheetType
 
 半模态在不同窗口所支持的显示类型：
 
-1. 宽度 < 600vp：底部、全屏。默认底部样式。2. 600vp <= 宽度 &lt; 840vp：底部、居中、跟手、侧边、全屏。默认居中样式。3. 宽度 &gt;= 840vp：底部、居中、跟手、侧边、全屏。默认跟手样式。4. API version 20开始，窗口宽度大于600vp时，preferType支持设置为SheetType.SIDE。5. API version 20开始，preferType支持设置为SheetType.CONTENT\_COVER，支持设置为全屏模态样式。
+1. 宽度 < 600vp：底部、全屏。默认底部样式。2. 600vp <= 宽度 &lt; 840vp：底部、居中、跟手、侧边、全屏。默认居中样式。3. 宽度 &gt;= 840vp：底部、居中、跟手、侧边、全屏。默认跟手样式。4. API version 20开始，窗口宽度大于600vp时，preferType支持设置为SheetType.SIDE。5. API version 20开始，preferType支持设置为SheetType.CONTENT_COVER，支持设置为全屏模态样式。
 
-**类型：** SheetType
+**类型：** [SheetType](../arkts-apis/arkts-arkui-common-sheettype-e.md)
 
 **起始版本：** 11
 
@@ -834,7 +834,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 1. 根据设置的圆角半径值显示，如果未设置，则使用默认值。底部样式不显示半模态底部2个圆角，即使设置了底部2个圆角也不生效。2. 分别设置4个方向的圆角半径后，如果某个方向的值异常，异常方向的圆角值重置为默认值，非异常方向的圆角值为已设置的值。统一设置4个方向的圆角时，如果设置的值异常，4个方向的圆角都重置为默认值。3. 半径设置为百分比时，以半模态页面的宽度为基准。4. 当圆角的半径大于半模态页面宽度一半时，圆角的半径取值为半模态页面宽度的一半。5. 当半模态页面高度过小且圆角半径设置过大时，可能导致显示异常。
 
-**类型：** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **起始版本：** 15
 
@@ -856,11 +856,11 @@ radiusRenderStrategy?: RenderStrategy
 
 设置组件绘制圆角的模式。
 
-默认值：RenderStrategy.FAST
+默认值：RenderStrategy.FAST 
 
-**说明**: 当半模态设置模糊时，可通过设置为OFFSCREEN离屏模式解决半模态顶部或顶部圆角区域内显示效果异常问题。popup样式不支持设置组件绘制圆角模式。
+**说明：**: 当半模态设置模糊时，可通过设置为OFFSCREEN离屏模式解决半模态顶部或顶部圆角区域内显示效果异常问题。popup样式不支持设置组件绘制圆角模式。
 
-**类型：** RenderStrategy
+**类型：** [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md)
 
 **默认值：** RenderStrategy.FAST
 
@@ -884,9 +884,9 @@ scrollSizeMode?: ScrollSizeMode
 
 设置半模态面板滑动时，内容区域刷新时机。
 
-默认值：ScrollSizeMode.FOLLOW\_DETENT
+默认值：ScrollSizeMode.FOLLOW_DETENT
 
-**类型：** ScrollSizeMode
+**类型：** [ScrollSizeMode](../arkts-apis/arkts-arkui-common-scrollsizemode-e.md)
 
 **默认值：** ScrollSizeMode.FELLOW_DETEND
 
@@ -910,9 +910,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 设置半模态页面的阴影。
 
-2in1设备默认值：ShadowStyle.OUTER\_FLOATING\_SM。
+2in1设备默认值：ShadowStyle.OUTER_FLOATING_SM。
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
 **起始版本：** 12
 
@@ -1000,14 +1000,14 @@ systemMaterial?: SystemUiMaterial
 
 设置组件的系统材质。
 
-默认值：undefined，会清除由该接口设置的材质效果。
+默认值：undefined，会清除由该接口设置的材质效果。 
 
-**说明**: 不同系统材质对应不同的属性影响效果，该接口影响背景色  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、边框颜色[borderColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、边框宽度[borderWidth]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、阴影  
-[shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_，不建议与上述接口一起使用。使用示例请参考  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
+**说明：**: 不同系统材质对应不同的属性影响效果，该接口影响背景色
+[backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。使用示例请参考  
+[示例10（半模态设置系统材质）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sheet-transition.md#示例10半模态设置系统材质)。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 
@@ -1029,7 +1029,7 @@ title?: SheetTitleOptions | CustomBuilder
 
 半模态面板的标题。
 
-**类型：** SheetTitleOptions \| CustomBuilder
+**类型：** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) \| CustomBuilder
 
 **起始版本：** 11
 
@@ -1053,9 +1053,9 @@ uiContext?: UIContext
 
 **说明：**
 
-使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_启动的半模态页面，不支持设置、更新该属性。
+使用[openBindSheet](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#openbindsheet12)启动的半模态页面，不支持设置、更新该属性。
 
-**类型：** UIContext
+**类型：** [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 12
 
@@ -1079,7 +1079,7 @@ width?: Dimension
 
 百分比参数方式：以父元素宽的百分比来设置半模态页面的宽度。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
 

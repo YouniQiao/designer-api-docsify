@@ -1,6 +1,6 @@
 # UIEventObserver
 
-Observer to monitor UI events.
+UI事件监听器。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Observer to monitor UI events.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## once('toastShow')
 
 ```TypeScript
 once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 ```
 
-Subscribes to events of the toast component. This API uses a callback to return the result.
+开始监听toast控件出现的事件，使用callback的形式返回结果。
 
 **Since:** 10
 
@@ -32,29 +38,33 @@ Subscribes to events of the toast component. This API uses a callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'toastShow' | Yes | Event type. The value is fixed at **'toastShow'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
+| type | 'toastShow' | Yes | 订阅的事件类型，取值为'toastShow'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | 事件发生时执行的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Driver, UIElementInfo, UIEventObserver } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Register a UI event listener.
   let observer: UIEventObserver = driver.createUIEventObserver();
+  // Define a callback to output the attribute information of the Toast component.
   let callback = (UIElementInfo: UIElementInfo) => {
     console.info(UIElementInfo.bundleName);
     console.info(UIElementInfo.text);
     console.info(UIElementInfo.type);
   }
+  // Subscribe to the events of the Toast component display.
   observer.once('toastShow', callback);
 }
 ```
@@ -65,7 +75,7 @@ async function demo() {
 once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
 ```
 
-Subscribes to events of the dialog component. This API uses a callback to return the result.
+开始监听dialog控件出现的事件，使用callback的形式返回结果。
 
 **Since:** 10
 
@@ -81,16 +91,16 @@ Subscribes to events of the dialog component. This API uses a callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dialogShow' | Yes | Event type. The value is fixed at **'dialogShow'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
+| type | 'dialogShow' | Yes | 订阅的事件类型，取值为'dialogShow'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | 事件发生时执行的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -114,7 +124,8 @@ async function demo() {
 once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void
 ```
 
-Starts listening for window change events of the specified type with extended configuration supported. This API triggers a callback when a specified window change event is detected.This API can be used only in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode.
+开始监听指定类型的窗口变化事件，支持设置事件监听的扩展配置，监听到指定窗口变化事件时触发callback回调。仅支持  
+[自由多窗模式](../../../windowmanager/window-terminology.md#自由多窗模式)的窗口监听。
 
 **Since:** 22
 
@@ -130,19 +141,19 @@ Starts listening for window change events of the specified type with extended co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowChange' | Yes | Type of the event to subscribe to, which can be **windowChange**. This event is triggered when the window changes. |
-| windowChangeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the window change event. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extended configuration, including the listening timeout interval and the bundle name of the window to be listened for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UIElementInfo&gt; | Yes | Callback triggered to return event information when an event occurs. |
+| type | 'windowChange' | Yes | 订阅的事件类型，支持的事件为'windowChange'。当监听到窗口变化时，触发该事件。 |
+| windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Yes | 窗口变化事件类型。 |
+| options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Yes | 窗口变化事件监听的扩展配置，包括监听超时时间和监听窗口对应包名。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | 事件发生时执行的回调函数，返回事件的相关信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000007 | Parameter verification failed. |
+| 17000005 | This operation is not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -172,7 +183,7 @@ async function demo() {
 once(type: 'componentEventOccur', componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void
 ```
 
-Starts listening for component operation events of the specified type with extended configuration supported. This API triggers a callback when a specified component operation event is detected.
+开始监听指定类型的控件操作事件，支持设置事件监听的扩展配置，监听到指定控件操作事件时触发callback回调。
 
 **Since:** 22
 
@@ -188,19 +199,19 @@ Starts listening for component operation events of the specified type with exten
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'componentEventOccur' | Yes | Type of the event to subscribe to, which can be **componentEventOccur**. This event is triggered when the component operation is detected. |
-| componentEventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the component operation event. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extended configuration, including the listening timeout interval and the matching condition of the component to be listened for. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
+| type | 'componentEventOccur' | Yes | 订阅的事件类型，支持的事件为'componentEventOccur'。当监听到控件操作时，触发该事件。 |
+| componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Yes | 控件操作事件类型。 |
+| options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Yes | 控件操作事件监听的扩展配置，包括监听超时时间和监听控件匹配条件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | 事件发生时执行的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000007 | Parameter verification failed. |
+| 17000005 | This operation is not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -221,9 +232,9 @@ async function demo() {
     console.info(UIElementInfo.windowId?.toString());
     console.info(UIElementInfo.componentId);
     console.info(UIElementInfo.componentRect?.left.toString());
-    console.info(UIElementInfo.componentRect?.left.toString());
-    console.info(UIElementInfo.componentRect?.left.toString());
-    console.info(UIElementInfo.componentRect?.left.toString());
+    console.info(UIElementInfo.componentRect?.top.toString());
+    console.info(UIElementInfo.componentRect?.right.toString());
+    console.info(UIElementInfo.componentRect?.bottom.toString());
   };
   observer.once('componentEventOccur', ComponentEventType.COMPONENT_CLICKED, option, callback);
 }
@@ -249,16 +260,16 @@ Listen on component event once, additional listening options can be set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentEventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Component event type to be listened on. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Additional listening options of component event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UIElementInfo&gt; | Yes | function, returns the monitored UIElementInfo. |
+| componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Yes | Component event type to be listened on. |
+| options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Yes | Additional listening options of component event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | function, returns the monitored UIElementInfo. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000007 | Parameter verification failed. |
+| 17000005 | This operation is not supported. |
 
 ## onceDialogShow
 
@@ -280,13 +291,13 @@ Listen for dialog show once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UIElementInfo&gt; | Yes | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | function, returns the monitored UIElementInfo. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onceToastShow
 
@@ -308,13 +319,13 @@ Listen for toast show once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UIElementInfo&gt; | Yes | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | function, returns the monitored UIElementInfo. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onceWindowChange
 
@@ -336,14 +347,14 @@ Listen on window change once, additional listening options can be set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowChangeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window change type to be listened on. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Additional listening options of window change. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UIElementInfo&gt; | Yes | function, returns the monitored UIElementInfo. |
+| windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Yes | Window change type to be listened on. |
+| options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Yes | Additional listening options of window change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | function, returns the monitored UIElementInfo. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000007 | Parameter verification failed. |
+| 17000005 | This operation is not supported. |
 

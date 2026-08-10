@@ -1,12 +1,18 @@
 # startCasting (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## startCasting
 
 ```TypeScript
 function startCasting(session: SessionToken, device: OutputDeviceInfo, callback: AsyncCallback<void>): void
 ```
 
-Cast resource to remote device.
+启动投播。结果通过callback异步回调方式返回。
 
 **Since:** 10
 
@@ -24,25 +30,23 @@ Cast resource to remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the sessionId which is to be casted. |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the device to cast. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | A callback instance used to return when start casting. |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | Yes | 会话令牌。SessionToken表示单个token。 |
+| device | [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | Yes | 设备相关信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功并启动投播，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600108](../errorcode-avsession.md#6600108-device-connection-failure) | Device connecting failed |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600101 | Session service exception |
+| 6600108 | Device connecting failed |
+| 201 | permission denied |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
@@ -51,12 +55,8 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
   castDevice = device;
   console.info(`on deviceAvailable  : ${device} `);
   if (castDevice !== undefined) {
-    avSession.startCasting(myToken, castDevice, (err: BusinessError) => {
-      if (err) {
-        console.error(`startCasting BusinessError: code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info('startCasting successfully');
-      }
+    avSession.startCasting(myToken, castDevice, () => {
+        console.info('Succeeded in starting casting.');
     });
   }
 });
@@ -69,7 +69,7 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
 function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<void>
 ```
 
-Cast resource to remote device.
+启动投播。结果通过Promise异步回调方式返回。
 
 **Since:** 10
 
@@ -87,30 +87,28 @@ Cast resource to remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the sessionId which is to be casted. |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the device to cast. |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | Yes | 会话令牌。SessionToken表示单个token。 |
+| device | [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | Yes | 设备相关信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise对象。当命令发送成功并启动投播，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600108](../errorcode-avsession.md#6600108-device-connection-failure) | Device connecting failed |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600101 | Session service exception |
+| 6600108 | Device connecting failed |
+| 201 | permission denied |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
@@ -120,9 +118,7 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
   console.info(`on deviceAvailable  : ${device} `);
   if (castDevice !== undefined) {
     avSession.startCasting(myToken, castDevice).then(() => {
-      console.info('startCasting successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startCasting BusinessError: code: ${err.code}, message: ${err.message}`);
+      console.info('Succeeded in starting casting.');
     });
   }
 });

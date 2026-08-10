@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## getReceivingSurfaceId
 
 ```TypeScript
@@ -34,7 +40,7 @@ getReceivingSurfaceId(): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | 异步返回Surface ID。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -76,9 +82,9 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，接收图片时触发。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 注册的事件回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 注册的事件回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -103,10 +109,11 @@ readLatestImage(): Promise<Image>
 ```
 
 从ImageReceiver读取最新的图片。使用promise异步回调。
-    **注意**：  
-    
-    此接口需要在[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调触发后调用，才能正常的接收到数据。且此接口返回的[Image]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_对象使  
-    用完毕后需要调用[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_方法释放，释放后才可以继续接收新的数据。
+
+> **注意**：
+> 
+> 此接口需要在[on](sendableImage.ImageReceiver.on)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md)对象使
+> 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 12
 
@@ -122,7 +129,7 @@ readLatestImage(): Promise<Image>
 | --- | --- |
 | Promise&lt;Image&gt; | 异步返回最新图片。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -150,10 +157,11 @@ readNextImage(): Promise<Image>
 ```
 
 从ImageReceiver读取下一张图片。使用promise异步回调。
-    **注意**：  
-    
-    此接口需要在[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调触发后调用，才能正常的接收到数据。且此接口返回的[Image]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_对象使  
-    用完毕后需要调用[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_方法释放，释放后才可以继续接收新的数据。
+
+> **注意**：
+> 
+> 此接口需要在[on](sendableImage.ImageReceiver.on)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md)对象使
+> 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 12
 
@@ -169,7 +177,7 @@ readNextImage(): Promise<Image>
 | --- | --- |
 | Promise&lt;Image&gt; | 异步返回下一张图片。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -216,7 +224,7 @@ release(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 异步返回操作结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

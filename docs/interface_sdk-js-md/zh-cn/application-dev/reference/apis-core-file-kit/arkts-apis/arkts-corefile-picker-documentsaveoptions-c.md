@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
+## 导入模块
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
+
 ## autoCreateEmptyFile
 
 ```TypeScript
@@ -100,7 +106,7 @@ pickerMode?: DocumentPickerMode
 
 拉起picker的类型, 默认为DEFAULT。当pickerMode设置为DOWNLOAD时，用户配置的参数newFileNames、defaultFilePathUri和fileSuffixChoices将不会生效。
 
-**类型：** DocumentPickerMode
+**类型：** [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md)
 
 **起始版本：** 12
 

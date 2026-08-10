@@ -1,6 +1,6 @@
 # RichEditorImageSpan
 
-Image span information.
+图片Span信息。
 
 **Since:** 10
 
@@ -16,9 +16,9 @@ Image span information.
 imageStyle?: RichEditorImageSpanStyle
 ```
 
-Image style.
+图片样式。
 
-**Type:** RichEditorImageSpanStyle
+**Type:** [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md)
 
 **Since:** 10
 
@@ -38,9 +38,9 @@ Image style.
 spanPosition: RichEditorSpanPosition
 ```
 
-Span position.
+Span位置。
 
-**Type:** RichEditorSpanPosition
+**Type:** [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md)
 
 **Since:** 10
 
@@ -60,9 +60,9 @@ Span position.
 value: PixelMap | ResourceStr
 ```
 
-Image content.
+图片内容。
 
-**Type:** PixelMap \| ResourceStr
+**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr
 
 **Since:** 10
 

@@ -4,7 +4,7 @@
 export type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => RequestEventResult
 ```
 
-Plugin component request event callback.
+对应request事件的监听回调函数。
 
 **Since:** 23
 
@@ -20,13 +20,13 @@ Plugin component request event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request the sender to provide relevant information.  |
-| name | string | Yes | Template name.  |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | data info.  |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | request请求发送方相关信息。 |
+| name | string | Yes | 请求的组件名称。 |
+| data | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Yes | request事件中传递的数据内容，以键值对形式存储，键和值类型由业务定义。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | - |
+| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | 注册request监听方法后，接收到请求事件时回应请求的数据类型。 |
 

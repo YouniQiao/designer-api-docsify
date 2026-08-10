@@ -1,6 +1,6 @@
 # EditableTitleBarMenuItemV2
 
-Declaration of the menu item on the right side.
+菜单项配置类。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declaration of the menu item on the right side.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
 public action?: OnActionCallback
 ```
 
-Callback function when click on this menu item.
+点击菜单项的回调函数。
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ Callback function when click on this menu item.
 constructor(options?: EditableTitleBarMenuItemV2Options)
 ```
 
-Constructor of EditableTitleBarMenuItemV2.
+EditableTitleBarMenuItemV2的构造函数。
 
 **Since:** 26.0.0
 
@@ -52,7 +58,7 @@ Constructor of EditableTitleBarMenuItemV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of the menu item |
+| options | [EditableTitleBarMenuItemV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2options-i.md) | No | 菜单项配置选项。 |
 
 ## accessibilityDescription
 
@@ -60,9 +66,11 @@ Constructor of EditableTitleBarMenuItemV2.
 public accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description.
+可访问性描述。此描述用于向用户详细解释当前组件，开发人员应为组件的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的后果。如果组件同时具备文本属性和无障碍说明属性，当组件被选中时，系统将首先播报组件的文本属性，随后播报无障碍说明属性的内容。
 
-**Type:** ResourceStr
+默认值："单指双击即可执行"。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -80,7 +88,19 @@ Accessibility description.
 public accessibilityLevel: string
 ```
 
-Accessibility level, options: 'auto', 'yes', 'no'.
+可访问性级别，用于控制当前项是否可被无障碍辅助服务所识别。
+
+支持的值为：
+
+"auto"：当前组件会转换为"yes"。
+
+"yes"：当前组件可被无障碍辅助服务所识别。
+
+"no"：当前组件不可被无障碍辅助服务所识别。
+
+"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
+
+默认值："auto"
 
 **Type:** string
 
@@ -102,9 +122,11 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 public accessibilityText?: ResourceStr
 ```
 
-Accessibility text for screen reader.
+屏幕阅读器的可访问性文本。当组件不包含文本属性时，屏幕朗读选中此组件时不播报，使用者无法清楚地知道当前选中了什么组件。为了解决此场景，开发人员可为不包含文字信息的组件设置无障碍文本，当屏幕朗读选中此组件时播报无障碍文本的内容。
 
-**Type:** ResourceStr
+默认值：有label时默认值为当前项label属性内容，没有设置label时，默认值为" "。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -122,7 +144,13 @@ Accessibility text for screen reader.
 public defaultFocus: boolean
 ```
 
-Whether to get focus by default.
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **Type:** boolean
 
@@ -144,7 +172,11 @@ Whether to get focus by default.
 public isEnabled: boolean
 ```
 
-Whether to enable this menu item.
+是否启用。
+
+默认值：true，表示启用。
+
+isEnabled为false时，表示禁用。
 
 **Type:** boolean
 
@@ -166,9 +198,9 @@ Whether to enable this menu item.
 public label?: ResourceStr
 ```
 
-Label text for long press dialog.
+长按对话框的标签文本。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -186,9 +218,9 @@ Label text for long press dialog.
 public symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol icon style modifier.
+Symbol图标样式修饰器，优先级大于value。
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -206,9 +238,11 @@ Symbol icon style modifier.
 public value: ResourceStr
 ```
 
-Icon resource, supports Symbol or Image.
+图标资源，支持Symbol或Image。
 
-**Type:** ResourceStr
+默认值：''。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Default:** ''
 

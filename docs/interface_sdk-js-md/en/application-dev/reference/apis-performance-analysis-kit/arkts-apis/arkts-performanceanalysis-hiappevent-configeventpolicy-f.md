@@ -1,14 +1,20 @@
 # configEventPolicy
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## configEventPolicy
 
 ```TypeScript
 function configEventPolicy(policy: EventPolicy): Promise<void>
 ```
 
-Sets a system event configuration policy. This API uses a promise to return the result.
+系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。
 
-In the same lifecycle, you can set system event configuration by policy.
+在同一生命周期中，可以通过配置策略设置系统事件相关的策略参数。
 
 **Since:** 22
 
@@ -24,15 +30,15 @@ In the same lifecycle, you can set system event configuration by policy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | System event configuration policy. |
+| policy | [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md) | Yes | 系统事件配置策略。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the event configuration policy, see [EventPolicy]{ |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 &lt;br&gt;各个事件的事件配置策略，详细规格见[EventPolicy]{ |
 
-**Example**
+## Examples
 
 The following example shows how to configure a policy for the MAIN_THREAD_JANK event:
 
@@ -41,13 +47,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let policy: hiAppEvent.EventPolicy = {
-  "mainThreadJankPolicy":{
-    "logType": 1,
-    "sampleInterval": 100,
-    "ignoreStartupTime": 11,
-    "sampleCount": 21,
-    "reportTimesPerApp": 3,
-    "autoStopSampling": true
+  mainThreadJankPolicy:{
+    logType: 1,
+    sampleInterval: 100,
+    ignoreStartupTime: 11,
+    sampleCount: 21,
+    reportTimesPerApp: 3,
+    autoStopSampling: true
   }
 };
 hiAppEvent.configEventPolicy(policy).then(() => {

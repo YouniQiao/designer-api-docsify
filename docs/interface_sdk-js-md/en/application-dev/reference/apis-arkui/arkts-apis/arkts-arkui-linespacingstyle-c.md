@@ -1,6 +1,6 @@
 # LineSpacingStyle
 
-Describes the text line spacing style.
+文本行间距对象说明。适用于需要调整段落内各行间距的场景，例如提升文本阅读舒适度、调整文档排版密度等。
 
 **Since:** 26.0.0
 
@@ -16,9 +16,7 @@ Describes the text line spacing style.
 constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-A constructor used to create a text line spacing style.
-
-**Since**: 26.0.0
+文本行间距的构造函数。未通过该接口设置时，默认行间距为0.0。LengthMetrics的value值小于0时，取默认值0.0。当与[LineHeightStyle](arkts-arkui-lineheightstyle-c.md)的lineHeightMultiple同时设置且lineHeightMultiple生效时，该参数不生效。
 
 **Since:** 26.0.0
 
@@ -36,8 +34,8 @@ A constructor used to create a text line spacing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineSpacing | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text line spacing.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **0.0**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞) \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE** If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Line spacing options.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **{ onlyBetweenLines: false } |
+| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本的行间距。 &lt;br&gt;取值范围：[0, +∞) |
+| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | 行间距的配置项。 |
 
 ## lineSpacing
 
@@ -45,11 +43,11 @@ A constructor used to create a text line spacing style.
 readonly lineSpacing: number
 ```
 
-Text line spacing.
+文本行间距。
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -71,9 +69,9 @@ Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 readonly options?: LineSpacingOptions
 ```
 
-Line spacing options.
+行间距配置项。
 
-**Type:** LineSpacingOptions
+**Type:** [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md)
 
 **Since:** 26.0.0
 

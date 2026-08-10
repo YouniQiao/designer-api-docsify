@@ -1,12 +1,18 @@
 # uninstallPublicCertificate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## uninstallPublicCertificate
 
 ```TypeScript
 function uninstallPublicCertificate(keyUri: string) : Promise<void>
 ```
 
-Uninstalls the public credential of the user. This API is called only by the certificate management application.This API uses a promise to return the result.
+卸载用的户公共凭据，仅证书管理应用调用。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -26,25 +32,25 @@ Uninstalls the public credential of the user. This API is called only by the cer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyUri | string | Yes | Unique identifier of a user's public credential. |
+| keyUri | string | Yes | 表示用户公共凭据的唯一标识符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Possible causes: the URI is null or the URI format is wrong. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
-| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | Indicates that the certificate does not exist. |
+| 401 | Parameter verification failed. &lt;br&gt; Possible causes: the URI is null or the URI format is wrong. |
+| 201 | Permission verification failed. &lt;br&gt; The application does not have the permission required to call the API. |
+| 17500002 | Indicates that the certificate does not exist. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -52,13 +58,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let keyUri: string = 'test'; /* Unique identifier of the user public credential. */
 try {
-    certificateManager.uninstallPublicCertificate(keyUri).then(() => {
-        console.info('Succeeded in uninstalling public certificate.');
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to uninstall public certificate. Code: ${err.code}, message: ${err.message}`);
-    })
-} catch (error: BusinessError) {
-    console.error(`Failed to uninstall public certificate. Code: ${error.code}, message: ${error.message}`);
+  certificateManager.uninstallPublicCertificate(keyUri).then(() => {
+    console.info('Succeeded in uninstalling public certificate.');
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to uninstall public certificate. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to uninstall public certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

@@ -1,6 +1,6 @@
 # EmbeddedOptions
 
-This interface is used to set the options for EmbeddedComponentAttribute during construction
+用于在EmbeddedComponent创建时传递可选的构造参数。
 
 **Since:** 26.0.0
 
@@ -16,9 +16,11 @@ This interface is used to set the options for EmbeddedComponentAttribute during 
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-Set Areachange placeholder.If the Areachange placeholder ComponentContent is set, the placeholder node is displayed until the EmbeddedComponent size change is complete.
+设置尺寸变化占位符，在EmbeddedComponent尺寸发生变化并且内部渲染未完成时显示。key为尺寸变化场景类型（如"FOLD_TO_EXPAND"表示折叠展开场景），value为对应场景的占位符组件。当前支持的键值包括：FOLD_TO_EXPAND。传入不支持的键值时，该占位符不生效。
 
-**Type:** Record&lt;string, ComponentContent&gt;
+默认值：null，表示不设置尺寸变化占位符。
+
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
 
 **Since:** 26.0.0
 
@@ -38,9 +40,11 @@ Set Areachange placeholder.If the Areachange placeholder ComponentContent is set
 dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 ```
 
-Set EmbeddedComponent Content Dpi Follow Strategy.
+设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。
 
-**Type:** EmbeddedDpiFollowStrategy
+默认值：FOLLOW_UI_EXTENSION_ABILITY_DPI，表示跟随EmbeddedUIExtensionAbility。
+
+**Type:** [EmbeddedDpiFollowStrategy](../arkts-apis/arkts-arkui-embeddedcomponent-embeddeddpifollowstrategy-e.md)
 
 **Default:** EmbeddedDpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
@@ -62,9 +66,11 @@ Set EmbeddedComponent Content Dpi Follow Strategy.
 placeholder?: ComponentContent
 ```
 
-Set placeholder.If set placeholder ComponentContent, show placeholder node when connection is not established.
+设置占位符，在EmbeddedComponent与EmbeddedUIExtensionAbility建立连接前显示。
 
-**Type:** ComponentContent
+默认值：null，表示不显示占位符。
+
+**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
 **Since:** 26.0.0
 
@@ -84,9 +90,11 @@ Set placeholder.If set placeholder ComponentContent, show placeholder node when 
 windowModeFollowStrategy?: EmbeddedWindowModeFollowStrategy
 ```
 
-Set EmbeddedComponent Content Window Mode Follow Strategy.
+设置窗口模式，使其能够跟随宿主或EmbeddedUIExtensionAbility。
 
-**Type:** EmbeddedWindowModeFollowStrategy
+默认值：FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE，表示窗口模式跟随EmbeddedUIExtensionAbility。
+
+**Type:** [EmbeddedWindowModeFollowStrategy](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedwindowmodefollowstrategy-e.md)
 
 **Default:** EmbeddedWindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 

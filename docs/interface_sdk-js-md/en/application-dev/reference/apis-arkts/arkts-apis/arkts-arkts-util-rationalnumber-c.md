@@ -10,6 +10,12 @@ The rational number is mainly to compare rational numbers and obtain the numerat
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## compare
 
 ```TypeScript
@@ -30,7 +36,7 @@ Compares the current RationalNumber object to the given object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| another | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | An object of other rational numbers |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
@@ -80,7 +86,7 @@ Creates a RationalNumber object based on a given string.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a RationalNumber object generated based on the given string. |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
 
 ## equals
 
@@ -276,7 +282,7 @@ Used to create a RationalNumber instance with a given numerator and denominator.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) |  |
 
 ## toString
 

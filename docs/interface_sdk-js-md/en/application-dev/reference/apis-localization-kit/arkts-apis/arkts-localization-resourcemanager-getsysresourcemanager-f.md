@@ -1,12 +1,18 @@
 # getSysResourceManager
 
+## Modules to Import
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## getSysResourceManager
 
 ```TypeScript
 export function getSysResourceManager(): ResourceManager
 ```
 
-Obtains a system resource management object for accessing preset system resources.
+获取系统资源管理对象，用于访问系统预置的资源。
 
 **Since:** 20
 
@@ -22,15 +28,15 @@ Obtains a system resource management object for accessing preset system resource
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The system **ResourceManager** object. |
+| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | 系统资源管理对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
+| 9001009 | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';

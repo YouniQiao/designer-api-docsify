@@ -1,5 +1,11 @@
 # getDnsUnicode
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## getDnsUnicode
 
 ```TypeScript
@@ -21,23 +27,23 @@ Convert a string from ASCII Compatible Encoding (ACE) to Unicode, as defined by 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the domain name of the ASCII type. |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates process flag, can be 0 or any logical OR of possible flags. can be ALLOW\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNASSIGNED \| USE\_\_\_ESCAPED\_UNDERSCORE\_\_\_STD3\_\_\_ESCAPED\_UNDERSCORE\_\_\_ASCII\_\_\_ESCAPED\_UNDERSCORE\_\_\_RULES to set all flag. |
+| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | No | Indicates process flag, can be 0 or any logical OR of possible flags. can be ALLOW_UNASSIGNED \| USE_STD3_ASCII_RULES to set all flag. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string |  Return the converted string. |
+| string | Return the converted string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 2100001 | Invalid parameter value. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

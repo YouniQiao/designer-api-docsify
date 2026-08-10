@@ -1,12 +1,18 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## on('systemBarTintChange')
 
 ```TypeScript
 function on(type: 'systemBarTintChange', callback: Callback<SystemBarTintState>): void
 ```
 
-Subscribes to the property change event of the status bar and navigation bar.
+开启状态栏、导航栏属性变化的监听。
 
 **Since:** 8
 
@@ -22,17 +28,17 @@ Subscribes to the property change event of the status bar and navigation bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemBarTintChange' | Yes | Event type. The value is fixed at **'systemBarTintChange'**, indicating the property change event of the status bar and navigation bar. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemBarTintState&gt; | Yes | Callback used to return the properties of the status bar and navigation bar. |
+| type | 'systemBarTintChange' | Yes | 监听事件，固定为'systemBarTintChange'，即导航栏、状态栏属性变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SystemBarTintState&gt; | Yes | 回调函数。返回当前的状态栏、导航栏信息集合。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -51,7 +57,7 @@ try {
 function on(type: 'gestureNavigationEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the gesture navigation status change event.
+添加手势导航启用状态变化的监听。
 
 **Since:** 10
 
@@ -67,19 +73,19 @@ Subscribes to the gesture navigation status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'gestureNavigationEnabledChange' | Yes | Event type. The value is fixed at **'gestureNavigationEnabledChange'**, indicating the gesture navigation status change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the gesture navigation status. **true** if enabled, **false** otherwise. |
+| type | 'gestureNavigationEnabledChange' | Yes | 监听事件，固定为'gestureNavigationEnabledChange'，即手势导航启用状态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。返回当前手势导航的启用状态。true表示手势导航状态变化为启用；false表示手势导航状态变化为禁用。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -98,7 +104,7 @@ try {
 function on(type: 'waterMarkFlagChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the watermark status change event.
+添加水印启用状态变化的监听。
 
 **Since:** 10
 
@@ -114,19 +120,19 @@ Subscribes to the watermark status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'waterMarkFlagChange' | Yes | Event type. The value is fixed at **'waterMarkFlagChange'**, indicating the watermark status change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the watermark status. **true** if enabled, **false** otherwise. |
+| type | 'waterMarkFlagChange' | Yes | 监听事件，固定为'waterMarkFlagChange'，即水印启用状态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。返回当前水印的启用状态。true表示当前已启用水印；false表示当前未启用水印。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

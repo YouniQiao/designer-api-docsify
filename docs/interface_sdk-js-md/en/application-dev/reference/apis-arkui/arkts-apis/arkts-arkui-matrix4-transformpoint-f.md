@@ -1,12 +1,20 @@
 # transformPoint
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## transformPoint
 
 ```TypeScript
 function transformPoint(options: [number, number]): [number, number]
 ```
 
-Applies the current transformation effect to a coordinate point.
+Matrix的坐标点转换函数，可以将当前的变换效果作用到一个坐标点上。
+
+> **说明：**
 
 **Since:** 7
 
@@ -14,7 +22,7 @@ Applies the current transformation effect to a coordinate point.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformpoint)
+**Substitutes:** [matrix4.Matrix4Transit.transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformpoint)
 
 <!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]--><!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]-End-->
 
@@ -24,11 +32,11 @@ Applies the current transformation effect to a coordinate point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [number, number] | Yes | Point to be transformed. |
+| options | [number, number] | Yes | 需要转换的坐标点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [number, number] | Point object after matrix transformation |
+| [number, number] | 返回矩阵变换后的Point对象。 |
 

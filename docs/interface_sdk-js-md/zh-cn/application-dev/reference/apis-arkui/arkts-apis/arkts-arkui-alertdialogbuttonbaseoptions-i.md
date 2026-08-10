@@ -1,9 +1,10 @@
 # AlertDialogButtonBaseOptions
 
 警告弹窗中按钮的样式。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -41,7 +42,7 @@ backgroundColor?: ResourceColor
 
 Button背景颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
 
@@ -113,7 +114,7 @@ fontColor?: ResourceColor
 
 Button的文本颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
 
@@ -135,7 +136,7 @@ style?: DialogButtonStyle
 
 设置Button的风格样式，默认值DialogButtonStyle.DEFAULT。
 
-**类型：** DialogButtonStyle
+**类型：** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
 **默认值：** -
 
@@ -159,7 +160,7 @@ value: ResourceStr
 
 Button的文本内容，若值为null，则该按钮不显示。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 

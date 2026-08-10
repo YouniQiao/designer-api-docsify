@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## curve
 
 ```TypeScript
@@ -18,7 +24,7 @@ curve: WindowAnimationCurve
 
 动画曲线类型。
 
-**类型：** WindowAnimationCurve
+**类型：** [WindowAnimationCurve](arkts-arkui-window-windowanimationcurve-e.md)
 
 **起始版本：** 20
 
@@ -42,7 +48,7 @@ duration?: long
 
 根据动画曲线类型决定是否必填。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 
@@ -62,7 +68,7 @@ param?: WindowAnimationCurveParam
 
 动画曲线参数，根据动画曲线类型决定是否必填。
 
-**类型：** WindowAnimationCurveParam
+**类型：** [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md)
 
 **起始版本：** 20
 

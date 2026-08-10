@@ -4,7 +4,7 @@
 declare type PathShape = import('../api/@ohos.arkui.shape').PathShape
 ```
 
-Defines the PathShape type.
+导入PathShape类型对象。
 
 **Since:** 12
 

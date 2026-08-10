@@ -1,6 +1,6 @@
 # SheetInfo
 
-Defines the option content in the dialog box. You can configure the text, icon, and callback for each option.
+弹窗中的选项内容，每一项支持设置文本、图标以及选中的回调。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Defines the option content in the dialog box. You can configure the text, icon, 
 action: VoidCallback
 ```
 
-Callback when the sheet is selected.
+选项选中的回调。
 
 **Since:** 8
 
@@ -34,9 +34,9 @@ Callback when the sheet is selected.
 icon?: string | Resource
 ```
 
-Sheet icon. By default, no icon is displayed.
+选项的图标，默认无图标显示。
 
-The string type can be used to load local images and, more frequently, online images. The value can be a relative path to a local image, for example, **Image("common/test.jpg")**.
+string格式可用于加载网络图片和本地图片，常用于加载网络图片。当使用相对路径引用本地图片时，例如Image("common/test.jpg")。
 
 **Type:** string \| Resource
 
@@ -56,9 +56,9 @@ The string type can be used to load local images and, more frequently, online im
 title: string | Resource
 ```
 
-Sheet text.
+选项的文本内容。
 
-If the text is too long to display, a scrollbar is displayed.
+文本超长时会触发滚动条。
 
 **Type:** string \| Resource
 

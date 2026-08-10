@@ -1,0 +1,110 @@
+# LiveFormExtensionContext
+
+**LiveFormExtensionContext**, inherited from   
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md), is the context of   
+[LiveFormExtensionAbility](arkts-app-form-liveformextensionability.md).
+
+**Inheritance/Implementation:** LiveFormExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+## connectServiceExtensionAbility
+
+ArkTS-Dyn:
+```TypeScript
+public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): number
+```
+
+ArkTS-Sta:
+```TypeScript
+public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): long
+```
+
+Connect a service extension ability.The destination of the connection must be a service extension.You must implement the {@link ConnectOptions} interface to obtain the proxy of the target service extension when the Service extension is connected.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LiveFormExtensionContext-public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): long--><!--Device-LiveFormExtensionContext-public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): long-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the service extension to connect. |
+| connection | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | Yes | Indicates the callback of connection. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Returns the connection id. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 16501000 | An internal functional error occurred. |
+| 16501011 | The form can not support this operation |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 16500100 | Failed to obtain the configuration information. |
+
+## disconnectServiceExtensionAbility
+
+ArkTS-Dyn:
+```TypeScript
+public disconnectServiceExtensionAbility(connectionId: number): Promise<void>
+```
+
+ArkTS-Sta:
+```TypeScript
+public disconnectServiceExtensionAbility(connectionId: long): Promise<void>
+```
+
+Disconnect an ability to a service extension, in contrast to {@link connectServiceExtensionAbility}.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LiveFormExtensionContext-public disconnectServiceExtensionAbility(connectionId: long): Promise<void>--><!--Device-LiveFormExtensionContext-public disconnectServiceExtensionAbility(connectionId: long): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| connectionId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | the connection id returned from connectServiceExtensionAbility api. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 16501000 | An internal functional error occurred. |
+| 16501011 | The form can not support this operation |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+

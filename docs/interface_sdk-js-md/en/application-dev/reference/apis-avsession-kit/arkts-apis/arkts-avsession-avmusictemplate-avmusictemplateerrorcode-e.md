@@ -1,6 +1,6 @@
 # AVMusicTemplateErrorCode
 
-Enumeration ErrorCode types, returns in BusinessError.code.
+表示错误码类型的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumeration ErrorCode types, returns in BusinessError.code.
 ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_FAILED = 35000001
 ```
 
-Failed to create the AVMusicTemplate.
+音频模板创建失败。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Failed to create the AVMusicTemplate.
 ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_CONTROLLER_FAILED = 35000002
 ```
 
-Failed to create the AVMusicTemplate controller.
+音频模板控制器创建失败。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Failed to create the AVMusicTemplate controller.
 ERR_CODE_TEMPLATE_LISTENER_NO_EXIT = 35000003
 ```
 
-Template listener not registered.
+模板监听未注册。
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Template listener not registered.
 ERR_CODE_CONTROLLER_CALLBACK_NO_EXIT = 35000004
 ```
 
-Controller callback not registered.
+未注册模板控制器回调。
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Controller callback not registered.
 ERR_CODE_AV_MUSIC_TEMPLATE_NOT_EXIST = 35000005
 ```
 
-AVMusicTemplate does not exist.
+音频模板不存在。
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ AVMusicTemplate does not exist.
 ERR_CODE_CONTROLLER_NOT_EXIST = 35000006
 ```
 
-AVMusicTemplateController does not exist.
+模板控制器不存在。
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ AVMusicTemplateController does not exist.
 ERR_CODE_CONTROLLER_IS_EXIST = 35000007
 ```
 
-AVMusicTemplateController already exists.
+模板控制器已经存在。
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ AVMusicTemplateController already exists.
 ERR_CODE_SERVICE_NOT_EXIST = 35000008
 ```
 
-AVMusicTemplate Manager services do not exist.
+音频模板管理服务不存在。
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ AVMusicTemplate Manager services do not exist.
 ERR_CODE_SERVICE_EXCEPTION = 35000009
 ```
 
-AVMusicTemplate Manager services exception.
+音频模板管理服务异常。
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ AVMusicTemplate Manager services exception.
 ERR_CODE_EXCEED_MAX_DATA_SIZE = 35000010
 ```
 
-The data exceeds the maximum allowable transmission capacity.
+数据超过了允许的最大传输容量。
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ The data exceeds the maximum allowable transmission capacity.
 ERR_CODE_WRITE_RESULT_EXCEPTION = 35000011
 ```
 
-The data write error, data is invalid.
+写数据失败，数据不可用。
 
 **Since:** 23
 
@@ -214,7 +214,7 @@ The data write error, data is invalid.
 ERR_CODE_AV_MUSIC_TEMPLATE_ERROR = 35000012
 ```
 
-AVMusicTemplate error.
+音频模板错误。
 
 **Since:** 23
 

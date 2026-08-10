@@ -1,6 +1,6 @@
 # BlurOnKeyboardHideMode
 
-Enumerates whether the **Web** component loses focus when the soft keyboard is hidden.
+Enum type supplied to {@link blurOnKeyboardHideMode} for setting the web blurOnKeyboardHide mode.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates whether the **Web** component loses focus when the soft keyboard is h
 SILENT = 0
 ```
 
-The **Web** component does not lose focus when the soft keyboard is hidden.
+The focused input elements on webview will not blur when soft keyboard is hidden manually.
 
 **Since:** 14
 
@@ -34,7 +34,7 @@ The **Web** component does not lose focus when the soft keyboard is hidden.
 BLUR = 1
 ```
 
-The **Web** component loses focus when the soft keyboard is hidden, and the focus moves from the text box to the web body.
+The focused input elements on webview will blur when soft keyboard is hidden manually.
 
 **Since:** 14
 

@@ -12,6 +12,12 @@ Obtains WCDMA cell information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## cellId
 
 ```TypeScript
@@ -20,7 +26,7 @@ cellId: int
 
 Indicates the cell ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -40,7 +46,7 @@ lac: int
 
 Indicates the location area code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -100,7 +106,7 @@ psc: int
 
 Indicates the primary scrambling code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -120,7 +126,7 @@ uarfcn: int
 
 Indicates the absolute radio frequency number.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

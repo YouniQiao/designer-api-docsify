@@ -1,8 +1,24 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an  
-**InputMethodController** instance is obtained via  
-[getController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller)获取到InputMethodController实例，再通过实例调用对应方法。
+
+InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作：
+
+- **绑定管理**：通过  
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)建立与输入法的绑定，通过[detach](arkts-ime-inputmethod-inputmethodcontroller-i.md#detach)解除绑定。attach和detach必须配对使用。  
+- **键盘控制**：通过[showTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#showtextinput)拉  
+起软键盘进入编辑状态，通过[hideTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#hidetextinput)隐藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。  
+- **编辑框状态同步**：通过  
+[updateCursor](arkts-ime-inputmethod-inputmethodcontroller-i.md#updatecursor)、  
+[changeSelection](arkts-ime-inputmethod-inputmethodcontroller-i.md#changeselection)、  
+[updateAttribute](arkts-ime-inputmethod-inputmethodcontroller-i.md#updateattribute)等接口向输入法同步光标、选区、属性等编辑框状态信息。  
+- **事件订阅**：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。
+
+典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()`
+
+> **注意：**
+> 
+> attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
 
 **Since:** 6
 
@@ -11,6 +27,12 @@ A control class that encapsulates APIs for input method management, which can on
 <!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
 
 ## hideSoftKeyboard
 
@@ -24,11 +46,7 @@ ArkTS-Sta:
 hideSoftKeyboard(displayId: long): Promise<void>
 ```
 
-Hides the soft keyboard on a specified screen. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API can be called only when the edit box is attached to the input method. That is, it can be called to  
-    hide the soft keyboard only when the edit box is focused.
+隐藏指定屏幕上的输入法软键盘。使用Promise异步回调。
 
 **Since:** 23
 
@@ -48,24 +66,24 @@ Hides the soft keyboard on a specified screen. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Display ID. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 201 | permissions check fails. |
+| 202 | not system application. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,11 +108,7 @@ ArkTS-Sta:
 showSoftKeyboard(displayId: long): Promise<void>
 ```
 
-Shows the soft keyboard on a specified screen. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API can be called only when the edit box is attached to the input method. That is, it can be called to  
-    show the soft keyboard only when the edit box is focused.
+在指定屏幕上显示输入法软键盘。使用Promise异步回调。
 
 **Since:** 23
 
@@ -114,24 +128,24 @@ Shows the soft keyboard on a specified screen. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Display ID. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 201 | permissions check fails. |
+| 202 | not system application. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

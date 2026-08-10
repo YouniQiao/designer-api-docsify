@@ -146,7 +146,7 @@ RGB色域为BT709类型。
 BT601_EBU = 7
 ```
 
-RGB色域为BT601\_P类型。
+RGB色域为BT601_P类型。
 
 转换函数为BT709类型。
 
@@ -168,7 +168,7 @@ RGB色域为BT601\_P类型。
 BT601_SMPTE_C = 8
 ```
 
-RGB色域为BT601\_N类型。
+RGB色域为BT601_N类型。
 
 转换函数为BT709类型。
 
@@ -366,7 +366,7 @@ RGB色域为BT709类型。
 BT601_EBU_LIMIT = 17
 ```
 
-RGB色域为BT601\_P类型。
+RGB色域为BT601_P类型。
 
 转换函数为BT709类型。
 
@@ -388,7 +388,7 @@ RGB色域为BT601\_P类型。
 BT601_SMPTE_C_LIMIT = 18
 ```
 
-RGB色域为BT601\_N类型。
+RGB色域为BT601_N类型。
 
 转换函数为BT709类型。
 
@@ -538,7 +538,7 @@ RGB色域为SRGB类型。
 LINEAR_BT709 = LINEAR_SRGB
 ```
 
-与LINEAR\_SRGB相同。
+与LINEAR_SRGB相同。
 
 RGB色域为BT709类型。
 
@@ -604,7 +604,7 @@ RGB色域为SRGB类型。
 DISPLAY_P3_SRGB = DISPLAY_P3
 ```
 
-与DISPLAY\_P3相同。
+与DISPLAY_P3相同。
 
 RGB色域为Display P3类型。
 
@@ -628,7 +628,7 @@ RGB色域为Display P3类型。
 DISPLAY_P3_HLG = P3_HLG
 ```
 
-与P3\_HLG相同。
+与P3_HLG相同。
 
 RGB色域为Display P3类型。
 
@@ -652,7 +652,7 @@ RGB色域为Display P3类型。
 DISPLAY_P3_PQ = P3_PQ
 ```
 
-与P3\_PQ相同。
+与P3_PQ相同。
 
 RGB色域为Display P3类型。
 

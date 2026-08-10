@@ -6,7 +6,7 @@
 function killProcessWithAccount(bundleName: string, accountId: number): Promise<void>
 ```
 
-Kill process with account.
+切断account进程。使用Promise异步回调。
 
 **Since:** 8
 
@@ -28,16 +28,16 @@ Kill process with account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | The process bundle name. |
-| accountId | number | Yes | The account id. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| accountId | number | Yes | 系统账号的账号ID，详情参考[getOsAccountCount] {@link @ohos.account.osAccount:osAccount.AccountManager.getOsAccountCount}。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -61,7 +61,7 @@ appManager.killProcessWithAccount(bundleName, accountId)
 function killProcessWithAccount(bundleName: string, accountId: number, callback: AsyncCallback<void>): void
 ```
 
-Kill process with account.
+切断account进程。使用callback异步回调。
 
 **Since:** 8
 
@@ -83,11 +83,11 @@ Kill process with account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | The process bundle name. |
-| accountId | number | Yes | The account id. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Cut off the callback function of the account process. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| accountId | number | Yes | 系统账号的账号ID，详情参考[getOsAccountCount] {@link @ohos.account.osAccount:osAccount.AccountManager.getOsAccountCount}。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当切断account进程成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

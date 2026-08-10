@@ -1,6 +1,6 @@
 # FloatingBallTextUpdateAnimationType
 
-Enumerates the animation types used when the floating ball text is updated.
+闪控球文本更新动画类型的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates the animation types used when the floating ball text is updated.
 ANIMATION_NONE = 0
 ```
 
-No animation.
+无动画。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ No animation.
 ANIMATION_OPACITY = 1
 ```
 
-Fade-in and fade-out animation.
+淡入淡出动画。
 
 **Since:** 26.0.0
 

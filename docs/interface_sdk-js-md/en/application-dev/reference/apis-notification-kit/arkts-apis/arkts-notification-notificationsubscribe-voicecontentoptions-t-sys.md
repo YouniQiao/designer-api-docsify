@@ -4,7 +4,7 @@
 export type VoiceContentOptions = _VoiceContentOptions
 ```
 
-Describes the properties of the voice content options for notification subscription.
+实况通知语音播报内容配置项。
 
 **Since:** 26.0.0
 

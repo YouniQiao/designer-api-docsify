@@ -1,7 +1,6 @@
 # NativeMediaPlayerConfig
 
-Represents the configuration for  
-[enabling the application to take over web page media playback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+用于[开启应用接管网页媒体播放功能](web:WebAttribute.enableNativeMediaPlayer)的配置信息。
 
 **Since:** 12
 
@@ -17,11 +16,11 @@ Represents the configuration for
 enable: boolean
 ```
 
-Whether to enable the application to take over web page media playback.
+是否开启应用接管网页媒体播放功能。
 
-The value **true** means to enable the application to take over web page media playback, and **false** means the opposite.
+true表示开启应用接管网页媒体播放功能，false表示关闭应用接管网页媒体播放功能。
 
-Default value: **false**.
+默认值：false。
 
 **Type:** boolean
 
@@ -41,11 +40,11 @@ Default value: **false**.
 shouldOverlay: boolean
 ```
 
-Whether the video player's display overlays the web page content when the application takes over the web page's video player.
+开启应用接管网页媒体播放功能后，应用接管网页视频的播放器画面是否覆盖网页内容。
 
-The value **true** indicates that the video player's display overlays the web page content. This means that the height of the video layer is adjusted to cover the web page content. The value **false** indicates that the video player's display does not overlay the web page content. This means that the video player maintains its original height and is embedded within the web page.
+true表示改变视频图层的高度，使其覆盖网页内容。false表示不覆盖网页内容，跟原视频图层高度一样，嵌入在网页中。
 
-Default value: **false**.
+默认值：false。
 
 **Type:** boolean
 

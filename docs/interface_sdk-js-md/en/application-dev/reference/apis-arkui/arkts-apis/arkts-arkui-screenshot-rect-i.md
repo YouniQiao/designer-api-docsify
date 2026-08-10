@@ -1,6 +1,6 @@
 # Rect
 
-Describes the region of the screen to capture.
+表示截取图像的区域。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the region of the screen to capture.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: long
 ```
 
-Height of the screen region to capture, in px. The value must be a positive integer.
+表示截取图像区域的高度，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Height of the screen region to capture, in px. The value must be a positive inte
 left: long
 ```
 
-Left boundary of the screen region to capture, in px. The value must be a non-negative integer.
+表示截取图像区域的左边界，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ Left boundary of the screen region to capture, in px. The value must be a non-ne
 top: long
 ```
 
-Top boundary of the screen region to capture, in px. The value must be a non-negative integer.
+表示截取图像区域的上边界，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -76,9 +82,9 @@ Top boundary of the screen region to capture, in px. The value must be a non-neg
 width: long
 ```
 
-Width of the screen region to capture, in px. The value must be a positive integer.
+表示截取图像区域的宽度，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 

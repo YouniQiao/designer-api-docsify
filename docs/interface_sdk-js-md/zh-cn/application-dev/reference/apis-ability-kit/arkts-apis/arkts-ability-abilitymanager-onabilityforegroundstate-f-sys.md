@@ -1,5 +1,11 @@
 # onAbilityForegroundState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onAbilityForegroundState
 
 ```TypeScript
@@ -24,38 +30,13 @@ function onAbilityForegroundState(observer: AbilityForegroundStateObserver): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Ability状态观测器，用于观测Ability的启动和退出。 |
+| observer | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | 是 | Ability状态观测器，用于观测Ability的启动和退出。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
-
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class AbilityForegroundStateObserverCustom implements abilityManager.AbilityForegroundStateObserver {
-  onAbilityStateChanged(abilityStateData: abilityManager.AbilityStateData) {
-    console.info(`onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
-  }
-}
-
-try {
-  let observer = new AbilityForegroundStateObserverCustom();
-  abilityManager.onAbilityForegroundState(observer);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
+| 16000050 | Connect to system server failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

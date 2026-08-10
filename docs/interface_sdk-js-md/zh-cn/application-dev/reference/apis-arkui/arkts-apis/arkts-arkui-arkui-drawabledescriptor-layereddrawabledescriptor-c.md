@@ -1,7 +1,7 @@
 # LayeredDrawableDescriptor
 
 当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自  
-[DrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
 
 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
 
@@ -14,6 +14,12 @@ drawable.json位于项目工程entry/src/main/resources/base/media目录下。�
 <!--Device-unnamed-export declare class LayeredDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export declare class LayeredDrawableDescriptor extends DrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+```
 
 ## constructor
 
@@ -41,9 +47,9 @@ LayeredDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| foreground | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 分层图标的前景图片选项。 |
-| background | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 分层图标的背景图片选项。 |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 分层图标的遮罩选项。 |
+| foreground | [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的前景图片选项。 |
+| background | [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的背景图片选项。 |
+| mask | [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的遮罩选项。 |
 
 ## constructor
 
@@ -68,8 +74,9 @@ getBackground(): DrawableDescriptor | undefined
 ```
 
 获取背景的DrawableDescriptor对象。
-    **说明：**  
-        DrawableDescriptor对象通过[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_释放后，本接口返回undefined。
+
+> **说明：**
+> > DrawableDescriptor对象通过[release](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
 
 **起始版本：** 23
 
@@ -85,7 +92,7 @@ getBackground(): DrawableDescriptor | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the DrawableDescriptor object of background. |
+| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of background. |
 
 ## getForeground
 
@@ -94,8 +101,9 @@ getForeground(): DrawableDescriptor | undefined
 ```
 
 获取前景的DrawableDescriptor对象。
-    **说明：**  
-        DrawableDescriptor对象通过[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_释放后，本接口返回undefined。
+
+> **说明：**
+> > DrawableDescriptor对象通过[release](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
 
 **起始版本：** 23
 
@@ -111,7 +119,7 @@ getForeground(): DrawableDescriptor | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the DrawableDescriptor object of foreground. |
+| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of foreground. |
 
 ## getMask
 
@@ -120,8 +128,9 @@ getMask(): DrawableDescriptor | undefined
 ```
 
 获取蒙版的DrawableDescriptor对象。
-    **说明：**  
-        DrawableDescriptor对象通过[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_释放后，本接口返回undefined。
+
+> **说明：**
+> > DrawableDescriptor对象通过[release](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
 
 **起始版本：** 23
 
@@ -137,7 +146,7 @@ getMask(): DrawableDescriptor | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the DrawableDescriptor object of mask. |
+| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of mask. |
 
 ## getMaskClipPath
 

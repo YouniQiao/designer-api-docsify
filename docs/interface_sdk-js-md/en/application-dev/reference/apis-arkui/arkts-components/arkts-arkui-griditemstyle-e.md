@@ -1,10 +1,10 @@
 # GridItemStyle
 
-Enumerates styles of grid items.
-    **NOTE**  
-    
-    To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for  
-    accommodating the focus frame of the grid item.
+GridItem样式枚举，用于定义GridItem的交互态样式。
+
+> **说明：**
+> 
+> GridItem焦点态样式设置：Grid组件需要设置4vp规格以上的内边距，用于显示GridItem的焦点框。
 
 **Since:** 11
 
@@ -20,7 +20,7 @@ Enumerates styles of grid items.
 NONE = 0
 ```
 
-No style.
+无样式，不显示Hover、Press态样式。
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ No style.
 PLAIN = 1
 ```
 
-Hover or press style.
+显示Hover、Press态样式。Hover态为鼠标悬停时的样式，Press态为按下时的样式。
 
 **Since:** 11
 

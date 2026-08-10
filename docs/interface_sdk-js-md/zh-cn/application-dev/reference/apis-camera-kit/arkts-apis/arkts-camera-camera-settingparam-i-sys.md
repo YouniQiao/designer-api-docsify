@@ -12,6 +12,12 @@ Defines the effect parameters used to preheat an image.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## faceSlender
 
 ```TypeScript
@@ -19,10 +25,9 @@ faceSlender: int
 ```
 
 Face slimming level, which is obtained through  
-[Beauty.getSupportedBeautyRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. For example, the value **1**  
-indicates level-1 slimming.
+[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). For example, the value **1**indicates level-1 slimming.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -41,10 +46,9 @@ skinSmoothLevel: int
 ```
 
 Skin smoothing level, which is obtained through  
-[Beauty.getSupportedBeautyRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. For example, the value **1**  
-indicates level-1 smoothing.
+[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). For example, the value **1**indicates level-1 smoothing.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -63,10 +67,10 @@ skinTone: int
 ```
 
 Skin tone perfection level, which is obtained through  
-[Beauty.getSupportedBeautyRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. For example, the value  
+[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). For example, the value  
 **0xBF986C** indicates a specific color.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

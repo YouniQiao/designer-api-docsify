@@ -1,6 +1,6 @@
 # DisplayPhysicalResolution
 
-Describes the display mode of a device and the corresponding physical screen resolution information.
+设备的显示模式以及对应的物理屏幕分辨率信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the display mode of a device and the corresponding physical screen res
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## foldDisplayMode
 
 ```TypeScript
 foldDisplayMode: FoldDisplayMode
 ```
 
-Display mode of the device. The value is **0** for non-foldable devices.
+设备的显示模式，非折叠设备时值为0。
 
-**Type:** FoldDisplayMode
+**Type:** [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Display mode of the device. The value is **0** for non-foldable devices.
 physicalHeight: long
 ```
 
-Height of the device, in px. The value is an integer greater than 0.
+设备的高度，单位为px，该参数为大于0的整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ Height of the device, in px. The value is an integer greater than 0.
 physicalWidth: long
 ```
 
-Width of the device, in px. The value is an integer greater than 0.
+设备的宽度，单位为px，该参数为大于0的整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 

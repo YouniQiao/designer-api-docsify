@@ -1,5 +1,11 @@
 # ArcAlphabetIndexer
 
+## Modules to Import
+
+```TypeScript
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+```
+
 ## ArcAlphabetIndexer
 
 ```TypeScript
@@ -8,7 +14,9 @@ export declare function ArcAlphabetIndexer(
 ): ArcAlphabetIndexerAttribute
 ```
 
-Defines ArcAlphabetIndexer Component.
+创建弧形索引条实例，传入弧形索引条配置项参数。
+
+无
 
 **Since:** 26.0.0
 
@@ -24,13 +32,13 @@ Defines ArcAlphabetIndexer Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The initialization parameters of the arc alphabet index bar |
+| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Yes | 定义弧形字母索引条的初始化参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the ArcAlphabetIndexer. |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | ArcAlphabetIndexer实例对象。 |
 
 
 ## ArcAlphabetIndexer
@@ -41,11 +49,11 @@ export declare function ArcAlphabetIndexer(
 ): ArcAlphabetIndexerAttribute
 ```
 
-Defines ArcAlphabetIndexer Component.
+创建弧形索引条实例，传入弧形索引条配置项参数。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Decorator:** @Builder
 
@@ -59,11 +67,11 @@ Defines ArcAlphabetIndexer Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArcAlphabetIndexerAttribute&gt; | Yes | arcAlphabetIndexer attribute instance |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcAlphabetIndexerAttribute&gt; | Yes | arcAlphabetIndexer属性实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 

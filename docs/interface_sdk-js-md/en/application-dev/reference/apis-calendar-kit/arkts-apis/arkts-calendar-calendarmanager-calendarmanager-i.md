@@ -1,7 +1,6 @@
 # CalendarManager
 
-Before calling any of the following APIs to manage the calendar, you must use  
-[getCalendarManager()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain a **CalendarManager** object first.
+下列API示例中需先通过[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager)方法获取CalendarManager对象，再通过此对象调用对应方法，进行Calendar的创建、删除、修改、查询等操作。
 
 **Since:** 10
 
@@ -11,21 +10,25 @@ Before calling any of the following APIs to manage the calendar, you must use
 
 **System capability:** SystemCapability.Applications.CalendarData
 
+## Modules to Import
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## createCalendar
 
 ```TypeScript
 createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 ```
 
-Creates a Calendar object based on the calendar account information.This API uses a promise to return the result.
+根据日历账户信息，创建一个Calendar对象，使用Promise异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+**Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
 <!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>-End-->
 
@@ -35,30 +38,31 @@ Creates a Calendar object based on the calendar account information.This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendarAccount | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Calendar account information. |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | 日历账户信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Calendar&gt; | Promise used to return the created Calendar object. |
+| Promise&lt;Calendar&gt; | Promise对象，返回创建的Calendar对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
-let calendar : calendarManager.Calendar | undefined = undefined;
 const calendarAccount: calendarManager.CalendarAccount = {
   name: 'CreateMyCalendarByPromise',
   type: calendarManager.CalendarType.LOCAL,
@@ -66,8 +70,8 @@ const calendarAccount: calendarManager.CalendarAccount = {
 };
 calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
   console.info(`Succeeded in creating calendar data->${JSON.stringify(data)}`);
-  calendar = data;
 }).catch((error : BusinessError) => {
+  // Check whether the permission is granted or whether the parameters are correct.
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
 });
 ```
@@ -78,15 +82,13 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void
 ```
 
-Creates a Calendar object based on the calendar account information.This API uses an asynchronous callback to return the result.
+根据日历账户信息，创建一个Calendar对象，若创建的账户已存在（与CalendarAccount的name和type相同的账户已被创建），则返回之前的Calendar对象，使用callback异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+**Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
 <!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void-End-->
 
@@ -96,25 +98,26 @@ Creates a Calendar object based on the calendar account information.This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendarAccount | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Calendar account information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | 日历账户信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | 回调函数，当创建账户成功时，err为undefined，data为创建成功的Calendar；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
-let calendar: calendarManager.Calendar | undefined = undefined;
 const calendarAccount: calendarManager.CalendarAccount = {
   name: 'CreateMyCalendarByCallBack',
   type: calendarManager.CalendarType.LOCAL
@@ -125,10 +128,10 @@ try {
       console.error(`Failed to create calendar. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
-      calendar = data;
     }
   });
 } catch (error) {
+  // Check whether the permission is granted or whether the parameters are correct.
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -139,15 +142,13 @@ try {
 deleteCalendar(calendar: Calendar): Promise<void>
 ```
 
-Deletes a specified Calendar object. This API uses a promise to return the result.
+删除指定Calendar对象，使用Promise异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+**Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
 <!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>-End-->
 
@@ -157,28 +158,30 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendar | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Calendar object to delete. The default account cannot be deleted. |
+| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes | 即将删除的Calendar对象。无法删除默认账户。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
 const calendarAccount: calendarManager.CalendarAccount = {
   name: 'DeleteMyCalendarByPromise',
@@ -189,14 +192,17 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
   calendarMgr?.getCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
     calendarMgr?.deleteCalendar(data).then(() => {
-      console.info("Succeeded in deleting calendar");
+      console.info('Succeeded in deleting calendar');
     }).catch((err: BusinessError) => {
+      // Check whether the parameters are correct.
       console.error(`Failed to delete calendar. Code: ${err.code}, message: ${err.message}`);
     });
   }).catch((err: BusinessError) => {
+    // Check whether the permission is granted or whether the parameters are correct.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   });
 }).catch((error: BusinessError) => {
+  // Check whether the permission is granted or whether the parameters are correct.
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
 })
 ```
@@ -207,15 +213,13 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void
 ```
 
-Deletes a specified Calendar object. This API uses an asynchronous callback to return the result.
+删除指定Calendar对象，使用callback异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+**Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
 <!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void-End-->
 
@@ -225,23 +229,25 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendar | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Calendar object to delete. The default account cannot be deleted. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
+| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes | 即将删除的Calendar对象。无法删除默认账户。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当删除账户成功时，err为undefined；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
 const calendarAccount: calendarManager.CalendarAccount = {
   name: 'DeleteMyCalendarByCallBack',
@@ -256,14 +262,16 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
       console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
       calendarMgr?.deleteCalendar(data, (err1: BusinessError) => {
         if (err1) {
+          // Check whether the parameters are correct.
           console.error(`Failed to delete calendar. Code: ${err1.code}, message: ${err1.message}`);
         } else {
-          console.info("Succeeded in deleting calendar");
+          console.info('Succeeded in deleting calendar');
         }
       });
     }
   });
 }).catch((error: BusinessError) => {
+  // Check whether the permission is granted or whether the parameters are correct.
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
 })
 ```
@@ -274,11 +282,7 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 editEvent(event: Event): Promise<number>
 ```
 
-Edits an event on the event creation page, with no event ID specified in **Event**. The **instanceStartTime**, **instanceEndTime**,  
-**identifier**, **attendee**, **service**, **isLunar**, and **timeZone** attributes cannot be set. Important events cannot be added either.This API uses a promise to return the result.
-
-Events created using this API can be obtained and modified by the system calendar.Third-party applications can obtain and modify the events after they requested the **READ\_WHOLE\_CALENDAR**  
-permission and the **WRITE\_WHOLE\_CALENDAR** permission, respectively.
+通过跳转到日程创建页面创建单个日程，入参Event不填日程id，不支持设置instanceStartTime、instanceEndTime、identifier、attendee、service、isLunar和timeZone属性，也不支持添加重要日程。使用Promise异步回调。使用该接口创建的日程，系统日历可以进行查询和修改，申请到READ_WHOLE_CALENDAR权限的三方应用可以查询，申请到WRITE_WHOLE_CALENDAR权限的三方应用可以修改。
 
 **Since:** 12
 
@@ -294,19 +298,20 @@ permission and the **WRITE\_WHOLE\_CALENDAR** permission, respectively.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event** object. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the event creation fails, no value is returned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0** , the event creation is successful. The return value cannot be **0 |
+| Promise&lt;number&gt; | Promise对象，返回日程的id，日程id是日程的唯一标识符，是数据库的自增主键。创建失败时没有返回值；当返回值小于0时代表用户取消创建；当返回值大于0时代表日程创建 成功；没有等于0的情况。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
 const date = new Date();
 const event: calendarManager.Event = {
@@ -317,8 +322,6 @@ const event: calendarManager.Event = {
 };
 calendarMgr?.editEvent(event).then((eventId: number): void => {
   console.info(`create Event id = ${eventId}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create Event. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -328,15 +331,13 @@ calendarMgr?.editEvent(event).then((eventId: number): void => {
 getAllCalendars(): Promise<Calendar[]>
 ```
 
-Obtains the created and default Calendar objects of the current application.This API uses a promise to return the result.
+获取当前应用所有创建的Calendar对象以及默认Calendar对象，使用Promise异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
 <!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>--><!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>-End-->
 
@@ -346,22 +347,24 @@ Obtains the created and default Calendar objects of the current application.This
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Calendar[]&gt; | Promise used to return an array of obtained Calendar objects. |
+| Promise&lt;Calendar[]&gt; | Promise对象，返回查询到的Calendar对象数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
 calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
   console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
@@ -370,7 +373,9 @@ calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
     console.info(`account -> ${JSON.stringify(account)}`);
   })
 }).catch((err: BusinessError) => {
+  // Check whether the permission has been successfully applied for.
   console.error(`Failed to get all calendars. Code: ${err.code}, message: ${err.message}`);
+  
 });
 ```
 
@@ -380,15 +385,13 @@ calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
 getAllCalendars(callback: AsyncCallback<Calendar[]>): void
 ```
 
-Obtains the created and default Calendar objects of the current application.This API uses an asynchronous callback to return the result.
+获取当前应用所有创建的Calendar对象以及默认Calendar对象，使用callback异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
 <!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void--><!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void-End-->
 
@@ -398,22 +401,24 @@ Obtains the created and default Calendar objects of the current application.This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar[]&gt; | Yes | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar数组；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
 calendarMgr?.getAllCalendars((err: BusinessError, data: calendarManager.Calendar[]) => {
   if (err) {
@@ -434,15 +439,13 @@ calendarMgr?.getAllCalendars((err: BusinessError, data: calendarManager.Calendar
 getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>
 ```
 
-Obtains the default or specified Calendar object. This API uses a promise to return the result.
+获取默认Calendar对象或者指定Calendar对象，使用Promise异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -454,35 +457,36 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendarAccount | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Calendar account information, which is used to obtain a specified Calendar object. If this parameter is not set, the default Calendar object is obtained. |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | No | 指定日历账户信息，用来获取指定Calendar对象，不填时，表示获取默认Calendar对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Calendar&gt; | the promise returned by the function. |
+| Promise&lt;Calendar&gt; | Promise对象，返回查询到的Calendar对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
+| 23900003 | 未找到指定的账户。<br>**Applicable version:** 23 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
-let calendar : calendarManager.Calendar | undefined = undefined;
 calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
   console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-  calendar = data;
 }).catch((err: BusinessError) => {
+  // Check whether the permission has been successfully applied for.
   console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -493,15 +497,13 @@ calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
 getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void
 ```
 
-Obtains a specified Calendar object. This API uses an asynchronous callback to return the result.
+获取默认Calendar对象，默认Calendar是日历存储首次运行时创建的，若创建Event时不关注其Calendar归属，则无须通过createCalendar()创建Calendar，直接使用默认Calendar，使用callback异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -513,26 +515,27 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendarAccount | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Calendar account information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | 指定日历账户信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
+| 23900003 | 未找到指定的账户。<br>**Applicable version:** 23 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
-let calendar : calendarManager.Calendar | undefined = undefined;
 const calendarAccount: calendarManager.CalendarAccount = {
   name: 'MyCalendar',
   type: calendarManager.CalendarType.LOCAL
@@ -542,13 +545,14 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
   calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
     if (err) {
       console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+      // Check whether the permission is granted or whether the parameters are correct.
     } else {
       console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
-      calendar = data;
     }
   });
 }).catch((error: BusinessError) => {
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+  // Check whether the permission is granted or whether the parameters are correct.
 })
 ```
 
@@ -558,15 +562,13 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 getCalendar(callback: AsyncCallback<Calendar>): void
 ```
 
-Obtains the default Calendar object, which is created when the data storage runs for the first time.This API uses an asynchronous callback to return the result.You can call this API instead of createCalendar() to use the default calendar for a new event.
+获取默认Calendar对象，默认Calendar是日历存储首次运行时创建的，若创建Event时不关注其Calendar归属，则无须通过createCalendar()创建Calendar，直接使用默认Calendar，使用callback异步回调。
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -578,30 +580,31 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. dataShare database execution error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. null pointer error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Data parsing error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| 801 | 该设备不支持此API。 |
+| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
+| 201 | 权限校验失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
 
-let calendar : calendarManager.Calendar | undefined = undefined;
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
+    // Check whether the permission is granted or whether the parameters are correct.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-    calendar = data;
   }
 });
 ```

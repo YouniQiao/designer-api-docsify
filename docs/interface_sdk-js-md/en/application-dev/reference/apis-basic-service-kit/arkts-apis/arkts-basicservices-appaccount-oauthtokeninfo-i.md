@@ -1,10 +1,10 @@
 # OAuthTokenInfo
 
-Defines authorization token information.
-    **NOTE**  
-    
-    This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-    [AuthTokenInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+表示OAuth令牌信息。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)替代。
 
 **Since:** 8
 
@@ -18,13 +18,19 @@ Defines authorization token information.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authType
 
 ```TypeScript
 authType: string
 ```
 
-Authentication type.
+令牌的鉴权类型。
 
 **Type:** string
 
@@ -46,7 +52,7 @@ Authentication type.
 token: string
 ```
 
-Value of the authorization token.
+令牌的取值。
 
 **Type:** string
 

@@ -1,16 +1,14 @@
 # ToolBarItem
 
-You can use the **ToolBarItem** component to add toolbar items to the title bar using the
-[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar) universal attribute.
+可以使用**ToolBarItem**组件，通过[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性向标题栏中添加toolbar item。
 
-> **NOTE**
+> **说明**
 >
-> This component is typically used with the
-> [toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar) universal attribute.
+> 该组件通常与[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性一起使用。
 
-## Child Components
+## 子组件
 
-This component can contain a single child component.
+该组件可以包含单个子组件。
 
 ## ToolBarItem
 
@@ -18,8 +16,7 @@ This component can contain a single child component.
 ToolBarItem(options?: ToolBarItemOptions)
 ```
 
-Creates a toolbar item at the beginning of the corresponding column in the title bar by default. The column position is determined by the component's  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ attribute configuration.
+默认在标题栏对应分栏开头位置创建工具栏项，分栏位置由绑定该[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)属性的组件所在分栏位置而定。
 
 **Since:** 20
 
@@ -35,7 +32,9 @@ Creates a toolbar item at the beginning of the corresponding column in the title
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Optional parameters for **ToolBarItem**, including the **placement** parameter of the [ToolBarItemPlacement]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ type.\_\_\_HTML\_TAG\_USD\_1\_\_\_Default value: **placement: ToolBarItemPlacement.TOP\_BAR\_LEADING**  |
+| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | ToolBarItem**的可选参数，包括[ToolBarItemPlacement]{@link ToolBarItemPlacement}类型的**placement**参数。<br>默认值：**placement: ToolBarItemPlacement.TOP_BAR_LEADING |
 
 ## Summary
 
+- [ToolBarItemOptions](arkts-arkui-toolbaritem-toolbaritemoptions-i.md)
+- [ToolBarItemPlacement](arkts-arkui-toolbaritem-toolbaritemplacement-e.md)

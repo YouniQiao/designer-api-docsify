@@ -1,8 +1,8 @@
 # FileUri
 
-FileUri represents the uri of the file.
+FileUri表示文件的URI，继承自uri.URI。
 
-**Inheritance/Implementation:** FileUri extends [uri.URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md)
+**Inheritance/Implementation:** FileUri extends [uri.URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)
 
 **Since:** 15
 
@@ -12,13 +12,19 @@ FileUri represents the uri of the file.
 
 **System capability:** SystemCapability.FileManagement.AppFileService
 
+## Modules to Import
+
+```TypeScript
+import { fileUri } from 'kits/@kit.CoreFileKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(uriOrPath: string)
 ```
 
-Constructor for obtaining the instance of the FileUri class.
+FileUri的构造函数，用于创建FileUri实例。
 
 **Since:** 15
 
@@ -34,18 +40,18 @@ Constructor for obtaining the instance of the FileUri class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriOrPath | string | Yes | Uri or Path. |
+| uriOrPath | string | Yes | URI或路径。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900005 | I/O error |
 | 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| 13900005 | I/O error |
 | 14300002 | Invalid uri |
+| 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 let path = pathDir + '/test';
@@ -60,7 +66,7 @@ console.info("The name of FileUri is " + fileUriObject.name);
 getFullDirectoryUri(): string
 ```
 
-Get the full directory uri where the file URI is located
+获取当前文件URI所在路径的完整目录URI。URI指向目录时直接返回原URI。
 
 **Since:** 15
 
@@ -76,7 +82,7 @@ Get the full directory uri where the file URI is located
 
 | Type | Description |
 | --- | --- |
-| string | Return the directory uri |
+| string | 返回文件所在路径的目录URI；URI指向目录时返回当前URI。 |
 
 **Error codes:**
 
@@ -86,7 +92,7 @@ Get the full directory uri where the file URI is located
 | 13900012 | Permission denied |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -106,7 +112,7 @@ try {
 isRemoteUri(): boolean
 ```
 
-Check whether the incoming URI is a remote URI
+判断当前URI是否为包含远端标识networkid的远端URI。
 
 **Since:** 15
 
@@ -122,7 +128,7 @@ Check whether the incoming URI is a remote URI
 
 | Type | Description |
 | --- | --- |
-| boolean | Return true or false |
+| boolean | 返回true表示远端URI，返回false表示本地URI。 |
 
 **Error codes:**
 
@@ -130,7 +136,7 @@ Check whether the incoming URI is a remote URI
 | --- | --- |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -150,7 +156,7 @@ function isRemoteUriExample() {
 toString(): string
 ```
 
-Converts this URI into an encoded string.
+将当前URI转换为序列化字符串。
 
 **Since:** 23
 
@@ -166,9 +172,9 @@ Converts this URI into an encoded string.
 
 | Type | Description |
 | --- | --- |
-| string | URI in a serialized string. |
+| string | 返回字符串类型的URI。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let path = pathDir + '/test';
@@ -182,7 +188,7 @@ console.info("The uri of FileUri is " + fileUriObject.toString());
 get name(): string
 ```
 
-Obtains the file name of uri.
+通过传入的URI获取文件名称。如果文件名中存在百分号编码字符，将解码后拼接在原处。
 
 **Type:** string
 

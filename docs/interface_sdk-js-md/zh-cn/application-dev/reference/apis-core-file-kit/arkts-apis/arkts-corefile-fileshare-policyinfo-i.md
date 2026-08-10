@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
+## 导入模块
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## operationMode
 
 ```TypeScript
 operationMode: int
 ```
 
-授予或激活权限的URI访问模式，例如 { OperationMode.READ\_MODE } 或{ OperationMode.READ\_MODE | OperationMode.WRITE\_MODE }。
+授予或激活权限的URI访问模式，例如 { OperationMode.READ_MODE } 或{ OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

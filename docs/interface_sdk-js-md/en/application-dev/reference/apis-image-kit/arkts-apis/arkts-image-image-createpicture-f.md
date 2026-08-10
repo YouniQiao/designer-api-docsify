@@ -1,15 +1,20 @@
 # createPicture
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createPicture
 
 ```TypeScript
 function createPicture(mainPixelmap : PixelMap): Picture
 ```
 
-Creates a Picture object based on a main PixelMap.
+通过主图的PixelMap创建一个Picture对象。
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **Since:** 13
 
@@ -23,36 +28,36 @@ Images occupy a large amount of memory. When you finish using a Picture instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainPixelmap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Main PixelMap. |
+| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | 主图的PixelMap。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Picture object. |
+| [Picture](arkts-image-image-picture-i.md) | 返回Picture对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 async function CreatePicture(context: Context) {
   const resourceMgr = context.resourceManager;
   const rawFile = await resourceMgr.getRawFileContent("test.jpg");
-  let ops: image.SourceOptions = {
+  let opts: image.SourceOptions = {
     sourceDensity: 98,
   }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
+  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, opts);
   let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
   let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
   if (pictureObj != null) {
-    console.info('Create picture succeeded');
+    console.info('Succeeded in creating picture');
   } else {
-    console.error('Create picture failed');
+    console.error('Failed to create picture');
   }
 }
 ```

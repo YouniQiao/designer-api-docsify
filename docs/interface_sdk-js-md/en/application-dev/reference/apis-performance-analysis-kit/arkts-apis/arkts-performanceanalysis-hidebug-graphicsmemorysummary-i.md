@@ -1,6 +1,6 @@
 # GraphicsMemorySummary
 
-Describes the GPU memory data of an application, including the GL and Graph parts.
+����Ӧ���Դ����ݣ�����gl��graph���֡�
 
 **Since:** 21
 
@@ -10,15 +10,21 @@ Describes the GPU memory data of an application, including the GL and Graph part
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## gl
 
 ```TypeScript
 gl: int
 ```
 
-GL memory
+gl�Դ��С��RenderService��Ⱦ���̼���������Դռ�õ��ڴ棬����ͼƬ�������ȣ���KBΪ��λ��
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -36,9 +42,9 @@ GL memory
 graph: int
 ```
 
-Graph memory
+graph�Դ��С������ͳ�Ƶ�DMA�ڴ�ռ�ã�����ֱ��ͨ���ӿ������DMA buffer��ͨ��allocator_host�����DMA buffer����KBΪ��λ��
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 

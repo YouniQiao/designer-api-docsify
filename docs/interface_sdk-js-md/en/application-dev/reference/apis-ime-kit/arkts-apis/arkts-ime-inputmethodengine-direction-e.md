@@ -1,6 +1,6 @@
 # Direction
 
-Enumerates the directions of cursor movement of the input method.
+光标的移动方向。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the directions of cursor movement of the input method.
 CURSOR_UP = 1
 ```
 
-Upward.
+向上。
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Upward.
 CURSOR_DOWN
 ```
 
-Downward.
+向下。
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Downward.
 CURSOR_LEFT
 ```
 
-Leftward.
+向左。
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Leftward.
 CURSOR_RIGHT
 ```
 
-Rightward.
+向右。
 
 **Since:** 10
 

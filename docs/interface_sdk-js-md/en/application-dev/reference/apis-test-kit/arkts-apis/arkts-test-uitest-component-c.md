@@ -1,6 +1,6 @@
 # Component
 
-Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component,scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
+UiTest框架在API9中，Component类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。该类对象可通过{@link Driver#findComponent}、{@link Driver#findComponents}、{@link Driver#waitForComponent}等接口获取。该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Represents a component on the UI and provides APIs for obtaining component attri
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## clearText
 
 ```TypeScript
 clearText(): Promise<void>
 ```
 
-Clears the text information of a component. This API takes effect only for editable text components. This API uses a promise to return the result.
+清除控件的文本信息，仅针对可编辑的文本组件生效。使用Promise异步回调。
 
 **Since:** 9
 
@@ -32,16 +38,16 @@ Clears the text information of a component. This API takes effect only for edita
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -60,7 +66,7 @@ async function demo() {
 click(): Promise<void>
 ```
 
-Clicks this component. This API uses a promise to return the result.
+控件对象进行点击操作。使用Promise异步回调。
 
 **Since:** 9
 
@@ -76,24 +82,27 @@ Clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Driver, ON, Component } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Search for the Button component.
   let button: Component = await driver.findComponent(ON.type('Button'));
+  // Tap the component.
   await button.click();
 }
 ```
@@ -104,7 +113,7 @@ async function demo() {
 doubleClick(): Promise<void>
 ```
 
-Double-clicks this component. This API uses a promise to return the result.
+控件对象进行双击操作。使用Promise异步回调。
 
 **Since:** 9
 
@@ -120,16 +129,16 @@ Double-clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -148,7 +157,7 @@ async function demo() {
 dragTo(target: Component): Promise<void>
 ```
 
-Drags a component to the target component. This API uses a promise to return the result.
+将控件拖拽至目标控件处。使用Promise异步回调。
 
 **Since:** 9
 
@@ -164,32 +173,36 @@ Drags a component to the target component. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target component. |
+| target | [Component](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-component-i.md) | Yes | 目标控件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Search for the target Button component.
   let button: Component = await driver.findComponent(ON.type('Button'));
+  // Search for the component whose text is 'hello world' as the drag target.
   let text: Component = await driver.findComponent(ON.text('hello world'));
+  // Drag the Button component to the Text component.
   await button.dragTo(text);
 }
 ```
@@ -200,7 +213,7 @@ async function demo() {
 getBounds(): Promise<Rect>
 ```
 
-Obtains the bounds information of this component. This API uses a promise to return the result.
+获取控件对象的边框信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -216,16 +229,16 @@ Obtains the bounds information of this component. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Rect&gt; |  Promise used to return the bound information of the component object. |
+| Promise&lt;Rect&gt; | Promise对象，返回控件对象的边框信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -244,7 +257,7 @@ async function demo() {
 getBoundsCenter(): Promise<Point>
 ```
 
-Obtains the center point of the area occupied by this component. This API uses a promise to return the result.
+获取控件对象所占区域的中心点信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -260,16 +273,16 @@ Obtains the center point of the area occupied by this component. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; |  Promise used to return the center point of the area occupied by the component object. |
+| Promise&lt;Point&gt; | Promise对象，返回控件对象所占区域的中心点信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -288,7 +301,7 @@ async function demo() {
 getDescription(): Promise<string>
 ```
 
-Obtains the description of this component. This API uses a promise to return the result.
+获取控件对象的描述信息。使用Promise异步回调。
 
 **Since:** 11
 
@@ -304,16 +317,16 @@ Obtains the description of this component. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the description of the component. |
+| Promise&lt;string&gt; | Promise对象，返回控件的描述信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -338,7 +351,7 @@ ArkTS-Sta:
 getDisplayId(): Promise<int>
 ```
 
-Obtains the ID of the display to which the component belongs. This API uses a promise to return the result.
+获取控件对象所属的屏幕ID。使用Promise异步回调。
 
 **Since:** 20
 
@@ -354,16 +367,16 @@ Obtains the ID of the display to which the component belongs. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; |  Promise used to return the ID of the display to which the component belongs. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回控件所属的屏幕ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -382,7 +395,7 @@ async function demo() {
 getHint(): Promise<string>
 ```
 
-Obtains the hint text of a component. This API uses a promise to return the result.
+获取控件对象的提示文本。使用Promise异步回调。
 
 **Since:** 18
 
@@ -398,16 +411,16 @@ Obtains the hint text of a component. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the hint text of a component. |
+| Promise&lt;string&gt; | Promise对象，返回控件的提示文本。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -426,7 +439,7 @@ async function demo() {
 getId(): Promise<string>
 ```
 
-Obtains the ID of this component. This API uses a promise to return the result.
+获取控件对象的id值。使用Promise异步回调。
 
 **Since:** 9
 
@@ -442,16 +455,16 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the component ID. |
+| Promise&lt;string&gt; | Promise对象，返回控件的id值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -470,8 +483,8 @@ async function demo() {
 getOriginalText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result. If the  
-[accessibilityLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ cannot.
+获取控件对象的文本信息。使用Promise异步回调。如果控件的无障碍属性  
+[accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)设置为'no'或'no-hide-descendants'，可以使用本接口获取控件的文本信息，无法使用[Component.getText()](arkts-test-uitest-component-c.md#gettext)获取控件的文本信息。
 
 **Since:** 20
 
@@ -487,16 +500,16 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the text information of the component. |
+| Promise&lt;string&gt; | Promise对象，返回控件的文本信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -515,13 +528,14 @@ async function demo() {
 getText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If the [accessibilityLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the  
-    text information of the component. In this case, you can use  
-    [Component.getOriginalText ()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ instead.
+获取控件对象的文本信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 如果控件的无障碍属性
+> [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)
+> 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](arkts-test-uitest-component-c.md#getoriginaltext)
+> 获取控件的文本信息。
 
 **Since:** 9
 
@@ -537,16 +551,16 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the text information of the component. |
+| Promise&lt;string&gt; | Promise对象，返回控件的文本信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -565,7 +579,7 @@ async function demo() {
 getType(): Promise<string>
 ```
 
-Obtains the type of this component. This API uses a promise to return the result.
+获取控件对象的控件类型。使用Promise异步回调。
 
 **Since:** 9
 
@@ -581,16 +595,16 @@ Obtains the type of this component. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  Promise used to return the component type. |
+| Promise&lt;string&gt; | Promise对象，返回控件的类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -609,7 +623,7 @@ async function demo() {
 inputText(text: string): Promise<void>
 ```
 
-Clears the original text in a component and inputs the specified text. This API takes effect only for editable text components. This API uses a promise to return the result.
+清空组件内原有文本并输入指定文本内容，仅针对可编辑的文本组件生效。使用Promise异步回调。
 
 **Since:** 9
 
@@ -625,31 +639,34 @@ Clears the original text in a component and inputs the specified text. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
+| text | string | Yes | 输入的文本信息，当前支持英文、中文和特殊字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Search for the component whose text is 'hello world'.
   let text: Component = await driver.findComponent(ON.text('hello world'));
+  // Clear the original text and enter '123'.
   await text.inputText('123');
 }
 ```
@@ -660,7 +677,7 @@ async function demo() {
 inputText(text: string, mode: InputTextMode): Promise<void>
 ```
 
-Inputs text to a component in a specified text input mode. This API takes effect only for editable text components. This API uses a promise to return the result.
+向控件中输入文本，并支持指定文本输入方式，仅针对可编辑的文本组件生效。使用Promise异步回调。
 
 **Since:** 20
 
@@ -676,25 +693,25 @@ Inputs text to a component in a specified text input mode. This API takes effect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text input mode. For details, see [InputTextMode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of the existing text in the component. Otherwise, the specified text overwrites the existing text of the component. |
+| text | string | Yes | 输入的文本信息，当前支持英文、中文和特殊字符。 |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md)。  **说明：** InputTextMode.addition取值为true时，在控件已有文本末尾后追加指定文本。取值为false时，指定文本将覆盖控件已有文本。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited device capabilities. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -713,7 +730,7 @@ async function mode_demo() {
 isCheckable(): Promise<boolean>
 ```
 
-Obtains the checkable status of this component. This API uses a promise to return the result.
+获取控件对象能否被勾选属性。使用Promise异步回调。
 
 **Since:** 9
 
@@ -729,16 +746,16 @@ Obtains the checkable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component object is checkable. The value **true** indicates indicates that the component is checkable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象能否可被勾选属性。true：可被勾选。false：不可被勾选。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -761,7 +778,7 @@ async function demo() {
 isChecked(): Promise<boolean>
 ```
 
-Obtains the checked status of this component. This API uses a promise to return the result.
+获取控件对象被勾选状态。使用Promise异步回调。
 
 **Since:** 9
 
@@ -777,16 +794,16 @@ Obtains the checked status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return the checked status of the component object. The value **true** indicates indicates that the component is checked, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象被勾选状态。true：被勾选。false：未被勾选。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -809,7 +826,7 @@ async function demo() {
 isClickable(): Promise<boolean>
 ```
 
-Obtains the clickable status of this component. This API uses a promise to return the result.
+获取控件对象可点击属性。使用Promise异步回调。
 
 **Since:** 9
 
@@ -825,16 +842,16 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component object is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象是否可点击。true：可点击。false：不可点击。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -844,9 +861,9 @@ async function demo() {
   let driver: Driver = Driver.create();
   let button: Component = await driver.findComponent(ON.type('Button'));
   if (await button.isClickable()) {
-    console.info('This button can be Clicked');
+    console.info('This button can be clicked');
   } else {
-    console.info('This button can not be Clicked');
+    console.info('This button cannot be clicked');
   }
 }
 ```
@@ -857,7 +874,7 @@ async function demo() {
 isEnabled(): Promise<boolean>
 ```
 
-Obtains the enabled status of this component. This API uses a promise to return the result.
+获取控件使能状态。使用Promise异步回调。
 
 **Since:** 9
 
@@ -873,16 +890,16 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component is enabled. The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件使能状态。true：使能。false：未使能。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -894,7 +911,7 @@ async function demo() {
   if (await button.isEnabled()) {
     console.info('This button can be operated');
   } else {
-    console.info('This button can not be operated');
+    console.info('This button cannot be operated');
   }
 }
 ```
@@ -905,7 +922,7 @@ async function demo() {
 isFocused(): Promise<boolean>
 ```
 
-Checks whether a component is focused. This API uses a promise to return the result.
+判断控件对象获焦状态。使用Promise异步回调。
 
 **Since:** 9
 
@@ -921,16 +938,16 @@ Checks whether a component is focused. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象获焦状态。true：获焦。false：未获焦。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -953,7 +970,7 @@ async function demo() {
 isLongClickable(): Promise<boolean>
 ```
 
-Obtains the clickable status of this component. This API uses a promise to return the result.
+获取控件对象可点击属性。使用Promise异步回调。
 
 **Since:** 9
 
@@ -969,16 +986,16 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component object is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象是否可点击。true：可点击。false：不可点击。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -988,9 +1005,9 @@ async function demo() {
   let driver: Driver = Driver.create();
   let button: Component = await driver.findComponent(ON.type('Button'));
   if (await button.isLongClickable()) {
-    console.info('This button can longClick');
+    console.info('This button supports long click');
   } else {
-    console.info('This button can not longClick');
+    console.info('This button can not support long click');
   }
 }
 ```
@@ -1001,7 +1018,7 @@ async function demo() {
 isScrollable(): Promise<boolean>
 ```
 
-Obtains the scrollable status of this component. This API uses a promise to return the result.
+获取控件对象可滑动属性。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1017,16 +1034,16 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component object is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象是否可滑动。true：可滑动。false：不可滑动。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1038,7 +1055,7 @@ async function demo() {
   if (await scrollBar.isScrollable()) {
     console.info('This scrollBar can be operated');
   } else {
-    console.info('This scrollBar can not be operated');
+    console.info('This scrollBar cannot be operated');
   }
 }
 ```
@@ -1049,7 +1066,7 @@ async function demo() {
 isSelected(): Promise<boolean>
 ```
 
-Obtains the selected status of this component. This API uses a promise to return the result.
+获取控件对象被选中状态。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1065,16 +1082,16 @@ Obtains the selected status of this component. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the component is selected. The value **true** indicates that the component is selected, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回控件对象被选中状态。true：被选中。false：未被选中。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1097,7 +1114,7 @@ async function demo() {
 longClick(): Promise<void>
 ```
 
-Long-clicks this component. This API uses a promise to return the result.
+控件对象进行长按操作。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1113,16 +1130,16 @@ Long-clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1147,7 +1164,7 @@ ArkTS-Sta:
 pinchIn(scale: double): Promise<void>
 ```
 
-Pinches in a component at the specified scale. This API uses a promise to return the result.
+将控件按指定的比例进行捏合缩小。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1163,23 +1180,23 @@ Pinches in a component at the specified scale. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor, which is a value ranging from 0 to 1. |
+| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 指定缩小的比例。取值范围为0~1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1204,7 +1221,7 @@ ArkTS-Sta:
 pinchOut(scale: double): Promise<void>
 ```
 
-Pinches out a component at the specified scale. This API uses a promise to return the result.
+将控件按指定的比例进行捏合放大。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1220,23 +1237,23 @@ Pinches out a component at the specified scale. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale factor, which is a value greater than 1. |
+| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 指定放大的比例。取值范围大于1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1255,7 +1272,7 @@ async function demo() {
 scrollSearch(on: On): Promise<Component>
 ```
 
-Scrolls on this component to search for the target component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
+在控件上滑动查找目标控件（适用支持滑动的控件）。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1271,31 +1288,34 @@ Scrolls on this component to search for the target component. This API is applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target component. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; |  Promise used to return the target component. |
+| Promise&lt;Component&gt; | Promise对象，返回目标控件对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Obtain the scrollable Scroll component.
   let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  // Scroll on the Scroll component to search for the component whose text is 'next page'.
   let button = await scrollBar.scrollSearch(ON.text('next page'));
 }
 ```
@@ -1306,7 +1326,7 @@ async function demo() {
 scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 ```
 
-Scrolls on this component to search for the target component. This API is applicable to components that support scrolling. You can specify the scrolling direction and the offset between the scrolling start and end points and the component border. This API uses a promise to return the result.
+在控件上滑动查找目标控件（适用支持滑动的控件），支持指定滑动方向和滑动起止点与组件边框的偏移量。使用Promise异步回调。
 
 **Since:** 18
 
@@ -1322,25 +1342,25 @@ Scrolls on this component to search for the target component. This API is applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target component. |
-| vertical | boolean | No | Whether the search direction is vertical. The default value **true** indicates that the search direction is vertical. **false** indicates that the search direction is horizontal. |
-| offset | number | No | Offset from the scrolling start/end point to the component border, in pixels. The default value is **80**. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 80 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
+| vertical | boolean | No | 默认为true，表示查找方向是纵向。false表示查找方向为横向。 |
+| offset | number | No | 滑动起点/终点到组件边框的偏移，默认80，单位：px，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; |  Promise used to return the target component. |
+| Promise&lt;Component&gt; | Promise对象，返回目标控件对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1359,7 +1379,7 @@ async function demo() {
 scrollSearch(on: On, vertical?: boolean, offset?: int): Promise<Component | null>
 ```
 
-Scroll on this \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to find matched \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,applicable to scrollable one.
+Scroll on this {@link Component}to find matched {@link Component},applicable to scrollable one.
 
 **Since:** 23
 
@@ -1373,9 +1393,9 @@ Scroll on this \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to find matched \_\_\_JSDOC\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the attribute requirements of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| vertical | boolean | No | Whether the swipe direction is vertical. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: true |
-| offset | int | No | Offset from the swipe start/end point to the component border \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 80 |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target {@link Component}. |
+| vertical | boolean | No | Whether the swipe direction is vertical, default is true. |
+| offset | int | No | Offset from the swipe start/end point to the component border, default is 80. |
 
 **Return value:**
 
@@ -1387,9 +1407,9 @@ Scroll on this \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to find matched \_\_\_JSDOC\
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
 ## scrollToBottom
 
@@ -1403,7 +1423,7 @@ ArkTS-Sta:
 scrollToBottom(speed?: int): Promise<void>
 ```
 
-Scrolls to the bottom of this component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
+在控件上滑动到底部（适用支持滑动的控件）。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1419,23 +1439,23 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Scroll speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1460,7 +1480,7 @@ ArkTS-Sta:
 scrollToTop(speed?: int): Promise<void>
 ```
 
-Scrolls to the top of this component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
+在控件上滑动到顶部（适用支持滑动的控件）。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1476,23 +1496,23 @@ Scrolls to the top of this component. This API is applicable to components that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Scroll speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000004 | The window or component is invisible or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets

@@ -1,6 +1,6 @@
 # Area
 
-Defines the area information of a component.
+区域类型，用于存储元素所占的区域信息。
 
 **Since:** 8
 
@@ -16,9 +16,9 @@ Defines the area information of a component.
 globalPosition: Position
 ```
 
-Position of the top-left corner of the target element in the current window coordinate system.
+目标元素左上角在当前窗口坐标系中的位置。
 
-**Type:** Position
+**Type:** [Position](arkts-arkui-display-position-i.md)
 
 **Since:** 8
 
@@ -38,11 +38,11 @@ Position of the top-left corner of the target element in the current window coor
 height: Length
 ```
 
-Height of the target element.
+目标元素的高度。
 
-Unit: vp
+单位：vp
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 8
 
@@ -62,10 +62,9 @@ Unit: vp
 position: Position
 ```
 
-Position of the top-left corner of the target element in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of the parent element.
+目标元素左上角在以父元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的位置。
 
-**Type:** Position
+**Type:** [Position](arkts-arkui-display-position-i.md)
 
 **Since:** 8
 
@@ -85,11 +84,11 @@ Position of the top-left corner of the target element in the
 width: Length
 ```
 
-Width of the target element.
+目标元素的宽度。
 
-Unit: vp
+单位：vp
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 8
 

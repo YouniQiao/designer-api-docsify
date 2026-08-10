@@ -1,6 +1,6 @@
 # BusType
 
-Enumerates the device bus types.
+设备总线类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the device bus types.
 USB = 1
 ```
 
-USB bus.
+USB总线类型。
 
 **Since:** 10
 

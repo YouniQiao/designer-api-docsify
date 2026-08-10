@@ -1,23 +1,24 @@
 # WindowLimits
 
-窗口尺寸限制参数，应用可以通过[getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获得当前窗口的尺寸限制（单位为px）；从API version 22开始，还可以通过[getWindowLimitsVP]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_获取窗口尺寸限制（单位为vp）。
+窗口尺寸限制参数，应用可以通过[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)获得当前窗口的尺寸限制（单位为px）；从API version 22开始，还可以通过[getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp)获取窗口尺寸限制（单位为vp）。
 
 窗口尺寸限制的最终生效结果由默认系统限制、应用配置和运行时设置的数据取交集得到，优先级从高到低依次为：
 
-1. 应用通过[setWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_设置窗口尺寸限制。2. 应用在[startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_拉起窗口时通过[StartOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_指定窗口尺寸限制（API version 17开始支持）。3. 应用在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中配置windowLimits。4. 默认系统限制（基于不同产品和窗口类型，其windowLimits系统默认限制存在差异）。
-    **说明：**  
-    
-    针对maxWidth、maxHeight、minWidth、minHeight属性：  
-    
-    - 默认单位为px，从API version 22开始支持通过pixelUnit设置单位为px或vp。  
-    
-    - 参数为整数，浮点数会向下取整。  
-    
-    - 默认值为0，表示属性不发生变化。  
-    
-    - 可生效范围下限值：系统限定的最小高度/宽度。  
-    
-    - 可生效范围上限值：系统限定的最大高度/宽度。
+1. 应用通过[setWindowLimits](arkts-arkui-window-window-i.md#setwindowlimits)设置窗口尺寸限制。2. 应用在[startAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#startability)拉起窗口时通过[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md/arkts-ability-app-ability-startoptions-startoptions-c.md)指定窗口尺寸限制（API version 17开始支持）。3. 应用在[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)中配置windowLimits。4. 默认系统限制（基于不同产品和窗口类型，其windowLimits系统默认限制存在差异）。
+
+> **说明：**
+> 
+> 针对maxWidth、maxHeight、minWidth、minHeight属性：
+> 
+> - 默认单位为px，从API version 22开始支持通过pixelUnit设置单位为px或vp。
+> 
+> - 参数为整数，浮点数会向下取整。
+> 
+> - 默认值为0，表示属性不发生变化。
+> 
+> - 可生效范围下限值：系统限定的最小高度/宽度。
+> 
+> - 可生效范围上限值：系统限定的最大高度/宽度。
 
 **起始版本：** 11
 
@@ -27,6 +28,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## maxHeight
 
 ```TypeScript
@@ -35,7 +42,7 @@ maxHeight?: int
 
 窗口的最大高度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -55,7 +62,7 @@ maxWidth?: int
 
 窗口的最大宽度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -75,7 +82,7 @@ minHeight?: int
 
 窗口的最小高度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -95,7 +102,7 @@ minWidth?: int
 
 窗口的最小宽度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -115,7 +122,7 @@ pixelUnit?: PixelUnit
 
 窗口尺寸限制的单位，默认为px。可显式设置为px或vp。
 
-**类型：** PixelUnit
+**类型：** [PixelUnit](arkts-arkui-window-pixelunit-e.md)
 
 **起始版本：** 22
 

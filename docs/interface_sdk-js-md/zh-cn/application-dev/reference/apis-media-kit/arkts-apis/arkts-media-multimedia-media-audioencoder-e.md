@@ -1,7 +1,7 @@
 # AudioEncoder
 
-    **说明：**  
-        从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+> **说明：**
+> > 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](media.CodecMimeType)替代。
 
 表示音频编码格式的枚举。
 
@@ -27,7 +27,7 @@ DEFAULT = 0
 
 仅做接口定义，暂不支持使用。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的AUDIO\_AAC替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](media.CodecMimeType)中的AUDIO_AAC替代。
 
 **起始版本：** 6
 
@@ -49,7 +49,7 @@ AMR-NB(Adaptive Multi Rate-Narrow Band Speech Codec) 编码格式。
 
 仅做接口定义，暂不支持使用。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的AUDIO\_AMR\_NB替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](media.CodecMimeType)中的AUDIO_AMR_NB替代。
 
 **起始版本：** 6
 
@@ -73,7 +73,7 @@ AMR-WB(Adaptive Multi Rate-Wide Band Speech Codec) 编码格式。
 
 仅做接口定义，暂不支持使用。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的AUDIO\_AMR\_WB替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](media.CodecMimeType)中的AUDIO_AMR_WB替代。
 
 **起始版本：** 6
 
@@ -95,7 +95,7 @@ AAC_LC = 3
 
 AAC-LC（Advanced Audio Coding Low Complexity）编码格式。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的AUDIO\_AAC替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](media.CodecMimeType)中的AUDIO_AAC替代。
 
 **起始版本：** 6
 
@@ -115,11 +115,11 @@ AAC-LC（Advanced Audio Coding Low Complexity）编码格式。
 HE_AAC = 4
 ```
 
-HE\_AAC（High-Efficiency Advanced Audio Coding）编码格式。
+HE_AAC（High-Efficiency Advanced Audio Coding）编码格式。
 
 仅做接口定义，暂不支持使用。
 
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的AUDIO\_AAC替代。
+**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](media.CodecMimeType)中的AUDIO_AAC替代。
 
 **起始版本：** 6
 

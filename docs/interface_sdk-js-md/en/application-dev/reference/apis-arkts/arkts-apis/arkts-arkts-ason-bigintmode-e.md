@@ -1,6 +1,6 @@
 # BigIntMode
 
-Enum defining modes for handling bigint.
+定义处理BigInt的模式。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enum defining modes for handling bigint.
 DEFAULT = 0
 ```
 
-BigInt is not supported.
+不支持BigInt。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ BigInt is not supported.
 PARSE_AS_BIGINT = 1
 ```
 
-Parse as BigInt when number less than -(2^53 �? 1) or greater than (2^53 �? 1).
+当整数小于-(2^53-1)或大于(2^53-1)时，解析为BigInt。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Parse as BigInt when number less than -(2^53 �? 1) or greater than (2^53 �? 
 ALWAYS_PARSE_AS_BIGINT = 2
 ```
 
-All numbers parse as BigInt.
+所有整数都解析为BigInt。
 
 **Since:** 12
 

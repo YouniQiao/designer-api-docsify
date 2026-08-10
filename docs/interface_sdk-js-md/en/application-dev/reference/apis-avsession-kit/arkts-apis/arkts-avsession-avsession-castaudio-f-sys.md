@@ -1,12 +1,20 @@
 # castAudio (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## castAudio
 
 ```TypeScript
 function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>, callback: AsyncCallback<void>): void
 ```
 
-Cast Audio to the remote devices or cast back local device
+投播会话到指定设备列表。结果通过callback异步回调方式返回。
+
+需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
 
 **Since:** 9
 
@@ -24,26 +32,25 @@ Cast Audio to the remote devices or cast back local device
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| 'all' | Yes | Specifies the sessionId which to send to remote. |
-| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | Specifies the audio devices to cast. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully 'all' means cast all the media audio of this device to remote. |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | Yes | 会话令牌。SessionToken表示单个token；字符串`'all'`指所有token。 |
+| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | 媒体设备列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当投播成功，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-| [6600104](../errorcode-avsession.md#6600104-remote-session-connection-failure) | The remote session connection failed. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 201 | permission denied |
+| 202 | Not System App. |
+| 6600104 | The remote session connection failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let audioManager = audio.getAudioManager();
 let audioRoutingManager = audioManager.getRoutingManager();
@@ -52,16 +59,10 @@ audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data)
   audioDevices = data;
   console.info('Promise returned to indicate that the device list is obtained.');
   if (audioDevices !== undefined) {
-    avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors, (err: BusinessError) => {
-      if (err) {
-        console.error(`CastAudio BusinessError: code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info('CastAudio : SUCCESS ');
-      }
+    avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors, () => {
+        console.info('Succeeded in casting audio.');
     });
   }
-}).catch((err: BusinessError) => {
-  console.error(`GetDevices BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -72,7 +73,9 @@ audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data)
 function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>
 ```
 
-Cast Audio to the remote devices or cast back local device
+投播会话到指定设备列表。结果通过Promise异步回调方式返回。
+
+调用此接口之前，需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
 
 **Since:** 9
 
@@ -90,31 +93,30 @@ Cast Audio to the remote devices or cast back local device
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| 'all' | Yes | Specifies the sessionId which to send to remote. |
-| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | Specifies the audio devices to cast. |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | Yes | 会话令牌。SessionToken表示单个token；字符串`'all'`指所有token。 |
+| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | 媒体设备列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully 'all' means cast all the media audio of this device to remote. |
+| Promise&lt;void&gt; | Promise对象。当投播成功，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-| [6600104](../errorcode-avsession.md#6600104-remote-session-connection-failure) | The remote session connection failed. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 201 | permission denied |
+| 202 | Not System App. |
+| 6600104 | The remote session connection failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let audioManager = audio.getAudioManager();
 let audioRoutingManager = audioManager.getRoutingManager();
@@ -122,15 +124,11 @@ let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
 audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
   audioDevices = data;
   console.info('Promise returned to indicate that the device list is obtained.');
-}).catch((err: BusinessError) => {
-  console.error(`GetDevices BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 
 if (audioDevices !== undefined) {
   avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors).then(() => {
-    console.info('CreateController : SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`CreateController BusinessError: code: ${err.code}, message: ${err.message}`);
+    console.info('Succeeded in creating controller.');
   });
 }
 ```

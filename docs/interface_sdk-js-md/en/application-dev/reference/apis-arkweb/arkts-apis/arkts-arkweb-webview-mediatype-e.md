@@ -1,6 +1,6 @@
 # MediaType
 
-Enumerates the media types.
+表示媒体类型。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the media types.
 VIDEO = 0
 ```
 
-Video.
+视频。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Video.
 AUDIO = 1
 ```
 
-Audio.
+音频。
 
 **Since:** 23
 

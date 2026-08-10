@@ -1,14 +1,22 @@
 # @ohos.nearlink.cdsm
 
-Provides methods related to nearlink CDSM(Coordinated Devices Set Management).
+提供与星闪CDSM（合作设备集合管理）相关的方法。
 
 **Since:** 26.0.0
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace cdsm--><!--Device-unnamed-declare namespace cdsm-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
+
+## Modules to Import
+
+```TypeScript
+import { cdsm } from 'kits/@kit.ConnectivityKit';
+```
 
 ## Summary
 
@@ -16,19 +24,19 @@ Provides methods related to nearlink CDSM(Coordinated Devices Set Management).
 
 | Name | Description |
 | --- | --- |
-| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient) | Creates a CDSM client instance. |
+| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient) | 创建CDSM客户端实例。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | Manages a CDSM client instance. Before invoking any CDSM client method,you must use \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to create a CDSM client instance. |
-| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | Describes the coordinated devices set information. |
-| [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | Describes the member information of coordinated devices set. |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | 管理CDSM客户端实例。在调用任何CDSM客户端方法之前，您必须使用{@link createCdsmClient}来创建CDSM客户端实例。 |
+| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | 描述合作设备集信息。 |
+| [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | 描述合作设备集的成员信息。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md) | The enum of member's connection state. |
+| [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md) | 成员连接状态的枚举。 |
 

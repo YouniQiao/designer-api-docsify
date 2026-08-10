@@ -1,6 +1,6 @@
 # Stat
 
-文件具体信息，包含文件大小、权限模式、访问时间、修改时间等属性。在调用Stat的方法前，需要先通过[stat()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法（同步或异步）构建一个Stat实例。
+文件具体信息，包含文件大小、权限模式、访问时间、修改时间等属性。在调用Stat的方法前，需要先通过[stat()](arkts-corefile-fileio-stat-f.md#stat)方法（同步或异步）构建一个Stat实例。
 
 **起始版本：** 23
 
@@ -9,6 +9,12 @@
 <!--Device-fileIo-interface Stat--><!--Device-fileIo-interface Stat-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
 
 ## isBlockDevice
 
@@ -333,7 +339,7 @@ readonly location: LocationType
 
 文件的位置，表示该文件是本地文件或者云端文件。
 
-**类型：** LocationType
+**类型：** [LocationType](arkts-corefile-fileio-locationtype-e.md)
 
 **起始版本：** 23
 
@@ -351,7 +357,7 @@ readonly mode: long
 
 表示文件权限，各特征位的含义如下：
 
-**说明**：以下值为八进制，取得的返回值为十进制，请换算后查看。
+**说明：**以下值为八进制，取得的返回值为十进制，请换算后查看。
 
 - 0o400：用户读。对于普通文件，所有者可读取文件；对于目录，所有者可读取目录项。
 

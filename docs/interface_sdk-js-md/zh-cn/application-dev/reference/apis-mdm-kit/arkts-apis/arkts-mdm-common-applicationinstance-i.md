@@ -2,10 +2,10 @@
 
 应用的实例数据。
 
-该接口目前在[addUserNonStopApps]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[removeUserNonStopApps]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[addFreezeExemptedApps]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[removeFreezeExemptedApps]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_接口中作为入参使用。
+该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addusernonstopapps)、  
+[removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md#removeusernonstopapps)、  
+[addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addfreezeexemptedapps)、  
+[removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removefreezeexemptedapps)接口中作为入参使用。
 
 **起始版本：** 22
 
@@ -15,13 +15,19 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { common } from 'kits/@kit.MDMKit';
+```
+
 ## accountId
 
 ```TypeScript
 accountId: number
 ```
 
-用户ID。取值范围：大于等于0的整数。accountId可以通过[getOsAccountLocalId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口获取。
+用户ID。取值范围：大于等于0的整数。accountId可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)接口获取。
 
 **类型：** number
 
@@ -41,8 +47,8 @@ accountId: number
 appIdentifier: string
 ```
 
-应用[唯一标识符]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，可以通过接口  
-[bundleManager.getBundleInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获取bundleInfo.signatureInfo.appIdentifier。
+应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md/arkts-ability-bundleinfo-signatureinfo-i.md)，可以通过接口  
+[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md/arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)获取bundleInfo.signatureInfo.appIdentifier。
 
 **类型：** string
 
@@ -64,7 +70,7 @@ appIndex: number
 
 应用分身索引。取值范围：大于等于0的整数。
 
-appIndex可以通过[getAppCloneIdentity]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口获取。
+appIndex可以通过[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity)接口获取。
 
 **类型：** number
 

@@ -1,6 +1,6 @@
 # IndicatorStyle
 
-Represents an indicator style object.
+下划线风格对象。
 
 **Since:** 10
 
@@ -16,15 +16,15 @@ Represents an indicator style object.
 borderRadius?: Length
 ```
 
-Rounded corner radius of the indicator. It cannot be set in percentage.
+下划线的圆角半径（不支持百分比设置）。
 
-Default value: **0.0**
+默认值：0.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
@@ -46,11 +46,11 @@ Value range: [0, +∞)
 color?: ResourceColor
 ```
 
-Color of the indicator and board.
+下划线的颜色和背板颜色。
 
-Default value: **#FF007DFF
+默认值：#FF007DFF，浅蓝色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
 
@@ -70,15 +70,15 @@ Default value: **#FF007DFF
 height?: Length
 ```
 
-Height of the indicator. It cannot be set in percentage.
+下划线的高度（不支持百分比设置）。
 
-Default value: **2.0**
+默认值：2.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
 
@@ -98,15 +98,15 @@ Value range: [0, +∞)
 marginTop?: Length
 ```
 
-Spacing between the indicator and text. It cannot be set in percentage.
+下划线与文字的间距（不支持百分比设置）。
 
-Default value: **8.0**
+默认值：8.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 8
 
@@ -128,19 +128,19 @@ Value range: [0, +∞)
 width?: Length
 ```
 
-Width of the indicator. It cannot be set in percentage.
+下划线的宽度（不支持百分比设置）。
 
-Default value: **0.0**
+默认值：0.0
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)。异常值时取默认值。
 
-**NOTE**
+**说明：**
 
-If this parameter is set to **0**, the tab text width will be used instead.
+宽度设置为0时，按页签文本宽度显示。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 

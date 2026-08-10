@@ -1,6 +1,6 @@
 # RotationGestureInterface
 
-RotationGesture** is used to trigger a rotation gesture, which recognizes rotational movements using two to five fingers, with a minimum angular change of 1 degree. This gesture cannot be triggered using a two-finger rotation operation on a trackpad.
+用于触发旋转手势，最少需要2指，最多5指，最小改变度数为1度。该手势不支持通过触控板双指旋转操作触发。
 
 **Inheritance/Implementation:** RotationGestureInterface extends [GestureInterface<RotationGestureInterface>](GestureInterface<RotationGestureInterface>)
 
@@ -18,7 +18,7 @@ RotationGesture** is used to trigger a rotation gesture, which recognizes rotati
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
 ```
 
-Sets the parameters for the rotation gesture. Inherits from [GestureInterface\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)，设置旋转手势事件。
 
 **Since:** 7
 
@@ -34,13 +34,13 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface\_\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; angle?: number } | No | Parameters for the rotation gesture. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **fingers**: minimum number of fingers to trigger the rotation gesture.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **2** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [2, 5]. Values less than 2 or greater than 5 are automatically adjusted to the default value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_While more fingers than the minimum number can be pressed to trigger the gesture, only the first two fingers participate in gesture calculation. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **angle**: minimum angular change required to trigger the rotation gesture; unit: deg.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **1**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is less than or equal to 0 or greater than 360, it will be converted to the default value. |
+| value | { fingers?: number; angle?: number } | No | 设置旋转手势事件参数。 &lt;br&gt; - fingers：触发旋转手势所需的最少手指数，&nbsp;最小为2指，最大为5指。&lt;br/&gt;默认值：2 &lt;br/&gt;取值范围：[2, 5]。当设置的值小于2或大于5时，会被转化 为默认值。&lt;br/&gt;触发手势时手指数量可以多于fingers参数值，但仅最先落下的两指参与手势计算。 &lt;br&gt; - angle：触发旋转手势所需的最小角度变化，单位为deg。&lt;br/&gt;默认值：1 &lt;br/&gt;**说明：** &lt;br/&gt;当改变度数的值小于等于0或大于360时，会被转化为默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -48,8 +48,7 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface\_\
 (options?: RotationGestureHandlerOptions): RotationGestureInterface
 ```
 
-Sets the parameters for the rotation gesture. Compared with  
-[RotationGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_)},this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+设置旋转手势事件。与[RotationGesture](arkts-arkui-rotationgestureinterface-i.md))}相比，options参数新增了isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
 
 **Since:** 15
 
@@ -67,13 +66,13 @@ Sets the parameters for the rotation gesture. Compared with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the rotation gesture handler. |
+| options | [RotationGestureHandlerOptions](arkts-arkui-gesture-rotationgesturehandleroptions-i.md) | No | 旋转手势处理器配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -81,7 +80,7 @@ Sets the parameters for the rotation gesture. Compared with
 onActionCancel(event: () => void): RotationGestureInterface
 ```
 
-Triggered when a tap cancellation event is received after the rotation gesture is recognized. This callback does not return gesture event information.
+Rotation手势识别成功，接收到触摸取消事件触发的回调。该回调不返回手势事件信息。
 
 **Since:** 7
 
@@ -97,13 +96,13 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | Callback for the gesture event. |
+| event | () =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -111,8 +110,7 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface
 ```
 
-Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with  
-[onActionCancel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, this callback returns gesture event information.
+Rotation手势识别成功，接收到触摸取消事件触发的回调。与[onActionCancel](arkts-arkui-rotationgestureinterface-i.md#onactioncancel)相比，该回调返回手势事件信息。
 
 **Since:** 18
 
@@ -130,13 +128,13 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback for the gesture event. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -144,7 +142,7 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 onActionEnd(event: (event: GestureEvent) => void): RotationGestureInterface
 ```
 
-Triggered when the last finger used for the rotation gesture is lifted.
+Rotation手势识别成功，当抬起最后一根满足手势触发条件的手指后触发的回调。
 
 **Since:** 7
 
@@ -160,13 +158,13 @@ Triggered when the last finger used for the rotation gesture is lifted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for the gesture event. |
+| event | (event: GestureEvent) =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionStart
 
@@ -174,7 +172,7 @@ Triggered when the last finger used for the rotation gesture is lifted.
 onActionStart(event: (event: GestureEvent) => void): RotationGestureInterface
 ```
 
-Triggered when the rotation gesture is recognized successfully.
+Rotation手势识别成功后触发的回调。
 
 **Since:** 7
 
@@ -190,13 +188,13 @@ Triggered when the rotation gesture is recognized successfully.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for the gesture event. |
+| event | (event: GestureEvent) =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 
 ## onActionUpdate
 
@@ -204,7 +202,7 @@ Triggered when the rotation gesture is recognized successfully.
 onActionUpdate(event: (event: GestureEvent) => void): RotationGestureInterface
 ```
 
-Triggered during the movement of the rotation gesture.
+Rotation手势移动过程中触发的回调。
 
 **Since:** 7
 
@@ -220,11 +218,11 @@ Triggered during the movement of the rotation gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for the gesture event. |
+| event | (event: GestureEvent) =&gt; void | Yes | 手势事件回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
 

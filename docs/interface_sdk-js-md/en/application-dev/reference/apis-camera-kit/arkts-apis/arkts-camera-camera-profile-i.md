@@ -1,6 +1,6 @@
 # Profile
 
-Describes the camera profile.
+相机配置信息项。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the camera profile.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## format
 
 ```TypeScript
 readonly format: CameraFormat
 ```
 
-Output format.
+输出格式。
 
-**Type:** CameraFormat
+**Type:** [CameraFormat](arkts-camera-camera-cameraformat-e.md)
 
 **Since:** 10
 
@@ -36,11 +42,11 @@ Output format.
 readonly size: Size
 ```
 
-Resolution.
+分辨率。
 
-The size setting corresponds to the camera's resolution width and height, rather than the actual dimensions of the output image.
+设置的是相机的分辨率宽度和高度，而非实际输出图像的宽度和高度。
 
-**Type:** Size
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **Since:** 10
 

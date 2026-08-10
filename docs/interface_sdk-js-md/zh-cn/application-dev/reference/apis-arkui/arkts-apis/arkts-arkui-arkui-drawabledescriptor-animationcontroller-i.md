@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+```
+
 ## getStatus
 
 ```TypeScript
@@ -32,7 +38,7 @@ getStatus(): AnimationStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  动图的播放状态。包含4种状态：初始态、播放态、暂停态、停止态。 |
+| [AnimationStatus](arkts-arkui-animationstatus-e.md) | 动图的播放状态。包含4种状态：初始态、播放态、暂停态、停止态。 |
 
 ## pause
 

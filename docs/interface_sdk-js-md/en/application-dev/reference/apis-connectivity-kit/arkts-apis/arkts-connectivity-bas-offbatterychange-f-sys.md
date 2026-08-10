@@ -1,5 +1,11 @@
 # offBatteryChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bas } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offBatteryChange
 
 ```TypeScript
@@ -26,14 +32,14 @@ Unsubscribe the event of battery state changes from a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BatteryInfo&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BatteryInfo&gt; | No | Callback used to listen. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 801 | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 | 2900099 | Operation failed. |
 

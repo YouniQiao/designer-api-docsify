@@ -19,6 +19,12 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## closeAshmem
 
 ```TypeScript
@@ -26,9 +32,10 @@ closeAshmem(): void
 ```
 
 关闭这个Ashmem。
-    **说明：**  
-    
-    关闭Ashmem对象前需要先解除地址映射。
+
+> **说明：**
+> 
+> 关闭Ashmem对象前需要先解除地址映射。
 
 **起始版本：** 8
 
@@ -38,7 +45,7 @@ closeAshmem(): void
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -79,21 +86,21 @@ static create(name: string, size: int): Ashmem
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | Ashmem名称，用于查询Ashmem信息，其长度不能为0。 |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Ashmem的大小，其大小应大于0，以字节为单位。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Ashmem的大小，其大小应大于0，以字节为单位。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的Ashmem对象；如果创建失败，返回null。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象；如果创建失败，返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -132,21 +139,21 @@ static create(ashmem: Ashmem): Ashmem
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ashmem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 已存在的Ashmem对象。 |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 是 | 已存在的Ashmem对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的Ashmem对象。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -196,9 +203,9 @@ static createAshmem(name: string, size: number): Ashmem
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的Ashmem对象；如果创建失败，返回null。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象；如果创建失败，返回null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -238,15 +245,15 @@ static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ashmem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 已存在的Ashmem对象。 |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 是 | 已存在的Ashmem对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的Ashmem对象。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -288,9 +295,9 @@ getAshmemSize(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回Ashmem对象的内存大小。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回Ashmem对象的内存大小。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -337,7 +344,7 @@ mapAshmem(mapType: number): boolean
 | --- | --- |
 | boolean | true：映射成功，false：映射失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -378,7 +385,7 @@ mapReadAndWriteAshmem(): boolean
 | --- | --- |
 | boolean | true：映射成功，false：映射失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -419,7 +426,7 @@ mapReadOnlyAshmem(): boolean
 | --- | --- |
 | boolean | true：映射成功，false：映射失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -454,9 +461,9 @@ mapReadWriteAshmem(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
+| 1900001 | Failed to call mmap. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -493,9 +500,9 @@ mapReadonlyAshmem(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
+| 1900001 | Failed to call mmap. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -538,16 +545,16 @@ mapTypedAshmem(mapType: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mapType | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定映射的内存区域的保护等级。 |
+| mapType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定映射的内存区域的保护等级。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
+| 1900001 | Failed to call mmap. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -571,9 +578,10 @@ readAshmem(size: number, offset: number): number[]
 ```
 
 从此Ashmem对象关联的共享文件中读取数据。
-    **说明：**  
-    
-    对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行映射。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **起始版本：** 9
 
@@ -604,10 +612,10 @@ readAshmem(size: number, offset: number): number[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) | Failed to read data from the shared memory. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| 1900004 | Failed to read data from the shared memory. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -641,9 +649,10 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 ```
 
 从此Ashmem对象关联的共享文件中读取数据。
-    **说明：**  
-    
-    对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行映射。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **起始版本：** 11
 
@@ -657,8 +666,8 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要读取的数据的大小，以字节为单位。 |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要读取的数据在此Ashmem对象关联的内存区间的起始位置。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要读取的数据的大小，以字节为单位。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要读取的数据在此Ashmem对象关联的内存区间的起始位置。 |
 
 **返回值：**
 
@@ -670,10 +679,10 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) | Failed to read data from the shared memory. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| 1900004 | Failed to read data from the shared memory. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -707,9 +716,10 @@ readFromAshmem(size: number, offset: number): number[]
 ```
 
 从此Ashmem对象关联的共享文件中读取数据。
-    **说明：**  
-    
-    对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行映射。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **起始版本：** 8
 
@@ -736,7 +746,7 @@ readFromAshmem(size: number, offset: number): number[]
 | --- | --- |
 | number[] | 返回读取的数据。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -788,7 +798,7 @@ setProtection(protectionType: number): boolean
 | --- | --- |
 | boolean | true：设置成功，false：设置失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -830,16 +840,16 @@ setProtectionType(protectionType: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| protectionType | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要设置的保护类型。 |
+| protectionType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要设置的保护类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900002](../errorcode-rpc.md#1900002-系统调用ioctl失败) | Failed to call ioctl. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| 1900002 | Failed to call ioctl. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -872,7 +882,7 @@ unmapAshmem(): void
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -893,9 +903,10 @@ writeAshmem(buf: number[], size: number, offset: number): void
 ```
 
 将数据写入此Ashmem对象关联的共享文件。
-    **说明：**  
-    
-    对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行映射。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **起始版本：** 9
 
@@ -921,10 +932,10 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
-| [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) | Failed to write data to the shared memory. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
+| 1900003 | Failed to write data to the shared memory. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -956,9 +967,10 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 ```
 
 将数据写入此Ashmem对象关联的共享文件。
-    **说明：**  
-    
-    对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行映射。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **起始版本：** 11
 
@@ -973,17 +985,17 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | 是 | 写入Ashmem对象的数据。 |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要写入的数据大小，以字节为单位。 |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要写入的数据在此Ashmem对象关联的内存区间的起始位置。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要写入的数据大小，以字节为单位。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要写入的数据在此Ashmem对象关联的内存区间的起始位置。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
-| [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) | Failed to write data to the shared memory. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
+| 1900003 | Failed to write data to the shared memory. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1014,9 +1026,10 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 ```
 
 将数据写入此Ashmem对象关联的共享文件。
-    **说明：**  
-    
-    对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_进行映射。
+
+> **说明：**
+> 
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
 
 **起始版本：** 8
 
@@ -1044,7 +1057,7 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 | --- | --- |
 | boolean | true：如果数据写入成功，false：在其他情况下，如数据写入越界或未获得写入权限。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

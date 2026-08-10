@@ -1,6 +1,6 @@
 # QueryMediaEntityParam
 
-The definition of QueryMediaEntityParam.
+查询媒体实例参数的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of QueryMediaEntityParam.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## entityId
 
 ```TypeScript
 entityId: string
 ```
 
-entityId.
+媒体实例的ID。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ entityId.
 episodeRange?: EpisodeRange
 ```
 
-episodeRange.
+要查询的剧集区间。
 
-**Type:** EpisodeRange
+**Type:** [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md)
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ episodeRange.
 pageIndex: int
 ```
 
-pageIndex.
+分页查询页码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -76,9 +82,9 @@ pageIndex.
 sort?: Sort
 ```
 
-sort.
+查询到的列表数据排序。
 
-**Type:** Sort
+**Type:** [Sort](arkts-avsession-avmusictemplate-sort-e.md)
 
 **Since:** 23
 
@@ -96,9 +102,9 @@ sort.
 subEntityType?: EntityType
 ```
 
-subEntityType.
+子节点的媒体资源类型。
 
-**Type:** EntityType
+**Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **Since:** 23
 
@@ -116,9 +122,9 @@ subEntityType.
 type: EntityType
 ```
 
-type.
+媒体资源类型。
 
-**Type:** EntityType
+**Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **Since:** 23
 

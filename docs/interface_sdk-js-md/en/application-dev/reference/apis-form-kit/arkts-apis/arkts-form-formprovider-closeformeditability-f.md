@@ -1,5 +1,11 @@
 # closeFormEditAbility
 
+## Modules to Import
+
+```TypeScript
+import { formProvider } from 'kits/@kit.FormKit';
+```
+
 ## closeFormEditAbility
 
 ```TypeScript
@@ -22,17 +28,17 @@ Closes the widget editing page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isMainPage | boolean | No | Whether to close the main editing page. The value **true** means closing the main editing page, and **false** means closing a non-main editing page.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **true**. |
+| isMainPage | boolean | No | Whether to close the main editing page. The value **true** means closing the main editing page, and **false** means closing a non-main editing page.&lt;br&gt;Default value: **true**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported due to limited device capabilities. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16501015](../errorcode-form.md#16501015-failed-to-close-semimodal-widget-editing-page-of-another-application) | Cannot close the widget editing page opened by other apps. |
+| 801 | Capability not supported due to limited device capabilities. |
+| 16500050 | IPC connection error. |
+| 16501015 | Cannot close the widget editing page opened by other apps. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formProvider } from '@kit.FormKit';
@@ -64,7 +70,7 @@ struct Page {
             formProvider.closeFormEditAbility();
             console.info(`${TAG} close FormEditAbility success.`);
           } catch (error) {
-            console.error(`${TAG} close FormEditAbility faild, code: ${error.code}, message: ${error.message}`);
+            console.error(`${TAG} close FormEditAbility failed, code: ${error.code}, message: ${error.message}`);
           }
         })
     }

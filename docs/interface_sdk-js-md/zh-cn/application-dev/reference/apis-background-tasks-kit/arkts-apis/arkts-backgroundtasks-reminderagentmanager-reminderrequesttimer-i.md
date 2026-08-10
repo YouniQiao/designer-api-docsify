@@ -14,6 +14,12 @@ ReminderRequestTimer extends ReminderRequest
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## repeatCount
 
 ```TypeScript
@@ -24,7 +30,7 @@ repeatCount?: int
 
 范围：[0, +∞)。超出范围返回错误码401。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -46,7 +52,7 @@ repeatInterval?: long
 
 单位：s，范围：[86400, +∞)。超出范围返回错误码401。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 26.0.0
 
@@ -68,7 +74,7 @@ triggerTimeInSeconds: long
 
 单位：s
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

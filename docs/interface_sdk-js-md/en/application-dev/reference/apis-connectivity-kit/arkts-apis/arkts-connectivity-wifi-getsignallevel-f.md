@@ -1,5 +1,11 @@
 # getSignalLevel
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getSignalLevel
 
 ```TypeScript
@@ -35,18 +41,18 @@ Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 | --- | --- |
 | number | Returns Wi-Fi signal level ranging from 0 to 4. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	let rssi = 0;
-	let band = 0;
-	let level = wifi.getSignalLevel(rssi,band);
-	console.info("level:" + JSON.stringify(level));
+  let rssi = 0;
+  let band = 0;
+  let level = wifi.getSignalLevel(rssi,band);
+  console.info("level:" + JSON.stringify(level));
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

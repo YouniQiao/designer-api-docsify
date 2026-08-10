@@ -1,6 +1,6 @@
 # VibratorStatusEvent
 
-振动设备上线、下线状态事件信息。当马达设备上线或下线时，通过[vibrator.on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调传递此对象。
+振动设备上线、下线状态事件信息。当马达设备上线或下线时，通过[vibrator.on](arkts-sensorservice-vibrator-on-f.md#on)回调传递此对象。
 
 **起始版本：** 19
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
+## 导入模块
+
+```TypeScript
+import { vibrator } from 'kits/@kit.SensorServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -17,9 +23,9 @@ deviceId: int
 ```
 
 设备的ID。可用于  
-[startVibration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和[stopVibration]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_等接口指定目标设备。
+[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)等接口指定目标设备。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -55,7 +61,7 @@ timestamp: long
 
 报告事件的时间戳。单位：ms。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 
@@ -73,7 +79,7 @@ vibratorCount: int
 
 设备上的马达的数量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 

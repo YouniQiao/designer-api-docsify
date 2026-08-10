@@ -1,6 +1,6 @@
 # FlowItemFrameNode
 
-Define the FlowItem type of FrameNode.
+定义FlowItem类型的FrameNode。
 
 **Inheritance/Implementation:** FlowItemFrameNode extends [TypedFrameNode<FlowItemAttribute>](TypedFrameNode<FlowItemAttribute>)
 
@@ -18,7 +18,7 @@ Define the FlowItem type of FrameNode.
 abstract initialize(): FlowItemAttribute
 ```
 
-Initialize FlowItem FrameNode.
+初始化FlowItem类型的FrameNode。
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ Initialize FlowItem FrameNode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) |  |
 

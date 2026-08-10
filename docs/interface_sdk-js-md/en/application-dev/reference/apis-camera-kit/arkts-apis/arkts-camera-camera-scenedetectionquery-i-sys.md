@@ -12,6 +12,12 @@ Provides the scene detection and query capabilities.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isSceneFeatureSupported
 
 ```TypeScript
@@ -34,7 +40,7 @@ Checks whether a scene feature is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scene feature. |
+| type | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes | Scene feature. |
 
 **Return value:**
 
@@ -46,6 +52,15 @@ Checks whether a scene feature is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application, only throw in session usage. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 202 | Not System Application, only throw in session usage. |
+
+## Examples
+
+```TypeScript
+function isSceneFeatureSupported(photoSessionForSys: camera.PhotoSessionForSys, featureType: camera.SceneFeatureType): boolean {
+  let isSupported: boolean = photoSessionForSys.isSceneFeatureSupported(featureType);
+  return isSupported;
+}
+```
 

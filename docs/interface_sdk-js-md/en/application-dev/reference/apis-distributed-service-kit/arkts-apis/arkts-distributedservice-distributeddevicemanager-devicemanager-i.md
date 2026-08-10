@@ -1,8 +1,6 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in  
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,  
-**dmInstance**.
+设备管理实例，用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
 
 **Since:** 10
 
@@ -12,13 +10,19 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## bindTarget
 
 ```TypeScript
 bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void
 ```
 
-Binds a device. This API uses an asynchronous callback to return the result.
+认证设备。使用callback异步回调。
 
 **Since:** 10
 
@@ -34,20 +38,20 @@ Binds a device. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
-| bindParam | { [key: string]: Object; } | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**bindType**: binding type, which is mandatory. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **1** means PIN authentication. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**targetPkgName**: bundle name of the target to bind. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**appName**: application that attempts to bind the target. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**appOperation**: reason for the application to bind the target. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**customDescription**: detailed description of the operation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{deviceId: string;}&gt; | Yes |  |
+| deviceId | string | Yes | 设备标识。长度范围1~255字符。 |
+| bindParam | { [key: string]: Object; } | Yes | 认证参数。由开发者自行决定传入的键值对。默认会携带以下key值： &lt;br&gt;bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 &lt;br&gt;targetPkgName 绑定目标的包名。 &lt;br&gt;appName 尝试绑定目标的应用程序名称。 &lt;br&gt;appOperation 应用程序要绑定目标的原因。 &lt;br&gt;customDescription 操作的详细说明。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified deviceId is greater than 255. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-authentication-unavailable) | Authentication unavailable. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified deviceId is greater than 255. |
+| 11600101 | Failed to execute the function. |
+| 11600103 | Authentication unavailable. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -88,7 +92,7 @@ try {
 bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: AsyncCallback<BindTargetResult>): void
 ```
 
-Binds a device. This API uses an asynchronous callback to return the result.
+认证设备。使用callback异步回调。
 
 **Since:** 23
 
@@ -104,17 +108,17 @@ Binds a device. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
-| bindParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, int \| string&gt; | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**bindType**: binding type, which is mandatory. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **1** means PIN authentication. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**targetPkgName**: bundle name of the target to bind. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**appName**: application that attempts to bind the target. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**appOperation**: reason for the application to bind the target. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**customDescription**: detailed description of the operation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BindTargetResult&gt; | Yes | Callback used to return the authentication result. |
+| deviceId | string | Yes | 设备标识。长度范围1~255字符。 |
+| bindParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| string&gt; | Yes | 认证参数。由开发者自行决定传入的键值对。 默认会携带以下key值： &lt;br&gt;bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 &lt;br&gt;targetPkgName 绑定目标的包名。 &lt;br&gt;appName 尝试绑定目标的应用程序名称。 &lt;br&gt;appOperation 应用程序要绑定目标的原因。 &lt;br&gt;customDescription 操作的详细说明。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BindTargetResult&gt; | Yes | 认证结果回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
-| [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-authentication-unavailable) | Authentication unavailable. |
+| 11600101 | Failed to execute the function. |
+| 11600103 | Authentication unavailable. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## getAvailableDeviceList
 
@@ -122,7 +126,7 @@ Binds a device. This API uses an asynchronous callback to return the result.
 getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 ```
 
-Obtains all trusted devices. This API uses an asynchronous callback to return the result.
+获取所有可信设备列表。使用callback异步回调。
 
 **Since:** 10
 
@@ -138,16 +142,16 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;DeviceBasicInfo&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceBasicInfo&gt;&gt; | Yes | 获取所有可信设备列表的回调，返回设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -174,7 +178,7 @@ try {
 getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 ```
 
-Obtains all trusted devices. This API uses a promise to return the result.
+获取所有可信设备列表。使用Promise异步回调。
 
 **Since:** 10
 
@@ -190,16 +194,16 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceBasicInfo&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;DeviceBasicInfo&gt;&gt; | Promise实例，用于获取异步返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -219,7 +223,7 @@ dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.D
 getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 ```
 
-Obtains all trusted devices synchronously.
+同步获取所有可信设备列表。
 
 **Since:** 10
 
@@ -235,16 +239,16 @@ Obtains all trusted devices synchronously.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceBasicInfo&gt; | List of trusted devices obtained. |
+| Array&lt;DeviceBasicInfo&gt; | 返回可信设备列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -265,7 +269,7 @@ try {
 getDeviceName(networkId: string): string
 ```
 
-Obtains the device name based on the network ID of the specified device.
+通过指定设备的网络标识获取该设备名称。
 
 **Since:** 10
 
@@ -281,23 +285,23 @@ Obtains the device name based on the network ID of the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkId | string | Yes | Network ID of the device. The value is a string of 1 to 255 characters. |
+| networkId | string | Yes | 设备的网络标识。长度范围1~255字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Device name obtained. |
+| string | 返回指定设备名称。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -327,7 +331,7 @@ ArkTS-Sta:
 getDeviceType(networkId: string): int
 ```
 
-Obtains the device type based on the network ID of the specified device.
+通过指定设备的网络标识获取该设备类型。
 
 **Since:** 10
 
@@ -343,23 +347,23 @@ Obtains the device type based on the network ID of the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkId | string | Yes | Network ID of the device. The value is a string of 1 to 255 characters. |
+| networkId | string | Yes | 设备的网络标识。长度范围1~255字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Device type obtained.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | &lt;!--RP2--&gt;返回指定设备类型。&lt;!--RP2End--&gt; |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -383,8 +387,7 @@ try {
 getLocalDeviceId(): string
 ```
 
-Obtains the local device ID. The value is the result of obfuscating the udid-hash (hash value of the UDID),  
-**appid**, and salt using the SHA-256 algorithm.
+获取本地设备id，实际值为udid-hash与appid和盐值基于sha256方式进行混淆后的值。
 
 **Since:** 10
 
@@ -400,16 +403,16 @@ Obtains the local device ID. The value is the result of obfuscating the udid-has
 
 | Type | Description |
 | --- | --- |
-| string | Local device ID obtained. |
+| string | 返回本地设备id。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -431,7 +434,7 @@ try {
 getLocalDeviceName(): string
 ```
 
-Obtains the local device name.
+获取本地设备名称。
 
 **Since:** 10
 
@@ -447,16 +450,16 @@ Obtains the local device name.
 
 | Type | Description |
 | --- | --- |
-| string | Name of the local device obtained. |
+| string | 返回本地设备名称。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -478,7 +481,7 @@ try {
 getLocalDeviceNetworkId(): string
 ```
 
-Obtains the network ID of the local device.
+获取本地设备网络标识。
 
 **Since:** 10
 
@@ -494,16 +497,16 @@ Obtains the network ID of the local device.
 
 | Type | Description |
 | --- | --- |
-| string | Network ID of the local device obtained. |
+| string | 返回本地设备网络标识。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -531,7 +534,7 @@ ArkTS-Sta:
 getLocalDeviceType(): int
 ```
 
-Obtains the local device type.
+获取本地设备类型。
 
 **Since:** 10
 
@@ -547,16 +550,16 @@ Obtains the local device type.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Local device type obtained.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | &lt;!--RP1--&gt;返回本地设备类型。&lt;!--RP1End--&gt; |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -578,7 +581,7 @@ try {
 off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
 ```
 
-Unsubscribes from the device state changes. This API uses an asynchronous callback to return the result.
+取消注册设备状态回调。使用callback异步回调。
 
 **Since:** 10
 
@@ -594,17 +597,17 @@ Unsubscribes from the device state changes. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No |  |
+| type | 'deviceStateChange' | Yes | 根据应用程序的包名取消注册设备状态回调，固定为deviceStateChange。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -637,7 +640,7 @@ try {
 off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void
 ```
 
-Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous callback to return the result.
+取消注册设备发现成功回调。使用callback异步回调。
 
 **Since:** 10
 
@@ -653,17 +656,17 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ device: DeviceBasicInfo; }&gt; | No |  |
+| type | 'discoverSuccess' | Yes | 取消注册设备发现回调，固定为discoverSuccess。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -695,7 +698,7 @@ try {
 off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void
 ```
 
-Unsubscribes from the device name changes. This API uses an asynchronous callback to return the result.
+取消注册设备名称变更回调监听。使用callback异步回调。
 
 **Since:** 10
 
@@ -711,17 +714,17 @@ Unsubscribes from the device name changes. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ deviceName: string; }&gt; | No |  |
+| type | 'deviceNameChange' | Yes | 取消注册设备名称改变回调，固定为deviceNameChange。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -748,7 +751,7 @@ try {
 off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void
 ```
 
-Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous callback to return the result.
+取消注册设备发现失败回调。使用callback异步回调。
 
 **Since:** 10
 
@@ -764,17 +767,17 @@ Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ reason: int; }&gt; | No |  |
+| type | 'discoverFailure' | Yes | 取消注册设备发现失败回调，固定为discoverFailure。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: int; }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -801,7 +804,7 @@ try {
 off(type: 'serviceDie', callback?: Callback<{}>): void
 ```
 
-Unsubscribes from the dead events of the **DeviceManager** service. This API uses an asynchronous callback to return the result.
+取消注册设备管理服务死亡回调。使用callback异步回调。
 
 **Since:** 10
 
@@ -817,17 +820,17 @@ Unsubscribes from the dead events of the **DeviceManager** service. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{}&gt; | No |  |
+| type | 'serviceDie' | Yes | 取消注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -850,7 +853,7 @@ try {
 offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
 ```
 
-UnRegister the device name change result callback.
+取消注册设备名称变更回调监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -866,13 +869,13 @@ UnRegister the device name change result callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceNameChangeResult&gt; | No | Indicates the device name change callback to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceNameChangeResult&gt; | No | 指示要取消注册设备名称改变的回调方法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## offDeviceStateChange
 
@@ -880,7 +883,7 @@ UnRegister the device name change result callback.
 offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
 ```
 
-UnRegister device state callback based on the application bundle name.
+取消注册设备状态回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -896,13 +899,13 @@ UnRegister device state callback based on the application bundle name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceStateChangeResult&gt; | No | Indicates the device state callback to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceStateChangeResult&gt; | No | 指示要取消注册的设备状态回调，返回设备状态和设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## offDiscoverFailure
 
@@ -910,7 +913,7 @@ UnRegister device state callback based on the application bundle name.
 offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
 ```
 
-UnRegister the device discovery result callback.
+取消注册设备发现失败回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -926,13 +929,13 @@ UnRegister the device discovery result callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DiscoveryFailureResult&gt; | No | Indicates the device found result callback to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryFailureResult&gt; | No | 指示要取消注册的设备发现失败回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## offDiscoverSuccess
 
@@ -940,7 +943,7 @@ UnRegister the device discovery result callback.
 offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
 ```
 
-UnRegister the device discovery result callback.
+取消注册设备发现成功回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -956,13 +959,13 @@ UnRegister the device discovery result callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DiscoverySuccessResult&gt; | No | Indicates the device discovery callback to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoverySuccessResult&gt; | No | 指示要取消注册的设备发现回调，返回设备状态和设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## offServiceDie
 
@@ -970,7 +973,7 @@ UnRegister the device discovery result callback.
 offServiceDie(callback?: Callback<ServiceDieData>): void
 ```
 
-UnRegister the service error callback.
+取消注册设备管理服务死亡回调。使用callback异步回调。
 
 **Since:** 23
 
@@ -986,13 +989,13 @@ UnRegister the service error callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ServiceDieData&gt; | No | Indicates the service error callback to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ServiceDieData&gt; | No | 取消注册serviceDie的回调方法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## on('deviceStateChange')
 
@@ -1000,7 +1003,7 @@ UnRegister the service error callback.
 on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
 ```
 
-Subscribes to the device state changes. The application (identified by the bundle name) will be notified when the device state changes. This API uses an asynchronous callback to return the result.
+注册设备状态回调，以便在设备状态发生变化时根据应用捆绑包名通知应用。使用callback异步回调。
 
 **Since:** 10
 
@@ -1016,17 +1019,17 @@ Subscribes to the device state changes. The application (identified by the bundl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes |  |
+| type | 'deviceStateChange' | Yes | 注册设备状态回调，固定为deviceStateChange。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -1059,7 +1062,7 @@ try {
 on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void
 ```
 
-Subscribes to the **'discoverSuccess'** event. The application will be notified when a device is successfully discovered. This API uses an asynchronous callback to return the result.
+注册发现设备成功回调监听。使用callback异步回调。
 
 **Since:** 10
 
@@ -1075,17 +1078,17 @@ Subscribes to the **'discoverSuccess'** event. The application will be notified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ device: DeviceBasicInfo; }&gt; | Yes |  |
+| type | 'discoverSuccess' | Yes | 注册设备发现回调，以便在发现周边设备时通知应用程序，固定为discoverSuccess。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -1117,7 +1120,7 @@ try {
 on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 ```
 
-Subscribes to device name changes. The application will be notified when the name of a device is changed. This API uses an asynchronous callback to return the result.
+注册设备名称变更回调，以便在设备名称改变时通知应用程序。使用callback异步回调。
 
 **Since:** 10
 
@@ -1133,17 +1136,17 @@ Subscribes to device name changes. The application will be notified when the nam
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ deviceName: string; }&gt; | Yes |  |
+| type | 'deviceNameChange' | Yes | 注册设备名称改变回调，以便在设备名称改变时通知应用程序，固定为deviceNameChange。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -1167,10 +1170,10 @@ try {
 ## on('discoverFailure')
 
 ```TypeScript
-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void
+on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 ```
 
-Subscribes to the **'discoverFailure'** event. The application will be notified when a device fails to be discovered. This API uses an asynchronous callback to return the result.
+注册设备发现失败回调监听。使用callback异步回调。
 
 **Since:** 10
 
@@ -1178,7 +1181,7 @@ Subscribes to the **'discoverFailure'** event. The application will be notified 
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void-End-->
+<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1186,17 +1189,17 @@ Subscribes to the **'discoverFailure'** event. The application will be notified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ reason: int; }&gt; | Yes |  |
+| type | 'discoverFailure' | Yes | 注册设备发现失败回调，以便在发现周边设备失败时通知应用程序，固定为discoverFailure。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -1223,8 +1226,7 @@ try {
 on(type: 'serviceDie', callback?: Callback<{}>): void
 ```
 
-Subscribes to the dead events of the **DeviceManager** service. The application will be notified when the  
-**DeviceManager** service is terminated unexpectedly. This API uses an asynchronous callback to return the result.
+注册设备管理服务死亡回调，以便在服务死亡时通知应用程序。使用callback异步回调。
 
 **Since:** 10
 
@@ -1240,17 +1242,17 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{}&gt; | No |  |
+| type | 'serviceDie' | Yes | 注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -1273,7 +1275,7 @@ try {
 onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
 ```
 
-Register a device name change callback so that the application can be notified when discovery success.
+注册设备名称变更回调，以便在设备名称改变时通知应用程序。使用callback异步回调。
 
 **Since:** 23
 
@@ -1289,13 +1291,13 @@ Register a device name change callback so that the application can be notified w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceNameChangeResult&gt; | Yes | Indicates the device name change callback to register. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceNameChangeResult&gt; | Yes | 注册设备名称改变的回调方法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## onDeviceStateChange
 
@@ -1303,7 +1305,7 @@ Register a device name change callback so that the application can be notified w
 onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
 ```
 
-Register a device state callback so that the application can be notified upon device state changes based on the application bundle name.
+注册设备状态回调，以便在设备状态发生变化时根据应用捆绑包名通知应用。使用callback异步回调。
 
 **Since:** 23
 
@@ -1319,13 +1321,13 @@ Register a device state callback so that the application can be notified upon de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceStateChangeResult&gt; | Yes | Indicates the device state callback to register. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceStateChangeResult&gt; | Yes | 指示要注册的设备状态回调，返回设备状态和设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| 201 | Permission verification failed. |
 
 ## onDiscoverFailure
 
@@ -1333,7 +1335,7 @@ Register a device state callback so that the application can be notified upon de
 onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
 ```
 
-Register a device discovery result callback so that the application can be notified when discover failed.
+注册设备发现失败回调监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1349,13 +1351,13 @@ Register a device discovery result callback so that the application can be notif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DiscoveryFailureResult&gt; | Yes | Indicates the device found result callback to register. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryFailureResult&gt; | Yes | 注册设备发现失败的回调方法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## onDiscoverSuccess
 
@@ -1363,7 +1365,7 @@ Register a device discovery result callback so that the application can be notif
 onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
 ```
 
-Register a device discovery result callback so that the application can be notified when discovery success.
+注册发现设备成功回调监听。使用callback异步回调。
 
 **Since:** 23
 
@@ -1379,13 +1381,13 @@ Register a device discovery result callback so that the application can be notif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DiscoverySuccessResult&gt; | Yes | Indicates the device discovery callback to register. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoverySuccessResult&gt; | Yes | 注册设备发现的回调方法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## onServiceDie
 
@@ -1393,7 +1395,7 @@ Register a device discovery result callback so that the application can be notif
 onServiceDie(callback: Callback<ServiceDieData>): void
 ```
 
-Register a serviceError callback so that the application can be notified when devicemanager service died
+注册设备管理服务死亡回调，以便在服务死亡时通知应用程序。使用callback异步回调。
 
 **Since:** 23
 
@@ -1409,13 +1411,13 @@ Register a serviceError callback so that the application can be notified when de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ServiceDieData&gt; | Yes | Indicates the service error callback to register. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ServiceDieData&gt; | Yes | 注册serviceDie的回调方法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## startDiscovering
 
@@ -1423,7 +1425,7 @@ Register a serviceError callback so that the application can be notified when de
 startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void
 ```
 
-Starts to discover devices nearby. The discovery process takes 2 minutes. A maximum of 99 devices can be discovered. In Wi-Fi scenarios, only the devices in the same LAN can be discovered.
+发现周边设备。发现状态持续两分钟，超过两分钟，会停止发现，最大发现数量99个。wifi场景要求同局域网。
 
 **Since:** 10
 
@@ -1439,19 +1441,19 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| discoverParam | { [key: string]: Object; } | Yes | Identifier of the device to discover. It specifies the type of the target to discover. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**discoverTargetType**: The default discovery target is device. The value is **1**. |
-| filterOptions | { [key: string]: Object; } | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **availableStatus(0-1)**: status of the device to discover. The value **0** means the device is untrusted. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: The device is offline. The client needs to call **bindTarget** to bind the device. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: The device is online and can be connected. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**discoverDistance(0-100)**: distance of the device to discover, in cm. This parameter is not used in Wi-Fi scenarios. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**authenticationStatus(0-1)**: authentication status of the device to discover. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: The device is not authenticated. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **1** means the device has been authenticated. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **authorizationType(0-2)**: authorization type of the device to discover. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: The device is authenticated by a temporarily agreed session key. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: The device is authenticated by a key of the same account. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **2**: The device is authenticated by a credential key of different accounts. |
+| discoverParam | { [key: string]: Object; } | Yes | 发现标识。 标识发现的目标类型。 &lt;br&gt;discoverTargetType: 发现目标默认为设备，值为1。 |
+| filterOptions | { [key: string]: Object; } | No | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。会携带以下key值： &lt;br&gt;availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。 &lt;br /&gt;-0：设备离线，客户端需要通过调用bindTarget绑定设备。 &lt;br /&gt;-1：设备已在线，客户端可以进行连接。 &lt;br&gt;discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 &lt;br&gt;authenticationStatus(0-1)：根据不同的认证状态发现设备： &lt;br /&gt;-0：设备未认证。 &lt;br /&gt;-1：设备已认证。 &lt;br&gt;authorizationType(0-2)：根据不同的授权类型发现设备： &lt;br /&gt;-0：根据临时协商的会话密钥认证的设备。 &lt;br /&gt;-1：基于同账号密钥进行身份验证的设备。 &lt;br /&gt;-2：基于不同账号凭据密钥认证的设备。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 11600104 | Discovery unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -1490,7 +1492,7 @@ try {
 startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Record<string, int | string>): void
 ```
 
-Starts to discover devices nearby. The discovery process takes 2 minutes. A maximum of 99 devices can be discovered. In Wi-Fi scenarios, only the devices in the same LAN can be discovered.
+发现周边设备。发现状态持续两分钟，超过两分钟，会停止发现，最大发现数量99个。wifi场景要求同局域网。
 
 **Since:** 23
 
@@ -1506,16 +1508,16 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| discoverParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, int \| string&gt; | Yes | Identifier of the device to discover. It specifies the type of the target to discover. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**discoverTargetType**: The default discovery target is device. The value is **1**. |
-| filterOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, int \| string&gt; | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **availableStatus(0-1)**: status of the device to discover. The value **0** means the device is untrusted. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: The device is offline. The client needs to call **bindTarget** to bind the device. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: The device is online and can be connected. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**discoverDistance(0-100)**: distance of the device to discover, in cm. This parameter is not used in Wi-Fi scenarios. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**authenticationStatus(0-1)**: authentication status of the device to discover. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: The device is not authenticated. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **1** means the device has been authenticated. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **authorizationType(0-2)**: authorization type of the device to discover. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: The device is authenticated by a temporarily agreed session key. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: The device is authenticated by a key of the same account. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **2**: The device is authenticated by a credential key of different accounts. |
+| discoverParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| string&gt; | Yes | 发现标识。 标识发现的目标类型。 &lt;br&gt;discoverTargetType: 发现目标默认为设备，值为1。 |
+| filterOptions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| string&gt; | No | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。 会携带以下key值： &lt;br&gt;availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。 &lt;br /&gt;-0：设备离线，客户端需要通过调用bindTarget绑定设备。 &lt;br /&gt;-1：设备已在线，客户端可以进行连接。 &lt;br&gt;discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 &lt;br&gt;authenticationStatus(0-1)：根据不同的认证状态发现设备： &lt;br /&gt;-0：设备未认证。 &lt;br /&gt;-1：设备已认证。 &lt;br&gt;authorizationType(0-2)：根据不同的授权类型发现设备： &lt;br /&gt;-0：根据临时协商的会话密钥认证的设备。 &lt;br /&gt;-1：基于同账号密钥进行身份验证的设备。 &lt;br /&gt;-2：基于不同账号凭据密钥认证的设备。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 11600104 | Discovery unavailable. |
 
 ## stopDiscovering
 
@@ -1523,7 +1525,7 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 stopDiscovering(): void
 ```
 
-Stops device discovery.
+停止发现周边设备。
 
 **Since:** 10
 
@@ -1539,10 +1541,10 @@ Stops device discovery.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -1563,7 +1565,7 @@ try {
 unbindTarget(deviceId: string): void
 ```
 
-Unbinds a device.
+解除认证设备。
 
 **Since:** 10
 
@@ -1579,17 +1581,17 @@ Unbinds a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
+| deviceId | string | Yes | 设备标识。长度范围1~255字符。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified deviceId is greater than 255. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified deviceId is greater than 255. |
+| 11600101 | Failed to execute the function. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';

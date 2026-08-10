@@ -14,6 +14,12 @@ Describes the Gatt profile connection state.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -44,7 +50,7 @@ state: ProfileConnectionState
 
 Connection state of the Gatt profile
 
-**Type:** ProfileConnectionState
+**Type:** [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
 
 **Since:** 7
 

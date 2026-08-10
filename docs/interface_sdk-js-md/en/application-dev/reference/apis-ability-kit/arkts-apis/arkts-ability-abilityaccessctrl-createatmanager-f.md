@@ -1,12 +1,18 @@
 # createAtManager
 
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## createAtManager
 
 ```TypeScript
 function createAtManager(): AtManager
 ```
 
-Creates a program access control management instance for scenarios such as permission verification, runtime permission request, settings page authorization guidance, and permission status change monitoring. After the call is successful, an AtManager instance is returned, which can be used for subsequent permission management operations.
+创建程序访问控制管理实例，用于权限校验、运行时权限申请、设置页授权引导和权限状态变化监听等场景。调用成功后返回AtManager实例，可用于后续的权限管理操作。
 
 **Since:** 8
 
@@ -22,11 +28,12 @@ Creates a program access control management instance for scenarios such as permi
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | AtManager** instance obtained. |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | 获取程序访问控制模块的实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+// Create a permission management instance
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 ```
 

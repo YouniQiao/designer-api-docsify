@@ -1,11 +1,11 @@
 # GridLayoutOptions
 
-Defines the grid layout options. In this API, **irregularIndexes** and **onGetIrregularSizeByIndex** can be used for grids where either **rowsTemplate** or **columnsTemplate** is set. These properties allow you to specify an index array and set the number of rows and columns to be occupied by a grid item at the specified index. For details about the usage, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.On the other hand, **onGetRectByIndex** can be used for grids where both **rowsTemplate** and **columnsTemplate** are set. It allows you to specify the position and size for the grid item at the specified index. For details about the usage, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对仅设置rowsTemplate或columnsTemplate的Grid使用，可以指定一个index数组，并为其中的index对应的GridItem设置其占据的行数与列数，使用方法参见  
+[示例3](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)；onGetRectByIndex可对同时设置rowsTemplate和columnsTemplate的Grid使用，为指定的index对应的GridItem设置位置和大小，使用方法参见  
+[示例1](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)。
 
-To improve the performance of **Grid** in scenarios such as jumps and column quantity changes, you are advised to use  
-**GridLayoutOptions** whenever possible. Even if there are no special cross-row or cross-column nodes in **Grid**,performance during jumps can still be enhanced by using 'Grid(this.scroller, {regularSize: [1, 1]})'.
+为提高Grid在跳转、列数变化等场景的性能，应该尽量使用GridLayoutOptions。即使Grid中没有任何特殊的跨行跨列节点，也可以通过使用'Grid(this.scroller, {regularSize: [1, 1]})'的方式提高跳转性能。参考&lt;!--RP1--&gt;  
+[使用GridLayoutOptions提升Grid性能](../../../performance/grid_optimization.md#使用gridlayoutoptions提升grid性能)&lt;!--RP1End--&gt;。
 
 **Since:** 10
 
@@ -21,7 +21,7 @@ To improve the performance of **Grid** in scenarios such as jumps and column qua
 onGetIrregularSizeByIndex?: (index: number) => [number, number]
 ```
 
-Called to return the size of the irregular grid items with the specified index in [rows, columns].
+配合irregularIndexes使用，设置不规则GridItem占用的行数和列数。开发者可为irregularIndexes中指明的index对应的GridItem设置占用的行数和列数。在API version 12之前，垂直滚动Grid不支持GridItem占多行，水平滚动Grid不支持GridItem占多列。
 
 **Since:** 10
 
@@ -47,8 +47,21 @@ Called to return the size of the irregular grid items with the specified index i
 onGetRectByIndex?: (index: number) => [number, number, number, number]
 ```
 
-Called to return the size of the grid items with the specified index in  
-[rowStart, columnStart, rowSpan, columnSpan].
+设置指定索引index对应的GridItem的位置及大小[rowStart,columnStart,rowSpan,columnSpan]。
+
+其中rowStart为行起始位置，columnStart为列起始位置，无单位。
+
+rowSpan为GridItem占用的行数，columnSpan为GridItem占用的列数，无单位。
+
+rowStart和columnStart取大于等于0的自然数，若取负数时，rowStart和columnStart默认为0。
+
+rowSpan和columnSpan取大于等于1的自然数，若取小数则向下取整，若小于1则按1计算。
+
+**说明：**
+
+第一种情况：某个GridItem发现给它指定的起始位置被占据了，则从起始位置[0,0]开始按顺序从左到右，从上到下寻找起始的放置位置。
+
+第二种情况：如果起始位置没有被占据，但其他位置被占据了，无法显示全部的GridItem大小，则只会布局一部分。
 
 **Since:** 11
 
@@ -74,7 +87,7 @@ Called to return the size of the grid items with the specified index in
 irregularIndexes?: number[]
 ```
 
-The indexes of grid items with irregular size. When **onGetIrregularSizeByIndex** is not set, the grid item specified in this parameter occupies an entire row of the grid that scrolls vertically or an entire column of the grid that scrolls horizontally.
+指定索引的GridItem在Grid中的大小是不规则的。当不设置onGetIrregularSizeByIndex时，irregularIndexes中GridItem的默认大小为垂直滚动Grid的一整行或水平滚动Grid的一整列。
 
 **Type:** number[]
 
@@ -98,7 +111,7 @@ The indexes of grid items with irregular size. When **onGetIrregularSizeByIndex*
 regularSize: [number, number]
 ```
 
-The size of most grid items, in [rows, columns], generally [1, 1]. The only supported value is **[1, 1]**, meaning that the grid item occupies one row and one column.
+大小规则的GridItem在Grid中占的行数和列数，只支持占1行1列即[1, 1]。
 
 **Type:** [number, number]
 

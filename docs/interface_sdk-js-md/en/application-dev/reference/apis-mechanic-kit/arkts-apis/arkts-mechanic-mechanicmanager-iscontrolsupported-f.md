@@ -1,12 +1,18 @@
 # isControlSupported
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## isControlSupported
 
 ```TypeScript
 function isControlSupported(mechDeviceType?: MechDeviceType): boolean
 ```
 
-Checks whether the current device supports embodied control for a specific type of device.
+判断当前设备是否支持某类设备的具身控制
 
 **Since:** 26.0.0
 
@@ -20,11 +26,20 @@ Checks whether the current device supports embodied control for a specific type 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechDeviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Associated device type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default: If this parameter is not provided, it represents all device types. As long as one or more types are supported, the result returned will be supported. |
+| mechDeviceType | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | No | 关联的设备类型 &lt;br&gt;默认值:如果未提供该参数，则代表所有类型设备，只要支持其中一种以上则返回支持 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns whether embodied control is supported. |
+| boolean | Returns whether control is supported. |
+
+## Examples
+
+```TypeScript
+console.info('Check whether control is supported');
+// Call the isControlSupported method and pass MechDeviceType.GIMBAL_DEVICE to check whether gimbal device control is supported.
+let isSupported = mechanicManager.isControlSupported(mechanicManager.MechDeviceType.GIMBAL_DEVICE);
+console.info(`isSupported: ${isSupported}`);
+```
 

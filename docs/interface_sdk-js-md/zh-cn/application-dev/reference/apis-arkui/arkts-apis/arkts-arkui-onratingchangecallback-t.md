@@ -20,5 +20,5 @@ export type OnRatingChangeCallback = (rating: double) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rating | double | 是 | 评分条的评分。  |
+| rating | double | 是 | 评分条的评分。 |
 

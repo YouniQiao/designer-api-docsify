@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## navigationButtonText
 
 ```TypeScript
@@ -57,11 +63,11 @@ uiContext?: Context
 ```
 
 以模应用弹窗方式显示身份认证对话框，从API版本18开始，支持在2in1设备上使用。传入有效的uiContext后，认证对话框将以模应用弹窗方式显示，认证结果返回后应用需先获取控件释放消息（订阅  
-[on('authTip')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_并等待收到authTipInfo.tipCode为WIDGET\_RELEASED的回调）才能弹出其他窗口。如果没有此参数或其他类型的设备，身份认证对话框将以模系统弹窗方式显示，此时控件释放后应用可直接进行后续操作。
+[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))并等待收到authTipInfo.tipCode为WIDGET_RELEASED的回调）才能弹出其他窗口。如果没有此参数或其他类型的设备，身份认证对话框将以模系统弹窗方式显示，此时控件释放后应用可直接进行后续操作。
 
 **默认值：** 以模系统弹窗方式显示身份认证对话框。
 
-**类型：** Context
+**类型：** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
 
 **起始版本：** 18
 

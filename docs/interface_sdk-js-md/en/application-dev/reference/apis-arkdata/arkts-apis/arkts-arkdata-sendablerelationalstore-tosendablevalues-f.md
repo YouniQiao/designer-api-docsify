@@ -1,12 +1,18 @@
 # toSendableValues
 
+## Modules to Import
+
+```TypeScript
+import { sendableRelationalStore } from 'kits/@kit.ArkData';
+```
+
 ## toSendableValues
 
 ```TypeScript
 function toSendableValues(values: NonSendableValues): collections.Array<ValueType>
 ```
 
-Converts the array data that cannot be passed across threads into the data that can be passed across threads.
+将不可跨线程传递的数组数据，转换为可跨线程传递的数组数据。
 
 **Since:** 20
 
@@ -20,21 +26,21 @@ Converts the array data that cannot be passed across threads into the data that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Array data that cannot be passed across threads. |
+| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Yes | 不可跨线程传递的数组数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| collections.Array&lt;ValueType&gt; | Array data that can be passed across threads. |
+| collections.Array&lt;ValueType&gt; | 可跨线程传递的数组数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| 14800000 | Inner error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { relationalStore, sendableRelationalStore } from '@kit.ArkData';

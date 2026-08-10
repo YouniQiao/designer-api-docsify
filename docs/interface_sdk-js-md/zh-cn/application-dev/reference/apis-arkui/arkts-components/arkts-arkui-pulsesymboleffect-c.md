@@ -2,7 +2,7 @@
 
 PulseSymbolEffect继承自父类SymbolEffect，脉冲动效。
 
-**继承/实现关系：** PulseSymbolEffect extends [SymbolEffect](../arkts-apis/arkts-arkui-component/symbolglyph-symboleffect-c.md)
+**继承/实现关系：** PulseSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **起始版本：** 12
 

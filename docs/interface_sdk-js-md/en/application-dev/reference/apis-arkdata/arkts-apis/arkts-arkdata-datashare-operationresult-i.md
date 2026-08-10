@@ -1,6 +1,6 @@
 # OperationResult
 
-Defines the result of the operation for subscribing to or unsubscribing from the data changes or published data.
+订阅/取消订阅数据变更和发布数据的操作结果。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Defines the result of the operation for subscribing to or unsubscribing from the
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## key
 
 ```TypeScript
 key: string
 ```
 
-Key of the operation result.
+指定运算结果的键。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Key of the operation result.
 result: int
 ```
 
-Operation result. If the operation is successful, **0** is returned; otherwise, an error code is returned.
+指定运算结果。正常情况下返回0，异常情况下返回错误码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

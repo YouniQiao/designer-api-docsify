@@ -1,12 +1,18 @@
 # destroyVlanInterface (System API)
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## destroyVlanInterface
 
 ```TypeScript
 function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>
 ```
 
-Destroy vlan interface by vlanId.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY\_INTERNAL} permission.
+Destroy vlan interface by vlanId.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
 **Since:** 23
 
@@ -27,25 +33,25 @@ Destroy vlan interface by vlanId.To invoke this method, you must have the {@code
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ifName | string | Yes | interface name. |
-| vlanId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | vlan id. |
+| vlanId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | vlan id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-nonethernet) | The input network interface name is incorrect. |
+| 2100400 | The input network interface name is incorrect. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
+| 202 | Nonsystem applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

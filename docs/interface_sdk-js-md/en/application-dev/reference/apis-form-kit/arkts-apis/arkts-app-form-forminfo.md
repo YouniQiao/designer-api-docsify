@@ -1,9 +1,11 @@
 # @ohos.app.form.formInfo
 
 The **formInfo** module provides types and enums related to the widget information and state.
-    **NOTE**
-    - This topic describes only system APIs provided by the module. For details about its public APIs, see  
-    [@ohos.app.form.formInfo (formInfo)]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+> **NOTE：**
+
+> - This topic describes only system APIs provided by the module. For details about its public APIs, see
+> [@ohos.app.form.formInfo (formInfo)](arkts-app-form-forminfo.md).
 
 **Since:** 9
 
@@ -12,6 +14,12 @@ The **formInfo** module provides types and enums related to the widget informati
 <!--Device-unnamed-declare namespace formInfo--><!--Device-unnamed-declare namespace formInfo-End-->
 
 **System capability:** SystemCapability.Ability.Form
+
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
 
 ## Summary
 

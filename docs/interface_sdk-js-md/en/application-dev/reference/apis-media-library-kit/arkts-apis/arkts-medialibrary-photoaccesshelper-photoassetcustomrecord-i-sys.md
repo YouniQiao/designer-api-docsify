@@ -12,6 +12,12 @@ Provides APIs for custom user behavior recording for Gallery.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## fileId
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly fileId: int
 
 File ID, which must be an integer greater than 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -40,7 +46,7 @@ readonly lcdJumpCount: int
 
 Number of times the image or video was jumped to in large view. The value must be an integer greater than 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -60,7 +66,7 @@ readonly shareCount: int
 
 Number of times that image or video was shared. The value must be an integer greater than 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

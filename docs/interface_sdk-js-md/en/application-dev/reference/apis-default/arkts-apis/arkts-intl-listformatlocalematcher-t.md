@@ -6,7 +6,7 @@ type ListFormatLocaleMatcher = "lookup" | "best fit"
 
 The locale matching algorithm to use.
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat#parameters).
 
 **ArkTS mode:** ArkTS-Dyn only
 

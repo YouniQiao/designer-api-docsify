@@ -8,7 +8,7 @@
 
 ## 子组件
 
-包含[MenuItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_子组件。
+包含[MenuItem]{@link menu_item}子组件。
 
 ## MenuItemGroup
 
@@ -30,7 +30,8 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 设置MenuItemGroup的标题和尾部信息。\_\_\_HTML\_TAG\_USD\_0\_\_\_ 未设置时，不显示标题和尾部信息。  |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | 否 | 设置MenuItemGroup的标题和尾部信息。<br/> 未设置时，不显示标题和尾部信息。 |
 
 ## 汇总
 
+- [MenuItemGroupOptions](arkts-arkui-menuitemgroup-menuitemgroupoptions-i.md)

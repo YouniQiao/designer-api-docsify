@@ -20,6 +20,6 @@ On scroll callback using in scrollable onDidScroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scrollOffset | double | Yes | offset this frame did scroll.  |
-| scrollState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | current scroll state.  |
+| scrollOffset | double | Yes | offset this frame did scroll. |
+| scrollState | [ScrollState](../arkts-components/arkts-arkui-scrollstate-e.md) | Yes | current scroll state. |
 

@@ -1,12 +1,18 @@
 # setPointerVisibleSync
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## setPointerVisibleSync
 
 ```TypeScript
 function setPointerVisibleSync(visible: boolean): void
 ```
 
-Sets whether the mouse pointer is visible in the current window. This API returns the result synchronously.
+设置当前窗口鼠标光标的显示状态，使用同步方式。
 
 **Since:** 10
 
@@ -20,15 +26,15 @@ Sets whether the mouse pointer is visible in the current window. This API return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true** indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
+| visible | boolean | Yes | 当前窗口鼠标光标是否显示。true表示显示，false表示不显示。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -41,10 +47,11 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Synchronously sets the visibility of the mouse pointer
             pointer.setPointerVisibleSync(false);
-            console.info(`Set pointer visible success`);
+            console.info(`Succeeded in setting pointer cursor visible.`);
           } catch (error) {
-            console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set pointer cursor visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

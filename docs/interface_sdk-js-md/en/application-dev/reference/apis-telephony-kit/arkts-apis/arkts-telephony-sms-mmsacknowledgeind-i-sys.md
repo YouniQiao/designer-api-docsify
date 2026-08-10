@@ -12,6 +12,12 @@ Defines an MMS confirmation indication.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## reportAllowed
 
 ```TypeScript
@@ -20,7 +26,7 @@ reportAllowed?: ReportType
 
 Indicates the report allowed for the MMS confirmation indication.
 
-**Type:** ReportType
+**Type:** [ReportType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-reporttype-e.md)
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ version: MmsVersionType
 
 Indicates the version for the MMS confirmation indication.
 
-**Type:** MmsVersionType
+**Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 8
 

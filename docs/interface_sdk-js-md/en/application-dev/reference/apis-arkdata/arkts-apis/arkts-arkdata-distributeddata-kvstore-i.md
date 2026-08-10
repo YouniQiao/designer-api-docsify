@@ -1,7 +1,7 @@
 # KVStore
 
-Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or completion of data sync.Before calling any method in **KVStore**, you must use  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain a **KVStore** object.
+KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。在调用KVStore的方法前，需要先通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个KVStore实例。
 
 **Since:** 7
 
@@ -21,7 +21,7 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 commit(callback: AsyncCallback<void>): void
 ```
 
-Commits the transaction in this KV store. This API uses an asynchronous callback to return the result.
+提交KVStore数据库中的事务，使用callback异步回调。
 
 **Since:** 8
 
@@ -39,9 +39,9 @@ Commits the transaction in this KV store. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -64,7 +64,7 @@ try {
 commit(): Promise<void>
 ```
 
-Commits the transaction in this KV store. This API uses a promise to return the result.
+提交KVStore数据库中的事务，使用Promise异步回调。
 
 **Since:** 8
 
@@ -82,9 +82,9 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -105,7 +105,7 @@ try {
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a KV pair from this KV store. This API uses an asynchronous callback to return the result.
+从数据库中删除指定键值的数据，使用callback异步回调。
 
 **Since:** 7
 
@@ -123,10 +123,10 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | 要删除数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -158,7 +158,7 @@ try {
 delete(key: string): Promise<void>
 ```
 
-Deletes a KV pair from this KV store. This API uses a promise to return the result.
+从数据库中删除指定键值的数据，使用Promise异步回调。
 
 **Since:** 7
 
@@ -176,15 +176,15 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| key | string | Yes | 要删除数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -212,7 +212,7 @@ try {
 deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 ```
 
-Deletes KV pairs in batches from this KV store. This API uses an asynchronous callback to return the result.
+批量删除KVStore数据库中的键值对，使用callback异步回调。
 
 **Since:** 8
 
@@ -230,10 +230,10 @@ Deletes KV pairs in batches from this KV store. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | string[] | Yes | KV pairs to delete in batches. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| keys | string[] | Yes | 表示要批量删除的键值对。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -270,7 +270,7 @@ try {
 deleteBatch(keys: string[]): Promise<void>
 ```
 
-Deletes KV pairs in batches from this KV store. This API uses a promise to return the result.
+批量删除KVStore数据库中的键值对，使用Promise异步回调。
 
 **Since:** 8
 
@@ -288,15 +288,15 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | string[] | Yes | KV pairs to delete in batches. |
+| keys | string[] | Yes | 表示要批量删除的键值对。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -337,7 +337,7 @@ try {
 enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets data sync, which can be enabled or disabled. This API uses an asynchronous callback to return the result.
+设定是否开启同步，使用callback异步回调。
 
 **Since:** 8
 
@@ -355,10 +355,10 @@ Sets data sync, which can be enabled or disabled. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable data sync. The value **true** means to enable data sync, and **false** means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| enabled | boolean | Yes | 设定是否开启同步，true表示开启同步，false表示不启用同步。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -381,7 +381,7 @@ try {
 enableSync(enabled: boolean): Promise<void>
 ```
 
-Sets data sync, which can be enabled or disabled. This API uses a promise to return the result.
+设定是否开启同步，使用Promise异步回调。
 
 **Since:** 8
 
@@ -399,15 +399,15 @@ Sets data sync, which can be enabled or disabled. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable data sync. The value **true** means to enable data sync, and **false** means the opposite. |
+| enabled | boolean | Yes | 设定是否开启同步，true表示开启同步，false表示不启用同步。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -428,7 +428,7 @@ try {
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 ```
 
-Unsubscribes from data changes.
+取消订阅数据变更通知。
 
 **Since:** 8
 
@@ -446,10 +446,10 @@ Unsubscribes from data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| event | 'dataChange' | Yes | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -476,7 +476,7 @@ class KvstoreModel {
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
 ```
 
-Unsubscribes from sync completion events.
+取消订阅同步完成事件回调通知。
 
 **Since:** 8
 
@@ -494,10 +494,10 @@ Unsubscribes from sync completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| event | 'syncComplete' | Yes | 取消订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -524,7 +524,7 @@ class KvstoreModel {
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
 ```
 
-Subscribes to data changes of the specified type.
+订阅指定类型的数据变更通知。
 
 **Since:** 7
 
@@ -542,11 +542,11 @@ Subscribes to data changes of the specified type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of data change. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
+| event | 'dataChange' | Yes | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 表示订阅的类型。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -561,7 +561,7 @@ kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, fun
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 ```
 
-Subscribes to sync completion events.
+订阅同步完成事件回调通知。
 
 **Since:** 7
 
@@ -579,10 +579,10 @@ Subscribes to sync completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
+| event | 'syncComplete' | Yes | 订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | 回调函数。用于向调用方发送同步结果的回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -597,7 +597,7 @@ kvStore.on('syncComplete', function (data) {
 put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void
 ```
 
-Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the result.
+添加指定类型键值对到数据库，使用callback异步回调。
 
 **Since:** 7
 
@@ -615,11 +615,11 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_VALUE\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| value | Uint8Array \| string \| number \| boolean | Yes | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -644,7 +644,7 @@ try {
 put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 ```
 
-Adds a KV pair of the specified type to this KV store. This API uses a promise to return the result.
+添加指定类型键值对到数据库，使用Promise异步回调。
 
 **Since:** 7
 
@@ -662,16 +662,16 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_VALUE\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| key | string | Yes | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| value | Uint8Array \| string \| number \| boolean | Yes | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -694,7 +694,7 @@ try {
 putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 ```
 
-Inserts KV pairs in batches to this KV store. This API uses an asynchronous callback to return the result.
+批量插入键值对到KVStore数据库中，使用callback异步回调。
 
 **Since:** 8
 
@@ -712,10 +712,10 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | KV pairs to insert in batches. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | Yes | 表示要批量插入的键值对。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -752,7 +752,7 @@ try {
 putBatch(entries: Entry[]): Promise<void>
 ```
 
-Inserts KV pairs in batches to this KV store. This API uses a promise to return the result.
+批量插入键值对到KVStore数据库中，使用Promise异步回调。
 
 **Since:** 8
 
@@ -770,15 +770,15 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | KV pairs to insert in batches. |
+| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | Yes | 表示要批量插入的键值对。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -818,7 +818,7 @@ try {
 rollback(callback: AsyncCallback<void>): void
 ```
 
-Rolls back the transaction in this KV store. This API uses an asynchronous callback to return the result.
+在KVStore数据库中回滚事务，使用callback异步回调。
 
 **Since:** 8
 
@@ -836,9 +836,9 @@ Rolls back the transaction in this KV store. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -861,7 +861,7 @@ try {
 rollback(): Promise<void>
 ```
 
-Rolls back the transaction in this KV store. This API uses a promise to return the result.
+在KVStore数据库中回滚事务，使用Promise异步回调。
 
 **Since:** 8
 
@@ -879,9 +879,9 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -902,7 +902,7 @@ try {
 setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void
 ```
 
-Sets the data sync range. This API uses an asynchronous callback to return the result.
+设置同步范围标签，使用callback异步回调。
 
 **Since:** 8
 
@@ -920,11 +920,11 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localLabels | string[] | Yes | Sync labels set for the local device. |
-| remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| localLabels | string[] | Yes | 表示本地设备的同步标签。 |
+| remoteSupportLabels | string[] | Yes | 表示要同步数据的设备的同步标签。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -945,7 +945,7 @@ try {
 setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>
 ```
 
-Sets the data sync range. This API uses a promise to return the result.
+设置同步范围标签，使用Promise异步回调。
 
 **Since:** 8
 
@@ -963,16 +963,16 @@ Sets the data sync range. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localLabels | string[] | Yes | Sync labels set for the local device. |
-| remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
+| localLabels | string[] | Yes | 表示本地设备的同步标签。 |
+| remoteSupportLabels | string[] | Yes | 表示要同步数据的设备的同步标签。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -995,7 +995,7 @@ try {
 startTransaction(callback: AsyncCallback<void>): void
 ```
 
-Starts the transaction in this KV store. This API uses an asynchronous callback to return the result.
+启动KVStore数据库中的事务，使用callback异步回调。
 
 **Since:** 8
 
@@ -1013,9 +1013,9 @@ Starts the transaction in this KV store. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;
@@ -1058,7 +1058,7 @@ try {
 startTransaction(): Promise<void>
 ```
 
-Starts the transaction in this KV store. This API uses a promise to return the result.
+启动KVStore数据库中的事务，使用Promise异步回调。
 
 **Since:** 8
 
@@ -1076,9 +1076,9 @@ Starts the transaction in this KV store. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let kvStore;

@@ -1,5 +1,11 @@
 # SelectionMenu
 
+## 导入模块
+
+```TypeScript
+import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## SelectionMenu
 
 ```TypeScript
@@ -7,8 +13,8 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 ```
 
 入参为空时，文本选择菜单组件SelectionMenu内容区大小及组件大小为零。表现例如，富文本组件  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_使用  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_接口绑定一个SelectionMenu的右键菜单，则右键富文本组件区域时无任何菜单弹出。
+[RichEditor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md)使用  
+[bindSelectionMenu](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md#bindselectionmenu)接口绑定一个SelectionMenu的右键菜单，则右键富文本组件区域时无任何菜单弹出。
 
 **起始版本：** 23
 
@@ -26,5 +32,5 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本选择菜单可选项。 |
+| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | 是 | 文本选择菜单可选项。 |
 

@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { ContentFormCard, FormType } from 'kits/@kit.ArkData';
+```
+
 ## build
 
 ```TypeScript
@@ -58,7 +64,7 @@ contentFormData: uniformDataStruct.ContentForm
 formHeight?: double
 ```
 
-卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE\_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
+卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
 
 **类型：** double
 
@@ -80,7 +86,7 @@ formType: FormType
 
 内容卡片类型，影响内容卡片的大小。
 
-**类型：** FormType
+**类型：** [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **起始版本：** 23
 
@@ -98,7 +104,7 @@ formType: FormType
 formWidth?: double
 ```
 
-卡片宽度，其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE\_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
+卡片宽度，其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
 
 **类型：** double
 

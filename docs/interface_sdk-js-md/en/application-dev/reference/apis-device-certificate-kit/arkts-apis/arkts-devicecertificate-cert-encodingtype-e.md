@@ -1,6 +1,6 @@
 # EncodingType
 
-Enumerates the encoding formats.
+表示编码格式的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the encoding formats.
 ENCODING_UTF8 = 0
 ```
 
-UTF-8.
+UTF8编码格式。
 
 **Since:** 12
 

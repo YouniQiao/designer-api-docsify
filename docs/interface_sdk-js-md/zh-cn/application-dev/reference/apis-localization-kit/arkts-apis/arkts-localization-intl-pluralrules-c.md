@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -36,7 +42,7 @@ constructor()
 
 **系统能力：** SystemCapability.Global.I18n
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -72,9 +78,9 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 创建单复数对象时设置的配置项。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：所有属性都取默认值时的配置项。 |
+| options | [PluralRulesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-pluralrulesoptions-i.md) | 否 | 创建单复数对象时设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -115,9 +121,9 @@ select(n: double): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 单复数类别，取值包括："zero"，"one"，"two", "few", "many", "other"。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_不同取值的含义请参考\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| string | 单复数类别，取值包括："zero"，"one"，"two", "few", "many", "other"。 &lt;br&gt;不同取值的含义请参考[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

@@ -1,6 +1,6 @@
 # DrawModifier
 
-Defined the draw modifier of node. Provides draw callbacks for the associated Node.Each DrawModifier instance can be set for only one component. Repeated setting is not allowed.
+Defined the draw modifier of node. Provides draw callbacks for the associated Node.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ drawBehind Method. Executed before drawing associated Node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The drawContext used to draw. |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The drawContext used to draw. |
 
 ## drawContent
 
@@ -60,7 +60,7 @@ drawContent Method. Executed when associated Node is drawing, the default drawCo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The drawContext used to draw. |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The drawContext used to draw. |
 
 ## drawForeground
 
@@ -68,7 +68,7 @@ drawContent Method. Executed when associated Node is drawing, the default drawCo
 drawForeground(drawContext: DrawContext): void
 ```
 
-drawforeground Method. This method is executed after drawing the associated Node and its children.It allows you to perform additional drawing operations on top of the already rendered content.This can be useful for adding visual elements that should appear above the main content.
+前景绘制，在关联节点和其子节点绘制后执行
 
 **Since:** 20
 
@@ -86,7 +86,7 @@ drawforeground Method. This method is executed after drawing the associated Node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The drawContext used to draw. |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | 用来绘制的drawContext |
 
 ## drawFront
 
@@ -112,7 +112,7 @@ drawFront Method. Executed after drawing associated Node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The drawContext used to draw. |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The drawContext used to draw. |
 
 ## drawOverlay
 
@@ -120,12 +120,11 @@ drawFront Method. Executed after drawing associated Node.
 drawOverlay(drawContext: DrawContext): void
 ```
 
-Draws content in the overlay layer after the associated Node and all its children have been drawn.
+在关联的Node及其所有子节点绘制完成后，在悬浮层中绘制内容。
 
-Custom drawing consists of five layers: Behind, Content, Front, Foreground, and Overlay.
-
-- The Foreground and Overlay layers are drawn after child nodes.  
-- The Overlay layer differs from Foreground in that it can draw outside the bounds of the component.
+自定义绘制包含五个层级：内容背景层、内容层、内容前景层、前景层和悬浮层。  
+ - 前景层和悬浮层在子节点之后绘制。  
+ - 悬浮层与前景层的区别在于：悬浮层可以在组件的边界范围外进行绘制。
 
 **Since:** 23
 
@@ -143,7 +142,7 @@ Custom drawing consists of five layers: Behind, Content, Front, Foreground, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The drawContext used to draw |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | 用于绘制的drawContext |
 
 ## invalidate
 
@@ -151,7 +150,7 @@ Custom drawing consists of five layers: Behind, Content, Front, Foreground, and 
 invalidate(): void
 ```
 
-Invalidate the component, which will cause a re-render of the component.No overloading is allowed or needed.
+Invalidate the component, which will cause a re-render of the component.
 
 **Since:** 12
 

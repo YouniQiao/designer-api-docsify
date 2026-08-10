@@ -1,5 +1,11 @@
 # updatePrintJobState
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## updatePrintJobState
 
 ```TypeScript
@@ -7,7 +13,7 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
     callback: AsyncCallback<void>): void
 ```
 
-Updates the print job state. This API uses an asynchronous callback to return the result.
+更新打印任务状态，使用callback异步回调。
 
 **Since:** 24
 
@@ -25,19 +31,20 @@ Updates the print job state. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Print job state. |
-| subState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Substate of the print job. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback to be invoked when the print job state is updated. |
+| jobId | string | Yes | 表示打印任务ID。 |
+| state | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | Yes | 表示打印任务状态。 |
+| subState | [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md) | Yes | 表示打印任务子状态。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步更新打印任务状态之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | The application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 10 - 23 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -48,7 +55,7 @@ let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
 let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
 print.updatePrintJobState(jobId, state, subState, (err: BusinessError) => {
     if (err) {
-        console.error('updataPrintJobState failed, because : ' + JSON.stringify(err));
+        console.error('updatePrintJobState failed, because : ' + JSON.stringify(err));
     } else {
         console.info('updatePrintJobState success');
     }
@@ -62,7 +69,7 @@ print.updatePrintJobState(jobId, state, subState, (err: BusinessError) => {
 function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState): Promise<void>
 ```
 
-Updates the print job state. This API uses a promise to return the result.
+更新打印任务状态，使用Promise异步回调。
 
 **Since:** 24
 
@@ -80,24 +87,25 @@ Updates the print job state. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Print job state. |
-| subState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Substate of the print job. |
+| jobId | string | Yes | 表示打印任务ID。 |
+| state | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | Yes | 表示打印任务状态。 |
+| subState | [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md) | Yes | 表示打印任务子状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 10 - 23 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

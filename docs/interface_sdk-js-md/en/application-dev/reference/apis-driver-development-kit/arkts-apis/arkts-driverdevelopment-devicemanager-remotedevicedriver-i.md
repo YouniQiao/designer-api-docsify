@@ -1,6 +1,6 @@
 # RemoteDeviceDriver
 
-Represents information about a remote device driver.
+远程设备驱动。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Represents information about a remote device driver.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
+## Modules to Import
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## deviceId
 
 ```TypeScript
 deviceId: long
 ```
 
-ID of the peripheral device.
+设备ID。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 11
 
@@ -34,7 +40,7 @@ ID of the peripheral device.
 remote: rpc.IRemoteObject
 ```
 
-Remote driver object.
+远程驱动程序对象。
 
 **Type:** rpc.IRemoteObject
 

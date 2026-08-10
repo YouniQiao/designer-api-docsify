@@ -1,6 +1,6 @@
 # UpdateStatus
 
-Enumerates the system update statuses.
+系统更新状态。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the system update statuses.
 NO_UPDATE_PACKAGE = -4
 ```
 
-The system update package of the specified version does not exist.
+指定版本系统更新包不存在。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ The system update package of the specified version does not exist.
 UPDATE_WAITING = -3
 ```
 
-The system update package is waiting to be installed.
+系统更新包等待安装中。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ The system update package is waiting to be installed.
 UPDATING = -2
 ```
 
-The system update is being performed.
+正在更新。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ The system update is being performed.
 UPDATE_FAILURE = -1
 ```
 
-The update failed.
+更新失败。
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ The update failed.
 UPDATE_SUCCESS = 0
 ```
 
-The update is successful.
+更新成功。
 
 **Since:** 12
 

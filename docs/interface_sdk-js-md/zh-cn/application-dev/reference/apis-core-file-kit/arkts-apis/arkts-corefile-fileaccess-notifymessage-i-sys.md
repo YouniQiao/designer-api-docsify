@@ -16,6 +16,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { fileAccess } from 'kits/@kit.CoreFileKit';
+```
+
 ## type
 
 ```TypeScript
@@ -24,7 +30,7 @@ type: NotifyType
 
 变更的通知类型。
 
-**类型：** NotifyType
+**类型：** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
 **起始版本：** 10
 

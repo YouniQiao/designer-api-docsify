@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -30,7 +36,7 @@ constructor()
 
 **系统接口：** 此接口为系统接口。
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { faceAuth } from '@kit.UserAuthenticationKit';
@@ -45,8 +51,8 @@ setSurfaceId(surfaceId: string): void
 ```
 
 用于在录入人脸时设置人脸预览界面的Surface ID。该接口需要配合  
-[addCredential]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用，通过  
-[getXComponentSurfaceId]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_组件的Surface来显示人脸预览画面。
+[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential)使用，通过  
+[getXComponentSurfaceId](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md/arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid)组件的Surface来显示人脸预览画面。
 
 **起始版本：** 9
 
@@ -64,17 +70,17 @@ setSurfaceId(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | [XComponent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明**：需在XComponent完成初始化后，通过[getXComponentSurfaceId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
+| surfaceId | string | 是 | [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。 &lt;br&gt;**说明：**需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md/arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
-| [12700001](../errorcode-useriam.md#12700001-人脸服务不可用) | The service is unavailable. |
+| 12700001 | The service is unavailable. |
+| 201 | Permission denied. |
+| 202 | Permission denied. Called by non-system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { faceAuth } from '@kit.UserAuthenticationKit';

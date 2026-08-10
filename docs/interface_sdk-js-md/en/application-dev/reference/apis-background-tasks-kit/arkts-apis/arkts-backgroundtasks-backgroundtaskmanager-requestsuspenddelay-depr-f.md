@@ -6,9 +6,9 @@
 function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo
 ```
 
-Requests delayed suspension after the application switches to the background.
+后台应用申请延迟挂起。
 
-The default duration of delayed suspension is 3 minutes when the battery level is higher than or equal to the broadcast low battery level and 1 minute when the battery level is lower than the broadcast low battery level.
+延迟挂起时间一般情况下默认值为3分钟，低电量（依据系统低电量广播）时默认值为1分钟。
 
 **Since:** 7
 
@@ -26,16 +26,16 @@ The default duration of delayed suspension is 3 minutes when the battery level i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | string | Yes | Reason for delayed transition to the suspended state. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Invoked when a delay is about to time out. Generally, this callback is used to notify the application 6 seconds before the delay times out. |
+| reason | string | Yes | 延迟挂起申请的原因。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 延迟即将超时的回调函数，一般在超时前6秒通过此回调通知应用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Information about the suspension delay. |
+| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | 返回延迟挂起信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import backgroundTaskManager from '@ohos.backgroundTaskManager';

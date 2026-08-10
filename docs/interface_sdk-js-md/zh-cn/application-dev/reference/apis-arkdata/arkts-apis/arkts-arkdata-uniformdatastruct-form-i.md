@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（\_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如"com.example.myapplication.MainAbility"）。
+卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如"com.example.myapplication.MainAbility"）。
 
 **类型：** string
 
@@ -58,7 +64,7 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**类型：** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **起始版本：** 15
 
@@ -78,7 +84,7 @@ formId: int
 
 卡片id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 15
 
@@ -137,7 +143,7 @@ readonly uniformDataType: 'openharmony.form'
 ```
 
 统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **类型：** 'openharmony.form'
 

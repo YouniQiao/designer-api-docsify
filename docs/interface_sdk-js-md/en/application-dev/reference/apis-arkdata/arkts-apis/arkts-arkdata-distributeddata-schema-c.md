@@ -1,7 +1,6 @@
 # Schema
 
-Defines the schema of a KV store. You can create a **Schema** object and place it in  
-[Options]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when creating or opening a KV store.
+表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](arkts-arkdata-distributeddata-options-i.md)中。
 
 **Since:** 8
 
@@ -21,7 +20,7 @@ Defines the schema of a KV store. You can create a **Schema** object and place i
 constructor()
 ```
 
-A constructor used to create a **Schema** instance.
+用于创建Schema实例的构造函数。
 
 **Since:** 8
 
@@ -41,7 +40,7 @@ A constructor used to create a **Schema** instance.
 indexes: Array<string>
 ```
 
-String array in JSON format.
+表示json类型的字符串数组。
 
 **Type:** Array&lt;string&gt;
 
@@ -63,7 +62,7 @@ String array in JSON format.
 mode: number
 ```
 
-Schema mode.
+表示Schema的模式。
 
 **Type:** number
 
@@ -85,9 +84,9 @@ Schema mode.
 root: FieldNode
 ```
 
-JSON root object.
+表示json根对象。
 
-**Type:** FieldNode
+**Type:** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
 
 **Since:** 8
 
@@ -107,7 +106,7 @@ JSON root object.
 skip: number
 ```
 
-Size of a skip of the schema.
+Schema的跳跃大小。
 
 **Type:** number
 

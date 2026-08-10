@@ -10,6 +10,12 @@ ArcSwiper自定义切换动画相关信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+```
+
 ## timeout
 
 ```TypeScript
@@ -17,7 +23,7 @@ timeout?: int
 ```
 
 ArcSwiper自定义切换动画超时时间。从页面执行默认动画（页面滑动）至移出视窗外的第一帧开始计时，如果到达该时间后，开发者仍未调用  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的[finishTransition]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口通知ArcSwiper组件此页面的自定义动画已结束，那么组件就会认为此页面的自定义动画已结束，立即在该页面节点下渲染树。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_单位：ms\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_默认值：0。
+[SwiperContentTransitionProxy](../../../reference/apis-arkui/arkui-ts/ts-container-arcswiper copy.md#swipercontenttransitionproxy)的[finishTransition](arkts-arkui-arkui-arcswiper-arcswipercontenttransitionproxy-i.md#finishtransition)接口通知ArcSwiper组件此页面的自定义动画已结束，那么组件就会认为此页面的自定义动画已结束，立即在该页面节点下渲染树。&lt;br/&gt;单位：ms&lt;br/&gt;默认值：0。
 
 **类型：** int
 
@@ -41,7 +47,7 @@ transition: Callback<ArcSwiperContentTransitionProxy>
 
 自定义切换动画具体内容。
 
-**类型：** Callback&lt;ArcSwiperContentTransitionProxy&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;ArcSwiperContentTransitionProxy&gt;
 
 **起始版本：** 26.0.0
 

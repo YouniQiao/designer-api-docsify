@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { systemLoad } from 'kits/@kit.BasicServicesKit';
+```
+
 ## on('systemLoadChange')
 
 ```TypeScript
@@ -21,15 +27,15 @@ function on(type: 'systemLoadChange', callback: Callback<SystemLoadLevel>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemLoadChange' | 是 | 固定取值'systemLoadChange'，系统负载变化类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemLoadLevel&gt; | 是 | 回调函数，返回本次注册系统负载时的系统负载融合档位。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SystemLoadLevel&gt; | 是 | 回调函数，返回本次注册系统负载时的系统负载融合档位。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Callback parameter error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Register a exist callback type; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Register a exist callback type; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { systemLoad } from '@kit.BasicServicesKit';

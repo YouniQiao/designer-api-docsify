@@ -1,12 +1,18 @@
 # createComponentObserver
 
+## Modules to Import
+
+```TypeScript
+import { inspector } from 'kits/@kit.ArkUI';
+```
+
 ## createComponentObserver
 
 ```TypeScript
 function createComponentObserver(id: string): ComponentObserver
 ```
 
-Sets the component after layout or draw criteria and returns the corresponding listening handle
+绑定指定组件，返回对应的监听句柄。
 
 **Since:** 10
 
@@ -28,17 +34,17 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | component id. |
+| id | string | Yes | 指定组件id，该id通过通用属性id或者key设置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | create listener for observer component event. |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-let listener:inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // Listen for callback events for the component whose ID is COMPONENT_ID.
+let listener: inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // Listen for callback events for the component whose ID is COMPONENT_ID.
 ```
 

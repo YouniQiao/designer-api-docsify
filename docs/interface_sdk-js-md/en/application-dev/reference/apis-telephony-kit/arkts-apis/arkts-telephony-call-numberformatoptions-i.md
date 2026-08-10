@@ -10,6 +10,12 @@ Indicates the option for number formatting.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## countryCode
 
 ```TypeScript

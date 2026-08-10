@@ -24,10 +24,10 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示订阅者对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 否 | 表示取消订阅的回调方法。 |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 表示取消订阅的回调方法。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import Base from '@ohos.base';
@@ -41,39 +41,40 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // 订阅公共事件回调
-function subscribeCB(err:Base.BusinessError, data:CommonEventManager.CommonEventData) {
+let subscribeCallBack = (err:Base.BusinessError, data:CommonEventManager.CommonEventData) => {
     if (err.code) {
-        console.error(`subscribe failed, code is ${err.code}`);
+        console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("subscribe " + JSON.stringify(data));
     }
 }
 
 // 创建订阅者回调
-function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
+let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}`);
+        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
-        // Subscribe to a common event.
-        commonEvent.subscribe(subscriber, subscribeCB);
+         // 订阅公共事件
+        commonEvent.subscribe(subscriber, subscribeCallBack);
     }
 }
 
 // 取消订阅公共事件回调
-function unsubscribeCB(err:Base.BusinessError) {
+let unsubscribeCallback = (err: Base.BusinessError) => {
     if (err.code) {
-        console.error(`unsubscribe failed, code is ${err.code}`);
+        console.error(`unsubscribe failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("unsubscribe");
     }
 }
 
 // 创建订阅者
-commonEvent.createSubscriber(subscribeInfo, createCB);
+commonEvent.createSubscriber(subscribeInfo, createCallBack);
 
 // 取消订阅公共事件
-commonEvent.unsubscribe(subscriber, unsubscribeCB);
+// 注意：需在subscriber创建成功后（即createCallBack回调执行后）调用，此处仅展示API用法
+commonEvent.unsubscribe(subscriber, unsubscribeCallback);
 ```
 

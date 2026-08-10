@@ -1,16 +1,24 @@
 # convertRecordsToEntries
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## convertRecordsToEntries
 
 ```TypeScript
 function convertRecordsToEntries(data: UnifiedData): void
 ```
 
-Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data.
+本接口用于将传入的data转换成多样式数据结构。若原data使用多个record去承载同一份数据的不同数据格式，则可以使用此接口将原data转换为多样式数据结构。
 
-This API is used only when the following rules are met:
+当满足以下规则时进行转换，传入的data经转换后变为多样式数据结构：
 
-1. The number of records in data is greater than 1.2. The value of **unifiedData.properties.tag** is **records\_to\_entries\_data\_format**.
+1. data中的record数量大于1；2. data中的properties中的tag值为"records_to_entries_data_format"。
+
+否则不会产生任何行为。
 
 **Since:** 17
 
@@ -28,37 +36,37 @@ This API is used only when the following rules are met:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Data to convert. |
+| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | Yes | 需要转换为多样式数据结构的统一数据对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let details : Record<string, string> = {
+let details: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
-let plainTextObj : uniformDataStruct.PlainText = {
+};
+let plainTextObj: uniformDataStruct.PlainText = {
   uniformDataType: 'general.plain-text',
-  textContent : 'The weather is very good today',
-  abstract : 'The weather is very good today',
-  details : details
-}
-let htmlObj : uniformDataStruct.HTML = {
-  uniformDataType :'general.html',
-  htmlContent : '<div><p>The weather is very good today</p></div>',
-  plainContent : 'The weather is very good today',
-  details : details
-}
+  textContent: 'The weather is very good today',
+  abstract: 'The weather is very good today',
+  details: details
+};
+let htmlObj: uniformDataStruct.HTML = {
+  uniformDataType: 'general.html',
+  htmlContent: '<div><p>The weather is very good today</p></div>',
+  plainContent: 'The weather is very good today',
+  details: details
+};
 let plainText = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainTextObj);
 let html = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HTML, htmlObj);
 let unifiedData = new unifiedDataChannel.UnifiedData(plainText);
@@ -70,14 +78,16 @@ try {
   let records: Array<unifiedDataChannel.UnifiedRecord> = unifiedData.getRecords();
   console.info(`Records size is ${records.length}`); // After conversion, its length must be less than 1
   if (records.length == 1) {
-    let plainTextObjRead: uniformDataStruct.PlainText = records[0].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
+    let plainTextObjRead: uniformDataStruct.PlainText =
+      records[0].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
     console.info(`TextContent is ${plainTextObjRead.textContent}`);
-    let htmlObjRead: uniformDataStruct.HTML = records[0].getEntry(uniformTypeDescriptor.UniformDataType.HTML) as uniformDataStruct.HTML;
+    let htmlObjRead: uniformDataStruct.HTML =
+      records[0].getEntry(uniformTypeDescriptor.UniformDataType.HTML) as uniformDataStruct.HTML;
     console.info(`HtmlContent is ${htmlObjRead.htmlContent}`);
   }
 } catch (e) {
   let error: BusinessError = e as BusinessError;
-  console.error(`Convert data throws an exception. code is ${error.code}, message is ${error.message} `);
+  console.error(`Convert data throws an exception. code is ${error.code}, message is ${error.message}`);
 }
 ```
 

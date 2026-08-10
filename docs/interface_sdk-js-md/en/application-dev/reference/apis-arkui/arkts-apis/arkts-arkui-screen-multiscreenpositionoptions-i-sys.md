@@ -1,6 +1,6 @@
 # MultiScreenPositionOptions (System API)
 
-Describes the screen position information.
+屏幕位置信息。
 
 **Since:** 13
 
@@ -12,15 +12,21 @@ Describes the screen position information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## id
 
 ```TypeScript
 id: long
 ```
 
-Screen ID. The value must be a positive integer. Any non-positive integer values will be considered invalid and result in an error.
+屏幕的ID，该参数应为正整数，非正整数会作为非法参数报错。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -38,9 +44,9 @@ Screen ID. The value must be a positive integer. Any non-positive integer values
 startX: long
 ```
 
-Start X coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being rightwards. in px. The value must be a non-negative integer. Any other values will be considered invalid and result in an error.
+屏幕的起始X轴坐标。以两块屏幕外接矩形的左上顶点为原点，向右为正方向。该参数应为正整数，非正整数会作为非法参数报错。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -58,9 +64,9 @@ Start X coordinate of the screen. The top-left vertex of the bounding rectangle 
 startY: long
 ```
 
-Start Y coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being downwards. in px. The value must be a non-negative integer. Any other values will be considered invalid and result in an error.
+屏幕的起始Y轴坐标。以两块屏幕外接矩形的左上顶点为原点，向下为正方向。该参数应为正整数，非正整数会作为非法参数报错。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 

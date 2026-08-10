@@ -1,6 +1,6 @@
 # ProgressInfo
 
-Notify progress data.
+通知进度信息。
 
 **Since:** 26.1.0
 
@@ -10,13 +10,19 @@ Notify progress data.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## fileName
 
 ```TypeScript
 fileName: string
 ```
 
-Notification content.
+通知内容。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Notification content.
 isMute?: boolean
 ```
 
-Whether to ring when the download progress reaches 100%.
+下载进度达到100%时是否静音。
 
 **Type:** boolean
 
@@ -56,9 +62,9 @@ Whether to ring when the download progress reaches 100%.
 progressValue?: int
 ```
 
-Download progress. If this field does not exist, the progress ring will not be displayed.The value should be an integer.
+通知进度。如果该字段不存在，则不显示通知进度环，显示为普通通知。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.1.0
 
@@ -76,7 +82,7 @@ Download progress. If this field does not exist, the progress ring will not be d
 title: string
 ```
 
-Notification title.
+通知标题。
 
 **Type:** string
 

@@ -6,7 +6,7 @@
 declare function rename(oldPath: string, newPath: string): Promise<void>
 ```
 
-Renames a file. This API uses a promise to return the result.
+重命名文件，使用Promise异步回调。
 
 **Since:** 7
 
@@ -24,14 +24,14 @@ Renames a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldPath | string | Yes | Application sandbox path of the file to rename. |
-| newPath | string | Yes | Application sandbox path of the file renamed. |
+| oldPath | string | Yes | 目标文件的当前应用沙箱路径。 |
+| newPath | string | Yes | 目标文件的新应用沙箱路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 
 ## rename
@@ -40,7 +40,7 @@ Renames a file. This API uses a promise to return the result.
 declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void
 ```
 
-Renames a file. This API uses an asynchronous callback to return the result.
+重命名文件，使用callback异步回调。
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ Renames a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldPath | string | Yes | Application sandbox path of the file to rename. |
-| newPath | string | Yes | Application sandbox path of the file renamed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the file is asynchronously renamed. |
+| oldPath | string | Yes | 目标文件的当前应用沙箱路径。 |
+| newPath | string | Yes | 目标文件的新应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步重命名文件之后的回调。 |
 

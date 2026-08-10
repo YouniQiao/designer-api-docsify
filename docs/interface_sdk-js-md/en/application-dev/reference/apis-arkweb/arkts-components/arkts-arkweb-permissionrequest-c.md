@@ -1,14 +1,6 @@
 # PermissionRequest
 
-Implements the **PermissionRequest** object.For details about the sample code,see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    - The initial APIs of this component are supported since API version 8.  
-    Updates will be marked with a superscript to indicate their earliest API version.  
-    
-    - The initial APIs of this class are supported since API version 9.  
-    
-    - The sample effect is subject to the actual device.
+权限请求。
 
 **Since:** 9
 
@@ -24,7 +16,7 @@ Implements the **PermissionRequest** object.For details about the sample code,se
 constructor()
 ```
 
-Constructs a **PermissionRequest** object.
+PermissionRequest的构造函数。
 
 **Since:** 9
 
@@ -42,7 +34,7 @@ Constructs a **PermissionRequest** object.
 deny(): void
 ```
 
-Denies the permission requested by the web page.
+Reject the request.
 
 **Since:** 9
 
@@ -60,8 +52,7 @@ Denies the permission requested by the web page.
 getAccessibleResource(): Array<string>
 ```
 
-Obtains the list of accessible resources requested for the web page. For details about the resource types, see  
-[ProtectedResourceType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Gets the resource that the webpage is trying to access.
 
 **Since:** 9
 
@@ -85,7 +76,7 @@ Obtains the list of accessible resources requested for the web page. For details
 getOrigin(): string
 ```
 
-Obtains the origin of this web page.
+Gets the source if the webpage that attempted to access the restricted resource.
 
 **Since:** 9
 
@@ -109,7 +100,7 @@ Obtains the origin of this web page.
 grant(resources: Array<string>): void
 ```
 
-Grants the permission for resources requested by the web page.
+Grant origin access to a given resource.
 
 **Since:** 9
 

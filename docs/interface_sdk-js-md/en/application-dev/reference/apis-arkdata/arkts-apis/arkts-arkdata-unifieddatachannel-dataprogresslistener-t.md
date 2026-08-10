@@ -4,7 +4,7 @@
 type DataProgressListener = (progressInfo: ProgressInfo, data: UnifiedData | null) => void
 ```
 
-Defines the callback used to return the data retrieval progress information and data obtained.
+定义获取进度信息和数据的监听回调函数。
 
 **Since:** 15
 
@@ -22,6 +22,6 @@ Defines the callback used to return the data retrieval progress information and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progressInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Progress information to report.  |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | Yes | Data obtained when the progress reaches 100. If the progress does not reach 10 0, **null** is returned.  |
+| progressInfo | [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md) | Yes | 定义进度上报的进度信息，用于接收拖拽任务的进度状态和进度百分比。包含progress（进度百分比，取值范围[-1-100]）和status（任务状态码） 两个字段，其中progress为-1表示获取数据失败，100表示获取数据完成。 |
+| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) \| null | Yes | 进度达到100时获取的数据，进度未到100时返回null。 |
 

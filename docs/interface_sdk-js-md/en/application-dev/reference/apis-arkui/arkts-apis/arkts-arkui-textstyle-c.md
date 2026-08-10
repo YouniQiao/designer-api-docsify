@@ -1,6 +1,6 @@
 # TextStyle
 
-Describes the text style.
+文本字体样式对象说明。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Describes the text style.
 constructor(value?: TextStyleInterface)
 ```
 
-A constructor used to create a text style.
+文本字体样式的构造函数。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ A constructor used to create a text style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Font style options. |
+| value | [TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md) | No | 字体样式设置项。 &lt;br&gt;默认值：不传入时继承TextStyleInterface各属性的默认值。 |
 
 ## fontColor
 
@@ -42,9 +42,9 @@ A constructor used to create a text style.
 readonly fontColor?: ResourceColor
 ```
 
-Text color of the styled string.
+获取属性字符串的文本颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -64,11 +64,11 @@ Text color of the styled string.
 readonly fontConfigs?: FontConfigs
 ```
 
-Font configuration of the styled string.
+获取属性字符串的字体配置。
 
-Default value: **undefined**, indicating that fontConfigs is not set.
+默认返回undefined，表示未设置fontConfigs。
 
-**Type:** FontConfigs
+**Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
 **Since:** 24
 
@@ -88,9 +88,9 @@ Default value: **undefined**, indicating that fontConfigs is not set.
 readonly fontFamily?: string
 ```
 
-Font family of the styled string.
+获取属性字符串的文本字体。
 
-Returns **undefined** by default.
+默认返回undefined。
 
 **Type:** string
 
@@ -112,9 +112,9 @@ Returns **undefined** by default.
 readonly fontSize?: number
 ```
 
-Font size of the styled string.
+获取属性字符串的文本字体大小。
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
 
 **Type:** number
 
@@ -136,9 +136,9 @@ Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 readonly fontStyle?: FontStyle
 ```
 
-Font style of the styled string.
+获取属性字符串的文本字体样式。
 
-**Type:** FontStyle
+**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **Since:** 12
 
@@ -158,11 +158,9 @@ Font style of the styled string.
 readonly fontVariations?: Array<FontVariation>
 ```
 
-Array of variable font attributes.
+获取可变字体的属性数组。
 
-Default value: **undefined**, indicating that variable font attributes are not set.
-
-**Since**: 26.0.0
+默认值：undefined，表示未设置可变字体的属性。
 
 **Type:** Array&lt;FontVariation&gt;
 
@@ -184,7 +182,13 @@ Default value: **undefined**, indicating that variable font attributes are not s
 readonly fontWeight?: number
 ```
 
-Font weight of the styled string.
+获取属性字符串的文本字体粗细。
+
+默认值：400
+
+**说明：**
+
+返回值为string类型，具体返回值和设置值关系参见下方表格。
 
 **Type:** number
 
@@ -206,11 +210,11 @@ Font weight of the styled string.
 readonly strokeColor?: ResourceColor
 ```
 
-Text stroke color of the styled string.
+获取属性字符串的文本描边颜色。
 
-Default value: same as the text color.
+默认返回字体颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 20
 
@@ -230,13 +234,11 @@ Default value: same as the text color.
 readonly strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Text stroke join style of the styled string.
+获取属性字符串的文本描边拐角样式。
 
-Default value: **StrokeJoinStyle.MITER\_JOIN**.
+默认值：StrokeJoinStyle.MITER_JOIN。
 
-**Since**: 26.0.0.
-
-**Type:** StrokeJoinStyle
+**Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
 
@@ -256,9 +258,9 @@ Default value: **StrokeJoinStyle.MITER\_JOIN**.
 readonly strokeWidth?: number
 ```
 
-Text stroke width of the styled string.
+获取属性字符串的文本描边宽度。
 
-Default value: **0**, in [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+默认返回0，单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
 
 **Type:** number
 
@@ -280,11 +282,11 @@ Default value: **0**, in [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 readonly superscript?: SuperscriptStyle
 ```
 
-Superscript or subscript for the styled string.
+获取属性字符串的文本上下角标。
 
-Default value: **SuperscriptStyle.NORMAL**.
+默认值：SuperscriptStyle.NORMAL。
 
-**Type:** SuperscriptStyle
+**Type:** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **Since:** 20
 

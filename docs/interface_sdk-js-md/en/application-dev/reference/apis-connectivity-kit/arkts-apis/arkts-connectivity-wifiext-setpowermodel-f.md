@@ -1,5 +1,11 @@
 # setPowerModel
 
+## Modules to Import
+
+```TypeScript
+import { wifiext } from 'kits/@kit.ConnectivityKit';
+```
+
 ## setPowerModel
 
 ```TypeScript
@@ -26,7 +32,7 @@ Set the current Wi-Fi power mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | model indicates model file description to be loaded. |
+| model | [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) | Yes | model indicates model file description to be loaded. |
 
 **Return value:**
 

@@ -12,6 +12,12 @@ Out Of Band data used in Bluetooth device pairing.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## confirmationHash
 
 ```TypeScript
@@ -42,7 +48,7 @@ deviceId: BluetoothAddress
 
 The address of remote Bluetooth device.
 
-**Type:** BluetoothAddress
+**Type:** [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
 
 **Since:** 23
 
@@ -86,7 +92,7 @@ deviceRole?: DeviceRole
 
 The role of the remote Bluetooth device.
 
-**Type:** DeviceRole
+**Type:** [DeviceRole](../../apis-audio-kit/arkts-apis/arkts-audio-audio-devicerole-e.md)
 
 **Since:** 23
 

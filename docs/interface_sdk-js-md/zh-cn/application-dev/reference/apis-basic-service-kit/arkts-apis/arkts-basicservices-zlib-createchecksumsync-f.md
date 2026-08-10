@@ -1,5 +1,11 @@
 # createChecksumSync
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createChecksumSync
 
 ```TypeScript
@@ -22,9 +28,9 @@ function createChecksumSync(): Checksum
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 校验对象实例。 |
+| [Checksum](arkts-basicservices-zlib-checksum-i.md) | 校验对象实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

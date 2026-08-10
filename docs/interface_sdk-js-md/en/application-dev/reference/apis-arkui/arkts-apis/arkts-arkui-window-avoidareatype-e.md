@@ -1,9 +1,13 @@
 # AvoidAreaType
 
-Enumerates the types of areas to avoid for window content.
+窗口内容的避让区域的类型枚举。
 
-When adapting window content for an  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, you should adjust the content based on the corresponding [AvoidArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ specified by **AvoidAreaType**.
+窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的  
+[AvoidArea](arkts-arkui-window-avoidarea-i.md)做窗口内容避让。
+
+&lt;!--RP13--&gt;
+
+&lt;!--RP13End--&gt;
 
 **Since:** 7
 
@@ -19,7 +23,7 @@ When adapting window content for an
 TYPE_SYSTEM = 0
 ```
 
-Default area of the system. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_It contains the status bar and three-button navigation bar.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+表示系统默认区域。&lt;!--RP11--&gt;包含状态栏和三键导航栏区域。&lt;!--RP11End--&gt;
 
 **Since:** 7
 
@@ -37,7 +41,7 @@ Default area of the system. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_It contains the
 TYPE_CUTOUT = 1
 ```
 
-Cutout area.
+表示挖孔区域。
 
 **Since:** 7
 
@@ -55,7 +59,7 @@ Cutout area.
 TYPE_SYSTEM_GESTURE = 2
 ```
 
-Side return gesture area. Currently, no devices support this type of avoid area.
+表示侧边返回手势区域。当前所有设备均无此类型避让区域。
 
 **Since:** 9
 
@@ -73,7 +77,7 @@ Side return gesture area. Currently, no devices support this type of avoid area.
 TYPE_KEYBOARD = 3
 ```
 
-Fixed soft keyboard area.
+表示固定态软键盘区域。
 
 **Since:** 9
 
@@ -91,7 +95,7 @@ Fixed soft keyboard area.
 TYPE_NAVIGATION_INDICATOR = 4
 ```
 
-Bottom navigation bar. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony devices do not support this capability.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+表示底部导航区域。当三键导航显示时，底部导航避让区域始终存在。&lt;!--Del--&gt;OpenHarmony各设备不支持此能力。&lt;!--DelEnd--&gt;
 
 **Since:** 11
 
@@ -109,7 +113,7 @@ Bottom navigation bar. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony devices 
 TYPE_FLOAT_NAVIGATION = 5
 ```
 
-Area for float navigation
+表示三键导航区域。&lt;!--RP12--&gt;OpenHarmony各设备不支持此能力。&lt;!--RP12End--&gt;
 
 **Since:** 26.0.0
 

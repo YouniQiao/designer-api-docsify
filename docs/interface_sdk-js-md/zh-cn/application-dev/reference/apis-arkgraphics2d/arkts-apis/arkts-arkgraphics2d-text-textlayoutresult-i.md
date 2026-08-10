@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## correctRect
 
 ```TypeScript
@@ -18,7 +24,7 @@ correctRect: TextRectSize
 
 布局后段落的矩形尺寸。
 
-**类型：** TextRectSize
+**类型：** [TextRectSize](arkts-arkgraphics2d-text-textrectsize-i.md)
 
 **起始版本：** 24
 

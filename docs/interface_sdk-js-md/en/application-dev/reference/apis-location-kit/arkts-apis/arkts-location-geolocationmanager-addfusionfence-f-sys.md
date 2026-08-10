@@ -1,5 +1,11 @@
 # addFusionFence (System API)
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## addFusionFence
 
 ```TypeScript
@@ -26,7 +32,7 @@ Add a fusion fence.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fenceRequestParams | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the fusion fence request parameters. |
+| fenceRequestParams | [FusionFenceRequestParams](arkts-location-geolocationmanager-fusionfencerequestparams-i-sys.md) | Yes | Indicates the fusion fence request parameters. |
 
 **Return value:**
 
@@ -38,11 +44,11 @@ Add a fusion fence.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.addFusionFence} due to limited device. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3501603](../errorcode-geoLocationManager.md#3501603-failed-to-add-a-beacon-fence-because-of-duplication) | Duplicate fusion fence identifier. |
-| [3301601](../errorcode-geoLocationManager.md#3301601-failed-to-add-a-geofence-because-the-maximum-number-is-exceeded) | The number of geofences exceeds the maximum. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.addFusionFence} due to limited device. |
+| 3301601 | The number of geofences exceeds the maximum. |
+| 3501603 | Duplicate fusion fence identifier. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 

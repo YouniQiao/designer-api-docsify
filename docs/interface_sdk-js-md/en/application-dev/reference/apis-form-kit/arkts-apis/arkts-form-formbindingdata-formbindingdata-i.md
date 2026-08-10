@@ -10,6 +10,12 @@ Defines the createFormBindingData result interface.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formBindingData } from 'kits/@kit.FormKit';
+```
+
 ## data
 
 ```TypeScript

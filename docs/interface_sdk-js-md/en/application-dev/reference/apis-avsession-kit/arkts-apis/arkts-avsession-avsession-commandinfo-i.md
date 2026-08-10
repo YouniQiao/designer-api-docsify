@@ -1,6 +1,6 @@
 # CommandInfo
 
-The definition of command information to be sent to the session
+定义要发送到会话的命令信息。
 
 **Since:** 22
 
@@ -10,13 +10,19 @@ The definition of command information to be sent to the session
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## callerBundleName
 
 ```TypeScript
 callerBundleName?: string
 ```
 
-Caller bundle name.
+调用方应用包名。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Caller bundle name.
 callerDeviceId?: string
 ```
 
-Caller device id.
+调用方设备ID。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Caller device id.
 callerModuleName?: string
 ```
 
-Caller module name.
+调用方应用模块名。
 
 **Type:** string
 
@@ -70,9 +76,9 @@ Caller module name.
 callerType?: CallerType
 ```
 
-Caller type.
+调用方来源。
 
-**Type:** CallerType
+**Type:** [CallerType](arkts-avsession-avsession-callertype-e.md)
 
 **Since:** 22
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## address
 
 ```TypeScript
@@ -42,7 +48,7 @@ addressType: AddressType
 
 地址类型。
 
-**类型：** AddressType
+**类型：** [AddressType](arkts-mechanic-mechanicmanager-addresstype-e-sys.md)
 
 **起始版本：** 26.0.0
 

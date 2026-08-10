@@ -1,20 +1,31 @@
 # registerFont
 
+## Modules to Import
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## registerFont
 
 ```TypeScript
 function registerFont(options: FontOptions): void
 ```
 
-Registers a custom font with the font manager.
+在字体管理中注册自定义字体。
 
-This API is asynchronous and does not support concurrent calls.
-    **NOTE**  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [Font]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated with  
-    the current UI context.
+该接口为异步接口，不支持并发调用。
+
+> **说明：**
+> 
+> -registerFont需要先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取
+> [Font](arkts-arkui-uicontext.md)对象，然后通过该对象进行调用。且直接使用registerFont可能导致
+> [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的
+> [Font](arkts-arkui-uicontext.md)对象。
 
 **Since:** 9
 
@@ -34,5 +45,5 @@ This API is asynchronous and does not support concurrent calls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the custom font to register. |
+| options | [FontOptions](arkts-arkui-font-fontoptions-i.md) | Yes | 注册的自定义字体信息。 |
 

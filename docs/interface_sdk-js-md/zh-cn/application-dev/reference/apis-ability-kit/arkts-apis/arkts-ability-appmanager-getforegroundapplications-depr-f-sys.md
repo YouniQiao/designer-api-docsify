@@ -6,7 +6,7 @@
 function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void
 ```
 
-获取所有当前处于前台的应用信息。该应用信息由[AppStateData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_定义。使用callback异步回调。
+获取所有当前处于前台的应用信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用callback异步回调。
 
 **起始版本：** 8
 
@@ -28,9 +28,9 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;AppStateData&gt;&gt; | 是 | 回调函数，返回所有当前处于前台的应用信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | 是 | 回调函数，返回所有当前处于前台的应用信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -51,7 +51,7 @@ appManager.getForegroundApplications((err, data) => {
 function getForegroundApplications(): Promise<Array<AppStateData>>
 ```
 
-获取所有当前处于前台的应用信息。该应用信息由[AppStateData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_定义。使用Promise异步回调。
+获取所有当前处于前台的应用信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用Promise异步回调。
 
 **起始版本：** 8
 
@@ -73,9 +73,9 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AppStateData&gt;&gt; | Promise对象，返回所有当前处于前台的应用信息。 |
+| Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Promise对象，返回所有当前处于前台的应用信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

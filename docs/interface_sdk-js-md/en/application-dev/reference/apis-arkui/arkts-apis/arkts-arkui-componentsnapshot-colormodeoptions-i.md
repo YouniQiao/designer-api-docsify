@@ -10,6 +10,12 @@ Defines the color mode used for current snapshot taking.By default, the system d
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
+
 ## colorSpace
 
 ```TypeScript

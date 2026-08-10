@@ -34,7 +34,7 @@ Returns itself as the iterator.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SegmentData&gt; | the iterator. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;SegmentData&gt; | the iterator. |
 
 ## constructor
 
@@ -58,7 +58,7 @@ Creates a new Segments iterator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parent | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | the parent segments array. |
+| parent | [SegmentData](arkts-arkts-intl-segmentdata-i.md)[] | Yes | the parent segments array. |
 
 ## next
 
@@ -82,5 +82,5 @@ Returns the next result in the segments iterator.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SegmentData&gt; | the next iteration result. |
+| [IteratorResult](arkts-arkts-iterator-iteratorresult-c.md)&lt;SegmentData&gt; | the next iteration result. |
 

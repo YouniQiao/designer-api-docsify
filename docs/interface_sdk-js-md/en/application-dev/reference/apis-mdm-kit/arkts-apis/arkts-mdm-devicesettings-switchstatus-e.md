@@ -1,6 +1,6 @@
 # SwitchStatus
 
-Enumerates switch states.
+开关状态的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates switch states.
 ON = 0
 ```
 
-On.
+开启状态。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ On.
 OFF = 1
 ```
 
-Off.
+关闭状态。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Off.
 FORCE_ON = 2
 ```
 
-Forced-on.
+强制开启状态。
 
 **Since:** 26.0.0
 

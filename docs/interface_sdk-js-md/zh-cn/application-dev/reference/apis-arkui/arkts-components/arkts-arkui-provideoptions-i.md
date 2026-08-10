@@ -1,7 +1,7 @@
 # ProvideOptions
 
 ProvideOptions是\@Provide的选项。允许在同一组件树上通过allowOverride重写同名的\@Provide，适用于子组件需要覆盖父组件同名\@Provide值的场景，提高了跨层级状态管理的灵活性。具体例子可见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[\@Provide支持allowOverride参数](../../../ui/state-management/arkts-provide-and-consume.md#provide支持allowoverride参数)。
 
 **起始版本：** 11
 

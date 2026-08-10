@@ -2,7 +2,7 @@
 
 FileUri表示文件的URI，继承自uri.URI。
 
-**继承/实现关系：** FileUri extends [uri.URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md)
+**继承/实现关系：** FileUri extends [uri.URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)
 
 **起始版本：** 15
 
@@ -11,6 +11,12 @@ FileUri表示文件的URI，继承自uri.URI。
 <!--Device-fileUri-class FileUri extends uri.URI--><!--Device-fileUri-class FileUri extends uri.URI-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
+
+## 导入模块
+
+```TypeScript
+import { fileUri } from 'kits/@kit.CoreFileKit';
+```
 
 ## constructor
 
@@ -40,12 +46,12 @@ FileUri的构造函数，用于创建FileUri实例。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900005 | I/O error |
 | 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| 13900005 | I/O error |
 | 14300002 | Invalid uri |
+| 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pathDir = this.context.filesDir; // 获取应用沙箱路径。
@@ -87,7 +93,7 @@ getFullDirectoryUri(): string
 | 13900012 | Permission denied |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -132,7 +138,7 @@ isRemoteUri(): boolean
 | --- | --- |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 function isRemoteUriExample() {

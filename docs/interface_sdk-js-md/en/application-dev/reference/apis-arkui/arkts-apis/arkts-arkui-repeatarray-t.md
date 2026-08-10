@@ -4,7 +4,7 @@
 declare type RepeatArray<T> = Array<T> | ReadonlyArray<T> | Readonly<Array<T>>
 ```
 
-Defines a union type for **Repeat** data source parameters.
+Repeat数据源参数联合类型。
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ Defines a union type for **Repeat** data source parameters.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Regular array type. |
-| ReadonlyArray&lt;T&gt; | Read-only array type, where the array object cannot be modified. |
-| Readonly&lt;Array&lt;T&gt;&gt; | Read-only array type, where the array object cannot be modified. |
+| Array&lt;T&gt; | 常规数组类型。 |
+| ReadonlyArray&lt;T&gt; | 只读数组类型，不允许数组对象变更。 |
+| Readonly&lt;Array&lt;T&gt;&gt; | 只读数组类型，不允许数组对象变更。 |
 

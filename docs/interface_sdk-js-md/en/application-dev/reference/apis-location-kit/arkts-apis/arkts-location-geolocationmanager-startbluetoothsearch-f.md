@@ -1,5 +1,11 @@
 # startBluetoothSearch
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## startBluetoothSearch
 
 ```TypeScript
@@ -27,15 +33,15 @@ Starts Bluetooth scanning and matches the device ID list in the input parameter 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the configuration parameters for the Bluetooth search function. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BluetoothScanResult&gt; | Yes | Callback used to return \_\_\_ESCAPED\_DOLLAR\_\_\_{BluetoothScanResult}. |
+| request | [BluetoothSearchRequestParams](arkts-location-geolocationmanager-bluetoothsearchrequestparams-i.md) | Yes | Indicates the configuration parameters for the Bluetooth search function. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothScanResult&gt; | Yes | Callback used to return \\${BluetoothScanResult}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.startBluetoothSearch} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301800](../errorcode-geoLocationManager.md#3301800-failed-to-start-wifi-or-bluetooth-scanning) | Failed to start Bluetooth scanning. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.startBluetoothSearch} due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301800 | Failed to start Bluetooth scanning. |
 

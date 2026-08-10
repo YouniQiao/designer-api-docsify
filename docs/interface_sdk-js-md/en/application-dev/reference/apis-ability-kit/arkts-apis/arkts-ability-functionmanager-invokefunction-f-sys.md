@@ -1,5 +1,11 @@
 # invokeFunction (System API)
 
+## Modules to Import
+
+```TypeScript
+import { functionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## invokeFunction
 
 ```TypeScript
@@ -29,8 +35,8 @@ Invoke a function by functionNamespace and functionName.
 | --- | --- | --- | --- |
 | functionNamespace | string | Yes | The namespace of the target function. |
 | functionName | string | Yes | The name of the target function. |
-| args | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | The input arguments for the function. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options for this invocation. |
+| args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | The input arguments for the function. |
+| options | [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | No | The options for this invocation. |
 
 **Return value:**
 
@@ -42,10 +48,10 @@ Invoke a function by functionNamespace and functionName.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| 35600050 | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
-| 35600060 | The function does not exist. |
-| 35600061 | The function execute failed. |
 | 35600062 | The function execute timeout. |
+| 35600061 | The function execute failed. |
+| 35600060 | The function does not exist. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 35600050 | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
 

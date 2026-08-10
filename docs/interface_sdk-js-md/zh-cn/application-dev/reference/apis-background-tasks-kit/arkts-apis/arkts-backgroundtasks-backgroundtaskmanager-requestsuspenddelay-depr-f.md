@@ -27,15 +27,15 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reason | string | 是 | 延迟挂起申请的原因。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 延迟即将超时的回调函数，一般在超时前6秒通过此回调通知应用。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 延迟即将超时的回调函数，一般在超时前6秒通过此回调通知应用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回延迟挂起信息。 |
+| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | 返回延迟挂起信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import backgroundTaskManager from '@ohos.backgroundTaskManager';

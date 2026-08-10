@@ -1,12 +1,18 @@
 # isRunningLockTypeSupported
 
+## Modules to Import
+
+```TypeScript
+import { runningLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isRunningLockTypeSupported
 
 ```TypeScript
 function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified type of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported. This API uses an asynchronous callback to return the result.
+查询系统是否支持该类型的锁。使用callback异步回调。
 
 **Since:** 7
 
@@ -24,10 +30,10 @@ Checks whether a specified type of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the running lock. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the query result obtained, where the value **true** indicates that the specified type of the running lock is supported and **false** indicates the opposite. Otherwise, **err** is an error object. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 需要查询的锁的类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当查询成功，err为undefined，data为获取到的支持情况，返回true表示支持，返回false表示不支持；否则为错误对象 。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (err: Error, data: boolean) => {
@@ -46,7 +52,7 @@ runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (
 function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 ```
 
-Checks whether a specified type of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported. This API uses a promise to return the result.
+查询系统是否支持该类型的锁。使用Promise异步回调。
 
 **Since:** 7
 
@@ -64,15 +70,15 @@ Checks whether a specified type of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the running lock. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 需要查询的锁的类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the specified type of the running lock is supported, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示支持；返回false表示不支持。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND)

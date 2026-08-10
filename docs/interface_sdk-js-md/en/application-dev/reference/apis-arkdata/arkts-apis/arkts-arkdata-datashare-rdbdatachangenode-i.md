@@ -1,6 +1,6 @@
 # RdbDataChangeNode
 
-Represents the RDB data change result. The data returned by the callback is not larger than 10 MB in size.
+订阅/取消订阅RDB数据变更的结果，回调支持传输不大于10M的数据。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Represents the RDB data change result. The data returned by the callback is not 
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## data
 
 ```TypeScript
 data: Array<string>
 ```
 
-Data of the callback. If an error occurs during callback data processing, the callback will not be triggered.
+指定回调的数据。若处理回调数据时发生错误，则回调将不会被触发。
 
 **Type:** Array&lt;string&gt;
 
@@ -36,9 +42,9 @@ Data of the callback. If an error occurs during callback data processing, the ca
 templateId: TemplateId
 ```
 
-ID of the template that triggers the callback.
+处理回调的templateId。
 
-**Type:** TemplateId
+**Type:** [TemplateId](arkts-arkdata-datashare-templateid-i.md)
 
 **Since:** 10
 
@@ -56,7 +62,7 @@ ID of the template that triggers the callback.
 uri: string
 ```
 
-URI of the callback.
+指定回调的uri。
 
 **Type:** string
 

@@ -10,6 +10,12 @@ Defines a VPN observer.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
+## Modules to Import
+
+```TypeScript
+import { vpnExtension } from 'kits/@kit.NetworkKit';
+```
+
 ## offAuthorizationResult
 
 ```TypeScript
@@ -32,7 +38,27 @@ Unregisters the listener for user authorization results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
+
+let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
+
+let callback = (result: boolean) => {
+  console.info('Authorization result: ' + result);
+};
+// Register a listener.
+vpnObserver.onAuthorizationResult(callback);
+
+// Unregister a specified listener.
+vpnObserver.offAuthorizationResult(callback);
+
+// Unregister all registered listeners.
+vpnObserver.offAuthorizationResult();
+```
 
 ## onAuthorizationResult
 
@@ -56,5 +82,20 @@ Registers a listener for user authorization results.The authorization results ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
+
+let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
+vpnObserver.onAuthorizationResult((result: boolean) => {
+  if (result) {
+    console.info('VPN authorization succeeded');
+  } else {
+    console.error('VPN authorization failed');
+  }
+});
+```
 

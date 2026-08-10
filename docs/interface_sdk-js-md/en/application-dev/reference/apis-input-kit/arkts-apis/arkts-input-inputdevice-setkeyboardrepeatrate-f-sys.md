@@ -1,12 +1,18 @@
 # setKeyboardRepeatRate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## setKeyboardRepeatRate
 
 ```TypeScript
 function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the keyboard repeat rate. This API uses an asynchronous callback to return the result.
+设置键盘按键的重复速率，使用callback异步回调。
 
 **Since:** 10
 
@@ -22,17 +28,17 @@ Sets the keyboard repeat rate. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Keyboard repeat rate, in ms/time. The value range is [36, 100] and the default value is 50. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置键盘按键重复速率成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -46,15 +52,16 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Key repeat rate 60ms/time
             inputDevice.setKeyboardRepeatRate(60, (error: BusinessError) => {
               if (error) {
-                console.error(`Set keyboard repeat rate failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to set keyboard repeat rate, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 return;
               }
-              console.info(`Set keyboard repeat rate success`);
+              console.info(`Succeeded in setting keyboard repeat rate.`);
             });
           } catch (error) {
-            console.error(`Set keyboard repeat rate failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set keyboard repeat rate, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -69,7 +76,7 @@ struct Index {
 function setKeyboardRepeatRate(rate: int): Promise<void>
 ```
 
-Sets the keyboard repeat rate. This API uses a promise to return the result.
+设置键盘按键的重复速率，使用Promise异步回调。
 
 **Since:** 10
 
@@ -85,22 +92,22 @@ Sets the keyboard repeat rate. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Keyboard repeat rate, in ms/time. The value range is [36, 100] and the default value is 50. |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -114,13 +121,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Key repeat rate 60ms/time
             inputDevice.setKeyboardRepeatRate(60).then(() => {
-              console.info(`Set keyboard repeat rate success`);
+              console.info(`Succeeded in setting keyboard repeat rate.`);
             }).catch((error: BusinessError) => {
-              console.error(`Set keyboard failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to set keyboard, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`Set keyboard repeat rate failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set keyboard repeat rate, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

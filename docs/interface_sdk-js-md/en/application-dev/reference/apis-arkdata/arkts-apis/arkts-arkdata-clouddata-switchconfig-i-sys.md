@@ -1,6 +1,6 @@
 # SwitchConfig (System API)
 
-Defines the switch configuration of a device-cloud synergy database.
+端云协同数据库级配置。
 
 **Since:** 23
 
@@ -12,15 +12,21 @@ Defines the switch configuration of a device-cloud synergy database.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## dbInfo
 
 ```TypeScript
 dbInfo: Record<string, DBSwitchInfo>
 ```
 
-Switch configuration information of a database. The key is the database name, and the value is the configuration information of the database.
+数据库级别的开关配置信息。键为库名称，值为该库的配置信息。
 
-**Type:** Record&lt;string, DBSwitchInfo&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, DBSwitchInfo&gt;
 
 **Since:** 23
 

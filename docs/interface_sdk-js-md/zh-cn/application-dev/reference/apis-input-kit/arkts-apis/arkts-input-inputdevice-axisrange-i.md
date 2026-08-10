@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## axis
 
 ```TypeScript
@@ -18,7 +24,7 @@ axis: AxisType
 
 输入设备的轴类型。
 
-**类型：** AxisType
+**类型：** [AxisType](../../apis-arkui/arkts-apis/arkts-arkui-axistype-e.md)
 
 **起始版本：** 8
 
@@ -36,7 +42,7 @@ flat: int
 
 轴的基准值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -54,7 +60,7 @@ fuzz: int
 
 轴的模糊值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -72,7 +78,7 @@ max: int
 
 轴的最大值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -90,7 +96,7 @@ min: int
 
 轴的最小值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -108,7 +114,7 @@ resolution: int
 
 轴的分辨率。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -126,7 +132,7 @@ source: SourceType
 
 输入设备的输入能力。包括键盘、鼠标、触摸屏、轨迹球、触控板、操纵杆等。
 
-**类型：** SourceType
+**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **起始版本：** 8
 

@@ -1,5 +1,11 @@
 # getFreeInodes
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getFreeInodes
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getFreeInodes(): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回文件系统inode资源剩余量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回文件系统inode资源剩余量。 |
 
 **错误码：**
 
@@ -31,9 +37,7 @@ function getFreeInodes(): Promise<long>
 | 13600001 | IPC error. |
 | 13600016 | Failed to query the inode information of the data partition. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -41,18 +45,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getFreeInodes().then((freeInodes: number) => {
   console.info('getFreeInodes successfully:' + freeInodes);
 }).catch((err: BusinessError) => {
-  console.error(`getFreeInodes failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.getFreeInodes().then((freeInodes: long) => {
-  console.info('getFreeInodes successfully:' + freeInodes);
-}).catch((err: BusinessError): void => {
   console.error(`getFreeInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```

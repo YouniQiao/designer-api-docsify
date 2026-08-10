@@ -1,6 +1,6 @@
 # NativeEmbedParamDataInfo
 
-Provides details about the same-layer tag when the **param** element embedded in the **object** tag changes.
+提供同层渲染object标签内嵌param元素变化时同层标签的详细信息。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Provides details about the same-layer tag when the **param** element embedded in
 embedId: string
 ```
 
-Unique ID of the same-layer tag.
+同层标签的唯一id。
 
 **Type:** string
 
@@ -34,7 +34,7 @@ Unique ID of the same-layer tag.
 objectAttributeId?: string
 ```
 
-ID of the same-layer tag.
+同层标签的id信息。
 
 **Type:** string
 
@@ -52,8 +52,7 @@ ID of the same-layer tag.
 paramItems?: Array<NativeEmbedParamItem>
 ```
 
-Details of the changed **param** element, including the status change type, ID, name, and value of each **param**  
-element.
+发生变化的param元素的详细信息，包括每一个param元素的状态变化类型、id、参数名称和参数值。
 
 **Type:** Array&lt;NativeEmbedParamItem&gt;
 

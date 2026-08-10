@@ -1,6 +1,6 @@
 # FileSelectorParam
 
-封装消息信息，作为 \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 方法的入参。
+封装消息信息，作为 {@link onFileSelectorShow} 方法的入参。
 
 **起始版本：** 9
 
@@ -162,7 +162,7 @@ getMode(): FileSelectorMode
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the FileSelectorMode of this file selector. |
+| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) | Return the FileSelectorMode of this file selector. |
 
 ## getSuggestedName
 

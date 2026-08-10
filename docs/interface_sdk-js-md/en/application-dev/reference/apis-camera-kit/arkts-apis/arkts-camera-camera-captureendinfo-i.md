@@ -1,6 +1,6 @@
 # CaptureEndInfo
 
-Describes the capture end information.
+拍照停止信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the capture end information.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## captureId
 
 ```TypeScript
 captureId: int
 ```
 
-ID of this capture action.
+拍照的ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ ID of this capture action.
 frameCount: int
 ```
 
-Number of frames captured.
+帧数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

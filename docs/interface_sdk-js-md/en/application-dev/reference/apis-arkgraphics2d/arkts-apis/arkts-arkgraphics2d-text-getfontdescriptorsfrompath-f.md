@@ -1,21 +1,25 @@
 # getFontDescriptorsFromPath
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getFontDescriptorsFromPath
 
 ```TypeScript
 function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<FontDescriptor>>
 ```
 
-Obtains an array of font descriptors by font file path. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - An empty array is returned if the font file is not found, the font file path is invalid, the font file does not  
-    have the required permission, or the file is not in the font format.  
-    
-    - The **weight** field in [FontDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ does not exactly correspond to the weight  
-    value in the font file. Instead, the actual weight value in the font file is rounded off and mapped to the  
-    [FontWeight]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ enum value. For example, the weight value 350 in the font file is mapped to 4  
-    00, and the corresponding enum value is W400.
+根据字体文件路径获取字体描述符数组。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回空数组。
+> 
+> - [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md)中的weight字段并不精准对应字体文件内部的字重数值，而是将字体文件中的实际字重四舍五入映射到
+> [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md)枚举值后的结果。例如，字体文件字重350会映射为400，对应枚举为W400。
 
 **Since:** 22
 
@@ -31,15 +35,15 @@ Obtains an array of font descriptors by font file path. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to query. Two formats are supported:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Absolute path of the font file starting with "file://", for example, "file:///system/fonts/test.ttf".\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. File in the project's resources/rawfile directory, in the format of \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('file name'), for example, \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('test.ttf' ). |
+| path | string \| Resource | Yes | 需要查询的字体文件的路径。支持两种格式：&lt;br/&gt;1. 以"file://"开头的字体文件绝对路径，如"file:///system/fonts/ test.ttf"。&lt;br/&gt;2. 工程resources/rawfile目录下的文件，格式为\\$rawfile('文件名称')，如\\$rawfile('test.ttf')。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise used to return all font descriptors. If the font file cannot be found, the path is invalid, the font file does not have the required permission, or the file is not a font file, an empty array is returned. |
+| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise对象，返回所有的字体描述符。如果找不到字体文件、路径无效、无权限或非字体文件，则返回空数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -50,7 +54,7 @@ struct GetFontDescriptorsFromPathTest {
   build() {
     Column({ space: 10 }) {
       Button("get fontDescriptors")
-        .onClick(async () => {
+        .onClick(() => {
           let promise = text.getFontDescriptorsFromPath("file:///system/fonts/NotoSansCJK-Regular.ttc")
           promise.then((fontFullDescriptors) => {
             for (let index = 0; index < fontFullDescriptors.length; index++) {

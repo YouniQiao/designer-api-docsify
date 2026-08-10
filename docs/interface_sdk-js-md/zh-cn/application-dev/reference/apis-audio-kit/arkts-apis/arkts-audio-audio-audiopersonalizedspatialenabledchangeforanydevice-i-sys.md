@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## deviceDescriptor
 
 ```TypeScript
@@ -20,7 +26,7 @@ deviceDescriptor: AudioDeviceDescriptor
 
 音频设备描述。
 
-**类型：** AudioDeviceDescriptor
+**类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md)
 
 **起始版本：** 26.0.0
 

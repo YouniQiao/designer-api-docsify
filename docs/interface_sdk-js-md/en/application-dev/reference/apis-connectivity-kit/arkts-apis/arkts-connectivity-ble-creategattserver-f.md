@@ -1,5 +1,11 @@
 # createGattServer
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createGattServer
 
 ```TypeScript
@@ -24,9 +30,9 @@ create a JavaScript Gatt server instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a JavaScript Gatt server instance { |
+| [GattServer](arkts-connectivity-bluetooth-gattserver-i.md) | Returns a JavaScript Gatt server instance { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let gattServer: bluetoothManager.GattServer  = bluetoothManager.BLE.createGattServer();

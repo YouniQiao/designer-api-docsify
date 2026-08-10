@@ -1,6 +1,6 @@
 # ProgressDetails
 
-Describes detail of the cloud sync {@code Progress}.
+描述数据库整体执行端云同步任务上传和下载的统计信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes detail of the cloud sync {@code Progress}.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
 code: ProgressCode
 ```
 
-Describes the code of data sync progress.
+表示端云同步过程的状态。
 
-**Type:** ProgressCode
+**Type:** [ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md)
 
 **Since:** 10
 
@@ -34,11 +40,11 @@ Describes the code of data sync progress.
 details: Record<string, TableDetails>
 ```
 
-Statistics of each table.
+表示端云同步各表的统计信息。
 
-The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
+键表示表名，值表示该表的端云同步过程统计信息。
 
-**Type:** Record&lt;string, TableDetails&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, TableDetails&gt;
 
 **Since:** 10
 
@@ -54,7 +60,7 @@ The key indicates the table name, and the value indicates the device-cloud sync 
 message?: string
 ```
 
-Indicates the code message.
+同步状态的详细消息。通过message信息查看详细的失败原因。默认值为空。
 
 **Type:** string
 
@@ -74,9 +80,9 @@ Indicates the code message.
 schedule: Progress
 ```
 
-Describes the status of data sync progress.
+表示端云同步过程。
 
-**Type:** Progress
+**Type:** [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md)
 
 **Since:** 10
 

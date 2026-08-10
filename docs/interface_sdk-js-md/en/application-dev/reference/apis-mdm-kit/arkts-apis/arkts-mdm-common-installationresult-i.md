@@ -1,9 +1,9 @@
 # InstallationResult
 
-An object that holds the application installation result.
+应用安装结果。
 
-This object is used as a callback parameter in  
-[EnterpriseAdminExtensionAbility.onMarketAppInstallResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+该对象目前在  
+[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)作为回调入参使用。
 
 **Since:** 22
 
@@ -13,13 +13,19 @@ This object is used as a callback parameter in
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { common } from 'kits/@kit.MDMKit';
+```
+
 ## message
 
 ```TypeScript
 message: string
 ```
 
-Application installation result message.
+应用安装结果消息。
 
 **Type:** string
 
@@ -39,9 +45,9 @@ Application installation result message.
 result: Result
 ```
 
-Application installation result. **SUCCESS** indicates that the application is successfully installed and can be properly used. **FAIL** indicates that the application fails to be installed and is unavailable.
+应用安装结果码。SUCCESS表示应用安装成功，应用可正常使用；FAIL表示应用安装失败，应用不可用。
 
-**Type:** Result
+**Type:** [Result](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-result-i.md)
 
 **Since:** 22
 

@@ -252,6 +252,6 @@
   <!--Del-->
   - [常量(系统接口)](arkts-backgroundtasks-workscheduler-con-sys.md)<!--DelEnd-->
 - application<!--arkts-backgroundtaskskit-application-->
-  - [application/WorkSchedulerExtensionContext](arkts-application/workschedulerextensioncontext.md)
+  - [WorkSchedulerExtensionContext](arkts-workschedulerextensioncontext.md)
     <!--Del-->
-    - [WorkSchedulerExtensionContext(系统接口)](workschedulerextensioncontext-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->
+    - [WorkSchedulerExtensionContext(系统接口)](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->

@@ -1,5 +1,11 @@
 # getPorts（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPorts
 
 ```TypeScript
@@ -28,7 +34,7 @@ function getPorts(): Array<USBPort>
 | --- | --- |
 | Array&lt;USBPort&gt; | USB端口描述信息列表。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let ret = usb.getPorts();

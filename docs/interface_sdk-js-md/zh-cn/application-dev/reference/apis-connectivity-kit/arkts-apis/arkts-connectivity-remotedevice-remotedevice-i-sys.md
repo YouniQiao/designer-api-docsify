@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## cancelDevicePairing
 
 ```TypeScript
@@ -42,10 +48,10 @@ cancelDevicePairing(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## connect
 
@@ -79,10 +85,10 @@ connect(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## disconnect
 
@@ -116,10 +122,10 @@ disconnect(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## getDeviceAlias
 
@@ -153,10 +159,10 @@ getDeviceAlias(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## getDeviceModel
 
@@ -182,15 +188,15 @@ getDeviceModel(): DeviceModel
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回远程设备的型号信息。 |
+| [DeviceModel](arkts-connectivity-remotedevice-devicemodel-i-sys.md) | 返回远程设备的型号信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## getRssiValue
 
@@ -224,16 +230,16 @@ getRssiValue(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | 返回RSSI值的promise对象。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 返回RSSI值的promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## removePairedDevice
 
@@ -267,10 +273,10 @@ removePairedDevice(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setConnectionInterval
 
@@ -298,16 +304,16 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interval | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要设置的连接间隔 |
+| interval | [ConnectionInterval](arkts-connectivity-remotedevice-connectioninterval-t-sys.md) | 是 | 要设置的连接间隔 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setDeviceAlias
 
@@ -335,17 +341,17 @@ setDeviceAlias(alias: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alias | string | 是 | 远端设备的别名 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_最大长度为64且不能为空。 |
+| alias | string | 是 | 远端设备的别名 &lt;br&gt;最大长度为64且不能为空。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
 | 36100046 | String exceeds maximum length. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setPairingConfirmation
 
@@ -379,10 +385,10 @@ setPairingConfirmation(accept: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 
 ## setPairingPasscode
 
@@ -410,7 +416,7 @@ setPairingPasscode(passcode: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| passcode | string | 是 | 用户输入的通行码。必须是6位数字 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_长度必须为6，6个10以内数字。 |
+| passcode | string | 是 | 用户输入的通行码。必须是6位数字 &lt;br&gt;长度必须为6，6个10以内数字。 |
 
 **返回值：**
 
@@ -422,11 +428,11 @@ setPairingPasscode(passcode: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 | 36100045 | Passcode must be a 6-digit number. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 
 ## startCrediblePairing
 
@@ -460,8 +466,8 @@ startCrediblePairing(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 36100003 | NearLink disabled. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 

@@ -4,7 +4,7 @@
 type OnDisconnectCallback = () => void
 ```
 
-Describes the callback to be invoked when the connection to **AccessibilityExtensionAbility** is disconnected.
+描述AccessibilityExtensionAbility断开连接的回调接口。
 
 **Since:** 23
 

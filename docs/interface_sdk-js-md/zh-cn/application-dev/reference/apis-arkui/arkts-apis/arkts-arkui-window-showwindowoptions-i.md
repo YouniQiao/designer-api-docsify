@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## focusOnShow
 
 ```TypeScript
 focusOnShow?: boolean
 ```
 
-窗口调用[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_显示时是否自动获焦，默认为true。该参数对主窗、模态窗、dialog窗口不生效。
+窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)显示时是否自动获焦，默认为true。该参数对主窗、模态窗、dialog窗口不生效。
 
 **类型：** boolean
 

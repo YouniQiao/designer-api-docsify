@@ -1,6 +1,6 @@
 # ImageFrameInfo
 
-Image frame information set.
+图片帧信息集合。
 
 **Since:** 7
 
@@ -16,11 +16,11 @@ Image frame information set.
 duration?: number
 ```
 
-Playback duration of each image frame, in milliseconds.
+每帧图片的播放时长，单位：毫秒。
 
-Default value: **0**
+默认值：0
 
-Negative numbers are not supported. Setting negative values will cause the image to stay in the current frame for a long time, affecting normal playback.
+不支持负数。设置为负数将导致图片在当前帧长时间停留，影响正常播放。
 
 **Type:** number
 
@@ -40,12 +40,13 @@ Negative numbers are not supported. Setting negative values will cause the image
 height?: number | string
 ```
 
-Image height. When the value is a string, it can represent a numeric value with or without units, for example,  
-**"2"** or **"2px"**.
+图片高度。string类型支持number类型取值的字符串形式，可以附带单位，例如"2"、"2px"。
 
-Default value: **0**
+默认值：0
 
-Unit: vp
+单位：vp
+
+**卡片能力：** 从API version 10开始，该接口支持在ArkTS卡片中使用
 
 **Type:** number \| string
 
@@ -67,11 +68,13 @@ Unit: vp
 left?: number | string
 ```
 
-Horizontal coordinate of the image relative to the upper left corner of the component. When the value is a string,it can represent a numeric value with or without units, for example, **"2"** or **"2px"**.
+图片相对于组件左上角的横向坐标。string类型支持number类型取值的字符串形式，可以附带单位，例如"2"、"2px"。
 
-Default value: **0**
+默认值：0
 
-Unit: vp
+单位：vp
+
+**卡片能力：** 从API version 10开始，该接口支持在ArkTS卡片中使用
 
 **Type:** number \| string
 
@@ -93,9 +96,17 @@ Unit: vp
 src: string | Resource | PixelMap
 ```
 
-Image path. The image format can be .jpg, .jpeg, .svg, .png, .bmp, .webp, .ico, or .heif. The  
-[Resource]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ type is supported since API version 9, and the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ type is supported since API version12.
+图片路径，图片格式为jpg、jpeg、svg、png、bmp、webp、ico和heif，从API version9开始支持[Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)类型的路径，从API version 12开始支持  
+[PixelMap](../../../reference/apis-arkui/arkui-ts/ts-image-common.md#pixelmap)类型。
+
+**string格式说明：**
+
+- 支持加载本地图片路径和网络图片地址。使用相对路径引用本地图片时，不支持跨包或跨模块调用。resources目录下的文件不支持通过相对路径访问，需使用[Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)类型（如\$r或\$  
+rawfile）来引用，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。  
+- 支持`http`和`https`网络图片地址，使用网络图片时需要申请权限`ohos.permission.INTERNET`。  
+- 支持`file://`路径前缀的字符串，应用沙箱URI为`file://&lt;bundleName&gt;/&lt;sandboxPath&gt;`。沙箱路径需要使用  
+[fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。  
+- 支持`Base64`字符串。
 
 **Type:** string \| Resource \| PixelMap
 
@@ -117,11 +128,13 @@ Image path. The image format can be .jpg, .jpeg, .svg, .png, .bmp, .webp, .ico, 
 top?: number | string
 ```
 
-Vertical coordinate of the image relative to the upper left corner of the component. When the value is a string, it can represent a numeric value with or without units, for example, **"2"** or **"2px"**.
+图片相对于组件左上角的纵向坐标。string类型支持number类型取值的字符串形式，可以附带单位，例如"2"、"2px"。
 
-Default value: **0**
+默认值：0
 
-Unit: vp
+单位：vp
+
+**卡片能力：** 从API version 10开始，该接口支持在ArkTS卡片中使用
 
 **Type:** number \| string
 
@@ -143,12 +156,13 @@ Unit: vp
 width?: number | string
 ```
 
-Image width. When the value is a string, it can represent a numeric value with or without units, for example,  
-**"2"** or **"2px"**.
+图片宽度。string类型支持number类型取值的字符串形式，可以附带单位，例如"2"、"2px"。
 
-Default value: **0**
+默认值：0
 
-Unit: vp
+单位：vp
+
+**卡片能力：** 从API version 10开始，该接口支持在ArkTS卡片中使用
 
 **Type:** number \| string
 

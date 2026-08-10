@@ -1,6 +1,6 @@
 # AuthType
 
-Enumerates the types of user authentication supported by an asset.
+枚举，关键资产支持的用户认证类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the types of user authentication supported by an asset.
 NONE = 0x00
 ```
 
-No user authentication is required before the asset is accessed.
+访问关键资产前无需用户认证。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ No user authentication is required before the asset is accessed.
 ANY = 0xFF
 ```
 
-The asset can be accessed if any user authentication (such as PIN, facial, or fingerprint authentication) is successful.
+任意一种用户认证方式（PIN码、人脸、指纹等）通过后，均可访问关键资产。
 
 **Since:** 11
 

@@ -1,12 +1,18 @@
 # promiseWrapper
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## promiseWrapper
 
 ```TypeScript
 function promiseWrapper(original: (err: Object, value: Object) => void): Object
 ```
 
-接收一个使用错误优先回调模式的函数（即最后一个参数为 \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_），并通过 promise 返回结果。
+接收一个使用错误优先回调模式的函数（即最后一个参数为 `(err, value) => callback`），并通过 promise 返回结果。
 
 **起始版本：** 7
 
@@ -30,5 +36,5 @@ function promiseWrapper(original: (err: Object, value: Object) => void): Object
 
 | 类型 | 说明 |
 | --- | --- |
-| Object | 错误优先风格（即最后一个参数为 (err, value) =       ... ）的 promise。 |
+| Object | 错误优先风格（即最后一个参数为 (err, value) => ... ）的 promise。 |
 

@@ -12,8 +12,8 @@
 
 ColumnSplit通过分割线限制子组件的高度。初始化时，分割线位置根据子组件的高度来计算。初始化后，动态修改子组件的高度不生效，分割线位置保持不变。设置resizeable(true)后，可通过拖动相邻分割线改变子组件高度。
 
-初始化后，当动态修改[margin]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[border]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[padding]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_通用属性导致子组件尺寸大于相邻分割线间距时，不支持拖动分割线改变子组件的高度。
+初始化后，当动态修改[margin]{@link CommonMethod#margin}、[border]{@link CommonMethod#border}、  
+[padding]{@link CommonMethod#padding}通用属性导致子组件尺寸大于相邻分割线间距时，不支持拖动分割线改变子组件的高度。
 
 ## ColumnSplit
 
@@ -35,3 +35,4 @@ ColumnSplit()
 
 ## 汇总
 
+- [ColumnSplitDividerStyle](arkts-arkui-columnsplit-columnsplitdividerstyle-i.md)

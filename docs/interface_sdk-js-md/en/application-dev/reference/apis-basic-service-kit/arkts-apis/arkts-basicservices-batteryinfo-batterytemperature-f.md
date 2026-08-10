@@ -1,12 +1,18 @@
 # batteryTemperature
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## batteryTemperature
 
 ```TypeScript
 function batteryTemperature(): int
 ```
 
-Battery temperature of the device, in unit of 0.1°C.
+表示当前设备电池的温度，单位0.1摄氏度。
 
 **Since:** 23
 
@@ -20,5 +26,5 @@ Battery temperature of the device, in unit of 0.1°C.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the battery temperature of the device, in unit of 0.1°C. |
+| int | 返回当前设备电池的温度，单位0.1摄氏度。 |
 

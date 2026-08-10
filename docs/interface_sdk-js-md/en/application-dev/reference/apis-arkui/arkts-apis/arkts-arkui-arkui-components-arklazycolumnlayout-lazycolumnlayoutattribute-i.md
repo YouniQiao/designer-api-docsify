@@ -1,8 +1,8 @@
 # LazyColumnLayoutAttribute
 
-Defines the lazy column layout attribute.
+定义懒列布局属性。
 
-**Inheritance/Implementation:** LazyColumnLayoutAttribute extends [CommonMethod](arkts-arkui-component/common-commonmethod-i.md)
+**Inheritance/Implementation:** LazyColumnLayoutAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Defines the lazy column layout attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
+```
+
 ## alignItems
 
 ```TypeScript
 default alignItems(value: HorizontalAlign | undefined): this
 ```
 
-Sets the horizontal alignment of the row content.
+设置行内容的水平对齐方式。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ Sets the horizontal alignment of the row content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | the horizontal alignment of the row content. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: HorizontalAlign.Center. |
+| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) \| undefined | Yes | 行内容的水平对齐。 &lt;br&gt;默认值：HorizontalAlign.Center。 |
 
 **Return value:**
 
@@ -48,7 +54,7 @@ Sets the horizontal alignment of the row content.
 default attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Sets the attribute modifier.
+设置属性修饰符。
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ Sets the attribute modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -78,7 +84,7 @@ Sets the attribute modifier.
 default footer(builder: CustomBuilder | undefined): this
 ```
 
-Sets the footer of the lazy column layout.
+设置懒加载列布局的footer。
 
 **Since:** 26.0.0
 
@@ -94,7 +100,7 @@ Sets the footer of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The footer builder function \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Passing undefined will remove the footer. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | footer生成器函数 &lt;br&gt;传递undefined将移除footer。 |
 
 **Return value:**
 
@@ -108,7 +114,7 @@ Sets the footer of the lazy column layout.
 default header(builder: CustomBuilder | undefined): this
 ```
 
-Sets the header of the lazy column layout.
+设置懒加载列布局的header。
 
 **Since:** 26.0.0
 
@@ -124,7 +130,7 @@ Sets the header of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The header builder function \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Passing undefined will remove the header. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | header生成器函数 &lt;br&gt;传递undefined将移除header。 |
 
 **Return value:**
 
@@ -138,7 +144,7 @@ Sets the header of the lazy column layout.
 default onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this
 ```
 
-Triggered when the index of child components in the visible area changes.
+当子组件在可见区域的索引发生变化时触发。
 
 **Since:** 26.0.0
 
@@ -154,7 +160,7 @@ Triggered when the index of child components in the visible area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Passing undefined will unregister the callback. |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | 回调函数，当可见区域中子组件的索引发生变化时触发. &lt;br&gt;传递undefined将取消注册回调。 |
 
 **Return value:**
 
@@ -168,11 +174,11 @@ Triggered when the index of child components in the visible area changes.
 default setLazyColumnLayoutOptions(): this
 ```
 
-Set LazyColumnLayout options.
+设置LazyColumnLayout选项。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,7 +198,7 @@ Set LazyColumnLayout options.
 default space(space: LengthMetrics | undefined): this
 ```
 
-The spacing between rows.
+行之间的间距。
 
 **Since:** 26.0.0
 
@@ -208,7 +214,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | the spacing between rows. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Range: [0, +∞). |
+| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | 行之间的间距。 &lt;br&gt;默认值为0。&lt;br&gt;范围：[0, +∞)。 |
 
 **Return value:**
 
@@ -222,7 +228,7 @@ The spacing between rows.
 default sticky(sticky: StickyStyle | undefined): this
 ```
 
-Sets sticky style for header and footer.
+设置header和footer的吸顶吸底样式。
 
 **Since:** 26.0.0
 
@@ -238,7 +244,7 @@ Sets sticky style for header and footer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The sticky style for header and footer. |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | header和footer的吸顶吸底样式。 |
 
 **Return value:**
 

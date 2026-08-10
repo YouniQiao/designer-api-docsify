@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## automotiveCameraPosition
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly automotiveCameraPosition?: AutomotiveCameraPosition
 
 Car设备摄像头位置。
 
-**类型：** AutomotiveCameraPosition
+**类型：** [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
 
 **起始版本：** 26.0.0
 
@@ -60,7 +66,7 @@ readonly cameraOrientation: int
 
 相机安装角度，不会随着屏幕旋转而改变。取值范围为[0, 360]。单位：度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -80,7 +86,7 @@ readonly cameraPosition: CameraPosition
 
 相机位置。
 
-**类型：** CameraPosition
+**类型：** [CameraPosition](arkts-camera-camera-cameraposition-e.md)
 
 **起始版本：** 10
 
@@ -100,7 +106,7 @@ readonly cameraType: CameraType
 
 相机类型。
 
-**类型：** CameraType
+**类型：** [CameraType](arkts-camera-camera-cameratype-e.md)
 
 **起始版本：** 10
 
@@ -120,7 +126,7 @@ readonly connectionType: ConnectionType
 
 相机连接类型。
 
-**类型：** ConnectionType
+**类型：** [ConnectionType](arkts-camera-camera-connectiontype-e.md)
 
 **起始版本：** 10
 
@@ -140,7 +146,7 @@ readonly constituentCameraDevices?: Array<CameraDevice>
 
 组成此逻辑相机的物理相机列表。
 
-**类型：** Array&lt;CameraDevice&gt;
+**类型：** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
 **起始版本：** 24
 
@@ -182,7 +188,7 @@ readonly hostDeviceType: HostDeviceType
 
 远端设备类型。
 
-**类型：** HostDeviceType
+**类型：** [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md)
 
 **起始版本：** 15
 
@@ -224,7 +230,7 @@ readonly lensDistortion?: Array<double>
 
 镜头畸变参数数组。
 
-**类型：** Array&lt;double&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **起始版本：** 24
 
@@ -246,7 +252,7 @@ readonly lensEquivalentFocalLength?: Array<int>
 
 相机镜头等效焦距。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 24
 
@@ -266,7 +272,7 @@ readonly lensFocalLength?: double
 
 镜头实际焦距。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 24
 
@@ -288,7 +294,7 @@ readonly lensIntrinsicCalibration?: Array<double>
 
 镜头内参标定参数数组。
 
-**类型：** Array&lt;double&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **起始版本：** 24
 
@@ -310,7 +316,7 @@ readonly minimumFocusDistance?: double
 
 相机最小对焦距离。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 24
 
@@ -332,7 +338,7 @@ readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 
 传感器颜色滤镜排列方式。
 
-**类型：** SensorColorFilterArrangement
+**类型：** [SensorColorFilterArrangement](arkts-camera-camera-sensorcolorfilterarrangement-e.md)
 
 **起始版本：** 24
 
@@ -354,7 +360,7 @@ readonly sensorPhysicalSize?: Array<double>
 
 传感器物理尺寸（宽度和高度）。
 
-**类型：** Array&lt;double&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **起始版本：** 24
 
@@ -376,7 +382,7 @@ readonly sensorPixelArraySize?: Array<int>
 
 传感器像素阵列尺寸（宽度和高度。单位：像素）。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 24
 

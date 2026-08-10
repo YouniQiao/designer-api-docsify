@@ -1,6 +1,6 @@
 # WindowStateInfo
 
-Defines the application window state information.
+应用窗口状态信息。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines the application window state information.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { applicationManager } from 'kits/@kit.MDMKit';
+```
+
 ## isOnDock
 
 ```TypeScript
 isOnDock: boolean
 ```
 
-Whether the application window is displayed on the bottom dock. For application on the bottom dock on tablets in PC mode and PCs/2-in-1 devices. For other devices, **false** is returned.
+表示应用窗口是否在底部Dock栏上显示。PC/2in1设备和Tablet设备的PC模式的应用在底部Dock栏上返回true，其他设备返回false。
 
 **Type:** boolean
 
@@ -36,7 +42,7 @@ Whether the application window is displayed on the bottom dock. For application 
 name: string
 ```
 
-Application window name.
+应用窗口名称。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ Application window name.
 state: WindowState
 ```
 
-Application window state.
+应用窗口状态。
 
-**Type:** WindowState
+**Type:** [WindowState](arkts-mdm-applicationmanager-windowstate-e.md)
 
 **Since:** 26.0.0
 
@@ -76,7 +82,7 @@ Application window state.
 windowId: number
 ```
 
-Application window ID.
+应用窗口ID。
 
 **Type:** number
 

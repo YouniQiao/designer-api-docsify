@@ -1,6 +1,6 @@
 # PpdInfo
 
-defines ppd info.
+定义打印机所使用驱动的PPD文件信息的接口。
 
 **Since:** 24
 
@@ -10,13 +10,19 @@ defines ppd info.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## manufacturer
 
 ```TypeScript
 manufacturer: string
 ```
 
-Manufacturer.
+表示当前PPD文件内的打印机厂商名称。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Manufacturer.
 nickName: string
 ```
 
-Nick name.
+表示当前PPD文件内的打印机别名。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Nick name.
 ppdName: string
 ```
 
-Ppd name.
+表示当前PPD文件的名称。
 
 **Type:** string
 

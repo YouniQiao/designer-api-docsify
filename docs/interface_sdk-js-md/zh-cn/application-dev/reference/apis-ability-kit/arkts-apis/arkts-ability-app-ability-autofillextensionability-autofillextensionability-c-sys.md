@@ -1,7 +1,7 @@
 # AutoFillExtensionAbility（系统接口）
 
 AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类型的自动填充与保存，继承自  
-[ExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)。
 
 **继承/实现关系：** AutoFillExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 
@@ -14,6 +14,12 @@ AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类�
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { AutoFillExtensionAbility } from 'kits/@kit.AbilityKit';
+```
 
 ## onBackground
 
@@ -35,7 +41,7 @@ onBackground(): void
 
 **系统接口：** 此接口为系统接口。
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
@@ -68,7 +74,7 @@ AutoFillExtensionAbility创建时触发回调函数。
 
 **系统接口：** 此接口为系统接口。
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
@@ -101,7 +107,7 @@ onDestroy(): void | Promise<void>
 
 **系统接口：** 此接口为系统接口。
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
@@ -140,22 +146,6 @@ onDestroy(): Promise<void> | undefined
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { AutoFillExtensionAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
-  onDestroy(): Promise<void> {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'onDestroy');
-  }
-}
-```
-
 ## onFillRequest
 
 ```TypeScript
@@ -180,13 +170,11 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | AutoFillExtensionAbility界面内容相关信息。 |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 自动填充数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 自动填充请求回调。 |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i-sys.md) | 是 | 自动填充数据。 |
+| callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | 是 | 自动填充请求回调。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
@@ -224,43 +212,6 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
-import { LocalStorage } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
-  onFillRequest(session: UIExtensionContentSession,
-    request: autoFillManager.FillRequest,
-    callback: autoFillManager.FillRequestCallback) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onFillRequest');
-    hilog.info(0x0000, 'testTag', 'fill requestCallback: %{public}s', JSON.stringify(callback));
-    hilog.info(0x0000, 'testTag', 'get request viewData: ', JSON.stringify(request.viewData));
-    try {
-      let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.FillRequestCallback |
-      autoFillManager.ViewData | common.AutoFillExtensionContext> = {
-        'session': session,
-        'message': 'AutoFill Page',
-        'fillCallback': callback,
-        'viewData': request.viewData,
-        'context': this.context
-      };
-      let storage_fill = new LocalStorage(localStorageData);
-      if (session) {
-        session.loadContent('pages/SelectorList', storage_fill);
-      } else {
-        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
-      }
-    } catch (err) {
-      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
-    }
-  }
-}
-```
-
 ## onForeground
 
 ```TypeScript
@@ -281,7 +232,7 @@ onForeground(): void
 
 **系统接口：** 此接口为系统接口。
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
@@ -318,13 +269,11 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | AutoFillExtensionAbility界面内容相关信息。 |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存请求数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存请求回调。 |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | 是 | 保存请求数据。 |
+| callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | 是 | 保存请求回调。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
@@ -360,41 +309,6 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
-import { LocalStorage } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
-  onSaveRequest(session: UIExtensionContentSession,
-    request: autoFillManager.SaveRequest,
-    callback: autoFillManager.SaveRequestCallback) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'onSaveRequest');
-    try {
-      let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.SaveRequestCallback |
-      autoFillManager.ViewData | common.AutoFillExtensionContext> = {
-        'session': session,
-        'message': 'AutoFill Page',
-        'fillCallback': callback,
-        'viewData': request.viewData,
-        'context': this.context,
-      };
-      let storage_save = new LocalStorage(localStorageData);
-      if (session) {
-        session.loadContent('pages/SavePage', storage_save);
-      } else {
-        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
-      }
-    } catch (err) {
-      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
-    }
-  }
-}
-```
-
 ## onSessionDestroy
 
 ```TypeScript
@@ -419,9 +333,9 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AutoFillExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
@@ -458,9 +372,9 @@ onUpdateRequest(request: UpdateRequest): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 更新请求。 |
+| request | [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | 是 | 更新请求。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AutoFillExtensionAbility, autoFillManager } from '@kit.AbilityKit';
@@ -482,7 +396,7 @@ context: AutoFillExtensionContext
 
 AutoFillExtension的上下文环境，继承自ExtensionContext。
 
-**类型：** AutoFillExtensionContext
+**类型：** [AutoFillExtensionContext](arkts-ability-autofillextensioncontext-c-sys.md)
 
 **起始版本：** 11
 

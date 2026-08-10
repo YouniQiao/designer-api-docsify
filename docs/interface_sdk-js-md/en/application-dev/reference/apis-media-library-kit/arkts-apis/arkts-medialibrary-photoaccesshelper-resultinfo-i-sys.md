@@ -12,6 +12,12 @@ ResultInfo info of batch operations.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## code
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly code: int
 
 result code of batch operations.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ readonly result: Array<string|null>
 
 result info of batch operations.
 
-**Type:** Array&lt;string\|null&gt;
+**Type:** Array&lt;string \| null&gt;
 
 **Since:** 26.0.0
 

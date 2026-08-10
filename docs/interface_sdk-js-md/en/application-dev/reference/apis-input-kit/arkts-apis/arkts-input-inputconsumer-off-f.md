@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## off('hotkeyChange')
 
 ```TypeScript
 function off(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback?: Callback<HotkeyOptions>): void
 ```
 
-Unsubscribes from application shortcut key change events. This API uses an asynchronous callback to return the result.
+取消订阅应用快捷键。使用callback异步回调。
 
 **Since:** 14
 
@@ -20,18 +26,18 @@ Unsubscribes from application shortcut key change events. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hotkeyChange' | Yes | Event type. This parameter has a fixed value of **hotkeyChange**. |
-| hotkeyOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Shortcut key options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HotkeyOptions&gt; | No | Callback to unregister. If this parameter is left unspecified, listening will be disabled for all callbacks registered for the specified shortcut key options. |
+| type | 'hotkeyChange' | Yes | 事件类型，固定取值为'hotkeyChange'。 |
+| hotkeyOptions | [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | Yes | 快捷键选项。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HotkeyOptions&gt; | No | 需要取消订阅的回调函数。若缺省，则取消当前应用快捷键选项已订阅的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
@@ -47,15 +53,17 @@ struct Index {
           let zKey = 2042;
           // Disable listening for a single callback.
           let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
-            console.info(`hotkeyOptions: ${JSON.stringify(hotkeyOptions)}`);
+            console.info(`Succeeded in consuming hotkey, hotkeyOptions: ${JSON.stringify(hotkeyOptions)}.`);
           }
           let hotkeyOption: inputConsumer.HotkeyOptions = { preKeys: [leftCtrlKey], finalKey: zKey, isRepeat: true };
           try {
+            // Subscribe to shortcut key change events.
             inputConsumer.on("hotkeyChange", hotkeyOption, hotkeyCallback);
+            // Unsubscribe from shortcut key change events.
             inputConsumer.off("hotkeyChange", hotkeyOption, hotkeyCallback);
-            console.info(`Unsubscribe success`);
+            console.info(`Succeeded in unsubscribing.`);
           } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to unsubscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -77,15 +85,17 @@ struct Index {
           let zKey = 2042;
           // Disable listening for all callbacks.
           let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
-            console.info(`hotkeyOptions: ${JSON.stringify(hotkeyOptions)}`);
+            console.info(`Succeeded in consuming hotkey, hotkeyOptions: ${JSON.stringify(hotkeyOptions)}.`);
           }
           let hotkeyOption: inputConsumer.HotkeyOptions = { preKeys: [leftCtrlKey], finalKey: zKey, isRepeat: true };
           try {
+            // Subscribe to shortcut key change events.
             inputConsumer.on("hotkeyChange", hotkeyOption, hotkeyCallback);
+            // Unsubscribe from shortcut key change events.
             inputConsumer.off("hotkeyChange", hotkeyOption);
-            console.info(`Unsubscribe success`);
+            console.info(`Succeeded in unsubscribing.`);
           } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to unsubscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -100,7 +110,7 @@ struct Index {
 function off(type: 'keyPressed', callback?: Callback<KeyEvent>): void
 ```
 
-Unsubscribes from key press events. This API uses an asynchronous callback to return the result. If the API call is successful, the system's default response to the key event will be resumed; that is, system-level actions, such as volume adjustment, will be triggered normally.
+取消对'keyPressed'事件的订阅，使用callback异步回调。调用该方法后，被屏蔽的系统按键默认行为将恢复，即系统对音量调节等默认响应将恢复。
 
 **Since:** 16
 
@@ -114,17 +124,17 @@ Unsubscribes from key press events. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyPressed' | Yes | Event type. This parameter has a fixed value of **keyPressed**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | No | Callback to unregister. If this parameter is not specified, listening will be disabled for all registered callbacks. |
+| type | 'keyPressed' | Yes | 事件类型，固定取值为'keyPressed'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | No | 需要取消订阅的回调函数。若缺省，则取消当前已订阅的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputConsumer, KeyEvent } from '@kit.InputKit';
@@ -144,14 +154,16 @@ struct Index {
               isRepeat: false,
             }
             let callback = (event: KeyEvent) => {
-              console.info(`Unsubscribe success ${JSON.stringify(event)}`);
+              console.info(`Succeeded in unsubscribing ${JSON.stringify(event)}.`);
             }
+            // Subscribe to key press events.
             inputConsumer.on('keyPressed', options, callback);
+            // Unsubscribe from key press events.
             inputConsumer.off('keyPressed', callback);
             // Disable listening for all callbacks.
             inputConsumer.off("keyPressed");
           } catch (error) {
-            console.error(`Unsubscribe execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to unsubscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

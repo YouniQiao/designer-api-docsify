@@ -1,12 +1,18 @@
 # subscribeToEvent
 
+## Modules to Import
+
+```TypeScript
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## subscribeToEvent
 
 ```TypeScript
 function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>
 ```
 
-Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or failure.
+订阅公共事件，并返回订阅成功或失败信息。使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,27 +28,25 @@ Subscribes to a common event. This API uses a promise to return the result, indi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Subscriber object. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CommonEventData&gt; | Yes | Callback to be invoked when a common event is subscribed to. |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Yes | 表示订阅者对象。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;CommonEventData&gt; | Yes | 表示接收公共事件数据的回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
-| [1500010](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500010-the-number-of-subscribers-exceeds-the-upper-limit) | The count of subscriber exceeds system specification. |
+| 801 | Capability not supported. |
+| 1500007 | Failed to send the message to the common event service. |
+| 1500010 | The count of subscriber exceeds system specification. |
+| 1500008 | Failed to initialize the common event service. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -51,7 +55,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let subscriber: commonEventManager.CommonEventSubscriber | null = null;
 // Subscriber information.
 let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
-  events: ["event"]
+  events: ['event']
 };
 
 // Create a subscriber.
@@ -66,9 +70,9 @@ try {
         // Subscribe to a common event.
         try {
           commonEventManager.subscribeToEvent(subscriber, (data: commonEventManager.CommonEventData) => {
-            console.info(`Succeeded to receive common event, data is ` + JSON.stringify(data));
+            console.info(`Succeeded to receive common event, data is ${JSON.stringify(data)}`);
           }).then(() => {
-            console.info(`Succeeded to subscribe.`);
+            console.info(`Succeeded in subscribing.`);
           }).catch((err: BusinessError) => {
             console.error(`Failed to subscribe. Code is ${err.code}, message is ${err.message}`);
           });
@@ -80,60 +84,6 @@ try {
     });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Define a subscriber.
-let subscriber: commonEventManager.CommonEventSubscriber | undefined | null = null;
-// Subscriber information.
-let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
-  events: ["event"]
-};
-
-// Create a subscriber.
-try {
-  commonEventManager.createSubscriber(
-    subscribeInfo,
-    (err: BusinessError | null, commonEventSubscriber: commonEventManager.CommonEventSubscriber | undefined) => {
-      if (err) {
-        console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
-        return;
-      }
-
-      // Ensure the subscriber object is valid.
-      if (!commonEventSubscriber) {
-        console.error(`Failed to create subscriber: subscriber is undefined`);
-        return;
-      }
-
-      console.info(`Succeeded in creating subscriber.`);
-      subscriber = commonEventSubscriber;
-
-      // Use type assertions to ensure the type is correct.
-      const validSubscriber = commonEventSubscriber as commonEventManager.CommonEventSubscriber;
-
-      // Subscribe to a common event.
-      commonEventManager.subscribeToEvent(
-        validSubscriber,
-        (data: commonEventManager.CommonEventData) => {
-          console.info(`Succeeded to receive common event, data is ${JSON.stringify(data)}`);
-        }
-      ).then(() => {
-        console.info(`Succeeded to subscribe.`);
-      }).catch((err: Error) => {
-        const businessErr = err as BusinessError;
-        console.error(`Failed to subscribe. Code is ${businessErr.code}, message is ${businessErr.message}`);
-      });
-    }
-  );
-} catch (error) {
-  const err = error as BusinessError;
   console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
 }
 ```

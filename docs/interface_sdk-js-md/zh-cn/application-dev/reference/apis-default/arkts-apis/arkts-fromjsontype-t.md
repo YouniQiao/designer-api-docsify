@@ -4,9 +4,9 @@
 export declare type FromJSONType<T> = (element: jsonx.JsonElement) => T
 ```
 
-    **说明：**  
-    
-    静态ArkTS反序列化接口，需开发者自己实现。
+> **说明：**
+> 
+> 静态ArkTS反序列化接口，需开发者自己实现。
 
 **起始版本：** 23
 
@@ -22,11 +22,11 @@ export declare type FromJSONType<T> = (element: jsonx.JsonElement) => T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| element | jsonx.JsonElement | 是 | json element  |
+| element | jsonx.JsonElement | 是 | json element |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | deserialization result  |
+| T | deserialization result |
 

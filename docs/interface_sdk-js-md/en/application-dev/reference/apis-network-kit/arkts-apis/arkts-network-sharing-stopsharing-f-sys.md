@@ -1,5 +1,11 @@
 # stopSharing (System API)
 
+## Modules to Import
+
+```TypeScript
+import { sharing } from 'kits/@kit.NetworkKit';
+```
+
 ## stopSharing
 
 ```TypeScript
@@ -24,25 +30,25 @@ Stop network sharing for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Enumeration of shareable interface types. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of startSharing. |
+| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Enumeration of shareable interface types. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of startSharing. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
-| [2202004](../errorcode-net-sharing.md#2202004-shared-iface-unavailable) | Try to share an unavailable iface. |
-| [2202005](../errorcode-net-sharing.md#2202005-wifi-sharing-failure) | WiFi sharing failed. |
-| [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) | Bluetooth sharing failed. |
-| [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
+| 2200001 | Invalid parameter value. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Failed to connect to the service. |
+| 2202005 | WiFi sharing failed. |
+| 2202004 | Try to share an unavailable iface. |
+| 2202006 | Bluetooth sharing failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2202011 | Cannot get network sharing configuration. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';
@@ -79,7 +85,7 @@ Stop network sharing for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Enumeration of shareable interface types. |
+| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Enumeration of shareable interface types. |
 
 **Return value:**
 
@@ -91,18 +97,18 @@ Stop network sharing for given type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
-| [2202004](../errorcode-net-sharing.md#2202004-shared-iface-unavailable) | Try to share an unavailable iface. |
-| [2202005](../errorcode-net-sharing.md#2202005-wifi-sharing-failure) | WiFi sharing failed. |
-| [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) | Bluetooth sharing failed. |
-| [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
+| 2200001 | Invalid parameter value. |
+| 401 | Parameter error. |
+| 2200003 | System internal error. |
+| 2200002 | Failed to connect to the service. |
+| 2202005 | WiFi sharing failed. |
+| 2202004 | Try to share an unavailable iface. |
+| 2202006 | Bluetooth sharing failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 2202011 | Cannot get network sharing configuration. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';

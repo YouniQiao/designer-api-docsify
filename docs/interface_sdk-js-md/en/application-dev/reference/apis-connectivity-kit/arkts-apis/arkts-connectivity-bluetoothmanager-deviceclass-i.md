@@ -14,6 +14,12 @@ Describes the class of a bluetooth device.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## classOfDevice
 
 ```TypeScript
@@ -44,7 +50,7 @@ majorClass: MajorClass
 
 Major classes of Bluetooth devices.
 
-**Type:** MajorClass
+**Type:** [MajorClass](arkts-connectivity-bluetoothmanager-majorclass-e.md)
 
 **Since:** 9
 
@@ -66,7 +72,7 @@ majorMinorClass: MajorMinorClass
 
 Major and minor classes of Bluetooth devices.
 
-**Type:** MajorMinorClass
+**Type:** [MajorMinorClass](arkts-connectivity-bluetooth-majorminorclass-e.md)
 
 **Since:** 9
 

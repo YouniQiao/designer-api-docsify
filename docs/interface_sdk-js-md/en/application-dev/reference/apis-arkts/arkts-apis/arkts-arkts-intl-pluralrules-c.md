@@ -33,7 +33,7 @@ Creates a new PluralRules.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| FixedArray&lt;string&gt; | No | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [PluralRulesOptions](arkts-arkts-intl-pluralrulesoptions-i.md) | No | the options. |
 
 ## resolvedOptions
 
@@ -57,7 +57,7 @@ Returns resolved options.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the resolved options. |
+| [ResolvedPluralRulesOptions](arkts-arkts-intl-resolvedpluralrulesoptions-i.md) | the resolved options. |
 
 ## select
 
@@ -87,7 +87,7 @@ Selects a plural rule category.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the plural rule. |
+| [LDMLPluralRule](arkts-arkts-intl-ldmlpluralrule-t.md) | the plural rule. |
 
 ## supportedLocalesOf
 
@@ -113,7 +113,7 @@ Returns supported locales.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| FixedArray&lt;string&gt; \| Array&lt;string&gt; | Yes | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| PluralRulesOptions | No | the options. |
+| options | [SupportedLocalesOfOptions](arkts-arkts-intl-supportedlocalesofoptions-i.md) \| PluralRulesOptions | No | the options. |
 
 **Return value:**
 

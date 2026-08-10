@@ -12,6 +12,12 @@ Indicates the panel config
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { verticalPanelManager } from 'kits/@kit.AbilityKit';
+```
+
 ## sourceAppInfo
 
 ```TypeScript
@@ -20,15 +26,14 @@ sourceAppInfo: Record<string, string>
 
 Indicates the info about source app
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**NOTE**  
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_1. The values of the following keys are assigned by the system. Manual settings do not take effect,since the system automatically changes the values to the actual values during data transfer.  
--SOURCE\_APP\_BUNDLE\_NAME: bundle name of the caller. The value is a string.  
--SOURCE\_APP\_MODULE\_NAME: module name of the caller. The value is a string.  
--SOURCE\_APP\_ABILITY\_NAME: ability name of the caller. The value is a string.  
--SOURCE\_APP\_WINDOW\_ID: the window ID of the caller. The value is a string.  
--SOURCE\_APP\_SCREEN\_MODE: the screen mode of the split screen. The value is a string. The value is "1".
+&lt;p&gt;**NOTE：**&lt;br&gt;1. The values of the following keys are assigned by the system. Manual settings do not take effect,since the system automatically changes the values to the actual values during data transfer.
+-SOURCE_APP_BUNDLE_NAME: bundle name of the caller. The value is a string.
+-SOURCE_APP_MODULE_NAME: module name of the caller. The value is a string.
+-SOURCE_APP_ABILITY_NAME: ability name of the caller. The value is a string.
+-SOURCE_APP_WINDOW_ID: the window ID of the caller. The value is a string.
+-SOURCE_APP_SCREEN_MODE: the screen mode of the split screen. The value is a string. The value is "1".
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 20
 
@@ -50,7 +55,7 @@ type: VerticalType
 
 The type of vertical domain
 
-**Type:** VerticalType
+**Type:** [VerticalType](arkts-ability-verticalpanelmanager-verticaltype-e-sys.md)
 
 **Since:** 20
 

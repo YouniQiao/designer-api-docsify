@@ -1,5 +1,11 @@
 # getRemoteAbilityInfos (System API)
 
+## Modules to Import
+
+```TypeScript
+import { distributedBundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getRemoteAbilityInfos
 
 ```TypeScript
@@ -7,7 +13,7 @@ function getRemoteAbilityInfos(elementNames: Array<ElementName>,
     callback: AsyncCallback<Array<RemoteAbilityInfo>>): void
 ```
 
-Obtains the information about remote abilities that match the given element names. This API uses an asynchronous callback to return the result.
+根据给定的ElementName获取有关远程设备AbilityInfos信息，使用callback异步回调。
 
 **Since:** 8
 
@@ -29,8 +35,8 @@ Obtains the information about remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;ElementName&gt; | Yes | ElementName** array, whose maximum length is 10. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | Callback used to return an array of the remote ability information. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | Yes | ElementName信息，最大数组长度为10。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | 程序启动作为入参的回调函数，返回远程基本能力信息。 |
 
 
 ## getRemoteAbilityInfos
@@ -39,7 +45,7 @@ Obtains the information about remote abilities that match the given element name
 function getRemoteAbilityInfos(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>
 ```
 
-Obtains the information about remote abilities that match the given element names. This API uses a promise to return the result.
+根据给定的ElementName获取有关远程设备AbilityInfos信息，使用Promise异步回调。
 
 **Since:** 8
 
@@ -61,11 +67,11 @@ Obtains the information about remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;ElementName&gt; | Yes | ElementName** array, whose maximum length is 10. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | Yes | ElementName信息，最大数组长度为10。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Promise used to return an array of the remote ability information. |
+| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt;&gt; | Promise形式返回远程基本能力信息。 |
 

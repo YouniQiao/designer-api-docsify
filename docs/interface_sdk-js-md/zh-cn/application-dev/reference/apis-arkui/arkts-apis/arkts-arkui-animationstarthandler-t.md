@@ -20,7 +20,7 @@ export type AnimationStartHandler = (index: int, targetIndex: int, event: Swiper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 当前显示元素的索引，动画开始前的index值（不是最终结束动画的index值）。  |
-| targetIndex | int | 是 | 当前显示元素的索引，动画开始前的index值（不是最终结束动画的index值）。  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 动画相关信息，包括主轴方向上当前显示元素和目标元素相对ArcSwiper起始位置的位移，以及离手速度。  |
+| index | int | 是 | 当前显示元素的索引，动画开始前的index值（不是最终结束动画的index值）。 |
+| targetIndex | int | 是 | 当前显示元素的索引，动画开始前的index值（不是最终结束动画的index值）。 |
+| event | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | 是 | 动画相关信息，包括主轴方向上当前显示元素和目标元素相对ArcSwiper起始位置的位移，以及离手速度。 |
 

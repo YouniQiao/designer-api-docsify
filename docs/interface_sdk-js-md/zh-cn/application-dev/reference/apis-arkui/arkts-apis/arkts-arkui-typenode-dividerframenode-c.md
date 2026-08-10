@@ -34,5 +34,5 @@ abstract initialize(): DividerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md) |  |
 

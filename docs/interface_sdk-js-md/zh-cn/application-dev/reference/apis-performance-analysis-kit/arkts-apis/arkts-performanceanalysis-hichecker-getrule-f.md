@@ -1,5 +1,11 @@
 # getRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getRule
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getRule() : bigint
 | --- | --- |
 | bigint | ��ǰϵͳ�����ӵĹ��� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 添加一条规则

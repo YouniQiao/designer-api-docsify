@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## cpuLevel
 
 ```TypeScript
@@ -20,7 +26,7 @@ cpuLevel?: EfficiencyResourcesCpuLevel
 
 指定CPU级别，能效资源类型resourceTypes为CPU时该参数用于指定CPU资源大小，系统会在负载空闲时间（例如灭屏场景）分配指定的CPU资源给应用。
 
-**类型：** EfficiencyResourcesCpuLevel
+**类型：** [EfficiencyResourcesCpuLevel](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcescpulevel-e-sys.md)
 
 **起始版本：** 23
 
@@ -131,7 +137,7 @@ resourceTypes: int
 
 申请的资源类型。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -151,7 +157,7 @@ timeOut: int
 
 资源使用时间，单位：ms。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

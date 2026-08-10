@@ -28,35 +28,13 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## getCustomErrorCode
-
-```TypeScript
-getCustomErrorCode(): number
-```
-
-Gets the custom error code of the Web resource.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-<!--Device-WebResourceError-getCustomErrorCode(): number--><!--Device-WebResourceError-getCustomErrorCode(): number-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | Return the custom error code of the Web resource. |
-
 ## getErrorCode
 
 ```TypeScript
 getErrorCode(): number
 ```
 
-Gets the code of the Web resource error.
+获取加载资源的错误码。
 
 **Since:** 8
 
@@ -72,7 +50,7 @@ Gets the code of the Web resource error.
 
 | Type | Description |
 | --- | --- |
-| number | Return the code of the Web resource error. |
+| number | 返回加载资源的错误码。 |
 
 ## getErrorInfo
 
@@ -80,7 +58,7 @@ Gets the code of the Web resource error.
 getErrorInfo(): string
 ```
 
-Gets the info of the Web resource error.
+获取加载资源的错误信息。
 
 **Since:** 8
 
@@ -96,5 +74,5 @@ Gets the info of the Web resource error.
 
 | Type | Description |
 | --- | --- |
-| string | Return the info of the Web resource error. |
+| string | 返回加载资源的错误信息。 |
 

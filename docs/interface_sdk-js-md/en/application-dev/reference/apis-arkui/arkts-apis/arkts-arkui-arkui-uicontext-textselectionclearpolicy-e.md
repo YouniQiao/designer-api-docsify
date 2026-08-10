@@ -1,6 +1,6 @@
 # TextSelectionClearPolicy
 
-Enum of TextSelectionClearPolicy
+TextSelectionClearPolicy的枚举
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enum of TextSelectionClearPolicy
 KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 0
 ```
 
-Keep the selected text when touch outside of text component.
+在文本组件之外单击时，保留选定文本。
 
 **Since:** 26.0.0
 

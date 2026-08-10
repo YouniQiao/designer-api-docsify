@@ -1,5 +1,11 @@
 # participate
 
+## 导入模块
+
+```TypeScript
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## participate
 
 ```TypeScript
@@ -22,7 +28,7 @@ function participate(config: HiRetrievalConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 开发者指定的应用灰度活动配置。用于设置此设备参与应用灰度活动时的用户类型、设备类型和设备型号信息，服务器将记录这些配置作为算法参数，用于圈选设备。 不同参数值会影响设备参与应用灰度活动的概率和采集的日志类型。 |
+| config | [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) | 是 | 开发者指定的应用灰度活动配置。用于设置此设备参与应用灰度活动时的用户类型、设备类型和设备型号信息，服务器将记录这些配置作为算法参数，用于圈选设备。 不同参数值会影响设备参与应用灰度活动的概率和采集的日志类型。 |
 
 **错误码：**
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -128,9 +134,9 @@ queryEntityParam: insightIntent.QueryEntityParam
 userId?: int
 ```
 
-目标用户ID。如果调用方应用的用户ID与目标用户ID不一致，则需要申请权限：oos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS。取值范围为全体整数。
+目标用户ID。如果调用方应用的用户ID与目标用户ID不一致，则需要申请权限：oos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

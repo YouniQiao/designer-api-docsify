@@ -1,6 +1,6 @@
 # UnitUsage
 
-Enumerates Scenarios for MeasureFormat.
+单位格式化使用场景的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates Scenarios for MeasureFormat.
 AREA_LAND_AGRICULT = 1
 ```
 
-Area land agricult scenario.
+农业土地面积。
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ Area land agricult scenario.
 AREA_LAND_COMMERCL = 2
 ```
 
-Area land commercl scenario.
+商业土地面积。
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ Area land commercl scenario.
 AREA_LAND_RESIDNTL = 3
 ```
 
-Area land residntl scenario.
+居住土地面积。
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ Area land residntl scenario.
 LENGTH_PERSON = 4
 ```
 
-Length person scenario.
+身高。
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ Length person scenario.
 LENGTH_PERSON_SMALL = 5
 ```
 
-Length person small scenario.
+高精度的身高。
 
 **Since:** 23
 
@@ -116,7 +116,7 @@ Length person small scenario.
 LENGTH_RAINFALL = 6
 ```
 
-Length rainfall scenario.
+降雨量。
 
 **Since:** 23
 
@@ -136,7 +136,7 @@ Length rainfall scenario.
 LENGTH_ROAD = 7
 ```
 
-Length road scenario.
+道路长度。
 
 **Since:** 23
 
@@ -156,7 +156,7 @@ Length road scenario.
 LENGTH_ROAD_SMALL = 8
 ```
 
-Length road small scenario.
+高精度的道路长度。
 
 **Since:** 23
 
@@ -176,7 +176,7 @@ Length road small scenario.
 LENGTH_SNOWFALL = 9
 ```
 
-Length snowfall scenario.
+降雪量。
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ Length snowfall scenario.
 LENGTH_VEHICLE = 10
 ```
 
-Length vehicle scenario.
+交通工具长度。
 
 **Since:** 23
 
@@ -216,7 +216,7 @@ Length vehicle scenario.
 LENGTH_VISIBLTY = 11
 ```
 
-Length visiblty scenario.
+能见度。
 
 **Since:** 23
 
@@ -236,7 +236,7 @@ Length visiblty scenario.
 LENGTH_VISIBLTY_SMALL = 12
 ```
 
-Length visiblty small scenario.
+高精度的能见度。
 
 **Since:** 23
 
@@ -256,7 +256,7 @@ Length visiblty small scenario.
 LENGTH_PERSON_INFORMAL = 13
 ```
 
-Length person informal scenario.
+口语化身高。
 
 **Since:** 23
 
@@ -276,7 +276,7 @@ Length person informal scenario.
 LENGTH_PERSON_SMALL_INFORMAL = 14
 ```
 
-Length person small informal scenario.
+高精度的口语化身高。
 
 **Since:** 23
 
@@ -296,7 +296,7 @@ Length person small informal scenario.
 LENGTH_ROAD_INFORMAL = 15
 ```
 
-Length road informal scenario.
+口语化道路长度。
 
 **Since:** 23
 
@@ -316,7 +316,7 @@ Length road informal scenario.
 SPEED_ROAD_TRAVEL = 16
 ```
 
-Speed road travel scenario.
+车速。
 
 **Since:** 23
 
@@ -336,7 +336,7 @@ Speed road travel scenario.
 SPEED_WIND = 17
 ```
 
-Speed wind scenario.
+风速。
 
 **Since:** 23
 
@@ -356,7 +356,7 @@ Speed wind scenario.
 TEMPERATURE_PERSON = 18
 ```
 
-Temperature person scenario.
+体温。
 
 **Since:** 23
 
@@ -376,7 +376,7 @@ Temperature person scenario.
 TEMPERATURE_WEATHER = 19
 ```
 
-Temperature weather scenario.
+气温。
 
 **Since:** 23
 
@@ -396,7 +396,7 @@ Temperature weather scenario.
 VOLUME_VEHICLE_FUEL = 20
 ```
 
-Volume vehicle fuel scenario.
+交通工具燃料容积。
 
 **Since:** 23
 
@@ -416,7 +416,7 @@ Volume vehicle fuel scenario.
 ELAPSED_TIME_SECOND = 21
 ```
 
-Elapsed time second scenario.
+过去的时间。
 
 **Since:** 23
 
@@ -436,7 +436,7 @@ Elapsed time second scenario.
 SIZE_FILE_BYTE = 22
 ```
 
-Size file byte scenario.
+文件大小。
 
 **Since:** 23
 
@@ -456,7 +456,7 @@ Size file byte scenario.
 SIZE_SHORTFILE_BYTE = 23
 ```
 
-Size shortfile byte scenario.
+简短的文件大小。
 
 **Since:** 23
 

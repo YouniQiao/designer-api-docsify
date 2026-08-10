@@ -1,6 +1,6 @@
 # RotationChangeType
 
-Enumerates the types of window rotation events.
+窗口旋转事件类型。
 
 **Since:** 19
 
@@ -16,7 +16,7 @@ Enumerates the types of window rotation events.
 WINDOW_WILL_ROTATE = 0
 ```
 
-The window is about to rotate.
+窗口即将旋转。
 
 **Since:** 19
 
@@ -34,7 +34,7 @@ The window is about to rotate.
 WINDOW_DID_ROTATE = 1
 ```
 
-The window has finished rotating.
+窗口旋转结束。
 
 **Since:** 19
 

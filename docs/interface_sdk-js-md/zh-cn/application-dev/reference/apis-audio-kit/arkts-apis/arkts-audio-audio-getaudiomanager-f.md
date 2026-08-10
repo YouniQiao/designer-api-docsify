@@ -1,5 +1,11 @@
 # getAudioManager
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## getAudioManager
 
 ```TypeScript
@@ -22,9 +28,9 @@ function getAudioManager(): AudioManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 音频管理器对象。 |
+| [AudioManager](arkts-audio-audio-audiomanager-i.md) | 音频管理器对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';

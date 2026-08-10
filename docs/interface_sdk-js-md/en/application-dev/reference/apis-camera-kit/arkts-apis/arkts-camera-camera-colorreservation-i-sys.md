@@ -1,6 +1,6 @@
 # ColorReservation (System API)
 
-ColorReservation extends [ColorReservationQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_Provides API for obtaining and setting a color reservation type.
+ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md)Provides API for obtaining and setting a color reservation type.
 
 **Inheritance/Implementation:** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md)
 
@@ -13,6 +13,12 @@ ColorReservation extends [ColorReservationQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getColorReservation
 
@@ -36,16 +42,16 @@ Obtains the color reservation type in use.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Color reservation type. |
+| [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | Color reservation type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,7 +76,7 @@ setColorReservation(type: ColorReservationType): void
 ```
 
 Sets a color reservation type. Before the setting, call  
-[getSupportedColorReservationTypes]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the supported color reservation types.
+[getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes) to obtain the supported color reservation types.
 
 **Since:** 15
 
@@ -86,19 +92,19 @@ Sets a color reservation type. Before the setting, call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color reservation type, which is obtained by calling [getSupportedColorReservationTypes]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | Yes | Color reservation type, which is obtained by calling [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

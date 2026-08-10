@@ -1,12 +1,18 @@
 # getAllUninstalledBundleResourceInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAllUninstalledBundleResourceInfo
 
 ```TypeScript
 function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>
 ```
 
-Obtains the bundle resource information of all uninstalled applications that have retained data based on the given resource flags. This API uses a promise to return the result.
+根据给定的resourceFlags获取所有已卸载且保留数据的应用的BundleResourceInfo。使用Promise异步回调。
 
 **Since:** 21
 
@@ -24,22 +30,22 @@ Obtains the bundle resource information of all uninstalled applications that hav
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of the resource information to obtain. For details, see [ResourceFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的BundleResourceInfo所包含的信息，取值请参考 [ResourceFlag枚举值](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise used to return the BundleResourceInfo array. |
+| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise对象，返回BundleResourceInfo数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';

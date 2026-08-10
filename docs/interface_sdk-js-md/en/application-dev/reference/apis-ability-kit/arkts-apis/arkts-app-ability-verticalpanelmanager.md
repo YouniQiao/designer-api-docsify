@@ -2,6 +2,12 @@
 
 Defines a vertical domain panel manager.
 
+## Modules to Import
+
+```TypeScript
+import { verticalPanelManager } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Namespaces

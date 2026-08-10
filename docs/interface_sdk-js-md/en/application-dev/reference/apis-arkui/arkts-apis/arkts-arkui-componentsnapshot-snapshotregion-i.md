@@ -10,6 +10,12 @@ Defines the target region information for snapshot taking.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
+
 ## bottom
 
 ```TypeScript

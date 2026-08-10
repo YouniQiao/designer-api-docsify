@@ -1,12 +1,18 @@
 # notifyWatermarkComplete
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## notifyWatermarkComplete
 
 ```TypeScript
 function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): void
 ```
 
-Notify watermark complete.
+通知水印处理完成。
 
 **Since:** 24
 
@@ -24,12 +30,38 @@ Notify watermark complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | Indicates the job ID. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Print job ID in preview. |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the result. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Watermark processing results. |
+| jobId | string | Yes | 表示打印任务ID。 |
+| result | [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md) | Yes | 表示水印处理结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
+
+## Examples
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
+    console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
+
+    try {
+        // Notify the system that the watermark processing is successful.
+        print.notifyWatermarkComplete(jobId, print.WatermarkHandleResult.WATERMARK_HANDLE_SUCCESS);
+        console.info('notifyWatermarkComplete success');
+    } catch (error) {
+        console.error('notifyWatermarkComplete error: ' + JSON.stringify(error));
+    }
+}
+
+try {
+    print.registerWatermarkCallback(watermarkCallback);
+    console.info('registerWatermarkCallback success');
+} catch (error) {
+    console.error('registerWatermarkCallback error: ' + JSON.stringify(error));
+}
+```
 

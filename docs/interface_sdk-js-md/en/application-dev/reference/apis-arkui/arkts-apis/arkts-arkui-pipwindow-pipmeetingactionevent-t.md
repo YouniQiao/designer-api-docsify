@@ -4,7 +4,7 @@
 type PiPMeetingActionEvent = 'hangUp' | 'voiceStateChanged' | 'videoStateChanged' | 'micStateChanged'
 ```
 
-Defines the PiP action event in a video meeting.
+视频会议控制事件类型。
 
 **Since:** 11
 
@@ -18,8 +18,8 @@ Defines the PiP action event in a video meeting.
 
 | Type | Description |
 | --- | --- |
-| 'hangUp' | The video meeting is hung up. |
-| 'voiceStateChanged' | The speaker is muted or unmuted. |
-| 'videoStateChanged' | The camera is turned on or off. |
-| 'micStateChanged' | The microphone is muted or unmuted. [since 12] |
+| 'hangUp' | 挂断视频会议。 |
+| 'voiceStateChanged' | 静音或解除静音。 |
+| 'videoStateChanged' | 打开或关闭摄像头。 |
+| 'micStateChanged' | 打开或关闭麦克风。 [since 12] |
 

@@ -1,5 +1,11 @@
 # createSubWindowAndBindParent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## createSubWindowAndBindParent
 
 ```TypeScript
@@ -7,7 +13,11 @@ function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseCont
     parentWindowEventListener: WindowEventListener): Promise<Window>
 ```
 
-Create a subwindow with a specific name and bind parent.The parent window only supports main window.The subwindow follows the parent window to show/hide, but does not follow the parent window to destroy.The subwindow listens to the parent window lifecycle changes through the callback function.
+创建一个子窗，并绑定父窗。使用Promise异步回调。
+
+子窗跟随父窗显示/隐藏，但并不跟随父窗销毁，子窗通过回调函数监听父窗生命周期变化。
+
+建议在父窗销毁后主动销毁创建的子窗。
 
 **Since:** 26.0.0
 
@@ -26,28 +36,28 @@ Create a subwindow with a specific name and bind parent.The parent window only s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates window name. |
-| parentId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates parent window id. The window id is a non-negative number and exists. |
-| ctx | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context on which the window depends. |
-| parentWindowEventListener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the event listener of parent window. |
+| parentId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates parent window id. The window id is a non-negative number and exists. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Indicates the context on which the window depends |
+| parentWindowEventListener | [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | Yes | Indicates the event listener of parent window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | The interface for creating a window returns a promise. |
+| Promise&lt;Window&gt; | Promise对象。返回当前创建的子窗口对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. This cannot work correctly due to limited device capabilities. |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Internal task error. 2. The number of windows has reached the limit. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: 1. The parent window does not exist or has been destroyed. 2. Invalid window type. Only main windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. This cannot work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. Internal task error. 2. The number of windows has reached the limit. |
+| 1300001 | Repeated operation. Possible cause: The window has been created and cannot be created again. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1300009 | The parent window is invalid. Possible cause: 1. The parent window does not exist or has been destroyed. 2. Invalid window type. Only main windows are supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';

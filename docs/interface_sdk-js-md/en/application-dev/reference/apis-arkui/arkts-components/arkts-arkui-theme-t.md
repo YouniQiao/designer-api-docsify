@@ -4,7 +4,7 @@
 declare type Theme = import('../api/@ohos.arkui.theme').Theme
 ```
 
-Theme.
+主题。
 
 **Since:** 12
 

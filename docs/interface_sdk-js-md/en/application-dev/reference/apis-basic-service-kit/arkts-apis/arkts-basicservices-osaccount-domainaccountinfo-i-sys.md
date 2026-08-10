@@ -1,6 +1,6 @@
 # DomainAccountInfo
 
-Represents the domain account information.
+表示域账号信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Represents the domain account information.
 
 **System capability:** SystemCapability.Account.OsAccount
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountId
 
 ```TypeScript
 accountId?: string
 ```
 
-Domain account ID.
+域账号标识。
 
-This is a system API and is **undefined** by default.
+此接口为系统接口，默认为undefined。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ This is a system API and is **undefined** by default.
 isAuthenticated?: boolean
 ```
 
-Whether the domain account has been authenticated. The value **true** means that the specified domain account has been authenticated; the value **false** means the opposite.
+指示域账号是否已认证。true表示指定的域账号已认证；false表示指定的域账号未认证。
 
-This is a system API. The default value is **false**.
+此接口为系统接口，默认为false。
 
 **Type:** boolean
 

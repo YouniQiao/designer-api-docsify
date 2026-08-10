@@ -12,6 +12,12 @@ Options for executing a command.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cliManager } from 'kits/@kit.AbilityKit';
+```
+
 ## background
 
 ```TypeScript
@@ -44,7 +50,7 @@ callback?: ToolEventCallback
 
 Indicates the event callback for receiving tool events. If provided, auto-subscribe is performed.
 
-**Type:** ToolEventCallback
+**Type:** [ToolEventCallback](arkts-ability-tooleventcallback-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -66,7 +72,7 @@ env?: Record<string, string>
 
 Indicates the environment variables for the command.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 26.0.0
 

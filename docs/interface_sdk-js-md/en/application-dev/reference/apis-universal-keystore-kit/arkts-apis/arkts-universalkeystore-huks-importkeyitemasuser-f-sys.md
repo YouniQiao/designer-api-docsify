@@ -1,12 +1,18 @@
 # importKeyItemAsUser (System API)
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## importKeyItemAsUser
 
 ```TypeScript
 function importKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>
 ```
 
-Imports a plaintext key for the specified user. This API uses a promise to return the result.
+指定用户身份导入明文密钥，使用Promise方式异步返回结果。
 
 **Since:** 12
 
@@ -24,38 +30,38 @@ Imports a plaintext key for the specified user. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | User ID. |
-| keyAlias | string | Yes | Key alias. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
-| huksOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for importing the key. The algorithm, key purpose, and key length are mandatory. |
+| userId | number | Yes | 用户ID。 |
+| keyAlias | string | Yes | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于导入时所需TAG和需要导入的密钥。其中密钥使用的算法、密钥用途、密钥长度为必选参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application permission is not sufficient, which may be caused by lack of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | non-system applications are not allowed to use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 801 | api is not supported |
+| 12000017 | The key with the same alias already exists<br>**Applicable version:** 20 and later |
+| 201 | the application permission is not sufficient, which may be caused by lack of &lt;br&gt;cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
+| 202 | non-system applications are not allowed to use system APIs. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 12000006 | error occurred in crypto engine |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000003 | algorithm param is invalid |
+| 12000002 | algorithm param is missing |
+| 12000001 | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
+| 12000015 | Failed to obtain the security information via UserIAM |
+| 12000014 | memory is insufficient |
+| 12000013 | queried credential does not exist |
+| 12000012 | Device environment or input parameter abnormal |
+| 12000011 | queried entity does not exist |
 
-**Example**
+## Examples
 
 Prerequisites: see Example of [generateKeyItemAsUser](#huksgeneratekeyitemasuser).
 

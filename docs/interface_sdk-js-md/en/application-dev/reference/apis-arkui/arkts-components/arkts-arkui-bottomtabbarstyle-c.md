@@ -1,6 +1,6 @@
 # BottomTabBarStyle
 
-Implements the bottom and side tab style.
+底部页签和侧边页签样式。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Implements the bottom and side tab style.
 constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)
 ```
 
-A constructor used to create a **BottomTabBarStyle** instance.
+BottomTabBarStyle的构造函数。
 
 **Since:** 9
 
@@ -32,8 +32,8 @@ A constructor used to create a **BottomTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| TabBarSymbol | Yes | Image for the tab.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
-| text | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text for the tab. |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**Since:** 9 - 11 |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
 
 ## iconStyle
 
@@ -41,7 +41,7 @@ A constructor used to create a **BottomTabBarStyle** instance.
 iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 ```
 
-Sets the style of the label icon on the bottom tab.
+设置底部页签的图标样式。
 
 **Since:** 12
 
@@ -59,13 +59,13 @@ Sets the style of the label icon on the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Style of the label icon on the bottom tab. |
+| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Yes | 底部页签的label图标的样式，用于设置图标的选中态和未选中态颜色。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## id
 
@@ -73,7 +73,7 @@ Sets the style of the label icon on the bottom tab.
 id(value: string): BottomTabBarStyle
 ```
 
-Sets the ID of the bottom tab.
+底部页签的id。
 
 **Since:** 11
 
@@ -91,13 +91,13 @@ Sets the ID of the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | [ID]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the bottom tab. |
+| value | string | Yes | 底部页签的id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## labelStyle
 
@@ -105,7 +105,7 @@ Sets the ID of the bottom tab.
 labelStyle(value: LabelStyle): BottomTabBarStyle
 ```
 
-Sets the style of the label text and font for the bottom tab.
+设置底部页签的label文本和字体的样式。
 
 **Since:** 10
 
@@ -123,13 +123,13 @@ Sets the style of the label text and font for the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Style of the label text and font for the bottom tab. |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | 底部页签的label文本和字体的样式，用于设置文字的颜色、大小、字体、行数等属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## layoutMode
 
@@ -137,7 +137,7 @@ Sets the style of the label text and font for the bottom tab.
 layoutMode(value: LayoutMode): BottomTabBarStyle
 ```
 
-Sets the layout mode of the images and texts on the bottom tab.
+设置底部页签的图片、文字排布的方式。
 
 **Since:** 10
 
@@ -155,13 +155,13 @@ Sets the layout mode of the images and texts on the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Layout mode of the images and text on the bottom tab.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **LayoutMode.VERTICAL |
+| value | [LayoutMode](../arkts-apis/arkts-arkui-tabcontent-layoutmode-e.md) | Yes | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。&lt;br/&gt;默认值：LayoutMode.VERTICAL |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## of
 
@@ -169,7 +169,7 @@ Sets the layout mode of the images and texts on the bottom tab.
 static of(icon: ResourceStr | TabBarSymbol, text: ResourceStr): BottomTabBarStyle
 ```
 
-Static constructor used to create a **BottomTabBarStyle** instance.
+BottomTabBarStyle的静态构造函数。
 
 **Since:** 10
 
@@ -187,14 +187,14 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| TabBarSymbol | Yes | Image for the tab.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
-| text | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text for the tab. |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**Since:** 10 - 11 |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BottomTabBarStyle** object created. |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回创建的BottomTabBarStyle对象，用于设置底部页签和侧边页签样式。 |
 
 ## padding
 
@@ -202,7 +202,7 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 ```
 
-Sets the padding of the bottom tab. It cannot be set in percentage. When the parameter is of the Dimension type,the value applies to all sides.
+设置底部页签的内边距属性（不支持百分比设置）。使用Dimension时，四个方向内边距同时生效。
 
 **Since:** 10
 
@@ -220,13 +220,13 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Dimension \| LocalizedPadding | Yes | Padding of the bottom tab.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **{left:4.0vp,right:4.0vp,top:0.0vp,bottom:0.0vp}**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If of the LocalizedPadding type, this attribute supports the mirroring capability.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Dimension \| LocalizedPadding | Yes | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、 优化视觉效果时传入自定义值。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}&lt;br/&gt;使用LocalizedPadding时，支持镜像能力。&lt;br /&gt;默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),&lt;br/&gt;top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**Since:** 10 - 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## symmetricExtensible
 
@@ -234,7 +234,7 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 symmetricExtensible(value: boolean): BottomTabBarStyle
 ```
 
-Sets whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. This parameter is valid only between bottom tabs in fixed horizontal mode.
+设置底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值，仅fixed水平模式下在底部页签之间有效。
 
 **Since:** 10
 
@@ -252,13 +252,13 @@ Sets whether the images and text on the bottom tab can be symmetrically extended
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**, indicating that the images and text on the bottom tab cannot be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. |
+| value | boolean | Yes | 底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值。 传入true启用对称借用功能（当需要优化页签布局、充分利用空间时选择），传入false禁用对称借用功能（当需要保持页签固定布局、避免页签内容位置变化时选择）。&lt;br/&gt;默认值：false。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 
 ## verticalAlign
 
@@ -266,7 +266,7 @@ Sets whether the images and text on the bottom tab can be symmetrically extended
 verticalAlign(value: VerticalAlign): BottomTabBarStyle
 ```
 
-Sets the vertical alignment mode of the images and text on the bottom tab.
+设置底部页签的图片、文字在垂直方向上的对齐格式。
 
 **Since:** 10
 
@@ -284,11 +284,11 @@ Sets the vertical alignment mode of the images and text on the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Vertical alignment mode of the images and text on the bottom tab.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **VerticalAlign.Center |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-enums-verticalalign-e.md) | Yes | 底部页签的图片、文字在垂直方向上的对齐格式。&lt;br/&gt;默认值：VerticalAlign.Center |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 

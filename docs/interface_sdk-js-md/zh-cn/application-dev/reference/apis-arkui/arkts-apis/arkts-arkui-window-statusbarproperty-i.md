@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## contentColor
 
 ```TypeScript
 contentColor: string
 ```
 
-状态栏文字颜色，固定为ARGB格式，如：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+状态栏文字颜色，固定为ARGB格式，如：`#E5FFFFFF`。
 
 **类型：** string
 

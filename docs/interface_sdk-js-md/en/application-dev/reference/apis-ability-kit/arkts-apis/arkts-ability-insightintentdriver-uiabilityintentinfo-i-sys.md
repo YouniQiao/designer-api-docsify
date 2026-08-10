@@ -1,7 +1,6 @@
 # UIAbilityIntentInfo (System API)
 
-Describes the information of the UIAbility bound to the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的UIAbility组件信息。
 
 **Since:** 23
 
@@ -13,13 +12,19 @@ Describes the information of the UIAbility bound to the
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## abilityName
 
 ```TypeScript
 readonly abilityName: string
 ```
 
-Name of the UIAbility bound to the intent.
+意图绑定的UIAbility组件名称。
 
 **Type:** string
 
@@ -41,9 +46,9 @@ Name of the UIAbility bound to the intent.
 readonly executeMode: ExecuteModeForConfiguration[]
 ```
 
-Intent execution mode.
+意图调用执行模式。
 
-**Type:** ExecuteModeForConfiguration[]
+**Type:** [ExecuteModeForConfiguration](arkts-ability-insightintentdriver-executemodeforconfiguration-e-sys.md)[]
 
 **Since:** 23
 

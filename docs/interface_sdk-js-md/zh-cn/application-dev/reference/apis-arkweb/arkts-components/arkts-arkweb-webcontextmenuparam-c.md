@@ -1,6 +1,6 @@
 # WebContextMenuParam
 
-定义上下文菜单参数，关联\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法。
+定义上下文菜单参数，关联{@link WebContextMenuParam}方法。
 
 **起始版本：** 9
 
@@ -72,7 +72,7 @@ getContextMenuMediaType(): ContextMenuDataMediaType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回上下文节点的类型。 |
+| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | 返回上下文节点的类型。 |
 
 ## getEditStateFlags
 
@@ -80,7 +80,7 @@ getContextMenuMediaType(): ContextMenuDataMediaType
 getEditStateFlags(): number
 ```
 
-返回上下文可编辑状态标记 \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+返回上下文可编辑状态标记 {@link ContextMenuEditStateFlags}。
 
 **起始版本：** 9
 
@@ -120,7 +120,7 @@ getInputFieldType(): ContextMenuInputFieldType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 输入框上触发菜单时返回输入框类型。 |
+| [ContextMenuInputFieldType](../arkts-apis/arkts-arkweb-web-contextmenuinputfieldtype-e.md) | 输入框上触发菜单时返回输入框类型。 |
 
 ## getLinkUrl
 
@@ -168,7 +168,7 @@ getMediaType(): ContextMenuMediaType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回上下文节点的类型。 |
+| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | 返回上下文节点的类型。 |
 
 ## getPreviewHeight
 
@@ -244,7 +244,7 @@ getSelectionText(): string
 getSourceType(): ContextMenuSourceType
 ```
 
- 返回上下文菜单的来源类型。
+* 返回上下文菜单的来源类型。
 
 **起始版本：** 9
 
@@ -260,7 +260,7 @@ getSourceType(): ContextMenuSourceType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) |  |
 
 ## getSourceUrl
 
@@ -316,7 +316,7 @@ getUnfilteredLinkUrl(): string
 isEditable(): boolean
 ```
 
- 返回当前上下文是否可编辑。
+* 返回当前上下文是否可编辑。
 
 **起始版本：** 9
 

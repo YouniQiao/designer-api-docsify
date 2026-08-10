@@ -6,7 +6,9 @@
 export declare function sendKeyEvent(event: KeyEvent): boolean
 ```
 
-Send a mock key event to the current application. This interface is only suitable for simple interaction testing within your own application and should not be used in real environment.
+发送按键事件。
+
+此接口仅用于对应用的测试。由于耗时长，不建议使用。
 
 **Since:** 23
 
@@ -22,11 +24,11 @@ Send a mock key event to the current application. This interface is only suitabl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KeyEvent to be sent. |
+| event | [KeyEvent](../arkts-components/arkts-arkui-keyevent-i.md) | Yes | 按键事件，event参数见[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md/arkts-input-multimodalinput-keyevent-keyevent-i.md)介绍。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean | 事件发送失败时返回false，其余情况返回true。 |
 

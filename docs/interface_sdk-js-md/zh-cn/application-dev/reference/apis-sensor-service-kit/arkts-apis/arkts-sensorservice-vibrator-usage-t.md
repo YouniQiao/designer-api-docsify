@@ -7,7 +7,7 @@ type Usage = 'unknown' | 'alarm' | 'ring' | 'notification' | 'communication' |
 
 振动使用场景。不同usage值对应不同的系统振动开关管控规则，开发者需根据实际业务场景选择合适的usage值。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_
+&lt;!--RP1End--&gt;
 
 **起始版本：** 9
 

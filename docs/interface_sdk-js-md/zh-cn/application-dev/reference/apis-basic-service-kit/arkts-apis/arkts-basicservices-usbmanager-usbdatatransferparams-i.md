@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## buffer
 
 ```TypeScript
@@ -36,7 +42,7 @@ callback: AsyncCallback<SubmitTransferCallback>
 
 传输完成时的回调信息。
 
-**类型：** AsyncCallback&lt;SubmitTransferCallback&gt;
+**类型：** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;SubmitTransferCallback&gt;
 
 **起始版本：** 18
 
@@ -52,9 +58,9 @@ callback: AsyncCallback<SubmitTransferCallback>
 devPipe: USBDevicePipe
 ```
 
-用于确定总线地址和设备地址，需要调用[usbManager.connectDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取。
+用于确定总线地址和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。
 
-**类型：** USBDevicePipe
+**类型：** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
 
 **起始版本：** 18
 
@@ -72,7 +78,7 @@ endpoint: int
 
 端点地址，正整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -90,7 +96,7 @@ flags: UsbTransferFlags
 
 USB传输标志。
 
-**类型：** UsbTransferFlags
+**类型：** [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
 
 **起始版本：** 18
 
@@ -108,7 +114,7 @@ isoPacketCount: int
 
 实时传输时数据包的数量，仅用于具有实时传输端点的I/O。必须是非负数，（单位：个数）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -126,7 +132,7 @@ length: int
 
 数据缓冲区的长度，必须是非负数（期望长度）。（单位：字节）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -144,7 +150,7 @@ timeout: int
 
 超时时间。（单位：毫秒）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -162,7 +168,7 @@ type: UsbEndpointTransferType
 
 传输类型。
 
-**类型：** UsbEndpointTransferType
+**类型：** [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
 
 **起始版本：** 18
 

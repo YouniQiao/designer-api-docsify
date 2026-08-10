@@ -1,6 +1,6 @@
 # Size
 
-Describes the window size, in px.
+窗口大小，单位为px。
 
 **Since:** 7
 
@@ -10,15 +10,21 @@ Describes the window size, in px.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Window height, in px. The value must be an integer.
+窗口高度，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -36,9 +42,9 @@ Window height, in px. The value must be an integer.
 width: int
 ```
 
-Window width, in px. The value must be an integer.
+窗口宽度，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 

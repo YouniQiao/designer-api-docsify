@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## authorityKeyIdentifier
 
 ```TypeScript
@@ -138,7 +144,7 @@ minPathLenConstraint?: int
 
 指定证书CA路径长度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -220,7 +226,7 @@ publicKey?: DataBlob
 
 指定证书公钥，DER编码格式。
 
-**类型：** DataBlob
+**类型：** [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **起始版本：** 11
 
@@ -360,7 +366,7 @@ x509Cert?: X509Cert
 
 指定具体的证书对象。
 
-**类型：** X509Cert
+**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
 **起始版本：** 11
 

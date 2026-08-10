@@ -1,6 +1,6 @@
 # CallbackParamV2
 
-Declare CallbackParamV2
+节点回调参数接口，用于传递节点事件回调的参数信息。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,25 @@ Declare CallbackParamV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
+
 ## childIndex
 
 ```TypeScript
 childIndex?: int
 ```
 
-Get the childIndex.
+返回子索引。
+
+取值范围：大于等于-1。
+
+默认值：-1
+
+仅在节点移动事件中有效，表示移动后的位置索引。
 
 **Type:** int
 
@@ -36,7 +48,9 @@ Get the childIndex.
 currentNodeId: int
 ```
 
-Get the currentNodeId.
+返回当前子节点id。
+
+取值范围：大于等于0。
 
 **Type:** int
 
@@ -56,7 +70,11 @@ Get the currentNodeId.
 parentNodeId?: int
 ```
 
-ID of the current parent node.
+返回当前父节点id。
+
+取值范围：大于等于-1。
+
+默认值：-1
 
 **Type:** int
 

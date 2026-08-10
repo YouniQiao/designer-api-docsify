@@ -1,5 +1,11 @@
 # setShortcutsEnabled
 
+## 导入模块
+
+```TypeScript
+import { shortcutManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setShortcutsEnabled
 
 ```TypeScript
@@ -22,7 +28,7 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shortcutsInfo | Array&lt;ShortcutInfo&gt; | 是 | 待启用或禁用的静态快捷方式。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_本接口不区分主应用和分身应用，且仅对静态快捷方式生效，所以 ShortcutInfo中的appIndex和sourceType设置不生效。 |
+| shortcutsInfo | Array&lt;ShortcutInfo&gt; | 是 | 待启用或禁用的静态快捷方式。&lt;br&gt;**说明：**&lt;br&gt;本接口不区分主应用和分身应用，且仅对静态快捷方式生效，所以 ShortcutInfo中的appIndex和sourceType设置不生效。 |
 | isEnabled | boolean | 是 | 快捷方式是否启用。true：快捷方式启用；false：快捷方式禁用。 |
 
 **返回值：**
@@ -35,13 +41,13 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
-| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is illegal. |
+| 801 | Capability not supported. |
+| 17700070 | The specified shortcut id is illegal. |
+| 201 | Permission denied. |
+| 202 | Permission denied. A non-system application is not allowed to call a system API. |
+| 17700001 | The specified bundle is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';

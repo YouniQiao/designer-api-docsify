@@ -1,6 +1,6 @@
 # CameraDevice
 
-Describes the camera device information.
+相机设备信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the camera device information.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## automotiveCameraPosition
 
 ```TypeScript
 readonly automotiveCameraPosition?: AutomotiveCameraPosition
 ```
 
-Automotive camera position attribute.
+Car设备摄像头位置。
 
-**Type:** AutomotiveCameraPosition
+**Type:** [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +44,7 @@ Automotive camera position attribute.
 readonly cameraId: string
 ```
 
-Camera ID.
+相机ID。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ Camera ID.
 readonly cameraOrientation: int
 ```
 
-Camera installation angle, which does not change as the screen rotates. The value range is [0, 360], in degrees.
+相机安装角度，不会随着屏幕旋转而改变。取值范围为[0, 360]。单位：度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -78,9 +84,9 @@ Camera installation angle, which does not change as the screen rotates. The valu
 readonly cameraPosition: CameraPosition
 ```
 
-Camera position.
+相机位置。
 
-**Type:** CameraPosition
+**Type:** [CameraPosition](arkts-camera-camera-cameraposition-e.md)
 
 **Since:** 10
 
@@ -98,9 +104,9 @@ Camera position.
 readonly cameraType: CameraType
 ```
 
-Camera type.
+相机类型。
 
-**Type:** CameraType
+**Type:** [CameraType](arkts-camera-camera-cameratype-e.md)
 
 **Since:** 10
 
@@ -118,9 +124,9 @@ Camera type.
 readonly connectionType: ConnectionType
 ```
 
-Camera connection type.
+相机连接类型。
 
-**Type:** ConnectionType
+**Type:** [ConnectionType](arkts-camera-camera-connectiontype-e.md)
 
 **Since:** 10
 
@@ -138,9 +144,9 @@ Camera connection type.
 readonly constituentCameraDevices?: Array<CameraDevice>
 ```
 
-List of physical cameras that form the logical camera.
+组成此逻辑相机的物理相机列表。
 
-**Type:** Array&lt;CameraDevice&gt;
+**Type:** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
 **Since:** 24
 
@@ -160,7 +166,7 @@ List of physical cameras that form the logical camera.
 readonly hostDeviceName: string
 ```
 
-Remote device name. If no remote device is available, an empty value is returned.
+远端设备名称。若当前无远端设备，返回为空。
 
 **Type:** string
 
@@ -180,9 +186,9 @@ Remote device name. If no remote device is available, an empty value is returned
 readonly hostDeviceType: HostDeviceType
 ```
 
-Remote device type.
+远端设备类型。
 
-**Type:** HostDeviceType
+**Type:** [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md)
 
 **Since:** 15
 
@@ -200,7 +206,7 @@ Remote device type.
 readonly isLogicalCamera?: boolean
 ```
 
-Whether a camera is a logical camera (consisting of multiple physical cameras). **true** if the camera is a logical camera, **false** otherwise.
+是否为逻辑摄像头（由多个物理相机组成）, true表示是逻辑摄像头，false表示是物理摄像头。
 
 **Type:** boolean
 
@@ -222,9 +228,9 @@ Whether a camera is a logical camera (consisting of multiple physical cameras). 
 readonly lensDistortion?: Array<double>
 ```
 
-Array of lens distortion parameters.
+镜头畸变参数数组。
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 24
 
@@ -244,9 +250,9 @@ Array of lens distortion parameters.
 readonly lensEquivalentFocalLength?: Array<int>
 ```
 
-Equivalent focal length of the camera lens.
+相机镜头等效焦距。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 24
 
@@ -264,9 +270,9 @@ Equivalent focal length of the camera lens.
 readonly lensFocalLength?: double
 ```
 
-Actual focal length of the lens.
+镜头实际焦距。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 24
 
@@ -286,9 +292,9 @@ Actual focal length of the lens.
 readonly lensIntrinsicCalibration?: Array<double>
 ```
 
-Array of lens intrinsic calibration parameters.
+镜头内参标定参数数组。
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 24
 
@@ -308,9 +314,9 @@ Array of lens intrinsic calibration parameters.
 readonly minimumFocusDistance?: double
 ```
 
-Minimum focus distance of the camera.
+相机最小对焦距离。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 24
 
@@ -330,9 +336,9 @@ Minimum focus distance of the camera.
 readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 ```
 
-Arrangement mode of the sensor color filter.
+传感器颜色滤镜排列方式。
 
-**Type:** SensorColorFilterArrangement
+**Type:** [SensorColorFilterArrangement](arkts-camera-camera-sensorcolorfilterarrangement-e.md)
 
 **Since:** 24
 
@@ -352,9 +358,9 @@ Arrangement mode of the sensor color filter.
 readonly sensorPhysicalSize?: Array<double>
 ```
 
-Physical dimensions (width and height) of the sensor.
+传感器物理尺寸（宽度和高度）。
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 24
 
@@ -374,9 +380,9 @@ Physical dimensions (width and height) of the sensor.
 readonly sensorPixelArraySize?: Array<int>
 ```
 
-Pixel array dimensions (width and height, in pixels) of the sensor.
+传感器像素阵列尺寸（宽度和高度。单位：像素）。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 24
 

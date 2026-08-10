@@ -1,6 +1,6 @@
 # ChangeInfo
 
-Represents the data change information, including the data change type, URI of the data changed, and changed data content.
+数据变更时通知用户具体变更的内容，包括数据变更类型、变化的uri、变更的数据内容。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents the data change information, including the data change type, URI of t
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## type
 
 ```TypeScript
 type: ChangeType
 ```
 
-Data change type.
+通知变更的类型。
 
-**Type:** ChangeType
+**Type:** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
 
 **Since:** 12
 
@@ -36,7 +42,7 @@ Data change type.
 uri: string
 ```
 
-URI of the data changed.
+指定uri。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ URI of the data changed.
 values: Array<ValuesBucket>
 ```
 
-Changed data.
+更新的数据。
 
-**Type:** Array&lt;ValuesBucket&gt;
+**Type:** Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt;
 
 **Since:** 12
 

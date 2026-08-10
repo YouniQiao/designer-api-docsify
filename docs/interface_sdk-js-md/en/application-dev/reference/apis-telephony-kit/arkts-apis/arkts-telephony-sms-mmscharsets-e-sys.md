@@ -36,7 +36,7 @@ Indicates the BIG5 format.
 ISO_10646_UCS_2 = 0X03E8
 ```
 
-Indicates the ISO\_10646\_UCS\_2 format.
+Indicates the ISO_10646_UCS_2 format.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Indicates the ISO\_10646\_UCS\_2 format.
 ISO_8859_1 = 0X04
 ```
 
-Indicates the ISO\_8859\_1 format.
+Indicates the ISO_8859_1 format.
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Indicates the ISO\_8859\_1 format.
 ISO_8859_2
 ```
 
-Indicates the ISO\_8859\_2 format.
+Indicates the ISO_8859_2 format.
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ Indicates the ISO\_8859\_2 format.
 ISO_8859_3
 ```
 
-Indicates the ISO\_8859\_3 format.
+Indicates the ISO_8859_3 format.
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ Indicates the ISO\_8859\_3 format.
 ISO_8859_4
 ```
 
-Indicates the ISO\_8859\_4 format.
+Indicates the ISO_8859_4 format.
 
 **Since:** 8
 
@@ -126,7 +126,7 @@ Indicates the ISO\_8859\_4 format.
 ISO_8859_5
 ```
 
-Indicates the ISO\_8859\_5 format.
+Indicates the ISO_8859_5 format.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ Indicates the ISO\_8859\_5 format.
 ISO_8859_6
 ```
 
-Indicates the ISO\_8859\_6 format.
+Indicates the ISO_8859_6 format.
 
 **Since:** 8
 
@@ -162,7 +162,7 @@ Indicates the ISO\_8859\_6 format.
 ISO_8859_7
 ```
 
-Indicates the ISO\_8859\_7 format.
+Indicates the ISO_8859_7 format.
 
 **Since:** 8
 
@@ -180,7 +180,7 @@ Indicates the ISO\_8859\_7 format.
 ISO_8859_8
 ```
 
-Indicates the ISO\_8859\_8 format.
+Indicates the ISO_8859_8 format.
 
 **Since:** 8
 
@@ -198,7 +198,7 @@ Indicates the ISO\_8859\_8 format.
 ISO_8859_9
 ```
 
-Indicates the ISO\_8859\_9 format.
+Indicates the ISO_8859_9 format.
 
 **Since:** 8
 
@@ -216,7 +216,7 @@ Indicates the ISO\_8859\_9 format.
 SHIFT_JIS = 0X11
 ```
 
-Indicates the SHIFT\_JIS format.
+Indicates the SHIFT_JIS format.
 
 **Since:** 8
 
@@ -234,7 +234,7 @@ Indicates the SHIFT\_JIS format.
 US_ASCII = 0X03
 ```
 
-Indicates the US\_ASCII format.
+Indicates the US_ASCII format.
 
 **Since:** 8
 
@@ -252,7 +252,7 @@ Indicates the US\_ASCII format.
 UTF_8 = 0X6A
 ```
 
-Indicates the UTF\_8 format.
+Indicates the UTF_8 format.
 
 **Since:** 8
 

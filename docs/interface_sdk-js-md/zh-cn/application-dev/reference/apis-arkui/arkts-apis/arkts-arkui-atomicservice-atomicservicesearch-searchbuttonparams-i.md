@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+```
+
 ## options
 
 ```TypeScript
 options?: SearchButtonOptions
 ```
 
-配置搜索框文本样式。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+配置搜索框文本样式。默认值：`{fontSize: '16fp',fontColor: '#ff3f97e9'}`。
 
-**类型：** SearchButtonOptions
+**类型：** [SearchButtonOptions](../arkts-components/arkts-arkui-searchbuttonoptions-i.md)
 
 **起始版本：** 18
 
@@ -38,7 +44,7 @@ searchButtonValue: ResourceStr
 
 搜索框末尾搜索按钮文本内容。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
 

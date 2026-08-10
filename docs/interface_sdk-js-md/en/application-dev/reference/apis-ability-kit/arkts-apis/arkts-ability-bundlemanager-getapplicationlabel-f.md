@@ -1,12 +1,18 @@
 # getApplicationLabel
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getApplicationLabel
 
 ```TypeScript
 function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>
 ```
 
-Obtains the name of an application with the specified package name and clone index.This API uses a promise to return the result.
+获取指定包名和分身索引的应用名称。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -24,20 +30,40 @@ Obtains the name of an application with the specified package name and clone ind
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| appIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the application. The value ranges from 0 to 5. The value 0 indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
+| bundleName | string | Yes | 应用的包名。 |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示应用索引。取值范围0~5，取值为0表示主应用，取值1~5表示分身应用的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. If the operation is successful, the application name is returned. Otherwise, an error object is returned. |
+| Promise&lt;string&gt; | Promise对象，调用成功返回应用名称；调用失败返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+| 17700061 | The specified app index is invalid. |
+| 201 | Permission denied. |
+| 17700001 | The specified bundle is not found. |
+
+## Examples
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  bundleManager.getApplicationLabel('com.hap.myapplication', 1).then((data: string) => {
+    hilog.info(0x0000, 'testTag', 'getApplicationLabel succeed: Data: %{public}s', data);
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getApplicationLabel failed: %{public}d  %{public}s', err.code, err.message);
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getApplicationLabel failed: error %{public}d  %{public}s', err.code, err.message);
+}
+```
 

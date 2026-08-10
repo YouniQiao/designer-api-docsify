@@ -1,6 +1,6 @@
 # ApplicationDefinedRecord
 
-ApplicationDefinedRecord是[UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，也是应用自定义数据类型的基类，用于描述仅在应用生态内部流通的自定义数据类型，应用可基于此类进行自定义数据类型的扩展。
+ApplicationDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是应用自定义数据类型的基类，用于描述仅在应用生态内部流通的自定义数据类型，应用可基于此类进行自定义数据类型的扩展。
 
 **继承/实现关系：** ApplicationDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
@@ -11,6 +11,12 @@ ApplicationDefinedRecord是[UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_�
 <!--Device-unifiedDataChannel-class ApplicationDefinedRecord extends UnifiedRecord--><!--Device-unifiedDataChannel-class ApplicationDefinedRecord extends UnifiedRecord-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
 
 ## applicationDefinedType
 

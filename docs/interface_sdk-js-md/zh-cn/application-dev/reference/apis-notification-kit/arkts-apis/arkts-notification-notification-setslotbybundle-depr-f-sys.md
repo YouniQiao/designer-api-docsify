@@ -28,9 +28,9 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定应用的包信息。 |
-| slot | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通知通道。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 设定通知通道回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | 是 | 通知通道。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定通知通道回调函数。 |
 
 
 ## setSlotByBundle
@@ -61,8 +61,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定应用的包信息。 |
-| slot | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通知通道。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | 是 | 通知通道。 |
 
 **返回值：**
 

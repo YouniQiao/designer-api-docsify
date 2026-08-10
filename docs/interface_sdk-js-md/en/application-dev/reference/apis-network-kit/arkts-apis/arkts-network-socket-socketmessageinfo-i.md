@@ -10,6 +10,12 @@ Defines the socket connection information.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## message
 
 ```TypeScript
@@ -36,7 +42,7 @@ remoteInfo: SocketRemoteInfo
 
 Socket connection information.
 
-**Type:** SocketRemoteInfo
+**Type:** [SocketRemoteInfo](arkts-network-socket-socketremoteinfo-i.md)
 
 **Since:** 11
 

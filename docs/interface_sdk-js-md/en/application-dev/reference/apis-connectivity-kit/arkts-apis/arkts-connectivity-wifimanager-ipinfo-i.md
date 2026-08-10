@@ -10,6 +10,12 @@ Wi-Fi IP information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## gateway
 
 ```TypeScript
@@ -18,7 +24,7 @@ gateway: int
 
 The gateway of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,7 +42,7 @@ ipAddress: int
 
 The IP address of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -54,7 +60,7 @@ leaseDuration: int
 
 The IP address lease duration of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -72,7 +78,7 @@ netmask: int
 
 The network mask of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -90,7 +96,7 @@ primaryDns: int
 
 The primary DNS server IP address of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -108,7 +114,7 @@ secondDns: int
 
 The secondary DNS server IP address of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -126,7 +132,7 @@ serverIp: int
 
 The DHCP server IP address of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

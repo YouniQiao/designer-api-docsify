@@ -1,9 +1,10 @@
 # AvisPropertyKey
 
 表示AVIS图片信息的枚举。
-    **说明：**  
-    
-    返回字段类型具体参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+
+> **说明：**
+> 
+> 返回字段类型具体参考[AvisMetadata](../../../reference/apis-image-kit/arkts-apis-image-AvisMetadata.md)。
 
 **起始版本：** 26.0.0
 

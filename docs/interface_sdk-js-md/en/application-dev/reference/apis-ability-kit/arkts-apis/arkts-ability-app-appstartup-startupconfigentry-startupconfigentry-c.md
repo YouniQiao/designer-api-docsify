@@ -1,6 +1,6 @@
 # StartupConfigEntry
 
-The module provides the capability to configure \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+本模块提供[应用启动框架](../../../application-models/app-startup.md)配置的能力。
 
 **Since:** 12
 
@@ -10,18 +10,21 @@ The module provides the capability to configure \_\_\_MD\_LINK\_DESC\_USD\_0\_\_
 
 **System capability:** SystemCapability.Ability.AppStartup
 
+## Modules to Import
+
+```TypeScript
+import { StartupConfigEntry } from 'kits/@kit.AbilityKit';
+```
+
 ## onConfig
 
 ```TypeScript
 onConfig?(): StartupConfig
 ```
 
-Called if the HAP of the AbilityStage has  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This callback is triggered before  
-[AbilityStage.onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+在回调[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)前，若该AbilityStage对应的HAP中启动框架配置文件中[定义了启动框架配置](../../../application-models/app-startup.md#定义启动参数配置)，则会触发该回调。
 
-You can set the AppStartup configuration within this callback. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+开发者可以在该回调中设置启动框架配置信息，详细使用方法可参考[设置启动参数](../../../application-models/app-startup.md#设置启动参数)章节。
 
 **Since:** 12
 
@@ -37,9 +40,9 @@ You can set the AppStartup configuration within this callback. For details, see
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | AppStartup configuration. |
+| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | 启动框架配置信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { StartupConfig, StartupConfigEntry, StartupListener } from '@kit.AbilityKit';
@@ -76,7 +79,7 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
 onConfig(): StartupConfig
 ```
 
-Called when startup initialization to configure startup mode.
+在回调[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)前，若该AbilityStage对应的HAP中启动框架配置文件中[定义了启动框架配置](../../../application-models/app-startup.md#定义启动参数配置)，则会触发该回调。
 
 **Since:** 23
 
@@ -92,7 +95,7 @@ Called when startup initialization to configure startup mode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The developer returns a startup configuration. |
+| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | 启动框架配置信息。 |
 
 ## onRequestCustomMatchRule
 
@@ -100,15 +103,12 @@ Called when startup initialization to configure startup mode.
 onRequestCustomMatchRule(want: Want): string
 ```
 
-Called if the HAP of the AbilityStage has  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This callback is triggered after [StartupConfigEntry.onConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ but before  
-[AbilityStage.onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
+在回调[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)前，若该AbilityStage对应的HAP中启动框架配置文件中[定义了启动框架配置](../../../application-models/app-startup.md#定义启动参数配置)，则会在  
+[StartupConfigEntry.onConfig](arkts-ability-app-appstartup-startupconfigentry-startupconfigentry-c.md#onconfig)后触发该回调。
 
-You can use this callback to return different custom matching rules based on parameters in the Want object passed by the caller to start the UIAbility. . AppStartup matches these rules with the **customization** field in  
-**matchRules** of the startup task configuration. If a match is successful, the task is executed automatically. For details about the matching rules, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+开发者可以在该回调中，可以根据调用方传入启动UIAbility的Want中的不同参数来返回不同的自定义匹配规则。启动框架会将其与启动任务配置的matchRules中customization字段进行匹配。若匹配成功，任务将在自动模式执行。详细匹配规则请参考[添加任务匹配规则](../../../application-models/app-startup.md#添加任务匹配规则)章节。
 
-This API is typically used in scenarios where tasks cannot be matched directly using URI, action, or intent name rules. It allows for further refinement of matching rules.
+该接口通常用于无法直接通过uri、action或意图名称规则来匹配启动任务的场景，可以使用本接口对匹配规则进一步细化。
 
 **Since:** 20
 
@@ -124,15 +124,15 @@ This API is typically used in scenarios where tasks cannot be matched directly u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want information about the target UIAbility. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 启动UIAbility的Want信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Custom matching rule, which is used to determine whether to automatically execute the task. |
+| string | 返回自定义匹配规则值，用于匹配启动任务是否自动执行。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { StartupConfigEntry, Want } from '@kit.AbilityKit';

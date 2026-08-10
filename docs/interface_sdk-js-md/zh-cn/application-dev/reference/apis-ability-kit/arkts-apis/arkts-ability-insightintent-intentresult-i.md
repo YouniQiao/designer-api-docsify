@@ -1,6 +1,6 @@
 # IntentResult
 
-意图执行的返回结果，支持\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+意图执行的返回结果，支持[泛型类型](../../../quick-start/introduction-to-arkts.md#泛型类和接口)。
 
 **起始版本：** 20
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## code
 
 ```TypeScript
@@ -18,7 +24,7 @@ code: int
 
 意图执行返回的错误码，由开发者定义。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 

@@ -1,5 +1,11 @@
 # unwrapKeyItem
 
+## 导入模块
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## unwrapKeyItem
 
 ```TypeScript
@@ -7,11 +13,12 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 ```
 
 加密导入密钥。使用Promise异步回调。
-    **说明：**  
-    
-    加密导入[HuksKeySecurityLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中定义的SE安全级别密钥需要ohos.permission.ACCESS\_SE\_KEY权限。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_该功能暂不支持。\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+> **说明：**
+> 
+> 加密导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
+
+&lt;!--Del--&gt;该功能暂不支持。&lt;!--DelEnd--&gt;
 
 **起始版本：** 20
 
@@ -28,7 +35,7 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，指定导入密钥的密钥别名。 |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于指定导入密钥时的加密类型。 |
+| params | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于指定导入密钥时的加密类型。 |
 | wrappedKey | Uint8Array | 是 | 加密导出密钥的密文。 |
 
 **返回值：**
@@ -41,13 +48,13 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS\_\_\_ESCAPED\_UNDERSCORE\_\_\_SE\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY permission is missing.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
+| 801 | api is not supported |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000018 | the input parameter is invalid |
+| 12000015 | Failed to obtain the security information via UserIAM |
+| 201 | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
+| 12000014 | memory is insufficient |
+| 12000012 | Device environment or input parameter abnormal |
+| 12000026 | the secure element is not available<br>**适用版本：** 26.0.0+ |
 

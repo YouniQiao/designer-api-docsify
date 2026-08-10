@@ -1,6 +1,6 @@
 # Pinch
 
-Defines a pinch event.
+捏合手势事件。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Defines a pinch event.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
+```
+
 ## scale
 
 ```TypeScript
 scale: double
 ```
 
-Pinch scale factor. The value is greater than or equal to 0.
+捏合度，取值范围大于等于0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -34,9 +40,9 @@ Pinch scale factor. The value is greater than or equal to 0.
 type: ActionType
 ```
 
-Gesture event type, for example, gesture start, gesture update, or gesture end.
+手势事件类型。如：手势开始、手势更新、手势结束等。
 
-**Type:** ActionType
+**Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 
 **Since:** 10
 

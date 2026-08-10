@@ -1,6 +1,6 @@
 # DeviceFlag
 
-Enumerates the audio device flags.
+表示音频设备类型的枚举。
 
 **Since:** 7
 

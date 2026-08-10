@@ -10,6 +10,12 @@ Provides methods related to cellular data services.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
+## Modules to Import
+
+```TypeScript
+import { data } from 'kits/@kit.TelephonyKit';
+```
+
 ## Summary
 
 ### Functions
@@ -17,8 +23,8 @@ Provides methods related to cellular data services.
 | Name | Description |
 | --- | --- |
 | [getActiveApnName](arkts-telephony-data-getactiveapnname-f.md#getactiveapnname) | Get Active APN's Name. |
-| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md#getcellulardataflowtype) | Indicates that there is no uplink or downlink data.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It is a return value of service state query of cellular data services. |
-| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md#getcellulardataflowtype-1) | Indicates that there is no uplink or downlink data.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It is a return value of service state query of cellular data services. |
+| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md#getcellulardataflowtype) | Indicates that there is no uplink or downlink data.  &lt;p&gt;It is a return value of service state query of cellular data services. |
+| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md#getcellulardataflowtype-1) | Indicates that there is no uplink or downlink data.  &lt;p&gt;It is a return value of service state query of cellular data services. |
 | [getCellularDataState](arkts-telephony-data-getcellulardatastate-f.md#getcellulardatastate) | Obtain the connection state of the PS domain. |
 | [getCellularDataState](arkts-telephony-data-getcellulardatastate-f.md#getcellulardatastate-1) | Obtain the connection state of the PS domain. |
 | [getDefaultCellularDataSimId](arkts-telephony-data-getdefaultcellulardatasimid-f.md#getdefaultcellulardatasimid) | Obtains the default cellular data SIM ID. |

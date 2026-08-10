@@ -1,12 +1,18 @@
 # isApplicationEnabled
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## isApplicationEnabled
 
 ```TypeScript
 function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an application is enabled based on a given bundle name. This API uses an asynchronous callback to return the result.
+根据给定的bundleName查询指定应用程序是否已经启用，使用callback异步回调。
 
 **Since:** 8
 
@@ -22,8 +28,8 @@ Checks whether an application is enabled based on a given bundle name. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
+| bundleName | string | Yes | 要查询的应用Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数，返回boolean代表是否启用。 |
 
 
 ## isApplicationEnabled
@@ -32,7 +38,7 @@ Checks whether an application is enabled based on a given bundle name. This API 
 function isApplicationEnabled(bundleName: string): Promise<boolean>
 ```
 
-Checks whether an application is enabled based on a given bundle name. This API uses a promise to return the result.
+根据给定的bundleName查询指定应用程序是否已经启用，使用Promise异步回调。
 
 **Since:** 8
 
@@ -48,11 +54,11 @@ Checks whether an application is enabled based on a given bundle name. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 要查询的应用Bundle名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise形式返回boolean代表是否启用。 |
 

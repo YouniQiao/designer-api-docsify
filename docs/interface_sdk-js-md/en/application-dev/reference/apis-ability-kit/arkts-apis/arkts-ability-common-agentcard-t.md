@@ -4,7 +4,7 @@
 export type AgentCard = _AgentCard
 ```
 
-The AgentCard information describes the basic information and capabilities provided by an Agent.
+AgentCard在系统中显示agent的配置文件和联系信息。
 
 **Since:** 24
 

@@ -1,12 +1,18 @@
 # setCurrentFunctions (System API)
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setCurrentFunctions
 
 ```TypeScript
 function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 ```
 
-Sets the current USB function list in Device mode.
+在设备模式下，设置当前的USB功能列表。
 
 **Since:** 9
 
@@ -26,15 +32,15 @@ Sets the current USB function list in Device mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Yes | 功能列表对应的数字掩码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回设置成功与否的结果。true表示设置成功，false表示设置失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let funcs : number = usb.FunctionType.HDC;

@@ -1,12 +1,18 @@
 # isOpenTouchGuideSync
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isOpenTouchGuideSync
 
 ```TypeScript
 function isOpenTouchGuideSync(): boolean
 ```
 
-Checks whether touch guide mode is enabled.
+是否开启了触摸浏览模式。
 
 **Since:** 10
 
@@ -24,9 +30,9 @@ Checks whether touch guide mode is enabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether touch guide mode is enabled. Returns **true** if touch guide mode is enabled; returns **false** otherwise. |
+| boolean | 表示是否开启了触摸浏览模式。true表示开启了触摸浏览，false表示未开启触摸浏览。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

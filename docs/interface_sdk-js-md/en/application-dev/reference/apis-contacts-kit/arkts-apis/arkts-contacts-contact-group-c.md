@@ -1,6 +1,6 @@
 # Group
 
-Defines a contact group.
+联系人的群组类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact group.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## groupId
 
 ```TypeScript
 groupId?: number
 ```
 
-ID of a contact group.
+联系人群组的Id。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ ID of a contact group.
 title: string
 ```
 
-Name of a contact group.
+联系人群组的名称。
 
 **Type:** string
 

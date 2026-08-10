@@ -1,8 +1,8 @@
 # TouchController
 
-Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements:
+提供模拟触控操作的功能。模拟触控操作序列必须满足以下要求：
 
-1. All touch points must share the same **displayId**.2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end with an **touchUp()** call.
+1. 所有触点的displayId必须相同。2. 每个触点都必须以`touchDown()`开始，以`touchUp()`结束，中间可包含多个`touchMove()`。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Provides the capability of simulating touch operations. The simulated touch oper
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## touchDown
 
 ```TypeScript
 touchDown(touch: TouchPoint): Promise<void>
 ```
 
-Presses down a touch point. This API uses a promise to return the result.
+触点按下。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -36,22 +42,75 @@ Presses down a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the touch point that is in contact with the display. |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | 与屏幕接触的触点信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 4300001 | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| 4300002 | The display does not exist. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+
+## Examples
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createTouchController()
+            .then((touchController: inputEventClient.TouchController) => {
+              const touchPoint: inputEventClient.TouchPoint = {
+                id: 0,
+                displayId: 0,
+                displayX: 600,
+                displayY: 1200
+              };
+              touchController.touchDown(touchPoint);
+              return touchController;
+            })
+            .then((touchController: inputEventClient.TouchController) => {
+              touchController.touchMove({
+                id: 0,
+                displayId: 0,
+                displayX: 720,
+                displayY: 1200
+              });
+              return touchController;
+            })
+            .then((touchController: inputEventClient.TouchController) => {
+              touchController.touchUp({
+                id: 0,
+                displayId: 0,
+                displayX: 720,
+                displayY: 1200
+              });
+            })
+            .then(() => {
+              console.info('Succeeded in touch up');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to simulate touch. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```
 
 ## touchMove
 
@@ -59,7 +118,7 @@ Presses down a touch point. This API uses a promise to return the result.
 touchMove(touch: TouchPoint): Promise<void>
 ```
 
-Moves a touch point. This API uses a promise to return the result.
+触点移动。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -77,21 +136,25 @@ Moves a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the touch point to be moved. |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | 需要移动的触点信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 4300001 | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+
+## Examples
+
+For details, see [touchDown](#touchdown).
 
 ## touchUp
 
@@ -99,7 +162,7 @@ Moves a touch point. This API uses a promise to return the result.
 touchUp(touch: TouchPoint): Promise<void>
 ```
 
-Releases a touch point. This API uses a promise to return the result.
+触点抬起。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -117,19 +180,23 @@ Releases a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the touch point to be released. |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | 即将离开屏幕的触点信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 4300001 | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+
+## Examples
+
+For details, see [touchDown](#touchdown).
 

@@ -4,7 +4,7 @@
 declare type DataSyncOptions = import('../api/@ohos.data.unifiedDataChannel').default.GetDataParams
 ```
 
-Defines the input parameter object for **startDataLoading**.
+作为startDataLoading的入参对象。
 
 **Since:** 15
 

@@ -4,7 +4,7 @@
 export type ExtensionAbility = _PackInfo.ExtensionAbility
 ```
 
-Defines the ExtensionAbility configuration information.
+extensionAbilities的配置信息。
 
 **Since:** 9
 

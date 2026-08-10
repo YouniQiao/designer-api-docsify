@@ -1,6 +1,6 @@
 # DismissPopupAction
 
-Provides information about the dismissal of the popup.
+气泡关闭的信息。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Provides information about the dismissal of the popup.
 dismiss: Callback<void>
 ```
 
-Callback for dismissing the popup. This API is called only when the popup needs to be dismissed.
+Popup关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -38,9 +38,9 @@ Callback for dismissing the popup. This API is called only when the popup needs 
 reason: DismissReason
 ```
 
-Reason why the popup is dismissed.
+关闭原因，返回本次拦截Popup消失的事件原因。
 
-**Type:** DismissReason
+**Type:** [DismissReason](arkts-arkui-dismissreason-e.md)
 
 **Since:** 12
 

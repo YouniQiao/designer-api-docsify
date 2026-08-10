@@ -20,12 +20,12 @@ type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 页面的索引。  |
-| sort | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 页面的索引。 |
+| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的播放列表的分页对象。  |
+| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的播放列表的分页对象。 |
 

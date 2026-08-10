@@ -1,12 +1,18 @@
 # getCalendarManager
 
+## Modules to Import
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## getCalendarManager
 
 ```TypeScript
 function getCalendarManager(context: Context) : CalendarManager
 ```
 
-Obtains a CalendarManager object based on the context.
+根据上下文获取CalendarManager对象，用于管理日历。
 
 **Since:** 10
 
@@ -24,20 +30,23 @@ Obtains a CalendarManager object based on the context.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. For details about the application context of the stage model, see Context. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用上下文Context。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | CalendarManager object obtained. |
+| [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | 返回创建的CalendarManager对象。 |
 
-**Example**
+## Examples
+
+For details about how to obtain an mContext object in the example, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // Obtain an mContext object.
 // Obtain a calendarMgr object.
 // The file is auto-generated: entry/src/main/ets/entryability/EntryAbility.ets
+// The file must be configured for the subsequent sample code in the document to run properly.
 import {
   abilityAccessCtrl,
   AbilityConstant, 
@@ -55,16 +64,16 @@ export let calendarMgr: calendarManager.CalendarManager | null = null;
 export let mContext: common.UIAbilityContext | null = null;
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    console.info("Ability onCreate");
+    console.info('Ability onCreate');
   }
 
   onDestroy(): void {
-    console.info("Ability onDestroy");
+    console.info('Ability onDestroy');
   }
 
   onWindowStageCreate(windowStage: window.WindowStage): void {
-    // Main window is created, set main page for this ability
-    console.info("Ability onWindowStageCreate");
+    // The main window has been created. Set the main page for the Ability.
+    console.info('Ability onWindowStageCreate');
 
     windowStage.loadContent('pages/Index', (err, data) => {
       if (err.code) {
@@ -85,18 +94,18 @@ export default class EntryAbility extends UIAbility {
   }
 
   onWindowStageDestroy(): void {
-    // Main window is destroyed, release UI related resources
-    console.info("Ability onWindowStageDestroy");
+    // The main window is destroyed. It is time to release UI resources.
+    console.info('Ability onWindowStageDestroy');
   }
 
   onForeground(): void {
-    // Ability has brought to foreground
-    console.info("Ability onForeground");
+    // Switch the ability to the foreground.
+    console.info('Ability onForeground');
   }
 
   onBackground(): void {
-    // Ability has back to background
-    console.info("Ability onBackground");
+    // Switch the ability to the background.
+    console.info('Ability onBackground');
   }
 }
 ```

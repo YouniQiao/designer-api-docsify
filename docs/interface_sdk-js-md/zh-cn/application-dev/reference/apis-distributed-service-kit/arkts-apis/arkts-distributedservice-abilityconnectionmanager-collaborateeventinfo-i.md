@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## eventMsg
 
 ```TypeScript
@@ -38,7 +44,7 @@ eventType: CollaborateEventType
 
 表示协同事件的类型。
 
-**类型：** CollaborateEventType
+**类型：** [CollaborateEventType](arkts-distributedservice-abilityconnectionmanager-collaborateeventtype-e.md)
 
 **起始版本：** 18
 

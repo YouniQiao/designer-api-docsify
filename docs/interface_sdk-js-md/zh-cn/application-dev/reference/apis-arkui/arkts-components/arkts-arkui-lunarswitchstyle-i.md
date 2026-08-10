@@ -17,9 +17,10 @@ selectedColor?: ResourceColor
 ```
 
 设置开关开启时开关的背景颜色。
-    默认值：\$r('sys.color.ohos\_id\_color\_text\_primary\_actived')。
 
-**类型：** ResourceColor
+> 默认值：\$r('sys.color.ohos_id_color_text_primary_actived')。
+
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** $r('sys.color.ohos_id_color_text_primary_actived')
 
@@ -42,9 +43,10 @@ strokeColor?: ResourceColor
 ```
 
 设置开关内部图标颜色。
-    默认值：Color.White。
 
-**类型：** ResourceColor
+> 默认值：Color.White。
+
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.White
 
@@ -67,9 +69,10 @@ unselectedColor?: ResourceColor
 ```
 
 设置开关未开启时开关的边框颜色。
-    默认值：\$r('sys.color.ohos\_id\_color\_switch\_outline\_off')。
 
-**类型：** ResourceColor
+> 默认值：\$r('sys.color.ohos_id_color_switch_outline_off')。
+
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** $r('sys.color.ohos_id_color_switch_outline_off')
 

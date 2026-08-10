@@ -1,6 +1,6 @@
 # TextStyleInterface
 
-TextStyleInterface
+文本字体样式。
 
 **Since:** 12
 
@@ -16,11 +16,11 @@ TextStyleInterface
 fontColor?: ResourceColor
 ```
 
-Font color.
+字体颜色。
 
-Default value: theme color.
+默认为主题色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -40,9 +40,9 @@ Default value: theme color.
 fontConfigs?: FontConfigs
 ```
 
-Font configuration. The default value is inherited from [FontConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+字体配置。默认值继承[FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)。
 
-**Type:** FontConfigs
+**Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
 **Since:** 24
 
@@ -62,11 +62,11 @@ Font configuration. The default value is inherited from [FontConfigs]\_\_\_JSDOC
 fontFamily?: ResourceStr
 ```
 
-Font family.
+文本字体。
 
-Default value: theme font.
+默认为主题字体。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
 
@@ -86,15 +86,15 @@ Default value: theme font.
 fontSize?: LengthMetrics
 ```
 
-Font size.
+字体大小。
 
-Default value: 16 fp.
+默认字体大小为16fp。
 
-If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead.
+如果LengthMetrics的unit值是PERCENT，当前设置不生效，处理为16fp。
 
-Unit: [fp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -114,11 +114,11 @@ Unit: [fp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 fontStyle?: FontStyle
 ```
 
-Font style.
+字体样式。
 
-Default value: **FontStyle.Normal**.
+默认值：FontStyle.Normal
 
-**Type:** FontStyle
+**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
 **Since:** 12
 
@@ -138,13 +138,11 @@ Default value: **FontStyle.Normal**.
 fontVariations?: Array<FontVariation>
 ```
 
-Variable font attributes.
+可变字体的属性。
 
-Default value: **undefined**, indicating that variable font attributes are not set.
+默认值：undefined，表示未设置可变字体的属性。
 
-The priority of **fontVariations** is higher than that of **fontWeight**.
-
-**Since**: 26.0.0
+fontVariations属性的优先级高于fontWeight。
 
 **Type:** Array&lt;FontVariation&gt;
 
@@ -166,11 +164,11 @@ The priority of **fontVariations** is higher than that of **fontWeight**.
 fontWeight?: number | FontWeight | string
 ```
 
-Font weight.
+字体粗细。
 
-For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example,  
-**400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**,  
-**regular**, and **medium**.
+number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。
+
+默认值：FontWeight.Normal
 
 **Type:** number \| FontWeight \| string
 
@@ -192,11 +190,11 @@ For the number type, the value ranges from 100 to 900, at an interval of 100. A 
 strokeColor?: ResourceColor
 ```
 
-Text stroke color.
+文本描边颜色。
 
-Default value: text color. If invalid values are provided, the text color is used.
+默认值为字体颜色，设置异常值时取字体颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 20
 
@@ -216,13 +214,11 @@ Default value: text color. If invalid values are provided, the text color is use
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Text stroke join style.
+文本描边拐角样式。具体枚举及说明请参考StrokeJoinStyle。
 
-Default value: **StrokeJoinStyle.MITER\_JOIN**.
+默认值：StrokeJoinStyle.MITER_JOIN。
 
-**Since**: 26.0.0.
-
-**Type:** StrokeJoinStyle
+**Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
 
@@ -242,13 +238,13 @@ Default value: **StrokeJoinStyle.MITER\_JOIN**.
 strokeWidth?: LengthMetrics
 ```
 
-Text stroke width. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 0 is used instead.
+文本描边宽度。如果LengthMetrics的unit值是PERCENT，当前设置不生效，处理为0。
 
-If the value is less than 0, the text is solid. If the value is greater than 0, the text is hollow.
+设置值小于0时为实心字，大于0时为空心字。
 
-Default value: **0**.
+默认值为0。
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 20
 
@@ -268,11 +264,11 @@ Default value: **0**.
 superscript?: SuperscriptStyle
 ```
 
-Superscript or subscript for the text.
+文本上下角标。
 
-Default value: **SuperscriptStyle.NORMAL**.
+默认值：SuperscriptStyle.NORMAL
 
-**Type:** SuperscriptStyle
+**Type:** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **Since:** 20
 

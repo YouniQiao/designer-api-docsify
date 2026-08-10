@@ -1,6 +1,6 @@
 # OcclusionState
 
-Enumerates the window visibility states.
+窗口可见性状态枚举。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the window visibility states.
 NO_OCCLUSION = 0
 ```
 
-The window is entirely visible, with no parts obscured by other non-transparent windows.
+窗口完全可见（没有任何部分被其他非透明窗口遮挡）。
 
 **Since:** 22
 
@@ -32,7 +32,7 @@ The window is entirely visible, with no parts obscured by other non-transparent 
 PARTIAL_OCCLUSION = 1
 ```
 
-The window is partially visible, with some parts obscured by other non-transparent windows.
+窗口部分可见（部分被其他非透明窗口遮挡）。
 
 **Since:** 22
 
@@ -48,7 +48,7 @@ The window is partially visible, with some parts obscured by other non-transpare
 FULL_OCCLUSION = 2
 ```
 
-The window is completely invisible, either fully obscured by other non-transparent windows, minimized, or hidden.
+窗口完全不可见（完全被其他非透明窗口遮挡，或窗口最小化，或窗口隐藏）。
 
 **Since:** 22
 

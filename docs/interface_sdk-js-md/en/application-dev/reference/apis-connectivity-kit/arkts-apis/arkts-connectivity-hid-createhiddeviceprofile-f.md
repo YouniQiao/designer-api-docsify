@@ -1,5 +1,11 @@
 # createHidDeviceProfile
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createHidDeviceProfile
 
 ```TypeScript
@@ -22,15 +28,15 @@ Creates the instance of HID device profile.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the instance of HID device profile. |
+| [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md) | Returns the instance of HID device profile. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

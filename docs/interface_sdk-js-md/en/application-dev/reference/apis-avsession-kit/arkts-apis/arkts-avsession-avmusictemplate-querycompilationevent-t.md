@@ -4,7 +4,7 @@
 type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<PageMediaEntity>
 ```
 
-The query compilation event.
+合集查询事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ The query compilation event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compilationId | string | Yes | compilation id  |
-| pageIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | page index  |
+| compilationId | string | Yes | 合集的ID。 |
+| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 页面的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise  |
+| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的合集媒体实体对象。 |
 

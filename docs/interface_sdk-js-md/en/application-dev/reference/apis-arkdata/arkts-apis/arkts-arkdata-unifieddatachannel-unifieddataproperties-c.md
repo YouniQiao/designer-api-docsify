@@ -1,6 +1,6 @@
 # UnifiedDataProperties
 
-Defines the properties of the data records in the unified data object, including the timestamp, tag, pasting range,and additional data.
+定义统一数据对象中所有数据记录的属性，包含时间戳、标签、粘贴范围以及一些附加数据等。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Defines the properties of the data records in the unified data object, including
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## getDelayData
 
 ```TypeScript
 getDelayData?: GetDelayData
 ```
 
-Callback for obtaining the deferred data. Currently, it can be used only in the pasteboard application of the same device. The default value is **undefined**.
+延迟获取数据回调。当前只支持同设备剪贴板场景，当用户从剪贴板读取数据时触发该回调。非必填字段，默认值为undefined。
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Callback for obtaining the deferred data. Currently, it can be used only in the 
 extras?: Record<string, object>
 ```
 
-Object of the dictionary type used to set other properties. The default value is an empty dictionary object.
+是一个字典类型对象，用于设置其他附加属性数据。非必填字段，默认值为空字典对象。
 
-**Type:** Record&lt;string, object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
 
 **Since:** 12
 
@@ -58,10 +64,9 @@ Object of the dictionary type used to set other properties. The default value is
 shareOptions?: ShareOptions
 ```
 
-Range, in which [UnifiedData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can be used. The default value is  
-**CROSS\_APP**.
+指示[UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md)支持的设备内使用范围，非必填字段，默认值为CROSS_APP。
 
-**Type:** ShareOptions
+**Type:** [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
 
 **Since:** 12
 
@@ -81,7 +86,7 @@ Range, in which [UnifiedData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can be used. 
 tag?: string
 ```
 
-Customized tag. The default value is an empty string.
+用户自定义标签。非必填字段，默认值为空字符串。
 
 **Type:** string
 
@@ -103,7 +108,7 @@ Customized tag. The default value is an empty string.
 readonly timestamp?: Date
 ```
 
-Timestamp when [UnifiedData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is generated. The default value is January 1, 1970 (UTC).
+[UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md)的生成时间戳。默认值为1970年1月1日（UTC）。
 
 **Type:** Date
 
@@ -125,7 +130,7 @@ Timestamp when [UnifiedData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is generated. 
 uriAuthorizationPolicies?: Array<UriPermission>
 ```
 
-Defines URI authorization policies for drag intention.
+用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST，只对单次数据生效，优先级较低，具体策略见[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
 **Type:** Array&lt;UriPermission&gt;
 

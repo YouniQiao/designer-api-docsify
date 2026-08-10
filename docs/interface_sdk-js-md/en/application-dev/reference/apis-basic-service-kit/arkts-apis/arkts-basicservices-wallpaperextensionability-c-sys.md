@@ -14,13 +14,19 @@ class of wallpaper extension ability.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onCreate
 
 ```TypeScript
 onCreate(want: object): void
 ```
 
-Called once to initialize the extension ability.
+初始化壁纸扩展应用。在拉起Extension壁纸扩展应用时触发回调，执行初始化应用操作。不支持多线程并发调用。
 
 **Since:** 10
 
@@ -40,9 +46,9 @@ Called once to initialize the extension ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | object | Yes | Indicates connection information about the wallpaper extension ability. |
+| want | object | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
@@ -61,7 +67,7 @@ class WallpaperExt extends WallpaperExtensionAbility {
 onDestroy(): void
 ```
 
-Called once to destroy the extension ability.
+清理壁纸扩展应用资源。在销毁壁纸扩展应用时触发回调，执行资源清理。不支持多线程并发调用。
 
 **Since:** 10
 
@@ -77,7 +83,7 @@ Called once to destroy the extension ability.
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
@@ -95,7 +101,7 @@ class WallpaperExt extends WallpaperExtensionAbility {
 onWallpaperChange(wallpaperType: number): void
 ```
 
-The onWallpaperChange callback is triggered when the user modifies the wallpaper settings.
+监听壁纸变化。在壁纸变化时触发回调。不支持多线程并发调用。
 
 **Since:** 10
 
@@ -115,9 +121,9 @@ The onWallpaperChange callback is triggered when the user modifies the wallpaper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | number | Yes | Indicates the wallpaper type. |
+| wallpaperType | number | Yes | 壁纸类型。主屏幕壁纸为0，锁屏壁纸为1。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';

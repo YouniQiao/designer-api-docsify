@@ -12,13 +12,19 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+```
+
 ## accessBackward
 
 ```TypeScript
 accessBackward(): boolean
 ```
 
-当前页面是否可后退，即当前页面是否有返回历史记录。可结合[backward]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_一起使用，先通过此方法判断是否可后退，再调用backward执行后退操作。
+当前页面是否可后退，即当前页面是否有返回历史记录。可结合[backward](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md#backward)一起使用，先通过此方法判断是否可后退，再调用backward执行后退操作。
 
 **起始版本：** 12
 
@@ -40,7 +46,7 @@ accessBackward(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## accessForward
 
@@ -48,7 +54,7 @@ accessBackward(): boolean
 accessForward(): boolean
 ```
 
-当前页面是否可前进，即当前页面是否有前进历史记录。可结合[forward]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_一起使用，先通过此方法判断是否可前进，再调用forward执行前进操作。
+当前页面是否可前进，即当前页面是否有前进历史记录。可结合[forward](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md#forward)一起使用，先通过此方法判断是否可前进，再调用forward执行前进操作。
 
 **起始版本：** 12
 
@@ -70,7 +76,7 @@ accessForward(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## accessStep
 
@@ -106,8 +112,8 @@ accessStep(step: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## backward
 
@@ -115,7 +121,7 @@ accessStep(step: number): boolean
 backward(): void
 ```
 
-按照历史栈，后退一个页面。可结合[accessBackward]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_一起使用。
+按照历史栈，后退一个页面。可结合[accessBackward](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md#accessbackward)一起使用。
 
 **起始版本：** 12
 
@@ -131,7 +137,7 @@ backward(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## forward
 
@@ -139,7 +145,7 @@ backward(): void
 forward(): void
 ```
 
-按照历史栈，前进一个页面。可结合[accessForward]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_一起使用。
+按照历史栈，前进一个页面。可结合[accessForward](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md#accessforward)一起使用。
 
 **起始版本：** 12
 
@@ -155,7 +161,7 @@ forward(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## getCustomUserAgent
 
@@ -179,13 +185,13 @@ getCustomUserAgent(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 自定义用户代理。默认User-Agent定义与使用场景请参考\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| string | 自定义用户代理。默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## getUserAgent
 
@@ -209,13 +215,13 @@ getUserAgent(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 默认用户代理。默认User-Agent定义与使用场景请参考\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| string | 默认用户代理。默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## loadUrl
 
@@ -246,10 +252,10 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
-| [17100002](../../apis-arkweb/errorcode-webview.md#17100002-url格式错误) | Invalid url. |
-| [17100003](../../apis-arkweb/errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 17100002 | Invalid url. |
+| 17100003 | Invalid resource path or file type. |
 
 ## refresh
 
@@ -273,7 +279,7 @@ refresh(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## setCustomUserAgent
 
@@ -284,10 +290,11 @@ setCustomUserAgent(userAgent: string): void
 设置自定义用户代理，会覆盖系统的用户代理。
 
 建议在onControllerAttached回调事件中设置User-Agent，设置方式请参考示例。不建议将User-Agent设置在onLoadIntercept回调事件中，在部分场景下可能出现设置失败。
-    **说明：**  
-    
-    当Web组件src设置了url，且未在onControllerAttached回调事件中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现  
-    象。
+
+> **说明：**
+> 
+> 当Web组件src设置了url，且未在onControllerAttached回调事件中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现
+> 象。
 
 **起始版本：** 12
 
@@ -303,12 +310,12 @@ setCustomUserAgent(userAgent: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAgent | string | 是 | 用户自定义代理信息。建议先使用[getUserAgent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取当前默认用户代 理，在此基础上追加自定义用户代理信息。 |
+| userAgent | string | 是 | 用户自定义代理信息。建议先使用[getUserAgent](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md#getuseragent)获取当前默认用户代 理，在此基础上追加自定义用户代理信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 17100001 | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 

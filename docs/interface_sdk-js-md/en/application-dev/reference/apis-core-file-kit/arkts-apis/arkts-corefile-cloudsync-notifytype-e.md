@@ -1,6 +1,6 @@
 # NotifyType
 
-Enumerates the data change types.
+数据变更通知类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the data change types.
 NOTIFY_ADDED = 0
 ```
 
-A file is created.
+文件已新建。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ A file is created.
 NOTIFY_MODIFIED = 1
 ```
 
-The file is modified.
+文件已修改。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ The file is modified.
 NOTIFY_DELETED = 2
 ```
 
-The file is deleted.
+文件已被删除。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ The file is deleted.
 NOTIFY_RENAMED = 3
 ```
 
-The file is renamed or moved.
+文件被重命名或者移动。
 
 **Since:** 12
 

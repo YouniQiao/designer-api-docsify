@@ -1,5 +1,11 @@
 # createStream（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## createStream
 
 ```TypeScript
@@ -24,26 +30,26 @@ Creating a Stream.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Ability connection Session id. |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Transport Stream Parameters |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Ability connection Session id. |
+| param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | 是 | Transport Stream Parameters |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | The promise returned by the function, contain the ID of a transport stream. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returned by the function, contain the ID of a transport stream. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-重复创建传输流) | Only one stream can be created for the current session. |
-| [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-比特率不支持) | Bitrate not supported. |
-| [32300004](../../apis-distributedservice-kit/errorcode-device-manager.md#32300004-色彩空间不支持) | Color space not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 32300004 | Color space not supported. |
+| 202 | Not system App. |
+| 32300001 | Only one stream can be created for the current session. |
+| 32300003 | Bitrate not supported. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
@@ -52,7 +58,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 hilog.info(0x0000, 'testTag', 'startStream');
 let sessionId = 100;
 // 创建传输流，配置名称为'receive'，角色为SOURCE（发送流）
-abilityConnectionManager.createStream(sessionId ,{name: 'receive', role: 0}).then(async (streamId) => {
+abilityConnectionManager.createStream(sessionId, {name: 'receive', role: 0}).then(async (streamId) => {
   // 配置Surface参数
   let surfaceParam: abilityConnectionManager.SurfaceParam = {
     width: 640,

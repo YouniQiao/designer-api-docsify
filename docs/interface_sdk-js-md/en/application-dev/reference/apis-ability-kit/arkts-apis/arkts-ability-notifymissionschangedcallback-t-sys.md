@@ -4,7 +4,7 @@
 type NotifyMissionsChangedCallback = (deviceId: string) => void
 ```
 
-Callback function on mission changed.
+任务回调函数已更改。
 
 **Since:** 9
 
@@ -22,5 +22,5 @@ Callback function on mission changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Indicates the deviceId mission changed.  |
+| deviceId | string | Yes | Indicates the deviceId mission changed. |
 

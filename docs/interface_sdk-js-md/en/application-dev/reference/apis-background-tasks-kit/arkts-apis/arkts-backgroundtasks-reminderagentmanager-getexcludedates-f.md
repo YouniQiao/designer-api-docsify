@@ -1,12 +1,18 @@
 # getExcludeDates
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## getExcludeDates
 
 ```TypeScript
 function getExcludeDates(reminderId: int): Promise<Array<Date>>
 ```
 
-Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result.
+为指定id的周期性的日历提醒，查询设置的所有不提醒日期。使用Promise异步回调。
 
 **Since:** 12
 
@@ -20,22 +26,22 @@ Obtains all non-reminder dates for a recurring calendar reminder with a specific
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the agent-powered reminder to be queried. The reminder ID is returned when the [publishReminder]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API is called. |
+| reminderId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 需要查询不提醒日期的代理提醒id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) 时作为返回值返回。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Date&gt;&gt; | Promise used to return all the non-reminder dates. |
+| Promise&lt;Array&lt;Date&gt;&gt; | Promise对象。返回特定日历设置的所有不提醒日期。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
+| 201 | Permission denied |
+| 1700003 | The reminder does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

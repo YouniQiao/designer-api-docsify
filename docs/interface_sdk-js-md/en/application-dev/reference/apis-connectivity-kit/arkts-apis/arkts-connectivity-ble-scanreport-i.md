@@ -10,6 +10,12 @@ Describes the contents of the scan report.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## reportType
 
 ```TypeScript
@@ -18,7 +24,7 @@ reportType: ScanReportType
 
 The type of scan report
 
-**Type:** ScanReportType
+**Type:** [ScanReportType](arkts-connectivity-ble-scanreporttype-e.md)
 
 **Since:** 15
 

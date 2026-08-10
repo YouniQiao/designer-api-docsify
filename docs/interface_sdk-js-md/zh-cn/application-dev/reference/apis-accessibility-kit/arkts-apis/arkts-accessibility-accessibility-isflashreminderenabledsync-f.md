@@ -1,5 +1,11 @@
 # isFlashReminderEnabledSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isFlashReminderEnabledSync
 
 ```TypeScript
@@ -24,7 +30,7 @@ function isFlashReminderEnabledSync(): boolean
 | --- | --- |
 | boolean | 表示是否开启闪烁提醒模式。true表示开启闪烁提醒模式，false表示未开启闪烁提醒模式。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

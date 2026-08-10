@@ -1,11 +1,11 @@
 # PluginErrorData (System API)
 
-Data provided when the error occurs.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
+发生错误时提供的数据。
+
+> **说明：**
+> 
+> 为了规范化匿名对象定义，此处的元素定义已在API版本18中进行修订。
+> 虽然为匿名对象保留了历史版本信息，但可能会出现外层元素的@since版本号高于内层元素的情况。这不影响接口的可用性。
 
 **Since:** 9
 
@@ -23,7 +23,7 @@ Data provided when the error occurs.
 errcode: number
 ```
 
-Error code.
+错误码。
 
 **Type:** number
 
@@ -43,7 +43,7 @@ Error code.
 msg: string
 ```
 
-Error message.
+错误信息。
 
 **Type:** string
 

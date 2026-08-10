@@ -1,9 +1,10 @@
 # DataBlob
 
 二进制数据的封装接口，核心字段data为Uint8Array类型。
-    **说明：**  
-    
-    Uint8Array类型数据表示8位无符号整数的数组。
+
+> **说明：**
+> 
+> Uint8Array类型数据表示8位无符号整数的数组。
 
 **起始版本：** 9
 
@@ -12,6 +13,12 @@
 <!--Device-cryptoFramework-interface DataBlob--><!--Device-cryptoFramework-interface DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
 
 ## data
 

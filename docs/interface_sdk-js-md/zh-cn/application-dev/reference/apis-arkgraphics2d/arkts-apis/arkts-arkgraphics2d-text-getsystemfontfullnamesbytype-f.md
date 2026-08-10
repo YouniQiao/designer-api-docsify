@@ -1,5 +1,11 @@
 # getSystemFontFullNamesByType
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getSystemFontFullNamesByType
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定的字体类型。 |
+| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | 是 | 指定的字体类型。 |
 
 **返回值：**
 
@@ -34,11 +40,9 @@ function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<s
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -64,43 +68,6 @@ struct Index {
                 console.info(fontItem)
               })
             }).catch((error: BusinessError) => {
-              console.error(`Failed to get font fullNames by type, error: ${JSON.stringify(error)}`);
-            });
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, Row, FontWeight} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D"
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button("get font list")
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .width(300)
-          .height(80)
-          .onClick(() => {
-            let fontType:text.SystemFontType = text.SystemFontType.GENERIC
-            let promise = text.getSystemFontFullNamesByType(fontType)
-            promise.then((data) => {
-              console.info(`then font list size: ${data.length}`)
-              data.forEach((fontItem) => {
-                console.info(fontItem)
-              })
-            }).catch((error: Error) => {
               console.error(`Failed to get font fullNames by type, error: ${JSON.stringify(error)}`);
             });
           })

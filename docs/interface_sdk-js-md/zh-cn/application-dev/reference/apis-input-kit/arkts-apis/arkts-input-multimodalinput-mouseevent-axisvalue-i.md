@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
+```
+
 ## axis
 
 ```TypeScript
@@ -18,7 +24,7 @@ axis: Axis
 
 鼠标轴类型。
 
-**类型：** Axis
+**类型：** [Axis](../../apis-arkui/arkts-apis/arkts-arkui-enums-axis-e.md)
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ value: int
 
 鼠标轴的值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

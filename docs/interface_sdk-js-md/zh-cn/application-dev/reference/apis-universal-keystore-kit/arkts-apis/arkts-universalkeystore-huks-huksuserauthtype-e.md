@@ -70,7 +70,7 @@ HUKS_USER_AUTH_TYPE_PIN = 1 << 2
 HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5
 ```
 
-表示用户认证类型为TUI PIN码。\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_（暂不支持）\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+表示用户认证类型为TUI PIN码。&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 

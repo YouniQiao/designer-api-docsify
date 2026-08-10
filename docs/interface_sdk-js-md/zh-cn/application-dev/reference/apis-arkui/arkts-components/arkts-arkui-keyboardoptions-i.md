@@ -16,7 +16,7 @@
 supportAvoidance?: boolean
 ```
 
-设置自定义键盘是否支持避让功能。默认值为 \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_，表示不支持避让；\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ 表示支持避让。
+设置自定义键盘是否支持避让功能。默认值为 `false`，表示不支持避让；`true` 表示支持避让。
 
 **类型：** boolean
 

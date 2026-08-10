@@ -4,7 +4,7 @@
 export type AgentHostProxy = _AgentHostProxy
 ```
 
-The AgentHostProxy is a proxy object for the client connected to the Agent, through which it can communicate with the Agent's connection counterpart.
+AgentHostProxy是连接到Agent的客户端的代理对象，通过它可以与agent.的连接对应方通信。
 
 **Since:** 24
 

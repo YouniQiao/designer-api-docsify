@@ -1,5 +1,11 @@
 # getHistoricalSessionDescriptors（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## getHistoricalSessionDescriptors
 
 ```TypeScript
@@ -24,19 +30,19 @@ function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxSize | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定获取描述符数量的最大值，可选范围是0-10。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | 是 | 回调函数。返回所有会话描述的只读对象。 |
+| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定获取描述符数量的最大值，可选范围是0-10。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | 是 | 回调函数。返回所有会话描述的只读对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| 401 | parameter check failed. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App |
 
-**示例：**
+## 示例
 
 ```TypeScript
 avSession.getHistoricalSessionDescriptors(1, (descriptors: avSession.AVSessionDescriptor[]) => { 
@@ -76,7 +82,7 @@ function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxSize | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 指定获取描述符数量的最大值，可选范围是0-10，不填则取默认值，默认值为3。 |
+| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 指定获取描述符数量的最大值，可选范围是0-10，不填则取默认值，默认值为3。 |
 
 **返回值：**
 
@@ -88,12 +94,12 @@ function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App |
 
-**示例：**
+## 示例
 
 ```TypeScript
 avSession.getHistoricalSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {

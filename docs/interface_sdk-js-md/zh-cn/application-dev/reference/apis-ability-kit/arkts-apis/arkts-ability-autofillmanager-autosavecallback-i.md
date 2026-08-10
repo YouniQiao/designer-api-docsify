@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## 导入模块
+
+```TypeScript
+import { autoFillManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onFailure
 
 ```TypeScript
@@ -30,7 +36,7 @@ onFailure(): void
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**示例：**
+## 示例
 
 参见[autoFillManager.requestAutoSave](#autofillmanagerrequestautosave)。
 
@@ -74,7 +80,7 @@ onSuccess(): void
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**示例：**
+## 示例
 
 参见[autoFillManager.requestAutoSave](#autofillmanagerrequestautosave)。
 

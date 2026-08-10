@@ -10,6 +10,12 @@ Defines a network address.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## address
 
 ```TypeScript
@@ -38,7 +44,7 @@ family?: int
 
 Address family identifier. The value is 1 for IPv4 and 2 for IPv6. The default value is 1.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -58,7 +64,7 @@ port?: int
 
 Port number. The value ranges from 0 to 65535.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

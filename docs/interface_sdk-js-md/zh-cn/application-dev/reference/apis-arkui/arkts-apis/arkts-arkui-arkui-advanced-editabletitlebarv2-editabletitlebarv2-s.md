@@ -2,15 +2,16 @@
 
 编辑型标题栏，适用于多选界面或内容编辑界面，一般采取左叉右勾的形式。
 
-该组件基于\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_实现，相较于  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制编辑型标题栏的数据和状态，实现更高效的用户界面刷新。
-    **说明：**  
-    
-    - 该组件仅可在Stage模型下使用。  
-    
-    - 如果EditableTitleBarV2设置[通用属性]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_和  
-    [通用事件]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_，编译工具链会额外生成节点\_\_Common\_\_，并将通用属性或通用事件挂载在\_\_Common\_\_上，而不是直接应用到  
-    EditableTitleBarV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议EditableTitleBarV2设置通用属性和通用事件。
+该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于  
+[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制编辑型标题栏的数据和状态，实现更高效的用户界面刷新。
+
+> **说明：**
+> 
+> - 该组件仅可在Stage模型下使用。
+> 
+> - 如果EditableTitleBarV2设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和
+> [通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
+> EditableTitleBarV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议EditableTitleBarV2设置通用属性和通用事件。
 
 **起始版本：** 26.0.0
 
@@ -21,6 +22,12 @@
 <!--Device-unnamed-export declare struct EditableTitleBarV2--><!--Device-unnamed-export declare struct EditableTitleBarV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
 
 ## build
 
@@ -54,7 +61,7 @@ imageItem?: EditableTitleBarItemV2
 
 **说明：** 左侧头像不支持配置无障碍属性。
 
-**类型：** EditableTitleBarItemV2
+**类型：** [EditableTitleBarItemV2](arkts-arkui-editabletitlebaritemv2-t.md)
 
 **起始版本：** 26.0.0
 
@@ -78,7 +85,7 @@ leftIcon?: EditableLeftIconV2
 
 默认值：undefined。
 
-**类型：** EditableLeftIconV2
+**类型：** [EditableLeftIconV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -128,7 +135,7 @@ options: EditableTitleBarStyleV2
 
 默认值：new EditableTitleBarStyleV2()。
 
-**类型：** EditableTitleBarStyleV2
+**类型：** [EditableTitleBarStyleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -152,7 +159,7 @@ saveButton?: EditableSaveButtonV2
 
 默认值：undefined，显示保存按钮。
 
-**类型：** EditableSaveButtonV2
+**类型：** [EditableSaveButtonV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -176,7 +183,7 @@ title: ResourceStr | EditableTitleV2
 
 默认值：new EditableTitleV2()，表示标题内容为空。
 
-**类型：** ResourceStr \| EditableTitleV2
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| EditableTitleV2
 
 **起始版本：** 26.0.0
 

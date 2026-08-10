@@ -1,8 +1,8 @@
 # LongPressRecognizer
 
-Implements a long press gesture recognizer. Inherits from [GestureRecognizer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+长按手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
-**Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
+**Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ Implements a long press gesture recognizer. Inherits from [GestureRecognizer]\_\
 getAllowableMovement(): number
 ```
 
-Obtains the maximum movement distance allowed for gesture recognition by the long press gesture recognizer.
+获取长按手势识别器识别的手势的最大移动距离。
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ Obtains the maximum movement distance allowed for gesture recognition by the lon
 
 | Type | Description |
 | --- | --- |
-| number | Maximum movement distance recognized by the long press gesture recognizer, in px. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: (0, +∞) |
+| number | 长按手势识别器识别的手势的最大移动距离，单位为px。&lt;br/&gt;取值范围：(0, +∞) |
 
 ## getDuration
 
@@ -44,7 +44,7 @@ Obtains the maximum movement distance allowed for gesture recognition by the lon
 getDuration(): number
 ```
 
-Obtains the minimum duration required for the long press gesture to be recognized.
+返回预设长按手势识别器触发长按最短时间阈值。
 
 **Since:** 18
 
@@ -62,7 +62,7 @@ Obtains the minimum duration required for the long press gesture to be recognize
 
 | Type | Description |
 | --- | --- |
-| number | Minimum duration, in ms. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞) |
+| number | 返回预设长按手势识别器触发长按最短时间阈值，单位为ms。&lt;br/&gt;取值范围：[0, +∞) |
 
 ## isRepeat
 
@@ -70,7 +70,7 @@ Obtains the minimum duration required for the long press gesture to be recognize
 isRepeat(): boolean
 ```
 
-Checks whether the long press gesture recognizer is set to trigger repeated callbacks.
+返回预设长按手势识别器是否连续触发事件回调。
 
 **Since:** 18
 
@@ -88,5 +88,5 @@ Checks whether the long press gesture recognizer is set to trigger repeated call
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the long press gesture recognizer is set to trigger repeated callbacks. **false**: Repeated callbacks are not triggered. **true**: Repeated callbacks are triggered. |
+| boolean | 预设长按手势识别器是否连续触发事件回调。当绑定长按手势且不会连续触发回调时，返回false。当绑定长按手势且会连续触发回调时，返回true。 |
 

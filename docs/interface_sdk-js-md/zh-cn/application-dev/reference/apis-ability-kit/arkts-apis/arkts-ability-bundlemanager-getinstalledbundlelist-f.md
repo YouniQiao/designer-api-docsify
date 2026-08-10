@@ -1,5 +1,11 @@
 # getInstalledBundleList
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getInstalledBundleList
 
 ```TypeScript
@@ -24,7 +30,7 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)。 |
 
 **返回值：**
 
@@ -36,9 +42,9 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -50,7 +56,7 @@ let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
 try {
   bundleManager.getInstalledBundleList(bundleFlags).then((data) => {
     hilog.info(0x0000, 'testTag', 'getInstalledBundleList successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
+  }).catch((err: BusinessError) => {
     hilog.error(0x0000, 'testTag', 'getInstalledBundleList failed. Cause: %{public}s', err.message);
   });
 } catch (err) {

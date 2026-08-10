@@ -4,7 +4,7 @@
 export type OnCheckboxChangeCallback = (value: boolean) => void
 ```
 
-Defines a Checkbox callback when onChange.Anonymous Object Rectification.
+选中的状态。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Defines a Checkbox callback when onChange.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | selected status  |
+| value | boolean | Yes | 返回true表示已选中。返回false表示未选中。 |
 

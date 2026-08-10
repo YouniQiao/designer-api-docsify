@@ -1,6 +1,6 @@
 # Progress
 
-Describes the data structure of the task progress.
+任务进度的数据结构。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the data structure of the task progress.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## extras
 
 ```TypeScript
 readonly extras?: object
 ```
 
-Extra information of the task, for example, the header and body of the response from the server. The default value is empty.
+交互的额外内容，例如：来自服务器的响应的header和body。默认值为空。
 
 **Type:** object
 
@@ -36,9 +42,9 @@ Extra information of the task, for example, the header and body of the response 
 readonly index: int
 ```
 
-Index of the file that is being processed in the task.
+任务中当前正在处理的文件索引。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -56,9 +62,9 @@ Index of the file that is being processed in the task.
 readonly processed: long
 ```
 
-Size of processed data in the current file in the task, in bytes.
+任务中当前文件的已处理数据大小，单位为字节（B）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -76,9 +82,9 @@ Size of processed data in the current file in the task, in bytes.
 readonly sizes: Array<long>
 ```
 
-Size of a file in a task, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **sizes** is treated as **-1**.
+任务中文件的大小，单位为字节（B）。在下载过程中，若服务器使用chunk方式传输导致无法从请求头中获取文件总大小时，sizes为 -1。
 
-**Type:** Array&lt;long&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
 
 **Since:** 10
 
@@ -96,9 +102,9 @@ Size of a file in a task, in bytes. If the server uses the chunk mode for data t
 readonly state: State
 ```
 
-Current task status.
+任务当前的状态。
 
-**Type:** State
+**Type:** [State](arkts-basicservices-agent-state-e.md)
 
 **Since:** 10
 

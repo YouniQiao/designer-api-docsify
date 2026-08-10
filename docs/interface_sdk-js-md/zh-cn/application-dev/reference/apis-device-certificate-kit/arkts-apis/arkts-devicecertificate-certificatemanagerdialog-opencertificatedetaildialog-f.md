@@ -1,5 +1,11 @@
 # openCertificateDetailDialog
 
+## 导入模块
+
+```TypeScript
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## openCertificateDetailDialog
 
 ```TypeScript
@@ -26,7 +32,7 @@ function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, p
 | --- | --- | --- | --- |
 | context | common.Context | 是 | 表示应用的上下文信息。 |
 | cert | Uint8Array | 是 | 表示证书数据。 |
-| property | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示打开证书管理对话框的属性。 |
+| property | [CertificateDialogProperty](arkts-devicecertificate-certificatemanagerdialog-certificatedialogproperty-i.md) | 是 | 表示打开证书管理对话框的属性。 |
 
 **返回值：**
 
@@ -38,13 +44,13 @@ function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, p
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
-| [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) | Show the certificate detail dialog failed, such as the certificate is in an invalid format. |
-| [29700004](../errorcode-certManagerDialog.md#29700004-设备类型不支持) | The API is not supported on this device. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 29700004 | The API is not supported on this device. |
+| 29700001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| 29700003 | Show the certificate detail dialog failed, such as the certificate is in an invalid format. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';

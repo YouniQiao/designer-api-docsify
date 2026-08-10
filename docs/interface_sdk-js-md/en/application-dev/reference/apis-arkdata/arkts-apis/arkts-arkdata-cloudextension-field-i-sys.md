@@ -1,6 +1,6 @@
 # Field (System API)
 
-Represents a field in the database.
+数据库中的字段结构。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents a field in the database.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## alias
 
 ```TypeScript
 alias: string
 ```
 
-Alias of the field in the table.
+该字段在服务器表中的别名。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Alias of the field in the table.
 colName: string
 ```
 
-Name of the column, in which the field is located.
+列名。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Name of the column, in which the field is located.
 nullable: boolean
 ```
 
-Whether the current column can be null.The value true means the current column can be null; the value false means the opposite.
+当前列是否允许为空值。true表示允许为空，false表示不允许为空。
 
 **Type:** boolean
 
@@ -78,7 +84,7 @@ Whether the current column can be null.The value true means the current column c
 primary: boolean
 ```
 
-Whether the current column is the primary key.The value true means the current column is the primary key; the value false means the opposite.
+当前列是否为主键。true表示是主键，false表示不是主键。
 
 **Type:** boolean
 
@@ -98,9 +104,9 @@ Whether the current column is the primary key.The value true means the current c
 type: FieldType
 ```
 
-Type of the field. For details, see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+字段类型。
 
-**Type:** FieldType
+**Type:** [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md)
 
 **Since:** 11
 

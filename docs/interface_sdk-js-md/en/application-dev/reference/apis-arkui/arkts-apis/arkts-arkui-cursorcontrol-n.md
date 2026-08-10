@@ -6,6 +6,8 @@ CursorControl
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-export declare namespace cursorControl--><!--Device-unnamed-export declare namespace cursorControl-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

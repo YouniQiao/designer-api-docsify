@@ -20,7 +20,7 @@ action?: GestureShortcut
 
 当未显式传入该参数或参数异常时，会清空当前组件的智慧手势响应行为配置。
 
-**类型：** GestureShortcut
+**类型：** [GestureShortcut](../arkts-apis/arkts-arkui-gestureshortcut-e.md)
 
 **起始版本：** 26.0.0
 

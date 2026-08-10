@@ -1,17 +1,24 @@
 # run
 
+## Modules to Import
+
+```TypeScript
+import { startupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## run
 
 ```TypeScript
 function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 ```
 
-Runs startup tasks or loads .so files.
-    **NOTE**  
-    
-    This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use  
-    [startupManager.run]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    .
+执行启动框架启动任务或加载so文件。
+
+> **说明：**
+> 
+> 本接口不支持执行feature类型HAP中的启动任务，如需要使用相关能力请调用
+> [startupManager.run](arkts-ability-startupmanager-run-f.md#run)
+> 接口。
 
 **Since:** 12
 
@@ -27,27 +34,27 @@ Runs startup tasks or loads .so files.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ names or names of .so files to be preloaded. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
+| startupTasks | Array&lt;string&gt; | Yes | 表示准备执行的启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称的数组。 |
+| config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | No | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) | Startup task or its dependency not found. |
-| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) | The startup tasks have circular dependencies. |
-| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) | An error occurred while running the startup tasks. |
-| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) | Running startup tasks timeout. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 28800004 | Running startup tasks timeout. |
+| 28800003 | An error occurred while running the startup tasks. |
+| 28800002 | The startup tasks have circular dependencies. |
+| 16000050 | Internal error. |
+| 28800001 | Startup task or its dependency not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
@@ -83,8 +90,7 @@ export default class EntryAbility extends UIAbility {
 function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
 ```
 
-Runs startup tasks or loads .so files. You can specify  
-[AbilityStageContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for loading startup tasks. This API uses a promise to return the result.
+执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md)用于启动任务的加载。使用Promise异步回调。
 
 **Since:** 20
 
@@ -100,27 +106,27 @@ Runs startup tasks or loads .so files. You can specify
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ names or names of .so files to be preloaded. |
-| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. It is passed as an input parameter to [init]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the task. |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
+| startupTasks | Array&lt;string&gt; | Yes | 表示准备执行的启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称的数组。 |
+| context | common.AbilityStageContext | Yes | 表示执行启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的AbilityStage上下文，作为入参传给启动任务的 [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init)。 |
+| config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | Yes | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) | Startup task or its dependency not found. |
-| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) | The startup tasks have circular dependencies. |
-| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) | An error occurred while running the startup tasks. |
-| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) | Running startup tasks timeout. |
+| 28800004 | Running startup tasks timeout. |
+| 28800003 | An error occurred while running the startup tasks. |
+| 28800002 | The startup tasks have circular dependencies. |
+| 16000050 | Internal error. |
+| 28800001 | Startup task or its dependency not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityStage, startupManager, StartupListener, StartupConfig } from '@kit.AbilityKit';

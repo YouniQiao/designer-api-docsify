@@ -1,5 +1,11 @@
 # restartPrintJob（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## restartPrintJob
 
 ```TypeScript
@@ -36,20 +42,20 @@ function restartPrintJob(jobId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let jobId : string = '121212';
 print.restartPrintJob(jobId).then(() => {
     console.info('restartPrintJob success');
 }).catch((error: BusinessError) => {
-    console.error('restartPrintJob failed, because : ' + JSON.stringify(error));
-})
+    console.error(`Failed to restart print job. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

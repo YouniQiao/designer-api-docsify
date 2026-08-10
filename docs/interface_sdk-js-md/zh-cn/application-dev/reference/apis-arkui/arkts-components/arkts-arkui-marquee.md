@@ -39,7 +39,8 @@ Marquee(options: MarqueeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 配置跑马灯组件的参数。 |
+| options | [MarqueeOptions](../arkts-apis/arkts-arkui-marquee-marqueeoptions-i.md) | 是 | 配置跑马灯组件的参数。 |
 
 ## 汇总
 
+- [MarqueeOptions](arkts-arkui-marquee-marqueeoptions-i.md)

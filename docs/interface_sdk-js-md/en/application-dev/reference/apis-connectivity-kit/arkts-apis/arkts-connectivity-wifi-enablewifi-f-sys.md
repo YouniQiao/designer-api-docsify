@@ -1,5 +1,11 @@
 # enableWifi (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## enableWifi
 
 ```TypeScript
@@ -30,7 +36,7 @@ Enables Wi-Fi.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

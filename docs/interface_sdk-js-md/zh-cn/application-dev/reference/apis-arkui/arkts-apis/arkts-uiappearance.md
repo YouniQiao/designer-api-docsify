@@ -11,6 +11,12 @@
 
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
+## 导入模块
+
+```TypeScript
+import { uiAppearance } from 'kits/@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 函数

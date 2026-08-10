@@ -22,7 +22,7 @@ focusedAreaBackgroundColor?: ResourceColor
 
 Background color of the focus area.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ focusedDayColor?: ResourceColor
 
 Style of focus color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
 
@@ -94,7 +94,7 @@ focusedLunarColor?: ResourceColor
 
 Focus on Lunar Colors.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
 

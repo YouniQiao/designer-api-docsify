@@ -1,6 +1,6 @@
 # Options
 
-Represents the configuration options of a **Preferences** instance.
+Preferences实例配置选项。
 
 **Since:** 12
 
@@ -10,17 +10,23 @@ Represents the configuration options of a **Preferences** instance.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
+## Modules to Import
+
+```TypeScript
+import { sendablePreferences } from 'kits/@kit.ArkData';
+```
+
 ## dataGroupId
 
 ```TypeScript
 dataGroupId?: string | null
 ```
 
-Application group ID. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Currently, this parameter is not supported.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+应用组ID，&lt;!--RP1--&gt;暂不支持指定dataGroupId在对应共享沙箱路径下创建Preferences实例。&lt;!--RP1End--&gt;
 
-This parameter is optional. A **Preferences** instance will be created in the sandbox path corresponding to the specified **dataGroupId**. If this parameter is not specified, the **Preferences** instance is created in the sandbox directory of the application.
+为可选参数。指定在此dataGroupId对应的沙箱路径下创建Preferences实例。当此参数不填时，默认在本应用沙箱目录下创建Preferences实例。
 
-This attribute can be used only in the stage model.
+**模型约束：** 此属性仅在Stage模型下可用。
 
 **Type:** string \| null
 
@@ -42,7 +48,7 @@ This attribute can be used only in the stage model.
 name: string
 ```
 
-Name of the **Preferences** instance.
+Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。
 
 **Type:** string
 

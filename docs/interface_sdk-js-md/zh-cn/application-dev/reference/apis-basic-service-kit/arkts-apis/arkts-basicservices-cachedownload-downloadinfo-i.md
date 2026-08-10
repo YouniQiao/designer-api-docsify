@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## network
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly network: NetworkInfo
 
 预下载的网络信息。
 
-**类型：** NetworkInfo
+**类型：** [NetworkInfo](arkts-basicservices-cachedownload-networkinfo-i.md)
 
 **起始版本：** 20
 
@@ -36,7 +42,7 @@ readonly performance: PerformanceInfo
 
 预下载的性能信息。
 
-**类型：** PerformanceInfo
+**类型：** [PerformanceInfo](arkts-basicservices-cachedownload-performanceinfo-i.md)
 
 **起始版本：** 20
 
@@ -54,7 +60,7 @@ readonly resource: ResourceInfo
 
 预下载的资源信息。
 
-**类型：** ResourceInfo
+**类型：** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 
 **起始版本：** 20
 

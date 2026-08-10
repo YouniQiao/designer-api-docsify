@@ -1,6 +1,6 @@
 # MoveIndex
 
-Defines position of moved data.
+定义移动数据的位置。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines position of moved data.
 from: number
 ```
 
-Start position for the movement. The value range is [0, data source length - 1].
+起始移动位置。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Start position for the movement. The value range is [0, data source length - 1].
 to: number
 ```
 
-End position for the movement. The value range is [0, data source length - 1].
+目标移动位置。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
 
 **Type:** number
 

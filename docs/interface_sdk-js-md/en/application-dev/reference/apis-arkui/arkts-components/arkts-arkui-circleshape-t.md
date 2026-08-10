@@ -4,7 +4,7 @@
 declare type CircleShape = import('../api/@ohos.arkui.shape').CircleShape
 ```
 
-Defines the CircleShape type.
+导入CircleShape类型对象。
 
 **Since:** 12
 

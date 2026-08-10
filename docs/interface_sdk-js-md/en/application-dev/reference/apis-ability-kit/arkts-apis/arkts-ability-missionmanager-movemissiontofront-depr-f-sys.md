@@ -6,7 +6,7 @@
 function moveMissionToFront(missionId: number, callback: AsyncCallback<void>): void
 ```
 
-Switches a given mission to the foreground. This API uses an asynchronous callback to return the result.
+把指定任务id的任务切到前台。使用callback异步回调。
 
 **Since:** 8
 
@@ -28,10 +28,10 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
+| missionId | number | Yes | 任务ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当把指定任务id的任务切到前台成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -57,7 +57,7 @@ try {
 function moveMissionToFront(missionId: number, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses an asynchronous callback to return the result.
+把指定任务id的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用callback异步回调。
 
 **Since:** 8
 
@@ -79,11 +79,11 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
+| missionId | number | Yes | 任务ID。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | Yes | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当把指定任务id的任务切到前台成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -109,7 +109,7 @@ try {
 function moveMissionToFront(missionId: number, options?: StartOptions): Promise<void>
 ```
 
-Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses a promise to return the result.
+把指定任务id的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用Promise异步回调。
 
 **Since:** 8
 
@@ -131,16 +131,16 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
+| missionId | number | Yes | 任务ID。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

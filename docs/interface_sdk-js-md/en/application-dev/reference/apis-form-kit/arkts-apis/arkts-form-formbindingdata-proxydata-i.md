@@ -10,6 +10,12 @@ Defines the form proxy data.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formBindingData } from 'kits/@kit.FormKit';
+```
+
 ## key
 
 ```TypeScript

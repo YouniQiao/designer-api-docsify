@@ -1,6 +1,6 @@
 # SideBarPosition
 
-Enumerates the positions of the sidebar.
+侧边栏显示位置。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the positions of the sidebar.
 Start
 ```
 
-The sidebar is on the left side of the container.
+侧边栏位于容器左侧。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ The sidebar is on the left side of the container.
 End
 ```
 
-The sidebar is on the right side of the container.
+侧边栏位于容器右侧。
 
 **Since:** 9
 

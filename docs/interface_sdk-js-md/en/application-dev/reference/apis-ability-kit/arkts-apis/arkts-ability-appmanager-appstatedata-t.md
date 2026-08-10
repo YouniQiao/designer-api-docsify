@@ -4,7 +4,7 @@
 export type AppStateData = _AppStateData.default
 ```
 
-Defines the application state data.
+应用状态信息。
 
 **Since:** 14
 

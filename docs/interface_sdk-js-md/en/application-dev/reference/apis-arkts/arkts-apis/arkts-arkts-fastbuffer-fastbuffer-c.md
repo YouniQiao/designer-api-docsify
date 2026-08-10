@@ -1,6 +1,6 @@
 # FastBuffer
 
-The FastBuffer object is a method of handling buffers dedicated to binary data.
+FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长度的字节序列，是专门存放二进制数据的缓冲区。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## compare
 
 ```TypeScript
 compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1
 ```
 
-Compares buf with target and returns a number indicating whether buf comes before, after,or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
+比较当前对象this与目标对象target，并返回比较结果。
 
 **Since:** 20
 
@@ -32,26 +38,26 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | The buffer to compare with this buffer |
-| targetStart | number | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
-| targetEnd | number | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
-| sourceStart | number | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
-| sourceEnd | number | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to end comparison (not inclusive) |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | 要比较的实例对象。 |
+| targetStart | number | No | `target`实例中开始的偏移量。默认值：0。取值范围：0 <= targetStart <= target.length。 |
+| targetEnd | number | No | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。取值范围：0 <= targetEnd <= target.length。 |
+| sourceStart | number | No | `this`实例中开始的偏移量。默认值：0。取值范围：0 <= sourceStart <= this.length。 |
+| sourceEnd | number | No | `this`实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
+| -1 | 返回比较结果。&lt;br/&gt;-1：当前排列在目标前；&lt;br/&gt;0：当前与目标相同；&lt;br/&gt;1：当前排列在目标后。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -73,7 +79,9 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf.If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
+将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
+
+如果sourceEnd大于target的长度，则以target的长度为准，超出部分不会被覆盖。
 
 **Since:** 20
 
@@ -89,25 +97,25 @@ Copies data from a region of buf to a region in target, even if the target memor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | The buffer to copy data into |
-| targetStart | number | No | targetStart [targetStart = 0] The offset within target at which to begin writing |
-| sourceStart | number | No | sourceStart [sourceStart = 0] The offset within buf from which to begin copying |
-| sourceEnd | number | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to stop copying (not inclusive) |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | 要复制到的Buffer或Uint8Array实例。 |
+| targetStart | number | No | `target`实例中开始写入的偏移量。默认值：0。取值范围：0 <= targetStart <= UINT32_MAX。 |
+| sourceStart | number | No | `this`实例中开始复制的偏移量。默认值：0。取值范围：0 <= sourceStart <= UINT32_MAX。 |
+| sourceEnd | number | No | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | The number of bytes copied |
+| number | 复制的字节总长度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -133,7 +141,7 @@ entries(): IterableIterator<[
         ]>
 ```
 
-Creates and returns an iterator of [index, byte] pairs from the contents of buf.
+返回一个包含key值和value值的迭代器，其中key为字节索引位置，value为该位置的字节值。
 
 **Since:** 20
 
@@ -149,9 +157,9 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[             number, number         ]&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[             number, number         ]&gt; |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -179,7 +187,7 @@ while (!next.done) {
 equals(otherBuffer: Uint8Array | FastBuffer): boolean
 ```
 
-Returns true if both buf and otherBuffer have exactly the same bytes, false otherwise
+逐字节比较`this`和otherBuffer是否相等。
 
 **Since:** 20
 
@@ -195,21 +203,21 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| FastBuffer | Yes | The buffer to compare with this buffer for equality |
+| otherBuffer | Uint8Array \| FastBuffer | Yes | 比较的目标对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true or false |
+| boolean | 若`this`和otherBuffer逐字节相等则返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -230,7 +238,7 @@ console.info(buf1.equals(buf3).toString());
 fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer
 ```
 
-Fills buf with the specified value. If the offset and end are not given, the entire buf will be filled.
+使用`value`填充当前对象指定位置的数据，默认为循环填充，并返回填充后的FastBuffer对象。
 
 **Since:** 20
 
@@ -246,25 +254,25 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| FastBuffer \| Uint8Array \| number | Yes | The value to fill into the buffer |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to fill buf |
-| end | number | No | end [end = buf.length] Where to stop filling buf (not inclusive) |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | encoding [encoding='utf8'] The encoding for value if value is a string |
+| value | string \| FastBuffer \| Uint8Array \| number | Yes | 用于填充的值。 |
+| offset | number | No | 起始偏移量。默认值：0。取值范围：0 <= offset <= this.length。 |
+| end | number | No | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= end <= this.length。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（`value`为string才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A reference to buf |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回填充后的FastBuffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -280,7 +288,7 @@ console.info(b.toString());
 includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
 ```
 
-Returns true if value was found in buf, false otherwise
+检查FastBuffer对象是否包含`value`值。
 
 **Since:** 20
 
@@ -296,17 +304,17 @@ Returns true if value was found in buf, false otherwise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to search for in the buffer |
-| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf. If negative, then offset is calculated from the end of buf |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | encoding [encoding='utf8'] If value is a string, this is its encoding |
+| value | string \| number \| FastBuffer \| Uint8Array | Yes | 要搜索的内容。 |
+| byteOffset | number | No | 字节偏移量。若为正数，则从0开始计算偏移量；若为负数，则从末尾开始计算偏移量。默认值：0。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true or false |
+| boolean | 若FastBuffer对象包含`value`值时返回true，否则为false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -324,7 +332,7 @@ console.info(buf.includes('be').toString());
 indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-The index of the first occurrence of value in buf
+返回当前对象中首次出现`value`的索引，如果不包含`value`，则返回-1。
 
 **Since:** 20
 
@@ -340,17 +348,17 @@ The index of the first occurrence of value in buf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to find the index for in the buffer |
-| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | encoding [encoding='utf8'] If value is a string, this is the encoding used to determine the binary representation of the string that will be searched for in buf |
+| value | string \| number \| FastBuffer \| Uint8Array | Yes | 要查找的内容。 |
+| byteOffset | number | No | 字节偏移量。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。默认值：0。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | The index of the first occurrence of value in buf, or -1 if buf does not contain value |
+| number | 返回第一次出现的位置。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -368,7 +376,7 @@ console.info(buf.indexOf('is').toString());
 keys(): IterableIterator<number>
 ```
 
-Creates and returns an iterator of buf keys (indices).
+返回一个包含key值的迭代器，其中key为字节索引位置，范围为0到length-1。
 
 **Since:** 20
 
@@ -384,9 +392,9 @@ Creates and returns an iterator of buf keys (indices).
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -412,7 +420,7 @@ Output: 0
 lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-The index of the last occurrence of value in buf
+返回当前对象中最后一次出现`value`的索引，如果对象不包含`value`，则返回-1。
 
 **Since:** 20
 
@@ -428,17 +436,17 @@ The index of the last occurrence of value in buf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to find the last index for in the buffer |
-| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | encoding [encoding='utf8'] If value is a string, this is the encoding used to determine the binary representation of the string that will be searched for in buf |
+| value | string \| number \| FastBuffer \| Uint8Array | Yes | 要搜索的内容。 |
+| byteOffset | number | No | 字节偏移量。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。默认值：this.length - 1。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | The index of the last occurrence of value in buf, or -1 if buf does not contain value |
+| number | 最后一次出现`value`值的索引。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -456,7 +464,7 @@ console.info(buf.lastIndexOf('buffer').toString());
 readBigInt64BE(offset?: number): bigint
 ```
 
-Reads a signed, big-endian 64-bit integer from buf at the specified offset
+从指定的`offset`处读取有符号的大端序64位整数。
 
 **Since:** 20
 
@@ -472,21 +480,21 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | Return a signed, big-endian 64-bit integer |
+| bigint | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -503,7 +511,7 @@ console.info(buf.readBigInt64BE(0).toString());
 readBigInt64LE(offset?: number): bigint
 ```
 
-Reads a signed, little-endian 64-bit integer from buf at the specified offset
+从指定的`offset`处读取有符号的小端序64位整数。
 
 **Since:** 20
 
@@ -519,21 +527,21 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | Return a signed, little-endian 64-bit integer |
+| bigint | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -550,7 +558,7 @@ console.info(buf.readBigInt64LE(0).toString());
 readBigUInt64BE(offset?: number): bigint
 ```
 
-Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
+从指定的`offset`处读取无符号的大端序64位整数。
 
 **Since:** 20
 
@@ -566,21 +574,21 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | Return a unsigned, big-endian 64-bit integer |
+| bigint | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -597,7 +605,7 @@ console.info(buf.readBigUInt64BE(0).toString());
 readBigUInt64LE(offset?: number): bigint
 ```
 
-Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
+从指定的`offset`处读取无符号的小端序64位整数。
 
 **Since:** 20
 
@@ -613,21 +621,21 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | Return a unsigned, little-endian 64-bit integer |
+| bigint | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -644,7 +652,7 @@ console.info(buf.readBigUInt64LE(0).toString());
 readDoubleBE(offset?: number): number
 ```
 
-Reads a 64-bit, big-endian double from buf at the specified offset
+从指定的`offset`处读取64位大端序双精度值。
 
 **Since:** 20
 
@@ -660,21 +668,21 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a 64-bit, big-endian double |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -690,7 +698,7 @@ console.info(buf.readDoubleBE(0).toString());
 readDoubleLE(offset?: number): number
 ```
 
-Reads a 64-bit, little-endian double from buf at the specified offset
+从指定的`offset`处读取64位小端序双精度值。
 
 **Since:** 20
 
@@ -706,21 +714,21 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a 64-bit, little-endian double |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -736,7 +744,7 @@ console.info(buf.readDoubleLE(0).toString());
 readFloatBE(offset?: number): number
 ```
 
-Reads a 32-bit, big-endian float from buf at the specified offset
+从指定的`offset`处读取32位大端序浮点数。
 
 **Since:** 20
 
@@ -752,21 +760,21 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a 32-bit, big-endian float |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -782,7 +790,7 @@ console.info(buf.readFloatBE(0).toString());
 readFloatLE(offset?: number): number
 ```
 
-Reads a 32-bit, little-endian float from buf at the specified offset
+从指定的`offset`处读取32位小端序浮点数。
 
 **Since:** 20
 
@@ -798,21 +806,21 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a 32-bit, little-endian float |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -828,7 +836,7 @@ console.info(buf.readFloatLE(0).toString());
 readInt16BE(offset?: number): number
 ```
 
-Reads a signed, big-endian 16-bit integer from buf at the specified offset
+从指定的`offset`处读取有符号的大端序16位整数。
 
 **Since:** 20
 
@@ -844,21 +852,21 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 2 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a signed, big-endian 16-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -874,7 +882,7 @@ console.info(buf.readInt16BE(0).toString());
 readInt16LE(offset?: number): number
 ```
 
-Reads a signed, little-endian 16-bit integer from buf at the specified offset
+从指定的`offset`处读取有符号的小端序16位整数。
 
 **Since:** 20
 
@@ -890,21 +898,21 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 2 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a signed, little-endian 16-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -920,7 +928,7 @@ console.info(buf.readInt16LE(0).toString());
 readInt32BE(offset?: number): number
 ```
 
-Reads a signed, big-endian 32-bit integer from buf at the specified offset
+从指定的`offset`处读取有符号的大端序32位整数。
 
 **Since:** 20
 
@@ -936,21 +944,21 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a signed, big-endian 32-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -966,7 +974,7 @@ console.info(buf.readInt32BE(0).toString());
 readInt32LE(offset?: number): number
 ```
 
-Reads a signed, little-endian 32-bit integer from buf at the specified offset
+从指定的`offset`处读取有符号的小端序32位整数。
 
 **Since:** 20
 
@@ -982,21 +990,21 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a signed, little-endian 32-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1012,7 +1020,7 @@ console.info(buf.readInt32LE(0).toString());
 readInt8(offset?: number): number
 ```
 
-Reads a signed 8-bit integer from buf at the specified offset
+从指定的`offset`处读取有符号的8位整数。
 
 **Since:** 20
 
@@ -1028,21 +1036,21 @@ Reads a signed 8-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 1 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return a signed 8-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1060,7 +1068,7 @@ console.info(buf.readInt8(1).toString());
 readIntBE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian,two's complement signed value supporting up to 48 bits of accuracy
+从指定的`offset`处读取byteLength个字节，并将结果解释为支持最高48位精度的大端序、二进制补码有符号值。
 
 **Since:** 20
 
@@ -1076,22 +1084,22 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
+| byteLength | number | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number |  |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1108,7 +1116,7 @@ console.info(num.toString());
 readIntLE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian,two's complement signed value supporting up to 48 bits of accuracy.
+从指定的`offset`处读取`byteLength`个字节，并将结果解释为支持最高48位精度的小端序、二进制补码有符号值。
 
 **Since:** 20
 
@@ -1124,22 +1132,22 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
+| byteLength | number | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number |  |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1155,7 +1163,7 @@ console.info(buf.readIntLE(0, 6).toString(16));
 readUInt16BE(offset?: number): number
 ```
 
-Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
+从指定的`offset`处读取无符号的大端序16位整数。
 
 **Since:** 20
 
@@ -1171,21 +1179,21 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 2 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Reads an unsigned, big-endian 16-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1203,7 +1211,7 @@ console.info(buf.readUInt16BE(1).toString(16));
 readUInt16LE(offset?: number): number
 ```
 
-Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
+从指定的`offset`处的buf读取无符号的小端序16位整数。
 
 **Since:** 20
 
@@ -1219,21 +1227,21 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 2 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Reads an unsigned, little-endian 16-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1251,7 +1259,7 @@ console.info(buf.readUInt16LE(1).toString(16));
 readUInt32BE(offset?: number): number
 ```
 
-Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
+从指定的`offset`处的buf读取无符号的大端序32位整数。
 
 **Since:** 20
 
@@ -1267,21 +1275,21 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 4 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Reads an unsigned, big-endian 32-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1297,7 +1305,7 @@ console.info(buf.readUInt32BE(0).toString(16));
 readUInt32LE(offset?: number): number
 ```
 
-Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
+从指定的`offset`处的buf读取无符号的小端序32位整数。
 
 **Since:** 20
 
@@ -1313,21 +1321,21 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 4 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Reads an unsigned, little-endian 32-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1343,7 +1351,7 @@ console.info(buf.readUInt32LE(0).toString(16));
 readUInt8(offset?: number): number
 ```
 
-Reads an unsigned 8-bit integer from buf at the specified offset
+从`offset`处读取8位无符号整型数。
 
 **Since:** 20
 
@@ -1359,21 +1367,21 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 1 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Reads an unsigned 8-bit integer |
+| number | 读取出的内容。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1391,7 +1399,7 @@ console.info(buf.readUInt8(1).toString());
 readUIntBE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned big-endian integer supporting up to 48 bits of accuracy.
+从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
 
 **Since:** 20
 
@@ -1407,22 +1415,22 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
+| byteLength | number | Yes | 要读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number |  |
+| number | 读取出的内容。当offset为小数时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1438,7 +1446,7 @@ console.info(buf.readUIntBE(0, 6).toString(16));
 readUIntLE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned,little-endian integer supporting up to 48 bits of accuracy.
+从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号小端序整数。
 
 **Since:** 20
 
@@ -1454,22 +1462,22 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
+| byteLength | number | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number |  |
+| number | 读取出的内容。当offset为小数时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1485,7 +1493,7 @@ console.info(buf.readUIntLE(0, 6).toString(16));
 subarray(start?: number, end?: number): FastBuffer
 ```
 
-Returns a new FastBuffer that references the same memory as the original, but offset and cropped by the start and end indices.
+截取当前对象指定位置的数据并返回。
 
 **Since:** 20
 
@@ -1501,16 +1509,16 @@ Returns a new FastBuffer that references the same memory as the original, but of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | start [start = 0] Where the new FastBuffer will start |
-| end | number | No | end [end = buf.length] Where the new FastBuffer will end (not inclusive) |
+| start | number | No | 截取开始位置。默认值：0。 |
+| end | number | No | 截取结束位置（不包含结束位置）。默认值：当前对象的字节长度。取值范围：start <= end <= this.length。传入null时返回空FastBuffer。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a new FastBuffer that references the same memory as the original |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回新的FastBuffer对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1531,7 +1539,7 @@ console.info(buf2.toString('ascii', 0, buf2.length));
 swap16(): FastBuffer
 ```
 
-Interprets buf as an array of unsigned 16-bit integers and swaps the byte order in-place.
+将当前对象转换为无符号的16位整数数组，并交换字节顺序。
 
 **Since:** 20
 
@@ -1547,15 +1555,15 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A reference to buf |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 16-bits |
+| 10200009 | The fastbuffer size must be a multiple of 16-bits |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1574,7 +1582,7 @@ console.info(buf1.toString('hex'));
 swap32(): FastBuffer
 ```
 
-Interprets buf as an array of unsigned 32-bit integers and swaps the byte order in-place.
+将当前对象转换为无符号的32位整数数组，并交换字节顺序。
 
 **Since:** 20
 
@@ -1590,15 +1598,15 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A reference to buf |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 32-bits |
+| 10200009 | The fastbuffer size must be a multiple of 32-bits |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1617,7 +1625,7 @@ console.info(buf1.toString('hex'));
 swap64(): FastBuffer
 ```
 
-Interprets buf as an array of unsigned 64-bit integers and swaps the byte order in-place.
+将当前对象转换为无符号的64位整数数组，并交换字节顺序。
 
 **Since:** 20
 
@@ -1633,15 +1641,15 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A reference to buf |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 64-bits |
+| 10200009 | The fastbuffer size must be a multiple of 64-bits |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1660,7 +1668,7 @@ console.info(buf1.toString('hex'));
 toJSON(): Object
 ```
 
-Returns a JSON representation of buf
+将Buffer转为JSON并返回。
 
 **Since:** 20
 
@@ -1676,9 +1684,9 @@ Returns a JSON representation of buf
 
 | Type | Description |
 | --- | --- |
-| Object | Returns a JSON |
+| Object | JSON对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1695,7 +1703,7 @@ console.info(JSON.stringify(obj));
 toString(encoding?: string, start?: number, end?: number): string
 ```
 
-Decodes buf to a string according to the specified character encoding in encoding
+将当前对象中指定位置的数据转成指定编码格式的字符串并返回。
 
 **Since:** 20
 
@@ -1711,23 +1719,23 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | encoding [encoding='utf8'] The character encoding to use |
-| start | number | No | start [start = 0] The byte offset to start decoding at |
-| end | number | No | end [end = buf.length] The byte offset to stop decoding at (not inclusive) |
+| encoding | string | No | 字符编码格式。默认值：'utf8'。 |
+| start | number | No | 开始位置。默认值：0。 |
+| end | number | No | 结束位置。默认值：Buffer.length。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | 字符串。当start >= this.length或start > end时返回空字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1746,7 +1754,7 @@ console.info(buf1.toString('utf-8'));
 values(): IterableIterator<number>
 ```
 
-Creates and returns an iterator for buf values (bytes).
+返回一个包含FastBuffer字节值的迭代器。
 
 **Since:** 20
 
@@ -1762,9 +1770,9 @@ Creates and returns an iterator for buf values (bytes).
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1792,7 +1800,7 @@ while (!next.done) {
 write(str: string, offset?: number, length?: number, encoding?: string): number
 ```
 
-Writes string to buf at offset according to the character encoding in encoding
+在FastBuffer对象的offset偏移处写入指定编码的字符串，写入的字节长度为length。
 
 **Since:** 20
 
@@ -1808,25 +1816,25 @@ Writes string to buf at offset according to the character encoding in encoding
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| str | string | Yes | The string to write into the buffer |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write string |
-| length | number | No | length [length = buf.length - offset] Maximum number of bytes to write (written bytes will not exceed buf.length - offset) |
-| encoding | string | No | encoding [encoding='utf8'] The character encoding of string. |
+| str | string | Yes | 要写入Buffer的字符串。 |
+| offset | number | No | 偏移量。默认值：0。 |
+| length | number | No | 最大字节长度。默认值：（this.length - offset）。 |
+| encoding | string | No | 字符编码。默认值：'utf8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Number of bytes written. |
+| number | 写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1848,7 +1856,7 @@ console.info("length = " + length);
 writeBigInt64BE(value: bigint, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as big-endian.
+在FastBuffer对象的offset偏移处写入有符号的大端序64位BigInt型数据。
 
 **Since:** 20
 
@@ -1864,22 +1872,22 @@ Writes value to buf at the specified offset as big-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | The 64-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| value | bigint | Yes | 写入Buffer的数据。取值范围：-INT64_MAX <= value <= INT64_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1896,7 +1904,7 @@ console.info("result = " + result);
 writeBigInt64LE(value: bigint, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as little-endian.
+在FastBuffer对象的offset偏移处写入有符号的小端序64位BigInt型数据。
 
 **Since:** 20
 
@@ -1912,22 +1920,22 @@ Writes value to buf at the specified offset as little-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | The 64-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| value | bigint | Yes | 写入Buffer的数据。取值范围：-INT64_MAX <= value <= INT64_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1944,7 +1952,7 @@ console.info("result = " + result);
 writeBigUInt64BE(value: bigint, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as big-endian.
+在FastBuffer对象的offset偏移处写入无符号的大端序64位BigUInt型数据。
 
 **Since:** 20
 
@@ -1960,22 +1968,22 @@ Writes value to buf at the specified offset as big-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | The unsigned 64-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| value | bigint | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT64_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1992,7 +2000,7 @@ console.info("result = " + result);
 writeBigUInt64LE(value: bigint, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as little-endian.
+在FastBuffer对象的offset偏移处写入无符号的小端序64位BigUInt型数据。
 
 **Since:** 20
 
@@ -2008,22 +2016,22 @@ Writes value to buf at the specified offset as little-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | The unsigned 64-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| value | bigint | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT64_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2040,7 +2048,7 @@ console.info("result = " + result);
 writeDoubleBE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as big-endian.
+在FastBuffer对象的offset偏移处写入大端序的64位双浮点型数据。
 
 **Since:** 20
 
@@ -2056,22 +2064,22 @@ Writes value to buf at the specified offset as big-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The 64-bit big-endian double value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-DOUBLE_MAX <= value <= DOUBLE_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2088,7 +2096,7 @@ console.info("result = " + result);
 writeDoubleLE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as little-endian.
+在FastBuffer对象的offset偏移处写入小端序的64位双浮点型数据。
 
 **Since:** 20
 
@@ -2104,22 +2112,22 @@ Writes value to buf at the specified offset as little-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The 64-bit little-endian double value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-DOUBLE_MAX <= value <= DOUBLE_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2136,7 +2144,7 @@ console.info("result = " + result);
 writeFloatBE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as big-endian.
+在FastBuffer对象的offset偏移处写入大端序的32位浮点型数据。
 
 **Since:** 20
 
@@ -2152,22 +2160,22 @@ Writes value to buf at the specified offset as big-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The 32-bit big-endian float value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-FLOAT_MAX <= value <= FLOAT_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2184,7 +2192,7 @@ console.info("result = " + result);
 writeFloatLE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as little-endian.
+在FastBuffer对象的offset偏移处写入小端序的32位浮点型数据。
 
 **Since:** 20
 
@@ -2200,22 +2208,22 @@ Writes value to buf at the specified offset as little-endian.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The 32-bit little-endian float value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-FLOAT_MAX <= value <= FLOAT_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2232,7 +2240,7 @@ console.info("result = " + result);
 writeInt16BE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as big-endian. The value must be a valid signed 16-bit integer
+在FastBuffer对象的offset偏移处写入大端序的16位有符号整型数据。
 
 **Since:** 20
 
@@ -2248,22 +2256,22 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The signed 16-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 2 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-INT16_MAX <= value <= INT16_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2280,7 +2288,7 @@ console.info("result = " + result);
 writeInt16LE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as little-endian. The value must be a valid signed 16-bit integer
+在FastBuffer对象的offset偏移处写入小端序的16位有符号整型数据。
 
 **Since:** 20
 
@@ -2296,22 +2304,22 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The signed 16-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 2 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-INT16_MAX <= value <= INT16_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2328,7 +2336,7 @@ console.info("result = " + result);
 writeInt32BE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as big-endian. The value must be a valid signed 32-bit integer.
+在FastBuffer对象的offset偏移处写入大端序的32位有符号整型数据。
 
 **Since:** 20
 
@@ -2344,22 +2352,22 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The signed 32-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-INT32_MAX <= value <= INT32_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2376,7 +2384,7 @@ console.info("result = " + result);
 writeInt32LE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as little-endian. The value must be a valid signed 32-bit integer.
+在FastBuffer对象的offset偏移处写入小端序的32位有符号整型数据。
 
 **Since:** 20
 
@@ -2392,22 +2400,22 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The signed 32-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-INT32_MAX <= value <= INT32_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2424,7 +2432,7 @@ console.info("result = " + result);
 writeInt8(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset. value must be a valid signed 8-bit integer.
+在FastBuffer对象的offset偏移处写入8位有符号整型数据。
 
 **Since:** 20
 
@@ -2440,22 +2448,22 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The signed 8-bit integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 1 |
+| value | number | Yes | 写入Buffer的数据。取值范围：-INT8_MAX <= value <= INT8_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2475,7 +2483,7 @@ console.info("result1 = " + result1);
 writeIntBE(value: number, offset: number, byteLength: number): number
 ```
 
-Writes byteLength bytes of value to buf at the specified offset as big-endian
+在FastBuffer对象的offset偏移处写入大端序的有符号数据，字节长度为byteLength。
 
 **Since:** 20
 
@@ -2491,23 +2499,23 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The big-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
+| value | number | Yes | 写入Buffer的数据。取值范围取决于byteLength。 |
+| offset | number | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
+| byteLength | number | Yes | 要写入的字节数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2524,7 +2532,7 @@ console.info("result = " + result);
 writeIntLE(value: number, offset: number, byteLength: number): number
 ```
 
-Writes byteLength bytes of value to buf at the specified offset as little-endian
+在FastBuffer对象的offset偏移处写入小端序的有符号数据，字节长度为byteLength。
 
 **Since:** 20
 
@@ -2540,23 +2548,23 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The little-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
+| value | number | Yes | 写入Buffer的数据。取值范围取决于byteLength。 |
+| offset | number | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
+| byteLength | number | Yes | 要写入的字节数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2573,7 +2581,7 @@ console.info("result = " + result);
 writeUInt16BE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as big-endian. The value must be a valid unsigned 16-bit integer.
+在FastBuffer对象的offset偏移处写入大端序的16位无符号整型数据。
 
 **Since:** 20
 
@@ -2589,22 +2597,22 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The unsigned 16-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 2 |
+| value | number | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT16_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2624,7 +2632,7 @@ console.info("result1 = " + result1);
 writeUInt16LE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as little-endian. The value must be a valid unsigned 16-bit integer.
+在FastBuffer对象的offset偏移处写入小端序的16位无符号整型数据。
 
 **Since:** 20
 
@@ -2640,22 +2648,22 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The unsigned 16-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 2 |
+| value | number | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT16_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2675,7 +2683,7 @@ console.info("result1 = " + result1);
 writeUInt32BE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as big-endian. The value must be a valid unsigned 32-bit integer.
+在FastBuffer对象的offset偏移处写入大端序的32位无符号整型数据。
 
 **Since:** 20
 
@@ -2691,22 +2699,22 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The unsigned 32-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 4 |
+| value | number | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT32_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2723,7 +2731,7 @@ console.info("result = " + result);
 writeUInt32LE(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset as little-endian. The value must be a valid unsigned 32-bit integer.
+在FastBuffer对象的offset偏移处写入小端序的32位无符号整型数据。
 
 **Since:** 20
 
@@ -2739,22 +2747,22 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The unsigned 32-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 4 |
+| value | number | Yes | 写入FastBuffer对象的数据。取值范围：0 <= value <= UINT32_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2771,7 +2779,7 @@ console.info("result = " + result);
 writeUInt8(value: number, offset?: number): number
 ```
 
-Writes value to buf at the specified offset. value must be a valid unsigned 8-bit integer
+在FastBuffer对象的offset偏移处写入8位无符号整型数据。
 
 **Since:** 20
 
@@ -2787,22 +2795,22 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The unsigned 8-bit integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 1 |
+| value | number | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT8_MAX。 |
+| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2828,7 +2836,7 @@ console.info("result3 = " + result3);
 writeUIntBE(value: number, offset: number, byteLength: number): number
 ```
 
-Writes byteLength bytes of value to buf at the specified offset as big-endian
+在FastBuffer对象的offset偏移处写入大端序的无符号数据，字节长度为byteLength。
 
 **Since:** 20
 
@@ -2844,23 +2852,23 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The unsigned big-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
+| value | number | Yes | 写入Buffer的数据。取值范围取决于byteLength。 |
+| offset | number | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
+| byteLength | number | Yes | 要写入的字节数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2877,7 +2885,7 @@ console.info("result = " + result);
 writeUIntLE(value: number, offset: number, byteLength: number): number
 ```
 
-Writes byteLength bytes of value to buf at the specified offset as little-endian
+在FastBuffer对象的offset偏移处写入小端序的无符号数据，字节长度为byteLength。
 
 **Since:** 20
 
@@ -2893,23 +2901,23 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The unsigned little-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
+| value | number | Yes | 写入Buffer的数据。取值范围取决于byteLength。 |
+| offset | number | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
+| byteLength | number | Yes | 要写入的字节数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | offset plus the number of bytes written |
+| number | 偏移量offset加上写入的字节数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2926,7 +2934,7 @@ console.info("result = " + result);
 buffer: ArrayBuffer
 ```
 
-The arraybuffer underlying the FastBuffer object
+ArrayBuffer对象。
 
 **Type:** ArrayBuffer
 
@@ -2946,7 +2954,7 @@ The arraybuffer underlying the FastBuffer object
 byteOffset: number
 ```
 
-The byteOffset of the Buffers underlying ArrayBuffer object
+当前Buffer所在内存池的偏移量。
 
 **Type:** number
 
@@ -2966,7 +2974,7 @@ The byteOffset of the Buffers underlying ArrayBuffer object
 length: number
 ```
 
-Returns the number of bytes in buf
+FastBuffer对象的字节长度。
 
 **Type:** number
 

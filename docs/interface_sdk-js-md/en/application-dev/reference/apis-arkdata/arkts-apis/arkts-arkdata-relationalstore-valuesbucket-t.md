@@ -4,7 +4,7 @@
 type ValuesBucket = Record<string, ValueType>
 ```
 
-Values in buckets are stored in key-value pairs, change {[key: string]: ValueType;} to Record&lt;string, ValueType&gt;
+用于存储键值对的类型。不支持Sendable跨线程传递。
 
 **Since:** 9
 

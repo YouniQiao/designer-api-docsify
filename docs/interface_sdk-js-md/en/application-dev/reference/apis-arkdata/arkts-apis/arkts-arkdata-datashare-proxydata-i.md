@@ -1,6 +1,6 @@
 # ProxyData
 
-Defines a struct for shared configurations.
+共享配置的数据结构。
 
 **Since:** 20
 
@@ -10,15 +10,19 @@ Defines a struct for shared configurations.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## allowList
 
 ```TypeScript
 allowList?: string[]
 ```
 
-List of applications that can subscribe to and read shared configurations. If this parameter is left empty, the value is an empty string array. The array can contain a maximum of 256 elements. Excess elements are invalid.Each element in the array is the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of an application.The maximum length of an **appIdentifier** is 128 bytes. If the length exceeds 128 bytes, the **appIdentifier**  
-does not take effect. If this parameter is not set when the shared configuration is published for the first time,the allowlist is empty by default. If this parameter is not set when the shared configuration is updated, the allowlist will not be updated. An empty allowlist indicates that only the publisher can access the shared configuration.
+允许订阅和读取共享配置的应用程序列表。不填则为空的字符串数组。数组最大长度为256，超过256的部分不生效。当首次发布共享配置时，如果未填写，将默认为空的允许列表。在更新共享配置时，如果未填写，共享配置的允许列表将不会被更新。一个空的允许列表表示只有发布者能够访问该共享配置。API版本26.0.0之前，数组中每个元素为应用的[appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，单个appIdentifier最大长度128字节，超过128字节的appIdentifier不会生效。从API版本26.0.0开始，数组支持配置特殊字符串"all"（区分大小写）表示允许所有应用访问。
 
 **Type:** string[]
 
@@ -38,7 +42,7 @@ does not take effect. If this parameter is not set when the shared configuration
 isMultiValues?: boolean
 ```
 
-Indicates whether the shared configuration is multi-value type. The default value is false, indicating that the shared configuration is not multi-value type. If the value is true, it indicates that the data being published is multi-value type, and the [value]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ parameter will be ignored.Default value: false.
+表示是否是多值类型的共享配置，默认为false，表示非多值类型。如果为true，则表示本次发布的数据是多值类型，则 [value](arkts-arkdata-datashare-proxydata-i.md#value) 参数将被忽略。默认值： false。
 
 **Type:** boolean
 
@@ -58,9 +62,7 @@ Indicates whether the shared configuration is multi-value type. The default valu
 trustProviders?: string[]
 ```
 
-List of applications that can add values to the shared configuration of multi-value type. The array can contain a maximum of 256 elements. Excess elements are invalid.Each element in the array is the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of an application.The maximum length of an **appIdentifier** is 128 bytes. If the length exceeds 128 bytes, the **appIdentifier**  
-does not take effect. If this parameter is not set when the shared configuration is published for the first time,the list is empty by default. If this parameter is not set when the shared configuration is updated, the list will not be updated. An empty list indicates that only the publisher can add values to the shared configuration.The array supports the special string "all" (case-sensitive), which indicates that all applications are allowed to add values to the shared configuration.
+可对多值类型共享配置进行赋值的App列表。数组最大长度为256个元素，超出部分无效。数组中每个元素为某个应用的[appIdentifier]（../../../quick-start/common-problem-of-application.md#什么是appIdentifier）)。appIdentifier最大长度为128字节，超过128字节的部分不生效。若首次发布共享配置时未设置该参数，则默认赋值列表为空。若更新共享配置时未设置该参数，则赋值列表不会更新。赋值列表为空表示仅发布者可以对共享配置进行赋值。该数组支持特殊字符串"all"（区分大小写），表示允许所有应用对共享配置进行赋值。
 
 **Type:** string[]
 
@@ -80,7 +82,7 @@ does not take effect. If this parameter is not set when the shared configuration
 uri: string
 ```
 
-Unique ID of a shared configuration, fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value is a string with a maximum of 256 bytes.
+共享配置的全局唯一标识。固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不允许重复。字符串长度不超过256个字节。
 
 **Type:** string
 
@@ -100,9 +102,11 @@ Unique ID of a shared configuration, fixed at the format of **"datashareproxy://
 value?: ValueType
 ```
 
-Value of a shared configuration. If not specified, the value is an empty string. The value is a string with a maximum of 4,096 bytes. If this parameter is not set when the shared configuration is published for the first time, the value will be an empty string by default. If this parameter is not set when a shared configuration is updated, the value of the shared configuration will not be updated.In versions earlier than API version 26.0.0, the maximum length of a string is 4096 bytes. In API version 26.0.0and later versions, the maximum length of a string is 4096 bytes by default, and can be extended to 102,400bytes by setting the maxValueLength parameter in [DataProxyConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+共享配置的值。不填则为空字符串。  
+**说明：**1. API版本26.0.0之前，字符串长度不超过4096个字节；从API版本26.0.0开始，默认允许的字符串最大长度为4096字节，可以在
+[DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中配置maxValueLength将最大长度扩展到102400字节。2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
 
-**Type:** ValueType
+**Type:** [ValueType](arkts-arkdata-valuetype-t.md)
 
 **Since:** 20
 
@@ -120,9 +124,9 @@ Value of a shared configuration. If not specified, the value is an empty string.
 values?: Record<int, ValueType>
 ```
 
-Values of the multi-value type. The first parameter in the **Record** is the key specified by the user, which must be unique. The second parameter is the value corresponding to the key. A maximum of 10 values can be added to a single URI for an application. Each value can contain a maximum of 4096 bytes. At the same time, the total length of all values is limited by the [maxValueLength]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ parameter value.This parameter is valid only when [isMultiValues]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is set to true.
+多值类型取值。**Record**中的第一个参数为key，key由用户指定，必须唯一。第二个参数为key对应的value。单个应用在单个URI下最多支持添加10个value，每个value最大长度为4096字节。同时，所有va lue的总长度受参数值[maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxvaluelength)]限制。该参数仅在[isMultiValues](arkts-arkdata-datashare-proxydata-i.md#ismultivalues)}设置为true时生效。
 
-**Type:** Record&lt;int, ValueType&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
 
 **Since:** 26.0.0
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authType
 
 ```TypeScript
@@ -20,7 +26,7 @@ authType: AuthType
 
 身份验证凭据类型。
 
-**类型：** AuthType
+**类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **起始版本：** 8
 
@@ -40,7 +46,7 @@ key: SetPropertyType
 
 指示要设置的属性类型。
 
-**类型：** SetPropertyType
+**类型：** [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md)
 
 **起始版本：** 8
 

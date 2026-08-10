@@ -1,6 +1,6 @@
 # SystemSoundManager
 
-管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建实例。
+管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f.md#getsystemsoundmanager)创建实例。
 
 **起始版本：** 10
 
@@ -9,6 +9,12 @@
 <!--Device-systemSoundManager-interface SystemSoundManager--><!--Device-systemSoundManager-interface SystemSoundManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from 'kits/@kit.AudioKit';
+```
 
 ## addCustomizedTone
 
@@ -32,8 +38,8 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| toneAttr | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 铃音属性。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 是 | 铃音属性。 |
 | externalUri | string | 是 | 外部存储器中的铃音uri。 |
 
 **返回值：**
@@ -46,16 +52,16 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone to add is not customized. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. System sound manager service error. |
-| [20700004](../errorcode-audio-ringtone-sys.md#20700004-数据大小超过限制) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 20+ |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 20+ |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-rom空间不足) | Insufficient ROM space.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 20+ |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400102 | Operation is not allowed, e.g. ringtone to add is not customized. |
+| 5400103 | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. System sound manager service error. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 20700006 | Insufficient ROM space.<br>**适用版本：** 20+ |
+| 20700005 | The number of files exceeds the limit.<br>**适用版本：** 20+ |
+| 20700004 | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**适用版本：** 20+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,11 +118,11 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: l
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| toneAttr | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 铃音属性。 |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 文件描述符，可通过[fileIo.open]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 否 | 读取数据的偏移量（以字节为单位）。默认情况下为0。 |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 否 | 读取的数据的长度（以字节为单位）。默认情况下，长度为偏移后的剩余全部字节数。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 是 | 铃音属性。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符，可通过[fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md/arkts-corefile-file-fs-open-f.md#open)获取。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 读取数据的偏移量（以字节为单位）。默认情况下为0。 |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 读取的数据的长度（以字节为单位）。默认情况下，长度为偏移后的剩余全部字节数。 |
 
 **返回值：**
 
@@ -128,16 +134,16 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: l
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone to add is not customized. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. Ringtone library error. 4. System sound manager service error. |
-| [20700004](../errorcode-audio-ringtone-sys.md#20700004-数据大小超过限制) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 20+ |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 20+ |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-rom空间不足) | Insufficient ROM space.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 20+ |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400102 | Operation is not allowed, e.g. ringtone to add is not customized. |
+| 5400103 | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. Ringtone library error. 4. System sound manager service error. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 20700006 | Insufficient ROM space.<br>**适用版本：** 20+ |
+| 20700005 | The number of files exceeds the limit.<br>**适用版本：** 20+ |
+| 20700004 | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**适用版本：** 20+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -192,7 +198,7 @@ close(fd: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 文件描述符，通过[openAlarmTone]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符，通过[openAlarmTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#openalarmtone)获取。 |
 
 **返回值：**
 
@@ -204,11 +210,11 @@ close(fd: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -246,7 +252,7 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
 
 **返回值：**
 
@@ -258,11 +264,11 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -299,7 +305,7 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
 
 **返回值：**
 
@@ -311,11 +317,11 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -352,7 +358,7 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -364,10 +370,10 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -402,7 +408,7 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
 
 **返回值：**
 
@@ -414,11 +420,11 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -455,8 +461,8 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -468,11 +474,11 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -510,8 +516,8 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取播放器的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | 是 | 待获取播放器的系统提示音的类型。 |
 
 **返回值：**
 
@@ -523,11 +529,11 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -565,8 +571,8 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| toneUri | string | 是 | 待获取同步振动的系统铃声Uri,可通过 [getRingtoneAttrList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_或 [getSystemToneAttrList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_等获取。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| toneUri | string | 是 | 待获取同步振动的系统铃声Uri,可通过 [getRingtoneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneattrlist)或 [getSystemToneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getsystemtoneattrlist)等获取。 |
 
 **返回值：**
 
@@ -578,13 +584,13 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. For example, the input URI is not used for tones. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400102 | Operation not allowed. For example, the input URI is not used for tones. |
+| 5400103 | I/O error. |
+| 20700003 | Unsupported operation. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -610,12 +616,13 @@ getMockHapticRingtonePlayer(
 ```
 
 获取模拟触觉铃声播放器，根据指定的铃声类型和铃音文件URI，播放该铃音文件对应的振动文件及其模拟触觉声音文件。使用Promise异步回调。
-    **说明：**  
-    
-    - 调用该接口前，请确保传入的ringtoneUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。  
-    
-    - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法释放播放器资源。
+
+> **说明：**
+> 
+> - 调用该接口前，请确保传入的ringtoneUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。
+> 
+> - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的
+> [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release)方法释放播放器资源。
 
 **起始版本：** 26.0.0
 
@@ -631,9 +638,9 @@ getMockHapticRingtonePlayer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取播放器的铃声类型。 |
-| ringtoneUri | string | 是 | 铃音文件的URI，需确保在系统文件中真实存在。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果为自定义铃声需使用 [addCustomizedTone]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 接口返回的ringtoneUri，确保铃音文件URI在铃音库中存在。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 待获取播放器的铃声类型。 |
+| ringtoneUri | string | 是 | 铃音文件的URI，需确保在系统文件中真实存在。 &lt;br&gt;如果为自定义铃声需使用 [addCustomizedTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#addcustomizedtone) 接口返回的ringtoneUri，确保铃音文件URI在铃音库中存在。 |
 
 **返回值：**
 
@@ -645,11 +652,11 @@ getMockHapticRingtonePlayer(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
+| 5400103 | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
+| 20700002 | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the {@link SystemSoundManager#addCustomizedTone}. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -679,12 +686,13 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 ```
 
 获取模拟触觉铃声播放器，根据指定的触觉文件URI播放振动文件及其对应的模拟触觉声音文件。使用Promise异步回调。
-    **说明：**  
-    
-    - 调用该接口前，请确保传入的hapticUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。  
-    
-    - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的  
-    [release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法释放播放器资源。
+
+> **说明：**
+> 
+> - 调用该接口前，请确保传入的hapticUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。
+> 
+> - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的
+> [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release)方法释放播放器资源。
 
 **起始版本：** 26.0.0
 
@@ -700,7 +708,7 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
 | hapticUri | string | 是 | 触觉文件的URI，需确保为JSON文件且在系统文件中真实存在。 |
 
 **返回值：**
@@ -713,11 +721,11 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
+| 5400103 | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
+| 20700002 | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -759,8 +767,8 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -772,11 +780,11 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -814,8 +822,8 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取播放器的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 待获取播放器的系统铃声的类型。 |
 
 **返回值：**
 
@@ -827,10 +835,10 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -870,8 +878,8 @@ Gets the ringtone player.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Current application context. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Ringtone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | Current application context. |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | Ringtone type to get. |
 
 **返回值：**
 
@@ -883,27 +891,7 @@ Gets the ringtone player.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-
-**示例：**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_SIM_CARD_0;
-let systemRingtonePlayer: systemSoundManager.RingtonePlayer | undefined = undefined;
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.getRingtonePlayer(context, type).then((value: systemSoundManager.RingtonePlayer) => {
-  console.info('Succeeded in doing getRingtonePlayer.');
-  systemRingtonePlayer = value;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
-});
-```
+| 202 | Caller is not a system application. |
 
 ## getRingtoneUri
 
@@ -925,8 +913,8 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -938,11 +926,11 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -984,11 +972,11 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取播放器的系统铃声的类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 待获取播放器的系统铃声的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1034,8 +1022,8 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取播放器的系统铃声的类型。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 待获取播放器的系统铃声的类型。 |
 
 **返回值：**
 
@@ -1043,7 +1031,7 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 | --- | --- |
 | Promise&lt;RingtonePlayer&gt; | Promise对象，返回获取的系统铃声播放器。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1087,11 +1075,11 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取的系统铃声的类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined， data为获取到的系统铃声uri；否则为错误对象。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 待获取的系统铃声的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined， data为获取到的系统铃声uri；否则为错误对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1135,8 +1123,8 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃声的类型。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -1144,7 +1132,7 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回获取的系统铃声uri。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1182,8 +1170,8 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取播放器的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | 是 | 待获取播放器的系统提示音的类型。 |
 
 **返回值：**
 
@@ -1195,11 +1183,11 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1237,8 +1225,8 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取播放器的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | 是 | 待获取播放器的系统提示音的类型。 |
 
 **返回值：**
 
@@ -1250,10 +1238,10 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1293,8 +1281,8 @@ Gets the system tone player.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Current application context. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | System tone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | Current application context. |
+| type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | 是 | System tone type to get. |
 
 **返回值：**
 
@@ -1306,27 +1294,7 @@ Gets the system tone player.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-
-**示例：**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let type: systemSoundManager.SystemToneType = systemSoundManager.SystemToneType.SYSTEM_TONE_TYPE_SIM_CARD_0;
-let systemTonePlayer: systemSoundManager.SystemTonePlayer | undefined = undefined;
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.getSystemTonePlayer(context, type).then((value: systemSoundManager.SystemTonePlayer) => {
-  console.info('Succeeded in doing getSystemTonePlayer.');
-    systemTonePlayer = value;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getSystemTonePlayer. Code: ${err.code}, message: ${err.message}`);
-});
-```
+| 202 | Caller is not a system application. |
 
 ## getSystemToneUri
 
@@ -1348,8 +1316,8 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | 是 | 被设置的系统提示音的类型。 |
 
 **返回值：**
 
@@ -1361,11 +1329,11 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1403,7 +1371,7 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
 | isSynced | boolean | 是 | 表示待获取的振动是否与某个铃音同步。true表示同步，false表示不同步。 |
 
 **返回值：**
@@ -1416,12 +1384,12 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 20700003 | Unsupported operation. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1458,8 +1426,8 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待获取系统铃音的振动类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e.md) | 是 | 待获取系统铃音的振动类型。 |
 
 **返回值：**
 
@@ -1471,12 +1439,12 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 20700003 | Unsupported operation. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1520,25 +1488,25 @@ openAlarmTone(context: BaseContext, uri: string): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md/arkts-media-media-avplayer-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回fd。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回fd。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of uri is notification instead of alarm. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1549,7 +1517,7 @@ let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let uri = 'file://data/test.wav'; // 需更改为目标铃声文件的uri。
 
 let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.openAlarmTone(context, uri).then((value) => {
+systemSoundManagerInstance.openAlarmTone(context, uri).then((value: number) => {
   console.info('Succeeded in doing openAlarmTone.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to openAlarmTone. Code: ${err.code}, message: ${err.message}`);
@@ -1582,26 +1550,26 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| hapticsUri | string | 是 | 待打开系统铃音的振动的uri，资源支持可参考 [media.AVPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| hapticsUri | string | 是 | 待打开系统铃音的振动的uri，资源支持可参考 [media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md/arkts-media-media-avplayer-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回fd。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回fd。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. For example, the input URI is not one for haptics. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400102 | Operation not allowed. For example, the input URI is not one for haptics. |
+| 5400103 | I/O error. |
+| 20700003 | Unsupported operation. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1612,7 +1580,7 @@ let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let hapticsUri = '/data/storage/el2/base/haptics/synchronized/alarms/test.json'; // 需更改为目标系统铃音的振动的uri。
 
 let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.openToneHaptics(context, hapticsUri).then((value) => {
+systemSoundManagerInstance.openToneHaptics(context, hapticsUri).then((value: number) => {
   console.info('Succeeded in doing openToneHaptics.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to openToneHaptics. Code: ${err.code}, message: ${err.message}`);
@@ -1651,16 +1619,16 @@ openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundEr
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;[string, number, SystemSoundError]&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;[string, long, SystemSoundError]&gt;&gt; | Promise对象，Promise用于返回此操作的结果，返回Array内第一个参数uri，第二个参数 fd，第三个参数为此uri打开的结果。 |
+| ArkTS-Dyn: Promise&lt;Array&lt;[string, number, SystemSoundError]&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;[string, long, SystemSoundError]&gt;&gt; | Promise对象，Promise用于返回此操作的结果，返回Array内第一个参数uri，第二个参数 fd，第三个参数为此uri打开的结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too long. |
+| 202 | Caller is not a system application. |
+| 20700007 | Parameter is invalid, e.g. the length of uriList is too long. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1702,8 +1670,8 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 铃音uri，可通过 [addCustomizedTone]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 或[getAlarmToneAttrList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_等方法获取。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| uri | string | 是 | 铃音uri，可通过 [addCustomizedTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#addcustomizedtone) 或[getAlarmToneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getalarmtoneattrlist)等方法获取。 |
 
 **返回值：**
 
@@ -1715,13 +1683,13 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone of this uri is not customized. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400102 | Operation is not allowed, e.g. ringtone of this uri is not customized. |
+| 5400103 | I/O error. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1773,11 +1741,11 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too long. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 20700007 | Parameter is invalid, e.g. the length of uriList is too long. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1817,8 +1785,8 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md/arkts-media-media-avplayer-i.md)。 |
 
 **返回值：**
 
@@ -1830,12 +1798,12 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of input uri is not an alarm tone. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1873,9 +1841,9 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md/arkts-media-media-avplayer-i.md)。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -1887,11 +1855,11 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1934,12 +1902,12 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃声的类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md/arkts-media-media-avplayer-i.md)。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 被设置的系统铃声的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1984,9 +1952,9 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃声的类型。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md/arkts-media-media-avplayer-i.md)。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
@@ -1994,7 +1962,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2033,9 +2001,9 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统提示音的uri，资源支持可参考[media.AVPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| uri | string | 是 | 被设置的系统提示音的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md/arkts-media-media-avplayer-i.md)。 |
+| type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | 是 | 被设置的系统提示音的类型。 |
 
 **返回值：**
 
@@ -2047,11 +2015,11 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400103 | I/O error. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2090,9 +2058,9 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前应用的上下文。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃音的振动类型。 |
-| settings | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 被设置的系统铃音的振动设置。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
+| type | [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e.md) | 是 | 被设置的系统铃音的振动类型。 |
+| settings | [ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i.md) | 是 | 被设置的系统铃音的振动设置。 |
 
 **返回值：**
 
@@ -2104,13 +2072,13 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. For example, the input URI is not valid. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 5400102 | Operation not allowed. For example, the input URI is not valid. |
+| 5400103 | I/O error. |
+| 20700003 | Unsupported operation. |
+| 202 | Caller is not a system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

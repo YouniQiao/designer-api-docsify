@@ -1,12 +1,18 @@
 # postQuerySync
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## postQuerySync
 
 ```TypeScript
 function postQuerySync(handle: AssetMap): void
 ```
 
-Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ together.This API returns the result synchronously.
+查询的后置处理，用于需要用户认证的关键资产。需与[asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync)函数成对出现。使用同步方式返回结果。
 
 **Since:** 12
 
@@ -22,21 +28,21 @@ Performs postprocessing for the asset query. This API is used when user authenti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuerySync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | 待处理的查询句柄，包含[asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync)执行成功返回的挑战值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
-| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 24000012 | Calling the OS Account service failed. |
+| 24000013 | Calling the Access Token service failed. |
+| 24000010 | IPC failed. |
+| 24000011 | Calling the Bundle Manager service failed. |
+| 24000006 | Insufficient memory. |
+| 24000001 | The ASSET service is unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

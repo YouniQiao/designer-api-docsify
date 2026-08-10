@@ -1,6 +1,6 @@
 # NotificationReminderInfo (System API)
 
-Describes the information about the application reminder.
+描述指定应用提醒方式信息。
 
 **Since:** 21
 
@@ -12,15 +12,21 @@ Describes the information about the application reminder.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## bundle
 
 ```TypeScript
 bundle: BundleOption
 ```
 
-Bundle information of the application.
+指定应用的包信息。
 
-**Type:** BundleOption
+**Type:** [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)
 
 **Since:** 21
 
@@ -38,10 +44,9 @@ Bundle information of the application.
 reminderFlags: long
 ```
 
-Notification reminder mode flags.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_- bit0: sound prompt. The value **0** indicates disabled, and **1**  
-indicates enabled. \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_- bit1: lock screen. The value **0** indicates disabled, and **1** indicates enabled. \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_- bit2: banner. The value **0** indicates disabled, and **1** indicates enabled. \_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_- bit3:screen on. The value **0** indicates disabled, and **1** indicates enabled. \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_- bit4: vibration. The value **0** indicates disabled, and **1** indicates enabled. \_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_- bit5: status bar notification icon. The value **0** indicates disabled, and **1** indicates enabled.
+表示通知提醒方式的标志位。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 21
 
@@ -59,7 +64,7 @@ indicates enabled. \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_- bit1: lock screen. The v
 silentReminderEnabled: boolean
 ```
 
-Whether the silent reminder is enabled. The value **true** indicates that the silent reminder is enabled, and the value **false** indicates the opposite.
+表示静默提醒开关使能状态（true：使能，false：禁止）。
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # HorizontalAlignParam
 
-Defines the horizontal align rule of relative container.
+定义相对容器的水平对齐规则。
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Sets the horizontal alignment relative to the anchor component.
 
 Anonymous Object Rectification
 
-**Type:** HorizontalAlign
+**Type:** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
 
 **Since:** 23
 

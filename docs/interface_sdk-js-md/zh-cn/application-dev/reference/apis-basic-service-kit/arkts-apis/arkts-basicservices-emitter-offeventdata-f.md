@@ -1,5 +1,11 @@
 # offEventData
 
+## 导入模块
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## offEventData
 
 ```TypeScript
@@ -7,10 +13,10 @@ function offEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用  
-[onEventData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或  
-[onceEventData]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口订阅callback时，该接口才生效。
+[onEventData](emitter.onEventData(eventId: string, callback: Callback&lt;EventData&gt;))或  
+[onceEventData](emitter.onceEventData(eventId: string, callback: Callback&lt;EventData&gt;))接口订阅callback时，该接口才生效。
 
-使用该接口取消某个事件订阅后，已通过[emit]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口发布但尚未被执行的事件将被取消。
+使用该接口取消某个事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 23
 
@@ -25,19 +31,5 @@ function offEventData(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EventData&gt; | 是 | 事件的回调处理函数。 |
-
-**示例：**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData | undefined | null) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-// 取消eventID为"eventId"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.offEventData("eventId", callback);
-```
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 | 事件的回调处理函数。 |
 

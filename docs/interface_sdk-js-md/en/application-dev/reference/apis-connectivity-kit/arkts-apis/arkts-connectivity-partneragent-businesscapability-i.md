@@ -10,6 +10,12 @@ Describes the business capabilities of the application.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
+## Modules to Import
+
+```TypeScript
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+```
+
 ## supportMediaControl
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # Ranking
 
-The definition of Ranking.
+排行榜的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
 
 **Inheritance/Implementation:** Ranking extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -12,15 +12,21 @@ The definition of Ranking.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## topElements
 
 ```TypeScript
 topElements: MediaEntity[]
 ```
 
-Recommended songs under the chart.
+榜单下的推荐歌曲。
 
-**Type:** MediaEntity[]
+**Type:** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
 **Since:** 23
 

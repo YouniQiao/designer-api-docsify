@@ -1,12 +1,18 @@
 # cwd (System API)
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## cwd
 
 ```TypeScript
 function cwd(): string
 ```
 
-Return the current work directory;
+返回当前工作目录。
 
 **Since:** 7
 
@@ -22,5 +28,5 @@ Return the current work directory;
 
 | Type | Description |
 | --- | --- |
-| string | Return the current work directory. |
+| string | 返回当前工作目录。 |
 

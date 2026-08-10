@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## changed
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly changed: long
 
 表示受影响的行数量。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 23
 
@@ -38,7 +44,7 @@ readonly resultSet: LiteResultSet
 
 表示受影响数据的结果集。默认返回1024行，最大支持32766行，超出部分将被丢弃。
 
-**类型：** LiteResultSet
+**类型：** [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)
 
 **起始版本：** 23
 

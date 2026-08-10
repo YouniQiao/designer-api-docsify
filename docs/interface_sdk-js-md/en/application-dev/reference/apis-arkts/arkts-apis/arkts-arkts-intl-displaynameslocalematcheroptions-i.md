@@ -18,7 +18,7 @@ localeMatcher?: RelativeTimeFormatLocaleMatcher
 
 Locale matcher option.
 
-**Type:** RelativeTimeFormatLocaleMatcher
+**Type:** [RelativeTimeFormatLocaleMatcher](arkts-arkts-intl-relativetimeformatlocalematcher-t.md)
 
 **Since:** 26.0.0
 

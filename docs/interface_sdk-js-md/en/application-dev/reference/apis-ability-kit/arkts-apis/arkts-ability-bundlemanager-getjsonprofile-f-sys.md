@@ -1,14 +1,20 @@
 # getJsonProfile (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getJsonProfile
 
 ```TypeScript
 function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: int): string
 ```
 
-Obtains the JSON strings of the profile based on the given profile type, bundle name, and module name. This API returns the result synchronously.
+以同步的方法根据给定的profileType、bundleName和moduleName查询相应配置文件的JSON字符串。
 
-No permission is required for obtaining the caller's own profile.
+获取调用方自己的配置文件时不需要权限。
 
 **Since:** 11
 
@@ -26,31 +32,31 @@ No permission is required for obtaining the caller's own profile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the profile. |
-| bundleName | string | Yes | Bundle name of the application. |
-| moduleName | string | No | Module name of the application. If this parameter is not passed in, the entry module is used. |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | User ID, which can be obtained by calling [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . The default value is the user ID of the caller. The value must be greater than or equal to 0.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| profileType | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | Yes | 表示要查询的配置文件类型。 |
+| bundleName | string | Yes | 表示要查询应用程序的bundleName。 |
+| moduleName | string | No | 表示要查询应用程序的module的名称，缺省时在入口模块中查找。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户，取值范围：大于等于0。<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | JSON string of the profile. |
+| string | 返回配置文件的JSON字符串。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because the specified profile is not found in the HAP. |
-| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700026 | The specified bundle is disabled. |
+| 17700024 | Failed to get the profile because the specified profile is not found in the HAP. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700004 | The specified user ID is not found.<br>**Applicable version:** 12 and later |
+| 17700002 | The specified moduleName is not found. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -62,7 +68,7 @@ let moduleName = 'entry';
 let profileType = bundleManager.ProfileType.INTENT_PROFILE;
 
 try {
-  let data = bundleManager.getJsonProfile(profileType, bundleName, moduleName)
+  let data = bundleManager.getJsonProfile(profileType, bundleName, moduleName);
   hilog.info(0x0000, 'testTag', 'getJsonProfile successfully. Data: %{public}s', data);
 } catch (err) {
   let message = (err as BusinessError).message;

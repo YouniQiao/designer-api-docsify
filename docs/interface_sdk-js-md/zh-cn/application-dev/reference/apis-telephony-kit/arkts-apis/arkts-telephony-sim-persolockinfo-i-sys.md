@@ -12,6 +12,12 @@ Defines the personalized lock information.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## lockType
 
 ```TypeScript
@@ -20,7 +26,7 @@ lockType: PersoLockType
 
 Indicates the personalized lock type.
 
-**类型：** PersoLockType
+**类型：** [PersoLockType](arkts-telephony-sim-persolocktype-e-sys.md)
 
 **起始版本：** 8
 

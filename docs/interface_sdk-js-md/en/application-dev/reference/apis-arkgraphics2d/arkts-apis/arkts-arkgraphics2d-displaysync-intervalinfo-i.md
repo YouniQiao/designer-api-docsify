@@ -1,6 +1,6 @@
 # IntervalInfo
 
-You can obtain the timestamp information from the event callback, including the timestamp when the current frame arrives and the timestamp when the next frame is expected to arrive.
+开发者可以从回调函数中获取帧绘制的时间戳信息，包含当前帧到达的时间timestamp和下一帧预期到达的时间targetTimestamp。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ You can obtain the timestamp information from the event callback, including the 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## targetTimestamp
 
 ```TypeScript
 targetTimestamp: long
 ```
 
-Expected arrival time of the next frame, in nanoseconds.
+下一帧预期到达的时间（单位：纳秒）。系统启动以来的单调递增时间，值应大于timestamp。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 11
 
@@ -34,9 +40,9 @@ Expected arrival time of the next frame, in nanoseconds.
 timestamp: long
 ```
 
-Time when the current frame arrives, in nanoseconds.
+当前帧到达的时间（单位：纳秒）。系统启动以来的单调递增时间。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 11
 

@@ -1,30 +1,37 @@
 # promoteCurrentToCandidateMasterProcess
 
+## 导入模块
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## promoteCurrentToCandidateMasterProcess
 
 ```TypeScript
 export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): Promise<void>
 ```
 
-开发者可以调用该接口将当前进程放入\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_链表。使用Promise异步回调。当\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_销毁后，再次启动配置了isolationProcess为true的UIAbility/UIExtensionAbility组件时，系统会根据是否存在备选主控进程执行相应操作。
+开发者可以调用该接口将当前进程放入[备选主控进程](../../../application-models/ability-terminology.md#candidatemasterprocess备选主控进程)链表。使用Promise异步回调。当[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)销毁后，再次启动配置了isolationProcess为true的UIAbility/UIExtensionAbility组件时，系统会根据是否存在备选主控进程执行相应操作。
 
 - 如果存在备选主控进程，系统会将备选主控进程链表首节点的进程设置为主控进程，触发  
-[onNewProcessRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_回调。  
+[onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequest)回调。  
 - 如果不存在备选主控进程，系统会根据组件类型执行相应的操作。  
  - 对于UIAbility组件，系统将创建新的空进程作为主控进程。  
  - 对于UIExtensionAbility组件，系统会优先复用已有的UIExtensionAbility进程作为新的主控进程，无可用进程时则创建新的空进程作为主控进程。  
 该接口在PC/2in1、Tablet中可正常调用，在其他设备类型中返回801错误码。
-    **说明：**  
-    
-    如果当前进程已经是\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_，调用该接口无效并且不会抛出错误码。  
-    
-    当前进程只有运行了isolationProcess字段设为true的组件，或曾经成为过主控进程，开发者才可将其设置为备选主控进程。  
-    
-    
-    当前仅支持sys/commonUI类型的UIExtensionAbility组件在\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_中配  
-    置isolationProcess字段为true。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_
+> **说明：**
+> 
+> 如果当前进程已经是[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)，调用该接口无效并且不会抛出错误码。
+> 
+> 当前进程只有运行了isolationProcess字段设为true的组件，或曾经成为过主控进程，开发者才可将其设置为备选主控进程。
+> 
+> 
+> 当前仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配
+> 置isolationProcess字段为true。
+
+&lt;!--DelEnd--&gt;
 
 **起始版本：** 20
 
@@ -52,10 +59,10 @@ export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000115](../errorcode-ability.md#16000115-当前进程不支持设置为备选主控进程) | The current process cannot be set as a candidate master process. |
+| 801 | Capability not supported. |
+| 16000115 | The current process cannot be set as a candidate master process. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';
@@ -68,8 +75,7 @@ export default class EntryAbility extends UIAbility {
         .then(() => {
           console.info('promote succeed');
         })
-        .catch((error: Error) => {
-          let err = error as BusinessError;
+        .catch((err: BusinessError) => {
           console.error(`promote failed, code is ${err.code}, message is ${err.message}`);
         });
     } catch (error) {

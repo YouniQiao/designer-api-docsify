@@ -14,11 +14,11 @@ Blank(min?: number | string)
 
 创建空白填充组件。
 
-从API version 10开始：
+从API version 10开始： 
 
-- Blank在父容器[Row]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, [Column]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ 或[Flex]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_主轴方向上未设置大小时会自动拉伸、压缩，设置了大小或容器自适应子节点大小时不会自动拉伸、压缩  
+- Blank在父容器[Row]{@link Row}, [Column]{@link Column} 或[Flex]{@link Flex}主轴方向上未设置大小时会自动拉伸、压缩，设置了大小或容器自适应子节点大小时不会自动拉伸、压缩  
 。  
-- Blank设置主轴方向大小（size）与min时约束关系为max(min, size)。  
+- Blank设置主轴方向大小（size）与min时约束关系为max(min, size)。   
 - Blank在父容器交叉轴上设置大小时不会撑满父容器交叉轴，交叉轴不设置大小时alignSelf默认值为ItemAlign.Stretch，会撑满容器交叉轴。
 
 **起始版本：** 7
@@ -37,7 +37,7 @@ Blank(min?: number | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| min | number \| string | 否 | 空白填充组件在容器主轴上的最小大小。\_\_\_HTML\_TAG\_USD\_0\_\_\_默认值：0，number类型单位为vp，string类型可以显式指定像素单位，如'10 px'。不指定像素单位时，默认单位vp，如'10'，等同于10vp。\_\_\_HTML\_TAG\_USD\_1\_\_\_非法值：按默认值处理。\_\_\_HTML\_TAG\_USD\_2\_\_\_**说明：** \_\_\_HTML\_TAG\_USD\_3\_\_\_不支持设置百分比。负值使用默认值。当最小值大于容器可用空间时，使用最小值作为自身大小 并超出容器。  |
+| min | number \| string | 否 | 空白填充组件在容器主轴上的最小大小。<br/>默认值：0，number类型单位为vp，string类型可以显式指定像素单位，如'10 px'。不指定像素单位时，默认单位vp，如'10'，等同于10vp。<br />非法值：按默认值处理。<br/>**说明：** <br/>不支持设置百分比。负值使用默认值。当最小值大于容器可用空间时，使用最小值作为自身大小 并超出容器。 |
 
 ## 汇总
 

@@ -1,12 +1,18 @@
 # hibernate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## hibernate
 
 ```TypeScript
 function hibernate(clearMemory: boolean): void
 ```
 
-Hibernates a device.
+休眠设备。
 
 **Since:** 12
 
@@ -25,18 +31,18 @@ Hibernates a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clearMemory | boolean | Yes | Whether to clear the memory. The value **true** means to clear the memory before the system enters the hibernation state, and the value **false** means the opposite. |
+| clearMemory | boolean | Yes | true 代表在进入休眠之前清理内存，否则为false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 19 and later |
+| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 19 and later |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 4900101 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

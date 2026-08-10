@@ -12,6 +12,12 @@ Indicates fusion fence transition information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## identifier
 
 ```TypeScript
@@ -42,7 +48,7 @@ scene: FusionFenceScene
 
 Indicates fusion fence scene.
 
-**Type:** FusionFenceScene
+**Type:** [FusionFenceScene](arkts-location-geolocationmanager-fusionfencescene-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -64,7 +70,7 @@ transitionEvent: GeofenceTransitionEvent
 
 Indicates the fence transition event.
 
-**Type:** GeofenceTransitionEvent
+**Type:** [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e-sys.md)
 
 **Since:** 26.0.0
 

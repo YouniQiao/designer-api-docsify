@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
+## 导入模块
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## displayName
 
 ```TypeScript
@@ -58,7 +64,7 @@ type: CalendarType
 
 账户类型。
 
-**类型：** CalendarType
+**类型：** [CalendarType](arkts-calendar-calendarmanager-calendartype-e.md)
 
 **起始版本：** 10
 

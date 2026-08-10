@@ -18,7 +18,7 @@ fillType?: ResponsiveFillType
 
 指定不同响应断点的列数。
 
-**类型：** ResponsiveFillType
+**类型：** [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md)
 
 **默认值：** ResponsiveFillType.BREAKPOINT_DEFAULT
 

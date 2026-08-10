@@ -1,5 +1,11 @@
 # offNavDestinationUpdate
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## offNavDestinationUpdate
 
 ```TypeScript
@@ -9,7 +15,7 @@ export function offNavDestinationUpdate(
   ): void
 ```
 
-Removes a callback function that was previously registered with \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+取消监听NavDestination组件的状态变化。
 
 **Since:** 23
 
@@ -25,8 +31,8 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The options object. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and navigation ID will be removed. |
+| options | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | 指定监听的Navigation的id。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | 回调函数。返回当前的NavDestination组件状态。 |
 
 
 ## offNavDestinationUpdate
@@ -35,7 +41,7 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 export function offNavDestinationUpdate(callback?: Callback<NavDestinationInfo>): void
 ```
 
-Removes a callback function that was previously registered with \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+取消监听NavDestination组件的状态变化。
 
 **Since:** 23
 
@@ -51,5 +57,5 @@ Removes a callback function that was previously registered with \_\_\_INLINE\_CO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | 回调函数。返回当前的NavDestination组件状态。 |
 

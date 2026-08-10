@@ -1,12 +1,24 @@
 # executeDelayed
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## executeDelayed
 
 ```TypeScript
 function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>
 ```
 
-Executes a task after a given delay. In this execution mode, you can set the task priority and call **cancel()** to cancel the execution. The task cannot be a task in a task group, serial queue, or asynchronous queue, or a periodic task. This API can be called only once for a continuous task, but multiple times for a non-continuous task. This API uses a promise to return the result.
+延时执行任务。当前执行模式可以设置任务优先级，可通过cancel取消任务。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 该任务不能是任务组任务、串行队列任务、异步队列任务或周期任务。
+> - 如果任务不是长时任务，可以多次调用executeDelayed执行。
+> - 如果是长时任务，则仅支持执行一次。
 
 **Since:** 11
 
@@ -22,27 +34,27 @@ Executes a task after a given delay. In this execution mode, you can set the tas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delayTime | number | Yes | Delay, in ms. The value must be greater than or equal to 0. The value should be an integer. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit:milliseconds. |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Task to be executed with a delay. |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| delayTime | number | Yes | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | 需要延时执行的任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result. |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The delayTime is less than zero. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 10200057 | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| 10200014 | The function is not marked as concurrent.<br>**Applicable version:** 12 and later |
+| 10200028 | The delayTime is less than zero. |
+| 10200051 | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| 10200006 | An exception occurred during serialization.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 // import BusinessError
@@ -70,7 +82,7 @@ taskpool.executeDelayed(1000, task).then(() => { // 1000: delayTime is 1000ms
 function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>
 ```
 
-Executes the generic task with a delay without verifying the parameter type and return value type of the task. This API uses a promise to return the result.The verification of the **executeDelayed** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
+延时执行泛型任务，使用Promise异步回调。executeDelayed任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
 
 **Since:** 13
 
@@ -86,25 +98,25 @@ Executes the generic task with a delay without verifying the parameter type and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delayTime | number | Yes | Delay, in ms. The value must be greater than or equal to 0. The value should be an integer. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit:milliseconds. |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;A, R&gt; | Yes | Generic task to be executed with a delay. |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| delayTime | number | Yes | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | 需要延时执行的泛型任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
+| Promise&lt;R&gt; | Promise对象，返回任务函数的执行结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The delayTime is less than zero. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 10200057 | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| 10200028 | The delayTime is less than zero. |
+| 10200051 | The periodic task cannot be executed again. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // import BusinessError

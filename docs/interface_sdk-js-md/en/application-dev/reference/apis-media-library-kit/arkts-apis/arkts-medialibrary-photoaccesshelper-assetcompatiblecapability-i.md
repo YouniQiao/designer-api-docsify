@@ -10,6 +10,12 @@ Defines the asset compatibility capability.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## supportedHighResolution
 
 ```TypeScript

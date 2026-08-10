@@ -1,17 +1,20 @@
 # @ohos.util.Stack
 
-Stack is implemented based on the array data structure. It follows the principle Last Out First In (LOFI) and
- supports data insertion and removal at one end.
- Unlike [Queue](arkts-util-queue.md), which is implemented based on the queue data structure and supports insertion
- at one end and removal at the other end, Stack supports insertion and removal at the same end.
- **Recommended use case**: Use Stack in LOFI scenarios.
- This topic uses the following to identify the use of generics:
- - T: Type
- > **NOTE**
+Stack基于数组的数据结构实现，特点是先进后出，只能在一端进行数据的插入和删除。
+ Stack和[Queue](arkts-util-queue.md)相比，Queue基于循环队列实现，在尾部增加元素在头部删除元素；而Stack只在一端进行插入和删除操作。
+ **推荐使用场景：** 一般符合先进后出的场景可以使用Stack，例如撤销/重做操作的历史记录管理、函数调用栈模拟等。
+ 文档中使用了泛型，涉及以下泛型标记符：
+ - T：Type，类型
+ > **说明**
  >
- > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
- > not support custom properties or methods.
+ > - 容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
+
+## Modules to Import
+
+```TypeScript
+import { Stack } from 'kits/@kit.ArkTS';
+```
 
 ## Summary
 
@@ -19,11 +22,11 @@ Stack is implemented based on the array data structure. It follows the principle
 
 | Name | Description |
 | --- | --- |
-| [Stack](arkts-arkts-util-stack-stack-c.md) | Stack is implemented based on the array data structure.It follows the principle Last In First Out (LIFO) and supports data insertion and removal at one end. |
+| [Stack](arkts-arkts-util-stack-stack-c.md) | Stack基于数组的数据结构实现，特点是先进后出，只能在一端进行数据的插入和删除。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [StackForEachCb](arkts-arkts-stackforeachcb-t.md) | The type of Stack callback function. |
+| [StackForEachCb](arkts-arkts-stackforeachcb-t.md) | Stack的回调函数类型。 |
 

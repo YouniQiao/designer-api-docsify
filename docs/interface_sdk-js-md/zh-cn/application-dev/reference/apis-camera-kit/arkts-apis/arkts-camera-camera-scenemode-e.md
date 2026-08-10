@@ -16,7 +16,7 @@
 NORMAL_PHOTO = 1
 ```
 
-普通拍照模式。详情见[PhotoSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+普通拍照模式。详情见[PhotoSession](arkts-camera-camera-photosession-i.md)。
 
 **起始版本：** 11
 
@@ -34,7 +34,7 @@ NORMAL_PHOTO = 1
 NORMAL_VIDEO = 2
 ```
 
-普通录像模式。详情见[VideoSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+普通录像模式。详情见[VideoSession](arkts-camera-camera-videosession-i.md)。
 
 **起始版本：** 11
 
@@ -52,7 +52,7 @@ NORMAL_VIDEO = 2
 SECURE_PHOTO = 12
 ```
 
-安全相机模式。详情见[SecureSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+安全相机模式。详情见[SecureSession](arkts-camera-camera-securesession-i.md)。
 
 **起始版本：** 12
 

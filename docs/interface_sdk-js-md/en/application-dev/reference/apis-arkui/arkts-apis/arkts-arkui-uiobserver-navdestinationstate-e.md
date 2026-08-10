@@ -1,6 +1,6 @@
 # NavDestinationState
 
-NavDestination state.
+NavDestination组件状态。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ NavDestination state.
 ON_SHOWN = 0
 ```
 
-When the NavDestination is displayed.
+NavDestination组件显示。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ When the NavDestination is displayed.
 ON_HIDDEN = 1
 ```
 
-When the NavDestination is hidden.
+NavDestination组件隐藏。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ When the NavDestination is hidden.
 ON_APPEAR = 2
 ```
 
-When the NavDestination appear.
+NavDestination从组件树上挂载。
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ When the NavDestination appear.
 ON_DISAPPEAR = 3
 ```
 
-When the NavDestination disappear.
+NavDestination从组件树上卸载。
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ When the NavDestination disappear.
 ON_WILL_SHOW = 4
 ```
 
-Before the NavDestination is displayed.
+NavDestination组件显示之前。
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Before the NavDestination is displayed.
 ON_WILL_HIDE = 5
 ```
 
-Before the NavDestination is hidden.
+NavDestination组件隐藏之前。
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ Before the NavDestination is hidden.
 ON_WILL_APPEAR = 6
 ```
 
-Before the NavDestination is appeared.
+NavDestination挂载到组件树之前。
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ Before the NavDestination is appeared.
 ON_WILL_DISAPPEAR = 7
 ```
 
-Before the NavDestination is disappeared.
+NavDestination从组件树上卸载之前。
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ Before the NavDestination is disappeared.
 ON_ACTIVE = 8
 ```
 
-When the NavDestination is active.
+NavDestination组件处于激活态。
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ When the NavDestination is active.
 ON_INACTIVE = 9
 ```
 
-When the NavDestination is inactive.
+NavDestination组件处于非激活态。
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ When the NavDestination is inactive.
 ON_BACKPRESS = 100
 ```
 
-When back press event happened in NavDestination.
+NavDestination组件返回。
 
 **Since:** 23
 

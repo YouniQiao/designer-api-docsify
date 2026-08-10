@@ -1,6 +1,6 @@
 # ComponentEventType
 
-Enumerates the component operation event types that can be listened for.
+支持监听的控件操作事件类型。
 
 **Since:** 22
 
@@ -16,9 +16,9 @@ Enumerates the component operation event types that can be listened for.
 COMPONENT_UNDEFINED = 0
 ```
 
-Non-component operation event.
+非控件操作事件。
 
-Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
+**说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ Note: This value can only be used as a return value. If it is passed in an API, 
 COMPONENT_CLICKED = 1
 ```
 
-Component clicked event.
+控件被点击事件。
 
 **Since:** 22
 
@@ -54,7 +54,7 @@ Component clicked event.
 COMPONENT_LONG_CLICKED = 2
 ```
 
-Component long-clicked event.
+控件被长按事件。
 
 **Since:** 22
 
@@ -72,7 +72,7 @@ Component long-clicked event.
 COMPONENT_SCROLL_START = 3
 ```
 
-Component scroll start event.
+控件滚动开始事件。
 
 **Since:** 22
 
@@ -90,7 +90,7 @@ Component scroll start event.
 COMPONENT_SCROLL_END = 4
 ```
 
-Component scroll end event.
+控件滚动结束事件。
 
 **Since:** 22
 
@@ -108,7 +108,7 @@ Component scroll end event.
 COMPONENT_TEXT_CHANGED = 5
 ```
 
-Text change event of the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[输入框控件](../../../ui/arkts-common-components-text-input.md)文本变化事件。
 
 **Since:** 22
 

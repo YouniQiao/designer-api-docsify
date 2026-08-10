@@ -1,6 +1,6 @@
 # HdrCompositionConfig
 
-Options for HDR composition configuration.
+HDR合成配置选项。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Options for HDR composition configuration.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+```
+
 ## rect
 
 ```TypeScript
 rect: Rectangle
 ```
 
-Rectangle area for HDR composition.
+HDR合成的矩形区域。
 
-**Type:** Rectangle
+**Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
 **Since:** 26.0.0
 

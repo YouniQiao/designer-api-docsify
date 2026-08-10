@@ -18,7 +18,7 @@ handler: VerifyPinHandler
 
 Handle the result of PIN verification.
 
-**Type:** VerifyPinHandler
+**Type:** [VerifyPinHandler](arkts-arkweb-verifypinhandler-c.md)
 
 **Since:** 22
 

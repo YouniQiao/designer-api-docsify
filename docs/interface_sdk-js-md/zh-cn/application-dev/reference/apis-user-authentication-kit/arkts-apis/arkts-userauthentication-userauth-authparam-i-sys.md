@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## credentialIdList
 
 ```TypeScript
@@ -40,7 +46,7 @@ userId?: int
 
 待认证的目标用户ID，用于指定需要认证的用户。当需要认证特定用户而非当前登录用户时传入此参数；若不传入则默认使用当前登录用户的ID。取值为非负整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** The ID of the current user. The value is a positive integer greater than or equal to 0.
 

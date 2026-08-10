@@ -1,6 +1,6 @@
 # ExchangeFreq (System API)
 
-Enumerates the device discovery frequencies.
+表示发现频率的枚举。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Enumerates the device discovery frequencies.
 LOW = 0
 ```
 
-Low frequency.
+低频率。
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ Low frequency.
 MID = 1
 ```
 
-Medium frequency.
+中频率。
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ Medium frequency.
 HIGH = 2
 ```
 
-High frequency.
+高频率。
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ High frequency.
 SUPER_HIGH = 3
 ```
 
-Ultra-high frequency.
+超高频率。
 
 **Since:** 7
 

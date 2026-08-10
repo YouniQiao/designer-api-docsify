@@ -1,6 +1,6 @@
 # FunctionKey
 
-Enumerates function key types.
+功能键的类型。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Enumerates function key types.
 CAPS_LOCK = 1
 ```
 
-CapsLock key. This key can be enabled or disabled only for the input keyboard extension.
+CapsLock键，仅支持对输入键盘扩展的CapsLock键设置使能。
 
 **Since:** 15
 

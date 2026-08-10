@@ -1,8 +1,8 @@
 # HierarchicalSymbolEffect
 
-Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
+HierarchicalSymbolEffect继承自父类SymbolEffect。
 
-**Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](../arkts-apis/arkts-arkui-component/symbolglyph-symboleffect-c.md)
+**Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
 constructor(fillStyle?: EffectFillStyle)
 ```
 
-A constructor used to create a **HierarchicalSymbolEffect** instance, which comes with a hierarchical animation effect.
+HierarchicalSymbolEffect的构造函数，层级动效。
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Effect fill style.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **EffectFillStyle.CUMULATIVE |
+| fillStyle | [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md) | No | 动效模式。具体枚举值及说明请参考EffectFillStyle枚举说明。 &lt;br&gt;默认值：EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 
@@ -46,11 +46,11 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 fillStyle?: EffectFillStyle
 ```
 
-Effect fill style.
+动效模式。
 
-Default value: **EffectFillStyle.CUMULATIVE
+默认值：EffectFillStyle.CUMULATIVE
 
-**Type:** EffectFillStyle
+**Type:** [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md)
 
 **Since:** 12
 

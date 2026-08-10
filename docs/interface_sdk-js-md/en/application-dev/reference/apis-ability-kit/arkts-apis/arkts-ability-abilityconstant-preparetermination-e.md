@@ -1,9 +1,8 @@
 # PrepareTermination
 
-Enumerates the actions triggered when an application is closed by the user. You can use it in  
-[onPrepareTermination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[onPrepareTerminationAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ of  
-[AbilityStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+应用准备关闭时返回的动作，该类型为枚举。需要配合[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的  
+[onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)或者  
+[onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)方法使用。
 
 **Since:** 15
 
@@ -19,7 +18,7 @@ Enumerates the actions triggered when an application is closed by the user. You 
 TERMINATE_IMMEDIATELY = 0
 ```
 
-Executes the termination action immediately. This is the default behavior.
+表示立即执行结束动作，默认值。
 
 **Since:** 15
 
@@ -39,7 +38,7 @@ Executes the termination action immediately. This is the default behavior.
 CANCEL = 1
 ```
 
-Cancels the termination action.
+表示取消结束动作。
 
 **Since:** 15
 

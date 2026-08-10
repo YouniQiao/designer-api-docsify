@@ -8,13 +8,19 @@ Provides APIs for encapsulating file asset attributes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md)
 
 <!--Device-userFileManager-interface FileAsset--><!--Device-userFileManager-interface FileAsset-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { userFileManager } from 'kits/@kit.CoreFileKit';
+```
 
 ## close
 
@@ -43,9 +49,9 @@ Closes a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to close. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -111,7 +117,7 @@ Closes this file. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -152,7 +158,7 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitmodify)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitmodify)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -166,9 +172,9 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -215,7 +221,7 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitmodify)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitmodify)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -231,7 +237,7 @@ Commits the modification on the file metadata to the database. This API uses a p
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -277,7 +283,7 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -292,9 +298,9 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isFavorite | boolean | Yes | Whether to favorite or unfavorite the file. The value **true** means to favorite the file; the value **false** means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -334,7 +340,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -356,7 +362,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -395,7 +401,7 @@ Obtains the value of a **FileAsset** parameter.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.get](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#get)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.get](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#get)
 
 <!--Device-FileAsset-get(member: string): MemberType--><!--Device-FileAsset-get(member: string): MemberType-End-->
 
@@ -407,15 +413,15 @@ Obtains the value of a **FileAsset** parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| member | string | Yes | Member parameter name, for example, **ImageVideoKey.DISPLAY\_\_\_ESCAPED\_UNDERSCORE\_\_\_NAME**. You need to set **PhotoKeys** to be obtained in **fetchColumns** for all attributes except **uri**, **photoType**, and **displayName**. For example, **fetchColumns: ['title']**. |
+| member | string | Yes | Member parameter name, for example, **ImageVideoKey.DISPLAY_NAME**. You need to set **PhotoKeys** to be obtained in **fetchColumns** for all attributes except **uri**, **photoType**, and **displayName**. For example, **fetchColumns: ['title']**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the member parameter. |
+| [MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md) | Returns the member parameter. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -449,7 +455,7 @@ getExif(callback: AsyncCallback<string>): void
 
 Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
 
-For details about the EXIF tags, see [image.PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md/arkts-image-image-propertykey-e.md).
 
 | Key Value | Description |  
 | --------------------------------------- | ----------------- |  
@@ -488,11 +494,12 @@ For details about the EXIF tags, see [image.PropertyKey]\_\_\_JSDOC\_LINK\_DESC\
 | WhiteBalance | White balance.|  
 | FocalLengthIn35mmFilm | Focal length in 35 mm film.|  
 | ExposureBiasValue | Exposure compensation.|
-    **NOTE**  
-    
-    This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all\_exif and  
-    [ImageVideoKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.USER\_COMMENT. The two fields need to be passed to  
-    **fetchColumns**.
+
+> **NOTE：**
+> 
+> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
+> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to
+> **fetchColumns**.
 
 **Since:** 10
 
@@ -500,7 +507,7 @@ For details about the EXIF tags, see [image.PropertyKey]\_\_\_JSDOC\_LINK\_DESC\
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getExif](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md#getexif)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getExif](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md#getexif)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -514,15 +521,15 @@ For details about the EXIF tags, see [image.PropertyKey]\_\_\_JSDOC\_LINK\_DESC\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback that returns the EXIF data, in JSON strings. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback that returns the EXIF data, in JSON strings. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| 202 | Called by non-system application. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -570,7 +577,7 @@ getExif(): Promise<string>
 
 Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result.
 
-For details about the EXIF tags, see [image.PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md/arkts-image-image-propertykey-e.md).
 
 | Key Value | Description |  
 | --------------------------------------- | ----------------- |  
@@ -609,11 +616,12 @@ For details about the EXIF tags, see [image.PropertyKey]\_\_\_JSDOC\_LINK\_DESC\
 | WhiteBalance | White balance.|  
 | FocalLengthIn35mmFilm | Focal length in 35 mm film.|  
 | ExposureBiasValue | Exposure compensation.|
-    **NOTE**  
-    
-    This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all\_exif and  
-    [ImageVideoKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.USER\_COMMENT. The two fields need to be passed to  
-    **fetchColumns**.
+
+> **NOTE：**
+> 
+> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
+> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to
+> **fetchColumns**.
 
 **Since:** 10
 
@@ -621,7 +629,7 @@ For details about the EXIF tags, see [image.PropertyKey]\_\_\_JSDOC\_LINK\_DESC\
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getExif](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md#getexif)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getExif](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md#getexif)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -641,9 +649,9 @@ For details about the EXIF tags, see [image.PropertyKey]\_\_\_JSDOC\_LINK\_DESC\
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| 202 | Called by non-system application. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -687,7 +695,7 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO
 
@@ -701,9 +709,9 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -744,7 +752,7 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO
 
@@ -759,9 +767,9 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | image.Size | Yes | Size of the thumbnail. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -804,7 +812,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO
 
@@ -826,7 +834,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;image.PixelMap&gt; | Promise that returns the PixelMap of the thumbnail. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -861,10 +869,11 @@ open(mode: string, callback: AsyncCallback<number>): void
 ```
 
 Opens this file asset. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The write operations are mutually exclusive. After a write operation is complete, you must call **close** to  
-    close the file.
+
+> **NOTE：**
+> 
+> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to
+> close the file.
 
 **Since:** 9
 
@@ -887,9 +896,9 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | string | Yes | Mode of opening the file, for example, **'r'** (read-only), **'w'** (write-only), and **'rw'** (read-write). |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the file descriptor of the file opened. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the file descriptor of the file opened. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -916,10 +925,11 @@ open(mode: string): Promise<number>
 ```
 
 Opens this file asset. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The write operations are mutually exclusive. After a write operation is complete, you must call **close** to  
-    close the file.
+
+> **NOTE：**
+> 
+> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to
+> close the file.
 
 **Since:** 9
 
@@ -949,7 +959,7 @@ Opens this file asset. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise that returns the file descriptor of the file opened. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -986,7 +996,7 @@ Sets a **FileAsset** parameter.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.set](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#set)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.set](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#set)
 
 <!--Device-FileAsset-set(member: string, value: string): void--><!--Device-FileAsset-set(member: string, value: string): void-End-->
 
@@ -998,10 +1008,10 @@ Sets a **FileAsset** parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| member | string | Yes | Member parameter name, for example, **ImageVideoKey.DISPLAY\_\_\_ESCAPED\_UNDERSCORE\_\_\_NAME**. |
-| value | string | Yes | Value to set. Only the values of **DISPLAY\_\_\_ESCAPED\_UNDERSCORE\_\_\_NAME** and **TITLE** can be changed. |
+| member | string | Yes | Member parameter name, for example, **ImageVideoKey.DISPLAY_NAME**. |
+| value | string | Yes | Value to set. Only the values of **DISPLAY_NAME** and **TITLE** can be changed. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1034,7 +1044,7 @@ setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 
 Sets a file to hidden state. This API uses an asynchronous callback to return the result.
 
-The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to  
+The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to   
 **false** to remove them from the private album.
 
 **Since:** 10
@@ -1043,7 +1053,7 @@ The private files set to hidden state are located in the private album (in hidde
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setHidden](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setHidden](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1058,16 +1068,16 @@ The private files set to hidden state are located in the private album (in hidde
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hiddenState | boolean | Yes | Whether to hide the file. The value **true** means to hide the file; the value **false** means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 13900020 | if parameter is invalid |
+| 202 | Called by non-system application. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1101,7 +1111,7 @@ setHidden(hiddenState: boolean): Promise<void>
 
 Sets this file asset to the hidden state. This API uses a promise to return the result.
 
-The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to  
+The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to   
 **false** to remove them from the private album.
 
 **Since:** 10
@@ -1110,7 +1120,7 @@ The private files set to hidden state are located in the private album (in hidde
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setHidden](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setHidden](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1136,10 +1146,10 @@ The private files set to hidden state are located in the private album (in hidde
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 13900020 | if parameter is invalid |
+| 202 | Called by non-system application. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1174,9 +1184,10 @@ setUserComment(userComment: string, callback: AsyncCallback<void>): void
 ```
 
 Sets user comment information of an image or video. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API can only be used to set user comment information of an image or video.
+
+> **NOTE：**
+> 
+> This API can only be used to set user comment information of an image or video.
 
 **Since:** 10
 
@@ -1184,7 +1195,7 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1199,16 +1210,16 @@ Sets user comment information of an image or video. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userComment | string | Yes | User comment information to set, which cannot exceed 140 characters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| 202 | Called by non-system application. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1246,9 +1257,10 @@ setUserComment(userComment: string): Promise<void>
 ```
 
 Sets user comment information of an image or video. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API can only be used to set user comment information of an image or video.
+
+> **NOTE：**
+> 
+> This API can only be used to set user comment information of an image or video.
 
 **Since:** 10
 
@@ -1256,7 +1268,7 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1282,10 +1294,10 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| 202 | Called by non-system application. |
 
-**Example**
+## Examples
 
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
 
@@ -1326,7 +1338,7 @@ File name, including the file name extension, to display.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.displayName](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#displayname)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.displayName](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#displayname)
 
 <!--Device-FileAsset-displayName: string--><!--Device-FileAsset-displayName: string-End-->
 
@@ -1342,7 +1354,7 @@ readonly fileType: FileType
 
 Type of the file.
 
-**Type:** FileType
+**Type:** [FileType](arkts-corefile-userfilemanager-filetype-e-sys.md)
 
 **Since:** 9
 
@@ -1350,7 +1362,7 @@ Type of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.photoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#phototype)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.photoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#phototype)
 
 <!--Device-FileAsset-readonly fileType: FileType--><!--Device-FileAsset-readonly fileType: FileType-End-->
 
@@ -1364,8 +1376,8 @@ Type of the file.
 readonly uri: string
 ```
 
-Media asset URI, for example, **file://media/Photo/1/IMG\_datetime\_0001/displayName.jpg**. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+Media asset URI, for example, **file://media/Photo/1/IMG_datetime_0001/displayName.jpg**. For details, see   
+[Media File URI](../../../file-management/user-file-uri-intro.md#media-file-uri).
 
 **Type:** string
 
@@ -1375,7 +1387,7 @@ Media asset URI, for example, **file://media/Photo/1/IMG\_datetime\_0001/display
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.uri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#uri)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.uri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#uri)
 
 <!--Device-FileAsset-readonly uri: string--><!--Device-FileAsset-readonly uri: string-End-->
 

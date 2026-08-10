@@ -1,6 +1,6 @@
 # TransferProgress (System API)
 
-Defines the TransferProgress data structure.
+搬迁任务的进度信息。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Defines the TransferProgress data structure.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## failedCount
 
 ```TypeScript
 failedCount: int
 ```
 
-failed count in TransferProgress.The value should be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Pcs.
+搬迁失败的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -40,9 +46,9 @@ failed count in TransferProgress.The value should be an integer.\_\_\_HTML\_TAG\
 state: TransferState
 ```
 
-Describes the state type of transfer task.
+搬迁任务的状态。
 
-**Type:** TransferState
+**Type:** [TransferState](arkts-corefile-cloudsyncmanager-transferstate-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -62,9 +68,9 @@ Describes the state type of transfer task.
 stopReason: TransferStopReason
 ```
 
-Describes the state type of transfer stop reason.
+搬迁停止的原因。
 
-**Type:** TransferStopReason
+**Type:** [TransferStopReason](arkts-corefile-cloudsyncmanager-transferstopreason-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -84,9 +90,9 @@ Describes the state type of transfer stop reason.
 successfulCount: int
 ```
 
-successful count in TransferProgress.The value should be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Pcs.
+已搬迁的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -106,9 +112,9 @@ successful count in TransferProgress.The value should be an integer.\_\_\_HTML\_
 totalCount: int
 ```
 
-total count in TransferProgress.The value should be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Pcs.
+待搬迁文件总个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -128,9 +134,9 @@ total count in TransferProgress.The value should be an integer.\_\_\_HTML\_TAG\_
 totalSize: long
 ```
 
-Total size in TransferProgress.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Byte.
+需要搬迁的文件总大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -150,9 +156,9 @@ Total size in TransferProgress.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Byte.
 transferredSize: long
 ```
 
-transferred size in TransferProgress.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Byte.
+已搬迁的数据大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 

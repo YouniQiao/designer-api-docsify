@@ -1,12 +1,18 @@
 # getDistributedDeviceList (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getDistributedDeviceList
 
 ```TypeScript
 function getDistributedDeviceList(): Promise<Array<string>>
 ```
 
-Obtains the device types that enable cross-device notification. This API uses a promise to return the result.
+查询支持跨设备协同通知的设备类型。使用Promise异步回调。
 
 **Since:** 20
 
@@ -24,16 +30,16 @@ Obtains the device types that enable cross-device notification. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;string&gt;&gt; | 返回支持跨设备协同通知的设备列表。Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| 201 | Permission denied. |
+| 202 | Not system application to call the interface. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

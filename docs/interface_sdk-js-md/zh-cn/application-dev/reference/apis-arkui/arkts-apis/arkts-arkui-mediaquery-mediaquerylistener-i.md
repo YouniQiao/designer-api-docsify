@@ -2,7 +2,7 @@
 
 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width <= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。
 
-继承自[MediaQueryResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。
 
 **继承/实现关系：** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
 
@@ -13,6 +13,12 @@
 <!--Device-mediaquery-export interface MediaQueryListener extends MediaQueryResult--><!--Device-mediaquery-export interface MediaQueryListener extends MediaQueryResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { mediaquery } from 'kits/@kit.ArkUI';
+```
 
 ## offChange
 
@@ -36,7 +42,7 @@ offChange(callback?: Callback<MediaQueryResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MediaQueryResult&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaQueryResult&gt; | 否 |  |
 
 ## onChange
 
@@ -60,5 +66,5 @@ onChange(callback: Callback<MediaQueryResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MediaQueryResult&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaQueryResult&gt; | 是 |  |
 

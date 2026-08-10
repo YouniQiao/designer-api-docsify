@@ -1,20 +1,19 @@
 # Restorer (System API)
 
-Defines a tool class for restoring factory settings, such as clearing data in the user partition, deeply clearing data in the user and OS partitions, and synchronously clearing file keys.
-    **Factory reset**
+提供清除用户数据分区、深度清除用户数据和操作系统分区、同步清除文件密钥等恢复出厂设置功能的工具类。
 
-- Call **getRestorer** to obtain a **Restorer** object.  
-- Select a factory reset mode as required:  
-1. **factoryReset**: Common factory reset. Only data in the user partition is cleared in this mode.2. **forceFactoryReset**: Forcible factory reset. Both data in the user partition and file keys are cleared in this mode.3. **deepFactoryReset**: Deep factory reset. Data in the scope specified by **scope** is cleared in this mode.  
-**DATA**: Clear data in the user partition only; **DATA\_AND\_OS**: Clear data in both the user partition and OS partition.  
-- After corresponding factory reset method is called, the device will clear data and restore to its factory  
-settings.
+> **恢复出厂设置流程**：
 
-You are advised to select **factoryReset** for routine maintenance, **forceFactoryReset** when sensitive data or device handover is involved, and **deepFactoryReset** when devices are scrapped or data needs to be physically destroyed.
+- 开发者调用getRestorer方法获取Restorer对象。  
+- 开发者根据需求选择恢复出厂方式：  
+ 1. factoryReset：普通恢复出厂，仅清除用户数据分区。 2. forceFactoryReset：强制恢复出厂，清除用户数据分区并同步清除文件密钥。 3. deepFactoryReset：深度恢复出厂，可通过scope参数指定清除范围：DATA仅清除用户数据分区，DATA_AND_OS同时清除用户数据和操作系统分区。  
+- 开发者调用相应的恢复出厂方法执行恢复出厂操作，设备将清除数据并恢复到出厂状态。
 
-**Benefits**
+选取建议：日常维护场景优先选择factoryReset；涉及敏感数据或设备交接场景选择forceFactoryReset；设备报废或需要物理销毁数据场景选择deepFactoryReset。
 
-This method quickly clears errors, releases storage space, and protects private data. It supports device handover and secure data destruction, meeting data clearing requirements at different security levels.
+**收益说明**：
+
+帮助用户快速解决系统异常、释放存储空间、保护隐私数据，支持设备交接和安全销毁场景，满足不同安全级别的数据清除需求。
 
 **Since:** 9
 
@@ -26,38 +25,37 @@ This method quickly clears errors, releases storage space, and protects private 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## deepFactoryReset
 
 ```TypeScript
 deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 ```
 
-Deeply clears data in the user partition and OS partition by means of overwriting, completely destroys data, and restores the device to its factory settings. After the API is successfully called, the system performs deep factory reset. The process is as follows: Determine the clearance scope based on the policy. Overwrite data in the data partition for multiple times. Destroy key data in the OS partition. Verify whether data is completely destroyed. The device automatically restarts to restore its factory settings. Deep clearance uses physical overwriting to ensure that data cannot be restored by any tool. This API uses a promise to return the result.
+通过覆盖等方式，深度清除用户数据分区、操作系统分区，彻底销毁数据，恢复设备出厂状态。调用成功后，系统执行深度恢复出厂流程：根据策略确定清除范围 → 对数据分区执行多次覆盖写入 → 销毁操作系统分区关键数据 → 验证数据销毁完整性 → 设备自动重启恢复到出厂初始状态。深度清除通过物理覆盖方式确保数据无法被任何工具恢复。使用Promise异步回调。
 
-Use scenarios: The device is lost, and data needs to be completely destroyed.
+使用场景：设备丢失，需要彻底销毁数据。
 
-**Overview**
+**原理说明**：
 
-This method provides data clearance of the highest security level. Unlike **factoryReset** which clears only data in the user partition and **forceFactoryReset** which clears data in the user partition and keys,  
-**deepFactoryReset** physically destroys data by overwriting multiple times, for example, by writing random data multiple times. This method can prevent residual data from being extracted using data recovery tools. The data clearing scope can be configured: **DATA**: Clear data in the user partition only; **DATA\_AND\_OS**: Clear data in both the user partition and OS partition.
+该方法提供最高安全级别的数据清除。与factoryReset（仅清除数据分区）和forceFactoryReset（清除数据分区和密钥）不同，deepFactoryReset通过多次覆盖写入（如多次写入随机数据）物理销毁数据，防止数据恢复工具提取残留数据。清除范围可配置：DATA仅清除用户数据分区，DATA_AND_OS同时清除用户数据和操作系统分区。
 
-**Constraints**
+**约束和限制**：
 
-- Data destruction is irreversible and cannot be restored by any technical means. Explicit authorization from the  
-user must be obtained before performing this operation.  
-- The system permission **ohos.permission.FACTORY\_RESET** is required.  
-- Deep data clearance takes a long time, which may last for hours. Ensure that the device has sufficient battery  
-power. It is recommended the battery level be above 50%.  
-- The APIs of this module can be used only in the stage model.  
-- This method is applicable to extreme scenarios such as device scrapping and complete data destruction with high  
-security requirements. It is not recommended for common factory reset scenarios.  
-- Before performing the operation, you must clearly inform the user of the consequences and obtain the user's  
-confirmation.  
-- You are advised to perform factory reset only after the user explicitly confirms the operation.  
-- You must call **getDeepFactoryResetInfo** to obtain the estimated time required for the operation and inform  
-the user of the waiting time. Ensure that the device has sufficient battery power before performing the deep factory reset.  
-- After the operation is complete, the device automatically restarts and restores to its factory settings. The  
-app status needs to be saved in advance.
+- 数据销毁不可逆，无法通过任何技术手段恢复，执行前必须获得用户明确授权。  
+- 需要系统权限ohos.permission.FACTORY_RESET。  
+- 深度清除耗时较长(可能数小时)，必须确保设备电量充足(建议电量>50%)。  
+- 仅可在Stage模型下使用。  
+- 适用于设备报废、高安全销毁等极端场景，不建议普通恢复出厂场景使用。  
+- 执行前必须明确告知用户操作后果并获得确认。  
+- 建议仅在用户明确确认后执行恢复出厂操作。  
+- 必须先调用getDeepFactoryResetInfo查询预计耗时，向用户提示等待时长，确保设备电量充足后再执行深度恢复出厂操作。  
+- 执行完成后设备将自动重启恢复到出厂初始状态，应用需提前做好状态保存。
 
 **Since:** 26.0.0
 
@@ -77,22 +75,45 @@ app status needs to be saved in advance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factoryResetStrategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Factory reset strategy, which contains the **scope** ( reset scope) and **strategy** (reset strategy description) fields. This parameter is used to control the scope and mode of factory reset. **scope** specifies the data clearance scope. **DATA** indicates that only data in the user partition is cleared; **DATA\_\_\_ESCAPED\_UNDERSCORE\_\_\_AND\_\_\_ESCAPED\_UNDERSCORE\_\_\_OS** indicates that data in both the user partition and OS partition is cleared. **strategy** is the custom description of the reset operation. The value is a string of 0 to 64 characters. The value can contain letters, digits, underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), hyphens (-), and spaces. An exception is thrown if the value is out of range or contains invalid characters. |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-update-factoryresetstrategy-i-sys.md) | Yes | 恢复出厂设置策略(FactoryResetStrategy)，包含scope(重置范围)和strategy(重置策略 描述)字段，用于控制恢复出厂设置的范围和方式。scope指定清除范围(DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA_AND_OS同时清除用户数据和操作系统分区，适用于同时清除系统和数据的场景)。 strategy为重置操作的自定义描述文本，长度范围[0，64]，单位：字符。有效字符包括字母、数字、下划线、连字符和空格。超出范围或包含无效字符时抛出异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
+| Promise&lt;void&gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 203 | This function is prohibited by enterprise management policies. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Create a FactoryResetStrategy object.
+  let factoryResetStrategy: update.FactoryResetStrategy = {
+    scope: update.FactoryResetScope.DATA, // The reset scope is user data.
+    strategy: 'deepFactoryReset test' // Reset scope
+  };
+  // Perform deep factory reset.
+  factoryRestorer.deepFactoryReset(factoryResetStrategy).then(() => {
+    console.info(`deepFactoryReset success`);
+  }).catch((deepResetError: BusinessError) => {
+    console.error(`deepFactoryReset error, code:${deepResetError.code}, message:${deepResetError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
+```
 
 ## factoryReset
 
@@ -100,20 +121,20 @@ app status needs to be saved in advance.
 factoryReset(callback: AsyncCallback<void>): void
 ```
 
-Clears data in the user partition, deletes installed apps, user files, and personal settings, and restores the device to its factory settings. This API uses an asynchronous callback to return the result.
+清除用户数据分区，删除用户安装的应用、用户文件和个人设置，恢复设备出厂状态。使用callback异步回调。
 
-Use scenarios: A user chooses to restore the device to its factory settings.
+使用场景：用户选择恢复出厂设置。
 
-**Overview**
+**原理说明**：
 
-The process is as follows: Verify the permission to call APIs. Clear data in the user partition by deleting the installed apps, user files, and personal settings. Retain the system partitions and pre-installed apps. Clear the system cache. Set the factory reset flag. The device automatically restarts. Data is cleared in quick erasure mode, and indexes and files in data partitions are deleted without being overwritten. Only data in the user partition is cleared. The OS partition and pre-installed apps are not affected. After the device is restarted, it is restored to its factory settings. The user data is cleared, and the system files remain intact.
+该方法执行普通恢复出厂流程：验证调用权限 → 清除用户数据分区（删除用户安装的应用、用户文件和个人设置） → 保留系统分区和预置应用 → 清除系统缓存 → 设置恢复出厂标志 → 设备自动重启。清除过程采用快速擦除方式，仅删除数据分区索引和数据文件，不进行深度覆盖。清除范围仅限用户数据分区，不影响系统分区和预置应用。重启后设备恢复到出厂初始状态，用户数据已清空，系统文件完好。
 
-**Constraints**
+**约束和限制**：
 
-- The operation is irreversible. Remind the user to back up important data and obtain explicit confirmation.  
-- The system permission **ohos.permission.FACTORY\_RESET** is required.  
-- During the operation, the device automatically restarts. The app status needs to be saved.  
-- You are advised to perform factory reset only after the user explicitly confirms the operation.
+- 操作不可逆，需提醒用户备份重要数据并获得明确确认。  
+- 需要系统权限ohos.permission.FACTORY_RESET。  
+- 操作过程中设备会自动重启，应用需做好状态保存。  
+- 建议仅在用户明确确认后执行恢复出厂操作。
 
 **Since:** 9
 
@@ -131,23 +152,37 @@ The process is as follows: Verify the permission to call APIs. Clear data in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to receive the factory reset result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收恢复出厂结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 203 | This function is prohibited by enterprise management policies. |
 
-**Example**
+## Examples
 
 ```TypeScript
-restorer.factoryReset((err) => {
-  console.info(`factoryReset error ${JSON.stringify(err)}`);
-});
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Restore factory settings.
+  factoryRestorer.factoryReset((resetError: BusinessError) => {
+    if (resetError) {
+      console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
+      return;
+    }
+    console.info(`factoryReset success`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Fail to get factoryRestorer. Code: ${err.code}, message: ${err.message}.`);
+}
 ```
 
 ## factoryReset
@@ -156,20 +191,20 @@ restorer.factoryReset((err) => {
 factoryReset(): Promise<void>
 ```
 
-Clears data in the user partition, deletes installed apps, user files, and personal settings, and restores the device to its factory settings. This API uses a promise to return the result.
+清除用户数据分区，删除用户安装的应用、用户文件和个人设置，恢复设备出厂状态。使用Promise异步回调。
 
-Use scenarios: A user chooses to restore the device to its factory settings.
+使用场景：用户选择恢复出厂设置。
 
-**Overview**
+**原理说明**：
 
-The process is as follows: Verify the permission to call APIs. Clear data in the user partition by deleting the installed apps, user files, and personal settings. Retain the system partitions and pre-installed apps. Clear the system cache. Set the factory reset flag. The device automatically restarts. Data is cleared in quick erasure mode, and indexes and files in data partitions are deleted without being overwritten. Only data in the user partition is cleared. The OS partition and pre-installed apps are not affected. After the device is restarted, it is restored to its factory settings. The user data is cleared, and the system files remain intact.
+该方法执行普通恢复出厂流程：验证调用权限 → 清除用户数据分区（删除用户安装的应用、用户文件和个人设置） → 保留系统分区和预置应用 → 清除系统缓存 → 设置恢复出厂标志 → 设备自动重启。清除过程采用快速擦除方式，仅删除数据分区索引和数据文件，不进行深度覆盖。清除范围仅限用户数据分区，不影响系统分区和预置应用。重启后设备恢复到出厂初始状态，用户数据已清空，系统文件完好。
 
-**Constraints**
+**约束和限制**：
 
-- The operation is irreversible. Remind the user to back up important data and obtain explicit confirmation.  
-- The system permission **ohos.permission.FACTORY\_RESET** is required.  
-- During the operation, the device automatically restarts. The app status needs to be saved.  
-- You are advised to perform factory reset only after the user explicitly confirms the operation.
+- 操作不可逆，需提醒用户备份重要数据并获得明确确认。  
+- 需要系统权限ohos.permission.FACTORY_RESET。  
+- 操作过程中设备会自动重启，应用需做好状态保存。  
+- 建议仅在用户明确确认后执行恢复出厂操作。
 
 **Since:** 9
 
@@ -187,27 +222,34 @@ The process is as follows: Verify the permission to call APIs. Clear data in the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
+| Promise&lt;void&gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 203 | This function is prohibited by enterprise management policies. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-restorer.factoryReset().then(() => {
-  console.info(`factoryReset success`);
-}).catch((err: BusinessError) => {
-  console.error(`factoryReset error ${JSON.stringify(err)}`);
-});
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Restore factory settings.
+  factoryRestorer.factoryReset().then(() => {
+    console.info(`factoryReset success`);
+  }).catch((resetError: BusinessError) => {
+    console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
 ```
 
 ## forceFactoryReset
@@ -216,24 +258,22 @@ restorer.factoryReset().then(() => {
 forceFactoryReset(): Promise<void>
 ```
 
-Clears data in the user partition, clears the file key, deletes the installed apps and user files, and restores the device to factory settings. The file key is generated by the system for encrypting user data and is stored in a secure area to protect sensitive user data. After the API is successfully called, the system immediately performs forcible factory reset. The process is as follows: Clear data in the user partition. Clear the file key.Clear the system cache and temporary files. The device automatically restarts to restore its factory settings.This API uses a promise to return the result.
+清除用户数据分区，同步清除文件密钥（系统为用户数据加密生成的密钥，存储在安全存储区域，用于保护用户敏感数据），删除用户安装的应用、用户文件，恢复设备出厂状态。调用成功后，系统立即执行强制恢复出厂流程：清除用户数据分区 → 同步清除文件密钥 → 清除系统缓存和临时文件 → 设备自动重启恢复到出厂初始状态。使用Promise异步回调。
 
-Use scenarios: This operation is performed to thoroughly delete sensitive data or clear data before device handover.
+使用场景：需要彻底清除敏感数据、设备交接前清除数据等安全操作。
 
-**Overview**
+**原理说明**：
 
-The difference between this method and **factoryReset** is that this method clears the file key synchronously.The file key is generated by the system to encrypt user data and is stored in a secure area such as the keystore or a dedicated partition. The file key is used to encrypt personal files, app data, and configuration information in the user data partition. After the file key is cleared, the residual encrypted data cannot be decrypted or restored, achieving more complete data destruction. **forceFactoryReset** not only deletes data in the user partition, but also sends a command of data clearing to the key management system to completely delete the key from the secure storage, ensuring that the encrypted data cannot be restored. This mechanism is applicable to secure data destruction.
+该方法与factoryReset的区别在于同步清除文件密钥。文件密钥是系统为用户数据加密生成的密钥，存储在安全存储区域（如密钥库或专用分区）。密钥作用：对用户数据分区中的个人文件、应用数据、配置信息等进行加密保护。清除影响：同步清除文件密钥后，即使残留的加密数据也无法被解密和恢复，实现更彻底的数据销毁。清除机制：forceFactoryReset不仅删除用户数据分区，还会向密钥管理系统发送清除指令，将密钥从安全存储中彻底删除，确保加密数据完全无法恢复，适用于安全销毁场景。
 
-**Constraints**
+**约束和限制**：
 
-- The operation is irreversible and will permanently delete all user data and encryption keys. Therefore, remind  
-users to back up important data in advance.  
-- The system permission **ohos.permission.FORCE\_FACTORY\_RESET** is required.  
-- Before calling this method, remind users to back up important data and confirm the operation.  
-- You are advised to perform factory reset only after the user explicitly confirms the operation.  
-- This method is applicable to scenarios with high security requirements, such as destruction of sensitive data  
-and device handover.  
-- During the operation, the device automatically restarts. The app status needs to be saved.
+- 操作不可逆，将永久删除所有用户数据和加密密钥，需提前提醒用户备份重要数据，无法恢复。  
+- 需要系统权限ohos.permission.FORCE_FACTORY_RESET。  
+- 执行前必须明确提醒用户备份重要数据并确认操作。  
+- 建议仅在用户明确确认后执行恢复出厂操作。  
+- 适用于敏感数据销毁、设备交接等高安全场景。  
+- 操作过程中设备会立即重启，应用需提前做好状态保存。
 
 **Since:** 23
 
@@ -251,27 +291,33 @@ and device handover.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
+| Promise&lt;void&gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 203 | This function is prohibited by enterprise management policies. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
-restorer.forceFactoryReset().then(() => {
-  console.info(`forceFactoryReset success`);
-}).catch((err: BusinessError) => {
-  console.error(`forceFactoryReset error ${JSON.stringify(err)}`);
-});
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Perform forcible factory reset.
+  factoryRestorer.forceFactoryReset().then(() => {
+    console.info(`forceFactoryReset success`);
+  }).catch((forceResetError: BusinessError) => {
+    console.error(`forceFactoryReset error, code:${forceResetError.code}, message:${forceResetError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
 ```
 
 ## getDeepFactoryResetInfo
@@ -280,23 +326,21 @@ restorer.forceFactoryReset().then(() => {
 getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<FactoryResetInfo>
 ```
 
-Obtains the deep factory reset information, which is used to estimate the time required for the reset. After this method is called, the system calculates the time required for deep factory reset based on the clearance scope specified by **DATA** or **DATA\_AND\_OS** and the device storage capacity, and returns a **FactoryResetInfo**  
-object that contains the estimated time required for reset. This API uses a promise to return the result.
+获取深度恢复出厂设置信息，用于预估恢复操作耗时。调用此方法后，系统根据清除范围（DATA或DATA_AND_OS）和设备存储容量计算深度清除所需时间，返回包含预计持续时间的FactoryResetInfo对象。使用Promise异步回调。
 
-Use scenarios: Before performing the deep factory reset, remind the user with the waiting time, plan the operation time, and ensure that the battery level is sufficient.
+使用场景：执行深度恢复出厂前向用户提示等待时长、规划操作时间、确保电量充足。
 
-**Overview**
+**原理说明**：
 
-This method calculates the time required by analyzing the data clearance scope and storage medium. Deep data clearance destroys data by overwriting it multiple times. The time required is directly proportional to the clearance scope. It the clearance scope is set to **DATA**, it takes a shorter time because only data in the user partition needs to be cleared; if the scope is set to **DATA\_AND\_OS**, it takes a longer time because data in both the user partition and OS partition needs to be cleared. The system calculates the estimated time based on factors such as the storage capacity, number of overwrites, and write speed.
+该方法通过分析清除范围和存储介质特性计算耗时。深度清除通过多次覆盖写入销毁数据，耗时与清除范围成正比：DATA仅清除用户数据分区耗时较短，DATA_AND_OS清除用户数据和操作系统分区耗时较长。系统根据存储容量、覆盖次数、写入速度等因素计算预计时间。
 
-**Constraints**
+**约束和限制**：
 
-- The APIs of this module can be used only in the stage model.  
-- The system permission **ohos.permission.FACTORY\_RESET** is required.  
-- The returned time is an estimated value. The actual time required may vary depending on the device status.  
-- It is recommended that the device power be higher than 50%. When the device power is lower than that level, do  
-not perform the deep factory reset. Otherwise, the operation may fail due to power-off.  
-- This API must be called before **deepFactoryReset** is called to help users prepare for time and power.
+- 仅可在Stage模型下使用。  
+- 需要系统权限ohos.permission.FACTORY_RESET。  
+- 返回的时间为预估值，实际耗时可能因设备状态略有差异。  
+- 当设备电量不足（建议电量高于50%）时，不应执行深度恢复出厂操作，以避免中途断电导致操作失败。  
+- 必须在执行deepFactoryReset前调用，帮助用户做好时间和电量准备。
 
 **Since:** 26.0.0
 
@@ -316,19 +360,43 @@ not perform the deep factory reset. Otherwise, the operation may fail due to pow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factoryResetStrategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Factory reset strategy, which contains the **scope** ( reset scope) and **strategy** (reset strategy description) fields. This parameter is used to control the scope and mode of factory reset. **scope** specifies the data clearance scope. **DATA** indicates that only data in the user partition is cleared; **DATA\_\_\_ESCAPED\_UNDERSCORE\_\_\_AND\_\_\_ESCAPED\_UNDERSCORE\_\_\_OS** indicates that data in both the user partition and OS partition is cleared. **strategy** is the custom description of the reset operation. The value is a string of 0 to 64 characters. The value can contain letters, digits, underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), hyphens (-), and spaces. An exception is thrown if the value is out of range or contains invalid characters. |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-update-factoryresetstrategy-i-sys.md) | Yes | 恢复出厂设置策略(FactoryResetStrategy)，包含scope(重置范围)和strategy(重置策略 描述)字段，用于控制恢复出厂设置的范围和方式。scope指定清除范围(DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA_AND_OS同时清除用户数据和操作系统分区，适用于同时清除系统和数据的场景)。 strategy为重置操作的自定义描述文本，长度范围[0，64]，单位：字符。有效字符包括字母、数字、下划线、连字符和空格。超出范围或包含无效字符时抛出异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FactoryResetInfo&gt; | Promise used to return the result. If the operation is successful, the return value of **resolve** is a **FactoryResetInfo** object, including the estimated time required for reset. If the operation fails, the return value of **reject** is an error message. |
+| Promise&lt;FactoryResetInfo&gt; | Promise对象。成功时resolve返回深度恢复出厂设置信息对象（FactoryResetInfo），包含预计耗时等；失败时reject返回错误 信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| 11500104 | IPC error. |
+| 201 | Permission denied. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a FactoryResetStrategy object.
+let factoryResetStrategy: update.FactoryResetStrategy = {
+  scope: update.FactoryResetScope.DATA, // The reset scope is user data.
+  strategy: 'getDeepFactoryResetInfo test' // Reset scope
+};
+try {
+  // Obtain a Restorer object for restoring factory settings.
+  let factoryRestorer = update.getRestorer();
+  // Query the deep factory reset strategy.
+  factoryRestorer.getDeepFactoryResetInfo(factoryResetStrategy).then((deepResetInfo: update.FactoryResetInfo) => {
+    console.info(`getDeepFactoryResetInfo success`);
+  }).catch((resetInfoError: BusinessError) => {
+    console.error(`getDeepFactoryResetInfo promise error, code:${resetInfoError.code}, message:${resetInfoError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
+```
 

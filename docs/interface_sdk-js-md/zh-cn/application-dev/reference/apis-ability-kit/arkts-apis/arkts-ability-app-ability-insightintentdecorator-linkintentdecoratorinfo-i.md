@@ -1,7 +1,7 @@
 # LinkIntentDecoratorInfo
 
-LinkIntentDecoratorInfo继承自[IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，用于描述  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器支持的参数，例如应用间跳转需要的uri信息。
+LinkIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述  
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器支持的参数，例如应用间跳转需要的uri信息。
 
 **继承/实现关系：** LinkIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -13,6 +13,12 @@ LinkIntentDecoratorInfo继承自[IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_US
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+```
+
 ## paramMappings
 
 ```TypeScript
@@ -21,7 +27,7 @@ paramMappings?: LinkIntentParamMapping[]
 
 意图参数和uri信息的映射。
 
-**类型：** LinkIntentParamMapping[]
+**类型：** [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md)[]
 
 **起始版本：** 20
 

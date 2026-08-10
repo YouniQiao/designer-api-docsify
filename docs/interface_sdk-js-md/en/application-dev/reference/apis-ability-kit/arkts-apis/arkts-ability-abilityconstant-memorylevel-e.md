@@ -1,17 +1,19 @@
 # MemoryLevel
 
-Enumerates the memory levels of the entire device. You can use it in  
-[onMemoryLevel()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the UIAbility to complete different operations.
-    **NOTE**  
-    
-    - The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of  
-    memory:  
-    - When the available memory of the entire device drops to 1700 MB to 1800 MB, the **onMemoryLevel** callback  
-    with a value of **0** is triggered, indicating that the available memory is moderate.  
-    - When the available memory of the entire device drops to 1600 MB to 1700 MB, the **onMemoryLevel** callback  
-    with a value of **1** is triggered, indicating that the available memory is low.  
-    - When the available memory of the entire device drops below 1600 MB, the **onMemoryLevel** callback with a  
-    value of **2** is triggered, indicating that the available memory is critically low.
+整机可用内存级别，该类型为枚举，可配合UIAbility的[onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel)方法根据level执行不同内存级别的相应操作。
+
+> **说明：**
+> 
+> - 不同产品的触发条件可能存在差异。以12G内存的标准设备为例：
+> - 当整机可用内存下降至1700MB~1800MB时，会触发取值为0的onMemoryLevel回调，表示当前整机可用内存适中。
+> - 当整机可用内存下降至1600MB~1700MB时，会触发取值为1的onMemoryLevel回调，表示当前整机可用内存偏低。
+> - 当整机可用内存下降至1600MB以下时，会触发取值为2的onMemoryLevel回调，表示当前整机可用内存很低。
+> 
+> - LRU：表示按应用最近使用顺序排序的链表。通常将最近使用的应用放在链表头部（位置靠前），将最不常用的应用放在链表尾部（位置靠后）。当内存不足时，位置靠后的应用将优先被清理。
+> 
+> - 当LRU发生变化时，后台应用会根据处于应用使用排序链表（LRU）的位置，触发对应MemoryLevel级别(MEMORY_LEVEL_BACKGROUND_MODERATE、
+> MEMORY_LEVEL_BACKGROUND_LOW、MEMORY_LEVEL_BACKGROUND_CRITICAL)的onMemoryLevel回调。如果应用被冻结，则会在应用唤醒时收到对应的onMemoryLevel回
+> 调，因此不建议在此回调接口中做耗时操作。
 
 **Since:** 9
 
@@ -27,7 +29,7 @@ Enumerates the memory levels of the entire device. You can use it in
 MEMORY_LEVEL_MODERATE = 0
 ```
 
-Indicates that the system has a moderate amount of available memory. Due to differences in system-wide memory thresholds across devices, the actual performance may vary by product. For details, please refer to the notes below.
+表示整机可用内存适中。由于整机内存水线的不同，在不同产品上的表现可能存在差异，参见下方说明。
 
 **Since:** 9
 
@@ -47,7 +49,7 @@ Indicates that the system has a moderate amount of available memory. Due to diff
 MEMORY_LEVEL_LOW = 1
 ```
 
-Indicates that the system has low available memory. Due to differences in system-wide memory thresholds across devices, the actual performance may vary by product. For details, please refer to the notes below.
+表示整机可用内存低。由于整机内存水线的不同，在不同产品上的表现可能存在差异，参见下方说明。
 
 **Since:** 9
 
@@ -67,7 +69,7 @@ Indicates that the system has low available memory. Due to differences in system
 MEMORY_LEVEL_CRITICAL = 2
 ```
 
-Indicates that the system has critically low available memory. Due to differences in system-wide memory thresholds across devices, the actual performance may vary by product. For details, please refer to the notes below.
+表示整机可用内存极低。由于整机内存水线的不同，在不同产品上的表现可能存在差异，参见下方说明。
 
 **Since:** 9
 
@@ -87,7 +89,7 @@ Indicates that the system has critically low available memory. Due to difference
 MEMORY_LEVEL_UI_HIDDEN = 3
 ```
 
-All UI elements of the process are hidden.
+表示应用程序的所有UI界面已不可见，此时应该释放一些资源。该枚举仅对从前台切换到后台的应用生效。
 
 **Since:** 24
 
@@ -107,7 +109,7 @@ All UI elements of the process are hidden.
 MEMORY_LEVEL_BACKGROUND_MODERATE = 4
 ```
 
-The process is in the background and the available memory of the entire device is moderate.
+表示应用刚被使用过，即处于应用使用排序链表（LRU）的头部，暂时不会被系统清理。该枚举仅对后台应用生效。
 
 **Since:** 24
 
@@ -127,7 +129,7 @@ The process is in the background and the available memory of the entire device i
 MEMORY_LEVEL_BACKGROUND_LOW = 5
 ```
 
-The process is in the background and the available memory of the entire device is low.
+表示应用已被用户使用完一段时间，即处于应用使用排序链表（LRU）的中部，存在被系统清理的风险。该枚举仅对后台应用生效。
 
 **Since:** 24
 
@@ -147,7 +149,7 @@ The process is in the background and the available memory of the entire device i
 MEMORY_LEVEL_BACKGROUND_CRITICAL = 6
 ```
 
-The process is in the background and the available memory of the entire device is extremely low.
+表示应用长期未被使用，即处于应用使用排序链表（LRU）的尾部，会被系统优先清理。该枚举仅对后台应用生效。
 
 **Since:** 24
 

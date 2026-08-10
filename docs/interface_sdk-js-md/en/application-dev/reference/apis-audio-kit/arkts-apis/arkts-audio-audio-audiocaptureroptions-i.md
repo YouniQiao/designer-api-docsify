@@ -1,6 +1,6 @@
 # AudioCapturerOptions
 
-Describes audio capturer configurations.
+音频采集器选项信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Describes audio capturer configurations.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerInfo
 
 ```TypeScript
 capturerInfo: AudioCapturerInfo
 ```
 
-Audio capturer information.
+音频采集器信息。
 
-**Type:** AudioCapturerInfo
+**Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
 **Since:** 8
 
@@ -34,12 +40,11 @@ Audio capturer information.
 playbackCaptureConfig?: AudioPlaybackCaptureConfig
 ```
 
-Defines configuration for capturing played audio.
+音频内录的配置信息。
 
-This API is supported since API version 10 and deprecated since API version 12. You are advised to use  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ instead.
+<br/
 
-**Type:** AudioPlaybackCaptureConfig
+**Type:** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
 
 **Since:** 10
 
@@ -59,9 +64,9 @@ This API is supported since API version 10 and deprecated since API version 12. 
 playbackCaptureMode?: AudioPlaybackCaptureMode
 ```
 
-The playback capture mode for audio capturer.This can be a combination of the available \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+内录模式。可设置为AudioPlaybackCaptureMode中的枚举值或其按位或组合，当前仅支持MODE_DEFAULT（0x0）、MODE_MEDIA（0x1）、MODE_EXCLUDING_SELF（0x8000），以及MODE_MEDIA和MODE_EXCLUDING_SELF的按位或组合（0x8001）。
 
-**Type:** AudioPlaybackCaptureMode
+**Type:** [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md)
 
 **Since:** 26.0.0
 
@@ -79,9 +84,9 @@ The playback capture mode for audio capturer.This can be a combination of the av
 streamInfo: AudioStreamInfo
 ```
 
-Audio stream information.
+音频流信息。
 
-**Type:** AudioStreamInfo
+**Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 8
 

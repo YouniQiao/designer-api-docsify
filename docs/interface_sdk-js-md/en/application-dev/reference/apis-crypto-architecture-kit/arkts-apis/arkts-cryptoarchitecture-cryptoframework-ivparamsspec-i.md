@@ -1,14 +1,14 @@
 # IvParamsSpec
 
-Encapsulates the parameters for encryption or decryption using a block cipher mode that requires an IV. It is a child class of [ParamsSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and used as a parameter in  
-[init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ for symmetric encryption or decryption.
+加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_This is applicable to block cipher modes that require an IV, such as CBC, CTR, OFB, and CFB.
-    **NOTE**  
-    
-    Before passing a value to  
-    [init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, specify  
-    **algName** for its parent class [ParamsSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
+&lt;br&gt;适用于CBC、CTR、OFB、CFB这些需要iv作为参数的加解密模式。
+
+> **说明：**
+> 
+> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要
+> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
 
 **Inheritance/Implementation:** IvParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
@@ -22,19 +22,25 @@ Encapsulates the parameters for encryption or decryption using a block cipher mo
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## iv
 
 ```TypeScript
 iv: DataBlob
 ```
 
-IV parameter for encryption/decryption. Common lengths are listed below:
+加解密参数iv。常见长度如下：
 
-- In the CBC, CTR, OFB, or CFB mode of AES: The IV length is 16 bytes.  
-- In the CBC, OFB, or CFB mode of 3DES: The IV length is 8 bytes.  
-- In the CBC, CTR, OFB, or CFB mode of SM4\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_10+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_: The IV length is 16 bytes.
+- AES的CBC|CTR|OFB|CFB模式：iv长度为16字节。  
+- 3DES的CBC|OFB|CFB模式：iv长度为8字节。  
+- SM4&lt;sup&gt;10+&lt;/sup&gt;的CBC|CTR|OFB|CFB模式：iv长度为16字节。
 
-**Type:** DataBlob
+**Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 

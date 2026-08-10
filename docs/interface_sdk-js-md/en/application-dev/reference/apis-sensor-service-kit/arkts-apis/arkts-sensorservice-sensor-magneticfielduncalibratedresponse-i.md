@@ -1,6 +1,6 @@
 # MagneticFieldUncalibratedResponse
 
-Describes the uncalibrated magnetic field sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+未校准磁场传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the uncalibrated magnetic field sensor data. It extends from [Response
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## biasX
 
 ```TypeScript
 biasX: double
 ```
 
-Bias of the uncalibrated magnetic field strength on the x-axis, in μT.
+x轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -36,9 +42,9 @@ Bias of the uncalibrated magnetic field strength on the x-axis, in μT.
 biasY: double
 ```
 
-Bias of the uncalibrated magnetic field strength on the y-axis, in μT.
+y轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -54,9 +60,9 @@ Bias of the uncalibrated magnetic field strength on the y-axis, in μT.
 biasZ: double
 ```
 
-Bias of the uncalibrated magnetic field strength on the z-axis, in μT.
+z轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -72,9 +78,9 @@ Bias of the uncalibrated magnetic field strength on the z-axis, in μT.
 x: double
 ```
 
-Uncalibrated magnetic field strength on the x-axis, in μT.
+x轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -90,9 +96,9 @@ Uncalibrated magnetic field strength on the x-axis, in μT.
 y: double
 ```
 
-Uncalibrated magnetic field strength on the y-axis, in μT.
+y轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -108,9 +114,9 @@ Uncalibrated magnetic field strength on the y-axis, in μT.
 z: double
 ```
 
-Uncalibrated magnetic field strength on the z-axis, in μT.
+z轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

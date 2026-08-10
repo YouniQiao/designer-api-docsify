@@ -1,5 +1,11 @@
 # setGlobalTimeoutOptions
 
+## 导入模块
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setGlobalTimeoutOptions
 
 ```TypeScript
@@ -22,29 +28,13 @@ Sets timeout configuration for all tasks.Used when task-specific timeout configu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Task timeout configuration. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: Refer to the default value of TimeoutOptions. |
+| options | [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md) | 否 | Task timeout configuration. &lt;br&gt;Default value: Refer to the default value of TimeoutOptions. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
-try {
-  // 设置全局任务超时配置
-  cacheDownload.setGlobalTimeoutOptions({
-    networkCheckTimeout: 20,
-    httpTotalTimeout: 60,
-  });
-  cacheDownload.download("https://www.example.com", {});
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
-}
-```
+import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
 
-ArkTS-Sta示例：
-
-```TypeScript
 try {
   // 设置全局任务超时配置
   cacheDownload.setGlobalTimeoutOptions({

@@ -1,12 +1,18 @@
 # isBuffer
 
+## Modules to Import
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## isBuffer
 
 ```TypeScript
 function isBuffer(obj: Object): boolean
 ```
 
-Returns true if obj is a FastBuffer, false otherwise
+判断`obj`是否为FastBuffer。
 
 **Since:** 20
 
@@ -22,15 +28,15 @@ Returns true if obj is a FastBuffer, false otherwise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | The object to check if it's a FastBuffer |
+| obj | Object | Yes | 要判断是否为FastBuffer的对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true or false |
+| boolean | 如果obj是FastBuffer，则返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

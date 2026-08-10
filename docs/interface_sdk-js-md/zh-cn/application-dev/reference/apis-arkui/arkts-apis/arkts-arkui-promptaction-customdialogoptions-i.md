@@ -1,6 +1,6 @@
 # CustomDialogOptions
 
-自定义弹窗的内容，继承自\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+自定义弹窗的内容，继承自[BaseDialogOptions](../../../reference/apis-arkui/js-apis-promptAction copy.md#basedialogoptions11)。
 
 **继承/实现关系：** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
 
@@ -12,15 +12,21 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## backgroundBlurStyle
 
 ```TypeScript
 backgroundBlurStyle?: BlurStyle
 ```
 
-弹窗背板模糊材质。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT\_ULTRA\_THICK。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**说明：** \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
+弹窗背板模糊材质。&lt;br/&gt;默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。&lt;br/&gt;**说明：** &lt;br/&gt;设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -40,10 +46,9 @@ backgroundBlurStyle?: BlurStyle
 backgroundColor?: ResourceColor
 ```
 
-设置弹窗背板颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值：Color.Transparent\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**说明：**  
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则颜色显示将不符合预期效果。
+设置弹窗背板颜色。&lt;br/&gt;默认值：Color.Transparent&lt;br/&gt;**说明：** &lt;br/&gt;当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则颜色显示将不符合预期效果。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -61,9 +66,9 @@ backgroundColor?: ResourceColor
 borderColor?: ResourceColor | EdgeColors
 ```
 
-设置弹窗背板的边框颜色。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值：Color.Black\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ 如果使用borderColor属性，需要和borderWidth属性一起使用。
+设置弹窗背板的边框颜色。&lt;br/&gt;默认值：Color.Black&lt;br/&gt; 如果使用borderColor属性，需要和borderWidth属性一起使用。
 
-**类型：** ResourceColor \| EdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
 **起始版本：** 23
 
@@ -81,9 +86,9 @@ borderColor?: ResourceColor | EdgeColors
 borderStyle?: BorderStyle | EdgeStyles
 ```
 
-设置弹窗背板的边框样式。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_默认值：BorderStyle.Solid\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ 如果使用borderStyle属性，需要和borderWidth属性一起使用。
+设置弹窗背板的边框样式。&lt;br/&gt;默认值：BorderStyle.Solid&lt;br/&gt; 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**类型：** BorderStyle \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
 **起始版本：** 23
 
@@ -101,9 +106,9 @@ borderStyle?: BorderStyle | EdgeStyles
 borderWidth?: Dimension | EdgeWidths
 ```
 
-设置弹窗背板的边框宽度。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_可分别设置4个边框宽度。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_默认值：0 \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_单位：vp\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
+设置弹窗背板的边框宽度。&lt;br /&gt;可分别设置4个边框宽度。&lt;br /&gt;默认值：0 &lt;br /&gt;单位：vp &lt;br /&gt; 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。&lt;br /&gt;当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
 
-**类型：** Dimension \| EdgeWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths
 
 **起始版本：** 23
 
@@ -121,11 +126,9 @@ borderWidth?: Dimension | EdgeWidths
 builder: CustomBuilder
 ```
 
-设置自定义弹窗的内容。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：** \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_builder需要赋值为箭头函数，格式如下：() =  
-    { this.XXX() }，其中XXX是内部builder名。  
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_全局builder需要在组件内部创建，并在内部builder中调用。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_builder根节点宽高百分比相对弹窗容器大小。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_builder非根节点宽高百分比相对父节点大小。
+设置自定义弹窗的内容。&lt;br/&gt;**说明：** &lt;br/&gt;builder需要赋值为箭头函数，格式如下：() => { this.XXX() }，其中XXX是内部builder名。&lt;br/&gt;全局builder需要在组件内部创建，并在内部builder中调用。&lt;br/&gt;builder根节点宽高百分比相对弹窗容器大小。&lt;br/&gt;builder非根节点宽高百分比相对父节点大小。
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -143,9 +146,9 @@ builder: CustomBuilder
 cornerRadius?: Dimension | BorderRadiuses
 ```
 
-设置背板的圆角半径。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_可分别设置4个圆角的半径。\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_ 圆角大小受组件尺寸限制，最大值为组件宽或高的一半，若值为负，则按照默认值处理。\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ 百分比参数方式：以父元素弹窗宽和高的百分比来设置弹窗的圆角。
+设置背板的圆角半径。&lt;br /&gt;可分别设置4个圆角的半径。&lt;br /&gt;默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }&lt;br /&gt; 圆角大小受组件尺寸限制，最大值为组件宽或高的一半，若值为负，则按照默认值处理。 &lt;br /&gt; 百分比参数方式：以父元素弹窗宽和高的百分比来设置弹窗的圆角。
 
-**类型：** Dimension \| BorderRadiuses
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses
 
 **起始版本：** 23
 
@@ -163,9 +166,9 @@ cornerRadius?: Dimension | BorderRadiuses
 height?: Dimension
 ```
 
-设置弹窗背板的高度。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_- 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_- 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
+设置弹窗背板的高度。&lt;br /&gt;**说明：**&lt;br /&gt;- 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。&lt;br /&gt;- 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 23
 
@@ -183,9 +186,9 @@ height?: Dimension
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER\_FLOATING\_MD，失焦为ShadowStyle.OUTER\_FLOATING\_SM。其他设备默认无阴影。
+设置弹窗背板的阴影。&lt;br /&gt;当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
 
 **起始版本：** 23
 
@@ -203,9 +206,9 @@ shadow?: ShadowOptions | ShadowStyle
 width?: Dimension
 ```
 
-设置弹窗背板的宽度。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_**说明：**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_- 弹窗宽度默认最大值：400vp \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_- 百分比参数方式：弹窗参考宽度基于所在窗口的宽度的基础上调整。
+设置弹窗背板的宽度。&lt;br /&gt;**说明：**&lt;br&gt;- 弹窗宽度默认最大值：400vp &lt;br /&gt;- 百分比参数方式：弹窗参考宽度基于所在窗口的宽度的基础上调整。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 23
 

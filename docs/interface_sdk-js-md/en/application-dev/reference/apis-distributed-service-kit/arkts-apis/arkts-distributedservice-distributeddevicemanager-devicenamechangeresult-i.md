@@ -1,6 +1,6 @@
 # DeviceNameChangeResult
 
-Device name change result.
+设备名字改变结果信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Device name change result.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## deviceName
 
 ```TypeScript
 deviceName: string
 ```
 
-Device name.
+设备名字。
 
 **Type:** string
 

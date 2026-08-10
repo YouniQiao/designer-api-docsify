@@ -12,6 +12,12 @@ Defines the contact number information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## alphaTag
 
 ```TypeScript
@@ -80,7 +86,7 @@ recordNumber?: int
 
 Indicates the record number.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

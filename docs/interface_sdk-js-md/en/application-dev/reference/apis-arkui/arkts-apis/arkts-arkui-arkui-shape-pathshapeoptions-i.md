@@ -1,6 +1,6 @@
 # PathShapeOptions
 
-Interface for PathShape constructor parameters.
+PathShape的构造函数参数。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Interface for PathShape constructor parameters.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## commands
 
 ```TypeScript
 commands?: string
 ```
 
-Defines the commands for drawing the PathShape.
+绘制路径的指令。更多说明请参考[commands](arkts-arkui-path-pathattribute-i.md#commands)支持的绘制命令。
 
 **Type:** string
 

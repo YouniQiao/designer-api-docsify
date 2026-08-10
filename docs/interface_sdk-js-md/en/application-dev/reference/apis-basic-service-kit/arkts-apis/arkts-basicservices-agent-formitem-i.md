@@ -1,6 +1,6 @@
 # FormItem
 
-Describes the form item of a task.
+任务的表单项信息。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the form item of a task.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## name
 
 ```TypeScript
 name: string
 ```
 
-Form parameter name.
+表单参数名。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Form parameter name.
 value: string | FileSpec | Array<FileSpec>
 ```
 
-Form parameter value.
+表单参数值。
 
 **Type:** string \| FileSpec \| Array&lt;FileSpec&gt;
 

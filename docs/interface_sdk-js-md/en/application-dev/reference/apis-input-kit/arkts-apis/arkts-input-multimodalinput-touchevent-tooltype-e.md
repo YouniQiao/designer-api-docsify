@@ -1,6 +1,6 @@
 # ToolType
 
-Enumerates touch tool types.
+操作触屏的工具类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates touch tool types.
 FINGER = 0
 ```
 
-Finger.
+手指。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Finger.
 PEN = 1
 ```
 
-Stylus.
+笔。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Stylus.
 RUBBER = 2
 ```
 
-Eraser.
+橡皮擦。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Eraser.
 BRUSH = 3
 ```
 
-Brush.
+笔刷。
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Brush.
 PENCIL = 4
 ```
 
-Pencil.
+铅笔。
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ Pencil.
 AIRBRUSH = 5
 ```
 
-Air brush.
+气笔。
 
 **Since:** 9
 
@@ -112,7 +112,7 @@ Air brush.
 MOUSE = 6
 ```
 
-Mouse.
+鼠标。
 
 **Since:** 9
 
@@ -128,7 +128,7 @@ Mouse.
 LENS = 7
 ```
 
-Lens.
+透镜。
 
 **Since:** 9
 

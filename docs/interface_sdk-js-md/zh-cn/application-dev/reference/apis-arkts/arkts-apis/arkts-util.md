@@ -10,6 +10,12 @@ util模块提供常用工具函数，如用于字符串编码和解码的TextEnc
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## 汇总
 
 ### 函数
@@ -18,7 +24,7 @@ util模块提供常用工具函数，如用于字符串编码和解码的TextEnc
 | --- | --- |
 | [callbackWrapper](arkts-arkts-util-callbackwrapper-f.md#callbackwrapper) | Takes an async function (or a function that returns a Promise) and returns a function following the error-first callback style. |
 | [errnoToString](arkts-arkts-util-errnotostring-f.md#errnotostring) | Get the string name of the system errno. |
-| [format](arkts-arkts-util-format-f.md#format) | %s: 用于转换除BigInt、Object和-0之外的所有值。BigInt值将以n表示，没有用户定义toString函数的对象使用util.inspect()检查，选项为{ depth: 0, colors: false, compact: 3 }。%d: 用于转换除BigInt和Symbol之外的所有值。%i: 对除BigInt和Symbol之外的所有值使用parseInt(value, 10)。%f: 对除BigInt和Symbol之外的所有值使用parseFloat(value)。%j: JSON。如果参数包含循环引用，则替换为字符串'[Circular]'。%o: Object。对象的通用JavaScript对象格式字符串表示。类似于util.inspect()，选项为{ showHidden: true, showProxy: true}。这将显示完整对象，包括不可枚举属性和代理。%O: Object。对象的通用JavaScript对象格式字符串表示。%O: Object。对象的通用JavaScript对象格式字符串表示。类似于util.inspect()，没有选项。这将显示完整对象，不包括不可枚举属性和代理。%c: CSS。此说明符被忽略，将跳过传入的任何CSS。%%: 单个百分号('%')。这不会消耗参数。返回：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 格式化的字符串。 |
+| [format](arkts-arkts-util-format-f.md#format) | %s: 用于转换除BigInt、Object和-0之外的所有值。BigInt值将以n表示，没有用户定义toString函数的对象使用util.inspect()检查，选项为{ depth: 0, colors: false, compact: 3 }。%d: 用于转换除BigInt和Symbol之外的所有值。%i: 对除BigInt和Symbol之外的所有值使用parseInt(value, 10)。%f: 对除BigInt和Symbol之外的所有值使用parseFloat(value)。%j: JSON。如果参数包含循环引用，则替换为字符串'[Circular]'。%o: Object。对象的通用JavaScript对象格式字符串表示。类似于util.inspect()，选项为{ showHidden: true, showProxy: true}。这将显示完整对象，包括不可枚举属性和代理。%O: Object。对象的通用JavaScript对象格式字符串表示。%O: Object。对象的通用JavaScript对象格式字符串表示。类似于util.inspect()，没有选项。这将显示完整对象，不包括不可枚举属性和代理。%c: CSS。此说明符被忽略，将跳过传入的任何CSS。%%: 单个百分号('%')。这不会消耗参数。返回：&lt;string&gt; 格式化的字符串。 |
 | [generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid) | Generate a random RFC 4122 version 4 binary UUID using a cryptographically secure random number generator. |
 | [generateRandomUUID](arkts-arkts-util-generaterandomuuid-f.md#generaterandomuuid) | 使用加密安全的随机数生成器生成随机的RFC 4122版本4 UUID。 |
 | [getHash](arkts-arkts-util-gethash-f.md#gethash) | Get the hash code of an object. |

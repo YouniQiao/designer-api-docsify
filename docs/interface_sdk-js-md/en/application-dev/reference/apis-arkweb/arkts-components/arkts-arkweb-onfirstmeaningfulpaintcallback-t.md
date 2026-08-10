@@ -4,7 +4,7 @@
 type OnFirstMeaningfulPaintCallback = (firstMeaningfulPaint: FirstMeaningfulPaint) => void
 ```
 
-Defines a callback invoked when the first meaningful paint occurs on the page.
+网页绘制页面度量信息的回调，当网页加载完页面主要内容时会触发该回调。
 
 **Since:** 12
 
@@ -20,5 +20,5 @@ Defines a callback invoked when the first meaningful paint occurs on the page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstMeaningfulPaint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the first meaningful paint.  |
+| firstMeaningfulPaint | [FirstMeaningfulPaint](arkts-arkweb-firstmeaningfulpaint-i.md) | Yes | 绘制页面主要内容度量的详细信息。 |
 

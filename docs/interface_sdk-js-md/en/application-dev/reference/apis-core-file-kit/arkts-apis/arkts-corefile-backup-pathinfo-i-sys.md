@@ -1,6 +1,6 @@
 # PathInfo (System API)
 
-Path information for file migration.
+文件迁移的路径信息。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Path information for file migration.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## destPath
 
 ```TypeScript
 destPath: string
 ```
 
-Destination path for migration.
+迁移的目标路径。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Destination path for migration.
 srcPath: string
 ```
 
-Source path for migration.
+迁移的源路径。
 
 **Type:** string
 

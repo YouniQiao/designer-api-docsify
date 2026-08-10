@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height: double
 
 窗口高度，单位为vp，该参数为浮点数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
@@ -38,7 +44,7 @@ width: double
 
 窗口宽度，单位为vp，该参数为浮点数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 

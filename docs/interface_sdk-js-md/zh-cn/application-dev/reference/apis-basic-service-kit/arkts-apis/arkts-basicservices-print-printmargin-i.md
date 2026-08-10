@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## bottom
 
 ```TypeScript
@@ -18,7 +24,7 @@ bottom?: int
 
 表示页面下边距。默认值为0。单位：毫米。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -36,7 +42,7 @@ left?: int
 
 表示页面左边距。默认值为0。单位：毫米。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -54,7 +60,7 @@ right?: int
 
 表示页面右边距。默认值为0。单位：毫米。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -72,7 +78,7 @@ top?: int
 
 表示页面上边距。默认值为0。单位：毫米。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 

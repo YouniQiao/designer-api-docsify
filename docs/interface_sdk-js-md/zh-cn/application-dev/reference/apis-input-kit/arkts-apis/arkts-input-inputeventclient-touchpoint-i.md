@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## displayId
 
 ```TypeScript
@@ -18,7 +24,7 @@ displayId: int
 
 触点所在屏幕的唯一标识，必须为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ displayX: int
 
 触点相对于屏幕左边缘的X坐标，单位为像素（px），必须为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -58,7 +64,7 @@ displayY: int
 
 触点相对于屏幕上边缘的Y坐标，单位为像素（px），必须为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -78,7 +84,7 @@ id: int
 
 触点唯一标识。取值范围为[0, 9]，且必须为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

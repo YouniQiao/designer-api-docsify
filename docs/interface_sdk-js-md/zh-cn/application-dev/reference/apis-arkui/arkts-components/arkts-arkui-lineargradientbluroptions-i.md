@@ -20,7 +20,7 @@ direction: GradientDirection
 
 GradientDirection.Bottom
 
-**类型：** GradientDirection
+**类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ fractionStops: FractionStop[]
 
 数组中保存的每一个二元数组（取值0-1，小于0则为0，大于1则为1）表示[模糊程度, 模糊位置]；模糊位置需严格递增，开发者传入的数据不符合规范会记录日志，渐变模糊数组中二元数组个数必须大于等于2，否则渐变模糊不生效。
 
-**类型：** FractionStop[]
+**类型：** [FractionStop](arkts-arkui-fractionstop-t.md)[]
 
 **起始版本：** 12
 

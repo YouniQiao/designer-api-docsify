@@ -1,6 +1,6 @@
 # Point3d
 
-Describes a 3D coordinate point. It inherits from [Point]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+三维的坐标点。继承自[Point](arkts-arkgraphics2d-common2d-point-i.md)。
 
 **Inheritance/Implementation:** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md)
 
@@ -12,15 +12,21 @@ Describes a 3D coordinate point. It inherits from [Point]\_\_\_JSDOC\_LINK\_DESC
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { common2D } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## z
 
 ```TypeScript
 z: double
 ```
 
-Z-axis coordinate. The value is a floating point number.
+z轴坐标，浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

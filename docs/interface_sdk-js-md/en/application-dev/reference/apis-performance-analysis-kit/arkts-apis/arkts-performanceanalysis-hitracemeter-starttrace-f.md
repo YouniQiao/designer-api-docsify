@@ -1,18 +1,25 @@
 # startTrace
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## startTrace
 
 ```TypeScript
 function startTrace(name: string, taskId: int): void
 ```
 
-Starts an asynchronous trace.
+标记一个异步跟踪耗时任务的开始。调用成功后，创建一条异步跟踪记录。
 
-If multiple trace tasks with the same name need to be performed at the same time or a trace needs to be performed multiple times concurrently, different task IDs must be specified in **startTrace**.
+如果有多个相同name的任务需要跟踪或者对同一个任务要跟踪多次，并且任务同时被执行，则开发者每次调用startTrace传入的taskId需不同。
 
-If the trace tasks with the same name are not performed at the same time, the same taskId can be used. For a specific example, see [finishTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+如果具有相同name的任务是串行执行的，则taskId可以相同。具体示例可参考[finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishtrace)中的示例。
 
-Since API version 19, you are advised to use [startAsyncTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, which must be used together with [finishAsyncTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. In this way, you can specify the trace output level and category.
+从API version 19开始，建议使用[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)接口（需与  
+[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishasynctrace)接口配套使用），以便分级控制跟踪输出与跟踪聚类。
 
 **Since:** 8
 
@@ -28,10 +35,10 @@ Since API version 19, you are advised to use [startAsyncTrace()]\_\_\_JSDOC\_LIN
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the trace to start. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
-| taskId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Task ID. It is used to distinguish multiple tasks with the same name. Ensure that the task IDs of concurrently executed tasks with the same name are unique. |
+| name | string | Yes | 要跟踪的任务名称。 由于单条trace记录的总长度限制为512Byte，超过的部分将会被截断，建议该参数的长度不要超过420Byte。 |
+| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务id。 用来区分具有相同名称的多个不同的任务，需确保并发执行的同名任务之间的任务id具有唯一性。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 hiTraceMeter.startTrace("myTestFunc", 1);

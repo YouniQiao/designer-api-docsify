@@ -1,6 +1,6 @@
 # ChildProcess (System API)
 
-The childprocess object can be used to create a new process.
+childprocess 对象可用于创建新的进程。
 
 **Since:** 7
 
@@ -12,13 +12,19 @@ The childprocess object can be used to create a new process.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Close the target process
+关闭目标进程。
 
 **Since:** 7
 
@@ -36,7 +42,7 @@ Close the target process
 getErrorOutput(): Promise<Uint8Array>
 ```
 
-Return it as 'Uint8Array of the stderr until EOF
+返回子进程的标准错误输出，以 Uint8Array 形式返回直到 EOF。
 
 **Since:** 7
 
@@ -52,7 +58,7 @@ Return it as 'Uint8Array of the stderr until EOF
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Return subprocess standard error output. |
+| Promise&lt;Uint8Array&gt; | 返回子进程的标准错误输出。 |
 
 ## getOutput
 
@@ -60,7 +66,7 @@ Return it as 'Uint8Array of the stderr until EOF
 getOutput(): Promise<Uint8Array>
 ```
 
-Return it as 'Uint8Array' of the stdout until EOF
+返回子进程的标准输出，以 Uint8Array 形式返回直到 EOF。
 
 **Since:** 7
 
@@ -76,7 +82,7 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Return subprocess standard output. |
+| Promise&lt;Uint8Array&gt; | 返回子进程的标准输出。 |
 
 ## kill
 
@@ -84,7 +90,7 @@ Return it as 'Uint8Array' of the stdout until EOF
 kill(signal: number | string): void
 ```
 
-Send a signal to process
+向进程发送信号。
 
 **Since:** 7
 
@@ -100,7 +106,7 @@ Send a signal to process
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signal | number \| string | Yes | Number or string represents the signal sent. |
+| signal | number \| string | Yes | number 或 string，表示发送的信号。 |
 
 ## wait
 
@@ -108,7 +114,7 @@ Send a signal to process
 wait(): Promise<number>
 ```
 
-Return 'number' is the target process exit code
+返回 number 表示目标进程的退出码。
 
 **Since:** 7
 
@@ -124,7 +130,7 @@ Return 'number' is the target process exit code
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Return the target process exit code. |
+| Promise&lt;number&gt; | 返回目标进程的退出码。 |
 
 ## exitCode
 
@@ -132,7 +138,7 @@ Return 'number' is the target process exit code
 readonly exitCode: number
 ```
 
-Return exitCode is the exit code of the current child process
+返回 exitCode 表示当前子进程的退出码。
 
 **Type:** number
 
@@ -152,7 +158,7 @@ Return exitCode is the exit code of the current child process
 readonly killed: boolean
 ```
 
-Return boolean is whether the current process signal is sent successfully
+返回 boolean 表示当前进程信号是否发送成功。
 
 **Type:** boolean
 
@@ -172,7 +178,7 @@ Return boolean is whether the current process signal is sent successfully
 readonly pid: number
 ```
 
-Return pid is the pid of the current process
+返回 pid 表示当前进程的 pid。
 
 **Type:** number
 
@@ -192,7 +198,7 @@ Return pid is the pid of the current process
 readonly ppid: number
 ```
 
-Return ppid is the pid of the current child process
+返回 ppid 表示当前子进程的 pid。
 
 **Type:** number
 

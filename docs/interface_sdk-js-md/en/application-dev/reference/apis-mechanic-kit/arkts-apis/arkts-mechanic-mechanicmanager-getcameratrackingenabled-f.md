@@ -1,12 +1,18 @@
 # getCameraTrackingEnabled
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## getCameraTrackingEnabled
 
 ```TypeScript
 function getCameraTrackingEnabled(): boolean
 ```
 
-Checks whether camera tracking is enabled for this mechanical device.
+获取相机跟踪状态
 
 **Since:** 20
 
@@ -20,19 +26,20 @@ Checks whether camera tracking is enabled for this mechanical device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Enabled status. The value true means that camera tracking is enabled, and false means the opposite. |
+| boolean | 返回是否启用摄像机跟踪 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 console.info('Get tracking status');
+// Call getCameraTrackingEnabled to obtain whether camera tracking is currently enabled.
 let enabled = mechanicManager.getCameraTrackingEnabled();
 console.info(`'current tracking status:' ${enabled}`);
 ```

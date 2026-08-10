@@ -6,7 +6,7 @@
 function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the notification badge is enabled for a specified application.This API uses an asynchronous callback to return the result.
+获取指定应用的角标使能状态（Callback形式）。
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ Checks whether the notification badge is enabled for a specified application.Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 获取角标使能状态回调函数。 |
 
 
 ## isBadgeDisplayed
@@ -38,7 +38,7 @@ Checks whether the notification badge is enabled for a specified application.Thi
 function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 ```
 
-Checks whether the notification badge is enabled for a specified application.This API uses a promise to return the result.
+获取指定应用的角标使能状态（Promise形式）。
 
 **Since:** 7
 
@@ -60,11 +60,11 @@ Checks whether the notification badge is enabled for a specified application.Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | 以Promise形式返回获取指定应用的角标使能状态。 |
 

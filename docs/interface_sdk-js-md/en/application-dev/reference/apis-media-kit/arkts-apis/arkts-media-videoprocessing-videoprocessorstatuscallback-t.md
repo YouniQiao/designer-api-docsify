@@ -20,5 +20,5 @@ Status change callback type for video processor notifications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The type of video processor status.  |
+| status | [VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) | Yes | The type of video processor status. |
 

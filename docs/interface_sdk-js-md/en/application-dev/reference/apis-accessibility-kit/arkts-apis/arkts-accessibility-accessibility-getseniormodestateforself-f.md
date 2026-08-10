@@ -1,5 +1,11 @@
 # getSeniorModeStateForSelf
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## getSeniorModeStateForSelf
 
 ```TypeScript
@@ -28,5 +34,5 @@ Check if this application's senior mode is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
+| 9300000 | System abnormality. |
 

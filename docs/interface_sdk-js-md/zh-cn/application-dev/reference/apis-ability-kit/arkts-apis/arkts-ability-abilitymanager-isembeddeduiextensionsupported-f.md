@@ -1,12 +1,18 @@
 # isEmbeddedUIExtensionSupported
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## isEmbeddedUIExtensionSupported
 
 ```TypeScript
 function isEmbeddedUIExtensionSupported(): boolean
 ```
 
-开发者通过调用该接口判断\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_是否可以在当前设备上使用。
+开发者通过调用该接口判断[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)是否可以在当前设备上使用。
 
 **起始版本：** 26.0.0
 
@@ -22,9 +28,9 @@ function isEmbeddedUIExtensionSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 当前设备是否支持\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。返回 true表示当前设备支持；返回false表示当前设备不支持。 |
+| boolean | 当前设备是否支持[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)。返回 true表示当前设备支持；返回false表示当前设备不支持。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityManager, UIAbility } from '@kit.AbilityKit';

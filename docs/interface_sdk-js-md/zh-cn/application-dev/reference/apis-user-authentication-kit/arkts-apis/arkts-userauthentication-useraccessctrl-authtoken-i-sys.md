@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## authTrustLevel
 
 ```TypeScript
@@ -160,7 +166,7 @@ tokenType: AuthTokenType
 
 认证令牌类型。标识令牌的签发来源，如本地认证、复用认证或协同认证。
 
-**类型：** AuthTokenType
+**类型：** [AuthTokenType](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md)
 
 **起始版本：** 18
 
@@ -180,7 +186,7 @@ userId: int
 
 用户ID。表示完成认证的用户标识，取值为非负整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

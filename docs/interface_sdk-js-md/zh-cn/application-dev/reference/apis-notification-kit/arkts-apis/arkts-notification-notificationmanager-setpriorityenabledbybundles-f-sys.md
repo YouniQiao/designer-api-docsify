@@ -1,5 +1,11 @@
 # setPriorityEnabledByBundles（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## setPriorityEnabledByBundles
 
 ```TypeScript
@@ -38,16 +44,14 @@ function setPriorityEnabledByBundles(switches: Map<BundleOption, boolean>): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600003 | Failed to connect to the service. |
+| 17700001 | The specified bundle name was not found. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -59,21 +63,6 @@ notificationManager.setPriorityEnabledByBundles(switches).then(() => {
   hilog.info(0x0000, 'testTag', `setPriorityEnabledByBundles success`);
 }).catch((err: BusinessError) => {
   hilog.error(0x0000, 'testTag', `setPriorityEnabledByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const bundleOption : notificationManager.BundleOption = { bundle: 'bundleName', uid: 1000 };
-let switches: Map<notificationManager.BundleOption, boolean> = new Map<notificationManager.BundleOption, boolean>([[bundleOption, false]]);
-notificationManager.setPriorityEnabledByBundles(switches).then(() => {
-    console.info(`setPriorityEnabledByBundles success`);
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setPriorityEnabledByBundles failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

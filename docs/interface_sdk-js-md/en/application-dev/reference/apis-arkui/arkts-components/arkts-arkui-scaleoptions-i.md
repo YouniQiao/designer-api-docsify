@@ -1,6 +1,9 @@
 # ScaleOptions
 
-Defines the options of scale.
+> **说明：**
+> 
+> 当组件同时设置了[rotate](arkts-arkui-commonmethod-c.md#rotate)和
+> [scale](arkts-arkui-commonmethod-c.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和centerY的值以最后设定的属性的值为准。
 
 **Since:** 7
 
@@ -16,10 +19,9 @@ Defines the options of scale.
 centerX?: number | string
 ```
 
-X coordinate of the transformation center point (anchor). The value can be of the string type, for example,  
-**'50'** and **'50%'**.
+变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。取值可为string类型，如'50'，'50%'。
 
-Unit: vp
+单位：vp
 
 **Type:** number \| string
 
@@ -41,10 +43,9 @@ Unit: vp
 centerY?: number | string
 ```
 
-Y coordinate of the transformation center point (anchor). The value can be of the string type, for example,  
-**'50'** and **'50%'**.
+变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。取值可为string类型，如'50'，'50%'。
 
-Unit: vp
+单位：vp
 
 **Type:** number \| string
 
@@ -66,9 +67,7 @@ Unit: vp
 x?: number
 ```
 
-Scale ratio along the x-axis.x   
-    1: The component is scaled up along the x-axis.  
-0 < x < 1: The component is scaled down along the x-axis.x < 0: The component is scaled in the reverse direction of the x-axis.
+The param of x direction.
 
 **Type:** number
 
@@ -90,9 +89,7 @@ Scale ratio along the x-axis.x
 y?: number
 ```
 
-Scale ratio along the y-axis.y   
-    1: The component is scaled up along the y-axis.  
-0 < y < 1: The component is scaled down along the y-axis.y < 0: The component is scaled in the reverse direction of the y-axis.
+The param of y direction.
 
 **Type:** number
 
@@ -114,9 +111,7 @@ Scale ratio along the y-axis.y
 z?: number
 ```
 
-Scale ratio along the z-axis. z   
-    1: The component is scaled up along the z-axis.  
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_0 < z < 1: The component is scaled down along the z-axis.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_z < 0: The component is scaled in the reverse direction of the z-axis.
+The param of z direction.
 
 **Type:** number
 

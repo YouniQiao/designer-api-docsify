@@ -1,12 +1,18 @@
 # unregisterShutdownCallback (System API)
 
+## Modules to Import
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## unregisterShutdownCallback
 
 ```TypeScript
 function unregisterShutdownCallback(callback?: Callback<void>): void
 ```
 
-Unregisters the callback to be invoked when the device is shut down or rebooted. This API uses a callback to return the result.
+取消订阅电源关机或重启的回调提醒。使用callback同步回调。
 
 **Since:** 23
 
@@ -24,17 +30,17 @@ Unregisters the callback to be invoked when the device is shut down or rebooted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback that returns no value. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 4900101 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

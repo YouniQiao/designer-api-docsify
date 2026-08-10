@@ -1,6 +1,6 @@
 # Panel
 
-Defines Panel Component.
+可滑动面板，提供一种轻量的内容展示窗口，方便在不同尺寸中切换。
 
 ## Panel
 
@@ -8,11 +8,11 @@ Defines Panel Component.
 Panel(show: boolean)
 ```
 
-Called when the panel slidable panel pops up.
+滑动面板组件。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -26,7 +26,10 @@ Called when the panel slidable panel pops up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| show | boolean | Yes |  |
+| show | boolean | Yes | 控制Panel显示或隐藏，true表示显示面板，false表示隐藏面板。 |
 
 ## Summary
 
+- [PanelHeight](arkts-arkui-panel-panelheight-e.md)
+- [PanelMode](arkts-arkui-panel-panelmode-e.md)
+- [PanelType](arkts-arkui-panel-paneltype-e.md)

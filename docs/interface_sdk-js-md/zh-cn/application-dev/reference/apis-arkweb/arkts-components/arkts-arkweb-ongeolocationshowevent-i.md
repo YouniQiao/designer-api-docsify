@@ -18,7 +18,7 @@ geolocation: JsGeolocation
 
 Defines the js geolocation request.
 
-**类型：** JsGeolocation
+**类型：** [JsGeolocation](../arkts-apis/arkts-arkweb-web-jsgeolocation-c.md)
 
 **起始版本：** 12
 

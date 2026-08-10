@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## 导入模块
+
+```TypeScript
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## [[Call]]
 
 ```TypeScript

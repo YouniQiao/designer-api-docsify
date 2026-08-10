@@ -1,7 +1,40 @@
 # InputClient
 
-You must first use [on('inputStart')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain a  
-**InputClient** instance, and then use this instance to call the following APIs.
+InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的  
+[on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。  
+**核心功能概述：**
+
+- **文本获取**：通过  
+[getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)/  
+[getForwardSync](arkts-ime-inputmethodengine-inputclient-i.md#getforwardsync)获取光标前的文本，通过  
+[getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)/  
+[getBackwardSync](arkts-ime-inputmethodengine-inputclient-i.md#getbackwardsync)获取光标后的文本，用于分析已输入内容并提供智能补全。  
+- **文本编辑**：通过  
+[insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)/  
+[insertTextSync](arkts-ime-inputmethodengine-inputclient-i.md#inserttextsync)插入文本，通过  
+[deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)/  
+[deleteForwardSync](arkts-ime-inputmethodengine-inputclient-i.md#deleteforwardsync)删除光标前的文本，通过  
+[deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)/[deleteBackwardSync](arkts-ime-inputmethodengine-inputclient-i.md#deletebackwardsync)删除光标后的文本。  
+- **功能键与光标**：通过  
+[sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)发送功能键（如回车键），通过  
+[moveCursor](arkts-ime-inputmethodengine-inputclient-i.md#movecursor)/  
+[moveCursorSync](arkts-ime-inputmethodengine-inputclient-i.md#movecursorsync)移动光标。  
+- **选区操作**：通过  
+[selectByRange](arkts-ime-inputmethodengine-inputclient-i.md#selectbyrange)/  
+[selectByRangeSync](arkts-ime-inputmethodengine-inputclient-i.md#selectbyrangesync)按范围选中文本，通过  
+[selectByMovement](arkts-ime-inputmethodengine-inputclient-i.md#selectbymovement)/[selectByMovementSync](arkts-ime-inputmethodengine-inputclient-i.md#selectbymovementsync)按方向选中文本。  
+- **编辑框属性**：通过  
+[getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)/[getEditorAttributeSync](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattributesync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键盘布局。  
+- **文本预览**：通过[setPreviewText](arkts-ime-inputmethodengine-inputclient-i.md#setpreviewtext)/  
+[setPreviewTextSync](arkts-ime-inputmethodengine-inputclient-i.md#setpreviewtextsync)设置预览文本，通过  
+[finishTextPreview](arkts-ime-inputmethodengine-inputclient-i.md#finishtextpreview)/  
+[finishTextPreviewSync](arkts-ime-inputmethodengine-inputclient-i.md#finishtextpreviewsync)结束文本预览。  
+- **私有通信**：通过[sendPrivateCommand](arkts-ime-inputmethodengine-inputclient-i.md#sendprivatecommand)向应用发送私有命令，通过  
+[sendMessage](arkts-ime-inputmethodengine-inputclient-i.md#sendmessage)/  
+[recvMessage](arkts-ime-inputmethodengine-inputclient-i.md#recvmessage)进行消息通信。
+
+下列API均需使用  
+[on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))获取到InputClient实例后，通过实例调用。
 
 **Since:** 9
 
@@ -10,6 +43,12 @@ You must first use [on('inputStart')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to ob
 <!--Device-inputMethodEngine-interface InputClient--><!--Device-inputMethodEngine-interface InputClient-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
 
 ## deleteBackward
 
@@ -23,7 +62,11 @@ ArkTS-Sta:
 deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
+删除光标后固定长度的文本。使用callback异步回调。
+
+**使用场景：** 实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。
+
+**使用后效果：** 成功时返回true，编辑框中光标后指定长度的文本被删除。
 
 **Since:** 9
 
@@ -37,18 +80,18 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -79,7 +122,7 @@ ArkTS-Sta:
 deleteBackward(length: int): Promise<boolean>
 ```
 
-Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
+删除光标后固定长度的文本。使用promise异步回调。
 
 **Since:** 9
 
@@ -93,23 +136,23 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。resolve返回true表示删除光标后固定长度的文本成功；resolve返回false表示删除光标后固定长度的文本失败；reject时抛出错误对 象，表示执行过程中发生错误。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -138,7 +181,7 @@ ArkTS-Sta:
 deleteBackwardSync(length: int): void
 ```
 
-Deletes the fixed-length text after the cursor.
+删除光标后固定长度的文本。
 
 **Since:** 10
 
@@ -152,17 +195,17 @@ Deletes the fixed-length text after the cursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let length: number = 1;
@@ -181,7 +224,11 @@ ArkTS-Sta:
 deleteForward(length: int, callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
+删除光标前固定长度的文本。使用callback异步回调。
+
+**使用场景：** 实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。
+
+**使用后效果：** 成功时返回true，编辑框中光标前指定长度的文本被删除。
 
 **Since:** 9
 
@@ -195,18 +242,18 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -237,7 +284,7 @@ ArkTS-Sta:
 deleteForward(length: int): Promise<boolean>
 ```
 
-Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
+删除光标前固定长度的文本。使用promise异步回调。
 
 **Since:** 9
 
@@ -251,23 +298,23 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。resolve返回true表示删除光标前固定长度的文本成功；resolve返回false表示删除光标前固定长度的文本失败；reject时抛出错误对 象，表示执行过程中发生错误。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -296,7 +343,7 @@ ArkTS-Sta:
 deleteForwardSync(length: int): void
 ```
 
-Deletes the fixed-length text before the cursor.
+删除光标前固定长度的文本。
 
 **Since:** 10
 
@@ -310,17 +357,17 @@ Deletes the fixed-length text before the cursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let length: number = 1;
@@ -333,10 +380,7 @@ inputClient.deleteForwardSync(length);
 finishTextPreview(): Promise<void>
 ```
 
-Finishes the text preview. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If there is preview text in the current text box, calling this API will display the preview text on the screen.
+结束预上屏。使用promise异步回调。
 
 **Since:** 12
 
@@ -350,16 +394,16 @@ Finishes the text preview. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) | text preview not supported. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800011 | text preview not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -377,10 +421,7 @@ inputClient.finishTextPreview().then(() => {
 finishTextPreviewSync(): void
 ```
 
-Finishes the text preview.
-    **NOTE**  
-    
-    If there is preview text in the current text box, calling this API will display the preview text on the screen.
+结束预上屏。
 
 **Since:** 12
 
@@ -394,10 +435,10 @@ Finishes the text preview.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) | text preview not supported. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800011 | text preview not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputClient.finishTextPreviewSync();
@@ -409,7 +450,7 @@ inputClient.finishTextPreviewSync();
 getAttachOptions(): AttachOptions
 ```
 
-Obtains the additional options for binding an input method.
+获取绑定输入法时的附加选项。
 
 **Since:** 19
 
@@ -423,9 +464,15 @@ Obtains the additional options for binding an input method.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Additional options for binding an input method. |
+| [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | 返回绑定输入法时的附加选项内容。 |
 
-**Example**
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
+
+## Examples
 
 ```TypeScript
 let attachOptions: inputMethodEngine.AttachOptions = inputClient.getAttachOptions();
@@ -438,7 +485,7 @@ console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptio
 getAttachOptions(): AttachOptions | null
 ```
 
-Get input attachOptions.
+获取绑定输入法时的附加选项。
 
 **Since:** 23
 
@@ -452,7 +499,7 @@ Get input attachOptions.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | return attach options. |
+| [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | 返回绑定输入法时的附加选项内容。 |
 
 ## getBackward
 
@@ -466,7 +513,7 @@ ArkTS-Sta:
 getBackward(length: int, callback: AsyncCallback<string>): void
 ```
 
-Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
+获取光标后固定长度的文本。使用callback异步回调。
 
 **Since:** 9
 
@@ -480,18 +527,18 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -518,7 +565,7 @@ ArkTS-Sta:
 getBackward(length: int): Promise<string>
 ```
 
-Obtains the specific-length text after the cursor. This API uses a promise to return the result.
+获取光标后固定长度的文本。使用promise异步回调。
 
 **Since:** 9
 
@@ -532,23 +579,23 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the specific-length text after the cursor. |
+| Promise&lt;string&gt; | Promise对象，返回光标后固定长度的文本。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -573,7 +620,7 @@ ArkTS-Sta:
 getBackwardSync(length: int): string
 ```
 
-Obtains the specific-length text after the cursor.
+获取光标后固定长度的文本。
 
 **Since:** 10
 
@@ -587,23 +634,23 @@ Obtains the specific-length text after the cursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Specific-length text after the cursor. |
+| string | 返回光标后固定长度的文本。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let length: number = 1;
@@ -617,11 +664,7 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
-Obtains information about the application window, in which the input box that starts an input method is located.This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API applies only to the input method applications that use [Panel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ as the  
-    soft keyboard window.
+获取当前拉起输入法的输入框所在应用窗口信息。使用promise异步回调。
 
 **Since:** 12
 
@@ -635,17 +678,17 @@ Obtains information about the application window, in which the input box that st
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowInfo&gt; | Promise used to return the information obtained. |
+| Promise&lt;WindowInfo&gt; | Promise对象，返回拉起输入法的输入框所在应用窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800012](../errorcode-inputmethod-framework.md#12800012-soft-keyboard-panel-not-created) | the input method panel does not exist. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800013 | window manager service error. |
+| 12800012 | the input method panel does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -664,7 +707,7 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 getCallingWindowInfo(): Promise<WindowInfo | null>
 ```
 
-Get info of the calling window.
+获取当前拉起输入法的输入框所在应用窗口信息。使用promise异步回调。
 
 **Since:** 23
 
@@ -678,15 +721,15 @@ Get info of the calling window.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowInfo \| null&gt; | the promise returned by the function. |
+| Promise&lt;WindowInfo \| null&gt; | Promise对象，返回拉起输入法的输入框所在应用窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800012](../errorcode-inputmethod-framework.md#12800012-soft-keyboard-panel-not-created) | the input method panel does not exist. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800013 | window manager service error. |
+| 12800012 | the input method panel does not exist. |
 
 ## getEditorAttribute
 
@@ -694,7 +737,11 @@ Get info of the calling window.
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
 
-Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
+获取编辑框属性值。使用callback异步回调。
+
+**使用场景：** 根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。
+
+**使用后效果：** 返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。
 
 **Since:** 9
 
@@ -708,15 +755,15 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EditorAttribute&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the attribute of the edit box. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EditorAttribute&gt; | Yes | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -737,7 +784,7 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 ```
 
-Get attribute about editor.
+获取编辑框属性值。使用callback异步回调。
 
 **Since:** 23
 
@@ -751,13 +798,13 @@ Get attribute about editor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EditorAttribute \| null&gt; | Yes | the callback of getEditorAttribute. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EditorAttribute \| null&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## getEditorAttribute
 
@@ -765,7 +812,7 @@ Get attribute about editor.
 getEditorAttribute(): Promise<EditorAttribute>
 ```
 
-Obtains the attribute of the edit box. This API uses a promise to return the result.
+获取编辑框属性值。使用promise异步回调。
 
 **Since:** 9
 
@@ -779,15 +826,15 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EditorAttribute&gt; | Promise used to return the attribute of the edit box. |
+| Promise&lt;EditorAttribute&gt; | Promise对象，返回编辑框属性值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -806,7 +853,7 @@ inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Editor
 getEditorAttribute(): Promise<EditorAttribute | null>
 ```
 
-Get attribute about editor.
+获取编辑框属性值。使用promise异步回调。
 
 **Since:** 23
 
@@ -820,13 +867,13 @@ Get attribute about editor.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EditorAttribute \| null&gt; | the promise returned by the function. |
+| Promise&lt;EditorAttribute \| null&gt; | Promise对象，返回编辑框属性值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## getEditorAttributeSync
 
@@ -834,7 +881,7 @@ Get attribute about editor.
 getEditorAttributeSync(): EditorAttribute
 ```
 
-Obtains the attribute of the edit box.
+获取编辑框属性值。
 
 **Since:** 10
 
@@ -848,15 +895,15 @@ Obtains the attribute of the edit box.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Attribute information. |
+| [EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) | 编辑框属性对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let editorAttribute: inputMethodEngine.EditorAttribute = inputClient.getEditorAttributeSync();
@@ -870,7 +917,7 @@ console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 getEditorAttributeSync(): EditorAttribute | null
 ```
 
-Get attribute about editor.
+获取编辑框属性值。
 
 **Since:** 23
 
@@ -884,13 +931,13 @@ Get attribute about editor.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the attribute of editor. |
+| [EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) | 编辑框属性对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 ## getForward
 
@@ -904,7 +951,9 @@ ArkTS-Sta:
 getForward(length: int, callback: AsyncCallback<string>): void
 ```
 
-Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
+获取光标前固定长度的文本。使用callback异步回调。  
+**使用场景：** 分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。  
+**使用后效果：** 成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。
 
 **Since:** 9
 
@@ -918,18 +967,18 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -956,7 +1005,7 @@ ArkTS-Sta:
 getForward(length: int): Promise<string>
 ```
 
-Obtains the specific-length text before the cursor. This API uses a promise to return the result.
+获取光标前固定长度的文本。使用promise异步回调。
 
 **Since:** 9
 
@@ -970,23 +1019,23 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the specific-length text before the cursor. |
+| Promise&lt;string&gt; | Promise对象，返回光标前固定长度的文本。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1011,7 +1060,7 @@ ArkTS-Sta:
 getForwardSync(length: int): string
 ```
 
-Obtains the specific-length text before the cursor.
+获取光标前固定长度的文本。
 
 **Since:** 10
 
@@ -1025,23 +1074,23 @@ Obtains the specific-length text before the cursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text length, which cannot be less than 0. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文本长度。不能小于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Specific-length text before the cursor. |
+| string | 返回光标前固定长度的文本。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let length: number = 1;
@@ -1061,7 +1110,7 @@ ArkTS-Sta:
 getTextIndexAtCursor(callback: AsyncCallback<int>): void
 ```
 
-Obtains the index of the text where the cursor is located. This API uses an asynchronous callback to return the result.
+获取光标所在处的文本索引。使用callback异步回调。
 
 **Since:** 10
 
@@ -1075,16 +1124,16 @@ Obtains the index of the text where the cursor is located. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. If the text index is obtained, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为 undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1110,7 +1159,7 @@ ArkTS-Sta:
 getTextIndexAtCursor(): Promise<int>
 ```
 
-Obtains the index of the text where the cursor is located. This API uses a promise to return the result.
+获取光标所在处的文本索引。使用promise异步回调。
 
 **Since:** 10
 
@@ -1124,16 +1173,16 @@ Obtains the index of the text where the cursor is located. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回光标所在处的文本索引。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1157,7 +1206,7 @@ ArkTS-Sta:
 getTextIndexAtCursorSync(): int
 ```
 
-Obtains the index of the text where the cursor is located.
+获取光标所在处的文本索引。
 
 **Since:** 10
 
@@ -1171,16 +1220,16 @@ Obtains the index of the text where the cursor is located.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Index of the text where the cursor is located. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回光标所在处的文本索引。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let index: number = inputClient.getTextIndexAtCursorSync();
@@ -1193,7 +1242,11 @@ console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
-Inserts text. This API uses an asynchronous callback to return the result.
+插入文本。使用callback异步回调。
+
+**使用场景：** 插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。
+
+**使用后效果：** 成功时返回true，文本已插入到编辑框光标位置。
 
 **Since:** 9
 
@@ -1207,18 +1260,18 @@ Inserts text. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text to insert. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| text | string | Yes | 文本内容。建议长度不超过1KB。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1243,7 +1296,7 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 insertText(text: string): Promise<boolean>
 ```
 
-Inserts text. This API uses a promise to return the result.
+插入文本。使用promise异步回调。
 
 **Since:** 9
 
@@ -1257,23 +1310,23 @@ Inserts text. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text to insert. |
+| text | string | Yes | 文本。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the insertion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。resolve返回true表示插入文本成功；resolve返回false表示插入文本失败；reject时抛出错误对象，表示执行过程中发生错误。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1295,7 +1348,7 @@ inputClient.insertText('test').then((result: boolean) => {
 insertTextSync(text: string): void
 ```
 
-Inserts text.
+插入文本。
 
 **Since:** 10
 
@@ -1309,17 +1362,17 @@ Inserts text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text to insert. |
+| text | string | Yes | 文本内容。建议长度不超过1KB。建议长度不超过1KB。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputClient.insertTextSync('test');
@@ -1337,7 +1390,11 @@ ArkTS-Sta:
 moveCursor(direction: int, callback: AsyncCallback<void>): void
 ```
 
-Moves the cursor. This API uses an asynchronous callback to return the result.
+移动光标。使用callback异步回调。
+
+**使用场景：** 实现光标移动到特定位置、实现上下左右移动光标功能、实现快速定位、实现自定义光标控制等。
+
+**使用后效果：** 成功时编辑框中的光标按指定方向移动一步。direction取值参见
 
 **Since:** 9
 
@@ -1351,17 +1408,17 @@ Moves the cursor. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Direction in which the cursor moves. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: upward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **2**: downward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **3**: leftward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **4**: rightward. which cannot be less than 0. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| direction | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1387,7 +1444,7 @@ ArkTS-Sta:
 moveCursor(direction: int): Promise<void>
 ```
 
-Moves the cursor. This API uses a promise to return the result.
+移动光标。使用promise异步回调。
 
 **Since:** 9
 
@@ -1401,22 +1458,22 @@ Moves the cursor. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Direction in which the cursor moves. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: upward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **2**: downward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **3**: leftward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **4**: rightward. which cannot be less than 0. |
+| direction | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1440,7 +1497,7 @@ ArkTS-Sta:
 moveCursorSync(direction: int): void
 ```
 
-Moves the cursor.
+移动光标。
 
 **Since:** 10
 
@@ -1454,16 +1511,16 @@ Moves the cursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Direction in which the cursor moves. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: upward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **2**: downward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **3**: leftward. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **4**: rightward. which cannot be less than 0. |
+| direction | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
@@ -1475,7 +1532,7 @@ inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
 off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 ```
 
-Unsubscribes from the event indicating that additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
+取消订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
 
 **Since:** 19
 
@@ -1489,10 +1546,10 @@ Unsubscribes from the event indicating that additional options for binding an in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'attachOptionsDidChange' | Yes | Additional option change event when the input method is bound. The value is fixed to **'attachOptionsDidChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachOptions&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
+| type | 'attachOptionsDidChange' | Yes | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | No | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let attachOptionsDidChangeCallback: (attachOptions: inputMethodEngine.AttachOptions) => void =
@@ -1512,7 +1569,7 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 ```
 
-Unsubscribe 'attachOptionsDidChange' event.
+取消订阅附加选项变更（attachOptionsDidChange）事件，停止监听输入法附加配置项的变更动作。
 
 **Since:** 23
 
@@ -1526,7 +1583,7 @@ Unsubscribe 'attachOptionsDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachOptions&gt; | No | optional, the callback called when the attach options changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | No | 回调函数。 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有attachOptionsDidChange事件的订阅。 |
 
 ## on('attachOptionsDidChange')
 
@@ -1534,7 +1591,7 @@ Unsubscribe 'attachOptionsDidChange' event.
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 ```
 
-Subscribes to the event indicating that the additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
+订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
 
 **Since:** 19
 
@@ -1548,10 +1605,16 @@ Subscribes to the event indicating that the additional options for binding an in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'attachOptionsDidChange' | Yes | Additional option change event when the input method is bound. The value is fixed to **'attachOptionsDidChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachOptions&gt; | Yes | Callback used to return the additional options for binding an input method. |
+| type | 'attachOptionsDidChange' | Yes | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | Yes | 回调函数，返回绑定输入法时的附加选项。 |
 
-**Example**
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
+
+## Examples
 
 ```TypeScript
 let attachOptionsDidChangeCallback: (attachOptions: inputMethodEngine.AttachOptions) => void =
@@ -1571,7 +1634,7 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 ```
 
-Subscribe 'attachOptionsDidChange' event.
+订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -1585,7 +1648,7 @@ Subscribe 'attachOptionsDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachOptions&gt; | Yes | the callback called when the attach options changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | Yes | 回调函数，返回绑定输入法时的附加选项。 |
 
 ## recvMessage
 
@@ -1593,16 +1656,7 @@ Subscribe 'attachOptionsDidChange' event.
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-Registers or unregisters MessageHandler.
-    **NOTE**  
-    
-    The [MessageHandler]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object is globally unique. After multiple  
-    registrations, only the last registered object is valid and retained, and the  
-    [onTerminated]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ callback of the penultimate registered  
-    object is triggered.  
-    
-    If no parameter is set, unregister [MessageHandler]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. Its  
-    [onTerminated]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ callback will be triggered.
+注册或取消注册Messagehandler。
 
 **Since:** 15
 
@@ -1616,15 +1670,15 @@ Registers or unregisters MessageHandler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and receives a message for terminating the subscription to this object through [onTerminated]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If no parameter is set, unregister [MessageHandler]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. Its [onTerminated]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | 该对象将通过 [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage)接收来自已绑定当前 输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。 &lt;br&gt;若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象，同时触发其 [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -1650,7 +1704,7 @@ inputMethodEngine.getInputMethodAbility()
 selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 ```
 
-Selects text based on the cursor movement direction. This API uses an asynchronous callback to return the result.
+根据光标移动方向选中文本。使用callback异步回调。
 
 **Since:** 10
 
@@ -1664,17 +1718,17 @@ Selects text based on the cursor movement direction. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Direction in which the cursor moves when the text is selected. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
+| movement | [Movement](arkts-ime-inputmethod-movement-i.md) | Yes | 选中时光标移动的方向。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1695,7 +1749,7 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
 selectByMovement(movement: Movement): Promise<void>
 ```
 
-Selects text based on the cursor movement direction. This API uses a promise to return the result.
+根据光标移动方向选中文本。使用promise异步回调。
 
 **Since:** 10
 
@@ -1709,22 +1763,22 @@ Selects text based on the cursor movement direction. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Direction in which the cursor moves when the text is selected. |
+| movement | [Movement](arkts-ime-inputmethod-movement-i.md) | Yes | 选中时光标移动的方向。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1743,7 +1797,7 @@ inputClient.selectByMovement(movement).then(() => {
 selectByMovementSync(movement: Movement): void
 ```
 
-Selects text based on the cursor movement direction.
+根据光标移动方向选中文本。
 
 **Since:** 10
 
@@ -1757,16 +1811,16 @@ Selects text based on the cursor movement direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Direction in which the cursor moves when the text is selected. |
+| movement | [Movement](arkts-ime-inputmethod-movement-i.md) | Yes | 选中时光标移动的方向。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let movement: inputMethodEngine.Movement = { direction: 1 };
@@ -1779,7 +1833,7 @@ inputClient.selectByMovementSync(movement);
 selectByRange(range: Range, callback: AsyncCallback<void>): void
 ```
 
-Selects text based on the specified range. This API uses an asynchronous callback to return the result.
+根据索引范围选中文本。使用callback异步回调。
 
 **Since:** 10
 
@@ -1793,17 +1847,17 @@ Selects text based on the specified range. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Range of the selected text. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 选中文本的范围。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1824,7 +1878,7 @@ inputClient.selectByRange(range, (err: BusinessError) => {
 selectByRange(range: Range): Promise<void>
 ```
 
-Selects text based on the specified range. This API uses a promise to return the result.
+根据索引范围选中文本。使用promise异步回调。
 
 **Since:** 10
 
@@ -1838,22 +1892,22 @@ Selects text based on the specified range. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Range of the selected text. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 选中文本的范围。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1872,7 +1926,7 @@ inputClient.selectByRange(range).then(() => {
 selectByRangeSync(range: Range): void
 ```
 
-Selects text based on the specified range.
+根据索引范围选中文本。
 
 **Since:** 10
 
@@ -1886,16 +1940,16 @@ Selects text based on the specified range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Range of the selected text. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 选中文本的范围。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let range: inputMethodEngine.Range = { start: 0, end: 1 };
@@ -1908,17 +1962,7 @@ inputClient.selectByRangeSync(range);
 sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
-Sends an extended edit action. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    The input method applications call this API to send extended edit actions to the edit box. The edit box listens  
-    for the corresponding event using  
-    [on('handleExtendAction')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ for further processing.  
-    
-    When the edit box responds to the **PASTE** command of [ExtendAction]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_,  
-    the edit box application needs to apply for the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    permission.
+发送扩展编辑操作。使用callback异步回调。
 
 **Since:** 10
 
@@ -1932,18 +1976,18 @@ Sends an extended edit action. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extended edit action to send. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| action | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Yes | 要发送的扩展操作。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。发送成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1963,18 +2007,7 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
-Sends an extended edit action. This API uses a promise to return the result.
-    **NOTE**  
-    
-    The input method applications call this API to send extended edit actions to the edit box. The edit box listens  
-    for the corresponding event using  
-    [on('handleExtendAction')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ for  
-    further processing.  
-    
-    When the edit box responds to the **PASTE** command of [ExtendAction]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_,  
-    the edit box application needs to apply for the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    permission.
+发送扩展编辑操作。使用promise异步回调。
 
 **Since:** 10
 
@@ -1988,23 +2021,23 @@ Sends an extended edit action. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extended edit action to send. |
+| action | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Yes | 要发送的扩展操作。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2028,7 +2061,7 @@ ArkTS-Sta:
 sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 ```
 
-Sends the function key. This API uses an asynchronous callback to return the result.
+发送功能键。使用callback异步回调。
 
 **Since:** 9
 
@@ -2042,17 +2075,17 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Action of the function key. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **0**: invalid key. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **1**: confirm key (Enter key). |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| action | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 功能键键值。&lt;br/&gt;- 当值为0时，表示无效按键。&lt;br/&gt;- 当值为1时，表示确认键（即回车键）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2084,7 +2117,7 @@ ArkTS-Sta:
 sendKeyFunction(action: int): Promise<boolean>
 ```
 
-Sends the function key. This API uses a promise to return the result.
+发送功能键。使用promise异步回调。
 
 **Since:** 9
 
@@ -2098,22 +2131,22 @@ Sends the function key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Action of the function key. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**0**: invalid key. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**1**: confirm key (Enter key). |
+| action | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 功能键键值。&lt;br/&gt;当值为0时，表示无效按键；&lt;br/&gt;当值为1时，表示确认键（即回车键）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。resolve返回true表示功能键发送成功；resolve返回false表示功能键发送失败；reject时抛出错误对象，表示执行过程中发生错误。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2136,13 +2169,7 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API can be called only when the edit box is attached to the input method and enter the edit mode, and the  
-    input method application is in full experience mode.  
-    
-    The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
+发送自定义通信至已绑定当前输入法应用的编辑框应用。使用Promise异步回调。
 
 **Since:** 15
 
@@ -2156,27 +2183,27 @@ Sends the custom communication to the edit box application attached to the input
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | Identifier of the custom data to be sent to the edit box application attached to the input method application. |
-| msgParam | ArrayBuffer | No | Message body of the custom data to be sent to the edit box application attached to the input method application. |
+| msgId | string | Yes | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的标识符。最大长度256字节。最大长度256字节。 |
+| msgParam | ArrayBuffer | No | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的消息体。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
-| [12800014](../errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) | the input method is in basic mode. |
-| [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) | the other side does not accept the request. |
-| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
+| 12800016 | input method client is not editable. |
+| 12800009 | input method client detached. |
+| 12800015 | the other side does not accept the request. |
+| 12800014 | the input method is in basic mode. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2196,14 +2223,7 @@ inputClient.sendMessage(msgId, msgParam).then(() => {
 sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - The private data channel allows communication between the system preset input method application and specific  
-    system components (such as a text box or a home screen application). It is usually used to implement custom  
-    input on a specific device.  
-    
-    - The total size of the private data is 32 KB, and the maximum number of private data records is 5.
+发送私有数据至需要与输入法应用通信的系统其他部分。使用promise异步回调。
 
 **Since:** 12
 
@@ -2217,23 +2237,23 @@ Sends private data to the system component that needs to communicate with the in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commandData | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, CommandDataType&gt; | Yes | Private data to send. |
+| commandData | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, CommandDataType&gt; | Yes | 私有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800010 | not the preconfigured default input method. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2259,7 +2279,7 @@ inputMethodEngine.getInputMethodAbility().on('inputStart', (kbController, textIn
 setPreviewText(text: string, range: Range): Promise<void>
 ```
 
-Sets the preview text. This API uses a promise to return the result.
+设置预上屏文本。使用promise异步回调。
 
 **Since:** 12
 
@@ -2273,24 +2293,24 @@ Sets the preview text. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Preview text to set. |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Range of the preview text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If **start** is not equal to **end**, **text** replaces the text of the specified range. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the values of **start** and **end** are negative values, a parameter error is returned. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| text | string | Yes | 预上屏的文本。建议长度不超过1KB。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 替换的文本范围。&lt;br/&gt;- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。&lt;br/&gt;- 当start等于end，默认将参 数text插入start对应的光标位置。&lt;br/&gt;- 当start不等于end，将参数text替换range对应区域的文本。&lt;br/&gt;- 当start与end为其他含有负数值的组合，按照参数错误返回。&lt;br/&gt;- 当输 入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。&lt;br/&gt;- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) | text preview not supported. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800011 | text preview not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2309,7 +2329,7 @@ inputClient.setPreviewText('test', range).then(() => {
 setPreviewTextSync(text: string, range: Range): void
 ```
 
-Sets the preview text.
+设置预上屏文本。
 
 **Since:** 12
 
@@ -2323,18 +2343,18 @@ Sets the preview text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Preview text to set. |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Range of the preview text. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If **start** is not equal to **end**, **text** replaces the text of the specified range. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the values of **start** and **end** are negative values, a parameter error is returned. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| text | string | Yes | 预上屏的文本。建议长度不超过1KB。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 替换的文本范围。&lt;br/&gt;- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。&lt;br/&gt;- 当start等于end，默认将参 数text插入start对应的光标位置。&lt;br/&gt;- 当start不等于end，将参数text替换range对应区域的文本。&lt;br/&gt;- 当start与end为其他含有负数值的组合，按照参数错误返回。&lt;br/&gt;- 当输 入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。&lt;br/&gt;- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) | text preview not supported. |
+| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 12800011 | text preview not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let range: inputMethodEngine.Range = { start: 0, end: 1 };

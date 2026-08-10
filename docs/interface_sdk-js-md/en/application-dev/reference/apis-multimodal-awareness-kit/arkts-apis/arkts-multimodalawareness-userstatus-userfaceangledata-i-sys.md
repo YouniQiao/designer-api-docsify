@@ -14,6 +14,12 @@ Defines user face angle data.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## hpeNetworkId
 
 ```TypeScript

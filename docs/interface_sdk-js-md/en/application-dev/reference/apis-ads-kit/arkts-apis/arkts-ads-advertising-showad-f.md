@@ -1,17 +1,24 @@
 # showAd
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## showAd
 
 ```TypeScript
 function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void
 ```
 
-Shows a full-screen ad.
-    **NOTE**  
-    
-    1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API.  
-    
-    2. This API only supports displaying rewarded ads and interstitial ads.
+展示全屏广告。
+
+> **说明：**
+> 
+> 1. 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。
+> 
+> 2. 该接口仅支持展示激励广告和插屏广告。
 
 **Since:** 11
 
@@ -27,19 +34,19 @@ Shows a full-screen ad.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ad | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ad object. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ad display parameters. |
-| context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes | 广告对象。 |
+| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes | 广告展示参数。 |
+| context | common.UIAbilityContext | No | UIAbility的上下文环境，不设置从api: [@ohos.app.ability.common](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ js-apis-app-ability-common)中获取。<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800004](../errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
+| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| 21800004 | Failed to display the ad. |
+| 21800001 | System internal error. |
 
-**Example**
+## Examples
 
 For details about how to obtain the context, see [Acquisition of Context](../../application-models/application-context-stage.md#acquisition-of-context).
 

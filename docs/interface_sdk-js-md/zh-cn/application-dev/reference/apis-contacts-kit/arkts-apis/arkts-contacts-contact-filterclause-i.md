@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.Contacts
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## dataItem
 
 ```TypeScript
@@ -18,7 +24,7 @@ dataItem?: DataFilter
 
 联系人数据过滤项。
 
-**类型：** DataFilter
+**类型：** [DataFilter](arkts-contacts-contact-datafilter-i.md)
 
 **起始版本：** 15
 

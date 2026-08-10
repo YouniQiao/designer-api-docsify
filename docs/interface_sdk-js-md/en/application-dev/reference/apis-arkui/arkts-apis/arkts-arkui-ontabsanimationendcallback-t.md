@@ -4,7 +4,7 @@
 export type OnTabsAnimationEndCallback = (index: int, extraInfo: TabsAnimationEvent) => void
 ```
 
-Defines a tabs callback when onAnimationEnd.
+切换动画结束时触发的回调。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ Defines a tabs callback when onAnimationEnd.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index value of the tab that when animation end. The value range is all integers The value should be an integer.  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The extra callback info.  |
+| index | int | Yes | 当前显示元素的索引，索引从0开始。 取值范围为全体整数 取值限定为整数。 |
+| extraInfo | [TabsAnimationEvent](arkts-arkui-tabs-tabsanimationevent-i.md) | Yes | 动画相关信息，只返回主轴方向上当前显示元素相对于Tabs起始位置的位移。 |
 

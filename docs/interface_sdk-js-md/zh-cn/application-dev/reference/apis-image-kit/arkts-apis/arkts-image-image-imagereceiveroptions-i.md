@@ -10,6 +10,12 @@ ImageReceiver的初始化选项。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## capacity
 
 ```TypeScript
@@ -20,7 +26,7 @@ capacity?: int
 
 该参数仅作为期望值，实际capacity由设备硬件决定。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -42,7 +48,7 @@ size?: Size
 
 该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 23
 

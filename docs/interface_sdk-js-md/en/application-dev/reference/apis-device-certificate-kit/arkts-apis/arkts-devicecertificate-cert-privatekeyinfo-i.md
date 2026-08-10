@@ -1,6 +1,6 @@
 # PrivateKeyInfo
 
-Represents the private key information.
+表示私钥信息。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Represents the private key information.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## key
 
 ```TypeScript
 key: string | Uint8Array
 ```
 
-Encrypted or unencrypted private key in PEM or DER format.
+未加密或加密的私钥，支持PEM或DER格式。
 
 **Type:** string \| Uint8Array
 
@@ -36,7 +42,7 @@ Encrypted or unencrypted private key in PEM or DER format.
 password?: string
 ```
 
-Password of the private key, if the private key is encrypted.
+私钥的密码，如果私钥是加密的。
 
 **Type:** string
 

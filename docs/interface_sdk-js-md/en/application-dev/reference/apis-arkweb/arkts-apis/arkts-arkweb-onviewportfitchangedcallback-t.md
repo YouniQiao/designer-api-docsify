@@ -18,5 +18,5 @@ The callback of ViewportFit Changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| viewportFit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | details of OnViewportFitChangedCallback.  |
+| viewportFit | [ViewportFit](arkts-arkweb-web-viewportfit-e.md) | Yes | details of OnViewportFitChangedCallback. |
 

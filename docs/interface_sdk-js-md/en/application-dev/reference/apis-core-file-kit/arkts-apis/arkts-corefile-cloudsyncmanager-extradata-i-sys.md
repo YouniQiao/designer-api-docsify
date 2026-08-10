@@ -1,6 +1,6 @@
 # ExtraData (System API)
 
-Represents the cloud data change information.
+云端数据变更信息。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents the cloud data change information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## eventId
 
 ```TypeScript
 eventId: string
 ```
 
-Change event ID.
+变更事件id。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Change event ID.
 extraData: string
 ```
 
-Represents the cloud data change information.
+云端数据变更信息。
 
 **Type:** string
 

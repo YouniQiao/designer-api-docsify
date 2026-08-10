@@ -1,6 +1,6 @@
 # DatePickerResult
 
-Defines the time format returned by the date picker.
+日期选择器返回的时间格式。
 
 **Since:** 8
 
@@ -16,9 +16,9 @@ Defines the time format returned by the date picker.
 day?: number
 ```
 
-Day of the selected date.
+选中日期的日。
 
-Value range: depends on **start** and **end**. If **start** and **end** are not set, the default range is [1, 31].
+取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[1, 31]。
 
 **Type:** number
 
@@ -38,9 +38,9 @@ Value range: depends on **start** and **end**. If **start** and **end** are not 
 month?: number
 ```
 
-Zero-based month index of the selected date. **0** indicates January, and **11** indicates December.
+选中日期的月的索引值，索引从0开始，0表示1月，11表示12月。
 
-Value range: depends on **start** and **end**. If **start** and **end** are not set, the default range is [0, 11].
+取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[0, 11]。
 
 **Type:** number
 
@@ -60,10 +60,9 @@ Value range: depends on **start** and **end**. If **start** and **end** are not 
 year?: number
 ```
 
-Year of the selected date.
+选中日期的年。
 
-Value range: depends on **start** and **end**. If **start** and **end** are not set, the default range is  
-[1970, 2100].
+取值范围：与设置的start、end有关，如果没有设置start、end，取值范围为[1970, 2100]。
 
 **Type:** number
 

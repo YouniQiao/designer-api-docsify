@@ -4,7 +4,7 @@
 export type AnimationStartHandler = (index: int, targetIndex: int, event: SwiperAnimationEvent) => void
 ```
 
-Handler of swiper, used in OnAnimationStart.
+切换动画开始时的回调。
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Handler of swiper, used in OnAnimationStart.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index of the current swiper.  |
-| targetIndex | int | Yes | The index of the target swiper.  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The extra information of the animation.  |
+| index | int | Yes | 当前显示元素的索引，动画开始前的index值（不是最终结束动画的index值）。 |
+| targetIndex | int | Yes | 当前显示元素的索引，动画开始前的index值（不是最终结束动画的index值）。 |
+| event | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | 动画相关信息，包括主轴方向上当前显示元素和目标元素相对ArcSwiper起始位置的位移，以及离手速度。 |
 

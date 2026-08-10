@@ -1,17 +1,22 @@
 # getAppNativeMemInfoWithCache
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppNativeMemInfoWithCache
 
 ```TypeScript
 function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo
 ```
 
-Obtains the memory information of the application process. This API uses the cache mechanism and has higher performance than the **getAppNativeMemInfo** API. The cache is valid for 5 minutes.
-    **NOTE**  
-    
-    Reading **\/proc/{pid}/smaps\_rollup** is time-consuming. Therefore, you are advised not to use this API in the  
-    main thread. You can use [@ohos.taskpool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [@ohos.worker]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to  
-    enable asynchronous threads to avoid application frame freezing.
+��ȡӦ�ý����ڴ���Ϣ����`getAppNativeMemInfo`�ӿ���ȣ��ýӿ�ʹ���˻�����ƣ���������ܡ��������Ч��Ϊ5���ӡ�
+
+> **ע��**
+> 
+> ���ڶ�ȡ /proc/{pid}/smaps_rollup �ȽϺ�ʱ�����鲻�����߳���ʹ�øýӿڡ�����ͨ��@ohos.taskpool��@ohos.worker�����첽�̣߳��Ա���Ӧ�ÿ��١�
 
 **Since:** 20
 
@@ -25,15 +30,15 @@ Obtains the memory information of the application process. This API uses the cac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| forceRefresh | boolean | No | Whether to ignore the cache validity and forcibly update the cache value. The default value is **false**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **true** means to directly obtain the current memory data and update the cache value.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **false** means to directly return the cache value if the cache is valid and obtain the current memory data and update the cache value if the cache is invalid. |
+| forceRefresh | boolean | No | �Ƿ���Ҫ���ӻ�����Ч�ԣ�ǿ�Ƹ��»���ֵ��Ĭ��ֵ��false�� true��ֱ�ӻ�ȡ��ǰ�ڴ����ݲ����»���ֵ�� false��������Чʱ��ֱ�ӷ��ػ���ֵ������ʧЧʱ��ȡ��ǰ�ڴ����ݲ����»���ֵ�� |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Memory information of the application process. |
+| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Ӧ�ý����ڴ���Ϣ�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 let nativeMemInfo: hidebug.NativeMemInfo = hidebug.getAppNativeMemInfoWithCache();

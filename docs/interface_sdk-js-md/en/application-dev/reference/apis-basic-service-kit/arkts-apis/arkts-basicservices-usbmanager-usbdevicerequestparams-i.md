@@ -1,6 +1,6 @@
 # USBDeviceRequestParams
 
-Represents control transfer parameters.
+控制传输参数。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents control transfer parameters.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## bRequest
 
 ```TypeScript
 bRequest: int
 ```
 
-Request type.
+请求类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -34,9 +40,9 @@ Request type.
 bmRequestType: int
 ```
 
-Control request type.
+请求控制类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -52,7 +58,7 @@ Control request type.
 data: Uint8Array
 ```
 
-Buffer for writing or reading data.
+用于写入或读取的缓冲区。
 
 **Type:** Uint8Array
 
@@ -70,9 +76,9 @@ Buffer for writing or reading data.
 wIndex: int
 ```
 
-Index of the request parameter.
+请求参数value对应的索引值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -88,9 +94,9 @@ Index of the request parameter.
 wLength: int
 ```
 
-Length of the requested data.Unit: bytes.
+请求数据的长度。（单位：字节）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -106,9 +112,9 @@ Length of the requested data.Unit: bytes.
 wValue: int
 ```
 
-Request parameter.
+请求参数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

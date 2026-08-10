@@ -1,10 +1,10 @@
 # TextEditControllerEx
 
-Implements an extended text editing controller.
+文本扩展编辑控制器。
 
-Inherits [TextBaseController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[TextBaseController](arkts-arkui-textbasecontroller-i.md)。
 
-**Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-component/textcommon-textbasecontroller-i.md)
+**Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-textbasecontroller-i.md)
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ Inherits [TextBaseController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 getCaretOffset(): number
 ```
 
-Obtains the current position of the caret.
+返回当前光标所在位置。
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Obtains the current position of the caret.
 
 | Type | Description |
 | --- | --- |
-| number | Position of the caret. |
+| number | 当前光标所在位置。 |
 
 ## getPreviewText
 
@@ -46,7 +46,7 @@ Obtains the current position of the caret.
 getPreviewText?(): PreviewText
 ```
 
-Obtains the preview text.
+获取预上屏信息。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Obtains the preview text.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Preview text. |
+| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息，包含预上屏起始位置索引和预上屏文本内容。 |
 
 ## isEditing
 
@@ -72,7 +72,7 @@ Obtains the preview text.
 isEditing(): boolean
 ```
 
-Obtains the editing status of the rich text.
+获取当前富文本的编辑状态。
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ Obtains the editing status of the rich text.
 
 | Type | Description |
 | --- | --- |
-| boolean | Editing status of the rich text. **true** means that the text is in editable state, and **false** means the opposite. |
+| boolean | true为编辑态，false为非编辑态。 |
 
 ## setCaretOffset
 
@@ -98,7 +98,7 @@ Obtains the editing status of the rich text.
 setCaretOffset(offset: number): boolean
 ```
 
-Sets the offset of the caret.
+设置光标偏移位置。
 
 **Since:** 12
 
@@ -116,13 +116,13 @@ Sets the offset of the caret.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Offset of the caret. If the offset is outside the range of all content, the setting fails. |
+| offset | number | Yes | 光标偏移位置，取值范围[0, 文本长度]。超出所有内容范围时，设置失败。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the caret offset is set successfully. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Returns **true** if it is set successfully; returns **false** otherwise. |
+| boolean | 光标是否设置成功。 &lt;br&gt;true表示光标设置成功，false表示设置失败。 |
 
 ## stopEditing
 
@@ -130,7 +130,7 @@ Sets the offset of the caret.
 stopEditing(): void
 ```
 
-Stops editing.
+退出编辑态。
 
 **Since:** 12
 

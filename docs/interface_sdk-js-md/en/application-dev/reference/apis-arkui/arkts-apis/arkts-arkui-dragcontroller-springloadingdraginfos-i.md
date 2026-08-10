@@ -10,6 +10,12 @@ Defines drag-related information when triggering spring loading callbacks.This i
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
+
 ## dataSummary
 
 ```TypeScript

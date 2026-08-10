@@ -1,12 +1,18 @@
 # sendData
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## sendData
 
 ```TypeScript
 function sendData(sessionId: int, data: ArrayBuffer): Promise<void>
 ```
 
-应用连接成功后，设备A或设备B可向对端设备发送\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_字节流。
+应用连接成功后，设备A或设备B可向对端设备发送[ArrayBuffer](../../../arkts-utils/arraybuffer-object.md)字节流。
 
 **起始版本：** 18
 
@@ -22,7 +28,7 @@ function sendData(sessionId: int, data: ArrayBuffer): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 协同会话ID。 |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 协同会话ID。 |
 | data | ArrayBuffer | 是 | 字节流信息。 |
 
 **返回值：**
@@ -35,11 +41,9 @@ function sendData(sessionId: int, data: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
@@ -48,25 +52,6 @@ import { util } from '@kit.ArkTS';
 
 let textEncoder = util.TextEncoder.create("utf-8");
 const arrayBuffer  = textEncoder.encodeInto("data send success");
-
-let sessionId = 100;
-abilityConnectionManager.sendData(sessionId, arrayBuffer.buffer).then(() => {
-  hilog.info(0x0000, 'testTag', "sendData success");
-}).catch(() => {
-  hilog.error(0x0000, 'testTag', "sendData failed");
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
-import hilog from '@ohos.hilog';
-import util from '@ohos.util';
-
-let textEncoder = util.TextEncoder.create("utf-8");
-
-const arrayBuffer = textEncoder.encodeInto("data send success");
 
 let sessionId = 100;
 abilityConnectionManager.sendData(sessionId, arrayBuffer.buffer).then(() => {

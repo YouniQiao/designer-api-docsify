@@ -1,6 +1,6 @@
 # LocalDateTime
 
-Sets the time information for a calendar reminder.
+用于日历类提醒设置时指定时间信息。
 
 **Since:** 7
 
@@ -14,13 +14,19 @@ Sets the time information for a calendar reminder.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## day
 
 ```TypeScript
 day: number
 ```
 
-Date.
+日
 
 **Type:** number
 
@@ -42,7 +48,7 @@ Date.
 hour: number
 ```
 
-Hour.
+时
 
 **Type:** number
 
@@ -64,7 +70,7 @@ Hour.
 minute: number
 ```
 
-Minute.
+分
 
 **Type:** number
 
@@ -86,7 +92,7 @@ Minute.
 month: number
 ```
 
-Month.
+月
 
 **Type:** number
 
@@ -108,7 +114,7 @@ Month.
 second?: number
 ```
 
-Second.
+秒
 
 **Type:** number
 
@@ -130,7 +136,7 @@ Second.
 year: number
 ```
 
-Year.
+年
 
 **Type:** number
 

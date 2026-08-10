@@ -1,6 +1,6 @@
 # SensorId
 
-Enumerates the sensor types.
+表示当前支持订阅或取消订阅的传感器类型。
 
 **Since:** 9
 
@@ -16,9 +16,7 @@ Enumerates the sensor types.
 COLOR = 14
 ```
 
-Color sensor.
-
-System API: This is a system API.
+颜色传感器。用于订阅/取消订阅颜色传感器数据，上报数据为[ColorResponse](arkts-sensorservice-sensor-colorresponse-i-sys.md)对象，包含光照强度和色温信息。
 
 **Since:** 10
 
@@ -36,9 +34,7 @@ System API: This is a system API.
 SAR = 15
 ```
 
-Sodium Adsorption Ratio (SAR) sensor.
-
-System API: This is a system API.
+吸收比率传感器。用于订阅/取消订阅吸收比率传感器数据，上报数据为[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)对象，包含电磁波吸收率信息。
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # PermissionQuery (System API)
 
-Permission query information.
+权限查询信息。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Permission query information.
 callerTokenId?: long
 ```
 
-Caller token ID.Value range: (-∞,+∞).
+主叫token标识。取值范围：(-∞,+∞)。
 
 **Type:** long
 
@@ -38,7 +38,7 @@ Caller token ID.Value range: (-∞,+∞).
 domainId?: string
 ```
 
-Domain ID.
+域ID。
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Domain ID.
 needTicket?: boolean
 ```
 
-Whether a ticket is required.
+是否需要ticket
 
 **Type:** boolean
 
@@ -78,9 +78,9 @@ Whether a ticket is required.
 operationInfo: OperationInfo[]
 ```
 
-Operation information list.
+操作信息列表。
 
-**Type:** OperationInfo[]
+**Type:** [OperationInfo](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscribe-operationinfo-i-sys.md)[]
 
 **Since:** 26.0.0
 
@@ -98,9 +98,9 @@ Operation information list.
 remoteInfo?: RemoteInfo
 ```
 
-Remote device information.
+远端设备信息。
 
-**Type:** RemoteInfo
+**Type:** [RemoteInfo](arkts-ability-abilitytoolaccessctrl-remoteinfo-i-sys.md)
 
 **Since:** 26.1.0
 
@@ -118,7 +118,7 @@ Remote device information.
 ticketExpireTimeMs?: long
 ```
 
-Ticket expiration time in milliseconds.Unit: milliseconds. The value must be greater than 0. Value constraint: Greater than 0.
+凭据过期时间，单位为毫秒。取值范围：(-∞,+∞)。
 
 **Type:** long
 

@@ -1,12 +1,18 @@
 # getFirstPreferredLanguage
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getFirstPreferredLanguage
 
 ```TypeScript
 export function getFirstPreferredLanguage(): string
 ```
 
-Obtains the first language in the preferred language list.
+获取偏好语言列表中的第一个语言。
 
 **Since:** 8
 
@@ -24,5 +30,5 @@ Obtains the first language in the preferred language list.
 
 | Type | Description |
 | --- | --- |
-| string | First language in the preferred language list. |
+| string | 偏好语言列表中的第一个语言。 |
 

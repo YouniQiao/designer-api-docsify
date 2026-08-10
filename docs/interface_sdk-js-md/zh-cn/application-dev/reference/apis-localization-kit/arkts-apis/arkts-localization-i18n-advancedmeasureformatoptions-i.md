@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## unitUsage
 
 ```TypeScript
@@ -18,7 +24,7 @@ unitUsage?: UnitUsage
 
 单位格式化使用场景的枚举。
 
-**类型：** UnitUsage
+**类型：** [UnitUsage](arkts-localization-i18n-unitusage-e.md)
 
 **起始版本：** 23
 

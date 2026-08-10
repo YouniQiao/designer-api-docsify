@@ -2,9 +2,9 @@
 
 环形无刻度样式选项。
 
-继承自[ScanEffectOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和[CommonProgressStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
 
-**继承/实现关系：** RingStyleOptions extends [ScanEffectOptions](../arkts-apis/arkts-arkui-component/progress-scaneffectoptions-i.md), [CommonProgressStyleOptions](../arkts-apis/arkts-arkui-component/progress-commonprogressstyleoptions-i.md)
+**继承/实现关系：** RingStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **起始版本：** 10
 
@@ -50,7 +50,7 @@ status?: ProgressStatus
 
 默认值：ProgressStatus.PROGRESSING
 
-**类型：** ProgressStatus
+**类型：** [ProgressStatus](arkts-arkui-progressstatus-e.md)
 
 **起始版本：** 10
 
@@ -78,7 +78,7 @@ strokeWidth?: Length
 
 超出取值范围或设置非法值时按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
 

@@ -16,6 +16,12 @@ Configuring parameters in geocode requests
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## description
 
 ```TypeScript

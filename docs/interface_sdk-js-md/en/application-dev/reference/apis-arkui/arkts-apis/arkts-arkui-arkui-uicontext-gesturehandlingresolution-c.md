@@ -1,6 +1,6 @@
 # GestureHandlingResolution
 
-Class GestureHandlingResolution. Represents the developer's decision result for smart gesture handling.
+类手势处理解决方案。表示开发者对智能手势处理的决策结果。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Class GestureHandlingResolution. Represents the developer's decision result for 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(isConsumed: boolean)
 ```
 
-GestureHandlingResolution constructor.
+GestureHandlingResolution构造函数。
 
 **Since:** 26.0.0
 
@@ -32,7 +38,7 @@ GestureHandlingResolution constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isConsumed | boolean | Yes | Whether to consume the current gesture event. |
+| isConsumed | boolean | Yes | 是否消费当前手势事件。 |
 
 ## isConsumed
 
@@ -40,7 +46,7 @@ GestureHandlingResolution constructor.
 isConsumed: boolean
 ```
 
-Determines whether to consume the current gesture event. If the gesture is not consumed, it will inform the consumer that the gesture is not supported.
+判断是否消费当前手势事件。如果手势没有被消费，它会告诉消费者该手势不被支持。
 
 **Type:** boolean
 
@@ -60,9 +66,9 @@ Determines whether to consume the current gesture event. If the gesture is not c
 selectedProposal?: BaseGestureHandlingProposal
 ```
 
-The final gesture handling proposal selected by the developer.
+开发者最终选择的手势处理方案。
 
-**Type:** BaseGestureHandlingProposal
+**Type:** [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
 

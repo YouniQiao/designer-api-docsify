@@ -1,10 +1,10 @@
 # BlurOptions
 
-Grayscale blur parameters.
+灰阶模糊参数。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 <!--Device-unnamed-declare interface BlurOptions--><!--Device-unnamed-declare interface BlurOptions-End-->
 
@@ -16,13 +16,13 @@ Grayscale blur parameters.
 grayscale: [number, number]
 ```
 
-Grayscale blur, with two parameters in the value range of [0, 127]. The color gradation of the black and white in the image is adjusted to create different shades of gray. The first parameter indicates the brightness of the black color, and the second parameter indicates the darkness of the white color. A larger value indicates a more obvious adjustment effect (the black and white colors become grayer). The valid value range is 0–127. For example, if the value specified is (20,20), the RGB value \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is converted to [20, 20, 20], RGB value \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ is converted to \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_, and the color pixels remain unchanged.
+灰阶模糊参数，两参数取值范围均为[0,127] 。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。参数一表示对黑色的提亮程度，参数二表示对白色的压暗程度，参数值越大调整效果越明显（黑白色变得越灰），有效值范围0-127。例如：设置参数为（20,20），图片中的黑色像素RGB:[0, 0, 0]会调整为[20,20,20]，白色像素RGB:[255,255,255]会调整为[235,235,235]（255-20），图像中的彩色像素维持不变。
 
 **Type:** [number, number]
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

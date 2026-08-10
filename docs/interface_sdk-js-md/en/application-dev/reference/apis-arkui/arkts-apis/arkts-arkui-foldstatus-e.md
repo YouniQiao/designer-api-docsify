@@ -2,9 +2,9 @@
 
 Enumerates the fold status.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 <!--Device-unnamed-declare enum FoldStatus--><!--Device-unnamed-declare enum FoldStatus-End-->
 
@@ -18,9 +18,9 @@ FOLD_STATUS_UNKNOWN = 0
 
 Fold Status Unknown.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,9 +38,9 @@ FOLD_STATUS_EXPANDED = 1
 
 Fold Status Expanded.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,9 +58,9 @@ FOLD_STATUS_FOLDED = 2
 
 Fold Status Folded.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,9 +78,9 @@ FOLD_STATUS_HALF_FOLDED = 3
 
 Fold Status Half Folded.
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

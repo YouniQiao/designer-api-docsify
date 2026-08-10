@@ -8,7 +8,7 @@ type DomainPluginIsAccountTokenValidFunc = (
   ) => void
 ```
 
-Checks whether the token of specified domain account is valid.
+检查指定的域账号令牌是否有效。
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Checks whether the token of specified domain account is valid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the domain account information.  |
-| token | Uint8Array | Yes | Indicates the account token.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Indicates the callback for notifying the checking result.  |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 表示域账号信息。 |
+| token | Uint8Array | Yes | 表示域账号令牌。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 表示检查结果回调。true表示指定的域账号令牌是有效的；false表示指定的域账号令牌是无效的。 |
 

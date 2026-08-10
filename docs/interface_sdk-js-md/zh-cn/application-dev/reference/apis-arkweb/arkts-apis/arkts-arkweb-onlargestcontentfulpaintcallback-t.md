@@ -18,5 +18,5 @@ The callback of largestContentfulPaint.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| largestContentfulPaint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | callback information of onLargestContentfulPaint.  |
+| largestContentfulPaint | [LargestContentfulPaint](arkts-arkweb-web-largestcontentfulpaint-i.md) | 是 | callback information of onLargestContentfulPaint. |
 

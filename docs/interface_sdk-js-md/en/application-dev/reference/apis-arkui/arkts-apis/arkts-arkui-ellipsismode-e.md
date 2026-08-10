@@ -1,6 +1,6 @@
 # EllipsisMode
 
-The position of ellipsis.
+Enum of ellipsisMode
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ The position of ellipsis.
 START = 0
 ```
 
-An ellipsis is used at the start of the line of text. This applies to single-line text scenarios.
+The ellipsis is in the head.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ An ellipsis is used at the start of the line of text. This applies to single-lin
 CENTER = 1
 ```
 
-An ellipsis is used at the center of the line of text. This applies to single-line text scenarios.
+The ellipsis is in the middle.
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ An ellipsis is used at the center of the line of text. This applies to single-li
 END = 2
 ```
 
-An ellipsis is used at the end of the line of text. This applies to single-line and multi-line text scenarios.
+The ellipsis is at the end.
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ An ellipsis is used at the end of the line of text. This applies to single-line 
 MULTILINE_START = 3
 ```
 
-An ellipsis is used at the start of the line of text. This applies to single-line and multi-line text scenarios.
+省略号在头部。对多行和单行有效。
 
 **Since:** 24
 
@@ -96,7 +96,7 @@ An ellipsis is used at the start of the line of text. This applies to single-lin
 MULTILINE_CENTER = 4
 ```
 
-An ellipsis is used at the center of the line of text. This applies to single-line and multi-line text scenarios.
+省略号在中间。对多行和单行有效。
 
 **Since:** 24
 

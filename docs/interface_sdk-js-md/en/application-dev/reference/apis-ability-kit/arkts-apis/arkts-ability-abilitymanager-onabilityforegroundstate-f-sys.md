@@ -1,12 +1,18 @@
 # onAbilityForegroundState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onAbilityForegroundState
 
 ```TypeScript
 function onAbilityForegroundState(observer: AbilityForegroundStateObserver): void
 ```
 
-Register Ability foreground or background state observer.
+注册Ability的启动和退出的观测器。
 
 **Since:** 23
 
@@ -24,13 +30,13 @@ Register Ability foreground or background state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The ability foreground state observer. |
+| observer | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | Yes | Ability状态观测器，用于观测Ability的启动和退出。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+| 16000050 | Connect to system server failed. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## screenId
 
 ```TypeScript
@@ -20,7 +26,7 @@ screenId: long
 
 屏幕的id，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ startX: long
 
 屏幕的起始X轴坐标，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ startY: long
 
 屏幕的起始Y轴坐标，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

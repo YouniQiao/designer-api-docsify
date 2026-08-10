@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## desc
 
 ```TypeScript
@@ -80,7 +86,7 @@ settingType?: SettingType
 
 设置项的类型。
 
-**类型：** SettingType
+**类型：** [SettingType](arkts-avsession-avmusictemplate-settingtype-e.md)
 
 **起始版本：** 23
 

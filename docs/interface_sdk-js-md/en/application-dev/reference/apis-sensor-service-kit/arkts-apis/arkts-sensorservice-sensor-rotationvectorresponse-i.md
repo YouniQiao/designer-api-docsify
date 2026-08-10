@@ -1,6 +1,6 @@
 # RotationVectorResponse
 
-Describes the rotation vector sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+旋转矢量传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** RotationVectorResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the rotation vector sensor data. It extends from [Response]\_\_\_JSDOC
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## w
 
 ```TypeScript
 w: double
 ```
 
-Scalar, which describes the rotation status of the device relative to a reference direction, in radians
+旋转矢量的标量分量，描述设备相对于某个参考方向的旋转状态。单位：弧度（rad）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -36,9 +42,9 @@ Scalar, which describes the rotation status of the device relative to a referenc
 x: double
 ```
 
-X-component of the rotation vector.
+旋转矢量的x轴分量，表示设备旋转状态在x轴方向的投影。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -54,9 +60,9 @@ X-component of the rotation vector.
 y: double
 ```
 
-Y-component of the rotation vector.
+旋转矢量的y轴分量，表示设备旋转状态在y轴方向的投影。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -72,9 +78,9 @@ Y-component of the rotation vector.
 z: double
 ```
 
-Z-component of the rotation vector.
+旋转矢量的z轴分量，表示设备旋转状态在z轴方向的投影。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

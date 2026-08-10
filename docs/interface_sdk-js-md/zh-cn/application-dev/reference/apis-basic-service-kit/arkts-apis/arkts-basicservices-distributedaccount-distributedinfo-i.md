@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Account.OsAccount
 
+## 导入模块
+
+```TypeScript
+import { distributedAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## avatar
 
 ```TypeScript
@@ -40,7 +46,7 @@ event: string
 
 - Ohos.account.event.LOGOUT
 
-- Ohos.account.event.TOKEN\_INVALID
+- Ohos.account.event.TOKEN_INVALID
 
 - Ohos.account.event.LOGOFF
 
@@ -134,7 +140,7 @@ readonly status?: DistributedAccountStatus
 
 分布式账号的状态，枚举类型，默认为未登录状态。
 
-**类型：** DistributedAccountStatus
+**类型：** [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md)
 
 **起始版本：** 10
 

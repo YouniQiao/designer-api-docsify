@@ -1,6 +1,6 @@
 # DLPPermissionInfo
 
-Represents the permission information about a DLP file.
+表示DLP文件的权限信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Represents the permission information about a DLP file.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## dlpFileAccess
 
 ```TypeScript
 dlpFileAccess: DLPFileAccess
 ```
 
-User permission on the DLP file, for example, read-only.
+表示DLP文件针对用户的授权类型，例如：只读。
 
-**Type:** DLPFileAccess
+**Type:** [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)
 
 **Since:** 10
 
@@ -34,8 +40,7 @@ User permission on the DLP file, for example, read-only.
 flags: number
 ```
 
-Operations that can be performed on the DLP file. The value is determined by a combination of different  
-[ActionFlagTypes]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示DLP文件的详细操作权限，取值范围由不同[ActionFlagType](arkts-dataprotection-dlppermission-actionflagtype-e.md)的组合决定。
 
 **Type:** number
 

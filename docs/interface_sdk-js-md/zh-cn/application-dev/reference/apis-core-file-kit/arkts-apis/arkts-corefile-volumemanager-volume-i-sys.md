@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { volumeManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## description
 
 ```TypeScript
@@ -60,7 +66,7 @@ fsType: string
 
 文件系统的类型，常见有ext2、vfat、NTFS等。
 
-**说明**：从API version 24开始，支持ISO9660、UDF。
+**说明：**从API version 24开始，支持ISO9660、UDF。
 
 **类型：** string
 
@@ -150,7 +156,7 @@ state: int
 
 3：正在弹出状态 EJECTING。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

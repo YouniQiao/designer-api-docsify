@@ -1,6 +1,6 @@
 # NavigationAnimatedTransition
 
-Defines the custom transition animation protocol. You need to implement this protocol to define the redirection animation of the navigation route.
+自定义转场动画协议，开发者需实现该协议来定义Navigation路由跳转的跳转动画。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Defines the custom transition animation protocol. You need to implement this pro
 onTransitionEnd?: (success: boolean) => void
 ```
 
-Callback invoked when the transition is complete.
+转场完成回调。
 
-**success**: whether the transition is successful.
+success：转场是否成功。
 
 **Since:** 11
 
@@ -44,9 +44,9 @@ Callback invoked when the transition is complete.
 transition: (transitionProxy: NavigationTransitionProxy) => void
 ```
 
-Callback for executing the custom transition animation.
+自定义转场动画执行回调。
 
-**transitionProxy**: proxy for the custom transition animation.
+transitionProxy：自定义转场动画代理对象。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Callback for executing the custom transition animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionProxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| transitionProxy | [NavigationTransitionProxy](arkts-arkui-navigationtransitionproxy-i.md) | Yes |  |
 
 ## isInteractive
 
@@ -72,11 +72,11 @@ Callback for executing the custom transition animation.
 isInteractive?: boolean
 ```
 
-Whether the transition animation is interactive.
+本次转场动画是否为可交互转场。
 
-**true**: yes; **false**: no
+true：本次转场动画是可交互转场；false：本次转场动画不是可交互转场。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -100,13 +100,13 @@ Default value: **false
 timeout?: number
 ```
 
-Animation timeout time.
+动画超时结束时间。
 
-Unit: ms
+单位：ms。
 
-Value range: [0, +��)
+取值范围：[0, +∞)。
 
-Default value: no default value for interactive animations; 1000 ms for non-interactive animations.
+默认值：可交互动画无默认值，不可交互动画默认超时时间为1000ms。
 
 **Type:** number
 

@@ -1,8 +1,6 @@
 # WatchEventListener
 
-(event: WatchEvent): void
-
-Provides APIs for observing events.
+事件监听类。
 
 **Since:** 10
 
@@ -11,6 +9,12 @@ Provides APIs for observing events.
 <!--Device-unnamed-export interface WatchEventListener--><!--Device-unnamed-export interface WatchEventListener-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
+
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
 
 ## [[Call]]
 
@@ -32,5 +36,5 @@ Specifies the callback function to be invoked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event for the callback to invoke. |
+| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
 

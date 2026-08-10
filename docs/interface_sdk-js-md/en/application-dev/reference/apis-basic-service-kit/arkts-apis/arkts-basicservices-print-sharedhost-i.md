@@ -1,6 +1,6 @@
 # SharedHost
 
-Interface defining shared device information
+定义共享设备信息的接口。
 
 **Since:** 24
 
@@ -10,13 +10,19 @@ Interface defining shared device information
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## ip
 
 ```TypeScript
 ip: string
 ```
 
-IP address of the shared device.
+表示共享设备的IP地址。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ IP address of the shared device.
 shareName: string
 ```
 
-Share name of the shared device.
+表示共享设备的主机名称。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Share name of the shared device.
 workgroupName: string
 ```
 
-Workgroup name of the shared device.
+表示共享设备的工作组名称。
 
 **Type:** string
 

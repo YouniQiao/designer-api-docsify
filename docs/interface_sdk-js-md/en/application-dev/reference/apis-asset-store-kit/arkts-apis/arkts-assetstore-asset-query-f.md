@@ -1,15 +1,21 @@
 # query
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## query
 
 ```TypeScript
 function query(query: AssetMap): Promise<Array<AssetMap>>
 ```
 
-Queries one or more assets. If user authentication is required for the access to the asset,call [asset.preQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ before this API and call [asset.postQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_after this API. For details about the development procedure, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.This API uses a promise to return the result.
+查询一条或多条符合条件的关键资产。若查询需要用户认证的关键资产，则需要在本函数前调用[asset.preQuery](arkts-assetstore-asset-prequery-f.md#prequery)接口，在本函数后调用  
+[asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery)接口，开发步骤请参考[开发指导](../../../security/AssetStoreKit/asset-js-query-auth.md)。使用Promise异步回调。
 
-If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
+如果未查询到符合条件的关键资产，将抛出“未找到关键资产”的异常，而非返回空的查询结果列表。
 
 **Since:** 11
 
@@ -25,34 +31,34 @@ If no asset is found, an exception indicating that no asset is found is thrown i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the asset to query, such as the asset alias, access control attributes, and custom data. |
+| query | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | 关键资产的查询条件，如别名、访问控制属性、自定义数据等。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AssetMap&gt;&gt; | Promise used to return the result obtained. |
+| Promise&lt;Array&lt;AssetMap&gt;&gt; | Promise对象，返回查询结果列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
-| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000002](../errorcode-asset.md#24000002-asset-not-found) | The asset is not found. |
-| [24000004](../errorcode-asset.md#24000004-access-denied) | Access denied. |
-| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
-| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
-| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
-| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
-| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) | The cryptography operation failed. |
-| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
-| [24000017](../errorcode-asset.md#24000017-function-not-supported) | The capability is not supported. |
+| 24000012 | Calling the OS Account service failed. |
+| 24000013 | Calling the Access Token service failed. |
+| 24000010 | IPC failed. |
+| 24000011 | Calling the Bundle Manager service failed. |
+| 24000008 | The database operation failed. |
+| 24000009 | The cryptography operation failed. |
+| 24000006 | Insufficient memory. |
+| 24000007 | The asset is corrupted. |
+| 24000004 | Access denied. |
+| 24000005 | The screen lock status does not match. |
+| 24000002 | The asset is not found. |
+| 24000001 | The ASSET service is unavailable. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| 24000017 | The capability is not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

@@ -1,5 +1,11 @@
 # listFileSync
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## listFileSync
 
 ```TypeScript
@@ -9,10 +15,9 @@ function listFileSync(
 ): string[]
 ```
 
-Lists the names of all files and directories in the current directory synchronously. A file name array is returned,which can be filtered by file name or file name extension.
+默认以同步方式列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。
 
-This API supports recursively listing the relative paths of all files by setting **recursion** in  
-**ListFileOptions**. The relative path starts with a slash (/).
+可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **Since:** 23
 
@@ -26,22 +31,22 @@ This API supports recursively listing the relative paths of all files by setting
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for filtering files. The files are not filtered by default. |
+| path | string | Yes | 目录的应用沙箱路径。 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | 文件过滤选项。默认不进行过滤。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string[] | File name array, which is encoded in UTF-8 format by default. |
+| string[] | 返回文件名数组，默认以'utf-8'编码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900018 | Not a directory |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 

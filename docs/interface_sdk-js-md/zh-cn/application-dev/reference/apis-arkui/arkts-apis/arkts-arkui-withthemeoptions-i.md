@@ -20,7 +20,7 @@ colorMode?: ThemeColorMode
 
 默认值：ThemeColorMode.SYSTEM
 
-**类型：** ThemeColorMode
+**类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **起始版本：** 12
 
@@ -42,9 +42,9 @@ theme?: CustomTheme
 
 用于设置WithTheme作用域内组件的自定义主题配色。
 
-默认值：undefined，默认配色跟随系统\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+默认值：undefined，默认配色跟随系统[token默认样式](../../../ui/theme_skinning.md#系统缺省token色值)。
 
-**类型：** CustomTheme
+**类型：** [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 

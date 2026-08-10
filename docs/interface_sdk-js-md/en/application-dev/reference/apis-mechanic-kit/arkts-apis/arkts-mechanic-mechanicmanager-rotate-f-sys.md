@@ -1,12 +1,18 @@
 # rotate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## rotate
 
 ```TypeScript
 function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Result>
 ```
 
-Rotates a mechanical device to the relative angles.
+将机械设备旋转到相对角度
 
 **Since:** 20
 
@@ -22,9 +28,9 @@ Rotates a mechanical device to the relative angles.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the mechanical device. |
-| angles | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Relative angles. |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Rotation duration. Unit: millisecond. |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. |
+| angles | [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | Yes | Relative angles. |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Rotation duration. Unit: millisecond. |
 
 **Return value:**
 
@@ -36,11 +42,11 @@ Rotates a mechanical device to the relative angles.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 console.info('Start rotate');

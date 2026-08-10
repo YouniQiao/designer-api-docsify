@@ -4,7 +4,7 @@
 export type HapModuleInfo = _HapModuleInfo.HapModuleInfo
 ```
 
-Defines the module information.
+模块信息。
 
 **Since:** 9
 

@@ -1,12 +1,18 @@
 # getAllWindowLayoutInfo
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## getAllWindowLayoutInfo
 
 ```TypeScript
 function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo>>
 ```
 
-Obtains the layout information array of all windows visible on a display. The layout information is arranged based on the current window stacking order, and the topmost window in the hierarchy is at index 0 of the array. This API uses a promise to return the result.
+获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。
 
 **Since:** 15
 
@@ -22,21 +28,22 @@ Obtains the layout information array of all windows visible on a display. The la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the display where the windows are located. The value must be an integer and can be obtained from [WindowProperties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WindowLayoutInfo&gt;&gt; | Promise used to return an array of window layout information objects. |
+| Promise&lt;Array&lt;WindowLayoutInfo&gt;&gt; | Promise对象。返回获取到的窗口布局信息对象数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getAllWindowLayoutInfo can not work correctly due to limited device capabilities. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal task error. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Function getAllWindowLayoutInfo can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal.<br>**Applicable version:** 15 - 18 |
 
 
 ## getAllWindowLayoutInfo
@@ -45,7 +52,7 @@ Obtains the layout information array of all windows visible on a display. The la
 function getAllWindowLayoutInfo(displayId: long, option?: WindowInfoOptions): Promise<Array<WindowLayoutInfo>>
 ```
 
-Obtains the array of window layout info visible on a specified screen.The width and height of each rect are calculated after scaling. The array is sorted by the current window level.The index of the array corresponding to the highest level is 0.
+根据option指定的过滤条件获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。当未传入option或其中的字段都为默认值时，当前接口与[getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getallwindowlayoutinfo)等价。
 
 **Since:** 26.0.0
 
@@ -63,20 +70,20 @@ Obtains the array of window layout info visible on a specified screen.The width 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Indicate the id of display. |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Filter criteria for window information. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)获取。 |
+| option | [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md) | No | 过滤选项。用于指定返回信息是否排除系统窗、比指定窗口层级更低或更高的窗口的信息。默认不过滤。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WindowLayoutInfo&gt;&gt; | Promise used to return the WindowLayoutInfo. |
+| Promise&lt;Array&lt;WindowLayoutInfo&gt;&gt; | Promise对象。返回获取到的窗口布局信息对象数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getAllWindowLayoutInfo can not work correctly due to limited device capabilities. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal task error. |
+| 801 | Capability not supported. Function getAllWindowLayoutInfo can not work correctly due to limited device capabilities. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
 

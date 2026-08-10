@@ -1,6 +1,6 @@
 # Asset
 
-Represents asset (such as a file, image, or video) information.
+记录资产附件（文件、图片、视频等类型文件）的相关信息。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Represents asset (such as a file, image, or video) information.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
+## Modules to Import
+
+```TypeScript
+import { commonType } from 'kits/@kit.ArkData';
+```
+
 ## createTime
 
 ```TypeScript
 createTime: string
 ```
 
-Time when the asset was created.
+资产被创建出来的时间。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Time when the asset was created.
 modifyTime: string
 ```
 
-Time when the asset was last modified.
+资产最后一次被修改的时间。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Time when the asset was last modified.
 name: string
 ```
 
-Asset name.
+资产的名称。
 
 **Type:** string
 
@@ -70,7 +76,7 @@ Asset name.
 path: string
 ```
 
-Application sandbox path of the asset.
+资产在应用沙箱里的路径。
 
 **Type:** string
 
@@ -88,7 +94,7 @@ Application sandbox path of the asset.
 size: string
 ```
 
-Size of the asset. If this field changes, the asset is considered to have changed.
+资产占用空间的大小。确保在全链路中保持统一、一致的存储格式与取值逻辑。建议所有系统节点均采用标准化处理方式（单位为字节（Byte），取值为非负整数）。
 
 **Type:** string
 
@@ -106,9 +112,9 @@ Size of the asset. If this field changes, the asset is considered to have change
 status?: AssetStatus
 ```
 
-Asset status. The default value is ASSET\_NORMAL.
+资产的状态，默认值为ASSET_NORMAL。
 
-**Type:** AssetStatus
+**Type:** [AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md)
 
 **Since:** 11
 
@@ -124,7 +130,7 @@ Asset status. The default value is ASSET\_NORMAL.
 uri: string
 ```
 
-Asset URI, which is an absolute path in the system.
+资产的uri，在系统里的绝对路径。
 
 **Type:** string
 

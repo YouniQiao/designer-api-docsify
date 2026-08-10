@@ -250,6 +250,13 @@
   - [PageIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-pageintentdecoratorinfo-i.md)
   - [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
 - [@ohos.app.ability.InsightIntentDecorator](arkts-app-ability-insightintentdecorator.md)
+  - [InsightIntentEntity](arkts-ability-app-ability-insightintentdecorator-insightintententity-i.md)
+  - [InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-i.md)
+  - [InsightIntentForm](arkts-ability-app-ability-insightintentdecorator-insightintentform-i.md)
+  - [InsightIntentFunction](arkts-ability-app-ability-insightintentdecorator-insightintentfunction-i.md)
+  - [InsightIntentFunctionMethod](arkts-ability-app-ability-insightintentdecorator-insightintentfunctionmethod-i.md)
+  - [InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-i.md)
+  - [InsightIntentPage](arkts-ability-app-ability-insightintentdecorator-insightintentpage-i.md)
   - [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md)
   - [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
 - [@ohos.app.ability.InsightIntentEntryExecutor](arkts-app-ability-insightintententryexecutor.md)
@@ -376,8 +383,6 @@
   <!--Del-->
   - [getProcessMemoryByPid(system api)](arkts-ability-appmanager-getprocessmemorybypid-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getProcessRunningInfos(system api)](arkts-ability-appmanager-getprocessrunninginfos-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [getRunningMultiAppInfo(system api)](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getRunningProcessInfoByBundleName(system api)](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md)<!--DelEnd-->
@@ -491,28 +496,27 @@
   - [promoteCurrentToCandidateMasterProcess](arkts-ability-application-promotecurrenttocandidatemasterprocess-f.md)
   - [AppPreloadType](arkts-ability-application-apppreloadtype-e.md)
 - [@ohos.app.ability.autoFillManager](arkts-app-ability-autofillmanager.md)
-  - [requestAutoFill](arkts-ability-autofillmanager-requestautofill-f.md)
   - [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md)
-  - [AutoFillCallback](arkts-ability-autofillmanager-autofillcallback-i.md)
   - [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md)
   <!--Del-->
   - [AutoFillPopupConfig(system api)](arkts-ability-autofillmanager-autofillpopupconfig-t-sys.md)<!--DelEnd-->
-  - [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t.md)
-  - [AutoFillTriggerType](arkts-ability-autofillmanager-autofilltriggertype-t.md)
-  - [AutoFillType](arkts-ability-autofillmanager-autofilltype-t.md)
+  <!--Del-->
+  - [AutoFillRect(system api)](arkts-ability-autofillmanager-autofillrect-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AutoFillTriggerType(system api)](arkts-ability-autofillmanager-autofilltriggertype-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AutoFillType(system api)](arkts-ability-autofillmanager-autofilltype-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CustomData(system api)](arkts-ability-autofillmanager-customdata-t-sys.md)<!--DelEnd-->
-  - [FillFailureResult](arkts-ability-autofillmanager-fillfailureresult-t.md)
   - [FillRequest](arkts-ability-autofillmanager-fillrequest-t.md)
   <!--Del-->
   - [FillRequestCallback(system api)](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FillResponse(system api)](arkts-ability-autofillmanager-fillresponse-t-sys.md)<!--DelEnd-->
   - [OnFailureFn](arkts-ability-autofillmanager-onfailurefn-t.md)
-  - [OnFillFailureFn](arkts-ability-autofillmanager-onfillfailurefn-t.md)
-  - [OnFillSuccessFn](arkts-ability-autofillmanager-onfillsuccessfn-t.md)
   - [OnSuccessFn](arkts-ability-autofillmanager-onsuccessfn-t.md)
-  - [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t.md)
+  <!--Del-->
+  - [PageNodeInfo(system api)](arkts-ability-autofillmanager-pagenodeinfo-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PopupPlacement(system api)](arkts-ability-autofillmanager-popupplacement-t-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -522,7 +526,8 @@
   - [SaveRequestCallback(system api)](arkts-ability-autofillmanager-saverequestcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateRequest(system api)](arkts-ability-autofillmanager-updaterequest-t-sys.md)<!--DelEnd-->
-  - [ViewData](arkts-ability-autofillmanager-viewdata-t.md)
+  <!--Del-->
+  - [ViewData(system api)](arkts-ability-autofillmanager-viewdata-t-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.autoStartupManager](arkts-app-ability-autostartupmanager.md)
   - [cancelApplicationAutoStartup](arkts-ability-autostartupmanager-cancelapplicationautostartup-f.md)
   - [getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md)
@@ -534,8 +539,6 @@
   - [queryAllAutoStartupApplications](arkts-ability-autostartupmanager-queryallautostartupapplications-f.md)
   - [setApplicationAutoStartup](arkts-ability-autostartupmanager-setapplicationautostartup-f.md)
 - [@ohos.app.ability.childProcessManager](arkts-app-ability-childprocessmanager.md)
-  - [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md)
-  - [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md)
   - [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md)
   - [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md)
   - [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md)
@@ -564,8 +567,6 @@
   <!--Del-->
   - [AutoStartupInfo(system api)](arkts-ability-common-autostartupinfo-t-sys.md)<!--DelEnd-->
   - [BaseContext](arkts-ability-common-basecontext-t.md)
-  <!--Del-->
-  - [CliToolEvent(system api)](arkts-ability-common-clitoolevent-t-sys.md)<!--DelEnd-->
   - [ConnectOptions](arkts-ability-common-connectoptions-t.md)
   - [Context](arkts-ability-common-context-t.md)
   - [EmbeddableUIAbilityContext](arkts-ability-common-embeddableuiabilitycontext-t.md)
@@ -573,19 +574,11 @@
   - [ExtensionContext](arkts-ability-common-extensioncontext-t.md)
   - [FormEditExtensionContext](arkts-ability-common-formeditextensioncontext-t.md)
   - [FormExtensionContext](arkts-ability-common-formextensioncontext-t.md)
-  <!--Del-->
-  - [FunctionInfo(system api)](arkts-ability-common-functioninfo-t-sys.md)<!--DelEnd-->
   - [LiveFormExtensionContext](arkts-ability-common-liveformextensioncontext-t.md)
   - [PacMap](arkts-ability-common-pacmap-t.md)
   - [PhotoEditorExtensionContext](arkts-ability-common-photoeditorextensioncontext-t.md)
   <!--Del-->
   - [ServiceExtensionContext(system api)](arkts-ability-common-serviceextensioncontext-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ToolEventCallback(system api)](arkts-ability-common-tooleventcallback-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ToolInfo(system api)](arkts-ability-common-toolinfo-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ToolSummary(system api)](arkts-ability-common-toolsummary-t-sys.md)<!--DelEnd-->
   - [UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md)
   - [UIExtensionContext](arkts-ability-common-uiextensioncontext-t.md)
   - [UIServiceExtensionConnectCallback](arkts-ability-common-uiserviceextensionconnectcallback-t.md)
@@ -850,7 +843,6 @@
     - [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md)
   - [WantAgent](arkts-ability-wantagent-t.md)
 - [@ohos.app.ability.wantConstant](arkts-app-ability-wantconstant.md)
-  - [Action](arkts-ability-wantconstant-action-e.md)
   - [Flags](arkts-ability-wantconstant-flags-e.md)
   - [Params](arkts-ability-wantconstant-params-e.md)
   <!--Del-->
@@ -972,8 +964,6 @@
   - [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-depr-f.md)
   <!--Del-->
   - [getForegroundApplications(system api)](arkts-ability-appmanager-getforegroundapplications-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getProcessRunningInformation(system api)](arkts-ability-appmanager-getprocessrunninginformation-depr-f-sys.md)<!--DelEnd-->
   - [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md)
   - [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-depr-f.md)
   - [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-depr-f.md)
@@ -1024,12 +1014,8 @@
   - [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md)
   - [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md)
   - [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md)
-  <!--Del-->
-  - [getApplicationInfos(system api)](arkts-ability-bundle-getapplicationinfos-f-sys.md)<!--DelEnd-->
   - [getBundleArchiveInfo](arkts-ability-bundle-getbundlearchiveinfo-f.md)
   - [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md)
-  <!--Del-->
-  - [getBundleInfos(system api)](arkts-ability-bundle-getbundleinfos-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getBundleInstaller(system api)](arkts-ability-bundle-getbundleinstaller-f-sys.md)<!--DelEnd-->
   - [getLaunchWantForBundle](arkts-ability-bundle-getlaunchwantforbundle-f.md)
@@ -1052,14 +1038,6 @@
   - [GrantStatus](arkts-ability-bundle-grantstatus-e.md)
   - [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)
   - [LaunchMode](arkts-ability-bundle-launchmode-e.md)
-  <!--Del-->
-  - [ModuleRemoveFlag(system api)](arkts-ability-bundle-moduleremoveflag-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [QueryShortCutFlag(system api)](arkts-ability-bundle-queryshortcutflag-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutExistence(system api)](arkts-ability-bundle-shortcutexistence-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SignatureCompareResult(system api)](arkts-ability-bundle-signaturecompareresult-e-sys.md)<!--DelEnd-->
 - [@ohos.bundle.appControl](arkts-bundle-appcontrol.md)
   <!--Del-->
   - [deleteDisposedStatus(system api)](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md)<!--DelEnd-->
@@ -1101,8 +1079,6 @@
   - [ControlType(system api)](arkts-ability-appcontrol-controltype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DisposedType(system api)](arkts-ability-appcontrol-disposedtype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PageJumpMode(system api)](arkts-ability-appcontrol-pagejumpmode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UninstallComponentType(system api)](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md)<!--DelEnd-->
 - [@ohos.bundle.appDomainVerify](arkts-bundle-appdomainverify.md)
@@ -1163,8 +1139,6 @@
   <!--Del-->
   - [getAppCloneIdentityBySandboxDataDir(system api)](arkts-ability-bundlemanager-getappcloneidentitybysandboxdatadir-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getAppClonePreference(system api)](arkts-ability-bundlemanager-getappclonepreference-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [getApplicationInfo(system api)](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getApplicationInfoSync(system api)](arkts-ability-bundlemanager-getapplicationinfosync-f-sys.md)<!--DelEnd-->
@@ -1181,7 +1155,8 @@
   - [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)
   - [getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md)
   - [getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)
-  - [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md)
+  <!--Del-->
+  - [getBundleInstallStatus(system api)](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md)<!--DelEnd-->
   - [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md)
   - [getBundleNameByUidSync](arkts-ability-bundlemanager-getbundlenamebyuidsync-f.md)
   <!--Del-->
@@ -1251,8 +1226,6 @@
   - [setAdditionalInfo(system api)](arkts-ability-bundlemanager-setadditionalinfo-f-sys.md)<!--DelEnd-->
   - [setAlternateIcon](arkts-ability-bundlemanager-setalternateicon-f.md)
   <!--Del-->
-  - [setAppClonePreference(system api)](arkts-ability-bundlemanager-setappclonepreference-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [setApplicationEnabled(system api)](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setApplicationEnabledSync(system api)](arkts-ability-bundlemanager-setapplicationenabledsync-f-sys.md)<!--DelEnd-->
@@ -1263,8 +1236,6 @@
   - [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)
   - [AlternateIconInfo](arkts-ability-bundlemanager-alternateiconinfo-t.md)
   - [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md)
-  <!--Del-->
-  - [AppClonePreference(system api)](arkts-ability-bundlemanager-appclonepreference-t-sys.md)<!--DelEnd-->
   - [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)
   <!--Del-->
   - [AppProvisionInfo(system api)](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md)<!--DelEnd-->
@@ -1305,8 +1276,6 @@
   - [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md)
   - [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
   <!--Del-->
-  - [AppClonePreferenceMode(system api)](arkts-ability-bundlemanager-appclonepreferencemode-e-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [AppDistributionType(system api)](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ApplicationFlag(system api)](arkts-ability-bundlemanager-applicationflag-e-sys.md)<!--DelEnd-->
@@ -1315,7 +1284,8 @@
   - [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
   <!--Del-->
   - [BundleFlag(system api)](arkts-ability-bundlemanager-bundleflag-e-sys.md)<!--DelEnd-->
-  - [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e.md)
+  <!--Del-->
+  - [BundleInstallStatus(system api)](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md)<!--DelEnd-->
   - [BundleType](arkts-ability-bundlemanager-bundletype-e.md)
   - [CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md)
   - [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
@@ -1520,7 +1490,6 @@
   - [isShortcutSupported](arkts-ability-shortcutmanager-isshortcutsupported-f.md)
   - [setShortcutsEnabled](arkts-ability-shortcutmanager-setshortcutsenabled-f.md)
   - [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md)
-  - [updateDesktopShortcutInfo](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f.md)
   - [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t.md)
   - [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md)
   - [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t.md)
@@ -1653,452 +1622,446 @@
     - [OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
     - [WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)
   - [WantAgent](arkts-ability-wantagent-depr-t.md)
-- [@system.package](arkts-package.md)
-  - [Package](arkts-ability-package-package-c.md)
-  - [CheckPackageHasInstalledOptions](arkts-ability-package-checkpackagehasinstalledoptions-i.md)
-  - [CheckPackageHasInstalledResponse](arkts-ability-package-checkpackagehasinstalledresponse-i.md)
-- [ets/lifecycle](arkts-ets/lifecycle.md)
-  - [LifecycleApp](lifecycle-lifecycleapp-i.md)
+- [@system.package](arkts-system-package.md)
+  - [Package](arkts-ability-system-package-package-c.md)
+  - [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md)
+  - [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md)
+- [lifecycle](arkts-lifecycle.md)
+  - [LifecycleApp](arkts-ability-lifecycle-lifecycleapp-i.md)
   <!--Del-->
-  - [LifecycleApp(system api)](lifecycle-lifecycleapp-i-sys.md)<!--DelEnd-->
-  - [LifecycleData](lifecycle-lifecycledata-i.md)
-  - [LifecycleForm](lifecycle-lifecycleform-i.md)
+  - [LifecycleApp(system api)](arkts-ability-lifecycle-lifecycleapp-i-sys.md)<!--DelEnd-->
+  - [LifecycleData](arkts-ability-lifecycle-lifecycledata-i.md)
+  - [LifecycleForm](arkts-ability-lifecycle-lifecycleform-i.md)
   <!--Del-->
-  - [LifecycleForm(system api)](lifecycle-lifecycleform-i-sys.md)<!--DelEnd-->
-  - [LifecycleService](lifecycle-lifecycleservice-i.md)
+  - [LifecycleForm(system api)](arkts-ability-lifecycle-lifecycleform-i-sys.md)<!--DelEnd-->
+  - [LifecycleService](arkts-ability-lifecycle-lifecycleservice-i.md)
 - [permissions](arkts-permissions.md)
   - [Permissions](arkts-ability-permissions-t.md)
 - ability<!--arkts-abilitykit-ability-->
-  - [ability/abilityResult](arkts-ability/abilityresult.md)
-    - [AbilityResult](abilityresult-abilityresult-i.md)
-  - [ability/connectOptions](arkts-ability/connectoptions.md)
-    - [ConnectOptions](connectoptions-connectoptions-i.md)
+  - [abilityResult](arkts-abilityresult.md)
+    - [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)
+  - [connectOptions](arkts-connectoptions.md)
+    - [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md)
     - [OnConnectFn](arkts-ability-onconnectfn-t.md)
     - [OnDisconnectFn](arkts-ability-ondisconnectfn-t.md)
     - [OnFailedFn](arkts-ability-onfailedfn-t.md)
-  - [ability/dataAbilityHelper](arkts-ability/dataabilityhelper.md)
-    - [DataAbilityHelper](dataabilityhelper-dataabilityhelper-i.md)
-    - [PacMap](dataabilityhelper-pacmap-i.md)
+  - [dataAbilityHelper](arkts-dataabilityhelper.md)
+    - [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md)
+    - [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)
     - [PacMap](arkts-ability-pacmap-t.md)
-  - [ability/dataAbilityOperation](arkts-ability/dataabilityoperation.md)
-    - [DataAbilityOperation](dataabilityoperation-dataabilityoperation-i.md)
-  - [ability/dataAbilityResult](arkts-ability/dataabilityresult.md)
-    - [DataAbilityResult](dataabilityresult-dataabilityresult-i.md)
-  - [ability/startAbilityParameter](arkts-ability/startabilityparameter.md)
-    - [StartAbilityParameter](startabilityparameter-startabilityparameter-i.md)
-  - [ability/want](arkts-ability/want.md)
-    - [Want](want-want-i.md)
+  - [dataAbilityOperation](arkts-dataabilityoperation.md)
+    - [DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)
+  - [dataAbilityResult](arkts-dataabilityresult.md)
+    - [DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)
+  - [startAbilityParameter](arkts-startabilityparameter.md)
+    - [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md)
+  - [want](arkts-want.md)
+    - [Want](arkts-ability-want-want-i.md)
 - app<!--arkts-abilitykit-app-->
-  - [app/appVersionInfo](arkts-app/appversioninfo.md)
-    - [AppVersionInfo](appversioninfo-appversioninfo-depr-i.md)
-  - [app/context](arkts-app/context.md)
-    - [Context](context-context-depr-i.md)
-    - [PermissionOptions](context-permissionoptions-depr-i.md)
-    - [PermissionRequestResult](context-permissionrequestresult-depr-i.md)
-  - [app/processInfo](arkts-app/processinfo.md)
-    - [ProcessInfo](processinfo-processinfo-depr-i.md)
+  - [appVersionInfo](arkts-appversioninfo.md)
+    - [AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)
+  - [context](arkts-context.md)
+    - [Context](arkts-ability-context-context-depr-i.md)
+    - [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md)
+    - [PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)
+  - [processInfo](arkts-processinfo.md)
+    - [ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)
 - application<!--arkts-abilitykit-application-->
-  - [application/AbilityDelegator](arkts-application/abilitydelegator.md)
-    - [AbilityDelegator](abilitydelegator-abilitydelegator-i.md)
-  - [application/AbilityFirstFrameStateData](arkts-application/abilityfirstframestatedata.md)
+  - [AbilityDelegator](arkts-abilitydelegator.md)
+    - [AbilityDelegator](arkts-ability-abilitydelegator-i.md)
+  - [AbilityFirstFrameStateData](arkts-abilityfirstframestatedata.md)
     <!--Del-->
-    - [AbilityFirstFrameStateData(system api)](abilityfirstframestatedata-abilityfirstframestatedata-i-sys.md)<!--DelEnd-->
-  - [application/AbilityFirstFrameStateObserver](arkts-application/abilityfirstframestateobserver.md)
+    - [AbilityFirstFrameStateData(system api)](arkts-ability-abilityfirstframestatedata-i-sys.md)<!--DelEnd-->
+  - [AbilityFirstFrameStateObserver](arkts-abilityfirstframestateobserver.md)
     <!--Del-->
-    - [AbilityFirstFrameStateObserver(system api)](abilityfirstframestateobserver-abilityfirstframestateobserver-i-sys.md)<!--DelEnd-->
-  - [application/AbilityForegroundStateObserver](arkts-application/abilityforegroundstateobserver.md)
+    - [AbilityFirstFrameStateObserver(system api)](arkts-ability-abilityfirstframestateobserver-i-sys.md)<!--DelEnd-->
+  - [AbilityForegroundStateObserver](arkts-abilityforegroundstateobserver.md)
     <!--Del-->
-    - [AbilityForegroundStateObserver(system api)](abilityforegroundstateobserver-abilityforegroundstateobserver-c-sys.md)<!--DelEnd-->
-  - [application/AbilityForegroundStateObserver](arkts-application/abilityforegroundstateobserver.md)
+    - [AbilityForegroundStateObserver(system api)](arkts-ability-abilityforegroundstateobserver-c-sys.md)<!--DelEnd-->
+  - [AbilityForegroundStateObserver](arkts-abilityforegroundstateobserver.md)
     <!--Del-->
-    - [AbilityForegroundStateObserver(system api)](abilityforegroundstateobserver-abilityforegroundstateobserver-i-sys.md)<!--DelEnd-->
-  - [application/AbilityMonitor](arkts-application/abilitymonitor.md)
-    - [AbilityMonitor](abilitymonitor-abilitymonitor-i.md)
-  - [application/AbilityRunningInfo](arkts-application/abilityrunninginfo.md)
-    - [AbilityRunningInfo](abilityrunninginfo-abilityrunninginfo-i.md)
-  - [application/AbilityStageContext](arkts-application/abilitystagecontext.md)
-    - [AbilityStageContext](abilitystagecontext-abilitystagecontext-c.md)
-  - [application/AbilityStageMonitor](arkts-application/abilitystagemonitor.md)
-    - [AbilityStageMonitor](abilitystagemonitor-abilitystagemonitor-i.md)
-  - [application/AbilityStartCallback](arkts-application/abilitystartcallback.md)
-    - [AbilityStartCallback](abilitystartcallback-abilitystartcallback-c.md)
-  - [application/AbilityStartCallback](arkts-application/abilitystartcallback.md)
-    - [AbilityStartCallback](abilitystartcallback-abilitystartcallback-i.md)
+    - [AbilityForegroundStateObserver(system api)](arkts-ability-abilityforegroundstateobserver-i-sys.md)<!--DelEnd-->
+  - [AbilityMonitor](arkts-abilitymonitor.md)
+    - [AbilityMonitor](arkts-ability-abilitymonitor-i.md)
+  - [AbilityRunningInfo](arkts-abilityrunninginfo.md)
+    - [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)
+  - [AbilityStageContext](arkts-abilitystagecontext.md)
+    - [AbilityStageContext](arkts-ability-abilitystagecontext-c.md)
+  - [AbilityStageMonitor](arkts-abilitystagemonitor.md)
+    - [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md)
+  - [AbilityStartCallback](arkts-abilitystartcallback.md)
+    - [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md)
+  - [AbilityStartCallback](arkts-abilitystartcallback.md)
+    - [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md)
     - [OnResultFn](arkts-ability-onresultfn-t.md)
-  - [application/AbilityStateData](arkts-application/abilitystatedata.md)
-    - [AbilityStateData](abilitystatedata-abilitystatedata-c.md)
-  - [application/AgentCard](arkts-application/agentcard.md)
-    - [AgentAppInfo](agentcard-agentappinfo-i.md)
-    - [AgentCapabilities](agentcard-agentcapabilities-i.md)
-    - [AgentCard](agentcard-agentcard-i.md)
-    - [AgentProvider](agentcard-agentprovider-i.md)
-    - [AgentSkill](agentcard-agentskill-i.md)
-  - [application/AgentExtensionConnectCallback](arkts-application/agentextensionconnectcallback.md)
+  - [AbilityStateData](arkts-abilitystatedata.md)
+    - [AbilityStateData](arkts-ability-abilitystatedata-c.md)
+  - [AgentCard](arkts-agentcard.md)
+    - [AgentAppInfo](arkts-ability-agentcard-agentappinfo-i.md)
+    - [AgentCapabilities](arkts-ability-agentcard-agentcapabilities-i.md)
+    - [AgentCard](arkts-ability-agentcard-i.md)
+    - [AgentProvider](arkts-ability-agentcard-agentprovider-i.md)
+    - [AgentSkill](arkts-ability-agentcard-agentskill-i.md)
+  - [AgentExtensionConnectCallback](arkts-agentextensionconnectcallback.md)
     <!--Del-->
-    - [AgentExtensionConnectCallback(system api)](agentextensionconnectcallback-agentextensionconnectcallback-i-sys.md)<!--DelEnd-->
-  - [application/AgentExtensionContext](arkts-application/agentextensioncontext.md)
-    - [AgentExtensionContext](agentextensioncontext-agentextensioncontext-c.md)
-  - [application/AgentHostProxy](arkts-application/agenthostproxy.md)
-    - [AgentHostProxy](agenthostproxy-agenthostproxy-i.md)
-  - [application/AgentProxy](arkts-application/agentproxy.md)
+    - [AgentExtensionConnectCallback(system api)](arkts-ability-agentextensionconnectcallback-i-sys.md)<!--DelEnd-->
+  - [AgentExtensionContext](arkts-agentextensioncontext.md)
+    - [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md)
+  - [AgentHostProxy](arkts-agenthostproxy.md)
+    - [AgentHostProxy](arkts-ability-agenthostproxy-i.md)
+  - [AgentProxy](arkts-agentproxy.md)
     <!--Del-->
-    - [AgentProxy(system api)](agentproxy-agentproxy-i-sys.md)<!--DelEnd-->
-  - [application/AppForegroundStateObserver](arkts-application/appforegroundstateobserver.md)
+    - [AgentProxy(system api)](arkts-ability-agentproxy-i-sys.md)<!--DelEnd-->
+  - [AppForegroundStateObserver](arkts-appforegroundstateobserver.md)
     <!--Del-->
-    - [AppForegroundStateObserver(system api)](appforegroundstateobserver-appforegroundstateobserver-c-sys.md)<!--DelEnd-->
-  - [application/AppForegroundStateObserver](arkts-application/appforegroundstateobserver.md)
+    - [AppForegroundStateObserver(system api)](arkts-ability-appforegroundstateobserver-c-sys.md)<!--DelEnd-->
+  - [AppForegroundStateObserver](arkts-appforegroundstateobserver.md)
     <!--Del-->
-    - [AppForegroundStateObserver(system api)](appforegroundstateobserver-appforegroundstateobserver-i-sys.md)<!--DelEnd-->
-  - [application/AppServiceExtensionContext](arkts-application/appserviceextensioncontext.md)
-    - [AppServiceExtensionContext](appserviceextensioncontext-appserviceextensioncontext-c.md)
-  - [application/AppStateData](arkts-application/appstatedata.md)
-    - [AppStateData](appstatedata-appstatedata-c.md)
-  - [application/ApplicationContext](arkts-application/applicationcontext.md)
-    - [ApplicationContext](applicationcontext-applicationcontext-c.md)
+    - [AppForegroundStateObserver(system api)](arkts-ability-appforegroundstateobserver-i-sys.md)<!--DelEnd-->
+  - [AppStateData](arkts-appstatedata.md)
+    - [AppStateData](arkts-ability-appstatedata-c.md)
+  - [ApplicationContext](arkts-applicationcontext.md)
+    - [ApplicationContext](arkts-ability-applicationcontext-c.md)
     <!--Del-->
-    - [ApplicationContext(system api)](applicationcontext-applicationcontext-c-sys.md)<!--DelEnd-->
-  - [application/ApplicationStateObserver](arkts-application/applicationstateobserver.md)
-    - [ApplicationStateObserver](applicationstateobserver-applicationstateobserver-c.md)
+    - [ApplicationContext(system api)](arkts-ability-applicationcontext-c-sys.md)<!--DelEnd-->
+  - [ApplicationStateObserver](arkts-applicationstateobserver.md)
+    - [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md)
     - [ProcessData](arkts-ability-processdata-t.md)
-  - [application/ApplicationStateObserver](arkts-application/applicationstateobserver.md)
-    - [ApplicationStateObserver](applicationstateobserver-applicationstateobserver-i.md)
+  - [ApplicationStateObserver](arkts-applicationstateobserver.md)
+    - [ApplicationStateObserver](arkts-ability-applicationstateobserver-i.md)
     - [ProcessData](arkts-ability-processdata-t.md)
-  - [application/AutoFillExtensionContext](arkts-application/autofillextensioncontext.md)
+  - [AutoFillExtensionContext](arkts-autofillextensioncontext.md)
     <!--Del-->
-    - [AutoFillExtensionContext(system api)](autofillextensioncontext-autofillextensioncontext-c-sys.md)<!--DelEnd-->
-  - [application/AutoFillPopupConfig](arkts-application/autofillpopupconfig.md)
+    - [AutoFillExtensionContext(system api)](arkts-ability-autofillextensioncontext-c-sys.md)<!--DelEnd-->
+  - [AutoFillPopupConfig](arkts-autofillpopupconfig.md)
     <!--Del-->
-    - [AutoFillPopupConfig(system api)](autofillpopupconfig-autofillpopupconfig-i-sys.md)<!--DelEnd-->
+    - [AutoFillPopupConfig(system api)](arkts-ability-autofillpopupconfig-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [PopupSize(system api)](autofillpopupconfig-popupsize-i-sys.md)<!--DelEnd-->
+    - [PopupSize(system api)](arkts-ability-autofillpopupconfig-popupsize-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [PopupPlacement(system api)](autofillpopupconfig-popupplacement-e-sys.md)<!--DelEnd-->
-  - [application/AutoFillRect](arkts-application/autofillrect.md)
-    - [AutoFillRect](autofillrect-autofillrect-i.md)
-  - [application/AutoFillRequest](arkts-application/autofillrequest.md)
-    - [FillFailureResult](autofillrequest-fillfailureresult-i.md)
-    - [FillRequest](autofillrequest-fillrequest-i.md)
+    - [PopupPlacement(system api)](arkts-ability-autofillpopupconfig-popupplacement-e-sys.md)<!--DelEnd-->
+  - [AutoFillRect](arkts-autofillrect.md)
     <!--Del-->
-    - [FillRequestCallback(system api)](autofillrequest-fillrequestcallback-i-sys.md)<!--DelEnd-->
+    - [AutoFillRect(system api)](arkts-ability-autofillrect-i-sys.md)<!--DelEnd-->
+  - [AutoFillRequest](arkts-autofillrequest.md)
+    - [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md)
     <!--Del-->
-    - [FillResponse(system api)](autofillrequest-fillresponse-i-sys.md)<!--DelEnd-->
-    - [SaveRequest](autofillrequest-saverequest-i.md)
+    - [FillRequest(system api)](arkts-ability-autofillrequest-fillrequest-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [SaveRequestCallback(system api)](autofillrequest-saverequestcallback-i-sys.md)<!--DelEnd-->
+    - [FillRequestCallback(system api)](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [UpdateRequest(system api)](autofillrequest-updaterequest-i-sys.md)<!--DelEnd-->
-  - [application/AutoFillTriggerType](arkts-application/autofilltriggertype.md)
-    - [AutoFillTriggerType](autofilltriggertype-autofilltriggertype-e.md)
-  - [application/AutoFillType](arkts-application/autofilltype.md)
-    - [AutoFillType](autofilltype-autofilltype-e.md)
-  - [application/AutoStartupCallback](arkts-application/autostartupcallback.md)
+    - [FillResponse(system api)](arkts-ability-autofillrequest-fillresponse-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [AutoStartupCallback(system api)](autostartupcallback-autostartupcallback-i-sys.md)<!--DelEnd-->
-  - [application/AutoStartupInfo](arkts-application/autostartupinfo.md)
+    - [SaveRequest(system api)](arkts-ability-autofillrequest-saverequest-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [AutoStartupInfo(system api)](autostartupinfo-autostartupinfo-i-sys.md)<!--DelEnd-->
-  - [application/BaseContext](arkts-application/basecontext.md)
-    - [BaseContext](basecontext-basecontext-c.md)
-  - [application/BusinessAbilityInfo](arkts-application/businessabilityinfo.md)
+    - [SaveRequestCallback(system api)](arkts-ability-autofillrequest-saverequestcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [BusinessAbilityInfo(system api)](businessabilityinfo-businessabilityinfo-i-sys.md)<!--DelEnd-->
-  - [application/CliToolEvent](arkts-application/clitoolevent.md)
+    - [UpdateRequest(system api)](arkts-ability-autofillrequest-updaterequest-i-sys.md)<!--DelEnd-->
+  - [AutoFillTriggerType](arkts-autofilltriggertype.md)
     <!--Del-->
-    - [CliToolEvent(system api)](clitoolevent-clitoolevent-i-sys.md)<!--DelEnd-->
+    - [AutoFillTriggerType(system api)](arkts-ability-autofilltriggertype-e-sys.md)<!--DelEnd-->
+  - [AutoFillType](arkts-autofilltype.md)
     <!--Del-->
-    - [ToolEventType(system api)](clitoolevent-tooleventtype-e-sys.md)<!--DelEnd-->
-  - [application/Context](arkts-application/context.md)
-    - [Context](context-context-c.md)
+    - [AutoFillType(system api)](arkts-ability-autofilltype-e-sys.md)<!--DelEnd-->
+  - [AutoStartupCallback](arkts-autostartupcallback.md)
     <!--Del-->
-    - [Context(system api)](context-context-c-sys.md)<!--DelEnd-->
-  - [application/ContinuableInfo](arkts-application/continuableinfo.md)
+    - [AutoStartupCallback(system api)](arkts-ability-autostartupcallback-i-sys.md)<!--DelEnd-->
+  - [AutoStartupInfo](arkts-autostartupinfo.md)
     <!--Del-->
-    - [ContinuableInfo(system api)](continuableinfo-continuableinfo-i-sys.md)<!--DelEnd-->
-  - [application/ContinueCallback](arkts-application/continuecallback.md)
+    - [AutoStartupInfo(system api)](arkts-ability-autostartupinfo-i-sys.md)<!--DelEnd-->
+  - [BaseContext](arkts-basecontext.md)
+    - [BaseContext](arkts-ability-basecontext-c.md)
+  - [BusinessAbilityInfo](arkts-businessabilityinfo.md)
     <!--Del-->
-    - [ContinueCallback(system api)](continuecallback-continuecallback-i-sys.md)<!--DelEnd-->
+    - [BusinessAbilityInfo(system api)](arkts-ability-businessabilityinfo-i-sys.md)<!--DelEnd-->
+  - [CliToolEvent](arkts-clitoolevent.md)
+    <!--Del-->
+    - [CliToolEvent(system api)](arkts-ability-clitoolevent-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ToolEventType(system api)](arkts-ability-clitoolevent-tooleventtype-e-sys.md)<!--DelEnd-->
+  - [Context](arkts-context.md)
+    - [Context](arkts-ability-context-c.md)
+    <!--Del-->
+    - [Context(system api)](arkts-ability-context-c-sys.md)<!--DelEnd-->
+  - [ContinuableInfo](arkts-continuableinfo.md)
+    <!--Del-->
+    - [ContinuableInfo(system api)](arkts-ability-continuableinfo-i-sys.md)<!--DelEnd-->
+  - [ContinueCallback](arkts-continuecallback.md)
+    <!--Del-->
+    - [ContinueCallback(system api)](arkts-ability-continuecallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [OnContinueDoneCallback(system api)](arkts-ability-oncontinuedonecallback-t-sys.md)<!--DelEnd-->
-  - [application/ContinueDeviceInfo](arkts-application/continuedeviceinfo.md)
+  - [ContinueDeviceInfo](arkts-continuedeviceinfo.md)
     <!--Del-->
-    - [ContinueDeviceInfo(system api)](continuedeviceinfo-continuedeviceinfo-i-sys.md)<!--DelEnd-->
-  - [application/ContinueMissionInfo](arkts-application/continuemissioninfo.md)
+    - [ContinueDeviceInfo(system api)](arkts-ability-continuedeviceinfo-i-sys.md)<!--DelEnd-->
+  - [ContinueMissionInfo](arkts-continuemissioninfo.md)
     <!--Del-->
-    - [ContinueMissionInfo(system api)](continuemissioninfo-continuemissioninfo-i-sys.md)<!--DelEnd-->
-  - [application/CustomData](arkts-application/customdata.md)
+    - [ContinueMissionInfo(system api)](arkts-ability-continuemissioninfo-i-sys.md)<!--DelEnd-->
+  - [CustomData](arkts-customdata.md)
     <!--Del-->
-    - [CustomData(system api)](customdata-customdata-i-sys.md)<!--DelEnd-->
-  - [application/EmbeddableUIAbilityContext](arkts-application/embeddableuiabilitycontext.md)
-    - [EmbeddableUIAbilityContext](embeddableuiabilitycontext-embeddableuiabilitycontext-c.md)
-  - [application/ErrorObserver](arkts-application/errorobserver.md)
-    - [ErrorObserver](errorobserver-errorobserver-c.md)
-  - [application/EventHub](arkts-application/eventhub.md)
-    - [EventHub](eventhub-eventhub-c.md)
-  - [application/ExtensionContext](arkts-application/extensioncontext.md)
-    - [ExtensionContext](extensioncontext-extensioncontext-c.md)
-  - [application/ExtensionRunningInfo](arkts-application/extensionrunninginfo.md)
+    - [CustomData(system api)](arkts-ability-customdata-i-sys.md)<!--DelEnd-->
+  - [EmbeddableUIAbilityContext](arkts-embeddableuiabilitycontext.md)
+    - [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-c.md)
+  - [ErrorObserver](arkts-errorobserver.md)
+    - [ErrorObserver](arkts-ability-errorobserver-c.md)
+  - [EventHub](arkts-eventhub.md)
+    - [EventHub](arkts-ability-eventhub-c.md)
+  - [ExtensionContext](arkts-extensioncontext.md)
+    - [ExtensionContext](arkts-ability-extensioncontext-c.md)
+  - [ExtensionRunningInfo](arkts-extensionrunninginfo.md)
     <!--Del-->
-    - [ExtensionRunningInfo(system api)](extensionrunninginfo-extensionrunninginfo-i-sys.md)<!--DelEnd-->
-  - [application/FunctionInfo](arkts-application/functioninfo.md)
+    - [ExtensionRunningInfo(system api)](arkts-ability-extensionrunninginfo-i-sys.md)<!--DelEnd-->
+  - [FunctionInfo](arkts-functioninfo.md)
     <!--Del-->
-    - [FunctionInfo(system api)](functioninfo-functioninfo-i-sys.md)<!--DelEnd-->
-  - [application/InteropAbilityMonitor](arkts-application/interopabilitymonitor.md)
-    - [InteropAbilityMonitor](interopabilitymonitor-interopabilitymonitor-i.md)
+    - [FunctionInfo(system api)](arkts-ability-functioninfo-i-sys.md)<!--DelEnd-->
+  - [InteropAbilityMonitor](arkts-interopabilitymonitor.md)
+    - [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md)
     - [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-  - [application/KioskStatus](arkts-application/kioskstatus.md)
-    - [KioskStatus](kioskstatus-kioskstatus-i.md)
-  - [application/LoopObserver](arkts-application/loopobserver.md)
-    - [LoopObserver](loopobserver-loopobserver-i.md)
-  - [application/MissionCallbacks](arkts-application/missioncallbacks.md)
+  - [KioskStatus](arkts-kioskstatus.md)
+    - [KioskStatus](arkts-ability-kioskstatus-i.md)
+  - [LoopObserver](arkts-loopobserver.md)
+    - [LoopObserver](arkts-ability-loopobserver-i.md)
+  - [MissionCallbacks](arkts-missioncallbacks.md)
     <!--Del-->
-    - [MissionCallback(system api)](missioncallbacks-missioncallback-i-sys.md)<!--DelEnd-->
+    - [MissionCallback(system api)](arkts-ability-missioncallbacks-missioncallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [NotifyMissionsChangedCallback(system api)](arkts-ability-notifymissionschangedcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [NotifyNetDisconnectCallback(system api)](arkts-ability-notifynetdisconnectcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [NotifySnapshotCallback(system api)](arkts-ability-notifysnapshotcallback-t-sys.md)<!--DelEnd-->
-  - [application/MissionDeviceInfo](arkts-application/missiondeviceinfo.md)
+  - [MissionDeviceInfo](arkts-missiondeviceinfo.md)
     <!--Del-->
-    - [MissionDeviceInfo(system api)](missiondeviceinfo-missiondeviceinfo-i-sys.md)<!--DelEnd-->
-  - [application/MissionInfo](arkts-application/missioninfo.md)
+    - [MissionDeviceInfo(system api)](arkts-ability-missiondeviceinfo-i-sys.md)<!--DelEnd-->
+  - [MissionInfo](arkts-missioninfo.md)
     <!--Del-->
-    - [MissionInfo(system api)](missioninfo-missioninfo-i-sys.md)<!--DelEnd-->
-  - [application/MissionListener](arkts-application/missionlistener.md)
+    - [MissionInfo(system api)](arkts-ability-missioninfo-i-sys.md)<!--DelEnd-->
+  - [MissionListener](arkts-missionlistener.md)
     <!--Del-->
-    - [MissionListener(system api)](missionlistener-missionlistener-i-sys.md)<!--DelEnd-->
-  - [application/MissionParameter](arkts-application/missionparameter.md)
+    - [MissionListener(system api)](arkts-ability-missionlistener-i-sys.md)<!--DelEnd-->
+  - [MissionParameter](arkts-missionparameter.md)
     <!--Del-->
-    - [MissionParameter(system api)](missionparameter-missionparameter-i-sys.md)<!--DelEnd-->
-  - [application/MissionSnapshot](arkts-application/missionsnapshot.md)
+    - [MissionParameter(system api)](arkts-ability-missionparameter-i-sys.md)<!--DelEnd-->
+  - [MissionSnapshot](arkts-missionsnapshot.md)
     <!--Del-->
-    - [MissionSnapshot(system api)](missionsnapshot-missionsnapshot-i-sys.md)<!--DelEnd-->
-  - [application/MultiAppMode](arkts-application/multiappmode.md)
+    - [MissionSnapshot(system api)](arkts-ability-missionsnapshot-i-sys.md)<!--DelEnd-->
+  - [MultiAppMode](arkts-multiappmode.md)
     <!--Del-->
-    - [MultiAppMode(system api)](multiappmode-multiappmode-e-sys.md)<!--DelEnd-->
-  - [application/PageNodeInfo](arkts-application/pagenodeinfo.md)
-    - [PageNodeInfo](pagenodeinfo-pagenodeinfo-i.md)
-  - [application/PhotoEditorExtensionContext](arkts-application/photoeditorextensioncontext.md)
-    - [PhotoEditorExtensionContext](photoeditorextensioncontext-photoeditorextensioncontext-c.md)
-  - [application/ProcessData](arkts-application/processdata.md)
-    - [ProcessData](processdata-processdata-c.md)
-  - [application/ProcessInformation](arkts-application/processinformation.md)
-    - [ProcessInformation](processinformation-processinformation-i.md)
-  - [application/ProcessRunningInfo](arkts-application/processrunninginfo.md)
-    - [ProcessRunningInfo](processrunninginfo-processrunninginfo-i.md)
-  - [application/RunningAppClone](arkts-application/runningappclone.md)
+    - [MultiAppMode(system api)](arkts-ability-multiappmode-e-sys.md)<!--DelEnd-->
+  - [PageNodeInfo](arkts-pagenodeinfo.md)
     <!--Del-->
-    - [RunningAppClone(system api)](runningappclone-runningappclone-i-sys.md)<!--DelEnd-->
-  - [application/RunningMultiAppInfo](arkts-application/runningmultiappinfo.md)
+    - [PageNodeInfo(system api)](arkts-ability-pagenodeinfo-i-sys.md)<!--DelEnd-->
+  - [PhotoEditorExtensionContext](arkts-photoeditorextensioncontext.md)
+    - [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md)
+  - [ProcessData](arkts-processdata.md)
+    - [ProcessData](arkts-ability-processdata-c.md)
+  - [ProcessInformation](arkts-processinformation.md)
+    - [ProcessInformation](arkts-ability-processinformation-i.md)
+  - [ProcessRunningInfo](arkts-processrunninginfo.md)
+    - [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)
+  - [RunningAppClone](arkts-runningappclone.md)
     <!--Del-->
-    - [RunningMultiAppInfo(system api)](runningmultiappinfo-runningmultiappinfo-i-sys.md)<!--DelEnd-->
-  - [application/RunningMultiInstanceInfo](arkts-application/runningmultiinstanceinfo.md)
+    - [RunningAppClone(system api)](arkts-ability-runningappclone-i-sys.md)<!--DelEnd-->
+  - [RunningMultiAppInfo](arkts-runningmultiappinfo.md)
     <!--Del-->
-    - [RunningMultiInstanceInfo(system api)](runningmultiinstanceinfo-runningmultiinstanceinfo-i-sys.md)<!--DelEnd-->
-  - [application/SendableContext](arkts-application/sendablecontext.md)
-    - [SendableContext](sendablecontext-sendablecontext-i.md)
-  - [application/ServiceExtensionContext](arkts-application/serviceextensioncontext.md)
+    - [RunningMultiAppInfo(system api)](arkts-ability-runningmultiappinfo-i-sys.md)<!--DelEnd-->
+  - [RunningMultiInstanceInfo](arkts-runningmultiinstanceinfo.md)
     <!--Del-->
-    - [ServiceExtensionContext(system api)](serviceextensioncontext-serviceextensioncontext-c-sys.md)<!--DelEnd-->
-  - [application/ToolEventCallback](arkts-application/tooleventcallback.md)
+    - [RunningMultiInstanceInfo(system api)](arkts-ability-runningmultiinstanceinfo-i-sys.md)<!--DelEnd-->
+  - [SendableContext](arkts-sendablecontext.md)
+    - [SendableContext](arkts-ability-sendablecontext-i.md)
+  - [ToolEventCallback](arkts-tooleventcallback.md)
     <!--Del-->
-    - [ToolEventCallback(system api)](tooleventcallback-tooleventcallback-i-sys.md)<!--DelEnd-->
+    - [ToolEventCallback(system api)](arkts-ability-tooleventcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [OnEventFn(system api)](arkts-ability-oneventfn-t-sys.md)<!--DelEnd-->
-  - [application/ToolInfo](arkts-application/toolinfo.md)
+  - [ToolInfo](arkts-toolinfo.md)
     <!--Del-->
-    - [SubCommandInfo(system api)](toolinfo-subcommandinfo-i-sys.md)<!--DelEnd-->
+    - [SubCommandInfo(system api)](arkts-ability-toolinfo-subcommandinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [ToolInfo(system api)](toolinfo-toolinfo-i-sys.md)<!--DelEnd-->
+    - [ToolInfo(system api)](arkts-ability-toolinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [ToolSummary(system api)](toolinfo-toolsummary-i-sys.md)<!--DelEnd-->
-  - [application/UIAbilityContext](arkts-application/uiabilitycontext.md)
-    - [UIAbilityContext](uiabilitycontext-uiabilitycontext-c.md)
+    - [ToolSummary(system api)](arkts-ability-toolinfo-toolsummary-i-sys.md)<!--DelEnd-->
+  - [UIAbilityContext](arkts-uiabilitycontext.md)
+    - [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)
     <!--Del-->
-    - [UIAbilityContext(system api)](uiabilitycontext-uiabilitycontext-c-sys.md)<!--DelEnd-->
-  - [application/UIExtensionContext](arkts-application/uiextensioncontext.md)
-    - [UIExtensionContext](uiextensioncontext-uiextensioncontext-c.md)
+    - [UIAbilityContext(system api)](arkts-ability-uiabilitycontext-c-sys.md)<!--DelEnd-->
+  - [UIExtensionContext](arkts-uiextensioncontext.md)
+    - [UIExtensionContext](arkts-ability-uiextensioncontext-c.md)
     <!--Del-->
-    - [UIExtensionContext(system api)](uiextensioncontext-uiextensioncontext-c-sys.md)<!--DelEnd-->
-  - [application/UIServiceExtensionConnectCallback](arkts-application/uiserviceextensionconnectcallback.md)
-    - [UIServiceExtensionConnectCallback](uiserviceextensionconnectcallback-uiserviceextensionconnectcallback-i.md)
-  - [application/UIServiceExtensionContext](arkts-application/uiserviceextensioncontext.md)
+    - [UIExtensionContext(system api)](arkts-ability-uiextensioncontext-c-sys.md)<!--DelEnd-->
+  - [UIServiceExtensionConnectCallback](arkts-uiserviceextensionconnectcallback.md)
+    - [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md)
+  - [UIServiceHostProxy](arkts-uiservicehostproxy.md)
     <!--Del-->
-    - [UIServiceExtensionContext(system api)](uiserviceextensioncontext-uiserviceextensioncontext-c-sys.md)<!--DelEnd-->
-  - [application/UIServiceHostProxy](arkts-application/uiservicehostproxy.md)
-    <!--Del-->
-    - [UIServiceHostProxy(system api)](uiservicehostproxy-uiservicehostproxy-i-sys.md)<!--DelEnd-->
-  - [application/UIServiceProxy](arkts-application/uiserviceproxy.md)
-    - [UIServiceProxy](uiserviceproxy-uiserviceproxy-i.md)
-  - [application/ViewData](arkts-application/viewdata.md)
-    - [ViewData](viewdata-viewdata-i.md)
-  - [application/abilityDelegatorArgs](arkts-application/abilitydelegatorargs.md)
-    - [AbilityDelegatorArgs](abilitydelegatorargs-abilitydelegatorargs-i.md)
-  - [application/shellCmdResult](arkts-application/shellcmdresult.md)
-    - [ShellCmdResult](shellcmdresult-shellcmdresult-i.md)
+    - [UIServiceHostProxy(system api)](arkts-ability-uiservicehostproxy-i-sys.md)<!--DelEnd-->
+  - [UIServiceProxy](arkts-uiserviceproxy.md)
+    - [UIServiceProxy](arkts-ability-uiserviceproxy-i.md)
+  - [ViewData](arkts-viewdata.md)
+    - [ViewData](arkts-ability-viewdata-i.md)
+  - [abilityDelegatorArgs](arkts-abilitydelegatorargs.md)
+    - [AbilityDelegatorArgs](arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md)
+  - [shellCmdResult](arkts-shellcmdresult.md)
+    - [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)
 - bundle<!--arkts-abilitykit-bundle-->
-  - [bundle/PermissionDef](arkts-bundle/permissiondef.md)
+  - [PermissionDef](arkts-permissiondef.md)
     <!--Del-->
-    - [PermissionDef(system api)](permissiondef-permissiondef-depr-i-sys.md)<!--DelEnd-->
-  - [bundle/abilityInfo](arkts-bundle/abilityinfo.md)
-    - [AbilityInfo](abilityinfo-abilityinfo-depr-i.md)
-  - [bundle/applicationInfo](arkts-bundle/applicationinfo.md)
-    - [ApplicationInfo](applicationinfo-applicationinfo-depr-i.md)
-  - [bundle/bundleInfo](arkts-bundle/bundleinfo.md)
-    - [BundleInfo](bundleinfo-bundleinfo-depr-i.md)
-    - [ReqPermissionDetail](bundleinfo-reqpermissiondetail-depr-i.md)
-    - [UsedScene](bundleinfo-usedscene-depr-i.md)
-  - [bundle/bundleInstaller](arkts-bundle/bundleinstaller.md)
+    - [PermissionDef(system api)](arkts-ability-permissiondef-depr-i-sys.md)<!--DelEnd-->
+  - [abilityInfo](arkts-abilityinfo.md)
+    - [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)
+  - [applicationInfo](arkts-applicationinfo.md)
+    - [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
+  - [bundleInfo](arkts-bundleinfo.md)
+    - [BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)
+    - [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)
+    - [UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md)
+  - [bundleInstaller](arkts-bundleinstaller.md)
     <!--Del-->
-    - [BundleInstaller(system api)](bundleinstaller-bundleinstaller-depr-i-sys.md)<!--DelEnd-->
+    - [BundleInstaller(system api)](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [InstallParam(system api)](bundleinstaller-installparam-depr-i-sys.md)<!--DelEnd-->
+    - [InstallParam(system api)](arkts-ability-bundleinstaller-installparam-depr-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [InstallStatus(system api)](bundleinstaller-installstatus-depr-i-sys.md)<!--DelEnd-->
-  - [bundle/bundleStatusCallback](arkts-bundle/bundlestatuscallback.md)
+    - [InstallStatus(system api)](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)<!--DelEnd-->
+  - [bundleStatusCallback](arkts-bundlestatuscallback.md)
     <!--Del-->
-    - [BundleStatusCallback(system api)](bundlestatuscallback-bundlestatuscallback-depr-i-sys.md)<!--DelEnd-->
-  - [bundle/customizeData](arkts-bundle/customizedata.md)
-    - [CustomizeData](customizedata-customizedata-depr-i.md)
-  - [bundle/elementName](arkts-bundle/elementname.md)
-    - [ElementName](elementname-elementname-depr-i.md)
-  - [bundle/hapModuleInfo](arkts-bundle/hapmoduleinfo.md)
-    - [HapModuleInfo](hapmoduleinfo-hapmoduleinfo-depr-i.md)
-  - [bundle/launcherAbilityInfo](arkts-bundle/launcherabilityinfo.md)
+    - [BundleStatusCallback(system api)](arkts-ability-bundlestatuscallback-bundlestatuscallback-depr-i-sys.md)<!--DelEnd-->
+  - [customizeData](arkts-customizedata.md)
+    - [CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)
+  - [elementName](arkts-elementname.md)
+    - [ElementName](arkts-ability-elementname-elementname-depr-i.md)
+  - [hapModuleInfo](arkts-hapmoduleinfo.md)
+    - [HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)
+  - [launcherAbilityInfo](arkts-launcherabilityinfo.md)
     <!--Del-->
-    - [LauncherAbilityInfo(system api)](launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)<!--DelEnd-->
-  - [bundle/moduleInfo](arkts-bundle/moduleinfo.md)
-    - [ModuleInfo](moduleinfo-moduleinfo-depr-i.md)
-  - [bundle/remoteAbilityInfo](arkts-bundle/remoteabilityinfo.md)
+    - [LauncherAbilityInfo(system api)](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)<!--DelEnd-->
+  - [moduleInfo](arkts-moduleinfo.md)
+    - [ModuleInfo](arkts-ability-moduleinfo-moduleinfo-depr-i.md)
+  - [remoteAbilityInfo](arkts-remoteabilityinfo.md)
     <!--Del-->
-    - [RemoteAbilityInfo(system api)](remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)<!--DelEnd-->
-  - [bundle/shortcutInfo](arkts-bundle/shortcutinfo.md)
-    - [ShortcutInfo](shortcutinfo-shortcutinfo-depr-i.md)
+    - [RemoteAbilityInfo(system api)](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)<!--DelEnd-->
+  - [shortcutInfo](arkts-shortcutinfo.md)
+    - [ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)
     <!--Del-->
-    - [ShortcutWant(system api)](shortcutinfo-shortcutwant-depr-i-sys.md)<!--DelEnd-->
+    - [ShortcutWant(system api)](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)<!--DelEnd-->
 - bundleManager<!--arkts-abilitykit-bundleManager-->
-  - [bundleManager/AbilityInfo](arkts-bundlemanager/abilityinfo.md)
-    - [AbilityInfo](abilityinfo-abilityinfo-i.md)
-    - [WindowSize](abilityinfo-windowsize-i.md)
-  - [bundleManager/AppProvisionInfo](arkts-bundlemanager/appprovisioninfo.md)
+  - [AbilityInfo](arkts-abilityinfo.md)
+    - [AbilityInfo](arkts-ability-abilityinfo-i.md)
+    - [WindowSize](arkts-ability-abilityinfo-windowsize-i.md)
+  - [AppProvisionInfo](arkts-appprovisioninfo.md)
     <!--Del-->
-    - [AppProvisionInfo(system api)](appprovisioninfo-appprovisioninfo-i-sys.md)<!--DelEnd-->
+    - [AppProvisionInfo(system api)](arkts-ability-appprovisioninfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [Validity(system api)](appprovisioninfo-validity-i-sys.md)<!--DelEnd-->
-  - [bundleManager/ApplicationInfo](arkts-bundlemanager/applicationinfo.md)
-    - [ApplicationInfo](applicationinfo-applicationinfo-i.md)
+    - [Validity(system api)](arkts-ability-appprovisioninfo-validity-i-sys.md)<!--DelEnd-->
+  - [ApplicationInfo](arkts-applicationinfo.md)
+    - [ApplicationInfo](arkts-ability-applicationinfo-i.md)
     <!--Del-->
-    - [ApplicationInfo(system api)](applicationinfo-applicationinfo-i-sys.md)<!--DelEnd-->
-    - [ModuleMetadata](applicationinfo-modulemetadata-i.md)
-    - [MultiAppMode](applicationinfo-multiappmode-i.md)
+    - [ApplicationInfo(system api)](arkts-ability-applicationinfo-i-sys.md)<!--DelEnd-->
+    - [ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md)
+    - [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md)
     <!--Del-->
-    - [PreinstalledApplicationInfo(system api)](applicationinfo-preinstalledapplicationinfo-i-sys.md)<!--DelEnd-->
-  - [bundleManager/BundleInfo](arkts-bundlemanager/bundleinfo.md)
-    - [AlternateIconInfo](bundleinfo-alternateiconinfo-i.md)
-    - [AppCloneIdentity](bundleinfo-appcloneidentity-i.md)
+    - [PreinstalledApplicationInfo(system api)](arkts-ability-applicationinfo-preinstalledapplicationinfo-i-sys.md)<!--DelEnd-->
+  - [BundleInfo](arkts-bundleinfo.md)
+    - [AlternateIconInfo](arkts-ability-bundleinfo-alternateiconinfo-i.md)
+    - [AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md)
+    - [BundleInfo](arkts-ability-bundleinfo-i.md)
     <!--Del-->
-    - [AppClonePreference(system api)](bundleinfo-appclonepreference-i-sys.md)<!--DelEnd-->
-    - [BundleInfo](bundleinfo-bundleinfo-i.md)
+    - [BundleOptions(system api)](arkts-ability-bundleinfo-bundleoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [BundleInfo(system api)](bundleinfo-bundleinfo-i-sys.md)<!--DelEnd-->
+    - [DynamicIconInfo(system api)](arkts-ability-bundleinfo-dynamiciconinfo-i-sys.md)<!--DelEnd-->
+    - [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md)
+    - [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md)
+    - [UsedScene](arkts-ability-bundleinfo-usedscene-i.md)
+  - [BundlePackInfo](arkts-bundlepackinfo.md)
     <!--Del-->
-    - [BundleOptions(system api)](bundleinfo-bundleoptions-i-sys.md)<!--DelEnd-->
+    - [AbilityFormInfo(system api)](arkts-ability-bundlepackinfo-abilityforminfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [DynamicIconInfo(system api)](bundleinfo-dynamiciconinfo-i-sys.md)<!--DelEnd-->
-    - [ReqPermissionDetail](bundleinfo-reqpermissiondetail-i.md)
-    - [SignatureInfo](bundleinfo-signatureinfo-i.md)
-    - [UsedScene](bundleinfo-usedscene-i.md)
-  - [bundleManager/BundlePackInfo](arkts-bundlemanager/bundlepackinfo.md)
+    - [ApiVersion(system api)](arkts-ability-bundlepackinfo-apiversion-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [AbilityFormInfo(system api)](bundlepackinfo-abilityforminfo-i-sys.md)<!--DelEnd-->
+    - [BundleConfigInfo(system api)](arkts-ability-bundlepackinfo-bundleconfiginfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [ApiVersion(system api)](bundlepackinfo-apiversion-i-sys.md)<!--DelEnd-->
+    - [BundlePackInfo(system api)](arkts-ability-bundlepackinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [BundleConfigInfo(system api)](bundlepackinfo-bundleconfiginfo-i-sys.md)<!--DelEnd-->
+    - [ExtensionAbility(system api)](arkts-ability-bundlepackinfo-extensionability-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [BundlePackInfo(system api)](bundlepackinfo-bundlepackinfo-i-sys.md)<!--DelEnd-->
+    - [ModuleAbilityInfo(system api)](arkts-ability-bundlepackinfo-moduleabilityinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [ExtensionAbility(system api)](bundlepackinfo-extensionability-i-sys.md)<!--DelEnd-->
+    - [ModuleConfigInfo(system api)](arkts-ability-bundlepackinfo-moduleconfiginfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [ModuleAbilityInfo(system api)](bundlepackinfo-moduleabilityinfo-i-sys.md)<!--DelEnd-->
+    - [ModuleDistroInfo(system api)](arkts-ability-bundlepackinfo-moduledistroinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [ModuleConfigInfo(system api)](bundlepackinfo-moduleconfiginfo-i-sys.md)<!--DelEnd-->
+    - [PackageConfig(system api)](arkts-ability-bundlepackinfo-packageconfig-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [ModuleDistroInfo(system api)](bundlepackinfo-moduledistroinfo-i-sys.md)<!--DelEnd-->
+    - [PackageSummary(system api)](arkts-ability-bundlepackinfo-packagesummary-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [PackageConfig(system api)](bundlepackinfo-packageconfig-i-sys.md)<!--DelEnd-->
+    - [Version(system api)](arkts-ability-bundlepackinfo-version-i-sys.md)<!--DelEnd-->
+  - [BundleResourceInfo](arkts-bundleresourceinfo.md)
     <!--Del-->
-    - [PackageSummary(system api)](bundlepackinfo-packagesummary-i-sys.md)<!--DelEnd-->
+    - [BundleResourceInfo(system api)](arkts-ability-bundleresourceinfo-i-sys.md)<!--DelEnd-->
+  - [DispatchInfo](arkts-dispatchinfo.md)
     <!--Del-->
-    - [Version(system api)](bundlepackinfo-version-i-sys.md)<!--DelEnd-->
-  - [bundleManager/BundleResourceInfo](arkts-bundlemanager/bundleresourceinfo.md)
+    - [DispatchInfo(system api)](arkts-ability-dispatchinfo-i-sys.md)<!--DelEnd-->
+  - [ElementName](arkts-elementname.md)
+    - [ElementName](arkts-ability-elementname-i.md)
+  - [ExtensionAbilityInfo](arkts-extensionabilityinfo.md)
+    - [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)
+  - [HapModuleInfo](arkts-hapmoduleinfo.md)
+    - [DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)
+    - [Dependency](arkts-ability-hapmoduleinfo-dependency-i.md)
+    - [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
+    - [PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)
+    - [RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)
+  - [LauncherAbilityInfo](arkts-launcherabilityinfo.md)
+    - [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)
+  - [LauncherAbilityResourceInfo](arkts-launcherabilityresourceinfo.md)
     <!--Del-->
-    - [BundleResourceInfo(system api)](bundleresourceinfo-bundleresourceinfo-i-sys.md)<!--DelEnd-->
-  - [bundleManager/DispatchInfo](arkts-bundlemanager/dispatchinfo.md)
+    - [LauncherAbilityResourceInfo(system api)](arkts-ability-launcherabilityresourceinfo-i-sys.md)<!--DelEnd-->
+  - [Metadata](arkts-metadata.md)
+    - [Metadata](arkts-ability-metadata-i.md)
+  - [OverlayModuleInfo](arkts-overlaymoduleinfo.md)
+    - [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)
+  - [PermissionDef](arkts-permissiondef.md)
     <!--Del-->
-    - [DispatchInfo(system api)](dispatchinfo-dispatchinfo-i-sys.md)<!--DelEnd-->
-  - [bundleManager/ElementName](arkts-bundlemanager/elementname.md)
-    - [ElementName](elementname-elementname-i.md)
-  - [bundleManager/ExtensionAbilityInfo](arkts-bundlemanager/extensionabilityinfo.md)
-    - [ExtensionAbilityInfo](extensionabilityinfo-extensionabilityinfo-i.md)
-  - [bundleManager/HapModuleInfo](arkts-bundlemanager/hapmoduleinfo.md)
-    - [DataItem](hapmoduleinfo-dataitem-i.md)
-    - [Dependency](hapmoduleinfo-dependency-i.md)
-    - [HapModuleInfo](hapmoduleinfo-hapmoduleinfo-i.md)
-    - [PreloadItem](hapmoduleinfo-preloaditem-i.md)
-    - [RouterItem](hapmoduleinfo-routeritem-i.md)
-  - [bundleManager/LauncherAbilityInfo](arkts-bundlemanager/launcherabilityinfo.md)
-    - [LauncherAbilityInfo](launcherabilityinfo-launcherabilityinfo-i.md)
-  - [bundleManager/LauncherAbilityResourceInfo](arkts-bundlemanager/launcherabilityresourceinfo.md)
+    - [PermissionDef(system api)](arkts-ability-permissiondef-i-sys.md)<!--DelEnd-->
+  - [PluginBundleInfo](arkts-pluginbundleinfo.md)
+    - [PluginBundleInfo](arkts-ability-pluginbundleinfo-i.md)
+    - [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md)
+  - [RecoverableApplicationInfo](arkts-recoverableapplicationinfo.md)
     <!--Del-->
-    - [LauncherAbilityResourceInfo(system api)](launcherabilityresourceinfo-launcherabilityresourceinfo-i-sys.md)<!--DelEnd-->
-  - [bundleManager/Metadata](arkts-bundlemanager/metadata.md)
-    - [Metadata](metadata-metadata-i.md)
-  - [bundleManager/OverlayModuleInfo](arkts-bundlemanager/overlaymoduleinfo.md)
-    - [OverlayModuleInfo](overlaymoduleinfo-overlaymoduleinfo-i.md)
-  - [bundleManager/PermissionDef](arkts-bundlemanager/permissiondef.md)
+    - [RecoverableApplicationInfo(system api)](arkts-ability-recoverableapplicationinfo-i-sys.md)<!--DelEnd-->
+  - [RemoteAbilityInfo](arkts-remoteabilityinfo.md)
     <!--Del-->
-    - [PermissionDef(system api)](permissiondef-permissiondef-i-sys.md)<!--DelEnd-->
-  - [bundleManager/PluginBundleInfo](arkts-bundlemanager/pluginbundleinfo.md)
-    - [PluginBundleInfo](pluginbundleinfo-pluginbundleinfo-i.md)
-    - [PluginModuleInfo](pluginbundleinfo-pluginmoduleinfo-i.md)
-  - [bundleManager/RecoverableApplicationInfo](arkts-bundlemanager/recoverableapplicationinfo.md)
+    - [RemoteAbilityInfo(system api)](arkts-ability-remoteabilityinfo-i-sys.md)<!--DelEnd-->
+  - [SharedBundleInfo](arkts-sharedbundleinfo.md)
     <!--Del-->
-    - [RecoverableApplicationInfo(system api)](recoverableapplicationinfo-recoverableapplicationinfo-i-sys.md)<!--DelEnd-->
-  - [bundleManager/RemoteAbilityInfo](arkts-bundlemanager/remoteabilityinfo.md)
+    - [SharedBundleInfo(system api)](arkts-ability-sharedbundleinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [RemoteAbilityInfo(system api)](remoteabilityinfo-remoteabilityinfo-i-sys.md)<!--DelEnd-->
-  - [bundleManager/SharedBundleInfo](arkts-bundlemanager/sharedbundleinfo.md)
-    <!--Del-->
-    - [SharedBundleInfo(system api)](sharedbundleinfo-sharedbundleinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [SharedModuleInfo(system api)](sharedbundleinfo-sharedmoduleinfo-i-sys.md)<!--DelEnd-->
-  - [bundleManager/ShortcutInfo](arkts-bundlemanager/shortcutinfo.md)
-    - [ParameterItem](shortcutinfo-parameteritem-i.md)
-    - [ShortcutInfo](shortcutinfo-shortcutinfo-i.md)
-    - [ShortcutWant](shortcutinfo-shortcutwant-i.md)
-  - [bundleManager/Skill](arkts-bundlemanager/skill.md)
-    - [Skill](skill-skill-i.md)
-    - [SkillUri](skill-skilluri-i.md)
-  - [bundleManager/SkillInfo](arkts-bundlemanager/skillinfo.md)
-    - [SkillInfo](skillinfo-skillinfo-i.md)
-    - [SkillType](skillinfo-skilltype-e.md)
+    - [SharedModuleInfo(system api)](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md)<!--DelEnd-->
+  - [ShortcutInfo](arkts-shortcutinfo.md)
+    - [ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)
+    - [ShortcutInfo](arkts-ability-shortcutinfo-i.md)
+    - [ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)
+  - [Skill](arkts-skill.md)
+    - [Skill](arkts-ability-skill-i.md)
+    - [SkillUri](arkts-ability-skill-skilluri-i.md)
+  - [SkillInfo](arkts-skillinfo.md)
+    - [SkillInfo](arkts-ability-skillinfo-i.md)
+    - [SkillType](arkts-ability-skillinfo-skilltype-e.md)
 - continuation<!--arkts-abilitykit-continuation-->
-  - [continuation/continuationExtraParams](arkts-continuation/continuationextraparams.md)
-    - [ContinuationExtraParams](continuationextraparams-continuationextraparams-i.md)
-  - [continuation/continuationResult](arkts-continuation/continuationresult.md)
-    - [ContinuationResult](continuationresult-continuationresult-i.md)
+  - [continuationExtraParams](arkts-continuationextraparams.md)
+    - [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md)
+  - [continuationResult](arkts-continuationresult.md)
+    - [ContinuationResult](arkts-ability-continuationresult-continuationresult-i.md)
 - security<!--arkts-abilitykit-security-->
-  - [security/PermissionRequestResult](arkts-security/permissionrequestresult.md)
-    - [PermissionRequestResult](permissionrequestresult-permissionrequestresult-c.md)
+  - [PermissionRequestResult](arkts-permissionrequestresult.md)
+    - [PermissionRequestResult](arkts-ability-permissionrequestresult-c.md)
 - wantAgent<!--arkts-abilitykit-wantAgent-->
-  - [wantAgent/triggerInfo](arkts-wantagent/triggerinfo.md)
-    - [TriggerInfo](triggerinfo-triggerinfo-i.md)
+  - [triggerInfo](arkts-triggerinfo.md)
+    - [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md)
     <!--Del-->
-    - [TriggerInfo(system api)](triggerinfo-triggerinfo-i-sys.md)<!--DelEnd-->
-  - [wantAgent/wantAgentInfo](arkts-wantagent/wantagentinfo.md)
+    - [TriggerInfo(system api)](arkts-ability-triggerinfo-triggerinfo-i-sys.md)<!--DelEnd-->
+  - [wantAgentInfo](arkts-wantagentinfo.md)
     <!--Del-->
-    - [LocalWantAgentInfo(system api)](wantagentinfo-localwantagentinfo-i-sys.md)<!--DelEnd-->
-    - [WantAgentInfo](wantagentinfo-wantagentinfo-i.md)
+    - [LocalWantAgentInfo(system api)](arkts-ability-wantagentinfo-localwantagentinfo-i-sys.md)<!--DelEnd-->
+    - [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md)
     <!--Del-->
-    - [WantAgentInfo(system api)](wantagentinfo-wantagentinfo-i-sys.md)<!--DelEnd-->
+    - [WantAgentInfo(system api)](arkts-ability-wantagentinfo-wantagentinfo-i-sys.md)<!--DelEnd-->

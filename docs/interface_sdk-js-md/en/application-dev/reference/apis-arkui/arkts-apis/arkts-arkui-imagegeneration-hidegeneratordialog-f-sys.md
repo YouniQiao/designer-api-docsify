@@ -1,5 +1,11 @@
 # hideGeneratorDialog (System API)
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## hideGeneratorDialog
 
 ```TypeScript
@@ -24,7 +30,7 @@ Hide the AI image generation task popup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The context of dialog for ui display. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes | The context of dialog for ui display. |
 
 **Return value:**
 

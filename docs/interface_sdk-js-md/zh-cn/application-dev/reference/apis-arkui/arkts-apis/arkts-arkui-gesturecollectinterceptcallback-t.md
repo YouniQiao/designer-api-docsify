@@ -21,12 +21,12 @@ Defines the callback type used in onGestureCollectIntercept.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| recognizers | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | 是 | the gesture recognizers of the component on the response chain.  |
-| touchRecognizers | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | 否 | the touch recognizers of the component on the response chain.  |
+| recognizers | Array&lt;[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)&gt; | 是 | the gesture recognizers of the component on the response chain. |
+| touchRecognizers | Array&lt;[TouchRecognizer](arkts-arkui-touchrecognizer-c.md)&gt; | 否 | the touch recognizers of the component on the response chain. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the gesture intervention.  |
+| [GestureCollectIntervention](arkts-arkui-gesturecollectintervention-e.md) | the gesture intervention. |
 

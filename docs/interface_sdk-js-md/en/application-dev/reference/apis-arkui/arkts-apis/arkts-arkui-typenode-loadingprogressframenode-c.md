@@ -1,6 +1,6 @@
 # LoadingProgressFrameNode
 
-Define the LoadingProgress type of FrameNode.
+定义LoadingProgress类型的FrameNode。
 
 **Inheritance/Implementation:** LoadingProgressFrameNode extends [TypedFrameNode<LoadingProgressAttribute>](TypedFrameNode<LoadingProgressAttribute>)
 
@@ -18,7 +18,7 @@ Define the LoadingProgress type of FrameNode.
 abstract initialize(): LoadingProgressAttribute
 ```
 
-Initialize LoadingProgress FrameNode.
+初始化LoadingProgress类型的FrameNode。
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ Initialize LoadingProgress FrameNode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |  |
 

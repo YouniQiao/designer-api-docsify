@@ -1,8 +1,8 @@
 # DataShareResultSet (System API)
 
-Provides APIs for accessing the result sets returned.
+提供通过查询数据库生成的结果集的相关访问方法。
 
-The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set.
+列或键名称作为字符串数组返回，其中字符串的顺序与结果集中的列或键的顺序相同。
 
 **Since:** 9
 
@@ -14,15 +14,21 @@ The column or key names are returned as a string array, in which the strings are
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { DataType } from 'kits/@kit.ArkData';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Closes this result set.
+关闭结果集。
 
-Calling this API will invalidate the result set and release all its resources.
+对结果集调用此方法将释放其所有资源并使其无效。
 
 **Since:** 9
 
@@ -36,7 +42,7 @@ Calling this API will invalidate the result set and release all its resources.
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -56,9 +62,9 @@ ArkTS-Sta:
 getBlob(columnIndex: int): Uint8Array
 ```
 
-Obtains the value in the form of a byte array based on the specified column and the current row.
+以字节数组的形式获取当前行中指定列的值。
 
-If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
+如果当前行中指定的列或键的值为空，或者指定的列或键不是Blob类型，则使用方需要确定是否抛出此异常。
 
 **Since:** 9
 
@@ -76,15 +82,15 @@ If the specified column or key is empty or the value is not of the Blob type, yo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Value obtained. |
+| Uint8Array | 以字节数组的形式返回指定列的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let columnIndex = 1;
@@ -111,9 +117,9 @@ ArkTS-Sta:
 getColumnIndex(columnName: string): int
 ```
 
-Obtains the column index based on a column name.
+根据指定的列名获取列索引。
 
-The column name is passed in as an input parameter.
+列名作为输入参数传递。
 
 **Since:** 9
 
@@ -131,15 +137,15 @@ The column name is passed in as an input parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnName | string | Yes | Column name. |
+| columnName | string | Yes | 表示结果集中指定列的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Column index obtained. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定列的索引。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let ColumnName = "name";
@@ -161,9 +167,9 @@ ArkTS-Sta:
 getColumnName(columnIndex: int): string
 ```
 
-Obtains the column name based on a column index.
+根据指定的列索引获取列名。
 
-The column index is passed in as an input parameter.
+列索引作为输入参数传递。
 
 **Since:** 9
 
@@ -181,15 +187,15 @@ The column index is passed in as an input parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Column index. |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示结果集中指定列的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Column name obtained. |
+| string | 返回指定列的名称。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let columnIndex = 1;
@@ -211,9 +217,9 @@ ArkTS-Sta:
 getDataType(columnIndex: int): DataType
 ```
 
-Obtains the data type based on the specified column index.
+指定列索引获取该列的数据类型。
 
-If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
+如果当前行中指定的列或键的值为空，或者指定的列或键不是DataType类型，则使用方需要确定是否抛出此异常。
 
 **Since:** 9
 
@@ -231,15 +237,15 @@ If the specified column or key is empty or the value is not of the DataType type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Column index. |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示结果集中指定列的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Data type obtained. |
+| [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | 返回指定列的类型。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let columnIndex = 1;
@@ -261,9 +267,9 @@ ArkTS-Sta:
 getDouble(columnIndex: int): double
 ```
 
-Obtains the value in the form of a double-precision floating-point number based on the specified column and the current row.
+以值类型为双浮点数形式获取当前行中指定列的值。
 
-If the specified column or key is empty or the value is not of the double type, you need to determine whether to throw an exception.
+如果当前行中指定的列或键的值为空，或者指定的列或键不是double类型，则使用方需要确定是否抛出此异常。
 
 **Since:** 9
 
@@ -281,15 +287,15 @@ If the specified column or key is empty or the value is not of the double type, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Value obtained. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Value obtained. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let columnIndex = 1;
@@ -312,9 +318,9 @@ ArkTS-Sta:
 getLong(columnIndex: int): long
 ```
 
-Obtains the value in the form of a long integer based on the specified column and the current row.
+以长整数值形式获取当前行中指定列的值。
 
-If the specified column or key is empty or the value is not of the long type, you need to determine whether to throw an exception.
+如果当前行中指定的列或键的值为空，或者指定的列或键不是long类型，则使用方需要确定是否抛出此异常。
 
 **Since:** 9
 
@@ -332,15 +338,15 @@ If the specified column or key is empty or the value is not of the long type, yo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Value obtained. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 以长整数值形式返回指定列的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let columnIndex = 1;
@@ -363,9 +369,9 @@ ArkTS-Sta:
 getString(columnIndex: int): string
 ```
 
-Obtains the value in the form of a string based on the specified column and the current row.
+以字符串形式获取当前行中指定列的值。
 
-If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
+如果当前行中指定的列或键的值为空，或者指定的列或键不是string类型，则使用方需要确定是否抛出此异常。
 
 **Since:** 9
 
@@ -383,15 +389,15 @@ If the specified column or key is empty or the value is not of the string type, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Value obtained. |
+| string | 以字符串形式返回指定列的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let columnIndex = 1;
@@ -414,7 +420,7 @@ ArkTS-Sta:
 goTo(offset: int): boolean
 ```
 
-Moves based on the specified offset.
+相对于当前位置向前或向后移动指定行数。
 
 **Since:** 9
 
@@ -432,15 +438,15 @@ Moves based on the specified offset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset relative to the current position. A negative value means to move forward, and a positive value means to move backward. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示相对于当前位置的偏移量。offset为负值表示向前偏移，正值则表示向后偏移。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let goToNum = 1;
@@ -456,7 +462,7 @@ if (resultSet != undefined) {
 goToFirstRow(): boolean
 ```
 
-Moves to the first row of the result set.
+转到结果集的第一行。
 
 **Since:** 9
 
@@ -474,9 +480,9 @@ Moves to the first row of the result set.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Create a resultSet object. For details, see Usage in this topic.
@@ -492,7 +498,7 @@ if (resultSet != undefined) {
 goToLastRow(): boolean
 ```
 
-Moves to the last row of the result set.
+转到结果集的最后一行。
 
 **Since:** 9
 
@@ -510,9 +516,9 @@ Moves to the last row of the result set.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -527,7 +533,7 @@ if (resultSet != undefined) {
 goToNextRow(): boolean
 ```
 
-Moves to the next row in the result set.
+转到结果集的下一行。
 
 **Since:** 9
 
@@ -545,9 +551,9 @@ Moves to the next row in the result set.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -562,7 +568,7 @@ if (resultSet != undefined) {
 goToPreviousRow(): boolean
 ```
 
-Moves to the previous row in the result set.
+转到结果集的上一行。
 
 **Since:** 9
 
@@ -580,9 +586,9 @@ Moves to the previous row in the result set.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -603,7 +609,7 @@ ArkTS-Sta:
 goToRow(position: int): boolean
 ```
 
-Moves to the specified row in the result set.
+转到结果集的指定行。
 
 **Since:** 9
 
@@ -621,15 +627,15 @@ Moves to the specified row in the result set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Position to move to, starting from 0. |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示要移动到的指定位置，从 0 开始。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let goToRowNum = 2;
@@ -645,9 +651,9 @@ if (resultSet != undefined) {
 columnCount: int
 ```
 
-Number of columns in the result set.
+结果集中的列数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -667,7 +673,7 @@ Number of columns in the result set.
 columnNames: Array<string>
 ```
 
-Names of all columns in the result set.
+结果集中所有列的名称。
 
 **Type:** Array&lt;string&gt;
 
@@ -689,7 +695,7 @@ Names of all columns in the result set.
 isClosed: boolean
 ```
 
-Whether the result set is closed. The value **true** means the result set is closed; the value **false** means the opposite.
+标识当前结果集是否关闭。如果结果集已关闭，则为true；否则为false。
 
 **Type:** boolean
 
@@ -711,9 +717,9 @@ Whether the result set is closed. The value **true** means the result set is clo
 rowCount: int
 ```
 
-Number of rows in the result set.
+结果集中的行数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

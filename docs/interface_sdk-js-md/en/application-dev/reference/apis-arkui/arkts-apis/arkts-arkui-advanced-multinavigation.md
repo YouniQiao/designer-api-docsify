@@ -1,29 +1,35 @@
 # @ohos.arkui.advanced.MultiNavigation
 
+## Modules to Import
+
+```TypeScript
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from 'kits/@kit.ArkUI';
+```
+
 ## Summary
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md) | MultiNavPathStack is used for storing pages when shown as split mode. |
+| [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md) | 当前，MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)的  [onReady](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#onready11)等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。 |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [MultiNavigation](arkts-arkui-arkui-advanced-multinavigation-multinavigation-s.md) | Declaration struct MultiNavigation. |
+| [MultiNavigation](arkts-arkui-arkui-advanced-multinavigation-multinavigation-s.md) | MultiNavigation({navDestination: PageMapBuilder \| undefined, multiStack: MultiNavPathStack, onNavigationModeChange?: OnNavigationModeChangeCallback, onHomeShowOnTop?: OnHomeShowOnTopCallback})  创建并初始化MultiNavigation组件。  MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左侧主页点击时，会触发详情页的加载并同时清除右侧所有其他详情页，确保右侧仅展示最新加载的详情页。然而，若在右侧的详情页上再次执行详情页加载操作，系统将不会执行清栈动作。效果可参见[主页跳转详情页效果演示](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-MultiNavigation copy.md#示例)。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | Splitpolicy indicates the policy of pages pushed to the stack. |
+| [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 表示MultiNavigation中页面的类型。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnHomeShowOnTopCallback](arkts-arkui-onhomeshowontopcallback-t.md) | Callback function when home NavDestination shown in top. |
-| [OnNavigationModeChangeCallback](arkts-arkui-onnavigationmodechangecallback-t.md) | Callback function when NavigationMode changed. |
+| [OnHomeShowOnTopCallback](arkts-arkui-onhomeshowontopcallback-t.md) | 当主页在栈顶显示时触发的回调函数。 |
+| [OnNavigationModeChangeCallback](arkts-arkui-onnavigationmodechangecallback-t.md) | 当MultiNavigation的mode变化时触发的回调函数。 |
 

@@ -1,5 +1,11 @@
 # @ohos.app.agent.AgentUIExtensionAbility
 
+## Modules to Import
+
+```TypeScript
+import { AgentUIExtensionAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Classes

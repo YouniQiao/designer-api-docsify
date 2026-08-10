@@ -17,8 +17,8 @@ Adds a property to an object, or modifies attributes of an existing property.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| propertyKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| attributes | \_\_\_MD\_LINK\_USD\_0\_\_\_ & ThisType&lt;any&gt; | Yes |  |
+| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |  |
+| attributes | [PropertyDescriptor](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-propertydescriptor-i.md) & ThisType&lt;any&gt; | Yes |  |
 
 **Return value:**
 

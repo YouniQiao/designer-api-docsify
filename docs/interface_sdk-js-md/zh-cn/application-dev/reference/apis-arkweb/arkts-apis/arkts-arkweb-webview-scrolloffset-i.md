@@ -1,6 +1,6 @@
 # ScrollOffset
 
-Defines the scroll offset of the webpage in view port, the unit is virtual pixel.Related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the scroll offset of the webpage in view port, the unit is virtual pixel.Related to {@link getScrollOffset} method.
 
 **起始版本：** 23
 
@@ -9,6 +9,12 @@ Defines the scroll offset of the webpage in view port, the unit is virtual pixel
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
 
 ## x
 

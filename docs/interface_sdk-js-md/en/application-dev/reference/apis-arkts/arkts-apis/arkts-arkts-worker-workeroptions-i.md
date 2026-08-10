@@ -1,6 +1,6 @@
 # WorkerOptions
 
-Provides options that can be set for the Worker instance to create.
+Worker构造函数的选项，用于为Worker添加其他信息。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Provides options that can be set for the Worker instance to create.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## name
 
 ```TypeScript
 name?: string
 ```
 
-Name of the Worker thread. The default value is undefined.
+Worker的名称。默认值为undefined，此时线程名称为'WorkerThread'。非默认值情况下，对应的线程名称带有'WorkerThread_'前缀。比如name为'testName'时，对应的线程名称为'WorkerThread_testName'。线程名称可通过HeapMemoryInfo的threadName获取。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Name of the Worker thread. The default value is undefined.
 priority?: ThreadWorkerPriority
 ```
 
-Priority of the Worker thread.
+表示Worker线程优先级。默认值为MEDIUM。
 
-**Type:** ThreadWorkerPriority
+**Type:** [ThreadWorkerPriority](arkts-arkts-worker-threadworkerpriority-e.md)
 
 **Since:** 18
 
@@ -56,7 +62,7 @@ Priority of the Worker thread.
 shared?: boolean
 ```
 
-Whether sharing of the Worker instance is enabled. Currently, sharing is not supported.
+表示Worker共享功能，此接口暂不支持。
 
 **Type:** boolean
 
@@ -76,7 +82,7 @@ Whether sharing of the Worker instance is enabled. Currently, sharing is not sup
 type?: 'classic' | 'module'
 ```
 
-Mode in which the Worker instance executes the script. The module type is not supported yet. The default value is classic.
+Worker执行脚本的模式类型，暂不支持module类型，默认值为classic。
 
 **Type:** 'classic' \| 'module'
 

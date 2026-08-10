@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Advertising.Ads
 
+## 导入模块
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## onAdLoadFailure
 
 ```TypeScript
@@ -35,7 +41,7 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 | errorCode | number | 是 | 广告请求失败的错误码。 |
 | errorMsg | string | 是 | 广告请求失败的错误信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';
@@ -75,7 +81,7 @@ onAdLoadSuccess(ads: Array<Advertisement>): void
 | --- | --- | --- | --- |
 | ads | Array&lt;Advertisement&gt; | 是 | 广告数据。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

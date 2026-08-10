@@ -1,7 +1,7 @@
 # LinkIntentInfo (System API)
 
-Describes the parameters supported by the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_decorator, such as the URI required for application redirection.
+LinkIntentInfo用于描述  
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器支持的参数，例如应用间跳转需要的uri信息。
 
 **Since:** 20
 
@@ -13,13 +13,19 @@ Describes the parameters supported by the
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## uri
 
 ```TypeScript
 readonly uri: string
 ```
 
-URI of an intent.
+表示意图的uri信息。
 
 **Type:** string
 

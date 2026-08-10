@@ -1,6 +1,6 @@
 # ColorManagementQuery
 
-ColorManagementQuery provides the APIs for color space query.
+色彩管理类，用于查询色彩空间参数。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ ColorManagementQuery provides the APIs for color space query.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getSupportedColorSpaces
 
 ```TypeScript
 getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 ```
 
-Obtains the supported color spaces.
+获取支持的色彩空间列表。
 
 **Since:** 12
 
@@ -32,5 +38,11 @@ Obtains the supported color spaces.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;colorSpaceManager.ColorSpace&gt; | Array of color spaces supported. If the API call fails, undefined is returned. |
+| Array&lt;colorSpaceManager.ColorSpace&gt; | 支持的色彩空间列表。若接口调用失败，返回undefined。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 7400103 | Session not config, only throw in session usage.<br>**Applicable version:** 12 - 17 |
 

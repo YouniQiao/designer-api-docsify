@@ -1,6 +1,10 @@
 # SensorType
 
-Enumerates the sensor types.
+表示要订阅或取消订阅的传感器类型。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.SensorId](arkts-sensorservice-sensor-sensorid-e.md)替代。
 
 **Since:** 8
 
@@ -20,7 +24,7 @@ Enumerates the sensor types.
 SENSOR_TYPE_ID_ACCELEROMETER = 1
 ```
 
-Acceleration sensor.
+加速度传感器。
 
 **Since:** 8
 
@@ -40,7 +44,7 @@ Acceleration sensor.
 SENSOR_TYPE_ID_GYROSCOPE = 2
 ```
 
-Gyroscope sensor.
+陀螺仪传感器。
 
 **Since:** 8
 
@@ -60,7 +64,7 @@ Gyroscope sensor.
 SENSOR_TYPE_ID_AMBIENT_LIGHT = 5
 ```
 
-Ambient light sensor.
+环境光传感器。
 
 **Since:** 8
 
@@ -80,7 +84,7 @@ Ambient light sensor.
 SENSOR_TYPE_ID_MAGNETIC_FIELD = 6
 ```
 
-Magnetic field sensor.
+磁场传感器。
 
 **Since:** 8
 
@@ -100,7 +104,7 @@ Magnetic field sensor.
 SENSOR_TYPE_ID_BAROMETER = 8
 ```
 
-Barometer sensor.
+气压计传感器。
 
 **Since:** 8
 
@@ -120,7 +124,7 @@ Barometer sensor.
 SENSOR_TYPE_ID_HALL = 10
 ```
 
-Hall effect sensor.
+霍尔传感器。
 
 **Since:** 8
 
@@ -140,7 +144,7 @@ Hall effect sensor.
 SENSOR_TYPE_ID_PROXIMITY = 12
 ```
 
-Proximity sensor.
+接近光传感器。
 
 **Since:** 8
 
@@ -160,7 +164,7 @@ Proximity sensor.
 SENSOR_TYPE_ID_HUMIDITY = 13
 ```
 
-Humidity sensor.
+湿度传感器。
 
 **Since:** 8
 
@@ -180,7 +184,7 @@ Humidity sensor.
 SENSOR_TYPE_ID_ORIENTATION = 256
 ```
 
-Orientation sensor.
+方向传感器。
 
 **Since:** 8
 
@@ -200,7 +204,7 @@ Orientation sensor.
 SENSOR_TYPE_ID_GRAVITY = 257
 ```
 
-Gravity sensor.
+重力传感器。
 
 **Since:** 8
 
@@ -220,7 +224,7 @@ Gravity sensor.
 SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258
 ```
 
-Linear acceleration sensor.
+线性加速度传感器。
 
 **Since:** 8
 
@@ -240,7 +244,7 @@ Linear acceleration sensor.
 SENSOR_TYPE_ID_ROTATION_VECTOR = 259
 ```
 
-Rotation vector sensor.
+旋转矢量传感器。
 
 **Since:** 8
 
@@ -260,7 +264,7 @@ Rotation vector sensor.
 SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260
 ```
 
-Ambient temperature sensor.
+环境温度传感器。
 
 **Since:** 8
 
@@ -280,7 +284,7 @@ Ambient temperature sensor.
 SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED = 261
 ```
 
-Uncalibrated magnetic field sensor.
+未校准磁场传感器。
 
 **Since:** 8
 
@@ -300,7 +304,7 @@ Uncalibrated magnetic field sensor.
 SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263
 ```
 
-Uncalibrated gyroscope sensor.
+未校准陀螺仪传感器。
 
 **Since:** 8
 
@@ -320,7 +324,7 @@ Uncalibrated gyroscope sensor.
 SENSOR_TYPE_ID_SIGNIFICANT_MOTION = 264
 ```
 
-Significant motion sensor.
+有效运动传感器。
 
 **Since:** 8
 
@@ -340,7 +344,7 @@ Significant motion sensor.
 SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265
 ```
 
-Pedometer detection sensor.
+计步检测传感器。
 
 **Since:** 8
 
@@ -360,7 +364,7 @@ Pedometer detection sensor.
 SENSOR_TYPE_ID_PEDOMETER = 266
 ```
 
-Pedometer sensor.
+计步传感器。
 
 **Since:** 8
 
@@ -380,7 +384,7 @@ Pedometer sensor.
 SENSOR_TYPE_ID_HEART_RATE = 278
 ```
 
-Heart rate sensor.
+心率传感器。
 
 **Since:** 8
 
@@ -400,7 +404,7 @@ Heart rate sensor.
 SENSOR_TYPE_ID_WEAR_DETECTION = 280
 ```
 
-Wear detection sensor.
+佩戴检测传感器。
 
 **Since:** 8
 
@@ -420,7 +424,7 @@ Wear detection sensor.
 SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281
 ```
 
-Uncalibrated acceleration sensor.
+未校准加速度传感器。
 
 **Since:** 8
 

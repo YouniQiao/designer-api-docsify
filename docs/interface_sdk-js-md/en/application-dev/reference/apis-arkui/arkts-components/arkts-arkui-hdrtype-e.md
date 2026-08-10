@@ -1,6 +1,6 @@
 # HdrType
 
-Sets the HDR type of the XComponent.
+设置XComponent的HDR类型。
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Sets the HDR type of the XComponent.
 DEFAULT = 0
 ```
 
-Default type.
+默认类型。
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ Default type.
 AIHDR = 1
 ```
 
-AIHDR type.
+AIHDR类型。
 
 **Since:** 24
 

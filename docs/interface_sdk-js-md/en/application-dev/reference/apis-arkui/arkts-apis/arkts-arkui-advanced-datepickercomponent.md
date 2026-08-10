@@ -1,28 +1,34 @@
 # @ohos.arkui.advanced.DatePickerComponent
 
+## Modules to Import
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
+
 ## Summary
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md) | CommonOptions defines common options for the date time picker.  **Description:**     - For Date usage, refer to   \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。     - The text size of DatePickerComponent adapts between 14vp and 16vp. When the component width is too narrow,   text may be truncated.     - When parameters are omitted or set to undefined, default values are used.     - In [DateOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, setting start, end, and selected only takes effect for the date part   (year, month, day). In [TimeOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, setting start, end, and selected only takes effect for the   time part (hour, minute, second). |
-| [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md) | DateOptions defines options for the date picker.  Inherits from [CommonOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) | DatePickerComponentOptions defines options for the date time picker component. |
-| [DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md) | DatePickerComponentResult defines the selection result of the date time picker. |
-| [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md) | TimeOptions defines options for the time picker.  Inherits from [CommonOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md) | CommonOptions定义日期时间选择器的通用选项。 |
+| [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md) | DateOptions定义日期选择器的选项。  继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。 |
+| [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) | DatePickerComponentOptions定义日期时间选择器组件的选项。 |
+| [DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md) | DatePickerComponentResult定义日期时间选择器的选择结果。 |
+| [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md) | TimeOptions定义时间选择器的选项。  继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。 |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [DatePickerComponent](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponent-s.md) | DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second).  **Description:**     - This component interface can only be used in Stage model. |
+| [DatePickerComponent](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponent-s.md) | DatePickerComponent组件用于选择日期（年月日）和时间（时分秒）。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md) | DateMode enum defines the mode of the date picker. |
-| [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md) | DisplayMode enum defines the display mode of the picker. |
-| [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md) | TimeFormat enum defines the format of the time picker. |
+| [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md) | DateMode枚举用于定义日期选择器的模式。 |
+| [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md) | DisplayMode枚举用于定义选择器的显示模式。 |
+| [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md) | TimeFormat枚举用于定义时间选择器的格式。 |
 

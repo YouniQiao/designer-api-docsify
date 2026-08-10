@@ -3,7 +3,7 @@
 更新数据库需要的参数信息。
 
 数据提供方需要在module.json5中的proxyData节点定义要共享的表的标识，读写权限和基本信息。配置方式请见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[数据提供方应用的开发](../../../database/share-data-by-silent-access-sys.md#数据提供方应用的开发)。
 
 **起始版本：** 11
 
@@ -15,6 +15,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## equalTo
 
 ```TypeScript
@@ -23,7 +29,7 @@ equalTo: Record<string, double | string | boolean>
 
 指示筛选条件，当前仅支持通过等于筛选。
 
-**类型：** Record&lt;string, double \| string \| boolean&gt;
+**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double \| string \| boolean&gt;
 
 **起始版本：** 11
 
@@ -63,7 +69,7 @@ value: ValuesBucket
 
 指示要更新的数据。
 
-**类型：** ValuesBucket
+**类型：** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
 **起始版本：** 11
 

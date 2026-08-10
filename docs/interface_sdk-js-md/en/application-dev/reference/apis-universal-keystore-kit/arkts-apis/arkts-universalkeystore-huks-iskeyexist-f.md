@@ -1,12 +1,24 @@
 # isKeyExist
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## isKeyExist
 
 ```TypeScript
 function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a key exists. This API uses an asynchronous callback to return the result.
+判断密钥是否存在。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.isKeyItemExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)
+> 替代。
 
 **Since:** 8
 
@@ -24,11 +36,11 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key to check. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for checking the key. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
+| keyAlias | string | Yes | 所需查找的密钥的别名。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于查询时指定密钥的属性TAG。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。false代表密钥不存在，true代表密钥存在。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -49,7 +61,12 @@ huks.isKeyExist(keyAlias, emptyOptions, (err, data) => {
 function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 ```
 
-Checks whether a key exists. This API uses a promise to return the result.
+判断密钥是否存在。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.isKeyItemExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)替代。
 
 **Since:** 8
 
@@ -67,16 +84,16 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key to check. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for checking the key. |
+| keyAlias | string | Yes | 所需查找的密钥的别名。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于查询时指定密钥的属性TAG。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。false代表密钥不存在，true代表密钥存在。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

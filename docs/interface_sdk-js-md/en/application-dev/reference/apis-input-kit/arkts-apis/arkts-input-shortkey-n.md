@@ -1,6 +1,10 @@
 # shortKey
 
-The shortKey module provides APIs to set the delay for starting an ability using a shortcut key.For example, you can set the delay to 3 seconds so that a screenshot is taken when you press and hold the shortcut key for 3 seconds.
+通过本模块接口，可以设置快捷键拉起Ability的延迟时间，如设置长按快捷键3s后再截屏等。
+
+> **说明：**
+> 
+> - 本模块接口为系统接口。
 
 **Since:** 10
 
@@ -12,6 +16,12 @@ The shortKey module provides APIs to set the delay for starting an ability using
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { shortKey } from 'kits/@kit.InputKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -19,7 +29,7 @@ The shortKey module provides APIs to set the delay for starting an ability using
 
 | Name | Description |
 | --- | --- |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration-1) | Sets the delay for starting an ability using shortcut keys. This API uses a promise to return the result. |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration) | 设置快捷键拉起Ability的延迟时间，使用callback异步回调。 |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration-1) | 设置快捷键拉起Ability的延迟时间，使用Promise异步回调。 |
 <!--DelEnd-->
 

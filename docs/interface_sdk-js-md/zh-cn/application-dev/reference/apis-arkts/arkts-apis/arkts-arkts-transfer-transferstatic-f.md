@@ -1,5 +1,11 @@
 # transferStatic
 
+## 导入模块
+
+```TypeScript
+import { transfer } from 'kits/@kit.ArkTS';
+```
+
 ## transferStatic
 
 ```TypeScript

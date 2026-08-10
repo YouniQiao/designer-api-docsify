@@ -1,8 +1,8 @@
 # Text
 
-文本类型数据，是[UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如  
-[PlainText]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Hyperlink]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[HTML]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_等具体子类。
+文本类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如  
+[PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md)、[Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md)、  
+[HTML](arkts-arkdata-unifieddatachannel-html-c.md)等具体子类。
 
 **继承/实现关系：** Text extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
@@ -13,6 +13,12 @@
 <!--Device-unifiedDataChannel-class Text extends UnifiedRecord--><!--Device-unifiedDataChannel-class Text extends UnifiedRecord-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
 
 ## details
 
@@ -32,7 +38,7 @@ details?: Record<string, string>
 
 的数据对象，用于描述一篇文章。非必填字段，默认值为空字典对象。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 10
 

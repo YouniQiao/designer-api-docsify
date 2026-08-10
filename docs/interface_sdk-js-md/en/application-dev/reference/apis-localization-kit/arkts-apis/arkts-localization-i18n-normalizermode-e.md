@@ -1,6 +1,6 @@
 # NormalizerMode
 
-Enumerates text normalization modes.
+文本标准化范式的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates text normalization modes.
 NFC = 1
 ```
 
-Normalization form C, characters are decomposed and then re-composed by canonical equivalence
+NFC范式。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Normalization form C, characters are decomposed and then re-composed by canonica
 NFD = 2
 ```
 
-Normalization form D, characters are decomposed by canonical equivalence
+NFD范式。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Normalization form D, characters are decomposed by canonical equivalence
 NFKC = 3
 ```
 
-Normalization form KC, characters are decomposed by compatibility, then re-composed by canonical equivalence
+NFKC范式。
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Normalization form KC, characters are decomposed by compatibility, then re-compo
 NFKD = 4
 ```
 
-Normalization form KD, characters are decomposed by compatibility
+NFKD范式。
 
 **Since:** 23
 

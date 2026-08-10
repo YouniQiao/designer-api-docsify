@@ -1,6 +1,6 @@
 # NetworkIdQueryFilter (System API)
 
-Defines the network ID filter options.
+设备网络ID过滤器选项。
 
 **Since:** 18
 
@@ -12,18 +12,24 @@ Defines the network ID filter options.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## onlineStatus
 
 ```TypeScript
 onlineStatus : int
 ```
 
-Device online status.
+设备在线状态，包括
 
-- **0**: The device is offline.  
-- **1**: The device is online.
+- 0：表示设备处于离线状态。  
+- 1：表示设备处于在线状态。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -41,7 +47,7 @@ Device online status.
 wiseDeviceId : string
 ```
 
-Registered device ID.
+已注册设备标识。
 
 **Type:** string
 

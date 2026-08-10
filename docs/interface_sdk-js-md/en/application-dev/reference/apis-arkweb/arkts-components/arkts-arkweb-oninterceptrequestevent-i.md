@@ -1,6 +1,6 @@
 # OnInterceptRequestEvent
 
-Defines the triggered callback when the resources loading is intercepted.
+定义当Web组件加载url之前触发。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines the triggered callback when the resources loading is intercepted.
 request: WebResourceRequest
 ```
 
-The information of request.
+url请求的相关信息。
 
-**Type:** WebResourceRequest
+**Type:** [WebResourceRequest](../arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
 
 **Since:** 12
 

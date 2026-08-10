@@ -1,5 +1,11 @@
 # hasVoiceCapability
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## hasVoiceCapability
 
 ```TypeScript

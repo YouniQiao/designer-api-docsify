@@ -1,6 +1,6 @@
 # KeyPolicy
 
-Enumerates key policies. This refers to the system behavior triggered after the key code delivered by the MDM app matches the system key event.
+按键策略。MDM应用下发按键策略的按键编码与系统按键事件匹配后的系统行为。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates key policies. This refers to the system behavior triggered after the 
 INTERCEPTION = 0
 ```
 
-Intercepts messages. After this parameter is set, only the current key event is intercepted. The system does not process the event, and the key callback API does not respond to the key event. For example, after the power key interception policy is delivered, pressing the power key does not respond, the device cannot be powered off or locked, and only the power key event in the power-on state is affected. When the device is powered off, the power key can be used to power on the device.
+拦截消息。设置后仅会拦截当前按键事件，系统不会再处理该事件，按键回调接口也不会响应按键事件。例如：下发电源键拦截策略后，按电源键无任何响应，无法关机，无法锁屏，仅影响开机状态下电源键事件，关机时可通过电源键正常开机。
 
 **Since:** 23
 
@@ -34,8 +34,8 @@ Intercepts messages. After this parameter is set, only the current key event is 
 CUSTOM = 1
 ```
 
-Intercepts and forwards messages. When this policy is configured, the system intercepts the current key event and does not process the event. In addition, the  
-[EnterpriseAdminExtensionAbility.onKeyEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_callback API is used to notify the MDM app of the key event, which does not block the processing of other events.
+拦截并转发消息。 设置后会拦截当前按键事件，系统不会再处理该事件，同时通过  
+[EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)回调接口将发生的按键事件通知给MDM应用，通知MDM应用处理该事件的过程不会阻塞系统后续的其他事件处理。
 
 **Since:** 23
 

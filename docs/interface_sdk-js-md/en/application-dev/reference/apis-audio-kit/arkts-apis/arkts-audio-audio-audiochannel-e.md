@@ -1,6 +1,6 @@
 # AudioChannel
 
-Enumerates the audio channels.
+表示音频声道的枚举。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the audio channels.
 CHANNEL_1 = 1
 ```
 
-One audio channel (mono).
+单声道。
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ One audio channel (mono).
 CHANNEL_2 = 2
 ```
 
-Two audio channels (stereo).
+双声道。
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Two audio channels (stereo).
 CHANNEL_3 = 3
 ```
 
-Three audio channels.
+三声道。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Three audio channels.
 CHANNEL_4 = 4
 ```
 
-Four audio channels.
+四声道。
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ Four audio channels.
 CHANNEL_5 = 5
 ```
 
-Five audio channels.
+五声道。
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ Five audio channels.
 CHANNEL_6 = 6
 ```
 
-Six audio channels.
+六声道。
 
 **Since:** 11
 
@@ -112,7 +112,7 @@ Six audio channels.
 CHANNEL_7 = 7
 ```
 
-Seven audio channels.
+七声道。
 
 **Since:** 11
 
@@ -128,7 +128,7 @@ Seven audio channels.
 CHANNEL_8 = 8
 ```
 
-Eight audio channels.
+八声道。
 
 **Since:** 11
 
@@ -144,7 +144,7 @@ Eight audio channels.
 CHANNEL_9 = 9
 ```
 
-Nine audio channels.
+九声道。
 
 **Since:** 11
 
@@ -160,7 +160,7 @@ Nine audio channels.
 CHANNEL_10 = 10
 ```
 
-Ten audio channels.
+十声道。
 
 **Since:** 11
 
@@ -176,7 +176,7 @@ Ten audio channels.
 CHANNEL_12 = 12
 ```
 
-Twelve audio channels.
+十二声道。
 
 **Since:** 11
 
@@ -192,7 +192,7 @@ Twelve audio channels.
 CHANNEL_14 = 14
 ```
 
-Fourteen audio channels.
+十四声道。
 
 **Since:** 11
 
@@ -208,7 +208,7 @@ Fourteen audio channels.
 CHANNEL_16 = 16
 ```
 
-Sixteen audio channels.
+十六声道。
 
 **Since:** 11
 

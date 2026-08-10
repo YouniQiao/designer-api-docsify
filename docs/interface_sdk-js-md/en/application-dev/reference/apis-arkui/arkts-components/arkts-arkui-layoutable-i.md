@@ -1,6 +1,6 @@
 # Layoutable
 
-Provides the child component layout information.
+子组件布局信息。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Provides the child component layout information.
 getBorderWidth() : DirectionalEdgesT<number>
 ```
 
-Obtains the border widths of the child component.
+调用此方法获取子组件的borderWidth信息。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Obtains the border widths of the child component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Border widths of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的borderWidth信息。 |
 
 ## getMargin
 
@@ -42,7 +42,7 @@ Obtains the border widths of the child component.
 getMargin() : DirectionalEdgesT<number>
 ```
 
-Obtains the margin values of the child component.
+调用此方法获取子组件的margin信息。
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ Obtains the margin values of the child component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Margin values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的margin信息。 |
 
 ## getPadding
 
@@ -68,7 +68,7 @@ Obtains the margin values of the child component.
 getPadding() : DirectionalEdgesT<number>
 ```
 
-Obtains the padding values of the child component.
+调用此方法获取子组件的padding信息。
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ Obtains the padding values of the child component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Padding values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的padding信息。 |
 
 ## layout
 
@@ -94,7 +94,7 @@ Obtains the padding values of the child component.
 layout(position: Position): void
 ```
 
-Applies the specified position constraints to the child component.
+调用此方法对子组件的位置信息进行限制。
 
 **Since:** 10
 
@@ -112,7 +112,7 @@ Applies the specified position constraints to the child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Absolute position. |
+| position | [Position](../arkts-apis/arkts-arkui-position-i.md) | Yes | 绝对位置。 |
 
 ## measureResult
 
@@ -120,9 +120,9 @@ Applies the specified position constraints to the child component.
 measureResult: MeasureResult
 ```
 
-Measurement result of the child component.Unit: vp.
+子组件测量后的尺寸信息。单位为： vp。
 
-**Type:** MeasureResult
+**Type:** [MeasureResult](../arkts-apis/arkts-arkui-common-measureresult-i.md)
 
 **Since:** 10
 
@@ -142,7 +142,7 @@ Measurement result of the child component.Unit: vp.
 uniqueId?: number
 ```
 
-Unique ID that the system assigns to the child component.The value must be an integer greater than or equal to 0.
+系统为子组件分配的唯一标识UniqueID。取值应为≥0的整数。
 
 **Type:** number
 

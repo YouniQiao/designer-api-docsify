@@ -4,7 +4,7 @@
 declare type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => void
 ```
 
-当折叠状态改变时触发的回调\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_，仅在横屏状态下生效\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_。
+当折叠状态改变时触发的回调&lt;!--RP4--&gt;，仅在横屏状态下生效&lt;!--RP4End--&gt;。
 
 **起始版本：** 18
 
@@ -22,5 +22,5 @@ declare type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 折叠状态改变时的信息，仅在横屏状态下生效。  |
+| event | [OnFoldStatusChangeInfo](../arkts-apis/arkts-arkui-folderstack-onfoldstatuschangeinfo-i.md) | 是 | 折叠状态改变时的信息，仅在横屏状态下生效。 |
 

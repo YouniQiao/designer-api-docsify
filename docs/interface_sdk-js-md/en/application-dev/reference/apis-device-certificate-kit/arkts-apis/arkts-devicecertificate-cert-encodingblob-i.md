@@ -1,6 +1,6 @@
 # EncodingBlob
 
-Represents an encoded binary data block.
+表示一个编码后的二进制数据块。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Represents an encoded binary data block.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## data
 
 ```TypeScript
 data: Uint8Array
 ```
 
-Encoded data.
+编码数据。
 
 **Type:** Uint8Array
 
@@ -36,9 +42,9 @@ Encoded data.
 encodingFormat: EncodingFormat
 ```
 
-Encoding format.
+编码格式。
 
-**Type:** EncodingFormat
+**Type:** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 
 **Since:** 9
 

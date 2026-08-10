@@ -1,9 +1,10 @@
 # @ohos.batteryStatistics
 
 该模块提供软硬件耗电统计信息的查询接口。
-    **说明：**  
-    
-    - 本模块接口为系统接口。
+
+> **说明：**
+> 
+> - 本模块接口为系统接口。
 
 **起始版本：** 8
 
@@ -14,6 +15,12 @@
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
+```
 
 ## 汇总
 

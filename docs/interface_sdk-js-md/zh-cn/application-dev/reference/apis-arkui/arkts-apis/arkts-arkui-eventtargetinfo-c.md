@@ -60,7 +60,7 @@ Returns the component's unique id.
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  the unique id of the component |
+| number | the unique id of the component |
 
 ## getUniqueId
 

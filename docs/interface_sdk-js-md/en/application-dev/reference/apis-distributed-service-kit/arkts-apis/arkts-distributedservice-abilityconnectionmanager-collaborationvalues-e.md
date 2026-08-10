@@ -1,6 +1,6 @@
 # CollaborationValues
 
-Enumerates application collaboration key values.
+应用协作键值的枚举。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates application collaboration key values.
 ABILITY_COLLABORATION_TYPE_DEFAULT = 'ohos.collaboration.value.abilityCollab'
 ```
 
-Default collaboration.
+表示默认的协作类型。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Default collaboration.
 ABILITY_COLLABORATION_TYPE_CONNECT_PROXY = 'ohos.collaboration.value.connectProxy'
 ```
 
-Collaboration via connection proxy.
+表示连接代理的协作类型。
 
 **Since:** 18
 

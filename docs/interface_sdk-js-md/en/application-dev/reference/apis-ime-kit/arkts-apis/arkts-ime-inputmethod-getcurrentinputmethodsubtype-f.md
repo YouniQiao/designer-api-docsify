@@ -1,12 +1,18 @@
 # getCurrentInputMethodSubtype
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## getCurrentInputMethodSubtype
 
 ```TypeScript
 function getCurrentInputMethodSubtype(): InputMethodSubtype
 ```
 
-Get the current input method subtype
+获取当前输入法的子类型。
 
 **Since:** 9
 
@@ -20,9 +26,9 @@ Get the current input method subtype
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the subtype of the current input method. |
+| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | 返回当前输入法子类型对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';

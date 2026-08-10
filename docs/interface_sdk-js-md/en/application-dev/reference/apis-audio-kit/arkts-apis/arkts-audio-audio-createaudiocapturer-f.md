@@ -1,12 +1,18 @@
 # createAudioCapturer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## createAudioCapturer
 
 ```TypeScript
 function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void
 ```
 
-Creates an AudioCapturer instance. This API uses an asynchronous callback to return the result.
+获取音频采集器。使用callback异步回调。
 
 **Since:** 8
 
@@ -20,10 +26,10 @@ Creates an AudioCapturer instance. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Capturer configurations. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | 配置音频采集器。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturer&gt; | Yes | 回调函数。当获取音频采集器成功，err为undefined，data为获取到的音频采集器对象；否则为错误对象。异常将返回 error对象： &lt;br&gt;错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 &lt;br&gt;错误码6800101：表示必选参数为空或参数类型错误。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -64,7 +70,7 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an asynchronous callback to return the capturer instance.Using \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to record audio will need permission according to different \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_in options parameter, like \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ for the most microphone recording cases.
+Obtains an {@link AudioCapturer} instance. This method uses an asynchronous callback to return the capturer instance.Using {@link #AudioCapturer} to record audio will need permission according to different {@link #Sourcetype}in options parameter, like {@link #ohos.permission.MICROPHONE} for the most microphone recording cases.
 
 **Since:** 23
 
@@ -80,15 +86,15 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Capturer configurations. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturer \| null&gt; | Yes | Callback used to return the audio capturer instance, or null if any error occurs. |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturer \| null&gt; | Yes | Callback used to return the audio capturer instance, or null if any error occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio system internal error, such as system crash. |
 
 
 ## createAudioCapturer
@@ -97,7 +103,7 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an a
 function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>
 ```
 
-Creates an AudioCapturer instance. This API uses a promise to return the result.
+获取音频采集器。使用Promise异步回调。
 
 **Since:** 8
 
@@ -111,15 +117,15 @@ Creates an AudioCapturer instance. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Capturer configurations. |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | 配置音频采集器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioCapturer&gt; | Promise used to return the result. If the operation is successful, an AudioCapturer instance is returned; otherwise, an error object with either of the following error codes is returned: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
+| Promise&lt;AudioCapturer&gt; | Promise对象，成功将返回音频采集器对象，异常将返回error对象： &lt;br&gt;错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 &lt;br&gt;错误码6800101：表示必选参数为空或参数类型错误。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -159,7 +165,7 @@ audio.createAudioCapturer(audioCapturerOptions).then((data) => {
 function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer | null>
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a promise to return the capturer instance.Using \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to record audio will need permission according to different \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_in options parameter, like \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ for the most microphone recording cases.
+Obtains an {@link AudioCapturer} instance. This method uses a promise to return the capturer instance.Using {@link #AudioCapturer} to record audio will need permission according to different {@link #Sourcetype}in options parameter, like {@link #ohos.permission.MICROPHONE} for the most microphone recording cases.
 
 **Since:** 23
 
@@ -175,7 +181,7 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Capturer configurations. |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
 
 **Return value:**
 
@@ -187,6 +193,6 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
+| 6800101 | Parameter verification failed. |
+| 6800301 | Audio system internal error, such as system crash. |
 

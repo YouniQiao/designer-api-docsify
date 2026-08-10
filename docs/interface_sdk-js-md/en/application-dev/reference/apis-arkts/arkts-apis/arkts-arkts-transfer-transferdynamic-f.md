@@ -1,12 +1,18 @@
 # transferDynamic
 
+## Modules to Import
+
+```TypeScript
+import { transfer } from 'kits/@kit.ArkTS';
+```
+
 ## transferDynamic
 
 ```TypeScript
 function transferDynamic(input: Object, inputName: string): Any
 ```
 
-Converting the 1.2 object to a 1.0 object.
+将1.2对象转换为1.0对象。
 
 **Since:** 23
 
@@ -22,18 +28,18 @@ Converting the 1.2 object to a 1.0 object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | Object | Yes | The 1.2 object that needs to be converted |
-| inputName | string | Yes | name registered by the subsystem. |
+| input | Object | Yes | 需要转换的1.2对象。 |
+| inputName | string | Yes | 子系统注册的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Any | Object |
+| Any | 转换后的对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200067 | Transfer Error. The input name is not supported! |
+| 10200067 | 转换错误，不支持的输入名称！ |
 

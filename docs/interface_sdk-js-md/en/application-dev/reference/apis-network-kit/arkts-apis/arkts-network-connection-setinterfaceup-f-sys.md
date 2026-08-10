@@ -1,5 +1,11 @@
 # setInterfaceUp (System API)
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## setInterfaceUp
 
 ```TypeScript
@@ -26,7 +32,7 @@ Set a specific interface up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifaceName | string | Yes | the name of the interface to set up. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:(0,1024] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Name of the actual network adapter to be started If the network adapter exists, try to up the network adapter. If the network adapter does not exist or does not meet the up condition, the network adapter fails to be up. The network adapter exists in the kernel, and the network adapter meets the up condition. None None |
+| ifaceName | string | Yes | the name of the interface to set up. &lt;br&gt;Value range:(0,1024] &lt;br&gt;Name of the actual network adapter to be started If the network adapter exists, try to up the network adapter. If the network adapter does not exist or does not meet the up condition, the network adapter fails to be up. The network adapter exists in the kernel, and the network adapter meets the up condition. None None |
 
 **Return value:**
 
@@ -38,7 +44,7 @@ Set a specific interface up.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 

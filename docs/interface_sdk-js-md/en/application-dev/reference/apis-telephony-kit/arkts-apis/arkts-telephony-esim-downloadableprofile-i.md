@@ -10,6 +10,12 @@ Information about a profile which is downloadable to an eUICC using.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## accessRules
 
 ```TypeScript

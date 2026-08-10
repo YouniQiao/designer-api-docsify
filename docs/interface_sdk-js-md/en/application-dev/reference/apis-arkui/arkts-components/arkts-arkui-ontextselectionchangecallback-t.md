@@ -4,7 +4,7 @@
 declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void
 ```
 
-Defines the callback for text selection changes or caret position changes.
+文本选择变化回调或光标位置变化回调。
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ Defines the callback for text selection changes or caret position changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Start position of the selected text. The start position of text is 0.  |
-| selectionEnd | number | Yes | End position of the selected text.  |
+| selectionStart | number | Yes | 所选文本的起始位置，文字的起始位置为0。 |
+| selectionEnd | number | Yes | 所选文本的结束位置。 |
 

@@ -1,12 +1,18 @@
 # getAdRequestBody
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## getAdRequestBody
 
 ```TypeScript
 function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>
 ```
 
-Obtains the body of an ad request. This API uses a promise to return the result(this API is only open to some pre-installed system applications).
+获取广告请求体，使用Promise异步回调（该接口仅对部分系统预置应用开放）。
 
 **Since:** 12
 
@@ -20,24 +26,24 @@ Obtains the body of an ad request. This API uses a promise to return the result(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParams | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Ad request parameters. **Note:** The **adId** parameter of this API can be empty. |
-| adOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ad configuration parameters. |
+| adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | Yes | 广告请求参数。 **说明：** 该接口体的adId参数可以为空。 |
+| adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes | 广告配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the ad data of the string type. |
+| Promise&lt;string&gt; | Promise对象，返回字符类型的广告数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Device not supported. |
+| 21800001 | System internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

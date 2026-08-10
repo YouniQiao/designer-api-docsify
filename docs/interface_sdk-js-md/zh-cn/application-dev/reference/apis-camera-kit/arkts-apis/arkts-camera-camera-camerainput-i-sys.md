@@ -2,7 +2,7 @@
 
 相机设备输入对象。
 
-会话中[Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用的相机信息。
+会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
 
 **起始版本：** 10
 
@@ -11,6 +11,12 @@
 <!--Device-camera-interface CameraInput--><!--Device-camera-interface CameraInput-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## closeDelayed
 
@@ -40,7 +46,7 @@ Delay close camera.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| time | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | delay time for turning off camera, in units of second. |
+| time | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | delay time for turning off camera, in units of second. |
 
 **返回值：**
 
@@ -52,9 +58,9 @@ Delay close camera.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## controlAuxiliary
 
@@ -78,8 +84,8 @@ Control auxiliary.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| auxiliaryType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Auxiliary type. |
-| auxiliaryStatus | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Auxiliary status. |
+| auxiliaryType | [AuxiliaryType](arkts-camera-camera-auxiliarytype-e-sys.md) | 是 | Auxiliary type. |
+| auxiliaryStatus | [AuxiliaryStatus](arkts-camera-camera-auxiliarystatus-e-sys.md) | 是 | Auxiliary status. |
 
 **返回值：**
 
@@ -91,9 +97,9 @@ Control auxiliary.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
 ## usedAsPosition
 
@@ -117,13 +123,13 @@ Sets the camera to be used as a camera at the specified position.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The positon used for the camera. |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | 是 | The positon used for the camera. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 

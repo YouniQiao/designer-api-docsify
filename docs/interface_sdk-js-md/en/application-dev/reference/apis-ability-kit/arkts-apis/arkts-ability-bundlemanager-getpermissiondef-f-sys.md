@@ -1,12 +1,18 @@
 # getPermissionDef (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getPermissionDef
 
 ```TypeScript
 function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void
 ```
 
-Obtains the PermissionDef struct based on the given permission name. This API uses an asynchronous callback to return the result.
+根据给定的permissionName获取权限定义结构体PermissionDef信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,19 +30,19 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | string | Yes | Name of the permission. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PermissionDef&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null** and **data** is the PermissionDef object obtained. Otherwise, **err** is an error object. |
+| permissionName | string | Yes | 表示权限名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionDef&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;PermissionDef&gt;；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700006](../errorcode-bundle.md#17700006-permission-does-not-exist) | The specified permission is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700006 | The specified permission is not found. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -65,7 +71,7 @@ try {
 function getPermissionDef(permissionName: string): Promise<PermissionDef>
 ```
 
-Obtains the PermissionDef struct based on the given permission name. This API uses a promise to return the result.
+根据给定的permissionName获取权限定义结构体PermissionDef信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -83,24 +89,24 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | string | Yes | Name of the permission. |
+| permissionName | string | Yes | 表示权限参数名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PermissionDef&gt; | Promise used to return the PermissionDef object obtained. |
+| Promise&lt;PermissionDef&gt; | Promise对象，返回Array&lt;PermissionDef&gt;对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700006](../errorcode-bundle.md#17700006-permission-does-not-exist) | The specified permission is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700006 | The specified permission is not found. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -1,5 +1,11 @@
 # queryPrintJobById（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## queryPrintJobById
 
 ```TypeScript
@@ -25,30 +31,30 @@ function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PrintJob&gt; | 是 | 异步按打印任务ID查询打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PrintJob&gt; | 是 | 异步按打印任务ID查询打印任务之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let jobId : string = '1';
-print.queryPrintJobById(jobId, (err: BusinessError, printJob : print.PrintJob) => {
-    if (err) {
-        console.error('queryPrintJobById failed, because : ' + JSON.stringify(err));
+print.queryPrintJobById(jobId, (error: BusinessError, printJob : print.PrintJob) => {
+    if (error) {
+        console.error(`Failed to query print job by id. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('queryPrintJobById success, data : ' + JSON.stringify(printJob));
     }
-})
+});
 ```
 
 
@@ -88,21 +94,21 @@ function queryPrintJobById(jobId: string): Promise<PrintJob>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let jobId : string = '1';
 print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
     console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
 }).catch((error: BusinessError) => {
-    console.error('queryPrintJobById error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to query print job by id. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

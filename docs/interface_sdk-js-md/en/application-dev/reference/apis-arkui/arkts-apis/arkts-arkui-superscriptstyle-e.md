@@ -1,6 +1,6 @@
 # SuperscriptStyle
 
-Enumerates the text superscript and subscript styles.
+定义文本上下角标样式。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the text superscript and subscript styles.
 NORMAL = 0
 ```
 
-Normal text style.
+普通文本样式。
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ Normal text style.
 SUPERSCRIPT = 1
 ```
 
-Superscript text style.
+上标文本样式。
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ Superscript text style.
 SUBSCRIPT = 2
 ```
 
-Subscript text style.
+下标文本样式。
 
 **Since:** 20
 

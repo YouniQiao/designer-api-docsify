@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
+## 导入模块
+
+```TypeScript
+import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## 汇总
 
 ### 函数
@@ -23,7 +29,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 当前色域对象实例。  下列API示例中都需先使用[create()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取到ColorSpaceManager实例，再通过此实例调用对应方法。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 当前色域对象实例。  下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create)获取到ColorSpaceManager实例，再通过此实例调用对应方法。 |
 | [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | 色域标准三原色（红、绿、蓝）和白色，基于现实世界的色度，使用(x, y)表示其在色彩空间中的位置。 |
 
 ### 枚举

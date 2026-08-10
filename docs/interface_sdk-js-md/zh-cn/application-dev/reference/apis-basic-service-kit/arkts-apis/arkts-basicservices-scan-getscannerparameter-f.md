@@ -1,5 +1,11 @@
 # getScannerParameter
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getScannerParameter
 
 ```TypeScript
@@ -34,9 +40,9 @@ function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';
@@ -46,7 +52,7 @@ let scannerId: string = 'scanner_001';
 scan.getScannerParameter(scannerId).then((parameters: scan.ScannerParameter[]) => {
     console.info('get scanner parameters success: ' + JSON.stringify(parameters));
 }).catch((error: BusinessError) => {
-    console.error('get scanner parameters failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to get scanner parameters. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

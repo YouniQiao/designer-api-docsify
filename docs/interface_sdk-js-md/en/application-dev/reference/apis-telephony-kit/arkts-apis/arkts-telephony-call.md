@@ -10,6 +10,12 @@ Provides methods related to call management.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## Summary
 
 ### Functions
@@ -25,9 +31,9 @@ Provides methods related to call management.
 | [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md#formatphonenumber-2) | Formats a phone number according to the Chinese Telephone Code Plan. Before the formatting,a phone number is in the format of country code (if any) + 3-digit service provider code+ 4-digit area code + 4-digit subscriber number. After the formatting,each part is separated by a space. |
 | [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md#formatphonenumbertoe164) | Formats a phone number into an E.164 representation. |
 | [formatPhoneNumberToE164](arkts-telephony-call-formatphonenumbertoe164-f.md#formatphonenumbertoe164-1) | Formats a phone number into an E.164 representation. |
-| [getCallState](arkts-telephony-call-getcallstate-f.md#getcallstate) | Obtains the call state.  If an incoming call is ringing or waiting, the system returns {@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_OFFHOOK}.In other cases, the system returns {@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_IDLE}. |
-| [getCallState](arkts-telephony-call-getcallstate-f.md#getcallstate-1) | Obtains the call state.  If an incoming call is ringing or waiting, the system returns {@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_OFFHOOK}.In other cases, the system returns {@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_IDLE}. |
-| [getCallStateSync](arkts-telephony-call-getcallstatesync-f.md#getcallstatesync) | Obtains the call state.  If an incoming call is ringing or waiting, the system returns {@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_OFFHOOK}. In other cases, the system returns {@code CallState#CALL\_\_\_ESCAPED\_UNDERSCORE\_\_\_STATE\_\_\_ESCAPED\_UNDERSCORE\_\_\_IDLE}. |
+| [getCallState](arkts-telephony-call-getcallstate-f.md#getcallstate) | Obtains the call state.  If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}. |
+| [getCallState](arkts-telephony-call-getcallstate-f.md#getcallstate-1) | Obtains the call state.  If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}. |
+| [getCallStateSync](arkts-telephony-call-getcallstatesync-f.md#getcallstatesync) | Obtains the call state.  If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}. In other cases, the system returns {@code CallState#CALL_STATE_IDLE}. |
 | [getCallTransferInfo](arkts-telephony-call-getcalltransferinfo-f.md#getcalltransferinfo) | Obtains call transfer information with the phone number. |
 | [hangUpCall](arkts-telephony-call-hangupcall-f.md#hangupcall-2) | Hang up the foreground call without callId. |
 | [hasCall](arkts-telephony-call-hascall-f.md#hascall) | Checks whether a call is ongoing. |

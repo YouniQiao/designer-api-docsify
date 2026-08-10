@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## device
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly device: CameraDevice
 
 相机并发设备。
 
-**类型：** CameraDevice
+**类型：** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
 **起始版本：** 18
 
@@ -78,7 +84,7 @@ readonly type: CameraConcurrentType
 
 镜头并发类型。
 
-**类型：** CameraConcurrentType
+**类型：** [CameraConcurrentType](arkts-camera-camera-cameraconcurrenttype-e.md)
 
 **起始版本：** 18
 

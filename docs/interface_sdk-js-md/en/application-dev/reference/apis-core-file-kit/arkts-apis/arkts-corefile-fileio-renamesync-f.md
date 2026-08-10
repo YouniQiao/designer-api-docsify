@@ -6,7 +6,7 @@
 declare function renameSync(oldPath: string, newPath: string): void
 ```
 
-Renames a file. This API returns the result synchronously.
+以同步方法重命名文件。
 
 **Since:** 7
 
@@ -24,6 +24,6 @@ Renames a file. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldPath | string | Yes | Application sandbox path of the file to rename. |
-| newPath | string | Yes | Application sandbox path of the file renamed. |
+| oldPath | string | Yes | 目标文件的当前应用沙箱路径。 |
+| newPath | string | Yes | 目标文件的新应用沙箱路径。 |
 

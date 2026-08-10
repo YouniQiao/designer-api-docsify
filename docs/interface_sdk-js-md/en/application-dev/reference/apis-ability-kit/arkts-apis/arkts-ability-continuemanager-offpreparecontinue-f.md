@@ -1,5 +1,11 @@
 # offPrepareContinue
 
+## Modules to Import
+
+```TypeScript
+import { continueManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offPrepareContinue
 
 ```TypeScript
@@ -22,12 +28,12 @@ Unregister prepareContinue event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the ability context. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinueResultInfo&gt; | No | Used to handle ('prepareContinue') command. |
+| context | [Context](arkts-ability-context-c.md) | Yes | the ability context. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | No | Used to handle ('prepareContinue') command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
+| 16300501 | the system ability work abnormally. |
 

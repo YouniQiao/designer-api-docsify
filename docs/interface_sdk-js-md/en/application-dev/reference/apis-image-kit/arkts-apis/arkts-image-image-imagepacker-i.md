@@ -1,14 +1,14 @@
 # ImagePacker
 
-The **ImagePacker** class provides APIs to compress and encode images.
+ImagePacker类，用于图片压缩和编码。
 
-Before calling any API in ImagePacker, you must use  
-[image.createImagePacker]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create an ImagePacker instance.During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
+在调用ImagePacker的方法前，需要先通过[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createimagepacker)构建一个ImagePacker实例。
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call  
-[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+编码期间，请避免修改或释放作为输入的ImageSource/PixelMap/Picture对象，以免出现crash或其他未定义行为。
 
-Currently, the following formats are supported: jpeg, webp, png, heic\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_, and gif\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_18+\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](arkts-image-image-imagepacker-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+
+当前支持的格式有：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同，可通过ImagePacker的supportedFormats属性查看）。
 
 **Since:** 6
 
@@ -18,13 +18,19 @@ Currently, the following formats are supported: jpeg, webp, png, heic\_\_\_HTML\
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## packBinaryImageToTiffData
 
 ```TypeScript
 packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptionsForTiff): Promise<ArrayBuffer>
 ```
 
-Compresses or packs an image into a file and uses a promise to return the result.
+将二值图像数据编码为TIFF数据，以ArrayBuffer的形式返回。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -40,21 +46,21 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bufferInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | image buffer info. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for tiff image packing. |
+| bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | Yes | 图像缓冲区信息。 |
+| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | No | TIFF图像编码选项。 &lt;br&gt;未传入options时，默认的compression为4（CCITT G4）。 &lt;br&gt;未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | A Promise instance used to return the compressed or packed data. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回编码后的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| 7800301 | Encode failed. |
+| 7800202 | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packBinaryImageToTiffFile
 
@@ -68,7 +74,7 @@ ArkTS-Sta:
 packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>
 ```
 
-Compresses or packs an image into a file and uses a promise to return the result.
+将二值图像数据编码到入参fd对应的TIFF文件。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -84,22 +90,22 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bufferInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | image buffer info. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of a file descriptor \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value must be a positive integer. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for tiff image packing. |
+| bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | Yes | 图像缓冲区信息。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符ID。该值必须为正整数。 |
+| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | No | TIFF图像编码选项。 &lt;br&gt;未传入options时，默认的compression为4（CCITT G4）。 &lt;br&gt;未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| 7800301 | Encode failed. |
+| 7800202 | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packToData
 
@@ -107,7 +113,7 @@ Compresses or packs an image into a file and uses a promise to return the result
 packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
+图片压缩或重新编码。使用Promise异步回调。
 
 **Since:** 13
 
@@ -123,28 +129,28 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image source to compress or re-encode. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | 编码的ImageSource。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 401 | If the parameter is invalid. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980101 | The image data is abnormal. |
+| 62980119 | Failed to encode the image. |
+| 62980120 | Add pixelmap out of range. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980172 | Failed to encode icc. |
+| 62980252 | Failed to create surface. |
 
 ## packToData
 
@@ -152,12 +158,11 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is  
-    released in advance. You need to check the code and ensure that the PixelMap object is released after this API  
-    is called.
+图片压缩或重新编码。使用Promise异步回调。
+
+> **注意：**
+> 
+> 接口如果返回401错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **Since:** 13
 
@@ -173,28 +178,28 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | PixelMap to compress or re-encode. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | 编码的PixelMap源。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 401 | If the parameter is invalid. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980101 | The image data is abnormal. |
+| 62980119 | Failed to encode the image. |
+| 62980120 | Add pixelmap out of range. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980172 | Failed to encode icc. |
+| 62980252 | Failed to create surface. |
 
 ## packToDataFromPixelmapSequence
 
@@ -202,7 +207,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>
 ```
 
-Encodes multiple PixelMap objects into GIF data. This API uses a promise to return the result.
+将多个PixelMap编码成GIF数据。使用Promise异步回调。
 
 **Since:** 18
 
@@ -216,21 +221,21 @@ Encodes multiple PixelMap objects into GIF data. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmapSequence | Array&lt;PixelMap&gt; | Yes | PixelMaps to encode. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for encoding animated images. |
+| pixelmapSequence | Array&lt;PixelMap&gt; | Yes | 待编码的PixelMap序列。 |
+| options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | Yes | 动图编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the encoded data. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回编码后的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 7800301 | Failed to encode image. |
 
 ## packToFile
 
@@ -244,7 +249,7 @@ ArkTS-Sta:
 packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-Encodes the image source into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
+指定编码参数，将ImageSource直接编码进文件。使用callback异步回调。
 
 **Since:** 11
 
@@ -258,24 +263,24 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image source to encode. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File descriptor. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | 编码的ImageSource。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符。取值范围为[0，65535]。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当编码进文件成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980115 | Invalid input parameter. |
+| 62980101 | The image data is abnormal. |
+| 62980119 | Failed to encode the image. |
+| 62980120 | Add pixelmap out of range. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980172 | Failed to encode icc. |
+| 62980252 | Failed to create surface. |
 
 ## packToFile
 
@@ -289,7 +294,7 @@ ArkTS-Sta:
 packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 ```
 
-Encodes the image source into a file based on the specified encoding parameters. This API uses a promise to return the result.
+指定编码参数，将ImageSource直接编码进文件。使用Promise异步回调。
 
 **Since:** 11
 
@@ -303,29 +308,29 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image source to encode. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File descriptor. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | 编码的ImageSource。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符。取值范围为[0，65535]。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980115 | Invalid input parameter. |
+| 62980101 | The image data is abnormal. |
+| 62980119 | Failed to encode the image. |
+| 62980120 | Add pixelmap out of range. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980172 | Failed to encode icc. |
+| 62980252 | Failed to create surface. |
 
 ## packToFile
 
@@ -339,12 +344,11 @@ ArkTS-Sta:
 packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap  
-    object is released in advance. You need to check the code and ensure that the PixelMap object is released after  
-    this API is called.
+指定编码参数，将PixelMap直接编码进文件。使用callback异步回调。
+
+> **注意：**
+> 
+> 接口如果返回62980115错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **Since:** 11
 
@@ -358,24 +362,24 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | PixelMap to encode. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File descriptor. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | 编码的PixelMap资源。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符。取值范围为[0，65535]。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当编码图片进文件成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980115 | Invalid input parameter. |
+| 62980101 | The image data is abnormal. |
+| 62980119 | Failed to encode the image. |
+| 62980120 | Add pixelmap out of range. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980172 | Failed to encode icc. |
+| 62980252 | Failed to create surface. |
 
 ## packToFile
 
@@ -389,12 +393,11 @@ ArkTS-Sta:
 packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap  
-    object is released in advance. You need to check the code and ensure that the PixelMap object is released after  
-    this API is called.
+指定编码参数，将PixelMap直接编码进文件。使用Promise异步回调。
+
+> **注意：**
+> 
+> 接口如果返回62980115错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **Since:** 11
 
@@ -408,29 +411,29 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | PixelMap to encode. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File descriptor. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | 编码的PixelMap资源。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符。取值范围为[0，65535]。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980115 | Invalid input parameter. |
+| 62980101 | The image data is abnormal. |
+| 62980119 | Failed to encode the image. |
+| 62980120 | Add pixelmap out of range. |
+| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| 62980172 | Failed to encode icc. |
+| 62980252 | Failed to create surface. |
 
 ## packToFile
 
@@ -444,7 +447,7 @@ ArkTS-Sta:
 packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>
 ```
 
-Encodes the Picture into a file based on the specified encoding parameters. This API uses a promise to return the result.
+指定编码参数，将Picture直接编码进文件。使用Promise异步回调。
 
 **Since:** 13
 
@@ -458,22 +461,22 @@ Encodes the Picture into a file based on the specified encoding parameters. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| picture | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Picture to encode. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File descriptor. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
+| picture | [Picture](arkts-image-image-picture-i.md) | Yes | 编码的Picture资源。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符。取值范围为[0，65535]。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 7800301 | Encode failed. |
 
 ## packToFileFromPixelmapSequence
 
@@ -487,7 +490,7 @@ ArkTS-Sta:
 packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>
 ```
 
-Encodes multiple PixelMaps into a GIF file. This API uses a promise to return the result.
+指定编码参数，将多个PixelMap编码成GIF文件。使用Promise异步回调。
 
 **Since:** 18
 
@@ -501,22 +504,22 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmapSequence | Array&lt;PixelMap&gt; | Yes | PixelMaps to encode. |
-| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File descriptor. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for encoding animated images. |
+| pixelmapSequence | Array&lt;PixelMap&gt; | Yes | 待编码的PixelMap序列。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符。取值范围为[0，65535]。 |
+| options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | Yes | 动图编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
+| 7800301 | Failed to encode image. |
 
 ## packing
 
@@ -524,7 +527,11 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-Compresses or re-encodes an image. This API uses an asynchronous callback to return the result.
+图片压缩或重新编码。使用callback异步回调。
+
+> **说明：**
+> 
+> [packToData](arkts-image-image-imagepacker-i.md#packtodata)代替。
 
 **Since:** 6
 
@@ -544,9 +551,9 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image source to compress or re-encode. |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | 编码的ImageSource。 |
+| option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
 ## packing
 
@@ -554,7 +561,11 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
+图片压缩或重新编码。使用Promise异步回调。
+
+> **说明：**
+> 
+> [packToData](arkts-image-image-imagepacker-i.md#packtodata)代替。
 
 **Since:** 6
 
@@ -574,14 +585,14 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image source to compress or re-encode. |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | 编码的ImageSource。 |
+| option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 ## packing
 
@@ -589,12 +600,14 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-Compresses or re-encodes an image. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the  
-    PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is  
-    released after this API is called.
+图片压缩或重新编码。使用callback异步回调。
+
+> **说明：**
+> 
+> [packToData](arkts-image-image-imagepacker-i.md#packtodata)代替。
+> > **注意：**
+> 
+> 接口如果返回"PixelMap mismatch"，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **Since:** 8
 
@@ -614,9 +627,9 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | PixelMap to compress or re-encode. |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | 编码的PixelMap资源。 |
+| option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
 ## packing
 
@@ -624,12 +637,14 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the  
-    PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is  
-    released after this API is called.
+图片压缩或重新编码。使用Promise异步回调。
+
+> **说明：**
+> 
+> [packToData](arkts-image-image-imagepacker-i.md#packtodata)代替。
+> > **注意：**
+> 
+> 接口如果返回"PixelMap mismatch"，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **Since:** 8
 
@@ -649,14 +664,14 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | PixelMap to compress or re-encode. |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | 编码的PixelMap源。 |
+| option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 ## packing
 
@@ -664,7 +679,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
+将图像压缩或重新编码。使用Promise异步回调。
 
 **Since:** 13
 
@@ -678,21 +693,21 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| picture | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Picture to compress or re-encode. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Encoding parameters. |
+| picture | [Picture](arkts-image-image-picture-i.md) | Yes | 编码的Picture对象。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | 设置编码参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 7800301 | Encode failed. |
 
 ## release
 
@@ -700,11 +715,11 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImagePacker instance. This API uses an asynchronous callback to return the result.
+释放图片编码实例。使用callback异步回调。
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内存。
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 6
 
@@ -718,7 +733,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当释放图片编码实例成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -726,11 +741,11 @@ Before releasing the instance, ensure that all asynchronous operations associate
 release(): Promise<void>
 ```
 
-Releases this ImagePacker instance. This API uses a promise to return the result.
+释放图片编码实例。使用Promise异步回调。
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内存。
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **Since:** 6
 
@@ -744,7 +759,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## supportedFormats
 
@@ -752,7 +767,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 readonly supportedFormats: Array<string>
 ```
 
-Supported formats for image encoding, including jpeg, webp, png, heic\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, and gif\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_18+\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_. (The supported formats may vary depending on the hardware.)
+图片编码支持的格式，包括：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同）。
 
 **Type:** Array&lt;string&gt;
 

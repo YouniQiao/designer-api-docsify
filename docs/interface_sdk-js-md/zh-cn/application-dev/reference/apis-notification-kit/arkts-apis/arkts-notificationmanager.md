@@ -26,6 +26,12 @@
 
 **系统能力：** SystemCapability.Notification.Notification
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -46,9 +52,9 @@
 | [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md#getactivenotifications) | 获取当前应用未删除的通知列表。使用callback异步回调。  用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。 |
 | [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md#getactivenotifications-1) | 获取当前应用未删除的通知列表。使用Promise异步回调。  用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。 |
 | [getBadgeNumber](arkts-notification-notificationmanager-getbadgenumber-f.md#getbadgenumber) | 获取当前应用角标数量。使用Promise异步回调。  用于查询当前应用桌面图标上显示的角标数字。 |
-| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md#getnotificationparameters) | 获取通知[NotificationRequest]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中wantAgent字段的部分信息。使用Promise异步回调。 |
-| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md#getnotificationparameters-1) | 获取通知[NotificationRequest]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中wantAgent字段的部分信息。使用Promise异步回调。 |
-| [getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md#getnotificationsetting) | 获取应用的通知设置，包括锁屏通知、横幅通知、桌面角标、振动、铃声等开关状态。使用Promise异步回调。 |
+| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md#getnotificationparameters) | 获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异步回调。 |
+| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md#getnotificationparameters-1) | 获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异步回调。 |
+| [getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md#getnotificationsetting) | 获取应用的通知设置，包括锁屏通知、横幅通知、桌面角标、振动、铃声等 开关状态。使用Promise异步回调。 |
 | [getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot) | 获取指定类型的通知渠道。使用callback异步回调。  用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。 |
 | [getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot-1) | 获取指定类型的通知渠道。使用callback异步回调。  用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。 |
 | [getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot-2) | 获取指定类型的通知渠道。使用Promise异步回调。  用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。 |
@@ -61,10 +67,10 @@
 | [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled-2) | 查询当前应用通知授权状态。使用callback异步回调。  用于在发布通知前检查当前应用是否被允许发送通知，避免在通知授权关闭时发布导致失败。 |
 | [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled-3) | 查询当前应用通知授权状态。使用Promise异步回调。  用于在发布通知前检查当前应用是否被允许发送通知，避免在通知使能关闭时发布导致失败。 |
 | [isNotificationEnabledSync](arkts-notification-notificationmanager-isnotificationenabledsync-f.md#isnotificationenabledsync) | 同步查询当前应用通知授权状态。  用于在发布通知前快速检查当前应用是否被允许发送通知。此接口为同步接口，调用后立即返回结果，适用于需要在同步代码流程中获取使能状态的场景。 |
-| [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#issupporttemplate) | 在使用[通知模板]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。 |
-| [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#issupporttemplate-1) | 在使用[通知模板]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。 |
-| [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md#opennotificationsettings) | 拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、通知提醒方式等。使用Promise异步回调。  适用于用户需要手动修改通知设置的场景，如用户拒绝授权后二次申请，或需要修改通知提醒方式（振动、响铃等）。当requestEnableNotification弹窗被用户拒绝后，开发者可调用此接口引导用户前往通知设置页面手动开启。 |
-| [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#opennotificationsettingswithresult) | 拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、通知提醒方式等。使用Promise异步回调，当半模态窗口关闭时返回用户设置的状态。  与openNotificationSettings相比，此接口在半模态窗口关闭时返回NotificationSetting对象，开发者可根据返回结果判断用户是否开启了通知权限，从而决定后续逻辑。 |
+| [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#issupporttemplate) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。 |
+| [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#issupporttemplate-1) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。 |
+| [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md#opennotificationsettings) | 拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、 通知提醒方式等。使用Promise异步回调。  适用于用户需要手动修改通知设置的场景，如用户拒绝授权后二次申请，或需要 修改通知提醒方式（振动、响铃等）。当requestEnableNotification弹窗被 用户拒绝后，开发者可调用此接口引导用户前往通知设置页面手动开启。 |
+| [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#opennotificationsettingswithresult) | 拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、 通知提醒方式等。使用Promise异步回调，当半模态窗口关闭时返回用户设置的状态。  与openNotificationSettings相比，此接口在半模态窗口关闭时返回 NotificationSetting对象，开发者可根据返回结果判断用户是否开启了通知 权限，从而决定后续逻辑。 |
 | [publish](arkts-notification-notificationmanager-publish-f.md#publish) | 发布通知。使用callback异步回调。  发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。 |
 | [publish](arkts-notification-notificationmanager-publish-f.md#publish-1) | 发布通知。使用Promise异步回调。  发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。 |
 | [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md#removeallslots) | 删除当前应用所有通知渠道。使用callback异步回调。  删除后，当前应用的所有通知渠道及其配置将被永久移除，后续发布通知时系统将自动创建对应类型的渠道。已通过这些渠道发布的通知不受影响，仍可在通知中心查看。适用于需要一次性清除所有渠道配置的场景。 |
@@ -75,8 +81,8 @@
 | [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification-1) | 应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用callback异步回调。 |
 | [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification-2) | 当前应用请求通知使能。使用Promise异步回调。 |
 | [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification-3) | 应用需要获取用户授权才能发送通知。在通知发布前调用该接口，可以拉起通知授权弹窗，让用户选择是否允许发送通知。使用Promise异步回调。 |
-| [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber) | 设定角标个数，在应用的桌面图标上呈现。使用callback异步回调。  角标是应用桌面图标右上角显示的数字标识，用于提示用户有未处理的通知数量。设定后，桌面图标将显示对应角标数字。适用于需要在桌面图标上提示用户待处理消息数量的场景，如未读消息数、待办事项数等。 |
-| [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber-1) | 设定角标个数，在应用的桌面图标上呈现。使用Promise异步回调。  角标是应用桌面图标右上角显示的数字标识，用于提示用户有未处理的通知数量。设定后，桌面图标将显示对应角标数字。适用于需要在桌面图标上提示用户待处理消息数量的场景，如未读消息数、待办事项数等。 |
+| [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber) | 设定角标个数，在应用的桌面图标上呈现。使用callback异步回调。  角标是应用桌面图标右上角显示的数字标识，用于提示用户有未处理的通知数量。 设定后，桌面图标将显示对应角标数字。适用于需要在桌面图标上提示用户 待处理消息数量的场景，如未读消息数、待办事项数等。 |
+| [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber-1) | 设定角标个数，在应用的桌面图标上呈现。使用Promise异步回调。  角标是应用桌面图标右上角显示的数字标识，用于提示用户有未处理的通知数量。 设定后，桌面图标将显示对应角标数字。适用于需要在桌面图标上提示用户 待处理消息数量的场景，如未读消息数、待办事项数等。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -89,7 +95,7 @@
 | [addSlot](arkts-notification-notificationmanager-addslot-f-sys.md#addslot-1) | 创建通知渠道。使用Promise异步回调。 |
 | [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md#addslots) | 创建多个通知渠道。使用callback异步回调。 |
 | [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md#addslots-1) | 创建多个通知渠道。使用Promise异步回调。 |
-| [cancel](arkts-notification-notificationmanager-cancel-f-sys.md#cancel-3) | 代理取消当前用户其他应用的通知。使用Promise异步回调。  需要当前应用与其他应用存在代理关系，或者当前应用有ohos.permission.NOTIFICATION\_\_\_ESCAPED\_UNDERSCORE\_\_\_AGENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONTROLLER权限。 |
+| [cancel](arkts-notification-notificationmanager-cancel-f-sys.md#cancel-3) | 代理取消当前用户其他应用的通知。使用Promise异步回调。  需要当前应用与其他应用存在代理关系，或者当前应用有ohos.permission.NOTIFICATION_AGENT_CONTROLLER权限。 |
 | [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md#cancelasbundle) | 取消代理通知。使用callback异步回调。 |
 | [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md#cancelasbundle-1) | 取消代理通知。使用Promise异步回调。 |
 | [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md#cancelasbundle-2) | 取消代理通知。使用Promise异步回调。 |
@@ -122,8 +128,8 @@
 | [getPriorityStrategyByBundles](arkts-notification-notificationmanager-getprioritystrategybybundles-f-sys.md#getprioritystrategybybundles) | 批量获取应用通知优先策略。使用Promise异步回调。 |
 | [getReminderInfoByBundles](arkts-notification-notificationmanager-getreminderinfobybundles-f-sys.md#getreminderinfobybundles) | 批量获取指定应用提醒信息。使用Promise异步回调。 |
 | [getRingtoneInfoByBundle](arkts-notification-notificationmanager-getringtoneinfobybundle-f-sys.md#getringtoneinfobybundle) | 获取应用自定义铃声信息。使用Promise异步回调。 |
-| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md#getslotbybundle) | 获取指定应用指定类型的通知渠道。使用Promise异步回调。  获取前需要先通过[addSlot]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_创建通知渠道。 |
-| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md#getslotbybundle-1) | 获取指定应用指定类型的通知渠道。使用Promise异步回调。  获取前需要先通过[addSlot]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_创建通知渠道。 |
+| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md#getslotbybundle) | 获取指定应用指定类型的通知渠道。使用Promise异步回调。  获取前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md#addslot)创建通知渠道。 |
+| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md#getslotbybundle-1) | 获取指定应用指定类型的通知渠道。使用Promise异步回调。  获取前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md#addslot)创建通知渠道。 |
 | [getSlotFlagsByBundle](arkts-notification-notificationmanager-getslotflagsbybundle-f-sys.md#getslotflagsbybundle) | 获取指定应用的通知渠道标识位。使用Promise异步回调。 |
 | [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getslotnumbybundle) | 获取指定应用的通知渠道数量。使用callback异步回调。 |
 | [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getslotnumbybundle-1) | 获取指定应用的通知渠道数量。使用Promise异步回调。 |
@@ -200,8 +206,8 @@
 | [setReminderInfoByBundles](arkts-notification-notificationmanager-setreminderinfobybundles-f-sys.md#setreminderinfobybundles) | 批量设置指定应用提醒信息。使用Promise异步回调。 |
 | [setRingtoneInfoByBundle](arkts-notification-notificationmanager-setringtoneinfobybundle-f-sys.md#setringtoneinfobybundle) | 设置应用自定义铃声信息。使用Promise异步回调。 |
 | [setSilentReminderEnabled](arkts-notification-notificationmanager-setsilentreminderenabled-f-sys.md#setsilentreminderenabled) | 设置静默提醒的开关状态。使用Promise进行异步回调。 |
-| [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md#setslotbybundle) | 设置指定应用的通知渠道。使用callback异步回调。  设置前需要先通过[addSlot]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_创建通知渠道。 |
-| [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md#setslotbybundle-1) | 设置指定应用的通知渠道。使用Promise异步回调。  设置前需要先通过[addSlot]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_创建通知渠道。 |
+| [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md#setslotbybundle) | 设置指定应用的通知渠道。使用callback异步回调。  设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md#addslot)创建通知渠道。 |
+| [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md#setslotbybundle-1) | 设置指定应用的通知渠道。使用Promise异步回调。  设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md#addslot)创建通知渠道。 |
 | [setSlotFlagsByBundle](arkts-notification-notificationmanager-setslotflagsbybundle-f-sys.md#setslotflagsbybundle) | 设定指定应用的通知提醒方式开关。使用Promise异步回调。 |
 | [setSmartReminderEnabled](arkts-notification-notificationmanager-setsmartreminderenabled-f-sys.md#setsmartreminderenabled) | 设置设备是否与其他设备协同智能提醒。使用Promise异步回调。 |
 | [setSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md#setsyncnotificationenabledwithoutapp) | 设置是否将通知同步到未安装应用的设备(callback形式)。 |

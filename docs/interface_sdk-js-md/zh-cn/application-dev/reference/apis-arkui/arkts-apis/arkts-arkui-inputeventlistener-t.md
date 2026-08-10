@@ -30,11 +30,11 @@ The listener executes synchronously in the UI thread and will directly block the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Input event wrapper  |
+| event | [RawInputEventWrapper](../arkts-components/arkts-arkui-rawinputeventwrapper-c.md) | 是 | Input event wrapper |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | - Event intercept result  |
+| [InputEventInterceptResult](../arkts-components/arkts-arkui-inputeventinterceptresult-i.md) | Event intercept result |
 

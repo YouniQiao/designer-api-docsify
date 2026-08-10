@@ -1,6 +1,6 @@
 # BundleStats
 
-Get the bundle statistics.
+获取捆绑包统计信息。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Get the bundle statistics.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
+## Modules to Import
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## appSize
 
 ```TypeScript
 appSize: long
 ```
 
-The size of application installation data.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+应用安装文件大小（单位为Byte）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ The size of application installation data.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Uni
 cacheSize: long
 ```
 
-The size of application cache data.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+应用缓存文件大小（单位为Byte）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -52,9 +58,9 @@ The size of application cache data.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte
 dataSize: long
 ```
 
-The size of application local data, distributed data and database data.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+应用文件存储大小（除应用安装文件）（单位为Byte）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

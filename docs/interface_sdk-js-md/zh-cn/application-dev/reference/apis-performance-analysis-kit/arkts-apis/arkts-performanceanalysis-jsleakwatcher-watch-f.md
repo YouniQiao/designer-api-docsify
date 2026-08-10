@@ -1,5 +1,11 @@
 # watch
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## watch
 
 ```TypeScript
@@ -20,10 +26,10 @@ function watch(obj: object, msg: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| obj | object | 是 | ��Ҫ���Ķ���\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**˵��**���ɴ����κη�null��ArkTS���󣬲�֧��undefined�ͻ������͡� |
+| obj | object | 是 | ��Ҫ���Ķ���&lt;br&gt;**˵��**���ɴ����κη�null��ArkTS���󣬲�֧��undefined�ͻ������͡� |
 | msg | string | 是 | �Զ��������Ϣ�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let obj:Object = new Object();

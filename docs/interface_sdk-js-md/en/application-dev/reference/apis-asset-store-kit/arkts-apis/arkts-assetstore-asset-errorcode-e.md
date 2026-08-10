@@ -1,6 +1,6 @@
 # ErrorCode
 
-Enumerates the error codes.
+表示错误码的枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the error codes.
 PERMISSION_DENIED = 201
 ```
 
-The caller does not have the permission.
+调用方无权限。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ The caller does not have the permission.
 NOT_SYSTEM_APPLICATION = 202
 ```
 
-The caller is not a system application.
+调用方不是一个系统应用。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ The caller is not a system application.
 INVALID_ARGUMENT = 401
 ```
 
-The argument is invalid.
+参数错误。
 
 **Since:** 11
 
@@ -66,7 +66,7 @@ The argument is invalid.
 SERVICE_UNAVAILABLE = 24000001
 ```
 
-The ASSET service is unavailable.
+关键资产服务不可用。
 
 **Since:** 11
 
@@ -84,7 +84,7 @@ The ASSET service is unavailable.
 NOT_FOUND = 24000002
 ```
 
-Failed to find the asset.
+未找到关键资产。
 
 **Since:** 11
 
@@ -102,7 +102,7 @@ Failed to find the asset.
 DUPLICATED = 24000003
 ```
 
-The specified asset already exists.
+关键资产已存在。
 
 **Since:** 11
 
@@ -120,7 +120,7 @@ The specified asset already exists.
 ACCESS_DENIED = 24000004
 ```
 
-The access to the asset is denied.
+访问被拒绝。
 
 **Since:** 11
 
@@ -138,7 +138,7 @@ The access to the asset is denied.
 STATUS_MISMATCH = 24000005
 ```
 
-The screen lock status does not match.
+锁屏状态不匹配。
 
 **Since:** 11
 
@@ -156,7 +156,7 @@ The screen lock status does not match.
 OUT_OF_MEMORY = 24000006
 ```
 
-The system memory is insufficient.
+系统内存不足。
 
 **Since:** 11
 
@@ -174,7 +174,7 @@ The system memory is insufficient.
 DATA_CORRUPTED = 24000007
 ```
 
-The asset is corrupted.
+关键资产损坏。
 
 **Since:** 11
 
@@ -192,7 +192,7 @@ The asset is corrupted.
 DATABASE_ERROR = 24000008
 ```
 
-The database operation failed.
+数据库操作失败。
 
 **Since:** 11
 
@@ -210,7 +210,7 @@ The database operation failed.
 CRYPTO_ERROR = 24000009
 ```
 
-The crypto operation failed.
+算法库操作失败。
 
 **Since:** 11
 
@@ -228,7 +228,7 @@ The crypto operation failed.
 IPC_ERROR = 24000010
 ```
 
-IPC failed.
+进程通信错误。
 
 **Since:** 11
 
@@ -246,7 +246,7 @@ IPC failed.
 BMS_ERROR = 24000011
 ```
 
-The Bundle Manager service is abnormal.
+包管理服务异常。
 
 **Since:** 11
 
@@ -264,7 +264,7 @@ The Bundle Manager service is abnormal.
 ACCOUNT_ERROR = 24000012
 ```
 
-The account service is abnormal.
+账号系统服务异常。
 
 **Since:** 11
 
@@ -282,7 +282,7 @@ The account service is abnormal.
 ACCESS_TOKEN_ERROR = 24000013
 ```
 
-The Access Token service is abnormal.
+访问控制服务异常。
 
 **Since:** 11
 
@@ -300,7 +300,7 @@ The Access Token service is abnormal.
 FILE_OPERATION_ERROR = 24000014
 ```
 
-The file operation failed.
+文件操作失败。
 
 **Since:** 11
 
@@ -318,7 +318,7 @@ The file operation failed.
 GET_SYSTEM_TIME_ERROR = 24000015
 ```
 
-Failed to obtain the system time.
+获取系统时间失败。
 
 **Since:** 11
 
@@ -336,7 +336,7 @@ Failed to obtain the system time.
 LIMIT_EXCEEDED = 24000016
 ```
 
-The number of cached records exceeds the upper limit.
+缓存数量超限。
 
 **Since:** 11
 
@@ -354,7 +354,7 @@ The number of cached records exceeds the upper limit.
 UNSUPPORTED = 24000017
 ```
 
-The feature is not supported.
+该子功能不支持。
 
 **Since:** 11
 
@@ -372,7 +372,7 @@ The feature is not supported.
 PARAM_VERIFICATION_FAILED = 24000018
 ```
 
-Parameter verification failed.
+参数校验失败。
 
 **Since:** 20
 
@@ -390,7 +390,9 @@ Parameter verification failed.
 INCONSISTENT_ATTRIBUTE = 24000019
 ```
 
-The error code indicates that the attributes required to be consistent are inconsistent.
+属性值不一致。
+
+26.0.0
 
 **Since:** 26.0.0
 

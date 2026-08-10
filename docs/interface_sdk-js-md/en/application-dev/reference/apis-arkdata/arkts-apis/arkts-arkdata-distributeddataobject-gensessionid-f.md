@@ -1,12 +1,18 @@
 # genSessionId
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
+
 ## genSessionId
 
 ```TypeScript
 function genSessionId(): string
 ```
 
-Creates a random session ID.
+随机创建一个sessionId。
 
 **Since:** 8
 
@@ -20,9 +26,9 @@ Creates a random session ID.
 
 | Type | Description |
 | --- | --- |
-| string | Session ID created. |
+| string | 随机创建的sessionId。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let sessionId: string = distributedDataObject.genSessionId();

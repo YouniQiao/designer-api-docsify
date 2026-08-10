@@ -1,12 +1,18 @@
 # isFlashReminderEnabledSync
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isFlashReminderEnabledSync
 
 ```TypeScript
 function isFlashReminderEnabledSync(): boolean
 ```
 
-Checks whether flash alerts mode is enabled with a synchronous method.
+使用同步方法判断闪烁提醒模式是否开启。
 
 **Since:** 23
 
@@ -22,9 +28,9 @@ Checks whether flash alerts mode is enabled with a synchronous method.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether flash alerts mode is enabled. Returns **true** if flash alerts mode is enabled; returns **false** otherwise. |
+| boolean | 表示是否开启闪烁提醒模式。true表示开启闪烁提醒模式，false表示未开启闪烁提醒模式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

@@ -1,19 +1,19 @@
 # Portrait
 
-Defines a contact's portrait.
-    **NOTE**  
-    
-    Since API version 22, contact portraits can be set in URI or [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    format. (Currently, contact avatars cannot be set through the [addContactViaUI]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or  
-    [saveToExistingContactViaUI]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API.)  
-    
-    URI indicates the address of the contact portrait file that can be accessed, and  
-    [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ indicates the [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_  
-    object generated based on the contact portrait resource.  
-    
-    Since API version 22, the profile picture resource can be read through URI. The resource can be opened only in  
-    [fs.open]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ mode and cannot be directly displayed in the **Image** component using a URI. You need to read  
-    the resource and display it in [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ format.
+联系人的头像类。
+
+> **说明：**
+> 
+> 从API version 22开始，支持通过uri和[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)格式设置联系人头像资源(暂不支持通过
+> [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md#addcontactviaui)、
+> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui)接口设置)。
+> 
+> uri为可访问的联系人头像文件地址，[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)为通过联系人头像资源生成的
+> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)对象。
+> 
+> 从API version 22开始，支持通过uri格式读取联系人头像资源，该格式仅支持以
+> [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md/arkts-corefile-file-fs-open-f.md#open)方式打开，无法直接在Image组件内显示，需读取后转换为
+> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)格式显示。
 
 **Since:** 7
 
@@ -23,13 +23,19 @@ Defines a contact's portrait.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## photo
 
 ```TypeScript
 photo?: image.PixelMap
 ```
 
-Contact portrait in PixelMap format.
+PixelMap格式的联系人头像。
 
 **Type:** image.PixelMap
 
@@ -49,7 +55,7 @@ Contact portrait in PixelMap format.
 uri: string
 ```
 
-Contact portrait in URI format.
+uri格式联系人头像。
 
 **Type:** string
 

@@ -1,5 +1,11 @@
 # isPoiServiceSupported
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## isPoiServiceSupported
 
 ```TypeScript
@@ -24,7 +30,7 @@ Check whether the POI service is supported.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

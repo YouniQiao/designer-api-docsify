@@ -10,6 +10,12 @@ Defines the optional parameters carried in the request for establishing a WebSoc
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## caPath
 
 ```TypeScript
@@ -36,7 +42,7 @@ clientCert?: ClientCert
 
 Client cert.
 
-**Type:** ClientCert
+**Type:** [ClientCert](arkts-network-websocket-clientcert-i.md)
 
 **Since:** 12
 
@@ -74,7 +80,7 @@ minSupportTlsProtocol?: TlsProtocol
 
 The minimum support version of TLS protocol.
 
-**Type:** TlsProtocol
+**Type:** [TlsProtocol](arkts-network-websocket-tlsprotocol-e.md)
 
 **Since:** 26.0.0
 
@@ -94,7 +100,7 @@ pingInterval?: int
 
 Self defined interval of ping frame.default: 30. disable: 0. max: 30000. unit:second.Ping is performed at every pingInterval.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -112,7 +118,7 @@ pongTimeout?: int
 
 Self defined timeout of pong frame.default: 30. max: 30000. unit:second. The value must be less than or equal to pingInterval.If no pong is received within the pongTimeout period, the websocket connection will be disconnected.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -148,7 +154,7 @@ proxy?: ProxyConfiguration
 
 HTTP proxy configuration. Use 'system' if this field is not set.
 
-**Type:** ProxyConfiguration
+**Type:** [ProxyConfiguration](arkts-network-websocket-proxyconfiguration-t.md)
 
 **Since:** 24
 

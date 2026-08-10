@@ -1,6 +1,6 @@
 # CloudDB (System API)
 
-Provides APIs for performing cloud database operations.
+提供云数据库操作接口的类。
 
 **Since:** 11
 
@@ -12,6 +12,12 @@ Provides APIs for performing cloud database operations.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## delete
 
 ```TypeScript
@@ -21,7 +27,7 @@ delete(
     ): Promise<Array<Result<Record<string, CloudType>>>>
 ```
 
-Deletes data from a cloud database table. This API uses a promise to return the result.
+删除云数据库表中的指定数据。使用Promise异步回调。
 
 **Since:** 11
 
@@ -37,16 +43,16 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Table name. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| table | string | Yes | 表名。 |
+| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | 表示当前数据的扩展信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the deleted data and operation result. |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise对象，返回被删除的数据和删除结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -74,7 +80,7 @@ ArkTS-Sta:
 generateId(count: int): Promise<Result<Array<string>>>
 ```
 
-Generates IDs for the data records inserted to the cloud database.The IDs are unique. This API uses a promise to return the result.
+为插入的云数据生成具有唯一性的ID。使用Promise异步回调。
 
 **Since:** 11
 
@@ -90,15 +96,15 @@ Generates IDs for the data records inserted to the cloud database.The IDs are un
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of IDs to generate. |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示要生成ID的数量。取值范围大于等于1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise used to return the generated IDs in Result. |
+| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise对象，以Result结构将生成的ID以数组形式返回。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -128,7 +134,7 @@ ArkTS-Sta:
 heartbeat(lockId: int): Promise<Result<LockInfo>>
 ```
 
-Extends the lock period of the database. This API uses a promise to return the result.
+延长数据库的加锁时效。使用Promise异步回调。
 
 **Since:** 11
 
@@ -144,19 +150,19 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lockId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Lock ID. |
+| lockId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示需要延时的锁ID，取值为lock方法返回的LockInfo中的lockId。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
+| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise对象，返回锁的信息，包含加锁时长和锁的ID。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-let test_lockId: number = 1;
-let test_time: number = 10;
+let testLockId: number = 1;
+let testTime: number = 10;
 class MyCloudDB implements cloudExtension.CloudDB {
   // ...
   async heartbeat(lockId: number): Promise<cloudExtension.Result<cloudExtension.LockInfo>> {
@@ -167,8 +173,8 @@ class MyCloudDB implements cloudExtension.CloudDB {
       code: cloudExtension.ErrorCode.SUCCESS,
       description: 'heartbeat succeeded',
       value: {
-        interval: test_time,
-        lockId: test_lockId
+        interval: testTime,
+        lockId: testLockId
       }
     };
   }
@@ -186,7 +192,7 @@ insert(
     ): Promise<Array<Result<Record<string, CloudType>>>>
 ```
 
-Inserts data to a cloud database table. This API uses a promise to return the result.
+将数据插入云数据库表中。使用Promise异步回调。
 
 **Since:** 11
 
@@ -202,17 +208,17 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Table name. |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Data to insert. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| table | string | Yes | 表名。 |
+| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | 表示要插入的数据。 |
+| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | 表示当前数据的扩展信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the inserted data and operation result. |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise对象，返回插入的数据和插入结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -234,7 +240,7 @@ class MyCloudDB implements cloudExtension.CloudDB {
 lock(): Promise<Result<LockInfo>>
 ```
 
-Locks this cloud database. This API uses a promise to return the result.
+为云数据库加锁。使用Promise异步回调。
 
 **Since:** 11
 
@@ -250,13 +256,13 @@ Locks this cloud database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
+| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise对象，返回加锁的信息，包含加锁时长和锁的ID。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-let test_time: number = 10;
-let test_lockId: number = 1;
+let testTime: number = 10;
+let testLockId: number = 1;
 class MyCloudDB implements cloudExtension.CloudDB {
   // ...
   async lock(): Promise<cloudExtension.Result<cloudExtension.LockInfo>> {
@@ -267,8 +273,8 @@ class MyCloudDB implements cloudExtension.CloudDB {
       code: cloudExtension.ErrorCode.SUCCESS,
       description: 'lock succeeded',
       value: {
-        interval: test_time,
-        lockId: test_lockId
+        interval: testTime,
+        lockId: testLockId
       }
     };
   }
@@ -288,7 +294,7 @@ ArkTS-Sta:
 query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>
 ```
 
-Queries data in a cloud database table. This API uses a promise to return the result.
+在云数据库表中查询数据。使用Promise异步回调。
 
 **Since:** 11
 
@@ -304,18 +310,18 @@ Queries data in a cloud database table. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Table name. |
-| fields | Array&lt;string&gt; | Yes | Name of the fields to query. |
-| queryCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of data records to query. |
-| queryCursor | string | Yes | Cursor for the query. |
+| table | string | Yes | 表名。 |
+| fields | Array&lt;string&gt; | Yes | 表示要查询的字段名数组。 |
+| queryCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示要查询的数据记录条数。取值范围大于等于1。 |
+| queryCursor | string | Yes | 表示要查询的游标。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;CloudData&gt;&gt; | Promise used to return the data and operation result. |
+| Promise&lt;Result&lt;CloudData&gt;&gt; | Promise对象，返回被查询的数据和查询结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -350,7 +356,7 @@ ArkTS-Sta:
 unlock(lockId: int): Promise<Result<boolean>>
 ```
 
-Unlocks a cloud database. This API uses a promise to return the result.
+为云数据库解锁。使用Promise异步回调。
 
 **Since:** 11
 
@@ -366,15 +372,15 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lockId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Lock ID to release. |
+| lockId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示锁的ID，取值为lock方法返回的LockInfo中的lockId。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;boolean&gt;&gt; | Promise used to return the result. The value true means the operation is successful; the value false means the opposite. |
+| Promise&lt;Result&lt;boolean&gt;&gt; | Promise对象，返回解锁结果，true表示解锁成功，false表示解锁失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -403,7 +409,7 @@ update(
     ): Promise<Array<Result<Record<string, CloudType>>>>
 ```
 
-Updates data in the cloud. This API uses a promise to return the result.
+通过该接口更新云上的数据。使用Promise异步回调。
 
 **Since:** 11
 
@@ -419,17 +425,17 @@ Updates data in the cloud. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | Table name. |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Data to insert. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| table | string | Yes | 表名。 |
+| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | 表示要更新的数据。 |
+| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | 表示当前数据的扩展信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the update result and updated data. |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise对象，返回更新的数据和更新结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {

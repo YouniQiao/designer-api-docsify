@@ -1,6 +1,6 @@
 # HolidayInfoItem
 
-Represents the holiday information.
+节假日信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Represents the holiday information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## baseName
 
 ```TypeScript
 baseName: string
 ```
 
-Holiday name.
+节假日的英文名称。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Holiday name.
 day: int
 ```
 
-Day of the holiday.The value should be an integer.
+节假日所在日。
 
 **Type:** int
 
@@ -56,7 +62,7 @@ Day of the holiday.The value should be an integer.
 localNames?: Array<HolidayLocalName>
 ```
 
-Local names of the holiday.
+节假日的本地名称列表。
 
 **Type:** Array&lt;HolidayLocalName&gt;
 
@@ -76,7 +82,7 @@ Local names of the holiday.
 month: int
 ```
 
-Month of the holiday.The value should be an integer.
+节假日所在月。
 
 **Type:** int
 
@@ -96,7 +102,7 @@ Month of the holiday.The value should be an integer.
 year: int
 ```
 
-Year of the holiday.The value should be an integer.
+节假日所在年。
 
 **Type:** int
 

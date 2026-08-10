@@ -1,6 +1,6 @@
 # DeviceProfileInfoFilterOptions (System API)
 
-Defines device profile information filter options.
+设备信息过滤器选项。
 
 **Since:** 15
 
@@ -12,13 +12,19 @@ Defines device profile information filter options.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## deviceIdList
 
 ```TypeScript
 deviceIdList?: Array<string>
 ```
 
-Device ID list.
+表示获取指定deviceId的设备信息，deviceId一般为设备的UDID，如设备无UDID，则取其MAC或SN作为deviceId。默认为空。
 
 **Type:** Array&lt;string&gt;
 
@@ -38,7 +44,10 @@ Device ID list.
 isCloud : boolean
 ```
 
-Whether to request data from the cloud.
+表示是否需要实时从云端获取设备列表。
+
+- false：表示从设备获取。  
+- true：表示从云端获取。
 
 **Type:** boolean
 

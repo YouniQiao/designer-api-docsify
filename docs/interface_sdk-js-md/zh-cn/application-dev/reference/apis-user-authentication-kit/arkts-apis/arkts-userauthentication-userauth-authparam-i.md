@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## authTrustLevel
 
 ```TypeScript
@@ -24,9 +30,9 @@ authTrustLevel: AuthTrustLevel
 - ATL4：适用于小额支付等高安全场景。
 
 典型操作需要的身份认证可信等级，以及身份认证可信等级的划分请参见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。
 
-**类型：** AuthTrustLevel
+**类型：** [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md)
 
 **起始版本：** 10
 
@@ -46,7 +52,7 @@ authType: UserAuthType[]
 
 认证类型列表，用来指定用户认证界面提供的认证方法。可同时指定多种认证类型，如[UserAuthType.PIN, UserAuthType.FACE, UserAuthType.FINGERPRINT]，用户可选择任意一种完成认证。认证类型的选择会影响认证结果复用的匹配条件。暂不支持同时发起伴随设备认证和其他认证类型。
 
-**类型：** UserAuthType[]
+**类型：** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)[]
 
 **起始版本：** 10
 
@@ -64,7 +70,7 @@ authType: UserAuthType[]
 challenge: Uint8Array
 ```
 
-随机挑战值，可用于防重放攻击。最大长度为32字节，可传Uint8Array([])。建议使用[加解密算法库框架]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_生成的随机数作为挑战值，以增强安全性。认证通过后，挑战值会被包含在认证令牌中，业务可通过验证令牌中的挑战值来确认认证结果的有效性。
+随机挑战值，可用于防重放攻击。最大长度为32字节，可传Uint8Array([])。建议使用[加解密算法库框架](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md/arkts-security-cryptoframework.md)生成的随机数作为挑战值，以增强安全性。认证通过后，挑战值会被包含在认证令牌中，业务可通过验证令牌中的挑战值来确认认证结果的有效性。
 
 **类型：** Uint8Array
 
@@ -86,7 +92,7 @@ reuseUnlockResult?: ReuseUnlockResult
 
 表示可以复用解锁认证的结果。配置后，若满足复用条件，系统将直接返回之前的认证结果，无需用户再次进行认证交互。默认为不复用。启用认证结果复用可以提升用户体验，但应根据业务场景的安全需求合理配置复用模式和有效时长。
 
-**类型：** ReuseUnlockResult
+**类型：** [ReuseUnlockResult](arkts-userauthentication-userauth-reuseunlockresult-i.md)
 
 **起始版本：** 12
 

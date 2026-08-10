@@ -1,7 +1,6 @@
 # HdrGainmapMetadata
 
-Describes the metadata keys used by a gain map, that is, the values available for **HDR\_GAINMAP\_METADATA** in  
-[HdrMetadataKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. For details, see ISO 21496-1.
+Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_GAINMAP_METADATA关键字对应的值，参考ISO 21496-1。
 
 **Since:** 12
 
@@ -11,6 +10,12 @@ Describes the metadata keys used by a gain map, that is, the values available fo
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## alternateHeadroom
 
 ```TypeScript
@@ -19,7 +24,7 @@ alternateHeadroom: double
 
 The alternate hdr headroom.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -37,7 +42,7 @@ baseHeadroom: double
 
 The baseline hdr headroom.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -73,7 +78,7 @@ gainmapChannelCount: int
 
 The number of gain map channels, with a value of 1 or 3.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -91,7 +96,7 @@ miniVersion: int
 
 The minimum version a parser needs to understand.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -127,7 +132,7 @@ writerVersion: int
 
 The version used by the writer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

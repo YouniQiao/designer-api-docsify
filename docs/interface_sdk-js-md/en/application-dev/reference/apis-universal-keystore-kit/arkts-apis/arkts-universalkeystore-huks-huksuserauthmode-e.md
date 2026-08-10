@@ -1,6 +1,6 @@
 # HuksUserAuthMode
 
-Enumerates the user authentication modes.
+表示用户认证模式。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the user authentication modes.
 HUKS_USER_AUTH_MODE_LOCAL = 0
 ```
 
-Local authentication.
+本地认证模式。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Local authentication.
 HUKS_USER_AUTH_MODE_COAUTH = 1
 ```
 
-Cross-device collaborative authentication.
+跨端协同认证模式。
 
 **Since:** 12
 

@@ -34,8 +34,8 @@ Creates a new Locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tag | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Locale | Yes | the tag. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| tag | [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| Locale | Yes | the tag. |
+| options | [LocaleOptions](arkts-arkts-intl-localeoptions-i.md) | No | the options. |
 
 ## defaultTag
 
@@ -155,7 +155,7 @@ Gets the most likely values for language, script, and region.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | locale with maximized info. |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) | locale with maximized info. |
 
 ## maximizeInfo
 
@@ -209,7 +209,7 @@ Removes information that would be added by maximize().
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | locale with minimized info. |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) | locale with minimized info. |
 
 ## numberingSystemList
 
@@ -335,7 +335,7 @@ Returns the full locale identifier string.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the locale identifier. |
+| [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) | the locale identifier. |
 
 ## baseName
 

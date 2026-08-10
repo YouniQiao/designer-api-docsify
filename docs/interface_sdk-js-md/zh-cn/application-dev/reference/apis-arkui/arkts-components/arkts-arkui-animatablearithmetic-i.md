@@ -34,7 +34,7 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 和自身比较相等的另一个数据对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 和自身比较相等的另一个数据对象。 |
 
 **返回值：**
 
@@ -72,7 +72,7 @@ multiply(scale: number): AnimatableArithmetic<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 乘法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 乘法运算的结果。 |
 
 ## plus
 
@@ -98,13 +98,13 @@ plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 加法运算的对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 加法运算的对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 加法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 加法运算的结果。 |
 
 ## subtract
 
@@ -130,11 +130,11 @@ subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 减法运算的对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 减法运算的对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 减法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 减法运算的结果。 |
 

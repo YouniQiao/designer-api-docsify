@@ -4,7 +4,7 @@
 export type DialogOptionsCornerRadius = Dimension | BorderRadiuses
 ```
 
-Corner radius type of DialogOptions.
+表示弹窗背板的圆角半径允许的数据字段类型。
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ Corner radius type of DialogOptions.
 
 | Type | Description |
 | --- | --- |
-| Dimension |  |
-| BorderRadiuses |  |
+| Dimension | 表示值类型为长度类型，用于描述尺寸单位。 |
+| BorderRadiuses | 表示值类型为圆角类型，用于描述组件边框圆角半径。 |
 

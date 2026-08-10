@@ -1,6 +1,6 @@
 # MainWindowInfo
 
-Describes the main window information.
+主窗口信息。
 
 **Since:** 21
 
@@ -10,6 +10,12 @@ Describes the main window information.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
@@ -18,7 +24,7 @@ displayId: long
 
 ID of the display to which the main window belongs.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 21
 
@@ -34,7 +40,7 @@ ID of the display to which the main window belongs.
 label: string
 ```
 
-Task name of the main window.
+主窗口的任务名称。
 
 **Type:** string
 
@@ -52,8 +58,7 @@ Task name of the main window.
 showing: boolean
 ```
 
-Foreground/Background status of the main window. **true** if the main window is in the foreground, **false**  
-otherwise.
+Foreground/Background status of the main window. **true** if the main window is in the foreground, **false**otherwise.
 
 **Type:** boolean
 
@@ -73,7 +78,7 @@ windowId: int
 
 ID of the main window.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 

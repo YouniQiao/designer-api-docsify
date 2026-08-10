@@ -4,7 +4,7 @@
 declare type TextAreaSubmitCallback = (enterKeyType: EnterKeyType, event?: SubmitEvent) => void
 ```
 
-Represents the callback invoked when the Enter key on the soft keyboard is pressed.
+软键盘按下回车键时的回调事件。
 
 **Since:** 14
 
@@ -22,6 +22,6 @@ Represents the callback invoked when the Enter key on the soft keyboard is press
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enterKeyType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the Enter key.\_\_\_HTML\_TAG\_USD\_0\_\_\_If the type is **EnterKeyType.NEW\_LINE**, **onSubmit** is not triggered.  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Submit event.  |
+| enterKeyType | [EnterKeyType](../arkts-apis/arkts-arkui-textinput-enterkeytype-e.md) | Yes | 软键盘输入法回车键类型。 <br>类型为EnterKeyType.NEW_LINE时不触发onSubmit。 |
+| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | No | 提交事件。用于获取提交事件的详细信息。不传入此参数时，无法获取提交事件的详细信息。 |
 

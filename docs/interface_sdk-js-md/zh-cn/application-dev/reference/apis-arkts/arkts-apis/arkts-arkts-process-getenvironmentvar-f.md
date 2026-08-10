@@ -1,5 +1,11 @@
 # getEnvironmentVar
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getEnvironmentVar
 
 ```TypeScript
@@ -32,7 +38,7 @@ function getEnvironmentVar(name: string): string
 | --- | --- |
 | string | 返回环境变量名对应的值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pres = process.getEnvironmentVar("PATH");

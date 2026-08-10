@@ -1,6 +1,6 @@
 # ReusableMemOptStrategy
 
-Defines a type for memory optimization strategy.
+可复用自定义组件内存优化策略枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines a type for memory optimization strategy.
 DEFAULT = 0
 ```
 
-No memory optimization.
+无内存优化策略。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,18 @@ No memory optimization.
 ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0
 ```
 
-CustomComponent handles the memory optimization.
+自动内存优化策略。建议在需要降低可复用自定义组件内存使用量的场景下使用此策略。
+
+满足以下任一条件时，释放复用池内的所有该类型自定义组件：
+
+- 应用退后台时。  
+- 复用池所在组件不可见时（[visibility](arkts-arkui-commonmethod-c.md#visibility)属性设置为[Visible](../arkts-apis/arkts-arkui-enums-visibility-e.md/arkts-arkui-enums-visibility-e.md)以外的值，或组件面积为0，不考虑遮挡）。  
+- 整机低内存时（[MemoryLevel](../../apis-ability-kit/arkts-apis/arkts-ability-abilityconstant-memorylevel-e.md/arkts-ability-abilityconstant-memorylevel-e.md)达到MEMORY_LEVEL_LOW或  
+MEMORY_LEVEL_CRITICAL）。
+
+当复用池中相同ReuseId的该类型自定义组件数量超过8，且5分钟内不再增加时，保留8个组件，释放其余组件。
+
+在释放节点时，会触发[自定义组件生命周期](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。
 
 **Since:** 26.0.0
 

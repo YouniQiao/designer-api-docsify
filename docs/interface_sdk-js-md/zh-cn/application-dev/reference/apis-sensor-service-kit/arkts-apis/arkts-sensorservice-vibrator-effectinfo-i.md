@@ -1,6 +1,6 @@
 # EffectInfo
 
-查询的预置效果信息。通过[vibrator.getEffectInfoSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_返回此对象，用于判断预置振动效果是否受指定设备的指定马达支持。
+查询的预置效果信息。通过[vibrator.getEffectInfoSync](arkts-sensorservice-vibrator-geteffectinfosync-f.md#geteffectinfosync)返回此对象，用于判断预置振动效果是否受指定设备的指定马达支持。
 
 **起始版本：** 19
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
+## 导入模块
+
+```TypeScript
+import { vibrator } from 'kits/@kit.SensorServiceKit';
+```
+
 ## isEffectSupported
 
 ```TypeScript
@@ -17,7 +23,7 @@ isEffectSupported: boolean
 ```
 
 预置效果是否受支持。true表示支持该预置振动效果，可用于  
-[startVibration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_；false表示不支持，使用该effectId触发振动可能效果不佳。
+[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)；false表示不支持，使用该effectId触发振动可能效果不佳。
 
 **类型：** boolean
 

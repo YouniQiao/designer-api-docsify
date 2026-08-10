@@ -1,6 +1,6 @@
 # HttpResponse
 
-Describes the data structure of the task response header.
+任务响应头的数据结构。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes the data structure of the task response header.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## headers
 
 ```TypeScript
 readonly headers: Map<string, Array<string>>
 ```
 
-HTTP response header.
+Http响应头部。
 
 **Type:** Map&lt;string, Array&lt;string&gt;&gt;
 
@@ -36,7 +42,7 @@ HTTP response header.
 readonly reason: string
 ```
 
-HTTP response cause.
+Http响应原因。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ HTTP response cause.
 readonly statusCode: int
 ```
 
-HTTP response status code.
+Http响应状态码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -76,7 +82,7 @@ HTTP response status code.
 readonly version: string
 ```
 
-HTTP version.
+Http版本。
 
 **Type:** string
 

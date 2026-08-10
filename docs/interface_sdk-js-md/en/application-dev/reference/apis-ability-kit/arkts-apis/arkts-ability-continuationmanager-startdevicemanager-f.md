@@ -1,12 +1,18 @@
 # startDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { continuationManager } from 'kits/@kit.AbilityKit';
+```
+
 ## startDeviceManager
 
 ```TypeScript
 function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 ```
 
-Starts the device selection module to show the list of available devices on the network. This API does not involve any filter parameters and uses an asynchronous callback to return the result.
+拉起设备选择模块，可显示组网内可选择设备列表信息，无过滤条件，使用AsyncCallback方式作为异步方法。
 
 **Since:** 8
 
@@ -14,7 +20,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam:
+**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam:
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,10 +32,10 @@ Starts the device selection module to show the list of available devices on the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| token | number | Yes | 注册后的token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -51,7 +57,7 @@ continuationManager.startDeviceManager(token, (err) => {
 function startDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCallback<void>): void
 ```
 
-Starts the device selection module to show the list of available devices on the network. This API uses an asynchronous callback to return the result.
+拉起设备选择模块，可显示组网内可选择设备列表信息，使用AsyncCallback方式作为异步方法。
 
 **Since:** 8
 
@@ -59,7 +65,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam:
+**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam:
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,11 +77,11 @@ Starts the device selection module to show the list of available devices on the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extra parameters used to filter the list of available devices. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| token | number | Yes | 注册后的token。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | 过滤可选择设备列表的额外参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -102,7 +108,7 @@ continuationManager.startDeviceManager(
 function startDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>
 ```
 
-Starts the device selection module to show the list of available devices on the network. This API uses a promise to return the result.
+拉起设备选择模块，可显示组网内可选择设备列表信息，使用Promise方式作为异步方法。
 
 **Since:** 8
 
@@ -110,7 +116,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam:
+**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam:
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,16 +128,16 @@ Starts the device selection module to show the list of available devices on the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
+| token | number | Yes | 注册后的token。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | 过滤可选择设备列表的额外参数，该参数可缺省。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

@@ -4,7 +4,7 @@
 type SystemTonePlayer = _SystemTonePlayer
 ```
 
-SystemTone player object.
+系统提示音播放器对象。
 
 **Since:** 11
 

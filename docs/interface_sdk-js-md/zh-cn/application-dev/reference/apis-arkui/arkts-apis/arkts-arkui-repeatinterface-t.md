@@ -24,11 +24,11 @@ Indicates the type of Repeat.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 数据源，为\_\_\_INLINE\_CODE\_USD\_0\_\_\_类型的数组，由开发者决定数据类型。  |
+| arr | [RepeatArray](arkts-arkui-repeatarray-t.md)&lt;T&gt; | 是 | 数据源，为`RepeatArray<T>`类型的数组，由开发者决定数据类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | - |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | - |
 

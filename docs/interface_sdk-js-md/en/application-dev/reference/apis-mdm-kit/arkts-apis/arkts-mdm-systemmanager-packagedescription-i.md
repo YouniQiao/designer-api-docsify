@@ -1,6 +1,6 @@
 # PackageDescription
 
-Represents the description of a system update package.
+系统更新包描述信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents the description of a system update package.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## notify
 
 ```TypeScript
 notify?: NotifyDescription
 ```
 
-Update notification defined by an enterprise.
+企业自定义更新通知说明。
 
-**Type:** NotifyDescription
+**Type:** [NotifyDescription](arkts-mdm-systemmanager-notifydescription-i.md)
 
 **Since:** 12
 

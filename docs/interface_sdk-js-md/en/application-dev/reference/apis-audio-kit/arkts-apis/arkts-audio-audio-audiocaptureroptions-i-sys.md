@@ -1,6 +1,6 @@
 # AudioCapturerOptions
 
-Describes audio capturer configurations.
+音频采集器选项信息。
 
 **Since:** 8
 
@@ -10,27 +10,11 @@ Describes audio capturer configurations.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
-## playbackCaptureUid
+## Modules to Import
 
 ```TypeScript
-playbackCaptureUid?: int
+import { audio } from 'kits/@kit.AudioKit';
 ```
-
-The target application uid for voice/video communication playback capture.This parameter takes effect only when \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is set in \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. In other playback capture modes,this parameter is ignored.The value should be an integer.
-
-**Type:** int
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioCapturerOptions-playbackCaptureUid?: int--><!--Device-AudioCapturerOptions-playbackCaptureUid?: int-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
-
-**System API:** This is a system API.
 
 ## preferredInputDevice
 
@@ -38,11 +22,9 @@ The target application uid for voice/video communication playback capture.This p
 preferredInputDevice?: AudioDeviceDescriptor
 ```
 
-Perfered input device for this audio capturer. The preferredInputDevice must be an input device, and the source type in \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ must be \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, otherwise this parameter will be ignored.If the user does not specify a device, the system automatically selects the recording device for the audio capturer. When the user specifies a prefer device to create a recongition or transcription recording,
+当前audio capturer的偏好输入设备。此设备必须为输入设备，并且{@link captureInfo}的source type必须为{@link SourceType#SOURCE_TYPE_RECONGITION} 或{@link SourceType#SOURCE_TYPE_VOICE_TRANSCRIPTION}。否则，此参数将会被忽略。如果调用者未指定偏好设备，则系统会自动选择一个设备。如果调用者指定了偏好设备取创建语音识别或者语音转写流：1. 如果设备在线，当前audiocapturer会使用偏好设备；如果运行过程中，偏好设备下线，则系统会自动选择一个录音设备；2. 如果设备不在线，当前audiocapturer会自动选择一个录音设备；如果运行过程中，偏好设备上线，则会自动切换到偏好设备上。调用者可以通过{@link AudioCapturer#getCurrentAudioCapturerChangeInfo}查询当前实际使用的录音设备。
 
-1) If the prefer device is online, the current audiocapturer may use the preferred device for recording; if the prefer device goes offline during operation, the system automatically selects a recording device.2) If the prefer device is offline, the system automatically selects a recording device;if the prefer device comes online during operation, it may switch to the prefer device for recording.Users can query the device which is in use by \_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
-
-**Type:** AudioDeviceDescriptor
+**Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md)
 
 **Since:** 22
 

@@ -1,14 +1,14 @@
 # ShaderEffect
 
-Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect.
-    **NOTE**  
-    
-    - The initial APIs of this class are supported since API version 12.  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+着色器，用于在绘图中填充颜色和渐变效果。画刷和画笔设置着色器后，会使用着色器效果而不是颜色属性去绘制，但此时画刷和画笔的透明度属性仍然生效。着色器支持创建单色着色器、线性渐变、径向渐变、扇形渐变、锥形渐变、图片着色器及混合着色器等多种类型。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 12
 
@@ -18,13 +18,19 @@ Implements the shader effect. After a shader effect is set for a pen or brush, t
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## createColorShader
 
 ```TypeScript
 static createColorShader(color: number): ShaderEffect
 ```
 
-Creates a **ShaderEffect** object with a single color.
+创建具有单一颜色的着色器。
 
 **Since:** 12
 
@@ -38,19 +44,19 @@ Creates a **ShaderEffect** object with a single color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | number | Yes | Color in the ARGB format. The value is a 32-bit unsigned integer. |
+| color | number | Yes | 表示着色器的ARGB格式颜色，该参数为32位无符号整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShaderEffect** object with a single color. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回具有单一颜色的着色器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createColorShader
 
@@ -58,7 +64,7 @@ Creates a **ShaderEffect** object with a single color.
 static createColorShader(color: int): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object with a single color.
+创建具有单一颜色的着色器。
 
 **Since:** 23
 
@@ -72,19 +78,19 @@ Creates a ShaderEffect object with a single color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | int | Yes | Color in the ARGB format. The value is a 32-bit unsigned integer. |
+| color | int | Yes | 表示着色器的ARGB格式颜色，该参数为32位无符号整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the shader with single color ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回具有单一颜色的着色器对象。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createComposeShader
 
@@ -93,7 +99,7 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
         blendMode: BlendMode): ShaderEffect
 ```
 
-Creates a shader by blending two existing shaders in a certain way.
+按照指定的混合模式对两个着色器进行叠加，生成一个新的着色器。
 
 **Since:** 20
 
@@ -107,21 +113,21 @@ Creates a shader by blending two existing shaders in a certain way.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dstShaderEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Shader that serves as the destination color in blend mode. |
-| srcShaderEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Shader that serves as the source color in blend mode. |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Blend mode. |
+| dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | 在混合模式中作为目标色的着色器。 |
+| srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | 在混合模式中作为源色的着色器。 |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShaderEffect** object created. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回叠加后的着色器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createComposeShader
 
@@ -144,21 +150,21 @@ Creates an ShaderEffect object that generates a blend ShaderEffect object by two
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dstShaderEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates a destination ShaderEffect pointer. |
-| srcShaderEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates a source ShaderEffect pointer. |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | BlendMode. |
+| dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | Indicates a destination ShaderEffect pointer. |
+| srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | Indicates a source ShaderEffect pointer. |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | BlendMode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a blend ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns a blend ShaderEffect object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createConicalGradient
 
@@ -168,7 +174,7 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
         pos?: Array<number> | null, matrix?: Matrix | null): ShaderEffect
 ```
 
-Creates a **ShaderEffect** object that generates a conical gradient between two given circles.
+创建着色器，在给定两个圆之间生成锥形渐变。锥形渐变是指颜色在起始圆和结束圆之间，按照一定比例进行插值过渡形成的渐变效果。
 
 **Since:** 12
 
@@ -182,26 +188,26 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | Yes | Center of the start circle of the gradient. |
-| startRadius | number | Yes | Radius of the start circle of the gradient. A negative number is invalid. The value is a floating point number. |
-| endPt | common2D.Point | Yes | Center of the end circle of the gradient. |
-| endRadius | number | Yes | Radius of the end circle of the gradient. A negative value is invalid. The value is a floating point number. |
-| colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the start circle and end circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two circles. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| startPt | common2D.Point | Yes | 表示渐变的起始圆的圆心。 |
+| startRadius | number | Yes | 表示渐变的起始圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
+| endPt | common2D.Point | Yes | 表示渐变的结束圆的圆心。 |
+| endRadius | number | Yes | 表示渐变的结束圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
+| colors | Array&lt;number&gt; | Yes | 表示在起始圆和结束圆之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 着色器效果平铺模式。 |
+| pos | Array&lt;number&gt; \| null | No | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致， 数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。 当不传该参数，或者pos传入undefined时，默认为null，表示颜色均匀分布在起始角度和结束角度之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。当不传该参数，或者matrix传入undefined时，默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShaderEffect** object created. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回锥形渐变着色器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createConicalGradient
 
@@ -211,7 +217,7 @@ static createConicalGradient(startPt: common2D.Point, startRadius: double, endPt
         pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object that generates a conical gradient between two given circles.
+创建着色器，在给定两个圆之间生成锥形渐变。锥形渐变是指颜色在起始圆和结束圆之间，按照一定比例进行插值过渡形成的渐变效果。
 
 **Since:** 23
 
@@ -225,26 +231,26 @@ Creates a ShaderEffect object that generates a conical gradient between two give
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | Yes | Center of the start circle of the gradient. |
-| startRadius | double | Yes | Radius of the start circle of the gradient. A negative number is invalid. The value is a floating point number. |
-| endPt | common2D.Point | Yes | Center of the end circle of the gradient. |
-| endRadius | double | Yes | Radius of the end circle of the gradient. A negative value is invalid. The value is a floating point number. |
-| colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the start circle and end circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two circles. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| startPt | common2D.Point | Yes | 表示渐变的起始圆的圆心。 |
+| startRadius | double | Yes | 表示渐变的起始圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
+| endPt | common2D.Point | Yes | 表示渐变的结束圆的圆心。 |
+| endRadius | double | Yes | 表示渐变的结束圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
+| colors | Array&lt;int&gt; | Yes | 表示在起始圆和结束圆之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 着色器效果平铺模式。 |
+| pos | Array&lt;double&gt; \| null | No | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致， 数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。 当不传该参数，或者pos传入undefined时，默认为null，表示颜色均匀分布在起始圆和结束圆之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。当不传该参数，或者matrix传入undefined时，默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a conical gradient ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回锥形渐变着色器对象。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createImageShader
 
@@ -253,7 +259,7 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
         samplingOptions: SamplingOptions, matrix?: Matrix | null): ShaderEffect
 ```
 
-Creates a shader based on an image. You are advised not to use the function for the canvas of the capture type because it affects the performance.
+基于图片创建一个着色器。此接口不建议用于录制类型的画布（即用于记录绘制指令而非直接渲染的Canvas对象），会影响性能。
 
 **Since:** 20
 
@@ -267,23 +273,23 @@ Creates a shader based on an image. You are advised not to use the function for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | Image object to be sampled. |
-| tileX | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode in the horizontal direction. |
-| tileY | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode in the vertical direction. |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image sampling options. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | (Optional) Matrix transformation applied to an image. If this parameter is left empty, no transformation is applied. |
+| pixelmap | image.PixelMap | Yes | 进行采样的图片对象。 |
+| tileX | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 水平方向的平铺模式。 |
+| tileY | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 竖直方向的平铺模式。 |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes | 图片采样参数，用于指定图像采样时的过滤模式。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShaderEffect** object created. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回基于图片的着色器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createImageShader
 
@@ -307,22 +313,22 @@ Creates an ShaderEffect object that generates a shader with single image.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pixelmap | image.PixelMap | Yes | PixelMap. |
-| tileX | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the type of tile mode for horizontal shader effect. |
-| tileY | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the type of tile mode for vertical shader effect. |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | SamplingOptions used to describe the sampling mode. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Indicates the Matrix object. The default value is null. |
+| tileX | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Indicates the type of tile mode for horizontal shader effect. |
+| tileY | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Indicates the type of tile mode for vertical shader effect. |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes | SamplingOptions used to describe the sampling mode. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Indicates the Matrix object. The default value is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the shader with single image ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns the shader with single image ShaderEffect object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createLinearGradient
 
@@ -331,7 +337,7 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
         mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect
 ```
 
-Creates a **ShaderEffect** object that generates a linear gradient between two points.
+创建着色器，在两个指定点之间生成线性渐变。
 
 **Since:** 12
 
@@ -345,24 +351,24 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | Yes | Start point. |
-| endPt | common2D.Point | Yes | End point. |
-| colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the two points. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| startPt | common2D.Point | Yes | 表示渐变的起点。 |
+| endPt | common2D.Point | Yes | 表示渐变的终点。 |
+| colors | Array&lt;int&gt; | Yes | 表示在两个点之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 着色器效果平铺模式。 |
+| pos | Array&lt;double&gt; \| null | No | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1 之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起点和终点之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShaderEffect** object created. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回线性渐变着色器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createLinearGradient
 
@@ -371,7 +377,7 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
         mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object that generates a linear gradient between two points.
+创建着色器，在两个指定点之间生成线性渐变。
 
 **Since:** 23
 
@@ -385,24 +391,24 @@ Creates a ShaderEffect object that generates a linear gradient between two point
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | Yes | Start point. |
-| endPt | common2D.Point | Yes | End point. |
-| colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the two points. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| startPt | common2D.Point | Yes | 表示渐变的起点。 |
+| endPt | common2D.Point | Yes | 表示渐变的终点。 |
+| colors | Array&lt;int&gt; | Yes | 表示在两个点之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 着色器效果平铺模式。 |
+| pos | Array&lt;double&gt; \| null | No | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致， 数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。 当不传该参数，或者pos传入undefined时，默认为null，表示颜色均匀分布在起点和终点之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。当不传该参数，或者matrix传入undefined时，默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a linear gradient ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回线性渐变着色器对象。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createRadialGradient
 
@@ -411,7 +417,7 @@ static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Ar
       mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect
 ```
 
-Creates a **ShaderEffect** object that generates a radial gradient based on the center and radius of a circle. A radial gradient refers to the color transition that spreads out gradually from the center of a circle.
+创建着色器，使用给定的圆心和半径生成径向渐变。径向渐变是指颜色从圆心逐渐向外扩散形成的渐变。
 
 **Since:** 12
 
@@ -425,24 +431,24 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | Yes | Center of the circle. |
-| radius | double | Yes | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
-| colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| centerPt | common2D.Point | Yes | 表示渐变的圆心。 |
+| radius | double | Yes | 表示渐变的半径，小于等于0时无效，该参数为浮点数。单位为物理像素px。 |
+| colors | Array&lt;int&gt; | Yes | 表示在圆心和圆边界之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 着色器效果平铺模式。 |
+| pos | Array&lt;double&gt; \| null | No | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1 之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在圆心和圆边界之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShaderEffect** object created. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回径向渐变着色器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createRadialGradient
 
@@ -451,7 +457,7 @@ static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Ar
       mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object that generates a radial gradient based on the center and radius of a circle.A radial gradient refers to the color transition that spreads out gradually from the center of a circle.
+创建着色器，使用给定的圆心和半径生成径向渐变。径向渐变是指颜色从圆心逐渐向外扩散形成的渐变。
 
 **Since:** 23
 
@@ -465,24 +471,24 @@ Creates a ShaderEffect object that generates a radial gradient based on the cent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | Yes | Center of the circle. |
-| radius | double | Yes | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
-| colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| centerPt | common2D.Point | Yes | 表示渐变的圆心。 |
+| radius | double | Yes | 表示渐变的半径，小于等于0时无效，该参数为浮点数。单位为物理像素px。 |
+| colors | Array&lt;int&gt; | Yes | 表示在圆心和圆边界之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 着色器效果平铺模式。 |
+| pos | Array&lt;double&gt; \| null | No | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致， 数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。 当不传该参数，或者pos传入undefined时，默认为null，表示颜色均匀分布在圆心和圆边界之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。当不传该参数，或者matrix传入undefined时，默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a radial gradient ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回径向渐变着色器对象。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSweepGradient
 
@@ -492,7 +498,7 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
         matrix?: Matrix | null): ShaderEffect
 ```
 
-Creates a **ShaderEffect** object that generates a color sweep gradient around a given center point, either in a clockwise or counterclockwise direction.
+创建着色器。该着色器以给定中心点为圆心，在起始角度和结束角度之间沿顺时针或逆时针方向生成颜色扇形渐变。
 
 **Since:** 12
 
@@ -506,25 +512,25 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | Yes | Center of the circle. |
-| colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the start angle and end angle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. |
-| startAngle | number | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |
-| endAngle | number | Yes | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. A value less than the start angle is invalid. The value is a floating point number. |
-| pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| centerPt | common2D.Point | Yes | 表示渐变的圆心。 |
+| colors | Array&lt;number&gt; | Yes | 表示在起始角度和结束角度之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 着色器效果平铺模式。 |
+| startAngle | number | Yes | 表示扇形渐变的起始角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。该参数为浮点数。 |
+| endAngle | number | Yes | 表示扇形渐变的结束角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。小于起始角度时无效。该参数为浮点数。 |
+| pos | Array&lt;number&gt; \| null | No | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1 之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始角度和结束角度之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ShaderEffect** object created. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回扇形渐变着色器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSweepGradient
 
@@ -534,7 +540,7 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<int>,
       matrix?: Matrix | null): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object that generates a color sweep gradient around a given center point,either in a clockwise or counterclockwise direction.
+创建着色器。该着色器以给定中心点为圆心，在起始角度和结束角度之间沿顺时针或逆时针方向生成颜色扇形渐变。
 
 **Since:** 23
 
@@ -548,23 +554,23 @@ Creates a ShaderEffect object that generates a color sweep gradient around a giv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | Yes | Center of the circle. |
-| colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the start angle and end angle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. |
-| startAngle | double | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |
-| endAngle | double | Yes | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. A value less than the start angle is invalid. The value is a floating point number. |
-| pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| centerPt | common2D.Point | Yes | 表示渐变的圆心。 |
+| colors | Array&lt;int&gt; | Yes | 表示在起始角度和结束角度之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | 着色器效果平铺模式。 |
+| startAngle | double | Yes | 表示扇形渐变的起始角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。该参数为浮点数。 |
+| endAngle | double | Yes | 表示扇形渐变的结束角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。小于起始角度时无效。该参数为浮点数。 |
+| pos | Array&lt;double&gt; \| null | No | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1 之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始角度和结束角度之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a sweep gradient ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回扇形渐变着色器对象。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

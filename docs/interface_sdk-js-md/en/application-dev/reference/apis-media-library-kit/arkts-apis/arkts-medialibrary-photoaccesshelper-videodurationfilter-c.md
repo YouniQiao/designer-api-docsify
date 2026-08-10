@@ -10,6 +10,12 @@ Describes the configuration for video duration filtering.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## extraVideoDuration
 
 ```TypeScript
@@ -20,7 +26,7 @@ Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is 
 
 The unit is milliseconds (ms).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 
@@ -42,7 +48,7 @@ Filter operator.
 
 For example, files can be filtered based on being greater than or less than a certain file size.
 
-**Type:** FilterOperator
+**Type:** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
 **Since:** 19
 
@@ -64,7 +70,7 @@ Video duration used for filtering.
 
 The unit is milliseconds (ms).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 

@@ -1,6 +1,6 @@
 # PopupIconOptions
 
-Defines the popup icon options
+PopupIconOptions定义图标的属性。
 
 **Since:** 23
 
@@ -10,15 +10,23 @@ Defines the popup icon options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
+
 ## borderRadius
 
 ```TypeScript
 borderRadius?: Length | BorderRadiuses
 ```
 
-Set the icon border radius.
+设置图标圆角。
 
-**Type:** Length \| BorderRadiuses
+默认值：`\$r('sys.float.ohos_id_corner_radius_default_s')`
+
+**Type:** [Length](arkts-arkui-length-t.md) \| BorderRadiuses
 
 **Default:** $r('sys.float.ohos_id_corner_radius_default_s')
 
@@ -38,9 +46,11 @@ Set the icon border radius.
 fillColor?: ResourceColor
 ```
 
-Set the icon fill color.
+设置图标填充颜色。仅针对svg图源生效。 
 
-**Type:** ResourceColor
+默认不改变图标颜色。
+
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -58,9 +68,11 @@ Set the icon fill color.
 height?: Dimension
 ```
 
-Set the icon height.
+设置图标高度。
 
-**Type:** Dimension
+默认值：32VP
+
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** 32.0_vp
 
@@ -80,9 +92,13 @@ Set the icon height.
 image?: ResourceStr
 ```
 
-Set the icon image.
+设置图标内容。
 
-**Type:** ResourceStr
+**ArkTS模式：** 该接口仅适用于ArkTS-Sta。
+
+**ArkTS-Sta起始版本：** 23
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -100,9 +116,11 @@ Set the icon image.
 width?: Dimension
 ```
 
-Set the icon width.
+设置图标宽度。
 
-**Type:** Dimension
+默认值：32VP
+
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** 32.0_vp
 

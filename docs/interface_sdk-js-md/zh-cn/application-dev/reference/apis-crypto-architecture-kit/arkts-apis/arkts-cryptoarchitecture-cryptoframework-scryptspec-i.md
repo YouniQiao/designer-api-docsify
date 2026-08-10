@@ -1,10 +1,11 @@
 # ScryptSpec
 
-密钥派生函数参数[KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，作为SCRYPT密钥派生函数进行密钥派生时的输入。
-    **说明：**  
-    
-    passphrase指的是原始密码，如果使用string类型，需要直接传入用于密钥派生的数据，而不是HexString、base64等字符串类型，同时需要确保该  
-    字符串为utf-8编码，否则派生结果会有差异。
+密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为SCRYPT密钥派生函数进行密钥派生时的输入。
+
+> **说明：**
+> 
+> passphrase指的是原始密码，如果使用string类型，需要直接传入用于密钥派生的数据，而不是HexString、base64等字符串类型，同时需要确保该
+> 字符串为utf-8编码，否则派生结果会有差异。
 
 **继承/实现关系：** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -16,6 +17,12 @@
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## keySize
 
 ```TypeScript
@@ -24,7 +31,7 @@ keySize: int
 
 派生得到的密钥字节长度，需要为正整数，单位为bytes。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -44,7 +51,7 @@ maxMemory: long
 
 最大内存限制参数，需要为正整数，单位为bytes。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 18
 
@@ -64,7 +71,7 @@ n: long
 
 CPU/内存开销参数，需要为正整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 18
 
@@ -84,7 +91,7 @@ p: long
 
 并行化参数，需要为正整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 18
 
@@ -124,7 +131,7 @@ r: long
 
 块大小参数，需要为正整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 18
 

@@ -1,5 +1,11 @@
 # @ohos.app.ability.VpnExtensionAbility
 
+## Modules to Import
+
+```TypeScript
+import { VpnExtensionContext } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Classes

@@ -1,6 +1,6 @@
 # FunctionIntentInfo（系统接口）
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)。
 
 **起始版本：** 20
 
@@ -13,4 +13,10 @@
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
 

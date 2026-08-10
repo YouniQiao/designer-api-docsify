@@ -1,6 +1,6 @@
 # CredentialType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when ClientAuthenticationHandler#confirm being called.
+Enum type supplied to {@link CredentialType} when ClientAuthenticationHandler#confirm being called.
 
 **起始版本：** 22
 

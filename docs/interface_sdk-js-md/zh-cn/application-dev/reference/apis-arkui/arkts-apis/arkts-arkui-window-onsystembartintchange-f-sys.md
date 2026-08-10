@@ -1,5 +1,11 @@
 # onSystemBarTintChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## onSystemBarTintChange
 
 ```TypeScript
@@ -22,24 +28,11 @@ function onSystemBarTintChange(callback: Callback<SystemBarTintState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemBarTintState&gt; | 是 | 回调函数。返回当前的状态栏、导航栏信息集合。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SystemBarTintState&gt; | 是 | 回调函数。返回当前的状态栏、导航栏信息集合。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例：**
-
-```TypeScript
-try {
-  window.onSystemBarTintChange((data) => {
-    console.info(`Succeeded in enabling the listener for systemBarTint changes. Data: ${JSON.stringify(data)}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to enable the listener for systemBarTint changes. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

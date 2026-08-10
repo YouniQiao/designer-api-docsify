@@ -1,6 +1,6 @@
 # PostMessageOptions
 
-Defines the object for which the ownership is to be transferred during data transfer. The object must be an ArrayBuffer instance.After the ownership is transferred, the object becomes unavailable in the sender and can be used only in the receiver.
+明确数据传递过程中需要转移所有权的对象，这些对象必须是ArrayBuffer，在发送方的上下文中将变为不可用，仅在接收方可用。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines the object for which the ownership is to be transferred during data tran
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## transfer
 
 ```TypeScript
 transfer?: Object[]
 ```
 
-ArrayBuffer array used to transfer the ownership. The array cannot be null.
+ArrayBuffer数组，用于传递所有权。该数组中不可传入null。
 
 **Type:** Object[]
 

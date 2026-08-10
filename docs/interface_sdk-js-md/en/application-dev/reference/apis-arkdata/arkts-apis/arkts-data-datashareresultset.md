@@ -1,8 +1,13 @@
 # @ohos.data.DataShareResultSet
 
-The **DataShareResultSet** module provides APIs for accessing the result set obtained from the database. You can
- access the values in the specified rows or the value of the specified data type.
+**DataShareResultSet** 可提供访问由查询数据库生成的结果集的相关方法，根据提供的行数，查询相应的值，也可查询指定数据类型的值。
 
+
+## Modules to Import
+
+```TypeScript
+import { DataType } from 'kits/@kit.ArkData';
+```
 
 ## Summary
 
@@ -11,7 +16,7 @@ The **DataShareResultSet** module provides APIs for accessing the result set obt
 
 | Name | Description |
 | --- | --- |
-| [DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md) | Provides APIs for accessing the result sets returned.  The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set. |
+| [DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md) | 提供通过查询数据库生成的结果集的相关访问方法。  列或键名称作为字符串数组返回，其中字符串的顺序与结果集中的列或键的顺序相同。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -19,6 +24,6 @@ The **DataShareResultSet** module provides APIs for accessing the result set obt
 
 | Name | Description |
 | --- | --- |
-| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) | Enumerates the data types. |
+| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) | 数据类型枚举。 |
 <!--DelEnd-->
 

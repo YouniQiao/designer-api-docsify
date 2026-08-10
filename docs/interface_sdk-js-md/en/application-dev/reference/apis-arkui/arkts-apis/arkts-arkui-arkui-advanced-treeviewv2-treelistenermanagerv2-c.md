@@ -1,6 +1,6 @@
 # TreeListenerManagerV2
 
-Declare class TreeListenerManagerV2
+树视图组件的监听管理器，可以将此对象绑定至树视图组件，然后通过它管理树视图监听器的变化，同一个监听管理器不可以控制多个树视图组件。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Declare class TreeListenerManagerV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
+
 ## getInstance
 
 ```TypeScript
 static getInstance(): TreeListenerManagerV2
 ```
 
-Get instance of treeListenerManagerV2.
+获取树视图组件的监听管理器单例对象。
 
 **Since:** 26.0.0
 
@@ -32,7 +38,7 @@ Get instance of treeListenerManagerV2.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the treeListenerManagerV2 instance. |
+| [TreeListenerManagerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) | 返回获取到的树视图组件的监听管理器单例对象。 |
 
 ## getTreeListener
 
@@ -40,7 +46,7 @@ Get instance of treeListenerManagerV2.
 getTreeListener(): TreeListenerV2
 ```
 
-Get treeListenerV2.
+获取树视图监听器实例。
 
 **Since:** 26.0.0
 
@@ -56,5 +62,5 @@ Get treeListenerV2.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the treeListenerV2 object. |
+| [TreeListenerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenerv2-c.md) | 返回获取到的树视图监听器实例。 |
 

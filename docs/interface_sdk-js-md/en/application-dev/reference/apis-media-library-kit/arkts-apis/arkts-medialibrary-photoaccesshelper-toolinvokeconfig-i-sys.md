@@ -12,6 +12,12 @@ Configuration for invoking an analysis tool.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## param
 
 ```TypeScript
@@ -42,7 +48,7 @@ type: AnalysisToolType
 
 Type of the analysis tool to invoke.
 
-**Type:** AnalysisToolType
+**Type:** [AnalysisToolType](arkts-medialibrary-photoaccesshelper-analysistooltype-e-sys.md)
 
 **Since:** 26.1.0
 

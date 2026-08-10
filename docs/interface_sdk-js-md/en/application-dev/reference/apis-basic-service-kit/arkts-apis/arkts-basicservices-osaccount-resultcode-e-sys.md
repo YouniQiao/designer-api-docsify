@@ -1,6 +1,6 @@
 # ResultCode (System API)
 
-Enumerates the authentication result codes.
+表示身份验证结果码。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the authentication result codes.
 SUCCESS = 0
 ```
 
-The authentication is successful or the authentication feature is supported.
+表示身份验证成功或支持此功能。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ The authentication is successful or the authentication feature is supported.
 FAIL = 1
 ```
 
-The authentication executor failed to identify the user.
+表示验证器无法识别用户。
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ The authentication executor failed to identify the user.
 GENERAL_ERROR = 2
 ```
 
-Other errors.
+表示其他错误。
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Other errors.
 CANCELED = 3
 ```
 
-The authentication is canceled.
+表示身份验证已取消。
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ The authentication is canceled.
 TIMEOUT = 4
 ```
 
-The authentication timed out.
+表示身份验证已超时。
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ The authentication timed out.
 TYPE_NOT_SUPPORT = 5
 ```
 
-The authentication credential type is not supported.
+表示不支持此身份验证类型。
 
 **Since:** 8
 
@@ -126,7 +126,7 @@ The authentication credential type is not supported.
 TRUST_LEVEL_NOT_SUPPORT = 6
 ```
 
-The authentication trust level is not supported.
+表示不支持身份验证信任级别。
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ The authentication trust level is not supported.
 BUSY = 7
 ```
 
-The authentication executor is busy. Try again after a few seconds.
+表示身份验证任务正忙。等待几秒钟，然后重试。
 
 **Since:** 8
 
@@ -162,7 +162,7 @@ The authentication executor is busy. Try again after a few seconds.
 INVALID_PARAMETERS = 8
 ```
 
-Incorrect parameters are detected.
+表示参数不正确。
 
 **Since:** 8
 
@@ -180,7 +180,7 @@ Incorrect parameters are detected.
 LOCKED = 9
 ```
 
-The authentication executor is locked.
+指示身份验证器已锁定。
 
 **Since:** 8
 
@@ -198,7 +198,7 @@ The authentication executor is locked.
 NOT_ENROLLED = 10
 ```
 
-The authentication executor is not enrolled.
+表示用户尚未注册验证器。
 
 **Since:** 8
 

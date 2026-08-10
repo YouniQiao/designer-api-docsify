@@ -10,13 +10,19 @@ Preferences实例配置选项。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
+## 导入模块
+
+```TypeScript
+import { sendablePreferences } from 'kits/@kit.ArkData';
+```
+
 ## dataGroupId
 
 ```TypeScript
 dataGroupId?: string | null
 ```
 
-应用组ID，\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_暂不支持指定dataGroupId在对应共享沙箱路径下创建Preferences实例。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+应用组ID，&lt;!--RP1--&gt;暂不支持指定dataGroupId在对应共享沙箱路径下创建Preferences实例。&lt;!--RP1End--&gt;
 
 为可选参数。指定在此dataGroupId对应的沙箱路径下创建Preferences实例。当此参数不填时，默认在本应用沙箱目录下创建Preferences实例。
 

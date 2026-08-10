@@ -1,7 +1,6 @@
 # LastExitReason
 
-Enumerates the reasons for the last exit of the ability. You can use it together with the value of  
-**launchParam.lastExitReason** in [onCreate()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the UIAbility to complete different operations.
+Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.lastExitReason的不同类型执行相应操作。
 
 **Since:** 9
 
@@ -17,7 +16,7 @@ Enumerates the reasons for the last exit of the ability. You can use it together
 UNKNOWN = 0
 ```
 
-Unknown reason.
+未知原因。
 
 **Since:** 9
 
@@ -37,7 +36,7 @@ Unknown reason.
 ABILITY_NOT_RESPONDING = 1
 ```
 
-The ability does not respond.
+Ability组件未响应。
 
 **Since:** 9
 
@@ -59,10 +58,9 @@ The ability does not respond.
 NORMAL = 2
 ```
 
-The ability exits normally because the user closes the application.
+用户主动关闭应用，应用程序正常退出。
 
-Note: If the application process is forcibly terminated using methods not provided by Ability Kit, such as calling \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or using the kernel **kill**  
-command, the reason for the last exit is also reported as **NORMAL**.
+**说明：**当开发者直接调用[process.exit()](../apis-arkts/js-apis-process.md#processexitdeprecated)、内核kill命令等非Ability Kit提供的能力强制退出应用进程时，也会返回NORMAL。
 
 **Since:** 9
 
@@ -82,7 +80,7 @@ command, the reason for the last exit is also reported as **NORMAL**.
 CPP_CRASH = 3
 ```
 
-The ability exits due to \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[进程崩溃](../../../dfx/cppcrash-guidelines.md)导致的应用程序退出。
 
 **Since:** 10
 
@@ -102,7 +100,7 @@ The ability exits due to \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 JS_ERROR = 4
 ```
 
-The ability exits due to a JS\_ERROR fault triggered when an application has a JS syntax error that is not captured by developers.
+当应用存在JS语法错误并未被开发者捕获时，触发JS_ERROR故障，导致应用程序退出。
 
 **Since:** 10
 
@@ -122,7 +120,7 @@ The ability exits due to a JS\_ERROR fault triggered when an application has a J
 APP_FREEZE = 5
 ```
 
-The ability exits due to \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[应用冻屏](../../../dfx/appfreeze-guidelines.md)导致的应用程序退出。
 
 **Since:** 10
 
@@ -142,9 +140,9 @@ The ability exits due to \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
 PERFORMANCE_CONTROL = 6
 ```
 
-The ability exits due to system performance problems, for example, insufficient device memory.
+因系统性能问题（如设备内存不足）导致的应用程序退出。
 
-Note: This API will be deprecated. You are advised to use **RESOURCE\_CONTROL** instead.
+**说明：**该接口即将废弃，建议使用RESOURCE_CONTROL替代。
 
 **Since:** 10
 
@@ -164,16 +162,14 @@ Note: This API will be deprecated. You are advised to use **RESOURCE\_CONTROL** 
 RESOURCE_CONTROL = 7
 ```
 
-The ability exits due to improper use of system resources. The specific error cause can be obtained through  
-[LaunchParam.lastExitMessage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The possible causes are as follows:
+系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md)获取，可能原因如下: 
 
-- **CPU Highload**: The CPU load is high.  
-- **CPU\_EXT Highload**: A fast CPU load detection is carried out.  
-- **IO Manage Control**: An I/O management and control operation is carried out.  
-- **App Memory Deterioration**: The application memory usage exceeds the threshold.  
-- **Temperature Control**: The temperature is too high or too low.  
-- **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of  
-priority.
+- CPU Highload，CPU高负载。  
+- CPU_EXT Highload，快速CPU负载检测。  
+- IO Manage Control，I/O管控。  
+- App Memory Deterioration，应用内存超限劣化。  
+- Temperature Control，温度管控。  
+- Memory Pressure，整机低内存触发按优先级由低到高终止进程。
 
 **Since:** 10
 
@@ -193,7 +189,7 @@ priority.
 UPGRADE = 8
 ```
 
-The application exits due to an upgrade.
+应用升级导致的应用程序退出。
 
 **Since:** 10
 
@@ -213,7 +209,7 @@ The application exits due to an upgrade.
 USER_REQUEST = 9
 ```
 
-The ability exits because it receives a request from the multitasking center.
+应用程序因多任务中心请求而退出。
 
 **Since:** 18
 
@@ -233,7 +229,7 @@ The ability exits because it receives a request from the multitasking center.
 SIGNAL = 10
 ```
 
-The ability exits because it receives a kill signal from the system.
+应用程序因收到系统kill指令信号而退出。
 
 **Since:** 18
 

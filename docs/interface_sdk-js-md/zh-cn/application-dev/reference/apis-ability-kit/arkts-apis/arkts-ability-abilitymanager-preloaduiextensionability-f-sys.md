@@ -1,12 +1,18 @@
 # preloadUIExtensionAbility（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## preloadUIExtensionAbility
 
 ```TypeScript
 function preloadUIExtensionAbility(want: Want): Promise<int>
 ```
 
-预加载指定的[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_并返回预加载UIExtensionAbility实例的ID。使用Promise异步回调。
+预加载指定的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)并返回预加载UIExtensionAbility实例的ID。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -26,28 +32,26 @@ function preloadUIExtensionAbility(want: Want): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的Want信息。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回预加载的 [UIExtensionAbility]{ |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回预加载的 [UIExtensionAbility]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1.Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. 4.Preload UIExtensionAbility timeout. |
+| 16000004 | Cannot start an invisible component. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16000050 | Internal error. Possible causes: 1.Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. 4.Preload UIExtensionAbility timeout. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { abilityManager, Want } from '@kit.AbilityKit';
@@ -68,38 +72,6 @@ try {
       console.info(`preloadUIExtensionAbility success, preloadId: ${preloadId}`);
     })
     .catch((err: BusinessError) => {
-      console.error(`preloadUIExtensionAbility fail, err: ${JSON.stringify(err)}`);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`preloadUIExtensionAbility failed, code is ${code}, message is ${message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { abilityManager, Want } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-try {
-  const preloadWant: Want = {
-    bundleName: 'com.example.application',
-    abilityName: 'EntryBackupAbility',
-    moduleName: 'entry',
-    parameters: {
-      'ability.want.params.uiExtensionType': 'sys/commonUI'
-    } as Record<string, RecordData>
-  };
-
-  abilityManager.preloadUIExtensionAbility(preloadWant)
-    .then((preloadId: int) => {
-      console.info(`preloadUIExtensionAbility success, preloadId: ${preloadId}`);
-    })
-    .catch((error: Error) => {
-      let err = error as BusinessError;
       console.error(`preloadUIExtensionAbility fail, err: ${JSON.stringify(err)}`);
     });
 } catch (err) {

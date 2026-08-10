@@ -1,5 +1,11 @@
 # getResourceManager
 
+## 导入模块
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## getResourceManager
 
 ```TypeScript
@@ -22,32 +28,32 @@ export function getResourceManager(callback: AsyncCallback<ResourceManager>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ResourceManager&gt; | 是 | 回调函数，返回资源管理对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | 是 | 回调函数，返回资源管理对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import resourceManager from '@ohos.resourceManager';
+// FA模型请使用上述方式导入模块
 
 export default {
-  onCreate() {
-    resourceManager.getResourceManager((error, mgr) => {
-      if (error != null) {
-        console.error("error is " + error);
-        return;
-      }
-      // 'test'仅作示例，请替换为实际使用的资源名称
-      mgr.getStringByName('test', (error, value) => {
-        if (error) {
-          console.error("error is " + JSON.stringify(error));
-        } else {
-          console.info("success is " + value);
-        }
+    onCreate() {
+        resourceManager.getResourceManager((error, mgr) => {
+            if (error != null) {
+                console.error("error is " + error);
+                return;
+            }
+            // 'test'仅作示例，请替换为实际使用的资源名称
+            mgr.getStringByName('test', (error, value) => {
+                if (error) {
+                    console.error("error is " + JSON.stringify(error));
+                } else {
+                    console.info("success is " + value);
+                }
 
-      });
-    });
-  }
+            });
+        });
+    }
 };
 ```
 
@@ -75,9 +81,9 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用包名。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ResourceManager&gt; | 是 | 回调函数，返回应用包名对应的资源管理对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | 是 | 回调函数，返回应用包名对应的资源管理对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
@@ -87,22 +93,22 @@ import resourceManager from '@ohos.resourceManager';
 const BUNDLE_NAME = 'com.example.testapp';
 
 export default {
-  onCreate() {
-    resourceManager.getResourceManager(BUNDLE_NAME, (error, mgr) => {
-      if (error != null) {
-        console.error("getResourceManager error is " + error);
-        return;
-      }
-      // 'test'仅作示例，请替换为实际使用的资源名称
-      mgr.getStringByName('test', (error, value) => {
-        if (error) {
-          console.error("getResourceManager error is " + JSON.stringify(error));
-        } else {
-          console.info("getResourceManager success is " + value);
-        }
-      });
-    });
-  }
+    onCreate() {
+        resourceManager.getResourceManager(BUNDLE_NAME, (error, mgr) => {
+            if (error != null) {
+                console.error("getResourceManager error is " + error);
+                return;
+            }
+            // 'test'仅作示例，请替换为实际使用的资源名称
+            mgr.getStringByName('test', (error, value) => {
+                if (error) {
+                    console.error("getResourceManager error is " + JSON.stringify(error));
+                } else {
+                    console.info("getResourceManager success is " + value);
+                }
+            });
+        });
+    }
 };
 ```
 
@@ -131,26 +137,26 @@ export function getResourceManager(): Promise<ResourceManager>
 | --- | --- |
 | Promise&lt;ResourceManager&gt; | Promise对象，返回资源管理对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
 // FA模型请使用上述方式导入模块
 
 export default {
-  onCreate() {
-    resourceManager.getResourceManager().then(resMgr => {
-      try {
-        // 'test'仅作示例，请替换为实际使用的资源名称
-        let testStr = resMgr.getStringByNameSync('test')
-        console.info("getResourceManager success is " + testStr);
-      } catch (error) {
-        console.error("getResourceManager error is " + JSON.stringify(error));
-      }
-    }).catch(error => {
-      console.error("getResourceManager error is " + error);
-    });
-  }
+    onCreate() {
+        resourceManager.getResourceManager().then(resMgr => {
+            try {
+                // 'test'仅作示例，请替换为实际使用的资源名称
+                let testStr = resMgr.getStringByNameSync('test')
+                console.info("getResourceManager success is " + testStr);
+            } catch (error) {
+                console.error("getResourceManager error is " + JSON.stringify(error));
+            }
+        }).catch(error => {
+            console.error("getResourceManager error is " + error);
+        });
+    }
 };
 ```
 
@@ -185,7 +191,7 @@ export function getResourceManager(bundleName: string): Promise<ResourceManager>
 | --- | --- |
 | Promise&lt;ResourceManager&gt; | Promise对象，返回应用包名对应的资源管理对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
@@ -195,19 +201,19 @@ import resourceManager from '@ohos.resourceManager';
 const BUNDLE_NAME = 'com.example.testapp';
 
 export default {
-  onCreate() {
-    resourceManager.getResourceManager(BUNDLE_NAME).then(resMgr => {
-      try {
-        // 'test'仅作示例，请替换为实际使用的资源名称
-        let testStr = resMgr.getStringByNameSync('test')
-        console.info("getResourceManager success is " + testStr);
-      } catch (error) {
-        console.error("getResourceManager error is " + JSON.stringify(error));
-      }
-    }).catch(error => {
-      console.error("getResourceManager error is " + error);
-    });
-  }
+    onCreate() {
+        resourceManager.getResourceManager(BUNDLE_NAME).then(resMgr => {
+            try {
+                // 'test'仅作示例，请替换为实际使用的资源名称
+                let testStr = resMgr.getStringByNameSync('test')
+                console.info("getResourceManager success is " + testStr);
+            } catch (error) {
+                console.error("getResourceManager error is " + JSON.stringify(error));
+            }
+        }).catch(error => {
+            console.error("getResourceManager error is " + error);
+        });
+    }
 };
 ```
 

@@ -1,12 +1,18 @@
 # enableFlag
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## enableFlag
 
 ```TypeScript
 function enableFlag(id: HiTraceId, flag: HiTraceFlag): void
 ```
 
-Enables the trace flag specified in HiTraceId. This API returns the result synchronously.
+启用HiTraceId中指定的跟踪标志，同步接口。用于在业务流程中动态调整跟踪行为，例如在调试时启用TP_INFO标志以打印埋点信息、在需要跟踪异步调用时启用INCLUDE_ASYNC标志、在需要禁用日志关联时启用DISABLE_LOG标志。
 
 **Since:** 8
 
@@ -20,10 +26,10 @@ Enables the trace flag specified in HiTraceId. This API returns the result synch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | HiTraceId** instance for which the trace flag is enabled. |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specified trace flag. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | 需要启用指定跟踪标志的HiTraceId实例。 |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | 指定的跟踪标志。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Start tracing. The tracing flag is INCLUDE_ASYNC.

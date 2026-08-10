@@ -20,7 +20,7 @@ authStatus?: AuthStatus
 
 授权状态。
 
-**类型：** AuthStatus
+**类型：** [AuthStatus](arkts-ability-abilitytoolaccessctrl-authstatus-e-sys.md)
 
 **起始版本：** 26.0.0
 

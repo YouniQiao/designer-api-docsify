@@ -1,5 +1,11 @@
 # dump
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## dump
 
 ```TypeScript
@@ -20,15 +26,15 @@ function dump(filePath: string): Array<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filePath | string | 是 | ������Ϣ���ɵ��ļ���ŵ�·����\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**˵��**����API version 24��ʼ���������������ڣ����������µ�һ�ݿ�����Ϣ�� |
+| filePath | string | 是 | ������Ϣ���ɵ��ļ���ŵ�·����&lt;br&gt;**˵��**����API version 24��ʼ���������������ڣ����������µ�һ�ݿ�����Ϣ�� |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | ����������ֱ�Ϊ�ļ�����׺Ϊ.jsleaklist��й©�б����ļ�����׺Ϊ.heapsnapshot������ڴ�����ļ��� \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**˵��**��dump�ɹ�������й©�б��ļ�·����������ڴ����·����dumpʧ�ܣ����ؿ����顣 |
+| Array&lt;string&gt; | ����������ֱ�Ϊ�ļ�����׺Ϊ.jsleaklist��й©�б����ļ�����׺Ϊ.heapsnapshot������ڴ�����ļ��� &lt;br&gt;**˵��**��dump�ɹ�������й©�б��ļ�·����������ڴ����·����dumpʧ�ܣ����ؿ����顣 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let context = this.getUIContext().getHostContext();

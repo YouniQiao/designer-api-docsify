@@ -1,6 +1,6 @@
 # Filter
 
-An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects,you need to call getEffectPixelMap to obtain the processed image.
+图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
 
 **Since:** 9
 
@@ -9,6 +9,12 @@ An image effect class used to add a specified effect to the effect chain through
 <!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
+
+## Modules to Import
+
+```TypeScript
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## ellipticalGradientBlur
 
@@ -24,7 +30,7 @@ ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
       maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
 ```
 
-Adds the elliptical gradient blur effect to the filter linked list, and returns the head node of the linked list.
+将带有椭圆形遮罩的渐变模糊效果添加到效果链表中，返回链表的头节点。
 
 **Since:** 23
 
@@ -42,49 +48,49 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in pixels. The blur effect is proportional to the configured value. A larger value indicates a more obvious effect. |
-| center | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Set the center point of the ellipse. [0, 0] represents the top-left corner of the component, and floating-point numbers are allowed. Values exceeding the boundary will be automatically truncated during implementation. |
-| maskRadius | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Set the major axis and minor axis of the ellipse. A radius of 1 is equal to the height of the component. The value range is [0, 10], and floating-point numbers are allowed. Values exceeding the boundary will be automatically truncated during implementation. |
-| fractionStops | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Gradient blur position and intensity array. The array length ranges from 0 to 12. It has no effect if the length is 0 or greater than 12. Both position and intensity values are between 0 and 1. Position 0 corresponds to the ellipse center, and position 1 corresponds to the ellipse boundary. Intensity 0 means no blur, while intensity 1 equals the blur effect of the input blur radius. |
+| blurRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 模糊半径，取正整数，单位为px，模糊半径大于60px时自动截断。 模糊效果与所设置的模糊半径值成正比，值越大效果越明显。 |
+| center | [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | Yes | 椭圆形遮罩的中心点坐标。 |
+| maskRadius | [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | Yes | 椭圆形遮罩在X轴和Y轴方向的半径。 |
+| fractionStops | [FractionStop](../../apis-arkui/arkts-components/arkts-arkui-fractionstop-t.md)[] | Yes | 渐变模糊位置与程度数组。数组元素为二元数组，第一个元素表示位置，第二个元素表示模糊程度。 位置取值范围为[0, 1]，椭圆中心对应位置0，椭圆边界对应位置1。模糊程度取值范围为[0, 1]，0表示无模糊，大于1的值自动转为1。 位置参数值需严格递增，数组长度不能小于2，最大为12。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Final image effect. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回已添加的图像效果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | 权限校验失败，非系统应用调用系统接口。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { image } from '@kit.ImageKit';	
+import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
-// Pass the image data to be read.
+// Pass in the read image data
 function ImageEllipticalGradientBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise((resolve, reject) => {
     let imageSource = image.createImageSource(Image);
-	  let blurRadius:number = 25;
-	  let fractionStops:FractionStop[] = [[0, 0.2], [0.5, 0.7]];
-	  let maskRadius:effectKit.EllipticalMaskRadius = [1, 1];
-	  let center:effectKit.EllipticalMaskCenter = [0.5, 0.5];
+    let blurRadius:number = 25;
+    let fractionStops:FractionStop[] = [[0, 0.2], [0.5, 0.7]];
+    let maskRadius:effectKit.EllipticalMaskRadius = [1, 1];
+    let center:effectKit.EllipticalMaskCenter = [0.5, 0.5];
     imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       let headFilter = effectKit.createEffect(pixelMap);
       if (headFilter != null) {
-        // Add an effect flag to the image.
+        // Add an effect identifier to the image
         headFilter.ellipticalGradientBlur(blurRadius, center, maskRadius, fractionStops);
+        // Process the image according to the added effect identifier and return the processed image data
+        headFilter.getEffectPixelMap(false).then(imageData => {
+          resolve(imageData);
+        });
       }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap(false).then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
+    });
+  });
 }
 
 @Entry
@@ -92,24 +98,24 @@ function ImageEllipticalGradientBlur(Image: ArrayBuffer): Promise<image.PixelMap
 struct Index {
   @State imagePixelMap: image.PixelMap | null = null;
   private imageBuffer: ArrayBuffer | undefined = undefined;
-  // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
+  // Read the image file from the rawfile folder. You can also change the reading method as needed, as long as the final image data is in ArrayBuffer format.
   async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
+    try {
       const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
       const buffer: ArrayBuffer = fileData.buffer.slice(0);
       return buffer;
-    }catch (err){
-      return undefined
+    } catch (err) {
+      return undefined;
     }
   }
 
-  async aboutToAppear(): Promise<void>{
+  async aboutToAppear(): Promise<void> {
     this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
+    if (this.imageBuffer == undefined) {
       return;
     }
-    // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
+    // Image processing is an asynchronous operation. You can add await for synchronization as needed, depending on whether you need to obtain the processed image data before proceeding to the next step.
     this.imagePixelMap = await ImageEllipticalGradientBlur(this.imageBuffer);
   }
 

@@ -42,7 +42,11 @@ Rating(options?: RatingOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 设置评分组件。\_\_\_HTML\_TAG\_USD\_0\_\_\_ 未设置时，则按照RatingOptions中各参数的默认值配置。 |
+| options | [RatingOptions](../arkts-apis/arkts-arkui-rating-ratingoptions-i.md) | 否 | 设置评分组件。<br/> 未设置时，则按照RatingOptions中各参数的默认值配置。 |
 
 ## 汇总
 
+- [RatingConfiguration](arkts-arkui-rating-ratingconfiguration-i.md)
+- [RatingOptions](arkts-arkui-rating-ratingoptions-i.md)
+- [StarStyleOptions](arkts-arkui-rating-starstyleoptions-i.md)
+- [OnRatingChangeCallback](arkts-arkui-rating-onratingchangecallback-t.md)

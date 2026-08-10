@@ -1,6 +1,6 @@
 # EventClassify (System API)
 
-Represents an event type.
+事件类型。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Represents an event type.
 TASK = 0x01000000
 ```
 
-Task event.
+任务事件。
 
 **Since:** 9
 

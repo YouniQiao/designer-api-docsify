@@ -1,6 +1,6 @@
 # HiPlayDeviceInfo (System API)
 
-HiPlay Device Information Definition
+HiPlay 设备类型定义
 
 **Since:** 24
 
@@ -12,15 +12,21 @@ HiPlay Device Information Definition
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## castMode
 
 ```TypeScript
 castMode?: int
 ```
 
-HiPlay device cast mode.1: DEVICE\_LEVEL\_CAST2: APP\_LEVEL\_CAST
+HiPlay 投播模式，设备级和应用级
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -42,9 +48,9 @@ HiPlay device cast mode.1: DEVICE\_LEVEL\_CAST2: APP\_LEVEL\_CAST
 castUid?: int
 ```
 
-HiPlay device current cast uid.
+HiPlay 当前投播uid
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -66,9 +72,9 @@ HiPlay device current cast uid.
 supportCastMode?: int
 ```
 
-HiPlay device supports cast mode.when device both support device level cast and app level cast, support cast mode is DEVICE\_LEVEL\_CAST|APP\_LEVEL\_CAST1: DEVICE\_LEVEL\_CAST2: APP\_LEVEL\_CAST
+支持的Cast Mode，包含设备级和应用级投播
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -79,6 +85,30 @@ HiPlay device supports cast mode.when device both support device level cast and 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-HiPlayDeviceInfo-supportCastMode?: int--><!--Device-HiPlayDeviceInfo-supportCastMode?: int-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**System API:** This is a system API.
+
+## supportMultiDeviceMode
+
+```TypeScript
+supportMultiDeviceMode?: int
+```
+
+是否支持多设备连接能力。取值限定为整数。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+
+**Since:** 26.1.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-HiPlayDeviceInfo-supportMultiDeviceMode?: int--><!--Device-HiPlayDeviceInfo-supportMultiDeviceMode?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

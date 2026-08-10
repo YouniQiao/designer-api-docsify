@@ -20,7 +20,7 @@ distributionType?: DistributionType
 
 默认值：DistributionType.UNIFORM
 
-**类型：** DistributionType
+**类型：** [DistributionType](../arkts-apis/arkts-arkui-particle-distributiontype-e.md)
 
 **默认值：** DistributionType.UNIFORM
 
@@ -46,7 +46,7 @@ range: ParticleTuple<ResourceColor, ResourceColor>
 
 默认值：range:[Color.White,Color.White]
 
-**类型：** ParticleTuple&lt;ResourceColor, ResourceColor&gt;
+**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md), [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;
 
 **起始版本：** 10
 
@@ -69,21 +69,21 @@ updater?: ParticleColorUpdaterOptions<UPDATER>
 颜色属性变化配置。颜色属性变化类型type有三类：
 
 1、当type为ParticleUpdater.NONE，表示无变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_[ParticleUpdater.NONE]。
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]。 
 
 2、type为ParticleUpdater.RANDOM，表示随机变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_[ParticleUpdater.RANDOM]。
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。 
 
 3、type为ParticleUpdater.CURVE,表示按动画曲线变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_[ParticleUpdater.CURVE]。
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]。
 
-默认值：type默认为 ParticleUpdater.NONE。
+默认值：type默认为 ParticleUpdater.NONE。 
 
-**说明**：
+**说明：**
 
 当type为ParticleUpdater.RANDOM或者ParticleUpdater.CURVE时，updater中颜色配置的优先级高于range中的颜色配置。在updater配置的动画时间周期内，以updater中的颜色配置来变化；在updater配置的动画时间周期外，以range中的颜色配置来变化。
 
-**类型：** ParticleColorUpdaterOptions&lt;UPDATER&gt;
+**类型：** [ParticleColorUpdaterOptions](../arkts-apis/arkts-arkui-particle-particlecolorupdateroptions-i.md)&lt;UPDATER&gt;
 
 **默认值：** {type:UPDATER.NONE;config:ParticleColorPropertyUpdaterConfigs[UPDATER.NONE]}
 

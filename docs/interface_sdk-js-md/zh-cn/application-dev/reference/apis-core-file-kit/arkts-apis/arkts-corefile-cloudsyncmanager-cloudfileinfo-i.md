@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## bothFileCount
 
 ```TypeScript
 bothFileCount: int
 ```
 
-本地已上传云端的文件总个数，取值范围[0, INT32\_MAX]，单位：个。
+本地已上传云端的文件总个数，取值范围[0, INT32_MAX]，单位：个。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -34,9 +40,9 @@ bothFileCount: int
 bothFileTotalSize: long
 ```
 
-本地已上传云端的文件总大小，取值范围[0, INT64\_MAX]，单位：Byte。
+本地已上传云端的文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 
@@ -52,9 +58,9 @@ bothFileTotalSize: long
 cloudFileCount: int
 ```
 
-本地未下载的云端文件总个数，取值范围[0, INT32\_MAX]，单位：个。
+本地未下载的云端文件总个数，取值范围[0, INT32_MAX]，单位：个。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -70,9 +76,9 @@ cloudFileCount: int
 cloudFileTotalSize: long
 ```
 
-本地未下载的云端文件总大小，取值范围[0, INT64\_MAX]，单位：Byte。
+本地未下载的云端文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 
@@ -88,9 +94,9 @@ cloudFileTotalSize: long
 localFileCount: int
 ```
 
-本地未上传云端的文件总个数，取值范围[0, INT32\_MAX]，单位：个。
+本地未上传云端的文件总个数，取值范围[0, INT32_MAX]，单位：个。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -106,9 +112,9 @@ localFileCount: int
 localFileTotalSize: long
 ```
 
-本地未上传云端的文件总大小，取值范围[0, INT64\_MAX]，单位：Byte。
+本地未上传云端的文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 

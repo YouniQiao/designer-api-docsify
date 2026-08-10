@@ -1,6 +1,6 @@
 # DelaySuspendInfo
 
-Defines the information about the transient task.
+短时任务信息。
 
 **Since:** 9
 
@@ -10,18 +10,23 @@ Defines the information about the transient task.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## actualDelayTime
 
 ```TypeScript
 actualDelayTime: int
 ```
 
-Actual duration of the transient task requested by the application, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Unit:ms
+Actual duration of the transient task requested by the application, in milliseconds.&lt;br&gt;Unit:ms
 
-Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery (  
-[BatteryCapacityLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ set to **LEVEL\_LOW**), the maximum duration is decreased to 1 minute.
+**说明：** 申请时间最长为3分钟，低电量（[BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md)为LEVEL_LOW）时最长为1分钟。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -37,9 +42,9 @@ Note: The maximum duration of a transient task is 3 minutes in normal cases. In 
 requestId: int
 ```
 
-Request ID of the transient task.
+应用实际申请的短时任务时间，单位：ms。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

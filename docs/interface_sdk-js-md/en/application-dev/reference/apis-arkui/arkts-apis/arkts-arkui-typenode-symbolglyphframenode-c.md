@@ -1,6 +1,6 @@
 # SymbolGlyphFrameNode
 
-Define the SymbolGlyph type of FrameNode.
+定义SymbolGlyph类型的FrameNode。
 
 **Inheritance/Implementation:** SymbolGlyphFrameNode extends [TypedFrameNode<SymbolGlyphAttribute>](TypedFrameNode<SymbolGlyphAttribute>)
 
@@ -18,7 +18,7 @@ Define the SymbolGlyph type of FrameNode.
 abstract initialize(value?: Resource): SymbolGlyphAttribute
 ```
 
-Initialize SymbolGlyph FrameNode.
+初始化SymbolGlyph类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize SymbolGlyph FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| value | [Resource](arkts-arkui-resource-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) |  |
 

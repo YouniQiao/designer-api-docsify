@@ -10,6 +10,12 @@ Provides the aperture query capability.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getSupportedPhysicalApertures
 
 ```TypeScript
@@ -38,8 +44,9 @@ Gets the supported physical apertures.Move to ApertureQuery interface from Apert
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**Applicable version:** 11 - 23 |
 
 ## getSupportedVirtualApertures
 
@@ -67,12 +74,21 @@ Obtains the supported virtual apertures.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Array of virtual apertures supported. |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Array of virtual apertures supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
+
+## Examples
+
+```TypeScript
+function getSupportedVirtualApertures(session: camera.PortraitPhotoSession): Array<number> {
+  let virtualApertures: Array<number> = session.getSupportedVirtualApertures();
+  return virtualApertures;
+}
+```
 

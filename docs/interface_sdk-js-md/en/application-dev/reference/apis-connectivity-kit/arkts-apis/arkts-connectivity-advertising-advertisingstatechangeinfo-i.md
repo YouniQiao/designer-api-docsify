@@ -1,6 +1,6 @@
 # AdvertisingStateChangeInfo
 
-Advertising state change information.
+广播状态变化信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Advertising state change information.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## advertisingId
 
 ```TypeScript
 advertisingId: int
 ```
 
-Indicates the advertising ID.
+广播ID。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Indicates the advertising ID.
 state: AdvertisingState
 ```
 
-Indicates the advertising state.
+广播状态。
 
-**Type:** AdvertisingState
+**Type:** [AdvertisingState](arkts-connectivity-ble-advertisingstate-e.md)
 
 **Since:** 26.0.0
 

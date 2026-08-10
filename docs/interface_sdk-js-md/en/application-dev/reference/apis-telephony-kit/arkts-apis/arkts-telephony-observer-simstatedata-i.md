@@ -10,6 +10,12 @@ Indicates SIM card type and status.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## reason
 
 ```TypeScript
@@ -18,7 +24,7 @@ reason: LockReason
 
 Indicates the SIM card lock type.
 
-**Type:** LockReason
+**Type:** [LockReason](arkts-telephony-observer-lockreason-e.md)
 
 **Since:** 8
 
@@ -36,7 +42,7 @@ state: SimState
 
 Indicates the SIM card states.
 
-**Type:** SimState
+**Type:** [SimState](arkts-telephony-sim-simstate-e.md)
 
 **Since:** 7
 
@@ -54,7 +60,7 @@ type: CardType
 
 Indicates the SIM card type.
 
-**Type:** CardType
+**Type:** [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md)
 
 **Since:** 7
 

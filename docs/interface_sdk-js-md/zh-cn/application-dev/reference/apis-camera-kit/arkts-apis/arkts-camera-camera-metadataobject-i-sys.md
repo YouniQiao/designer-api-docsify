@@ -1,6 +1,6 @@
 # MetadataObject
 
-相机元能力信息，[CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。
+相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。
 
 **起始版本：** 10
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## confidence
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly confidence: double
 
 Confidence of the detection, with a value range of [0, 1].
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 13
 
@@ -38,7 +44,7 @@ readonly objectId: int
 
 Metadata object ID.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 13
 

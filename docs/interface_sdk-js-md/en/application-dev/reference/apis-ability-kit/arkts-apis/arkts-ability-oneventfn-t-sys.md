@@ -22,5 +22,5 @@ Defines cli event callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The event sent by cli tool.  |
+| event | [CliToolEvent](arkts-ability-clitoolevent-i-sys.md) | Yes | The event sent by cli tool. |
 

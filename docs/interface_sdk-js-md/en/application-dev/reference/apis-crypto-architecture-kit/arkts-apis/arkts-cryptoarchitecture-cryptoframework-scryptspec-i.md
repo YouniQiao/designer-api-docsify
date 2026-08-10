@@ -1,11 +1,11 @@
 # ScryptSpec
 
-Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is a parameter for scrypt key derivation function (KDF).
-    **NOTE**  
-    
-    **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for  
-    key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8  
-    format. Otherwise, the key derived may be different from the one expected.
+密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为SCRYPT密钥派生函数进行密钥派生时的输入。
+
+> **说明：**
+> 
+> passphrase指的是原始密码，如果使用string类型，需要直接传入用于密钥派生的数据，而不是HexString、base64等字符串类型，同时需要确保该
+> 字符串为utf-8编码，否则派生结果会有差异。
 
 **Inheritance/Implementation:** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -17,15 +17,21 @@ Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## keySize
 
 ```TypeScript
 keySize: int
 ```
 
-Length of the derived key, in bytes. The value must be a positive integer.
+派生得到的密钥字节长度，需要为正整数，单位为bytes。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -43,9 +49,9 @@ Length of the derived key, in bytes. The value must be a positive integer.
 maxMemory: long
 ```
 
-Maximum memory size, in bytes. The value must be a positive integer.
+最大内存限制参数，需要为正整数，单位为bytes。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 18
 
@@ -63,9 +69,9 @@ Maximum memory size, in bytes. The value must be a positive integer.
 n: long
 ```
 
-CPU/memory cost parameter. The value must be a positive integer.
+CPU/内存开销参数，需要为正整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 18
 
@@ -83,9 +89,9 @@ CPU/memory cost parameter. The value must be a positive integer.
 p: long
 ```
 
-Parallelization parameter. The value must be a positive integer.
+并行化参数，需要为正整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 18
 
@@ -103,7 +109,7 @@ Parallelization parameter. The value must be a positive integer.
 passphrase: string | Uint8Array
 ```
 
-Original password entered by the user.
+用户输入的原始密码。
 
 **Type:** string \| Uint8Array
 
@@ -123,9 +129,9 @@ Original password entered by the user.
 r: long
 ```
 
-Block size. The value must be a positive integer.
+块大小参数，需要为正整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 18
 
@@ -143,7 +149,7 @@ Block size. The value must be a positive integer.
 salt: Uint8Array
 ```
 
-Salt value.
+盐值。
 
 **Type:** Uint8Array
 

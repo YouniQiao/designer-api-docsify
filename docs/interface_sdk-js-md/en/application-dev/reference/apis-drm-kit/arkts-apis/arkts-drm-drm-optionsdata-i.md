@@ -10,6 +10,12 @@ Provides the drm media key request info optional data.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## name
 
 ```TypeScript

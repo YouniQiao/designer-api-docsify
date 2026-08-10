@@ -1,5 +1,11 @@
 # createAtManager
 
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## createAtManager
 
 ```TypeScript
@@ -22,9 +28,9 @@ function createAtManager(): AtManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 获取程序访问控制模块的实例。 |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | 获取程序访问控制模块的实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建权限管理实例

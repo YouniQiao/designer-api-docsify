@@ -20,6 +20,6 @@ Defines the callback type used in VisibleAreaChange events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isExpanding | boolean | Yes | Indicates the ratio of the visible area to its own area compared to the last change. It is true as the ratio increases and false as the ratio decreases.  |
-| currentRatio | double | Yes | The value of currentRatio indicates the visibility ratio of the current component.  |
+| isExpanding | boolean | Yes | Indicates the ratio of the visible area to its own area compared to the last change. It is true as the ratio increases and false as the ratio decreases. |
+| currentRatio | double | Yes | The value of currentRatio indicates the visibility ratio of the current component. |
 

@@ -1,12 +1,18 @@
 # rotateToEulerAngles (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## rotateToEulerAngles
 
 ```TypeScript
 function rotateToEulerAngles(mechId: int, angles: EulerAngles, duration: int): Promise<Result>
 ```
 
-Rotates a mechanical device to the absolute angles.
+将机械设备旋转到绝对角度
 
 **Since:** 20
 
@@ -22,25 +28,25 @@ Rotates a mechanical device to the absolute angles.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the mechanical device. |
-| angles | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Absolute angles. |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Rotation duration. Unit: millisecond. |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
+| angles | [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | Yes | 绝对角度位置 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 执行时间 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that return the execution result. |
+| Promise&lt;Result&gt; | 返回执行结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let degree: mechanicManager.EulerAngles = {

@@ -1,11 +1,12 @@
 # Path
 
-Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成，支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。未设置填充类型时，默认填充类型为WINDING，可通过[setFillType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_修改。
-    **说明：**  
-    
-    - 本模块使用屏幕物理像素单位px。  
-    
-    - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成，支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。未设置填充类型时，默认填充类型为WINDING，可通过[setFillType](arkts-arkgraphics2d-drawing-path-c.md#setfilltype)修改。
+
+> **说明：**
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 11
 
@@ -14,6 +15,12 @@ Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥
 <!--Device-drawing-class Path--><!--Device-drawing-class Path-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## addArc
 
@@ -27,7 +34,7 @@ ArkTS-Sta:
 addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 ```
 
-向路径添加一段圆弧。与[arcTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相比，addArc不会自动添加从路径最后点到弧线起点的连接线段，且通过common2D.Rect对象指定矩形边界。若需要自动连接弧线起点，请使用arcTo；若仅需添加独立弧线，可使用addArc。
+向路径添加一段圆弧。与[arcTo](arkts-arkgraphics2d-drawing-path-c.md#arcto)相比，addArc不会自动添加从路径最后点到弧线起点的连接线段，且通过common2D.Rect对象指定矩形边界。若需要自动连接弧线起点，请使用arcTo；若仅需添加独立弧线，可使用addArc。
 
 **起始版本：** 12
 
@@ -42,14 +49,14 @@ addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 包含弧的椭圆的矩形边界。 |
-| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 弧的起始角度，单位为度，0°为x轴正方向，该参数为浮点数。当对90取余接近于0且sweepAngle不在(-360, 360)区间内时，将添加整个椭圆而非圆弧。 |
-| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向。当参数不在(-360, 360)区间内且startAngle对90取余接近于0时，将添加整个椭圆而非圆 弧；其余情况下实际扫描角度为该入参对360取余的结果。该参数为浮点数。 |
+| startAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 弧的起始角度，单位为度，0°为x轴正方向，该参数为浮点数。当对90取余接近于0且sweepAngle不在(-360, 360)区间内时，将添加整个椭圆而非圆弧。 |
+| sweepAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向。当参数不在(-360, 360)区间内且startAngle对90取余接近于0时，将添加整个椭圆而非圆 弧；其余情况下实际扫描角度为该入参对360取余的结果。该参数为浮点数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## addCircle
 
@@ -77,16 +84,16 @@ addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆形的半径，取值范围>0，该参数为浮点数，小于等于0时不会有任何效果。单位为物理像素px。 |
-| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示圆形的半径，取值范围>0，该参数为浮点数，小于等于0时不会有任何效果。单位为物理像素px。 |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addOval
 
@@ -115,14 +122,14 @@ addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 椭圆的矩形边界。 |
-| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示椭圆初始点的索引，取值范围为不小于0的整数，0、1、2、3分别对应椭圆的上端点、右端点、下端点、左端点，大于等于4时会对4取余。 |
-| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示椭圆初始点的索引，取值范围为不小于0的整数，0、1、2、3分别对应椭圆的上端点、右端点、下端点、左端点，大于等于4时会对4取余。 |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addPath
 
@@ -144,14 +151,14 @@ addPath(path: Path, matrix?: Matrix | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要添加到当前路径的源路径对象，经过矩阵变换后将被追加到当前路径中。 |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 表示矩阵对象，用于对源路径进行变换（如旋转、缩放、平移等）。当需要对源路径进行 几何变换后再添加到当前路径时传入此参数；当仅需原样添加源路径时可不传入，不传入时默认为单位矩阵（即不进行任何变换）。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 要添加到当前路径的源路径对象，经过矩阵变换后将被追加到当前路径中。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 表示矩阵对象，用于对源路径进行变换（如旋转、缩放、平移等）。当需要对源路径进行 几何变换后再添加到当前路径时传入此参数；当仅需原样添加源路径时可不传入，不传入时默认为单位矩阵（即不进行任何变换）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## addPolygon
 
@@ -180,7 +187,7 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## addRect
 
@@ -203,13 +210,13 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 向路径中添加的矩形轮廓，rect参数需为有效的common2D.Rect对象，left需小于right、top需小于bottom。 |
-| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addRoundRect
 
@@ -231,14 +238,14 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 向路径中添加的圆角矩形对象，需为有效的RoundRect对象。 |
-| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 向路径中添加的圆角矩形对象，需为有效的RoundRect对象。 |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## approximate
 
@@ -247,13 +254,14 @@ approximate(acceptableError: number): Array<number>
 ```
 
 将当前路径转化为由连续直线段构成的近似路径。
-    **说明：**  
-    
-    - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。  
-    
-    - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。  
-    
-    - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
+
+> **说明：**
+> 
+> - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。
+> 
+> - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。
+> 
+> - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
 
 **起始版本：** 20
 
@@ -273,13 +281,13 @@ approximate(acceptableError: number): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. 点的x坐标。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. 点的y坐标。 |
+| Array&lt;number&gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： &lt;br&gt;1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 &lt;br&gt;2. 点的x坐标。 &lt;br&gt;3. 点的y坐标。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## approximate
 
@@ -288,13 +296,14 @@ approximate(acceptableError: double): Array<double> | undefined
 ```
 
 将当前路径转化为由连续直线段构成的近似路径。
-    **说明：**  
-    
-    - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。  
-    
-    - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。  
-    
-    - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
+
+> **说明：**
+> 
+> - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。
+> 
+> - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。
+> 
+> - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
 
 **起始版本：** 24
 
@@ -314,13 +323,13 @@ approximate(acceptableError: double): Array<double> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;double&gt; |  返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. 点的x坐标。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. 点的y坐标。 |
+| Array&lt;double&gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： &lt;br&gt;1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 &lt;br&gt;2. 点的x坐标。 &lt;br&gt;3. 点的y坐标。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## arcTo
 
@@ -334,7 +343,7 @@ ArkTS-Sta:
 arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg: double): void
 ```
 
-给路径添加一段弧线。绘制弧线的方式为角度弧：首先指定一个矩形边界，取其内切椭圆；然后指定起始角度和扫描度数；最后从起始角度扫描截取椭圆周长的一部分，即为绘制的弧线。另外会默认添加一条从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到弧线起始点位置的线段。若不需要自动添加连接线段，请使用[addArc]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+给路径添加一段弧线。绘制弧线的方式为角度弧：首先指定一个矩形边界，取其内切椭圆；然后指定起始角度和扫描度数；最后从起始角度扫描截取椭圆周长的一部分，即为绘制的弧线。另外会默认添加一条从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到弧线起始点位置的线段。若不需要自动添加连接线段，请使用[addArc](arkts-arkgraphics2d-drawing-path-c.md#addarc)。
 
 **起始版本：** 11
 
@@ -350,18 +359,18 @@ arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形左上角的x坐标，该参数为浮点数。单位为物理像素px。 |
-| y1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形左上角的y坐标，该参数为浮点数。单位为物理像素px。 |
-| x2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形右下角的x坐标，该参数为浮点数。单位为物理像素px。 |
-| y2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形右下角的y坐标，该参数为浮点数。单位为物理像素px。 |
-| startDeg | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始的角度。角度的起始方向（0°）为x轴正方向。单位为度。 |
-| sweepDeg | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 扫描的度数，为正数时顺时针扫描，为负数时逆时针扫描。实际扫描的度数为该入参对360取模的结果。 单位为度。 |
+| x1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形左上角的x坐标，该参数为浮点数。单位为物理像素px。 |
+| y1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形左上角的y坐标，该参数为浮点数。单位为物理像素px。 |
+| x2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形右下角的x坐标，该参数为浮点数。单位为物理像素px。 |
+| y2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形右下角的y坐标，该参数为浮点数。单位为物理像素px。 |
+| startDeg | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 起始的角度。角度的起始方向（0°）为x轴正方向。单位为度。 |
+| sweepDeg | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 扫描的度数，为正数时顺时针扫描，为负数时逆时针扫描。实际扫描的度数为该入参对360取模的结果。 单位为度。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## buildFromSvgString
 
@@ -395,7 +404,7 @@ buildFromSvgString(str: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## close
 
@@ -425,7 +434,7 @@ ArkTS-Sta:
 conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)，目标点为 (endX, endY)。与[quadTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相比，conicTo通过权重参数可更灵活地控制曲线形状：权重为1时效果与quadTo相同，权重不为1时可精确表示圆弧、椭圆弧等圆锥曲线段。仅需标准二次贝塞尔曲线时推荐使用quadTo，需要精确表示圆弧或灵活控制曲线形状时推荐使用conicTo。
+在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)，目标点为 (endX, endY)。与[quadTo](arkts-arkgraphics2d-drawing-path-c.md#quadto)相比，conicTo通过权重参数可更灵活地控制曲线形状：权重为1时效果与quadTo相同，权重不为1时可精确表示圆弧、椭圆弧等圆锥曲线段。仅需标准二次贝塞尔曲线时推荐使用quadTo，需要精确表示圆弧或灵活控制曲线形状时推荐使用conicTo。
 
 **起始版本：** 12
 
@@ -441,17 +450,17 @@ conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。 小于等于0时，效果与[lineTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相同； 值为1时，效果与[quadTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相同。该参数为浮点数。 |
+| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。 小于等于0时，效果与[lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto)相同； 值为1时，效果与[quadTo](arkts-arkgraphics2d-drawing-path-c.md#quadto)相同。该参数为浮点数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## constructor
 
@@ -493,7 +502,7 @@ constructor(path: Path)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待复制的路径对象。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 待复制的路径对象。 |
 
 ## contains
 
@@ -507,7 +516,7 @@ ArkTS-Sta:
 contains(x: double, y: double): boolean
 ```
 
-判断指定坐标点是否被路径包含，判定规则参考[PathFillType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+判断指定坐标点是否被路径包含，判定规则参考[PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md)。
 
 **起始版本：** 12
 
@@ -521,8 +530,8 @@ contains(x: double, y: double): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴上坐标点，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴上坐标点，该参数为浮点数。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | x轴上坐标点，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | y轴上坐标点，该参数为浮点数。单位为物理像素px。 |
 
 **返回值：**
 
@@ -534,7 +543,7 @@ contains(x: double, y: double): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## convertToSvgString
 
@@ -588,18 +597,18 @@ cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: do
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlY1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlX2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlY2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlX1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 第一个控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlY1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 第一个控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlX2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 第二个控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlY2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 第二个控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getBounds
 
@@ -667,7 +676,7 @@ getConicWeightData(): Array<double>
 
 精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。
 
-数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）配合使用。
+数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo](arkts-arkgraphics2d-drawing-path-c.md#conicto)）配合使用。
 
 **起始版本：** 26.0.0
 
@@ -683,7 +692,7 @@ getConicWeightData(): Array<double>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 类型为浮点数，取值范围≥0。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生 额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 类型为浮点数，取值范围≥0。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生 额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
 
 ## getFillType
 
@@ -705,7 +714,7 @@ getFillType(): PathFillType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径的填充类型，决定路径内部区域的定义方式。 |
+| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | 路径的填充类型，决定路径内部区域的定义方式。 |
 
 ## getFillType
 
@@ -727,7 +736,7 @@ getFillType(): PathFillType | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径的填充类型，决定路径内部区域的定义方式。 |
+| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | 路径的填充类型，决定路径内部区域的定义方式。 |
 
 ## getLastPoint
 
@@ -809,7 +818,7 @@ getLength(forceClosed: boolean): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 路径长度。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 路径长度。单位为物理像素px。 |
 
 ## getMatrix
 
@@ -838,9 +847,9 @@ getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| distance | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。 单位为物理像素px。 |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于存储获取到的变换矩阵的矩阵对象，该矩阵表示路径上指定距离处的坐标位置和朝向信息。 |
-| flags | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 矩阵信息维度枚举，用于指定获取的矩阵包含哪些维度信息。 |
+| distance | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。 单位为物理像素px。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 用于存储获取到的变换矩阵的矩阵对象，该矩阵表示路径上指定距离处的坐标位置和朝向信息。 |
+| flags | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | 是 | 矩阵信息维度枚举，用于指定获取的矩阵包含哪些维度信息。 |
 
 **返回值：**
 
@@ -852,7 +861,7 @@ getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMea
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## getPathIterator
 
@@ -874,7 +883,7 @@ getPathIterator(): PathIterator
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。 |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。 |
 
 ## getPathIterator
 
@@ -896,7 +905,7 @@ getPathIterator(): PathIterator | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。创建失败时返回undefined。 |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。创建失败时返回undefined。 |
 
 ## getPointData
 
@@ -910,11 +919,11 @@ getPointData(): Array<common2D.Point>
 
 点数据的主要类型包括：
 
-终点坐标：与[moveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[lineTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_等指令配合，定义线段或移动的目标位置。
+终点坐标：与[moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto)、[lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto)等指令配合，定义线段或移动的目标位置。
 
 控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。
 
-闭合点：通常不单独提供坐标，由[close]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_指令隐式使用路径起点。
+闭合点：通常不单独提供坐标，由[close](arkts-arkgraphics2d-drawing-path-c.md#close)指令隐式使用路径起点。
 
 **起始版本：** 26.0.0
 
@@ -959,7 +968,7 @@ getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| distance | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。 该参数为浮点数。单位为物理像素px。 |
+| distance | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。 该参数为浮点数。单位为物理像素px。 |
 | position | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的坐标。 |
 | tangent | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的切线值，tangent.x表示该点切线的余弦值，tangent.y表示该点切线的正弦值。 |
 
@@ -973,7 +982,7 @@ getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getSegment
 
@@ -1002,10 +1011,10 @@ getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点， 小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。单位为物理像素px。 |
-| stop | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点， 小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
-| startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
-| dst | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点， 小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。单位为物理像素px。 |
+| stop | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点， 小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
+| startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto) 移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
+| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
 
 **返回值：**
 
@@ -1025,11 +1034,11 @@ getVerbData(): Array<PathIteratorVerb>
 
 指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如：
 
-[moveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_：将当前绘图点移至指定坐标，不产生线段。
+[moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto)：将当前绘图点移至指定坐标，不产生线段。
 
-[lineTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_：从当前点向指定点绘制直线段。
+[lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto)：从当前点向指定点绘制直线段。
 
-[close]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_：将当前点与路径起点相连，形成封闭区域。
+[close](arkts-arkgraphics2d-drawing-path-c.md#close)：将当前点与路径起点相连，形成封闭区域。
 
 **起始版本：** 26.0.0
 
@@ -1073,9 +1082,9 @@ interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示另一条路径对象。 |
-| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示插值权重，取值范围为[0.0, 1.0]。该参数为浮点数。 |
-| interpolatedPath | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示用于存储插值结果的目标路径对象。 |
+| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示另一条路径对象。 |
+| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示插值权重，取值范围为[0.0, 1.0]。该参数为浮点数。 |
+| interpolatedPath | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示用于存储插值结果的目标路径对象。 |
 
 **返回值：**
 
@@ -1087,7 +1096,7 @@ interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## isClosed
 
@@ -1155,7 +1164,7 @@ isEqual(path: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 另一条路径对象。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 另一条路径对象。 |
 
 **返回值：**
 
@@ -1183,7 +1192,7 @@ isInterpolate(other: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示另一条路径对象。 |
+| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示另一条路径对象。 |
 
 **返回值：**
 
@@ -1197,7 +1206,7 @@ isInterpolate(other: Path): boolean
 isInverseFillType(): boolean
 ```
 
-检查当前路径填充类型是否是反向填充类型。例如填充类型WINDING、EVEN\_ODD不是反向类型，INVERSE\_WINDING、INVERSE\_EVEN\_ODD是反向类型。
+检查当前路径填充类型是否是反向填充类型。例如填充类型WINDING、EVEN_ODD不是反向类型，INVERSE_WINDING、INVERSE_EVEN_ODD是反向类型。
 
 **起始版本：** 23
 
@@ -1269,14 +1278,14 @@ lineTo(x: double, y: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## moveTo
 
@@ -1290,7 +1299,7 @@ ArkTS-Sta:
 moveTo(x: double, y: double): void
 ```
 
-设置自定义路径的起始点位置。与[rMoveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用相对坐标不同，moveTo使用绝对坐标设置起始点。当路径起点固定时，推荐使用moveTo；当路径需要基于当前位置动态构建时，推荐使用[rMoveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+设置自定义路径的起始点位置。与[rMoveTo](arkts-arkgraphics2d-drawing-path-c.md#rmoveto)使用相对坐标不同，moveTo使用绝对坐标设置起始点。当路径起点固定时，推荐使用moveTo；当路径需要基于当前位置动态构建时，推荐使用[rMoveTo](arkts-arkgraphics2d-drawing-path-c.md#rmoveto)。
 
 **起始版本：** 11
 
@@ -1306,14 +1315,14 @@ moveTo(x: double, y: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 起始点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 起始点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## offset
 
@@ -1342,13 +1351,13 @@ offset(dx: number, dy: number): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## offset
 
@@ -1377,13 +1386,13 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | New path generated. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | New path generated. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## op
 
@@ -1405,8 +1414,8 @@ op(path: Path, pathOp: PathOp): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径对象，用于与当前路径合并。 |
-| pathOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径操作类型枚举，用于指定两条路径的布尔运算方式。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象，用于与当前路径合并。 |
+| pathOp | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | 是 | 路径操作类型枚举，用于指定两条路径的布尔运算方式。 |
 
 **返回值：**
 
@@ -1418,7 +1427,7 @@ op(path: Path, pathOp: PathOp): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## quadTo
 
@@ -1448,16 +1457,16 @@ quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rConicTo
 
@@ -1471,7 +1480,7 @@ ArkTS-Sta:
 rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。与[conicTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rConicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加圆锥曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。与[conicTo](arkts-arkgraphics2d-drawing-path-c.md#conicto)使用绝对坐标不同，rConicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加圆锥曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1487,17 +1496,17 @@ rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: doubl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示曲线权重，决定了曲线的形状，越大越接近控制点。 若小于等于0则等同于使用[rLineTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_添加一条到结束点的线段， 若为1则等同于[rQuadTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，该参数为浮点数。 |
+| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 表示曲线权重，决定了曲线的形状，越大越接近控制点。 若小于等于0则等同于使用[rLineTo](arkts-arkgraphics2d-drawing-path-c.md#rlineto)添加一条到结束点的线段， 若为1则等同于[rQuadTo](arkts-arkgraphics2d-drawing-path-c.md#rquadto)，该参数为浮点数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rCubicTo
 
@@ -1511,7 +1520,7 @@ ArkTS-Sta:
 rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。与[cubicTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rCubicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加三阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。与[cubicTo](arkts-arkgraphics2d-drawing-path-c.md#cubicto)使用绝对坐标不同，rCubicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加三阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1527,18 +1536,18 @@ rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlX2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlX1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 第一个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 第一个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlX2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 第二个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 第二个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rLineTo
 
@@ -1552,7 +1561,7 @@ ArkTS-Sta:
 rLineTo(dx: double, dy: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。与[lineTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rLineTo使用相对于当前路径最后点位置的偏移量来指定目标点。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当目标点位置固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。与[lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto)使用绝对坐标不同，rLineTo使用相对于当前路径最后点位置的偏移量来指定目标点。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当目标点位置固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1568,14 +1577,14 @@ rLineTo(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rMoveTo
 
@@ -1589,7 +1598,7 @@ ArkTS-Sta:
 rMoveTo(dx: double, dy: double): void
 ```
 
-设置一个相对于当前路径最后点位置（若路径没有内容则默认为 (0, 0)）的路径起始点位置。与[moveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rMoveTo使用相对于当前路径最后点位置的偏移量。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法（如rMoveTo、rLineTo等）；当路径起点固定时，推荐使用绝对坐标方法。
+设置一个相对于当前路径最后点位置（若路径没有内容则默认为 (0, 0)）的路径起始点位置。与[moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto)使用绝对坐标不同，rMoveTo使用相对于当前路径最后点位置的偏移量。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法（如rMoveTo、rLineTo等）；当路径起点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1605,14 +1614,14 @@ rMoveTo(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 路径新起始点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 路径新起始点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 路径新起始点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 路径新起始点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rQuadTo
 
@@ -1626,7 +1635,7 @@ ArkTS-Sta:
 rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。与[quadTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rQuadTo使用相对于当前路径最后点位置的偏移量在当前路径上添加二阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。与[quadTo](arkts-arkgraphics2d-drawing-path-c.md#quadto)使用绝对坐标不同，rQuadTo使用相对于当前路径最后点位置的偏移量在当前路径上添加二阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1642,16 +1651,16 @@ rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dy1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dx2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dy2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dx1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dy1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dx2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dy2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## reset
 
@@ -1707,7 +1716,7 @@ set(src: Path): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于替换当前路径内容的源路径对象。 |
+| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 用于替换当前路径内容的源路径对象。 |
 
 ## setFillType
 
@@ -1729,13 +1738,13 @@ setFillType(pathFillType: PathFillType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathFillType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示路径填充类型，决定路径内部区域的定义方式。 |
+| pathFillType | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | 是 | 表示路径填充类型，决定路径内部区域的定义方式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setLastPoint
 
@@ -1763,8 +1772,8 @@ setLastPoint(x: double, y: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定点的x轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定点的y轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 指定点的x轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 指定点的y轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## toggleInverseFillType
 
@@ -1772,7 +1781,7 @@ setLastPoint(x: double, y: double): void
 toggleInverseFillType(): void
 ```
 
-切换路径的填充类型为反向类型。例如，使用WINDING填充类型时，经过取反后填充类型为INVERSE\_WINDING，而使用EVEN\_ODD填充类型时，经过取反后填充类型为INVERSE\_EVEN\_ODD，反之亦然。
+切换路径的填充类型为反向类型。例如，使用WINDING填充类型时，经过取反后填充类型为INVERSE_WINDING，而使用EVEN_ODD填充类型时，经过取反后填充类型为INVERSE_EVEN_ODD，反之亦然。
 
 **起始版本：** 23
 
@@ -1802,11 +1811,11 @@ transform(matrix: Matrix): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示对路径进行矩阵变换所使用的矩阵对象，该矩阵定义了变换的具体参数 （如缩放比例、旋转角度、平移距离等），路径中的所有点将按照该矩阵进行变换。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 表示对路径进行矩阵变换所使用的矩阵对象，该矩阵定义了变换的具体参数 （如缩放比例、旋转角度、平移距离等），路径中的所有点将按照该矩阵进行变换。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

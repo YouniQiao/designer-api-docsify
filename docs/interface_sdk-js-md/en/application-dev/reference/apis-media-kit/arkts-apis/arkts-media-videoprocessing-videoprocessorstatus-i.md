@@ -10,6 +10,12 @@ Provides the unified video processor status.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
+## Modules to Import
+
+```TypeScript
+import { videoProcessing } from 'kits/@kit.MediaKit';
+```
+
 ## aiHdr
 
 ```TypeScript
@@ -18,7 +24,7 @@ aiHdr?: VideoProcessorAiHdrStatus
 
 AIHDR status.
 
-**Type:** VideoProcessorAiHdrStatus
+**Type:** [VideoProcessorAiHdrStatus](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md)
 
 **Since:** 26.0.0
 

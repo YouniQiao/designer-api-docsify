@@ -1,6 +1,6 @@
 # PackingOptionsForSequence
 
-Defines the options for encoding animated images.
+描述动图编码参数的选项。
 
 **Since:** 18
 
@@ -10,19 +10,24 @@ Defines the options for encoding animated images.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## delayTimeList
 
 ```TypeScript
 delayTimeList: Array<int>
 ```
 
-Delay time of each frame in GIF encoding. The value must be greater than 0.
+GIF编码中设定每帧输出图像的延迟时间，取值需大于0。
 
-The unit is 10 milliseconds. For example, if this parameter is set to 10, the actual delay per frame is 100 ms.
+- 单位：10毫秒（ms）。例如，取值为10时，实际单帧延迟是100毫秒。  
+- 如果长度小于frameCount，不足的部分将使用delayTimeList中的最后一个值进行填充。
 
-If the array length is less than **frameCount**, the last value in the array will be used for the remaining frames.
-
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 18
 
@@ -38,14 +43,14 @@ If the array length is less than **frameCount**, the last value in the array wil
 disposalTypes?: Array<int>
 ```
 
-Array that defines how each image frame transitions. If the array length is less than **frameCount**, the last value in the array will be used for the remaining frames. The values can be:
+GIF编码中设定每帧输出图像的帧过渡模式，如果长度小于frameCount，不足的部分将使用disposalTypes中的最后一个值进行填充，可取值如下：
 
-- **0**: No operation is required.  
-- **1**: Keeps the image unchanged.  
-- **2**: Restores the background color.  
-- **3**: Restores to the previous state.
+- 0：不需要任何操作。  
+- 1：保持图形不变。  
+- 2：恢复背景色。  
+- 3：恢复到之前的状态。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 18
 
@@ -61,9 +66,9 @@ Array that defines how each image frame transitions. If the array length is less
 frameCount: int
 ```
 
-Number of frames specified in GIF encoding.
+GIF编码中指定的帧数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -79,11 +84,11 @@ Number of frames specified in GIF encoding.
 loopCount?: int
 ```
 
-Number of times that the output image in GIF encoding loops. The value range is [0, 65535].
+表示在GIF编码中输出图片循环播放次数，取值范围为[0，65535]。
 
-The value **0** means an infinite loop. If this field is not carried, loop playback is not performed.
+0表示无限循环；若无此字段，则表示不循环播放。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 

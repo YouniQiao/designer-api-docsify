@@ -1,6 +1,6 @@
 # ChildProcessOptions
 
-子进程的启动配置选项。通过[childProcessManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_启动子进程时，可以通过ChildProcessOptions配置子进程启动选项。
+子进程的启动配置选项。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，可以通过ChildProcessOptions配置子进程启动选项。
 
 **起始版本：** 12
 
@@ -9,6 +9,12 @@
 <!--Device-unnamed-export interface ChildProcessOptions--><!--Device-unnamed-export interface ChildProcessOptions-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { ChildProcessOptions } from 'kits/@kit.AbilityKit';
+```
 
 ## isolationMode
 

@@ -1,6 +1,6 @@
 # ContextMenuAnimationOptions
 
-Defines the style for displaying a long-press preview.
+长按预览时显示的样式信息。
 
 **Since:** 11
 
@@ -16,24 +16,21 @@ Defines the style for displaying a long-press preview.
 hoverScale?: AnimationRange<number>
 ```
 
-In the custom preview (**preview** is of the CustomBuilder type) and menu displayed in long-press (**responseType**  
-is set to **LongPress**) scenarios, **hoverScale** is used to set two parameters for the screenshot floating animation of the bound component: the start and end scale ratios relative to the original preview image. After  
-**hoverScale** is set, the floating animation and preview image are switched with a transition effect.
+在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，hoverScale用于为绑定组件的截图浮起动画设置两个参数：相对于预览原图的起始与结束缩放比例。hoverScale设置后，浮起动画和预览图之间会有切换过渡动效。 
 
-**NOTE**
+**说明：**
 
-If the value is less than or equal to **0**, this parameter does not take effect.
+倍率设置参数小于等于0时，不生效。
 
-This API does not take effect in  
-[bindContextMenu\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_scenarios.
+[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)场景下，不生效。
 
-This API does not take effect when **transition** is set.
+设置transition接口时，不生效。 
 
-If this API and the **scale** API are used at the same time, the start value of the **scale** API does not take effect.
+使用此接口且同时使用scale接口时，scale接口起始值不生效。
 
-To ensure the optimal experience, it is not recommended that the final preview image size be smaller than the size of the original component snapshot. The width and height of the preview animation are affected by the component snapshot and the custom preview size. Verify the display effect based on the actual use case.
+为保障最佳体验，最终预览图尺寸不建议小于原组件截图尺寸。当前预览动效宽高会受组件截图和自定义预览大小影响，请根据实际使用情况自行保障展示效果。
 
-**Type:** AnimationRange&lt;number&gt;
+**Type:** [AnimationRange](arkts-arkui-animationrange-t.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -53,14 +50,13 @@ To ensure the optimal experience, it is not recommended that the final preview i
 hoverScaleInterruption?: boolean
 ```
 
-Whether lifting the finger before triggering the drag effect allows preview menu pop-up cancellation in scenarios where **preview** is of the CustomBuilder type (custom preview image), **responseType** is set to **LongPress** (display is triggered by a long-press action), and **hoverScaleInterruption** is set to **true**. The options are  
-**true** (yes) and **false** (no).
+在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，且hoverScaleInterruption为true时，在触发拖拽效果前抬起手是否允许取消预览菜单弹出。true表示允许取消预览菜单弹出，false表示不允许取消预览菜单弹出。
 
-Default value: **false**
+默认值：false 
 
-**NOTE**
+**说明：**
 
-If the **hoverScale** API is not set or the **transition** API is set, this parameter does not take effect. If the finger is lifted before the long-press duration is sufficient to trigger the drag effect, the **hoverScale** effect of the preview menu will revert, the preview menu will not pop up, and gesture events such as click bound to the original component can still be triggered. If the finger is lifted after the long-press duration is sufficient to trigger the drag effect, the preview menu will pop up properly, and gesture events such as click bound to the original component will no longer be triggered.
+未设置hoverScale接口或设置了transition接口时，该参数不生效。长按时长不足以触发拖拽效果时抬起手，预览菜单hoverScale效果回退，预览菜单不弹出，并可触发原组件上绑定的click等手势事件。长按时长足以触发拖拽效果后抬起手，预览菜单正常弹出，并不再触发原组件上绑定的click等手势事件。
 
 **Type:** boolean
 
@@ -84,15 +80,15 @@ If the **hoverScale** API is not set or the **transition** API is set, this para
 scale?: AnimationRange<number>
 ```
 
-Relative scale ratio at the start and end of the animation compared to the original preview image.
+动画开始和结束时相对预览原图缩放比例。
 
-Default value: **[0.95, 1.1]**
+默认值：[0.95, 1.1]
 
-**NOTE**
+**说明：**
 
-The scale ratio must be set based on the specific use case. It is recommended that it be less than the width of the preview image or the maximum constraint of the layout.
+缩放比例需要根据实际开发场景设置，建议设置值为小于预览图宽度或布局的最大限制。
 
-**Type:** AnimationRange&lt;number&gt;
+**Type:** [AnimationRange](arkts-arkui-animationrange-t.md)&lt;number&gt;
 
 **Default:** [0.95, 1.1] [since 11 - 11]
 
@@ -114,15 +110,15 @@ The scale ratio must be set based on the specific use case. It is recommended th
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the menu.
+设置菜单显示和退出的过渡效果。
 
-**NOTE**
+**说明：**
 
-If the screen orientation is switched during the exit animation of a menu, the menu will avoid obstacles. Level-2menus do not inherit custom animations. The level-2 menu can be clicked during the display process, but not during the execution of the exit animation.
+在菜单退出动效过程中，横竖屏切换时，菜单会避让。二级菜单不继承自定义动效。弹出过程中可以点击二级菜单，但在退出动效执行过程中不允许点击二级菜单。
 
-For details, see [TransitionEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。
 
-**Type:** TransitionEffect
+**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
 
 **Since:** 12
 

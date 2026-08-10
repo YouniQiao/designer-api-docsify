@@ -1,6 +1,6 @@
 # SyncedPropertyOneWay (System API)
 
-Inherits from [SubscribedAbstractProperty\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Represents a property with one-way synchronization.
+继承自[SubscribedAbstractProperty\&lt;T\&gt;](arkts-arkui-subscribedabstractproperty-c.md)。用于接收父组件状态值的单向同步，当父组件状态变化时更新自身值。
 
 **Inheritance/Implementation:** SyncedPropertyOneWay extends [SubscribedAbstractProperty<T>](SubscribedAbstractProperty<T>) and implements [ISinglePropertyChangeSubscriber<T>](ISinglePropertyChangeSubscriber<T>)
 
@@ -20,7 +20,7 @@ Inherits from [SubscribedAbstractProperty\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_]\_\
 aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void
 ```
 
-Called when the object is about to be destroyed.
+销毁时调用。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Called when the object is about to be destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unsubscribeMe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Subscriber to remove. |
+| unsubscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | 被取消的订阅者，需为已订阅的订阅者；不传入则取消所有订阅者。 |
 
 ## constructor
 
@@ -44,7 +44,7 @@ Called when the object is about to be destroyed.
 constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)
 ```
 
-Constructor.
+构造函数。订阅关系不再需要时，应调用[unlinkSuscriber()](arkts-arkui-subscribedabstractproperty-c.md#unlinksuscriber)解除订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取），或调用本对象的[aboutToBeDeleted()](arkts-arkui-syncedpropertyoneway-c-sys.md#abouttobedeleted)方法处理取消订阅。
 
 **Since:** 7
 
@@ -60,9 +60,9 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Data source for the one-way synchronized property. |
-| subscribeMe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Subscriber. |
-| info | string | No | Additional information about the subscriber. |
+| source | [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | Yes | 单向同步属性的数据源。 |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
+| info | string | No | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
 ## get
 
@@ -70,7 +70,7 @@ Constructor.
 get(): T
 ```
 
-Obtains the current value of the property.
+获取数据时调用。
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ Obtains the current value of the property.
 
 | Type | Description |
 | --- | --- |
-| T |  Instance of the T type. |
+| T | 返回单向同步属性当前的数据值。 |
 
 ## hasChanged
 
@@ -94,7 +94,7 @@ Obtains the current value of the property.
 hasChanged(newValue: T): void
 ```
 
-Notifies subscribers that the property value has changed.
+变化时调用。
 
 **Since:** 7
 
@@ -110,7 +110,7 @@ Notifies subscribers that the property value has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | Instance of the T type. |
+| newValue | T | Yes | 更改后的新值。 |
 
 ## set
 
@@ -118,7 +118,7 @@ Notifies subscribers that the property value has changed.
 set(newValue: T): void
 ```
 
-Sets a new value for the property.
+赋值时调用。
 
 **Since:** 7
 
@@ -134,7 +134,7 @@ Sets a new value for the property.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | Instance of the T type. |
+| newValue | T | Yes | 要设置的新值。 |
 
 ## source_
 
@@ -142,7 +142,7 @@ Sets a new value for the property.
 private source_
 ```
 
-Data source for the two-way synchronized property.
+单向同步属性的数据源。
 
 **Since:** 7
 
@@ -160,7 +160,7 @@ Data source for the two-way synchronized property.
 private wrappedValue_
 ```
 
-Value used for one-way binding.
+单向绑定时的值。
 
 **Since:** 7
 

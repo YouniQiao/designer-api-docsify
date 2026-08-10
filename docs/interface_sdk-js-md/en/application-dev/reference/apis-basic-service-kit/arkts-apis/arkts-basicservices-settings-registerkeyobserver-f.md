@@ -1,5 +1,11 @@
 # registerKeyObserver
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## registerKeyObserver
 
 ```TypeScript
@@ -7,7 +13,7 @@ function registerKeyObserver(context: Context, name: string, domainName: string,
 ```
 
 Monitor registration key(synchronous method)  
-[USER\_SECURE] domain need ohos.permission.MANAGE\_SECURE\_SETTINGS permission.
+[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
@@ -23,10 +29,10 @@ Monitor registration key(synchronous method)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | callback when monitored key value is changed. |
+| observer | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | callback when monitored key value is changed. |
 
 **Return value:**
 
@@ -34,7 +40,7 @@ Monitor registration key(synchronous method)
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

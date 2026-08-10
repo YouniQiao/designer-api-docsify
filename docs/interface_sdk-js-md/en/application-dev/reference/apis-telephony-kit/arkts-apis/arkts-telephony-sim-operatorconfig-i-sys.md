@@ -12,6 +12,12 @@ Defines the carrier configuration.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## field
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # WebHitTestType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the cursor node HitTest.
+Enum type supplied to {@link getHitTest} for indicating the cursor node HitTest.
 
 **起始版本：** 23
 

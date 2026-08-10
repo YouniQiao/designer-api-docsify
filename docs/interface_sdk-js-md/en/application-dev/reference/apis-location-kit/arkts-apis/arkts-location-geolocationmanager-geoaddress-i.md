@@ -10,6 +10,12 @@ Data struct describes geographic locations.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## addressUrl
 
 ```TypeScript
@@ -108,7 +114,7 @@ descriptionsSize?: int
 
 Indicates the amount of additional descriptive information.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -126,7 +132,7 @@ latitude?: double
 
 Indicates latitude information.A positive value indicates north latitude,and a negative value indicates south latitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -180,7 +186,7 @@ longitude?: double
 
 Indicates longitude information.A positive value indicates east longitude ,and a negative value indicates west longitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 

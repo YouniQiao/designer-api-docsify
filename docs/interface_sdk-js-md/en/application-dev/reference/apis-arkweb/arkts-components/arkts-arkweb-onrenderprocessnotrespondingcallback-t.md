@@ -4,7 +4,7 @@
 type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void
 ```
 
-Defines a callback invoked when the rendering process does not respond.
+The callback of render process not responding.
 
 **Since:** 12
 
@@ -18,5 +18,5 @@ Defines a callback invoked when the rendering process does not respond.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | details of onRenderProcessNotResponding.  |
+| data | [RenderProcessNotRespondingData](arkts-arkweb-renderprocessnotrespondingdata-i.md) | Yes | details of onRenderProcessNotResponding. |
 

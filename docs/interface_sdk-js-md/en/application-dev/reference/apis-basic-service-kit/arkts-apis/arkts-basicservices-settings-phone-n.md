@@ -10,6 +10,12 @@ Provides methods for setting the answering mode of incoming and outgoing calls.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Constants

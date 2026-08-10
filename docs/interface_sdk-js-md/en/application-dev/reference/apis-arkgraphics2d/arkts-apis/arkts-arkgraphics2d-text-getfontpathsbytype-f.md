@@ -1,12 +1,18 @@
 # getFontPathsByType
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getFontPathsByType
 
 ```TypeScript
 function getFontPathsByType(fontType: SystemFontType): Array<string>
 ```
 
-Obtains the paths of all font files of a specified font type.
+获取指定字体类型的所有字体文件路径。
 
 **Since:** 23
 
@@ -22,15 +28,15 @@ Obtains the paths of all font files of a specified font type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font type. |
+| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | 指定的字体类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of font file paths. |
+| Array&lt;string&gt; | 字体文件路径列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'

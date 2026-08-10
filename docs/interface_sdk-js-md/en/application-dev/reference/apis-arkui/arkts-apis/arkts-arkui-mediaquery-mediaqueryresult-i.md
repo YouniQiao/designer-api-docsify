@@ -1,6 +1,6 @@
 # MediaQueryResult
 
-Defines the Result of mediaquery.
+用于执行媒体查询操作。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the Result of mediaquery.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { mediaquery } from 'kits/@kit.ArkUI';
+```
+
 ## matches
 
 ```TypeScript
 readonly matches: boolean
 ```
 
-Whether the match condition is met.This parameter is read-only.
+是否符合匹配条件。true表示满足查询条件，false表示不满足查询条件。此属性为只读属性。
 
 **Type:** boolean
 
@@ -36,7 +42,7 @@ Whether the match condition is met.This parameter is read-only.
 readonly media: string
 ```
 
-Matching condition of a media event.This parameter is read-only.
+媒体事件的匹配条件。此属性为只读属性。
 
 **Type:** string
 

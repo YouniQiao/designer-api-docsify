@@ -5,7 +5,7 @@ type DomainPluginGetAccountInfoFunc = (options: GetDomainAccountInfoPluginOption
     callback: AsyncCallback<DomainAccountInfo>) => void
 ```
 
-Gets the domain account information with the specified options.
+查询指定域账号的信息。
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ Gets the domain account information with the specified options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the options for getting domain account information.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DomainAccountInfo&gt; | Yes | Indicates the callback for notifying the domain account information.  |
+| options | [GetDomainAccountInfoPluginOptions](arkts-basicservices-osaccount-getdomainaccountinfopluginoptions-i-sys.md) | Yes | 表示域账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DomainAccountInfo&gt; | Yes | 表示查询结果回调。 |
 

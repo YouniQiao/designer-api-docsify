@@ -1,12 +1,18 @@
 # createCdsmClient
 
+## Modules to Import
+
+```TypeScript
+import { cdsm } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createCdsmClient
 
 ```TypeScript
 function createCdsmClient(address: string): CdsmClient
 ```
 
-Creates a CDSM client instance.
+创建CDSM客户端实例。
 
 **Since:** 26.0.0
 
@@ -24,22 +30,22 @@ Creates a CDSM client instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the address of CDSM server. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The length must be 17. Value constraint: The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
+| address | string | Yes | CDSM服务端地址。 &lt;br&gt;长度必须为17。取值约束：由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a CDSM client instance. |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | 返回CDSM客户端实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
-| 36100003 | NearLink disabled. |
-| 36100041 | Invalid address. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100050 | Coordinated Devices Set Management not supported. |
+| 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 36100041 | Invalid address. |
 

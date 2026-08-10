@@ -20,6 +20,6 @@ export type NavDestinationBuilder = (name: string, param?: Object) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | [NavDestination]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_页面名称。  |
-| param | Object | 否 | [NavDestination]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_页面详细参数。默认值为空。  |
+| name | string | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面名称。 |
+| param | Object | 否 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面详细参数。默认值为空。 |
 

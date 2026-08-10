@@ -4,7 +4,7 @@
 export declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void
 ```
 
-Handler of ArcSlider, used in OnEnlarge.
+弧形Slider放大或缩小时，告知应用。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Handler of ArcSlider, used in OnEnlarge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnlarged | boolean | Yes | the enlarged type of the ArcSlider. True means enlarge, false means shrink.  |
+| isEnlarged | boolean | Yes | ArcSlider当前是否放大。<br/>isEnlarged为false时，ArcSlider组件处于缩小状态。<br/>isEnlarged为true时， ArcSlider组件处于放大状态。 |
 

@@ -1,6 +1,6 @@
 # AudioPersonalizedSpatialEnabledChangeForAnyDevice (System API)
 
-This interface is used to notify the listener of personalized spatialization enabled state change of any device.
+通知监听器开启个性化空间任何设备的状态变化。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ This interface is used to notify the listener of personalized spatialization ena
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## deviceDescriptor
 
 ```TypeScript
 deviceDescriptor: AudioDeviceDescriptor
 ```
 
-Audio device description.
+音频设备描述。
 
-**Type:** AudioDeviceDescriptor
+**Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -40,7 +46,7 @@ Audio device description.
 enabled: boolean
 ```
 
-Personalized spatialization enable state.
+个性化空间化使能状态。
 
 **Type:** boolean
 

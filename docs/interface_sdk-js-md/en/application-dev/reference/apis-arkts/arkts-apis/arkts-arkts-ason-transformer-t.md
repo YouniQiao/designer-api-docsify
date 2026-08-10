@@ -5,7 +5,7 @@ type Transformer = (this: ISendable, key: string,
       value: ISendable | undefined | null) => ISendable | undefined | null
 ```
 
-The type of conversion result function.
+用于转换结果函数的类型。
 
 **Since:** 12
 
@@ -21,13 +21,13 @@ The type of conversion result function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The ISendable to which the parsed key value pair belongs.  |
-| key | string | Yes | Attribute name.  |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined \| null | Yes | The value of the parsed key value pair.  |
+| this | [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) | Yes | 所解析的键值对所属的对象。 |
+| key | string | Yes | 属性名。 |
+| value | [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) \| undefined \| null | Yes | 所解析的键值对的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined \| null | Return the modified ISendable or undefined or null.  |
+| [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) \| undefined \| null | 返回转换结果后的ISendable对象或undefined或null。 |
 

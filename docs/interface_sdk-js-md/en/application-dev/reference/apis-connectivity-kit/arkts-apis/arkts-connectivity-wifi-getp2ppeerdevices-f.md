@@ -1,5 +1,11 @@
 # getP2pPeerDevices
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getP2pPeerDevices
 
 ```TypeScript
@@ -55,9 +61,9 @@ Obtains the information about the found devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WifiP2pDevice[]&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -67,11 +73,11 @@ wifi.getP2pPeerDevices((err, data:wifi.WifiP2pDevice) => {
        console.error("get P2P peer devices error");
        return;
    }
-	console.info("get P2P peer devices: " + JSON.stringify(data));
+  console.info("get P2P peer devices: " + JSON.stringify(data));
 });
 
 wifi.getP2pPeerDevices().then(data => {
-	console.info("get P2P peer devices: " + JSON.stringify(data));
+  console.info("get P2P peer devices: " + JSON.stringify(data));
 });
 ```
 

@@ -1,6 +1,6 @@
 # PeerInfo
 
-Defines the application collaboration information.
+应用协同信息。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Defines the application collaboration information.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Ability name of the peer application.
+对端应用的组件名。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Ability name of the peer application.
 bundleName: string
 ```
 
-Bundle name of the application.
+对端应用的包名。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Bundle name of the application.
 deviceId: string
 ```
 
-Peer device ID.
+对端设备ID。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ Peer device ID.
 moduleName: string
 ```
 
-Module name of the peer application.
+对端应用的模块名。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ Module name of the peer application.
 serviceName?: string
 ```
 
-Service name for the application.
+应用设置的服务名称。
 
 **Type:** string
 

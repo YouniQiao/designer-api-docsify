@@ -1,6 +1,6 @@
 # WindowTransitionType
 
-Enumerates the types of window transition animations.
+窗口转场动画类型枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the types of window transition animations.
 DESTROY = 0
 ```
 
-Transition animation when the window is destroyed.
+表示窗口销毁时的转场动画。
 
 **Since:** 20
 

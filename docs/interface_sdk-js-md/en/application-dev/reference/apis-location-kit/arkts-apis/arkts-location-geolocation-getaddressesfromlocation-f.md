@@ -1,5 +1,11 @@
 # getAddressesFromLocation
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## getAddressesFromLocation
 
 ```TypeScript
@@ -26,10 +32,10 @@ Obtain address info from location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the reverse geocode query parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
+| request | [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md) | Yes | Indicates the reverse geocode query parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -71,7 +77,7 @@ Obtain address info from location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the reverse geocode query parameters. |
+| request | [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md) | Yes | Indicates the reverse geocode query parameters. |
 
 **Return value:**
 
@@ -79,7 +85,7 @@ Obtain address info from location
 | --- | --- |
 | Promise&lt;Array&lt;GeoAddress&gt;&gt; | The promise returned by the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

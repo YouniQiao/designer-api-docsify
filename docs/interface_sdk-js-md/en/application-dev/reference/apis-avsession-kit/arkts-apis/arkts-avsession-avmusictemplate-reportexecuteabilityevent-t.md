@@ -4,7 +4,7 @@
 type ReportExecuteAbilityEvent = (want: WantAgent) => void
 ```
 
-The report extension ability event.
+通知音频模板控制方拉起指定媒体应用界面事件。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ The report extension ability event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | ability info  |
+| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | Yes | 媒体应用页面启动信息。 |
 

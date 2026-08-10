@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## type
 
 ```TypeScript
@@ -22,7 +28,7 @@ type: AnimationType
 
 The type of window animation
 
-**类型：** AnimationType
+**类型：** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
 **起始版本：** 20
 

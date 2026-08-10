@@ -1,8 +1,8 @@
 # SwipeActionItem
 
-Describes the swipe action item.For a list in vertical layout, it refers to the delete option displayed on the left (or right) of the list item when the list item is swiped right (or left).
+SwipeActionItem用于配置[SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md)中的start或end划出项，包括划出时显示的操作项、长距离操作区域的距离阈值，以及进入、退出长距离操作区域、抬手触发操作和状态变化时的回调。
 
-For a list in horizontal layout, it refers to the delete option displayed below (or above) the list item when the list item is swiped up (or down).
+作为start划出项时，List为垂直布局时显示在ListItem左侧，List为水平布局时显示在ListItem上方；作为end划出项时，List为垂直布局时显示在ListItem右侧，List为水平布局时显示在ListItem下方。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ For a list in horizontal layout, it refers to the delete option displayed below 
 onAction?: () => void
 ```
 
-Callback invoked when the list item is released while in the delete area.
+组件进入长距删除区后抬手时触发。滑动后松手的位置超过或等于设置的距离阈值，并且设置的距离阈值有效时才会触发。
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ Callback invoked when the list item is released while in the delete area.
 onEnterActionArea?: () => void
 ```
 
-Callback invoked each time the list item enters the delete area.
+在滑动条目进入删除区域时调用，只触发一次，当再次进入时仍触发。
 
 **Since:** 10
 
@@ -58,7 +58,7 @@ Callback invoked each time the list item enters the delete area.
 onExitActionArea?: () => void
 ```
 
-Callback invoked each time the list item exits the delete area.
+当滑动条目退出删除区域时调用，只触发一次，当再次退出时仍触发。
 
 **Since:** 10
 
@@ -78,7 +78,7 @@ Callback invoked each time the list item exits the delete area.
 onStateChange?: (state: SwipeActionState) => void
 ```
 
-Callback invoked when the swipe state of the list item changes.
+当列表项滑动状态变化时候触发。
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ Callback invoked when the swipe state of the list item changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| state | [SwipeActionState](arkts-arkui-swipeactionstate-e.md) | Yes |  |
 
 ## actionAreaDistance
 
@@ -104,9 +104,9 @@ Callback invoked when the swipe state of the list item changes.
 actionAreaDistance?: Length
 ```
 
-Swipe distance threshold for deleting the list item. This threshold applies after the swipe action component is fully swiped into view and triggers the deletion action.
+设置组件长距离滑动删除距离阈值。即划出组件被完全滑进视窗后，继续滑动触发删除的距离阈值。不支持设置百分比。删除距离阈值大于item宽度减去划出组件宽度，或删除距离阈值小于等于0就不会设置删除区域。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 56vp
 
@@ -128,9 +128,9 @@ Swipe distance threshold for deleting the list item. This threshold applies afte
 builder?: CustomBuilder
 ```
 
-Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
+当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 10
 
@@ -150,9 +150,9 @@ Swipe action item displayed when the list item is swiped left or right (in verti
 builderComponent?: ComponentContent
 ```
 
-Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
+当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。该参数的优先级高于参数builder。即同时设置builder和builderComponent时，以builderComponent设置的值为准。同一个builderComponent不推荐同时给不同的start/end使用，否则会导致显示问题。
 
-**Type:** ComponentContent
+**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
 **Since:** 18
 

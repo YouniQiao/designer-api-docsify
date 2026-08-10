@@ -1,15 +1,20 @@
 # getLastWindow
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## getLastWindow
 
 ```TypeScript
 function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 ```
 
-Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result.
+获取当前应用内层级最高的子窗口，使用callback异步回调。
 
-If no child window exists or the child window is not displayed by calling  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the main window of the application is returned.
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主窗口。
 
 **Since:** 9
 
@@ -25,18 +30,18 @@ If no child window exists or the child window is not displayed by calling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current application context. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Window&gt; | Yes | Callback used to return the top window obtained. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | Callback used to return the top window obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
-| [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
+| 1300006 | This window context is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -77,7 +82,7 @@ export default class EntryAbility extends UIAbility {
       });
     });
   }
-  //...
+  // ...
 }
 ```
 
@@ -88,10 +93,9 @@ export default class EntryAbility extends UIAbility {
 function getLastWindow(ctx: BaseContext): Promise<Window>
 ```
 
-Obtains the topmost layer child window of the current application. This API uses a promise to return the result.
+获取当前应用内层级最高的子窗口，使用Promise异步回调。
 
-If no child window exists or the child window is not displayed by calling  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the main window of the application is returned.
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主窗口。
 
 **Since:** 9
 
@@ -107,23 +111,23 @@ If no child window exists or the child window is not displayed by calling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current application context. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | 当前应用上下文信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the topmost layer window obtained. |
+| Promise&lt;Window&gt; | Promise对象。返回当前应用内层级最高的窗口对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
-| [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
+| 1300006 | This window context is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -162,7 +166,7 @@ export default class EntryAbility extends UIAbility {
       });
     });
   }
-  //...
+  // ...
 }
 ```
 

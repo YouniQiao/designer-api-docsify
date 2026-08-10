@@ -30,9 +30,9 @@ Creates a **FormBindingData** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FormBindingData** object created based on the passed data. |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | FormBindingData** object created based on the passed data. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { formBindingData } from '@kit.FormKit';
@@ -46,20 +46,25 @@ struct Index {
   pathDir: string = this.content.filesDir;
 
   createFormBindingData() {
+    let filePath = this.pathDir + "/form.png";
+    let fd: number = -1;
     try {
-      let filePath = this.pathDir + "/form.png";
-      let file = fileIo.openSync(filePath);
+      fd = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY).fd;
       let formImagesParam: Record<string, number> = {
-        'image': file.fd
+        'image': fd
       };
       let createFormBindingDataParam: Record<string, string | Record<string, number>> = {
         'name': '21°',
         'imgSrc': 'image',
         'formImages': formImagesParam
       };
-      formBindingData.createFormBindingData(createFormBindingDataParam);
+      let formBindingDataObj = formBindingData.createFormBindingData(createFormBindingDataParam);
     } catch (error) {
-      console.error(`catch error, error: ${JSON.stringify(error)}`);
+      console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    } finally {
+      if (fd !== -1) {
+        fileIo.closeSync(fd);
+      }
     }
   }
 

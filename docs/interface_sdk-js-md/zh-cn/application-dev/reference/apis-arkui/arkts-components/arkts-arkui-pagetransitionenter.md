@@ -24,7 +24,7 @@ PageTransitionEnter(value: PageTransitionOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 配置入场动效的参数。  |
+| value | [PageTransitionOptions](../arkts-apis/arkts-arkui-pagetransition-pagetransitionoptions-i.md) | 是 | 配置入场动效的参数。 |
 
 ## PageTransitionEnter
 
@@ -48,7 +48,12 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 入场动画的逐帧回调直到入场动画结束，progress从0变化到1。 |
+| event | [PageTransitionCallback](../arkts-apis/arkts-arkui-pagetransitioncallback-t.md) | 是 | 入场动画的逐帧回调直到入场动画结束，progress从0变化到1。 |
 
 ## 汇总
 
+- [PageTransitionExitInterface](arkts-arkui-pagetransitionenter-pagetransitionexitinterface-i.md)
+- [PageTransitionOptions](arkts-arkui-pagetransitionenter-pagetransitionoptions-i.md)
+- [PageTransitionCallback](arkts-arkui-pagetransitionenter-pagetransitioncallback-t.md)
+- [RouteType](arkts-arkui-pagetransitionenter-routetype-e.md)
+- [SlideEffect](arkts-arkui-pagetransitionenter-slideeffect-e.md)

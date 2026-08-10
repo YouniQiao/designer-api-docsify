@@ -1,19 +1,6 @@
 # MessageHandler
 
-Represents a custom communication object.
-    **NOTE**  
-    
-    You can register this object to receive custom communication data sent by the edit box application attached to  
-    the input method application. When the custom communication data is received, the  
-    [onMessage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback in  
-    this object is triggered.  
-    
-    This object is globally unique. After multiple registrations, only the last registered object is valid and  
-    retained, and the [onTerminated]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ callback of the  
-    penultimate registered object is triggered.  
-    
-    If this object is unregistered, its [onTerminated]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    callback will be triggered.
+自定义通信对象。
 
 **Since:** 15
 
@@ -23,13 +10,21 @@ Represents a custom communication object.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## onMessage
 
 ```TypeScript
 onMessage: OnMessageCallback
 ```
 
-This method is called when a custom message is received.
+onMessage(msgId: string, msgParam?: ArrayBuffer): void
+
+接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。
 
 **Since:** 23
 
@@ -45,14 +40,9 @@ This method is called when a custom message is received.
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-Receives the custom data callback sent by the edit box application attached to the input method application.
-    **NOTE**  
-    
-    This callback is triggered when the registered [MessageHandler]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    receives custom communication data sent by the edit box application attached to the input method application.  
-    
-    The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId**  
-    data is received, confirm it with the data sender.
+接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。
+
+&lt;p&gt;当已注册的MessageHandler接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。&lt;/p&gt;&lt;p&gt;msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。&lt;/p&gt;
 
 **Since:** 15
 
@@ -66,10 +56,10 @@ Receives the custom data callback sent by the edit box application attached to t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | Identifier of the received custom communication data. |
-| msgParam | ArrayBuffer | No | Message body of the received custom communication data. |
+| msgId | string | Yes | 接收到的自定义通信数据的标识符。 |
+| msgParam | ArrayBuffer | No | 接收到的自定义通信数据的消息体。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -82,7 +72,7 @@ inputMethodEngine.getInputMethodAbility()
           console.info('OnTerminated.');
         },
         onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-          console.info('recv message.');
+          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
         }
       }
       inputClient.recvMessage(messageHandler);
@@ -95,16 +85,9 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated(): void
 ```
 
-Listens for MessageHandler termination.
-    **NOTE**  
-    
-    When an application registers a new [MessageHandler]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object, the  
-    [onTerminated]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ callback of the penultimate registered  
-    [MessageHandler]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object is triggered.  
-    
-    When an application unregisters a new [MessageHandler]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ object, the  
-    [onTerminated]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ callback of the registered  
-    [MessageHandler]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ object is triggered.
+监听对象终止回调函数。
+
+&lt;p&gt;当应用注册新的MessageHandler对象时，会触发上一个已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;&lt;p&gt;当应用取消注册时，会触发当前已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;
 
 **Since:** 15
 
@@ -114,7 +97,7 @@ Listens for MessageHandler termination.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -127,7 +110,7 @@ inputMethodEngine.getInputMethodAbility()
           console.info('OnTerminated.');
         },
         onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-          console.info('recv message.');
+          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
         }
       }
       inputClient.recvMessage(messageHandler);
@@ -140,9 +123,11 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated: Callback<void>
 ```
 
-This method is called when a new message handler is set.
+onTerminated(): void
 
-**Type:** Callback&lt;void&gt;
+监听对象终止回调函数。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # USBDevice
 
-Represents the USB device information.
+USB设备信息。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Represents the USB device information.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## busNum
 
 ```TypeScript
 busNum: int
 ```
 
-Bus address.
+总线地址。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Bus address.
 clazz: int
 ```
 
-Device class.
+设备类。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -52,7 +58,7 @@ Device class.
 configs: Array<USBConfiguration>
 ```
 
-Device configuration descriptor information.
+设备配置描述符信息。
 
 **Type:** Array&lt;USBConfiguration&gt;
 
@@ -70,9 +76,9 @@ Device configuration descriptor information.
 devAddress: int
 ```
 
-Device address.
+设备地址。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -88,7 +94,7 @@ Device address.
 manufacturerName: string
 ```
 
-Device manufacturer.
+产商信息。
 
 **Type:** string
 
@@ -106,7 +112,7 @@ Device manufacturer.
 name: string
 ```
 
-Device name.
+设备名字。
 
 **Type:** string
 
@@ -124,9 +130,9 @@ Device name.
 productId: int
 ```
 
-Product ID.
+产品ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -142,7 +148,7 @@ Product ID.
 productName: string
 ```
 
-Product name.
+产品信息。
 
 **Type:** string
 
@@ -160,9 +166,9 @@ Product name.
 protocol: int
 ```
 
-Device protocol code.
+设备协议码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -178,7 +184,7 @@ Device protocol code.
 serial: string
 ```
 
-Sequence number.
+序列号。
 
 **Type:** string
 
@@ -196,9 +202,9 @@ Sequence number.
 subClass: int
 ```
 
-Device subclass.
+设备子类。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -214,9 +220,9 @@ Device subclass.
 vendorId: int
 ```
 
-Vendor ID.
+厂商ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -232,7 +238,7 @@ Vendor ID.
 version: string
 ```
 
-Version number.
+版本。
 
 **Type:** string
 

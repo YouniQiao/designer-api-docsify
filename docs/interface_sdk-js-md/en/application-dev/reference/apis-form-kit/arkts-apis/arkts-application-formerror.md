@@ -10,6 +10,12 @@ interface of formError.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formError } from 'kits/@kit.FormKit';
+```
+
 ## Summary
 
 ### Enums

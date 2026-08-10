@@ -1,10 +1,11 @@
 # AtomicServiceNavigation
 
 作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示  
-[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子组件，首页和非首页通过路由进行切换。
-    **说明：**  
-    
-    该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)的子组件，首页和非首页通过路由进行切换。
+
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
 
@@ -15,6 +16,12 @@
 <!--Device-unnamed-export declare struct AtomicServiceNavigation--><!--Device-unnamed-export declare struct AtomicServiceNavigation-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+```
 
 ## navDestinationBuilder
 
@@ -44,7 +51,7 @@ gradientBackground?: GradientBackground
 
 渐变背景色选项。设置时各字段的默认值见GradientBackground。
 
-**类型：** GradientBackground
+**类型：** [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md)
 
 **起始版本：** 18
 
@@ -88,7 +95,7 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 
 宽屏场景下用户自定义插入的布局样式。默认值为空，不显示任何样式。屏幕宽度低于600vp为非宽屏场景，大于等于600vp为宽屏场景。
 
-**类型：** CustomBuilder \| Array&lt;NavigationMenuItem&gt;
+**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;NavigationMenuItem&gt;
 
 **起始版本：** 18
 
@@ -110,7 +117,7 @@ minContentWidth?: Dimension
 
 设置导航栏内容区最小宽度（双栏模式下生效）。默认值为360vp。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
 
@@ -132,7 +139,7 @@ mode?: NavigationMode
 
 设置导航栏的显示模式。默认值为Auto。支持Stack、Split与Auto模式。
 
-**类型：** NavigationMode
+**类型：** [NavigationMode](arkts-arkui-navigation-navigationmode-e.md)
 
 **起始版本：** 12
 
@@ -154,7 +161,7 @@ modeChangeCallback?: Callback<NavigationMode>
 
 当Navigation首次显示或者单双栏状态发生变化时触发该回调。默认值为空。
 
-**类型：** Callback&lt;NavigationMode&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavigationMode&gt;
 
 **起始版本：** 12
 
@@ -174,7 +181,7 @@ navBarWidth?: Length
 
 设置导航栏宽度。默认值为240vp。仅在Navigation组件分栏时生效。
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 12
 
@@ -199,7 +206,7 @@ navBarWidthRange?: [
 
 设置导航栏最小和最大宽度（双栏模式下生效）。默认值：最小为240vp，最大为组件宽度的40%，且不大于432vp，如果只设置一个值，则未设置的值按照默认值计算。单位：vp。
 
-**类型：** [     Dimension,     Dimension   ]
+**类型：** [     Dimension,     Dimension   ]
 
 **起始版本：** 12
 
@@ -221,7 +228,7 @@ navPathStack?: NavPathStack
 
 路由栈信息。默认值为new NavPathStack()。
 
-**类型：** NavPathStack
+**类型：** [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
 
 **起始版本：** 12
 
@@ -243,7 +250,7 @@ navigationContent?: Callback<void>
 
 Navigation容器内容。默认值为空，无内容展示。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
 
@@ -265,7 +272,7 @@ sideBarContent?: Callback<void>
 
 侧边栏的内容。默认值为空。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 18
 
@@ -285,9 +292,9 @@ sideBarContent?: Callback<void>
 sideBarOptions?: SideBarOptions
 ```
 
-侧边栏的功能选项。默认值为{ sideBarBackground: \$r('sys.color.ohos\_id\_color\_sub\_background'), sideBarIcon: \$r('sys.symbol.open\_sidebar') }。
+侧边栏的功能选项。默认值为{ sideBarBackground: \$r('sys.color.ohos_id_color_sub_background'), sideBarIcon: \$r('sys.symbol.open_sidebar') }。
 
-**类型：** SideBarOptions
+**类型：** [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md)
 
 **起始版本：** 18
 
@@ -309,7 +316,7 @@ stateChangeCallback?: Callback<boolean>
 
 导航栏显示状态切换时触发该回调。true表示导航栏显示，false表示导航栏隐藏。默认值为空。
 
-**类型：** Callback&lt;boolean&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
 **起始版本：** 12
 
@@ -327,9 +334,9 @@ stateChangeCallback?: Callback<boolean>
 title?: ResourceStr
 ```
 
-设置页面标题。默认值为空字符串。当titleOptions的titleBarType字段设置为TitleBarType.ROUND\_ICON或者TitleBarType.SQUARED\_ICON，且设置了titleIcon时，title标题内容将不会显示。
+设置页面标题。默认值为空字符串。当titleOptions的titleBarType字段设置为TitleBarType.ROUND_ICON或者TitleBarType.SQUARED_ICON，且设置了titleIcon时，title标题内容将不会显示。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
 
@@ -349,9 +356,9 @@ title?: ResourceStr
 titleOptions?: TitleOptions
 ```
 
-标题栏选项。默认值为{ isBlurEnabled: true }。当titleBarType字段设置为TitleBarType.ROUND\_ICON或者TitleBarType.SQUARED\_ICON，且设置了titleIcon时，title标题内容将不会显示。
+标题栏选项。默认值为{ isBlurEnabled: true }。当titleBarType字段设置为TitleBarType.ROUND_ICON或者TitleBarType.SQUARED_ICON，且设置了titleIcon时，title标题内容将不会显示。
 
-**类型：** TitleOptions
+**类型：** [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md)
 
 **起始版本：** 12
 

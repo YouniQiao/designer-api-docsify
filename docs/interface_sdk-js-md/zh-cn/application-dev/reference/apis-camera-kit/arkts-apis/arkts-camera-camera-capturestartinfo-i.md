@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## captureId
 
 ```TypeScript
@@ -18,7 +24,7 @@ captureId: int
 
 拍照的ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -38,7 +44,7 @@ time: long
 
 预估的单次拍照底层出sensor采集帧时间，如果上报-1，代表没有预估时间。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 

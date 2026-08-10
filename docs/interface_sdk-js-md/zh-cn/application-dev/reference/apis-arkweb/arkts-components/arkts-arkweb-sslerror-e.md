@@ -1,6 +1,6 @@
 # SslError
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when onSslErrorEventReceive being called.
+Enum type supplied to {@link error} when onSslErrorEventReceive being called.
 
 **起始版本：** 9
 

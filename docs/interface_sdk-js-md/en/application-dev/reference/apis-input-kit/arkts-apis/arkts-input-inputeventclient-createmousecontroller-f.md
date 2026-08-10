@@ -1,12 +1,18 @@
 # createMouseController
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## createMouseController
 
 ```TypeScript
 function createMouseController(): Promise<MouseController>
 ```
 
-Creates a mouse controller for simulating mouse operations. This API uses a promise to return the result.
+创建鼠标控制器，用于模拟鼠标操作。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -24,13 +30,39 @@ Creates a mouse controller for simulating mouse operations. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MouseController&gt; | Promise used to return the mouse controller instance. |
+| Promise&lt;MouseController&gt; | Promise对象，返回鼠标控制器实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 801 | Capability not supported. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+
+## Examples
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createMouseController()
+            .then(mouseController => {
+              console.info('Succeeded in creating mouse controller');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to create mouse controller. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```
 

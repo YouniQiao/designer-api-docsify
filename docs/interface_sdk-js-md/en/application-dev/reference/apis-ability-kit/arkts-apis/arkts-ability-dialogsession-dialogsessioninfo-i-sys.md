@@ -1,6 +1,6 @@
 # DialogSessionInfo (System API)
 
-Provides session information, including the requester information, target ability information list, and other parameters.
+提供会话信息，包括请求方信息、目标组件信息列表、其他参数。
 
 **Since:** 11
 
@@ -12,15 +12,21 @@ Provides session information, including the requester information, target abilit
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { dialogSession } from 'kits/@kit.AbilityKit';
+```
+
 ## callerAbilityInfo
 
 ```TypeScript
 callerAbilityInfo: DialogAbilityInfo
 ```
 
-Ability information of the requester.
+表示请求方组件信息。
 
-**Type:** DialogAbilityInfo
+**Type:** [DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)
 
 **Since:** 11
 
@@ -40,9 +46,9 @@ Ability information of the requester.
 parameters?: Record<string, Object>
 ```
 
-Other parameters.
+表示其他参数。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 11
 
@@ -62,7 +68,7 @@ Other parameters.
 targetAbilityInfos: Array<DialogAbilityInfo>
 ```
 
-List of target ability information.
+表示目标组件信息列表。
 
 **Type:** Array&lt;DialogAbilityInfo&gt;
 

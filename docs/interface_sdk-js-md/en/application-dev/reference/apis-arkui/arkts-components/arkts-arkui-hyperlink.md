@@ -1,26 +1,24 @@
 # Hyperlink
 
-The **Hyperlink** component implements a link from a location in the component to another location.
+超链接组件，支持文本和图片两种展示形式，在组件宽高范围内点击可实现跳转到指定网页。适用于应用内打开外部网页链接的场景，该组件仅支持与系统浏览器配合使用。
 
-> **NOTE**
+> **说明：**
 >
-> - This component must be used with the system browser.
+> - 该组件仅支持与系统浏览器配合使用。
 
-## Required Permissions
+## 需要权限
 
-If Internet access is required, you must apply for the **ohos.permission.INTERNET** permission. For details about how to apply for a permission, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+跳转到目标网页需要使用网络时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](docroot://security/AccessToken/declare-permissions.md)。
 
-## Child Components
+## 子组件
 
-This component can contain the [Image]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ child component.
+可以包含[Image]{@link ./image}子组件。
 
 ## Hyperlink
 
 ```TypeScript
 Hyperlink(address: string | Resource, content?: string | Resource)
 ```
-
-Defines the constructor of Hyperlink.
 
 **Since:** 7
 
@@ -36,8 +34,8 @@ Defines the constructor of Hyperlink.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string \| Resource | Yes | Web page to which the hyperlink is redirected.  |
-| content | string \| Resource | No | Text displayed in the hyperlink.\_\_\_HTML\_TAG\_USD\_0\_\_\_Default value: **''**. If this parameter is not passed and the component does not have child components, the value of the **address** parameter is displayed by default.\_\_\_HTML\_TAG\_USD\_1\_\_\_**NOTE**\_\_\_HTML\_TAG\_USD\_2\_\_\_If this component has child components, the hyperlink text is not displayed.  |
+| address | string \| Resource | Yes | Hyperlink组件跳转的网页地址。 |
+| content | string \| Resource | No | Hyperlink组件中超链接显示文本。 <br>默认值：''。若不传该参数且组件内无子组件时，默认显示address参数值。 <br>**说明：** <br>组件内有子组件时，不显示超链接文本。 |
 
 ## Summary
 

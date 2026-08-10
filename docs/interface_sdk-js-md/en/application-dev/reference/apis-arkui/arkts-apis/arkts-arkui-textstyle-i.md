@@ -1,6 +1,6 @@
 # TextStyle
 
-Describes the word break rule of the message in the dialog box.
+弹窗中message的文本样式，包含文本截断方式等。
 
 **Since:** 12
 
@@ -16,11 +16,11 @@ Describes the word break rule of the message in the dialog box.
 wordBreak?: WordBreak
 ```
 
-Word break rule.
+弹窗message内容的文本截断方式。
 
-Default value: **WordBreak.BREAK\_ALL
+默认值：WordBreak.BREAK_ALL
 
-**Type:** WordBreak
+**Type:** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # ContinuousTaskCancelInfo
 
-Describes the information about the cancellation of a continuous task.
+长时任务取消信息。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Describes the information about the cancellation of a continuous task.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## detailedReason
 
 ```TypeScript
 detailedReason?: ContinuousTaskDetailedCancelReason
 ```
 
-Detailed reason for canceling the continuous task.
+长时任务取消详细原因。
 
-**Type:** ContinuousTaskDetailedCancelReason
+**Type:** [ContinuousTaskDetailedCancelReason](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskdetailedcancelreason-e.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Detailed reason for canceling the continuous task.
 id: int
 ```
 
-ID of the continuous task canceled.
+被取消的长时任务 Id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -54,9 +60,9 @@ ID of the continuous task canceled.
 reason: ContinuousTaskCancelReason
 ```
 
-Reason for canceling the continuous task.
+长时任务取消原因。
 
-**Type:** ContinuousTaskCancelReason
+**Type:** [ContinuousTaskCancelReason](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskcancelreason-e.md)
 
 **Since:** 15
 

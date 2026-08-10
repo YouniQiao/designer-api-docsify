@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { xml } from 'kits/@kit.ArkTS';
+```
+
 ## getAttributeCount
 
 ArkTS-Dyn:
@@ -40,9 +46,9 @@ ArkTS-Sta: getAttributeCount(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int |  |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -92,9 +98,9 @@ ArkTS-Sta: getColumnNumber(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回当前列号。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前列号。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -129,9 +135,10 @@ getDepth(): int
 ArkTS-Sta: getDepth(): int
 
 获取元素的当前深度。
-    **说明：**  
-    
-    标签内的空白事件深度与标签的深度保持一致。
+
+> **说明：**
+> 
+> 标签内的空白事件深度与标签的深度保持一致。
 
 **起始版本：** 8
 
@@ -147,9 +154,9 @@ ArkTS-Sta: getDepth(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回元素的当前深度。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回元素的当前深度。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -203,9 +210,9 @@ ArkTS-Sta: getLineNumber(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回当前行号。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前行号。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -249,7 +256,7 @@ getName(): string
 | --- | --- |
 | string | 返回当前元素名称。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -293,7 +300,7 @@ getNamespace(): string
 | --- | --- |
 | string | 返回当前元素的命名空间。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -341,7 +348,7 @@ getPrefix(): string
 | --- | --- |
 | string | 返回当前元素前缀。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -389,7 +396,7 @@ getText(): string
 | --- | --- |
 | string | 返回当前事件的文本内容。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -433,7 +440,7 @@ isEmptyElementTag(): boolean
 | --- | --- |
 | boolean | 返回true，表示当前元素为空元素。返回false，表示当前元素为非空元素。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -481,7 +488,7 @@ isWhitespace(): boolean
 | --- | --- |
 | boolean | 返回true，表示当前文本事件仅包含空格字符。返回false，表示当前文本事件包含非空格字符。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { util } from '@kit.ArkTS';

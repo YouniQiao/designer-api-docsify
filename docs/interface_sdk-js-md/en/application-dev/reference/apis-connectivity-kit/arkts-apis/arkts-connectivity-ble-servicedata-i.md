@@ -10,6 +10,12 @@ Describes the service data.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## serviceUuid
 
 ```TypeScript

@@ -20,11 +20,11 @@ Defines the callback type used in accessibility action intercept.The value of ac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the enum of accessibility action type.  |
+| action | [AccessibilityAction](../arkts-components/arkts-arkui-accessibilityaction-e.md) | Yes | the enum of accessibility action type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the result of continuing to execute the action or interrupting it or bubbling up  |
+| [AccessibilityActionInterceptResult](../arkts-components/arkts-arkui-accessibilityactioninterceptresult-e.md) | the result of continuing to execute the action or interrupting it or bubbling up |
 

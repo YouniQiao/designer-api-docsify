@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
+## 导入模块
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## count
 
 ```TypeScript
@@ -116,7 +122,7 @@ excludedDates?: number[]
 expire?: number
 ```
 
-重复周期截止日。格式为13位时间戳，不填时则日程无截止日期。
+重复周期截止日。格式为13位时间戳，不填时则日程无截止日期。 
 
 当expire与count和interval同时设置时，以先到达的限制条件及效果为准。
 
@@ -180,7 +186,7 @@ recurrenceFrequency: RecurrenceFrequency
 
 日程重复规则类型。
 
-**类型：** RecurrenceFrequency
+**类型：** [RecurrenceFrequency](arkts-calendar-calendarmanager-recurrencefrequency-e.md)
 
 **起始版本：** 10
 

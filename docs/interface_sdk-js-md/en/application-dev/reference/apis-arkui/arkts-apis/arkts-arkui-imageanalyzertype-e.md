@@ -1,6 +1,6 @@
 # ImageAnalyzerType
 
-Defines the AI image analysis type. If it is not set, subject recognition and text recognition are enabled by default.
+图像AI分析类型，未设置时默认开启主体识别和文字识别功能。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the AI image analysis type. If it is not set, subject recognition and te
 SUBJECT = 0
 ```
 
-Subject recognition.
+主体识别功能。
 
 **Since:** 12
 
@@ -36,8 +36,6 @@ Subject recognition.
 TEXT
 ```
 
-Text recognition.
-
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
@@ -55,8 +53,6 @@ Text recognition.
 ```TypeScript
 OBJECT_LOOKUP
 ```
-
-Object lookup.
 
 **Since:** 12
 

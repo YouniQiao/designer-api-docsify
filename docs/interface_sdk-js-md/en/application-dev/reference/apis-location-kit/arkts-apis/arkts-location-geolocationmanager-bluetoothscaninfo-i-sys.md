@@ -12,6 +12,12 @@ Describes the contents of the Bluetooth scan results.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## deviceName
 
 ```TypeScript
@@ -60,7 +66,7 @@ rssi: int
 
 RSSI of the remote device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -80,7 +86,7 @@ timestamp: long
 
 Time stamp.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 

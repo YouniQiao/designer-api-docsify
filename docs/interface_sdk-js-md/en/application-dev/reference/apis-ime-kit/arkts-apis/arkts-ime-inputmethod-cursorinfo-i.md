@@ -1,6 +1,6 @@
 # CursorInfo
 
-Information of Cursor.
+光标信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Information of Cursor.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## displayId
 
 ```TypeScript
 displayId?: long
 ```
 
-Indicates the ID of the display where the cursor locates.
+光标所在显示器的ID。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Indicates the ID of the display where the cursor locates.
 height: double
 ```
 
-Indicates the height point of the cursor info, unit is px.
+光标的高度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -54,9 +60,9 @@ Indicates the height point of the cursor info, unit is px.
 left: double
 ```
 
-Indicates the left point of the cursor info and must be absolute coordinate of the physical screen, unit is px.
+光标的横坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -72,9 +78,9 @@ Indicates the left point of the cursor info and must be absolute coordinate of t
 top: double
 ```
 
-Indicates the top point of the cursor info and must be absolute coordinate of the physical screen, unit is px.
+光标的纵坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -90,9 +96,9 @@ Indicates the top point of the cursor info and must be absolute coordinate of th
 width: double
 ```
 
-Indicates the width point of the cursor info, unit is px.
+光标的宽度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 

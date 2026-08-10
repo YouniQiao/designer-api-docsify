@@ -20,5 +20,5 @@ Defines the callback that is called when state variable is change
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| propertyName | string | 是 | property name  |
+| propertyName | string | 是 | property name |
 

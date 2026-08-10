@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## reminderId
 
 ```TypeScript
@@ -18,7 +24,7 @@ reminderId: int
 
 发布提醒后返回的id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -36,7 +42,7 @@ reminderReq: ReminderRequest
 
 代理提醒对象。
 
-**类型：** ReminderRequest
+**类型：** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
 **起始版本：** 12
 

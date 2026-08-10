@@ -1,6 +1,6 @@
 # DialogButtonInfo
 
-The definition of dialog button information.
+对话框按钮信息的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of dialog button information.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## buttonId
 
 ```TypeScript
 buttonId: string
 ```
 
-Button id.
+按钮的ID。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Button id.
 buttonText: string
 ```
 
-Button text.
+按钮的文本。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ Button text.
 buttonType: ButtonType
 ```
 
-Button type.
+按钮的类型。
 
-**Type:** ButtonType
+**Type:** [ButtonType](../../apis-arkui/arkts-apis/arkts-arkui-button-buttontype-e.md)
 
 **Since:** 23
 

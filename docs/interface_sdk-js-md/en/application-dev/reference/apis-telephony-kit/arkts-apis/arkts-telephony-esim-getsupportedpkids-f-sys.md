@@ -1,5 +1,11 @@
 # getSupportedPkids (System API)
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## getSupportedPkids
 
 ```TypeScript
@@ -24,7 +30,7 @@ Get supported pkids
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the card slot index number. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number. |
 
 **Return value:**
 
@@ -36,13 +42,13 @@ Get supported pkids
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
-| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
+| 3120002 | System internal error. |
+| 3120001 | Service connection failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { eSIM } from '@kit.TelephonyKit';

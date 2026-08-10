@@ -1,5 +1,11 @@
 # setFoldDisplayMode（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## setFoldDisplayMode
 
 ```TypeScript
@@ -22,19 +28,17 @@ function setFoldDisplayMode(mode: FoldDisplayMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 可折叠设备的显示模式。 |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | 是 | 可折叠设备的显示模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { display } from '@kit.ArkUI';
@@ -45,20 +49,6 @@ try {
   display.setFoldDisplayMode(mode);
 } catch (exception) {
   console.error(`Failed to change the fold display mode. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-
-try {
-  let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_FULL;
-  display.setFoldDisplayMode(mode);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to change the fold display mode. Code: ${error.code} , message: ${error.message}`);
 }
 ```
 
@@ -85,19 +75,17 @@ function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 可折叠设备的显示模式。 |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | 是 | 可折叠设备的显示模式。 |
 | reason | string | 是 | 更改显示模式的原因。不设置，则默认为空字符串。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { display } from '@kit.ArkUI';
@@ -108,20 +96,6 @@ try {
   display.setFoldDisplayMode(mode, 'backSelfie');
 } catch (exception) {
   console.error(`Failed to change the fold display mode. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-
-try {
-  let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_MAIN;
-  display.setFoldDisplayMode(mode, 'backSelfie');
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to change the fold display mode. Code: ${error.code} , message: ${error.message}`);
 }
 ```
 

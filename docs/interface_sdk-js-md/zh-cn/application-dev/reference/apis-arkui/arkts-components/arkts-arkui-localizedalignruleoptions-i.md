@@ -18,7 +18,7 @@ bias?: Bias
 
 设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
 
-**类型：** Bias
+**类型：** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
 
 **默认值：** {horizontal:0.5,vertical:0.5}
 
@@ -42,7 +42,7 @@ bottom?: LocalizedVerticalAlignParam
 
 设置纵向底部对齐的参数。
 
-**类型：** LocalizedVerticalAlignParam
+**类型：** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -64,7 +64,7 @@ center?: LocalizedVerticalAlignParam
 
 设置纵向居中对齐方式的参数。
 
-**类型：** LocalizedVerticalAlignParam
+**类型：** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -86,7 +86,7 @@ end?: LocalizedHorizontalAlignParam
 
 设置横向对齐方式的参数，LTR模式时为右对齐，RTL模式时为左对齐。
 
-**类型：** LocalizedHorizontalAlignParam
+**类型：** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -108,7 +108,7 @@ middle?: LocalizedHorizontalAlignParam
 
 设置横向居中对齐方式的参数。
 
-**类型：** LocalizedHorizontalAlignParam
+**类型：** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -130,7 +130,7 @@ start?: LocalizedHorizontalAlignParam
 
 设置横向对齐方式的参数，LTR模式时为左对齐，RTL模式时为右对齐。
 
-**类型：** LocalizedHorizontalAlignParam
+**类型：** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -152,7 +152,7 @@ top?: LocalizedVerticalAlignParam
 
 设置纵向顶部对齐的参数。
 
-**类型：** LocalizedVerticalAlignParam
+**类型：** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 
 **起始版本：** 12
 

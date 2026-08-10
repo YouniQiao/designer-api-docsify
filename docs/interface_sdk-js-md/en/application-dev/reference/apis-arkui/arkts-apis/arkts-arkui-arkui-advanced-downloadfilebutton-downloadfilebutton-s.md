@@ -12,6 +12,12 @@ Declare struct DownloadFileButton
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from 'kits/@kit.ArkUI';
+```
+
 ## build
 
 ```TypeScript
@@ -40,7 +46,7 @@ contentOptions: DownloadContentOptions
 
 Set DownloadFileButton Content.
 
-**Type:** DownloadContentOptions
+**Type:** [DownloadContentOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md)
 
 **Since:** 23
 
@@ -60,7 +66,7 @@ styleOptions: DownloadStyleOptions
 
 Set DownloadFileButton Style.
 
-**Type:** DownloadStyleOptions
+**Type:** [DownloadStyleOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md)
 
 **Since:** 23
 

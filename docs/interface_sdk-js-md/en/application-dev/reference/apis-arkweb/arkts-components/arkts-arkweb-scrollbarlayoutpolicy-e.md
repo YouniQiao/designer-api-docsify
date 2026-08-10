@@ -1,6 +1,6 @@
 # ScrollbarLayoutPolicy
 
-Defines the layout policy for scrollbars, used with \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+定义滚动条布局模式控制参数的枚举类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines the layout policy for scrollbars, used with \_\_\_JSDOC\_LINK\_DESC\_USD
 CONTENT = 0
 ```
 
-Adheres to W3C standards (CSS/HTML/XHTML) for scrollbar layout.
+滚动条左右布局模式跟随css设定。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Adheres to W3C standards (CSS/HTML/XHTML) for scrollbar layout.
 SYSTEM = 1
 ```
 
-Follows the system UI conventions for scrollbar layout in the system language.
+滚动条左右布局模式跟随系统语种设定。
 
 **Since:** 26.0.0
 

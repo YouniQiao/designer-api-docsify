@@ -34,7 +34,7 @@ Description is DOWNLOAD.
 DOWNLOAD_FILE = 2
 ```
 
-Description is DOWNLOAD\_FILE.
+Description is DOWNLOAD_FILE.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Description is SAVE.
 SAVE_IMAGE = 4
 ```
 
-Description is SAVE\_IMAGE.
+Description is SAVE_IMAGE.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Description is SAVE\_IMAGE.
 SAVE_FILE = 5
 ```
 
-Description is SAVE\_FILE.
+Description is SAVE_FILE.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Description is SAVE\_FILE.
 DOWNLOAD_AND_SHARE = 6
 ```
 
-Description is DOWNLOAD\_AND\_SHARE.
+Description is DOWNLOAD_AND_SHARE.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ Description is RECEIVE.
 CONTINUE_TO_RECEIVE = 8
 ```
 
-Description is CONTINUE\_TO\_RECEIVE.
+Description is CONTINUE_TO_RECEIVE.
 
 **Since:** 23
 

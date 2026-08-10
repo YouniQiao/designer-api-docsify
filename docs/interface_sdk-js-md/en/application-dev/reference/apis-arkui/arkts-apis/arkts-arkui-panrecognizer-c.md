@@ -1,8 +1,8 @@
 # PanRecognizer
 
-Gesture recognizer object.
+手势识别器对象。
 
-**Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
+**Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Gesture recognizer object.
 getDirection(): PanDirection
 ```
 
-Obtains the recognized direction of the current pan gesture recognizer.
+返回当前滑动手势识别器的识别方向。
 
 **Since:** 19
 
@@ -36,7 +36,7 @@ Obtains the recognized direction of the current pan gesture recognizer.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Recognized direction of the current pan gesture recognizer. |
+| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 当前滑动手势识别器的识别方向。 |
 
 ## getDistance
 
@@ -44,7 +44,7 @@ Obtains the recognized direction of the current pan gesture recognizer.
 getDistance(): number
 ```
 
-Obtains the minimum pan distance required to trigger this pan gesture recognizer.
+返回当前滑动手势识别器触发的最小滑动距离。
 
 **Since:** 19
 
@@ -62,7 +62,7 @@ Obtains the minimum pan distance required to trigger this pan gesture recognizer
 
 | Type | Description |
 | --- | --- |
-| number | Minimum swipe distance. Unit: vp. |
+| number | 当前滑动手势识别器触发的最小滑动距离。单位：vp |
 
 ## getDistanceMap
 
@@ -70,12 +70,11 @@ Obtains the minimum pan distance required to trigger this pan gesture recognizer
 getDistanceMap(): Map<SourceTool, number>
 ```
 
-Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer.
-    **NOTE**  
-    
-    This API only returns thresholds for input sources that have been explicitly configured during pan gesture  
-    initialization. The default threshold can be queried using the [SourceTool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.Unknown type.  
-    Thresholds for unconfigured device types are not available.
+返回滑动手势识别器在不同输入源的情况下触发的最小滑动距离。
+
+> **说明：**
+> 
+> 仅支持对通过Pan手势初始化配置修改的设备类型进行阈值查询。对于默认滑动阈值，可通过查询[SourceTool](arkts-arkui-common-sourcetool-e.md).Unknown类型获取。其他未主动设置的类型则无法获取。
 
 **Since:** 19
 
@@ -93,7 +92,7 @@ Obtains the minimum pan distances required for different input sources to trigge
 
 | Type | Description |
 | --- | --- |
-| Map&lt;SourceTool, number&gt; | Minimum pan distances required for different input sources to trigger the pan gesture recognizer. Unit: vp. |
+| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt; | 不同输入源的滑动手势识别器触发的最小滑动距离。滑动距离的单位：vp |
 
 ## getPanGestureOptions
 
@@ -101,7 +100,7 @@ Obtains the minimum pan distances required for different input sources to trigge
 getPanGestureOptions(): PanGestureOptions
 ```
 
-Obtains the properties of this pan gesture recognizer.
+返回当前滑动手势识别器的属性。
 
 **Since:** 12
 
@@ -119,5 +118,5 @@ Obtains the properties of this pan gesture recognizer.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Properties of the current pan gesture recognizer. |
+| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | 当前滑动手势识别器的属性。 |
 

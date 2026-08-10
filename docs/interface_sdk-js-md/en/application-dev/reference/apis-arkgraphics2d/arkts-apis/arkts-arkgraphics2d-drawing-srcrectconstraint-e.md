@@ -1,6 +1,6 @@
 # SrcRectConstraint
 
-Enumerates the constraints on the source rectangle. It is used to specify whether to limit the sampling range within the source rectangle when drawing an image on a canvas.
+源矩形区域约束类型枚举，用于在画布绘制图像时指定是否将采样范围（图像像素读取范围）限制在源矩形区域内。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the constraints on the source rectangle. It is used to specify whethe
 STRICT = 0
 ```
 
-The sampling range is strictly confined to the source rectangle, resulting in a slow sampling speed.
+严格限制采样范围在源矩形区域内，速度较慢。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ The sampling range is strictly confined to the source rectangle, resulting in a 
 FAST = 1
 ```
 
-The sampling range is not limited to the source rectangle and can extend beyond it, allowing for a high sampling speed.
+允许采样范围超出源矩形范围，速度较快。
 
 **Since:** 12
 

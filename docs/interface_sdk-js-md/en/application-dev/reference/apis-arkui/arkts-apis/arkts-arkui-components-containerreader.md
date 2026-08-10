@@ -1,5 +1,11 @@
 # @ohos.arkui.components.ContainerReader
 
+## Modules to Import
+
+```TypeScript
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## Summary
 
 ### Functions

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
+## 导入模块
+
+```TypeScript
+import { PanelInfo, PanelType } from 'kits/@kit.BasicServicesKit';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height: int
 
 划词面板高度，单位为px。取值范围(0, +∞)，传入0或负数时面板无法正常创建。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -36,9 +42,9 @@ height: int
 panelType: PanelType
 ```
 
-划词面板类型枚举，有两种面板可供选择，详见[PanelType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+划词面板类型枚举，有两种面板可供选择，详见[PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)。
 
-**类型：** PanelType
+**类型：** [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 
 **默认值：** MENU_PANEL
 
@@ -60,7 +66,7 @@ width: int
 
 划词面板宽度，单位为px。取值范围(0, +∞)，传入0或负数时面板无法正常创建。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -80,7 +86,7 @@ x: int
 
 划词面板左上角的x轴坐标，单位为px。以主屏幕左上角为原点，x轴正方向向右。取值范围[0, +∞)，传入负数时面板无法正常创建。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -100,7 +106,7 @@ y: int
 
 划词面板左上角的y轴坐标，单位为px。以主屏幕左上角为原点，y轴正方向向下。取值范围[0, +∞)，传入负数时面板无法正常创建。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 

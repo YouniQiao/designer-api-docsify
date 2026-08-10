@@ -1,12 +1,10 @@
 # StabilizationQuery
 
-StabilizationQuery provides APIs to check the support for video stabilization.
-    **NOTE**  
-    
-    - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
-    preserved the initial version information of inner elements. As a result, you might see outer element's @since  
-    version number being higher than that of the inner elements. However, this discrepancy does not affect the  
-    functionality of the interface.
+提供了查询设备在录像模式下是否支持对应的视频防抖模式的能力。
+
+> **说明：**
+> 
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **Since:** 12
 
@@ -16,13 +14,19 @@ StabilizationQuery provides APIs to check the support for video stabilization.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isVideoStabilizationModeSupported
 
 ```TypeScript
 isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 ```
 
-Checks whether a video stabilization mode is supported.
+查询是否支持指定的视频防抖模式。
 
 **Since:** 11
 
@@ -38,17 +42,17 @@ Checks whether a video stabilization mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vsMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Video stabilization mode. |
+| vsMode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Yes | 视频防抖模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the video stabilization mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| boolean | 返回视频防抖模式是否支持。true表示支持，false表示不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
 

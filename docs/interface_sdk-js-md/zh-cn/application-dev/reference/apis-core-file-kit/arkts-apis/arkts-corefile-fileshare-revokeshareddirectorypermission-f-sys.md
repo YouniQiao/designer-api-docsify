@@ -1,5 +1,11 @@
 # revokeSharedDirectoryPermission（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## revokeSharedDirectoryPermission
 
 ```TypeScript
@@ -32,14 +38,12 @@ function revokeSharedDirectoryPermission(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 801 | Capability not supported. |
 | 13900001 | Operation not permitted. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | The caller is not a system application. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -54,23 +58,6 @@ async function revokeSharedDirectoryPermission() {
     });
   } catch (error) {
     console.error(`revokeSharedDirectoryPermission error, Code: ${error.code}, message: ${error.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function revokeSharedDirectoryPermission() {
-  try {
-    await fileShare.revokeSharedDirectoryPermission();
-    console.info("revokeSharedDirectoryPermission success.");
-  }
-  catch (error) {
-    console.error('revokeSharedDirectoryPermission error, Code: ' + error.code + ', message: ' + error.message);
   }
 }
 ```

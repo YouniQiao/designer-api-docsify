@@ -36,7 +36,7 @@ constructor(options?: SwipeGestureHandlerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 快滑手势处理器配置参数。 |
+| options | [SwipeGestureHandlerOptions](arkts-arkui-gesture-swipegesturehandleroptions-i.md) | 否 | 快滑手势处理器配置参数。 |
 
 ## onAction
 
@@ -62,11 +62,11 @@ onAction(event: Callback<GestureEvent>): SwipeGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | 是 | 快滑手势处理器识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 快滑手势处理器识别成功回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前快滑手势处理器对象。 |
+| [SwipeGestureHandler](arkts-arkui-swipegesturehandler-c.md) | 返回当前快滑手势处理器对象。 |
 

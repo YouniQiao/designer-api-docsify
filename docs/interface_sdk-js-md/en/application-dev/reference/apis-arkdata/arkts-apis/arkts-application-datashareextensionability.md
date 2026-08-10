@@ -1,7 +1,13 @@
 # @ohos.application.DataShareExtensionAbility
 
-The **DataShareExtensionAbility** module provides data share services based on the ExtensionAbility.
+DataShareExtensionAbility基于ExtensionAbility框架，提供支持数据共享业务的能力。
 
+
+## Modules to Import
+
+```TypeScript
+import { DataShareExtensionAbility } from 'kits/@kit.ArkData';
+```
 
 ## Summary
 
@@ -10,7 +16,7 @@ The **DataShareExtensionAbility** module provides data share services based on t
 
 | Name | Description |
 | --- | --- |
-| [DataShareExtensionAbility](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md) | This module provides data sharing and expansion capabilities. |
+| [DataShareExtensionAbility](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md) | 本模块提供数据共享和扩展功能。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -18,15 +24,15 @@ The **DataShareExtensionAbility** module provides data share services based on t
 
 | Name | Description |
 | --- | --- |
-| [BatchInsertFn](arkts-arkdata-batchinsertfn-t-sys.md) | Callback function called when inserting multiple data records into the database. |
-| [BatchUpdateFn](arkts-arkdata-batchupdatefn-t-sys.md) | Callback function called when updating multiple data records in the database. |
-| [DeleteFn](arkts-arkdata-deletefn-t-sys.md) | Callback function called when deleting one or more data records in the database. |
-| [DenormalizeUriFn](arkts-arkdata-denormalizeurifn-t-sys.md) | Callback function called when converting the given normalized URI into a denormalized URI. |
-| [InsertFn](arkts-arkdata-insertfn-t-sys.md) | Callback function called when inserting a data record into the database. |
-| [NormalizeUriFn](arkts-arkdata-normalizeurifn-t-sys.md) | Callback function called when converting the given URI into a normalized URI. |
-| [OnCreateFn](arkts-arkdata-oncreatefn-t-sys.md) | Callback function called when a datashare extension ability is started for initialization. |
-| [QueryFn](arkts-arkdata-queryfn-t-sys.md) | Callback function called when querying one or more data records in the database. |
-| [UpdateFn](arkts-arkdata-updatefn-t-sys.md) | Callback function called when updating one or more data records in the database. |
-| [UpdateOperation](arkts-arkdata-updateoperation-t-sys.md) | Represents the batch update operation information. |
+| [BatchInsertFn](arkts-arkdata-batchinsertfn-t-sys.md) | 批量插入操作的属性类型。 |
+| [BatchUpdateFn](arkts-arkdata-batchupdatefn-t-sys.md) | 批量更新操作的属性类型。 |
+| [DeleteFn](arkts-arkdata-deletefn-t-sys.md) | 删除操作的属性类型。 |
+| [DenormalizeUriFn](arkts-arkdata-denormalizeurifn-t-sys.md) | 服务端使用的URI转换为用户传入的初始URI操作的属性类型。 |
+| [InsertFn](arkts-arkdata-insertfn-t-sys.md) | 插入操作的属性类型。 |
+| [NormalizeUriFn](arkts-arkdata-normalizeurifn-t-sys.md) | 用户给定的URI转换为服务端使用的URI操作的属性类型。 |
+| [OnCreateFn](arkts-arkdata-oncreatefn-t-sys.md) | 业务逻辑初始化操作的属性类型。 |
+| [QueryFn](arkts-arkdata-queryfn-t-sys.md) | 查询操作的属性类型。 |
+| [UpdateFn](arkts-arkdata-updatefn-t-sys.md) | 更新操作的属性类型。 |
+| [UpdateOperation](arkts-arkdata-updateoperation-t-sys.md) | 批量更新操作的参数结构。 |
 <!--DelEnd-->
 

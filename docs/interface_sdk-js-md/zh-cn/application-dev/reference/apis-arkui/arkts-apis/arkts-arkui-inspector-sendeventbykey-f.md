@@ -1,5 +1,11 @@
 # sendEventByKey
 
+## 导入模块
+
+```TypeScript
+import { inspector } from 'kits/@kit.ArkUI';
+```
+
 ## sendEventByKey
 
 ```TypeScript
@@ -25,7 +31,7 @@ function sendEventByKey(id: string, action: int, params: string): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 要触发事件的组件id。 |
-| action | int | 是 | 要触发的事件类型，当前支持取值：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_点击事件Click：10。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_长按事件LongClick：11。 |
+| action | int | 是 | 要触发的事件类型，当前支持取值：&lt;br/&gt;点击事件Click：10。&lt;br/&gt;长按事件LongClick：11。 |
 | params | string | 是 | 事件参数，无参数时传空字符串""。 |
 
 **返回值：**

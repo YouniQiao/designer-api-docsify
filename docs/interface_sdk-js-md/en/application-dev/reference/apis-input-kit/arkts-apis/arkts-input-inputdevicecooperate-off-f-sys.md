@@ -1,12 +1,24 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
+```
+
 ## off('cooperation')
 
 ```TypeScript
 function off(type: 'cooperation', callback?: AsyncCallback<void>): void
 ```
 
-Deregisters the listener for screen hopping status changes. This API uses an asynchronous callback to return the result.
+关闭监听键鼠穿越状态，使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用
+> [cooperate.off](@ohos.cooperate:cooperate.off(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;))
+> 替代。
 
 **Since:** 9
 
@@ -26,17 +38,17 @@ Deregisters the listener for screen hopping status changes. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cooperation' | Yes | Event type. The value is **cooperation**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is undefined. If this parameter is not specified, all callbacks registered by the current application are unregistered. |
+| type | 'cooperation' | Yes | 注册类型，取值“cooperation”。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数。当取消注册成功，err为undefined，否则为错误对象。若无此参数，则取消当前应用注册的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDeviceCooperate } from '@kit.InputKit';
@@ -50,14 +62,14 @@ struct Index {
         .onClick(() => {
           // Unregister a single callback.
           let callbackOn = (msg: object) => {
-            console.info(`Keyboard mouse crossing event: ${JSON.stringify(msg)}`);
+            console.info(`Succeeded in monitoring cooperation, msg: ${JSON.stringify(msg)}.`);
             return false;
           }
           try {
             inputDeviceCooperate.on('cooperation', callbackOn);
             inputDeviceCooperate.off("cooperation", callbackOn);
           } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to unregister callback function, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -77,14 +89,14 @@ struct Index {
         .onClick(() => {
           // Unregister all callbacks.
           let callback = (msg: object) => {
-            console.info(`Keyboard mouse crossing event: ${JSON.stringify(msg)}`);
+            console.info(`Succeeded in monitoring cooperation, msg: ${JSON.stringify(msg)}.`);
             return false;
           }
           try {
             inputDeviceCooperate.on('cooperation', callback);
             inputDeviceCooperate.off("cooperation");
           } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to unregister callback function, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

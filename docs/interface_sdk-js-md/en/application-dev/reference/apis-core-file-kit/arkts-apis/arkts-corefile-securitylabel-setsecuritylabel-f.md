@@ -1,12 +1,18 @@
 # setSecurityLabel
 
+## Modules to Import
+
+```TypeScript
+import { securityLabel } from 'kits/@kit.CoreFileKit';
+```
+
 ## setSecurityLabel
 
 ```TypeScript
 function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 ```
 
-Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to the same level. This API uses a promise to return the result.
+设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置。使用Promise异步回调。
 
 **Since:** 9
 
@@ -20,29 +26,29 @@ Sets the data security level for a file or directory. The level can only be adju
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | File path. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
+| path | string | Yes | 文件路径。 |
+| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | Yes | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise实例，用于异步获取结果。本调用将返回空值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900007 | Arg list too long |
-| 13900015 | File exists |
 | 13900020 | Invalid argument |
-| 13900025 | No space left on device |
 | 13900037 | No data available |
+| 13900007 | Arg list too long |
+| 13900001 | Operation not permitted |
+| 13900015 | File exists |
+| 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,7 +67,7 @@ securityLabel.setSecurityLabel(filePath, "s0").then(() => {
 function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void
 ```
 
-Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to the same level. This API uses an asynchronous callback to return the result.
+设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置。使用callback异步回调。
 
 **Since:** 9
 
@@ -75,24 +81,24 @@ Sets the data security level for a file or directory. The level can only be adju
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | File path. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the security level. |
+| path | string | Yes | 文件路径。 |
+| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | Yes | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 设置数据安全等级之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900007 | Arg list too long |
-| 13900015 | File exists |
 | 13900020 | Invalid argument |
-| 13900025 | No space left on device |
 | 13900037 | No data available |
+| 13900007 | Arg list too long |
+| 13900001 | Operation not permitted |
+| 13900015 | File exists |
+| 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

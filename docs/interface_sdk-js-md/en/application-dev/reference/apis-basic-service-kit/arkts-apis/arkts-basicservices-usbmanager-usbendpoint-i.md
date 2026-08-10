@@ -1,12 +1,12 @@
 # USBEndpoint
 
-Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  
-[USBInterface]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    The host controller schedules the endpoint based on the endpoint type.  
-    
-    The transmission characteristics are determined by the type during protocol layer packaging.
+通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)获取。
+
+> **说明：**
+> 
+> 主机控制器按照Endpoint类型调度。
+> 
+> 协议层打包时依赖type决定传输特性。
 
 **Since:** 9
 
@@ -16,15 +16,21 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## address
 
 ```TypeScript
 address: int
 ```
 
-Endpoint address.
+端点地址。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -40,9 +46,9 @@ Endpoint address.
 attributes: int
 ```
 
-Endpoint attributes.
+端点属性。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Endpoint attributes.
 direction: USBRequestDirection
 ```
 
-Endpoint direction.
+端点的方向。
 
-**Type:** USBRequestDirection
+**Type:** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
 
 **Since:** 9
 
@@ -76,7 +82,7 @@ Endpoint direction.
 endpointAddr: int
 ```
 
-Endpoint address.
+Endpoint address
 
 **Type:** int
 
@@ -94,9 +100,9 @@ Endpoint address.
 interfaceId: int
 ```
 
-Unique ID of the interface to which the endpoint belongs.
+端点所属的接口的唯一标识。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -112,9 +118,9 @@ Unique ID of the interface to which the endpoint belongs.
 interval: int
 ```
 
-Endpoint interval.Unit: milliseconds.
+端点间隔。（单位：毫秒）
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -130,9 +136,9 @@ Endpoint interval.Unit: milliseconds.
 maxPacketSize: int
 ```
 
-Maximum size of data packets on the endpoint.Unit: bytes.
+端点最大数据包大小。（单位：字节）
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -148,7 +154,7 @@ Maximum size of data packets on the endpoint.Unit: bytes.
 number: number
 ```
 
-Endpoint number.
+端点号。
 
 **Type:** number
 
@@ -166,9 +172,9 @@ Endpoint number.
 type: int
 ```
 
-Endpoint type. For details, see [UsbEndpointTransferType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+端点类型。取值见[UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

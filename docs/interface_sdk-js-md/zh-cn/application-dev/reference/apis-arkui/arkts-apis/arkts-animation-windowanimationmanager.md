@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## 汇总
 
 <!--Del-->
@@ -21,7 +27,7 @@
 | --- | --- |
 | [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation) | 最小化动画目标窗口，并返回动画完成的回调。使用callback异步回调。 |
 | [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation-1) | 最小化动画目标窗口，并返回动画完成的回调。使用Promise异步回调。 |
-| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md#setcontroller) | 设置窗口动画控制器。窗口动画控制器的说明请参考[WindowAnimationController]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。  在使用windowAnimationManager的其他接口前，需要预先调用本接口设置窗口动画控制器。 |
+| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md#setcontroller) | 设置窗口动画控制器。窗口动画控制器的说明请参考[WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md)。  在使用windowAnimationManager的其他接口前，需要预先调用本接口设置窗口动画控制器。 |
 <!--DelEnd-->
 
 <!--Del-->

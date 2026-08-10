@@ -1,6 +1,6 @@
 # UIEnvWindowAvoidAreaInfoPX
 
-窗口不同类型避让区域信息组成的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_数据类型，每种类型避让区域单位为px。
+窗口不同类型避让区域信息组成的[环境变量](../../../ui/arkts-env-system-property.md)数据类型，每种类型避让区域单位为px。
 
 **起始版本：** 23
 
@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## cutout
 
 ```TypeScript
 cutout: AvoidArea
 ```
 
-表示[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为TYPE\_CUTOUT类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_CUTOUT类型的避让区域，单位为px。
 
-**类型：** AvoidArea
+**类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
 
@@ -34,9 +40,9 @@ cutout: AvoidArea
 keyboard: AvoidArea
 ```
 
-表示[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为TYPE\_KEYBOARD类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD类型的避让区域，单位为px。
 
-**类型：** AvoidArea
+**类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
 
@@ -52,9 +58,9 @@ keyboard: AvoidArea
 navigationIndicator: AvoidArea
 ```
 
-表示[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为TYPE\_NAVIGATION\_INDICATOR类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为px。
 
-**类型：** AvoidArea
+**类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
 
@@ -70,9 +76,9 @@ navigationIndicator: AvoidArea
 statusBar: AvoidArea
 ```
 
-表示[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为TYPE\_SYSTEM类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM类型的避让区域，单位为px。
 
-**类型：** AvoidArea
+**类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
 

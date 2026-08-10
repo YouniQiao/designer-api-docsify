@@ -1,12 +1,18 @@
 # onUpdate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleMonitor } from 'kits/@kit.AbilityKit';
+```
+
 ## onUpdate
 
 ```TypeScript
 function onUpdate(callback: Callback<BundleChangedInfo>): void
 ```
 
-Register update listener.
+注册监听应用的更新。
 
 **Since:** 23
 
@@ -24,12 +30,12 @@ Register update listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleChangedInfo&gt; | Yes | Indicates the callback to be registered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BundleChangedInfo&gt; | Yes | 注册监听的AsyncCallback |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 

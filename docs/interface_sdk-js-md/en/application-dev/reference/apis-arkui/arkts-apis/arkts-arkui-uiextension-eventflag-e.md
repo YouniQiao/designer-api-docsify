@@ -1,6 +1,6 @@
 # EventFlag
 
-Enumerates event types.
+事件类型枚举。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates event types.
 EVENT_PAN_GESTURE_LEFT = 0x00000001
 ```
 
-Pan-left event.
+左滑事件。
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ Pan-left event.
 EVENT_PAN_GESTURE_RIGHT = 0x00000002
 ```
 
-Pan-right event.
+右滑事件。
 
 **Since:** 18
 
@@ -56,7 +56,7 @@ Pan-right event.
 EVENT_LONG_PRESS = 0x00000200
 ```
 
-Long press event.
+长按事件。
 
 **Since:** 18
 
@@ -76,7 +76,7 @@ Long press event.
 EVENT_PAN_GESTURE_UP = 0x00000004
 ```
 
-Pan-up event.
+上滑事件。
 
 **Since:** 18
 
@@ -96,7 +96,7 @@ Pan-up event.
 EVENT_CLICK = 0x00000100
 ```
 
-Click event.
+点击事件。
 
 **Since:** 18
 
@@ -116,7 +116,7 @@ Click event.
 EVENT_NONE = 0x00000000
 ```
 
-No event.
+无事件。
 
 **Since:** 18
 
@@ -136,7 +136,7 @@ No event.
 EVENT_PAN_GESTURE_DOWN = 0x00000008
 ```
 
-Pan-down event.
+下滑事件。
 
 **Since:** 18
 

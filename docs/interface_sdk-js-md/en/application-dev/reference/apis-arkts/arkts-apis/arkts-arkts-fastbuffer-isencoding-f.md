@@ -1,12 +1,18 @@
 # isEncoding
 
+## Modules to Import
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## isEncoding
 
 ```TypeScript
 function isEncoding(encoding: string): boolean
 ```
 
-Returns true if encoding is the name of a supported character encoding, or false otherwise.
+判断`encoding`是否为支持的编码格式。
 
 **Since:** 20
 
@@ -22,15 +28,15 @@ Returns true if encoding is the name of a supported character encoding, or false
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | Yes | The character encoding name to validate |
+| encoding | string | Yes | 编码格式，支持的格式范围为[BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true or false |
+| boolean | 是支持的编码格式返回true，反之则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

@@ -20,8 +20,8 @@ The callback of itemClicked event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| clickType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| itemInfo | [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | Yes |  |
+| clickType | [ClickType](arkts-medialibrary-file-photopickercomponent-clicktype-e.md) | Yes |  |
 
 **Return value:**
 

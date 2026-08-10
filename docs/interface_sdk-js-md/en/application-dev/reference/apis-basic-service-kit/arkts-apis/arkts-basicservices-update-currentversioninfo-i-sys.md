@@ -1,6 +1,6 @@
 # CurrentVersionInfo (System API)
 
-Represents information about the current version.
+当前版本信息。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Represents information about the current version.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## deviceName
 
 ```TypeScript
 deviceName: string
 ```
 
-Device name.
+设备名。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Device name.
 osVersion: string
 ```
 
-System version number.
+系统版本号。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ System version number.
 versionComponents: Array<VersionComponent>
 ```
 
-Version components.
+版本组件。
 
 **Type:** Array&lt;VersionComponent&gt;
 

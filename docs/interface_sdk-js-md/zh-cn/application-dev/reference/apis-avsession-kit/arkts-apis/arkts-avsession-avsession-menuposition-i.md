@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height: int
 
 组件高度。单位为vp。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -38,7 +44,7 @@ width: int
 
 组件宽度。单位为vp。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -58,7 +64,7 @@ x: int
 
 组件在X轴上的位置坐标。单位为vp。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 
@@ -78,7 +84,7 @@ y: int
 
 组件在y轴上的位置坐标。单位为vp。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 22
 

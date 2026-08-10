@@ -1,6 +1,6 @@
 # FunctionKey
 
-FunctionKey of Input.
+输入法功能键类型。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ FunctionKey of Input.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## enterKeyType
 
 ```TypeScript
 enterKeyType: EnterKeyType
 ```
 
-Indicates the enter key type of the input method.
+输入法enter键类型。
 
-**Type:** EnterKeyType
+**Type:** [EnterKeyType](../../apis-arkui/arkts-apis/arkts-arkui-textinput-enterkeytype-e.md)
 
 **Since:** 10
 

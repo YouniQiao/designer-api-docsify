@@ -1,6 +1,6 @@
 # ResourceType (System API)
 
-The type of exemption resources requested by the application.
+非待机应用资源枚举。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ The type of exemption resources requested by the application.
 NETWORK = 1
 ```
 
-The resource for non-standby network access.
+网络访问资源。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ The resource for non-standby network access.
 RUNNING_LOCK = 1 << 1
 ```
 
-The resource for non-standby cpu running-lock.
+cpu-runninglock资源。
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ The resource for non-standby cpu running-lock.
 TIMER = 1 << 2
 ```
 
-The resource for non-standby timer.
+timer任务资源。
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ The resource for non-standby timer.
 WORK_SCHEDULER = 1 << 3
 ```
 
-The resource for non-standby workscheduler.
+work任务资源。
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ The resource for non-standby workscheduler.
 AUTO_SYNC = 1 << 4
 ```
 
-The resource for non-standby automatic synchronization.
+自动同步的资源。
 
 **Since:** 10
 
@@ -108,7 +108,7 @@ The resource for non-standby automatic synchronization.
 PUSH = 1 << 5
 ```
 
-The resource for non-standby push-kit.
+pushkit资源。
 
 **Since:** 10
 
@@ -126,7 +126,7 @@ The resource for non-standby push-kit.
 FREEZE = 1 << 6
 ```
 
-The resource for non-standby freezing application.
+冻结应用资源。
 
 **Since:** 10
 

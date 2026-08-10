@@ -1,12 +1,18 @@
 # getPointerSizeSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## getPointerSizeSync
 
 ```TypeScript
 function getPointerSizeSync(): int
 ```
 
-Obtains the pointer size. This API returns the result synchronously.
+获取鼠标光标大小，使用同步方式返回结果。
 
 **Since:** 10
 
@@ -22,15 +28,15 @@ Obtains the pointer size. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Mouse pointer size. The value ranges from **1** to **7**. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 鼠标光标大小，范围为[1-7]。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -44,9 +50,9 @@ struct Index {
         .onClick(() => {
           try {
             let pointerSize = pointer.getPointerSizeSync();
-            console.info(`getPointerSizeSync success, pointerSize: ${JSON.stringify(pointerSize)}`);
+            console.info(`Succeeded in getting pointer size sync, pointerSize: ${JSON.stringify(pointerSize)}.`);
           } catch (error) {
-            console.error(`getPointerSizeSync failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get pointer size sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

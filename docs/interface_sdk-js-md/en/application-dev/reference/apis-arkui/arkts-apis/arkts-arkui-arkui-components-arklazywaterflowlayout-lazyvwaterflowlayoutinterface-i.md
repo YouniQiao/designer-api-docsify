@@ -1,6 +1,6 @@
 # LazyVWaterFlowLayoutInterface
 
-Defines the lazy vertical waterflow layout component.
+定义懒加载垂直瀑布流布局组件。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines the lazy vertical waterflow layout component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## [[Call]]
 
 ```TypeScript
 (): LazyVWaterFlowLayoutAttribute
 ```
 
-Construct the lazy vertical waterflow attribute.
+构造懒加载垂直瀑布流属性。
 
 **Since:** 26.0.0
 
@@ -34,5 +40,5 @@ Construct the lazy vertical waterflow attribute.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
 

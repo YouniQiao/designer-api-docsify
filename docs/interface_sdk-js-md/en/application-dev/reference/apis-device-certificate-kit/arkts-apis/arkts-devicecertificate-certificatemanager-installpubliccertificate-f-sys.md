@@ -1,12 +1,18 @@
 # installPublicCertificate (System API)
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## installPublicCertificate
 
 ```TypeScript
 function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : Promise<CMResult>
 ```
 
-Installs the public credential of the user. This API is called only by the certificate management application. This API uses a promise to return the result.
+安装用户的公共凭据，仅证书管理应用调用。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -26,28 +32,28 @@ Installs the public credential of the user. This API is called only by the certi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keystore | Uint8Array | Yes | Keystore file containing the key pair and certificate. Only the P12 format is supported. |
-| keystorePwd | string | Yes | Password of the keystore file. |
+| keystore | Uint8Array | Yes | 表示带有密钥对和证书的密钥库文件，仅支持P12格式。 |
+| keystorePwd | string | Yes | 表示密钥库文件的密码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the [CMResult]{ |
+| Promise&lt;CMResult&gt; | Promise对象，返回安装用户公共凭据的结果，返回值为 [CMResult]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_the keystore parameter is empty or exceeds the maximum length. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
-| [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | Indicates that the certificate is in an invalid format. |
-| [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | Indicates that the number of certificates reaches the maximum allowed. |
-| [17500008](../errorcode-certManager.md#17500008-incorrect-password) | Indicates that the password is error. |
+| 401 | Parameter verification failed. Possible causes: &lt;br&gt;the keystore parameter is empty or exceeds the maximum length. |
+| 17500008 | Indicates that the password is error. |
+| 17500003 | Indicates that the certificate is in an invalid format. |
+| 201 | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| 17500004 | Indicates that the number of certificates reaches the maximum allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -59,14 +65,15 @@ let keystore: Uint8Array = new Uint8Array([
 ]);
 let keystorePwd: string = "123456";
 try {
-    certificateManager.installPublicCertificate(keystore, keystorePwd).then((cmResult: certificateManager.CMResult) => {
-        let uri: string = (cmResult?.uri == undefined) ? '' : cmResult.uri;
-        console.info('Succeeded in installing public certificate.');
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to install public certificate. Code: ${err.code}, message: ${err.message}`);
-    })
-} catch (error: BusinessError) {
-    console.error(`Failed to install public certificate. Code: ${error.code}, message: ${error.message}`);
+  certificateManager.installPublicCertificate(keystore, keystorePwd).then((cmResult: certificateManager.CMResult) => {
+    let uri: string = (cmResult?.uri == undefined) ? '' : cmResult.uri;
+    console.info('Succeeded in installing public certificate.');
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to install public certificate. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to install public certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

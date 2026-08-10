@@ -38,7 +38,7 @@ The album nickname operation attribute.
 EXTRA_INFO_ATTR = 'extra_info'
 ```
 
-The album extra\_info operation attribute.
+The album extra_info operation attribute.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ The album extra\_info operation attribute.
 IS_REMOVED_ATTR = 'is_removed'
 ```
 
-The album is\_removed operation attribute.
+The album is_removed operation attribute.
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ The album is\_removed operation attribute.
 FRIEND_ID_ATTR = 'friend_id'
 ```
 
-The album friend\_id operation attribute.
+The album friend_id operation attribute.
 
 **Since:** 26.1.0
 

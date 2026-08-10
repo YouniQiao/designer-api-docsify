@@ -10,6 +10,12 @@ Information details of the HTTP request
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## cipherSuite
 
 ```TypeScript
@@ -18,7 +24,7 @@ cipherSuite?: CipherSuite
 
 The cipher suite used to fetch the resource.
 
-**Type:** CipherSuite
+**Type:** [CipherSuite](arkts-network-http-ciphersuite-t.md)
 
 **Since:** 24
 
@@ -118,7 +124,7 @@ localPort: int
 
 localPort of the HTTP request. -1 for unknown.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -158,7 +164,7 @@ redirectCount: int
 
 The HTTP request redirect count.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -198,7 +204,7 @@ remotePort: int
 
 remotePort of the HTTP request. -1 for unknown.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -218,7 +224,7 @@ tlsVersion?: TlsVersion
 
 The tls version used to fetch the resource.
 
-**Type:** TlsVersion
+**Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
 **Since:** 24
 

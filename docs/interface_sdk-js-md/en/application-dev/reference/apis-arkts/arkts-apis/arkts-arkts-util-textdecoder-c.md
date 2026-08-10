@@ -10,6 +10,12 @@ The TextDecoder represents a text decoder that accepts a string as input,decodes
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
@@ -47,13 +53,13 @@ Replaces the original constructor to process arguments and return a textDecoder 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | encoding | string | No | Decoding format |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options |
+| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | No | Options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) |  |
 
 ## decodeToString
 
@@ -76,7 +82,7 @@ The input is decoded and a string is returned.If options.stream is set to true, 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | input | Uint8Array | Yes | Decoded numbers in accordance with the format. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The default option is set to false. |
+| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | No | The default option is set to false. |
 
 **Return value:**
 
@@ -108,7 +114,7 @@ The source encoding's name, lowercased.
 get fatal(): boolean
 ```
 
-Returns \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ if error mode is "fatal", and \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ otherwise.
+Returns `true` if error mode is "fatal", and `false` otherwise.
 
 **Type:** boolean
 
@@ -126,7 +132,7 @@ Returns \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ if error mode is "fatal", and \_\
 get ignoreBOM(): boolean
 ```
 
-Returns \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ if ignore BOM flag is set, and \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ otherwise.
+Returns `true` if ignore BOM flag is set, and `false` otherwise.
 
 **Type:** boolean
 

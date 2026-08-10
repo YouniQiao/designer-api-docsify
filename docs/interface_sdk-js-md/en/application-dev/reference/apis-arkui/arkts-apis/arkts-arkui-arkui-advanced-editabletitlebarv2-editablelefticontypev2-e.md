@@ -1,6 +1,6 @@
 # EditableLeftIconTypeV2
 
-Declaration of the left icon type.
+左侧图标类型枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Declaration of the left icon type.
 Back = 0
 ```
 
-The back type.
+返回图标类型。点击时默认执行路由返回操作。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ The back type.
 Cancel = 1
 ```
 
-The cancel type.
+取消图标类型。点击时无默认操作，需自定义回调。
 
 **Since:** 26.0.0
 

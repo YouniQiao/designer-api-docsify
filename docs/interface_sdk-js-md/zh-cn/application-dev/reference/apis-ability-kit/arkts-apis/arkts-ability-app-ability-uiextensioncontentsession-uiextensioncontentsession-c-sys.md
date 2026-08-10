@@ -10,6 +10,12 @@ UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
+```
+
 ## getUIExtensionHostWindowProxy
 
 ```TypeScript
@@ -40,12 +46,10 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 16000050 | Internal error. |
+| 202 | Not System App. Interface caller is not a system app. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
@@ -91,54 +95,6 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { uiExtensionHost, LocalStorage } from '@kit.ArkUI';
-
-const TAG: string = '[UIExtAbility]';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  onCreate() {
-    console.info(TAG, `UIExtAbility onCreate`);
-  }
-
-  onForeground() {
-    console.info(TAG, `UIExtAbility onForeground`);
-  }
-
-  onBackground() {
-    console.info(TAG, `UIExtAbility onBackground`);
-  }
-
-  onDestroy(): Promise<void> | undefined {
-    console.info(TAG, `UIExtAbility onDestroy`);
-    return undefined;
-  }
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    let extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    let data: Record<string, UIExtensionContentSession | uiExtensionHost.UIExtensionHostWindowProxy> = {
-      'session': session,
-      'extensionHostWindow': extensionHostWindow
-    };
-    let storage: LocalStorage = new LocalStorage(data);
-
-    try {
-      session.loadContent('pages/Extension', storage);
-    } catch (err) {
-      console.info('loadContent err:' + JSON.stringify(err));
-    }
-  }
-
-  onSessionDestroy(session: UIExtensionContentSession) {
-    console.info(TAG, `UIExtAbility onSessionDestroy`);
-  }
-}
-```
-
 ## sendData
 
 ```TypeScript
@@ -163,17 +119,17 @@ sendData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 发送给UIExtensionComponent控件的数据参数。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 发送给UIExtensionComponent控件的数据参数。<br>**起始版本：** 11 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000050 | Internal error. |
+| 202 | Not System App. Interface caller is not a system app. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -231,53 +187,14 @@ sendData(data: Record<string, RecordData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, RecordData&gt; | 是 | 发送给UIExtensionComponent控件的数据参数。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 发送给UIExtensionComponent控件的数据参数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { RecordData } from '@kit.BasicServicesKit';
-import { Entry, Text, Column, Component, Button, RelativeContainer, LocalStorage } from '@kit.ArkUI';
-
-@Entry()
-@Component
-struct Index {
-  private storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          let data: Record<string, RecordData> = {
-            'number': 123456,
-            'message': 'test'
-          };
-
-          try {
-            this.session?.sendData(data);
-          } catch (err) {
-            console.error('sendData err:' + JSON.stringify(err));
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
+| 16000050 | Internal error. |
+| 202 | Not System App. Interface caller is not a system app. |
 
 ## setReceiveDataCallback
 
@@ -309,11 +226,11 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000050 | Internal error. |
+| 202 | Not System App. Interface caller is not a system app. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -364,50 +281,14 @@ setReceiveDataCallback(callback: OnReceiveDataCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回接收的数据。 |
+| callback | [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) | 是 | 回调函数，返回接收的数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Failed to communicate with dependency module. |
-
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { Entry, RelativeContainer, Button, Component, LocalStorage } from '@kit.ArkUI';
-import { RecordData } from '@kit.BasicServicesKit';
-
-@Entry()
-@Component
-struct Index {
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          this.setReceiveDataCallbackFun();
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-
-  private setReceiveDataCallbackFun() {
-    this.session?.setReceiveDataCallback((data: Record<string, RecordData>) => {
-      console.info(`Succeeded in setReceiveDataCallback, data: ${JSON.stringify(data)}`);
-    });
-  }
-}
-```
+| 16000050 | Internal error. Possible causes: Failed to communicate with dependency module. |
+| 202 | Not System App. Interface caller is not a system app. |
 
 ## setReceiveDataForResultCallback
 
@@ -439,11 +320,11 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000050 | Internal error. |
+| 202 | Not System App. Interface caller is not a system app. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -495,51 +376,14 @@ setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回带返回值的接收的数据。 |
+| callback | [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) | 是 | 回调函数，返回带返回值的接收的数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Failed to communicate with dependency module. |
-
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { Entry, RelativeContainer, Button, Component, LocalStorage } from '@kit.ArkUI';
-import { RecordData } from '@kit.BasicServicesKit';
-
-@Entry()
-@Component
-struct Index {
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          this.setReceiveDataForResultCallbackFun();
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-
-  private setReceiveDataForResultCallbackFun() {
-    this.session?.setReceiveDataForResultCallback((data: Record<string, RecordData>) => {
-      console.info(`Succeeded in setReceiveDataCallback, data: ${JSON.stringify(data)}`);
-      return data;
-    });
-  }
-}
-```
+| 16000050 | Internal error. Possible causes: Failed to communicate with dependency module. |
+| 202 | Not System App. Interface caller is not a system app. |
 
 ## setWindowBackgroundColor
 
@@ -548,7 +392,7 @@ setWindowBackgroundColor(color: string): void
 ```
 
 设置UIExtensionAbility加载界面的背景色。该接口需要在  
-[loadContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_调用生效后使用。
+[loadContent()](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)调用生效后使用。
 
 **起始版本：** 10
 
@@ -566,19 +410,17 @@ setWindowBackgroundColor(color: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | string | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_或\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| color | string | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`#00FF00`或`#FF00FF00`。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000050 | Internal error. |
+| 202 | Not System App. Interface caller is not a system app. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
@@ -607,37 +449,6 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
-import { LocalStorage } from '@kit.ArkUI';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let storage: LocalStorage = new LocalStorage();
-    storage.setOrCreate('session', session);
-
-    try {
-      session.loadContent('pages/Extension', storage);
-    } catch (err) {
-      console.info('loadContent err:' + JSON.stringify(err));
-    }
-
-    try {
-      session.setWindowBackgroundColor('#00FF00');
-    } catch (err) {
-      console.info('setWindowBackgroundColor err:' + JSON.stringify(err));
-    }
-  }
-
-  // ...
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -645,10 +456,11 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
 启动Ability。使用callback异步回调。
-    **说明：**  
-    
-    组件启动规则详见：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-        对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
 
@@ -666,33 +478,33 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当启动成功，err为undefined，否则为错误对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
@@ -702,7 +514,7 @@ export default class UIExtAbility extends UIExtensionAbility {
   // ...
 
   onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    session.startAbility(want, (err: BusinessError | null) => {
+    session.startAbility(want, (err: BusinessError) => {
       if (err) {
         console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
         return;
@@ -722,10 +534,11 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 ```
 
 启动Ability。使用callback异步回调。
-    **说明：**  
-    
-    组件启动规则详见：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-        对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
 
@@ -743,32 +556,32 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability所携带的参数。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当启动成功，err为undefined，否则为错误对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 是 | 启动Ability所携带的参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -782,7 +595,7 @@ export default class UIExtAbility extends UIExtensionAbility {
       displayId: 0
     };
 
-    session.startAbility(want, startOptions, (err: BusinessError | null) => {
+    session.startAbility(want, startOptions, (err: BusinessError) => {
       if (err) {
         console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
         return;
@@ -802,10 +615,11 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
 启动Ability。使用Promise异步回调。
-    **说明：**  
-    
-    组件启动规则详见：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-        对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
 
@@ -823,8 +637,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 启动Ability所携带的参数。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -836,26 +650,26 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -873,8 +687,7 @@ export default class UIExtAbility extends UIExtensionAbility {
       .then(() => {
         console.info(`Succeeded in startAbility`);
       })
-      .catch((error: Error) => {
-        let err = error as BusinessError;
+      .catch((err: BusinessError) => {
         console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
       });
   }
@@ -907,33 +720,33 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
@@ -948,7 +761,7 @@ export default class UIExtAbility extends UIExtensionAbility {
     localWant.moduleName = 'entry';
     localWant.abilityName = 'TestAbility';
 
-    session.startAbilityAsCaller(localWant, (err: BusinessError | null) => {
+    session.startAbilityAsCaller(localWant, (err: BusinessError) => {
       if (err) {
         console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
         return;
@@ -985,32 +798,32 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability所携带的参数。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 是 | 启动Ability所携带的参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -1029,7 +842,7 @@ export default class UIExtAbility extends UIExtensionAbility {
       displayId: 0
     };
 
-    session.startAbilityAsCaller(localWant, startOptions, (err: BusinessError | null) => {
+    session.startAbilityAsCaller(localWant, startOptions, (err: BusinessError) => {
       if (err) {
         console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
         return;
@@ -1066,8 +879,8 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 启动Ability所携带的参数。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -1079,26 +892,26 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -1121,8 +934,7 @@ export default class UIExtAbility extends UIExtensionAbility {
       .then(() => {
         console.info(`Succeeded in startAbilityAsCaller`);
       })
-      .catch((error: Error) => {
-        let err = error as BusinessError;
+      .catch((err: BusinessError) => {
         console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
       });
   }
@@ -1140,14 +952,15 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 启动一个Ability，在Ability终止后返回结果给调用方。使用callback异步回调。Ability的终止方式包括以下几种情况：
 
 - 正常情况下可通过调用  
-[terminateSelfWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口使之终止并且返回结果给调用方。  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止并且返回结果给调用方。  
 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
-[terminateSelfWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
-    **说明：**  
-    
-    组件启动规则详见：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-        对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
 
@@ -1165,33 +978,33 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AbilityResult&gt; | 是 | 回调函数。当Ability启动并终止成功，err为undefined，data为获取到的结果码和数据；否则为错误对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数。当Ability启动并终止成功，err为undefined，data为获取到的结果码和数据；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want, common } from '@kit.AbilityKit';
@@ -1201,7 +1014,7 @@ export default class UIExtAbility extends UIExtensionAbility {
   // ...
 
   onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    session.startAbilityForResult(want, (err: BusinessError | null, data: common.AbilityResult | undefined) => {
+    session.startAbilityForResult(want, (err: BusinessError, data: common.AbilityResult) => {
       if (err) {
         console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
         return;
@@ -1223,14 +1036,15 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 启动一个Ability，在Ability终止后返回结果给调用方。使用callback异步回调。Ability的终止方式包括以下几种情况：
 
 - 正常情况下可通过调用  
-[terminateSelfWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口使之终止并且返回结果给调用方。  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止并且返回结果给调用方。  
 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
-[terminateSelfWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
-    **说明：**  
-    
-    组件启动规则详见：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-        对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
 
@@ -1248,32 +1062,32 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability所携带的参数。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AbilityResult&gt; | 是 | 回调函数。当Ability启动并终止成功，err为undefined，data为获取到的结果码和数据；否则为错误对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 是 | 启动Ability所携带的参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数。当Ability启动并终止成功，err为undefined，data为获取到的结果码和数据；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions, common } from '@kit.AbilityKit';
@@ -1287,14 +1101,13 @@ export default class UIExtAbility extends UIExtensionAbility {
       displayId: 0
     };
 
-    session.startAbilityForResult(want, startOptions,
-      (err: BusinessError | null, data: common.AbilityResult | undefined) => {
-        if (err) {
-          console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
-          return;
-        }
-        console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
-      })
+    session.startAbilityForResult(want, startOptions, (err: BusinessError, data: common.AbilityResult) => {
+      if (err) {
+        console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
+    })
   }
 
   // ...
@@ -1310,14 +1123,15 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 启动一个Ability，在Ability终止后返回结果给调用方。使用Promise异步回调。Ability的终止方式包括以下几种情况：
 
 - 正常情况下可通过调用  
-[terminateSelfWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口使之终止并且返回结果给调用方。  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止并且返回结果给调用方。  
 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
-[terminateSelfWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
-    **说明：**  
-    
-    组件启动规则详见：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-        对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
 
@@ -1335,39 +1149,39 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 启动Ability所携带的参数。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AbilityResult&gt; | Promise对象，返回结果码和数据。 |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，返回结果码和数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 16000053 | The ability is not on the top of the UI. |
+| 16000055 | Installation-free timed out. |
+| 16000050 | Internal error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | Not System App. Interface caller is not a system app. |
+| 16000004 | Cannot start an invisible component. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000005 | The specified process does not have the permission. |
+| 16000006 | Cross-user operations are not allowed. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16200001 | The caller has been released. |
+| 16000012 | The application is controlled. |
+| 16000013 | The application is controlled by EDM. |
+| 16000008 | The crowdtesting application expires. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions, common } from '@kit.AbilityKit';
@@ -1385,8 +1199,7 @@ export default class UIExtAbility extends UIExtensionAbility {
       .then((data: common.AbilityResult) => {
         console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
       })
-      .catch((error: Error) => {
-        let err = error as BusinessError;
+      .catch((err: BusinessError) => {
         console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
       });
   }

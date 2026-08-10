@@ -1,6 +1,6 @@
 # ConnectionType
 
-Enumerates the camera connection types.
+枚举，相机连接类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the camera connection types.
 CAMERA_CONNECTION_BUILT_IN = 0
 ```
 
-Built-in camera.
+内置相机。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ Built-in camera.
 CAMERA_CONNECTION_USB_PLUGIN = 1
 ```
 
-Camera connected using USB.
+USB连接的相机。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ Camera connected using USB.
 CAMERA_CONNECTION_REMOTE = 2
 ```
 
-Remote camera.
+远程连接的相机。
 
 **Since:** 10
 

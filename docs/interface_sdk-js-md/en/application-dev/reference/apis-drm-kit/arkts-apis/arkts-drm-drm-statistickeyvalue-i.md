@@ -10,6 +10,12 @@ Used to indicate the statistic info.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## name
 
 ```TypeScript

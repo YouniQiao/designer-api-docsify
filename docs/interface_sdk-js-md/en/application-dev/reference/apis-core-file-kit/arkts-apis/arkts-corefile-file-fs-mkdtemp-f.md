@@ -1,12 +1,18 @@
 # mkdtemp
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## mkdtemp
 
 ```TypeScript
 declare function mkdtemp(prefix: string): Promise<string>
 ```
 
-Creates a temporary directory. This API uses a promise to return the result.
+创建临时目录，使用promise异步回调。
 
 **Since:** 9
 
@@ -20,33 +26,33 @@ Creates a temporary directory. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
+| prefix | string | Yes | 指定目录路径，命名时需要以"XXXXXX"作为结尾。路径末尾的"XXXXXX"字符串将被替换为随机字符，以创建唯一的目录名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the directory created. |
+| Promise&lt;string&gt; | Promise对象。返回生成的唯一目录路径。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900020 | Invalid argument |
+| 13900018 | Not a directory |
+| 13900028 | Too many links |
+| 13900030 | File name too long |
+| 13900025 | No space left on device |
 | 13900001 | Operation not permitted |
+| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900028 | Too many links |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## mkdtemp
@@ -55,7 +61,7 @@ Creates a temporary directory. This API uses a promise to return the result.
 declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 ```
 
-Creates a temporary directory. This API uses an asynchronous callback to return the result.
+创建临时目录，使用callback异步回调。
 
 **Since:** 9
 
@@ -69,26 +75,26 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the result. |
+| prefix | string | Yes | 指定目录路径，命名时需要以"XXXXXX"作为结尾。路径末尾的"XXXXXX"字符串将被替换为随机字符，以创建唯一的目录名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 异步创建临时目录之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900020 | Invalid argument |
+| 13900018 | Not a directory |
+| 13900028 | Too many links |
+| 13900030 | File name too long |
+| 13900025 | No space left on device |
 | 13900001 | Operation not permitted |
+| 13900033 | Too many symbolic links encountered |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900028 | Too many links |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 

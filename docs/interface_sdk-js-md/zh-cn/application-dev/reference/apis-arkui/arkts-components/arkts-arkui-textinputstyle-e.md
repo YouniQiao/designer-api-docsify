@@ -40,7 +40,7 @@ Inline
 
 不支持showError属性。
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_下，不支持拖入文本。
+[内联模式](../../../ui/arkts-common-components-text-input.md#内联模式)下，不支持拖入文本。
 
 **起始版本：** 9
 

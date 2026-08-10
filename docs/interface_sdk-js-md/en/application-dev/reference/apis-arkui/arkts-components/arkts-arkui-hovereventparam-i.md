@@ -1,7 +1,5 @@
 # HoverEventParam
 
-The param of hover event.
-
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
@@ -16,9 +14,9 @@ The param of hover event.
 appRotation: AppRotation
 ```
 
-Current orientation.
+当前应用方向的旋转角度。
 
-**Type:** AppRotation
+**Type:** [AppRotation](../arkts-apis/arkts-arkui-enums-approtation-e.md)
 
 **Since:** 12
 
@@ -38,9 +36,9 @@ Current orientation.
 foldStatus: FoldStatus
 ```
 
-Current fold state of the device.
+当前设备的折叠状态。
 
-**Type:** FoldStatus
+**Type:** [FoldStatus](../arkts-apis/arkts-arkui-enums-foldstatus-e.md)
 
 **Since:** 12
 
@@ -60,7 +58,7 @@ Current fold state of the device.
 isHoverMode: boolean
 ```
 
-Whether hover mode is enabled. **true**: Hover mode is enabled. **false**: Hover mode is disabled.
+当前是否为悬停态。设置为true时表示当前为悬停态，设置为false时表示当前为非悬停态。
 
 **Type:** boolean
 
@@ -82,9 +80,9 @@ Whether hover mode is enabled. **true**: Hover mode is enabled. **false**: Hover
 windowStatusType: WindowStatusType
 ```
 
-Window mode.
+窗口模式枚举。
 
-**Type:** WindowStatusType
+**Type:** [WindowStatusType](arkts-arkui-windowstatustype-t.md)
 
 **Since:** 12
 

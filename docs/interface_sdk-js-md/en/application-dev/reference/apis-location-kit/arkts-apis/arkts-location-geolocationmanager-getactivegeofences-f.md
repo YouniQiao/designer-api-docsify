@@ -1,5 +1,11 @@
 # getActiveGeoFences
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## getActiveGeoFences
 
 ```TypeScript
@@ -22,16 +28,16 @@ Get all active fences.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Map&lt;number, Geofence&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Map&lt;int, Geofence&gt;&gt; | The promise returned by the function. The key of the map represents the fence ID. The value of the map represents the detailed information of the fence. |
+| ArkTS-Dyn: Promise&lt;Map&lt;number, Geofence&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Map&lt;int, Geofence&gt;&gt; | The promise returned by the function. The key of the map represents the fence ID. The value of the map represents the detailed information of the fence. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.getActiveGeoFences} due to limited device capabilities. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.getActiveGeoFences} due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

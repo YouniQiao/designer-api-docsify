@@ -1,12 +1,18 @@
 # getCurrentBundleInodes
 
+## Modules to Import
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getCurrentBundleInodes
 
 ```TypeScript
 function getCurrentBundleInodes(): Promise<long>
 ```
 
-Get the current bundle inodes.
+获取当前应用的inode占用量，使用Promise异步回调。
 
 **Since:** 24
 
@@ -22,17 +28,17 @@ Get the current bundle inodes.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | return Promise |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回当前应用的inode占用量。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600001 | IPC error. |
 | 13600002 | File system not supported. |
+| 13600001 | IPC error. |
 | 13600017 | Failed to query the inode information of the application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

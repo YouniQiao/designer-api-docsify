@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## ascent
 
 ```TypeScript
@@ -18,7 +24,7 @@ ascent: double
 
 文字上升高度，即从基线到字符顶部的距离，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ baseline: double
 
 该行基线相对于段落顶部的 Y 坐标位置，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ descent: double
 
 文字下降高度，即从基线到字符底部的距离，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ endIndex: int
 
 文本缓冲区中该行结束的索引位置。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -96,9 +102,9 @@ endIndex: int
 height: double
 ```
 
-当前行的高度，单位为物理像素px，计算方式为 \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
+当前行的高度，单位为物理像素px，计算方式为 `Math.round(ascent + descent)`
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -116,9 +122,9 @@ height: double
 left: double
 ```
 
-行的左边缘位置，单位为物理像素px。右边缘可通过 \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ 计算得出。
+行的左边缘位置，单位为物理像素px。右边缘可通过 `left+width` 计算得出。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -138,7 +144,7 @@ lineNumber: int
 
 行号，从0开始计数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -158,7 +164,7 @@ runMetrics: Map<int, RunMetrics>
 
 文本索引范围与关联的字体度量信息之间的映射。
 
-**类型：** Map&lt;int, RunMetrics&gt;
+**类型：** ArkTS-Dyn: Map&lt;number, RunMetrics&gt;  <br>ArkTS-Sta：Map&lt;int, RunMetrics&gt;
 
 **起始版本：** 12
 
@@ -178,7 +184,7 @@ startIndex: int
 
 文本缓冲区中该行开始的索引位置。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -198,7 +204,7 @@ topHeight: double
 
 从顶部到当前行的高度，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -218,7 +224,7 @@ width: double
 
 行的宽度，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 

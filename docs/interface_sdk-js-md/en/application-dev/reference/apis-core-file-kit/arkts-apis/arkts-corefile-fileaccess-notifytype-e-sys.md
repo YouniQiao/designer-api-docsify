@@ -1,6 +1,6 @@
 # NotifyType (System API)
 
-Enumerates the notification types.
+枚举，通知类型。
 
 **Since:** 10
 
@@ -20,9 +20,7 @@ Enumerates the notification types.
 NOTIFY_ADD = 0
 ```
 
-File added.
-
-See examples 2 and 3 of **registerObserver**.
+表示新增文件（详见registerObserver接口的示例2、示例3）。
 
 **Since:** 10
 
@@ -44,9 +42,7 @@ See examples 2 and 3 of **registerObserver**.
 NOTIFY_DELETE = 1
 ```
 
-File deleted.
-
-See examples 1 and 2 of **unregisterObserver(uri: string, callback: Callback\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_)**.
+表示删除文件（详见unregisterObserver(uri: string, callback: Callback&lt;NotifyMessage&gt;)接口的示例1、示例2）。
 
 **Since:** 10
 
@@ -68,9 +64,7 @@ See examples 1 and 2 of **unregisterObserver(uri: string, callback: Callback\_\_
 NOTIFY_MOVED_TO = 2
 ```
 
-File or directory moved in (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved to this directory).
-
-See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
+表示移动至该文件（对目录下子文件或目录执行rename操作，或外部文件或目录执行move操作到本文件。详见registerObserver接口的示例1，及unregisterObserver(uri: string)接口的示例1）。
 
 **Since:** 10
 
@@ -92,9 +86,7 @@ See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri:
 NOTIFY_MOVED_FROM = 3
 ```
 
-File or directory moved out (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved out from this directory).
-
-See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
+表示自该文件移出（对目录下子文件或目录执行rename操作，或子文件（夹）执行move操作从该文件夹内移出。详见registerObserver接口的示例1，及unregisterObserver(uri: string)接口的示例1）。
 
 **Since:** 10
 
@@ -116,9 +108,7 @@ See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri:
 NOTIFY_MOVE_SELF = 4
 ```
 
-File moved (for example, the target file or directory is renamed or moved).
-
-See example 1 of **registerObserver**.
+表示本文件被移动（如对文件或文件夹执行rename或move操作时，监听该文件（夹）的callback收到该事件，详见registerObserver接口的示例1）。
 
 **Since:** 10
 
@@ -140,7 +130,7 @@ See example 1 of **registerObserver**.
 NOTIFY_DEVICE_ONLINE = 5
 ```
 
-Device goes online.
+表示设备上线。
 
 **Since:** 11
 
@@ -162,7 +152,7 @@ Device goes online.
 NOTIFY_DEVICE_OFFLINE = 6
 ```
 
-Device goes offline.
+表示设备下线。
 
 **Since:** 11
 

@@ -14,6 +14,12 @@ Provides methods to operate or manage Bluetooth.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Namespaces
@@ -75,8 +81,8 @@ Provides methods to operate or manage Bluetooth.
 | [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md) | Base interface of profile. |
 | [A2dpSourceProfile](arkts-connectivity-bluetooth-a2dpsourceprofile-i.md) | Manager a2dp source profile. |
 | [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetooth-handsfreeaudiogatewayprofile-i.md) | Manager handsfree AG profile. |
-| [GattServer](arkts-connectivity-bluetooth-gattserver-i.md) | Manages GATT server. Before calling an Gatt server method, you must use \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to create an GattServer instance. |
-| [GattClientDevice](arkts-connectivity-bluetooth-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to create an GattClientDevice instance. |
+| [GattServer](arkts-connectivity-bluetooth-gattserver-i.md) | Manages GATT server. Before calling an Gatt server method, you must use {@link createGattServer} to create an GattServer instance. |
+| [GattClientDevice](arkts-connectivity-bluetooth-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance. |
 | [GattService](arkts-connectivity-bluetooth-gattservice-i.md) | Describes the Gatt service. |
 | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Describes the Gatt characteristic. |
 | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Describes the Gatt descriptor. |

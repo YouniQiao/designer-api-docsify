@@ -1,6 +1,6 @@
 # HiTraceCommunicationMode
 
-Enumerates communication modes.
+跟踪通信类型枚举。用于标识通信发生的层级，例如THREAD用于标记同一应用内线程间通信，PROCESS用于标记同一设备内进程间通信，DEVICE用于标记跨设备的分布式通信。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates communication modes.
 DEFAULT = 0
 ```
 
-Default communication.
+缺省通信类型。
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Default communication.
 THREAD = 1
 ```
 
-Inter-thread communication.
+线程间通信。
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Inter-thread communication.
 PROCESS = 2
 ```
 
-Inter-process communication.
+进程间通信。
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Inter-process communication.
 DEVICE = 3
 ```
 
-Inter-device communication.
+设备间通信。
 
 **Since:** 8
 

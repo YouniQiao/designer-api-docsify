@@ -1,6 +1,6 @@
 # TxPowerMode
 
-The enum of advertising mode.
+广播模式的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of advertising mode.
 ADV_TX_POWER_LOW = 1
 ```
 
-Low power mode.
+低功率模式。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Low power mode.
 ADV_TX_POWER_MEDIUM = 2
 ```
 
-Medium power mode.
+中等功率模式。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Medium power mode.
 ADV_TX_POWER_HIGH = 3
 ```
 
-High power mode.
+高功率模式。
 
 **Since:** 26.0.0
 

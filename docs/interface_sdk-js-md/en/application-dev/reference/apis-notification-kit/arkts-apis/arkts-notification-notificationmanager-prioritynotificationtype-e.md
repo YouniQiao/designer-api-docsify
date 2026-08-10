@@ -1,6 +1,6 @@
 # PriorityNotificationType
 
-Describes the priority type of a notification.
+描述通知的优先级类型。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Describes the priority type of a notification.
 OTHER = 'OTHER'
 ```
 
-Default.
+表示通知优先级类型为默认。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Default.
 PRIMARY_CONTACT = 'PRIMARY_CONTACT'
 ```
 
-Primary contact.
+表示通知优先级类型为重要联系人。
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Primary contact.
 AT_ME = 'AT_ME'
 ```
 
-Message that mentions me.
+表示通知优先级类型为@我。
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ Message that mentions me.
 URGENT_MESSAGE = 'URGENT_MESSAGE'
 ```
 
-Urgent message.
+表示通知优先级类型为加急消息。
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ Urgent message.
 SCHEDULE_REMINDER = 'SCHEDULE_REMINDER'
 ```
 
-Schedule reminder.
+表示通知优先级类型为日程待办。
 
 **Since:** 23
 

@@ -1,15 +1,20 @@
 # LinkIntentParamMapping
 
-LinkIntentParamMapping是  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器的意图参数和uri信息的映射。
+Declare interface of LinkIntentParamMapping.
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-unnamed-declare interface LinkIntentParamMapping--><!--Device-unnamed-declare interface LinkIntentParamMapping-End-->
+<!--Device-unnamed-export declare interface LinkIntentParamMapping--><!--Device-unnamed-export declare interface LinkIntentParamMapping-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+```
 
 ## paramCategory
 
@@ -17,21 +22,15 @@ LinkIntentParamMapping是
 paramCategory?: LinkParamCategory
 ```
 
-表示意图参数类别。
+The parameter category.
 
-若意图参数类别取值为\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，系统获取paramName字段对应的意图参数映射名称，并将该意图参数映射名称拼接到uri链接的末尾(以键值对的形式key=value，key为意图参数映射名称，value为意图参数值)。
+**类型：** [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
 
-若意图参数类别为\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_，系统获取paramName字段对应的意图参数映射名称，并将该意图参数映射名称及取值通过\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_的parameters字段进行传递。
+**起始版本：** 26.0.0
 
-**类型：** LinkParamCategory
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LinkIntentParamMapping-paramCategory?: LinkParamCategory--><!--Device-LinkIntentParamMapping-paramCategory?: LinkParamCategory-End-->
 
@@ -43,17 +42,15 @@ paramCategory?: LinkParamCategory
 paramMappingName?: string
 ```
 
-表示意图参数映射名称。
+The parameter mapping name.
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LinkIntentParamMapping-paramMappingName?: string--><!--Device-LinkIntentParamMapping-paramMappingName?: string-End-->
 
@@ -65,17 +62,15 @@ paramMappingName?: string
 paramName: string
 ```
 
-表示意图参数的名称。
+The parameter name.
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LinkIntentParamMapping-paramName: string--><!--Device-LinkIntentParamMapping-paramName: string-End-->
 

@@ -17,9 +17,10 @@ getModifierKeyState?(keys: Array<string>): boolean
 ```
 
 获取功能键按压状态。报错信息请参考以下错误码。支持功能键'Ctrl'\|'Alt'\|'Shift'。
-    **说明：**  
-    
-    此接口不支持在手写笔场景下使用。
+
+> **说明：**
+> 
+> 此接口不支持在手写笔场景下使用。
 
 **起始版本：** 12
 
@@ -49,7 +50,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 
@@ -235,7 +236,7 @@ source: SourceType
 
 事件输入设备的类型。
 
-**类型：** SourceType
+**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **起始版本：** 8
 
@@ -257,7 +258,7 @@ sourceTool: SourceTool
 
 事件输入源的类型。
 
-**类型：** SourceTool
+**类型：** [SourceTool](../arkts-apis/arkts-arkui-common-sourcetool-e.md)
 
 **起始版本：** 9
 
@@ -279,7 +280,7 @@ target: EventTarget
 
 触发手势事件的元素对象。
 
-**类型：** EventTarget
+**类型：** [EventTarget](../../apis-arkts/arkts-apis/arkts-arkts-worker-eventtarget-i.md)
 
 **起始版本：** 8
 
@@ -299,7 +300,7 @@ target: EventTarget
 targetDisplayId?: number
 ```
 
-事件发生的屏幕ID。
+事件发生的屏幕ID。 
 
 默认值：0
 

@@ -1,5 +1,11 @@
 # setHyperSnapEnabled
 
+## Modules to Import
+
+```TypeScript
+import { hyperSnapManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setHyperSnapEnabled
 
 ```TypeScript
@@ -12,10 +18,10 @@ When enabled, the system will create a snapshot of the application process at an
 
 **Notes:**  
 - The system ultimately determines whether to create or use snapshots based on  
-application compatibility, resource availability, and system policies. Enabling this feature only indicates the application's readiness for optimization.  
+ application compatibility, resource availability, and system policies. Enabling this feature only  indicates the application's readiness for optimization.  
 - Hyper Snap is enabled by default for applications meeting system compatibility requirements.  
 - If issues arise after enabling Hyper Snap, disable this feature to revert  
-to standard cold start processes.  
+ to standard cold start processes.  
 - Settings persist across reboots.
 
 **Since:** 24
@@ -32,7 +38,7 @@ to standard cold start processes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enableFlag | boolean | Yes | Indicates the desired optimization state: - \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: Indicates the application's compatibility with Hyper Snap optimization (system may apply when appropriate) - \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: Disables Hyper Snap; uses standard cold-start process. |
+| enableFlag | boolean | Yes | Indicates the desired optimization state: - `true`: Indicates the application's compatibility with Hyper Snap optimization (system may apply when appropriate) - `false`: Disables Hyper Snap; uses standard cold-start process. |
 
 **Error codes:**
 

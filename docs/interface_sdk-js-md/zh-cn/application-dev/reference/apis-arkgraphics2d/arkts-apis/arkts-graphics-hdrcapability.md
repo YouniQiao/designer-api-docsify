@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
+## 导入模块
+
+```TypeScript
+import { hdrCapability } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## 汇总
 
 ### 枚举

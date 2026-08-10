@@ -1,6 +1,6 @@
 # HuksKeySize
 
-Enumerates the key sizes.
+表示密钥长度。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the key sizes.
 HUKS_RSA_KEY_SIZE_512 = 512
 ```
 
-Rivest-Shamir-Adleman (RSA) key of 512 bits.
+表示使用RSA算法的密钥长度为512bit。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Rivest-Shamir-Adleman (RSA) key of 512 bits.
 HUKS_RSA_KEY_SIZE_768 = 768
 ```
 
-RSA key of 768 bits.
+表示使用RSA算法的密钥长度为768bit。
 
 **Since:** 8
 
@@ -56,7 +56,7 @@ RSA key of 768 bits.
 HUKS_RSA_KEY_SIZE_1024 = 1024
 ```
 
-RSA key of 1024 bits.
+表示使用RSA算法的密钥长度为1024bit。
 
 **Since:** 8
 
@@ -76,7 +76,7 @@ RSA key of 1024 bits.
 HUKS_RSA_KEY_SIZE_2048 = 2048
 ```
 
-RSA key of 2048 bits.
+表示使用RSA算法的密钥长度为2048bit。
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ RSA key of 2048 bits.
 HUKS_RSA_KEY_SIZE_3072 = 3072
 ```
 
-RSA key of 3072 bits.
+表示使用RSA算法的密钥长度为3072bit。
 
 **Since:** 8
 
@@ -116,7 +116,7 @@ RSA key of 3072 bits.
 HUKS_RSA_KEY_SIZE_4096 = 4096
 ```
 
-RSA key of 4096 bits.
+表示使用RSA算法的密钥长度为4096bit。
 
 **Since:** 8
 
@@ -136,7 +136,7 @@ RSA key of 4096 bits.
 HUKS_ECC_KEY_SIZE_224 = 224
 ```
 
-Elliptic Curve Cryptography (ECC) key of 224 bits.
+表示使用ECC算法的密钥长度为224bit。
 
 **Since:** 8
 
@@ -156,7 +156,7 @@ Elliptic Curve Cryptography (ECC) key of 224 bits.
 HUKS_ECC_KEY_SIZE_256 = 256
 ```
 
-ECC key of 256 bits.
+表示使用ECC算法的密钥长度为256bit。
 
 **Since:** 8
 
@@ -176,7 +176,7 @@ ECC key of 256 bits.
 HUKS_ECC_KEY_SIZE_384 = 384
 ```
 
-ECC key of 384 bits.
+表示使用ECC算法的密钥长度为384bit。
 
 **Since:** 8
 
@@ -196,7 +196,7 @@ ECC key of 384 bits.
 HUKS_ECC_KEY_SIZE_521 = 521
 ```
 
-ECC key of 521 bits.
+表示使用ECC算法的密钥长度为521bit。
 
 **Since:** 8
 
@@ -216,7 +216,7 @@ ECC key of 521 bits.
 HUKS_AES_KEY_SIZE_128 = 128
 ```
 
-Advanced Encryption Standard (AES) key of 128 bits.
+表示使用AES算法的密钥长度为128bit。
 
 **Since:** 8
 
@@ -234,7 +234,7 @@ Advanced Encryption Standard (AES) key of 128 bits.
 HUKS_AES_KEY_SIZE_192 = 192
 ```
 
-AES key of 192 bits.
+表示使用AES算法的密钥长度为192bit。
 
 **Since:** 8
 
@@ -252,7 +252,7 @@ AES key of 192 bits.
 HUKS_AES_KEY_SIZE_256 = 256
 ```
 
-AES key of 256 bits.
+表示使用AES算法的密钥长度为256bit。
 
 **Since:** 8
 
@@ -270,9 +270,9 @@ AES key of 256 bits.
 HUKS_AES_KEY_SIZE_512 = 512
 ```
 
-AES key of 512 bits.
+表示使用AES算法的密钥长度为512bit。
 
-Note: This parameter is supported since API version 8 and deprecated since API version 11.
+**说明：** 从API version 8开始支持，从API version 11开始废弃。
 
 **Since:** 8
 
@@ -290,7 +290,7 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 HUKS_CURVE25519_KEY_SIZE_256 = 256
 ```
 
-Curve25519 key of 256 bits.
+表示使用CURVE25519算法的密钥长度为256bit。
 
 **Since:** 8
 
@@ -310,7 +310,7 @@ Curve25519 key of 256 bits.
 HUKS_DH_KEY_SIZE_2048 = 2048
 ```
 
-Diffie-Hellman (DH) key of 2048 bits.
+表示使用DH算法的密钥长度为2048bit。
 
 **Since:** 8
 
@@ -330,7 +330,7 @@ Diffie-Hellman (DH) key of 2048 bits.
 HUKS_DH_KEY_SIZE_3072 = 3072
 ```
 
-DH key of 3072 bits.
+表示使用DH算法的密钥长度为3072bit。
 
 **Since:** 8
 
@@ -350,7 +350,7 @@ DH key of 3072 bits.
 HUKS_DH_KEY_SIZE_4096 = 4096
 ```
 
-DH key of 4096 bits.
+表示使用DH算法的密钥长度为4096bit。
 
 **Since:** 8
 
@@ -370,7 +370,7 @@ DH key of 4096 bits.
 HUKS_SM2_KEY_SIZE_256 = 256
 ```
 
-ShangMi2 (SM2) key of 256 bits.
+表示SM2算法的密钥长度为256bit。
 
 **Since:** 9
 
@@ -390,7 +390,7 @@ ShangMi2 (SM2) key of 256 bits.
 HUKS_SM4_KEY_SIZE_128 = 128
 ```
 
-ShangMi4 (SM4) key of 128 bits.
+表示SM4算法的密钥长度为128bit。
 
 **Since:** 9
 
@@ -410,7 +410,7 @@ ShangMi4 (SM4) key of 128 bits.
 HUKS_DES_KEY_SIZE_64 = 64
 ```
 
-DES key of 64 bits.
+表示DES算法的密钥长度为64bit。
 
 **Since:** 12
 
@@ -428,7 +428,7 @@ DES key of 64 bits.
 HUKS_3DES_KEY_SIZE_128 = 128
 ```
 
-3DES key of 128 bits.
+表示3DES算法的密钥长度为128bit。
 
 **Since:** 12
 
@@ -446,7 +446,7 @@ HUKS_3DES_KEY_SIZE_128 = 128
 HUKS_3DES_KEY_SIZE_192 = 192
 ```
 
-3DES key of 192 bits.
+表示3DES算法的密钥长度为192bit。
 
 **Since:** 12
 
@@ -464,7 +464,7 @@ HUKS_3DES_KEY_SIZE_192 = 192
 HUKS_ML_DSA_KEY_PARAM_SET_44 = 44
 ```
 
-ML-DSA-44 parameter set.
+ML-DSA-44参数集。
 
 **Since:** 26.0.0
 
@@ -482,7 +482,7 @@ ML-DSA-44 parameter set.
 HUKS_ML_DSA_KEY_PARAM_SET_65 = 65
 ```
 
-ML-DSA-65 parameter set.
+ML-DSA-65参数集。
 
 **Since:** 26.0.0
 
@@ -500,7 +500,7 @@ ML-DSA-65 parameter set.
 HUKS_ML_DSA_KEY_PARAM_SET_87 = 87
 ```
 
-ML-DSA-87 parameter set.
+ML-DSA-87参数集。
 
 **Since:** 26.0.0
 
@@ -518,7 +518,7 @@ ML-DSA-87 parameter set.
 HUKS_ML_KEM_KEY_PARAM_SET_768 = 768
 ```
 
-ML-KEM-768 parameter set.
+ML-KEM-768参数集。
 
 **Since:** 26.0.0
 
@@ -536,7 +536,7 @@ ML-KEM-768 parameter set.
 HUKS_ML_KEM_KEY_PARAM_SET_1024 = 1024
 ```
 
-ML-KEM-1024 parameter set.
+ML-KEM-1024参数集。
 
 **Since:** 26.0.0
 

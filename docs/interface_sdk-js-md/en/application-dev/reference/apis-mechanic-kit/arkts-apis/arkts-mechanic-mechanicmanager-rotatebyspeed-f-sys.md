@@ -1,12 +1,18 @@
 # rotateBySpeed (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## rotateBySpeed
 
 ```TypeScript
 function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>
 ```
 
-Rotates a mechanical device at the specified speed.
+以指定的速度旋转机械设备
 
 **Since:** 20
 
@@ -22,25 +28,25 @@ Rotates a mechanical device at the specified speed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the mechanical device. |
-| speed | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rotation speed. |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Rotation duration. Unit: millisecond. |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
+| speed | [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | Yes | 旋转速度 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 执行时间 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that return the execution result. |
+| Promise&lt;Result&gt; | 返回执行结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 console.info('Start rotate');

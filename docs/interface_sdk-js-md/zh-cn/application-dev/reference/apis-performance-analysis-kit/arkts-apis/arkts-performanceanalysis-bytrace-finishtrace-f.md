@@ -7,9 +7,10 @@ function finishTrace(name: string, taskId: number): void
 ```
 
 标记一个时间片跟踪事件的结束。
-    **说明：**  
-    
-    finishTrace的name和taskId必须与流程开始的startTrace对应参数值一致。
+
+> **说明：**
+> 
+> finishTrace的name和taskId必须与流程开始的startTrace对应参数值一致。
 
 **起始版本：** 7
 
@@ -30,7 +31,7 @@ function finishTrace(name: string, taskId: number): void
 | name | string | 是 | 时间片跟踪任务名称，必须与startTrace调用时的name参数值一致。 |
 | taskId | number | 是 | 时间片跟踪任务id，必须与startTrace调用时的taskId参数值一致。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 bytrace.finishTrace("myTestFunc", 1);

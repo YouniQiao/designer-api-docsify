@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## reason
 
 ```TypeScript
@@ -18,7 +24,7 @@ reason: AudioSessionDeactivatedReason
 
 音频会话停用原因。
 
-**类型：** AudioSessionDeactivatedReason
+**类型：** [AudioSessionDeactivatedReason](arkts-audio-audio-audiosessiondeactivatedreason-e.md)
 
 **起始版本：** 12
 

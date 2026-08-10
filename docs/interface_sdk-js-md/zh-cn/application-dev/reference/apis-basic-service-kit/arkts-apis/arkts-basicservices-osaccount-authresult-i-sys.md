@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountId
 
 ```TypeScript
@@ -20,7 +26,7 @@ accountId?: int
 
 指示系统账号标识，默认为undefined。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -60,7 +66,7 @@ freezingTime?: int
 
 指示冻结时间，单位为ms，默认为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -80,7 +86,7 @@ nextPhaseFreezingTime?: int
 
 指示下次冻结时间，单位为ms，默认为undefined。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -100,7 +106,7 @@ pinValidityPeriod?: long
 
 指示认证有效期，单位为ms，默认为undefined。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -120,7 +126,7 @@ remainTimes?: int
 
 指示剩余次数，默认为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 

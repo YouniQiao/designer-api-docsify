@@ -12,6 +12,12 @@ Describes the album sorting order.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumId
 
 ```TypeScript
@@ -20,7 +26,7 @@ albumId: int
 
 Album ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -40,7 +46,7 @@ albumOrder: int
 
 Sorting value of the album.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -60,7 +66,7 @@ orderSection: int
 
 Sorting section of the album.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -80,7 +86,7 @@ orderStatus: int
 
 Sorting status of the album.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -100,7 +106,7 @@ orderType: int
 
 Sorting type of the album.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

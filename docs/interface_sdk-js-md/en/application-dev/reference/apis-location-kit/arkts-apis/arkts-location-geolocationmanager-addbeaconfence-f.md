@@ -1,5 +1,11 @@
 # addBeaconFence
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## addBeaconFence
 
 ```TypeScript
@@ -24,26 +30,26 @@ Add a beacon fence.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fenceRequest | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the details of the beacon fence. |
+| fenceRequest | [BeaconFenceRequest](arkts-location-geolocationmanager-beaconfencerequest-i.md) | Yes | Indicates the details of the beacon fence. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | The promise returned by the function, for reporting the ID of beacon fence. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returned by the function, for reporting the ID of beacon fence. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.addBeaconFence} due to limited device capabilities. |
-| [3501100](../errorcode-geoLocationManager.md#3501100-failed-to-add-a-beacon-fence-because-the-location-switch-is-turned-off) | Failed to add a beacon fence because the location switch is off. |
-| [3501101](../errorcode-geoLocationManager.md#3501101-failed-to-add-a-beacon-fence-because-bluetooth-is-disabled) | Failed to add a beacon fence because the bluetooth switch is off. |
-| [3501601](../errorcode-geoLocationManager.md#3501601-failed-to-add-a-beacon-fence-because-the-maximum-number-is-exceeded) | The number of beacon fences exceeds the maximum. |
-| [3501603](../errorcode-geoLocationManager.md#3501603-failed-to-add-a-beacon-fence-because-of-duplication) | Duplicate beacon fence information. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.addBeaconFence} due to limited device capabilities. |
+| 3501601 | The number of beacon fences exceeds the maximum. |
+| 3501603 | Duplicate beacon fence information. |
+| 3501101 | Failed to add a beacon fence because the bluetooth switch is off. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3501100 | Failed to add a beacon fence because the location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

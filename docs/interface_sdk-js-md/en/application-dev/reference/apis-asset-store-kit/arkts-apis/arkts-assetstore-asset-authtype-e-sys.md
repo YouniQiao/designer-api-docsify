@@ -1,6 +1,6 @@
 # AuthType
 
-Enumerates the types of user authentication supported by an asset.
+枚举，关键资产支持的用户认证类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the types of user authentication supported by an asset.
 PRIVATE_PIN = 0x100
 ```
 
-Private PIN type, supports only system applications.
+隐私PIN码仅支持系统应用
 
 **Since:** 26.0.0
 

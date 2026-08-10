@@ -1,6 +1,6 @@
 # DataMoveOperation
 
-Represents an operation for moving data.
+移动数据操作。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents an operation for moving data.
 index: MoveIndex
 ```
 
-Positions for the movement. The value range is [0, data source length - 1].
+移动位置。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
 
-**Type:** MoveIndex
+**Type:** [MoveIndex](arkts-arkui-moveindex-i.md)
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Positions for the movement. The value range is [0, data source length - 1].
 key?: string
 ```
 
-New key to assign to the moved data. The original key is used by default.
+为被移动的数据分配新的键值，默认使用原键值。
 
 **Type:** string
 
@@ -60,7 +60,7 @@ New key to assign to the moved data. The original key is used by default.
 type: DataOperationType.MOVE
 ```
 
-Type of data movement.
+数据移动类型。
 
 **Type:** DataOperationType.MOVE
 

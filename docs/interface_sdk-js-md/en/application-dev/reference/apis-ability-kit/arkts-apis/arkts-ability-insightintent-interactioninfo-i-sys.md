@@ -1,6 +1,6 @@
 # InteractionInfo (System API)
 
-Defines the interaction information returned after the current intent execution completes, including the next intent to be triggered and the interaction UI to be displayed.
+定义当前意图执行完成后返回的交互信息，包括下一个要触发的意图和要显示的交互界面。
 
 **Since:** 26.1.0
 
@@ -12,15 +12,21 @@ Defines the interaction information returned after the current intent execution 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## interactionUI
 
 ```TypeScript
 interactionUI?: InteractionUI
 ```
 
-Information of the interaction UI to be displayed after the current intent execution completes.
+当前意图执行完成后需要展示的交互界面信息。
 
-**Type:** InteractionUI
+**Type:** [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
 
 **Since:** 26.1.0
 

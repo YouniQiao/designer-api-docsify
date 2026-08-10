@@ -20,13 +20,13 @@ export type OnRequestEventCallback = (source: Want, name: string, data: KVObject
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | request请求发送方相关信息。  |
-| name | string | 是 | 请求的组件名称。  |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | request事件中传递的数据内容，以键值对形式存储，键和值类型由业务定义。  |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | request请求发送方相关信息。 |
+| name | string | 是 | 请求的组件名称。 |
+| data | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | 是 | request事件中传递的数据内容，以键值对形式存储，键和值类型由业务定义。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 注册request监听方法后，接收到请求事件时回应请求的数据类型。  |
+| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | 注册request监听方法后，接收到请求事件时回应请求的数据类型。 |
 

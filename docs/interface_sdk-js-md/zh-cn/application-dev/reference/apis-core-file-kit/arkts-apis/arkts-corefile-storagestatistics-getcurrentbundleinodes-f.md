@@ -1,5 +1,11 @@
 # getCurrentBundleInodes
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getCurrentBundleInodes
 
 ```TypeScript
@@ -22,38 +28,24 @@ function getCurrentBundleInodes(): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回当前应用的inode占用量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回当前应用的inode占用量。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13600001 | IPC error. |
 | 13600002 | File system not supported. |
+| 13600001 | IPC error. |
 | 13600017 | Failed to query the inode information of the application. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-storageStatistics.getCurrentBundleInodes().then((curInodes: number) => {
-  console.info('getCurrentBundleInodes successfully:' + curInodes);
+storageStatistics.getCurrentBundleInodes().then((bundleInodes: number) => {
+  console.info('getCurrentBundleInodes successfully:' + bundleInodes);
 }).catch((err: BusinessError) => {
-  console.error(`getCurrentBundleInodes failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.getCurrentBundleInodes().then((curInodes: long) => {
-  console.info('getCurrentBundleInodes successfully:' + curInodes);
-}).catch((err: BusinessError): void => {
   console.error(`getCurrentBundleInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```

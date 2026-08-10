@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isExistNewVersion
 
 ```TypeScript
@@ -40,7 +46,7 @@ newVersionInfo: NewVersionInfo
 
 新版本数据。
 
-**类型：** NewVersionInfo
+**类型：** [NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)
 
 **起始版本：** 9
 

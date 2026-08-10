@@ -1,6 +1,6 @@
 # PopInfo
 
-Provides the callback information returned when a page is popped out of the routing stack.
+下一个页面返回的回调信息载体。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Provides the callback information returned when a page is popped out of the rout
 info: NavPathInfo
 ```
 
-Information about the current page when a back action is performed. The value is automatically obtained by the system.
+页面触发返回时的当前页面信息，系统自动获取填入，无需开发者传入。
 
-**Type:** NavPathInfo
+**Type:** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ Information about the current page when a back action is performed. The value is
 result: Object
 ```
 
-Result returned when a back action is performed. You must customize the object.
+页面触发返回时的结果，开发者自定义对象。
 
 **Type:** Object
 

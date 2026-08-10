@@ -1,6 +1,6 @@
 # CustomComponentLifecycleState
 
-Current lifecycle status of a custom component.
+自定义组件当前的生命周期状态。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Current lifecycle status of a custom component.
 INIT = 0
 ```
 
-Initial.
+初始化状态。
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ Initial.
 APPEARED = 1
 ```
 
-To build.
+准备展开状态。
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ To build.
 BUILT = 2
 ```
 
-Built.
+已展开状态。
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ Built.
 RECYCLED = 3
 ```
 
-Recycled.
+回收状态。
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ Recycled.
 DISAPPEARED = 4
 ```
 
-Deleted.
+已销毁状态。
 
 **Since:** 23
 

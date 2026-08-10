@@ -1,10 +1,16 @@
-# @ohos.atomicservice.AtomicServiceMenuBar(System API)
+# @ohos.atomicservice.AtomicServiceMenuBar(系统接口)
 
-###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+###### 子组件
+ 无。
+ ###### 属性
+ 不支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
 
+
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 
@@ -13,6 +19,6 @@
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceMenuBar](arkts-arkui-atomicservice-atomicservicemenubar-atomicservicemenubar-c-sys.md) | Creates an **AtomicServiceMenuBar** object based on the context of the current atomic service. The object is used to control the display of the menu function capsule in the upper right corner. |
+| [AtomicServiceMenuBar](arkts-arkui-atomicservice-atomicservicemenubar-atomicservicemenubar-c-sys.md) | 依赖当前原子化服务的UI上下文，创建AtomicServiceMenuBar对象，用于操控右上角菜单功能胶囊的显隐状态。 |
 <!--DelEnd-->
 

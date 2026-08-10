@@ -1,6 +1,6 @@
 # CheckboxFrameNode
 
-Define the Checkbox type of FrameNode.
+定义Checkbox类型的FrameNode。
 
 **Inheritance/Implementation:** CheckboxFrameNode extends [TypedFrameNode<CheckboxAttribute>](TypedFrameNode<CheckboxAttribute>)
 
@@ -18,7 +18,7 @@ Define the Checkbox type of FrameNode.
 abstract initialize(options?: CheckboxOptions): CheckboxAttribute
 ```
 
-Initialize Checkbox FrameNode.
+初始化Checkbox类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Checkbox FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [CheckboxOptions](../arkts-components/arkts-arkui-checkboxoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) |  |
 

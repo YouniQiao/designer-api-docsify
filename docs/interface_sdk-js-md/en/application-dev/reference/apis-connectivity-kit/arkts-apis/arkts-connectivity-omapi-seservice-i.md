@@ -10,6 +10,12 @@ SEService realizes the communication to available SEs on the device.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
+## Modules to Import
+
+```TypeScript
+import { omapi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getReaders
 
 ```TypeScript
@@ -30,15 +36,15 @@ Returns the list of available SE readers. There must be no duplicated objects in
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | The list of available SE readers. |
+| [Reader](arkts-connectivity-omapi-reader-i.md)[] | The list of available SE readers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';
@@ -90,9 +96,9 @@ Returns the version of the Open Mobile API Specification this implementation is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';
@@ -137,9 +143,9 @@ Checks whether or not the service is connected.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';
@@ -182,9 +188,9 @@ Releases all SE resources allocated by this SEService. As a result isConnected()
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';

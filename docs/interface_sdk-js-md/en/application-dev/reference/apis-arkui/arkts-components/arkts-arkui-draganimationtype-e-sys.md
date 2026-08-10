@@ -1,6 +1,6 @@
 # DragAnimationType (System API)
 
-Enumerates drag animation types.
+拖拽动画类型。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Enumerates drag animation types.
 DEFAULT = 0
 ```
 
-Default drag animation.
+使用默认拖拽动画。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Default drag animation.
 FOLLOW_HAND_MORPH = 1
 ```
 
-Follow-hand morph drag animation.
+使用跟手变形拖拽动画。
 
 **Since:** 26.0.0
 

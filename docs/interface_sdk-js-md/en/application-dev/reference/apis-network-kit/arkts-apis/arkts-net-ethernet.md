@@ -10,6 +10,12 @@ Provides interfaces to manage ethernet.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
+## Modules to Import
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions

@@ -6,7 +6,7 @@
 function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void
 ```
 
-Removes notifications under a notification group of a specified application.This API uses an asynchronous callback to return the result.
+删除指定应用的指定组下的通知（Callback形式）。
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ Removes notifications under a notification group of a specified application.This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| groupName | string | Yes | Name of the notification group. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 应用的包信息。 |
+| groupName | string | Yes | 通知组名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 删除指定应用指定组下通知的回调函数。 |
 
 
 ## removeGroupByBundle
@@ -39,7 +39,7 @@ Removes notifications under a notification group of a specified application.This
 function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>
 ```
 
-Removes notifications under a notification group of a specified application.This API uses a promise to return the result.
+删除指定应用的指定组下的通知（Promise形式）。
 
 **Since:** 8
 
@@ -61,12 +61,12 @@ Removes notifications under a notification group of a specified application.This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bundle information of the application. |
-| groupName | string | Yes | Name of the notification group. |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 应用的包信息。 |
+| groupName | string | Yes | 通知组名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

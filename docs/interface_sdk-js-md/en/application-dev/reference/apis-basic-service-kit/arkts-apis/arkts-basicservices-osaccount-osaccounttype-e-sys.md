@@ -1,6 +1,6 @@
 # OsAccountType
 
-Enumerates the OS account types.
+表示系统账号类型的枚举。
 
 **Since:** 7
 
@@ -16,9 +16,9 @@ Enumerates the OS account types.
 PRIVATE = 1024
 ```
 
-Privacy account. Only one privacy account is allowed.
+隐私账号。隐私账号只能有一个。
 
-This is a system API.
+此接口为系统接口。
 
 **Since:** 12
 

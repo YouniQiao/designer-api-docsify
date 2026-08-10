@@ -1,6 +1,6 @@
 # ControllerHandler
 
-Defines the onWindowNew callback, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the onWindowNew callback, related to {@link onWindowNew} method.
 
 **起始版本：** 11
 
@@ -50,5 +50,5 @@ Set WebController object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| controller | [WebviewController](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md) | 是 |  |
 

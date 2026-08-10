@@ -1,12 +1,18 @@
 # onDownloadError
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onDownloadError
 
 ```TypeScript
 function onDownloadError(url: string, callback: Callback<DownloadError>): void
 ```
 
-Subscribes to the pre-download error events. This API uses an asynchronous callback to return the result.
+订阅预下载的错误事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -20,10 +26,10 @@ Subscribes to the pre-download error events. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | URL to be registered, with a maximum of 8192 bytes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DownloadError&gt; | Yes | Callback used to return the error information about the pre- download. |
+| url | string | Yes | 待注册回调的url，URL字符串的最大长度为8192字节。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;DownloadError&gt; | Yes | 回调函数，返回预下载的错误信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cacheDownload } from '@kit.BasicServicesKit';

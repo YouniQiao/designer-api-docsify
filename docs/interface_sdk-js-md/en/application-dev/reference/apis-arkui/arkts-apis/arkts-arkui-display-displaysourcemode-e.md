@@ -1,6 +1,6 @@
 # DisplaySourceMode
 
-Enumerates the display modes for screen content.
+屏幕显示内容的显示模式枚举。
 
 **Since:** 19
 
@@ -16,7 +16,7 @@ Enumerates the display modes for screen content.
 MAIN = 1
 ```
 
-The primary screen of the device is currently in use.
+表示设备当前为主屏。
 
 **Since:** 19
 
@@ -34,7 +34,7 @@ The primary screen of the device is currently in use.
 NONE = 0
 ```
 
-The device is currently not in use.
+表示设备当前未使用。
 
 **Since:** 19
 
@@ -52,7 +52,7 @@ The device is currently not in use.
 EXTEND = 3
 ```
 
-The device is currently in extended display mode.
+表示设备当前为扩展显示模式。
 
 **Since:** 19
 
@@ -70,7 +70,7 @@ The device is currently in extended display mode.
 MIRROR = 2
 ```
 
-The device is currently in mirror display mode.
+表示设备当前为镜像显示模式。
 
 **Since:** 19
 
@@ -88,7 +88,7 @@ The device is currently in mirror display mode.
 ALONE = 4
 ```
 
-The device is currently in independent display mode.
+表示设备当前为异源显示模式。
 
 **Since:** 19
 

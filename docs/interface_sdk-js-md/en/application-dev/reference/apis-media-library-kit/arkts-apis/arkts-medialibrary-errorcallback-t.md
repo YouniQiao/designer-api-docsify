@@ -22,5 +22,5 @@ Callback to be invoked when an error occurs in the **PhotoPickerComponent**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerError | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Basic information about the error.  |
+| pickerError | [PickerError](arkts-medialibrary-file-photopickercomponent-pickererror-c.md) | Yes | Basic information about the error. |
 

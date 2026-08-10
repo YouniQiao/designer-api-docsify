@@ -20,6 +20,6 @@ Defines the callback type used in onTouchTestDone.When the user touch down, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the event information, basicly is the touch down information  |
-| recognizers | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Yes | the gesture recognizers of the component on the response chain  |
+| event | [BaseGestureEvent](arkts-arkui-basegestureevent-i.md) | Yes | the event information, basicly is the touch down information |
+| recognizers | Array&lt;[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | the gesture recognizers of the component on the response chain |
 

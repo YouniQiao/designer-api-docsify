@@ -1,5 +1,11 @@
 # createGroup
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createGroup
 
 ```TypeScript
@@ -26,7 +32,7 @@ Creates a P2P group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the configuration for creating a group. |
+| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | Yes | Indicates the configuration for creating a group. |
 
 **Return value:**
 
@@ -34,23 +40,23 @@ Creates a P2P group.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	let config:wifi.WifiP2PConfig = {
-		deviceAddress: "****",
-		netId: 0,
-		passphrase: "*****",
-		groupName: "****",
-		goBand: 0
-	}
-	wifi.createGroup(config);	
-	
+  let config:wifi.WifiP2PConfig = {
+    deviceAddress: "****",
+    netId: 0,
+    passphrase: "*****",
+    groupName: "****",
+    goBand: 0
+  }
+  wifi.createGroup(config);  
+  
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

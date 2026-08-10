@@ -1,6 +1,6 @@
 # ExtraKey
 
-Define some common extra keys used in different scenarios.
+表示定义在不同场景中使用的额外键的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Define some common extra keys used in different scenarios.
 LIVE_VIEW_HIDDEN_WHEN_KEYGUARD = 'hw_live_view_hidden_when_keyguard'
 ```
 
-Inform the system that the live view card should be hidden on the keyguard.
+作为[setExtras](arkts-avsession-avsession-avsession-i.md#setextras))}接口传入的键，值传入bool类型列表，用于通知系统在锁屏时是否隐藏实况窗卡片。
 
 **Since:** 26.0.0
 

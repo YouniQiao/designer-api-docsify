@@ -12,6 +12,12 @@ Defines the paragraph information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## chapterId
 
 ```TypeScript
@@ -20,7 +26,7 @@ chapterId?: int
 
 Chapter ID of the paragraph, which is the identifier of each subchapter.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -40,7 +46,7 @@ hookId?: long
 
 Hook ID of the paragraph, which is the identifier of each main paragraph.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 

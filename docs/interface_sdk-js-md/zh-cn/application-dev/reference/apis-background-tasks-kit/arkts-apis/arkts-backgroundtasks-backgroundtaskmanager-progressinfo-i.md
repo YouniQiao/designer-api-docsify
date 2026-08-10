@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## fileName
 
 ```TypeScript
@@ -58,7 +64,7 @@ progressValue?: int
 
 通知进度。如果该字段不存在，则不显示通知进度环，显示为普通通知。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.1.0
 

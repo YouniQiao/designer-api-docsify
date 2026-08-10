@@ -1,6 +1,6 @@
 # AudioHRTFAnonymousDescriptor (System API)
 
-Anonymous personalzied HRTF file descriptor for cross-process transfer.
+匿名的HRTF文件描述符，用于跨进程传输。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Anonymous personalzied HRTF file descriptor for cross-process transfer.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## fd
 
 ```TypeScript
 fd: int
 ```
 
-The file descriptor of personalzied HRTF.
+个人化HRTF的文件描述符。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -40,9 +46,9 @@ The file descriptor of personalzied HRTF.
 length: long
 ```
 
-Total size of personalzied HRTF data in bytes.
+个人化HRTF数据的总大小（以字节为单位）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 

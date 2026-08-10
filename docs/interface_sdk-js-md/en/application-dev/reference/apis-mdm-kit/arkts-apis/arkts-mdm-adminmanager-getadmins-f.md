@@ -1,12 +1,18 @@
 # getAdmins
 
+## Modules to Import
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## getAdmins
 
 ```TypeScript
 function getAdmins(): Promise<Array<Want>>
 ```
 
-Queries all device administrator applications of the current user. This API uses a promise to return the result.
+查询当前用户下的所有设备管理应用。使用Promise异步回调。
 
 **Since:** 15
 
@@ -22,15 +28,15 @@ Queries all device administrator applications of the current user. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt;&gt; | Promise that contains all activated device administrator applications. |
+| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt;&gt; | 包含所有已激活的设备管理应用的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

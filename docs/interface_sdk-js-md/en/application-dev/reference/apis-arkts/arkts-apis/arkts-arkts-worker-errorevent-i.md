@@ -1,6 +1,6 @@
 # ErrorEvent
 
-Provides detailed information about the exception that occurs during worker execution. The ErrorEvent class inherits from Event.
+错误事件类用于表示Worker执行过程中出现异常的详细信息，ErrorEvent类继承Event。
 
 **Inheritance/Implementation:** ErrorEvent extends [Event](arkts-arkts-worker-event-i.md)
 
@@ -12,13 +12,19 @@ Provides detailed information about the exception that occurs during worker exec
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## colno
 
 ```TypeScript
 readonly colno: number
 ```
 
-Serial number of the column where the exception is located.
+异常所在的列数。
 
 **Type:** number
 
@@ -38,7 +44,7 @@ Serial number of the column where the exception is located.
 readonly error: Object
 ```
 
-Type of the exception.
+异常类型。
 
 **Type:** Object
 
@@ -58,7 +64,7 @@ Type of the exception.
 readonly filename: string
 ```
 
-File where the exception is located.
+出现异常所在的文件。
 
 **Type:** string
 
@@ -78,7 +84,7 @@ File where the exception is located.
 readonly lineno: number
 ```
 
-Serial number of the line where the exception is located.
+异常所在的行数。
 
 **Type:** number
 
@@ -98,7 +104,7 @@ Serial number of the line where the exception is located.
 readonly message: string
 ```
 
-Information about the exception.
+异常发生的错误信息。
 
 **Type:** string
 

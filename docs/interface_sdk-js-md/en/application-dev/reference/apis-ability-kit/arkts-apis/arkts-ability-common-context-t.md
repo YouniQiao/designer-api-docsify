@@ -4,8 +4,7 @@
 export type Context = _Context.default
 ```
 
-Defines the context base class for the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[Stage模型](../../../application-models/ability-terminology.md#stage模型)的上下文基类。
 
 **Since:** 9
 

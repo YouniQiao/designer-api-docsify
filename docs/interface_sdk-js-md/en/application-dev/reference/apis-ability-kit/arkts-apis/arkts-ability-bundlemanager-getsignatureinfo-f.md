@@ -1,12 +1,18 @@
 # getSignatureInfo
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getSignatureInfo
 
 ```TypeScript
 function getSignatureInfo(uid: int): SignatureInfo
 ```
 
-Obtains the [signature information]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an application based on the given UID.
+根据给定的uid获取对应应用的[签名信息](arkts-ability-bundlemanager-signatureinfo-t.md)。
 
 **Since:** 18
 
@@ -22,22 +28,22 @@ Obtains the [signature information]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | UID of the application. |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示应用程序的UID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SignatureInfo object. |
+| [SignatureInfo](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-signatureinfo-i.md) | 返回SignatureInfo对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700021](../errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
+| 201 | Permission denied. |
+| 17700021 | The uid is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

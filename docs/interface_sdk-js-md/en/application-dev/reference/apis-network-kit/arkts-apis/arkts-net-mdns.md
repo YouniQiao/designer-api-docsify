@@ -10,6 +10,12 @@ Provides interfaces to discover DNS based services on a local network over Multi
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
+## Modules to Import
+
+```TypeScript
+import { mdns } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions

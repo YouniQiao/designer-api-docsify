@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { stream } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
@@ -28,7 +34,7 @@ constructor()
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 let readableStream = new stream.Readable();
@@ -56,9 +62,9 @@ constructor(options: ReadableOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Readable**构造函数中的选项。 |
+| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | 是 | Readable**构造函数中的选项。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let option : stream.ReadableOptions = {
@@ -73,7 +79,7 @@ let readableStream = new stream.Readable(option);
 doInitialize(callback: Function): void
 ```
 
-需要由开发者实现此API。在可读流首次调用[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_时调用此API。使用异步回调返回结果。
+需要由开发者实现此API。在可读流首次调用[on](stream.Writable#on(event: string, callback: Callback&lt;emitter.EventData&gt;))时调用此API。使用异步回调返回结果。
 
 **起始版本：** 12
 
@@ -91,9 +97,7 @@ doInitialize(callback: Function): void
 | --- | --- | --- | --- |
 | callback | Function | 是 | 回调函数。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class MyReadable extends stream.Readable {
@@ -103,24 +107,6 @@ class MyReadable extends stream.Readable {
   }
 
   doRead(size: number) {
-  }
-}
-
-let myReadable = new MyReadable();
-myReadable.on("data", () => {
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class MyReadable extends stream.Readable {
-  doInitialize(callback: Function) {
-    super.doInitialize(callback);
-    console.info("Readable doInitialize"); // 期望结果: Readable doInitialize
-  }
-
-  doRead(size: int) {
   }
 }
 
@@ -157,11 +143,9 @@ doRead(size: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 待读取的字节数。取值范围：0 <= size <= Number.MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_VALUE |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 待读取的字节数。取值范围：0 <= size <= Number.MAX_VALUE |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -179,31 +163,13 @@ readableStream.on("data", () => {
 });
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-    console.info("doRead called"); // 期望结果: doRead called
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.on("data", () => {
-});
-```
-
 ## isPaused
 
 ```TypeScript
 isPaused(): boolean
 ```
 
-检查可读流是否已暂停。流在调用[pause()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_后暂停，在调用[resume()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_后从暂停状态恢复。
+检查可读流是否已暂停。流在调用[pause()](arkts-arkts-stream-readable-c.md#pause)后暂停，在调用[resume()](arkts-arkts-stream-readable-c.md#resume)后从暂停状态恢复。
 
 **起始版本：** 12
 
@@ -221,9 +187,7 @@ isPaused(): boolean
 | --- | --- |
 | boolean | 检查结果。流已暂停返回**true**，否则返回**false**。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -239,24 +203,6 @@ let readableStream = new TestReadable();
 console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused false
 readableStream.pause();
 console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-console.info("Readable isPaused", readableStream.isPaused()); // 期望结果: Readable isPaused false
-readableStream.pause();
-console.info("Readable isPaused", readableStream.isPaused()); // 期望结果: Readable isPaused true
 ```
 
 ## off
@@ -282,11 +228,9 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \| 'resume'。 - 'close'：完成push()调用，传入null值，触发该事件。 - 'data'：当流传递给消费者一个数据块时触发该事件。 - 'end'：完成push()调用，传入null值，触发该事件。 - 'error'：流发生异常时触发。 - 'readable'：当有可从流中读取的数据时触发该事件。 - 'pause'：完成pause()调用，触发该事件。 - 'resume'：完成resume()调用，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -295,31 +239,6 @@ class TestReadable extends stream.Readable {
   }
 
   doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-
-function read() {
-  console.info("read() called");
-}
-
-readableStream.setEncoding("utf8");
-readableStream.on("readable", read);
-readableStream.off("readable");
-readableStream.push("test");
-// off注销对readable事件的监听后，read函数不会被调用，"read() called"也不会被打印
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
   }
 }
 
@@ -384,11 +303,9 @@ on(event: string, callback: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \| 'resume'。 - 'close'：完成push()调用，传入null值，触发该事件。 - 'data'：当流传递给消费者一个数据块时触发该事件。 - 'end'：完成push()调用，传入null值，触发该事件。 - 'error'：流发生异常时触发。 - 'readable'：当有可从流中读取的数据时触发该事件。 - 'pause'：完成pause()调用，触发该事件。 - 'resume'：完成resume()调用，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件数据。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件数据。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -405,26 +322,6 @@ let readableStream = new TestReadable();
 readableStream.push("test");
 readableStream.on("error", () => {
   console.error("error event called"); // error event called
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-    throw new Error("Simulated error");
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.push("test");
-readableStream.on("error", (): void => {
-  console.error("error event called"); // 期望结果: error event called
 });
 ```
 
@@ -475,11 +372,9 @@ pause(): Readable
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -494,23 +389,6 @@ class TestReadable extends stream.Readable {
 let readableStream = new TestReadable();
 readableStream.pause();
 console.info("Readable test pause", readableStream.isPaused()); // Readable test pause true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.pause();
-console.info("Readable test pause", readableStream.isPaused()); // 期望结果: Readable test pause true
 ```
 
 ## pipe
@@ -535,18 +413,16 @@ pipe(destination: Writable, options?: Object): Writable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| destination | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收数据的可写流。 |
+| destination | [Writable](arkts-arkts-stream-writable-c.md) | 是 | 接收数据的可写流。 |
 | options | Object | 否 | 预留参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前**Writable**对象。 |
+| [Writable](arkts-arkts-stream-writable-c.md) | 当前**Writable**对象。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -568,36 +444,6 @@ class TestWritable extends stream.Writable {
   doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
     console.info("Readable test pipe", chunk); // Readable test pipe test
     callback();
-  }
-}
-
-let readableStream = new TestReadable();
-let writableStream = new TestWritable();
-readableStream.pipe(writableStream);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-    this.push("test");
-    this.push(null);
-  }
-}
-
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Readable test pipe", chunk); // 期望结果: Readable test pipe test
-    callback.unsafeCall();
   }
 }
 
@@ -628,7 +474,7 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | 是 | 待读取的数据。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 从API version 22起有兼容性变更。在API version 21及之前版本，类型为 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 23 |
+| chunk | Uint8Array \| string \| undefined \| null | 是 | 待读取的数据。&lt;br&gt; 从API version 22起有兼容性变更。在API version 21及之前版本，类型为 `Uint8Array \| string \| null`。<br>**起始版本：** 23 |
 | encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
 
 **返回值：**
@@ -637,9 +483,7 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 | --- | --- |
 | boolean | 表示可读流缓冲区中是否还有空间。**true**表示缓冲区中还有空间；**false**表示缓冲区已满。如果传入**null**，则始终返回**false**，表示没有可推送的数据块。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -655,24 +499,6 @@ let readableStream = new TestReadable();
 let testData = "Hello world";
 readableStream.push(testData);
 console.info("Readable push test", readableStream.readableLength); // Readable push test 11
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let testData = "Hello world";
-readableStream.push(testData);
-console.info("Readable push test", readableStream.readableLength); // 期望结果: Readable push test 11
 ```
 
 ## read
@@ -709,11 +535,9 @@ read(size?: number): string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200038](../errorcode-utils.md#10200038-doread接口未实现) | The doRead method has not been implemented. |
+| 10200038 | The doRead method has not been implemented. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -730,25 +554,6 @@ readableStream.push("test");
 readableStream.pause();
 let dataChunk = readableStream.read();
 console.info("Readable data is", dataChunk); // Readable data is test
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.push("test");
-readableStream.pause();
-let dataChunk = readableStream.read();
-console.info("Readable data is", dataChunk); // 期望结果: Readable data is test
 ```
 
 ## read
@@ -785,7 +590,7 @@ read(size?: int): buffer.Buffer | string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200038](../errorcode-utils.md#10200038-doread接口未实现) | The doRead method has not been implemented. |
+| 10200038 | The doRead method has not been implemented. |
 
 ## resume
 
@@ -809,11 +614,9 @@ resume(): Readable
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -822,23 +625,6 @@ class TestReadable extends stream.Readable {
   }
 
   doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.resume();
-console.info("Readable test resume", !readableStream.isPaused()); // 切换流动模式成功时，此处日志将打印"Readable test resume true"
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
   }
 }
 
@@ -877,9 +663,7 @@ setEncoding(encoding?: string): boolean
 | --- | --- |
 | boolean | 操作结果。设置成功返回**true**，否则返回**false**。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -894,23 +678,6 @@ class TestReadable extends stream.Readable {
 let readableStream = new TestReadable();
 let result = readableStream.setEncoding("utf8");
 console.info("Readable result", result); // Readable result true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let result = readableStream.setEncoding("utf8");
-console.info("Readable result", result); // 期望结果: Readable result true
 ```
 
 ## unpipe
@@ -935,17 +702,15 @@ unpipe(destination?: Writable): Readable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| destination | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 待分离的可写流。默认值为**undefined**。 |
+| destination | [Writable](arkts-arkts-stream-writable-c.md) | 否 | 待分离的可写流。默认值为**undefined**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -977,40 +742,6 @@ readableStream.on("data", () => {
   console.info("Readable test unpipe data event triggered");
 });
 // unpipe成功断开连接之后，data事件将不会触发，不会打印"Readable test unpipe data event triggered"
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-    this.push("test");
-    this.push(null);
-  }
-}
-
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let readableStream = new TestReadable();
-let writableStream = new TestWritable();
-readableStream.pipe(writableStream);
-readableStream.unpipe(writableStream);
-readableStream.on("data", () => {
-  console.info("Readable test unpipe data event called");
-});
-// unpipe成功断开连接之后，data事件将不会触发，不会打印"Readable test unpipe data event called"
 ```
 
 ## readable
@@ -1101,7 +832,7 @@ get readableHighWatermark(): int
 
 返回创建此Readable时传入的highWatermark的值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -1121,7 +852,7 @@ get readableLength(): int
 
 可读取的数据大小，单位为字节或对象。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

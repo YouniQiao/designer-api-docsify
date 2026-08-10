@@ -1,5 +1,11 @@
 # minimizeWindowWithAnimation (System API)
 
+## Modules to Import
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## minimizeWindowWithAnimation
 
 ```TypeScript
@@ -7,7 +13,7 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
     callback: AsyncCallback<WindowAnimationFinishedCallback>): void
 ```
 
-Minimize the window target with animation.
+最小化动画目标窗口，并返回动画完成的回调。使用callback异步回调。
 
 **Since:** 9
 
@@ -23,10 +29,10 @@ Minimize the window target with animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The window target to be minimized. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowAnimationFinishedCallback&gt; | Yes | Returns the animation finished callback. |
+| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WindowAnimationFinishedCallback&gt; | Yes | 回调函数。当最小化动画目标窗口成功，err为undefined，data为获取到的 WindowAnimationFinishedCallback；否则返回err.code为-1，data为undefined。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -97,7 +103,7 @@ windowAnimationManager.minimizeWindowWithAnimation(target, (err: BusinessError, 
 function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>
 ```
 
-Minimize the window target with animation.
+最小化动画目标窗口，并返回动画完成的回调。使用Promise异步回调。
 
 **Since:** 9
 
@@ -113,15 +119,15 @@ Minimize the window target with animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowAnimationFinishedCallback&gt; | Promise used to return the animation finished callback. |
+| Promise&lt;WindowAnimationFinishedCallback&gt; | Promise对象，返回动画完成的回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,25 +1,24 @@
 # WindowLimits
 
-Describes the parameters for window size limits. Applications can obtain the current window size limits (in px) via  
-[getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. Starting from API version 22, they can also be obtained via [getWindowLimitsVP]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ (in vp).
+窗口尺寸限制参数，应用可以通过[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)获得当前窗口的尺寸限制（单位为px）；从API version 22开始，还可以通过[getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp)获取窗口尺寸限制（单位为vp）。
 
-The actual window size limits applied are determined by the intersection of the default system limits, application configurations, and runtime settings, with the priority (from highest to lowest) as follows:
+窗口尺寸限制的最终生效结果由默认系统限制、应用配置和运行时设置的数据取交集得到，优先级从高到低依次为：
 
-1. Window size limits configured by the application via [setWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.2. Window size limits specified by the application via [StartOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ when the application starts the window through [startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_. (This approach is supported since API version 17.)3. Window size limits configured by the application in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.4. Default system limits (which vary depending on the product and window type).
-    **NOTE**  
-    
-    For the **maxWidth**, **maxHeight**, **minWidth**, and **minHeight** properties:  
-    
-    - The default unit is px. Starting from API version 22, the unit can be px or vp, depending on the setting of  
-    **pixelUnit**.  
-    
-    - The value is an integer. Floating-point values will be rounded down.  
-    
-    - The default value is **0**, indicating that the property does not change.  
-    
-    - The lower bound of the effective range is the minimum height/width limited by the system.  
-    
-    - The upper bound of the effective range is the maximum height/width limited by the system.
+1. 应用通过[setWindowLimits](arkts-arkui-window-window-i.md#setwindowlimits)设置窗口尺寸限制。2. 应用在[startAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#startability)拉起窗口时通过[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md/arkts-ability-app-ability-startoptions-startoptions-c.md)指定窗口尺寸限制（API version 17开始支持）。3. 应用在[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)中配置windowLimits。4. 默认系统限制（基于不同产品和窗口类型，其windowLimits系统默认限制存在差异）。
+
+> **说明：**
+> 
+> 针对maxWidth、maxHeight、minWidth、minHeight属性：
+> 
+> - 默认单位为px，从API version 22开始支持通过pixelUnit设置单位为px或vp。
+> 
+> - 参数为整数，浮点数会向下取整。
+> 
+> - 默认值为0，表示属性不发生变化。
+> 
+> - 可生效范围下限值：系统限定的最小高度/宽度。
+> 
+> - 可生效范围上限值：系统限定的最大高度/宽度。
 
 **Since:** 11
 
@@ -29,15 +28,21 @@ The actual window size limits applied are determined by the intersection of the 
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## maxHeight
 
 ```TypeScript
 maxHeight?: int
 ```
 
-Maximum window height.
+窗口的最大高度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -55,9 +60,9 @@ Maximum window height.
 maxWidth?: int
 ```
 
-Maximum window width.
+窗口的最大宽度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -75,9 +80,9 @@ Maximum window width.
 minHeight?: int
 ```
 
-Minimum window height.
+窗口的最小高度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -95,9 +100,9 @@ Minimum window height.
 minWidth?: int
 ```
 
-Minimum window width.
+窗口的最小宽度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -115,9 +120,9 @@ Minimum window width.
 pixelUnit?: PixelUnit
 ```
 
-Unit of the window size limits. The default value is **px**. The value can be **px** or **vp**.
+窗口尺寸限制的单位，默认为px。可显式设置为px或vp。
 
-**Type:** PixelUnit
+**Type:** [PixelUnit](arkts-arkui-window-pixelunit-e.md)
 
 **Since:** 22
 

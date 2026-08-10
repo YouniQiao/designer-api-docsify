@@ -1,6 +1,6 @@
 # DatePickerComponentResult
 
-DatePickerComponentResult defines the selection result of the date time picker.
+DatePickerComponentResult定义日期时间选择器的选择结果。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ DatePickerComponentResult defines the selection result of the date time picker.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
+
 ## day
 
 ```TypeScript
 day?: int
 ```
 
-Day of the selected date.The value should be an integer.
+所选日期的日。取值限定为整数。
 
 **Type:** int
 
@@ -36,7 +42,7 @@ Day of the selected date.The value should be an integer.
 hour?: int
 ```
 
-Hour part of the selected time.The value should be an integer.
+所选时间的小时部分。取值限定为整数。
 
 **Type:** int
 
@@ -56,7 +62,7 @@ Hour part of the selected time.The value should be an integer.
 minute?: int
 ```
 
-Minute part of the selected time.The value should be an integer.
+所选时间的分钟部分。取值限定为整数。
 
 **Type:** int
 
@@ -76,7 +82,7 @@ Minute part of the selected time.The value should be an integer.
 month?: int
 ```
 
-Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December.The value should be an integer.
+所选日期的月份索引，从0开始，0表示1月，11表示12月。取值限定为整数。
 
 **Type:** int
 
@@ -96,7 +102,7 @@ Month index of the selected date, starting from 0, where 0 indicates January and
 second?: int
 ```
 
-Second part of the selected time.The value should be an integer.
+所选时间的秒部分。取值限定为整数。
 
 **Type:** int
 
@@ -116,7 +122,7 @@ Second part of the selected time.The value should be an integer.
 year?: int
 ```
 
-Year of the selected date.The value should be an integer.
+所选日期的年份。取值限定为整数。
 
 **Type:** int
 

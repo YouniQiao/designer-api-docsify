@@ -1,12 +1,18 @@
 # unbindDriverWithDeviceId
 
+## Modules to Import
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## unbindDriverWithDeviceId
 
 ```TypeScript
 function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 ```
 
-Unbinds a peripheral device. This API uses a promise to return the result.
+解除设备绑定。使用Promise异步回调。
 
 **Since:** 19
 
@@ -22,23 +28,23 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Device ID, which can be obtained via [queryDevices]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获得。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the ID of the unbound device. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回解除绑定的设备ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
-| [26300003](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-driver-client-not-bound-to-any-driver-server) | There is no binding relationship. |
+| 26300001 | ExternalDeviceManager service exception. |
+| 26300003 | There is no binding relationship. |
+| 201 | The permission check failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

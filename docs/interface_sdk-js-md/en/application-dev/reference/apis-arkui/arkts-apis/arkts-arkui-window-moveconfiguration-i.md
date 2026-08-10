@@ -1,6 +1,6 @@
 # MoveConfiguration
 
-Describes the window movement configuration.
+窗口移动选项。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Describes the window movement configuration.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
 displayId?: long
 ```
 
-Target display ID. The value must be an integer. If a non-integer is passed in, the value is rounded down. If this parameter is passed in, the window is positioned relative to the top-left corner of the target display. If this parameter is left empty or the target display ID does not exist, the window is positioned relative to the top-left corner of the current display.
+目标屏幕ID，该参数应为整数，输入非整数时将向下取整。默认值为undefined。填入该参数时，将移动到相对于目标屏幕左上角的指定位置。此参数不传、传undefined或传入目标屏幕ID不存在时，将移动到相对于当前屏幕左上角的指定位置。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 15
 

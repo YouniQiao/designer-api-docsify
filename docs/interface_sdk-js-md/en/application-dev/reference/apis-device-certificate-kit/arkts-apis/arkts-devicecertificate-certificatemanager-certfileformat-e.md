@@ -1,6 +1,6 @@
 # CertFileFormat
 
-Represents the certificate file format.
+表示证书文件格式。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Represents the certificate file format.
 PEM_DER = 0
 ```
 
-The certificate file format is PEM or DER.
+表示证书文件格式为PEM或DER。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ The certificate file format is PEM or DER.
 P7B = 1
 ```
 
-The certificate file format is P7B.
+表示证书文件格式为P7B。
 
 **Since:** 26.0.0
 

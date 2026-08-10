@@ -1,5 +1,11 @@
 # getLinkedInfo
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getLinkedInfo
 
 ```TypeScript
@@ -55,9 +61,9 @@ Obtains information about a Wi-Fi connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WifiLinkedInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

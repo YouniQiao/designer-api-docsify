@@ -1,6 +1,10 @@
 # UiDriver
 
-The **UiDriver** class is the main entry to the UiTest framework. It provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **UiDriver.create()**, use a promise to return the result and must be invoked using **await**.
+UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等API。该类提供的方法除UiDriver.create()以外的所有方法都使用Promise方式作为异步方法，需使用await调用。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[Driver&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md)替代。
 
 **Since:** 8
 
@@ -14,13 +18,24 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## assertComponentExist
 
 ```TypeScript
 assertComponentExist(by: By): Promise<void>
 ```
 
-Asserts that a component that matches the given attributes exists on the current page. If the component does not exist, the API throws a JS exception, causing the current test case to fail. This API uses a promise to return the result.
+断言API，用于断言当前界面存在满足给出的目标控件属性的控件；如果控件不存在，该API将抛出JS异常，使当前测试用例失败。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[assertComponentExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#assertcomponentexist)替
+> 代。
 
 **Since:** 8
 
@@ -38,23 +53,23 @@ Asserts that a component that matches the given attributes exists on the current
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target component. |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | 目标控件的属性要求。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if the input parameters are invalid. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
+| 17000003 | if the assertion failed. |
+| 401 | if the input parameters are invalid. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -72,7 +87,11 @@ async function demo() {
 click(x: number, y: number): Promise<void>
 ```
 
-Clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
+UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[click&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#click)替代。
 
 **Since:** 8
 
@@ -90,16 +109,16 @@ Clicks a specific point of this **UiDriver** object based on the given coordinat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
+| x | number | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | number | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -117,11 +136,11 @@ async function demo() {
 static create(): UiDriver
 ```
 
-Creates a **UiDriver** object and returns the object created. This API is a static API.
-    **NOTE**  
-    
-    This method is supported since API version 8 and deprecated since API version 9. You are advised to use  
-    [create\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+静态方法，构造一个UiDriver对象，并返回该对象。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create)替代。
 
 **Since:** 8
 
@@ -139,9 +158,9 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  **UiDriver** object created. |
+| [UiDriver](arkts-test-uitest-uidriver-c.md) | 返回构造的UiDriver对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -158,7 +177,11 @@ async function demo() {
 delayMs(duration: number): Promise<void>
 ```
 
-Delays this **UiDriver** object within the specified duration. This API uses a promise to return the result.
+UiDriver对象在给定的时间内延时。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[delayMs&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#delayms)替代。
 
 **Since:** 8
 
@@ -176,15 +199,15 @@ Delays this **UiDriver** object within the specified duration. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | Duration of time. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms |
+| duration | number | Yes | 给定的时间。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -202,7 +225,11 @@ async function demo() {
 doubleClick(x: number, y: number): Promise<void>
 ```
 
-Double-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
+UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
 
 **Since:** 8
 
@@ -220,16 +247,16 @@ Double-clicks a specific point of this **UiDriver** object based on the given co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
+| x | number | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | number | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -247,7 +274,11 @@ async function demo() {
 findComponent(by: By): Promise<UiComponent>
 ```
 
-Searches this **UiDriver** object for the target component that matches the given attributes. This API uses a promise to return the result.
+在UiDriver对象中，根据给出的目标控件属性要求查找目标控件。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponent&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponent)替代。
 
 **Since:** 8
 
@@ -265,15 +296,15 @@ Searches this **UiDriver** object for the target component that matches the give
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target component. |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | 目标控件的属性要求。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UiComponent&gt; |  Promise used to return the component. |
+| Promise&lt;UiComponent&gt; | Promise对象，返回控件对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -291,7 +322,11 @@ async function demo() {
 findComponents(by: By): Promise<Array<UiComponent>>
 ```
 
-Searches this **UiDriver** object for all components that match the given attributes. This API uses a promise to return the result.
+在UiDriver对象中，根据给出的目标控件属性要求查找出所有匹配控件，以列表保存。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponents&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponents)替代。
 
 **Since:** 8
 
@@ -309,15 +344,15 @@ Searches this **UiDriver** object for all components that match the given attrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target component. |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | 目标控件的属性要求。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UiComponent&gt;&gt; |  Promise used to return the list of components. |
+| Promise&lt;Array&lt;UiComponent&gt;&gt; | Promise对象，返回控件对象的列表。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -335,7 +370,11 @@ async function demo() {
 longClick(x: number, y: number): Promise<void>
 ```
 
-Long-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
+UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
 
 **Since:** 8
 
@@ -353,16 +392,16 @@ Long-clicks a specific point of this **UiDriver** object based on the given coor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
+| x | number | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | number | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -380,7 +419,11 @@ async function demo() {
 pressBack(): Promise<void>
 ```
 
-Presses the Back button on this **UiDriver** object. This API uses a promise to return the result.
+UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[pressBack&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#pressback)替代。
 
 **Since:** 8
 
@@ -398,9 +441,9 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -418,7 +461,11 @@ async function demo() {
 screenCap(savePath: string): Promise<boolean>
 ```
 
-Captures the current screen of this **UiDriver** object and saves it as a PNG image to the given save path. This API uses a promise to return the result.
+UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[screenCap&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#screencap)替代。
 
 **Since:** 8
 
@@ -436,15 +483,15 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| savePath | string | Yes | File save path. |
+| savePath | string | Yes | 文件保存路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the screenshot operation is successful. The value **true* The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -462,7 +509,11 @@ async function demo() {
 swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>
 ```
 
-Swipes on this **UiDriver** object from the start point to the end point based on the given coordinates. This API uses a promise to return the result.
+UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目的坐标点。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[swipe&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#swipe)替代。
 
 **Since:** 8
 
@@ -480,18 +531,18 @@ Swipes on this **UiDriver** object from the start point to the end point based o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startx | number | Yes | Number, which indicates the horizontal coordinate of the start point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| starty | number | Yes | Number, which indicates the vertical coordinate of the start point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| endx | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| endy | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
+| startx | number | Yes | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
+| starty | number | Yes | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
+| endx | number | Yes | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
+| endy | number | Yes | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -509,7 +560,11 @@ async function demo() {
 triggerKey(keyCode: number): Promise<void>
 ```
 
-Triggers the key of this **UiDriver** object that matches the given key code. This API uses a promise to return the result.
+UiDriver对象采取如下操作：通过key值找到对应键并点击。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[triggerKey&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#triggerkey)替代。
 
 **Since:** 8
 
@@ -527,19 +582,19 @@ Triggers the key of this **UiDriver** object that matches the given key code. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | Key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| keyCode | number | Yes | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
-import { Driver, UiDriver } from '@kit.TestKit';
+import { UiDriver } from '@kit.TestKit';
 import { KeyCode } from '@kit.InputKit';
 
 async function demo() {

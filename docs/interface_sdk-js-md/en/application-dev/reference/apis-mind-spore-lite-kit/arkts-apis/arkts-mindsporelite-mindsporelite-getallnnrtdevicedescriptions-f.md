@@ -1,5 +1,11 @@
 # getAllNNRTDeviceDescriptions
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## getAllNNRTDeviceDescriptions
 
 ```TypeScript
@@ -22,14 +28,20 @@ Obtain the all device descriptions in NNRT.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | the array of NNRTDeviceDescription |
+| [NNRTDeviceDescription](arkts-mindsporelite-mindsporelite-nnrtdevicedescription-i.md)[] | the array of NNRTDeviceDescription |
 
-**Example**
+## Examples
 
 ```TypeScript
-let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
-if (allDevices == null) {
-  console.error('MS_LITE_LOG: getAllNNRTDeviceDescriptions is NULL.');
+try {
+  let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
+  if (allDevices == null || allDevices.length === 0) {
+    console.error('Failed to get NNRT device descriptions. Result: null or empty array');
+  } else {
+    console.info(`Succeeded in getting NNRT device descriptions. Device count: ${allDevices.length}`);
+  }
+} catch (error) {
+  console.error(`Failed to get NNRT device descriptions. Error: ${error}`);
 }
 ```
 

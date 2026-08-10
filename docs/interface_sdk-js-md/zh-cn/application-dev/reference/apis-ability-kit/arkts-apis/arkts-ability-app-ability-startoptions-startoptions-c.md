@@ -1,7 +1,7 @@
 # StartOptions
 
 StartOptions可以作为启动UIAbility接口（例如  
-[startAbility()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
+[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
 
 **起始版本：** 9
 
@@ -11,6 +11,12 @@ StartOptions可以作为启动UIAbility接口（例如
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { StartOptions } from 'kits/@kit.AbilityKit';
+```
+
 ## completionHandler
 
 ```TypeScript
@@ -19,7 +25,7 @@ completionHandler?: CompletionHandler
 
 拉起应用结果的操作类，用于处理拉起应用的结果。
 
-**类型：** CompletionHandler
+**类型：** [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md)
 
 **起始版本：** 20
 
@@ -45,13 +51,13 @@ displayId?: long
 - 取值为0，表示主屏幕。  
 - 取值为正整数，表示指定ID的屏幕。
 
-**说明**：
+**说明：**
 
 从API version 14开始，默认值是-1，即当前屏幕。
 
 在API version 14之前版本，默认值为0，即主屏幕。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -72,7 +78,7 @@ hideStartWindow?: boolean
 ```
 
 启动当前应用的UIAbility时，控制是否隐藏窗口的启动页，true表示隐藏启动页，false表示不隐藏启动页。启动页介绍和规格详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[StartWindow](../../../quick-start/module-configuration-file.md#startwindow标签)。
 
 **约束：**
 
@@ -98,13 +104,13 @@ hideStartWindow?: boolean
 maxWindowHeight?: int
 ```
 
-窗口最大的高度，单位为vp，可以通过[getWindowLimitsVP]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获得当前窗口的尺寸限制。
+窗口最大的高度，单位为vp，可以通过[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP)获得当前窗口的尺寸限制。
 
 **约束：**
 
-该功能仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态下生效。
+该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 17
 
@@ -122,13 +128,13 @@ maxWindowHeight?: int
 maxWindowWidth?: int
 ```
 
-窗口最大的宽度，单位为vp，可以通过[getWindowLimitsVP]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获得当前窗口的尺寸限制。
+窗口最大的宽度，单位为vp，可以通过[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP)获得当前窗口的尺寸限制。
 
 **约束：**
 
-该功能仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态下生效。
+该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 17
 
@@ -146,13 +152,13 @@ maxWindowWidth?: int
 minWindowHeight?: int
 ```
 
-窗口最小的高度，单位为vp，可以通过[getWindowLimitsVP]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获得当前窗口的尺寸限制。
+窗口最小的高度，单位为vp，可以通过[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP)获得当前窗口的尺寸限制。
 
 **约束：**
 
-该功能仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态下生效。
+该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 17
 
@@ -170,13 +176,13 @@ minWindowHeight?: int
 minWindowWidth?: int
 ```
 
-窗口最小的宽度，单位为vp，可以通过[getWindowLimitsVP]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_获得当前窗口的尺寸限制。
+窗口最小的宽度，单位为vp，可以通过[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP)获得当前窗口的尺寸限制。
 
 **约束：**
 
-该功能仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态下生效。
+该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 17
 
@@ -200,7 +206,7 @@ UIAbility启动后的进程模式。
 
 1.该功能仅在2in1和Tablet设备上生效。
 
-2.仅在[UIAbilityContext.startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中生效。
+2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
 
 3.processMode和startupVisibility必须同时设置。
 
@@ -242,13 +248,13 @@ splitRatio?: window.SplitRatioPreference
 startWindowBackgroundColor?: string
 ```
 
-启动当前应用的UIAbility时，启动页所显示的背景颜色。固定为ARGB格式, 如：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。如果未配置该字段，则默认采用module.json5文件中startWindowBackground字段的配置。
+启动当前应用的UIAbility时，启动页所显示的背景颜色。固定为ARGB格式, 如：`#E5FFFFFF`。如果未配置该字段，则默认采用module.json5文件中startWindowBackground字段的配置。
 
 **约束：**
 
 - 启动其他应用的UIAbility时，该字段不生效。  
 - 该功能仅在2in1和Tablet设备上生效。  
-- 仅在[UIAbilityContext.startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中生效。
+- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
 
 **类型：** string
 
@@ -274,7 +280,7 @@ startWindowIcon?: image.PixelMap
 
 - 启动其他应用的UIAbility时，该字段不生效。  
 - 该功能仅在2in1和Tablet设备上生效。  
-- 仅在[UIAbilityContext.startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中生效。  
+- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。  
 - 图片数据大小限制为600MB。
 
 **类型：** image.PixelMap
@@ -301,7 +307,7 @@ UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时�
 
 1.该功能仅在2in1和Tablet设备上生效。
 
-2.仅在[UIAbilityContext.startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中生效。
+2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
 
 3.processMode和startupVisibility必须同时设置。
 
@@ -324,21 +330,21 @@ supportWindowModes?: Array<bundleManager.SupportWindowMode>
 ```
 
 启动UIAbility时，指定窗口是否显示最大化/窗口化/分屏按键。如果未配置该字段，则默认采用该UIAbility对应的  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_的supportWindowMode字段取值。
+[module.json5配置文件](../../../quick-start/module-configuration-file.md)中  
+[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值。
 
-- FULL\_SCREEN：支持全屏模式。  
+- FULL_SCREEN：支持全屏模式。  
 - FLOATING：支持悬浮窗模式。  
-- SPLIT：支持分屏模式。通常需要配合FULL\_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模  
-式，支持进入分屏模式。
+- SPLIT：支持分屏模式。通常需要配合FULL_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模  
+式，支持进入分屏模式。 
 
-在\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_状态下同时配置FULL\_SCREEN和SPLIT时，如果应用的  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_小于15，窗口将以悬浮窗模式启动；如果应用的  
-\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_大于等于15，窗口将以全屏模式启动。
+在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下同时配置FULL_SCREEN和SPLIT时，如果应用的  
+[targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)小于15，窗口将以悬浮窗模式启动；如果应用的  
+[targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)大于等于15，窗口将以全屏模式启动。 
 
 **约束：**
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_该功能仅在2in1和Tablet设备上生效。\_\_\_MD\_COMMENT\_DESC\_USD\_6\_\_\_
+&lt;!--RP1--&gt;该功能仅在2in1和Tablet设备上生效。&lt;!--RP1End--&gt;
 
 **类型：** Array&lt;bundleManager.SupportWindowMode&gt;
 
@@ -380,13 +386,13 @@ windowHeight?: int
 
 窗口的高度，单位为px。
 
-取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_换算为对应的px值。
+取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
 
 **约束：**
 
-该功能仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态下生效。
+该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -408,9 +414,9 @@ windowLeft?: int
 
 **约束：**
 
-该功能仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态下生效。
+该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -428,9 +434,9 @@ windowLeft?: int
 windowMode?: int
 ```
 
-启动UIAbility时的窗口模式，详见[WindowMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-abilityconstant-windowmode-e.md)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -452,9 +458,9 @@ windowTop?: int
 
 **约束：**
 
-该功能仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态下生效。
+该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -474,13 +480,13 @@ windowWidth?: int
 
 窗口的宽度，单位为px。
 
-取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_换算为对应的px值。
+取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
 
 **约束：**
 
-该功能仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_状态下生效。
+该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -500,11 +506,11 @@ withAnimation?: boolean
 
 启动UIAbility时是否具有动画效果。
 
-传入true时，跟随系统默认动画效果。传入false时，表示关闭启动UIAbility动画效果，仅在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的情况下生效。
+传入true时，跟随系统默认动画效果。传入false时，表示关闭启动UIAbility动画效果，仅在[自由窗口状态](../../../windowmanager/window-terminology.md#自由窗口)的情况下生效。
 
 此参数不填时，默认为undefined，跟随系统默认动画效果。
 
-从\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_开始支持。
+从&lt;!--RP2--&gt;OpenHarmony 6.1&lt;!--RP2End--&gt;开始支持。
 
 **类型：** boolean
 

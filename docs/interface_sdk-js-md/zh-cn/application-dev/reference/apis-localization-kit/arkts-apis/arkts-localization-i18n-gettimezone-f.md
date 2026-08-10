@@ -1,5 +1,11 @@
 # getTimeZone
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getTimeZone
 
 ```TypeScript
@@ -28,5 +34,5 @@ export function getTimeZone(zoneID?: string): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 时区ID对应的时区对象。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区ID对应的时区对象。 |
 

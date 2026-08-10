@@ -1,12 +1,18 @@
 # getKeyboardTypeSync
 
+## Modules to Import
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## getKeyboardTypeSync
 
 ```TypeScript
 function getKeyboardTypeSync(deviceId: int): KeyboardType
 ```
 
-Obtains the keyboard type of the input device.
+获取输入设备的键盘类型。
 
 **Since:** 10
 
@@ -20,21 +26,21 @@ Obtains the keyboard type of the input device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Keyboard type. |
+| [KeyboardType](arkts-input-inputdevice-keyboardtype-e.md) | 返回查询结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -48,10 +54,10 @@ struct Index {
         .onClick(() => {
           // Query the keyboard type of the input device whose ID is 1.
           try {
-            let type: number = inputDevice.getKeyboardTypeSync(1)
-            console.info(`Keyboard type: ${JSON.stringify(type)}`)
+            let type: inputDevice.KeyboardType = inputDevice.getKeyboardTypeSync(1)
+            console.info(`Succeeded in getting keyboard type: ${JSON.stringify(type)}.`)
           } catch (error) {
-            console.error(`Failed to get keyboard type, error: ${JSON.stringify(error, [`code`, `message`])}`)
+            console.error(`Failed to get keyboard type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`)
           }
         })
     }

@@ -1,12 +1,10 @@
 # FocusQuery
 
-FocusQuery provides APIs to check whether a focus mode is supported.
-    **NOTE**  
-    
-    - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
-    preserved the initial version information of inner elements. As a result, you might see outer element's @since  
-    version number being higher than that of the inner elements. However, this discrepancy does not affect the  
-    functionality of the interface.
+提供了查询是否支持当前对焦模式的方法。
+
+> **说明：**
+> 
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **Since:** 12
 
@@ -15,6 +13,12 @@ FocusQuery provides APIs to check whether a focus mode is supported.
 <!--Device-camera-interface FocusQuery--><!--Device-camera-interface FocusQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## isFocusAssistSupported
 
@@ -44,10 +48,10 @@ Checks whether the focus assist is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -87,7 +91,7 @@ Checks whether a focus drive type is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Focus drive type. |
+| type | [FocusDrivenType](arkts-camera-camera-focusdriventype-e-sys.md) | Yes | Focus drive type. |
 
 **Return value:**
 
@@ -99,11 +103,11 @@ Checks whether a focus drive type is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -143,7 +147,7 @@ Checks whether a focus range type is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Focus range type. |
+| type | [FocusRangeType](arkts-camera-camera-focusrangetype-e-sys.md) | Yes | Focus range type. |
 
 **Return value:**
 
@@ -155,11 +159,11 @@ Checks whether a focus range type is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

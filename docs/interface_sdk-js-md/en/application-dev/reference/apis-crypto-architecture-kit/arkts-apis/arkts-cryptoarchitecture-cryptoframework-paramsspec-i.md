@@ -1,22 +1,21 @@
 # ParamsSpec
 
-Encapsulates the parameters used for encryption or decryption. You need to construct its child class object and pass it to [init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for symmetric encryption or decryption.
+加解密参数，在进行对称加解密时需要构造其子类对象，并将子类对象传入  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_It applies to the symmetric block cipher modes that require parameters such as the initialization vector (IV). If the IV is not required (for example, the ECB mode), pass in **null** to  
-[init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
-    **NOTE**  
-    
-    An initialization vector (IV) is a byte sequence used to introduce randomness or uniqueness in symmetric  
-    encryption modes (such as CBC, CTR, OFB, CFB, GCM, CCM, and ChaCha20-Poly1305). It ensures that different  
-    ciphertexts are generated for the same plaintext under the same key.
-    **NOTE**  
-    
-    The **params** parameter in  
-    [init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is of the  
-    **ParamsSpec** type (parent class). However, a child class object (such as  
-    [IvParamsSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_) needs to be passed in. When constructing the child class  
-    object, you must set **algName** for its parent class **ParamsSpec** to specify the child class object to be  
-    passed to **init()**.
+&lt;br&gt;适用于需要iv等参数的对称加解密模式（对于无iv等参数的模式如ECB模式，无需构造，在  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)中传入null即可）。
+
+> **说明：**
+> 
+> iv（Initialization Vector，初始化向量）是用于对称加密模式（如 CBC/CTR/OFB/CFB/GCM/CCM/ChaCha20-Poly1305）中引入随机性或
+> 唯一性的字节序列，保证相同明文在相同密钥下产生不同密文。
+
+> **说明：**
+> 
+> 由于[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)的params
+> 参数是ParamsSpec类型（父类），而实际需要传入具体的子类对象（如[IvParamsSpec](arkts-cryptoarchitecture-cryptoframework-ivparamsspec-i.md)），因此在
+> 构造子类对象时应设置其父类ParamsSpec的algName参数，使算法库在init()时知道传入的是哪种子类对象。
 
 **Since:** 9
 
@@ -28,18 +27,24 @@ Encapsulates the parameters used for encryption or decryption. You need to const
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## algName
 
 ```TypeScript
 algName: string
 ```
 
-Algorithm for symmetric encryption or decryption. The value can be:
+指明对称加解密参数的算法模式。可选值如下：
 
-- **IvParamsSpec**: applicable to the CBC, CTR, OFB, and CFB modes.  
-- **GcmParamsSpec**: applicable to the GCM mode.  
-- **CcmParamsSpec**: applicable to the CCM mode.  
-- **AeadParamsSpec**: applicable to the AES-GCM, AES-CCM, SM4-GCM and ChaCha20-Poly1305 algorithm.
+- "IvParamsSpec"：适用于CBC|CTR|OFB|CFB模式。  
+- "GcmParamsSpec"：适用于GCM模式。  
+- "CcmParamsSpec"：适用于CCM模式。  
+- "AeadParamsSpec"：适用于AES-GCM，AES-CCM，SM4-GCM和ChaCha20-Poly1305算法。
 
 **Type:** string
 

@@ -1,12 +1,18 @@
 # hasRight
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## hasRight
 
 ```TypeScript
 function hasRight(deviceName: string): boolean
 ```
 
-Checks whether the application has the permission to access the device.
+判断是否有权访问该设备。
 
 **Since:** 8
 
@@ -24,15 +30,15 @@ Checks whether the application has the permission to access the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | Device name. |
+| deviceName | string | Yes | 设备名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the application has the permission to access the device; returns **false** otherwise. |
+| boolean | true表示有访问设备的权限，false表示没有访问设备的权限。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let devicesName= "1-1";

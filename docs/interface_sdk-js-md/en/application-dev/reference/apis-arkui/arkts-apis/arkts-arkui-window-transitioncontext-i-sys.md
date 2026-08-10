@@ -1,6 +1,6 @@
 # TransitionContext (System API)
 
-Provides the context for the transition animation.
+属性转换的上下文信息。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Provides the context for the transition animation.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## completeTransition
 
 ```TypeScript
 completeTransition(isCompleted: boolean): void
 ```
 
-Completes the transition. This API can be called only after [animateTo()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is executed.
+设置属性转换的最终完成状态。该函数需要在动画函数[animateTo()](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)执行后设置。
 
 **Since:** 9
 
@@ -34,16 +40,16 @@ Completes the transition. This API can be called only after [animateTo()]\_\_\_J
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isCompleted | boolean | Yes | Whether the transition is complete. **true** if complete, **false** otherwise. |
+| isCompleted | boolean | Yes | 窗口属性转换是否完成。true表示完成本次转换；false表示撤销本次转换。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 (context: window.TransitionContext) => {
@@ -80,9 +86,9 @@ Completes the transition. This API can be called only after [animateTo()]\_\_\_J
 toWindow: Window
 ```
 
-The target window with animation
+动画的目标窗口。
 
-**Type:** Window
+**Type:** [Window](arkts-arkui-window-window-i-sys.md)
 
 **Since:** 9
 

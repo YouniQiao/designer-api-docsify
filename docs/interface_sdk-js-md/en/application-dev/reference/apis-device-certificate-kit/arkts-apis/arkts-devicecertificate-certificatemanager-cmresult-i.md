@@ -1,6 +1,6 @@
 # CMResult
 
-Represents the result returned.
+表示接口的返回结果。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Represents the result returned.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## appUidList
 
 ```TypeScript
 appUidList?: Array<string>
 ```
 
-List of authorized applications.
+表示授权应用列表。
 
 **Type:** Array&lt;string&gt;
 
@@ -34,9 +40,9 @@ List of authorized applications.
 certInfo?: CertInfo
 ```
 
-Detailed certificate information.
+表示证书详情。
 
-**Type:** CertInfo
+**Type:** [CertInfo](arkts-devicecertificate-certificatemanager-certinfo-i.md)
 
 **Since:** 11
 
@@ -52,7 +58,7 @@ Detailed certificate information.
 certList?: Array<CertAbstract>
 ```
 
-Brief certificate information.
+表示证书简要信息的列表。
 
 **Type:** Array&lt;CertAbstract&gt;
 
@@ -70,9 +76,9 @@ Brief certificate information.
 credential?: Credential
 ```
 
-Detailed credential information.
+表示凭据详情。
 
-**Type:** Credential
+**Type:** [Credential](arkts-devicecertificate-certificatemanager-credential-i.md)
 
 **Since:** 11
 
@@ -88,7 +94,7 @@ Detailed credential information.
 credentialDetailList?: Array<Credential>
 ```
 
-Represents detailed information about a credential.
+表示凭据详细信息。
 
 **Type:** Array&lt;Credential&gt;
 
@@ -106,7 +112,7 @@ Represents detailed information about a credential.
 credentialList?: Array<CredentialAbstract>
 ```
 
-Brief credential information.
+表示凭据简要信息的列表。
 
 **Type:** Array&lt;CredentialAbstract&gt;
 
@@ -124,7 +130,7 @@ Brief credential information.
 outData?: Uint8Array
 ```
 
-Signature generated.
+表示签名结果。
 
 **Type:** Uint8Array
 
@@ -142,7 +148,7 @@ Signature generated.
 uri?: string
 ```
 
-Unique identifier of a certificate or credential. The value contains up to 256 bytes.
+表示证书或凭据的唯一标识符，最大长度为256字节。
 
 **Type:** string
 
@@ -160,8 +166,7 @@ Unique identifier of a certificate or credential. The value contains up to 256 b
 uriList?: Array<string>
 ```
 
-Certificate URI list.  
-**Since**: 26.0.0
+表示证书URI列表。26.0.0
 
 **Type:** Array&lt;string&gt;
 

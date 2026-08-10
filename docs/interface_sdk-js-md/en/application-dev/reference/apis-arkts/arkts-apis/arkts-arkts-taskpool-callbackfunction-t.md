@@ -4,7 +4,7 @@
 type CallbackFunction = () => void
 ```
 
-Describes a callback function.
+注册的回调函数类型。
 
 **Since:** 12
 

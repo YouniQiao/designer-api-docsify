@@ -1,12 +1,18 @@
 # removeStickyCommonEvent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## removeStickyCommonEvent
 
 ```TypeScript
 function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): void
 ```
 
-Removes a sticky common event. This API uses an asynchronous callback to return the result.
+移除粘性公共事件。使用callback异步回调。
 
 **Since:** 10
 
@@ -24,44 +30,28 @@ Removes a sticky common event. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | Sticky common event to remove. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the sticky common event is successfully removed, **err** is **undefined**; otherwise, **err** is an error object. |
+| event | string | Yes | 表示被移除的粘性公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当移除粘性公共事件成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1500004](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500004-failed-to-send-system-common-events) | A third-party application cannot send system common events. |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1500007 | Failed to send the message to the common event service. |
+| 1500004 | A third-party application cannot send system common events. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1500008 | Failed to initialize the common event service. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError) => {
   if (err) {
-    console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
-    return;
-  }
-  console.info(`removeStickyCommonEvent success`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError | null) => {
-  if (err) {
-    console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
+    console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
     return;
   }
   console.info(`removeStickyCommonEvent success`);
@@ -75,7 +65,7 @@ commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError |
 function removeStickyCommonEvent(event: string): Promise<void>
 ```
 
-Removes a sticky common event that has been published. This API uses a promise to return the result.
+移除已发布的粘性公共事件。使用Promise异步回调。
 
 **Since:** 10
 
@@ -93,49 +83,34 @@ Removes a sticky common event that has been published. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | Sticky common event to remove. |
+| event | string | Yes | 表示被移除的粘性公共事件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1500004](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500004-failed-to-send-system-common-events) | A third-party application cannot send system common events. |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1500007 | Failed to send the message to the common event service. |
+| 1500004 | A third-party application cannot send system common events. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1500008 | Failed to initialize the common event service. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
   console.info(`removeStickyCommonEvent success`);
-}).catch ((err: BusinessError) => {
-  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
-  console.info(`removeStickyCommonEvent success`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`removeStickyCommonEvent failed, errCode: ${error.code}, errMes: ${error.message}`);
+}).catch((err: BusinessError) => {
+  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 ```
 

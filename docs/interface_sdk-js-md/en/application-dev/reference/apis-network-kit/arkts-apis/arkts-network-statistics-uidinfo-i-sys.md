@@ -12,15 +12,21 @@ Parameters for obtaining detailed information on application traffic usage.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { statistics } from 'kits/@kit.NetworkKit';
+```
+
 ## ifaceInfo
 
 ```TypeScript
 ifaceInfo: IfaceInfo
 ```
 
-See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+See {@link IfaceInfo}
 
-**Type:** IfaceInfo
+**Type:** [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)
 
 **Since:** 10
 
@@ -40,7 +46,7 @@ uid: int
 
 Uid of app for querying traffic.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

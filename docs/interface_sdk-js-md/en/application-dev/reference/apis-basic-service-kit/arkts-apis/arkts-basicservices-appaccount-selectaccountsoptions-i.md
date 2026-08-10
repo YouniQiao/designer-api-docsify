@@ -1,6 +1,6 @@
 # SelectAccountsOptions
 
-Defines the options for selecting accounts.
+表示用于选择账号的选项。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines the options for selecting accounts.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## allowedAccounts
 
 ```TypeScript
 allowedAccounts?: Array<AppAccountInfo>
 ```
 
-Array of allowed accounts. By default, no value is passed in.
+允许的账号数组，默认为空。
 
 **Type:** Array&lt;AppAccountInfo&gt;
 
@@ -34,7 +40,7 @@ Array of allowed accounts. By default, no value is passed in.
 allowedOwners?: Array<string>
 ```
 
-Array of the owners of the allowed accounts. By default, no value is passed in.
+允许的账号所有者数组，默认为空。
 
 **Type:** Array&lt;string&gt;
 
@@ -52,7 +58,7 @@ Array of the owners of the allowed accounts. By default, no value is passed in.
 requiredLabels?: Array<string>
 ```
 
-Labels of the authenticator. By default, no value is passed in.
+认证器的标签标识，默认为空。
 
 **Type:** Array&lt;string&gt;
 

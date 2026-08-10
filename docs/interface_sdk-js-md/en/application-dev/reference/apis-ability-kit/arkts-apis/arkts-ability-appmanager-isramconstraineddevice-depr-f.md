@@ -6,7 +6,7 @@
 function isRamConstrainedDevice(): Promise<boolean>
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses a promise to return the result.
+查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用Promise异步回调。
 
 **Since:** 7
 
@@ -24,9 +24,9 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the API call result and the result indicating whether the device is RAM-constrained. You can perform error handling or custom processing in this callback. **true** if the device is RAM -constrained, **false** otherwise. |
+| Promise&lt;boolean&gt; | 以Promise方式返回接口运行结果及当前设备是否为RAM受限设备，可进行错误处理或其他自定义处理。true：当前设备为RAM受限设备，false：当前设备为非RAM受限设备。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -46,7 +46,7 @@ appManager.isRamConstrainedDevice().then((data) => {
 function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses an asynchronous callback to return the result.
+查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用callback异步回调。
 
 **Since:** 7
 
@@ -64,9 +64,9 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the API call result and the result indicating whether the device is RAM-constrained. You can perform error handling or custom processing in this callback. **true** if the device is RAM-constrained, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 以回调方式返回接口运行结果及当前设备是否为RAM受限设备，可进行错误处理或其他自定义处理。true：当前设备为RAM受限设备，false：当前设备为非 RAM受限设备。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

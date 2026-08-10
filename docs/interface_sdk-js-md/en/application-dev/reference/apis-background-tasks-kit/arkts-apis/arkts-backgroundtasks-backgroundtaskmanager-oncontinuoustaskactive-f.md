@@ -1,12 +1,18 @@
 # onContinuousTaskActive
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## onContinuousTaskActive
 
 ```TypeScript
 function onContinuousTaskActive(callback: Callback<ContinuousTaskActiveInfo>): void
 ```
 
-Register continuous task active callback.
+注册长时任务激活的监听，使用callback异步回调。应用回前台激活暂停的长时任务。
 
 **Since:** 23
 
@@ -22,12 +28,12 @@ Register continuous task active callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskActiveInfo&gt; | Yes | the callback of continuous task active. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskActiveInfo&gt; | Yes | the callback of continuous task active. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 

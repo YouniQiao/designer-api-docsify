@@ -1,23 +1,27 @@
 # createModuleContext (System API)
 
+## Modules to Import
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## createModuleContext
 
 ```TypeScript
 export function createModuleContext(context: Context, bundleName: string, moduleName: string): Promise<Context>
 ```
 
-Creates the context for a module. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - Starting from API version 18, the context can obtain the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of the current  
-    application. The **processName** property in the context created by **createModuleContext** is the same as the  
-    **processName** property in the input parameter **Context**. The values of other properties are obtained based on  
-    the input parameters **Context**, **bundleName**, and **moduleName**.  
-    
-    - Creating a module context involves resource querying and initialization, which can be time-consuming. In  
-    scenarios where application fluidity is critical, avoid frequently or repeatedly calling the  
-    **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+根据入参Context创建相应模块的Context。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 从API version 18开始，Context支持获取当前应用的进程名
+> [processName](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context)。
+> createModuleContext创建的Context中的processName属性与入参Context中的processName属性一致，其他属性根据入参Context、bundleName和moduleName获得相应
+> 的属性值。
+> 
+> - 由于创建模块上下文的过程涉及资源查询与初始化，耗时相对较长，在对应用流畅性要求较高的场景下，不建议频繁或多次调用createModuleContext接口创建多个Context实例，以免影响用户体验。
 
 **Since:** 12
 
@@ -37,25 +41,25 @@ Creates the context for a module. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. |
-| bundleName | string | Yes | Bundle name of the application. If an empty string is passed in, the current application is used by default. |
-| moduleName | string | Yes | Module name. |
+| context | [Context](arkts-ability-context-c-sys.md) | Yes | 表示应用上下文。 |
+| bundleName | string | Yes | 表示应用包名。取值为空字符串时，默认为当前应用。 |
+| moduleName | string | Yes | 表示应用模块名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the context created. |
+| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; | Promise对象。返回创建的Context。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility, application, common } from '@kit.AbilityKit';

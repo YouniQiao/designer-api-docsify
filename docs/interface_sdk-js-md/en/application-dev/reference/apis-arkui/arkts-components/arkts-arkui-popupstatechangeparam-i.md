@@ -1,6 +1,6 @@
 # PopupStateChangeParam
 
-Display state of the popup.
+气泡的显示状态。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Display state of the popup.
 isVisible: boolean
 ```
 
-Display state of the popup. It returns **true** when the popup transitions from closed to open, and **false** when the popup transitions from open to closed.
+气泡的显示状态。true表示气泡打开，false表示气泡关闭。
 
 **Type:** boolean
 

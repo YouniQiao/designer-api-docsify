@@ -1,6 +1,6 @@
 # PersistPropsOptions
 
-Defines a key-value pair object used to specify persistent properties and their default values, passed as a parameter to [persistProps]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+用于指定持久化属性及其默认值的键值对对象，作为[persistProps](arkts-arkui-persistentstorage-c.md#persistprops)参数传入。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Defines a key-value pair object used to specify persistent properties and their 
 defaultValue: number | string | boolean | Object
 ```
 
-Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage.Since API version 12, **defaultValue** can be set to **null** or **undefined**.
+在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。从API version 12开始，defaultValue可以为null或undefined。
 
 **Type:** number \| string \| boolean \| Object
 
@@ -36,7 +36,7 @@ Default value used for initialization if the specified **key** is not found in P
 key: string
 ```
 
-Property name.
+要持久化的属性名。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # EnterKeyType
 
-Type of the Enter key.
+输入法回车键类型。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Type of the Enter key.
 Go = 2
 ```
 
-The Enter key is labeled "Go."
+显示为开始样式。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ The Enter key is labeled "Go."
 Search = 3
 ```
 
-The Enter key is labeled "Search."
+显示为搜索样式。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ The Enter key is labeled "Search."
 Send = 4
 ```
 
-The Enter key is labeled "Send."
+显示为发送样式。
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ The Enter key is labeled "Send."
 Next = 5
 ```
 
-The Enter key is labeled "Next."
+显示为下一步样式。
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ The Enter key is labeled "Next."
 Done = 6
 ```
 
-The Enter key is labeled "Done."
+显示为完成样式。
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ The Enter key is labeled "Done."
 PREVIOUS = 7
 ```
 
-The Enter key is labeled "Previous."
+显示为上一步样式。
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ The Enter key is labeled "Previous."
 NEW_LINE = 8
 ```
 
-The Enter key is labeled "New Line."
+显示为换行样式。
 
 **Since:** 11
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## enableStableQualityMode
 
 ```TypeScript

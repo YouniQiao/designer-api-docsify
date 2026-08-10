@@ -1,6 +1,6 @@
 # DynamicOptions (System API)
 
-Defines the parameters to be passed during **DynamicComponent** construction.
+用于在DynamicComponent构造时传递参数。
 
 **Since:** 26.0.0
 
@@ -18,8 +18,7 @@ Defines the parameters to be passed during **DynamicComponent** construction.
 allowCrossProcessNesting?: boolean
 ```
 
-Whether to allow cross-process [UIExtensionComponent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ nesting.  
-**true**: yes; **false**: no.The default value is **false**.
+是否允许跨进程[UIExtensionComponent](./ui_extension_component)嵌套。&lt;br/&gt;true：允许跨进程嵌套；false：不允许跨进程嵌套。&lt;br/&gt;默认值：false
 
 **Type:** boolean
 
@@ -41,7 +40,7 @@ Whether to allow cross-process [UIExtensionComponent]\_\_\_JSDOC\_LINK\_DESC\_US
 allowOccupied?: boolean
 ```
 
-Indicates allow keyboard avoidance inside the DynamicComponent.
+表示是否允许DynamicComponent内部避让键盘。
 
 **Type:** boolean
 
@@ -63,8 +62,7 @@ Indicates allow keyboard avoidance inside the DynamicComponent.
 backgroundTransparent?: boolean
 ```
 
-Whether to enable the transparent background for the component.  
-**true**: yes; **false**: no.The default value is **false**.
+是否启用组件背景透明。&lt;br/&gt;true：启用背景透明；false：不启用背景透明。&lt;br/&gt;默认值：false
 
 **Type:** boolean
 
@@ -86,7 +84,7 @@ Whether to enable the transparent background for the component.
 entryPoint: string
 ```
 
-Entry of the .abc page to be loaded.
+要加载的Abc页面入口。&lt;br/&gt;取值格式：'bundleName/moduleName/pagePath'，例如'com.example.myapplication/entry/ets/pages/DynamicPage'。
 
 **Type:** string
 
@@ -108,9 +106,9 @@ Entry of the .abc page to be loaded.
 worker: Worker
 ```
 
-Worker for running the .abc file.
+用于运行Abc的Worker线程对象，需通过worker.ThreadWorker创建。Worker在独立线程中执行Abc的UI逻辑，与主线程通信。
 
-**Type:** Worker
+**Type:** [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-worker-c.md)
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # OnPermissionRequestEvent
 
-Represents the callback invoked when a permission request is received.
+定义通知收到获取权限请求。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents the callback invoked when a permission request is received.
 request: PermissionRequest
 ```
 
-User operation.
+Defines the js geolocation request.
 
-**Type:** PermissionRequest
+**Type:** [PermissionRequest](../arkts-apis/arkts-arkweb-web-permissionrequest-c.md)
 
 **Since:** 12
 

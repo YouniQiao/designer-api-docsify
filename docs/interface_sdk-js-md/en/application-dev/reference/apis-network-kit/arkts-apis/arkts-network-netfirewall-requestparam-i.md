@@ -10,6 +10,12 @@ Pagination query input parameters.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## orderField
 
 ```TypeScript
@@ -18,7 +24,7 @@ orderField: NetFirewallOrderField
 
 Sort field.
 
-**Type:** NetFirewallOrderField
+**Type:** [NetFirewallOrderField](arkts-network-netfirewall-netfirewallorderfield-e.md)
 
 **Since:** 15
 
@@ -36,7 +42,7 @@ orderType: NetFirewallOrderType
 
 Sort Type: ascending or descending.
 
-**Type:** NetFirewallOrderType
+**Type:** [NetFirewallOrderType](arkts-network-netfirewall-netfirewallordertype-e.md)
 
 **Since:** 15
 

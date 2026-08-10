@@ -1,5 +1,11 @@
 # enable
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## enable
 
 ```TypeScript
@@ -22,7 +28,7 @@ function enable(isEnable: boolean): void
 | --- | --- | --- | --- |
 | isEnable | boolean | 是 | �Ƿ�ʹ��jsLeakWatcher��true��ʹ��jsLeakWatcher��false����ʹ��jsLeakWatcher�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 jsLeakWatcher.enable(true);

@@ -1,6 +1,6 @@
 # Range
 
-Describes the range of the selected text.
+选中的文本范围。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the range of the selected text.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## end
 
 ```TypeScript
 end: int
 ```
 
-Index of the last selected character in the text box.
+选中文本的末字符在编辑框的索引值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -34,9 +40,9 @@ Index of the last selected character in the text box.
 start: int
 ```
 
-Index of the first selected character in the text box.
+选中文本的首字符在编辑框的索引值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

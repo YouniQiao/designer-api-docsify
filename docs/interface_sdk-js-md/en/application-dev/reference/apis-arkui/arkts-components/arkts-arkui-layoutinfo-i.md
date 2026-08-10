@@ -1,6 +1,6 @@
 # LayoutInfo
 
-Provides the child component layout information.
+子组件布局位置信息
 
 **Since:** 9
 
@@ -8,7 +8,7 @@ Provides the child component layout information.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](../arkts-apis/arkts-arkui-component/common-layoutable-i.md)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md)
 
 <!--Device-unnamed-declare interface LayoutInfo--><!--Device-unnamed-declare interface LayoutInfo-End-->
 
@@ -20,9 +20,9 @@ Provides the child component layout information.
 constraint: ConstraintSizeOptions
 ```
 
-Constraint size of the child component.
+子组件布局约束
 
-**Type:** ConstraintSizeOptions
+**Type:** [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md)
 
 **Since:** 9
 
@@ -30,7 +30,7 @@ Constraint size of the child component.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](../arkts-apis/arkts-arkui-component/common-layoutable-i.md)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -44,9 +44,9 @@ Constraint size of the child component.
 position: Position
 ```
 
-Position coordinates of the child component.
+子组件位置信息
 
-**Type:** Position
+**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Position coordinates of the child component.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](../arkts-apis/arkts-arkui-component/common-layoutable-i.md)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

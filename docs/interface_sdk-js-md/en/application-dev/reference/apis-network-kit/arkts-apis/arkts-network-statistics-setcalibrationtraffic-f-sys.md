@@ -1,5 +1,11 @@
 # setCalibrationTraffic (System API)
 
+## Modules to Import
+
+```TypeScript
+import { statistics } from 'kits/@kit.NetworkKit';
+```
+
 ## setCalibrationTraffic
 
 ```TypeScript
@@ -26,9 +32,9 @@ Set calibration traffic data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| simId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The ID of the specified sim card. |
-| remainTraffic | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | The remaining traffic data. |
-| totalTraffic | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | No | The total traffic data. |
+| simId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The ID of the specified sim card. |
+| remainTraffic | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | The remaining traffic data. |
+| totalTraffic | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | The total traffic data. |
 
 **Return value:**
 
@@ -40,14 +46,14 @@ Set calibration traffic data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value, such as simId error. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error, such as nullptr. |
+| 801 | Capability not supported. |
+| 2100001 | Invalid parameter value, such as simId error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error, such as nullptr. |
+| 201 | Permission denied. |
+| 202 | Nonsystem applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection, statistics } from '@kit.NetworkKit';

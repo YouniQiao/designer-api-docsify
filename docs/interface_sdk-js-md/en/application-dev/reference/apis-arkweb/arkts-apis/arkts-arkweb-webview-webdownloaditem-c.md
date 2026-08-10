@@ -10,6 +10,12 @@ Represents a download task, You can use this object to operate the corresponding
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## cancel
 
 ```TypeScript
@@ -52,13 +58,13 @@ Deserialize web download from typed array.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Deserialize the serialized data into a WebDownloadItem. |
+| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
 
 ## getCurrentSpeed
 
@@ -80,7 +86,7 @@ Get current speed, in bytes per second.
 
 | Type | Description |
 | --- | --- |
-| int |  Returns the current download speed. |
+| int | Returns the current download speed. |
 
 ## getFullPath
 
@@ -102,7 +108,7 @@ Get full path of the web download.
 
 | Type | Description |
 | --- | --- |
-| string |  Returns the full path of the download. |
+| string | Returns the full path of the download. |
 
 ## getGuid
 
@@ -124,7 +130,7 @@ Get guid.
 
 | Type | Description |
 | --- | --- |
-| string |  Returns the download's guid. |
+| string | Returns the download's guid. |
 
 ## getLastErrorCode
 
@@ -146,7 +152,7 @@ Get last error code of the web download.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the last error code. |
+| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
 
 ## getMethod
 
@@ -168,7 +174,7 @@ Get http method of the web download request.
 
 | Type | Description |
 | --- | --- |
-| string |  Returns the http request method. |
+| string | Returns the http request method. |
 
 ## getMimeType
 
@@ -190,7 +196,7 @@ Get mime type of the web download.
 
 | Type | Description |
 | --- | --- |
-| string |  Returns the mimetype. |
+| string | Returns the mimetype. |
 
 ## getOriginalUrl
 
@@ -214,7 +220,7 @@ Get the original url of the web download.
 
 | Type | Description |
 | --- | --- |
-| string |  Returns the original url of the download. |
+| string | Returns the original url of the download. |
 
 ## getPercentComplete
 
@@ -236,7 +242,7 @@ Get percent complete.
 
 | Type | Description |
 | --- | --- |
-| int |  Returns -1 if progress is unknown. 100 if the download is already complete. |
+| int | Returns -1 if progress is unknown. 100 if the download is already complete. |
 
 ## getReceivedBytes
 
@@ -258,7 +264,7 @@ Get received bytes.
 
 | Type | Description |
 | --- | --- |
-| long |  Returns the received bytes. |
+| long | Returns the received bytes. |
 
 ## getReferrerUrl
 
@@ -282,7 +288,7 @@ Get the referrer url of the web download.
 
 | Type | Description |
 | --- | --- |
-| string |  Returns the referrer url of the download. |
+| string | Returns the referrer url of the download. |
 
 ## getState
 
@@ -304,7 +310,7 @@ Get state of the web download.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the current download state. |
+| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Returns the current download state. |
 
 ## getSuggestedFileName
 
@@ -326,7 +332,7 @@ Get suggested file name of the web download request.
 
 | Type | Description |
 | --- | --- |
-| string |  Returns the suggested file name. |
+| string | Returns the suggested file name. |
 
 ## getTotalBytes
 
@@ -348,7 +354,7 @@ Get total bytes.
 
 | Type | Description |
 | --- | --- |
-| long |  Returns the total bytes received, -1 if the total size is unknown. |
+| long | Returns the total bytes received, -1 if the total size is unknown. |
 
 ## getUrl
 
@@ -370,7 +376,7 @@ Get url of the web download request.
 
 | Type | Description |
 | --- | --- |
-| string |  Returns the url. |
+| string | Returns the url. |
 
 ## pause
 
@@ -392,7 +398,7 @@ Pause the web download.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100019](../errorcode-webview.md#17100019-download-not-started-yet) | The download task is not started yet. |
+| 17100019 | The download task is not started yet. |
 
 ## resume
 
@@ -414,7 +420,7 @@ Resume the web download.Use WebDownloadManager.resumeDownload to resume deserial
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100016](../errorcode-webview.md#17100016-download-task-not-paused) | The download task is not paused. |
+| 17100016 | The download task is not paused. |
 
 ## serialize
 
@@ -436,7 +442,7 @@ Serialize web download to typed array.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array |  Returns the serialized data. |
+| Uint8Array | Returns the serialized data. |
 
 ## start
 
@@ -464,5 +470,5 @@ Start the web download.Used in onBeforeDownload, If you want to start the curren
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
 

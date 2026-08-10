@@ -10,20 +10,26 @@ Defines the image recommendation options. The image recommendation feature depen
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## defaultRecommendationType
 
 ```TypeScript
 defaultRecommendationType?: RecommendationType
 ```
 
-Recommended tag displayed when the picker is opened. This configuration takes effect only after  
+Recommended tag displayed when the picker is opened. This configuration takes effect only after   
 **recommendationTypeList** is set.
 
 If the tag exists, the tag page is displayed by default.
 
 If the tag does not exist, the All tag page is displayed by default.
 
-**Type:** RecommendationType
+**Type:** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e-sys.md)
 
 **Since:** 24
 

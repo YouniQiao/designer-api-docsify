@@ -1,5 +1,11 @@
 # getAttestStatus (System API)
 
+## Modules to Import
+
+```TypeScript
+import { deviceAttest } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAttestStatus
 
 ```TypeScript
@@ -22,17 +28,17 @@ Obtains the AttestResultInfo object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttestResultInfo&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AttestResultInfo&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
-| [20000001](../../apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
+| 20000001 | System service exception, please try again or reboot your device. |
+| 401 | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
+| 202 | This api is system api, Please use the system application to call this api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -47,7 +53,7 @@ try {
         " patchLevelResult:" + value.softwareResultDetail[1],
         " rootHashResult:" + value.softwareResultDetail[2],
         " PCIDResult:" + value.softwareResultDetail[3],
-        " reserver:" + value.softwareResultDetail[4]);
+        " reserved:" + value.softwareResultDetail[4]);
     }
     })
 } catch (error) {
@@ -86,11 +92,11 @@ Obtains the AttestResultInfo object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
-| [20000001](../../apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
+| 20000001 | System service exception, please try again or reboot your device. |
+| 401 | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
+| 202 | This api is system api, Please use the system application to call this api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -102,7 +108,7 @@ try {
         " patchLevelResult:" + value.softwareResultDetail[1],
         " rootHashResult:" + value.softwareResultDetail[2],
         " PCIDResult:" + value.softwareResultDetail[3],
-        " reserver:" + value.softwareResultDetail[4]);
+        " reserved:" + value.softwareResultDetail[4]);
     }).catch((error: BusinessError) => {
         console.error("error code:" + error.code + " message:" + error.message);
     });

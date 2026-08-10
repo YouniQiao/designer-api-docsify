@@ -1,12 +1,20 @@
 # getInspectorTree
 
+## Modules to Import
+
+```TypeScript
+import { inspector } from 'kits/@kit.ArkUI';
+```
+
 ## getInspectorTree
 
 ```TypeScript
 function getInspectorTree(): RecordData
 ```
 
-Get components tree.
+获取组件树及组件属性。
+
+此接口仅用于对应用的测试。由于耗时长，不建议测试之外的场景使用。
 
 **Since:** 23
 
@@ -22,5 +30,5 @@ Get components tree.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 组件树及组件属性列表的JSON对象。组件中每个字段的含义请参考getInspectorInfo的返回值说明。 |
 

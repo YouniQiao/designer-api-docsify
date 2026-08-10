@@ -1,6 +1,6 @@
 # PrintColorMode
 
-Enumerates the color modes.
+打印色彩模式的枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the color modes.
 COLOR_MODE_MONOCHROME = 0
 ```
 
-Black and white.
+表示黑白打印。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Black and white.
 COLOR_MODE_COLOR = 1
 ```
 
-Color.
+表示彩色打印。
 
 **Since:** 11
 

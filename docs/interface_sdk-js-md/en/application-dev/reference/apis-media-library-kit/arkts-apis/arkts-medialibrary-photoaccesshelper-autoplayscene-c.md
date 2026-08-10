@@ -10,6 +10,12 @@ Defines the playback mode of the moving photo in different scenarios.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## playMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ playMode: PlayMode
 
 Whether to support automatic playback of the moving photo.
 
-**Type:** PlayMode
+**Type:** [PlayMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-playmode-e.md)
 
 **Since:** 23
 
@@ -40,7 +46,7 @@ sceneType: SceneType
 
 Scene of the moving photo playback.
 
-**Type:** SceneType
+**Type:** [SceneType](arkts-medialibrary-photoaccesshelper-scenetype-e.md)
 
 **Since:** 23
 

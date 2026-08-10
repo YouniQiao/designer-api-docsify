@@ -1,6 +1,6 @@
 # CopyEvent
 
-User copy event.
+定义用户复制事件。
 
 **Since:** 12
 
@@ -16,9 +16,11 @@ User copy event.
 preventDefault?: Callback<void>
 ```
 
-Prevents the default cut event.
+阻止系统默认复制事件。
 
-**Type:** Callback&lt;void&gt;
+省略时，执行系统默认复制行为。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 

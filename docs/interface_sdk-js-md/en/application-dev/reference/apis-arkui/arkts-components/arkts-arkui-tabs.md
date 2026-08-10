@@ -1,36 +1,28 @@
 # Tabs
 
-The **Tabs** component is a container component that allows users to switch between content views through tabs. Each
-tab page corresponds to a content view.
+通过页签进行内容视图切换的容器组件，每个页签对应一个内容视图。适用于应用底部导航栏、顶部页签切换、侧边栏导航等需要在不同内容视图间快速切换的场景。使用Tabs组件可以简化多视图导航的实现，提升用户切换效率。
 
-> **NOTE**
->
-> -
->
-> - Since API version 11, this component supports the safe area avoidance feature. The default value of the
-> [expandSafeArea]{}
-> **expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])**. You can override the default behavior by
-> rewriting this attribute. For versions earlier than API version 11, you need to manually implement safe area
-> avoidance together with the **expandSafeArea** attribute.
+> **说明：**
 
-## Child Components
+> - 该组件从API version 11开始，支持安全区域避让特性，其[expandSafeArea]{@link CommonMethod#expandSafeArea}属性的默认值为expandSafeArea(
+> [SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])。开发者可通过重写该属性覆盖默认行为。对于API version 11之前的版本，则需配合expandSafeArea属性手动实现安全区域避
+> 让。
 
-Only the child component [TabContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ and rendering control types  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ and  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ are supported. You are advised not to use custom components as child components. If **if/else** or **ForEach** is used, only **TabContent** can be used as the child component. You are advised not to use custom components as child components.
-    **NOTE**  
-    
-    If the child component has the **visibility** attribute set to **None** or **Hidden**, it is hidden but still takes  
-    up space in the layout.  
-    
-    When a displayed **Tabs** child component **TabContent** is hidden, it is not destroyed. For details about how to  
-    implement lazy loading and release on the page, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.  
-    
-    
-    If [height]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ is set to **auto** for **Tabs**, the tab height can be  
-    automatically adjusted based on that of the child component. When [width]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_  
-    is set to **auto**, the tab width can be automatically adjusted based on that of the child component.
+## 子组件
+
+仅支持子组件[TabContent]{@link tab_content}，以及渲染控制类型  
+[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)和  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)，不建议自定义组件作为子组件。并且if/else和ForEach下也仅支持TabContent作为子组件，不建议自定义组件作为子组件。
+
+> **说明：**
+> 
+> Tabs子组件设置了通用属性[visibility]{@link CommonMethod#visibility}的值为None，或者设置值为Hidden时，对应子组件不显示，但依然会在视窗内占位。
+> 
+> 已经显示的Tabs子组件TabContent后续隐藏时不会被销毁，若需要页面懒加载和释放，可以参考
+> [示例13](docroot://reference/apis-arkui/arkui-ts/ts-container-tabs.md#示例13页面懒加载和释放)。
+> 
+> Tabs设置[height]{@link CommonMethod#height(value: Length)}为auto时，可根据子组件高度自适应高度大小。设置
+> [width]{@link CommonMethod#width(value: Length)}为auto时，可根据子组件宽度自适应宽度大小。
 
 ## Tabs
 
@@ -38,7 +30,7 @@ Only the child component [TabContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ and r
 Tabs(options?: TabsOptions)
 ```
 
-Create a **Tabs** container.
+创建Tabs容器。
 
 **Since:** 7
 
@@ -54,7 +46,30 @@ Create a **Tabs** container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options of the **Tabs** component. |
+| options | [TabsOptions](../arkts-apis/arkts-arkui-tabs-tabsoptions-i.md) | No | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
 
 ## Summary
 
+- [BarGridColumnOptions](arkts-arkui-tabs-bargridcolumnoptions-i.md)
+- [DividerStyle](arkts-arkui-tabs-dividerstyle-i.md)
+- [FloatingTabBarStyle](arkts-arkui-tabs-floatingtabbarstyle-i.md)
+- [FloatingTabBarWidth](arkts-arkui-tabs-floatingtabbarwidth-i.md)
+- [ScrollableBarModeOptions](arkts-arkui-tabs-scrollablebarmodeoptions-i.md)
+- [TabContentAnimatedTransition](arkts-arkui-tabs-tabcontentanimatedtransition-i.md)
+- [TabContentTransitionProxy](arkts-arkui-tabs-tabcontenttransitionproxy-i.md)
+- [TabsAnimationEvent](arkts-arkui-tabs-tabsanimationevent-i.md)
+- [TabsOptions](arkts-arkui-tabs-tabsoptions-i.md)
+- [CommonModifier](arkts-arkui-tabs-commonmodifier-t.md)
+- [OnTabsAnimationEndCallback](arkts-arkui-tabs-ontabsanimationendcallback-t.md)
+- [OnTabsAnimationStartCallback](arkts-arkui-tabs-ontabsanimationstartcallback-t.md)
+- [OnTabsContentDidScrollCallback](arkts-arkui-tabs-ontabscontentdidscrollcallback-t.md)
+- [OnTabsContentWillChangeCallback](arkts-arkui-tabs-ontabscontentwillchangecallback-t.md)
+- [OnTabsGestureSwipeCallback](arkts-arkui-tabs-ontabsgestureswipecallback-t.md)
+- [TabsCustomContentTransitionCallback](arkts-arkui-tabs-tabscustomcontenttransitioncallback-t.md)
+- [UIMaterial](arkts-arkui-tabs-uimaterial-t.md)
+- [AnimationMode](arkts-arkui-tabs-animationmode-e.md)
+- [BarMode](arkts-arkui-tabs-barmode-e.md)
+- [BarPosition](arkts-arkui-tabs-barposition-e.md)
+- [LayoutStyle](arkts-arkui-tabs-layoutstyle-e.md)
+- [TabsCacheMode](arkts-arkui-tabs-tabscachemode-e.md)
+- [TabsNestedScrollMode](arkts-arkui-tabs-tabsnestedscrollmode-e.md)

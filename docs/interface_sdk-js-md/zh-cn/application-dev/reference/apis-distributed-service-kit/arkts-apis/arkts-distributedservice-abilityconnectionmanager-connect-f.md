@@ -1,5 +1,11 @@
 # connect
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## connect
 
 ```TypeScript
@@ -22,7 +28,7 @@ function connect(sessionId: int): Promise<ConnectResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 已创建的协同会话ID。 |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 已创建的协同会话ID。 |
 
 **返回值：**
 
@@ -34,11 +40,11 @@ function connect(sessionId: int): Promise<ConnectResult>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-**示例：**
+## 示例
 
-ArkTS-Dyn示例：
+设备A上创建协同会话成功并获得会话ID后，调用connect()方法启动UIAbility连接，并拉起设备B应用。
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
@@ -49,23 +55,6 @@ abilityConnectionManager.connect(sessionId).then((ConnectResult) => {
   if (!ConnectResult.isConnected) {
     hilog.info(0x0000, 'testTag', 'connect failed');
     return;
-  }
-}).catch(() => {
-  hilog.error(0x0000, 'testTag', "connect failed");
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
-import hilog from '@ohos.hilog';
-
-let sessionId = 100;
-abilityConnectionManager.connect(sessionId).then((ConnectResult) => {
-  if (!ConnectResult.isConnected) {
-    hilog.info(0x0000, 'testTag', 'connect failed');
-    return ConnectResult;
   }
 }).catch(() => {
   hilog.error(0x0000, 'testTag', "connect failed");

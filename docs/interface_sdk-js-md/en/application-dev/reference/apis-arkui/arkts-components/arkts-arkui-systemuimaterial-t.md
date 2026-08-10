@@ -4,17 +4,17 @@
 declare type SystemUiMaterial = import('../api/@ohos.arkui.uiMaterial').default.Material
 ```
 
-Base class for system material objects.
+系统材质对象基类。
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-unnamed-declare type SystemUiMaterial = import('../api/@ohos.arkui.uiMaterial').default.Material--><!--Device-unnamed-declare type SystemUiMaterial = import('../api/@ohos.arkui.uiMaterial').default.Material-End-->
 

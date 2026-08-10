@@ -1,10 +1,10 @@
 # ThemeColorMode
 
-Enumerates the color modes.
+设置颜色模式。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum ThemeColorMode--><!--Device-unnamed-declare enum ThemeColorMode-End-->
 
@@ -16,11 +16,11 @@ Enumerates the color modes.
 SYSTEM = 0
 ```
 
-System color mode.
+跟随系统深浅色模式。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +36,11 @@ System color mode.
 LIGHT = 1
 ```
 
-Light color mode.
+固定使用浅色模式。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +56,11 @@ Light color mode.
 DARK = 2
 ```
 
-Dark color mode.
+固定使用深色模式。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,6 +1,6 @@
 # PhotoBrowserRange
 
-PhotoBrowserRange. include ALL and SELECTED\_ONLY
+PhotoBrowserRange. include ALL and SELECTED_ONLY
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ ALL. all photos or vedios
 SELECTED_ONLY = 1
 ```
 
-SELECTED\_ONLY. only selected photos or vedios
+SELECTED_ONLY. only selected photos or vedios
 
 **Since:** 26.0.0
 

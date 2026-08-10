@@ -1,7 +1,5 @@
 # Util
 
-Provides util functions.
-
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
@@ -14,13 +12,19 @@ Provides util functions.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## unitConvert
 
 ```TypeScript
 unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string
 ```
 
-Converts one measurement unit into another and formats the unit based on the specified locale and style.
+将fromUnit的单位转换为toUnit的单位，并根据区域与风格进行格式化。
 
 **Since:** 8
 
@@ -38,15 +42,15 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Measurement unit to be converted. |
-| toUnit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Measurement unit to be converted to. |
-| value | double | Yes | Value of the measurement unit to be converted. |
-| locale | string | Yes | Locale ID used for formatting, for example, **zh-Hans-CN**. |
-| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | 要被转换的单位。 |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | 要转换为的单位。 |
+| value | double | Yes | 要被转换的单位的数量值。 |
+| locale | string | Yes | 格式化时使用的区域ID，如：zh-Hans-CN。 |
+| style | string | No | 格式化使用的风格，取值包括：'long', 'short', 'narrow'。默认值：short。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | String obtained after formatting based on the measurement unit specified by **toUnit**. |
+| string | 按照toUnit的单位格式化后，得到的字符串。 |
 

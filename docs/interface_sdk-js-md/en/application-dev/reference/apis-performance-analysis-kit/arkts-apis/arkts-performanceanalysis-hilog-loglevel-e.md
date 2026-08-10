@@ -1,6 +1,6 @@
 # LogLevel
 
-Enumerates the log levels.
+日志级别。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the log levels.
 DEBUG = 3
 ```
 
-Log level used to record more detailed process information than INFO logs to help developers analyze service processes and locate faults.
+详细的流程记录，通过该级别的日志可以更详细地分析业务流程和定位分析问题。
 
 **Since:** 7
 
@@ -34,11 +34,11 @@ Log level used to record more detailed process information than INFO logs to hel
 INFO = 4
 ```
 
-Log level used to record key service process nodes and exceptions that occur during service running,
+用于记录业务关键流程节点，可以还原业务的主要运行过程；
 
-for example, no network signal or login failure.
+用于记录可预料的非正常情况信息，如无网络信号、登录失败等。
 
-These logs should be recorded by the dominant module in the service to avoid repeated logging conducted by multiple invoked modules or low-level functions.
+这些日志都应该由该业务内处于支配地位的模块来记录，避免在多个被调用的模块或低级函数中重复记录。
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ These logs should be recorded by the dominant module in the service to avoid rep
 WARN = 5
 ```
 
-Log level used to record severe, unexpected faults that have little impact on users and can be rectified by the programs themselves or through simple operations.
+用于记录较为严重的非预期情况，但是对用户影响不大，应用可以自动恢复或通过简单的操作就可以恢复的问题。
 
 **Since:** 7
 
@@ -74,7 +74,7 @@ Log level used to record severe, unexpected faults that have little impact on us
 ERROR = 6
 ```
 
-Log level used to record program or functional errors that affect the normal running or use of the functionality and can be fixed at a high cost, for example, by resetting data.
+应用发生了错误，该错误会影响功能的正常运行或用户的正常使用，可以恢复但恢复代价较高，如重置数据等。
 
 **Since:** 7
 
@@ -92,7 +92,7 @@ Log level used to record program or functional errors that affect the normal run
 FATAL = 7
 ```
 
-Log level used to record program or functionality crashes that cannot be rectified.
+重大致命异常，表明应用即将崩溃，故障无法恢复。
 
 **Since:** 7
 

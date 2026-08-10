@@ -1,6 +1,6 @@
 # TextConfig
 
-Config of editor.
+编辑框的配置信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Config of editor.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## capitalizeMode
 
 ```TypeScript
 capitalizeMode?: CapitalizeMode
 ```
 
-Indicates the capitalize mode of the edit box.
+编辑框设置大小写模式。如果没有设置或设置非法值，默认不进行任何首字母大写处理。
 
-**Type:** CapitalizeMode
+**Type:** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
 
 **Default:** CapitalizeMode.NONE
 
@@ -36,9 +42,9 @@ Indicates the capitalize mode of the edit box.
 cursorInfo?: CursorInfo
 ```
 
-Cursor information.
+光标信息。
 
-**Type:** CursorInfo
+**Type:** [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md)
 
 **Since:** 10
 
@@ -54,9 +60,9 @@ Cursor information.
 inputAttribute: InputAttribute
 ```
 
-Attribute of Input.
+编辑框属性。
 
-**Type:** InputAttribute
+**Type:** [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md)
 
 **Since:** 10
 
@@ -72,7 +78,7 @@ Attribute of Input.
 newEditBox?: boolean
 ```
 
-Indicates that this is a new edit box.
+表示是否为新编辑框。true表示新编辑框，false表示非新编辑框。
 
 **Type:** boolean
 
@@ -90,9 +96,9 @@ Indicates that this is a new edit box.
 selection?: Range
 ```
 
-Selection information.
+文本选中的范围。
 
-**Type:** Range
+**Type:** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
 
 **Since:** 10
 
@@ -108,9 +114,11 @@ Selection information.
 windowId?: int
 ```
 
-The window ID of the application currently bound to the input method.
+编辑框所在的窗口Id，该参数应为整数。
 
-**Type:** int
+推荐使用[getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md/arkts-arkui-window-window-i.md#getwindowproperties)方法获取窗口id属性。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

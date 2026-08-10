@@ -1,12 +1,18 @@
 # connectPrinter
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## connectPrinter
 
 ```TypeScript
 function connectPrinter(printerId: string, callback: AsyncCallback<void>): void
 ```
 
-Connects to a printer by printer ID. This API uses an asynchronous callback to return the result.
+通过打印机ID连接打印机，使用callback异步回调。
 
 **Since:** 20
 
@@ -24,16 +30,17 @@ Connects to a printer by printer ID. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Printer ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback to be invoked when a printer is connected. |
+| printerId | string | Yes | 打印机ID。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 通过打印机ID异步连接打印机的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 10 - 19 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -56,7 +63,7 @@ print.connectPrinter(printerId, (err: BusinessError) => {
 function connectPrinter(printerId: string): Promise<void>
 ```
 
-Connects to a printer by printer ID. This API uses a promise to return the result.
+通过打印机ID连接打印机，使用Promise异步回调。
 
 **Since:** 20
 
@@ -74,21 +81,22 @@ Connects to a printer by printer ID. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Printer ID. |
+| printerId | string | Yes | 打印机ID |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 10 - 19 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

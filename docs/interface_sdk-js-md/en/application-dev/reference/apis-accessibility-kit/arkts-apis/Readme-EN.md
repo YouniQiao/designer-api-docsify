@@ -63,15 +63,9 @@
   <!--Del-->
   - [AccessibilityFocusScene(system api)](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [AccessibilitySourceType(system api)](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [FocusMoveResultCode(system api)](arkts-accessibility-accessibility-focusmoveresultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [FocusRuleType(system api)](arkts-accessibility-accessibility-focusruletype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [InjectActionType(system api)](arkts-accessibility-accessibility-injectactiontype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [OperateVirtualNodeResult(system api)](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)<!--DelEnd-->
 - [@ohos.accessibility.GesturePath](arkts-accessibility-gesturepath.md)
   - [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md)
 - [@ohos.accessibility.GesturePoint](arkts-accessibility-gesturepoint.md)
@@ -106,10 +100,6 @@
   <!--Del-->
   - [setSeniorModeStateForApp(system api)](arkts-accessibility-config-setseniormodestateforapp-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [startBlinking(system api)](arkts-accessibility-config-startblinking-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [stopBlinking(system api)](arkts-accessibility-config-stopblinking-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [AppSeniorModeInfo(system api)](arkts-accessibility-config-appseniormodeinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Config(system api)](arkts-accessibility-config-config-i-sys.md)<!--DelEnd-->
@@ -124,12 +114,6 @@
   <!--Del-->
   - [RepeatClickInterval(system api)](arkts-accessibility-config-repeatclickinterval-t-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [BlinkingMode(system api)](arkts-accessibility-config-blinkingmode-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [BlinkingScenario(system api)](arkts-accessibility-config-blinkingscenario-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [BlinkResultCode(system api)](arkts-accessibility-config-blinkresultcode-e-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [Constants(system api)](arkts-accessibility-config-con-sys.md)<!--DelEnd-->
 - [@ohos.application.AccessibilityExtensionAbility](arkts-application-accessibilityextensionability.md)
   - [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md)
@@ -140,8 +124,6 @@
   - [AccessibilityEventInfo(system api)](arkts-accessibility-application-accessibilityextensionability-accessibilityeventinfo-i-sys.md)<!--DelEnd-->
   - [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md)
   - [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
-  <!--Del-->
-  - [AccessibilityVirtualNode(system api)](arkts-accessibility-accessibilityvirtualnode-t-sys.md)<!--DelEnd-->
   - [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md)
   - [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md)
   <!--Del-->
@@ -158,33 +140,27 @@
   - [Parameter(system api)](arkts-accessibility-parameter-t-sys.md)<!--DelEnd-->
   - [Rect](arkts-accessibility-rect-t.md)
   - [TouchGuideType](arkts-accessibility-touchguidetype-t.md)
-  <!--Del-->
-  - [TouchPosition(system api)](arkts-accessibility-touchposition-t-sys.md)<!--DelEnd-->
   - [WindowType](arkts-accessibility-windowtype-t.md)
 - application<!--arkts-accessibilitykit-application-->
-  - [application/AccessibilityExtensionContext](arkts-application/accessibilityextensioncontext.md)
-    - [AccessibilityExtensionContext](accessibilityextensioncontext-accessibilityextensioncontext-c.md)
+  - [AccessibilityExtensionContext](arkts-accessibilityextensioncontext.md)
+    - [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md)
     <!--Del-->
-    - [AccessibilityExtensionContext(system api)](accessibilityextensioncontext-accessibilityextensioncontext-c-sys.md)<!--DelEnd-->
+    - [AccessibilityExtensionContext(system api)](arkts-accessibility-accessibilityextensioncontext-c-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [Parameter(system api)](accessibilityextensioncontext-parameter-c-sys.md)<!--DelEnd-->
-    - [AccessibilityElement](accessibilityextensioncontext-accessibilityelement-i.md)
+    - [Parameter(system api)](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md)<!--DelEnd-->
+    - [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
     <!--Del-->
-    - [AccessibilityElement(system api)](accessibilityextensioncontext-accessibilityelement-i-sys.md)<!--DelEnd-->
+    - [AccessibilityElement(system api)](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [AccessibilityGrid(system api)](accessibilityextensioncontext-accessibilitygrid-i-sys.md)<!--DelEnd-->
+    - [AccessibilityGrid(system api)](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [AccessibilitySpan(system api)](accessibilityextensioncontext-accessibilityspan-i-sys.md)<!--DelEnd-->
+    - [AccessibilitySpan(system api)](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)<!--DelEnd-->
+    - [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md)
     <!--Del-->
-    - [AccessibilityVirtualNode(system api)](accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md)<!--DelEnd-->
-    - [ElementAttributeValues](accessibilityextensioncontext-elementattributevalues-i.md)
+    - [ElementAttributeValues(system api)](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [ElementAttributeValues(system api)](accessibilityextensioncontext-elementattributevalues-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [FocusMoveResult(system api)](accessibilityextensioncontext-focusmoveresult-i-sys.md)<!--DelEnd-->
-    - [Rect](accessibilityextensioncontext-rect-i.md)
-    <!--Del-->
-    - [TouchPosition(system api)](accessibilityextensioncontext-touchposition-i-sys.md)<!--DelEnd-->
+    - [FocusMoveResult(system api)](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)<!--DelEnd-->
+    - [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
     <!--Del-->
     - [FocusCondition(system api)](arkts-accessibility-focuscondition-t-sys.md)<!--DelEnd-->
     - [FocusDirection](arkts-accessibility-focusdirection-t.md)

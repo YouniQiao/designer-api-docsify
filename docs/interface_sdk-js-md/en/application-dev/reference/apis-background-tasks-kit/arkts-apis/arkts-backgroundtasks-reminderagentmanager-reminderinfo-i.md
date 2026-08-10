@@ -1,6 +1,6 @@
 # ReminderInfo
 
-Defines the reminder information.
+代理提醒信息，包含 ReminderRequest 和 ReminderId。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Defines the reminder information.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## reminderId
 
 ```TypeScript
 reminderId: int
 ```
 
-Reminder ID.
+发布提醒后返回的id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -34,9 +40,9 @@ Reminder ID.
 reminderReq: ReminderRequest
 ```
 
-Request used for publishing the reminder.
+代理提醒对象。
 
-**Type:** ReminderRequest
+**Type:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
 **Since:** 12
 

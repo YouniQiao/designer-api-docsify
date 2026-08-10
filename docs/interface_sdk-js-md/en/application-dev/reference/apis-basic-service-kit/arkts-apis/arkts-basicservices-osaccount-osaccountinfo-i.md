@@ -1,6 +1,6 @@
 # OsAccountInfo
 
-Represents information about an OS account.
+表示系统账号信息。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Represents information about an OS account.
 
 **System capability:** SystemCapability.Account.OsAccount
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## constraints
 
 ```TypeScript
 constraints: Array<string>
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of the system account. By default, no value is passed in.
+系统账号[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)，默认为空。
 
 **Type:** Array&lt;string&gt;
 
@@ -34,9 +40,9 @@ constraints: Array<string>
 createTime: long
 ```
 
-OS account creation time. The value is a Unix timestamp (in seconds).
+系统账号创建时间，以Unix时间戳格式表示，单位为s。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -52,7 +58,7 @@ OS account creation time. The value is a Unix timestamp (in seconds).
 distributedInfo: distributedAccount.DistributedInfo
 ```
 
-Distributed account information. By default, no value is passed in.
+分布式账号信息，默认为空。
 
 **Type:** distributedAccount.DistributedInfo
 
@@ -70,9 +76,9 @@ Distributed account information. By default, no value is passed in.
 domainInfo: DomainAccountInfo
 ```
 
-Domain account information. By default, no value is passed in.
+域账号信息，默认为空。
 
-**Type:** DomainAccountInfo
+**Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
 **Since:** 8
 
@@ -88,8 +94,7 @@ Domain account information. By default, no value is passed in.
 isActivated: boolean
 ```
 
-Whether the OS account is activated. The value **true** means the specified account is activated; the value  
-**false** means the opposite.
+系统账号是否激活。true表示指定账号已激活；false表示指定账号未激活。
 
 **Type:** boolean
 
@@ -107,11 +112,9 @@ Whether the OS account is activated. The value **true** means the specified acco
 isActived: boolean
 ```
 
-Whether the OS account is activated. The value **true** means the specified account is activated; the value  
-**false** means the opposite.
+系统账号激活状态。true表示指定账号处于激活状态；false表示指定账号处于未激活状态。
 
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use  
-**isActivated** instead.
+**说明：**从API version 7开始支持，从API version 11开始废弃，建议使用isActivated。
 
 **Type:** boolean
 
@@ -133,7 +136,7 @@ Note: This parameter is supported since API version 7 and deprecated since API v
 isCreateCompleted: boolean
 ```
 
-Whether the OS account information is complete. The value **true** means the specified account is complete;the value **false** means the opposite.
+系统账号创建是否完整。true表示指定账号已创建完整；false表示指定账号未创建完整。
 
 **Type:** boolean
 
@@ -151,7 +154,7 @@ Whether the OS account information is complete. The value **true** means the spe
 isUnlocked: boolean
 ```
 
-Whether the account is unlocked (whether the **el2/** directory is decrypted). The value **true** means the specified account is unlocked; the value **false** means the opposite.
+账号是否已解锁（EL2级别目录是否解密）。true表示指定账号已解锁；false表示指定账号未解锁。
 
 **Type:** boolean
 
@@ -169,10 +172,9 @@ Whether the account is unlocked (whether the **el2/** directory is decrypted). T
 isVerified: boolean
 ```
 
-Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.
+账号是否验证。true表示指定账号已验证；false表示指定账号未验证。
 
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use  
-**isUnlocked** instead.
+**说明：**从API version 7开始支持，从API version 11开始废弃，建议使用isUnlocked。
 
 **Type:** boolean
 
@@ -194,9 +196,9 @@ Note: This parameter is supported since API version 7 and deprecated since API v
 lastLoginTime: long
 ```
 
-Last login time of the OS account. The value is a Unix timestamp (in seconds).
+系统账号最后一次登录时间，以Unix时间戳格式表示，单位为s。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -212,9 +214,9 @@ Last login time of the OS account. The value is a Unix timestamp (in seconds).
 localId: int
 ```
 
-ID of the target OS account.
+系统账号ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -230,7 +232,7 @@ ID of the target OS account.
 localName: string
 ```
 
-Name of the OS account.
+系统账号名称。
 
 **Type:** string
 
@@ -248,7 +250,7 @@ Name of the OS account.
 photo: string
 ```
 
-Avatar of the OS account. By default, no value is passed in.
+系统账号头像，默认为空。
 
 **Type:** string
 
@@ -266,9 +268,9 @@ Avatar of the OS account. By default, no value is passed in.
 serialNumber: long
 ```
 
-SN of the OS account.
+系统账号SN码。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -284,9 +286,9 @@ SN of the OS account.
 type: OsAccountType
 ```
 
-Type of the OS account.
+系统账号类型。
 
-**Type:** OsAccountType
+**Type:** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 
 **Since:** 7
 

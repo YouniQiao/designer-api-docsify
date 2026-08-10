@@ -1,5 +1,11 @@
 # readSync
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## readSync
 
 ```TypeScript
@@ -28,7 +34,7 @@ declare function readSync(
 | --- | --- | --- | --- |
 | fd | number | 是 | 已打开的文件描述符。 |
 | buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 支持如下选项：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- length， number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：&lt;br/&gt;- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。&lt;br/&gt;- length， number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -41,13 +47,13 @@ declare function readSync(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
+| 13900034 | Operation would block |
+| 13900019 | Is a directory |
+| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+| 13900013 | Bad address |
 | 13900008 | Bad file descriptor |
 | 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
 

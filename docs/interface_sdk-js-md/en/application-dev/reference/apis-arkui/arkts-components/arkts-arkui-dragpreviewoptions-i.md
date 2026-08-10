@@ -1,6 +1,6 @@
 # DragPreviewOptions
 
-Preview image processing mode and badge count during dragging.
+设置拖拽过程中预览图处理模式及数量角标的显示。
 
 **Since:** 11
 
@@ -16,13 +16,13 @@ Preview image processing mode and badge count during dragging.
 mode?: DragPreviewMode | Array<DragPreviewMode>
 ```
 
-How the background image is processed when the component is dragged.
+表示拖拽过程中背板图处理模式。
 
-Default value: **DragPreviewMode.AUTO**
+默认值：DragPreviewMode.AUTO
 
-If **DragPreviewMode.AUTO** is set concurrently with other enumerated values, **DragPreviewMode.AUTO** takes precedence and the other values are ignored.
+当组件同时设置DragPreviewMode.AUTO和其它枚举值时，以DragPreviewMode.AUTO为准，其它枚举值设置无效。
 
-**Type:** DragPreviewMode \| Array&lt;DragPreviewMode&gt;
+**Type:** [DragPreviewMode](../arkts-apis/arkts-arkui-common-dragpreviewmode-e.md) \| Array&lt;DragPreviewMode&gt;
 
 **Since:** 11
 
@@ -42,14 +42,13 @@ If **DragPreviewMode.AUTO** is set concurrently with other enumerated values, **
 numberBadge?: boolean | number
 ```
 
-Whether to display the number badge or the number displayed on the badge. For a number badge, the value range is  
-[0, 2\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_31\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_-1]. Values outside this range will be processed as the default state. If the value specified is a floating-point number, only the integer part is displayed.
+控制数量角标是否显示，或强制设置显示的数量。当设置数量角标时取值范围为[0，2&lt;sup&gt;31&lt;/sup&gt;-1]，超过取值范围时会按默认状态处理。当设置为浮点数时，只显示整数部分。
 
-**NOTE**
+**说明：**
 
-When multiple items are dragged, use this API to set the number of items dragged.
+在多选拖拽场景，需通过该接口设置拖拽对象的数量。
 
-Default value: **true**.
+默认值：true。
 
 **Type:** boolean \| number
 
@@ -71,11 +70,11 @@ Default value: **true**.
 sizeChangeEffect?: DraggingSizeChangeEffect
 ```
 
-Transition effect between the floating image and drag preview.
+用于选择长按浮起图与拖拽预览图过渡效果。
 
-Default value: **DraggingSizeChangeEffect.DEFAULT**.
+默认值：DraggingSizeChangeEffect.DEFAULT。
 
-**Type:** DraggingSizeChangeEffect
+**Type:** [DraggingSizeChangeEffect](../arkts-apis/arkts-arkui-common-draggingsizechangeeffect-e.md)
 
 **Since:** 19
 

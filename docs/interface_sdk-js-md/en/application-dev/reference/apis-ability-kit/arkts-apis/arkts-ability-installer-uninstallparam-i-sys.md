@@ -1,6 +1,6 @@
 # UninstallParam (System API)
 
-Defines the parameters required for the uninstall of a shared bundle.
+共享包卸载需指定的参数信息。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Defines the parameters required for the uninstall of a shared bundle.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Name of the shared bundle.
+共享包包名。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ Name of the shared bundle.
 versionCode?: int
 ```
 
-Version number of the shared bundle. By default, no value is passed, and all shared bundles of the specified name are uninstalled.
+指示共享包的版本号。默认值：如果不填写versionCode，则卸载该包名的所有共享包。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

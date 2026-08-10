@@ -1,6 +1,6 @@
 # AuthStatusInfo (System API)
 
-Presents the authentication status information.
+表示认证状态信息。
 
 **Since:** 10
 
@@ -12,15 +12,21 @@ Presents the authentication status information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## freezingTime
 
 ```TypeScript
 freezingTime: int
 ```
 
-Freezing time, in milliseconds.
+冻结时间，单位为ms。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -38,9 +44,9 @@ Freezing time, in milliseconds.
 remainTimes: int
 ```
 
-Number of remaining times.
+剩余次数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

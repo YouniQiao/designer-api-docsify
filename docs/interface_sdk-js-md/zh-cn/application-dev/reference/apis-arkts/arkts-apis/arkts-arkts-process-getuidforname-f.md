@@ -1,5 +1,11 @@
 # getUidForName
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getUidForName
 
 ```TypeScript
@@ -32,7 +38,7 @@ function getUidForName(v: string): number
 | --- | --- |
 | number | 返回用户 uid。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pres = process.getUidForName("tool");

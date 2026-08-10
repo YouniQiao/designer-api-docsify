@@ -8,11 +8,17 @@
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions
+**替代接口：** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
 
 <!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
+
+## 导入模块
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 
 ## MIMEType
 
@@ -22,7 +28,7 @@ MIMEType?: PhotoViewMIMETypes
 
 可选择的媒体文件类型。若无此参数，则默认为图片和视频类型。
 
-**类型：** PhotoViewMIMETypes
+**类型：** [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
 
 **起始版本：** 9
 

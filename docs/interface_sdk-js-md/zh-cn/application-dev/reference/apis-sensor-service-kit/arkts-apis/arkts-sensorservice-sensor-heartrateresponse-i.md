@@ -1,44 +1,38 @@
 # HeartRateResponse
 
-心率传感器数据改变后的回调函数的响应对象，包含心率值数据。
+心率传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**起始版本：** 3
+**继承/实现关系：** HeartRateResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
+**起始版本：** 8
 
-**废弃版本：** 8
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
-**替代接口：** ohos.sensor/sensor#HeartRateResponse
+<!--Device-sensor-interface HeartRateResponse extends Response--><!--Device-sensor-interface HeartRateResponse extends Response-End-->
 
-**需要权限：** ohos.permission.READ_HEALTH_DATA
+**系统能力：** SystemCapability.Sensors.Sensor
 
-<!--Device-unnamed-export interface HeartRateResponse--><!--Device-unnamed-export interface HeartRateResponse-End-->
+## 导入模块
 
-**系统能力：** SystemCapability.Sensors.Sensor.Lite
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
 
 ## heartRate
 
 ```TypeScript
-heartRate: number
+heartRate: double
 ```
 
-心率值。单位：次/分钟（bpm）。取值范围：取值为实际上报物理量，由硬件传感器决定。正常成人静息心率约为60-100 bpm。
+用户的心率数值。单位：bpm（beats per minute，每分钟心跳次数）。
 
-**类型：** number
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 3
+**起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
-**废弃版本：** 8
+<!--Device-HeartRateResponse-heartRate: double--><!--Device-HeartRateResponse-heartRate: double-End-->
 
-**替代接口：** ohos.sensor/sensor#HeartRateResponse.heartRate
-
-**需要权限：** ohos.permission.READ_HEALTH_DATA
-
-**模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-HeartRateResponse-heartRate: number--><!--Device-HeartRateResponse-heartRate: number-End-->
-
-**系统能力：** SystemCapability.Sensors.Sensor.Lite
+**系统能力：** SystemCapability.Sensors.Sensor
 

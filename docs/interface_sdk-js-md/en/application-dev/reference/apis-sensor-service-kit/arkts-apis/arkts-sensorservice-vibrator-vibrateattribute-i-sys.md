@@ -1,6 +1,7 @@
 # VibrateAttribute
 
-Describes the vibration attribute.
+马达振动属性。用于  
+[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)接口的attribute参数，指定马达ID、设备ID和振动使用场景。
 
 **Since:** 9
 
@@ -9,6 +10,12 @@ Describes the vibration attribute.
 <!--Device-vibrator-interface VibrateAttribute--><!--Device-vibrator-interface VibrateAttribute-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
+
+## Modules to Import
+
+```TypeScript
+import { vibrator } from 'kits/@kit.SensorServiceKit';
+```
 
 ## systemUsage
 

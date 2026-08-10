@@ -22,6 +22,6 @@ declare type OnDragEventCallback = (event: DragEvent, extraParams?: string) => v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | event为拖拽事件信息，包括拖拽点坐标。  |
-| extraParams | string | 否 | extraParams为拖拽事件额外信息，需要解析为JSON格式。  |
+| event | [DragEvent](arkts-arkui-dragevent-i.md) | 是 | event为拖拽事件信息，包括拖拽点坐标。 |
+| extraParams | string | 否 | extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
 

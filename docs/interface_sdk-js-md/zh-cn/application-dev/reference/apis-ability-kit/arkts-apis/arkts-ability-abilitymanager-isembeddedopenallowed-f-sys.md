@@ -1,12 +1,18 @@
 # isEmbeddedOpenAllowed（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## isEmbeddedOpenAllowed
 
 ```TypeScript
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-判断是否允许嵌入式拉起[EmbeddableUIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。使用Promise异步回调。
+判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -24,7 +30,7 @@ function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。 |
+| context | [Context](arkts-ability-context-c-sys.md) | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。 |
 | appId | string | 是 | 应用的唯一标识，由云端统一分配。 |
 
 **返回值：**
@@ -37,10 +43,10 @@ function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityManager, UIAbility } from '@kit.AbilityKit';
@@ -52,14 +58,12 @@ export default class EntryAbility extends UIAbility {
     let appId: string = '6918661953712445909';
     try {
       abilityManager.isEmbeddedOpenAllowed(this.context, appId).then((data) => {
-        console.info(`isEmbeddedOpenAllowed data: ${data}`);
-      }).catch((e: Error) => {
-        let err = e as BusinessError;
+        console.info(`isEmbeddedOpenAllowed data: ${JSON.stringify(data)}`);
+      }).catch((err: BusinessError) => {
         console.error(`isEmbeddedOpenAllowed failed, code is ${err.code}, message is ${err.message}`);
       });
-    } catch (e) {
+    } catch (err) {
       // 处理入参错误异常
-      let err = e as BusinessError;
       console.error(`param is invalid, code is ${err.code}, message is ${err.message}`);
     }
   }

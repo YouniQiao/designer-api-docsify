@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## addEventListener
 
 ```TypeScript
@@ -33,16 +39,16 @@ addEventListener(type: string, listener: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker.ets
@@ -79,7 +85,7 @@ dispatchEvent(event: Event): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要分发的事件。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 | 需要分发的事件。 |
 
 **返回值：**
 
@@ -91,9 +97,9 @@ dispatchEvent(event: Event): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker.ets
@@ -132,9 +138,9 @@ removeAllListener(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker.ets
@@ -174,15 +180,15 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 移除监听事件后执行的回调函数。 |
+| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 | 移除监听事件后执行的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // worker.ets

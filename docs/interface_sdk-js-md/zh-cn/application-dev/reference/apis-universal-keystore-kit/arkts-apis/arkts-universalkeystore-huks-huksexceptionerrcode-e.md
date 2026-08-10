@@ -2,8 +2,8 @@
 
 表示错误码的枚举以及对应的错误信息，错误码表示错误类型，错误信息展示错误详情。
 
-关于错误码的具体信息，可在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_和  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中查看。
+关于错误码的具体信息，可在[通用错误码](../../../reference/errorcode-universal.md)和  
+[HUKS错误码](../../../reference/apis-universal-keystore-kit/errorcode-huks.md)中查看。
 
 **起始版本：** 9
 

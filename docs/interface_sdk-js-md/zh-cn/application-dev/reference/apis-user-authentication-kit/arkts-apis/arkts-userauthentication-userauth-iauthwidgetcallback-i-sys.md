@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## sendCommand
 
 ```TypeScript
@@ -36,9 +42,7 @@ sendCommand(cmdData: string): void
 | --- | --- | --- | --- |
 | cmdData | string | 是 | 命令数据。JSON格式的字符串，包含用户认证框架向身份认证控件发送的具体命令内容。JSON结构根据不同的命令类型包含相应字段，常见字段包括：commandType（ string，命令类型）、authType（array，认证类型列表）、result（number，认证结果码）等。控件需解析此数据并根据命令类型执行相应操作。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -50,28 +54,6 @@ try {
   console.info('get userAuthWidgetMgr instance successfully.');
   userAuthWidgetMgr.on('command', {
     sendCommand: (cmdData) => {
-      console.info(`The cmdData is ${cmdData}`);
-    }
-  })
-  console.info('subscribe authentication event successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@ohos.base';
-
-const userAuthWidgetMgrVersion = 1;
-try {
-  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
-  console.info('get userAuthWidgetMgr instance successfully.');
-  userAuthWidgetMgr.onCommand({
-    sendCommand: (cmdData: string) => {
       console.info(`The cmdData is ${cmdData}`);
     }
   })

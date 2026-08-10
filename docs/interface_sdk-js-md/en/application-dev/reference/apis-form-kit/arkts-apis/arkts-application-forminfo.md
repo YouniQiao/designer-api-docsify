@@ -1,9 +1,11 @@
 # @ohos.application.formInfo
 
 The **formInfo** module provides types and enums related to the widget information and state.
-    **NOTE**
-    - This module is deprecated since API version 9. You are advised to use  
-    [formInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+
+> **NOTE：**
+
+> - This module is deprecated since API version 9. You are advised to use
+> [formInfo](arkts-application-forminfo.md) instead.
 
 **Since:** 8
 

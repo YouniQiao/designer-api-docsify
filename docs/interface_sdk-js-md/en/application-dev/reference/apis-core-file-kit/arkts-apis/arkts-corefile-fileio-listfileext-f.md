@@ -1,5 +1,11 @@
 # listFileExt
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## listFileExt
 
 ```TypeScript
@@ -9,9 +15,9 @@ function listFileExt(
 ): Promise<string[]>
 ```
 
-Lists all files in a directory. This API supports recursive listing of files and file filtering. This API uses a promise to return the result.
+列出目录下所有文件名，支持递归列出和自定义文件名过滤。使用Promise异步回调。
 
-You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
+可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **Since:** 26.0.0
 
@@ -27,21 +33,21 @@ You can configure the **recursion** parameter in **options** to recursively list
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for listing files. The default value is empty, indicating no recursive listing of files or file filtering and no limit on the number of files to be listed. |
+| path | string | Yes | 目录的应用沙箱路径。 |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise used to return the files names listed. |
+| Promise&lt;string[]&gt; | Promise对象，返回文件名数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
-| 13900011 | Out of memory |
-| 13900018 | Not a directory |
 | 13900020 | Invalid argument |
+| 13900002 | No such file or directory |
+| 13900018 | Not a directory |
+| 13900011 | Out of memory |
 

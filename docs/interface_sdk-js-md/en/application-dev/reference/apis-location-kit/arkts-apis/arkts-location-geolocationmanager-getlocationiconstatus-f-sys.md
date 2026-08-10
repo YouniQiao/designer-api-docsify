@@ -1,5 +1,11 @@
 # getLocationIconStatus (System API)
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## getLocationIconStatus
 
 ```TypeScript
@@ -22,17 +28,17 @@ Get location icon status.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The location icon status. |
+| [LocationIconStatus](arkts-location-geolocationmanager-locationiconstatus-e-sys.md) | The location icon status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.getLocationIconStatus} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.getLocationIconStatus} due to limited device capabilities. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 3301000 | The location service is unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

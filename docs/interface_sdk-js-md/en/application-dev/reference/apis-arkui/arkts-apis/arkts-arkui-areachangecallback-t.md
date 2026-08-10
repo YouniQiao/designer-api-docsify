@@ -20,6 +20,6 @@ Defines the options for the AreaChangeEvent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Component area information before the change.  |
-| newValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Component area information after the change.  |
+| oldValue | [Area](arkts-arkui-area-i.md) | Yes | Component area information before the change. |
+| newValue | [Area](arkts-arkui-area-i.md) | Yes | Component area information after the change. |
 

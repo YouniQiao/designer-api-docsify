@@ -1,5 +1,11 @@
 # isWifiActive
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isWifiActive
 
 ```TypeScript
@@ -28,16 +34,16 @@ Queries the Wi-Fi status
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	let isWifiActive = wifi.isWifiActive();
-	console.info("isWifiActive:" + isWifiActive);
+  let isWifiActive = wifi.isWifiActive();
+  console.info("isWifiActive:" + isWifiActive);
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

@@ -1,6 +1,6 @@
 # BackgroundEffectOptions
 
-Defines the options of BackgroundEffect
+背景效果参数。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Defines the options of BackgroundEffect
 adaptiveColor?: AdaptiveColor
 ```
 
-Adaptive color mode used for the background blur effect. Default value: **DEFAULT** . When set to **AVERAGE**, the adaptive color mode takes effect only when the color has transparency.
+背景模糊效果使用的取色模式，默认为DEFAULT。使用AVERAGE时color必须带有透明度，取色模式才生效。
 
-**Type:** AdaptiveColor
+**Type:** [AdaptiveColor](../arkts-apis/arkts-arkui-common-adaptivecolor-e.md)
 
 **Default:** AdaptiveColor.DEFAULT
 
@@ -40,9 +40,9 @@ Adaptive color mode used for the background blur effect. Default value: **DEFAUL
 blurOptions?: BlurOptions
 ```
 
-Grayscale blur.
+灰阶模糊参数，默认为[0,0]。
 
-**Type:** BlurOptions
+**Type:** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
 **Default:** { grayScale: [0,1] } [since 11 - 11] @default { grayScale: [0,0] } [since 12]
 
@@ -64,7 +64,7 @@ Grayscale blur.
 brightness?: number
 ```
 
-Brightness.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range: [0, +∞).\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Default value: **1** Recommended value range: [0, 2].
+亮度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 2]。
 
 **Type:** number
 
@@ -88,9 +88,9 @@ Brightness.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range: [0, +∞).\_\_\_HTML\
 color?: ResourceColor
 ```
 
-Color.
+颜色，默认透明色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
@@ -112,10 +112,9 @@ Color.
 inactiveColor?: ResourceColor
 ```
 
-Background color when the blur effect does not take effect. This parameter must be used together with the  
-**policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
+模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，控件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为控件背景色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
@@ -137,9 +136,11 @@ Background color when the blur effect does not take effect. This parameter must 
 policy?: BlurStyleActivePolicy
 ```
 
-Blur activation policy.
+模糊激活策略。
 
-**Type:** BlurStyleActivePolicy
+默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
+
+**Type:** [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md)
 
 **Default:** BlurStyleActivePolicy.ALWAYS_ACTIVE
 
@@ -161,7 +162,7 @@ Blur activation policy.
 radius: number
 ```
 
-Blur radius.Value range: [0, +∞).Default value: **0**.
+模糊半径，取值范围：[0, +∞)，默认为0。
 
 **Type:** number
 
@@ -183,7 +184,7 @@ Blur radius.Value range: [0, +∞).Default value: **0**.
 saturation?: number
 ```
 
-Saturation.Value range: [0, +∞).Recommended value range: [0, 50].
+饱和度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 50]。
 
 **Type:** number
 

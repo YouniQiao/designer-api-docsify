@@ -1,5 +1,11 @@
 # getSync
 
+## Modules to Import
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
+
 ## getSync
 
 ```TypeScript
@@ -23,19 +29,19 @@ Take a screenshot of the specified component in synchronous mode,this mode will 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Target component ID, set by developer through .id attribute. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Define the snapshot options. |
+| options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Define the snapshot options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap |  The snapshot result in PixelMap format. |
+| image.PixelMap | The snapshot result in PixelMap format. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| 100001 | Invalid ID. |
+| 160002 | Timeout. |
+| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
 

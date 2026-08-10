@@ -4,7 +4,7 @@
 type DialogControlType = 'open' | 'close' | 'refresh' | 'toast'
 ```
 
-Dialog control type open & close, refresh, toast.
+对话框控制类型的定义。该类型可取的值为下表字符串。
 
 **Since:** 23
 

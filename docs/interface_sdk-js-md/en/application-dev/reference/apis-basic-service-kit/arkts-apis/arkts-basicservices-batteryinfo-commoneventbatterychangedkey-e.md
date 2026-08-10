@@ -1,6 +1,6 @@
 # CommonEventBatteryChangedKey
 
-Enumerates keys for querying the additional information about the **COMMON\_EVENT\_BATTERY\_CHANGED** event.
+表示COMMON_EVENT_BATTERY_CHANGED通用事件附加信息的查询键。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates keys for querying the additional information about the **COMMON\_EVEN
 EXTRA_SOC = 'soc'
 ```
 
-Remaining battery level in percentage.
+表示剩余电池电量百分比的查询键。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Remaining battery level in percentage.
 EXTRA_CHARGE_STATE = 'chargeState'
 ```
 
-Battery charging status of the device.
+表示当前设备电池充电状态的查询键。
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Battery charging status of the device.
 EXTRA_HEALTH_STATE = 'healthState'
 ```
 
-Battery health status of the device.
+表示当前设备电池健康状态的查询键。
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ Battery health status of the device.
 EXTRA_PLUGGED_TYPE = 'pluggedType'
 ```
 
-Type of the charger connected to the device.
+表示当前设备连接的充电器类型的查询键。
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ Type of the charger connected to the device.
 EXTRA_VOLTAGE = 'voltage'
 ```
 
-Battery voltage of the device.
+表示当前设备电池电压的查询键。
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ Battery voltage of the device.
 EXTRA_TECHNOLOGY = 'technology'
 ```
 
-Battery technology of the device.
+表示当前设备电池技术型号的查询键。
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ Battery technology of the device.
 EXTRA_TEMPERATURE = 'temperature'
 ```
 
-Battery temperature of the device.
+表示当前设备电池温度的查询键。
 
 **Since:** 23
 
@@ -128,7 +128,7 @@ Battery temperature of the device.
 EXTRA_PRESENT = 'present'
 ```
 
-Whether the battery is supported by the device or installed.
+表示当前设备是否支持电池或者电池是否在位的查询键。
 
 **Since:** 23
 
@@ -144,7 +144,7 @@ Whether the battery is supported by the device or installed.
 EXTRA_CAPACITY_LEVEL = 'capacityLevel'
 ```
 
-Battery level of the device.
+表示当前设备电池电量等级的查询键。
 
 **Since:** 23
 

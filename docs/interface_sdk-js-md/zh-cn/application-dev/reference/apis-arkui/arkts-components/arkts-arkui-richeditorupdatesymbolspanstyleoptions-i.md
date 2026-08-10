@@ -2,9 +2,9 @@
 
 SymbolSpan样式选项。
 
-继承自[RichEditorSpanStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)。
 
-**继承/实现关系：** RichEditorUpdateSymbolSpanStyleOptions extends [RichEditorSpanStyleOptions](../arkts-apis/arkts-arkui-component/richeditor-richeditorspanstyleoptions-i.md)
+**继承/实现关系：** RichEditorUpdateSymbolSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)
 
 **起始版本：** 11
 
@@ -22,7 +22,7 @@ symbolStyle: RichEditorSymbolSpanStyle
 
 SymbolSpan的样式信息。
 
-**类型：** RichEditorSymbolSpanStyle
+**类型：** [RichEditorSymbolSpanStyle](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
 
 **起始版本：** 11
 

@@ -1,12 +1,18 @@
 # createController
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## createController
 
 ```TypeScript
 function createController(sessionId: string): Promise<AVSessionController>
 ```
 
-Create an avsession controller
+根据会话ID创建会话控制器。使用Promise异步回调。
 
 **Since:** 23
 
@@ -24,33 +30,50 @@ Create an avsession controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | Specifies the sessionId to create the controller. If provided 'default', the system will create a default controller, Used to control the system default session |
+| sessionId | string | Yes | 会话ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVSessionController&gt; | Promise for AVSessionController |
+| Promise&lt;AVSessionController&gt; | Promise对象。返回会话控制器实例，可查看会话ID， &lt;br&gt;并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 201 | Permission denied |
+| 202 | Not System App.<br>**Applicable version:** 9 - 22 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
 
-let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
-currentAvSession.createController(sessionId).then((avcontroller: avSession.AVSessionController) => {
-  currentAVcontroller = avcontroller;
-  console.info('CreateController : SUCCESS ');
-}).catch((err: BusinessError) => {
-  console.error(`CreateController BusinessError: code: ${err.code}, message: ${err.message}`);
-});
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            avSession.getAllSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
+              console.info(`Succeeded in getting all session descriptors, length: ${descriptors.length}`);
+              if (descriptors.length > 0 ) {
+                avSession.createController(descriptors[0]?.sessionId).then((avcontroller: avSession.AVSessionController) => {
+                  console.info('Succeeded in creating controller.');
+                });
+              }
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 

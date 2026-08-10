@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## data
 
 ```TypeScript
@@ -38,7 +44,7 @@ encodingFormat: EncodingFormat
 
 编码格式。
 
-**类型：** EncodingFormat
+**类型：** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 
 **起始版本：** 9
 

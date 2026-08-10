@@ -1,6 +1,6 @@
 # UsedRecordDetail (System API)
 
-Represents the details of a single access record.
+单次访问记录详情。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Represents the details of a single access record.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## accessDuration
 
 ```TypeScript
 accessDuration: long
 ```
 
-Access duration.Unit: milliseconds.
+访问时长。单位为：毫秒。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -38,11 +44,11 @@ Access duration.Unit: milliseconds.
 count?: int
 ```
 
-Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections.
+访问次数。在accessRecords中表示成功访问次数，在rejectRecords中表示失败或拒绝次数。
 
-Default value: 0.
+默认值：0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -60,14 +66,14 @@ Default value: 0.
 lockScreenStatus?: int
 ```
 
-Lock screen status at the time of access.
+访问时的锁屏状态。
 
-- 1: Indicates permission usage in a non-lock-screen scenario.  
-- 2: Indicates permission usage in a lock-screen scenario.
+- 1，表示非锁屏场景使用权限。  
+- 2，表示锁屏场景使用权限。
 
-Default value: 1.
+默认值：1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -85,9 +91,9 @@ Default value: 1.
 status: int
 ```
 
-Access status. 0 indicates stopped usage, 1 indicates foreground usage, and 2 indicates background usage.
+访问状态。0表示停止使用，1表示前台使用，2表示后台使用。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -105,9 +111,9 @@ Access status. 0 indicates stopped usage, 1 indicates foreground usage, and 2 in
 timestamp: long
 ```
 
-Access timestamp.Unit: milliseconds.
+访问时的时间戳。单位为：毫秒。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -125,11 +131,11 @@ Access timestamp.Unit: milliseconds.
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission access method.
+敏感权限访问方式。
 
-Default value: NORMAL\_TYPE.
+默认值：NORMAL_TYPE。
 
-**Type:** PermissionUsedType
+**Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **Since:** 12
 

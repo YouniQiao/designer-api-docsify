@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## entityCert
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly entityCert: X509Cert
 
 表示实体证书。
 
-**类型：** X509Cert
+**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
 **起始版本：** 11
 
@@ -38,7 +44,7 @@ readonly trustAnchor: X509TrustAnchor
 
 表示信任锚。
 
-**类型：** X509TrustAnchor
+**类型：** [X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)
 
 **起始版本：** 11
 

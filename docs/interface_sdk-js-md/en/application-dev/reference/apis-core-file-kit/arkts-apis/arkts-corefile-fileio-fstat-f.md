@@ -6,7 +6,7 @@
 declare function fstat(fd: number): Promise<Stat>
 ```
 
-Obtains file status based on the file descriptor. This API uses a promise to return the result.
+基于文件描述符获取文件状态信息，使用Promise异步回调。
 
 **Since:** 7
 
@@ -24,13 +24,13 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file whose status is to be obtained. |
+| fd | number | Yes | 待获取文件状态的文件描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stat&gt; | Promise that returns the detailed file status obtained. |
+| Promise&lt;Stat&gt; | Promise对象。返回表示文件状态的具体信息。 |
 
 
 ## fstat
@@ -39,7 +39,7 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 declare function fstat(fd: number, callback: AsyncCallback<Stat>): void
 ```
 
-Obtains file status based on the file descriptor. This API uses an asynchronous callback to return the result.
+基于文件描述符获取文件状态信息，使用callback异步回调。
 
 **Since:** 7
 
@@ -57,6 +57,6 @@ Obtains file status based on the file descriptor. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file whose status is to be obtained. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Stat&gt; | Yes | Callback used to return the file status obtained. |
+| fd | number | Yes | 待获取文件状态的文件描述符。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | 异步获取文件状态信息之后的回调。 |
 

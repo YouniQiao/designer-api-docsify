@@ -1,12 +1,18 @@
 # createTonePlayer (System API)
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## createTonePlayer
 
 ```TypeScript
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void
 ```
 
-Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback to return the renderer instance.
 
 **Since:** 9
 
@@ -22,10 +28,10 @@ Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tone playing attribute. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TonePlayer&gt; | Yes | Callback used to return the tonePlayer instance. |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TonePlayer&gt; | Yes | Callback used to return the tonePlayer instance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -54,7 +60,7 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void
 ```
 
-Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback to return the renderer instance.
 
 **Since:** 23
 
@@ -70,14 +76,14 @@ Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tone playing attribute. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TonePlayer \| null&gt; | Yes | Callback used to return the tonePlayer instance， null when an error happens. |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TonePlayer \| null&gt; | Yes | Callback used to return the tonePlayer instance, or null when an error happens. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 
 
 ## createTonePlayer
@@ -86,7 +92,7 @@ Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses an as
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 ```
 
-Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a promise to return the renderer instance.
+Obtains a {@link TonePlayer} instance. This method uses a promise to return the renderer instance.
 
 **Since:** 9
 
@@ -102,7 +108,7 @@ Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tone playing attribute. |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
 
 **Return value:**
 
@@ -110,7 +116,7 @@ Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a pro
 | --- | --- |
 | Promise&lt;TonePlayer&gt; | Promise used to return the tonePlayer instance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -132,7 +138,7 @@ async function createTonePlayerBefore(){
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>
 ```
 
-Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a promise to return the renderer instance.
+Obtains a {@link TonePlayer} instance. This method uses a promise to return the renderer instance.
 
 **Since:** 23
 
@@ -148,7 +154,7 @@ Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tone playing attribute. |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
 
 **Return value:**
 
@@ -160,5 +166,5 @@ Obtains a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This method uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| 202 | Not system App. |
 

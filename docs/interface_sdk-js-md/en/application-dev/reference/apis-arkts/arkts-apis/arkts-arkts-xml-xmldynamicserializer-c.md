@@ -1,6 +1,10 @@
 # XmlDynamicSerializer
 
-The XmlDynamicSerializer interface is used to dynamically generate an xml file.
+XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容长度时，推荐使用该类。
+
+> **说明：**
+> 
+> 使用该类构造的对象无需自行创建ArrayBuffer，程序动态扩容，可以不断添加XML元素，最终序列化结果字符串长度上限为100000。
 
 **Since:** 20
 
@@ -10,13 +14,23 @@ The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { xml } from 'kits/@kit.ArkTS';
+```
+
 ## addEmptyElement
 
 ```TypeScript
 addEmptyElement(name: string): void
 ```
 
-Add an empty element.
+写入一个空元素。
+
+> **说明：**
+> 
+> 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
 **Since:** 20
 
@@ -32,16 +46,16 @@ Add an empty element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the element. |
+| name | string | Yes | 该空元素的元素名。所组成的XML长度不能超过100000。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200064 | 不能为空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -60,7 +74,7 @@ console.info(result); // <d/>
 constructor(encoding?: string)
 ```
 
-A parameterized constructor used to create a new XmlDynamicSerializer instance.The input parameter is an encoding format of string type.
+XmlDynamicSerializer的构造函数。
 
 **Since:** 20
 
@@ -76,15 +90,15 @@ A parameterized constructor used to create a new XmlDynamicSerializer instance.T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | [encoding='utf8'] this is its encoding, only support utf-8. |
+| encoding | string | No | 编码格式，默认'utf-8'(目前仅支持'utf-8')。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) | Incorrect encoding format, only support utf-8. |
+| 10200066 | 编码格式错误，目前仅支持utf-8。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let serializer = new xml.XmlDynamicSerializer('utf-8');
@@ -96,7 +110,11 @@ let serializer = new xml.XmlDynamicSerializer('utf-8');
 endElement(): void
 ```
 
-Writes end tag of the element.
+写入元素结束标记。
+
+> **说明：**
+> 
+> 调用该接口前必须先调用[startElement](arkts-arkts-xml-xmlserializer-c.md#startelement)接口写入元素开始标记。
 
 **Since:** 20
 
@@ -112,10 +130,10 @@ Writes end tag of the element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200065 | startElement和endElement不匹配。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -136,7 +154,7 @@ console.info(result); // <note>Happy</note>
 getOutput(): ArrayBuffer
 ```
 
-Get an ArrayBuffer from a XmlDynamicSerializer instance.
+返回XML字符串的ArrayBuffer。
 
 **Since:** 20
 
@@ -152,9 +170,9 @@ Get an ArrayBuffer from a XmlDynamicSerializer instance.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer |  Returns ArrayBuffer result from a XmlDynamicSerializer instance. |
+| ArrayBuffer | 用于接收写入XML信息的ArrayBuffer内存。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -175,7 +193,11 @@ console.info(result); // <note>Happy</note>
 setAttributes(name: string, value: string): void
 ```
 
-Write an attribute to xml element.
+写入元素的属性和属性值。
+
+> **说明：**
+> 
+> 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的属性名称以及添加多个同名的属性名称。
 
 **Since:** 20
 
@@ -191,18 +213,18 @@ Write an attribute to xml element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key name of the attribute. Cannot be an empty string. |
-| value | string | Yes | Values of attribute. |
+| name | string | Yes | 属性。所组成的XML长度不能超过100000，不可为空字符。 |
+| value | string | Yes | 属性值。所组成的XML长度不能超过100000。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| 10200063 | xml位置非法。 |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200064 | 不能为空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -223,7 +245,11 @@ console.info(result); // <note importance="high"/>
 setCdata(text: string): void
 ```
 
-Writes the CDATA.
+提供在CDATA标签中添加数据的能力，所生成的CDATA标签结构为："\&lt;!\[CDATA\[" + 所添加的数据 + "\]\]\&gt;"。
+
+> **说明：**
+> 
+> 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许在CDATA标签中添加包含"\]\]\>"字符串的数据。
 
 **Since:** 20
 
@@ -239,16 +265,16 @@ Writes the CDATA.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Values of CDATA. Cannot be an empty string. |
+| text | string | Yes | CDATA属性的内容。所组成的XML长度不能超过100000。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200064 | 不能为空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -267,7 +293,7 @@ console.info(result); // <![CDATA[root SYSTEM]]>
 setComment(text: string): void
 ```
 
-Writes the comment to xml.
+写入注释内容。
 
 **Since:** 20
 
@@ -283,16 +309,16 @@ Writes the comment to xml.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Values of comment. Cannot be an empty string. |
+| text | string | Yes | 当前元素的注释内容。所组成的XML长度不能超过100000。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200064 | 不能为空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -311,7 +337,7 @@ console.info(result); // <!--Hello, World!-->
 setDeclaration(): void
 ```
 
-Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encoding="utf-8"?&gt;.
+编写带有编码的文件声明。
 
 **Since:** 20
 
@@ -327,10 +353,10 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
+| 10200063 | xml位置非法。 |
+| 10200062 | xml累计长度超过上限100000。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -349,7 +375,7 @@ console.info(result); // <?xml version="1.0" encoding="utf-8"?>
 setDocType(text: string): void
 ```
 
-Writes the DOCTYPE.
+写入文档类型。
 
 **Since:** 20
 
@@ -365,16 +391,16 @@ Writes the DOCTYPE.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Values of docType. Cannot be an empty string. |
+| text | string | Yes | DocType属性的内容。所组成的XML长度不能超过100000。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200064 | 不能为空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -393,7 +419,11 @@ console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
 setNamespace(prefix: string, namespace: string): void
 ```
 
-Writes the namespace of the current element tag.
+写入当前元素标记的命名空间。
+
+> **说明：**
+> 
+> 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的前缀以及对同一个元素设置多个命名空间。
 
 **Since:** 20
 
@@ -409,17 +439,17 @@ Writes the namespace of the current element tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | Values name of the prefix. Cannot be an empty string. |
-| namespace | string | Yes | Values of namespace. Cannot be an empty string. |
+| prefix | string | Yes | 当前元素及其子元素的前缀。所组成的XML长度不能超过100000，不可为空字符。 |
+| namespace | string | Yes | 当前元素及其子元素的命名空间。所组成的XML长度不能超过100000，不可为空字符。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200064 | 不能为空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -440,7 +470,7 @@ console.info(result); // <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
 setText(text: string): void
 ```
 
-Writes the text to xml element.
+写入标签值。
 
 **Since:** 20
 
@@ -456,16 +486,16 @@ Writes the text to xml element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Values of text. Cannot be an empty string. |
+| text | string | Yes | 标签值。所组成的XML长度不能超过100000。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200064 | 不能为空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -487,7 +517,13 @@ console.info(result); // <note importance="high">Happy</note>
 startElement(name: string): void
 ```
 
-Writes a element start tag with the given name.
+写入元素开始标记。
+
+> **说明：**
+> 
+> - 调用该接口后须调用[endElement](arkts-arkts-xml-xmlserializer-c.md#endelement)写入元素结束标记，以确保节点正确闭合。
+> 
+> - 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
 **Since:** 20
 
@@ -503,16 +539,16 @@ Writes a element start tag with the given name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the element. |
+| name | string | Yes | 当前元素的元素名。所组成的XML长度不能超过100000。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| 10200062 | xml累计长度超过上限100000。 |
+| 10200064 | 不能为空字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';

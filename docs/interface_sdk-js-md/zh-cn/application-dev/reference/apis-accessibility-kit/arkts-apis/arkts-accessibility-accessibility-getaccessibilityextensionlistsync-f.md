@@ -1,5 +1,11 @@
 # getAccessibilityExtensionListSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## getAccessibilityExtensionListSync
 
 ```TypeScript
@@ -27,8 +33,8 @@ function getAccessibilityExtensionListSync(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的类型。 |
-| stateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 辅助应用的状态。 |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
 
 **返回值：**
 
@@ -36,7 +42,7 @@ function getAccessibilityExtensionListSync(
 | --- | --- |
 | Array&lt;AccessibilityAbilityInfo&gt; | 返回辅助应用信息列表。 |
 
-**示例：**
+## 示例
 
 查询所有已安装的辅助应用。
 

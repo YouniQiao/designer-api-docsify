@@ -2,15 +2,16 @@
 
 窗口内容的避让区域。
 
-窗口内容做\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_适配时，需要按照  
-[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_对应的AvoidArea做窗口内容避让。
+窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)对应的AvoidArea做窗口内容避让。
 
 在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。
-    **说明：**  
-    
-    示意图展示了leftRect、topRect、rightRect、bottomRect的含义。  
-    
-    !\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+
+> **说明：**
+> 
+> 示意图展示了leftRect、topRect、rightRect、bottomRect的含义。
+> 
+> ![avoidArea](../../../reference/apis-arkui/figures/avoidArea.png)
 
 **起始版本：** 7
 
@@ -20,6 +21,12 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## bottomRect
 
 ```TypeScript
@@ -28,7 +35,7 @@ bottomRect: Rect
 
 中心位于窗口的两条对角线的底部的矩形区。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 7
 
@@ -48,7 +55,7 @@ leftRect: Rect
 
 中心位于窗口的两条对角线的左侧的矩形区。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 7
 
@@ -68,7 +75,7 @@ rightRect: Rect
 
 中心位于窗口的两条对角线的右侧的矩形区。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 7
 
@@ -88,7 +95,7 @@ topRect: Rect
 
 中心位于窗口的两条对角线的顶部的矩形区。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 7
 

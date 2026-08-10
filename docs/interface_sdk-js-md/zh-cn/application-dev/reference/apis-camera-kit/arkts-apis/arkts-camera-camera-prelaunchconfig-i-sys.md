@@ -12,6 +12,12 @@ Defines the camera prelaunch configuration.Currently, the configuration is used 
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## activeTime
 
 ```TypeScript
@@ -20,7 +26,7 @@ activeTime?: int
 
 Activation time, in minutes.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -40,7 +46,7 @@ cameraDevice: CameraDevice
 
 Camera device.
 
-**类型：** CameraDevice
+**类型：** [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md)
 
 **起始版本：** 10
 
@@ -60,7 +66,7 @@ restoreParamType?: RestoreParamType
 
 Type of the parameter used for prelaunch.
 
-**类型：** RestoreParamType
+**类型：** [RestoreParamType](arkts-camera-camera-restoreparamtype-e-sys.md)
 
 **起始版本：** 11
 
@@ -80,7 +86,7 @@ settingParam?: SettingParam
 
 Setting parameter.
 
-**类型：** SettingParam
+**类型：** [SettingParam](arkts-camera-camera-settingparam-i-sys.md)
 
 **起始版本：** 11
 

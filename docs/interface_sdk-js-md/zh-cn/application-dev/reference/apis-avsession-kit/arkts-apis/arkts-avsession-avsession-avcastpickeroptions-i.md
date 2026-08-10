@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## menuPosition
 
 ```TypeScript
 menuPosition?: MenuPosition
 ```
 
-当pickerStyle设置为STYLE\_MENU时，可以设置弹出菜单的位置。
+当pickerStyle设置为STYLE_MENU时，可以设置弹出菜单的位置。
 
-**类型：** MenuPosition
+**类型：** [MenuPosition](arkts-avsession-avsession-menuposition-i.md)
 
 **起始版本：** 22
 
@@ -36,7 +42,7 @@ pickerStyle?: AVCastPickerStyle
 
 设置组件样式。
 
-**类型：** AVCastPickerStyle
+**类型：** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
 **起始版本：** 22
 
@@ -54,9 +60,9 @@ sessionType?: AVSessionType
 
 会话类型，默认值为audio。
 
-当前仅支持的会话类型有audio和video。如果传入voice\_call或video\_call，将默认按照传入audio处理。
+当前仅支持的会话类型有audio和video。如果传入voice_call或video_call，将默认按照传入audio处理。
 
-**类型：** AVSessionType
+**类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
 **起始版本：** 14
 

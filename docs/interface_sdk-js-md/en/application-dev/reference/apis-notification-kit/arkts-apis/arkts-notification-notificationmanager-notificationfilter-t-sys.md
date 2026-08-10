@@ -4,7 +4,7 @@
 export type NotificationFilter = _NotificationFilter
 ```
 
-Describes the filter criteria for querying the live view.
+描述查询普通实况窗时的筛选条件。
 
 **Since:** 11
 

@@ -18,11 +18,11 @@ The callback of onOverrideErrorPage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errorPageEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The information of error.  |
+| errorPageEvent | [OnErrorReceiveEvent](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md) | Yes | The information of error. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | - Return an HTML text content encoded in Base64.  |
+| string | Return an HTML text content encoded in Base64. |
 

@@ -18,7 +18,7 @@ end?: LengthMetrics
 
 滚动条的末尾边距。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 20
 
@@ -40,7 +40,7 @@ start?: LengthMetrics
 
 滚动条的起始边距。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 20
 

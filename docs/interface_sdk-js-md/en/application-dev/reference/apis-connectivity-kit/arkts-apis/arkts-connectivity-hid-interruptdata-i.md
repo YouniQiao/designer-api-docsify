@@ -10,6 +10,12 @@ Describe the interrupt data is received from remote host.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## data
 
 ```TypeScript
@@ -38,7 +44,7 @@ id: int
 
 id of interrupt data.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

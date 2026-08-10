@@ -1,5 +1,11 @@
 # p2pCancelConnect
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## p2pCancelConnect
 
 ```TypeScript
@@ -28,15 +34,15 @@ Canceling a P2P connection.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	wifi.p2pCancelConnect();	
+  wifi.p2pCancelConnect();  
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

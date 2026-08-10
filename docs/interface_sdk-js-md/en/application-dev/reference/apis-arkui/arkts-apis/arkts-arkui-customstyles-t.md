@@ -20,5 +20,5 @@ The custom styles function block.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The component instance which can be used to set common attributes.  |
+| instance | [CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md) | Yes | The component instance which can be used to set common attributes. |
 

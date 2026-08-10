@@ -20,5 +20,5 @@ Defines the callback that is called when state variable is change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propertyName | string | Yes | property name  |
+| propertyName | string | Yes | property name |
 

@@ -1,6 +1,6 @@
 # CompatiblePolicy
 
-Defines the version compatibility type of the dynamic shared library.
+标识动态共享库的版本兼容类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Defines the version compatibility type of the dynamic shared library.
 BACKWARD_COMPATIBILITY = 1
 ```
 
-The shared library is backward compatible.
+共享库是向后兼容类型。
 
 **Since:** 10
 

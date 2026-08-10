@@ -1,6 +1,6 @@
 # ListItemSwipeActionDirection
 
-Enumerates the swipe action menu display directions for ListItem components.
+ListItem划出菜单的展开方向。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates the swipe action menu display directions for ListItem components.
 START = 0
 ```
 
-When the List direction is vertical, it indicates the left in LTR mode and right in RTL mode.When the List direction is horizontal, it indicates the top.
+当列表方向是垂直方向时，LTR模式下表示ListItem的左边，RTL模式下表示ListItem的右边。当列表是水平方向时，表示ListItem的上边。
 
 **Since:** 21
 
@@ -36,7 +36,7 @@ When the List direction is vertical, it indicates the left in LTR mode and right
 END = 1
 ```
 
-When the List direction is vertical, it indicates the right in LTR mode and left in RTL mode.When the List direction is horizontal, it indicates the bottom.
+当列表方向是垂直方向时，LTR模式下表示ListItem的右边，RTL模式下表示ListItem的左边。当列表是水平方向时，表示ListItem的下边。
 
 **Since:** 21
 

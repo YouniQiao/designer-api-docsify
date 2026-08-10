@@ -10,17 +10,23 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## finalKey
 
 ```TypeScript
 finalKey: int
 ```
 
-被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)](arkts-input-multimodalinput-keycode-keycode-e.md)。
 
 例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 14
 
@@ -58,7 +64,7 @@ preKeys: Array<int>
 
 例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 14
 

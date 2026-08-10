@@ -10,15 +10,21 @@ Indicates the options of NavDestination switch.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## navigationId
 
 ```TypeScript
 navigationId: ResourceStr
 ```
 
-The navigationId that need observation.
+The navigationId that need observation
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 

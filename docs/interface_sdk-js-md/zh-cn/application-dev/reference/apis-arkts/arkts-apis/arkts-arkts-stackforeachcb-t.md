@@ -22,7 +22,7 @@ Stack的回调函数类型。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | T | 是 | 当前遍历到的元素。  |
-| index | int | 是 | 当前遍历到的下标值。 该值为整数。  |
-| stack | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 当前正在遍历的Stack实例。  |
+| value | T | 是 | 当前遍历到的元素。 |
+| index | int | 是 | 当前遍历到的下标值。 该值为整数。 |
+| stack | [Stack](../../apis-arkui/arkts-apis/arkts-arkui-typenode-stack-t.md)&lt;T&gt; | 是 | 当前正在遍历的Stack实例。 |
 

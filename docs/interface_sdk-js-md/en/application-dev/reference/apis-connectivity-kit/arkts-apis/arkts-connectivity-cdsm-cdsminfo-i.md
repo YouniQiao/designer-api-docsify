@@ -1,6 +1,6 @@
 # CdsmInfo
 
-Describes the coordinated devices set information.
+描述合作设备集信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes the coordinated devices set information.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { cdsm } from 'kits/@kit.ConnectivityKit';
+```
+
 ## members
 
 ```TypeScript
 members: CdsmMemberInfo[]
 ```
 
-Indicates the members of coordinated devices set.
+合作设备集的成员。
 
-**Type:** CdsmMemberInfo[]
+**Type:** [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md)[]
 
 **Since:** 26.0.0
 

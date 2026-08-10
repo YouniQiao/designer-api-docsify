@@ -1,12 +1,18 @@
 # getSystemInputMethodConfigAbility (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## getSystemInputMethodConfigAbility
 
 ```TypeScript
 function getSystemInputMethodConfigAbility(userId?: int): ElementName
 ```
 
-Get the system input method config ability of a specified user.
+获取指定用户的系统输入法设置界面Ability信息。用于启动系统输入法配置界面。
 
 **Since:** 26.0.0
 
@@ -24,21 +30,21 @@ Get the system input method config ability of a specified user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用户ID。如果不提供： &lt;br&gt;- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 &lt;br&gt;- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the information of system input method config ability. |
+| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | 系统输入法设置界面Ability的ElementName。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800023 | the specified user does not exist. |
-| 12800024 | the specified user is not in the foreground. |
+| 202 | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800024 | the specified user is not in the foreground. |
 

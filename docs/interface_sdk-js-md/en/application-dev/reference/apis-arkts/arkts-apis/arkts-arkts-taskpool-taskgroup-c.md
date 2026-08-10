@@ -1,7 +1,6 @@
 # TaskGroup
 
-Implements a task group, in which tasks are associated with each other and all tasks are executed at a time. If all the tasks are executed normally, an array of task results is returned asynchronously, and the sequence of elements in the array is the same as the sequence of tasks added by calling  
-[addTask]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. If any task fails, the corresponding exception is thrown.If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be executed for multiple times, but no task can be added after the task group is executed.
+表示任务组，一次执行一组任务，适用于执行一组有关联的任务。如果所有任务正常执行，异步执行完毕后返回所有任务结果的数组，数组中元素的顺序与调用[addTask](arkts-arkts-taskpool-taskgroup-c.md#addtask)添加任务的顺序相同。如果任意任务失败，则会抛出对应异常。如果任务组中存在多个任务失败的情况，则会抛出第一个失败任务的异常。任务组可以多次执行，但执行后不能新增任务。
 
 **Since:** 10
 
@@ -11,14 +10,19 @@ Implements a task group, in which tasks are associated with each other and all t
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## addTask
 
 ```TypeScript
 addTask(func: Function, ...args: Object[]): void
 ```
 
-Adds the function to be executed to this task group. Before using this API, you must create a **TaskGroup**  
-instance.
+将待执行的函数添加到任务组中。使用该方法前需要先构造**TaskGroup**实例。
 
 **Since:** 10
 
@@ -34,16 +38,16 @@ instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | Function that must be decorated using \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. For details about the supported return value types, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is **undefined**. |
+| func | Function | Yes | 需要传入使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰的函数。支持的返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
+| args | Object[] | Yes | 任务执行函数的入参，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| 10200014 | The function is not marked as concurrent. |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -62,7 +66,7 @@ taskGroup.addTask(printArgs, 100); // 100: test number
 addTask(task: Task): void
 ```
 
-Adds a created task to this task group. Before using this API, you must create a **TaskGroup** instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, continuous tasks, tasks that have been executed, and periodic tasks cannot be added to the task group.
+将创建好的任务添加到任务组中。使用此方法前需要先构造**TaskGroup**实例。任务组不能添加其他任务组中的任务、串行队列任务、异步队列任务、有依赖关系的任务、长时任务、周期任务和已执行的任务。
 
 **Since:** 10
 
@@ -78,17 +82,17 @@ Adds a created task to this task group. Before using this API, you must create a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Task to be added to the task group. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | 需要添加到任务组中的任务。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 10200057 | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| 10200014 | The function is not marked as concurrent. |
+| 10200051 | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 @Concurrent
@@ -108,7 +112,7 @@ taskGroup.addTask(task);
 constructor()
 ```
 
-Constructor used to create a **TaskGroup** instance.
+TaskGroup的构造函数。
 
 **Since:** 10
 
@@ -120,7 +124,7 @@ Constructor used to create a **TaskGroup** instance.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 let taskGroup = new taskpool.TaskGroup();
@@ -132,7 +136,7 @@ let taskGroup = new taskpool.TaskGroup();
 constructor(name: string)
 ```
 
-A constructor used to create a **TaskGroup** instance, with the task group name specified.
+TaskGroup的构造函数，支持指定任务组名称。
 
 **Since:** 11
 
@@ -148,9 +152,9 @@ A constructor used to create a **TaskGroup** instance, with the task group name 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Task group name. |
+| name | string | Yes | 任务组名称。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let taskGroupName: string = "groupName";
@@ -164,7 +168,7 @@ let name: string = taskGroup.name;
 name: string
 ```
 
-Name of the task group specified when the task group is created.
+创建任务组时指定的任务组名称。
 
 **Type:** string
 

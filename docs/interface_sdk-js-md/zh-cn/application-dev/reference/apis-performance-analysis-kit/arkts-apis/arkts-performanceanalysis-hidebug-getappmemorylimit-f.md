@@ -1,5 +1,11 @@
 # getAppMemoryLimit
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppMemoryLimit
 
 ```TypeScript
@@ -20,9 +26,9 @@ function getAppMemoryLimit(): MemoryLimit
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Ӧ�ó�������ڴ����ơ� |
+| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | Ӧ�ó�������ڴ����ơ� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

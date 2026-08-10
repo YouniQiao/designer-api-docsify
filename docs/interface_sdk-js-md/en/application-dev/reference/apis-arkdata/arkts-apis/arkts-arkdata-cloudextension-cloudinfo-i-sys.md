@@ -1,6 +1,6 @@
 # CloudInfo (System API)
 
-Represents the cloud information.
+云信息。
 
 **Since:** 11
 
@@ -12,15 +12,21 @@ Represents the cloud information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## apps
 
 ```TypeScript
 apps: Record<string, AppBriefInfo>
 ```
 
-Brief application information.
+简要应用信息。
 
-**Type:** Record&lt;string, AppBriefInfo&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, AppBriefInfo&gt;
 
 **Since:** 11
 
@@ -38,9 +44,9 @@ Brief application information.
 cloudInfo: ServiceInfo
 ```
 
-Cloud service information.
+云服务信息。
 
-**Type:** ServiceInfo
+**Type:** [ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # HuksKeyFlag
 
-Enumerates the key generation modes.
+表示密钥的产生方式。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the key generation modes.
 HUKS_KEY_FLAG_IMPORT_KEY = 1
 ```
 
-Import a key using an API.
+表示通过导入公钥接口导入的密钥。
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Import a key using an API.
 HUKS_KEY_FLAG_GENERATE_KEY = 2
 ```
 
-Generate a key by using an API.
+表示通过生成密钥接口生成的密钥。
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Generate a key by using an API.
 HUKS_KEY_FLAG_AGREE_KEY = 3
 ```
 
-Generate a key by using a key agreement API.
+表示通过生成密钥协商接口生成的密钥。
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Generate a key by using a key agreement API.
 HUKS_KEY_FLAG_DERIVE_KEY = 4
 ```
 
-Derive a key by using an API.
+表示通过生成密钥派生接口生成的密钥。
 
 **Since:** 8
 

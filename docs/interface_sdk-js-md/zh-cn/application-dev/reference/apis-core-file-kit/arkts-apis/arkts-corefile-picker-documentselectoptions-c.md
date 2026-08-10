@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
+## 导入模块
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
+
 ## allowsMulFolderSelection
 
 ```TypeScript
@@ -154,7 +160,7 @@ mergeMode?: MergeTypeMode
 
 该参数在Phone设备中可正常使用，在其他设备中无效果。
 
-**类型：** MergeTypeMode
+**类型：** [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
 
 **起始版本：** 15
 
@@ -218,7 +224,7 @@ selectMode?: DocumentSelectMode
 
 Picker选择的文档类型，默认值是FILE(文件类型)。
 
-**类型：** DocumentSelectMode
+**类型：** [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md)
 
 **起始版本：** 11
 

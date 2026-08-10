@@ -1,5 +1,11 @@
 # executePeriodically
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## executePeriodically
 
 ```TypeScript
@@ -7,11 +13,12 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 ```
 
 周期任务每隔period时长执行一次。当前执行模式支持设置任务优先级，可通过cancel取消任务。
-    **说明：**  
-    
-    - 周期任务不能是任务组任务、串行队列任务或异步队列任务。  
-    - 同一个周期任务不能多次调用该接口。  
-    - 执行的任务不能拥有依赖关系。
+
+> **说明：**
+> 
+> - 周期任务不能是任务组任务、串行队列任务或异步队列任务。
+> - 同一个周期任务不能多次调用该接口。
+> - 执行的任务不能拥有依赖关系。
 
 **起始版本：** 12
 
@@ -28,20 +35,20 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | period | number | 是 | 周期时长。单位：ms。period值必须要大于等于0。 |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要周期执行的任务。 |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要周期执行的任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The period is less than zero. |
-| [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) | The concurrent task has been executed and cannot be executed periodically. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
+| 10200057 | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| 10200014 | The function is not marked as concurrent. |
+| 10200028 | The period is less than zero. |
+| 10200050 | The concurrent task has been executed and cannot be executed periodically. |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent
@@ -106,20 +113,20 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | period | number | 是 | 周期时长。单位：ms。period值必须要大于等于0。 |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;A, R&gt; | 是 | 需要周期执行的泛型任务。 |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要周期执行的泛型任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The period is less than zero. |
-| [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) | The concurrent task has been executed and cannot be executed periodically. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
+| 10200057 | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| 10200014 | The function is not marked as concurrent. |
+| 10200028 | The period is less than zero. |
+| 10200050 | The concurrent task has been executed and cannot be executed periodically. |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent

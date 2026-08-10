@@ -1,6 +1,6 @@
 # VideoPlayerState
 
-VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK\_START and SEEK\_FINISH
+VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ STOPPED. video is stopped
 SEEK_START = 3
 ```
 
-SEEK\_START. seek drag is start
+SEEK_START. seek drag is start
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ SEEK\_START. seek drag is start
 SEEK_FINISH = 4
 ```
 
-SEEK\_FINISH. seek drag is finish
+SEEK_FINISH. seek drag is finish
 
 **Since:** 26.0.0
 

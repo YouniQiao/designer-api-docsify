@@ -10,6 +10,12 @@ Describes the information of an SEI message.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## payload
 
 ```TypeScript
@@ -38,7 +44,7 @@ payloadType: int
 
 Payload type of SEI message.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

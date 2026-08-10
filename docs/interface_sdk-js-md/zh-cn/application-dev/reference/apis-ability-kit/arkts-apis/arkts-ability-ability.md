@@ -6,9 +6,18 @@ Ability模块将二级模块API组织在一起方便开发者进行导出。
 
 **ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
+**模型约束：** 
+- API版本9-10：此接口仅可在FA模型下使用。
+
 <!--Device-unnamed-declare namespace ability--><!--Device-unnamed-declare namespace ability-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## 导入模块
+
+```TypeScript
+import { ability } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 

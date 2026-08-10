@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## gradientHeight
 
 ```TypeScript
@@ -18,7 +24,7 @@ gradientHeight: int
 
 渐变高度，不能超过屏幕高度的15%。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -36,7 +42,7 @@ gradientMode: GradientMode
 
 渐变模式。
 
-**类型：** GradientMode
+**类型：** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
 **起始版本：** 20
 

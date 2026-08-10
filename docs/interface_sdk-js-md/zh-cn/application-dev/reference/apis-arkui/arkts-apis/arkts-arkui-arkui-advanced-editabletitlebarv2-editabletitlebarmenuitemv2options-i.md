@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
@@ -38,7 +44,7 @@ accessibilityDescription?: ResourceStr
 
 默认值："单指双击即可执行"。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -94,7 +100,7 @@ accessibilityText?: ResourceStr
 
 默认值：有label时默认值为当前项label属性内容，没有设置label时，默认值为" "。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -168,7 +174,7 @@ label?: ResourceStr
 
 长按对话框的标签文本。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -188,7 +194,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol图标样式修饰器，优先级大于value。
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 
@@ -208,7 +214,7 @@ value?: ResourceStr
 
 图标资源，支持Symbol类型图标或Image类型图标。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,6 @@
 # @ohos.logLibrary
 
-The **logLibrary** module provides APIs for obtaining various system maintenance and test logs.
+本模块提供了获取各类系统维测日志的能力。
 
 **Since:** 10
 
@@ -12,6 +12,12 @@ The **logLibrary** module provides APIs for obtaining various system maintenance
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -19,12 +25,12 @@ The **logLibrary** module provides APIs for obtaining various system maintenance
 
 | Name | Description |
 | --- | --- |
-| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy) | Copies log files of the specified type to the target application directory. This API uses a promise to return the result. |
-| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy-1) | Copies log files of the specified type to the target application directory. This API uses an asynchronous callback to return the result. |
-| [list](arkts-performanceanalysis-loglibrary-list-f-sys.md#list) | Obtains the list of log files of the specified type in synchronous mode. This API accepts objects of the string type as input parameters and returns a list log files of the specified type. |
-| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move) | Moves log files of the specified type to the target application directory. This API uses a promise to return the result. |
-| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move-1) | Moves log files of the specified type to the target application directory. This API uses an asynchronous callback to return the result. |
-| [remove](arkts-performanceanalysis-loglibrary-remove-f-sys.md#remove) | Deletes log files of the specified type in synchronous mode. |
+| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy) | 拷贝指定日志类型的指定文件到目标应用目录下。使用Promise回调。 |
+| [copy](arkts-performanceanalysis-loglibrary-copy-f-sys.md#copy-1) | 拷贝指定日志类型的指定文件到目标应用目录下。使用callback回调。 |
+| [list](arkts-performanceanalysis-loglibrary-list-f-sys.md#list) | 以同步方法查询指定类型的日志文件列表，接收string类型的对象作为参数，返回指定类型日志的文件列表信息。 |
+| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move) | 移动指定日志类型的指定文件到目标应用目录下。使用Promise回调。 |
+| [move](arkts-performanceanalysis-loglibrary-move-f-sys.md#move-1) | 移动指定日志类型的指定文件到目标应用目录下。使用callback回调。 |
+| [remove](arkts-performanceanalysis-loglibrary-remove-f-sys.md#remove) | 以同步方法删除指定日志类型的指定文件。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -32,6 +38,6 @@ The **logLibrary** module provides APIs for obtaining various system maintenance
 
 | Name | Description |
 | --- | --- |
-| [LogEntry](arkts-performanceanalysis-loglibrary-logentry-i-sys.md) | Defines a **LogEntry** object. |
+| [LogEntry](arkts-performanceanalysis-loglibrary-logentry-i-sys.md) | 日志文件对象接口。 |
 <!--DelEnd-->
 

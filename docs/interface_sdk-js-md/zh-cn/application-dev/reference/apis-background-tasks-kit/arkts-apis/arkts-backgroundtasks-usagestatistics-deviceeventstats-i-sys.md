@@ -12,6 +12,12 @@ FA模型的使用信息属性集合。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## count
 
 ```TypeScript
@@ -20,7 +26,7 @@ count: int
 
 应用通知次数或者系统事件触发次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ eventId: int
 
 应用事件类型。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

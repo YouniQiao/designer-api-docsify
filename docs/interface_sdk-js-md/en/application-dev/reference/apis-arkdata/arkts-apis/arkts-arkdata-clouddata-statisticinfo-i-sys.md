@@ -1,6 +1,6 @@
 # StatisticInfo (System API)
 
-Represents the device-cloud sync statistics.
+端云同步的统计信息。
 
 **Since:** 12
 
@@ -12,16 +12,21 @@ Represents the device-cloud sync statistics.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## inserted
 
 ```TypeScript
 inserted: int
 ```
 
-Number of data records that are added locally and have not been synced to the cloud. For example, the value **2**  
-indicates that the table has two data records that are added locally but not synced to the cloud.
+本地新增且未同步到云端的数据条数，如返回值为2，表示本地新增2条数据且还未同步到云端。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -39,9 +44,9 @@ indicates that the table has two data records that are added locally but not syn
 normal: int
 ```
 
-Number of consistent data records between the device and the cloud. For example, the value **2** indicates that table has two data records that are consistent between the device and the cloud.
+端云一致的数据条数。如返回值为2，表示本地与云端一致的数据为2条。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -59,8 +64,7 @@ Number of consistent data records between the device and the cloud. For example,
 table: string
 ```
 
-Name of the table queried. For example, the value **cloud\_notes** indicates that the sync information of the  
-**cloud\_notes** table is queried.
+查询的表名。如返回值为"cloud_notes"，表示查询结果是表名为"cloud_notes"的同步信息。
 
 **Type:** string
 
@@ -80,10 +84,9 @@ Name of the table queried. For example, the value **cloud\_notes** indicates tha
 updated: int
 ```
 
-Number of data records that are modified locally or on the cloud but have not been synced. For example, the value  
-**2** indicates that the table has two data records that are updated locally or on the cloud but not synced.
+云端同步之后，本地或云端修改还未同步的数据条数，如返回值为2，表示本地或云端修改还有2条数据未同步。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

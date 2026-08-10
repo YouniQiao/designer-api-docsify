@@ -1,5 +1,11 @@
 # getOpNameSync
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getOpNameSync
 
 ```TypeScript
@@ -20,7 +26,7 @@ Obtains the operator name of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
 
 **Return value:**
 
@@ -28,7 +34,7 @@ Obtains the operator name of the SIM card in a specified slot.
 | --- | --- |
 | string | Returns the operator name; returns an empty string if no SIM card is inserted or no operator name is matched. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

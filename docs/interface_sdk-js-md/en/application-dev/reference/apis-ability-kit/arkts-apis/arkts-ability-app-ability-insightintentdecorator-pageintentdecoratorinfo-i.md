@@ -1,8 +1,8 @@
 # PageIntentDecoratorInfo
 
-PageIntentDecoratorInfo inherits from [IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ and describes the parameters supported by the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_decorator, such as the name of  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ of the target page.
+PageIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述  
+[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)装饰器支持的参数，例如目标页面的  
+[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)名称。
 
 **Inheritance/Implementation:** PageIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -14,14 +14,20 @@ PageIntentDecoratorInfo inherits from [IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DE
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+```
+
 ## navDestinationName
 
 ```TypeScript
 navDestinationName?: string
 ```
 
-Name of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_component bound to the intent.
+表示与意图绑定  
+[NavDestination组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)的名称。
 
 **Type:** string
 
@@ -43,7 +49,7 @@ Name of the
 navigationId?: string
 ```
 
-ID of the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_component bound to the intent.
+表示与意图绑定的[Navigation组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#属性)的id属性。
 
 **Type:** string
 
@@ -65,7 +71,7 @@ ID of the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_component bound to the intent.
 pagePath: string
 ```
 
-Path of the page bound to the intent. The page must be a file that actually exists.
+表示与意图绑定的页面路径，该页面需要是一个实际存在的文件。
 
 **Type:** string
 
@@ -87,7 +93,7 @@ Path of the page bound to the intent. The page must be a file that actually exis
 uiAbility?: string
 ```
 
-Name of the UIAbility bound to the intent.
+表示与意图绑定的UIAbility名称。
 
 **Type:** string
 

@@ -12,6 +12,12 @@ The result of AI-generated images
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## image
 
 ```TypeScript
@@ -42,7 +48,7 @@ statistic: TaskStatistic
 
 Statistics of AI-generated image tasks.
 
-**Type:** TaskStatistic
+**Type:** [TaskStatistic](arkts-arkui-imagegeneration-taskstatistic-i-sys.md)
 
 **Since:** 23
 

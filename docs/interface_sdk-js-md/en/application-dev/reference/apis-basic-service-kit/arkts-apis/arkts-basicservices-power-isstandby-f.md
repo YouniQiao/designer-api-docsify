@@ -1,12 +1,18 @@
 # isStandby
 
+## Modules to Import
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isStandby
 
 ```TypeScript
 function isStandby(): boolean
 ```
 
-Checks whether the device is in standby mode.
+检测当前设备是否进入待机低功耗续航模式。
 
 **Since:** 10
 
@@ -20,15 +26,15 @@ Checks whether the device is in standby mode.
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the device is in standby mode, and the value **false** indicates the opposite. |
+| boolean | 进入待机模式返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| 4900101 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

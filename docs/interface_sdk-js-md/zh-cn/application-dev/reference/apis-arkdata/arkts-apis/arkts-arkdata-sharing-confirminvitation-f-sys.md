@@ -1,5 +1,11 @@
 # confirmInvitation（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## confirmInvitation
 
 ```TypeScript
@@ -23,31 +29,31 @@ function confirmInvitation(invitationCode: string, state: State, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | invitationCode | string | 是 | 端云共享的邀请码。 |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 确认邀请的状态。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Result&lt;string&gt;&gt; | 是 | 回调函数。返回确认邀请的结果。 |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | 是 | 确认邀请的状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;string&gt;&gt; | 是 | 回调函数。返回确认邀请的结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let shareResource: string;
-cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED, ((err: BusinessError|null, result) => {
+cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED, (err: BusinessError, result) => {
   if (err) {
     console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`confirm invitation succeeded, result: ${result}`);
   shareResource = result.value;
-}))
+});
 ```
 
 
@@ -74,7 +80,7 @@ function confirmInvitation(invitationCode: string, state: State): Promise<Result
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | invitationCode | string | 是 | 端云共享的邀请码。 |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 确认邀请的状态。 |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | 是 | 确认邀请的状态。 |
 
 **返回值：**
 
@@ -86,11 +92,11 @@ function confirmInvitation(invitationCode: string, state: State): Promise<Result
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -99,8 +105,8 @@ let shareResource: string | undefined;
 cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED).then((result: cloudData.sharing.Result<string>) => {
   console.info(`confirm invitation succeeded, result: ${result}`);
   shareResource = result.value;
-}).catch((err) => {
+}).catch((err: BusinessError) => {
   console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
-})
+});
 ```
 

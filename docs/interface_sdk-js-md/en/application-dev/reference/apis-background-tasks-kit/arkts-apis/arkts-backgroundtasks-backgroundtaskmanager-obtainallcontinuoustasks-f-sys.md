@@ -1,12 +1,18 @@
 # obtainAllContinuousTasks (System API)
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## obtainAllContinuousTasks
 
 ```TypeScript
 function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 ```
 
-Obtains all continuous task information, including the task ID and type. This API uses a promise to return the result.
+获取所有长时任务信息，如长时任务ID、长时任务类型等。使用Promise异步回调。
 
 **Since:** 23
 
@@ -26,17 +32,17 @@ Obtains all continuous task information, including the task ID and type. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ContinuousTaskInfo[]&gt; | Promise that returns all continuous task information. |
+| Promise&lt;ContinuousTaskInfo[]&gt; | Promise对象，返回所有长时任务信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| 9800004 | System service operation failed. |
+| 201 | Permission denied. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

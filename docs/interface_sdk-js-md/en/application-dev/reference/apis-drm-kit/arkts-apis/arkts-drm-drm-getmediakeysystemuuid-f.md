@@ -1,5 +1,11 @@
 # getMediaKeySystemUuid
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## getMediaKeySystemUuid
 
 ```TypeScript
@@ -34,21 +40,16 @@ Get a MediaKeySystem's UUID.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed.Possibly because: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed.Possibly because: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let uuid: string = drm.getMediaKeySystemUuid("com.clearplay.drm");
-  console.info("getMediaKeySystemUuid: ", uuid);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getMediaKeySystemUuid ERROR: ${error}`);  
-}
+
+let uuid: string = drm.getMediaKeySystemUuid('com.clearplay.drm');
+console.info("getMediaKeySystemUuid: ", uuid);
 ```
 

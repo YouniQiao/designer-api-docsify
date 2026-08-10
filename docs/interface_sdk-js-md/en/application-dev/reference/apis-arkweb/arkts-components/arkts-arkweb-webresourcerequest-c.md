@@ -1,6 +1,6 @@
 # WebResourceRequest
 
-Defines the Web resource request.
+Encompassed message information as parameters to {@link onConsole} method.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Constructor.
 getRequestHeader(): Array<Header>
 ```
 
-Gets request headers.
+获取资源请求头信息。
 
 **Since:** 8
 
@@ -50,7 +50,7 @@ Gets request headers.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | Return the request headers |
+| Array&lt;Header&gt; | 返回资源请求头信息。 |
 
 ## getRequestMethod
 
@@ -58,7 +58,7 @@ Gets request headers.
 getRequestMethod(): string
 ```
 
-Get request method.
+获取请求方法。
 
 **Since:** 9
 
@@ -74,7 +74,7 @@ Get request method.
 
 | Type | Description |
 | --- | --- |
-| string | Return the request method. |
+| string | 返回请求方法。 |
 
 ## getRequestUrl
 
@@ -82,7 +82,7 @@ Get request method.
 getRequestUrl(): string
 ```
 
-Gets the request URL.
+获取资源请求的URL信息。
 
 **Since:** 8
 
@@ -98,7 +98,7 @@ Gets the request URL.
 
 | Type | Description |
 | --- | --- |
-| string | Return the request URL. |
+| string | 返回资源请求的URL信息。 |
 
 ## isMainFrame
 
@@ -106,7 +106,7 @@ Gets the request URL.
 isMainFrame(): boolean
 ```
 
-Check whether the request is for getting the main frame.
+判断资源请求是否为主frame。
 
 **Since:** 8
 
@@ -122,7 +122,7 @@ Check whether the request is for getting the main frame.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return { |
+| boolean | 返回 { |
 
 ## isRedirect
 
@@ -130,7 +130,7 @@ Check whether the request is for getting the main frame.
 isRedirect(): boolean
 ```
 
-Check whether the request redirects.
+判断资源请求是否被服务端重定向。
 
 **Since:** 8
 
@@ -146,7 +146,7 @@ Check whether the request redirects.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return { |
+| boolean | 返回 { |
 
 ## isRequestGesture
 
@@ -154,7 +154,7 @@ Check whether the request redirects.
 isRequestGesture(): boolean
 ```
 
-Check whether the request is associated with gesture.
+获取资源请求是否与手势（如点击）相关联。
 
 **Since:** 8
 
@@ -170,5 +170,5 @@ Check whether the request is associated with gesture.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return { |
+| boolean | 返回 { |
 

@@ -1,17 +1,23 @@
 # getSystemResourceManager
 
+## Modules to Import
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## getSystemResourceManager
 
 ```TypeScript
 export function getSystemResourceManager(): ResourceManager
 ```
 
-Obtains a system resource management object for accessing preset system resources.
-    **NOTE**  
-    
-    The **Configuration** parameter in the **ResourceManager** object obtained via this API uses the default value.  
-    The default value is  
-    **{"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}**.
+获取系统资源管理对象，用于访问系统预置的资源。
+
+> **说明：**
+> 
+> 该接口获取到的系统资源管理ResourceManager对象中的Configuration为默认值。默认值如下：{"locale": "", "direction": -1, "deviceType": -1, "
+> screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}。
 
 **Since:** 10
 
@@ -31,15 +37,15 @@ Obtains a system resource management object for accessing preset system resource
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The system **ResourceManager** object. |
+| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | 系统资源管理对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
+| 9001009 | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';

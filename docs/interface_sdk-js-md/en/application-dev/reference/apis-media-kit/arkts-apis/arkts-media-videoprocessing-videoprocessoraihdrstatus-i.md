@@ -10,6 +10,12 @@ Provides the AIHDR feature status.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
+## Modules to Import
+
+```TypeScript
+import { videoProcessing } from 'kits/@kit.MediaKit';
+```
+
 ## enabled
 
 ```TypeScript

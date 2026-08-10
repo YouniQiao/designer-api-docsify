@@ -1,6 +1,6 @@
 # ScreenCaptureHandler
 
-Defines the onScreenCapture callback, related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Defines the onScreenCapture callback, related to {@link onScreenCapture} method.
 
 **起始版本：** 10
 
@@ -92,5 +92,5 @@ Grant origin access to a given resource.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The screen capture configuration. |
+| config | [ScreenCaptureConfig](arkts-arkweb-screencaptureconfig-i.md) | 是 | The screen capture configuration. |
 

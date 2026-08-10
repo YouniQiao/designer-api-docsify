@@ -1,5 +1,11 @@
 # LazyVWaterFlowLayout
 
+## Modules to Import
+
+```TypeScript
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## LazyVWaterFlowLayout
 
 ```TypeScript
@@ -8,7 +14,7 @@ export declare function LazyVWaterFlowLayout (
 ): LazyVWaterFlowLayoutAttribute
 ```
 
-Defines LazyVWaterFlowLayout Component.
+定义LazyVWaterFlowLayout组件。
 
 **Since:** 26.0.0
 
@@ -24,13 +30,13 @@ Defines LazyVWaterFlowLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
 
 
 ## LazyVWaterFlowLayout
@@ -42,11 +48,11 @@ export declare function LazyVWaterFlowLayout(
 ): LazyVWaterFlowLayoutAttribute
 ```
 
-Defines LazyVWaterFlowLayout Component.
+定义LazyVWaterFlowLayout组件。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Decorator:** @Builder
 
@@ -60,12 +66,12 @@ Defines LazyVWaterFlowLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LazyVWaterFlowLayoutAttribute&gt; | Yes | The style to create a LazyVWaterFlowLayout. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyVWaterFlowLayoutAttribute&gt; | Yes | The style to create a LazyVWaterFlowLayout. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the LazyVWaterFlowLayout. |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | LazyVWaterFlowLayout的属性。 |
 

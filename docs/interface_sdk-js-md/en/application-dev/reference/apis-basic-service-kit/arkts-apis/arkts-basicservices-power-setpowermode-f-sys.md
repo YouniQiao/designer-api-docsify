@@ -1,12 +1,18 @@
 # setPowerMode (System API)
 
+## Modules to Import
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setPowerMode
 
 ```TypeScript
 function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void
 ```
 
-Sets the power mode of a device. This API uses an asynchronous callback to return the result.
+设置当前设备的电源模式。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,19 +30,19 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Power mode. The value must be an enum. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked to return the result.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ If the power mode is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| mode | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | Yes | 电源模式；该参数类型是一个枚举类。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置电源模式成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900301](../../apis-basic-services-kit/errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 4900301 | Setting the power mode failed.<br>**Applicable version:** 23 and later |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE, (err: Error) => {
@@ -55,7 +61,7 @@ power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE, (err: Error) => {
 function setPowerMode(mode: DevicePowerMode): Promise<void>
 ```
 
-Sets the power mode of a device. This API uses a promise to return the result.
+设置当前设备的电源模式。使用Promise异步回调。
 
 **Since:** 9
 
@@ -73,24 +79,24 @@ Sets the power mode of a device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Power mode. The value must be an enum. |
+| mode | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | Yes | 电源模式；该参数类型是一个枚举类。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900301](../../apis-basic-services-kit/errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 4900301 | Setting the power mode failed.<br>**Applicable version:** 23 and later |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE)

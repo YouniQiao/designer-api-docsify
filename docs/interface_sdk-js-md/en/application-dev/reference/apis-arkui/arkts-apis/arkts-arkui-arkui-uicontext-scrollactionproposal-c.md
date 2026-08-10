@@ -1,6 +1,6 @@
 # ScrollActionProposal
 
-Class ScrollActionProposal. The default scroll direction is forward.
+类ScrollActionProposal。默认滚动方向为向前。
 
 **Inheritance/Implementation:** ScrollActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
 
@@ -12,13 +12,19 @@ Class ScrollActionProposal. The default scroll direction is forward.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(node: FrameNode, distance: double)
 ```
 
-ScrollActionProposal constructor.
+ScrollActionProposal构造函数。
 
 **Since:** 26.0.0
 
@@ -34,8 +40,8 @@ ScrollActionProposal constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The node responding to scroll action. |
-| distance | double | Yes | The distance to scroll or slide. |
+| node | [FrameNode](arkts-arkui-framenode-t.md) | Yes | 响应滚动动作的节点。 |
+| distance | double | Yes | 滚动或滑动的距离。 |
 
 ## distance
 
@@ -43,7 +49,7 @@ ScrollActionProposal constructor.
 distance: double
 ```
 
-Distance parameter for gesture operations. Used for actions like scrolling or sliding to specify travel distance.
+手势操作的距离参数。用于滚动或滑动等动作，以指定移动距离。
 
 **Type:** double
 

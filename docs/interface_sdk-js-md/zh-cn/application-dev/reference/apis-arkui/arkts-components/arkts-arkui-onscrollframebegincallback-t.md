@@ -22,12 +22,12 @@ Scroll每帧滚动前触发的回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 即将发生的滑动量，单位vp。  |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前滑动状态。Idle表示空闲状态，Scroll表示滚动状态，Fling表示惯性滚动状态。  |
+| offset | number | 是 | 即将发生的滑动量，单位vp。 |
+| state | [ScrollState](arkts-arkui-scrollstate-e.md) | 是 | 当前滑动状态。Idle表示空闲状态，Scroll表示滚动状态，Fling表示惯性滚动状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | data 返回实际滑动量，Scroll将按照返回值中的offsetRemain进行滚动。  |
+| [OnScrollFrameBeginHandlerResult](arkts-arkui-onscrollframebeginhandlerresult-i.md) | data 返回实际滑动量，Scroll将按照返回值中的offsetRemain进行滚动。 |
 

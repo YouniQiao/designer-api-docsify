@@ -10,6 +10,12 @@ Defines the Web's request/response header.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## headerKey
 
 ```TypeScript

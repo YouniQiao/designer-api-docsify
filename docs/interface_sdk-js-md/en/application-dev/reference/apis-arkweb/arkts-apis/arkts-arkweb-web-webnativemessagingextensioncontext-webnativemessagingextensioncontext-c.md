@@ -1,8 +1,17 @@
 # WebNativeMessagingExtensionContext
 
-WebNativeMessagingExtensionContext is the context of web native message extension and is inherited from ExtensionContext. It provides the capability of exchanging messages with WebNativeMessagingExtension.The APIs of this module can be used only in the stage model.
+WebNativeMessagingExtensionContext是Web原生消息扩展（  
+[WebNativeMessagingExtensionAbility](arkts-web-webnativemessagingextensionability.md)）的运行上下文，继承自ExtensionContext，为扩展Ability提供生命周期管理、Ability启动以及原生消息连接控制能力。开发者可在继承WebNativeMessagingExtensionAbility的扩展中通过`this.context`获取该上下文，进而调用  
+[startAbility](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startability)启动其他Ability、调用  
+[startAbilityForResult](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startabilityforresult)启动UIAbility并接收返回结果、调用  
+[terminateSelf](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#terminateself)结束当前扩展，或调用  
+[stopNativeConnection](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#stopnativeconnection)停止指定的Web原生消息连接。
 
-**Inheritance/Implementation:** WebNativeMessagingExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-application/extensioncontext-extensioncontext-c.md)
+> **说明:**
+> 
+> 本模块接口仅可在Stage模型下使用。
+
+**Inheritance/Implementation:** WebNativeMessagingExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
 **Since:** 23
 
@@ -12,13 +21,20 @@ WebNativeMessagingExtensionContext is the context of web native message extensio
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { WebNativeMessagingExtensionContext } from 'kits/@kit.ArkWeb';
+```
+
 ## startAbility
 
 ```TypeScript
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability using a promise.
+使用Promise异步回调启动Ability。如需获取启动的UIAbility退出时的返回结果，可以使用  
+[startAbilityForResult](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startabilityforresult)。
 
 **Since:** 23
 
@@ -34,41 +50,41 @@ Starts an ability using a promise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the ability to start. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the start options. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 表示需要启动的Ability的信息，包含bundleName、abilityName等属性，用于指定要启动的目标Ability。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | No | 启动选项，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。当需要自定义启动配置时传入，不传入时使 用系统默认启动配置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| [16000071](../../apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported. |
-| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported. |
-| [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid. |
-| [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit. |
-| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported. |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_INSTANCE\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY cannot be specified. |
-| [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported. |
+| 16000055 | Installation-free timed out. |
+| 16000080 | Creating a new instance is not supported. |
+| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 16000019 | No matching ability is found. |
+| 201 | The application does not have permission to call the interface. |
+| 16000004 | Cannot start an invisible component. |
+| 16000005 | The specified process does not have the permission. |
+| 16000071 | App clone is not supported. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16000012 | The application is controlled. |
+| 16000076 | The app instance key is invalid. |
+| 16000013 | The application is controlled by EDM. |
+| 16000077 | The number of app instances reaches the limit. |
+| 16000078 | The multi-instance is not supported. |
+| 16000079 | The APP_INSTANCE_KEY cannot be specified. |
+| 16000008 | The crowdtesting application expires. |
+| 16000072 | App clone or multi-instance is not supported. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000073 | The app clone index is invalid. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
 ## startAbilityForResult
 
@@ -76,7 +92,12 @@ Starts an ability using a promise.
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts an ability and returns the execution result when the ability is destroyed.
+启动一个UIAbility，使用Promise异步回调接收被拉起的UIAbility退出时的返回结果。UIAbility被启动后，有如下情况:
+
+- 正常情况下可通过调用  
+[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止并且返回结果给调用方。  
+- 异常情况下比如销毁UIAbility会返回异常信息给调用方，异常信息中resultCode为-1。  
+- 只支持拉起自己应用的UIAbility。
 
 **Since:** 26.0.0
 
@@ -92,41 +113,41 @@ Starts an ability and returns the execution result when the ability is destroyed
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the ability to start. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the start options. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 表示需要启动的UIAbility的信息，包含bundleName、abilityName等属性，用于指定要启动的目标UIAbility。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | No | 启动选项，用于配置UIAbility的窗口模式等。当需要自定义启动配置时传入，不传入时使用系统默认启动配置。各字段默认值参考 [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md/arkts-ability-app-ability-startoptions-startoptions-c.md)说明。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityResult&gt; | Returns the result of startAbility. |
+| Promise&lt;[AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，返回被启动方退出时的结果码和数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled by the AppGallery and cannot be started. |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by Enterprise Device Manager and cannot be started. |
-| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| [16000071](../../apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) | The application does not support appClone mode in multiAppMode. |
-| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | The application does not support appClone and multi-instance mode in multiAppMode. |
-| [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid. |
-| [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit. |
-| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The application does not support multiple instances. |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_INSTANCE\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY cannot be specified. |
-| [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) | Instances cannot be created for other applications during inter-application startup. |
+| 16000055 | Installation-free timed out. |
+| 16000080 | Instances cannot be created for other applications during inter-application startup. |
+| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 16000019 | No matching ability is found. |
+| 201 | The application does not have permission to call the interface. |
+| 16000004 | Cannot start an invisible component. |
+| 16000005 | The specified process does not have the permission. |
+| 16000071 | The application does not support appClone mode in multiAppMode. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16000012 | The application is controlled by the AppGallery and cannot be started. |
+| 16000076 | The app instance key is invalid. |
+| 16000013 | The application is controlled by Enterprise Device Manager and cannot be started. |
+| 16000077 | The number of app instances reaches the limit. |
+| 16000078 | The application does not support multiple instances. |
+| 16000079 | The APP_INSTANCE_KEY cannot be specified. |
+| 16000008 | The crowdtesting application expires. |
+| 16000072 | The application does not support appClone and multi-instance mode in multiAppMode. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000073 | The app clone index is invalid. |
+| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
+| 16000011 | The context does not exist. |
 
 ## stopNativeConnection
 
@@ -134,7 +155,7 @@ Starts an ability and returns the execution result when the ability is destroyed
 stopNativeConnection(connectionId: int): Promise<void>
 ```
 
-Stops a native connection. This API uses a promise to return the result.
+停止指定的本地连接。使用Promise异步回调。
 
 **Since:** 23
 
@@ -150,21 +171,21 @@ Stops a native connection. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connectionId | int | Yes | ID of the connection to stop. |
+| connectionId | int | Yes | 要停止的连接ID。取值范围为正整数，必须是有效的连接ID。当connectionId值无效时，会对应返回错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 201 | The application does not have permission to call the interface. |
+| 16000011 | The context does not exist. |
 
 ## terminateSelf
 
@@ -172,7 +193,7 @@ Stops a native connection. This API uses a promise to return the result.
 terminateSelf(): Promise<void>
 ```
 
-Destroys the current native web message extension.
+销毁当前Web原生消息扩展。该方法返回一个Promise对象用于异步处理，调用此方法会自动停止所有Web原生消息连接，无需再调用stopNativeConnection。
 
 **Since:** 23
 
@@ -188,13 +209,13 @@ Destroys the current native web message extension.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| 16000011 | The context does not exist. |
 

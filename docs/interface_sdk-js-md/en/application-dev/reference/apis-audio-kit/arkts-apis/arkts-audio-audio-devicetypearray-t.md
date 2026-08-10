@@ -4,7 +4,7 @@
 type DeviceTypeArray = Array<DeviceType>
 ```
 
-Defines the device type array.
+数组类型，[DeviceType](arkts-audio-audio-devicetype-e.md)数组。
 
 **Since:** 26.0.0
 

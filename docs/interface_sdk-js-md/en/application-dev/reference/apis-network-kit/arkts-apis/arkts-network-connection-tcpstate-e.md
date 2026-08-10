@@ -34,7 +34,7 @@ The TCP connection is in the ESTABLISHED state.
 TCP_SYN_SENT = 2
 ```
 
-The TCP connection is in the SYN\_SENT state.
+The TCP connection is in the SYN_SENT state.
 
 **Since:** 24
 
@@ -52,7 +52,7 @@ The TCP connection is in the SYN\_SENT state.
 TCP_SYN_RECV = 3
 ```
 
-The TCP connection is in the SYN\_RECV state.
+The TCP connection is in the SYN_RECV state.
 
 **Since:** 24
 
@@ -70,7 +70,7 @@ The TCP connection is in the SYN\_RECV state.
 TCP_FIN_WAIT1 = 4
 ```
 
-The TCP connection is in the FIN\_WAIT1 state.
+The TCP connection is in the FIN_WAIT1 state.
 
 **Since:** 24
 
@@ -88,7 +88,7 @@ The TCP connection is in the FIN\_WAIT1 state.
 TCP_FIN_WAIT2 = 5
 ```
 
-The TCP connection is in the FIN\_WAIT2 state.
+The TCP connection is in the FIN_WAIT2 state.
 
 **Since:** 24
 
@@ -106,7 +106,7 @@ The TCP connection is in the FIN\_WAIT2 state.
 TCP_TIME_WAIT = 6
 ```
 
-The TCP connection is in the TIME\_WAIT state.
+The TCP connection is in the TIME_WAIT state.
 
 **Since:** 24
 
@@ -142,7 +142,7 @@ The TCP connection is in the CLOSE state.
 TCP_CLOSE_WAIT = 8
 ```
 
-The TCP connection is in the CLOSE\_WAIT state.
+The TCP connection is in the CLOSE_WAIT state.
 
 **Since:** 24
 
@@ -160,7 +160,7 @@ The TCP connection is in the CLOSE\_WAIT state.
 TCP_LAST_ACK = 9
 ```
 
-The TCP connection is in the LAST\_ACK state.
+The TCP connection is in the LAST_ACK state.
 
 **Since:** 24
 

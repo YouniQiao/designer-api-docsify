@@ -12,6 +12,12 @@ Configuration stream result for AI-generated image tasks.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## imageData
 
 ```TypeScript
@@ -64,7 +70,7 @@ partialFail?: BusinessError
 
 Information of the partial error corresponding to AI-generated image task, available in partial error result.
 
-**Type:** BusinessError
+**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)
 
 **Since:** 23
 
@@ -108,7 +114,7 @@ type: PartialResultType
 
 The type information used for AI-generated image task.
 
-**Type:** PartialResultType
+**Type:** [PartialResultType](arkts-arkui-imagegeneration-partialresulttype-e-sys.md)
 
 **Since:** 23
 

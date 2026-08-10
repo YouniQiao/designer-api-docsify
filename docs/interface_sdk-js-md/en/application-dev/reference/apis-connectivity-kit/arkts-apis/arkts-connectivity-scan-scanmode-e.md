@@ -1,6 +1,6 @@
 # ScanMode
 
-The enum of scan mode.
+扫描模式的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of scan mode.
 SCAN_MODE_LOW_POWER = 0
 ```
 
-Low-power mode with a lower scan frequency (default).
+低功率模式，扫描频率低（默认配置）。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Low-power mode with a lower scan frequency (default).
 SCAN_MODE_BALANCED = 1
 ```
 
-Medium-power mode with a medium scan frequency.
+中等功率模式，扫描频率中等。
 
 **Since:** 26.0.0
 

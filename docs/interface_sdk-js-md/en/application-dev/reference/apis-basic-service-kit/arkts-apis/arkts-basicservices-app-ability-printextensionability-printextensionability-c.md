@@ -1,6 +1,6 @@
 # PrintExtensionAbility
 
-class of print extension ability.
+该模块提供打印扩展能力的调用接口。PrintExtensionAbility基于生命周期回调机制运行，系统在打印扩展连接、发现打印机、连接/断开打印机、查询打印机能力、启动/取消打印任务等场景下分别调用相应回调方法，开发者需在各回调中实现对应的打印扩展逻辑。
 
 **Since:** 14
 
@@ -10,13 +10,19 @@ class of print extension ability.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onCancelPrintJob
 
 ```TypeScript
 public onCancelPrintJob(jobInfo: print.PrintJob): void
 ```
 
-Called once to remove the print job has been started.
+取消已开始的打印任务时调用。开发者应在此回调中实现取消打印任务的逻辑，停止正在进行的打印操作并清理相关资源。
 
 **Since:** 24
 
@@ -32,7 +38,13 @@ Called once to remove the print job has been started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
+| jobInfo | print.PrintJob | Yes | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，需为已通过onStartPrintJob启动的打印任务， 用于取消打印任务时定位目标任务。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | not system application<br>**Applicable version:** 10 - 23 |
 
 ## onConnectPrinter
 
@@ -46,7 +58,7 @@ ArkTS-Sta:
 onConnectPrinter(printerId: int): void
 ```
 
-Called once to connect to the specific printer.
+连接到特定打印机时调用。开发者应在此回调中实现与指定打印机（通过printerId标识）的连接逻辑。
 
 **Since:** 14
 
@@ -62,9 +74,9 @@ Called once to connect to the specific printer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | connect the printerId. |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示打印机ID，应为已发现的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -83,7 +95,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 onCreate(want: Want): void
 ```
 
-Called once to initialize the extensionAbility.
+系统首次连接打印扩展能力时调用。开发者可在此回调中完成打印扩展能力的初始化工作，如初始化必要的资源、状态等。
 
 **Since:** 14
 
@@ -99,9 +111,9 @@ Called once to initialize the extensionAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | call print page want params. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 表示创建打印扩展时传入的Want意图信息，包含调用方指定的信息（如action、uri等），用于初始化打印扩展能力。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -121,7 +133,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 onDestroy(): void
 ```
 
-Called once to finalize the extensionAbility.
+结束打印扩展能力时调用。开发者应在此回调中释放相关资源并完成必要的清理工作。
 
 **Since:** 14
 
@@ -133,7 +145,7 @@ Called once to finalize the extensionAbility.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -157,7 +169,7 @@ ArkTS-Sta:
 onDisconnectPrinter(printerId: int): void
 ```
 
-Called once to disconnect to the specific printer.
+断开与特定打印机的连接时调用。开发者应在此回调中实现断开打印机连接的逻辑并释放相关资源。
 
 **Since:** 14
 
@@ -173,9 +185,9 @@ Called once to disconnect to the specific printer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | connect the printerId. |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -194,7 +206,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 onRequestPreview(jobInfo: print.PrintJob): string
 ```
 
-Called once to request preview and send result to Print SA.
+系统打印服务在请求预览时回调此方法，开发者需继承PrintExtensionAbility类并实现此方法，将预览结果返回到系统打印服务。
 
 **Since:** 10
 
@@ -210,21 +222,21 @@ Called once to request preview and send result to Print SA.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of job. |
+| jobInfo | print.PrintJob | Yes | 表示打印任务信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | preview result. |
+| string | 返回的预览结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| 202 | not system application |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -251,7 +263,7 @@ ArkTS-Sta:
 public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 ```
 
-Called once to request the printer's capabilities.
+请求打印机支持的能力特性（如色彩模式、双面打印模式、纸张尺寸等）时调用，例如在打印设置界面中用户选择打印机后，系统需要获取该打印机支持的能力信息时触发此回调。开发者应在此回调中根据printerId查询并返回对应打印机的能力信息（print.PrinterCapability）。
 
 **Since:** 24
 
@@ -267,7 +279,7 @@ Called once to request the printer's capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the information of printer. |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
 **Return value:**
 
@@ -275,13 +287,19 @@ Called once to request the printer's capabilities.
 | --- | --- |
 | print.PrinterCapability | printer capability. |
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | not system application<br>**Applicable version:** 10 - 23 |
+
 ## onStartDiscoverPrinter
 
 ```TypeScript
 onStartDiscoverPrinter(): void
 ```
 
-Called once to start to discover the printers connected with the device.
+开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addprintertodiscovery) 将发现的打印机信息上报给系统。
 
 **Since:** 14
 
@@ -293,7 +311,7 @@ Called once to start to discover the printers connected with the device.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -312,7 +330,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 public onStartPrintJob(jobInfo: print.PrintJob): void
 ```
 
-Called once to start print job.
+开始打印任务时调用。开发者应在此回调中根据jobInfo中的任务信息处理打印操作，如解析打印任务参数并执行相应的打印流程。
 
 **Since:** 24
 
@@ -328,7 +346,13 @@ Called once to start print job.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
+| jobInfo | print.PrintJob | Yes | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，用于指定要开始的打印任务。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | not system application<br>**Applicable version:** 10 - 23 |
 
 ## onStopDiscoverPrinter
 
@@ -336,7 +360,7 @@ Called once to start print job.
 onStopDiscoverPrinter(): void
 ```
 
-Called once to stop discovering the printer.
+停止发现打印机时调用。开发者应在此回调中停止打印机发现流程并释放相关资源。
 
 **Since:** 14
 
@@ -348,7 +372,7 @@ Called once to stop discovering the printer.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -367,9 +391,9 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 context: PrintExtensionContext
 ```
 
-Indicates print service extension ability context.
+打印扩展能力上下文。
 
-**Type:** PrintExtensionContext
+**Type:** [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 
 **Since:** 26.0.0
 

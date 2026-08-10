@@ -1,15 +1,15 @@
 # CalendarDialogOptions
 
-Defines the configuration options of the calendar picker dialog box.
+日历选择器弹窗选项。
 
-Inherits from [CalendarOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    When the application window is resized, the width of the dialog box is continuously compressed. If the window width  
-    is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the  
-    content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
+继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。
 
-**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](../arkts-apis/arkts-arkui-component/calendarpicker-calendaroptions-i.md)
+> **说明：**
+> 
+> 在应用窗口缩小过程中，弹窗的宽度会被不断压缩，当缩小到一定程度时会导致其内容无法完整显示，保证CalendarPickerDialog内容能够完整显示的最小
+> 窗口宽度为386vp。
+
+**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md)
 
 **Since:** 10
 
@@ -25,11 +25,18 @@ Inherits from [CalendarOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation mode for the dialog.
+设置系统材质下弹窗的非线性动画模式。当需要自定义弹窗的非线性动画效果时传入此参数。
 
-Default Value: DistortionMode.DISTORTION\_AUTO
+> **默认值：** DistortionMode.DISTORTION_AUTO
 
-**Type:** DistortionMode
+> **系统接口：** 此接口为系统接口。
+
+> **说明：** 当取值为 DISTORTION_AUTO 时，需设置
+> [ImmersiveMaterial](ImmersiveMaterial)类型材质方可生效，并依据设备算力档位自动生效非线性效果（高中档算力设备生效，
+> 低档算力设备不生效）。非线性动画会增加渲染开销，建议在低端设备上谨慎使用。
+> 各枚举取值含义请参见[DistortionMode](../arkts-apis/arkts-arkui-common-distortionmode-e-sys.md/arkts-arkui-common-distortionmode-e-sys.md)。
+
+**Type:** [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
@@ -51,11 +58,17 @@ Default Value: DistortionMode.DISTORTION\_AUTO
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edge light animation mode for the dialog.
+设置系统材质下弹窗的流光动画模式。当需要自定义弹窗的流光动画效果时传入此参数。
 
-Default value: EdgeLightMode.EDGELIGHT\_AUTO
+> **默认值：** EdgeLightMode.EDGELIGHT_AUTO
+> 
+> **系统接口：** 此接口为系统接口。
+> 
+> **说明：** 当取值为 EDGELIGHT_AUTO 时，需设置
+> [ImmersiveMaterial](ImmersiveMaterial)类型材质方可生效，并依据设备算力档位自动生效流光效果（高档算力设备生效，
+> 中低档算力设备不生效）。流光动画会增加渲染开销，建议在低端设备上谨慎使用。各枚举取值含义请参见[EdgeLightMode](../arkts-apis/arkts-arkui-common-edgelightmode-e-sys.md/arkts-arkui-common-edgelightmode-e-sys.md)。
 
-**Type:** EdgeLightMode
+**Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 

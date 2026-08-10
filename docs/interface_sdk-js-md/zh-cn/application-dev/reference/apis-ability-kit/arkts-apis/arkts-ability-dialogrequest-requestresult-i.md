@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { dialogRequest } from 'kits/@kit.AbilityKit';
+```
+
 ## result
 
 ```TypeScript
@@ -18,7 +24,7 @@ result: ResultCode
 
 表示结果码。
 
-**类型：** ResultCode
+**类型：** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ want?: Want
 
 表示Want类型信息，如ability名称，包名等。
 
-**类型：** Want
+**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 10
 

@@ -1,6 +1,6 @@
 # DlpFeatureStatus (System API)
 
-Enumerates DLP statuses.
+DLP特性开关状态的枚举。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Enumerates DLP statuses.
 NOT_ENABLED_FEATURE = 0
 ```
 
-DLP disabled.
+表示关闭DLP特性开关。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ DLP disabled.
 ENABLED_FEATURE = 1
 ```
 
-DLP enabled.
+表示开启DLP特性开关。
 
 **Since:** 26.0.0
 

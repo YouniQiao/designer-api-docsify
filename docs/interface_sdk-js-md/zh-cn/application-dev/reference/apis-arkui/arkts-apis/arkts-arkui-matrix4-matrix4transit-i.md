@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## combine
 
 ```TypeScript
@@ -32,13 +38,13 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待叠加的矩阵对象。 |
+| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 是 | 待叠加的矩阵对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 矩阵叠加后的对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 矩阵叠加后的对象。 |
 
 ## copy
 
@@ -62,7 +68,7 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前矩阵的拷贝对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的拷贝对象。 |
 
 ## invert
 
@@ -86,7 +92,7 @@ Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效�
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前矩阵的逆矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的逆矩阵对象。 |
 
 ## rotate
 
@@ -110,13 +116,13 @@ Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置旋转参数。 |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | 是 | 设置旋转参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 旋转效果后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 旋转效果后的矩阵对象。 |
 
 ## scale
 
@@ -140,13 +146,13 @@ Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置缩放参数。 |
+| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | 是 | 设置缩放参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 缩放效果后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 缩放效果后的矩阵对象。 |
 
 ## setPolyToPoly
 
@@ -170,13 +176,13 @@ setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 映射相关的参数。 |
+| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | 是 | 映射相关的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前矩阵变换后的对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵变换后的对象。 |
 
 ## skew
 
@@ -207,7 +213,7 @@ Matrix的倾斜函数，可以为当前矩阵增加x轴/y轴倾斜效果。会�
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 倾斜效果后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 倾斜效果后的矩阵对象。 |
 
 ## transformPoint
 
@@ -237,13 +243,13 @@ Matrix的坐标点转换函数，可以将当前的变换效果作用到一个�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [             double,             double         ] | 是 | 需要转换的坐标点。 |
+| options | [             double,             double         ] | 是 | 需要转换的坐标点。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [             double,             double         ] | 返回矩阵变换后的Point对象。 |
+| [             double,             double         ] | 返回矩阵变换后的Point对象。 |
 
 ## translate
 
@@ -267,11 +273,11 @@ Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置平移参数。 |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | 是 | 设置平移参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 平移效果后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 平移效果后的矩阵对象。 |
 

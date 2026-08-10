@@ -1,6 +1,6 @@
 # WebKeyboardAvoidMode
 
-Enumerates the soft keyboard avoidance modes.
+Enum type supplied to {@link keyboardAvoidMode} for setting the web keyboard avoid mode.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the soft keyboard avoidance modes.
 RESIZE_VISUAL = 0
 ```
 
-For soft keyboard avoidance, the visual viewport is resized, but not the layout viewport.
+Resize the visual viewport when keyboard avoidance occurs.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ For soft keyboard avoidance, the visual viewport is resized, but not the layout 
 RESIZE_CONTENT = 1
 ```
 
-For soft keyboard avoidance, both the visual viewport and layout viewport are resized.
+Resize the visual and layout viewport when keyboard avoidance occurs.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ For soft keyboard avoidance, both the visual viewport and layout viewport are re
 OVERLAYS_CONTENT = 2
 ```
 
-No viewport is resized, and soft keyboard avoidance is not triggered.
+Do not resize any viewport when keyboard avoidance occurs.
 
 **Since:** 12
 
@@ -70,8 +70,7 @@ No viewport is resized, and soft keyboard avoidance is not triggered.
 RETURN_TO_UICONTEXT = 3
 ```
 
-The soft keyboard avoidance behavior of the **Web** component follows the  
-[KeyboardAvoidMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ set by UIcontext. The **Web** component does not process the avoidance behavior of the component.
+When the soft keyboard avoids, follow the avoid result of UIContext.
 
 **Since:** 22
 

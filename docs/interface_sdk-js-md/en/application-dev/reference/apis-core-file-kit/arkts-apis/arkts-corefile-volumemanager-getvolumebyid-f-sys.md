@@ -1,12 +1,18 @@
 # getVolumeById (System API)
 
+## Modules to Import
+
+```TypeScript
+import { volumeManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## getVolumeById
 
 ```TypeScript
 function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void
 ```
 
-Obtains information about a volume based on the volume ID. This API uses an asynchronous callback to return the result.
+通过指定卷设备id获得卷设备信息，使用callback异步回调。
 
 **Since:** 9
 
@@ -24,18 +30,18 @@ Obtains information about a volume based on the volume ID. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeId | string | Yes | Volume ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Volume&gt; | Yes | Callback used to return the volume information obtained. |
+| volumeId | string | Yes | 卷设备id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Volume&gt; | Yes | 获取卷设备信息之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
 
@@ -45,7 +51,7 @@ Obtains information about a volume based on the volume ID. This API uses an asyn
 function getVolumeById(volumeId: string): Promise<Volume>
 ```
 
-Obtains information about a volume based on the volume ID. This API uses a promise to return the result.
+通过卷设备id获得指定卷设备信息，使用Promise异步回调。
 
 **Since:** 9
 
@@ -63,22 +69,22 @@ Obtains information about a volume based on the volume ID. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeId | string | Yes | Volume ID. |
+| volumeId | string | Yes | 卷设备id。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Volume&gt; | Promise used to return the volume information of the current ID. |
+| Promise&lt;Volume&gt; | Promise对象，返回当前id的卷设备信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

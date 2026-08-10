@@ -1,6 +1,6 @@
 # AbilityState
 
-Ability的状态，该类型为枚举，可配合[AbilityRunningInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_返回Ability的状态。
+Ability的状态，该类型为枚举，可配合[AbilityRunningInfo](arkts-ability-abilitymanager-abilityrunninginfo-t.md)返回Ability的状态。
 
 **起始版本：** 14
 

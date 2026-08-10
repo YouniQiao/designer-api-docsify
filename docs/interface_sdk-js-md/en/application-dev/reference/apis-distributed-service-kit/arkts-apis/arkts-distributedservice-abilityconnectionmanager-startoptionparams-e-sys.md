@@ -1,6 +1,6 @@
 # StartOptionParams
 
-Enumerates application start options.
+启动选项参数的枚举。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates application start options.
 START_IN_BACKGROUND = 1
 ```
 
-Launching the peer application to the background.
+将对端应用启动至后台。
 
 **Since:** 18
 

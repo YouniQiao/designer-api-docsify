@@ -1,16 +1,22 @@
 # resetUsbDevice
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## resetUsbDevice
 
 ```TypeScript
 function resetUsbDevice(pipe: USBDevicePipe): boolean
 ```
 
-Resets a USB peripheral.
-    **NOTE**  
-    
-    Previous configurations and APIs will be reset. Ensure that the related services have been completed before  
-    calling this API.
+重置USB外设。
+
+> **说明：**
+> 
+> 本接口调用后会重置此前设置的配置和替换接口，请在调用之前确认相关业务已结束。
 
 **Since:** 20
 
@@ -24,26 +30,26 @@ Resets a USB peripheral.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain its value. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the device is reset successfully; returns **false** otherwise. |
+| boolean | true表示重置设备成功，false表示重置设备失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes: 1. No accessory is plugged in. |
-| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device(it may have been disconnected) |
-| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-unrecognized-error) | Other USB error. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.Unrecognized discard error code. |
-| [14400013](../../apis-basic-services-kit/errorcode-usb.md#14400013-parameter-validity-check-failed) | The USBDevicePipe validity check failed. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.The input parameters fail the validation check.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.The call chain used to obtain the input parameters is not reasonable. |
+| 801 | Capability not supported. |
+| 14400010 | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
+| 14400008 | No such device(it may have been disconnected) |
+| 14400013 | The USBDevicePipe validity check failed. Possible causes:  &lt;br&gt;1.The input parameters fail the validation check.  &lt;br&gt;2.The call chain used to obtain the input parameters is not reasonable. |
+| 14400001 | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| 14400004 | Service exception. Possible causes: 1. No accessory is plugged in. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function resetUsbDevice() {
@@ -53,8 +59,8 @@ function resetUsbDevice() {
     return;
   }
 
-  usbManager.requestRight(devicesList[0].name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
+  usbManager.requestRight(devicesList?.[0]?.name);
+  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
   try {
     let ret: boolean = usbManager.resetUsbDevice(devicepipe);
     console.info(`resetUsbDevice  = ${ret}`);

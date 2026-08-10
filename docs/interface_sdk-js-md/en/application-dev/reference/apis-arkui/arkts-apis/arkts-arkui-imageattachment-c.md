@@ -1,6 +1,6 @@
 # ImageAttachment
 
-Describes the image attachment.
+图片对象说明。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Describes the image attachment.
 constructor(value: ImageAttachmentInterface)
 ```
 
-A constructor used to create an image object.
+图片对象的构造函数。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ A constructor used to create an image object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Image attachment options. |
+| value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Yes | 图片设置项。 |
 
 ## constructor
 
@@ -42,8 +42,7 @@ A constructor used to create an image object.
 constructor(attachment: Optional<AttachmentType>)
 ```
 
-A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and  
-[ResourceStr]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ types.
+图片对象的构造函数。与value类型入参构造函数相比，attachment参数增加了对undefined类型和[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片的支持。
 
 **Since:** 15
 
@@ -61,7 +60,7 @@ A constructor used to create an image object. Compared to the constructor with a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attachment | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachmentType&gt; | Yes | Image attachment, which can be of type PixelMap or [ResourceStr]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| attachment | [Optional](arkts-arkui-optional-t.md)&lt;AttachmentType&gt; | Yes | PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片设置项。 |
 
 ## colorFilter
 
@@ -69,9 +68,9 @@ A constructor used to create an image object. Compared to the constructor with a
 readonly colorFilter?: ColorFilterType
 ```
 
-Image color filter of the styled string.
+获取属性字符串的图片颜色滤镜效果。
 
-**Type:** ColorFilterType
+**Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
 **Since:** 15
 
@@ -91,9 +90,9 @@ Image color filter of the styled string.
 readonly layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-Image layout of the styled string.
+获取属性字符串的图片布局。
 
-**Type:** ImageAttachmentLayoutStyle
+**Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
 **Since:** 12
 
@@ -113,9 +112,9 @@ Image layout of the styled string.
 readonly objectFit?: ImageFit
 ```
 
-Image scale type of the styled string.
+获取属性字符串的图片缩放类型。
 
-**Type:** ImageFit
+**Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **Since:** 12
 
@@ -135,11 +134,11 @@ Image scale type of the styled string.
 readonly size?: SizeOptions
 ```
 
-Image size of the styled string.
+获取属性字符串的图片尺寸。
 
-Number-type values use px as the unit.
+返回number类型值的单位为`px`。
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
 
 **Since:** 12
 
@@ -159,13 +158,13 @@ Number-type values use px as the unit.
 readonly sizeInVp?: SizeOptions
 ```
 
-Image size of the styled string.
+获取属性字符串的图片尺寸。
 
-Number-type values use vp as the unit.
+返回number类型值的单位为`vp`。
 
-If **ImageAttachment** is set to a negative value or **undefined**, **undefined** is returned.
+当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
 
 **Since:** 21
 
@@ -185,12 +184,11 @@ If **ImageAttachment** is set to a negative value or **undefined**, **undefined*
 readonly supportSvg2?: boolean
 ```
 
-Whether to enable  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
 
-**true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.
+true：支持SVG解析新能力；false：保持原有SVG解析能力。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -212,9 +210,9 @@ Default value: **false
 readonly value: PixelMap
 ```
 
-Image data source of the styled string.
+获取属性字符串的图片数据源。
 
-**Type:** PixelMap
+**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 12
 
@@ -234,9 +232,9 @@ Image data source of the styled string.
 readonly verticalAlign?: ImageSpanAlignment
 ```
 
-Image alignment mode of the styled string.
+获取属性字符串的图片对齐方式。
 
-**Type:** ImageSpanAlignment
+**Type:** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
 
 **Since:** 12
 

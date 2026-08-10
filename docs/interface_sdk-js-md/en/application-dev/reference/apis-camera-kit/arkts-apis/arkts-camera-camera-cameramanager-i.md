@@ -1,7 +1,6 @@
 # CameraManager
 
-CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use  
-[getCameraManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain a **CameraManager** instance.
+相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager)接口获取相机管理实例。
 
 **Since:** 10
 
@@ -11,15 +10,21 @@ CameraManager** implements camera management. Before calling any API in **Camera
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## createCameraInput
 
 ```TypeScript
 createCameraInput(camera: CameraDevice): CameraInput
 ```
 
-Creates a **CameraInput** instance with the specified **CameraDevice** instance. This API returns the result synchronously.
+使用CameraDevice对象创建CameraInput实例，同步返回结果。
 
-Before calling this API, call [getSupportedCameras]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the list of supported camera devices, select the camera device that meets the requirements based on the actual usage scenario, and then create the **CameraInput** instance.
+该接口使用前首先通过[getSupportedCameras](arkts-camera-camera-cameramanager-i.md#getsupportedcameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选择符合需求的相机设备，然后使用该接口创建CameraInput实例。
 
 **Since:** 10
 
@@ -37,21 +42,21 @@ Before calling this API, call [getSupportedCameras]\_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | CameraDevice** instance, which is obtained through [getSupportedCameras]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | CameraDevice对象，通过 [getSupportedCameras](arkts-camera-camera-cameramanager-i.md#getsupportedcameras) 接口获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [CameraInput](arkts-camera-camera-camerainput-i.md) | 返回CameraInput实例。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createCameraInput
 
@@ -59,9 +64,9 @@ Before calling this API, call [getSupportedCameras]\_\_\_JSDOC\_LINK\_DESC\_USD\
 createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 ```
 
-Creates a **CameraInput** instance with the specified camera position and type. This API returns the result synchronously.
+根据相机位置和类型创建CameraInput实例，同步返回结果。
 
-Before calling this API, specify the camera position and type based on the usage scenario. For example, open the front camera for the selfie feature
+该接口使用前需要开发者根据应用具体使用场景自行指定相机位置和类型，例如打开前置相机进入自拍功能。
 
 **Since:** 10
 
@@ -79,22 +84,22 @@ Before calling this API, specify the camera position and type based on the usage
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera position. You need to obtain the supported camera object by calling [getSupportedCameras]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and then obtain the device position information based on the returned camera object. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera type. You need to obtain the supported camera object by calling [getSupportedCameras]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and then obtain the camera type based on the returned camera object. |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | Yes | 相机位置，首先通过 [getSupportedCameras](arkts-camera-camera-cameramanager-i.md#getsupportedcameras) 接口获取支持的相机设备对象，然后根据返回的相机设备对象获取设备位置信息。 |
+| type | [CameraType](arkts-camera-camera-cameratype-e.md) | Yes | 相机类型，首先通过 [getSupportedCameras](arkts-camera-camera-cameramanager-i.md#getsupportedcameras) 接口获取 支持的相机设备对象，然后根据返回的相机设备对象获取设备类型信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [CameraInput](arkts-camera-camera-camerainput-i.md) | 返回CameraInput实例。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createCaptureSession
 
@@ -102,7 +107,11 @@ Before calling this API, specify the camera position and type based on the usage
 createCaptureSession(): CaptureSession
 ```
 
-Creates a **CaptureSession** instance. This API returns the result synchronously.
+创建CaptureSession实例，同步返回结果。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **Since:** 10
 
@@ -120,13 +129,13 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | CaptureSession** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [CaptureSession](arkts-camera-camera-capturesession-i.md) | CaptureSession实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## createDeferredPreviewOutput
 
@@ -134,7 +143,7 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 createDeferredPreviewOutput(profile: Profile): PreviewOutput
 ```
 
-Creates a deferred **PreviewOutput** instance and adds it, instead of a common **PreviewOutput** instance, to the data stream during stream configuration.
+创建延迟预览输出对象，在配流时替代普通的预览输出对象加入数据流。
 
 **Since:** 24
 
@@ -150,20 +159,21 @@ Creates a deferred **PreviewOutput** instance and adds it, instead of a common *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | 支持的预览配置信息，通过 [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability) 接口获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 24 and later |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 23 |
 
 ## createMetadataOutput
 
@@ -171,7 +181,7 @@ Creates a deferred **PreviewOutput** instance and adds it, instead of a common *
 createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOutput
 ```
 
-Creates a **MetadataOutput** instance. This API returns the result synchronously.
+创建metadata流输出对象，同步返回结果。
 
 **Since:** 10
 
@@ -187,20 +197,20 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataObjectTypes | Array&lt;MetadataObjectType&gt; | Yes | Metadata object types, which are obtained through [getSupportedOutputCapability]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| metadataObjectTypes | Array&lt;MetadataObjectType&gt; | Yes | metadata流类型信息，通过 [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability) 接口获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | MetadataOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | MetadataOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPhotoOutput
 
@@ -208,10 +218,13 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 ```
 
-Creates a **PhotoOutput** instance. This API returns the result synchronously.
-    **NOTE**  
-    
-    - This API can only be used to create a **PhotoOutput** object in JPEG format.
+创建拍照输出对象，同步返回结果。
+
+> **说明：**
+> 
+> - 从API version 10开始支持，从API version 11开始废弃。
+> 
+> - 该接口只支持创建JPEG格式的拍照输出对象。
 
 **Since:** 10
 
@@ -229,20 +242,20 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Supported photo profile, which is obtained through [getSupportedOutputCapability]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| surfaceId | string | Yes | Surface ID, which is obtained from [ImageReceiver]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | 支持的拍照配置信息，通过 [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability) 接口获取。 |
+| surfaceId | string | Yes | 从[ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md/arkts-image-image-imagereceiver-i.md)获取的surfaceId。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| 7400101 | Parameter missing or parameter type incorrect. |
 
 ## createPhotoOutput
 
@@ -250,7 +263,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 createPhotoOutput(profile?: Profile): PhotoOutput
 ```
 
-Creates a **PhotoOutput** instance. This API returns the result synchronously.
+创建拍照输出对象，同步返回结果。
 
 **Since:** 11
 
@@ -266,20 +279,20 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Supported photo profile, which is obtained through [getSupportedOutputCapability]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | No | 支持的拍照配置信息，通过 [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability) 接口获取。 &lt;br&gt;API version 11时，该参数必填；从API version 12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入 profile参数会覆盖preconfig的预配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPreviewOutput
 
@@ -287,7 +300,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 ```
 
-Creates a **PreviewOutput** instance. This API returns the result synchronously.
+创建预览输出对象，同步返回结果。
 
 **Since:** 10
 
@@ -303,21 +316,21 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or [ImageReceiver]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | 支持的预览配置信息，通过 [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability) 接口获取。 |
+| surfaceId | string | Yes | 从[XComponent](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponent-f.md/arkts-arkui-xcomponent-xcomponent-f.md#xcomponent)或者 [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md/arkts-image-image-imagereceiver-i.md)组件获取的surfaceId。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPreviewOutput
 
@@ -325,7 +338,7 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 createPreviewOutput(surfaceId: string): PreviewOutput
 ```
 
-Creates a **PreviewOutput** instance without configuration. This API returns the result synchronously. It must be used with [preconfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+创建无配置信息的预览输出对象，同步返回结果。该接口需配合[preconfig](arkts-camera-camera-photosession-i.md#preconfig)一起使用。
 
 **Since:** 12
 
@@ -341,20 +354,20 @@ Creates a **PreviewOutput** instance without configuration. This API returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or [ImageReceiver]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| surfaceId | string | Yes | 从[XComponent](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponent-f.md/arkts-arkui-xcomponent-xcomponent-f.md#xcomponent)或者 [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md/arkts-image-image-imagereceiver-i.md)组件获取的surfaceId。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
 
 ## createSession
 
@@ -362,7 +375,7 @@ Creates a **PreviewOutput** instance without configuration. This API returns the
 createSession<T extends Session>(mode: SceneMode): T
 ```
 
-Creates a **Session** instance with a given scene mode. This API returns the result synchronously.
+创建指定SceneMode的Session实例，同步返回结果。
 
 **Since:** 11
 
@@ -378,20 +391,20 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scene mode. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
+| mode | [SceneMode](arkts-camera-camera-scenemode-e.md) | Yes | 相机支持的模式。如果传入的参数异常（如超出范围、传入null或未定义等），实际接口不会生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Session** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| T | Session实例。接口调用失败会返回相应的错误码，错误码类型为[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 19 and later |
+| 7400101 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**Applicable version:** 19 and later |
+| 7400201 | Camera service fatal error. |
 
 ## createVideoOutput
 
@@ -399,14 +412,14 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 ```
 
-Creates a **VideoOutput** instance. This API returns the result synchronously.
+创建录像输出对象，同步返回结果。
 
-In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions.
+在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。
 
-| SDR/HDR Photo Capture | CameraFormat | ColorSpace |  
+| SDR/HDR拍摄 | CameraFormat | ColorSpace |  
 |--------------------|--------------------------|------------------|  
-| SDR | CAMERA\_FORMAT\_YUV\_420\_SP | BT709\_LIMIT |  
-| HDR\_VIVID | CAMERA\_FORMAT\_YCRCB\_P010\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_CAMERA\_FORMAT\_YCBCR\_P010 | BT2020\_HLG\_LIMIT\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_BT2020\_HLG\_FULL |
+| SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |  
+| HDR_VIVID | CAMERA_FORMAT_YCRCB_P010&lt;br&gt;CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT&lt;br&gt;BT2020_HLG_FULL |
 
 **Since:** 10
 
@@ -422,21 +435,21 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Supported video profile, which is obtained through [getSupportedOutputCapability]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | Yes | 支持的录像配置信息，通过 [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability) 接口获取。 |
+| surfaceId | string | Yes | 从[AVRecorder](@ohos.multimedia.media:media.AVRecorder)获取的surfaceId。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createVideoOutput
 
@@ -444,7 +457,7 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 createVideoOutput(surfaceId: string): VideoOutput
 ```
 
-Creates a **VideoOutput** instance without configuration. This API returns the result synchronously. It must be used with [preconfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+创建无配置信息的录像输出对象，同步返回结果。该接口需配合[preconfig](arkts-camera-camera-videosession-i.md#preconfig)功能一起使用。
 
 **Since:** 12
 
@@ -460,20 +473,20 @@ Creates a **VideoOutput** instance without configuration. This API returns the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| surfaceId | string | Yes | 从[AVRecorder](@ohos.multimedia.media:media.AVRecorder)获取的surfaceId。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400201 | Camera service fatal error. |
 
 ## getCameraConcurrentInfos
 
@@ -481,7 +494,7 @@ Creates a **VideoOutput** instance without configuration. This API returns the r
 getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentInfo>
 ```
 
-Obtains the concurrency information of the specified cameras. If the return value is an empty array, concurrency is not supported.
+获取指定相机设备的并发信息。返回空数组表示不支持并发。
 
 **Since:** 18
 
@@ -497,19 +510,19 @@ Obtains the concurrency information of the specified cameras. If the return valu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameras | Array&lt;CameraDevice&gt; | Yes | Array of **CameraDevice** objects. You are advised to use the front and rear cameras obtained by calling [getCameraDevice]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| cameras | Array&lt;CameraDevice&gt; | Yes | 一组CameraDevice相机设备，并得到与这一组CameraDevice对应的并发信息，推荐设置为由 [getCameraDevice](arkts-camera-camera-cameramanager-i.md#getcameradevice)获取的前置与后置两个用于并发的相机设备。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;CameraConcurrentInfo&gt; | Array of concurrency information corresponding to the provided CameraDevice objects, with a one-to-one mapping. |
+| Array&lt;CameraConcurrentInfo&gt; | 一组CameraDevice相机设备对象对应的并发信息，与CameraDevice相机设备一一对应。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## getCameraDevice
 
@@ -517,10 +530,9 @@ Obtains the concurrency information of the specified cameras. If the return valu
 getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 ```
 
-Obtains the specified camera based on the camera position and type.
+根据相机位置和相机类型查询对应相机。
 
-Obtains the camera lens of the specified [CameraPosition]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[CameraType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. If the returned result is undefined, the camera lens is not found on the current device.
+获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md)和[CameraType](arkts-camera-camera-cameratype-e.md)的相机镜头，如果该接口返回结果为undefined，表示当前设备未查询到该镜头。
 
 **Since:** 18
 
@@ -536,20 +548,20 @@ Obtains the camera lens of the specified [CameraPosition]\_\_\_JSDOC\_LINK\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera position. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera type. |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | Yes | 需要得到的CameraDevice对象对应的CameraPosition条件。 |
+| type | [CameraType](arkts-camera-camera-cameratype-e.md) | Yes | 需要得到的CameraDevice对象对应的CameraType条件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Camera obtained. |
+| [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 根据相机位置和相机类型查询的对应相机。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## getCameraDevices
 
@@ -557,7 +569,7 @@ Obtains the camera lens of the specified [CameraPosition]\_\_\_JSDOC\_LINK\_DESC
 getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType: ConnectionType): Array<CameraDevice>
 ```
 
-Obtains the list of cameras that meet the search criteria based on the camera position, camera types, and connection type.
+根据相机位置、相机类型数组和连接类型查询符合条件的相机列表。
 
 **Since:** 23
 
@@ -573,21 +585,21 @@ Obtains the list of cameras that meet the search criteria based on the camera po
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera position. |
-| types | Array&lt;CameraType&gt; | Yes | Array of camera types. |
-| connectType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera connection type. |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | Yes | 相机的位置。 |
+| types | Array&lt;CameraType&gt; | Yes | 相机类型数组。 |
+| connectType | [ConnectionType](arkts-camera-camera-connectiontype-e.md) | Yes | 相机的连接类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;CameraDevice&gt; | Array of cameras that meet the search criteria. |
+| Array&lt;CameraDevice&gt; | 根据相机位置、相机类型数组和连接类型查询符合条件的相机列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## getSupportedCameras
 
@@ -595,9 +607,10 @@ Obtains the list of cameras that meet the search criteria based on the camera po
 getSupportedCameras(): Array<CameraDevice>
 ```
 
-Obtains the supported cameras (such as the default camera whose **CameraType** is **CAMERA\_TYPE\_DEFAULT**). This API returns the result synchronously.
+获取支持的基础相机设备对象（如获取CameraType为CAMERA_TYPE_DEFAULT的默认相机），同步返回结果。
 
-Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA\_TYPE\_TELEPHOTO**) can be obtained using [getCameraDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.
+如果需要获取额外的相机设备对象（如获取CameraType为CAMERA_TYPE_TELEPHOTO的长焦相机），可通过  
+[getCameraDevices](arkts-camera-camera-cameramanager-i.md#getcameradevices)接口获取。
 
 **Since:** 10
 
@@ -613,7 +626,7 @@ Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA\_TY
 
 | Type | Description |
 | --- | --- |
-| Array&lt;CameraDevice&gt; | Array of camera devices supported. |
+| Array&lt;CameraDevice&gt; | 相机设备列表。 |
 
 ## getSupportedFullOutputCapability
 
@@ -621,11 +634,11 @@ Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA\_TY
 getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
 ```
 
-Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV,HEIF, and HDR.
-    **NOTE**  
-    
-    Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output  
-    capabilities are obtained.
+查询指定相机在指定模式下支持的完整输出能力，包括未压缩图（YUV）、HEIF和HDR等能力。
+
+> **说明：**
+> 
+> 使用YUV，HEIF或HDR等能力前，需要先显式调用此方法确保获取完整输出能力。
 
 **Since:** 23
 
@@ -643,14 +656,14 @@ Obtains the complete output capabilities supported by a specified camera in a sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scene mode. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
+| mode | [SceneMode](arkts-camera-camera-scenemode-e.md) | Yes | Scene mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Camera output capability obtained. |
+| [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 相机输出能力。 |
 
 ## getSupportedOutputCapability
 
@@ -658,7 +671,11 @@ Obtains the complete output capabilities supported by a specified camera in a sp
 getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 ```
 
-Obtains the output capability supported by a camera device. This API returns the result synchronously.
+查询相机设备支持的输出能力，同步返回结果。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
 
 **Since:** 10
 
@@ -676,13 +693,13 @@ Obtains the output capability supported by a camera device. This API returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Camera output capability obtained. |
+| [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 相机输出能力。 |
 
 ## getSupportedOutputCapability
 
@@ -690,7 +707,7 @@ Obtains the output capability supported by a camera device. This API returns the
 getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
 ```
 
-Obtains the output capability supported by a camera device in a given scene mode. This API returns the result synchronously.
+查询相机设备在指定模式下支持的输出能力，同步返回结果。
 
 **Since:** 11
 
@@ -706,14 +723,14 @@ Obtains the output capability supported by a camera device in a given scene mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scene mode. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
+| mode | [SceneMode](arkts-camera-camera-scenemode-e.md) | Yes | Scene mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Camera output capability obtained. |
+| [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 相机输出能力。 |
 
 ## getSupportedSceneModes
 
@@ -721,7 +738,7 @@ Obtains the output capability supported by a camera device in a given scene mode
 getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>
 ```
 
-Obtains the scene modes supported by a camera device. This API returns the result synchronously.
+获取指定的相机设备对象支持的模式，同步返回结果。
 
 **Since:** 11
 
@@ -737,13 +754,13 @@ Obtains the scene modes supported by a camera device. This API returns the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SceneMode&gt; | Array of scene modes supported. |
+| Array&lt;SceneMode&gt; | 相机支持的模式列表。 |
 
 ## getTorchMode
 
@@ -751,7 +768,7 @@ Obtains the scene modes supported by a camera device. This API returns the resul
 getTorchMode(): TorchMode
 ```
 
-Obtains the flashlight mode of this camera device.
+获取当前设备手电筒模式。
 
 **Since:** 11
 
@@ -767,7 +784,7 @@ Obtains the flashlight mode of this camera device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Flashlight mode. |
+| [TorchMode](arkts-camera-camera-torchmode-e.md) | 返回设备当前手电筒模式。 |
 
 ## isCameraMuted
 
@@ -775,7 +792,7 @@ Obtains the flashlight mode of this camera device.
 isCameraMuted(): boolean
 ```
 
-Checks whether this camera is muted.
+查询当前相机是否禁用。
 
 **Since:** 10
 
@@ -791,7 +808,7 @@ Checks whether this camera is muted.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the camera is muted. **true** if muted, **false** otherwise. |
+| boolean | 返回true表示相机被禁用，返回false表示相机未被禁用。 |
 
 ## isTorchLevelControlSupported
 
@@ -799,7 +816,7 @@ Checks whether this camera is muted.
 isTorchLevelControlSupported(): boolean
 ```
 
-Checks whether the device supports flashlight brightness control.
+检测设备是否支持手电筒亮度调节功能。
 
 **Since:** 26.0.0
 
@@ -817,7 +834,13 @@ Checks whether the device supports flashlight brightness control.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the device supports flashlight brightness control. Returns **true** if supported, **false** if not. If the API call fails, undefined is returned. |
+| boolean | 表示设备是否支持手电筒亮度调节功能。返回true表示支持，返回false表示不支持。若接口调用失败，返回undefined。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | Not System Application.<br>**Applicable version:** 23 - 24 |
 
 ## isTorchModeSupported
 
@@ -825,7 +848,7 @@ Checks whether the device supports flashlight brightness control.
 isTorchModeSupported(mode: TorchMode): boolean
 ```
 
-Checks whether a flashlight mode is supported.
+检测是否支持设置的手电筒模式。
 
 **Since:** 11
 
@@ -841,13 +864,13 @@ Checks whether a flashlight mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Flashlight mode. If the input parameter is null or undefined, it is treated as 0 and the flashlight is turned off. |
+| mode | [TorchMode](arkts-camera-camera-torchmode-e.md) | Yes | 手电筒模式。传参为null或者undefined，作为0处理，手电筒关闭。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the flashlight mode. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
+| boolean | 返回true表示设备支持设置的手电筒模式，返回false表示设备不支持的手电筒模式。若接口调用失败，返回undefined。 |
 
 ## isTorchSupported
 
@@ -855,7 +878,7 @@ Checks whether a flashlight mode is supported.
 isTorchSupported(): boolean
 ```
 
-Checks whether the camera device supports the flashlight.
+检测设备是否支持手电筒。
 
 **Since:** 11
 
@@ -871,7 +894,7 @@ Checks whether the camera device supports the flashlight.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the device supports the flashlight. **true** if supported, **false** otherwise. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **false** is returned, [isTorchModeSupported]{ |
+| boolean | 表示设备是否支持手电筒，true表示设备支持手电筒，false表示设备不支持手电。 &lt;br&gt;如果返回false，则[isTorchModeSupported]{ |
 
 ## off('cameraStatus')
 
@@ -879,7 +902,7 @@ Checks whether the camera device supports the flashlight.
 off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void
 ```
 
-Unsubscribes from camera status events. This API uses an asynchronous callback to return the result.
+相机设备状态注销回调，通过注销回调函数取消获取相机的状态变化。
 
 **Since:** 10
 
@@ -895,8 +918,8 @@ Unsubscribes from camera status events. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraStatus' | Yes | Event type. The value is fixed at **'cameraStatus'**. The event can be listened for when a **CameraManager** instance is obtained. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraStatusInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'cameraStatus' | Yes | 监听事件，固定为'cameraStatus'。cameraManager对象获取成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraStatusInfo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('foldStatusChange')
 
@@ -904,7 +927,7 @@ Unsubscribes from camera status events. This API uses an asynchronous callback t
 off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void
 ```
 
-Unsubscribes from fold state change events of the foldable device.
+关闭折叠设备折叠状态变化的监听。
 
 **Since:** 12
 
@@ -920,8 +943,8 @@ Unsubscribes from fold state change events of the foldable device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldStatusChange' | Yes | Event type. The value is fixed at **'foldStatusChange'**. The event is triggered when the fold state of the foldable device changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FoldStatusInfo&gt; | No | Callback used to return the fold state information about the foldable device. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'foldStatusChange' | Yes | 监听事件，固定为'foldStatusChange'。表示折叠设备折叠状态发生变化。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FoldStatusInfo&gt; | No | 回调函数，返回折叠设备折叠信息。如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
 
 ## off('torchStatusChange')
 
@@ -929,7 +952,7 @@ Unsubscribes from fold state change events of the foldable device.
 off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
 ```
 
-Unsubscribes from flashlight status change events. This API uses an asynchronous callback to return the result.
+手电筒状态变化注销回调，通过注销回调函数取消获取手电筒状态变化。
 
 **Since:** 11
 
@@ -945,8 +968,8 @@ Unsubscribes from flashlight status change events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'torchStatusChange' | Yes | Event type. The value is fixed at **'torchStatusChange'**. The event can be listened for when a **CameraManager** instance is obtained. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TorchStatusInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'torchStatusChange' | Yes | 监听事件，固定为'torchStatusChange'。cameraManager对象获取成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TorchStatusInfo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## offCameraStatus
 
@@ -968,7 +991,7 @@ Unsubscribes from camera status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraStatusInfo&gt; | No | Callback used to get the camera status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraStatusInfo&gt; | No | Callback used to get the camera status change. |
 
 ## offFoldStatusChange
 
@@ -990,7 +1013,7 @@ Unsubscribes from fold status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FoldStatusInfo&gt; | No | Callback used to get the fold status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FoldStatusInfo&gt; | No | Callback used to get the fold status change. |
 
 ## offTorchStatusChange
 
@@ -1012,7 +1035,7 @@ Unsubscribes torch status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TorchStatusInfo&gt; | No | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TorchStatusInfo&gt; | No | Callback used to return the torch status change |
 
 ## on('cameraStatus')
 
@@ -1020,10 +1043,11 @@ Unsubscribes torch status change event callback.
 on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 ```
 
-Subscribes to camera status events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+相机设备状态回调，通过注册回调函数获取相机的状态变化。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 10
 
@@ -1039,8 +1063,8 @@ Subscribes to camera status events. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraStatus' | Yes | Event type. The value is fixed at **'cameraStatus'**. The event can be listened for when a **CameraManager** instance is obtained. This event is triggered and the corresponding information is returned only when the camera device is enabled or disabled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraStatusInfo&gt; | Yes | Callback used to return the camera status change. |
+| type | 'cameraStatus' | Yes | 监听事件，固定为'cameraStatus'。cameraManager对象获取成功后可监听。目前只支持对设备打开或者关闭会触发该事件并返回对应信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraStatusInfo&gt; | Yes | 回调函数，用于获取镜头状态变化信息。 |
 
 ## on('foldStatusChange')
 
@@ -1048,10 +1072,11 @@ Subscribes to camera status events. This API uses an asynchronous callback to re
 on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 ```
 
-Subscribes to fold status change events of the foldable device. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+注册折叠设备折叠状态变化的监听。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 12
 
@@ -1067,8 +1092,8 @@ Subscribes to fold status change events of the foldable device. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldStatusChange' | Yes | Event type. The value is fixed at **'foldStatusChange'**. The event is triggered when the fold state of the foldable device changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FoldStatusInfo&gt; | Yes | Callback used to return the fold state information about the foldable device. |
+| type | 'foldStatusChange' | Yes | 监听事件，固定为'foldStatusChange'。表示折叠设备折叠状态发生变化。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FoldStatusInfo&gt; | Yes | 回调函数。返回折叠设备折叠信息。 |
 
 ## on('torchStatusChange')
 
@@ -1076,10 +1101,11 @@ Subscribes to fold status change events of the foldable device. This API uses an
 on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 ```
 
-Subscribes to flashlight status change events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+手电筒状态变化回调，通过注册回调函数获取手电筒状态变化。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 11
 
@@ -1095,8 +1121,8 @@ Subscribes to flashlight status change events. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'torchStatusChange' | Yes | Event type. The value is fixed at **'torchStatusChange'**. The event can be listened for when a **CameraManager** instance is obtained. Currently, this event is triggered only in the following scenarios: The flashlight is turned on or turned off, or becomes unavailable or available. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TorchStatusInfo&gt; | Yes | Callback used to return the flashlight status. |
+| type | 'torchStatusChange' | Yes | 监听事件，固定为'torchStatusChange'。cameraManager对象获取成功后可监听。目前只支持手电筒打开，手电筒关闭，手电筒不可 用，手电筒恢复可用会触发该事件并返回对应信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TorchStatusInfo&gt; | Yes | 回调函数，用于获取手电筒状态变化信息。 |
 
 ## onCameraStatus
 
@@ -1118,7 +1144,7 @@ Subscribes camera status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraStatusInfo&gt; | Yes | Callback used to get the camera status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraStatusInfo&gt; | Yes | Callback used to get the camera status change. |
 
 ## onFoldStatusChange
 
@@ -1140,7 +1166,7 @@ Subscribes fold status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FoldStatusInfo&gt; | Yes | Callback used to get the fold status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FoldStatusInfo&gt; | Yes | Callback used to get the fold status change. |
 
 ## onTorchStatusChange
 
@@ -1162,7 +1188,7 @@ Subscribes torch status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TorchStatusInfo&gt; | Yes | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TorchStatusInfo&gt; | Yes | Callback used to return the torch status change |
 
 ## setTorchMode
 
@@ -1170,7 +1196,7 @@ Subscribes torch status change event callback.
 setTorchMode(mode: TorchMode): void
 ```
 
-Sets the flashlight mode.
+设置设备手电筒模式。
 
 **Since:** 11
 
@@ -1186,14 +1212,15 @@ Sets the flashlight mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Flashlight mode. If the input parameter is null or undefined, it is treated as 0 and the flashlight is turned off. |
+| mode | [TorchMode](arkts-camera-camera-torchmode-e.md) | Yes | 手电筒模式。传参为null或者undefined，作为0处理，手电筒关闭。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 11 - 17 |
+| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
+| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## setTorchModeOnWithLevel
 
@@ -1207,7 +1234,7 @@ ArkTS-Sta:
 setTorchModeOnWithLevel(torchLevel: double): void
 ```
 
-Sets the torch mode to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with the specified torch level.
+手电筒设置指定亮度级别。
 
 **Since:** 26.0.0
 
@@ -1225,12 +1252,13 @@ Sets the torch mode to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with the specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| torchLevel | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | the specified torch level, the value range is [0.0, 1.0] |
+| torchLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 手电筒亮度级别。通常范围是[0.0, 1.0]（0.0为最暗，1.0为最亮）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application.<br>**Applicable version:** 23 - 24 |
 

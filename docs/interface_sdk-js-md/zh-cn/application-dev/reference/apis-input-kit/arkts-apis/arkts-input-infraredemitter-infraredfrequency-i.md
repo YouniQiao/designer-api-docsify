@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
+## 导入模块
+
+```TypeScript
+import { infraredEmitter } from 'kits/@kit.InputKit';
+```
+
 ## max
 
 ```TypeScript
@@ -18,7 +24,7 @@ max: long
 
 最大支持频率，单位：Hz。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 15
 
@@ -36,7 +42,7 @@ min: long
 
 最小支持频率，单位：Hz。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 15
 

@@ -1,6 +1,6 @@
 # TabBarPosition
 
-Position of the tab bar. The default value is **TabBarPosition.BOTTOM**.
+设置页签栏位置，默认值为TabBarPosition.BOTTOM。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Position of the tab bar. The default value is **TabBarPosition.BOTTOM**.
 LEFT = 0
 ```
 
-The tab bar is on the left side of the screen.
+设置TabBar位于屏幕左侧
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ The tab bar is on the left side of the screen.
 BOTTOM = 1
 ```
 
-The tab bar is at the bottom of the screen.
+设置TabBar位于屏幕底部
 
 **Since:** 12
 

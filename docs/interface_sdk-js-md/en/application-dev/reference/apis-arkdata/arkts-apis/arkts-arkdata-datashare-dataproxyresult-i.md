@@ -1,6 +1,6 @@
 # DataProxyResult
 
-Defines a struct for the batch operation result of shared configuration.
+配置共享批量操作结果的数据结构。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Defines a struct for the batch operation result of shared configuration.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## result
 
 ```TypeScript
 result: DataProxyErrorCode
 ```
 
-Operation result code.
+操作结果的错误码。
 
-**Type:** DataProxyErrorCode
+**Type:** [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md)
 
 **Since:** 20
 
@@ -36,8 +42,7 @@ Operation result code.
 uri: string
 ```
 
-URI to be operated, with a maximum of 256 bytes. The value is fixed at the format of  
-**"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application.
+被操作的URI。固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不允许重复，字符串长度不超过256个字节。
 
 **Type:** string
 

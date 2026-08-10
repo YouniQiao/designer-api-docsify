@@ -1,6 +1,6 @@
 # PictureComplexityDegree (System API)
 
-Enumerates the complexity degree of the image.
+图片内容复杂度的枚举。
 
 **Since:** 22
 
@@ -18,7 +18,7 @@ Enumerates the complexity degree of the image.
 UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0
 ```
 
-Default value. The complexity degree of the image is unknown.
+默认值，图片内容复杂度未知。
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ Default value. The complexity degree of the image is unknown.
 PURE_PICTURE = 1
 ```
 
-The complexity degree of the image is pure.
+图片内容复杂度为纯净。
 
 **Since:** 22
 
@@ -54,7 +54,7 @@ The complexity degree of the image is pure.
 MODERATE_COMPLEXITY_PICTURE = 2
 ```
 
-The complexity degree of the image is moderate.
+图片内容复杂度为一般。
 
 **Since:** 22
 
@@ -72,7 +72,7 @@ The complexity degree of the image is moderate.
 VERY_FLOWERY_PICTURE = 3
 ```
 
-The complexity degree of the image is very flowery.
+图片内容复杂度为复杂。
 
 **Since:** 22
 

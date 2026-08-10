@@ -1,12 +1,18 @@
 # createZipSync
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createZipSync
 
 ```TypeScript
 function createZipSync(): Zip
 ```
 
-Creates this **Zip** instance. A **Zip** instance is returned upon a success.
+创建压缩解压缩对象实例，成功时返回压缩解压缩对象实例。
 
 **Since:** 12
 
@@ -22,9 +28,9 @@ Creates this **Zip** instance. A **Zip** instance is returned upon a success.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The **Zip** instance created. |
+| [Zip](arkts-basicservices-zlib-zip-i.md) | 返回压缩解压缩对象实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

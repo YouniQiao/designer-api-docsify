@@ -1,7 +1,6 @@
 # SaveOccasionFlag
 
-Enumerates the scenarios for saving the application state. This enum is used as an input parameter of  
-[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+保存条件标志，[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口状态保存时的选项参数，该类型为枚举。
 
 **Since:** 9
 
@@ -17,7 +16,7 @@ Enumerates the scenarios for saving the application state. This enum is used as 
 SAVE_WHEN_ERROR = 0x0001
 ```
 
-Saving the application state when an application fault occurs.
+当发生应用故障时保存。
 
 **Since:** 9
 
@@ -35,7 +34,7 @@ Saving the application state when an application fault occurs.
 SAVE_WHEN_BACKGROUND = 0x0002
 ```
 
-Saving the application state when the application is switched to the background.
+当应用切入后台时保存。
 
 **Since:** 9
 

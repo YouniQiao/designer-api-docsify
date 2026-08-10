@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## camera
 
 ```TypeScript
@@ -18,7 +24,7 @@ camera: CameraDevice
 
 相机信息。
 
-**类型：** CameraDevice
+**类型：** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ status: CameraStatus
 
 相机状态。
 
-**类型：** CameraStatus
+**类型：** [CameraStatus](arkts-camera-camera-camerastatus-e.md)
 
 **起始版本：** 10
 

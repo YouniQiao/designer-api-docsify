@@ -1,6 +1,6 @@
 # PhotoBrowserUIElement
 
-PhotoBrowserUIElement. include CHECKBOX and BACK\_BUTTON
+PhotoBrowserUIElement. include CHECKBOX and BACK_BUTTON
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ CHECKBOX. checkbox
 BACK_BUTTON = 1
 ```
 
-BACK\_BUTTON. back button
+BACK_BUTTON. back button
 
 **Since:** 26.0.0
 

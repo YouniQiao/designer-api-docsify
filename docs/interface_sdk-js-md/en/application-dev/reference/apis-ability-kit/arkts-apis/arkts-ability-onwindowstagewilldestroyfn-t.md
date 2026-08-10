@@ -4,7 +4,7 @@
 type OnWindowStageWillDestroyFn = (ability: UIAbility, windowStage: window.WindowStage) => void
 ```
 
-Defines a onWindowStageWillDestroy function.
+注册监听应用上下文的生命周期后，在UIAbility的onWindowStageDestroy触发前回调。
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ Defines a onWindowStageWillDestroy function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the ability to register for listening.  |
-| windowStage | window.WindowStage | Yes | window stage to create  |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 当前Ability对象。 |
+| windowStage | window.WindowStage | Yes | 当前WindowStage对象。 |
 

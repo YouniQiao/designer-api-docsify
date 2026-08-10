@@ -1,12 +1,18 @@
 # factoryReset (System API)
 
+## Modules to Import
+
+```TypeScript
+import { manager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## factoryReset
 
 ```TypeScript
 function factoryReset(): Promise<void>
 ```
 
-Restores NearLink settings.
+恢复星闪设置。
 
 **Since:** 26.0.0
 
@@ -26,14 +32,14 @@ Restores NearLink settings.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 

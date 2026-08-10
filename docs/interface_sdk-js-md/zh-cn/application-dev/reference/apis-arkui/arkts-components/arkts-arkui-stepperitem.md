@@ -16,10 +16,12 @@
 StepperItem()
 ```
 
-创建[Stepper]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_组件的页面子组件。
-    **说明：**
-    从API version 8开始支持，从API version 22开始废弃，建议使用  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。
+创建[Stepper]{@link stepper}组件的页面子组件。
+
+> **说明：**
+
+> 从API version 8开始支持，从API version 22开始废弃，建议使用
+> [Swiper](docroot://reference/apis-arkui/arkui-ts/ts-container-swiper.md#属性)替代。
 
 **起始版本：** 8
 
@@ -37,3 +39,4 @@ StepperItem()
 
 ## 汇总
 
+- [ItemState](arkts-arkui-stepperitem-itemstate-e.md)

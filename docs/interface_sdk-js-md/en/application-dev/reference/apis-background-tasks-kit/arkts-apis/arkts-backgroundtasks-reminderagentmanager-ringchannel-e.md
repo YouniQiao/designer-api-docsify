@@ -1,6 +1,6 @@
 # RingChannel
 
-Enumerates the audio playback channels for the custom prompt tone.
+自定义提示音的音频播放通道。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the audio playback channels for the custom prompt tone.
 RING_CHANNEL_ALARM = 0
 ```
 
-Alarm channel.
+闹钟通道。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Alarm channel.
 RING_CHANNEL_MEDIA = 1
 ```
 
-Media channel.
+媒体通道。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ Media channel.
 RING_CHANNEL_NOTIFICATION = 2
 ```
 
-Notification slot.
+通知通道。
 
 **Since:** 23
 

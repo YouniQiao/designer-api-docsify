@@ -1,6 +1,6 @@
 # AdvancedMeasureFormat
 
-Provides the number formatting capability, supporting automatic unit conversion based on specific application scenarios.
+提供数字格式化能力，支持根据单位使用场景自动转换合适的单位。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides the number formatting capability, supporting automatic unit conversion 
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)
 ```
 
-A constructor used to create an AdvancedMeasureFormat object.
+创建数字格式化对象。
 
 **Since:** 23
 
@@ -34,8 +40,8 @@ A constructor used to create an AdvancedMeasureFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| numberFormat | Intl.NumberFormat | Yes | 用于格式化数字的对象。 |
+| options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
 
 ## format
 
@@ -43,7 +49,7 @@ A constructor used to create an AdvancedMeasureFormat object.
 format(num: double): string
 ```
 
-Formats a number by appropriate measure for usage scenarios. For instance, when formatting the value 12.3for rainfall in the English locale, the output is "12.3 mm".
+对数字进行格式化。
 
 **Since:** 23
 
@@ -61,11 +67,11 @@ Formats a number by appropriate measure for usage scenarios. For instance, when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| num | double | Yes | number to be formatted. |
+| num | double | Yes | 需要格式化的数字。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | measure formatting result. |
+| string | 格式化后的文本。 |
 

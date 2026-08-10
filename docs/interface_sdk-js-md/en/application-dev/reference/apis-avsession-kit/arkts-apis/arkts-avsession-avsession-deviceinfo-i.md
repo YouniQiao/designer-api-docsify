@@ -1,6 +1,6 @@
 # DeviceInfo
 
-Device Information Definition
+播放设备的相关信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Device Information Definition
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## audioCapabilities
 
 ```TypeScript
 audioCapabilities?: AudioCapabilities
 ```
 
-Audio capabilities supported by the device.
+播放设备支持的音频能力。
 
-**Type:** AudioCapabilities
+**Type:** [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md)
 
 **Since:** 20
 
@@ -36,9 +42,9 @@ Audio capabilities supported by the device.
 castCategory: AVCastCategory
 ```
 
-The playback type supported by the device. See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+投播的类别。
 
-**Type:** AVCastCategory
+**Type:** [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
 
 **Since:** 10
 
@@ -56,7 +62,7 @@ The playback type supported by the device. See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_
 deviceId: string
 ```
 
-Audio device id.The length of the audioDeviceId array is greater than 1if output to multiple devices at the same time.
+播放设备的ID。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ Audio device id.The length of the audioDeviceId array is greater than 1if output
 deviceName: string
 ```
 
-Device name. The length of the deviceName array is greater than 1if output to multiple devices at the same time.
+播放设备的名称。
 
 **Type:** string
 
@@ -96,9 +102,9 @@ Device name. The length of the deviceName array is greater than 1if output to mu
 deviceType: DeviceType
 ```
 
-device type.
+播放设备的类型。
 
-**Type:** DeviceType
+**Type:** [DeviceType](arkts-avsession-avsession-devicetype-e.md)
 
 **Since:** 10
 
@@ -116,7 +122,7 @@ device type.
 manufacturer?: string
 ```
 
-Device manufacturer.
+播放设备生产厂家。
 
 **Type:** string
 
@@ -136,7 +142,7 @@ Device manufacturer.
 modelName?: string
 ```
 
-Device model name.
+播放设备型号名称。
 
 **Type:** string
 
@@ -156,7 +162,7 @@ Device model name.
 supportedDrmCapabilities?: Array<string>
 ```
 
-The drm capability supported by current device, each drm is represented by uuid.
+播放设备支持的DRM能力。
 
 **Type:** Array&lt;string&gt;
 
@@ -176,9 +182,13 @@ The drm capability supported by current device, each drm is represented by uuid.
 supportedProtocols?: int
 ```
 
-The protocols supported by current device, can be union of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+播放设备支持的协议。
 
-**Type:** int
+默认为TYPE_LOCAL,具体取值来自[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)，可以是ProtocolType中的某个协议或者多个协议的组合。
+
+设备仅支持一种协议，返回对应枚举值；设备支持多种协议，返回对应枚举值之和。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -196,9 +206,9 @@ The protocols supported by current device, can be union of \_\_\_JSDOC\_LINK\_DE
 supportedPullClients?: Array<int>
 ```
 
-Whether the device supports pull-end playback, including a collection of pull-end client IDs.
+支持拉端客户端的ID集合（只有支持4K投播的设备会返回此字段）。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 20
 

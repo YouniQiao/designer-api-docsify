@@ -1,10 +1,11 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager.
+当前窗口实例，窗口管理器管理的基本单元。
 
-In the following API examples, you must use  
-[getLastWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[createWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,or [findWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+下列API示例中都需先使用  
+[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow)、  
+[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)、  
+[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
 
 **Since:** 6
 
@@ -14,29 +15,34 @@ In the following API examples, you must use
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## attachLayoutToParentWindow
 
 ```TypeScript
 attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWindowAttachOptions): Promise<void>
 ```
 
-Attaches a first-level child window to the main window to maintain a fixed relative position.This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window.The child window and the parent window use the same window anchor point.
-    **NOTE**  
-    
-    - Only first-level child windows can call this API. The child window must be in floating window mode  
-    (that is, the window mode is **window.WindowStatusType.FLOATING**).  
-    
-    - After the child window calls this API, the display position of the child window immediately follows the  
-    main window and the relative position remains unchanged. In addition, the size and mode changes of the main  
-    window can be listened to. The effect will persist unless the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API is called for detaching.  
-    
-    -After the child window calls this API, calling APIs such as  
-    [moveWindowTo()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,  
-    [maximize()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and  
-    [setFollowParentWindowLayoutEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_  
-    to change the window position, or dragging and moving or dragging and resizing the child window through mouse  
-    or touch operations will not take effect.
+设置一级子窗与主窗保持相对位置不变。使用Promise异步回调。
+
+该相对位置通过子窗与主窗之间的锚点偏移量表示，子窗和主窗使用的窗口锚点相同。
+
+> **说明：**
+> 
+> - 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。
+> 
+> - 当子窗调用该接口后，立即使其显示位置跟随主窗并保持相对位置不变，并且可以监听主窗大小及模式切换。除非调用
+> [detachLayoutToParentWindow()](arkts-arkui-window-window-i-sys.md#detachlayouttoparentwindow)接口解绑，否则效果将持续。
+> 
+> - 当子窗调用该接口后，再调用
+> [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、
+> [maximize()](arkts-arkui-window-window-i.md#maximize)、
+> [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)等修改窗
+> 口位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将不生效。
 
 **Since:** 24
 
@@ -54,25 +60,73 @@ Attaches a first-level child window to the main window to maintain a fixed relat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| anchorInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Anchor point information used to attach the first-level child window to the main window to maintain the fixed relative position. If this parameter is not passed, the default logic is the same as that of [WindowAnchorInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| attachOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Additional parameters for setting the child window layout. If this parameter is not passed, the default logic is the same as that of [SubWindowAttachOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | No | 一级子窗与主窗保持相对位置不变时的锚点参数。若不传，默认逻辑参考 [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md)。 |
+| attachOptions | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) | No | 设置子窗布局的附加参数。若不传，默认逻辑参考 [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function attachLayoutToParentWindow can not work correctly due to limited device capabilities. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only subwindows are supported; 2. The current window's parent window is not a main window; 3. Only level-1 subwindows are supported. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: 1. The subwindow is following its parent window's layout. 2. The subwindow is not in the floating mode. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function attachLayoutToParentWindow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: 1. Invalid window type. Only subwindows are supported; 2. The current window's parent window is not a main window; 3. Only level-1 subwindows are supported. |
+| 1300010 | The operation in the current window status is invalid. Possible cause: 1. The subwindow is following its parent window's layout. 2. The subwindow is not in the floating mode. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    windowStage.loadContent('pages/Index', (loadError: BusinessError) => {
+      if (loadError.code) {
+        console.error(`Failed to load the content. Cause code: ${loadError.code}, message: ${loadError.message}`);
+        return;
+      }
+      console.info("Succeeded in loading the content.");
+      windowStage.createSubWindow("subWindow").then((subWindow: window.Window) => {
+        if (subWindow == null) {
+          console.error("Failed to create the subWindow. Cause: The data is empty");
+          return;
+        }
+        let anchorInfo : window.WindowAnchorInfo = {
+          anchorType: window.WindowAnchor.TOP_START,
+          offsetX: 0,
+          offsetY: 0
+        };
+        let attachOptions: window.SubWindowAttachOptions = {
+          parentWindowSizeChangeCallback:(data: window.Size) => {
+            console.info(`Successfully accepted parentWindow size change, width: ${data.width}, height: ${data.height}`);
+          },
+          parentWindowStatusChangeCallback:(type: window.WindowStatusType) => {
+            console.info(`Successfully accepted parentWindow status change, statusType: ${type}`);
+          },
+          isIntersectedWidthLimit: true,
+          isIntersectedHeightLimit: true
+        }
+        subWindow.attachLayoutToParentWindow(anchorInfo, attachOptions).then(() => {
+          console.info("Succeeded in attaching to the main window");
+        }).catch((error: BusinessError) => {
+          console.error(`attachLayoutToParentWindow failed. ${error.code} ${error.message}`);
+        })
+      }).catch((error: BusinessError) => {
+        console.error(`createSubWindow failed. ${error.code} ${error.message}`);
+      })
+    });
+  }
+}
+```
 
 ## bindDialogTarget
 
@@ -80,7 +134,7 @@ Attaches a first-level child window to the main window to maintain a fixed relat
 bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promise<void>
 ```
 
-Binds the modal window to the target window. After the binding is successful, the target window cannot respond to user operations. In addition, a callback used to listen for modal window destruction events is added. This API uses a promise to return the result.
+绑定模态窗口与目标窗口，成功绑定后，目标窗口不能响应用户操作。同时添加目标窗口销毁监听，使用Promise异步回调。
 
 **Since:** 9
 
@@ -96,25 +150,25 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | Yes | Token of the target window. |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
+| token | rpc.RemoteObject | Yes | 目标窗口token值。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 目标窗口销毁监听。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -172,7 +226,7 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callback: AsyncCallback<void>): void
 ```
 
-Binds the modal window to the target window. After the binding is successful, the target window cannot respond to user operations. In addition, a callback used to listen for modal window destruction events is added. This API uses an asynchronous callback to return the result.
+绑定模态窗口与目标窗口，成功绑定后，目标窗口不能响应用户操作。同时添加目标窗口销毁监听，使用callback异步回调。
 
 **Since:** 9
 
@@ -188,20 +242,20 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | rpc.RemoteObject | Yes | Token of the target window. |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| token | rpc.RemoteObject | Yes | 目标窗口token值。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 目标窗口销毁监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -261,7 +315,7 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>): Promise<void>
 ```
 
-Binds the modal window to the target window. After the binding is successful, the target window cannot respond to user operations. In addition, a callback used to listen for modal window destruction events is added. This API uses a promise to return the result.
+绑定模态窗口与目标窗口，成功绑定后，目标窗口不能响应用户操作。同时添加目标窗口销毁监听，使用Promise异步回调。
 
 **Since:** 9
 
@@ -277,25 +331,25 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | Yes | RequestInfo** of the target window. |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
+| requestInfo | dialogRequest.RequestInfo | Yes | 目标窗口RequestInfo值。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 目标窗口销毁监听。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
@@ -341,7 +395,7 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>, callback: AsyncCallback<void>): void
 ```
 
-Binds the modal window to the target window. After the binding is successful, the target window cannot respond to user operations. In addition, a callback used to listen for modal window destruction events is added. This API uses an asynchronous callback to return the result.
+绑定模态窗口与目标窗口，成功绑定后，目标窗口不能响应用户操作。同时添加目标窗口销毁监听，使用callback异步回调。
 
 **Since:** 9
 
@@ -357,20 +411,20 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | dialogRequest.RequestInfo | Yes | RequestInfo** of the target window. |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| requestInfo | dialogRequest.RequestInfo | Yes | 目标窗口RequestInfo值。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 目标窗口销毁监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
@@ -418,20 +472,19 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 detachLayoutToParentWindow(): Promise<void>
 ```
 
-Detach a first-level child window from the main window to cancel a fixed relative position.This API uses a promise to return the result.
-    **NOTE**  
-    
-    - When the child window calls this API, the child window must be in the attached state.  
-    
-    - After detached by calling this API, the child window retains its position during attaching.  
-    You can drag the child window to change its size and position.  
-    
-    - After the detaching, calling APIs such as  
-    [moveWindowTo()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-    [maximize()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and  
-    [setFollowParentWindowLayoutEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    to change the window position, or dragging and moving or dragging and resizing the child window through mouse  
-    or touch operations will take effect.
+解除一级子窗与主窗保持相对位置不变的协同关系。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 子窗调用接口时需保持子窗处于协同状态。
+> 
+> - 调用接口解除协同后，子窗将保持协同时的位置，可对子窗进行拖拽以修改子窗大小和位置。
+> 
+> - 解除协同后，调用
+> [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、
+> [maximize()](arkts-arkui-window-window-i.md#maximize)、
+> [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)修改窗口
+> 位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将生效。
 
 **Since:** 24
 
@@ -449,18 +502,51 @@ Detach a first-level child window from the main window to cancel a fixed relativ
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function detachLayoutToParentWindow cannot work correctly due to limited device capabilities. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only subwindows are supported; 2. Only level-1 subwindows are supported. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The subwindow is not attached to the main window. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function detachLayoutToParentWindow cannot work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: 1. Invalid window type. Only subwindows are supported; 2. Only level-1 subwindows are supported. |
+| 1300010 | The operation in the current window status is invalid. Possible cause: The subwindow is not attached to the main window. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    windowStage.loadContent('pages/Index', (loadError: BusinessError) => {
+      if (loadError.code) {
+        console.error(`Failed to load the content. Cause code: ${loadError.code}, message: ${loadError.message}`);
+        return;
+      }
+      console.info("Succeeded in loading the content.");
+      windowStage.createSubWindow("subWindow").then((subWindow: window.Window) => {
+        if (subWindow == null) {
+          console.error("Failed to create the subWindow. Cause: The data is empty");
+          return;
+        }
+        subWindow.detachLayoutToParentWindow().then(() => {
+          console.info("Succeeded in detaching to the main window");
+        }).catch((error: BusinessError) => {
+          console.error(`detachLayoutToParentWindow failed. ${error.code} ${error.message}`);
+        })
+      }).catch((error: BusinessError) => {
+        console.error(`createSubWindow failed. ${error.code} ${error.message}`);
+      })
+    });
+  }
+}
+```
 
 ## getRotationLocked
 
@@ -468,7 +554,7 @@ Detach a first-level child window from the main window to cancel a fixed relativ
 getRotationLocked(): boolean
 ```
 
-Checks whether the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ has its screen rotation locked. If this API is called by a non-system window, error code 1300029 is thrown.
+仅支持[系统窗口](../../../windowmanager/window-terminology.md#系统窗口)获取当前旋转锁定状态。非系统窗口调用返回1300029错误码。
 
 **Since:** 22
 
@@ -484,19 +570,19 @@ Checks whether the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ has its screen rotation lo
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether rotation is currently locked for this system window. **true** if locked, **false** otherwise. |
+| boolean | 当前系统窗是否设置旋转锁定。true表示当前系统窗已锁定旋转；false表示当前系统窗未锁定旋转。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getRotationLocked can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| 1300029 | This window type is invalid. Possible cause: A non-system window calls this API. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function setRotationLocked can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1300029 | This window type is invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -513,7 +599,7 @@ try {
 getTransitionController(): TransitionController
 ```
 
-Obtains the transition animation controller.
+获取窗口属性转换控制器。
 
 **Since:** 9
 
@@ -529,17 +615,17 @@ Obtains the transition animation controller.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Transition animation controller. |
+| [TransitionController](arkts-arkui-window-transitioncontroller-i-sys.md) | 属性转换控制器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let controller = windowClass.getTransitionController(); // Obtain the transition animation controller.
@@ -551,7 +637,7 @@ let controller = windowClass.getTransitionController(); // Obtain the transition
 hide (callback: AsyncCallback<void>): void
 ```
 
-Hides this window. This API uses an asynchronous callback to return the result. This API takes effect only for a system window or an application child window.
+隐藏当前窗口，使用callback异步回调，仅支持系统窗口与应用子窗口。
 
 **Since:** 7
 
@@ -567,16 +653,16 @@ Hides this window. This API uses an asynchronous callback to return the result. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -597,7 +683,7 @@ windowClass.hide((err: BusinessError) => {
 hide(): Promise<void>
 ```
 
-Hides this window. This API uses a promise to return the result. This API takes effect only for a system window or an application child window.
+隐藏当前窗口，使用Promise异步回调，仅支持系统窗口与应用子窗口。
 
 **Since:** 7
 
@@ -613,16 +699,16 @@ Hides this window. This API uses a promise to return the result. This API takes 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -641,10 +727,9 @@ promise.then(() => {
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to hide non-system floating windows (where [windowType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is  
-**TYPE\_FLOAT**). This API uses an asynchronous callback to return the result.
+设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md)类型为TYPE_FLOAT），使用callback异步回调。
 
-A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non-system floating window.
+非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会被上层的非系统级悬浮窗口遮挡。
 
 **Since:** 11
 
@@ -660,21 +745,21 @@ A non-system floating window is a floating window created by a non-system applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shouldHide | boolean | Yes | Whether to hide non-system floating windows. **true** to hide, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| shouldHide | boolean | Yes | 指示是否隐藏非系统级的悬浮窗口，true表示隐藏，false表示不隐藏。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -725,10 +810,9 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to hide non-system floating windows (where [windowType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is  
-**TYPE\_FLOAT**). This API uses a promise to return the result.
+设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md)类型为TYPE_FLOAT），使用Promise异步回调。
 
-A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non-system floating window.
+非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会被上层的非系统级悬浮窗口遮挡。
 
 **Since:** 11
 
@@ -744,26 +828,26 @@ A non-system floating window is a floating window created by a non-system applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shouldHide | boolean | Yes | Whether to hide non-system floating windows. **true** to hide, **false** otherwise. |
+| shouldHide | boolean | Yes | 指示是否隐藏非系统级的悬浮窗口，true表示隐藏，false表示不隐藏。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -814,7 +898,7 @@ export default class EntryAbility extends UIAbility {
 hideWithAnimation(callback: AsyncCallback<void>): void
 ```
 
-Hides this window and plays an animation during the process. This API uses an asynchronous callback to return the result. This API takes effect only for a system window.
+隐藏当前窗口，过程中播放动画，使用callback异步回调，仅支持系统窗口。
 
 **Since:** 9
 
@@ -830,18 +914,18 @@ Hides this window and plays an animation during the process. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only system windows are supported. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -862,7 +946,7 @@ windowClass.hideWithAnimation((err: BusinessError) => {
 hideWithAnimation(): Promise<void>
 ```
 
-Hides this window and plays an animation during the process. This API uses a promise to return the result. This API takes effect only for a system window.
+隐藏当前窗口，过程中播放动画，使用Promise异步回调，仅支持系统窗口。
 
 **Since:** 9
 
@@ -878,18 +962,18 @@ Hides this window and plays an animation during the process. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only system windows are supported. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -908,7 +992,7 @@ promise.then(() => {
 isMainWindowFullScreenAcrossDisplays(): Promise<boolean>
 ```
 
-Checks whether the main window is in full-screen mode across multiple displays. This API uses a promise to return the result. It takes effect only for the main window and child windows.
+判断当前窗口的主窗口是否是跨多块屏幕使用全屏模式显示，使用Promise异步回调，仅支持主窗口与应用子窗口。
 
 **Since:** 20
 
@@ -924,19 +1008,19 @@ Checks whether the main window is in full-screen mode across multiple displays. 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result indicating whether the main window is in full- screen mode across multiple displays. **true** if yes, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口的主窗口跨多块屏幕使用全屏模式显示，返回false表示当前窗口的主窗口未跨多块屏幕使用全屏模式显示。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -959,7 +1043,7 @@ try {
 off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from events indicating whether the main window is in full-screen mode across multiple displays.
+取消监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
 
 **Since:** 20
 
@@ -975,20 +1059,20 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'mainWindowFullScreenAcrossDisplaysChanged' | Yes | Event type. The value is fixed at **'mainWindowFullScreenAcrossDisplaysChanged'**, indicating changes in whether the main window is in full- screen mode across multiple displays. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result indicating whether the main window is in full-screen mode across multiple displays. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'mainWindowFullScreenAcrossDisplaysChanged' | Yes | 监听事件，固定为'mainWindowFullScreenAcrossDisplaysChanged' ，即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 回调函数。即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口的主窗口跨多块 屏幕使用全屏模式显示的状态变化回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 const callback = (mainWindowFullScreenAcrossDisplaysChanged: boolean) => {
@@ -1012,7 +1096,7 @@ try {
 offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from events indicating whether the main window is in full-screen mode across multiple displays.
+取消监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
 
 **Since:** 23
 
@@ -1028,17 +1112,17 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result indicating whether the main window is in full-screen mode across multiple displays. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 回调函数。即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口的主窗口跨多块 屏幕使用全屏模式显示的状态变化回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 202 | Permission verification failed. A nonsystem application calls a system API. |
 
 ## on('mainWindowFullScreenAcrossDisplaysChanged')
 
@@ -1046,7 +1130,7 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void
 ```
 
-Subscribes to events indicating whether the main window is in full-screen mode across multiple displays.
+监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
 
 **Since:** 20
 
@@ -1062,20 +1146,20 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'mainWindowFullScreenAcrossDisplaysChanged' | Yes | Event type. The value is fixed at **'mainWindowFullScreenAcrossDisplaysChanged'**, indicating changes in whether the main window is in full- screen mode across multiple displays. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result indicating whether the main window is in full-screen mode across multiple displays. **true** if yes, **false** otherwise. |
+| type | 'mainWindowFullScreenAcrossDisplaysChanged' | Yes | 监听事件，固定为'mainWindowFullScreenAcrossDisplaysChanged' ，即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化回调。true表示主窗口进入跨多块屏幕使用全屏模式显示状态，false表示主窗口退出 跨多块屏幕使用全屏模式显示状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 const callback = (mainWindowFullScreenAcrossDisplaysChanged: boolean) => {
@@ -1094,7 +1178,7 @@ try {
 onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void
 ```
 
-Subscribes to events indicating whether the main window is in full-screen mode across multiple displays.
+监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
 
 **Since:** 23
 
@@ -1110,17 +1194,17 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result indicating whether the main window is in full-screen mode across multiple displays. **true** if yes, **false** otherwise. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化回调。true表示主窗口进入跨多块屏幕使用全屏模式显示状态，false表示主窗口退出 跨多块屏幕使用全屏模式显示状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 202 | Permission verification failed. A nonsystem application calls a system API. |
 
 ## opacity
 
@@ -1134,8 +1218,7 @@ ArkTS-Sta:
 opacity(opacity: double): void
 ```
 
-Sets the opacity for this window. This API can be used only when you  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+设置窗口不透明度。仅支持在[自定义系统窗口的显示与隐藏动画](../../../windowmanager/system-window-stage-sys.md#自定义系统窗口的显示与隐藏动画)中使用。
 
 **Since:** 9
 
@@ -1151,18 +1234,18 @@ Sets the opacity for this window. This API can be used only when you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opacity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Opacity. The value is a floating-point number in the range [0.0, 1.0]. The value **0.0** means completely transparent, and **1.0** means completely opaque. |
+| opacity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 不透明度。该参数为浮点数，取值范围为[0.0, 1.0]。0.0表示完全透明，1.0表示完全不透明。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1184,10 +1267,10 @@ ArkTS-Sta:
 raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void
 ```
 
-Raises a child window above a target child window. This API uses an asynchronous callback to return the result.
+将同一个主窗口下的子窗口抬升到目标子窗口之上。使用callback异步回调。
 
-Before calling this API, ensure that the child window to raise and the target child window have been created and  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ has been successfully executed for each.
+使用该接口需要确保要抬升的子窗口和目标子窗口都已创建完成，分别调用  
+[showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
 
 **Since:** 10
 
@@ -1203,22 +1286,22 @@ Before calling this API, ensure that the child window to raise and the target ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the target child window, which is the value of **properties.id** in [properties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ obtained through [getWindowProperties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Mandatory parameters are left unspecified. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: Mandatory parameters are left unspecified. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1300009 | The parent window is invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -1272,10 +1355,10 @@ ArkTS-Sta:
 raiseAboveTarget(windowId: int): Promise<void>
 ```
 
-Raises a child window above a target child window. This API uses a promise to return the result.
+将同一个主窗下的子窗口提升到目标子窗口之上。使用Promise异步回调。
 
-Before calling this API, ensure that the child window to raise and the target child window have been created and  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ has been successfully executed for each.
+使用该接口需要确保要抬升的子窗口和目标子窗口都已创建完成，分别调用  
+[showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
 
 **Since:** 10
 
@@ -1291,27 +1374,27 @@ Before calling this API, ensure that the child window to raise and the target ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the target child window, which is the value of **properties.id** in [properties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ obtained through [getWindowProperties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Mandatory parameters are left unspecified. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: Mandatory parameters are left unspecified. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1300009 | The parent window is invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -1363,16 +1446,14 @@ ArkTS-Sta:
 raiseMainWindowAboveTarget(windowId: int): Promise<void>
 ```
 
-Moves the main window above another main window within the same application, with child windows following their parents' layer change. This API uses a promise to return the result.
+将主窗口的层级调整至同应用下的另一个主窗口之上，子窗口的层级会跟随所属主窗口变动。使用Promise异步回调。
 
-This API can be called only by the main window of a system application.
+仅支持系统应用主窗口调用。
 
-You need to pass the ID of the target main window. Both the calling window and the target window must be in the same application process, displayed on the same physical screen, below the lock screen layer, not topmost, not modal, and have no application-modal child windows.
+传入目标主窗口的id，调用窗口和目标窗口需满足：同应用进程、显示在同一物理屏、层级低于锁屏、非置顶主窗、非模态主窗且无模应用子窗。
 
-- If the application's main window or its child windows currently have focus, calling this API to lower the layer  
-will cause the window to lose focus automatically, and the highest-layered application window will gain focus.  
-- If the main window calls this API to move above the current focused window, the highest-layered window among  
-the raised main window and its child windows will gain focus. If the main window calls this API without moving above the current focused window, the focus remains unchanged.
+- 应用主窗口或者它的子窗口如果是焦点窗口，此主窗口调用该接口降低层级后则自动失焦，由当前层级最高的应用窗口获焦。  
+- 应用主窗口调用该接口调整层级后超过当前焦点窗口，则被抬升主窗口及其子窗口中，层级最高的窗口自动获焦；应用主窗口调用该接口调整层级后未超过当前焦点窗口，则焦点不做转移。
 
 **Since:** 20
 
@@ -1388,26 +1469,26 @@ the raised main window and its child windows will gain focus. If the main window
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the target main window. The value is an integer. It is the value of **properties.id** in [properties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ obtained through [getWindowProperties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标主窗口的id，该参数为整数，通过 [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -1535,10 +1616,9 @@ export default class RaiseMainWindowAbility extends UIAbility {
 raiseToAppTop(callback: AsyncCallback<void>): void
 ```
 
-Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result.
+提升应用子窗口到应用顶层。使用callback异步回调。
 
-Before calling this API, ensure that the child window has been created and  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ has been successfully executed.
+使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
 
 **Since:** 10
 
@@ -1554,19 +1634,19 @@ Before calling this API, ensure that the child window has been created and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1300009 | The parent window is invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -1605,12 +1685,12 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use  
-[on('windowEvent')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to listen for the focus status of the window.
+支持当前窗口主动请求获焦/失焦，使用Promise异步回调。调用成功即返回，该接口返回值不代表最终获焦/失焦生效结果。可使用  
+[on('windowEvent')](@ohos.window:window.Window.on(type: 'windowEvent', callback: Callback&lt;WindowEventType&gt;))监听窗口获焦/失焦状态。
 
-When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed).
+获焦请求发送后，窗口获焦结果受到窗口可获焦属性及窗口可见状态的限制。获焦成功的窗口需满足以下约束：1.窗口支持获焦；2.窗口可见（窗口已显示，未销毁且未退至后台）。
 
-Conversely, once a blur request is sent, the window will lose focus without any conditions.
+失焦请求发送后，窗口无条件失焦。
 
 **Since:** 13
 
@@ -1626,25 +1706,25 @@ Conversely, once a blur request is sent, the window will lose focus without any 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFocused | boolean | Yes | Whether to gain or lose focus. **true** to gain focus, **false** otherwise. |
+| isFocused | boolean | Yes | 是否获取焦点，true表示请求获焦，false表示请求失焦。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed, non-system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1664,8 +1744,7 @@ promise.then(() => {
 rotate(rotateOptions: RotateOptions): void
 ```
 
-Sets the rotation parameters for this window. This API can be used only when you  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+设置窗口旋转参数。仅支持在[自定义系统窗口的显示与隐藏动画](../../../windowmanager/system-window-stage-sys.md#自定义系统窗口的显示与隐藏动画)中使用。
 
 **Since:** 9
 
@@ -1681,18 +1760,18 @@ Sets the rotation parameters for this window. This API can be used only when you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotateOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rotation parameters to set. |
+| rotateOptions | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | Yes | 旋转参数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let obj: window.RotateOptions = {
@@ -1715,8 +1794,7 @@ try {
 scale(scaleOptions: ScaleOptions): void
 ```
 
-Sets the scale parameters for this window. This API can be used only when you  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+设置窗口缩放参数。仅支持在[自定义系统窗口的显示与隐藏动画](../../../windowmanager/system-window-stage-sys.md#自定义系统窗口的显示与隐藏动画)中使用。
 
 **Since:** 9
 
@@ -1732,18 +1810,18 @@ Sets the scale parameters for this window. This API can be used only when you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scaleOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scale parameters to set. |
+| scaleOptions | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | Yes | 缩放参数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let obj: window.ScaleOptions = {
@@ -1771,12 +1849,11 @@ ArkTS-Sta:
 setBackdropBlur(radius: double): void
 ```
 
-Blurs the background of this window.
+设置窗口背景模糊。
 
-The window background refers to the lower-layer area covered by the window, which is the same as the window size.
+窗口背景是指窗口覆盖的下层区域，与窗口大小相同。
 
-To make the blur effect visible, you must set the window background transparent by calling  
-[setWindowBackgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+需要通过[setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)将窗口内容背景设置成透明，否则无法看到模糊效果。
 
 **Since:** 9
 
@@ -1792,18 +1869,18 @@ To make the blur effect visible, you must set the window background transparent 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the blur. The value is a floating-point number greater than or equal to 0.0, in px. The value **0.0** means that the blur is disabled for the background of the window. |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示窗口背景模糊的半径值。该参数为浮点数，单位为px，取值范围为[0.0, +∞)，取值为0.0表示关闭窗口背景模糊。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1820,7 +1897,7 @@ try {
 setBackdropBlurStyle(blurStyle: BlurStyle): void
 ```
 
-Sets the blur style for the background of this window.
+设置窗口背景模糊类型。
 
 **Since:** 9
 
@@ -1836,18 +1913,18 @@ Sets the blur style for the background of this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Blur style to set for the background of the window. |
+| blurStyle | [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md) | Yes | 表示窗口背景模糊类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1869,7 +1946,7 @@ ArkTS-Sta:
 setBlur(radius: double): void
 ```
 
-Blurs this window.
+设置窗口模糊。
 
 **Since:** 9
 
@@ -1885,18 +1962,18 @@ Blurs this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the blur. The value is a floating-point number greater than or equal to 0.0, in px. The value **0.0** means that the blur is disabled for the window. |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示窗口模糊的半径值。该参数为浮点数，单位为px，取值范围为[0, +∞)，取值为0.0时表示关闭窗口模糊。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1918,7 +1995,7 @@ ArkTS-Sta:
 setCornerRadius(cornerRadius: double): void
 ```
 
-Sets the radius of the rounded corners for this window.
+设置窗口圆角半径。
 
 **Since:** 9
 
@@ -1934,18 +2011,18 @@ Sets the radius of the rounded corners for this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cornerRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the rounded corners. The value is a floating-point number greater than or equal to 0.0, in px. The value **0.0** means that the window does not use rounded corners. |
+| cornerRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示窗口圆角的半径值。该参数为浮点数，单位为px，取值范围为[0.0, +∞)，取值为0.0时表示没有窗口圆角。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1961,13 +2038,13 @@ try {
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after  
-[loadContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+设置窗口是否使用所在屏幕的系统默认Density。Stage模型下，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
-If this API is not called, the default density is not used.
+不调用此接口进行设置，则表示不使用系统默认Density。
 
-If this API,  
-[setDefaultDensityEnabled(true)]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and [setCustomDensity]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ are all called, the setting from the last called API will be applied.
+当存在同时使用该接口、  
+[setDefaultDensityEnabled(true)](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)时，以最后调用的设置效果为准。
 
 **Since:** 20
 
@@ -1983,17 +2060,17 @@ If this API,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to use the default density of the system. **true** to enable, **false** otherwise. When the default density is enabled, the window layout does not change with the system display size. |
+| enabled | boolean | Yes | 设置是否使用系统默认Density。true表示使用系统默认Density，窗口不跟随系统显示大小变化重新布局；false表示不使用系统默认Density，窗口跟随系统 显示大小变化重新布局。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -2010,7 +2087,7 @@ try {
 setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window is forbidden to move in split-screen mode. This API uses an asynchronous callback to return the result.
+设置主窗口在分屏模式下是否被禁止移动，使用callback异步回调。
 
 **Since:** 9
 
@@ -2028,19 +2105,19 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isForbidSplitMove | boolean | Yes | Whether the window is forbidden to move in split-screen mode. **true** if forbidden, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isForbidSplitMove | boolean | Yes | 窗口在分屏模式下是否被禁止移动。true表示禁止；false表示不禁止。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -2083,7 +2160,7 @@ export default class EntryAbility extends UIAbility {
 setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>
 ```
 
-Sets whether the main window is forbidden to move in split-screen mode. This API uses a promise to return the result.
+设置主窗口在分屏模式下是否被禁止移动，使用Promise异步回调。
 
 **Since:** 9
 
@@ -2101,24 +2178,24 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isForbidSplitMove | boolean | Yes | Whether the window is forbidden to move in split-screen mode. **true** if forbidden, **false** otherwise. |
+| isForbidSplitMove | boolean | Yes | 窗口在分屏模式下是否被禁止移动。true表示禁止；false表示不禁止。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -2159,7 +2236,7 @@ export default class EntryAbility extends UIAbility {
 setHandwritingFlag(enable: boolean): Promise<void>
 ```
 
-Adds or deletes the handwriting flag for this window. After this flag is added, the window responds to stylus events but not touch events. This API uses a promise to return the result.
+为当前窗口添加或移除手写标志，添加该标志后窗口只响应手写笔事件，不响应触屏事件。使用Promise异步回调。
 
 **Since:** 12
 
@@ -2175,25 +2252,25 @@ Adds or deletes the handwriting flag for this window. After this flag is added, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to add or delete the flag. **true** to add, **false** otherwise. |
+| enable | boolean | Yes | 是否对窗口添加标志位。true表示添加，false表示移除。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2217,9 +2294,9 @@ try {
 setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>
 ```
 
-Sets whether to enable the main window to raise itself by click. This API uses a promise to return the result.
+禁止/使能主窗口点击抬升功能。使用Promise异步回调。
 
-By default, clicking the main window raises both the main window and its associated child windows. Disabling this feature (by passing **false**) prevents the main window and its child windows from being raised when the main window is clicked, preserving their current state. However, clicking on a child window still raises both the child window and the main window together.
+点击主窗口时，默认会抬升主窗口及其子窗口。调用此接口禁止主窗口点击抬升后（即传入false），点击主窗口时不会将其及子窗口进行抬升，保持原有状态不变；点击子窗口时，主窗口会连同子窗口一起被抬升。
 
 **Since:** 23
 
@@ -2235,25 +2312,25 @@ By default, clicking the main window raises both the main window and its associa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the main window to raise itself by click. **true** to enable, **false** otherwise. |
+| enable | boolean | Yes | 设置主窗口点击抬升功能是否使能，true表示使能，false表示禁止。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -2292,13 +2369,11 @@ export default class EntryAbility extends UIAbility {
 setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result.
+禁止/使能子窗口点击抬升功能。使用callback异步回调。
 
-Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable**  
-parameter is set to **false**, the child window is not displayed on the top when being clicked.
+通常来说，点击一个子窗口，会将该子窗口显示到最上方，如果设置为false，那么点击子窗口的时候，不会将该子窗口显示到最上方，而是保持不变。
 
-Before calling this API, ensure that the child window has been created and  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ has been successfully executed.
+使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
 
 **Since:** 10
 
@@ -2314,22 +2389,22 @@ Before calling this API, ensure that the child window has been created and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable a child window to raise itself by click. **true** to enable, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| enable | boolean | Yes | 设置子窗口点击抬升功能是否使能，true表示使能，false表示禁止。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1300009 | The parent window is invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -2372,38 +2447,32 @@ export default class EntryAbility extends UIAbility {
 setRotationLocked(locked: boolean): Promise<void>
 ```
 
-Allows a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - If the main window sets the display orientation via  
-    [setPreferredOrientation()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_  
-    while rotation is locked, the window restores the last orientation request when brought to the foreground after  
-    unlocking.  
-    
-    - If the system window sets the display orientation via  
-    [setPreferredOrientation()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_  
-    while rotation is locked, the window restores the last orientation request when brought to the foreground with  
-    the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked**  
-    does not hinder the system window at a higher level to set the display orientation by calling  
-    [setPreferredOrientation()]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_  
-    .  
-    
-    - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after  
-    unlocking.  
-    
-    - If the application calls  
-    [setOrientation()]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_  
-    to set the screen orientation while rotation is locked, that screen?orientation setting is ignored.  
-    
-    - When rotation is unlocked, the application's display orientation is determined based on the main window's  
-    display orientation set via  
-    [setPreferredOrientation()]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_  
-    , the sensor orientation, and more. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    - The API does not affect the launch orientation set by the **orientation** under  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ of the  
-    application.
+仅支持[系统窗口](../../../windowmanager/window-terminology.md#系统窗口)设置旋转锁定，锁定后系统窗口显示方向不变，未锁定时系统窗口显示方向受主窗口显示方向、旋转锁定按钮、sensor旋转影响。非系统窗口调用返回1300029错误码。使用Promise异步回调。
+
+> **说明：**
+> 
+> - 如果在锁定期间主窗口通过
+> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
+> 设置显示方向属性，则解除旋转锁定后该窗口在前台还原最后一次的方向请求。
+> 
+> - 如果在锁定期间系统窗口通过
+> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
+> 设置显示方向属性，则解除旋转锁定后该窗口在前台且层级最高时还原最后一次的方向请求。低层级窗口通过setRotationLocked设置旋转锁定不会影响高层级系统窗口调用
+> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
+> 设置显示方向。
+> 
+> - 如果在锁定期间sensor方向发生了变化，则解除旋转锁定后还原到最后一次的sensor方向。
+> 
+> - 如果在锁定期间应用调用
+> [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation)
+> 设置屏幕方向，忽略该次屏幕方向设置。
+> 
+> - 解除锁定时，根据主窗口的显示方向属性
+> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
+> 、sensor方向等决定应用显示方向，具体见[窗口旋转简介](../../../windowmanager/window-rotation.md#窗口旋转简介)。
+> 
+> - 不影响应用[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)
+> orientation属性设置的启动方向。
 
 **Since:** 22
 
@@ -2419,25 +2488,25 @@ Allows a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to lock or unlock its own screen-rot
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locked | boolean | Yes | Whether to lock the rotation. **true** to lock, **false** otherwise. |
+| locked | boolean | Yes | 设置是否锁定旋转，true表示锁定旋转，false表示解除锁定。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setRotationLocked can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| 1300029 | This window type is invalid. Possible cause: A non-system window calls this API. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function setRotationLocked can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1300029 | This window type is invalid. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2463,7 +2532,7 @@ ArkTS-Sta:
 setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): void
 ```
 
-Sets the shadow for the window borders.
+设置窗口边缘阴影。
 
 **Since:** 9
 
@@ -2479,21 +2548,21 @@ Sets the shadow for the window borders.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the shadow. The value is a floating-point number greater than or equal to 0. 0, in px. The value **0.0** means that the shadow is disabled for the window borders. |
-| color | string | No | Color of the shadow. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **#00FF00** or **#FF00FF00**. The default value is **'#000000'**. |
-| offsetX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Offset of the shadow along the x-axis, in px. The value is a floating-point number, in px. The default value is **0.0**. |
-| offsetY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Offset of the shadow along the y-axis, in px. The value is a floating-point number, in px. The default value is **0.0**. |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示窗口边缘阴影的模糊半径。该参数为浮点数，单位为px，取值范围为[0.0, +∞)，取值为0.0时表示关闭窗口边缘阴影。 |
+| color | string | No | 表示窗口边缘阴影的颜色，为十六进制RGB或ARGB颜色，不区分大小写，例如`#00FF00`或`#FF00FF00`，默认值为'#000000'。 |
+| offsetX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 表示窗口边缘阴影的X轴的偏移量。该参数为浮点数，单位为px，默认值为0.0。 |
+| offsetY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 表示窗口边缘阴影的Y轴的偏移量。该参数为浮点数，单位为px，默认值为0.0。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -2509,9 +2578,9 @@ try {
 setSingleFrameComposerEnabled(enable: boolean): Promise<void>
 ```
 
-Enables or disables the single-frame composer. This API uses a promise to return the result.
+禁止/使能单帧合成渲染节点的功能。使用Promise异步回调。
 
-The single-frame composer is mainly used in scenarios that require extremely low interaction latency. It reduces the screen display latency of the rendering node.
+单帧合成渲染节点的功能主要用于跟手性要求较高的场景，使能该功能之后可以降低渲染节点的上屏延时。通过setSingleFrameComposerEnabled接口，如果enable设置为true，则使能单帧合成渲染节点的功能，否则禁止单帧合成渲染节点的功能。
 
 **Since:** 11
 
@@ -2527,24 +2596,24 @@ The single-frame composer is mainly used in scenarios that require extremely low
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the single-frame composer. **true** to enable, **false** otherwise. |
+| enable | boolean | Yes | 设置单帧合成渲染节点的功能是否使能，true表示使能，false表示禁止。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2568,10 +2637,10 @@ try {
 setSnapshotSkip(isSkip: boolean): void
 ```
 
-Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting.
+截屏、录屏或投屏是否忽略当前窗口。此接口一般用于禁止截屏、录屏或投屏的场景。
 
-If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using  
-[on('windowEvent')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
+若要实现窗口始终在前台忽略截屏、录屏或投屏，在窗口从后台回到前台时，需要通过  
+[on('windowEvent')](@ohos.window:window.Window.on(type: 'windowEvent', callback: Callback&lt;WindowEventType&gt;))监听窗口生命周期变化，在后台状态时设置为false，而在前台状态时设置为true。
 
 **Since:** 9
 
@@ -2587,15 +2656,26 @@ If you want the window to always be ignored during screen capture, recording, or
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSkip | boolean | Yes | Whether to ignore the window. The default value is **false**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** to ignore, **false** otherwise.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| isSkip | boolean | Yes | 截屏、录屏或投屏是否忽略当前窗口，默认为false。&lt;br&gt;true表示忽略当前窗口，false表示不忽略当前窗口。&lt;/br&gt; |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+
+## Examples
+
+```TypeScript
+let isSkip: boolean = true;
+try {
+  windowClass.setSnapshotSkip(isSkip);
+} catch (exception) {
+  console.error(`Failed to Skip. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
 
 ## setTitleButtonVisible
 
@@ -2603,9 +2683,9 @@ If you want the window to always be ignored during screen capture, recording, or
 setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void
 ```
 
-Shows or hides the maximize, minimize, and split-screen buttons on the title bar of the main window.
+设置主窗标题栏上的最大化、最小化、分屏按钮是否可见。
 
-This API takes effect only for the title bar buttons (maximize, minimize, and split-screen) that are available in the current scenario.
+仅对在当前场景下可见的标题栏按钮（最大化、最小化、分屏）生效。
 
 **Since:** 12
 
@@ -2621,21 +2701,21 @@ This API takes effect only for the title bar buttons (maximize, minimize, and sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isMaximizeVisible | boolean | Yes | Whether to show the maximize button. **true** to show, **false** otherwise. |
-| isMinimizeVisible | boolean | Yes | Whether to show the minimize button. **true** to show, **false** otherwise. |
-| isSplitVisible | boolean | Yes | Whether to show the split-screen button. **true** to show, **false** otherwise. |
+| isMaximizeVisible | boolean | Yes | 设置最大化按钮是否可见，true为可见，false为隐藏。 |
+| isMinimizeVisible | boolean | Yes | 设置最小化按钮是否可见，true为可见，false为隐藏。 |
+| isSplitVisible | boolean | Yes | 设置分屏按钮是否可见，true为可见，false为隐藏。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -2679,7 +2759,7 @@ export default class EntryAbility extends UIAbility {
 setTopmost(isTopmost: boolean): Promise<void>
 ```
 
-Called by the main window to place the window above all the other windows. This API uses a promise to return the result.
+系统应用主窗口调用，实现将窗口置于所有应用窗口之上不被遮挡，使用Promise异步回调。
 
 **Since:** 12
 
@@ -2695,26 +2775,26 @@ Called by the main window to place the window above all the other windows. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTopmost | boolean | Yes | Whether to pin the main window on top. **true** to pin, **false** otherwise. |
+| isTopmost | boolean | Yes | 是否将系统应用主窗口置顶，true表示置顶，false表示取消置顶。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -2743,7 +2823,7 @@ export default class EntryAbility extends UIAbility {
 setWakeUpScreen(wakeUp: boolean): void
 ```
 
-Wakes up the screen.
+唤醒屏幕。
 
 **Since:** 9
 
@@ -2759,18 +2839,18 @@ Wakes up the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wakeUp | boolean | Yes | Whether to wake up the screen. **true** to wake up, **false** otherwise. |
+| wakeUp | boolean | Yes | 是否设置唤醒屏幕。true表示唤醒；false表示不唤醒。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let wakeUp: boolean = true;
@@ -2787,7 +2867,7 @@ try {
 setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Adds or deletes the watermark flag for this window. This API uses an asynchronous callback to return the result.
+为当前窗口添加或删除安全水印标志，使用callback异步回调。
 
 **Since:** 10
 
@@ -2803,20 +2883,20 @@ Adds or deletes the watermark flag for this window. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to add or delete the flag. **true** to add, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| enable | boolean | Yes | 是否对窗口添加标志位。true表示添加，false表示删除。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| 1300008 | The display device is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2842,7 +2922,7 @@ try {
 setWaterMarkFlag(enable: boolean): Promise<void>
 ```
 
-Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
+为当前窗口添加或删除安全水印标志，使用Promise异步回调。
 
 **Since:** 10
 
@@ -2858,25 +2938,25 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to add or delete the flag. **true** to add, **false** otherwise. |
+| enable | boolean | Yes | 是否对窗口添加标志位。true表示添加，false表示删除。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| 1300008 | The display device is abnormal. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2900,7 +2980,7 @@ try {
 setWindowMode(mode: WindowMode): Promise<void>
 ```
 
-Sets the mode of the main window. This API uses a promise to return the result.
+设置主窗口模式，使用Promise异步回调。
 
 **Since:** 9
 
@@ -2916,24 +2996,24 @@ Sets the mode of the main window. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicate the mode of a window. |
+| mode | [WindowMode](../../apis-test-kit/arkts-apis/arkts-test-uitest-windowmode-e.md) | Yes | 窗口模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -2974,7 +3054,7 @@ export default class EntryAbility extends UIAbility {
 setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 ```
 
-Sets the mode of the main window. This API uses an asynchronous callback to return the result.
+设置主窗口模式，使用callback异步回调。
 
 **Since:** 9
 
@@ -2990,19 +3070,19 @@ Sets the mode of the main window. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicate the mode of a window. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| mode | [WindowMode](../../apis-test-kit/arkts-apis/arkts-test-uitest-windowmode-e.md) | Yes | 窗口模式。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -3045,7 +3125,7 @@ export default class EntryAbility extends UIAbility {
 setWindowType(type: WindowType): Promise<void>
 ```
 
-Sets the type of this window. This API uses a promise to return the result.
+设置窗口类型，使用Promise异步回调。
 
 **Since:** 7
 
@@ -3063,15 +3143,15 @@ Sets the type of this window. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window type. |
+| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | 窗口类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3091,7 +3171,7 @@ promise.then(() => {
 setWindowType(type: WindowType, callback: AsyncCallback<void>): void
 ```
 
-Sets the type of this window. This API uses an asynchronous callback to return the result.
+设置窗口类型，使用callback异步回调。
 
 **Since:** 7
 
@@ -3109,10 +3189,10 @@ Sets the type of this window. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | 窗口类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3134,7 +3214,7 @@ windowClass.setWindowType(type, (err: BusinessError) => {
 showWithAnimation(callback: AsyncCallback<void>): void
 ```
 
-Shows this window and plays an animation during the process. This API uses an asynchronous callback to return the result. This API takes effect only for a system window.
+显示当前窗口，过程中播放动画，使用callback异步回调，仅支持系统窗口。
 
 **Since:** 9
 
@@ -3150,18 +3230,18 @@ Shows this window and plays an animation during the process. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only system windows are supported. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3182,7 +3262,7 @@ windowClass.showWithAnimation((err: BusinessError) => {
 showWithAnimation(): Promise<void>
 ```
 
-Shows this window and plays an animation during the process. This API uses a promise to return the result. This API takes effect only for a system window.
+显示当前窗口，过程中播放动画，使用Promise异步回调，仅支持系统窗口。
 
 **Since:** 9
 
@@ -3198,18 +3278,18 @@ Shows this window and plays an animation during the process. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only system windows are supported. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3222,58 +3302,13 @@ promise.then(() => {
 });
 ```
 
-## startMovingWithOptions
-
-```TypeScript
-startMovingWithOptions(startMovingOptions?: StartMovingOptions): Promise<void>
-```
-
-Starts moving this window.The window moves along with the cursor only when this API is called in the callback function of onTouch,where the event type is TouchType.Down.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Window-startMovingWithOptions(startMovingOptions?: StartMovingOptions): Promise<void>--><!--Device-Window-startMovingWithOptions(startMovingOptions?: StartMovingOptions): Promise<void>-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| startMovingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The move configuration during drag-moving. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type, main windows are not supported in non-free window mode. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
-
 ## translate
 
 ```TypeScript
 translate(translateOptions: TranslateOptions): void
 ```
 
-Sets the translation parameters for this window. This API can be used only when you  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+设置窗口平移参数。仅支持在[自定义系统窗口的显示与隐藏动画](../../../windowmanager/system-window-stage-sys.md#自定义系统窗口的显示与隐藏动画)中使用。
 
 **Since:** 9
 
@@ -3289,18 +3324,18 @@ Sets the translation parameters for this window. This API can be used only when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| translateOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Translation parameters. The unit is px. |
+| translateOptions | [TranslateOptions](arkts-arkui-common-translateoptions-i.md) | Yes | 平移参数，单位为px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let obj: window.TranslateOptions = {

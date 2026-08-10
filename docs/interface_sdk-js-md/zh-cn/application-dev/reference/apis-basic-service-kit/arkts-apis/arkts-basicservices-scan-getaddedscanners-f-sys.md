@@ -1,5 +1,11 @@
 # getAddedScanners（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAddedScanners
 
 ```TypeScript
@@ -30,10 +36,10 @@ function getAddedScanners(): Promise<ScannerDevice[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';
@@ -42,7 +48,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 scan.getAddedScanners().then((scanners: scan.ScannerDevice[]) => {
     console.info('get added scanners success: ' + JSON.stringify(scanners));
 }).catch((error: BusinessError) => {
-    console.error('get added scanners failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to get added scanners. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

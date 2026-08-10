@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## description
 
 ```TypeScript
@@ -18,7 +24,7 @@ description?: ResourceStr
 
 设置描述内容。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ icon?: ResourceStr
 
 设置图标
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -58,7 +64,7 @@ iconStyle?: IconTypeV2
 
 图标样式。
 
-**类型：** IconTypeV2
+**类型：** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **起始版本：** 26.0.0
 
@@ -78,7 +84,7 @@ primaryText?: ResourceStr
 
 设置标题内容。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -98,7 +104,7 @@ secondaryText?: ResourceStr
 
 设置副标题内容。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -118,7 +124,7 @@ symbolStyle?: SymbolGlyphModifier
 
 设置Symbol图标。
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 

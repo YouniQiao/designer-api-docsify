@@ -1,6 +1,6 @@
 # AudioErrors
 
-Enumerates the error codes available for audio management.
+表示音频错误码的枚举。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the error codes available for audio management.
 ERROR_INVALID_PARAM = 6800101
 ```
 
-Invalid parameter.
+无效入参。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Invalid parameter.
 ERROR_NO_MEMORY = 6800102
 ```
 
-Memory allocation failure.
+分配内存失败。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Memory allocation failure.
 ERROR_ILLEGAL_STATE = 6800103
 ```
 
-Unsupported state.
+状态不支持。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Unsupported state.
 ERROR_UNSUPPORTED = 6800104
 ```
 
-Unsupported parameter value.
+参数选项不支持。
 
 **Since:** 9
 
@@ -77,32 +77,32 @@ Unsupported parameter value.
 ## ERROR_TIMEOUT
 
 ```TypeScript
-ERROR_TIMEOUT = 6800105
+ERROR_TIMEOUT       = 6800105
 ```
 
-Processing timeout.
+处理超时。
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-AudioErrors-ERROR_TIMEOUT = 6800105--><!--Device-AudioErrors-ERROR_TIMEOUT = 6800105-End-->
+<!--Device-AudioErrors-ERROR_TIMEOUT       = 6800105--><!--Device-AudioErrors-ERROR_TIMEOUT       = 6800105-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_STREAM_LIMIT
 
 ```TypeScript
-ERROR_STREAM_LIMIT = 6800201
+ERROR_STREAM_LIMIT  = 6800201
 ```
 
-Too many audio streams.
+音频流数量达到限制。
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-AudioErrors-ERROR_STREAM_LIMIT = 6800201--><!--Device-AudioErrors-ERROR_STREAM_LIMIT = 6800201-End-->
+<!--Device-AudioErrors-ERROR_STREAM_LIMIT  = 6800201--><!--Device-AudioErrors-ERROR_STREAM_LIMIT  = 6800201-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -112,7 +112,7 @@ Too many audio streams.
 ERROR_SYSTEM = 6800301
 ```
 
-System error.
+系统处理异常。
 
 **Since:** 9
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## expirationTime
 
 ```TypeScript
@@ -20,7 +26,7 @@ expirationTime: long
 
 订阅过期时间（ms）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 11
 
@@ -40,7 +46,7 @@ subscribe: Record<string, Array<SubscribeId>>
 
 订阅信息。
 
-**类型：** Record&lt;string, Array&lt;SubscribeId&gt;&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;SubscribeId&gt;&gt;
 
 **起始版本：** 11
 

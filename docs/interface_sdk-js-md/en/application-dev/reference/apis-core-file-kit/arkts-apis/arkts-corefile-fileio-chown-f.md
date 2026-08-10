@@ -6,7 +6,7 @@
 declare function chown(path: string, uid: number, gid: number): Promise<void>
 ```
 
-Changes the file owner based on the file path. This API uses a promise to return the result.
+基于文件路径改变文件所有者，使用Promise异步回调。
 
 **Since:** 7
 
@@ -22,15 +22,15 @@ Changes the file owner based on the file path. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
-| uid | number | Yes | New user ID (UID). |
-| gid | number | Yes | New group ID (GID). |
+| path | string | Yes | 待改变文件的应用沙箱路径。 |
+| uid | number | Yes | 新的UID（UserID）。 |
+| gid | number | Yes | 新的GID（GroupID）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 
 ## chown
@@ -39,7 +39,7 @@ Changes the file owner based on the file path. This API uses a promise to return
 declare function chown(path: string, uid: number, gid: number, callback: AsyncCallback<void>): void
 ```
 
-Changes the file owner based on the file path. This API uses an asynchronous callback to return the result.
+基于文件路径改变文件所有者，使用callback异步回调。
 
 **Since:** 7
 
@@ -55,8 +55,8 @@ Changes the file owner based on the file path. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
-| uid | number | Yes | New UID. |
-| gid | number | Yes | New GID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the file owner is changed asynchronously. |
+| path | string | Yes | 待改变文件的应用沙箱路径。 |
+| uid | number | Yes | 新的UID。 |
+| gid | number | Yes | 新的GID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步改变文件所有者之后的回调。 |
 

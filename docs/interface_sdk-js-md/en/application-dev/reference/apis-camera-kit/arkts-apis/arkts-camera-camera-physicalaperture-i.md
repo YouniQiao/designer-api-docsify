@@ -1,6 +1,6 @@
 # PhysicalAperture
 
-Describes the physical aperture object.
+物理光圈对象。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Describes the physical aperture object.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## apertures
 
 ```TypeScript
 apertures: Array<double>
 ```
 
-Supported physical aperture.
+支持的物理光圈值。
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 24
 
@@ -36,9 +42,9 @@ Supported physical aperture.
 zoomRange: ZoomRange
 ```
 
-Zoom range of a given physical aperture.
+特定物理光圈的变焦范围。
 
-**Type:** ZoomRange
+**Type:** [ZoomRange](arkts-camera-camera-zoomrange-i.md)
 
 **Since:** 24
 

@@ -1,8 +1,8 @@
 # AVMetadata
 
 Defines the audio and video metadata. Parameters that are not declared as read-only in  
-[AVRecorderConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can be used as input parameters for recording of  
-[AVRecorder]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+[AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of  
+[AVRecorder](#AVRecorder).
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## gltf_offset
 
 ```TypeScript
 gltf_offset?: string
 ```
 
-The offset value of GLTF 3D model in media file. This parameter is not supported in AVRecorder settings.If the media file has no GLTF 3D model, gltf\_offset is undefined.
+The offset value of GLTF 3D model in media file. This parameter is not supported in AVRecorder settings.If the media file has no GLTF 3D model, gltf_offset is undefined.
 
 **Type:** string
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## addedTime
 
 ```TypeScript
@@ -42,7 +48,7 @@ deviceStatus: DeviceStatus
 
 设备状态信息。与该模板关联的伴随设备的当前状态，包括在线状态、设备名等。
 
-**类型：** DeviceStatus
+**类型：** [DeviceStatus](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md)
 
 **起始版本：** 23
 
@@ -62,9 +68,9 @@ deviceStatus: DeviceStatus
 enabledBusinessIds: int[]
 ```
 
-支持的业务ID列表。该模板已启用的业务场景范围，可通过[updateEnabledBusinessIds]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口更新。
+支持的业务ID列表。该模板已启用的业务场景范围，可通过[updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateenabledbusinessids)接口更新。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -130,7 +136,7 @@ localUserId: int
 
 本地用户ID。主设备上与该模板关联的用户标识，为非负整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

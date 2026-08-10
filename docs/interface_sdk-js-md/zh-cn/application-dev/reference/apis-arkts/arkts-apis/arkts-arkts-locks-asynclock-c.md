@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
@@ -52,7 +58,7 @@ lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
 
 **返回值：**
 
@@ -64,7 +70,7 @@ lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
+| 10200030 | The lock does not exist. |
 
 ## lockAsync
 
@@ -88,8 +94,8 @@ lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 锁的操作模式。 |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 | 锁的操作模式。 |
 
 **返回值：**
 
@@ -101,7 +107,7 @@ lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
+| 10200030 | The lock does not exist. |
 
 ## lockAsync
 
@@ -110,7 +116,7 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
         options: AsyncLockOptions<U>): Promise<T | U>
 ```
 
-在获取的锁下执行操作。该方法首先获取锁，然后调用回调，最后释放锁。回调在调用lockAsync的同一线程中以异步方式执行。在\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中可以提供一个可选的超时值。在这种情况下，如果超时前未能获取锁，lockAsync将返回被拒绝的Promise并带上一个BusinessError实例。这种情况下，错误信息将包含持有的锁和等待的锁的信息以及可能的死锁警告。
+在获取的锁下执行操作。该方法首先获取锁，然后调用回调，最后释放锁。回调在调用lockAsync的同一线程中以异步方式执行。在{@link AsyncLockOptions}中可以提供一个可选的超时值。在这种情况下，如果超时前未能获取锁，lockAsync将返回被拒绝的Promise并带上一个BusinessError实例。这种情况下，错误信息将包含持有的锁和等待的锁的信息以及可能的死锁警告。
 
 **起始版本：** 12
 
@@ -126,9 +132,9 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 锁的操作模式。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;U&gt; | 是 | 锁的操作选项。 |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 | 锁的操作模式。 |
+| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | 是 | 锁的操作选项。 |
 
 **返回值：**
 
@@ -140,8 +146,8 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
-| [10200031](../errorcode-utils.md#10200031-lockasync超时) | Timeout exceeded. |
+| 10200031 | Timeout exceeded. |
+| 10200030 | The lock does not exist. |
 
 ## query
 
@@ -171,13 +177,13 @@ static query(name: string): AsyncLockState
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 包含状态描述的异步锁状态实例。 |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | 包含状态描述的异步锁状态实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
+| 10200030 | The lock does not exist. |
 
 ## queryAll
 
@@ -201,7 +207,7 @@ static queryAll(): AsyncLockState[]
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 包含锁状态信息的异步锁状态数组。 |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] | 包含锁状态信息的异步锁状态数组。 |
 
 ## request
 
@@ -231,7 +237,7 @@ static request(name: string): AsyncLock
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回AsyncLock实例。 |
+| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | 返回AsyncLock实例。 |
 
 ## name
 

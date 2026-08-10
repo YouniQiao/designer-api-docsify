@@ -1,6 +1,6 @@
 # SyncType
 
-Enumerates the sync types supported by an asset.
+枚举，关键资产支持的同步类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the sync types supported by an asset.
 NEVER = 0
 ```
 
-Asset sync is not allowed.
+不允许同步关键资产。
 
 **Since:** 11
 
@@ -34,9 +34,9 @@ Asset sync is not allowed.
 THIS_DEVICE = 1 << 0
 ```
 
-Asset sync is allowed only on the local device, for example, in data restore on the local device.
+只在本设备进行同步，如仅在本设备还原的备份场景。
 
-**Note**: This field is reserved for future use and is not supported currently.
+**说明：** 本字段是能力预埋，当前不支持。
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ Asset sync is allowed only on the local device, for example, in data restore on 
 TRUSTED_DEVICE = 1 << 1
 ```
 
-Asset sync is allowed only between trusted devices, for example, in the case of cloning.
+只在可信设备间进行同步，如克隆场景。
 
 **Since:** 11
 
@@ -72,9 +72,9 @@ Asset sync is allowed only between trusted devices, for example, in the case of 
 TRUSTED_ACCOUNT = 1 << 2
 ```
 
-Asset sync is allowed only between the devices that are logged in with trusted accounts, for example,in cloud sync scenarios.
+只在登录可信账号的设备间进行同步，如云同步场景。
 
-**Note**: This field is reserved for future use and is not supported currently.
+**说明：** 本字段是能力预埋，当前不支持。
 
 **Since:** 12
 

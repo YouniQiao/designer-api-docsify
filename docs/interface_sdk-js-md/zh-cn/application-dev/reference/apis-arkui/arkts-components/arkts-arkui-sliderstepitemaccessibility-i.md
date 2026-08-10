@@ -16,11 +16,11 @@ Slider刻度点的无障碍文本信息。
 text?: ResourceStr
 ```
 
-无障碍文本，供屏幕阅读器等工具读取，增强无障碍功能。
+无障碍文本，供屏幕阅读器等工具读取，增强无障碍功能。 
 
 默认值：""
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 20
 

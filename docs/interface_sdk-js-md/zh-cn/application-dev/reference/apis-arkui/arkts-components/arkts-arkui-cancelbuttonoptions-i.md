@@ -18,7 +18,7 @@ icon?: IconOptions
 
 右侧清除按钮图标。不传入时使用默认清除图标样式。
 
-**类型：** IconOptions
+**类型：** [IconOptions](arkts-arkui-iconoptions-i.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ style?: CancelButtonStyle
 
 右侧清除按钮显示状态。默认值：CancelButtonStyle.INPUT。
 
-**类型：** CancelButtonStyle
+**类型：** [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
 
 **起始版本：** 12
 

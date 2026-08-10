@@ -1,5 +1,11 @@
 # getApplicationLabel
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getApplicationLabel
 
 ```TypeScript
@@ -25,7 +31,7 @@ function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用的包名。 |
-| appIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示应用索引。取值范围0~5，取值为0表示主应用，取值1~5表示分身应用的索引。 |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示应用索引。取值范围0~5，取值为0表示主应用，取值1~5表示分身应用的索引。 |
 
 **返回值：**
 
@@ -37,11 +43,11 @@ function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
+| 17700061 | The specified app index is invalid. |
+| 201 | Permission denied. |
+| 17700001 | The specified bundle is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

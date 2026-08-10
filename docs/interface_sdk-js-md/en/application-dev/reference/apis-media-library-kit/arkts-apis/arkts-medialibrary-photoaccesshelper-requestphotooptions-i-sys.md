@@ -12,6 +12,12 @@ Defines the options for obtaining the thumbnail of an image or video.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## requestPhotoType
 
 ```TypeScript
@@ -20,7 +26,7 @@ requestPhotoType?: RequestPhotoType
 
 Operation to perform.
 
-**Type:** RequestPhotoType
+**Type:** [RequestPhotoType](arkts-medialibrary-photoaccesshelper-requestphototype-e-sys.md)
 
 **Since:** 11
 

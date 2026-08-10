@@ -22,6 +22,6 @@ declare type VP = `${number}vp` | number
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_INLINE\_CODE\_USD\_0\_\_\_ |  |
+| `\${number}vp` |  |
 | number |  |
 

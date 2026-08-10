@@ -1,6 +1,6 @@
 # AudioSamplingRate
 
-Enumerates the audio sampling rates. The sampling rates supported vary according to the device in use.
+表示音频采样率的枚举（具体设备支持的采样率规格会存在差异）。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the audio sampling rates. The sampling rates supported vary according
 SAMPLE_RATE_8000 = 8000
 ```
 
-The sampling rate is 8000.
+采样率为8000。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ The sampling rate is 8000.
 SAMPLE_RATE_11025 = 11025
 ```
 
-The sampling rate is 11025.
+采样率为11025。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ The sampling rate is 11025.
 SAMPLE_RATE_12000 = 12000
 ```
 
-The sampling rate is 12000.
+采样率为12000。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ The sampling rate is 12000.
 SAMPLE_RATE_16000 = 16000
 ```
 
-The sampling rate is 16000.
+采样率为16000。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ The sampling rate is 16000.
 SAMPLE_RATE_22050 = 22050
 ```
 
-The sampling rate is 22050.
+采样率为22050。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ The sampling rate is 22050.
 SAMPLE_RATE_24000 = 24000
 ```
 
-The sampling rate is 24000.
+采样率为24000。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -112,7 +112,7 @@ The sampling rate is 24000.
 SAMPLE_RATE_32000 = 32000
 ```
 
-The sampling rate is 32000.
+采样率为32000。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -128,7 +128,7 @@ The sampling rate is 32000.
 SAMPLE_RATE_44100 = 44100
 ```
 
-The sampling rate is 44100.
+采样率为44100。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ The sampling rate is 44100.
 SAMPLE_RATE_48000 = 48000
 ```
 
-The sampling rate is 48000.
+采样率为48000。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -160,7 +160,7 @@ The sampling rate is 48000.
 SAMPLE_RATE_64000 = 64000
 ```
 
-The sampling rate is 64000.
+采样率为64000。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -176,7 +176,7 @@ The sampling rate is 64000.
 SAMPLE_RATE_88200 = 88200
 ```
 
-The sampling rate is 88200.
+采样率为88200。单位为赫兹（Hz）。
 
 **Since:** 12
 
@@ -192,7 +192,7 @@ The sampling rate is 88200.
 SAMPLE_RATE_96000 = 96000
 ```
 
-The sampling rate is 96000.
+采样率为96000。单位为赫兹（Hz）。
 
 **Since:** 8
 
@@ -208,7 +208,7 @@ The sampling rate is 96000.
 SAMPLE_RATE_176400 = 176400
 ```
 
-The sampling rate is 176400.
+采样率为176400。单位为赫兹（Hz）。
 
 **Since:** 12
 
@@ -224,7 +224,7 @@ The sampling rate is 176400.
 SAMPLE_RATE_192000 = 192000
 ```
 
-The sampling rate is 192000.
+采样率为192000。单位为赫兹（Hz）。
 
 **Since:** 12
 
@@ -240,7 +240,7 @@ The sampling rate is 192000.
 SAMPLE_RATE_384000 = 384000
 ```
 
-The sampling rate is 384000.
+采样率为384000。单位为赫兹（Hz）
 
 **Since:** 26.0.0
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## command
 
 ```TypeScript
@@ -18,7 +24,7 @@ command: AVControlCommandType
 
 命令（不同命令对应不同参数）。
 
-**类型：** AVControlCommandType
+**类型：** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ commandInfo?: CommandInfo
 
 命令信息。
 
-**类型：** CommandInfo
+**类型：** [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
 **起始版本：** 22
 
@@ -56,7 +62,7 @@ parameter?: LoopMode | string | double
 
 命令对应的参数。
 
-**类型：** LoopMode \| string \| double
+**类型：** ArkTS-Dyn: [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number  <br>ArkTS-Sta：[LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
 
 **起始版本：** 10
 

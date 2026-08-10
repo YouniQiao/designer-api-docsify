@@ -1,6 +1,6 @@
 # GenericEventData
 
-Describes the generic data carried by the emitted event.
+发送事件时传递的泛型数据。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes the generic data carried by the emitted event.
 
 **System capability:** SystemCapability.Notification.Emitter
 
+## Modules to Import
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## data
 
 ```TypeScript
 data?: T
 ```
 
-Data carried by the emitted event. **T** represents a generic type, which can be customized based on service requirements.
+发送事件时传递的数据。T：泛型类型，由开发者根据业务需要自定义具体的数据类型。
 
 **Type:** T
 

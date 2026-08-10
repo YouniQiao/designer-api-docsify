@@ -1,6 +1,6 @@
 # UsbDeviceId
 
-Represents the USB device identity information.
+USB设备ID信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the USB device identity information.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.MDMKit';
+```
+
 ## productId
 
 ```TypeScript
 productId: number
 ```
 
-Product ID.
+产品ID。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ Product ID.
 vendorId: number
 ```
 
-Vendor ID.
+厂商ID。
 
 **Type:** number
 

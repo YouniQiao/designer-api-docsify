@@ -1,9 +1,10 @@
 # tags
 
 ֧��traceʹ�ó����ı�ǩ���û���ͨ��hitraceץȡָ����ǩ��trace���ݡ�
-    **ע��**  
-    
-    ���±�ǩʵ��ֵ��ϵͳ���壬������汾�����������ı䣬Ϊ������������ּ��������⣬��������Ӧֱ��ʹ�ñ�ǩ���ƶ��Ǳ�ǩ��ֵ��
+
+> **ע��**
+> 
+> ���±�ǩʵ��ֵ��ϵͳ���壬������汾�����������ı䣬Ϊ������������ּ��������⣬��������Ӧֱ��ʹ�ñ�ǩ���ƶ��Ǳ�ǩ��ֵ��
 
 **起始版本：** 12
 
@@ -12,6 +13,12 @@
 <!--Device-hidebug-namespace tags--><!--Device-hidebug-namespace tags-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
 
 ## 汇总
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
+## 导入模块
+
+```TypeScript
+import { commonType } from 'kits/@kit.ArkData';
+```
+
 ## 汇总
 
 ### 接口

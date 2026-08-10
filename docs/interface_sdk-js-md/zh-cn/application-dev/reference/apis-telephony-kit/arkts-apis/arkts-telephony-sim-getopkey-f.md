@@ -1,5 +1,11 @@
 # getOpKey
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getOpKey
 
 ```TypeScript
@@ -20,21 +26,21 @@ Obtains the operator key of the SIM card in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | Indicates the callback for getting the operator key; Returns an empty string if no SIM card is inserted or no operator key matched. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Indicates the callback for getting the operator key; Returns an empty string if no SIM card is inserted or no operator key matched. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -74,7 +80,7 @@ Obtains the operator key of the SIM card in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **返回值：**
 
@@ -86,14 +92,14 @@ Obtains the operator key of the SIM card in a specified slot.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 8300999 | Unknown error. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

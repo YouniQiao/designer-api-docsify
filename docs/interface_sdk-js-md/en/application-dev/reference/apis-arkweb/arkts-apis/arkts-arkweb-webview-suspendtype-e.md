@@ -1,6 +1,6 @@
 # SuspendType
 
-Enumerates the suspension types of the player.
+表示播放器的挂起类型。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the suspension types of the player.
 ENTER_BACK_FORWARD_CACHE = 0
 ```
 
-The page enters the BFCache.
+页面进入BFCache。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ The page enters the BFCache.
 ENTER_BACKGROUND = 1
 ```
 
-The page is displayed in the background.
+页面进入后台。
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ The page is displayed in the background.
 AUTO_CLEANUP = 2
 ```
 
-The page is automatically cleaned up by the system.
+系统自动清理。
 
 **Since:** 23
 

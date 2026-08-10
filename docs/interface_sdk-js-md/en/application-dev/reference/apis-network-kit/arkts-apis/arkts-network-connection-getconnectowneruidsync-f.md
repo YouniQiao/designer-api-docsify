@@ -1,5 +1,11 @@
 # getConnectOwnerUidSync
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## getConnectOwnerUidSync
 
 ```TypeScript
@@ -24,27 +30,27 @@ Obtains the data network that is activated by default.You can only call this met
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protocol | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Protocol type. |
-| local | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Local net address. |
-| remote | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Remote net address. |
+| protocol | [ProtocolType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-protocoltype-e.md) | Yes | Protocol type. |
+| local | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Local net address. |
+| remote | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Remote net address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | The owner uid of the specified connection. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | The owner uid of the specified connection. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100301](../errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-nonvpn-application) | Incorrect usage in non-VPN application. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 2100001 | Invalid parameter value. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
+| 2100301 | Incorrect usage in non-VPN application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

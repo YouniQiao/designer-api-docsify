@@ -1,6 +1,6 @@
 # ConstraintType
 
-Enumerates the parameter constraint types.
+定义参数限制类型的枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the parameter constraint types.
 SCAN_CONSTRAINT_NONE = 0
 ```
 
-No constraint.
+无限制。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ No constraint.
 SCAN_CONSTRAINT_RANGE = 1
 ```
 
-Range.
+范围限制。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ Range.
 SCAN_CONSTRAINT_WORD_LIST = 2
 ```
 
-Number list.
+数字列表。
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ Number list.
 SCAN_CONSTRAINT_STRING_LIST = 3
 ```
 
-String list.
+字符串列表。
 
 **Since:** 20
 

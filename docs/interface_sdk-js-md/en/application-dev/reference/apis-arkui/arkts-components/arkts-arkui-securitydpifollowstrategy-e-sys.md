@@ -1,6 +1,6 @@
 # SecurityDpiFollowStrategy (System API)
 
-Defines the enum of the resolution following strategy for **SecurityUIExtensionComponent**.
+定义SecurityUIExtensionComponent内容分辨率跟随策略的枚举。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Defines the enum of the resolution following strategy for **SecurityUIExtensionC
 FOLLOW_HOST_DPI = 0
 ```
 
-The resolution follows the host application.
+表示分辨率跟随宿主。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ The resolution follows the host application.
 FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 ```
 
-The resolution follows the **UIExtensionAbility**.
+表示分辨率跟随UIExtensionAbility。
 
 **Since:** 26.0.0
 

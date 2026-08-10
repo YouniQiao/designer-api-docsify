@@ -1,8 +1,8 @@
 # File
 
-File类型数据，是[UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，也是文件类型数据的基类，用于描述文件类型数据，推荐开发者优先使用File的子类描述数据，如  
-[Image]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[Video]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[Folder]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_等具体子类。
+File类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是文件类型数据的基类，用于描述文件类型数据，推荐开发者优先使用File的子类描述数据，如  
+[Image](arkts-arkdata-unifieddatachannel-image-c.md)、[Video](arkts-arkdata-unifieddatachannel-video-c.md)、  
+[Folder](arkts-arkdata-unifieddatachannel-folder-c.md)等具体子类。
 
 **继承/实现关系：** File extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
@@ -13,6 +13,12 @@ File类型数据，是[UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子
 <!--Device-unifiedDataChannel-class File extends UnifiedRecord--><!--Device-unifiedDataChannel-class File extends UnifiedRecord-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
 
 ## details
 
@@ -32,7 +38,7 @@ details?: Record<string, string>
 
 的数据对象，用于描述一个文件。非必填字段，默认值为空字典对象。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 10
 
@@ -75,7 +81,7 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 ```
 
 用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权），只针对单个record使用，优先级最高，具体策略见  
-[UriPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
 **类型：** Array&lt;UriPermission&gt;
 

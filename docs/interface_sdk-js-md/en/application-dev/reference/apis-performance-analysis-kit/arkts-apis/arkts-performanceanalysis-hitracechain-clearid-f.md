@@ -1,14 +1,20 @@
 # clearId
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## clearId
 
 ```TypeScript
 function clearId(): void
 ```
 
-Clears the trace ID. This API returns the result synchronously.
+清除跟踪标识，同步接口。用于在需要切断当前跟踪链的场景，例如业务逻辑分支不再需要跟踪、任务完成后清理跟踪标识、或者在开始新的跟踪前清理旧的跟踪标识。
 
-Clears the HiTrace ID in the current thread's TLS.
+将当前线程TLS中的HiTraceId设置为无效。
 
 **Since:** 8
 
@@ -18,7 +24,7 @@ Clears the HiTrace ID in the current thread's TLS.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
-**Example**
+## Examples
 
 ```TypeScript
 // Before the service starts, try to clear the trace ID.

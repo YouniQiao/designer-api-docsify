@@ -4,8 +4,7 @@
 declare type StyledStringUnmarshallCallback = (buf: ArrayBuffer) => StyledStringMarshallingValue
 ```
 
-Defines a callback for unmarshalling an ArrayBuffer to obtain  
-[StyledStringMarshallingValue]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+属性字符串反序列化ArrayBuffer得到[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)回调类型。
 
 **Since:** 19
 
@@ -23,11 +22,11 @@ Defines a callback for unmarshalling an ArrayBuffer to obtain
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Marshaled data of [StyledStringMarshallingValue]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_.  |
+| buf | ArrayBuffer | Yes | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)序列化后的数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [StyledStringMarshallingValue]{ |
+| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | 反序列化得到的自定义数据片段对象，用于恢复用户自定义的样式数据。 |
 

@@ -46,7 +46,7 @@ launchMode?: LaunchMode
 
 默认值：LaunchMode.STANDARD
 
-**类型：** LaunchMode
+**类型：** [LaunchMode](arkts-arkui-launchmode-e.md)
 
 **起始版本：** 12
 

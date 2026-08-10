@@ -1,13 +1,18 @@
 # getNotificationParameters
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getNotificationParameters
 
 ```TypeScript
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-Obtains some information about the **wantAgent** field in  
-[NotificationRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+获取通知[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)中wantAgent字段的部分信息。使用Promise异步回调。
 
 **Since:** 24
 
@@ -23,25 +28,25 @@ Obtains some information about the **wantAgent** field in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
-| label | string | No | Notification label. This parameter is left empty by default. |
+| id | number | Yes | 通知ID，用于标识目标通知。该值由发布通知时NotificationRequest的id字段指定。 |
+| label | string | No | 通知标签，默认为空。该值由发布通知时NotificationRequest的label字段指定。 - 若标签为空，则获取与指定通知ID匹配，标签为空的已发布通知的部分信息。 - 若标签不为空，则获取与指定通知ID和标签同时匹配的已发布通知的部分信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationParameters&gt; | Promise used to return some information about **wantAgent**. |
+| Promise&lt;NotificationParameters&gt; | Promise对象，返回wantAgent的部分信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,8 +67,7 @@ notificationManager.getNotificationParameters(id, label).then((data: notificatio
 function getNotificationParameters(id: int, label?: string): Promise<NotificationParameters | null>
 ```
 
-Obtains some information about the **wantAgent** field in  
-[NotificationRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+获取通知[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)中wantAgent字段的部分信息。使用Promise异步回调。
 
 **Since:** 24
 
@@ -79,21 +83,21 @@ Obtains some information about the **wantAgent** field in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
-| label | string | No | Notification label. This parameter is left empty by default. |
+| id | int | Yes | 通知ID，用于标识目标通知。该值由发布通知时NotificationRequest的id字段指定。 |
+| label | string | No | 通知标签，默认为空。该值由发布通知时NotificationRequest的label字段指定。 - 若标签为空，则获取与指定通知ID匹配，标签为空的已发布通知的部分信息。 - 若标签不为空，则获取与指定通知ID和标签同时匹配的已发布通知的部分信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationParameters \| null&gt; | Promise used to return some information about **wantAgent**. |
+| Promise&lt;NotificationParameters \| null&gt; | Promise对象，返回wantAgent的部分信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| 1600001 | Internal error. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 1600007 | The notification does not exist. |
 

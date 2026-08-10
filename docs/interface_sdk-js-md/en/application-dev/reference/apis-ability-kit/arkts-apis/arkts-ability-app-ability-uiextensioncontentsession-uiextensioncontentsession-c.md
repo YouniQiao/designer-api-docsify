@@ -1,6 +1,6 @@
 # UIExtensionContentSession
 
-UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application.
+UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主应用窗口隐私模式等功能。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
+```
+
 ## getUIExtensionWindowProxy
 
 ```TypeScript
 getUIExtensionWindowProxy(): uiExtension.WindowProxy
 ```
 
-Obtains the window proxy of this UIExtensionAbility.
+获取UIExtension窗口代理。
 
 **Since:** 12
 
@@ -32,15 +38,15 @@ Obtains the window proxy of this UIExtensionAbility.
 
 | Type | Description |
 | --- | --- |
-| uiExtension.WindowProxy | Window proxy of the host application. |
+| uiExtension.WindowProxy | UIExtensionAbility组件的宿主应用窗口代理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -86,8 +92,9 @@ struct Extension {
 loadContent(path: string, storage?: LocalStorage): void
 ```
 
-Loads a page for the [UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, with state properties passed to the page through \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.This API is used to load a page in the  
-[onSessionCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ lifecycle of the UIExtensionAbility.
+为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件加载页面，支持通过  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的  
+[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)生命周期中加载页面。
 
 **Since:** 10
 
@@ -103,17 +110,17 @@ Loads a page for the [UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page to load. The path is configured using the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ tag in the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ file. |
-| storage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | A page-level UI state storage unit, which is used to pass state properties to the page. |
+| path | string | Yes | 要加载的页面所在的路径，该路径通过[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的 [pages标签](../../../quick-start/module-configuration-file.md#pages标签)配置。 |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | No | 页面级UI状态存储单元，开发者可通过该参数为加载的页面传递状态属性。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -145,9 +152,10 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 loadContentByName(name: string, storage?: LocalStorage): void
 ```
 
-Loads a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page for a  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, with state properties passed to the page through \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_. This API is used to load a named route page in the  
-[onSessionCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ lifecycle of the UIExtensionAbility.
+为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件加载  
+[命名路由](../../../ui/arkts-routing.md#命名路由)页面，支持通过  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的  
+[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)生命周期中加载命名路由页面。
 
 **Since:** 18
 
@@ -163,16 +171,16 @@ Loads a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page for a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the named route page. |
-| storage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | A page-level UI state storage unit, which is used to pass state properties to the page. |
+| name | string | Yes | 命名路由页面的名称。 |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | No | 页面级UI状态存储单元，开发者可通过该参数为加载的页面传递状态属性。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 Implementation of the UIExtensionAbility:
 
@@ -236,7 +244,7 @@ struct UIExtensionPage {
 setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 ```
 
-Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or recorded. This API uses a promise to return the result.
+设置宿主应用窗口的隐私模式开启或关闭。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。使用Promise异步回调。
 
 **Since:** 10
 
@@ -254,22 +262,22 @@ Enables or disables the window privacy mode of the host application. A window in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether to enable the privacy mode. **true** to enable, **false** otherwise. |
+| isPrivacyMode | boolean | Yes | 表示是否开启隐私模式。true表示开启；false表示关闭。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | The application does not have permission to call the interface. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -306,7 +314,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or recorded. This API uses an asynchronous callback to return the result.
+设置宿主应用窗口的隐私模式开启或关闭。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。使用callback异步回调。
 
 **Since:** 10
 
@@ -324,17 +332,17 @@ Enables or disables the window privacy mode of the host application. A window in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether to enable the privacy mode. **true** to enable, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| isPrivacyMode | boolean | Yes | 表示是否开启隐私模式。true表示开启；false表示关闭。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | The application does not have permission to call the interface. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -372,7 +380,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-Implicitly starts a given type of UIExtensionAbility. This API uses an asynchronous callback to return the result.It can be called only by applications running in the foreground.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START\_INVISIBLE\_ABILITY to start target invisible ability.
+通过type隐式启动UIExtensionAbility。使用callback异步回调。仅支持处于前台的应用调用。
 
 **Since:** 11
 
@@ -388,19 +396,24 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the UIExtensionAbility. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
-| abilityStartCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Execution result of starting the UIExtensionAbility. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| type | string | Yes | UIExtensionAbility组件类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 表示启动UIExtensionAbility组件时传递的参数。 |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | Yes | 表示启动UIExtensionAbility组件的执行结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000004 | Cannot start an invisible component.<br>**Applicable version:** 11 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| 16000001 | The specified ability does not exist.<br>**Applicable version:** 11 and later |
+| 16000002 | Incorrect ability type.<br>**Applicable version:** 11 and later |
+| 16000050 | Internal error. |
+| 16200001 | The caller has been released.<br>**Applicable version:** 11 and later |
+| 201 | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -443,7 +456,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-Starts the UIAbility or UIExtensionAbility by type.If the caller application is in the background, it is not allowed to call this interface.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START\_INVISIBLE\_ABILITY to start target invisible ability.
+通过type隐式启动UIExtensionAbility。使用callback异步回调。仅支持处于前台的应用调用。
 
 **Since:** 23
 
@@ -459,16 +472,16 @@ Starts the UIAbility or UIExtensionAbility by type.If the caller application is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | The type of target ability. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Indicates the want parameter. |
-| abilityStartCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the abilityStartCallback. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of startAbility. |
+| type | string | Yes | 显示拉起的UIExtensionAbility类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 表示扩展参数。 |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | Yes | 回调函数，返回启动失败后的详细错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
 
 ## startAbilityByType
 
@@ -477,7 +490,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Implicitly starts a given type of UIExtensionAbility. This API uses a promise to return the result. It can be called only by applications running in the foreground.
+通过type隐式启动UIExtensionAbility组件。使用Promise异步回调。仅支持处于前台的应用调用。
 
 **Since:** 11
 
@@ -493,24 +506,29 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the UIExtensionAbility. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
-| abilityStartCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Execution result of starting the UIExtensionAbility. |
+| type | string | Yes | UIExtensionAbility组件类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 表示启动UIExtensionAbility组件时传递的参数。 |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | Yes | 表示启动UIExtensionAbility组件的执行结果。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000004 | Cannot start an invisible component.<br>**Applicable version:** 11 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| 16000001 | The specified ability does not exist.<br>**Applicable version:** 11 and later |
+| 16000002 | Incorrect ability type.<br>**Applicable version:** 11 and later |
+| 16000050 | Internal error. |
+| 16200001 | The caller has been released.<br>**Applicable version:** 11 and later |
+| 201 | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -553,7 +571,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts the UIAbility or UIExtensionAbility by type.If the caller application is in the background, it is not allowed to call this interface.
+通过type隐式启动UIExtensionAbility。使用callback异步回调。仅支持处于前台的应用调用。
 
 **Since:** 23
 
@@ -569,21 +587,21 @@ Starts the UIAbility or UIExtensionAbility by type.If the caller application is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | The type of target ability. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Indicates the want parameter. |
-| abilityStartCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the abilityStartCallback. |
+| type | string | Yes | 显示拉起的UIExtensionAbility类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 表示扩展参数。 |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | Yes | 回调函数，返回启动失败后的详细错误信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
 
 ## terminateSelf
 
@@ -591,7 +609,7 @@ Starts the UIAbility or UIExtensionAbility by type.If the caller application is 
 terminateSelf(callback: AsyncCallback<void>): void
 ```
 
-Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses an asynchronous callback to return the result.
+销毁UIExtensionAbility组件自身，同时关闭对应的宿主应用窗口界面。使用callback异步回调。
 
 **Since:** 10
 
@@ -607,15 +625,15 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -655,7 +673,7 @@ struct Index {
 terminateSelf(): Promise<void>
 ```
 
-Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses a promise to return the result.
+销毁UIExtensionAbility组件自身，同时关闭对应的宿主应用窗口界面。使用Promise异步回调。
 
 **Since:** 10
 
@@ -671,9 +689,9 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -713,7 +731,7 @@ struct Index {
 terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void
 ```
 
-Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result to the host application. This API uses an asynchronous callback to return the result.
+销毁UIExtensionAbility组件自身，关闭对应的宿主应用窗口界面，并将结果返回给宿主应用。使用callback异步回调。
 
 **Since:** 10
 
@@ -729,16 +747,16 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information returned to the host application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | 返回给宿主应用的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIExtensionContentSession, common } from '@kit.AbilityKit';
@@ -788,7 +806,7 @@ struct Index {
 terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 ```
 
-Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result to the host application. This API uses a promise to return the result.
+销毁UIExtensionAbility组件自身，关闭对应的宿主应用窗口界面，并将结果返回给宿主应用。使用Promise异步回调。
 
 **Since:** 10
 
@@ -804,21 +822,21 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information returned to the host application. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | 返回给宿主应用的信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIExtensionContentSession, common } from '@kit.AbilityKit';

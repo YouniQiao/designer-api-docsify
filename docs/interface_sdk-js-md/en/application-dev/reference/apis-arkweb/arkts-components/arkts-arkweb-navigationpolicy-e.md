@@ -1,6 +1,6 @@
 # NavigationPolicy
 
-Enumerates the modes of opening a new window in the WebView.
+Enum type for navigationPolicy in OnWindowNewExtEvent.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the modes of opening a new window in the WebView.
 NEW_POPUP = 0
 ```
 
-Open in a new pop-up window.
+NEW POPUP window.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Open in a new pop-up window.
 NEW_WINDOW = 1
 ```
 
-Open in a new window.
+Shift key when clicking.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Open in a new window.
 NEW_BACKGROUND_TAB = 2
 ```
 
-Open in a new tab in background.
+Middle mouse button or meta/ctrl key when clicking.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ Open in a new tab in background.
 NEW_FOREGROUND_TAB = 3
 ```
 
-Open in a new tab in foreground.
+Shift key + Middle mouse button or meta/ctrl key when clicking.
 
 **Since:** 23
 

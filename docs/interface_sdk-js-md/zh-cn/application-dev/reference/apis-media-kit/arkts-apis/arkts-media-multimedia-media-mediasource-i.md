@@ -1,10 +1,11 @@
 # MediaSource
 
 媒体数据信息。来源于  
-[createMediaSourceWithUrl]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    - 本Interface首批接口从API version 12开始支持。
+[createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createmediasourcewithurl)。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 12
 
@@ -13,6 +14,12 @@
 <!--Device-unnamed-interface MediaSource--><!--Device-unnamed-interface MediaSource-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
+
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
 
 ## enableOfflineCache
 
@@ -84,7 +91,7 @@ Obtains the configured audio and video feature filtering values.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | If the TrackSelectionFilter object exists, the TrackSelectionFilter object is returned. Otherwise, the TrackSelectionFilter object is returned. |
+| [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | If the TrackSelectionFilter object exists, the TrackSelectionFilter object is returned. Otherwise, the TrackSelectionFilter object is returned. |
 
 ## setMediaResourceLoaderDelegate
 
@@ -108,7 +115,7 @@ setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceLoader | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用实现的媒体数据获取接口，方便播放器获取数据。 |
+| resourceLoader | [MediaSourceLoader](arkts-media-multimedia-media-mediasourceloader-i.md) | 是 | 应用实现的媒体数据获取接口，方便播放器获取数据。 |
 
 ## setMimeType
 
@@ -132,7 +139,7 @@ setMimeType(mimeType: AVMimeTypes): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 媒体MIME类型。 |
+| mimeType | [AVMimeTypes](arkts-media-multimedia-media-avmimetypes-e.md) | 是 | 媒体MIME类型。 |
 
 ## setTrackSelectionFilter
 
@@ -156,5 +163,5 @@ Set the audio and video feature filtering items of the MediaSource,After the use
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Specifies the audio and video features of the pre-downloaded streaming media. |
+| filter | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | 是 | Specifies the audio and video features of the pre-downloaded streaming media. |
 

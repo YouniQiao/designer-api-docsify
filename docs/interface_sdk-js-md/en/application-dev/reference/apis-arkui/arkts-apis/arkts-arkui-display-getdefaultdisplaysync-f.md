@@ -1,12 +1,18 @@
 # getDefaultDisplaySync
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getDefaultDisplaySync
 
 ```TypeScript
 function getDefaultDisplaySync(): Display
 ```
 
-Obtains the **Display** object of the screen where the application is located. If multiple abilities of an application are on different screens, the **Display** object of the main screen is returned. If multiple abilities of an application are on the same screen, the **Display** object of the screen is returned.
+返回应用所在屏幕的Display对象。若应用内多个Ability在不同屏幕，返回主屏的Display对象，若应用内多个Ability在同一屏幕，返回所在屏幕的Display对象。
 
 **Since:** 9
 
@@ -22,19 +28,17 @@ Obtains the **Display** object of the screen where the application is located. I
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Default Display object. |
+| [Display](arkts-arkui-display-display-i.md) | 返回默认的Display对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Display is not created or destroyed. |
+| 1400001 | Invalid display or screen. Possible cause: Display is not created or destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
-
 let displayClass: display.Display | null = null;
 try {
   displayClass = display.getDefaultDisplaySync();

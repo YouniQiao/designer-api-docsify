@@ -4,7 +4,7 @@
 export type AutoStartupInfo = _AutoStartupInfo
 ```
 
-Level-2 module AutoStartupInfo.
+AutoStartupInfo二级模块。
 
 **Since:** 11
 

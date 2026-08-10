@@ -22,6 +22,6 @@ declare function animateToImmediately(value: AnimateParam, event: () => void): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Animation settings. |
+| value | [AnimateParam](arkts-arkui-animateparam-i.md) | 是 | Animation settings. |
 | event | () =&gt; void | 是 | Closure function that displays the animation. The system automatically inserts a transition animation for state changes caused by the closure function. |
 

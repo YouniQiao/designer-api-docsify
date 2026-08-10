@@ -1,12 +1,18 @@
 # notifyScreenshotEvent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## notifyScreenshotEvent
 
 ```TypeScript
 function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 ```
 
-Notifies a screenshot event. This API uses a promise to return the result.
+通知屏幕截屏的事件类型，使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,23 +28,23 @@ Notifies a screenshot event. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the screenshot event. |
+| eventType | [ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md) | Yes | 截屏事件类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

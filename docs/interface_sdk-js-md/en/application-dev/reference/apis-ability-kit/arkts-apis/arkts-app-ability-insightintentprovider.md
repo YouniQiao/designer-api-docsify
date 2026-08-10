@@ -6,9 +6,17 @@ Insight intent Provider.
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace insightIntentProvider--><!--Device-unnamed-declare namespace insightIntentProvider-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Modules to Import
+
+```TypeScript
+import { insightIntentProvider } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 

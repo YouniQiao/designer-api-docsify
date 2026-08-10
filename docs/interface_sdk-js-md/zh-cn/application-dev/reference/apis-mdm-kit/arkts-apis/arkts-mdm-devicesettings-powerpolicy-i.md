@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { deviceSettings } from 'kits/@kit.MDMKit';
+```
+
 ## delayTime
 
 ```TypeScript
@@ -38,7 +44,7 @@ powerPolicyAction: PowerPolicyAction
 
 执行电源策略的动作。
 
-**类型：** PowerPolicyAction
+**类型：** [PowerPolicyAction](arkts-mdm-devicesettings-powerpolicyaction-e.md)
 
 **起始版本：** 11
 

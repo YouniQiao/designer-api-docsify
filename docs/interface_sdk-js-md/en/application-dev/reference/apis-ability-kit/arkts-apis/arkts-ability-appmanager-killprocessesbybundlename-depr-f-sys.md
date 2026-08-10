@@ -6,7 +6,7 @@
 function killProcessesByBundleName(bundleName: string): Promise<void>
 ```
 
-Kill processes by bundle name
+通过Bundle名称终止进程。使用Promise异步回调。
 
 **Since:** 8
 
@@ -28,15 +28,15 @@ Kill processes by bundle name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | bundle name. |
+| bundleName | string | Yes | 表示Bundle名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -59,7 +59,7 @@ appManager.killProcessesByBundleName(bundleName)
 function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<void>)
 ```
 
-Kill processes by bundle name
+通过Bundle名称终止进程。使用callback异步回调。
 
 **Since:** 8
 
@@ -81,10 +81,10 @@ Kill processes by bundle name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | bundle name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | cut off the callback function of the account process. |
+| bundleName | string | Yes | 表示Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当通过Bundle名称终止进程成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

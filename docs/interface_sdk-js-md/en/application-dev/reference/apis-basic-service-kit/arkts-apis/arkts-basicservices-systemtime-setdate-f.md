@@ -1,12 +1,18 @@
 # setDate
 
+## Modules to Import
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setDate
 
 ```TypeScript
 function setDate(date: Date, callback: AsyncCallback<void>): void
 ```
 
-Sets the system date. This API uses an asynchronous callback to return the result.
+设置系统日期，使用callback异步回调。
 
 **Since:** 7
 
@@ -26,8 +32,8 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Target date to set. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| date | Date | Yes | 目标日期。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
@@ -35,7 +41,7 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -44,7 +50,7 @@ let date = new Date();
 try {
   systemTime.setDate(date, (error: BusinessError) => {
     if (error) {
-      console.info(`Failed to setting date. message: ${error.message}, code: ${error.code}`);
+      console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
       return;
     }
     console.info(`Succeeded in setting date.`);
@@ -62,7 +68,7 @@ try {
 function setDate(date: Date): Promise<void>
 ```
 
-Sets the system date. This API uses a promise to return the result.
+设置系统日期，使用Promise异步回调。
 
 **Since:** 7
 
@@ -82,13 +88,13 @@ Sets the system date. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Target date to set. |
+| date | Date | Yes | 目标日期。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
@@ -96,7 +102,7 @@ Sets the system date. This API uses a promise to return the result.
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -106,7 +112,7 @@ try {
   systemTime.setDate(date).then(() => {
     console.info(`Succeeded in setting date.`);
   }).catch((error: BusinessError) => {
-    console.info(`Failed to setting date. message: ${error.message}, code: ${error.code}`);
+    console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;

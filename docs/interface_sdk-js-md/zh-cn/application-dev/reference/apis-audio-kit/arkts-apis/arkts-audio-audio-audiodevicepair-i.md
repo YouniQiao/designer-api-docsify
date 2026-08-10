@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## inputDevice
 
 ```TypeScript
@@ -18,7 +24,7 @@ inputDevice: AudioDeviceDescriptor
 
 输入音频设备描述。
 
-**类型：** AudioDeviceDescriptor
+**类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ outputDevice: AudioDeviceDescriptor
 
 输出音频设备描述。
 
-**类型：** AudioDeviceDescriptor
+**类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **起始版本：** 26.0.0
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { systemTimer } from 'kits/@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 <!--Del-->
@@ -19,8 +25,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer) | 创建定时器，使用callback异步回调。  **注意：**     需与[systemTimer.destroyTimer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_结合使用，否则会造   成内存泄漏 |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer-1) | 创建定时器，使用Promise异步回调返回定时器的ID。  **注意：**     需与[systemTimer.destroyTimer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_结合使用，否则会造   成内存泄漏 |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer) | 创建定时器，使用callback异步回调。  > **注意：** >  > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer)结合使用，否则会造 > 成内存泄漏 |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer-1) | 创建定时器，使用Promise异步回调返回定时器的ID。  > **注意：** >  > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer)结合使用，否则会造 > 成内存泄漏 |
 | [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer) | 销毁定时器，使用callback异步回调。 |
 | [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-1) | 销毁定时器，使用Promise进行异步回调。 |
 | [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer) | 开启定时器，使用callback异步回调。 |

@@ -4,7 +4,7 @@
 type CommandDataType = int | string | boolean
 ```
 
-Defines the private data type, which varies depending on its function.
+表示私有数据类型，接口参数具体类型根据其功能而定。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the private data type, which varies depending on its function.
 
 | Type | Description |
 | --- | --- |
-| int | Number. |
-| string | String. |
-| boolean | Boolean. |
+| int | 表示值类型为数字。 |
+| string | 表示值类型为字符串。 |
+| boolean | 表示值类型为布尔值。 |
 

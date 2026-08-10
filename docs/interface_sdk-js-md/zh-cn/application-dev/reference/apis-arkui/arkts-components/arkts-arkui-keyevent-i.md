@@ -34,7 +34,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 功能键列表。支持功能键 'Ctrl'\| 'Alt' \| 'Shift'。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_此接口不支持在手写笔场景下使用。 |
+| keys | Array&lt;string&gt; | 是 | 功能键列表。支持功能键 'Ctrl'\| 'Alt' \| 'Shift'。&lt;br/&gt;**说明：**&lt;br/&gt;此接口不支持在手写笔场景下使用。 |
 
 **返回值：**
 
@@ -46,7 +46,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## stopPropagation
 
@@ -54,7 +54,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 stopPropagation: () => void
 ```
 
-阻塞\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_传递。
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)传递。
 
 **起始版本：** 7
 
@@ -94,9 +94,9 @@ intentionCode: IntentionCode
 
 按键对应的意图。
 
-默认值：IntentionCode.INTENTION\_UNKNOWN。
+默认值：IntentionCode.INTENTION_UNKNOWN。
 
-**类型：** IntentionCode
+**类型：** [IntentionCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
 
 **默认值：** IntentionCode.INTENTION_UNKNOWN
 
@@ -184,7 +184,7 @@ ScrollLock是否锁定（true: 锁定；false: 解锁）。
 keyCode: number
 ```
 
-按键的键值。按键设备提供的键值请参考[KeyCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+按键的键值。按键设备提供的键值请参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。
 
 **类型：** number
 
@@ -206,7 +206,7 @@ keySource: KeySource
 
 触发当前按键的输入设备类型。
 
-**类型：** KeySource
+**类型：** [KeySource](../arkts-apis/arkts-arkui-keysource-e.md)
 
 **起始版本：** 7
 
@@ -286,7 +286,7 @@ type: KeyType
 
 按键的类型。
 
-**类型：** KeyType
+**类型：** [KeyType](../arkts-apis/arkts-arkui-keytype-e.md)
 
 **起始版本：** 7
 

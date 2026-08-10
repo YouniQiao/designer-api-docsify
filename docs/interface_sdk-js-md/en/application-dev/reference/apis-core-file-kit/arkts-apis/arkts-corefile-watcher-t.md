@@ -4,8 +4,7 @@
 type Watcher = fileIo.Watcher
 ```
 
-Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call  
-**createWatcher()** to create a **Watcher** object.
+文件目录变化监听对象。由createWatcher接口获得。
 
 **Since:** 23
 

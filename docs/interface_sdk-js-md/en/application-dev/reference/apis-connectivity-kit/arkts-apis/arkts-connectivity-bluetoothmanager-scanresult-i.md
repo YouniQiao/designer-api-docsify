@@ -14,6 +14,12 @@ Describes the contents of the scan results.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## data
 
 ```TypeScript

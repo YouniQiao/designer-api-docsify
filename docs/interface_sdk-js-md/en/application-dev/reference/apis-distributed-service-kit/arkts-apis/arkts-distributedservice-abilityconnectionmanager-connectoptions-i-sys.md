@@ -1,6 +1,6 @@
 # ConnectOptions
 
-Connection options for the application.
+应用连接时所需的连接选项。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Connection options for the application.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## needReceiveStream
 
 ```TypeScript
 needReceiveStream?: boolean
 ```
 
-Receive Stream Data Configuration Options. WiFi needs to be turned on.
+接收流数据的配置选项。需要开启WiFi。
 
 **Type:** boolean
 
@@ -38,7 +44,7 @@ Receive Stream Data Configuration Options. WiFi needs to be turned on.
 needSendStream?: boolean
 ```
 
-Send Stream Data Configuration Options. WiFi needs to be turned on.
+发送流数据的配置选项。需要开启WiFi。
 
 **Type:** boolean
 

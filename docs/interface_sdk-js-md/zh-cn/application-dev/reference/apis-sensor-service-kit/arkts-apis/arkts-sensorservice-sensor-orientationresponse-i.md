@@ -1,6 +1,6 @@
 # OrientationResponse
 
-方向传感器数据，继承于[Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+方向传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **继承/实现关系：** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## alpha
 
 ```TypeScript
@@ -20,7 +26,7 @@ alpha: double
 
 设备围绕Z轴的旋转角度，即方位角。单位：degree（度）；取值范围：[0, 360]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -40,7 +46,7 @@ beta: double
 
 设备围绕X轴的旋转角度，即俯仰角。单位：degree（度）；取值范围：[-180, 180]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -60,7 +66,7 @@ gamma: double
 
 设备围绕Y轴的旋转角度，即翻转角。单位：degree（度）；取值范围：[-90, 90]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 

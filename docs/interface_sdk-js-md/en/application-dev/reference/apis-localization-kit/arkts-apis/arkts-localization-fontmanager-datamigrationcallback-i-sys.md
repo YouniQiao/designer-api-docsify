@@ -1,6 +1,6 @@
 # DataMigrationCallback (System API)
 
-Callback API type used during data migration, defining the callback methods for the data migration process. You must implement all methods of this API to receive heartbeat notifications, progress updates, and the final result during migration.
+数据迁移时使用的回调接口类型，定义了数据迁移过程中的回调方法。开发者需实现该接口的所有方法，以接收迁移过程中的心跳通知、进度更新和最终结果。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Callback API type used during data migration, defining the callback methods for 
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { fontManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## onHeartBeat
 
 ```TypeScript
 onHeartBeat(): void
 ```
 
-Callback function that is periodically invoked during the execution of the data migration task to notify you that the migration task is still running normally. You can use it to update UI prompts or execute other business logic.
+回调函数，在数据迁移任务执行期间定期调用，用于通知开发者迁移任务仍在正常运行，开发者可据此更新UI提示或执行其他业务逻辑。
 
 **Since:** 23
 
@@ -30,20 +36,20 @@ Callback function that is periodically invoked during the execution of the data 
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
 
-dataMigration() {
+async function dataMigration() {
   const callback: fontManager.DataMigrationCallback = {
     onHeartBeat: () => {
       console.info('onHeartBeat callback');
     },
-    onProgress(progress : fontManager.DataMigrationProgress) => {
+    onProgress: (progress : fontManager.DataMigrationProgress) => {
       console.info('onProgress callback');
     },
-    onResult(result : int) => {
+    onResult: (result : number) => {
       console.info('onResult callback');
     }
   }
@@ -53,7 +59,6 @@ dataMigration() {
   } catch (error) {
     console.error('dataMigration err.' + error.code);
   }
-  return;
 }
 ```
 
@@ -63,7 +68,7 @@ dataMigration() {
 onProgress(progress : DataMigrationProgress): void
 ```
 
-Callback function that is periodically invoked during the execution of the data migration task to notify you of the current migration progress and estimated remaining time. This callback can be used when progress bars,remaining time, and other information need to be displayed on the UI.
+回调函数，在数据迁移任务执行过程中定期调用，用于通知开发者当前的迁移进度和预估剩余时间。当需要在UI上展示进度条、剩余时间等信息时使用此回调。
 
 **Since:** 23
 
@@ -79,22 +84,22 @@ Callback function that is periodically invoked during the execution of the data 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Data migration progress. |
+| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes | 数据迁移进度信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
 
-dataMigration() {
+async function dataMigration() {
   const callback: fontManager.DataMigrationCallback = {
     onHeartBeat: () => {
       console.info('onHeartBeat callback');
     },
-    onProgress(progress : fontManager.DataMigrationProgress) => {
+    onProgress: (progress : fontManager.DataMigrationProgress) => {
       console.info('onProgress callback');
     },
-    onResult(result : int) => {
+    onResult: (result : number) => {
       console.info('onResult callback');
     }
   }
@@ -104,7 +109,6 @@ dataMigration() {
   } catch (error) {
     console.error('dataMigration err.' + error.code);
   }
-  return;
 }
 ```
 
@@ -120,7 +124,7 @@ ArkTS-Sta:
 onResult(result : int): void
 ```
 
-Callback function that is invoked after the data migration task is completed (whether successful or failed) to notify you of the final migration result. This callback can be used when subsequent operations (such as updating the UI, logging, notifying users, etc.) need to be performed after migration is complete.
+回调函数，在数据迁移任务完成（无论成功或失败）后调用，用于通知开发者迁移的最终结果。当需要在迁移完成后执行后续操作（如更新UI、记录日志、通知用户等）时使用此回调。
 
 **Since:** 23
 
@@ -136,22 +140,22 @@ Callback function that is invoked after the data migration task is completed (wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Data migration result. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**0**: Data migration succeeded. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**1**: No data migration is required. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**2**: Failed to obtain the user ID. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**3**: Failed to check the directory. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**4**: Failed to initialize the cache directory. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**5**: Failed to open the source file. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**6**: Failed to copy the file. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**7**: Failed to rename the file. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**8**: Failed to delete the file. |
+| result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 数据迁移结果。 &lt;br&gt;0：数据迁移成功。 &lt;br&gt;1：无需进行数据迁移。 &lt;br&gt;2：获取用户ID失败。 &lt;br&gt;3：检查目录失败。 &lt;br&gt;4：初始化缓存目录失败。 &lt;br&gt;5：打开源文件失败。 &lt;br&gt;6：拷贝失败。 &lt;br&gt;7：文件重命名失败。 &lt;br&gt;8：文件删除失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
 
-dataMigration() {
+async function dataMigration() {
   const callback: fontManager.DataMigrationCallback = {
     onHeartBeat: () => {
       console.info('onHeartBeat callback');
     },
-    onProgress(progress : fontManager.DataMigrationProgress) => {
+    onProgress: (progress : fontManager.DataMigrationProgress) => {
       console.info('onProgress callback');
     },
-    onResult(result : int) => {
+    onResult: (result : number) => {
       console.info('onResult callback');
     }
   }
@@ -161,7 +165,6 @@ dataMigration() {
   } catch (error) {
     console.error('dataMigration err.' + error.code);
   }
-  return;
 }
 ```
 

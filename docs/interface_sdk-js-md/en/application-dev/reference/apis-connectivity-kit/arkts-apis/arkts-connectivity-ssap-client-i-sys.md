@@ -1,6 +1,6 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method,you must use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a ssap client instance.
+管理SSAP客户端。在调用ssap客户端方法之前，必须使用{@link createClient}创建ssap客户端实例。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Manages SSAP client. Before calling a SSAP client method,you must use \_\_\_JSDO
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## callMethod
 
 ```TypeScript
 callMethod(method: Method): Promise<Method>
 ```
 
-Calls the method of a server.
+调用服务端的方法。
 
 **Since:** 26.0.0
 
@@ -36,24 +42,24 @@ Calls the method of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the Method to call. |
+| method | [Method](arkts-connectivity-ssap-method-i-sys.md) | Yes | 指示要调用的方法 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Method&gt; | Promise used to return the Method result. |
+| Promise&lt;Method&gt; | Promise用于返回方法结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID. |
 
 ## offEventNotify
 
@@ -61,7 +67,7 @@ Calls the method of a server.
 offEventNotify(callback?: Callback<Event>): void
 ```
 
-Unsubscribes from event notifications.
+取消订阅事件通知。
 
 **Since:** 26.0.0
 
@@ -79,7 +85,7 @@ Unsubscribes from event notifications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Event&gt; | No | Callback used to listen for the event notified event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | 用于监听事件通知事件的回调。 |
 
 ## onEventNotify
 
@@ -87,9 +93,9 @@ Unsubscribes from event notifications.
 onEventNotify(callback: Callback<Event>): void
 ```
 
-Subscribes to event notifications.
+订阅事件通知。
 
-This event is accessible only to system applications that granted the ohos.permission.NEARLINK\_ACCESS permission.
+只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
 
 **Since:** 26.0.0
 
@@ -107,7 +113,7 @@ This event is accessible only to system applications that granted the ohos.permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Event&gt; | Yes | Callback used to listen for the event notified event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | 用于监听事件通知事件的回调。 |
 
 ## readDescriptor
 
@@ -115,7 +121,7 @@ This event is accessible only to system applications that granted the ohos.permi
 readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 ```
 
-Reads the descriptor of a server.
+读取服务器的描述符。
 
 **Since:** 26.0.0
 
@@ -135,24 +141,24 @@ Reads the descriptor of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to read. |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Yes | 指示要读取的描述符 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PropertyDescriptor&gt; | Promise used to return the descriptor value. |
+| Promise&lt;PropertyDescriptor&gt; | Promise用于返回描述符值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID in descriptor. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in descriptor. |
 
 ## setPropertyIndication
 
@@ -160,7 +166,7 @@ Reads the descriptor of a server.
 setPropertyIndication(property: Property, enable: boolean): Promise<void>
 ```
 
-Enables or disables indication of a property when value changed.
+启用或禁用属性值变更指示。
 
 **Since:** 26.0.0
 
@@ -180,26 +186,26 @@ Enables or disables indication of a property when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the property to indicate. |
-| enable | boolean | Yes | Specifies whether to enable indication of the property. |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | 要指示的属性。 |
+| enable | boolean | Yes | 指定是否启用属性的指示 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| Promise&lt;void&gt; | 返回promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
-| 36100030 | The connection is not established. |
-| 36100043 | Invalid UUID in property. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
+| 36100030 | The connection is not established. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in property. |
 
 ## writeDescriptor
 
@@ -207,10 +213,9 @@ Enables or disables indication of a property when value changed.
 writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 ```
 
-Writes the descriptor of a server.
+写入服务端的描述符。
 
-This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[setPropertyIndication]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ instead.
+此方法不支持写入客户端属性配置描述符。要写入客户端属性配置描述符，请改为调用[setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification)或[setPropertyIndication](arkts-connectivity-ssap-client-i-sys.md#setpropertyindication)。
 
 **Since:** 26.0.0
 
@@ -230,22 +235,22 @@ This method does not support writing client property configuration descriptors. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the descriptor to write. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The descriptor type should not be CLIENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_PROPERTY\_\_\_ESCAPED\_UNDERSCORE\_\_\_CONFIG. |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Yes | 指示要写入的描述符。 &lt;br&gt;描述符类型不应为CLIENT_PROPERTY_CONFIG。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise用于返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100003 | NearLink disabled. |
-| 36100043 | Invalid UUID in descriptor. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in descriptor. |
 

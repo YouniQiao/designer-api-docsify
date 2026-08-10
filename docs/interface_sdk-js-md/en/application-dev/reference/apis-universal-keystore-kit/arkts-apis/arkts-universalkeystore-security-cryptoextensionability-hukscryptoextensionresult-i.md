@@ -1,6 +1,6 @@
 # HuksCryptoExtensionResult
 
-Represents the operation result of crypto extension.
+接口返回值的通用类型。
 
 **Since:** 22
 
@@ -10,13 +10,19 @@ Represents the operation result of crypto extension.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
+## Modules to Import
+
+```TypeScript
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## authState
 
 ```TypeScript
 authState?: int
 ```
 
-Auth state.
+认证状态。
 
 **Type:** int
 
@@ -34,7 +40,7 @@ Auth state.
 certs?: Array<HuksCryptoExtensionCertInfo>
 ```
 
-The cert array.
+/**证书。
 
 **Type:** Array&lt;HuksCryptoExtensionCertInfo&gt;
 
@@ -52,7 +58,7 @@ The cert array.
 errInfo?: huksExternalCrypto.HuksExternalErrorInfo
 ```
 
-The detailed error information returned.
+返回详细错误信息
 
 **Type:** huksExternalCrypto.HuksExternalErrorInfo
 
@@ -72,7 +78,7 @@ The detailed error information returned.
 handle?: string
 ```
 
-The provider resource handle.
+资源句柄。
 
 **Type:** string
 
@@ -90,7 +96,7 @@ The provider resource handle.
 outData?: Uint8Array
 ```
 
-Returned data.
+返回的数据。
 
 **Type:** Uint8Array
 
@@ -108,7 +114,7 @@ Returned data.
 property?: Array<huksExternalCrypto.HuksExternalCryptoParam>
 ```
 
-Returned property info.
+返回的属性信息。
 
 **Type:** Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt;
 
@@ -126,7 +132,11 @@ Returned property info.
 resourceId?: string
 ```
 
-The returned resource ID.
+返回的资源ID。
+
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Type:** string
 
@@ -146,7 +156,7 @@ The returned resource ID.
 resultCode: int
 ```
 
-Returned code.
+返回值的错误码。
 
 **Type:** int
 
@@ -164,7 +174,7 @@ Returned code.
 retryCount?: int
 ```
 
-The remaining retry count when the PIN is incorrect.
+重试次数。
 
 **Type:** int
 

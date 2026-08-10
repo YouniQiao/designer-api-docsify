@@ -1,5 +1,11 @@
 # getWindowsByCoordinate
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## getWindowsByCoordinate
 
 ```TypeScript
@@ -23,10 +29,10 @@ function getWindowsByCoordinate(displayId: long, windowNumber?: int, x?: int, y?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 是 | 查询窗口所在的displayId，该参数应为整数，传入非整数会忽略掉小数部分，可以在窗口属性 [WindowProperties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中获取。 |
-| windowNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 查询的窗口数量，该参数应为大于0的整数，传入非整数会忽略掉小数部分，未设置或小于等于0返回所有满足条件的窗口。 |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 查询的x坐标，以屏幕左上角为原点，该参数应为非负整数，传入非整数会忽略掉小数部分，未设置或小于0返回所有可见窗口。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 查询的y坐标，以屏幕左上角为原点，该参数应为非负整数，传入非整数会忽略掉小数部分，未设置或小于0返回所有可见窗口。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 查询窗口所在的displayId，该参数应为整数，传入非整数会忽略掉小数部分，可以在窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)中获取。 |
+| windowNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 查询的窗口数量，该参数应为大于0的整数，传入非整数会忽略掉小数部分，未设置或小于等于0返回所有满足条件的窗口。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 查询的x坐标，以屏幕左上角为原点，该参数应为非负整数，传入非整数会忽略掉小数部分，未设置或小于0返回所有可见窗口。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 查询的y坐标，以屏幕左上角为原点，该参数应为非负整数，传入非整数会忽略掉小数部分，未设置或小于0返回所有可见窗口。 |
 
 **返回值：**
 
@@ -38,13 +44,11 @@ function getWindowsByCoordinate(displayId: long, windowNumber?: int, x?: int, y?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal task error. |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal task error. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -69,30 +73,6 @@ export default class EntryAbility extends UIAbility {
       console.error(`Failed to get window from point. Cause code: ${exception.code}, message: ${exception.message}`);
     }
   }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let displayId = 0;
-  window.getWindowsByCoordinate(displayId).then((data) => {
-    console.info(`Succeeded in getting windows. Data: ${data}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to get window from point. Cause code: ${err.code}, message: ${err.message}`);
-  });
-  window.getWindowsByCoordinate(displayId, 2, 500, 500).then((data) => {
-    console.info(`Succeeded in getting windows. Data: ${data}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to get window from point. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to get window from point. Cause code: ${error.code}, message: ${error.message}`);
 }
 ```
 

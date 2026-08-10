@@ -16,6 +16,12 @@ Circular fence information.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## expiration
 
 ```TypeScript

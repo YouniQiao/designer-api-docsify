@@ -1,6 +1,6 @@
 # DataFilter
 
-Defines the contact data filter item.
+联系人数据过滤项。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Defines the contact data filter item.
 
 **System capability:** SystemCapability.Applications.Contacts
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## field
 
 ```TypeScript
 field: DataField
 ```
 
-Contact data field.
+联系人数据字段。
 
-**Type:** DataField
+**Type:** [DataField](arkts-contacts-contact-datafield-e.md)
 
 **Since:** 15
 
@@ -36,7 +42,7 @@ Contact data field.
 options: Array<FilterOptions>
 ```
 
-Contact filtering parameter. Multiple filter options in the array are ORed. The maximum length of the array is 3.
+联系人过滤参数，数组中多个FilterOptions之间是“或”的关系，数组的最大长度为3。
 
 **Type:** Array&lt;FilterOptions&gt;
 

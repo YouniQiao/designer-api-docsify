@@ -21,8 +21,8 @@ export declare type PersistenceErrorCallback = (key: string, reason: string, mes
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 出错的键值。  |
-| reason | string | 是 | 出错的原因类型。  |
-| message | string | 是 | 出错的更多消息。  |
-| oldValue | string | 否 | 反序列化失败时返回原始序列化数据。  |
+| key | string | 是 | 出错的键值。 |
+| reason | string | 是 | 出错的原因类型。 |
+| message | string | 是 | 出错的更多消息。 |
+| oldValue | string | 否 | 反序列化失败时返回原始序列化数据。 |
 

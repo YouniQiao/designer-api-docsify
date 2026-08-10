@@ -1,5 +1,11 @@
 # onCaptureStatusChange
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## onCaptureStatusChange
 
 ```TypeScript
@@ -20,22 +26,11 @@ Register the callback for device capture, casting, or recording status changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | Callback used to return the device capture, casting, or recording status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to return the device capture, casting, or recording status. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例：**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<boolean> = (captureStatus: boolean) => {
-  console.info(`Listening capture status: ${captureStatus}`);
-};
-display.onCaptureStatusChange(callback);
-```
+| 1400003 | This display manager service works abnormally. |
 

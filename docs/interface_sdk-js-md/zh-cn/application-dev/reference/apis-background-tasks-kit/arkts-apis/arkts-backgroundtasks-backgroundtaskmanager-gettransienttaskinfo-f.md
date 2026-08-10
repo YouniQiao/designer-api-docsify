@@ -1,5 +1,11 @@
 # getTransientTaskInfo
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## getTransientTaskInfo
 
 ```TypeScript
@@ -26,13 +32,11 @@ function getTransientTaskInfo(): Promise<TransientTaskInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9900001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900001-短时任务调用方信息校验失败) | Caller information verification failed for a transient task. |
-| [9900003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900003-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Failed to apply for memory. |
-| [9900004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900004-系统服务失败) | System service operation failed. |
+| 9900004 | System service operation failed. |
+| 9900003 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| 9900001 | Caller information verification failed for a transient task. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -42,23 +46,6 @@ try {
   backgroundTaskManager.getTransientTaskInfo().then((res: backgroundTaskManager.TransientTaskInfo) => {
     console.info(`Operation getTransientTaskInfo succeeded. data: ` + JSON.stringify(res));
   }).catch((error : BusinessError) => {
-    console.error(`Operation getTransientTaskInfo failed. code is ${error.code} message is ${error.message}`);
-  });
-} catch (error) {
-  console.error(`Operation getTransientTaskInfo failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  backgroundTaskManager.getTransientTaskInfo().then((res: backgroundTaskManager.TransientTaskInfo) => {
-    console.info(`Operation getTransientTaskInfo succeeded. data: ` + JSON.stringify(res));
-  }).catch((error) => {
     console.error(`Operation getTransientTaskInfo failed. code is ${error.code} message is ${error.message}`);
   });
 } catch (error) {

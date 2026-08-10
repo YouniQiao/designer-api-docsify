@@ -20,12 +20,12 @@ Determine whether two values are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldV | T | Yes | the old value  |
-| newV | T | Yes | the new value  |
+| oldV | T | Yes | the old value |
+| newV | T | Yes | the new value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | - Returns the comparison result between old value and new value, if they are equal, return true; otherwise, return false.  |
+| boolean | Returns the comparison result between old value and new value, if they are equal, return true; otherwise, return false. |
 

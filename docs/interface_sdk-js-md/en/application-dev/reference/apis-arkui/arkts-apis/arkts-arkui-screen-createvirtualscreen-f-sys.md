@@ -1,12 +1,18 @@
 # createVirtualScreen (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## createVirtualScreen
 
 ```TypeScript
 function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallback<Screen>): void
 ```
 
-Creates a virtual screen. This API uses an asynchronous callback to return the result.
+创建虚拟屏幕，使用callback异步回调。
 
 **Since:** 9
 
@@ -24,19 +30,19 @@ Creates a virtual screen. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Virtual screen parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Screen&gt; | Yes | Callback used to return the created virtual screen. |
+| options | [VirtualScreenOption](arkts-arkui-screen-virtualscreenoption-i-sys.md) | Yes | 用于创建虚拟屏幕的参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Screen&gt; | Yes | 回调函数，返回创建的虚拟屏幕对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400001 | Invalid display or screen. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -51,18 +57,19 @@ class VirtualScreenOption {
   supportsFocus ?: boolean = true;
 }
 
-let option : VirtualScreenOption = { 
+let option: VirtualScreenOption = { 
   name: 'screen01',
   width: 1080,
   height: 2340,
   density: 2,
   surfaceId: '',
   supportsFocus: false
-};
+}; // Create virtual screen parameters.
+// Create a virtual screen.
 screen.createVirtualScreen(option, (err: BusinessError, data: screen.Screen) => {
   const errCode: number = err.code;
   if (errCode) {
-    console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+    console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   screenClass = data;
@@ -77,7 +84,7 @@ screen.createVirtualScreen(option, (err: BusinessError, data: screen.Screen) => 
 function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>
 ```
 
-Creates a virtual screen. This API uses a promise to return the result.
+创建虚拟屏幕，使用Promise异步回调。
 
 **Since:** 9
 
@@ -95,24 +102,24 @@ Creates a virtual screen. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Virtual screen parameters. |
+| options | [VirtualScreenOption](arkts-arkui-screen-virtualscreenoption-i-sys.md) | Yes | 用于创建虚拟屏幕的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Screen&gt; | Promise used to return the created virtual screen. |
+| Promise&lt;Screen&gt; | Promise对象。返回创建的虚拟屏幕对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 1400001 | Invalid display or screen. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -127,20 +134,21 @@ class VirtualScreenOption {
   supportsFocus ?: boolean = true;
 }
 
-let option : VirtualScreenOption = { 
+let option: VirtualScreenOption = { 
   name: 'screen01',
   width: 1080,
   height: 2340,
   density: 2,
   surfaceId: '',
   supportsFocus: false
-};
+}; // Create virtual screen parameters.
 
+// Create a virtual screen.
 screen.createVirtualScreen(option).then((data: screen.Screen) => {
   screenClass = data;
   console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

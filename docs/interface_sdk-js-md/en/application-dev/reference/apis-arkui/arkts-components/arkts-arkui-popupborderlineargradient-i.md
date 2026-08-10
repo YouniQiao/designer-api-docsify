@@ -1,6 +1,6 @@
 # PopupBorderLinearGradient
 
-Sets the color and direction of the linear gradient for the outlines.
+弹出边框线性渐变色。
 
 **Since:** 20
 
@@ -16,18 +16,17 @@ Sets the color and direction of the linear gradient for the outlines.
 colors: Array<[ResourceColor, number]>
 ```
 
-Array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped.
+指定渐变色颜色和其对应的百分比位置的数组，设置非法颜色直接跳过。
 
-**NOTE**
+**说明：**
 
-For details about how to set colors, see [ResourceColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Colors that are not within the types of [ResourceColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ are invalid.
+颜色设置方式可参考：[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md)，非[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md)范围内的颜色值即为非法颜色。
 
-If the color in the array is set to **undefined** or **null**, the default color is black.
+数组内颜色设置为undefined或者null时，默认为黑色。
 
-When using the **colors** parameter, take note of the following:
+colors参数的约束：
 
-[ResourceColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ indicates the color, and **number** indicates the color's position, which ranges from 0 to 1.0: **0** indicates the start of the gradient color container, and **1.0** indicates the end of the container. To create a gradient with multiple color stops, you are advised to set the **number** values in ascending order. If a value of **number** in an array is smaller than that in the previous one, the value of  
-**number** in the previous array is used.
+[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md)表示填充的颜色，number表示指定颜色所处的位置，取值范围为[0,1.0]，0表示需要设置渐变色的容器的起始位置，1.0表示容器的结束位置。为实现多个颜色渐变效果，建议多个数组中number参数递增设置，如后一个数组number参数比前一个数组number小时，按照等于前一个数组number的值处理。
 
 **Type:** Array&lt;[ResourceColor, number]&gt;
 
@@ -49,15 +48,15 @@ When using the **colors** parameter, take note of the following:
 direction?: GradientDirection
 ```
 
-Direction of the linear gradient.
+线性渐变的方向。
 
-Default value: **GradientDirection.Bottom**
+默认值：GradientDirection.Bottom 
 
-**NOTE**
+**说明：**
 
-When the direction is set to **GradientDirection.None**, the default value is used.
+当线性渐变的方向设置为GradientDirection.None时，显示默认值。
 
-**Type:** GradientDirection
+**Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **Since:** 20
 

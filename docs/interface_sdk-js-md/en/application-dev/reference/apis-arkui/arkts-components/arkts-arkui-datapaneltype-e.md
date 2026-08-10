@@ -1,6 +1,6 @@
 # DataPanelType
 
-Enumerates data panel types.
+数据面板的类型。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates data panel types.
 Line
 ```
 
-Line data panel.
+线型数据面板。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Line data panel.
 Circle
 ```
 
-Circle data panel.
+Line Rainbow
 
 **Since:** 8
 

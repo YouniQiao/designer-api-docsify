@@ -1,17 +1,22 @@
 # getPss
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getPss
 
 ```TypeScript
 function getPss() : bigint
 ```
 
-Obtains the size of the physical memory actually used by the application process. This API is implemented by summing up the values of **Pss** and **SwapPss** in the **\/proc/{pid}/smaps\_rollup** node.
-    **NOTE**  
-    
-    Reading the **\/proc/{pid}/smaps\_rollup** node is time-consuming. Therefore, you are advised not to use this API  
-    in the main thread. You can use this API in the asynchronous thread started by calling  
-    [@ohos.taskpool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [@ohos.worker]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to avoid frame freezing.
+��ȡӦ�ý���ʵ��ʹ�õ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps_rollup�ڵ��е�Pss��SwapPssֵ����͡�
+
+> **ע��**
+> 
+> ����/proc/{pid}/smaps_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
 
 **Since:** 8
 
@@ -25,13 +30,14 @@ Obtains the size of the physical memory actually used by the application process
 
 | Type | Description |
 | --- | --- |
-| bigint | Size of the physical memory actually used by the application process, in KB. |
+| bigint | ����Ӧ�ý���ʵ��ʹ�õ������ڴ��С����λΪKB�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let pss: bigint = hidebug.getPss();
+console.info(`pss = ${pss}`);
 ```
 

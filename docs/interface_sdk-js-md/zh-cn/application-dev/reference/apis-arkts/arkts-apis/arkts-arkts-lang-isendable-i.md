@@ -16,3 +16,9 @@ ISendable主要用在开发者自定义Sendable数据结构的场景中。ArkTS�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
+```
+

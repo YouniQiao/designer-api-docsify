@@ -1,5 +1,11 @@
 # isPartnerAgentSupported
 
+## Modules to Import
+
+```TypeScript
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isPartnerAgentSupported
 
 ```TypeScript

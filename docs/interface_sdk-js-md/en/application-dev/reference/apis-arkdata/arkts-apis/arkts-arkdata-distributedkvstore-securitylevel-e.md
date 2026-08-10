@@ -1,20 +1,18 @@
 # SecurityLevel
 
-Enumerates the KV store security levels.
-    **NOTE**  
-    
-    For the scenarios involving a single device, you can upgrade the security level of a KV store by modifying the  
-    **securityLevel** parameter. When upgrading the database security level, observe the following:  
-    
-    * This operation does not apply to the databases that require cross-device sync. Data cannot be synced between  
-    databases of different security levels. If you want to upgrade the security level of a database, you are advised  
-    to create a database of a higher security level.  
-    
-    * You need to close the database before modifying the **securityLevel** parameter, and open it after the security  
-    level is upgraded.  
-    
-    * You cannot downgrade the database security level. For example, you can change the database security level from  
-    S2 to S3, but cannot change it from S3 to S2.
+数据库的安全级别枚举。
+
+> **说明：**
+> 
+> 在单设备使用场景下，KV数据库支持修改securityLevel参数进行安全等级升级。升级操作需要注意以下几点：
+> 
+> * 该操作不支持跨设备同步的数据库。不同安全等级的数据库之间不能进行数据同步。若需升级数据库的安全等级，建议重新创建更高安全等级的数据库。
+> 
+> * 关闭当前数据库后，修改securityLevel参数以重新设置数据库的安全等级，然后调用
+> [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)
+> 接口重新打开数据库。
+> 
+> * 该操作仅支持升级，例如从S2到S3，不支持降级，例如从S3到S2。
 
 **Since:** 9
 
@@ -30,7 +28,7 @@ Enumerates the KV store security levels.
 S1
 ```
 
-S1: means the db is in the low security level There are some low impact when the data is leaked.
+表示数据库的安全级别为低级别，数据的泄露、篡改、破坏、销毁可能会给个人或组织导致有限的不利影响。
 
 **Since:** 9
 
@@ -48,7 +46,7 @@ S1: means the db is in the low security level There are some low impact when the
 S2
 ```
 
-S2: means the db is in the middle security level There are some major impact when the data is leaked.
+表示数据库的安全级别为中级别，数据的泄露、篡改、破坏、销毁可能会给个人或组织导致严重的不利影响。
 
 **Since:** 9
 
@@ -66,7 +64,7 @@ S2: means the db is in the middle security level There are some major impact whe
 S3
 ```
 
-S3: means the db is in the high security level There are some severity impact when the data is leaked.
+表示数据库的安全级别为高级别，数据的泄露、篡改、破坏、销毁可能会给个人或组织导致严峻的不利影响。
 
 **Since:** 9
 
@@ -84,7 +82,7 @@ S3: means the db is in the high security level There are some severity impact wh
 S4
 ```
 
-S4: means the db is in the critical security level There are some critical impact when the data is leaked.
+表示数据库的安全级别为关键级别，业界法律法规中定义的特殊数据类型，涉及个人的最私密领域的信息，一旦泄露、篡改、破坏、销毁可能会给个人或组织造成重大的不利影响。
 
 **Since:** 9
 

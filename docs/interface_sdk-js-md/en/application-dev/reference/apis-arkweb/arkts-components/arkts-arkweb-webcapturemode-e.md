@@ -1,10 +1,10 @@
 # WebCaptureMode
 
-Enumerates the web screen capture modes.
+Enum type supplied to {@link captureMode} for setting the web capture mode.
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum WebCaptureMode--><!--Device-unnamed-declare enum WebCaptureMode-End-->
 
@@ -16,11 +16,11 @@ Enumerates the web screen capture modes.
 HOME_SCREEN = 0
 ```
 
-Home screen capture mode.
+The home screen.
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

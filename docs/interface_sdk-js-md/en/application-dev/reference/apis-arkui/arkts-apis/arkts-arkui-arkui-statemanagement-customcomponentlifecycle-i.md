@@ -1,6 +1,6 @@
 # CustomComponentLifecycle
 
-CustomComponentLifecycle** monitors the lifecycle changes of a custom component.
+CustomComponentLifecycle用于监控自定义组件生命周期的变化，开发者可以通过[UIUtils.getLifecycle](arkts-arkui-arkui-statemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。
 
 **Since:** 23
 
@@ -10,13 +10,21 @@ CustomComponentLifecycle** monitors the lifecycle changes of a custom component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## addObserver
 
 ```TypeScript
 addObserver(observer: CustomComponentLifecycleObserver): void
 ```
 
-Registers a listener for the lifecycle of a custom component. Lifecycle changes will trigger the lifecycle callback in the listener.
+addObserver函数用于注册自定义组件生命周期监听器。调用此方法前，需先通过[UIUtils.getLifecycle](arkts-arkui-arkui-statemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。当自定义组件的生命周期发生变化时，会触发监听器中相应的生命周期回调函数。
+
+调用addObserver注册监听器后，必须在组件销毁或不再需要监听时调用[removeObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycle-i.md#removeobserver)移除监听器，两者需成对使用。若未调用removeObserver移除监听器，可能导致监听器持续触发回调并引发内存泄漏。
 
 **Since:** 23
 
@@ -34,7 +42,7 @@ Registers a listener for the lifecycle of a custom component. Lifecycle changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Listener for a custom component. |
+| observer | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | Yes | 自定义组件生命周期的监听器。 |
 
 ## getCurrentState
 
@@ -42,7 +50,7 @@ Registers a listener for the lifecycle of a custom component. Lifecycle changes 
 getCurrentState(): CustomComponentLifecycleState
 ```
 
-getCurrentState(): CustomComponentLifecycleState
+getCurrentState函数用于获取自定义组件当前的生命周期状态。调用此方法前，需先通过[UIUtils.getLifecycle](arkts-arkui-arkui-statemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。
 
 **Since:** 23
 
@@ -60,7 +68,7 @@ getCurrentState(): CustomComponentLifecycleState
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Current lifecycle status of a custom component. |
+| [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md) | 自定义组件当前的生命周期状态。 |
 
 ## removeObserver
 
@@ -68,7 +76,7 @@ getCurrentState(): CustomComponentLifecycleState
 removeObserver(observer: CustomComponentLifecycleObserver): void
 ```
 
-Removes a listener for the lifecycle of a custom component. After the listener is removed,the lifecycle callback in the listener is not triggered even if the component status changes.
+removeObserver函数用于移除自定义组件生命周期监听器。调用此方法前，需先通过[UIUtils.getLifecycle](arkts-arkui-arkui-statemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。解除注册后，即使自定义组件的生命周期状态发生变化，也不会触发监听器中相应的生命周期回调函数。
 
 **Since:** 23
 
@@ -86,5 +94,5 @@ Removes a listener for the lifecycle of a custom component. After the listener i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Listener for a custom component. |
+| observer | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | Yes | 自定义组件生命周期的监听器。 |
 

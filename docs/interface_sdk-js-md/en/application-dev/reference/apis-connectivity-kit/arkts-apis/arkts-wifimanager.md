@@ -10,14 +10,20 @@ Provides methods to operate or manage Wi-Fi.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig) | Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot.The app must be in the foreground. |
-| [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig-1) | Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot.The app must be in the foreground. |
+| [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig) | Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.The app must be in the foreground. |
+| [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig-1) | Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.The app must be in the foreground. |
 | [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md#adddeviceconfig) | Add Wi-Fi connection configuration to the device. The configuration will be updated when the configuration is added. |
 | [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md#adddeviceconfig-1) | Add Wi-Fi connection configuration to the device. The configuration will be updated when the configuration is added. |
 | [connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md#connecttocandidateconfig) | Connect to a specified candidate hotspot by networkId, only the configuration which is added by ourself is allowed to be connected. This method connect to a configuration at a time.The app must be in the foreground. |
@@ -36,17 +42,17 @@ Provides methods to operate or manage Wi-Fi.
 | [getDeviceMacAddress](arkts-connectivity-wifimanager-getdevicemacaddress-f.md#getdevicemacaddress) | Obtain the MAC address of a Wi-Fi device. Wi-Fi must be enabled.The MAC address is unique and cannot be changed. |
 | [getIpInfo](arkts-connectivity-wifimanager-getipinfo-f.md#getipinfo) | Obtain the IPv4 information of the Wi-Fi connection.The IP information includes the host IP address, gateway address, and DNS information. |
 | [getIpv6Info](arkts-connectivity-wifimanager-getipv6info-f.md#getipv6info) | Obtain the IPv6 information of the Wi-Fi connection.The IPv6 information includes the host IP address, gateway address, and DNS information. |
-| [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo) | Obtain connection information about the Wi-Fi connection. If does't have the permission of ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_WIFI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PEERS\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAC, return random bssid. |
+| [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo) | Obtain connection information about the Wi-Fi connection. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
 | [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo-1) | Obtain connection information about the Wi-Fi connection. |
-| [getLinkedInfoSync](arkts-connectivity-wifimanager-getlinkedinfosync-f.md#getlinkedinfosync) | Obtain connection information about the Wi-Fi connection.this apireturns the result syncchronously.If does't have the permission of ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_WIFI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PEERS\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAC, return random bssid. |
-| [getMultiLinkedInfo](arkts-connectivity-wifimanager-getmultilinkedinfo-f.md#getmultilinkedinfo) | Obtain multiple Wi-Fi connection information when Wi-Fi linked in MLO(Muti-Link Operation) state.If does't have the permission of ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_WIFI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PEERS\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAC, return random bssid. |
+| [getLinkedInfoSync](arkts-connectivity-wifimanager-getlinkedinfosync-f.md#getlinkedinfosync) | Obtain connection information about the Wi-Fi connection.this apireturns the result syncchronously.If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
+| [getMultiLinkedInfo](arkts-connectivity-wifimanager-getmultilinkedinfo-f.md#getmultilinkedinfo) | Obtain multiple Wi-Fi connection information when Wi-Fi linked in MLO(Muti-Link Operation) state.If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
 | [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getp2plinkedinfo) | Obtain information about the P2P connection. |
 | [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getp2plinkedinfo-1) | Obtain information about the P2P connection. |
-| [getP2pLocalDevice](arkts-connectivity-wifimanager-getp2plocaldevice-f.md#getp2plocaldevice) | Obtain the information about own device information.DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_WIFI\_\_\_ESCAPED\_UNDERSCORE\_\_\_LOCAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAC is not granted. |
-| [getP2pLocalDevice](arkts-connectivity-wifimanager-getp2plocaldevice-f.md#getp2plocaldevice-1) | Obtain the information about own device information.DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_WIFI\_\_\_ESCAPED\_UNDERSCORE\_\_\_LOCAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAC is not granted. |
+| [getP2pLocalDevice](arkts-connectivity-wifimanager-getp2plocaldevice-f.md#getp2plocaldevice) | Obtain the information about own device information. DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET_WIFI_LOCAL_MAC is not granted. |
+| [getP2pLocalDevice](arkts-connectivity-wifimanager-getp2plocaldevice-f.md#getp2plocaldevice-1) | Obtain the information about own device information. DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET_WIFI_LOCAL_MAC is not granted. |
 | [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices) | Obtain the information about the found devices. |
 | [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices-1) | Obtain the information about the found devices. |
-| [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist) | Obtain the scanned station list. If does't have the permission of ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_WIFI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PEERS\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAC, return random bssid. |
+| [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist) | Obtain the scanned station list. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
 | [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults) | Obtain the scanned sta list. |
 | [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults-1) | Obtain the scanned sta list. |
 | [getScanResultsSync](arkts-connectivity-wifimanager-getscanresultssync-f.md#getscanresultssync) | Obtain the scanned sta list. |
@@ -133,7 +139,7 @@ Provides methods to operate or manage Wi-Fi.
 | [get5GChannelList](arkts-connectivity-wifimanager-get5gchannellist-f-sys.md#get5gchannellist) | Obtain the supported 5G channel list of the device. |
 | [getDeviceConfig](arkts-connectivity-wifimanager-getdeviceconfig-f-sys.md#getdeviceconfig) | Obtain the single Wi-Fi configuration with Network ID. |
 | [getDisconnectedReason](arkts-connectivity-wifimanager-getdisconnectedreason-f-sys.md#getdisconnectedreason) | Obtain the latest disconnected reason. |
-| [getHotspotBlockList](arkts-connectivity-wifimanager-gethotspotblocklist-f-sys.md#gethotspotblocklist) | Get all the stations in the block list. If does't have the permission of ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_WIFI\_\_\_ESCAPED\_UNDERSCORE\_\_\_PEERS\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAC, return random bssid. |
+| [getHotspotBlockList](arkts-connectivity-wifimanager-gethotspotblocklist-f-sys.md#gethotspotblocklist) | Get all the stations in the block list. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
 | [getHotspotConfig](arkts-connectivity-wifimanager-gethotspotconfig-f-sys.md#gethotspotconfig) | Obtain the Wi-Fi hotspot configuration. |
 | [getP2pGroups](arkts-connectivity-wifimanager-getp2pgroups-f-sys.md#getp2pgroups) | Obtain information about the groups. |
 | [getP2pGroups](arkts-connectivity-wifimanager-getp2pgroups-f-sys.md#getp2pgroups-1) | Obtain information about the groups. |

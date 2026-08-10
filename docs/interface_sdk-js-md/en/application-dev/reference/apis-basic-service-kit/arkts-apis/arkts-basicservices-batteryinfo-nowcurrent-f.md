@@ -1,12 +1,18 @@
 # nowCurrent
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## nowCurrent
 
 ```TypeScript
 function nowCurrent(): int
 ```
 
-Battery current of the device, in unit of mA.
+表示当前设备电池的电流，单位毫安。
 
 **Since:** 23
 
@@ -20,5 +26,5 @@ Battery current of the device, in unit of mA.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the battery current of the device, in mA. |
+| int | 返回当前设备电池的电流，单位毫安。 |
 

@@ -12,6 +12,12 @@ HiPlay 设备类型定义
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## castMode
 
 ```TypeScript
@@ -20,7 +26,7 @@ castMode?: int
 
 HiPlay 投播模式，设备级和应用级
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -44,7 +50,7 @@ castUid?: int
 
 HiPlay 当前投播uid
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -68,7 +74,7 @@ supportCastMode?: int
 
 支持的Cast Mode，包含设备级和应用级投播
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -92,7 +98,7 @@ supportMultiDeviceMode?: int
 
 是否支持多设备连接能力。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.1.0
 

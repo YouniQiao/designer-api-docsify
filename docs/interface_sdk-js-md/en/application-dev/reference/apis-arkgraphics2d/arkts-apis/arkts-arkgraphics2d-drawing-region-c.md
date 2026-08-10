@@ -1,14 +1,14 @@
 # Region
 
-Describes a region, which is used to describe the region where the shape can be drawn.
-    **NOTE**  
-    
-    - The initial APIs of this class are supported since API version 12.  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+区域对象，用于描述所绘制图形的区域信息。Region支持设置矩形区域和路径区域，提供区域间的合并运算、相交判断、平移、边界获取等操作。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 12
 
@@ -18,13 +18,19 @@ Describes a region, which is used to describe the region where the shape can be 
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Constructs a **Region** object.
+构造一个区域对象。
 
 **Since:** 20
 
@@ -40,7 +46,7 @@ Constructs a **Region** object.
 constructor(region: Region)
 ```
 
-Copies a **Region** object.
+拷贝一个区域对象。
 
 **Since:** 20
 
@@ -54,7 +60,7 @@ Copies a **Region** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region to be copied. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 用于拷贝的区域。 |
 
 ## constructor
 
@@ -68,7 +74,7 @@ ArkTS-Sta:
 constructor(left: int, top: int, right: int, bottom: int)
 ```
 
-Constructs a rectangular region.
+构造矩形区域。
 
 **Since:** 20
 
@@ -82,10 +88,10 @@ Constructs a rectangular region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Left position of the rectangle (X coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Top position of the rectangle (Y coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin , while a negative value places the point above the coordinate origin. |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Right position of the rectangle (X coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Bottom position of the rectangle (Y coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## getBoundaryPath
 
@@ -93,7 +99,7 @@ Constructs a rectangular region.
 getBoundaryPath(): Path
 ```
 
-Obtains a new path that is the boundary of the existing region.
+返回一个新路径，该路径取自当前区域的边界。
 
 **Since:** 20
 
@@ -107,7 +113,7 @@ Obtains a new path that is the boundary of the existing region.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Path of the boundary of the existing region. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回当前区域边界的路径。 |
 
 ## getBoundaryPath
 
@@ -115,7 +121,7 @@ Obtains a new path that is the boundary of the existing region.
 getBoundaryPath(): Path | undefined
 ```
 
-Gets the boundary of the region, which represents by a path.Gets the bounds of the region.
+返回一个新路径，该路径取自当前区域的边界。
 
 **Since:** 24
 
@@ -129,7 +135,7 @@ Gets the boundary of the region, which represents by a path.Gets the bounds of t
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns Path object. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回当前区域边界的路径。 |
 
 ## getBounds
 
@@ -137,7 +143,7 @@ Gets the boundary of the region, which represents by a path.Gets the bounds of t
 getBounds(): common2D.Rect
 ```
 
-Obtains the boundaries of the existing region.
+获取区域的边界。
 
 **Since:** 20
 
@@ -151,7 +157,7 @@ Obtains the boundaries of the existing region.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Bounding rectangle of this region. |
+| common2D.Rect | 返回当前区域的边界矩形。 |
 
 ## getBounds
 
@@ -159,7 +165,7 @@ Obtains the boundaries of the existing region.
 getBounds(): common2D.Rect | undefined
 ```
 
-Gets the bounds of the region.
+获取区域的边界。
 
 **Since:** 24
 
@@ -173,7 +179,7 @@ Gets the bounds of the region.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Returns Rect object. |
+| common2D.Rect | 返回当前区域的边界矩形。 |
 
 ## isComplex
 
@@ -181,7 +187,7 @@ Gets the bounds of the region.
 isComplex(): boolean
 ```
 
-Checks whether this region contains multiple rectangles.
+判断当前区域是否包含多个矩形。
 
 **Since:** 20
 
@@ -195,7 +201,7 @@ Checks whether this region contains multiple rectangles.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** means yes; **false** otherwise. |
+| boolean | 返回当前区域是否包含多个矩形的结果。true表示当前区域包含多个矩形，false表示当前区域不包含多个矩形。 |
 
 ## isEmpty
 
@@ -203,7 +209,7 @@ Checks whether this region contains multiple rectangles.
 isEmpty(): boolean
 ```
 
-Checks whether the existing region is empty.
+判断当前区域是否为空。
 
 **Since:** 20
 
@@ -217,7 +223,7 @@ Checks whether the existing region is empty.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** means yes; **false** otherwise. |
+| boolean | 返回当前区域是否为空的结果。true表示当前区域为空，false表示当前区域不为空。 |
 
 ## isEqual
 
@@ -225,7 +231,7 @@ Checks whether the existing region is empty.
 isEqual(other: Region): boolean
 ```
 
-Checks whether another region is equal to this region.
+判断指定区域是否与当前区域相等。
 
 **Since:** 20
 
@@ -239,13 +245,13 @@ Checks whether another region is equal to this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region** object. |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 用于与当前区域进行比较的其他区域对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** if the source rectangle is equal to the destination rectangle; **false** otherwise. |
+| boolean | 返回其他区域是否与当前区域相等的结果。true表示相等，false表示不相等。 |
 
 ## isPointContained
 
@@ -259,7 +265,7 @@ ArkTS-Sta:
 isPointContained(x: int, y:int): boolean
 ```
 
-Checks whether a point is contained in this region.
+判断测试点是否在区域内。
 
 **Since:** 12
 
@@ -273,20 +279,20 @@ Checks whether a point is contained in this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | X coordinate of the point. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Y coordinate of the point. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 测试点的x轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 测试点的y轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** means yes; **false** otherwise. |
+| boolean | 返回测试点是否在区域内的结果。true表示测试点在区域内，false表示测试点不在区域内。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isRect
 
@@ -294,7 +300,7 @@ Checks whether a point is contained in this region.
 isRect(): boolean
 ```
 
-Checks whether this region is the same as a single rectangle.
+判断当前区域是否等同于单个矩形。
 
 **Since:** 23
 
@@ -310,7 +316,7 @@ Checks whether this region is the same as a single rectangle.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** if this region is the same as a single rectangle; **false** otherwise. |
+| boolean | 返回当前区域是否等同于单个矩形的结果。true表示当前区域等同于单个矩形，false表示当前区域不等同于单个矩形。 |
 
 ## isRegionContained
 
@@ -318,7 +324,7 @@ Checks whether this region is the same as a single rectangle.
 isRegionContained(other: Region): boolean
 ```
 
-Checks whether another region is contained in this region.
+判断其他区域是否在当前区域内。
 
 **Since:** 12
 
@@ -332,19 +338,19 @@ Checks whether another region is contained in this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region** object. |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 用于判断是否在当前区域内的其他区域对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** means yes; **false** otherwise. |
+| boolean | 返回其他区域是否在当前区域内的结果。true表示其他区域在当前区域内，false表示其他区域不在当前区域内。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## offset
 
@@ -358,7 +364,7 @@ ArkTS-Sta:
 offset(dx: int, dy: int): void
 ```
 
-Translates a region.
+对区域进行平移。
 
 **Since:** 20
 
@@ -372,8 +378,8 @@ Translates a region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | X offset. A positive number indicates an offset towards the positive direction of the X axis, and a negative number indicates an offset towards the negative direction of the X axis. The value is an integer. |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Y offset. A positive number indicates an offset towards the positive direction of the Y axis, and a negative number indicates an offset towards the negative direction of the Y axis. The value is an integer. |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | x轴方向平移量，正数往x轴正方向平移，负数往x轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | y轴方向平移量，正数往y轴正方向平移，负数往y轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 ## op
 
@@ -381,8 +387,7 @@ Translates a region.
 op(region: Region, regionOp: RegionOp): boolean
 ```
 
-Performs an operation on this region and another region, and stores the resulting region in this **Region**  
-object.
+将当前区域与指定区域进行运算，并替换为运算结果。
 
 **Since:** 12
 
@@ -396,20 +401,20 @@ object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region** object. |
-| regionOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Operation mode of the region. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 用于与当前区域进行运算的指定区域对象。 |
+| regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | Yes | 区域运算操作类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the resulting region is stored in the current **Region** object, and **false** means the opposite. |
+| boolean | 返回区域运算结果是否成功替换当前区域的结果。true表示区域运算结果替换当前区域成功，false表示区域运算结果替换当前区域失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## quickContains
 
@@ -423,7 +428,7 @@ ArkTS-Sta:
 quickContains(left: int, top: int, right: int, bottom: int): boolean
 ```
 
-Checks whether this region is the same as a single rectangle and contains the specified rectangle.
+判断当前区域是否等同于单个矩形并且包含指定矩形。
 
 **Since:** 23
 
@@ -439,16 +444,16 @@ Checks whether this region is the same as a single rectangle and contains the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的左侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的顶部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的右侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的底部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** if the current region is the same as a single rectangle and contains the specified rectangle; **false** otherwise. |
+| boolean | 返回判断结果。true表示当前区域等同于单个矩形且包含指定矩形，false表示当前区域不等同于单个矩形或不包含指定矩形。 |
 
 ## quickReject
 
@@ -462,7 +467,7 @@ ArkTS-Sta:
 quickReject(left: int, top: int, right: int, bottom: int): boolean
 ```
 
-Checks whether a rectangle do not intersect with this region. Actually, this API determines whether the rectangle does not intersect with the bounding rectangle of the region, and therefore the result may not be accurate.
+快速判断矩形和区域是否不相交。实际上比较的是矩形和区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
 **Since:** 12
 
@@ -476,22 +481,22 @@ Checks whether a rectangle do not intersect with this region. Actually, this API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** means that the two do not intersect; **false** otherwise. |
+| boolean | 返回矩形是否与区域不相交的结果。true表示矩形与区域不相交，false表示矩形与区域相交。当矩形与区域仅点或边相交时，也返回true。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## quickRejectRegion
 
@@ -499,7 +504,7 @@ Checks whether a rectangle do not intersect with this region. Actually, this API
 quickRejectRegion(region: Region): boolean
 ```
 
-Checks whether the existing region does not intersect with another region. Actually, the outer rectangles of the two regions are compared to determine whether they do not intersect. Therefore, there may be an error.
+判断当前区域是否与指定区域不相交。实际上比较的是两个区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
 **Since:** 20
 
@@ -513,13 +518,13 @@ Checks whether the existing region does not intersect with another region. Actua
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region** object. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 用于判断是否与当前区域不相交的指定区域对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** if the regions do not intersect; **false** otherwise. The value **true** is returned only if the regions intersect with each other by point or edge. |
+| boolean | 返回当前区域与另一个区域是否不相交的结果。true表示不相交，false表示相交。当两个区域仅点或边相交时，也返回true。 |
 
 ## setEmpty
 
@@ -527,7 +532,7 @@ Checks whether the existing region does not intersect with another region. Actua
 setEmpty(): void
 ```
 
-Set the existing region to empty.
+设置当前区域为空。
 
 **Since:** 20
 
@@ -543,7 +548,7 @@ Set the existing region to empty.
 setPath(path: Path, clip: Region): boolean
 ```
 
-Sets a region that matches the outline of a path within the cropping area.
+设置一个与裁剪区域内路径轮廓相匹配的区域。
 
 **Since:** 12
 
@@ -557,20 +562,20 @@ Sets a region that matches the outline of a path within the cropping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Path** object. |
-| clip | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region** object. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 用于设置区域轮廓的路径对象。 |
+| clip | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 裁剪区域对象，用于限定路径轮廓的有效范围，仅路径在裁剪区域内的部分会被用于设置区域。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Result of the setting operation. The value **true** is returned if the corked status is successfully set; otherwise, **false** is returned. |
+| boolean | 返回设置区域是否成功的结果。true表示设置成功，false表示设置失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRect
 
@@ -584,7 +589,7 @@ ArkTS-Sta:
 setRect(left: int, top: int, right: int, bottom: int): boolean
 ```
 
-Sets a rectangle.
+设置一个矩形区域。
 
 **Since:** 12
 
@@ -598,22 +603,22 @@ Sets a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Result of the setting operation. The value **true** means that the setting is successful, and **false** means the opposite. |
+| boolean | 返回设置矩形区域是否成功的结果。true表示设置矩形区域成功，false表示设置矩形区域失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRegion
 
@@ -621,7 +626,7 @@ Sets a rectangle.
 setRegion(region: Region): void
 ```
 
-Sets the existing region to another region.
+设置当前区域为指定区域。
 
 **Since:** 20
 
@@ -635,5 +640,5 @@ Sets the existing region to another region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region to be set. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 用于设置当前区域内容的源区域对象。 |
 

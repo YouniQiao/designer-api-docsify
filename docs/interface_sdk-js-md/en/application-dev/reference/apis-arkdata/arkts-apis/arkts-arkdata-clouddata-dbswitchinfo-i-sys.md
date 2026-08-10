@@ -1,6 +1,6 @@
 # DBSwitchInfo (System API)
 
-Defines the switch information of a device-cloud synergy database.
+端云协同数据库开关配置信息。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Defines the switch information of a device-cloud synergy database.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## enable
 
 ```TypeScript
 enable: boolean
 ```
 
-Whether to enable device-cloud synergy for the database. The value **true** indicates that device-cloud synergy is enabled, and the value **false** indicates the opposite.
+数据库是否启用端云协同开关。true为启用端云协同开关，false为不启用该开关。
 
 **Type:** boolean
 
@@ -38,10 +44,9 @@ Whether to enable device-cloud synergy for the database. The value **true** indi
 tableInfo?: Record<string, boolean>
 ```
 
-Device-cloud synergy configuration of a table. The key is the table name, and the value is the switch status of the table. The value **true** indicates that device-cloud synergy is enabled for the table, and the value  
-**false** indicates the opposite. If this parameter is not set, the device-cloud synergy is enabled for the database by default.
+表级别的端云协同开关配置信息。键为表名，值为该表的开关状态。true为打开该表的端云协同开关，false为关闭该表开关。当未配置该参数时，默认按照数据库级开关状态enable生效。
 
-**Type:** Record&lt;string, boolean&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt;
 
 **Since:** 23
 

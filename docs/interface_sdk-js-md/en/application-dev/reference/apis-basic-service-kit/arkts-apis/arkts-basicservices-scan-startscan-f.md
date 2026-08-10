@@ -1,12 +1,18 @@
 # startScan
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## startScan
 
 ```TypeScript
 function startScan(scannerId: string, batchMode: boolean): Promise<void>
 ```
 
-Starts scanning. This API uses a promise to return the result.
+开始扫描。使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,22 +28,22 @@ Starts scanning. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | Scanner ID. |
-| batchMode | boolean | Yes | Whether to use the batch processing mode. The value **true** indicates that the batch processing mode is used, and **false** indicates the opposite. |
+| scannerId | string | Yes | 扫描仪的ID。 |
+| batchMode | boolean | Yes | 是否使用批处理模式。true表示使用批处理模式，false表示不使用批处理模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

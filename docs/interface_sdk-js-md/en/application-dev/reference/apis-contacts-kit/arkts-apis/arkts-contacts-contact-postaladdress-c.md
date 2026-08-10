@@ -1,6 +1,6 @@
 # PostalAddress
 
-Defines a contact's postal address.
+联系人的邮政地址类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's postal address.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## ADDR_HOME
 
 ```TypeScript
 static readonly ADDR_HOME: 1
 ```
 
-Home address, the default value is **1**.
+家庭地址类型，默认值为1。
 
 **Type:** 1
 
@@ -36,7 +42,7 @@ Home address, the default value is **1**.
 static readonly ADDR_OTHER: 3
 ```
 
-Other addresses, the default value is **3**.
+其它地址类型，默认值为3。
 
 **Type:** 3
 
@@ -56,7 +62,7 @@ Other addresses, the default value is **3**.
 static readonly ADDR_WORK: 2
 ```
 
-Work address, the default value is **2**.
+工作地址类型，默认值为2。
 
 **Type:** 2
 
@@ -76,7 +82,7 @@ Work address, the default value is **2**.
 static readonly CUSTOM_LABEL: 0
 ```
 
-Custom mailbox type, the default value is **0**.
+自定义邮箱类型，默认值为0。
 
 **Type:** 0
 
@@ -96,7 +102,7 @@ Custom mailbox type, the default value is **0**.
 static readonly INVALID_LABEL_ID: -1
 ```
 
-Invalid mailbox, the default value is **-1**.
+无效邮箱类型，默认值为-1。
 
 **Type:** -1
 
@@ -116,7 +122,7 @@ Invalid mailbox, the default value is **-1**.
 city?: string
 ```
 
-City where the contact is located.
+联系人所在的城市。
 
 **Type:** string
 
@@ -136,7 +142,7 @@ City where the contact is located.
 country?: string
 ```
 
-Country/Region where the contact is located.
+联系人所在的国家。
 
 **Type:** string
 
@@ -156,7 +162,7 @@ Country/Region where the contact is located.
 labelId?: number
 ```
 
-Mailbox type.
+邮箱的类型。
 
 **Type:** number
 
@@ -176,7 +182,7 @@ Mailbox type.
 labelName?: string
 ```
 
-Name of the mailbox type.
+邮箱的类型名称。
 
 **Type:** string
 
@@ -196,7 +202,7 @@ Name of the mailbox type.
 neighborhood?: string
 ```
 
-Neighbor of the contact.
+联系人的邻居。
 
 **Type:** string
 
@@ -216,7 +222,7 @@ Neighbor of the contact.
 pobox?: string
 ```
 
-Email of the contact.
+联系人的邮箱。
 
 **Type:** string
 
@@ -236,7 +242,7 @@ Email of the contact.
 postalAddress: string
 ```
 
-Postal address of the contact.
+联系人的邮政地址。
 
 **Type:** string
 
@@ -256,7 +262,7 @@ Postal address of the contact.
 postcode?: string
 ```
 
-Postal code of the region where the contact is located.
+联系人所在区域的邮政编码。
 
 **Type:** string
 
@@ -276,7 +282,7 @@ Postal code of the region where the contact is located.
 region?: string
 ```
 
-Area where the contact is located.
+联系人所在的区域。
 
 **Type:** string
 
@@ -296,7 +302,7 @@ Area where the contact is located.
 street?: string
 ```
 
-Street where the contact resides.
+联系人所在的街道。
 
 **Type:** string
 

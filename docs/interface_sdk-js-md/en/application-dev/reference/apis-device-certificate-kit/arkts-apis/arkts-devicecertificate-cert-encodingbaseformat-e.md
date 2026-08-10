@@ -1,6 +1,6 @@
 # EncodingBaseFormat
 
-Enumerates the encoding formats for certificate-related data.
+表示生成证书相关数据的编码格式的枚举。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the encoding formats for certificate-related data.
 PEM = 0
 ```
 
-Privacy-Enhanced Mail (PEM) format.
+PEM格式。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Privacy-Enhanced Mail (PEM) format.
 DER = 1
 ```
 
-Distinguished Encoding Rules (DER) format.
+DER格式。
 
 **Since:** 18
 

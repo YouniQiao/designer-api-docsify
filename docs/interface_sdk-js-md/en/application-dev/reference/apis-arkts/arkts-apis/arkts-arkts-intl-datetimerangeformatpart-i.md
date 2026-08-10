@@ -20,7 +20,7 @@ source: DateTimeRangeFormatPartSource
 
 Part source.
 
-**Type:** DateTimeRangeFormatPartSource
+**Type:** [DateTimeRangeFormatPartSource](arkts-arkts-intl-datetimerangeformatpartsource-t.md)
 
 **Since:** 26.0.0
 

@@ -12,6 +12,12 @@ FA模型的使用信息属性集合。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityDescriptionId
 
 ```TypeScript
@@ -20,7 +26,7 @@ abilityDescriptionId?: long
 
 FA的MainAbility descriptionId。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ abilityIconId?: long
 
 FA的MainAbility iconId。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ abilityLableId?: long
 
 FA的MainAbility labelId。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -100,7 +106,7 @@ appLabelId?: long
 
 FA的应用labelId。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -140,7 +146,7 @@ descriptionId?: long
 
 FA所属的应用descriptionId。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -200,7 +206,7 @@ labelId?: long
 
 FA所属module的labelId。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -220,7 +226,7 @@ lastModuleUsedTime: long
 
 FA的上一次使用时间，单位：ms。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -240,7 +246,7 @@ launchedCount: int
 
 FA的启动次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

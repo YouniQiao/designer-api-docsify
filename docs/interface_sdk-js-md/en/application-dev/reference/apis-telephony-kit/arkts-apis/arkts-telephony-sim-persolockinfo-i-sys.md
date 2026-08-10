@@ -12,6 +12,12 @@ Defines the personalized lock information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## lockType
 
 ```TypeScript
@@ -20,7 +26,7 @@ lockType: PersoLockType
 
 Indicates the personalized lock type.
 
-**Type:** PersoLockType
+**Type:** [PersoLockType](arkts-telephony-sim-persolocktype-e-sys.md)
 
 **Since:** 8
 

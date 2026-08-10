@@ -1,6 +1,6 @@
 # InstallParam
 
-Defines the parameters for application installation.
+应用包安装需指定的参数信息。
 
 **Since:** 12
 
@@ -10,15 +10,19 @@ Defines the parameters for application installation.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.MDMKit';
+```
+
 ## installFlag
 
 ```TypeScript
 installFlag?: number
 ```
 
-Installation flag.
-
-**0** (default value) indicates fresh installation of the application, **1** indicates overlay installation of the application, and **2** indicates installation-free.
+安装标志。枚举值：0：应用初次安装，1：应用覆盖安装，2：应用免安装，默认值为0(应用初次安装)。
 
 **Type:** number
 
@@ -38,9 +42,9 @@ Installation flag.
 parameters?: Record<string, string>
 ```
 
-Extended parameters. The default value is null. The key can be **ohos.bms.param.enterpriseForAllUser**. If the corresponding value is set **true**, the application is installed for all users.
+扩展参数，默认值为空。key取值支持"ohos.bms.param.enterpriseForAllUser"，若对应的value值为"true"，表示为所有用户安装应用。
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 19
 
@@ -58,7 +62,7 @@ Extended parameters. The default value is null. The key can be **ohos.bms.param.
 userId?: number
 ```
 
-User ID, which must be greater than or equal to 0. The default value is the user ID of the caller.
+指示用户ID，默认值：调用方所在用户，取值范围：大于等于0。
 
 **Type:** number
 

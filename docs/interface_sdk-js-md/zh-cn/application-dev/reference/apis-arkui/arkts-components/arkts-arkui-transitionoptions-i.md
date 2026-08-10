@@ -1,14 +1,15 @@
 # TransitionOptions
 
 TransitionOptions通过指定结构体内的参数来指定转场效果。
-    **说明：**  
-    
-    1. 当使用TransitionOptions类型的入参指定转场效果时，**必须**配合  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_使用才有动画效果，动效时长、曲线、延时跟随  
-    animateTo中的配置。  
-    
-    2. 当使用TransitionOptions作为入参，且不指定除type外的任何参数时，此时相当于指定了透明度的转场效果。例如，指定{type: TransitionType.Insert}相当于指定了{type:  
-    TransitionType.Insert, opacity: 0}的转场效果。而指定了具体效果时，则不会添加默认的透明度转场效果。
+
+> **说明：**
+> 
+> 1. 当使用TransitionOptions类型的入参指定转场效果时，**必须**配合
+> [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)使用才有动画效果，动效时长、曲线、延时跟随
+> animateTo中的配置。
+> 
+> 2. 当使用TransitionOptions作为入参，且不指定除type外的任何参数时，此时相当于指定了透明度的转场效果。例如，指定{type: TransitionType.Insert}相当于指定了{type:
+> TransitionType.Insert, opacity: 0}的转场效果。而指定了具体效果时，则不会添加默认的透明度转场效果。
 
 **起始版本：** 7
 
@@ -16,7 +17,7 @@ TransitionOptions通过指定结构体内的参数来指定转场效果。
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md)
+**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 <!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
@@ -44,7 +45,7 @@ opacity?: number
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect#opacity](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md#opacity)
+**替代接口：** [TransitionEffect#opacity](arkts-arkui-transitioneffect-c.md#opacity)
 
 <!--Device-TransitionOptions-opacity?: number--><!--Device-TransitionOptions-opacity?: number-End-->
 
@@ -68,7 +69,7 @@ rotate?: RotateOptions
 
 - 中心点为(0, 0)代表组件的左上角。
 
-**类型：** RotateOptions
+**类型：** [RotateOptions](arkts-arkui-rotateoptions-i.md)
 
 **起始版本：** 7
 
@@ -76,7 +77,7 @@ rotate?: RotateOptions
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect#rotate](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md#rotate)
+**替代接口：** [TransitionEffect#rotate](arkts-arkui-transitioneffect-c.md#rotate)
 
 <!--Device-TransitionOptions-rotate?: RotateOptions--><!--Device-TransitionOptions-rotate?: RotateOptions-End-->
 
@@ -104,7 +105,7 @@ scale?: ScaleOptions
 
 设置centerX、centerY为非法字符串时（例如，"illegalString"），默认值为"0"。
 
-**类型：** ScaleOptions
+**类型：** [ScaleOptions](arkts-arkui-scaleoptions-i.md)
 
 **起始版本：** 7
 
@@ -112,7 +113,7 @@ scale?: ScaleOptions
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect#scale](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md#scale)
+**替代接口：** [TransitionEffect#scale](arkts-arkui-transitioneffect-c.md#scale)
 
 <!--Device-TransitionOptions-scale?: ScaleOptions--><!--Device-TransitionOptions-scale?: ScaleOptions-End-->
 
@@ -132,7 +133,7 @@ translate?: TranslateOptions
 
 -z：竖向的平移距离。
 
-**类型：** TranslateOptions
+**类型：** [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md)
 
 **起始版本：** 7
 
@@ -140,7 +141,7 @@ translate?: TranslateOptions
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect#translate](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md#translate)
+**替代接口：** [TransitionEffect#translate](arkts-arkui-transitioneffect-c.md#translate)
 
 <!--Device-TransitionOptions-translate?: TranslateOptions--><!--Device-TransitionOptions-translate?: TranslateOptions-End-->
 
@@ -160,7 +161,7 @@ type?: TransitionType
 
 不指定type时默认为TransitionType.All，即插入删除都生效。
 
-**类型：** TransitionType
+**类型：** [TransitionType](../arkts-apis/arkts-arkui-transitiontype-e.md)
 
 **起始版本：** 7
 
@@ -168,7 +169,7 @@ type?: TransitionType
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect](../arkts-apis/arkts-arkui-component/common-transitioneffect-c.md)
+**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 <!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
 

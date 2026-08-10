@@ -1,0 +1,63 @@
+# onTemplateFormDetailInfoChange（系统接口）
+
+## 导入模块
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
+## onTemplateFormDetailInfoChange
+
+```TypeScript
+function onTemplateFormDetailInfoChange(callback: formInfo.TemplateFormDetailInfoCallback): void
+```
+
+Subscribes to changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
+**需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-formHost-function onTemplateFormDetailInfoChange(callback: formInfo.TemplateFormDetailInfoCallback): void--><!--Device-formHost-function onTemplateFormDetailInfoChange(callback: formInfo.TemplateFormDetailInfoCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | formInfo.TemplateFormDetailInfoCallback | 是 | Callback function used to listen for changes in the static configuration information of template widgets. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
+
+## 示例
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const callback: formInfo.TemplateFormDetailInfoCallback = (info: formInfo.TemplateFormDetailInfo[]) => {
+    for (let templateFormDetailInfo of info) {
+      console.info(`TemplateFormDetailInfoCallback bundleName: ${templateFormDetailInfo.bundleName}, moduleName: ${templateFormDetailInfo.moduleName}, formName: ${templateFormDetailInfo.formName}`);
+    }
+  };
+  formHost.onTemplateFormDetailInfoChange(callback);
+  console.info(`onTemplateFormDetailInfoChange success`);
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+

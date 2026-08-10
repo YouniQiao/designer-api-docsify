@@ -34,7 +34,7 @@ Determine whether the current Static Field object is equal to another object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Another Static Field object to compare. |
+| other | [StaticField](arkts-arkts-reflect-staticfield-c.md) | Yes | Another Static Field object to compare. |
 
 **Return value:**
 

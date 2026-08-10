@@ -1,18 +1,23 @@
 # saveHdrPicture (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## saveHdrPicture
 
 ```TypeScript
 function saveHdrPicture(options?: HdrScreenshotOptions): Promise<Array<image.PixelMap>>
 ```
 
-Obtains a screenshot. This API uses a promise to return the result. SDR stands for Standard Dynamic Range, and HDR stands for High Dynamic Range.
+获取屏幕截图，使用Promise异步回调。SDR为标准动态范围图，HDR为高动态范围图。
 
-- If the screen contains HDR resources (even if they are partially obscured), this API returns an array with both  
-SDR and HDR PixelMaps, regardless of whether HDR is enabled.  
-- If there are no HDR resources, it returns an array with a single SDR PixelMap. Unlike the  
-[save]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API, which returns a single SDR PixelMap, this API always returns an array. Additionally, this API does not support cropping,stretching, or rotating features available in the  
-[save]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API.
+- 当物理屏存在HDR资源（包括HDR资源被遮挡）时，无论HDR是否开启，该接口返回一个包含SDR和HDR的PixelMap数组。  
+- 当物理屏不存在HDR资源时，与[save](arkts-arkui-screenshot-save-f-sys.md#save)  
+接口返回一个SDR的PixelMap不同，该接口返回包含一个SDR的PixelMap数组。同时该接口不具备  
+[save](arkts-arkui-screenshot-save-f-sys.md#save)接口的裁剪、拉伸、旋转功能。
 
 **Since:** 20
 
@@ -32,7 +37,7 @@ SDR and HDR PixelMaps, regardless of whether HDR is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Information about the HDR snapshot. This parameter is left unspecified by default. |
+| options | [HdrScreenshotOptions](arkts-arkui-screenshot-hdrscreenshotoptions-i-sys.md) | No | 要截取的HDR图像信息。默认为空。 |
 
 **Return value:**
 
@@ -44,37 +49,38 @@ SDR and HDR PixelMaps, regardless of whether HDR is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1.Invalid parameter range. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400004 | Parameter error. Possible cause: 1.Invalid parameter range. |
+| 1400001 | Invalid display or screen. |
+| 1400003 | This display manager service works abnormally. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 
 let hdrScreenshotOptions: screenshot.HdrScreenshotOptions = {
-  "displayId": 0,
-  "isNotificationNeeded": true,
-  "isCaptureFullOfScreen": true
+  displayId: 0,
+  isNotificationNeeded: true,
+  isCaptureFullOfScreen: true,
+  displayIntent: screenshot.DisplayIntentType.CANONICAL
 };
 try {
   let promise = screenshot.saveHdrPicture(hdrScreenshotOptions);
   promise.then((pixelMapArray: Array<image.PixelMap>) => {
     for (let i = 0; i < pixelMapArray.length; i++) {
       const pixelMap = pixelMapArray[i];
-      console.info('succeeded in saving screenshot ${i}. Pixel bytes number' + pixelMap.getPixelBytesNumber());
+      console.info(`succeeded in saving screenshot ${i}. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
       pixelMap.release();
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to save SDR and HDR screenshot. Code: ${err.code} , message : ${err.message}`);
+    console.error(`Failed to save SDR and HDR screenshot. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to save SDR and HDR screenshot. Code: ${exception.code} , message : ${exception.message}`);
-};
+  console.error(`Failed to save SDR and HDR screenshot. Code: ${exception.code}, message: ${exception.message}`);
+}
 ```
 

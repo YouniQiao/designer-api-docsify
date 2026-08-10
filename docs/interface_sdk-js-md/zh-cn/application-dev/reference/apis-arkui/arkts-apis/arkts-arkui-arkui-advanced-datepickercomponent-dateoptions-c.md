@@ -2,7 +2,7 @@
 
 DateOptions定义日期选择器的选项。
 
-继承于[CommonOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
 
 **继承/实现关系：** DateOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
@@ -13,6 +13,12 @@ DateOptions定义日期选择器的选项。
 <!--Device-unnamed-export declare class DateOptions extends CommonOptions--><!--Device-unnamed-export declare class DateOptions extends CommonOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
 
 ## lunar
 
@@ -27,7 +33,7 @@ lunar?: boolean
 
 默认值：false
 
-**说明**：
+**说明：**
 
 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
@@ -55,7 +61,7 @@ mode?: DateMode
 
 默认值：DateMode.DATE
 
-**类型：** DateMode
+**类型：** [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
 
 **默认值：** DateMode.DATE
 

@@ -1,6 +1,6 @@
 # XMPNamespace
 
-Describes XMP namespace parameters.
+表示XMP命名空间。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes XMP namespace parameters.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## prefix
 
 ```TypeScript
 prefix: string
 ```
 
-The prefix of XMP namespace.
+XMP命名空间前缀。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ The prefix of XMP namespace.
 uri: string
 ```
 
-The uri of XMP namespace.
+XMP命名空间URI。
 
 **Type:** string
 

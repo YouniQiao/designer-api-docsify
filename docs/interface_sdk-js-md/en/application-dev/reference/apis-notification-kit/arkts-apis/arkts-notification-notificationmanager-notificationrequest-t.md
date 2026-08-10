@@ -4,7 +4,7 @@
 export type NotificationRequest = _NotificationRequest
 ```
 
-Describes the notification request.
+通知请求。
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # CmsEnvelopedDecryptionConfig
 
-Configuration used for decrypting CMS enveloped data.
+CMS解封装的配置。
 
 **Since:** 22
 
@@ -10,15 +10,21 @@ Configuration used for decrypting CMS enveloped data.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## cert
 
 ```TypeScript
 cert?: X509Cert
 ```
 
-Public key certificate. This parameter is left empty by default.
+公钥证书。默认为空。
 
-**Type:** X509Cert
+**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
 **Since:** 22
 
@@ -36,9 +42,9 @@ Public key certificate. This parameter is left empty by default.
 contentDataFormat?: CmsContentDataFormat
 ```
 
-Format of the content.
+内容数据的格式。
 
-**Type:** CmsContentDataFormat
+**Type:** [CmsContentDataFormat](arkts-devicecertificate-cert-cmscontentdataformat-e.md)
 
 **Default:** CmsContentDataFormat.BINARY
 
@@ -58,7 +64,7 @@ Format of the content.
 encryptedContentData?: Uint8Array
 ```
 
-Encrypted content data for detached CMS enveloped data, used when the CMS structure does not contain the encrypted content inline.
+加密的内容数据，如果CMS不包含指定数据。
 
 **Type:** Uint8Array
 
@@ -78,9 +84,9 @@ Encrypted content data for detached CMS enveloped data, used when the CMS struct
 keyInfo?: PrivateKeyInfo
 ```
 
-Private key parameter. This parameter is left empty by default.
+私钥参数。默认为空。
 
-**Type:** PrivateKeyInfo
+**Type:** [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md)
 
 **Since:** 22
 

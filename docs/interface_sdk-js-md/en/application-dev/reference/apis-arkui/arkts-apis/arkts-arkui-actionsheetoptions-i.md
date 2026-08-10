@@ -1,6 +1,6 @@
 # ActionSheetOptions
 
-Provides **ActionSheet** configuration options.
+列表选择弹窗的样式。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Provides **ActionSheet** configuration options.
 cancel?: VoidCallback
 ```
 
-Callback invoked when the dialog box is closed after the overlay is clicked.
+点击遮障层关闭弹窗时的回调。
 
 **Since:** 8
 
@@ -34,15 +34,15 @@ Callback invoked when the dialog box is closed after the overlay is clicked.
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.
+弹窗在竖直方向上的对齐方式。
 
-Default value: **DialogAlignment.Bottom**
+默认值：DialogAlignment.Bottom 
 
-**NOTE**
+**说明：**
 
-If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
+若在UIExtension中设置showInSubWindow为true，弹窗将基于UIExtension的宿主窗口对齐。
 
-**Type:** DialogAlignment
+**Type:** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **Since:** 8
 
@@ -60,11 +60,11 @@ If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is 
 autoCancel?: boolean
 ```
 
-Whether to close the dialog box when the overlay is clicked.
+点击遮障层时，是否关闭弹窗。
 
-Default value: **true**
+默认值：true
 
-The value **true** means to close the dialog box when the overlay is clicked, and **false** means the opposite.
+值为true时，点击遮障层关闭弹窗，值为false时，点击遮障层不关闭弹窗。
 
 **Type:** boolean
 
@@ -84,15 +84,15 @@ The value **true** means to close the dialog box when the overlay is clicked, an
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.
+弹窗背板模糊材质。
 
-Default value: **BlurStyle.COMPONENT\_ULTRA\_THICK**
+默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。
 
-**NOTE**
+**说明：**
 
-Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -114,10 +114,9 @@ Setting this parameter to **BlurStyle.NONE** disables the background blur. When 
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for customizing the background blur style. For details about the default value, see  
-**BackgroundBlurStyleOptions**.
+背景模糊效果。默认值请参考BackgroundBlurStyleOptions类型说明。
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
 
@@ -137,16 +136,15 @@ Options for customizing the background blur style. For details about the default
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box.
+弹窗背板颜色。
 
-Default value: **Color.Transparent**
+默认值：Color.Transparent
 
-**NOTE**
+**说明：**
 
-The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the  
-**backgroundBlurStyle** property to **BlurStyle.NONE**.
+backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
@@ -168,10 +166,9 @@ The background color will be visually combined with the blur effect when both pr
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Options for customizing the background effect. For details about the default value, see  
-**BackgroundEffectOptions**.
+背景效果参数。默认值请参考BackgroundEffectOptions类型说明。
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
 
@@ -191,17 +188,17 @@ Options for customizing the background effect. For details about the default val
 borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 ```
 
-Border color of the dialog box.
+设置弹窗背板的边框颜色。
 
-Default value: **Color.Black**
+默认值：Color.Black
 
-**borderColor** must be used with **borderWidth** in pairs.
+如果使用borderColor属性，需要和borderWidth属性一起使用。
 
-**NOTE**
+**说明：**
 
-When **borderColor** is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings.
+当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。
 
-**Type:** ResourceColor \| EdgeColors \| LocalizedEdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
 
 **Default:** Color.Black - borderColor must be used with borderWidth in pairs.
 
@@ -223,13 +220,13 @@ When **borderColor** is of type LocalizedEdgeColors, the layout order can be dyn
 borderStyle?: BorderStyle | EdgeStyles
 ```
 
-Border style of the dialog box.
+设置弹窗背板的边框样式。
 
-Default value: **BorderStyle.Solid**
+默认值：BorderStyle.Solid。
 
-**borderStyle** must be used with **borderWidth** in pairs.
+如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**Type:** BorderStyle \| EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-enums-borderstyle-e.md) \| EdgeStyles
 
 **Default:** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
@@ -251,21 +248,21 @@ Default value: **BorderStyle.Solid**
 borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 ```
 
-Border width of the dialog box.
+设置弹窗背板的边框宽度。
 
-You can set the width for all four sides or set separate widths for individual sides.
+可分别设置4个边框宽度。
 
-Default value: **0**
+默认值：0
 
-When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width.
+百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。
 
-If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
+当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
 
-**NOTE**
+**说明：**
 
-When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dynamically adjusted based on the user's language settings.
+当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。
 
-**Type:** Dimension \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
 
 **Default:** 0 - When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
@@ -287,10 +284,9 @@ When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dyn
 confirm?: ActionSheetButtonOptions
 ```
 
-Information about the confirm button. When the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation, the button responds to the **Enter** key by default. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. The default response to the  
-**Enter** key does not work when **defaultFocus** is set to **true**.
+确认Button的使能状态、默认焦点、按钮风格、文本内容和点击回调。
 
-**Type:** ActionSheetButtonOptions
+**Type:** [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md)
 
 **Since:** 8
 
@@ -308,21 +304,21 @@ Information about the confirm button. When the dialog box has focus and the **Ta
 cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-Corner radius of the background.
+设置背板的圆角半径。
 
-You can set the radius for each of the four corners individually.
+可分别设置4个圆角的半径。
 
-Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }**
+默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
-The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used.
+圆角大小受组件尺寸限制，最大值为组件宽或高的一半，若值为负，则按照默认值处理。 
 
-When set to a percentage, the value defines the radius as a percentage of the parent dialog box's width or height.
+百分比参数方式：以父元素弹窗宽和高的百分比来设置弹窗的圆角。
 
-**NOTE**
+**说明：**
 
-When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can be dynamically adjusted based on the user's language settings.
+当cornerRadius属性类型为LocalizedBorderRadiuses时，支持随语言习惯改变布局顺序。
 
-**Type:** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** - {topLeft:'32vp', topRight:'32vp', bottomLeft:'32vp', bottomRight:'32vp'}, The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used. When set to a percentage, the value defines the radius as a percentage of the parent component's width or height.
 
@@ -344,15 +340,13 @@ When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can b
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode.
+是否响应悬停态，值为true表示响应悬停态。
 
-Default value: **false**, meaning not to enable the hover mode.
+默认值：false，默认不响应。
 
-**NOTE**
+**说明：**
 
-For a PC or 2-in-1 device, the dialog box is displayed on the upper half of the screen by default when  
-**enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the dialog box on the lower half of the screen. For other devices, the dialog box is displayed on the lower half of the screen by default when  
-**enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the dialog box on the upper half of the screen.
+PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true时，可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
 
 **Type:** boolean
 
@@ -376,15 +370,14 @@ For a PC or 2-in-1 device, the dialog box is displayed on the upper half of the 
 height?: Dimension
 ```
 
-Height of the dialog box.
+设置弹窗背板的高度。
 
-**NOTE**
+**说明：**
 
-- Default maximum height of the dialog box: 0.9 x (Window height – Safe area)  
-- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window  
-where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
+- 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。  
+- 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** - Default maximum height of the dialog box: 0.9 x (Window height – Safe area) <br>When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
@@ -406,11 +399,11 @@ where the dialog box is located minus the safe area. You can decrease or increas
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box in hover mode.
+悬停态下弹窗默认展示区域。
 
-Default value: **HoverModeAreaType.BOTTOM\_SCREEN
+默认值：HoverModeAreaType.BOTTOM_SCREEN。
 
-**Type:** HoverModeAreaType
+**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -432,14 +425,14 @@ Default value: **HoverModeAreaType.BOTTOM\_SCREEN
 immersiveMode?: ImmersiveMode
 ```
 
-Overlay effect for the page-level dialog box.
+设置页面内弹窗蒙层效果。
 
-**NOTE**
+**说明：**
 
-- Default value: **ImmersiveMode.DEFAULT**  
-- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+- 默认值：ImmersiveMode.DEFAULT   
+- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**Type:** ImmersiveMode
+**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT - This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
@@ -461,10 +454,9 @@ Overlay effect for the page-level dialog box.
 isModal?: boolean
 ```
 
-Whether the dialog box is a modal. A modal dialog box has a mask applied, while a non-modal dialog box does not.  
-**false**: The dialog box is not a modal.
+弹窗是否为模态窗口，模态窗口有蒙层，非模态窗口无蒙层。值为false时，弹窗为非模态窗口，无蒙层。
 
-Default value: **true
+默认值：true，此时弹窗有蒙层。
 
 **Type:** boolean
 
@@ -488,14 +480,14 @@ Default value: **true
 levelMode?: LevelMode
 ```
 
-Display level of the dialog box.
+设置弹窗显示层级。
 
-**NOTE**
+**说明：**
 
-- Default value: **LevelMode.OVERLAY**  
-- This parameter takes effect only when **showInSubWindow** is set to **false**.
+- 默认值：LevelMode.OVERLAY   
+- 仅当showInSubWindow属性设置为false时生效。
 
-**Type:** LevelMode
+**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY - This parameter takes effect only when showInSubWindow is set to false.
 
@@ -517,14 +509,14 @@ Display level of the dialog box.
 levelOrder?: LevelOrder
 ```
 
-Display order of the dialog box.
+设置弹窗显示的顺序。
 
-**NOTE**
+**说明：**
 
-- Default value: **LevelOrder.clamp(0)**  
-- Dynamic updating is not supported.
+- 默认值：LevelOrder.clamp(0)   
+- 不支持动态刷新顺序。
 
-**Type:** LevelOrder
+**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **Default:** The value returns by LevelOrder.clamp(0)
 
@@ -546,13 +538,13 @@ Display order of the dialog box.
 levelUniqueId?: number
 ```
 
-[Unique ID]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the node under the display level for the page-level dialog box.
+设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)。
 
-Value range: a number no less than 0
+取值范围：大于等于0的数字。
 
-**NOTE**
+**说明：**
 
-- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **Type:** number
 
@@ -574,15 +566,15 @@ Value range: a number no less than 0
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.
+弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。
 
-Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
+默认值：{ x: 0, y: 0, width: '100%', height: '100%' } 
 
-**NOTE**
+**说明：**
 
-**maskRect** does not take effect when **showInSubWindow** is set to **true**.
+showInSubWindow为true时，maskRect不生效。
 
-**Type:** Rectangle
+**Type:** [Rectangle](arkts-arkui-common-rectangle-i.md)
 
 **Default:** - {x:0,y:0, width:'100%', height:'100%'} [since 11]
 
@@ -604,9 +596,9 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 message: string | Resource
 ```
 
-Content of the dialog box.
+弹窗内容。
 
-If the text is too long to display, a scrollbar is displayed.
+文本超长时会触发滚动条。
 
 **Type:** string \| Resource
 
@@ -626,13 +618,15 @@ If the text is too long to display, a scrollbar is displayed.
 offset?: ActionSheetOffset
 ```
 
-Offset of the dialog box relative to the alignment position.
+弹窗相对alignment所在位置的偏移量。
 
-Default value:
+默认值：
 
-1. If **alignment** is set to **Top**, **TopStart**, or **TopEnd**, the default offset value is **{dx: 0,dy: "40vp"}**.2. If **alignment** is set to other values, the default offset value is **{dx: 0,dy: "-40vp"}**.
+1.alignment设置为Top、TopStart、TopEnd时默认值为{dx: 0,dy: "40vp"} 
 
-**Type:** ActionSheetOffset
+2.alignment设置为其他时默认值为{dx: 0,dy: "-40vp"}
+
+**Type:** [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md)
 
 **Since:** 8
 
@@ -650,17 +644,19 @@ Default value:
 onDidAppear?: Callback<void>
 ```
 
-Event callback after the dialog box appears.
+弹窗弹出后的事件回调。
 
-**NOTE**
+**说明：**
 
-1. The normal timing sequence is as follows: onWillAppear   
-    onDidAppear   
-    onWillDisappear   
-    onDidDisappear.  
-2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
+1.正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
-**Type:** Callback&lt;void&gt;
+2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+
+3.快速点击弹出，关闭弹窗时，onWillDisappear在onDidAppear前生效。
+
+4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -680,16 +676,13 @@ Event callback after the dialog box appears.
 onDidDisappear?: Callback<void>
 ```
 
-Event callback after the dialog box disappears.
+弹窗消失后的事件回调。
 
-**NOTE**
+**说明：**
 
-The normal timing sequence is as follows: onWillAppear   
-    onDidAppear   
-    onWillDisappear   
-    onDidDisappear.
+正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -709,17 +702,15 @@ The normal timing sequence is as follows: onWillAppear
 onWillAppear?: Callback<void>
 ```
 
-Event callback when the dialog box is about to appear.
+弹窗显示动效前的事件回调。
 
-**NOTE**
+**说明：**
 
-1. The normal timing sequence is as follows: onWillAppear   
-    onDidAppear   
-    onWillDisappear   
-    onDidDisappear.  
-2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+1.正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
-**Type:** Callback&lt;void&gt;
+2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -739,16 +730,13 @@ Event callback when the dialog box is about to appear.
 onWillDisappear?: Callback<void>
 ```
 
-Event callback when the dialog box is about to disappear.
+弹窗退出动效前的事件回调。
 
-**NOTE**
+**说明：**
 
-The normal timing sequence is as follows: onWillAppear   
-    onDidAppear   
-    onWillDisappear   
-    onDidDisappear.
+正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 19
 
@@ -768,13 +756,15 @@ The normal timing sequence is as follows: onWillAppear
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-Callback for interactive closure of the dialog box.
+交互式关闭回调函数。
 
-**NOTE**
+**说明：**
 
-1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE\_BUTTON**.2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
+1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。
 
-**Type:** Callback&lt;DismissDialogAction&gt;
+2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DismissDialogAction&gt;
 
 **Since:** 12
 
@@ -794,12 +784,11 @@ Callback for interactive closure of the dialog box.
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.
+设置弹窗背板的阴影。 
 
-Default value on 2-in-1 devices: **ShadowStyle.OUTER\_FLOATING\_MD** when the dialog box is focused and  
-**ShadowStyle.OUTER\_FLOATING\_SM** otherwise On other devices, the dialog box has no shadow by default.
+当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
 **Default:** - Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
@@ -821,7 +810,7 @@ Default value on 2-in-1 devices: **ShadowStyle.OUTER\_FLOATING\_MD** when the di
 sheets: Array<SheetInfo>
 ```
 
-Options in the dialog box. Each option supports the image, text, and callback.
+设置选项内容，每个选择项支持设置图片、文本和选中的回调。
 
 **Type:** Array&lt;SheetInfo&gt;
 
@@ -841,15 +830,13 @@ Options in the dialog box. Each option supports the image, text, and callback.
 showInSubWindow?: boolean
 ```
 
-Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window.  
-**true**: The dialog box is shown in a subwindow.
+当弹窗需要显示在主窗口之外时，是否在子窗口显示此弹窗。值为true表示在子窗口显示弹窗。
 
-Default value: **false**, meaning the dialog box is displayed within the application, not in a separate subwindow.
+默认值：false，弹窗显示在应用内，而非独立子窗口。
 
-**NOTE**
+**说明：**
 
-A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the display of another dialog box whose  
-**showInSubWindow** attribute is also **true**.
+showInSubWindow为true的弹窗无法触发显示另一个showInSubWindow为true的弹窗。
 
 **Type:** boolean
 
@@ -873,11 +860,11 @@ A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the 
 subtitle?: ResourceStr
 ```
 
-Subtitle of the dialog box.
+弹窗副标题。
 
-If the text is too long to display, it is truncated with an ellipsis (...).
+当文本内容过长无法显示时，用省略号代替未显示的部分。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
 
@@ -897,11 +884,19 @@ If the text is too long to display, it is truncated with an ellipsis (...).
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+设置弹窗的系统材质。
 
-Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
+**说明：**
 
-**Type:** SystemUiMaterial
+- 默认值：[ImmersiveOptions](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersiveoptions)的style为  
+ImmersiveStyle.ULTRA_THICK的  
+[ImmersiveMaterial](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivematerial)对象。设置undefined时与默认值保持一致。  
+- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、背景模糊  
+[backgroundBlurStyle](arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)、背景效果[backgroundEffect](arkts-arkui-common-commonmethod-i.md#backgroundeffect)、边框颜色  
+[borderColor](arkts-arkui-common-commonmethod-i.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-common-commonmethod-i.md#borderwidth)、阴影  
+[shadow](arkts-arkui-common-commonmethod-i.md#shadow)，不建议与上述接口一起使用。
+
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 
@@ -921,9 +916,9 @@ Device Behavior Differences:The effect of same material may vary across differen
 title: string | Resource
 ```
 
-Title of the dialog box.
+弹窗标题。
 
-If the text is too long to display, it is truncated with an ellipsis (...).
+当文本内容过长无法显示时，用省略号代替未显示的部分。
 
 **Type:** string \| Resource
 
@@ -943,13 +938,17 @@ If the text is too long to display, it is truncated with an ellipsis (...).
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the dialog box.
+设置弹窗显示和退出的过渡效果。
 
-**NOTE**
+**说明：**
 
-1. If this parameter is not set, the default effect is used.2. Touching the Back button during the entrance animation pauses the entrance animation and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application.
+1.如果不设置，则使用默认的显示/退出动效。
 
-**Type:** TransitionEffect
+2.显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。
+
+3.退出动效中按back键，不会打断退出动效，退出动效继续执行，继续按back键退出应用。
+
+**Type:** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **Since:** 12
 
@@ -969,15 +968,14 @@ Transition effect for the entrance and exit of the dialog box.
 width?: Dimension
 ```
 
-Width of the dialog box.
+设置弹窗背板的宽度。
 
-**NOTE**
+**说明：**
 
-- Default maximum width of the dialog box: 400 vp  
-- When this parameter is set to a percentage, the reference width of the dialog box is the width of the window  
-where the dialog box is located. You can decrease or increase the width as needed.
+- 弹窗宽度默认最大值：400vp。  
+- 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** - Default maximum width of the dialog box: 400 vp, When this parameter is set to a percentage, the reference width of the dialog box is the width of the window where the dialog box is located. You can decrease or increase the width as needed.
 

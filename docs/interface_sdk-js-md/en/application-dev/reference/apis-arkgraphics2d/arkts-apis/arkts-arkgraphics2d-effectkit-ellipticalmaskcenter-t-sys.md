@@ -7,7 +7,7 @@ type EllipticalMaskCenter = [
 ]
 ```
 
-Defines the center point of the elliptical mask.
+定义椭圆形遮罩的中心点。
 
 **Since:** 23
 

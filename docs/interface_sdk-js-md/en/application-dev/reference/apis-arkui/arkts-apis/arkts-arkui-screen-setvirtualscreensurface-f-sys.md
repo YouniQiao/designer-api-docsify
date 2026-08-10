@@ -1,12 +1,18 @@
 # setVirtualScreenSurface (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## setVirtualScreenSurface
 
 ```TypeScript
 function setVirtualScreenSurface(screenId:long, surfaceId: string, callback: AsyncCallback<void>): void
 ```
 
-Sets a surface for a virtual screen. This API uses an asynchronous callback to return the result.
+设置虚拟屏幕的surface，使用callback异步回调。
 
 **Since:** 9
 
@@ -24,20 +30,20 @@ Sets a surface for a virtual screen. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the virtual screen. The value must be an integer. |
-| surfaceId | string | Yes | Surface ID of the virtual screen. The value can be customized. You can specify the surface ID of an existing surface. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the virtual screen surface is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕的id，该参数仅支持整数输入。 |
+| surfaceId | string | Yes | 代表虚拟屏幕的surface标识符，surfaceId值可自行定义，由用户指定某一实际存在的surface对应的surfaceId。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置虚拟屏幕surface成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400001 | Invalid display or screen. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -51,10 +57,11 @@ struct Index {
   setVirtualScreenSurface = () => {
     let screenId: number = 1;
     let surfaceId = this.xComponentController.getXComponentSurfaceId();
+    // Set the surface of the virtual screen.
     screen.setVirtualScreenSurface(screenId, surfaceId, (err: BusinessError) => {
     const errCode: number = err.code;
     if (errCode) {
-      console.error(`Failed to set the surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
+      console.error(`Failed to set the surface for the virtual screen. Code: ${err.code}, message: ${err.message}`);
       return;
     }
       console.info('Succeeded in setting the surface for the virtual screen.');
@@ -85,7 +92,7 @@ struct Index {
 function setVirtualScreenSurface(screenId:long, surfaceId: string): Promise<void>
 ```
 
-Sets a surface for a virtual screen. This API uses a promise to return the result.
+设置虚拟屏幕的surface，使用Promise异步回调。
 
 **Since:** 9
 
@@ -103,25 +110,25 @@ Sets a surface for a virtual screen. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the virtual screen. The value must be an integer. |
-| surfaceId | string | Yes | Surface ID of the virtual screen. The value can be customized. You can specify the surface ID of an existing surface. |
+| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕的id，该参数仅支持整数输入。 |
+| surfaceId | string | Yes | 代表虚拟屏幕的surface标识符，surfaceId值可自行定义，由用户指定某一实际存在的surface对应的surfaceId。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400001 | Invalid display or screen. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -135,10 +142,11 @@ struct Index {
   setVirtualScreenSurface = () => {
     let screenId: number = 1;
     let surfaceId = this.xComponentController.getXComponentSurfaceId();
+    // Set the surface of the virtual screen.
     screen.setVirtualScreenSurface(screenId, surfaceId).then(() => {
       console.info('Succeeded in setting the surface for the virtual screen.');
     }).catch((err: BusinessError) => {
-      console.error(`Failed to set the surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
+      console.error(`Failed to set the surface for the virtual screen. Code: ${err.code}, message: ${err.message}`);
     });
   }
   build() {

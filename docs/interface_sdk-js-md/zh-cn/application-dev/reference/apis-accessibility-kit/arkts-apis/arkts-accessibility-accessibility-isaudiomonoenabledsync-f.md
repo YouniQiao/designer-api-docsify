@@ -1,5 +1,11 @@
 # isAudioMonoEnabledSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isAudioMonoEnabledSync
 
 ```TypeScript
@@ -24,7 +30,7 @@ function isAudioMonoEnabledSync(): boolean
 | --- | --- |
 | boolean | 表示是否开启单声道音频模式。true表示开启单声道音频模式，false表示未开启单声道音频模式。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

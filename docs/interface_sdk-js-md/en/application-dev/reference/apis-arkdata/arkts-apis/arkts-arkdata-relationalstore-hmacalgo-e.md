@@ -1,6 +1,6 @@
 # HmacAlgo
 
-Enumerates the HMAC algorithms for the database. Use the enum name rather than the enum value.
+数据库的HMAC算法枚举。请使用枚举名称而非枚举值。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates the HMAC algorithms for the database. Use the enum name rather than t
 SHA1 = 0
 ```
 
-SHA1: HMAC\_SHA1 algorithm.
+HMAC_SHA1算法。
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ SHA1: HMAC\_SHA1 algorithm.
 SHA256 = 1
 ```
 
-SHA256: HMAC\_SHA256 algorithm.
+HMAC_SHA256算法。
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ SHA256: HMAC\_SHA256 algorithm.
 SHA512 = 2
 ```
 
-SHA512: HMAC\_SHA512 algorithm.
+HMAC_SHA512算法。
 
 **Since:** 14
 

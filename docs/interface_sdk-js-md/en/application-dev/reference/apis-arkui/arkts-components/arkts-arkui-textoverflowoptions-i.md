@@ -1,11 +1,10 @@
 # TextOverflowOptions
 
-Defines the configuration object for text overflow behavior.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
+文本超长显示方式对象。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,11 +20,11 @@ Defines the configuration object for text overflow behavior.
 overflow: TextOverflow
 ```
 
-Display mode of overflowing text.
+文本超长时的显示方式。
 
-Default value: **TextOverflow.Clip
+默认值：TextOverflow.Clip
 
-**Type:** TextOverflow
+**Type:** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 
 **Default:** TextOverflow.Clip [since 18]
 

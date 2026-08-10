@@ -1,12 +1,18 @@
 # getCurrentTime
 
+## Modules to Import
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getCurrentTime
 
 ```TypeScript
 function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void
 ```
 
-Obtains the time elapsed since the Unix epoch. This API uses an asynchronous callback to return the result.
+获取自Unix纪元以来经过的时间，使用callback异步回调。
 
 **Since:** 8
 
@@ -24,8 +30,8 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | Yes | Whether the time to return is in nanoseconds.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **true**: The result is in nanoseconds.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **false**: The result is in milliseconds. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch. |
+| isNano | boolean | Yes | 返回结果是否为纳秒数。&lt;br&gt;- true：表示返回结果为纳秒数（ns）。 &lt;br&gt;- false：表示返回结果为毫秒数（ms）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回自Unix纪元以来经过的时间。 |
 
 **Error codes:**
 
@@ -33,7 +39,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -59,7 +65,7 @@ try {
 function getCurrentTime(callback: AsyncCallback<number>): void
 ```
 
-Obtains the time elapsed since the Unix epoch. This API uses an asynchronous callback to return the result.
+获取自Unix纪元以来经过的时间，使用callback异步回调。
 
 **Since:** 8
 
@@ -77,7 +83,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch, in milliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回自Unix纪元以来经过的时间（ms）。 |
 
 **Error codes:**
 
@@ -85,7 +91,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,7 +117,7 @@ try {
 function getCurrentTime(isNano?: boolean): Promise<number>
 ```
 
-Obtains the time elapsed since the Unix epoch. This API uses a promise to return the result.
+获取自Unix纪元以来经过的时间，使用Promise异步回调。
 
 **Since:** 8
 
@@ -129,13 +135,13 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is false.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **true**: The result is in nanoseconds.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **false**: The result is in milliseconds. |
+| isNano | boolean | No | 返回结果是否为纳秒数，默认值为false。&lt;br/&gt;默认值为false。&lt;br/&gt;- true：表示返回结果为纳秒数（ns）。 &lt;br/&gt;- false：表示返回结果为毫秒数 （ms）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the time elapsed since the Unix epoch. |
+| Promise&lt;number&gt; | Promise对象，返回自Unix纪元以来经过的时间。 |
 
 **Error codes:**
 
@@ -143,7 +149,7 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -425,5 +425,5 @@
   - [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md)
   - [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 - application<!--arkts-mdmkit-application-->
-  - [application/EnterpriseAdminExtensionContext](arkts-application/enterpriseadminextensioncontext.md)
-    - [EnterpriseAdminExtensionContext](enterpriseadminextensioncontext-enterpriseadminextensioncontext-c.md)
+  - [EnterpriseAdminExtensionContext](arkts-enterpriseadminextensioncontext.md)
+    - [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-c.md)

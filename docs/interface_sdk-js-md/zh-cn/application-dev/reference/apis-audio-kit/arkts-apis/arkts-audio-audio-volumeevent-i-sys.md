@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## networkId
 
 ```TypeScript
@@ -38,7 +44,7 @@ percentage?: int
 
 Volume percentage, which is an integer ranging from [0, 100].
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -58,7 +64,7 @@ volumeGroupId: int
 
 volumeGroup id
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

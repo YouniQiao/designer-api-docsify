@@ -4,7 +4,7 @@
 export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitchChangedCallbackData) => void
 ```
 
-注册由[notificationManager.setNotificationSwitch]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口设置的通知开关状态变化的回调函数类型。
+注册由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch)接口设置的通知开关状态变化的回调函数类型。
 
 **起始版本：** 26.0.0
 
@@ -22,5 +22,5 @@ export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitc
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackData | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调返回由[notificationManager.setNotificationSwitch]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ 接口设置的通知开关状态变化信息。  |
+| callbackData | [NotificationSwitchChangedCallbackData](arkts-notification-notificationsubscriber-notificationswitchchangedcallbackdata-i-sys.md) | 是 | 回调返回由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch) 接口设置的通知开关状态变化信息。 |
 

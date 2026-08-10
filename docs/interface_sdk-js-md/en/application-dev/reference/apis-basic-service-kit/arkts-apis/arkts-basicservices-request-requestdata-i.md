@@ -1,16 +1,20 @@
 # RequestData
 
-**Since:** 3
+[UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的表单数据。
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-**Substitutes:** [@ohos.request:request.RequestData](arkts-basicservices-request-requestdata-i.md)
+<!--Device-request-interface RequestData--><!--Device-request-interface RequestData-End-->
 
-<!--Device-unnamed-export interface RequestData--><!--Device-unnamed-export interface RequestData-End-->
+**System capability:** SystemCapability.MiscServices.Download
 
-**System capability:** SystemCapability.MiscServices.Upload
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
 
 ## name
 
@@ -18,21 +22,17 @@
 name: string
 ```
 
-Name of the form element.
+表示表单元素的名称。
 
 **Type:** string
 
-**Since:** 3
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 9
-
-**Substitutes:** ohos.request.agent.FormItem.name
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 <!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
 
-**System capability:** SystemCapability.MiscServices.Upload
+**System capability:** SystemCapability.MiscServices.Download
 
 ## value
 
@@ -40,19 +40,15 @@ Name of the form element.
 value: string
 ```
 
-Value of the form element.
+表示表单元素的值。
 
 **Type:** string
 
-**Since:** 3
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 9
-
-**Substitutes:** ohos.request.agent.FormItem.value
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 <!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
 
-**System capability:** SystemCapability.MiscServices.Upload
+**System capability:** SystemCapability.MiscServices.Download
 

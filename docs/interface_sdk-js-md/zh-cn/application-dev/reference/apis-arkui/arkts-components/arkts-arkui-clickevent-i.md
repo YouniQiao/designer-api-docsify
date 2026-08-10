@@ -1,8 +1,8 @@
 # ClickEvent
 
-继承于[BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** ClickEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 7
 
@@ -36,7 +36,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## preventDefault
 
@@ -64,7 +64,7 @@ preventDefault: () => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100017](../errorcode-event.md#100017-组件不支持阻止默认事件) | Component does not support prevent function. |
+| 100017 | Component does not support prevent function. |
 
 ## displayX
 
@@ -120,7 +120,7 @@ displayY: number
 globalDisplayX?: number
 ```
 
-点击位置在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
 单位：vp
 
@@ -146,7 +146,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-触摸点在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
 
 单位：vp
 
@@ -174,7 +174,7 @@ hand?: InteractionHand
 
 表示事件是由左手点击还是右手点击触发。
 
-**类型：** InteractionHand
+**类型：** [InteractionHand](../arkts-apis/arkts-arkui-interactionhand-e.md)
 
 **起始版本：** 15
 
@@ -206,7 +206,7 @@ screenX: number
 
 **废弃版本：** 10
 
-**替代接口：** [ClickEvent#windowX](../arkts-apis/arkts-arkui-component/common-clickevent-i.md#windowx)
+**替代接口：** [ClickEvent#windowX](arkts-arkui-clickevent-i.md#windowx)
 
 <!--Device-ClickEvent-screenX: number--><!--Device-ClickEvent-screenX: number-End-->
 
@@ -230,7 +230,7 @@ screenY: number
 
 **废弃版本：** 10
 
-**替代接口：** [ClickEvent#windowY](../arkts-apis/arkts-arkui-component/common-clickevent-i.md#windowy)
+**替代接口：** [ClickEvent#windowY](arkts-arkui-clickevent-i.md#windowy)
 
 <!--Device-ClickEvent-screenY: number--><!--Device-ClickEvent-screenY: number-End-->
 
@@ -290,8 +290,8 @@ windowY: number
 x: number
 ```
 
-点击位置在被点击元素为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。onClick的  
-[distanceThreshold]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的  
+[distanceThreshold](arkts-arkui-commonmethod-c.md#onclick)设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
 
 单位：vp
 
@@ -315,7 +315,7 @@ x: number
 y: number
 ```
 
-点击位置在被点击元素为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
 
 单位：vp
 

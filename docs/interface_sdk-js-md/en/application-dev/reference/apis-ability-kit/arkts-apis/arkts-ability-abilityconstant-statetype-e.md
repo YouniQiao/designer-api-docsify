@@ -1,8 +1,7 @@
 # StateType
 
-Enumerates the scenarios for saving application data. You can use it in  
-[onSaveState()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_of the UIAbility to complete  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+保存应用数据场景原因，该类型为枚举。配合UIAbility的  
+[onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)方法使用，可以实现[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。
 
 **Since:** 9
 
@@ -18,7 +17,7 @@ Enumerates the scenarios for saving application data. You can use it in
 CONTINUATION = 0
 ```
 
-Application migration scenario.
+应用迁移场景。
 
 **Since:** 9
 
@@ -38,7 +37,7 @@ Application migration scenario.
 APP_RECOVERY = 1
 ```
 
-Application recovery scenario.
+应用故障恢复场景。
 
 **Since:** 9
 

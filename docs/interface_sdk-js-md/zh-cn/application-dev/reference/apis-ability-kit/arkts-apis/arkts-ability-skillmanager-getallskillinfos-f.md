@@ -1,5 +1,11 @@
 # getAllSkillInfos
 
+## 导入模块
+
+```TypeScript
+import { skillManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAllSkillInfos
 
 ```TypeScript
@@ -39,6 +45,6 @@ function getAllSkillInfos(flags: int, userId?: int): Promise<Array<SkillInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| 201 | Permission denied. |
+| 17700004 | The specified user ID is not found. |
 

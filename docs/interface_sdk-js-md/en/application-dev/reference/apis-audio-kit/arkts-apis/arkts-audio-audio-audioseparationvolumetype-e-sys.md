@@ -1,6 +1,6 @@
 # AudioSeparationVolumeType (System API)
 
-Volume type for audio separation effect.
+音频分离效果的音量类型。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Volume type for audio separation effect.
 VOLUME_TYPE_VOCAL = 0
 ```
 
-Vocal type.
+人声类型。
 
 **Since:** 26.0.0
 

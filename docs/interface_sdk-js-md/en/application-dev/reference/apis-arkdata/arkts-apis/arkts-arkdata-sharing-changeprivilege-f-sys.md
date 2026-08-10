@@ -1,5 +1,11 @@
 # changePrivilege (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## changePrivilege
 
 ```TypeScript
@@ -10,7 +16,7 @@ function changePrivilege(
     ): void
 ```
 
-Changes the privilege on the shared data.This API uses an asynchronous callback to return the result.
+根据指定的共享资源标识更改共享参与者对共享数据的操作权限，使用callback异步回调。
 
 **Since:** 11
 
@@ -26,19 +32,19 @@ Changes the privilege on the shared data.This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Yes | Callback used to return the result. |
+| sharingResource | string | Yes | 端云共享数据的资源标识。 |
+| participants | Array&lt;Participant&gt; | Yes | 端云共享的参与者。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Yes | 回调函数。返回更改权限的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,7 +83,7 @@ function changePrivilege(
     ): Promise<Result<Array<Result<Participant>>>>
 ```
 
-Changes the privilege on the shared data.This API uses a promise to return the result.
+根据指定的共享资源标识更改共享参与者对共享数据的操作权限，使用Promise异步回调。
 
 **Since:** 11
 
@@ -93,24 +99,24 @@ Changes the privilege on the shared data.This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
+| sharingResource | string | Yes | 端云共享数据的资源标识。 |
+| participants | Array&lt;Participant&gt; | Yes | 端云共享的参与者。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Promise对象，返回更改共享参与者权限的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

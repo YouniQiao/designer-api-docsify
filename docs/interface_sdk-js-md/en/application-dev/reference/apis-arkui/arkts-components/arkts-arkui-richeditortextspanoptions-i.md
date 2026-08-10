@@ -1,6 +1,6 @@
 # RichEditorTextSpanOptions
 
-Describes the options for adding a text span.
+添加文本的偏移位置和文本样式信息。
 
 **Since:** 10
 
@@ -16,9 +16,9 @@ Describes the options for adding a text span.
 gesture?: RichEditorGesture
 ```
 
-Behavior-triggered callback. If this parameter is left empty, only the default system behavior is supported.
+行为触发回调。当需要自定义文本Span的点击或长按交互行为时传入此参数；省略时，仅使用系统默认行为。
 
-**Type:** RichEditorGesture
+**Type:** [RichEditorGesture](arkts-arkui-richeditorgesture-i.md)
 
 **Since:** 11
 
@@ -38,9 +38,9 @@ Behavior-triggered callback. If this parameter is left empty, only the default s
 offset?: number
 ```
 
-Position of the text span to be added. If this parameter is omitted, the paragraph is added to the end of all content.
+添加文本的位置。省略时，添加到所有内容的最后。
 
-If the value specified is less than 0, the paragraph is placed at the beginning of all content. If the value is greater than the length of all content, the paragraph is placed at the end of all content.
+当值小于0时，放在所有内容最前面；当值大于所有内容长度时，放在所有内容最后面。
 
 **Type:** number
 
@@ -62,9 +62,9 @@ If the value specified is less than 0, the paragraph is placed at the beginning 
 paragraphStyle?: RichEditorParagraphStyle
 ```
 
-Paragraph style.
+段落样式。当需要设置文本的对齐方式、缩进、断行规则等段落级排版属性时传入此参数。不传入时，使用系统默认段落样式（左对齐、无缩进、按单词断行）。
 
-**Type:** RichEditorParagraphStyle
+**Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
 
 **Since:** 11
 
@@ -84,9 +84,9 @@ Paragraph style.
 style?: RichEditorTextStyle
 ```
 
-Style of the text span to be added. If this parameter is left empty, the default text style will be used.
+文本样式信息。当需要设置文本的颜色、字体大小、粗细等自定义样式时传入此参数。省略时，使用系统默认文本信息。
 
-**Type:** RichEditorTextStyle
+**Type:** [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)
 
 **Since:** 10
 
@@ -106,11 +106,11 @@ Style of the text span to be added. If this parameter is left empty, the default
 urlStyle?: RichEditorUrlStyle
 ```
 
-URL information.
+url信息。
 
-Default value: **undefined
+默认值：undefined
 
-**Type:** RichEditorUrlStyle
+**Type:** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **Since:** 19
 

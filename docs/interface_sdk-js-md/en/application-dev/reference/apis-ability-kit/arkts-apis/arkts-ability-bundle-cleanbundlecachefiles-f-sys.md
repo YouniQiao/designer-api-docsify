@@ -1,12 +1,18 @@
 # cleanBundleCacheFiles (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## cleanBundleCacheFiles
 
 ```TypeScript
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Clears the cache data of an application. This API uses an asynchronous callback to return the result.
+清除指定应用程序的缓存数据，使用callback异步回调。
 
 **Since:** 8
 
@@ -28,8 +34,8 @@ Clears the cache data of an application. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| bundleName | string | Yes | 指示要清除其缓存数据的应用Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 
 ## cleanBundleCacheFiles
@@ -38,7 +44,7 @@ Clears the cache data of an application. This API uses an asynchronous callback 
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-Clears the cache data of an application. This API uses a promise to return the result.
+清除指定应用程序的缓存数据，使用Promise异步回调。
 
 **Since:** 8
 
@@ -60,11 +66,11 @@ Clears the cache data of an application. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 指示要清除其缓存数据的应用Bundle名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
 

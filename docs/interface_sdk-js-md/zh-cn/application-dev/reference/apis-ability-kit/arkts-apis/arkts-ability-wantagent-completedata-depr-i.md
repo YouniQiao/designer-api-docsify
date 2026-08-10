@@ -94,7 +94,7 @@ info: WantAgent
 
 触发的wantAgent。
 
-**类型：** WantAgent
+**类型：** [WantAgent](arkts-ability-wantagent-t.md)
 
 **起始版本：** 7
 
@@ -118,7 +118,7 @@ want: Want
 
 存在的被触发的want。
 
-**类型：** Want
+**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 7
 

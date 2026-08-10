@@ -1,14 +1,6 @@
 # ScreenCaptureHandler
 
-Implements the **ScreenCaptureHandler** object for accepting or rejecting a screen capture request.For details about the sample code,see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    - The initial APIs of this component are supported since API version 8.  
-    Updates will be marked with a superscript to indicate their earliest API version.  
-    
-    - The initial APIs of this class are supported since API version 10.  
-    
-    - The sample effect is subject to the actual device.
+Defines the onScreenCapture callback, related to {@link onScreenCapture} method.
 
 **Since:** 10
 
@@ -24,7 +16,7 @@ Implements the **ScreenCaptureHandler** object for accepting or rejecting a scre
 constructor()
 ```
 
-Constructs a **ScreenCaptureHandler** object.
+Constructor.
 
 **Since:** 10
 
@@ -42,7 +34,7 @@ Constructs a **ScreenCaptureHandler** object.
 deny(): void
 ```
 
-Rejects this screen capture request.
+Reject the request.
 
 **Since:** 10
 
@@ -60,7 +52,7 @@ Rejects this screen capture request.
 getOrigin(): string
 ```
 
-Obtains the origin of this web page.
+Gets the source of the webpage that attempted to access the restricted resource.
 
 **Since:** 10
 
@@ -76,7 +68,7 @@ Obtains the origin of this web page.
 
 | Type | Description |
 | --- | --- |
-| string | Origin of the web page that requests the permission. |
+| string |  |
 
 ## grant
 
@@ -84,7 +76,7 @@ Obtains the origin of this web page.
 grant(config: ScreenCaptureConfig): void
 ```
 
-Grants the screen capture permission.
+Grant origin access to a given resource.
 
 **Since:** 10
 
@@ -100,5 +92,5 @@ Grants the screen capture permission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Screen capture configuration. |
+| config | [ScreenCaptureConfig](arkts-arkweb-screencaptureconfig-i.md) | Yes | The screen capture configuration. |
 

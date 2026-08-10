@@ -1,11 +1,10 @@
 # FullscreenInfo
 
-Describes whether the video is in full-screen playback mode.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer  
-    element's @since version number is higher than inner elements'. This does not affect interface usability.
+用于描述当前视频是否进入全屏播放状态。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,9 +20,11 @@ Describes whether the video is in full-screen playback mode.
 fullscreen: boolean
 ```
 
-Callback that indicates whether the video playback is in full-screen mode.  
-**true**: The video playback is in full-screen mode.  
-**false**: The video playback is not in full-screen mode.Default value: **false**.
+当前视频是否进入全屏播放状态。
+
+true：进入全屏播放状态；false：未进入全屏播放状态。
+
+默认值：false
 
 **Type:** boolean
 

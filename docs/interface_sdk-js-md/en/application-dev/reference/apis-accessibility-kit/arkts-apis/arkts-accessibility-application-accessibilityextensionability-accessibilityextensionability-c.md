@@ -1,6 +1,6 @@
 # AccessibilityExtensionAbility
 
-The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework.
+AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ The **AccessibilityExtensionAbility** module provides accessibility extension ca
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
+## Modules to Import
+
+```TypeScript
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
+```
+
 ## onAccessibilityEvent
 
 ```TypeScript
 onAccessibilityEvent(event: AccessibilityEvent): void
 ```
 
-Called when an event that matches the specified bundle and event type occurs. In this API, you can implement event-specific service logic. Generally, this API needs to be overridden.
+在关注的应用及事件类型对应的事件发生时回调此接口，可以在该方法中根据事件信息进行业务逻辑处理。一般情况下需要重写该方法完成业务。
 
 **Since:** 9
 
@@ -32,9 +38,9 @@ Called when an event that matches the specified bundle and event type occurs. In
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility event. No return value. |
+| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes | 无障碍事件。无返回值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AccessibilityExtensionAbility, AccessibilityEvent } from '@kit.AccessibilityKit';
@@ -55,7 +61,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onConnect(): void
 ```
 
-Called when the **AccessibilityExtensionAbility** is enabled and connected to the system service. In this API, you can have the service logic initialized. This API can be overridden as required.
+用户启用AccessibilityExtensionAbility时，系统服务完成连接后，回调此接口，可以该方法中执行初始化业务逻辑操作。该方法可以选择性重写。
 
 **Since:** 9
 
@@ -67,7 +73,7 @@ Called when the **AccessibilityExtensionAbility** is enabled and connected to th
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -85,7 +91,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onDisconnect(): void
 ```
 
-Called when the **AccessibilityExtensionAbility** is disabled and disconnected from the system service. In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
+用户停用AccessibilityExtensionAbility时，系统服务完成断开连接后，回调此接口，可以该方法中执行资源回收退出业务逻辑操作。该方法可以选择性重写。
 
 **Since:** 9
 
@@ -97,7 +103,7 @@ Called when the **AccessibilityExtensionAbility** is disabled and disconnected f
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -115,7 +121,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onKeyEvent(keyEvent: KeyEvent): boolean
 ```
 
-Called when a physical key is pressed. In this API, you can determine whether to consume the event based on the service.
+在物理按键按下时回调此方法，可以在该方法中根据业务判断是否对事件进行拦截。
 
 **Since:** 9
 
@@ -131,15 +137,15 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Key event. If **true** is returned, the key is consumed. |
+| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | 按键事件回调函数。返回true表示拦截此按键。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the event is consumed and will not be transferred;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_returns **false** if the event is not consumed and will be transferred. |
+| boolean | 返回true表示此事件被消费，不会继续传递。&lt;br&gt;返回false表示此事件未被消费，会继续传递。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -163,9 +169,9 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 context: AccessibilityExtensionContext
 ```
 
-Context of the accessibility extension ability.
+表示辅助扩展能力上下文。
 
-**Type:** AccessibilityExtensionContext
+**Type:** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md)
 
 **Since:** 9
 

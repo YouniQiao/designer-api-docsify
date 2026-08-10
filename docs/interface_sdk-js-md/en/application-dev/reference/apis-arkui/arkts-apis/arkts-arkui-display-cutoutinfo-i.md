@@ -1,6 +1,6 @@
 # CutoutInfo
 
-Describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display.
+挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Describes the unusable area of a display, including punch hole, notch, and curve
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## boundingRects
 
 ```TypeScript
 readonly boundingRects: Array<Rect>
 ```
 
-Unusable areas (bounding rectangles) designed for punch holes and notches. If there are no punch holes or notches, an empty array is returned.
+挖孔、刘海等区域的边界矩形。如果没有挖孔、刘海等区域，数组返回为空。
 
 **Type:** Array&lt;Rect&gt;
 
@@ -36,9 +42,9 @@ Unusable areas (bounding rectangles) designed for punch holes and notches. If th
 readonly waterfallDisplayAreaRects: WaterfallDisplayAreaRects
 ```
 
-Curved area on a waterfall display.
+瀑布屏曲面部分显示区域。
 
-**Type:** WaterfallDisplayAreaRects
+**Type:** [WaterfallDisplayAreaRects](arkts-arkui-display-waterfalldisplayarearects-i.md)
 
 **Since:** 9
 

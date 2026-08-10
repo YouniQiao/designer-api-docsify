@@ -1,10 +1,16 @@
 # @ohos.app.ability.Configuration
 
+## Modules to Import
+
+```TypeScript
+import { Configuration } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | The module defines the environment variables for the application runtime, including language, dark/light color mode,screen orientation, and font size. You can subscribe to these environment variables to adapt to different user preferences and enhance the interaction experience. |
+| [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 定义了应用运行时的环境变量，包含语言、深浅色、屏幕方向、字体等。开发者可以通过订阅环境变量，适配不同用户偏好，提升交互体验。 |
 

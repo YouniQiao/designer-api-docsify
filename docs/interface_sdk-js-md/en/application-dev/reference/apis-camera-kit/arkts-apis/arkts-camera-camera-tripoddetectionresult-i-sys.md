@@ -1,6 +1,6 @@
 # TripodDetectionResult (System API)
 
-TripodDetectionResult extends [SceneFeatureDetectionResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_Describes the tripod detection result.
+TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)Describes the tripod detection result.
 
 **Inheritance/Implementation:** TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)
 
@@ -14,6 +14,12 @@ TripodDetectionResult extends [SceneFeatureDetectionResult]\_\_\_JSDOC\_LINK\_DE
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## tripodStatus
 
 ```TypeScript
@@ -22,7 +28,7 @@ readonly tripodStatus: TripodStatus
 
 Tripod status.
 
-**Type:** TripodStatus
+**Type:** [TripodStatus](arkts-camera-camera-tripodstatus-e-sys.md)
 
 **Since:** 13
 

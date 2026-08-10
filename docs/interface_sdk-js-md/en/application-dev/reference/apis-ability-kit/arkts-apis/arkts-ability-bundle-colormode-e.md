@@ -1,10 +1,10 @@
 # ColorMode
 
-    **NOTE**  
-    
-    This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided.
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，暂无替代接口。
 
-Enumerates the color modes of applications and widgets.
+应用、卡片等的颜色模式。
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ Enumerates the color modes of applications and widgets.
 AUTO_MODE = -1
 ```
 
-Auto mode.
+自动模式。
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ Auto mode.
 DARK_MODE = 0
 ```
 
-Dark mode.
+黑色模式。
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ Dark mode.
 LIGHT_MODE = 1
 ```
 
-Light mode.
+亮度模式。
 
 **Since:** 7
 

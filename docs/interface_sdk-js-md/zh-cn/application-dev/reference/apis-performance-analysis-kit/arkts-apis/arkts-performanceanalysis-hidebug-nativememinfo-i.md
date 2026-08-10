@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## privateClean
 
 ```TypeScript
 privateClean: bigint
 ```
 
-˽�иɾ��ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps\_rollup: Private\_Clean��
+˽�иɾ��ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Private_Clean��
 
 **类型：** bigint
 
@@ -34,7 +40,7 @@ privateClean: bigint
 privateDirty: bigint
 ```
 
-˽�����ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps\_rollup: Private\_Dirty��
+˽�����ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Private_Dirty��
 
 **类型：** bigint
 
@@ -52,7 +58,7 @@ privateDirty: bigint
 pss: bigint
 ```
 
-ʵ��ռ�õ������ڴ��С(�������乲����ռ�õ��ڴ�)����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps\_rollup: Pss + SwapPss��
+ʵ��ռ�õ������ڴ��С(�������乲����ռ�õ��ڴ�)����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Pss + SwapPss��
 
 **类型：** bigint
 
@@ -70,7 +76,7 @@ pss: bigint
 rss: bigint
 ```
 
-ʵ��ռ�õ������ڴ��С(����������ռ��)����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps\_rollup: Rss��
+ʵ��ռ�õ������ڴ��С(����������ռ��)����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Rss��
 
 **类型：** bigint
 
@@ -88,7 +94,7 @@ rss: bigint
 sharedClean: bigint
 ```
 
-�������ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps\_rollup: Shared\_Clean��
+�������ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Shared_Clean��
 
 **类型：** bigint
 
@@ -106,7 +112,7 @@ sharedClean: bigint
 sharedDirty: bigint
 ```
 
-�������ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps\_rollup: Shared\_Dirty��
+�������ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Shared_Dirty��
 
 **类型：** bigint
 

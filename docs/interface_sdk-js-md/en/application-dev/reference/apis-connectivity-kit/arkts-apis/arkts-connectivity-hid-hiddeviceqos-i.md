@@ -10,6 +10,12 @@ Represents the Quality of Service (QoS) settings for a bluetooth hid device appl
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## delayVariation
 
 ```TypeScript
@@ -18,7 +24,7 @@ delayVariation?: int
 
 L2CAP delay variation, default = -1.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ latency?: int
 
 L2CAP latency, default = -1.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ peakBandwidth?: int
 
 L2CAP peak bandwidth, default = 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -76,9 +82,9 @@ L2CAP peak bandwidth, default = 0.
 serviceType?: ServiceType
 ```
 
-L2CAP service type, default = SERVICE\_BEST\_EFFORT.
+L2CAP service type, default = SERVICE_BEST_EFFORT.
 
-**Type:** ServiceType
+**Type:** [ServiceType](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-servicetype-e.md)
 
 **Since:** 23
 
@@ -98,7 +104,7 @@ tokenBucketSize?: int
 
 L2CAP token bucket size, default = 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -118,7 +124,7 @@ tokenRate?: int
 
 L2CAP tokenRate, means transmission rate, default = 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

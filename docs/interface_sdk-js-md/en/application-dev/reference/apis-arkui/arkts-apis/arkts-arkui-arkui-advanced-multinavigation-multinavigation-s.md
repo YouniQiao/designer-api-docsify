@@ -1,6 +1,10 @@
 # MultiNavigation
 
-Declaration struct MultiNavigation.
+MultiNavigation({navDestination: PageMapBuilder | undefined, multiStack: MultiNavPathStack, onNavigationModeChange?: OnNavigationModeChangeCallback, onHomeShowOnTop?: OnHomeShowOnTopCallback})
+
+创建并初始化MultiNavigation组件。
+
+MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左侧主页点击时，会触发详情页的加载并同时清除右侧所有其他详情页，确保右侧仅展示最新加载的详情页。然而，若在右侧的详情页上再次执行详情页加载操作，系统将不会执行清栈动作。效果可参见[主页跳转详情页效果演示](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-MultiNavigation copy.md#示例)。
 
 **Since:** 23
 
@@ -11,6 +15,12 @@ Declaration struct MultiNavigation.
 <!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from 'kits/@kit.ArkUI';
+```
 
 ## build
 
@@ -38,7 +48,7 @@ The method to build multiNavigation.
 onHomeShowOnTop?: OnHomeShowOnTopCallback
 ```
 
-This callback is triggered when the HomePage at the top of the stack.
+设置主页处于栈顶时的回调。
 
 **Since:** 23
 
@@ -56,7 +66,7 @@ This callback is triggered when the HomePage at the top of the stack.
 onNavigationModeChange?: OnNavigationModeChangeCallback
 ```
 
-callback when the MultiNavigationMode change.
+设置MultiNavigation模式变更时的回调。
 
 **Since:** 23
 
@@ -74,9 +84,9 @@ callback when the MultiNavigationMode change.
 multiStack: MultiNavPathStack
 ```
 
-MultiNavigation path stack of the MultiNavigation.
+设置路由栈。
 
-**Type:** MultiNavPathStack
+**Type:** [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md)
 
 **Since:** 23
 
@@ -96,9 +106,11 @@ MultiNavigation path stack of the MultiNavigation.
 navDestination: PageMapBuilder | undefined
 ```
 
-build function of NavDestination.
+设置加载目标页面的路由规则。
 
-**Type:** PageMapBuilder \| undefined
+取值为undefined时，不会加载。
+
+**Type:** [PageMapBuilder](arkts-arkui-pagemapbuilder-t.md) \| undefined
 
 **Since:** 23
 

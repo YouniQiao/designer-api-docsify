@@ -6,7 +6,7 @@
 function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCallback<MissionInfo>): void
 ```
 
-Obtains the information about a given mission. This API uses an asynchronous callback to return the result.
+获取单个任务信息。使用callback异步回调。
 
 **Since:** 8
 
@@ -28,11 +28,11 @@ Obtains the information about a given mission. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
-| missionId | number | Yes | Mission ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MissionInfo&gt; | Yes | Callback used to return the mission information obtained. |
+| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
+| missionId | number | Yes | 任务ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Yes | 回调函数，返回任务信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -61,7 +61,7 @@ missionManager.getMissionInfo('', missionId, (error, mission) => {
 function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInfo>
 ```
 
-Obtains the information about a given mission. This API uses a promise to return the result.
+获取单个任务信息。使用Promise异步回调。
 
 **Since:** 8
 
@@ -83,16 +83,16 @@ Obtains the information about a given mission. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
-| missionId | number | Yes | Mission ID. |
+| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
+| missionId | number | Yes | 任务ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MissionInfo&gt; | Promise used to return the mission information obtained. |
+| Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Promise对象，返回任务信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

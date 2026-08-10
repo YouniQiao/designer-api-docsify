@@ -1,6 +1,6 @@
 # NumericTextTransitionOptions
 
-Defines the options of the numeric flip animation.
+数字翻牌的参数。
 
 **Since:** 20
 
@@ -16,13 +16,13 @@ Defines the options of the numeric flip animation.
 enableBlur?: boolean
 ```
 
-Whether to enable the blur effect for the flip animation.
+是否开启翻牌模糊效果。
 
-Default value: **false**
+默认值：false
 
-**true**: Enable the blur effect.
+true：开启翻牌模糊效果。
 
-**false**: Disable the blur effect.
+false：不开启翻牌模糊效果。
 
 **Type:** boolean
 
@@ -44,11 +44,11 @@ Default value: **false**
 flipDirection?: FlipDirection
 ```
 
-Direction of the flip animation.
+翻牌方向。
 
-Default value: **FlipDirection.DOWN
+默认值：FlipDirection.DOWN
 
-**Type:** FlipDirection
+**Type:** [FlipDirection](arkts-arkui-textcommon-flipdirection-e.md)
 
 **Since:** 20
 

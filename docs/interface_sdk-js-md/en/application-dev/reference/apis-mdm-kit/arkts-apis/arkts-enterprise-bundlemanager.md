@@ -1,10 +1,10 @@
-# @ohos.enterprise.bundleManager(Bundle Management)
+# @ohos.enterprise.bundleManager(包管理)
 
-This module provides package management capabilities, including installing and uninstalling application packages, and managing the installation trustlist, installation blocklist, uninstallation blocklist, and distribution types of installable applications. In enterprise device management scenarios, these capabilities enable fine-grained control over application installation and uninstallation, preventing unauthorized installations and uninstallations, thereby safeguarding enterprise device security and reducing security risks.
-    **NOTE**  
-    
-    The APIs of this module can be called only by a device administrator application that is enabled. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+本模块提供包管理能力，包括安装和卸载应用包，管理包安装允许名单、包安装禁止名单、包卸载禁止名单、可安装应用的分发类型等。在企业设备管理场景中，通过这些能力可以实现应用安装卸载的精细化管控，防止未授权应用的安装和卸载，保障企业设备安全，降低安全风险。
+
+> **说明：**
+> 
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **Since:** 12
 
@@ -14,84 +14,90 @@ This module provides package management capabilities, including installing and u
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.MDMKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles) | Adds the applications that can be installed by the current user. This API uses an asynchronous callback to return the result. |
-| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles-1) | Adds the applications that can be installed by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles-2) | Adds the applications that can be installed by the current or specified user. This API uses a promise to return the result. |
-| [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync) | Adds the applications that can be installed by the current or specified user. The reinstallation of system apps after uninstallation is not restricted by the API. However, the reinstallation of regular apps after uninstallation is restricted by the API. |
-| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles) | Adds the applications that cannot be installed by the current user. This API uses an asynchronous callback to return the result. |
-| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles-1) | Adds the applications that cannot be installed by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles-2) | Adds the applications that are not allowed to be installed by the current or specified user. This API uses a promise to return the result. |
-| [addDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-adddisallowedinstallbundlessync-f.md#adddisallowedinstallbundlessync) | Adds the applications that are not allowed to be installed by the current or specified user. The reinstallation of system apps after uninstallation is not restricted by the API. However, the reinstallation of regular apps after uninstallation is restricted by the API. |
-| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles) | Adds the applications that cannot be uninstalled by the current user. This API uses an asynchronous callback to return the result. |
-| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles-1) | Adds the applications that cannot be uninstalled by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles-2) | Adds the applications that cannot be uninstalled by the current or specified user. This API uses a promise to return the result. |
-| [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync) | Adds the applications that are not allowed to be uninstalled by the current or specified user. |
-| [addInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-addinstallationallowedappdistributiontypes-f.md#addinstallationallowedappdistributiontypes) | Adds the distribution type of the application that can be installed. Only applications of the distribution type that is added to [AppDistributionType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ can be installed on the current device.  For details about the distribution type of the application signing certificate, refer to the  **appDistributionType** attribute in [ApplicationInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles) | Obtains the applications that can be installed by the current user. This API uses an asynchronous callback to return the result. |
-| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles-1) | Obtains the applications that can be installed by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles-2) | Obtains the list of applications that are allowed to be installed by the current or specified user. This API uses a promise to return the result. |
-| [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync) | Obtains the applications that can be installed by the current or specified user. |
-| [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync-1) | Obtains the applications that can be installed by the current or specified user. |
-| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles) | Obtains the applications that cannot be installed by the current user. This API uses an asynchronous callback to return the result. |
-| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles-1) | Obtains the applications that cannot be installed by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles-2) | Obtains the list of applications that are not allowed to be installed by the current or specified user. This API uses a promise to return the result. |
-| [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md#getdisallowedinstallbundlessync) | Obtains the applications that cannot be installed by the current or specified user. |
-| [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md#getdisallowedinstallbundlessync-1) | Obtains the applications that cannot be installed by the current or specified user. |
-| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles) | Obtains the applications that cannot be uninstalled by the current user. This API uses an asynchronous callback to return the result. |
-| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles-1) | Obtains the applications that cannot be uninstalled by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles-2) | Obtains the list of applications that are not allowed to be uninstalled by the current or specified user. This API uses a promise to return the result. |
-| [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync) | Obtains the bundles that cannot be uninstalled by the current or specified user. |
-| [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync-1) | Obtains the bundles that are not allowed to be uninstalled by the current or specified user. |
-| [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md#getinstallationallowedappdistributiontypes) | Obtains the distribution type of the signing certificate used by applications that can be installed. |
-| [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md#getinstallationallowedappdistributiontypes-1) | Obtains the distribution type of the signing certificate used by applications that can be installed. |
-| [getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md#getinstalledbundlelist) | Obtains the applications installed by a specified user on a device. This API uses a promise to return the result. |
-| [getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md#getinstalledbundlelist-1) | Obtains the list of applications installed by a specified user based on the specified **bundleInfoGetFlag**. This API uses a promise to return the result. |
-| [getInstalledBundleStorageStats](arkts-mdm-bundlemanager-getinstalledbundlestoragestats-f.md#getinstalledbundlestoragestats) | Obtains the storage usage of installed applications of a specified user on a device. This API uses a promise to return the result. |
-| [install](arkts-mdm-bundlemanager-install-f.md#install) | Installs specified applications. This API uses an asynchronous callback to return the result. |
-| [install](arkts-mdm-bundlemanager-install-f.md#install-1) | Installs applications with specified parameters. This API uses an asynchronous callback to return the result. |
-| [install](arkts-mdm-bundlemanager-install-f.md#install-2) | Installs specified applications. This API uses a promise to return the result.  This API can be used to install only applications of the **enterprise\_\_\_ESCAPED\_UNDERSCORE\_\_\_mdm** (MDM application) or  **enterprise\_\_\_ESCAPED\_UNDERSCORE\_\_\_normal** (common enterprise application) distribution type. You can call the  [getBundleInfoForSelf]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API to query the  [BundleInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of an application, where **BundleInfo.appInfo.appDistributionType**  indicates the distribution type. Since API version 26.0.0, you are advised to use  [installForResult]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain more detailed error code return values. |
-| [installForResult](arkts-mdm-bundlemanager-installforresult-f.md#installforresult) | Installs the application bundle in the specified path and returns the installation result. This API uses a promise to return the result.  This API can be used to install only applications of the **enterprise\_\_\_ESCAPED\_UNDERSCORE\_\_\_mdm** (MDM application) or  **enterprise\_\_\_ESCAPED\_UNDERSCORE\_\_\_normal** (common enterprise application) distribution type. You can call the  [getBundleInfoForSelf]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API to query the  [BundleInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of an application, where **BundleInfo.appInfo.appDistributionType**  indicates the distribution type. |
-| [installMarketApps](arkts-mdm-bundlemanager-installmarketapps-f.md#installmarketapps) | Downloads and installs an application from AppGallery. |
-| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles) | Removes the applications that can be installed by the current user. This API uses an asynchronous callback to return the result. |
-| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles-1) | Removes the applications that can be installed by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles-2) | Removes the applications that can be installed by the current or specified user. This API uses a promise to return the result. |
-| [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync) | Removes the applications that can be installed by the current or specified user. |
-| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles) | Removes the applications that cannot be installed by the current user. This API uses an asynchronous callback to return the result. |
-| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles-1) | Removes the applications that cannot be installed by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles-2) | Removes the applications that cannot be installed by the current or specified user. This API uses a promise to return the result. |
-| [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync) | Removes the applications that cannot be installed by the current or specified user. |
-| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles) | Removes the applications that cannot be uninstalled by the current user. This API uses an asynchronous callback to return the result. |
-| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles-1) | Removes the applications that cannot be uninstalled by the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles-2) | Removes the applications that cannot be uninstalled by the current or specified user. This API uses a promise to return the result. |
-| [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync) | Removes the applications that cannot be uninstalled by the current or specified user through the specified device administrator application. |
-| [removeInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-removeinstallationallowedappdistributiontypes-f.md#removeinstallationallowedappdistributiontypes) | Removes the distribution type of an application. If only some distribution types in the array are removed, the current device can install applications of the remaining distribution types in the array, but cannot install applications of the distribution types not included in  [AppDistributionType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.  For details about the distribution type of the application signing certificate, refer to the  **appDistributionType** attribute in [ApplicationInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall) | Uninstalls an application of the current user without retaining the bundle data. This API uses an asynchronous callback to return the result. |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-1) | Uninstalls an application of the specified user without retaining the bundle data This API uses an asynchronous callback to return the result. |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-2) | Uninstalls an application of the current user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result. |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-3) | Uninstalls an application of the specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result. |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4) | Uninstalls a specified bundle of the current or specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses a promise to return the result. After the API is successfully called, the application is uninstalled, and the data is retained or deleted based on the **isKeepData** parameter. |
+| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles) | 添加应用至当前用户的应用程序包安装允许名单，添加至允许名单的应用允许在当前用户下安装，否则不允许安装，使用callback异步回调。 |
+| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles-1) | 添加应用至应用程序包安装允许名单，添加至允许名单的应用允许在指定用户（通过userId指定）下安装，否则不允许安装，使用callback异步回调。 |
+| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles-2) | 添加应用至应用程序包安装允许名单，添加至允许名单的应用允许在当前/指定用户下安装，否则不允许安装。使用Promise异步回调。 |
+| [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync) | 添加应用至应用程序包安装允许名单，添加至允许名单的应用允许在当前/指定用户下安装，其它非允许名单应用不允许安装。系统应用卸载后重新安装不会受到接口限制；而普通应用在卸载后重新安装时，则会受到接口限制。 |
+| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles) | 添加应用至应用程序包安装禁止名单，添加至禁止名单的应用不允许在当前用户下安装，使用callback异步回调。 |
+| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles-1) | 添加应用至应用程序包安装禁止名单，添加至禁止名单的应用不允许在指定用户（通过userId指定）下安装。使用callback异步回调。 |
+| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles-2) | 添加应用至应用程序包安装禁止名单，添加至禁止名单的应用不允许在当前/指定用户下安装。使用Promise异步回调。 |
+| [addDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-adddisallowedinstallbundlessync-f.md#adddisallowedinstallbundlessync) | 添加应用至应用程序包安装禁止名单，添加至禁止名单的应用不允许在当前/指定用户下安装。系统应用卸载后重新安装不会受到接口限制；而普通应用在卸载后重新安装时，则会受到接口限制。 |
+| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles) | 添加应用至应用程序包卸载禁止名单，添加至禁止名单的应用不允许在当前用户下卸载，使用callback异步回调。 |
+| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles-1) | 添加应用至应用程序包卸载禁止名单，添加至禁止名单的应用不允许在指定用户（通过userId指定）下卸载。使用callback异步回调。 |
+| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles-2) | 添加应用至应用程序包卸载禁止名单，添加至禁止名单的应用不允许在当前/指定用户下卸载。使用Promise异步回调。 |
+| [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync) | 添加应用至包卸载禁止名单，添加至禁止名单的应用不允许在当前/指定用户下卸载。 |
+| [addInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-addinstallationallowedappdistributiontypes-f.md#addinstallationallowedappdistributiontypes) | 添加可安装应用的分发类型。添加成功后，当前设备可以安装对应分发类型的应用，但无法安装[AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)中未添加的分发类型的应用。  应用程序签名证书的分发类型详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md/arkts-ability-applicationinfo-i.md)的appDistributionType属性。 |
+| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles) | 获取当前用户下的应用程序包安装允许名单，使用callback异步回调。 |
+| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles-1) | 获取指定用户（通过userId指定）下的应用程序包安装允许名单，使用callback异步回调。 |
+| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles-2) | 获取当前/指定用户下的应用程序包安装允许名单，使用Promise异步回调。 |
+| [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync) | 获取当前/指定用户下的应用程序包安装允许名单。 |
+| [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync-1) | 获取当前/指定用户下的应用程序包安装允许名单。 |
+| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles) | 获取当前用户下的应用程序包安装禁止名单，使用callback异步回调。 |
+| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles-1) | 获取指定用户（通过userId指定）下的应用程序包安装禁止名单，使用callback异步回调。 |
+| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles-2) | 获取当前/指定用户下的应用程序包安装禁止名单，使用Promise异步回调。 |
+| [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md#getdisallowedinstallbundlessync) | 获取当前/指定用户下的应用程序包安装禁止名单。 |
+| [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md#getdisallowedinstallbundlessync-1) | 获取当前/指定用户下的应用程序包安装禁止名单。 |
+| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles) | 获取当前用户下的应用程序包卸载禁止名单，使用callback异步回调。 |
+| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles-1) | 获取指定用户（通过userId指定）下的应用程序包卸载禁止名单，使用callback异步回调。 |
+| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles-2) | 获取当前/指定用户下应用程序包卸载禁止名单接口，使用Promise异步回调。 |
+| [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync) | 获取当前/指定用户下包卸载禁止名单。 |
+| [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync-1) | 获取当前/指定用户下包卸载禁止名单。 |
+| [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md#getinstallationallowedappdistributiontypes) | 获取可安装的应用程序签名证书的分发类型。 |
+| [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md#getinstallationallowedappdistributiontypes-1) | 获取可安装的应用程序签名证书的分发类型。 |
+| [getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md#getinstalledbundlelist) | 获取设备指定用户下已安装应用列表。使用Promise异步回调。 |
+| [getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md#getinstalledbundlelist-1) | 根据给定的bundleInfoGetFlag获取设备指定用户下已安装应用列表。使用Promise异步回调。 |
+| [getInstalledBundleStorageStats](arkts-mdm-bundlemanager-getinstalledbundlestoragestats-f.md#getinstalledbundlestoragestats) | 获取设备指定用户下已安装应用的存储占用信息。使用Promise异步回调。 |
+| [install](arkts-mdm-bundlemanager-install-f.md#install) | 安装指定路径下的应用包。使用callback异步回调。 |
+| [install](arkts-mdm-bundlemanager-install-f.md#install-1) | 安装指定路径下的指定安装参数的应用包。使用callback异步回调。 |
+| [install](arkts-mdm-bundlemanager-install-f.md#install-2) | 安装指定路径下的应用包。使用Promise异步回调。  此接口只能安装分发类型为enterprise_mdm（MDM应用）和enterprise_normal（普通企业应用）类型的应用，可以通过  [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口查询应用自身的  [BundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-i.md/arkts-ability-bundleinfo-i.md)，其中BundleInfo.appInfo.appDistributionType为应用的分发类型。自API版本26.0.0起，建议使用  [installForResult](arkts-mdm-bundlemanager-installforresult-f.md#installforresult)，以获取更详细的错误码返回值。 |
+| [installForResult](arkts-mdm-bundlemanager-installforresult-f.md#installforresult) | 安装指定路径下的应用包，并返回安装结果。使用Promise异步回调。  此接口只能安装分发类型为enterprise_mdm（MDM应用）和enterprise_normal（普通企业应用）类型的应用，可以通过  [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口查询应用自身的  [BundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-i.md/arkts-ability-bundleinfo-i.md)，其中BundleInfo.appInfo.appDistributionType为应用的分发类型。 |
+| [installMarketApps](arkts-mdm-bundlemanager-installmarketapps-f.md#installmarketapps) | 下载并安装应用市场应用。 |
+| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles) | 移除当前用户的应用程序包安装允许名单中的指定应用。安装允许名单存在时，不在允许名单中的应用不允许在当前用户下安装，使用callback异步回调。 |
+| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles-1) | 移除在应用程序包安装允许名单中的应用，在允许名单存在的情况下，不在允许名单中的应用不允许在指定用户（通过userId指定）下安装，使用callback异步回调。 |
+| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles-2) | 移除在应用程序包安装允许名单中的应用，在允许名单存在的情况下，不在允许名单中的应用不允许在当前/指定用户下安装。使用Promise异步回调。 |
+| [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync) | 在应用程序包安装允许名单中移除应用，在允许名单存在的情况下，不在应用程序包安装允许名单中的应用不允许在当前/指定用户下安装。 |
+| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles) | 移除在应用程序包安装禁止名单中的应用，在禁止名单存在的情况下，在禁止名单中的应用不允许在当前用户下安装。使用callback异步回调。 |
+| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles-1) | 移除在应用程序包安装禁止名单中的应用，在禁止名单存在的情况下，在禁止名单中的应用不允许在指定用户（通过userId指定）下安装，使用callback异步回调。 |
+| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles-2) | 移除在应用程序包安装禁止名单中的应用，在禁止名单存在的情况下，在禁止名单中的应用不允许在当前/指定用户下安装。使用Promise异步回调。 |
+| [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync) | 在应用程序包安装禁止名单中移除应用，在禁止名单存在的情况下，在应用程序包安装禁止名单中的应用不允许在当前/指定用户下安装。 |
+| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles) | 移除在应用程序包卸载禁止名单中的应用，在禁止名单存在的情况下，在禁止名单中的应用不允许在当前用户下卸载，使用callback异步回调。 |
+| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles-1) | 移除在应用程序包卸载禁止名单中的应用，在禁止名单存在的情况下，在禁止名单中的应用不允许在指定用户（通过userId指定）下卸载。使用callback异步回调。 |
+| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles-2) | 移除在应用程序包卸载禁止名单中的应用。在禁止名单存在的情况下，在禁止名单中的应用不允许在当前/指定用户下卸载。使用Promise异步回调。 |
+| [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync) | 在包卸载禁止名单中移除应用。在禁止名单存在的情况下，在包卸载禁止名单中的应用不允许在当前/指定用户下卸载。 |
+| [removeInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-removeinstallationallowedappdistributiontypes-f.md#removeinstallationallowedappdistributiontypes) | 移除应用的分发类型。若只移除了数组中部分的分发类型，则当前设备可以安装数组中剩下的分发类型的应用，但无法安装  [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)中未添加的分发类型的应用。  应用程序签名证书的分发类型详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md/arkts-ability-applicationinfo-i.md)的appDistributionType属性。 |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall) | 卸载当前用户下的指定应用程序包，且不保留应用程序包数据。使用callback异步回调。 |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-1) | 卸载指定用户下（由参数userId指定）的指定应用程序包，且不保留应用程序包数据。使用callback异步回调。 |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-2) | 卸载当前用户下的指定应用程序包，选择是否保留应用程序包数据（由isKeepData指定）。使用callback异步回调。 |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-3) | 卸载指定用户下（由参数userId指定）的指定应用程序包接口，选择是否保留应用程序包数据（由isKeepData指定）。使用callback异步回调。 |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4) | 卸载当前/指定用户下的指定包，选择是否保留包数据（由isKeepData指定）。使用Promise异步回调。调用成功后，应用被卸载，数据根据isKeepData参数保留或删除。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md) | Defines the application information. |
-| [BundleInfo](arkts-mdm-bundlemanager-bundleinfo-i.md) | Describes the application bundle information. |
-| [BundleStorageStats](arkts-mdm-bundlemanager-bundlestoragestats-i.md) | Storage usage information of the application. |
-| [InstallParam](arkts-mdm-bundlemanager-installparam-i.md) | Defines the parameters for application installation. |
-| [Resource](arkts-mdm-bundlemanager-resource-i.md) | Describes application resource information, including the bundle name, module name, and resource ID. |
-| [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md) | Describes the signature information of the bundle. |
+| [ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md) | 应用程序信息。 |
+| [BundleInfo](arkts-mdm-bundlemanager-bundleinfo-i.md) | 描述应用包信息。 |
+| [BundleStorageStats](arkts-mdm-bundlemanager-bundlestoragestats-i.md) | 应用的存储占用信息。 |
+| [InstallParam](arkts-mdm-bundlemanager-installparam-i.md) | 应用包安装需指定的参数信息。 |
+| [Resource](arkts-mdm-bundlemanager-resource-i.md) | 资源相关信息，包括应用包名、应用模块名、资源id。 |
+| [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md) | 描述应用包的签名信息。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md) | Defines the distribution type of the application signing certificate. For details, please refer to the  **appDistributionType** attribute of [ApplicationInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [BundleInfoGetFlag](arkts-mdm-bundlemanager-bundleinfogetflag-e.md) | Enumerates the bundle flags, which indicate the type of bundle information to obtain. |
+| [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md) | 应用程序签名证书的分发类型。详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md/arkts-ability-applicationinfo-i.md)的appDistributionType属性。 |
+| [BundleInfoGetFlag](arkts-mdm-bundlemanager-bundleinfogetflag-e.md) | 包信息获取标志，指示需要获取的包信息的内容。 |
 

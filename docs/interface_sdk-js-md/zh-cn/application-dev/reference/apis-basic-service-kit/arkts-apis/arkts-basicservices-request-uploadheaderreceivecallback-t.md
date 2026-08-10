@@ -18,5 +18,5 @@ The callback function for the HTTP Response Header event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| header | object | 是 | HTTP Response Header returned by the developer server.  |
+| header | object | 是 | HTTP Response Header returned by the developer server. |
 

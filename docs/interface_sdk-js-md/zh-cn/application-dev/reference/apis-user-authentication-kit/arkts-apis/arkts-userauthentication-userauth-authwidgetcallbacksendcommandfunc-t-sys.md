@@ -20,5 +20,5 @@ type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cmdData | string | 是 | 用户身份认证框架向控件发送的命令。  |
+| cmdData | string | 是 | 用户身份认证框架向控件发送的命令。 |
 

@@ -10,6 +10,12 @@ RouterPageInfo包含的信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## context
 
 ```TypeScript
@@ -18,7 +24,7 @@ context: UIAbilityContext | UIContext
 
 触发生命周期的routerPage页面对应的上下文信息。
 
-**类型：** UIAbilityContext \| UIContext
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
 
 **起始版本：** 23
 
@@ -118,7 +124,7 @@ size?: Size
 
 routerPage页面的大小，单位是vp。
 
-**类型：** Size
+**类型：** [Size](arkts-arkui-size-i.md)
 
 **起始版本：** 23
 
@@ -138,7 +144,7 @@ state: RouterPageState
 
 触发生命周期的routerPage页面的状态。
 
-**类型：** RouterPageState
+**类型：** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
 
 **起始版本：** 23
 

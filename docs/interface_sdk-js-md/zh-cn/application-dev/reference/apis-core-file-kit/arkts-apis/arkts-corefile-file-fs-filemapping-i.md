@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## capacity
 
 ```TypeScript
@@ -32,17 +38,17 @@ capacity(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  Size of the file mapping area, in bytes. |
+| number | Size of the file mapping area, in bytes. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -77,10 +83,10 @@ flip(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -121,17 +127,17 @@ getLimit(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  当前可读写区域上界值，单位为Byte。 |
+| number | 当前可读写区域上界值，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -165,17 +171,17 @@ getPosition(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  Current location of the file mapping area. |
+| number | Current location of the file mapping area. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -209,22 +215,20 @@ msync(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -239,29 +243,6 @@ mapping.write(buffer);
 mapping.msync().then(() => {
   console.info("Succeeded in msync.");
 }).catch((err: BusinessError) => {
-  console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  mapping.unmapSync();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-mapping.write(buffer);
-
-mapping.msync().then(() => {
-  console.info("Succeeded in msync.");
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
   console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   mapping.unmapSync();
@@ -298,22 +279,20 @@ msync(position: number, length: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -328,29 +307,6 @@ mapping.write(50, buffer);
 mapping.msync(50, buffer.byteLength).then(() => {
   console.info("Succeeded in msync.");
 }).catch((err: BusinessError) => {
-  console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  mapping.unmapSync();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-mapping.write(50, buffer);
-
-mapping.msync(50, buffer.byteLength).then(() => {
-  console.info("Succeeded in msync.");
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
   console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   mapping.unmapSync();
@@ -380,14 +336,14 @@ msyncSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -435,14 +391,14 @@ msyncSync(position: number, length: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -490,19 +446,19 @@ read(buffer: ArrayBuffer, length?: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  返回实际读取的数据长度，单位为Byte。 |
+| number | 返回实际读取的数据长度，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -547,19 +503,19 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  返回实际读取的数据长度，单位为Byte。 |
+| number | 返回实际读取的数据长度，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -596,17 +552,17 @@ remaining(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  剩余可读或可写的字节数，单位为Byte。 |
+| number | 剩余可读或可写的字节数，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -650,10 +606,10 @@ setLimit(limit: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -694,10 +650,10 @@ setPosition(position: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -731,7 +687,7 @@ unmap(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **错误码：**
 
@@ -740,9 +696,7 @@ unmap(): Promise<void>
 | 13900020 | Invalid argument |
 | 13900050 | Internal resource error |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -756,27 +710,6 @@ mapping.write(buffer);
 mapping.unmap().then(() => {
   console.info("Succeeded in unmap.");
 }).catch((err: BusinessError) => {
-  console.error(`Failed to unmap. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-mapping.write(buffer);
-mapping.unmap().then(() => {
-  console.info("Succeeded in unmap.");
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
   console.error(`Failed to unmap. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   fileIo.closeSync(file);
@@ -808,7 +741,7 @@ unmapSync(): void
 | 13900020 | Invalid argument |
 | 13900050 | Internal resource error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -851,20 +784,20 @@ write(data: ArrayBuffer, length?: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  返回实际写入的长度，单位为Byte。 |
+| number | 返回实际写入的长度，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -910,20 +843,20 @@ write(position: number, data: ArrayBuffer, length?: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number |  返回实际写入的长度，单位为Byte。 |
+| number | 返回实际写入的长度，单位为Byte。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";

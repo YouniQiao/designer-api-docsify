@@ -36,7 +36,7 @@ error: SslError
 
 错误码。
 
-**类型：** SslError
+**类型：** [SslError](arkts-arkweb-sslerror-e.md)
 
 **起始版本：** 12
 
@@ -56,7 +56,7 @@ handler: SslErrorHandler
 
 通知Web组件用户操作行为。
 
-**类型：** SslErrorHandler
+**类型：** [SslErrorHandler](arkts-arkweb-sslerrorhandler-c.md)
 
 **起始版本：** 12
 

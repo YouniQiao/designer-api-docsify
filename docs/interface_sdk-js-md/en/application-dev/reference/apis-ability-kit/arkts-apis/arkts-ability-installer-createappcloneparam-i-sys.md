@@ -1,6 +1,6 @@
 # CreateAppCloneParam (System API)
 
-Describes the parameters used for creating an application clone.
+创建分身应用可指定的参数信息。
 
 **Since:** 12
 
@@ -12,15 +12,21 @@ Describes the parameters used for creating an application clone.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## appIndex
 
 ```TypeScript
 appIndex?: int
 ```
 
-Index of the clone. The default value is the currently available minimum index.
+指定创建分身应用的索引值。默认值：当前可用的最小索引值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -38,10 +44,10 @@ Index of the clone. The default value is the currently available minimum index.
 userId?: int
 ```
 
-ID of the user for whom the clone is to be created. You can obtain the user ID by calling  
-[getOsAccountLocalId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The default value is the user ID of the caller.
+指定创建分身应用所在的用户ID，可以通过  
+[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。默认值：调用方所在用户。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

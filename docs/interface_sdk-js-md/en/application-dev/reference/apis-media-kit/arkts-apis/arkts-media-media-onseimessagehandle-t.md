@@ -4,7 +4,7 @@
 type OnSeiMessageHandle = (messages: Array<SeiMessage>, playbackPosition?: int) => void
 ```
 
-Describes the handle used to obtain SEI messages. This is used when in subscriptions to SEI message events, and the callback returns detailed SEI information.
+获取SEI信息，使用场景：订阅SEI信息事件，回调返回SEI详细信息。
 
 **Since:** 18
 
@@ -20,6 +20,6 @@ Describes the handle used to obtain SEI messages. This is used when in subscript
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messages | Array&lt;SeiMessage&gt; | Yes | Array of SEI messages.  |
-| playbackPosition | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Current playback position, in milliseconds.  |
+| messages | Array&lt;SeiMessage&gt; | Yes | SEI信息。 |
+| playbackPosition | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 获取当前播放位置（单位：毫秒）。 |
 

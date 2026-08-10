@@ -1,12 +1,18 @@
 # pick
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## pick
 
 ```TypeScript
 function pick(): Promise<PickInfo>
 ```
 
-Obtains this screenshot. Currently, only the screenshot of the display whose ID is **0** can be obtained. (If a screenshot of the extended screen is needed, you can use the [capture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.) This API uses a promise to return the result.
+获取屏幕截图，当前仅支持获取displayId为0的屏幕截图（如果需要对扩展屏截图，可以通过[capture](arkts-arkui-screenshot-capture-f.md#capture)接口实现），使用Promise异步回调。
 
 **Since:** 12
 
@@ -22,31 +28,32 @@ Obtains this screenshot. Currently, only the screenshot of the display whose ID 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PickInfo&gt; | Promise used to return the PickInfo object. |
+| Promise&lt;PickInfo&gt; | Promise对象。返回一个PickInfo对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on this device. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 801 | Capability not supported on this device. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // Call the pick API to obtain the screenshot.
   let promise = screenshot.pick();
   promise.then((pickInfo: screenshot.PickInfo) => {
-    console.info('pick Pixel bytes number: ' + pickInfo.pixelMap.getPixelBytesNumber());
-    console.info('pick Rect: ' + pickInfo.pickRect);
+    console.info(`pick Pixel bytes number: ${pickInfo.pixelMap.getPixelBytesNumber()}`);
+    console.info(`pick Rect: ${pickInfo.pickRect}`);
     pickInfo.pixelMap.release(); // Release the memory in time after the PixelMap is no longer needed.
   }).catch((err: BusinessError) => {
-    console.error(`Failed to pick. Code: ' + Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to pick. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to pick Code: ' + Code: ${exception.code}, message: ${exception.message}`);
-};
+  console.error(`Failed to pick. Code: ${exception.code}, message: ${exception.message}`);
+}
 ```
 

@@ -1,6 +1,6 @@
 # UndoStyle
 
-Enumerates the options for whether to retain the original style during undo/redo operations.
+撤销还原是否保留原样式选项。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the options for whether to retain the original style during undo/redo
 CLEAR_STYLE = 0
 ```
 
-Undo/Redo operations do not retain the original style.
+撤销还原内容不保留原样式。
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ Undo/Redo operations do not retain the original style.
 KEEP_STYLE = 1
 ```
 
-Undo/Redo operations retain the original style.
+撤销还原内容保留原样式。
 
 **Since:** 20
 

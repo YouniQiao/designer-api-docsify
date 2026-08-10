@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
+## 导入模块
+
+```TypeScript
+import { AVVolumePanelParameter, AVVolumePanel } from 'kits/@kit.AudioKit';
+```
+
 ## build
 
 ```TypeScript
@@ -44,7 +50,7 @@ volumeLevel?: int
 
 如果该值小于当前设备音量的最小值，则视为设置最小音量值。
 
-获取设备的最大值、最小值和当前值，可参考[AudioVolumeGroupManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+获取设备的最大值、最小值和当前值，可参考[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)。
 
 **类型：** int
 
@@ -62,11 +68,11 @@ volumeLevel?: int
 volumeParameter?: AVVolumePanelParameter
 ```
 
-设置音量面板的自定义参数。
+设置音量面板的自定义参数。 
 
 如果不设置该参数，则为系统音量条。
 
-**类型：** AVVolumePanelParameter
+**类型：** [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
 
 **起始版本：** 23
 

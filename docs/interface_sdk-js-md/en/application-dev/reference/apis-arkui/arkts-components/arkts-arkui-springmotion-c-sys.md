@@ -1,6 +1,6 @@
 # SpringMotion (System API)
 
-Spring animation model. You can build a spring animation based on the start point, end point, initial speed, and spring attributes.
+弹簧动画模型。可以基于起点、终点、初始速度和弹簧属性构建弹簧动画。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Spring animation model. You can build a spring animation based on the start poin
 constructor(start: number, end: number, velocity: number, prop: SpringProp)
 ```
 
-Constructor parameters
+构造器参数。
 
 **Since:** 7
 
@@ -41,5 +41,5 @@ Constructor parameters
 | start | number | Yes |  |
 | end | number | Yes |  |
 | velocity | number | Yes |  |
-| prop | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |  |
 

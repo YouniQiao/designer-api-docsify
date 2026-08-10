@@ -1,6 +1,6 @@
 # ParseInfo
 
-The current parse info.
+当前XML解析信息。
 
 **Since:** 8
 
@@ -9,6 +9,12 @@ The current parse info.
 <!--Device-xml-interface ParseInfo--><!--Device-xml-interface ParseInfo-End-->
 
 **System capability:** SystemCapability.Utils.Lang
+
+## Modules to Import
+
+```TypeScript
+import { xml } from 'kits/@kit.ArkTS';
+```
 
 ## getAttributeCount
 
@@ -22,7 +28,9 @@ ArkTS-Sta:
 getAttributeCount(): int
 ```
 
-Obtains the number of attributes for the current start tag.
+ArkTS-Sta: getAttributeCount(): int
+
+获取当前开始标记的属性数。
 
 **Since:** 8
 
@@ -38,9 +46,9 @@ Obtains the number of attributes for the current start tag.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int |  |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -72,7 +80,9 @@ ArkTS-Sta:
 getColumnNumber(): int
 ```
 
-Obtains the current column number, starting from 1.
+ArkTS-Sta: getColumnNumber(): int
+
+获取当前列号，从1开始计数。
 
 **Since:** 8
 
@@ -88,9 +98,9 @@ Obtains the current column number, starting from 1.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int |  |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前列号。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -122,7 +132,13 @@ ArkTS-Sta:
 getDepth(): int
 ```
 
-Obtains the depth of this element.
+ArkTS-Sta: getDepth(): int
+
+获取元素的当前深度。
+
+> **说明：**
+> 
+> 标签内的空白事件深度与标签的深度保持一致。
 
 **Since:** 8
 
@@ -138,9 +154,9 @@ Obtains the depth of this element.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int |  |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回元素的当前深度。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -176,7 +192,9 @@ ArkTS-Sta:
 getLineNumber(): int
 ```
 
-Obtains the current line number, starting from 1.
+ArkTS-Sta: getLineNumber(): int
+
+获取当前行号，从1开始。
 
 **Since:** 8
 
@@ -192,9 +210,9 @@ Obtains the current line number, starting from 1.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int |  |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前行号。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -220,7 +238,7 @@ console.info(str);
 getName(): string
 ```
 
-Obtains the name of this element.
+获取当前元素名称。
 
 **Since:** 8
 
@@ -236,9 +254,9 @@ Obtains the name of this element.
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | 返回当前元素名称。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -264,7 +282,7 @@ console.info(str);
 getNamespace(): string
 ```
 
-Obtains the namespace of this element.
+获取当前元素的命名空间。
 
 **Since:** 8
 
@@ -280,9 +298,9 @@ Obtains the namespace of this element.
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | 返回当前元素的命名空间。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -312,7 +330,7 @@ console.info(str);
 getPrefix(): string
 ```
 
-Obtains the prefix of this element.
+获取当前元素前缀。
 
 **Since:** 8
 
@@ -328,9 +346,9 @@ Obtains the prefix of this element.
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | 返回当前元素前缀。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -360,7 +378,7 @@ console.info(str);
 getText(): string
 ```
 
-Obtains the text of the current event.
+获取当前事件的文本内容。
 
 **Since:** 8
 
@@ -376,9 +394,9 @@ Obtains the text of the current event.
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | 返回当前事件的文本内容。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -404,7 +422,7 @@ console.info(str);
 isEmptyElementTag(): boolean
 ```
 
-Checks whether the current element is empty.
+判断当前元素是否为空元素。
 
 **Since:** 8
 
@@ -420,9 +438,9 @@ Checks whether the current element is empty.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean | 返回true，表示当前元素为空元素。返回false，表示当前元素为非空元素。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -452,7 +470,7 @@ console.info(str);
 isWhitespace(): boolean
 ```
 
-Checks whether the current event contains only whitespace characters.
+判断当前事件是否仅包含空格字符。
 
 **Since:** 8
 
@@ -468,9 +486,9 @@ Checks whether the current event contains only whitespace characters.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean | 返回true，表示当前文本事件仅包含空格字符。返回false，表示当前文本事件包含非空格字符。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';

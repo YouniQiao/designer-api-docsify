@@ -16,7 +16,7 @@
 TYPE_CAST_PLUS_MIRROR = 1
 ```
 
-Cast+的镜像模式。
+Cast+的镜像模式。 
 
 **系统接口：** 该接口为系统接口。
 

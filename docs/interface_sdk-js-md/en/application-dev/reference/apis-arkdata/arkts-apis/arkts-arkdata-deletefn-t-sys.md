@@ -8,7 +8,7 @@ type DeleteFn = (
 ) => void
 ```
 
-Callback function called when deleting one or more data records in the database.
+删除操作的属性类型。
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Callback function called when deleting one or more data records in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the database table storing the data to delete.  |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be deleted by default.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Returns the number of data records deleted.  |
+| uri | string | Yes | Indicates the database table storing the data to delete. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be deleted by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the number of data records deleted. |
 

@@ -1,6 +1,6 @@
 # FoldCreaseRegion
 
-Describes the crease region of a foldable device.
+折叠折痕区域。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Describes the crease region of a foldable device.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## creaseRects
 
 ```TypeScript
 readonly creaseRects: Array<Rect>
 ```
 
-Crease region.
+折痕区域。
 
 **Type:** Array&lt;Rect&gt;
 
@@ -36,9 +42,9 @@ Crease region.
 readonly displayId: long
 ```
 
-ID of the display where the crease is located.
+屏幕ID，用于识别折痕所在的屏幕。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 

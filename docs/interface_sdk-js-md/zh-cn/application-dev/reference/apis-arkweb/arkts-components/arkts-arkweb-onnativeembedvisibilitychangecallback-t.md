@@ -18,5 +18,5 @@ type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeE
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| nativeEmbedVisibilityInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 提供同层标签的可见性信息。  |
+| nativeEmbedVisibilityInfo | [NativeEmbedVisibilityInfo](../arkts-apis/arkts-arkweb-web-nativeembedvisibilityinfo-i.md) | 是 | 提供同层标签的可见性信息。 |
 

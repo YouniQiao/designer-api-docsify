@@ -1,6 +1,6 @@
 # WindowType
 
-Enumerates the window types.
+窗口类型枚举。
 
 **Since:** 7
 
@@ -13,13 +13,13 @@ Enumerates the window types.
 ## TYPE_INPUT_METHOD
 
 ```TypeScript
-TYPE_INPUT_METHOD = 2
+TYPE_INPUT_METHOD
 ```
 
-Input method window.
+表示输入法窗口。
 
-Note: This API is supported since API version 9 and deprecated since API version 13. There is no alternative window type. To control the input method, call  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+**说明：** 从API version 9开始支持，从API version 13开始废弃，无替代窗口类型，输入法相关控制都请调用
+[输入法框架侧接口](../../../inputmethod/inputmethod-application-guide.md)执行。
 
 **Since:** 9
 
@@ -29,7 +29,7 @@ Note: This API is supported since API version 9 and deprecated since API version
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowType-TYPE_INPUT_METHOD = 2--><!--Device-WindowType-TYPE_INPUT_METHOD = 2-End-->
+<!--Device-WindowType-TYPE_INPUT_METHOD--><!--Device-WindowType-TYPE_INPUT_METHOD-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -41,7 +41,7 @@ Note: This API is supported since API version 9 and deprecated since API version
 TYPE_STATUS_BAR = 3
 ```
 
-Status bar window.
+表示状态栏窗口。
 
 **Since:** 9
 
@@ -61,7 +61,7 @@ Status bar window.
 TYPE_PANEL = 4
 ```
 
-Notification panel.
+表示通知栏。
 
 **Since:** 9
 
@@ -81,7 +81,7 @@ Notification panel.
 TYPE_KEYGUARD = 5
 ```
 
-Keyguard.
+表示锁屏。
 
 **Since:** 9
 
@@ -101,7 +101,7 @@ Keyguard.
 TYPE_VOLUME_OVERLAY = 6
 ```
 
-Volume bar.
+表示音量条。
 
 **Since:** 9
 
@@ -121,7 +121,7 @@ Volume bar.
 TYPE_NAVIGATION_BAR = 7
 ```
 
-Navigation bar.
+表示导航栏窗口。
 
 **Since:** 9
 
@@ -141,7 +141,7 @@ Navigation bar.
 TYPE_WALLPAPER = 9
 ```
 
-Wallpaper.
+表示壁纸。
 
 **Since:** 9
 
@@ -161,7 +161,7 @@ Wallpaper.
 TYPE_DESKTOP = 10
 ```
 
-Home screen.
+表示桌面。
 
 **Since:** 9
 
@@ -181,7 +181,7 @@ Home screen.
 TYPE_LAUNCHER_RECENT = 11
 ```
 
-Recent tasks screen.
+表示多任务中心。
 
 **Since:** 9
 
@@ -201,7 +201,7 @@ Recent tasks screen.
 TYPE_LAUNCHER_DOCK = 12
 ```
 
-Dock bar on the home screen.
+表示桌面Dock栏。
 
 **Since:** 9
 
@@ -221,7 +221,7 @@ Dock bar on the home screen.
 TYPE_VOICE_INTERACTION = 13
 ```
 
-Voice assistant.
+表示智慧语音。
 
 **Since:** 9
 
@@ -241,7 +241,7 @@ Voice assistant.
 TYPE_POINTER = 14
 ```
 
-Mouse.
+表示鼠标。
 
 **Since:** 9
 
@@ -261,7 +261,7 @@ Mouse.
 TYPE_FLOAT_CAMERA = 15
 ```
 
-Floating camera window.
+表示相机类型悬浮窗。
 
 **Since:** 9
 
@@ -281,7 +281,7 @@ Floating camera window.
 TYPE_SCREENSHOT = 17
 ```
 
-Screenshot window.
+表示截屏窗口。
 
 **Since:** 9
 
@@ -301,7 +301,7 @@ Screenshot window.
 TYPE_SYSTEM_TOAST = 18
 ```
 
-Toast displayed at the top.
+表示顶层提示窗口。
 
 **Since:** 11
 
@@ -321,7 +321,7 @@ Toast displayed at the top.
 TYPE_DIVIDER = 19
 ```
 
-Divider.
+表示分屏条。
 
 **Since:** 11
 
@@ -341,7 +341,7 @@ Divider.
 TYPE_GLOBAL_SEARCH = 20
 ```
 
-Window used for global search.
+表示全局搜索窗口。
 
 **Since:** 11
 
@@ -361,7 +361,7 @@ Window used for global search.
 TYPE_HANDWRITE = 21
 ```
 
-Stylus window.
+表示手写笔窗口。
 
 **Since:** 12
 
@@ -381,7 +381,7 @@ Stylus window.
 TYPE_WALLET_SWIPE_CARD = 22
 ```
 
-Wallet swipe card window.
+表示钱包刷卡窗口。
 
 **Since:** 15
 
@@ -401,7 +401,7 @@ Wallet swipe card window.
 TYPE_SCREEN_CONTROL = 23
 ```
 
-Top-level window used for locking touch input, which intercepts screen touch and click events.
+表示锁定触控的顶层窗口，用于拦截屏幕触摸和点击事件。
 
 **Since:** 15
 
@@ -418,18 +418,18 @@ Top-level window used for locking touch input, which intercepts screen touch and
 ## TYPE_FLOAT_NAVIGATION
 
 ```TypeScript
-TYPE_FLOAT_NAVIGATION = 24
+TYPE_FLOAT_NAVIGATION = 22
 ```
 
-Floating window with a three-button navigation bar.
+TYPE_FLOAT_NAVIGATION.
 
-**Since:** 17
+**Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowType-TYPE_FLOAT_NAVIGATION = 24--><!--Device-WindowType-TYPE_FLOAT_NAVIGATION = 24-End-->
+<!--Device-WindowType-TYPE_FLOAT_NAVIGATION = 22--><!--Device-WindowType-TYPE_FLOAT_NAVIGATION = 22-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -441,7 +441,7 @@ Floating window with a three-button navigation bar.
 TYPE_DYNAMIC = 25
 ```
 
-System window that allows for adjustable z-levels.
+表示可设置窗口层级的系统窗口。
 
 **Since:** 20
 
@@ -461,7 +461,7 @@ System window that allows for adjustable z-levels.
 TYPE_MUTISCREEN_COLLABORATION = 26
 ```
 
-Window for multi-screen collaboration.
+表示多屏协同窗口。
 
 **Since:** 20
 

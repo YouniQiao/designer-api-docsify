@@ -1,15 +1,22 @@
 # startNativeChildProcess
 
+## 导入模块
+
+```TypeScript
+import { childProcessManager } from 'kits/@kit.AbilityKit';
+```
+
 ## startNativeChildProcess
 
 ```TypeScript
 function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>
 ```
 
-启动\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。使用Promise异步回调。该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回801错误码。
-    **说明：**  
-    
-    调用该接口创建的子进程不会继承父进程资源，子进程创建成功会返回子进程pid，然后加载参数中指定的动态链接库文件并执行子进程的入口函数，入口函数执行完后子进程会自动销毁。调用该接口的进程销毁后，所创建的子进程也会一并销毁。
+启动[Native子进程](../../../application-models/ability-terminology.md#native子进程)。使用Promise异步回调。该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回801错误码。
+
+> **说明：**
+> 
+> 调用该接口创建的子进程不会继承父进程资源，子进程创建成功会返回子进程pid，然后加载参数中指定的动态链接库文件并执行子进程的入口函数，入口函数执行完后子进程会自动销毁。调用该接口的进程销毁后，所创建的子进程也会一并销毁。
 
 **起始版本：** 13
 
@@ -26,26 +33,26 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | entryPoint | string | 是 | 子进程中调用动态库的符号和入口函数，中间用“:”隔开（例如“libentry.so:Main”)。 |
-| args | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 传递到子进程的参数。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 子进程的启动配置选项。 |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 是 | 传递到子进程的参数。 |
+| options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | 否 | 子进程的启动配置选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回子进程pid。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回子进程pid。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
-| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 16000050 | Internal error. |
+| 16000061 | Operation not supported. |
+| 16000062 | The number of child processes exceeds the upper limit. |
 
-**示例：**
+## 示例
 
 子进程部分，详见[Native子进程开发指导（C/C++）- 创建支持参数传递的Native子进程](../../application-models/capi-nativechildprocess-development-guideline.md#创建支持参数传递的native子进程)：
 
@@ -61,7 +68,7 @@ extern "C" {
  */
 void Main(NativeChildProcess_Args args)
 {
-    // 获取传入的entryPrams
+    // 获取传入的entryParams
     char *entryParams = args.entryParams;
     // 获取传入的fd列表，对应ChildProcessArgs中的args.fds
     NativeChildProcess_Fd *current = args.fdList.head;
@@ -109,13 +116,13 @@ struct Index {
               };
               childProcessManager.startNativeChildProcess("libentry.so:Main", args, options)
                 .then((pid) => {
-                  console.info(`startChildProcess success, pid: ${pid}`);
+                  console.info(`startNativeChildProcess success, pid: ${pid}`);
                 })
                 .catch((err: BusinessError) => {
-                  console.error(`startChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
+                  console.error(`startNativeChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
                 })
             } catch (err: BusinessError) {
-              console.error(`startChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
+              console.error(`startNativeChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
             }
           });
       }

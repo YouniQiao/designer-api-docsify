@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authSubType
 
 ```TypeScript
@@ -20,7 +26,7 @@ authSubType: AuthSubType
 
 指示认证凭据子类型。
 
-**类型：** AuthSubType
+**类型：** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
 **起始版本：** 8
 
@@ -40,7 +46,7 @@ credentialLength?: int
 
 指示凭据长度，默认为undefined。查询生物信息等无定长属性的凭据时返回undefined。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -80,7 +86,7 @@ freezingTime?: int
 
 指示冻结时间，单位为ms，默认为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -100,7 +106,7 @@ nextPhaseFreezingTime?: int
 
 指示下次冻结时间，单位为ms，默认为undefined。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -120,7 +126,7 @@ remainTimes?: int
 
 指示剩余次数，默认为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -140,7 +146,7 @@ result: int
 
 指示结果。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 

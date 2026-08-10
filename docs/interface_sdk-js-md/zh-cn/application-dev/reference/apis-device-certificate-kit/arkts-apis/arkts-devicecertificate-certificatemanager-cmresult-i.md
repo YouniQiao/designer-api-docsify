@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## appUidList
 
 ```TypeScript
@@ -36,7 +42,7 @@ certInfo?: CertInfo
 
 表示证书详情。
 
-**类型：** CertInfo
+**类型：** [CertInfo](arkts-devicecertificate-certificatemanager-certinfo-i.md)
 
 **起始版本：** 11
 
@@ -72,7 +78,7 @@ credential?: Credential
 
 表示凭据详情。
 
-**类型：** Credential
+**类型：** [Credential](arkts-devicecertificate-certificatemanager-credential-i.md)
 
 **起始版本：** 11
 

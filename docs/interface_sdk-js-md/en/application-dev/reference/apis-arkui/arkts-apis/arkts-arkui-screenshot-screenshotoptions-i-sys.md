@@ -1,6 +1,6 @@
 # ScreenshotOptions (System API)
 
-Describes the screenshot options.
+设置截取图像的信息。
 
 **Since:** 7
 
@@ -12,15 +12,21 @@ Describes the screenshot options.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
 displayId?: long
 ```
 
-ID of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ device on which the screen region is to be captured. The value must be an integer.
+表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -38,9 +44,9 @@ ID of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ device on which the scr
 imageSize?: Size
 ```
 
-Region of the screen to capture. If no value is passed, the region of the logical screen associated with the specified display ID is returned.
+表示截取图像的区域，不传值默认返回displayId所在逻辑屏的区域。
 
-**Type:** Size
+**Type:** [Size](arkts-arkui-window-size-i.md)
 
 **Since:** 7
 
@@ -58,8 +64,7 @@ Region of the screen to capture. If no value is passed, the region of the logica
 isCaptureFullOfScreen?: boolean
 ```
 
-Whether to capture all displays on the current screen. If the screen contains multiple displays, the value  
-**true** means that the entire screen is captured, and **false** means that only the region of the logical screen associated with the specified display ID is captured.
+表示是否截取当前Screen上的所有display。对于一个Screen上有多个display的场景，为true表示截取整个Screen，false则只截取displayId所在逻辑屏的区域，默认值为false。
 
 **Type:** boolean
 
@@ -79,8 +84,8 @@ Whether to capture all displays on the current screen. If the screen contains mu
 isNotificationNeeded?: boolean
 ```
 
-Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through  
-[captureStatusChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示截取图像之后是否发送截屏通知，true表示发送截屏通知，false表示不发送截屏通知，默认值为true。截屏通知可以通过  
+[captureStatusChange](@ohos.display:display.on(type: 'captureStatusChange', callback: Callback&lt;boolean&gt;))接口监听。
 
 **Type:** boolean
 
@@ -100,10 +105,9 @@ Whether to send a notification after a snapshot is captured. **true** to send, *
 rotation?: int
 ```
 
-Angle by which the captured image should be rotated. Currently, the value can be **0** only. The default value is  
-**0**.
+表示截取图像后要旋转的角度，当前仅支持输入值为0，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -121,9 +125,9 @@ Angle by which the captured image should be rotated. Currently, the value can be
 screenRect?: Rect
 ```
 
-Region of the screen to capture. If no value is passed, the region of the logical screen associated with the specified display ID is returned.
+表示截取图像的区域，不传值默认返回displayId所在逻辑屏的区域。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 7
 

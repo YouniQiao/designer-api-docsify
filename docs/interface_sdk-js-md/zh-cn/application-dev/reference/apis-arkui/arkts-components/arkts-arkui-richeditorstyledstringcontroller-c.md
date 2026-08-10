@@ -1,12 +1,12 @@
 # RichEditorStyledStringController
 
-使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
 ## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts controller: RichEditorStyledStringController = new RichEditorStyledStringController();```
 
-**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](../arkts-apis/arkts-arkui-component/richeditor-richeditorbasecontroller-c.md) implements [StyledStringController](../arkts-apis/arkts-arkui-component/textcommon-styledstringcontroller-i.md)
+**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) implements [StyledStringController](../arkts-apis/arkts-arkui-textcommon-styledstringcontroller-i.md/arkts-arkui-textcommon-styledstringcontroller-i.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ getSelection(): RichEditorRange
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 选中区域范围。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 选中区域范围。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getStyledString
 
@@ -66,7 +66,7 @@ getStyledString(): MutableStyledString
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 富文本组件显示的属性字符串。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## onContentChanged
 
@@ -74,7 +74,7 @@ getStyledString(): MutableStyledString
 onContentChanged(listener: StyledStringChangedListener): void
 ```
 
-注册文本内容变化回调，该回调仅在后端程序导致文本内容变更时触发，调用[setStyledString]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_时不会触发。
+注册文本内容变化回调，该回调仅在后端程序导致文本内容变更时触发，调用[setStyledString](arkts-arkui-richeditorstyledstringcontroller-c.md#setstyledstring)时不会触发。
 
 **起始版本：** 12
 
@@ -92,7 +92,7 @@ onContentChanged(listener: StyledStringChangedListener): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本内容变化回调监听器。 |
+| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-textcommon-styledstringchangedlistener-i.md) | 是 | 文本内容变化回调监听器。 |
 
 ## setStyledString
 
@@ -101,11 +101,12 @@ setStyledString(styledString: StyledString): void
 ```
 
 设置富文本组件显示的属性字符串。
-    **说明：**  
-    
-    - 调用该接口时，会全量替换富文本组件的StyledString，并重新渲染。  
-    
-    - 当内容超过组件本身区域时，组件会自动向上滚动内容直到末尾处可见。
+
+> **说明：**
+> 
+> - 调用该接口时，会全量替换富文本组件的StyledString，并重新渲染。
+> 
+> - 当内容超过组件本身区域时，组件会自动向上滚动内容直到末尾处可见。
 
 **起始版本：** 12
 
@@ -123,5 +124,5 @@ setStyledString(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 属性字符串。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_StyledString的子类 [MutableStyledString]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_也可以作为入参值。 |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;StyledString的子类 [MutableStyledString](../arkts-apis/arkts-arkui-styledstring-mutablestyledstring-c.md/arkts-arkui-styledstring-mutablestyledstring-c.md)也可以作为入参值。 |
 

@@ -1,5 +1,11 @@
 # isScreenReaderOpenSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isScreenReaderOpenSync
 
 ```TypeScript
@@ -26,7 +32,7 @@ function isScreenReaderOpenSync(): boolean
 | --- | --- |
 | boolean | 表示是否开启了屏幕朗读。true表示开启了屏幕朗读，false表示未开启屏幕朗读。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

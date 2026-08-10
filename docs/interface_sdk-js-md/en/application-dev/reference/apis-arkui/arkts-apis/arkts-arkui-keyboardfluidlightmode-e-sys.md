@@ -1,6 +1,6 @@
 # KeyboardFluidLightMode (System API)
 
-Enumerates keyboard fluid lighting effects.
+键盘流光效果。
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ Enumerates keyboard fluid lighting effects.
 NONE = 0
 ```
 
-No fluid lighting effect.
+键盘无流光效果。
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ No fluid lighting effect.
 BACKGROUND_FLUID_LIGHT = 1
 ```
 
-Background fluid lighting effect enabled.
+键盘设置流光效果。
 
 **Since:** 20
 

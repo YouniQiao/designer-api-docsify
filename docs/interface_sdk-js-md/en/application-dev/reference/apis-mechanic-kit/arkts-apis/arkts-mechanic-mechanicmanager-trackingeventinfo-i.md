@@ -10,15 +10,21 @@ Tracking event callback info.
 
 **System capability:** SystemCapability.Mechanic.Core
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## event
 
 ```TypeScript
 event: TrackingEvent
 ```
 
-Tracking event.
+跟踪事件
 
-**Type:** TrackingEvent
+**Type:** [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md)
 
 **Since:** 20
 

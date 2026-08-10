@@ -10,6 +10,12 @@ Describes the value of the indication or notification sent by the Gatt server.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## characteristicUuid
 
 ```TypeScript
@@ -82,7 +88,7 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 serviceUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to which the characteristic belongs
+The UUID of the {@link GattService} instance to which the characteristic belongs
 
 **Type:** string
 

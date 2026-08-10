@@ -1,12 +1,18 @@
 # setUserProperty
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setUserProperty
 
 ```TypeScript
 function setUserProperty(name: string, value: string): void
 ```
 
-Sets a user property, which is used for association when a [Processor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is configured.
+设置用户属性值。用于在配置[Processor](arkts-performanceanalysis-hiappevent-processor-i.md)数据处理者时进行关联。
 
 **Since:** 11
 
@@ -22,16 +28,16 @@ Sets a user property, which is used for association when a [Processor]\_\_\_JSDO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key of a user property. The value is string that contains a maximum of 256 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and dollar sign (\_\_\_ESCAPED\_DOLLAR\_\_\_). It must not start with a digit. |
-| value | string | Yes | Value of a user property. It can contain a maximum of 1024 characters. If the value is **null** or left empty, the user property is cleared. |
+| name | string | Yes | 用户属性的key。只能包含大小写字母、数字、下划线和 \\$，不能以数字开头，长度非空且不超过256个字符。 |
+| value | string | Yes | 用户属性的值。长度不超过1024个字符，当值为null或空字符串时，则清除用户属性。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

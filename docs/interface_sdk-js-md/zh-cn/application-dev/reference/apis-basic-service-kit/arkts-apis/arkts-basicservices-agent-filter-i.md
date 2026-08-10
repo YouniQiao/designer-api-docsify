@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## action
 
 ```TypeScript
@@ -22,7 +28,7 @@ action?: Action
 - DOWNLOAD表示下载任务。  
 - 如果未填写，则查询所有任务。
 
-**类型：** Action
+**类型：** [Action](arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 10
 
@@ -40,7 +46,7 @@ after?: long
 
 开始的Unix时间戳（毫秒），默认值为调用时刻减24小时。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -58,7 +64,7 @@ before?: long
 
 结束的Unix时间戳（毫秒），默认为调用时刻。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -80,7 +86,7 @@ mode?: Mode
 - BACKGROUND表示后台任务。  
 - 如果未填写，则查询所有任务。
 
-**类型：** Mode
+**类型：** [Mode](arkts-basicservices-agent-mode-e.md)
 
 **起始版本：** 10
 
@@ -98,7 +104,7 @@ state?: State
 
 指定任务的状态。如果未填写，则查询所有任务。
 
-**类型：** State
+**类型：** [State](arkts-basicservices-agent-state-e.md)
 
 **起始版本：** 10
 

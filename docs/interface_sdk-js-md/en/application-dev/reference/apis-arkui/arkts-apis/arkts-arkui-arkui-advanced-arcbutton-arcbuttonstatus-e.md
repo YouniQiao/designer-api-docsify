@@ -1,6 +1,6 @@
 # ArcButtonStatus
 
-Defines an arc button status.
+定义ArcButton可设置的弧形按钮状态。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Defines an arc button status.
 NORMAL = 0
 ```
 
-Normal state.
+正常状态。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Normal state.
 PRESSED = 1
 ```
 
-Pressed state.
+按压状态。
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Pressed state.
 DISABLED = 2
 ```
 
-Disabled state.
+禁用状态。
 
 **Since:** 23
 

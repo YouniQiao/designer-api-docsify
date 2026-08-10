@@ -1,6 +1,6 @@
 # OnContextMenuShowEvent
 
-Represents the callback invoked during a call to allow for the display of a custom context menu.
+定义调用时触发的回调，以允许自定义显示上下文菜单。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Represents the callback invoked during a call to allow for the display of a cust
 param: WebContextMenuParam
 ```
 
-Parameters related to the context menu.
+菜单相关参数。
 
-**Type:** WebContextMenuParam
+**Type:** [WebContextMenuParam](../arkts-apis/arkts-arkweb-web-webcontextmenuparam-c.md)
 
 **Since:** 12
 
@@ -36,9 +36,9 @@ Parameters related to the context menu.
 result: WebContextMenuResult
 ```
 
-Result of the context menu.
+菜单相应事件传入内核。
 
-**Type:** WebContextMenuResult
+**Type:** [WebContextMenuResult](arkts-arkweb-webcontextmenuresult-c.md)
 
 **Since:** 12
 

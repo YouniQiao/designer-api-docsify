@@ -1,6 +1,6 @@
 # SwipeGestureHandler
 
-Defines a swipe gesture handler object.
+快滑手势处理器对象类型。
 
 **Inheritance/Implementation:** SwipeGestureHandler extends [GestureHandler<SwipeGestureHandler>](GestureHandler<SwipeGestureHandler>)
 
@@ -18,7 +18,7 @@ Defines a swipe gesture handler object.
 constructor(options?: SwipeGestureHandlerOptions)
 ```
 
-Constructor used to create a swipe gesture handler instance.
+快滑手势处理器的构造函数。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Constructor used to create a swipe gesture handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the swipe gesture handler. |
+| options | [SwipeGestureHandlerOptions](arkts-arkui-gesture-swipegesturehandleroptions-i.md) | No | 快滑手势处理器配置参数。 |
 
 ## onAction
 
@@ -44,7 +44,7 @@ Constructor used to create a swipe gesture handler instance.
 onAction(event: Callback<GestureEvent>): SwipeGestureHandler
 ```
 
-Sets the callback for successful swipe gesture recognition.
+设置快滑手势处理器识别成功回调。
 
 **Since:** 12
 
@@ -62,11 +62,11 @@ Sets the callback for successful swipe gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback invoked upon successful swipe gesture recognition. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 快滑手势处理器识别成功回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Swipe gesture handler object. |
+| [SwipeGestureHandler](arkts-arkui-swipegesturehandler-c.md) | 返回当前快滑手势处理器对象。 |
 

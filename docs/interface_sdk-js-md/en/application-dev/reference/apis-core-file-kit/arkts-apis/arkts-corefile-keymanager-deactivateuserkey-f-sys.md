@@ -1,13 +1,18 @@
 # deactivateUserKey (System API)
 
+## Modules to Import
+
+```TypeScript
+import { keyManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## deactivateUserKey
 
 ```TypeScript
 function deactivateUserKey(userId: long):void
 ```
 
-When the screen is locked, the specified user key is uninstalled synchronously.  
-**(Currently, this API is available only to lock screen applications.)
+用户锁屏时，同步卸载指定用户对应密钥。**（该接口目前仅开放给锁屏应用）**
 
 **Since:** 15
 
@@ -25,20 +30,20 @@ When the screen is locked, the specified user key is uninstalled synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | User ID. This parameter specifies the user who currently logs in to the lock screen application. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 用户id。锁屏应用感知设备当前登录的用户，指定为该用户。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid. Possible causes: Mandatory parameters are left unspecified; Or input parameter has type different from the type the interface requires. |
-| 13600001 | IPC error. |
-| 13600008 | No such object. Possible causes: Cannot find userkey for the specified user. |
+| 401 | The input parameter is invalid. Possible causes: Mandatory parameters are left unspecified; Or input parameter has type different from the type the interface requires. |
 | 13600009 | User ID out of range. Possible causes: input parameter userId &lt; 100 or userId &gt; 10736. |
+| 13600008 | No such object. Possible causes: Cannot find userkey for the specified user. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { keyManager } from "@kit.CoreFileKit";

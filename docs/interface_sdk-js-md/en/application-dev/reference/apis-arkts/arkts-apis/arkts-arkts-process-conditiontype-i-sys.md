@@ -1,6 +1,6 @@
 # ConditionType (System API)
 
-Provides the ConditionType type,including timeout, killSignal, maxBuffer.
+提供 ConditionType 类型，包括 timeout、killSignal、maxBuffer。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ Provides the ConditionType type,including timeout, killSignal, maxBuffer.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## killSignal
 
 ```TypeScript
 killSignal?: number | string
 ```
 
-Signal sent to the child process when the running time of a child process exceeds the timeout period.
+当子进程运行时间超过 timeout 时，向子进程发送的信号。
 
 **Type:** number \| string
 
@@ -38,7 +44,7 @@ Signal sent to the child process when the running time of a child process exceed
 maxBuffer?: number
 ```
 
-Maximum buffer size for the standard input and output of the child process.
+子进程标准输入和输出的最大缓冲区大小。
 
 **Type:** number
 
@@ -58,7 +64,7 @@ Maximum buffer size for the standard input and output of the child process.
 timeout?: number
 ```
 
-Maximum running time (in ms) of the child process.
+子进程的最大运行时间（单位：毫秒）。
 
 **Type:** number
 

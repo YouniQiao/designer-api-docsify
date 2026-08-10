@@ -1,12 +1,18 @@
 # getExtBundleStats (System API)
 
+## Modules to Import
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getExtBundleStats
 
 ```TypeScript
 function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundleStats>
 ```
 
-Obtains the space usage of a specified user, system application bundle name, or system service name. This API uses a promise to return the result.
+获取指定用户、指定系统应用包名或系统服务名称的空间占用详情。使用Promise异步回调。
 
 **Since:** 23
 
@@ -26,26 +32,26 @@ Obtains the space usage of a specified user, system application bundle name, or 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | User ID. |
-| businessName | string | Yes | System application bundle name or system service name. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户id。 |
+| businessName | string | Yes | 系统应用包名或系统服务名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExtBundleStats&gt; | Promise used to return the space usage of a specified user, system application bundle name, or system service name. |
+| Promise&lt;ExtBundleStats&gt; | Promise对象，返回指定用户、指定系统应用包名或系统服务名称的空间占用详情。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600010 | The input parameter is invalid. |
 | 13600012 | Failed to query the specified business space usage. |
+| 13600010 | The input parameter is invalid. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { storageStatistics } from '@kit.CoreFileKit';

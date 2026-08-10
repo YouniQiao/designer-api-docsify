@@ -10,6 +10,12 @@ Defines the window callback.
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## [[Call]]
 
 ```TypeScript
@@ -38,5 +44,5 @@ Defines the callback info.
 
 | 类型 | 说明 |
 | --- | --- |
-| V |  Returns result of the callback. |
+| V | Returns result of the callback. |
 

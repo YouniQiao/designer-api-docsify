@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## duration
 
 ```TypeScript
@@ -20,7 +26,7 @@ duration: int
 
 豁免时长。单位：s
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -78,9 +84,9 @@ reason: string
 resourceTypes: int
 ```
 
-资源类型，类型具体说明请参考[ResourceType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -100,7 +106,7 @@ uid: int
 
 应用uid。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

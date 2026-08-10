@@ -10,6 +10,12 @@ Return encoded text.
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## read
 
 ```TypeScript

@@ -10,6 +10,12 @@ Describes the information about an album.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumName
 
 ```TypeScript
@@ -36,7 +42,7 @@ albumSubtype: AlbumSubtype
 
 Subtype of the album.
 
-**Type:** AlbumSubtype
+**Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **Since:** 20
 
@@ -54,7 +60,7 @@ albumType: AlbumType
 
 Type of the album.
 
-**Type:** AlbumType
+**Type:** [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md)
 
 **Since:** 20
 
@@ -90,7 +96,7 @@ count: int
 
 Total number of assets in the album, including images and videos.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -126,7 +132,7 @@ imageCount: int
 
 Number of images in the album.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -144,7 +150,7 @@ videoCount: int
 
 Number of videos in the album.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

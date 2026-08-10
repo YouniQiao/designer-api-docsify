@@ -1,5 +1,11 @@
 # @ohos.file.PhotoPickerComponent(A component which support other applications to select photos or videos)
 
+## Modules to Import
+
+```TypeScript
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## Summary
 
 ### Classes
@@ -33,15 +39,15 @@
 | [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md) | DataType represents the type of the data set to picker component |
 | [ItemDisplayRatio](arkts-medialibrary-file-photopickercomponent-itemdisplayratio-e.md) | Enumerates the aspect ratios of the grid item display, including 1:1 and the original image's aspect ratio. |
 | [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) | ItemType. include CAMERA and THUMBNAIL |
-| [MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md) | MaxCountType. include TOTAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_COUNT, PHOTO\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_COUNT and VIDEO\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_COUNT |
-| [PhotoBrowserRange](arkts-medialibrary-file-photopickercomponent-photobrowserrange-e.md) | PhotoBrowserRange. include ALL and SELECTED\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY |
-| [PhotoBrowserUIElement](arkts-medialibrary-file-photopickercomponent-photobrowseruielement-e.md) | PhotoBrowserUIElement. include CHECKBOX and BACK\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUTTON |
+| [MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md) | MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT |
+| [PhotoBrowserRange](arkts-medialibrary-file-photopickercomponent-photobrowserrange-e.md) | PhotoBrowserRange. include ALL and SELECTED_ONLY |
+| [PhotoBrowserUIElement](arkts-medialibrary-file-photopickercomponent-photobrowseruielement-e.md) | PhotoBrowserUIElement. include CHECKBOX and BACK_BUTTON |
 | [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md) | PickerColorMode. include AUTO, LIGHT and DARK |
 | [PickerOrientation](arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md) | PickerOrientation. include VERTICAL and HORIZONTAL |
 | [ReminderMode](arkts-medialibrary-file-photopickercomponent-remindermode-e.md) | ReminderMode, include NONE, TOAST and MASK |
 | [SaveMode](arkts-medialibrary-file-photopickercomponent-savemode-e.md) | Enumeration type of save mode. |
-| [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md) | SelectMode. include SINGLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SELECT and MULTI\_\_\_ESCAPED\_UNDERSCORE\_\_\_SELECT |
-| [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md) | VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_START and SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_FINISH |
+| [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md) | SelectMode. include SINGLE_SELECT and MULTI_SELECT |
+| [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md) | VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH |
 
 ### Types
 

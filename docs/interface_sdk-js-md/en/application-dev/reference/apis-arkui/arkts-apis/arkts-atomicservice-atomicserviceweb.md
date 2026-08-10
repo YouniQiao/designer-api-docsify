@@ -1,15 +1,21 @@
 # @ohos.atomicservice.AtomicServiceWeb(Defines the atomicService web component)
 
-###### Required Permissions
- **ohos.permission.INTERNET**, required for accessing online web pages. For details about how to apply for a
- permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
- ###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
- ###### Events
- The [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+###### 需要权限
+ 访问在线网页时需添加网络权限：ohos.permission.INTERNET，
+ 具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
+ ###### 子组件
+ 无
+ ###### 属性
+ 不支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+ ###### 事件
+ 不支持[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
 
+
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 
@@ -17,30 +23,30 @@
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md) | Implements an **AtomicServiceWebController** object for controlling the behavior of the **AtomicServiceWeb**  component. An **AtomicServiceWebController** can control only one **AtomicServiceWeb** component, and the APIs on the  **AtomicServiceWebController** can be called only after it has been bound to the target **AtomicServiceWeb**  component. |
+| [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md) | 通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。一个AtomicServiceWebController对象只能控制一个AtomicServiceWeb组件，且必须在AtomicServiceWeb组件和AtomicServiceWebController绑定后，才能调用AtomicServiceWebController上的方法。 |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceWeb](arkts-arkui-atomicservice-atomicserviceweb-atomicserviceweb-s.md) | AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities. |
+| [AtomicServiceWeb](arkts-arkui-atomicservice-atomicserviceweb-atomicserviceweb-s.md) | 为开发者提供满足定制化诉求的Web高阶组件，屏蔽原生Web组件中无需关注的接口，并提供JS扩展能力。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [OnErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md) | Represents the callback invoked when an error occurs during web page loading. |
-| [OnHttpErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onhttperrorreceiveevent-i.md) | Represents the callback invoked when an HTTP error occurs during web page resource loading. |
-| [OnLoadInterceptEvent](arkts-arkui-atomicservice-atomicserviceweb-onloadinterceptevent-i.md) | Represents the event triggered when resource loading is intercepted. |
-| [OnMessageEvent](arkts-arkui-atomicservice-atomicserviceweb-onmessageevent-i.md) | Represents the callback invoked when the page is navigated back or destroyed. |
-| [OnPageBeginEvent](arkts-arkui-atomicservice-atomicserviceweb-onpagebeginevent-i.md) | Represents the callback invoked when the web page loading begins. |
-| [OnPageEndEvent](arkts-arkui-atomicservice-atomicserviceweb-onpageendevent-i.md) | Represents the callback invoked when the web page loading ends. |
-| [OnProgressChangeEvent](arkts-arkui-atomicservice-atomicserviceweb-onprogresschangeevent-i.md) | Represents the callback invoked when the web page loading progress changes. |
-| [WebHeader](arkts-arkui-atomicservice-atomicserviceweb-webheader-i.md) | Describes the request/response header returned by the **AtomicServiceWeb** component. |
+| [OnErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md) | 定义网页加载遇到错误时触发该回调。 |
+| [OnHttpErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onhttperrorreceiveevent-i.md) | 定义网页加载资源遇到HTTP错误时触发该回调。 |
+| [OnLoadInterceptEvent](arkts-arkui-atomicservice-atomicserviceweb-onloadinterceptevent-i.md) | 定义Web组件加载url之前触发的加载拦截事件。 |
+| [OnMessageEvent](arkts-arkui-atomicservice-atomicserviceweb-onmessageevent-i.md) | 定义页面返回或销毁时触发该回调。 |
+| [OnPageBeginEvent](arkts-arkui-atomicservice-atomicserviceweb-onpagebeginevent-i.md) | 定义网页加载开始时触发该回调。 |
+| [OnPageEndEvent](arkts-arkui-atomicservice-atomicserviceweb-onpageendevent-i.md) | 定义网页加载结束时触发该回调。 |
+| [OnProgressChangeEvent](arkts-arkui-atomicservice-atomicserviceweb-onprogresschangeevent-i.md) | 定义网页加载进度变化时触发该回调。 |
+| [WebHeader](arkts-arkui-atomicservice-atomicserviceweb-webheader-i.md) | Web组件返回的请求/响应头对象。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnLoadInterceptCallback](arkts-arkui-onloadinterceptcallback-t.md) | Represents the callback invoked when resource loading is intercepted. |
+| [OnLoadInterceptCallback](arkts-arkui-onloadinterceptcallback-t.md) | 当Web组件加载url之前触发该回调，用于判断是否阻止此次访问。 |
 

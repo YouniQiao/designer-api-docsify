@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## description
 
 ```TypeScript

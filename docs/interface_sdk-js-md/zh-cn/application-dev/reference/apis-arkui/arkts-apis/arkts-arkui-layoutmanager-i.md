@@ -1,16 +1,17 @@
 # LayoutManager
 
 布局管理器对象。
-    **说明：**  
-    
-    文本内容变更后，需等待布局完成才可获取到最新的布局信息。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
 
 ## 导入对象
 
 以Text组件为例，完整示例请参考Text组件的  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
+[示例10（获取文本信息）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例10获取文本信息)。
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts controller: TextController = new TextController();let layoutManager: LayoutManager = this.controller.getLayoutManager();```
 
 **起始版本：** 12
 
@@ -27,12 +28,13 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 ```
 
 获取距离指定坐标最近的字符的位置信息。
-    **说明：**  
-    
-    - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用  
-    [getGlyphPositionAtCoordinate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法。  
-    
-    - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
+
+> **说明：**
+> 
+> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用
+> [getGlyphPositionAtCoordinate](arkts-arkui-layoutmanager-i.md#getglyphpositionatcoordinate)方法。
+> 
+> - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **起始版本：** 24
 
@@ -50,14 +52,14 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 相对于组件的横坐标。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| y | number | 是 | 相对于组件的纵坐标。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| x | number | 是 | 相对于组件的横坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | 是 | 相对于组件的纵坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 字符的位置信息。当[LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | 字符的位置信息。当[LayoutManager]{ |
 
 ## getCharacterPositionAtCoordinate
 
@@ -84,15 +86,15 @@ getCharacterPositionAtCoordinate(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 相对于组件的横坐标。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| y | number | 是 | 相对于组件的纵坐标。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符位置使用的编码类型，默认值为**TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8**。 |
+| x | number | 是 | 相对于组件的横坐标。&lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | 是 | 相对于组件的纵坐标。&lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符位置使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 字符的位置信息。当[LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | 字符的位置信息。当[LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -101,10 +103,11 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 ```
 
 根据给定的文本字形范围来获取范围内的字符范围，以及实际的字形范围。
-    **说明：**  
-    
-    文本内容变更后，需等待布局完成才可获取到最新的字符范围信息。  
-    以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的字符范围信息。
+> 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
 
 | 文本 | 世 | 界 | H | e | l | l | o |  
 |---|---|---|---|---|---|---|---|  
@@ -129,13 +132,13 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的字形范围。 |
+| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字形范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当返回的范围是异常值时，范围内元素为-1。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当[LayoutManager]{ |
+| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -161,14 +164,14 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的字形范围。 |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8**。 |
+| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字形范围。 |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当返回的范围是异常值时，范围内元素为-1。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当[LayoutManager]{ |
+| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getGlyphPositionAtCoordinate
 
@@ -177,12 +180,13 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 ```
 
 获取较为接近给定坐标的字形的位置信息。
-    **说明：**  
-    
-    - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用  
-    [getCharacterPositionAtCoordinate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法。  
-    
-    - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
+
+> **说明：**
+> 
+> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用
+> [getCharacterPositionAtCoordinate](arkts-arkui-layoutmanager-i.md#getcharacterpositionatcoordinate)方法。
+> 
+> - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **起始版本：** 12
 
@@ -200,14 +204,14 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 相对于组件的横坐标。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| y | number | 是 | 相对于组件的纵坐标。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| x | number | 是 | 相对于组件的横坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | 是 | 相对于组件的纵坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 字形位置信息。当[LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | 字形位置信息。当[LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -216,10 +220,11 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 ```
 
 根据给定的文本字符范围来获取范围内的字形范围，以及实际的字符范围。
-    **说明：**  
-    
-    文本内容变更后，需等待布局完成才可获取到最新的字形范围信息。  
-    以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的字形范围信息。
+> 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
 
 | 文本 | 世 | 界 | H | e | l | l | o |  
 |---|---|---|---|---|---|---|---|  
@@ -244,13 +249,13 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| charRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的字符范围。 |
+| charRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字符范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当返回的范围是异常值时，范围内元素为-1。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当[LayoutManager]{ |
+| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -276,14 +281,14 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| charRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的字符范围。 |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8**。 |
+| charRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字符范围。 |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当返回的范围是异常值时，范围内元素为-1。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当[LayoutManager]{ |
+| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getLineCount
 
@@ -292,9 +297,10 @@ getLineCount(): number
 ```
 
 获取组件内容的总行数。
-    **说明：**  
-    
-    文本内容变更后，需等待布局完成才可获取到最新的总行数。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的总行数。
 
 **起始版本：** 12
 
@@ -321,9 +327,10 @@ getLineMetrics(lineNumber: number): LineMetrics
 ```
 
 获取指定行的行信息、文本样式信息、以及字体属性信息。
-    **说明：**  
-    
-    文本内容变更后，需等待布局完成才可获取到最新的行信息。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的行信息。
 
 **起始版本：** 12
 
@@ -347,7 +354,7 @@ getLineMetrics(lineNumber: number): LineMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 行信息、文本样式信息、以及字体属性信息。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_当行号小于0或超出实际行，返回无效值。当[LayoutManager]{ |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) | 行信息、文本样式信息、以及字体属性信息。 &lt;br&gt;当行号小于0或超出实际行，返回无效值。当[LayoutManager]{ |
 
 ## getRectsForRange
 
@@ -356,9 +363,10 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 ```
 
 根据给定的矩形区域宽度样式和高度样式，获取文本中任意区间范围内的字符或占位符所占的绘制区域信息。
-    **说明：**  
-    
-    文本内容变更后，需等待布局完成才可获取到最新的绘制区域信息。
+
+> **说明：**
+> 
+> 文本内容变更后，需等待布局完成才可获取到最新的绘制区域信息。
 
 **起始版本：** 14
 
@@ -376,9 +384,9 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要获取的区域的文本区间。 |
-| widthStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 返回的矩形区域的宽度规格，用于控制返回矩形的宽度计算方式，不同规格值会影响矩形的宽度边界。 |
-| heightStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 返回的矩形区域的高度规格，用于控制返回矩形的高度计算方式，不同规格值会影响矩形的高度边界。 |
+| range | [TextRange](arkts-arkui-textrange-i.md) | 是 | 需要获取的区域的文本区间。 |
+| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | 是 | 返回的矩形区域的宽度规格，用于控制返回矩形的宽度计算方式，不同规格值会影响矩形的宽度边界。 |
+| heightStyle | [RectHeightStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectheightstyle-e.md) | 是 | 返回的矩形区域的高度规格，用于控制返回矩形的高度计算方式，不同规格值会影响矩形的高度边界。 |
 
 **返回值：**
 

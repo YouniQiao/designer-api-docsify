@@ -12,15 +12,21 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## failedCount
 
 ```TypeScript
 failedCount: int
 ```
 
-搬迁失败的文件个数，取值范围[0, INT32\_MAX]，单位：个。进度异常时返回-1。
+搬迁失败的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -42,7 +48,7 @@ state: TransferState
 
 搬迁任务的状态。
 
-**类型：** TransferState
+**类型：** [TransferState](arkts-corefile-cloudsyncmanager-transferstate-e-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -64,7 +70,7 @@ stopReason: TransferStopReason
 
 搬迁停止的原因。
 
-**类型：** TransferStopReason
+**类型：** [TransferStopReason](arkts-corefile-cloudsyncmanager-transferstopreason-e-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -84,9 +90,9 @@ stopReason: TransferStopReason
 successfulCount: int
 ```
 
-已搬迁的文件个数，取值范围[0, INT32\_MAX]，单位：个。进度异常时返回-1。
+已搬迁的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -106,9 +112,9 @@ successfulCount: int
 totalCount: int
 ```
 
-待搬迁文件总个数，取值范围[0, INT32\_MAX]，单位：个。进度异常时返回-1。
+待搬迁文件总个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -128,9 +134,9 @@ totalCount: int
 totalSize: long
 ```
 
-需要搬迁的文件总大小，取值范围[0, INT64\_MAX)，单位：Byte。进度异常时返回INT64\_MAX。
+需要搬迁的文件总大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 26.0.0
 
@@ -150,9 +156,9 @@ totalSize: long
 transferredSize: long
 ```
 
-已搬迁的数据大小，取值范围[0, INT64\_MAX)，单位：Byte。进度异常时返回INT64\_MAX。
+已搬迁的数据大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 26.0.0
 

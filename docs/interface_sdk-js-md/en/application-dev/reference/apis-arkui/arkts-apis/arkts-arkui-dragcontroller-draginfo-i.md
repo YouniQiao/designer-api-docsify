@@ -10,6 +10,12 @@ DragInfo object description
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
+
 ## autoHideComponentUniqueIds
 
 ```TypeScript
@@ -118,7 +124,7 @@ previewOptions?: DragPreviewOptions
 
 Drag preview options.
 
-**Type:** DragPreviewOptions
+**Type:** [DragPreviewOptions](../arkts-components/arkts-arkui-dragpreviewoptions-i.md)
 
 **Since:** 23
 
@@ -138,7 +144,7 @@ touchPoint?: TouchPoint
 
 Touch point coordinates.
 
-**Type:** TouchPoint
+**Type:** [TouchPoint](arkts-arkui-touchpoint-i.md)
 
 **Since:** 23
 

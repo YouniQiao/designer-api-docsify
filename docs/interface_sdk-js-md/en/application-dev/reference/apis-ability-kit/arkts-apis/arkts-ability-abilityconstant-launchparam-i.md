@@ -1,6 +1,6 @@
 # LaunchParam
 
-Describes the launch parameters, which mainly include the ability launch reasons and reasons for the last exit. The parameter values are automatically passed in by the system when the ability is launched. You do not need to change the values.
+启动参数，主要包括Ability启动原因以及上次退出原因。Ability启动时由系统自动传入，开发者无需修改。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Describes the launch parameters, which mainly include the ability launch reasons
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { AbilityConstant } from 'kits/@kit.AbilityKit';
+```
+
 ## lastExitDetailInfo
 
 ```TypeScript
 lastExitDetailInfo?: LastExitDetailInfo
 ```
 
-Key runtime information for the last exit of the ability (including process ID, exit timestamp, and RSS memory value).
+表示Ability上次退出时的关键运行信息（含进程ID、退出时间戳、RSS内存值等）。
 
-**Type:** LastExitDetailInfo
+**Type:** [LastExitDetailInfo](arkts-ability-abilityconstant-lastexitdetailinfo-i.md)
 
 **Since:** 18
 
@@ -38,7 +44,7 @@ Key runtime information for the last exit of the ability (including process ID, 
 lastExitMessage: string
 ```
 
-Detailed message that describes the reason for the last exit of the ability.
+表示Ability上次退出的详细原因。
 
 **Type:** string
 
@@ -60,9 +66,9 @@ Detailed message that describes the reason for the last exit of the ability.
 lastExitReason: LastExitReason
 ```
 
-An enumerated value indicating the reason for the last exit of the ability.
+枚举类型，表示Ability上次退出原因。
 
-**Type:** LastExitReason
+**Type:** [LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md)
 
 **Since:** 9
 
@@ -82,9 +88,9 @@ An enumerated value indicating the reason for the last exit of the ability.
 launchReason: LaunchReason
 ```
 
-An enumerated value indicating the reason for ability launch (for example, recovery from a fault, intent invocation, or atomic service sharing). For details, see [LaunchReason]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+枚举类型，表示Ability启动原因（如故障恢复拉起、意图调用拉起、原子化服务分享拉起等），详见[LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)。
 
-**Type:** LaunchReason
+**Type:** [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)
 
 **Since:** 9
 
@@ -104,7 +110,7 @@ An enumerated value indicating the reason for ability launch (for example, recov
 launchReasonMessage?: string
 ```
 
-Detailed message that describes the reason for the ability launch.
+表示Ability启动的详细原因。
 
 **Type:** string
 
@@ -126,15 +132,13 @@ Detailed message that describes the reason for the ability launch.
 launchUTCTime?: long
 ```
 
-UTC timestamp when the UIAbility starts, in milliseconds.
+表示UIAbility开始启动的UTC时间戳，单位为毫秒。
 
-This API can be used in atomic services since API version 23.
+**约束：**
 
-**Constraints**:
+该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
 
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example,UIExtensionAbility), the obtained start time is the default value **0**.
-
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
@@ -154,13 +158,13 @@ This feature takes effect only when the UIAbility is started. For other types of
 launchUptime?: long
 ```
 
-System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.
+表示UIAbility开始启动时系统已运行的时间（自系统开机启动以来的时间），单位为毫秒。
 
-**Constraints**:
+**约束：**
 
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example,UIExtensionAbility), the obtained start time is the default value **0**.
+该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 

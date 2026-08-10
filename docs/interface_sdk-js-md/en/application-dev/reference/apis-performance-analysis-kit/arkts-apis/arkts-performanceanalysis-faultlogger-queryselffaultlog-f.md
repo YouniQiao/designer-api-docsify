@@ -1,12 +1,18 @@
 # querySelfFaultLog
 
+## Modules to Import
+
+```TypeScript
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## querySelfFaultLog
 
 ```TypeScript
 function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void
 ```
 
-Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information.
+获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。
 
 **Since:** 8
 
@@ -24,10 +30,10 @@ Obtains the fault information about the current application. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| faultType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Fault type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;FaultLogInfo&gt;&gt; | Yes | Callback used to return the fault information array.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. In this case, an error string will be returned. |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes | 输入要查询的故障类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;FaultLogInfo&gt;&gt; | Yes | 回调函数，在回调函数中获取故障信息数组。 &lt;br&gt;value拿到故障信息数组；value为undefined表示获取过程中出现异常，error返回错误提示字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FaultLogger } from '@kit.PerformanceAnalysisKit';
@@ -62,7 +68,7 @@ FaultLogger.querySelfFaultLog(FaultLogger.FaultType.JS_CRASH, queryFaultLogCallb
 function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>
 ```
 
-Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information.
+获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。
 
 **Since:** 8
 
@@ -80,15 +86,15 @@ Obtains the fault information about the current application. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| faultType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Fault type. |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes | 输入要查询的故障类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; | Promise used to return the fault information array. You can obtain the fault information instance in its **then()** method or use **await**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. |
+| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; | Promise实例，可以在其then()方法中获取故障信息实例，也可以使用await。 &lt;br&gt;value拿到故障信息数组；value为undefined表示获取过程中出现异常。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FaultLogger } from '@kit.PerformanceAnalysisKit';

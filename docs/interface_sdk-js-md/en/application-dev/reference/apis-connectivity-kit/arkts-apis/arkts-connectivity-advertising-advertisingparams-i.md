@@ -1,6 +1,6 @@
 # AdvertisingParams
 
-Describes the advertising parameters.
+广播参数。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes the advertising parameters.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## advertisingData
 
 ```TypeScript
 advertisingData: AdvertisingData
 ```
 
-Indicates the advertising data.
+广播数据。
 
-**Type:** AdvertisingData
+**Type:** [AdvertisingData](arkts-connectivity-advertising-advertisingdata-i.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Indicates the advertising data.
 advertisingSettings: AdvertisingSettings
 ```
 
-Indicates the advertising settings.
+广播设置。
 
-**Type:** AdvertisingSettings
+**Type:** [AdvertisingSettings](arkts-connectivity-advertising-advertisingsettings-i.md)
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 type QueryMediaEntityEvent = (params: QueryMediaEntityParam) => Promise<PageMediaEntity>
 ```
 
-The query media entity event.
+媒体实体查询事件。使用Promise异步回调。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ The query media entity event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | query params  |
+| params | [QueryMediaEntityParam](arkts-avsession-avmusictemplate-querymediaentityparam-i.md) | Yes | 查询媒体实体的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise  |
+| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的媒体实体分页对象。 |
 

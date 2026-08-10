@@ -10,6 +10,12 @@ Defines the frame info when fetch picture form a video.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## actualTimeUs
 
 ```TypeScript
@@ -18,7 +24,7 @@ actualTimeUs?: long
 
 The actual frame time.
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 23
 
@@ -58,7 +64,7 @@ requestedTimeUs: long
 
 The requested frame time.
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 23
 
@@ -78,7 +84,7 @@ result: FetchResult
 
 The fetch result code - succeed, failed or cancelled.
 
-**类型：** FetchResult
+**类型：** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)
 
 **起始版本：** 23
 

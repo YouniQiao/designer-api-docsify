@@ -1,0 +1,50 @@
+# ThumbnailVisibility（系统接口）
+
+Enumerates the visibility statuses of thumbnails.
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+<!--Device-photoAccessHelper-enum ThumbnailVisibility--><!--Device-photoAccessHelper-enum ThumbnailVisibility-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+## INVISIBLE
+
+```TypeScript
+INVISIBLE = 0
+```
+
+Unable to access thumbnail
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+<!--Device-ThumbnailVisibility-INVISIBLE = 0--><!--Device-ThumbnailVisibility-INVISIBLE = 0-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+## VISIBLE
+
+```TypeScript
+VISIBLE = 1
+```
+
+able to access thumbnail
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+<!--Device-ThumbnailVisibility-VISIBLE = 1--><!--Device-ThumbnailVisibility-VISIBLE = 1-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+

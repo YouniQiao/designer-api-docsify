@@ -1,6 +1,6 @@
 # Transliterator
 
-Provides the API for transliterate text from one format to another.
+提供文本音译相关的能力，包括音译支持范围获取和文本音译等。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides the API for transliterate text from one format to another.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getAvailableIDs
 
 ```TypeScript
 static getAvailableIDs(): string[]
 ```
 
-Obtains a list of IDs supported by the Transliterator object.
+获取音译支持的转换ID列表。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Obtains a list of IDs supported by the Transliterator object.
 
 | Type | Description |
 | --- | --- |
-| string[] | List of IDs supported by the Transliterator object. |
+| string[] | 音译支持的转换ID列表。 |
 
 ## getInstance
 
@@ -40,7 +46,7 @@ Obtains a list of IDs supported by the Transliterator object.
 static getInstance(id: string): Transliterator
 ```
 
-Creates a Transliterator object based on the specified ID.
+创建指定转换ID的音译对象。
 
 **Since:** 23
 
@@ -56,13 +62,13 @@ Creates a Transliterator object based on the specified ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID supported by the Transliterator object. |
+| id | string | Yes | 音译支持的转换ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Transliterator object. |
+| [Transliterator](arkts-localization-i18n-transliterator-c.md) | 音译对象。 |
 
 ## transform
 
@@ -70,7 +76,7 @@ Creates a Transliterator object based on the specified ID.
 transform(text: string): string
 ```
 
-Converts the input text from the source format to the target format.
+将输入文本从源格式转换为目标格式。
 
 **Since:** 23
 
@@ -86,11 +92,11 @@ Converts the input text from the source format to the target format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Input text. |
+| text | string | Yes | 输入文本。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Text after conversion. |
+| string | 转换后的文本。 |
 

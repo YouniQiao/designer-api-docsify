@@ -1,6 +1,6 @@
 # PrinterStatus
 
-Enumerates the printer states.
+打印机状态的枚举。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates the printer states.
 PRINTER_IDLE = 0
 ```
 
-The printer is idle.
+表示打印机空闲状态。
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ The printer is idle.
 PRINTER_BUSY = 1
 ```
 
-The printer is busy.
+表示打印机忙碌状态。
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ The printer is busy.
 PRINTER_UNAVAILABLE = 2
 ```
 
-The printer is unavailable.
+表示打印机脱机状态。
 
 **Since:** 14
 

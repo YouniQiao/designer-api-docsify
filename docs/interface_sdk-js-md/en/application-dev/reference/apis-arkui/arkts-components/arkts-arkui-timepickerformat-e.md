@@ -1,6 +1,6 @@
 # TimePickerFormat
 
-Enumerates time display formats of the time picker.
+时间选择器的数据格式。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates time display formats of the time picker.
 HOUR_MINUTE
 ```
 
-Time format displaying hours and minutes.
+按照小时和分钟进行显示。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Time format displaying hours and minutes.
 HOUR_MINUTE_SECOND
 ```
 
-Time format displaying hours, minutes, and seconds.
+Hour and minute and second
 
 **Since:** 11
 

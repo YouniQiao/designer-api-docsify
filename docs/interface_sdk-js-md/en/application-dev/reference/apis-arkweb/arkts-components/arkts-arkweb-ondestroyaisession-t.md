@@ -4,7 +4,7 @@
 type OnDestroyAISession = (id: string) => void
 ```
 
-Triggered when an AI session is destroyed.Used for cleaning up resources associated with custom AI models.
+AI会话销毁回调函数类型。用于清理与自定义AI模型关联的资源。
 
 **Since:** 26.0.0
 
@@ -20,5 +20,5 @@ Triggered when an AI session is destroyed.Used for cleaning up resources associa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | The session task ID.  |
+| id | string | Yes | 会话任务ID。 |
 

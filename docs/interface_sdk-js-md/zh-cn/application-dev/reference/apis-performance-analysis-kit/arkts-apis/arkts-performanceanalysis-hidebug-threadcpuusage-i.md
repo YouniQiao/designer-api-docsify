@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## cpuUsage
 
 ```TypeScript
@@ -18,7 +24,7 @@ cpuUsage: double
 
 �߳�CPUʹ���ʡ�
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 12
 
@@ -36,7 +42,7 @@ threadId: long
 
 �̺߳š�
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 

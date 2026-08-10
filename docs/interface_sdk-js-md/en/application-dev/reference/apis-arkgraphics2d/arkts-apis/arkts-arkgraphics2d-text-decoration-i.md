@@ -1,6 +1,6 @@
 # Decoration
 
-Describes a text decoration.
+文本装饰线。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes a text decoration.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## color
 
 ```TypeScript
 color?: common2D.Color
 ```
 
-Color of the decoration. The default value is the text color.
+装饰线颜色，默认为跟随文本颜色。
 
 **Type:** common2D.Color
 
@@ -36,9 +42,9 @@ Color of the decoration. The default value is the text color.
 decorationStyle?: TextDecorationStyle
 ```
 
-Style of the decoration. The default value is **SOLID**.
+装饰线样式，默认为SOLID。
 
-**Type:** TextDecorationStyle
+**Type:** [TextDecorationStyle](../../apis-arkui/arkts-apis/arkts-arkui-enums-textdecorationstyle-e.md)
 
 **Since:** 12
 
@@ -56,10 +62,9 @@ Style of the decoration. The default value is **SOLID**.
 decorationThicknessScale?: double
 ```
 
-Scale factor for the thickness of the decoration line. The value is a floating point number. The default value is  
-**1.0**. If the value is less than or equal to 0, no decoration line is drawn.
+装饰线粗细系数，浮点数，默认为1.0。如果设置的值小于等于0，则不会绘制装饰线。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -77,9 +82,9 @@ Scale factor for the thickness of the decoration line. The value is a floating p
 textDecoration?: TextDecorationType
 ```
 
-Type of the decoration. The default value is **NONE**.
+装饰线类型，默认为NONE。
 
-**Type:** TextDecorationType
+**Type:** [TextDecorationType](../../apis-arkui/arkts-apis/arkts-arkui-textdecorationtype-e.md)
 
 **Since:** 12
 

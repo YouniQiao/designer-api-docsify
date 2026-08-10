@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
@@ -20,7 +26,7 @@ height: long
 
 矩形的高度，单位为px，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 
@@ -40,7 +46,7 @@ left: long
 
 矩形左上角顶点的X轴坐标，单位为px，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 
@@ -60,7 +66,7 @@ top: long
 
 矩形左上角顶点的Y轴坐标，单位为px，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 
@@ -80,7 +86,7 @@ width: long
 
 矩形的宽度，单位为px，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 

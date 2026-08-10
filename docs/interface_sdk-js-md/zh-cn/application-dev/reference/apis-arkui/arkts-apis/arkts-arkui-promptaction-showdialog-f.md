@@ -1,5 +1,11 @@
 # showDialog
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## showDialog
 
 ```TypeScript
@@ -7,15 +13,16 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 ```
 
 创建并显示对话框，对话框响应结果使用callback异步回调返回。
-    **说明：**  
-    
-    - 从API version 9开始支持，从API version 18开始废弃，建议使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。  
-showDialog需先通过\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中的  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_方法获取\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_对象，然后通过该对象进行调用。且直接使用showDialog可能导致\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_的问题。  
-    
-    - 从API version 10开始，可以通过使用\_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_中的  
-\_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_方法获取当前UI上下文关联的  
-\_\_\_MD\_LINK\_DESC\_USD\_7\_\_\_对象。
+
+> **说明：**
+> 
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用[showDialog](arkts-apis-uicontext-promptaction.md#showdialog)替代。
+showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
+[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
+[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
+[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
 
 **起始版本：** 9
 
@@ -35,15 +42,275 @@ showDialog需先通过\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中的
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 页面显示对话框信息描述。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ShowDialogSuccessResponse&gt; | 是 | 回调函数。弹出对话框成功时，err为undefined， data为获取到的对话框响应结果；失败时，err为错误对象。 |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 | 页面显示对话框信息描述。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | 是 | 回调函数。弹出对话框成功时，err为undefined， data为获取到的对话框响应结果；失败时，err为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { promptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  promptAction.showDialog({
+    title: 'showDialog Title Info',
+    message: 'Message Info',
+    buttons: [
+      {
+        text: 'button1',
+        color: '#000000'
+      },
+      {
+        text: 'button2',
+        color: '#000000'
+      }
+    ]
+  }, (err, data) => {
+    if (err) {
+      console.info('showDialog err: ' + err);
+      return;
+    }
+    console.info('showDialog success callback, click button: ' + data.index);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  let code = (error as BusinessError).code;
+  console.error(`showDialog args error code is ${code}, message is ${message}`);
+};
+```
+
+```TypeScript
+import { promptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  promptAction.showDialog({
+    title: 'showDialog Title Info',
+    message: 'Message Info',
+    buttons: [
+      {
+        text: 'button1',
+        color: '#000000'
+      },
+      {
+        text: 'button2',
+        color: '#000000'
+      }
+    ]
+  }, (err, data) => {
+    if (err) {
+      console.info('showDialog err: ' + err);
+      return;
+    }
+    console.info('showDialog success callback, click button: ' + data.index);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  let code = (error as BusinessError).code;
+  console.error(`showDialog args error code is ${code}, message is ${message}`);
+};
+```
+
+当弹窗的showInSubWindow属性为true时，弹窗可显示在窗口外。
+
+```TypeScript
+import { promptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  promptAction.showDialog({
+    title: 'showDialog Title Info',
+    message: 'Message Info',
+    isModal: true,
+    showInSubWindow: true,
+    buttons: [
+      {
+        text: 'button1',
+        color: '#000000'
+      },
+      {
+        text: 'button2',
+        color: '#000000'
+      }
+    ]
+  }, (err, data) => {
+    if (err) {
+      console.info('showDialog err: ' + err);
+      return;
+    }
+    console.info('showDialog success callback, click button: ' + data.index);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  let code = (error as BusinessError).code;
+  console.error(`showDialog args error code is ${code}, message is ${message}`);
+};
+```
+
+当弹窗的showInSubWindow属性为true时，弹窗可显示在窗口外。
+
+```TypeScript
+import { promptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  promptAction.showDialog({
+    title: 'showDialog Title Info',
+    message: 'Message Info',
+    isModal: true,
+    showInSubWindow: true,
+    buttons: [
+      {
+        text: 'button1',
+        color: '#000000'
+      },
+      {
+        text: 'button2',
+        color: '#000000'
+      }
+    ]
+  }, (err, data) => {
+    if (err) {
+      console.info('showDialog err: ' + err);
+      return;
+    }
+    console.info('showDialog success callback, click button: ' + data.index);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  let code = (error as BusinessError).code;
+  console.error(`showDialog args error code is ${code}, message is ${message}`);
+};
+```
+
+从API version 19开始，该示例通过调用[ShowDialogOptions](#showdialogoptions)中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了弹窗生命周期的相关接口的使用方法。
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct DialogExample {
+  @State log: string = 'Log information:';
+  build() {
+    Column() {
+      Button('showDialog')
+        .onClick(() => {
+          this.showCustomDialog();
+        })
+      Text(this.log).fontSize(30).margin({ top: 200 })
+    }.width('100%').margin({ top: 5 })
+  }
+
+  showCustomDialog() {
+    try {
+      this.getUIContext().getPromptAction().showDialog({
+        title: '操作确认',
+        message: '您确定要执行此操作吗？',
+        alignment: DialogAlignment.Bottom,
+        buttons: [
+          {
+            text: '取消',
+            color: '#999999'
+          },
+          {
+            text: '确定',
+            color: '#007DFF'
+          }
+        ],
+        onDidAppear: () => {
+          this.log += '# onDidAppear';
+          console.info("showDialog,is onDidAppear!");
+        },
+        onDidDisappear: () => {
+          this.log += '# onDidDisappear';
+          console.info("showDialog,is onDidDisappear!");
+        },
+        onWillAppear: () => {
+          this.log = 'Log information:# onWillAppear';
+          console.info("showDialog,is onWillAppear!");
+        },
+        onWillDisappear: () => {
+          this.log += '# onWillDisappear';
+          console.info("showDialog,is onWillDisappear!");
+        },
+      })
+    } catch (error) {
+      let err: BusinessError = error as BusinessError;
+      console.error(`捕获到异常: ${err.code}, ${err.message}`);
+    }
+  }
+}
+```
+
+从API version 19开始，该示例通过调用[ShowDialogOptions](#showdialogoptions)中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了弹窗生命周期的相关接口的使用方法。
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct DialogExample {
+  @State log: string = 'Log information:';
+  build() {
+    Column() {
+      Button('showDialog')
+        .onClick(() => {
+          this.showCustomDialog();
+        })
+      Text(this.log).fontSize(30).margin({ top: 200 })
+    }.width('100%').margin({ top: 5 })
+  }
+
+  showCustomDialog() {
+    try {
+      this.getUIContext().getPromptAction().showDialog({
+        title: '操作确认',
+        message: '您确定要执行此操作吗？',
+        alignment: DialogAlignment.Bottom,
+        buttons: [
+          {
+            text: '取消',
+            color: '#999999'
+          },
+          {
+            text: '确定',
+            color: '#007DFF'
+          }
+        ],
+        onDidAppear: () => {
+          this.log += '# onDidAppear';
+          console.info("showDialog,is onDidAppear!");
+        },
+        onDidDisappear: () => {
+          this.log += '# onDidDisappear';
+          console.info("showDialog,is onDidDisappear!");
+        },
+        onWillAppear: () => {
+          this.log = 'Log information:# onWillAppear';
+          console.info("showDialog,is onWillAppear!");
+        },
+        onWillDisappear: () => {
+          this.log += '# onWillDisappear';
+          console.info("showDialog,is onWillDisappear!");
+        },
+      })
+    } catch (error) {
+      let err: BusinessError = error as BusinessError;
+      console.error(`捕获到异常: ${err.code}, ${err.message}`);
+    }
+  }
+}
+```
 
 
 ## showDialog
@@ -53,15 +320,16 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 ```
 
 创建并显示对话框，对话框通过Promise返回结果。
-    **说明：**  
-    
-    - 从API version 9开始支持，从API version 18开始废弃，建议使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。  
-showDialog需先通过\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中的  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_方法获取\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_对象，然后通过该对象进行调用。且直接使用showDialog可能导致\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_的问题。  
-    
-    - 从API version 10开始，可以通过使用\_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_中的  
-\_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_方法获取当前UI上下文关联的  
-\_\_\_MD\_LINK\_DESC\_USD\_7\_\_\_对象。
+
+> **说明：**
+> 
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用[showDialog](arkts-apis-uicontext-promptaction.md#showdialog-1)替代。
+showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
+[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
+[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
+[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
 
 **起始版本：** 9
 
@@ -81,7 +349,7 @@ showDialog需先通过\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中的
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 对话框选项。 |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 | 对话框选项。 |
 
 **返回值：**
 
@@ -93,6 +361,58 @@ showDialog需先通过\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中的
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { promptAction } from '@kit.ArkUI';
+
+promptAction.showDialog({
+  title: 'Title Info',
+  message: 'Message Info',
+  buttons: [
+    {
+      text: 'button1',
+      color: '#000000'
+    },
+    {
+      text: 'button2',
+      color: '#000000'
+    }
+  ],
+})
+  .then(data => {
+    console.info('showDialog success, click button: ' + data.index);
+  })
+  .catch((err: Error) => {
+    console.info('showDialog error: ' + err);
+  })
+```
+
+```TypeScript
+import { promptAction } from '@kit.ArkUI';
+
+promptAction.showDialog({
+  title: 'Title Info',
+  message: 'Message Info',
+  buttons: [
+    {
+      text: 'button1',
+      color: '#000000'
+    },
+    {
+      text: 'button2',
+      color: '#000000'
+    }
+  ],
+})
+  .then(data => {
+    console.info('showDialog success, click button: ' + data.index);
+  })
+  .catch((err: Error) => {
+    console.info('showDialog error: ' + err);
+  })
+```
 

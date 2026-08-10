@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## existTask
 
 ```TypeScript
@@ -42,7 +48,7 @@ taskBody: TaskBody
 
 任务数据。
 
-**类型：** TaskBody
+**类型：** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
 **起始版本：** 9
 

@@ -10,15 +10,21 @@ UDMF提供的数据操作接口包含三个可选参数：intention、key和visi
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## intention
 
 ```TypeScript
 intention?: Intention
 ```
 
-表示数据操作相关的数据通路类型，取值为[Intention]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_枚举类型，包括DATA\_HUB、DRAG等。不填写时默认无值，具体是否必填请参阅具体接口的参数说明。
+表示数据操作相关的数据通路类型，取值为[Intention](arkts-arkdata-unifieddatachannel-intention-e.md)枚举类型，包括DATA_HUB、DRAG等。不填写时默认无值，具体是否必填请参阅具体接口的参数说明。
 
-**类型：** Intention
+**类型：** [Intention](arkts-arkdata-unifieddatachannel-intention-e.md)
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ intention?: Intention
 key?: string
 ```
 
-UDMF中数据对象的唯一标识符，可通过[insertData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口的返回值获取。不填写时默认无值，具体是否必填请参阅具体接口的参数说明。
+UDMF中数据对象的唯一标识符，可通过[insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata)接口的返回值获取。不填写时默认无值，具体是否必填请参阅具体接口的参数说明。
 
 由udmf:/、intention、bundleName和groupId四部分组成，以'/'连接，比如：udmf://DataHub/com.ohos.test/0123456789。
 
@@ -64,9 +70,9 @@ UDMF中数据对象的唯一标识符，可通过[insertData]\_\_\_JSDOC\_LINK\_
 visibility?: Visibility
 ```
 
-表示数据的可见性等级，仅公共数据通路可使用，取值为[Visibility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_枚举类型。只在写入数据的时候填写才生效，若不填写默认是Visibility.ALL。
+表示数据的可见性等级，仅公共数据通路可使用，取值为[Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md)枚举类型。只在写入数据的时候填写才生效，若不填写默认是Visibility.ALL。
 
-**类型：** Visibility
+**类型：** [Visibility](../../apis-arkui/arkts-apis/arkts-arkui-visibility-e.md)
 
 **起始版本：** 20
 

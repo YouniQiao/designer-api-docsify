@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## onBackupSizeReport
 
 ```TypeScript
@@ -54,12 +60,12 @@ onFileReadyBatch?: OnFileReadyBatch
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
+| 13900011 | Out of memory |
 
 ## onProcess
 
@@ -92,18 +98,18 @@ onProcess(bundleName: string, process: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13500006 | Tar error |
-| 13500008 | Untar error |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
 | 13900020 | Invalid argument |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 13900005 | I/O error |
+| 13500008 | Untar error |
+| 13900001 | Operation not permitted |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13500006 | Tar error |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
+| 13900011 | Out of memory |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { backup } from '@kit.CoreFileKit';
@@ -138,16 +144,16 @@ onProcess: OnProcess
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13500006 | Tar error |
-| 13500008 | Untar error |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
 | 13900020 | Invalid argument |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 13900005 | I/O error |
+| 13500008 | Untar error |
+| 13900001 | Operation not permitted |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13500006 | Tar error |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
+| 13900011 | Out of memory |
 
 ## onResultReport
 
@@ -180,13 +186,13 @@ onResultReport(bundleName: string, result: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13600001 | IPC error |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| 13900011 | Out of memory |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 ## onResultReport
 
@@ -212,13 +218,13 @@ onResultReport: OnResultReport
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13600001 | IPC error |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| 13900011 | Out of memory |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
+| 13600001 | IPC error |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 ## onAllBundlesEnd
 
@@ -228,7 +234,7 @@ onAllBundlesEnd: AsyncCallback<undefined>
 
 所有应用的备份或恢复完成或异常中止时触发的回调。
 
-**类型：** AsyncCallback&lt;undefined&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
 
 **起始版本：** 10
 
@@ -248,7 +254,7 @@ onBackupServiceDied: Callback<undefined>
 
 备份服务异常死亡时触发的回调。
 
-**类型：** Callback&lt;undefined&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;undefined&gt;
 
 **起始版本：** 10
 
@@ -268,7 +274,7 @@ onBundleBegin: AsyncCallback<string, void | string>
 
 应用备份或恢复开始时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
 
-**类型：** AsyncCallback&lt;string, void \| string&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **起始版本：** 12
 
@@ -288,7 +294,7 @@ onBundleEnd: AsyncCallback<string, void | string>
 
 应用备份或恢复成功结束或异常中止时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
 
-**类型：** AsyncCallback&lt;string, void \| string&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **起始版本：** 12
 
@@ -306,9 +312,9 @@ onBundleEnd: AsyncCallback<string, void | string>
 onFileReady: AsyncCallback<File>
 ```
 
-备份服务向客户端发送文件时触发的回调。File参数表示发送给客户端的文件。返回的文件归备份服务所有，客户端关闭文件句柄后由备份服务清理。
+备份服务向客户端发送文件时触发的回调。File参数表示发送给客户端的文件。 返回的文件归备份服务所有，客户端关闭文件句柄后由备份服务清理。
 
-**类型：** AsyncCallback&lt;File&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
 
 **起始版本：** 10
 
@@ -328,7 +334,7 @@ onMigrateResult?: AsyncCallback<string, void | string>
 
 文件迁移流程结束时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
 
-**类型：** AsyncCallback&lt;string, void \| string&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **起始版本：** 26.0.0
 

@@ -1,19 +1,18 @@
 # LoadingProgress
 
-The **LoadingProgress** component is used to create a loading progress animation.
+LoadingProgress是用于显示加载进度条的组件，在数据加载过程中为用户提供视觉反馈，提升用户体验。该组件支持设置前景色、控制动画显示状态等特性，适用于需要在应用内展示加载进度的场景。
 
-The loading progress animation stops when the component is invisible. The component's visibility is determined by the
-value of **ratios** in the
+加载进度条的动效在组件不可见时停止，组件的可见状态基于
 [onVisibleAreaChange]{@link CommonMethod#onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback)}
-event callback: If the value is greater than 0, the component is visible.
+处理，可见阈值ratios大于0即视为可见状态。
 
-> **NOTE**
+> **说明：**
 >
-> - This component supports [WithTheme]{@link ./with_theme} since API version 26.0.0.
+> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
 
-## Child Components
+## 子组件
 
-Not supported
+无
 
 ## LoadingProgress
 
@@ -21,7 +20,7 @@ Not supported
 LoadingProgress()
 ```
 
-Creates a loading progress component.
+创建加载进度组件。
 
 **Since:** 8
 
@@ -37,3 +36,5 @@ Creates a loading progress component.
 
 ## Summary
 
+- [LoadingProgressConfiguration](arkts-arkui-loadingprogress-loadingprogressconfiguration-i.md)
+- [LoadingProgressStyle](arkts-arkui-loadingprogress-loadingprogressstyle-e.md)

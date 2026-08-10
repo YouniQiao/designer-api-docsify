@@ -1,6 +1,6 @@
 # BaseShape
 
-Base shape class
+继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。
 
 **Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
@@ -12,13 +12,19 @@ Base shape class
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height(height: Length): this
 ```
 
-Sets the height of the shape.
+设置形状的高度。
 
 **Since:** 23
 
@@ -34,13 +40,13 @@ Sets the height of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| height | [Length](arkts-arkui-length-t.md) | Yes | 形状的高度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| this | 返回当前对象。 |
 
 ## size
 
@@ -48,7 +54,7 @@ Sets the height of the shape.
 size(size: SizeOptions): this
 ```
 
-Sets the size of the shape.
+设置形状的大小。
 
 **Since:** 23
 
@@ -64,13 +70,13 @@ Sets the size of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| size | [SizeOptions](arkts-arkui-sizeoptions-i.md) | Yes | 形状的大小。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| this | 返回当前对象。 |
 
 ## width
 
@@ -78,7 +84,7 @@ Sets the size of the shape.
 width(width: Length): this
 ```
 
-Sets the width of the shape.
+设置形状的宽度。
 
 **Since:** 23
 
@@ -94,11 +100,11 @@ Sets the width of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| width | [Length](arkts-arkui-length-t.md) | Yes | 形状的宽度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| this | 返回当前对象。 |
 

@@ -1,6 +1,6 @@
 # PrinterState
 
-Enumerates the printer states.
+打印机状态的枚举。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates the printer states.
 PRINTER_ADDED = 0
 ```
 
-A new printer is added.
+表示新打印机到达。
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ A new printer is added.
 PRINTER_REMOVED = 1
 ```
 
-The printer is removed.
+表示打印机丢失。
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ The printer is removed.
 PRINTER_CAPABILITY_UPDATED = 2
 ```
 
-The printer is updated.
+表示打印机更新。
 
 **Since:** 14
 
@@ -64,7 +64,7 @@ The printer is updated.
 PRINTER_CONNECTED = 3
 ```
 
-The printer is connected.
+表示打印机已连接。
 
 **Since:** 14
 
@@ -80,7 +80,7 @@ The printer is connected.
 PRINTER_DISCONNECTED = 4
 ```
 
-The printer is disconnected.
+表示打印机已断开连接。
 
 **Since:** 14
 
@@ -96,7 +96,7 @@ The printer is disconnected.
 PRINTER_RUNNING = 5
 ```
 
-The printer is running.
+表示打印机正在运行。
 
 **Since:** 14
 

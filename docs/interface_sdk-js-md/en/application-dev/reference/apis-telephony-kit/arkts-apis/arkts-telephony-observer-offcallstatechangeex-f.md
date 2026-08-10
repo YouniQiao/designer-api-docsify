@@ -1,5 +1,11 @@
 # offCallStateChangeEx
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## offCallStateChangeEx
 
 ```TypeScript
@@ -20,14 +26,14 @@ Cancel callback when the telCall state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TelCallState&gt; | No | Indicates the callback to unsubscribe from the callStateChangeEx event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | No | Indicates the callback to unsubscribe from the callStateChangeEx event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [8800002](../errorcode-telephony.md#8800002-service-connection-error) | Service connection failed. |
-| [8800003](../errorcode-telephony.md#8800003-system-internal-error) | System internal error. |
-| [8800999](../errorcode-telephony.md#8800999-internal-error) | Unknown error. |
+| 8800999 | Unknown error. |
+| 8800002 | Service connection failed. |
+| 8800003 | System internal error. |
+| 8800001 | Invalid parameter value. |
 

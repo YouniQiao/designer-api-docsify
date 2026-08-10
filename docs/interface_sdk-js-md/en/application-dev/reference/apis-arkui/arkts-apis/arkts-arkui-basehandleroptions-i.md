@@ -1,6 +1,6 @@
 # BaseHandlerOptions
 
-Provides the parameters of the basic gesture handler.
+基础手势处理器配置参数。
 
 **Since:** 15
 
@@ -16,9 +16,9 @@ Provides the parameters of the basic gesture handler.
 isFingerCountLimited?: boolean
 ```
 
-Whether to enforce the exact number of fingers touching the screen. **true**: Enforce the exact number of fingers touching the screen. **false**: Do not enforce the exact number of fingers touching the screen.
+是否检查触摸屏幕的手指数量。true表示检查触摸屏幕的手指数量，false表示不检查触摸屏幕的手指数量。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 

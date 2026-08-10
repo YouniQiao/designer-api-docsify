@@ -1,5 +1,11 @@
 # getFontCount
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getFontCount
 
 ```TypeScript
@@ -26,17 +32,15 @@ function getFontCount(path: string | Resource) : int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string \| Resource | 是 | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('工程中resources/rawfile目录下的文件名称')。 |
+| path | string \| Resource | 是 | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 \\$rawfile('工程中resources/rawfile目录下的文件名称')。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 包含字体数量。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 包含字体数量。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -46,29 +50,6 @@ import { text } from '@kit.ArkGraphics2D'
 struct GetFontCountTest {
   build() {
     Column({ space: 10 }) {
-      Button("get fontCount")
-        .onClick(() => {
-          let fontCount = text.getFontCount("file:///system/fonts/NotoSansCJK-Regular.ttc")
-          console.info("file count: " + fontCount)
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, FlexAlign } from '@ohos.arkui.component'
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct GetFontCountTest {
-  build() {
-    Column() {
       Button("get fontCount")
         .onClick(() => {
           let fontCount = text.getFontCount("file:///system/fonts/NotoSansCJK-Regular.ttc")

@@ -1,6 +1,6 @@
 # Axis
 
-Enumerates mouse axis types.
+鼠标轴类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates mouse axis types.
 SCROLL_VERTICAL = 0
 ```
 
-Vertical scroll axis of the mouse.
+鼠标垂直滚动轴。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Vertical scroll axis of the mouse.
 SCROLL_HORIZONTAL = 1
 ```
 
-Horizontal scroll axis of the mouse.
+鼠标水平滚动轴。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Horizontal scroll axis of the mouse.
 PINCH = 2
 ```
 
-Pinch axis of the mouse.
+鼠标捏合轴。
 
 **Since:** 9
 

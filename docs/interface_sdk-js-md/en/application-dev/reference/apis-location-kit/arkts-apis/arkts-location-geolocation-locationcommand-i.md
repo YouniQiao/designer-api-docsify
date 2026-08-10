@@ -16,6 +16,12 @@ Location subsystem command structure
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## command
 
 ```TypeScript
@@ -42,7 +48,7 @@ command: string
 scenario: LocationRequestScenario
 ```
 
-**Type:** LocationRequestScenario
+**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **Since:** 8
 

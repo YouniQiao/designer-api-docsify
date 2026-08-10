@@ -1,6 +1,6 @@
 # RotateOption
 
-Set Rotation Parameters.
+旋转参数。
 
 **Since:** 23
 
@@ -10,13 +10,21 @@ Set Rotation Parameters.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## angle
 
 ```TypeScript
 angle?: double
 ```
 
-Rotation angle.
+旋转角度。
+
+默认值：0
 
 **Type:** double
 
@@ -36,7 +44,13 @@ Rotation angle.
 centerX?: double
 ```
 
-Transform the x-axis coordinate of the center point.
+变换中心点x轴坐标。
+
+单位：px
+
+默认值：组件中心点x轴坐标。
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -56,7 +70,13 @@ Transform the x-axis coordinate of the center point.
 centerY?: double
 ```
 
-Transform the y-axis coordinate of the center point.
+变换中心点y轴坐标。
+
+单位：px
+
+默认值：组件中心点y轴坐标。
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -76,7 +96,11 @@ Transform the y-axis coordinate of the center point.
 x?: double
 ```
 
-Axis of rotation vector x coordinate.
+旋转轴向量x坐标。
+
+默认值：0。
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -96,7 +120,11 @@ Axis of rotation vector x coordinate.
 y?: double
 ```
 
-Axis of rotation vector y coordinate.
+旋转轴向量y坐标。
+
+默认值：0。
+
+取值范围 (-∞, +∞)
 
 **Type:** double
 
@@ -116,7 +144,13 @@ Axis of rotation vector y coordinate.
 z?: double
 ```
 
-Axis of rotation vector z coordinate.
+旋转轴向量z坐标。
+
+默认值：0。
+
+取值范围 (-∞, +∞)。
+
+**说明：** 旋转向量中x、y、z至少有一个不为0才有意义。
 
 **Type:** double
 

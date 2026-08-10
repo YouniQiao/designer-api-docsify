@@ -1,6 +1,6 @@
 # InputEventSubTypeMask
 
-Defines the input event subtype mask for monitoring.
+输入事件子类型掩码枚举，用于标识不同类型的输入事件子类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines the input event subtype mask for monitoring.
 LEFT_MOUSE_DOWN = 1 << 0
 ```
 
-Mouse left button down.
+鼠标左键按下。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Mouse left button down.
 LEFT_MOUSE_UP = 1 << 1
 ```
 
-Mouse left button up.
+鼠标左键抬起。
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ Mouse left button up.
 RIGHT_MOUSE_DOWN = 1 << 2
 ```
 
-Mouse right button down.
+鼠标右键按下。
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ Mouse right button down.
 RIGHT_MOUSE_UP = 1 << 3
 ```
 
-Mouse right button up.
+鼠标右键抬起。
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ Mouse right button up.
 MIDDLE_MOUSE_DOWN = 1 << 4
 ```
 
-Mouse middle button down.
+鼠标中键按下。
 
 **Since:** 26.0.0
 
@@ -116,7 +116,7 @@ Mouse middle button down.
 MIDDLE_MOUSE_UP = 1 << 5
 ```
 
-Mouse middle button up.
+鼠标中键抬起。
 
 **Since:** 26.0.0
 
@@ -136,7 +136,7 @@ Mouse middle button up.
 LEFT_MOUSE_DRAGGING = 1 << 6
 ```
 
-Mouse left button dragging.
+鼠标左键按下并移动。
 
 **Since:** 26.0.0
 
@@ -156,7 +156,7 @@ Mouse left button dragging.
 RIGHT_MOUSE_DRAGGING = 1 << 7
 ```
 
-Mouse right button dragging.
+鼠标右键按下并移动。
 
 **Since:** 26.0.0
 
@@ -176,7 +176,7 @@ Mouse right button dragging.
 MIDDLE_MOUSE_DRAGGING = 1 << 8
 ```
 
-Mouse middle button dragging.
+鼠标中键按下并移动。
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ Mouse middle button dragging.
 TOUCH_DOWN = 1 << 9
 ```
 
-Touch down.
+触控按下。
 
 **Since:** 26.0.0
 
@@ -216,7 +216,7 @@ Touch down.
 TOUCH_UP = 1 << 10
 ```
 
-Touch up.
+触控抬起。
 
 **Since:** 26.0.0
 
@@ -236,7 +236,7 @@ Touch up.
 KEY_DOWN = 1 << 11
 ```
 
-Physical keyboard key down.
+物理键盘按下。
 
 **Since:** 26.0.0
 
@@ -256,7 +256,7 @@ Physical keyboard key down.
 KEY_UP = 1 << 12
 ```
 
-Physical keyboard key up.
+物理键盘抬起。
 
 **Since:** 26.0.0
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## name
 
 ```TypeScript
@@ -38,7 +44,7 @@ type: XMPTagType
 
 XMP标签类型。
 
-**类型：** XMPTagType
+**类型：** [XMPTagType](arkts-image-image-xmptagtype-e.md)
 
 **起始版本：** 26.0.0
 
@@ -78,7 +84,7 @@ xmpNamespace: XMPNamespace
 
 XMP命名空间。
 
-**类型：** XMPNamespace
+**类型：** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
 
 **起始版本：** 26.0.0
 

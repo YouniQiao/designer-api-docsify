@@ -1,12 +1,24 @@
 # createRotationMatrix
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## createRotationMatrix
 
 ```TypeScript
 function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-Converts a rotation vector into a rotation matrix. This API uses an asynchronous callback to return the result.
+将旋转矢量转换为旋转矩阵，使用Callback异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)
+> 替代。
 
 **Since:** 8
 
@@ -24,10 +36,10 @@ Converts a rotation vector into a rotation matrix. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation matrix. |
+| rotationVector | Array&lt;number&gt; | Yes | 表示旋转矢量。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | 异步返回旋转矩阵。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -52,7 +64,12 @@ sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877],
 function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>
 ```
 
-Converts a rotation vector into a rotation matrix. This API uses a promise to return the result.
+将旋转矢量转换为旋转矩阵，使用Promise异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)替代。
 
 **Since:** 8
 
@@ -70,15 +87,15 @@ Converts a rotation vector into a rotation matrix. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
+| rotationVector | Array&lt;number&gt; | Yes | 表示旋转矢量。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation matrix. |
+| Promise&lt;Array&lt;number&gt;&gt; | 使用异步方式返回旋转矩阵。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -102,7 +119,13 @@ promise.then((data: Array<number>) => {
 function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void
 ```
 
-Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses an asynchronous callback to return the result.
+根据重力矢量和地磁矢量计算旋转矩阵，使用Callback异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)
+> 替代。
 
 **Since:** 8
 
@@ -120,11 +143,11 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gravity | Array&lt;number&gt; | Yes | Gravity vector. |
-| geomagnetic | Array&lt;number&gt; | Yes | Geomagnetic vector. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationMatrixResponse&gt; | Yes | Callback used to return the rotation matrix. |
+| gravity | Array&lt;number&gt; | Yes | 表示重力向量。 |
+| geomagnetic | Array&lt;number&gt; | Yes | 表示地磁矢量。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RotationMatrixResponse&gt; | Yes | 异步返回旋转矩阵。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -147,7 +170,12 @@ sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.
 function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>
 ```
 
-Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses a promise to return the result.
+根据重力矢量和地磁矢量计算旋转矩阵，使用Promise异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)替代。
 
 **Since:** 8
 
@@ -165,12 +193,12 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gravity | Array&lt;number&gt; | Yes | Gravity vector. |
-| geomagnetic | Array&lt;number&gt; | Yes | Geomagnetic vector. |
+| gravity | Array&lt;number&gt; | Yes | 表示重力向量。 |
+| geomagnetic | Array&lt;number&gt; | Yes | 表示地磁矢量。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RotationMatrixResponse&gt; | Promise used to return the rotation matrix. |
+| Promise&lt;RotationMatrixResponse&gt; | 使用异步方式返回旋转矩阵。 |
 

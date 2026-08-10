@@ -1,8 +1,8 @@
 # HoverEvent
 
-继承于[BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** HoverEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**继承/实现关系：** HoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 10
 
@@ -18,7 +18,7 @@
 stopPropagation: () => void
 ```
 
-阻塞\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。 
 
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
 
@@ -96,7 +96,7 @@ displayY?: number
 globalDisplayX?: number
 ```
 
-鼠标光标或手写笔位置在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
 单位：vp
 
@@ -200,7 +200,7 @@ windowY?: number
 x?: number
 ```
 
-鼠标光标或手写笔位置在当前组件为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
 
 单位：vp
 
@@ -228,7 +228,7 @@ x?: number
 y?: number
 ```
 
-鼠标光标或手写笔位置在当前组件为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
 
 单位：vp
 

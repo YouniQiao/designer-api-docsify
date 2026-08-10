@@ -1,6 +1,6 @@
 # PerfMeasureResult
 
-Represents the measurement result data corresponding to the performance metric.
+性能指标对应测量结果数据。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Represents the measurement result data corresponding to the performance metric.
 
 **System capability:** SystemCapability.Test.PerfTest
 
+## Modules to Import
+
+```TypeScript
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
+```
+
 ## average
 
 ```TypeScript
 readonly average: double
 ```
 
-Average value of the measurement data of each round (the value **-1** is excluded).
+各轮测量数据平均值（剔除为-1的数据后计算）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -36,9 +42,9 @@ Average value of the measurement data of each round (the value **-1** is exclude
 readonly maximum: double
 ```
 
-Maximum value of the measurement data of each round (the value **-1** is excluded).
+各轮测量数据最大值（剔除为-1的数据后计算）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -56,9 +62,9 @@ Maximum value of the measurement data of each round (the value **-1** is exclude
 readonly metric: PerfMetric
 ```
 
-Performance metric to test.
+被测性能指标。
 
-**Type:** PerfMetric
+**Type:** [PerfMetric](arkts-test-test-perftest-perfmetric-e.md)
 
 **Since:** 20
 
@@ -76,9 +82,9 @@ Performance metric to test.
 readonly minimum: double
 ```
 
-Minimum value of the measurement data of each round (the value **-1** is excluded).
+各轮测量数据最小值（剔除为-1的数据后计算）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -96,9 +102,9 @@ Minimum value of the measurement data of each round (the value **-1** is exclude
 readonly roundValues: Array<double>
 ```
 
-Measurement data value of each round of the tested performance metric. If data collection fails, the value **-1** is returned.
+被测性能指标的各轮测量数据值，单位与对应PerfMetric指标一致。当数据采集失败时返回-1。
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 20
 

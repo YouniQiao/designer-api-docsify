@@ -1,5 +1,11 @@
 # subscribe
 
+## 导入模块
+
+```TypeScript
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+```
+
 ## subscribe
 
 ```TypeScript
@@ -22,7 +28,7 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 是 | 订阅的信息列表（数组）。 |
+| info | [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)[] | 是 | 订阅的信息列表（数组）。 |
 
 **返回值：**
 
@@ -34,14 +40,12 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied or current device not supported. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) | The application does not implement the NotificationSubscriberExtensionAbility. |
+| 201 | Permission denied or current device not supported. |
+| 1600001 | Internal error. |
+| 1600003 | Failed to connect to the service. |
+| 1600023 | The application does not implement the NotificationSubscriberExtensionAbility. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[] = [
@@ -54,23 +58,6 @@ notificationExtensionSubscription.subscribe(infos).then(() => {
   console.info(`subscribe success`);
 }).catch((err: BusinessError) => {
   console.error(`subscribe fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[] = [
-  {
-    addr: '01:23:45:67:89:AB', // 使用动态获取的蓝牙地址
-    type: notificationExtensionSubscription.SubscribeType.BLUETOOTH
-  }
-];
-notificationExtensionSubscription.subscribe(infos).then(() => {
-  console.info('subscribe success');
-}).catch((err: Error) => {
-  let error = err as BusinessError
-  console.error(`subscribe fail, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

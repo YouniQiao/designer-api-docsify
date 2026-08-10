@@ -1,6 +1,6 @@
 # USBInterface
 
-一个[USBConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中可以含有多个USBInterface，每个USBInterface提供一个功能。
+一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。
 
 **起始版本：** 9
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## alternateSetting
 
 ```TypeScript
@@ -18,7 +24,7 @@ alternateSetting: int
 
 在同一个接口中的多个描述符中进行切换设置。值的大小表示支持可选模式个数，其中0表示不支持可选模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ clazz: int
 
 设备类型。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -72,7 +78,7 @@ id: int
 
 接口的唯一标识。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -108,7 +114,7 @@ protocol: int
 
 接口的协议。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -126,7 +132,7 @@ subClass: int
 
 设备子类。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

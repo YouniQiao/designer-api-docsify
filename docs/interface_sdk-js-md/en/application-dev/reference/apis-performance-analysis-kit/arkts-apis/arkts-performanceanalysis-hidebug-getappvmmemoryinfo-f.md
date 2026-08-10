@@ -1,12 +1,18 @@
 # getAppVMMemoryInfo
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppVMMemoryInfo
 
 ```TypeScript
 function getAppVMMemoryInfo(): VMMemoryInfo
 ```
 
-Obtains VM memory information.
+��ȡVM�ڴ������Ϣ��
 
 **Since:** 12
 
@@ -20,9 +26,9 @@ Obtains VM memory information.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | VM memory information. |
+| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) | ����VM�ڴ���Ϣ�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

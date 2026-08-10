@@ -1,6 +1,6 @@
 # DistributedTableType
 
-Enumerates the distributed table types. Use the enum name rather than the enum value. This item is a database-level configuration. If a database contains multiple distributed tables, all tables must use the same distributed table type; switching the table type or upgrade tables is not supported.
+分布式表类型的枚举。请使用枚举名称而非枚举值。此配置项为数据库级配置，如果数据库中有多张分布式表，则所有表必须使用相同的分布式表类型，且不支持切换升级。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the distributed table types. Use the enum name rather than the enum v
 DEVICE_COLLABORATION = 0
 ```
 
-Multi-device collaboration table. Data on each device is stored in an independent distributed table in an isolated manner instead of being written to the local table. The name of the distributed table is formed by prepending the peer device's device ID to the original table name.
+多设备协同表，各设备的数据将被隔离存储在独立的分布式表中，而非写入本地表，分布式表名为在原来表名前拼接对端设备的DeviceID标识符。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Multi-device collaboration table. Data on each device is stored in an independen
 SINGLE_VERSION = 1
 ```
 
-Single version table. Data is directly written to the local table of the peer device through the distributed data management framework.
+单版本表，数据通过分布式数据管理框架直接写入对端设备的本地表中。
 
 **Since:** 23
 

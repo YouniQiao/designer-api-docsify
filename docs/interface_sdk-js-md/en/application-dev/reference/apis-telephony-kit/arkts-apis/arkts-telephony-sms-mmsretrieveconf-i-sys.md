@@ -12,6 +12,12 @@ Defines the MMS message retrieval configuration.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## cc
 
 ```TypeScript
@@ -60,7 +66,7 @@ date: long
 
 Indicates the date for the MMS message retrieval configuration.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ deliveryReport?: int
 
 Indicates the status report for the MMS message retrieval configuration.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -100,7 +106,7 @@ from?: MmsAddress
 
 Indicates the source address for the MMS message retrieval configuration.
 
-**Type:** MmsAddress
+**Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
 **Since:** 8
 
@@ -140,7 +146,7 @@ priority?: MmsPriorityType
 
 Indicates the priority for the MMS message retrieval configuration.
 
-**Type:** MmsPriorityType
+**Type:** [MmsPriorityType](arkts-telephony-sms-mmsprioritytype-e-sys.md)
 
 **Since:** 8
 
@@ -160,7 +166,7 @@ readReport?: int
 
 Indicates the read report for the MMS message retrieval configuration.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -180,7 +186,7 @@ retrieveStatus?: int
 
 Indicates the retrieval status for the MMS message retrieval configuration.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -280,7 +286,7 @@ version: MmsVersionType
 
 Indicates the version for the MMS message retrieval configuration.
 
-**Type:** MmsVersionType
+**Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 8
 

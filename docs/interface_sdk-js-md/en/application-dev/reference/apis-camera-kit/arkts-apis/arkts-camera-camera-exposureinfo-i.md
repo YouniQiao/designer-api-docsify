@@ -1,6 +1,6 @@
 # ExposureInfo
 
-Describes the exposure information object.
+曝光信息对象。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Describes the exposure information object.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## exposureTime
 
 ```TypeScript
 readonly exposureTime?: int
 ```
 
-Exposure time, in microseconds.
+曝光时间值。单位：微秒。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

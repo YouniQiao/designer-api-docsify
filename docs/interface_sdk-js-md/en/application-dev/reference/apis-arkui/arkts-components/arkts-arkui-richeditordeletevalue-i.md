@@ -1,6 +1,6 @@
 # RichEditorDeleteValue
 
-Provides information about the delete operation and the deleted content.
+删除操作和被删除内容的信息。
 
 **Since:** 10
 
@@ -16,9 +16,9 @@ Provides information about the delete operation and the deleted content.
 direction: RichEditorDeleteDirection
 ```
 
-Direction of the delete operation.
+删除操作的方向。
 
-**Type:** RichEditorDeleteDirection
+**Type:** [RichEditorDeleteDirection](arkts-arkui-richeditordeletedirection-e.md)
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ Direction of the delete operation.
 length: number
 ```
 
-Length of the deleted content.
+删除内容长度。
 
 **Type:** number
 
@@ -60,7 +60,7 @@ Length of the deleted content.
 offset: number
 ```
 
-Offset of the deleted content.
+删除内容的偏移位置。
 
 **Type:** number
 
@@ -82,7 +82,7 @@ Offset of the deleted content.
 richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 ```
 
-Information about the deleted text or image span.
+删除的文本或图片Span的信息。
 
 **Type:** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
 

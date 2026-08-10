@@ -10,6 +10,12 @@ Describes the parameters of the Ble phy.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## phyMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ phyMode?: CodedPhyMode
 
 Preferred coded phy mode.
 
-**Type:** CodedPhyMode
+**Type:** [CodedPhyMode](arkts-connectivity-ble-codedphymode-e.md)
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ rxPhy: BlePhy
 
 Receiver phy.
 
-**Type:** BlePhy
+**Type:** [BlePhy](arkts-connectivity-ble-blephy-e.md)
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ txPhy: BlePhy
 
 Transmitter phy.
 
-**Type:** BlePhy
+**Type:** [BlePhy](arkts-connectivity-ble-blephy-e.md)
 
 **Since:** 23
 

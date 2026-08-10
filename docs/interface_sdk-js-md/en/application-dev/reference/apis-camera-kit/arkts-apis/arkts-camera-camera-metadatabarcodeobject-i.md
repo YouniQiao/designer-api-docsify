@@ -1,7 +1,7 @@
 # MetadataBarcodeObject
 
-Barcode metadata detected by the camera, which is extended from [MetadataObject]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It serves as the data source of the camera information in [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. It is obtained by calling metadataOutput.  
-[on('metadataObjectsAvailable')]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+相机检测到的二维码元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.  
+[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>))接口获取。
 
 **Inheritance/Implementation:** MetadataBarcodeObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 
@@ -14,4 +14,10 @@ Barcode metadata detected by the camera, which is extended from [MetadataObject]
 <!--Device-camera-interface MetadataBarcodeObject extends MetadataObject--><!--Device-camera-interface MetadataBarcodeObject extends MetadataObject-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 

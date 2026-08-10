@@ -10,6 +10,12 @@ Defines the status of the socket connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## isBound
 
 ```TypeScript

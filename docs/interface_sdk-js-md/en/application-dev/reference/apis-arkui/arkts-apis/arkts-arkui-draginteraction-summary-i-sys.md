@@ -1,6 +1,6 @@
 # Summary (System API)
 
-Defines the data summary of the dragged object.
+拖拽对象的数据摘要。
 
 **Since:** 11
 
@@ -12,15 +12,21 @@ Defines the data summary of the dragged object.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { dragInteraction } from 'kits/@kit.ArkUI';
+```
+
 ## dataSize
 
 ```TypeScript
 dataSize: int
 ```
 
-Data length of the dragged object.
+拖拽对象数据长度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -38,7 +44,7 @@ Data length of the dragged object.
 dataType: string
 ```
 
-Type of the dragged object.
+拖拽对象类型。
 
 **Type:** string
 

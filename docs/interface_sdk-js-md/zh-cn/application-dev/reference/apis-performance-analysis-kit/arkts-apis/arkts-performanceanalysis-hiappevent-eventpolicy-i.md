@@ -1,6 +1,6 @@
 # EventPolicy
 
-提供系统事件配置策略的定义，用于使用[configEventPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置事件配置策略。
+提供系统事件配置策略的定义，用于使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy)设置事件配置策略。
 
 **起始版本：** 22
 
@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addressSanitizerPolicy
 
 ```TypeScript
@@ -18,7 +24,7 @@ addressSanitizerPolicy?: AddressSanitizerPolicy
 
 地址越界事件配置策略。
 
-**类型：** AddressSanitizerPolicy
+**类型：** [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md)
 
 **起始版本：** 24
 
@@ -38,7 +44,7 @@ appCrashPolicy?: AppCrashPolicy
 
 崩溃事件配置策略。
 
-**类型：** AppCrashPolicy
+**类型：** [AppCrashPolicy](arkts-performanceanalysis-hiappevent-appcrashpolicy-i.md)
 
 **起始版本：** 24
 
@@ -58,7 +64,7 @@ appFreezePolicy?: AppFreezePolicy
 
 应用冻屏事件配置策略。
 
-**类型：** AppFreezePolicy
+**类型：** [AppFreezePolicy](arkts-performanceanalysis-hiappevent-appfreezepolicy-i.md)
 
 **起始版本：** 24
 
@@ -78,7 +84,7 @@ cpuUsageHighPolicy?: CpuUsageHighPolicy
 
 CPU高负载事件配置策略。
 
-**类型：** CpuUsageHighPolicy
+**类型：** [CpuUsageHighPolicy](arkts-performanceanalysis-hiappevent-cpuusagehighpolicy-i.md)
 
 **起始版本：** 22
 
@@ -98,7 +104,7 @@ mainThreadJankPolicy?: MainThreadJankPolicy
 
 主线程超时事件配置策略。
 
-**类型：** MainThreadJankPolicy
+**类型：** [MainThreadJankPolicy](arkts-performanceanalysis-hiappevent-mainthreadjankpolicy-i.md)
 
 **起始版本：** 22
 
@@ -118,7 +124,7 @@ resourceOverlimitPolicy?: ResourceOverlimitPolicy
 
 资源泄漏事件配置策略。
 
-**类型：** ResourceOverlimitPolicy
+**类型：** [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md)
 
 **起始版本：** 24
 

@@ -6,7 +6,7 @@
 function traceByValue(name: string, count: number): void
 ```
 
-Defines a numeric variable that indicates the number of timeslice trace tasks.
+标记预追踪耗时任务的数值变量，该变量的数值会不断变化。traceByValue可独立使用，用于记录某个数值变量的变化轨迹。
 
 **Since:** 7
 
@@ -24,10 +24,10 @@ Defines a numeric variable that indicates the number of timeslice trace tasks.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the numeric variable. |
-| count | number | Yes | Value of the numeric variable. |
+| name | string | Yes | 数值变量的名称。 |
+| count | number | Yes | 数值变量的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let traceCount = 3;

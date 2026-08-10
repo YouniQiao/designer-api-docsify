@@ -1,14 +1,20 @@
 # onAdvertisingStateChange
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## onAdvertisingStateChange
 
 ```TypeScript
 function onAdvertisingStateChange(callback: Callback<AdvertisingStateChangeInfo>): void
 ```
 
-Subscribes to the advertising state change event.
+订阅广播状态变化事件。
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK\_ACCESS permission.
+只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
 
 **Since:** 26.0.0
 
@@ -24,11 +30,11 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AdvertisingStateChangeInfo&gt; | Yes | Callback used to listen for the advertising state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AdvertisingStateChangeInfo&gt; | Yes | 用于监听广播状态的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 

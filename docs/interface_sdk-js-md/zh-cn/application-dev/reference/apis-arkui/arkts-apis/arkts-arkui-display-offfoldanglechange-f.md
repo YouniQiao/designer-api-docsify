@@ -1,5 +1,11 @@
 # offFoldAngleChange
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## offFoldAngleChange
 
 ```TypeScript
@@ -20,24 +26,11 @@ Unregister the callback for fold angle changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;double&gt;&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例：**
-
-```TypeScript
-// 如果通过on注册多个callback，同时关闭所有callback监听
-display.offFoldAngleChange();
-
-let callback: Callback<Array<double>> = (angles: Array<double>) => {
-  console.info(`Listening fold angles length: ${angles.length}`);
-};
-// 关闭传入的callback监听
-display.offFoldAngleChange(callback);
-```
+| 1400003 | This display manager service works abnormally. |
 

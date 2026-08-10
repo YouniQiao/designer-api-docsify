@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## dlpFileAccess
 
 ```TypeScript
@@ -18,7 +24,7 @@ dlpFileAccess: DLPFileAccess
 
 表示DLP文件针对用户的授权类型，例如：只读。
 
-**类型：** DLPFileAccess
+**类型：** [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)
 
 **起始版本：** 10
 
@@ -34,7 +40,7 @@ dlpFileAccess: DLPFileAccess
 flags: number
 ```
 
-表示DLP文件的详细操作权限，取值范围由不同[ActionFlagType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的组合决定。
+表示DLP文件的详细操作权限，取值范围由不同[ActionFlagType](arkts-dataprotection-dlppermission-actionflagtype-e.md)的组合决定。
 
 **类型：** number
 

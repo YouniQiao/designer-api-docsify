@@ -1,5 +1,11 @@
 # get（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemParameter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## get
 
 ```TypeScript
@@ -27,18 +33,18 @@ function get(key: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 待查询的系统参数Key。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数，用于异步返回系统参数值。当获取成功时，err为undefined，data为系统参数值；当获取失败时，err为错误对象，data为undefined。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，用于异步返回系统参数值。当获取成功时，err为undefined，data为系统参数值；当获取失败时，err为错误对象，data为undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) | Invalid system parameter value. |
-| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) | The operation on the system permission is denied. |
-| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) | System internal error such as out memory or deadlock. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
+| 14700102 | Invalid system parameter value. |
+| 14700103 | The operation on the system permission is denied. |
+| 14700104 | System internal error such as out memory or deadlock. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -85,18 +91,18 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | key | string | 是 | 待查询的系统参数key。 |
 | def | string | 是 | def为所要获取的系统参数的默认值。调用时必须传入此参数，但参数值可以传任意字符串类型的值。仅当系统参数不存在时，def参数值生效。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数，用于异步返回系统参数值。当获取成功时，err为undefined，data为系统参数值；当获取失败时，err为错误对象，data为undefined。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，用于异步返回系统参数值。当获取成功时，err为undefined，data为系统参数值；当获取失败时，err为错误对象，data为undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) | Invalid system parameter value. |
-| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) | The operation on the system permission is denied. |
-| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) | System internal error such as out memory or deadlock. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
+| 14700102 | Invalid system parameter value. |
+| 14700103 | The operation on the system permission is denied. |
+| 14700104 | System internal error such as out memory or deadlock. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -142,7 +148,7 @@ function get(key: string, def?: string): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 待查询的系统参数key。 |
-| def | string | 否 | def为所要获取的系统参数的默认值。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ def为可选参数，仅当系统参数不存在时生效。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ def可以传undefined或任意字符串类型的值。 |
+| def | string | 否 | def为所要获取的系统参数的默认值。 &lt;br&gt; def为可选参数，仅当系统参数不存在时生效。 &lt;br&gt; def可以传undefined或任意字符串类型的值。 |
 
 **返回值：**
 
@@ -154,12 +160,12 @@ function get(key: string, def?: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) | Invalid system parameter value. |
-| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) | The operation on the system permission is denied. |
-| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) | System internal error such as out memory or deadlock. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
+| 14700102 | Invalid system parameter value. |
+| 14700103 | The operation on the system permission is denied. |
+| 14700104 | System internal error such as out memory or deadlock. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## actionUponExpiry
 
 ```TypeScript
@@ -18,7 +24,7 @@ actionUponExpiry?: ActionType
 
 表示到期后文件是否允许打开（打开后拥有编辑权限），仅在expireTime不为空时生效，默认为空。
 
-**类型：** ActionType
+**类型：** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 
 **起始版本：** 21
 
@@ -88,7 +94,7 @@ contactAccount: string
 countdown?: number
 ```
 
-表示文件可被查看的有效时间，超时后打开的文件将自动关闭，默认为0，单位：s。取值范围为[-2\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_31\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, 2\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_31\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_-1]。
+表示文件可被查看的有效时间，超时后打开的文件将自动关闭，默认为0，单位：s。取值范围为[-2&lt;sup&gt;31&lt;/sup&gt;, 2&lt;sup&gt;31&lt;/sup&gt;-1]。
 
 **类型：** number
 
@@ -146,7 +152,7 @@ extensionFields?: Record<string, Object>
 
 表示DLP文件的扩展属性，默认为空。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 24
 
@@ -238,7 +244,7 @@ ownerAccountType: AccountType
 
 表示权限设置者账号类型。
 
-**类型：** AccountType
+**类型：** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
 
 **起始版本：** 21
 

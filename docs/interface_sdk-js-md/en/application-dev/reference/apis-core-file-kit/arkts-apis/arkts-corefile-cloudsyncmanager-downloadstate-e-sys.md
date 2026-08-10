@@ -1,6 +1,6 @@
 # DownloadState
 
-Enumerates the full download states.
+全量下载任务状态的枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the full download states.
 MISSING = 3
 ```
 
-Indicates that the download task is missing.
+下载任务不存在。
 
 **Since:** 26.0.0
 

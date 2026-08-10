@@ -1,6 +1,6 @@
 # CopyResult (System API)
 
-Defines the information returned when the file copy operation fails. If the copy operation is successful, no information is returned.
+表示复制操作失败时的返回信息，复制成功时则没有返回信息。
 
 **Since:** 10
 
@@ -14,13 +14,19 @@ Defines the information returned when the file copy operation fails. If the copy
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { fileAccess } from 'kits/@kit.CoreFileKit';
+```
+
 ## destUri
 
 ```TypeScript
 destUri: string
 ```
 
-URI of the conflicting file. If the error is not caused by a file conflict, **destUri** is empty.
+产生冲突的目标文件的 uri。如果非冲突导致的错误，则为空。
 
 **Type:** string
 
@@ -46,7 +52,7 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 errCode: number
 ```
 
-Error code.
+错误码。
 
 **Type:** number
 
@@ -72,7 +78,7 @@ Error code.
 errMsg: string
 ```
 
-Error message.
+错误信息。
 
 **Type:** string
 
@@ -98,7 +104,7 @@ Error message.
 sourceUri: string
 ```
 
-URI of the source file or directory.
+源文件(夹) uri。
 
 **Type:** string
 

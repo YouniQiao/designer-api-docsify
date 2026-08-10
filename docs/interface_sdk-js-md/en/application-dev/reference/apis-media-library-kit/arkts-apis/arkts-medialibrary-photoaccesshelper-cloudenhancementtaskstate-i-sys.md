@@ -12,16 +12,22 @@ Represents the cloud enhancement task information, which includes the cloud enha
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## expectedDuration
 
 ```TypeScript
 readonly expectedDuration?: int
 ```
 
-Queuing time. This parameter is mandatory when **taskStage** is  
-**CloudEnhancementTaskStage.TASK\_STAGE\_EXECUTING**.
+Queuing time. This parameter is mandatory when **taskStage** is   
+**CloudEnhancementTaskStage.TASK_STAGE_EXECUTING**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -39,9 +45,9 @@ Queuing time. This parameter is mandatory when **taskStage** is
 readonly statusCode?: int
 ```
 
-Status code. This parameter is mandatory when **taskStage** is **CloudEnhancementTaskStage.TASK\_STAGE\_FAILED**.
+Status code. This parameter is mandatory when **taskStage** is **CloudEnhancementTaskStage.TASK_STAGE_FAILED**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -61,7 +67,7 @@ readonly taskStage: CloudEnhancementTaskStage
 
 Cloud enhancement task state.
 
-**Type:** CloudEnhancementTaskStage
+**Type:** [CloudEnhancementTaskStage](arkts-medialibrary-photoaccesshelper-cloudenhancementtaskstage-e-sys.md)
 
 **Since:** 13
 
@@ -79,10 +85,10 @@ Cloud enhancement task state.
 readonly totalFileSize?: int
 ```
 
-Total file size. This parameter is mandatory when **taskStage** is  
-**CloudEnhancementTaskStage.TASK\_STAGE\_UPLOADING** or **CloudEnhancementTaskStage.TASK\_STAGE\_DOWNLOADING**.
+Total file size. This parameter is mandatory when **taskStage** is   
+**CloudEnhancementTaskStage.TASK_STAGE_UPLOADING** or **CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -100,10 +106,10 @@ Total file size. This parameter is mandatory when **taskStage** is
 readonly transferredFileSize?: int
 ```
 
-Size of the file transferred. This parameter is mandatory when **taskStage** is  
-**CloudEnhancementTaskStage.TASK\_STAGE\_UPLOADING** or **CloudEnhancementTaskStage.TASK\_STAGE\_DOWNLOADING**.
+Size of the file transferred. This parameter is mandatory when **taskStage** is   
+**CloudEnhancementTaskStage.TASK_STAGE_UPLOADING** or **CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 

@@ -1,19 +1,19 @@
 # VideoSession
 
-VideoSession inherits from [Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_, [Flash]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_,  
-[AutoExposure]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_, [WhiteBalance]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_, [Focus]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_,  
-[Zoom]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_, [Stabilization]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_,  
-[ColorManagement]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_, [AutoDeviceSwitch]\_\_\_JSDOC\_LINK\_DESC\_USD\_13\_\_\_,  
-[Macro]\_\_\_JSDOC\_LINK\_DESC\_USD\_14\_\_\_, [ControlCenter]\_\_\_JSDOC\_LINK\_DESC\_USD\_15\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_, and  
-\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_.
+VideoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts-camera-camera-flash-i.md)、  
+[AutoExposure](arkts-camera-camera-autoexposure-i.md)、[WhiteBalance](arkts-camera-camera-whitebalance-i.md)、[Focus](arkts-camera-camera-focus-i.md)、  
+[Zoom](arkts-camera-camera-zoom-i.md)、[Stabilization](arkts-camera-camera-stabilization-i.md)、  
+[ColorManagement](arkts-camera-camera-colormanagement-i.md)、[AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md)、  
+[Macro](arkts-camera-camera-macro-i.md)、[ControlCenter](arkts-camera-camera-controlcenter-i.md)、  
+[ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md)、  
+[ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md)、  
+[ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md)、  
+[OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md)、  
+[Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md)。
 
-It implements a video session, which provides operations on the flash, exposure, white balance, focus, zoom, video stabilization, color space, macro mode and controller, manual exposure, manual focus, manual ISO, optical image stabilization, and aperture.
+普通录像模式会话类，提供了对闪光灯、曝光、白平衡、对焦、变焦、视频防抖、色彩空间、微距及控制器、手动曝光、手动对焦、手动ISO、光学防抖及光圈的操作。
 
-**VideoSession** is provided for the default video recording mode. It applies to common scenarios. It supports recording at various resolutions (such as 720p and 1080p) and frame rates (such as 30 fps and 60 fps).
+默认的视频录制模式，适用于一般场景。支持720P、1080p等多种分辨率的录制，可选择不同帧率（如30fps、60fps）。
 
 **Inheritance/Implementation:** VideoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Stabilization](arkts-camera-camera-stabilization-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [ControlCenter](arkts-camera-camera-controlcenter-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md), [ManualFocus](arkts-camera-camera-manualfocus-i.md), [ManualIso](arkts-camera-camera-manualiso-i.md), [OIS](arkts-camera-camera-ois-i.md), [Aperture](arkts-camera-camera-aperture-i.md)
 
@@ -25,13 +25,19 @@ It implements a video session, which provides operations on the flash, exposure,
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## canPreconfig
 
 ```TypeScript
 canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boolean
 ```
 
-Checks whether this session supports a preconfigured resolution.
+查询当前Session是否支持指定的预配置类型。
 
 **Since:** 12
 
@@ -47,20 +53,20 @@ Checks whether this session supports a preconfigured resolution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preconfigType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Resolution type. |
-| preconfigRatio | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Aspect ratio. The default value is 16:9. |
+| preconfigType | [PreconfigType](arkts-camera-camera-preconfigtype-e.md) | Yes | 指定配置预期分辨率。 |
+| preconfigRatio | [PreconfigRatio](arkts-camera-camera-preconfigratio-e.md) | No | 可选画幅比例，默认为16:9。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true**: The preconfigured resolution is supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**false**: The preconfigured resolution is not supported. |
+| boolean | true: 支持指定预配置类型。&lt;br/&gt;false: 不支持指定预配置类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## off('error')
 
@@ -68,7 +74,7 @@ Checks whether this session supports a preconfigured resolution.
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from **VideoSession** error events. This API uses a callback to return the result.
+注销监听普通录像会话的错误事件，通过注册回调函数获取结果。
 
 **Since:** 11
 
@@ -84,8 +90,8 @@ Unsubscribes from **VideoSession** error events. This API uses a callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'error' | Yes | 监听事件，固定为'error'，session创建成功之后可监听该接口。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('focusStateChange')
 
@@ -93,7 +99,7 @@ Unsubscribes from **VideoSession** error events. This API uses a callback to ret
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 ```
 
-Unsubscribes from focus state change events.
+注销监听相机聚焦的状态变化。
 
 **Since:** 11
 
@@ -109,8 +115,8 @@ Unsubscribes from focus state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'focusStateChange' | Yes | 监听事件，固定为'focusStateChange'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('smoothZoomInfoAvailable')
 
@@ -118,7 +124,7 @@ Unsubscribes from focus state change events.
 off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
 ```
 
-Unsubscribes from smooth zoom state change events.
+注销监听相机平滑变焦的状态变化。
 
 **Since:** 11
 
@@ -134,8 +140,8 @@ Unsubscribes from smooth zoom state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SmoothZoomInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'smoothZoomInfoAvailable' | Yes | 监听事件，固定为'smoothZoomInfoAvailable'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SmoothZoomInfo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('controlCenterEffectStatusChange')
 
@@ -143,7 +149,7 @@ Unsubscribes from smooth zoom state change events.
 off(type: 'controlCenterEffectStatusChange', callback?: AsyncCallback<ControlCenterStatusInfo>): void
 ```
 
-Unsubscribes from events indicating that the camera controller effect status changes.
+注销监听相机控制器激活状态变化。
 
 **Since:** 20
 
@@ -159,8 +165,8 @@ Unsubscribes from events indicating that the camera controller effect status cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'controlCenterEffectStatusChange' | Yes | Event type. The value is fixed at **'controlCenterEffectStatusChange'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ControlCenterStatusInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. ( The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'controlCenterEffectStatusChange' | Yes | 注销监听事件，固定为'controlCenterEffectStatusChange'，session创建成功可触发此事 件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ControlCenterStatusInfo&gt; | No | 回调函数，如果指定参数则取消对应callback (callback对象不可是匿名函数)，否则参数 默认为空，取消所有callback。 |
 
 ## off('macroStatusChanged')
 
@@ -168,7 +174,7 @@ Unsubscribes from events indicating that the camera controller effect status cha
 off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
 ```
 
-Unsubscribes from macro state change events.
+注销相机微距状态变化的监听。
 
 **Since:** 20
 
@@ -184,8 +190,14 @@ Unsubscribes from macro state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'macroStatusChanged' | Yes | Event type. The value is fixed at **'macroStatusChanged'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. If **true** is returned, the unsubscription is successful. If **false** is returned, the unsubscription fails. |
+| type | 'macroStatusChanged' | Yes | 注销监听事件，固定为'macroStatusChanged'，session创建成功可触发此事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则参数默认为空，取消所有callback, 返 回true表示成功，false表示失败。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | Not System Application.<br>**Applicable version:** 11 - 19 |
 
 ## off('autoDeviceSwitchStatusChange')
 
@@ -193,7 +205,7 @@ Unsubscribes from macro state change events.
 off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwitchStatus>): void
 ```
 
-Unsubscribes from automatic camera switch status change events.
+注销监听相机自动切换镜头状态变化。
 
 **Since:** 13
 
@@ -209,8 +221,8 @@ Unsubscribes from automatic camera switch status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'autoDeviceSwitchStatusChange' | Yes | Event type. The value is fixed at **'autoDeviceSwitchStatusChange'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AutoDeviceSwitchStatus&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'autoDeviceSwitchStatusChange' | Yes | 监听事件，固定为'autoDeviceSwitchStatusChange'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AutoDeviceSwitchStatus&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
 
 ## off('systemPressureLevelChange')
 
@@ -218,7 +230,7 @@ Unsubscribes from automatic camera switch status change events.
 off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLevel>): void
 ```
 
-Unsubscribes from system pressure level change events.
+注销监听系统压力状态变化。
 
 **Since:** 20
 
@@ -234,8 +246,8 @@ Unsubscribes from system pressure level change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemPressureLevelChange' | Yes | Event type. The value is fixed at **'systemPressureLevelChange'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemPressureLevel&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'systemPressureLevelChange' | Yes | 注销监听事件，固定为'systemPressureLevelChange'，session创建成功可触发此事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SystemPressureLevel&gt; | No | 回调函数，如果指定参数则取消对应callback (callback对象不可是匿名函数)，否则参数默认为空，取消 所有callback。 |
 
 ## offAutoDeviceSwitchStatusChange
 
@@ -257,7 +269,7 @@ Unsubscribes to auto device switch status event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AutoDeviceSwitchStatus&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AutoDeviceSwitchStatus&gt; | No | Callback used to return the result. |
 
 ## offControlCenterEffectStatusChange
 
@@ -279,7 +291,7 @@ Unsubscribes to control center effect status change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ControlCenterStatusInfo&gt; | No | Callback used to get control center effect status. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ControlCenterStatusInfo&gt; | No | Callback used to get control center effect status. |
 
 ## offError
 
@@ -301,7 +313,7 @@ Unsubscribes from error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the capture session errors. |
 
 ## offExposureInfoChange
 
@@ -309,7 +321,7 @@ Unsubscribes from error events.
 offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 ```
 
-Unsubscribes from exposure information change events. If you have subscribed to exposure information, cancel the subscription before releasing the camera. This API uses an asynchronous callback to return the result.
+取消订阅曝光信息变化事件回调。如果订阅了曝光信息，请在释放相机前取消订阅。使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -327,7 +339,7 @@ Unsubscribes from exposure information change events. If you have subscribed to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ExposureInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExposureInfo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## offFocusStateChange
 
@@ -349,7 +361,7 @@ Unsubscribes from focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | No | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | No | Callback used to get the focus state change. |
 
 ## offIsoInfoChange
 
@@ -357,7 +369,7 @@ Unsubscribes from focus state change event callback.
 offIsoInfoChange(callback?: Callback<IsoInfo>): void
 ```
 
-Unsubscribes from ISO state change events.
+取消监听相机感光度（ISO）状态的变化。
 
 **Since:** 22
 
@@ -375,7 +387,7 @@ Unsubscribes from ISO state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IsoInfo&gt; | No | Callback used for unsubscription. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IsoInfo&gt; | No | 回调函数，可选。 &lt;br&gt;如果指定callback参数则注销该callback监听，callback不可是匿名函数。 &lt;br&gt;如果未指定callback，则注销所有已存在的callback监听。 |
 
 ## offMacroStatusChanged
 
@@ -397,7 +409,7 @@ Unsubscribes camera macro status event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
 
 ## offSmoothZoomInfoAvailable
 
@@ -419,7 +431,7 @@ Unsubscribes from zoom info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SmoothZoomInfo&gt; | No | Callback used to get the zoom info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SmoothZoomInfo&gt; | No | Callback used to get the zoom info. |
 
 ## offSystemPressureLevelChange
 
@@ -441,7 +453,7 @@ Unsubscribes to system pressure level event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemPressureLevel&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SystemPressureLevel&gt; | No | Callback used to return the result. |
 
 ## on('error')
 
@@ -449,10 +461,11 @@ Unsubscribes to system pressure level event callback.
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to **VideoSession** error events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听普通录像会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 11
 
@@ -468,8 +481,8 @@ Subscribes to **VideoSession** error events. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, [commitConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and [addInput]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to return an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | 'error' | Yes | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](arkts-camera-camera-session-i.md#beginconfig)， [commitConfig](arkts-camera-camera-session-i.md#commitconfig)， [addInput](arkts-camera-camera-session-i.md#addinput)等接口发生错误时返回错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## on('focusStateChange')
 
@@ -477,10 +490,11 @@ Subscribes to **VideoSession** error events. This API uses an asynchronous callb
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 ```
 
-Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 11
 
@@ -496,8 +510,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | Yes | Callback used to return the focus state change. |
+| type | 'focusStateChange' | Yes | 监听事件，固定为'focusStateChange'，session创建成功可监听。仅当自动对焦模式时，且相机对焦状态发生改变时可触发该事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | Yes | 回调函数，用于获取当前对焦状态。 |
 
 ## on('smoothZoomInfoAvailable')
 
@@ -505,10 +519,11 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
 ```
 
-Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听相机平滑变焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 11
 
@@ -524,8 +539,8 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SmoothZoomInfo&gt; | Yes | Callback used to return the smooth zoom state change. |
+| type | 'smoothZoomInfoAvailable' | Yes | 监听事件，固定为'smoothZoomInfoAvailable'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SmoothZoomInfo&gt; | Yes | 回调函数，用于获取当前平滑变焦状态。 |
 
 ## on('controlCenterEffectStatusChange')
 
@@ -533,10 +548,11 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCenterStatusInfo>): void
 ```
 
-Subscribes to events indicating that the camera controller effect status changes. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听相机控制器效果激活状态变化，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 20
 
@@ -552,8 +568,8 @@ Subscribes to events indicating that the camera controller effect status changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'controlCenterEffectStatusChange' | Yes | Event type. The value is fixed at **'controlCenterEffectStatusChange'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ControlCenterStatusInfo&gt; | Yes | Callback used to return the effect status of the current controller. |
+| type | 'controlCenterEffectStatusChange' | Yes | 监听事件，固定为'controlCenterEffectStatusChange'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ControlCenterStatusInfo&gt; | Yes | 回调函数，用于获取当前控制器激活状态。 |
 
 ## on('macroStatusChanged')
 
@@ -561,7 +577,7 @@ Subscribes to events indicating that the camera controller effect status changes
 on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
 ```
 
-Subscribes to macro state change events. This API uses an asynchronous callback to return the result.
+监听相机微距状态变化，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 20
 
@@ -577,8 +593,14 @@ Subscribes to macro state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'macroStatusChanged' | Yes | Event type. The value is fixed at **'macroStatusChanged'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the macro state. **true** if enabled, **false** otherwise. |
+| type | 'macroStatusChanged' | Yes | 监听事件，固定为'macroStatusChanged'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数，用于获取当前微距状态，返回true是开启状态，返回false是禁用状态。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | Not System Application.<br>**Applicable version:** 11 - 19 |
 
 ## on('autoDeviceSwitchStatusChange')
 
@@ -586,10 +608,11 @@ Subscribes to macro state change events. This API uses an asynchronous callback 
 on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitchStatus>): void
 ```
 
-Subscribes to automatic camera switch status change events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听相机自动切换镜头状态变化，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 13
 
@@ -605,8 +628,8 @@ Subscribes to automatic camera switch status change events. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'autoDeviceSwitchStatusChange' | Yes | Event type. The value is fixed at **'autoDeviceSwitchStatusChange'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AutoDeviceSwitchStatus&gt; | Yes | Callback used to obtain the status of automatic camera switch. |
+| type | 'autoDeviceSwitchStatusChange' | Yes | 监听事件，固定为'autoDeviceSwitchStatusChange'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AutoDeviceSwitchStatus&gt; | Yes | 回调函数，用于获取当前自动切换镜头的状态。 |
 
 ## on('systemPressureLevelChange')
 
@@ -614,10 +637,11 @@ Subscribes to automatic camera switch status change events. This API uses an asy
 on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLevel>): void
 ```
 
-Subscribes to system pressure level change events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听系统压力状态变化，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 20
 
@@ -633,8 +657,8 @@ Subscribes to system pressure level change events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemPressureLevelChange' | Yes | Event type. The value is fixed at **'systemPressureLevelChange'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemPressureLevel&gt; | Yes | Callback used to return the current system pressure level. |
+| type | 'systemPressureLevelChange' | Yes | 监听事件，固定为'systemPressureLevelChange'，session创建成功可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SystemPressureLevel&gt; | Yes | 回调函数，用于获取当前系统压力状态。 |
 
 ## onAutoDeviceSwitchStatusChange
 
@@ -656,7 +680,7 @@ Subscribes to auto device switch status event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AutoDeviceSwitchStatus&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AutoDeviceSwitchStatus&gt; | Yes | Callback used to return the result. |
 
 ## onControlCenterEffectStatusChange
 
@@ -678,7 +702,7 @@ Subscribes to control center effect status change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ControlCenterStatusInfo&gt; | Yes | Callback used to get control center effect status. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ControlCenterStatusInfo&gt; | Yes | Callback used to get control center effect status. |
 
 ## onError
 
@@ -700,7 +724,7 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the capture session errors. |
 
 ## onExposureInfoChange
 
@@ -708,7 +732,7 @@ Subscribes to error events.
 onExposureInfoChange(callback: Callback<ExposureInfo>): void
 ```
 
-Subscribes to exposure information change events. After the exposure parameters are changed, the system returns the updated exposure information. This API uses an asynchronous callback to return the result.
+订阅曝光信息变化事件回调。曝光参数更改后，系统将返回更新后的曝光信息。使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -726,7 +750,7 @@ Subscribes to exposure information change events. After the exposure parameters 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ExposureInfo&gt; | Yes | Callback used to obtain the exposure information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExposureInfo&gt; | Yes | 回调函数，用于获取曝光值变化信息。 |
 
 ## onFocusStateChange
 
@@ -748,7 +772,7 @@ Subscribes focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | Yes | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | Yes | Callback used to get the focus state change. |
 
 ## onIsoInfoChange
 
@@ -756,7 +780,7 @@ Subscribes focus state change event callback.
 onIsoInfoChange(callback: Callback<IsoInfo>): void
 ```
 
-Subscribes to sensitivity (ISO) state change events and obtains the latest ISO value through a callback.
+监听相机感光度（ISO）状态变化，通过注册回调函数获取最新ISO值。
 
 **Since:** 22
 
@@ -774,7 +798,7 @@ Subscribes to sensitivity (ISO) state change events and obtains the latest ISO v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IsoInfo&gt; | Yes | Callback used to obtain the current ISO value of the camera. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IsoInfo&gt; | Yes | 回调函数，用于获取相机当前的ISO值。 |
 
 ## onMacroStatusChanged
 
@@ -796,7 +820,7 @@ Subscribes camera macro status event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
 
 ## onSmoothZoomInfoAvailable
 
@@ -818,7 +842,7 @@ Subscribes zoom info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SmoothZoomInfo&gt; | Yes | Callback used to get the zoom info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SmoothZoomInfo&gt; | Yes | Callback used to get the zoom info. |
 
 ## onSystemPressureLevelChange
 
@@ -840,7 +864,7 @@ Subscribes to system pressure level event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemPressureLevel&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SystemPressureLevel&gt; | Yes | Callback used to return the result. |
 
 ## preconfig
 
@@ -848,7 +872,7 @@ Subscribes to system pressure level event callback.
 preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 ```
 
-Preconfigures this session.
+对当前Session进行预配置。
 
 **Since:** 12
 
@@ -864,14 +888,14 @@ Preconfigures this session.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preconfigType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Resolution type. |
-| preconfigRatio | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Aspect ratio. The default value is 16:9. |
+| preconfigType | [PreconfigType](arkts-camera-camera-preconfigtype-e.md) | Yes | 指定配置预期分辨率。 |
+| preconfigRatio | [PreconfigRatio](arkts-camera-camera-preconfigratio-e.md) | No | 可选画幅比例，默认为16:9。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## setQualityPrioritization
 
@@ -879,15 +903,14 @@ Preconfigures this session.
 setQualityPrioritization(quality: QualityPrioritization): void
 ```
 
-Sets the priority level for video recording quality.
-    **NOTE**  
-    
-    - The default value is **HIGH\_QUALITY**. Switching to **POWER\_BALANCE** will compromise video recording quality  
-    to achieve lower power usage. The extent of power conservation achieved varies depending on the platform.  
-    
-    - It is recommended that this API be called between  
-    [commitConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-    [start]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+设置录像质量优先级。
+
+> **说明：**
+> 
+> - 默认为高录像质量，设置为功耗平衡将降低录像质量以减少功耗。实际功耗收益因平台而异。
+> 
+> - 建议该接口在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)和
+> [start](arkts-camera-camera-session-i.md#start)之间调用。
 
 **Since:** 14
 
@@ -903,12 +926,12 @@ Sets the priority level for video recording quality.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| quality | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Priority level to set. The default value is **HIGH\_\_\_ESCAPED\_UNDERSCORE\_\_\_QUALITY**. |
+| quality | [QualityPrioritization](arkts-camera-camera-qualityprioritization-e.md) | Yes | 需要设置的视频质量优先级（默认为高录像质量）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. The session has not been committed or configured. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 7400103 | Session not config. The session has not been committed or configured. |
 

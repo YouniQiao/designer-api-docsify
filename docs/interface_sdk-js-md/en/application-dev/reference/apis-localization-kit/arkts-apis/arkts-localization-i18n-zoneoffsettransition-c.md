@@ -1,6 +1,6 @@
 # ZoneOffsetTransition
 
-Provides the API for obtaining a timezone transition information.
+提供解析时区跳变规则的能力。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides the API for obtaining a timezone transition information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getMilliseconds
 
 ```TypeScript
 public getMilliseconds(): double
 ```
 
-Obtains the timestamp of the change in the time zone offset.
+获取时区跳变点的时间戳。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Obtains the timestamp of the change in the time zone offset.
 
 | Type | Description |
 | --- | --- |
-| double | Timestamp of the change in the time zone offset. |
+| double | 从1970年1月1日0时0分0秒到时区跳变点之间的毫秒数，例如：1762074000000，单位为毫秒（ms）。如果当前时区 [原始偏移量]{ |
 
 ## getOffsetAfter
 
@@ -40,7 +46,7 @@ Obtains the timestamp of the change in the time zone offset.
 public getOffsetAfter(): int
 ```
 
-Get the offset after time zone offset trasition.
+获取时区跳变后的偏移量。
 
 **Since:** 23
 
@@ -56,7 +62,7 @@ Get the offset after time zone offset trasition.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the offset after time zone offset trasition. |
+| int | 时区跳变后的偏移量，表示跳变后的时间相对于标准时间（协调世界时UTC）的时间差，单位为毫秒（ms）。 例如：-28800000表示跳变后的时间比标准时间慢28800000毫秒（8小时）。 |
 
 ## getOffsetBefore
 
@@ -64,7 +70,7 @@ Get the offset after time zone offset trasition.
 public getOffsetBefore(): int
 ```
 
-Get the offset before time zone offset trasition.
+获取时区跳变前的偏移量。
 
 **Since:** 23
 
@@ -80,5 +86,5 @@ Get the offset before time zone offset trasition.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the offset before time zone offset trasition. |
+| int | 时区跳变前的偏移量，表示跳变前的时间相对于标准时间（协调世界时UTC）的时间差，单位为毫秒（ms）。 例如：-25200000表示跳变前的时间比标准时间慢25200000毫秒（7小时）。 |
 

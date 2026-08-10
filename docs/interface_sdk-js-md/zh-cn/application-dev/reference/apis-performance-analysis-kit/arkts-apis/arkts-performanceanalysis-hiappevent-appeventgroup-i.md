@@ -1,6 +1,6 @@
 # AppEventGroup
 
-提供订阅返回的事件组的参数定义。可用于获取事件组的详细信息，事件组常在[Watcher]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的onReceive回调中使用。
+提供订阅返回的事件组的参数定义。可用于获取事件组的详细信息，事件组常在[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的onReceive回调中使用。
 
 **起始版本：** 11
 
@@ -9,6 +9,12 @@
 <!--Device-hiAppEvent-interface AppEventGroup--><!--Device-hiAppEvent-interface AppEventGroup-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
 
 ## appEventInfos
 

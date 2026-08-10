@@ -16,7 +16,7 @@ Device attach states.
 ATTACHED = 0
 ```
 
-Device attached.
+设备挂载
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Device attached.
 DETACHED = 1
 ```
 
-Device detached.
+设备卸载
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # RouteType
 
-Sets the type of page transition.
+页面转场类型。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Sets the type of page transition.
 None = 0
 ```
 
-The page is not redirected. The animation specified by **PageTransitionEnter** takes effect for page entrance, and the animation specified by **PageTransitionExit** takes effect for page exit.
+页面未重定向。如Push和Pop描述中RouteType为None的情形，即页面进场时PageTransitionEnter的转场效果生效；退场时PageTransitionExit的转场效果生效。
 
 **Since:** 7
 
@@ -34,8 +34,7 @@ The page is not redirected. The animation specified by **PageTransitionEnter** t
 Push = 1
 ```
 
-Redirects to the next page. To redirect the user from page A to page B, set **RouteType** of **PageTransitionExit**  
-to **None** or **Push** for page A and set **RouteType** of **PageTransitionEnter** to **None** or **Push** for page B.
+跳转到下一页面。PageA跳转到下一个新的界面PageB。对于PageA，指定RouteType为None或者Push的PageTransitionExit组件样式生效，对于PageB，指定RouteType为None或者Push的PageTransitionEnter组件样式生效。
 
 **Since:** 7
 
@@ -53,9 +52,7 @@ to **None** or **Push** for page A and set **RouteType** of **PageTransitionEnte
 Pop = 2
 ```
 
-Redirects to a specified page. To redirect the user from page B back to page A, set **RouteType** of  
-**PageTransitionExit** to **None** or **Pop** for page B and set **RouteType** of **PageTransitionEnter** to  
-**None** or **Pop** for page A.
+重定向指定页面。从PageB回退到之前的页面PageA。对于PageB，指定RouteType为None或者Pop的PageTransitionExit组件样式生效，对于PageA，指定RouteType为None或者Pop的PageTransitionEnter组件样式生效。
 
 **Since:** 7
 

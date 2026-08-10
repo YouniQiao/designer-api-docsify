@@ -1,6 +1,6 @@
 # ReadonlySystemEnvKey
 
-Define read-only system environment variable keys.
+定义只读的系统环境变量Key，继承自[SystemEnvKey\&lt;T\&gt;](arkts-arkui-systemenvkey-c.md)。
 
 **Inheritance/Implementation:** ReadonlySystemEnvKey extends [SystemEnvKey<T>](SystemEnvKey<T>)
 

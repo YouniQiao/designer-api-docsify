@@ -1,6 +1,6 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Encompassed message information as parameters to {@link onConsole} method.
 
 **起始版本：** 8
 
@@ -37,7 +37,7 @@ Constructor.
 | message | string | 是 | ConsoleMessage的日志输出信息。 |
 | sourceId | string | 是 | 网页源文件的路径和文件名。 |
 | lineNumber | number | 是 | ConsoleMessage的行号。 |
-| messageLevel | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | ConsoleMessage的日志级别。 |
+| messageLevel | [MessageLevel](../arkts-apis/arkts-arkweb-web-messagelevel-e.md) | 是 | ConsoleMessage的日志级别。 |
 
 ## constructor
 
@@ -127,7 +127,7 @@ getMessageLevel(): MessageLevel
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回ConsoleMessage的信息级别。 |
+| [MessageLevel](../arkts-apis/arkts-arkweb-web-messagelevel-e.md) | 返回ConsoleMessage的信息级别。 |
 
 ## getSource
 
@@ -149,7 +149,7 @@ getSource() : ConsoleMessageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回ConsoleMessage的日志来源。 |
+| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | 返回ConsoleMessage的日志来源。 |
 
 ## getSourceId
 

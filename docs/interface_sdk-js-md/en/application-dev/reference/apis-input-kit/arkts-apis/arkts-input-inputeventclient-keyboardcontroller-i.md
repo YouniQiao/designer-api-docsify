@@ -1,8 +1,8 @@
 # KeyboardController
 
-Provides the capability of simulating key operations. The simulated key operation sequence must meet the following requirements:
+提供模拟按键操作的功能。模拟按键操作序列必须满足以下要求：
 
-1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and has not been released.2. A key can only be released after it has been pressed.3. A maximum of five keys can be pressed and held simultaneously.
+1. 按键只能在抬起状态下被按下，或者在该按键是最近按下的按键且未抬起的情况下被按下。2. 按键只能在被按下后才能抬起。3. 最多可以同时按下并保持五个按键。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Provides the capability of simulating key operations. The simulated key operatio
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## pressKey
 
 ```TypeScript
 pressKey(keyCode: KeyCode): Promise<void>
 ```
 
-Presses a key. This API uses a promise to return the result.
+按下按键。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -36,21 +42,54 @@ Presses a key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Key code of the key to be pressed. |
+| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | Yes | 要按下的按键键码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The key is already pressed and is not the most recently pressed key. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 4300001 | The key is already pressed and is not the most recently pressed key. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+
+## Examples
+
+```TypeScript
+import { inputEventClient, KeyCode } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputEventClient.createKeyboardController()
+            .then((keyboardController: inputEventClient.KeyboardController) => {
+              keyboardController.pressKey(KeyCode.KEYCODE_A);
+              return keyboardController;
+            })
+            .then((keyboardController: inputEventClient.KeyboardController) => {
+              keyboardController.releaseKey(KeyCode.KEYCODE_A);
+            })
+            .then(() => {
+              console.info('Succeeded in releasing key');
+            })
+            .catch((error: BusinessError) => {
+              console.error(`Failed to release key. Code: ${error.code}, message: ${error.message}.`);
+            });
+        })
+    }
+  }
+}
+```
 
 ## releaseKey
 
@@ -58,7 +97,7 @@ Presses a key. This API uses a promise to return the result.
 releaseKey(keyCode: KeyCode): Promise<void>
 ```
 
-Releases a key. This API uses a promise to return the result.
+抬起按键。使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -76,19 +115,23 @@ Releases a key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Key code of the key to be released. |
+| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | Yes | 要抬起的按键键码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The key is not pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 4300001 | The key is not pressed. |
+| 3800001 | Input service exception. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+
+## Examples
+
+For details, see [pressKey](#presskey).
 

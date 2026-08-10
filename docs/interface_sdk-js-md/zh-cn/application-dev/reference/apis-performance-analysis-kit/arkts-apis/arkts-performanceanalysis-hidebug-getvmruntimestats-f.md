@@ -1,5 +1,11 @@
 # getVMRuntimeStats
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getVMRuntimeStats
 
 ```TypeScript
@@ -20,9 +26,9 @@ function getVMRuntimeStats(): GcStats
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ϵͳGCͳ����Ϣ�� |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | ϵͳGCͳ����Ϣ�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

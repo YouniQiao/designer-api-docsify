@@ -20,7 +20,7 @@ Triggered when executing an AI session action.Enables custom implementation of A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | The session task ID.  |
-| params | string | 是 | Contextual data passed during execution (in JSON string format).  |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Callback function to notify the system of the execution result.  |
+| id | string | 是 | The session task ID. |
+| params | string | 是 | Contextual data passed during execution (in JSON string format). |
+| result | [OnAISessionCallback](../arkts-components/arkts-arkweb-onaisessioncallback-t.md) | 是 | Callback function to notify the system of the execution result. |
 

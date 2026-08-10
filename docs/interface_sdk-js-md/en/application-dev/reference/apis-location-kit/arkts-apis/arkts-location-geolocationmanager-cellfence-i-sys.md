@@ -12,6 +12,12 @@ Indicates CELL fence information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## cellInfos
 
 ```TypeScript

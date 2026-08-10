@@ -1,6 +1,6 @@
 # SignificantMotionResponse
 
-Describes the significant motion sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+有效运动传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** SignificantMotionResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the significant motion sensor data. It extends from [Response]\_\_\_JS
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## scalar
 
 ```TypeScript
 scalar: double
 ```
 
-Intensity of a motion. This parameter specifies whether a device has a significant motion on three physical axes(X, Y, and Z). The value **1** is reported when the device has a significant motion.
+表示剧烈运动程度。取值范围：1（检测到有效运动），表示设备在三个物理轴（x、y和z）上存在大幅度运动时上报为1。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

@@ -1,6 +1,10 @@
 # GetImagePropertyOptions
 
-Describes the image properties.
+表示查询图片属性的索引。
+
+> **说明：**
+> 
+> [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)代替。
 
 **Since:** 7
 
@@ -14,13 +18,19 @@ Describes the image properties.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## defaultValue
 
 ```TypeScript
 defaultValue?: string
 ```
 
-Default property value. The default value is null.
+默认属性值。默认值为空。
 
 **Type:** string
 
@@ -42,7 +52,7 @@ Default property value. The default value is null.
 index?: number
 ```
 
-Index of the image. The default value is **0**.
+图片序号。默认值为0。
 
 **Type:** number
 
@@ -50,7 +60,7 @@ Index of the image. The default value is **0**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Deprecated since:** 11  
+**Deprecated since:** 11
 
 **Substitutes:** [image.ImagePropertyOptions#index](arkts-image-image-imagepropertyoptions-i.md#index)
 

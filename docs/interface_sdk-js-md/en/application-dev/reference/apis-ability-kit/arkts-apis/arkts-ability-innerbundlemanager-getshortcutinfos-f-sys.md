@@ -1,17 +1,24 @@
 # getShortcutInfos (System API)
 
+## Modules to Import
+
+```TypeScript
+import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## getShortcutInfos
 
 ```TypeScript
 function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<ShortcutInfo>>): void
 ```
 
-Obtains an array of the shortcut information based on a given bundle name. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
-    [getShortcutInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+根据给定的Bundle名称获取快捷方式信息，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo)
+> 替代。
 
 **Since:** 8
 
@@ -33,8 +40,8 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;ShortcutInfo&gt;&gt; | Yes | Callback used to return an array of the shortcut information. |
+| bundleName | string | Yes | 要查询的应用Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)&gt;&gt; | Yes | 程序启动作为入参的回调函数，返回快捷方式信息。 |
 
 
 ## getShortcutInfos
@@ -43,12 +50,13 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>
 ```
 
-Obtains an array of the shortcut information based on a given bundle name. This API uses a promise to return the result.
-    **NOTE**  
-    
-    This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
-    [getShortcutInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+根据给定的Bundle名称获取快捷方式信息，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo)
+> 替代。
 
 **Since:** 8
 
@@ -70,11 +78,11 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 要查询的应用Bundle名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise used to return an array of the shortcut information. |
+| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)&gt;&gt; | Promise形式返回快捷方式信息。 |
 

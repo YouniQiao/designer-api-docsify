@@ -1,6 +1,6 @@
 # UIAbility
 
-Application component that has the UI. It provides lifecycle callbacks such as component creation, destruction, and foreground/background switching, and supports background communication.
+表示包含UI界面的应用组件，提供组件创建、销毁、前后台切换等生命周期回调，同时也具备后台通信能力。
 
 **Inheritance/Implementation:** UIAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md)
 
@@ -12,18 +12,22 @@ Application component that has the UI. It provides lifecycle callbacks such as c
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## Modules to Import
+
+```TypeScript
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## onBackPressed
 
 ```TypeScript
 onBackPressed(): boolean
 ```
 
-Called when an operation of going back to the previous page is triggered on this UIAbility. The return value determines whether to destroy the UIAbility instance.
+UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回值决定是否销毁UIAbility。
 
-- When the target SDK version is earlier than 12, the default return value is **false**, indicating that the  
-UIAbility will be destroyed.  
-- When the target SDK version is 12 or later, the default return value is **true**, indicating that the UIAbility  
-will be moved to the background and will not be destroyed.
+- 当targetSdkVersion&lt;12时，默认返回值为false，会销毁UIAbility。  
+- 当targetSdkVersion&gt;=12时，默认返回值为true，会将UIAbility移动到后台不销毁。
 
 **Since:** 10
 
@@ -41,9 +45,9 @@ will be moved to the background and will not be destroyed.
 
 | Type | Description |
 | --- | --- |
-| boolean | The value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means that the UIAbility instance will be moved to the background and will not be destroyed, and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means that the UIAbility instance will be destroyed. |
+| boolean | The value &lt;code&gt;true&lt;/code&gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and &lt;code&gt;false&lt;/code&gt; means that the UIAbility instance will be destroyed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -61,9 +65,9 @@ export default class EntryAbility extends UIAbility {
 onBackground(): void
 ```
 
-Called when the application transitions from the foreground to the background. You can release resources when the UI is no longer visible, for example, stopping location services, within this callback.
+当应用从前台转入到后台时，系统触发该回调。开发者可在该回调中实现UI不可见时的资源释放操作，如停止定位功能等。
 
-This API returns the result synchronously and does not support asynchronous callback.
+同步接口，不支持异步回调。
 
 **Since:** 9
 
@@ -77,7 +81,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -97,23 +101,21 @@ export default class MyUIAbility extends UIAbility {
 onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult
 ```
 
-Callback invoked to return the collaboration result in multi-device collaboration scenarios.
-    **NOTE**  
-    
-    - This callback does not support ability launch in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.  
-    
-    - When you use methods such as  
-    [startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_  
-    to start an application, you must include **FLAG\_ABILITY\_ON\_COLLABORATE** in  
-    [Flags]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ in the Want object.  
-    
-    - During a  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, this  
-    callback must be invoked before [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ or after  
-    [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_. During a  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_, this  
-    callback must be invoked before [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_.
+UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。
+
+> **说明：**
+> 
+> - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。
+> 
+> - 通过
+> [startAbility](arkts-ability-uiabilitycontext-c.md#startability)
+> 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md)为
+> FLAG_ABILITY_ON_COLLABORATE。
+> 
+> - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在
+> [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)前或[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)后调用；
+> [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在
+> [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)前调用。
 
 **Since:** 18
 
@@ -129,15 +131,15 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.CollaborateResult | Whether the coordinator accepts the collaboration result. |
+| AbilityConstant.CollaborateResult | 协同方是否接受协同的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
@@ -155,23 +157,21 @@ export default class MyAbility extends UIAbility {
 onCollaborate(wantParam: Record<string, RecordData>): AbilityConstant.CollaborateResult
 ```
 
-Callback invoked to return the collaboration result in multi-device collaboration scenarios.
-    **NOTE**  
-    
-    - This callback does not support ability launch in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.  
-    
-    - When you use methods such as  
-    [startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_  
-    to start an application, you must include **FLAG\_ABILITY\_ON\_COLLABORATE** in  
-    [Flags]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ in the Want object.  
-    
-    - During a  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, this  
-    callback must be invoked before [onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ or after  
-    [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_. During a  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_, this  
-    callback must be invoked before [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_.
+UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。
+
+> **说明：**
+> 
+> - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。
+> 
+> - 通过
+> [startAbility](arkts-ability-uiabilitycontext-c.md#startability)
+> 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md)为
+> FLAG_ABILITY_ON_COLLABORATE。
+> 
+> - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在
+> [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)前或[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)后调用；
+> [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在
+> [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)前调用。
 
 **Since:** 23
 
@@ -187,13 +187,13 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.CollaborateResult | Whether the coordinator accepts the collaboration result. |
+| AbilityConstant.CollaborateResult | 协同方是否接受协同的结果。 |
 
 ## onContinue
 
@@ -202,11 +202,11 @@ onContinue(wantParam: Record<string, Object>):
     AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>
 ```
 
-Called when a UIAbility is to be migrated across devices. You can save service data to be migrated.
-    **NOTE**  
-    
-    For versions prior to API version 18, only synchronous calls are supported. Starting from API version 18,  
-    asynchronous calls are also supported.
+当UIAbility准备跨端迁移时触发，可以保存待迁移的业务数据。
+
+> **说明：**
+> 
+> 对于API version 18（不含18） 之前版本仅支持同步调用，从API version 18及后续版本可支持异步调用。
 
 **Since:** 9
 
@@ -224,16 +224,16 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Data to be migrated.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 开发者通过该参数保存待迁移的数据。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.OnContinueResult | Return the result of onContinue.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 9 - 11 |
-| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | Whether the migration is accepted. The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **AGREE**: The migration is allowed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **REJECT**: The migration is rejected, for example, when an application is abnormal in **onContinue()**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **MISMATCH**: The application versions of the source and target devices do not match. The application on the source device can obtain the version of the target application from **onContinue**. If the ability continuation cannot be performed due to version mismatch, this result is returned. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ This callback comes in pairs with **onWindowStageRestore**. In ability continuation scenarios, the source UIAbility triggers **onContinue** to save custom data, and the target UIAbility triggers **onWindowStageRestore** to restore the custom data.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| AbilityConstant.OnContinueResult | Return the result of onContinue.<br>**Applicable version:** 9 - 11 |
+| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | 表示是否同意迁移的结果： &lt;br&gt;- AGREE：表示同意。 &lt;br&gt;- REJECT：表示拒绝，如应用在onContinue中异常可以返回REJECT。 &lt;br&gt;- MISMATCH：表示版本不匹配，接续源端应用可以在onContinue中获取到迁移对端应用的版本号，进行协商后，如果版本不匹配导致无法迁移，可以返回该结果。 &lt;br&gt; 该回调与onWindowStageRestore成对出现。在接续场景下，源端的UIAbility触发onContinue保存自定义数据，在目标端UIAbility触发onWindowStageRestore恢复自定义数据 。<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 The following is an example of saving data using a synchronous API during application migration:
 
@@ -278,10 +278,10 @@ export default class MyUIAbility extends UIAbility {
 onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 ```
 
-Called when a UIAbility instance is created. You can execute initialization logic (such as defining variables and loading resources) in this callback. This callback is invoked during a  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of the UIAbility.
+当UIAbility实例创建完成时，系统会触发该回调，开发者可在该回调中执行初始化逻辑（如定义变量、加载资源等）。该回调仅会在UIAbility  
+[冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时触发。
 
-This API returns the result synchronously and does not support asynchronous callback.
+同步接口，不支持异步回调。
 
 **Since:** 9
 
@@ -299,10 +299,10 @@ This API returns the result synchronously and does not support asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Data passed by the caller when launching the UIAbility. |
-| launchParam | AbilityConstant.LaunchParam | Yes | Parameters for application launch, including the reason for application launch and the reason for the last application exit. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 调用方拉起该UIAbility时传递的数据。 |
+| launchParam | AbilityConstant.LaunchParam | Yes | 应用启动参数，包含应用启动原因、应用上次退出原因等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
@@ -323,18 +323,16 @@ export default class MyUIAbility extends UIAbility {
 onDestroy(): void | Promise<void>
 ```
 
-Called when the UIAbility is destroyed (for example, when the UIAbility is terminated using the  
-[terminateSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_API). You can clear resources and save data during this lifecycle.
+当UIAbility被销毁（例如使用  
+[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)接口停止UIAbility）时，系统触发该回调。开发者可以在该生命周期中执行资源清理、数据保存等相关操作。
 
-This API returns the result synchronously or uses a promise to return the result.
-    **NOTE**  
-    
-    - Once the **onDestroy** lifecycle callback completes, the application may exit. This can interrupt any pending  
-    asynchronous operations (such as asynchronously writing data to a database), preventing them from finishing  
-    successfully. In this case, you are advised to use a promise to return the result.  
-    
-    - The callback is invoked only when the UIAbility exits gracefully. It is not invoked in cases of abnormal exits  
-    (for example, process termination due to low memory conditions).
+使用同步回调或Promise异步回调。
+
+> **说明：**
+> 
+> - 在执行完onDestroy生命周期回调后，应用可能会退出，从而导致其中的异步函数（比如异步写入数据库）未能正确执行。在此情况下，推荐使用Promise异步回调。
+> 
+> - 该回调仅在UIAbility正常退出时触发，当UIAbility异常退出（例如低内存终止进程）时，该回调将不被触发。
 
 **Since:** 9
 
@@ -348,7 +346,7 @@ This API returns the result synchronously or uses a promise to return the result
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 A synchronous callback example is as follows:
 
@@ -384,18 +382,16 @@ export default class MyUIAbility extends UIAbility {
 onDestroy(): Promise<void> | undefined
 ```
 
-Called when the UIAbility is destroyed (for example, when the UIAbility is terminated using the  
-[terminateSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_API). You can clear resources and save data during this lifecycle.
+当UIAbility被销毁（例如使用  
+[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)接口停止UIAbility）时，系统触发该回调。开发者可以在该生命周期中执行资源清理、数据保存等相关操作。
 
-This API returns the result synchronously or uses a promise to return the result.
-    **NOTE**  
-    
-    - Once the **onDestroy** lifecycle callback completes, the application may exit. This can interrupt any pending  
-    asynchronous operations (such as asynchronously writing data to a database), preventing them from finishing  
-    successfully. In this case, you are advised to use a promise to return the result.  
-    
-    - The callback is invoked only when the UIAbility exits gracefully. It is not invoked in cases of abnormal exits  
-    (for example, process termination due to low memory conditions).
+使用同步回调或Promise异步回调。
+
+> **说明：**
+> 
+> - 在执行完onDestroy生命周期回调后，应用可能会退出，从而导致其中的异步函数（比如异步写入数据库）未能正确执行。在此情况下，推荐使用Promise异步回调。
+> 
+> - 该回调仅在UIAbility正常退出时触发，当UIAbility异常退出（例如低内存终止进程）时，该回调将不被触发。
 
 **Since:** 23
 
@@ -411,7 +407,7 @@ This API returns the result synchronously or uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | No return value or a Promise object that returns no result. |
+| Promise&lt;void&gt; | 无返回结果或无返回结果的Promise对象。 |
 
 ## onDidBackground
 
@@ -419,10 +415,9 @@ This API returns the result synchronously or uses a promise to return the result
 onDidBackground(): void
 ```
 
-Called after the application has transitioned to the background. It is called after  
-[onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It can be used to release resources after the application has entered the background, for example, stopping audio playback.
+UIAbility生命周期回调，当应用从前台转到后台后触发，在[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)之后被调用。可在该回调中实现应用进入后台之后的资源释放操作，如进入后台后停止音频播放等。
 
-This API returns the result synchronously and does not support asynchronous callback.
+同步接口，不支持异步回调。
 
 **Since:** 20
 
@@ -436,7 +431,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -494,10 +489,10 @@ export default class MyUIAbility extends UIAbility {
 onDidForeground(): void
 ```
 
-Called after the application has transitioned to the foreground. It is called after  
-[onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It can be used to capture the moment when the application fully transitions to the foreground. When paired with [onWillForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.
+UIAbility生命周期回调，应用转到前台后触发，在[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)后被调用，可在该回调中实现应用切换到前台后的时间打点。如果与  
+[onWillForeground](arkts-ability-app-ability-uiability-uiability-c.md#onwillforeground)配合使用，还可以统计出从应用开始进入前台到切换至前台状态的耗时。
 
-This API returns the result synchronously and does not support asynchronous callback.
+同步接口，不支持异步回调。
 
 **Since:** 20
 
@@ -511,7 +506,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 For details, see [onWillForeground](#onwillforeground20).
 
@@ -521,7 +516,7 @@ For details, see [onWillForeground](#onwillforeground20).
 onDump(params: Array<string>): Array<string>
 ```
 
-Called when UIAbility data is dumped by running the dump command during application debugging. You can return non-sensitive information to be dumped by the UIAbility in this callback.
+应用调测场景下，通过命令行dump UIAbility数据时，系统会触发该回调。开发者可以在该回调中返回UIAbility要转储的非敏感信息。
 
 **Since:** 9
 
@@ -539,15 +534,15 @@ Called when UIAbility data is dumped by running the dump command during applicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array&lt;string&gt; | Yes | Parameters for the dump command. |
+| params | Array&lt;string&gt; | Yes | 表示dump命令参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Information returned by the dump operation. |
+| Array&lt;string&gt; | 返回的dump信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -566,9 +561,9 @@ export default class MyUIAbility extends UIAbility {
 onForeground(): void
 ```
 
-Called when the application is initially launched into the foreground or transitions from the background to the foreground. You can request necessary system resources, for example, requesting location services when the application transitions to the foreground, within this callback.
+当应用首次启动到前台或者从后台转入到前台时，系统触发该回调。开发者可在该回调中实现系统所需资源的申请，如应用转到前台时申请定位服务等。
 
-This API returns the result synchronously and does not support asynchronous callback.
+同步接口，不支持异步回调。
 
 **Since:** 9
 
@@ -582,7 +577,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -601,10 +596,11 @@ export default class MyUIAbility extends UIAbility {
 onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 ```
 
-Called when a started UIAbility instance is brought up again. If there are specific scenarios where you do not want this lifecycle callback to be triggered, you can use  
-[setOnNewWantSkipScenarios]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to set those [scenarios]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+当已经启动的UIAbility实例再次被拉起时，系统会触发该回调。若在特定场景下（参见  
+[Scenarios](arkts-ability-contextconstant-scenarios-e.md)），不需要触发该生命周期回调，可以使用  
+[setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口设置。
 
-This API returns the result synchronously and does not support asynchronous callback.
+同步接口，不支持异步回调。
 
 **Since:** 9
 
@@ -622,10 +618,10 @@ This API returns the result synchronously and does not support asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Data passed by the caller when re-launching the UIAbility. |
-| launchParam | AbilityConstant.LaunchParam | Yes | UIAbility launch parameters, including the launch reason. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 调用方再次拉起该UIAbility时传递的数据。 |
+| launchParam | AbilityConstant.LaunchParam | Yes | UIAbility启动参数，包含启动原因等。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
@@ -644,20 +640,20 @@ export default class MyUIAbility extends UIAbility {
 onPrepareToTerminate(): boolean
 ```
 
-Triggered by the system just before the UIAbility is about to close (for example, when the user clicks the close button in the top-right corner of the application window or exits from the dock or system tray), allowing for additional operations to be performed before the UIAbility is officially shut down. You can return **true** to block the current closure attempt and then manually call  
-[terminateSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually.This API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
-    **NOTE**  
-    
-    - Starting from API version 15, this callback is not executed when  
-    [UIAbility.onPrepareToTerminateAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is implemented. When  
-    [AbilityStage.onPrepareTerminationAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_  
-    or [AbilityStage.onPrepareTermination]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ is  
-    implemented, this callback is not executed if the user right-clicks the dock bar or system tray to close the  
-    UIAbility.  
-    
-    - Additionally, if the application or a third-party framework registers a listener for  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    , this callback function is not executed.
+在UIAbility即将关闭前（例如用户通过点击应用窗口右上角的关闭按钮、或者通过Dock栏/托盘右键退出应用时），系统会触发该回调，用于在UIAbility正式关闭前执行其他操作。开发者可以在该回调中返回true阻拦此次关闭，然后在合适时机主动调用  
+[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)接口关闭。例如，询问用户是否确认关闭UIAbility，再主动销毁UIAbility。该接口仅在2in1和Tablet设备中可正常执行回调，在其他设备上不执行回调。
+
+> **说明：**
+> 
+> - 从API version 15开始，当[UIAbility.onPrepareToTerminateAsync](arkts-ability-app-ability-uiability-uiability-c.md#onpreparetoterminateasync)实现时，本回调函数将不执
+> 行。当
+> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
+> 或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在
+> dock栏或系统托盘处右键点击关闭，本回调函数将不执行。
+> 
+> - 如果应用本身或者所使用的三方框架注册了
+> [window.WindowStage.on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose14)
+> 监听，本回调函数将不执行。
 
 **Since:** 10
 
@@ -677,9 +673,9 @@ Triggered by the system just before the UIAbility is about to close (for example
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to terminate the UIAbility. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means that the termination process is canceled. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means to continue terminating the UIAbility. |
+| boolean | Whether to terminate the UIAbility. &lt;br&gt;The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. &lt;br&gt;The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -718,24 +714,23 @@ export default class EntryAbility extends UIAbility {
 onPrepareToTerminateAsync(): Promise<boolean>
 ```
 
-Triggered by the system just before the UIAbility is close (for example, when the user clicks the close button in the top-right corner of the application window or exits from the dock or system tray), allowing for additional operations to be performed before the UIAbility is officially shut down.
+在UIAbility关闭前（例如用户通过点击应用窗口右上角的关闭按钮、或者通过Dock栏/托盘右键退出应用时），系统会触发该回调，用于在UIAbility正式关闭前执行其他操作。
 
-You can return **true** to block the current closure attempt and then manually call  
-[terminateSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually.Starting from API version 15, this API executes the callback normally only on 2-in-1 devices. It does not execute the callback on other devices.Starting from API version 19, this API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
-    **NOTE**  
-    
-    - When  
-    [AbilityStage.onPrepareTerminationAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    or [AbilityStage.onPrepareTermination]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is  
-    implemented, this callback is not executed if the user right-clicks the dock bar or system tray to close the  
-    UIAbility.  
-    
-    - Additionally, if the application or a third-party framework registers a listener for  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    , this callback function is not executed.  
-    
-    - If an asynchronous callback crashes, it will be handled as a timeout. If the UIAbility does not respond within  
-    10 seconds, it will be terminated forcibly.
+开发者可以在该回调中返回true阻拦此次关闭，然后在合适时机主动调用  
+[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)接口关闭。例如，询问用户是否确认关闭UIAbility，再主动销毁UIAbility。从API version 15开始，该接口仅在2in1设备中可正常执行回调，在其他设备上不执行回调。从API version 19开始，该接口在2in1和Tablet设备中可正常执行回调，在其他设备上不执行回调。
+
+> **说明：**
+> 
+> - 当
+> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
+> 或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在
+> dock栏或系统托盘处右键点击关闭，本回调函数将不执行。
+> 
+> - 如果应用本身或者所使用的三方框架注册了
+> [window.WindowStage.on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose14)
+> 监听，本回调函数将不执行。
+> 
+> - 若异步回调内发生crash，按超时处理，执行等待超过10秒未响应，UIAbility将被强制关闭。
 
 **Since:** 15
 
@@ -755,9 +750,9 @@ You can return **true** to block the current closure attempt and then manually c
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means that the termination process is canceled. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means to continue terminating the UIAbility. |
+| Promise&lt;boolean&gt; | Promise used to return the result. &lt;br&gt;The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. &lt;br&gt;The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -778,13 +773,14 @@ export default class EntryAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>): AbilityConstant.OnSaveResult
 ```
 
-This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in  
-[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ set to **SAVE\_WHEN\_ERROR**),this callback is invoked to save the UIAbility data in the case of an application fault.
-    **NOTE**  
-    
-    Starting from API version 20, this callback is not executed when  
-    [onSaveStateAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    is implemented.
+该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即  
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口中的saveOccasion参数设置为SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。
+
+> **说明：**
+> 
+> 从API version 20开始，当
+> [onSaveStateAsync](arkts-ability-app-ability-uiability-uiability-c.md#onsavestateasync)
+> 实现时，本回调函数将不执行。
 
 **Since:** 9
 
@@ -802,16 +798,16 @@ This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. W
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ when the application restarts.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| reason | AbilityConstant.StateType | Yes | 触发应用保存状态的原因，当前仅支持APP_RECOVERY（即应用故障恢复场景）。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.OnSaveResult | An object indicating the data-saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
+| AbilityConstant.OnSaveResult | 返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
@@ -831,14 +827,14 @@ export default class MyUIAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>): AbilityConstant.OnSaveResult
 ```
 
-This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in  
-[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ set to  
-**SAVE\_WHEN\_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault.
-    **NOTE**  
-    
-    Starting from API version 20, this callback is not executed when  
-    [onSaveStateAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    is implemented.
+该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即  
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口中的saveOccasion参数设置为SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。
+
+> **说明：**
+> 
+> 从API version 20开始，当
+> [onSaveStateAsync](arkts-ability-app-ability-uiability-uiability-c.md#onsavestateasync)
+> 实现时，本回调函数将不执行。
 
 **Since:** 23
 
@@ -854,14 +850,14 @@ This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. W
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ when the application restarts. |
+| reason | AbilityConstant.StateType | Yes | 触发应用保存状态的原因，当前仅支持APP_RECOVERY（即应用故障恢复场景）。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 用户自定义的应用状态数据，应用再启动时被保存在onCreate中的Want.parameters中。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.OnSaveResult | An object indicating the data-saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
+| AbilityConstant.OnSaveResult | 返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
 
 ## onSaveStateAsync
 
@@ -869,8 +865,8 @@ This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. W
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in  
-[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ set to **SAVE\_WHEN\_ERROR**),this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
+该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即  
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口中的saveOccasion参数设置为SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
 
 **Since:** 20
 
@@ -888,16 +884,16 @@ This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. W
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stateType | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently , only **APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ when the application restarts. |
+| stateType | AbilityConstant.StateType | Yes | 触发应用保存状态的原因，当前仅支持`APP_RECOVERY`（即应用故障恢复场景）。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityConstant.OnSaveResult&gt; | Promise used to return the result. An object indicating the data -saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
+| Promise&lt;AbilityConstant.OnSaveResult&gt; | Promise对象。返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
@@ -919,9 +915,8 @@ class MyUIAbility extends UIAbility {
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, RecordData>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in  
-[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ set to  
-**SAVE\_WHEN\_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault.This API uses a promise to return the result.
+该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即  
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口中的saveOccasion参数设置为SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
 
 **Since:** 23
 
@@ -937,14 +932,14 @@ This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. W
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stateType | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently , only **APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ when the application restarts. |
+| stateType | AbilityConstant.StateType | Yes | 触发应用保存状态的原因，当前仅支持`APP_RECOVERY`（即应用故障恢复场景）。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityConstant.OnSaveResult&gt; | Promise used to return the result. An object indicating the data -saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
+| Promise&lt;AbilityConstant.OnSaveResult&gt; | Promise对象。返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
 
 ## onShare
 
@@ -952,7 +947,7 @@ This API must be used with [appRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. W
 onShare(wantParam: Record<string, Object>): void
 ```
 
-Called when an atomic service is shared across devices. You can set the title, abstract, and URL of the atomic service to be shared in this callback.
+当跨端分享原子化服务时，系统触发该回调。开发者可以在该回调中设置待分享原子化服务的标题、摘要和URL等数据。
 
 **Since:** 10
 
@@ -970,9 +965,9 @@ Called when an atomic service is shared across devices. You can set the title, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Data to share.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 待分享的数据。<br>**Since:** 11 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -991,7 +986,7 @@ export default class MyUIAbility extends UIAbility {
 onShare(wantParam: Record<string, RecordData>): void
 ```
 
-Called when an atomic service is shared across devices. You can set the title, abstract, and URL of the atomic service to be shared in this callback.
+当跨端分享原子化服务时，系统触发该回调。开发者可以在该回调中设置待分享原子化服务的标题、摘要和URL等数据。
 
 **Since:** 23
 
@@ -1007,7 +1002,7 @@ Called when an atomic service is shared across devices. You can set the title, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Data to share. |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 待分享的数据。 |
 
 ## onWillBackground
 
@@ -1015,10 +1010,9 @@ Called when an atomic service is shared across devices. You can set the title, a
 onWillBackground(): void
 ```
 
-Called just when the application transitions to the background. It is called before  
-[onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It can be used to log various types of data, such as faults,statistics, security information, and user behavior that occur during application running.
+UIAbility生命周期回调，当应用从前台转到后台前触发，在[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)前被调用。可在该回调中实现数据打点，例如，打点应用运行过程中发生的故障信息、统计信息、安全信息、用户行为信息等。
 
-This API returns the result synchronously and does not support asynchronous callback.
+同步接口，不支持异步回调。
 
 **Since:** 20
 
@@ -1032,7 +1026,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1068,10 +1062,10 @@ export default class MyUIAbility extends UIAbility {
 onWillForeground(): void
 ```
 
-Called just before the application transitions to the foreground. It is called before  
-[onForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It can be used to capture the moment when the application starts to transition to the foreground. When paired with [onDidForeground]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.
+UIAbility生命周期回调，应用转到前台前触发，在[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)前被调用。可在该回调中实现采集应用开始进入前台的时间。如果与  
+[onDidForeground](arkts-ability-app-ability-uiability-uiability-c.md#ondidforeground)配合使用，还可以统计出从应用开始进入前台到切换至前台状态的耗时。
 
-This API returns the result synchronously and does not support asynchronous callback.
+同步接口，不支持异步回调。
 
 **Since:** 20
 
@@ -1085,7 +1079,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1145,7 +1139,7 @@ export default class EntryAbility extends UIAbility {
 onWindowStageCreate(windowStage: window.WindowStage): void
 ```
 
-Called when a [WindowStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance is created. You can load a page through the WindowStage instance in this callback.
+当[WindowStage](../../apis-arkui/arkts-apis/arkts-window.md/arkts-window.md)实例创建完成后，系统会触发该回调。开发者可以在该回调中通过WindowStage加载页面。
 
 **Since:** 9
 
@@ -1163,9 +1157,9 @@ Called when a [WindowStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance is cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowStage | window.WindowStage | Yes | WindowStage instance. |
+| windowStage | window.WindowStage | Yes | WindowStage实例对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1192,9 +1186,9 @@ export default class MyUIAbility extends UIAbility {
 onWindowStageDestroy(): void
 ```
 
-Called when the WindowStage instance has been destroyed. It informs applications that the WindowStage instance is no longer available for use.
+当WindowStage销毁后，系统触发该回调。该回调用于通知开发者WindowStage对象已被销毁，不能再继续使用。
 
-The callback is invoked only when the UIAbility exits gracefully. It is not invoked in cases of abnormal exits (for example, process termination due to low memory conditions).
+仅当UIAbility正常退出时会触发该回调，异常退出场景（例如低内存终止进程）不会触发该回调。
 
 **Since:** 9
 
@@ -1208,7 +1202,7 @@ The callback is invoked only when the UIAbility exits gracefully. It is not invo
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1228,14 +1222,14 @@ export default class MyUIAbility extends UIAbility {
 onWindowStageRestore(windowStage: window.WindowStage): void
 ```
 
-Called when the page stack is restored for the target UIAbility during cross-device migration.
-    **NOTE**  
-    
-    When an application is launched as a result of a migration, the **onWindowStageRestore()** lifecycle callback  
-    function, rather than **onWindowStageCreate()**, is triggered following [onCreate()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ or  
-    [onNewWant()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_. This sequence occurs for both  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ and  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+当UIAbility跨端迁移时，目标端UIAbility恢复页面栈时回调。
+
+> **说明：**
+> 
+> 在应用迁移启动时，无论是[冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)还是
+> [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)，都会在执行完
+> [onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)/[onNewWant()](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)后，触发onWindowStageRestore()生命周期函数，不
+> 执行onWindowStageCreate()生命周期函数。
 
 **Since:** 9
 
@@ -1253,9 +1247,9 @@ Called when the page stack is restored for the target UIAbility during cross-dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowStage | window.WindowStage | Yes | WindowStage instance. |
+| windowStage | window.WindowStage | Yes | WindowStage实例对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1275,7 +1269,7 @@ export default class MyUIAbility extends UIAbility {
 onWindowStageWillDestroy(windowStage: window.WindowStage): void
 ```
 
-Called when the WindowStage instance is about to be destroyed. You can cancel the listening of WindowStage events in this lifecycle.
+当WindowStage即将销毁时，系统触发该回调。开发者可以在该生命周期中取消windowStage事件的监听。
 
 **Since:** 12
 
@@ -1293,9 +1287,9 @@ Called when the WindowStage instance is about to be destroyed. You can cancel th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowStage | window.WindowStage | Yes | WindowStage instance. |
+| windowStage | window.WindowStage | Yes | WindowStage实例对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1315,9 +1309,9 @@ export default class MyUIAbility extends UIAbility {
 callee: Callee
 ```
 
-Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee),which is capable of receiving data sent from the Caller object.
+系统为UIAbility创建的后台通信对象，Callee UIAbility（被调用方）可以通过Callee对象接收Caller对象发送的数据。
 
-**Type:** Callee
+**Type:** [Callee](arkts-ability-app-ability-uiability-callee-i.md)
 
 **Since:** 9
 
@@ -1335,9 +1329,9 @@ Background communication object created by the system for the UIAbility, known a
 context: UIAbilityContext
 ```
 
-Context of the UIAbility.
+UIAbility的上下文。
 
-**Type:** UIAbilityContext
+**Type:** [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)
 
 **Since:** 9
 
@@ -1351,40 +1345,18 @@ Context of the UIAbility.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## isDestroyed
-
-```TypeScript
-isDestroyed: boolean
-```
-
-Indicates whether the UIAbility has been destroyed. The default value is **false**.
-
-After the [onDestroy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ callback is executed, this property is set to **true**.
-
-**Type:** boolean
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIAbility-isDestroyed: boolean--><!--Device-UIAbility-isDestroyed: boolean-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
 ## lastRequestWant
 
 ```TypeScript
 lastRequestWant: Want
 ```
 
-Want in the most recent request to launch the UIAbility.
+最近一次拉起UIAbility请求的Want参数。
 
-- On the first launch of a UIAbility, it is the Want parameter received in [onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-- On subsequent launches, it is the most recent Want received in [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+- 首次拉起UIAbility时，取值为[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)接收到的Want参数。  
+- 重复拉起UIAbility时，取值为[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)最近一次接收到的Want参数。
 
-**Type:** Want
+**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 9
 
@@ -1404,10 +1376,10 @@ Want in the most recent request to launch the UIAbility.
 launchWant: Want
 ```
 
-Want in the request used to  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ the UIAbility. The value is the Want received in [onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+UIAbility[冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时接收到的Want参数，取值为  
+[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)接收到的Want参数。
 
-**Type:** Want
+**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 9
 
@@ -1427,8 +1399,7 @@ Want in the request used to
 specifiedId?: string
 ```
 
-Custom UIAbility ID. This parameter is available only when the UIAbility launch mode is set to  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+仅当UIAbility启动模式为[specified](../../../application-models/uiability-launch-type.md#specified启动模式)时存在，取值为开发者自定义的UIAbility标识。
 
 **Type:** string
 

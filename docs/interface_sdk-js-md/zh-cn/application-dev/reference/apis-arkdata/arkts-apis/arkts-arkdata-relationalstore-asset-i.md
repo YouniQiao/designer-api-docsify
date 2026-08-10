@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## createTime
 
 ```TypeScript
@@ -106,9 +112,9 @@ size: string
 status?: AssetStatus
 ```
 
-资产的状态，默认值为ASSET\_NORMAL。
+资产的状态，默认值为ASSET_NORMAL。
 
-**类型：** AssetStatus
+**类型：** [AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md)
 
 **起始版本：** 10
 

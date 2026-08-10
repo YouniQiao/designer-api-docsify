@@ -6,7 +6,7 @@
 declare function fsync(fd: number): Promise<void>
 ```
 
-Synchronizes a file. This API uses a promise to return the result.
+同步文件数据，使用Promise异步回调。
 
 **Since:** 7
 
@@ -24,13 +24,13 @@ Synchronizes a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to synchronize. |
+| fd | number | Yes | 待同步文件的文件描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 
 ## fsync
@@ -39,7 +39,7 @@ Synchronizes a file. This API uses a promise to return the result.
 declare function fsync(fd: number, callback: AsyncCallback<void>): void
 ```
 
-Synchronizes a file. This API uses an asynchronous callback to return the result.
+同步文件数据，使用callback异步回调。
 
 **Since:** 7
 
@@ -57,6 +57,6 @@ Synchronizes a file. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to synchronize. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the file is synchronized in asynchronous mode. |
+| fd | number | Yes | 待同步文件的文件描述符。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步将文件数据同步之后的回调。 |
 

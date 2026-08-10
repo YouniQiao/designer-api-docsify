@@ -4,7 +4,7 @@
 declare type ItemGeneratorFunc<T> = (item: T, index: int) => void
 ```
 
-Defines item generator function.
+Define item generator function.
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ Defines item generator function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | item in an array  |
-| index | int | Yes | index corresponding to an array item.  |
+| item | T | Yes | item in an array |
+| index | int | Yes | index corresponding to an array item. 取值限定为整数。 |
 

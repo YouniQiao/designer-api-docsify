@@ -1,14 +1,14 @@
 # Set
 
-A non-linear data structure.
-    **NOTE**  
-    
-    - This module can be imported only to ArkTS files (with the file name extension .ets).  
-    This section uses the following to identify the use of generics:
+一种存储唯一值的非线性数据结构，能够高效地进行元素存在性检测和去重操作。
 
-- T: type, which can be any of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.  
-**Decorator**: \@Sendable
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> 本节使用以下标识来表示泛型的使用：
+
+- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。  
+**装饰器类型：** \@Sendable
 
 **Since:** 12
 
@@ -20,13 +20,19 @@ A non-linear data structure.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { collections } from 'kits/@kit.ArkTS';
+```
+
 ## [Symbol.iterator]
 
 ```TypeScript
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-Returns an iterator, each item of which is a JavaScript object.NOTE:This API cannot be used in .ets files.
+返回一个迭代器，迭代器的每一项都是一个JavaScript对象。说明：本接口不支持在.ets文件中使用。
 
 **Since:** 12
 
@@ -42,13 +48,13 @@ Returns an iterator, each item of which is a JavaScript object.NOTE:This API can
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Iterator object. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 迭代器对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
 ## add
 
@@ -56,7 +62,7 @@ Returns an iterator, each item of which is a JavaScript object.NOTE:This API can
 add(value: T): Set<T>
 ```
 
-Checks whether a value exists in this ArkTS set, and if not, adds the value to the set.
+检查此Set中是否存在指定值，如果不存在，则将该值添加到Set中。
 
 **Since:** 12
 
@@ -72,20 +78,20 @@ Checks whether a value exists in this ArkTS set, and if not, adds the value to t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | Target value. |
+| value | T | Yes | 目标值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Set&lt;T&gt; | Set object. |
+| Set&lt;T&gt; | Set对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The add method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## clear
 
@@ -93,7 +99,7 @@ Checks whether a value exists in this ArkTS set, and if not, adds the value to t
 clear(): void
 ```
 
-Removes all elements from this ArkTS set.
+删除此Set中的所有元素。
 
 **Since:** 12
 
@@ -109,8 +115,8 @@ Removes all elements from this ArkTS set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The clear method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## constructor
 
@@ -118,7 +124,7 @@ Removes all elements from this ArkTS set.
 constructor(values?: readonly T[] | null)
 ```
 
-A constructor used to create an ArkTS set.
+构造函数，用于创建ArkTS Set对象。
 
 **Since:** 12
 
@@ -134,13 +140,13 @@ A constructor used to create an ArkTS set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | readonly T[] \| null | No | Array or iterator object. The default value is **null**, indicating that an empty set is created. |
+| values | readonly T[] \| null | No | 数组或其它可迭代对象。默认值为**null**，表示创建一个空Set对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArkTS Set's constructor cannot be directly invoked. |
+| 10200012 | The ArkTS Set's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -148,7 +154,7 @@ A constructor used to create an ArkTS set.
 constructor(iterable: Iterable<T>)
 ```
 
-A constructor used to create an ArkTS set.
+创建ArkTS Set对象的构造函数。
 
 **Since:** 12
 
@@ -164,13 +170,13 @@ A constructor used to create an ArkTS set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; | Yes | Object used to construct an ArkTS set. |
+| iterable | Iterable&lt;T&gt; | Yes | 用于构造ArkTS Set的对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArkTS Set's constructor cannot be directly invoked. |
+| 10200012 | The ArkTS Set's constructor cannot be directly invoked. |
 
 ## delete
 
@@ -178,7 +184,7 @@ A constructor used to create an ArkTS set.
 delete(value: T): boolean
 ```
 
-Deletes an element from this ArkTS set.
+删除此Set中的指定元素。
 
 **Since:** 12
 
@@ -194,20 +200,20 @@ Deletes an element from this ArkTS set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | Target value. |
+| value | T | Yes | 目标值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the key is deleted; otherwise, **false** is returned. |
+| boolean | 操作结果。成功删除返回**true**，否则返回**false**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The delete method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The delete method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## entries
 
@@ -215,7 +221,7 @@ Deletes an element from this ArkTS set.
 entries(): IterableIterator<[T, T]>
 ```
 
-Returns a set iterator object that contains the key-value pair of each element in this ArkTS set.
+返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。
 
 **Since:** 12
 
@@ -231,14 +237,14 @@ Returns a set iterator object that contains the key-value pair of each element i
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[T, T]&gt; | Returns a set iterator object that contains the key-value pair of each element in this ArkTS set. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The entries method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## forEach
 
@@ -246,7 +252,7 @@ Returns a set iterator object that contains the key-value pair of each element i
 forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 ```
 
-Calls a callback function for each key-value pair in this ArkTS set.
+对此Set中的每个键值对执行一次回调函数。
 
 **Since:** 12
 
@@ -262,14 +268,14 @@ Calls a callback function for each key-value pair in this ArkTS set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | Yes | Callback function to run for each key-value pair. |
+| callbackFn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | Yes | 对每个键值对运行的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The forEach method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## has
 
@@ -277,7 +283,7 @@ Calls a callback function for each key-value pair in this ArkTS set.
 has(value: T): boolean
 ```
 
-Checks whether a value exists in this ArkTS set.
+判断此Set中是否存在指定值。
 
 **Since:** 12
 
@@ -293,20 +299,20 @@ Checks whether a value exists in this ArkTS set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | Target key. |
+| value | T | Yes | 目标键。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the value exists; otherwise, **false** is returned. |
+| boolean | 检查结果。如果存在指定元素，则返回**true**，否则返回**false**。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The has method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## keys
 
@@ -314,7 +320,7 @@ Checks whether a value exists in this ArkTS set.
 keys(): IterableIterator<T>
 ```
 
-Returns a set iterator object that contains the key of each element in this ArkTS set.
+返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。
 
 **Since:** 12
 
@@ -330,14 +336,14 @@ Returns a set iterator object that contains the key of each element in this ArkT
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Returns a set iterator object that contains the key of each element in this ArkTS set. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The keys method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## values
 
@@ -345,7 +351,7 @@ Returns a set iterator object that contains the key of each element in this ArkT
 values(): IterableIterator<T>
 ```
 
-Returns a set iterator object that contains the value of each element in this ArkTS set.
+返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。
 
 **Since:** 12
 
@@ -361,14 +367,14 @@ Returns a set iterator object that contains the value of each element in this Ar
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Returns a set iterator object that contains the value of each element in this ArkTS set. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound with non-sendable. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| 10200011 | The values method cannot be bound with non-sendable. |
+| 10200201 | Concurrent modification error. |
 
 ## size
 
@@ -376,7 +382,7 @@ Returns a set iterator object that contains the value of each element in this Ar
 readonly size: number
 ```
 
-Number of elements in a set.
+Set的元素个数。
 
 **Type:** number
 

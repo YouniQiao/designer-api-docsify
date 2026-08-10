@@ -10,6 +10,12 @@ Define parameters for the proxy connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## address
 
 ```TypeScript
@@ -18,7 +24,7 @@ address: NetAddress
 
 Proxy server address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 18
 
@@ -54,7 +60,7 @@ type: ProxyTypes
 
 Proxy types.
 
-**Type:** ProxyTypes
+**Type:** [ProxyTypes](arkts-network-socket-proxytypes-e.md)
 
 **Since:** 18
 

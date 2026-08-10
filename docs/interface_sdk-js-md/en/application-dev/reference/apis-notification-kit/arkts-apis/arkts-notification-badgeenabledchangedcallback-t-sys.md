@@ -4,8 +4,7 @@
 export type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
 ```
 
-Defines a callback function to listen for the enabling state changes of the application badge.type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =  
-    void
+type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void注册应用角标使能状态变化的回调函数类型。
 
 **Since:** 23
 
@@ -23,5 +22,5 @@ Defines a callback function to listen for the enabling state changes of the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to return the listened badge enabling state.  |
+| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscribe-enablednotificationcallbackdata-t-sys.md) | Yes | 回调返回监听到的角标使能状态信息。 |
 

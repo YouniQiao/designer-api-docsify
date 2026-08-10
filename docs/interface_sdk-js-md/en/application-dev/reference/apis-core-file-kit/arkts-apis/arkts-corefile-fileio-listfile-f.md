@@ -1,5 +1,11 @@
 # listFile
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## listFile
 
 ```TypeScript
@@ -9,10 +15,9 @@ function listFile(
 ): Promise<string[]>
 ```
 
-Lists the names of all files and directories in the current directory. A file name array is returned, which can be filtered by file name or file name extension. This API uses a promise to return the result.
+默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用Promise异步回调。
 
-This API supports recursively listing the relative paths of all files by setting **recursion** in  
-**ListFileOptions**. The relative path starts with a slash (/).
+可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **Since:** 23
 
@@ -26,24 +31,24 @@ This API supports recursively listing the relative paths of all files by setting
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for filtering files. The files are not filtered by default. |
+| path | string | Yes | 目录的应用沙箱路径。 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | 文件过滤选项。默认不进行过滤。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise used to return the file name array, which is encoded in UTF-8 format by default. |
+| Promise&lt;string[]&gt; | Promise对象，返回文件名数组，默认以'utf-8'编码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900018 | Not a directory |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## listFile
@@ -52,7 +57,7 @@ This API supports recursively listing the relative paths of all files by setting
 function listFile(path: string, callback: AsyncCallback<string[]>): void
 ```
 
-Lists the names of all files and directories in the current path. A file name array is returned. This API uses an asynchronous callback to return the result.
+默认列出当前目录下所有文件名和目录名，返回文件名数组。使用callback异步回调。
 
 **Since:** 23
 
@@ -66,18 +71,18 @@ Lists the names of all files and directories in the current path. A file name ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | Yes | Callback used to return the file name array, which is encoded in UTF-8 format by default. |
+| path | string | Yes | 目录的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | 回调函数，返回文件名数组，默认以'utf-8'编码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900018 | Not a directory |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## listFile
@@ -90,10 +95,9 @@ function listFile(
 ): void
 ```
 
-Lists the names of all files and directories in the current directory. A file name array is returned, which can be filtered by file name or file name extension. This API uses an asynchronous callback to return the result.
+默认列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。使用callback异步回调。
 
-This API supports recursively listing the relative paths of all files by setting **recursion** in  
-**ListFileOptions**. The relative path starts with a slash (/).
+可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **Since:** 23
 
@@ -107,17 +111,17 @@ This API supports recursively listing the relative paths of all files by setting
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for filtering files. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | Yes | Callback used to return the file name array, which is encoded in UTF-8 format by default. |
+| path | string | Yes | 目录的应用沙箱路径。 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | Yes | 文件过滤选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | 回调函数，返回文件名数组，默认以'utf-8'编码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900018 | Not a directory |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 

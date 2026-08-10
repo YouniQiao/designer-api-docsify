@@ -1,10 +1,10 @@
-# @ohos.enterprise.adminManager(Administrator Permission Management)
+# @ohos.enterprise.adminManager(admin权限管理)
 
-The **adminManager** module provides administrator permission management capabilities for enterprise MDM applications, including enabling or disabling administrator permissions, subscribing to events, delegating applications, and granting permissions.
-    **NOTE**  
-    
-    The APIs of this module can be called only by a device administrator application. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+本模块为企业MDM应用提供admin权限管理能力，包括激活/解除激活admin权限、事件订阅、委托授权等。
+
+> **说明：**
+> 
+> 本模块接口仅对设备管理应用开放，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **Since:** 12
 
@@ -14,64 +14,70 @@ The **adminManager** module provides administrator permission management capabil
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { adminManager } from 'kits/@kit.MDMKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [authorizeAdmin](arkts-mdm-adminmanager-authorizeadmin-f.md#authorizeadmin) | Authorizes the administrator permission to a specified application. This API uses an asynchronous callback to return the result. |
-| [authorizeAdmin](arkts-mdm-adminmanager-authorizeadmin-f.md#authorizeadmin-1) | Authorizes the administrator permission to a specified application. This API uses a promise to return the result. |
-| [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin) | Disables a common device administrator application for the current user. This API uses an asynchronous callback to return the result. |
-| [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin-1) | Disables a common device administrator application for the user specified by **userId**. This API uses an asynchronous callback to return the result. |
-| [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin-2) | Disables a device administrator application for the specified user. This API uses a promise to return the result.After this API is called successfully, the specified device administrator application will be deactivated and no longer have the device management capability. |
-| [disableDeviceAdmin](arkts-mdm-adminmanager-disabledeviceadmin-f.md#disabledeviceadmin) | Disables a \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ application by a  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ application. This API uses a promise to return the result. After this API is called successfully, the specified device administrator application is disabled and no longer has the device management capability. This API can be called only by super device administrator applications. |
-| [disableSuperAdmin](arkts-mdm-adminmanager-disablesuperadmin-f.md#disablesuperadmin) | Disables a super device administrator application based on **bundleName**. This API uses an asynchronous callback to return the result. |
-| [disableSuperAdmin](arkts-mdm-adminmanager-disablesuperadmin-f.md#disablesuperadmin-1) | Disables a super device administrator application based on **bundleName**. This API uses a promise to return the result. |
-| [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin) | Enables a device administrator application. The super device administrator application can be enabled only for the first user (u100). After the application is enabled, it cannot be uninstalled. Its  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ component will automatically start upon device startup and user switching. This API uses an asynchronous callback to return the result. |
-| [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin-1) | Enables a device administrator application for a user (specified by **userId**). The super device administrator application can be enabled only for the first user (u100). This API uses an asynchronous callback to return the result. |
-| [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin-2) | Enables the device administrator application for the current or specified user. The super device administrator application can be enabled only for the first user (u100). This API uses a promise to return the result. |
-| [enableDeviceAdmin](arkts-mdm-adminmanager-enabledeviceadmin-f.md#enabledeviceadmin) | Enables a \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ application by a  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ application. This API uses a promise to return the result. After the API is successfully called, the specified DA application is enabled and granted device management capabilities. This API can be called only by super device administrator applications. |
-| [enableSelfDeviceAdmin](arkts-mdm-adminmanager-enableselfdeviceadmin-f.md#enableselfdeviceadmin) | Allows an MDM application to enable itself in scenarios where it is not pre-enabled on the enterprise device. This API supports enablement of the MDM application itself only, and cannot be used to enable other MDM applications.The supported enablement types include super device administrator application and normal device administrator application. |
-| [getAdmins](arkts-mdm-adminmanager-getadmins-f.md#getadmins) | Queries all device administrator applications of the current user. This API uses a promise to return the result. |
-| [getDelegatedBundleNames](arkts-mdm-adminmanager-getdelegatedbundlenames-f.md#getdelegatedbundlenames) | Queries the delegated applications that can access a delegation policy and output the list of delegated applications. |
-| [getDelegatedPolicies](arkts-mdm-adminmanager-getdelegatedpolicies-f.md#getdelegatedpolicies) | Queries the list of policies that can be accessed by the delegated application. |
-| [getEnterpriseInfo](arkts-mdm-adminmanager-getenterpriseinfo-f.md#getenterpriseinfo) | Obtains the enterprise information of the device administrator application. This API uses an asynchronous callback to return the result. |
-| [getEnterpriseInfo](arkts-mdm-adminmanager-getenterpriseinfo-f.md#getenterpriseinfo-1) | Obtains the enterprise information of the device administrator application. This API uses a promise to return the result. |
-| [getEnterpriseManagedTips](arkts-mdm-adminmanager-getenterprisemanagedtips-f.md#getenterprisemanagedtips) | Gets enterprise message tips. |
-| [getSuperAdmin](arkts-mdm-adminmanager-getsuperadmin-f.md#getsuperadmin) | Queries the super device administrator application of this first user (u100). This API uses a promise to return the result. |
-| [isAdminEnabled](arkts-mdm-adminmanager-isadminenabled-f.md#isadminenabled) | Checks whether a device administrator application of the current user is enabled. This API uses an asynchronous callback to return the result. |
-| [isAdminEnabled](arkts-mdm-adminmanager-isadminenabled-f.md#isadminenabled-1) | Checks whether a device administrator application of the specified user is enabled. This API uses an asynchronous callback to return the result. |
-| [isAdminEnabled](arkts-mdm-adminmanager-isadminenabled-f.md#isadminenabled-2) | Checks whether a device administrator application of the current or specified user is enabled. This API uses a promise to return the result. |
-| [isByodAdmin](arkts-mdm-adminmanager-isbyodadmin-f.md#isbyodadmin) | Checks whether the current application is activated as a BYOD device administrator application based on the  **EnterpriseAdminExtensionAbility** component. |
-| [isSuperAdmin](arkts-mdm-adminmanager-issuperadmin-f.md#issuperadmin) | Checks whether the super device administrator application of the first user (u100) is enabled based on  **bundleName**. This API uses an asynchronous callback to return the result. |
-| [isSuperAdmin](arkts-mdm-adminmanager-issuperadmin-f.md#issuperadmin-1) | Checks whether the super device administrator application of the first user (u100) is enabled based on  **bundleName**. This API uses a promise to return the result. |
-| [replaceSuperAdmin](arkts-mdm-adminmanager-replacesuperadmin-f.md#replacesuperadmin) | Replaces a specified application with a super device administrator application. |
-| [setAdminRunningMode](arkts-mdm-adminmanager-setadminrunningmode-f.md#setadminrunningmode) | Sets the running mode of the device administrator application. |
-| [setDelegatedPolicies](arkts-mdm-adminmanager-setdelegatedpolicies-f.md#setdelegatedpolicies) | Delegates other applications to set device management policies. The applications must request the permissions required. |
-| [setDelegatedPolicies](arkts-mdm-adminmanager-setdelegatedpolicies-f.md#setdelegatedpolicies-1) | Delegates other applications to set device management policies. The applications must request the permissions required. |
-| [setEnterpriseInfo](arkts-mdm-adminmanager-setenterpriseinfo-f.md#setenterpriseinfo) | Sets the enterprise information of the device administrator application. This API uses an asynchronous callback to return the result. |
-| [setEnterpriseInfo](arkts-mdm-adminmanager-setenterpriseinfo-f.md#setenterpriseinfo-1) | Sets the enterprise information of the device administrator application. This API uses a promise to return the result. |
-| [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision) | Enables the device administrator application to open a page for the BYOD administrator to perform activation. |
-| [subscribeManagedEvent](arkts-mdm-adminmanager-subscribemanagedevent-f.md#subscribemanagedevent) | Subscribes to system management events. This API uses an asynchronous callback to return the result. |
-| [subscribeManagedEvent](arkts-mdm-adminmanager-subscribemanagedevent-f.md#subscribemanagedevent-1) | Subscribes to system management events. This API uses a promise to return the result. |
-| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync) | Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs.  Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED\_\_\_ESCAPED\_UNDERSCORE\_\_\_EVENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_POLICIES\_\_\_ESCAPED\_UNDERSCORE\_\_\_CHANGED]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ event. |
-| [unsubscribeManagedEvent](arkts-mdm-adminmanager-unsubscribemanagedevent-f.md#unsubscribemanagedevent) | Unsubscribes from system management events. This API uses an asynchronous callback to return the result. |
-| [unsubscribeManagedEvent](arkts-mdm-adminmanager-unsubscribemanagedevent-f.md#unsubscribemanagedevent-1) | Unsubscribes from system management events. This API uses a promise to return the result. |
-| [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md#unsubscribemanagedeventsync) | Unsubscribes from system management events. After the API is successfully called, no notifications for the unsubscribed system management events will be received. |
+| [authorizeAdmin](arkts-mdm-adminmanager-authorizeadmin-f.md#authorizeadmin) | 授予指定应用管理员权限。使用callback异步回调。 |
+| [authorizeAdmin](arkts-mdm-adminmanager-authorizeadmin-f.md#authorizeadmin-1) | 授予指定应用管理员权限。使用Promise异步回调。 |
+| [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin) | 将当前用户下指定的普通设备管理应用解除激活。使用callback异步回调。 |
+| [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin-1) | 将指定用户（通过userId指定）下指定的普通管理应用解除激活。使用callback异步回调。 |
+| [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md#disableadmin-2) | 解除激活指定用户的设备管理应用。使用Promise异步回调。调用成功后，指定的设备管理应用将被解除激活，不再具备设备管理能力。 |
+| [disableDeviceAdmin](arkts-mdm-adminmanager-disabledeviceadmin-f.md#disabledeviceadmin) | [SDA](../../../mdm/mdm-kit-term.md#super-device-admin-sda超级设备管理员)应用通过该接口可以解除激活其他  [DA](../../../mdm/mdm-kit-term.md#device-admin-da普通设备管理员)应用，使用Promise异步回调。调用成功后，指定的DA应用将被解除激活，不再具备设备管理能力。该接口仅支持超级设备管理应用调用。 |
+| [disableSuperAdmin](arkts-mdm-adminmanager-disablesuperadmin-f.md#disablesuperadmin) | 根据bundleName将超级设备管理应用解除激活。使用callback异步回调。 |
+| [disableSuperAdmin](arkts-mdm-adminmanager-disablesuperadmin-f.md#disablesuperadmin-1) | 根据bundleName将超级设备管理应用解除激活。使用Promise异步回调。 |
+| [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin) | 激活指定的设备管理应用。超级设备管理应用仅在首用户（u100）下可激活。激活后，应用不可卸载，其  [企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)组件将开机自启并在用户切换后自启。使用callback异步回调。 |
+| [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin-1) | 激活指定用户（通过userId指定）下指定的设备管理应用，其中超级管理应用仅能在首用户（u100）下被激活。使用callback异步回调。 |
+| [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin-2) | 激活当前/指定用户下指定的设备管理应用，其中超级管理应用仅能在首用户（u100）下被激活。使用Promise异步回调。 |
+| [enableDeviceAdmin](arkts-mdm-adminmanager-enabledeviceadmin-f.md#enabledeviceadmin) | [SDA](../../../mdm/mdm-kit-term.md#super-device-admin-sda超级设备管理员)应用通过该接口可以激活其他  [DA](../../../mdm/mdm-kit-term.md#device-admin-da普通设备管理员)应用，使用Promise异步回调。调用成功后，指定的DA应用将被激活并具备设备管理能力。该接口仅支持超级设备管理应用调用。 |
+| [enableSelfDeviceAdmin](arkts-mdm-adminmanager-enableselfdeviceadmin-f.md#enableselfdeviceadmin) | 在企业设备中，MDM应用没有预置激活的场景下，MDM应用可以通过该接口实现自激活。该接口仅支持激活MDM应用自身，不支持激活其他MDM应用；支持的激活类型包括超级设备管理应用和普通设备管理应用。 |
+| [getAdmins](arkts-mdm-adminmanager-getadmins-f.md#getadmins) | 查询当前用户下的所有设备管理应用。使用Promise异步回调。 |
+| [getDelegatedBundleNames](arkts-mdm-adminmanager-getdelegatedbundlenames-f.md#getdelegatedbundlenames) | 查询可以访问某个委托策略的被委托应用，输出被委托应用列表。 |
+| [getDelegatedPolicies](arkts-mdm-adminmanager-getdelegatedpolicies-f.md#getdelegatedpolicies) | 查询被委托应用可访问的策略列表。 |
+| [getEnterpriseInfo](arkts-mdm-adminmanager-getenterpriseinfo-f.md#getenterpriseinfo) | 获取设备管理应用的企业信息。使用callback异步回调。 |
+| [getEnterpriseInfo](arkts-mdm-adminmanager-getenterpriseinfo-f.md#getenterpriseinfo-1) | 获取设备管理应用的企业信息，使用Promise异步回调。 |
+| [getEnterpriseManagedTips](arkts-mdm-adminmanager-getenterprisemanagedtips-f.md#getenterprisemanagedtips) | 查询企业定制信息 |
+| [getSuperAdmin](arkts-mdm-adminmanager-getsuperadmin-f.md#getsuperadmin) | 查询首用户（u100）下的超级设备管理应用。使用Promise异步回调。 |
+| [isAdminEnabled](arkts-mdm-adminmanager-isadminenabled-f.md#isadminenabled) | 查询当前用户下指定的设备管理应用是否被激活。使用callback异步回调。 |
+| [isAdminEnabled](arkts-mdm-adminmanager-isadminenabled-f.md#isadminenabled-1) | 查询指定用户（通过userId指定）下指定的设备管理应用是否被激活。使用callback异步回调。 |
+| [isAdminEnabled](arkts-mdm-adminmanager-isadminenabled-f.md#isadminenabled-2) | 查询当前/指定用户下指定的设备管理应用是否被激活。使用Promise异步回调。 |
+| [isByodAdmin](arkts-mdm-adminmanager-isbyodadmin-f.md#isbyodadmin) | 根据企业设备管理扩展组件查询当前应用是否被激活为BYOD设备管理应用。 |
+| [isSuperAdmin](arkts-mdm-adminmanager-issuperadmin-f.md#issuperadmin) | 根据bundleName查询首用户（u100）下的超级设备管理应用是否被激活。使用callback异步回调。 |
+| [isSuperAdmin](arkts-mdm-adminmanager-issuperadmin-f.md#issuperadmin-1) | 根据bundleName查询首用户（u100）下的超级设备管理应用是否被激活。使用Promise异步回调。 |
+| [replaceSuperAdmin](arkts-mdm-adminmanager-replacesuperadmin-f.md#replacesuperadmin) | 将指定应用替换成超级设备管理应用。 |
+| [setAdminRunningMode](arkts-mdm-adminmanager-setadminrunningmode-f.md#setadminrunningmode) | 设置设备管理应用的运行模式。 |
+| [setDelegatedPolicies](arkts-mdm-adminmanager-setdelegatedpolicies-f.md#setdelegatedpolicies) | 委托其他应用来设置设备的管控策略。被委托的其他应用需申请委托策略对应接口所需权限。 |
+| [setDelegatedPolicies](arkts-mdm-adminmanager-setdelegatedpolicies-f.md#setdelegatedpolicies-1) | 委托其他应用来设置设备的管控策略。被委托的其他应用需申请委托策略对应接口所需权限。 |
+| [setEnterpriseInfo](arkts-mdm-adminmanager-setenterpriseinfo-f.md#setenterpriseinfo) | 设置设备管理应用的企业信息。使用callback异步回调。 |
+| [setEnterpriseInfo](arkts-mdm-adminmanager-setenterpriseinfo-f.md#setenterpriseinfo-1) | 设置设备管理应用的企业信息。使用Promise异步回调。 |
+| [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision) | 设备管理应用拉起BYOD管理员激活页面进行激活。 |
+| [subscribeManagedEvent](arkts-mdm-adminmanager-subscribemanagedevent-f.md#subscribemanagedevent) | 订阅系统管理事件。使用callback异步回调。 |
+| [subscribeManagedEvent](arkts-mdm-adminmanager-subscribemanagedevent-f.md#subscribemanagedevent-1) | 订阅系统管理事件。使用Promise异步回调。 |
+| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync) | 订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。  从API版本26.0.0开始，非超级设备管理应用调用该接口订阅[MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md)事件时返回9200002错误码。 |
+| [unsubscribeManagedEvent](arkts-mdm-adminmanager-unsubscribemanagedevent-f.md#unsubscribemanagedevent) | 取消订阅系统管理事件。使用callback异步回调。 |
+| [unsubscribeManagedEvent](arkts-mdm-adminmanager-unsubscribemanagedevent-f.md#unsubscribemanagedevent-1) | 取消订阅系统管理事件。使用Promise异步回调。 |
+| [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md#unsubscribemanagedeventsync) | 取消订阅系统管理事件。调用成功后，将不再收到已取消订阅的系统管理事件通知。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i.md) | Represents the enterprise information of a device administrator application. |
+| [EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i.md) | 设备管理应用的企业信息。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Enumerates the types of device administrator applications. |
-| [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md) | Enumerates the system management events that can be subscribed to. |
-| [Policy](arkts-mdm-adminmanager-policy-e.md) | Defines the policy type for the trustlist or blocklist. |
-| [RunningMode](arkts-mdm-adminmanager-runningmode-e.md) | Represents the running mode of a device administrator application. |
+| [AdminType](arkts-mdm-adminmanager-admintype-e.md) | 设备管理应用的类型。 |
+| [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md) | 可订阅的系统管理事件。 |
+| [Policy](arkts-mdm-adminmanager-policy-e.md) | 允许或禁用名单的策略类型。 |
+| [RunningMode](arkts-mdm-adminmanager-runningmode-e.md) | 设备管理的运行模式。 |
 

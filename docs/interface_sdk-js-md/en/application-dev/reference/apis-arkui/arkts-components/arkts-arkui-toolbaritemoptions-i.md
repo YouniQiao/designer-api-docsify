@@ -1,6 +1,6 @@
 # ToolBarItemOptions
 
-Provides optional parameters for **ToolBarItem** configuration.
+用于配置ToolBarItem的可选参数，主要通过placement设置工具栏项在标题栏的放置位置。
 
 **Since:** 20
 
@@ -16,15 +16,15 @@ Provides optional parameters for **ToolBarItem** configuration.
 placement?: ToolBarItemPlacement
 ```
 
-Placement position of the toolbar item.
+设置工具栏项的放置位置。
 
-Default value: **ToolBarItemPlacement.TOP\_BAR\_LEADING**.
+默认值：**ToolBarItemPlacement.TOP_BAR_LEADING**。
 
-**ToolBarItemPlacement.TOP\_BAR\_LEADING**: places the item at the start of the top bar.
+**ToolBarItemPlacement.TOP_BAR_LEADING**：将工具栏项放置在对应顶部栏的开头位置。
 
-**ToolBarItemPlacement.TOP\_BAR\_TRAILING**: places the item at the end of the top bar.
+**ToolBarItemPlacement.TOP_BAR_TRAILING**：将工具栏项放置在对应顶部栏的末尾位置。
 
-**Type:** ToolBarItemPlacement
+**Type:** [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # TextAlign
 
-Enumerates the text alignment modes.
+文本对齐方式枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the text alignment modes.
 LEFT = 0
 ```
 
-Left-aligned.
+文本靠左对齐。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Left-aligned.
 RIGHT = 1
 ```
 
-Right-aligned.
+文本靠右对齐。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Right-aligned.
 CENTER = 2
 ```
 
-Center-aligned.
+文本居中对齐。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Center-aligned.
 JUSTIFY = 3
 ```
 
-Justified, which means that each line (except the last line) is stretched so that every line has equal width, and the left and right margins are straight.
+文本两侧对齐，对最后一行无效。
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ Justified, which means that each line (except the last line) is stretched so tha
 START = 4
 ```
 
-Aligned with the start position, which depends on [TextDirection]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+基于文本的方向[TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)，文本靠开头方向对齐。
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ Aligned with the start position, which depends on [TextDirection]\_\_\_JSDOC\_LI
 END = 5
 ```
 
-Aligned with the end position, which depends on [TextDirection]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+基于文本的方向[TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)，文本以结束方向对齐。
 
 **Since:** 12
 

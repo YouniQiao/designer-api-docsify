@@ -10,6 +10,12 @@ Provides interfaces to manage network policy rules.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions
@@ -101,7 +107,7 @@ Provides interfaces to manage network policy rules.
 | [NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md) | Indicate whether the application can use metered networks in background. |
 | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Uid Specifies the Internet access policy in background mode. |
 | [NetUidRule](arkts-network-policy-netuidrule-e-sys.md) | Rules whether an uid can access to a metered or non-metered network. |
-| [RemindType](arkts-network-policy-remindtype-e-sys.md) | Specify the remind type, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [RemindType](arkts-network-policy-remindtype-e-sys.md) | Specify the remind type, see {@link updateRemindPolicy}. |
 <!--DelEnd-->
 
 ### Types

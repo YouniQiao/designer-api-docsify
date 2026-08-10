@@ -1,6 +1,6 @@
 # PolyToPolyOptions
 
-Set poly to poly point options.
+多边形到多边形的映射选项。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Set poly to poly point options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## dst
 
 ```TypeScript
 dst: Array<Point>
 ```
 
-Array of point coordinates for the target polygon.
+目标点坐标。
 
 **Type:** Array&lt;Point&gt;
 
@@ -36,7 +42,11 @@ Array of point coordinates for the target polygon.
 dstIndex?: int
 ```
 
-Start index of the target polygon, which defaults to 0.
+目标坐标起始索引。
+
+默认值: src.length/2 
+
+取值范围：[0, +∞)
 
 **Type:** int
 
@@ -58,7 +68,11 @@ Start index of the target polygon, which defaults to 0.
 pointCount?: int
 ```
 
-The number of points to be used.If it is 0, it returns the identity matrix.If it is 1, it returns a translation matrix that changed before two points.If it is 2-4, it returns a transformation matrix.
+使用到的点数量。
+
+默认值: 0 
+
+取值范围：[0, +∞)
 
 **Type:** int
 
@@ -80,7 +94,7 @@ The number of points to be used.If it is 0, it returns the identity matrix.If it
 src: Array<Point>
 ```
 
-Array of point coordinates for the source polygon.
+源点坐标。
 
 **Type:** Array&lt;Point&gt;
 
@@ -100,7 +114,11 @@ Array of point coordinates for the source polygon.
 srcIndex?: int
 ```
 
-Start point index of the source polygon, which defaults to 0.
+源点坐标起始索引。
+
+默认值:0 
+
+取值范围：[0, +∞)
 
 **Type:** int
 

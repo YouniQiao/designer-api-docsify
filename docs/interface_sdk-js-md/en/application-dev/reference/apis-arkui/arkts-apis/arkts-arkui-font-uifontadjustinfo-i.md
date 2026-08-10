@@ -8,13 +8,21 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## to
 
 ```TypeScript
 to: int
 ```
 
-Font weight displayed in the app
+字体在应用中显示的weight值。
+
+可返回的值有100、400、700、900。
 
 **Type:** int
 
@@ -34,7 +42,9 @@ Font weight displayed in the app
 weight: double
 ```
 
-Original weight of the font
+字体原本的weight值。
+
+可返回的值有50、80、100、200。
 
 **Type:** double
 

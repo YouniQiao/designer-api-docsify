@@ -1,12 +1,18 @@
 # stopBLEScan
 
+## Modules to Import
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## stopBLEScan
 
 ```TypeScript
 function stopBLEScan(): void
 ```
 
-Stops BLE scanning.On API 10 and above, the permission required by this interface is changed from DISCOVER\_BLUETOOTH to ACCESS\_BLUETOOTH.
+Stops BLE scanning.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -28,13 +34,13 @@ Stops BLE scanning.On API 10 and above, the permission required by this interfac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

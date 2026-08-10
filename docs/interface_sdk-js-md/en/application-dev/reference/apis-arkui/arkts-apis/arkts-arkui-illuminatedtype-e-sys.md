@@ -1,6 +1,6 @@
 # IlluminatedType (System API)
 
-Enum of Illuminated type
+被照亮的类型枚举。
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ Enum of Illuminated type
 NONE = 0
 ```
 
-The component is not illuminated.
+组件不会被照亮。
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ The component is not illuminated.
 BORDER = 1
 ```
 
-The borders of the component can be illuminated.
+组件边缘可以被照亮。
 
 **Since:** 11
 
@@ -58,7 +58,7 @@ The borders of the component can be illuminated.
 CONTENT = 2
 ```
 
-The content of the component can be illuminated.
+组件内容可以被照亮。
 
 **Since:** 11
 
@@ -78,7 +78,7 @@ The content of the component can be illuminated.
 BORDER_CONTENT = 3
 ```
 
-The borders and content of the component can be illuminated.
+组件边缘和内容可以被照亮。
 
 **Since:** 11
 
@@ -98,7 +98,7 @@ The borders and content of the component can be illuminated.
 BLOOM_BORDER = 4
 ```
 
-The borders of the component can be illuminated, with a luminous effect applied to the borders.
+组件边缘可以被照亮，边缘带有发光效果。
 
 **Since:** 11
 
@@ -118,7 +118,7 @@ The borders of the component can be illuminated, with a luminous effect applied 
 BLOOM_BORDER_CONTENT = 5
 ```
 
-The borders and content of the component can be illuminated, with a luminous effect applied to the borders.
+组件边缘和内容可以被照亮，边缘带有发光效果。
 
 **Since:** 11
 

@@ -1,7 +1,5 @@
 # StorageStats (System API)
 
-Get the user storage statistics.
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -12,15 +10,21 @@ Get the user storage statistics.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## app
 
 ```TypeScript
 app: long
 ```
 
-The size of application.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+应用数据大小，单位为Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -38,9 +42,9 @@ The size of application.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
 audio: long
 ```
 
-The size of audio file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+音频数据大小，单位为Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -58,9 +62,9 @@ The size of audio file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
 file: long
 ```
 
-The size of other file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+文件数据大小，单位为Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -78,9 +82,9 @@ The size of other file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
 image: long
 ```
 
-The size of image file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+图像数据大小，单位为Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -98,9 +102,9 @@ The size of image file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
 total: long
 ```
 
-The total size of device.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+内置存储总空间大小，单位为Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -118,9 +122,9 @@ The total size of device.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
 video: long
 ```
 
-The size of video file.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: Byte.
+视频数据大小，单位为Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

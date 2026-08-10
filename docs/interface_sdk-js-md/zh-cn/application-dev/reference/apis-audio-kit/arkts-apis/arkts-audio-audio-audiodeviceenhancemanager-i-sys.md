@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## getSoundCardInfo
 
 ```TypeScript
@@ -40,10 +46,10 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';

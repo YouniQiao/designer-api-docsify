@@ -18,5 +18,5 @@ type AuthCallbackOnResultFunc = (result: UserAuthResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Authentication result information.  |
+| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | 是 | Authentication result information. |
 

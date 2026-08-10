@@ -10,6 +10,12 @@ This interface is used to monitor the progress of sending data.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## sendSize
 
 ```TypeScript
@@ -18,7 +24,7 @@ sendSize: int
 
 Used to specify the data size to be sent.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -38,7 +44,7 @@ totalSize: int
 
 Total number of bytes to receive.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 

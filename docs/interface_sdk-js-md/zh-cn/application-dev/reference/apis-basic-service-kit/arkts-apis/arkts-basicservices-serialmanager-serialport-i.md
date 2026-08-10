@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## deviceName
 
 ```TypeScript
@@ -36,7 +42,7 @@ portId: int
 
 端口号。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 

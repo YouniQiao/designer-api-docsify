@@ -34,13 +34,13 @@ abstract initialize(value: BadgeParamWithNumber): BadgeAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| value | [BadgeParamWithNumber](../arkts-components/arkts-arkui-badgeparamwithnumber-i.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
 
 ## initialize
 
@@ -64,11 +64,11 @@ abstract initialize(value: BadgeParamWithString): BadgeAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| value | [BadgeParamWithString](../arkts-components/arkts-arkui-badgeparamwithstring-i.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
 

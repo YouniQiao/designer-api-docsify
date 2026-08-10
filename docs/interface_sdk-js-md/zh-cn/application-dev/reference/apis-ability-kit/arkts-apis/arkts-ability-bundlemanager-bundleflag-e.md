@@ -70,7 +70,7 @@ GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002
 GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004
 ```
 
-用于获取包含ability的bundleInfo，获取的bundleInfo不包含signatureInfo、applicationInfo、extensionAbility和permission的信息。单独使用不生效，需要与GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE一起使用。
+用于获取包含ability的bundleInfo，获取的bundleInfo不包含signatureInfo、applicationInfo、extensionAbility和permission的信息。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
 **起始版本：** 9
 
@@ -88,7 +88,7 @@ GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004
 GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY = 0x00000008
 ```
 
-用于获取包含extensionAbility的bundleInfo，获取的bundleInfo不包含signatureInfo、applicationInfo、ability 和permission的信息。单独使用不生效，需要与GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE一起使用。
+用于获取包含extensionAbility的bundleInfo，获取的bundleInfo不包含signatureInfo、applicationInfo、ability 和permission的信息。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
 **起始版本：** 9
 
@@ -124,15 +124,15 @@ GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010
 GET_BUNDLE_INFO_WITH_METADATA = 0x00000020
 ```
 
-用于获取applicationInfo、moduleInfo、abilityInfo和extensionAbilityInfo中包含的metadata。单独使用不生效，它需要与GET\_BUNDLE\_INFO\_WITH\_APPLICATION、GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE、GET\_BUNDLE\_INFO\_WITH\_ABILITY、GET\_BUNDLE\_INFO\_WITH\_EXTENSION\_ABILITY配合使用，其中：
+用于获取applicationInfo、moduleInfo、abilityInfo和extensionAbilityInfo中包含的metadata。单独使用不生效，它需要与GET_BUNDLE_INFO_WITH_APPLICATION、GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY配合使用，其中：
 
--?获取applicationInfo中包含的metadata，需要与GET\_BUNDLE\_INFO\_WITH\_APPLICATION一起使用。
+-?获取applicationInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_APPLICATION一起使用。
 
--?获取moduleInfo中包含的metadata，需要与GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE一起使用。
+-?获取moduleInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
--?获取abilityInfo中包含的metadata，需要与GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE、GET\_BUNDLE\_INFO\_WITH\_ABILITY一起使用。
+-?获取abilityInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY一起使用。
 
--?获取extensionAbilityInfo中包含的metadata，需要与GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE、GET\_BUNDLE\_INFO\_WITH\_EXTENSION\_ABILITY一起使  
+-?获取extensionAbilityInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY一起使  
 用。
 
 **起始版本：** 9
@@ -187,7 +187,7 @@ GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080
 GET_BUNDLE_INFO_WITH_MENU = 0x00000100
 ```
 
-用于获取包含fileContextMenuConfig的bundleInfo。单独使用不生效，需要与GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE一起使用。
+用于获取包含fileContextMenuConfig的bundleInfo。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
 **起始版本：** 11
 
@@ -205,7 +205,7 @@ GET_BUNDLE_INFO_WITH_MENU = 0x00000100
 GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200
 ```
 
-用于获取包含routerMap的bundleInfo。单独使用不生效，需要与GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE一起使用。
+用于获取包含routerMap的bundleInfo。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
 **起始版本：** 12
 
@@ -223,7 +223,7 @@ GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200
 GET_BUNDLE_INFO_WITH_SKILL = 0x00000800
 ```
 
-用于获取包含skills的bundleInfo。单独使用不生效，需要与GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE、GET\_BUNDLE\_INFO\_WITH\_ABILITY、GET\_BUNDLE\_INFO\_WITH\_EXTENSION\_ABILITY一起使用。
+用于获取包含skills的bundleInfo。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY一起使用。
 
 **起始版本：** 12
 

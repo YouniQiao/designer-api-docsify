@@ -1,6 +1,6 @@
 # Locale
 
-Provides APIs for obtaining locale information.
+区域信息
 
 **Since:** 6
 
@@ -14,13 +14,19 @@ Provides APIs for obtaining locale information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Creates a **Locale** object.
+创建区域对象。
 
 **Since:** 8
 
@@ -38,12 +44,12 @@ Creates a **Locale** object.
 
 **System capability:** SystemCapability.Global.I18n
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
 
-// The current system locale is used by the default constructor.
+// The current locale ID is used by the default constructor.
 let locale = new intl.Locale();
 // Return the current system locale ID.
 let localeID = locale.toString();
@@ -55,7 +61,7 @@ let localeID = locale.toString();
 constructor(locale: string, options?: LocaleOptions)
 ```
 
-Creates a **Locale** object.
+创建区域对象。
 
 **Since:** 6
 
@@ -77,10 +83,10 @@ Creates a **Locale** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Locale information, which consists of the language, script, and country/region. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for creating the **Locale** object.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| locale | string | Yes | 表示区域ID的字符串，由语言、脚本、国家地区组成。 |
+| options | [LocaleOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-localeoptions-i.md) | No | 创建区域对象的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。<br>**Since:** 12 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -96,7 +102,7 @@ let localeID = locale.toString(); // localeID = 'zh-CN'
 maximize(): Locale
 ```
 
-Maximizes locale information by supplementing the missing script and country/region information.
+最大化区域信息，补齐区域对象中缺少的脚本、国家地区信息。
 
 **Since:** 6
 
@@ -118,9 +124,9 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Locale** object with the script and country/region information. |
+| [Locale](arkts-localization-intl-locale-c.md) | 补齐完脚本、国家地区信息后的区域对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -144,7 +150,7 @@ localeID = maximizedLocale.toString(); // localeID = 'en-Latn-US'
 minimize(): Locale
 ```
 
-Minimizes locale information by removing the script and country/region information.
+最小化区域信息，移除区域对象中的脚本、国家地区信息。
 
 **Since:** 6
 
@@ -166,9 +172,9 @@ Minimizes locale information by removing the script and country/region informati
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Locale** object without the script and country/region information. |
+| [Locale](arkts-localization-intl-locale-c.md) | 移除完脚本、国家地区信息后的区域对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -192,7 +198,7 @@ localeID = minimizedLocale.toString(); // localeID = 'en'
 toString(): string
 ```
 
-Obtains the string that represents a **Locale** object.
+获取区域对象的字符串。
 
 **Since:** 6
 
@@ -214,9 +220,9 @@ Obtains the string that represents a **Locale** object.
 
 | Type | Description |
 | --- | --- |
-| string | String that represents the **Locale** object. |
+| string | 区域对象的字符串。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -232,7 +238,7 @@ let localeID = locale.toString(); // localeID = 'en-GB'
 baseName: string
 ```
 
-Locale information, which consists of the language, script, and country/region, for example, **zh-Hans-CN**.
+区域对象的基本信息，由语言、脚本、国家地区组成，如：zh-Hans-CN。
 
 **Type:** string
 
@@ -258,11 +264,11 @@ Locale information, which consists of the language, script, and country/region, 
 calendar: string
 ```
 
-Calendar for the locale. The value can be:The value can be any of the following: **buddhist**, **chinese**,  
-**coptic**, **dangi**, **ethioaa**, **ethiopic**, **gregory**, **hebrew**, **indian**, **islamic**,  
-**islamic-umalqura**, **islamic-tbla**, **islamic-civil**, **islamic-rgsa**, **iso8601**, **japanese**,  
-**persian**, **roc**, or **islamicc**.For details about their meanings, see Table 1 in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+区域的日历信息，取值包括：
+
+"buddhist", "chinese", "coptic","dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic","islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc","islamicc"。
+
+不同取值表示的含义请参考[设置日历和历法表1](../../../internationalization/i18n-calendar.md)。
 
 **Type:** string
 
@@ -288,10 +294,13 @@ Calendar for the locale. The value can be:The value can be any of the following:
 caseFirst: string
 ```
 
-Whether case is taken into account for the locale's collation rules. The value can be:  
-**upper**: Uppercase letters come first.  
-**lower**: Lowercase letters come first.  
-**false**: The default collation rules of the locale are used.
+区域的排序规则是否考虑大小写，取值包括：
+
+"upper"：大写排前面。
+
+"lower"：小写排前面。
+
+"false"：使用区域默认的大小写排序规则。
 
 **Type:** string
 
@@ -317,23 +326,39 @@ Whether case is taken into account for the locale's collation rules. The value c
 collation: string
 ```
 
-Collation rules for the locale. The value can be:  
-**big5han**: Pinyin sorting for Latin letters.  
-**compat** : compatibility sorting, only for Arabic.  
-**dict**: dictionary-style sorting, only for Singhalese.  
-**direct**: binary code point sorting.  
-**ducet**: sorting according to the Unicode collation element table.  
-**eor**: sorting according to the European collation rules.  
-**gb2312**: Pinyin sorting, only for Chinese.  
-**phonebk**: phone book-style sorting.  
-**phonetic**: phonetic sorting.  
-**pinyin**: Pinyin sorting.  
-**reformed**: reformed sorting, only for Swedish.  
-**searchjl**: special sorting for Korean initial consonant search.  
-**stroke**: stroke sorting for Chinese.  
-**trad**: traditional-style sorting, for example, Spanish.  
-**unihan**: radical-stroke sorting for Han characters, only for Chinese, Japanese, and Korean.  
-**zhuyin**: Zhuyin sorting, only for Chinese.
+区域的排序规则，取值包括：
+
+"big5han"：拉丁字母使用的拼音排序。
+
+"compat"：兼容性排序，仅用于阿拉伯语。
+
+"dict"：词典风格排序，仅用于僧伽罗语。
+
+"direct"：二进制码点排序。
+
+"ducet"：按Unicode排序元素表排序。
+
+"eor"：按欧洲排序规则排序。
+
+"gb2312"：拼音排序，仅用于中文排序。
+
+"phonebk"：电话本风格排序。
+
+"phonetic"：发音排序。
+
+"pinyin"：拼音排序。
+
+"reformed"：瑞典语排序。
+
+"searchjl"：韩语初始辅音搜索的特殊排序。
+
+"stroke"：汉语的笔画排序。
+
+"trad"：传统风格排序，如西班牙语。
+
+"unihan"：统一汉字排序，用于日语、韩语、中文等汉字排序。
+
+"zhuyin"：注音排序，仅用于中文排序。
 
 **Type:** string
 
@@ -359,7 +384,11 @@ Collation rules for the locale. The value can be:
 hourCycle: string
 ```
 
-Time system for the locale. The value can be:"h11", "h12", "h23", or "h24".For details about their display effects, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+区域的时制信息，取值包括：
+
+"h11"、"h12"、"h23"、"h24"。
+
+不同取值的显示效果可参考[附录表5](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **Type:** string
 
@@ -385,7 +414,7 @@ Time system for the locale. The value can be:"h11", "h12", "h23", or "h24".For d
 language: string
 ```
 
-Language associated with the locale, for example, **zh**. The value complies with the ISO 639 standard.
+与区域设置相关的语言，如：zh。取值遵循ISO 639标准。
 
 **Type:** string
 
@@ -411,14 +440,9 @@ Language associated with the locale, for example, **zh**. The value complies wit
 numberingSystem: string
 ```
 
-Numbering system for the locale. The value can be:  
-**adlm**, **ahom**, **arab**, **arabext**, **bali**,  
-**beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**, **diak**, **fullwide**, **gong**, **gonm**, **gujr**,  
-**guru**, **hanidec**, **hmng**, **hmnp**, **java**, **kali**, **khmr**, **knda**, **lana**, **lanatham**,  
-**laoo**, **latn**, **lepc**, **limb**, **mathbold**, **mathdbl**, **mathmono**, **mathsanb**, **mathsans**,  
-**mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**, **mymrshan**, **mymrtlng**, **newa**, **nkoo**,  
-**olck**, **orya**, **osma**, **rohg**, **saur**, **segment**, **shrd**, **sind**, **sinh**, **sora**, **sund**,  
-**takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**, **tirh**, **vaii**, **wara**, or **wcho**.
+区域使用的数字系统，取值包括：
+
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
 
 **Type:** string
 
@@ -444,7 +468,9 @@ Numbering system for the locale. The value can be:
 numeric: boolean
 ```
 
-Whether to use special sorting rules for digits. The value **true** means to use special sorting rules for digits,and the value **false** means the opposite.The default value is **false**.
+true表示对数字字符进行特殊的排序规则处理（把数字字符作为数值进行排序），false表示不对数字字符进行特殊的排序规则处理。
+
+默认值：false。
 
 **Type:** boolean
 
@@ -470,7 +496,7 @@ Whether to use special sorting rules for digits. The value **true** means to use
 region: string
 ```
 
-Country/region associated with the locale, for example, **CN**. The value complies with the ISO 3166 standard.
+与区域设置相关的国家地区，如：CN。取值遵循ISO 3166标准。
 
 **Type:** string
 
@@ -496,7 +522,7 @@ Country/region associated with the locale, for example, **CN**. The value compli
 script: string
 ```
 
-Script type of the language, for example, **Hans**. The value complies with the Unicode ISO 15924 standard.
+区域语言的书写方式（脚本），如：Hans。取值遵循ISO 15924标准。
 
 **Type:** string
 

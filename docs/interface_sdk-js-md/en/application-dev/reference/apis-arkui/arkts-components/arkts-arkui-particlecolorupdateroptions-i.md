@@ -1,11 +1,10 @@
 # ParticleColorUpdaterOptions
 
-How the color property is updated.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
+颜色属性变化配置。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -21,16 +20,20 @@ How the color property is updated.
 config: ParticleColorPropertyUpdaterConfigs[UPDATER]
 ```
 
-Color updater configuration.
+颜色属性变化类型type有三类：
 
-The available options of **type** are as follows:
+1、当type为ParticleUpdater.NONE，表示无变化，则config类型为  
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]。 
 
-1. **ParticleUpdater.NONE**: The property does not change. In this case,the **config** type is [ParticleColorPropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_[ParticleUpdater.NONE].2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case,the **config** type is [ParticleColorPropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_[ParticleUpdater.RANDOM].3. **ParticleUpdater.CURVE**: The property changes with the animation curve.In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_[ParticleUpdater.CURVE].
+2、type为ParticleUpdater.RANDOM，表示随机变化，则config类型为  
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。 
 
-**NOTE**
+3、type为ParticleUpdater.CURVE,表示按动画曲线变化，则config类型为  
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]。 
 
-When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**, the color configuration in  
-**updater** has higher priority than that in **range**. During the animation period specified by updater, the color changes based on the color configuration in updater. Before the animation period specified by updater, the color changes based on the color configuration in range.
+**说明：**
+
+当type为ParticleUpdater.RANDOM或者ParticleUpdater.CURVE时，updater中颜色配置的优先级高于range中的颜色配置。在updater配置的动画时间周期内，以updater中的颜色配置来变化；在updater配置的动画时间周期外，以range中的颜色配置来变化。
 
 **Type:** ParticleColorPropertyUpdaterConfigs[UPDATER]
 
@@ -52,9 +55,9 @@ When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**,
 type: UPDATER
 ```
 
-Type of property updating.
+表示颜色属性变化类型。
 
-The default value of **type** is **ParticleUpdater.NONE**.
+默认值：type默认为 ParticleUpdater.NONE。
 
 **Type:** UPDATER
 

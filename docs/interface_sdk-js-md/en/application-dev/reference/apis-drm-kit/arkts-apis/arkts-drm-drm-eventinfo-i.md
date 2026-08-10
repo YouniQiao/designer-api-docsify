@@ -10,6 +10,12 @@ Used to indicate the event info attached to specific event type.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## extraInfo
 
 ```TypeScript

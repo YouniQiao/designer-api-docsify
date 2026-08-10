@@ -1,5 +1,11 @@
 # Popup
 
+## 导入模块
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
+
 ## Popup
 
 ```TypeScript
@@ -22,5 +28,5 @@ export declare function Popup(options: PopupOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 定义Popup组件的类型。 |
+| options | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | 是 | 定义Popup组件的类型。 |
 

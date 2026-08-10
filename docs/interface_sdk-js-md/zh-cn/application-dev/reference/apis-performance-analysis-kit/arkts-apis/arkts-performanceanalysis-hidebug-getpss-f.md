@@ -1,15 +1,22 @@
 # getPss
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getPss
 
 ```TypeScript
 function getPss() : bigint
 ```
 
-��ȡӦ�ý���ʵ��ʹ�õ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps\_rollup�ڵ��е�Pss��SwapPssֵ����͡�
-    **ע��**  
-    
-    ����/proc/{pid}/smaps\_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
+��ȡӦ�ý���ʵ��ʹ�õ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps_rollup�ڵ��е�Pss��SwapPssֵ����͡�
+
+> **ע��**
+> 
+> ����/proc/{pid}/smaps_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
 
 **起始版本：** 8
 
@@ -25,7 +32,7 @@ function getPss() : bigint
 | --- | --- |
 | bigint | ����Ӧ�ý���ʵ��ʹ�õ������ڴ��С����λΪKB�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

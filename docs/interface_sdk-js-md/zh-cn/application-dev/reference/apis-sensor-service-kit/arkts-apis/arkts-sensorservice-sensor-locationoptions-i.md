@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## altitude
 
 ```TypeScript
@@ -18,7 +24,7 @@ altitude: double
 
 海拔高度。单位：m（米）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -36,7 +42,7 @@ latitude: double
 
 纬度。取值范围：[-90, 90]。单位：degree（度）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -54,7 +60,7 @@ longitude: double
 
 经度。取值范围：[-180, 180]。单位：degree（度）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 

@@ -10,6 +10,12 @@ P2P config.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceAddress
 
 ```TypeScript
@@ -36,7 +42,7 @@ deviceAddressType?: DeviceAddressType
 
 Device mac address type
 
-**Type:** DeviceAddressType
+**Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
 **Since:** 10
 
@@ -54,7 +60,7 @@ goBand: GroupOwnerBand
 
 Group owner band
 
-**Type:** GroupOwnerBand
+**Type:** [GroupOwnerBand](arkts-connectivity-wifi-groupownerband-e.md)
 
 **Since:** 9
 
@@ -72,7 +78,7 @@ goFreq?: int
 
 Group owner frequency
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -109,7 +115,7 @@ netId: int
 Group network ID. When creating a group, -1 indicates creates a temporary group,  
 -2: indicates creates a persistent group
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

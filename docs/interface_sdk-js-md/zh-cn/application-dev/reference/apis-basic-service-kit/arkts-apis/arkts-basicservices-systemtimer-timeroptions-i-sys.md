@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { systemTimer } from 'kits/@kit.BasicServicesKit';
+```
+
 ## callback
 
 ```TypeScript
@@ -42,7 +48,7 @@ autoRestore?: boolean
 
 true为重启后恢复，false为重启后不恢复。
 
-仅支持非\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_类型且配置了wantAgent的定时器配置为true。
+仅支持非`TIMER_TYPE_REALTIME`类型且配置了wantAgent的定时器配置为true。
 
 默认值为false。
 
@@ -72,7 +78,7 @@ interval?: long
 
 默认值为0。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 7
 
@@ -144,7 +150,7 @@ type: int
 
 取值为8，表示为IDLE模式定时器（仅支持系统服务配置，不支持应用配置）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -166,7 +172,7 @@ wantAgent?: WantAgent
 
 默认值为空。
 
-**类型：** WantAgent
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 7
 

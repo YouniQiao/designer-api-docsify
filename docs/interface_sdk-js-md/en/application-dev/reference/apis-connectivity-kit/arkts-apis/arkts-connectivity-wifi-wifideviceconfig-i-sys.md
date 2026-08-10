@@ -14,6 +14,12 @@ Wi-Fi device configuration information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## creatorUid
 
 ```TypeScript
@@ -70,7 +76,7 @@ ipType: IpType
 
 IP Type
 
-**Type:** IpType
+**Type:** [IpType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-iptype-e.md)
 
 **Since:** 6
 
@@ -166,7 +172,7 @@ staticIp: IpConfig
 
 IP config of static
 
-**Type:** IpConfig
+**Type:** [IpConfig](arkts-connectivity-wifi-ipconfig-i-sys.md)
 
 **Since:** 6
 

@@ -1,6 +1,6 @@
 # DoNotDisturbDate (System API)
 
-Defines the DND time.
+免打扰时间选项。
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ Defines the DND time.
 begin: Date
 ```
 
-DND start time.
+免打扰设置的起点时间。
 
 **Type:** Date
 
@@ -46,7 +46,7 @@ DND start time.
 end: Date
 ```
 
-DND end time.
+免打扰设置的终点时间。
 
 **Type:** Date
 
@@ -70,9 +70,9 @@ DND end time.
 type: DoNotDisturbType
 ```
 
-DND time type.
+免打扰设置的时间类型。
 
-**Type:** DoNotDisturbType
+**Type:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
 
 **Since:** 8
 

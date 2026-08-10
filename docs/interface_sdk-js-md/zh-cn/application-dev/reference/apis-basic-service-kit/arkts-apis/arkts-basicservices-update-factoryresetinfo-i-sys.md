@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## duration
 
 ```TypeScript
@@ -20,7 +26,7 @@ duration: int
 
 恢复出厂设置所需持续时间。单位为min。取值范围[0, 86400]。超出范围时抛出异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

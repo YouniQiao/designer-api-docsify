@@ -1,6 +1,14 @@
 # AVCastPickerHelper
 
-A helper to enable a picker to select output devices
+投播半模态对象，可拉起半模态窗口，选择投播设备。在使用前，需要创建AVCastPickerHelper实例。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 14开始支持。
+> 
+> - AVCastPickerHelper样式显示为半模态，实际会绑定
+> [全模态页面（bindContentCover）](../../apis-arkui/arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#bindcontentcover)
+> 。
 
 **Since:** 14
 
@@ -10,13 +18,19 @@ A helper to enable a picker to select output devices
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(context: Context)
 ```
 
-The constructor used to create a AVCastPickerHelper object.
+创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)。
 
 **Since:** 14
 
@@ -32,14 +46,14 @@ The constructor used to create a AVCastPickerHelper object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | represents the context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文（仅支持[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md)）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
 
 ## off('pickerStateChange')
 
@@ -47,7 +61,7 @@ The constructor used to create a AVCastPickerHelper object.
 off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
 ```
 
-Unregister picker state change callback.
+取消半模态窗口变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **Since:** 14
 
@@ -63,15 +77,15 @@ Unregister picker state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'pickerStateChange' | Yes | 'pickerStateChange' |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVCastPickerState&gt; | No | The callback used to handle picker state changed event. |
+| type | 'pickerStateChange' | Yes | 取消对应的监听事件，支持事件`'pickerStateChange'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | No | 回调函数，参数state是变化后的半模态窗口状态。 &lt;br&gt;当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
 
 ## offPickerStateChange
 
@@ -93,13 +107,13 @@ Unregister picker state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVCastPickerState&gt; | No | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | No | The callback used to handle picker state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 6600101 | Session service exception. |
 
 ## on('pickerStateChange')
 
@@ -107,7 +121,9 @@ Unregister picker state change callback.
 on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
 ```
 
-Register picker state change callback.
+设置半模态窗口变化的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **Since:** 14
 
@@ -123,15 +139,15 @@ Register picker state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'pickerStateChange' | Yes | 'pickerStateChange' |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVCastPickerState&gt; | Yes | The callback used to handle picker state changed event. |
+| type | 'pickerStateChange' | Yes | 事件回调类型，支持事件`'pickerStateChange'`：当半模态窗口变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | Yes | 回调函数，参数state是变化后的半模态窗口状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 6600101 | Session service exception. |
 
 ## onPickerStateChange
 
@@ -153,13 +169,13 @@ Register picker state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVCastPickerState&gt; | Yes | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | Yes | The callback used to handle picker state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 6600101 | Session service exception. |
 
 ## resetCommunicationDevice
 
@@ -167,7 +183,7 @@ Register picker state change callback.
 resetCommunicationDevice(): Promise<void>
 ```
 
-Reset audio device to be default set by the platform which is used for communication use cases including voice or video calls.For example, the audio output device will be switched to earpiece for voice call and to speaker for video call on phone.
+将应用通话设备恢复至默认设备。例如，在语音通话场景下，手机设备的通话装置将恢复为听筒。使用Promise异步回调。
 
 **Since:** 21
 
@@ -183,7 +199,7 @@ Reset audio device to be default set by the platform which is used for communica
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## select
 
@@ -191,7 +207,7 @@ Reset audio device to be default set by the platform which is used for communica
 select(options?: AVCastPickerOptions): Promise<void>
 ```
 
-Pull up the avcastpicker based on the options.
+通过选择模式拉起AVCastPicker界面，用户可以选择投播设备。接口采用Promise异步返回形式，传入可选参数AVCastPickerOptions对象，无返回结果。
 
 **Since:** 14
 
@@ -207,17 +223,17 @@ Pull up the avcastpicker based on the options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | represents the options provided to the picker. |
+| options | [AVCastPickerOptions](arkts-avsession-avsession-avcastpickeroptions-i.md) | No | AVCastPicker选择选项。无此参数时，以AVCastPickerOptions默认值拉起。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 

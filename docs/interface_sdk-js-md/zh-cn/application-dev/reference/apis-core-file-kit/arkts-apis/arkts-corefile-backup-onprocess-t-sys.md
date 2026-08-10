@@ -22,6 +22,6 @@ type OnProcess = (bundleName: string, process: string) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 触发回调的应用名称。  |
-| process | string | 是 | 应用备份或恢复的进度信息。  |
+| bundleName | string | 是 | 触发回调的应用名称。 |
+| process | string | 是 | 应用备份或恢复的进度信息。 |
 

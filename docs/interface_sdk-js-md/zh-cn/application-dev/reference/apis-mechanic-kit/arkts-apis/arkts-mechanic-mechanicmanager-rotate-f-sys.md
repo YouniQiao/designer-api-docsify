@@ -1,5 +1,11 @@
 # rotate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## rotate
 
 ```TypeScript
@@ -22,9 +28,9 @@ function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Res
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ID of the mechanical device. |
-| angles | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Relative angles. |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Rotation duration. Unit: millisecond. |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ID of the mechanical device. |
+| angles | [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | 是 | Relative angles. |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Rotation duration. Unit: millisecond. |
 
 **返回值：**
 
@@ -36,11 +42,11 @@ function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Res
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 console.info('Start rotate');

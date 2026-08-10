@@ -1,6 +1,6 @@
 # Attribute
 
-Enumerates contact attributes. The enumerated value is of the number type.Create contact data in JSON format:
+枚举，类型为number。联系人属性列表。通过JSON格式创建数据。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates contact attributes. The enumerated value is of the number type.Create
 ATTR_CONTACT_EVENT = 0
 ```
 
-Important dates such as birthday and anniversaries of the contact.
+联系人的生日、周年纪念等重要日期。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Important dates such as birthday and anniversaries of the contact.
 ATTR_EMAIL = 1
 ```
 
-Email address of the contact.
+联系人的邮箱地址。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Email address of the contact.
 ATTR_GROUP_MEMBERSHIP = 2
 ```
 
-Groups of the contact.
+联系人的群组。
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Groups of the contact.
 ATTR_IM = 3
 ```
 
-IM addresses of the contact.
+联系人的即时消息地址。
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ IM addresses of the contact.
 ATTR_NAME = 4
 ```
 
-Contact name.
+联系人的姓名。
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ Contact name.
 ATTR_NICKNAME = 5
 ```
 
-Contact nickname.
+联系人的昵称。
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ Contact nickname.
 ATTR_NOTE = 6
 ```
 
-Contact notes.
+联系人的备注。
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ Contact notes.
 ATTR_ORGANIZATION = 7
 ```
 
-Organization of the contact.
+联系人的组织信息。
 
 **Since:** 7
 
@@ -160,7 +160,7 @@ Organization of the contact.
 ATTR_PHONE = 8
 ```
 
-Phone number of a contact. Only full match is supported, and wildcards are not supported.
+联系人的电话号码。
 
 **Since:** 7
 
@@ -178,7 +178,7 @@ Phone number of a contact. Only full match is supported, and wildcards are not s
 ATTR_PORTRAIT = 9
 ```
 
-Contact portrait.
+联系人的头像。
 
 **Since:** 7
 
@@ -196,7 +196,7 @@ Contact portrait.
 ATTR_POSTAL_ADDRESS = 10
 ```
 
-Postal address of the contact.
+联系人的邮政地址。
 
 **Since:** 7
 
@@ -214,7 +214,7 @@ Postal address of the contact.
 ATTR_RELATION = 11
 ```
 
-Relationship with the contact.
+联系人的关系。
 
 **Since:** 7
 
@@ -232,7 +232,7 @@ Relationship with the contact.
 ATTR_SIP_ADDRESS = 12
 ```
 
-SIP addresses of the contact.
+联系人的会话发起协议(SIP)地址。
 
 **Since:** 7
 
@@ -250,7 +250,7 @@ SIP addresses of the contact.
 ATTR_WEBSITE = 13
 ```
 
-Website that stores the contact information.
+联系人的网站。
 
 **Since:** 7
 

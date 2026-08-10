@@ -10,6 +10,12 @@ Describes the permission of a att attribute item.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## read
 
 ```TypeScript

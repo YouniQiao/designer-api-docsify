@@ -1,6 +1,6 @@
 # WatchEvent
 
-Defines the event to observe.
+事件类
 
 **Since:** 23
 
@@ -10,16 +10,19 @@ Defines the event to observe.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## cookie
 
 ```TypeScript
 readonly cookie: int
 ```
 
-Cookie bound with the event.
-
-Currently, only the **IN\_MOVED\_FROM** and **IN\_MOVED\_TO** events are supported. The **IN\_MOVED\_FROM** and  
-**IN\_MOVED\_TO** events of the same file have the same **cookie** value.
+绑定相关事件的cookie。当前仅支持事件IN_MOVED_FROM与IN_MOVED_TO，同一个文件的移动事件IN_MOVED_FROM和IN_MOVED_TO具有相同的cookie值。
 
 **Type:** int
 
@@ -37,23 +40,33 @@ Currently, only the **IN\_MOVED\_FROM** and **IN\_MOVED\_TO** events are support
 readonly event: int
 ```
 
-Events to observe. Multiple events can be separated by vertical bars (|).
+监听变动的事件集，多个事件通过或(|)的方式进行集合。
 
-- **0x1: IN\_ACCESS**: A file is accessed.  
-- **0x2: IN\_MODIFY**: The file content is modified.  
-- **0x4: IN\_ATTRIB**: The file metadata is modified.  
-- **0x8: IN\_CLOSE\_WRITE**: A file is opened, written with data, and then closed.  
-- **0x10: IN\_CLOSE\_NOWRITE**: A file or directory is opened and then closed without data written.  
-- **0x20: IN\_OPEN**: A file or directory is opened.  
-- **0x40: IN\_MOVED\_FROM**: A file in the observed directory is moved.  
-- **0x80: IN\_MOVED\_TO**: A file is moved to the observed directory.  
-- **0x100: IN\_CREATE**: A file or directory is created in the observed directory.  
-- **0x200: IN\_DELETE**: A file or directory is deleted from the observed directory.  
-- **0x400: IN\_DELETE\_SELF**: The observed directory is deleted. After the directory is deleted, the listening  
-stops.  
-- **0x800: IN\_MOVE\_SELF**: The observed file or directory is moved. After the file or directory is moved, the  
-listening continues.  
-- **0xfff: IN\_ALL\_EVENTS**: All events.
+- 0x1: IN_ACCESS， 文件被访问。
+
+- 0x2: IN_MODIFY，文件内容被修改。
+
+- 0x4: IN_ATTRIB，文件元数据被修改。
+
+- 0x8: IN_CLOSE_WRITE，文件在打开时进行了写操作，然后被关闭。
+
+- 0x10: IN_CLOSE_NOWRITE，文件或目录在打开时未进行写操作，然后被关闭。
+
+- 0x20: IN_OPEN，文件或目录被打开。
+
+- 0x40: IN_MOVED_FROM，监听目录中文件被移动走。
+
+- 0x80: IN_MOVED_TO，监听目录中文件被移动过来。
+
+- 0x100: IN_CREATE，监听目录中文件或子目录被创建。
+
+- 0x200: IN_DELETE，监听目录中文件或子目录被删除。
+
+- 0x400: IN_DELETE_SELF，监听的目录被删除，删除后监听停止。
+
+- 0x800: IN_MOVE_SELF，监听的文件或目录被移动，移动后监听继续。
+
+- 0xfff: IN_ALL_EVENTS，监听以上所有事件。
 
 **Type:** int
 
@@ -71,7 +84,7 @@ listening continues.
 readonly fileName: string
 ```
 
-Sandbox path of the file to observe. The sandbox path contains the file name.
+发生监听事件对应文件的沙箱路径，该沙箱路径包含文件名称。
 
 **Type:** string
 

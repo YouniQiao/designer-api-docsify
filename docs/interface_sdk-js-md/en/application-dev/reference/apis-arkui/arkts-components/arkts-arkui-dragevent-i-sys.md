@@ -1,6 +1,6 @@
 # DragEvent
 
-Provides information about the drag event.
+拖拽事件信息。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Provides information about the drag event.
 enableInternalDropAnimation(configuration: string): void
 ```
 
-Sets whether to enable the system's built-in drop animation effect. This API is available only to system applications and can only be used during the **onDrop** phase.
+使用系统的内置动效，且该动效只有系统应用可使用。仅支持在onDrop阶段使用。
 
 **Since:** 20
 
@@ -34,15 +34,15 @@ Sets whether to enable the system's built-in drop animation effect. This API is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | string | Yes | the internal drop animation's configuration. |
+| configuration | string | Yes | 动效配置参数，字符串内容为json格式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
+| 801 | Capability not supported. |
+| 190003 | Operation not allowed for current phase. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
 ## executeFollowHandMorphDropAnimation
 
@@ -50,13 +50,13 @@ Sets whether to enable the system's built-in drop animation effect. This API is 
 executeFollowHandMorphDropAnimation(onAnimationFinished: Callback<void>, animationOption?: string): void
 ```
 
-Sets a callback to be executed after the follow-hand morph drop animation is completed. This callback is triggered by the system after the drag framework animation ends. This callback uses an asynchronous callback.
-    **NOTE**  
-    
-    1. This API takes effect only when [dragAnimationType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is  
-    set to **DragAnimationType.FOLLOW\_HAND\_MORPH**.  
-    
-    2. Do not implement logic unrelated to the animation in the callback to avoid affecting execution efficiency.
+设置一个跟手变形落位动效执行完成后的回调，该回调由系统在拖拽框架动效结束后触发。使用callback异步回调。
+
+> **说明：**
+> 
+> 1. 该接口仅在[dragAnimationType](arkts-arkui-dragevent-i-sys.md#draganimationtype)设置为DragAnimationType.FOLLOW_HAND_MORPH时生效。
+> 
+> 2. 不要在回调中实现与动效无关的逻辑，避免影响执行效率。
 
 **Since:** 26.0.0
 
@@ -74,8 +74,8 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onAnimationFinished | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback triggered after the drag framework animation ends. |
-| animationOption | string | No | Drop animation parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The parameter is a JSON string containing the following fields:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**CubicCurveEnable**: boolean, indicating whether to enable the cubic curve animation. Set to **true** to enable it, or **false** to disable it.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**SpringEnable**: boolean, indicating whether to enable the spring animation. Set to **true** to enable it, or **false** to disable it.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **dropAnimationCurve**: number[], indicating the drop animation curve parameters. Its meaning depends on **SpringEnable** and **CubicCurveEnable** (with **SpringEnable** having higher priority). When **SpringEnable** is **true**, the array length is 3, in the format of [response, dampingRatio, blendDuration], corresponding to the spring curve parameters of [curves.springMotion]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. When **SpringEnable** is **false** and **CubicCurveEnable** is **true**, the array length is 4, in the format of [x1, y1, x2, y2], corresponding to the cubic Bezier curve control point parameters of [curves.cubicBezierCurve]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE:** **SpringEnable** takes priority over **CubicCurveEnable**. When both are **true**, the spring animation prevails. When neither **SpringEnable** nor **CubicCurveEnable** is correctly set, the default spring animation is used.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **dropPosition**: number[], indicating the drop position coordinates. The array length is 2, in the format of [x, y], in px, representing the target position coordinates of the dragged element when it drops. Value range: (-∞, +∞).\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**dropSize**: number[], indicating the drop size. The array length is 2, in the format of [width, height], in px, representing the target size of the dragged element when it drops. Value range: (0, +∞). |
+| onAnimationFinished | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 拖拽框架动效结束后触发的回调。 |
+| animationOption | string | No | 落位动效参数。&lt;br&gt; 参数为JSON字符串格式，包含以下字段：&lt;br&gt; **CubicCurveEnable**: boolean，表示是否启用三次曲线 动画。设置为true时启用三次曲线动画，设置为false时不启用。&lt;br&gt; **SpringEnable**: boolean，表示是否启用弹簧动画。设置为true时启用弹簧动画效果，设置为false时不启用。 &lt;br&gt; **dropAnimationCurve**: number[]，表示落位动画曲线参数，其含义由SpringEnable和CubicCurveEnable决定（SpringEnable优先级更高）。当 SpringEnable为true时，数组长度为3，格式为[response, dampingRatio, blendDuration]，对应 [curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion)的弹簧曲线参数；当SpringEnable为false且CubicCurveEnable为true 时，数组长度为4，格式为[x1, y1, x2, y2]，对应[curves.cubicBezierCurve](../arkts-apis/arkts-arkui-curves-cubicbeziercurve-f.md/arkts-arkui-curves-cubicbeziercurve-f.md#cubicbeziercurve)的三次贝塞尔曲线控制点 参数。&lt;br&gt; **说明：** SpringEnable优先级高于CubicCurveEnable，当两者同时为true时，以弹簧动画为准。当SpringEnable和CubicCurveEnable均未正确设置时，使用默 认弹簧动效。&lt;br&gt; **dropPosition**: number[]，落位位置坐标。数组长度为2，格式为[x, y]，单位为px，表示拖拽元素落位时的目标位置坐标，取值范围为(-∞, +∞)。&lt;br&gt; **dropSize**: number[]，落位尺寸。数组长度为2，格式为[width, height]，单位为px，表示拖拽元素落位时的目标尺寸，取值范围为(0, +∞)。 |
 
 ## dragAnimationType
 
@@ -83,18 +83,17 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 dragAnimationType?: DragAnimationType
 ```
 
-Sets the drag animation type. This attribute can only be set during the  
-[onDragStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ phase and can be obtained in the  
-[onDragStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, [onDragEnter]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_,  
-[onDragMove]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, [onDragLeave]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_,  
-[onDrop]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_, and  
-[onDragEnd]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ callbacks.
+设置拖拽动画类型。该属性仅支持在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)阶段设置，可在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)、  
+[onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter)、[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove)、  
+[onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave)、  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop)、  
+[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)回调中获取。
 
-Default value: **DEFAULT**
+默认值为DEFAULT 
 
-**System API:** This is a system API.
+**系统接口：** 此接口为系统接口。
 
-**Type:** DragAnimationType
+**Type:** [DragAnimationType](../arkts-apis/arkts-arkui-common-draganimationtype-e-sys.md)
 
 **Default:** DragAnimationType.DEFAULT
 

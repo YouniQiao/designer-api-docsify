@@ -1,6 +1,6 @@
 # WebStorageOrigin
 
-Provides usage information of the Web SQL Database.
+Provides basic information of web storage.
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides usage information of the Web SQL Database.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## origin
 
 ```TypeScript
 origin: string
 ```
 
-Index of the origin.
+Url source.
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Index of the origin.
 quota: double
 ```
 
-Storage quota of the origin.
+the callback of getOriginUsage. Unit: byte.
 
 **Type:** double
 
@@ -52,7 +58,7 @@ Storage quota of the origin.
 usage: double
 ```
 
-Storage usage of the origin.
+Specify the amount of storage for the source. Unit: byte.
 
 **Type:** double
 

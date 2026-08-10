@@ -280,5 +280,5 @@
   - [SessionCategory(系统接口)](arkts-avsession-avsession-sessioncategory-e-sys.md)<!--DelEnd-->
   - [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 - application<!--arkts-avsessionkit-application-->
-  - [application/MediaControlExtensionContext](arkts-application/mediacontrolextensioncontext.md)
-    - [MediaControlExtensionContext](mediacontrolextensioncontext-mediacontrolextensioncontext-c.md)
+  - [MediaControlExtensionContext](arkts-mediacontrolextensioncontext.md)
+    - [MediaControlExtensionContext](arkts-avsession-mediacontrolextensioncontext-c.md)

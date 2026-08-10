@@ -1,10 +1,10 @@
 # DeviceType
 
-Enumerates the device types.
+用于表示当前设备类型。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_
+&lt;!--RP1--&gt;
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP1End--&gt;
 
 **Since:** 6
 
@@ -20,7 +20,7 @@ Enumerates the device types.
 DEVICE_TYPE_PHONE = 0x00
 ```
 
-Phone
+手机。
 
 **Since:** 6
 
@@ -38,7 +38,7 @@ Phone
 DEVICE_TYPE_TABLET = 0x01
 ```
 
-Tablet
+平板。
 
 **Since:** 6
 
@@ -56,7 +56,7 @@ Tablet
 DEVICE_TYPE_CAR = 0x02
 ```
 
-Head unit
+车机。
 
 **Since:** 6
 
@@ -74,8 +74,6 @@ Head unit
 DEVICE_TYPE_PC = 0x03
 ```
 
-Indicates a PC.
-
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
@@ -92,7 +90,7 @@ Indicates a PC.
 DEVICE_TYPE_TV = 0x04
 ```
 
-Smart TV
+智慧屏。
 
 **Since:** 6
 
@@ -110,7 +108,7 @@ Smart TV
 DEVICE_TYPE_WEARABLE = 0x06
 ```
 
-Wearable
+智能手表。
 
 **Since:** 6
 
@@ -127,8 +125,6 @@ Wearable
 ```TypeScript
 DEVICE_TYPE_2IN1 = 0x07
 ```
-
-PC/2-in-1 device
 
 **Since:** 11
 

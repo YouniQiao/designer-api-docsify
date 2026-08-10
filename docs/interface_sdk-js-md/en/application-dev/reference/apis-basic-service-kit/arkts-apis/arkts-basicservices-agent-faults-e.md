@@ -1,11 +1,10 @@
 # Faults
 
-Defines the cause of a task failure.
-    **NOTE**  
-    
-    In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain  
-    name is supported, and the connection time for a single IP address is not controllable. If the first IP address  
-    returned by the DNS is blocked, a handshake timeout may occur, leading to a **TIMEOUT** error.
+定义任务失败的原因。
+
+> **说明：**
+> 
+> API version 12及以下版本，只支持串行的尝试连接域名相关ip，且不支持单个ip的连接时间控制，如果DNS返回的首个ip是阻塞的，可能会导致握手超时，进而引发TIMEOUT错误。
 
 **Since:** 10
 
@@ -21,7 +20,7 @@ Defines the cause of a task failure.
 OTHERS = 0xFF
 ```
 
-Other fault.
+表示其他故障。
 
 **Since:** 10
 
@@ -39,7 +38,7 @@ Other fault.
 DISCONNECTED = 0x00
 ```
 
-Network disconnection.
+表示网络断开连接。
 
 **Since:** 10
 
@@ -57,7 +56,7 @@ Network disconnection.
 TIMEOUT = 0x10
 ```
 
-Timeout.
+表示任务超时。
 
 **Since:** 10
 
@@ -75,7 +74,7 @@ Timeout.
 PROTOCOL = 0x20
 ```
 
-Protocol error, for example, an internal server error (500) or a data range that cannot be processed (416).
+表示协议错误，例如：服务器内部错误（500）、无法处理的数据区间（416）等。
 
 **Since:** 10
 
@@ -93,7 +92,7 @@ Protocol error, for example, an internal server error (500) or a data range that
 PARAM = 0x30
 ```
 
-Parameter error, for example, incorrect URL format.
+表示参数错误，例如：url格式错误等。
 
 **Since:** 12
 
@@ -111,7 +110,7 @@ Parameter error, for example, incorrect URL format.
 FSIO = 0x40
 ```
 
-File system I/O error, for example, an error that occurs during the open, search, read, write, or close operation.
+表示文件系统io错误，例如：打开/查找/读取/写入/关闭。
 
 **Since:** 10
 
@@ -129,7 +128,7 @@ File system I/O error, for example, an error that occurs during the open, search
 DNS = 0x50
 ```
 
-DNS resolution error.
+表示DNS解析错误。
 
 **Since:** 12
 
@@ -147,7 +146,7 @@ DNS resolution error.
 TCP = 0x60
 ```
 
-TCP connection error.
+表示TCP连接错误。
 
 **Since:** 12
 
@@ -165,7 +164,7 @@ TCP connection error.
 SSL = 0x70
 ```
 
-SSL connection error, for example, a certificate error or certificate verification failure.
+表示SSL连接错误，例如：证书错误、证书校验失败错误等。
 
 **Since:** 12
 
@@ -183,7 +182,7 @@ SSL connection error, for example, a certificate error or certificate verificati
 REDIRECT = 0x80
 ```
 
-Redirection error.
+表示重定向错误。
 
 **Since:** 12
 
@@ -201,7 +200,7 @@ Redirection error.
 LOW_SPEED = 0x90
 ```
 
-Low speed.
+表示任务速度过低。
 
 **Since:** 20
 

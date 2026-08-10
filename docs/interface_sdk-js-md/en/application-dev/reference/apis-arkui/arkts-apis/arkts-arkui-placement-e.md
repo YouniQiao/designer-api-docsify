@@ -2,9 +2,9 @@
 
 Placement enumeration description
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum Placement--><!--Device-unnamed-declare enum Placement-End-->
 
@@ -18,9 +18,9 @@ Left
 
 Left placement
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,9 +36,9 @@ Right
 
 Right placement
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,9 +54,9 @@ Top
 
 Top placement
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,9 +72,9 @@ Bottom
 
 Bottom placement
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,9 +90,9 @@ TopLeft
 
 TopLeft placement
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,9 +108,9 @@ TopRight
 
 TopRight placement
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -126,9 +126,9 @@ BottomLeft
 
 BottomLeft placement
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -144,9 +144,9 @@ BottomRight
 
 BottomRight placement
 
-**Since:** 8
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,9 +162,9 @@ LeftTop
 
 LeftTop placement
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -180,9 +180,9 @@ LeftBottom
 
 LeftBottom placement
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -198,9 +198,9 @@ RightTop
 
 RightTop placement
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -216,9 +216,9 @@ RightBottom
 
 RightBottom placement
 
-**Since:** 9
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

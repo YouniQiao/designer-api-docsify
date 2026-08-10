@@ -1,5 +1,11 @@
 # setSecurityLabelSync
 
+## 导入模块
+
+```TypeScript
+import { securityLabel } from 'kits/@kit.CoreFileKit';
+```
+
 ## setSecurityLabelSync
 
 ```TypeScript
@@ -21,22 +27,22 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
+| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900007 | Arg list too long |
-| 13900015 | File exists |
 | 13900020 | Invalid argument |
-| 13900025 | No space left on device |
 | 13900037 | No data available |
+| 13900007 | Arg list too long |
+| 13900001 | Operation not permitted |
+| 13900015 | File exists |
+| 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + '/test.txt';

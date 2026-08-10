@@ -1,10 +1,10 @@
 # @ohos.multimodalInput.inputConsumer(Global Shortcut Keys)
 
-The **inputConsumer** module implements listening for combination key events as well as listening and interception for volume key events.
-    **NOTE**  
-    
-    - Global shortcut keys are combination keys defined by the system or application. System shortcut keys are defined  
-    by the system, and application shortcut keys are defined by applications.
+全局快捷键订阅模块，用于处理组合按键的订阅，本模块也支持音量键拦截监听能力。
+
+> **说明：**
+> 
+> - 全局快捷键指由系统或应用定义的组合按键，系统快捷键指由系统定义的全局快捷键，应用快捷键指由应用定义的全局快捷键。
 
 **Since:** 14
 
@@ -14,50 +14,56 @@ The **inputConsumer** module implements listening for combination key events as 
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md#getallsystemhotkeys) | Obtains all system shortcut keys. This API uses a promise to return the result. |
-| [off](arkts-input-inputconsumer-off-f.md#off-1) | Unsubscribes from application shortcut key change events. This API uses an asynchronous callback to return the result. |
-| [off](arkts-input-inputconsumer-off-f.md#off-2) | Unsubscribes from key press events. This API uses an asynchronous callback to return the result. If the API call is successful, the system's default response to the key event will be resumed; that is, system-level actions, such as volume adjustment, will be triggered normally. |
-| [offHotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md#offhotkeychange) | Unsubscribe from hotkey event. |
-| [offKeyPressed](arkts-input-inputconsumer-offkeypressed-f.md#offkeypressed) | Cancels consumption of key events. |
-| [on](arkts-input-inputconsumer-on-f.md#on-1) | Subscribes to application shortcut key change events. This API obtains combination key input events that meet the specified conditions, and uses an asynchronous callback to return the result. |
-| [on](arkts-input-inputconsumer-on-f.md#on-2) | Subscribes to key press events. If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. This API uses an asynchronous callback to return the result.  If the API call is successful, the system's default response to the key event will be intercepted; that is, system-level actions, such as volume adjustment, will no longer be triggered. To restore the system response, call  [off]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to disable listening for the key event. |
-| [onHotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md#onhotkeychange) | Listening for hotkey event. |
-| [onKeyPressed](arkts-input-inputconsumer-onkeypressed-f.md#onkeypressed) | Subscribes to key press events. This API uses an asynchronous callback to return the result.If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. |
+| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md#getallsystemhotkeys) | 获取所有系统快捷键，使用Promise异步回调。 |
+| [off](arkts-input-inputconsumer-off-f.md#off-1) | 取消订阅应用快捷键。使用callback异步回调。 |
+| [off](arkts-input-inputconsumer-off-f.md#off-2) | 取消对'keyPressed'事件的订阅，使用callback异步回调。调用该方法后，被屏蔽的系统按键默认行为将恢复，即系统对音量调节等默认响应将恢复。 |
+| [offHotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md#offhotkeychange) | 取消订阅应用快捷键。使用callback异步回调。 |
+| [offKeyPressed](arkts-input-inputconsumer-offkeypressed-f.md#offkeypressed) | 取消对'keyPressed'事件的订阅，使用callback异步回调。调用该方法后，被屏蔽的系统按键默认行为将恢复，即系统对音量调节等默认响应将恢复。 |
+| [on](arkts-input-inputconsumer-on-f.md#on-1) | 订阅应用快捷键。获取满足条件的组合按键输入事件，使用callback异步回调。 |
+| [on](arkts-input-inputconsumer-on-f.md#on-2) | 订阅按键按下事件。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。使用callback异步回调。  订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用  [off](inputConsumer.off(type: 'keyPressed', callback?: Callback&lt;KeyEvent&gt;))方法取消订阅。 |
+| [onHotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md#onhotkeychange) | 订阅应用快捷键。获取满足条件的组合按键输入事件，使用Callback异步回调。 |
+| [onKeyPressed](arkts-input-inputconsumer-onkeypressed-f.md#onkeypressed) | 订阅按键按下事件，使用callback异步回调。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用off方法取消订阅。 |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getShieldStatus](arkts-input-inputconsumer-getshieldstatus-f-sys.md#getshieldstatus) | Obtains the system hotkey shield status. |
-| [off](arkts-input-inputconsumer-off-f-sys.md#off) | Disables listening for system hotkey change events. This API uses an asynchronous callback to return the result. |
-| [offKey](arkts-input-inputconsumer-offkey-f-sys.md#offkey) | Subscribe system keys. |
-| [offKey](arkts-input-inputconsumer-offkey-f-sys.md#offkey-1) | Unsubscribe system keys. |
-| [on](arkts-input-inputconsumer-on-f-sys.md#on) | Enables listening for system hotkey change events. This API uses an asynchronous callback to return the system hotkey data when a system hotkey event that meets the specified condition occurs. |
-| [onKey](arkts-input-inputconsumer-onkey-f-sys.md#onkey) | Subscribe system keys. |
-| [onKey](arkts-input-inputconsumer-onkey-f-sys.md#onkey-1) | Subscribe system keys. |
-| [setShieldStatus](arkts-input-inputconsumer-setshieldstatus-f-sys.md#setshieldstatus) | Sets the system hotkey shield status. |
+| [getShieldStatus](arkts-input-inputconsumer-getshieldstatus-f-sys.md#getshieldstatus) | 获取系统快捷键屏蔽类型。 |
+| [off](arkts-input-inputconsumer-off-f-sys.md#off) | 取消订阅系统快捷键。使用callback异步回调。 |
+| [offKey](arkts-input-inputconsumer-offkey-f-sys.md#offkey) | 取消订阅系统快捷键。使用callback异步回调。 |
+| [offKey](arkts-input-inputconsumer-offkey-f-sys.md#offkey-1) | 取消订阅系统快捷键。使用callback异步回调。 |
+| [on](arkts-input-inputconsumer-on-f-sys.md#on) | 订阅系统快捷键，使用callback异步回调。 |
+| [onKey](arkts-input-inputconsumer-onkey-f-sys.md#onkey) | 订阅系统快捷键，当满足条件的组合按键输入事件发生时，使用Callback异步方式上报组合按键数据。 |
+| [onKey](arkts-input-inputconsumer-onkey-f-sys.md#onkey-1) | 订阅组合按键（按键命令模式），支持通过triggerType指定不同的触发模式。当满足条件的组合按键输入事件发生时，使用callback异步回调。  与  [inputConsumer.on('key')](inputConsumer.on(type: 'key', keyOptions: KeyOptions, callback: Callback&lt;KeyOptions&gt;))现有接口的区别：  - 本接口的keyOptions支持triggerType参数，可选择按键按下触发、重复按下触发、重复按下或抬起均会触发等模式。  - 本接口回调参数为KeyCommandCallback类型，同时接收KeyOptions和KeyEvent对象。  - 本接口采用事件消费机制，可通过事件消费阻止按键事件向后传递。 |
+| [setShieldStatus](arkts-input-inputconsumer-setshieldstatus-f-sys.md#setshieldstatus) | 设置系统快捷键屏蔽类型。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | Defines shortcut key options. |
-| [KeyPressedConfig](arkts-input-inputconsumer-keypressedconfig-i.md) | Sets the key event consumption configuration. |
+| [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | 快捷键选项。 |
+| [KeyPressedConfig](arkts-input-inputconsumer-keypressedconfig-i.md) | 按键事件消费设置。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [KeyOptions](arkts-input-inputconsumer-keyoptions-i-sys.md) | Represents combination key options. |
+| [KeyOptions](arkts-input-inputconsumer-keyoptions-i-sys.md) | 组合键选项。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -65,8 +71,8 @@ The **inputConsumer** module implements listening for combination key events as 
 
 | Name | Description |
 | --- | --- |
-| [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md) | KeyCommandTriggerType |
-| [ShieldMode](arkts-input-inputconsumer-shieldmode-e-sys.md) | Enumerates shortcut key shield modes. |
+| [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md) | 按键命令触发类型枚举，用于指定组合按键的触发时机。 |
+| [ShieldMode](arkts-input-inputconsumer-shieldmode-e-sys.md) | 系统快捷键屏蔽类型。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -74,6 +80,6 @@ The **inputConsumer** module implements listening for combination key events as 
 
 | Name | Description |
 | --- | --- |
-| [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | Callback function when the shortcut key registered by the system application meets the conditions. |
+| [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | 按键命令回调函数类型，当快捷键注册条件满足时触发的回调。 |
 <!--DelEnd-->
 

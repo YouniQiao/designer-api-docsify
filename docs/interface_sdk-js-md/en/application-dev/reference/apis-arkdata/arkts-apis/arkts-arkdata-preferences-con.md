@@ -6,7 +6,7 @@
 const MAX_KEY_LENGTH: int
 ```
 
-Maximum key length, which is 1,024 bytes.
+Key的最大长度限制为1024个字节。
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ Maximum key length, which is 1,024 bytes.
 const MAX_VALUE_LENGTH: int
 ```
 
-Maximum value length, which is 16 MB.
+Value的最大长度限制为16MB。
 
 **Since:** 9
 

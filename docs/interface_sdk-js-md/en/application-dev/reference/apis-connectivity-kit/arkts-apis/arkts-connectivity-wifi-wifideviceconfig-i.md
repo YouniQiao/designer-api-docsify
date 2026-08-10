@@ -14,6 +14,12 @@ Wi-Fi device configuration information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## bssid
 
 ```TypeScript
@@ -88,7 +94,7 @@ securityType: WifiSecurityType
 
 Security type: reference definition of WifiSecurityType
 
-**Type:** WifiSecurityType
+**Type:** [WifiSecurityType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-wifisecuritytype-e.md)
 
 **Since:** 6
 

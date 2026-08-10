@@ -1,12 +1,18 @@
 # onAttachmentDidFail
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## onAttachmentDidFail
 
 ```TypeScript
 function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 ```
 
-Subscribe the attachment failure event.
+订阅绑定失败事件。使用callback异步回调。
 
 **Since:** 22
 
@@ -20,9 +26,9 @@ Subscribe the attachment failure event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachFailureReason&gt; | Yes | the callback is invoked only when the attachment triggered by the registrant's process fails. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachFailureReason&gt; | Yes | 回调函数，返回绑定失败的原因，仅当注册者进程触发的绑定失败时，调用该回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

@@ -1,6 +1,6 @@
 # WeekDay
 
-Enumerates the first day of a week. The value ranges from Monday to Sunday.
+周起始日的枚举，取值范围为周一至周日。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the first day of a week. The value ranges from Monday to Sunday.
 MON = 1
 ```
 
-Monday.
+周一。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Monday.
 TUE = 2
 ```
 
-Tuesday.
+周二。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Tuesday.
 WED = 3
 ```
 
-Wednesday.
+周三。
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Wednesday.
 THU = 4
 ```
 
-Thursday.
+周四。
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Thursday.
 FRI = 5
 ```
 
-Friday.
+周五。
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Friday.
 SAT = 6
 ```
 
-Saturday.
+周六。
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ Saturday.
 SUN = 7
 ```
 
-Sunday.
+周日。
 
 **Since:** 23
 

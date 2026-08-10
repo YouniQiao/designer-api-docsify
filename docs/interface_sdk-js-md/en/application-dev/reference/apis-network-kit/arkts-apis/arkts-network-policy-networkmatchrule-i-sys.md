@@ -12,6 +12,12 @@ The matching rules of network quota policies.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## identity
 
 ```TypeScript
@@ -38,9 +44,9 @@ To specify the identity of network, such as different WLAN.
 netType: NetBearType
 ```
 
-netType see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+netType see {@link NetBearType}.
 
-**Type:** NetBearType
+**Type:** [NetBearType](arkts-network-connection-netbeartype-e.md)
 
 **Since:** 10
 
@@ -58,7 +64,7 @@ netType see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 simId: string
 ```
 
-The ID of the target card, valid when netType is BEARER\_CELLULAR.
+The ID of the target card, valid when netType is BEARER_CELLULAR.
 
 **Type:** string
 

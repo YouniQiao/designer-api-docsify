@@ -1,12 +1,18 @@
 # getBundleInstallerSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleInstallerSync
 
 ```TypeScript
 function getBundleInstallerSync(): BundleInstaller
 ```
 
-Obtains a BundleInstaller object. This API is a synchronous API.
+获取并返回BundleInstaller对象。
 
 **Since:** 10
 
@@ -22,11 +28,11 @@ Obtains a BundleInstaller object. This API is a synchronous API.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | BundleInstaller object. |
+| [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md) | BundleInstaller object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

@@ -10,6 +10,12 @@ Provides the options (including callbacks) for sending an SMS message.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## content
 
 ```TypeScript
@@ -18,7 +24,7 @@ content: string | Array<int>
 
 If the content is a string, this is a short message. If the content is a byte array, this is a data message.
 
-**Type:** string \| Array&lt;int&gt;
+**Type:** ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt;
 
 **Since:** 6
 
@@ -36,7 +42,7 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 
 Indicates the callback invoked after the SMS message is delivered.
 
-**Type:** AsyncCallback&lt;IDeliveryShortMessageCallback&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;IDeliveryShortMessageCallback&gt;
 
 **Since:** 6
 
@@ -72,7 +78,7 @@ destinationPort?: int
 
 If send data message, destinationPort is mandatory. Otherwise is optional.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 6
 
@@ -90,7 +96,7 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 Indicates the callback invoked after the SMS message is sent.
 
-**Type:** AsyncCallback&lt;ISendShortMessageCallback&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ISendShortMessageCallback&gt;
 
 **Since:** 6
 
@@ -126,7 +132,7 @@ slotId: int
 
 Indicates the ID of the SIM card slot used for sending the SMS message.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 6
 

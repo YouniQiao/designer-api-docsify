@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { cameraPicker } from 'kits/@kit.CameraKit';
+```
+
 ## cameraPosition
 
 ```TypeScript
@@ -36,7 +42,7 @@ cameraPosition: camera.CameraPosition
 saveUri?: string
 ```
 
-保存配置信息的uri，默认值请参考[文件uri]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。当前saveUri参数为可选参数，若未配置该参数，则拍摄的照片和视频会默认存入媒体库中；若不想将照片和视频存入媒体库中，请自行配置应用沙箱内的文件资源路径，如自行传入资源路径时请确保该文件存在且具备写入权限，否则会保存失败。
+保存配置信息的uri，默认值请参考[文件uri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。当前saveUri参数为可选参数，若未配置该参数，则拍摄的照片和视频会默认存入媒体库中；若不想将照片和视频存入媒体库中，请自行配置应用沙箱内的文件资源路径，如自行传入资源路径时请确保该文件存在且具备写入权限，否则会保存失败。
 
 **类型：** string
 
@@ -58,7 +64,7 @@ videoDuration?: int
 
 录制的最大时长（单位：秒）。默认为0，不设置最大录制时长。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

@@ -1,6 +1,6 @@
 # AudioHapticPlayerOptions
 
-Describes the options for the audio-haptic player.
+音振播放器选项。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Describes the options for the audio-haptic player.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
+## Modules to Import
+
+```TypeScript
+import { audioHaptic } from 'kits/@kit.AudioKit';
+```
+
 ## muteAudio
 
 ```TypeScript
 muteAudio?: boolean
 ```
 
-Whether to mute the audio. **true** to mute, **false** otherwise. If this parameter is not specified, the default value **false** is used.
+是否将音频静音，true表示将音频静音，false表示正常播放声音。若不填该参数，则默认为false。
 
 **Type:** boolean
 
@@ -34,7 +40,7 @@ Whether to mute the audio. **true** to mute, **false** otherwise. If this parame
 muteHaptics?: boolean
 ```
 
-Whether to mute haptics feedback. **true** to mute, **false** otherwise. If this parameter is not specified, the default value **false** is used.
+是否禁止振动，true表示将禁止振动，false表示正常振动。若不填该参数，则默认为false。
 
 **Type:** boolean
 

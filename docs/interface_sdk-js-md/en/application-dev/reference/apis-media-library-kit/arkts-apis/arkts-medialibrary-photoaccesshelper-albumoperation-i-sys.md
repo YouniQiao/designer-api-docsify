@@ -12,6 +12,12 @@ Album operation info.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## attr
 
 ```TypeScript
@@ -20,7 +26,7 @@ attr: AlbumAttribute
 
 The album operation attribute.
 
-**Type:** AlbumAttribute
+**Type:** [AlbumAttribute](arkts-medialibrary-photoaccesshelper-albumattribute-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ type: AlbumOperationType
 
 The album operation type.
 
-**Type:** AlbumOperationType
+**Type:** [AlbumOperationType](arkts-medialibrary-photoaccesshelper-albumoperationtype-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -62,7 +68,7 @@ The album operation type.
 values: string[]
 ```
 
-The album operation parameters. The maximum length is 20, The array can contain a maximum of 20 strings, and each string must not exceed 500 characters in length.
+The album operation parameters. The maximum length is 20, The array can contain a maximum of 20 strings, and  each string must not exceed 500 characters in length.
 
 **Type:** string[]
 

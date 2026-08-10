@@ -10,6 +10,12 @@ Configuring parameters in continuous location requests.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## interval
 
 ```TypeScript
@@ -18,7 +24,7 @@ interval: int
 
 Location report interval, in seconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -38,7 +44,7 @@ locationScenario: UserActivityScenario | PowerConsumptionScenario
 
 Location scenario. You can select a user activity scenario or power consumption scenario.
 
-**Type:** UserActivityScenario \| PowerConsumptionScenario
+**Type:** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) \| PowerConsumptionScenario
 
 **Since:** 12
 
@@ -78,7 +84,7 @@ sportsType?: SportsType
 
 Indicates the type of sports.This parameter is valid only when locationScenario is set to UserActivityScenario.SPORT.
 
-**Type:** SportsType
+**Type:** [SportsType](arkts-location-geolocationmanager-sportstype-e.md)
 
 **Since:** 26.0.0
 

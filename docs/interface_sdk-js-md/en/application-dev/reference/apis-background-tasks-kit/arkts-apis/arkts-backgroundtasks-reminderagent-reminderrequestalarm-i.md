@@ -1,6 +1,6 @@
 # ReminderRequestAlarm
 
-Defines a reminder for an alarm.
+闹钟实例对象，用于设置提醒的时间。
 
 **Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
 
@@ -16,13 +16,19 @@ Defines a reminder for an alarm.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## daysOfWeek
 
 ```TypeScript
 daysOfWeek?: Array<number>
 ```
 
-Days of a week when the reminder repeats. The value ranges from 1 to 7, corresponding to the data from Monday to Sunday.
+指明每周哪几天需要重复提醒。范围为周一到周末，对应数字为1到7。
 
 **Type:** Array&lt;number&gt;
 
@@ -44,7 +50,7 @@ Days of a week when the reminder repeats. The value ranges from 1 to 7, correspo
 hour: number
 ```
 
-Hour portion of the reminder time.
+指明提醒的目标时刻。
 
 **Type:** number
 
@@ -66,7 +72,7 @@ Hour portion of the reminder time.
 minute: number
 ```
 
-Minute portion of the reminder time.
+指明提醒的目标分钟。
 
 **Type:** number
 

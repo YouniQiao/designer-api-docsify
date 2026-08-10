@@ -1,6 +1,6 @@
 # TextInputType
 
-Enumerates the text input type.
+文本输入类型。
 
 **Since:** 10
 
@@ -16,7 +16,9 @@ Enumerates the text input type.
 NONE = -1
 ```
 
-The text input type is NONE.
+NONE。
+
+**使用场景：**当编辑框不希望指定特定输入类型时使用，输入法将使用默认键盘布局。
 
 **Since:** 10
 
@@ -32,7 +34,9 @@ The text input type is NONE.
 TEXT = 0
 ```
 
-The text input type is TEXT.
+文本类型。
+
+**使用场景：**适用于普通文本输入框，如聊天、备忘录等，输入法显示全功能键盘。
 
 **Since:** 10
 
@@ -48,7 +52,9 @@ The text input type is TEXT.
 MULTILINE
 ```
 
-The text input type is MULTILINE.
+多行类型。
+
+**使用场景：**适用于需要多行文本输入的场景，如长文本编辑、评论框等。
 
 **Since:** 10
 
@@ -64,7 +70,9 @@ The text input type is MULTILINE.
 NUMBER
 ```
 
-The text input type is NUMBER.
+数字类型。
+
+**使用场景：**适用于仅需要输入数字的场景，如数量输入、年龄输入等，输入法显示数字键盘。
 
 **Since:** 10
 
@@ -80,7 +88,9 @@ The text input type is NUMBER.
 PHONE
 ```
 
-The text input type is PHONE.
+电话号码类型。
+
+**使用场景：**适用于电话号码输入框，输入法显示电话号码键盘（包含数字和常用电话符号）。
 
 **Since:** 10
 
@@ -96,7 +106,9 @@ The text input type is PHONE.
 DATETIME
 ```
 
-The text input type is DATETIME.
+日期类型。
+
+**使用场景：**适用于日期时间输入框，输入法显示日期相关的键盘布局。
 
 **Since:** 10
 
@@ -112,7 +124,9 @@ The text input type is DATETIME.
 EMAIL_ADDRESS
 ```
 
-The text input type is EMAIL\_ADDRESS.
+邮箱地址类型。
+
+**使用场景：**适用于邮箱输入框，输入法键盘会突出显示"@""."等常用邮箱符号。
 
 **Since:** 10
 
@@ -128,7 +142,9 @@ The text input type is EMAIL\_ADDRESS.
 URL
 ```
 
-The text input type is URL.
+链接类型。
+
+**使用场景：**适用于网址输入框，输入法键盘会突出显示"/""."等常用URL符号。
 
 **Since:** 10
 
@@ -144,7 +160,9 @@ The text input type is URL.
 VISIBLE_PASSWORD
 ```
 
-The text input type is VISIBLE\_PASSWORD.
+密码类型。
+
+**使用场景：**适用于密码输入框，输入法显示可见密码键盘，不进行自动建议。
 
 **Since:** 10
 
@@ -160,7 +178,9 @@ The text input type is VISIBLE\_PASSWORD.
 NUMBER_PASSWORD
 ```
 
-The text input type is NUMBER\_PASSWORD.
+数字密码类型。
+
+**使用场景：**适用于仅需输入数字密码的场景，如PIN码输入。
 
 **Since:** 11
 
@@ -176,7 +196,9 @@ The text input type is NUMBER\_PASSWORD.
 SCREEN_LOCK_PASSWORD
 ```
 
-The text input type is SCREEN\_LOCK\_PASSWORD.
+锁屏密码类型。
+
+**使用场景：**适用于锁屏界面的密码输入框。
 
 **Since:** 20
 
@@ -192,7 +214,9 @@ The text input type is SCREEN\_LOCK\_PASSWORD.
 USER_NAME
 ```
 
-The text input type is USER\_NAME.
+用户名类型。
+
+**使用场景：**适用于用户名输入框，输入法可根据用户名特点优化建议。
 
 **Since:** 20
 
@@ -208,7 +232,9 @@ The text input type is USER\_NAME.
 NEW_PASSWORD
 ```
 
-The text input type is NEW\_PASSWORD.
+新密码类型。
+
+**使用场景：**适用于设置新密码的输入框，输入法可提供密码强度提示。
 
 **Since:** 20
 
@@ -224,7 +250,9 @@ The text input type is NEW\_PASSWORD.
 NUMBER_DECIMAL
 ```
 
-The text input type is NUMBER\_DECIMAL.
+带小数点的数字类型。
+
+**使用场景：**适用于需要输入带小数点数字的场景，如金额输入。
 
 **Since:** 20
 
@@ -240,7 +268,9 @@ The text input type is NUMBER\_DECIMAL.
 ONE_TIME_CODE
 ```
 
-The text input type is ONE\_TIME\_CODE.
+验证码类型。
+
+**使用场景：**适用于验证码输入框，输入法可优化验证码输入体验。
 
 **Since:** 20
 

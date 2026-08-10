@@ -1,6 +1,6 @@
 # FilterType
 
-Enumerates contact filter types.
+枚举，联系人过滤类型。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Enumerates contact filter types.
 SHOW_FILTER = 0
 ```
 
-Shows only contacts that meet the filter criteria.
+仅展示符合过滤条件的联系人。
 
 **Since:** 15
 
@@ -34,7 +34,7 @@ Shows only contacts that meet the filter criteria.
 DEFAULT_SELECT = 1
 ```
 
-Selects contacts that meet the filter criteria by default.
+默认勾选符合过滤条件的联系人。
 
 **Since:** 15
 
@@ -52,7 +52,7 @@ Selects contacts that meet the filter criteria by default.
 SHOW_FILTER_AND_DEFAULT_SELECT = 2
 ```
 
-Shows only contacts that meet the filter criteria and selects these contacts by default.
+默认勾选仅展示符合过滤条件的联系人。
 
 **Since:** 15
 

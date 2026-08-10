@@ -1,6 +1,6 @@
 # XmlPullParser
 
-The XmlPullParser interface is used to parse the existing xml file.
+XmlPullParser接口用于解析现有的XML文件。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ The XmlPullParser interface is used to parse the existing xml file.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { xml } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 ```
 
-Creates and returns an XmlPullParser object.
+构造并返回一个XmlPullParser对象。
 
 **Since:** 8
 
@@ -32,10 +38,10 @@ Creates and returns an XmlPullParser object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| DataView | Yes | A instance, the new XmlPullParser with. |
-| encoding | string | No | [encoding='utf8'] this is its encoding. |
+| buffer | ArrayBuffer \| DataView | Yes | 用于解析的XML文本信息。 |
+| encoding | string | No | 编码格式，默认'utf-8'（目前仅支持'utf-8'）。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -52,7 +58,7 @@ let that = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UT
 parse(option: ParseOptions): void
 ```
 
-Starts parsing the XML file.
+该接口用于解析XML。
 
 **Since:** 8
 
@@ -72,9 +78,9 @@ Starts parsing the XML file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | XML解析选项。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -112,7 +118,7 @@ that.parse(options);
 parseXml(option: ParseOptions): void
 ```
 
-Parses XML information.
+解析XML。
 
 **Since:** 14
 
@@ -128,5 +134,5 @@ Parses XML information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | XML parsing options. |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | XML解析选项。 |
 

@@ -1,6 +1,6 @@
 # GaugeConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **继承/实现关系：** GaugeConfiguration extends [CommonConfiguration<GaugeConfiguration>](CommonConfiguration<GaugeConfiguration>)
 

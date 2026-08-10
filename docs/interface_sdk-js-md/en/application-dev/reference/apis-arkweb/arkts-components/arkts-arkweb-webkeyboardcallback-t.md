@@ -4,7 +4,7 @@
 type WebKeyboardCallback = (keyboardCallbackInfo: WebKeyboardCallbackInfo) => WebKeyboardOptions
 ```
 
-Defines a callback to intercept the soft keyboard initiated from editable elements on a web page. This event is typically called when the **\_\_\_ESCAPED\_UNDERSCORE\_DESC\_\_\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** tag on the web page is clicked.
+The callback of onInterceptKeyboardAttach event.
 
 **Since:** 12
 
@@ -20,11 +20,11 @@ Defines a callback to intercept the soft keyboard initiated from editable elemen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyboardCallbackInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Input parameter of the callback used to intercept the soft keyboard initiated from editable elements on a web page, including [WebKeyboardController]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ and editable element attributes.  |
+| keyboardCallbackInfo | [WebKeyboardCallbackInfo](arkts-arkweb-webkeyboardcallbackinfo-i.md) | Yes | callback information of onInterceptKeyboardAttach. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | R[WebKeyboardOptions]{ |
+| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | Return the web keyboard options of this web component. |
 

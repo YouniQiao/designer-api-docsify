@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## endPage
 
 ```TypeScript
@@ -18,7 +24,7 @@ endPage?: int
 
 表示结束页。默认值为待打印文件的最大页数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -36,7 +42,7 @@ pages?: Array<int>
 
 表示待打印的页面范围的集合。默认值为空。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 11
 
@@ -54,7 +60,7 @@ startPage?: int
 
 表示起始页。默认值为1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

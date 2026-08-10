@@ -1,6 +1,6 @@
 # BrightnessParam (System API)
 
-Detailed description of the material brightness parameters.
+材质提亮参数的详细说明。
 
 **Since:** 22
 
@@ -12,15 +12,21 @@ Detailed description of the material brightness parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## cubicCoeff
 
 ```TypeScript
 cubicCoeff : double
 ```
 
-Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
+灰度调整三阶系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大，灰度调整效果越强。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 22
 
@@ -38,9 +44,9 @@ Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Va
 fraction : double
 ```
 
-Blending ratio for the brightness effect. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A larger value indicates a weaker brightness effect.
+提亮效果混合比例。取值范围为[0, 1]，小于0时取值为0，大于1时取值为1，值越大，提亮效果越弱。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 22
 
@@ -58,9 +64,9 @@ Blending ratio for the brightness effect. The value range is [0, 1]. Values less
 lightUpDegree : double
 ```
 
-Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are treated as -1;values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
+灰度调整比例。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大，灰度调整效果越强。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 22
 
@@ -78,9 +84,9 @@ Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are 
 negRgb : [double, double, double]
 ```
 
-Negative adjustment coefficients based on the base saturation. The value range for each number is [-1, 1].Values less than -1 are treated as -1; values greater than 1 are treated as 1.A larger value indicates lower saturation.
+基于基准饱和度的负向调整系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大饱和度越低。
 
-**Type:** [double, double, double]
+**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
 
 **Since:** 22
 
@@ -98,9 +104,9 @@ Negative adjustment coefficients based on the base saturation. The value range f
 posRgb : [double, double, double]
 ```
 
-Positive adjustment coefficients based on the base saturation. The value range for each number is [-1, 1].Values less than -1 are treated as -1; values greater than 1 are treated as 1.A larger value indicates higher saturation.
+基于基准饱和度的正向调整系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大饱和度越高。
 
-**Type:** [double, double, double]
+**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
 
 **Since:** 22
 
@@ -118,9 +124,9 @@ Positive adjustment coefficients based on the base saturation. The value range f
 quadCoeff : double
 ```
 
-Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
+灰度调整二阶系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大，灰度调整效果越强。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 22
 
@@ -138,9 +144,9 @@ Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. V
 rate : double
 ```
 
-Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1;values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
+灰度调整线性系数。取值范围为[-1, 1]，小于-1时取值为-1，大于1时取值为1，值越大，灰度调整效果越强。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 22
 
@@ -158,9 +164,9 @@ Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values 
 saturation : double
 ```
 
-Base saturation for brightness. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A larger value indicates a higher base saturation.
+提亮基准饱和度。取值范围为[0, 1]，小于0时取值为0，大于1时取值为1，值越大基准饱和度越高。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 22
 

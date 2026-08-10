@@ -1,6 +1,6 @@
 # StopBits
 
-Stop bits in serial port communication.
+串口通信中的停止位
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Stop bits in serial port communication.
 ONE = 1
 ```
 
-One stop bit.
+1位停止位
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ One stop bit.
 TWO = 2
 ```
 
-2 stop bits.
+2位停止位
 
 **Since:** 26.0.0
 

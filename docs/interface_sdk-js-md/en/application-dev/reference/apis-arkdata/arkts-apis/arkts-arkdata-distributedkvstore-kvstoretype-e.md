@@ -1,11 +1,6 @@
 # KVStoreType
 
-Enumerates the distributed KV store types.  
-| Name | Value| Description |  
-| -------------------- | - | ------------------------------------------------------------ |  
-| DEVICE\_COLLABORATION | 0 | Device KV store.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**System capability**:  
-SystemCapability.DistributedDataManager.KVStore.DistributedKVStore|  
-| SINGLE\_VERSION | 1 | Single KV store.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_**System capability**: SystemCapability.DistributedDataManager.KVStore.Core|
+分布式键值数据库类型枚举。
 
 **Since:** 9
 
@@ -21,7 +16,7 @@ SystemCapability.DistributedDataManager.KVStore.DistributedKVStore|
 DEVICE_COLLABORATION
 ```
 
-Device-collaboration database, as specified by {@code DeviceKVStore}
+表示多设备协同数据库。
 
 **Since:** 9
 
@@ -39,7 +34,7 @@ Device-collaboration database, as specified by {@code DeviceKVStore}
 SINGLE_VERSION
 ```
 
-Single-version database, as specified by {@code SingleKVStore}
+表示单版本数据库。
 
 **Since:** 9
 

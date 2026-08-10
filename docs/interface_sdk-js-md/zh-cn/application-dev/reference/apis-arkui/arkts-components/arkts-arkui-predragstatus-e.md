@@ -136,7 +136,7 @@ PREVIEW_LANDING_FINISHED = 5
 ACTION_CANCELED_BEFORE_DRAG = 6
 ```
 
-拖拽浮起落位动效中断。(已满足READY\_TO\_TRIGGER\_DRAG\_ACTION状态后，未达到动效阶段，手指抬手时触发)
+拖拽浮起落位动效中断。(已满足READY_TO_TRIGGER_DRAG_ACTION状态后，未达到动效阶段，手指抬手时触发)
 
 **起始版本：** 12
 

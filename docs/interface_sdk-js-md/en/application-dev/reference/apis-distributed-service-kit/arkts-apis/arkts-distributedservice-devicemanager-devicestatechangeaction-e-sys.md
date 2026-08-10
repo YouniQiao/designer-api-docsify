@@ -1,6 +1,6 @@
 # DeviceStateChangeAction (System API)
 
-Enumerates the device states.
+表示设备状态变化的枚举。
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ Enumerates the device states.
 ONLINE = 0
 ```
 
-The device is physically online.
+设备物理上线状态。
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ The device is physically online.
 READY = 1
 ```
 
-The information between devices has been synchronized in the Distributed Data Service (DDS) module, and the device is ready for running distributed services.
+设备可用状态，表示设备间信息已在分布式数据中同步完成, 可以运行分布式业务。
 
 **Since:** 7
 
@@ -66,7 +66,7 @@ The information between devices has been synchronized in the Distributed Data Se
 OFFLINE = 2
 ```
 
-The device is physically offline.
+设备物理下线状态。
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ The device is physically offline.
 CHANGE = 3
 ```
 
-The device information is changed.
+设备信息更改。
 
 **Since:** 7
 

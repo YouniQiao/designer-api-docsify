@@ -1,6 +1,6 @@
 # PopupV2Button
 
-Defines the popup button
+PopupV2Button定义按钮的相关属性和事件。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,23 @@ Defines the popup button
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
 action?: VoidCallback
 ```
 
-Set the button callback.
+设置按钮点击回调。
 
-**Type:** VoidCallback
+默认不执行任何操作。
+
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -36,7 +44,7 @@ Set the button callback.
 buttonTextModifier?: TextModifier
 ```
 
-The button text attributes of Popup.
+设置按钮文本属性，如设置文本颜色、字体大小等。默认值：undefined，值为undefined时，默认使用系统按钮文本属性。
 
 **Type:** TextModifier
 
@@ -56,9 +64,9 @@ The button text attributes of Popup.
 text: ResourceStr
 ```
 
-Set the button display content.
+设置按钮内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

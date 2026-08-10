@@ -4,7 +4,7 @@
 export type CustomColors = Partial<Colors>
 ```
 
-Defines the struct of CustomColors.
+自定义主题颜色资源类型。
 
 **Since:** 23
 

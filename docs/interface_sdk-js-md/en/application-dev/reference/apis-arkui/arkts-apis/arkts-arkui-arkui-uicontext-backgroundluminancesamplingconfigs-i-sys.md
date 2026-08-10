@@ -1,6 +1,6 @@
 # BackgroundLuminanceSamplingConfigs (System API)
 
-Sets the background luminance sampling parameters.
+背景取色参数配置。
 
 **Since:** 23
 
@@ -12,13 +12,21 @@ Sets the background luminance sampling parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## brightThreshold
 
 ```TypeScript
 brightThreshold?: number
 ```
 
-Light color brightness threshold. The value must be an integer in the range of [0, 255]. The dark color brightness threshold must be less than the light color brightness threshold.
+浅色亮度阈值：[0, 255]内的整数，设置的深色亮度阈值应小于浅色亮度阈值。
+
+默认值：220
 
 **Type:** number
 
@@ -42,7 +50,9 @@ Light color brightness threshold. The value must be an integer in the range of [
 darkThreshold?: number
 ```
 
-Dark color brightness threshold. The value must be an integer in the range of [0, 255]. The dark color brightness threshold must be less than the light color brightness threshold.
+深色亮度阈值：[0, 255]内的整数，设置的深色亮度阈值应小于浅色亮度阈值。
+
+默认值：150
 
 **Type:** number
 
@@ -66,11 +76,11 @@ Dark color brightness threshold. The value must be an integer in the range of [0
 region?: Edges<LengthMetrics>
 ```
 
-Sample area offset relative to the component, calculated from the component's upper left corner as the reference point.
+相对组件的取色区域偏移，以组件自身的左上点为基准进行偏移计算。
 
-The component's own area is used by default.
+默认使用组件自身区域
 
-**Type:** Edges&lt;LengthMetrics&gt;
+**Type:** [Edges](arkts-arkui-edges-i.md)&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
 
 **Since:** 23
 
@@ -90,7 +100,9 @@ The component's own area is used by default.
 samplingInterval?: number
 ```
 
-Color sampling interval, in milliseconds. The minimum value is 180 ms.
+取色间隔，单位为毫秒，最小值180ms。
+
+默认值：500
 
 **Type:** number
 

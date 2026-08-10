@@ -6,9 +6,9 @@
 const MAX_RECORD_NUM = 512
 ```
 
-Maximum number of records in a **PasteData** object. In versions earlier than API version 10, the value is 512,indicating that no more records can be added once the number of records reaches 512.
+API version 10之前，此常量值为512，表示单个PasteData中所能包含的最大条目数为512。当剪贴板内容中添加的条目达到数量上限512后，后续的添加操作无效。
 
-Since API version 10, no limit is placed on the number of records in a **PasteData** object.
+从API version 10开始，不再限制单个PasteData中所能包含的最大条目数。
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ Since API version 10, no limit is placed on the number of records in a **PasteDa
 const MIMETYPE_PIXELMAP = 'pixelMap'
 ```
 
-MIME type of the PixelMap content.
+PixelMap内容的MIME类型定义。
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ MIME type of the PixelMap content.
 const MIMETYPE_TEXT_HTML = 'text/html'
 ```
 
-MIME type of the HTML content.
+HTML内容的MIME类型定义。
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ MIME type of the HTML content.
 const MIMETYPE_TEXT_PLAIN = 'text/plain'
 ```
 
-MIME type of the plain text content.
+纯文本内容的MIME类型定义。
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ MIME type of the plain text content.
 const MIMETYPE_TEXT_URI = 'text/uri'
 ```
 
-MIME type of the URI content.
+URI内容的MIME类型定义。
 
 **Since:** 7
 
@@ -98,7 +98,7 @@ MIME type of the URI content.
 const MIMETYPE_TEXT_WANT = 'text/want'
 ```
 
-MIME type of the Want content.
+Want内容的MIME类型定义。
 
 **Since:** 7
 

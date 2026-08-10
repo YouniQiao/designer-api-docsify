@@ -1,17 +1,23 @@
 # getDevices
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getDevices
 
 ```TypeScript
 function getDevices(): Array<Readonly<USBDevice>>
 ```
 
-Obtains the list of USB devices connected to the host.
-    **NOTE**  
-    
-    Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they  
-    request permission using [usbManager.requestRight]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    and then initiate a control transfer to obtain it.
+获取接入主设备的USB设备列表。
+
+> **说明：**
+> 
+> 三方应用没有权限获取serial字段读取设备序列号，需要通过
+> [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)申请权限后，自行发起控制传输获取。
 
 **Since:** 9
 
@@ -25,15 +31,15 @@ Obtains the list of USB devices connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
+| Array&lt;Readonly&lt;USBDevice&gt;&gt; | 设备信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 18 and later |
+| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();

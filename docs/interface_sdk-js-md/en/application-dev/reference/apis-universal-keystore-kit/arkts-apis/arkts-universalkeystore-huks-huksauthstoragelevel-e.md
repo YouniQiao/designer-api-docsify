@@ -1,12 +1,12 @@
 # HuksAuthStorageLevel
 
-Enumerates the storage security levels of a key.
-    **NOTE**  
-    
-    When using a key whose storage level is ECE, you are advised to clear the session resources created using the key  
-    by detecting the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    to ensure security.
+表示生成或导入密钥时，指定该密钥的存储安全等级。
+
+> **说明：**
+> 
+> 业务在使用存储等级为ECE的密钥时，建议通过感知
+> [锁屏事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_screen_locked)
+> 来清理使用该密钥创建的会话资源，以保证安全性。
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ Enumerates the storage security levels of a key.
 HUKS_AUTH_STORAGE_LEVEL_DE = 0
 ```
 
-The key can be accessed only after the device is started.
+表示密钥仅在开机后可访问。
 
 **Since:** 11
 
@@ -44,7 +44,7 @@ The key can be accessed only after the device is started.
 HUKS_AUTH_STORAGE_LEVEL_CE = 1
 ```
 
-The key can be accessed only after the first unlock of the device.
+表示密钥仅在首次解锁后可访问。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ The key can be accessed only after the first unlock of the device.
 HUKS_AUTH_STORAGE_LEVEL_ECE = 2
 ```
 
-The key can be accessed only when the device is unlocked.
+表示密钥仅在解锁状态时可访问。
 
 **Since:** 11
 

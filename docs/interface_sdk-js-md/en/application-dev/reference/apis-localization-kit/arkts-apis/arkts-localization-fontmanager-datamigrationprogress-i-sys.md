@@ -1,6 +1,6 @@
 # DataMigrationProgress (System API)
 
-Describes the progress information of data migration, including the progress percentage and estimated remaining time. This API is the parameter type of the \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ API in the data migration callback.
+描述数据迁移的进度信息，包含进度百分比和预估剩余时间。该接口为数据迁移回调onProgress方法的参数类型。
 
 **Since:** 23
 
@@ -12,15 +12,21 @@ Describes the progress information of data migration, including the progress per
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { fontManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## progressPercentage
 
 ```TypeScript
 progressPercentage: int
 ```
 
-Data migration progress percentage, which is calculated based on the number or size of migrated font files and may not increase evenly. When \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ reaches \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_, the migration task is about to complete and the \_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_ callback is about to be invoked.The value range is [0, 100].
+数据迁移百分比进度，进度值根据已迁移的字体文件数量或大小计算，可能不是均匀增长。当progressPercentage为100时，迁移任务即将完成，onResult回调即将被调用。取值范围为[0, 100]。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -38,9 +44,9 @@ Data migration progress percentage, which is calculated based on the number or s
 timeRemaining: int
 ```
 
-Estimated remaining time, which may vary depending on factors such as device performance, file size, and system load.The value must be a non-negative integer, with a minimum value of 0.The unit is seconds.
+预计剩余时间，可能因设备性能、文件大小、系统负载等因素而有所差异。取值范围为非负整数，最小值为0。单位为s。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

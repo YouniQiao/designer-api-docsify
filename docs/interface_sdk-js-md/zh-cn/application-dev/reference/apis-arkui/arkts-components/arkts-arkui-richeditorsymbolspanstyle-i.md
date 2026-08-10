@@ -20,7 +20,7 @@ effectStrategy?: SymbolEffectStrategy
 
 默认值：SymbolEffectStrategy.NONE。
 
-**类型：** SymbolEffectStrategy
+**类型：** [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md)
 
 **起始版本：** 11
 
@@ -122,7 +122,7 @@ renderingStrategy?: SymbolRenderingStrategy
 
 默认值：SymbolRenderingStrategy.SINGLE。
 
-**类型：** SymbolRenderingStrategy
+**类型：** [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)
 
 **起始版本：** 11
 

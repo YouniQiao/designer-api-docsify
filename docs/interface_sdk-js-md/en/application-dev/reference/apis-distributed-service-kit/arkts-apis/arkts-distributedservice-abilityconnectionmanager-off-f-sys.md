@@ -1,5 +1,11 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## off('receiveImage')
 
 ```TypeScript
@@ -7,7 +13,7 @@ function off(type: 'receiveImage', sessionId: number,
         callback?: Callback<EventCallbackInfo>): void
 ```
 
-Unregisters receiveImage event.
+取消receiveImage事件的回调监听。
 
 **Since:** 18
 
@@ -25,18 +31,18 @@ Unregisters receiveImage event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveImage' | Yes | Registration Type, 'receiveImage'. |
-| sessionId | number | Yes | Ability connection Session id. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EventCallbackInfo&gt; | No | Used to handle ('receiveImage') command. |
+| type | 'receiveImage' | Yes | 事件注册类型，'receiveImage'。 |
+| sessionId | number | Yes | 协同会话ID。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | 用于处理('receiveImage')事件的回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
@@ -53,7 +59,7 @@ function off(type: 'collaborateEvent', sessionId: number,
         callback?: Callback<CollaborateEventInfo>): void
 ```
 
-Unregisters collaborateEvent event.
+取消collaborateEvent事件的回调监听。
 
 **Since:** 18
 
@@ -71,18 +77,18 @@ Unregisters collaborateEvent event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'collaborateEvent' | Yes | Registration Type, 'collaborateEvent'. |
-| sessionId | number | Yes | Ability connection Session id. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CollaborateEventInfo&gt; | No | Called when an error event comes. |
+| type | 'collaborateEvent' | Yes | 事件注册类型，'collaborateEvent'。 |
+| sessionId | number | Yes | 协同会话ID。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CollaborateEventInfo&gt; | No | 错误事件回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 202 | Not system App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## colorMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ colorMode: int
 
 表示色彩模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -36,7 +42,7 @@ copyNumber: int
 
 表示文件列表副本。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -54,7 +60,7 @@ duplexMode: int
 
 表示单双面打印模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -72,7 +78,7 @@ fdList: Array<int>
 
 表示待打印文件fd列表。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 24
 
@@ -144,7 +150,7 @@ jobState: PrintJobState
 
 表示当前打印任务状态。
 
-**类型：** PrintJobState
+**类型：** [PrintJobState](arkts-basicservices-print-printjobstate-e.md)
 
 **起始版本：** 24
 
@@ -162,7 +168,7 @@ jobSubstate: PrintJobSubState
 
 表示当前打印任务子状态。
 
-**类型：** PrintJobSubState
+**类型：** [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md)
 
 **起始版本：** 24
 
@@ -180,7 +186,7 @@ margin?: PrintMargin
 
 表示当前页边距设置。
 
-**类型：** PrintMargin
+**类型：** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
 **起始版本：** 24
 
@@ -216,7 +222,7 @@ pageRange: PrinterRange
 
 表示打印范围大小。
 
-**类型：** PrinterRange
+**类型：** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
 **起始版本：** 24
 
@@ -234,7 +240,7 @@ pageSize: PrintPageSize
 
 表示选定的页面尺寸。
 
-**类型：** PrintPageSize
+**类型：** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
 
 **起始版本：** 24
 
@@ -252,7 +258,7 @@ preview?: PreviewAttribute
 
 表示预览设置。
 
-**类型：** PreviewAttribute
+**类型：** [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md)
 
 **起始版本：** 24
 

@@ -1,12 +1,18 @@
 # getBundleInfoForSelfSync
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleInfoForSelfSync
 
 ```TypeScript
 function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo
 ```
 
-Obtains the bundle information of the current application based on the given bundle flags. This API returns the result synchronously.
+以同步方法根据给定的bundleFlags获取当前应用的BundleInfo。
 
 **Since:** 10
 
@@ -22,21 +28,21 @@ Obtains the bundle information of the current application based on the given bun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Type of the bundle information to obtain. |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的BundleInfo所包含的信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回BundleInfo对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

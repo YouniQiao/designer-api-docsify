@@ -1,7 +1,6 @@
 # FilterAbilityStateType (System API)
 
-Enumerates the types of ability states to filter. It can be used with  
-[AppStateFilter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to filter the ability state types you want to listen for.
+表示要监听的Ability状态，该类型为枚举。可配合[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md)过滤想要监听的Ability状态。
 
 **Since:** 21
 
@@ -19,8 +18,8 @@ Enumerates the types of ability states to filter. It can be used with
 CREATE = 1 << 0
 ```
 
-The ability is being created. It corresponds to the state **ABILITY\_STATE\_CREATE** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+Ability正在创建中，对应  
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_CREATE。
 
 **Since:** 21
 
@@ -38,8 +37,8 @@ The ability is being created. It corresponds to the state **ABILITY\_STATE\_CREA
 FOREGROUND = 1 << 1
 ```
 
-The ability is running in the foreground. It corresponds to the state **ABILITY\_STATE\_FOREGROUND** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+Ability处于前台，对应  
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_FOREGROUND。
 
 **Since:** 21
 
@@ -57,8 +56,8 @@ The ability is running in the foreground. It corresponds to the state **ABILITY\
 BACKGROUND = 1 << 2
 ```
 
-The ability is running in the background. It corresponds to the state **ABILITY\_STATE\_BACKGROUND** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+Ability处于后台，对应  
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_BACKGROUND。
 
 **Since:** 21
 
@@ -76,8 +75,8 @@ The ability is running in the background. It corresponds to the state **ABILITY\
 DESTROY = 1 << 3
 ```
 
-The ability has been destroyed. It corresponds to the state **ABILITY\_STATE\_TERMINATED** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+Ability已经销毁，对应  
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_TERMINATED。
 
 **Since:** 21
 

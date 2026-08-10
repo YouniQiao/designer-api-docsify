@@ -5,7 +5,7 @@ type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,
     callback: IUserAuthCallback) => void
 ```
 
-Authenticates the specified domain account with a popup.
+弹窗认证指定的域账号。
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ Authenticates the specified domain account with a popup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the domain account information for authentication.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the callback for notifying the authentication result.  |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 表示域账号信息。 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 表示认证结果回调。 |
 

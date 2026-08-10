@@ -32,7 +32,7 @@ space?: SpaceType
 
 space取值是大于等于0的数字，或者可以转换为非负数字的字符串，或者可以转换为数字的Resource类型数据。负数作为非法值将被当作默认值0处理。
 
-**类型：** SpaceType
+**类型：** [SpaceType](arkts-arkui-spacetype-t.md)
 
 **起始版本：** 18
 

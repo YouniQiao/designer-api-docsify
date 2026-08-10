@@ -1,6 +1,6 @@
 # OnConfirmEvent
 
-Defines the callback used when a web page triggers **confirm()**.
+定义网页触发 `confirm()` 弹窗时的回调函数。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the callback used when a web page triggers **confirm()**.
 message: string
 ```
 
-Information displayed in the dialog box.
+显示在弹窗中的信息。
 
 **Type:** string
 
@@ -36,9 +36,9 @@ Information displayed in the dialog box.
 result: JsResult
 ```
 
-User operation result that is notified to the **Web** component.
+通知Web组件用户的操作结果。
 
-**Type:** JsResult
+**Type:** [JsResult](../arkts-apis/arkts-arkweb-web-jsresult-c.md)
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ User operation result that is notified to the **Web** component.
 url: string
 ```
 
-URL of the web page where the dialog box is displayed.
+当前显示弹窗的网页的URL。
 
 **Type:** string
 

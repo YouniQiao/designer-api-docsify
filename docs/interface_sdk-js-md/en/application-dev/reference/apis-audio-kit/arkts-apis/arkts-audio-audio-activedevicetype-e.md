@@ -1,6 +1,6 @@
 # ActiveDeviceType
 
-Enumerates the active device types.
+表示活跃设备类型的枚举。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Enumerates the active device types.
 SPEAKER = 2
 ```
 
-Speaker.
+扬声器。
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ Speaker.
 BLUETOOTH_SCO = 7
 ```
 
-Bluetooth device using Synchronous Connection Oriented (SCO) links.
+蓝牙设备SCO（Synchronous Connection Oriented）连接。
 
 **Since:** 7
 

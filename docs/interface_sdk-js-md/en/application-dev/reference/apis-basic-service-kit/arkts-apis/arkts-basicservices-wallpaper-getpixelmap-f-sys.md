@@ -1,12 +1,22 @@
 # getPixelMap (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPixelMap
 
 ```TypeScript
 function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.
+获取壁纸图片的像素图。
+
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **Since:** 7
 
@@ -26,10 +36,10 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the wallpaper type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | Yes | the callback of getPixelMap. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | 壁纸类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -51,7 +61,11 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: Business
 function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 ```
 
-Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.
+获取壁纸图片的像素图。
+
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **Since:** 7
 
@@ -71,15 +85,15 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | 壁纸类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
+| Promise&lt;image.PixelMap&gt; | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

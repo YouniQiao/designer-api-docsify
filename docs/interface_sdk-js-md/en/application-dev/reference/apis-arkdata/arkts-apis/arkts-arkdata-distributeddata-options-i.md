@@ -1,6 +1,6 @@
 # Options
 
-Provides KV store configuration.
+用于提供创建数据库的配置信息。
 
 **Since:** 7
 
@@ -20,9 +20,9 @@ Provides KV store configuration.
 autoSync?: boolean
 ```
 
-Whether to automatically synchronize database files. The default value is **false**, which means the database files are manually synchronized.
+设置数据库文件是否自动同步。默认为false，即手动同步。
 
-ohos.permission.DISTRIBUTED\_DATASYNC
+ohos.permission.DISTRIBUTED_DATASYNC
 
 **Type:** boolean
 
@@ -46,7 +46,7 @@ ohos.permission.DISTRIBUTED\_DATASYNC
 backup?: boolean
 ```
 
-Whether to back up the KV store. The default value is **true**, which means to back up the KV store.
+设置数据库文件是否备份，默认为true，即备份。
 
 **Type:** boolean
 
@@ -68,7 +68,7 @@ Whether to back up the KV store. The default value is **true**, which means to b
 createIfMissing?: boolean
 ```
 
-Whether to create a KV store if the database file does not exist. The default value is **true**, which means to create a KV store.
+当数据库文件不存在时是否创建数据库，默认为true，即创建。
 
 **Type:** boolean
 
@@ -90,7 +90,7 @@ Whether to create a KV store if the database file does not exist. The default va
 encrypt?: boolean
 ```
 
-Whether to encrypt the KV store. The default value is **false**, which means the KV store is not encrypted.
+设置数据库文件是否加密，默认为false，即不加密。
 
 **Type:** boolean
 
@@ -112,9 +112,9 @@ Whether to encrypt the KV store. The default value is **false**, which means the
 kvStoreType?: KVStoreType
 ```
 
-Type of the KV store to create. The default value is **DEVICE\_COLLABORATION**, which indicates a device KV store.
+设置要创建的数据库类型，默认为DEVICE_COLLABORATION，即多设备协同数据库。
 
-**Type:** KVStoreType
+**Type:** [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md)
 
 **Since:** 7
 
@@ -134,9 +134,9 @@ Type of the KV store to create. The default value is **DEVICE\_COLLABORATION**, 
 schema?: Schema
 ```
 
-Schema that defines the values stored in the KV store. The default value is **undefined**, which means no schema is used.
+设置定义存储在数据库中的值，默认为undefined，即不使用schema。
 
-**Type:** Schema
+**Type:** [Schema](arkts-arkdata-distributedkvstore-schema-c.md)
 
 **Since:** 8
 
@@ -156,9 +156,9 @@ Schema that defines the values stored in the KV store. The default value is **un
 securityLevel?: SecurityLevel
 ```
 
-Security level (S1 to S4) of the KV store.
+设置数据库安全级别(S1-S4)。
 
-**Type:** SecurityLevel
+**Type:** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
 
 **Since:** 7
 

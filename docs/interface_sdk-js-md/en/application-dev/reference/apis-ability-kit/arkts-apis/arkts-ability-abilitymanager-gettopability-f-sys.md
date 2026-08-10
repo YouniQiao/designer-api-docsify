@@ -1,12 +1,18 @@
 # getTopAbility (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getTopAbility
 
 ```TypeScript
 function getTopAbility(): Promise<ElementName>
 ```
 
-Obtains the top ability, which is the ability that has the window focus. This API uses a promise to return the result.
+获取窗口焦点所在的Ability。使用Promise异步回调。
 
 **Since:** 9
 
@@ -22,14 +28,14 @@ Obtains the top ability, which is the ability that has the window focus. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ElementName&gt; | Promise used to return the API call result and the element name. You can perform error handling or other custom processing. |
+| Promise&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Promise对象，返回接口运行结果及应用名。开发者可在此进行错误处理或其他自定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 202 | Not system application. |
 
 
 ## getTopAbility
@@ -38,7 +44,7 @@ Obtains the top ability, which is the ability that has the window focus. This AP
 function getTopAbility(callback: AsyncCallback<ElementName>): void
 ```
 
-Obtains the top ability, which is the ability that has the window focus. This API uses an asynchronous callback to return the result.
+获取窗口焦点所在的Ability。使用callback异步回调。
 
 **Since:** 9
 
@@ -54,13 +60,13 @@ Obtains the top ability, which is the ability that has the window focus. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ElementName&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the top ability name obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | 回调函数。当获取窗口焦点所在的Ability成功，err为undefined，data为获取到的应用名；否则为错误对象。可进行错误处理或其他自 定义处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 202 | Not system application. |
 

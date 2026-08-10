@@ -40,7 +40,7 @@ status: SelectStatus
 
 群组多选框的选中状态。
 
-**类型：** SelectStatus
+**类型：** [SelectStatus](arkts-arkui-selectstatus-e.md)
 
 **起始版本：** 8
 

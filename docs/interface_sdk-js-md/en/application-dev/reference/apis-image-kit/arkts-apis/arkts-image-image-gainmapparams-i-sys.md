@@ -1,6 +1,6 @@
 # GainmapParams (System API)
 
-Describes gainmap generation parameters.
+Gainmap（增益图）参数设置选项。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,21 @@ Describes gainmap generation parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## isFullSizeGainmap
 
 ```TypeScript
 isFullSizeGainmap: boolean
 ```
 
-Indicates generating a full-size gainmap or a 1/2 downscaled gainmap.
+返回Picture中的Gainmap（增益图）是否使用全尺寸图。
+
+true表示使用全尺寸图，宽高和主图一致；false表示不使用全尺寸图，宽高均为主图的一半。默认值为false。
 
 **Type:** boolean
 

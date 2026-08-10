@@ -10,6 +10,12 @@ Defines information about the images or videos selected.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## contextRecoveryInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ contextRecoveryInfo: ContextRecoveryInfo
 
 Information about the context of exiting the PhotoPicker. This information is returned when the selection process is complete and is used by the application within **PhotoSelectOptions** during the subsequent launch of the PhotoPicker to restore the state from the previous exit.
 
-**Type:** ContextRecoveryInfo
+**Type:** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
 **Since:** 21
 
@@ -59,7 +65,7 @@ movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>
 
 Array of moving photo badge states for the media files selected from Gallery.
 
-If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise,it is empty.
+If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
 
 **Type:** Array&lt;MovingPhotoBadgeStateType&gt;
 
@@ -81,9 +87,9 @@ photoUris: Array<string>
 
 URIs of the media files selected.
 
-This URI array can be used only by calling the  
-[photoAccessHelper.getAssets]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_API through temporary authorization. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+This URI array can be used only by calling the   
+[photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)API through temporary authorization. For details, see   
+[Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array&lt;string&gt;
 

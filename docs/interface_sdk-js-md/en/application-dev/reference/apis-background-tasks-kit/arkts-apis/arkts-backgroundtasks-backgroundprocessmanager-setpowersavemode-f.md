@@ -1,19 +1,24 @@
 # setPowerSaveMode
 
+## Modules to Import
+
+```TypeScript
+import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## setPowerSaveMode
 
 ```TypeScript
 function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>
 ```
 
-Sets the power saving mode for a process. This API uses a promise to return the result.
+设置进程的能效模式，使用Promise异步回调。
 
-You can set to enter the power saving mode when:
+当应用满足以下条件时，可以设置自身是否进入能效模式：
 
-- The application is not focused, and there are no audio operations or UI updates.  
-- The application cannot obtain the power lock through the system framework.  
-- The application needs to perform time-consuming computing tasks, such as compression, decompression, and  
-compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be enabled forcibly.)
+- 应用未获取系统焦点，未执行音频或界面刷新操作。  
+- 无法通过框架层获取电源锁。  
+- 应用需要执行压缩、解压缩、编译等耗时较长的计算任务，不希望这些任务受到显著的CPU资源限制（即被迫进入能效模式）。
 
 **Since:** 20
 
@@ -29,26 +34,26 @@ compilation, which are significantly restricted by CPU resources. (In this case,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Process ID. |
-| powerSaveMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Power saving mode. |
+| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 进程号。 |
+| powerSaveMode | [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md) | Yes | 能效模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
-| [31800003](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-setting-overriden-by-task-manager) | Setup error, This setting is overridden by settings in Task Manager |
-| [31800004](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-setting-failure-due-to-system-scheduling) | The setting failed due to system scheduling reasons. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 31800004 | The setting failed due to system scheduling reasons. |
+| 801 | Capability not supported. |
+| 31800003 | Setup error, This setting is overridden by settings in Task Manager |
+| 31800002 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

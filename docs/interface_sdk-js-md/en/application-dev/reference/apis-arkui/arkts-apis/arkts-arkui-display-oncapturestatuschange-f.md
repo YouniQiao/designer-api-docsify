@@ -1,12 +1,18 @@
 # onCaptureStatusChange
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## onCaptureStatusChange
 
 ```TypeScript
 function onCaptureStatusChange(callback: Callback<boolean>): void
 ```
 
-Register the callback for the status of the device's screen content is being captured.
+Register the callback for device capture, casting, or recording status changes.
 
 **Since:** 23
 
@@ -20,11 +26,11 @@ Register the callback for the status of the device's screen content is being cap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the device capture, casting, or recording status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the device capture, casting, or recording status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 

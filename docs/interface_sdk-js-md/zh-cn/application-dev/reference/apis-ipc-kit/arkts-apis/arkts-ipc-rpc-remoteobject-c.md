@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## attachLocalInterface
 
 ```TypeScript
@@ -36,10 +42,10 @@ attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| localInterface | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 将与描述符绑定的IRemoteBroker对象。 |
+| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 是 | 将与描述符绑定的IRemoteBroker对象。 |
 | descriptor | string | 是 | 用于与IRemoteBroker对象绑定的描述符。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -89,7 +95,7 @@ RemoteObject构造函数。
 | --- | --- | --- | --- |
 | descriptor | string | 是 | 接口描述符，其长度应小于40960。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -127,11 +133,9 @@ getCallingPid(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回通信对端的进程Pid。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回通信对端的进程Pid。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -141,44 +145,15 @@ class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
-
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
     return true;
   }
 }
-
 try {
   let testRemoteObject = new TestRemoteObject("testObject");
   hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid: ' + testRemoteObject.getCallingPid());
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error: ' + error);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid: ' + testRemoteObject.getCallingUid());
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
@@ -210,11 +185,9 @@ getCallingUid(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Return the UID of the { |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Return the UID of the { |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -224,7 +197,6 @@ class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
-
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
@@ -234,32 +206,6 @@ class TestRemoteObject extends rpc.RemoteObject {
 try {
   let testRemoteObject = new TestRemoteObject("testObject");
   hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid: ' + testRemoteObject.getCallingUid());
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error: ' + error);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid: ' + testRemoteObject.getCallingPid());
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
@@ -291,9 +237,9 @@ getDescriptor(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| 1900008 | The proxy or remote object is invalid. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -347,7 +293,7 @@ getInterfaceDescriptor(): string
 | --- | --- |
 | string | 返回接口描述符。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -399,15 +345,15 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回绑定到指定接口描述符的IRemoteBroker对象。 |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 返回绑定到指定接口描述符的IRemoteBroker对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -418,14 +364,12 @@ class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
-
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
     return true;
   }
 }
-
 try {
   let testRemoteObject = new TestRemoteObject("testObject");
   testRemoteObject.getLocalInterface("testObject");
@@ -456,16 +400,16 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| localInterface | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 将与描述符绑定的IRemoteBroker对象。 |
+| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 是 | 将与描述符绑定的IRemoteBroker对象。 |
 | descriptor | string | 是 | 用于与IRemoteBroker对象绑定的描述符，其长度应小于40960。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -521,11 +465,12 @@ onRemoteMessageRequest(
 ```
 
 sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果。
-    **说明：**  
-    
-    开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。  
-    
-    开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
+
+> **说明：**
+> 
+> 开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
+> 
+> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
 
 **起始版本：** 9
 
@@ -541,20 +486,18 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 对端发送的服务请求码。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 携带客户端调用参数的MessageSequence对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 写入结果的MessageSequence对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示操作是同步还是异步。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 对端发送的服务请求码。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
+| boolean | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 &lt;br/&gt;- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 // 重写onRemoteMessageRequest方法同步处理请求
@@ -578,34 +521,6 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 ```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 重写onRemoteMessageRequest方法同步处理请求
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
 
 ```TypeScript
 // 重写onRemoteMessageRequest方法异步处理请求
@@ -633,38 +548,6 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-// 重写onRemoteMessageRequest方法异步处理请求
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return new Promise<boolean>((resolve) => {
-        resolve(false);
-      });
-    }
-    return new Promise<boolean>((resolve) => {
-      resolve(true);
-    });
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
 ```TypeScript
 // 同时重写onRemoteMessageRequest和onRemoteRequest方法同步处理请求
 import { rpc } from '@kit.IPCKit';
@@ -676,15 +559,15 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 
   onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
+     if (code === 1) {
+        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+        return true;
+     } else {
+        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+        return false;
+     }
   }
-  // 同时调用仅会执行onRemoteMessageRequest
+    // 同时调用仅会执行onRemoteMessageRequest
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     if (code === 1) {
@@ -723,11 +606,12 @@ onRemoteMessageRequest(
 ```
 
 sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果，该接口可从入参callingInfo中获取IPC上下文信息。
-    **说明：**  
-    
-    开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。  
-    
-    开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
+
+> **说明：**
+> 
+> 开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
+> 
+> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
 
 **起始版本：** 23
 
@@ -741,21 +625,19 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 对端发送的服务请求码。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 携带客户端调用参数的MessageSequence对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 写入结果的MessageSequence对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示操作是同步还是异步。 |
-| callingInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 获取IPC上下文信息。不传此参数时，默认为undefined。当需要获取调用者的PID、UID、TokenId或设备ID等信息时传入此参数，可通过 callingInfo.callerPid等方式获取。不传入时无法直接获取IPC上下文信息，需通过rpc.IPCSkeleton其他方法（如getCallingPid、getCallingUid等）获取。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 对端发送的服务请求码。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
+| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | 否 | 获取IPC上下文信息。不传此参数时，默认为undefined。当需要获取调用者的PID、UID、TokenId或设备ID等信息时传入此参数，可通过 callingInfo.callerPid等方式获取。不传入时无法直接获取IPC上下文信息，需通过rpc.IPCSkeleton其他方法（如getCallingPid、getCallingUid等）获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
+| boolean | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 &lt;br/&gt;- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 // 重写onRemoteMessageRequest方法同步处理请求
@@ -780,35 +662,6 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 ```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 重写onRemoteMessageRequest方法同步处理请求
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo: rpc.CallingInfo): boolean {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-      let pid = callingInfo.callerPid;
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
 
 ```TypeScript
 // 重写onRemoteMessageRequest方法异步处理请求
@@ -837,8 +690,6 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 ```
 
-ArkTS-Dyn示例：
-
 ```TypeScript
 // 同时重写onRemoteMessageRequest和onRemoteRequest方法同步处理请求
 import { rpc } from '@kit.IPCKit';
@@ -858,12 +709,11 @@ class TestRemoteObject extends rpc.RemoteObject {
         return false;
      }
   }
-  // 同时调用仅会执行onRemoteMessageRequest
-  // 动态语言中不支持重写onRemoteMessageRequest，此处只提供带有CallingInfo的示例
+    // 同时调用仅会执行onRemoteMessageRequest
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean {
+    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean | Promise<boolean> {
     if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
       let pid = callingInfo?.callerPid;
     } else {
       hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
@@ -871,46 +721,6 @@ class TestRemoteObject extends rpc.RemoteObject {
     }
     return true;
   }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 同时重写带有CallingInfo和不带CallingInfo的onRemoteMessageRequest方法及onRemoteRequest方法同步处理请求
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean {
-     if (code === 1) {
-        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-        return true;
-     } else {
-        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-        return false;
-     }
-  }
-
-  // 同时调用仅会执行该onRemoteMessageRequest
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo: rpc.CallingInfo): boolean {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-      let pid = callingInfo.callerPid;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    return true;
-  }
-  // ArkTS-Sta无onRemoteRequest方法
 }
 ```
 
@@ -939,9 +749,9 @@ sendRequest请求的响应处理函数，服务端在该函数里处理请求，
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 | 对端发送的服务请求码。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 携带客户端调用参数的MessageParcel对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 写入结果的MessageParcel对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示操作是同步还是异步。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 携带客户端调用参数的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 写入结果的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
 
 **返回值：**
 
@@ -949,7 +759,7 @@ sendRequest请求的响应处理函数，服务端在该函数里处理请求，
 | --- | --- |
 | boolean | true：操作成功，false：操作失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1001,9 +811,9 @@ queryLocalInterface(descriptor: string): IRemoteBroker
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 如果接口描述符对应的远端对象存在，则返回该远端对象，否则返回Null。 |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 如果接口描述符对应的远端对象存在，则返回该远端对象，否则返回Null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1013,14 +823,12 @@ class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
-
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
     return true;
   }
 }
-
 try {
   let testRemoteObject = new TestRemoteObject("testObject");
   testRemoteObject.queryLocalInterface("testObject");
@@ -1065,10 +873,10 @@ sendMessageRequest(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageSequence对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageSequence对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 
 **返回值：**
 
@@ -1080,11 +888,9 @@ sendMessageRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1095,53 +901,6 @@ class TestRemoteObject extends rpc.RemoteObject {
     super(descriptor);
   }
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  let option = new rpc.MessageOption();
-  let data = rpc.MessageSequence.create();
-  let reply = rpc.MessageSequence.create();
-  data.writeInt(1);
-  data.writeString("hello");
-  testRemoteObject.sendMessageRequest(1, data, reply, option)
-    .then((result: rpc.RequestResult) => {
-      if (result.errCode === 0) {
-        hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
-        let num = result.reply.readInt();
-        let msg = result.reply.readString();
-        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
-        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
-      } else {
-        hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
-      }
-    }).catch((e: Error) => {
-      hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + JSON.stringify(e));
-    }).finally (() => {
-      hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
-      data.reclaim();
-      reply.reclaim();
-    });
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
     return true;
@@ -1215,17 +974,17 @@ sendMessageRequest(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageSequence对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageSequence对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RequestResult&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -1252,9 +1011,9 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageParcel对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageParcel对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 
 **返回值：**
 
@@ -1262,7 +1021,7 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 | --- | --- |
 | boolean | true：发送成功，false：发送失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1328,9 +1087,9 @@ sendRequest(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageParcel对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageParcel对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 
 **返回值：**
 
@@ -1338,7 +1097,7 @@ sendRequest(
 | --- | --- |
 | Promise&lt;SendRequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1415,8 +1174,8 @@ sendRequest(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 保存待发送数据的MessageParcel对象。 |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 接收应答数据的MessageParcel对象。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SendRequestResult&gt; | 是 | 接收发送结果的回调。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | 是 | 接收发送结果的回调。 |
 

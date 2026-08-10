@@ -1,0 +1,37 @@
+# checkbox
+
+提供多选框组件，通常用于某选项的打开或关闭。
+ > **说明：**
+ >
+ > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
+ >
+ > - API version 11开始，Checkbox默认样式由圆角方形变为圆形。
+ >
+ > - 该组件默认有[margin](arkts-arkui-common-commonmethod-i.md#margin)间距，默认值为：{&nbsp;top: '14px',&nbsp;right: '14px',&nbsp;bottom: '14px',&
+ > nbsp;left: '14px' }。
+ ###### 子组件
+ 无
+
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [Checkbox](arkts-arkui-checkbox-checkbox-f.md#checkbox) | Defines Checkbox Component. |
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [CheckBoxConfiguration](arkts-arkui-checkbox-checkboxconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。 |
+| [CheckboxAttribute](arkts-arkui-checkbox-checkboxattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
+| [CheckboxOptions](arkts-arkui-checkbox-checkboxoptions-i.md) | 多选框的信息。 |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 选中的状态。 |
+

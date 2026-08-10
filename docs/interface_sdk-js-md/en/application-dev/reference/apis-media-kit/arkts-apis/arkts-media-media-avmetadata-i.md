@@ -1,8 +1,8 @@
 # AVMetadata
 
 Defines the audio and video metadata. Parameters that are not declared as read-only in  
-[AVRecorderConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ can be used as input parameters for recording of  
-[AVRecorder]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+[AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of  
+[AVRecorder](#AVRecorder).
 
 **Since:** 11
 
@@ -11,6 +11,12 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 <!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
+
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
 
 ## album
 
@@ -110,7 +116,7 @@ customInfo?: Record<string, string>
 
 Custom key-value mappings obtained from **moov.meta.list**.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 12
 
@@ -274,7 +280,7 @@ hdrType?: HdrType
 
 HDR type of the media asset. This parameter is not supported in AVRecorder settings.
 
-**Type:** HdrType
+**Type:** [HdrType](arkts-media-media-hdrtype-e.md)
 
 **Since:** 12
 
@@ -292,7 +298,7 @@ location?: Location
 
 Geographical location of the media asset.
 
-**Type:** Location
+**Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
 
 **Since:** 12
 

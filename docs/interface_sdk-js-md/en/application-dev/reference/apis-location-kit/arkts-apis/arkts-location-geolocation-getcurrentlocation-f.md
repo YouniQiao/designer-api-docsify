@@ -1,5 +1,11 @@
 # getCurrentLocation
 
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
 ## getCurrentLocation
 
 ```TypeScript
@@ -26,10 +32,10 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the location request parameters. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | Yes | Indicates the location request parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -73,9 +79,9 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -118,7 +124,7 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the location request parameters. |
+| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | No | Indicates the location request parameters. |
 
 **Return value:**
 
@@ -126,7 +132,7 @@ Obtain current location
 | --- | --- |
 | Promise&lt;Location&gt; | The promise returned by the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

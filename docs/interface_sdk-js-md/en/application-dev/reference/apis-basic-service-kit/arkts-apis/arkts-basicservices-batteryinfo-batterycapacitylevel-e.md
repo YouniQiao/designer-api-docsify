@@ -1,6 +1,6 @@
 # BatteryCapacityLevel
 
-Enumerates battery levels.
+表示电池电量等级的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates battery levels.
 LEVEL_NONE
 ```
 
-Unknown battery level.
+表示电池电量等级为未知电量。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Unknown battery level.
 LEVEL_FULL
 ```
 
-Full battery level.
+表示电池电量等级为满电量。
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Full battery level.
 LEVEL_HIGH
 ```
 
-High battery level.
+表示电池电量等级为高电量。
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ High battery level.
 LEVEL_NORMAL
 ```
 
-Normal battery level.
+表示电池电量等级为正常电量。
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ Normal battery level.
 LEVEL_LOW
 ```
 
-Low battery level.
+表示电池电量等级为低电量。
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ Low battery level.
 LEVEL_WARNING
 ```
 
-Alarm battery level.
+表示电池电量等级为告警电量。
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ Alarm battery level.
 LEVEL_CRITICAL
 ```
 
-Ultra-low battery level.
+表示电池电量等级为极低电量。
 
 **Since:** 23
 
@@ -128,7 +128,7 @@ Ultra-low battery level.
 LEVEL_SHUTDOWN
 ```
 
-Power-down battery level.
+表示电池电量等级为关机电量。
 
 **Since:** 23
 

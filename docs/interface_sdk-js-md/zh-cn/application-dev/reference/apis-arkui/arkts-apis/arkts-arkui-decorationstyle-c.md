@@ -34,7 +34,7 @@ constructor(value: DecorationStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本装饰线设置项。 |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
 
 ## constructor
 
@@ -60,8 +60,8 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本装饰线设置项。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 文本装饰线额外配置选项。 |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
+| options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | 否 | 文本装饰线额外配置选项。 |
 
 ## color
 
@@ -71,7 +71,7 @@ readonly color?: ResourceColor
 
 获取属性字符串的文本装饰线颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -93,7 +93,7 @@ readonly options?: DecorationOptions
 
 获取属性字符串的文本装饰线样式的额外配置选项。
 
-**类型：** DecorationOptions
+**类型：** [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md)
 
 **起始版本：** 20
 
@@ -115,7 +115,7 @@ readonly style?: TextDecorationStyle
 
 获取属性字符串的文本装饰线样式。
 
-**类型：** TextDecorationStyle
+**类型：** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
 
 **起始版本：** 12
 
@@ -159,7 +159,7 @@ readonly type: TextDecorationType
 
 获取属性字符串的文本装饰线类型。
 
-**类型：** TextDecorationType
+**类型：** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 
 **起始版本：** 12
 

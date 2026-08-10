@@ -1,12 +1,18 @@
 # offTouchscreenSwipe (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
 ## offTouchscreenSwipe
 
 ```TypeScript
 function offTouchscreenSwipe(fingers: int, receiver?: Callback<TouchGestureEvent>): void
 ```
 
-Disables listening touchscreen swipe gesture events.
+取消监听触摸屏滑动手势事件。
 
 **Since:** 23
 
@@ -24,14 +30,14 @@ Disables listening touchscreen swipe gesture events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fingers | int | Yes | Number of fingers. |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TouchGestureEvent&gt; | No | Callback used to receive reported data. |
+| fingers | int | Yes | 滑动手势的手指数，取值范围：[3,5]。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md)&gt; | No | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
 

@@ -1,6 +1,6 @@
 # Entity
 
-Enumerates the entity constants of the Want object. **entity** specifies additional information of the target ability.
+want实体的常数。用于表示目标Ability额外的类别信息。
 
 **Since:** 6
 
@@ -18,7 +18,7 @@ Enumerates the entity constants of the Want object. **entity** specifies additio
 ENTITY_DEFAULT = 'entity.system.default'
 ```
 
-Default entity. The default entity is used if no entity is specified.
+指示默认实体，如果未指定实体，则使用该实体。
 
 **Since:** 6
 
@@ -36,7 +36,7 @@ Default entity. The default entity is used if no entity is specified.
 ENTITY_HOME = 'entity.system.home'
 ```
 
-Home screen entity.
+指示主屏幕实体。
 
 **Since:** 6
 
@@ -54,7 +54,7 @@ Home screen entity.
 ENTITY_VOICE = 'entity.system.voice'
 ```
 
-Voice interaction entity.
+表示语音交互实体。
 
 **Since:** 6
 
@@ -72,7 +72,7 @@ Voice interaction entity.
 ENTITY_BROWSABLE = 'entity.system.browsable'
 ```
 
-Browser type entity.
+指示浏览器类别。
 
 **Since:** 6
 
@@ -90,7 +90,7 @@ Browser type entity.
 ENTITY_VIDEO = 'entity.system.video'
 ```
 
-Video type entity.
+指示视频类别。
 
 **Since:** 6
 

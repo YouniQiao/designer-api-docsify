@@ -1,6 +1,6 @@
 # DialogBaseAlignment
 
-The alignment of dialog.
+对话框的对齐方式。
 
 **Since:** 26.1.0
 
@@ -16,7 +16,7 @@ The alignment of dialog.
 TOP = 0
 ```
 
-Vertical top alignment.
+垂直顶部对齐。
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ Vertical top alignment.
 CENTER = 1
 ```
 
-Align vertically to the center.
+垂直居中对齐。
 
 **Since:** 26.1.0
 
@@ -56,7 +56,7 @@ Align vertically to the center.
 BOTTOM = 2
 ```
 
-Vertical bottom alignment.
+垂直底部对齐。
 
 **Since:** 26.1.0
 
@@ -76,7 +76,7 @@ Vertical bottom alignment.
 DEFAULT = 3
 ```
 
-Default alignment.
+默认对齐方式。
 
 **Since:** 26.1.0
 
@@ -96,7 +96,7 @@ Default alignment.
 TOP_START = 4
 ```
 
-Align the upper left corner.
+左上角对齐。
 
 **Since:** 26.1.0
 
@@ -116,7 +116,7 @@ Align the upper left corner.
 TOP_END = 5
 ```
 
-Align the upper right corner.
+右上角对齐。
 
 **Since:** 26.1.0
 
@@ -136,7 +136,7 @@ Align the upper right corner.
 CENTER_START = 6
 ```
 
-Left center alignment.
+左居中对齐。
 
 **Since:** 26.1.0
 
@@ -156,7 +156,7 @@ Left center alignment.
 CENTER_END = 7
 ```
 
-Right center alignment.
+右居中对齐。
 
 **Since:** 26.1.0
 
@@ -176,7 +176,7 @@ Right center alignment.
 BOTTOM_START = 8
 ```
 
-Align the lower left corner.
+左下角对齐。
 
 **Since:** 26.1.0
 
@@ -196,7 +196,7 @@ Align the lower left corner.
 BOTTOM_END = 9
 ```
 
-Align the lower right corner.
+右下角对齐。
 
 **Since:** 26.1.0
 

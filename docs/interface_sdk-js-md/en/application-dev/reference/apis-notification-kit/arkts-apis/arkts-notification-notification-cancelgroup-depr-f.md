@@ -6,7 +6,7 @@
 function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result.
+取消本应用指定组下的通知（Callback形式）。
 
 **Since:** 8
 
@@ -24,8 +24,8 @@ Cancels notifications under a notification group of this application. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ when the notification is published. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| groupName | string | Yes | 通知组名称，此名称需要在发布通知时通过 [NotificationRequest](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)对象指定。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 取消本应用指定组下通知的回调函数。 |
 
 
 ## cancelGroup
@@ -34,7 +34,7 @@ Cancels notifications under a notification group of this application. This API u
 function cancelGroup(groupName: string): Promise<void>
 ```
 
-Cancels notifications under a notification group of this application. This API uses a promise to return the result.
+取消本应用指定组下的通知（Promise形式）。
 
 **Since:** 8
 
@@ -52,11 +52,11 @@ Cancels notifications under a notification group of this application. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group. |
+| groupName | string | Yes | 通知组名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

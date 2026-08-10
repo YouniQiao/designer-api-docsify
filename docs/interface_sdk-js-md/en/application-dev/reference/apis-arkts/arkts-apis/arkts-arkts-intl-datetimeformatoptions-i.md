@@ -38,7 +38,7 @@ dateStyle?: DateStyle
 
 Date style option.
 
-**Type:** DateStyle
+**Type:** [DateStyle](arkts-arkts-intl-datestyle-t.md)
 
 **Since:** 26.0.0
 
@@ -318,7 +318,7 @@ timeStyle?: TimeStyle
 
 Time style option.
 
-**Type:** TimeStyle
+**Type:** [TimeStyle](arkts-arkts-intl-timestyle-t.md)
 
 **Since:** 26.0.0
 
@@ -358,7 +358,7 @@ timeZoneName?: TimeZoneName
 
 Time zone name option.
 
-**Type:** TimeZoneName
+**Type:** [TimeZoneName](arkts-arkts-intl-timezonename-t.md)
 
 **Since:** 26.0.0
 

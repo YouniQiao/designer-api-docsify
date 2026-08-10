@@ -4,7 +4,7 @@
 export type NativeXComponentPointer = long
 ```
 
-Defines the NativeXComponent Pointer type.
+表示NativeXComponent指针类型。
 
 **Since:** 23
 

@@ -1,18 +1,18 @@
 # Environment
 
-For details about how to use environment parameters, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+Environment提供设备环境状态的查询能力，可将系统环境变量（如深浅色模式、语言、字体缩放、布局方向等）注入AppStorage，使应用能够感知和响应设备环境变化。具体UI使用说明，详见  
+[Environment：设备环境查询](../../../ui/state-management/arkts-environment.md)。
 
-## Built-in Environment Variables
+## 内置环境变量说明
 
-| key | Type | Description |  
+| key | 类型 | 说明 |  
 | -------------------- | --------------- | ------------------------------------------------------------ |  
-| accessibilityEnabled | string | Whether to enable accessibility. If there is no value of **accessibilityEnabled** in the environment variables, the default value passed through APIs such as **envProp** and **envProps** is added to AppStorage.|  
-| colorMode | \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ | Color mode. The options are as follows:\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_- **ColorMode.LIGHT**: light mode.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_- **ColorMode.DARK**: dark mode.|  
-| fontScale | number | Font scale. |  
-| fontWeightScale | number | Font weight ratio. |  
-| layoutDirection | \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ | Layout direction. The options are as follows:\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_- **LayoutDirection.LTR**: from left to right.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_- **LayoutDirection.RTL**: from right to left.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_- **Auto**: follows the system settings.|  
-| languageCode | string | Current system language, which is in lowercase letters, for example, **zh**.
+| accessibilityEnabled | string | 无障碍屏幕朗读是否启用。当无法获取环境变量中的accessibilityEnabled的值时，将通过envProp、envProps等接口传入的开发者指定的默认值添加到AppStorage中。 |  
+| colorMode | [ColorMode](arkts-arkui-colormode-e.md) | 深浅色模式，可选值为：&lt;br&gt;- **ColorMode.LIGHT：浅色模式**；&lt;br&gt;- **ColorMode.DARK**：深色模式。 |  
+| fontScale | number | 字体大小比例。 |  
+| fontWeightScale | number | 字重比例。 |  
+| layoutDirection | [LayoutDirection](arkts-arkui-layoutdirection-e.md) | 布局方向类型，可选值为：&lt;br&gt;- **LayoutDirection.LTR**：从左到右；&lt;br&gt;- **LayoutDirection.RTL**：从右到左；&lt;br&gt;- **LayoutDirection.Auto**：跟随系统。 |  
+| languageCode | string | 当前系统语言，小写字母，例如zh。 |
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ For details about how to use environment parameters, see
 constructor()
 ```
 
-Constructor.
+构造函数。
 
 **Since:** 7
 

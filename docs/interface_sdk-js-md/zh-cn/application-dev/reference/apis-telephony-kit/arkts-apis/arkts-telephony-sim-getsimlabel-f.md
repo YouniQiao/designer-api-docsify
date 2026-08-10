@@ -1,5 +1,11 @@
 # getSimLabel
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getSimLabel
 
 ```TypeScript
@@ -20,19 +26,19 @@ Obtains the SIM card label.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | SIM card slot ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SimLabel&gt; | 是 | Callback used to return the SIM card label. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | SIM card slot ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimLabel&gt; | 是 | Callback used to return the SIM card label. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| 8300999 | Unknown error code. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,7 +70,7 @@ function getSimLabel(slotId: int): Promise<SimLabel>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 卡槽索引号 |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 卡槽索引号 |
 
 **返回值：**
 
@@ -76,12 +82,12 @@ function getSimLabel(slotId: int): Promise<SimLabel>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| 8300999 | Unknown error code. |
+| 8300002 | Operation failed. Cannot connect to service. |
+| 8300003 | System internal error. |
+| 8300001 | Invalid parameter value. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

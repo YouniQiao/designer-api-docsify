@@ -4,7 +4,7 @@
 declare type OnHomeShowOnTopCallback = (name: string) => void
 ```
 
-Callback function when home NavDestination shown in top.
+当主页在栈顶显示时触发的回调函数。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Callback function when home NavDestination shown in top.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | the name of home NavDestination shown in top.  |
+| name | string | Yes | 显示在栈顶的页面的标识符。 |
 

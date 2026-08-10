@@ -1,6 +1,6 @@
 # ReturnMode
 
-Enumerates the modes that define how the execution result of an intent is returned to the intent initiator.
+意图执行结果返回给意图拉起方的返回形式。
 
 **Since:** 23
 
@@ -16,9 +16,9 @@ Enumerates the modes that define how the execution result of an intent is return
 CALLBACK = 0
 ```
 
-The intent execution result is returned through the  
-[onExecuteInUIAbilityForegroundMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or  
-[onExecuteInUIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_API in the [intent execution base class]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+表示意图执行结果将由[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)中的  
+[onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode)接口或  
+[onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability)接口返回。
 
 **Since:** 23
 
@@ -38,10 +38,9 @@ The intent execution result is returned through the
 FUNCTION = 1
 ```
 
-The intent execution result is returned after the  
-[sendExecuteResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[sendIntentResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API in  
-[intent provider management]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is called.
+表示意图执行结果会延迟返回，直到开发者主动调用[意图提供方管理能力](arkts-app-ability-insightintentprovider.md)中的  
+[sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult)接口或  
+[sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult)接口返回意图执行结果。
 
 **Since:** 23
 

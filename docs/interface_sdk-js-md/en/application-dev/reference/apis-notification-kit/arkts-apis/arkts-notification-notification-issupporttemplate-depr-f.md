@@ -6,8 +6,7 @@
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified template is supported before using  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to publish a notification.This API uses an asynchronous callback to return the result.
+在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
 
 **Since:** 8
 
@@ -25,8 +24,8 @@ Checks whether a specified template is supported before using
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. |
+| templateName | string | Yes | 模板名称。当前仅支持'downloadTemplate'。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 查询模板是否存在的回调函数。 |
 
 
 ## isSupportTemplate
@@ -35,8 +34,7 @@ Checks whether a specified template is supported before using
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-Checks whether a specified template is supported before using  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to publish a notification.This API uses a promise to return the result.
+在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
 
 **Since:** 8
 
@@ -54,11 +52,11 @@ Checks whether a specified template is supported before using
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
+| templateName | string | Yes | 模板名称。当前仅支持'downloadTemplate'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise方式返回模板是否存在的结果。 |
 

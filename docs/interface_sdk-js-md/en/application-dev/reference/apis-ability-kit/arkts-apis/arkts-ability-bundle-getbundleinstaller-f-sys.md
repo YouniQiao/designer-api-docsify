@@ -1,12 +1,18 @@
 # getBundleInstaller (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleInstaller
 
 ```TypeScript
 function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 ```
 
-Obtains the installation package. This API uses an asynchronous callback to return the result.
+获取用于安装包的接口，使用callback异步回调。
 
 **Since:** 7
 
@@ -28,7 +34,7 @@ Obtains the installation package. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleInstaller&gt; | Yes | Callback used to return the installation package. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | Yes | 回调函数，返回安装接口对象。 |
 
 
 ## getBundleInstaller
@@ -37,7 +43,7 @@ Obtains the installation package. This API uses an asynchronous callback to retu
 function getBundleInstaller(): Promise<BundleInstaller>
 ```
 
-Obtains the installation package. This API uses a promise to return the result.
+获取用于安装包的接口，使用Promise异步回调，返回安装接口对象。
 
 **Since:** 7
 
@@ -59,5 +65,5 @@ Obtains the installation package. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleInstaller&gt; | Promise used to return the installation package. |
+| Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | Promise对象，返回安装接口对象。 |
 

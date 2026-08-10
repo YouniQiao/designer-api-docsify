@@ -8,11 +8,11 @@
 
 ## 需要权限
 
-跳转到目标网页需要使用网络时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+跳转到目标网页需要使用网络时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](docroot://security/AccessToken/declare-permissions.md)。
 
 ## 子组件
 
-可以包含[Image]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_子组件。
+可以包含[Image]{@link ./image}子组件。
 
 ## Hyperlink
 
@@ -34,8 +34,8 @@ Hyperlink(address: string | Resource, content?: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | string \| Resource | 是 | Hyperlink组件跳转的网页地址。  |
-| content | string \| Resource | 否 | Hyperlink组件中超链接显示文本。 \_\_\_HTML\_TAG\_USD\_0\_\_\_默认值：''。若不传该参数且组件内无子组件时，默认显示address参数值。 \_\_\_HTML\_TAG\_USD\_1\_\_\_**说明：** \_\_\_HTML\_TAG\_USD\_2\_\_\_组件内有子组件时，不显示超链接文本。  |
+| address | string \| Resource | 是 | Hyperlink组件跳转的网页地址。 |
+| content | string \| Resource | 否 | Hyperlink组件中超链接显示文本。 <br>默认值：''。若不传该参数且组件内无子组件时，默认显示address参数值。 <br>**说明：** <br>组件内有子组件时，不显示超链接文本。 |
 
 ## 汇总
 

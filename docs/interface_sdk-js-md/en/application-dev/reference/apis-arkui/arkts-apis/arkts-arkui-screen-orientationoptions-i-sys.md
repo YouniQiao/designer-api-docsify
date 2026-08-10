@@ -1,6 +1,6 @@
 # OrientationOptions (System API)
 
-The parameter of setting orientation
+设置旋转行为的参数
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ The parameter of setting orientation
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## ignoreRotationLock
 
 ```TypeScript
 ignoreRotationLock?: boolean
 ```
 
-Whether to ignore rotation lock.The value true means allowing the screen to rotate even if some system windows lock screen rotation,while false means preventing the screen from rotating when any system windows lock it.
+是否忽略旋转锁定
 
 **Type:** boolean
 
@@ -42,7 +48,7 @@ Whether to ignore rotation lock.The value true means allowing the screen to rota
 needAnimation?: boolean
 ```
 
-Whether to need animation.The value true means rotating the screen with animation,while false means rotating the screen without animation.
+是否需要动效
 
 **Type:** boolean
 

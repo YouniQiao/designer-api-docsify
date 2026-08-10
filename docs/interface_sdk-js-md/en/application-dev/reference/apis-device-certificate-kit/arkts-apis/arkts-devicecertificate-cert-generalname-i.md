@@ -1,6 +1,6 @@
 # GeneralName
 
-Represents an X.509 GeneralName as defined in RFC 5280, which can appear in Subject Alternative Name and other extensions.
+表示X.509 GeneralName，定义在RFC 5280中，可出现在Subject Alternative Name等扩展中。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents an X.509 GeneralName as defined in RFC 5280, which can appear in Subj
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## name
 
 ```TypeScript
 name?: Uint8Array
 ```
 
-DER-encoded value of the GeneralName.
+指定GeneralName的DER编码值。
 
 **Type:** Uint8Array
 
@@ -36,9 +42,9 @@ DER-encoded value of the GeneralName.
 type: GeneralNameType
 ```
 
-Type of the GeneralName.
+GeneralName类型。
 
-**Type:** GeneralNameType
+**Type:** [GeneralNameType](arkts-devicecertificate-cert-generalnametype-e.md)
 
 **Since:** 12
 

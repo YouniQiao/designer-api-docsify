@@ -10,6 +10,12 @@ Indicates the result of call transfer.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## endHour
 
 ```TypeScript
@@ -18,7 +24,7 @@ endHour: int
 
 Indicates the end time hours of call forwarding.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ endMinute: int
 
 Indicates the end time minutes of call forwarding.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -72,7 +78,7 @@ startHour: int
 
 Indicates the start time hours of call forwarding.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -90,7 +96,7 @@ startMinute: int
 
 Indicates the start time minutes of call forwarding.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -108,7 +114,7 @@ status: TransferStatus
 
 Indicates the status of call forwarding.
 
-**Type:** TransferStatus
+**Type:** [TransferStatus](arkts-telephony-call-transferstatus-e.md)
 
 **Since:** 26.0.0
 

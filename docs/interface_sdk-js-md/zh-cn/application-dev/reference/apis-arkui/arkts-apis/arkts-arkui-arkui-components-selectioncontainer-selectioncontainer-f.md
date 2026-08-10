@@ -1,5 +1,11 @@
 # SelectionContainer
 
+## 导入模块
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## SelectionContainer
 
 ```TypeScript
@@ -22,13 +28,13 @@ export declare function SelectionContainer(content_?: CustomBuilder): SelectionC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 容器。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
 
 
 ## SelectionContainer
@@ -57,11 +63,11 @@ export declare function SelectionContainer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SelectionContainerAttribute&gt; | 是 | 设置SelectionContainer属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SelectionContainerAttribute&gt; | 是 | 设置SelectionContainer属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 

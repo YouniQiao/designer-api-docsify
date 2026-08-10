@@ -10,6 +10,12 @@ Define the certificate content.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { networkSecurity } from 'kits/@kit.NetworkKit';
+```
+
 ## data
 
 ```TypeScript
@@ -36,7 +42,7 @@ type: CertType
 
 Certificate type.
 
-**Type:** CertType
+**Type:** [CertType](arkts-network-http-certtype-e.md)
 
 **Since:** 11
 

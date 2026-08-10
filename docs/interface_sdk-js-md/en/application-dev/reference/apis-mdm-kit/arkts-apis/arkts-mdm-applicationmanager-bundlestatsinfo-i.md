@@ -1,6 +1,6 @@
 # BundleStatsInfo
 
-Application bundle statistics.
+应用包统计信息。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Application bundle statistics.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { applicationManager } from 'kits/@kit.MDMKit';
+```
+
 ## abilityInFgTotalTime
 
 ```TypeScript
 abilityInFgTotalTime: number
 ```
 
-Total duration that the ability runs in the foreground, in milliseconds.
+Ability在前台运行的总时长，单位：毫秒。
 
 **Type:** number
 
@@ -36,7 +42,8 @@ Total duration that the ability runs in the foreground, in milliseconds.
 appIndex: number
 ```
 
-Index of the application clone. The value is an integer greater than or equal to 0.You can call [getAppCloneIdentity]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of @ohos.bundle.bundleManager to obtain the index.
+应用分身索引，取值范围：大于等于0的整数。appIndex可以通过@ohos.bundle.bundleManager中的  
+[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity)等接口来获取。
 
 **Type:** number
 
@@ -56,7 +63,7 @@ Index of the application clone. The value is an integer greater than or equal to
 bundleName: string
 ```
 
-Bundle name of the application.
+应用的包名。
 
 **Type:** string
 

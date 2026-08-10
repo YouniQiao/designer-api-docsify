@@ -4,7 +4,7 @@
 type Assets = collections.Array<Asset>
 ```
 
-Represent an array of [Assets]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which allows assets to be passed across threads.
+表示[Asset](arkts-arkdata-sendablerelationalstore-asset-i.md)类型数据的集合。用于支持Asset数据集合跨线程传递。
 
 **Since:** 12
 

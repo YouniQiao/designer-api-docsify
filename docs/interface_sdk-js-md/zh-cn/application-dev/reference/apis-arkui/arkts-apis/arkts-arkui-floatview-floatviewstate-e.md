@@ -35,7 +35,7 @@ HIDDEN = 2
 ```
 
 标准悬浮窗已隐藏。上滑进入多任务界面时触发、使用  
-[setFloatViewVisibilityInApp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口设置了应用在前台时隐藏标准悬浮窗且应用处于前台时触发。
+[setFloatViewVisibilityInApp](arkts-arkui-floatview-floatviewcontroller-i.md#setfloatviewvisibilityinapp)接口设置了应用在前台时隐藏标准悬浮窗且应用处于前台时触发。
 
 **起始版本：** 26.0.0
 

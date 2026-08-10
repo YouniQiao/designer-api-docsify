@@ -10,6 +10,12 @@ arkTS script info.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { scriptManager } from 'kits/@kit.AbilityKit';
+```
+
 ## context
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly context: Context
 
 The context of the bound ability.
 
-**Type:** Context
+**Type:** [Context](arkts-ability-context-c.md)
 
 **Since:** 26.0.0
 

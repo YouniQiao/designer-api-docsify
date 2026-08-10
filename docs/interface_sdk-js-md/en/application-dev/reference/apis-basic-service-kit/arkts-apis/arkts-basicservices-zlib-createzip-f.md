@@ -1,12 +1,18 @@
 # createZip
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createZip
 
 ```TypeScript
 function createZip(): Promise<Zip>
 ```
 
-Creates this **Zip** instance. This API uses a promise to return the result.
+创建压缩解压缩对象实例。使用Promise异步回调。
 
 **Since:** 12
 
@@ -22,9 +28,9 @@ Creates this **Zip** instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Zip&gt; | Promise used to return the **Zip** instance created. |
+| Promise&lt;Zip&gt; | Promise对象。返回压缩解压缩对象实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';

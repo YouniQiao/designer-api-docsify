@@ -1,6 +1,6 @@
 # RequestCallbackParameters
 
-Plugin component request callback parameters.
+pluginComponentManager.request方法接收到的回调结果。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Plugin component request callback parameters.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## componentTemplate
 
 ```TypeScript
 componentTemplate: PluginComponentTemplate
 ```
 
-Defines componentTemplate.
+组件模板。
 
-**Type:** PluginComponentTemplate
+**Type:** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Defines componentTemplate.
 data: KVObject
 ```
 
-Defines data.
+组件数据，以键值对形式存储，键和值类型由业务定义。
 
-**Type:** KVObject
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ Defines data.
 extraData: KVObject
 ```
 
-Defines extraData.
+附加数据。该字段为可选字段，不提供时默认不包含在返回结果中。
 
-**Type:** KVObject
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 

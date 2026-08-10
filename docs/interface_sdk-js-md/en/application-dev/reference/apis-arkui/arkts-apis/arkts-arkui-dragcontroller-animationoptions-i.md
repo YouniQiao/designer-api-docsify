@@ -10,6 +10,12 @@ Defines the animation options for drag preview.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
+
 ## curve
 
 ```TypeScript
@@ -18,7 +24,7 @@ curve?: Curve | ICurve
 
 Animation curve.
 
-**Type:** Curve \| ICurve
+**Type:** [Curve](arkts-arkui-curve-e.md) \| ICurve
 
 **Since:** 23
 

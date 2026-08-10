@@ -12,15 +12,21 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## windowType
 
 ```TypeScript
 windowType: WindowType
 ```
 
-窗口类型。无默认类型，不配置会导致窗口创建失败。不支持TYPE\_DIALOG类型。
+窗口类型。无默认类型，不配置会导致窗口创建失败。不支持TYPE_DIALOG类型。
 
-**类型：** WindowType
+**类型：** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
 
 **起始版本：** 14
 

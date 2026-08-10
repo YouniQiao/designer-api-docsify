@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onAcquireInfo
 
 ArkTS-Dyn:
@@ -40,13 +46,11 @@ onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| module | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 |  |
-| acquire | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 |  |
+| module | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
+| acquire | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
 | extraInfo | Uint8Array | 是 |  |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let authCallback: osAccount.IUserAuthCallback = {
@@ -55,22 +59,6 @@ let authCallback: osAccount.IUserAuthCallback = {
     console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
   },
   onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
-    console.info('auth module = ' + module);
-    console.info('auth acquire = ' + acquire);
-    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let authCallback: osAccount.IUserAuthCallback = {
-  onResult: (result: int, extraInfo: osAccount.AuthResult) => {
-    console.info('auth result = ' + result)
-    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-  },
-  onAcquireInfo: (module: int, acquire: int, extraInfo: Uint8Array) => {
     console.info('auth module = ' + module);
     console.info('auth acquire = ' + acquire);
     console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
@@ -106,27 +94,14 @@ onResult: (result: int, extraInfo: AuthResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 |  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
+| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 是 |  |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let authCallback: osAccount.IUserAuthCallback = {
   onResult: (result: number, extraInfo: osAccount.AuthResult) => {
-    console.info('auth result = ' + result);
-    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let authCallback: osAccount.IUserAuthCallback = {
-  onResult: (result: int, extraInfo: osAccount.AuthResult) => {
     console.info('auth result = ' + result);
     console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
   }

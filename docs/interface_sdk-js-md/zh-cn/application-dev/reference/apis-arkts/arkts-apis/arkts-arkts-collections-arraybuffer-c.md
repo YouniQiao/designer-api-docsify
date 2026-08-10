@@ -1,17 +1,18 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[Uint8Array]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[Int16Array]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[Uint16Array]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-[Int32Array]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、  
-[Uint32Array]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、  
-[Uint8ClampedArray]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、  
-[Float32Array]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_）的底层数据结构。
-    **说明**  
-    
-    - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。  
-    **装饰器类型**：\@Sendable
+ArkTS TypedArray（[Int8Array](arkts-collections.md)、  
+[Uint8Array](arkts-collections.md)、  
+[Int16Array](arkts-collections.md)、  
+[Uint16Array](arkts-collections.md)、  
+[Int32Array](arkts-collections.md)、  
+[Uint32Array](arkts-collections.md)、  
+[Uint8ClampedArray](arkts-collections.md)、  
+[Float32Array](arkts-collections.md)）的底层数据结构。
+
+> **说明：**
+> 
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
@@ -22,6 +23,12 @@ ArkTS TypedArray（[Int8Array]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、
 <!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { collections } from 'kits/@kit.ArkTS';
+```
 
 ## constructor
 
@@ -51,7 +58,7 @@ constructor(byteLength: number)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArrayBuffer's constructor cannot be directly invoked. |
+| 10200012 | The ArrayBuffer's constructor cannot be directly invoked. |
 
 ## slice
 
@@ -75,8 +82,8 @@ slice(begin: number, end?: number): ArrayBuffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 是 | 开始索引，如果\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，则会从\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_位置开始。 |
-| end | number | 否 | 结束索引（不包括该元素），如果\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，则会到\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_位置结束。默认为原ArkTS ArrayBuffer的长度。 |
+| begin | number | 是 | 开始索引，如果`begin < 0`，则会从`begin + arrayBuffer.byteLength`位置开始。 |
+| end | number | 否 | 结束索引（不包括该元素），如果`end < 0`，则会到`end + arrayBuffer.byteLength`位置结束。默认为原ArkTS ArrayBuffer的长度。 |
 
 **返回值：**
 
@@ -88,8 +95,8 @@ slice(begin: number, end?: number): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 10200011 | The slice method cannot be bound. |
+| 10200201 | Concurrent modification error. |
 
 ## byteLength
 

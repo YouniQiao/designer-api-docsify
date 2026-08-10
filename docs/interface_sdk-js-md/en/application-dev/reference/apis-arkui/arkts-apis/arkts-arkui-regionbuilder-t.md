@@ -4,7 +4,7 @@
 type RegionBuilder = () => void
 ```
 
-RegionBuilder
+RegionBuilder类型。
 
 **Since:** 23
 

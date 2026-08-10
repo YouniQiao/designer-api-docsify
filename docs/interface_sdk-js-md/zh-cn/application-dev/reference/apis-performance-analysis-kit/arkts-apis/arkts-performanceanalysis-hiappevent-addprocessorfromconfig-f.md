@@ -1,5 +1,11 @@
 # addProcessorFromConfig
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addProcessorFromConfig
 
 ```TypeScript
@@ -22,24 +28,22 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| processorName | string | 是 | 数据处理者的名称。名称只能包含大小写字母、数字、下划线和\_\_\_ESCAPED\_DOLLAR\_\_\_，不能以数字开头，长度非空且不超过256个字符。 |
-| configName | string | 否 | 数据处理者的配置名称，支持从配置文件中加载对应配置，默认为“SDK\_\_\_ESCAPED\_UNDERSCORE\_\_\_OCG”。只能包含大小写字母、数字、下划线和\_\_\_ESCAPED\_DOLLAR\_\_\_，不能以数字开头，长度非空且不 超过256个字符。 |
+| processorName | string | 是 | 数据处理者的名称。名称只能包含大小写字母、数字、下划线和\\$，不能以数字开头，长度非空且不超过256个字符。 |
+| configName | string | 否 | 数据处理者的配置名称，支持从配置文件中加载对应配置，默认为“SDK_OCG”。只能包含大小写字母、数字、下划线和\\$，不能以数字开头，长度非空且不 超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回添加的事件数据处理者的唯一ID，可用于移除该数据处理者。 添加失败返回11105001错误码。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回添加的事件数据处理者的唯一ID，可用于移除该数据处理者。 添加失败返回11105001错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
+| 11105001 | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -49,20 +53,6 @@ hiAppEvent.addProcessorFromConfig("test_name").then((processorId) => {
   hilog.info(0x0000, 'hiAppEvent', `Succeeded in adding processor from config, processorId=${processorId}`);
 }).catch((err: BusinessError) => {
   hilog.error(0x0000, 'hiAppEvent', `Failed to add processor from config, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hiAppEvent.addProcessorFromConfig("test_name").then((processorId: long) => {
-  hilog.info(0x0000, 'hiAppEvent', `Succeeded in adding processor from config, processorId=${processorId}`);
-}).catch((err: Error) => {
-  const bErr = err as BusinessError;
-  hilog.error(0x0000, 'hiAppEvent', `Failed to add processor from config, code: ${bErr.code}, message: ${bErr.message}`);
 });
 ```
 

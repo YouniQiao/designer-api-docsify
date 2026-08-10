@@ -1,5 +1,11 @@
 # getLevel
 
+## 导入模块
+
+```TypeScript
+import { thermal } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getLevel
 
 ```TypeScript
@@ -20,9 +26,9 @@ function getLevel(): ThermalLevel
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 热档位信息。 |
+| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | 热档位信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let level = thermal.getLevel();

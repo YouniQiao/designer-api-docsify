@@ -1,0 +1,32 @@
+# GridItemOptions
+
+GridItem样式对象。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare interface GridItemOptions--><!--Device-unnamed-export declare interface GridItemOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## style
+
+```TypeScript
+style?: GridItemStyle
+```
+
+设置GridItem样式。
+
+**Type:** [GridItemStyle](arkts-arkui-griditem-griditemstyle-e.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GridItemOptions-style?: GridItemStyle--><!--Device-GridItemOptions-style?: GridItemStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

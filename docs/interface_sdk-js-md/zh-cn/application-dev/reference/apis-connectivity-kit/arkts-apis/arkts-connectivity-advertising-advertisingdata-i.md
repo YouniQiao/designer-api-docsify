@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## includeDeviceName
 
 ```TypeScript
@@ -38,7 +44,7 @@ manufacturerData?: ManufacturerData[]
 
 制造商数据。
 
-**类型：** ManufacturerData[]
+**类型：** [ManufacturerData](arkts-connectivity-advertising-manufacturerdata-i.md)[]
 
 **起始版本：** 26.0.0
 
@@ -58,7 +64,7 @@ serviceData?: ServiceData[]
 
 服务数据。
 
-**类型：** ServiceData[]
+**类型：** [ServiceData](arkts-connectivity-advertising-servicedata-i.md)[]
 
 **起始版本：** 26.0.0
 

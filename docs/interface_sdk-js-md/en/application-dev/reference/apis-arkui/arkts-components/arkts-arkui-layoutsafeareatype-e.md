@@ -1,6 +1,6 @@
 # LayoutSafeAreaType
 
-Enumerates the types for expanding layout safe areas.
+扩展布局安全区域的枚举类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the types for expanding layout safe areas.
 SYSTEM = 0
 ```
 
-Default non-safe area of the system, including the status bar and navigation bar.The component's layout range can be expanded to include both component-level safe areas([safeAreaPadding]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) and page-level safe areas (status bar, navigation bar, and cutout area).
+设置后，组件的布局范围可扩展至组件级安全区([safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding))和页面级安全区（状态栏、导航栏、挖孔区）。
 
 **Since:** 12
 

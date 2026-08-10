@@ -20,13 +20,13 @@ colors: Array<[ResourceColor, number]>
 
 **说明：**
 
-颜色设置方式可参考：[ResourceColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，非[ResourceColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_范围内的颜色值即为非法颜色。
+颜色设置方式可参考：[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md)，非[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md)范围内的颜色值即为非法颜色。
 
 数组内颜色设置为undefined或者null时，默认为黑色。
 
 colors参数的约束：
 
-[ResourceColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_表示填充的颜色，number表示指定颜色所处的位置，取值范围为[0,1.0]，0表示需要设置渐变色的容器的起始位置，1.0表示容器的结束位置。为实现多个颜色渐变效果，建议多个数组中number参数递增设置，如后一个数组number参数比前一个数组number小时，按照等于前一个数组number的值处理。
+[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md)表示填充的颜色，number表示指定颜色所处的位置，取值范围为[0,1.0]，0表示需要设置渐变色的容器的起始位置，1.0表示容器的结束位置。为实现多个颜色渐变效果，建议多个数组中number参数递增设置，如后一个数组number参数比前一个数组number小时，按照等于前一个数组number的值处理。
 
 **类型：** Array&lt;[ResourceColor, number]&gt;
 
@@ -50,13 +50,13 @@ direction?: GradientDirection
 
 线性渐变的方向。
 
-默认值：GradientDirection.Bottom
+默认值：GradientDirection.Bottom 
 
 **说明：**
 
 当线性渐变的方向设置为GradientDirection.None时，显示默认值。
 
-**类型：** GradientDirection
+**类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **起始版本：** 20
 

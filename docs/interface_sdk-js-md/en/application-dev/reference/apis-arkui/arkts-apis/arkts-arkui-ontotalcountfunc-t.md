@@ -4,7 +4,7 @@
 type OnTotalCountFunc = () => int
 ```
 
-Function that is used to get total count.
+用于计算期望加载的数据项总数的函数类型。
 
 **Since:** 23
 

@@ -20,7 +20,7 @@ permissionQuery: PermissionQuery
 
 权限查询信息。
 
-**类型：** PermissionQuery
+**类型：** [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)
 
 **起始版本：** 26.1.0
 
@@ -40,7 +40,7 @@ results: RemoteUserAuthItem[]
 
 授权结果列表。
 
-**类型：** RemoteUserAuthItem[]
+**类型：** [RemoteUserAuthItem](arkts-ability-abilitytoolaccessctrl-remoteuserauthitem-i-sys.md)[]
 
 **起始版本：** 26.1.0
 

@@ -1,12 +1,18 @@
 # totalEnergy (System API)
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## totalEnergy
 
 ```TypeScript
 function totalEnergy(): int
 ```
 
-Total battery capacity of the device, in unit of mAh. This is a system API.
+获取当前设备电池的总容量，单位毫安时。
 
 **Since:** 23
 
@@ -22,5 +28,5 @@ Total battery capacity of the device, in unit of mAh. This is a system API.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the total battery capacity of the device, in mAh. |
+| int | 返回当前设备电池的总容量，单位毫安时。 |
 

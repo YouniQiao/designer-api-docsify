@@ -1,6 +1,6 @@
 # WrappedBuilder
 
-Defines the WrappedBuilder class.
+`WrappedBuilder`是`@Builder`函数的包装类，用于封装全局`@Builder`函数及其参数，实现按引用传递和动态调用。
 
 **Since:** 11
 
@@ -15,6 +15,8 @@ Defines the WrappedBuilder class.
 ```TypeScript
 builder: (...args: Args) => void
 ```
+
+`@Builder`装饰的全局函数，用于生成对应的自定义构建内容。
 
 **Since:** 11
 
@@ -40,6 +42,8 @@ builder: (...args: Args) => void
 constructor(builder: (...args: Args) => void)
 ```
 
+`WrappedBuilder`的构造函数。
+
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
@@ -56,5 +60,5 @@ constructor(builder: (...args: Args) => void)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | (...args: Args) =&gt; void | Yes |  |
+| builder | (...args: Args) =&gt; void | Yes | `@Builder`装饰的全局函数，作为构造参数用于初始化`WrappedBuilder`实例。函数参数`args`为该`@Builder`函数所需的参数列表。 |
 

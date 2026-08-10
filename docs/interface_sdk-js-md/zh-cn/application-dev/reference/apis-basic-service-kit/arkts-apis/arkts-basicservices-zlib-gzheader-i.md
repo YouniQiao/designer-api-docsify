@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## comment
 
 ```TypeScript
@@ -78,7 +84,7 @@ extraLen?: int
 
 额外字段的长度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -158,7 +164,7 @@ os?: int
 
 操作系统。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -178,7 +184,7 @@ time?: long
 
 修改时间。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -198,7 +204,7 @@ xflags?: int
 
 额外标志。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

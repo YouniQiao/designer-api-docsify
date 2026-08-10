@@ -1,0 +1,60 @@
+# ConversionProcess
+
+Defines the flag of conversion operations.
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
+
+<!--Device-connection-export enum ConversionProcess--><!--Device-connection-export enum ConversionProcess-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+
+## NO_CONFIGURATION
+
+```TypeScript
+NO_CONFIGURATION = 0
+```
+
+Indicates that no flag are configured.
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
+
+<!--Device-ConversionProcess-NO_CONFIGURATION = 0--><!--Device-ConversionProcess-NO_CONFIGURATION = 0-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+
+## ALLOW_UNASSIGNED
+
+```TypeScript
+ALLOW_UNASSIGNED = 1
+```
+
+Indicates that the conversion allow unassigned code points.
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
+
+<!--Device-ConversionProcess-ALLOW_UNASSIGNED = 1--><!--Device-ConversionProcess-ALLOW_UNASSIGNED = 1-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+
+## USE_STD3_ASCII_RULES
+
+```TypeScript
+USE_STD3_ASCII_RULES = 2
+```
+
+Indicates that the conversion turn on the check against STD-3 ASCII rules.
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
+
+<!--Device-ConversionProcess-USE_STD3_ASCII_RULES = 2--><!--Device-ConversionProcess-USE_STD3_ASCII_RULES = 2-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+

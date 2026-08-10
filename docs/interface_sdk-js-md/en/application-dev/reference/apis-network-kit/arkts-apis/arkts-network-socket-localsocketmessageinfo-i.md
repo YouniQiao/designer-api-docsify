@@ -10,6 +10,12 @@ Defines the local socket connection information.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## address
 
 ```TypeScript

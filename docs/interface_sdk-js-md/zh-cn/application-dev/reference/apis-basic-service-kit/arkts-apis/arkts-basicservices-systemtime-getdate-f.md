@@ -1,5 +1,11 @@
 # getDate
 
+## 导入模块
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getDate
 
 ```TypeScript
@@ -24,7 +30,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Date&gt; | 是 | 回调函数，返回当前系统日期。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | 是 | 回调函数，返回当前系统日期。 |
 
 **错误码：**
 
@@ -32,7 +38,7 @@ function getDate(callback: AsyncCallback<Date>): void
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -84,7 +90,7 @@ function getDate(): Promise<Date>
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

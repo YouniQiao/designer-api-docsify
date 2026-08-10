@@ -1,14 +1,12 @@
 # XComponent
 
-**XComponent** provides a [surface](docroot://ui/napi-xcomponent-guidelines.md#overview) for graphics rendering and
-media data input into your view. You can customize the position and size of the surface as needed. For details, see
-[Native XComponent](docroot://ui/napi-xcomponent-guidelines.md).
+**XComponent**提供用于图形绘制和媒体数据写入的[surface](docroot://ui/napi-xcomponent-guidelines.md#overview)，XComponent负责将其嵌入到视图中，支持应用自定义surface的位置和大小。同时支持AI图像分析、HDR视频亮度调节、防截屏录屏隐私保护、画布自绘制等能力，适用于视频播放、相机预览、游戏渲染、图像AI识别等需要高性能自绘制和媒体内容展示的场景。具体指南请参考[自定义渲染（XComponent）文档](docroot://ui/napi-xcomponent-guidelines.md)。
 
-> **NOTE**
+> **说明：**
 
-## Child Components
+## 子组件
 
-Not supported
+不支持
 
 ## XComponent
 
@@ -16,7 +14,7 @@ Not supported
 XComponent(value: { id: string; type: string; libraryname?: string; controller?: XComponentController })
 ```
 
-Constructor parameters
+构造参数
 
 **Since:** 8
 
@@ -34,7 +32,7 @@ Constructor parameters
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { id: string; type: string; libraryname?: string; controller?: XComponentController } | Yes | Indicates the options of the xcomponent.  |
+| value | { id: string; type: string; libraryname?: string; controller?: XComponentController } | Yes | 表示XComponent的选项。 |
 
 ## XComponent
 
@@ -42,10 +40,9 @@ Constructor parameters
 XComponent(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 ```
 
-Creates an **XComponent** component, whose lifecycle callbacks can be triggered from the native side.
+创建**XComponent**组件，其生命周期回调可以从native侧触发。
 
-This API is deprecated since API version 12. You are advised to use  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_instead.
+从API版本12开始，该接口不再维护。建议使用[XComponent(options: XComponentOptions)](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12)替代。
 
 **Since:** 10
 
@@ -63,7 +60,7 @@ This API is deprecated since API version 12. You are advised to use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController } | Yes | Indicates the options of the xcomponent.  |
+| value | { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController } | Yes | 表示XComponent的选项。 |
 
 ## XComponent
 
@@ -71,7 +68,7 @@ This API is deprecated since API version 12. You are advised to use
 XComponent(options: XComponentOptions)
 ```
 
-Creates an **XComponent** component, allowing you to obtain the **SurfaceId** value on the ArkTS side, register the lifecycle callbacks for the surface held by the **XComponent** and the callbacks for component events such as touch, mouse, and key events, and configure the AI analyzer feature.
+创建**XComponent**组件，允许您在ArkTS侧获取**SurfaceId**值，注册**XComponent**所持有的surface的生命周期回调以及触摸、鼠标、按键等组件事件的回调，并配置AI分析器功能。
 
 **Since:** 12
 
@@ -89,7 +86,7 @@ Creates an **XComponent** component, allowing you to obtain the **SurfaceId** va
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options of the **XComponent**.  |
+| options | [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | Yes | 表示XComponent的选项。 |
 
 ## XComponent
 
@@ -97,7 +94,7 @@ Creates an **XComponent** component, allowing you to obtain the **SurfaceId** va
 XComponent(params: NativeXComponentParameters)
 ```
 
-Obtains an **XComponent** node instance on the native side, and registers the lifecycle callbacks for the surface held by the **XComponent** and the callbacks for component events, such as touch, mouse, and key events.
+在native侧获取**XComponent**节点实例，并注册**XComponent**所持有的surface的生命周期回调以及触摸、鼠标、按键等组件事件的回调。
 
 **Since:** 19
 
@@ -115,7 +112,14 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options of the **XComponent**.  |
+| params | [NativeXComponentParameters](../arkts-apis/arkts-arkui-xcomponent-nativexcomponentparameters-i.md) | Yes | 表示用于native开发的XComponent构造参数。 |
 
 ## Summary
 
+- [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md)
+- [SurfaceConfig](arkts-arkui-xcomponent-surfaceconfig-i.md)
+- [SurfaceRect](arkts-arkui-xcomponent-surfacerect-i.md)
+- [SurfaceRotationOptions](arkts-arkui-xcomponent-surfacerotationoptions-i.md)
+- [XComponentOptions](arkts-arkui-xcomponent-xcomponentoptions-i.md)
+- [OnNativeLoadCallback](arkts-arkui-xcomponent-onnativeloadcallback-t.md)
+- [HdrType](arkts-arkui-xcomponent-hdrtype-e.md)

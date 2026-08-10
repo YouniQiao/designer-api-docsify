@@ -6,9 +6,17 @@ Namespace for managing and organizing script information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace scriptManager--><!--Device-unnamed-declare namespace scriptManager-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
+
+## Modules to Import
+
+```TypeScript
+import { scriptManager } from 'kits/@kit.AbilityKit';
+```
 
 ## Summary
 

@@ -4,7 +4,7 @@
 export type BundleInfo = _BundleInfo.BundleInfo
 ```
 
-Defines the bundle information.
+应用包信息。
 
 **Since:** 9
 

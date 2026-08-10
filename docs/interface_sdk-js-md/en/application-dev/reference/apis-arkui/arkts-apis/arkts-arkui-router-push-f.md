@@ -1,12 +1,23 @@
 # push
 
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
 ## push
 
 ```TypeScript
 function push(options: RouterOptions): void
 ```
 
-Navigates to a specified page in the application.
+跳转到应用内的指定页面。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)替代。
 
 **Since:** 8
 
@@ -24,12 +35,14 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 跳转页面描述信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-class innerParams {
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -39,11 +52,11 @@ class innerParams {
 
 class RouterParams {
   data1: string;
-  data2: innerParams;
+  data2: InnerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new innerParams(tuple);
+    this.data2 = new InnerParams(tuple);
   }
 }
 
@@ -54,7 +67,9 @@ router.push({
 ```
 
 ```TypeScript
-class innerParams {
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -64,11 +79,11 @@ class innerParams {
 
 class RouterParams {
   data1: string;
-  data2: innerParams;
+  data2: InnerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new innerParams(tuple);
+    this.data2 = new InnerParams(tuple);
   }
 }
 

@@ -1,6 +1,6 @@
 # BreakpointsReference
 
-Breakpoint reference of the grid container component.
+设置栅格容器组件的断点参照物。
 
 **Since:** 9
 
@@ -13,10 +13,10 @@ Breakpoint reference of the grid container component.
 ## WindowSize
 
 ```TypeScript
-WindowSize
+WindowSize = 0
 ```
 
-The window is used as a reference.
+以窗口为参照。断点计算基于应用窗口尺寸，适用于需要根据窗口整体大小变化进行响应式布局的场景。
 
 **Since:** 9
 
@@ -26,17 +26,17 @@ The window is used as a reference.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-BreakpointsReference-WindowSize--><!--Device-BreakpointsReference-WindowSize-End-->
+<!--Device-BreakpointsReference-WindowSize = 0--><!--Device-BreakpointsReference-WindowSize = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ComponentSize
 
 ```TypeScript
-ComponentSize
+ComponentSize = 1
 ```
 
-The container is used as a reference.
+以容器为参照。断点计算基于GridRow组件自身尺寸，适用于需要根据组件容器尺寸变化进行响应式布局的场景，例如GridRow嵌套在其他容器中时。
 
 **Since:** 9
 
@@ -46,7 +46,7 @@ The container is used as a reference.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-BreakpointsReference-ComponentSize--><!--Device-BreakpointsReference-ComponentSize-End-->
+<!--Device-BreakpointsReference-ComponentSize = 1--><!--Device-BreakpointsReference-ComponentSize = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

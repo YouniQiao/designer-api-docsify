@@ -1,5 +1,11 @@
 # getModelResult (System API)
 
+## Modules to Import
+
+```TypeScript
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+```
+
 ## getModelResult
 
 ```TypeScript
@@ -24,7 +30,7 @@ Request security model result from security guard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the security model rule. |
+| rule | [ModelRule](arkts-securityguard-securityguard-modelrule-i-sys.md) | Yes | indicates the security model rule. |
 
 **Return value:**
 
@@ -36,7 +42,7 @@ Request security model result from security guard.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | check permission fail. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | non-system application uses the system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 401 | invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 201 | check permission fail. |
+| 202 | non-system application uses the system API. |
 

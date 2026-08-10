@@ -1,6 +1,6 @@
 # Constants
 
-KVStore constants
+分布式键值数据库常量
 
 **Since:** 23
 

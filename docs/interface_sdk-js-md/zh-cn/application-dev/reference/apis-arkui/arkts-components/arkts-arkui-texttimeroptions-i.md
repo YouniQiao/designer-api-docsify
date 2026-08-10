@@ -18,7 +18,7 @@ controller?: TextTimerController
 
 TextTimer控制器，用于通过编程方式控制计时器的启动、暂停和重置。不传入时，计时器仍可正常显示但无法通过代码控制其状态。
 
-**类型：** TextTimerController
+**类型：** [TextTimerController](arkts-arkui-texttimercontroller-c.md)
 
 **起始版本：** 8
 
@@ -96,9 +96,9 @@ startTime?: number
 
 取值范围：[−2147483648, 2147483647]。
 
-默认值：0
+默认值：0 
 
-单位：毫秒
+单位：毫秒 
 
 当值为负数时，计时器将从负值开始计时，经过0后继续向正数计时。
 

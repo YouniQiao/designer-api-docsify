@@ -1,6 +1,6 @@
 # RunMetrics
 
-Describes the layout information and measurement information of a run of text in a text line.
+描述文本行中连续文本块的布局信息和度量数据。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes the layout information and measurement information of a run of text in
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## fontMetrics
 
 ```TypeScript
 fontMetrics: drawing.FontMetrics
 ```
 
-Font measurement information.
+字体度量信息。
 
 **Type:** drawing.FontMetrics
 
@@ -36,9 +42,9 @@ Font measurement information.
 textStyle: TextStyle
 ```
 
-Text style.
+字体的样式信息。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 12
 

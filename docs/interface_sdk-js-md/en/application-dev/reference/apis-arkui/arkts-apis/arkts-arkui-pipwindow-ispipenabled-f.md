@@ -1,12 +1,18 @@
 # isPiPEnabled
 
+## Modules to Import
+
+```TypeScript
+import { PiPWindow } from 'kits/@kit.ArkUI';
+```
+
 ## isPiPEnabled
 
 ```TypeScript
 function isPiPEnabled(): boolean
 ```
 
-Checks whether the current device supports the PiP feature.
+判断当前设备是否支持画中画功能。
 
 **Since:** 11
 
@@ -22,12 +28,12 @@ Checks whether the current device supports the PiP feature.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the PiP feature is supported. **true** if supported, **false** otherwise. |
+| boolean | 当前系统是否支持画中画功能。true表示支持，false则表示不支持。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-let enable: boolean = PiPWindow.isPiPEnabled();
-console.info('isPipEnabled:' + enable);
+let enable: boolean = PiPWindow.isPiPEnabled(); // Check whether the PiP window is supported.
+console.info('isPiPEnabled:' + enable);
 ```
 

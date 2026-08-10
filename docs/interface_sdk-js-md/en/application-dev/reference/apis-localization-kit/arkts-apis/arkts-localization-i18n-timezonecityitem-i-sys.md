@@ -1,6 +1,6 @@
 # TimeZoneCityItem (System API)
 
-Represents a time zone and city combination item.
+时区城市的组合信息。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Represents a time zone and city combination item.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## cityDisplayName
 
 ```TypeScript
 cityDisplayName: string
 ```
 
-City display name in the system locale.
+城市ID在系统区域下显示的名称。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ City display name in the system locale.
 cityId: string
 ```
 
-City ID, for example, "Shanghai".
+城市ID，例如Shanghai。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ City ID, for example, "Shanghai".
 offset: int
 ```
 
-Offset of the time zone ID.The value should be an integer.
+时区ID的偏移量，单位为毫秒（ms）。
 
 **Type:** int
 
@@ -78,7 +84,7 @@ Offset of the time zone ID.The value should be an integer.
 rawOffset?: int
 ```
 
-Fixed offset of the time zone ID.The value should be an integer.
+时区ID的固定偏移量，单位为毫秒（ms）。
 
 **Type:** int
 
@@ -98,7 +104,7 @@ Fixed offset of the time zone ID.The value should be an integer.
 zoneDisplayName: string
 ```
 
-Time zone display name in the system locale.
+时区ID在系统区域下显示的名称。
 
 **Type:** string
 
@@ -118,7 +124,7 @@ Time zone display name in the system locale.
 zoneId: string
 ```
 
-Time zone ID, for example, "Asia/Shanghai".
+时区ID，例如Asia/Shanghai。
 
 **Type:** string
 

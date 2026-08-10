@@ -10,6 +10,12 @@ You can trigger download manually through this interface, or resume failed or ca
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## resumeDownload
 
 ```TypeScript
@@ -30,13 +36,13 @@ Resume the canceled or failed download.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| webDownloadItem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Download that need to be resume. |
+| webDownloadItem | [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | Yes | Download that need to be resume. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100018](../errorcode-webview.md#17100018-no-webdownloaddelegate-available) | No WebDownloadDelegate has been set yet. |
+| 17100018 | No WebDownloadDelegate has been set yet. |
 
 ## setDownloadDelegate
 
@@ -58,5 +64,5 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delegate | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Delegate used for download triggered from WebDownloadManager. |
+| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | Yes | Delegate used for download triggered from WebDownloadManager. |
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 导入模块
+
+```TypeScript
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
+```
+
 ## elementId
 
 ```TypeScript
@@ -83,7 +89,7 @@ target?: AccessibilityElement
 
 发生事件的目标组件。
 
-**类型：** AccessibilityElement
+**类型：** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
 **起始版本：** 9
 

@@ -26,7 +26,11 @@ Creates a DistortionComponent with content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | DistortionComponent Options.  |
+| options | [DistortionComponentOptions](../arkts-apis/arkts-arkui-distortioncomponent-distortioncomponentoptions-i-sys.md) | No | DistortionComponent Options. |
 
 ## Summary
 
+- [DistortionComponentOptions](arkts-arkui-distortioncomponent-distortioncomponentoptions-i-sys.md)
+- [DistortionParam](arkts-arkui-distortioncomponent-distortionparam-i-sys.md)
+- [Vector2](arkts-arkui-distortioncomponent-vector2-t-sys.md)
+- [Vector4](arkts-arkui-distortioncomponent-vector4-t-sys.md)

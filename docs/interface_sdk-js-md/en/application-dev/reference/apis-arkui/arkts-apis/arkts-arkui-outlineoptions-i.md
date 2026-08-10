@@ -1,6 +1,6 @@
 # OutlineOptions
 
-Defines the options of outline.
+定义外描边的参数选项
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the outline color.
 
-**Type:** EdgeColors \| ResourceColor \| LocalizedEdgeColors
+**Type:** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| ResourceColor \| LocalizedEdgeColors
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ radius?: OutlineRadiuses | Dimension
 
 Defines the outline radius.
 
-**Type:** OutlineRadiuses \| Dimension
+**Type:** [OutlineRadiuses](arkts-arkui-units-outlineradiuses-i.md) \| Dimension
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ style?: EdgeOutlineStyles | OutlineStyle
 
 Defines the outline style.
 
-**Type:** EdgeOutlineStyles \| OutlineStyle
+**Type:** [EdgeOutlineStyles](arkts-arkui-units-edgeoutlinestyles-i.md) \| OutlineStyle
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ width?: EdgeOutlineWidths | Dimension
 
 Defines the outline width.
 
-**Type:** EdgeOutlineWidths \| Dimension
+**Type:** [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md) \| Dimension
 
 **Since:** 12
 

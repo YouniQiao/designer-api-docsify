@@ -1,5 +1,11 @@
 # hasWindowFocus
 
+## 导入模块
+
+```TypeScript
+import { featureAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## hasWindowFocus
 
 ```TypeScript
@@ -22,9 +28,9 @@ function hasWindowFocus(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 回调函数。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。&lt;br&gt;如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
@@ -64,7 +70,7 @@ function hasWindowFocus(): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

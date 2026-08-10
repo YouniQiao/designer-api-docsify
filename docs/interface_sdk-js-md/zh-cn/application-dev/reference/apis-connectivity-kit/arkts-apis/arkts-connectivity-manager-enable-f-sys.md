@@ -1,5 +1,11 @@
 # enable（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { manager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## enable
 
 ```TypeScript
@@ -26,9 +32,9 @@ function enable(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | EDM denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 801 | Capability not supported because the chip does not support it. |
+| 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 203 | EDM denied. |
 

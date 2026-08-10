@@ -12,6 +12,12 @@ Rotation axes status
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## pitchEnabled
 
 ```TypeScript
@@ -40,7 +46,7 @@ pitchLimited?: RotationAxisLimited
 
 Whether the pitch axis is limited.
 
-**类型：** RotationAxisLimited
+**类型：** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **起始版本：** 20
 
@@ -80,7 +86,7 @@ rollLimited?: RotationAxisLimited
 
 Whether the roll axis is limited.
 
-**类型：** RotationAxisLimited
+**类型：** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **起始版本：** 20
 
@@ -120,7 +126,7 @@ yawLimited?: RotationAxisLimited
 
 偏航轴是否限位
 
-**类型：** RotationAxisLimited
+**类型：** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **起始版本：** 20
 

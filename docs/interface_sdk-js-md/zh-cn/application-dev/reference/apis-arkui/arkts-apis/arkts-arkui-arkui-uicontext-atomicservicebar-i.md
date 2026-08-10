@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## getBarRect
 
 ```TypeScript
@@ -32,7 +38,7 @@ getBarRect(): Frame
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The size and position of bar in vp relative to window. |
+| [Frame](arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
 
 ## setBackgroundColor
 
@@ -56,7 +62,7 @@ setBackgroundColor(color: Nullable< Color | int | string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_ \| int \| string&gt; | 是 | the color to set, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) \| int \| string&gt; | 是 | the color to set, undefined indicates using default. |
 
 ## setIconColor
 
@@ -80,7 +86,7 @@ setIconColor(color: Nullable< Color | int | string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_ \| int \| string&gt; | 是 | the color to set to icon, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) \| int \| string&gt; | 是 | the color to set to icon, undefined indicates using default. |
 
 ## setTitleContent
 
@@ -128,7 +134,7 @@ setTitleFontStyle(font: FontStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the font style of the bar's title. |
+| font | [FontStyle](arkts-arkui-fontstyle-e.md) | 是 | the font style of the bar's title. |
 
 ## setVisible
 

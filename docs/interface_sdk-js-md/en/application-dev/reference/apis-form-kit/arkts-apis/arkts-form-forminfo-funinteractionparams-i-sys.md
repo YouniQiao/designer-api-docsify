@@ -12,6 +12,12 @@ The fun interaction form params.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## abilityName
 
 ```TypeScript
@@ -40,7 +46,7 @@ keepStateDuration?: int
 
 duration of the fun interaction form will be paused if not operate.Unit: milliseconds, The value must be an integer within [0,60000]. Default value: 10000.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

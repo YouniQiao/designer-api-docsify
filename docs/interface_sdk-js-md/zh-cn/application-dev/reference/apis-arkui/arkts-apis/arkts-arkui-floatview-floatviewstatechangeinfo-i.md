@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## state
 
 ```TypeScript
@@ -18,7 +24,7 @@ state: FloatViewState
 
 标准悬浮窗的状态。
 
-**类型：** FloatViewState
+**类型：** [FloatViewState](arkts-arkui-floatview-floatviewstate-e.md)
 
 **起始版本：** 26.0.0
 
@@ -38,19 +44,19 @@ stopReason: string
 
 标准悬浮窗停止的原因。该参数仅在状态为FloatViewState.STOPPED时有效，在其他状态下默认为空字符串。停止原因和对应含义如下：
 
-"APP\_STOP"：应用主动停止
+"APP_STOP"：应用主动停止
 
-"STOP\_IN\_SIDEBAR"：在侧边栏被关闭
+"STOP_IN_SIDEBAR"：在侧边栏被关闭
 
-"TITLE\_BAR\_STOP\_CLICK"：标题栏点击关闭按钮
+"TITLE_BAR_STOP_CLICK"：标题栏点击关闭按钮
 
-"DUMPSTER\_STOP"：拖入垃圾桶停止
+"DUMPSTER_STOP"：拖入垃圾桶停止
 
-"REPLACE\_STOP"：被其他标准悬浮窗挤占
+"REPLACE_STOP"：被其他标准悬浮窗挤占
 
-"FLOATING\_BALL\_STOP"：绑定状态下跟随闪控球停止
+"FLOATING_BALL_STOP"：绑定状态下跟随闪控球停止
 
-"MAIN\_WINDOW\_DESTROY\_STOP"：context关联的主窗被销毁后停止
+"MAIN_WINDOW_DESTROY_STOP"：context关联的主窗被销毁后停止
 
 **类型：** string
 

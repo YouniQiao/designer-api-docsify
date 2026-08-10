@@ -1,6 +1,6 @@
 # ImageLoadResult
 
-Describes the object returned after the callback is triggered when an image is successfully loaded or decoded.
+图片数据加载成功和解码成功触发回调时返回的对象。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Describes the object returned after the callback is triggered when an image is s
 componentHeight: number
 ```
 
-Height of the component.
+组件的高。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -40,9 +40,9 @@ Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 componentWidth: number
 ```
 
-Width of the component.
+组件的宽。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -64,13 +64,13 @@ Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 contentHeight: number
 ```
 
-Actual rendered height of the image.
+图片实际绘制的高度。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**NOTE**
+**说明：**
 
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+仅在loadingStatus返回1时有效。
 
 **Type:** number
 
@@ -92,13 +92,13 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentOffsetX: number
 ```
 
-Offset of the rendered content relative to the component on the x-axis.
+实际绘制内容相对于组件自身的x轴偏移。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**NOTE**
+**说明：**
 
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+仅在loadingStatus返回1时有效。
 
 **Type:** number
 
@@ -120,13 +120,13 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentOffsetY: number
 ```
 
-Offset of the rendered content relative to the component on the y-axis
+实际绘制内容相对于组件自身的y轴偏移。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**NOTE**
+**说明：**
 
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+仅在loadingStatus返回1时有效。
 
 **Type:** number
 
@@ -148,13 +148,13 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentWidth: number
 ```
 
-Actual rendered width of the image.
+图片实际绘制的宽度。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**NOTE**
+**说明：**
 
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+仅在loadingStatus返回1时有效。
 
 **Type:** number
 
@@ -176,9 +176,9 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 height: number
 ```
 
-Height of the image.
+图片的高。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -200,11 +200,11 @@ Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 loadingStatus: number
 ```
 
-Loading status of the image.
+图片加载成功的状态值。
 
-**NOTE**
+**说明：**
 
-If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
+返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
 
 **Type:** number
 
@@ -226,9 +226,9 @@ If the return value is **0**, the image is successfully loaded. If the return va
 width: number
 ```
 
-Width of the image.
+图片的宽。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 

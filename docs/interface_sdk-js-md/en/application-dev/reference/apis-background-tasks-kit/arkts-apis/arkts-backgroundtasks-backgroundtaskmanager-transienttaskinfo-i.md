@@ -1,6 +1,6 @@
 # TransientTaskInfo
 
-Describes all transient task information.
+所有短时任务信息。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes all transient task information.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## remainingQuota
 
 ```TypeScript
 remainingQuota: int
 ```
 
-Remaining quota of the application on the current day, in ms.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:ms
+应用当日所剩余总配额，单位：ms。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Remaining quota of the application on the current day, in ms.\_\_\_HTML\_TAG\_DE
 transientTasks: DelaySuspendInfo[]
 ```
 
-All information about the requested transient task.
+当前已申请的所有短时任务信息。
 
-**Type:** DelaySuspendInfo[]
+**Type:** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)[]
 
 **Since:** 20
 

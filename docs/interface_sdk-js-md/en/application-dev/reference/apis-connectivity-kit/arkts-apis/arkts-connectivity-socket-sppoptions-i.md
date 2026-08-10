@@ -10,6 +10,12 @@ Describes the spp parameters.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.ConnectivityKit';
+```
+
 ## psm
 
 ```TypeScript
@@ -18,7 +24,7 @@ psm?: int
 
 l2cap protocol service multiplexer
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -54,7 +60,7 @@ type: SppType
 
 Spp link type
 
-**Type:** SppType
+**Type:** [SppType](arkts-connectivity-socket-spptype-e.md)
 
 **Since:** 10
 

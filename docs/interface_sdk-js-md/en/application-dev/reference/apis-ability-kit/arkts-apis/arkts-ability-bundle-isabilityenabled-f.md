@@ -1,12 +1,18 @@
 # isAbilityEnabled
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## isAbilityEnabled
 
 ```TypeScript
 function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses an asynchronous callback to return the result.
+根据给定的AbilityInfo查询ability是否已经启用，使用callback异步回调。
 
 **Since:** 8
 
@@ -22,8 +28,8 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability的配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数，返回boolean代表是否启用。 |
 
 
 ## isAbilityEnabled
@@ -32,7 +38,7 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 ```
 
-Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses a promise to return the result.
+根据给定的AbilityInfo查询ability是否已经启用，使用Promise异步回调。
 
 **Since:** 8
 
@@ -48,11 +54,11 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability information. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability的配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise形式返回boolean代表是否启用。 |
 

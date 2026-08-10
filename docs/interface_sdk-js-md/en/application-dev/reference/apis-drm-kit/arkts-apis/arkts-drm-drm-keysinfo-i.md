@@ -10,6 +10,12 @@ Used to indicate the media key status with a key and its value.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## keyId
 
 ```TypeScript

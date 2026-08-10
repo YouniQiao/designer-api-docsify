@@ -1,5 +1,11 @@
 # getTaskPoolInfo
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## getTaskPoolInfo
 
 ```TypeScript
@@ -22,9 +28,9 @@ function getTaskPoolInfo(): TaskPoolInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 任务池的内部信息。 |
+| [TaskPoolInfo](arkts-arkts-taskpool-taskpoolinfo-c.md) | 任务池的内部信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let taskpoolInfo: taskpool.TaskPoolInfo = taskpool.getTaskPoolInfo();

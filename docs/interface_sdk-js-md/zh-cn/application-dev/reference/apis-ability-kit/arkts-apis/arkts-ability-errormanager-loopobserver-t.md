@@ -4,7 +4,7 @@
 export type LoopObserver = _LoopObserver
 ```
 
-LoopObserver模块。定义异常监听，可作为 \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ 函数的参数，监听并处理当前应用主线程超时的事件。
+LoopObserver模块。定义异常监听，可作为 `errormanager.on` 函数的参数，监听并处理当前应用主线程超时的事件。
 
 **起始版本：** 12
 

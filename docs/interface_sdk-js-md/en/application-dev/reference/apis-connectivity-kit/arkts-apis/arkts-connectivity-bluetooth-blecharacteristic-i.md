@@ -14,6 +14,12 @@ Describes the Gatt characteristic.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## characteristicUuid
 
 ```TypeScript
@@ -64,7 +70,7 @@ The value of a BLECharacteristic instance
 descriptors: Array<BLEDescriptor>
 ```
 
-The list of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ contained in the characteristic
+The list of {@link BLEDescriptor} contained in the characteristic
 
 **Type:** Array&lt;BLEDescriptor&gt;
 
@@ -86,7 +92,7 @@ The list of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ contained in the characteristi
 serviceUuid: string
 ```
 
-The UUID of the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance to which the characteristic belongs
+The UUID of the {@link GattService} instance to which the characteristic belongs
 
 **Type:** string
 

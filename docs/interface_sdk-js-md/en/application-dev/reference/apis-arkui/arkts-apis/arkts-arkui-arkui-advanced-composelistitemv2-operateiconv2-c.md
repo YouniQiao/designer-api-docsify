@@ -1,6 +1,6 @@
 # OperateIconV2
 
-Declare type OperateIconV2
+列表右侧图标元素的类型。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declare type OperateIconV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
 public action?: OnActionCallback
 ```
 
-Callback function when operate the icon.
+操作图标时的回调函数。
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ Callback function when operate the icon.
 constructor(options?: OperateIconV2Options)
 ```
 
-The constructor of OperateIconV2.
+OperateIconV2的构造函数。
 
 **Since:** 26.0.0
 
@@ -52,7 +58,7 @@ The constructor of OperateIconV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of OperateIconV2 |
+| options | [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | No | OperateIconV2的可选项 |
 
 ## accessibilityDescription
 
@@ -60,9 +66,9 @@ The constructor of OperateIconV2.
 public accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of the icon.
+图标的无障碍描述。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -80,7 +86,7 @@ The accessibilityDescription of the icon.
 public accessibilityLevel?: string
 ```
 
-The accessibilityLevel of the icon.
+图标的无障碍重要性。
 
 **Type:** string
 
@@ -102,9 +108,9 @@ The accessibilityLevel of the icon.
 public accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of the icon.
+图标的无障碍文本属性。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -122,9 +128,9 @@ The accessibilityText of the icon.
 public symbolStyle?: SymbolGlyphModifier
 ```
 
-The content of text or the address of symbol.
+文本内容或图标地址。
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -142,9 +148,9 @@ The content of text or the address of symbol.
 public value: ResourceStr
 ```
 
-The content of text or the address of icon.
+文本内容或图标地址。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

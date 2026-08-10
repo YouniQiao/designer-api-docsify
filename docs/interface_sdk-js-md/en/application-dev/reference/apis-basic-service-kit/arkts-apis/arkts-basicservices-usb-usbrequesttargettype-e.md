@@ -1,6 +1,6 @@
 # USBRequestTargetType
 
-Enumerates request target types.
+请求目标类型。
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ Enumerates request target types.
 USB_REQUEST_TARGET_DEVICE = 0
 ```
 
-Device.
+设备。
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ Device.
 USB_REQUEST_TARGET_INTERFACE = 1
 ```
 
-Interface.
+接口。
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ Interface.
 USB_REQUEST_TARGET_ENDPOINT = 2
 ```
 
-Endpoint.
+端点。
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Endpoint.
 USB_REQUEST_TARGET_OTHER = 3
 ```
 
-Other.
+其他。
 
 **Since:** 8
 

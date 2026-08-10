@@ -1,6 +1,6 @@
 # FeatureForAccount
 
-Enumerates the features that can be disabled or enabled for a specified user.
+可为指定用户设置禁用/启用的特性的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates the features that can be disabled or enabled for a specified user.
 MULTI_WINDOW = 0
 ```
 
-System multi-window. Currently, this feature is available only on phones and tablets. Once disabled, the system multi-window feature (split-screen, one-click split-screen, Multi-Window, and floating window) cannot be used. If the feature is currently active, the current usage remains unaffected. However, it cannot be used once closed.
+系统多窗口。当前仅支持手机、平板设备使用，禁用后无法使用系统多窗口功能（分屏、一键分屏、智慧多窗、悬浮窗口）。若系统多窗口功能已开启，本次使用不受影响，但关闭后将无法再次使用。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ System multi-window. Currently, this feature is available only on phones and tab
 DISTRIBUTED_TRANSMISSION = 1
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.Once disabled, functions such as discovery, authentication, query, and listening in the distributed device management service cannot be used.
+[分布式管理服务](../../../distributedservice/distributedservice-kit-intro.md#运作机制)。禁用后无法使用设备分布式管理服务中的发现、认证、查询、监听等功能。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ DISTRIBUTED_TRANSMISSION = 1
 SUPER_HUB = 2
 ```
 
-SuperHub. Currently, this feature is available only on phones and tablets. Once disabled, the SuperHub feature cannot be used. If SuperHub is currently active, the current usage remains unaffected. However, it cannot be used once closed.
+中转站。当前仅支持手机、平板设备使用，禁用后无法使用中转站功能。若中转站已开启，本次使用不受影响，但关闭后将无法再次使用。
 
 **Since:** 26.0.0
 
@@ -70,9 +70,9 @@ SuperHub. Currently, this feature is available only on phones and tablets. Once 
 FINGERPRINT = 3
 ```
 
-Device fingerprint authentication capability. Currently, this feature is supported only on PCs/2-in-1 devices.The rules for using this capability are as follows:
+设备指纹认证能力，当前仅支持PC/2in1设备使用。使用时有以下规则：
 
-1. After the device fingerprint authentication capability ([FeatureForDevice.FINGERPRINT]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_)is disabled, disabling this capability for a specific user will result in a policy conflict.2. After the device fingerprint authentication capability is disabled or enabled for a specific user, disabling this capability ([FeatureForDevice.FINGERPRINT]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_) globally will override the user-specific policy. Subsequently, re-enabling this capability ([FeatureForDevice.FINGERPRINT]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_)globally will allow all users to use device fingerprint authentication.
+1. 禁用设备指纹认证能力（[FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md)）后，再禁用某用户的设备指纹认证能力，会报策略冲突。2. 禁用/启用指定用户的设备指纹认证能力后，再禁用设备指纹认证能力（[FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md)）时，后者会覆盖前者的策略。此后再启用设备指纹认证能力（[FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md)），则所有用户都允许使用设备指纹认证能力。
 
 **Since:** 26.0.0
 
@@ -90,8 +90,7 @@ Device fingerprint authentication capability. Currently, this feature is support
 PRINT = 4
 ```
 
-Device printing capability. If the device printing capability is disabled for a specific user, it remains disabled for that user even if the device printing capability (  
-[FeatureForDevice.PRINTER]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) capability is enabled globally.
+设备打印能力。如果禁用了指定用户的设备打印能力，再启用设备打印能力（[FeatureForDevice.PRINTER](arkts-mdm-restrictions-featurefordevice-e.md)），该用户下的设备打印能力仍然被禁用。
 
 **Since:** 26.0.0
 
@@ -109,7 +108,8 @@ Device printing capability. If the device printing capability is disabled for a 
 MTP_CLIENT = 5
 ```
 
-MTP client capability (including read and write capabilities). Currently, it is supported only on PC/2-in-1devices. MTP allows users to linearly access media files on mobile devices. After the device MTP client capability ([FeatureForDevice.MTP\_CLIENT]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) is disabled, disabling the MTP client write capability for a specific user will result in a policy conflict.
+MTP客户端能力（仅包含写入），当前仅支持PC/2in1设备使用。MTP（MediaTransferProtocol，媒体传输协议），该协议允许用户在移动设备上线性访问媒体文件。当已禁用设备MTP客户端能力（  
+[FeatureForDevice.MTP_CLIENT](arkts-mdm-restrictions-featurefordevice-e.md)）时，再禁用某用户MTP客户端写入能力，会报策略冲突。
 
 **Since:** 26.0.0
 
@@ -127,12 +127,16 @@ MTP client capability (including read and write capabilities). Currently, it is 
 USB_STORAGE_DEVICE_WRITE = 6
 ```
 
-USB storage device write capability. Currently, it is supported only on enterprise PCs/2-in-1 devices.
+USB存储设备写入能力，当前仅支持PC/2in1企业设备使用。
 
-Disabling the USB storage device write capability for a specific user in any of the following scenarios will result in a policy conflict:
+以下三种情况再禁用某用户USB存储设备写入能力，会报策略冲突。
 
-1. The device USB capability ([FeatureForDevice.USB]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) has been disabled.2. USB storage device access policy has been set to read-only or disabled via the  
-[setUsbStorageDeviceAccessPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API.3. Storage USB devices have been disabled via the [addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API.
+1）已禁用设备USB能力（[FeatureForDevice.USB](arkts-mdm-restrictions-featurefordevice-e.md)）。
+
+2）通过  
+[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy)接口设置了USB存储设备访问策略为只读/禁用。
+
+3）通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)接口添加了存储类型的USB设备禁用。
 
 **Since:** 26.0.0
 
@@ -150,7 +154,7 @@ Disabling the USB storage device write capability for a specific user in any of 
 DISK_RECOVERY_KEY = 7
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ recovery capability. Currently, it is supported only on PCs/2-in-1 devices.
+恢复[密钥导出](../../../security/UniversalKeystoreKit/huks-export-key-arkts.md)能力，当前仅支持PC/2in1设备使用。
 
 **Since:** 26.0.0
 
@@ -168,7 +172,7 @@ DISK_RECOVERY_KEY = 7
 SUDO = 8
 ```
 
-superuser do (execution with superuser privileges). Currently, it is supported only on PCs/2-in-1 devices. If this feature is disabled, neither enterprise spaces nor personal spaces can perform operations with superuser privileges.
+superuser do，表示以超级用户执行，当前仅支持PC/2in1设备使用。禁用后企业空间或个人空间不能以超级用户执行。
 
 **Since:** 26.0.0
 
@@ -186,7 +190,7 @@ superuser do (execution with superuser privileges). Currently, it is supported o
 DISTRIBUTED_TRANSMISSION_OUTGOING = 9
 ```
 
-Distributed one-way data transmission between devices (only data transmission to other devices is supported).Disabling distributed one-way data transmission capability between devices after the distributed management service ([DISTRIBUTED\_TRANSMISSION]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) has been disabled will result in a policy conflict.
+设备间分布式单向传输数据的能力（仅包含向其他设备传输数据）。当已禁用分布式管理服务（[DISTRIBUTED_TRANSMISSION](arkts-mdm-restrictions-featureforaccount-e.md)），再禁用设备间分布式单向传输数据的能力，会报策略冲突。
 
 **Since:** 26.0.0
 
@@ -204,7 +208,7 @@ Distributed one-way data transmission between devices (only data transmission to
 OPEN_FILE_BOOST = 10
 ```
 
-File open acceleration capability, providing applications with the ability to sense the file open acceleration status. By integrating the corresponding APIs, apps can detect the acceleration status of files, and further implement features such as displaying unique UI identifiers for accelerated files, thereby optimizing user experience of file opening. Currently, this feature is supported only on PCs/2-in-1 devices.
+文件打开加速能力，为应用提供文件打开加速状态感知能力。应用可以通过接入对应API，感知文件的加速状态，进而应用可以实现对已加速文件给出独特的UI（user interface）标识等功能，优化用户文件打开体验，当前仅支持PC/2in1设备使用。
 
 **Since:** 26.0.0
 

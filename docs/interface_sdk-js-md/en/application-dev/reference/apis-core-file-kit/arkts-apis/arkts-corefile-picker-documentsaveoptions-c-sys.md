@@ -1,6 +1,6 @@
 # DocumentSaveOptions
 
-Defines the options for saving documents.
+文档保存选项。
 
 **Since:** 9
 
@@ -10,17 +10,23 @@ Defines the options for saving documents.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
+
 ## themeColor
 
 ```TypeScript
 themeColor?: CustomColors
 ```
 
-Theme color parameter. By default, it is left empty and follows the color settings of the **FilePicker**. When it is set to specific theme color properties, such as  
-[brand, fontPrimary, compBackgroundEmphasize, and iconFourth]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the launched  
-**FilePicker** will adapt to the theme color accordingly.This API can be called on smartphones but has no effect on other devices.
+主题色参数, 默认为空，跟随FilePicker应用颜色。当themeColor设置为特定的主题色属性（[brand, fontPrimary, compBackgroundEmphasize, iconFourth](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-colors-i.md/arkts-arkui-arkui-theme-colors-i.md)）时，被拉起的FilePicker应用将适配传入的主题色参数的效果。
 
-**Type:** CustomColors
+该接口在Phone设备中可正常调用，在其他设备中无效果。
+
+**Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
 **Since:** 18
 

@@ -14,13 +14,19 @@ Represents information about a file or directory in the **Recently deleted** lis
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { trash } from 'kits/@kit.CoreFileKit';
+```
+
 ## ctime
 
 ```TypeScript
 readonly ctime: number
 ```
 
-Time when the file or directory was created. It is the number of seconds elapsed since the Unix epoch (00:00:00UTC on January 1, 1970).
+Time when the file or directory was created. It is the number of seconds elapsed since the Unix epoch (00:00:00 UTC on January 1, 1970).
 
 **Type:** number
 
@@ -92,7 +98,7 @@ Permission on the file or directory.
 readonly mtime: number
 ```
 
-Time when the file or directory was last modified. It is the number of milliseconds elapsed since the Unix epoch(00:00:00 UTC on January 1, 1970).
+Time when the file or directory was last modified. It is the number of milliseconds elapsed since the Unix epoch (00:00:00 UTC on January 1, 1970).
 
 **Type:** number
 

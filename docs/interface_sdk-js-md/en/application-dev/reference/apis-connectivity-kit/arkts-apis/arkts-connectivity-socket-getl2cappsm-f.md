@@ -1,5 +1,11 @@
 # getL2capPsm
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getL2capPsm
 
 ```TypeScript
@@ -20,15 +26,15 @@ Get l2cap socket psm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverSocket | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the server socket ID, returned by \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| serverSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the server socket ID, returned by {@link sppListen}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Returns the l2cap socket psm |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the l2cap socket psm |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

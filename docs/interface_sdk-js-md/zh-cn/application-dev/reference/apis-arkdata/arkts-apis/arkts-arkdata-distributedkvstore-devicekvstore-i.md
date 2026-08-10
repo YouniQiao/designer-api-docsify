@@ -7,7 +7,7 @@
 比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。
 
 在调用DeviceKVStore的方法前，需要先通过  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构建一个DeviceKVStore实例。
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个DeviceKVStore实例。
 
 **继承/实现关系：** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md)
 
@@ -18,6 +18,12 @@
 <!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore--><!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
 
 ## get
 
@@ -47,17 +53,17 @@ get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean \| string \| number \| number \| Uint8Array&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。返回获取查询的值。 |
+| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。返回获取查询的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| 15100004 | Not found. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
 ## get
 
@@ -87,22 +93,22 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise对象。返回获取查询的值，值的类型取决于存储时的数据类型。 |
+| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise对象。返回获取查询的值，值的类型取决于存储时的数据类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| 15100004 | Not found. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
 ## get
 
@@ -117,14 +123,15 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | lo
 ```
 
 获取与指定设备ID和Key匹配的值，使用callback异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -141,17 +148,17 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | lo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| key | string | 是 | 要查询数据的键名，不能为空且长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean \| string \| number \| number \| Uint8Array&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。成功时返回匹配给定条件的值（值的类型取决于存储时的 数据类型），失败时返回错误对象。 |
+| key | string | 是 | 要查询数据的键名，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。成功时返回匹配给定条件的值（值的类型取决于存储时的 数据类型），失败时返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| 15100004 | Not found. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
 ## get
 
@@ -166,14 +173,15 @@ get(deviceId: string, key: string): Promise<boolean | string | long | double | U
 ```
 
 获取与指定设备ID和Key匹配的值，使用Promise异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -190,22 +198,22 @@ get(deviceId: string, key: string): Promise<boolean | string | long | double | U
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| key | string | 是 | 表示要查询Key值的键，不能为空且长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| key | string | 是 | 表示要查询Key值的键，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise对象。返回匹配给定条件的值，值的类型取决于存储时的数据类型。 |
+| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise对象。返回匹配给定条件的值，值的类型取决于存储时的数据类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| 15100004 | Not found. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
 ## getEntries
 
@@ -229,20 +237,18 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | 是 | 回调函数。返回匹配指定前缀的键值对列表。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回匹配指定前缀的键值对列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -281,48 +287,7 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    kvStore!.getEntries('batch_test_string_key', (err: BusinessError | null, entries: distributedKVStore.Entry[] | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      if (entries != undefined) {
-        console.info('Succeeded in getting Entries');
-        console.info(`entries.length: ${entries.length}`);
-        console.info(`entries[0]: ${entries[0]}`);
-      }
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -348,7 +313,7 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -360,13 +325,11 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -400,43 +363,7 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    kvStore!.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]): void => {
-      console.info('Succeeded in getting Entries');
-      console.info(`PutBatch ${entries}`);
-    }).catch((err): void => {
-      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -447,14 +374,15 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 ```
 
 获取与指定设备ID和Key前缀匹配的所有键值对，使用callback异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -471,20 +399,18 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | 是 | 回调函数，返回满足给定条件的所有键值对的列表。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数，返回满足给定条件的所有键值对的列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -527,47 +453,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    kvStore!.getEntries('localDeviceId', 'batch_test_string_key', (err: BusinessError | null, entries: distributedKVStore.Entry[] | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      if (entries != undefined) {
-        console.info('Succeeded in getting Entries');
-        console.info(`entries.length: ${entries.length}`);
-        console.info(`entries[0]: ${entries[0]}`);
-      }
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
 ## getEntries
 
 ```TypeScript
@@ -575,14 +460,15 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 ```
 
 获取与指定设备ID和Key前缀匹配的所有键值对，使用Promise异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -599,7 +485,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -611,13 +497,11 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -658,45 +542,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    kvStore!.getEntries('localDeviceId', 'batch_test_string_key').then((entries: distributedKVStore.Entry[]): void => {
-      console.info('Succeeded in getting Entries');
-      console.info(`entries.length: ${entries.length}`);
-      console.info(`entries[0]: ${entries[0]}`);
-      console.info(`entries[0].value: ${entries[0].value}`);
-      console.info(`entries[0].value.value: ${entries[0].value.value}`);
-    }).catch((err): void => {
-      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
 ## getEntries
 
 ```TypeScript
@@ -719,20 +564,18 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示要查询的对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | 是 | 回调函数。返回本设备与指定Query对象匹配的键值对列表。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示要查询的对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回本设备与指定Query对象匹配的键值对列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -753,6 +596,10 @@ try {
   }
   console.info(`entries: ${entries}`);
   kvStore.putBatch(entries, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
     console.info('Succeeded in putting Batch');
     const query = new distributedKVStore.Query();
     query.prefixKey('batch_test');
@@ -771,50 +618,6 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let arr = new Uint8Array([21, 31]);
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_bool_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.BYTE_ARRAY,
-        value: arr
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    kvStore!.getEntries(query, (err: BusinessError | null, entries: distributedKVStore.Entry[] | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      if (entries != undefined) {
-        console.info('Succeeded in getting Entries');
-        console.info(`entries.length: ${entries.length}`);
-        console.info(`entries[0]: ${entries[0]}`);
-      }
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -840,7 +643,7 @@ getEntries(query: Query): Promise<Entry[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -852,13 +655,11 @@ getEntries(query: Query): Promise<Entry[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -890,52 +691,12 @@ try {
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`)
+    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
   });
   console.info('Succeeded in getting Entries');
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let arr = new Uint8Array([21, 31]);
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_bool_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.BYTE_ARRAY,
-        value: arr
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    kvStore!.getEntries(query).then((entries: distributedKVStore.Entry[]): void => {
-      console.info('Succeeded in getting Entries');
-      console.info(`entries.length: ${entries.length}`);
-      console.info(`entries[0]: ${entries[0]}`);
-    }).catch((err): void => {
-      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -946,14 +707,15 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 ```
 
 获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -970,20 +732,18 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1021,58 +781,13 @@ try {
         console.info('Succeeded in getting entries');
         console.info(`entries.length: ${entries.length}`);
         console.info(`entries[0]: ${entries[0]}`);
-      });
+      })
     }
   });
   console.info('Succeeded in getting entries');
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let arr = new Uint8Array([21, 31]);
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_bool_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.BYTE_ARRAY,
-        value: arr
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.deviceId('localDeviceId');
-    query.prefixKey('batch_test');
-    kvStore!.getEntries('localDeviceId', query, (err: BusinessError | null, entries: distributedKVStore.Entry[] | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      if (entries != undefined) {
-        console.info('Succeeded in getting Entries');
-        console.info(`entries.length: ${entries.length}`);
-        console.info(`entries[0]: ${entries[0]}`);
-      }
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -1083,14 +798,15 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 ```
 
 获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -1107,7 +823,7 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1119,13 +835,11 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1167,47 +881,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let arr = new Uint8Array([21, 31]);
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_bool_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.BYTE_ARRAY,
-        value: arr
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.deviceId('localDeviceId');
-    query.prefixKey('batch_test');
-    kvStore!.getEntries('localDeviceId', query).then((entries: distributedKVStore.Entry[]): void => {
-      console.info('Succeeded in getting Entries');
-      console.info(`entries.length: ${entries.length}`);
-      console.info(`entries[0]: ${entries[0]}`);
-    }).catch((err): void => {
-      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
 ## getResultSet
 
 ```TypeScript
@@ -1215,7 +888,7 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
 从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_关闭结果集释放资源。
+[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
 
 **起始版本：** 9
 
@@ -1231,21 +904,19 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KVStoreResultSet&gt; | 是 | 回调函数。返回具有指定前缀的结果集。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | 是 | 回调函数。返回具有指定前缀的结果集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 10+ |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1285,7 +956,7 @@ try {
               return;
             }
             console.info('Succeeded in closing result set');
-          });
+          })
         }
       });
     }
@@ -1296,54 +967,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    kvStore!.getResultSet('batch_test_string_key', (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in getting result set');
-      if (result != undefined) {
-        resultSet = result;
-        kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
-          if (err != null) {
-            console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in closing result set');
-        });
-      }
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
 ## getResultSet
 
 ```TypeScript
@@ -1351,7 +974,7 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
 从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_关闭结果集释放资源。
+[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
 
 **起始版本：** 9
 
@@ -1367,7 +990,7 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -1379,14 +1002,12 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 10+ |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1407,21 +1028,21 @@ try {
   }
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting batch');
+    kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info('Succeeded in getting result set');
+      resultSet = result;
+      if (kvStore != null) {
+        kvStore.closeResultSet(resultSet).then(() => {
+          console.info('Succeeded in closing result set');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+        });
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
   }).catch((err: BusinessError) => {
     console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-  });
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting result set');
-    resultSet = result;
-    if (kvStore != null) {
-      kvStore.closeResultSet(resultSet).then(() => {
-        console.info('Succeeded in closing result set');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
   let error = err as BusinessError;
@@ -1436,14 +1057,15 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 ```
 
 获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用callback异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -1460,21 +1082,19 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KVStoreResultSet&gt; | 是 | 回调函数。返回与指定设备ID和Key前缀匹配的KVStoreResultSet对象。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | 是 | 回调函数。返回与指定设备ID和Key前缀匹配的KVStoreResultSet对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 10+ |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1495,60 +1115,12 @@ try {
           return;
         }
         console.info('Succeeded in closing resultSet');
-      });
+      })
     }
   });
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    kvStore!.getResultSet('localDeviceId', 'batch_test_string_key', (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in getting result set');
-      if (result != undefined) {
-        resultSet = result;
-        kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
-          if (err != null) {
-            console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in closing result set');
-        });
-      }
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -1559,14 +1131,15 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
 获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用Promise异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -1583,7 +1156,7 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -1595,14 +1168,12 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 10+ |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1628,48 +1199,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    kvStore!.getResultSet('localDeviceId', 'batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet): void => {
-      console.info('Succeeded in getting result set');
-      resultSet = result;
-      kvStore!.closeResultSet(resultSet).then((): void => {
-        console.info('Succeeded in closing result set');
-      }).catch((err): void => {
-        console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-      });
-    }).catch((err): void => {
-      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
 ## getResultSet
 
 ```TypeScript
@@ -1692,21 +1221,19 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KVStoreResultSet&gt; | 是 | 回调函数。成功时返回与指定Query对象匹配的KVStoreResultSet对象，失败时返回错误对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | 是 | 回调函数。成功时返回与指定Query对象匹配的KVStoreResultSet对象，失败时返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 10+ |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1748,64 +1275,14 @@ try {
               return;
             }
             console.info('Succeeded in closing resultSet');
-          });
+          })
         }
       });
     }
   });
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`Failed to get resultSet`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-    kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-      if (err != null) {
-        console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    kvStore!.getResultSet(query, (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in getting resultSet');
-      if (result != undefined) {
-        resultSet = result;
-        kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
-          if (err != null) {
-            console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in closing resultSet');
-        });
-      }
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1831,7 +1308,7 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1843,14 +1320,12 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 10+ |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1895,15 +1370,16 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 ```
 
 获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_关闭结果集释放资源。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_。
+[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -1920,21 +1396,19 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KVStoreResultSet&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的KVStoreResultSet对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的KVStoreResultSet对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 10+ |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1976,7 +1450,7 @@ try {
               return;
             }
             console.info('Succeeded in closing resultSet');
-          });
+          })
         }
       });
     }
@@ -1987,56 +1461,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    kvStore!.getResultSet('localDeviceId', query, (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in getting resultSet');
-      if (result != undefined) {
-        resultSet = result;
-        kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
-          if (err != null) {
-            console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in closing resultSet');
-        });
-      }
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
 ## getResultSet
 
 ```TypeScript
@@ -2044,15 +1468,16 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 ```
 
 获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_关闭结果集释放资源。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_。
+[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -2069,7 +1494,7 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -2081,14 +1506,12 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 10+ |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2130,55 +1553,11 @@ try {
     });
   }
   query.deviceId('localDeviceId');
-  console.info(`GetResultSet ` + query.getSqlLike());
+  console.info('GetResultSet ' + query.getSqlLike());
 
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    kvStore!.getResultSet('localDeviceId', query).then((result: distributedKVStore.KVStoreResultSet): void => {
-      console.info('Succeeded in getting resultSet');
-      resultSet = result;
-      kvStore!.closeResultSet(resultSet).then((): void => {
-        console.info('Succeeded in closing resultSet');
-      }).catch((err): void => {
-        console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
-      });
-    }).catch((err): void => {
-      console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -2210,21 +1589,19 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | 是 | 回调函数。返回与本设备指定Query对象匹配的结果数。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。返回与本设备指定Query对象匹配的结果数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100004 | Not found. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2243,50 +1620,16 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
     console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
     query.prefixKey('batch_test');
     if (kvStore != null) {
       kvStore.getResultSize(query, (err: BusinessError, resultSize: number) => {
         if (err) {
-          console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in getting result set size');
-      });
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError|null) :void=> {
-    console.info('Succeeded in putting batch');
-    const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    if (kvStore != null) {
-      kvStore!.getResultSize(query, (err: BusinessError|null, resultSize: number|undefined): void=> {
-        if (err != null) {
           console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
           return;
         }
@@ -2328,26 +1671,24 @@ getResultSize(query: Query): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象。获取与本设备指定Query对象匹配的结果数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。获取与本设备指定Query对象匹配的结果数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100004 | Not found. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2383,42 +1724,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries).then(async () => {
-    console.info('Succeeded in putting batch');
-  }).catch((err) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-  });
-  const query = new distributedKVStore.Query();
-  query.prefixKey('batch_test');
-  kvStore!.getResultSize(query).then((resultSize: int) => {
-    console.info('Succeeded in getting result set size');
-  }).catch((err) => {
-    console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getResultSize
 
 ArkTS-Dyn:
@@ -2432,14 +1737,15 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): voi
 ```
 
 获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -2456,21 +1762,19 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100004 | Not found. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2512,45 +1816,6 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    kvStore!.getResultSize('localDeviceId', query, (err: BusinessError | null, resultSize: int | undefined): void => {
-      if (err != null) {
-        console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in getting result size');
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
-}
-```
-
 ## getResultSize
 
 ArkTS-Dyn:
@@ -2564,14 +1829,15 @@ getResultSize(deviceId: string, query: Query): Promise<int>
 ```
 
 获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。
-    **说明：**  
-    
-    其中deviceId通过调用  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。  
-    
-    deviceId具体获取方式请参考  
-    [sync接口示例]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+
+> **说明：**
+> 
+> 其中deviceId通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
 
@@ -2588,26 +1854,24 @@ getResultSize(deviceId: string, query: Query): Promise<int>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回与指定设备ID和Query对象匹配的结果数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回与指定设备ID和Query对象匹配的结果数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100004 | Not found. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2640,43 +1904,6 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
-    if (err != null) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in putting Batch');
-    const query: distributedKVStore.Query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
-    kvStore!.getResultSize('localDeviceId', query).then((resultSize: int): void => {
-      console.info('Succeeded in getting result size');
-    }).catch((err): void => {
-      console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
-    });
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 

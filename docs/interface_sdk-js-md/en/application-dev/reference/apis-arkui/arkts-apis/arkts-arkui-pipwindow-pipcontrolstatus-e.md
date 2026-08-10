@@ -1,6 +1,6 @@
 # PiPControlStatus
 
-Enumerates the statuses of components displayed on the PiP controller.
+控制面板控件状态枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the statuses of components displayed on the PiP controller.
 PLAY = 1
 ```
 
-Play.
+播放。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Play.
 PAUSE = 0
 ```
 
-Pause.
+暂停。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Pause.
 OPEN = 1
 ```
 
-Open.
+打开。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Open.
 CLOSE = 0
 ```
 
-Close.
+关闭。
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # ContentType
 
-Enumerates the content types for autofill.
+自动填充类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the content types for autofill.
 USER_NAME = 0
 ```
 
-Username. Password Vault, when enabled, can automatically save and fill in usernames.
+【用户名】在已启用密码保险箱的情况下，支持用户名的自动保存和自动填充。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Username. Password Vault, when enabled, can automatically save and fill in usern
 PASSWORD = 1
 ```
 
-Password. Password Vault, when enabled, can automatically save and fill in passwords.
+【密码】在已启用密码保险箱的情况下，支持密码的自动保存和自动填充。
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Password. Password Vault, when enabled, can automatically save and fill in passw
 NEW_PASSWORD = 2
 ```
 
-New password. Password Vault, when enabled, can automatically generate a new password.
+【新密码】在已启用密码保险箱的情况下，支持自动生成新密码。
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ New password. Password Vault, when enabled, can automatically generate a new pas
 FULL_STREET_ADDRESS = 3
 ```
 
-Full street address. The scenario-based autofill feature, when enabled, can automatically save and fill in full street addresses.
+【详细地址】在已启用情景化自动填充的情况下，支持详细地址的自动保存和自动填充。
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Full street address. The scenario-based autofill feature, when enabled, can auto
 HOUSE_NUMBER = 4
 ```
 
-House number. The scenario-based autofill feature, when enabled, can automatically save and fill in house numbers.
+【门牌号】在已启用情景化自动填充的情况下，支持门牌号的自动保存和自动填充。
 
 **Since:** 12
 
@@ -116,7 +116,7 @@ House number. The scenario-based autofill feature, when enabled, can automatical
 DISTRICT_ADDRESS = 5
 ```
 
-District and county. The scenario-based autofill feature, when enabled, can automatically save and fill in districts and counties.
+【区/县】在已启用情景化自动填充的情况下，支持区/县的自动保存和自动填充。
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ District and county. The scenario-based autofill feature, when enabled, can auto
 CITY_ADDRESS = 6
 ```
 
-City. The scenario-based autofill feature, when enabled, can automatically save and fill in cities.
+【市】在已启用情景化自动填充的情况下，支持市的自动保存和自动填充。
 
 **Since:** 12
 
@@ -156,7 +156,7 @@ City. The scenario-based autofill feature, when enabled, can automatically save 
 PROVINCE_ADDRESS = 7
 ```
 
-Province. The scenario-based autofill feature, when enabled, can automatically save and fill in provinces.
+【省】在已启用情景化自动填充的情况下，支持省的自动保存和自动填充。
 
 **Since:** 12
 
@@ -176,7 +176,7 @@ Province. The scenario-based autofill feature, when enabled, can automatically s
 COUNTRY_ADDRESS = 8
 ```
 
-Country. The scenario-based autofill feature, when enabled, can automatically save and fill in countries.
+【国家】在已启用情景化自动填充的情况下，支持国家的自动保存和自动填充。
 
 **Since:** 12
 
@@ -196,7 +196,7 @@ Country. The scenario-based autofill feature, when enabled, can automatically sa
 PERSON_FULL_NAME = 9
 ```
 
-Full name. The scenario-based autofill feature, when enabled, can automatically save and fill in full names.
+【姓名】在已启用情景化自动填充的情况下，支持姓名的自动保存和自动填充。
 
 **Since:** 12
 
@@ -216,7 +216,7 @@ Full name. The scenario-based autofill feature, when enabled, can automatically 
 PERSON_LAST_NAME = 10
 ```
 
-Last name. The scenario-based autofill feature, when enabled, can automatically save and fill in last names.
+【姓氏】在已启用情景化自动填充的情况下，支持姓氏的自动保存和自动填充。
 
 **Since:** 12
 
@@ -236,7 +236,7 @@ Last name. The scenario-based autofill feature, when enabled, can automatically 
 PERSON_FIRST_NAME = 11
 ```
 
-First name. The scenario-based autofill feature, when enabled, can automatically save and fill in first names.
+【名字】在已启用情景化自动填充的情况下，支持名字的自动保存和自动填充。
 
 **Since:** 12
 
@@ -256,7 +256,7 @@ First name. The scenario-based autofill feature, when enabled, can automatically
 PHONE_NUMBER = 12
 ```
 
-Phone number. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers.
+【手机号码】在已启用情景化自动填充的情况下，支持手机号码的自动保存和自动填充。
 
 **Since:** 12
 
@@ -276,7 +276,7 @@ Phone number. The scenario-based autofill feature, when enabled, can automatical
 PHONE_COUNTRY_CODE = 13
 ```
 
-Country code. The scenario-based autofill feature, when enabled, can automatically save and fill in country codes.
+【国家代码】在已启用情景化自动填充的情况下，支持国家代码的自动保存和自动填充。
 
 **Since:** 12
 
@@ -296,7 +296,7 @@ Country code. The scenario-based autofill feature, when enabled, can automatical
 FULL_PHONE_NUMBER = 14
 ```
 
-Phone number with country code. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers with country codes.
+【包含国家代码的手机号码】在已启用情景化自动填充的情况下，支持包含国家代码的手机号码的自动保存和自动填充。
 
 **Since:** 12
 
@@ -316,7 +316,7 @@ Phone number with country code. The scenario-based autofill feature, when enable
 EMAIL_ADDRESS = 15
 ```
 
-Email address. The scenario-based autofill feature, when enabled, can automatically save and fill in email addresses.
+【邮箱地址】在已启用情景化自动填充的情况下，支持邮箱地址的自动保存和自动填充。
 
 **Since:** 12
 
@@ -336,7 +336,7 @@ Email address. The scenario-based autofill feature, when enabled, can automatica
 BANK_CARD_NUMBER = 16
 ```
 
-Bank card number. The scenario-based autofill feature, when enabled, can automatically save and fill in bank card numbers.
+【银行卡号】在已启用情景化自动填充的情况下，支持银行卡号的自动保存和自动填充。
 
 **Since:** 12
 
@@ -356,7 +356,7 @@ Bank card number. The scenario-based autofill feature, when enabled, can automat
 ID_CARD_NUMBER = 17
 ```
 
-ID card number. The scenario-based autofill feature, when enabled, can automatically save and fill in ID card numbers.
+【身份证号】在已启用情景化自动填充的情况下，支持身份证号的自动保存和自动填充。
 
 **Since:** 12
 
@@ -376,7 +376,7 @@ ID card number. The scenario-based autofill feature, when enabled, can automatic
 NICKNAME = 23
 ```
 
-Nickname. The scenario-based autofill feature, when enabled, can automatically save and fill in nicknames.
+【昵称】在已启用情景化自动填充的情况下，支持昵称的自动保存和自动填充。
 
 **Since:** 12
 
@@ -396,7 +396,7 @@ Nickname. The scenario-based autofill feature, when enabled, can automatically s
 DETAIL_INFO_WITHOUT_STREET = 24
 ```
 
-Address information without street address. The scenario-based autofill feature, when enabled, can automatically save and fill in address information without street addresses.
+【无街道地址】在已启用情景化自动填充的情况下，支持无街道地址的自动保存和自动填充。
 
 **Since:** 12
 
@@ -416,7 +416,7 @@ Address information without street address. The scenario-based autofill feature,
 FORMAT_ADDRESS = 25
 ```
 
-Standard address. The scenario-based autofill feature, when enabled, can automatically save and fill in standard addresses.
+【标准地址】在已启用情景化自动填充的情况下，支持标准地址的自动保存和自动填充。
 
 **Since:** 12
 
@@ -436,7 +436,7 @@ Standard address. The scenario-based autofill feature, when enabled, can automat
 PASSPORT_NUMBER = 26
 ```
 
-Passport number. The scenario-based autofill feature, when enabled, can automatically save and fill in passport numbers.
+【护照号】在已启用情景化自动填充的情况下，支持护照号的自动保存和自动填充。
 
 **Since:** 18
 
@@ -456,7 +456,7 @@ Passport number. The scenario-based autofill feature, when enabled, can automati
 VALIDITY = 27
 ```
 
-Passport validity period. The scenario-based autofill feature, when enabled, can automatically save and fill in passport validity periods.
+【护照有效期】在已启用情景化自动填充的情况下，支持护照有效期的自动保存和自动填充。
 
 **Since:** 18
 
@@ -476,7 +476,7 @@ Passport validity period. The scenario-based autofill feature, when enabled, can
 ISSUE_AT = 28
 ```
 
-Passport place of issue. The scenario-based autofill feature, when enabled, can automatically save and fill in the place of issue for passports.
+【护照签发地】在已启用情景化自动填充的情况下，支持护照签发地的自动保存和自动填充。
 
 **Since:** 18
 
@@ -496,7 +496,7 @@ Passport place of issue. The scenario-based autofill feature, when enabled, can 
 ORGANIZATION = 29
 ```
 
-Invoice title. The scenario-based autofill feature, when enabled, can automatically save and fill in invoice titles.
+【发票抬头名称】在已启用情景化自动填充的情况下，支持发票抬头名称的自动保存和自动填充。
 
 **Since:** 18
 
@@ -516,7 +516,7 @@ Invoice title. The scenario-based autofill feature, when enabled, can automatica
 TAX_ID = 30
 ```
 
-Tax ID. The scenario-based autofill feature, when enabled, can automatically save and fill in tax IDs.
+【税号】在已启用情景化自动填充的情况下，支持税号的自动保存和自动填充。
 
 **Since:** 18
 
@@ -536,7 +536,7 @@ Tax ID. The scenario-based autofill feature, when enabled, can automatically sav
 ADDRESS_CITY_AND_STATE = 31
 ```
 
-Location. The scenario-based autofill feature, when enabled, can automatically save and fill in locations.
+【所在地区】在已启用情景化自动填充的情况下，支持所在地区的自动保存和自动填充。
 
 **Since:** 18
 
@@ -556,7 +556,7 @@ Location. The scenario-based autofill feature, when enabled, can automatically s
 FLIGHT_NUMBER = 32
 ```
 
-Flight number. Currently not supported for automatic saving and auto-filling.
+【航班号】暂不支持自动保存和自动填充。
 
 **Since:** 18
 
@@ -576,7 +576,7 @@ Flight number. Currently not supported for automatic saving and auto-filling.
 LICENSE_NUMBER = 33
 ```
 
-Driver's license number. Currently not supported for automatic saving and auto-filling.
+【驾驶证号】暂不支持自动保存和自动填充。
 
 **Since:** 18
 
@@ -596,7 +596,7 @@ Driver's license number. Currently not supported for automatic saving and auto-f
 LICENSE_FILE_NUMBER = 34
 ```
 
-Driver's license file number. Currently not supported for automatic saving and auto-filling.
+【驾驶证档案编号】暂不支持自动保存和自动填充。
 
 **Since:** 18
 
@@ -616,7 +616,7 @@ Driver's license file number. Currently not supported for automatic saving and a
 LICENSE_PLATE = 35
 ```
 
-License plate number. The scenario-based autofill feature, when enabled, can automatically save and fill in license plate numbers.
+【车牌号】在已启用情景化自动填充的情况下，支持车牌号的自动保存和自动填充。
 
 **Since:** 18
 
@@ -636,7 +636,7 @@ License plate number. The scenario-based autofill feature, when enabled, can aut
 ENGINE_NUMBER = 36
 ```
 
-Vehicle registration engine number. Currently not supported for automatic saving and auto-filling.
+【行驶证发动机号】暂不支持自动保存和自动填充。
 
 **Since:** 18
 
@@ -656,7 +656,7 @@ Vehicle registration engine number. Currently not supported for automatic saving
 LICENSE_CHASSIS_NUMBER = 37
 ```
 
-Chassis number. Currently not supported for automatic saving and auto-filling.
+【车牌识别号】暂不支持自动保存和自动填充。
 
 **Since:** 18
 

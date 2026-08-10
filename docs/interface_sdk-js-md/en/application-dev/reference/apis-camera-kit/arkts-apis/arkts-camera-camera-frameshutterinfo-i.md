@@ -1,6 +1,6 @@
 # FrameShutterInfo
 
-Describes the frame shutter information.
+拍照帧输出信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the frame shutter information.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## captureId
 
 ```TypeScript
 captureId: int
 ```
 
-ID of this capture action.
+拍照的ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ ID of this capture action.
 timestamp: long
 ```
 
-Timestamp when the frame shutter event is triggered, in milliseconds.
+快门时间戳。单位毫秒。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 

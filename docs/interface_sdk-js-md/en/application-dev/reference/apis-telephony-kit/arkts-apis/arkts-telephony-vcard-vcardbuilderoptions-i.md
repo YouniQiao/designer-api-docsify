@@ -10,6 +10,12 @@ Indicates the options for VCard export.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { vcard } from 'kits/@kit.TelephonyKit';
+```
+
 ## cardType
 
 ```TypeScript
@@ -18,7 +24,7 @@ cardType?: VCardType
 
 Indicates the VCard types.
 
-**Type:** VCardType
+**Type:** [VCardType](arkts-telephony-vcard-vcardtype-e.md)
 
 **Since:** 23
 

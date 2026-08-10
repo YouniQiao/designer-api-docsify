@@ -1,12 +1,18 @@
 # querySyncResult
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## querySyncResult
 
 ```TypeScript
 function querySyncResult(query: AssetMap): Promise<SyncResult>
 ```
 
-Queries the result of the sync operation. This API uses a promise to return the result.
+执行同步操作后，查询同步执行结果。使用Promise异步回调。
 
 **Since:** 20
 
@@ -20,28 +26,28 @@ Queries the result of the sync operation. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the sync result to query, such as the group to which the asset belongs and whether the custom attribute information is encrypted. |
+| query | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | 同步结果查询条件，如关键资产所属群组、业务自定义属性信息是否加密。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SyncResult&gt; | Promise used to return the result obtained. |
+| Promise&lt;SyncResult&gt; | Promise对象，返回同步执行结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
-| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
-| [24000014](../errorcode-asset.md#24000014-file-operation-failed) | The file operation failed. |
-| [24000018](../errorcode-asset.md#24000018-parameter-check-failed) | Parameter verification failed. |
+| 24000014 | The file operation failed. |
+| 24000012 | Calling the OS Account service failed. |
+| 24000013 | Calling the Access Token service failed. |
+| 24000010 | IPC failed. |
+| 24000011 | Calling the Bundle Manager service failed. |
+| 24000006 | Insufficient memory. |
+| 24000018 | Parameter verification failed. |
+| 24000001 | The ASSET service is unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

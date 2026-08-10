@@ -1,6 +1,6 @@
 # Position
 
-Defines the position.
+定义位置。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Defines the position.
 x?: Length
 ```
 
-Coordinate x of the Position.
+位置X坐标。
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 
@@ -38,9 +38,9 @@ Coordinate x of the Position.
 y?: Length
 ```
 
-Coordinate y of the Position.
+位置Y坐标。
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
 

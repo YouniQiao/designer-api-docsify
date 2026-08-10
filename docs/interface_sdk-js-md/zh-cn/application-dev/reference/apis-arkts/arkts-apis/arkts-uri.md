@@ -5,9 +5,10 @@
 适用于网络请求URL处理、深链接解析或数据共享URI处理等场景。
 
 URI遵循RFC3986规范标准，不支持非标准场景解析。
-    **说明：**  
-    
-    - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
+
+> **说明：**
+> 
+> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
 
 **起始版本：** 8
 
@@ -16,6 +17,12 @@ URI遵循RFC3986规范标准，不支持非标准场景解析。
 <!--Device-unnamed-declare namespace uri--><!--Device-unnamed-declare namespace uri-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { uri } from 'kits/@kit.ArkTS';
+```
 
 ## 汇总
 

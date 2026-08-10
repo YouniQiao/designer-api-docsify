@@ -12,6 +12,12 @@ Defines the MMS message param.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## data
 
 ```TypeScript
@@ -40,7 +46,7 @@ mmsConfig?: MmsConfig
 
 Indicates the MMS UA and MMS UaProf used for sending the MMS message.
 
-**Type:** MmsConfig
+**Type:** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 
 **Since:** 11
 
@@ -80,7 +86,7 @@ slotId: int
 
 Indicates the ID of the SIM card slot used for sending the MMS message.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

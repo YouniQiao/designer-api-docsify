@@ -1,6 +1,6 @@
 # ChainStyle
 
-Enumerates the chain styles in relative container.
+定义链的风格，支持attributeModifier动态设置属性方法。
 
 **Since:** 12
 
@@ -13,10 +13,10 @@ Enumerates the chain styles in relative container.
 ## SPREAD
 
 ```TypeScript
-SPREAD
+SPREAD = 0
 ```
 
-Child components are evenly distributed among constraint anchors.
+组件在约束锚点间均匀分布。
 
 **Since:** 12
 
@@ -26,17 +26,17 @@ Child components are evenly distributed among constraint anchors.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ChainStyle-SPREAD--><!--Device-ChainStyle-SPREAD-End-->
+<!--Device-ChainStyle-SPREAD = 0--><!--Device-ChainStyle-SPREAD = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SPREAD_INSIDE
 
 ```TypeScript
-SPREAD_INSIDE
+SPREAD_INSIDE = 1
 ```
 
-All child components except the first and last ones are evenly distributed among constraint anchors.
+除首尾2个子组件的其他组件在约束锚点间均匀分布。
 
 **Since:** 12
 
@@ -46,17 +46,17 @@ All child components except the first and last ones are evenly distributed among
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ChainStyle-SPREAD_INSIDE--><!--Device-ChainStyle-SPREAD_INSIDE-End-->
+<!--Device-ChainStyle-SPREAD_INSIDE = 1--><!--Device-ChainStyle-SPREAD_INSIDE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PACKED
 
 ```TypeScript
-PACKED
+PACKED = 2
 ```
 
-There is no gap between child components in the chain.
+链内子组件无间隙。
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ There is no gap between child components in the chain.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ChainStyle-PACKED--><!--Device-ChainStyle-PACKED-End-->
+<!--Device-ChainStyle-PACKED = 2--><!--Device-ChainStyle-PACKED = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

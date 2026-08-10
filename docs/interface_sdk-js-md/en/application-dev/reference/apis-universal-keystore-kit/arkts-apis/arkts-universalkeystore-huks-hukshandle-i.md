@@ -1,10 +1,10 @@
 # HuksHandle
 
-Defines the struct for a HUKS handle.
-    **NOTE**  
-    
-    This API is deprecated since API version 9. You are advised to use  
-    [HuksSessionHandle\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_9+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+huks Handle结构体。
+
+> **说明：**
+> 
+> 从API version 9开始废弃，建议使用[HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md)替代。
 
 **Since:** 8
 
@@ -18,15 +18,21 @@ Defines the struct for a HUKS handle.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## errorCode
 
 ```TypeScript
 errorCode: number
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Type:** number
 
@@ -46,9 +52,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 handle: number
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Type:** number
 
@@ -68,9 +74,9 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 token?: Uint8Array
 ```
 
-Reserved field.
+原为预留字段。
 
-Note: This API is deprecated since API version 9. No substitute API is provided.
+**说明：** 从API version 9开始废弃，无替代接口。
 
 **Type:** Uint8Array
 

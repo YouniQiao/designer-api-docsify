@@ -1,6 +1,11 @@
 # FluidLightMode (System API)
 
-Enumerates the fluid light modes of the input method.
+枚举，输入法流光模式。
+
+| 名称 | 值 | 说明 |  
+| ------------ | -- | ------------------ |  
+| NONE | 0 | 不使用流光模式。 |  
+| BACKGROUND_FLUID_LIGHT | 1 | 开启背景流光模式。系统面板变为透明，流光效果由编辑框宿主应用实现。 |
 
 **Since:** 20
 
@@ -18,7 +23,7 @@ Enumerates the fluid light modes of the input method.
 NONE = 0
 ```
 
-Disable fluid light mode.
+不使用流光模式。
 
 **Since:** 20
 
@@ -36,7 +41,7 @@ Disable fluid light mode.
 BACKGROUND_FLUID_LIGHT = 1
 ```
 
-When the background fluid light mode is enabled, the system panel turns transparent. The fluid light effect must be implemented by the application.
+开启背景流光模式。此时系统面板会变为透明，流光效果需要由编辑框宿主应用实现。
 
 **Since:** 20
 

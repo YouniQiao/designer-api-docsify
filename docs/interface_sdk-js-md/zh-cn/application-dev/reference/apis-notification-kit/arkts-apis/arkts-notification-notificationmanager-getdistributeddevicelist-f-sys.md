@@ -1,5 +1,11 @@
 # getDistributedDeviceList（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getDistributedDeviceList
 
 ```TypeScript
@@ -30,12 +36,10 @@ function getDistributedDeviceList(): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| 201 | Permission denied. |
+| 202 | Not system application to call the interface. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -51,31 +55,6 @@ export default class EntryAbility extends UIAbility {
         console.info('getDistributedDeviceList succeeded, result = ' + data);
       }).catch((err: BusinessError) => {
         console.error(`getDistributedDeviceList failed. Code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      console.error(`getDistributedDeviceList failed. Code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    try {
-      notificationManager.getDistributedDeviceList().then((data: Array<string>) => {
-        console.info('getDistributedDeviceList succeeded, result = ' + data);
-      }).catch((err: Error) => {
-        let error: BusinessError = err as BusinessError;
-        console.error(`getDistributedDeviceList failed. Code is ${error.code}, message is ${error.message}`);
       });
     } catch (err) {
       console.error(`getDistributedDeviceList failed. Code is ${err.code}, message is ${err.message}`);

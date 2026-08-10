@@ -1,6 +1,6 @@
 # ControllerAttachState
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the attach state of controller.
+Enum type supplied to {@link getAttachState} for indicating the attach state of controller.
 
 **Since:** 23
 

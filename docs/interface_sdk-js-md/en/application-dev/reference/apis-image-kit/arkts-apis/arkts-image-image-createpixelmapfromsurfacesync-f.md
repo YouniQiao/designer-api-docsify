@@ -1,5 +1,11 @@
 # createPixelMapFromSurfaceSync
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createPixelMapFromSurfaceSync
 
 ```TypeScript
@@ -21,29 +27,36 @@ Creates a PixelMap object from surface id.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | surface id. |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The region to surface. |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes | The region to surface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 62980178 | Failed to create the PixelMap. |
+| 62980105 | Failed to get the data. |
 
-**Example**
+## Examples
 
 ```TypeScript
-async function Demo(surfaceId: string) {
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPixelMapFromSurfaceSync(surfaceId: string) {
   let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
-  let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId, region);
-  return pixelMap;
+  try {
+    let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId, region);
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  } catch (e) {
+    const err = e as BusinessError;
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  }
 }
 ```
 
@@ -74,22 +87,29 @@ Creates a PixelMap object from surface id.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 62980178 | Failed to create the PixelMap. |
+| 62980105 | Failed to get the data. |
 
-**Example**
+## Examples
 
 ```TypeScript
-async function CreatePixelMapFromSurfaceSync(surfaceId: string) {
-  let pixelMap : image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
-  return pixelMap;
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPixelMapFromSurfaceSync(surfaceId: string) {
+  try {
+    let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  } catch (e) {
+    const err = e as BusinessError;
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  }
 }
 ```
 

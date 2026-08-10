@@ -1,6 +1,6 @@
 # FloatViewRectChangeInfo
 
-Provides the rectangle area change information of the float view.
+标准悬浮窗矩形区域变化信息。
 
 **Since:** 26.0.0
 
@@ -10,19 +10,25 @@ Provides the rectangle area change information of the float view.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## reason
 
 ```TypeScript
 reason: string
 ```
 
-Reason for the change of the rectangle area of the float view. The reasons and their meanings are as follows:
+标准悬浮窗矩形区域变化的原因。原因和对应含义如下：
 
-**"POSITION\_CHANGE"**: The position changes.
+"POSITION_CHANGE"：位置变化
 
-**"SIZE\_CHANGE"**: The size changes.
+"SIZE_CHANGE"：大小变化
 
-**"RECT\_CHANGE"**: Both the position and size change.
+"RECT_CHANGE"：位置大小同时变化
 
 **Type:** string
 
@@ -42,7 +48,7 @@ Reason for the change of the rectangle area of the float view. The reasons and t
 windowRect: window.Rect
 ```
 
-Rectangle area of the float view.
+标准悬浮窗窗口矩形区域。
 
 **Type:** window.Rect
 
@@ -62,9 +68,9 @@ Rectangle area of the float view.
 windowScale: double
 ```
 
-Scale factor of the float view.
+标准悬浮窗窗口缩放比例。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 

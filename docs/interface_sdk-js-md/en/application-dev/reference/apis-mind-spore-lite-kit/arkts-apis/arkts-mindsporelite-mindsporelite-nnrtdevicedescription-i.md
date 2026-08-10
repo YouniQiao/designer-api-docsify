@@ -10,6 +10,12 @@ Provides the nnrt device description
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## deviceID
 
 ```TypeScript
@@ -34,18 +40,19 @@ Get device id
 | --- | --- |
 | bigint | the number of device id |
 
-**Example**
+## Examples
 
 ```TypeScript
 let context: mindSporeLite.Context = {};
 context.target = ["nnrt"];
 context.nnrt = {};
 let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
-if (allDevices == null) {
-  console.error('getAllNNRTDeviceDescriptions is NULL.');
+if (allDevices == null || allDevices.length === 0) {
+  console.error(`Failed to get NNRT device descriptions. Context: ${JSON.stringify(context)}, Result: null or empty`);
 } else {
-  for (let i: number = 0; i < allDevices.length; i++) {
-    console.info(allDevices[i].deviceID().toString());
+  console.info(`Succeeded in getting NNRT device descriptions. Device count: ${allDevices.length}`);
+    for (let i: number = 0; i < allDevices.length; i++) {
+      console.info(`Device ${i} ID: ${allDevices[i].deviceID().toString()}`);
   }
 }
 ```
@@ -74,18 +81,19 @@ Get device name.
 | --- | --- |
 | string | device name |
 
-**Example**
+## Examples
 
 ```TypeScript
 let context: mindSporeLite.Context = {};
 context.target = ["nnrt"];
 context.nnrt = {};
 let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
-if (allDevices == null) {
-  console.error('getAllNNRTDeviceDescriptions is NULL.');
+if (allDevices == null || allDevices.length === 0) {
+  console.error(`Failed to get NNRT device descriptions. Context: ${JSON.stringify(context)}, Result: null or empty`);
 } else {
+console.info(`Succeeded in getting NNRT device descriptions. Device count: ${allDevices.length}`);
   for (let i: number = 0; i < allDevices.length; i++) {
-    console.info(allDevices[i].deviceName().toString());
+    console.info(`Device ${i} name: ${allDevices[i].deviceName()}`);
   }
 }
 ```
@@ -112,20 +120,21 @@ Get device type.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the device type |
+| [NNRTDeviceType](arkts-mindsporelite-mindsporelite-nnrtdevicetype-e.md) | the device type |
 
-**Example**
+## Examples
 
 ```TypeScript
 let context: mindSporeLite.Context = {};
 context.target = ["nnrt"];
 context.nnrt = {};
 let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
-if (allDevices == null) {
-  console.error('getAllNNRTDeviceDescriptions is NULL.');
+if (allDevices == null || allDevices.length === 0) {
+  console.error(`Failed to get NNRT device descriptions. Context: ${JSON.stringify(context)}, Result: null or empty`);
 } else {
+console.info(`Succeeded in getting NNRT device descriptions. Device count: ${allDevices.length}`);
   for (let i: number = 0; i < allDevices.length; i++) {
-    console.info(allDevices[i].deviceType().toString());
+    console.info(`Device ${i} type: ${allDevices[i].deviceType().toString()}`);
   }
 }
 ```

@@ -1,12 +1,18 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## on('continuousTaskCancel')
 
 ```TypeScript
 function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCancelInfo>): void
 ```
 
-Subscribes to continuous task cancellation events. This API uses an asynchronous callback to return the result.
+注册长时任务取消的监听，使用callback异步回调。
 
 **Since:** 15
 
@@ -22,17 +28,17 @@ Subscribes to continuous task cancellation events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskCancel' | Yes | Event type. The value is fixed at **'continuousTaskCancel'**, indicating that a continuous task is canceled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskCancelInfo&gt; | Yes | Callback used to return information such as the reason for canceling a continuous task. |
+| type | 'continuousTaskCancel' | Yes | 事件回调类型，固定取值为'continuousTaskCancel'，表示长时任务取消。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskCancelInfo&gt; | Yes | 回调函数，返回长时任务取消原因等信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Callback parameter error; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Register a exist callback type; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Register a exist callback type; 3. Parameter verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -62,9 +68,9 @@ export default class EntryAbility extends UIAbility {
 function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSuspendInfo>): void
 ```
 
-Registers a listener for continuous task suspension. This API uses an asynchronous callback to return the result.After the callback is registered, if the system detects for the first time that the application does not execute the corresponding service, the system does not directly cancel the continuous task. Instead, it will mark the task as suspended. If the detection failures persist, the system will cancel the continuous task.
+注册长时任务暂停的监听，使用callback异步回调。注册该回调后，如果系统首次检测到应用未执行相应的业务，不会直接取消长时任务，而是将长时任务标记为暂停状态，如果连续检测失败，仍会取消长时任务。
 
-When a continuous task is suspended, the application will be suspended when switched to the background and automatically activated when brought back to the foreground.
+长时任务处于暂停状态时，应用退后台会被挂起，回前台自动激活。
 
 **Since:** 20
 
@@ -80,17 +86,17 @@ When a continuous task is suspended, the application will be suspended when swit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskSuspend' | Yes | Event type. The value is fixed at **'continuousTaskSuspend'**, indicating that the continuous task is suspended. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskSuspendInfo&gt; | Yes | Callback used to return information such as the reason for suspending a continuous task. |
+| type | 'continuousTaskSuspend' | Yes | 事件回调类型，固定取值为'continuousTaskSuspend'，表示长时任务暂停。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskSuspendInfo&gt; | Yes | 回调函数，返回长时任务暂停原因等信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -121,7 +127,7 @@ export default class EntryAbility extends UIAbility {
 function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiveInfo>): void
 ```
 
-Registers a listener for continuous task activation. This API uses an asynchronous callback to return the result.The application returns to the foreground to activate the suspended continuous task.
+注册长时任务激活的监听，使用callback异步回调。应用回前台激活暂停的长时任务。
 
 **Since:** 20
 
@@ -137,17 +143,17 @@ Registers a listener for continuous task activation. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskActive' | Yes | Event type. The value is fixed at **'continuousTaskActive'**, indicating that the continuous task is activated. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskActiveInfo&gt; | Yes | Callback used to return the activation information about a continuous task. |
+| type | 'continuousTaskActive' | Yes | 事件回调类型，固定取值为'continuousTaskActive'，表示长时任务激活。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskActiveInfo&gt; | Yes | 回调函数，返回长时任务激活相关信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

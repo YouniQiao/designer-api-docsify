@@ -4,7 +4,7 @@
 type AuthCallbackOnResultFunc = (result: UserAuthResult) => void
 ```
 
-Called to return the authentication result. If the authentication is successful,UserAuthResult contains the token information.
+回调函数，返回认证结果。认证成功时，可以通过UserAuthResult获取到认证成功的令牌信息。
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ Called to return the authentication result. If the authentication is successful,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication result information.  |
+| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes | Authentication result information. |
 

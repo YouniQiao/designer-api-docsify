@@ -1,7 +1,6 @@
 # AuthTipInfo
 
-Represents the intermediate authentication status. This API is used to describe various intermediate states generated during authentication, including the authentication type and specific status code corresponding to each state. The application can obtain these intermediate states through  
-[AuthTipCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to provide more refined user feedback and status awareness during authentication.
+用户认证中间状态。该接口用于描述认证过程中产生的各种中间状态信息，包括状态对应的认证类型和具体的状态码。应用可通过[AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md)获取这些中间状态，以便在认证过程中提供更精细的用户反馈和状态感知。
 
 **Since:** 20
 
@@ -11,15 +10,21 @@ Represents the intermediate authentication status. This API is used to describe 
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## tipCode
 
 ```TypeScript
 tipCode: UserAuthTipCode
 ```
 
-Intermediate status. It indicates the specific intermediate status type, such as authentication failure, timeout,lockout, and UI loading/release. The application should provide feedback or execute the corresponding processing logic based on the value of **tipCode**.
+中间状态值。表示具体的中间状态类型，如认证不通过、超时、冻结、界面加载/释放等。应用应根据tipCode为用户提供相应的反馈或执行相应的处理逻辑。
 
-**Type:** UserAuthTipCode
+**Type:** [UserAuthTipCode](arkts-userauthentication-userauth-userauthtipcode-e.md)
 
 **Since:** 20
 
@@ -37,9 +42,9 @@ Intermediate status. It indicates the specific intermediate status type, such as
 tipType: UserAuthType
 ```
 
-Authentication type of the intermediate status. It indicates the authentication type that generates the current intermediate state, such as face authentication (**FACE**), fingerprint authentication (**FINGERPRINT**), or PIN authentication (**PIN**). The application can provide specific prompts for the user based on the authentication type.
+中间状态对应的认证类型。表示产生当前中间状态的认证方式，如人脸认证(FACE)、指纹认证(FINGERPRINT)或PIN认证(PIN)。应用可根据认证类型为用户提供针对性的提示。
 
-**Type:** UserAuthType
+**Type:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **Since:** 20
 

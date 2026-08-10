@@ -18,7 +18,7 @@ info: NavPathInfo
 
 页面触发返回时的当前页面信息，系统自动获取填入，无需开发者传入。
 
-**类型：** NavPathInfo
+**类型：** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
 **起始版本：** 11
 

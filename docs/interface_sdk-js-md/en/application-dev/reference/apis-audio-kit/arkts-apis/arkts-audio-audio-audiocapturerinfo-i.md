@@ -1,6 +1,6 @@
 # AudioCapturerInfo
 
-Describes audio capturer information.
+描述音频采集器信息。
 
 **Since:** 8
 
@@ -10,17 +10,23 @@ Describes audio capturer information.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerFlags
 
 ```TypeScript
 capturerFlags: int
 ```
 
-Flags that control the capturer behavior.
+录制流行为标志。
 
-Set this parameter to **0**.
+设置为0即可。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -36,9 +42,9 @@ Set this parameter to **0**.
 source: SourceType
 ```
 
-Audio source type.
+音源类型。
 
-**Type:** SourceType
+**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # OnHttpErrorReceiveEvent
 
-Represents the callback invoked when an HTTP error occurs during web page resource loading.
+定义网页加载资源遇到HTTP错误时触发该回调。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents the callback invoked when an HTTP error occurs during web page resour
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+```
+
 ## request
 
 ```TypeScript
 request: WebResourceRequest
 ```
 
-Web resource request of event.
+网页请求的封装信息。
 
-**Type:** WebResourceRequest
+**Type:** [WebResourceRequest](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Web resource request of event.
 response: WebResourceResponse
 ```
 
-Web resource response of event.
+资源响应的封装信息。
 
-**Type:** WebResourceResponse
+**Type:** [WebResourceResponse](../../apis-arkweb/arkts-components/arkts-arkweb-webresourceresponse-c.md)
 
 **Since:** 12
 

@@ -1,5 +1,11 @@
 # getMaxSimCount
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getMaxSimCount
 
 ```TypeScript
@@ -20,9 +26,9 @@ Obtains the maximum number of SIM cards that can be used simultaneously on the d
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Returns the maximum number of SIM card slots. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the maximum number of SIM card slots. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

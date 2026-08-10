@@ -1,6 +1,6 @@
 # KemEncapResult
 
-Represents the encapsulation result of the KEM.
+KEM封装结果。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Represents the encapsulation result of the KEM.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## sharedSecret
 
 ```TypeScript
 sharedSecret: Uint8Array
 ```
 
-Indicates the shared secret key of the KEM.
+KEM的共享密钥。
 
 **Type:** Uint8Array
 
@@ -38,7 +44,7 @@ Indicates the shared secret key of the KEM.
 wrappedKey: Uint8Array
 ```
 
-Indicates the wrapped key of the KEM, which is the ciphertext of the KEM.
+KEM封装的密钥，即KEM的密文。
 
 **Type:** Uint8Array
 

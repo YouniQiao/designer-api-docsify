@@ -10,19 +10,25 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## mode
 
 ```TypeScript
 mode?: int
 ```
 
-创建文件可写流的[OpenMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，必须指定如下选项中的一个，默认只写方式创建：
+创建文件可写流的[OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)，必须指定如下选项中的一个，默认只写方式创建：
 
-- OpenMode.READ\_ONLY(0o0)：只读。
+- OpenMode.READ_ONLY(0o0)：只读。
 
-- OpenMode.WRITE\_ONLY(0o1)：只写。
+- OpenMode.WRITE_ONLY(0o1)：只写。
 
-- OpenMode.READ\_WRITE(0o2)：读写。
+- OpenMode.READ_WRITE(0o2)：读写。
 
 给定如下功能选项，以按位或的方式追加，默认不给定任何额外选项：
 

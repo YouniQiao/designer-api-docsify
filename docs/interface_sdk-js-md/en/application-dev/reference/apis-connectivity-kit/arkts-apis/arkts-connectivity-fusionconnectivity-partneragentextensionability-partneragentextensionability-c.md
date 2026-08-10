@@ -2,7 +2,7 @@
 
 Class for the PartnerAgentExtensionAbility.Applications can use this ability to discover devices.
 
-**Inheritance/Implementation:** PartnerAgentExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)
+**Inheritance/Implementation:** PartnerAgentExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md/arkts-ability-app-ability-extensionability-extensionability-c.md)
 
 **Since:** 23
 
@@ -11,6 +11,12 @@ Class for the PartnerAgentExtensionAbility.Applications can use this ability to 
 <!--Device-unnamed-export default class PartnerAgentExtensionAbility extends ExtensionAbility--><!--Device-unnamed-export default class PartnerAgentExtensionAbility extends ExtensionAbility-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
+
+## Modules to Import
+
+```TypeScript
+import { PartnerAgentExtensionAbility } from 'kits/@kit.ConnectivityKit';
+```
 
 ## onDestroyWithReason
 
@@ -34,9 +40,9 @@ Called when the PartnerAgentExtensionAbility is to be destroyed.Applications can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The reason for Ability destruction. |
+| reason | [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md) | Yes | The reason for Ability destruction. |
 
-**Example**
+## Examples
 
 ```TypeScript
 export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
@@ -68,9 +74,9 @@ Called when a device is discovered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Address of the discovered device. |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | Address of the discovered device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
@@ -88,7 +94,7 @@ context: PartnerAgentExtensionContext
 
 Context of the PartnerAgentExtensionAbility.
 
-**Type:** PartnerAgentExtensionContext
+**Type:** [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md)
 
 **Since:** 23
 

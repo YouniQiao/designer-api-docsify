@@ -10,6 +10,12 @@ Provides networkSecurity related APIs.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { networkSecurity } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions

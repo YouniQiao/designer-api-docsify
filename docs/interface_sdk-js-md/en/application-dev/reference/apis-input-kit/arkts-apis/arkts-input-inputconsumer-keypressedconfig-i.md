@@ -1,6 +1,6 @@
 # KeyPressedConfig
 
-Sets the key event consumption configuration.
+按键事件消费设置。
 
 **Since:** 16
 
@@ -10,19 +10,25 @@ Sets the key event consumption configuration.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## action
 
 ```TypeScript
 action: int
 ```
 
-Subscription type.
+订阅指定的按键事件。
 
-**Note**: Since API version 21, the value of this parameter can be **1** or **2**. The value **1** indicates subscription to only key press events, and the value **2** indicates subscription to both key press and release events.
+**说明：** 从API version 21开始，支持取值为1和2，取值为1表示订阅按键按下事件，取值为2表示同时订阅按键按下事件和按键抬起事件。
 
-In API version 20 or earlier versions, the value of this parameter can only be set to **1**, indicating subscription to only key press events.
+对于API version 20及之前的版本，仅支持取值为1，表示订阅按键按下事件。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 16
 
@@ -38,8 +44,7 @@ In API version 20 or earlier versions, the value of this parameter can only be s
 isRepeat: boolean
 ```
 
-Whether to report repeated key events. The value **true** means to report repeated key events, and the value  
-**false** means the opposite. The default value is **true**.
+是否上报重复的按键事件。true表示上报，false表示不上报，默认值为true。
 
 **Type:** boolean
 
@@ -57,20 +62,20 @@ Whether to report repeated key events. The value **true** means to report repeat
 key: int
 ```
 
-Key value.
+按键键值。
 
-**Note:** Since API version 26.0.0, the  
-[KEYCODE\_FINGERPRINT\_SLIDE\_UP]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and  
-[KEYCODE\_FINGERPRINT\_SLIDE\_DOWN]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ keys are supported. The keys are not universal device keys. Before using them, check whether the current device supports the reporting of related key events. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+**说明：** 从API version 26.0.0开始，新增支持[KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-multimodalinput-keycode-keycode-e.md)键和
+[KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md)键，非设备通用键值，使用前请判断当前设备是否支持相关按键事件上报，请参考  
+[优先响应系统功能键开发指导](../../../device/input/keypressed-guidelines.md)。
 
-Since API version 21, the [KEYCODE\_MEDIA\_PLAY\_PAUSE]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_,  
-[KEYCODE\_MEDIA\_NEXT]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_, and  
-[KEYCODE\_MEDIA\_PREVIOUS]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ keys are supported.
+从API version 21开始，新增支持[KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-multimodalinput-keycode-keycode-e.md)键、  
+[KEYCODE_MEDIA_NEXT](arkts-input-multimodalinput-keycode-keycode-e.md)键和  
+[KEYCODE_MEDIA_PREVIOUS](arkts-input-multimodalinput-keycode-keycode-e.md)键。
 
-In API version 20 or earlier versions, only the [KEYCODE\_VOLUME\_UP]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_and [KEYCODE\_VOLUME\_DOWN]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ keys are supported.
+对于API version 20及之前的版本，仅支持[KEYCODE_VOLUME_UP](arkts-input-multimodalinput-keycode-keycode-e.md)键和  
+[KEYCODE_VOLUME_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md)键。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 16
 

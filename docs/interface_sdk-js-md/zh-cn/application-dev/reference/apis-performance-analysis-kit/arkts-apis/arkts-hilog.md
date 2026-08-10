@@ -10,6 +10,12 @@ hilog日志系统，使应用/服务可以按照指定级别、标识和格式�
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
+## 导入模块
+
+```TypeScript
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -25,8 +31,8 @@ hilog日志系统，使应用/服务可以按照指定级别、标识和格式�
 | [info](arkts-performanceanalysis-hilog-info-f.md#info) | 打印INFO级别的日志。 |
 | [info](arkts-performanceanalysis-hilog-info-f.md#info-1) | 打印INFO级别的日志。 |
 | [isLoggable](arkts-performanceanalysis-hilog-isloggable-f.md#isloggable) | 在打印日志前调用该接口，用于检查指定领域标识、日志标识和级别的日志是否可以打印。 |
-| [setLogLevel](arkts-performanceanalysis-hilog-setloglevel-f.md#setloglevel) | 设置当前应用程序进程的最低日志级别。  可通过prefer参数配置不同的偏好策略。如果选择策略PREFER\_\_\_ESCAPED\_UNDERSCORE\_\_\_CLOSE\_\_\_ESCAPED\_UNDERSCORE\_\_\_LOG，等同于调用setMinLogLevel函数。  **注意：**     debug版本应用下，此函数不生效。 |
-| [setMinLogLevel](arkts-performanceanalysis-hilog-setminloglevel-f.md#setminloglevel) | 设置应用日志打印的最低日志级别，用于拦截低级别日志打印。  **注意：**     如果设置的日志级别低于\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，设置不生效。     debug版本应用下，此函数不生效。 |
+| [setLogLevel](arkts-performanceanalysis-hilog-setloglevel-f.md#setloglevel) | 设置当前应用程序进程的最低日志级别。  可通过prefer参数配置不同的偏好策略。如果选择策略PREFER_CLOSE_LOG，等同于调用setMinLogLevel函数。  > **注意：** >  > debug版本应用下，此函数不生效。 |
+| [setMinLogLevel](arkts-performanceanalysis-hilog-setminloglevel-f.md#setminloglevel) | 设置应用日志打印的最低日志级别，用于拦截低级别日志打印。  > **注意：** >  > 如果设置的日志级别低于[全局日志级别](../../../dfx/hilog.md#查看和设置日志级别)，设置不生效。 >  > debug版本应用下，此函数不生效。 |
 | [warn](arkts-performanceanalysis-hilog-warn-f.md#warn) | 打印WARN级别的日志。 |
 | [warn](arkts-performanceanalysis-hilog-warn-f.md#warn-1) | 打印WARN级别的日志。 |
 

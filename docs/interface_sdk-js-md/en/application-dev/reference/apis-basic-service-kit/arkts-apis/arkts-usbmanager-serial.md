@@ -1,6 +1,6 @@
 # @ohos.usbManager.serial
 
-This module provides the serial port management functions, including enabling and disabling the serial port of the device, writing and reading data, setting and obtaining the configuration parameters of the serial port, and managing permissions.
+本模块主要提供串口管理功能，包括打开和关闭设备的串口、写入和读取数据、设置和获取串口的配置参数、权限管理等。
 
 **Since:** 19
 
@@ -10,39 +10,45 @@ This module provides the serial port management functions, including enabling an
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
+## Modules to Import
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md#cancelserialright) | Cancels the permission to access the serial port device when the application is running. This API is used to close the enabled serial port device. |
-| [close](arkts-basicservices-serialmanager-close-f.md#close) | Closes the serial port device. |
-| [getAttribute](arkts-basicservices-serialmanager-getattribute-f.md#getattribute) | Obtains the configuration parameters of a specified serial port. |
-| [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist) | Obtains the serial port device list, including the device name and port number. |
-| [hasSerialRight](arkts-basicservices-serialmanager-hasserialright-f.md#hasserialright) | Checks whether the application has the permission to access the serial port device. When an application is restarted after exits, you need to request the permission from the user again. |
-| [open](arkts-basicservices-serialmanager-open-f.md#open) | Opens a serial port device. |
-| [read](arkts-basicservices-serialmanager-read-f.md#read) | Reads data from the serial port device asynchronously. This API uses a promise to return the result. |
-| [readSync](arkts-basicservices-serialmanager-readsync-f.md#readsync) | Reads data from the serial port device synchronously. |
-| [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestserialright) | Requests the permission for the application to access the serial port device. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. This API uses a promise to return the result. |
-| [setAttribute](arkts-basicservices-serialmanager-setattribute-f.md#setattribute) | Sets the parameters of the serial port. If this method is not called, the default configuration parameters are used(baud rate: 9600 bit/s; data bit: 8; parity bit: 0; stop bit: 1). |
-| [write](arkts-basicservices-serialmanager-write-f.md#write) | Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB;otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result. |
-| [writeSync](arkts-basicservices-serialmanager-writesync-f.md#writesync) | Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB;otherwise, data loss may occur. You are advised to write long data in multiple packets. |
+| [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md#cancelserialright) | 移除应用程序运行时访问串口设备的权限。此接口会调用close关闭已打开的串口。 |
+| [close](arkts-basicservices-serialmanager-close-f.md#close) | 关闭串口。 |
+| [getAttribute](arkts-basicservices-serialmanager-getattribute-f.md#getattribute) | 获取指定串口的配置参数。 |
+| [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist) | 查询串口设备清单，包括设备名称和对应的端口号。 |
+| [hasSerialRight](arkts-basicservices-serialmanager-hasserialright-f.md#hasserialright) | 检查应用程序是否具有访问串口设备的权限。应用退出后再拉起时，需要重新申请授权。 |
+| [open](arkts-basicservices-serialmanager-open-f.md#open) | 打开串口设备。 |
+| [read](arkts-basicservices-serialmanager-read-f.md#read) | 从串口设备异步读取数据。使用Promise异步回调。 |
+| [readSync](arkts-basicservices-serialmanager-readsync-f.md#readsync) | 从串口设备同步读取数据。 |
+| [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestserialright) | 请求应用程序访问串口设备的权限。应用退出自动移除对串口设备的访问权限，在应用重启后需要重新申请授权。使用Promise异步回调。 |
+| [setAttribute](arkts-basicservices-serialmanager-setattribute-f.md#setattribute) | 设置串口的配置参数。如果未调用该方法，使用默认配置参数（波特率：9600bps；数据位：8；校验位：0；停止位：1）。 |
+| [write](arkts-basicservices-serialmanager-write-f.md#write) | 向串口设备异步写数据，每次写入数据长度不超过4KB，数据过大会导致数据丢失，长数据建议分包写入。使用Promise异步回调。 |
+| [writeSync](arkts-basicservices-serialmanager-writesync-f.md#writesync) | 向串口设备同步写数据，每次写入数据长度不超过4KB，数据过大会导致数据丢失，长数据建议分包写入。 |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addSerialRight](arkts-basicservices-serialmanager-addserialright-f-sys.md#addserialright) | Adds the permission to an application for accessing the serial port device.serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not trigger a dialog box but directly adds the device access permission for the application. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. |
+| [addSerialRight](arkts-basicservices-serialmanager-addserialright-f-sys.md#addserialright) | 为应用程序添加访问串口设备权限。serialManager.requestSerialRight会触发弹窗请求用户授权；addSerialRight不会触发弹窗，而是直接添加应用程序访问设备的权限。应用退出自动移除对串口设备的访问权限，在应用重启后需要重新申请授权。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md) | Represents the configuration parameters of a serial port. |
-| [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) | Represents the parameters of a serial port. |
+| [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md) | 串口的配置参数。 |
+| [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) | 串口参数。 |
 
 ### Enums
 

@@ -8,7 +8,7 @@ export type PromptActionTripleButtons = [
     ]
 ```
 
-Defines the three-buttons array.
+菜单中的菜单项按钮，仅支持3个按钮。
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # AbilityStartFailureCode
 
-Enumerates the specific error codes for ability launch failures.
+拉起指定类型的Ability组件失败的特定错误码。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates the specific error codes for ability launch failures.
 FAILURE_CODE_SYSTEM_MALFUNCTION = 0
 ```
 
-The ability cannot be launched due to a system error (for example, a crash in starting the picker).
+表示由于系统错误（如跳转弹框崩溃）而无法拉起Ability组件。
 
 **Since:** 21
 
@@ -36,7 +36,7 @@ The ability cannot be launched due to a system error (for example, a crash in st
 FAILURE_CODE_USER_CANCEL = 1
 ```
 
-The user canceled the operation.
+用户取消。
 
 **Since:** 21
 

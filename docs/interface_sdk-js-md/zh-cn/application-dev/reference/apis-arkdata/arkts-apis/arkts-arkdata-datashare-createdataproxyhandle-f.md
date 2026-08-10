@@ -1,5 +1,11 @@
 # createDataProxyHandle
 
+## 导入模块
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## createDataProxyHandle
 
 ```TypeScript
@@ -28,9 +34,9 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

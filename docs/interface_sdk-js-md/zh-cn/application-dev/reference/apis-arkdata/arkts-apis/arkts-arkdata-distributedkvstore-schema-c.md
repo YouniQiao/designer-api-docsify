@@ -1,6 +1,6 @@
 # Schema
 
-表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中。
+表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](arkts-arkdata-distributedkvstore-options-i.md)中。
 
 STRICT：STRICT模式要求用户插入的值必须与Schema定义严格匹配，字段数量和格式都不能有差异。如果不匹配，数据库将在插入数据时返回错误。
 
@@ -13,6 +13,12 @@ COMPATIBLE：选择为COMPATIBLE模式时，数据库在检查Value格式时较�
 <!--Device-distributedKVStore-class Schema--><!--Device-distributedKVStore-class Schema-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
 
 ## constructor
 
@@ -32,9 +38,7 @@ constructor()
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let child1 = new distributedKVStore.FieldNode('id');
@@ -45,26 +49,6 @@ let child2 = new distributedKVStore.FieldNode('name');
 child2.type = distributedKVStore.ValueType.STRING;
 child2.nullable = false;
 child2.default = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.LONG;
-child1.nullable = false;
-child1.defaultValue = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.defaultValue = 'zhangsan';
 
 let schema = new distributedKVStore.Schema();
 schema.root.appendChild(child1);
@@ -102,7 +86,7 @@ set mode(mode: int)
 
 设置Schema的模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -122,7 +106,7 @@ set root(root: FieldNode)
 
 设置Value中所有字段的定义。
 
-**类型：** FieldNode
+**类型：** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
 
 **起始版本：** 9
 
@@ -142,7 +126,7 @@ set skip(skip: int)
 
 设置跳过的字节数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

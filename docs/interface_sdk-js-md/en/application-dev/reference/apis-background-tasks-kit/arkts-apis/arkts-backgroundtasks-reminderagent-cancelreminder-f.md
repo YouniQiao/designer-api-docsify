@@ -1,12 +1,18 @@
 # cancelReminder
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## cancelReminder
 
 ```TypeScript
 function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 ```
 
-Cancels the reminder with the specified ID. This API uses an asynchronous callback to return the cancellation result.
+取消指定id的提醒，使用回调的方式实现异步调用。
 
 **Since:** 7
 
@@ -24,13 +30,14 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the reminder. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| reminderId | number | Yes | 目标reminder的id号。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
+import reminderAgent from '@ohos.reminderAgent';
 
 reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
   console.info("cancelReminder callback");
@@ -44,7 +51,7 @@ reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
 function cancelReminder(reminderId: number): Promise<void>
 ```
 
-Cancels the reminder with the specified ID. This API uses a promise to return the cancellation result.
+取消指定id的提醒，使用Promise方式实现异步调用。
 
 **Since:** 7
 
@@ -62,17 +69,19 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the reminder. |
+| reminderId | number | Yes | 目标reminder的id号。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise类型异步回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
 reminderAgent.cancelReminder(1).then(() => {
     console.info("cancelReminder promise");
 });

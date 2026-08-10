@@ -1,17 +1,21 @@
 # @ohos.application.WindowExtensionAbility
 
-**WindowExtensionAbility** inherits from **ExtensionAbility**. The content in a WindowExtensionAbility object can be
- displayed as an ability component in other application windows.
- > **NOTE**
+WindowExtensionAbility基于ExtensionAbility。WindowExtensionAbility中展示的内容可作为一个控件（AbilityComponent）内容展示在其他应用窗口中。
+ > **说明：**
  >
- > - This is deprecated since API version 21. You are advised to use
- > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instead. For details about how
- > to set an embedded UIAbility, see [UIExtensionAbility](../../../application-models/uiextensionability-sys.md).
+ > - 从API version 21开始废弃，推荐使用[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)，针对设置一
+ > 个嵌入式UIAbility的场景，请参见[UIExtensionAbility使用指南](../../../application-models/uiextensionability-sys.md)。
  >
- > - The APIs provided by this module are system APIs.
+ > - 本模块接口为系统接口。
  >
- > - The APIs of this module can be used only in the stage model.
+ > - 本模块接口仅可在Stage模型下使用。
 
+
+## Modules to Import
+
+```TypeScript
+import { WindowExtensionContext } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 
@@ -20,7 +24,7 @@
 
 | Name | Description |
 | --- | --- |
-| [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md) | class of window extension ability. |
+| [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md) | WindowExtensionAbility类。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -28,6 +32,6 @@
 
 | Name | Description |
 | --- | --- |
-| [WindowExtensionContext](arkts-arkui-windowextensioncontext-t-sys.md) | The context of window extension. It allows access to windowExtension-specific resources. |
+| [WindowExtensionContext](arkts-arkui-windowextensioncontext-t-sys.md) | WindowExtension上下文信息。 |
 <!--DelEnd-->
 

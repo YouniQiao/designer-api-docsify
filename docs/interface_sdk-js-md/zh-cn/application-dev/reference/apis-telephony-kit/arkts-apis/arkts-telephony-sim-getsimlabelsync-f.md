@@ -1,5 +1,11 @@
 # getSimLabelSync
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getSimLabelSync
 
 ```TypeScript
@@ -20,15 +26,15 @@ Obtains the SIM card label synchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | SIM card slot ID, which ranges from 0 to the maximum number of slots supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | SIM card slot ID, which ranges from 0 to the maximum number of slots supported by the device. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | SIM card label. |
+| [SimLabel](arkts-telephony-sim-simlabel-i.md) | SIM card label. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

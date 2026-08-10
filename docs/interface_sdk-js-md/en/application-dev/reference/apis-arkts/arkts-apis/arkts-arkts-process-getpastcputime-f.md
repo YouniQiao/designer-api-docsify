@@ -1,12 +1,18 @@
 # getPastCpuTime
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getPastCpuTime
 
 ```TypeScript
 function getPastCpuTime(): number
 ```
 
-Obtains the CPU time (in milliseconds) from the time the process starts to the current time.
+获取进程启动到当前时间的 CPU 时间（以毫秒为单位）。
 
 **Since:** 8
 
@@ -22,9 +28,9 @@ Obtains the CPU time (in milliseconds) from the time the process starts to the c
 
 | Type | Description |
 | --- | --- |
-| number | CPU time obtained, in milliseconds. |
+| number | 返回经过的 CPU 时间。单位：毫秒。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let result = process.getPastCpuTime();

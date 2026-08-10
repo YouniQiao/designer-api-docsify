@@ -12,6 +12,12 @@ Defines the cell broadcast configuration list configs.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## messageIds
 
 ```TypeScript
@@ -20,7 +26,7 @@ messageIds: int[]
 
 Indicates the messageIDs for the cell broadcast configuration list configs.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -40,7 +46,7 @@ ranType: RanType
 
 Indicates the RAN type for the cell broadcast configuration list configs.
 
-**Type:** RanType
+**Type:** [RanType](arkts-telephony-sms-rantype-e-sys.md)
 
 **Since:** 23
 
@@ -60,7 +66,7 @@ slotId: int
 
 Indicates the card slot ID for the cell broadcast configuration list configs.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

@@ -10,6 +10,12 @@ Wi-Fi EAP config.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## altSubjectMatch
 
 ```TypeScript
@@ -162,7 +168,7 @@ eapMethod: EapMethod
 
 EAP authentication method
 
-**Type:** EapMethod
+**Type:** [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md)
 
 **Since:** 10
 
@@ -180,7 +186,7 @@ eapSubId: int
 
 Sub ID of the SIM card
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -234,7 +240,7 @@ phase2Method: Phase2Method
 
 Phase 2 authentication method
 
-**Type:** Phase2Method
+**Type:** [Phase2Method](../../apis-network-kit/arkts-apis/arkts-network-eap-phase2method-e.md)
 
 **Since:** 10
 

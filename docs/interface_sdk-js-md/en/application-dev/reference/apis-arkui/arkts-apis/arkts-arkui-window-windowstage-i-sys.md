@@ -1,9 +1,8 @@
 # WindowStage
 
-Implements a window manager, which manages each basic window unit, that is, [Window]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
+窗口管理器。管理各个基本窗口单元，即[Window](arkts-window.md)实例。
 
-Before calling any of the following APIs, you must use  
-[onWindowStageCreate()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to create a WindowStage instance.
+下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage的实例调用对应方法。
 
 **Since:** 9
 
@@ -13,16 +12,22 @@ Before calling any of the following APIs, you must use
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## disableWindowDecor
 
 ```TypeScript
 disableWindowDecor(): void
 ```
 
-Disables window decorators.
+禁止窗口装饰。
 
-When window decorators are disabled and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call  
-[setTitleAndDockHoverShown()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+禁止窗口装饰后，当主窗口进入全屏沉浸状态时，此时鼠标Hover到上方窗口标题栏热区上会显示悬浮标题栏。若想禁用悬浮标题栏显示，请使用  
+[setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown)接口。
 
 **Since:** 9
 
@@ -40,11 +45,11 @@ When window decorators are disabled and the main window transitions into full-sc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
+| 1300002 | This window state is abnormal. |
+| 1300005 | This window stage is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets
@@ -66,7 +71,11 @@ export default class EntryAbility extends UIAbility {
 setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 ```
 
-Sets the image displayed in the multitasking view. This API uses a promise to return the result.
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。  
+> **说明：**
+> 
+> 调用该接口前，建议先通过[loadContent](#loadcontent9)方法或者[setUIContent](arkts-apis-window-Window.md#setuicontent9-1)
+> 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
 
 **Since:** 19
 
@@ -84,26 +93,26 @@ Sets the image displayed in the multitasking view. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imgResourceId | number | Yes | Resource ID of the custom image. The image must be stored in the **resources/base/media** directory and its resource ID can be obtained using the **\_\_\_ESCAPED\_DOLLAR\_\_\_r** resource access mode. For example, to obtain the resource ID of the startIcon image, use the following: \_\_\_ESCAPED\_DOLLAR\_\_\_r("app.media.startIcon") .id. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Fill mode of the custom image. |
+| imgResourceId | number | Yes | 应用自定义图片的资源id，图片资源需放在resources/base/media目录下，通过`\\$r`资源访问方式获取对应图片的资源id，这里以获取 startIcon图片的资源id为例给出示意：`\\$r("app.media.startIcon").id`。 |
+| value | [ImageFit](arkts-arkui-imagefit-e.md) | Yes | 应用自定义图片的填充方式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -135,7 +144,7 @@ export default class EntryAbility extends UIAbility {
 setShowOnLockScreen(showOnLockScreen: boolean): void
 ```
 
-Sets whether to display the window of the application on the lock screen.
+设置应用显示在锁屏之上。
 
 **Since:** 9
 
@@ -153,18 +162,18 @@ Sets whether to display the window of the application on the lock screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showOnLockScreen | boolean | Yes | Whether to display the window on the lock screen. **true** to display, **false** otherwise. |
+| showOnLockScreen | boolean | Yes | 是否设置应用显示在锁屏之上。true表示显示在锁屏之上；false表示不显示在锁屏之上。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
+| 1300005 | This window stage is abnormal. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 // EntryAbility.ets

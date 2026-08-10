@@ -1,6 +1,6 @@
 # State (System API)
 
-Enumerates the device-cloud sharing states.
+端云共享状态。
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ Enumerates the device-cloud sharing states.
 STATE_UNKNOWN = 0
 ```
 
-Unknown state. Use the enum name rather than the enum value.
+未知状态。请使用枚举名称而非枚举值。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Unknown state. Use the enum name rather than the enum value.
 STATE_ACCEPTED = 1
 ```
 
-The device-cloud sharing invitation is accepted. Use the enum name rather than the enum value.
+端云共享已接受。请使用枚举名称而非枚举值。
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ The device-cloud sharing invitation is accepted. Use the enum name rather than t
 STATE_REJECTED = 2
 ```
 
-The device-cloud sharing invitation is rejected. Use the enum name rather than the enum value.
+端云共享被拒绝。请使用枚举名称而非枚举值。
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ The device-cloud sharing invitation is rejected. Use the enum name rather than t
 STATE_SUSPENDED = 3
 ```
 
-The device-cloud sharing is suspended temporarily. Use the enum name rather than the enum value.
+端云共享被暂时挂起，未作处理。请使用枚举名称而非枚举值。
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ The device-cloud sharing is suspended temporarily. Use the enum name rather than
 STATE_UNAVAILABLE = 4
 ```
 
-The device-cloud sharing is unavailable. Use the enum name rather than the enum value.
+端云共享不可用。请使用枚举名称而非枚举值。
 
 **Since:** 12
 

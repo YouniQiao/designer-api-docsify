@@ -22,11 +22,11 @@ Define the function of WithThemeInterface.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | withThemeAttribute object  |
+| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) | withThemeAttribute object |
 

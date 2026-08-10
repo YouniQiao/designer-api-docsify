@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## deleted
 
 ```TypeScript
@@ -18,7 +24,7 @@ deleted: Array<string> | Array<long>
 
 记录删除数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示删除数据的行号。
 
-**类型：** Array&lt;string&gt; \| Array&lt;long&gt;
+**类型：** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 
 **起始版本：** 10
 
@@ -36,7 +42,7 @@ inserted: Array<string> | Array<long>
 
 记录插入数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示插入数据的行号。
 
-**类型：** Array&lt;string&gt; \| Array&lt;long&gt;
+**类型：** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 
 **起始版本：** 10
 
@@ -72,7 +78,7 @@ type: ChangeType
 
 表示发生变化的数据的类型，数据或者资产附件发生变化。
 
-**类型：** ChangeType
+**类型：** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
 
 **起始版本：** 10
 
@@ -90,7 +96,7 @@ updated: Array<string> | Array<long>
 
 记录更新数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示更新数据的行号。
 
-**类型：** Array&lt;string&gt; \| Array&lt;long&gt;
+**类型：** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 
 **起始版本：** 10
 

@@ -10,6 +10,12 @@ Result of arkTS script execution.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { scriptManager } from 'kits/@kit.AbilityKit';
+```
+
 ## code
 
 ```TypeScript
@@ -38,7 +44,7 @@ Indicates result code.The value range is all integers.
 flags?: number
 ```
 
-Indicates the URIs read and write permissions which consistent with \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,flags must be one of \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_,\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_|\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.The value range is all integers.
+Indicates the URIs read and write permissions which consistent with {@link Want#flags},flags must be one of {@link wantConstant#Flags#FLAG_AUTH_READ_URI_PERMISSION},{@link wantConstant#Flags#FLAG_AUTH_WRITE_URI_PERMISSION},{@link wantConstant#Flags#FLAG_AUTH_READ_URI_PERMISSION}|{@link wantConstant#Flags#FLAG_AUTH_WRITE_URI_PERMISSION}.The value range is all integers.
 
 **Type:** number
 
@@ -62,7 +68,7 @@ result?: Record<string, Object>
 
 Indicates execute result.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 26.0.0
 

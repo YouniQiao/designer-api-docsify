@@ -4,7 +4,7 @@
 export declare type GestureListenerCallback = (info: GestureTriggerInfo) => void
 ```
 
-Defines the callback type used in UIObserver to monitor specific gesture triggered information.
+定义UIObserver监听指定手势触发信息时使用的回调类型。
 
 **Since:** 26.0.0
 
@@ -20,5 +20,5 @@ Defines the callback type used in UIObserver to monitor specific gesture trigger
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the gesture details triggered with user interaction  |
+| info | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | Yes | the gesture details triggered with user interaction |
 

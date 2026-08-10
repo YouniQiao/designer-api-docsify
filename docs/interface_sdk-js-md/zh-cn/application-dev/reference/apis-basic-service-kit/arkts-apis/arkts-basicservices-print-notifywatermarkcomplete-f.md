@@ -1,5 +1,11 @@
 # notifyWatermarkComplete
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## notifyWatermarkComplete
 
 ```TypeScript
@@ -25,15 +31,15 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示水印处理结果。 |
+| result | [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md) | 是 | 表示水印处理结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -46,15 +52,15 @@ let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => 
         print.notifyWatermarkComplete(jobId, print.WatermarkHandleResult.WATERMARK_HANDLE_SUCCESS);
         console.info('notifyWatermarkComplete success');
     } catch (error) {
-        console.error('notifyWatermarkComplete error: ' + JSON.stringify(error));
+        console.error(`Failed to notifyWatermarkComplete. Code: ${error.code}, message: ${error.message}`);
     }
-}
+};
 
 try {
     print.registerWatermarkCallback(watermarkCallback);
     console.info('registerWatermarkCallback success');
 } catch (error) {
-    console.error('registerWatermarkCallback error: ' + JSON.stringify(error));
+    console.error(`Failed to registerWatermarkCallback. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

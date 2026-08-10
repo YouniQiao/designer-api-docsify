@@ -1,6 +1,6 @@
 # UIAbilityIntentInfo（系统接口）
 
-用于描述\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_所绑定的UIAbility组件信息。
+用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的UIAbility组件信息。
 
 **起始版本：** 23
 
@@ -11,6 +11,12 @@
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
 
 ## abilityName
 
@@ -42,7 +48,7 @@ readonly executeMode: ExecuteModeForConfiguration[]
 
 意图调用执行模式。
 
-**类型：** ExecuteModeForConfiguration[]
+**类型：** [ExecuteModeForConfiguration](arkts-ability-insightintentdriver-executemodeforconfiguration-e-sys.md)[]
 
 **起始版本：** 23
 

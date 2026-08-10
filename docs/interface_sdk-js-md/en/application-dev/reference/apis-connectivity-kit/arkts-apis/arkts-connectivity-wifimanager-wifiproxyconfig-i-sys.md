@@ -12,6 +12,12 @@ Wi-Fi Proxy config.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## exclusionObjects
 
 ```TypeScript
@@ -60,7 +66,7 @@ proxyMethod?: ProxyMethod
 
 Wi-Fi proxy method
 
-**Type:** ProxyMethod
+**Type:** [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md)
 
 **Since:** 10
 
@@ -100,7 +106,7 @@ serverPort?: int
 
 Server port for manual configured proxy.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

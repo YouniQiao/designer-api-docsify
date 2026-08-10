@@ -1,6 +1,6 @@
 # FaceAuthManager (System API)
 
-Provides APIs for facial authentication management. It provides management features during face enrollment,including setting the surface ID of the face preview page.
+人脸认证管理器对象。用于提供人脸录入过程中的管理功能，目前支持设置人脸预览界面的Surface ID。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Provides APIs for facial authentication management. It provides management featu
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Creates a face authentication manager object.
+用于创建人脸认证管理器对象。
 
 **Since:** 9
 
@@ -30,7 +36,7 @@ Creates a face authentication manager object.
 
 **System API:** This is a system API.
 
-**Example**
+## Examples
 
 ```TypeScript
 import { faceAuth } from '@kit.UserAuthenticationKit';
@@ -44,9 +50,9 @@ let faceAuthManager = new faceAuth.FaceAuthManager();
 setSurfaceId(surfaceId: string): void
 ```
 
-Sets the surface ID of the face preview page during face enrollment. This API must be used together with  
-[addCredential]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to display the face preview page through the surface of the  
-[getXComponentSurfaceId]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ component.
+用于在录入人脸时设置人脸预览界面的Surface ID。该接口需要配合  
+[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential)使用，通过  
+[getXComponentSurfaceId](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md/arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid)组件的Surface来显示人脸预览画面。
 
 **Since:** 9
 
@@ -64,28 +70,28 @@ Sets the surface ID of the face preview page during face enrollment. This API mu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | ID of the surface held by [XComponent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. This ID is used to display the face preview page during face enrollment. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**Note:** A valid **surfaceId** must be obtained through the [getXComponentSurfaceId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ method after **XComponent** initialization. An invalid **surfaceId** may cause the preview page to fail to display or the API call to fail. |
+| surfaceId | string | Yes | [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。 &lt;br&gt;**说明：**需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md/arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
-| [12700001](../errorcode-useriam.md#12700001-facial-authentication-service-unavailable) | The service is unavailable. |
+| 12700001 | The service is unavailable. |
+| 201 | Permission denied. |
+| 202 | Permission denied. Called by non-system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { faceAuth } from '@kit.UserAuthenticationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// The surfaceId is obtained from the XComponent control. The surfaceId here is only an example.
+// Obtain this surfaceId through the XComponentController.getXComponentSurfaceId() method from the XComponent component. This is only an example.
 let surfaceId = '123456';
 let manager = new faceAuth.FaceAuthManager();
 try {
   manager.setSurfaceId(surfaceId);
-  console.info('set surface id success');
+  console.info('set surface id successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
   console.error(`set surface id failed, Code is ${err?.code}, message is ${err?.message}`);

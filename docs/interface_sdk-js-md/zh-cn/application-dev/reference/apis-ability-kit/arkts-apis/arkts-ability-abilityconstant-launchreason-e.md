@@ -1,6 +1,6 @@
 # LaunchReason
 
-Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法根据launchParam.launchReason的不同类型执行相应操作。
+Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.launchReason的不同类型执行相应操作。
 
 **起始版本：** 9
 
@@ -37,7 +37,7 @@ START_ABILITY = 1
 ```
 
 通过  
-[startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口启动Ability。
+[startAbility](arkts-ability-uiabilitycontext-c.md#startability)接口启动Ability。
 
 **起始版本：** 9
 
@@ -57,7 +57,7 @@ START_ABILITY = 1
 CALL = 2
 ```
 
-通过[startAbilityByCall]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口启动Ability。
+通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall)接口启动Ability。
 
 **起始版本：** 9
 

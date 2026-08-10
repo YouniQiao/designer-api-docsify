@@ -1,6 +1,6 @@
 # MessageEvents
 
-Holds the data transferred between Worker threads.
+消息类，持有Worker线程间传递的数据。
 
 **Inheritance/Implementation:** MessageEvents extends [Event](arkts-arkts-worker-event-i.md)
 
@@ -12,13 +12,19 @@ Holds the data transferred between Worker threads.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## data
 
 ```TypeScript
 readonly data: any
 ```
 
-Data transferred when an exception occurs.
+异常发生时传递的数据。
 
 **Type:** any
 

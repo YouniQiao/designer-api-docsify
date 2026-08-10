@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## dst
 
 ```TypeScript
@@ -38,7 +44,7 @@ dstIndex?: int
 
 目标坐标起始索引。
 
-默认值: src.length/2
+默认值: src.length/2 
 
 取值范围：[0, +∞)
 
@@ -64,7 +70,7 @@ pointCount?: int
 
 使用到的点数量。
 
-默认值: 0
+默认值: 0 
 
 取值范围：[0, +∞)
 
@@ -110,7 +116,7 @@ srcIndex?: int
 
 源点坐标起始索引。
 
-默认值:0
+默认值:0 
 
 取值范围：[0, +∞)
 

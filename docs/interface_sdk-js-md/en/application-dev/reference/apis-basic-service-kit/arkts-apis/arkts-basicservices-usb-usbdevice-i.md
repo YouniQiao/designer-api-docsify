@@ -1,6 +1,6 @@
 # USBDevice
 
-Represents the USB device information.
+USB设备信息。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ Represents the USB device information.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## busNum
 
 ```TypeScript
 busNum: number
 ```
 
-Bus address.
+总线地址。
 
 **Type:** number
 
@@ -42,7 +48,7 @@ Bus address.
 clazz: number
 ```
 
-Device class.
+设备类。
 
 **Type:** number
 
@@ -64,7 +70,7 @@ Device class.
 configs: Array<USBConfig>
 ```
 
-Device configuration descriptor information.
+设备配置描述符信息。
 
 **Type:** Array&lt;USBConfig&gt;
 
@@ -86,7 +92,7 @@ Device configuration descriptor information.
 devAddress: number
 ```
 
-Device address.
+设备地址。
 
 **Type:** number
 
@@ -108,7 +114,7 @@ Device address.
 manufacturerName: string
 ```
 
-Device manufacturer.
+产商信息。
 
 **Type:** string
 
@@ -130,7 +136,7 @@ Device manufacturer.
 name: string
 ```
 
-Device name.
+设备名字。
 
 **Type:** string
 
@@ -152,7 +158,7 @@ Device name.
 productId: number
 ```
 
-Product ID.
+产品ID。
 
 **Type:** number
 
@@ -174,7 +180,7 @@ Product ID.
 productName: string
 ```
 
-Product name.
+产品信息。
 
 **Type:** string
 
@@ -196,7 +202,7 @@ Product name.
 protocol: number
 ```
 
-Device protocol code.
+设备协议码。
 
 **Type:** number
 
@@ -218,7 +224,7 @@ Device protocol code.
 serial: string
 ```
 
-Sequence number.
+序列号。
 
 **Type:** string
 
@@ -240,7 +246,7 @@ Sequence number.
 subClass: number
 ```
 
-Device subclass.
+设备子类。
 
 **Type:** number
 
@@ -262,7 +268,7 @@ Device subclass.
 vendorId: number
 ```
 
-Vendor ID.
+厂商ID。
 
 **Type:** number
 
@@ -284,7 +290,7 @@ Vendor ID.
 version: string
 ```
 
-Version.
+版本。
 
 **Type:** string
 

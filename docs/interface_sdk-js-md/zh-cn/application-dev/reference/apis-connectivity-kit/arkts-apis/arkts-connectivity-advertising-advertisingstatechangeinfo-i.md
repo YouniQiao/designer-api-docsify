@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## advertisingId
 
 ```TypeScript
@@ -18,7 +24,7 @@ advertisingId: int
 
 广播ID。取值范围为全体整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ state: AdvertisingState
 
 广播状态。
 
-**类型：** AdvertisingState
+**类型：** [AdvertisingState](arkts-connectivity-ble-advertisingstate-e.md)
 
 **起始版本：** 26.0.0
 

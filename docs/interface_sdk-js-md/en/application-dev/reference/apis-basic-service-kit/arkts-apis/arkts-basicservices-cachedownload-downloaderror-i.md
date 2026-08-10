@@ -1,6 +1,6 @@
 # DownloadError
 
-Describes the error message returned when a pre-download error occurs.
+预下载错误回调的返回信息。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Describes the error message returned when a pre-download error occurs.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## errorCode
 
 ```TypeScript
 readonly errorCode: ErrorCode
 ```
 
-Specific error type returned by the pre-download error callback.
+预下载错误回调返回的特定错误类型。
 
-**Type:** ErrorCode
+**Type:** [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md)
 
 **Since:** 23
 
@@ -34,8 +40,8 @@ Specific error type returned by the pre-download error callback.
 readonly message: string
 ```
 
-Error message. A \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ is returned.
+返回[通用错误码](../../../reference/errorcode-universal.md)或  
+[HTTP错误码](../../../reference/apis-network-kit/errorcode-net-http.md)。
 
 **Type:** string
 

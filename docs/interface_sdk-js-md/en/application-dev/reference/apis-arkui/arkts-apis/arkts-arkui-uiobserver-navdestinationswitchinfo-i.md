@@ -1,6 +1,6 @@
 # NavDestinationSwitchInfo
 
-NavDestination switch info
+Navigation组件页面切换的信息。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ NavDestination switch info
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## context
 
 ```TypeScript
 context: UIAbilityContext | UIContext
 ```
 
-The context of the navigation operation.
+触发页面切换的Navigation对应的上下文信息。
 
-**Type:** UIAbilityContext \| UIContext
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**Type:** NavDestinationInfo \| NavBar
+**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ operation: NavigationOperation
 
 The operation type.
 
-**Type:** NavigationOperation
+**Type:** [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md)
 
 **Since:** 23
 
@@ -78,7 +84,7 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**Type:** NavDestinationInfo \| NavBar
+**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
 
 **Since:** 23
 

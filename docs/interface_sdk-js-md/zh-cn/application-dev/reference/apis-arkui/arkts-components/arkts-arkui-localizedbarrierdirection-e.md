@@ -4,10 +4,10 @@
 
 | 名称 | 值 | 说明 |  
 | ------ | -- | ----------------------------- |  
-| START | 0 |屏障在其所有[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的起始侧，LTR模式时为最左侧，RTL模式时为最右侧。|  
-| END | 1 | 屏障在其所有[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的结束侧，LTR模式时为最右侧，RTL模式时为最左侧。|  
-| TOP | 2 | 屏障在其所有[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_的最上方。|  
-| BOTTOM | 3 | 屏障在其所有[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_的最下方。|
+| START | 0 |屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的起始侧，LTR模式时为最左侧，RTL模式时为最右侧。|  
+| END | 1 | 屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的结束侧，LTR模式时为最右侧，RTL模式时为最左侧。|  
+| TOP | 2 | 屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最上方。|  
+| BOTTOM | 3 | 屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最下方。|
 
 **起始版本：** 12
 
@@ -23,7 +23,7 @@
 START = 0
 ```
 
-The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of all the referenced components specified by [referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **起始版本：** 12
 
@@ -43,7 +43,7 @@ The barrier is on the left (for left-to-right scripts) or right (for right-to-le
 END = 1
 ```
 
-The barrier is on the right (for left-to-right scripts) or left (for right-to-left scripts) side of all the referenced components specified by [referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+The barrier is on the right (for left-to-right scripts) or left (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **起始版本：** 12
 
@@ -64,7 +64,7 @@ TOP = 2
 ```
 
 The barrier is at the top of all the referenced components specified by  
-[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **起始版本：** 12
 
@@ -85,7 +85,7 @@ BOTTOM = 3
 ```
 
 The barrier is at the bottom of all the referenced components specified by  
-[referencedId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **起始版本：** 12
 

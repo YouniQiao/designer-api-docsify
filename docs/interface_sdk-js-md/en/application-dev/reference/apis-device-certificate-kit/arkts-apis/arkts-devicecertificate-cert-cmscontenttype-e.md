@@ -1,6 +1,6 @@
 # CmsContentType
 
-Enumerates the Cryptographic Message Syntax (CMS) message types.
+表示Cms内容类型的枚举。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the Cryptographic Message Syntax (CMS) message types.
 SIGNED_DATA = 0
 ```
 
-Signed data.
+签名数据。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Signed data.
 ENVELOPED_DATA = 1
 ```
 
-Enveloped data, including authenticated enveloped data.
+封装数据，包含带认证的封装数据。
 
 **Since:** 22
 

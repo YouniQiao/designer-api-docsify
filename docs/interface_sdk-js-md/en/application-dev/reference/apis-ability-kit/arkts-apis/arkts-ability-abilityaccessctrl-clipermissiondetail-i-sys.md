@@ -1,6 +1,6 @@
 # CliPermissionDetail (System API)
 
-Represents the status information of a single CLI permission declared by a CLI command.
+表示CLI指令声明的单个CLI权限的状态信息。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Represents the status information of a single CLI permission declared by a CLI c
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## cliPermissionStatus
 
 ```TypeScript
 cliPermissionStatus: PermissionDecisionStatus
 ```
 
-Decision status of the CLI permission declared by the CLI command.
+CLI指令声明的CLI权限的决策状态。
 
-**Type:** PermissionDecisionStatus
+**Type:** [PermissionDecisionStatus](arkts-ability-abilityaccessctrl-permissiondecisionstatus-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -40,9 +46,9 @@ Decision status of the CLI permission declared by the CLI command.
 requiredCliPermission: Permissions
 ```
 
-CLI permission required to call the CLI.
+调用CLI所需的CLI权限。
 
-**Type:** Permissions
+**Type:** [Permissions](arkts-ability-permissions-t.md)
 
 **Since:** 26.0.0
 
@@ -62,9 +68,9 @@ CLI permission required to call the CLI.
 usedPermissions: Array<Permissions>
 ```
 
-List of runtime permissions mapped from requiredCliPermission.
+由requiredCliPermission映射出的运行时权限列表。
 
-**Type:** Array&lt;Permissions&gt;
+**Type:** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 
 **Since:** 26.0.0
 

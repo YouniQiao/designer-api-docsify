@@ -4,7 +4,7 @@
 type ReportExecuteActionEvent = (actionType: string, params: string) => void
 ```
 
-The report execute action event.
+执行动作上报事件。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ The report execute action event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | string | Yes | action type  |
-| params | string | Yes | params  |
+| actionType | string | Yes | 操作类型。 |
+| params | string | Yes |  |
 

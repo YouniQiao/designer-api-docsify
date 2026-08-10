@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## animationParams
 
 ```TypeScript
@@ -18,7 +24,7 @@ animationParams?: StartAnimationParams
 
 The params of start animation
 
-**类型：** StartAnimationParams
+**类型：** [StartAnimationParams](arkts-arkui-window-startanimationparams-i.md)
 
 **起始版本：** 20
 

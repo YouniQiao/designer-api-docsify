@@ -1,6 +1,6 @@
 # CreateAccountOptions
 
-Defines the options for creating an application account.
+表示创建账号的选项。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the options for creating an application account.
 
 **System capability:** SystemCapability.Account.AppAccount
 
+## Modules to Import
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## customData
 
 ```TypeScript
 customData?: Record<string, string>
 ```
 
-Custom data. By default, no value is passed in.
+自定义数据，默认为空。
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 9
 

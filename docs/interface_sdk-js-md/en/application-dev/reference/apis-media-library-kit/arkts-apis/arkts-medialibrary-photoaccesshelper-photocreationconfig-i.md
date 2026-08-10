@@ -10,6 +10,12 @@ Represents the configuration for saving a media asset (image or video) to the me
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## fileNameExtension
 
 ```TypeScript
@@ -36,10 +42,10 @@ File name extension, for example, **'jpg'**.
 photoType: PhotoType
 ```
 
-Type of the file to create, which can be **IMAGE** or **VIDEO**. See  
-[PhotoType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Type of the file to create, which can be **IMAGE** or **VIDEO**. See   
+[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md).
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
 
 **Since:** 12
 
@@ -57,10 +63,10 @@ Type of the file to create, which can be **IMAGE** or **VIDEO**. See
 subtype?: PhotoSubtype
 ```
 
-Image or video file subtype. The default value is **DEFAULT**. See  
-[PhotoSubtype]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Image or video file subtype. The default value is **DEFAULT**. See   
+[PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md).
 
-**Type:** PhotoSubtype
+**Type:** [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md)
 
 **Since:** 12
 

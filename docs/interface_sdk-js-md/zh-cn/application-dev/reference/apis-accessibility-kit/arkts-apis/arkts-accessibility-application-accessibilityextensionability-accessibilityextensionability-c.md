@@ -10,6 +10,12 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能�
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 导入模块
+
+```TypeScript
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
+```
+
 ## onAccessibilityEvent
 
 ```TypeScript
@@ -32,9 +38,9 @@ onAccessibilityEvent(event: AccessibilityEvent): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 无障碍事件。无返回值。 |
+| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | 是 | 无障碍事件。无返回值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AccessibilityExtensionAbility, AccessibilityEvent } from '@kit.AccessibilityKit';
@@ -67,7 +73,7 @@ onConnect(): void
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -97,7 +103,7 @@ onDisconnect(): void
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -131,15 +137,15 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 按键事件回调函数。返回true表示拦截此按键。 |
+| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件回调函数。返回true表示拦截此按键。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回true表示此事件被消费，不会继续传递。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_返回false表示此事件未被消费，会继续传递。 |
+| boolean | 返回true表示此事件被消费，不会继续传递。&lt;br&gt;返回false表示此事件未被消费，会继续传递。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -165,7 +171,7 @@ context: AccessibilityExtensionContext
 
 表示辅助扩展能力上下文。
 
-**类型：** AccessibilityExtensionContext
+**类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md)
 
 **起始版本：** 9
 

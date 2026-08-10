@@ -1,6 +1,6 @@
 # ErrorMessage (System API)
 
-Represents an error message.
+错误信息。
 
 **Since:** 9
 
@@ -12,19 +12,23 @@ Represents an error message.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## errorCode
 
 ```TypeScript
 errorCode: int
 ```
 
-Error code, which identifies an error type. You can quickly locate the cause of the upgrade failure based on  
-**errorCode** and take corresponding measures. For example, **201** indicates the permission error, **401**  
-indicates the parameter error, and **11500104** indicates the IPC error.
+错误码，用于标识具体的错误类型。通过errorCode可快速定位升级失败的原因（如权限错误201、参数错误401、IPC错误11500104等），从而采取针对性的处理措施。
 
-Use scenarios: In the callback of **EVENT\_UPGRADE\_FAIL**, use **errorCode** to determine the failure cause and handle the error or notify the user. You are advised to analyze and handle the error based on **errorMessage**.
+使用场景：在升级失败事件(EVENT_UPGRADE_FAIL)回调中，通过errorCode判断失败原因，进行相应的错误处理或提示用户。建议结合errorMessage进行详细的错误分析和处理。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -42,10 +46,9 @@ Use scenarios: In the callback of **EVENT\_UPGRADE\_FAIL**, use **errorCode** to
 errorMessage: string
 ```
 
-Error message, which provides detailed description of the error. **errorMessage** provides detailed error description, such as 'Permission denied' and 'Parameter verification failed', to help developers understand the cause of the error and perform debugging.
+错误描述文本，用于提供错误的详细说明信息。errorMessage提供了错误的具体描述（如'Permission denied.、'Parameter verification failed'等），帮助开发者理解错误原因和进行调试。
 
-Use scenarios: During error handling, **errorMessage** can be used for log recording, error message display, or error analysis. It is recommended that this parameter be used together with **errorCode**. The **errorCode**  
-parameter defines the error type, and the **errorMessage** parameter provides detailed description.
+使用场景：在错误处理时，可将errorMessage用于日志记录、错误提示展示或错误分析。建议结合errorCode一起使用，errorCode提供错误类型，errorMessage提供详细说明。
 
 **Type:** string
 

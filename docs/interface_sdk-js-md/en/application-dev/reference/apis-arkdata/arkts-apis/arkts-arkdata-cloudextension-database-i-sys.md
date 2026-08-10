@@ -1,6 +1,6 @@
 # Database (System API)
 
-Represents the database information.
+数据库结构信息。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents the database information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## alias
 
 ```TypeScript
 alias: string
 ```
 
-Alias of the database on the server.
+该数据库在服务器中的别名。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Alias of the database on the server.
 name: string
 ```
 
-Name of the database.
+数据库名称。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Name of the database.
 tables: Array<Table>
 ```
 
-Table in the database, including the detailed data information.
+数据库中的表，包含数据详细信息。
 
 **Type:** Array&lt;Table&gt;
 

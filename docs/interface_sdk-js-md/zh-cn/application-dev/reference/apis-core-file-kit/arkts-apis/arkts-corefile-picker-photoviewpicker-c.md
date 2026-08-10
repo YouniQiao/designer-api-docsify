@@ -1,7 +1,7 @@
 # PhotoViewPicker
 
 图库选择器对象，用来支撑选择图片/视频和保存图片/视频等用户场景。选择文件推荐使用  
-[PhotoAccessHelper的PhotoViewPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。在使用前，需要先创建PhotoViewPicker实例。
+[PhotoAccessHelper的PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md/arkts-file-photoaccesshelper.md)。在使用前，需要先创建PhotoViewPicker实例。
 
 **起始版本：** 9
 
@@ -9,11 +9,17 @@
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker
+**替代接口：** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
 
 <!--Device-picker-class PhotoViewPicker--><!--Device-picker-class PhotoViewPicker-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
+
+## 导入模块
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 
 ## constructor
 
@@ -27,7 +33,7 @@ constructor()
 
 **废弃版本：** 18
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker
+**替代接口：** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,7 +41,7 @@ constructor()
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
-**示例：**
+## 示例
 
 ```TypeScript
 let photoPicker = new picker.PhotoViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
@@ -53,7 +59,7 @@ constructor(context: Context)
 
 **废弃版本：** 18
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker
+**替代接口：** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
 
 <!--Device-PhotoViewPicker-constructor(context: Context)--><!--Device-PhotoViewPicker-constructor(context: Context)-End-->
 
@@ -63,13 +69,13 @@ constructor(context: Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文（仅支持UIAbilityContext）。 Stage模型的应用Context定义见[Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。 Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 @Entry
 @Component
 struct Index {
@@ -107,7 +113,7 @@ save(option?: PhotoSaveOptions): Promise<Array<string>>
 
 **废弃版本：** 12
 
-**替代接口：** SaveButton
+**替代接口：** [SaveButton](../../apis-arkui/arkts-apis/arkts-arkui-savebutton-savebutton-f.md/arkts-arkui-savebutton-savebutton-f.md#savebutton)
 
 <!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>--><!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>-End-->
 
@@ -117,20 +123,20 @@ save(option?: PhotoSaveOptions): Promise<Array<string>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | photoPicker保存图片或视频文件选项。若无此参数， 则拉起photoPicker界面后需用户自行输入保存的文件名。 |
+| option | [PhotoSaveOptions](arkts-corefile-picker-photosaveoptions-c.md) | 否 | photoPicker保存图片或视频文件选项。若无此参数， 则拉起photoPicker界面后需用户自行输入保存的文件名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回photoPicker保存图片或视频文件后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口会将文件保存在文件管理器，而不是图库。返回的uri数组的具体使用方式参见用户文件uri介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回photoPicker保存图片或视频文件后的结果集。 &lt;br&gt;**注意**：此接口会将文件保存在文件管理器，而不是图库。返回的uri数组的具体使用方式参见用户文件uri介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example04(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let photoSaveOptions = new picker.PhotoSaveOptions();
@@ -162,7 +168,7 @@ save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 12
 
-**替代接口：** SaveButton
+**替代接口：** [SaveButton](../../apis-arkui/arkts-apis/arkts-arkui-savebutton-savebutton-f.md/arkts-arkui-savebutton-savebutton-f.md#savebutton)
 
 <!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -172,19 +178,19 @@ save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | photoPicker保存图片或视频文件选项。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | 是 | callback 返回photoPicker保存图片或视频文件后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口会将文件保存在文件管理器，而不是图库。返回的uri数组的具体使用方式参见用户文件uri介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| option | [PhotoSaveOptions](arkts-corefile-picker-photosaveoptions-c.md) | 是 | photoPicker保存图片或视频文件选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回photoPicker保存图片或视频文件后的结果集。 &lt;br&gt;**注意**：此接口会将文件保存在文件管理器，而不是图库。返回的uri数组的具体使用方式参见用户文件uri介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example05(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let photoSaveOptions = new picker.PhotoSaveOptions();
-    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg','PhotoViewPicker02.mp4'];
+    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg', 'PhotoViewPicker02.mp4'];
     let photoPicker = new picker.PhotoViewPicker(context);
     photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
       if (err) {
@@ -214,7 +220,7 @@ save(callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 12
 
-**替代接口：** SaveButton
+**替代接口：** [SaveButton](../../apis-arkui/arkts-apis/arkts-arkui-savebutton-savebutton-f.md/arkts-arkui-savebutton-savebutton-f.md#savebutton)
 
 <!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -224,14 +230,14 @@ save(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | 是 | callback 返回photoPicker保存图片或视频文件后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口会将文件保存在文件管理器，而不是图库。返回的uri数组的具体使用方式参见用户文件uri介绍中的 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回photoPicker保存图片或视频文件后的结果集。 &lt;br&gt;**注意**：此接口会将文件保存在文件管理器，而不是图库。返回的uri数组的具体使用方式参见用户文件uri介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example06(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let photoPicker = new picker.PhotoViewPicker(context);
@@ -263,7 +269,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option?:
+**替代接口：** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option?:
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -275,20 +281,20 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | photoPicker选择选项。若无此参数，则默认选择媒体文件类型为图片和视频类型。 选择媒体文件数量的默认最大值为50。 |
+| option | [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | 否 | photoPicker选择选项。若无此参数，则默认选择媒体文件类型为图片和视频类型。 选择媒体文件数量的默认最大值为50。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoSelectResult&gt; | Promise对象。返回photoPicker选择后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets]{ |
+| Promise&lt;PhotoSelectResult&gt; | Promise对象。返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets]{ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example01(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let photoSelectOptions = new picker.PhotoSelectOptions();
@@ -321,7 +327,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option:
+**替代接口：** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option:
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -333,15 +339,15 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | photoPicker选择选项。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PhotoSelectResult&gt; | 是 | callback返回photoPicker选择后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 去使用，具体使用方式参见用户文件URI介绍中的\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| option | [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | 是 | photoPicker选择选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) 去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example02(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let photoSelectOptions = new picker.PhotoSelectOptions();
@@ -376,7 +382,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(callback:
+**替代接口：** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(callback:
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -388,14 +394,14 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PhotoSelectResult&gt; | 是 | callback返回photoPicker选择后的结果集。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 去使用，具体使用方式参见用户文件URI介绍中的\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) 去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-
+import { picker } from '@kit.CoreFileKit';
 async function example03(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let photoPicker = new picker.PhotoViewPicker(context);

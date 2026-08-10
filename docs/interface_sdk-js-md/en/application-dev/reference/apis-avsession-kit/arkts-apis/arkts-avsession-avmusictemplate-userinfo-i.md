@@ -1,6 +1,6 @@
 # UserInfo
 
-The definition of User information.
+用户信息的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of User information.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## isLogin
 
 ```TypeScript
 isLogin: boolean
 ```
 
-User is login.
+用户是否登录。true表示已登录，false表示未登录。无默认值。
 
 **Type:** boolean
 
@@ -36,7 +42,7 @@ User is login.
 isVip: boolean
 ```
 
-User is vip.
+用户是否是VIP。true表示是，false表示不是。无默认值。
 
 **Type:** boolean
 
@@ -56,7 +62,7 @@ User is vip.
 nickName: string
 ```
 
-Nick name of the user.
+用户昵称。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ Nick name of the user.
 profilePicUrl: string
 ```
 
-Profile pic url of the user.
+用户的头像图片URL。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ Profile pic url of the user.
 tips: string
 ```
 
-Other descriptions of the user.
+其他关于用户的描述。
 
 **Type:** string
 
@@ -116,7 +122,7 @@ Other descriptions of the user.
 userInfoId: string
 ```
 
-Unique id of the user.
+用户的唯一ID。
 
 **Type:** string
 

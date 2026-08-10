@@ -4,7 +4,7 @@
 type Assets = Array<Asset>
 ```
 
-Represents an array of Assets.
+表示Asset类型的数组。
 
 **Since:** 11
 

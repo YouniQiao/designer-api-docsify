@@ -1,5 +1,11 @@
 # queryParticipantsByInvitation (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## queryParticipantsByInvitation
 
 ```TypeScript
@@ -9,7 +15,7 @@ function queryParticipantsByInvitation(
     ): void
 ```
 
-Queries the participants based on the sharing invitation code.This API uses an asynchronous callback to return the result.
+根据指定的共享邀请码查询当前共享的参与者，使用callback异步回调。
 
 **Since:** 11
 
@@ -25,18 +31,18 @@ Queries the participants based on the sharing invitation code.This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| invitationCode | string | Yes | Invitation code of the share. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Result&lt;Array&lt;Participant&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
+| invitationCode | string | Yes | 端云共享的邀请码。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Participant&gt;&gt;&gt; | Yes | 回调函数。返回查找共享参与者的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -57,7 +63,7 @@ cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', 
 function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>
 ```
 
-Queries the participants based on the sharing invitation code.This API uses a promise to return the result.
+根据指定的共享邀请码查询当前共享的参与者，使用Promise异步回调。
 
 **Since:** 11
 
@@ -73,23 +79,23 @@ Queries the participants based on the sharing invitation code.This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| invitationCode | string | Yes | Invitation code of the share. |
+| invitationCode | string | Yes | 端云共享的邀请码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Participant&gt;&gt;&gt; | Promise used to return the participants obtained. |
+| Promise&lt;Result&lt;Array&lt;Participant&gt;&gt;&gt; | Promise对象，返回查找共享参与者的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

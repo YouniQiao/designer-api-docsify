@@ -1,12 +1,22 @@
 # offEventData
 
+## Modules to Import
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## offEventData
 
 ```TypeScript
 function offEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-Unsubscribes from an event with the specified event ID and processed by the specified callback.This API takes effect only when Callback\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ has been registered through the on or once API.Otherwise, no processing is performed.
+取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用  
+[onEventData](emitter.onEventData(eventId: string, callback: Callback&lt;EventData&gt;))或  
+[onceEventData](emitter.onceEventData(eventId: string, callback: Callback&lt;EventData&gt;))接口订阅callback时，该接口才生效。
+
+使用该接口取消某个事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未被执行的事件将被取消。
 
 **Since:** 23
 
@@ -20,20 +30,6 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EventData&gt; | Yes | Callback to unregister. |
-
-**Example**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData | undefined | null) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-// Unregister the callbacks for events whose ID is eventId. The callback object must be the object used during registration.
-// If the callback handler has not been subscribed, no processing is performed.
-emitter.offEventData("eventId", callback);
-```
+| eventId | string | Yes | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 事件的回调处理函数。 |
 

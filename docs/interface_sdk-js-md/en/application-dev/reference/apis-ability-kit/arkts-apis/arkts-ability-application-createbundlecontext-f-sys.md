@@ -1,19 +1,25 @@
 # createBundleContext (System API)
 
+## Modules to Import
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## createBundleContext
 
 ```TypeScript
 export function createBundleContext(context: Context, bundleName: string): Promise<Context>
 ```
 
-Creates the context for an application. This API uses a promise to return the result.
-    **NOTE**  
-    
-    Starting from API version 18, the context can obtain the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ of the current  
-    application. The **processName** property in the context created by **createBundleContext** is the same as the  
-    **processName** property in the input parameter **Context**. The values of other properties are obtained based on  
-    the input parameters **Context**, **bundleName**, and **moduleName**.
+根据入参Context创建相应应用的Context。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 18开始，Context支持获取当前应用的进程名
+> [processName](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context)。
+> createBundleContext创建的Context中的processName属性与入参Context中的processName属性一致，其他属性根据入参Context、bundleName和moduleName获得相应
+> 的属性值。
 
 **Since:** 12
 
@@ -33,24 +39,24 @@ Creates the context for an application. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. |
-| bundleName | string | Yes | Bundle name of the application. |
+| context | [Context](arkts-ability-context-c-sys.md) | Yes | 表示应用上下文。 |
+| bundleName | string | Yes | 表示应用包名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the context created. |
+| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; | Promise对象。返回创建的Context。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIAbility, application, common } from '@kit.AbilityKit';

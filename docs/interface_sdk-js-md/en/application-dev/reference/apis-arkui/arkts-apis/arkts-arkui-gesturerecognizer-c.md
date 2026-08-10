@@ -1,6 +1,6 @@
 # GestureRecognizer
 
-Gesture recognizer object.
+手势识别器对象。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Gesture recognizer object.
 getEventTargetInfo(): EventTargetInfo
 ```
 
-Obtains the information about the component corresponding to this gesture recognizer.
+返回当前手势识别器对应组件的信息。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Obtains the information about the component corresponding to this gesture recogn
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Information about the component corresponding to the current gesture recognizer. |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | 当前手势识别器对应组件的信息。 |
 
 ## getFingerCount
 
@@ -42,7 +42,7 @@ Obtains the information about the component corresponding to this gesture recogn
 getFingerCount(): number
 ```
 
-Obtains the number of fingers required to trigger the preset gesture.
+返回预设手指识别数阈值。
 
 **Since:** 18
 
@@ -60,7 +60,7 @@ Obtains the number of fingers required to trigger the preset gesture.
 
 | Type | Description |
 | --- | --- |
-| number | Number of fingers required to trigger the preset gesture. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: an integer from 1 to 10. |
+| number | 预设手指识别数阈值。&lt;br/&gt;取值范围：[1, 10], 整数。 |
 
 ## getState
 
@@ -68,7 +68,7 @@ Obtains the number of fingers required to trigger the preset gesture.
 getState(): GestureRecognizerState
 ```
 
-Obtains the state of this gesture recognizer.
+返回当前手势识别器的状态。
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ Obtains the state of this gesture recognizer.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | State of the gesture recognizer. |
+| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | 当前手势识别器的状态。 |
 
 ## getTag
 
@@ -94,7 +94,7 @@ Obtains the state of this gesture recognizer.
 getTag(): string
 ```
 
-Obtains the tag of this gesture recognizer.
+返回当前手势识别器的tag。
 
 **Since:** 12
 
@@ -112,7 +112,7 @@ Obtains the tag of this gesture recognizer.
 
 | Type | Description |
 | --- | --- |
-| string | Tag of the current gesture recognizer. |
+| string | 当前手势识别器的标志。 |
 
 ## getType
 
@@ -120,7 +120,7 @@ Obtains the tag of this gesture recognizer.
 getType(): GestureControl.GestureType
 ```
 
-Obtains the type of this gesture recognizer.
+返回当前手势识别器的类型。
 
 **Since:** 12
 
@@ -138,7 +138,7 @@ Obtains the type of this gesture recognizer.
 
 | Type | Description |
 | --- | --- |
-| GestureControl.GestureType | Type of the current gesture recognizer. |
+| GestureControl.GestureType | 当前手势识别器的类型。 |
 
 ## isBuiltIn
 
@@ -146,7 +146,7 @@ Obtains the type of this gesture recognizer.
 isBuiltIn(): boolean
 ```
 
-Obtains whether this gesture recognizer is a built-in gesture.
+返回当前手势识别器是否为系统内置手势。
 
 **Since:** 12
 
@@ -164,7 +164,7 @@ Obtains whether this gesture recognizer is a built-in gesture.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current gesture recognizer is a built-in gesture. The value **true** means that the gesture recognizer is a built-in gesture, and **false** means the opposite. |
+| boolean | 当前手势识别器是否为系统内置手势。true表示手势识别器为系统内置手势，false表示非系统内置手势。 |
 
 ## isEnabled
 
@@ -172,7 +172,7 @@ Obtains whether this gesture recognizer is a built-in gesture.
 isEnabled(): boolean
 ```
 
-Obtains the enabled state of this gesture recognizer.
+返回当前手势识别器的使能状态。
 
 **Since:** 12
 
@@ -190,7 +190,7 @@ Obtains the enabled state of this gesture recognizer.
 
 | Type | Description |
 | --- | --- |
-| boolean | Enabled state of the gesture recognizer. The value **true** means that the gesture recognizer is enabled and will trigger events, and **false** means the opposite. |
+| boolean | 当前手势识别器的使能状态。true表示当前手势识别器能够回调应用事件，false表示当前手势识别器不回调应用事件。 |
 
 ## isFingerCountLimit
 
@@ -198,7 +198,7 @@ Obtains the enabled state of this gesture recognizer.
 isFingerCountLimit(): boolean
 ```
 
-Checks whether the preset gesture detects the number of fingers on the screen.
+返回预设手势是否会检测触摸屏幕上手指识别数量。
 
 **Since:** 18
 
@@ -216,7 +216,7 @@ Checks whether the preset gesture detects the number of fingers on the screen.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the preset gesture will detect the number of fingers on the screen. **true** if the gesture event is bound and detects the number of fingers; **false** otherwise. |
+| boolean | 预设手势是否会检测触摸屏幕上手指识别数量。当绑定手势事件且会检测触摸屏幕上手指的数量时，返回true。当绑定手势事件且不会检测触摸屏幕上手指的数量时，返回false。 |
 
 ## isHostBelongsTo
 
@@ -224,7 +224,7 @@ Checks whether the preset gesture detects the number of fingers on the screen.
 isHostBelongsTo(uniqueId: int): boolean
 ```
 
-Returns whether the node bound to the current gesture recognizer is a descendant of the specified component.
+返回当前手势识别器绑定节点是否为传入组件的后代节点。
 
 **Since:** 26.0.0
 
@@ -242,13 +242,13 @@ Returns whether the node bound to the current gesture recognizer is a descendant
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API. |
+| uniqueId | int | Yes | 组件的唯一ID。可以通过[getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid)接口获取该ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the node bound to the current gesture recognizer is a descendant of the specified component. Returns **true** if the bound node is a descendant, and **false** otherwise. |
+| boolean | 当前手势识别器绑定节点是否为传入组件的后代节点。true表示当前绑定节点为传入组件的后代节点，false表示当前绑定节点非传入组件的后代节点。 |
 
 ## isValid
 
@@ -256,7 +256,7 @@ Returns whether the node bound to the current gesture recognizer is a descendant
 isValid(): boolean
 ```
 
-Whether the current gesture recognizer is valid.
+返回当前手势识别器是否有效。
 
 **Since:** 12
 
@@ -272,7 +272,7 @@ Whether the current gesture recognizer is valid.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current gesture recognizer is valid. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Returns **false** if the component bound to this recognizer is destroyed or if the recognizer is not on the response chain. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Returns **true** if the bound component exists and the recognizer is in the response chain. |
+| boolean | 当前手势识别器是否有效。&lt;br/&gt;当该识别器绑定的组件被析构或该识别器不在响应链上时返回false。&lt;br/&gt;当该识别器绑定的组件未被析构且该识别器在响应链上时返回true。 |
 
 ## preventBegin
 
@@ -280,7 +280,8 @@ Whether the current gesture recognizer is valid.
 preventBegin(): void
 ```
 
-Prevents a gesture recognizer from participating in the current gesture recognition before all fingers are lifted.If the system has already determined the result of the gesture recognizer (regardless of success or failure),calling this API will be ineffective. Unlike GestureRecognizer.[setEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_(isEnabled: boolean),which only affects callback execution, this API prevents the recognizer from participating in the recognition process entirely.
+在手指全部抬起前阻止手势识别器参与当前手势识别。如果系统已确定该手势识别器的结果（无论成功与否），调用此接口将无效。此方法与GestureRecognizer.[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled)(isEnabled: boolean)不同，  
+[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled)并不会阻止手势识别器对象参与手势识别过程，而只会影响手势对应的回调函数是否执行。
 
 **Since:** 20
 
@@ -300,7 +301,7 @@ Prevents a gesture recognizer from participating in the current gesture recognit
 setEnabled(isEnabled: boolean): void
 ```
 
-Sets the enabled state of this gesture recognizer.
+设置当前手势识别器的使能状态。
 
 **Since:** 12
 
@@ -318,5 +319,5 @@ Sets the enabled state of this gesture recognizer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Enabled state to set. The value **true** means that the gesture recognizer is enabled and will trigger events, and **false** means the opposite. |
+| isEnabled | boolean | Yes | 手势识别器的使能状态。true表示当前手势识别器能够回调应用事件，false表示当前手势识别器不回调应用事件。 |
 

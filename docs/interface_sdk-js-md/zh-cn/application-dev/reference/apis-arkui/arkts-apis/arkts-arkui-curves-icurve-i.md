@@ -1,8 +1,8 @@
 # ICurve
 
 曲线对象，支持通过本模块中的  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_等方法创建不同类型的曲线对象，并可通过曲线对象调用其\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_的成员方法。
+[curves.cubicBezierCurve](../../../reference/apis-arkui/js-apis-curve_static.md#curvescubicbeziercurve9)、  
+[curves.interpolatingSpring](../../../reference/apis-arkui/js-apis-curve_static.md#curvesinterpolatingspring10)等方法创建不同类型的曲线对象，并可通过曲线对象调用其[interpolate](../../../reference/apis-arkui/js-apis-curve_static.md#interpolate9)的成员方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,12 @@
 <!--Device-curves-export interface ICurve--><!--Device-curves-export interface ICurve-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { curves } from 'kits/@kit.ArkUI';
+```
 
 ## interpolate
 
@@ -34,7 +40,7 @@ interpolate(fraction: double): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fraction | double | 是 | 当前的归一化时间参数。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0,1]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_设置的值小于0时，按0处理；设置的值大于1时，按1处理。 |
+| fraction | double | 是 | 当前的归一化时间参数。&lt;br/&gt;取值范围：[0,1]&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0时，按0处理；设置的值大于1时，按1处理。 |
 
 **返回值：**
 

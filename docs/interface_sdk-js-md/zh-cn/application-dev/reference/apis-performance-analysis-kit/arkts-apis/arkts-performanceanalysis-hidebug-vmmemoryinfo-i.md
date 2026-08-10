@@ -10,6 +10,12 @@ VM�ڴ���Ϣ��
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## allArraySize
 
 ```TypeScript

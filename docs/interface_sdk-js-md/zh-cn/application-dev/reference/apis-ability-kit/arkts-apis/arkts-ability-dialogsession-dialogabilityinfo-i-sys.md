@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { dialogSession } from 'kits/@kit.AbilityKit';
+```
+
 ## abilityIconId
 
 ```TypeScript
@@ -20,7 +26,7 @@ abilityIconId: int
 
 表示Ability图标ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -42,7 +48,7 @@ abilityLabelId: int
 
 表示Ability标签ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -86,7 +92,7 @@ appIndex: int
 
 表示应用的分身索引。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -108,7 +114,7 @@ bundleIconId: int
 
 表示Bundle图标ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -130,7 +136,7 @@ bundleLabelId: int
 
 表示Bundle标签ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -246,7 +252,7 @@ multiAppMode: MultiAppMode
 
 表示应用的多开模式。
 
-**类型：** MultiAppMode
+**类型：** [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md)
 
 **起始版本：** 12
 

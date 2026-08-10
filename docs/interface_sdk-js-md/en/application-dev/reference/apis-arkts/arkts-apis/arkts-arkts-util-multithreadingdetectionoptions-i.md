@@ -1,6 +1,6 @@
 # MultithreadingDetectionOptions
 
-Multi-thread detection functional parameter configuration
+多线程检测功能参数配置。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Multi-thread detection functional parameter configuration
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## abort
 
 ```TypeScript
 abort?: boolean
 ```
 
-If abort is **true**, the application will crash, if abort is **false**, the application will not crash.Default **true**.
+若 abort 为 **true**，应用将崩溃；若 abort 为 **false**，应用将不崩溃。默认值为 **true**。
 
 **Type:** boolean
 
@@ -36,7 +42,7 @@ If abort is **true**, the application will crash, if abort is **false**, the app
 frequency?: number
 ```
 
-The sampling frequency of multi-thread detection The value must be an integer, minimum is **100**, maximum is **2147483647**. (default **100**)The value should be an integer.
+多线程检测的采样频率。该值必须为整数，最小为 **100**，最大为 **2147483647**（默认 **100**）。该值应为整数。
 
 **Type:** number
 
@@ -56,7 +62,7 @@ The sampling frequency of multi-thread detection The value must be an integer, m
 interval?: number
 ```
 
-The interval of multi-thread detection(min)Errors will be reported again only if the time since the last detection exceeds this interval.The value must be an integer within \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+多线程检测的时间间隔（分钟）。只有距离上次检测的时间超过此间隔时才会再次上报错误。该值必须为 [0,1440] 范围内的整数（默认 5min）。
 
 **Type:** number
 

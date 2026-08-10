@@ -6,9 +6,17 @@ Provides methods to accessing bluetooth PAN(Personal Area Networking Profile)-re
 
 **ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace pan--><!--Device-unnamed-declare namespace pan-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## Modules to Import
+
+```TypeScript
+import { pan } from 'kits/@kit.ConnectivityKit';
+```
 
 ## Summary
 

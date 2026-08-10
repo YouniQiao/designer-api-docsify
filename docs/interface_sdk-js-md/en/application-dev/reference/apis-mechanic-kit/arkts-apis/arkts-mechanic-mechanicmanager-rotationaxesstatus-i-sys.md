@@ -12,13 +12,19 @@ Rotation axes status
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## pitchEnabled
 
 ```TypeScript
 pitchEnabled: boolean
 ```
 
-Whether the pitch axis is enabled.
+是否使能俯仰轴
 
 **Type:** boolean
 
@@ -40,7 +46,7 @@ pitchLimited?: RotationAxisLimited
 
 Whether the pitch axis is limited.
 
-**Type:** RotationAxisLimited
+**Type:** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **Since:** 20
 
@@ -58,7 +64,7 @@ Whether the pitch axis is limited.
 rollEnabled: boolean
 ```
 
-Whether the roll axis is enabled.
+是否启用滚动轴
 
 **Type:** boolean
 
@@ -80,7 +86,7 @@ rollLimited?: RotationAxisLimited
 
 Whether the roll axis is limited.
 
-**Type:** RotationAxisLimited
+**Type:** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **Since:** 20
 
@@ -98,7 +104,7 @@ Whether the roll axis is limited.
 yawEnabled: boolean
 ```
 
-Whether the yaw axis is enabled.
+是否启用偏航轴
 
 **Type:** boolean
 
@@ -118,9 +124,9 @@ Whether the yaw axis is enabled.
 yawLimited?: RotationAxisLimited
 ```
 
-Whether the yaw axis is limited.
+偏航轴是否限位
 
-**Type:** RotationAxisLimited
+**Type:** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **Since:** 20
 

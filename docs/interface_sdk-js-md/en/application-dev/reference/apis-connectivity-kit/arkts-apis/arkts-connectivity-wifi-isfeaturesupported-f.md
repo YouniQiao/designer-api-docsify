@@ -1,5 +1,11 @@
 # isFeatureSupported
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isFeatureSupported
 
 ```TypeScript
@@ -34,17 +40,17 @@ Checks whether this device supports a specified feature.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	let featureId = 0;
-	let ret = wifi.isFeatureSupported(featureId);
-	console.info("isFeatureSupported:" + ret);
+  let featureId = 0;
+  let ret = wifi.isFeatureSupported(featureId);
+  console.info("isFeatureSupported:" + ret);
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

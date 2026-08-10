@@ -1,6 +1,6 @@
 # TextTimerFrameNode
 
-Define the TextTimer type of FrameNode.
+定义TextTimer类型的FrameNode。
 
 **Inheritance/Implementation:** TextTimerFrameNode extends [TypedFrameNode<TextTimerAttribute>](TypedFrameNode<TextTimerAttribute>)
 
@@ -18,7 +18,7 @@ Define the TextTimer type of FrameNode.
 abstract initialize(options?: TextTimerOptions): TextTimerAttribute
 ```
 
-Initialize TextTimer FrameNode.
+初始化TextTimer类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize TextTimer FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [TextTimerOptions](../arkts-components/arkts-arkui-texttimeroptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextTimerAttribute](../arkts-components/arkts-arkui-texttimer-attribute.md) |  |
 

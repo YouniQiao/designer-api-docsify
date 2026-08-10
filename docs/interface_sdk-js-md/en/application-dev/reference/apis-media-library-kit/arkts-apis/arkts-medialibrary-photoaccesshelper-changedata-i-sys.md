@@ -10,6 +10,12 @@ Defines the return value of the listener callback.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## sharedAlbumAssets
 
 ```TypeScript

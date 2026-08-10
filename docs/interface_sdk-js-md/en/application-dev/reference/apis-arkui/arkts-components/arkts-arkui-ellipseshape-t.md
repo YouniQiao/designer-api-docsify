@@ -4,7 +4,7 @@
 declare type EllipseShape = import('../api/@ohos.arkui.shape').EllipseShape
 ```
 
-Defines the EllipseShape type.
+导入EllipseShape类型对象。
 
 **Since:** 12
 

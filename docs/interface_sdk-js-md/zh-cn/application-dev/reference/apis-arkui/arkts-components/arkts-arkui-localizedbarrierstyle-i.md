@@ -46,7 +46,7 @@ localizedDirection : LocalizedBarrierDirection
 
 非法值：按默认值处理。
 
-**类型：** LocalizedBarrierDirection
+**类型：** [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md)
 
 **起始版本：** 12
 

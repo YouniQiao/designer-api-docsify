@@ -12,6 +12,12 @@ Worker线程自身的运行环境，GlobalScope类继承WorkerEventTarget。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## onerror
 
 ```TypeScript
@@ -34,7 +40,7 @@ Worker在执行过程中发生异常被调用的回调函数，该回调函数�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | 是 |  |
 
 ## name
 
@@ -64,7 +70,7 @@ readonly self: GlobalScope & typeof globalThis
 
 GlobalScope本身。
 
-**类型：** GlobalScope & typeof globalThis
+**类型：** [GlobalScope](arkts-arkts-worker-globalscope-i.md) & typeof globalThis
 
 **起始版本：** 9
 

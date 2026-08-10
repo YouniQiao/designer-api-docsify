@@ -1,6 +1,6 @@
 # TipsOptions
 
-Defines the parameters of the tooltip.
+悬浮气泡自定义参数。
 
 **Since:** 19
 
@@ -16,11 +16,11 @@ Defines the parameters of the tooltip.
 appearingTime?: number
 ```
 
-Delay before the tooltip appears. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms.
+设置悬浮气泡的显示时延。显示时延的最大值为4000ms，设置超过4000ms的值以4000ms为准。
 
-Default value: **700**.
+默认值：700
 
-Unit: ms.
+单位：ms
 
 **Type:** number
 
@@ -42,11 +42,11 @@ Unit: ms.
 appearingTimeWithContinuousOperation?: number
 ```
 
-Delay before the tooltip appears when multiple tooltips are displayed consecutively. The maximum delay is 4000 ms.Values exceeding 4000 ms are capped at 4000 ms.
+多个组件连续弹出悬浮气泡时，悬浮气泡的显示时延。显示时延的最大值为4000ms，设置超过4000ms的值以4000ms为准。 
 
-Default value: **300**.
+默认值：300
 
-Unit: ms.
+单位：ms
 
 **Type:** number
 
@@ -68,17 +68,9 @@ Unit: ms.
 arrowHeight?: Dimension
 ```
 
-Height of the tooltip arrow.
+The height of the arrow.
 
-Default value: **8**.
-
-Unit: vp.
-
-**NOTE**
-
-Percentage values are not supported.
-
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 8.0_vp.
 
@@ -100,12 +92,11 @@ Percentage values are not supported.
 arrowPointPosition?: ArrowPointPosition
 ```
 
-Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and  
-**End**, in both vertical and horizontal directions. These positions are within the parent component area and do not exceed its boundaries or cover rounded corners.
+气泡箭头相对于父组件显示位置，气泡箭头在垂直和水平方向上有 “Start”、“Center”、“End”三个位置点可选。所有位置点均位于父组件区域范围内，不会超出父组件的边界范围，也不会覆盖圆角范围。
 
-Default value: **ArrowPointPosition.CENTER**.
+默认值：ArrowPointPosition.CENTER
 
-**Type:** ArrowPointPosition
+**Type:** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
 
 **Since:** 19
 
@@ -125,17 +116,9 @@ Default value: **ArrowPointPosition.CENTER**.
 arrowWidth?: Dimension
 ```
 
-Width of the tooltip arrow. If the set width exceeds the length of the edge minus twice the tooltip's corner radius, the arrow is not drawn.
+The width of the arrow.
 
-Default value: **16**.
-
-Unit: vp.
-
-**NOTE**
-
-Percentage values are not supported.
-
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 16.0_vp.
 
@@ -157,11 +140,11 @@ Percentage values are not supported.
 disappearingTime?: number
 ```
 
-Delay before the tooltip disappears. The maximum delay is 4000 ms. Values exceeding 4000 ms are capped at 4000 ms.
+设置悬浮气泡的隐藏时延。隐藏时延的最大值为4000ms，设置超过4000ms的值以4000ms为准。
 
-Default value: **300**.
+默认值：300
 
-Unit: ms.
+单位：ms
 
 **Type:** number
 
@@ -183,11 +166,11 @@ Unit: ms.
 disappearingTimeWithContinuousOperation?: number
 ```
 
-Delay before the tooltip disappears when multiple tooltips are displayed consecutively. The maximum delay is 4000ms. Values exceeding 4000 ms are capped at 4000 ms.
+多个组件连续弹出悬浮气泡时，悬浮气泡的隐藏时延。隐藏时延的最大值为4000ms，设置超过4000ms的值以4000ms为准。 
 
-Default value: **0**.
+默认值：0
 
-Unit: ms.
+单位：ms
 
 **Type:** number
 
@@ -209,15 +192,15 @@ Unit: ms.
 enableArrow?: boolean
 ```
 
-Whether to display the tooltip arrow.
+设置是否显示气泡箭头。
 
-Default value: **true**.
+默认值：true
 
-**true**: yes. **false**: no.
+true：显示箭头；false：不显示箭头。
 
-**NOTE**
+**说明：**
 
-If the available space on the screen is insufficient, the tooltip will cover part of the component and the arrow will not be displayed.
+当页面可用空间无法让气泡完全避让时，气泡会覆盖到组件上并且不显示气泡箭头。
 
 **Type:** boolean
 
@@ -241,15 +224,15 @@ If the available space on the screen is insufficient, the tooltip will cover par
 showAtAnchor?: TipsAnchorType
 ```
 
-Anchor type of the tooltip.
+设置Tips跟随类型。
 
-Default value: **TipsAnchorType.TARGET**.
+默认值：TipsAnchorType.TARGET
 
-**NOTE**
+**说明：**
 
-If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does not display an arrow.
+Tips的跟随类型为TipsAnchorType.CURSOR时，Tips不显示箭头。
 
-**Type:** TipsAnchorType
+**Type:** [TipsAnchorType](../arkts-apis/arkts-arkui-tipsanchortype-e.md)
 
 **Since:** 20
 
@@ -269,9 +252,17 @@ If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for tips. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of tips.
+设置组件的系统材质。
 
-**Type:** SystemUiMaterial
+默认值：undefined，会清除由该接口设置的材质效果。 
+
+**说明：**
+
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
+
+**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 

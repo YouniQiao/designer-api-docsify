@@ -1,12 +1,16 @@
 # getNameForUid
 
+## Modules to Import
+
+```TypeScript
+import { bundle } from 'kits/@kit.AbilityKit';
+```
+
 ## getNameForUid
 
 ```TypeScript
 function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 ```
-
-Obtains bundle name by the given uid.
 
 **Since:** 8
 
@@ -24,8 +28,8 @@ Obtains bundle name by the given uid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | Indicates the UID of an application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes |  |
+| uid | number | Yes | @param { AsyncCallback&lt;string&gt; } callback |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
 
 ## getNameForUid
@@ -34,7 +38,7 @@ Obtains bundle name by the given uid.
 function getNameForUid(uid: number): Promise<string>
 ```
 
-Obtains the bundle name based on a UID. This API uses a promise to return the result.
+通过uid获取对应的Bundle名称，使用Promise异步回调。
 
 **Since:** 8
 
@@ -52,7 +56,7 @@ Obtains the bundle name based on a UID. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | UID based on which the bundle name is to obtain. |
+| uid | number | Yes | 要查询的uid。 |
 
 **Return value:**
 

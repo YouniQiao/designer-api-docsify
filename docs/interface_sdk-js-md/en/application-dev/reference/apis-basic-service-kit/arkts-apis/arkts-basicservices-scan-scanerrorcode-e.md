@@ -1,6 +1,6 @@
 # ScanErrorCode
 
-Enumerates the scan error codes.
+定义扫描错误码的枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the scan error codes.
 SCAN_ERROR_NO_PERMISSION = 201
 ```
 
-No permission.
+无权限。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ No permission.
 SCAN_ERROR_NOT_SYSTEM_APPLICATION = 202
 ```
 
-Non-system application.
+非系统应用。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ Non-system application.
 SCAN_ERROR_INVALID_PARAMETER = 401
 ```
 
-Invalid parameter.
+无效参数。
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ Invalid parameter.
 SCAN_ERROR_GENERIC_FAILURE = 13100001
 ```
 
-Generic failure.
+通用失败。
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ Generic failure.
 SCAN_ERROR_RPC_FAILURE = 13100002
 ```
 
-RPC failure.
+RPC失败。
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ RPC failure.
 SCAN_ERROR_SERVER_FAILURE = 13100003
 ```
 
-Service failure.
+服务失败。
 
 **Since:** 20
 
@@ -112,7 +112,7 @@ Service failure.
 SCAN_ERROR_UNSUPPORTED = 13100004
 ```
 
-Unsupported operation.
+不支持的操作。
 
 **Since:** 20
 
@@ -128,7 +128,7 @@ Unsupported operation.
 SCAN_ERROR_CANCELED = 13100005
 ```
 
-Operation canceled.
+操作取消。
 
 **Since:** 20
 
@@ -144,7 +144,7 @@ Operation canceled.
 SCAN_ERROR_DEVICE_BUSY = 13100006
 ```
 
-Device busy.
+设备忙。
 
 **Since:** 20
 
@@ -160,7 +160,7 @@ Device busy.
 SCAN_ERROR_INVALID = 13100007
 ```
 
-Invalid operation.
+无效操作。
 
 **Since:** 20
 
@@ -176,7 +176,7 @@ Invalid operation.
 SCAN_ERROR_JAMMED = 13100008
 ```
 
-Paper jammed.
+卡纸。
 
 **Since:** 20
 
@@ -192,7 +192,7 @@ Paper jammed.
 SCAN_ERROR_NO_DOCS = 13100009
 ```
 
-Out of paper.
+缺纸。
 
 **Since:** 20
 
@@ -208,7 +208,7 @@ Out of paper.
 SCAN_ERROR_COVER_OPEN = 13100010
 ```
 
-Cover open.
+盖子打开。
 
 **Since:** 20
 
@@ -224,7 +224,7 @@ Cover open.
 SCAN_ERROR_IO_ERROR = 13100011
 ```
 
-I/O error.
+I/O错误。
 
 **Since:** 20
 
@@ -240,7 +240,7 @@ I/O error.
 SCAN_ERROR_NO_MEMORY = 13100012
 ```
 
-Insufficient memory.
+内存不足。
 
 **Since:** 20
 

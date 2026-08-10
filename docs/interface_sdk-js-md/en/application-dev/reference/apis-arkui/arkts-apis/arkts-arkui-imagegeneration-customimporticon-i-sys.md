@@ -12,6 +12,12 @@ Customize the import icon, which is used to add images and text from the applica
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## callback
 
 ```TypeScript
@@ -62,7 +68,7 @@ text: ResourceStr
 
 Icon text description.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

@@ -1,14 +1,20 @@
 # getKeyboardDelegate
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## getKeyboardDelegate
 
 ```TypeScript
 function getKeyboardDelegate(): KeyboardDelegate
 ```
 
-Obtains a [KeyboardDelegate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance for the input method.
+获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)（键盘代理对象）。
 
-The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
+输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。
 
 **Since:** 9
 
@@ -22,9 +28,9 @@ The input method can use the obtained instance to subscribe to a physical keyboa
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | KeyboardDelegate** instance. |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let KeyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.getKeyboardDelegate();
@@ -37,7 +43,7 @@ let KeyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.get
 function getKeyboardDelegate(): KeyboardDelegate | null
 ```
 
-Get KeyboardDelegate object to subscribe key event or events about editor.
+获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)（键盘代理对象）。输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。
 
 **Since:** 23
 
@@ -51,5 +57,5 @@ Get KeyboardDelegate object to subscribe key event or events about editor.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the object of KeyboardDelegate. |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
 

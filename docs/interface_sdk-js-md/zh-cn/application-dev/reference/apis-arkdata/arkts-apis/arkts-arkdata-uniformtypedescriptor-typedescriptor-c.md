@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+```
+
 ## belongsTo
 
 ```TypeScript
@@ -32,7 +38,7 @@ belongsTo(type: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 所指定的标准化数据类型（即\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中各类型对应的UTD-ID或自定义UTD-ID）。 |
+| type | string | 是 | 所指定的标准化数据类型（即[UTD预置列表](../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。 |
 
 **返回值：**
 
@@ -44,47 +50,25 @@ belongsTo(type: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let ret = typeObj.belongsTo('general.source-code');
-    if(ret) {
-        console.info('type general.type-script belongs to type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
-ArkTS-Sta示例：
+## 示例
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    let typeObj : uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    if (!typeObj) {
-        console.info('TypeDescriptor not found');
-        return;
-    }
-    let ret = typeObj.belongsTo('general.source-code');
-    if(ret) {
-        console.info('type general.type-script belongs to type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.info(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
+  // 获取TypeDescriptor对象
+  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+  // 判断是否归属指定类型
+  let ret = typeObj.belongsTo('general.source-code');
+  if (ret) {
+    console.info('type general.type-script belongs to type general.source-code');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -94,7 +78,7 @@ try {
 equals(typeDescriptor: TypeDescriptor): boolean
 ```
 
-判断指定的标准化数据类型描述类对象的类型ID和当前标准化数据类型描述类对象的类型ID是否相同，即[TypeDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对象的typeId。
+判断指定的标准化数据类型描述类对象的类型ID和当前标准化数据类型描述类对象的类型ID是否相同，即[TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md)对象的typeId。
 
 **起始版本：** 11
 
@@ -110,7 +94,7 @@ equals(typeDescriptor: TypeDescriptor): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typeDescriptor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待比较的标准化数据类型描述类对象。 |
+| typeDescriptor | [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | 是 | 待比较的标准化数据类型描述类对象。 |
 
 **返回值：**
 
@@ -122,11 +106,9 @@ equals(typeDescriptor: TypeDescriptor): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
@@ -145,39 +127,13 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let typeA: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-  if (!typeA) {
-    console.info('TypeDescriptor not found');
-    return;
-  }
-  let typeB: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.python-script');
-  if (!typeB) {
-    console.info('TypeDescriptor not found');
-    return;
-  }
-  if (!typeA.equals(typeB)) {
-    console.info('typeA is not equal to typeB');
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.info(`throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
 ## isHigherLevelType
 
 ```TypeScript
 isHigherLevelType(type: string): boolean
 ```
 
-判断当前标准化数据类型是否是指定标准化数据类型的高层级类型。例如SOURCE\_CODE为TYPE\_SCRIPT的高层级类型，TEXT为SOURCE\_CODE和TYPE\_SCRIPT的高层级类型。
+判断当前标准化数据类型是否是指定标准化数据类型的高层级类型。例如SOURCE_CODE为TYPE_SCRIPT的高层级类型，TEXT为SOURCE_CODE和TYPE_SCRIPT的高层级类型。
 
 **起始版本：** 11
 
@@ -193,7 +149,7 @@ isHigherLevelType(type: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 所指定的标准化数据类型（即\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中各类型对应的UTD-ID或自定义UTD-ID）。 |
+| type | string | 是 | 所指定的标准化数据类型（即[UTD预置列表](../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。 |
 
 **返回值：**
 
@@ -205,11 +161,9 @@ isHigherLevelType(type: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
@@ -228,34 +182,13 @@ try {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let typeObj: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
-  if (!typeObj) {
-    console.info('TypeDescriptor not found');
-  }
-  let ret = typeObj.isHigherLevelType('general.type-script');
-  if (ret) {
-    console.info('type general.source-code is higher level type of type general.type-script');
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.info(`isHigherLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
 ## isLowerLevelType
 
 ```TypeScript
 isLowerLevelType(type: string): boolean
 ```
 
-判断当前标准化数据类型是否是指定标准化数据类型的低层级类型。例如TYPE\_SCRIPT为SOURCE\_CODE的低层级类型，TYPE\_SCRIPT和SOURCE\_CODE为TEXT的低层级类型。
+判断当前标准化数据类型是否是指定标准化数据类型的低层级类型。例如TYPE_SCRIPT为SOURCE_CODE的低层级类型，TYPE_SCRIPT和SOURCE_CODE为TEXT的低层级类型。
 
 **起始版本：** 11
 
@@ -271,7 +204,7 @@ isLowerLevelType(type: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 所指定的标准化数据类型（即\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中各类型对应的UTD-ID或自定义UTD-ID）。 |
+| type | string | 是 | 所指定的标准化数据类型（即[UTD预置列表](../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。 |
 
 **返回值：**
 
@@ -283,47 +216,24 @@ isLowerLevelType(type: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let ret = typeObj.isLowerLevelType('general.source-code');
-    if(ret) {
-        console.info('type general.type-script is lower level type of type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
-ArkTS-Sta示例：
+## 示例
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    let typeObj : uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
-    if (!typeObj) {
-        console.info('TypeDescriptor not found');
-        return;
-    }
-    let ret = typeObj.isLowerLevelType('general.source-code');
-    if(ret) {
-        console.info('type general.source-code is lower level type of type general.type-script');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.info(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
+  // 获取TypeDescriptor对象
+  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+  let ret = typeObj.isLowerLevelType('general.source-code');
+  if (ret) {
+    console.info('type general.type-script is lower level type of type general.source-code');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 

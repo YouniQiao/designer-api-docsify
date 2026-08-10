@@ -2,9 +2,9 @@
 
 设置栅格列布局组件布局选项。
 
-\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_属性按照\_\_\_INLINE\_CODE\_DESC\_USD\_3\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_4\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_5\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_6\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_7\_\_\_、\_\_\_INLINE\_CODE\_DESC\_USD\_8\_\_\_的顺序具有“继承性”，未设置值的断点将会从前一个断点取值。
+`span`、`offset`、`order`属性按照`xs`、`sm`、`md`、`lg`、`xl`、`xxl`的顺序具有“继承性”，未设置值的断点将会从前一个断点取值。
 
-API version 20之后，\_\_\_INLINE\_CODE\_DESC\_USD\_9\_\_\_的继承规则见[GridColColumnOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_，\_\_\_INLINE\_CODE\_DESC\_USD\_10\_\_\_和\_\_\_INLINE\_CODE\_DESC\_USD\_11\_\_\_的继承规则保持不变。
+API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)，`offset`和`order`的继承规则保持不变。
 
 **起始版本：** 9
 

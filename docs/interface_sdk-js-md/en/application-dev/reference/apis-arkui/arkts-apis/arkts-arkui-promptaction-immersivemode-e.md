@@ -1,6 +1,6 @@
 # ImmersiveMode
 
-Define the immersive mode of all kind of dialog
+页面内弹窗蒙层显示区域模式。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Define the immersive mode of all kind of dialog
 DEFAULT = 0
 ```
 
-Mask covering the parent node.
+弹窗蒙层遵循父节点布局约束进行显示。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Mask covering the parent node.
 EXTEND = 1
 ```
 
-Mask extend safe area includes status bar and navigation bar.
+弹窗蒙层可扩展至覆盖状态栏和导航条。
 
 **Since:** 23
 

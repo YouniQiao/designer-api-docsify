@@ -1,8 +1,8 @@
 # MouseEvent
 
-继承于[BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** MouseEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**继承/实现关系：** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 8
 
@@ -36,7 +36,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHistoricalPoints
 
@@ -46,7 +46,7 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 
 获取当前帧的所有历史点信息。历史点可用于实现更平滑的绘制效果。
 
-该接口仅能在[MouseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中调用，用于获取触发[onMouse]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_数目大于1，会将该帧最后一个点通过[onMouse]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_返回，其余点作为历史点。
+该接口仅能在[MouseEvent](arkts-arkui-mouseevent-i.md)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](arkts-arkui-mouseevent-i.md)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse)返回，其余点作为历史点。
 
 **起始版本：** 26.0.0
 
@@ -72,7 +72,7 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 stopPropagation: () => void
 ```
 
-阻塞\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
 **起始版本：** 8
 
@@ -92,7 +92,7 @@ action: MouseAction
 
 鼠标动作。
 
-**类型：** MouseAction
+**类型：** [MouseAction](../arkts-apis/arkts-arkui-mouseaction-e.md)
 
 **起始版本：** 8
 
@@ -112,7 +112,7 @@ button: MouseButton
 
 鼠标按键。
 
-**类型：** MouseButton
+**类型：** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)
 
 **起始版本：** 8
 
@@ -182,7 +182,7 @@ eventHandleId?: number
 
 取值范围：[0, +∞)
 
-**说明：** 在使用[postInputEventWithStrategy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
@@ -206,7 +206,7 @@ eventHandleId?: number
 globalDisplayX?: number
 ```
 
-鼠标位置在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
 单位：vp
 
@@ -232,7 +232,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标光标在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+鼠标光标在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
 
 单位：vp
 
@@ -260,7 +260,7 @@ pressedButtons?: MouseButton[]
 
 当前按下的鼠标按键集合。
 
-**类型：** MouseButton[]
+**类型：** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)[]
 
 **起始版本：** 15
 
@@ -340,7 +340,7 @@ screenX: number
 
 **废弃版本：** 10
 
-**替代接口：** [MouseEvent#windowX](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-mouseevent-i.md#windowx)
+**替代接口：** [MouseEvent#windowX](arkts-arkui-mouseevent-i.md#windowx)
 
 <!--Device-MouseEvent-screenX: number--><!--Device-MouseEvent-screenX: number-End-->
 
@@ -364,7 +364,7 @@ screenY: number
 
 **废弃版本：** 10
 
-**替代接口：** [MouseEvent#windowY](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-mouseevent-i.md#windowy)
+**替代接口：** [MouseEvent#windowY](arkts-arkui-mouseevent-i.md#windowy)
 
 <!--Device-MouseEvent-screenY: number--><!--Device-MouseEvent-screenY: number-End-->
 
@@ -424,7 +424,7 @@ windowY: number
 x: number
 ```
 
-鼠标位置在事件响应组件为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+鼠标位置在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
 
 单位：vp
 
@@ -446,7 +446,7 @@ x: number
 y: number
 ```
 
-鼠标位置在事件响应组件为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+鼠标位置在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
 
 单位：vp
 

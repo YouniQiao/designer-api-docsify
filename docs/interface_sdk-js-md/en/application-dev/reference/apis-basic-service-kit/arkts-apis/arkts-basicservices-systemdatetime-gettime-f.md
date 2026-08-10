@@ -1,12 +1,18 @@
 # getTime
 
+## Modules to Import
+
+```TypeScript
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getTime
 
 ```TypeScript
 function getTime(isNanoseconds?: boolean): long
 ```
 
-Obtains the time elapsed since the Unix epoch. This API returns the result synchronously.
+使用同步方式获取自Unix纪元以来到当前系统时间所经过的时间。
 
 **Since:** 10
 
@@ -26,9 +32,9 @@ Obtains the time elapsed since the Unix epoch. This API returns the result synch
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Time elapsed since the Unix epoch. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 自Unix纪元以来到当前系统时间所经过的时间。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

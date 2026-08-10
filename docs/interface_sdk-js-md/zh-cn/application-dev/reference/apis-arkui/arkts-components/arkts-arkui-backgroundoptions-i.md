@@ -20,7 +20,7 @@ Set the alignment of the custom background and component.
 
 Anonymous Object Rectification.
 
-**类型：** Alignment
+**类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **默认值：** Alignment.Center
 

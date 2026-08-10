@@ -10,6 +10,12 @@ Provides the aperture query capability.
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getSupportedPhysicalApertures
 
 ```TypeScript
@@ -38,8 +44,9 @@ Gets the supported physical apertures.Move to ApertureQuery interface from Apert
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 24+ |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 11 - 23 |
 
 ## getSupportedVirtualApertures
 
@@ -67,16 +74,16 @@ Obtains the supported virtual apertures.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Array of virtual apertures supported. |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Array of virtual apertures supported. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 function getSupportedVirtualApertures(session: camera.PortraitPhotoSession): Array<number> {

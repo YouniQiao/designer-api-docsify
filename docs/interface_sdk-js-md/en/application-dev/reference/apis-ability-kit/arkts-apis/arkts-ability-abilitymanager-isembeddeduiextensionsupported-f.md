@@ -1,12 +1,18 @@
 # isEmbeddedUIExtensionSupported
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## isEmbeddedUIExtensionSupported
 
 ```TypeScript
 function isEmbeddedUIExtensionSupported(): boolean
 ```
 
-Indicates whether the current device supports EmbeddedUIExtensionAbility.
+开发者通过调用该接口判断[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)是否可以在当前设备上使用。
 
 **Since:** 26.0.0
 
@@ -22,5 +28,5 @@ Indicates whether the current device supports EmbeddedUIExtensionAbility.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | 当前设备是否支持[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)。返回 true表示当前设备支持；返回false表示当前设备不支持。 |
 

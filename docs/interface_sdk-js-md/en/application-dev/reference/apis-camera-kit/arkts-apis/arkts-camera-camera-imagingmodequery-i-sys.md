@@ -12,6 +12,12 @@ Imaging mode query object.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isImagingModeSupported
 
 ```TypeScript
@@ -36,7 +42,7 @@ Checks whether a camera imaging mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Imaging mode. |
+| mode | [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) | Yes | Imaging mode. |
 
 **Return value:**
 
@@ -48,6 +54,6 @@ Checks whether a camera imaging mode is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 

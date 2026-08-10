@@ -1,6 +1,6 @@
 # CliInfo (System API)
 
-Represents CLI (Command Line Interface) information.
+表示CLI（Command Line Interface，命令行界面）信息。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Represents CLI (Command Line Interface) information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## cliName
 
 ```TypeScript
 cliName: string
 ```
 
-CLI name. This field cannot be empty and its length cannot exceed 256 characters.
+CLI名称。该字段不能为空，且长度不能超过256个字符。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ CLI name. This field cannot be empty and its length cannot exceed 256 characters
 subCliName: string
 ```
 
-CLI sub-command name. This field can be empty, but its length cannot exceed 256 characters.
+CLI子命令名称。该字段可以为空，但长度不能超过256个字符。
 
 **Type:** string
 

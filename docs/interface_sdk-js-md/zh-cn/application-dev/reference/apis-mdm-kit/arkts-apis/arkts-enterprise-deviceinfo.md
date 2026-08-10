@@ -8,9 +8,10 @@
 - 企业设备合规性检查  
 - 设备信息采集与统计  
 - 故障诊断与设备识别
-    **说明：**  
-    
-    本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+
+> **说明：**
+> 
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 12
 
@@ -19,6 +20,12 @@
 <!--Device-unnamed-declare namespace deviceInfo--><!--Device-unnamed-declare namespace deviceInfo-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { deviceInfo } from 'kits/@kit.MDMKit';
+```
 
 ## 汇总
 

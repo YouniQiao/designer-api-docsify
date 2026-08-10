@@ -14,6 +14,12 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -38,9 +44,9 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -77,7 +83,7 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 | value | V | 是 | 被移除的值。 |
 | newValue | V | 是 | 如果调用了 **put()** 方法并且要添加的 key 已存在时该 key 的新值。其他情况下此参数为空。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 class ChildLruBuffer<K, V> extends util.LruBuffer<K, V> {
@@ -122,7 +128,7 @@ clear(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -157,7 +163,7 @@ constructor(capacity?: number)
 | --- | --- | --- | --- |
 | capacity | number | 否 | 要创建的缓存的容量。默认值为 **64**。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -195,7 +201,7 @@ contains(key: K): boolean
 | --- | --- |
 | boolean | 检查结果。如果缓存包含指定的 key，则返回 **true**；否则返回 **false**。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -237,7 +243,7 @@ createDefault(key: K): V
 | --- | --- |
 | V | key 对应的值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -268,9 +274,9 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 可迭代的数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 可迭代的数组。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -310,7 +316,7 @@ get(key: K): V | undefined
 | --- | --- |
 | V | key 对应的值。如果未找到匹配项，则返回 **undefined**。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -346,7 +352,7 @@ getCapacity(): number
 | --- | --- |
 | number | 缓存的容量。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -381,7 +387,7 @@ getCreateCount(): number
 | --- | --- |
 | number | createDefault()** 的返回值数量。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -417,7 +423,7 @@ getMatchCount(): number
 | --- | --- |
 | number | 查询值匹配的次数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -454,7 +460,7 @@ getMissCount(): number
 | --- | --- |
 | number | 查询值未匹配的次数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -491,7 +497,7 @@ getPutCount(): number
 | --- | --- |
 | number | 向缓存添加的次数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -527,7 +533,7 @@ getRemovalCount(): number
 | --- | --- |
 | number | 从缓存中移除的次数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -565,7 +571,7 @@ isEmpty(): boolean
 | --- | --- |
 | boolean | 如果缓存不包含任何值，则返回 **true**。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -601,7 +607,7 @@ keys(): K[]
 | --- | --- |
 | K[] | 此缓存中的所有 key，按从最近最多访问到最近最少访问的顺序排列。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -644,7 +650,7 @@ put(key: K, value: V): V
 | --- | --- |
 | V | 添加的值。如果 key 已存在，则返回已存在的值；如果 **key** 或 **value** 传入 **null**，则抛出错误。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -685,7 +691,7 @@ remove(key: K): V | undefined
 | --- | --- |
 | V | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional** 对象；如果 **key** 传入 **null**，则抛出错误。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -721,7 +727,7 @@ toString(): string
 | --- | --- |
 | string | 此缓存的字符串表示形式。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -759,7 +765,7 @@ updateCapacity(newCapacity: number): void
 | --- | --- | --- | --- |
 | newCapacity | number | 是 | 缓存的新容量。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -792,7 +798,7 @@ values(): V[]
 | --- | --- |
 | V[] | 此缓存中的所有值，按从最近最多访问到最近最少访问的顺序排列。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pro : util.LruBuffer<number|string,number|string> = new util.LruBuffer();

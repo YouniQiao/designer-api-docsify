@@ -1,6 +1,6 @@
 # X509CertRevokedParams
 
-Parameters for checking certificate revocation status.
+表示证书吊销检查参数。
 
 **Since:** 26.0.0
 
@@ -10,16 +10,23 @@ Parameters for checking certificate revocation status.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## allowDownloadCrl
 
 ```TypeScript
 allowDownloadCrl?: boolean
 ```
 
-Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL.
-    **NOTE**  
-    
-    Skip download if matching CRL exists in crls.
+是否允许下载CRL，默认值为false。true：尝试使用证书的CDP扩展下载CRL；false：不尝试下载CRL。
+
+> **说明：**
+> 
+> 如果crls中存在匹配的CRL，则跳过下载。
 
 **Type:** boolean
 
@@ -43,13 +50,13 @@ Indicates whether to allow CRL download. The default value is false. true: The C
 allowOcspCheckOnline?: boolean
 ```
 
-Indicates whether to allow online OCSP check. The default value is false.  
-- **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the  
-certificate and send a request to obtain a response;  
-- **false**: does not perform online OCSP check.
-    **NOTE**  
-    
-    Skip online OCSP check if a matching OCSP response is found in ocspResponses.
+是否允许在线OCSP检查，默认值为false。  
+- true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应；  
+- false：不执行在线OCSP检查。
+
+> **说明：**
+> 
+> 如果在ocspResponses中找到匹配的OCSP响应，则跳过在线OCSP检查。
 
 **Type:** boolean
 
@@ -73,7 +80,7 @@ certificate and send a request to obtain a response;
 crls?: Array<X509CRL>
 ```
 
-CRL list. Maximum count: 100.
+CRL列表。最大个数：100。
 
 **Type:** Array&lt;X509CRL&gt;
 
@@ -95,9 +102,9 @@ CRL list. Maximum count: 100.
 ocspDigest?: OcspDigest
 ```
 
-Digest algorithm used by OCSP requests. The default value is SHA256.
+OCSP请求使用的摘要算法，默认值为SHA256。
 
-**Type:** OcspDigest
+**Type:** [OcspDigest](arkts-devicecertificate-cert-ocspdigest-e.md)
 
 **Default:** SHA256
 
@@ -119,7 +126,7 @@ Digest algorithm used by OCSP requests. The default value is SHA256.
 ocspResponses?: Array<Uint8Array>
 ```
 
-Preconfigured OCSP response data. Maximum count: 100.
+OCSP响应数据。预置的OCSP响应数据。最大个数：100。
 
 **Type:** Array&lt;Uint8Array&gt;
 
@@ -141,7 +148,7 @@ Preconfigured OCSP response data. Maximum count: 100.
 revocationFlags: Array<CertRevocationFlag>
 ```
 
-Revocation check flag. Array length range: [1,4]. The array must contain either CERT\_REVOCATION\_CRL\_CHECK or CERT\_REVOCATION\_OCSP\_CHECK.
+吊销检查标志。数组长度范围：[1, 4]。数组必须包含CERT_REVOCATION_CRL_CHECK或CERT_REVOCATION_OCSP_CHECK。
 
 **Type:** Array&lt;CertRevocationFlag&gt;
 

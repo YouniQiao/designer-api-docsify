@@ -1,12 +1,18 @@
 # isApplicationEnabledSync (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## isApplicationEnabledSync
 
 ```TypeScript
 function isApplicationEnabledSync(bundleName: string): boolean
 ```
 
-Checks whether an application is enabled. This API returns the result synchronously.
+以同步方法获取指定应用的禁用或使能状态。
 
 **Since:** 10
 
@@ -22,23 +28,23 @@ Checks whether an application is enabled. This API returns the result synchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
+| bundleName | string | Yes | 表示应用程序的bundleName。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the application is enabled. **true** if enabled, **false** otherwise. |
+| boolean | 返回true表示当前应用为使能状态，返回false表示当前应用为禁用状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

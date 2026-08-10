@@ -1,12 +1,18 @@
 # getScannerCurrentSetting
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getScannerCurrentSetting
 
 ```TypeScript
 function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<ScannerOptionValue>
 ```
 
-Obtains the current scanner settings. This API uses a promise to return the result.
+获取当前扫描仪设置。使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,22 +28,22 @@ Obtains the current scanner settings. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | Scanner ID. |
-| optionIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the option to be obtained. |
+| scannerId | string | Yes | 扫描仪的ID。 |
+| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要获取的选项的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ScannerOptionValue&gt; | Promise used to return the scanner option value. |
+| Promise&lt;ScannerOptionValue&gt; | Promise对象，返回扫描仪选项值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

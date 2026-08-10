@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## eventType
 
 ```TypeScript
@@ -18,7 +24,7 @@ eventType: InterruptType
 
 音频中断事件类型，开始或是结束。
 
-**类型：** InterruptType
+**类型：** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ forceType: InterruptForceType
 
 操作是由系统强制执行或是由应用程序执行。
 
-**类型：** InterruptForceType
+**类型：** [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)
 
 **起始版本：** 9
 
@@ -58,7 +64,7 @@ hintType: InterruptHint
 
 中断提示，用于提供中断事件的相关信息。
 
-**类型：** InterruptHint
+**类型：** [InterruptHint](arkts-audio-audio-interrupthint-e.md)
 
 **起始版本：** 9
 

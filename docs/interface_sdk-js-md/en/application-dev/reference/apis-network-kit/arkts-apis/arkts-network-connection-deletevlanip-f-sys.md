@@ -1,12 +1,18 @@
 # deleteVlanIp (System API)
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## deleteVlanIp
 
 ```TypeScript
 function deleteVlanIp(ifName: string, vlanId: int, address: LinkAddress): Promise<void>
 ```
 
-Delete ip of vlan interface by vlanId.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY\_INTERNAL} permission.
+Delete ip of vlan interface by vlanId.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
 **Since:** 23
 
@@ -27,27 +33,27 @@ Delete ip of vlan interface by vlanId.To invoke this method, you must have the {
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ifName | string | Yes | interface name. |
-| vlanId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | vlan id. |
-| address | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | vlan ip address. |
+| vlanId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | vlan id. |
+| address | [LinkAddress](arkts-network-vpn-linkaddress-t.md) | Yes | vlan ip address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-nonethernet) | The input network interface name is incorrect. |
-| [2100401](../errorcode-net-connection.md#2100401-no-ip-address-configured-on-the-vlan-is-found) | The input IP address is not found. |
+| 2100400 | The input network interface name is incorrect. |
+| 2100401 | The input IP address is not found. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
+| 202 | Nonsystem applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

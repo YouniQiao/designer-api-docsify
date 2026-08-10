@@ -4,7 +4,7 @@
 type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'
 ```
 
-Custom tab type USER\_INFO & TAB, COMPILATION, SETTINGS.
+自定义类型。该类型可取的值为下表字符串。
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Custom tab type USER\_INFO & TAB, COMPILATION, SETTINGS.
 
 | Type | Description |
 | --- | --- |
-| 'USER\_INFO' |  |
+| 'USER_INFO' |  |
 | 'TAB' |  |
 | 'COMPILATION' |  |
 | 'SETTINGS' |  |

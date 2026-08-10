@@ -1,6 +1,6 @@
 # DocumentSaveOptions
 
-Defines the options for saving documents.
+文档保存选项。
 
 **Since:** 23
 
@@ -11,4 +11,10 @@ Defines the options for saving documents.
 <!--Device-picker-interface DocumentSaveOptions--><!--Device-picker-interface DocumentSaveOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
+
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 

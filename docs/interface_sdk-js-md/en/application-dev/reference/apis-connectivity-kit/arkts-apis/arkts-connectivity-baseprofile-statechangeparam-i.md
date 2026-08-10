@@ -10,6 +10,12 @@ Profile state change parameters.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { baseProfile } from 'kits/@kit.ConnectivityKit';
+```
+
 ## cause
 
 ```TypeScript
@@ -18,7 +24,7 @@ cause: DisconnectCause
 
 Cause of disconnect
 
-**Type:** DisconnectCause
+**Type:** [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md)
 
 **Since:** 12
 
@@ -58,7 +64,7 @@ role?: PanRole
 
 PAN role of the device
 
-**Type:** PanRole
+**Type:** [PanRole](arkts-connectivity-baseprofile-panrole-e.md)
 
 **Since:** 26.0.0
 
@@ -78,7 +84,7 @@ state: ProfileConnectionState
 
 Profile state value
 
-**Type:** ProfileConnectionState
+**Type:** [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
 
 **Since:** 10
 

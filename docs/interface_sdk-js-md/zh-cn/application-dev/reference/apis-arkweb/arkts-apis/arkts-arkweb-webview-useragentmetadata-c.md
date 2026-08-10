@@ -10,6 +10,12 @@ Holds User-Agent metadata information and uses to generate User-Agent client hin
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## getArchitecture
 
 ```TypeScript
@@ -32,7 +38,7 @@ Gets the value for sec-ch-ua-architecture.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns the value for sec-ch-ua-architecture. |
+| string | Returns the value for sec-ch-ua-architecture. |
 
 ## getBitness
 
@@ -56,7 +62,7 @@ Gets the value for the sec-ch-ua-bitness.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns the value for the sec-ch-ua-bitness. |
+| string | Returns the value for the sec-ch-ua-bitness. |
 
 ## getBrandVersionList
 
@@ -80,7 +86,7 @@ Returns the current list of UserAgentBrandVersion which are used to generate the
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;UserAgentBrandVersion&gt; |  Returns the current list of UserAgentBrandVersion. |
+| Array&lt;UserAgentBrandVersion&gt; | Returns the current list of UserAgentBrandVersion. |
 
 ## getFormFactors
 
@@ -104,7 +110,7 @@ Gets the value for the sec-ch-ua-form-factors.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;UserAgentFormFactor&gt; |  Returns the form factors. |
+| Array&lt;UserAgentFormFactor&gt; | Returns the form factors. |
 
 ## getFullVersion
 
@@ -128,7 +134,7 @@ Gets the value for the sec-ch-ua-full-version.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns the value for the sec-ch-ua-full-version. |
+| string | Returns the value for the sec-ch-ua-full-version. |
 
 ## getMobile
 
@@ -152,7 +158,7 @@ Gets the value for the sec-ch-ua-mobile.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  Returns the value for the sec-ch-ua-mobile. |
+| boolean | Returns the value for the sec-ch-ua-mobile. |
 
 ## getModel
 
@@ -176,7 +182,7 @@ Gets the value for the sec-ch-ua-model.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns the value for the sec-ch-ua-model. |
+| string | Returns the value for the sec-ch-ua-model. |
 
 ## getPlatform
 
@@ -200,7 +206,7 @@ Gets the value for the sec-ch-ua-platform.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns the value for the sec-ch-ua-platform. |
+| string | Returns the value for the sec-ch-ua-platform. |
 
 ## getPlatformVersion
 
@@ -224,7 +230,7 @@ Gets the value for the sec-ch-ua-platform-version.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns the value for the sec-ch-ua-platform-version. |
+| string | Returns the value for the sec-ch-ua-platform-version. |
 
 ## getWow64
 
@@ -248,7 +254,7 @@ Gets the value for the sec-ch-ua-wow64.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  Returns the value for the sec-ch-ua-wow64. |
+| boolean | Returns the value for the sec-ch-ua-wow64. |
 
 ## setArchitecture
 
@@ -258,7 +264,7 @@ setArchitecture(arch: string): void
 
 Sets User-Agent metadata architecture.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The default value is empty string which means the system default value will be used.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
 
 **起始版本：** 24
 
@@ -308,7 +314,7 @@ setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 
 Sets User-Agent metadata brands and their versions.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The default value is an empty list which means the system default User-Agent metadata brands and versions will be used to generate the User-Agent client hints.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is an empty list which means the system default User-Agent metadata brands and versions will be used to generate the User-Agent client hints.&lt;/p&gt;
 
 **起始版本：** 24
 
@@ -334,7 +340,7 @@ setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 
 Sets User-Agent metadata form factors.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The default value is empty list which means the system default value will be used.Form factor value should be one or more of DESKTOP, AUTOMOTIVE, MOBILE, TABLET, XR, EINK, WATCH.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty list which means the system default value will be used.Form factor value should be one or more of DESKTOP, AUTOMOTIVE, MOBILE, TABLET, XR, EINK, WATCH.&lt;/p&gt;
 
 **起始版本：** 24
 
@@ -360,7 +366,7 @@ setFullVersion(fullVersion: string): void
 
 Sets User-Agent metadata full version.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The default value is empty string which means the system default value will be used.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
 
 **起始版本：** 24
 
@@ -410,7 +416,7 @@ setModel(model: string): void
 
 Sets User-Agent metadata model.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The default value is empty string which means the system default value will be used.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
 
 **起始版本：** 24
 
@@ -436,7 +442,7 @@ setPlatform(platform: string): void
 
 Sets User-Agent metadata platform.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The default value is empty string which means the system default value will be used.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
 
 **起始版本：** 24
 
@@ -462,7 +468,7 @@ setPlatformVersion(platformVersion: string): void
 
 Sets User-Agent metadata platform version.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The default value is empty string which means the system default value will be used.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
 
 **起始版本：** 24
 

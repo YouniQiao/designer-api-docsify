@@ -12,6 +12,12 @@ Describes upload file information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+```
+
 ## filesContent
 
 ```TypeScript
@@ -60,7 +66,7 @@ type: UploadFileType
 
 Report file type.
 
-**Type:** UploadFileType
+**Type:** [UploadFileType](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md)
 
 **Since:** 12
 

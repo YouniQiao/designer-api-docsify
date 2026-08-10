@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authSubType
 
 ```TypeScript
@@ -20,7 +26,7 @@ authSubType: AuthSubType
 
 指示认证凭据子类型。
 
-**类型：** AuthSubType
+**类型：** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
 **起始版本：** 8
 
@@ -40,7 +46,7 @@ authType: AuthType
 
 身份验证凭据类型。
 
-**类型：** AuthType
+**类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **起始版本：** 8
 
@@ -120,7 +126,7 @@ validityPeriod?: long
 
 指示凭据有效期，单位为ms。默认为undefined，表示有效期未定义。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 20
 

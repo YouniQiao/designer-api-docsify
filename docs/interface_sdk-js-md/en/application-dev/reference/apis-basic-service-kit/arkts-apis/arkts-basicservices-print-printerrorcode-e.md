@@ -1,6 +1,6 @@
 # PrintErrorCode
 
-Enumerates the print error codes.
+打印错误代码的枚举。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates the print error codes.
 E_PRINT_NONE = 0
 ```
 
-No error.
+表示没有错误。
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ No error.
 E_PRINT_NO_PERMISSION = 201
 ```
 
-No permission.
+表示没有许可。
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ No permission.
 E_PRINT_INVALID_PARAMETER = 401
 ```
 
-Invalid parameters.
+表示无效的参数。
 
 **Since:** 14
 
@@ -64,7 +64,7 @@ Invalid parameters.
 E_PRINT_GENERIC_FAILURE = 13100001
 ```
 
-Printing failure.
+表示一般打印失败。
 
 **Since:** 14
 
@@ -80,7 +80,7 @@ Printing failure.
 E_PRINT_RPC_FAILURE = 13100002
 ```
 
-RPC failure.
+表示RPC失败。
 
 **Since:** 14
 
@@ -96,7 +96,7 @@ RPC failure.
 E_PRINT_SERVER_FAILURE = 13100003
 ```
 
-Print service failure.
+表示打印服务失败。
 
 **Since:** 14
 
@@ -112,7 +112,7 @@ Print service failure.
 E_PRINT_INVALID_EXTENSION = 13100004
 ```
 
-Invalid printer extension.
+表示打印扩展无效。
 
 **Since:** 14
 
@@ -128,7 +128,7 @@ Invalid printer extension.
 E_PRINT_INVALID_PRINTER = 13100005
 ```
 
-Invalid printer.
+表示打印机无效。
 
 **Since:** 14
 
@@ -144,7 +144,7 @@ Invalid printer.
 E_PRINT_INVALID_PRINT_JOB = 13100006
 ```
 
-Invalid print job.
+表示打印任务无效。
 
 **Since:** 14
 
@@ -160,7 +160,7 @@ Invalid print job.
 E_PRINT_FILE_IO = 13100007
 ```
 
-Incorrect file input/output.
+表示文件输入/输出错误。
 
 **Since:** 14
 
@@ -176,7 +176,7 @@ Incorrect file input/output.
 E_PRINT_TOO_MANY_FILES = 13100010
 ```
 
-Excessive files. Maximum number: 99.
+表示文件数量超过上限，当前上限99个。
 
 **Since:** 18
 
@@ -192,7 +192,9 @@ Excessive files. Maximum number: 99.
 E_PRINT_SMB_LOGIN_LOCKOUT = 13100012
 ```
 
-The SMB account is locked due to multiple failed login attempts.
+表示当前SMB协议共享打印机账号因多次登录失败而被锁定。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Since:** 24
 
@@ -210,7 +212,9 @@ The SMB account is locked due to multiple failed login attempts.
 E_PRINT_SMB_CONNECTION_FAILURE = 13100013
 ```
 
-SMB Connection Failure (A network error occurs, the host is unreachable, or the port is blocked.)
+表示SMB协议共享打印机连接失败（发生网络错误、主机不可达或端口被阻止）。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Since:** 24
 
@@ -228,7 +232,9 @@ SMB Connection Failure (A network error occurs, the host is unreachable, or the 
 E_PRINT_SMB_INVALID_CREDENTIALS = 13100014
 ```
 
-The login account or password is invalid.
+表示SMB协议共享打印机账号/密码错误。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Since:** 24
 

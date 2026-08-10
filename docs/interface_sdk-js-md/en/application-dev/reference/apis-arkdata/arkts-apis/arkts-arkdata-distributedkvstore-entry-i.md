@@ -1,6 +1,6 @@
 # Entry
 
-Provides key-value pairs stored in the distributedKVStore.
+存储在数据库中的键值对。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Provides key-value pairs stored in the distributedKVStore.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## key
 
 ```TypeScript
 key: string
 ```
 
-Indicates the key
+表示键名。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the key
 value: Value
 ```
 
-Indicates the value
+值对象。
 
-**Type:** Value
+**Type:** [Value](arkts-arkdata-distributeddata-value-i.md)
 
 **Since:** 9
 

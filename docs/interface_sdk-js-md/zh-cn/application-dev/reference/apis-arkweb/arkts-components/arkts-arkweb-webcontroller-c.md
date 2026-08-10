@@ -228,7 +228,7 @@ Gets network cookie manager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [WebCookie](arkts-arkweb-webcookie-c.md) |  |
 
 ## getHitTest
 
@@ -254,7 +254,7 @@ getHitTest(): HitTestType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 点击测试类型。 |
+| [HitTestType](arkts-arkweb-hittesttype-e.md) | 点击测试类型。 |
 
 ## loadData
 
@@ -314,7 +314,7 @@ Loads the given URL.
 onActive(): void
 ```
 
-Let the Web active.It is no longer maintained since API version 9, and it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+Let the Web active.It is no longer maintained since API version 9, and it is recommended to use {@link onActive} instead.
 
 **起始版本：** 8
 
@@ -334,7 +334,7 @@ Let the Web active.It is no longer maintained since API version 9, and it is rec
 onInactive(): void
 ```
 
-Let the Web inactive.It is no longer maintained since API version 9, and it is recommended to use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+Let the Web inactive.It is no longer maintained since API version 9, and it is recommended to use {@link onInactive} instead.
 
 **起始版本：** 8
 
@@ -420,7 +420,7 @@ Gets the request focus.
 runJavaScript(options: { script: string, callback?: (result: string) => void })
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_API Note\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_
+Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.&lt;p&gt;
 
 **起始版本：** 8
 

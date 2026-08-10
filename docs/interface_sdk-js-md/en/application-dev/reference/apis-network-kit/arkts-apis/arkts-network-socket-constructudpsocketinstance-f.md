@@ -1,5 +1,11 @@
 # constructUDPSocketInstance
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## constructUDPSocketInstance
 
 ```TypeScript
@@ -20,9 +26,9 @@ Creates a UDPSocket object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the UDPSocket of the constructUDPSocketInstance. |
+| [UDPSocket](arkts-network-socket-udpsocket-i.md) | the UDPSocket of the constructUDPSocketInstance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

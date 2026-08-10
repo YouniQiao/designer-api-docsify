@@ -1,6 +1,6 @@
 # Banner
 
-海报的定义。继承自[MediaEntity]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+海报的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
 
 **继承/实现关系：** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -11,6 +11,12 @@
 <!--Device-avMusicTemplate-interface Banner extends MediaEntity--><!--Device-avMusicTemplate-interface Banner extends MediaEntity-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
 
 ## isSupportOnePlay
 

@@ -14,6 +14,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { recent } from 'kits/@kit.CoreFileKit';
+```
+
 ## ctime
 
 ```TypeScript
@@ -68,7 +74,7 @@ readonly fileName: string
 readonly mode: number
 ```
 
-[文件权限信息]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+[文件权限信息](arkts-corefile-file-fs-stat-i.md)。
 
 **类型：** number
 

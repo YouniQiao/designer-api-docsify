@@ -4,7 +4,7 @@
 export type ModuleDistroInfo = _PackInfo.ModuleDistroInfo
 ```
 
-Defines the distribution information of the module.
+module发行版信息。
 
 **Since:** 9
 

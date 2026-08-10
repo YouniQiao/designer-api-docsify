@@ -18,7 +18,7 @@ renderExitReason: RenderExitReason
 
 The specific reason why the rendering process exits abnormally.
 
-**类型：** RenderExitReason
+**类型：** [RenderExitReason](../arkts-apis/arkts-arkweb-web-renderexitreason-e.md)
 
 **起始版本：** 12
 

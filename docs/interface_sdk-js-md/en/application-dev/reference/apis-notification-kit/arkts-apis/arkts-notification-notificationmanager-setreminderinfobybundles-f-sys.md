@@ -1,12 +1,18 @@
 # setReminderInfoByBundles (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## setReminderInfoByBundles
 
 ```TypeScript
 function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>) : Promise<void>
 ```
 
-Batch sets reminders for specified applications. This API uses a promise to return the result.
+批量设置指定应用提醒信息。使用Promise异步回调。
 
 **Since:** 21
 
@@ -24,26 +30,26 @@ Batch sets reminders for specified applications. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderInfos | Array&lt;NotificationReminderInfo&gt; | Yes | Reminders to be set. |
+| reminderInfos | Array&lt;NotificationReminderInfo&gt; | Yes | 设置应用通知提醒信息的列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| 1600012 | No memory space. |
+| 201 | Permission denied. |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface. |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

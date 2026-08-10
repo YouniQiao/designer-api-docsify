@@ -1,5 +1,11 @@
 # getOverlayModuleInfoByBundleName (System API)
 
+## Modules to Import
+
+```TypeScript
+import { overlay } from 'kits/@kit.AbilityKit';
+```
+
 ## getOverlayModuleInfoByBundleName
 
 ```TypeScript
@@ -7,9 +13,9 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
       callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.
+获取指定应用中所有module的OverlayModuleInfo信息。使用callback异步回调。
 
-No permission is required when the specified application is the caller itself.
+指定应用是调用方自身时不需要权限。
 
 **Since:** 10
 
@@ -27,20 +33,20 @@ No permission is required when the specified application is the caller itself.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result, which is an array of [OverlayModuleInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| bundleName | string | Yes | 指定应用的bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取指定应用中所有 module的[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)信息成功时，err返回undefined。否则回调函 数返回具体错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700032 | The specified bundle does not contain any overlay module. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -71,9 +77,9 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.
+获取指定应用中指定module的OverlayModuleInfo信息。使用callback异步回调。
 
-No permission is required when the specified application is the caller itself.
+指定应用是调用方自身时不需要权限。
 
 **Since:** 10
 
@@ -91,23 +97,23 @@ No permission is required when the specified application is the caller itself.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| moduleName | string | Yes | Name of the module with the overlay feature. If this parameter is not specified, the API obtains the information of all modules with the overlay feature in that application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result, which is an array of [OverlayModuleInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| bundleName | string | Yes | 指定应用的bundle名称。 |
+| moduleName | string | Yes | 指定应用中的overlay module的名称。缺省该字段时，查询接口将查询指定应用中所有module的OverlayModuleInfo信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取指定应用中指定 module的[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)信息成功时，err返回undefined。否则回调函 数返回具体错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
-| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
-| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700002 | The specified module name is not found. |
+| 17700032 | The specified bundle does not contain any overlay module. |
+| 17700001 | The specified bundleName is not found. |
+| 17700033 | The specified module is not an overlay module. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -139,9 +145,9 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>
 ```
 
-Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result.
+获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。
 
-No permission is required when the specified application is the caller itself.
+指定应用是调用方自身时不需要权限。
 
 **Since:** 10
 
@@ -159,28 +165,28 @@ No permission is required when the specified application is the caller itself.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| moduleName | string | No | Name of the module with the overlay feature. By default, no value is passed, and the API obtains the information of all modules with the overlay feature in that application. |
+| bundleName | string | Yes | 指定应用的bundle名称。 |
+| moduleName | string | No | 指定应用中的overlay module的名称。默认值：缺省该字段时，查询接口将查询指定应用中所有module的OverlayModuleInfo信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise used to return the result, which is an array of [OverlayModuleInfo]{ |
+| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise对象，返回<Array< [OverlayModuleInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
-| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
-| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700002 | The specified module name is not found. |
+| 17700032 | The specified bundle does not contain any overlay module. |
+| 17700001 | The specified bundleName is not found. |
+| 17700033 | The specified module is not an overlay module. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';

@@ -1,8 +1,8 @@
 # RelativeTimeFormatOptions
 
-An object with some or all of properties of \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ parameter of \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ constructor.
+An object with some or all of properties of `options` parameter of `Intl.RelativeTimeFormat` constructor.
 
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -14,9 +14,9 @@ An object with some or all of properties of \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_
 localeMatcher?: RelativeTimeFormatLocaleMatcher
 ```
 
-The locale matching algorithm to use. For information about this option, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
 
-**Type:** RelativeTimeFormatLocaleMatcher
+**Type:** [RelativeTimeFormatLocaleMatcher](../../apis-arkts/arkts-apis/arkts-arkts-intl-relativetimeformatlocalematcher-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -30,7 +30,7 @@ numeric?: RelativeTimeFormatNumeric
 
 The format of output message.
 
-**Type:** RelativeTimeFormatNumeric
+**Type:** [RelativeTimeFormatNumeric](arkts-intl-relativetimeformatnumeric-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -44,7 +44,7 @@ style?: RelativeTimeFormatStyle
 
 The length of the internationalized message.
 
-**Type:** RelativeTimeFormatStyle
+**Type:** [RelativeTimeFormatStyle](arkts-intl-relativetimeformatstyle-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

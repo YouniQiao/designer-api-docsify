@@ -1,5 +1,11 @@
 # createOppServerProfile (System API)
 
+## Modules to Import
+
+```TypeScript
+import { opp } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createOppServerProfile
 
 ```TypeScript
@@ -24,12 +30,12 @@ create the instance of OPP server profile.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the instance of opp profile. |
+| [OppServerProfile](arkts-connectivity-opp-oppserverprofile-i-sys.md) | Returns the instance of opp profile. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 

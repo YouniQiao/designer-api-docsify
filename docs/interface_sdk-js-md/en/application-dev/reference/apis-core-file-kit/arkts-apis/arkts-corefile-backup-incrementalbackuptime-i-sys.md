@@ -1,6 +1,6 @@
 # IncrementalBackupTime (System API)
 
-Save the time information of the incremental backup. IncrementalBackupTime is useful when doing IPC with the backup service.
+记录最后一次增量备份时间，用于描述备份增量的时间点。
 
 **Since:** 12
 
@@ -12,13 +12,19 @@ Save the time information of the incremental backup. IncrementalBackupTime is us
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Indicates the name of a bundle.
+应用名称。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ Indicates the name of a bundle.
 lastIncrementalTime: long
 ```
 
-Time of the last incremental backup
+最后一次增量备份时间。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 

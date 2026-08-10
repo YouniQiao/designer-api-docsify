@@ -9,7 +9,7 @@ export type PromptActionQuadrupleButtons = [
     ]
 ```
 
-Defines the four-buttons array.
+菜单中的菜单项按钮，仅支持4个按钮。
 
 **Since:** 23
 

@@ -22,11 +22,11 @@ Create a FrameNode of SymbolGlyph type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the FrameNode. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return SymbolGlyph type FrameNode. |
+| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) | Return SymbolGlyph type FrameNode. |
 

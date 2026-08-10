@@ -1,6 +1,6 @@
 # SpringBackAction
 
-Defines sheet spring back action
+控制半模态关闭前的回弹。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines sheet spring back action
 springBack: Callback<void>
 ```
 
-Defines spring back function
+半模态页面关闭前控制回弹函数，开发者需要半模态回弹时调用。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 

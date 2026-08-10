@@ -1,7 +1,6 @@
 # USBEndpoint
 
-Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  
-[USBInterface]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usb-usbinterface-i.md)获取。
 
 **Since:** 8
 
@@ -15,13 +14,19 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## address
 
 ```TypeScript
 address: number
 ```
 
-Endpoint address.
+端点地址。
 
 **Type:** number
 
@@ -43,7 +48,7 @@ Endpoint address.
 attributes: number
 ```
 
-Endpoint attributes.
+端点属性。
 
 **Type:** number
 
@@ -65,9 +70,9 @@ Endpoint attributes.
 direction: USBRequestDirection
 ```
 
-Endpoint direction.
+端点的方向。
 
-**Type:** USBRequestDirection
+**Type:** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
 
 **Since:** 8
 
@@ -87,7 +92,7 @@ Endpoint direction.
 interfaceId: number
 ```
 
-Unique ID of the interface to which the endpoint belongs.
+端点所属的接口的唯一标识。
 
 **Type:** number
 
@@ -109,7 +114,7 @@ Unique ID of the interface to which the endpoint belongs.
 interval: number
 ```
 
-Endpoint interval.
+端点间隔。
 
 **Type:** number
 
@@ -131,7 +136,7 @@ Endpoint interval.
 maxPacketSize: number
 ```
 
-Maximum size of data packets on the endpoint.
+端点最大数据包大小。
 
 **Type:** number
 
@@ -153,7 +158,7 @@ Maximum size of data packets on the endpoint.
 number: number
 ```
 
-Endpoint number.
+端点号。
 
 **Type:** number
 
@@ -175,7 +180,7 @@ Endpoint number.
 type: number
 ```
 
-Endpoint type.
+端点类型。
 
 **Type:** number
 

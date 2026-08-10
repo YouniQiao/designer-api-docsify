@@ -24,7 +24,7 @@ function configure(config: ConfigOption): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用事件打点配置项对象。 |
+| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | 是 | 应用事件打点配置项对象。 |
 
 **返回值：**
 
@@ -32,7 +32,7 @@ function configure(config: ConfigOption): boolean
 | --- | --- |
 | boolean | 配置结果，true 表示配置成功，false 表示配置失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 配置应用事件打点功能开关

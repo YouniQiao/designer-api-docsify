@@ -1,15 +1,16 @@
 # CsrGenerationConfig
 
 用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。
-    **说明：**  
-    
-    - subject是X500DistinguishedName对象。  
-    
-    - mdName是摘要算法名，当前支持SHA1、SHA256、SHA384、SHA512。  
-    
-    - attributes是可选参数，指定**PKCS #9**中规定的扩展类型跟扩展值生成CSR。例如challengePassword。  
-    
-    - outFormat指定输出CSR的格式，若不指定默认为PEM格式。
+
+> **说明：**
+> 
+> - subject是X500DistinguishedName对象。
+> 
+> - mdName是摘要算法名，当前支持SHA1、SHA256、SHA384、SHA512。
+> 
+> - attributes是可选参数，指定**PKCS #9**中规定的扩展类型跟扩展值生成CSR。例如challengePassword。
+> 
+> - outFormat指定输出CSR的格式，若不指定默认为PEM格式。
 
 **起始版本：** 18
 
@@ -18,6 +19,12 @@
 <!--Device-cert-interface CsrGenerationConfig--><!--Device-cert-interface CsrGenerationConfig-End-->
 
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
 
 ## attributes
 
@@ -67,7 +74,7 @@ outFormat?: EncodingBaseFormat
 
 输出类型。
 
-**类型：** EncodingBaseFormat
+**类型：** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)
 
 **默认值：** EncodingBaseFormat.PEM
 
@@ -89,7 +96,7 @@ subject: X500DistinguishedName
 
 主体名称。
 
-**类型：** X500DistinguishedName
+**类型：** [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md)
 
 **起始版本：** 18
 

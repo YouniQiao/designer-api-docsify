@@ -20,11 +20,11 @@ autoAdjustScrollBarMargin(enable: boolean | undefined): T
 
 设置滚动条是否自动调整边距。默认不会自动调整边距。
 
-打开滚动条自动边距调整后，滚动条滚动方向上会避让组件[padding]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、  
-[safeAreaPadding]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_/\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_区域。如果设置了  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_属性，则自动调整边距不生效。当[padding]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、[safeAreaPadding]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_、\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_在水平方向上的总和大于组件的宽度，或在垂直方向上的总和大于组件的高度时，滚动条不显示。
+打开滚动条自动边距调整后，滚动条滚动方向上会避让组件[padding](arkts-arkui-commonmethod-c.md#padding)、  
+[safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)、  
+[contentStartOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentstartoffset22)/[contentEndOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentendoffset22)区域。如果设置了  
+[scrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarmargin20)属性，则自动调整边距不生效。当[padding](arkts-arkui-commonmethod-c.md#padding)、[safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)、  
+[contentStartOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentstartoffset22)、[contentEndOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentendoffset22)在水平方向上的总和大于组件的宽度，或在垂直方向上的总和大于组件的高度时，滚动条不显示。
 
 **起始版本：** 26.0.0
 
@@ -42,7 +42,7 @@ autoAdjustScrollBarMargin(enable: boolean | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | 是 | 是否自动调整边距。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：自动调整边距。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不自动调整边距。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_undefined：不自动调整边距。 |
+| enable | boolean \| undefined | 是 | 是否自动调整边距。 &lt;br&gt;true：自动调整边距。 &lt;br&gt;false：不自动调整边距。 &lt;br&gt;undefined：不自动调整边距。 |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ backToTop(backToTop: boolean): T
 设置滚动组件是否支持点击状态栏回到顶部。
 
 支持当前页面的滚动组件收到点击状态栏事件后，通过动画回到顶部。点击状态栏后，后台应用的滚动组件不受影响，不做回到顶部的动作。本属性不受  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_设置的影响。
+[enableScrollInteraction](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#enablescrollinteraction11)设置的影响。
 
 **起始版本：** 15
 
@@ -77,7 +77,7 @@ backToTop(backToTop: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| backToTop | boolean | 是 | 设置滚动组件是否支持点击状态栏回到顶部。设置为true支持点击状态栏通过动画回到顶部，设置为false不支持点击状态栏回到顶部。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_API version 18之前：false。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_API version 18及以后：滚动方向是水平方向时为false，是垂直方向时为true。 |
+| backToTop | boolean | 是 | 设置滚动组件是否支持点击状态栏回到顶部。设置为true支持点击状态栏通过动画回到顶部，设置为false不支持点击状态栏回到顶部。&lt;br/&gt;默认值：&lt;br/&gt;API version 18之前：false。 &lt;br/&gt;API version 18及以后：滚动方向是水平方向时为false，是垂直方向时为true。 |
 
 **返回值：**
 
@@ -111,7 +111,7 @@ clipContent(clip: ContentClipMode | RectShape): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| clip | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| RectShape | 是 | 裁剪只针对滚动容器的内容，即其子节点，背景不受影响。通过RectShape传入自定义矩形区域时仅支持设置宽高和相对于组件左上角的 [offset]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，不支持圆角。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：Grid、Scroll的默认值为ContentClipMode.BOUNDARY，List、WaterFlow的默认值为ContentClipMode.CONTENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY。 |
+| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| RectShape | 是 | 裁剪只针对滚动容器的内容，即其子节点，背景不受影响。通过RectShape传入自定义矩形区域时仅支持设置宽高和相对于组件左上角的 [offset](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md/arkts-arkui-arkui-shape-commonshapemethod-c.md#offset)，不支持圆角。 &lt;br&gt;默认值：Grid、Scroll的默认值为ContentClipMode.BOUNDARY，List、WaterFlow的默认值为ContentClipMode.CONTENT_ONLY。 |
 
 **返回值：**
 
@@ -145,7 +145,7 @@ contentStartOffset + contentEndOffset超过滚动组件内容区长度后content
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | 内容区末尾偏移量。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围： [0, +∞)\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_设置异常值如负数、非数字Resource时，按默认值处理。 |
+| offset | number \| Resource | 是 | 内容区末尾偏移量。&lt;br/&gt;默认值：0&lt;br/&gt;单位：vp &lt;br/&gt;取值范围： [0, +∞)&lt;br/&gt;设置异常值如负数、非数字Resource时，按默认值处理。 |
 
 **返回值：**
 
@@ -179,7 +179,7 @@ contentStartOffset + contentEndOffset超过滚动组件内容区长度后content
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | 内容区域起始偏移量。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围： [0, +∞)\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_设置异常值如负数、非数字Resource时，按默认值处理。 |
+| offset | number \| Resource | 是 | 内容区域起始偏移量。&lt;br/&gt;默认值：0&lt;br/&gt;单位：vp &lt;br/&gt;取值范围： [0, +∞)&lt;br/&gt;设置异常值如负数、非数字Resource时，按默认值处理。 |
 
 **返回值：**
 
@@ -195,8 +195,8 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 设置表冠响应事件灵敏度。
 
-组件收到[表冠事件]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的前提是该组件获焦，焦点控制可以通过[focusable]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[defaultFocus]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、[focusOnTouch]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_进行管理。
+组件收到[表冠事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)的前提是该组件获焦，焦点控制可以通过[focusable](arkts-arkui-commonmethod-c.md#focusable)、  
+[defaultFocus](arkts-arkui-commonmethod-c.md#defaultfocus)、[focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch)进行管理。
 
 **起始版本：** 18
 
@@ -214,7 +214,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。CrownSensitivity.LOW表示低灵敏度，滚动响应较慢； CrownSensitivity.MEDIUM表示中灵敏度，滚动响应适中；CrownSensitivity.HIGH表示高灵敏度，滚动响应较快。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：CrownSensitivity.MEDIUM，响应速度适 中。 |
+| sensitivity | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 | 表冠响应灵敏度。CrownSensitivity.LOW表示低灵敏度，滚动响应较慢； CrownSensitivity.MEDIUM表示中灵敏度，滚动响应适中；CrownSensitivity.HIGH表示高灵敏度，滚动响应较快。&lt;br/&gt;默认值：CrownSensitivity.MEDIUM，响应速度适 中。 |
 
 **返回值：**
 
@@ -246,8 +246,8 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动组件的边缘滑动效果，支持弹簧效果和阴影效果。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：Grid、Scroll、WaterFlow组件默认EdgeEffect.None，List组件 默认EdgeEffect.Spring。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 组件内容大小小于组件自身时是否开启滑动效果。从API version 18开始，支持设置边缘效果生效的边缘。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_List、Grid、WaterFlow组件默认{ alwaysEnabled: false }，Scroll组 件默认{ alwaysEnabled: true }。从API version 18开始，默认增加effectEdge字段，取值为EffectEdge.START \| EffectEdge.END。 |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | 滚动组件的边缘滑动效果，支持弹簧效果和阴影效果。&lt;br/&gt;默认值：Grid、Scroll、WaterFlow组件默认EdgeEffect.None，List组件 默认EdgeEffect.Spring。 |
+| options | [EdgeEffectOptions](../arkts-apis/arkts-arkui-common-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时是否开启滑动效果。从API version 18开始，支持设置边缘效果生效的边缘。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。&lt;br/&gt;默认值：&lt;br/&gt;List、Grid、WaterFlow组件默认{ alwaysEnabled: false }，Scroll组 件默认{ alwaysEnabled: true }。从API version 18开始，默认增加effectEdge字段，取值为EffectEdge.START \| EffectEdge.END。 |
 
 **返回值：**
 
@@ -279,7 +279,7 @@ enableScrollInteraction(value: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持手指或鼠标滚动手势。设置为true时支持，设置为false时不支持，但不影响控制器[Scroller]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_的滚动接口和 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_属性。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值： true |
+| value | boolean | 是 | 是否支持手指或鼠标滚动手势。设置为true时支持，设置为false时不支持，但不影响控制器[Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)的滚动接口和 [backToTop](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#backtotop15)属性。&lt;br/&gt;默认值： true |
 
 **返回值：**
 
@@ -311,7 +311,7 @@ enableScrollWithMouse(enabled: boolean | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | 是 | 是否支持鼠标左键按下拖动滚动。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持鼠标左键按下拖动滚动。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不支持鼠标左键按下拖动滚动。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ undefined：不支持鼠标左键按下拖动滚动。 |
+| enabled | boolean \| undefined | 是 | 是否支持鼠标左键按下拖动滚动。&lt;br/&gt;true：支持鼠标左键按下拖动滚动。&lt;br/&gt;false：不支持鼠标左键按下拖动滚动。&lt;br/&gt; undefined：不支持鼠标左键按下拖动滚动。 |
 
 **返回值：**
 
@@ -326,31 +326,32 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 ```
 
 设置是否开启边缘渐隐效果及设置边缘渐隐长度。
-    **说明：**  
-    
-    fadingEdge是通过设置[overlay]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_属性和  
-    [blendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_属性（参数值为BlendMode.SRC\_OVER，  
-    BlendApplyType.OFFSCREEN）实现的。当fadingEdge生效时，会覆盖原组件的.overlay()属性和.blendMode()属性，并将导致当前组件和其子组件需要截屏的接口无法截取到正确的画面。需要截  
-    屏的接口有：[blur]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-    [linearGradientBlur]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-    [brightness]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、[visualEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、  
-    [grayscale]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、[saturate]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、  
-    [contrast]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、  
-    [invert]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、  
-    [sepia]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_、  
-    [hueRotate]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_、  
-    [colorBlend]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_、  
-    [lightUpEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_13\_\_\_、  
-    [pixelStretchEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_14\_\_\_、  
-    [blendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_15\_\_\_、  
-    [backgroundBrightness]\_\_\_JSDOC\_LINK\_DESC\_USD\_16\_\_\_。  
-    
-    fadingEdge生效时，建议不在设置fadingEdge属性的组件上设置[background]\_\_\_JSDOC\_LINK\_DESC\_USD\_17\_\_\_相关属性，会影响渐隐的显示效果。  
-    
-    fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial]\_\_\_JSDOC\_LINK\_DESC\_USD\_18\_\_\_相关属性，会影响系统材质的显示效果，  
-    导致材质效果与预期效果不一致。  
-    
-    fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip]\_\_\_JSDOC\_LINK\_DESC\_USD\_19\_\_\_属性为false不生效。
+
+> **说明：**
+> 
+> fadingEdge是通过设置[overlay](arkts-arkui-commonmethod-c.md#overlay)属性和
+> [blendMode](arkts-arkui-commonmethod-c.md#blendmode)属性（参数值为BlendMode.SRC_OVER，
+> BlendApplyType.OFFSCREEN）实现的。当fadingEdge生效时，会覆盖原组件的.overlay()属性和.blendMode()属性，并将导致当前组件和其子组件需要截屏的接口无法截取到正确的画面。需要截
+> 屏的接口有：[blur](arkts-arkui-commonmethod-c.md#blur)、
+> [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、
+> [brightness](arkts-arkui-commonmethod-c.md#brightness)、[visualEffect](arkts-arkui-commonmethod-c.md#visualeffect)、
+> [grayscale](arkts-arkui-commonmethod-c.md#grayscale)、[saturate](arkts-arkui-commonmethod-c.md#saturate)、
+> [contrast](arkts-arkui-commonmethod-c.md#contrast)、
+> [invert](arkts-arkui-commonmethod-c.md#invert)、
+> [sepia](arkts-arkui-commonmethod-c.md#sepia)、
+> [hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、
+> [colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、
+> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)、
+> [blendMode](arkts-arkui-commonmethod-c.md#blendmode)、
+> [backgroundBrightness](arkts-arkui-commonmethod-c.md#backgroundbrightness)。
+> 
+> fadingEdge生效时，建议不在设置fadingEdge属性的组件上设置[background](arkts-arkui-commonmethod-c.md#background)相关属性，会影响渐隐的显示效果。
+> 
+> fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial)相关属性，会影响系统材质的显示效果，
+> 导致材质效果与预期效果不一致。
+> 
+> fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip](arkts-arkui-commonmethod-c.md#clip)属性为false不生效。
 
 **起始版本：** 14
 
@@ -368,8 +369,8 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 是否开启边缘渐隐效果。设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：false |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 边缘渐隐参数对象。可以通过该对象定义边缘渐隐效果属性，比如设置渐隐长度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果设置小于0的值或undefined或者不设置则取默认值，默认长 度为32vp。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_如果设置的长度超过容器高度的一半时，渐隐长度取容器高度的一半。 |
+| enabled | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启边缘渐隐效果。设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。&lt;br/&gt;默认值：false |
+| options | [FadingEdgeOptions](../arkts-apis/arkts-arkui-common-fadingedgeoptions-i.md) | 否 | 边缘渐隐参数对象。可以通过该对象定义边缘渐隐效果属性，比如设置渐隐长度。&lt;br/&gt;如果设置小于0的值或undefined或者不设置则取默认值，默认长 度为32vp。&lt;br/&gt;如果设置的长度超过容器高度的一半时，渐隐长度取容器高度的一半。 |
 
 **返回值：**
 
@@ -384,15 +385,16 @@ flingSpeedLimit(speedLimit: number): T
 ```
 
 限制跟手滑动结束后，惯性动效开始时的最大初始速度。
-    **说明：**  
-    
-    - 惯性动效是指手指快速滑动并离开屏幕后，滚动内容继续滚动并逐渐减速停止的效果，也称为惯性滚动。  
-    
-    - 惯性动效触发场景包括：惯性手指快速滑动并离手时，或调用[fling]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法。  
-    
-    - 使用鼠标滚轮、键盘方向键方式滚动，或通过[scrollTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_等方法直接滚动到指定位置，不会产生惯性动效。  
-    
-    - 如果惯性动效通过[fling]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_方法触发，则flingSpeedLimit设置不生效。
+
+> **说明：**
+> 
+> - 惯性动效是指手指快速滑动并离开屏幕后，滚动内容继续滚动并逐渐减速停止的效果，也称为惯性滚动。
+> 
+> - 惯性动效触发场景包括：惯性手指快速滑动并离手时，或调用[fling](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#fling)方法。
+> 
+> - 使用鼠标滚轮、键盘方向键方式滚动，或通过[scrollTo](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrollto)等方法直接滚动到指定位置，不会产生惯性动效。
+> 
+> - 如果惯性动效通过[fling](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#fling)方法触发，则flingSpeedLimit设置不生效。
 
 **起始版本：** 11
 
@@ -410,7 +412,7 @@ flingSpeedLimit(speedLimit: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speedLimit | number | 是 | 惯性动效开始时的最大初始速度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：9000\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp/s \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
+| speedLimit | number | 是 | 惯性动效开始时的最大初始速度。&lt;br/&gt;默认值：9000&lt;br/&gt;单位：vp/s &lt;br/&gt;取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 **返回值：**
 
@@ -424,7 +426,7 @@ flingSpeedLimit(speedLimit: number): T
 friction(value: number | Resource): T
 ```
 
-设置摩擦系数，手动划动滚动区域时生效，仅影响惯性滚动过程，对惯性滚动过程中嵌套滚动组件间的联动效果（如List组件的链式动效[chainAnimation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）有间接影响，适用于需要调整惯性滚动减速快慢的场景。设置为小于等于0的值时，按默认值处理。
+设置摩擦系数，手动划动滚动区域时生效，仅影响惯性滚动过程，对惯性滚动过程中嵌套滚动组件间的联动效果（如List组件的链式动效[chainAnimation](../arkts-apis/arkts-arkui-list-listattribute-i.md/arkts-arkui-list-listattribute-i.md#chainanimation)）有间接影响，适用于需要调整惯性滚动减速快慢的场景。设置为小于等于0的值时，按默认值处理。
 
 **起始版本：** 11
 
@@ -442,7 +444,7 @@ friction(value: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 摩擦系数。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：非wearable设备为0.6，wearable设备为0.9。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_从API version 11开始，非wearable设 备默认值为0.7。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_从API version 12开始，非wearable设备默认值为0.75。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
+| value | number \| Resource | 是 | 摩擦系数。&lt;br/&gt;默认值：非wearable设备为0.6，wearable设备为0.9。&lt;br/&gt;从API version 11开始，非wearable设 备默认值为0.7。&lt;br/&gt;从API version 12开始，非wearable设备默认值为0.75。 &lt;br/&gt;取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 **返回值：**
 
@@ -474,7 +476,7 @@ nestedScroll(value: NestedScrollOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 嵌套滚动选项。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：{ scrollForward: NestedScrollMode.SELF\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY, scrollBackward: NestedScrollMode.SELF\_\_\_ESCAPED\_UNDERSCORE\_\_\_ONLY } |
+| value | [NestedScrollOptions](../arkts-apis/arkts-arkui-common-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。&lt;br/&gt;默认值：{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY } |
 
 **返回值：**
 
@@ -489,9 +491,10 @@ onDidScroll(handler: OnScrollCallback): T
 ```
 
 滚动组件滑动时触发，返回当前帧滑动的偏移量和当前滑动状态。
-    **说明：**  
-    
-    从API version 14开始，该接口支持在[attributeModifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中调用。
+
+> **说明：**
+> 
+> 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -511,7 +514,7 @@ onDidScroll(handler: OnScrollCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动组件滑动时触发的回调。 |
+| handler | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) | 是 | 滚动组件滑动时触发的回调。 |
 
 **返回值：**
 
@@ -545,7 +548,7 @@ onDidStopDragging(handler: OnDidStopDraggingCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动组件结束拖动时触发的回调。 |
+| handler | [OnDidStopDraggingCallback](arkts-arkui-ondidstopdraggingcallback-t.md) | 是 | 滚动组件结束拖动时触发的回调。 |
 
 **返回值：**
 
@@ -579,7 +582,7 @@ onDidStopFling(handler: VoidCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动组件结束惯性动效后触发的回调。 |
+| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | 滚动组件结束惯性动效后触发的回调。 |
 
 **返回值：**
 
@@ -662,10 +665,11 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 ```
 
 滚动组件滑动时触发。
-    **说明：**  
-    
-    从API version 11开始支持，从API version 12开始废弃。[List]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[Grid]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和[WaterFlow]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    组件的onScroll事件在布局之后触发，
+
+> **说明：**
+> 
+> 从API version 11开始支持，从API version 12开始废弃。[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、[Grid](../arkts-apis/arkts-arkui-grid-grid-f.md/arkts-arkui-grid-grid-f.md#grid)和[WaterFlow](./water_flow)
+> 组件的onScroll事件在布局之后触发，
 
 **起始版本：** 11
 
@@ -687,7 +691,7 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | 是 | 滚动组件滑动时的回调。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_scrollOffset：相对于上一帧的偏移量，滚动组件的内容向上滚动时偏移量为正，向下滚动时偏移量为负。单位vp。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ scrollState：当前滑动状态。 |
+| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | 是 | 滚动组件滑动时的回调。&lt;br/&gt;scrollOffset：相对于上一帧的偏移量，滚动组件的内容向上滚动时偏移量为正，向下滚动时偏移量为负。单位vp。&lt;br/&gt; scrollState：当前滑动状态。 |
 
 **返回值：**
 
@@ -701,7 +705,7 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 onScrollStart(event: () => void): T
 ```
 
-滚动开始时触发。手指拖动滚动组件或其滚动条触发的滚动开始时，会触发该事件。使用[Scroller]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_滚动控制器触发的带动画的滚动，动画开始时会触发该事件。
+滚动开始时触发。手指拖动滚动组件或其滚动条触发的滚动开始时，会触发该事件。使用[Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)滚动控制器触发的带动画的滚动，动画开始时会触发该事件。
 
 触发该事件的条件：
 
@@ -739,7 +743,7 @@ onScrollStart(event: () => void): T
 onScrollStop(event: () => void): T
 ```
 
-滚动停止时触发。手指拖动滚动组件或其滚动条触发的滚动，手指离开屏幕后滚动停止时会触发该事件。使用[Scroller]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_滚动控制器触发的带动画的滚动，动画停止时会触发该事件。
+滚动停止时触发。手指拖动滚动组件或其滚动条触发的滚动，手指离开屏幕后滚动停止时会触发该事件。使用[Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)滚动控制器触发的带动画的滚动，动画停止时会触发该事件。
 
 触发该事件的条件：
 
@@ -778,16 +782,17 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): T
 ```
 
 滚动事件回调，滚动组件滚动前触发。与  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的对比：onWillScroll在滚动发生前触发，可通过返回值指定将要滚动的偏移量，适用于需要拦截或自定义滚动行为的场景；onDidScroll在滚动发生时触发，返回当前帧的实际滚动偏移量和滑动状态，适用于仅需监听滚动过程的场景。两者可同时使用。
+[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)的对比：onWillScroll在滚动发生前触发，可通过返回值指定将要滚动的偏移量，适用于需要拦截或自定义滚动行为的场景；onDidScroll在滚动发生时触发，返回当前帧的实际滚动偏移量和滑动状态，适用于仅需监听滚动过程的场景。两者可同时使用。
 
-回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。[Scroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_组件的  
-[onWillScroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口的参数类型是  
-[ScrollOnWillScrollCallback]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_。
-    **说明：**  
-    
-    - 从API version 14开始，该接口支持在[attributeModifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_中调用。  
-    
-    - 调用不带动画的[ScrollEdge]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_和[ScrollToIndex]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_时，不触发onWillScroll。
+回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。[Scroll](../arkts-apis/arkts-arkui-scroll-scroll-f.md/arkts-arkui-scroll-scroll-f.md#scroll)组件的  
+[onWillScroll](../arkts-apis/arkts-arkui-scroll-scrollattribute-i.md/arkts-arkui-scroll-scrollattribute-i.md#onwillscroll)接口的参数类型是  
+[ScrollOnWillScrollCallback](../arkts-apis/arkts-arkui-scrollonwillscrollcallback-t.md/arkts-arkui-scrollonwillscrollcallback-t.md)。
+
+> **说明：**
+> 
+> - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 
+> - 调用不带动画的[ScrollEdge](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrolledge)和[ScrollToIndex](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrolltoindex)时，不触发onWillScroll。
 
 **起始版本：** 12
 
@@ -805,7 +810,7 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OnWillScrollCallback&gt; | 是 | 滚动组件滑动前触发的回调。 |
+| handler | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;OnWillScrollCallback&gt; | 是 | 滚动组件滑动前触发的回调。 |
 
 **返回值：**
 
@@ -839,7 +844,7 @@ onWillStartDragging(handler: VoidCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动组件开始拖动时触发的回调。 |
+| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | 滚动组件开始拖动时触发的回调。 |
 
 **返回值：**
 
@@ -854,13 +859,14 @@ onWillStartFling(handler: VoidCallback): T
 ```
 
 滚动组件将要开始惯性动效时触发。
-    **说明：**  
-    
-    - 如果惯性动效通过[fling]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法触发，则onWillStartFling不触发。  
-    
-    - 惯性动效的触发场景参考  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_方法的  
-    说明。
+
+> **说明：**
+> 
+> - 如果惯性动效通过[fling](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#fling)方法触发，则onWillStartFling不触发。
+> 
+> - 惯性动效的触发场景参考
+> [flingSpeedLimit](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#flingspeedlimit11)方法的
+> 说明。
 
 **起始版本：** 21
 
@@ -880,7 +886,7 @@ onWillStartFling(handler: VoidCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动组件将要开始惯性动效时触发的回调。 |
+| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | 滚动组件将要开始惯性动效时触发的回调。 |
 
 **返回值：**
 
@@ -914,7 +920,7 @@ onWillStopDragging(handler: OnWillStopDraggingCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动组件划动离手时触发的回调。 |
+| handler | [OnWillStopDraggingCallback](../arkts-apis/arkts-arkui-onwillstopdraggingcallback-t.md) | 是 | 滚动组件划动离手时触发的回调。 |
 
 **返回值：**
 
@@ -946,7 +952,7 @@ scrollBar(barState: BarState): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| barState | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动条状态。 |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | 滚动条状态。 |
 
 **返回值：**
 
@@ -978,7 +984,7 @@ scrollBarColor(color: Color | number | string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| number \| string | 是 | 滚动条的颜色。 |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string | 是 | 滚动条的颜色。 |
 
 **返回值：**
 
@@ -993,7 +999,7 @@ scrollBarColor(color: Color | number | string | Resource): T
 ```
 
 设置滚动条的颜色。与  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_相比，color参数开始支持Resource类型。
+[scrollBarColor&lt;sup&gt;11+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarcolor11)相比，color参数开始支持Resource类型。
 
 **起始版本：** 22
 
@@ -1011,7 +1017,7 @@ scrollBarColor(color: Color | number | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| number \| string \| Resource | 是 | 滚动条的颜色。 |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| Resource | 是 | 滚动条的颜色。 |
 
 **返回值：**
 
@@ -1028,11 +1034,12 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 设置滚动条滑轨高度。
 
 未设置该接口时，滚动条滑轨高度默认自适应滚动组件高度，儿童智能表的默认高度为37vp。
-    **说明：**  
-    
-    应确保scrollBarHeight与  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的设定  
-    值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
+
+> **说明：**
+> 
+> 应确保scrollBarHeight与
+> [scrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarmargin20)的设定
+> 值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
 
 **起始版本：** 26.0.0
 
@@ -1050,7 +1057,7 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 滚动条滑轨高度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_值必须大于等于0。设置为undefined或小于0时，自适应滚动组件高度，儿童智能表则恢复至默认值37vp。设置 为0时，不显示滚动条。 |
+| height | [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 滚动条滑轨高度。&lt;br/&gt;值必须大于等于0。设置为undefined或小于0时，自适应滚动组件高度，儿童智能表则恢复至默认值37vp。设置 为0时，不显示滚动条。 |
 
 **返回值：**
 
@@ -1065,8 +1072,8 @@ scrollBarMargin(margin: ScrollBarMargin): T
 ```
 
 设置滚动条的边距。边距是在滚动条避让滚动组件圆角区域距离的基础上计算的，如果滚动条区域小于滚动条的最小长度，则不显示滚动条。如果设置了本属性，则  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的自动调整边距功能不生效。应注意确保  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_与本属性的设定值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
+[autoAdjustScrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#autoadjustscrollbarmargin)的自动调整边距功能不生效。应注意确保  
+[scrollBarHeight](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarheight)与本属性的设定值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
 
 **起始版本：** 20
 
@@ -1084,7 +1091,7 @@ scrollBarMargin(margin: ScrollBarMargin): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| margin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 滚动条起始、末尾边距。 |
+| margin | [ScrollBarMargin](../arkts-apis/arkts-arkui-scrollbarmargin-i.md) | 是 | 滚动条起始、末尾边距。 |
 
 **返回值：**
 

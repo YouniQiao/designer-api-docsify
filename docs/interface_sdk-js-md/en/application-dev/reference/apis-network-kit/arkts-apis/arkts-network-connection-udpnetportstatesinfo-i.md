@@ -10,6 +10,12 @@ Defines UDP port states of system network.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## udpLocalIp
 
 ```TypeScript
@@ -38,7 +44,7 @@ udpLocalPort: int
 
 Local port of the UDP network.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -58,7 +64,7 @@ udpPid: int
 
 PID of the UDP network.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -78,7 +84,7 @@ udpUid: int
 
 UID of the UDP network.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

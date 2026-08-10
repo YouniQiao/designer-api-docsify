@@ -4,7 +4,7 @@
 export type ReqPermissionDetail = _BundleInfo.ReqPermissionDetail
 ```
 
-Defines the detailed information of the permissions to request from the system.
+应用运行时需向系统申请的权限集合的详细信息。
 
 **Since:** 9
 

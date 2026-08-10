@@ -10,6 +10,12 @@ LeakWatcherConfig�������ͣ������а�������
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## bgLeakCountThreshold
 
 ```TypeScript
@@ -24,7 +30,7 @@ GC/Dump�׶Σ����ڵ���1ʱ����Dump��
 
 ���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -50,7 +56,7 @@ checkInterval?: int
 
 ���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -76,7 +82,7 @@ GC������Ĭ���ӳ�5��ִ��dump��
 
 ���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -98,8 +104,7 @@ exclusionList?: Array<string>
 
 ���ڻ�������ʱ�޷����й��ˣ�ֻ�ڿ���̬��Ч��
 
-�������ͻ���ȼ���ID�б�   
-    ��������
+�������ͻ���ȼ���ID�б� > ��������
 
 Ĭ��Ϊ�����顣
 
@@ -127,7 +132,7 @@ GC/Dump�׶Σ����ڵ���5ʱ����Dump��
 
 ���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -149,7 +154,7 @@ maxStoredHeapDumps?: int
 
 ���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -169,7 +174,7 @@ monitorObjectTypes: MonitorObjectType
 
 Ĭ�ϼ������������͡�
 
-**类型：** MonitorObjectType
+**类型：** [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
 
 **起始版本：** 24
 
@@ -193,7 +198,7 @@ objectUniqueIDs?: Array<int>
 
 Ĭ��Ϊ�����顣
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 24
 

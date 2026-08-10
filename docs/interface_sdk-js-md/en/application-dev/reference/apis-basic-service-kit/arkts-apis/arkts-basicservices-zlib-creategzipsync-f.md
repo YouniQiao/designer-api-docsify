@@ -1,12 +1,18 @@
 # createGZipSync
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createGZipSync
 
 ```TypeScript
 function createGZipSync(): GZip
 ```
 
-Creates this **GZip** object. A **GZip** instance is returned upon a success.
+创建GZip对象。成功时返回GZip对象实例。
 
 **Since:** 12
 
@@ -22,9 +28,9 @@ Creates this **GZip** object. A **GZip** instance is returned upon a success.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | gzip object instance. |
+| [GZip](arkts-basicservices-zlib-gzip-i.md) | GZip对象实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

@@ -1,6 +1,6 @@
 # PermissionStatusInfo (System API)
 
-Indicates the permission status.
+表示权限状态信息。
 
 **Since:** 26.0.0
 
@@ -12,30 +12,33 @@ Indicates the permission status.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## grantFlags
 
 ```TypeScript
 grantFlags: int
 ```
 
-Permission flags. The value range is as follows:  
-- 0: The permission is not set by the user.  
-- 1: The permission is set by the user. If the permission is not granted, a permission dialog box can be  
-displayed again to request authorization.  
-- 2: The permission is set by the user. If the permission is not granted, a permission dialog box cannot be  
-displayed again to request authorization. The user needs to grant the permission in system settings.  
-- 4: The permission is set by the system.  
-- 8: The permission is pre-granted by the system and can be revoked.  
-- 16: The permission is set by a security control.  
-- 32: The permission is fixed by a security policy. The user cannot grant or revoke it.  
-- 64: The permission is allowed only when the app is in the foreground during the current lifecycle.  
-- 128: The permission is fixed by an administrator policy. The user cannot grant or revoke it, but the  
-administrator can unfix it.  
-- 256: The permission is unfixed by an administrator policy. The user can grant or revoke it.  
-- 512: The permission is restricted by a user policy.  
-The value should be an integer.
+权限标志，取值范围如下：  
+- 0：用户未设置该权限。  
+- 1：用户已设置该权限，若权限未授予，允许再次弹出权限弹窗请求授权。  
+- 2：用户已设置该权限，若权限未授予，不允许再次弹出权限弹窗请求授权，需用户在系统设置中授权。  
+- 4：系统已设置该权限。  
+- 8：系统已预授权该权限，且允许取消授权。  
+- 16：安全控件已设置该权限。  
+- 32：安全策略已固定该权限，用户不能授权或取消授权。  
+- 64：仅在当前生命周期前台期间允许使用该权限。  
+- 128：管理员策略已固定该权限，用户不能授权或取消授权，管理员可取消固定。  
+- 256：管理员策略取消固定该权限，用户可授权或取消授权。  
+- 512：用户策略限制该权限。  
+取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -55,9 +58,9 @@ The value should be an integer.
 grantStatus: GrantStatus
 ```
 
-Permission authorization status.
+权限授权状态。
 
-**Type:** GrantStatus
+**Type:** [GrantStatus](arkts-ability-bundle-grantstatus-e.md)
 
 **Since:** 26.0.0
 
@@ -77,9 +80,9 @@ Permission authorization status.
 grantTimestamp?: long
 ```
 
-Timestamp of the authorization status change. This is an optional field and is returned when the permission status changes.Unit: milliseconds.
+授权状态变化的时间戳。该字段为可选字段，当权限状态变化时返回。单位为：毫秒。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -99,9 +102,9 @@ Timestamp of the authorization status change. This is an optional field and is r
 permissionName: Permissions
 ```
 
-Permission name.
+权限名称。
 
-**Type:** Permissions
+**Type:** [Permissions](arkts-ability-permissions-t.md)
 
 **Since:** 26.0.0
 
@@ -121,9 +124,9 @@ Permission name.
 tokenID: int
 ```
 
-Application ID.The value should be an integer.
+应用的身份标识。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

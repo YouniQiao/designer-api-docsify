@@ -1,6 +1,6 @@
 # CustomKeyboardContinueFeature
 
-Enum of CustomKeyboardContinueFeature
+自定义键盘接续特性的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enum of CustomKeyboardContinueFeature
 ENABLED = 0
 ```
 
-Enable custom keyboard continuation.
+使能自定义键盘接续。
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Enable custom keyboard continuation.
 
 <!--Device-CustomKeyboardContinueFeature-ENABLED = 0--><!--Device-CustomKeyboardContinueFeature-ENABLED = 0-End-->
 
-**System capability:** SystemCapability. ArkUI.ArkUI.Full
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DISABLED
 
@@ -34,7 +34,7 @@ Enable custom keyboard continuation.
 DISABLED = 1
 ```
 
-Disable custom keyboard continuation.
+关闭自定义键盘接续。
 
 **Since:** 23
 
@@ -44,5 +44,5 @@ Disable custom keyboard continuation.
 
 <!--Device-CustomKeyboardContinueFeature-DISABLED = 1--><!--Device-CustomKeyboardContinueFeature-DISABLED = 1-End-->
 
-**System capability:** SystemCapability. ArkUI.ArkUI.Full
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

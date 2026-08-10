@@ -1,12 +1,12 @@
 # Button
 
-The **Button** component can be used to create different types of buttons.
+按钮组件，可快速创建不同样式的按钮。
 
-> **NOTE**
+> **说明：**
 
-## Child Components
+## 子组件
 
-This component can contain only one child component.
+可以包含单个子组件。
 
 ## Button
 
@@ -14,7 +14,7 @@ This component can contain only one child component.
 Button()
 ```
 
-Creates an empty button.
+创建一个空按钮。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Creates an empty button.
 Button(options: ButtonOptions)
 ```
 
-Creates a button that can contain a single child component.
+创建可以包含单个子组件的按钮。未通过该接口设置时，则按照ButtonOptions中各参数的默认值配置。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Creates a button that can contain a single child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Button settings.  |
+| options | [ButtonOptions](../arkts-apis/arkts-arkui-button-buttonoptions-i.md) | Yes | 配置按钮的显示样式。 |
 
 ## Button
 
@@ -60,9 +60,9 @@ Creates a button that can contain a single child component.
 Button(label: ResourceStr, options?: ButtonOptions)
 ```
 
-Creates a button based on text content. In this case, the component cannot contain child components.
+使用文本内容创建相应的按钮组件，此时Button无法包含子组件。
 
-By default, the text content is displayed in a one line.
+文本内容默认单行显示。
 
 **Since:** 7
 
@@ -80,8 +80,16 @@ By default, the text content is displayed in a one line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Button text.\_\_\_HTML\_TAG\_USD\_0\_\_\_Note: If the text is longer than the width of the button, it is truncated.  |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Button settings.  |
+| label | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 按钮文本内容。<br/>**说明：** 当文本字符的长度超过按钮本身的宽度时，文本将会被截断。 |
+| options | [ButtonOptions](../arkts-apis/arkts-arkui-button-buttonoptions-i.md) | No | 配置按钮的显示样式。 <br/> 未设置时，则按照ButtonOptions中各参数的默认值配置。 |
 
 ## Summary
 
+- [ButtonConfiguration](arkts-arkui-button-buttonconfiguration-i.md)
+- [ButtonOptions](arkts-arkui-button-buttonoptions-i.md)
+- [LabelStyle](arkts-arkui-button-labelstyle-i.md)
+- [ButtonTriggerClickCallback](arkts-arkui-button-buttontriggerclickcallback-t.md)
+- [ButtonRole](arkts-arkui-button-buttonrole-e.md)
+- [ButtonStyleMode](arkts-arkui-button-buttonstylemode-e.md)
+- [ButtonType](arkts-arkui-button-buttontype-e.md)
+- [ControlSize](arkts-arkui-button-controlsize-e.md)

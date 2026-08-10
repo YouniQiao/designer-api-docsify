@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## allowRebuild
 
 ```TypeScript
@@ -43,7 +49,7 @@ autoCleanDirtyData?: boolean
 指定是否自动清理云端删除后同步到本地的数据，true表示自动清理，false表示手动清理，默认自动清理。
 
 对于端云协同的数据库，当云端删除的数据同步到设备端时，可通过该参数设置设备端是否自动清理。手动清理可以通过  
-[cleanDirtyData\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_11+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口清理。
+[cleanDirtyData&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkdata-relationalstore-rdbstore-i.md#cleandirtydata)接口清理。
 
 从API version 11开始，支持此可选参数。
 
@@ -65,13 +71,13 @@ cryptoParam?: CryptoParam
 
 指定用户自定义的加密参数。
 
-当此参数不填时，使用默认的加密参数，见[CryptoParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_各参数默认值。
+当此参数不填时，使用默认的加密参数，见[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)各参数默认值。
 
 此配置只有在encrypt选项设置为true或密钥非空时才有效。
 
 从API version 14开始，支持此可选参数。
 
-**类型：** CryptoParam
+**类型：** [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)
 
 **起始版本：** 14
 
@@ -89,7 +95,7 @@ customDir?: string
 
 数据库自定义路径。
 
-**使用约束：** 数据库路径大小限制为128字节，如果超过该大小会开库失败，抛出错误码401，请参见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+**使用约束：** 数据库路径大小限制为128字节，如果超过该大小会开库失败，抛出错误码401，请参见[通用错误码](../../../reference/errorcode-universal.md)。
 
 从API version 11开始，支持此可选参数。数据库将在如下的目录结构中被创建：context.databaseDir + "/rdb/" + customDir，其中context.databaseDir是应用沙箱对应的路径，"/rdb/"表示创建的是关系型数据库，customDir表示自定义的路径。当此参数不填时，默认在本应用沙箱目录下创建RdbStore实例。从API version 18开始，如果同时配置了rootDir参数，将打开或删除如下路径数据库：rootDir + "/" + customDir + "/" + name。
 
@@ -109,7 +115,7 @@ customDir?: string
 dataGroupId?: string
 ```
 
-应用组ID，\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_暂不支持指定dataGroupId在对应的沙箱路径下创建RdbStore实例。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+应用组ID，&lt;!--RP1--&gt;暂不支持指定dataGroupId在对应的沙箱路径下创建RdbStore实例。&lt;!--RP1End--&gt;
 
 **模型约束：** 此属性仅在Stage模型下可用。
 
@@ -151,7 +157,7 @@ enableSemanticIndex?: boolean
 encrypt?: boolean
 ```
 
-指定数据库是否加密，默认非加密。数据库创建完成后，此参数不允许直接修改。如需变更数据库加密状态，请调用[rekeyEx]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口进行更新操作。
+指定数据库是否加密，默认非加密。数据库创建完成后，此参数不允许直接修改。如需变更数据库加密状态，请调用[rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyex)接口进行更新操作。
 
 true：加密。
 
@@ -236,7 +242,7 @@ pluginLibs?: Array<string>
 ```
 
 配置加载自定义动态库，数组中可传入多个动态库名称，默认值为空数组。具体请见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[pluginLibs的使用约束和示例](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#pluginlibs的使用约束和示例)。
 
 **类型：** Array&lt;string&gt;
 
@@ -276,7 +282,7 @@ securityLevel: SecurityLevel
 
 设置数据库安全级别。
 
-**类型：** SecurityLevel
+**类型：** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
 
 **起始版本：** 9
 
@@ -297,9 +303,9 @@ tokenizer?: Tokenizer
 当此参数不填时，则在FTS下不支持中文以及多国语言分词，但仍可支持英文分词。
 
 如果用户想使用自定义分词器，可以通过pluginLibs参数进行配置，具体请见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[pluginLibs的使用约束和示例](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#pluginlibs的使用约束和示例)。
 
-**类型：** Tokenizer
+**类型：** [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md)
 
 **起始版本：** 17
 

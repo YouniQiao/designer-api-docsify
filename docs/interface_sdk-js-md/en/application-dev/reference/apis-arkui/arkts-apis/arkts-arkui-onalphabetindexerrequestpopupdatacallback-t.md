@@ -4,7 +4,7 @@
 export type OnAlphabetIndexerRequestPopupDataCallback = (index: int) => Array<string>
 ```
 
-Defines an AlphabetIndexer callback when onRequestPopupData.
+[usingPopup](arkts-arkui-alphabetindexer-alphabetindexerattribute-i.md#usingpopup)设置值为true，索引项被选中时触发的事件。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ Defines an AlphabetIndexer callback when onRequestPopupData.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | selected index  |
+| index | int | Yes | selected index |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | string array corresponding to the index  |
+| Array&lt;string&gt; | string array corresponding to the index |
 

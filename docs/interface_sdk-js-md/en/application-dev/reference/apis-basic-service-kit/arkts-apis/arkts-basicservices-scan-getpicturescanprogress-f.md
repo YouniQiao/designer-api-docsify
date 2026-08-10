@@ -1,12 +1,18 @@
 # getPictureScanProgress
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPictureScanProgress
 
 ```TypeScript
 function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>
 ```
 
-Obtains the progress of scanning a picture. This API uses a promise to return the result.
+获取图片扫描进度。使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,21 +28,21 @@ Obtains the progress of scanning a picture. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | Scanner ID. |
+| scannerId | string | Yes | 扫描仪的ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PictureScanProgress&gt; | Promise used to return the progress. |
+| Promise&lt;PictureScanProgress&gt; | Promise对象，返回图片扫描进度信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

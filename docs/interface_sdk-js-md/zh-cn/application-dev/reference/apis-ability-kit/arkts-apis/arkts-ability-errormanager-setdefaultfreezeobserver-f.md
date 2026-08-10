@@ -1,5 +1,11 @@
 # setDefaultFreezeObserver
 
+## 导入模块
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## setDefaultFreezeObserver
 
 ```TypeScript
@@ -26,23 +32,21 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| defaultObserver | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 默认冻屏观测器。 |
+| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 否 | 默认冻屏观测器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  返回原来的默认冻屏观测器。 |
+| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 返回原来的默认冻屏观测器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) | API未在主线程中调用。 |
+| 16000205 | API未在主线程中调用。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -60,7 +64,7 @@ const freezeHandler: errorManager.FreezeObserver = () => {
   }
 };
 
-export const setFreezeHandler = () => {
+export function setFreezeHandler() {
   try {
     oldHandler = errorManager.setDefaultFreezeObserver(freezeHandler);
   } catch (paramError) {
@@ -69,33 +73,6 @@ export const setFreezeHandler = () => {
     console.error(`Failed to set freeze handler. Code: ${code}, message: ${message}`);
   }
   console.info('Registered freeze Handler.');
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { errorManager } from '@kit.AbilityKit';
-
-let oldHandler: errorManager.FreezeObserver = () => {};
-const freezeHandler: errorManager.FreezeObserver = () => {
-    // 自定义的FreezeHandler实现逻辑
-    console.info('[freezeHandler] freeze handler invoked.');
-    if (oldHandler) {
-        oldHandler();
-    } else {
-        console.info('[freezeHandler] freeze handler end.');
-    }
-};
-
-export const setFreezeHandler = () => {
-  try {
-    oldHandler = errorManager.setDefaultFreezeObserver(freezeHandler);
-    console.info('Registered freeze Handler.');
-  } catch (paramError) {
-    console.error('setFreezeHandler error: ', paramError);
-  }
-};
+}
 ```
 

@@ -1,6 +1,6 @@
 # MessageLevel
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for receiving the console log level of JavaScript.
+Enum type supplied to {@link getMessageLevel} for receiving the console log level of JavaScript.
 
 **起始版本：** 8
 

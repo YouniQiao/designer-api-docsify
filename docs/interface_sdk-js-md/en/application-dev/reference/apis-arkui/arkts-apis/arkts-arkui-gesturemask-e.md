@@ -1,6 +1,6 @@
 # GestureMask
 
-Enumerates masking modes of child component gestures.
+定义是否屏蔽子组件手势。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates masking modes of child component gestures.
 Normal
 ```
 
-The gestures of child components are enabled and recognized based on the default gesture recognition sequence.
+不屏蔽子组件的手势，按照默认手势识别顺序进行识别。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ The gestures of child components are enabled and recognized based on the default
 IgnoreInternal
 ```
 
-The gestures of child components are disabled, including the built-in gestures, such as the built-in swipe gesture for a **List** component. If the areas of the parent and child components are partly overlapped, only gestures in the overlapped areas are disabled.
+屏蔽子组件的手势，包括子组件上系统内置的手势，如子组件为List组件时，内置的滑动手势同样会被屏蔽。 若父子组件区域存在部分重叠，则只会屏蔽父子组件重叠的部分。
 
 **Since:** 7
 

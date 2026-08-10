@@ -1,12 +1,18 @@
 # healthStatus
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## healthStatus
 
 ```TypeScript
 function healthStatus(): BatteryHealthState
 ```
 
-Battery health status of the device.
+表示当前设备电池的健康状态。
 
 **Since:** 23
 
@@ -20,5 +26,5 @@ Battery health status of the device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the battery health status of the device. |
+| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | 返回当前设备电池的健康状态。 |
 

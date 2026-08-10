@@ -1,6 +1,6 @@
 # CdsmClient
 
-Manages a CDSM client instance. Before invoking any CDSM client method,you must use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a CDSM client instance.
+管理CDSM客户端实例。在调用任何CDSM客户端方法之前，您必须使用{@link createCdsmClient}来创建CDSM客户端实例。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Manages a CDSM client instance. Before invoking any CDSM client method,you must 
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { cdsm } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getCdsmInfo
 
 ```TypeScript
 getCdsmInfo(): CdsmInfo
 ```
 
-Gets the coordinated devices set information.
+获取合作设备集合信息。
 
 **Since:** 26.0.0
 
@@ -34,15 +40,15 @@ Gets the coordinated devices set information.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the coordinated devices set information. |
+| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | 返回合作设备集信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
 
 ## offCdsmInfoChange
 
@@ -50,7 +56,7 @@ Gets the coordinated devices set information.
 offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 ```
 
-Unsubscribes from coordinated devices set information change event.
+取消订阅协作设备集信息变更事件。
 
 **Since:** 26.0.0
 
@@ -66,7 +72,7 @@ Unsubscribes from coordinated devices set information change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CdsmInfo&gt; | No | Callback used to listen for the coordinated devices set information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CdsmInfo&gt; | No | 用于监听合作设备集信息的回调。 |
 
 ## onCdsmInfoChange
 
@@ -74,9 +80,9 @@ Unsubscribes from coordinated devices set information change event.
 onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 ```
 
-Subscribes to coordinated devices set information change event.
+订阅协作设备集信息变更事件。
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK\_ACCESS permission.If the application is granted the ohos.permission.GET\_NEARLINK\_PEER\_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
 
 **Since:** 26.0.0
 
@@ -92,5 +98,5 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CdsmInfo&gt; | Yes | Callback used to listen for the coordinated devices set information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CdsmInfo&gt; | Yes | 用于监听合作设备集信息的回调。 |
 

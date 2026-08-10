@@ -10,6 +10,12 @@ Defines a TLSSocketServer server connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## close
 
 ```TypeScript
@@ -38,10 +44,10 @@ Close the TLSSocketServer. Close the TLSSocketServer listening port.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 2300002 | System internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -100,16 +106,16 @@ Returns an object representing a local certificate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;X509CertRawData&gt; | Yes | The callback of getCertificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509CertRawData&gt; | Yes | The callback of getCertificate. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2300002 | System internal error. |
+| 2303504 | An error occurred when verifying the X.509 certificate. |
+| 2303501 | SSL is null. |
 
 ## getCertificate
 
@@ -137,9 +143,9 @@ Returns an object representing a local certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 2300002 | System internal error. |
+| 2303504 | An error occurred when verifying the X.509 certificate. |
+| 2303501 | SSL is null. |
 
 ## getLocalAddress
 
@@ -167,11 +173,11 @@ Obtains the local address of the TLSSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| 2300002 | System internal error. |
+| 2301009 | Bad file descriptor. |
+| 2303188 | Socket operation on non-socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -205,18 +211,18 @@ Returns a string containing the negotiated SSL/TLS protocol version of the curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | The callback of getProtocol. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback of getProtocol. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2300002 | System internal error. |
+| 2303505 | An error occurred in the TLS system call. |
+| 2303501 | SSL is null. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -282,11 +288,11 @@ Returns a string containing the negotiated SSL/TLS protocol version of the curre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 2300002 | System internal error. |
+| 2303505 | An error occurred in the TLS system call. |
+| 2303501 | SSL is null. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -352,15 +358,15 @@ Obtains the file descriptor of the TLSSocketServer.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | The promise returns the file descriptor of the TLS socket server. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returns the file descriptor of the TLS socket server. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -418,17 +424,17 @@ Obtains the status of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SocketStateBase&gt; | Yes | The callback of getState. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SocketStateBase&gt; | Yes | The callback of getState. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2300002 | System internal error. |
+| 2303188 | Socket operation on non-socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -494,10 +500,10 @@ Obtains the status of the TLSSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 2300002 | System internal error. |
+| 2303188 | Socket operation on non-socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -541,7 +547,7 @@ tlsServer.getState().then(() => {
 listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 ```
 
-Binds the IP address and port number, the port number can be specified or randomly allocated by the system.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Listens for a TCPSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Binds the IP address and port number, the port number can be specified or randomly allocated by the system.&lt;p&gt;Listens for a TCPSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
 
 **Since:** 24
 
@@ -557,27 +563,27 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | TLS connection options \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of listen. |
+| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | TLS connection options {@link TLSConnectOptions}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of listen. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
-| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
-| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| 401 | Parameter error. |
+| 2300002 | System internal error. |
+| 2303506 | Failed to close the TLS connection. |
+| 2303505 | An error occurred in the TLS system call. |
+| 2303111 | Resource temporarily unavailable. Try again. |
+| 2303109 | Bad file number. |
+| 201 | Permission denied. |
+| 2303199 | Cannot assign requested address. |
+| 2303503 | An error occurred when writing data on the TLS socket. |
+| 2303198 | Address already in use. |
+| 2303502 | An error occurred when reading data on the TLS socket. |
+| 2303501 | SSL is null. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -615,7 +621,7 @@ tlsServer.listen(tlsConnectOptions, (err: BusinessError) => {
 listen(options: TLSConnectOptions): Promise<void>
 ```
 
-Binds the IP address and port number, the port number can be specified or randomly allocated by the system.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Listens for a TCPSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Binds the IP address and port number, the port number can be specified or randomly allocated by the system.&lt;p&gt;Listens for a TCPSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
 
 **Since:** 24
 
@@ -631,7 +637,7 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | TLS connection options \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | TLS connection options {@link TLSConnectOptions}. |
 
 **Return value:**
 
@@ -643,20 +649,20 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
-| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
-| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| 401 | Parameter error. |
+| 2300002 | System internal error. |
+| 2303506 | Failed to close the TLS connection. |
+| 2303505 | An error occurred in the TLS system call. |
+| 2303111 | Resource temporarily unavailable. Try again. |
+| 2303109 | Bad file number. |
+| 201 | Permission denied. |
+| 2303199 | Cannot assign requested address. |
+| 2303503 | An error occurred when writing data on the TLS socket. |
+| 2303198 | Address already in use. |
+| 2303502 | An error occurred when reading data on the TLS socket. |
+| 2303501 | SSL is null. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -711,15 +717,15 @@ Cancels listening for connect events of the TLSSocketServer connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TLSSocketConnection&gt; | No | The callback of off. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TLSSocketConnection&gt; | No | The callback of off. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -781,15 +787,15 @@ Cancels listening for error events of the TLSSocketServer connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback of off. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | The callback of off. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -851,15 +857,15 @@ Listens for connect events of the TLSSocketServer connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TLSSocketConnection&gt; | Yes | The callback of on. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TLSSocketConnection&gt; | Yes | The callback of on. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -916,15 +922,15 @@ Listens for error events of the TLSSocketServer connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback of on. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | The callback of on. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| 401 | Parameter error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -980,18 +986,18 @@ Sets other attributes of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters of the attributes \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of setExtraOptions. |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Parameters of the attributes {@link TCPExtraOptions}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setExtraOptions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2300002 | System internal error. |
+| 2303188 | Socket operation on non-socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1067,7 +1073,7 @@ Sets other attributes of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters of the attributes \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Parameters of the attributes {@link TCPExtraOptions}. |
 
 **Return value:**
 
@@ -1079,11 +1085,11 @@ Sets other attributes of the TLSSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2300002 | System internal error. |
+| 2303188 | Socket operation on non-socket. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

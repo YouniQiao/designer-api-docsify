@@ -1,6 +1,6 @@
 # DockInfo
 
-Describes information about an application in the shortcut bar.
+快捷栏中的应用信息。
 
 **Since:** 24
 
@@ -10,13 +10,19 @@ Describes information about an application in the shortcut bar.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { applicationManager } from 'kits/@kit.MDMKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Ability name of the application.
+应用的Ability名称。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Ability name of the application.
 bundleName: string
 ```
 
-Bundle name of the application.
+应用的包名。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Bundle name of the application.
 index: number
 ```
 
-Location index of the application in the shortcut bar.
+应用在快捷栏中的位置索引。
 
 **Type:** number
 

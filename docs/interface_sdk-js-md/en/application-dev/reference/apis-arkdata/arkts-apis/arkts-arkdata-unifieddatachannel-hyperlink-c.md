@@ -1,6 +1,6 @@
 # Hyperlink
 
-Represents the hyperlink data. It is a child class of [Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超链接类型数据。
 
 **Inheritance/Implementation:** Hyperlink extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
@@ -12,13 +12,19 @@ Represents the hyperlink data. It is a child class of [Text]\_\_\_JSDOC\_LINK\_D
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## description
 
 ```TypeScript
 description?: string
 ```
 
-Indicates the description of a link
+链接内容描述，非必填字段，默认值为空字符串。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Indicates the description of a link
 set url(value: string)
 ```
 
-Indicates the url of a link
+链接url。
 
 **Type:** string
 

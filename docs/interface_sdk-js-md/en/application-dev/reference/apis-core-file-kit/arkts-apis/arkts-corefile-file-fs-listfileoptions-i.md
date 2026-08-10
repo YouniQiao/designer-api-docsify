@@ -1,6 +1,6 @@
 # ListFileOptions
 
-Defines the options used in **listFile()**.
+可选项类型，支持listFile接口使用。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Defines the options used in **listFile()**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## filter
 
 ```TypeScript
 filter?: Filter
 ```
 
-File filtering configuration. This parameter is optional. It specifies the file filtering conditions.
+文件过滤配置项。 可选，设置过滤条件。
 
-**Type:** Filter
+**Type:** [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md)
 
 **Since:** 23
 
@@ -34,7 +40,7 @@ File filtering configuration. This parameter is optional. It specifies the file 
 listNum?: long
 ```
 
-Number of file names to list. This parameter is optional. The default value is **0**, which means to list all files.
+列出文件名数量。可选，当设置0时，列出所有文件，默认为0。
 
 **Type:** long
 
@@ -52,8 +58,7 @@ Number of file names to list. This parameter is optional. The default value is *
 recursion?: boolean
 ```
 
-Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is  
-**false**. If **recursion** is **false**, the names of files and directories that meet the filtering requirements in the current directory are returned. If **recursion** is **true**, relative paths (starting with /) of all files that meet the specified conditions in the current directory are returned.
+是否递归子目录下文件名。可选，默认为false。当recursion为false时，返回当前目录下满足过滤要求的文件名及目录名。当recursion为true时，返回此目录下所有满足过滤要求的文件的相对路径（以“/”开头）。
 
 **Type:** boolean
 

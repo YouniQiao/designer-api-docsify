@@ -1,6 +1,6 @@
 # Queue
 
-Queue follows the principle of First In First Out (FIFO).It supports insertion of elements at the end and removal from the front of the queue.Queue is implemented based on the queue data structure.
+Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。Queue基于循环队列的数据结构实现。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ Queue follows the principle of First In First Out (FIFO).It supports insertion o
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { Queue } from 'kits/@kit.ArkTS';
+```
+
 ## $_iterator
 
 ```TypeScript
 $_iterator(): IterableIterator<T>
 ```
 
-returns an iterator. Each item of the iterator is a ArkTS Object
+返回一个迭代器，每一项都是一个ArkTS对象。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ returns an iterator. Each item of the iterator is a ArkTS Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 ## [Symbol.iterator]
 
@@ -40,7 +46,7 @@ returns an iterator. Each item of the iterator is a ArkTS Object
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-returns an iterator.Each item of the iterator is a Javascript Object
+返回一个迭代器，每一项为T类型的元素。
 
 **Since:** 8
 
@@ -56,15 +62,15 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Queue中的所有元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| 10200011 | The Symbol.iterator method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -101,7 +107,7 @@ while(temp != undefined) {
 add(element: T): boolean
 ```
 
-Adds an element at the end of this Queue.
+在队列尾部插入元素，插入成功则返回true，队列长度增加，否则返回false。
 
 **Since:** 8
 
@@ -117,21 +123,21 @@ Adds an element at the end of this Queue.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| element | T | Yes | 要插入的元素。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
+| boolean | 插入成功返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| 10200011 | The add method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 class C1 {
@@ -154,7 +160,7 @@ console.info("result:", queue.length);  // result: 4
 constructor()
 ```
 
-A constructor used to create a **Queue** instance.
+Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
 **Since:** 8
 
@@ -170,9 +176,9 @@ A constructor used to create a **Queue** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Queue's constructor cannot be directly invoked. |
+| 10200012 | The Queue's constructor cannot be directly invoked. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let queue = new Queue<number | string | Object>();
@@ -184,7 +190,7 @@ let queue = new Queue<number | string | Object>();
 forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void
 ```
 
-Uses a callback to traverse each element in the **Queue** instance.
+遍历Queue实例中的每个元素，并对每个元素执行回调函数。
 
 **Since:** 8
 
@@ -200,16 +206,16 @@ Uses a callback to traverse each element in the **Queue** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, Queue?: Queue&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Queue. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| callbackFn | (value: T, index?: number, Queue?: Queue&lt;T&gt;) =&gt; void | Yes | 对每个元素执行的回调函数。 |
+| thisArg | Object | No | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| 10200011 | The forEach method cannot be bound. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -232,7 +238,7 @@ queue.forEach((value: number, index: number): void => {
 forEach(callbackFn: QueueForEachCb<T>): void
 ```
 
-Executes a provided function once for each value in the queue object.
+在遍历队列对象中每一个元素的过程中，对每个元素执行回调函数。
 
 **Since:** 23
 
@@ -250,7 +256,7 @@ Executes a provided function once for each value in the queue object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | callbackFn |
+| callbackFn | [QueueForEachCb](arkts-arkts-queueforeachcb-t.md)&lt;T&gt; | Yes | 回调函数。 |
 
 ## getFirst
 
@@ -258,7 +264,7 @@ Executes a provided function once for each value in the queue object.
 getFirst(): T
 ```
 
-Obtains the first element of this Queue.
+获取队列的头元素（不会删除队列的头元素）。
 
 **Since:** 8
 
@@ -274,16 +280,16 @@ Obtains the first element of this Queue.
 
 | Type | Description |
 | --- | --- |
-| T | The first element obtained. |
+| T | 返回队列的头元素。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The getFirst method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -301,7 +307,7 @@ console.info("result:", result);  // result: 2
 pop(): T
 ```
 
-Removes the first element from this Queue.
+删除队列头部元素，并返回被删除元素。当Queue为空时，返回undefined。
 
 **Since:** 8
 
@@ -317,16 +323,16 @@ Removes the first element from this Queue.
 
 | Type | Description |
 | --- | --- |
-| T | Element removed. |
+| T | 返回删除的元素。当Queue为空时，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 10200011 | The pop method cannot be bound. |
+| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -345,7 +351,7 @@ console.info("result:", result);  // result: 2
 length: number
 ```
 
-Number of elements in a Queue.
+Queue的元素个数。
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # SyncResult
 
-Indicates synchronization result.
+表示设备同步结果。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Indicates synchronization result.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
 readonly code:SyncResultCode
 ```
 
-Indicates the synchronization result code.
+表示同步结果的状态码。
 
-**Type:** SyncResultCode
+**Type:** [SyncResultCode](arkts-arkdata-relationalstore-syncresultcode-e.md)
 
 **Since:** 26.0.0
 
@@ -36,7 +42,8 @@ Indicates the synchronization result code.
 readonly device:string
 ```
 
-Indicates the synchronization deviceId.
+表示同步的设备ID，可通过  
+[getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)等接口获取所有可信设备ID列表。
 
 **Type:** string
 
@@ -56,7 +63,7 @@ Indicates the synchronization deviceId.
 readonly message:string
 ```
 
-Indicates detailed information about the synchronization results.
+表示同步结果的信息。
 
 **Type:** string
 

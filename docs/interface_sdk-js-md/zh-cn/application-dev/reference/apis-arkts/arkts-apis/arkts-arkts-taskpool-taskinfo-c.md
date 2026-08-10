@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## duration
 
 ```TypeScript
 duration?: number
 ```
 
-任务执行至当前所用的时间，默认为0，单位为ms。当返回为0时，表示任务未执行；返回为空时，表示没有任务执行。不建议修改此值。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_从API version 11开始，该接口支持在原子化服务中使用。
+任务执行至当前所用的时间，默认为0，单位为ms。当返回为0时，表示任务未执行；返回为空时，表示没有任务执行。不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -36,7 +42,7 @@ duration?: number
 name: string
 ```
 
-任务的名字，不建议修改此值。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_从API version 12开始，该接口支持在原子化服务中使用。
+任务的名字，不建议修改此值。&lt;br/&gt;从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -56,9 +62,9 @@ name: string
 state: State
 ```
 
-任务的状态。state标识任务的当前状态，不建议修改此值。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_从API version 11开始，该接口支持在原子化服务中使用。
+任务的状态。state标识任务的当前状态，不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** State
+**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
 **默认值：** State::WAITING
 
@@ -78,7 +84,7 @@ state: State
 taskId: number
 ```
 
-任务的ID。任务的标识符，系统默认提供全局唯一值，不建议修改此值。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_从API version 11开始，该接口支持在原子化服务中使用。
+任务的ID。任务的标识符，系统默认提供全局唯一值，不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 

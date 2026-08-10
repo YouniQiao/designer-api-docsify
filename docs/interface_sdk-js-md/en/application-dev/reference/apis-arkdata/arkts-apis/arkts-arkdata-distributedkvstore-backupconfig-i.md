@@ -1,6 +1,6 @@
 # BackupConfig
 
-Provides backup config to backup or restore KVStore.
+用于备份数据库的配置信息。
 
 **Since:** 24
 
@@ -10,13 +10,19 @@ Provides backup config to backup or restore KVStore.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## fileName
 
 ```TypeScript
 fileName: string
 ```
 
-Specifies the file name to the backup database
+备份数据库的名称，无长度限制，不能包含特殊字符'/'。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Specifies the file name to the backup database
 filePath: string
 ```
 
-Specifies the root directory relative to the backup database
+备份数据库的路径，无长度限制。
 
 **Type:** string
 

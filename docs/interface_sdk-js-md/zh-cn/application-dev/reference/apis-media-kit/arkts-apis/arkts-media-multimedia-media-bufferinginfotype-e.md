@@ -16,7 +16,7 @@
 BUFFERING_START = 1
 ```
 
-表示开始缓冲。当上报BUFFERING\_START时，播放器会暂停播放。
+表示开始缓冲。当上报BUFFERING_START时，播放器会暂停播放。
 
 **起始版本：** 8
 
@@ -34,7 +34,7 @@ BUFFERING_START = 1
 BUFFERING_END = 2
 ```
 
-表示结束缓冲。当上报BUFFERING\_END时，播放器会恢复播放。
+表示结束缓冲。当上报BUFFERING_END时，播放器会恢复播放。
 
 **起始版本：** 8
 

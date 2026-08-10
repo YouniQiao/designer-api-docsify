@@ -10,6 +10,12 @@ Defines the parameters for sending data over the UDPSocket connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## address
 
 ```TypeScript
@@ -18,7 +24,7 @@ address: NetAddress
 
 Destination address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 10
 
@@ -54,7 +60,7 @@ proxy?: ProxyOptions
 
 Set this option for the proxy feature.
 
-**Type:** ProxyOptions
+**Type:** [ProxyOptions](arkts-network-socket-proxyoptions-i.md)
 
 **Since:** 18
 

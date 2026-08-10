@@ -3,6 +3,12 @@
 本模块为设备厂商提供广告扩展能力，设备厂商可自主实现请求广告的回调。
 
 
+## 导入模块
+
+```TypeScript
+import { RespCallback } from 'kits/@kit.AdsKit';
+```
+
 ## 汇总
 
 <!--Del-->

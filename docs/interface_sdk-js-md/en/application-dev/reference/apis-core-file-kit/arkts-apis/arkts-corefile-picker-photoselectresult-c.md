@@ -1,6 +1,6 @@
 # PhotoSelectResult
 
-Defines information about the images or videos selected.
+返回图库选择后的结果集。
 
 **Since:** 9
 
@@ -8,11 +8,17 @@ Defines information about the images or videos selected.
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)
 
 <!--Device-picker-class PhotoSelectResult--><!--Device-picker-class PhotoSelectResult-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
+
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 
 ## isOriginalPhoto
 
@@ -20,7 +26,7 @@ Defines information about the images or videos selected.
 isOriginalPhoto: boolean
 ```
 
-Whether the selected image is the original one. The value **true** means the selected image is the original one;the value **false** means the opposite.
+返回图库选择后的媒体文件是否为原图。true为原图；false不是原图。
 
 **Type:** boolean
 
@@ -30,7 +36,7 @@ Whether the selected image is the original one. The value **true** means the sel
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#isOriginalPhoto](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#isoriginalphoto)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#isOriginalPhoto](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#isoriginalphoto)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,9 +50,8 @@ Whether the selected image is the original one. The value **true** means the sel
 photoUris: Array<string>
 ```
 
-URIs of the media files selected. This URI array can be used only by  
-[photoAccessHelper.getAssets]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+返回图库选择后的媒体文件的URI数组。此URI数组只能通过临时授权的方式调用接口  
+[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **Type:** Array&lt;string&gt;
 
@@ -56,7 +61,7 @@ URIs of the media files selected. This URI array can be used only by
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#photoUris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photouris)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#photoUris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photouris)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

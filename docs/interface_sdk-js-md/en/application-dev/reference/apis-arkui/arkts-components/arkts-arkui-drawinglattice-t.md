@@ -4,7 +4,7 @@
 declare type DrawingLattice = import('../api/@ohos.graphics.drawing').default.Lattice
 ```
 
-Represents a matrix grid object that divides an image into a rectangular grid.
+将图片按照矩形网格进行划分。
 
 **Since:** 12
 

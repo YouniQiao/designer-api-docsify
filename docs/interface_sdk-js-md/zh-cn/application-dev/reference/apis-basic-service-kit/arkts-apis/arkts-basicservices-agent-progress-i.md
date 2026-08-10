@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## extras
 
 ```TypeScript
@@ -38,7 +44,7 @@ readonly index: int
 
 任务中当前正在处理的文件索引。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -58,7 +64,7 @@ readonly processed: long
 
 任务中当前文件的已处理数据大小，单位为字节（B）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -78,7 +84,7 @@ readonly sizes: Array<long>
 
 任务中文件的大小，单位为字节（B）。在下载过程中，若服务器使用chunk方式传输导致无法从请求头中获取文件总大小时，sizes为 -1。
 
-**类型：** Array&lt;long&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
 
 **起始版本：** 10
 
@@ -98,7 +104,7 @@ readonly state: State
 
 任务当前的状态。
 
-**类型：** State
+**类型：** [State](arkts-basicservices-agent-state-e.md)
 
 **起始版本：** 10
 

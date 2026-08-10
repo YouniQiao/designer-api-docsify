@@ -1,6 +1,6 @@
 # GzErrorOutputInfo
 
-GzError return value information.
+GzError返回信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ GzError return value information.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## status
 
 ```TypeScript
 status: ReturnStatus
 ```
 
-Return Zlib status ReturnStatus the specific meaning is defined as enum.
+返回zlib文件状态码，参考ReturnStatus的定义。
 
-**Type:** ReturnStatus
+**Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **Since:** 12
 
@@ -36,7 +42,7 @@ Return Zlib status ReturnStatus the specific meaning is defined as enum.
 statusMsg: string
 ```
 
-The last status message reported on the zlib file.
+zlib文件上发生的最后一个状态的状态消息。
 
 **Type:** string
 

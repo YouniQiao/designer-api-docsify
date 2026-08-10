@@ -1,6 +1,6 @@
 # TextEncoding
 
-Enumerates the text encoding types supported by text layout query APIs.
+枚举文本布局查询接口支持的文本编码类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates the text encoding types supported by text layout query APIs.
 TEXT_ENCODING_UTF8 = 0
 ```
 
-UTF-8 encoding.
+UTF-8编码。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ UTF-8 encoding.
 TEXT_ENCODING_UTF16 = 1
 ```
 
-UTF-16 encoding.
+UTF-16编码。
 
 **Since:** 26.0.0
 

@@ -1,5 +1,11 @@
 # startShortcutWithReason（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## startShortcutWithReason
 
 ```TypeScript
@@ -8,7 +14,7 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 
 根据指定的快捷方式信息，拉起对应的Ability，并携带快捷方式的启动原因。使用Promise异步回调。
 
-被拉起方可以通过[LaunchParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的launchReasonMessage字段获取到启动原因，并根据启动原因进行业务逻辑处理。
+被拉起方可以通过[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md)的launchReasonMessage字段获取到启动原因，并根据启动原因进行业务逻辑处理。
 
 **起始版本：** 20
 
@@ -26,9 +32,9 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shortcutInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用的快捷方式信息。 |
-| startReason | string | 是 | 快捷方式的启动原因，取值包括： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ ，表示桌面快捷方式启动。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 启动Ability所携带的参数，用于指定目标Ability的窗口模式。 |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | 是 | 应用的快捷方式信息。 |
+| startReason | string | 是 | 快捷方式的启动原因，取值包括： [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](../../../reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md#常量) ，表示桌面快捷方式启动。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 否 | 启动Ability所携带的参数，用于指定目标Ability的窗口模式。 |
 
 **返回值：**
 
@@ -40,12 +46,12 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
-| [17700065](../errorcode-bundle.md#17700065-shortcutinfo结构体中指定的want不支持被拉起) | The specified shortcut want in shortcut info is not supported to be started. |
+| 801 | Capability not support. |
+| 201 | Verify permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700065 | The specified shortcut want in shortcut info is not supported to be started. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';

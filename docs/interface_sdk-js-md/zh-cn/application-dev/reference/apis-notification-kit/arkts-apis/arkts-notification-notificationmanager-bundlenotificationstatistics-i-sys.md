@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## bundle
 
 ```TypeScript
@@ -20,7 +26,7 @@ bundle: BundleOption
 
 指定应用的包信息。
 
-**类型：** BundleOption
+**类型：** [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)
 
 **起始版本：** 26.0.0
 

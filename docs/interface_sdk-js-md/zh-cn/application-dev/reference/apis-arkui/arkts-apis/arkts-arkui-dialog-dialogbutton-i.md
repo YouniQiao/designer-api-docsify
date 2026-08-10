@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
@@ -38,7 +44,7 @@ backgroundColor?: ResourceColor
 
 按钮背景色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.1.0
 
@@ -108,7 +114,7 @@ fontColor?: ResourceColor
 
 按钮文字颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.1.0
 
@@ -152,7 +158,7 @@ style?: DialogButtonStyle
 
 按钮的样式。
 
-**类型：** DialogButtonStyle
+**类型：** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
 **默认值：** DialogButtonStyle.DEFAULT
 
@@ -176,7 +182,7 @@ value: ResourceStr
 
 按钮的文本内容。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.1.0
 

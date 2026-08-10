@@ -1,6 +1,6 @@
 # OffsetResult
 
-Represents the offset values resulting from a scroll operation.
+滑动偏移量对象。
 
 **Since:** 11
 
@@ -16,7 +16,9 @@ Represents the offset values resulting from a scroll operation.
 xOffset: number
 ```
 
-Horizontal scrolling offset.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The unit of the return value is vp.
+水平滑动偏移。
+
+单位：vp。
 
 **Type:** number
 
@@ -38,7 +40,9 @@ Horizontal scrolling offset.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The unit of the r
 yOffset: number
 ```
 
-Vertical scrolling offset.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The unit of the return value is vp.
+竖直滑动偏移。
+
+单位：vp。
 
 **Type:** number
 

@@ -10,6 +10,12 @@ This parameter specifies the selection result of a filtering dimension.The index
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { FilterType, Filter, FilterParams, FilterResult } from 'kits/@kit.ArkUI';
+```
+
 ## index
 
 ```TypeScript
@@ -46,9 +52,9 @@ name: ResourceStr
 
 默认值：空字符串。
 
-**说明**：如果文本大于列宽时，文本被截断。
+**说明：**如果文本大于列宽时，文本被截断。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 
@@ -72,9 +78,9 @@ value: ResourceStr
 
 默认值：空字符串。
 
-**说明**：如果文本大于列宽时，文本被截断。
+**说明：**如果文本大于列宽时，文本被截断。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 

@@ -4,7 +4,7 @@
 type AuthType = 'ALL' | 'FACE_ONLY'
 ```
 
-Enumerates the authentication types.
+表示认证类型。
 
 **Since:** 6
 
@@ -20,6 +20,6 @@ Enumerates the authentication types.
 
 | Type | Description |
 | --- | --- |
-| 'ALL' | Reserved parameter. Authentication of the **ALL** type is not supported in the current version. |
-| 'FACE\_ONLY' | Face authentication. |
+| 'ALL' | 预留参数，当前版本暂不支持ALL类型的认证。 |
+| 'FACE_ONLY' | 人脸认证。 |
 

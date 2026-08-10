@@ -4,7 +4,7 @@
 export type AccessibilityExtensionContext = _AccessibilityExtensionContext.default
 ```
 
-表示辅助功能扩展的上下文环境，请参考[AccessibilityExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+表示辅助功能扩展的上下文环境，请参考[AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)。
 
 **起始版本：** 10
 

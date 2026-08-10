@@ -1,6 +1,6 @@
 # ProgressCode
 
-Describes the status of {@code Progress}.
+表示端云同步过程的状态码。请使用枚举名称而非枚举值。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Describes the status of {@code Progress}.
 SUCCESS = 0
 ```
 
-The device-cloud sync is successful.
+表示端云同步过程成功。
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ The device-cloud sync is successful.
 UNKNOWN_ERROR = 1
 ```
 
-An unknown error occurs during the device-cloud sync.
+表示端云同步过程遇到未知错误。
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ An unknown error occurs during the device-cloud sync.
 NETWORK_ERROR = 2
 ```
 
-A network error occurs during the device-cloud sync.
+表示端云同步过程遇到网络错误。
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ A network error occurs during the device-cloud sync.
 CLOUD_DISABLED = 3
 ```
 
-The cloud is unavailable.
+表示云端不可用。
 
 **Since:** 10
 
@@ -80,9 +80,9 @@ The cloud is unavailable.
 LOCKED_BY_OTHERS = 4
 ```
 
-The device-cloud sync of another device is being performed.
+表示有其他设备正在端云同步，本设备无法进行端云同步。
 
-The sync of the local device can be performed only when the cloud resources are available.
+请确保无其他设备占用云端资源后，再使用本设备进行端云同步任务。
 
 **Since:** 10
 
@@ -98,7 +98,7 @@ The sync of the local device can be performed only when the cloud resources are 
 RECORD_LIMIT_EXCEEDED = 5
 ```
 
-The number of records or size of the data to be synced exceeds the maximum. The maximum value is configured on the cloud.
+表示本次端云同步需要同步的条目或大小超出最大值。由云端配置最大值。
 
 **Since:** 10
 
@@ -114,7 +114,7 @@ The number of records or size of the data to be synced exceeds the maximum. The 
 NO_SPACE_FOR_ASSET = 6
 ```
 
-The remaining cloud space is less than the size of the data to be synced.
+表示云空间剩余空间小于待同步的资产大小。
 
 **Since:** 10
 
@@ -130,7 +130,7 @@ The remaining cloud space is less than the size of the data to be synced.
 BLOCKED_BY_NETWORK_STRATEGY = 7
 ```
 
-The device-cloud sync is blocked due to the network strategy.
+表示端云同步被网络策略限制。
 
 **Since:** 12
 
@@ -146,7 +146,7 @@ The device-cloud sync is blocked due to the network strategy.
 STOP_CLOUD_SYNC = 8
 ```
 
-STOP\_CLOUD\_SYNC: means cloud synchronization has been stopped.
+表示端云同步被停止。
 
 **Since:** 26.0.0
 

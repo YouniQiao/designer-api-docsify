@@ -1,6 +1,6 @@
 # StartLineInfo (System API)
 
-Define start line info used in GridLayoutOptions.
+用于记录Grid页面内起始行的位置信息。
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Define start line info used in GridLayoutOptions.
 startIndex: int
 ```
 
-Define the start index of the row where the target index or offset is located.
+在OnGetStartIndexByOffsetCallback中，表示滚动偏移量所在行的起始索引；在OnGetStartIndexByIndexCallback中，表示目标索引所在行的起始索引。
 
 **Type:** int
 
@@ -40,7 +40,7 @@ Define the start index of the row where the target index or offset is located.
 startLine: int
 ```
 
-Define the start row of the item with startIndex.
+startIndex对应GridItem在Grid布局中的起始行号。若该GridItem跨多行，且当前视窗从该GridItem中间位置开始显示，startLine仍表示该GridItem在完整Grid布局中实际占用的首行行号。
 
 **Type:** int
 
@@ -62,7 +62,9 @@ Define the start row of the item with startIndex.
 startOffset: double
 ```
 
-Offset between the top of the **GridItem** corresponding to **startIndex** and the top of the **Grid**.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: vp
+startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。
+
+单位：vp
 
 **Type:** double
 
@@ -84,7 +86,9 @@ Offset between the top of the **GridItem** corresponding to **startIndex** and t
 totalOffset: double
 ```
 
-Total scrolling offset,that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: vp
+总滚动偏移量，即Grid中第一个GridItem的顶部与Grid顶部之间的偏移量。
+
+单位：vp
 
 **Type:** double
 

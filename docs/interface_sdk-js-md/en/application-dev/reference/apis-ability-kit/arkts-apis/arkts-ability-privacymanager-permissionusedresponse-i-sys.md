@@ -1,6 +1,6 @@
 # PermissionUsedResponse (System API)
 
-Represents the access records of all applications or devices.
+表示所有应用或设备的访问记录。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Represents the access records of all applications or devices.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## beginTime
 
 ```TypeScript
 beginTime: long
 ```
 
-Start time of the query.Unit: milliseconds.
+查询记录的起始时间。单位为：毫秒。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -38,7 +44,7 @@ Start time of the query.Unit: milliseconds.
 bundleRecords: Array<BundleUsedRecord>
 ```
 
-Each element represents the permission access record under an application dimension. Developers can further traverse permissionRecords to obtain specific permission usage details.
+每个元素表示一个应用维度下的权限访问记录，开发者可进一步遍历permissionRecords获取具体权限使用详情。
 
 **Type:** Array&lt;BundleUsedRecord&gt;
 
@@ -58,9 +64,9 @@ Each element represents the permission access record under an application dimens
 endTime: long
 ```
 
-End time of the query.Unit: milliseconds.
+查询记录的终止时间。单位为：毫秒。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

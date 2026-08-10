@@ -1,7 +1,7 @@
 # AuthOptions (System API)
 
-Represents a set of optional parameters for  
-[auth]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示  
+[认证用户](arkts-basicservices-osaccount-userauth-c-sys.md#auth)的可选参数集合。
 
 **Since:** 12
 
@@ -13,15 +13,21 @@ Represents a set of optional parameters for
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountId
 
 ```TypeScript
 accountId?: int
 ```
 
-OS account ID, which is **undefined** by default.
+系统账号标识，默认为undefined。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -39,7 +45,7 @@ OS account ID, which is **undefined** by default.
 additionalInfo?: string
 ```
 
-Indicates the additional information about the authentication options.
+表示有关身份验证选项的附加信息。
 
 **Type:** string
 
@@ -61,9 +67,9 @@ Indicates the additional information about the authentication options.
 authIntent?: AuthIntent
 ```
 
-Authentication intent, which is **undefined** by default.
+认证意图，默认为undefined。
 
-**Type:** AuthIntent
+**Type:** [AuthIntent](arkts-basicservices-osaccount-authintent-e-sys.md)
 
 **Since:** 12
 
@@ -81,9 +87,9 @@ Authentication intent, which is **undefined** by default.
 remoteAuthOptions?: RemoteAuthOptions
 ```
 
-Remote authentication options, which is **undefined** by default.
+远程认证选项，默认为undefined。
 
-**Type:** RemoteAuthOptions
+**Type:** [RemoteAuthOptions](arkts-basicservices-osaccount-remoteauthoptions-i-sys.md)
 
 **Since:** 12
 

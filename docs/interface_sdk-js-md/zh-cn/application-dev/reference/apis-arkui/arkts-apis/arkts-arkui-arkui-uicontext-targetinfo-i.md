@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## componentId
 
 ```TypeScript
@@ -37,8 +43,7 @@ id: string | int
 ```
 
 指定popup或menu绑定的目标节点。  
-**说明：**  
-1. 当id是number时，对应组件实例的UniqueID，此id由系统保证唯一性。2. 当id是string时，对应[通用属性id]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_所指定的组件，此id的唯一性需由开发者确保，但实际可能会有多个。
+**说明：**1. 当id是number时，对应组件实例的UniqueID，此id由系统保证唯一性。2. 当id是string时，对应[通用属性id](arkts-arkui-common-commonmethod-i.md#id)所指定的组件，此id的唯一性需由开发者确保，但实际可能会有多个。
 
 **类型：** string \| int
 

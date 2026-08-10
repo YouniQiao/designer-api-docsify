@@ -1,5 +1,11 @@
 # addDeviceConfig (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## addDeviceConfig
 
 ```TypeScript
@@ -8,7 +14,7 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 Adds Wi-Fi connection configuration to the device.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The configuration will be updated when the configuration is added.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
 
 **Since:** 6
 
@@ -30,7 +36,7 @@ Adds Wi-Fi connection configuration to the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i-sys.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
@@ -38,7 +44,7 @@ Adds Wi-Fi connection configuration to the device.
 | --- | --- |
 | Promise&lt;number&gt; | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -80,7 +86,7 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 
 Adds Wi-Fi connection configuration to the device.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The configuration will be updated when the configuration is added.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
 
 **Since:** 6
 
@@ -102,10 +108,10 @@ Adds Wi-Fi connection configuration to the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes |  |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i-sys.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

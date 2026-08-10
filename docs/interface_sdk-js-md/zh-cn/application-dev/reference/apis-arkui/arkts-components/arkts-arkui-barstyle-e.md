@@ -56,7 +56,7 @@ STACK = 1
 SAFE_AREA_PADDING = 2
 ```
 
-将指定该模式的标题栏或工具栏设置为[组件级安全区]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+将指定该模式的标题栏或工具栏设置为[组件级安全区](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#safeareapadding)。
 
 **起始版本：** 14
 

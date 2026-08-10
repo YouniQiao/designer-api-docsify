@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -18,7 +24,7 @@ deviceId?: int
 
 设备ID。-1表示本地设备，其它值表示远程设备。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -126,7 +132,7 @@ maxRange:double
 
 传感器最大测量范围。单位：取决于具体传感器类型（如加速度传感器为m/s²）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -144,7 +150,7 @@ maxSamplePeriod:long
 
 传感器最大采样周期。单位：ns（纳秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -162,7 +168,7 @@ minSamplePeriod:long
 
 传感器最小采样周期。单位：ns（纳秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -180,7 +186,7 @@ power:double
 
 传感器估计功耗。单位：mA（毫安）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -198,7 +204,7 @@ precision:double
 
 传感器精度。单位：取决于具体传感器类型。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 9
 
@@ -214,9 +220,9 @@ precision:double
 sensorId:int
 ```
 
-传感器类型ID，对应[SensorId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_枚举值。
+传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md)枚举值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -234,7 +240,7 @@ sensorIndex?: int
 
 传感器索引，同一类型传感器可能有多个实例，通过sensorIndex区分。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 

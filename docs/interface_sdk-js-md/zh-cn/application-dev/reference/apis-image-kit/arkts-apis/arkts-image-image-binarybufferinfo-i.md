@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## bytesPerRow
 
 ```TypeScript
@@ -18,7 +24,7 @@ bytesPerRow?: int
 
 每行字节数。若未指定，将按(width + 7) / 8计算。该值应为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -58,7 +64,7 @@ size: Size
 
 图像尺寸，包含宽度和高度。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 26.0.0
 

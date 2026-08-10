@@ -2,9 +2,9 @@
 
 FlexWrap enumeration description
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum FlexWrap--><!--Device-unnamed-declare enum FlexWrap-End-->
 
@@ -16,15 +16,15 @@ FlexWrap enumeration description
 NoWrap
 ```
 
-The Flex container has a single row/column layout of elements, and children are allowed to go beyond the container.
+The Flex container has a single row/column layout of elements, and children are not allowed to go beyond the container.
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-FlexWrap-NoWrap--><!--Device-FlexWrap-NoWrap-End-->
 
@@ -38,13 +38,13 @@ Wrap
 
 The elements of the Flex container are arranged in multiple rows or columns, and the sub-items are allowed to exceed the container.
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-FlexWrap-Wrap--><!--Device-FlexWrap-Wrap-End-->
 
@@ -58,13 +58,13 @@ WrapReverse
 
 The elements of the Flex container are arranged in reverse multiple rows/columns, and children are allowed to exceed the container.
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-FlexWrap-WrapReverse--><!--Device-FlexWrap-WrapReverse-End-->
 

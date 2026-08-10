@@ -1,12 +1,18 @@
 # getLauncherAbilityResourceInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getLauncherAbilityResourceInfo
 
 ```TypeScript
 function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int): Array<LauncherAbilityResourceInfo>
 ```
 
-Obtains the bundle information of the entry ability of an application based on the given bundle name and resource flags. This API returns the result synchronously.
+以同步方法根据给定的bundleName和resourceFlags获取当前应用的LauncherAbilityResourceInfo。
 
 **Since:** 11
 
@@ -24,23 +30,23 @@ Obtains the bundle information of the entry ability of an application based on t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_RESOURCE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO\_\_\_ESCAPED\_UNDERSCORE\_\_\_ALL**. |
+| bundleName | string | Yes | 指定查询应用的包名。 |
+| resourceFlags | int | No | 指定返回的LauncherAbilityResourceInfo所包含的信息，默认值为 [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_ALL。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | Resource information of the entry ability obtained. |
+| Array&lt;LauncherAbilityResourceInfo&gt; | 返回指定应用的LauncherAbilityResourceInfo。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
 
 ## getLauncherAbilityResourceInfo
@@ -49,7 +55,7 @@ Obtains the bundle information of the entry ability of an application based on t
 function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): Array<LauncherAbilityResourceInfo>
 ```
 
-Obtains the launcher ability resource information of an application based on the given bundle name, resource flags,and app index. This API returns the result synchronously.
+以同步方法根据给定的bundleName、resourceFlags和appIndex获取当前应用或分身应用的LauncherAbilityResourceInfo。
 
 **Since:** 12
 
@@ -67,23 +73,23 @@ Obtains the launcher ability resource information of an application based on the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| resourceFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Type of the resource information to obtain. The default value is **[ResourceFlag]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_RESOURCE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO\_\_\_ESCAPED\_UNDERSCORE\_\_\_ALL**. |
-| appIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Index of the application clone. The default value is **0**. |
+| bundleName | string | Yes | 指定查询应用的包名。 |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定返回的LauncherAbilityResourceInfo所包含的信息，默认值为 [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_ALL。 |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定查询应用分身的ID，默认值为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | Resource information of the entry ability obtained. |
+| Array&lt;LauncherAbilityResourceInfo&gt; | 返回指定应用的LauncherAbilityResourceInfo。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range or not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700061 | AppIndex not in valid range or not found. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 

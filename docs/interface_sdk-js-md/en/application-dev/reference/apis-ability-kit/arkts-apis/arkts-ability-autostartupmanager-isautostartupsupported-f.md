@@ -1,12 +1,23 @@
 # isAutoStartupSupported
 
+## Modules to Import
+
+```TypeScript
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## isAutoStartupSupported
 
 ```TypeScript
 function isAutoStartupSupported(): boolean
 ```
 
-Check whether the current device supports auto startup on this device.
+检查当前设备是否支持开机自启动。
+
+> **说明：**
+> 
+> 建议在调用[autoStartupManager.getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md#getautostartupstatusforself) 之前，先调
+> 用该接口检查设备能力。如果返回false，则表明当前设备不支持开机自启动。
 
 **Since:** 26.0.0
 
@@ -22,5 +33,5 @@ Check whether the current device supports auto startup on this device.
 
 | Type | Description |
 | --- | --- |
-| boolean |  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: Device supports auto startup. - \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: Device do not support auto startup. |
+| boolean | 当前设备是否支持开机自启动。true：支持，false：不支持。 |
 

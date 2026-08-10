@@ -1,16 +1,15 @@
 # Canvas
 
-A carrier that carries the drawn content and drawing status.
-    **NOTE**  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.  
-    
-    
-    The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style  
-    effects. This default brush is used when no brush or pen is actively set in the canvas.
+承载绘制内容与绘制状态的载体。Canvas提供矩形、圆形、椭圆、弧线、路径、文字、图片等多种图形的绘制能力，支持通过画笔和画刷设置绘制样式，支持画布裁剪、矩阵变换、画布状态保存与恢复等功能。
+
+> **说明：**
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> > **说明：**
+> 
+> 画布自带一个默认画刷，该画刷为黑色，具备抗锯齿，不具备其他任何样式效果。当画布中没有主动设置画刷和画笔时，该默认画刷生效。
 
 **Since:** 11
 
@@ -20,17 +19,24 @@ A carrier that carries the drawn content and drawing status.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## attachBrush
 
 ```TypeScript
 attachBrush(brush: Brush): void
 ```
 
-Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes.
-    **NOTE**  
-    
-    If the brush effect changes after this API is called, you must call the API again if you want to use the new  
-    effect in the subsequent drawing.
+绑定画刷到画布上，在画布上进行绘制时，将使用画刷的样式对绘制图形形状的内部进行填充。调用本方法后，画刷将持续生效于后续所有绘制操作，直至调用  
+[detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachbrush)解除绑定。
+
+> **说明：**
+> 
+> 执行该方法后，若brush的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
 
 **Since:** 11
 
@@ -44,13 +50,13 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Brush** object. |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | 画刷对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## attachPen
 
@@ -58,11 +64,11 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 attachPen(pen: Pen): void
 ```
 
-Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes.
-    **NOTE**  
-    
-    If the pen effect changes after this API is called, you must call the API again if you want to use the new  
-    effect in the subsequent drawing.
+绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作，直至调用[detachPen](arkts-arkgraphics2d-drawing-canvas-c.md#detachpen)解除绑定。
+
+> **说明：**
+> 
+> 执行该方法后，若pen的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
 
 **Since:** 11
 
@@ -76,13 +82,13 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pen | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Pen** object. |
+| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Yes | 画笔对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clear
 
@@ -90,8 +96,7 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 clear(color: common2D.Color): void
 ```
 
-Clears the canvas with a given color. This API has the same effect as  
-[drawColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)。
 
 **Since:** 12
 
@@ -105,13 +110,13 @@ Clears the canvas with a given color. This API has the same effect as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| color | common2D.Color | Yes | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clear
 
@@ -125,7 +130,7 @@ ArkTS-Sta:
 clear(color: common2D.Color | int): void
 ```
 
-Clears the canvas with a given color.
+使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)。
 
 **Since:** 18
 
@@ -139,7 +144,7 @@ Clears the canvas with a given color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| color | ArkTS-Dyn: common2D.Color \| number  <br>ArkTS-Sta：common2D.Color \| int | Yes | 颜色，可以用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。 |
 
 ## clipPath
 
@@ -147,7 +152,7 @@ Clears the canvas with a given color.
 clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void
 ```
 
-Clips the drawable area of the canvas using a custom path.
+使用自定义路径对画布进行裁剪。
 
 **Since:** 12
 
@@ -161,15 +166,15 @@ Clips the drawable area of the canvas using a custom path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Path** object. |
-| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Clip mode. The default value is **INTERSECT**. |
-| doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti- aliasing, and **false** means the opposite. Default value: **false**. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 路径对象。 |
+| clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | 裁剪方式。默认为INTERSECT。 |
+| doAntiAlias | boolean | No | 表示是否使用抗锯齿绘制。true表示使用，false表示不使用。默认为false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clipRect
 
@@ -177,7 +182,7 @@ Clips the drawable area of the canvas using a custom path.
 clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void
 ```
 
-Clips the drawable area of the canvas using a rectangle.
+使用矩形对画布进行裁剪。
 
 **Since:** 12
 
@@ -191,15 +196,15 @@ Clips the drawable area of the canvas using a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle. |
-| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Clip mode. The default value is **INTERSECT**. |
-| doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti- aliasing, and **false** means the opposite. Default value: **false**. |
+| rect | common2D.Rect | Yes | 需要裁剪的矩形区域。 |
+| clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | 裁剪方式。默认值为INTERSECT。 |
+| doAntiAlias | boolean | No | 表示是否使用抗锯齿绘制。true表示使用，false表示不使用。默认值为false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clipRegion
 
@@ -207,7 +212,7 @@ Clips the drawable area of the canvas using a rectangle.
 clipRegion(region: Region, clipOp?: ClipOp): void
 ```
 
-Clips a region on the canvas.
+在画布上裁剪一个区域。
 
 **Since:** 12
 
@@ -221,14 +226,14 @@ Clips a region on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region** object, which indicates the range to clip. |
-| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Clipping mode. The default value is **INTERSECT**. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 区域对象，表示裁剪范围。 |
+| clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | 裁剪方式。默认值为INTERSECT。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## clipRoundRect
 
@@ -236,7 +241,7 @@ Clips a region on the canvas.
 clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void
 ```
 
-Clips a rounded rectangle on the canvas.
+在画布上裁剪一个圆角矩形。
 
 **Since:** 12
 
@@ -250,15 +255,15 @@ Clips a rounded rectangle on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | RoundRect** object, which indicates the range to clip. |
-| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Clipping mode. The default value is **INTERSECT**. |
-| doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti- aliasing, and **false** means the opposite. Default value: **false**. |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | 圆角矩形对象，表示裁剪范围。 |
+| clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | 裁剪方式。默认值为INTERSECT。 |
+| doAntiAlias | boolean | No | 表示是否使用抗锯齿。true表示使用，false表示不使用。默认值为false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## concatMatrix
 
@@ -266,7 +271,7 @@ Clips a rounded rectangle on the canvas.
 concatMatrix(matrix: Matrix): void
 ```
 
-Multiplies the current canvas matrix by the incoming matrix on the left. This API does not affect previous drawing operations, but subsequent drawing and clipping operations will be influenced by this matrix in terms of shape and position.
+画布现有矩阵左乘传入矩阵，不影响之前的绘制操作，后续绘制操作和裁剪操作的形状和位置都会受到该矩阵的影响。
 
 **Since:** 12
 
@@ -280,13 +285,13 @@ Multiplies the current canvas matrix by the incoming matrix on the left. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Matrix object. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 矩阵对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## constructor
 
@@ -294,7 +299,7 @@ Multiplies the current canvas matrix by the incoming matrix on the left. This AP
 constructor(pixelmap: image.PixelMap)
 ```
 
-Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
+创建一个以PixelMap作为绘制目标的Canvas对象。
 
 **Since:** 11
 
@@ -310,13 +315,13 @@ Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** used to create the object. |
+| pixelmap | image.PixelMap | Yes | 作为Canvas绘制目标的PixelMap对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## detachBrush
 
@@ -324,7 +329,7 @@ Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
 detachBrush(): void
 ```
 
-Detaches the brush from the canvas. When you draw on the canvas, the brush is no longer used to fill the interior of shapes.
+将画刷与画布解绑，在画布上进行绘制时，不会再使用画刷对绘制图形形状的内部进行填充。本方法与[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachbrush)配合使用，用于在完成绘制后解除画刷绑定。
 
 **Since:** 11
 
@@ -340,7 +345,7 @@ Detaches the brush from the canvas. When you draw on the canvas, the brush is no
 detachPen(): void
 ```
 
-Detaches the pen from the canvas. When you draw on the canvas, the pen is no longer used to outline shapes.
+将画笔与画布解绑，在画布上进行绘制时，不会再使用画笔去绘制图形形状的轮廓。本方法与[attachPen](arkts-arkgraphics2d-drawing-canvas-c.md#attachpen)配合使用，用于在完成绘制后解除画笔绑定。
 
 **Since:** 11
 
@@ -362,7 +367,7 @@ ArkTS-Sta:
 drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void
 ```
 
-Draws an arc on the canvas. with the start angle and sweep angle specified. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn.
+在画布上绘制圆弧，默认使用黑色填充内容。该方法允许指定起始角度、扫描角度。当扫描角度的绝对值大于360度时，则绘制椭圆。
 
 **Since:** 12
 
@@ -376,15 +381,15 @@ Draws an arc on the canvas. with the start angle and sweep angle specified. If t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arc | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
-| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Start angle, in degrees. The value is a floating point number. When the degree is **0**, the start point is located at the right end of the oval. A positive number indicates that the start point is placed clockwise, and a negative number indicates that the start point is placed counterclockwise. |
-| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The valid range is from -360 degrees to 360 degrees. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn. |
+| arc | common2D.Rect | Yes | 包含要绘制的圆弧的椭圆的矩形边界。 |
+| startAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，正数时以顺时针方向放置起始点，负数时以逆时针方向放置起始点。 |
+| sweepAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。它的有效范围在-360度到360度之间，当绝对值大于360度时，该方法绘制的是一个椭 圆。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawArcWithCenter
 
@@ -398,7 +403,7 @@ ArkTS-Sta:
 drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void
 ```
 
-Draws an arc on the canvas. It enables you to define the start angle, sweep angle, and whether the arc's endpoints should connect to its center.
+在画布上绘制圆弧。与[drawArc](arkts-arkgraphics2d-drawing-canvas-c.md#drawarc)相比，本接口增加了useCenter参数，用于控制圆弧的起点和终点是否连接圆弧的中心点。该方法允许指定圆弧的起始角度和扫描角度。
 
 **Since:** 18
 
@@ -412,10 +417,10 @@ Draws an arc on the canvas. It enables you to define the start angle, sweep angl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arc | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
-| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Start angle, in degrees. The value is a floating point number. When the degree is **0**, the start point is located at the right end of the oval. A positive number indicates that the start point is placed clockwise, and a negative number indicates that the start point is placed counterclockwise. |
-| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The swipe angle can exceed 360 degrees, and a complete ellipse is drawn. |
-| useCenter | boolean | Yes | Whether the start point and end point of the arc are connected to its center. The value **true** means that they are connected to the center; the value **false** means the opposite. |
+| arc | common2D.Rect | Yes | 包含要绘制的圆弧的椭圆的矩形边界。 |
+| startAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，为正数时以顺时针方向放置起始点，为负数时以逆时针方向放置起始点。 |
+| sweepAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。扫描角度可以超过360度，超过360度时将绘制一个完整的椭圆。 |
+| useCenter | boolean | Yes | 绘制时弧形的起点和终点是否连接弧形的中心点。true表示连接，false表示不连接。 |
 
 ## drawBackground
 
@@ -423,7 +428,7 @@ Draws an arc on the canvas. It enables you to define the start angle, sweep angl
 drawBackground(brush: Brush): void
 ```
 
-Uses a brush to fill the drawable area of the canvas.
+使用画刷填充画布的裁剪区域。
 
 **Since:** 12
 
@@ -437,13 +442,13 @@ Uses a brush to fill the drawable area of the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Brush** object. |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | 画刷对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawCircle
 
@@ -457,7 +462,7 @@ ArkTS-Sta:
 drawCircle(x: double, y: double, radius: double): void
 ```
 
-Draws a circle. If the radius is less than or equal to zero, nothing is drawn. By default, black is used for filling.
+绘制一个圆形。如果半径小于等于零，则不绘制。默认使用黑色填充内容。
 
 **Since:** 11
 
@@ -471,15 +476,15 @@ Draws a circle. If the radius is less than or equal to zero, nothing is drawn. B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the center of the circle. The value is a floating point number. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the center of the circle. The value is a floating point number. |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the circle. The value is a floating point number greater than 0. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 圆的半径，大于0的浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -487,8 +492,7 @@ Draws a circle. If the radius is less than or equal to zero, nothing is drawn. B
 drawColor(color: common2D.Color, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and  
-[BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
 
 **Since:** 11
 
@@ -502,14 +506,14 @@ Fills the drawable area of the canvas with the specified color and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Blend mode. The default mode is **SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER**. |
+| color | common2D.Color | Yes | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数。 |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | No | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -523,9 +527,8 @@ ArkTS-Sta:
 drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and  
-[BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API provides better performance than  
-[drawColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and is recommended.
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。性能优于  
+[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)接口，推荐使用本接口。
 
 **Since:** 12
 
@@ -539,17 +542,17 @@ Fills the drawable area of the canvas with the specified color and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| red | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
-| green | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| blue | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Blend mode. The default mode is **SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER**. |
+| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的透明度通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| red | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的红色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| green | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的绿色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| blue | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的蓝色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | No | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -563,8 +566,7 @@ ArkTS-Sta:
 drawColor(color: int, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and  
-[BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
 
 **Since:** 18
 
@@ -578,14 +580,14 @@ Fills the drawable area of the canvas with the specified color and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Color in hexadecimal ARGB format. |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Blend mode. The default mode is **SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER**. |
+| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 16进制ARGB格式的颜色，用32位无符号整数表示，例如：0xAARRGGBB。 |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | No | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawGlyphs
 
@@ -601,7 +603,7 @@ drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.P
       positionOffset: int, glyphCount: int, font: Font): void
 ```
 
-Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is smaller than or equals to 0.
+绘制具有指定字体的字形数组。如果字形计数小于或等于0，则不绘制任何内容。
 
 **Since:** 26.0.0
 
@@ -617,18 +619,18 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphIds | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | Yes | Indicates an array of glyph IDs. |
-| glyphIdOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the number of elements to skip before drawing in glyphIds array. |
-| positions | Array&lt;common2D.Point&gt; | Yes | Indicates an array of positions. |
-| positionOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the number of elements to skip before drawing in positions. |
-| glyphCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the number of glyphs to be drawn. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the font used for drawing. |
+| glyphIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | 字形ID的数组。数组成员取值限定为整数，输入浮点数则仅保留整数部分。 |
+| glyphIdOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 在绘制字形ID数组之前要跳过的元素的数量。 取值限定为整数，输入浮点数则仅保留整数部分。 &lt;br&gt;如果glyphCount为n，跳过长度为m，则有效glyphIds数组的范围为[glyphIds[m], glyphIds[m+n])。 &lt;br&gt;如果glyphIds数组长度小于“glyphIdOffset + glyphCount”则抛出错误码25900001。 &lt;br&gt;如果glyphIdOffset小于0则抛出错误码25900001。 |
+| positions | Array&lt;common2D.Point&gt; | Yes | 每个字形对应的绘制位置坐标数组。如果glyphCount为n，跳过长度为m，则有效positions数组范围为 [positions[m], positions[m+n])。 |
+| positionOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 在绘制位置数组之前要跳过的元素的数量。取值限定为整数，输入浮点数则仅保留整数部分。 &lt;br&gt;如果glyphCount为n，跳过长度为m，则有效positions数组的范围为[positions[m], positions[m+n])。 &lt;br&gt;如果positions数组长度小于“positionOffset + glyphCount”则抛出错误码25900001。 &lt;br&gt;如果positionOffset小于0则抛出错误码25900001。 |
+| glyphCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要绘制的字形的数目。数目小于或等于0，则不绘制任何内容，并抛出错误码25900001。 &lt;br&gt;如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 用于绘图的字体。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## drawImage
 
@@ -642,7 +644,7 @@ ArkTS-Sta:
 drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?: SamplingOptions): void
 ```
 
-Draws an image. The coordinates of the upper left corner of the image are (left, top).
+绘制一张图片，图片的左上角坐标为(left, top)。
 
 **Since:** 11
 
@@ -656,16 +658,16 @@ Draws an image. The coordinates of the upper left corner of the image are (left,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** of an image. |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the upper left corner of the image. The value is a floating point number. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the upper left corner of the image. The value is a floating point number. |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| pixelmap | image.PixelMap | Yes | 图片的PixelMap。 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 图片位置的左上角x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 图片位置的左上角y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawImageLattice
 
@@ -674,9 +676,9 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
       filterMode: FilterMode): void
 ```
 
-Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect.
+将图像按照矩形网格对象的设置划分为多个网格，并把图像的每个部分按照网格对象的设置绘制到画布上的目标矩形区域。与[drawImageNine](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagenine)固定将图像分割为9个部分不同，本接口通过Lattice对象支持自定义网格分割。使用此接口时，设置开启抗锯齿无效。
 
-The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
+偶数行和列（起始计数为0）的每个交叉点对应的网格区域保持原始尺寸不缩放，若固定网格区域的尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区域，则剩下的区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
 
 **Since:** 18
 
@@ -690,16 +692,16 @@ The intersections of even-numbered rows and columns (starting from 0) are fixed 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** to draw. |
-| lattice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Lattice object. |
-| dstRect | common2D.Rect | Yes | Target rectangle. |
-| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter mode. |
+| pixelmap | image.PixelMap | Yes | 用于绘制网格的像素图。 |
+| lattice | [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Yes | 矩形网格对象。 |
+| dstRect | common2D.Rect | Yes | 目标矩形区域。 |
+| filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | 过滤模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawImageNine
 
@@ -708,9 +710,9 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
       filterMode: FilterMode): void
 ```
 
-Splits an image into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. When this API is used, the anti-aliasing enablement setting does not take effect.
+通过绘制两条水平线和两条垂直线将图像分割成9个部分：四个边、四个角和中心。使用此接口时，设置开启抗锯齿无效。
 
-If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
+若角落的4个区域尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区域，则剩下的5个区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
 
 **Since:** 18
 
@@ -724,16 +726,16 @@ If the four corner sections are smaller than the target rectangle, they will be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** to draw. |
-| center | common2D.Rect | Yes | Central rectangle that divides the image into nine sections by extending its four edges. |
-| dstRect | common2D.Rect | Yes | Target rectangle drawn on the canvas. |
-| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter mode. |
+| pixelmap | image.PixelMap | Yes | 用于绘制网格的像素图。 |
+| center | common2D.Rect | Yes | 分割图像的中心矩形。矩形四条边所在的直线将图像分成了9个部分。 |
+| dstRect | common2D.Rect | Yes | 在画布上绘制的目标矩形区域。 |
+| filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | 过滤模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawImageRect
 
@@ -741,7 +743,7 @@ If the four corner sections are smaller than the target rectangle, they will be 
 drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions): void
 ```
 
-Draws an image onto a specified area of the canvas.
+将图片绘制到画布的指定区域上。
 
 **Since:** 12
 
@@ -755,15 +757,15 @@ Draws an image onto a specified area of the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** of an image. |
-| dstRect | common2D.Rect | Yes | Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used. |
+| pixelmap | image.PixelMap | Yes | 图片的PixelMap。 |
+| dstRect | common2D.Rect | Yes | 矩形对象，用于指定画布上图片的绘制区域。 |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawImageRectWithSrc
 
@@ -772,7 +774,7 @@ drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: 
       samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void
 ```
 
-Draws a portion of an image onto a specified area of the canvas.
+将图片的指定区域绘制到画布的指定区域。
 
 **Since:** 12
 
@@ -786,17 +788,17 @@ Draws a portion of an image onto a specified area of the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** of an image. |
-| srcRect | common2D.Rect | Yes | Rectangle** object, which specifies the portion of the image to draw. |
-| dstRect | common2D.Rect | Yes | Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used. |
-| constraint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Constraint type of the source rectangle. The default value is **STRICT**. |
+| pixelmap | image.PixelMap | Yes | 图片的PixelMap。 |
+| srcRect | common2D.Rect | Yes | 矩形对象，用于指定图片的待绘制区域。 |
+| dstRect | common2D.Rect | Yes | 矩形对象，用于指定画布上图片的绘制区域。 |
+| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | 采样选项对象，默认为不使用任何参数构造的原始采样选项对象。 |
+| constraint | [SrcRectConstraint](arkts-arkgraphics2d-drawing-srcrectconstraint-e.md) | No | 源矩形区域约束类型，默认为STRICT。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawLine
 
@@ -810,7 +812,7 @@ ArkTS-Sta:
 drawLine(x0: double, y0: double, x1: double, y1: double): void
 ```
 
-Draws a line segment from the start point to the end point. If the coordinates of the start point are the same as those of the end point, nothing is drawn.
+绘制一条直线段，从指定的起点到终点。如果直线段的起点和终点是同一个点，无法绘制。
 
 **Since:** 11
 
@@ -824,16 +826,16 @@ Draws a line segment from the start point to the end point. If the coordinates o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x0 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the start point of the line segment. The value is a floating point number. |
-| y0 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the start point of the line segment. The value is a floating point number. |
-| x1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the end point of the line segment. The value is a floating point number. |
-| y1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the end point of the line segment. The value is a floating point number. |
+| x0 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 线段起点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y0 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 线段起点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| x1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 线段终点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 线段终点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawNestedRoundRect
 
@@ -841,7 +843,7 @@ Draws a line segment from the start point to the end point. If the coordinates o
 drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void
 ```
 
-Draws two nested rounded rectangles. The outer rectangle boundary must contain the inner rectangle boundary.Otherwise, there is no drawing effect.
+绘制两个嵌套的圆角矩形，外部矩形边界必须完全包围内部矩形边界（即内部矩形必须完全位于外部矩形之内），否则无绘制效果。
 
 **Since:** 12
 
@@ -855,14 +857,14 @@ Draws two nested rounded rectangles. The outer rectangle boundary must contain t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Outer rounded rectangle. |
-| inner | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Inner rounded rectangle. |
+| outer | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | 圆角矩形对象，表示外部圆角矩形边界。 |
+| inner | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | 圆角矩形对象，表示内部圆角矩形边界。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawOval
 
@@ -870,7 +872,7 @@ Draws two nested rounded rectangles. The outer rectangle boundary must contain t
 drawOval(oval: common2D.Rect): void
 ```
 
-Draws an oval on the canvas, where the shape and position of the oval are defined by its bounding rectangle.
+在画布上绘制一个椭圆，椭圆的形状和位置由椭圆的外切矩形给出。默认使用黑色填充内容。
 
 **Since:** 12
 
@@ -884,13 +886,13 @@ Draws an oval on the canvas, where the shape and position of the oval are define
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | common2D.Rect | Yes | Rectangle. The oval inscribed within the rectangle is the oval to draw. |
+| oval | common2D.Rect | Yes | 矩形区域，该矩形的内切椭圆即为待绘制椭圆。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawPath
 
@@ -898,7 +900,7 @@ Draws an oval on the canvas, where the shape and position of the oval are define
 drawPath(path: Path): void
 ```
 
-Draws a custom path, which contains a set of path outlines. Each path outline can be open or closed.
+绘制一个自定义路径，默认使用黑色填充内容。该路径包含了一组路径轮廓，每个路径轮廓可以是开放的或封闭的。
 
 **Since:** 11
 
@@ -912,13 +914,13 @@ Draws a custom path, which contains a set of path outlines. Each path outline ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Path** object to draw. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 要绘制的路径对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawPixelMapMesh
 
@@ -934,7 +936,7 @@ drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,
       vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void
 ```
 
-Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed across the **PixelMap**. (This API works with brushes but not pens.)
+在网格上绘制像素图，网格均匀分布在像素图上。（只支持画刷，使用画笔没有绘制效果。）
 
 **Since:** 12
 
@@ -948,19 +950,19 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | image.PixelMap | Yes | PixelMap** to draw. |
-| meshWidth | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of columns in the mesh. The value is an integer greater than 0. |
-| meshHeight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of rows in the mesh. The value is an integer greater than 0. |
-| vertices | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) (meshHeight+1) + vertOffset) 2. |
-| vertOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of vert elements to skip before drawing. The value is an integer greater than or equal to 0. |
-| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | Yes | Array of colors, which specify the color at each vertex. The value is an integer array and can be null. The size must be (meshWidth+1) (meshHeight+1) + colorOffset.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
-| colorOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of color elements to skip before drawing. The value is an integer greater than or equal to 0. |
+| pixelmap | image.PixelMap | Yes | 用于绘制网格的像素图。 |
+| meshWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 网格中的列数，大于0的整数。 |
+| meshHeight | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 网格中的行数，大于0的整数。 |
+| vertices | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | 顶点数组，指定网格的绘制位置，该参数为浮点数组，单位为物理像素px。大小必须为((meshWidth+1) (meshHeight+1) + vertOffset) 2。 |
+| vertOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 绘图前要跳过的vert元素数，大于等于0的整数。 |
+| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  <br>ArkTS-Sta：Array&lt;int&gt; \| null | Yes | 颜色数组，在每个顶点指定一种颜色，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB，可为null，大小必须为( meshWidth+1) (meshHeight+1) + colorOffset。<br>**Since:** 20 |
+| colorOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 绘制前要跳过的颜色元素数，大于等于0的整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawPoint
 
@@ -974,7 +976,7 @@ ArkTS-Sta:
 drawPoint(x: double, y: double): void
 ```
 
-Draws a point.
+绘制一个点。
 
 **Since:** 11
 
@@ -988,14 +990,14 @@ Draws a point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the point. The value is a floating point number. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the point. The value is a floating point number. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawPoints
 
@@ -1003,7 +1005,7 @@ Draws a point.
 drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
 ```
 
-Draws a group of points, line segments, or polygons on the canvas, with the specified drawing mode. An array is used to hold these points.
+在画布上绘制一组点、线段或多边形。通过指定点的数组和绘制模式来决定绘制方式。
 
 **Since:** 12
 
@@ -1017,14 +1019,14 @@ Draws a group of points, line segments, or polygons on the canvas, with the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes | Array that holds the points to draw. The length cannot be **0**. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Mode in which the points are drawn. The default value is **drawing.PointMode.POINTS**. |
+| points | Array&lt;common2D.Point&gt; | Yes | 要绘制的点的数组。长度不能为0。 |
+| mode | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | No | 绘制数组中的点的方式。默认值为drawing.PointMode.POINTS。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawRect
 
@@ -1032,7 +1034,7 @@ Draws a group of points, line segments, or polygons on the canvas, with the spec
 drawRect(rect: common2D.Rect): void
 ```
 
-Draws a rectangle. By default, black is used for filling.
+绘制一个矩形，默认使用黑色填充。
 
 **Since:** 11
 
@@ -1046,13 +1048,13 @@ Draws a rectangle. By default, black is used for filling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle to draw. |
+| rect | common2D.Rect | Yes | 绘制的矩形区域。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawRect
 
@@ -1066,8 +1068,7 @@ ArkTS-Sta:
 drawRect(left: double, top: double, right: double, bottom: double): void
 ```
 
-Draws a rectangle. By default, black is used for filling. This API provides better performance than  
-[drawRect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and is recommended.
+绘制一个矩形，默认使用黑色填充。性能优于[drawRect](arkts-arkgraphics2d-drawing-canvas-c.md#drawrect)接口，推荐使用本接口。
 
 **Since:** 12
 
@@ -1081,16 +1082,16 @@ Draws a rectangle. By default, black is used for filling. This API provides bett
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的左上角x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的左上角y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的右下角x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形的右下角y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawRegion
 
@@ -1098,7 +1099,7 @@ Draws a rectangle. By default, black is used for filling. This API provides bett
 drawRegion(region: Region): void
 ```
 
-Draws a region.
+绘制一个区域，默认使用黑色填充内容。
 
 **Since:** 12
 
@@ -1112,13 +1113,13 @@ Draws a region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region to draw. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | 绘制的区域。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawRoundRect
 
@@ -1126,7 +1127,7 @@ Draws a region.
 drawRoundRect(roundRect: RoundRect): void
 ```
 
-Draws a rounded rectangle.
+绘制一个圆角矩形，默认使用黑色填充内容。
 
 **Since:** 12
 
@@ -1140,13 +1141,13 @@ Draws a rounded rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rounded rectangle. |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | 圆角矩形对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawShadow
 
@@ -1162,7 +1163,7 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
       ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void
 ```
 
-Draws a spot shadow and uses a given path to outline the ambient shadow.
+绘制射灯类型阴影，使用路径描述环境光阴影的轮廓。
 
 **Since:** 12
 
@@ -1176,19 +1177,19 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Path** object, which is used to outline the shadow. |
-| planeParams | common2D.Point3d | Yes | 3D vector, which is used to determine the z-axis offset of an occluder relative to the canvas, based on its x and y coordinates. |
-| devLightPos | common2D.Point3d | Yes | Position of the light relative to the canvas. |
-| lightRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the light. The value is a floating point number. |
-| ambientColor | common2D.Color | Yes | Color of the ambient shadow. |
-| spotColor | common2D.Color | Yes | Color of the spot shadow. |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Defines an enum for the shadow flags. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 路径对象，可生成阴影。 |
+| planeParams | common2D.Point3d | Yes | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
+| devLightPos | common2D.Point3d | Yes | 光线相对于画布的位置。 |
+| lightRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 圆形灯半径，取值范围>0，该参数为浮点数。单位为物理像素px。 |
+| ambientColor | common2D.Color | Yes | 环境阴影颜色。 |
+| spotColor | common2D.Color | Yes | 点阴影颜色。 |
+| flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | Yes | 阴影标志，用于控制阴影的绘制方式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawShadow
 
@@ -1204,7 +1205,7 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
       ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void
 ```
 
-Draws a spot shadow and uses a given path to outline the ambient shadow.
+绘制射灯类型阴影，使用路径描述环境光阴影的轮廓。
 
 **Since:** 18
 
@@ -1218,19 +1219,19 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Path** object, which is used to outline the shadow. |
-| planeParams | common2D.Point3d | Yes | 3D vector, which is used to calculate the offset in the Z axis. |
-| devLightPos | common2D.Point3d | Yes | Position of the light relative to the canvas. |
-| lightRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the light. The value is a floating point number. |
-| ambientColor | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | Yes | Ambient shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
-| spotColor | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | Yes | Spot shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Defines an enum for the shadow flags. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 路径对象，可生成阴影。 |
+| planeParams | common2D.Point3d | Yes | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
+| devLightPos | common2D.Point3d | Yes | 光线相对于画布的位置。 |
+| lightRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 圆形灯半径，该参数为浮点数。单位为物理像素px。 |
+| ambientColor | ArkTS-Dyn: common2D.Color \| number  <br>ArkTS-Sta：common2D.Color \| int | Yes | 环境阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
+| spotColor | ArkTS-Dyn: common2D.Color \| number  <br>ArkTS-Sta：common2D.Color \| int | Yes | 点阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
+| flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | Yes | 阴影标志，用于控制阴影的绘制方式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawSingleCharacter
 
@@ -1244,7 +1245,7 @@ ArkTS-Sta:
 drawSingleCharacter(text: string, font: Font, x: double, y: double): void
 ```
 
-Draws a single character. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character.
+绘制单个字符。当前字体不支持待绘制字符时，退化到使用系统字体绘制字符。
 
 **Since:** 12
 
@@ -1258,16 +1259,16 @@ Draws a single character. If the typeface of the current font does not support t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Single character to draw. The length of the string must be **1**. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font** object. |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the left point (red point in the figure below) of the character baseline ( blue line in the figure below). The value is a floating point number. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the left point (red point in the figure below) of the character baseline ( blue line in the figure below). The value is a floating point number. |
+| text | string | Yes | 待绘制的单个字符，字符串长度必须为1。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 字型对象。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 所绘制出的字符基线（下图蓝线）的左端点（下图红点）的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 所绘制出的字符基线（下图蓝线）的左端点（下图红点）的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawSingleCharacterWithFeatures
 
@@ -1281,7 +1282,7 @@ ArkTS-Sta:
 drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, features: Array<FontFeature>): void
 ```
 
-Draws a single character with font features. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character.
+绘制单个字符，字符带有字体特征。当前字体不支持待绘制字符时，退化到使用系统字体绘制字符。
 
 **Since:** 20
 
@@ -1295,17 +1296,17 @@ Draws a single character with font features. If the typeface of the current font
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Single character to draw. The length of the string must be **1**. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font** object. |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the left endpoint of the drawn character baseline. The value is a floating point number. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the left endpoint of the drawn character baseline. The value is a floating point number. |
-| features | Array&lt;FontFeature&gt; | Yes | Array of the font feature object. For an empty array, the preset font features in the TrueType Font (TTF) file are used. |
+| text | string | Yes | 待绘制的单个字符，字符串长度必须为1。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 字型对象。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 所绘制字符基线左端点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 所绘制字符基线左端点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| features | Array&lt;FontFeature&gt; | Yes | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## drawTextBlob
 
@@ -1319,7 +1320,7 @@ ArkTS-Sta:
 drawTextBlob(blob: TextBlob, x: double, y: double): void
 ```
 
-Draws a text blob. If the typeface used to construct **blob** does not support a character, that character will not be drawn.
+绘制一段文字。若构造blob的字体不支持待绘制字符，则该部分字符无法绘制。
 
 **Since:** 11
 
@@ -1333,15 +1334,15 @@ Draws a text blob. If the typeface used to construct **blob** does not support a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blob | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | TextBlob** object. |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the left point (red point in the figure below) of the text baseline (blue line in the figure below). The value is a floating point number. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the left point (red point in the figure below) of the text baseline (blue line in the figure below). The value is a floating point number. |
+| blob | [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | Yes | TextBlob对象。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 所绘制出的文字基线（下图蓝线）的左端点（下图红点）的横坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 所绘制出的文字基线（下图蓝线）的左端点（下图红点）的纵坐标，该参数为浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## drawVertices
 
@@ -1359,7 +1360,7 @@ drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D
       indices: Array<int> | null, mode: BlendMode): void
 ```
 
-Draws a triangle mesh described by the vertex array.
+绘制顶点数组描述的三角网格。
 
 **Since:** 23
 
@@ -1373,20 +1374,20 @@ Draws a triangle mesh described by the vertex array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vertexMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Connection mode of the vertex to be drawn. |
-| vertexCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of elements in the vertex array. The value is an integer greater than or equal to 3. |
-| positions | Array&lt;common2D.Point&gt; | Yes | Array that holds the position of every vertex. The array cannot be null and its length must be equal to the value of **vertexCount**. |
-| texs | Array&lt;common2D.Point&gt; \| null | Yes | Array of texture space coordinates corresponding to the vertices. This array can be null, which indicates that the texture space is invalid. If not null, the length of the array must be equal to the value of **vertexCount**. |
-| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | Yes | Array of colors corresponding to the vertices, which is used for interpolation in triangles. This array can be null, which indicates that the color effect is the default color set by the user. If not null, the length of the array must be equal to the value of **vertexCount**. |
-| indexCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of indices. The value can be **0** or a value greater than or equal to 3. If the value is not **0**, the value must be an integer greater than or equal to 3. |
-| indices | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | Yes | Array of vertex indices. The value can be null. In this case, the value of **indexCount** is ignored (an integer greater than or equal to 3 or equal to 0). If not null, the value length must be the same as that of **indexCount**. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color blend mode. |
+| vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | Yes | 绘制顶点的连接方式。 |
+| vertexCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 顶点数组元素的数量，值为大于等于3的整数，输入浮点数则仅保留整数部分。 |
+| positions | Array&lt;common2D.Point&gt; | Yes | 描述顶点位置的数组，不能为空，其长度必须等于vertexCount。 |
+| texs | Array&lt;common2D.Point&gt; \| null | Yes | 描述顶点对应纹理空间坐标的数组。其可以为空，表明纹理空间失效；若不为空，其长度必须等于vertexCount。 |
+| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  <br>ArkTS-Sta：Array&lt;int&gt; \| null | Yes | 描述顶点对应颜色的数组，用于在三角形中进行插值，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。其可以为空，表明不 使用顶点颜色插值，颜色效果取决于当前画布绑定的画刷或画笔所设置的颜色；若不为空其长度必须等于vertexCount。 |
+| indexCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 索引的数量。其值可以为0，且indices数组长度为0时可以画图；若不为0，则值必须为大于等于3的整数，输入浮点数则仅保留整数部分。 |
+| indices | ArkTS-Dyn: Array&lt;number&gt; \| null  <br>ArkTS-Sta：Array&lt;int&gt; \| null | Yes | 描述顶点对应索引的数组。其可以为空，此时将忽略indexCount的合理传值（大于等于3的整数或等于0）；若不为空其长度必须等于 indexCount。 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 颜色混合模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## getHeight
 
@@ -1400,7 +1401,7 @@ ArkTS-Sta:
 getHeight(): int
 ```
 
-Obtains the canvas height.
+获取画布的高度。
 
 **Since:** 12
 
@@ -1414,7 +1415,7 @@ Obtains the canvas height.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Canvas height. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回画布的高度，该参数为浮点数。单位为物理像素px。 |
 
 ## getLocalClipBounds
 
@@ -1422,7 +1423,7 @@ Obtains the canvas height.
 getLocalClipBounds(): common2D.Rect
 ```
 
-Obtains the bounds of the cropping region of the canvas.
+获取画布裁剪区域的边界。
 
 **Since:** 12
 
@@ -1436,7 +1437,7 @@ Obtains the bounds of the cropping region of the canvas.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Bounds of the cropping region. |
+| common2D.Rect | 返回画布裁剪区域的矩形边界。 |
 
 ## getLocalClipBounds
 
@@ -1444,7 +1445,7 @@ Obtains the bounds of the cropping region of the canvas.
 getLocalClipBounds(): common2D.Rect | undefined
 ```
 
-Obtains the bounds of the cropping region of the canvas.
+获取画布裁剪区域的边界。
 
 **Since:** 23
 
@@ -1458,7 +1459,7 @@ Obtains the bounds of the cropping region of the canvas.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Rect object. |
+| common2D.Rect | 返回画布裁剪区域的矩形边界。获取失败时返回undefined。 |
 
 ## getSaveCount
 
@@ -1472,7 +1473,7 @@ ArkTS-Sta:
 getSaveCount(): int
 ```
 
-Obtains the number of canvas states (canvas matrix and clipping area) saved in the stack.
+获取栈中保存的画布状态（画布矩阵和裁剪区域）的数量。
 
 **Since:** 12
 
@@ -1486,7 +1487,7 @@ Obtains the number of canvas states (canvas matrix and clipping area) saved in t
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of canvas statuses that have been saved. The value is a positive integer. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 已保存的画布状态的数量，该参数为正整数。 |
 
 ## getTotalMatrix
 
@@ -1494,7 +1495,7 @@ Obtains the number of canvas states (canvas matrix and clipping area) saved in t
 getTotalMatrix(): Matrix
 ```
 
-Obtains the canvas matrix.
+获取画布矩阵。
 
 **Since:** 12
 
@@ -1508,7 +1509,7 @@ Obtains the canvas matrix.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Canvas matrix. |
+| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 返回当前画布的变换矩阵，该矩阵累积了已应用的平移、缩放、旋转和倾斜等变换效果。 |
 
 ## getTotalMatrix
 
@@ -1516,7 +1517,7 @@ Obtains the canvas matrix.
 getTotalMatrix(): Matrix | undefined
 ```
 
-Obtains the canvas matrix.
+获取画布矩阵。
 
 **Since:** 23
 
@@ -1530,7 +1531,7 @@ Obtains the canvas matrix.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Canvas matrix. |
+| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 返回当前画布的变换矩阵，该矩阵累积了已应用的平移、缩放、旋转和倾斜等变换效果。获取失败时返回undefined。 |
 
 ## getWidth
 
@@ -1544,7 +1545,7 @@ ArkTS-Sta:
 getWidth(): int
 ```
 
-Obtains the canvas width.
+获取画布的宽度。
 
 **Since:** 12
 
@@ -1558,7 +1559,7 @@ Obtains the canvas width.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Canvas width. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回画布的宽度，该参数为浮点数。单位为物理像素px。 |
 
 ## isClipEmpty
 
@@ -1566,7 +1567,7 @@ Obtains the canvas width.
 isClipEmpty(): boolean
 ```
 
-Checks whether the region that can be drawn is empty after clipping.
+判断画布的裁剪区域是否为空。
 
 **Since:** 12
 
@@ -1580,7 +1581,7 @@ Checks whether the region that can be drawn is empty after clipping.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the region is empty, and **false** means the opposite. |
+| boolean | 返回画布的裁剪区域是否为空的结果，true表示为空，false表示不为空。 |
 
 ## isOpaque
 
@@ -1588,7 +1589,7 @@ Checks whether the region that can be drawn is empty after clipping.
 isOpaque(): boolean
 ```
 
-Checks whether the current layer that drawn into the device is opaque.
+检查当前Canvas绘制目标的图层是否不透明。
 
 **Since:** 26.0.0
 
@@ -1604,7 +1605,7 @@ Checks whether the current layer that drawn into the device is opaque.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the current layer that drawn into the device is opaque. |
+| boolean | 返回当前Canvas绘制目标的图层是否不透明的结果，true表示不透明，false表示透明。 |
 
 ## quickRejectPath
 
@@ -1612,7 +1613,7 @@ Checks whether the current layer that drawn into the device is opaque.
 quickRejectPath(path: Path): boolean
 ```
 
-Checks whether the path is not intersecting with the canvas area. The canvas area includes its boundaries.
+判断路径与画布区域是否不相交。画布区域包含边界。
 
 **Since:** 18
 
@@ -1626,13 +1627,13 @@ Checks whether the path is not intersecting with the canvas area. The canvas are
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Path** object. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 路径对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the path is not intersecting with the canvas area, and **false** means the opposite. |
+| boolean | 返回路径是否与画布区域不相交的结果。true表示路径与画布区域不相交，false表示路径与画布区域相交。 |
 
 ## quickRejectRect
 
@@ -1640,7 +1641,7 @@ Checks whether the path is not intersecting with the canvas area. The canvas are
 quickRejectRect(rect: common2D.Rect): boolean
 ```
 
-Checks whether the rectangle is not intersecting with the canvas area. The canvas area includes its boundaries.
+判断矩形和画布区域是否不相交。画布区域包含边界。
 
 **Since:** 18
 
@@ -1654,13 +1655,13 @@ Checks whether the rectangle is not intersecting with the canvas area. The canva
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Describes a rectangle. |
+| rect | common2D.Rect | Yes | 矩形区域。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the rectangle is not intersecting with the canvas area, and **false** means the opposite. |
+| boolean | 返回矩形是否与画布区域不相交的结果。true表示矩形与画布区域不相交，false表示矩形与画布区域相交。 |
 
 ## resetClip
 
@@ -1668,7 +1669,7 @@ Checks whether the rectangle is not intersecting with the canvas area. The canva
 resetClip(): void
 ```
 
-Resets the clip status.
+将当前画布的裁剪状态重置为初始状态。
 
 **Since:** 26.0.0
 
@@ -1686,7 +1687,7 @@ Resets the clip status.
 resetMatrix(): void
 ```
 
-Resets the matrix of this canvas to an identity matrix.
+将当前画布的矩阵重置为单位矩阵。
 
 **Since:** 12
 
@@ -1702,7 +1703,7 @@ Resets the matrix of this canvas to an identity matrix.
 restore(): void
 ```
 
-Restores the canvas state (canvas matrix and clipping area) saved on the top of the stack.
+恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。需要与保存接口[save](arkts-arkgraphics2d-drawing-canvas-c.md#save)或[saveLayer](arkts-arkgraphics2d-drawing-canvas-c.md#savelayer)配合使用。若栈顶状态由saveLayer保存，恢复时还会将saveLayer分配的位图绘制到画布上；若栈为空（无已保存状态），则不执行恢复操作。
 
 **Since:** 12
 
@@ -1724,7 +1725,7 @@ ArkTS-Sta:
 restoreToCount(count: int): void
 ```
 
-Restores the canvas state (canvas matrix and clipping area) to a specified number.
+恢复到指定深度的画布状态（画布矩阵和裁剪区域）。需要先调用[save](arkts-arkgraphics2d-drawing-canvas-c.md#save)或[saveLayer](arkts-arkgraphics2d-drawing-canvas-c.md#savelayer)保存画布状态后才能使用本接口恢复。
 
 **Since:** 12
 
@@ -1738,13 +1739,13 @@ Restores the canvas state (canvas matrix and clipping area) to a specified numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Depth of the canvas statuses to restore. The value is an integer. If the value is less than or equal to 1, the canvas is restored to the initial state. If the value is greater than the number of canvas statuses that have been saved, no operation is performed. |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要恢复到的画布状态深度，该参数为整数。小于等于1时，恢复为初始状态；大于已保存的画布状态数量时，不执行任何操作。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rotate
 
@@ -1758,7 +1759,7 @@ ArkTS-Sta:
 rotate(degrees: double, sx: double, sy: double) : void
 ```
 
-Applies a rotation matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a rotation effect applied to their shapes and positions.
+在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个旋转矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个旋转效果。
 
 **Since:** 12
 
@@ -1772,15 +1773,15 @@ Applies a rotation matrix on top of the current canvas matrix (identity matrix b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degrees | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to rotate, in degrees. The value is a floating point number. A positive value indicates a clockwise rotation, and a negative value indicates a counterclockwise rotation. |
-| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the rotation center. The value is a floating point number. |
-| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the rotation center. The value is a floating point number. |
+| degrees | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转角度，单位为度，该参数为浮点数，正数为顺时针旋转，负数为逆时针旋转。 |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## save
 
@@ -1794,7 +1795,7 @@ ArkTS-Sta:
 save(): int
 ```
 
-Saves the canvas states (canvas matrix and drawable area) to the top of the stack. This API must be used in pair with [restore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+保存当前画布状态（画布矩阵和裁剪区域）到栈顶。需要与恢复接口[restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore)配合使用。
 
 **Since:** 12
 
@@ -1808,7 +1809,7 @@ Saves the canvas states (canvas matrix and drawable area) to the top of the stac
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of canvas statuses. The value is a positive integer. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 画布状态个数，该参数为正整数。 |
 
 ## saveLayer
 
@@ -1822,7 +1823,7 @@ ArkTS-Sta:
 saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long
 ```
 
-Saves the matrix and cropping region of the canvas, and allocates a **PixelMap** for subsequent drawing. If you call [restore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, changes made to the matrix and clipping region are discarded, and the PixelMap is drawn.
+保存当前画布的矩阵和裁剪区域，并为后续绘制分配位图。需要与恢复接口[restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore)配合使用，调用restore将会舍弃对矩阵和裁剪区域做的更改，并绘制位图。
 
 **Since:** 12
 
@@ -1836,20 +1837,20 @@ Saves the matrix and cropping region of the canvas, and allocates a **PixelMap**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect \| null | No | Rect** object, which is used to limit the size of the graphics layer. The default value is the current canvas size. |
-| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | Brush** object. The alpha value, filter effect, and blend mode of the brush are applied when the **PixelMap** is drawn. If null is passed in, no effect is applied. |
+| rect | common2D.Rect \| null | No | 矩形对象，用于限制图层大小，默认为当前画布大小。 |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) \| null | No | 画刷对象，绘制位图时会应用画刷对象的透明度、颜色滤波器效果和混合模式，默认不设置额外效果。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Number of canvas statuses that have been saved. The value is a positive integer. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回调用前保存的画布状态数，该参数为正整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## scale
 
@@ -1863,7 +1864,7 @@ ArkTS-Sta:
 scale(sx: double, sy: double): void
 ```
 
-Applies a scaling matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a scaling effect applied to the shapes and positions.
+在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个缩放矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个缩放效果。
 
 **Since:** 12
 
@@ -1877,14 +1878,14 @@ Applies a scaling matrix on top of the current canvas matrix (identity matrix by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale ratio on the X axis. The value is a floating point number. |
-| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale ratio on the Y axis. The value is a floating point number. |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向的缩放比例，该参数为浮点数。正值表示正常缩放，负值表示镜像缩放。 |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向的缩放比例，该参数为浮点数。正值表示正常缩放，负值表示镜像缩放。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setMatrix
 
@@ -1892,7 +1893,7 @@ Applies a scaling matrix on top of the current canvas matrix (identity matrix by
 setMatrix(matrix: Matrix): void
 ```
 
-Sets a matrix for the canvas. Subsequent drawing and clipping operations will be affected by this matrix in terms of shape and position.
+设置画布的矩阵，后续绘制操作和裁剪操作的形状和位置都会受到该矩阵的影响。
 
 **Since:** 12
 
@@ -1906,13 +1907,13 @@ Sets a matrix for the canvas. Subsequent drawing and clipping operations will be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Matrix object. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 矩阵对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## skew
 
@@ -1926,7 +1927,7 @@ ArkTS-Sta:
 skew(sx: double, sy: double) : void
 ```
 
-Applies a skewing matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a skewing effect applied to the shapes and positions.
+在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个倾斜矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个倾斜效果。
 
 **Since:** 12
 
@@ -1940,14 +1941,14 @@ Applies a skewing matrix on top of the current canvas matrix (identity matrix by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
-| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## translate
 
@@ -1961,7 +1962,7 @@ ArkTS-Sta:
 translate(dx: double, dy: double): void
 ```
 
-Applies a translation matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a translation effect applied to the shapes and positions.
+在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个平移矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个平移效果。
 
 **Since:** 12
 
@@ -1975,12 +1976,12 @@ Applies a translation matrix on top of the current canvas matrix (identity matri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Distance to translate on the X axis. The value is a floating point number. |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Distance to translate on the Y axis. The value is a floating point number. |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向的移动距离，该参数为浮点数。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向的移动距离，该参数为浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

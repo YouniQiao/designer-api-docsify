@@ -1,6 +1,6 @@
 # SslType
 
-Enumerates secure communication protocols.
+表示安全通信协议的枚举。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates secure communication protocols.
 TLS = 'TLS'
 ```
 
-TLS.
+使用TLS安全通信协议。
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ TLS.
 TLCP = 'TLCP'
 ```
 
-TLCP.
+使用TLCP安全通信协议。
 
 **Since:** 21
 

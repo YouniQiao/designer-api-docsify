@@ -2,7 +2,7 @@
 
 提供进程管理相关接口，包括进程 UID 判断、用户信息查询、线程优先级获取、环境变量获取、进程退出和信号发送等功能。
 
-通过 \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ 构造 ProcessManager 对象。
+通过 `new process.ProcessManager()` 构造 ProcessManager 对象。
 
 **起始版本：** 9
 
@@ -11,6 +11,12 @@
 <!--Device-process-export class ProcessManager--><!--Device-process-export class ProcessManager-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
 
 ## exit
 
@@ -38,7 +44,7 @@ exit(code: number): void
 | --- | --- | --- | --- |
 | code | number | 是 | 进程的退出码。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let processManager = new process.ProcessManager();
@@ -75,7 +81,7 @@ getEnvironmentVar(name: string): string
 | --- | --- |
 | string | 返回指定环境变量名对应的值。如果环境变量不存在，返回undefined。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建ProcessManager实例
@@ -114,7 +120,7 @@ getSystemConfig(name: number): number
 | --- | --- |
 | number | 返回系统配置信息。如果配置不存在，返回 -1。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建ProcessManager实例
@@ -155,7 +161,7 @@ getThreadPriority(v: number): number
 | --- | --- |
 | number | 返回线程的优先级。优先级顺序取决于当前操作系统。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建ProcessManager实例
@@ -196,7 +202,7 @@ getUidForName(v: string): number
 | --- | --- |
 | number | 获取用户 uid，如果用户不存在则返回 -1。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建ProcessManager实例
@@ -235,7 +241,7 @@ isAppUid(v: number): boolean
 | --- | --- |
 | boolean | 返回判断结果。如果是应用程序的 uid 则返回 true； 否则返回 false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建ProcessManager实例
@@ -278,7 +284,7 @@ kill(signal: number, pid: number): boolean
 | --- | --- |
 | boolean | 信号是否发送成功。如果信号发送成功则返回 true； 否则返回 false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 创建ProcessManager实例

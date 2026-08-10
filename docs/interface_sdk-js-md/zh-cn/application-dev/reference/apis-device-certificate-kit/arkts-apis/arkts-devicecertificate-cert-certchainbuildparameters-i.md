@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certMatchParameters
 
 ```TypeScript
@@ -18,7 +24,7 @@ certMatchParameters: X509CertMatchParameters
 
 指定过滤条件。
 
-**类型：** X509CertMatchParameters
+**类型：** [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ maxLength?: int
 
 指定CA证书的最大数量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ validationParameters: CertChainValidationParameters
 
 指定验证条件。
 
-**类型：** CertChainValidationParameters
+**类型：** [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md)
 
 **起始版本：** 12
 

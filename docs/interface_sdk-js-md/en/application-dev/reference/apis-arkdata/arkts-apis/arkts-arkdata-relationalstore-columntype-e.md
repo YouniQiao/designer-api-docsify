@@ -1,6 +1,6 @@
 # ColumnType
 
-Enumerates the types of the column data. Use the enum name rather than the enum value.
+描述数据库列存储类型的枚举。请使用枚举名称而非枚举值。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the types of the column data. Use the enum name rather than the enum 
 NULL = 0
 ```
 
-The value in the column is null.
+表示列数据类型为NULL。
 
 **Since:** 18
 
@@ -32,10 +32,8 @@ The value in the column is null.
 INTEGER = 1
 ```
 
-64-bit integer.
-
-The column can hold 8-bit (including Boolean values), 16-bit, 32-bit, and 64-bit integers. If the 64-bit integer is greater than 2^53 or less than -2^53, use  
-[getString]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to convert the 64-bit integer to a string.
+表示列数据类型为64位整数。可用于保存8位（包括布尔值）、16位、32位、64位整数。如果64位整数大于2^53或小于-2^53，需使用  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)将64位整数转换为字符串。
 
 **Since:** 18
 
@@ -51,7 +49,7 @@ The column can hold 8-bit (including Boolean values), 16-bit, 32-bit, and 64-bit
 REAL = 2
 ```
 
-The value in the column is a floating point number.
+表示列类型为浮点数。
 
 **Since:** 18
 
@@ -67,7 +65,7 @@ The value in the column is a floating point number.
 TEXT = 3
 ```
 
-The value in the column is a string.
+表示列类型为字符串。
 
 **Since:** 18
 
@@ -83,7 +81,7 @@ The value in the column is a string.
 BLOB = 4
 ```
 
-The value in the column is a Uint8Array.
+表示列类型为Uint8Array。
 
 **Since:** 18
 
@@ -99,7 +97,7 @@ The value in the column is a Uint8Array.
 ASSET = 5
 ```
 
-The value in the column is an asset.
+表示列类型为[Asset](arkts-arkdata-relationalstore-asset-i.md)。
 
 **Since:** 18
 
@@ -115,7 +113,7 @@ The value in the column is an asset.
 ASSETS = 6
 ```
 
-The value in the column is an array of assets.
+表示列类型为[Assets](arkts-arkdata-relationalstore-assets-t.md)。
 
 **Since:** 18
 
@@ -131,7 +129,7 @@ The value in the column is an array of assets.
 FLOAT_VECTOR = 7
 ```
 
-The value in the column is a Float32Array.
+表示列类型为Float32Array。
 
 **Since:** 18
 
@@ -147,7 +145,7 @@ The value in the column is a Float32Array.
 UNLIMITED_INT = 8
 ```
 
-The value in the column is a bigint.
+表示列类型为bigint。
 
 **Since:** 18
 

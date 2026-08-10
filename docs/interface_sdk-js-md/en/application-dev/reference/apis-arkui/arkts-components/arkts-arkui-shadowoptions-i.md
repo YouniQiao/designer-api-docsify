@@ -1,10 +1,10 @@
 # ShadowOptions
 
-Provides the shadow attributes, including the blur radius, color, and offset along the x-axis and y-axis.
+阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare interface ShadowOptions--><!--Device-unnamed-declare interface ShadowOptions-End-->
 
@@ -16,29 +16,27 @@ Provides the shadow attributes, including the blur radius, color, and offset alo
 color?: Color | string | Resource | ColoringStrategy
 ```
 
-Color of the shadow.
+阴影的颜色。
 
-The default color is black.
+默认为黑色。
 
-**NOTE**
+**说明：**
 
-Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the  
-[textShadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ attribute.
+从API version 11开始，该接口支持使用ColoringStrategy实现智能取色，智能取色功能不支持在ArkTS卡片、[textShadow](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#textshadow)中使用。
 
-With **ColoringStrategy**, the average color or primary color can be obtained, and the obtained color is applied to the shadow drawing area.
+当前仅支持平均取色和主色取色，智能取色区域为shadow绘制区域。
 
-The **'average'** string can be used to trigger the mode for obtaining the average color, and the **'primary'**  
-string for obtaining the primary color.
+支持使用'average'字符串触发智能平均取色模式，支持使用'primary'字符串触发智能主色模式。
 
-**Type:** Color \| string \| Resource \| ColoringStrategy
+**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource \| ColoringStrategy
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-ShadowOptions-color?: Color | string | Resource | ColoringStrategy--><!--Device-ShadowOptions-color?: Color | string | Resource | ColoringStrategy-End-->
 
@@ -50,23 +48,21 @@ string for obtaining the primary color.
 fill?: boolean
 ```
 
-Whether to fill the inside of the component with shadow. **true**: Fill the inside of the component with shadow.
+阴影是否内部填充。true表示阴影在内部填充，false表示阴影在外部填充。
 
-**false**: Do not fill the inside of the component with shadow.
+默认值：false。
 
-Default value: **false**.
+**说明：**
 
-**NOTE**
-
-This attribute does not take effect in [textShadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[textShadow](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#textshadow)中该字段不生效。
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,27 +78,27 @@ This attribute does not take effect in [textShadow]\_\_\_JSDOC\_LINK\_DESC\_USD\
 offsetX?: number | Resource
 ```
 
-Offset of the shadow along the x-axis.
+阴影的X轴偏移量。
 
-Default value: **0**
+默认值：0
 
-Unit: px
+单位：px
 
-**NOTE**
+**说明：**
 
-To use a value in the unit of vp, you can use [vp2px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to convert the value.
+如需使用vp单位的数值可用[vp2px](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#vp2px12)进行转换。
 
-If **offsetX** is of the Resource type, its value must be of the number type.
+如果offsetX为Resource类型，则传入的值需为number类型。
 
 **Type:** number \| Resource
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-ShadowOptions-offsetX?: number | Resource--><!--Device-ShadowOptions-offsetX?: number | Resource-End-->
 
@@ -114,27 +110,27 @@ If **offsetX** is of the Resource type, its value must be of the number type.
 offsetY?: number | Resource
 ```
 
-Offset of the shadow along the y-axis.
+阴影的Y轴偏移量。
 
-Default value: **0**
+默认值：0
 
-Unit: px
+单位：px
 
-**NOTE**
+**说明：**
 
-To use a value in the unit of vp, you can use [vp2px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to convert the value.
+如需使用vp单位的数值可用[vp2px](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#vp2px12)进行转换。
 
-If **offsetY** is of the Resource type, its value must be of the number type.
+如果offsetY为Resource类型，则传入的值需为number类型。
 
 **Type:** number \| Resource
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-ShadowOptions-offsetY?: number | Resource--><!--Device-ShadowOptions-offsetY?: number | Resource-End-->
 
@@ -146,29 +142,29 @@ If **offsetY** is of the Resource type, its value must be of the number type.
 radius: number | Resource
 ```
 
-Blur radius of the shadow.
+阴影模糊半径。
 
-Value range: [0, +∞)
+取值范围：[0, +∞)，API版本26.0.0开始取值范围变更为(-∞, +∞)
 
-Unit: px
+单位：px
 
-**NOTE**
+**说明：**
 
-A value less than 0 evaluates to the value **0**.
+API版本26.0.0之前，设置小于0的值时，按值为0处理。从API版本26.0.0开始，设置的值即为最终取值，当设置负数值时阴影消失。
 
-To use a value in the unit of vp, you can use [vp2px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to convert the value.
+如需使用vp单位的数值可用[vp2px](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#vp2px12)进行转换。
 
-If **radius** is of the Resource type, its value must be of the number type.
+如果radius为Resource类型，则传入的值需为number类型。
 
 **Type:** number \| Resource
 
-**Since:** 7
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-ShadowOptions-radius: number | Resource--><!--Device-ShadowOptions-radius: number | Resource-End-->
 
@@ -180,17 +176,17 @@ If **radius** is of the Resource type, its value must be of the number type.
 type?: ShadowType
 ```
 
-Shadow type.
+阴影类型。
 
-Default value: **COLOR
+默认值：COLOR
 
-**Type:** ShadowType
+**Type:** [ShadowType](arkts-arkui-shadowtype-e.md)
 
 **Default:** ShadowType.COLOR
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

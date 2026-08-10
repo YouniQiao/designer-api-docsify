@@ -10,6 +10,12 @@ Defines parameters affecting spring loading detection. Typically, default system
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
+
 ## stillTimeLimit
 
 ```TypeScript

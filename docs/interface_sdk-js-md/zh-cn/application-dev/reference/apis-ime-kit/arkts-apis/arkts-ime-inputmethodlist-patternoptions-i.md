@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { Pattern, InputMethodListDialog, PatternOptions } from 'kits/@kit.IMEKit';
+```
+
 ## action
 
 ArkTS-Dyn:
@@ -42,7 +48,7 @@ action: (index: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 |  |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
 
 ## defaultSelected
 
@@ -62,7 +68,7 @@ defaultSelected?: int
 
 **说明：** 该索引值必须在patterns数组的有效范围内，否则设置不生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -84,7 +90,7 @@ patterns: Array<Pattern>
 
 **使用后效果：** 设置后，输入法切换列表弹窗中会在默认输入法区域展示该数组中定义的所有模式选项供用户选择。
 
-**说明：** patterns数组中的每个Pattern的icon和selectedIcon均需为有效的[Resource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_资源引用；建议至少配置2个模式选项以提供有意义的选择功能。
+**说明：** patterns数组中的每个Pattern的icon和selectedIcon均需为有效的[Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)资源引用；建议至少配置2个模式选项以提供有意义的选择功能。
 
 **类型：** Array&lt;Pattern&gt;
 

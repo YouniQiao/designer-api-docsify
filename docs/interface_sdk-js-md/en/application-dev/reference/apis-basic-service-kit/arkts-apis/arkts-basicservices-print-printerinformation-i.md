@@ -1,6 +1,6 @@
 # PrinterInformation
 
-Defines the printer information.
+定义打印机信息的接口。
 
 **Since:** 14
 
@@ -10,13 +10,19 @@ Defines the printer information.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## alias
 
 ```TypeScript
 alias?: string
 ```
 
-Printer alias.
+表示打印机别名。
 
 **Type:** string
 
@@ -34,9 +40,9 @@ Printer alias.
 capability?: PrinterCapabilities
 ```
 
-Printer capabilities.
+表示打印机能力。
 
-**Type:** PrinterCapabilities
+**Type:** [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
 
 **Since:** 14
 
@@ -52,7 +58,7 @@ Printer capabilities.
 description?: string
 ```
 
-Printer description.
+表示打印机说明。
 
 **Type:** string
 
@@ -70,7 +76,7 @@ Printer description.
 options?: string
 ```
 
-Printer details.
+表示打印机详细信息。
 
 **Type:** string
 
@@ -88,9 +94,9 @@ Printer details.
 preferences?: PrinterPreferences
 ```
 
-Printer preferences.
+表示打印机首选项。
 
-**Type:** PrinterPreferences
+**Type:** [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
 
 **Since:** 18
 
@@ -106,7 +112,7 @@ Printer preferences.
 printerId: string
 ```
 
-Printer ID.
+表示打印机ID。
 
 **Type:** string
 
@@ -124,7 +130,7 @@ Printer ID.
 printerMake?: string
 ```
 
-Printer model.
+表示打印机型号。
 
 **Type:** string
 
@@ -142,7 +148,7 @@ Printer model.
 printerName: string
 ```
 
-Printer name.
+表示打印机名称。
 
 **Type:** string
 
@@ -160,9 +166,9 @@ Printer name.
 printerStatus: PrinterStatus
 ```
 
-Printer state.
+表示当前打印机状态。
 
-**Type:** PrinterStatus
+**Type:** [PrinterStatus](arkts-basicservices-print-printerstatus-e.md)
 
 **Since:** 14
 
@@ -178,9 +184,11 @@ Printer state.
 selectedDriver?: PpdInfo
 ```
 
-Information about the selected driver when adding the printer.
+表示添加打印机时选择的驱动的信息。
 
-**Type:** PpdInfo
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**Type:** [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
 
 **Since:** 24
 
@@ -198,7 +206,9 @@ Information about the selected driver when adding the printer.
 selectedProtocol?: string
 ```
 
-Protocol used when adding the printer.
+表示添加打印机时使用的协议。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Type:** string
 
@@ -218,7 +228,7 @@ Protocol used when adding the printer.
 uri?: string
 ```
 
-Printer URI.
+表示打印机uri。
 
 **Type:** string
 

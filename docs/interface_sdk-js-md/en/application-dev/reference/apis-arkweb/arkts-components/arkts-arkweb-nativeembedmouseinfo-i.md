@@ -1,6 +1,6 @@
 # NativeEmbedMouseInfo
 
-Provides detailed information about clicking or touching and holding a same-layer tag using the mouse or touchpad.
+提供鼠标/触摸板在同层标签上点击或长按的详细信息。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Provides detailed information about clicking or touching and holding a same-laye
 embedId?: string
 ```
 
-Unique ID of the same-layer tag.
+同层标签的唯一id。
 
 **Type:** string
 
@@ -34,9 +34,9 @@ Unique ID of the same-layer tag.
 mouseEvent?: MouseEvent
 ```
 
-Information about clicking or touching and holding using the mouse or touchpad.
+鼠标/触摸板点击/长按信息。
 
-**Type:** MouseEvent
+**Type:** [MouseEvent](../../apis-arkui/arkts-components/arkts-arkui-mouseevent-i.md)
 
 **Since:** 20
 
@@ -52,9 +52,9 @@ Information about clicking or touching and holding using the mouse or touchpad.
 result?: EventResult
 ```
 
-Mouse event consumption result.
+通知Web组件鼠标事件的消费结果。
 
-**Type:** EventResult
+**Type:** [EventResult](../arkts-apis/arkts-arkweb-web-eventresult-c.md)
 
 **Since:** 20
 

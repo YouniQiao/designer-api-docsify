@@ -1,6 +1,6 @@
 # AnimatableArithmetic
 
-The **AnimatableArithmetic** API defines animation calculation rules for non-number data types. To animate non-number data (such as arrays, structs, and colors), you need to implement the addition, subtraction, multiplication, and equality checking functions in the **AnimatableArithmetic\&lt;T\&gt;** API. This enables the data to participate in animation interpolation calculations and to detect whether the data has changed. In other words, the non-number data is defined as types that implement the **AnimatableArithmetic\&lt;T\&gt;** API.
+该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ The **AnimatableArithmetic** API defines animation calculation rules for non-num
 equals(rhs: AnimatableArithmetic<T>): boolean
 ```
 
-Defines the equality check rule for the data type.
+定义该数据类型的相等判断规则。
 
 **Since:** 10
 
@@ -34,13 +34,13 @@ Defines the equality check rule for the data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Another data object to compare for equality with the current object. |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | 和自身比较相等的另一个数据对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the objects are equal. Returns **true** if they are equal; returns **false** otherwise. |
+| boolean | 是否相等。返回true表示相等，返回false表示不相等。 |
 
 ## multiply
 
@@ -48,7 +48,7 @@ Defines the equality check rule for the data type.
 multiply(scale: number): AnimatableArithmetic<T>
 ```
 
-Defines the multiplication rule for the data type.
+定义该数据类型的乘法运算规则。
 
 **Since:** 10
 
@@ -66,13 +66,13 @@ Defines the multiplication rule for the data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number | Yes | Coefficient for the multiplication operation. |
+| scale | number | Yes | 乘法运算的系数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Result of the multiplication operation. |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 乘法运算的结果。 |
 
 ## plus
 
@@ -80,7 +80,7 @@ Defines the multiplication rule for the data type.
 plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 ```
 
-Defines the addition rule for the data type.
+定义数据类型的加法运算规则。
 
 **Since:** 10
 
@@ -98,13 +98,13 @@ Defines the addition rule for the data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Object for the addition operation. |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | 加法运算的对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Result of the addition operation. |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 加法运算的结果。 |
 
 ## subtract
 
@@ -112,7 +112,7 @@ Defines the addition rule for the data type.
 subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 ```
 
-Defines the subtraction rule for the data type.
+定义该数据类型的减法运算规则。
 
 **Since:** 10
 
@@ -130,11 +130,11 @@ Defines the subtraction rule for the data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Object for the subtraction operation. |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | 减法运算的对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Result of the subtraction operation. |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 减法运算的结果。 |
 

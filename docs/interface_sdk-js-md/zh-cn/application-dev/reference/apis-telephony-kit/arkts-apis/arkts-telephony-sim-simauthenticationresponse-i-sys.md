@@ -12,6 +12,12 @@ Defines the SIM card authentication response.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## response
 
 ```TypeScript
@@ -40,7 +46,7 @@ simStatusWord1: int
 
 Status word 1 of the SIM card, which is returned by the SIM card after command execution.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 14
 
@@ -60,7 +66,7 @@ simStatusWord2: int
 
 Status word 2 of the SIM card, which is returned by the SIM card after command execution.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 14
 

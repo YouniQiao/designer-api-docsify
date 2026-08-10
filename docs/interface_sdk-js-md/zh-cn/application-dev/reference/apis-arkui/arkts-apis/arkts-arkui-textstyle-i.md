@@ -18,9 +18,9 @@ wordBreak?: WordBreak
 
 弹窗message内容的文本截断方式。
 
-默认值：WordBreak.BREAK\_ALL
+默认值：WordBreak.BREAK_ALL
 
-**类型：** WordBreak
+**类型：** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
 
 **起始版本：** 12
 

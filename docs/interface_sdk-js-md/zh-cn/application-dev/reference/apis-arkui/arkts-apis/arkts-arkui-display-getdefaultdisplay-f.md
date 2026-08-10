@@ -1,5 +1,11 @@
 # getDefaultDisplay
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getDefaultDisplay
 
 ```TypeScript
@@ -24,9 +30,9 @@ function getDefaultDisplay(callback: AsyncCallback<Display>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Display&gt; | 是 | 回调函数。返回当前默认的Display对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Display&gt; | 是 | 回调函数。返回当前默认的Display对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,7 +76,7 @@ function getDefaultDisplay(): Promise<Display>
 | --- | --- |
 | Promise&lt;Display&gt; | Promise对象。返回当前默认的Display对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

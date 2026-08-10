@@ -1,6 +1,6 @@
 # OutputDeviceInfo
 
-Target Device Information Definition
+播放设备的相关信息。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Target Device Information Definition
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## devices
 
 ```TypeScript
 devices: Array<DeviceInfo>
 ```
 
-Arrays of device information
+播放设备的集合。
 
 **Type:** Array&lt;DeviceInfo&gt;
 

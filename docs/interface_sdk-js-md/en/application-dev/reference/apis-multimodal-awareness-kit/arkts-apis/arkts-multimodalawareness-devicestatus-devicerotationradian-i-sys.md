@@ -12,6 +12,12 @@ Interface for device rotation radian
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## x
 
 ```TypeScript
@@ -20,7 +26,7 @@ x: double
 
 indicates X-RotationRadian
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -40,7 +46,7 @@ y: double
 
 indicates Y-RotationRadian
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -60,7 +66,7 @@ z: double
 
 indicates Z-RotationRadian
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 

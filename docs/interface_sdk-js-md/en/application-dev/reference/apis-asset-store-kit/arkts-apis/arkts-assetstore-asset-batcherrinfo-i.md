@@ -1,6 +1,6 @@
 # BatchErrInfo
 
-Result object containing error information with a specific index, error code, and message for a single asset.
+批量操作中单个关键资产的错误信息。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Result object containing error information with a specific index, error code, an
 
 **System capability:** SystemCapability.Security.Asset
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## errCode
 
 ```TypeScript
 errCode: number
 ```
 
-The error code of the batch operation.
+批量操作的错误码。
 
 **Type:** number
 
@@ -34,7 +40,7 @@ The error code of the batch operation.
 index: number
 ```
 
-The index in the source assets array.
+关键资产的索引。
 
 **Type:** number
 
@@ -52,7 +58,7 @@ The index in the source assets array.
 message: string
 ```
 
-The error message of the batch operation.
+批量操作的错误信息。
 
 **Type:** string
 

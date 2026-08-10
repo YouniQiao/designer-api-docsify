@@ -18,7 +18,7 @@ enableDeviceFontWeightCategory?: boolean
 
 是否随设备的字体粗细级别自动更新字重。
 
-默认值：true
+默认值：true 
 
 true：当设备的字体粗细级别发生变化时，字重会自动更新。
 
@@ -46,7 +46,7 @@ enableVariableFontWeight?: boolean
 
 是否启用可变字重调节。当设置字体粗细的值weight为[100, 900]内非整百数值时，enableVariableFontWeight用于设置weight的值是否生效。
 
-默认值：false
+默认值：false 
 
 true：启用可变字重调节。此时如果weight取值为[100, 900]范围内任意整数，字重取值为weight，否则取默认值400。
 

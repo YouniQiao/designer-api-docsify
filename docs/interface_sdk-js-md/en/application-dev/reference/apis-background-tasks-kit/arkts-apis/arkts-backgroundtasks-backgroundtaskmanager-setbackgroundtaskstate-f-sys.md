@@ -1,12 +1,18 @@
 # setBackgroundTaskState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## setBackgroundTaskState
 
 ```TypeScript
 function setBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): void
 ```
 
-Sets the authorization information of a continuous task.
+设置长时任务授权信息。
 
 **Since:** 22
 
@@ -26,18 +32,18 @@ Sets the authorization information of a continuous task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stateInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Required authorization information, including the user ID, application bundle name, and application clone ID. |
+| stateInfo | [BackgroundTaskStateInfo](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskstateinfo-i-sys.md) | Yes | 授权的必要信息，包括用户ID、应用包名、应用分身ID等。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 9800004 | System service operation failed. |
+| 201 | Permission denied. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

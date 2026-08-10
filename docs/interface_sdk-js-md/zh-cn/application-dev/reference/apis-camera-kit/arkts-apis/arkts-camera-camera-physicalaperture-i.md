@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## apertures
 
 ```TypeScript
@@ -18,7 +24,7 @@ apertures: Array<double>
 
 支持的物理光圈值。
 
-**类型：** Array&lt;double&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **起始版本：** 24
 
@@ -38,7 +44,7 @@ zoomRange: ZoomRange
 
 特定物理光圈的变焦范围。
 
-**类型：** ZoomRange
+**类型：** [ZoomRange](arkts-camera-camera-zoomrange-i.md)
 
 **起始版本：** 24
 

@@ -10,6 +10,12 @@ Obtains traffic statistics.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { statistics } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions
@@ -73,7 +79,7 @@ Obtains traffic statistics.
 | --- | --- |
 | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Parameters for obtaining detailed information on network interface traffic usage. |
 | [NetStatsChangeInfo](arkts-network-statistics-netstatschangeinfo-i-sys.md) | Used to monitor and manage the status and usage of network interfaces. |
-| [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) | Parameters for an \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ with start time and end time. |
+| [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) | Parameters for an {@link NetStatsInfo} with start time and end time. |
 | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Parameters for obtaining detailed information on application traffic usage. |
 <!--DelEnd-->
 
@@ -88,7 +94,7 @@ Obtains traffic statistics.
 
 | Name | Description |
 | --- | --- |
-| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | Array of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for every UID. Key is UID. |
+| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | Array of {@link NetStatsInfoSequenceItem}. |
+| [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | {@link NetStatsInfo} for every UID. Key is UID. |
 <!--DelEnd-->
 

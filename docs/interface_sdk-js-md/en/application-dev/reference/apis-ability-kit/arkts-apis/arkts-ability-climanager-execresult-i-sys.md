@@ -12,6 +12,12 @@ Execute result of a tool execution.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cliManager } from 'kits/@kit.AbilityKit';
+```
+
 ## errorText
 
 ```TypeScript

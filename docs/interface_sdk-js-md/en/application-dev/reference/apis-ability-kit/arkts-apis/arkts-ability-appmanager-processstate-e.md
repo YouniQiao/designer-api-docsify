@@ -1,6 +1,6 @@
 # ProcessState
 
-Enumerates the processes states.
+表示进程状态的枚举。
 
 **Since:** 10
 
@@ -13,7 +13,7 @@ Enumerates the processes states.
 ## STATE_CREATE
 
 ```TypeScript
-STATE_CREATE
+STATE_CREATE = 0
 ```
 
 The process is created.
@@ -24,14 +24,14 @@ The process is created.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ProcessState-STATE_CREATE--><!--Device-ProcessState-STATE_CREATE-End-->
+<!--Device-ProcessState-STATE_CREATE = 0--><!--Device-ProcessState-STATE_CREATE = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STATE_FOREGROUND
 
 ```TypeScript
-STATE_FOREGROUND
+STATE_FOREGROUND = 1
 ```
 
 The process is running in the foreground.
@@ -42,14 +42,14 @@ The process is running in the foreground.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ProcessState-STATE_FOREGROUND--><!--Device-ProcessState-STATE_FOREGROUND-End-->
+<!--Device-ProcessState-STATE_FOREGROUND = 1--><!--Device-ProcessState-STATE_FOREGROUND = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STATE_ACTIVE
 
 ```TypeScript
-STATE_ACTIVE
+STATE_ACTIVE = 2
 ```
 
 At least one window in the process has focus.
@@ -60,14 +60,14 @@ At least one window in the process has focus.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ProcessState-STATE_ACTIVE--><!--Device-ProcessState-STATE_ACTIVE-End-->
+<!--Device-ProcessState-STATE_ACTIVE = 2--><!--Device-ProcessState-STATE_ACTIVE = 2-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STATE_BACKGROUND
 
 ```TypeScript
-STATE_BACKGROUND
+STATE_BACKGROUND = 3
 ```
 
 The process is running in the background.
@@ -78,14 +78,14 @@ The process is running in the background.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ProcessState-STATE_BACKGROUND--><!--Device-ProcessState-STATE_BACKGROUND-End-->
+<!--Device-ProcessState-STATE_BACKGROUND = 3--><!--Device-ProcessState-STATE_BACKGROUND = 3-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STATE_DESTROY
 
 ```TypeScript
-STATE_DESTROY
+STATE_DESTROY = 4
 ```
 
 The process is destroyed.
@@ -96,7 +96,7 @@ The process is destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ProcessState-STATE_DESTROY--><!--Device-ProcessState-STATE_DESTROY-End-->
+<!--Device-ProcessState-STATE_DESTROY = 4--><!--Device-ProcessState-STATE_DESTROY = 4-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

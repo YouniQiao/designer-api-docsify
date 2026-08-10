@@ -1,6 +1,6 @@
 # PanelRect
 
-Represents the size of the input method panel.
+输入法面板位置大小信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the size of the input method panel.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## landscapeRect
 
 ```TypeScript
 landscapeRect: window.Rect
 ```
 
-Size of the input method panel window in landscape mode.
+横屏状态时输入法面板窗口的位置大小。
 
 **Type:** window.Rect
 
@@ -34,7 +40,7 @@ Size of the input method panel window in landscape mode.
 portraitRect: window.Rect
 ```
 
-Size of the input method panel window in portrait mode.
+竖屏状态时输入法面板窗口的位置大小。
 
 **Type:** window.Rect
 

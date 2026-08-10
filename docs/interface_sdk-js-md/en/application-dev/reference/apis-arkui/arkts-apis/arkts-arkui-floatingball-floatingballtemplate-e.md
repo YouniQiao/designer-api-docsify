@@ -1,6 +1,6 @@
 # FloatingBallTemplate
 
-Enumerates the types of the floating ball template.
+闪控球模板类型的枚举。
 
 **Since:** 20
 
@@ -16,8 +16,7 @@ Enumerates the types of the floating ball template.
 STATIC = 1
 ```
 
-Static layout, which provides a title and an icon. When this template is used, the **title** and **icon**  
-parameters in **FloatingBallParams** must be passed.
+静态布局，支持标题和图标。使用此模板时，FloatingBallParams中的title参数和icon参数必传。
 
 **Since:** 20
 
@@ -33,8 +32,7 @@ parameters in **FloatingBallParams** must be passed.
 NORMAL = 2
 ```
 
-Standard text layout, which provides a title and content. When this template is used, the **title** parameter in  
-**FloatingBallParams** must be passed.
+普通文本布局，支持标题和内容。使用此模板时，FloatingBallParams中的title参数必传。
 
 **Since:** 20
 
@@ -50,8 +48,7 @@ Standard text layout, which provides a title and content. When this template is 
 EMPHATIC = 3
 ```
 
-Emphasized text layout, which provides an icon, a title, and content. When this template is used, the **title**  
-parameter in **FloatingBallParams** must be passed.
+强调文本布局，支持图标、标题和内容。使用此模板时，FloatingBallParams中的title参数必传。
 
 **Since:** 20
 
@@ -67,8 +64,7 @@ parameter in **FloatingBallParams** must be passed.
 SIMPLE = 4
 ```
 
-Plain text layout, which provides only a title. When this template is used, the **title** parameter in  
-**FloatingBallParams** must be passed.
+纯文本布局，只支持标题。使用此模板时，FloatingBallParams中的title参数必传。
 
 **Since:** 20
 

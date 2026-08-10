@@ -1,12 +1,18 @@
 # unsubscribeThermalLevel
 
+## Modules to Import
+
+```TypeScript
+import { thermal } from 'kits/@kit.BasicServicesKit';
+```
+
 ## unsubscribeThermalLevel
 
 ```TypeScript
 function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from the thermal level changes. This API uses an asynchronous callback to return the result.
+取消订阅热档位变化时的回调提醒。使用callback异步回调。
 
 **Since:** 8
 
@@ -24,9 +30,9 @@ Unsubscribes from the thermal level changes. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback that returns no value. If this parameter is not set, all callbacks will be unregistered. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，无返回值。不填该参数则取消所有回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 thermal.unsubscribeThermalLevel(() => {

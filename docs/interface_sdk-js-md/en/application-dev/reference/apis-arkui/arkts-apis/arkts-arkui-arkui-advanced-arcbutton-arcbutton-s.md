@@ -1,6 +1,8 @@
 # ArcButton
 
-Declare Component ArcButton
+ArcButton({ options: ArcButtonOptions })
+
+创建ArcButton实例，入参是弧形按钮配置选项。
 
 **Since:** 23
 
@@ -11,6 +13,12 @@ Declare Component ArcButton
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## Modules to Import
+
+```TypeScript
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from 'kits/@kit.ArkUI';
+```
 
 ## build
 
@@ -36,9 +44,9 @@ The method to build component.
 readonly options: ArcButtonOptions
 ```
 
-Describes the arc button options.
+定义ArcButton组件的文本、背景色、阴影等参数。
 
-**Type:** ArcButtonOptions
+**Type:** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **Since:** 23
 

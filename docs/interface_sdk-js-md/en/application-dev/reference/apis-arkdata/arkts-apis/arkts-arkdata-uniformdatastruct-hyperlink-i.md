@@ -1,6 +1,6 @@
 # Hyperlink
 
-Represents data of the hyperlink type.
+超链接类型数据，用于描述和管理超链接信息。创建Hyperlink对象后，可用于拖拽、分享等场景，实现跨应用的超链接数据传递和跳转。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents data of the hyperlink type.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## description
 
 ```TypeScript
 description?: string
 ```
 
-Description of the linked content. This parameter is optional. By default, it is an empty string.
+链接内容描述，非必填字段。当需要为超链接提供文字描述时传入此参数（如用于可访问性、链接预览等场景），不传入时默认值为空字符串，不提供描述信息。
 
 **Type:** string
 
@@ -36,19 +42,19 @@ Description of the linked content. This parameter is optional. By default, it is
 details?: Record<string, string>
 ```
 
-Object of the dictionary type used to describe the attributes of the hyperlink. Both the key and value of the object are of the string type. For example, the following is a **details** object used to describe the properties of a file:
+字典类型对象，key和value均为string类型，用于描述Hyperlink的详细属性内容。非必填字段，默认值为空字典对象。例如，可生成一个details内容为
 
 {
 
-"title":"Title of the file",
+"title":"标题",
 
-"content":"Content of the file"
+"content":"内容"
 
 }
 
-By default, it is an empty dictionary object.
+的数据对象。当需要存储额外的超链接属性信息时传入此参数，不传入时默认值为空字典对象，不提供额外属性。
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 12
 
@@ -66,8 +72,8 @@ By default, it is an empty dictionary object.
 readonly uniformDataType: 'general.hyperlink'
 ```
 
-Uniform data type, which has a fixed value of **general.hyperlink**. For details, see  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+统一数据类型标识为超链接类型数据，固定为“general.hyperlink”，数据类型描述信息见  
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **Type:** 'general.hyperlink'
 
@@ -87,7 +93,7 @@ Uniform data type, which has a fixed value of **general.hyperlink**. For details
 url: string
 ```
 
-URL.
+链接URL地址，支持http、https等协议，需符合标准URL格式。例如：`https://www.example.com`或`file:///path/to/file`。
 
 **Type:** string
 

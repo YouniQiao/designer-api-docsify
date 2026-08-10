@@ -1,6 +1,6 @@
 # ResourceRequest (System API)
 
-The request of standby resources.
+待机资源请求体。
 
 **Since:** 10
 
@@ -12,15 +12,21 @@ The request of standby resources.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## duration
 
 ```TypeScript
 duration: int
 ```
 
-The exemption duration.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:s
+豁免时长。单位：s
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -38,7 +44,7 @@ The exemption duration.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:s
 name: string
 ```
 
-The application name.
+应用名。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ The application name.
 reason: string
 ```
 
-The reason for the request.
+申请原因。
 
 **Type:** string
 
@@ -78,9 +84,9 @@ The reason for the request.
 resourceTypes: int
 ```
 
-The set of resource types that an application requests.
+资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -98,9 +104,9 @@ The set of resource types that an application requests.
 uid: int
 ```
 
-The application uid.
+应用uid。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

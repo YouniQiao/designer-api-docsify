@@ -1,6 +1,6 @@
 # AppIdInfo (System API)
 
-Describes app ID information.
+描述app id信息。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Describes app ID information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## appFullTokenId
 
 ```TypeScript
 appFullTokenId: long
 ```
 
-App full token ID.
+应用完整令牌ID。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -40,9 +46,9 @@ App full token ID.
 appPid: int
 ```
 
-App PID.
+应用pid。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -62,9 +68,9 @@ App PID.
 appTokenId: int
 ```
 
-App token ID.
+应用令牌ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -84,9 +90,9 @@ App token ID.
 appUid: int
 ```
 
-App UID.
+应用uid。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

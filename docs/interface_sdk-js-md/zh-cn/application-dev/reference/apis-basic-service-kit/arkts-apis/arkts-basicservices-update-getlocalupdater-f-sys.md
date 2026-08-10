@@ -1,5 +1,11 @@
 # getLocalUpdater（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getLocalUpdater
 
 ```TypeScript
@@ -19,7 +25,7 @@ function getLocalUpdater(): LocalUpdater
 - 升级包必须从设备厂商官网或官方渠道下载，确保来源可信。  
 - 安装前必须先校验升级包（调用verifyUpgradePackage），未校验的包可能导致系统损坏。  
 - 升级过程中设备会重启，应用需做好状态保存。  
-- 调用getLocalUpdater相关接口时，需要权限ohos.permission.UPDATE\_SYSTEM。  
+- 调用getLocalUpdater相关接口时，需要权限ohos.permission.UPDATE_SYSTEM。  
 - 升级包文件路径长度不超过255字符。超出255字符时将抛出异常。
 
 **起始版本：** 9
@@ -36,21 +42,18 @@ function getLocalUpdater(): LocalUpdater
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 用于执行本地升级相关操作的工具类对象。 |
+| [LocalUpdater](arkts-basicservices-update-localupdater-i-sys.md) | 用于执行本地升级相关操作的工具类对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
-try {
+// 获取本地升级对象
   let localUpdater = update.getLocalUpdater();
-} catch(error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
 ```
 

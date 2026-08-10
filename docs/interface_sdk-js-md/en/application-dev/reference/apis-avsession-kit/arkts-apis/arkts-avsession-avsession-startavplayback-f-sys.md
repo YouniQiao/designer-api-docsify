@@ -1,12 +1,18 @@
 # startAVPlayback (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## startAVPlayback
 
 ```TypeScript
 function startAVPlayback(bundleName: string, assetId: string): Promise<void>
 ```
 
-Start an application for media playback.
+启动媒体播放应用程序。结果通过Promise异步回调方式返回。
 
 **Since:** 11
 
@@ -24,34 +30,31 @@ Start an application for media playback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Specifies the bundleName which to be started. |
-| assetId | string | Yes | Specifies the assetId to be started. |
+| bundleName | string | Yes | 指定应用包名。 |
+| assetId | string | Yes | 指定媒体ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象。当播放成功，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. Interface caller is not a system app. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 avSession.startAVPlayback("com.example.myapplication", "121278").then(() => {
-  console.info('startAVPlayback : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`startAVPlayback BusinessError: code: ${err.code}, message: ${err.message}`);
+  console.info('Succeeded in starting AV playback.');
 });
 ```
 
@@ -62,7 +65,7 @@ avSession.startAVPlayback("com.example.myapplication", "121278").then(() => {
 function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo): Promise<void>
 ```
 
-Start an application for media playback with command info.
+携带启动参数的冷启动应用播放接口
 
 **Since:** 22
 
@@ -82,7 +85,7 @@ Start an application for media playback with command info.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Specifies the bundleName which to be started. |
 | assetId | string | Yes | Specifies the assetId to be started. |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the specified command information. |
+| info | [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) | Yes | Specifies the specified command information. |
 
 **Return value:**
 
@@ -94,20 +97,7 @@ Start an application for media playback with command info.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-
-**Example**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.startAVPlayback("com.example.myapplication", "121278", "entry").then(() => {
-  console.info('startAVPlayback : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`startAVPlayback BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. |
 

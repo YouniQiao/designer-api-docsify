@@ -1,6 +1,6 @@
 # Form
 
-Represents data of the widget type defined by the system.
+系统定义的卡片类型数据，用于跨应用共享卡片信息。典型使用场景包括：卡片拖拽分享、卡片内容跨应用传输、桌面小组件数据共享等。
 
 **Since:** 15
 
@@ -10,13 +10,19 @@ Represents data of the widget type defined by the system.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Ability name corresponding to the widget.
+卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如"com.example.myapplication.MainAbility"）。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Ability name corresponding to the widget.
 bundleName: string
 ```
 
-Bundle to which the widget belongs.
+卡片所属的bundle名，格式需符合应用包名规范。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ Bundle to which the widget belongs.
 details?: Record<string, int | long | double | string | Uint8Array>
 ```
 
-Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
+字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**Type:** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **Since:** 15
 
@@ -76,9 +82,9 @@ Object of the dictionary type used to describe the icon. The key is of the strin
 formId: int
 ```
 
-Widget ID.
+卡片id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -96,7 +102,7 @@ Widget ID.
 formName: string
 ```
 
-Widget name.
+卡片名。
 
 **Type:** string
 
@@ -116,7 +122,7 @@ Widget name.
 module: string
 ```
 
-Module to which the widget belongs.
+卡片所属的module名。
 
 **Type:** string
 
@@ -136,8 +142,8 @@ Module to which the widget belongs.
 readonly uniformDataType: 'openharmony.form'
 ```
 
-Uniform data type, which has a fixed value of **openharmony.form**. For details, see  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见  
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **Type:** 'openharmony.form'
 

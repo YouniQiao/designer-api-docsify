@@ -12,15 +12,21 @@ DLP特性开关的状态信息。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+```
+
 ## dlpFeatureStatus
 
 ```TypeScript
 dlpFeatureStatus: DlpFeatureStatus
 ```
 
-DLP特性开关的状态，包含NOT\_ENABLED\_FEATURE和ENABLED\_FEATURE。
+DLP特性开关的状态，包含NOT_ENABLED_FEATURE和ENABLED_FEATURE。
 
-**类型：** DlpFeatureStatus
+**类型：** [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md)
 
 **起始版本：** 26.0.0
 

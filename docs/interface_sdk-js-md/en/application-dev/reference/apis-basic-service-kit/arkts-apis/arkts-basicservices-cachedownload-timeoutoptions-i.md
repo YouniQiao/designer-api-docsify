@@ -10,6 +10,12 @@ Task timeout configuration.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## httpTotalTimeout
 
 ```TypeScript
@@ -18,7 +24,7 @@ httpTotalTimeout?: int
 
 Complete HTTP request-response cycle timeout, in seconds.The default value is 60.The minimum value is 1.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -38,7 +44,7 @@ networkCheckTimeout?: int
 
 Network availability check timeout, in seconds.The default value is 20.The minimum value is 0.The maximum value is 20.When set to 0, no check will be performed.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

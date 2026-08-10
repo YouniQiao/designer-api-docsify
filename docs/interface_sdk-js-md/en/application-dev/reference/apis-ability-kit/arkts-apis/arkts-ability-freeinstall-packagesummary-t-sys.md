@@ -4,7 +4,7 @@
 export type PackageSummary = _PackInfo.PackageSummary
 ```
 
-Defines the package summary information in the **pack.info** file.
+pack.info中的包摘要信息。
 
 **Since:** 9
 

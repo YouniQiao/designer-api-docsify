@@ -1,6 +1,6 @@
 # ReturnStatus
 
-Return codes for the compression/decompression functions.
+压缩/解压缩函数的返回代码。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Return codes for the compression/decompression functions.
 OK = 0
 ```
 
-The API is successfully called. This API is supported for use in atomic services.
+函数调用成功。该接口支持在原子化服务中使用。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ The API is successfully called. This API is supported for use in atomic services
 STREAM_END = 1
 ```
 
-The API is successfully called, indicating that the entire data has been processed.
+函数调用成功，表示已处理了整个数据。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ The API is successfully called, indicating that the entire data has been process
 NEED_DICT = 2
 ```
 
-The API is successfully called, indicating that a preset dictionary is required to continue decompression.
+函数调用成功，表示需要预设字典才能继续解压缩。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ The API is successfully called, indicating that a preset dictionary is required 
 ERRNO = -1
 ```
 
-The API fails to be called, indicating that the file operation is incorrect.
+函数调用失败，表示文件操作错误。
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ The API fails to be called, indicating that the file operation is incorrect.
 STREAM_ERROR = -2
 ```
 
-The API fails to be called, indicating that the compression or decompression stream is incorrect.
+函数调用失败，表示压缩或解压缩流错误。
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ The API fails to be called, indicating that the compression or decompression str
 DATA_ERROR = -3
 ```
 
-The API fails to be called, indicating that the input data is incorrect.
+函数调用失败，表示输入数据不正确。
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ The API fails to be called, indicating that the input data is incorrect.
 MEM_ERROR = -4
 ```
 
-The API fails to be called, indicating that the memory allocation fails.
+函数调用失败，表示内存分配失败。
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ The API fails to be called, indicating that the memory allocation fails.
 BUF_ERROR = -5
 ```
 
-The API fails to be called, indicating that the input buffer is incorrect.
+函数调用失败，表示输入缓冲区不正确。
 
 **Since:** 23
 

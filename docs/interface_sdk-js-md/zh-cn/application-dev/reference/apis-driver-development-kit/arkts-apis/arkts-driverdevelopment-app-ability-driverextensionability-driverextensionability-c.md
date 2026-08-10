@@ -10,14 +10,20 @@ DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建�
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
+## 导入模块
+
+```TypeScript
+import { DriverExtensionContext } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## onConnect
 
 ```TypeScript
 onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 ```
 
-Extension生命周期回调，会在[onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_之后回调。返回一个  
-[RemoteObject]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_对象，用于客户端和服务端进行通信。
+Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitystage-abilitystage-c.md/arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)之后回调。返回一个  
+[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md/arkts-ipc-rpc-remoteobject-c.md)对象，用于客户端和服务端进行通信。
 
 **起始版本：** 10
 
@@ -33,7 +39,7 @@ Extension生命周期回调，会在[onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
 **返回值：**
 
@@ -41,7 +47,7 @@ Extension生命周期回调，会在[onCreate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\
 | --- | --- |
 | rpc.RemoteObject | 一个RemoteObject对象，用于客户端和服务端进行通信；或一个Promise对象，返回用于通信的 RemoteObject对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -116,9 +122,9 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -167,7 +173,7 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Indicates disconnection information about the driver extension. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Indicates disconnection information about the driver extension. |
 
 **返回值：**
 
@@ -205,7 +211,7 @@ onDump(params: Array<string>): Array<string>
 | --- | --- |
 | Array&lt;string&gt; | 一个string类型的数组，用于转存客户端信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 class DriverExt extends DriverExtensionAbility {
@@ -238,9 +244,9 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -271,7 +277,7 @@ Extension生命周期回调，在销毁时回调，执行资源清理等操作�
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
-**示例：**
+## 示例
 
 ```TypeScript
 class DriverExt extends DriverExtensionAbility {
@@ -289,7 +295,7 @@ context: DriverExtensionContext
 
 DriverExtension的上下文环境，继承自ExtensionContext。
 
-**类型：** DriverExtensionContext
+**类型：** [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
 
 **起始版本：** 10
 

@@ -1,6 +1,6 @@
 # BaseDialogOptions
 
-Dialog base options
+弹窗的选项。
 
 **Since:** 23
 
@@ -10,6 +10,12 @@ Dialog base options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## distortionMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ distortionMode?: DistortionMode
 
 Sets the distortion animation Mode of the dialog.
 
-**Type:** DistortionMode
+**Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
@@ -42,7 +48,7 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edgeLight animation Mode of the dialog.
 
-**Type:** EdgeLightMode
+**Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 

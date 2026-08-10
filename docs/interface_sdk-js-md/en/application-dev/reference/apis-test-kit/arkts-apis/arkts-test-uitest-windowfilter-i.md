@@ -1,6 +1,6 @@
 # WindowFilter
 
-Provides the flag attributes of this window.
+窗口的标志属性信息。
 
 **Since:** 9
 
@@ -10,13 +10,21 @@ Provides the flag attributes of this window.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## active
 
 ```TypeScript
 active?: boolean
 ```
 
-Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
+窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** boolean
 
@@ -36,9 +44,9 @@ Whether the window is interacting with the user. The value **true** indicates th
 actived?: boolean
 ```
 
-Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
+窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。
 
-This API is deprecated since API version 11. You are advised to use the **active** API instead.
+从API version 11开始废弃，建议使用active替代。
 
 **Type:** boolean
 
@@ -60,7 +68,9 @@ This API is deprecated since API version 11. You are advised to use the **active
 bundleName?: string
 ```
 
-Bundle name of the application to which the window belongs. The default value is empty.
+窗口归属应用的包名，默认值为空，用于在多窗口场景下根据应用包名筛选目标窗口。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 
@@ -80,9 +90,11 @@ Bundle name of the application to which the window belongs. The default value is
 displayId?: int
 ```
 
-ID of the display to which the window belongs. The value is an integer greater than or equal to 0. The default value is the default screen ID of the device.
+窗口所属的屏幕ID。取值大于或等于0的整数。默认值为设备默认屏幕ID。
 
-**Type:** int
+从API version 20开始，该接口支持在原子化服务中使用。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -100,7 +112,9 @@ ID of the display to which the window belongs. The value is an integer greater t
 focused?: boolean
 ```
 
-Whether the window is focused. The value **true** indicates that the window is focused, and **false** indicates the opposite. The default value is **false**.
+窗口是否处于获焦状态，true：获焦状态，false：未获焦状态，默认值为false。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** boolean
 
@@ -120,7 +134,7 @@ Whether the window is focused. The value **true** indicates that the window is f
 title?: string
 ```
 
-Title of the window. The default value is empty.
+窗口的标题信息，默认值为空，用于在多窗口场景下根据窗口标题筛选目标窗口。 从API version 11开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 

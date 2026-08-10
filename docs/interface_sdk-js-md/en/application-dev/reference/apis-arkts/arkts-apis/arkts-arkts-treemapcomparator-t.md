@@ -4,7 +4,7 @@
 export type TreeMapComparator<K> = (firstValue: K, secondValue: K) => double
 ```
 
-The type of TreeMap comparator.
+TreeMap的比较器类型。
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ The type of TreeMap comparator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstValue | K | Yes | The first value compared  |
-| secondValue | K | Yes | The second value compared  |
+| firstValue | K | Yes | 第一个比较值。 |
+| secondValue | K | Yes | 第二个比较值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double | - Comparison results  |
+| double | 比较结果。 |
 

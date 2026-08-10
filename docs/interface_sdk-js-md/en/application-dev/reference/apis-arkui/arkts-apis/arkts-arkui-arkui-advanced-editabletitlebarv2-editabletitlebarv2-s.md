@@ -1,6 +1,17 @@
 # EditableTitleBarV2
 
-Declaration of the editable title bar.
+编辑型标题栏，适用于多选界面或内容编辑界面，一般采取左叉右勾的形式。
+
+该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于  
+[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制编辑型标题栏的数据和状态，实现更高效的用户界面刷新。
+
+> **说明：**
+> 
+> - 该组件仅可在Stage模型下使用。
+> 
+> - 如果EditableTitleBarV2设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和
+> [通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
+> EditableTitleBarV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议EditableTitleBarV2设置通用属性和通用事件。
 
 **Since:** 26.0.0
 
@@ -12,13 +23,19 @@ Declaration of the editable title bar.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## build
 
 ```TypeScript
 build(): void
 ```
 
-The method to build component.
+构建组件的方法。
 
 **Since:** 26.0.0
 
@@ -38,9 +55,13 @@ The method to build component.
 imageItem?: EditableTitleBarItemV2
 ```
 
-Image item configuration, displayed on the left side of the title.
+用于左侧头像的单个菜单项。需要在标题栏左侧显示头像时传入此参数，不传入时取默认值，不显示头像。
 
-**Type:** EditableTitleBarItemV2
+默认值：undefined。
+
+**说明：** 左侧头像不支持配置无障碍属性。
+
+**Type:** [EditableTitleBarItemV2](arkts-arkui-editabletitlebaritemv2-t.md)
 
 **Since:** 26.0.0
 
@@ -60,9 +81,11 @@ Image item configuration, displayed on the left side of the title.
 leftIcon?: EditableLeftIconV2
 ```
 
-Left icon configuration.
+左侧图标配置。需要在标题栏左侧显示返回或取消图标时传入此参数，不传入时取默认值，不显示左侧图标。
 
-**Type:** EditableLeftIconV2
+默认值：undefined。
+
+**Type:** [EditableLeftIconV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
 
 **Since:** 26.0.0
 
@@ -82,7 +105,11 @@ Left icon configuration.
 menuItems?: Array<EditableTitleBarMenuItemV2>
 ```
 
-Custom menu items array, maximum 2-3 items.
+右侧菜单项列表。需要在标题栏右侧显示自定义操作按钮时传入此参数，不传入时取默认值，不显示右侧菜单项列表。
+
+**说明：** 最多支持配置3个菜单项，如果同时配置保存按钮，则最多支持2个菜单项。
+
+默认值：undefined。
 
 **Type:** Array&lt;EditableTitleBarMenuItemV2&gt;
 
@@ -104,9 +131,11 @@ Custom menu items array, maximum 2-3 items.
 options: EditableTitleBarStyleV2
 ```
 
-Style and layout configuration.
+标题栏样式和布局配置。需要自定义标题栏背景、安全区域、边距等样式时传入此参数。
 
-**Type:** EditableTitleBarStyleV2
+默认值：new EditableTitleBarStyleV2()。
+
+**Type:** [EditableTitleBarStyleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
 
 **Since:** 26.0.0
 
@@ -126,9 +155,11 @@ Style and layout configuration.
 saveButton?: EditableSaveButtonV2
 ```
 
-Save button configuration.
+保存按钮配置。需要对标题栏右侧保存按钮的控制显示或隐藏状态、设置默认焦点、或者设置保存回调函数时传入此参数，不传入时取默认值，显示保存按钮。
 
-**Type:** EditableSaveButtonV2
+默认值：undefined，显示保存按钮。
+
+**Type:** [EditableSaveButtonV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
 
 **Since:** 26.0.0
 
@@ -148,9 +179,11 @@ Save button configuration.
 title: ResourceStr | EditableTitleV2
 ```
 
-Title configuration, supports string or object form.
+标题内容，支持字符串或对象形式配置。传入字符串时仅显示主标题，传入EditableTitleV2对象时可同时配置主标题和副标题。
 
-**Type:** ResourceStr \| EditableTitleV2
+默认值：new EditableTitleV2()，表示标题内容为空。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| EditableTitleV2
 
 **Since:** 26.0.0
 

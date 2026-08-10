@@ -1,5 +1,11 @@
 # createPixelMapFromParcel
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createPixelMapFromParcel
 
 ```TypeScript
@@ -26,49 +32,50 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
-| [62980177](../errorcode-image.md#62980177-abnormal-api-environment) | Abnormal API environment. |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
-| [62980179](../errorcode-image.md#62980179-abnormal-buffer-size) | Abnormal buffer size. |
-| [62980180](../errorcode-image.md#62980180-failure-in-mapping-the-file-descriptor) | FD mapping failed. Possible cause: 1. Size and address does not match. 2. Memory map in memalloc failed. |
-| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the PixelMap. |
+| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| 62980177 | Abnormal API environment. |
+| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| 62980115 | Invalid input parameter. |
+| 62980179 | Abnormal buffer size. |
+| 62980178 | Failed to create the PixelMap. |
+| 62980180 | FD mapping failed. Possible cause: 1. Size and address does not match. 2. Memory map in memalloc failed. |
+| 62980246 | Failed to read the PixelMap. |
+| 62980105 | Failed to get the data. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 class MySequence implements rpc.Parcelable {
-  pixel_map: image.PixelMap;
-  constructor(conPixelmap: image.PixelMap) {
-    this.pixel_map = conPixelmap;
+  pixelMap: image.PixelMap;
+  constructor(pixelMap: image.PixelMap) {
+    this.pixelMap = pixelMap;
   }
   marshalling(messageSequence: rpc.MessageSequence) {
-    this.pixel_map.marshalling(messageSequence);
+    this.pixelMap.marshalling(messageSequence);
     return true;
   }
   unmarshalling(messageSequence: rpc.MessageSequence) {
     try {
-      this.pixel_map = image.createPixelMapFromParcel(messageSequence);
-    } catch(e) {
-      let error = e as BusinessError;
-      console.error(`createPixelMapFromParcel error. code is ${error.code}, message is ${error.message}`);
+      this.pixelMap = image.createPixelMapFromParcel(messageSequence);
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`Failed to create the PixelMap from parcel. Code: ${err.code}, message: ${err.message}`);
       return false;
     }
     return true;
   }
 }
-async function CreatePixelMapFromParcel() {
+
+async function createPixelMapFromParcel() {
   const color: ArrayBuffer = new ArrayBuffer(96);
   let bufferArr: Uint8Array = new Uint8Array(color);
   for (let i = 0; i < bufferArr.length; i++) {
@@ -79,11 +86,8 @@ async function CreatePixelMapFromParcel() {
     pixelFormat: image.PixelMapFormat.BGRA_8888,
     size: { height: 4, width: 6 },
     alphaType: image.AlphaType.UNPREMUL
-  }
-  let pixelMap: image.PixelMap | undefined = undefined;
-  await image.createPixelMap(color, opts).then((srcPixelMap: image.PixelMap) => {
-    pixelMap = srcPixelMap;
-  })
+  };
+  const pixelMap: image.PixelMap | undefined = await image.createPixelMap(color, opts);
   if (pixelMap != undefined) {
     // Implement serialization.
     let parcelable: MySequence = new MySequence(pixelMap);
@@ -91,11 +95,14 @@ async function CreatePixelMapFromParcel() {
     data.writeParcelable(parcelable);
 
     // Implement deserialization to obtain data through the RPC.
-    let ret: MySequence = new MySequence(pixelMap);
-    data.readParcelable(ret);
+    let seq: MySequence = new MySequence(pixelMap);
+    data.readParcelable(seq);
 
-    // Obtain the PixelMap object.
-    let newPixelmap = ret.pixel_map;
+    // Obtain the PixelMap.
+    let newPixelMap = seq.pixelMap;
+    if (newPixelMap != undefined) {
+      console.info('Succeeded in getting the PixelMap.');
+    }
   }
 }
 ```

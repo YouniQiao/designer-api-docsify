@@ -1,12 +1,18 @@
 # getDefaultNet
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## getDefaultNet
 
 ```TypeScript
 function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 ```
 
-Obtains the data network that is activated by default.To call this method, you must have the {@code ohos.permission.GET\_NETWORK\_INFO} permission.
+Obtains the data network that is activated by default.To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 11
 
@@ -24,18 +30,18 @@ Obtains the data network that is activated by default.To call this method, you m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetHandle&gt; | Yes | the callback of getDefaultNet. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | the callback of getDefaultNet. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -57,7 +63,7 @@ connection.getDefaultNet((error: BusinessError, data: connection.NetHandle) => {
 function getDefaultNet(): Promise<NetHandle>
 ```
 
-Obtains the data network that is activated by default.To call this method, you must have the {@code ohos.permission.GET\_NETWORK\_INFO} permission.
+Obtains the data network that is activated by default.To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 11
 
@@ -81,11 +87,11 @@ Obtains the data network that is activated by default.To call this method, you m
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

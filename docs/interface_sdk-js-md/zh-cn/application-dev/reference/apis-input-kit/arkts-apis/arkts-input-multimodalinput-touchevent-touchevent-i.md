@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+```
+
 ## action
 
 ```TypeScript
@@ -20,7 +26,7 @@ action: Action
 
 触屏输入事件类型。
 
-**类型：** Action
+**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ sourceType: SourceType
 
 触屏来源的设备类型。
 
-**类型：** SourceType
+**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **起始版本：** 9
 
@@ -56,7 +62,7 @@ touch: Touch
 
 当前触屏点信息。
 
-**类型：** Touch
+**类型：** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)
 
 **起始版本：** 9
 
@@ -74,7 +80,7 @@ touches: Touch[]
 
 所有触屏点。
 
-**类型：** Touch[]
+**类型：** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
 **起始版本：** 9
 

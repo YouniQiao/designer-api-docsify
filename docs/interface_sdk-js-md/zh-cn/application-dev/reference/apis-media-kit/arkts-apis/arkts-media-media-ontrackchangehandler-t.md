@@ -20,6 +20,6 @@ track变更事件回调方法。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 当前变更的track索引。  |
-| isSelected | boolean | 是 | 当前变更的track索引是否被选中。true表示处于选中状态，false表示处于非选中状态。  |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 当前变更的track索引。 |
+| isSelected | boolean | 是 | 当前变更的track索引是否被选中。true表示处于选中状态，false表示处于非选中状态。 |
 

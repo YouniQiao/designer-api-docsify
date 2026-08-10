@@ -1,5 +1,11 @@
 # setAppResourceLimit
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setAppResourceLimit
 
 ```TypeScript
@@ -7,9 +13,10 @@ function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean):
 ```
 
 ����Ӧ�õ��ļ��������������߳�������JS�ڴ��Native�ڴ���Դ���ơ���ҪӦ�ó������ڹ����ڴ�й©���ϡ�
-    **ע��**  
-    
-    �������еĿ�����ѡ����ڿ�����ѡ���б����ҵ�"ϵͳ��Դй©��־"�����ã������豸��ӿ���Ч��
+
+> **ע��**
+> 
+> �������еĿ�����ѡ����ڿ�����ѡ���б����ҵ�"ϵͳ��Դй©��־"�����ã������豸��ӿ���Ч��
 
 **起始版本：** 12
 
@@ -25,18 +32,18 @@ function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | й©��Դ���ͣ������֣� - pss\_\_\_ESCAPED\_UNDERSCORE\_\_\_memory��native�ڴ棩 - js\_\_\_ESCAPED\_UNDERSCORE\_\_\_heap��js���ڴ棩 - fd���ļ��������� - thread���̣߳� |
-| value | int | 是 | ��Ӧй©��Դ���͵����ֵ����Χ�� - pss\_\_\_ESCAPED\_UNDERSCORE\_\_\_memory���ͣ�[1024, 4 1024 1024]����λ��KB�� - js\_\_\_ESCAPED\_UNDERSCORE\_\_\_heap���ͣ�[85, 95]�������JS���ڴ����޵�85%~95%�� - fd���ͣ�[10, 10000] - thread���ͣ�[1, 1000]��������Χ�ᵼ�¹���ʧЧ�� |
+| type | string | 是 | й©��Դ���ͣ������֣� - pss_memory��native�ڴ棩 - js_heap��js���ڴ棩 - fd���ļ��������� - thread���̣߳� |
+| value | int | 是 | ��Ӧй©��Դ���͵����ֵ����Χ�� - pss_memory���ͣ�[1024, 4 1024 1024]����λ��KB�� - js_heap���ͣ�[85, 95]�������JS���ڴ����޵�85%~95%�� - fd���ͣ�[10, 10000] - thread���ͣ�[1, 1000]��������Χ�ᵼ�¹���ʧЧ�� |
 | enableDebugLog | boolean | 是 | �Ƿ������ⲿ������־���ⲿ������־����ڻҶȰ汾����ʽ�汾����֮ǰ������һС�����û��Ƴ��Ĳ��԰汾�������ã���Ϊ�ռ�������־��ռ�ô�����cpu��Դ���ڴ���Դ�����ܻ�����Ӧ�����������⡣ true�������ⲿ������־�� false�������ⲿ������־�� |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not in the specified type 3.The parameter type error or parameter order error |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Set limit failed due to remote exception |
+| 401 | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not in the specified type 3.The parameter type error or parameter order error |
+| 11400104 | Set limit failed due to remote exception |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

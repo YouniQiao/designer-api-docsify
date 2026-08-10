@@ -10,6 +10,12 @@ Describes the video transcoding parameters.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## audioBitrate
 
 ```TypeScript
@@ -18,7 +24,7 @@ audioBitrate?: int
 
 Bitrate of the output audio, in bit/s. The value range is [1-500000]. The default value is 48 kbit/s.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ audioCodec?: CodecMimeType
 
 Encoding format of the output audio. Currently, only AAC is supported. The default value is **AAC**.
 
-**类型：** CodecMimeType
+**类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 12
 
@@ -78,7 +84,7 @@ fileFormat: ContainerFormatType
 
 Container format of the output video file. Currently, only MP4 is supported.
 
-**类型：** ContainerFormatType
+**类型：** [ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)
 
 **起始版本：** 12
 
@@ -98,7 +104,7 @@ videoBitrate?: int
 
 Bitrate of the output video, in bit/s. The default bitrate depends on the resolution of the output video.The default bitrate is 1 Mbit/s for the resolution in the range [240p, 480P],2 Mbit/s for the range (480P,720P], 4 Mbit/s for the range (720P,1080P], and 8 Mbit/s for 1080p or higher.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -118,7 +124,7 @@ videoCodec?: CodecMimeType
 
 Encoding format of the output video. Currently, only AVC and HEVC are supported.If the source video is in HEVC format, the default value is **HEVC**. Otherwise, the default value is **AVC**.
 
-**类型：** CodecMimeType
+**类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 12
 
@@ -138,7 +144,7 @@ videoFrameHeight?: int
 
 Height of the output video frame, in px. The value range is [240 - 2160].The default value is the height of the source video frame.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -158,7 +164,7 @@ videoFrameWidth?: int
 
 Width of the output video frame, in px. The value range is [240 - 3840].The default value is the width of the source video frame.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

@@ -7,7 +7,7 @@ type BatchUpdateFn = (
 ) => void
 ```
 
-Callback function called when updating multiple data records in the database.
+批量更新操作的属性类型。
 
 **Since:** 23
 
@@ -25,6 +25,6 @@ Callback function called when updating multiple data records in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operations | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes | Indicates the data to update.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, Array&lt;int&gt;&gt;&gt; | Yes | Callback used to return the result.  |
+| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes | Indicates the data to update. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;int&gt;&gt;&gt; | Yes | Callback used to return the result. |
 

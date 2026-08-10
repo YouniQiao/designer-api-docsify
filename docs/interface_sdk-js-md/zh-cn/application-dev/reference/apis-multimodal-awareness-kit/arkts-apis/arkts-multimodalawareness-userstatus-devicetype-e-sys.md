@@ -1,0 +1,94 @@
+# DeviceType（系统接口）
+
+Enumerates device types.
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+<!--Device-userStatus-export enum DeviceType--><!--Device-userStatus-export enum DeviceType-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.UserStatus
+
+**系统接口：** 此接口为系统接口。
+
+## UNKNOWN_TYPE
+
+```TypeScript
+UNKNOWN_TYPE = 0
+```
+
+Unknown device type.
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceType-UNKNOWN_TYPE = 0--><!--Device-DeviceType-UNKNOWN_TYPE = 0-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.UserStatus
+
+**系统接口：** 此接口为系统接口。
+
+## PC
+
+```TypeScript
+PC = 0x0C
+```
+
+PC device.
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceType-PC = 0x0C--><!--Device-DeviceType-PC = 0x0C-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.UserStatus
+
+**系统接口：** 此接口为系统接口。
+
+## PHONE
+
+```TypeScript
+PHONE = 0x0E
+```
+
+Phone device.
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceType-PHONE = 0x0E--><!--Device-DeviceType-PHONE = 0x0E-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.UserStatus
+
+**系统接口：** 此接口为系统接口。
+
+## TABLET
+
+```TypeScript
+TABLET = 0x11
+```
+
+Tablet device.
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceType-TABLET = 0x11--><!--Device-DeviceType-TABLET = 0x11-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.UserStatus
+
+**系统接口：** 此接口为系统接口。
+

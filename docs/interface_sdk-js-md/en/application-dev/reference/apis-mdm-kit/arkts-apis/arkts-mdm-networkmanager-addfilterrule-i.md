@@ -1,6 +1,6 @@
 # AddFilterRule
 
-Defines the network packet filtering rule to add.
+添加网络包过滤规则。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Defines the network packet filtering rule to add.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
+
 ## action
 
 ```TypeScript
 action: Action
 ```
 
-Action to take, that is, receive or discard the data packets.
+接收或者丢弃数据包。
 
-**Type:** Action
+**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **Since:** 10
 
@@ -36,7 +42,7 @@ Action to take, that is, receive or discard the data packets.
 destAddr?: string
 ```
 
-Destination IP address.
+ip目标地址。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Destination IP address.
 destPort?: string
 ```
 
-Port of the destination IP address.
+ip目标端口。
 
 **Type:** string
 
@@ -76,9 +82,9 @@ Port of the destination IP address.
 direction: Direction
 ```
 
-Direction chains to which the rule applies.
+规则链。
 
-**Type:** Direction
+**Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 10
 
@@ -96,9 +102,9 @@ Direction chains to which the rule applies.
 method: AddMethod
 ```
 
-Method used to add the data packets.
+添加策略。
 
-**Type:** AddMethod
+**Type:** [AddMethod](arkts-mdm-networkmanager-addmethod-e.md)
 
 **Since:** 10
 
@@ -116,9 +122,9 @@ Method used to add the data packets.
 protocol?: Protocol
 ```
 
-Network protocol.
+网络协议。
 
-**Type:** Protocol
+**Type:** [Protocol](../../apis-network-kit/arkts-apis/arkts-network-socket-protocol-e.md)
 
 **Since:** 10
 
@@ -136,7 +142,7 @@ Network protocol.
 ruleNo?: number
 ```
 
-Sequence number of the rule.
+规则序号。
 
 **Type:** number
 
@@ -156,7 +162,7 @@ Sequence number of the rule.
 srcAddr?: string
 ```
 
-Source IP address.
+ip源地址。
 
 **Type:** string
 
@@ -176,7 +182,7 @@ Source IP address.
 srcPort?: string
 ```
 
-Port of the source IP address.
+ip源端口。
 
 **Type:** string
 
@@ -196,7 +202,7 @@ Port of the source IP address.
 uid?: string
 ```
 
-UID of the application.
+应用uid。
 
 **Type:** string
 

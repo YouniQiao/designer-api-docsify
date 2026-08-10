@@ -1,5 +1,11 @@
 # getGraphicsMemory
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getGraphicsMemory
 
 ```TypeScript
@@ -22,37 +28,23 @@ function getGraphicsMemory(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | promise���󣬷���Ӧ���Դ��ܴ�С����λΪKB�� |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | promise���󣬷���Ӧ���Դ��ܴ�С����λΪKB�� |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
+| 11400104 | Failed to get the application memory due to a remote exception. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
-import { hidebug, hilog } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 hidebug.getGraphicsMemory().then((ret: number) => {
   console.info(`graphicsMemory: ${ret}`)
 }).catch((error: BusinessError) => {
-  console.error(`error code: ${error.code}, error msg: ${error.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { hidebug, hilog } from '@kit.PerformanceAnalysisKit';
-
-hidebug.getGraphicsMemory().then((ret: int) => {
-  console.info(`graphicsMemory: ${ret}`)
-}).catch((error: Error) => {
   console.error(`error code: ${error.code}, error msg: ${error.message}`);
 })
 ```

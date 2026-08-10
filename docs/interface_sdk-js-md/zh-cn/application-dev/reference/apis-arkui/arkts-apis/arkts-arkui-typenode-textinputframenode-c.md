@@ -34,11 +34,11 @@ abstract initialize(value?: TextInputOptions): TextInputAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| value | [TextInputOptions](../arkts-components/arkts-arkui-textinputoptions-i.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) |  |
 

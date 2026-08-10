@@ -1,12 +1,18 @@
 # getAllMainWindowInfo
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## getAllMainWindowInfo
 
 ```TypeScript
 function getAllMainWindowInfo(): Promise<Array<MainWindowInfo>>
 ```
 
-Obtains the information about all main windows. This API uses a promise to return the result.
+获取全部主窗口信息，使用Promise异步回调。
 
 **Since:** 21
 
@@ -22,17 +28,17 @@ Obtains the information about all main windows. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MainWindowInfo&gt;&gt; | Promise used to return an array of main window information. |
+| Promise&lt;Array&lt;MainWindowInfo&gt;&gt; | Promise对象。返回主窗口信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

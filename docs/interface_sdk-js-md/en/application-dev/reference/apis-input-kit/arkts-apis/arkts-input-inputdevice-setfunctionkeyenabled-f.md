@@ -1,12 +1,18 @@
 # setFunctionKeyEnabled
 
+## Modules to Import
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## setFunctionKeyEnabled
 
 ```TypeScript
 function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>
 ```
 
-Specifies whether to enable a function key (for example, **CapsLock**). This API uses a promise to return the result.
+设置功能键（如：CapsLock键）使能状态。使用Promise异步回调。
 
 **Since:** 15
 
@@ -22,25 +28,25 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the function key. |
-| enabled | boolean | Yes | Status of the function key. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | 需要设置的功能键类型。 |
+| enabled | boolean | Yes | 功能键使能状态。取值为true表示使能功能键，取值为false表示不使能功能键。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
-| [3900003](../errorcode-inputdevice.md#3900003-api-call-failed-for-a-noninput-application) | It is prohibited for non-input applications. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 3900003 | It is prohibited for non-input applications. |
+| 201 | Permission denied. |
+| 3900002 | There is currently no keyboard device connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -54,13 +60,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Set Function Key Enabled Status
             inputDevice.setFunctionKeyEnabled(inputDevice.FunctionKey.CAPS_LOCK, true).then(() => {
-              console.info(`Set capslock state success`);
+              console.info(`Succeeded in setting capslock state.`);
             }).catch((error: BusinessError) => {
-              console.error(`Set capslock state failed, error=${JSON.stringify(error)}`);
+              console.error(`Failed to set capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             });
           } catch (error) {
-            console.error(`Set capslock enable error`);
+            console.error(`Failed to set capslock enable, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

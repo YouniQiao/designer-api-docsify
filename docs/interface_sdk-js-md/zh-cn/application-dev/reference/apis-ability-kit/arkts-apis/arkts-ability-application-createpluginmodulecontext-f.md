@@ -1,5 +1,11 @@
 # createPluginModuleContext
 
+## 导入模块
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## createPluginModuleContext
 
 ```TypeScript
@@ -22,7 +28,7 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示应用上下文。 |
+| context | [Context](arkts-ability-context-c.md) | 是 | 表示应用上下文。 |
 | pluginBundleName | string | 是 | 表示应用的插件包名。 |
 | pluginModuleName | string | 是 | 表示应用的插件模块名。 |
 
@@ -30,12 +36,12 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise对象。返回创建的Context。 |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise对象。返回创建的Context。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { AbilityConstant, UIAbility, application, common, Want, Context } from '@kit.AbilityKit';
+import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
@@ -47,7 +53,7 @@ export default class EntryAbility extends UIAbility {
           moduleContext = data;
           console.info('createPluginModuleContext success!');
         })
-        .catch((error: Error) => {
+        .catch((error: BusinessError) => {
           let code: number = (error as BusinessError).code;
           let message: string = (error as BusinessError).message;
           console.error(`createPluginModuleContext failed, error.code: ${code}, error.message: ${message}`);

@@ -10,6 +10,12 @@ Defines a callback used to return whether the application started by double-pres
 
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
 
+## Modules to Import
+
+```TypeScript
+import { settingsLite } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onResult
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # PixelRoundPolicy
 
-Enumerates the directions of pixel rounding at the component level.
+指定组件级像素取整的方向。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Enumerates the directions of pixel rounding at the component level.
 bottom?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's bottom edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Invalid values are rounded using the round-half-up rule.
+组件底部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**Type:** PixelRoundCalcPolicy
+**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -42,9 +42,9 @@ Rounding alignment for the component's bottom edge.\_\_\_HTML\_TAG\_DESC\_USD\_0
 end?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's end edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Invalid values are rounded using the round-half-up rule.
+组件尾部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**Type:** PixelRoundCalcPolicy
+**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -68,9 +68,9 @@ Rounding alignment for the component's end edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\
 start?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's start edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Invalid values are rounded using the round-half-up rule.
+组件前部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**Type:** PixelRoundCalcPolicy
+**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -94,9 +94,9 @@ Rounding alignment for the component's start edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\
 top?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's top edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Invalid values are rounded using the round-half-up rule.
+组件上部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**Type:** PixelRoundCalcPolicy
+**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 

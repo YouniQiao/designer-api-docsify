@@ -1,12 +1,18 @@
 # getPowerMode
 
+## Modules to Import
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPowerMode
 
 ```TypeScript
 function getPowerMode(): DevicePowerMode
 ```
 
-Obtains the power mode of this device.
+获取当前设备的电源模式。
 
 **Since:** 9
 
@@ -20,9 +26,9 @@ Obtains the power mode of this device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Power mode. |
+| [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | 电源模式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let mode = power.getPowerMode();

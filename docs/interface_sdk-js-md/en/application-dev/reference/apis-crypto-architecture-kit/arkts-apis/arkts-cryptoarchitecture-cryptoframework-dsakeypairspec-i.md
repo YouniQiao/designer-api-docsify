@@ -1,9 +1,8 @@
 # DSAKeyPairSpec
 
-Defines a child class of [AsyKeySpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ used to specify full parameters of the public and private keys in the DSA algorithm.
+密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DSA算法中公私钥包含的全量参数。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_To generate a key based on key parameters, pass it to  
-[createAsyKeyGeneratorBySpec()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to create a key generator.
+&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建密钥生成器。
 
 **Inheritance/Implementation:** DSAKeyPairSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
@@ -17,15 +16,21 @@ Defines a child class of [AsyKeySpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ used 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## params
 
 ```TypeScript
 params: DSACommonParamsSpec
 ```
 
-Common parameters of the public and private keys in the DSA algorithm.
+指定DSA算法中公私钥包含的公共参数。
 
-**Type:** DSACommonParamsSpec
+**Type:** [DSACommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-dsacommonparamsspec-i.md)
 
 **Since:** 10
 
@@ -45,7 +50,7 @@ Common parameters of the public and private keys in the DSA algorithm.
 pk: bigint
 ```
 
-Public key **pk** in the DSA algorithm.
+DSA算法的公钥pk。
 
 **Type:** bigint
 
@@ -67,7 +72,7 @@ Public key **pk** in the DSA algorithm.
 sk: bigint
 ```
 
-Private key **sk** in the DSA algorithm.
+DSA算法的私钥sk。
 
 **Type:** bigint
 

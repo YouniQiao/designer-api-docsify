@@ -1,14 +1,25 @@
 # create
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## create
 
 ```TypeScript
 function create(id: string, type: WindowType, callback: AsyncCallback<Window>): void
 ```
 
-Creates a child window. This API uses an asynchronous callback to return the result.
+创建子窗口，使用callback异步回调。
 
-The child window created uses an \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_by default.
+子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，参数id传入null或undefined时，可能会导致callback无法得到执行，建议使用
+> [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
 
 **Since:** 7
 
@@ -28,11 +39,11 @@ The child window created uses an \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Window&gt; | Yes | Callback used to return the child window created. |
+| id | string | Yes | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
+| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | 窗口类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | 回调函数。返回当前创建的子窗口对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,9 +67,13 @@ window.create('test', window.WindowType.TYPE_APP, (err: BusinessError, data) => 
 function create(id: string, type: WindowType): Promise<Window>
 ```
 
-Creates a child window. This API uses a promise to return the result.
+创建子窗口，使用Promise异步回调。
 
-The child window created uses an \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_by default.
+子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
 
 **Since:** 7
 
@@ -78,16 +93,16 @@ The child window created uses an \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window type. |
+| id | string | Yes | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
+| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | 窗口类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the child window created. |
+| Promise&lt;Window&gt; | Promise对象。返回当前创建的子窗口对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -109,7 +124,11 @@ promise.then((data) => {
 function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 ```
 
-Creates a system window. This API uses a promise to return the result.
+创建系统窗口，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
 
 **Since:** 8
 
@@ -127,17 +146,17 @@ Creates a system window. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current application context. |
-| id | string | Yes | Window name, that is, the value of name in [Configuration]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window type. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | 当前应用上下文信息。 |
+| id | string | Yes | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
+| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | 窗口类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the child window created. |
+| Promise&lt;Window&gt; | Promise对象。返回当前创建的子窗口对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -159,7 +178,12 @@ promise.then((data) => {
 function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void
 ```
 
-Creates a system window. This API uses an asynchronous callback to return the result.
+创建系统窗口，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
 
 **Since:** 8
 
@@ -177,12 +201,12 @@ Creates a system window. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current application context. |
-| id | string | Yes | Window name, that is, the value of name in [Configuration]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Window&gt; | Yes | Callback used to return the child window created. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | 当前应用上下文信息。 |
+| id | string | Yes | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
+| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | 窗口类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | 回调函数。返回当前创建的子窗口对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

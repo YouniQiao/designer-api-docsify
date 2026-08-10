@@ -22,6 +22,6 @@ type OnFileReadyBatch = (error: BusinessError<void>, files: Array<File>) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 获取文件句柄失败时返回的错误对象。  |
-| files | Array&lt;File&gt; | 是 | 获取到的文件句柄数组。  |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | 是 | 获取文件句柄失败时返回的错误对象。 |
+| files | Array&lt;File&gt; | 是 | 获取到的文件句柄数组。 |
 

@@ -1,13 +1,14 @@
 # RichEditorParagraphStyleOptions
 
-Defines the paragraph style options.
+段落样式选项。
 
-Inherits [RichEditorRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    Applicable scope of the API: spans involved in the specified range.
+继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
 
-**Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](../arkts-apis/arkts-arkui-component/richeditor-richeditorrange-i.md)
+> **说明：**
+> 
+> 接口作用的范围：设定的区间所覆盖的段落，即区间起始位置和结束位置所在的段落及其之间的所有段落。
+
+**Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
 
 **Since:** 11
 
@@ -23,9 +24,9 @@ Inherits [RichEditorRange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 style: RichEditorParagraphStyle
 ```
 
-Paragraph style.
+段落样式。
 
-**Type:** RichEditorParagraphStyle
+**Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
 
 **Since:** 11
 

@@ -10,6 +10,12 @@ XMPMetadata instance.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## enumerateTags
 
 ```TypeScript
@@ -38,13 +44,13 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 | --- | --- | --- | --- |
 | callback | (path: string, tag: XMPTag) =&gt; boolean | Yes | Callback used to return the XMP node and the corresponding XMPTag. The callback receives a path argument that follows the XMP namespace:path format. |
 | rootPath | string | No | Enumerate root path. If this parameter is not specified, the default value is root path. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | XMP enumerate option. |
+| options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | No | XMP enumerate option. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
+| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## getBlob
 
@@ -74,8 +80,8 @@ Obtains the XMP metadata as a blob.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+| 7600302 | Memory copy failed. |
+| 7600301 | Memory alloc failed. |
 
 ## getTag
 
@@ -111,7 +117,7 @@ Get a single XMP tag from specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
+| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## getTags
 
@@ -136,7 +142,7 @@ Get all XMP tags from specified path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rootPath | string | No | The specified path. If this parameter is not specified, the default value is root path. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | XMP enumerate option. |
+| options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | No | XMP enumerate option. |
 
 **Return value:**
 
@@ -148,7 +154,7 @@ Get all XMP tags from specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
+| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## registerXMPNamespace
 
@@ -172,7 +178,7 @@ Register a new namespace according to the xml namespace and prefix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xmpNamespace | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The xmp namespace. |
+| xmpNamespace | [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | Yes | The xmp namespace. |
 
 **Return value:**
 
@@ -184,7 +190,7 @@ Register a new namespace according to the xml namespace and prefix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
+| 7600206 | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
 
 ## removeTag
 
@@ -220,7 +226,7 @@ Remove the XMP tag from specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
+| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## setBlob
 
@@ -256,7 +262,7 @@ Set a blob into the XMP metadata.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
+| 7600206 | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
 
 ## setValue
 
@@ -281,7 +287,7 @@ Set the XMP type and value of the XMP tag in the specified path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | The specified path of the target XMP tag.(e.g., "dc:title"). |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The specified XMP tag type. |
+| type | [XMPTagType](arkts-image-image-xmptagtype-e.md) | Yes | The specified XMP tag type. |
 | value | string | No | The specified value. If this parameter is not specified, the default value is empty. |
 
 **Return value:**
@@ -294,5 +300,5 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |
+| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |
 

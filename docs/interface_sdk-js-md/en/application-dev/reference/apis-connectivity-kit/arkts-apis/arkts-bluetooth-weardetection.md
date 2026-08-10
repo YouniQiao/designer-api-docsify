@@ -10,6 +10,12 @@ Provides methods to manage the wearing detection function.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { wearDetection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 <!--Del-->

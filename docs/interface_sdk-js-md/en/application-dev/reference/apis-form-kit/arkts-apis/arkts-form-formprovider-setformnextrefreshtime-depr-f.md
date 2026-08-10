@@ -26,9 +26,9 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | minute | number | Yes | Time for the next refresh. The value must be greater than or equal to 5, in minutes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -76,7 +76,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

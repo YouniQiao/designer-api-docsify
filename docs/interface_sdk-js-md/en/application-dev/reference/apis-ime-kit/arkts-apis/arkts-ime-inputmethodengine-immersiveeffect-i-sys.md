@@ -1,6 +1,6 @@
 # ImmersiveEffect
 
-Describes the immersive effect.
+沉浸效果。
 
 **Since:** 20
 
@@ -10,17 +10,23 @@ Describes the immersive effect.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## fluidLightMode
 
 ```TypeScript
 fluidLightMode?: FluidLightMode
 ```
 
-Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default.
+流光模式，未填充时默认为NONE。
 
-This attribute is available only to system applications.
+该属性仅系统应用可以使用。
 
-**Type:** FluidLightMode
+**Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **Since:** 20
 

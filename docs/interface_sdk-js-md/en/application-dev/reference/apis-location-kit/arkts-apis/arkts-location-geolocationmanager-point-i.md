@@ -10,6 +10,12 @@ Indicates a location point, including the longitude and latitude.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## latitude
 
 ```TypeScript
@@ -18,7 +24,7 @@ latitude: double
 
 Indicates latitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -38,7 +44,7 @@ longitude: double
 
 Indicates longitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 type ReportDialogCommandEvent = (type: DialogControlType, buttonInfo: DialogInfo) => void
 ```
 
-The report dialog command event.
+对话框命令上报事件。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ The report dialog command event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | type  |
-| buttonInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | button info  |
+| type | [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md) | Yes |  |
+| buttonInfo | [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | Yes | 对话框信息。 |
 

@@ -1,6 +1,6 @@
 # TipInfo
 
-Represents the tip information displayed during the authentication, which is used to provide feedback during the authentication process.
+表示认证过程中的提示信息，用于提供认证过程的反馈。
 
 **Since:** 9
 
@@ -14,13 +14,19 @@ Represents the tip information displayed during the authentication, which is use
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## module
 
 ```TypeScript
 module: number
 ```
 
-ID of the module that sends the tip information.
+发送提示信息的模块标识。
 
 **Type:** number
 
@@ -42,7 +48,7 @@ ID of the module that sends the tip information.
 tip: number
 ```
 
-Tip to be given during the authentication process.
+认证过程提示信息。
 
 **Type:** number
 

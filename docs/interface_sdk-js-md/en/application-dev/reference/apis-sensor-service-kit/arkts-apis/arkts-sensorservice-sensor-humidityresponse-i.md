@@ -1,6 +1,6 @@
 # HumidityResponse
 
-Describes the humidity sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+湿度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** HumidityResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the humidity sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## humidity
 
 ```TypeScript
 humidity: double
 ```
 
-Ambient relative humidity, in a percentage (%).
+环境的相对湿度。单位：%（百分比），表示环境的相对湿度百分比。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

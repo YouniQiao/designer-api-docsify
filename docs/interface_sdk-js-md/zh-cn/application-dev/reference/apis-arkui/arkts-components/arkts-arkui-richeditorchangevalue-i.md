@@ -18,7 +18,7 @@ rangeBefore: TextRange
 
 即将被替换内容的开始和结束索引。
 
-**类型：** TextRange
+**类型：** [TextRange](../arkts-apis/arkts-arkui-textrange-i.md)
 
 **起始版本：** 12
 

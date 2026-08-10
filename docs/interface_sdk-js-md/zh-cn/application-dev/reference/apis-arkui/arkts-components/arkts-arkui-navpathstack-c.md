@@ -3,16 +3,18 @@
 Navigation导航控制器，以栈的数据结构管理Navigation中所有的子页面，并提供栈操作的方法用于控制Navigation中子页面的切换。
 
 从API version 12开始，NavPathStack允许被继承，派生类对象可以替代基类NavPathStack对象使用。使用示例参见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    1.连续调用多个导航控制器操作方法时，中间过程会被忽略，显示最终的栈操作结果。
-    例如：在Page1页面先pop再push一个Page1，系统会认为操作前和操作后的结果一致而不进行任何操作，如果需要强行push一个Page1实例，可以设置  
-    [NavigationOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中的launchMode属性值为LaunchMode.NEW\_INSTANCE模式。  
-    
-    2.不建议开发者通过监听页面生命周期的方式管理自己的导航控制器。  
-    
-    3.在应用处于后台状态下，调用NavPathStack的栈操作方法，会在应用再次回到前台状态时触发刷新。
+[示例10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例10定义导航控制器派生类)。
+
+> **说明：**
+> 
+> 1.连续调用多个导航控制器操作方法时，中间过程会被忽略，显示最终的栈操作结果。
+
+> 例如：在Page1页面先pop再push一个Page1，系统会认为操作前和操作后的结果一致而不进行任何操作，如果需要强行push一个Page1实例，可以设置
+> [NavigationOption](arkts-arkui-navigationoptions-i.md)中的launchMode属性值为LaunchMode.NEW_INSTANCE模式。
+> 
+> 2.不建议开发者通过监听页面生命周期的方式管理自己的导航控制器。
+> 
+> 3.在应用处于后台状态下，调用NavPathStack的栈操作方法，会在应用再次回到前台状态时触发刷新。
 
 **起始版本：** 10
 
@@ -46,7 +48,7 @@ clear(animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true<br>**起始版本：** 11 |
 
 ## constructor
 
@@ -92,7 +94,7 @@ disableAnimation(value: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否关闭转场动画，\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：false\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：关闭转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：不关闭转场动画。 |
+| value | boolean | 是 | 是否关闭转场动画，&lt;br/&gt;默认值：false&lt;br/&gt;true：关闭转场动画。&lt;br/&gt;false：不关闭转场动画。 |
 
 ## getAllPathName
 
@@ -182,7 +184,7 @@ getParamByIndex(index: number): unknown | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| unknown | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**undefined**: an invalid index is provided. |
+| unknown | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type. &lt;br&gt;**undefined**: an invalid index is provided. |
 
 ## getParamByName
 
@@ -242,7 +244,7 @@ getParent(): NavPathStack | null
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
+| [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
 
 ## getPathStack
 
@@ -295,7 +297,7 @@ moveIndexToTop(index: number, animated?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true<br>**起始版本：** 11 |
 
 ## moveToTop
 
@@ -322,7 +324,7 @@ moveToTop(name: string, animated?: boolean): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -337,17 +339,26 @@ pop(animated?: boolean): NavPathInfo | undefined
 ```
 
 弹出路由栈栈顶元素。
-    **说明：**  
-    
-    连续调用多个导航控制器方法时，中间被pop的页面会被缓存，后续push同名页面时会优先复用该页面，不会走新的页面创建流程。
-    例如：
-    pathStack: NavPathStack = new NavPathStack()
-    // 初始页面栈为：[A]
-    pathStack.pop()
-    pathStack.pushPath(A)
-    pathStack.pushPath(B)
-    // 操作后页面栈为：[A B]
-    此时A页面会被复用，不会走新的创建流程。
+
+> **说明：**
+> 
+> 连续调用多个导航控制器方法时，中间被pop的页面会被缓存，后续push同名页面时会优先复用该页面，不会走新的页面创建流程。
+
+> 例如：
+
+> pathStack: NavPathStack = new NavPathStack()
+
+> // 初始页面栈为：[A]
+
+> pathStack.pop()
+
+> pathStack.pushPath(A)
+
+> pathStack.pushPath(B)
+
+> // 操作后页面栈为：[A B]
+
+> 此时A页面会被复用，不会走新的创建流程。
 
 **起始版本：** 10
 
@@ -365,13 +376,13 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | NavPathInfo**: information about the navigation destination page at the top of the stack. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**undefined**: the routing stack is empty. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) | NavPathInfo**: information about the navigation destination page at the top of the stack. &lt;br&gt;**undefined**: the routing stack is empty. |
 
 ## pop
 
@@ -380,17 +391,26 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 ```
 
 弹出路由栈栈顶元素，并触发onPop回调传入页面处理结果。
-    **说明：**  
-    
-    连续调用多个导航控制器方法时，中间被pop的页面会被缓存，后续push同名页面时会优先复用该页面，不会走新的页面创建流程。
-    例如：
-    pathStack: NavPathStack = new NavPathStack()
-    // 初始页面栈为：[A]
-    pathStack.pop()
-    pathStack.pushPath(A)
-    pathStack.pushPath(B)
-    // 操作后页面栈为：[A B]
-    此时A页面会被复用，不会走新的创建流程。
+
+> **说明：**
+> 
+> 连续调用多个导航控制器方法时，中间被pop的页面会被缓存，后续push同名页面时会优先复用该页面，不会走新的页面创建流程。
+
+> 例如：
+
+> pathStack: NavPathStack = new NavPathStack()
+
+> // 初始页面栈为：[A]
+
+> pathStack.pop()
+
+> pathStack.pushPath(A)
+
+> pathStack.pushPath(B)
+
+> // 操作后页面栈为：[A B]
+
+> 此时A页面会被复用，不会走新的创建流程。
 
 **起始版本：** 11
 
@@ -409,13 +429,13 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | NavPathInfo**: information about the navigation destination page at the top of the stack. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**undefined**: the routing stack is empty. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) | NavPathInfo**: information about the navigation destination page at the top of the stack. &lt;br&gt;**undefined**: the routing stack is empty. |
 
 ## popToIndex
 
@@ -442,7 +462,7 @@ popToIndex(index: number, animated?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true<br>**起始版本：** 11 |
 
 ## popToIndex
 
@@ -470,7 +490,7 @@ popToIndex(index: number, result: Object, animated?: boolean): void
 | --- | --- | --- | --- |
 | index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
 | result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 ## popToName
 
@@ -497,7 +517,7 @@ popToName(name: string, animated?: boolean): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -531,7 +551,7 @@ popToName(name: string, result: Object, animated?: boolean): number
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 **返回值：**
 
@@ -563,8 +583,8 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | NavDestination页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 **返回值：**
 
@@ -576,10 +596,10 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 100006 | NavDestination not found. |
 
 ## pushDestination
 
@@ -587,7 +607,7 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，来实现不同的行为。
+将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
 
 **起始版本：** 12
 
@@ -605,8 +625,8 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | NavDestination页面的信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 路由栈操作选项。 |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| options | [NavigationOptions](../arkts-apis/arkts-arkui-navigation-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
 
 **返回值：**
 
@@ -618,10 +638,10 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 100006 | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -649,7 +669,7 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 **返回值：**
 
@@ -661,10 +681,10 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 100006 | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -692,8 +712,8 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。仅 [pop]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、 [popToName]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、 [popToIndex]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中设置result参数后触发。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。仅 [pop](arkts-arkui-navpathstack-c.md#pop)、 [popToName](arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 **返回值：**
 
@@ -705,10 +725,10 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 100006 | NavDestination not found. |
 
 ## pushPath
 
@@ -734,8 +754,8 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | NavDestination页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_传入参数非法时，按true处理。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;传入参数非法时，按true处理。<br>**起始版本：** 11 |
 
 ## pushPath
 
@@ -743,7 +763,7 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 pushPath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-将info指定的NavDestination页面信息入栈，具体根据options中指定不同的[LaunchMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，来实现不同的行为。
+将info指定的NavDestination页面信息入栈，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
 
 **起始版本：** 12
 
@@ -761,8 +781,8 @@ pushPath(info: NavPathInfo, options?: NavigationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | NavDestination页面的信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 路由栈操作选项。 |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| options | [NavigationOptions](../arkts-apis/arkts-arkui-navigation-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
 
 ## pushPathByName
 
@@ -790,7 +810,7 @@ pushPathByName(name: string, param: unknown, animated?: boolean): void
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | unknown | 是 | 开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true<br>**起始版本：** 11 |
 
 ## pushPathByName
 
@@ -818,8 +838,8 @@ pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').C
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时触发该回调处理返回结果。仅 [pop]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、 [popToName]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、 [popToIndex]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中设置result参数后触发。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时触发该回调处理返回结果。仅 [pop](arkts-arkui-navpathstack-c.md#pop)、 [popToName](arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 ## removeByIndexes
 
@@ -892,8 +912,8 @@ removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
 将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的  
-[onReady]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调中获取，也可以在  
-[NavDestinationInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中获取。
+[onReady](../arkts-apis/arkts-arkui-navdestination-navdestinationattribute-i.md/arkts-arkui-navdestination-navdestinationattribute-i.md#onready)回调中获取，也可以在  
+[NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md/arkts-arkui-uiobserver-navdestinationinfo-i.md)中获取。
 
 **起始版本：** 12
 
@@ -917,7 +937,7 @@ removeByNavDestinationId(navDestinationId: string): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回是否成功删除该页面，\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：删除成功。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false：删除失败。 |
+| boolean | 返回是否成功删除该页面，&lt;br/&gt;true：删除成功。&lt;br/&gt;false：删除失败。 |
 
 ## replaceDestination
 
@@ -925,7 +945,7 @@ removeByNavDestinationId(navDestinationId: string): boolean
 replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-替换路由栈操作。使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，来实现不同的行为。
+替换路由栈操作。使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
 
 **起始版本：** 18
 
@@ -943,8 +963,8 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | NavDestination页面的信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 路由栈操作选项。 |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| options | [NavigationOptions](../arkts-apis/arkts-arkui-navigation-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
 
 **返回值：**
 
@@ -956,10 +976,10 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| 100005 | Builder function not registered. |
+| 100006 | NavDestination not found. |
 
 ## replacePath
 
@@ -985,8 +1005,8 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 新栈顶页面参数信息。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 ## replacePath
 
@@ -994,7 +1014,7 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 replacePath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-替换路由栈操作，具体根据options中指定不同的[LaunchMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，来实现不同的行为。
+替换路由栈操作，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
 
 **起始版本：** 12
 
@@ -1012,8 +1032,8 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 新栈顶页面参数信息。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 路由栈操作选项。 |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
+| options | [NavigationOptions](../arkts-apis/arkts-arkui-navigation-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
 
 ## replacePathByName
 
@@ -1041,7 +1061,7 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：支持转场动画；false：不支持转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 ## setInterception
 
@@ -1067,7 +1087,7 @@ setInterception(interception: NavigationInterception): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interception | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置Navigation跳转拦截对象。设置后，可在页面跳转前/后执行自定义回调，允许操作栈或拦截跳转。 |
+| interception | [NavigationInterception](../arkts-apis/arkts-arkui-navigation-navigationinterception-i.md) | 是 | 设置Navigation跳转拦截对象。设置后，可在页面跳转前/后执行自定义回调，允许操作栈或拦截跳转。 |
 
 ## setPathStack
 
@@ -1076,15 +1096,16 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 ```
 
 将当前路由栈中的路由页面信息数组更新为指定内容，并实现路由转场。
-    **说明：**  
-    
-    1. 开发者可以在原有栈的基础上批量添加或删除页面。批量入栈的页面中，只有可见的页面会触发创建，其他页面虽已入栈但不会立即创建，当这些页面变为可见时，才会触发创建。  
-    
-    2. 通过批量入栈功能更新的路由栈，各页面的生命周期事件触发顺序为从栈顶到底部依次触发，这与其它入栈接口从栈底到顶部的触发顺序不同。  
-    
-    3. 开发者可以通过[NavPathInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的页面唯一标识符navDestinationId来操作已有页面，该id由系统默认生成且全局唯一（可以通过  
-    [getPathStack]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口获取，不可主动赋新值）。若该id在当前路由栈中不存在，则表示新增页面，若在当前路由栈中存在，同时对应的name相同，则表示复用已  
-    有页面。
+
+> **说明：**
+> 
+> 1. 开发者可以在原有栈的基础上批量添加或删除页面。批量入栈的页面中，只有可见的页面会触发创建，其他页面虽已入栈但不会立即创建，当这些页面变为可见时，才会触发创建。
+> 
+> 2. 通过批量入栈功能更新的路由栈，各页面的生命周期事件触发顺序为从栈顶到底部依次触发，这与其它入栈接口从栈底到顶部的触发顺序不同。
+> 
+> 3. 开发者可以通过[NavPathInfo](arkts-arkui-navpathinfo-c.md)中的页面唯一标识符navDestinationId来操作已有页面，该id由系统默认生成且全局唯一（可以通过
+> [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack)接口获取，不可主动赋新值）。若该id在当前路由栈中不存在，则表示新增页面，若在当前路由栈中存在，同时对应的name相同，则表示复用已
+> 有页面。
 
 **起始版本：** 19
 
@@ -1102,8 +1123,8 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;NavPathInfo&gt; | 是 | 设置当前路由栈中的路由页面信息数组。设置后，将当前路由栈更新为指定内容，并实现路由转场。开发者可在原有栈的基础上批量添加或删除页面。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_数组长度无限制。 |
-| animated | boolean | 否 | 是否开启转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：开启转场动画；false：不开启转场动画。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 默认值：true |
+| pathStack | Array&lt;NavPathInfo&gt; | 是 | 设置当前路由栈中的路由页面信息数组。设置后，将当前路由栈更新为指定内容，并实现路由转场。开发者可在原有栈的基础上批量添加或删除页面。&lt;br/&gt;**说明：**&lt;br/&gt;数组长度无限制。 |
+| animated | boolean | 否 | 是否开启转场动画。&lt;br/&gt;true：开启转场动画；false：不开启转场动画。&lt;br /&gt; 默认值：true |
 
 ## size
 
@@ -1129,5 +1150,5 @@ size(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Stack size. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞) |
+| number | Stack size. &lt;br&gt;Value range: [0, +∞) |
 

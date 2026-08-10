@@ -1,10 +1,10 @@
 # ViewportRect
 
-Describes the options of the viewport.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element's @since version number is higher than inner elements'. This does not affect interface usability.
+用于描述Viewport的绘制属性。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -20,15 +20,15 @@ Describes the options of the viewport.
 height?: Length
 ```
 
-Height of the viewport. The value must be greater than or equal to 0.
+形状视口的高度，取值范围≥0。
 
-Default value: **0**
+默认值：0
 
-Default unit: vp
+默认单位：vp
 
-Invalid values are treated as the default value.
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 
@@ -48,15 +48,15 @@ Invalid values are treated as the default value.
 width?: Length
 ```
 
-Width of the viewport. The value must be greater than or equal to 0.
+形状视口的宽度，取值范围≥0。
 
-Default value: **0**
+默认值：0
 
-Default unit: vp
+默认单位：vp
 
-Invalid values are treated as the default value.
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 
@@ -76,15 +76,15 @@ Invalid values are treated as the default value.
 x?: Length
 ```
 
-Horizontal coordinate of the start point of the viewport.
+形状视口起始点的水平坐标。
 
-Default value: **0**
+默认值：0
 
-Default unit: vp
+默认单位：vp
 
-Invalid values are treated as the default value.
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 
@@ -104,15 +104,15 @@ Invalid values are treated as the default value.
 y?: Length
 ```
 
-Vertical coordinate of the start point of the viewport.
+形状视口起始点的垂直坐标。
 
-Default value: **0**
+默认值：0
 
-Default unit: vp
+默认单位：vp
 
-Invalid values are treated as the default value.
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 

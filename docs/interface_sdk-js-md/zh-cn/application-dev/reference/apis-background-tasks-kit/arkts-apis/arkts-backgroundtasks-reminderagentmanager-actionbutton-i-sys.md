@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## dataShareUpdate
 
 ```TypeScript
@@ -18,7 +24,7 @@ dataShareUpdate?: DataShareUpdate
 
 点击按钮将更新应用数据库。
 
-**类型：** DataShareUpdate
+**类型：** [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md)
 
 **起始版本：** 11
 
@@ -38,7 +44,7 @@ wantAgent?: WantAgent
 
 点击按钮跳转的ability信息。
 
-**类型：** WantAgent
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 10
 

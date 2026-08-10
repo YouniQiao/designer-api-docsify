@@ -20,5 +20,5 @@ Popup state change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The parameter of state change callback.  |
+| event | [PopupStateChangeParam](arkts-arkui-common-popupstatechangeparam-i.md) | Yes | The parameter of state change callback. |
 

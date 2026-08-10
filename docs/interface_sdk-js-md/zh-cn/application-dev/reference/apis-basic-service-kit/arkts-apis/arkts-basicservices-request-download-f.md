@@ -1,5 +1,11 @@
 # download
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## download
 
 ```TypeScript
@@ -28,16 +34,16 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 下载的配置信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DownloadTask&gt; | 是 | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
+| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 | 下载的配置信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadTask&gt; | 是 | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let downloadTask: request.DownloadTask;
@@ -81,7 +87,7 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 下载的配置信息。 |
+| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 | 下载的配置信息。 |
 
 **返回值：**
 
@@ -93,9 +99,9 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let downloadTask: request.DownloadTask;

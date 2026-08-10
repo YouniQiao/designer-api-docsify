@@ -1,22 +1,21 @@
 # TouchGuideType
 
 ```TypeScript
-type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'
+type TouchGuideType = 'touchBegin' | 'touchEnd'
 ```
 
-Enumerates the touch guide event types.
+触摸浏览事件类型。
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'--><!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'-End-->
+<!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd'--><!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd'-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 | Type | Description |
 | --- | --- |
-| 'touchBegin' | Start of touch. |
-| 'touchEnd' | End of touch. |
-| 'touchGuideGesture' | Event indicating the touchGuide gesture. [since 26.0.0] |
+| 'touchBegin' | 表示触摸浏览时开始触摸。 |
+| 'touchEnd' | 表示触摸浏览时结束触摸。 |
 

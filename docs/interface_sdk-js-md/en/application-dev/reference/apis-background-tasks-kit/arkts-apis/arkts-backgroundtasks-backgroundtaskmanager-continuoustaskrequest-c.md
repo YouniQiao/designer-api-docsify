@@ -1,11 +1,10 @@
 # ContinuousTaskRequest
 
-Specifies details of the continuous task being requested or updated. It is typically used as input for the  
-[startBackgroundRunning()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_and  
-[updateBackgroundRunning()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_APIs. Note that:
+通常作为  
+[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)和  
+[updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)接口的入参，用于指定申请或更新的长时任务信息。其中：
 
-1. When requesting a continuous task via  
-[startBackgroundRunning()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_,notifications will be combined if the main type and subtype of the continuous task to be requested are the same as those of the existing continuous task in the current application,and the **combinedTaskNotification** value is **true** for both tasks.Otherwise, notifications will not be combined.2. Notifications will not be combined if the continuous task has no notification.For details about whether notifications are sent for the continuous task,see [BackgroundTaskMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.3. Notifications cannot be combined if the continuous task includes data transmission.4. Notifications that have been combined cannot be canceled.If notifications have been combined, they cannot be updated to uncombined.5. After notifications are combined, tapping the notification will redirect to the UIAbility corresponding to the first requested continuous task.If the update API is called,the redirection will target the UIAbility corresponding to the last updated continuous task.6. When the [updateBackgroundRunning()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_API is called to update a continuous task, the input **continuousTaskId** must exist. Otherwise, the update fails.7. Continuous tasks of the [MODE\_SPECIAL\_SCENARIO\_PROCESSING]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ type are supported since API version 22. This task type must be used independently and notifications cannot be combined.Specifically, when you request or update a continuous task,it must be of the **MODE\_SPECIAL\_SCENARIO\_PROCESSING** type.Otherwise, an error is returned.
+1. 通过[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)接口申请长时任务时，如果待申请长时任务与当前应用下已存在长时任务，两者的主类型和子类型均相同，且combinedTaskNotification均取值为true，则会合并通知。否则不会合并通知。2. 如果长时任务本身没有通知，则不会合并，长时任务类型是否会通知请参考[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)。3. 如果长时任务类型中包含数据传输类型，则不会合并通知。4. 通知合并后不能取消合并，已合并的不能更新成不合并。5. 通知合并后，点击通知栏消息，会跳转到第一个申请的长时任务对应的UIAbility，如果调用了更新接口，则跳转到最后一次更新的长时任务对应的UIAbility。6. 通过[updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)接口更新长时任务时，传入的continuousTaskId必须存在，否则更新失败。7. 从API version 22开始支持特殊场景类型[MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)的长时任务。必须单独使用且不支持通知合并，即申请或更新长时任务时，长时任务类型只能有特殊场景类型，否则返回错误。
 
 **Since:** 21
 
@@ -15,13 +14,19 @@ Specifies details of the continuous task being requested or updated. It is typic
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## checkSpecialScenarioAuth
 
 ```TypeScript
 checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>
 ```
 
-Checks whether the user has authorized tasks to run continuously in the background. This API uses a promise to return the result.An exception will be thrown if unauthorized.
+查询用户是否授权能在后台长时间运行。使用Promise异步回调。
 
 **Since:** 22
 
@@ -39,23 +44,23 @@ Checks whether the user has authorized tasks to run continuously in the backgrou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the application context of the FA model, see [Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the application context of the stage model, see [Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用运行的上下文 &lt;br&gt; &lt;br&gt;FA模型的应用Context定义见[Context]{@link./app/context}。&lt;br&gt;Stage模型的应用Context定 义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 &lt;br&gt; **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持 ServiceAbility申请。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UserAuthResult&gt; | Promise used to return the user authorization result. |
+| Promise&lt;UserAuthResult&gt; | Promise对象，返回用户授权结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 9800004 | System service operation failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -84,7 +89,7 @@ export default class EntryAbility extends UIAbility {
 checkSpecialScenarioAuthResult(context: Context): Promise<UserAuthResult>
 ```
 
-Check whether the application can request MODE\_SPECIAL\_SCENARIO\_PROCESSING.No exception will be thrown whether authorized or not.
+特殊场景长时任务申请用户授权，未授权时不会抛出异常。
 
 **Since:** 26.0.0
 
@@ -102,21 +107,44 @@ Check whether the application can request MODE\_SPECIAL\_SCENARIO\_PROCESSING.No
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | App running context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UserAuthResult&gt; | The promise returns the result of user authorization. |
+| Promise&lt;UserAuthResult&gt; | 用户授权结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | 长时任务校验错误 |
+| 9800004 | 系统服务无响应 |
+| 201 | 无权限 |
+
+## Examples
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    try {
+      let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
+      continuousTaskRequest.checkSpecialScenarioAuthResult(this.context).then((res: backgroundTaskManager.UserAuthResult) => {
+        console.info('Operation checkSpecialScenarioAuthResult succeeded. data: ' + JSON.stringify(res));
+      }).catch((error: BusinessError) => {
+        console.error(`Operation checkSpecialScenarioAuthResult failed. code is ${error.code} message is ${error.message}`);
+      });
+    } catch (error) {
+      console.error(`Operation checkSpecialScenarioAuthResult failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+    }
+  }
+};
+```
 
 ## isModeSupported
 
@@ -124,9 +152,8 @@ Check whether the application can request MODE\_SPECIAL\_SCENARIO\_PROCESSING.No
 isModeSupported(): boolean
 ```
 
-Checks whether **BackgroundTaskMode** specified in  
-[ContinuousTaskRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported. For details, see  
-[BackgroundTaskMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+查询当前[ContinuousTaskRequest](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md)设置的长时任务主类型，是否支持申请长时任务。是否支持申请长时任务请参考  
+[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)的说明。
 
 **Since:** 21
 
@@ -144,16 +171,16 @@ Checks whether **BackgroundTaskMode** specified in
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether **BackgroundTaskMode** is supported. The value **true** means it is supported, and the value **false** means the opposite. |
+| boolean | 返回长时任务主类型是否支持。true表示支持，false表示不支持。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -182,8 +209,8 @@ export default class EntryAbility extends UIAbility {
 requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 ```
 
-Requests user authorization to run tasks continuously in the background. This API uses an asynchronous callback to return the result. If the API call is successful, a banner notification with a sound is sent. This API is applicable only to continuous tasks of the  
-[MODE\_SPECIAL\_SCENARIO\_PROCESSING]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type.
+请求用户授权是否能在后台长时间运行，使用callback异步回调。接口调用成功会弹出用户授权弹框，建议应用在前台时调用该接口，提示用户进行授权。仅适用于特殊场景类型  
+[MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)的长时任务。
 
 **Since:** 22
 
@@ -201,18 +228,18 @@ Requests user authorization to run tasks continuously in the background. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the application context of the FA model, see [Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the application context of the stage model, see [Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UserAuthResult&gt; | Yes | Callback used to return the user authorization result. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用运行的上下文。 &lt;br&gt; &lt;br&gt;FA模型的应用Context定义见[Context]{@link./app/context}。&lt;br&gt;Stage模型的应用Context定义 见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 &lt;br&gt; **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility 申请。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes | 用户操作后，返回授权结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 9800004 | System service operation failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -246,7 +273,7 @@ export default class EntryAbility extends UIAbility {
 requestAuthFromUserByDialog(context: Context, callback: Callback<UserAuthResult>): void
 ```
 
-Requesting MODE\_SPECIAL\_SCENARIO\_PROCESSING authorization from users,a dialog box will be displayed.
+向用户请求MODE_SPECIAL_SCENARIO_PROCESSING授权时，会弹出对话框。
 
 **Since:** 26.0.0
 
@@ -264,16 +291,50 @@ Requesting MODE\_SPECIAL\_SCENARIO\_PROCESSING authorization from users,a dialog
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | App running context. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UserAuthResult&gt; | Yes | The callback of the function. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | App running context. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes | The callback of the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| 9800005 | Continuous task verification failed. |
+| 9800004 | System service operation failed. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callbackAuth(authResult: backgroundTaskManager.UserAuthResult) {
+  console.info('Operation requestAuthFromUserByDialog success. auth result: ' + JSON.stringify(authResult));
+}
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    windowStage.loadContent('pages/Index', (err) => {
+      if (err.code) {
+        return;
+      }
+      try {
+        let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
+        let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_SPECIAL_SCENARIO_PROCESSING];
+        continuousTaskRequest.backgroundTaskModes = modeList;
+        let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION];
+        continuousTaskRequest.backgroundTaskSubmodes = subModeList;
+        continuousTaskRequest.requestAuthFromUserByDialog(this.context, callbackAuth);
+        console.info('Operation requestAuthFromUserByDialog succeeded.');
+      } catch (error) {
+        console.error(`Operation requestAuthFromUserByDialog failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+      }
+    });
+  }
+};
+```
 
 ## backgroundTaskModes
 
@@ -281,11 +342,11 @@ Requesting MODE\_SPECIAL\_SCENARIO\_PROCESSING authorization from users,a dialog
 set backgroundTaskModes(value: BackgroundTaskMode[])
 ```
 
-Main type of a continuous task.
+长时任务主类型
 
-Note: The main type must match the subtype.
+**说明：** 主类型与子类型必须匹配。
 
-**Type:** BackgroundTaskMode[]
+**Type:** [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)[]
 
 **Since:** 21
 
@@ -303,11 +364,11 @@ Note: The main type must match the subtype.
 set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
 ```
 
-Subtype of a continuous task.
+长时任务子类型。
 
-Note: The main type must match the subtype.
+**说明：** 主类型与子类型必须匹配。
 
-**Type:** BackgroundTaskSubmode[]
+**Type:** [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)[]
 
 **Since:** 21
 
@@ -325,11 +386,10 @@ Note: The main type must match the subtype.
 combinedTaskNotification?: boolean
 ```
 
-Whether to combine notifications. The value **true** means to combine notifications, and the value **false** (default) means the opposite.
+是否合并通知，true表示合并，false表示不合并，默认为false。
 
-Note: This property does not take effect in  
-[updateBackgroundRunning]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_API. If notifications need to be combined for an existing task, request the task again and set the value to  
-**true**.
+**说明：** 该属性在
+[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)接口中不生效，如需在已有任务上合并通知，请重新申请该任务，并在申请时设置为支持合并。
 
 **Type:** boolean
 
@@ -349,15 +409,15 @@ Note: This property does not take effect in
 continuousTaskId?: number
 ```
 
-Continuous task ID. The default value is **-1**.
+长时任务ID，默认值为-1。
 
-Note: If **combinedTaskNotification** is set to true, this property is mandatory and the corresponding ID must exist.
+**说明：** 如果combinedTaskNotification取值为true，则该值为必填项，且必须是存在的ID。
 
-Additionally, this property is mandatory (with the corresponding ID required) when used as an input parameter for the  
-[updateBackgroundRunning]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_API.
+作为  
+[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)接口入参时，该属性必填，且必须是存在的ID。
 
-You can call the  
-[getAllContinuousTasks]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_API to view information about all continuous tasks.
+可以通过  
+[getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getallcontinuoustasks)接口查看当前所有长时任务信息。
 
 **Type:** number
 
@@ -377,9 +437,9 @@ You can call the
 progressInfo?: ProgressInfo
 ```
 
-Notify progress data.
+通知进度信息。
 
-**Type:** ProgressInfo
+**Type:** [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md)
 
 **Since:** 26.1.0
 
@@ -397,9 +457,9 @@ Notify progress data.
 set wantAgent(value: WantAgent)
 ```
 
-Notification parameters, which are used to specify the target page that is redirected to when a continuous task notification is clicked.
+通知参数，用于指定点击长时任务通知后跳转的界面。
 
-**Type:** WantAgent
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 21
 

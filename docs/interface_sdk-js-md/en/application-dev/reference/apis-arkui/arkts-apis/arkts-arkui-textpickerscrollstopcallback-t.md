@@ -4,7 +4,9 @@
 export type TextPickerScrollStopCallback = (value: string | string[], index: int | int[]) => void
 ```
 
-Callback of the listened scroll stop event.
+定义触发onScrollStop事件的回调类型。
+
+当显示文本或图片加文本列表时，value值为选中项中的文本值，当显示图片列表时，value值为空。
 
 **Since:** 23
 
@@ -20,6 +22,6 @@ Callback of the listened scroll stop event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| string[] | Yes | Value of the selected item.  |
-| index | int \| int[] | Yes | Index of the selected item.  |
+| value | string \| string[] | Yes | 当前选中项的文本。多列数据选择器的value为数组类型。 <br/>**说明：**<br/>当选择器内容为文本或图文混排时，value值为选中项中的文本值；当选择器内容为图片时，value值为空。 |
+| index | int \| int[] | Yes | 当前选中项的索引值，索引从0开始。多列数据选择器的index为数组类型。 |
 

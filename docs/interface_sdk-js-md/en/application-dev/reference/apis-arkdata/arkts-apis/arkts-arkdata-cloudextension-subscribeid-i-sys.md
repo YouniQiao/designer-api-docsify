@@ -1,6 +1,6 @@
 # SubscribeId (System API)
 
-Represents the subscription ID information.
+订阅ID。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents the subscription ID information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## databaseAlias
 
 ```TypeScript
 databaseAlias: string
 ```
 
-Name of the database on the server.
+服务器上数据库的名称。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Name of the database on the server.
 id: string
 ```
 
-Subscription ID.
+订阅ID。
 
 **Type:** string
 

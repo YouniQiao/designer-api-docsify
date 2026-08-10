@@ -1,12 +1,18 @@
 # getFileSyncState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## getFileSyncState
 
 ```TypeScript
 function getFileSyncState(uri: Array<string>): Promise<Array<FileSyncState>>
 ```
 
-Obtains the file sync state. This API uses a promise to return the result.
+异步方法获取文件同步状态。使用Promise异步回调。
 
 **Since:** 11
 
@@ -24,26 +30,26 @@ Obtains the file sync state. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | Array&lt;string&gt; | Yes | URI of the file whose sync state is to be obtained. |
+| uri | Array&lt;string&gt; | Yes | 待获取同步状态的uri。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FileSyncState&gt;&gt; | Promise used to return the sync state obtained. |
+| Promise&lt;Array&lt;FileSyncState&gt;&gt; | Promise对象，返回文件同步状态的结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,7 +71,7 @@ cloudSync.getFileSyncState(uris).then((syncStates: Array<cloudSync.FileSyncState
 function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<FileSyncState>>): void
 ```
 
-Obtains the file sync state. This API uses an asynchronous callback to return the result.
+异步方法获取文件同步状态。使用callback异步回调。
 
 **Since:** 11
 
@@ -83,21 +89,21 @@ Obtains the file sync state. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | Array&lt;string&gt; | Yes | URI of the file whose sync state is to be obtained. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;FileSyncState&gt;&gt; | Yes | Callback used to return the file sync state. |
+| uri | Array&lt;string&gt; | Yes | 待获取同步状态的uri。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;FileSyncState&gt;&gt; | Yes | 回调函数。异步获取文件状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13600001 | IPC error. |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -121,7 +127,7 @@ cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSyn
 function getFileSyncState(uri: string): FileSyncState
 ```
 
-Obtains the file sync state.
+获取文件同步状态。
 
 **Since:** 12
 
@@ -137,29 +143,29 @@ Obtains the file sync state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the target file. |
+| uri | string | Yes | 待下载文件uri。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Sync state of the file. |
+| [FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md) | 返回给定文件的同步状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| 13900002 | No such file or directory. |
 | 13900004 | Interrupted system call |
-| 13900010 | Try again |
-| 13900012 | Permission denied by the file system |
-| 13900031 | Function not implemented |
-| 13900042 | Unknown error |
+| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
+| 13900012 | Permission denied by the file system |
+| 202 | Permission verification failed, application which is not a system application uses system API. |
+| 13900031 | Function not implemented |
+| 13900010 | Try again |
+| 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -171,7 +177,7 @@ try {
   let state = cloudSync.getFileSyncState(uri);
 } catch (err) {
   let error:BusinessError = err as BusinessError;
-  console.error("getFileSyncStatefailed with error:" + JSON.stringify(error));
+  console.error("getFileSyncStatefailed with error: " + JSON.stringify(error));
 }
 ```
 

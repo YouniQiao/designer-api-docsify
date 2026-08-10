@@ -1,5 +1,11 @@
 # off
 
+## 导入模块
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('error')
 
 ```TypeScript
@@ -26,16 +32,16 @@ function off(type: 'error', observerId: number, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 填写'error'，表示错误观测器。 |
 | observerId | number | 是 | 由on方法返回的观测器的index值。没有具体的单位。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 表示指定的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示指定的回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | 指定的ID不存在。 |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16000003 | 指定的ID不存在。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -96,10 +102,10 @@ function off(type: 'error', observerId: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | 指定的ID不存在。 |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16000003 | 指定的ID不存在。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -148,17 +154,17 @@ function off(type: 'loopObserver', observer?: LoopObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'loopObserver' | 是 | 填写'loopObserver'，表示应用主线程观测器。 |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 应用主线程观测器标志。 |
+| observer | [LoopObserver](arkts-ability-loopobserver-i.md) | 否 | 应用主线程观测器标志。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 请在主线程中调用。 |
-| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 请在主线程中调用。 |
+| 16300004 | 观测器不存在。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -198,17 +204,17 @@ function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'unhandledRejection' | 是 | 填写'unhandledRejection'，表示注册被拒绝promise监听器。 |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 注册了被拒绝promise监听器。建议使用该参数，缺省时默认清除所有通过on注册的相同env的observer，否则删除指定 observer。 |
+| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | 否 | 注册了被拒绝promise监听器。建议使用该参数，缺省时默认清除所有通过on注册的相同env的observer，否则删除指定 observer。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 请在主线程中调用。 |
-| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 请在主线程中调用。 |
+| 16300004 | 观测器不存在。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -224,7 +230,7 @@ let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise:
   }
 };
 
-errorManager.on("unhandledRejection", observer);
+errorManager.on('unhandledRejection', observer);
 
 let promise1 = new Promise<void>(() => {}).then(() => {
   throw new Error('uncaught error')
@@ -249,13 +255,13 @@ let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise:
   }
 };
 
-errorManager.on("unhandledRejection", observer);
+errorManager.on('unhandledRejection', observer);
 
 let promise1 = new Promise<void>(() => {}).then(() => {
   throw new Error('uncaught error')
 })
 
-errorManager.off("unhandledRejection", observer);
+errorManager.off('unhandledRejection', observer);
 ```
 
 
@@ -284,17 +290,17 @@ function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'globalUnhandledRejectionDetected' | 是 | 填写'globalUnhandledRejectionDetected'，表示注册被拒绝promise监听器。 |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 由on接口注册的被拒绝promise的callback。建议使用该参数，缺省时默认清除所有通过on注册的相同env的callback，否则删除指定 callback。 |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 否 | 由on接口注册的被拒绝promise的callback。建议使用该参数，缺省时默认清除所有通过on注册的相同env的callback，否则删除指定 callback。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 调用者无效。 |
-| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 调用者无效。 |
+| 16300004 | 观测器不存在。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -348,21 +354,21 @@ function off(type: 'freeze', observer?: FreezeObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'freeze' | 是 | 填写'freeze'，表示应用主线程freeze观测器。 |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 由on接口注册的freeze监听的callback。建议使用该参数，如果参数不填会直接清空callback，否则删除指定的callback。 |
+| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 否 | 由on接口注册的freeze监听的callback。建议使用该参数，如果参数不填会直接清空callback，否则删除指定的callback。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16300004 | 观测器不存在。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-  
+
 const freezeCallback = () => {
   console.info('freezecallback');
 };
@@ -402,17 +408,17 @@ function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'globalErrorOccurred' | 是 | 填写'globalErrorOccurred'，表示错误观测器。 |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 由on方法注册的callback。建议使用该参数，缺省时默认清除所有通过on注册的相同env的callback，否则删除指定callback。 |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 否 | 由on方法注册的callback。建议使用该参数，缺省时默认清除所有通过on注册的相同env的callback，否则删除指定callback。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 调用者无效。 |
-| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 调用者无效。 |
+| 16300004 | 观测器不存在。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -424,7 +430,7 @@ const errorFunc = (observer: errorManager.GlobalError) => {
   console.info('result stack :' + observer.stack);
   console.info('result instanceName :' + observer.instanceName);
   console.info('result instanceType :' + observer.instanceType);
-};
+}
 
 try {
   errorManager.off('globalErrorOccurred', errorFunc)

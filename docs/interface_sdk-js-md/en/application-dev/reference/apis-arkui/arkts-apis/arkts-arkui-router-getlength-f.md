@@ -1,18 +1,29 @@
 # getLength
 
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
 ## getLength
 
 ```TypeScript
 function getLength(): string
 ```
 
-Obtains the number of pages in the current stack.
-    **NOTE**  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [Router]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated  
-    with the current UI context.
+获取当前在页面栈内的页面数量。
+
+> **说明：**
+> 
+> - 从API version 8开始支持，从API version 18开始废弃，建议使用[getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)替代。
+> getLength需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
+> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [Router](arkts-arkui-uicontext.md)对象。
 
 **Since:** 8
 
@@ -32,9 +43,9 @@ Obtains the number of pages in the current stack.
 
 | Type | Description |
 | --- | --- |
-| string | Number of pages in the stack. The maximum value is **32**. |
+| string | 页面数量，页面栈支持最大数值是32。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let size = this.getUIContext().getRouter().getLength();

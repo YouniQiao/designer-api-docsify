@@ -1,6 +1,6 @@
 # VideoOptions
 
-Defines the options of the **Video** component.
+定义Video的具体配置参数。
 
 **Since:** 7
 
@@ -16,9 +16,11 @@ Defines the options of the **Video** component.
 controller?: VideoController
 ```
 
-Video controller to control the video playback status.
+设置视频控制器，可以控制视频的播放状态。当设置了controllerAsync时，controller参数设置不生效。
 
-**Type:** VideoController
+默认值：不设置视频控制器。
+
+**Type:** [VideoController](arkts-arkui-videocontroller-c.md)
 
 **Since:** 7
 
@@ -36,9 +38,11 @@ Video controller to control the video playback status.
 controllerAsync?: VideoControllerAsync
 ```
 
-controllerAsync of video.
+设置异步版本的视频控制器，可以控制视频的播放状态并通过Promise获取返回结果，当设置了controllerAsync时，controller会被忽略。
 
-**Type:** VideoControllerAsync
+默认值：空
+
+**Type:** [VideoControllerAsync](arkts-arkui-videocontrollerasync-c.md)
 
 **Since:** 26.0.0
 
@@ -58,19 +62,20 @@ controllerAsync of video.
 currentProgressRate?: number | string | PlaybackSpeed
 ```
 
-Video playback speed.
-    **NOTE**  
-    
-    The value of the number type can only be **0.75**, **1.0**, **1.25**, **1.75**, or **2.0**. Values **0.5**,  
-    **1.5**, **3**, **0.25**, and **0.125** are supported since API version 22.
+视频播放倍速。
 
-For the string type, numeric string values, for example, **0.75**, **1.0**, **1.25**, **1.75**, and **2.0**, are supported. Values **"0.5"**, **"1.5"**, **"3"**, **"0.25"**, and **"0.125"** are supported since API version 22.
+**说明：**
 
-Other values, for example, **"abc"** or **"1.5+1.5"**, are considered as invalid values.
+number格式取值仅支持：0.75、1.0、1.25、1.75、2.0。从API version 22开始，新增支持取值0.5，1.5，3，0.25和0.125。从API version 26.0.0开始，支持取值范围：  
+[0.125, 8]。
 
-Default value: 1.0 | PlaybackSpeed.Speed\_Forward\_1\_00\_X
+string格式支持number格式取值的字符串形式："0.75"，"1.0"，"1.25"，"1.75"，"2.0"。从API version 22开始，新增支持取值"0.5"，"1.5"，"3"，"0.25"和"0.125"。
 
-If an invalid value is passed, the default value will be used.
+除此之外的取值，例如"abc"或"1.5+1.5"会按照异常值处理。
+
+默认值：1.0 | PlaybackSpeed.Speed_Forward_1_00_X
+
+异常值：按默认值处理。
 
 **Type:** number \| string \| PlaybackSpeed
 
@@ -90,9 +95,9 @@ If an invalid value is passed, the default value will be used.
 imageAIOptions?: ImageAIOptions
 ```
 
-AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
+设置图像AI分析选项，可配置分析类型或绑定一个分析控制器。配置后可启用图像AI分析功能，并通过分析控制器控制分析过程。当需要使用AI分析功能时传入此参数，不传入时默认不启用AI分析功能。
 
-**Type:** ImageAIOptions
+**Type:** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
 
 **Since:** 12
 
@@ -112,9 +117,9 @@ AI image analysis options. You can configure the analysis type or bind an analyz
 posterOptions?: PosterOptions
 ```
 
-Display options for the first frame of the video.
+设置视频播放的首帧送显选项，可以控制视频是否支持首帧送显。当需要开启首帧送显功能时传入此参数，不传入时默认不启用首帧送显。
 
-**Type:** PosterOptions
+**Type:** [PosterOptions](arkts-arkui-posteroptions-i.md)
 
 **Since:** 18
 
@@ -134,26 +139,23 @@ Display options for the first frame of the video.
 previewUri?: string | PixelMap | Resource
 ```
 
-Path of the preview image displayed before the video playback starts. By default, no preview image is displayed.
+视频未播放时的预览图片路径。
 
-The string type can be used to load network images and local images.
+string格式可用于加载本地图片和网络图片，
 
-- URLs are supported for loading online images.  
-- Relative paths are supported for loading local images, for example, **previewUri: "common/test.jpg"**. When using  
-an image referenced using a relative path, the component cannot be called across bundles or modules.  
-- Strings with the **file://** prefix, that is,  
-[application sandbox URIs]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_:  
-**file://\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_/\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.
+- 支持网络图片地址。  
+- 支持相对路径引用本地图片，例如：previewUri: “common/test.jpg”。当使用相对路径引用本地图片时，不支持跨包/跨模块调用。  
+- 支持file://路径前缀的字符串，即应用沙箱URI（见[uriOrPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)）：file://&lt;bundleName  
+&gt; /&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
 
-The Resource type allows cross-package and cross-module access to resource files.
+Resource格式可以跨包/跨模块访问资源文件。
 
-- Resources in the **rawfile** folder are supported, which means that you can reference image files with  
-**\$rawfile**.  
-- \$r can be used to reference images in system resources or application resources.
+- 支持rawfile文件下的资源，即通过\$rawfile引用图片。  
+- 支持通过\$r引用系统资源或者应用资源中的图片。
 
-The default value is an empty string.
+默认值：空字符串
 
-If an invalid value is passed, the default value will be used.
+异常值：按默认值处理。
 
 **Type:** string \| PixelMap \| Resource
 
@@ -173,26 +175,25 @@ If an invalid value is passed, the default value will be used.
 src?: string | Resource
 ```
 
-Video source, which can be either a local or a network video.
+视频的数据源，支持本地视频和网络视频。
 
-The Resource type allows cross-package and cross-module access to resource files and is commonly used for accessing local videos.
+Resource格式可以跨包/跨模块访问资源文件，常用于访问本地视频。
 
-- Only resources in the rawfile folder are supported, which means that you can reference video files only with  
-**\$rawfile**.
+- 仅支持rawfile文件下的资源，即通过\$rawfile引用视频文件。
 
-The string type is used for loading local videos and, more frequently, network videos.
+string格式可用于加载网络视频和本地视频，常用于加载网络视频。
 
-- Network video URLs are supported.  
-- Strings with the **file://** prefix, that is,  
-[application sandbox URIs]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_:  
-**file://\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_/\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.
+- 支持网络视频地址，网络视频地址支持的格式见[流媒体支持的格式](../../../media/media/streaming-media-playback-development-guide.md#流媒体支持的格式)。  
+- 支持file://路径前缀的字符串，即应用沙箱URI（见[uriOrPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)）：file://&lt;bundleName  
+&gt; /&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
 
-The default value is an empty string.
+默认值：空字符串
 
-If an invalid value is passed, the default value will be used.
-    **NOTE**  
-    
-    The supported video formats are MP4, MKV, and TS.
+异常值：按默认值处理。
+
+**说明：**
+
+视频支持的格式是：mp4、mkv、TS。
 
 **Type:** string \| Resource
 

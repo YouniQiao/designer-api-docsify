@@ -10,7 +10,7 @@ function construct<A extends readonly any[], R>(
     ): R
 ```
 
-Constructs the target with the elements of specified array as the arguments and the specified constructor as the \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ value.
+Constructs the target with the elements of specified array as the arguments and the specified constructor as the `new.target` value.
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -21,7 +21,7 @@ Constructs the target with the elements of specified array as the arguments and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | new (...args: A) =&gt; R | Yes |  |
-| argumentsList | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;A&gt; | Yes |  |
+| argumentsList | [Readonly](arkts-readonly-t.md)&lt;A&gt; | Yes |  |
 | newTarget | new (...args: any) =&gt; any | No |  |
 
 **Return value:**
@@ -44,7 +44,7 @@ function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | Function | Yes |  |
-| argumentsList | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;any&gt; | Yes |  |
+| argumentsList | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;any&gt; | Yes |  |
 | newTarget | Function | No |  |
 
 **Return value:**

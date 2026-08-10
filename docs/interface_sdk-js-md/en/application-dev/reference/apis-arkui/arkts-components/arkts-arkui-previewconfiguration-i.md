@@ -1,6 +1,6 @@
 # PreviewConfiguration
 
-Configures the style of the preview image during custom drag operations.
+配置自定义拖拽过程中的预览图样式。
 
 **Since:** 15
 
@@ -16,9 +16,9 @@ Configures the style of the preview image during custom drag operations.
 delayCreating?: boolean
 ```
 
-Whether the preview builder is loaded at the time of setting.
+组件预览builder是否在设置时加载。
 
-The default value is **false**. The value **true** means that the preview builder is loaded at the time of setting,and **false** means the opposite.
+默认值为false。true表示组件预览builder在设置时加载，false表示组件预览builder不在设置时加载。
 
 **Type:** boolean
 
@@ -42,12 +42,13 @@ The default value is **false**. The value **true** means that the preview builde
 onlyForLifting?: boolean
 ```
 
-Whether the custom preview image is used only for lifting.
+自定义配置的预览图是否仅用于浮起。
 
-**NOTE**
+**说明：**
 
-The default value is **false**. **true**: The custom preview image is used only for lifting. **false**: The custom preview image is used for both lifting and dragging. When the value is set to **true**, the preview image is used only during the lifting phase of a long press. For the preview image used during the dragging phase: The  
-[dragPreview]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ attribute is ignored,and the system prioritizes the image returned in [onDragStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_; if no image is returned in **onDragStart**, the component's snapshot is used.
+默认值为false。true表示自定义预览图仅用于浮起，false表示可用于浮起和拖拽。设置为true时，如果发起长按拖拽，浮起时的预览图为自定义配置的预览图，拖拽时的预览图不使用  
+[dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)属性，优先使用开发者在  
+[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)中返回的预览图，如果[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)中没有返回预览图则使用组件自截图。
 
 **Type:** boolean
 

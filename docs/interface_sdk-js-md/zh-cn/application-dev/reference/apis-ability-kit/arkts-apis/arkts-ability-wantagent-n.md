@@ -1,8 +1,8 @@
 # wantAgent
 
-WantAgent模块封装了[Want]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_对象，允许应用程序在未来的某个时间点触发WantAgent实例执行指定操作（如启动Ability、发送公共事件等）。
+WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象，允许应用程序在未来的某个时间点触发WantAgent实例执行指定操作（如启动Ability、发送公共事件等）。
 
-该模块提供了创建WantAgent实例、获取WantAgent实例所属应用的包名、获取WantAgent实例所属应用的UID、主动触发WantAgent实例、判断两个WantAgent实例是否相等等功能。WantAgent的一个典型应用场景是通知处理。例如，当用户点击通知时，会触发WantAgent的[trigger]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口，并拉起目标应用。具体使用请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+该模块提供了创建WantAgent实例、获取WantAgent实例所属应用的包名、获取WantAgent实例所属应用的UID、主动触发WantAgent实例、判断两个WantAgent实例是否相等等功能。WantAgent的一个典型应用场景是通知处理。例如，当用户点击通知时，会触发WantAgent的[trigger](arkts-ability-wantagent-trigger-f.md#trigger)接口，并拉起目标应用。具体使用请参考[Notification](../../../notification/notification-with-wantagent.md)。
 
 **起始版本：** 9
 
@@ -11,6 +11,12 @@ WantAgent模块封装了[Want]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_对象，允�
 <!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 
@@ -39,7 +45,7 @@ WantAgent模块封装了[Want]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_对象，允�
 | --- | --- |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant) | 获取WantAgent对象的want。使用callback异步回调。 |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant-1) | 获取WantAgent对象的want。使用Promise异步回调。 |
-| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync) | 主动触发WantAgent实例，即按照WantAgent实例中已封装的指定操作和参数等信息执行。使用Promise异步回调。仅当入参agent为本地WantAgent实例时需要申请: ohos.permission.TRIGGER\_\_\_ESCAPED\_UNDERSCORE\_\_\_LOCAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_WANTAGENT permission. |
+| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync) | 主动触发WantAgent实例，即按照WantAgent实例中已封装的指定操作和参数等信息执行。使用Promise异步回调。仅当入参agent为本地WantAgent实例时需要申请: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
 | [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md#setwantagentmultithreading) | 开启或者关闭WantAgent多线程传递功能。 |
 | [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md#createlocalwantagent) | 创建本地WantAgent实例。 |
 | [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md#islocalwantagent) | 判断WantAgent实例是否为本地实例。 |

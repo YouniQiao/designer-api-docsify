@@ -10,6 +10,12 @@ Defines the screen capture parameters.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## audioBitrate
 
 ```TypeScript
@@ -18,7 +24,7 @@ audioBitrate?: int
 
 Audio bit rate, in bit/s. This value is used for both internal capture and external capture (using microphones).The default value is **96000**.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -36,7 +42,7 @@ audioChannelCount?: int
 
 Number of audio channels. This value is used for both internal capture and external capture (using microphones).Only **1** and **2** (default) are supported.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -54,7 +60,7 @@ audioSampleRate?: int
 
 Audio sampling rate, in Hz. This value is used for both internal capture and external capture (using microphones), in Hz. Only **48000** (default value) and **16000** are supported.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -72,7 +78,7 @@ displayId?: int
 
 ID of the display used for screen capture. By default, the main screen is captured.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 15
 
@@ -90,7 +96,7 @@ fd: int
 
 FD of the file output.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -108,7 +114,7 @@ fillMode?: AVScreenCaptureFillMode
 
 Video fill mode during screen capture.
 
-**类型：** AVScreenCaptureFillMode
+**类型：** [AVScreenCaptureFillMode](arkts-media-multimedia-media-avscreencapturefillmode-e.md)
 
 **起始版本：** 18
 
@@ -126,7 +132,7 @@ frameHeight?: int
 
 Video height, in px. The default value varies according to the display in use.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -144,7 +150,7 @@ frameWidth?: int
 
 Video width, in px. The default value varies according to the display in use.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -160,9 +166,9 @@ Video width, in px. The default value varies according to the display in use.
 preset?: AVScreenCaptureRecordPreset
 ```
 
-Encoding and container format used. The default value is **SCREEN\_RECORD\_PRESET\_H264\_AAC\_MP4**.
+Encoding and container format used. The default value is **SCREEN_RECORD_PRESET_H264_AAC_MP4**.
 
-**类型：** AVScreenCaptureRecordPreset
+**类型：** [AVScreenCaptureRecordPreset](arkts-media-multimedia-media-avscreencapturerecordpreset-e.md)
 
 **起始版本：** 12
 
@@ -180,7 +186,7 @@ strategy?: AVScreenCaptureStrategy
 
 Screen Capture Policy Configuration Fields
 
-**类型：** AVScreenCaptureStrategy
+**类型：** [AVScreenCaptureStrategy](arkts-media-multimedia-media-avscreencapturestrategy-i.md)
 
 **默认值：** {default value of the property} [Required if provided]
 
@@ -200,7 +206,7 @@ videoBitrate?: int
 
 Video bit rate, in bit/s. The default value is **10000000**.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

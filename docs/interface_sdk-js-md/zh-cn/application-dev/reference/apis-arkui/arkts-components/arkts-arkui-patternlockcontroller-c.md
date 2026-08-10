@@ -4,7 +4,7 @@ PatternLock组件的控制器，用于重置组件状态和设置图案密码状
 
 ## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts patternLockController: PatternLockController = new PatternLockController();```
 
 **起始版本：** 9
 
@@ -74,5 +74,5 @@ setChallengeResult(result: PatternLockChallengeResult): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 图案密码状态。包括正确和错误状态。 |
+| result | [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md) | 是 | 图案密码状态。包括正确和错误状态。 |
 

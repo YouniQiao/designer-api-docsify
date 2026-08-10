@@ -1,6 +1,6 @@
 # DeviceEncryptionStatus
 
-Represents the file system encryption status.
+设备管理应用的文件系统加密状态。
 
 **Since:** 11
 
@@ -10,15 +10,19 @@ Represents the file system encryption status.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { securityManager } from 'kits/@kit.MDMKit';
+```
+
 ## isEncrypted
 
 ```TypeScript
 isEncrypted: boolean
 ```
 
-Whether the file system of the device is encrypted.
-
-The value **true** means the file system of the device is encrypted; the value **false** means the opposite.
+表示设备的文件系统是否加密。true：表示已加密。false：表示未加密。
 
 **Type:** boolean
 

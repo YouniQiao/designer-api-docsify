@@ -1,6 +1,6 @@
 # HuksKeyDigest
 
-Enumerates the digest algorithms.
+表示摘要算法。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the digest algorithms.
 HUKS_DIGEST_NONE = 0
 ```
 
-No digest algorithm
+表示无摘要算法。
 
 **Since:** 8
 
@@ -38,7 +38,7 @@ No digest algorithm
 HUKS_DIGEST_MD5 = 1
 ```
 
-MD5
+表示MD5摘要算法。
 
 **Since:** 8
 
@@ -58,7 +58,7 @@ MD5
 HUKS_DIGEST_SM3 = 2
 ```
 
-SM3
+表示SM3摘要算法。
 
 **Since:** 9
 
@@ -78,7 +78,7 @@ SM3
 HUKS_DIGEST_SHA1 = 10
 ```
 
-SHA-1
+表示SHA1摘要算法。
 
 **Since:** 8
 
@@ -98,7 +98,7 @@ SHA-1
 HUKS_DIGEST_SHA224 = 11
 ```
 
-SHA-224
+表示SHA224摘要算法。
 
 **Since:** 8
 
@@ -118,7 +118,7 @@ SHA-224
 HUKS_DIGEST_SHA256 = 12
 ```
 
-SHA-256
+表示SHA256摘要算法。
 
 **Since:** 8
 
@@ -138,7 +138,7 @@ SHA-256
 HUKS_DIGEST_SHA384 = 13
 ```
 
-SHA-384
+表示SHA384摘要算法。
 
 **Since:** 8
 
@@ -158,7 +158,7 @@ SHA-384
 HUKS_DIGEST_SHA512 = 14
 ```
 
-SHA-512
+表示SHA512摘要算法。
 
 **Since:** 8
 

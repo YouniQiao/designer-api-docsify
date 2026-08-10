@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## pitchSpeed
 
 ```TypeScript
@@ -20,7 +26,7 @@ pitchSpeed?: double
 
 俯仰速度，单位为弧度每秒。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -40,7 +46,7 @@ rollSpeed?: double
 
 滚动速度，单位为弧度每秒。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -60,7 +66,7 @@ yawSpeed?: double
 
 偏航速度，单位为弧度每秒。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 

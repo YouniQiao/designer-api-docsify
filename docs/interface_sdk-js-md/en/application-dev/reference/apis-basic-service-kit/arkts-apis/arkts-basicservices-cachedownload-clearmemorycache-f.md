@@ -1,12 +1,18 @@
 # clearMemoryCache
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## clearMemoryCache
 
 ```TypeScript
 function clearMemoryCache(): void
 ```
 
-Clears this memory cache.
+清除缓存下载内容的内存缓存。
 
 **Since:** 23
 
@@ -16,7 +22,7 @@ Clears this memory cache.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cacheDownload } from '@kit.BasicServicesKit';

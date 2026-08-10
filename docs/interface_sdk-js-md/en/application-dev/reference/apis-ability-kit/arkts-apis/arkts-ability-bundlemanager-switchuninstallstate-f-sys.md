@@ -1,12 +1,18 @@
 # switchUninstallState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## switchUninstallState
 
 ```TypeScript
 function switchUninstallState(bundleName: string, state: boolean): void
 ```
 
-Switches the uninstall state of an application. This API is independent of EDM application interception control.
+切换指定应用的可卸载状态，此接口与EDM应用拦截管控机制不互相影响。
 
 **Since:** 12
 
@@ -24,20 +30,20 @@ Switches the uninstall state of an application. This API is independent of EDM a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| state | boolean | Yes | Whether the application can be uninstalled. **true** if the application can be uninstalled, **false** otherwise. |
+| bundleName | string | Yes | 表示指定应用的bundleName。 |
+| state | boolean | Yes | 表示应用的可卸载状态，值为true表示应用可以被卸载，值为false表示应用不可以被卸载。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700060 | The specified application cannot be uninstalled. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

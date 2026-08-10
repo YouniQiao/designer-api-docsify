@@ -10,6 +10,12 @@ class ComponentSnapshot
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## getWithRange
 
 ```TypeScript
@@ -35,8 +41,8 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the start component ID, set by developer through .id attribute or the unique ID get from FrameNode. |
-| end | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the end component ID, set by developer through.id attribute or the unique ID get from FrameNode. |
+| start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 | the start component ID, set by developer through .id attribute or the unique ID get from FrameNode. |
+| end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 | the end component ID, set by developer through.id attribute or the unique ID get from FrameNode. |
 | isStartRect | boolean | 是 | indicating the snapshot rect to use, true for using the rect of the start component, false for using the rect of the end component. |
 | options | componentSnapshot.SnapshotOptions | 否 | Define the snapshot options. |
 
@@ -50,7 +56,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID detected. |
-| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options. |
+| 100001 | Invalid ID detected. |
+| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
+| 202 | The caller is not a system application. |
 

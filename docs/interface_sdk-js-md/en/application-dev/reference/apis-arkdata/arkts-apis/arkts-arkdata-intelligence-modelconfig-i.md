@@ -1,6 +1,6 @@
 # ModelConfig
 
-Manages configurations of the embedding model.
+管理嵌入模型的配置信息。
 
 **Since:** 15
 
@@ -10,13 +10,19 @@ Manages configurations of the embedding model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
+## Modules to Import
+
+```TypeScript
+import { intelligence } from 'kits/@kit.ArkData';
+```
+
 ## cachePath
 
 ```TypeScript
 cachePath?: string
 ```
 
-If NPU is used for accelerating, a local path is required for model caching.
+如果使用NPU进行加速，则需要本地路径进行模型缓存。格式为/xxx/xxx/xxx，xxx为路径地址，例如"/data"。长度上限为512个字符。默认值为""。超出长度时抛出异常。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ If NPU is used for accelerating, a local path is required for model caching.
 isNpuAvailable: boolean
 ```
 
-Indicates whether NPU is used.
+指示是否使用NPU加速向量化过程，true表示使用，false表示不使用。如果设备不支持NPU，调用加载模型会失败，并抛出错误码31300000。
 
 **Type:** boolean
 
@@ -52,9 +58,9 @@ Indicates whether NPU is used.
 modelInfo?: CloudModelInfo
 ```
 
-Indicates cloud embedding model information.
+云侧模型类型和版本信息，在使用文本向量模型时配置，通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel)接口获取支持的模型信息，默认值为空。
 
-**Type:** CloudModelInfo
+**Type:** [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)
 
 **Since:** 26.0.0
 
@@ -72,9 +78,9 @@ Indicates cloud embedding model information.
 networkPolicy?: NetworkPolicy
 ```
 
-Indicates cloud embedding model network policy.
+下载云侧模型时使用的网络策略，默认值为WIFI_ONLY。此参数仅在使用文本嵌入模型时生效，在使用图像嵌入模型场景此参数不生效。
 
-**Type:** NetworkPolicy
+**Type:** [NetworkPolicy](arkts-arkdata-intelligence-networkpolicy-e.md)
 
 **Since:** 26.0.0
 
@@ -92,9 +98,9 @@ Indicates cloud embedding model network policy.
 version: ModelVersion
 ```
 
-Version of the model.The outputs of text or image embedding models with the same version are in the same vector space.
+模型的版本。
 
-**Type:** ModelVersion
+**Type:** [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
 
 **Since:** 15
 

@@ -4,7 +4,7 @@
 export declare type OnUIPickerComponentCallback = (selectedIndex: int) => void
 ```
 
-Callback of Picker item is selected event.
+定义[onChange](onChange)和[onScrollStop](onScrollStop)事件的回调类型。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Callback of Picker item is selected event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedIndex | int | Yes | Index of the selected item.  |
+| selectedIndex | int | Yes | 当前选中项的索引值。</br>取值范围：[0, 子组件的个数-1]内的整数。 |
 

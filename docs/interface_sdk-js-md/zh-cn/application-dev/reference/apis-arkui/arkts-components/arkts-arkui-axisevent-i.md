@@ -1,8 +1,8 @@
 # AxisEvent
 
-轴事件的对象说明，继承于[BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** AxisEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 17
 
@@ -36,7 +36,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHorizontalAxisValue
 
@@ -62,7 +62,7 @@ getHorizontalAxisValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 水平轴值。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp |
+| number | 水平轴值。 &lt;br&gt;单位：vp |
 
 ## getPinchAxisScaleValue
 
@@ -88,7 +88,7 @@ getPinchAxisScaleValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 双指缩放比例。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **说明：** 缩放比例指的是触控板双指缩放事件触发过程中双指当前的距离与双指最初按下时的距离的比值。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：0 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0, +∞)\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| number | 双指缩放比例。&lt;br/&gt; **说明：** 缩放比例指的是触控板双指缩放事件触发过程中双指当前的距离与双指最初按下时的距离的比值。&lt;br/&gt;默认值：0 &lt;br/&gt;取值范围：[0, +∞)&lt;br/&gt; |
 
 ## getVerticalAxisValue
 
@@ -114,7 +114,7 @@ getVerticalAxisValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 垂直轴值。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp |
+| number | 垂直轴值。 &lt;br&gt;单位：vp |
 
 ## hasAxis
 
@@ -140,13 +140,13 @@ hasAxis(axisType: AxisType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axisType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 轴事件的轴类型。 |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | 是 | 轴事件的轴类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 此轴事件是否包含指定的轴类型。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true：包含指定的轴类型；false：不包含指定的轴类型。 |
+| boolean | 此轴事件是否包含指定的轴类型。 &lt;br&gt;true：包含指定的轴类型；false：不包含指定的轴类型。 |
 
 ## action
 
@@ -156,7 +156,7 @@ action: AxisAction
 
 轴事件的动作类型。
 
-**类型：** AxisAction
+**类型：** [AxisAction](../arkts-apis/arkts-arkui-axisaction-e.md)
 
 **起始版本：** 17
 
@@ -228,7 +228,7 @@ eventHandleId?: number
 
 取值范围：[0, +∞)
 
-**说明：** 在使用[postInputEventWithStrategy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
@@ -252,7 +252,7 @@ eventHandleId?: number
 globalDisplayX?: number
 ```
 
-鼠标光标在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+鼠标光标在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
 单位：vp
 
@@ -278,7 +278,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标光标或手写笔位置在\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
 
 单位：vp
 
@@ -304,9 +304,9 @@ globalDisplayY?: number
 propagation: Callback<void>
 ```
 
-激活\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+激活[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 17
 
@@ -398,7 +398,7 @@ windowY: number
 x: number
 ```
 
-鼠标光标在被点击元素为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的X坐标。
+鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
 
 单位：vp
 
@@ -422,7 +422,7 @@ x: number
 y: number
 ```
 
-鼠标光标在被点击元素为基准的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的Y坐标。
+鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
 
 单位：vp
 

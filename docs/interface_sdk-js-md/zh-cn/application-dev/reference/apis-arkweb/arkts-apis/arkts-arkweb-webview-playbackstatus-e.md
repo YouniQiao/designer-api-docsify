@@ -1,6 +1,6 @@
 # PlaybackStatus
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_接口参数， 用于表示播放器的播放状态。
+[handleStatusChanged](../../../reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md#handlestatuschanged12)接口参数， 用于表示播放器的播放状态。
 
 **起始版本：** 23
 

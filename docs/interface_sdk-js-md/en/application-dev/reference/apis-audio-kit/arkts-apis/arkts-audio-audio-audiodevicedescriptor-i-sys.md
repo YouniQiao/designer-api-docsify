@@ -1,6 +1,6 @@
 # AudioDeviceDescriptor
 
-Describes an audio device.
+描述音频设备。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Describes an audio device.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## dmDeviceInfo
 
 ```TypeScript
 readonly dmDeviceInfo?: string
 ```
 
-Extended information for distributed device, includes whether the device supports stereo, Device SN, etc.
+Extended information for distributed device, including whether the device supports stereo, Device SN, etc.
 
 **Type:** string
 
@@ -38,9 +44,9 @@ Extended information for distributed device, includes whether the device support
 readonly dmDeviceType?: int
 ```
 
-Only \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with networkId、\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_or \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ has dmDeviceType which indicated deviceTypeId.
+Only {@link DeviceType.SPEAKER} with networkId, {@link DeviceType.REMOTE_CAST}or {@link DeviceType.REMOTE_DAUDIO} has dmDeviceType which indicated deviceTypeId.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -58,7 +64,7 @@ Only \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with networkId、\_\_\_JSDOC\_LINK\_D
 readonly highQualityRecordingSupported?: boolean
 ```
 
-whether supports high-quality recording.
+Whether device supports high quality recording.
 
 **Type:** boolean
 
@@ -80,7 +86,7 @@ readonly interruptGroupId: int
 
 Interrupt group id
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -97,8 +103,6 @@ Interrupt group id
 ```TypeScript
 readonly networkId: string
 ```
-
-Device network id
 
 **Type:** string
 
@@ -120,7 +124,7 @@ readonly volumeGroupId: int
 
 Volume group id
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

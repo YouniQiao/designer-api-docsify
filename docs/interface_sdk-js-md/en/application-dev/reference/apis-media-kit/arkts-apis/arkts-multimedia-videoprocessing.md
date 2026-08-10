@@ -6,9 +6,17 @@ Provides the VideoProcessor type, including AIHDR related functions.
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace videoProcessing--><!--Device-unnamed-declare namespace videoProcessing-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
+
+## Modules to Import
+
+```TypeScript
+import { videoProcessing } from 'kits/@kit.MediaKit';
+```
 
 ## Summary
 

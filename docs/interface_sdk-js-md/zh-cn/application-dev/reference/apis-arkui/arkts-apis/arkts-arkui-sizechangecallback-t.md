@@ -20,6 +20,6 @@ Defines the callback type used in onSizeChange.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oldValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the width and height of the component before the change.  |
-| newValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the width and height of the component after the change.  |
+| oldValue | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 | the width and height of the component before the change. |
+| newValue | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 | the width and height of the component after the change. |
 

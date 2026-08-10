@@ -10,6 +10,12 @@ AtomicFile是一个用于对文件进行原子读写等操作的类。在写操�
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -36,7 +42,7 @@ constructor(path: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -61,8 +67,8 @@ delete(): void
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900027 | Read-only file system |
 | 13900042 | Internal error |
+| 13900027 | Read-only file system |
 
 ## failWrite
 
@@ -128,14 +134,14 @@ getBaseFile(): File
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | File object opened. |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | File object opened. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900002 | No such file or directory |
 | 13900005 | IO error |
+| 13900002 | No such file or directory |
 | 13900012 | Permission denied |
 | 13900042 | Internal error |
 
@@ -159,7 +165,7 @@ openRead(): ReadStream
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ReadStream instance obtained. |
+| [ReadStream](arkts-corefile-fileio-readstream-c.md) | ReadStream instance obtained. |
 
 **错误码：**
 
@@ -219,7 +225,7 @@ startWrite(): WriteStream
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the file write stream. |
+| [WriteStream](arkts-corefile-fileio-writestream-c.md) | Returns the file write stream. |
 
 **错误码：**
 
@@ -228,6 +234,6 @@ startWrite(): WriteStream
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900027 | Read-only file system |
 | 13900042 | Internal error |
+| 13900027 | Read-only file system |
 

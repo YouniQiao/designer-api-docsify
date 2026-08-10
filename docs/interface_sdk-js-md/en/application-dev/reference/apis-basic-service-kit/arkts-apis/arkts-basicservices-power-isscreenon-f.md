@@ -1,12 +1,18 @@
 # isScreenOn
 
+## Modules to Import
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isScreenOn
 
 ```TypeScript
 function isScreenOn(callback: AsyncCallback<boolean>): void
 ```
 
-Checks the screen status of the current device. This API uses an asynchronous callback to return the result.
+检测当前设备的亮灭屏状态。使用callback异步回调。
 
 **Since:** 7
 
@@ -24,9 +30,9 @@ Checks the screen status of the current device. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the screen status obtained, where the value **true** indicates on and the value **false** indicates off. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当检测成功，err为undefined，data为获取到的亮灭屏状态，返回true表示亮屏，返回false表示灭屏；否则为错误对象 。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 power.isScreenOn((err: Error, data: boolean) => {
@@ -45,7 +51,7 @@ power.isScreenOn((err: Error, data: boolean) => {
 function isScreenOn(): Promise<boolean>
 ```
 
-Checks the screen status of the current device. This API uses a promise to return the result.
+检测当前设备的亮灭屏状态。使用Promise异步回调。
 
 **Since:** 7
 
@@ -63,9 +69,9 @@ Checks the screen status of the current device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns true if the screen is on; returns false otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示亮屏；返回false表示灭屏。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 power.isScreenOn()

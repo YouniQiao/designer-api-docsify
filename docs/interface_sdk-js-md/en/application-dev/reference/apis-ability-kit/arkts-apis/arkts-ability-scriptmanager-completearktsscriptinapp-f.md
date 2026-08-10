@@ -1,5 +1,11 @@
 # completeArkTSScriptInApp
 
+## Modules to Import
+
+```TypeScript
+import { scriptManager } from 'kits/@kit.AbilityKit';
+```
+
 ## completeArkTSScriptInApp
 
 ```TypeScript
@@ -24,21 +30,21 @@ complete arkTS script for in-app skills.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability context, Used for temporary file authorization. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Ability context, Used for temporary file authorization. |
 | requestCode | string | Yes | Identifying the current operation. It is from ArkTSScriptInfo.requestCode. |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The result of arkTS script execution. |
+| result | [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Yes | The result of arkTS script execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000020](../errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) | The context is not ability context. |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000020 | The context is not ability context. |
+| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| 16000003 | The specified ID does not exist. |
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getColorTintRange
 
 ArkTS-Dyn:
@@ -40,13 +46,13 @@ getColorTintRange(): Array<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | 用于获取色调调节值的可调范围。若接口调用失败，返回undefined。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 用于获取色调调节值的可调范围。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
 
 ## getWhiteBalanceRange
 
@@ -76,13 +82,14 @@ getWhiteBalanceRange(): Array<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | 用于获取手动白平衡值的可调范围，如[2800，10000]，单位为K（Kelvin，温度单位），实际情况根据底层能力返回为准。若接口调用失败，返回undefined。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 用于获取手动白平衡值的可调范围，如[2800，10000]，单位为K（Kelvin，温度单位），实际情况根据底层能力返回为准。若接口调用失败，返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application.<br>**适用版本：** 12 - 19 |
 
 ## isWhiteBalanceGainsSupported
 
@@ -112,8 +119,8 @@ Checks whether the RGB gain is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## isWhiteBalanceModeSupported
 
@@ -137,7 +144,7 @@ isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 白平衡模式。 |
+| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 是 | 白平衡模式。 |
 
 **返回值：**
 
@@ -149,6 +156,7 @@ isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application.<br>**适用版本：** 12 - 19 |
 

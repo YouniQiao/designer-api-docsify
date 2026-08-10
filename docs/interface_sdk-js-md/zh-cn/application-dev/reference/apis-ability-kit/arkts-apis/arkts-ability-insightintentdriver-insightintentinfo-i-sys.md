@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -42,7 +48,7 @@ readonly developType?: DevelopType
 
 表示意图的开发方式。
 
-**类型：** DevelopType
+**类型：** [DevelopType](arkts-ability-insightintentdriver-developtype-e-sys.md)
 
 **起始版本：** 23
 
@@ -107,7 +113,7 @@ readonly domain: string
 ```
 
 表示意图垂域，用于将意图按垂直领域分类（例如：视频、音乐、游戏），取值范围参见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的垂域字段。
+[各垂域的智慧分发特性列表](https://developer.huawei.com/consumer/cn/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215)中的垂域字段。
 
 **类型：** string
 
@@ -199,9 +205,9 @@ readonly intentType: InsightIntentType
 
 **说明：**
 
-对于使用配置文件开发的意图，该字段返回值默认为\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_类型装饰器。
+对于使用配置文件开发的意图，该字段返回值默认为[@InsightIntentEntry](./js-apis-app-ability-InsightIntentDecorator.md#insightintententry)类型装饰器。
 
-**类型：** InsightIntentType
+**类型：** [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md)
 
 **起始版本：** 20
 
@@ -311,7 +317,7 @@ readonly parameters: Record<string, Object>
 
 表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 20
 
@@ -333,7 +339,7 @@ readonly result: Record<string, Object>
 
 表示意图调用返回的结果。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **起始版本：** 20
 
@@ -375,13 +381,13 @@ readonly schema: string
 readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
 ```
 
-表示特定意图装饰器的意图信息。
+表示特定意图装饰器的意图信息。 
 
 **说明：**
 
-对于使用配置文件开发的意图，该字段返回值默认为\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+对于使用配置文件开发的意图，该字段返回值默认为[EntryIntentInfo](#entryintentinfo20)。
 
-**类型：** LinkIntentInfo \| PageIntentInfo \| FunctionIntentInfo \| FormIntentInfo \| EntryIntentInfo
+**类型：** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| PageIntentInfo \| FunctionIntentInfo \| FormIntentInfo \| EntryIntentInfo
 
 **起始版本：** 20
 
@@ -403,7 +409,7 @@ readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration
 
 表示使用配置文件开发的意图的特有信息。
 
-**类型：** SubIntentInfoForConfiguration
+**类型：** [SubIntentInfoForConfiguration](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md)
 
 **起始版本：** 23
 

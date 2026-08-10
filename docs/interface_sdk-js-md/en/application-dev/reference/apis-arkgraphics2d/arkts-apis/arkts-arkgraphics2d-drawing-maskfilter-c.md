@@ -1,14 +1,14 @@
 # MaskFilter
 
-Implements a mask filter.
-    **NOTE**  
-    
-    - The initial APIs of this class are supported since API version 12.  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+蒙版滤镜对象，用于对绘制内容施加模糊效果。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 12
 
@@ -18,13 +18,19 @@ Implements a mask filter.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## createBlurMaskFilter
 
 ```TypeScript
 static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 ```
 
-Creates a mask filter with a blur effect.
+创建具有模糊效果的蒙版滤镜。
 
 **Since:** 12
 
@@ -38,20 +44,20 @@ Creates a mask filter with a blur effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Blur type. |
-| sigma | number | Yes | Standard deviation of the Gaussian blur to apply. The value must be a floating point number greater than 0. |
+| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Yes | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
+| sigma | number | Yes | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Maskfilter** object created. |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | 返回创建的蒙版滤镜对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlurMaskFilter
 
@@ -59,7 +65,7 @@ Creates a mask filter with a blur effect.
 static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | undefined
 ```
 
-Creates a mask filter with a blur effect.
+创建具有模糊效果的蒙版滤镜。
 
 **Since:** 23
 
@@ -73,18 +79,18 @@ Creates a mask filter with a blur effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Blur type. |
-| sigma | double | Yes | Standard deviation of the Gaussian blur to apply. The value must be a floating point number greater than 0. |
+| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Yes | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
+| sigma | double | Yes | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | MaskFilter object. |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | 返回创建的蒙版滤镜对象。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

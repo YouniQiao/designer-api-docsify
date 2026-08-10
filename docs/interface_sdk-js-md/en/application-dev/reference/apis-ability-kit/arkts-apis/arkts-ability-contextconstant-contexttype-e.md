@@ -1,6 +1,6 @@
 # ContextType
 
-Context type
+上下文类型
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Context type
 APPLICATION_CONTEXT = 0
 ```
 
-Application context type.
+应用上下文类型。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Application context type.
 ABILITY_STAGE_CONTEXT = 1
 ```
 
-Ability stage context type.
+能力阶段上下文类型。
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ Ability stage context type.
 UIABILITY_CONTEXT = 2
 ```
 
-UI ability context type.
+UI能力上下文类型。
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ UI ability context type.
 FORM_EXTENSION_CONTEXT = 3
 ```
 
-Form extension context type.
+表单扩展上下文类型。
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ Form extension context type.
 APP_SERVICE_EXTENSION_CONTEXT = 4
 ```
 
-App service extension context type.
+App业务扩展上下文类型。
 
 **Since:** 26.0.0
 

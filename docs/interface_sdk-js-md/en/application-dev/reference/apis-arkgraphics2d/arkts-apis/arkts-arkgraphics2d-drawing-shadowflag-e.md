@@ -1,6 +1,6 @@
 # ShadowFlag
 
-Enumerates the shadow drawing behaviors.
+控制阴影绘制行为的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the shadow drawing behaviors.
 NONE = 0
 ```
 
-No shadow effect is used.
+不使用任何阴影处理选项。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ No shadow effect is used.
 TRANSPARENT_OCCLUDER = 1
 ```
 
-The occluder is translucent.
+遮挡物是半透明的。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ The occluder is translucent.
 GEOMETRIC_ONLY = 2
 ```
 
-Only the geometric shadow effect is used.
+仅使用几何阴影效果。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Only the geometric shadow effect is used.
 ALL = 3
 ```
 
-Shadow effects are combined, including the translucent occluder and geometric shadow.
+使用所有可用的阴影处理选项，以生成组合阴影效果，包括半透明遮挡和几何阴影效果。
 
 **Since:** 12
 

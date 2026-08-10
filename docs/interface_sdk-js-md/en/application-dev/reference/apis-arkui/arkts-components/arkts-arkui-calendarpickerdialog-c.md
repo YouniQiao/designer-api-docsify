@@ -1,6 +1,6 @@
 # CalendarPickerDialog
 
-A calendar picker dialog box is a dialog box that allows users to select a date from a calendar picker.
+点击日期弹出日历选择器弹窗，可在弹窗内选择日期。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ A calendar picker dialog box is a dialog box that allows users to select a date 
 static show(options?: CalendarDialogOptions): void
 ```
 
-Defines a calendar picker dialog box.
+显示日历选择器弹窗，供用户选择日期。
 
 **Since:** 10
 
@@ -34,5 +34,5 @@ Defines a calendar picker dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the calendar picker dialog box. |
+| options | [CalendarDialogOptions](../arkts-apis/arkts-arkui-calendarpicker-calendardialogoptions-i.md) | No | 配置日历选择器弹窗的参数，缺省时无法弹出弹窗。 |
 

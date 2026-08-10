@@ -32,3 +32,4 @@ ImageAnimator()
 
 ## 汇总
 
+- [ImageFrameInfo](arkts-arkui-imageanimator-imageframeinfo-i.md)

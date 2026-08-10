@@ -4,7 +4,7 @@
 export type AgentAppInfo = _AgentAppInfo
 ```
 
-Application-related information for the agent.
+agent的应用程序相关信息。
 
 **Since:** 24
 

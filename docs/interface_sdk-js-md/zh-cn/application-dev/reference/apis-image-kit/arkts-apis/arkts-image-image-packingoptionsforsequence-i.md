@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## delayTimeList
 
 ```TypeScript
@@ -21,7 +27,7 @@ GIF编码中设定每帧输出图像的延迟时间，取值需大于0。
 - 单位：10毫秒（ms）。例如，取值为10时，实际单帧延迟是100毫秒。  
 - 如果长度小于frameCount，不足的部分将使用delayTimeList中的最后一个值进行填充。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 18
 
@@ -44,7 +50,7 @@ GIF编码中设定每帧输出图像的帧过渡模式，如果长度小于frame
 - 2：恢复背景色。  
 - 3：恢复到之前的状态。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 18
 
@@ -62,7 +68,7 @@ frameCount: int
 
 GIF编码中指定的帧数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -82,7 +88,7 @@ loopCount?: int
 
 0表示无限循环；若无此字段，则表示不循环播放。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

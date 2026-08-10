@@ -1,7 +1,6 @@
 # SystemDefinedAppItem
 
-Represents the data of the home screen icon defined by the system. It is a child class of  
-[SystemDefinedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+系统定义的桌面图标类型数据，是[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类。
 
 **Inheritance/Implementation:** SystemDefinedAppItem extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
@@ -13,13 +12,19 @@ Represents the data of the home screen icon defined by the system. It is a child
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## abilityName
 
 ```TypeScript
 set abilityName(value: string)
 ```
 
-Indicates the ability name of app
+图标对应的应用ability名。
 
 **Type:** string
 
@@ -41,7 +46,7 @@ Indicates the ability name of app
 set appIconId(value: string)
 ```
 
-Indicates the id of app icon.This field can be sourced from BMS or customized as needed.
+图标的图片id。This field can be sourced from BMS or customized as needed.
 
 **Type:** string
 
@@ -63,7 +68,7 @@ Indicates the id of app icon.This field can be sourced from BMS or customized as
 set appId(value: string)
 ```
 
-Indicates the app id
+图标对应的应用id。
 
 **Type:** string
 
@@ -85,7 +90,7 @@ Indicates the app id
 set appLabelId(value: string)
 ```
 
-Indicates the id of app label.This field can be sourced from BMS or customized as needed.
+图标名称对应的标签id。
 
 **Type:** string
 
@@ -107,7 +112,7 @@ Indicates the id of app label.This field can be sourced from BMS or customized a
 set appName(value: string)
 ```
 
-Indicates the app name
+图标对应的应用名。
 
 **Type:** string
 
@@ -129,7 +134,7 @@ Indicates the app name
 set bundleName(value: string)
 ```
 
-Indicates the bundle name of app
+图标对应的应用bundle名。
 
 **Type:** string
 

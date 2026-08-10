@@ -1,6 +1,6 @@
 # ExecutorProperty (System API)
 
-Defines the executor property.
+提供执行器的属性。
 
 **Since:** 8
 
@@ -12,15 +12,21 @@ Defines the executor property.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## authSubType
 
 ```TypeScript
 authSubType: AuthSubType
 ```
 
-Authentication credential subtype.
+指示认证凭据子类型。
 
-**Type:** AuthSubType
+**Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
 **Since:** 8
 
@@ -38,9 +44,9 @@ Authentication credential subtype.
 credentialLength?: int
 ```
 
-Credential length, which is **undefined** by default. When credentials with indefinite-length attributes such as biometric information are queried, **undefined** is returned.
+指示凭据长度，默认为undefined。查询生物信息等无定长属性的凭据时返回undefined。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -58,7 +64,7 @@ Credential length, which is **undefined** by default. When credentials with inde
 enrollmentProgress?: string
 ```
 
-Enrollment progress, which is left blank by default.
+指示录入进度，默认为空。
 
 **Type:** string
 
@@ -78,9 +84,9 @@ Enrollment progress, which is left blank by default.
 freezingTime?: int
 ```
 
-Freezing time, in milliseconds. The default value is **-1**.
+指示冻结时间，单位为ms，默认为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -98,9 +104,9 @@ Freezing time, in milliseconds. The default value is **-1**.
 nextPhaseFreezingTime?: int
 ```
 
-Next freezing time, in milliseconds. The default value is **undefined**.
+指示下次冻结时间，单位为ms，默认为undefined。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -118,9 +124,9 @@ Next freezing time, in milliseconds. The default value is **undefined**.
 remainTimes?: int
 ```
 
-Number of remaining authentication times, which is **-1** by default.
+指示剩余次数，默认为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -138,9 +144,9 @@ Number of remaining authentication times, which is **-1** by default.
 result: int
 ```
 
-Result.
+指示结果。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -158,7 +164,7 @@ Result.
 sensorInfo?: string
 ```
 
-Sensor information, which is left blank by default.
+指示传感器信息，默认为空。
 
 **Type:** string
 

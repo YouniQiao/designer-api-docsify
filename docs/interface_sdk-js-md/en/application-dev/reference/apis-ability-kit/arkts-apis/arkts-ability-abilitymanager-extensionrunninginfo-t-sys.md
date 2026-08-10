@@ -4,7 +4,7 @@
 export type ExtensionRunningInfo = _ExtensionRunningInfo
 ```
 
-Defines the level-2 module ExtensionRunningInfo.
+ExtensionRunningInfo二级模块。
 
 **Since:** 9
 

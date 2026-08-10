@@ -1,6 +1,6 @@
 # SyncResult
 
-Represents the sync result of an asset.
+关键资产同步的结果。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Represents the sync result of an asset.
 
 **System capability:** SystemCapability.Security.Asset
 
+## Modules to Import
+
+```TypeScript
+import { asset } from 'kits/@kit.AssetStoreKit';
+```
+
 ## failedCount
 
 ```TypeScript
 readonly failedCount?: number
 ```
 
-Number of assets that fail to be synced.
+关键资产同步失败的数量。
 
 **Type:** number
 
@@ -34,8 +40,7 @@ Number of assets that fail to be synced.
 readonly resultCode: number
 ```
 
-Sync result code of an asset. If the sync is successful, the result code is **0**. If the sync fails, see  
-[ErrorCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for the result code.
+关键资产同步的结果码。同步成功时结果码为0，同步失败时结果码参考[ErrorCode](arkts-assetstore-asset-errorcode-e.md)。
 
 **Type:** number
 
@@ -53,7 +58,7 @@ Sync result code of an asset. If the sync is successful, the result code is **0*
 readonly totalCount?: number
 ```
 
-Total number of assets to be synced.
+触发同步的关键资产总数。
 
 **Type:** number
 

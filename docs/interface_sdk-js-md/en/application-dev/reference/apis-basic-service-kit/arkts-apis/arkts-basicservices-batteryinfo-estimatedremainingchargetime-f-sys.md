@@ -1,12 +1,18 @@
 # estimatedRemainingChargeTime (System API)
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## estimatedRemainingChargeTime
 
 ```TypeScript
 function estimatedRemainingChargeTime(): long
 ```
 
-Estimated time for fully charging the current device, in unit of milliseconds. This is a system API.
+获取当前设备充满电的预估时间，单位毫秒。
 
 **Since:** 23
 
@@ -22,5 +28,5 @@ Estimated time for fully charging the current device, in unit of milliseconds. T
 
 | Type | Description |
 | --- | --- |
-| long | Returns the estimated remaining time for the current device to be fully charged, in ms. |
+| long | 返回当前设备充满电的预估时间，单位毫秒。 |
 

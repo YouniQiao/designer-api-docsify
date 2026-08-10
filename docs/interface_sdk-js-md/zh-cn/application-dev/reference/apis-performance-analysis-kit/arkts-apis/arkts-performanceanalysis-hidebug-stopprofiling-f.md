@@ -1,12 +1,18 @@
 # stopProfiling
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## stopProfiling
 
 ```TypeScript
 function stopProfiling(): void
 ```
 
-ֹͣ�����Profiling�������٣�\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_�����ĵ�����Ҫ��\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_�����ĵ���һһ��Ӧ���ȿ�����رգ�������ظ��������ظ��رյĵ��÷�ʽ�������ӿڵ����쳣��
+ֹͣ�����Profiling�������٣�`stopProfiling()`�����ĵ�����Ҫ��`startProfiling(filename: string)`�����ĵ���һһ��Ӧ���ȿ�����رգ�������ظ��������ظ��رյĵ��÷�ʽ�������ӿڵ����쳣��
 
 **起始版本：** 8
 
@@ -20,7 +26,7 @@ function stopProfiling(): void
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

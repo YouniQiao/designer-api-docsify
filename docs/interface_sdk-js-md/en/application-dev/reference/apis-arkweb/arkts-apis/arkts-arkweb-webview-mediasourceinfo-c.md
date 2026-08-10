@@ -1,9 +1,14 @@
 # MediaSourceInfo
 
-Implements a **MediaSourceInfo** object to provide the information about the media source.
-    **NOTE**  
-    
-    - The sample effect is subject to the actual device.
+表示媒体源的信息。
+
+> **说明：**
+> 
+> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 示例效果请以真机运行为准。
 
 **Since:** 23
 
@@ -13,13 +18,19 @@ Implements a **MediaSourceInfo** object to provide the information about the med
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## format
 
 ```TypeScript
 format: string
 ```
 
-Format of the media source, which may be empty. You need to determine the format by yourself.
+媒体源格式，可能为空，需要开发者自行判断格式。
 
 **Type:** string
 
@@ -37,7 +48,7 @@ Format of the media source, which may be empty. You need to determine the format
 source: string
 ```
 
-Address of the media source.
+媒体源地址。
 
 **Type:** string
 
@@ -55,9 +66,9 @@ Address of the media source.
 type: SourceType
 ```
 
-Type of the media source.
+媒体源的类型。
 
-**Type:** SourceType
+**Type:** [SourceType](arkts-arkweb-webview-sourcetype-e.md)
 
 **Since:** 23
 

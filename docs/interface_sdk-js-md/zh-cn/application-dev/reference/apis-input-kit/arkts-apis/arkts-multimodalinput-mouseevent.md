@@ -4,6 +4,12 @@ The **mouseEvent** module provides mouse events reported by a device. It is inhe
  [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md).
 
 
+## 导入模块
+
+```TypeScript
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
+```
+
 ## 汇总
 
 ### 接口

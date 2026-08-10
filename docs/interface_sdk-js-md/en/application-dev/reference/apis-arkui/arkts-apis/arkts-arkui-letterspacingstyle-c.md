@@ -1,6 +1,6 @@
 # LetterSpacingStyle
 
-Describes the letter spacing style.
+文本字符间距对象说明。适用于需要调整字符间距的场景，例如标题文字加宽间距以增强视觉效果、密集文本缩小间距以节省空间等。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Describes the letter spacing style.
 constructor(value: LengthMetrics)
 ```
 
-A constructor used to create a text letter spacing style.
+文本字符间距的构造函数。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ A constructor used to create a text letter spacing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Letter spacing options. This API does not work if **unit** of **LengthMetrics** is percent. |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本字符间距设置项。如果LengthMetrics的unit值是PERCENT，该设置不生效。 |
 
 ## letterSpacing
 
@@ -42,9 +42,9 @@ A constructor used to create a text letter spacing style.
 readonly letterSpacing: number
 ```
 
-Letter spacing.
+获取属性字符串的文本字符间距。
 
-Unit: [vp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 

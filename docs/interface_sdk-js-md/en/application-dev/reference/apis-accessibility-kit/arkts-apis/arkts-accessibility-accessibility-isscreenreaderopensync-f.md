@@ -1,12 +1,18 @@
 # isScreenReaderOpenSync
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isScreenReaderOpenSync
 
 ```TypeScript
 function isScreenReaderOpenSync(): boolean
 ```
 
-Checks whether screen reader mode is enabled.
+是否开启了屏幕朗读模式。
 
 **Since:** 18
 
@@ -24,9 +30,9 @@ Checks whether screen reader mode is enabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the screen reader is enabled. Returns **true** if the screen reader is enabled; returns **false** otherwise. |
+| boolean | 表示是否开启了屏幕朗读。true表示开启了屏幕朗读，false表示未开启屏幕朗读。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

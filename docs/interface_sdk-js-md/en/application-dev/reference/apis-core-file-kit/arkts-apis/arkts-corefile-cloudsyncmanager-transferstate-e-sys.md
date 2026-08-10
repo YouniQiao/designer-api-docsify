@@ -1,6 +1,6 @@
 # TransferState (System API)
 
-Describes the state type of transfer task.
+搬迁任务状态的枚举。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Describes the state type of transfer task.
 RUNNING = 0
 ```
 
-Indicates that the transfer task is running.
+搬迁中。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Indicates that the transfer task is running.
 COMPLETED = 1
 ```
 
-Indicates that the transfer task has been finished.
+搬迁完成。
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ Indicates that the transfer task has been finished.
 STOPPED = 2
 ```
 
-Indicates that the transfer task has been stopped.
+搬迁停止。
 
 **Since:** 26.0.0
 

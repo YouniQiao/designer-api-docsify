@@ -1,8 +1,8 @@
 # ResolvedSymbolNumberFormatOptions
 
-Represents optional element for the ResolvedSymbolNumberFormatOptions object.Define the resolved symbol element and value that need to get.
+自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions，支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。
 
-**Inheritance/Implementation:** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvednumberformatoptions-i.md)
+**Inheritance/Implementation:** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvednumberformatoptions-i.md/arkts-arkts-intl-resolvednumberformatoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Represents optional element for the ResolvedSymbolNumberFormatOptions object.Def
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## groupingSeparator
 
 ```TypeScript
 groupingSeparator?: string
 ```
 
-Grouping Separator symbol of localized number part, such as "," of "10,000".
+分组符号。默认值：区域默认的符号。例如：","。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Grouping Separator symbol of localized number part, such as "," of "10,000".
 infinity?: string
 ```
 
-Infinity symbol of localized number part, such as "∞".
+无穷符号。默认值：区域默认的符号。例如："∞"。
 
 **Type:** string
 
@@ -62,7 +68,7 @@ Infinity symbol of localized number part, such as "∞".
 minusSign?: string
 ```
 
-Minus sign of localized number part, such as "-".
+减符号。默认值：区域默认的符号。例如："-"。
 
 **Type:** string
 
@@ -84,7 +90,7 @@ Minus sign of localized number part, such as "-".
 nan?: string
 ```
 
-NaN symbol of localized number part, such as "null".
+NaN符号。默认值：区域默认的符号。例如："null"。
 
 **Type:** string
 
@@ -106,7 +112,7 @@ NaN symbol of localized number part, such as "null".
 plusSign?: string
 ```
 
-Plus sign of localized number part, such as "+".
+加符号。默认值：区域默认的符号。例如："+"。
 
 **Type:** string
 
@@ -128,7 +134,7 @@ Plus sign of localized number part, such as "+".
 zero?: string
 ```
 
-Zero symbol of localized number part, such as "0".
+零符号。默认值：区域默认的符号。例如："0"。
 
 **Type:** string
 

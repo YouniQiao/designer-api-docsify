@@ -1,12 +1,18 @@
 # isStartupTaskInitialized
 
+## Modules to Import
+
+```TypeScript
+import { startupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## isStartupTaskInitialized
 
 ```TypeScript
 function isStartupTaskInitialized(startupTask: string): boolean
 ```
 
-Checks whether a startup task or .so file preloading task is initialized.
+获取指定启动任务或so预加载任务是否已初始化。
 
 **Since:** 12
 
@@ -22,21 +28,21 @@ Checks whether a startup task or .so file preloading task is initialized.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or name of the .so file to be preloaded. |
+| startupTask | string | Yes | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the task is initialized. **true** if initialized, **false** otherwise. |
+| boolean | 返回布尔值，true表示该启动任务或so预加载任务已执行完成，false表示该启动任务或so预加载任务尚未执行完成。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';

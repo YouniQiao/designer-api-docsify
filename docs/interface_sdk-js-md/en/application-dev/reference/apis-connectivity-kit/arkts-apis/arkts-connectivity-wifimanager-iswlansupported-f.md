@@ -1,5 +1,11 @@
 # isWlanSupported
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isWlanSupported
 
 ```TypeScript
@@ -28,5 +34,5 @@ Query whether Wi-Fi is available
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
+| 2401000 | Operation failed. |
 

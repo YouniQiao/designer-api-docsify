@@ -1,6 +1,6 @@
 # PairingStateParam
 
-Describes the pairing state parameters.
+配对状态参数。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the pairing state parameters.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the device address.The length must be 17, The value consists of hexade
 preState: PairingState
 ```
 
-Indicates the previous pairing state.
+上一个配对状态。
 
-**Type:** PairingState
+**Type:** [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ Indicates the previous pairing state.
 reason: PairingReason
 ```
 
-Indicates the pairing state reason.
+配对状态原因。
 
-**Type:** PairingReason
+**Type:** [PairingReason](arkts-connectivity-remotedevice-pairingreason-e.md)
 
 **Since:** 26.0.0
 
@@ -76,7 +82,7 @@ Indicates the pairing state reason.
 reasonMsg?: string
 ```
 
-Indicates reason message. This field is intended for log information only and should not be used for logic processing.
+原因消息。此字段仅用于日志信息，不应该用于逻辑处理。
 
 **Type:** string
 
@@ -96,9 +102,9 @@ Indicates reason message. This field is intended for log information only and sh
 state: PairingState
 ```
 
-Indicates the current pairing state.
+当前配对状态。
 
-**Type:** PairingState
+**Type:** [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
 
 **Since:** 26.0.0
 

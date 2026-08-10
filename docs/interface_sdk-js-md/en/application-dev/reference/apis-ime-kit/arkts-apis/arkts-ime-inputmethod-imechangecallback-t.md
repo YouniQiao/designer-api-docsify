@@ -18,6 +18,6 @@ The callback of 'imeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the property of current inputmethod.  |
-| inputMethodSubtype | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the subtype of current inputmethod.  |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | the property of current inputmethod. |
+| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | the subtype of current inputmethod. |
 

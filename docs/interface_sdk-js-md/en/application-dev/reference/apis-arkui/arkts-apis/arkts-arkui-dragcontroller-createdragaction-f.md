@@ -1,20 +1,26 @@
 # createDragAction
 
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
+
 ## createDragAction
 
 ```TypeScript
 function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - Since API version 11, you can use the  
-    [getDragController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the  
-    [DragController]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated with the current UI context.  
-    
-    - For optimal drag and drop performance, limit the number of drag previews.
+创建拖拽的Action对象，需要显式指定拖拽背板图（可多个），以及拖拽的数据，跟手点等信息；当通过一个已创建的 Action 对象发起的拖拽未结束时，无法再次创建新的 Action 对象，接口会抛出异常；当Action对象的生命周期结束后，注册在该对象上的回调函数会失效，因此需要在一个尽量长的作用域下持有该对象，并在每次发起拖拽前通过createDragAction返回新的对象覆盖旧值。
+
+> **说明：**
+> 
+> - 从API version 11开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
+> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
+> 
+> - 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。
 
 **Since:** 11
 
@@ -36,25 +42,25 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customArray | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_ \| \_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Object to be dragged. |
-| dragInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Drag information. |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes | 拖拽发起后跟手效果所拖拽的对象。 |
+| dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | 拖拽信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
+| [DragAction](arkts-arkui-dragcontroller-dragaction-i.md) | 创建拖拽Action对象，主要用于后面实现注册监听拖拽状态改变事件和启动拖拽服务。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| 100001 | Internal handling failed. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
-**Example**
+## Examples
 
-You are advised to use the [getDragController](arkts-apis-uicontext-uicontext.md#getdragcontroller11) to obtain the DragController object associated with the current UI context.
+You are advised to use [getDragController](arkts-apis-uicontext-uicontext.md#getdragcontroller11) in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -147,10 +153,10 @@ struct DragControllerPage {
               })
               this.dragAction.startDrag().then(() => {
               }).catch((err: Error) => {
-                console.error(`start drag Error:${err.message}`);
+                console.error(`Failed to start drag. Code: ${err.code}, message: ${err.message}`);
               })
             } catch (err) {
-              console.error(`create dragAction Error:${err.message}`);
+              console.error(`Failed to create dragAction. Code: ${err.code}, message: ${err.message}`);
             }
           }
         }

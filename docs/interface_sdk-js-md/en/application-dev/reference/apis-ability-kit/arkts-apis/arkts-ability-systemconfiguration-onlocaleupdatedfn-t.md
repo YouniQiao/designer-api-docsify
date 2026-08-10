@@ -22,5 +22,5 @@ Defines an OnLocaleUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Indicates the locale settings. The application will automatically adjust its behavior based on the current locale to meet the user's localization requirements. This property can be configured by setting the system language, system region, and application language preferences  |
+| locale | string | Yes | Indicates the locale settings. The application will automatically adjust its behavior based on the current locale to meet the user's localization requirements. This property can be configured by setting the system language, system region, and application language preferences |
 

@@ -10,6 +10,12 @@ The optional options used as filters to ask getFormsInfo to return formInfos fro
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## moduleName
 
 ```TypeScript

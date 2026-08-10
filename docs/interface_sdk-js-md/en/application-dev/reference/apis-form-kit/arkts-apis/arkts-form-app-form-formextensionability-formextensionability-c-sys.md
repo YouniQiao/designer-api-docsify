@@ -10,6 +10,12 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { FormExtensionAbility } from 'kits/@kit.FormKit';
+```
+
 ## onAcquireFormData
 
 ```TypeScript
@@ -40,8 +46,8 @@ Called when the system acquire the form data.
 
 | Type | Description |
 | --- | --- |
-| object | Returns the wantParams object.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Returns the wantParams object.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| object | Returns the wantParams object.<br>**Applicable version:** 10 and later |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
 
 ## onAcquireFormData
 
@@ -93,8 +99,8 @@ Called when the system shares the form.
 
 | Type | Description |
 | --- | --- |
-| object | Returns the wantParams object.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 9 - 10 |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Returns the wantParams object.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| object | Returns the wantParams object.<br>**Applicable version:** 9 - 10 |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
 
 ## onShareForm
 

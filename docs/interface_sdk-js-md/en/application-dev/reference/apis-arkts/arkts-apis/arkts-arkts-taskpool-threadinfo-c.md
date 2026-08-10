@@ -1,6 +1,6 @@
 # ThreadInfo
 
-Describes the internal information about a worker thread.
+工作线程的内部信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the internal information about a worker thread.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## priority
 
 ```TypeScript
 priority?: Priority
 ```
 
-Priority of the calling thread. If the return value is empty, no task is running. You are advised not to change the value.
+当前线程的优先级。如果返回为空，表示当前没有任务执行。不建议修改此值。
 
-**Type:** Priority
+**Type:** [Priority](arkts-arkts-taskpool-priority-e.md)
 
 **Since:** 10
 
@@ -36,7 +42,7 @@ Priority of the calling thread. If the return value is empty, no task is running
 taskIds?: number[]
 ```
 
-IDs of tasks running on the calling thread. If the return value is empty, no task is running. You are advised not to change the value.
+在当前线程上运行的任务ID列表。如果返回为空，表示当前没有任务执行。不建议修改此值。
 
 **Type:** number[]
 
@@ -56,7 +62,7 @@ IDs of tasks running on the calling thread. If the return value is empty, no tas
 tid: number
 ```
 
-ID of the worker thread. If the return value is empty, no task is running. You are advised not to change the value.
+工作线程的标识符。如果返回为空，表示当前没有任务执行。不建议修改此值。
 
 **Type:** number
 

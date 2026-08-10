@@ -1,8 +1,8 @@
 # HoverEvent
 
-Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**Inheritance/Implementation:** HoverEvent extends [BaseEvent](../arkts-apis/arkts-arkui-component/common-baseevent-i.md)
+**Inheritance/Implementation:** HoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 10
 
@@ -18,7 +18,9 @@ Inherits from [BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 stopPropagation: () => void
 ```
 
-Disables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
+阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。 
+
+**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **Since:** 10
 
@@ -38,9 +40,13 @@ Disables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
 displayX?: number
 ```
 
-X coordinate of the cursor or stylus position in the coordinate system of the current screen window.
+鼠标光标或手写笔位置在当前应用屏幕坐标系中的X坐标。
 
-Unit: vp.
+单位：vp
+
+取值范围：[0, +∞)
+
+**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -62,9 +68,13 @@ Unit: vp.
 displayY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the coordinate system of the current screen window.
+鼠标光标或手写笔位置在当前应用屏幕坐标系中的Y坐标。
 
-Unit: vp.
+单位：vp
+
+取值范围：[0, +∞)
+
+**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -86,12 +96,11 @@ Unit: vp.
 globalDisplayX?: number
 ```
 
-X coordinate of the cursor or stylus position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
 
-Unit: vp.
+单位：vp
 
-Value range: (-∞, +∞).
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -113,12 +122,7 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-
-Unit: vp.
-
-Value range: (-∞, +∞).
+相对于全局显示的点的 Y 坐标。
 
 **Type:** number
 
@@ -140,9 +144,13 @@ Value range: (-∞, +∞).
 windowX?: number
 ```
 
-X coordinate of the cursor or stylus position in the coordinate system of the current application window.
+鼠标光标或手写笔位置在当前应用窗口坐标系中的X坐标。
 
-Unit: vp.
+单位：vp
+
+取值范围：[0, +∞)
+
+**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -164,9 +172,13 @@ Unit: vp.
 windowY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the coordinate system of the current application window.
+鼠标光标或手写笔位置在当前应用窗口坐标系中的Y坐标。
 
-Unit: vp.
+单位：vp
+
+取值范围：[0, +∞)
+
+**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -188,10 +200,13 @@ Unit: vp.
 x?: number
 ```
 
-X coordinate of the cursor or stylus position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ based on the current component.
+鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
 
-Unit: vp.
+单位：vp
+
+取值范围：[0, +∞)
+
+**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 
@@ -213,10 +228,13 @@ Unit: vp.
 y?: number
 ```
 
-Y coordinate of the cursor or stylus position in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ based on the current component.
+鼠标光标或手写笔位置在当前组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
 
-Unit: vp.
+单位：vp
+
+取值范围：[0, +∞)
+
+**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **Type:** number
 

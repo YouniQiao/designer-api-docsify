@@ -12,6 +12,12 @@ Indicates the information of call restriction.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## mode
 
 ```TypeScript
@@ -20,7 +26,7 @@ mode: CallRestrictionMode
 
 Indicates the mode of call restriction.
 
-**Type:** CallRestrictionMode
+**Type:** [CallRestrictionMode](arkts-telephony-call-callrestrictionmode-e-sys.md)
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ type: CallRestrictionType
 
 Indicates the type of call restriction.
 
-**Type:** CallRestrictionType
+**Type:** [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md)
 
 **Since:** 8
 

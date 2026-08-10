@@ -4,7 +4,7 @@
 export type SkillType = _SkillType
 ```
 
-Enumerates the skill types.
+技能类型的枚举。
 
 **Since:** 26.0.0
 

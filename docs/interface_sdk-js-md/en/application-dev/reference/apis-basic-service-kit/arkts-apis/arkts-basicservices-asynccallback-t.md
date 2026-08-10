@@ -4,7 +4,7 @@
 export type AsyncCallback<T, E = void> = (err: BusinessError<E> | null, data: T | undefined) => void
 ```
 
-Defines a common callback that carries an error parameter and asynchronous return value.The error parameter is of the [BusinessError]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type. The type of the asynchronous return value is defined by the developer.
+通用回调函数，携带错误参数和异步返回值。错误参数为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型的信息。异步返回值的类型由开发者自定义，回调将返回对应类型的信息。
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ Defines a common callback that carries an error parameter and asynchronous retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;E&gt; \| null | Yes | Common error information about the API invoking failure.  |
-| data | T \| undefined | Yes | Common callback information.  |
+| err | [BusinessError](arkts-basicservices-base-businesserror-c.md)&lt;E&gt; \| null | Yes | 接口调用失败的公共错误信息。 |
+| data | T \| undefined | Yes | 接口调用时的公共回调信息。 |
 

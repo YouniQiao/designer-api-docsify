@@ -5,7 +5,7 @@ declare type GestureCollectInterceptCallback = (recognizers: Array<GestureRecogn
    touchRecognizers?: Array<TouchRecognizer>) => GestureCollectIntervention
 ```
 
-Defines the callback type used in [onGestureCollectIntercept]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+定义在[onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept)中使用的回调类型。
 
 **Since:** 26.0.0
 
@@ -23,12 +23,12 @@ Defines the callback type used in [onGestureCollectIntercept]\_\_\_JSDOC\_LINK\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recognizers | Array&lt;GestureRecognizer&gt; | Yes | Gesture recognizer objects of the component on the response chain.  |
-| touchRecognizers | Array&lt;TouchRecognizer&gt; | No | Touch recognizer objects of the component on the response chain.\_\_\_HTML\_TAG\_USD\_0\_\_\_The default value is **null**.  |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | 响应链上组件的手势识别器对象。 |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No | 响应链上组件的触摸识别器对象。<br/>默认值为null。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Gesture collection intervention result.  |
+| [GestureCollectIntervention](../arkts-apis/arkts-arkui-gesturecollectintervention-e.md) | 手势收集干预结果。 |
 

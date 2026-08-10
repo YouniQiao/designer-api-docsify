@@ -1,7 +1,6 @@
 # GaugeConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from  
-[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **Inheritance/Implementation:** GaugeConfiguration extends [CommonConfiguration<GaugeConfiguration>](CommonConfiguration<GaugeConfiguration>)
 
@@ -19,7 +18,7 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 max: number
 ```
 
-Maximum value of the current data segment.
+当前数据段最大值。
 
 **Type:** number
 
@@ -41,7 +40,7 @@ Maximum value of the current data segment.
 min: number
 ```
 
-Minimum value of the current data segment.
+当前数据段最小值。
 
 **Type:** number
 
@@ -63,7 +62,7 @@ Minimum value of the current data segment.
 value: number
 ```
 
-Current value.
+当前数据值。
 
 **Type:** number
 

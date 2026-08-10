@@ -1,6 +1,6 @@
 # AudioLoopbackReverbPreset
 
-Enumerates the reverb modes of audio loopback.
+表示返听混响模式的枚举。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates the reverb modes of audio loopback.
 ORIGINAL = 1
 ```
 
-Maintains the original reverb without enhancement.
+保持原始混响，不进行任何增强。
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ Maintains the original reverb without enhancement.
 KTV = 2
 ```
 
-Provides a Karaoke-style reverb effect.
+提供类似KTV的混响效果。
 
 **Since:** 21
 
@@ -48,7 +48,7 @@ Provides a Karaoke-style reverb effect.
 THEATER = 3
 ```
 
-Provides a theater-style reverb effect (default).
+提供类似剧场的混响效果（默认的混响模式）。
 
 **Since:** 21
 
@@ -64,7 +64,7 @@ Provides a theater-style reverb effect (default).
 CONCERT = 4
 ```
 
-Provides a concert-style reverb effect.
+提供类似演唱会的混响效果。
 
 **Since:** 21
 

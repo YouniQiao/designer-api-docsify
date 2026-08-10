@@ -1,5 +1,11 @@
 # reconnect (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## reconnect
 
 ```TypeScript
@@ -30,7 +36,7 @@ Re-connects to current network.
 | --- | --- |
 | boolean | { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

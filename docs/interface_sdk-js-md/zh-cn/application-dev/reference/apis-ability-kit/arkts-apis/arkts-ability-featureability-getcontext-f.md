@@ -1,5 +1,11 @@
 # getContext
 
+## 导入模块
+
+```TypeScript
+import { featureAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## getContext
 
 ```TypeScript
@@ -22,9 +28,9 @@ function getContext(): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回应用程序上下文。 |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 返回应用程序上下文。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

@@ -10,6 +10,12 @@ Class that holds brand name, major version and full version. Brand name and majo
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## getBrand
 
 ```TypeScript
@@ -32,7 +38,7 @@ Get the brand info.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns brand info of UserAgentBrandVersion. |
+| string | Returns brand info of UserAgentBrandVersion. |
 
 ## getFullVersion
 
@@ -56,7 +62,7 @@ Get the full version.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns full version of UserAgentBrandVersion. |
+| string | Returns full version of UserAgentBrandVersion. |
 
 ## getMajorVersion
 
@@ -80,7 +86,7 @@ Get the major version.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns major version of UserAgentBrandVersion. |
+| string | Returns major version of UserAgentBrandVersion. |
 
 ## setBrand
 

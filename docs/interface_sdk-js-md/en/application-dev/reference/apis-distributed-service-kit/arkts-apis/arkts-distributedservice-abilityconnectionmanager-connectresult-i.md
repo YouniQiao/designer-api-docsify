@@ -1,6 +1,6 @@
 # ConnectResult
 
-Defines the connection result.
+连接的结果。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Defines the connection result.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## errorCode
 
 ```TypeScript
 errorCode?: ConnectErrorCode
 ```
 
-Connection error code.
+表示连接错误码。
 
-**Type:** ConnectErrorCode
+**Type:** [ConnectErrorCode](arkts-distributedservice-abilityconnectionmanager-connecterrorcode-e.md)
 
 **Since:** 18
 
@@ -36,7 +42,7 @@ Connection error code.
 isConnected: boolean
 ```
 
-Whether the connection is successful. The value **true** indicates that the connection is successful, and the value **false** indicates the opposite.
+true表示连接成功，false表示连接失败。
 
 **Type:** boolean
 
@@ -56,7 +62,7 @@ Whether the connection is successful. The value **true** indicates that the conn
 reason?: string
 ```
 
-Connection rejection reason.
+表示拒绝连接的原因。
 
 **Type:** string
 

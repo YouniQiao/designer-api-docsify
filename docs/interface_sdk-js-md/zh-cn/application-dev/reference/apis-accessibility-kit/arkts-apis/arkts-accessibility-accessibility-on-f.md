@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## on('accessibilityStateChange')
 
 ```TypeScript
@@ -7,14 +13,15 @@ function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 ```
 
 监听辅助应用启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  
-[accessibility.getAccessibilityExtensionListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。  
-    
-    - 调用此方法后，务必在对象生命周期结束前使用  
-    [accessibility.off('accessibilityStateChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    取消监听，否则可能会导致崩溃。
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。
+
+> **说明：**
+> 
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> 
+> - 调用此方法后，务必在对象生命周期结束前使用
+> [accessibility.off('accessibilityStateChange')](accessibility.off(type: 'accessibilityStateChange', callback?: Callback&lt;boolean&gt;))
+> 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 7
 
@@ -33,15 +40,15 @@ function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'accessibilityStateChange' | 是 | 监听的事件名，固定为‘accessibilityStateChange’，即辅助应用启用状态变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 回调函数，在辅助应用启用状态变化时将状态通过此函数进行通知。此状态为全局辅助应用启用状态。返回true表示已启用辅助应用，返回false表示已禁用辅助 应用。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，在辅助应用启用状态变化时将状态通过此函数进行通知。此状态为全局辅助应用启用状态。返回true表示已启用辅助应用，返回false表示已禁用辅助 应用。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -80,14 +87,15 @@ function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 ```
 
 监听触摸浏览功能启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  
-[accessibility.getAccessibilityExtensionListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。  
-    
-    - 调用此方法后，务必在对象生命周期结束前使用  
-    [accessibility.off('touchGuideStateChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    取消监听，否则可能会导致崩溃。
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。
+
+> **说明：**
+> 
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> 
+> - 调用此方法后，务必在对象生命周期结束前使用
+> [accessibility.off('touchGuideStateChange')](accessibility.off(type: 'touchGuideStateChange', callback?: Callback&lt;boolean&gt;))
+> 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 7
 
@@ -106,15 +114,15 @@ function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'touchGuideStateChange' | 是 | 监听的事件名，固定为‘touchGuideStateChange’，即触摸浏览启用状态变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 回调函数，在触摸浏览启用状态变化时将状态通过此函数进行通知。返回true表示触摸浏览功能已开启，返回false表示触摸浏览功能已关闭。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，在触摸浏览启用状态变化时将状态通过此函数进行通知。返回true表示触摸浏览功能已开启，返回false表示触摸浏览功能已关闭。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -153,13 +161,14 @@ function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void
 ```
 
 监听屏幕朗读功能启用状态变化事件，使用callback异步回调。
-    **说明：**  
-    
-    - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。  
-    
-    - 调用此方法后，务必在对象生命周期结束前使用  
-    [accessibility.off('screenReaderStateChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    取消监听，否则可能会导致崩溃。
+
+> **说明：**
+> 
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> 
+> - 调用此方法后，务必在对象生命周期结束前使用
+> [accessibility.off('screenReaderStateChange')](accessibility.off(type: 'screenReaderStateChange', callback?: Callback&lt;boolean&gt;))
+> 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 18
 
@@ -178,15 +187,15 @@ function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'screenReaderStateChange' | 是 | 监听的事件名，固定为‘screenReaderStateChange’，即屏幕朗读启用状态变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 回调函数，在屏幕朗读启用状态变化时将状态通过此函数进行通知。返回true表示屏幕朗读功能已开启，返回false表示屏幕朗读功能已关闭。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，在屏幕朗读启用状态变化时将状态通过此函数进行通知。返回true表示屏幕朗读功能已开启，返回false表示屏幕朗读功能已关闭。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -222,13 +231,14 @@ function on(type: 'touchModeChange', callback: Callback<string>): void
 ```
 
 监听触摸浏览功能下的单击/双击操作模式变化事件，使用callback异步回调。
-    **说明：**  
-    
-    - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。  
-    
-    - 调用此方法后，务必在对象生命周期结束前使用  
-    [accessibility.off('touchModeChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    取消监听，否则可能会导致崩溃。
+
+> **说明：**
+> 
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> 
+> - 调用此方法后，务必在对象生命周期结束前使用
+> [accessibility.off('touchModeChange')](accessibility.off(type: 'touchModeChange', callback?: Callback&lt;string&gt;))
+> 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 20
 
@@ -247,15 +257,15 @@ function on(type: 'touchModeChange', callback: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'touchModeChange' | 是 | 监听的事件名，固定为‘touchModeChange’，即触摸浏览功能下的单击/双击操作模式变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数，在触摸浏览功能下的单击/双击操作模式变化时将状态通过此函数进行通知。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，在触摸浏览功能下的单击/双击操作模式变化时将状态通过此函数进行通知。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

@@ -1,6 +1,6 @@
 # FactoryResetScope (System API)
 
-Describes the scope of restoring factory settings.
+恢复出厂设置范围。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Describes the scope of restoring factory settings.
 DATA = 1
 ```
 
-User data.
+用户数据。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ User data.
 DATA_AND_OS = 2
 ```
 
-User data and operating system.
+用户数据和操作系统。
 
 **Since:** 26.0.0
 

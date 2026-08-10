@@ -18,6 +18,6 @@ The callback function for the download progress event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| receivedSize | long | 是 | the length of downloaded data, in bytes.  |
-| totalSize | long | 是 | the length of data expected to be downloaded, in bytes.  |
+| receivedSize | long | 是 | the length of downloaded data, in bytes. |
+| totalSize | long | 是 | the length of data expected to be downloaded, in bytes. |
 

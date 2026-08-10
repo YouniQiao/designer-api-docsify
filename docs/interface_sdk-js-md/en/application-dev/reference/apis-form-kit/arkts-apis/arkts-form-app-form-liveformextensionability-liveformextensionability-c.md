@@ -2,7 +2,7 @@
 
 Interactive widget extension class. It provides APIs for the widget provider to receive notifications about widget creation and destruction.
 
-**Inheritance/Implementation:** LiveFormExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)
+**Inheritance/Implementation:** LiveFormExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md/arkts-ability-app-ability-extensionability-extensionability-c.md)
 
 **Since:** 20
 
@@ -11,6 +11,12 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 <!--Device-unnamed-declare class LiveFormExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class LiveFormExtensionAbility extends ExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.Form
+
+## Modules to Import
+
+```TypeScript
+import { LiveFormInfo } from 'kits/@kit.FormKit';
+```
 
 ## onLiveFormCreate
 
@@ -36,10 +42,10 @@ Called after the UI content of **LiveFormExtensionAbility** is created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| liveFormInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Interactive widget information, including the widget ID. |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UI information. |
+| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Yes | Interactive widget information, including the widget ID. |
+| session | [UIExtensionContentSession](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI information. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -78,9 +84,9 @@ Called to clear resources when this **LiveFormExtensionAbility** is destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| liveFormInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Interactive widget information, including the widget ID. |
+| liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Yes | Interactive widget information, including the widget ID. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
@@ -100,10 +106,10 @@ export default class LiveFormExtAbility extends LiveFormExtensionAbility {
 context: LiveFormExtensionContext
 ```
 
-Context of the **LiveFormExtensionAbility**. This context is inherited from  
-[ExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Context of the **LiveFormExtensionAbility**. This context is inherited from   
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
 
-**Type:** LiveFormExtensionContext
+**Type:** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
 
 **Since:** 20
 
@@ -123,10 +129,10 @@ Context of the **LiveFormExtensionAbility**. This context is inherited from
 liveFormContext: LiveFormExtensionContext
 ```
 
-Context of the **LiveFormExtensionAbility**. This context is inherited from  
-[ExtensionContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Context of the **LiveFormExtensionAbility**. This context is inherited from   
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
 
-**Type:** LiveFormExtensionContext
+**Type:** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
 
 **Since:** 23
 

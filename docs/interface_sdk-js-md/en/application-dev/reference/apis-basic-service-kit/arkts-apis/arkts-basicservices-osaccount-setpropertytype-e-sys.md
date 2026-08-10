@@ -1,6 +1,6 @@
 # SetPropertyType (System API)
 
-Enumerates the types of properties to set.
+表示要设置的属性类型的枚举。
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates the types of properties to set.
 INIT_ALGORITHM = 1
 ```
 
-Initialization algorithm.
+初始化算法。
 
 **Since:** 8
 

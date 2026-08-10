@@ -1,5 +1,11 @@
 # regCustomEapHandler
 
+## Modules to Import
+
+```TypeScript
+import { eap } from 'kits/@kit.NetworkKit';
+```
+
 ## regCustomEapHandler
 
 ```TypeScript
@@ -25,35 +31,31 @@ Customize eap packets by callback
 | netType | number | Yes | Indicates net type need to customize. |
 | eapCode | number | Yes | Indicates eap code need to customize. |
 | eapType | number | Yes | Indicates eap type need to customize. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EapData&gt; | Yes | the callback of eap packet customization. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EapData&gt; | Yes | the callback of eap packet customization. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [33200006](../errorcode-net-eap.md#33200006-invalid-network-type) | Invalid net type |
-| [33200007](../errorcode-net-eap.md#33200007-invalid-eapcode-value) | Invalid eap code |
-| [33200008](../errorcode-net-eap.md#33200008-invalid-eaptype-value) | Invalid eap type |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
+| 33200008 | Invalid eap type |
+| 33200009 | netmanager stop |
+| 201 | Permission denied. |
+| 33200099 | internal error |
+| 33200006 | Invalid net type |
+| 33200007 | Invalid eap code |
 
-**Example**
+## Examples
 
 ```TypeScript
 import {eap} from '@kit.NetworkKit';
 let netType = 1;
 let eapCode = 1;
 let eapType = 25;
-let  eapData = (eapData:eap.EapData):void => {
-  console.info("rsp result",JSON.stringify(eapData))
-}
+let eapData = (eapData:eap.EapData):void => {
+  console.info("rsp result", JSON.stringify(eapData));
+};
     
-try {
-  eap.regCustomEapHandler(netType, eapCode, eapType, eapData);
-  console.info('regCustomEapHandler success');
-} catch (err) {
-  console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
+eap.regCustomEapHandler(netType, eapCode, eapType, eapData);
+console.info('regCustomEapHandler success');
 ```
 

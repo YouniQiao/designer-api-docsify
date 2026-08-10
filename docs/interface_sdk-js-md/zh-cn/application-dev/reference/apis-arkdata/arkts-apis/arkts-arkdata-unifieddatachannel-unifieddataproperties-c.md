@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## getDelayData
 
 ```TypeScript
@@ -38,7 +44,7 @@ extras?: Record<string, object>
 
 是一个字典类型对象，用于设置其他附加属性数据。非必填字段，默认值为空字典对象。
 
-**类型：** Record&lt;string, object&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
 
 **起始版本：** 12
 
@@ -58,9 +64,9 @@ extras?: Record<string, object>
 shareOptions?: ShareOptions
 ```
 
-指示[UnifiedData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_支持的设备内使用范围，非必填字段，默认值为CROSS\_APP。
+指示[UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md)支持的设备内使用范围，非必填字段，默认值为CROSS_APP。
 
-**类型：** ShareOptions
+**类型：** [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
 
 **起始版本：** 12
 
@@ -102,7 +108,7 @@ tag?: string
 readonly timestamp?: Date
 ```
 
-[UnifiedData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的生成时间戳。默认值为1970年1月1日（UTC）。
+[UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md)的生成时间戳。默认值为1970年1月1日（UTC）。
 
 **类型：** Date
 
@@ -124,7 +130,7 @@ readonly timestamp?: Date
 uriAuthorizationPolicies?: Array<UriPermission>
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST，只对单次数据生效，优先级较低，具体策略见[UriPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST，只对单次数据生效，优先级较低，具体策略见[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
 **类型：** Array&lt;UriPermission&gt;
 

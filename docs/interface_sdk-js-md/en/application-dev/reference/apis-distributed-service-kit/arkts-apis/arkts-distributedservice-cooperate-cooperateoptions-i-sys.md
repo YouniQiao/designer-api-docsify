@@ -1,6 +1,6 @@
 # CooperateOptions (System API)
 
-Screen hopping options, such as the exit position.
+键鼠穿越可选控制参数，控制穿出点位置。
 
 **Since:** 20
 
@@ -12,15 +12,21 @@ Screen hopping options, such as the exit position.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## displayId
 
 ```TypeScript
 displayId: long
 ```
 
-Screen ID of the peer device.
+对端设备屏幕标识。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -38,9 +44,9 @@ Screen ID of the peer device.
 displayX: int
 ```
 
-X coordinate of the mouse cursor.
+鼠标X坐标位置。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -58,9 +64,9 @@ X coordinate of the mouse cursor.
 displayY: int
 ```
 
-Y coordinate of the mouse cursor.
+鼠标Y坐标位置。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

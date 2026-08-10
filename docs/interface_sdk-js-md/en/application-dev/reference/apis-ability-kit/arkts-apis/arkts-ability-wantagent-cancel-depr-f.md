@@ -6,7 +6,7 @@
 function cancel(agent: WantAgent, callback: AsyncCallback<void>): void
 ```
 
-Cancel a WantAgent. Only the application that creates the WantAgent can cancel it.
+取消WantAgent实例。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,10 +26,10 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | to cancel. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Cancel the callback method for Want in WantAgent. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 取消WantAgent实例的回调方法 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -90,7 +90,7 @@ wantAgent.getWantAgent({
 function cancel(agent: WantAgent): Promise<void>
 ```
 
-Cancel a WantAgent. Only the application that creates the WantAgent can cancel it.
+取消WantAgent实例。使用Promise异步回调。
 
 **Since:** 7
 
@@ -110,15 +110,15 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | to cancel. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | 以Promise形式获取异步返回结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

@@ -1,5 +1,11 @@
 # isBandTypeSupported
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isBandTypeSupported
 
 ```TypeScript
@@ -22,7 +28,7 @@ Check whether the current device supports the specified band.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bandType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the band type. |
+| bandType | [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | Yes | Indicates the band type. |
 
 **Return value:**
 
@@ -34,11 +40,11 @@ Check whether the current device supports the specified band.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 2501000 | Operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

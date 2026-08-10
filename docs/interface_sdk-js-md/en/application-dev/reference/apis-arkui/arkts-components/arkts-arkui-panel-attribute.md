@@ -1,14 +1,12 @@
 # Panel properties/events
 
-Pane Attribute.
+窗格属性。
 
 **Inheritance/Implementation:** PanelAttribute extends [CommonMethod<PanelAttribute>](CommonMethod<PanelAttribute>)
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare class PanelAttribute extends CommonMethod<PanelAttribute>--><!--Device-unnamed-declare class PanelAttribute extends CommonMethod<PanelAttribute>-End-->
 
@@ -20,11 +18,11 @@ Pane Attribute.
 backgroundMask(color: ResourceColor)
 ```
 
-Called when the panel background mask is requested.
+指定Panel的背景蒙层。
 
-**Since:** 11
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 12
 
@@ -38,7 +36,7 @@ Called when the panel background mask is requested.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 指定Panel的背景蒙层。 |
 
 ## customHeight
 
@@ -46,11 +44,11 @@ Called when the panel background mask is requested.
 customHeight(value: Dimension | PanelHeight)
 ```
 
-Sets the height. It is valid only when PanelType is set to Custom.
+指定PanelType.CUSTOM状态下的高度。
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 12
 
@@ -64,7 +62,7 @@ Sets the height. It is valid only when PanelType is set to Custom.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| PanelHeight | Yes | value - Content height to set. |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| PanelHeight | Yes | 指定PanelType.CUSTOM状态下的高度。 |
 
 ## dragBar
 
@@ -72,11 +70,11 @@ Sets the height. It is valid only when PanelType is set to Custom.
 dragBar(value: boolean)
 ```
 
-Called when determining whether dragbar exists.
+设置是否存在控制条。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -90,7 +88,7 @@ Called when determining whether dragbar exists.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes |  |
+| value | boolean | Yes | 设置是否存在控制条，true表示存在，false表示不存在。 |
 
 ## fullHeight
 
@@ -98,11 +96,11 @@ Called when determining whether dragbar exists.
 fullHeight(value: number | string)
 ```
 
-Called when the height in the full state is specified.
+指定PanelType.Full状态下的高度。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -116,7 +114,7 @@ Called when the height in the full state is specified.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes |  |
+| value | number \| string | Yes | 指定PanelMode.Full状态下的高度。 |
 
 ## halfHeight
 
@@ -124,11 +122,11 @@ Called when the height in the full state is specified.
 halfHeight(value: number | string)
 ```
 
-Called when the height in the half state is specified.
+指定PanelMode.Half状态下的高度。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -142,7 +140,7 @@ Called when the height in the half state is specified.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes |  |
+| value | number \| string | Yes | 指定PanelMode.Half状态下的高度。 |
 
 ## miniHeight
 
@@ -150,11 +148,11 @@ Called when the height in the half state is specified.
 miniHeight(value: number | string)
 ```
 
-Called when the height in the mini state is specified.
+指定PanelMode.Mini状态下的高度。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -168,7 +166,7 @@ Called when the height in the mini state is specified.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes |  |
+| value | number \| string | Yes | 指定PanelMode.Mini状态下的高度。 |
 
 ## mode
 
@@ -176,11 +174,11 @@ Called when the height in the mini state is specified.
 mode(value: PanelMode)
 ```
 
-Called when the initial state of the slidable panel is set.
+可滑动面板的初始状态。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -194,7 +192,7 @@ Called when the initial state of the slidable panel is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [PanelMode](arkts-arkui-panelmode-e.md) | Yes | 设置可滑动面板的初始状态。 |
 
 ## onChange
 
@@ -255,11 +253,11 @@ onChange(
   )
 ```
 
-Called when the state of the slidable panel changes.
+当可滑动面板发生状态变化时触发。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -273,7 +271,7 @@ Called when the state of the slidable panel changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (     /**      * Width of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Width of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 11 dynamiconly      * @deprecated since 12      */       width: number,      /**      * Height of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Height of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 11 dynamiconly      * @deprecated since 12      */       height: number,      /**      * Initial state.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Initial state.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 11 dynamiconly      * @deprecated since 12      */       mode: PanelMode,     ) =&gt; void | Yes |  |
+| event | (     /**      * Width of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Width of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 11 dynamiconly      * @deprecated since 12      */       width: number,      /**      * Height of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Height of content area.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 11 dynamiconly      * @deprecated since 12      */       height: number,      /**      * Initial state.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Initial state.      *      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @FaAndStageModel      * @atomicservice      * @since 11 dynamiconly      * @deprecated since 12      */       mode: PanelMode,     ) =&gt; void | Yes |  |
 
 ## onHeightChange
 
@@ -281,11 +279,11 @@ Called when the state of the slidable panel changes.
 onHeightChange(callback: (value: number) => void)
 ```
 
-Called when height of the panel is changed
+当可滑动面板发生高度变化时触发。
 
-**Since:** 11
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 12
 
@@ -307,11 +305,11 @@ Called when height of the panel is changed
 show(value: boolean)
 ```
 
-Called when the panel slidable panel pops up.
+当滑动面板弹出时调用。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -325,7 +323,7 @@ Called when the panel slidable panel pops up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes |  |
+| value | boolean | Yes | 当滑动面板弹出时调用，true显示面板，false不显示面板。 |
 
 ## showCloseIcon
 
@@ -333,11 +331,11 @@ Called when the panel slidable panel pops up.
 showCloseIcon(value: boolean)
 ```
 
-Called when the panel show close icon.
+设置是否显示关闭图标。
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 12
 
@@ -351,7 +349,7 @@ Called when the panel show close icon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | used to set whether to display the close icon. |
+| value | boolean | Yes | 设置是否显示关闭图标，true表示显示，false表示不显示。 |
 
 ## type
 
@@ -359,11 +357,11 @@ Called when the panel show close icon.
 type(value: PanelType)
 ```
 
-Called when the slidable panel type is set.
+可滑动面板的类型。
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -377,5 +375,5 @@ Called when the slidable panel type is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | Yes | 设置可滑动面板的类型。 |
 

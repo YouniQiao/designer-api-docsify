@@ -1,11 +1,10 @@
 # NumericTextTransition
 
-Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the  
-[copyOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ property is ineffective. The flip animation fails if the text contains child components or is set via a styled string.
+数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，[copyOption](arkts-arkui-text-textattribute-i.md#copyoption)属性无效。当文本存在子组件时或通过属性字符串设置时，数字翻牌失效。
 
-**NumericTextTransition** inherits from [ContentTransition]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-c.md)。
 
-**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-component/textcommon-contenttransition-c.md)
+**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md)
 
 **Since:** 20
 
@@ -21,7 +20,7 @@ Implements a flip animation for numeric text. It applies only to positive intege
 constructor(options?: NumericTextTransitionOptions)
 ```
 
-A constructor used to create a **NumericTextTransition** object.
+用于创建NumericTextTransition对象的构造函数。
 
 **Since:** 20
 
@@ -39,7 +38,7 @@ A constructor used to create a **NumericTextTransition** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options of the numeric flip animation. The default value is inherited from [NumericTextTransitionOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | 设置数字翻牌动效。 默认值继承 [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md)。 |
 
 ## enableBlur
 
@@ -47,13 +46,13 @@ A constructor used to create a **NumericTextTransition** object.
 enableBlur?: boolean
 ```
 
-Whether to enable the blur effect for the flip animation.
+是否开启翻牌模糊效果。
 
-Default value: **false**
+默认值：false
 
-**true**: Enable the blur effect.
+true：开启翻牌模糊效果。
 
-**false**: Disable the blur effect.
+false：不开启翻牌模糊效果。
 
 **Type:** boolean
 
@@ -75,11 +74,11 @@ Default value: **false**
 flipDirection?: FlipDirection
 ```
 
-Direction of the flip animation.
+翻牌方向。
 
-Default value: **FlipDirection.DOWN
+默认值：FlipDirection.DOWN
 
-**Type:** FlipDirection
+**Type:** [FlipDirection](arkts-arkui-textcommon-flipdirection-e.md)
 
 **Since:** 20
 

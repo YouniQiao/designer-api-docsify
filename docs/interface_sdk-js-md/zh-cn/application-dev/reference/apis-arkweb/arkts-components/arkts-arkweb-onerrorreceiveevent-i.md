@@ -18,7 +18,7 @@ error: WebResourceError
 
 网页加载资源错误的封装信息。
 
-**类型：** WebResourceError
+**类型：** [WebResourceError](arkts-arkweb-webresourceerror-c.md)
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ request: WebResourceRequest
 
 网页请求的封装信息。
 
-**类型：** WebResourceRequest
+**类型：** [WebResourceRequest](../arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
 
 **起始版本：** 12
 

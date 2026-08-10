@@ -1,8 +1,8 @@
 # DataLoadParams
 
-Defines the data loading policy for the data sender in the lazy loading scenario.
+用于在延迟加载场景下描述发送方的数据加载策略。
 
-If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedDataLoadHandler** is preferentially used, and **loadHandler** does not take effect.
+当同时传入loadHandler和delayedDataLoadHandler时，优先使用delayedDataLoadHandler，loadHandler不生效。
 
 **Since:** 20
 
@@ -12,13 +12,19 @@ If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedData
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## delayedDataLoadHandler
 
 ```TypeScript
 delayedDataLoadHandler?: DelayedDataLoadHandler
 ```
 
-Indicates the callback function for deferred and non-blocking data loading.This handler is optional. If it is provided, it will take precedence over the synchronous DataLoadHandler (i.e., DataLoadHandler will be ignored).
+表示用于延迟加载数据的异步处理函数。默认值为undefined，不填写时仅使用loadHandler。
 
 **Since:** 22
 
@@ -38,7 +44,8 @@ Indicates the callback function for deferred and non-blocking data loading.This 
 loadHandler: DataLoadHandler
 ```
 
-Indicates the callback function for loading data.
+表示用于延迟加载数据的处理函数。该处理函数为同步函数，适用于处理简单业务逻辑，若函数业务逻辑较复杂、执行时间较长（3s以上），推荐使用  
+[DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md)。
 
 **Since:** 20
 
@@ -58,9 +65,9 @@ Indicates the callback function for loading data.
 dataLoadInfo: DataLoadInfo
 ```
 
-Indicates data loading information.
+用于描述当前发送方可生成的数据类型及数量信息。
 
-**Type:** DataLoadInfo
+**Type:** [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md)
 
 **Since:** 20
 

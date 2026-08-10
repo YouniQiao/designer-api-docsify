@@ -1,5 +1,11 @@
 # ArcAlphabetIndexer
 
+## 导入模块
+
+```TypeScript
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+```
+
 ## ArcAlphabetIndexer
 
 ```TypeScript
@@ -26,13 +32,13 @@ export declare function ArcAlphabetIndexer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 定义弧形字母索引条的初始化参数。 |
+| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ArcAlphabetIndexer实例对象。 |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | ArcAlphabetIndexer实例对象。 |
 
 
 ## ArcAlphabetIndexer
@@ -61,11 +67,11 @@ export declare function ArcAlphabetIndexer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArcAlphabetIndexerAttribute&gt; | 是 | arcAlphabetIndexer属性实例。 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcAlphabetIndexerAttribute&gt; | 是 | arcAlphabetIndexer属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 

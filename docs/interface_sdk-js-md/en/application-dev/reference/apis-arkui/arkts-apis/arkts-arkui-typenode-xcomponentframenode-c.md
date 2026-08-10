@@ -1,6 +1,6 @@
 # XComponentFrameNode
 
-Defines the XComponent type of FrameNode.
+定义XComponent 类型的FrameNode。
 
 **Inheritance/Implementation:** XComponentFrameNode extends [TypedFrameNode<XComponentAttribute>](TypedFrameNode<XComponentAttribute>)
 
@@ -18,7 +18,7 @@ Defines the XComponent type of FrameNode.
 abstract initialize(value: XComponentParameters): XComponentAttribute
 ```
 
-Initialize XComponent FrameNode.
+初始化XComponent类型的FrameNode。
 
 **Since:** 23
 
@@ -34,13 +34,13 @@ Initialize XComponent FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the options of the xcomponent. |
+| value | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) | Yes | xcomponent节点的选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
 
 ## initialize
 
@@ -48,7 +48,7 @@ Initialize XComponent FrameNode.
 abstract initialize(value: XComponentOptions): XComponentAttribute
 ```
 
-Initialize XComponent FrameNode.
+初始化XComponent类型的FrameNode。
 
 **Since:** 23
 
@@ -64,13 +64,13 @@ Initialize XComponent FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the options of the xcomponent. |
+| value | [XComponentOptions](../arkts-components/arkts-arkui-xcomponentoptions-i.md) | Yes | xcomponent节点的选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
 
 ## initialize
 
@@ -78,7 +78,7 @@ Initialize XComponent FrameNode.
 abstract initialize(params: NativeXComponentParameters): XComponentAttribute
 ```
 
-Initialize XComponent FrameNode.
+初始化XComponent类型的FrameNode。
 
 **Since:** 23
 
@@ -94,11 +94,11 @@ Initialize XComponent FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the constructor parameters of the xcomponent for native developing. |
+| params | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | Yes | 用于原生开发的 XComponent 的构造参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
 

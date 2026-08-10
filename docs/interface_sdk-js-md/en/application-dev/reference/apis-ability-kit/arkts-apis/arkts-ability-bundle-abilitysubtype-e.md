@@ -1,10 +1,10 @@
 # AbilitySubType
 
-    **NOTE**  
-    
-    This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided.
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，暂无替代接口。
 
-Enumerates the ability subtypes.
+Ability组件的子类型。
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ Enumerates the ability subtypes.
 UNSPECIFIED = 0
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ Installation conflict. (The basic information of the application to update is in
 CA = 1
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 

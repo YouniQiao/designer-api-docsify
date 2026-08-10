@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## blockStatus
 
 ```TypeScript
@@ -18,7 +24,7 @@ blockStatus: DeviceBlockStatus
 
 音频设备堵塞状态。
 
-**类型：** DeviceBlockStatus
+**类型：** [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md)
 
 **起始版本：** 13
 
@@ -36,7 +42,7 @@ devices: AudioDeviceDescriptors
 
 设备信息。
 
-**类型：** AudioDeviceDescriptors
+**类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **起始版本：** 13
 

@@ -1,6 +1,6 @@
 # Zoom
 
-Zoom继承自[ZoomQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
 
 变焦类，对设备变焦操作。
 
@@ -13,6 +13,12 @@ Zoom继承自[ZoomQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 <!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getZoomCenterPoint
 
@@ -36,14 +42,14 @@ Gets zoom center point.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The current zoom center point. |
+| [Point](arkts-camera-camera-point-i.md) | The current zoom center point. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## prepareZoom
 
@@ -67,10 +73,10 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -108,14 +114,14 @@ Sets zoom center point.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Target zoom center point. |
+| point | [Point](arkts-camera-camera-point-i.md) | 是 | Target zoom center point. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## unprepareZoom
 
@@ -139,10 +145,10 @@ Instructs the bottom layer to unprepare for zooming.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -10,6 +10,12 @@ Describes the ranging state change information.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
+## Modules to Import
+
+```TypeScript
+import { ranging } from 'kits/@kit.ConnectivityKit';
+```
+
 ## cause
 
 ```TypeScript
@@ -18,7 +24,7 @@ cause: RangingStoppedCause
 
 Cause of ranging stop.
 
-**Type:** RangingStoppedCause
+**Type:** [RangingStoppedCause](arkts-connectivity-ranging-rangingstoppedcause-e.md)
 
 **Since:** 26.0.0
 
@@ -58,7 +64,7 @@ handle?: int
 
 Indicates the handle number of ranging monitoring.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -78,7 +84,7 @@ state: RangingState
 
 Ranging state.
 
-**Type:** RangingState
+**Type:** [RangingState](arkts-connectivity-ranging-rangingstate-e.md)
 
 **Since:** 26.0.0
 

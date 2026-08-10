@@ -1,19 +1,23 @@
 # TimePicker
 
-**TimePicker** is a component that allows users to select a time from the given range through scrolling.
+TimePicker是用于滑动选择时间的组件，支持12/24小时制、多种时间格式（小时/分钟/秒）、循环滚动、样式定制和时间范围限制等功能。
+适用于日程安排、时间预约、任务管理等需要用户选择时间的场景，能够提升用户体验，减少输入错误，并可快速集成到应用中。
 
-**NOTE**
+> **说明：**
+>
+> - 该组件从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+>
+> - 该组件不建议开发者在动效过程中修改属性数据。
+>
+> - 最大显示行数在横、竖屏模式下存在差异。竖屏时默认为5行，横屏时依赖系统配置，未配置时默认显示为3行。
+> 可通过如下参数查看具体配置值$r('sys.float.ohos_id_picker_show_count_landscape')。
 
-- Avoid changing component attributes during animation processes.
+>
 
-- The maximum number of rows that can be displayed varies by screen orientation: In portrait mode, the default
- number of rows is 5. In landscape mode, the number of rows depends on the system configuration. If no system
- configuration is set, the default is 3 rows. To check the specific system configuration value for landscape mode,
- use **$r('sys.float.ohos_id_picker_show_count_landscape')**.
+## 子组件
 
-Child Components
-
-Not supported
+> 
+> 该组件为基础组件，不建议包含子组件。
 
 ## TimePicker
 
@@ -21,7 +25,7 @@ Not supported
 TimePicker(options?: TimePickerOptions)
 ```
 
-Creates a time picker, which uses the 24-hour time format by default.
+创建滑动选择器，默认使用24小时的时间区间。适用于日程安排、闹钟设置、时间记录等需要选择时间的场景。
 
 **Since:** 8
 
@@ -37,7 +41,13 @@ Creates a time picker, which uses the 24-hour time format by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the time picker.  |
+| options | [TimePickerOptions](../arkts-apis/arkts-arkui-timepicker-timepickeroptions-i.md) | No | 配置时间选择组件的参数。当需要自定义初始选中时间、时间格式、时间范围等配置时传入此参数， 不传入时使用默认配置（初始选中时间为当前系统时间，时间格式默认为小时和分钟，时间范围默认为00:00-23:59（默认结束时间为23:59:59））。 |
 
 ## Summary
 
+- [TimePickerDialogOptions](arkts-arkui-timepicker-timepickerdialogoptions-i.md)
+- [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)
+- [TimePickerResult](arkts-arkui-timepicker-timepickerresult-i.md)
+- [DateTimeOptions](arkts-arkui-timepicker-datetimeoptions-t.md)
+- [OnTimePickerChangeCallback](arkts-arkui-timepicker-ontimepickerchangecallback-t.md)
+- [TimePickerFormat](arkts-arkui-timepicker-timepickerformat-e.md)

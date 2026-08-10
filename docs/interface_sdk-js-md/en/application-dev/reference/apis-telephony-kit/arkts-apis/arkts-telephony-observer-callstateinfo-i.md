@@ -10,6 +10,12 @@ Indicates call state and number.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## number
 
 ```TypeScript
@@ -36,7 +42,7 @@ state: CallState
 
 Indicates call state.
 
-**Type:** CallState
+**Type:** [CallState](arkts-telephony-call-callstate-e.md)
 
 **Since:** 11
 

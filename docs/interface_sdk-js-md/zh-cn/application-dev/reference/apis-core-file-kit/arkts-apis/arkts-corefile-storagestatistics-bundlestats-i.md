@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## appSize
 
 ```TypeScript
@@ -18,7 +24,7 @@ appSize: long
 
 应用安装文件大小（单位为Byte）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ cacheSize: long
 
 应用缓存文件大小（单位为Byte）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -54,7 +60,7 @@ dataSize: long
 
 应用文件存储大小（除应用安装文件）（单位为Byte）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

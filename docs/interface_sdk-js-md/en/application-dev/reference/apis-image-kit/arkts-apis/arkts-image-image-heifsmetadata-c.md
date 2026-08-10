@@ -2,7 +2,7 @@
 
 HeifsMetadata implements Metadata
 
-HEIF image sequence metadata.
+HEIF序列图像元数据类，用于存储图像的元数据。
 
 **Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -14,13 +14,19 @@ HEIF image sequence metadata.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## clone
 
 ```TypeScript
 clone(): Promise<HeifsMetadata>
 ```
 
-Clones the HEIFS metadata. This API returns the result asynchronously through a promise.
+对Heifs元数据进行克隆。使用Promise异步回调。
 
 **Since:** 23
 
@@ -36,7 +42,7 @@ Clones the HEIFS metadata. This API returns the result asynchronously through a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the HEIFS metadata instance. |
+| Promise&lt;[HeifsMetadata](arkts-image-image-heifsmetadata-c.md)&gt; | Promise对象，成功返回Heifs元数据实例。 |
 
 ## createInstance
 
@@ -44,7 +50,7 @@ Clones the HEIFS metadata. This API returns the result asynchronously through a 
 static createInstance(): HeifsMetadata
 ```
 
-Creates an empty [HeifsMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
+创建一个空的[HeifsMetadata](arkts-image-image-heifsmetadata-c.md)实例。
 
 **Since:** 23
 
@@ -60,7 +66,7 @@ Creates an empty [HeifsMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Empty **HeifsMetadata** instance. |
+| [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) | 返回HeifsMetadata的空实例。 |
 
 ## getAllProperties
 
@@ -68,10 +74,9 @@ Creates an empty [HeifsMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
+获取图片中所有元数据的属性的值。使用Promise异步回调。
 
-For details about the properties, see  
-[HeifsPropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **Since:** 23
 
@@ -87,7 +92,7 @@ For details about the properties, see
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
 
 ## getBlob
 
@@ -95,7 +100,7 @@ For details about the properties, see
 getBlob(): Promise<ArrayBuffer>
 ```
 
-Obtains the metadata in binary format. This API uses a promise to return the result.
+以二进制数据的形式获取元数据。使用Promise异步回调。
 
 **Since:** 23
 
@@ -111,7 +116,7 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回元数据的二进制数据。 |
 
 ## getProperties
 
@@ -119,7 +124,9 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-Obtains the property values of image metadata. This API returns the result asynchronously through a promise.
+获取图像元数据的属性值。使用Promise异步回调。
+
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **Since:** 23
 
@@ -135,19 +142,19 @@ Obtains the property values of image metadata. This API returns the result async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array&lt;string&gt; | Yes | Names of the properties to query. |
+| key | Array&lt;string&gt; | Yes | 要获取的值的属性名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如果获取失败则返回错误码。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type |
 
 ## setBlob
 
@@ -155,7 +162,7 @@ Obtains the property values of image metadata. This API returns the result async
 setBlob(blob: ArrayBuffer): Promise<void>
 ```
 
-Replaces the current metadata with binary data. This API uses a promise to return the result.
+使用二进制数据替换当前元数据。使用Promise异步回调。
 
 **Since:** 23
 
@@ -171,19 +178,19 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blob | ArrayBuffer | Yes | Binary data used to replace the metadata. |
+| blob | ArrayBuffer | Yes | 要替换的二进制数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| 7600206 | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -191,10 +198,9 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。
 
-For details about the properties, see  
-[HeifsPropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **Since:** 23
 
@@ -210,19 +216,19 @@ For details about the properties, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing the **HeifsMetadata** properties and corresponding values. |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## heifsCanvasHeight
 
@@ -230,9 +236,13 @@ For details about the properties, see
 readonly heifsCanvasHeight?: int
 ```
 
-Canvas height.
+HEIF序列图片的画布高度。
 
-**Type:** int
+单位为像素（px）。
+
+该值为正整数。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -250,9 +260,13 @@ Canvas height.
 readonly heifsCanvasWidth?: int
 ```
 
-Canvas width.
+HEIF序列图片的画布宽度。
 
-**Type:** int
+单位为像素（px）。
+
+该值为正整数。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -270,9 +284,9 @@ Canvas width.
 readonly heifsDelayTime?: int
 ```
 
-Playback duration of each frame in an HEIF image sequence, in ms.
+HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -290,9 +304,13 @@ Playback duration of each frame in an HEIF image sequence, in ms.
 readonly heifsUnclampedDelayTime?: int
 ```
 
-Unclamped delay of each frame in ms.
+HEIF序列图片每帧未钳制的延迟时长。
 
-**Type:** int
+单位为毫秒（ms）。
+
+该值为正整数。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

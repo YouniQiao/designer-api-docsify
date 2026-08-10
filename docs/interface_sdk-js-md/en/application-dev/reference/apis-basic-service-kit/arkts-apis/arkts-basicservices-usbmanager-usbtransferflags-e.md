@@ -16,7 +16,7 @@ Enumerates USB transfer flags.
 USB_TRANSFER_SHORT_NOT_OK = 0
 ```
 
-Reports short frames as errors.
+将短帧报告为错误。
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ Reports short frames as errors.
 USB_TRANSFER_FREE_BUFFER = 1
 ```
 
-Automatically releases the transfer buffer.
+自动释放传输缓冲区。
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ Automatically releases the transfer buffer.
 USB_TRANSFER_FREE_TRANSFER = 2
 ```
 
-Automatically transfers after the callback is complete.
+完成回调后自动传输。
 
 **Since:** 18
 
@@ -64,7 +64,7 @@ Automatically transfers after the callback is complete.
 USB_TRANSFER_ADD_ZERO_PACKET = 3
 ```
 
-Adds an additional data packet to the transfer.
+传输将增加一个额外的数据包。
 
 **Since:** 18
 

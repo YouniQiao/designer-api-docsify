@@ -1,6 +1,6 @@
 # WindowInfoOptions
 
-Filter criteria for window information.
+窗口布局信息过滤选项。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Filter criteria for window information.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## excludeSystemWindows
 
 ```TypeScript
 excludeSystemWindows?: boolean
 ```
 
-Whether the result excludes system windows.If true, the result list does not include system windows;if false, the result list includes system windows.
+是否排除系统窗口。true表示需要排除，false表示不排除，默认为false。
 
 **Type:** boolean
 
@@ -40,9 +46,9 @@ Whether the result excludes system windows.If true, the result list does not inc
 foregroundAboveWindow?: int
 ```
 
-Only include windows with a higher z-order than the specified window ID.When this field is set to the default value 0, this field is not used as a filter criterion.
+需要过滤掉的不高于此窗口层级的窗口的ID。表示只返回层级高于这个窗口的窗口信息。默认值是0，表示忽略本选项；如果值小于0，返回1300016错误码；如果指定的窗口不存在，则与设置为0等价。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 0
 
@@ -64,9 +70,9 @@ Only include windows with a higher z-order than the specified window ID.When thi
 foregroundBelowWindow?: int
 ```
 
-Only include windows with a lower z-order than the specified window ID.When this field is set to the default value 0, this field is not used as a filter criterion.
+需要过滤掉的不低于此窗口层级的窗口的ID。表示只返回层级低于这个窗口的窗口信息。默认值是0，表示忽略本选项；如果值小于0，返回1300016错误码；如果指定的窗口不存在，则与设置为0等价。若同时指定foregroundBelowWindow和foregroundAboveWindow，且两者都是有效的窗口ID，但foregroundBelowWindow指定的窗口的层级未高于foregroundAboveWindow指定的窗口，则返回空数组。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 0
 

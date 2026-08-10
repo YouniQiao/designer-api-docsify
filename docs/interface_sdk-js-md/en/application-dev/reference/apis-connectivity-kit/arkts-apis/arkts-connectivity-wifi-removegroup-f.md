@@ -1,5 +1,11 @@
 # removeGroup
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## removeGroup
 
 ```TypeScript
@@ -28,15 +34,15 @@ Removes a P2P group.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	wifi.removeGroup();	
+  wifi.removeGroup();  
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## enabled
 
 ```TypeScript
@@ -42,7 +48,7 @@ sourceType?: SourceType
 
 启用录制控制器时由应用程序配置的预期音频源类型。用于匹配对应的录制场景和降噪模式。
 
-**类型：** SourceType
+**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **起始版本：** 26.0.0
 
@@ -64,7 +70,7 @@ uid?: int
 
 触发系统记录控制器状态更改的应用程序的UID。取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

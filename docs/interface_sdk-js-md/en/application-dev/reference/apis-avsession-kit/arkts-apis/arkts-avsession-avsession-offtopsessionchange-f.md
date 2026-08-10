@@ -1,5 +1,11 @@
 # offTopSessionChange
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## offTopSessionChange
 
 ```TypeScript
@@ -22,12 +28,36 @@ Unregister top session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVSessionDescriptor&gt; | No | Used to unregister listener for ('topSessionChange') command |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVSessionDescriptor&gt; | No | Top会话变化回调函数 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 6600101 | Session service exception. |
+| 201 | permission denied. |
+
+## Examples
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            avSession.offTopSessionChange((descriptor: avSession.AVSessionDescriptor) => {
+            });
+            avSession.offTopSessionChange();
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 

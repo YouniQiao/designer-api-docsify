@@ -12,6 +12,12 @@ FA模型的使用信息属性集合。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## count
 
 ```TypeScript
@@ -20,7 +26,7 @@ count: int
 
 卡片的点击次数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ formDimension: int
 
 卡片尺寸。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ formId: long
 
 卡片Id。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -80,7 +86,7 @@ formLastUsedTime: long
 
 卡片的上一次点击时间，单位：ms。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 

@@ -10,6 +10,12 @@ FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## compare
 
 ```TypeScript
@@ -32,26 +38,26 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | 是 | 要比较的实例对象。 |
-| targetStart | number | 否 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例中开始的偏移量。默认值：0。取值范围：0 <= targetStart <= target.length。 |
-| targetEnd | number | 否 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。取值范围：0 <= targetEnd <= target.length。 |
-| sourceStart | number | 否 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例中开始的偏移量。默认值：0。取值范围：0 <= sourceStart <= this.length。 |
-| sourceEnd | number | 否 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要比较的实例对象。 |
+| targetStart | number | 否 | `target`实例中开始的偏移量。默认值：0。取值范围：0 <= targetStart <= target.length。 |
+| targetEnd | number | 否 | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。取值范围：0 <= targetEnd <= target.length。 |
+| sourceStart | number | 否 | `this`实例中开始的偏移量。默认值：0。取值范围：0 <= sourceStart <= this.length。 |
+| sourceEnd | number | 否 | `this`实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| -1 | 返回比较结果。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1：当前排列在目标前；\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_0：当前与目标相同；\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1：当前排列在目标后。 |
+| -1 | 返回比较结果。&lt;br/&gt;-1：当前排列在目标前；&lt;br/&gt;0：当前与目标相同；&lt;br/&gt;1：当前排列在目标后。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -76,7 +82,7 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-将\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_实例中指定位置的数据复制到\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_的指定位置上，并返回复制的字节总长度。
+将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
 
 如果sourceEnd大于target的长度，则以target的长度为准，超出部分不会被覆盖。
 
@@ -94,10 +100,10 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | 是 | 要复制到的Buffer或Uint8Array实例。 |
-| targetStart | number | 否 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例中开始写入的偏移量。默认值：0。取值范围：0 <= targetStart <= UINT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
-| sourceStart | number | 否 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例中开始复制的偏移量。默认值：0。取值范围：0 <= sourceStart <= UINT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
-| sourceEnd | number | 否 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要复制到的Buffer或Uint8Array实例。 |
+| targetStart | number | 否 | `target`实例中开始写入的偏移量。默认值：0。取值范围：0 <= targetStart <= UINT32_MAX。 |
+| sourceStart | number | 否 | `this`实例中开始复制的偏移量。默认值：0。取值范围：0 <= sourceStart <= UINT32_MAX。 |
+| sourceEnd | number | 否 | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
 
 **返回值：**
 
@@ -109,10 +115,10 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -156,9 +162,9 @@ entries(): IterableIterator<[
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[             number, number         ]&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[             number, number         ]&gt; |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -190,7 +196,7 @@ while (!nextEntry.done) {
 equals(otherBuffer: Uint8Array | FastBuffer): boolean
 ```
 
-逐字节比较\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_和otherBuffer是否相等。
+逐字节比较`this`和otherBuffer是否相等。
 
 **起始版本：** 20
 
@@ -212,15 +218,15 @@ equals(otherBuffer: Uint8Array | FastBuffer): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 若\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_和otherBuffer逐字节相等则返回true，否则返回false。 |
+| boolean | 若`this`和otherBuffer逐字节相等则返回true，否则返回false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -241,7 +247,7 @@ console.info(buf1.equals(buf3).toString());
 fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer
 ```
 
-使用\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_填充当前对象指定位置的数据，默认为循环填充，并返回填充后的FastBuffer对象。
+使用`value`填充当前对象指定位置的数据，默认为循环填充，并返回填充后的FastBuffer对象。
 
 **起始版本：** 20
 
@@ -260,22 +266,22 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 | value | string \| FastBuffer \| Uint8Array \| number | 是 | 用于填充的值。 |
 | offset | number | 否 | 起始偏移量。默认值：0。取值范围：0 <= offset <= this.length。 |
 | end | number | 否 | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= end <= this.length。 |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符编码格式（\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_为string才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 字符编码格式（`value`为string才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回填充后的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回填充后的FastBuffer对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -291,7 +297,7 @@ console.info(filledBuffer.toString());
 includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
 ```
 
-检查FastBuffer对象是否包含\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_值。
+检查FastBuffer对象是否包含`value`值。
 
 **起始版本：** 20
 
@@ -309,15 +315,15 @@ includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, 
 | --- | --- | --- | --- |
 | value | string \| number \| FastBuffer \| Uint8Array | 是 | 要搜索的内容。 |
 | byteOffset | number | 否 | 字节偏移量。若为正数，则从0开始计算偏移量；若为负数，则从末尾开始计算偏移量。默认值：0。 |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 字符编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 若FastBuffer对象包含\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_值时返回true，否则为false。 |
+| boolean | 若FastBuffer对象包含`value`值时返回true，否则为false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -335,7 +341,7 @@ console.info(buf.includes('be').toString());
 indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-返回当前对象中首次出现\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_的索引，如果不包含\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_，则返回-1。
+返回当前对象中首次出现`value`的索引，如果不包含`value`，则返回-1。
 
 **起始版本：** 20
 
@@ -353,7 +359,7 @@ indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, e
 | --- | --- | --- | --- |
 | value | string \| number \| FastBuffer \| Uint8Array | 是 | 要查找的内容。 |
 | byteOffset | number | 否 | 字节偏移量。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。默认值：0。 |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 字符编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **返回值：**
 
@@ -361,7 +367,7 @@ indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, e
 | --- | --- |
 | number | 返回第一次出现的位置。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -395,9 +401,9 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -423,7 +429,7 @@ for (const key of keys) {
 lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-返回当前对象中最后一次出现\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_的索引，如果对象不包含\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_，则返回-1。
+返回当前对象中最后一次出现`value`的索引，如果对象不包含`value`，则返回-1。
 
 **起始版本：** 20
 
@@ -441,15 +447,15 @@ lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: numbe
 | --- | --- | --- | --- |
 | value | string \| number \| FastBuffer \| Uint8Array | 是 | 要搜索的内容。 |
 | byteOffset | number | 否 | 字节偏移量。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。默认值：this.length - 1。 |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符编码格式。默认值：'utf8'。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 字符编码格式。默认值：'utf8'。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 最后一次出现\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_值的索引。 |
+| number | 最后一次出现`value`值的索引。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -467,7 +473,7 @@ console.info(buf.lastIndexOf('buffer').toString());
 readBigInt64BE(offset?: number): bigint
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取有符号的大端序64位整数。
+从指定的`offset`处读取有符号的大端序64位整数。
 
 **起始版本：** 20
 
@@ -495,9 +501,9 @@ readBigInt64BE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -514,7 +520,7 @@ console.info(buf.readBigInt64BE(0).toString());
 readBigInt64LE(offset?: number): bigint
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取有符号的小端序64位整数。
+从指定的`offset`处读取有符号的小端序64位整数。
 
 **起始版本：** 20
 
@@ -542,9 +548,9 @@ readBigInt64LE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -561,7 +567,7 @@ console.info(buf.readBigInt64LE(0).toString());
 readBigUInt64BE(offset?: number): bigint
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取无符号的大端序64位整数。
+从指定的`offset`处读取无符号的大端序64位整数。
 
 **起始版本：** 20
 
@@ -589,9 +595,9 @@ readBigUInt64BE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -608,7 +614,7 @@ console.info(buf.readBigUInt64BE(0).toString());
 readBigUInt64LE(offset?: number): bigint
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取无符号的小端序64位整数。
+从指定的`offset`处读取无符号的小端序64位整数。
 
 **起始版本：** 20
 
@@ -636,9 +642,9 @@ readBigUInt64LE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -655,7 +661,7 @@ console.info(buf.readBigUInt64LE(0).toString());
 readDoubleBE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取64位大端序双精度值。
+从指定的`offset`处读取64位大端序双精度值。
 
 **起始版本：** 20
 
@@ -683,9 +689,9 @@ readDoubleBE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -701,7 +707,7 @@ console.info(buf.readDoubleBE(0).toString());
 readDoubleLE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取64位小端序双精度值。
+从指定的`offset`处读取64位小端序双精度值。
 
 **起始版本：** 20
 
@@ -729,9 +735,9 @@ readDoubleLE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -747,7 +753,7 @@ console.info(buf.readDoubleLE(0).toString());
 readFloatBE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取32位大端序浮点数。
+从指定的`offset`处读取32位大端序浮点数。
 
 **起始版本：** 20
 
@@ -775,9 +781,9 @@ readFloatBE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -793,7 +799,7 @@ console.info(buf.readFloatBE(0).toString());
 readFloatLE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取32位小端序浮点数。
+从指定的`offset`处读取32位小端序浮点数。
 
 **起始版本：** 20
 
@@ -821,9 +827,9 @@ readFloatLE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -839,7 +845,7 @@ console.info(buf.readFloatLE(0).toString());
 readInt16BE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取有符号的大端序16位整数。
+从指定的`offset`处读取有符号的大端序16位整数。
 
 **起始版本：** 20
 
@@ -867,9 +873,9 @@ readInt16BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -885,7 +891,7 @@ console.info(buf.readInt16BE(0).toString());
 readInt16LE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取有符号的小端序16位整数。
+从指定的`offset`处读取有符号的小端序16位整数。
 
 **起始版本：** 20
 
@@ -913,9 +919,9 @@ readInt16LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -931,7 +937,7 @@ console.info(buf.readInt16LE(0).toString());
 readInt32BE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取有符号的大端序32位整数。
+从指定的`offset`处读取有符号的大端序32位整数。
 
 **起始版本：** 20
 
@@ -959,9 +965,9 @@ readInt32BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -977,7 +983,7 @@ console.info(buf.readInt32BE(0).toString());
 readInt32LE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取有符号的小端序32位整数。
+从指定的`offset`处读取有符号的小端序32位整数。
 
 **起始版本：** 20
 
@@ -1005,9 +1011,9 @@ readInt32LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1023,7 +1029,7 @@ console.info(buf.readInt32LE(0).toString());
 readInt8(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取有符号的8位整数。
+从指定的`offset`处读取有符号的8位整数。
 
 **起始版本：** 20
 
@@ -1051,9 +1057,9 @@ readInt8(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1071,7 +1077,7 @@ console.info(buf.readInt8(1).toString());
 readIntBE(offset: number, byteLength: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取byteLength个字节，并将结果解释为支持最高48位精度的大端序、二进制补码有符号值。
+从指定的`offset`处读取byteLength个字节，并将结果解释为支持最高48位精度的大端序、二进制补码有符号值。
 
 **起始版本：** 20
 
@@ -1100,9 +1106,9 @@ readIntBE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1119,7 +1125,7 @@ console.info(num.toString());
 readIntLE(offset: number, byteLength: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_个字节，并将结果解释为支持最高48位精度的小端序、二进制补码有符号值。
+从指定的`offset`处读取`byteLength`个字节，并将结果解释为支持最高48位精度的小端序、二进制补码有符号值。
 
 **起始版本：** 20
 
@@ -1148,9 +1154,9 @@ readIntLE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1166,7 +1172,7 @@ console.info(buf.readIntLE(0, 6).toString(16));
 readUInt16BE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取无符号的大端序16位整数。
+从指定的`offset`处读取无符号的大端序16位整数。
 
 **起始版本：** 20
 
@@ -1194,9 +1200,9 @@ readUInt16BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1214,7 +1220,7 @@ console.info(buf.readUInt16BE(1).toString(16));
 readUInt16LE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处的buf读取无符号的小端序16位整数。
+从指定的`offset`处的buf读取无符号的小端序16位整数。
 
 **起始版本：** 20
 
@@ -1242,9 +1248,9 @@ readUInt16LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1262,7 +1268,7 @@ console.info(buf.readUInt16LE(1).toString(16));
 readUInt32BE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处的buf读取无符号的大端序32位整数。
+从指定的`offset`处的buf读取无符号的大端序32位整数。
 
 **起始版本：** 20
 
@@ -1290,9 +1296,9 @@ readUInt32BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1308,7 +1314,7 @@ console.info(buf.readUInt32BE(0).toString(16));
 readUInt32LE(offset?: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处的buf读取无符号的小端序32位整数。
+从指定的`offset`处的buf读取无符号的小端序32位整数。
 
 **起始版本：** 20
 
@@ -1336,9 +1342,9 @@ readUInt32LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1354,7 +1360,7 @@ console.info(buf.readUInt32LE(0).toString(16));
 readUInt8(offset?: number): number
 ```
 
-从\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处读取8位无符号整型数。
+从`offset`处读取8位无符号整型数。
 
 **起始版本：** 20
 
@@ -1382,9 +1388,9 @@ readUInt8(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1402,7 +1408,7 @@ console.info(buf.readUInt8(1).toString());
 readUIntBE(offset: number, byteLength: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处的buf读取\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
+从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
 
 **起始版本：** 20
 
@@ -1431,9 +1437,9 @@ readUIntBE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1449,7 +1455,7 @@ console.info(buf.readUIntBE(0, 6).toString(16));
 readUIntLE(offset: number, byteLength: number): number
 ```
 
-从指定的\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_处的buf读取\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_个字节，并将结果解释为支持最高48位精度的无符号小端序整数。
+从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号小端序整数。
 
 **起始版本：** 20
 
@@ -1478,9 +1484,9 @@ readUIntLE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1519,9 +1525,9 @@ subarray(start?: number, end?: number): FastBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回新的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回新的FastBuffer对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1558,15 +1564,15 @@ swap16(): FastBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 交换之后的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 16-bits |
+| 10200009 | The fastbuffer size must be a multiple of 16-bits |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1601,15 +1607,15 @@ swap32(): FastBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 交换之后的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 32-bits |
+| 10200009 | The fastbuffer size must be a multiple of 32-bits |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1644,15 +1650,15 @@ swap64(): FastBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 交换之后的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 64-bits |
+| 10200009 | The fastbuffer size must be a multiple of 64-bits |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1689,7 +1695,7 @@ toJSON(): Object
 | --- | --- |
 | Object | JSON对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1730,15 +1736,15 @@ toString(encoding?: string, start?: number, end?: number): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 字符串。当start >= this.length或start        end时返回空字符串。 |
+| string | 字符串。当start >= this.length或start > end时返回空字符串。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1773,9 +1779,9 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1834,10 +1840,10 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| 10200068 | The underlying ArrayBuffer is null or detach. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1875,7 +1881,7 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | bigint | 是 | 写入Buffer的数据。取值范围：-INT64\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= INT64\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | bigint | 是 | 写入Buffer的数据。取值范围：-INT64_MAX <= value <= INT64_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **返回值：**
@@ -1888,9 +1894,9 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1923,7 +1929,7 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | bigint | 是 | 写入Buffer的数据。取值范围：-INT64\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= INT64\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | bigint | 是 | 写入Buffer的数据。取值范围：-INT64_MAX <= value <= INT64_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **返回值：**
@@ -1936,9 +1942,9 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1971,7 +1977,7 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | bigint | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT64\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | bigint | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT64_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **返回值：**
@@ -1984,9 +1990,9 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2019,7 +2025,7 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | bigint | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT64\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | bigint | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT64_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **返回值：**
@@ -2032,9 +2038,9 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2067,7 +2073,7 @@ writeDoubleBE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-DOUBLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= DOUBLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-DOUBLE_MAX <= value <= DOUBLE_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **返回值：**
@@ -2080,9 +2086,9 @@ writeDoubleBE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2115,7 +2121,7 @@ writeDoubleLE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-DOUBLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= DOUBLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-DOUBLE_MAX <= value <= DOUBLE_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
 
 **返回值：**
@@ -2128,9 +2134,9 @@ writeDoubleLE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2163,7 +2169,7 @@ writeFloatBE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-FLOAT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= FLOAT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-FLOAT_MAX <= value <= FLOAT_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **返回值：**
@@ -2176,9 +2182,9 @@ writeFloatBE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2211,7 +2217,7 @@ writeFloatLE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-FLOAT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= FLOAT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-FLOAT_MAX <= value <= FLOAT_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **返回值：**
@@ -2224,9 +2230,9 @@ writeFloatLE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2259,7 +2265,7 @@ writeInt16BE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-INT16\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= INT16\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-INT16_MAX <= value <= INT16_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **返回值：**
@@ -2272,9 +2278,9 @@ writeInt16BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2307,7 +2313,7 @@ writeInt16LE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-INT16\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= INT16\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-INT16_MAX <= value <= INT16_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **返回值：**
@@ -2320,9 +2326,9 @@ writeInt16LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2355,7 +2361,7 @@ writeInt32BE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-INT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= INT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-INT32_MAX <= value <= INT32_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **返回值：**
@@ -2368,9 +2374,9 @@ writeInt32BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2403,7 +2409,7 @@ writeInt32LE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-INT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= INT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-INT32_MAX <= value <= INT32_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **返回值：**
@@ -2416,9 +2422,9 @@ writeInt32LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2451,7 +2457,7 @@ writeInt8(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：-INT8\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX <= value <= INT8\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：-INT8_MAX <= value <= INT8_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
 
 **返回值：**
@@ -2464,9 +2470,9 @@ writeInt8(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2516,9 +2522,9 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2565,9 +2571,9 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2600,7 +2606,7 @@ writeUInt16BE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT16\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT16_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **返回值：**
@@ -2613,9 +2619,9 @@ writeUInt16BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2651,7 +2657,7 @@ writeUInt16LE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT16\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT16_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
 
 **返回值：**
@@ -2664,9 +2670,9 @@ writeUInt16LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2702,7 +2708,7 @@ writeUInt32BE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT32_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **返回值：**
@@ -2715,9 +2721,9 @@ writeUInt32BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2750,7 +2756,7 @@ writeUInt32LE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer对象的数据。取值范围：0 <= value <= UINT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入FastBuffer对象的数据。取值范围：0 <= value <= UINT32_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
 
 **返回值：**
@@ -2763,9 +2769,9 @@ writeUInt32LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2798,7 +2804,7 @@ writeUInt8(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT8\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| value | number | 是 | 写入Buffer的数据。取值范围：0 <= value <= UINT8_MAX。 |
 | offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
 
 **返回值：**
@@ -2811,9 +2817,9 @@ writeUInt8(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2869,9 +2875,9 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2918,9 +2924,9 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

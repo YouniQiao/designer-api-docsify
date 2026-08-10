@@ -1,6 +1,6 @@
 # FileInfo (System API)
 
-Represents information about the recent file list.
+最近访问列表文件信息。
 
 **Since:** 10
 
@@ -14,13 +14,19 @@ Represents information about the recent file list.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { recent } from 'kits/@kit.CoreFileKit';
+```
+
 ## ctime
 
 ```TypeScript
 readonly ctime: number
 ```
 
-Time when the file was created.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: second.
+文件的创建时间。自1970年1月1日起至目标时间的秒数。
 
 **Type:** number
 
@@ -44,7 +50,7 @@ Time when the file was created.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: second.
 readonly fileName: string
 ```
 
-File name.
+文件名。
 
 **Type:** string
 
@@ -68,7 +74,7 @@ File name.
 readonly mode: number
 ```
 
-[Permissions on the file]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[文件权限信息](arkts-corefile-file-fs-stat-i.md)。
 
 **Type:** number
 
@@ -92,7 +98,7 @@ readonly mode: number
 readonly mtime: number
 ```
 
-Time when the file was last modified.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: ms.
+文件的修改时间。自1970年1月1日起至目标时间的毫秒数。
 
 **Type:** number
 
@@ -116,7 +122,7 @@ Time when the file was last modified.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: ms
 readonly size: number
 ```
 
-File size, in bytes.
+文件的大小（单位：字节）。
 
 **Type:** number
 
@@ -140,7 +146,7 @@ File size, in bytes.
 readonly srcPath: string
 ```
 
-File path.
+文件路径。
 
 **Type:** string
 
@@ -164,7 +170,7 @@ File path.
 readonly uri: string
 ```
 
-File URI.
+文件URI。
 
 **Type:** string
 

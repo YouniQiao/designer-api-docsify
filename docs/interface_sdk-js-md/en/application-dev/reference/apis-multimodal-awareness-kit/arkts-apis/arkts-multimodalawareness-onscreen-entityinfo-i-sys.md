@@ -12,6 +12,12 @@ Provides entity information perceived, including content, links, images, and oth
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## entityInfo
 
 ```TypeScript
@@ -20,7 +26,7 @@ entityInfo: Record<string, Object>
 
 Entity information of the awareness result, including the content, links, images, and other entity information.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 23
 

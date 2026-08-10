@@ -1,6 +1,6 @@
 # PluginComponentTemplate
 
-Plugin component template property.
+插件组件模板参数。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Plugin component template property.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## ability
 
 ```TypeScript
 ability: string
 ```
 
-Defines the ability.
+提供方Ability的bundleName。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Defines the ability.
 source: string
 ```
 
-Defines the source.
+组件模板名。
 
 **Type:** string
 

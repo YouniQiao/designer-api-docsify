@@ -1,5 +1,11 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## on
 
 ```TypeScript
@@ -20,12 +26,12 @@ Subscribes to the device status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| activity | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device status type. |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event type. |
+| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | Yes | Device status type. |
+| event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | Yes | Event type. |
 | reportLatencyNs | number | Yes | Report delay, in ns. The value ranges from **1000000000** to **3000000000**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ActivityResponse&gt; | Yes | Callback used to receive reported data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | Yes | Callback used to receive reported data. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let reportLatencyNs = 1000000000;

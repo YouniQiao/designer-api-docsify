@@ -1,5 +1,11 @@
 # onGetWantParamsCallback (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
 ## onGetWantParamsCallback
 
 ```TypeScript
@@ -32,7 +38,31 @@ Register callback of getting the want parameters of the form.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
+
+## Examples
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const callback = (formInfos: formInfo.FormInfo[]): Array<Record<string, Object>> => {
+    console.info(`onGetWantParamsCallback formInfos length: ${formInfos.length}`);
+    let wantParamsList: Array<Record<string, Object>> = [];
+    for (let formInfoItem of formInfos) {
+      let wantParams: Record<string, Object> = {};
+      wantParams['key'] = 'value';
+      wantParamsList.push(wantParams);
+    }
+    return wantParamsList;
+  };
+  formHost.onGetWantParamsCallback(callback);
+  console.info(`onGetWantParamsCallback success`);
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
 

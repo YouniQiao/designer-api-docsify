@@ -1,6 +1,6 @@
 # DeviceListener
 
-Provides hot swap information about an input device.
+描述输入设备热插拔的信息。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Provides hot swap information about an input device.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
+## Modules to Import
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## deviceId
 
 ```TypeScript
 deviceId: int
 ```
 
-Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change.
+输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 type: ChangedType
 ```
 
-Device change type, which indicates whether an input device is inserted or removed.
+输入设备插入或者移除。
 
-**Type:** ChangedType
+**Type:** [ChangedType](arkts-input-inputdevice-changedtype-t.md)
 
 **Since:** 9
 

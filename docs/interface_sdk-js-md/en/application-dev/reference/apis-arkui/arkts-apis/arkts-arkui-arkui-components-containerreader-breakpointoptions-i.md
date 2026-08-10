@@ -10,6 +10,12 @@ Defines the breakpoint configuration options for container dimension analysis.Sp
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript

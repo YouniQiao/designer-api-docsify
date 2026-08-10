@@ -1,12 +1,18 @@
 # injectTouchEvent
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## injectTouchEvent
 
 ```TypeScript
 function injectTouchEvent(touchEvent: TouchEventData): void
 ```
 
-Injects a touch event.
+触屏输入事件注入。
 
 **Since:** 11
 
@@ -23,17 +29,17 @@ Injects a touch event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touchEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Touch event data. [Action]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in this parameter cannot be set to **CANCEL**. |
+| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i.md) | Yes | 触屏注入描述信息。此参数中[Action](arkts-input-multimodalinput-keyevent-action-e.md)属性不支持设置为 CANCEL。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied.<br>**Applicable version:** 12 and later |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
@@ -83,6 +89,7 @@ struct Index {
             let touchEventUp: inputEventClient.TouchEventData = {
               touchEvent: touchEventUpData
             }
+            // Inject touch event
             inputEventClient.injectTouchEvent(touchEventUp);
 
             let touchEventDownData: TouchEvent = {
@@ -100,9 +107,10 @@ struct Index {
             let touchEventDown: inputEventClient.TouchEventData = {
               touchEvent: touchEventDownData
             }
+            // Inject touch event
             inputEventClient.injectTouchEvent(touchEventDown);
           } catch (error) {
-            console.error(`Failed to inject touchEvent, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to inject touchEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

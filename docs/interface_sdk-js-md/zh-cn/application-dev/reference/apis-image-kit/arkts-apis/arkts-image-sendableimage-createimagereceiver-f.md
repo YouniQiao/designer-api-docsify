@@ -1,5 +1,11 @@
 # createImageReceiver
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## createImageReceiver
 
 ```TypeScript
@@ -8,7 +14,7 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 通过图片大小、图片格式、容量创建ImageReceiver实例。
 
-由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 12
 
@@ -30,15 +36,15 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 如果操作成功，则返回ImageReceiver实例。 |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 如果操作成功，则返回ImageReceiver实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
+| 401 | The parameter check failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

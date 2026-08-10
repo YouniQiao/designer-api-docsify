@@ -1,5 +1,11 @@
 # setDiscoverable（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## setDiscoverable
 
 ```TypeScript
@@ -23,20 +29,20 @@ function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 是否允许本设备被发现。true表示允许被发现，false表示不允许被发现。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当设置成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
-avSession.setDiscoverable(true, (err) => {
-  console.info('setDiscoverable successfully');
+avSession.setDiscoverable(true, () => {
+    console.info('Succeeded in setting discoverable.');
 });
 ```
 
@@ -75,14 +81,14 @@ function setDiscoverable(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 avSession.setDiscoverable(true).then(() => {
-  console.info('setDiscoverable successfully');
+  console.info('Succeeded in setting discoverable.');
 });
 ```
 

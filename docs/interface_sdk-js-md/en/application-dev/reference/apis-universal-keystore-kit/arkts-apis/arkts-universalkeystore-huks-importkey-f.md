@@ -1,12 +1,24 @@
 # importKey
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## importKey
 
 ```TypeScript
 function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void
 ```
 
-Imports a key in plaintext. This API uses an asynchronous callback to return the result.
+导入明文密钥，使用Callback方式回调异步返回结果。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md#importkeyitem)
+> 替代。
 
 **Since:** 8
 
@@ -24,11 +36,11 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tags required for the import and key to import. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| keyAlias | string | Yes | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于导入时所需TAG和需要导入的密钥。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | Yes | 回调函数。当导入密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -83,7 +95,12 @@ huks.importKey(keyAlias, options, (err, data) => {
 function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 ```
 
-Imports a key in plaintext. This API uses a promise to return the result.
+导入明文密钥。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md#importkeyitem)替代。
 
 **Since:** 8
 
@@ -101,16 +118,16 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tags required for the import and key to import. |
+| keyAlias | string | Yes | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于导入时所需TAG和需要导入的密钥。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. |
+| Promise&lt;HuksResult&gt; | Promise对象，返回HuksResult。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

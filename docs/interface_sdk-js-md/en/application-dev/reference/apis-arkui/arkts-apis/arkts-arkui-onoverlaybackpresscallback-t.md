@@ -4,7 +4,7 @@
 type OnOverlayBackPressCallback = () => boolean
 ```
 
-Defines the callback type for intercepting a back-press event on an overlay.
+定义用于拦截overlay上返回按键事件的回调类型。
 
 **Since:** 26.0.0
 

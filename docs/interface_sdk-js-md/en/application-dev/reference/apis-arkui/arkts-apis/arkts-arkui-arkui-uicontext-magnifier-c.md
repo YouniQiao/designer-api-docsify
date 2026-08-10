@@ -1,6 +1,6 @@
 # Magnifier
 
-Provides the method for magnifier capabilities.
+提供控制放大镜的能力。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provides the method for magnifier capabilities.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## bind
 
 ```TypeScript
 bind(id: string): void
 ```
 
-Bind magnifier to a component.
+将放大镜和组件绑定。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Bind magnifier to a component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | component id. |
+| id | string | Yes | 组件id |
 
 ## show
 
@@ -40,7 +46,7 @@ Bind magnifier to a component.
 show(x: double, y: double): void
 ```
 
-Set the position of the magnified content.
+设置放大镜显示内容的位置。
 
 **Since:** 23
 
@@ -56,8 +62,8 @@ Set the position of the magnified content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | double | Yes | the x position of the magnified content relative to the component. The unit of x is vp. |
-| y | double | Yes | the y position of the magnified content relative to the component. The unit of y is vp. |
+| x | double | Yes | 放大镜显示内容相对组件水平方向坐标。 单位为vp |
+| y | double | Yes | 放大镜显示内容相对组件垂直方向坐标。 单位为vp |
 
 ## unbind
 
@@ -65,7 +71,7 @@ Set the position of the magnified content.
 unbind(): void
 ```
 
-Unbind the magnifier from its associated component.
+将放大镜和组件解绑。
 
 **Since:** 23
 

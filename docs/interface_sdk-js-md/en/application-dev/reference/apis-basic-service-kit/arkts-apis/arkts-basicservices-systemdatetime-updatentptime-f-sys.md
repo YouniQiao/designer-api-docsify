@@ -1,12 +1,18 @@
 # updateNtpTime (System API)
 
+## Modules to Import
+
+```TypeScript
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## updateNtpTime
 
 ```TypeScript
 function updateNtpTime(): Promise<void>
 ```
 
-Updates the NTP time from the NTP server This API returns the result asynchronously. In this way, the NTP time is updated from the NTP server only once within one hour.
+使用异步方式从NTP服务器更新NTP时间。该方法一小时内只会从NTP服务器更新一次NTP时间。
 
 **Since:** 14
 
@@ -22,23 +28,23 @@ Updates the NTP time from the NTP server This API returns the result asynchronou
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. |
+| 13000001 | Network connection error or OS error. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   systemDateTime.updateNtpTime().then(() => {
-    console.info(`Succeeded in update ntp time.`);
+    console.info(`Succeeded in updating ntp time.`);
   }).catch((error: BusinessError) => {
     console.error(`Failed to update ntp time. message: ${error.message}, code: ${error.code}`);
   });

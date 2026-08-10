@@ -1,12 +1,18 @@
 # initCurve
 
+## Modules to Import
+
+```TypeScript
+import { curves } from 'kits/@kit.ArkUI';
+```
+
 ## initCurve
 
 ```TypeScript
 export function initCurve(curve?: Curve): ICurve
 ```
 
-Implements initialization for the interpolation curve,which is used to create an interpolation curve based on the input parameter.
+插值曲线的初始化函数，可以根据入参创建一个插值曲线对象。
 
 **Since:** 23
 
@@ -22,11 +28,11 @@ Implements initialization for the interpolation curve,which is used to create an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Curve type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **Curve.Linear**. |
+| curve | [Curve](arkts-arkui-curve-e.md) | No | 曲线类型。&lt;br/&gt;默认值：Curve.Linear |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线的插值对象。 |
 

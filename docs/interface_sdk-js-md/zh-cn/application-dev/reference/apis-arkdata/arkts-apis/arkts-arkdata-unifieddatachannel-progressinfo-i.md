@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## progress
 
 ```TypeScript
@@ -18,7 +24,7 @@ progress: int
 
 系统上报拖拽任务进度百分比。取值范围为[-1-100]的整数，其中-1时代表本次获取数据失败，100时表示本次获取数据完成。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 15
 
@@ -40,7 +46,7 @@ status: ListenerStatus
 
 系统上报拖拽任务的状态码。
 
-**类型：** ListenerStatus
+**类型：** [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md)
 
 **起始版本：** 15
 

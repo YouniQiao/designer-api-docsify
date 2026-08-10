@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## fileFilter
 
 ```TypeScript
@@ -18,7 +24,7 @@ fileFilter?: FileFilter
 
 自定义文件名过滤的规则，默认为空，表示不进行过滤。
 
-**类型：** FileFilter
+**类型：** [FileFilter](arkts-corefile-file-fs-filefilter-i.md)
 
 **起始版本：** 26.0.0
 

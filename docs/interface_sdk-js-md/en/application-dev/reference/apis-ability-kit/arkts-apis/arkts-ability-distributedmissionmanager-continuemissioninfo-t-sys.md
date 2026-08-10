@@ -4,7 +4,7 @@
 export type ContinueMissionInfo = _ContinueMissionInfo
 ```
 
-Parameters corresponding to continue mission.
+迁移任务所需的参数。
 
 **Since:** 10
 

@@ -24,7 +24,7 @@ RichText(content: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string \| Resource | 是 | [since 20] { string } content [since 8 - 19]  |
+| content | string \| Resource | 是 | [since 20] { string } content [since 8 - 19] |
 
 ## 汇总
 

@@ -6,9 +6,17 @@
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace manager--><!--Device-unnamed-declare namespace manager-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { manager } from 'kits/@kit.ConnectivityKit';
+```
 
 ## 汇总
 
@@ -17,7 +25,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getlocalname) | 获取本地设备的名称。 |
-| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices) | 获取已与当前设备配对的设备列表。如果用户有ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_NEARLINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_PEER\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAC权限，则返回真实设备地址。否则，返回随机的设备地址 |
+| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices) | 获取已与当前设备配对的设备列表。如果用户有ohos.permission.GET_NEARLINK_PEER_MAC权限，则返回真实设备地址。否则，返回随机的设备地址 |
 | [getState](arkts-connectivity-manager-getstate-f.md#getstate) | 获取星闪状态。 |
 | [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isnearlinksupported) | 检查当前设备是否支持星闪。 |
 | [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offstatechange) | 取消订阅状态变更事件。 |

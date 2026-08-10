@@ -1,6 +1,6 @@
 # WallpaperResourceType (System API)
 
-Indicates the resource type of the wallpaper.
+定义壁纸资源的枚举类型。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Indicates the resource type of the wallpaper.
 DEFAULT
 ```
 
-Indicates the default wallpaper resource.
+默认为图片资源。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Indicates the default wallpaper resource.
 PICTURE
 ```
 
-Indicates the picture wallpaper resource.
+图片资源。
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ Indicates the picture wallpaper resource.
 VIDEO
 ```
 
-Indicates the video wallpaper resource.
+视频资源。
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ Indicates the video wallpaper resource.
 PACKAGE
 ```
 
-Indicates the package wallpaper resource.
+包资源。
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # DialogBaseOptions
 
-Base options shared by all dialog types.
+所有Dialog类型共享的基本选项。
 
 **Since:** 26.1.0
 
@@ -10,15 +10,21 @@ Base options shared by all dialog types.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## distortionMode
 
 ```TypeScript
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation Mode of the dialog.
+设置对话框的变形动画模式。
 
-**Type:** DistortionMode
+**Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
@@ -40,9 +46,9 @@ Sets the distortion animation Mode of the dialog.
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edgeLight animation Mode of the dialog.
+设置对话框的edgeLight动画模式。
 
-**Type:** EdgeLightMode
+**Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 

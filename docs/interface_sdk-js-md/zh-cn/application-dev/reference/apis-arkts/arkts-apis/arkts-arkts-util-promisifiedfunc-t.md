@@ -18,11 +18,11 @@ The type of promisify return function
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| args | FixedArray&lt;Any&gt; | 是 | arguments to be passed  |
+| args | FixedArray&lt;Any&gt; | 是 | arguments to be passed |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Any&gt; | - a promise value  |
+| Promise&lt;Any&gt; | a promise value |
 

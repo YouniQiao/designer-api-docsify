@@ -1,6 +1,6 @@
 # PrintDocumentFormat
 
-Enumerates the data formats.
+打印数据格式的枚举。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the data formats.
 DOCUMENT_FORMAT_AUTO = 0
 ```
 
-Auto-detected format.
+表示自动检测格式。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Auto-detected format.
 DOCUMENT_FORMAT_JPEG = 1
 ```
 
-JPEG.
+表示Jpeg格式。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ JPEG.
 DOCUMENT_FORMAT_PDF = 2
 ```
 
-PDF.
+表示PDF格式。
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ PDF.
 DOCUMENT_FORMAT_POSTSCRIPT = 3
 ```
 
-PostScript.
+表示PostScript格式。
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ PostScript.
 DOCUMENT_FORMAT_TEXT = 4
 ```
 
-Text.
+表示文本格式。
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Text.
 DOCUMENT_FORMAT_RAW = 5
 ```
 
-RAW.
+表示RAW格式。
 
 **Since:** 23
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ capturerInfo: AudioCapturerInfo
 
 音频采集器信息。
 
-**类型：** AudioCapturerInfo
+**类型：** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
 **起始版本：** 8
 
@@ -38,7 +44,7 @@ playbackCaptureConfig?: AudioPlaybackCaptureConfig
 
 <br/
 
-**类型：** AudioPlaybackCaptureConfig
+**类型：** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
 
 **起始版本：** 10
 
@@ -58,9 +64,9 @@ playbackCaptureConfig?: AudioPlaybackCaptureConfig
 playbackCaptureMode?: AudioPlaybackCaptureMode
 ```
 
-内录模式。可设置为AudioPlaybackCaptureMode中的枚举值或其按位或组合，当前仅支持MODE\_DEFAULT（0x0）、MODE\_MEDIA（0x1）、MODE\_EXCLUDING\_SELF（0x8000），以及MODE\_MEDIA和MODE\_EXCLUDING\_SELF的按位或组合（0x8001）。
+内录模式。可设置为AudioPlaybackCaptureMode中的枚举值或其按位或组合，当前仅支持MODE_DEFAULT（0x0）、MODE_MEDIA（0x1）、MODE_EXCLUDING_SELF（0x8000），以及MODE_MEDIA和MODE_EXCLUDING_SELF的按位或组合（0x8001）。
 
-**类型：** AudioPlaybackCaptureMode
+**类型：** [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md)
 
 **起始版本：** 26.0.0
 
@@ -80,7 +86,7 @@ streamInfo: AudioStreamInfo
 
 音频流信息。
 
-**类型：** AudioStreamInfo
+**类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **起始版本：** 8
 

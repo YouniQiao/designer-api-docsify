@@ -1,6 +1,6 @@
 # IMonitor
 
-Define IMonitor interface
+当监听的状态变量变化时，状态管理框架侧将回调开发者注册的函数，并传入变化信息。变化信息的类型为IMonitor。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Define IMonitor interface
 value<T>(path?: string): IMonitorValue<T> | undefined
 ```
 
-Return the pair of the value before the most recent change and current value for given path.If path does not exist, return undefined; If path is not specified, return the value pair corresponding to the first path in dirty.
+获取指定path的变化信息。
 
 **Since:** 12
 
@@ -30,19 +30,17 @@ Return the pair of the value before the most recent change and current value for
 
 <!--Device-IMonitor-value<T>(path?: string): IMonitorValue<T> | undefined--><!--Device-IMonitor-value<T>(path?: string): IMonitorValue<T> | undefined-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | No |  |
+| path | string | No | 被监听的状态变量路径名。未指定时默认使用变化路径数组dirty中的第一个路径。从API版本26.0.0开始，默认使用dirty中第一个非通配符路径。 当指定路径为通配符路径时，返回undefined。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; |  |
+| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; |  |
 
 ## dirty
 
@@ -50,7 +48,7 @@ Return the pair of the value before the most recent change and current value for
 dirty: Array<string>
 ```
 
-Array of changed paths(keys)
+被监听的状态变量中发生变化的属性路径数组，路径格式与@Monitor装饰器指定的状态变量名路径一致，支持点号分隔的嵌套属性路径（如'a.b.c'）。从API版本26.0.0开始，当通配符能力开启时，该数组中可能包含通配符路径，通过[value](arkts-arkui-imonitor-i.md#value)()方法查询通配符路径将返回undefined。
 
 **Type:** Array&lt;string&gt;
 

@@ -1,6 +1,6 @@
 # LoadingProgressStyle
 
-Enumerates style types of **LoadingProgress**. This API is not recommended for use.
+表示LoadingProgress的样式类型，不推荐使用。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates style types of **LoadingProgress**. This API is not recommended for u
 Default
 ```
 
-Default loading style.
+默认加载样式。
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Default loading style.
 Circular
 ```
 
-Circular loading style.
+环形加载样式。
 
 **Since:** 8
 
@@ -56,7 +56,7 @@ Circular loading style.
 Orbital
 ```
 
-Comet-shaped loading style.
+彗星形加载样式。
 
 **Since:** 8
 

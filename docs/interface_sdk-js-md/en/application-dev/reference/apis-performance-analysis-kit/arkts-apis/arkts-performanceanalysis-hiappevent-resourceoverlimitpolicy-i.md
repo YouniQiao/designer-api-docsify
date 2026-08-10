@@ -1,6 +1,6 @@
 # ResourceOverlimitPolicy
 
-Defines the resource leak event configuration policy.
+提供资源泄漏事件配置策略的定义。
 
 **Since:** 24
 
@@ -10,26 +10,33 @@ Defines the resource leak event configuration policy.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## jsHeapLogtype
 
 ```TypeScript
 jsHeapLogtype?: string
 ```
 
-The policy for RESOURCE\_OVERLIMIT event  
-**event**: No heap snapshot is transferred when an OOM error occurs.
+设置传递堆快照规格。
 
-**event\_rawheap**: The system generates and transfers a heap snapshot when an OOM error occurs.
+"event"：应用发生OOM时，不传递堆快照。
 
-**NOTE**
+"event_rawheap"：应用发生OOM时，系统生成并传递堆快照。
 
-- Only the preceding two values are supported. If other values are passed in, the method fails to be called and  
-takes no effect.  
-- If the parameter value is **event\_rawheap**, the heap snapshot file may fail to be generated. This is because  
-the application may exit in advance due to a freeze event triggered by a performance problem.
+**说明：**
 
--The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle, the  
-enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
+- 当前仅接收以上二值，如果传入其他内容，方法将调用失败，不会产生任何效果。  
+- 参数值为"event_rawheap"，无法确保成功生成堆快照文件。原因是生成堆快照时，应用可能因性能问题触发冻屏而提前退出。  
+- 应用每次使能行为只在应用当前生命周期生效，在同一生命周期内，以最后一次成功调用的使能状态为准。应用重启后，需要重新设置使能状态。
+
+**起始版本**：26.0.0
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **Type:** string
 
@@ -49,15 +56,15 @@ enabling status of the last successful call is used. After the application resta
 pageSwitchLogEnable?: boolean
 ```
 
-Whether to enable the page switching log for RESOURCE\_OVERLIMIT event.
+是否使能资源泄漏事件的页面切换日志。
 
-**true**: yes.
+true：使能资源泄漏事件的页面切换日志。
 
-**false**: no.
+false：不使能资源泄漏事件的页面切换日志。
 
-The default value is **false**.
+默认值：false。
 
-Note: The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle,the enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
+**说明：**应用每次使能行为只在应用当前生命周期生效，在同一生命周期内，以最后一次成功调用的使能状态为准。应用重启后，需要重新设置使能状态。
 
 **Type:** boolean
 
@@ -77,7 +84,13 @@ Note: The enabling behavior of an application takes effect only in its current l
 useRefinedLogFileName?: boolean
 ```
 
-This parameter is used to control whether to output refined external log file names.The default value is false.
+是否使能事件日志文件名精细化开关。
+
+true：使能事件日志文件名精细化开关。
+
+false：不使能事件日志文件名精细化开关。
+
+默认值：false。
 
 **Type:** boolean
 

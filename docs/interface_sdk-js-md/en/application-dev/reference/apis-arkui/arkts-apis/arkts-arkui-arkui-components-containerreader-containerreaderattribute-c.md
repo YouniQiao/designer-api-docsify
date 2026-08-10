@@ -1,6 +1,6 @@
 # ContainerReaderAttribute
 
-Defines the ContainerReader attribute functions.Provides methods for configuring container reading parameters and breakpoint analysis properties.
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
 
 **Inheritance/Implementation:** ContainerReaderAttribute extends [CommonMethod<ContainerReaderAttribute>](CommonMethod<ContainerReaderAttribute>)
 
@@ -12,13 +12,19 @@ Defines the ContainerReader attribute functions.Provides methods for configuring
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## breakpointConfig
 
 ```TypeScript
 breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 ```
 
-Sets the breakpoint configuration for container dimension analysis.Defines a set of threshold values that trigger different layout behaviors based on container size.
+设置断点配置选项，定义触发不同布局行为的尺寸阈值。
 
 **Since:** 26.0.0
 
@@ -38,11 +44,11 @@ Sets the breakpoint configuration for container dimension analysis.Defines a set
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | An array of breakpoint values in vp |
+| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No | 断点配置选项，包含宽度和高度的断点阈值数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md) |  |
 

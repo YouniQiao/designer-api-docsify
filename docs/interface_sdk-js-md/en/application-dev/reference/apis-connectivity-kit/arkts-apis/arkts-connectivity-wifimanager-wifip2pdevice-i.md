@@ -10,6 +10,12 @@ P2P device information.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceAddress
 
 ```TypeScript
@@ -36,7 +42,7 @@ deviceAddressType?: DeviceAddressType
 
 Device mac address type
 
-**Type:** DeviceAddressType
+**Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
 **Since:** 10
 
@@ -72,7 +78,7 @@ deviceStatus: P2pDeviceStatus
 
 Device status
 
-**Type:** P2pDeviceStatus
+**Type:** [P2pDeviceStatus](arkts-connectivity-wifi-p2pdevicestatus-e.md)
 
 **Since:** 9
 
@@ -90,7 +96,7 @@ groupCapabilities: int
 
 Device group capabilities
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

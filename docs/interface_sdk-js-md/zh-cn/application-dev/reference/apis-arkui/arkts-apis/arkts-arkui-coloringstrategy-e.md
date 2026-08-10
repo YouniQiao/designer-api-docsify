@@ -16,7 +16,7 @@
 INVERT = 'invert'
 ```
 
-设置前景色为控件背景色的反色。仅支持在[foregroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中设置该枚举。
+设置前景色为控件背景色的反色。仅支持在[foregroundColor](arkts-arkui-common-commonmethod-i.md#foregroundcolor)中设置该枚举。
 
 **起始版本：** 10
 
@@ -37,7 +37,7 @@ AVERAGE = 'average'
 ```
 
 设置控件背景阴影色为控件背景阴影区域的平均色。仅支持在入参类型为ShadowOptions的  
-[shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中设置该枚举。
+[shadow](arkts-arkui-common-commonmethod-i.md#shadow)中设置该枚举。
 
 **起始版本：** 11
 
@@ -58,7 +58,7 @@ PRIMARY = 'primary'
 ```
 
 设置控件背景阴影色为控件背景阴影区域的主色。仅支持在入参类型为ShadowOptions的  
-[shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中设置该枚举。
+[shadow](arkts-arkui-common-commonmethod-i.md#shadow)中设置该枚举。
 
 **起始版本：** 11
 

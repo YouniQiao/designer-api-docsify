@@ -1,6 +1,7 @@
 # Theme
 
-Defines the struct of Theme.
+当前生效的主题风格对象，可从  
+[onWillApplyTheme](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#onwillapplytheme12)中获取。
 
 **Since:** 23
 
@@ -10,15 +11,21 @@ Defines the struct of Theme.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomTheme } from 'kits/@kit.ArkUI';
+```
+
 ## colors
 
 ```TypeScript
 colors: Colors
 ```
 
-Define tokens associated with color resources.
+主题颜色资源。
 
-**Type:** Colors
+**Type:** [Colors](arkts-arkui-arkui-theme-colors-i.md)
 
 **Since:** 23
 

@@ -4,7 +4,7 @@ TextTimer组件的控制器，用于控制文本计时器。一个TextTimer组�
 
 ## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+```ts textTimerController: TextTimerController = new TextTimerController();```
 
 **起始版本：** 8
 

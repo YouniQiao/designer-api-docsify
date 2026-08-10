@@ -36,7 +36,7 @@ In normal mode, the advertisement packet is reported immediately after being sca
 BATCH = 2
 ```
 
-Enables delayed sending of advertising packets in batch mode by the interval specified by\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Enables delayed sending of advertising packets in batch mode by the interval specified by{@link ScanOptions#interval}.
 
 **Since:** 19
 

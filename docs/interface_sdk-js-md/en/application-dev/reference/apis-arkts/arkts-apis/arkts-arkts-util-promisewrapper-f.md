@@ -1,13 +1,18 @@
 # promiseWrapper
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## promiseWrapper
 
 ```TypeScript
 function promiseWrapper(original: (err: Object, value: Object) => void): Object
 ```
 
-Receives a function that uses the error-first callback mode, that is, uses \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ as the last  
-parameter, and uses a promise to return the result.
+接收一个使用错误优先回调模式的函数（即最后一个参数为 `(err, value) => callback`），并通过 promise 返回结果。
 
 **Since:** 7
 
@@ -25,11 +30,11 @@ parameter, and uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | Yes | Asynchronous function. |
+| original | (err: Object, value: Object) =&gt; void | Yes | 异步函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Promise in the error-first style (that is, (err, value) =       ... is called as the last parameter) . |
+| Object | 错误优先风格（即最后一个参数为 (err, value) => ... ）的 promise。 |
 

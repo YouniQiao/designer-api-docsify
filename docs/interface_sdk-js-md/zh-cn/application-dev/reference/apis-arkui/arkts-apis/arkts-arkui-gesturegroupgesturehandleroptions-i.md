@@ -20,9 +20,9 @@ gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestur
 
 **说明：**
 
-当需要为一个组件同时添加单击和双击手势时，可在[GestureGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中添加两个[TapGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，需要双击手势在前，单击手势在后，否则不生效。
+当需要为一个组件同时添加单击和双击手势时，可在[GestureGroup](arkts-arkui-gesture-con.md#gesturegroup)中添加两个[TapGesture](arkts-arkui-gesture-con.md#tapgesture)，需要双击手势在前，单击手势在后，否则不生效。
 
-**类型：** GestureHandler&lt;TapGestureHandler \| LongPressGestureHandler \| PanGestureHandler \| SwipeGestureHandler \| PinchGestureHandler \| RotationGestureHandler \| GestureGroupHandler&gt;[]
+**类型：** [GestureHandler](arkts-arkui-gesturehandler-c.md)&lt;TapGestureHandler \| LongPressGestureHandler \| PanGestureHandler \| SwipeGestureHandler \| PinchGestureHandler \| RotationGestureHandler \| GestureGroupHandler&gt;[]
 
 **起始版本：** 12
 
@@ -46,7 +46,7 @@ mode: GestureMode
 
 默认值：GestureMode.Sequence
 
-**类型：** GestureMode
+**类型：** [GestureMode](arkts-arkui-gesture-gesturemode-e.md)
 
 **起始版本：** 12
 

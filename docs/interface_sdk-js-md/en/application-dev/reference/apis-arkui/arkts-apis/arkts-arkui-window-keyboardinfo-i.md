@@ -1,6 +1,6 @@
 # KeyboardInfo
 
-Describes the information about the soft keyboard window.
+软键盘窗口信息。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Describes the information about the soft keyboard window.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## animated
 
 ```TypeScript
 animated?: boolean
 ```
 
-Whether there is a show/hide animation. **true** if there is a show/hide animation, **false** otherwise.
+当前是否有显示/隐藏动画，true表示有动画，false表示没有。
 
 **Type:** boolean
 
@@ -36,9 +42,9 @@ Whether there is a show/hide animation. **true** if there is a show/hide animati
 beginRect: Rect
 ```
 
-Position and size of the soft keyboard before the animation starts.
+动画开始前软键盘的位置和大小。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 18
 
@@ -56,9 +62,9 @@ Position and size of the soft keyboard before the animation starts.
 config?: WindowAnimationConfig
 ```
 
-Animation configuration.
+动画配置信息。
 
-**Type:** WindowAnimationConfig
+**Type:** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
 **Since:** 20
 
@@ -76,9 +82,9 @@ Animation configuration.
 endRect: Rect
 ```
 
-Position and size of the soft keyboard after the animation ends.
+动画结束后软键盘的位置和大小。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 18
 

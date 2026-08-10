@@ -4,7 +4,7 @@
 declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph
 ```
 
-Implements a carrier that stores the text content and style. It supports operations such as layout and drawing.
+保存文本内容及样式的载体，支持排版与绘制操作。
 
 **Since:** 20
 

@@ -16,7 +16,7 @@
 CONFLICT_POLICY_DEFAULT = 0
 ```
 
-默认冲突策略，按照端云同步模式[SyncMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_执行。
+默认冲突策略，按照端云同步模式[SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)执行。
 
 **起始版本：** 26.0.0
 

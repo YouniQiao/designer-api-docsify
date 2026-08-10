@@ -1,5 +1,11 @@
 # isPiPEnabled
 
+## 导入模块
+
+```TypeScript
+import { PiPWindow } from 'kits/@kit.ArkUI';
+```
+
 ## isPiPEnabled
 
 ```TypeScript
@@ -24,10 +30,10 @@ function isPiPEnabled(): boolean
 | --- | --- |
 | boolean | 当前系统是否支持画中画功能。true表示支持，false则表示不支持。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-let enable: boolean = PiPWindow.isPiPEnabled();
-console.info('isPiPEnabled: ' + enable);
+let enable: boolean = PiPWindow.isPiPEnabled(); // 获取当前系统是否支持画中画功能
+console.info('isPiPEnabled:' + enable);
 ```
 

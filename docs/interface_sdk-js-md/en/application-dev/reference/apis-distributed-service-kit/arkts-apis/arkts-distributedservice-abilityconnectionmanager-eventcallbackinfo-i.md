@@ -1,6 +1,6 @@
 # EventCallbackInfo
 
-Defines the event callback information.
+回调方法的接收信息。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Defines the event callback information.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## data
 
 ```TypeScript
 data?: ArrayBuffer
 ```
 
-Received byte stream.
+表示接收的字节流。
 
 **Type:** ArrayBuffer
 
@@ -36,7 +42,7 @@ Received byte stream.
 msg?: string
 ```
 
-Received message.
+表示接收的消息。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ Received message.
 reason?: DisconnectReason
 ```
 
-Disconnection reason.
+表示断连原因。
 
-**Type:** DisconnectReason
+**Type:** [DisconnectReason](arkts-distributedservice-abilityconnectionmanager-disconnectreason-e.md)
 
 **Since:** 18
 
@@ -76,9 +82,9 @@ Disconnection reason.
 sessionId: int
 ```
 
-Collaboration session ID.
+表示当前事件对应的协同会话ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 

@@ -1,12 +1,18 @@
 # isHapModuleRemovable (System API)
 
+## Modules to Import
+
+```TypeScript
+import { freeInstall } from 'kits/@kit.AbilityKit';
+```
+
 ## isHapModuleRemovable
 
 ```TypeScript
 function isHapModuleRemovable(bundleName: string, moduleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a module can be removed. This API uses an asynchronous callback to return the result.
+查询指定模块是否可以被移除。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,20 +30,20 @@ Checks whether a module can be removed. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| moduleName | string | Yes | Module name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the module can be removed, **false** otherwise). If the operation fails, **err** is an error object. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| moduleName | string | Yes | 应用程序模块名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)。当获取成功时，err为undefined，data为bool值 ，true表示可以移除；false表示不可移除；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700002 | The specified module name is not found. |
+| 17700001 | The specified bundle name is not found. |
 
 
 ## isHapModuleRemovable
@@ -46,7 +52,7 @@ Checks whether a module can be removed. This API uses an asynchronous callback t
 function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<boolean>
 ```
 
-Checks whether a module can be removed. This API uses a promise to return the result.
+查询指定模块是否可以被移除。使用Promise异步回调。
 
 **Since:** 9
 
@@ -64,23 +70,23 @@ Checks whether a module can be removed. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| moduleName | string | Yes | Module name. |
+| bundleName | string | Yes | 应用Bundle名称。 |
+| moduleName | string | Yes | 应用程序模块名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the module can be removed, **true** is returned ; otherwise, **false** is returned. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示可以移除；返回false表示不可移除。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700002 | The specified module name is not found. |
+| 17700001 | The specified bundle name is not found. |
 

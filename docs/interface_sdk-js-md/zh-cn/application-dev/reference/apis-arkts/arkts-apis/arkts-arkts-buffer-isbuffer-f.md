@@ -1,12 +1,18 @@
 # isBuffer
 
+## 导入模块
+
+```TypeScript
+import { buffer } from 'kits/@kit.ArkTS';
+```
+
 ## isBuffer
 
 ```TypeScript
 function isBuffer(obj: Object): boolean
 ```
 
-判断\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_是否为Buffer。
+判断`obj`是否为Buffer。
 
 **起始版本：** 9
 
@@ -30,7 +36,7 @@ function isBuffer(obj: Object): boolean
 | --- | --- |
 | boolean | 如果obj是Buffer，则返回true，否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

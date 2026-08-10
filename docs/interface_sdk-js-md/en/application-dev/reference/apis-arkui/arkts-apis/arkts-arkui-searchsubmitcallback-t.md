@@ -4,7 +4,7 @@
 export type SearchSubmitCallback = (searchContent: string, event?: SubmitEvent) => void
 ```
 
-Declare the event listener callback of the enter key.
+点击搜索图标、搜索按钮或者按下软键盘搜索按钮时的回调事件。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ Declare the event listener callback of the enter key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchContent | string | Yes | The submitted content of search.  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Provides the method of keeping Search editable state when submitted.  |
+| searchContent | string | Yes | 当前搜索框中输入的文本内容。 |
+| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | No | 提交事件。 |
 

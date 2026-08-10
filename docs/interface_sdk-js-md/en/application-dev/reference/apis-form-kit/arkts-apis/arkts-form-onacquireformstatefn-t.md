@@ -4,7 +4,7 @@
 type OnAcquireFormStateFn = (want: Want) => formInfo.FormState
 ```
 
-Called to return a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ by default.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_
+Called to return a {@link FormState} object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns {@link FormState#DEFAULT} by default.&lt;/p&gt;
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ Called to return a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object.\_\_\_HTML\_TAG\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the description of the form for which the \_\_\_JSDOC\_LINK\_USD\_0\_\_\_ is obtained. The description covers the bundle name, ability name, module name, form name, and form dimensions.  |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the description of the form for which the {@link formInfo#FormState} is obtained. The description covers the bundle name, ability name, module name, form name, and form dimensions. |
 
 **Return value:**
 

@@ -1,6 +1,6 @@
 # SceneMode
 
-Enumerates the camera scene modes.
+枚举，相机模式。
 
 **Since:** 11
 

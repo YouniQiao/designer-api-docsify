@@ -4,7 +4,7 @@
 type OnDisconnectFn = (elementName: ElementName) => void
 ```
 
-Callback invoked when a connection is interrupted.
+与指定的后台服务成功断开连接时，会触发该回调。
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ Callback invoked when a connection is interrupted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Element name of the ability.  |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | 目标Ability的elementName。 |
 

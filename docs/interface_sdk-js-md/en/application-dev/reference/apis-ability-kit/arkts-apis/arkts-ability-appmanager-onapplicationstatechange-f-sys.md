@@ -1,12 +1,18 @@
 # onApplicationStateChange (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onApplicationStateChange
 
 ```TypeScript
 function onApplicationStateChange(observer: ApplicationStateObserver, filter: AppStateFilter): int
 ```
 
-Register application state observer with filter.
+注册应用程序的状态监听器，并通过设置过滤条件来筛选所需监听的应用生命周期变化事件。
 
 **Since:** 23
 
@@ -24,20 +30,20 @@ Register application state observer with filter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The application state observer. |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter configuration for targeted monitoring. |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
+| filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | Yes | 应用生命周期变化事件的过滤器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Returns the number code of the observer. |
+| int | 已注册监听器ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 

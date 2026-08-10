@@ -1,6 +1,6 @@
 # CompleteData
 
-Describes the data returned by the operation of proactive triggering a WantAgent object.
+表示主动触发WantAgent返回的数据。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Describes the data returned by the operation of proactive triggering a WantAgent
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
+
 ## extraInfo
 
 ```TypeScript
 extraInfo?: Record<string, Object>
 ```
 
-Extra information.
+额外数据。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Extra information.
 finalCode: int
 ```
 
-Request code that triggers the WantAgent object.
+触发wantAgent的返回码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,7 +62,7 @@ Request code that triggers the WantAgent object.
 finalData: string
 ```
 
-Final data collected by the common event.
+触发wantAgent的返回数据。返回**canceled**时表示触发失败，WantAgent实例已经被取消。
 
 **Type:** string
 
@@ -76,9 +82,9 @@ Final data collected by the common event.
 info: WantAgent
 ```
 
-WantAgent object that is triggered.
+触发的wantAgent。
 
-**Type:** WantAgent
+**Type:** [WantAgent](arkts-ability-wantagent-t.md)
 
 **Since:** 9
 
@@ -96,9 +102,9 @@ WantAgent object that is triggered.
 want: Want
 ```
 
-Existing Want that is triggered.
+触发wantAgent时实际使用的want信息。
 
-**Type:** Want
+**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 9
 

@@ -10,6 +10,12 @@ Describes the information about an album.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumOrder
 
 ```TypeScript
@@ -18,7 +24,7 @@ albumOrder?: int
 
 Sorting value of the album.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ coverInfo?: PhotoAssetChangeInfo
 
 Information of the album cover asset.
 
-**Type:** PhotoAssetChangeInfo
+**Type:** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i-sys.md)
 
 **Since:** 20
 
@@ -80,7 +86,7 @@ hiddenCount: int
 
 Number of hidden assets in the album.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -100,7 +106,7 @@ hiddenCoverInfo?: PhotoAssetChangeInfo
 
 Information of the hidden album cover asset.
 
-**Type:** PhotoAssetChangeInfo
+**Type:** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i-sys.md)
 
 **Since:** 20
 
@@ -202,7 +208,7 @@ orderSection?: int
 
 Section that defines the order of the album, specifying where the album is displayed in the Gallery.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

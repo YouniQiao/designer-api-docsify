@@ -1,6 +1,6 @@
 # PopupOptions
 
-Provides the configuration options for the popup.
+基础气泡的信息。
 
 **Since:** 7
 
@@ -37,7 +37,7 @@ onStateChange?: (event: {
   }) => void
 ```
 
-Callback for popup visibility state changes. The parameter **isVisible** indicates the visibility of the popup. It returns **true** when the popup transitions from closed to open, and **false** when the popup transitions from open to closed.
+气泡状态变化事件回调，参数isVisible为气泡的显示状态。返回true时，表示气泡从关闭到打开，返回false时，表示气泡从打开到关闭。
 
 **Since:** 7
 
@@ -53,7 +53,7 @@ Callback for popup visibility state changes. The parameter **isVisible** indicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | {     /**      * is Visible.      *      * @type { boolean }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @stagemodelonly      * @crossplatform      * @since 10      */     /**      * is Visible.      *      * @type { boolean }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @stagemodelonly      * @crossplatform      * @atomicservice      * @since 11      */     isVisible: boolean   } | Yes |  |
+| event | {     /**      * is Visible.      *      * @type { boolean }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @stagemodelonly      * @crossplatform      * @since 10      */     /**      * is Visible.      *      * @type { boolean }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @stagemodelonly      * @crossplatform      * @atomicservice      * @since 11      */     isVisible: boolean   } | Yes |  |
 
 ## arrowHeight
 
@@ -61,17 +61,17 @@ Callback for popup visibility state changes. The parameter **isVisible** indicat
 arrowHeight?: Dimension
 ```
 
-Arrow height.
+设置气泡箭头高度。
 
-Default value: **8**
+默认值：8
 
-Unit: vp
+单位：vp
 
-**NOTE**
+**说明：**
 
-Percentage values are not supported.
+不支持设置百分比。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 8.0_vp.
 
@@ -93,22 +93,21 @@ Percentage values are not supported.
 arrowOffset?: Length
 ```
 
-Offset of the popup arrow relative to the popup.
+Popup箭头在气泡处的偏移。
 
-When the arrow is at the top or bottom of the popup: The value **0** indicates that the arrow is located on the leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by default.
+箭头在气泡上下方时，数值为0表示箭头居最左侧，偏移量为箭头至最左侧的距离，默认居中。
 
-When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the top; the arrow is centered by default.
+箭头在气泡左右侧时，偏移量为箭头至最上侧的距离，默认居中。
 
-When the popup is displayed on either edge of the screen, it automatically adjusts horizontally. When the value is  
-**0**, the arrow always points to the bound component.
+显示在屏幕边缘时，气泡会自动左右偏移，数值为0时箭头始终指向绑定组件。
 
-Unit: vp
+单位：vp
 
-**NOTE**
+**说明：**
 
-1. If **arrowOffset** is not set, the distance between the popup arrow and the four corners must be no less than the corner radius.2. If **arrowPointPosition** is set, **arrowOffset** does not take effect.3. Percentage values are not supported.
+1. 没设置arrowOffset的情况下，气泡箭头与四个角的距离不能小于圆角半径。2. 只有arrowPointPosition不设置或者设置为null、undefined时，arrowOffset属性才生效。3. 不支持设置百分比。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
 
@@ -126,12 +125,11 @@ Unit: vp
 arrowPointPosition?: ArrowPointPosition
 ```
 
-Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and  
-**End**, in both vertical and horizontal directions. All these positions are within the parent component area.
+气泡箭头相对于父组件显示位置，气泡箭头在垂直和水平方向上有Start、Center、End三个位置点可选。以上所有位置点均位于父组件区域的范围内，不会超出父组件的边界范围。
 
-Default value: **ArrowPointPosition.CENTER
+默认值：ArrowPointPosition.CENTER
 
-**Type:** ArrowPointPosition
+**Type:** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
 
 **Since:** 11
 
@@ -151,17 +149,17 @@ Default value: **ArrowPointPosition.CENTER
 arrowWidth?: Dimension
 ```
 
-Arrow thickness. If the arrow thickness exceeds the length of the edge minus twice the size of the popup rounded corner, the arrow is not drawn.
+设置气泡箭头宽度。若所设置的宽度超过所在边的长度减去两倍的气泡圆角大小，则不绘制气泡箭头。
 
-Default value: **16**
+默认值：16
 
-Unit: vp
+单位：vp
 
-**NOTE**
+**说明：**
 
-Percentage values are not supported.
+不支持设置百分比。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 16.0_vp.
 
@@ -183,11 +181,11 @@ Percentage values are not supported.
 autoCancel?: boolean
 ```
 
-Whether the popup is automatically closed when an operation is performed on the page.
+页面有操作时，气泡是否自动关闭。
 
-**true**: The popup is automatically closed; **false**: The popup is not automatically closed.
+true：自动关闭气泡；false：气泡不会自动关闭。
 
-Default value: **true
+默认值：true
 
 **Type:** boolean
 
@@ -211,11 +209,11 @@ Default value: **true
 avoidTarget?: AvoidanceMode
 ```
 
-Whether the popup covers the pointing component during avoidance.
+设置Popup避让时是否覆盖指向组件。
 
-Default value: **AvoidanceMode.COVER\_TARGET
+默认值：AvoidanceMode.COVER_TARGET
 
-**Type:** AvoidanceMode
+**Type:** [AvoidanceMode](arkts-arkui-avoidancemode-e.md)
 
 **Default:** AvoidanceMode.COVER_TARGET
 
@@ -237,11 +235,11 @@ Default value: **AvoidanceMode.COVER\_TARGET
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the popup.
+设置气泡模糊背景参数。
 
-Default value: **BlurStyle.COMPONENT\_ULTRA\_THICK
+默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -263,9 +261,9 @@ Default value: **BlurStyle.COMPONENT\_ULTRA\_THICK
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Defines the popup's background blur style with options
+定义Popup的背景模糊样式选项。
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -285,9 +283,9 @@ Defines the popup's background blur style with options
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Defines the popup's background effect with options
+定义Popup的背景效果选项。
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -307,13 +305,13 @@ Defines the popup's background effect with options
 borderLinearGradient?: PopupBorderLinearGradient
 ```
 
-Linear gradient color of the inner outline of the popup.
+设置Popup组件内描边线性渐变的颜色。
 
-**NOTE**
+**说明：**
 
-1. If **borderLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the inner outline does not take effect.2. When **borderLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
+1. borderLinearGradient不设置或者设置为null、undefined时，内描边没有线性渐变效果。2. borderLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
 
-**Type:** PopupBorderLinearGradient
+**Type:** [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
 
 **Since:** 20
 
@@ -333,17 +331,17 @@ Linear gradient color of the inner outline of the popup.
 borderWidth?: Dimension
 ```
 
-Width of the inner outline of the popup.
+设置Popup组件内描边的宽度。
 
-Default value: **1**
+默认值：1 
 
-Unit: vp
+单位：vp
 
-**NOTE**
+**说明：**
 
-1. Percentage values are not supported. If a percentage value is set, the value **0** is used.2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**.3. For double outlines, it is recommended that the inner outline width should not exceed 10 vp.
+1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件内描边的情况下，该接口需要和borderLinearGradient配合使用。3. 当设置双描边时，建议内描边宽度不超过10vp。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 20
 
@@ -363,9 +361,15 @@ Unit: vp
 colorMode?: AnchoredColorMode
 ```
 
-Define the popup theme color mode.
+设置气泡深浅色模式，默认跟随绑定组件深浅色模式。
 
-**Type:** AnchoredColorMode
+默认值：AnchoredColorMode.FOLLOW_TARGET
+
+**说明：**
+
+1. 仅当绑定组件使用了[WithTheme](../../../reference/apis-arkui/arkui-ts/ts-container-with-theme.md#接口)标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
+
+**Type:** [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md)
 
 **Default:** AnchoredColorMode.FOLLOW_TARGET
 
@@ -377,6 +381,8 @@ Define the popup theme color mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
 <!--Device-PopupOptions-colorMode?: AnchoredColorMode--><!--Device-PopupOptions-colorMode?: AnchoredColorMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -387,15 +393,15 @@ Define the popup theme color mode.
 enableArrow?: boolean
 ```
 
-Whether to display the arrow.
+设置是否显示箭头。
 
-**true**: The arrow is displayed; **false**: The arrow is not displayed.
+true：显示箭头；false：不显示箭头。
 
-Default value: **true**
+默认值：true
 
-**NOTE**
+**说明：**
 
-If the available space on the screen is insufficient, the popup will cover part of the component and the arrow will not be displayed.
+当页面可用空间无法让气泡完全避让时，气泡会覆盖到组件上并且不显示箭头。
 
 **Type:** boolean
 
@@ -419,13 +425,13 @@ If the available space on the screen is insufficient, the popup will cover part 
 enableHoverMode?: boolean
 ```
 
-Whether the popup responds when the device is in hover mode (semi-folded state), that is, whether it triggers avoidance of the crease area in hover mode.
+Popup组件是否响应悬停态（半折叠状态）变化，即在悬停态下是否触发避让折痕区域。
 
-Default value: **false** (**true** for 2-in-1 devices by default). If this parameter is not set or set to an invalid value, the default value is used.
+默认值：false，2in1设备默认为true。未设置或者值为非法值时，生效默认值。
 
-**NOTE**
+**说明：**
 
-1. If the popup position is within the crease area in hover mode, it will not respond in hover mode.2. This parameter is supported on 2-in-1 devices since API version 20.3. This parameter only takes effect in window waterfall mode for 2-in-1 devices.
+1. 如果Popup的弹出位置在悬停态折痕区域，Popup组件不会响应悬停态。2. 2in1设备从API version 20开始生效。3. 2in1设备仅在窗口瀑布模式下生效。
 
 **Type:** boolean
 
@@ -449,11 +455,11 @@ Default value: **false** (**true** for 2-in-1 devices by default). If this param
 followTransformOfTarget?: boolean
 ```
 
-Whether the popup aligns with the transformed position of the target when the target component or its parent container has transformations (such as rotation and scaling).
+气泡绑定的宿主组件或其宿主组件的父容器添加了旋转、缩放等变换时，气泡是否跟随宿主组件变换。
 
-**true**: The popup aligns with the transformed position of the target; **false**: The popup does not track such transformations, which may result in incorrect display.
+true：气泡可以拿到变换后宿主的位置，显示到相应位置；false：气泡拿不到宿主变换后的位置，可能显示异常。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -477,11 +483,11 @@ Default value: **false
 keyboardAvoidMode?: KeyboardAvoidMode
 ```
 
-Whether to avoid the soft keyboard. By default, the popup does not avoid the soft keyboard. When configured to avoid the soft keyboard, if the popup display space is insufficient, the display mode of the popup changes from being centered over the parent component to being translated and covering the parent component.. In addition, if the popup arrow does not point to the host, the arrow will not be displayed.
+气泡是否避让软键盘，默认不避让。设置为避让后，气泡显示空间不足时，由原先居中覆盖父组件的方式改为平移覆盖父组件，且气泡箭头不指向宿主时，不再显示箭头。
 
-Default value: **KeyboardAvoidMode.NONE
+默认值：KeyboardAvoidMode.NONE
 
-**Type:** KeyboardAvoidMode
+**Type:** [KeyboardAvoidMode](../arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
 
 **Default:** KeyboardAvoidMode.NONE
 
@@ -503,9 +509,11 @@ Default value: **KeyboardAvoidMode.NONE
 levelMode?: LevelMode
 ```
 
-Defines the display level of the popup.
+设置气泡的显示层级模式。
 
-**Type:** LevelMode
+默认值：LevelMode.OVERLAY
+
+**Type:** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **Since:** 26.0.0
 
@@ -525,13 +533,13 @@ Defines the display level of the popup.
 mask?: boolean | { color: ResourceColor }
 ```
 
-Whether to apply a mask with the specified color to the popup.
+设置气泡是否有遮罩层及遮罩颜色。
 
-**true**: A transparent mask is applied; **false**: No mask is applied.
+true：显示透明色遮罩层；false：不显示遮罩层。
 
-**Color**: A mask with the specified color is applied.
+Color：显示指定颜色的遮罩层。
 
-Default value: **true
+默认值：true
 
 **Type:** boolean \| { color: ResourceColor }
 
@@ -553,7 +561,7 @@ Default value: **true
 message: string
 ```
 
-Content of the popup.
+气泡信息内容。
 
 **Type:** string
 
@@ -573,9 +581,9 @@ Content of the popup.
 messageOptions?: PopupMessageOptions
 ```
 
-Configuration options of the popup message.
+设置气泡信息文本参数。
 
-**Type:** PopupMessageOptions
+**Type:** [PopupMessageOptions](../arkts-apis/arkts-arkui-common-popupmessageoptions-i.md)
 
 **Since:** 10
 
@@ -595,17 +603,17 @@ Configuration options of the popup message.
 offset?: Position
 ```
 
-Offset of the popup relative to the display position specified by **placement**.
+设置Popup组件相对于placement设置的显示位置的偏移。
 
-Default value: **{x:0, y:0}**
+默认值：{ x: 0, y: 0 }
 
-Unit: vp
+单位：vp
 
-**NOTE**
+**说明：**
 
-Percentage values are not supported.
+不支持设置百分比。
 
-**Type:** Position
+**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
 **Default:** { x: 0, y: 0 } [since 11]
 
@@ -627,13 +635,13 @@ Percentage values are not supported.
 onWillDismiss?: boolean | Callback<DismissPopupAction>
 ```
 
-Interactive dismissal behavior. The default value is **true**, meaning that the popup responds to clicks, swipes (left or right), and the back button.
+设置Popup交互式关闭拦截开关及拦截回调函数，默认值为true，Popup响应点击、侧滑（左滑/右滑）、三键back。
 
-1. For the boolean type, if this parameter is set to **false**, the popup ignores clicks, swipes, back button, route navigation, and **Esc** key events, and can only be dismissed by setting the **show** parameter to **false**; if this parameter is set to **true**, the popup responds to dismissal events.2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. For swipes, back button, route navigation, and the **Esc** key, the value of **reason** returned in the callback function is **PRESS\_BACK**. For clicks, the value is **TOUCH\_OUTSIDE**.
+1. 当为boolean类型时，如果设置为false，则不响应点击、侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC退出事件，仅当设置“气泡显示状态”参数show值为false时才退出；如果设置为true，则正常响应退出事件；2. 如果设置为函数类型，则拦截退出事件且执行回调函数。侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC在回调函数中返回的reason为PRESS_BACK，点击为TOUCH_OUTSIDE。
 
-**NOTE**
+**说明：**
 
-No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.
+在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
 **Type:** boolean \| Callback&lt;DismissPopupAction&gt;
 
@@ -655,13 +663,13 @@ No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.
 outlineLinearGradient?: PopupBorderLinearGradient
 ```
 
-Linear gradient color of the outer outline of the popup.
+设置Popup组件外描边线性渐变的颜色。
 
-**NOTE**
+**说明：**
 
-1. If **outlineLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the outer outline does not take effect.2. When **outlineLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
+1. outlineLinearGradient不设置或者设置为null、undefined时，外描边没有线性渐变效果。2. outlineLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
 
-**Type:** PopupBorderLinearGradient
+**Type:** [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
 
 **Since:** 20
 
@@ -681,17 +689,17 @@ Linear gradient color of the outer outline of the popup.
 outlineWidth?: Dimension
 ```
 
-Width of the outer outline of the popup.
+设置Popup组件外描边的宽度。
 
-Default value: **1**
+默认值：1 
 
-Unit: vp
+单位：vp
 
-**NOTE**
+**说明：**
 
-1. Percentage values are not supported. If a percentage value is set, the value **0** is used.2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**.3. For double outlines, it is recommended that the outer outline width should not exceed 10 vp.
+1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件外描边的情况下，该接口需要和outlineLinearGradient配合使用。3. 当设置双描边时，建议外描边宽度不超过10vp。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 20
 
@@ -711,11 +719,11 @@ Unit: vp
 placement?: Placement
 ```
 
-Display position of the popup relative to the host node. The default value is **Placement.Bottom**.
+设置Popup组件相对于宿主节点的显示位置，默认值为Placement.Bottom。
 
-If both **placementOnTop** and **placement** are set, the latter prevails. If the popup cannot be completely displayed in the specified position, the popup automatically adjusts its position to completely show itself.
+如果同时设置了`placementOnTop`和`placement`，则以`placement`的设置为准。如果开发者设置的位置上无法完整显示气泡，气泡会自动避让至可以完整显示的位置
 
-**Type:** Placement
+**Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **Default:** Placement.Bottom
 
@@ -737,12 +745,11 @@ If both **placementOnTop** and **placement** are set, the latter prevails. If th
 placementOnTop?: boolean
 ```
 
-Whether to display the popup above the component. The default value is **false**. **true**: The popup is displayed above the bound component; **false**: The popup is displayed below the bound component.
+是否在组件上方显示，默认值为false。取值为true：气泡显示到绑定组件的上方，取值false：气泡显示到绑定组件的下方。
 
-**NOTE**
+**说明：**
 
-This parameter is supported since API version 7 and deprecated since API version 10. You are advised to use  
-**placement** instead.
+从API version 7开始支持，从API version 10开始废弃，建议使用`placement`替代。
 
 **Type:** boolean
 
@@ -752,7 +759,7 @@ This parameter is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [PopupOptions#placement](../arkts-apis/arkts-arkui-component/common-popupoptions-i.md#placement)
+**Substitutes:** [PopupOptions#placement](arkts-arkui-popupoptions-i.md#placement)
 
 <!--Device-PopupOptions-placementOnTop?: boolean--><!--Device-PopupOptions-placementOnTop?: boolean-End-->
 
@@ -764,11 +771,11 @@ This parameter is supported since API version 7 and deprecated since API version
 popupColor?: Color | string | Resource | number
 ```
 
-Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**.
+气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。
 
-Default value: [TRANSPARENT]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ plus [COMPONENT\_ULTRA\_THICK]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+默认值：透明色[TRANSPARENT](../arkts-apis/arkts-arkui-enums-color-e.md/arkts-arkui-enums-color-e.md)加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)。
 
-**Type:** Color \| string \| Resource \| number
+**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource \| number
 
 **Since:** 11
 
@@ -840,13 +847,13 @@ primaryButton?: {
   }
 ```
 
-Primary button.
+第一个按钮。
 
-**value**: text of the primary button in the popup.
+value：气泡里主按钮的文本。
 
-**action**: callback function for clicking of the primary button.
+action：点击主按钮的回调函数。
 
-**Type:** {     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     value: string;      /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     action: () =&gt; void;   }
+**Type:** {     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     value: string;      /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     action: () =&gt; void;   }
 
 **Since:** 7
 
@@ -864,13 +871,13 @@ Primary button.
 radius?: Dimension
 ```
 
-Rounded corner radius of the popup.
+设置气泡圆角半径。
 
-Default value: **20**
+默认值：20
 
-Unit: vp
+单位：vp
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 20.0_vp.
 
@@ -944,13 +951,13 @@ secondaryButton?: {
   }
 ```
 
-Secondary button.
+第二个按钮。
 
-**value**: text of the secondary button in the popup.
+value：气泡里辅助按钮的文本。
 
-**action**: callback function for clicking of the secondary button.
+action：点击辅助按钮的回调函数。
 
-**Type:** {     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     value: string;      /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     action: () =&gt; void;   }
+**Type:** {     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     value: string;      /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     action: () =&gt; void;   }
 
 **Since:** 7
 
@@ -968,11 +975,11 @@ Secondary button.
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Popup shadow.
+设置气泡阴影。
 
-Default value: **ShadowStyle.OUTER\_DEFAULT\_MD
+默认值：ShadowStyle.OUTER_DEFAULT_MD
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -994,11 +1001,11 @@ Default value: **ShadowStyle.OUTER\_DEFAULT\_MD
 showInSubWindow?: boolean
 ```
 
-Whether the popup is displayed in the created subwindow.
+气泡是否显示在创建的子窗里。
 
-**true**: The popup is displayed in the created subwindow; **false**: The popup is displayed in the corresponding main window.
+true：气泡会显示在创建的子窗里；false：气泡会显示在对应的主窗中。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -1020,9 +1027,17 @@ Default value: **false
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for popup. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of popup.
+设置组件的系统材质。
 
-**Type:** SystemUiMaterial
+默认值：undefined，会清除由该接口设置的材质效果。 
+
+**说明：**
+
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
+
+**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 
@@ -1042,13 +1057,13 @@ Set system-styled materials for popup. Different materials have different effect
 targetSpace?: Length
 ```
 
-Spacing between the popup and the host node. Percentage values are not supported.
+设置Popup与宿主节点的间距。不支持设置百分比。
 
-Default value: **8**
+默认值：8
 
-Unit: vp
+单位：vp
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
 
@@ -1068,13 +1083,13 @@ Unit: vp
 transition?: TransitionEffect
 ```
 
-Transition animations for the entrance and exit of the popup.
+自定义设置Popup气泡显示和退出的动画效果。
 
-**NOTE**
+**说明：**
 
-1. If this parameter is not set, the default entrance and exit animations are used.2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive.
+1. 不设置时使用默认的显示/退出动效。2. 显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。3. 退出动效中按back键，不会打断退出动效，back键不被响应。
 
-**Type:** TransitionEffect
+**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
 
 **Since:** 12
 
@@ -1094,11 +1109,11 @@ Transition animations for the entrance and exit of the popup.
 width?: Dimension
 ```
 
-Width of the popup. If this parameter is not set or the value is invalid, the popup width is automatically adjusted to adapt to the content width.
+气泡宽度，未设置或者异常值场景下，气泡自适应内容宽度。
 
-Unit: vp
+单位：vp
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 11
 

@@ -10,6 +10,12 @@ The ScopeComparable contains comparison methods.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## compareTo
 
 ```TypeScript

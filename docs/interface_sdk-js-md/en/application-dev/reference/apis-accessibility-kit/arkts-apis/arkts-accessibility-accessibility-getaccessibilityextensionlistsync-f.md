@@ -1,5 +1,11 @@
 # getAccessibilityExtensionListSync
 
+## Modules to Import
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## getAccessibilityExtensionListSync
 
 ```TypeScript
@@ -9,7 +15,7 @@ function getAccessibilityExtensionListSync(
   ): Array<AccessibilityAbilityInfo>
 ```
 
-Query the list of accessibility applications in the current system, which can be queried by criteria.
+查询当前系统内辅助应用列表，支持按条件查询。
 
 **Since:** 12
 
@@ -27,12 +33,12 @@ Query the list of accessibility applications in the current system, which can be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility application type. |
-| stateType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Accessibility application status. |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | 辅助应用的状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AccessibilityAbilityInfo&gt; | Promise used to return the accessibility application list. |
+| Array&lt;AccessibilityAbilityInfo&gt; | 返回辅助应用信息列表。 |
 

@@ -1,20 +1,17 @@
 # CustomDialogController
 
-Defines the controller of the custom dialog box.
+自定义弹窗的控制器。
 
-## Objects to Import
+## 导入对象
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
-    **NOTE**  
-    
-    - **CustomDialogController** is effective only when it is a member variable of the @CustomDialog and @Component  
-    decorated struct and is defined in the @Component decorated struct. For details, see the following example.  
-    
-    - You can pass in multiple other controllers in the CustomDialog to open one or more other CustomDialogs in the  
-    CustomDialog. In this case, you must place the controller pointing to the self behind all controllers. For details,  
-    see  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.  
-    
+```ts dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions)```
+
+> **说明：**
+> 
+> - CustomDialogController仅在作为@CustomDialog和@Component struct成员变量，且在@Component struct内部定义时赋值才有效，具体用法可参考下方示例。
+> 
+> - 若尝试在CustomDialog中传入多个其他的Controller，以实现在CustomDialog中打开另一个或另一些CustomDialog，那么此处需要将指向自己的controller放在所有controller的后
+> 面。详细用法可参考[示例1（弹出嵌套弹窗）](../../../reference/apis-arkui/arkui-ts/ts-methods-custom-dialog-box.md#示例1弹出嵌套弹窗)。
 
 **Since:** 7
 
@@ -46,21 +43,18 @@ close()
 constructor(value: CustomDialogControllerOptions)
 ```
 
-Constructor for a custom dialog box.
-    **NOTE**  
-    
-    Custom dialog box parameters do not support dynamic updates. However, by setting **customStyle** to **true** and  
-    configuring attributes such as [background color]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-    [background blur]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,  
-    and [width/height]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ on the custom component, dynamic updates can be achieved through state variables  
-    bound to these attributes.  
-    
-    If **CustomDialogController** is used as a global variable to implement global custom dialog boxes, the previous  
-    dialog box cannot be closed after a new value is assigned to the controller. You are advised to close the dialog  
-    box before reassigning the value.  
-    
-    When a custom dialog box is started within another custom dialog box, you are advised not to close the latter  
-    custom dialog box directly.
+自定义弹窗的构造器。
+
+> **说明：**
+> 
+> 自定义弹窗的所有参数，不支持动态刷新，但可以通过设置customStyle为true，并在自定义组件上设置背景色
+> [backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、背景模糊
+> [backgroundBlurStyle](arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)
+> 、[尺寸设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)等属性，通过属性绑定的状态变量来实现动态刷新的效果。
+> 
+> 在CustomDialogController作为全局变量以实现全局自定义弹窗的场景下，若对controller重新赋值，则无法通过其关闭之前的弹窗。建议在重新赋值前先关闭弹窗。
+> 
+> 在自定义弹窗内拉起另一个自定义弹窗时，不建议直接关闭拉起方。
 
 **Since:** 7
 
@@ -76,7 +70,7 @@ Constructor for a custom dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters of the custom dialog box. |
+| value | [CustomDialogControllerOptions](arkts-arkui-customdialogcontroller-customdialogcontrolleroptions-i.md) | Yes | 配置自定义弹窗的参数。 |
 
 ## getState
 
@@ -84,7 +78,7 @@ Constructor for a custom dialog box.
 getState(): PromptActionCommonState
 ```
 
-Obtains the state of the custom dialog box.
+获取自定义弹窗的状态。
 
 **Since:** 20
 
@@ -102,7 +96,7 @@ Obtains the state of the custom dialog box.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | State of the custom dialog box. |
+| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) | 返回对应的弹窗状态。 |
 
 ## open
 
@@ -110,13 +104,13 @@ Obtains the state of the custom dialog box.
 open()
 ```
 
-Opens the content of the custom dialog box. This API can be called multiple times. If the dialog box is displayed in a subwindow, no new subwindow is allowed.
-    **NOTE**  
-    
-    **CustomDialog** with subwindow display (**showInSubwindow** set to **true**) is not supported in input method  
-    windows. For details, see the constraints in  
-    [createPanel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    of the input method framework documentation.
+显示自定义弹窗内容，允许多次使用，但如果弹窗为SubWindow模式（showInSubWindow为true），则该弹窗不允许再弹出SubWindow模式的弹窗。
+
+> **说明：**
+> 
+> 不支持在输入法类型窗口中使用子窗（showInSubwindow为true）的CustomDialog，详情见输入法框架的约束与限制说明
+> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)
+> 。
 
 **Since:** 7
 

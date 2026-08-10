@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## generateThumbnailIfAbsent
 
 ```TypeScript
@@ -19,7 +25,7 @@ generateThumbnailIfAbsent?: boolean
 指定图像无缩略图时是否生成缩略图。true表示生成，false表示不生成。默认值为true。
 
 当图片文件中无缩略图且generateThumbnailIfAbsent为false时，返回undefined（抛出错误码  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_）。
+[7700303 图片不包含缩略图数据](../../../reference/apis-image-kit/errorcode-image.md#7700303-图片不包含缩略图数据)）。
 
 **类型：** boolean
 
@@ -47,7 +53,7 @@ maxGeneratedPixelDimension?: int
 
 单位：像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

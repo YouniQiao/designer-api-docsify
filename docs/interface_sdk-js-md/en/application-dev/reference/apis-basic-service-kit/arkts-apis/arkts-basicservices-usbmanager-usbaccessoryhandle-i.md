@@ -1,6 +1,6 @@
 # USBAccessoryHandle
 
-Describes the USB accessory handle.
+USB配件句柄。
 
 **Since:** 14
 
@@ -10,15 +10,21 @@ Describes the USB accessory handle.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accessoryFd
 
 ```TypeScript
 accessoryFd: int
 ```
 
-Accessory file descriptor. A valid **accessoryFd** is a positive integer.
+配件文件描述符。合法的accessoryFd是正整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 

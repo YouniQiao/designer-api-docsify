@@ -1,6 +1,6 @@
 # RemoteProxy
 
-Provides APIs to implement **IRemoteObject**.
+实现IRemoteObject代理对象。
 
 **Inheritance/Implementation:** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
 
@@ -12,13 +12,19 @@ Provides APIs to implement **IRemoteObject**.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## addDeathRecipient
 
 ```TypeScript
 addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 ```
 
-Adds a callback for receiving death notifications of the remote object.
+注册用于接收远程对象死亡通知的回调。
 
 **Since:** 7
 
@@ -36,16 +42,16 @@ Adds a callback for receiving death notifications of the remote object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback to add. |
-| flags | number | Yes | Flag of the death notification. This parameter is reserved. It is set to **0**. |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | 收件人表示要注册的回调。 |
+| flags | number | Yes | 死亡通知标志。保留参数。设置为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the callback is added successfully; returns **false** otherwise. |
+| boolean | true：回调注册成功，false：回调注册失败。 |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -107,7 +113,7 @@ if (proxy != undefined) {
 getDescriptor(): string
 ```
 
-Obtains the interface descriptor (which is a string) of this object.
+获取对象的接口描述符，接口描述符为字符串。
 
 **Since:** 9
 
@@ -121,16 +127,16 @@ Obtains the interface descriptor (which is a string) of this object.
 
 | Type | Description |
 | --- | --- |
-| string | Interface descriptor obtained. |
+| string | 返回接口描述符。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900007](../errorcode-rpc.md#1900007-failed-to-communicate-with-the-remote-object) | communication failed. |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| 1900008 | The proxy or remote object is invalid. |
+| 1900007 | communication failed. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -194,7 +200,7 @@ if (proxy != undefined) {
 getInterfaceDescriptor(): string
 ```
 
-Obtains the interface descriptor of this proxy object.
+查询当前代理对象接口的描述符。
 
 **Since:** 7
 
@@ -212,9 +218,9 @@ Obtains the interface descriptor of this proxy object.
 
 | Type | Description |
 | --- | --- |
-| string | Interface descriptor obtained. |
+| string | 当前的接口描述符。 |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -271,7 +277,7 @@ if (proxy != undefined) {
 getLocalInterface(interfaceDes: string): IRemoteBroker
 ```
 
-Obtains the **LocalInterface** object of an interface token.
+查询并获取当前接口描述符对应的本地接口对象。
 
 **Since:** 9
 
@@ -285,22 +291,22 @@ Obtains the **LocalInterface** object of an interface token.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interfaceDes | string | Yes | Interface descriptor. |
+| interfaceDes | string | Yes | 需要查询的接口描述符，其长度应小于40960。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns **Null** by default, which indicates a proxy interface. |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 默认返回Null，标识该接口是一个代理侧接口。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | check param failed |
-| [1900006](../errorcode-rpc.md#1900006-ipc-object-permission-error) | Operation allowed only for the remote object. |
+| 401 | check param failed |
+| 1900006 | Operation allowed only for the remote object. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -364,7 +370,7 @@ if (proxy != undefined) {
 isObjectDead(): boolean
 ```
 
-Checks whether the **RemoteObject** is dead.
+指示对应的RemoteObject是否死亡。
 
 **Since:** 7
 
@@ -378,9 +384,9 @@ Checks whether the **RemoteObject** is dead.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if **RemoteObject** is dead; returns **false** otherwise. |
+| boolean | true：对应的对象已经死亡，false：对应的对象未死亡。 |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -437,7 +443,7 @@ if (proxy != undefined) {
 queryLocalInterface(interface: string): IRemoteBroker
 ```
 
-Obtains the **LocalInterface** object of an interface token.
+查询并获取当前接口描述符对应的本地接口对象。
 
 **Since:** 7
 
@@ -455,15 +461,15 @@ Obtains the **LocalInterface** object of an interface token.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interface | string | Yes | Interface descriptor. |
+| interface | string | Yes | 需要查询的接口描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns **Null** by default, which indicates a proxy interface. |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 默认返回Null，标识该接口是一个代理侧接口。 |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -526,7 +532,7 @@ ArkTS-Sta:
 registerDeathRecipient(recipient: DeathRecipient, flags: int): void
 ```
 
-Registers a callback for receiving death notifications of the remote object.
+注册用于接收远程对象死亡通知的回调。
 
 **Since:** 9
 
@@ -540,17 +546,17 @@ Registers a callback for receiving death notifications of the remote object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback to register. |
-| flags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Flag of the death notification. |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | 要注册的回调。 |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 死亡通知标志。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| 1900008 | The proxy or remote object is invalid. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -619,7 +625,7 @@ if (proxy != undefined) {
 removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 ```
 
-Removes the callback used to receive death notifications of the remote object.
+注销用于接收远程对象死亡通知的回调。
 
 **Since:** 7
 
@@ -637,16 +643,16 @@ Removes the callback used to receive death notifications of the remote object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback to remove. |
-| flags | number | Yes | Flag of the death notification. This parameter is reserved. It is set to **0**. |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | 要注销的死亡回调。 |
+| flags | number | Yes | 死亡通知标志。保留参数。设置为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the callback is removed; returns **false** otherwise. |
+| boolean | true：回调注销成功，false：回调注销失败。 |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -725,8 +731,7 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
-**options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
+以同步或异步方式向对端进程发送MessageSequence消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendMessageRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
 
 **Since:** 9
 
@@ -740,24 +745,24 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageSequence** object holding the data to send. |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageSequence** object that receives the response. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 保存待发送数据的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 接收应答数据的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RequestResult&gt; | Promise used to return a **requestResult** instance. |
+| Promise&lt;RequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -857,8 +862,8 @@ sendMessageRequest(
     ): void
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
-**options**, a callback will be invoked at certain time after the response to **RequestResult** is returned,and the reply contains the returned information.
+以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，将在  
+ [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)返回后、服务端处理请求完成时执行回调，回调中可读取[RequestResult](arkts-ipc-rpc-requestresult-i.md)获取服务端返回的数据。
 
 **Since:** 9
 
@@ -872,17 +877,17 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageSequence** object holding the data to send. |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageSequence** object that receives the response. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 保存待发送数据的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 接收应答数据的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -890,7 +895,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**,a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
+以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回复，回复内容在reply报文里。
 
 **Since:** 7
 
@@ -908,18 +913,18 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageParcel** object holding the data to send. |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageParcel** object that receives the response. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the message is sent successfully; returns **false** otherwise. |
+| boolean | true：发送成功，false：发送失败。 |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -999,7 +1004,7 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**,a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
+以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
 
 **Since:** 8
 
@@ -1017,18 +1022,18 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageParcel** object holding the data to send. |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageParcel** object that receives the response. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SendRequestResult&gt; | Promise used to return a **sendRequestResult** instance. |
+| Promise&lt;SendRequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -1117,7 +1122,7 @@ sendRequest(
     ): void
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**,a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
+以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回调，回复内容在reply报文里。
 
 **Since:** 8
 
@@ -1135,11 +1140,11 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageParcel** object holding the data to send. |
-| reply | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageParcel** object that receives the response. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SendRequestResult&gt; | Yes | Callback for receiving the sending result. |
+| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | Yes | 接收发送结果的回调。 |
 
 ## unregisterDeathRecipient
 
@@ -1153,7 +1158,7 @@ ArkTS-Sta:
 unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void
 ```
 
-Unregisters from the callback used to receive death notifications of the remote object.
+注销用于接收远程对象死亡通知的回调。
 
 **Since:** 9
 
@@ -1167,17 +1172,17 @@ Unregisters from the callback used to receive death notifications of the remote 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback to unregister. |
-| flags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Flag of the death notification. |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | 要注销的回调。 |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 死亡通知标志。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| 1900008 | The proxy or remote object is invalid. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -1247,7 +1252,7 @@ if (proxy != undefined) {
 static readonly DUMP_TRANSACTION: number
 ```
 
-Internal instruction code used to obtain IPC service status information.
+内部指令码，获取IPC服务相关的状态信息。
 
 **Type:** number
 
@@ -1267,7 +1272,7 @@ Internal instruction code used to obtain IPC service status information.
 static readonly INTERFACE_TRANSACTION: number
 ```
 
-Internal instruction code used to obtain the remote interface token.
+内部指令码，获取对端接口描述符。
 
 **Type:** number
 
@@ -1287,7 +1292,7 @@ Internal instruction code used to obtain the remote interface token.
 static readonly MAX_TRANSACTION_ID: number
 ```
 
-Maximum valid instruction code.
+最大有效指令码。
 
 **Type:** number
 
@@ -1307,7 +1312,7 @@ Maximum valid instruction code.
 static readonly MIN_TRANSACTION_ID: number
 ```
 
-Minimum valid instruction code.
+最小有效指令码。
 
 **Type:** number
 
@@ -1327,7 +1332,7 @@ Minimum valid instruction code.
 static readonly PING_TRANSACTION: number
 ```
 
-Internal instruction code used to test whether the IPC service is normal.
+内部指令码，用于测试IPC服务是否正常。
 
 **Type:** number
 

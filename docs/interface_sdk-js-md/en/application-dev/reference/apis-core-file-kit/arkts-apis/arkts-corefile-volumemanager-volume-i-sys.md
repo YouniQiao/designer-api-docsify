@@ -1,6 +1,6 @@
 # Volume (System API)
 
-Get All Volumes.
+获取所有卷。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Get All Volumes.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { volumeManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## description
 
 ```TypeScript
 description: string
 ```
 
-Description of the volume.
+卷设备描述。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Description of the volume.
 diskId: string
 ```
 
-ID of the disk to which the volume belongs. A disk can have one or more volumes. The disk ID is in the disk-{Primary device ID}-{Secondary device ID} format, which is similar to the volume ID.
+卷设备所属的磁盘ID，一个磁盘可以有一个或者多个卷设备。磁盘设备ID的格式为disk-{主设备号}-{次设备号}，与卷设备ID相似。
 
 **Type:** string
 
@@ -52,35 +58,15 @@ ID of the disk to which the volume belongs. A disk can have one or more volumes.
 
 **System API:** This is a system API.
 
-## extraInfo
-
-```TypeScript
-extraInfo?: string
-```
-
-Extra information of the volume.
-
-**Type:** string
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Volume-extraInfo?: string--><!--Device-Volume-extraInfo?: string-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.Volume
-
-**System API:** This is a system API.
-
 ## fsType
 
 ```TypeScript
 fsType: string
 ```
 
-File system type. Common file systems are **ext2**, **vfat**, and **NTFS**.
+文件系统的类型，常见有ext2、vfat、NTFS等。
+
+**说明：**从API version 24开始，支持ISO9660、UDF。
 
 **Type:** string
 
@@ -100,7 +86,7 @@ File system type. Common file systems are **ext2**, **vfat**, and **NTFS**.
 id: string
 ```
 
-Volume ID, in the vol-{Primary device ID}-{Secondary device ID} format. The primary device IDs identify devices of different types. The secondary device IDs identify different devices of the same type. The volume IDs vary depending on the card insertion sequence.
+卷设备ID的格式为vol-{主设备号}-{次设备号}，主设备号用来区分不同种类的设备，次设备号用来区分同一类型的多个设备，卷设备ID会随着插卡顺序不同而变化。
 
 **Type:** string
 
@@ -114,35 +100,13 @@ Volume ID, in the vol-{Primary device ID}-{Secondary device ID} format. The prim
 
 **System API:** This is a system API.
 
-## partitionNum
-
-```TypeScript
-partitionNum?: int
-```
-
-Partition number.
-
-**Type:** int
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Volume-partitionNum?: int--><!--Device-Volume-partitionNum?: int-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.Volume
-
-**System API:** This is a system API.
-
 ## path
 
 ```TypeScript
 path: string
 ```
 
-Path of the volume mounted. Generally, the path is **\/mnt/data/external/{uuid}**.
+卷设备的挂载地址，一般为/mnt/data/external/{uuid}。
 
 **Type:** string
 
@@ -162,8 +126,7 @@ Path of the volume mounted. Generally, the path is **\/mnt/data/external/{uuid}*
 removable: boolean
 ```
 
-Whether the volume can be removed. Currently, only removable storage devices are supported. The value **true**  
-means the device can be removed; the value **false** means the opposite.
+表示卷设备是否可移除，当前仅支持可移除存储设备。true为可移除；false为不可移除。
 
 **Type:** boolean
 
@@ -183,17 +146,17 @@ means the device can be removed; the value **false** means the opposite.
 state: int
 ```
 
-Volume status.
+卷设备状态标识：
 
-**0**: The volume is unmounted.
+0：卸载状态 UNMOUNTED。
 
-**1**: The volume is being checked.
+1：检查状态 CHECKING。
 
-**2**: The volume is mounted.
+2：挂载状态 MOUNTED。
 
-**3**: The volume is being ejected.
+3：正在弹出状态 EJECTING。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -211,7 +174,7 @@ Volume status.
 uuid: string
 ```
 
-Volume UUID, which uniquely identifies a volume irrespective of the card insertion sequence. However, the UUID of a volume will change after the volume is formatted.
+卷设备uuid是卷设备的通用唯一识别码，不会随着插卡顺序变化而变化，但是卷设备的格式化会改变卷设备的uuid。
 
 **Type:** string
 

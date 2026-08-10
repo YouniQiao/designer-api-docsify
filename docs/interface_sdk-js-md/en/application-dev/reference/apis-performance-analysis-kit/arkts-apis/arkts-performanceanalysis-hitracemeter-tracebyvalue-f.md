@@ -1,14 +1,20 @@
 # traceByValue
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## traceByValue
 
 ```TypeScript
 function traceByValue(name: string, count: long): void
 ```
 
-Traces the value changes of an integer variable.
+用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者快速发现异常波动，分析数据趋势。
 
-Since API version 19, you are advised to use the [traceByValue\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_19+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_API to specify the trace output level
+从API version 19开始，建议使用[traceByValue&lt;sup&gt;19+&lt;/sup&gt;()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue)接口，以便分级控制跟踪输出。
 
 **Since:** 8
 
@@ -24,16 +30,16 @@ Since API version 19, you are advised to use the [traceByValue\_\_\_HTML\_TAG\_D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the integer variable to trace. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
-| count | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Value of an integer variable. |
+| name | string | Yes | 要跟踪的整数变量名称。 由于单条trace记录的总长度限制为512Byte，超过的部分将会被截断，建议该参数的长度不要超过420Byte。 |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 整数变量的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let traceCount = 3;
-hiTraceMeter.traceByValue("myTestCount", traceCount);
+hiTraceMeter.traceByValue("myTestCount", traceCount);  // Use trace to record the value of myTestCount.
 traceCount = 4;
-hiTraceMeter.traceByValue("myTestCount", traceCount);
+hiTraceMeter.traceByValue("myTestCount", traceCount);  // When myTestCount changes, the new value is recorded.
 // Service flow...
 ```
 
@@ -44,7 +50,7 @@ hiTraceMeter.traceByValue("myTestCount", traceCount);
 function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void
 ```
 
-Traces an integer with the trace output level specified. It is used to mark the name and value of a predefined integer variable to be traced.
+整数跟踪事件，分级控制跟踪输出。用来标记一个预先定义需要跟踪的整数变量名及整数值。
 
 **Since:** 19
 
@@ -60,11 +66,11 @@ Traces an integer with the trace output level specified. It is used to mark the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Trace output level. |
-| name | string | Yes | Name of the integer variable to trace. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
-| count | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Value of an integer variable. |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | 跟踪输出级别。 |
+| name | string | Yes | 要跟踪的整数变量名称。 由于单条trace记录的总长度限制为512Byte，超出部分将被截断，建议该参数的长度不要超过420Byte。 |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 整数变量的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;

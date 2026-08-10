@@ -21,6 +21,12 @@
  ![image_abilityAccessCtrl](../../../reference/apis-ability-kit/figures/abilityAccessCtrl.png)
 
 
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 命名空间

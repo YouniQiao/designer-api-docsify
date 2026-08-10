@@ -12,6 +12,12 @@ Contract request data
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## nonce
 
 ```TypeScript

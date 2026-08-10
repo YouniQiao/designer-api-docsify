@@ -1,6 +1,6 @@
 # DomainServerConfigManager
 
-Provides APIs for domain server configuration and management.
+域服务器配置管理类。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Provides APIs for domain server configuration and management.
 
 **System capability:** SystemCapability.Account.OsAccount
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## addServerConfig
 
 ```TypeScript
 static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>
 ```
 
-Adds domain server configuration. This API uses a promise to return the result.
+添加域服务器配置。使用Promise异步回调。
 
 **Since:** 18
 
@@ -32,27 +38,27 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameters | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Configuration parameters of the domain server. |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 表示域服务器配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the configuration of the newly added domain server. |
+| Promise&lt;DomainServerConfig&gt; | Promise对象，返回新添加的域服务器配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| 801 | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 12300213 | Server config already exists. |
+| 201 | Permission denied. |
+| 12300002 | Invalid server config parameters. |
+| 12300001 | The system service works abnormally. |
 | 12300215 | The number of server config reaches the upper limit. |
+| 12300213 | Server config already exists. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,7 +81,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainServerConfig>
 ```
 
-Adds domain server configuration. This API uses a promise to return the result.
+添加域服务器配置。使用Promise异步回调。
 
 **Since:** 23
 
@@ -91,25 +97,25 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameters | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Configuration parameters of the domain server. |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 表示域服务器配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the configuration of the newly added domain server. |
+| Promise&lt;DomainServerConfig&gt; | Promise对象，返回新添加的域服务器配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| 801 | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 12300213 | Server config already exists. |
+| 201 | Permission denied. |
+| 12300002 | Invalid server config parameters. |
+| 12300001 | The system service works abnormally. |
 | 12300215 | The number of server config reaches the upper limit. |
+| 12300213 | Server config already exists. |
 
 ## getAccountServerConfig
 
@@ -117,7 +123,7 @@ Adds domain server configuration. This API uses a promise to return the result.
 static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>
 ```
 
-Obtains the server configuration of a domain account. This API uses a promise to return the result.
+获取目标域账号的服务器配置。使用Promise异步回调。
 
 **Since:** 18
 
@@ -133,24 +139,24 @@ Obtains the server configuration of a domain account. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information of the domain account. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | 表示目标域账号信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the domain server configuration of the account. |
+| Promise&lt;DomainServerConfig&gt; | Promise对象，返回目标账号的域服务器配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Domain account not found. |
+| 801 | Capability not supported. |
+| 12300003 | Domain account not found. |
+| 201 | Permission denied. |
+| 12300001 | The system service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -173,7 +179,7 @@ osAccount.DomainServerConfigManager.getAccountServerConfig(accountInfo).then((
 static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 ```
 
-Obtains the configurations of all domain servers. This API uses a promise to return the result.
+获取所有域服务器配置。使用Promise异步回调。
 
 **Since:** 18
 
@@ -189,17 +195,17 @@ Obtains the configurations of all domain servers. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DomainServerConfig&gt;&gt; | Promise used to return the domain server configuration obtained. |
+| Promise&lt;Array&lt;DomainServerConfig&gt;&gt; | Promise对象，返回获取的所有域服务器配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 12300001 | The system service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -227,7 +233,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static getServerConfig(configId: string): Promise<DomainServerConfig>
 ```
 
-Obtains the domain server configuration. This API uses a promise to return the result.
+获取域服务器配置。使用Promise异步回调。
 
 **Since:** 18
 
@@ -243,24 +249,24 @@ Obtains the domain server configuration. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configId | string | Yes | Server configuration ID. |
+| configId | string | Yes | 表示服务器配置标识。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the domain server configuration obtained. |
+| Promise&lt;DomainServerConfig&gt; | Promise对象，返回获取的域服务器配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 12300001 | The system service works abnormally. |
 | 12300212 | Server config not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -288,7 +294,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static removeServerConfig(configId: string): Promise<void>
 ```
 
-Removes domain server configuration. This API uses a promise to return the result.
+删除域服务器配置。使用Promise异步回调。
 
 **Since:** 18
 
@@ -304,25 +310,25 @@ Removes domain server configuration. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configId | string | Yes | Server configuration ID. |
+| configId | string | Yes | 表示服务器配置标识。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| 12300212 | Server config not found. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 12300001 | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
+| 12300212 | Server config not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -347,7 +353,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>
 ```
 
-Updates the domain server configuration. This API uses a promise to return the result.
+更新域服务器配置。使用Promise异步回调。
 
 **Since:** 18
 
@@ -363,29 +369,29 @@ Updates the domain server configuration. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configId | string | Yes | Server configuration ID. |
-| parameters | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Configuration parameters of the domain server. |
+| configId | string | Yes | 表示服务器配置标识。 |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 表示域服务器配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the updated domain server configuration. |
+| Promise&lt;DomainServerConfig&gt; | Promise对象，返回更新后的域服务器配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| 801 | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 12300212 | Server config not found. |
-| 12300213 | Server config already exists. |
+| 201 | Permission denied. |
+| 12300002 | Invalid server config parameters. |
+| 12300001 | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
+| 12300213 | Server config already exists. |
+| 12300212 | Server config not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -413,7 +419,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static updateServerConfig(configId: string, parameters: Record<string, RecordData>): Promise<DomainServerConfig>
 ```
 
-Updates the domain server configuration. This API uses a promise to return the result.
+更新域服务器配置。使用Promise异步回调。
 
 **Since:** 23
 
@@ -429,25 +435,25 @@ Updates the domain server configuration. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configId | string | Yes | Server configuration ID. |
-| parameters | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Configuration parameters of the domain server. |
+| configId | string | Yes | 表示服务器配置标识。 |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 表示域服务器配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the updated domain server configuration. |
+| Promise&lt;DomainServerConfig&gt; | Promise对象，返回更新后的域服务器配置。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| 801 | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 12300212 | Server config not found. |
-| 12300213 | Server config already exists. |
+| 201 | Permission denied. |
+| 12300002 | Invalid server config parameters. |
+| 12300001 | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
+| 12300213 | Server config already exists. |
+| 12300212 | Server config not found. |
 

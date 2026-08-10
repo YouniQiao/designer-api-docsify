@@ -1,7 +1,6 @@
 # PhotoOutput
 
-PhotoOutput implements output information used in a photo session. It inherits from  
-[CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 **Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -13,13 +12,19 @@ PhotoOutput implements output information used in a photo session. It inherits f
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## capture
 
 ```TypeScript
 capture(callback: AsyncCallback<void>): void
 ```
 
-Captures a photo with the default photo capture parameters. This API uses an asynchronous callback to return the result.
+以默认设置触发一次拍照，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 10
 
@@ -35,14 +40,14 @@ Captures a photo with the default photo capture parameters. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the photo is successfully captured with the default parameters, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当以默认设置触发拍照成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
 
 ## capture
 
@@ -50,7 +55,7 @@ Captures a photo with the default photo capture parameters. This API uses an asy
 capture(): Promise<void>
 ```
 
-Captures a photo with the default photo capture parameters. This API uses a promise to return the result.
+以默认设置触发一次拍照。使用Promise异步回调。
 
 **Since:** 10
 
@@ -66,14 +71,14 @@ Captures a photo with the default photo capture parameters. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
 
 ## capture
 
@@ -81,7 +86,7 @@ Captures a photo with the default photo capture parameters. This API uses a prom
 capture(setting: PhotoCaptureSetting, callback: AsyncCallback<void>): void
 ```
 
-Captures a photo with the specified photo capture parameters. This API uses an asynchronous callback to return the result.
+以指定参数触发一次拍照，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 10
 
@@ -97,16 +102,16 @@ Captures a photo with the specified photo capture parameters. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Photo capture settings. If the input data is of the **undefined** type, a photo capture operation is triggered based on the default settings. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is returned. |
+| setting | [PhotoCaptureSetting](arkts-camera-camera-photocapturesetting-i.md) | Yes | 拍照设置，传入undefined类型数据按默认设置触发一次拍照处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于获取结果。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
 
 ## capture
 
@@ -114,7 +119,7 @@ Captures a photo with the specified photo capture parameters. This API uses an a
 capture(setting: PhotoCaptureSetting): Promise<void>
 ```
 
-Captures a photo with the specified photo capture parameters. This API uses a promise to return the result.
+以指定参数触发一次拍照。使用Promise异步回调。
 
 **Since:** 10
 
@@ -130,21 +135,21 @@ Captures a photo with the specified photo capture parameters. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Photo capture settings. If the input data is of the **undefined** type, a photo capture operation is triggered based on the default settings. |
+| setting | [PhotoCaptureSetting](arkts-camera-camera-photocapturesetting-i.md) | Yes | 拍照设置，传入undefined类型数据按默认设置触发一次拍照处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400104 | Session not running. |
+| 7400201 | Camera service fatal error. |
 
 ## enableAutoExtendedGainmapDelivery
 
@@ -152,7 +157,7 @@ Captures a photo with the specified photo capture parameters. This API uses a pr
 enableAutoExtendedGainmapDelivery(enabled: boolean): void
 ```
 
-Enables or disables automatic extended gain map delivery.
+是否启用自动扩展增益图（Gainmap）的输出。
 
 **Since:** 26.0.0
 
@@ -170,15 +175,15 @@ Enables or disables automatic extended gain map delivery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable automatic extended gain map delivery. The value **true** indicates it is enabled, and the value **false** indicates it is disabled. |
+| enabled | boolean | Yes | 是否启用自动扩展增益图（Gainmap）的输出。true表示启用，false表示不启用。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config, only throw in session usage. |
+| 7400201 | Camera service fatal error. |
 
 ## enableMirror
 
@@ -186,10 +191,10 @@ Enables or disables automatic extended gain map delivery.
 enableMirror(enabled: boolean): void
 ```
 
-Enables or disables dynamic photo capture.
+是否启用动态照片镜像拍照。
 
-Before calling this API, check whether moving photo capture is supported by calling  
-[isMovingPhotoSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and whether mirroring is supported by calling [isMirrorSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+调用该接口前，需要通过[isMovingPhotoSupported](arkts-camera-camera-photooutput-i.md#ismovingphotosupported)查询是否支持动态照片拍摄功能以及通过  
+[isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported)查询是否支持镜像拍照功能。
 
 **Since:** 13
 
@@ -205,15 +210,15 @@ Before calling this API, check whether moving photo capture is supported by call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Enables or disables dynamic photo capture. **true** to enable, **false** otherwise. |
+| enabled | boolean | Yes | 是否启用动态照片镜像拍照。true为开启动态照片镜像拍照，false为关闭动态照片镜像拍照。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
 
 ## enableMovingPhoto
 
@@ -221,7 +226,7 @@ Before calling this API, check whether moving photo capture is supported by call
 enableMovingPhoto(enabled: boolean): void
 ```
 
-Enables or disables the feature of taking moving photos.
+使能动态照片拍照。
 
 **Since:** 12
 
@@ -239,15 +244,15 @@ Enables or disables the feature of taking moving photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Enables or disables the feature of taking moving photos. **true** to enable, **false** otherwise. |
+| enabled | boolean | Yes | 使能动态照片拍照。true为开启动态照片，false为关闭动态照片。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 201 | permission denied. |
+| 7400201 | Camera service fatal error. |
 
 ## getActiveProfile
 
@@ -255,7 +260,7 @@ Enables or disables the feature of taking moving photos.
 getActiveProfile(): Profile
 ```
 
-Obtains the profile that takes effect currently.
+获取当前生效的配置信息。
 
 **Since:** 12
 
@@ -271,13 +276,13 @@ Obtains the profile that takes effect currently.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Profile obtained. |
+| [Profile](arkts-camera-camera-profile-i.md) | 当前生效的配置信息 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## getPhotoRotation
 
@@ -291,12 +296,10 @@ ArkTS-Sta:
 getPhotoRotation(deviceDegree?: int): ImageRotation
 ```
 
-Obtains the photo rotation angle.
+获取拍照旋转角度。
 
-- Device' natural orientation: the default orientation for using a device. For example, the default orientation  
-of the bar-type phone is in portrait mode, with the charging port facing downward.  
-- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's  
-natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
+- 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。  
+- 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。
 
 **Since:** 12
 
@@ -314,19 +317,20 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Device rotation angle, measured in degrees, within the range of [0, 360]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the input value goes beyond this range, the system uses the remainder of the input value divided by 36 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the photo rotation angle.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 23 |
+| deviceDegree | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 设备旋转角度，单位度，取值范围：[0, 360]。 &lt;br&gt;若入参超过该范围，则取入参除以360的余数。 &lt;br&gt;从API version 23开始，入参deviceDegree为可选参数，当不传入参数时，由系统获取deviceDegree进行拍照旋转角度计算。<br>**Since:** 23 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rotation angle of the photo. If the API call fails, undefined is returned. |
+| [ImageRotation](arkts-camera-camera-imagerotation-e.md) | 返回拍照旋转角度。若接口调用失败，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
+| 7400201 | Camera service fatal error. |
 
 ## getSupportedMovingPhotoVideoCodecTypes
 
@@ -334,7 +338,7 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>
 ```
 
-Obtains the supported video codec types of moving photos.
+查询支持的动态照片短视频编码类型。
 
 **Since:** 13
 
@@ -350,13 +354,13 @@ Obtains the supported video codec types of moving photos.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;VideoCodecType&gt; | Array holding the supported video codec types. If the API call fails, undefined is returned. |
+| Array&lt;VideoCodecType&gt; | 支持的动态照片短视频编码类型列表。若接口调用失败，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## isAutoExtendedGainmapDeliverySupported
 
@@ -364,7 +368,7 @@ Obtains the supported video codec types of moving photos.
 isAutoExtendedGainmapDeliverySupported(): boolean
 ```
 
-Checks whether automatic extended gain map delivery is supported.
+确认是否支持自动扩展增益图（Gainmap）的输出。
 
 **Since:** 26.0.0
 
@@ -382,7 +386,7 @@ Checks whether automatic extended gain map delivery is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether automatic extended gain map delivery is supported. The value **true** indicates it is supported, and the value **false** indicates it is not supported. |
+| boolean | 是否支持自动扩展增益图（Gainmap）的输出。true表示支持，false表示不支持。 |
 
 ## isMirrorSupported
 
@@ -390,7 +394,7 @@ Checks whether automatic extended gain map delivery is supported.
 isMirrorSupported(): boolean
 ```
 
-Checks whether mirror photography is supported.
+查询是否支持镜像拍照。
 
 **Since:** 10
 
@@ -406,7 +410,7 @@ Checks whether mirror photography is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of mirror photography. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
+| boolean | 返回是否支持镜像拍照，true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
 
 ## isMovingPhotoSupported
 
@@ -414,7 +418,7 @@ Checks whether mirror photography is supported.
 isMovingPhotoSupported(): boolean
 ```
 
-Checks whether taking moving photos is supported.
+查询是否支持动态照片拍摄。
 
 **Since:** 12
 
@@ -430,13 +434,13 @@ Checks whether taking moving photos is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of taking moving photos. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
+| boolean | 返回是否支持动态照片拍照。true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## isPhotoQualityPrioritizationSupported
 
@@ -444,7 +448,7 @@ Checks whether taking moving photos is supported.
 isPhotoQualityPrioritizationSupported(qualityPrioritization: PhotoQualityPrioritization): boolean
 ```
 
-Checks whether the specified photo quality prioritization strategy is supported.
+检查是否支持指定的拍照画质优先策略。
 
 **Since:** 21
 
@@ -460,19 +464,19 @@ Checks whether the specified photo quality prioritization strategy is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| qualityPrioritization | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Photo quality prioritization strategy. |
+| qualityPrioritization | [PhotoQualityPrioritization](arkts-camera-camera-photoqualityprioritization-e.md) | Yes | 要检查的拍照画质优先策略。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the specified photo quality prioritization strategy. **true** if supported, **false** otherwise. |
+| boolean | 是否支持指定的拍照画质优先策略。true表示支持，false表示不支持。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
+| 7400201 | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
 
 ## off('photoAvailable')
 
@@ -480,7 +484,7 @@ Checks whether the specified photo quality prioritization strategy is supported.
 off(type: 'photoAvailable', callback?: AsyncCallback<Photo>): void
 ```
 
-Unsubscribes from the events of returning available photos.
+注销监听拍照返回照片上报事件。
 
 **Since:** 11
 
@@ -496,8 +500,8 @@ Unsubscribes from the events of returning available photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'photoAvailable' | Yes | Event type. The value is fixed at **'photoAvailable'**. The event can be listened for when a **photoOutput** instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Photo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'photoAvailable' | Yes | 监听事件，固定为'photoAvailable'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('photoAssetAvailable')
 
@@ -505,7 +509,7 @@ Unsubscribes from the events of returning available photos.
 off(type: 'photoAssetAvailable', callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Unsubscribes from photo asset available events.
+注销photoAsset上报。
 
 **Since:** 12
 
@@ -521,8 +525,8 @@ Unsubscribes from photo asset available events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'photoAssetAvailable' | Yes | Event type. The value is fixed at **'photoAssetAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;photoAccessHelper.PhotoAsset&gt; | No | Callback used for unsubscription. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'photoAssetAvailable' | Yes | 监听事件，固定为'photoAssetAvailable'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | No | 需要解监听的回调方法。如果callback不为空且与此对应的监听方法一致，不为匿名方法，则解注 册该方法；如果callback为空，则解监听所有回调。 |
 
 ## off('captureStart')
 
@@ -530,10 +534,13 @@ Unsubscribes from photo asset available events.
 off(type: 'captureStart', callback?: AsyncCallback<number>): void
 ```
 
-Unsubscribes from capture start events.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+注销拍照开始的监听。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 10
 
@@ -551,8 +558,8 @@ Unsubscribes from capture start events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureStart' | Yes | Event type. The value is fixed at **'captureStart'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'captureStart' | Yes | 监听事件，固定为'captureStart'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('captureStartWithInfo')
 
@@ -560,7 +567,7 @@ Unsubscribes from capture start events.
 off(type: 'captureStartWithInfo', callback?: AsyncCallback<CaptureStartInfo>): void
 ```
 
-Unsubscribes from capture start events.
+注销监听拍照。
 
 **Since:** 11
 
@@ -576,8 +583,8 @@ Unsubscribes from capture start events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureStartWithInfo' | Yes | Event type. The value is fixed at **'captureStartWithInfo'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptureStartInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'captureStartWithInfo' | Yes | 监听事件，固定为'captureStartWithInfo'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureStartInfo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('frameShutter')
 
@@ -585,7 +592,7 @@ Unsubscribes from capture start events.
 off(type: 'frameShutter', callback?: AsyncCallback<FrameShutterInfo>): void
 ```
 
-Unsubscribes from frame shutter events.
+注销监听拍照帧输出捕获。
 
 **Since:** 10
 
@@ -601,8 +608,8 @@ Unsubscribes from frame shutter events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameShutter' | Yes | Event type. The value is fixed at **'frameShutter'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameShutterInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'frameShutter' | Yes | 监听事件，固定为'frameShutter'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterInfo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('frameShutterEnd')
 
@@ -610,7 +617,7 @@ Unsubscribes from frame shutter events.
 off(type: 'frameShutterEnd', callback?: AsyncCallback<FrameShutterEndInfo>): void
 ```
 
-Unsubscribes from frame shutter end events.
+注销监听拍照曝光结束捕获。
 
 **Since:** 12
 
@@ -626,8 +633,8 @@ Unsubscribes from frame shutter end events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameShutterEnd' | Yes | Event type. The value is fixed at **'frameShutterEnd'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameShutterEndInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'frameShutterEnd' | Yes | 监听事件，固定为'frameShutterEnd'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterEndInfo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
 
 ## off('captureEnd')
 
@@ -635,7 +642,7 @@ Unsubscribes from frame shutter end events.
 off(type: 'captureEnd', callback?: AsyncCallback<CaptureEndInfo>): void
 ```
 
-Unsubscribes from capture end events.
+注销监听拍照结束。
 
 **Since:** 10
 
@@ -651,8 +658,8 @@ Unsubscribes from capture end events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureEnd' | Yes | Event type. The value is fixed at **'captureEnd'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptureEndInfo&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'captureEnd' | Yes | 监听事件，固定为'captureEnd'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureEndInfo&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('captureReady')
 
@@ -660,7 +667,7 @@ Unsubscribes from capture end events.
 off(type: 'captureReady', callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from capture ready events.
+注销监听可拍下一张。
 
 **Since:** 12
 
@@ -676,8 +683,8 @@ Unsubscribes from capture ready events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureReady' | Yes | Event type. The value is fixed at **'captureReady'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'captureReady' | Yes | 监听事件，固定为'captureReady'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('estimatedCaptureDuration')
 
@@ -685,7 +692,7 @@ Unsubscribes from capture ready events.
 off(type: 'estimatedCaptureDuration', callback?: AsyncCallback<double>): void
 ```
 
-Unsubscribes from estimated capture duration events.
+注销监听预估的拍照时间。
 
 **Since:** 12
 
@@ -701,8 +708,8 @@ Unsubscribes from estimated capture duration events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'estimatedCaptureDuration' | Yes | Event type. The value is fixed at **'estimatedCaptureDuration'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'estimatedCaptureDuration' | Yes | 监听事件，固定为'estimatedCaptureDuration'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('error')
 
@@ -710,7 +717,7 @@ Unsubscribes from estimated capture duration events.
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from PhotoOutput error events.
+注销监听拍照输出发生错误。
 
 **Since:** 10
 
@@ -726,8 +733,8 @@ Unsubscribes from PhotoOutput error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'error' | Yes | 监听事件，固定为'error'，photoOutput创建成功后可监听。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## offCaptureEnd
 
@@ -749,7 +756,7 @@ Unsubscribes from capture end event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptureEndInfo&gt; | No | Callback used to get the capture end information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureEndInfo&gt; | No | Callback used to get the capture end information. |
 
 ## offCapturePhotoAvailable
 
@@ -757,7 +764,7 @@ Unsubscribes from capture end event callback.
 offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void
 ```
 
-Unsubscribes from the events of returning full-quality images and uncompressed images. This API uses an asynchronous callback to return the result.
+注销监听全质量图和未压缩图。使用callback异步回调。
 
 **Since:** 23
 
@@ -775,7 +782,7 @@ Unsubscribes from the events of returning full-quality images and uncompressed i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CapturePhoto&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CapturePhoto&gt; | No | 回调函数，如果指定参数则取消对应callback，callback对象不可是匿名函数，否则取消所有callback。 |
 
 ## offCaptureReady
 
@@ -797,7 +804,7 @@ Unsubscribes from capture ready event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to notice capture ready. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to notice capture ready. |
 
 ## offCaptureStartWithInfo
 
@@ -819,7 +826,7 @@ Unsubscribes from capture start event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptureStartInfo&gt; | No | Callback used to get the capture start info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureStartInfo&gt; | No | Callback used to get the capture start info. |
 
 ## offError
 
@@ -841,7 +848,7 @@ Unsubscribes from error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to get the photo output errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the photo output errors. |
 
 ## offEstimatedCaptureDuration
 
@@ -863,7 +870,7 @@ Unsubscribes from estimated capture duration event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | No | Callback used to notify the estimated capture duration (in milliseconds). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | No | Callback used to notify the estimated capture duration (in milliseconds). |
 
 ## offFrameShutter
 
@@ -885,7 +892,7 @@ Unsubscribes from frame shutter event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameShutterInfo&gt; | No | Callback used to get the frame shutter information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterInfo&gt; | No | Callback used to get the frame shutter information. |
 
 ## offFrameShutterEnd
 
@@ -907,7 +914,7 @@ Unsubscribes from frame shutter end event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameShutterEndInfo&gt; | No | Callback used to get the frame shutter end information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterEndInfo&gt; | No | Callback used to get the frame shutter end information. |
 
 ## offPhotoAssetAvailable
 
@@ -929,7 +936,7 @@ Unsubscribes photo asset event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;photoAccessHelper.PhotoAsset&gt; | No | Callback used to get the asset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | No | Callback used to get the asset. |
 
 ## offPhotoAvailable
 
@@ -951,7 +958,7 @@ Unsubscribes photo available event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Photo&gt; | No | Callback used to get the Photo. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | No | Callback used to get the Photo. |
 
 ## on('photoAvailable')
 
@@ -959,10 +966,11 @@ Unsubscribes photo available event callback.
 on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void
 ```
 
-Subscribes to the events of returning available photos. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+注册监听拍照返回照片上报事件。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 11
 
@@ -978,8 +986,8 @@ Subscribes to the events of returning available photos. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'photoAvailable' | Yes | Event type. The value is fixed at **'photoAvailable'**. The event can be listened for when a **photoOutput** instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Photo&gt; | Yes | Callback used to listen for the event of returning available photos. |
+| type | 'photoAvailable' | Yes | 监听事件，固定为'photoAvailable'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | Yes | 回调函数，用于监听拍照返回照片上报事件。 |
 
 ## on('photoAssetAvailable')
 
@@ -987,10 +995,11 @@ Subscribes to the events of returning available photos. This API uses an asynchr
 on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to photo asset available events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+注册监听photoAsset上报。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 12
 
@@ -1006,8 +1015,8 @@ Subscribes to photo asset available events. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'photoAssetAvailable' | Yes | Event type. The value is fixed at **'photoAssetAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;photoAccessHelper.PhotoAsset&gt; | Yes | Callback used to return the photo asset. |
+| type | 'photoAssetAvailable' | Yes | 监听事件，固定为'photoAssetAvailable'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | Yes | 回调函数，用于监听photoAsset上报。 |
 
 ## on('captureStart')
 
@@ -1015,10 +1024,13 @@ Subscribes to photo asset available events. This API uses an asynchronous callba
 on(type: 'captureStart', callback: AsyncCallback<number>): void
 ```
 
-Subscribes to capture start events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听拍照开始，通过注册回调函数获取Capture ID。使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 10
 
@@ -1036,8 +1048,8 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureStart' | Yes | Event type. The value is fixed at **'captureStart'**. The event can be listened for when a photoOutput instance is created. This event is triggered and returned when the bottom layer starts exposure each time a photo is taken. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the capture ID. |
+| type | 'captureStart' | Yes | 监听事件，固定为'captureStart'，photoOutput创建成功后可监听。每次拍照，底层开始曝光时触发该事件并返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 使用callback的方式获取Capture ID。 |
 
 ## on('captureStartWithInfo')
 
@@ -1045,11 +1057,11 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): void
 ```
 
-Subscribes to capture start events. This API uses an asynchronous callback to return the  
-[capture start ID]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听拍照开始，通过注册回调函数获取[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 11
 
@@ -1065,8 +1077,8 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureStartWithInfo' | Yes | Event type. The value is fixed at **'captureStartWithInfo'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptureStartInfo&gt; | Yes | Callback used to return the capture ID. |
+| type | 'captureStartWithInfo' | Yes | 监听事件，固定为'captureStartWithInfo'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureStartInfo&gt; | Yes | 使用callback的方式获取Capture ID。 |
 
 ## on('frameShutter')
 
@@ -1074,7 +1086,7 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 on(type: 'frameShutter', callback: AsyncCallback<FrameShutterInfo>): void
 ```
 
-Subscribes to frame shutter events. This API uses an asynchronous callback to return the result.
+监听拍照帧输出捕获，通过注册回调函数获取结果。使用callback异步回调。
 
 **Since:** 10
 
@@ -1090,8 +1102,8 @@ Subscribes to frame shutter events. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameShutter' | Yes | Event type. The value is fixed at **'frameShutter'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameShutterInfo&gt; | Yes | Callback used to return the result. A new photo capture request can be delivered as long as this event is returned. |
+| type | 'frameShutter' | Yes | 监听事件，固定为'frameShutter'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterInfo&gt; | Yes | 回调函数，用于获取相关信息。该回调返回意味着可以再次下发拍照请求。 |
 
 ## on('frameShutterEnd')
 
@@ -1099,10 +1111,11 @@ Subscribes to frame shutter events. This API uses an asynchronous callback to re
 on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void
 ```
 
-Subscribes to frame shutter end events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听拍照曝光结束捕获，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 12
 
@@ -1118,8 +1131,8 @@ Subscribes to frame shutter end events. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameShutterEnd' | Yes | Event type. The value is fixed at **'frameShutterEnd'**. The event can be listened for when a photoOutput instance is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameShutterEndInfo&gt; | Yes | Callback used to return the result. It is invoked when the frame shutter ends. |
+| type | 'frameShutterEnd' | Yes | 监听事件，固定为'frameShutterEnd'，photoOutput创建成功后可监听。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterEndInfo&gt; | Yes | 回调函数，用于获取相关信息。该回调返回表示拍照曝光结束。 |
 
 ## on('captureEnd')
 
@@ -1127,10 +1140,11 @@ Subscribes to frame shutter end events. This API uses an asynchronous callback t
 on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void
 ```
 
-Subscribes to capture end events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听拍照结束，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 10
 
@@ -1146,8 +1160,8 @@ Subscribes to capture end events. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureEnd' | Yes | Event type. The value is fixed at **'captureEnd'**. The event can be listened for when a photoOutput instance is created. This event is triggered and the corresponding information is returned when the photo capture is complete. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptureEndInfo&gt; | Yes | Callback used to return the result. |
+| type | 'captureEnd' | Yes | 监听事件，固定为'captureEnd'。photoOutput创建成功后可监听。拍照完全结束可触发该事件发生并返回相应信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureEndInfo&gt; | Yes | 回调函数，用于获取相关信息。 |
 
 ## on('captureReady')
 
@@ -1155,10 +1169,11 @@ Subscribes to capture end events. This API uses an asynchronous callback to retu
 on(type: 'captureReady', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to capture ready events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听可拍下一张，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 12
 
@@ -1174,8 +1189,8 @@ Subscribes to capture ready events. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureReady' | Yes | Event type. The value is fixed at **'captureReady'**. The event can be listened for when a photoOutput instance is created. The event is triggered and the corresponding information is returned when it is ready to take the next photo. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| type | 'captureReady' | Yes | 监听事件，固定为'captureReady'，photoOutput创建成功后可监听。当下一张可拍时可触发该事件发生并返回相应信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于获取相关信息。 |
 
 ## on('estimatedCaptureDuration')
 
@@ -1183,10 +1198,11 @@ Subscribes to capture ready events. This API uses an asynchronous callback to re
 on(type: 'estimatedCaptureDuration', callback: AsyncCallback<double>): void
 ```
 
-Subscribes to estimated capture duration events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听预估的拍照时间，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 12
 
@@ -1202,8 +1218,8 @@ Subscribes to estimated capture duration events. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'estimatedCaptureDuration' | Yes | Event type. The value is fixed at **'estimatedCaptureDuration'**. The event can be listened for when a photoOutput instance is created. This event is triggered and the corresponding information is returned when the photo capture is complete. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | Yes | Callback used to return the estimated duration when the sensor captures frames at the bottom layer in a single capture, measured in units of milliseconds. If **–1** is reported, there is no estimated duration. |
+| type | 'estimatedCaptureDuration' | Yes | 监听事件，固定为'estimatedCaptureDuration'，photoOutput创建成功后可监听。拍照完全结束可触发该事件发 生并返回相应信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | 回调函数，用于获取预估的单次拍照底层出sensor采集帧时间，单位：毫秒。如果上报-1，代表没有预估时间。 |
 
 ## on('error')
 
@@ -1211,10 +1227,11 @@ Subscribes to estimated capture duration events. This API uses an asynchronous c
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to PhotoOutput error events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听拍照输出发生错误，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 10
 
@@ -1230,8 +1247,8 @@ Subscribes to PhotoOutput error events. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a photoOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the calling of a photo-related API. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to return an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | 'error' | Yes | 监听事件，固定为'error'，photoOutput创建成功后可监听。拍照接口调用时出现错误触发该事件并返回错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## onCaptureEnd
 
@@ -1253,7 +1270,7 @@ Subscribes capture end event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptureEndInfo&gt; | Yes | Callback used to get the capture end information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureEndInfo&gt; | Yes | Callback used to get the capture end information. |
 
 ## onCapturePhotoAvailable
 
@@ -1261,14 +1278,15 @@ Subscribes capture end event callback.
 onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 ```
 
-Subscribes to the events of returning full-quality images and uncompressed images. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    - You cannot call  
-    [offCapturePhotoAvailable]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    to unregister the callback in the callback listened by this API.  
-    
-    - This API can be used to register listeners only when uncompressed images in the YUV format are captured.
+注册监听全质量图和未压缩图。使用callback异步回调。
+
+> **说明：**
+> 
+> - 注册监听接口时，不支持在该接口监听的回调方法里调用
+> [offCapturePhotoAvailable](camera.PhotoOutput.offCapturePhotoAvailable(callback?: Callback&lt;CapturePhoto&gt;))
+> 注销回调。
+> 
+> - 拍摄未压缩图（YUV）格式图片时，仅支持使用此接口注册监听。
 
 **Since:** 23
 
@@ -1286,7 +1304,7 @@ Subscribes to the events of returning full-quality images and uncompressed image
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CapturePhoto&gt; | Yes | Callback used to listen for the event of returning full-quality images and uncompressed images. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CapturePhoto&gt; | Yes | 回调函数，用于监听全质量图和未压缩图上报事件。 |
 
 ## onCaptureReady
 
@@ -1308,7 +1326,7 @@ Subscribes capture ready event callback. After receiving the callback, can proce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to notice capture ready. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to notice capture ready. |
 
 ## onCaptureStartWithInfo
 
@@ -1330,7 +1348,7 @@ Subscribes capture start event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CaptureStartInfo&gt; | Yes | Callback used to get the capture start info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureStartInfo&gt; | Yes | Callback used to get the capture start info. |
 
 ## onError
 
@@ -1352,7 +1370,7 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to get the photo output errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the photo output errors. |
 
 ## onEstimatedCaptureDuration
 
@@ -1374,7 +1392,7 @@ Subscribes estimated capture duration event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | Yes | Callback used to notify the estimated capture duration (in milliseconds). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | Callback used to notify the estimated capture duration (in milliseconds). |
 
 ## onFrameShutter
 
@@ -1396,7 +1414,7 @@ Subscribes frame shutter event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameShutterInfo&gt; | Yes | Callback used to get the frame shutter information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterInfo&gt; | Yes | Callback used to get the frame shutter information. |
 
 ## onFrameShutterEnd
 
@@ -1418,7 +1436,7 @@ Subscribes frame shutter end event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameShutterEndInfo&gt; | Yes | Callback used to get the frame shutter end information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterEndInfo&gt; | Yes | Callback used to get the frame shutter end information. |
 
 ## onPhotoAssetAvailable
 
@@ -1429,7 +1447,7 @@ onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): vo
 Subscribes to photo asset event callback.
 
 This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
 
 **Since:** 23
 
@@ -1443,7 +1461,7 @@ This API processes deferred photo delivery data by quickly displaying low-qualit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;photoAccessHelper.PhotoAsset&gt; | Yes | Callback used to get the asset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | Yes | Callback used to get the asset. |
 
 ## onPhotoAvailable
 
@@ -1465,7 +1483,7 @@ Subscribes photo available event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Photo&gt; | Yes | Callback used to get the Photo. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | Yes | Callback used to get the Photo. |
 
 ## setMovingPhotoVideoCodecType
 
@@ -1473,7 +1491,7 @@ Subscribes photo available event callback.
 setMovingPhotoVideoCodecType(codecType: VideoCodecType): void
 ```
 
-Sets a video codec type for moving photos.
+设置动态照片短视频编码类型。
 
 **Since:** 13
 
@@ -1489,13 +1507,13 @@ Sets a video codec type for moving photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| codecType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Video codec type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is not within the enumerated value range, this parameter does not take effect. |
+| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | Yes | 动态照片短视频编码类型。 &lt;br&gt;如果设置不在枚举范围内，则该参数不会生效。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## setPhotoQualityPrioritization
 
@@ -1503,10 +1521,10 @@ Sets a video codec type for moving photos.
 setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void
 ```
 
-Sets the photo quality prioritization strategy.
+设置拍照画质优先策略。
 
-Before setting the strategy, you can call  
-[isPhotoQualityPrioritizationSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the device supports the specified photo quality prioritization strategy.
+设置之前，可先使用方法  
+[isPhotoQualityPrioritizationSupported](arkts-camera-camera-photooutput-i.md#isphotoqualityprioritizationsupported)对设备是否支持指定的拍照画质优先策略进行检查。
 
 **Since:** 21
 
@@ -1522,12 +1540,12 @@ Before setting the strategy, you can call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| qualityPrioritization | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Photo quality prioritization strategy. |
+| qualityPrioritization | [PhotoQualityPrioritization](arkts-camera-camera-photoqualityprioritization-e.md) | Yes | 要设置的拍照画质优先策略。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
 

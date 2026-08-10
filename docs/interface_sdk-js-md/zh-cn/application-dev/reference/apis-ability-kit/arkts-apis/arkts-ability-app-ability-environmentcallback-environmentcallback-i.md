@@ -10,13 +10,19 @@ EnvironmentCallback模块提供对系统环境变化监听回调的能力。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## onConfigurationUpdated
 
 ```TypeScript
 onConfigurationUpdated(config: Configuration): void
 ```
 
-[注册系统环境变化的监听]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_后，在系统环境变化时触发回调。
+[注册系统环境变化的监听](./application/ApplicationContext:ApplicationContext#on(type: 'environment', callback: EnvironmentCallback))后，在系统环境变化时触发回调。
 
 **起始版本：** 23
 
@@ -34,7 +40,7 @@ onConfigurationUpdated(config: Configuration): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 变化后的Configuration对象。 |
+| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 | 变化后的Configuration对象。 |
 
 ## onMemoryLevel
 
@@ -42,7 +48,7 @@ onConfigurationUpdated(config: Configuration): void
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-[注册系统环境变化的监听]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_后，在系统内存变化时触发回调。
+[注册系统环境变化的监听](./application/ApplicationContext:ApplicationContext#on(type: 'environment', callback: EnvironmentCallback))后，在系统内存变化时触发回调。
 
 **起始版本：** 23
 
@@ -60,5 +66,5 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
 

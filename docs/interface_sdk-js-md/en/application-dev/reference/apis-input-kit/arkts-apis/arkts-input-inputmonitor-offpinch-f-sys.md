@@ -1,12 +1,18 @@
 # offPinch (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
 ## offPinch
 
 ```TypeScript
 function offPinch(receiver?: Callback<Pinch>): void
 ```
 
-Cancel listening for touchPad pinch events.
+取消监听全局触控板的捏合事件。
 
 **Since:** 23
 
@@ -24,15 +30,15 @@ Cancel listening for touchPad pinch events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Pinch&gt; | No | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Pinch](arkts-input-multimodalinput-gestureevent-pinch-i.md)&gt; | No | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permit error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | SystemAPI permit error. |
 
 
 ## offPinch
@@ -41,7 +47,7 @@ Cancel listening for touchPad pinch events.
 function offPinch(fingers: int, receiver?: Callback<Pinch>): void
 ```
 
-Cancel listening for touchPad fingers pinch events.
+取消监听全局触控板的捏合事件。
 
 **Since:** 23
 
@@ -59,14 +65,14 @@ Cancel listening for touchPad fingers pinch events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fingers | int | Yes | the number of fingers. |
-| receiver | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Pinch&gt; | No | Callback used to receive the reported data. |
+| fingers | int | Yes | 捏合的手指数，手指数不能小于0，当前仅支持收到捏合手势的回调。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Pinch](arkts-input-multimodalinput-gestureevent-pinch-i.md)&gt; | No | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permit error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | SystemAPI permit error. |
 

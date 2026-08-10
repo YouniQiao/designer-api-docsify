@@ -1,5 +1,11 @@
 # getBundleNameByUidSync
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getBundleNameByUidSync
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getBundleNameByUidSync(uid: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示应用程序的UID。 |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示应用程序的UID。 |
 
 **返回值：**
 
@@ -34,11 +40,11 @@ function getBundleNameByUidSync(uid: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700021](../errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Permission denied. |
+| 17700021 | The uid is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

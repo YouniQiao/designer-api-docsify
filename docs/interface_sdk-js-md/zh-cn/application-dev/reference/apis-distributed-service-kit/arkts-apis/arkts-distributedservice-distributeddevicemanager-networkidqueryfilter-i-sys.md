@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## onlineStatus
 
 ```TypeScript
@@ -23,7 +29,7 @@ onlineStatus : int
 - 0：表示设备处于离线状态。  
 - 1：表示设备处于在线状态。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

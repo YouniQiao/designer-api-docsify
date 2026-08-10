@@ -8,7 +8,7 @@
 fallback?: DisplayNamesFallback
 ```
 
-**Type:** DisplayNamesFallback
+**Type:** [DisplayNamesFallback](../../apis-arkts/arkts-apis/arkts-arkts-intl-displaynamesfallback-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -18,7 +18,7 @@ fallback?: DisplayNamesFallback
 languageDisplay?: DisplayNamesLanguageDisplay
 ```
 
-**Type:** DisplayNamesLanguageDisplay
+**Type:** [DisplayNamesLanguageDisplay](../../apis-arkts/arkts-apis/arkts-arkts-intl-displaynameslanguagedisplay-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -28,7 +28,7 @@ languageDisplay?: DisplayNamesLanguageDisplay
 localeMatcher?: RelativeTimeFormatLocaleMatcher
 ```
 
-**Type:** RelativeTimeFormatLocaleMatcher
+**Type:** [RelativeTimeFormatLocaleMatcher](../../apis-arkts/arkts-apis/arkts-arkts-intl-relativetimeformatlocalematcher-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -38,7 +38,7 @@ localeMatcher?: RelativeTimeFormatLocaleMatcher
 style?: RelativeTimeFormatStyle
 ```
 
-**Type:** RelativeTimeFormatStyle
+**Type:** [RelativeTimeFormatStyle](arkts-intl-relativetimeformatstyle-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -48,7 +48,7 @@ style?: RelativeTimeFormatStyle
 type: DisplayNamesType
 ```
 
-**Type:** DisplayNamesType
+**Type:** [DisplayNamesType](../../apis-arkts/arkts-apis/arkts-arkts-intl-displaynamestype-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

@@ -36,7 +36,7 @@ The default follow device select strategy.
 SELECT_STRATEGY_INDEPENDENT = 1
 ```
 
-The independent device select strategy.
+The independent device select strategy..
 
 **Since:** 21
 

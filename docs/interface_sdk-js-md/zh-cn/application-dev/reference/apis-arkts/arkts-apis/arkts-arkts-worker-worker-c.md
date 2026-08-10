@@ -16,6 +16,12 @@ Worker类包含所有Worker功能。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
@@ -41,9 +47,9 @@ constructor(scriptURL: string, options?: WorkerOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scriptURL | string | 是 | scriptURL worker执行的脚本URL。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 可为worker设置的选项。 |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | 否 | 可为worker设置的选项。 |
 
-**示例：**
+## 示例
 
 此处以在Stage模型的entry模块Index.ets文件中加载Worker线程文件为例，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../arkts-utils/worker-introduction.md#文件路径注意事项)。
 
@@ -80,9 +86,9 @@ off(type: string, listener?: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | listener 要移除的事件监听的回调函数。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 | listener 要移除的事件监听的回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -118,9 +124,9 @@ on(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | type 向Worker添加一个事件监听。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -157,9 +163,9 @@ once(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -195,7 +201,7 @@ onerror属性用于指定Worker在执行过程中发生异常时被调用的事�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| err | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | 是 |  |
 
 ## onexit
 
@@ -247,7 +253,7 @@ onmessage属性用于指定当宿主线程接收到来自其创建的Worker通�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| event | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | 是 |  |
 
 ## onmessageerror
 
@@ -273,7 +279,7 @@ onmessage属性用于指定当Worker收到一条无法被序列化的消息时�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| event | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | 是 |  |
 
 ## postMessage
 
@@ -302,7 +308,7 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 | message | Object | 是 | 发送至Worker的数据。 |
 | transfer | ArrayBuffer[] | 是 | transfer 可转移的ArrayBuffer实例对象。 transferList数组不可包含null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -339,9 +345,9 @@ postMessage(message: Object, options?: PostMessageOptions): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | message | Object | 是 | 发送至Worker的数据。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 可为postMessage设置的选项。 transferList数组不可包含null。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 可为postMessage设置的选项。 transferList数组不可包含null。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -375,7 +381,7 @@ terminate(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets

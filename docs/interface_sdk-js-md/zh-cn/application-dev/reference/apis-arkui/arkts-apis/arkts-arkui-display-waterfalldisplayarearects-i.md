@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## bottom
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly bottom: Rect
 
 瀑布曲面区域的底部矩形区域。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 9
 
@@ -38,7 +44,7 @@ readonly left: Rect
 
 瀑布曲面区域的左侧矩形区域。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 9
 
@@ -58,7 +64,7 @@ readonly right: Rect
 
 瀑布曲面区域的右侧矩形区域。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 9
 
@@ -78,7 +84,7 @@ readonly top: Rect
 
 瀑布曲面区域的顶部矩形区域。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 9
 

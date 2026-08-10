@@ -3,10 +3,11 @@
 管理音频组音量。
 
 在使用AudioVolumeGroupManager的接口之前，需先通过  
-[getVolumeGroupManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取AudioVolumeGroupManager实例。
-    **说明：**  
-    
-    - 本Interface首批接口从API version 9开始支持。
+[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)获取AudioVolumeGroupManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 9
 
@@ -15,6 +16,12 @@
 <!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## adjustSystemVolumeByStep
 
@@ -38,20 +45,20 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio volume type. |
-| adjustType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Volume adjustment type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by callback. |
+| 201 | Permission denied. |
+| 6800301 | System error. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -87,8 +94,8 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio volume type. |
-| adjustType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Volume adjustment type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
 
 **返回值：**
 
@@ -100,12 +107,12 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 6800301 | System error. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -139,19 +146,19 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adjustType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Volume adjustment type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by callback. |
+| 201 | Permission denied. |
+| 6800301 | System error. Return by callback. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -188,7 +195,7 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adjustType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Volume adjustment type. |
+| adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
 
 **返回值：**
 
@@ -200,12 +207,12 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 6800301 | System error. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -245,26 +252,26 @@ Obtains the active volume type in the calling moment. This method returns in syn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | The target uid's active volume type or 0 which means the global active volume type. |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | The target uid's active volume type or 0 which means the global active volume type. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current active volume type. |
+| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | Current active volume type. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
-let uid = 20010041; // 应用ID。
+let uid: number = 20010041; // 应用ID。
 
 let value = audioVolumeGroupManager.getActiveVolumeTypeSync(uid);
 ```
@@ -297,10 +304,10 @@ isPersistentMicMute(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
@@ -328,11 +335,11 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio stream type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 是 | Audio stream type. |
 | mute | boolean | 是 | Mute status to set. The value true means to mute the stream, and false means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -370,7 +377,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio stream type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 是 | Audio stream type. |
 | mute | boolean | 是 | Mute status to set. The value true means to mute the stream, and false means the opposite. |
 
 **返回值：**
@@ -379,7 +386,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
@@ -421,12 +428,12 @@ setMicMute(mute: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 audioVolumeGroupManager.setMicMute(true).then(() => {
@@ -457,7 +464,7 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mute | boolean | 是 | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Mute status to set. This value represents the caller's type such as EDM or privacy. |
+| type | [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md) | 是 | Mute status to set. This value represents the caller's type such as EDM or privacy. |
 
 **返回值：**
 
@@ -469,12 +476,12 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
+| 201 | @throws { BusinessError } 201 - Permission denied. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).then(() => {
@@ -504,10 +511,10 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Ringer mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | Ringer mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -545,7 +552,7 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Ringer mode. |
+| mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | Ringer mode. |
 
 **返回值：**
 
@@ -553,7 +560,7 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
@@ -591,11 +598,11 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio stream type. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | Callback used to return the result. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 是 | Audio stream type. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -639,8 +646,8 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio stream type. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 是 | Audio stream type. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
 
 **返回值：**
 
@@ -648,7 +655,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
@@ -686,9 +693,9 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Audio stream type. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| flags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | volume flags used to enable different operations, can be union of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 是 | Audio stream type. |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | volume flags used to enable different operations, can be union of {@link VolumeFlag} |
 
 **返回值：**
 
@@ -700,10 +707,10 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| 201 | Permission denied. |
+| 202 | Not system App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 audioVolumeGroupManager.setVolumeWithFlag(audio.AudioVolumeType.MEDIA, 10, 1).then(() => {

@@ -1,5 +1,11 @@
 # onSystemCommonEvent（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## onSystemCommonEvent
 
 ```TypeScript
@@ -24,12 +30,12 @@ function onSystemCommonEvent(callback: EventProcess): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 监听通用事件命令回调 |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 是 | 监听通用事件命令回调 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| 6600101 | Session service exception. |
+| 202 | Not System App. |
 

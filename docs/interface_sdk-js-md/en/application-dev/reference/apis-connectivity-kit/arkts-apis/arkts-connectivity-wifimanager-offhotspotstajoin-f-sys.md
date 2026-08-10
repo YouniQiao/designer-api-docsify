@@ -1,5 +1,11 @@
 # offHotspotStaJoin (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offHotspotStaJoin
 
 ```TypeScript
@@ -24,14 +30,14 @@ Unsubscribe Wi-Fi hotspot sta join events.All callback functions will be deregis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StationInfo&gt; | No | the callback of off |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | No | the callback of off |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | System API is not allowed called by Non-system application. |
+| 2601000 | Operation failed. |
 

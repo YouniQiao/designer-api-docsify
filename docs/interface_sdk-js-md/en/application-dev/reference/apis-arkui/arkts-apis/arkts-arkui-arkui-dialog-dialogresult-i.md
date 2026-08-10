@@ -1,6 +1,6 @@
 # DialogResult
 
-Response result for dialog.
+对话的响应结果。
 
 **Since:** 26.1.0
 
@@ -10,13 +10,19 @@ Response result for dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## dialogId
 
 ```TypeScript
 dialogId: int
 ```
 
-Id of the dialog.The value should be an integer.
+对话框的ID。取值限定为整数。
 
 **Type:** int
 

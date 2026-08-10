@@ -10,6 +10,12 @@ Usb异步传输回调。
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## actualLength
 
 ```TypeScript
@@ -18,7 +24,7 @@ actualLength: int
 
 读写操作的实际长度值。（单位：字节）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -54,7 +60,7 @@ status: UsbTransferStatus
 
 读写操作完成的状态。
 
-**类型：** UsbTransferStatus
+**类型：** [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
 
 **起始版本：** 18
 

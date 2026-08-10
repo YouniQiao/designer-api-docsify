@@ -58,5 +58,5 @@ declare function opendir(path: string, callback: AsyncCallback<Dir>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 待打开文件目录的应用沙箱路径。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Dir&gt; | 是 | 异步打开文件目录之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dir&gt; | 是 | 异步打开文件目录之后的回调。 |
 

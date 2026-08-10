@@ -1,5 +1,11 @@
 # callbackWrapper
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## callbackWrapper
 
 ```TypeScript

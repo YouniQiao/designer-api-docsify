@@ -96,8 +96,7 @@ Checks whether the value is less than the predicate, using the first element of 
 GREATER_THAN_OR_EQUAL_TO = 5
 ```
 
-Checks whether the value is greater than or equal to the predicate, using the first element of the **value**  
-array to match the predicate. If the array is longer, only the first element is considered.
+Checks whether the value is greater than or equal to the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
 
 **Since:** 22
 

@@ -1,6 +1,6 @@
 # TitleBarType
 
-Enumerates the title bar types. The default type is **ROUND\_ICON**.
+标题栏类型的可选项，默认值为ROUND_ICON。
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the title bar types. The default type is **ROUND\_ICON**.
 SQUARED_ICON = 1
 ```
 
-Square icon style.
+方形图标样式。
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Square icon style.
 ROUND_ICON = 2
 ```
 
-Round icon style.
+圆形图标样式。
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ Round icon style.
 DRAWER = 3
 ```
 
-Drawer style.
+抽屉样式。
 
 **Since:** 18
 

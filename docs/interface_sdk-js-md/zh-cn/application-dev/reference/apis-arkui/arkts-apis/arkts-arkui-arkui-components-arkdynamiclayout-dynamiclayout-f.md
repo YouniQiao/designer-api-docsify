@@ -1,5 +1,11 @@
 # DynamicLayout
 
+## 导入模块
+
+```TypeScript
+import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
+```
+
 ## DynamicLayout
 
 ```TypeScript
@@ -25,12 +31,12 @@ export declare function DynamicLayout (
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algorithm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定动态布局组件的布局算法。 取非法值时，按照堆叠布局算法\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_布局子组件，子组件堆叠排列。 |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 是 | 指定动态布局组件的布局算法。 取非法值时，按照堆叠布局算法[StackLayoutAlgorithm](../../../reference/apis-arkui/js-apis-arkui-layoutAlgorithm.md#stacklayoutalgorithm)布局子组件，子组件堆叠排列。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |
 

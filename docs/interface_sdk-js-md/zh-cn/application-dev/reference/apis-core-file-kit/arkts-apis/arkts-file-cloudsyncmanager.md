@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## 汇总
 
 <!--Del-->
@@ -68,7 +74,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [DownloadState](arkts-corefile-cloudsyncmanager-downloadstate-e.md) | 全量下载任务状态的枚举。 |
-| [DownloadStopReason](arkts-corefile-cloudsyncmanager-downloadstopreason-e.md) | 全量下载停止原因的枚举，默认值为NO\_\_\_ESCAPED\_UNDERSCORE\_\_\_STOP。 |
+| [DownloadStopReason](arkts-corefile-cloudsyncmanager-downloadstopreason-e.md) | 全量下载停止原因的枚举，默认值为NO_STOP。 |
 
 <!--Del-->
 ### 枚举（系统接口）

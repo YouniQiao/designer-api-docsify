@@ -1,6 +1,6 @@
 # ProtectedResourceType
 
-定义可访问的资源类型，与 \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ 方法相关。
+定义可访问的资源类型，与 {@link onPermissionRequest} 方法相关。
 
 **起始版本：** 9
 

@@ -1,6 +1,6 @@
 # DepthComponentErrorEvent (System API)
 
-Information about the background resource loading error.
+背景资源加载失败的事件信息。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Information about the background resource loading error.
 componentHeight: double
 ```
 
-Component height.
+组件高度，单位为vp。
 
 **Type:** double
 
@@ -42,7 +42,7 @@ Component height.
 componentWidth: double
 ```
 
-Component width.
+组件宽度，单位为vp。
 
 **Type:** double
 
@@ -66,9 +66,9 @@ Component width.
 error?: BusinessError<void>
 ```
 
-Business Error.
+加载失败的错误信息。
 
-**Type:** BusinessError&lt;void&gt;
+**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt;
 
 **Since:** 26.0.0
 

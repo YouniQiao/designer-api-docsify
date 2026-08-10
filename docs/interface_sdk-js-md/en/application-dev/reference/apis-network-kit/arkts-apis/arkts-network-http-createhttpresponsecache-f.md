@@ -1,5 +1,11 @@
 # createHttpResponseCache
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## createHttpResponseCache
 
 ```TypeScript
@@ -22,15 +28,15 @@ Creates a default {@code HttpResponseCache} object to store the responses of HTT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cacheSize | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | the size of cache(max value is 10MB), default is 10*1024*1024(10MB). |
+| cacheSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the size of cache(max value is 10MB), default is 10*1024*1024(10MB). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the HttpResponseCache of the createHttpResponseCache. |
+| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) | the HttpResponseCache of the createHttpResponseCache. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

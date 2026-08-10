@@ -22,7 +22,7 @@ formState: FormState
 
 Widget state.
 
-**Type:** FormState
+**Type:** [FormState](arkts-form-forminfo-formstate-e.md)
 
 **Since:** 8
 
@@ -44,7 +44,7 @@ want: Want
 
 Want text.
 
-**Type:** Want
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 8
 

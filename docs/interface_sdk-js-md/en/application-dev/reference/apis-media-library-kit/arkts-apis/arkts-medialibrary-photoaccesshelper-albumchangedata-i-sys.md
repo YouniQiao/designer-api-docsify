@@ -10,6 +10,12 @@ Describes the change data of an album.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## version
 
 ```TypeScript
@@ -18,7 +24,7 @@ version: long
 
 Version number of the album notification, which is used to determine the order of notifications.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 

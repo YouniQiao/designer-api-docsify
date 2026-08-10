@@ -1,5 +1,11 @@
 # onDensityUpdate
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## onDensityUpdate
 
 ```TypeScript
@@ -22,6 +28,6 @@ Registers a callback function to be called when the screen density is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The context scope of the observer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DensityInfo&gt; | Yes | The callback function to be called when the screen density is updated. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DensityInfo&gt; | Yes | The callback function to be called when the screen density is updated. |
 

@@ -4,7 +4,7 @@
 export type SetPreviewTextCallback = (text: string, range: Range) => void
 ```
 
-The callback of 'setPreviewText' event.
+当输入法框架需要显示预览文本时触发的回调。
 
 **Since:** 17
 
@@ -18,6 +18,6 @@ The callback of 'setPreviewText' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | text to be previewed.  |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the range of the text to be replaced by the preview text.  |
+| text | string | Yes | 预览文本内容。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 文本的选中范围。 |
 

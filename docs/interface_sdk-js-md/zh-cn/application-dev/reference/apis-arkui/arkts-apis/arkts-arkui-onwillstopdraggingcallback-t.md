@@ -20,5 +20,5 @@ On scroll callback using in scrollable onWillStopDragging.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| velocity | double | 是 | The veolicity of the scroll view at the moment the touch was released. \_\_\_HTML\_TAG\_USD\_0\_\_\_Unit: vp/s.  |
+| velocity | double | 是 | The veolicity of the scroll view at the moment the touch was released. <br>Unit: vp/s. |
 

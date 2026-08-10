@@ -1,6 +1,6 @@
 # SceneDetection（系统接口）
 
-Provides the scene detection capability. It inherits from [SceneDetectionQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md).
 
 **继承/实现关系：** SceneDetection extends [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)
 
@@ -14,6 +14,12 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery]\
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## enableSceneFeature
 
 ```TypeScript
@@ -21,7 +27,7 @@ enableSceneFeature(type: SceneFeatureType, enabled: boolean): void
 ```
 
 Enables or disables a scene feature. This API must be called after  
-[SceneFeatureDetectionResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the corresponding scene feature is received.
+[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) of the corresponding scene feature is received.
 
 **起始版本：** 12
 
@@ -37,17 +43,17 @@ Enables or disables a scene feature. This API must be called after
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Scene feature. |
+| type | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Scene feature. |
 | enabled | boolean | 是 | Whether to enable the scene feature. **true** to enable, **false** otherwise. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

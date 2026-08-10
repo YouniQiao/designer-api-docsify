@@ -10,6 +10,12 @@ ARGB格式的颜色描述。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { common2D } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alpha
 
 ```TypeScript
@@ -18,7 +24,7 @@ alpha: int
 
 颜色的A分量（透明度），值是0~255的整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -38,7 +44,7 @@ blue: int
 
 颜色的B分量（蓝色），值是0~255的整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -58,7 +64,7 @@ green: int
 
 颜色的G分量（绿色），值是0~255的整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -78,7 +84,7 @@ red: int
 
 颜色的R分量（红色），值是0~255的整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

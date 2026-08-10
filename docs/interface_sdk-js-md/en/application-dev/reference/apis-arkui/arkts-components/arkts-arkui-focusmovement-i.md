@@ -1,13 +1,12 @@
 # FocusMovement
 
-Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies.
-    **NOTE**  
-    
-    Directly using **focusControl** can lead to the issue of  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. To avoid this, obtain the  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ object using the **getUIContext()** API and then obtain the  
-    **focusControl** bound to the instance using the  
-    [getFocusController]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API.
+设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。
+
+> **说明：**
+> 
+> 直接使用focusControl可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取
+> [UIContext](arkts-arkui-uicontext-t.md)实例，并使用
+> [getFocusController](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller)获取绑定实例的focusControl。
 
 **Since:** 18
 
@@ -23,9 +22,9 @@ Sets the target component for focus movement based on key presses. If it is not 
 backward?: string
 ```
 
-ID of the component to focus on when **Shift+Tab** is pressed.
+通过shift+tab键走焦到组件的id。
 
-The default value resets **backward** to empty.
+默认值为重置backward为空。
 
 **Type:** string
 
@@ -47,9 +46,9 @@ The default value resets **backward** to empty.
 down?: string
 ```
 
-ID of the component to focus on when the down arrow key is pressed.
+通过方向键下键走焦到组件的id。
 
-The default value resets **down** to empty.
+默认值为重置down为空。
 
 **Type:** string
 
@@ -71,9 +70,9 @@ The default value resets **down** to empty.
 forward?: string
 ```
 
-ID of the component to focus on when the **Tab** key is pressed.
+通过tab键走焦到组件的id。
 
-The default value resets **forward** to empty.
+默认值为重置forward为空。
 
 **Type:** string
 
@@ -95,9 +94,9 @@ The default value resets **forward** to empty.
 left?: string
 ```
 
-ID of the component to focus on when the left arrow key is pressed.
+通过方向键左键走焦到组件的id。
 
-The default value resets **left** to empty.
+默认值为重置left为空。
 
 **Type:** string
 
@@ -119,9 +118,9 @@ The default value resets **left** to empty.
 right?: string
 ```
 
-ID of the component to focus on when the right arrow key is pressed.
+通过方向键右键走焦到组件的id。
 
-The default value resets **right** to empty.
+默认值为重置right为空。
 
 **Type:** string
 
@@ -143,9 +142,9 @@ The default value resets **right** to empty.
 up?: string
 ```
 
-ID of the component to focus on when the up arrow key is pressed.
+通过方向键上键走焦到组件的id。
 
-The default value resets **up** to empty.
+默认值为重置up为空。
 
 **Type:** string
 

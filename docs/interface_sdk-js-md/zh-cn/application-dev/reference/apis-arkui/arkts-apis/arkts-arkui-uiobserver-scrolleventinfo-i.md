@@ -10,6 +10,12 @@ ScrollEvent info.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## axis
 
 ```TypeScript
@@ -18,7 +24,7 @@ axis?: Axis
 
 滚动轴。
 
-**类型：** Axis
+**类型：** [Axis](arkts-arkui-axis-e.md)
 
 **起始版本：** 26.0.0
 
@@ -78,7 +84,7 @@ scrollEvent: ScrollEventType
 
 Changed ScrollEvent type.
 
-**类型：** ScrollEventType
+**类型：** [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
 
 **起始版本：** 23
 

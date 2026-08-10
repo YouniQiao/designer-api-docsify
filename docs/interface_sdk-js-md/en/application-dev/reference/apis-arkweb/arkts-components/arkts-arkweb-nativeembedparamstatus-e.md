@@ -1,6 +1,6 @@
 # NativeEmbedParamStatus
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when onNativeEmbedObjectParamChange being called.
+定义同层渲染object标签内嵌param元素的状态变化类型，当添加param元素时触发ADD，修改param元素属性触发UPDATE，删除param元素触发DELETE。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when onNativeEmbedOb
 ADD = 0
 ```
 
-Triggered when a **param** element is added.
+添加param元素。
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ Triggered when a **param** element is added.
 UPDATE = 1
 ```
 
-Triggered when a **param** element is modified.
+更改param元素属性。
 
 **Since:** 21
 
@@ -48,7 +48,7 @@ Triggered when a **param** element is modified.
 DELETE = 2
 ```
 
-Triggered when a **param** element is deleted.
+删除param元素。
 
 **Since:** 21
 

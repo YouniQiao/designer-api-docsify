@@ -8,6 +8,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -32,8 +38,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio) | 投播会话到指定设备列表。结果通过callback异步回调方式返回。  需要导入\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_模块获取AudioDeviceDescriptor的相关描述。 |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio-1) | 投播会话到指定设备列表。结果通过Promise异步回调方式返回。  调用此接口之前，需要导入\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_模块获取AudioDeviceDescriptor的相关描述。 |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio) | 投播会话到指定设备列表。结果通过callback异步回调方式返回。  需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。 |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio-1) | 投播会话到指定设备列表。结果通过Promise异步回调方式返回。  调用此接口之前，需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。 |
 | [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md#castaudiosession) | Cast Audio to the remote devices or cast back local device |
 | [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md#castaudiosession-1) | Cast Audio to the remote devices or cast back local device |
 | [castAudioSessionAll](arkts-avsession-avsession-castaudiosessionall-f-sys.md#castaudiosessionall) | Cast all the media audio to the remote devices or cast back local device |
@@ -120,14 +126,14 @@
 | --- | --- |
 | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | 通话状态相关属性。 |
 | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | 投播控制器接受的命令的对象描述。 |
-| [AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) | 在投播建立后，调用[avSession.getAVCastController]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。 |
+| [AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) | 在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。 |
 | [AVCastPickerOptions](arkts-avsession-avsession-avcastpickeroptions-i.md) | 拉起的投播组件包含的配置属性。 |
 | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | 会话接受的命令的对象描述。 |
 | [AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md) | 播放列表媒体元数据的相关属性。 |
 | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | 媒体元数据的相关属性。 |
 | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | 媒体播放状态的相关属性。 |
 | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | 播放列表中单项的相关属性。 |
-| [AVSession](arkts-avsession-avsession-avsession-i.md) | 调用[avSession.createAVSession]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。 |
+| [AVSession](arkts-avsession-avsession-avsession-i.md) | 调用[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession)后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。 |
 | [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md) | AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。 |
 | [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md) | 会话的相关描述信息。 |
 | [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md) | 表示投播设备支持的音频能力。 |
@@ -145,7 +151,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AVCastController](arkts-avsession-avsession-avcastcontroller-i-sys.md) | 在投播建立后，调用[avSession.getAVCastController]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。 |
+| [AVCastController](arkts-avsession-avsession-avcastcontroller-i-sys.md) | 在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。 |
 | [AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md) | 歌单（歌曲列表）的相关属性。 |
 | [DeviceInfo](arkts-avsession-avsession-deviceinfo-i-sys.md) | 播放设备的相关信息。 |
 | [DeviceState](arkts-avsession-avsession-devicestate-i-sys.md) | 投播设备的连接状态。 |
@@ -159,7 +165,7 @@
 | --- | --- |
 | [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md) | 投播的类别枚举。 |
 | [AVSessionErrorCode](arkts-avsession-avsession-avsessionerrorcode-e.md) | 会话发生错误时的错误码。 |
-| [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md) | 表示session支持的后台播放模式的枚举。  \| 名称 \| 值 \| 说明 \|  \| ------------------------- \| - \| ----------------------- \|  \| ENABLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BACKGROUND\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLAY \| 0 \| 支持后台播放。 \|  \| DISABLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_BACKGROUND\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLAY \| 1 \| 不支持后台播放。 \| |
+| [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md) | 表示session支持的后台播放模式的枚举。  \| 名称 \| 值 \| 说明 \|  \| ------------------------- \| - \| ----------------------- \|  \| ENABLE_BACKGROUND_PLAY \| 0 \| 支持后台播放。 \|  \| DISABLE_BACKGROUND_PLAY \| 1 \| 不支持后台播放。 \| |
 | [CallState](arkts-avsession-avsession-callstate-e.md) | 表示通话状态的枚举。 |
 | [CallerType](arkts-avsession-avsession-callertype-e.md) | 表示调用方来源类型的枚举。 |
 | [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md) | 投播显示设备状态的枚举。 |
@@ -172,7 +178,7 @@
 | [PlaybackState](arkts-avsession-avsession-playbackstate-e.md) | 表示媒体播放状态的枚举。 |
 | [ProtocolType](arkts-avsession-avsession-protocoltype-e.md) | 远端设备支持的协议类型的枚举。 |
 | [ResolutionLevel](arkts-avsession-avsession-resolutionlevel-e.md) | 枚举，设备所支持的分辨率。 |
-| [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md) | 表示session支持的快进快退时间间隔的枚举。  \| 名称 \| 值 \| 说明 \|  \| ---------------------- \| -- \| ----------------------- \|  \| SECONDS\_\_\_ESCAPED\_UNDERSCORE\_\_\_10 \| 10 \| 时间为10秒。 \|  \| SECONDS\_\_\_ESCAPED\_UNDERSCORE\_\_\_15 \| 15 \| 时间为15秒。 \|  \| SECONDS\_\_\_ESCAPED\_UNDERSCORE\_\_\_30 \| 30 \| 时间为30秒。 \| |
+| [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md) | 表示session支持的快进快退时间间隔的枚举。  \| 名称 \| 值 \| 说明 \|  \| ---------------------- \| -- \| ----------------------- \|  \| SECONDS_10 \| 10 \| 时间为10秒。 \|  \| SECONDS_15 \| 15 \| 时间为15秒。 \|  \| SECONDS_30 \| 30 \| 时间为30秒。 \| |
 
 <!--Del-->
 ### 枚举（系统接口）

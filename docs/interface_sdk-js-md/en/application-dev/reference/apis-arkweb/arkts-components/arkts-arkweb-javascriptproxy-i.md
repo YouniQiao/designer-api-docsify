@@ -1,6 +1,6 @@
 # JavaScriptProxy
 
-Defines the JavaScript object to be injected.
+定义要注入的JavaScript对象。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the JavaScript object to be injected.
 asyncMethodList?: Array<string>
 ```
 
-The async method of the application side JavaScript object participating in the registration.
+参与注册的应用侧JavaScript对象的异步方法。异步方法无法获取返回值。
 
 **Type:** Array&lt;string&gt;
 
@@ -38,7 +38,7 @@ controller: WebController | WebviewController
 
 Controller.
 
-**Type:** WebController \| WebviewController
+**Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| WebviewController
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Controller.
 methodList: Array<string>
 ```
 
-The method of the application side JavaScript object participating in the registration.
+参与注册的应用侧JavaScript对象的同步方法。
 
 **Type:** Array&lt;string&gt;
 
@@ -76,7 +76,7 @@ The method of the application side JavaScript object participating in the regist
 name: string
 ```
 
-The name of the registered object, which is consistent with the object name called in the window.
+注册对象的名称，与window中调用的对象名一致。
 
 **Type:** string
 
@@ -96,7 +96,7 @@ The name of the registered object, which is consistent with the object name call
 object: object
 ```
 
-Objects participating in registration.
+参与注册的对象。
 
 **Type:** object
 

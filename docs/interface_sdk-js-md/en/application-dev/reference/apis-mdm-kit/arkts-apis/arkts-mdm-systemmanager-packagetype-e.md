@@ -1,6 +1,6 @@
 # PackageType
 
-Enumerates the update package types.
+系统更新包类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the update package types.
 FIRMWARE = 1
 ```
 
-Firmware.
+固件。
 
 **Since:** 12
 

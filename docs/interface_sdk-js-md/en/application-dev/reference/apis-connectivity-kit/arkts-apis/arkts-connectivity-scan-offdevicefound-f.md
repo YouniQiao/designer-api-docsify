@@ -1,12 +1,18 @@
 # offDeviceFound
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offDeviceFound
 
 ```TypeScript
 function offDeviceFound(callback?: Callback<ScanResults[]>): void
 ```
 
-Unsubscribes from NearLink scan results.
+取消订阅星闪扫描结果。
 
 **Since:** 26.0.0
 
@@ -22,11 +28,11 @@ Unsubscribes from NearLink scan results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScanResults[]&gt; | No | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScanResults[]&gt; | No | 监听扫描结果事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 

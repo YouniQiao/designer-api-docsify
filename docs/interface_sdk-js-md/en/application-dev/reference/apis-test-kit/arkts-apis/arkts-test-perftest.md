@@ -1,15 +1,22 @@
 # @ohos.test.PerfTest
 
-PerfTest provides white-box performance testing capabilities.
- It can test performance data of specified code segments or scenarios, automatically execute test code segments,
- and collect performance data such as time consumption, CPU, memory, latency, and frame rate.
- > **NOTE**
- > - The initial APIs of this module are supported since API version 20.
- Newly added APIs will be marked with a superscript to indicate their earliest API version.
- > - The APIs of this module can be used only in <!--RP1-->[JsUnit](../../application-test/unittest-guidelines.md)<!--RP1End-->.
- > - The APIs of this module do not support concurrent calls.
- > - The APIs of this module are applicable to phones, tablets, PCs/2-in-1 devices, smart TVs, and head units.
+PerfTest提供白盒性能测试能力，供开发者在测试场景使用。支持对指定代码段或指定场景自动化执行测试，并采集耗时、CPU、内存、时延、帧率等性能数据。
+ > **说明：**
+ >
+ > - 本模块首批接口从API version 20开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+ >
+ > - 本模块接口在<!--RP1-->[单元测试框架](../../../application-test/unittest-guidelines.md)<!--RP1End-->中使用。
+ >
+ > - 本模块接口不支持并发调用。
+ >
+ > - 本模块接口适用于手机、平板、PC/2in1、智慧屏、车机。
 
+
+## Modules to Import
+
+```TypeScript
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
+```
 
 ## Summary
 
@@ -17,18 +24,18 @@ PerfTest provides white-box performance testing capabilities.
 
 | Name | Description |
 | --- | --- |
-| [PerfTest](arkts-test-test-perftest-perftest-c.md) | Represents the general entry of the white-box performance test framework.It provides capabilities such as test task creation, test code segment execution, data collection, and measurement result obtaining. |
+| [PerfTest](arkts-test-test-perftest-perftest-c.md) | PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。通过{@link create}创建实例。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | Represents the measurement result data corresponding to the performance metric. |
-| [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | Represents the performance test strategy. |
+| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | 性能指标对应测量结果数据。 |
+| [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | 性能测试执行策略。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | Represents performance metrics that can be collected by the framework. |
+| [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | 框架支持采集的性能指标。 |
 

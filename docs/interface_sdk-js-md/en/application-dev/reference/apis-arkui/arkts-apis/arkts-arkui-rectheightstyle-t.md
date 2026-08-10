@@ -4,7 +4,7 @@
 declare type RectHeightStyle = import('../api/@ohos.graphics.text').default.RectHeightStyle
 ```
 
-Enumerates the rectangle height styles.
+矩形区域高度规格枚举。
 
 **Since:** 14
 

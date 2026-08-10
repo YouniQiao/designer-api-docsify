@@ -1,6 +1,6 @@
 # TargetedGestureProposal
 
-Class TargetedGestureProposal.
+类TargetedGestureProposal。
 
 **Inheritance/Implementation:** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
@@ -12,15 +12,21 @@ Class TargetedGestureProposal.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## node
 
 ```TypeScript
 node: FrameNode
 ```
 
-The target frame node for gesture handling. This node will receive and process the gesture events.
+手势处理的目标节点。该节点将接收并处理手势事件。
 
-**Type:** FrameNode
+**Type:** [FrameNode](arkts-arkui-framenode-t.md)
 
 **Since:** 26.0.0
 

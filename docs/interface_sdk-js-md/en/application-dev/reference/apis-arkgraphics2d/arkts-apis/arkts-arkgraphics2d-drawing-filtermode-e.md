@@ -1,6 +1,6 @@
 # FilterMode
 
-Enumerates the filter modes.
+过滤模式枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the filter modes.
 FILTER_MODE_NEAREST = 0
 ```
 
-Nearest filter mode.
+邻近过滤模式，使用最近的像素点进行采样。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Nearest filter mode.
 FILTER_MODE_LINEAR = 1
 ```
 
-Linear filter mode.
+线性过滤模式，使用周围像素点的加权平均值进行采样。
 
 **Since:** 12
 

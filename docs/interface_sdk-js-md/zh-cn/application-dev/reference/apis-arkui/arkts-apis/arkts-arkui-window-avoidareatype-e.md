@@ -2,12 +2,12 @@
 
 窗口内容的避让区域的类型枚举。
 
-窗口内容做\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_适配时，需要按照AvoidAreaType对应的  
-[AvoidArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_做窗口内容避让。
+窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的  
+[AvoidArea](arkts-arkui-window-avoidarea-i.md)做窗口内容避让。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+&lt;!--RP13--&gt;
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+&lt;!--RP13End--&gt;
 
 **起始版本：** 7
 
@@ -23,7 +23,7 @@
 TYPE_SYSTEM = 0
 ```
 
-表示系统默认区域。\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_包含状态栏和三键导航栏区域。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+表示系统默认区域。&lt;!--RP11--&gt;包含状态栏和三键导航栏区域。&lt;!--RP11End--&gt;
 
 **起始版本：** 7
 
@@ -95,7 +95,7 @@ TYPE_KEYBOARD = 3
 TYPE_NAVIGATION_INDICATOR = 4
 ```
 
-表示底部导航区域。当三键导航显示时，底部导航避让区域始终存在。\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony各设备不支持此能力。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+表示底部导航区域。当三键导航显示时，底部导航避让区域始终存在。&lt;!--Del--&gt;OpenHarmony各设备不支持此能力。&lt;!--DelEnd--&gt;
 
 **起始版本：** 11
 
@@ -113,7 +113,7 @@ TYPE_NAVIGATION_INDICATOR = 4
 TYPE_FLOAT_NAVIGATION = 5
 ```
 
-表示三键导航区域。\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony各设备不支持此能力。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+表示三键导航区域。&lt;!--RP12--&gt;OpenHarmony各设备不支持此能力。&lt;!--RP12End--&gt;
 
 **起始版本：** 26.0.0
 

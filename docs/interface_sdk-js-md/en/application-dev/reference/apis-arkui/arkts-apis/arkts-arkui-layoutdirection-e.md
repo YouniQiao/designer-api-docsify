@@ -1,6 +1,6 @@
 # LayoutDirection
 
-Enumerates system layout directions.
+系统的布局方向类型。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates system layout directions.
 LTR
 ```
 
-Left-to-right layout.
+从左向右布局。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Left-to-right layout.
 RTL
 ```
 
-Right-to-left layout.
+从右向左布局。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Right-to-left layout.
 Auto
 ```
 
-Automatic layout direction based on the system.
+自动布局，跟随系统。
 
 **Since:** 8
 

@@ -12,6 +12,12 @@ Describes an audio volume group.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## groupId
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly groupId: int
 
 Volume group id.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ readonly mappingId: int
 
 Volume mapping group id.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -100,7 +106,7 @@ readonly type: ConnectType
 
 Connect type of device for this group.
 
-**类型：** ConnectType
+**类型：** [ConnectType](arkts-audio-audio-connecttype-e-sys.md)
 
 **起始版本：** 9
 

@@ -1,6 +1,6 @@
 # LinkParamCategory
 
-Enum definition of the paramCategory \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+Enum definition of the paramCategory {@link #LinkIntentParamMapping#paramCategory},paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink {@link #InsightIntentLink}.
 
 **Since:** 26.0.0
 

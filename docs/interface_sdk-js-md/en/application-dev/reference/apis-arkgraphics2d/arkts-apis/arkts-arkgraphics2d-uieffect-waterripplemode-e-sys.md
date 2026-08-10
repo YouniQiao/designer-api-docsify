@@ -1,6 +1,6 @@
 # WaterRippleMode (System API)
 
-Water ripple scene mode enumeration.
+水波纹场景模式枚举。
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Water ripple scene mode enumeration.
 SMALL2MEDIUM_RECV = 0
 ```
 
-Phone tapping 2in1 device (receiving end).
+手机碰2in1设备（接收端）。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Phone tapping 2in1 device (receiving end).
 SMALL2MEDIUM_SEND = 1
 ```
 
-Phone tapping 2in1 device (sending end).
+手机碰2in1设备（发送端）。
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ Phone tapping 2in1 device (sending end).
 SMALL2SMALL = 2
 ```
 
-Phone tapping phone.
+手机碰手机。
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ Phone tapping phone.
 MINI_RECV = 3
 ```
 
-2in1 device sharing with other devices (keyboard and mouse sharing scenario).
+2in1设备与其它设备共享（键鼠共享场景）。
 
 **Since:** 17
 

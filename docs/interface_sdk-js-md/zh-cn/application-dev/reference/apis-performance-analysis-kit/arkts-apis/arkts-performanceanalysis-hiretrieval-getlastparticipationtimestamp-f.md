@@ -1,5 +1,11 @@
 # getLastParticipationTimestamp
 
+## 导入模块
+
+```TypeScript
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getLastParticipationTimestamp
 
 ```TypeScript
@@ -22,5 +28,5 @@ function getLastParticipationTimestamp(): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 上一次参与应用灰度活动的UNIX时间戳，单位为毫秒。如果此设备从未参与则返回0。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 上一次参与应用灰度活动的UNIX时间戳，单位为毫秒。如果此设备从未参与则返回0。 |
 

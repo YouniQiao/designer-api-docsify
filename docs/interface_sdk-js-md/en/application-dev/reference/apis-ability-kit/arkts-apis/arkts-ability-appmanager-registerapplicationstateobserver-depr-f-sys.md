@@ -6,7 +6,7 @@
 function registerApplicationStateObserver(observer: ApplicationStateObserver): number
 ```
 
-Register application state observer.
+注册全部应用程序状态观测器。
 
 **Since:** 8
 
@@ -28,15 +28,15 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The application state observer. |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 表示程序状态观测器，用于观测应用的生命周期变化。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns the number code of the observer. |
+| number | 已注册观测器的数字代码。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

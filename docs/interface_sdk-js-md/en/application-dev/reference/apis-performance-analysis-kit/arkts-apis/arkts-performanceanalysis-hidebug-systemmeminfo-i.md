@@ -1,6 +1,6 @@
 # SystemMemInfo
 
-Describes the system memory information, including the total memory, free memory, and available memory.
+����ϵͳ�ڴ���Ϣ���������ڴ桢�����ڴ�Ϳ����ڴ档
 
 **Since:** 12
 
@@ -10,14 +10,19 @@ Describes the system memory information, including the total memory, free memory
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## availableMem
 
 ```TypeScript
 availableMem: bigint
 ```
 
-Available memory of the system, in KB. The value of this parameter is obtained by reading the value of  
-**MemAvailable** in the **\/proc/meminfo** node.
+ϵͳ���õ��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemAvailable��
 
 **Type:** bigint
 
@@ -35,7 +40,7 @@ Available memory of the system, in KB. The value of this parameter is obtained b
 freeMem: bigint
 ```
 
-Free memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemFree** in the **\/proc/meminfo** node.
+ϵͳ���е��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemFree��
 
 **Type:** bigint
 
@@ -53,8 +58,7 @@ Free memory of the system, in KB. The value of this parameter is obtained by rea
 totalMem: bigint
 ```
 
-Total memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemTotal**  
-in the **\/proc/meminfo** node.
+ϵͳ�ܵ��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemTotal��
 
 **Type:** bigint
 

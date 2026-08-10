@@ -1,5 +1,11 @@
 # getGraphicsMemorySummary
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getGraphicsMemorySummary
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interval | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | �Դ����ݻ���ֵ��Чʱ�䣬��λΪ�롣Ĭ��ֵ��300��ȡֵ��ΧΪ[2-3600]��������ֵ����ȡֵ��Χʱ����ʹ��Ĭ��ֵ�� ���Դ����ݻ���ֵ����ʱ�䳬����ֵʱ����ȡ�����Դ����ݲ����»���ֵ������ֱ�ӻ�ȡ����ֵ�� ȡֵ��ΧΪȫ�������� |
+| interval | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | �Դ����ݻ���ֵ��Чʱ�䣬��λΪ�롣Ĭ��ֵ��300��ȡֵ��ΧΪ[2-3600]��������ֵ����ȡֵ��Χʱ����ʹ��Ĭ��ֵ�� ���Դ����ݻ���ֵ����ʱ�䳬����ֵʱ����ȡ�����Դ����ݲ����»���ֵ������ֱ�ӻ�ȡ����ֵ�� ȡֵ��ΧΪȫ�������� |
 
 **返回值：**
 
@@ -34,9 +40,9 @@ function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
+| 11400104 | Failed to get the application memory due to a remote exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

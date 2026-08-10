@@ -6,7 +6,7 @@
 declare function mkdtemp(prefix: string): Promise<string>
 ```
 
-Creates a temporary directory. This API uses a promise to return the result.
+创建临时目录，使用Promise异步回调。
 
 **Since:** 7
 
@@ -24,13 +24,13 @@ Creates a temporary directory. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
+| prefix | string | Yes | 用随机产生的字符串替换以“XXXXXX”结尾目录路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise that returns the directory created. |
+| Promise&lt;string&gt; | Promise对象。返回生成的唯一目录路径。 |
 
 
 ## mkdtemp
@@ -39,7 +39,7 @@ Creates a temporary directory. This API uses a promise to return the result.
 declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 ```
 
-Creates a temporary directory. This API uses an asynchronous callback to return the result.
+创建临时目录，使用callback异步回调。
 
 **Since:** 7
 
@@ -57,6 +57,6 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback invoked when a temporary directory is created asynchronously. |
+| prefix | string | Yes | 用随机产生的字符串替换以“XXXXXX”结尾目录路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 异步创建临时目录之后的回调。 |
 

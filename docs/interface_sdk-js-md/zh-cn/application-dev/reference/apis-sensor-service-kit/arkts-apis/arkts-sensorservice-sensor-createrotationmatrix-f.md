@@ -1,5 +1,11 @@
 # createRotationMatrix
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## createRotationMatrix
 
 ```TypeScript
@@ -7,11 +13,12 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 ```
 
 将旋转矢量转换为旋转矩阵，使用Callback异步方式返回结果。
-    **说明**：  
-    
-    从API version 8 开始支持，从API version 9 开始废弃，建议使用  
-    [sensor.getRotationMatrix]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)
+> 替代。
 
 **起始版本：** 8
 
@@ -30,9 +37,9 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;number&gt; | 是 | 表示旋转矢量。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt; | 是 | 异步返回旋转矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回旋转矩阵。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -58,10 +65,11 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 ```
 
 将旋转矢量转换为旋转矩阵，使用Promise异步方式返回结果。
-    **说明**：  
-    
-    从API version 8 开始支持，从API version 9 开始废弃，建议使用  
-    [sensor.getRotationMatrix]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)替代。
 
 **起始版本：** 8
 
@@ -87,7 +95,7 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 | --- | --- |
 | Promise&lt;Array&lt;number&gt;&gt; | 使用异步方式返回旋转矩阵。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -112,11 +120,12 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 ```
 
 根据重力矢量和地磁矢量计算旋转矩阵，使用Callback异步方式返回结果。
-    **说明**：  
-    
-    从API version 8 开始支持，从API version 9 开始废弃，建议使用  
-    [sensor.getRotationMatrix]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)
+> 替代。
 
 **起始版本：** 8
 
@@ -136,9 +145,9 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 | --- | --- | --- | --- |
 | gravity | Array&lt;number&gt; | 是 | 表示重力向量。 |
 | geomagnetic | Array&lt;number&gt; | 是 | 表示地磁矢量。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationMatrixResponse&gt; | 是 | 异步返回旋转矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RotationMatrixResponse&gt; | 是 | 异步返回旋转矩阵。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -162,10 +171,11 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 ```
 
 根据重力矢量和地磁矢量计算旋转矩阵，使用Promise异步方式返回结果。
-    **说明**：  
-    
-    从API version 8 开始支持，从API version 9 开始废弃，建议使用  
-    [sensor.getRotationMatrix]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)替代。
 
 **起始版本：** 8
 

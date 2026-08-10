@@ -12,6 +12,12 @@ Obtains the network information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## operatorName
 
 ```TypeScript
@@ -80,7 +86,7 @@ state: NetworkInformationState
 
 Indicates the status of network information.
 
-**Type:** NetworkInformationState
+**Type:** [NetworkInformationState](arkts-telephony-radio-networkinformationstate-e-sys.md)
 
 **Since:** 6
 

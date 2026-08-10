@@ -6,7 +6,7 @@
 const LOCAL_NETWORK_ID: string
 ```
 
-Define local device network id for audio.
+Define local device network id for audio
 
 **Since:** 9
 

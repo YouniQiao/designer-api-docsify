@@ -4,7 +4,7 @@
 export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void
 ```
 
-Called when the start, end and center positions of the display change.
+有子组件划入或划出ArcList显示区域时触发的回调。
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Called when the start, end and center positions of the display change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | the start index of the display area. \_\_\_HTML\_TAG\_USD\_0\_\_\_The value should be an integer.  |
-| end | int | Yes | the end index of the display area. \_\_\_HTML\_TAG\_USD\_0\_\_\_The value should be an integer.  |
-| center | int | Yes | the center index of the display area. \_\_\_HTML\_TAG\_USD\_0\_\_\_The value should be an integer.  |
+| start | int | Yes | ArcList显示区域内第一个子组件的索引值。 <br>取值限定为整数。 |
+| end | int | Yes | ArcList显示区域内最后一个子组件的索引值。 <br>取值限定为整数。 |
+| center | int | Yes | ArcList显示区域内中间位置子组件的索引值。 <br>取值限定为整数。 |
 

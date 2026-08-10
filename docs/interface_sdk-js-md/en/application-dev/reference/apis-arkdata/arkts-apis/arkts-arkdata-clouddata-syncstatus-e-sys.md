@@ -1,6 +1,6 @@
 # SyncStatus (System API)
 
-Enumerates the device-cloud sync task statuses.
+端云同步任务的状态。
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ Enumerates the device-cloud sync task statuses.
 RUNNING = 0
 ```
 
-The device-cloud sync task is running.
+端云同步任务正在运行中。
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ The device-cloud sync task is running.
 FINISHED = 1
 ```
 
-The device-cloud sync task is completed.
+端云同步任务已完成。
 
 **Since:** 18
 

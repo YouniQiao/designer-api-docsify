@@ -1,17 +1,24 @@
 # getDragPreview
 
+## Modules to Import
+
+```TypeScript
+import { dragController } from 'kits/@kit.ArkUI';
+```
+
 ## getDragPreview
 
 ```TypeScript
 function getDragPreview(): DragPreview
 ```
 
-Obtains the **DragPreview** object, which represents the preview displayed during a drag operation.
-    **NOTE**  
-    
-    Since API version 11, you can use the [getDragController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [DragController]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object  
-    associated with the current UI context.
+返回一个代表拖拽背板的对象。
+
+> **说明：**
+> 
+> 从API version 11开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
+> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
 
 **Since:** 11
 
@@ -33,5 +40,5 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
+| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | 一个代表拖拽背板的对象，提供背板样式设置的接口，在OnDrop和OnDragEnd回调中使用不生效。 |
 

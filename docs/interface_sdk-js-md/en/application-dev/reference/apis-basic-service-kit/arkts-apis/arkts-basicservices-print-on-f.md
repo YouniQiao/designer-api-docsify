@@ -1,12 +1,18 @@
 # on
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## on('printerChange')
 
 ```TypeScript
 function on(type: 'printerChange', callback: PrinterChangeCallback): void
 ```
 
-Registers a listener for the printer change events. This API uses a callback to return the result.
+注册打印机变动事件回调，使用callback回调。
 
 **Since:** 18
 
@@ -22,17 +28,17 @@ Registers a listener for the printer change events. This API uses a callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'printerChange' | Yes | Printer change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback to be invoked when the printer changes. |
+| type | 'printerChange' | Yes | 表示打印机变动事件。 |
+| callback | [PrinterChangeCallback](arkts-basicservices-print-printerchangecallback-t.md) | Yes | 打印机变动之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

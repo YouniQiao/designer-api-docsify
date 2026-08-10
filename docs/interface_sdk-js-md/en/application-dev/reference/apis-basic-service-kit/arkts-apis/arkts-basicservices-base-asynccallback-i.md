@@ -1,10 +1,10 @@
 # AsyncCallback
 
-Defines a common callback that carries an error parameter and asynchronous return value. It is used to return error information or success data when an asynchronous operation is complete.
+通用回调函数，携带错误参数和异步返回值，用于在异步操作完成时同时回传错误信息或成功数据。
 
-The error parameter is of the [BusinessError]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type.
+错误参数为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型。
 
-The type of the asynchronous return value is defined by the developer.
+异步返回值的类型由开发者自定义，回调将返回对应类型的信息。
 
 **Since:** 6
 
@@ -13,6 +13,12 @@ The type of the asynchronous return value is defined by the developer.
 <!--Device-unnamed-export interface AsyncCallback<T, E = void>--><!--Device-unnamed-export interface AsyncCallback<T, E = void>-End-->
 
 **System capability:** SystemCapability.Base
+
+## Modules to Import
+
+```TypeScript
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
+```
 
 ## [[Call]]
 
@@ -36,6 +42,6 @@ The type of the asynchronous return value is defined by the developer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;E&gt; | Yes | Common error message returned when the API fails to be called. |
-| data | T | Yes | Data returned asynchronously when the API is successfully called. The data type is defined by the developer. This parameter is unavailable when the API fails to be called. |
+| err | [BusinessError](arkts-basicservices-base-businesserror-c.md)&lt;E&gt; | Yes | 接口调用失败的公共错误信息，包含错误码和可选附加信息。 当不指定E类型参数时，默认为void，此时BusinessError不包含附加信息，只包含错误码。接口调用成功时，此参数返回null。 |
+| data | T | Yes | 接口调用成功时的异步返回数据，类型由开发者自定义。接口调用失败时，此参数不可用。 |
 

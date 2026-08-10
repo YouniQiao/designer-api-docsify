@@ -12,6 +12,12 @@ Describe the context of GATT responses.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## timestamp
 
 ```TypeScript
@@ -20,7 +26,7 @@ timestamp: long
 
 Timestamp of when Bluetooth received the response command.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 

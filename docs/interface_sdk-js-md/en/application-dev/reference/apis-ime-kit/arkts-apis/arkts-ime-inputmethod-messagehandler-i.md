@@ -1,6 +1,6 @@
 # MessageHandler
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Custom message handler.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Implement this interface to respond to custom messages.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_
+自定义通信对象。
 
 **Since:** 15
 
@@ -10,13 +10,19 @@
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## onMessage
 
 ```TypeScript
 onMessage: OnMessageCallback
 ```
 
-This method is called when a custom message is received.
+onMessage(msgId: string, msgParam?: ArrayBuffer): void
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ This method is called when a custom message is received.
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-This method is called when a custom message is received.
+接收输入法应用发送的自定义数据回调函数。
 
 **Since:** 15
 
@@ -46,10 +52,10 @@ This method is called when a custom message is received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | the identifier of the message. |
-| msgParam | ArrayBuffer | No | the parameter of the custom message. |
+| msgId | string | Yes | 接收到的自定义通信数据的标识符。 |
+| msgParam | ArrayBuffer | No | 接收到的自定义通信数据的消息体。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
@@ -59,7 +65,7 @@ let messageHandler: inputMethod.MessageHandler = {
     console.info('OnTerminated.');
   },
   onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-    console.info('recv message.');
+    console.info(`recv message, msg: ${msgId}, msgParam: ${JSON.stringify(msgParam)}`);
   }
 };
 inputMethodController.recvMessage(messageHandler);
@@ -71,7 +77,7 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated(): void
 ```
 
-This method is called when a new message handler is set.
+监听对象终止回调函数。
 
 **Since:** 15
 
@@ -81,7 +87,7 @@ This method is called when a new message handler is set.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
-**Example**
+## Examples
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
@@ -91,7 +97,7 @@ let messageHandler: inputMethod.MessageHandler = {
     console.info('OnTerminated.');
   },
   onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-    console.info('recv message.');
+    console.info(`recv message, msg: ${msgId}, msgParam: ${JSON.stringify(msgParam)}`);
   }
 };
 inputMethodController.recvMessage(messageHandler);
@@ -103,9 +109,11 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated: Callback<void>
 ```
 
-This method is called when a new message handler is set.
+onTerminated(): void
 
-**Type:** Callback&lt;void&gt;
+监听对象终止回调函数。
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 23
 

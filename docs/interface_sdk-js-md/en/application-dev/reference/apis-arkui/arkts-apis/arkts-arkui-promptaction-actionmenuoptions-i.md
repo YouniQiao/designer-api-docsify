@@ -1,6 +1,6 @@
 # ActionMenuOptions
 
-ActionMenu options.
+操作菜单的选项。
 
 **Since:** 23
 
@@ -10,6 +10,12 @@ ActionMenu options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## buttons
 
 ```TypeScript
@@ -17,9 +23,9 @@ buttons: PromptActionSingleButton | PromptActionDoubleButtons | PromptActionTrip
             PromptActionQuadrupleButtons | PromptActionQuintupleButtons | PromptActionSextupleButtons
 ```
 
-Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to six buttons are supported.
+菜单中菜单项按钮的数组，结构为： {text:'button', color: '#666666'}.支持1-6个按钮。按钮数量大于6个时，仅显示前6个按钮，之后的按钮不显示。
 
-**Type:** PromptActionSingleButton \| PromptActionDoubleButtons \| PromptActionTripleButtons \| PromptActionQuadrupleButtons \| PromptActionQuintupleButtons \| PromptActionSextupleButtons
+**Type:** [PromptActionSingleButton](arkts-arkui-promptaction-promptactionsinglebutton-t.md) \| PromptActionDoubleButtons \| PromptActionTripleButtons \| PromptActionQuadrupleButtons \| PromptActionQuintupleButtons \| PromptActionSextupleButtons
 
 **Since:** 23
 
@@ -37,9 +43,9 @@ Array of buttons in the dialog box.The array structure is {text:'button', color:
 immersiveMode?: ImmersiveMode
 ```
 
-Determine the immersive mode of the dialog.
+设置页面内菜单蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**Type:** ImmersiveMode
+**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -59,7 +65,7 @@ Determine the immersive mode of the dialog.
 isModal?: boolean
 ```
 
-Whether it is a modal dialog
+菜单是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与菜单周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与菜单周围其他控件进行交互。&lt;br/&gt;默认值：true
 
 **Type:** boolean
 
@@ -81,9 +87,9 @@ Whether it is a modal dialog
 levelMode?: LevelMode
 ```
 
-Determine the display level of the dialog.
+设置菜单显示层级。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
 
-**Type:** LevelMode
+**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
@@ -103,7 +109,7 @@ Determine the display level of the dialog.
 levelUniqueId?: int
 ```
 
-The uniqueId of any node in the router or navigation page.
+设置页面级菜单需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)获取。取值范围：大于等于0的数字。&lt;br /&gt;**说明：**&lt;br/&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **Type:** int
 
@@ -123,9 +129,9 @@ The uniqueId of any node in the router or navigation page.
 onDidAppear?: VoidCallback
 ```
 
-Callback function when the menu appears.
+菜单弹出后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.快速点击弹出，关闭菜单时，onWillDisappear在onDidAppear前生效。
 
-**Type:** VoidCallback
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **Since:** 23
 
@@ -143,9 +149,9 @@ Callback function when the menu appears.
 onDidDisappear?: VoidCallback
 ```
 
-Callback function when the menu disappears.
+菜单消失后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**Type:** VoidCallback
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **Since:** 23
 
@@ -163,9 +169,9 @@ Callback function when the menu disappears.
 onWillAppear?: VoidCallback
 ```
 
-Callback function before the menu openAnimation starts.
+菜单显示动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**Type:** VoidCallback
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **Since:** 23
 
@@ -183,9 +189,9 @@ Callback function before the menu openAnimation starts.
 onWillDisappear?: VoidCallback
 ```
 
-Callback function before the menu closeAnimation starts.
+菜单退出动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**Type:** VoidCallback
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **Since:** 23
 
@@ -203,7 +209,12 @@ Callback function before the menu closeAnimation starts.
 showInSubWindow?: boolean
 ```
 
-Whether to display in the sub window.
+某操作菜单需要显示在主窗口之外时，是否在子窗口显示此菜单。值为true表示在子窗口显示菜单。
+
+默认值：false，在子窗口不显示菜单。
+
+**说明：** - showInSubWindow为true的菜单无法触发显示另一个showInSubWindow为true的菜单。
+- 若在UIExtension中设置showInSubWindow为true, 菜单将基于UIExtension的宿主窗口对齐。
 
 **Type:** boolean
 
@@ -225,9 +236,7 @@ Whether to display in the sub window.
 systemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
-
-Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
+设置弹窗的系统材质。&lt;br/&gt;默认值：ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象。设置undefined时与默认值保持一致。不同的材质具有不同的效果，可以影响弹窗的背景色、边框、阴影等视觉属性。
 
 **Type:** uiMaterial.Material
 
@@ -247,7 +256,7 @@ Device Behavior Differences:The effect of same material may vary across differen
 title?: string | Resource
 ```
 
-Title of the text to display.
+标题文本。&lt;br/&gt;默认值：undefined，取值为undefined默认不显示标题。
 
 **Type:** string \| Resource
 

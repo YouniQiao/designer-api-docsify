@@ -1,7 +1,6 @@
 # PasteDataProperty
 
-Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range,and additional data. The defined properties can be applied to the pasteboard only with the  
-[setProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+定义剪贴板中所有内容条目的属性，包含时间戳、数据类型、粘贴范围以及一些附加数据等，该属性必须通过[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty)方法，才能设置到剪贴板中。
 
 **Since:** 7
 
@@ -11,15 +10,21 @@ Defines the properties of PasteData in the pasteboard, including the timestamp, 
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## additions
 
 ```TypeScript
 additions: Record<string, object>
 ```
 
-Additional property data. It does not allow for dynamic adding of properties. Properties can be added only by re-assigning values. This parameter is left empty by default. For details, see the example of **setProperty**.
+设置其他附加属性数据。不支持动态追加属性，只能通过重新赋值的方式修改附加值，具体见相关示例setProperty， 默认为空。
 
-**Type:** Record&lt;string, object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
 
 **Since:** 7
 
@@ -37,8 +42,7 @@ Additional property data. It does not allow for dynamic adding of properties. Pr
 localOnly: boolean
 ```
 
-Whether the pasteboard content is for local access only. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the  
-[ShareOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ attribute instead.
+配置剪贴板内容是否为“仅在本地”，true表示仅在本地有效，false表示允许跨设备传输。默认值为false。其值会被shareOption属性覆盖，推荐使用[ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)属性。
 
 **Type:** boolean
 
@@ -58,7 +62,7 @@ Whether the pasteboard content is for local access only. The default value is **
 readonly mimeTypes: Array<string>
 ```
 
-Data types of all records in PasteData.
+剪贴板内容条目的数据类型，非重复的类型列表。
 
 **Type:** Array&lt;string&gt;
 
@@ -78,9 +82,9 @@ Data types of all records in PasteData.
 shareOption: ShareOption
 ```
 
-Pasteable ranges of PasteData. The default value is **CROSSDEVICE**.
+指示剪贴板数据可以粘贴到的范围，默认值为CROSSDEVICE。与localOnly属性互斥，设置shareOption会影响localOnly的实际值。
 
-**Type:** ShareOption
+**Type:** [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
 
 **Since:** 9
 
@@ -98,7 +102,7 @@ Pasteable ranges of PasteData. The default value is **CROSSDEVICE**.
 tag: string
 ```
 
-Custom tag. This parameter is left empty by default.
+用户自定义标签，默认为空。
 
 **Type:** string
 
@@ -118,9 +122,9 @@ Custom tag. This parameter is left empty by default.
 readonly timestamp: long
 ```
 
-Timestamp when data is written to the pasteboard (unit: nanoseconds since the device is powered on).
+剪贴板数据的写入时间戳（单位：已开机时间的ns数）。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 7
 

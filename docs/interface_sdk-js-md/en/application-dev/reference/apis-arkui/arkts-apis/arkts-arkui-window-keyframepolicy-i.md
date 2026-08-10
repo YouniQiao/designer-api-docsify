@@ -1,6 +1,6 @@
 # KeyFramePolicy
 
-Describes the configuration for keyframe policies.
+关键帧的策略配置。
 
 **Since:** 20
 
@@ -10,16 +10,21 @@ Describes the configuration for keyframe policies.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## animationDelay
 
 ```TypeScript
 animationDelay?: long
 ```
 
-Delay before the animation for keyframe layout changes starts, in ms. The default value is **100**. The value is  
-**0** or a positive integer. Floating-point values are rounded down.
+设置关键帧布局切换动效延迟时间，单位为毫秒，默认值为100。取值为0或正整数，浮点数向下取整。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Default:** 100
 
@@ -37,9 +42,9 @@ Delay before the animation for keyframe layout changes starts, in ms. The defaul
 animationDuration?: long
 ```
 
-Duration of the animation for keyframe layout changes, in ms. The default value is **100**. The value is **0** or a positive integer. Floating-point values are rounded down.
+设置关键帧布局的动效切换时间，单位为毫秒，默认值为100。取值为0或正整数，浮点数向下取整。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Default:** 100
 
@@ -57,9 +62,9 @@ Duration of the animation for keyframe layout changes, in ms. The default value 
 distance?: int
 ```
 
-Distance interval for triggering keyframe layout changes via dragging, in px. The default value is **1000**. The value is **0** or a positive integer. Floating-point values are rounded down. If the value is 0, the drag distance is ignored. It works with **interval** using an OR condition. If either of them is met, the layout change starts.
+设置关键帧布局切换的拖拽距离间隔，单位为px，默认值为1000。取值为0或正整数，浮点数向下取整。设置为0时，忽略拖拽距离因素。与interval判断为或的关系：满足其一即开始布局切换。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 1000
 
@@ -77,7 +82,7 @@ Distance interval for triggering keyframe layout changes via dragging, in px. Th
 enable: boolean
 ```
 
-Whether to enable keyframes. **true** to enable, **false** otherwise.
+是否开启关键帧。true表示开启，false表示关闭。
 
 **Type:** boolean
 
@@ -95,9 +100,9 @@ Whether to enable keyframes. **true** to enable, **false** otherwise.
 interval?: long
 ```
 
-Time interval for triggering keyframe layout changes via dragging, in ms. The default value is **1000**. The value is a positive integer. Floating-point values are rounded down. It works with **distance** using an OR condition. If either of them is met, the layout change starts.
+设置关键帧布局切换的拖拽时间间隔，单位为毫秒，默认值为1000。取值为正整数，浮点数向下取整。与distance判断为或的关系：满足其一即开始布局切换。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Default:** 1000
 

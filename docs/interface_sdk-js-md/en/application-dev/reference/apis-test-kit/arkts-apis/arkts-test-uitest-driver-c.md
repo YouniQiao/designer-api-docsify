@@ -1,6 +1,6 @@
 # Driver
 
-The **Driver** class is the main entry to the UiTest framework. It provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **Driver.create()**, use a promise to return the result and must be invoked using **await**.
+Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。通过{@link create}创建实例。该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ The **Driver** class is the main entry to the UiTest framework. It provides APIs
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## assertComponentExist
 
 ```TypeScript
 assertComponentExist(on: On): Promise<void>
 ```
 
-Asserts whether a component matches the specified attributes exists on the current page. This API uses a promise to return the result.
+断言API，用于断言当前界面是否存在满足给出的目标属性的控件。使用Promise异步回调。
 
 **Since:** 9
 
@@ -32,23 +38,23 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | Assertion failed. |
+| 17000003 | Assertion failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -72,7 +78,7 @@ ArkTS-Sta:
 click(x: int, y: int): Promise<void>
 ```
 
-Clicks the target coordinate point. This API uses a promise to return the result.
+在目标坐标点单击。使用Promise异步回调。
 
 **Since:** 9
 
@@ -88,30 +94,32 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Perform a tap operation at the coordinate (100,100).
   await driver.click(100, 100);
 }
 ```
@@ -122,7 +130,7 @@ async function demo() {
 clickAt(point: Point): Promise<void>
 ```
 
-Clicks the target coordinate point. This API uses a promise to return the result.
+在目标坐标点进行单击。使用Promise异步回调。
 
 **Since:** 20
 
@@ -138,22 +146,22 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which is used to transfer the target point information. |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入目标点信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -171,7 +179,7 @@ async function demo() {
 clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 ```
 
-Click on the specified location on the screen, with optional touch options.
+点击屏幕上的指定位置，可选择触摸选项。
 
 **Since:** 26.0.0
 
@@ -187,21 +195,37 @@ Click on the specified location on the screen, with optional touch options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the coordinate point where the finger touches the screen. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options for the click operation. Only the 'pressure' property is applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 手指接触屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | 单击操作的选项。 只有''属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let options: TouchOptions = {
+    pressure: 0.5
+  };
+  // Clicks the target coordinate point and specifies the touch pressure.
+  await driver.clickAtWithOptions({ x: 100, y: 100, displayId: 0 }, options);
+}
+```
 
 ## create
 
@@ -209,7 +233,7 @@ Click on the specified location on the screen, with optional touch options.
 static create(): Driver
 ```
 
-Creates a **Driver** object and returns the object created. This API is a static API.
+静态方法，构造一个Driver对象，并返回该对象。
 
 **Since:** 9
 
@@ -225,15 +249,15 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  **{ |
+| [Driver](arkts-test-uitest-driver-c.md) | 返回构造的Driver对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000001](../errorcode-uitest.md#17000001-initialization-failure) | Initialization failed. |
+| 17000001 | Initialization failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -250,7 +274,7 @@ async function demo() {
 createUIEventObserver(): UIEventObserver
 ```
 
-Creates a UI event listener \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+创建一个UI事件监听器。
 
 **Since:** 10
 
@@ -266,15 +290,15 @@ Creates a UI event listener \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  UI event listener { |
+| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) | 返回找到的目标窗口对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -298,7 +322,7 @@ ArkTS-Sta:
 crownRotate(d: int, speed?: int): Promise<void>
 ```
 
-Injects a crown rotation event. You can specify the rotation speed. This API uses a promise to return the result.
+注入手表表冠旋转事件，可指定旋转速度。使用Promise异步回调。
 
 **Since:** 20
 
@@ -314,24 +338,24 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of rotation ticks. A positive value indicates rotation, and a negative value indicates counterclockwise rotation. The value must be an integer. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Rotation speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ticks/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [1, 500] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 17000007 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 20 |
+| d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 手表表冠旋转的格数，正值表示顺时针旋转，负值表示逆时针旋转，取值需为整数。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 手表表冠旋转的格数，正值表示顺时针旋转，负值表示逆时针旋转，取值需为整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -358,7 +382,7 @@ ArkTS-Sta:
 delayMs(duration: int): Promise<void>
 ```
 
-Delays execution for the specified duration. This API uses a promise to return the result.
+在给定的时间内延时。使用Promise异步回调。
 
 **Since:** 9
 
@@ -374,22 +398,22 @@ Delays execution for the specified duration. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Specified time, in ms. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 0 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 给定的时间，单位：ms，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -413,7 +437,7 @@ ArkTS-Sta:
 doubleClick(x: int, y: int): Promise<void>
 ```
 
-Double-clicks the target coordinate point. This API uses a promise to return the result.
+在目标坐标点双击。使用Promise异步回调。
 
 **Since:** 9
 
@@ -429,23 +453,23 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -463,7 +487,7 @@ async function demo() {
 doubleClickAt(point: Point): Promise<void>
 ```
 
-Double-clicks the target coordinate point. This API uses a promise to return the result.
+对目标坐标进行双击。使用Promise异步回调。
 
 **Since:** 20
 
@@ -479,22 +503,22 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which is used to transfer the target point information. |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入目标点信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -518,7 +542,7 @@ ArkTS-Sta:
 drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
-Drags from the start coordinate point to the target coordinate point. This API uses a promise to return the result.
+从起始坐标点拖拽至目的坐标点。使用Promise异步回调。
 
 **Since:** 9
 
@@ -534,26 +558,26 @@ Drags from the start coordinate point to the target coordinate point. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the horizontal coordinate of the start point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| starty | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the vertical coordinate of the start point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| endx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| endy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| startx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
+| starty | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
+| endx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
+| endy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -577,7 +601,7 @@ ArkTS-Sta:
 dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 ```
 
-Drags from the start point to the target point. You can specify the drag speed and the click duration before dragging. This API uses a promise to return the result.
+从起始坐标点拖拽至目标坐标点，支持指定拖拽速度和拖拽前长按时间。使用Promise异步回调。
 
 **Since:** 20
 
@@ -593,25 +617,25 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 17000007 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | The duration of the long press before dragging. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 1500 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1500 |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -629,7 +653,7 @@ async function demo() {
 dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>
 ```
 
-Drag on the screen between the specified points with optional settings.
+在屏幕上拖拽指定的点之间，具有可选设置。
 
 **Since:** 26.0.0
 
@@ -645,22 +669,40 @@ Drag on the screen between the specified points with optional settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the coordinate point where the finger touches the screen. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the coordinate point where the finger leaves the screen. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options for the drag operation. Only the 'pressure', 'speed', and 'duration' properties are applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 手指接触屏幕的坐标点。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 手指离开屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | 拖动操作的选项。 只有“压力”、“速度”和“持续时间”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let options: TouchOptions = {
+    speed: 800,     // Drag speed: 800 px/s
+    duration: 2000, // Click duration before dragging: 2000 ms.
+    pressure: 0.5   // Touch pressure value.
+  };
+  // Drag from the start coordinate point to the target coordinate point, and specify the drag speed, click duration, and touch pressure.
+  await driver.dragBetweenWithOptions({ x: 100, y: 100, displayId: 0 }, { x: 1000, y: 1000, displayId: 0 }, options);
+}
+```
 
 ## dumpLayout
 
@@ -690,8 +732,8 @@ Get the current layout information and save as file with json format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| savePath | string | Yes | the path where to store the json, must be in the application sandbox directory. The path must be the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the current application. |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | the Id of the specified display, default is the displayId of the main screen. |
+| savePath | string | Yes | the path where to store the json, must be in the application sandbox directory. The path must be the [sandbox path](../../../file-management/app-sandbox-directory.md) of the current application. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the Id of the specified display, default is the displayId of the main screen. |
 
 **Return value:**
 
@@ -703,8 +745,21 @@ Get the current layout information and save as file with json format.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // Obtain the current layout information and save it as a JSON file.
+  await driver.dumpLayout('/data/storage/el2/base/cache/layout.json', 0);
+}
+```
 
 ## findComponent
 
@@ -712,7 +767,7 @@ Get the current layout information and save as file with json format.
 findComponent(on: On): Promise<Component>
 ```
 
-Searches for the target component based on the specified attributes. This API uses a promise to return the result.
+根据给出的目标控件属性要求查找目标控件。使用Promise异步回调。
 
 **Since:** 9
 
@@ -728,29 +783,31 @@ Searches for the target component based on the specified attributes. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; |  Promise used to return the { |
+| Promise&lt;Component&gt; | Promise对象，返回控件对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Search for the component whose text is 'next page'.
   let button: Component = await driver.findComponent(ON.text('next page'));
 }
 ```
@@ -761,7 +818,7 @@ async function demo() {
 findComponent(on: On): Promise<Component | null>
 ```
 
-Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ on current UI.
+Find the first matched {@link Component} on current UI.
 
 **Since:** 23
 
@@ -775,7 +832,7 @@ Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ on current UI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the attribute requirements of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target {@link Component}. |
 
 **Return value:**
 
@@ -787,8 +844,8 @@ Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ on current UI.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
 ## findComponents
 
@@ -796,7 +853,7 @@ Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ on current UI.
 findComponents(on: On): Promise<Array<Component>>
 ```
 
-Searches for all matched components based on the specified attributes and saves them in a list. This API uses a promise to return the result.
+根据给出的目标控件属性要求查找出所有匹配控件，以列表保存。使用Promise异步回调。
 
 **Since:** 9
 
@@ -812,29 +869,31 @@ Searches for all matched components based on the specified attributes and saves 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Component&gt;&gt; |  Promise used to return the list of { |
+| Promise&lt;Array&lt;Component&gt;&gt; | Promise对象，返回控件对象的列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Search for all components whose text is 'next page'.
   let buttonList: Array<Component> = await driver.findComponents(ON.text('next page'));
 }
 ```
@@ -845,7 +904,7 @@ async function demo() {
 findComponents(on: On): Promise<Array<Component> | null>
 ```
 
-Find all the matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_s on current UI.
+Find all the matched {@link Component}s on current UI.
 
 **Since:** 23
 
@@ -859,7 +918,7 @@ Find all the matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_s on current UI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the attribute requirements of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target {@link Component}. |
 
 **Return value:**
 
@@ -871,8 +930,8 @@ Find all the matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_s on current UI.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
 ## findWindow
 
@@ -880,7 +939,7 @@ Find all the matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_s on current UI.
 findWindow(filter: WindowFilter): Promise<UiWindow>
 ```
 
-Searches for a window based on the specified attributes. This API uses a promise to return the result.
+通过指定窗口的属性来查找目标窗口。使用Promise异步回调。
 
 **Since:** 9
 
@@ -896,22 +955,22 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | 目标窗口的属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UiWindow&gt; |  Promise used to return the target { |
+| Promise&lt;UiWindow&gt; | Promise对象，返回目标窗口对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -919,7 +978,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
+  let window: UiWindow = await driver.findWindow({ active: true });
 }
 ```
 
@@ -929,7 +988,7 @@ async function demo() {
 findWindow(filter: WindowFilter): Promise<UiWindow | null>
 ```
 
-Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ window.
+Find the first matched {@link UiWindow} window.
 
 **Since:** 23
 
@@ -943,7 +1002,7 @@ Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the filter condition of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | the filter condition of the target {@link UiWindow}. |
 
 **Return value:**
 
@@ -955,8 +1014,8 @@ Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ window.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
 ## fling
 
@@ -970,7 +1029,7 @@ ArkTS-Sta:
 fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>
 ```
 
-Simulates a fling operation. This API uses a promise to return the result.
+模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
 **Since:** 9
 
@@ -986,25 +1045,25 @@ Simulates a fling operation. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the point where the finger touches the screen. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the point where the finger leaves the screen. |
-| stepLen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Step length, in pixels. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 17000007 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 手指接触屏幕的起始点坐标。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 手指离开屏幕时的坐标点。 |
+| stepLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 间隔距离，取值大于等于0的整数，单位：px。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1028,7 +1087,7 @@ ArkTS-Sta:
 fling(direction: UiDirection, speed: int): Promise<void>
 ```
 
-Simulates a fling operation with the specified direction and speed. This API uses a promise to return the result.
+指定方向和滑动速率，模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
 **Since:** 10
 
@@ -1044,23 +1103,23 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Direction of the fling operation. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Scroll speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | 进行抛滑的方向。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1084,7 +1143,7 @@ ArkTS-Sta:
 fling(direction: UiDirection, speed: int, displayId: int): Promise<void>
 ```
 
-Simulates a fling operation on a specified display with the specified direction and speed. This API uses a promise to return the result.
+指定方向、滑动速率和操作屏幕，模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
 **Since:** 20
 
@@ -1100,24 +1159,24 @@ Simulates a fling operation on a specified display with the specified direction 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Direction of the fling operation. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If the input **displayId** does not exist, the exception **401** is reported. |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | 进行抛滑的方向。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 滑动速率，取值范围为200-40000，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1135,7 +1194,7 @@ async function demo() {
 getDisplayDensity(): Promise<Point>
 ```
 
-Obtains the display density of the current device. This API uses a promise to return the result.
+获取当前设备屏幕的分辨率。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1151,15 +1210,15 @@ Obtains the display density of the current device. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise used to return the **Point** object. The density of the current device display is **Point.x*Point.y**. |
+| Promise&lt;Point&gt; | Promise对象，返回Point对象，当前设备屏幕的分辨率为Point.x*Point.y。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1183,7 +1242,7 @@ ArkTS-Sta:
 getDisplayDensity(displayId: int): Promise<Point>
 ```
 
-Obtains the density of the specified display of the current device. This API uses a promise to return the result.
+获取当前设备指定屏幕的分辨率。使用Promise异步回调。
 
 **Since:** 20
 
@@ -1199,22 +1258,22 @@ Obtains the density of the specified display of the current device. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定设备屏幕ID。取值范围：大于等于0的整数。  **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise used to return the **Point** object. The density of the specified display is **Point.x*Point.y**. |
+| Promise&lt;Point&gt; | Promise对象，返回Point对象，当前设备指定屏幕的分辨率为Point.x*Point.y。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1232,7 +1291,7 @@ async function demo() {
 getDisplayRotation(): Promise<DisplayRotation>
 ```
 
-Obtains the display rotation of the current device. This API uses a promise to return the result.
+获取当前设备的屏幕显示方向。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1248,15 +1307,15 @@ Obtains the display rotation of the current device. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DisplayRotation&gt; |  Promise used to return the display rotation of the current device. |
+| Promise&lt;DisplayRotation&gt; | Promise对象，返回当前设备的显示方向。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1280,7 +1339,7 @@ ArkTS-Sta:
 getDisplayRotation(displayId: int): Promise<DisplayRotation>
 ```
 
-Obtains the display rotation of the specified device. This API uses a promise to return the result.
+获取当前设备指定屏幕的显示方向。使用Promise异步回调。
 
 **Since:** 20
 
@@ -1296,22 +1355,22 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定设备屏幕ID。取值范围：大于等于0的整数。  **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DisplayRotation&gt; |  Promise used to return the display rotation of the specified device. |
+| Promise&lt;DisplayRotation&gt; | Promise对象，返回指定屏幕的显示方向。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1329,7 +1388,7 @@ async function demo() {
 getDisplaySize(): Promise<Point>
 ```
 
-Obtains the display size of the current device. This API uses a promise to return the result.
+获取当前设备的屏幕大小。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1345,15 +1404,15 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; |  Promise used to return the **Point** object. The size of the current device screen is **Point.x Point.y**. |
+| Promise&lt;Point&gt; | Promise对象，返回Point对象，当前设备屏幕的大小为Point.x Point.y。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1377,7 +1436,7 @@ ArkTS-Sta:
 getDisplaySize(displayId: int): Promise<Point>
 ```
 
-Obtains the size of the specified display on the current device. This API uses a promise to return the result.
+获取当前设备指定屏幕的大小。使用Promise异步回调。
 
 **Since:** 20
 
@@ -1393,22 +1452,22 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise used to return the **Point** object. The size of the specified display is **Point.x Point.y**. |
+| Promise&lt;Point&gt; | Promise对象，返回Point对象，当前设备指定屏幕的大小为Point.x Point.y。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1432,10 +1491,11 @@ ArkTS-Sta:
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 ```
 
-Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If the knuckle gesture is disabled on the device\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, 17000005 is returned.
+模拟指关节多点注入滑动操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> 若设备关闭了指关节手势&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，则调用本接口返回17000005错误码。
 
 **Since:** 22
 
@@ -1451,24 +1511,24 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pointers | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory.  **Note**: Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Knuckle pointer action speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 17000007 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | 滑动轨迹，包括操作手指个数和滑动坐标序列。  **说明：**当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+| 17000005 | This operation is not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1500,7 +1560,7 @@ ArkTS-Sta:
 injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>
 ```
 
-Injects a multi-finger operation into a device. This API uses a promise to return the result.
+向设备注入多指操作。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1516,41 +1576,46 @@ Injects a multi-finger operation into a device. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pointers | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Pointer action speed, in px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | 滑动轨迹，包括操作手指个数和滑动坐标序列。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the operation is successful. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回操作是否成功完成。true：完成，false：未完成。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Driver, PointerMatrix } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Create a 2-finger 5-step sliding track matrix.
   let pointers: PointerMatrix = PointerMatrix.create(2, 5);
+  // Set the sliding track of the first finger.
   pointers.setPoint(0, 0, { x: 250, y: 480 });
   pointers.setPoint(0, 1, { x: 250, y: 440 });
   pointers.setPoint(0, 2, { x: 250, y: 400 });
   pointers.setPoint(0, 3, { x: 250, y: 360 });
   pointers.setPoint(0, 4, { x: 250, y: 320 });
+  // Set the sliding track of the second finger.
   pointers.setPoint(1, 0, { x: 250, y: 480 });
   pointers.setPoint(1, 1, { x: 250, y: 440 });
   pointers.setPoint(1, 2, { x: 250, y: 400 });
   pointers.setPoint(1, 3, { x: 250, y: 360 });
   pointers.setPoint(1, 4, { x: 250, y: 320 });
+  // Inject the two-finger sliding operation.
   await driver.injectMultiPointerAction(pointers);
 }
 ```
@@ -1567,7 +1632,7 @@ ArkTS-Sta:
 injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>
 ```
 
-Simulates a continuous multi-point pen injection operation. This API uses a promise to return the result.
+模拟手写笔多点连续注入操作。使用Promise异步回调。
 
 **Since:** 18
 
@@ -1583,24 +1648,24 @@ Simulates a continuous multi-point pen injection operation. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pointers | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory. **Note**: Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Pen pointer action speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
-| pressure | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Injection pressure. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[0.0, 1.0] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1.0 |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | 滑动轨迹，包括操作手指个数和滑动坐标序列。  **说明：**当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
+| pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 手写笔多点连续注入的压力，默认为1.0，取值范围为0.0到1.0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1608,10 +1673,13 @@ import { Driver, PointerMatrix } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  // Create a single-finger 8-step sliding track matrix.
   let pointer = PointerMatrix.create(1, 8);
+  // Set the coordinates of each step cyclically to simulate a downward-to-upward sliding.
   for (let step = 0; step < 8; step++) {
     pointer.setPoint(0, step, { x: 500, y: 1100 - 100 * step });
   }
+  // Inject swiping with a stylus at a speed of 600 px/s and a pressure of 0.5.
   await driver.injectPenPointerAction(pointer, 600, 0.5);
 }
 ```
@@ -1622,7 +1690,7 @@ async function demo() {
 inputText(p: Point, text: string): Promise<void>
 ```
 
-Inputs text at a specified coordinate without clearing the original text in the component. This API uses a promise to return the result.
+在指定坐标点输入文本，不清空组件内原有文本，直接在坐标处追加输入。使用Promise异步回调。
 
 **Since:** 11
 
@@ -1638,32 +1706,36 @@ Inputs text at a specified coordinate without clearing the original text in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the end point. |
-| text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 输入文本的坐标点。 |
+| text | string | Yes | 输入的文本信息，当前支持英文、中文和特殊字符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Search for the target TextInput component.
   let text: Component = await driver.findComponent(ON.type('TextInput'));
+  // Obtain the coordinates of the component center point.
   let point = await text.getBoundsCenter();
+  // Enter the text '123' at the coordinate point.
   await driver.inputText(point, '123');
 }
 ```
@@ -1674,7 +1746,7 @@ async function demo() {
 inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 ```
 
-Inputs text at a specified coordinate point in a specified input mode. This API uses a promise to return the result.
+在指定坐标点输入文本，支持指定文本输入方式。使用Promise异步回调。
 
 **Since:** 20
 
@@ -1690,25 +1762,25 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the end point. |
-| text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text input mode. For details, see [InputTextMode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. **NOTE**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 输入文本的坐标点。 |
+| text | string | Yes | 输入的文本信息，当前支持英文、中文和特殊字符。 |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md)。  **说明：**  InputTextMode.addition取值为true时，将光标移动至文本末尾后输入指定文本。取值为false时，将在坐标点位置输入指定文本。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function can not work correctly due to limited device capabilities. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. function can not work correctly due to limited device capabilities. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1721,7 +1793,7 @@ async function demo() {
   await driver.inputText(point, '123', { paste: true, addition: false });
 }
 
-async function demo_Chinese() {
+async function demoChinese() {
   let driver: Driver = Driver.create();
   let text: Component = await driver.findComponent(ON.type('TextInput'));
   let point = await text.getBoundsCenter();
@@ -1742,7 +1814,7 @@ ArkTS-Sta:
 isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>
 ```
 
-Drags from the start point to the end point and checks whether the target component exists. This API uses a promise to return the result.
+从起始点拖拽至终止点，并查找目标控件是否存在。使用Promise异步回调。
 
 **Since:** 22
 
@@ -1758,26 +1830,26 @@ Drags from the start point to the end point and checks whether the target compon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Drag speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 17000007 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | The duration of the long press before dragging. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 1500 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1500 |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the target component exists during the dragging operation. The value **true** indicates that the target component exists, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回拖拽操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1801,7 +1873,7 @@ ArkTS-Sta:
 isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>
 ```
 
-Long-clicks at the specified coordinates and checks whether the target component exists. This API uses a promise to return the result.
+在坐标点长按，并查找目标控件是否存在。使用Promise异步回调。
 
 **Since:** 22
 
@@ -1817,24 +1889,24 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the long-clicked point. |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Long-click duration. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 1500 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1500 |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 长按的坐标点。 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the target component exists during a long-click operation. The value **true** indicates that the target component exists, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回长按操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1858,7 +1930,7 @@ ArkTS-Sta:
 isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>
 ```
 
-Swipes from the start point to the end point and checks whether the target component exists. This API uses a promise to return the result.
+从起始点滑向终止点，并查找目标控件是否存在。使用Promise异步回调。
 
 **Since:** 22
 
@@ -1874,25 +1946,25 @@ Swipes from the start point to the end point and checks whether the target compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target component. |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Scroll speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 17000007 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the target component exists during the swiping operation.The value **true** indicates that the target component exists, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回滑动操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1916,10 +1988,11 @@ ArkTS-Sta:
 knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 ```
 
-Simulates a knuckle knock on the display. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If the knuckle gesture is disabled on the device\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, 17000005 is returned.
+模拟指关节敲击屏幕操作。使用Promise异步回调。
+
+> **说明：**
+> 
+> 若设备关闭了指关节手势&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，则调用本接口返回17000005错误码。
 
 **Since:** 22
 
@@ -1935,24 +2008,24 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pointers | Array&lt;Point&gt; | Yes | Array of knuckle knock coordinates on the display. The array length can be 1 or 2. |
-| times | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of consecutive knocks on the display. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[1,2] |
+| pointers | Array&lt;Point&gt; | Yes | 指关节敲击屏幕坐标点的数组，数组长度取值为1或2。 |
+| times | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指关节连续敲击屏幕的次数，取值为1或2。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+| 17000005 | This operation is not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -1978,7 +2051,7 @@ ArkTS-Sta:
 longClick(x: int, y: int): Promise<void>
 ```
 
-Long-clicks the target coordinate point. This API uses a promise to return the result.
+在目标坐标点长按。使用Promise异步回调。
 
 **Since:** 9
 
@@ -1994,23 +2067,23 @@ Long-clicks the target coordinate point. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2034,7 +2107,7 @@ ArkTS-Sta:
 longClickAt(point: Point, duration?: int): Promise<void>
 ```
 
-Long-clicks the target coordinate point for a specified duration. This API uses a promise to return the result.
+长按目标坐标点，支持指定长按时长。使用Promise异步回调。
 
 **Since:** 20
 
@@ -2050,23 +2123,23 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which is used to transfer the target point information. |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Long-click duration, in ms. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 1500 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1500 |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入目标点信息。 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2084,7 +2157,7 @@ async function demo() {
 longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 ```
 
-LongClick on the specified location on the screen, with optional touch settings.
+长按屏幕上的指定位置，可选择触摸设置。
 
 **Since:** 26.0.0
 
@@ -2100,21 +2173,38 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the coordinate point where the finger touches the screen. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options for the long click operation. Only the 'duration' and 'pressure' properties are applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 手指接触屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | 用于长单击操作的选项。 只有“持续时间”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let options: TouchOptions = {
+    duration: 2000, // The click duration is 2000 ms.
+    pressure: 0.8 // Touch pressure value.
+  };
+  // Long-click the target coordinate point, and specify the touch duration and pressure.
+  await driver.longClickAtWithOptions({ x: 100, y: 100, displayId: 0 }, options);
+}
+```
 
 ## mouseClick
 
@@ -2128,7 +2218,7 @@ ArkTS-Sta:
 mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 ```
 
-Injects a mouse click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the value of **key1** is **2072**, the **Ctrl** button is pressed with the mouse click.
+在指定坐标点注入鼠标点击动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标点击动作。
 
 **Since:** 10
 
@@ -2144,25 +2234,25 @@ Injects a mouse click action at the specified coordinates, with the optional key
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the mouse click. |
-| btnId | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | First key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| key2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Second key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 鼠标点击的坐标。 |
+| btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | Yes | 按下的鼠标按钮。 |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**Since:** 11 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2186,7 +2276,7 @@ ArkTS-Sta:
 mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 ```
 
-Injects a double-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the value of **key** is **2072**, the **Ctrl** button is pressed with the double-click.
+在指定坐标点注入鼠标双击动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标双击动作。
 
 **Since:** 11
 
@@ -2202,25 +2292,25 @@ Injects a double-click action at the specified coordinates, with the optional ke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the double-click. |
-| btnId | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | First key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| key2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Second key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 鼠标双击的坐标。 |
+| btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | Yes | 按下的鼠标按钮。 |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2238,7 +2328,7 @@ async function demo() {
 mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 ```
 
-Drags the mouse pointer from the start point to the end point. This API uses a promise to return the result.
+鼠标按住鼠标左键从起始坐标点拖拽至终点坐标点。使用Promise异步回调。对于 API version 26.0.0 之前的版本，该接口不支持鼠标跨屏拖拽操作，起始点与终点需属于同一屏幕，否则将抛出401错误码；从 API version 26.0.0 开始，该接口支持鼠标跨屏拖拽操作。
 
 **Since:** 11
 
@@ -2254,24 +2344,24 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the start point. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the end point. |
-| speed | number | No | Mouse drag speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 起始点坐标。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 终点坐标。 |
+| speed | number | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码 。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2295,7 +2385,7 @@ ArkTS-Sta:
 mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 ```
 
-Drags the mouse from the start point to the end point. You can specify the dragging speed and the duration before dragging. This API uses a promise to return the result.
+鼠标按住鼠标左键从起始坐标点拖拽至终点坐标点，支持指定拖拽速度和拖拽前长按时间。使用Promise异步回调。对于 API version 26.0.0 之前的版本，该接口不支持鼠标跨屏拖拽操作，起始点与终点需属于同一屏幕，否则将抛出401错误码；从 API version 26.0.0 开始，该接口支持鼠标跨屏拖拽操作。
 
 **Since:** 20
 
@@ -2311,25 +2401,25 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the start point. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the end point. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Speed of mouse drag. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | The duration of the long press before dragging. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 1500 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1500 |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 起始点坐标。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 终点坐标。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2347,7 +2437,7 @@ async function demo() {
 mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>
 ```
 
-Hold down the left mouse button and drag on the screen between the specified points,with optional touch and key settings.
+按住鼠标左键并在屏幕上的指定点之间拖动，具有可选的触摸和按键设置。
 
 **Since:** 26.0.0
 
@@ -2363,23 +2453,44 @@ Hold down the left mouse button and drag on the screen between the specified poi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the starting point. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the ending point. |
-| touchOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the touch options for speed and duration settings. Only 'speed' and 'duration' properties are valid in this method. Setting other properties will cause BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
-| keyOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the key options for key codes to press during drag. Default value: Refer to the default value of keyOptions. |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 起点。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 终点。 |
+| touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | 速度和持续时间设置的触摸选项。 在此方法中，只有“速度”和“持续时间”属性有效。 设置其他属性会导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
+| keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | No | 拖动期间要按的键代码的键选项。 &lt;br&gt;默认值：参考keyOptions的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions, KeyOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let touchOptions: TouchOptions = {
+    speed: 800,     // Drag speed: 800 px/s
+    duration: 2000  // Click duration before dragging: 2000 ms.
+  };
+  let keyOptions: KeyOptions = {
+    key1: 2072,  // Ctrl key
+    key2: 2019   // C key
+  };
+  // Drag the mouse and press Ctrl+C.
+  await driver.mouseDragWithOptions({ x: 100, y: 100 }, { x: 200, y: 200 }, touchOptions, keyOptions);
+}
+```
 
 ## mouseLongClick
 
@@ -2387,7 +2498,7 @@ Hold down the left mouse button and drag on the screen between the specified poi
 mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
 ```
 
-Injects a mouse long-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the value of **Key** is **2072**, the **Ctrl** button is long-clicked with the mouse device.
+在指定坐标点注入鼠标长按动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标长按动作。
 
 **Since:** 11
 
@@ -2403,25 +2514,25 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the long-click of the mouse device. |
-| btnId | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mouse button pressed. |
-| key1 | number | No | First key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| key2 | number | No | Second key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 鼠标长按的坐标。 |
+| btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | Yes | 按下的鼠标按钮。 |
+| key1 | number | No | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
+| key2 | number | No | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2429,6 +2540,7 @@ import { Driver, MouseButton } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  // If the key code value is 2072, the Ctrl button is pressed with the long-click.
   await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072);
 }
 ```
@@ -2445,8 +2557,7 @@ ArkTS-Sta:
 mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>
 ```
 
-Injects a mouse long-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the value of **Key** is **2072**  
-, the **Ctrl** button is long-clicked with the mouse device.
+在指定坐标点注入鼠标长按动作，支持同时按下对应键盘组合键，支持指定长按时长。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标长按动作。
 
 **Since:** 20
 
@@ -2462,26 +2573,26 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the long-click of the mouse device. |
-| btnId | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | First key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| key2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Second key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| duration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Long-click duration. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 1500 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1500 |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 鼠标长按的坐标。 |
+| btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | Yes | 按下的鼠标按钮。 |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2489,6 +2600,7 @@ import { Driver, MouseButton } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  // If the key code value is 2072, the Ctrl button is pressed with the long-click for 2,000 ms.
   await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
 }
 ```
@@ -2499,7 +2611,7 @@ async function demo() {
 mouseMoveTo(p: Point): Promise<void>
 ```
 
-Moves the mouse cursor to the target point. This API uses a promise to return the result.
+将鼠标光标移到目标点。使用Promise异步回调。
 
 **Since:** 10
 
@@ -2515,22 +2627,22 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the end point. |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 目标点的坐标。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2554,7 +2666,7 @@ ArkTS-Sta:
 mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>
 ```
 
-Moves the mouse pointer from the start point to the end point. This API uses a promise to return the result.
+鼠标从起始坐标点滑向终点坐标点。使用Promise异步回调。
 
 **Since:** 11
 
@@ -2570,24 +2682,24 @@ Moves the mouse pointer from the start point to the end point. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the start point. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the end point. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Mouse move speed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 起始点坐标。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 终点坐标。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2605,7 +2717,7 @@ async function demo() {
 mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): Promise<void>
 ```
 
-Injects a mouse scroll action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the value of **key1** is **2072**, the **Ctrl** button is pressed with mouse scrolling.
+在指定坐标点注入鼠标滚轮滑动动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标滚轮滑动动作。
 
 **Since:** 10
 
@@ -2621,26 +2733,26 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the mouse click. |
-| down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
-| d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px shift to the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 0 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| key1 | number | No | First key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| key2 | number | No | Second key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 鼠标点击的坐标。 |
+| down | boolean | Yes | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
+| d | number | Yes | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
+| key1 | number | No | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**Since:** 11 |
+| key2 | number | No | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2664,7 +2776,7 @@ ArkTS-Sta:
 mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>
 ```
 
-Injects a mouse scroll action at the specified coordinates, with the optional key or key combination and the specified scroll speed. This API uses a promise to return the result.
+在指定坐标点注入鼠标滚轮滑动动作，支持同时按下对应键盘组合键并且指定滑动速度。使用Promise异步回调。
 
 **Since:** 11
 
@@ -2680,27 +2792,27 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the mouse click. |
-| down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
-| d | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px shift to the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: cell |
-| key1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | First key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| key2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Second key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Scroll speed of the mouse wheel. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[1, 500] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ticks/s \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 20 |
+| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 鼠标点击的坐标。 |
+| down | boolean | Yes | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
+| d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 鼠标滚轮滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出401错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2718,7 +2830,7 @@ async function demo() {
 penClick(point: Point): Promise<void>
 ```
 
-Simulates a pen click operation. This API uses a promise to return the result.
+模拟手写笔点击操作。使用Promise异步回调。
 
 **Since:** 18
 
@@ -2734,22 +2846,22 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the clicked point. |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 点击的坐标点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2767,7 +2879,7 @@ async function demo() {
 penDoubleClick(point: Point): Promise<void>
 ```
 
-Simulates a pen double-click operation. This API uses a promise to return the result.
+模拟手写笔双击操作。使用Promise异步回调。
 
 **Since:** 18
 
@@ -2783,22 +2895,22 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the double-clicked point. |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 双击的坐标点。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2822,7 +2934,7 @@ ArkTS-Sta:
 penLongClick(point: Point, pressure?: double): Promise<void>
 ```
 
-Simulates a pen long-click operation. This API uses a promise to return the result.
+模拟手写笔长按操作。使用Promise异步回调。
 
 **Since:** 18
 
@@ -2838,23 +2950,23 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the long-clicked point. |
-| pressure | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Swipe pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[0.0, 1.0] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1.0 |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 长按的坐标点。 |
+| pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2878,7 +2990,7 @@ ArkTS-Sta:
 penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>
 ```
 
-Simulates a pen swipe operation. This API uses a promise to return the result.
+模拟手写笔的滑动操作。使用Promise异步回调。
 
 **Since:** 18
 
@@ -2894,25 +3006,25 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startPoint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the start point. |
-| endPoint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Coordinates of the end point. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Speed of pen swipe. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
-| pressure | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Swipe pressure of the pen. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[0.0, 1.0] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 1.0 |
+| startPoint | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 起始位置的坐标点。 |
+| endPoint | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 结束位置的坐标点。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
+| pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2930,7 +3042,7 @@ async function demo() {
 pressBack(): Promise<void>
 ```
 
-Presses the Back button. This API uses a promise to return the result.
+进行点击BACK键的操作。使用Promise异步回调。
 
 **Since:** 9
 
@@ -2946,15 +3058,15 @@ Presses the Back button. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -2978,7 +3090,7 @@ ArkTS-Sta:
 pressBack(displayId: int): Promise<void>
 ```
 
-Presses the Back button on the specified screen. This API uses a promise to return the result.
+对指定屏幕进行点击BACK键的操作。使用Promise异步回调。
 
 **Since:** 20
 
@@ -2994,22 +3106,22 @@ Presses the Back button on the specified screen. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3027,7 +3139,7 @@ async function demo() {
 pressHome(): Promise<void>
 ```
 
-Injects an operation of returning to the home screen on the device. This API uses a promise to return the result.
+设备注入返回桌面操作。使用Promise异步回调。
 
 **Since:** 9
 
@@ -3043,15 +3155,15 @@ Injects an operation of returning to the home screen on the device. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3075,7 +3187,7 @@ ArkTS-Sta:
 pressHome(displayId: int): Promise<void>
 ```
 
-Injects an operation of returning to the home screen on the specified display. This API uses a promise to return the result.
+设备指定屏幕上注入返回桌面操作。使用Promise异步回调。
 
 **Since:** 20
 
@@ -3091,22 +3203,22 @@ Injects an operation of returning to the home screen on the specified display. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定设备屏幕ID。取值范围：大于等于0的整数。  **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3124,7 +3236,7 @@ async function demo() {
 screenCap(savePath: string): Promise<boolean>
 ```
 
-Captures the current screen and saves it as a PNG image to the given save path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
+捕获当前屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
 **Since:** 9
 
@@ -3140,22 +3252,22 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| savePath | string | Yes | File save path. The path must be the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the current application. |
+| savePath | string | Yes | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the screenshot operation is successful. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：完成，false：未完成。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3179,7 +3291,7 @@ ArkTS-Sta:
 screenCap(savePath: string, displayId: int): Promise<boolean>
 ```
 
-Captures the specified screen and saves it as a PNG image to the given save path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
+捕获指定屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
 **Since:** 20
 
@@ -3195,23 +3307,23 @@ Captures the specified screen and saves it as a PNG image to the given save path
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| savePath | string | Yes | File save path. The path must be the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the current application. |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If the input **displayId** does not exist, the exception **401** is reported. |
+| savePath | string | Yes | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return whether the screenshot operation is successful. The value **true** indicates that the screen capture operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：完成。false：未完成。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3229,7 +3341,7 @@ async function demo() {
 screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 ```
 
-Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
+捕获当前屏幕的指定区域，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
 **Since:** 10
 
@@ -3245,23 +3357,23 @@ Captures the specified area of the current screen and saves the captured screens
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| savePath | string | Yes | File save path. The path must be the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of the current application. |
-| rect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Area of the screen to capture. The default value is the entire screen. |
+| savePath | string | Yes | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
+| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | No | 截图区域，默认为全屏。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether the screenshot operation is successful. The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3284,7 +3396,7 @@ async function demo() {
 setDisplayRotation(rotation: DisplayRotation): Promise<void>
 ```
 
-Sets the display rotation of the current scene. This API uses a promise to return the result. It applies to rotatable scenarios.
+将当前场景的显示方向设置为指定的显示方向。使用Promise异步回调。适用于可旋转的应用场景。
 
 **Since:** 9
 
@@ -3300,22 +3412,22 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Display rotation of the device. |
+| rotation | [DisplayRotation](arkts-test-uitest-displayrotation-e.md) | Yes | 设备的显示方向。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3333,7 +3445,7 @@ async function demo() {
 setDisplayRotationEnabled(enabled: boolean): Promise<void>
 ```
 
-Enables or disables display rotation. This API uses a promise to return the result.
+启用/禁用设备旋转屏幕的功能。使用Promise异步回调。
 
 **Since:** 9
 
@@ -3349,22 +3461,22 @@ Enables or disables display rotation. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the screen can be rotated. The value **true** indicates that the screen can be rotated, and **false** indicates the opposite. |
+| enabled | boolean | Yes | 能否旋转屏幕的标识。true：可以旋转。false：不可以旋转。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3388,7 +3500,7 @@ ArkTS-Sta:
 swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
-Swipes from the start coordinate point to the target coordinate point. This API uses a promise to return the result.
+从起始坐标点滑向目的坐标点。使用Promise异步回调。
 
 **Since:** 9
 
@@ -3404,33 +3516,35 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the horizontal coordinate of the start point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| starty | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the vertical coordinate of the start point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| endx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| endy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 401 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| startx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
+| starty | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
+| endx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
+| endy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
+  // Create a Driver object.
   let driver: Driver = Driver.create();
+  // Swipe from coordinates (100, 100) to coordinates (200, 200) at a speed of 600 px/s.
   await driver.swipe(100, 100, 200, 200, 600);
 }
 ```
@@ -3447,7 +3561,7 @@ ArkTS-Sta:
 swipeBetween(from: Point, to: Point, speed?: int): Promise<void>
 ```
 
-Swipes from the start coordinate point to the target coordinate point. This API uses a promise to return the result.
+从起始坐标点滑向目标坐标点。使用Promise异步回调。
 
 **Since:** 20
 
@@ -3463,24 +3577,24 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range:[200, 40000] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: px/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 17000007 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 600 |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3498,7 +3612,7 @@ async function demo() {
 swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>
 ```
 
-Swipe on the screen between the specified points with optional touch options.
+使用可选的触摸选项在指定点之间滑动屏幕。
 
 **Since:** 26.0.0
 
@@ -3514,22 +3628,39 @@ Swipe on the screen between the specified points with optional touch options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the coordinate point where the finger touches the screen. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the coordinate point where the finger leaves the screen. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options for the swipe operation. Only the 'speed' and 'pressure' properties are applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
+| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 手指接触屏幕的坐标点。 |
+| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 手指离开屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | 滑动操作的选项。 只有“速度”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+// xxx.test.ets
+import { Driver, TouchOptions } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let options: TouchOptions = {
+    speed: 800,   // Swipe speed: 800 px/s
+    pressure: 0.5  // Touch pressure value.
+  };
+  // Swipes from the start coordinate point to the target coordinate point, and specifies the swipe speed and touch pressure.
+  await driver.swipeBetweenWithOptions({ x: 100, y: 100, displayId: 0 }, { x: 1000, y: 1000, displayId: 0 }, options);
+}
+```
 
 ## touchPadMultiFingerSwipe
 
@@ -3543,7 +3674,7 @@ ArkTS-Sta:
 touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>
 ```
 
-Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise to return the result.
+模拟触摸板多指滑动手势。使用Promise异步回调。
 
 **Since:** 18
 
@@ -3559,25 +3690,25 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fingers | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of fingers. The value can be 3 or 4. |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Swipe direction. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Additional options for the multi-finger swipe gesture on the touchpad. The default values of the attributes in **\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_** are used by default. |
+| fingers | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 触摸板多指滑动的手指数。取值为3或者4。 |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | 触摸板多指滑动的方向。 |
+| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | No | 触摸板多指滑动手势附加选项，默认取TouchPadSwipeOptions中各属性的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000005 | This operation is not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3601,7 +3732,7 @@ ArkTS-Sta:
 touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>
 ```
 
-Simulates a two-finger scroll gesture on the touchpad. This API uses a promise to return the result.
+模拟触摸板双指滚动手势。使用Promise异步回调。
 
 **Since:** 22
 
@@ -3617,26 +3748,26 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Point of the mouse cursor when the two-finger scrolling is performed on the touchpad. |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Direction of two-finger scrolling on the touchpad. |
-| d | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of grids scrolled by two fingers on the touchpad. A grid indicates a 120 px shift to the target point. The value is an integer greater than or equal to 0. |
-| speed | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Speed of two-finger scrolling on the touchpad. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ticks/s. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [1, 500] \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Throws error code 17000007 if negative. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 20 |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 触摸板双指滚动时鼠标光标的位置。 |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | 触摸板双指滚动的方向。 |
+| d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 触摸板双指滚动的格数，取值为大于等于0的整数，每格对应目标点位移120px。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 触摸板双指滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出17000007错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. |
+| 17000005 | This operation is not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3654,7 +3785,7 @@ async function demo() {
 triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 ```
 
-Triggers a combination key event based on the specified key values. This API uses a promise to return the result.For example, if the value of **Key** is (2072, 2019), the combination key **Ctrl+C** that matches the value is found and clicked.
+通过给定的key值，找到对应组合键并点击。使用Promise异步回调。例如，Key值为(2072, 2019)时，找到key值对应的组合键并点击，如Ctrl+c。
 
 **Since:** 9
 
@@ -3670,24 +3801,24 @@ Triggers a combination key event based on the specified key values. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | number | Yes | First key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| key1 | number | Yes | Second key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| key2 | number | No | Third key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
+| key0 | number | Yes | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key1 | number | Yes | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key2 | number | No | 指定的第三个key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)， 默认值为0。<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3695,6 +3826,7 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  // Inject the Ctrl+Alt+Delete key combination.
   await driver.triggerCombineKeys(2072, 2047, 2035);
 }
 ```
@@ -3711,8 +3843,7 @@ ArkTS-Sta:
 triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>
 ```
 
-Triggers a combination key event based on the specified key values on the specified screen. This API uses a promise to return the result. For example, if the value of **Key** is (2072, 2019), the combination key **Ctrl+C**  
-that matches the value is found and clicked.
+通过给定的key值，找到对应组合键，并在指定屏幕下进行点击。使用Promise异步回调。例如，Key值为(2072, 2019)时，找到key值对应的组合键并点击，如Ctrl+c。
 
 **Since:** 20
 
@@ -3728,25 +3859,25 @@ that matches the value is found and clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | First key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| key1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Second key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| key2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Third key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: 0 |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default display ID of the device. |
+| key0 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的第三个key值，取值范围：大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的屏幕ID，取值范围：大于等于0的整数，默认值为设备默认屏幕ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3770,7 +3901,7 @@ ArkTS-Sta:
 triggerKey(keyCode: int): Promise<void>
 ```
 
-Triggers a key event by passing the key value. This API uses a promise to return the result.
+传入key值实现模拟点击对应按键的效果。使用Promise异步回调。
 
 **Since:** 9
 
@@ -3786,22 +3917,22 @@ Triggers a key event by passing the key value. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| keyCode | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3826,7 +3957,7 @@ ArkTS-Sta:
 triggerKey(keyCode: int, displayId: int): Promise<void>
 ```
 
-Triggers a key event by passing the key value on the specified screen. This API uses a promise to return the result.
+在指定屏幕，传入key值实现模拟点击对应按键的效果。使用Promise异步回调。
 
 **Since:** 20
 
@@ -3842,23 +3973,23 @@ Triggers a key event by passing the key value on the specified screen. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Key value. The value is an integer greater than or equal to 0. For details, see [KeyCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: If the input **displayId** does not exist, the exception **401** is reported. |
+| keyCode | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3881,9 +4012,9 @@ Trigger pen key operation.
 
 Supported combinations:
 
-- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE\_CLICK operation.  
-- AIR\_MOUSE mode: AIR\_MOUSE key with CLICK or DOUBLE\_CLICK operation (requires point in options),  
-HANDWRITING key with CLICK or DOUBLE\_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
+- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation.  
+- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),  
+HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
 
 **Since:** 26.0.0
 
@@ -3899,24 +4030,41 @@ HANDWRITING key with CLICK or DOUBLE\_CLICK operation, SMART key with CLICK oper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the pen key to operate. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the pen mode. |
-| operation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the operation type. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the operation options, including optional coordinate point. Default value: Refer to the default value of PenKeyOperationOption. |
+| key | [PenKey](arkts-test-uitest-penkey-e.md) | Yes | the pen key to operate. |
+| mode | [PenMode](arkts-test-uitest-penmode-e.md) | Yes | the pen mode. |
+| operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Yes | the operation type. |
+| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | the operation options, including optional coordinate point. Default value: Refer to the default value of PenKeyOperationOption. &lt;br&gt;默认值：参考PenKeyOperationOption的默认值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. Unsupported key, mode, and operation combination. |
+| 17000002 | The API does not support concurrent calls. |
+| 17000007 | Parameter verification failed. Unsupported key, mode, and operation combination. |
+| 17000005 | This operation is not supported. |
+
+## Examples
+
+```TypeScript
+// xxx.test.ets
+import { Driver, PenKey, PenMode, PenKeyOperation } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // Trigger the handwriting key click in handwriting mode.
+  await driver.triggerPenKey(PenKey.HANDWRITING, PenMode.HANDWRITING, PenKeyOperation.CLICK);
+  // Trigger the air mouse key double-click in air mouse mode.
+  await driver.triggerPenKey(PenKey.AIR_MOUSE, PenMode.AIR_MOUSE, PenKeyOperation.DOUBLE_CLICK, { point: { x: 500, y: 500 } });
+  // Trigger the smart key click in air mouse mode.
+  await driver.triggerPenKey(PenKey.SMART, PenMode.AIR_MOUSE, PenKeyOperation.CLICK);
+}
+```
 
 ## waitForComponent
 
@@ -3924,7 +4072,7 @@ HANDWRITING key with CLICK or DOUBLE\_CLICK operation, SMART key with CLICK oper
 waitForComponent(on: On, time: number): Promise<Component>
 ```
 
-Searches for the target component based on the attributes within a specified time. This API uses a promise to return the result.
+在用户给定的时间内，持续查找满足控件属性要求的目标控件。使用Promise异步回调。
 
 **Since:** 9
 
@@ -3940,23 +4088,23 @@ Searches for the target component based on the attributes within a specified tim
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Attributes of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| time | number | Yes | Duration for searching for the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, in ms. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 0 |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | 目标控件的属性要求。 |
+| time | number | Yes | 查找目标控件的持续时间。单位ms，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; | the first matched { |
+| Promise&lt;Component&gt; | Promise对象，返回控件对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -3974,7 +4122,7 @@ async function demo() {
 waitForComponent(on: On, time: int): Promise<Component | null>
 ```
 
-Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ on current UI during the time given.
+Find the first matched {@link Component} on current UI during the time given.
 
 **Since:** 23
 
@@ -3988,8 +4136,8 @@ Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ on current UI durin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the attribute requirements of the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| time | int | Yes | duration of finding in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: The value should be >= 0 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target {@link Component}. |
+| time | int | Yes | duration of finding in milliseconds, not less than 0. |
 
 **Return value:**
 
@@ -4001,8 +4149,8 @@ Find the first matched \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ on current UI durin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
 ## waitForIdle
 
@@ -4016,7 +4164,7 @@ ArkTS-Sta:
 waitForIdle(idleTime: int, timeout: int): Promise<boolean>
 ```
 
-Checks whether all components on the current UI are idle. This API uses a promise to return the result.
+判断当前界面的所有控件是否已经空闲。使用Promise异步回调。
 
 **Since:** 9
 
@@ -4032,23 +4180,23 @@ Checks whether all components on the current UI are idle. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| idleTime | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Idle time threshold, in ms. If the duration for which a component remains inactive reaches this threshold, it is considered as idle. The value must be an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms |
-| timeout | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Maximum waiting time, in milliseconds. The value is an integer greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms |
+| idleTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 空闲时间的阈值。在这个时间段控件不发生变化，视为该控件空闲，单位：毫秒，取值范围：大于等于0的整数。 |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 等待空闲的最大时间，单位：毫秒，取值范围：大于等于0的整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; |  Promise used to return whether all components on the current UI are idle. The value true indicates that all components on the current UI are idle, and false indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象，返回当前界面的所有控件是否已经空闲。true：已经空闲，false：不空闲。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets
@@ -4066,7 +4214,7 @@ async function demo() {
 wakeUpDisplay(): Promise<void>
 ```
 
-Wakes up the current display. This API uses a promise to return the result.
+唤醒当前设备即设备亮屏。使用Promise异步回调。
 
 **Since:** 9
 
@@ -4082,15 +4230,15 @@ Wakes up the current display. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| 17000002 | The API does not support concurrent calls. |
 
-**Example**
+## Examples
 
 ```TypeScript
 // xxx.test.ets

@@ -4,7 +4,7 @@
 export type CompatibleUpdatableBuilder<T> = (arg: T) => void
 ```
 
-Defines the source builder for updating compatible builder.
+自定义构建函数的类型。
 
 **Since:** 23
 
@@ -22,5 +22,5 @@ Defines the source builder for updating compatible builder.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arg | T | Yes | the argument of the source builder  |
+| arg | T | Yes | 自定义构建函数。 |
 

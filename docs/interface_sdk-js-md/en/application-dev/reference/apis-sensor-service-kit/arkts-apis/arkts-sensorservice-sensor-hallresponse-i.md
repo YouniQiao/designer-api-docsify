@@ -1,6 +1,6 @@
 # HallResponse
 
-Describes the Hall effect sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+霍尔传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** HallResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,16 +12,21 @@ Describes the Hall effect sensor data. It extends from [Response]\_\_\_JSDOC\_LI
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## status
 
 ```TypeScript
 status: double
 ```
 
-Hall effect sensor status. This parameter specifies whether a magnetic field exists around a device. The value  
-**0** means that a magnetic field does not exist, and a value greater than **0** means the opposite.
+霍尔开关状态，表示设备周围是否存在磁力吸引。取值范围：0（无磁力吸引，霍尔开关断开）或大于0（有磁力吸引，霍尔开关闭合）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

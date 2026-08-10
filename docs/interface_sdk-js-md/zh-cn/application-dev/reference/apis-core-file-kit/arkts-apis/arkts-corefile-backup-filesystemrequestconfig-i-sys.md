@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## triggerType
 
 ```TypeScript
@@ -20,7 +26,7 @@ triggerType: int
 
 指定碎片清理的触发类型，取值0表示执行存储器件碎片清理。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -42,7 +48,7 @@ waitTime: int
 
 执行碎片清理的最大允许时间，单位为秒，取值范围为0至300。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -64,7 +70,7 @@ writeSize: int
 
 碎片清理的目标大小，单位为MB，取值范围为0至2097152。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

@@ -1,5 +1,11 @@
 # getImagePackerSupportedFormats
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## getImagePackerSupportedFormats
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getImagePackerSupportedFormats(): string[]
 | --- | --- |
 | string[] | 支持编码的图片格式（mime type）列表。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 async function GetImagePackerSupportedFormats() {

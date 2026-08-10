@@ -4,7 +4,7 @@
 type PrinterChangeCallback = (event: PrinterEvent, printerInformation: PrinterInformation) => void
 ```
 
-Defines a callback that takes the printer event and printer information as parameters.
+将打印机事件和打印机信息作为参数的回调方法。
 
 **Since:** 18
 
@@ -18,6 +18,6 @@ Defines a callback that takes the printer event and printer information as param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Printer event.  |
-| printerInformation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Printer information.  |
+| event | [PrinterEvent](arkts-basicservices-print-printerevent-e.md) | Yes | 表示打印机事件。 |
+| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Yes | 表示打印机信息。 |
 

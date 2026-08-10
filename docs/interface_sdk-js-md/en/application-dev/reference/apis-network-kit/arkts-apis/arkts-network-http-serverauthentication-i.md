@@ -10,6 +10,12 @@ HTTP server authentication.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## authenticationType
 
 ```TypeScript
@@ -18,7 +24,7 @@ authenticationType?: AuthenticationType
 
 Authentication type of server. If not set, negotiate with the server.
 
-**Type:** AuthenticationType
+**Type:** [AuthenticationType](arkts-network-http-authenticationtype-t.md)
 
 **Since:** 18
 
@@ -38,7 +44,7 @@ credential: Credential
 
 Credential of server.
 
-**Type:** Credential
+**Type:** [Credential](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-credential-i.md)
 
 **Since:** 18
 

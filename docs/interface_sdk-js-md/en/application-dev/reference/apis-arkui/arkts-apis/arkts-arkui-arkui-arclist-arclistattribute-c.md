@@ -1,6 +1,7 @@
 # ArcListAttribute
 
-In addition to the [universal attributes]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the following attributes are supported.
+除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性（不支持  
+[滚动组件通用属性](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)）：
 
 **Inheritance/Implementation:** ArcListAttribute extends [CommonMethod<ArcListAttribute>](CommonMethod<ArcListAttribute>)
 
@@ -12,14 +13,19 @@ In addition to the [universal attributes]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## cachedCount
 
 ```TypeScript
 cachedCount(count: Optional<number>): ArcListAttribute
 ```
 
-Sets the number of arc list items to be preloaded (cached). In a lazy loading scenario,only the content equivalent to **cachedCount** outside the visible area of the arc list is preloaded. In a non-lazy loading scenario, all items are loaded at once. For both lazy and non-lazy loading, only the content within the visible area of the arc list plus the content equivalent to **cachedCount** outside the visible area is laid out.When **cachedCount** is set for the arc list, the system preloads and lays out the  
-**cachedCount**-specified number of rows of arc list items both above and below the currently visible area of the arc list.
+设置列表中ArcListItem的预加载数量，懒加载场景只会预加载ArcList显示区域外上下各cachedCount行的ArcListItem，非懒加载场景会全部加载。懒加载、非懒加载都只布局ArcList显示区域+ArcList显示区域外上下各cachedCount行的ArcListItem。
 
 **Since:** 18
 
@@ -35,13 +41,13 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Number of list items to preload.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: number of nodes visible on the screen, with the maximum value of 16.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Value range: [0, +∞) |
+| count | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | ArcListItem的预加载数量。 &lt;br&gt;默认值：根据屏幕内显示的节点个数设置，最大值为16。 &lt;br&gt;取值范围：[0, +∞) &lt;br&gt;设置为负数时，按1处理。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## chainAnimation
 
@@ -49,8 +55,9 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 chainAnimation(enable: Optional<boolean>): ArcListAttribute
 ```
 
-Sets whether to enable chained animations, which provide a visually connected, or"chained," effect when the **ArcList** component is scrolled or its top or bottom edge is dragged.The list items are separated with even space, and one item animation starts after the previous animation during basic sliding interactions. The chained animation effect is similar with spring physics.For chained animations to work properly, the edge scrolling effect of the **ArcList**  
-component must be set to **EdgeEffect.Spring**.
+设置当前ArcList是否启用链式联动动效，开启后列表滑动以及顶部和底部拖拽时会有链式联动的效果。
+
+链式联动效果：ArcList内的ArcListItem间隔一定距离，在基本的滑动交互行为下，主动对象驱动从动对象进行联动，驱动效果遵循弹簧物理动效。
 
 **Since:** 18
 
@@ -66,13 +73,13 @@ component must be set to **EdgeEffect.Spring**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Whether to enable chained animations.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **false** (default): Chained animations are disabled. **true**: Chained animations are enabled. |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 是否启用链式联动动效。仅当边缘效果为[EdgeEffect.Spring](arkts-arkui-enums-edgeeffect-e.md)时，链式联动动效才会生效。 &lt;br&gt;默认值：false，不启用链式联动。true，启用链式联动。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## childrenMainSize
 
@@ -80,7 +87,7 @@ component must be set to **EdgeEffect.Spring**.
 childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute
 ```
 
-Sets the size information of the child components of the **ArcList** component along the main axis.
+设置ArcList组件的子组件在主轴方向的大小信息。
 
 **Since:** 18
 
@@ -96,13 +103,13 @@ Sets the size information of the child components of the **ArcList** component a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Precise size information for all child components along the main axis. This ensures accurate scrolling positions in scenarios where child components have varying sizes, are added or removed, or when APIs like **scrollToIndex** are used. It guarantees that **scrollTo** can accurately navigate to the specified position, **currentOffset** or **offset** can accurately reflect the current scrolling position, and the built-in scrollbar can move smoothly without any jumps or abrupt changes. The **offset** API is added from API version 23.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The provided sizes must match the actual sizes of the child components. Any changes to the sizes, or any additions or removals of child components, must be notified to the **ArcList** component through the **ChildrenMainSize** object. |
+| size | [Optional](arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | Yes | 通过[ChildrenMainSize](arkts-arkui-common-childrenmainsize-c.md)对象向ArcList组件精确提供所有子组件在主轴方向 的大小信息，能够确保ArcList组件在子组件主轴尺寸不统一、子组件的增删变动、以及使用[scrollToIndex](arkts-arkui-scroll-scroller-c.md#scrolltoindex)等场景时，仍能保持其滑动位置的准确性。进而保 证了[scrollTo](arkts-arkui-scroll-scroller-c.md#scrollto)能够精准跳转至指定位置，[currentOffset](arkts-arkui-scroll-scroller-c.md#currentoffset)或 [offset](arkts-arkui-scroll-scroller-c.md#offset)准确反映当前的滑动位置，且内置滚动条能够实现平滑移动，避免任何跳跃或突变。从API version 23开始，新增offset接口。 &lt;br&gt; **说明：** &lt;br&gt;提供的主轴方向大小必须与子组件实际在主轴方向的大小一致，否则可能导致ArcList组件显示异常。子组件在主轴方向大小发生变化或进行增删操作时，必须通过调用ChildrenMainSize对象的方法在变更后通知 ArcList组件，否则可能导致ArcList组件显示异常。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## digitalCrownSensitivity
 
@@ -110,7 +117,7 @@ Sets the size information of the child components of the **ArcList** component a
 digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribute
 ```
 
-Sets the sensitivity of the digital crown's event response.
+设置表冠响应灵敏度。
 
 **Since:** 18
 
@@ -126,13 +133,13 @@ Sets the sensitivity of the digital crown's event response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Sensitivity of the digital crown's event response.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **CrownSensitivity.MEDIUM**, indicating moderate response speed. |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | Yes | 表冠响应灵敏度。 &lt;br&gt;默认值：CrownSensitivity.MEDIUM，响应速度适中。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## enableScrollInteraction
 
@@ -140,7 +147,7 @@ Sets the sensitivity of the digital crown's event response.
 enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute
 ```
 
-Sets whether to enable scroll gestures.
+设置是否支持滚动手势。
 
 **Since:** 18
 
@@ -156,13 +163,13 @@ Sets whether to enable scroll gestures.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Whether to enable scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the **Scroller**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **true |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器 [Scroller](arkts-arkui-scroll-scroller-c.md)的滚动接口。 &lt;br&gt;默认值：true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## fadingEdge
 
@@ -170,7 +177,7 @@ Sets whether to enable scroll gestures.
 fadingEdge(enable: Optional<boolean>): ArcListAttribute
 ```
 
-Sets whether to enable the edge fading effect.
+设置是否开启边缘渐隐效果。
 
 **Since:** 18
 
@@ -186,13 +193,13 @@ Sets whether to enable the edge fading effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Whether to enable the edge fading effect.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ When **fadingEdge** is set to **true**, it overrides the **.overlay()** attribute of the component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_With **fadingEdge** set to **true**, avoid setting background-related attributes on the component, as this may affect the display of the fading effect.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ When **fadingEdge** is set to **true**, the component is clipped to the boundary. If the **clip** attribute of the component is set to **false**, the setting does not take effect.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_With the value **true**, the edge fading effect is enabled. With the value **false**, the edge fading effect is disabled.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**. |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | fadingEdge生效时，会覆盖原组件的`.overlay()`属性。 &lt;br&gt;fadingEdge生效时，建议不在该组件上设置background相关属性，会影响渐隐的显示效果。 &lt;br&gt;fadingEdge生效时，组件会裁剪到边界，设置组件的[clip](arkts-arkui-common-commonmethod-i.md#clip)属性为false不生效。 &lt;br&gt;设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。 &lt;br&gt;默认值：false |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## flingSpeedLimit
 
@@ -200,7 +207,7 @@ Sets whether to enable the edge fading effect.
 flingSpeedLimit(speed: Optional<number>): ArcListAttribute
 ```
 
-Sets the maximum initial speed for inertial scrolling after a fling gesture. If this attribute is set to a value less than or equal to 0, the default value is used.
+限制跟手滑动结束后，惯性滚动动效开始时的最大初始速度。设置为小于等于0的值时，按默认值处理。
 
 **Since:** 18
 
@@ -216,13 +223,13 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Maximum initial speed for inertial scrolling.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **9000**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp/s.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: (0, +∞) |
+| speed | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 惯性滚动动效开始时的最大初始速度。设置为小于等于0的值时，按默认值处理。 &lt;br&gt;默认值：9000 &lt;br&gt;单位：vp/s &lt;br&gt;取值范围：(0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## friction
 
@@ -230,7 +237,7 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 friction(friction: Optional<number>): ArcListAttribute
 ```
 
-Sets the friction coefficient. It applies only to gestures in the scrolling area, and it affects only the inertial scrolling process. If this attribute is set to a value less than or equal to 0, the default value is used.
+设置摩擦系数，手动滑动滚动区域时生效，仅影响惯性滚动过程。设置为小于等于0的值时，按默认值处理。
 
 **Since:** 18
 
@@ -246,13 +253,13 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| friction | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Friction coefficient.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **0.8**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: (0, +∞) |
+| friction | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 摩擦系数，手动滑动滚动区域时生效，仅影响惯性滚动过程。设置为小于等于0的值时，按默认值处理。 &lt;br&gt;默认值：0.8 &lt;br&gt;取值范围：(0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onDidScroll
 
@@ -260,7 +267,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute
 ```
 
-Triggered when the list scrolls. The return value is the offset amount by which the list has scrolled and the current scroll state.
+列表滑动时触发，返回当前帧滑动的偏移量和当前滑动状态。
 
 **Since:** 18
 
@@ -276,13 +283,13 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback triggered when the list scrolls. |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md)&gt; | Yes | 列表滑动时触发的回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onReachEnd
 
@@ -290,7 +297,9 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list reaches the end position.If the edge scrolling effect is set to spring, this event is triggered when scrolling past the end position and again when bouncing back to it.
+列表到达末尾位置时触发。
+
+ArcList边缘效果为弹簧效果时，滑动经过末尾位置时触发一次该事件，回弹返回末尾位置时再触发一次该事件。
 
 **Since:** 18
 
@@ -306,13 +315,13 @@ Triggered when the list reaches the end position.If the edge scrolling effect is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback triggered when the list reaches the end position. |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes | 列表到达末尾位置时触发。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onReachStart
 
@@ -320,8 +329,9 @@ Triggered when the list reaches the end position.If the edge scrolling effect is
 onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list reaches the start position.This event is triggered during initialization of the **ArcList** component if  
-**initialIndex** is set to **0**, and whenever the list scrolls to the start position.If the edge scrolling effect is set to spring, this event is triggered when scrolling past the start position and again when bouncing back to it.
+列表到达起始位置时触发。
+
+当ArcList进行初始化时，若[initialIndex](arkts-arkui-arkui-arclist-arklistoptions-i.md)设定为0，将触发一次事件。当ArcList滚动至起始位置，亦会触发一次事件。在ArcList的边缘效果设置为弹簧效果时，滑动经过起始位置时会触发一次事件，而在回弹返回起始位置时，将再次触发一次事件。
 
 **Since:** 18
 
@@ -337,13 +347,13 @@ Triggered when the list reaches the start position.This event is triggered durin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback triggered when the list reaches the start position. |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes | 列表到达起始位置时触发。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollIndex
 
@@ -351,8 +361,9 @@ Triggered when the list reaches the start position.This event is triggered durin
 onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute
 ```
 
-Triggered when a child component enters or leaves the visible area of the **ArcList**  
-component. This event is triggered during initialization of the **ArcList** component and when the index of the first or last child component in the visible area changes, or when the center child component changes.If the edge scrolling effect of the **ArcList** component is set to spring, this event is not triggered during continued scrolling at the edge or during the bounce-back process.
+当子组件划入或划出ArcList的显示区域时，将触发此事件。在ArcList初始化时，此事件会被触发一次。当ArcList显示区域内的首个或末个子组件的索引值发生变化，或是显示区域中心的子组件发生变动时，同样会触发此事件。
+
+ArcList的边缘效果为弹簧效果时，在ArcList滑动到边缘后继续滑动以及松手回弹的过程中，不会触发onScrollIndex事件。
 
 **Since:** 18
 
@@ -368,13 +379,13 @@ component. This event is triggered during initialization of the **ArcList** comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArcScrollIndexHandler&gt; | Yes | Callback triggered when a child component enters or leaves the visible area of the **ArcList** component. |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;ArcScrollIndexHandler&gt; | Yes | 有子组件划入或划出ArcList显示区域时触发该回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollStart
 
@@ -382,7 +393,7 @@ component. This event is triggered during initialization of the **ArcList** comp
 onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list starts scrolling initiated by the user's finger dragging the list or its scrollbar. This event is also triggered when the animation contained in the scrolling triggered by **Scroller** starts.
+列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroll-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
 
 **Since:** 18
 
@@ -398,13 +409,13 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback triggered when the list starts scrolling. |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes | 列表滑动开始时触发。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onScrollStop
 
@@ -412,8 +423,7 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-Triggered when the list stops scrolling after the user's finger leaves the screen.This event is also triggered when the animation contained in the scrolling triggered by  
-**Scroller** stops.
+列表滑动停止时触发。手指拖动列表或列表的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroll-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
 
 **Since:** 18
 
@@ -429,13 +439,13 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback triggered when the list stops scrolling. |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes | 列表滑动停止时触发。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## onWillScroll
 
@@ -443,7 +453,7 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute
 ```
 
-Triggered before each frame during list scrolling. The callback returns the offset amount by which the list will scroll and the current scroll state. The returned offset is a calculated value, not the actual offset.
+列表滑动时每帧开始前触发，返回当前帧将要滑动的偏移量和当前滑动状态。返回的偏移量为计算得到的将要滑动的偏移量值，并非最终实际滑动偏移。
 
 **Since:** 18
 
@@ -459,13 +469,13 @@ Triggered before each frame during list scrolling. The callback returns the offs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback triggered before each frame during list scrolling. |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md)&gt; | Yes | 列表滑动时每帧开始前触发的回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBar
 
@@ -473,7 +483,7 @@ Triggered before each frame during list scrolling. The callback returns the offs
 scrollBar(status: Optional<BarState>): ArcListAttribute
 ```
 
-Sets the state of the scrollbar.
+设置滚动条状态。
 
 **Since:** 18
 
@@ -489,13 +499,13 @@ Sets the state of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | State of the scrollbar.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **BarState.Auto |
+| status | [Optional](arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | Yes | 滚动条状态。 &lt;br&gt;默认值：BarState.Auto |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBarColor
 
@@ -503,7 +513,7 @@ Sets the state of the scrollbar.
 scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 ```
 
-Sets the color of the scrollbar.
+设置滚动条的颜色。
 
 **Since:** 18
 
@@ -519,13 +529,13 @@ Sets the color of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Color of the scrollbar.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | Yes | 设置滚动条颜色。 &lt;br&gt;默认值：ColorMetrics.numeric(0xA9FFFFFF) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## scrollBarWidth
 
@@ -533,7 +543,7 @@ Sets the color of the scrollbar.
 scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 ```
 
-Sets the width of the scrollbar. Once the width is set, the scrollbar will use this width in its pressed state.
+设置ArcList滚动条在按压态下的宽度。未设置时，按压态宽度为LengthMetrics.vp(24)。非按压态宽度固定为LengthMetrics.vp(4)，不受该属性影响。
 
 **Since:** 18
 
@@ -549,13 +559,13 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Width of the scrollbar.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **LengthMetrics.vp(24)**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Minimum value: **LengthMetrics.vp(4)**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | ArcList滚动条在按压态下的宽度。 &lt;br&gt;默认值：LengthMetrics.vp(24) &lt;br&gt;非按压态宽度：LengthMetrics.vp(4) &lt;br&gt;设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 &lt;br&gt;单位：vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 ## space
 
@@ -563,7 +573,7 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 space(space: Optional<LengthMetrics>): ArcListAttribute
 ```
 
-Sets the spacing between list items.
+设置列表子项之间的间距。
 
 **Since:** 18
 
@@ -579,11 +589,11 @@ Sets the spacing between list items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Spacing between list items.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: **LengthMetrics.vp(0)**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
+| space | [Optional](arkts-arkui-optional-t.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | 列表子项之间的间距。 &lt;br&gt;默认值：LengthMetrics.vp(0) &lt;br&gt;ArcList子组件的[visibility](arkts-arkui-common-commonmethod-i.md#visibility)属性设置为None时不显示，但该子组件上下的space还会生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 

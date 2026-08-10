@@ -18,5 +18,5 @@ The callback of Intelligent Tracking Prevention.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| details | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | callback information of onIntelligentTrackingPrevention.  |
+| details | [IntelligentTrackingPreventionDetails](../arkts-components/arkts-arkweb-intelligenttrackingpreventiondetails-i.md) | 是 | callback information of onIntelligentTrackingPrevention. |
 

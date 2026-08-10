@@ -1,15 +1,14 @@
 # @ohos.effectKit
 
-The Image Effect module provides basic capabilities for processing images, including brightness adjustment,blurring, grayscale adjustment, and intelligent color picking. It is applicable to scenarios such as adding filter effects in image editing apps, blurring the background image of app startup pages, automatically extracting UI theme colors, and analyzing image color schemes.
+图像效果模块提供了处理图像的基础能力，包括亮度调节、模糊化、灰度调节和智能取色等，适用于图片编辑应用中添加滤镜效果、应用启动页背景图模糊处理、UI主题色自动提取、图片配色分析等场景。
 
-This module is used for offline processing of image.PixelMap to obtain visual effects, while uiEffect(UI Effect Service) connects to the rendering service in real time to process screen frame buffers for dynamic visual effects.
+本模块用于离线处理[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)以获得视觉效果，而uiEffect（UI效果服务）则实时接入渲染服务，针对屏幕帧缓存进行处理以获得动态视觉效果。
 
-This module provides the following classes:
+该模块提供以下图像效果相关的常用功能：
 
-- [Filter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: an effect class used to add a specified effect to the effect chain,  
-enabling combined processing of multiple image effects through chained calls.  
-- [Color]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_: a class used to store the color picked.  
-- [ColorPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_: a smart color picker.
+- [Filter](arkts-arkgraphics2d-effectkit-filter-i.md)：效果类，用于将指定效果添加到效果链表中，通过链式调用实现多种图像效果的组合处理。  
+- [Color](arkts-arkgraphics2d-effectkit-color-i.md)：颜色类，用于保存取色的结果。  
+- [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)：智能取色器。
 
 **Since:** 9
 
@@ -19,49 +18,55 @@ enabling combined processing of multiple image effects through chained calls.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker) | Creates a ColorPicker instance based on a pixel map. This API uses a promise to return the result. |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-1) | Creates a ColorPicker instance for the selected region based on a pixel map. This API uses a promise to return the result. |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-2) | Creates a ColorPicker instance based on a pixel map. This API uses an asynchronous callback to return the result. |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-3) | Creates a ColorPicker instance for the selected region based on a pixel map. This API uses an asynchronous callback to return the result. |
-| [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect) | Creates a Filter instance based on the input PixelMap. You can then add various image effects through chained calls, and finally obtain the processed image via getEffectPixelMap. |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker) | 通过传入的PixelMap创建ColorPicker实例，使用Promise异步回调。 |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-1) | 通过传入的PixelMap创建选定取色区域的ColorPicker实例，使用Promise异步回调。 |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-2) | 通过传入的PixelMap创建ColorPicker实例，使用callback异步回调。 |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-3) | 通过传入的PixelMap创建选定取色区域的ColorPicker实例，使用callback异步回调。 |
+| [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect) | 通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果，最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | A color class used to store the color picking result. It is suitable for scenarios such as obtaining the main color, the color with the largest proportion, and the color with the highest saturation from an image in conjunction with ColorPicker, helping developers conveniently obtain and pass image color picking results. |
-| [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md) | A color picker class used to obtain the main color from image data. It is suitable for scenarios such as UI theme color extraction, image color scheme analysis, and intelligent color scheme recommendation, helping developers dynamically generate harmonious color schemes based on image content. Before calling the methods of ColorPicker, you need to create a ColorPicker instance via createColorPicker. |
-| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects,you need to call getEffectPixelMap to obtain the processed image. |
+| [Color](arkts-arkgraphics2d-effectkit-color-i.md) | 颜色类，用于保存取色的结果，适用于配合ColorPicker获取图像主色、占比最多颜色、饱和度最高颜色等场景，可帮助开发者便捷地获取和传递图像取色结果。 |
+| [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md) | 取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过  [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker)创建一个ColorPicker实例。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i-sys.md) | A color picker class used to obtain the main color from image data. It is suitable for scenarios such as UI theme color extraction, image color scheme analysis, and intelligent color scheme recommendation, helping developers dynamically generate harmonious color schemes based on image content. Before calling the methods of ColorPicker, you need to create a ColorPicker instance via createColorPicker. |
-| [Filter](arkts-arkgraphics2d-effectkit-filter-i-sys.md) | An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects,you need to call getEffectPixelMap to obtain the processed image. |
+| [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i-sys.md) | 取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过  [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker)创建一个ColorPicker实例。 |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i-sys.md) | 图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。 |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Enumerates the tile modes of the shader effect. |
+| [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 着色器效果平铺模式的枚举。 |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [PictureComplexityDegree](arkts-arkgraphics2d-effectkit-picturecomplexitydegree-e-sys.md) | Enumerates the complexity degree of the image. |
-| [PictureLightDegree](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md) | Enum for the brightness of image colors. |
-| [PictureShadeDegree](arkts-arkgraphics2d-effectkit-pictureshadedegree-e-sys.md) | Enumerates the shade degrees of image colors. |
+| [PictureComplexityDegree](arkts-arkgraphics2d-effectkit-picturecomplexitydegree-e-sys.md) | 图片内容复杂度的枚举。 |
+| [PictureLightDegree](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md) | 图片颜色明亮度的枚举。 |
+| [PictureShadeDegree](arkts-arkgraphics2d-effectkit-pictureshadedegree-e-sys.md) | 图片颜色深浅度的枚举。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -69,7 +74,7 @@ enabling combined processing of multiple image effects through chained calls.
 
 | Name | Description |
 | --- | --- |
-| [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | Defines the center point of the elliptical mask. |
-| [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | Defines the radius of the elliptical mask. |
+| [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | 定义椭圆形遮罩的中心点。 |
+| [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | 定义椭圆形遮罩的半径。 |
 <!--DelEnd-->
 

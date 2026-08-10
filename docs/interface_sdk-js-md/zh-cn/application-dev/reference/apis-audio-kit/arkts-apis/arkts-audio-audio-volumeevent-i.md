@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## updateUi
 
 ```TypeScript
@@ -36,7 +42,7 @@ volume: int
 
 音量等级，可设置范围通过调用getMinVolume和getMaxVolume方法获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -52,9 +58,9 @@ volume: int
 volumeMode?: AudioVolumeMode
 ```
 
-音频的音量模式。默认值为SYSTEM\_GLOBAL。
+音频的音量模式。默认值为SYSTEM_GLOBAL。
 
-**类型：** AudioVolumeMode
+**类型：** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
 **起始版本：** 19
 
@@ -72,7 +78,7 @@ volumeType: AudioVolumeType
 
 音频音量类型。
 
-**类型：** AudioVolumeType
+**类型：** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
 
 **起始版本：** 9
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## 汇总
 
 ### 函数
@@ -20,7 +26,7 @@
 | [dump](arkts-performanceanalysis-jsleakwatcher-dump-f.md#dump) | ����й©�б���������ڴ���ա� |
 | [enable](arkts-performanceanalysis-jsleakwatcher-enable-f.md#enable) | ʹ��ArkTS����й©��⣬Ĭ�Ϲرա���������ռ�й©��Ϣ�������������ܿ����� |
 | [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md#enableleakwatcher) | ʹ��ArkTS����й©��⡣  �˽ӿ�ͨ��һ�ε��ü��ɼ��ArkTS������ڴ�й©����֮ǰ��Ҫ�����ĸ�������enable��watch��check��dump���ķ������Ӽ�ࡣ |
-| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md#enableleakwatcher-1) | ʹ��ArkTS����й©��⡣  �˽ӿ�ͨ��һ�ε��ü��ɼ��ArkTS������ڴ�й©����֮ǰ��Ҫ�����ĸ�������enable��watch��check��dump���ķ������Ӽ�ࣻͨ��configs��������������Զ������ü��������ԣ���Ƚ�֮ǰ����������й©������ܡ�  **ע��**     ��ǰjsLeakWatcherй©������ܿ����ϴ󣬻ᵼ��Ӧ�ÿ��٣�������������ʱ�䣬���ٿ���Ƶ�ʡ� |
+| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md#enableleakwatcher-1) | ʹ��ArkTS����й©��⡣  �˽ӿ�ͨ��һ�ε��ü��ɼ��ArkTS������ڴ�й©����֮ǰ��Ҫ�����ĸ�������enable��watch��check��dump���ķ������Ӽ�ࣻͨ��configs��������������Զ������ü��������ԣ���Ƚ�֮ǰ����������й©������ܡ�  > **ע��** >  > ��ǰjsLeakWatcherй©������ܿ����ϴ󣬻ᵼ��Ӧ�ÿ��٣�������������ʱ�䣬���ٿ���Ƶ�ʡ� |
 | [watch](arkts-performanceanalysis-jsleakwatcher-watch-f.md#watch) | ע������й©�Ķ��� |
 
 ### 接口

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## touchEvent
 
 ```TypeScript
@@ -18,7 +24,7 @@ touchEvent: TouchEvent
 
 触屏输入事件。
 
-**类型：** TouchEvent
+**类型：** [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md)
 
 **起始版本：** 11
 

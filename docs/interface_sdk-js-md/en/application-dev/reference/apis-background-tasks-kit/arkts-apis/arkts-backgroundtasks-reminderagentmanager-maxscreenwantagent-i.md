@@ -1,6 +1,6 @@
 # MaxScreenWantAgent
 
-Describes the information about the ability that is started automatically and displayed in full-screen mode when a reminder is displayed in the notification center. This API is reserved.
+通知中心弹出提醒时，全屏显示自动拉起目标的ability信息。该接口为预留接口，暂不支持使用。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Describes the information about the ability that is started automatically and di
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Name of the target ability. (If the device is in use, only a notification banner is displayed.)
+指明提醒到达时自动拉起的目标ability名（如果设备在使用中，则只弹出通知横幅框）。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Name of the target ability. (If the device is in use, only a notification banner
 pkgName: string
 ```
 
-Name of the target package. (If the device is in use, only a notification banner is displayed.)
+指明提醒到达时自动拉起的目标包名（如果设备在使用中，则只弹出通知横幅框）。
 
 **Type:** string
 

@@ -1,12 +1,18 @@
 # getTouchpadRightClickType (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## getTouchpadRightClickType
 
 ```TypeScript
 function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): void
 ```
 
-Obtains the touchpad right-click menu type. This API uses an asynchronous callback to return the result.
+获取触控板右键菜单类型，使用callback异步回调。
 
 **Since:** 10
 
@@ -22,16 +28,16 @@ Obtains the touchpad right-click menu type. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RightClickType&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and the object is the touchpad right-click menu type. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RightClickType&gt; | Yes | 回调函数。当获取触控板右键菜单类型成功，err为undefined，对象是触控板右键菜单类型；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -45,11 +51,12 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Obtain the touchpad right-click menu type.
             pointer.getTouchpadRightClickType((error: BusinessError, type: pointer.RightClickType) => {
-              console.info(`getTouchpadRightClickType success, type: ${JSON.stringify(type)}`);
+              console.info(`Succeeded in getting touchpad right click type, type: ${JSON.stringify(type)}.`);
             });
           } catch (error) {
-            console.error(`getTouchpadRightClickType failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -64,7 +71,7 @@ struct Index {
 function getTouchpadRightClickType(): Promise<RightClickType>
 ```
 
-Obtains the touchpad right-click menu type. This API uses a promise to return the result.
+获取触控板右键菜单类型，使用Promise异步回调。
 
 **Since:** 10
 
@@ -80,16 +87,16 @@ Obtains the touchpad right-click menu type. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RightClickType&gt; | Promise used to return the touchpad right-click menu type. |
+| Promise&lt;RightClickType&gt; | Promise对象，返回触控板右键菜单类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -103,13 +110,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Obtain the touchpad right-click menu type.
             pointer.getTouchpadRightClickType().then((type: pointer.RightClickType) => {
-              console.info(`getTouchpadRightClickType success, type: ${JSON.stringify(type)}`);
+              console.info(`Succeeded in getting touchpad right click type, type: ${JSON.stringify(type)}.`);
             }).catch((error: BusinessError) => {
-              console.error(`Get touchpad right click type failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`getTouchpadRightClickType failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

@@ -11,9 +11,17 @@
 
 **ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace proxyChannelManager--><!--Device-unnamed-declare namespace proxyChannelManager-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+## 导入模块
+
+```TypeScript
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+```
 
 ## 汇总
 

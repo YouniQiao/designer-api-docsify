@@ -1,6 +1,6 @@
 # ActionFlagType
 
-Enumerates the operations that can be performed on a DLP file. For example, the DLP sandbox application can dim its button based on this parameter.
+可以对DLP文件进行的操作类型枚举。例如：DLP沙箱应用可以根据是否具有操作权限，对其按钮进行置灰。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the operations that can be performed on a DLP file. For example, the 
 ACTION_VIEW = 0x00000001
 ```
 
-View the file.
+表示文件的查看权限。
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ View the file.
 ACTION_SAVE = 0x00000002
 ```
 
-Save the file.
+表示文件的保存权限。
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Save the file.
 ACTION_SAVE_AS = 0x00000004
 ```
 
-Save the file as another file.
+表示文件的另存为权限。
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Save the file as another file.
 ACTION_EDIT = 0x00000008
 ```
 
-Edit the file.
+表示文件的编辑权限。
 
 **Since:** 10
 
@@ -80,7 +80,7 @@ Edit the file.
 ACTION_SCREEN_CAPTURE = 0x00000010
 ```
 
-Capture screenshots of the file.
+表示文件的截屏权限。
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ Capture screenshots of the file.
 ACTION_SCREEN_SHARE = 0x00000020
 ```
 
-Share the screen of the file.
+表示文件的共享屏幕权限。
 
 **Since:** 10
 
@@ -112,7 +112,7 @@ Share the screen of the file.
 ACTION_SCREEN_RECORD = 0x00000040
 ```
 
-Record the screen on which the file is open.
+表示文件的录屏权限。
 
 **Since:** 10
 
@@ -128,7 +128,7 @@ Record the screen on which the file is open.
 ACTION_COPY = 0x00000080
 ```
 
-Copy the file.
+表示文件的复制权限。
 
 **Since:** 10
 
@@ -144,7 +144,7 @@ Copy the file.
 ACTION_PRINT = 0x00000100
 ```
 
-Print the file.
+表示文件的打印权限。
 
 **Since:** 10
 
@@ -160,7 +160,7 @@ Print the file.
 ACTION_EXPORT = 0x00000200
 ```
 
-Export the file.
+表示文件的导出权限。
 
 **Since:** 10
 
@@ -176,7 +176,7 @@ Export the file.
 ACTION_PERMISSION_CHANGE = 0x00000400
 ```
 
-Modify the permissions on the file.
+表示文件的修改文件权限。
 
 **Since:** 10
 

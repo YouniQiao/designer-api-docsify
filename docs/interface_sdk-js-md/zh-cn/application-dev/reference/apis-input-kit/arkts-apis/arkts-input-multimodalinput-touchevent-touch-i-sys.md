@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
+## 导入模块
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+```
+
 ## blobId
 
 ```TypeScript
@@ -18,7 +24,7 @@ blobId?: int
 
 触摸点属性标识。当前仅支持单指触摸：左手触摸为1，右手触摸为2。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -40,7 +46,7 @@ fixedDisplayX?: int
 
 适配单手模式下screenX坐标的修正值，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -60,7 +66,7 @@ fixedDisplayY?: int
 
 适配单手模式下screenY坐标的修正值，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 

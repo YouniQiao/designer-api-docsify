@@ -1,5 +1,11 @@
 # setPreferredApn
 
+## Modules to Import
+
+```TypeScript
+import { data } from 'kits/@kit.TelephonyKit';
+```
+
 ## setPreferredApn
 
 ```TypeScript
@@ -22,7 +28,7 @@ Set preferred APN.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| apnId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The APN ID which is used to be set. |
+| apnId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The APN ID which is used to be set. |
 
 **Return value:**
 
@@ -34,9 +40,9 @@ Set preferred APN.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

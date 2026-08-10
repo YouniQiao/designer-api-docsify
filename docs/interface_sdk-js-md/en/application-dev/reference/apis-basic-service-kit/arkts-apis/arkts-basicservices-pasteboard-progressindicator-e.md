@@ -1,6 +1,6 @@
 # ProgressIndicator
 
-Enumerates options for the progress indicator. You can choose whether to use the default progress indicator.
+定义进度条指示选项，可选择是否采用系统默认进度显示。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Enumerates options for the progress indicator. You can choose whether to use the
 NONE = 0
 ```
 
-Getting data without system default progress indicator.
+不采用系统默认进度显示。
 
 **Since:** 15
 
@@ -34,7 +34,7 @@ Getting data without system default progress indicator.
 DEFAULT = 1
 ```
 
-Getting data with system default progress indicator.
+采用系统默认进度显示。
 
 **Since:** 15
 

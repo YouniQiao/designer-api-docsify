@@ -17,16 +17,16 @@ buttonStyle?: ButtonStyleMode
 ```
 
 按钮的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和[role]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口设置，实际显示效果以最后一次设置为准。
+[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
 
-默认值：ButtonStyleMode.EMPHASIZED
+默认值：ButtonStyleMode.EMPHASIZED 
 
 **说明：**
 
 按钮重要程度：强调按钮>普通按钮>文字按钮。
 
-**类型：** ButtonStyleMode
+**类型：** [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md)
 
 **默认值：** ButtonStyleMode.EMPHASIZED
 
@@ -54,7 +54,7 @@ controlSize?: ControlSize
 
 默认值：ControlSize.NORMAL
 
-**类型：** ControlSize
+**类型：** [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md)
 
 **默认值：** ControlSize.NORMAL
 
@@ -79,12 +79,12 @@ role?: ButtonRole
 ```
 
 按钮的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[fontColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和[buttonStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口设置，实际显示效果以最后一次设置为准。
+[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。
 
 默认值：ButtonRole.NORMAL
 
-**类型：** ButtonRole
+**类型：** [ButtonRole](arkts-arkui-buttonrole-e.md)
 
 **默认值：** ButtonRole.NORMAL
 
@@ -140,11 +140,11 @@ type?: ButtonType
 
 按钮显示样式。
 
-默认值：ButtonType.ROUNDED\_RECTANGLE
+默认值：ButtonType.ROUNDED_RECTANGLE
 
-API version 18及之后，ButtonType的默认值修改为ButtonType.ROUNDED\_RECTANGLE。API version 18之前的版本，ButtonType的默认值为ButtonType.Capsule。
+API version 18及之后，ButtonType的默认值修改为ButtonType.ROUNDED_RECTANGLE。API version 18之前的版本，ButtonType的默认值为ButtonType.Capsule。
 
-**类型：** ButtonType
+**类型：** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
 
 **起始版本：** 7
 

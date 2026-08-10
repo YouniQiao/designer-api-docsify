@@ -22,5 +22,5 @@ Callback to be invoked when a grid view switches to the photo browser page or th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetPhotoInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Basic information about the selected items.  |
+| targetPhotoInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes | Basic information about the selected items. |
 

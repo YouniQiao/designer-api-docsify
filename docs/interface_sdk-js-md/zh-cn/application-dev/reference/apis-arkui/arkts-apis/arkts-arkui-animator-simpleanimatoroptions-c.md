@@ -10,6 +10,12 @@ animator简易动画参数对象。与AnimatorOptions相比，部分动画参数
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
@@ -63,7 +69,7 @@ delay(delay: int): SimpleAnimatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 ## direction
 
@@ -87,13 +93,13 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置animator动画播放方向，默认值：PlayMode.Normal。 |
+| direction | [PlayMode](arkts-arkui-playmode-e.md) | 是 | 设置animator动画播放方向，默认值：PlayMode.Normal。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 ## duration
 
@@ -123,7 +129,7 @@ duration(duration: int): SimpleAnimatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 ## easing
 
@@ -153,7 +159,7 @@ easing(curve: string): SimpleAnimatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 ## fill
 
@@ -177,13 +183,13 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现，默认值：FillMode.Forwards。 |
+| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现，默认值：FillMode.Forwards。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 ## iterations
 
@@ -213,5 +219,5 @@ iterations(iterations: int): SimpleAnimatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 

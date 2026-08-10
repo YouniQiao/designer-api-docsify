@@ -1,6 +1,6 @@
 # DropOptions
 
-Sets parameters for the drop process.
+设置落入过程的参数。
 
 **Since:** 15
 
@@ -16,11 +16,11 @@ Sets parameters for the drop process.
 disableDataPrefetch?: boolean
 ```
 
-Whether to disable data prefetching for the drag-and-drop operation. The value **true** means to disable data prefetching for the drag-and-drop operation, and **false** means the opposite. Default value: **false**.
+设置拖拽是否提前获取数据。true表示不提前获取数据，false表示提前获取数据，默认值为false。
 
-**NOTE**
+**说明：**
 
-Set this parameter to **true** when using [startDataLoading]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to enable data prefetching.
+当使用[startDataLoading](arkts-arkui-dragevent-i.md#startdataloading)获取数据时需设置该参数为true，防止拖拽提前获取数据。
 
 **Type:** boolean
 

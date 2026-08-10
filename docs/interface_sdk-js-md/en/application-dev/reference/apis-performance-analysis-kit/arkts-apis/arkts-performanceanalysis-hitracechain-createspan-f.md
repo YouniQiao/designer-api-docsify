@@ -1,15 +1,20 @@
 # createSpan
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## createSpan
 
 ```TypeScript
 function createSpan(): HiTraceId
 ```
 
-Creates a trace span. This API works in synchronous manner.
+创建跟踪分支，同步接口。用于在业务流程中标记重要的子流程，例如在请求处理过程中的关键步骤、服务端处理链中的各个阶段、或者需要重点关注的业务分支。
 
-Specifically, create a **HiTraceId**, use the **chainId** and **spanId** in the TLS of the current thread to initialize the **chainId** and **parentSpanId** of the **HiTraceId**, generate a new **spanId** for the  
-**HiTraceId**, and return the **HiTraceId**.
+创建一个HiTraceId，使用当前线程TLS中的chainId、spanId初始化HiTraceId的chainId、parentSpanId，并为HiTraceId生成一个新的spanId，返回该HiTraceId。
 
 **Since:** 8
 
@@ -23,9 +28,9 @@ Specifically, create a **HiTraceId**, use the **chainId** and **spanId** in the 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | HiTraceId** instance. |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Start tracing. The tracing flag is DEFAULT.

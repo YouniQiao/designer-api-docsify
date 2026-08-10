@@ -12,6 +12,12 @@ Class of the photo editor ExtensionAbility, which provides APIs for you to edit 
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
+## Modules to Import
+
+```TypeScript
+import { PhotoEditorExtensionAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## onBackground
 
 ```TypeScript
@@ -30,7 +36,7 @@ Called back when the state of an UI extension changes to background.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
@@ -62,7 +68,7 @@ Called back when an UI extension is started for initialization.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
@@ -94,7 +100,7 @@ Called back before an UI extension is destroyed.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
-**Example**
+## Examples
 
 A synchronous callback example is as follows:
 
@@ -168,7 +174,7 @@ Called back when the state of an UI extension changes to foreground.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
@@ -205,10 +211,10 @@ Called back when an UI extension session is created and original image is ready.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the uri info of the original image. |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the want info of the UI extension. |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the session of the UI extension page. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want info of the UI extension. |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | Indicates the session of the UI extension page. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { PhotoEditorExtensionAbility, Want, UIExtensionContentSession } from '@kit.AbilityKit';
@@ -230,7 +236,7 @@ context: PhotoEditorExtensionContext
 
 Indicates configuration information about an Photo editor extension ability context.
 
-**Type:** PhotoEditorExtensionContext
+**Type:** [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md)
 
 **Since:** 12
 

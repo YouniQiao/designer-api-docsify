@@ -1,6 +1,6 @@
 # DictionaryOutputInfo
 
-InflateGetDictionary and deflateGetDictionary return value information.
+InflateGetDictionary和deflateGetDictionary这两个函数会返回值的相关信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ InflateGetDictionary and deflateGetDictionary return value information.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## dictionaryLength
 
 ```TypeScript
 dictionaryLength: int
 ```
 
-Length of a dictionary.
+字典的长度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Length of a dictionary.
 status: ReturnStatus
 ```
 
-For details, see [ReturnStatus]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md)。
 
-**Type:** ReturnStatus
+**Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **Since:** 12
 

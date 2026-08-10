@@ -1,6 +1,6 @@
 # UnifiedRecord
 
-An abstract definition of the data content supported by the UDMF. A **UnifiedRecord** object contains one or more data records, for example, a text record, an image record, or an HTML record. Since API version 15, different styles of the same content can be added to a **UnifiedRecord** object. Data users can obtain the corresponding styles as required.
+对UDMF支持的数据内容的抽象定义，称为数据记录。一个统一数据对象内包含一条或多条数据记录，例如一条文本记录、一条图片记录、一条HTML记录等。从API version 15开始，支持往数据记录中增加同一内容的不同数据格式（例如同一文本可同时以纯文本、HTML或超链接等格式存储），数据使用方根据业务需要通过getEntry方法获取对应格式。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ An abstract definition of the data content supported by the UDMF. A **UnifiedRec
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## addEntry
 
 ```TypeScript
 addEntry(type: string, value: ValueType): void
 ```
 
-Adds data of a specified data type and content to the current data record. You can use this API to add different data types and contents to the same data.
+在当前数据记录中添加一条指定数据类型和内容的数据，通过该方法增加的数据类型和内容为同一内容的不同表现样式。调用成功后，指定的数据类型和内容被添加到当前数据记录中。
 
 **Since:** 15
 
@@ -34,35 +40,35 @@ Adds data of a specified data type and content to the current data record. You c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the data to add. For details, see [UniformDataType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value of the data to add. |
+| type | string | Yes | 要创建的数据类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 要创建的数据的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-let fileUriDetails : Record<string, string> = {
+let fileUriDetails: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
-let fileUri : uniformDataStruct.FileUri = {
-  uniformDataType : 'general.file-uri',
-  oriUri : 'file://data/image/1.png',
-  fileType : 'general.image',
-  details : fileUriDetails
-}
-let hyperlink : uniformDataStruct.Hyperlink = {
-  uniformDataType:'general.hyperlink',
-  url : 'file://data/image/1.png',
-  description : 'This is the description of the hyperlink'
-}
+};
+let fileUri: uniformDataStruct.FileUri = {
+  uniformDataType: 'general.file-uri',
+  oriUri: 'file://data/image/1.png',
+  fileType: 'general.image',
+  details: fileUriDetails
+};
+let hyperlink: uniformDataStruct.Hyperlink = {
+  uniformDataType: 'general.hyperlink',
+  url: 'file://data/image/1.png',
+  description: 'This is the description of the hyperlink'
+};
 
 let unifiedData = new unifiedDataChannel.UnifiedData();
 let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
@@ -76,7 +82,7 @@ unifiedData.addRecord(record);
 constructor()
 ```
 
-Defines a constructor used to create a **UnfiedRecord** object.
+用于创建数据记录。调用成功后，返回一个空的UnifiedRecord对象。
 
 **Since:** 12
 
@@ -90,7 +96,7 @@ Defines a constructor used to create a **UnfiedRecord** object.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
-**Example**
+## Examples
 
 ```TypeScript
 let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
@@ -102,15 +108,13 @@ let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 constructor(type: string, value: ValueType)
 ```
 
-Defines a constructor used to create a data record with the specified type and value.
+用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。
 
-If **value** is of the [image.PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ type, **type** must be the value of  
-**OPENHARMONY\_PIXEL\_MAP** in  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)类型时，参数type必须对应为  
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中OPENHARMONY_PIXEL_MAP的值；
 
-If **value** is of the [Want]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ type, **type** must be the value of  
-**OPENHARMONY\_WANT** in  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
+当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md)类型时，参数type必须对应为  
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中OPENHARMONY_WANT的值。
 
 **Since:** 12
 
@@ -128,42 +132,48 @@ If **value** is of the [Want]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ type, **type*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the data record to create. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Value of the data record to create. |
+| type | string | Yes | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)，如 'general.plain-text'、'general.hyperlink'等。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 要创建的数据记录的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 import { image } from '@kit.ImageKit';
 
-let hyperlink : uniformDataStruct.Hyperlink = {
-  uniformDataType:'general.hyperlink',
-  url : 'www.XXX.com',
-  description : 'This is the description of the hyperlink'
-}
+let hyperlink: uniformDataStruct.Hyperlink = {
+  uniformDataType: 'general.hyperlink',
+  url: 'www.XXX.com',
+  description: 'This is the description of the hyperlink'
+};
 let hyperlinkRecord = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
 
-let plainText : uniformDataStruct.PlainText = {
+let plainText: uniformDataStruct.PlainText = {
   uniformDataType: 'general.plain-text',
-  textContent : 'This is a plain text example',
-  abstract : 'This is abstract'
-}
+  textContent: 'This is a plain text example',
+  abstract: 'This is abstract'
+};
 let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
 
 let arrayBuffer = new ArrayBuffer(4 * 200 * 200);
-let opt : image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 }, alphaType: 3 };
-let pixelMap : uniformDataStruct.PixelMap = {
-  uniformDataType : 'openharmony.pixel-map',
-  pixelMap : image.createPixelMapSync(arrayBuffer, opt)
-}
-let pixelMapRecord = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
+let opt: image.InitializationOptions = {
+  editable: true,
+  pixelFormat: 3,
+  size: { height: 200, width: 200 },
+  alphaType: 3
+};
+let pixelMap: uniformDataStruct.PixelMap = {
+  uniformDataType: 'openharmony.pixel-map',
+  pixelMap: image.createPixelMapSync(arrayBuffer, opt)
+};
+let pixelMapRecord =
+  new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
 ```
 
 ## getEntries
@@ -172,7 +182,7 @@ let pixelMapRecord = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.
 getEntries(): Record<string, ValueType>
 ```
 
-Obtains all the data in the current data record.
+获取当前数据记录中所有数据的类型和内容。
 
 **Since:** 15
 
@@ -190,9 +200,9 @@ Obtains all the data in the current data record.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, ValueType&gt; | Values and types obtained. |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ValueType&gt; | 当前数据记录对应的类型和内容。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -200,17 +210,17 @@ import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 let fileUriDetails : Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
+};
 let fileUri : uniformDataStruct.FileUri = {
   uniformDataType : 'general.file-uri',
   oriUri : 'file://data/image/1.png',
   fileType : 'general.image',
   details : fileUriDetails
-}
+};
 let formDetails : Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
+};
 let form : uniformDataStruct.Form = {
   uniformDataType : 'openharmony.form',
   formId : 1,
@@ -219,7 +229,7 @@ let form : uniformDataStruct.Form = {
   abilityName : 'ability',
   module : 'module',
   details : formDetails
-}
+};
 
 let unifiedData = new unifiedDataChannel.UnifiedData();
 let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM, form);
@@ -247,7 +257,7 @@ for (let i = 0; i < records.length; i++) {
 getEntry(type: string): ValueType
 ```
 
-Obtains data of the specified type from the data record.
+通过数据类型获取数据记录中的数据内容。
 
 **Since:** 15
 
@@ -265,48 +275,48 @@ Obtains data of the specified type from the data record.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the data to obtain. For details, see [UniformDataType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | string | Yes | 要获取数据的类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Value obtained. |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 当前数据记录对应的值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-let fileUriDetails : Record<string, string> = {
+let fileUriDetails: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
-let fileUri : uniformDataStruct.FileUri = {
-  uniformDataType : 'general.file-uri',
-  oriUri : 'file://data/image/1.png',
-  fileType : 'general.image',
-  details : fileUriDetails
-}
-let formDetails : Record<string, string> = {
+};
+let fileUri: uniformDataStruct.FileUri = {
+  uniformDataType: 'general.file-uri',
+  oriUri: 'file://data/image/1.png',
+  fileType: 'general.image',
+  details: fileUriDetails
+};
+let formDetails: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
-let form : uniformDataStruct.Form = {
-  uniformDataType : 'openharmony.form',
-  formId : 1,
-  formName : 'form',
-  bundleName : 'com.xx.app',
-  abilityName : 'ability',
-  module : 'module',
-  details : formDetails
-}
+};
+let form: uniformDataStruct.Form = {
+  uniformDataType: 'openharmony.form',
+  formId: 1,
+  formName: 'form',
+  bundleName: 'com.xx.app',
+  abilityName: 'ability',
+  module: 'module',
+  details: formDetails
+};
 
 let unifiedData = new unifiedDataChannel.UnifiedData();
 let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM, form);
@@ -316,11 +326,13 @@ unifiedData.addRecord(record);
 let records = unifiedData.getRecords();
 for (let i = 0; i < records.length; i++) {
   let unifiedDataRecord = records[i] as unifiedDataChannel.UnifiedRecord;
-  let fileUriRead : uniformDataStruct.FileUri = unifiedDataRecord.getEntry(uniformTypeDescriptor.UniformDataType.FILE_URI) as uniformDataStruct.FileUri;
+  let fileUriRead: uniformDataStruct.FileUri =
+    unifiedDataRecord.getEntry(uniformTypeDescriptor.UniformDataType.FILE_URI) as uniformDataStruct.FileUri;
   if (fileUriRead != undefined) {
     console.info(`oriUri: ${fileUriRead.oriUri}`);
   }
-  let formRead = unifiedDataRecord.getEntry(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM) as uniformDataStruct.Form;
+  let formRead =
+    unifiedDataRecord.getEntry(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM) as uniformDataStruct.Form;
   if (formRead != undefined) {
     console.info(`formName: ${formRead.formName}`);
   }
@@ -333,10 +345,7 @@ for (let i = 0; i < records.length; i++) {
 getType(): string
 ```
 
-Obtains the type of this **UnfiedRecord**. The data obtained by  
-[getRecords]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ from the **UnifiedData** object is a  
-**UnifiedRecord** object. You need to use this API to obtain the specific type of the record, convert the  
-**UnifiedRecord** object to its child class, and call the child class interfaces.
+获取当前数据记录的类型。由于从统一数据对象中调用[getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getrecords)所取出的数据是UnifiedRecord对象，因此需要通过本接口查询此记录的具体类型，再将该UnifiedRecord对象转换为其子类，调用子类接口。
 
 **Since:** 10
 
@@ -354,18 +363,18 @@ Obtains the type of this **UnfiedRecord**. The data obtained by
 
 | Type | Description |
 | --- | --- |
-| string | Data type obtained. For details, see [UniformDataType]{ |
+| string | 当前数据记录对应的具体数据类型，见 [UniformDataType]{ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-let plainText : uniformDataStruct.PlainText = {
+let plainText: uniformDataStruct.PlainText = {
   uniformDataType: 'general.plain-text',
-  textContent : 'This is a plain text example',
-  abstract : 'This is abstract'
-}
+  textContent: 'This is a plain text example',
+  abstract: 'This is abstract'
+};
 let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
 let unifiedData = new unifiedDataChannel.UnifiedData(text);
 
@@ -382,8 +391,8 @@ if (records[0].getType() == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
 getTypes(): Array<string>
 ```
 
-Obtains all the data types in the data record. This API can be called using the **UnifiedRecord** object to query all data types in the record, including the data types added using the  
-[addEntry]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ function.
+获取数据记录中数据的所有类型集合。可通过UnifiedRecord数据记录对象调用本接口，查询出此记录中数据的所有类型集合，包括使用  
+[addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addentry)函数添加的数据类型。
 
 **Since:** 15
 
@@ -401,36 +410,36 @@ Obtains all the data types in the data record. This API can be called using the 
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of [UniformDataType]{ |
+| Array&lt;string&gt; | [UniformDataType]{ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-let fileUriDetails : Record<string, string> = {
+let fileUriDetails: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
-let fileUri : uniformDataStruct.FileUri = {
-  uniformDataType : 'general.file-uri',
-  oriUri : 'file://data/image/1.png',
-  fileType : 'general.image',
-  details : fileUriDetails
-}
-let formDetails : Record<string, string> = {
+};
+let fileUri: uniformDataStruct.FileUri = {
+  uniformDataType: 'general.file-uri',
+  oriUri: 'file://data/image/1.png',
+  fileType: 'general.image',
+  details: fileUriDetails
+};
+let formDetails: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
-let form : uniformDataStruct.Form = {
-  uniformDataType : 'openharmony.form',
-  formId : 1,
-  formName : 'form',
-  bundleName : 'com.xx.app',
-  abilityName : 'ability',
-  module : 'module',
-  details : formDetails
-}
+};
+let form: uniformDataStruct.Form = {
+  uniformDataType: 'openharmony.form',
+  formId: 1,
+  formName: 'form',
+  bundleName: 'com.xx.app',
+  abilityName: 'ability',
+  module: 'module',
+  details: formDetails
+};
 
 let unifiedData = new unifiedDataChannel.UnifiedData();
 let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM, form);
@@ -440,11 +449,11 @@ unifiedData.addRecord(record);
 let records = unifiedData.getRecords();
 for (let i = 0; i < records.length; i++) {
   let unifiedDataRecord = records[i] as unifiedDataChannel.UnifiedRecord;
-  let types : Array<string> = unifiedDataRecord.getTypes();
+  let types: Array<string> = unifiedDataRecord.getTypes();
   if (types.includes(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM)) {
     console.info(`Types include: ${uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM}`);
   }
-}
+};
 ```
 
 ## getValue
@@ -453,7 +462,7 @@ for (let i = 0; i < records.length; i++) {
 getValue(): ValueType
 ```
 
-Obtains the value of this data record.
+获取当前数据记录的值。
 
 **Since:** 12
 
@@ -471,26 +480,27 @@ Obtains the value of this data record.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Value obtained. |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 当前数据记录对应的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, 'this is value of text');
+let text =
+  new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, 'this is value of text');
 let value = text.getValue();
 
-let hyperlinkDetails : Record<string, string> = {
+let hyperlinkDetails: Record<string, string> = {
   'attr1': 'value1',
   'attr2': 'value2'
-}
-let hyperlink : uniformDataStruct.Hyperlink = {
-  uniformDataType:'general.hyperlink',
-  url : 'www.XXX.com',
-  description : 'This is the description of the hyperlink',
-  details : hyperlinkDetails
-}
+};
+let hyperlink: uniformDataStruct.Hyperlink = {
+  uniformDataType: 'general.hyperlink',
+  url: 'www.XXX.com',
+  description: 'This is the description of the hyperlink',
+  details: hyperlinkDetails
+};
 let hyperlinkRecord = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
 let hyperlinkValue = hyperlinkRecord.getValue();
 ```

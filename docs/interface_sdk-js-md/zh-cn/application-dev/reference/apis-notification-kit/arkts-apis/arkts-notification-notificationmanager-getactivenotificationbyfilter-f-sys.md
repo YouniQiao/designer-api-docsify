@@ -1,5 +1,11 @@
 # getActiveNotificationByFilter（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## getActiveNotificationByFilter
 
 ```TypeScript
@@ -24,20 +30,18 @@ function getActiveNotificationByFilter(filter: NotificationFilter, callback: Asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 查询普通实况窗的过滤条件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NotificationRequest&gt; | 是 | 获取满足条件的普通实况通知信息的回调函数。 |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | 是 | 查询普通实况窗的过滤条件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest&gt; | 是 | 获取满足条件的普通实况通知信息的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600007 | The notification does not exist. |
+| 17700001 | The specified bundle name was not found. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,37 +60,6 @@ let filter: notificationManager.NotificationFilter = {
     extraInfoKeys: ['event']
 }
 let getActiveNotificationByFilterCallback = (err: BusinessError, data: notificationManager.NotificationRequest): void => {
-    if (err) {
-        console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('getActiveNotificationByFilter success');
-    }
-}
-notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationByFilterCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
-
-let bundleOption: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-    // 需根据实际情况进行替换
-    id: 0,
-    label: 'text'
-};
-let filter: notificationManager.NotificationFilter = {
-    bundle: bundleOption,
-    notificationKey: notificationKey,
-    // 需根据实际情况进行替换
-    extraInfoKeys: ['event']
-}
-let getActiveNotificationByFilterCallback = (err: BusinessError | null, data: notificationManager.NotificationRequest | null | undefined): void => {
     if (err) {
         console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
     } else {
@@ -121,16 +94,16 @@ function getActiveNotificationByFilter(filter: NotificationFilter, callback: Asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 查询普通实况窗的过滤条件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NotificationRequest \| null&gt; | 是 | 获取满足条件的普通实况通知信息的回调函数。 |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | 是 | 查询普通实况窗的过滤条件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest \| null&gt; | 是 | 获取满足条件的普通实况通知信息的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600007 | The notification does not exist. |
+| 17700001 | The specified bundle name was not found. |
 
 
 ## getActiveNotificationByFilter
@@ -157,7 +130,7 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 查询普通实况窗的过滤条件。 |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | 是 | 查询普通实况窗的过滤条件。 |
 
 **返回值：**
 
@@ -169,13 +142,11 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600007 | The notification does not exist. |
+| 17700001 | The specified bundle name was not found. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -197,35 +168,6 @@ notificationManager.getActiveNotificationByFilter(filter).then((data: notificati
     console.info(`getActiveNotificationByFilter success, data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
     console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
-
-let bundleOption: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-    // 需根据实际情况进行替换
-    id: 0,
-    label: 'text'
-};
-let filter: notificationManager.NotificationFilter = {
-    bundle: bundleOption,
-    notificationKey: notificationKey,
-    // 需根据实际情况进行替换
-    extraInfoKeys: ['event']
-}
-notificationManager.getActiveNotificationByFilter(filter).then((data: notificationManager.NotificationRequest | null | undefined) => {
-    console.info(`getActiveNotificationByFilter success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getActiveNotificationByFilter failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
 
@@ -254,7 +196,7 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 查询普通实况窗的过滤条件。 |
+| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | 是 | 查询普通实况窗的过滤条件。 |
 
 **返回值：**
 
@@ -266,7 +208,7 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1600007 | The notification does not exist. |
+| 17700001 | The specified bundle name was not found. |
 

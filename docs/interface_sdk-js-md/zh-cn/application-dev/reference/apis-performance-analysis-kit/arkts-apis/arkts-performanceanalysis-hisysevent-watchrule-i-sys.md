@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## domain
 
 ```TypeScript
@@ -60,7 +66,7 @@ ruleType: RuleType
 
 匹配规则类型。
 
-**类型：** RuleType
+**类型：** [RuleType](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)
 
 **起始版本：** 9
 

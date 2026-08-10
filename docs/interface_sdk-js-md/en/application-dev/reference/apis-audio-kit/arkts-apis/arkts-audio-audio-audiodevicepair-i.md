@@ -1,6 +1,6 @@
 # AudioDevicePair
 
-Describes an audio device pair including both input and output devices.
+描述返听使用的音频设备对，包含输入设备和输出设备。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes an audio device pair including both input and output devices.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## inputDevice
 
 ```TypeScript
 inputDevice: AudioDeviceDescriptor
 ```
 
-Input audio device descriptor.
+输入音频设备描述。
 
-**Type:** AudioDeviceDescriptor
+**Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Input audio device descriptor.
 outputDevice: AudioDeviceDescriptor
 ```
 
-Output audio device descriptor.
+输出音频设备描述。
 
-**Type:** AudioDeviceDescriptor
+**Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **Since:** 26.0.0
 

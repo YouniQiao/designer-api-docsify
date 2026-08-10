@@ -1,6 +1,6 @@
 # MechInfo
 
-Mechanical device information.
+机械设备信息
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Mechanical device information.
 
 **System capability:** SystemCapability.Mechanic.Core
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## mechDeviceType
 
 ```TypeScript
 mechDeviceType: MechDeviceType
 ```
 
-Type of the mechanical device.
+机械设备类型
 
-**Type:** MechDeviceType
+**Type:** [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md)
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Type of the mechanical device.
 mechId: int
 ```
 
-ID of the mechanical device.
+机械设备ID
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -52,7 +58,7 @@ ID of the mechanical device.
 mechName: string
 ```
 
-Name of the mechanical device.
+机械设备名称
 
 **Type:** string
 

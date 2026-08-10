@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## currentLayoutMode
 
 ```TypeScript
@@ -90,7 +96,7 @@ parentWindowSizeChangeCallback?: Callback<Size>
 
 父窗大小变化的回调。绑定后立即回调一次，后续父窗大小变化时通知。默认不传，无法收到父窗大小变化通知。
 
-**类型：** Callback&lt;Size&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Size&gt;
 
 **起始版本：** 24
 
@@ -112,7 +118,7 @@ parentWindowStatusChangeCallback?: Callback<WindowStatusType>
 
 父窗模式变化的回调。绑定后立即回调一次，后续父窗模式变化时通知。默认不传，无法收到父窗模式变化通知。
 
-**类型：** Callback&lt;WindowStatusType&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt;
 
 **起始版本：** 24
 

@@ -1,6 +1,6 @@
 # StyledDateTimeFormatOptions
 
-Represents optional configuration items for the DateTimeFormat object.
+创建富文本显示的时间日期格式化对象时的可选配置项。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Represents optional configuration items for the DateTimeFormat object.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## day
 
 ```TypeScript
 day?: TextStyle
 ```
 
-Text style for the day part. The default value is the default text style.
+指定日的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -36,9 +42,9 @@ Text style for the day part. The default value is the default text style.
 dayPeriod?: TextStyle
 ```
 
-Text style for the day period part. The default value is the default text style.
+指定时段的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ Text style for the day period part. The default value is the default text style.
 era?: TextStyle
 ```
 
-Text style for the era part. The default value is the default text style.
+指定纪元的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -76,9 +82,9 @@ Text style for the era part. The default value is the default text style.
 hour?: TextStyle
 ```
 
-Text style for the hour part. The default value is the default text style.
+指定时的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -96,9 +102,9 @@ Text style for the hour part. The default value is the default text style.
 minute?: TextStyle
 ```
 
-Text style for the minute part. The default value is the default text style.
+指定分的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -116,9 +122,9 @@ Text style for the minute part. The default value is the default text style.
 month?: TextStyle
 ```
 
-Text style for the month part. The default value is the default text style.
+指定月的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -136,9 +142,9 @@ Text style for the month part. The default value is the default text style.
 second?: TextStyle
 ```
 
-Text style for the second part. The default value is the default text style.
+指定秒的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -156,9 +162,9 @@ Text style for the second part. The default value is the default text style.
 timeZoneName?: TextStyle
 ```
 
-Text style for the timezone name part. The default value is the default text style.
+指定时区名称的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -176,9 +182,9 @@ Text style for the timezone name part. The default value is the default text sty
 weekday?: TextStyle
 ```
 
-Text style for the weekday part. The default value is the default text style.
+指定星期的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 
@@ -196,9 +202,9 @@ Text style for the weekday part. The default value is the default text style.
 year?: TextStyle
 ```
 
-Text style for the year part. The default value is the default text style.
+指定年的文本样式。默认值：StyledString默认的文本样式。
 
-**Type:** TextStyle
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
 
 **Since:** 23
 

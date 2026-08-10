@@ -1,6 +1,6 @@
 # FlexFrameNode
 
-Define the Flex type of FrameNode.
+定义Flex类型的FrameNode。
 
 **Inheritance/Implementation:** FlexFrameNode extends [TypedFrameNode<FlexAttribute>](TypedFrameNode<FlexAttribute>)
 
@@ -18,7 +18,7 @@ Define the Flex type of FrameNode.
 abstract initialize(value?: FlexOptions): FlexAttribute
 ```
 
-Initialize Flex FrameNode.
+初始化Flex类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Flex FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Flex options. |
+| value | [FlexOptions](../arkts-components/arkts-arkui-flexoptions-i.md) | No | Flex节点的选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) |  |
 

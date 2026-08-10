@@ -10,6 +10,12 @@ Defines an object that stores the response to an HTTP request.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## delete
 
 ```TypeScript
@@ -32,9 +38,9 @@ Disables a cache and deletes the data in it.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of delete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of delete. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -108,7 +114,7 @@ Disables a cache and deletes the data in it.
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the delete. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -168,9 +174,9 @@ Writes data in the cache to the file system so that all the cached data can be a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of flush. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of flush. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -242,7 +248,7 @@ Writes data in the cache to the file system so that all the cached data can be a
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the flush. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
+## 导入模块
+
+```TypeScript
+import { AVVolumePanelParameter, AVVolumePanel } from 'kits/@kit.AudioKit';
+```
+
 ## position
 
 ```TypeScript
@@ -26,7 +32,7 @@ position?: Position
 
 **注意：** 若应用需隐藏系统默认音量面板，必须提供自定义音量面板，以确保用户仍可调节音量。
 
-**类型：** Position
+**类型：** [Position](../../apis-arkui/arkts-apis/arkts-arkui-position-i.md)
 
 **起始版本：** 23
 

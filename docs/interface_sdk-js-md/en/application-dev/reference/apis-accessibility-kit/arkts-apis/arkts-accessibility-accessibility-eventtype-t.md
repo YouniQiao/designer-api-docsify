@@ -8,7 +8,7 @@ type EventType = 'accessibilityFocus' | 'accessibilityFocusClear' |
   'announceForAccessibilityNotInterrupt' | 'scrolling' | 'pageActive' | 'notificationUpdate' | 'focusInvisible'
 ```
 
-Accessibility event types.
+无障碍事件类型。
 
 **Since:** 7
 
@@ -24,23 +24,23 @@ Accessibility event types.
 
 | Type | Description |
 | --- | --- |
-| 'accessibilityFocus' | Event indicating that the accessibility focus is obtained. |
-| 'accessibilityFocusClear' | Event indicating that the accessibility focus is cleared. |
-| 'click' | Event of clicking a component. |
-| 'longClick' | Event indicating that the component is long pressed. |
-| 'focus' | Event indicating that the component obtains the focus. Not supported currently. |
-| 'select' | Event of selecting a component. |
-| 'hoverEnter' | Event indicating that the hover enters a component. |
-| 'hoverExit' | Event indicating that the hover exits a component. |
-| 'textUpdate' | Event indicating that the component text has been updated. |
-| 'textSelectionUpdate' | Event indicating that the selected text has been updated. Not supported currently. |
-| 'scroll' | Event of the scroll view. |
-| 'requestFocusForAccessibility' | Event of the auto-focusing. [since 12] |
-| 'announceForAccessibility' | Event of the auto-broadcasting. [since 12] |
-| 'requestFocusForAccessibilityNotInterrupt' | Event of the auto-focusing without interruption. [since 18] |
-| 'announceForAccessibilityNotInterrupt' | Event of the auto-broadcasting without interruption. [since 18] |
-| 'scrolling' | Event indicating that an item is scrolled out of the screen in the scrolling view. [since 18] |
-| 'pageActive' | Event indicating that a page changes. The value is fixed at **'pageActive'** . [since 23] |
-| 'notificationUpdate' | Event indicating that a notification changes. The value is fixed at **'notificationUpdate'**. [since 26.0.0] |
+| 'accessibilityFocus' | 表示获得无障碍焦点的事件。 |
+| 'accessibilityFocusClear' | 表示清除无障碍焦点的事件。 |
+| 'click' | 表示点击组件的事件。 |
+| 'longClick' | 表示长按组件的事件。 |
+| 'focus' | 表示组件获得焦点的事件，当前版本暂不支持。 |
+| 'select' | 表示选择组件的事件。 |
+| 'hoverEnter' | 表示悬停进入组件的事件。 |
+| 'hoverExit' | 表示悬停离开组件的事件。 |
+| 'textUpdate' | 表示组件文本已更改的事件。 |
+| 'textSelectionUpdate' | 表示选定文本已更改的事件，当前版本暂不支持。 |
+| 'scroll' | 表示滚动视图的事件。 |
+| 'requestFocusForAccessibility' | 表示主动聚焦的事件。 [since 12] |
+| 'announceForAccessibility' | 表示主动播报的事件。 [since 12] |
+| 'requestFocusForAccessibilityNotInterrupt' | 表示主动聚焦不打断的事件。 [since 18] |
+| 'announceForAccessibilityNotInterrupt' | 表示主动播报不打断的事件。 [since 18] |
+| 'scrolling' | 表示滚动视图中有item被滚出屏幕的事件。 [since 18] |
+| 'pageActive' | 表示页面变化的事件，值固定为'pageActive'字符串。 [since 23] |
+| 'notificationUpdate' | 表示通知变化的事件，值固定为'notificationUpdate'字符串。 [since 26.0.0] |
 | 'focusInvisible' | [since 26.0.0] |
 

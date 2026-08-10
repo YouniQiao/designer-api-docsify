@@ -1,5 +1,11 @@
 # disableNetwork (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disableNetwork
 
 ```TypeScript
@@ -24,20 +30,20 @@ Disable the specified DeviceConfig by networkId.The disabled DeviceConfig will n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Identifies the network to disable. The value of networkId cannot be less than 0. |
+| netId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identifies the network to disable. The value of networkId cannot be less than 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
-| [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
+| 401 | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | System API is not allowed called by Non-system application. |
+| 2501000 | Operation failed. |
+| 2501001 | Wi-Fi STA disabled. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
@@ -75,30 +81,30 @@ Disable the specified DeviceConfig by networkId for a period of time.The disable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Identifies the network to disable. The value of networkId cannot be less than 0. |
-| blockDuration | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the duration of network disablement(unit is secondes), If the value is -1, means permanent disablement. |
+| netId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identifies the network to disable. The value of networkId cannot be less than 0. |
+| blockDuration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the duration of network disablement(unit is secondes), If the value is -1, means permanent disablement. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
-| [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | System API is not allowed called by Non-system application. |
+| 2501000 | Operation failed. |
+| 2501001 | Wi-Fi STA disabled. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
 
-try {
-  let netId = 0;
-  let blockDuration = 300;
-  wifiManager.disableNetwork(netId, blockDuration);  
-} catch (error) {
-  console.error(`failed: ${JSON.stringify(error)}`);
-}
+  try {
+    let netId = 0;
+    let blockDuration = 300;
+    wifiManager.disableNetwork(netId, blockDuration);
+  } catch (error) {
+    console.error(`failed: ${JSON.stringify(error)}`);
+  }
 ```
 

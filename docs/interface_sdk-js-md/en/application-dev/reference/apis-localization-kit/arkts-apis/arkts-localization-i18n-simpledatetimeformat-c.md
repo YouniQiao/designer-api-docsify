@@ -1,6 +1,6 @@
 # SimpleDateTimeFormat
 
-Provide a simple date time formatting interface.
+提供时间日期格式化的能力。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Provide a simple date time formatting interface.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## format
 
 ```TypeScript
 format(date: Date): string
 ```
 
-Formats the date and time.
+对时间日期进行格式化。
 
 **Since:** 23
 
@@ -32,11 +38,11 @@ Formats the date and time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Date and time. Note: The month starts from 0. For example, 0 indicates January. |
+| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | A string containing the formatted date and time. |
+| string | 格式化后的时间日期字符串。 |
 

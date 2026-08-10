@@ -1,5 +1,11 @@
 # connectDevice（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## connectDevice
 
 ```TypeScript
@@ -26,8 +32,8 @@ function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<Att
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| addrInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 地址信息。 |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 操作参数。 |
+| addrInfo | [AddressInfo](arkts-mechanic-mechanicmanager-addressinfo-i-sys.md) | 是 | 地址信息。 |
+| params | [ConnectParam](arkts-mechanic-mechanicmanager-connectparam-i-sys.md) | 是 | 操作参数。 |
 
 **返回值：**
 
@@ -39,7 +45,7 @@ function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<Att
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
 

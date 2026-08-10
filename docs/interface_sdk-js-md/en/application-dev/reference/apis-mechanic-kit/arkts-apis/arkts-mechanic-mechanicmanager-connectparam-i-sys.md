@@ -1,6 +1,6 @@
 # ConnectParam (System API)
 
-Definition of connect parameter.
+连接参数定义
 
 **Since:** 26.0.0
 
@@ -12,24 +12,30 @@ Definition of connect parameter.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## custdata
 
 ```TypeScript
 custdata: string
 ```
 
-Data carried during device discovery Data must be in the following format:|type|value|type|value|..value'len for each specific type is predefined length The following table lists the supported types and versions.  
+发现设备时携带的数据数据必须符合以下格式：|类型|值|类型|值|。每个特定类型的value'len是预定义的长度支持的类型和版本如下表所示。  
 -----------------------------------------------------------------  
-type | value | value len |api level  
+类型|值|值len |api级别  
 -----------------------------------------------------------------  
-0x01 | 3-axis gravity sensor value | 3Byte |26.0.0  
+0x01 |三轴重力传感器值| 3Byte |26.0.0  
 -----------------------------------------------------------------  
-0x02 | 1st byte offset of the MAC address | 1Byte |26.0.0  
+0x02|MAC地址第1字节偏移|1字节|26.0.0  
 -----------------------------------------------------------------  
-0x03 | Pairing broadcast | 1Byte |26.0.0  
+0x03 |配对广播|1字节|26.0.0  
 -----------------------------------------------------------------  
-0x04 | Target device identifer | 4Byte |26.0.0  
------------------------------------------------------------------.
+0x04 |目标设备标识|4字节|26.0.0  
+-----------------------------------------------------------------。
 
 **Type:** string
 
@@ -51,7 +57,7 @@ type | value | value len |api level
 deviceName?: string
 ```
 
-Name of the mechanical device.
+具身设备名称。
 
 **Type:** string
 
@@ -73,9 +79,9 @@ Name of the mechanical device.
 identifier?: int
 ```
 
-Identifer of current device.The value should be an integer.
+当前设备标识。取值限定为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

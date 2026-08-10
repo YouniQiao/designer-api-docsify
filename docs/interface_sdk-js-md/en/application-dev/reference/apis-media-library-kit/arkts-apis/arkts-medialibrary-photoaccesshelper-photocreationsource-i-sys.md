@@ -12,6 +12,12 @@ Defines the application information provided to create assets on behalf of the a
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## appId
 
 ```TypeScript
@@ -80,7 +86,7 @@ tokenId?: long
 
 Token ID of the target application.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 18
 

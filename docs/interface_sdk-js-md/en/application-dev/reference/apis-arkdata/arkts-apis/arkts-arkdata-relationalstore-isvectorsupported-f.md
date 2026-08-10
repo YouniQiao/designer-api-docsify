@@ -1,12 +1,18 @@
 # isVectorSupported
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## isVectorSupported
 
 ```TypeScript
 function isVectorSupported(): boolean
 ```
 
-Checks whether the system supports vector stores.
+判断系统是否提供向量数据库能力。
 
 **Since:** 18
 
@@ -20,9 +26,9 @@ Checks whether the system supports vector stores.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the system supports vector stores; returns **false** otherwise. |
+| boolean | 系统具备向量数据库能力时返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { contextConstant, UIAbility } from '@kit.AbilityKit';

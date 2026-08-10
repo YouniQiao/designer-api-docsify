@@ -1,5 +1,11 @@
 # isDoNotDisturbEnabled
 
+## Modules to Import
+
+```TypeScript
+import { intelligentScene } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isDoNotDisturbEnabled
 
 ```TypeScript
@@ -30,24 +36,27 @@ Checks whether Do Not Disturb is enabled on this device.The Do Not Disturb state
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [35200001](../../apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
+| 35200001 | Internal error. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError, intelligentScene } from '@kit.BasicServicesKit';
 
-let isDoNotDisturbEnabled: boolean = false;
-try {
-  isDoNotDisturbEnabled = await intelligentScene.isDoNotDisturbEnabled();
-} catch (err) {
-  console.error(`Failed to get doNotDisturb state, code: ${err.code}, message: ${err.message}`);
-}
-if (isDoNotDisturbEnabled) {
-  console.info('DoNotDisturb state is open');
-} else {
-  console.info('DoNotDisturb state is closed');
+async function isDoNotDisturbEnabled(): Promise<boolean> {
+  let isDoNotDisturbEnabled: boolean = false;
+  try {
+    isDoNotDisturbEnabled = await intelligentScene.isDoNotDisturbEnabled();
+  } catch (err) {
+    console.error(`Failed to get doNotDisturb state, code: ${err.code}, message: ${err.message}`);
+  }
+  if (isDoNotDisturbEnabled) {
+    console.info('DoNotDisturb state is open');
+  } else {
+    console.info('DoNotDisturb state is closed');
+  }
+  return isDoNotDisturbEnabled;
 }
 ```
 

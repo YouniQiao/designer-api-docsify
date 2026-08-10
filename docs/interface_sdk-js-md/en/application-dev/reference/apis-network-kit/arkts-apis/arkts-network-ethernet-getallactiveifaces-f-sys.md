@@ -1,5 +1,11 @@
 # getAllActiveIfaces (System API)
 
+## Modules to Import
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
 ## getAllActiveIfaces
 
 ```TypeScript
@@ -24,18 +30,18 @@ Gets the names of all active network interfaces.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | Yes | the callback of getAllActiveIfaces. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getAllActiveIfaces. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| 2200003 | System internal error. |
+| 2200002 | Failed to connect to the service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';
@@ -84,12 +90,12 @@ Gets the names of all active network interfaces.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| 2200003 | System internal error. |
+| 2200002 | Failed to connect to the service. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';

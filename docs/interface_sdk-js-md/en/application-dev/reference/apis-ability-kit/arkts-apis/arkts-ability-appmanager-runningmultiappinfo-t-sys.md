@@ -4,7 +4,7 @@
 export type RunningMultiAppInfo = _RunningMultiAppInfo
 ```
 
-Defines the information of an application in multi-app mode in the running state.
+应用多开在运行态的结构信息。
 
 **Since:** 12
 

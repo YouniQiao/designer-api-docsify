@@ -12,6 +12,12 @@ Defines the SIM card authentication response.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## response
 
 ```TypeScript
@@ -40,7 +46,7 @@ simStatusWord1: int
 
 Status word 1 of the SIM card, which is returned by the SIM card after command execution.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 
@@ -60,7 +66,7 @@ simStatusWord2: int
 
 Status word 2 of the SIM card, which is returned by the SIM card after command execution.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 

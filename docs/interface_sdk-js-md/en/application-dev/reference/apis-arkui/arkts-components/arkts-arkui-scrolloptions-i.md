@@ -1,6 +1,10 @@
 # ScrollOptions
 
-Provides parameters for scrolling to a specific position in a scrollable container.
+滚动到指定位置的参数选项。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **Since:** 18
 
@@ -16,13 +20,13 @@ Provides parameters for scrolling to a specific position in a scrollable contain
 animation?: ScrollAnimationOptions | boolean
 ```
 
-Animation configuration Anonymous Object Rectification.
+动画配置。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Currently, the \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_Scroll\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_Grid\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_, and \_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_support the \_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_Boolean\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_ type and \_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_ICurve\_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;目前List、Scroll、Grid和WaterFlow支持Boolean类型和ICurve。&lt;/p&gt;
 
-parameters and the boolean type enables default spring animation. [since 10 - 11]and the boolean type enables default spring animation. [since 12]
+ 布尔类型启用默认弹簧动效。 [since 10 - 11] 布尔类型启用默认弹簧动效。 [since 12]
 
-**Type:** ScrollAnimationOptions \| boolean
+**Type:** [ScrollAnimationOptions](../arkts-apis/arkts-arkui-scroll-scrollanimationoptions-i.md) \| boolean
 
 **Default:** ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false } [since 18]
 
@@ -44,7 +48,7 @@ parameters and the boolean type enables default spring animation. [since 10 - 11
 canOverScroll?: boolean
 ```
 
-Set whether the scroll target position can over the boundary.
+设置滚动目标位置是否可以超出边界。
 
 **Type:** boolean
 
@@ -66,9 +70,9 @@ Set whether the scroll target position can over the boundary.
 xOffset: number | string
 ```
 
-Horizontal scrolling offset.Anonymous Object Rectification.
+水平滚动偏移量。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_This parameter cannot be set in percentage.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_This parameter takes effect only when the scroll axis is the x-axis.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_Value range: Values less than 0 are treated as 0, and scrolling occurs without animation.Animated scrolling stops at the starting position by default.By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_If the parameter type is number, the unit is vp.\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;不支持设置百分比。&lt;br&gt;无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。&lt;br&gt;该参数仅在滚动轴为x轴时生效。&lt;/p&gt;
 
 **Type:** number \| string
 
@@ -90,9 +94,9 @@ Horizontal scrolling offset.Anonymous Object Rectification.
 yOffset: number | string
 ```
 
-Vertical scrolling offset.Anonymous Object Rectification.
+竖直滚动偏移量。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_This parameter cannot be set in percentage.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_This parameter takes effect only when the scroll axis is the y-axis.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_Value range: Values less than 0 are treated as 0, and scrolling occurs without animation.Animated scrolling stops at the starting position by default.By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_If the parameter type is number, the unit is vp.\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;不支持设置百分比。&lt;br&gt;无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。&lt;br&gt;该参数仅在滚动轴为y轴时生效。&lt;/p&gt;
 
 **Type:** number \| string
 

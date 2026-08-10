@@ -252,6 +252,6 @@
   <!--Del-->
   - [Constants(system api)](arkts-backgroundtasks-workscheduler-con-sys.md)<!--DelEnd-->
 - application<!--arkts-backgroundtaskskit-application-->
-  - [application/WorkSchedulerExtensionContext](arkts-application/workschedulerextensioncontext.md)
+  - [WorkSchedulerExtensionContext](arkts-workschedulerextensioncontext.md)
     <!--Del-->
-    - [WorkSchedulerExtensionContext(system api)](workschedulerextensioncontext-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->
+    - [WorkSchedulerExtensionContext(system api)](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->

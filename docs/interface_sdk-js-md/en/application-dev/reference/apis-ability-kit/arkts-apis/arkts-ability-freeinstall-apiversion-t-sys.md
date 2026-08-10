@@ -4,7 +4,7 @@
 export type ApiVersion = _PackInfo.ApiVersion
 ```
 
-Defines the API version of the module.
+module的api版本。
 
 **Since:** 9
 

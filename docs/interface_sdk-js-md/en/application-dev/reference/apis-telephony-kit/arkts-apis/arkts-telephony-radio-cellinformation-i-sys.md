@@ -10,6 +10,12 @@ Obtains current cell information.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## data
 
 ```TypeScript
@@ -19,7 +25,7 @@ data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInfo
 
 Obtains signal strength under different network formats.
 
-**Type:** CdmaCellInformation \| GsmCellInformation \| LteCellInformation \| NrCellInformation \| TdscdmaCellInformation \| WcdmaCellInformation
+**Type:** [CdmaCellInformation](arkts-telephony-radio-cdmacellinformation-i-sys.md) \| GsmCellInformation \| LteCellInformation \| NrCellInformation \| TdscdmaCellInformation \| WcdmaCellInformation
 
 **Since:** 8
 
@@ -63,7 +69,7 @@ Obtains the timestamp when the cell information is obtained.
 
 Returns a timestamp since boot, in nanoseconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

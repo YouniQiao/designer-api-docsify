@@ -1,12 +1,11 @@
 # HitTestMode
 
-Sets the response logic and node blocking rules for the hit test.
-    **NOTE**  
-    
-    When multiple nodes in a **Stack** component have overlapping touch areas, if the touch point hits a child  
-    component of the topmost node, only the topmost node will undergo hit testing by default. In this case, touch  
-    testing for lower-layer nodes can only be triggered by setting the  
-    [hitTestBehavior]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the topmost node to **HitTestMode.Transparent**.
+定义触摸测试的响应逻辑及节点阻塞规则。
+
+> **说明：**
+> 
+> 当Stack组件中有多个节点触摸区域重叠时，如果最上层节点的子组件命中，则默认只会对显示在最上层的节点做触摸测试。此时只有给显示在最上层的节点设置
+> [hitTestBehavior](arkts-arkui-common-commonmethod-i.md#hittestbehavior)为HitTestMode.Transparent时，才能使显示在下层的节点触发触摸测试。
 
 **Since:** 9
 
@@ -22,7 +21,7 @@ Sets the response logic and node blocking rules for the hit test.
 Default
 ```
 
-Default hit test mode. The node itself and its child nodes respond to the hit test, but block the hit test of sibling nodes. It does not affect the hit test of ancestor nodes.
+默认触摸测试效果。自身及子节点响应触摸测试，但阻塞兄弟节点的触摸测试，不影响祖先节点的触摸测试。
 
 **Since:** 9
 
@@ -42,7 +41,7 @@ Default hit test mode. The node itself and its child nodes respond to the hit te
 Block
 ```
 
-The node itself responds to the hit test and blocks the hit test of child nodes, sibling nodes, and ancestor nodes.
+自身响应触摸测试，阻塞子节点、兄弟节点和祖先节点的触摸测试。
 
 **Since:** 9
 
@@ -62,7 +61,7 @@ The node itself responds to the hit test and blocks the hit test of child nodes,
 Transparent
 ```
 
-Both the node itself and its child nodes respond to the hit test and do not block the hit test of sibling nodes and ancestor nodes.
+自身和子节点均响应触摸测试，不会阻塞兄弟节点和祖先节点的触摸测试。
 
 **Since:** 9
 
@@ -82,7 +81,7 @@ Both the node itself and its child nodes respond to the hit test and do not bloc
 None
 ```
 
-The node itself does not respond to the hit test and does not block the hit test of child nodes, sibling nodes, and ancestor nodes.
+自身不响应触摸测试，不会阻塞子节点、兄弟节点和祖先节点的触摸测试。
 
 **Since:** 9
 
@@ -102,7 +101,7 @@ The node itself does not respond to the hit test and does not block the hit test
 BLOCK_HIERARCHY
 ```
 
-The node itself and its child nodes respond to the hit test, preventing all sibling nodes and parent nodes with lower priority from participating in the hit test.
+自身和子节点响应触摸测试，阻止所有优先级较低的兄弟节点和父节点参与触摸测试。
 
 **Since:** 20
 
@@ -124,7 +123,7 @@ The node itself and its child nodes respond to the hit test, preventing all sibl
 BLOCK_DESCENDANTS
 ```
 
-The node itself does not respond to the hit test, and all its descendants (children, grandchildren, and more) also do not respond to the hit test. It does not affect the hit test of ancestor nodes.
+自身不响应触摸测试，并且所有的后代（孩子，孙子等）也不响应触摸测试，不会影响祖先节点的触摸测试。
 
 **Since:** 20
 

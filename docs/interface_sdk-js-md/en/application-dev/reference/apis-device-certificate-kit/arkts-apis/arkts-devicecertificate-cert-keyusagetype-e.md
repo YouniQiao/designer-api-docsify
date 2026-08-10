@@ -1,6 +1,6 @@
 # KeyUsageType
 
-Enumerates the purposes for which the key in the certificate is used.
+表示证书中密钥用途的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the purposes for which the key in the certificate is used.
 KEYUSAGE_DIGITAL_SIGNATURE = 0
 ```
 
-The certificate holder can use the private key contained in the certificate to generate a digital signature.
+证书持有者可以用证书中包含的私钥进行数字签名操作。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ The certificate holder can use the private key contained in the certificate to g
 KEYUSAGE_NON_REPUDIATION = 1
 ```
 
-The certificate holder can use the key to create a digital signature as part of a non-repudiation service.
+证书公钥可用于不可否认操作，防止签名者否认其签名。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ The certificate holder can use the key to create a digital signature as part of 
 KEYUSAGE_KEY_ENCIPHERMENT = 2
 ```
 
-The certificate holder can use the public key contained in the certificate for key encryption.
+证书公钥可用于密钥加密操作，用于加密对称密钥等。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ The certificate holder can use the public key contained in the certificate for k
 KEYUSAGE_DATA_ENCIPHERMENT = 3
 ```
 
-The certificate holder can use the public key contained in the certificate for data encryption.
+证书公钥可用于数据加密操作，用于加密数据。
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ The certificate holder can use the public key contained in the certificate for d
 KEYUSAGE_KEY_AGREEMENT = 4
 ```
 
-The certificate holder can use the private key contained in the certificate to perform key agreement operations.
+证书公钥可用于密钥协商操作，用于协商共享密钥。
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ The certificate holder can use the private key contained in the certificate to p
 KEYUSAGE_KEY_CERT_SIGN = 5
 ```
 
-The certificate holder can use the private key contained in the certificate to sign other certificates.
+证书公钥可用于证书签名操作。
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ The certificate holder can use the private key contained in the certificate to s
 KEYUSAGE_CRL_SIGN = 6
 ```
 
-The certificate holder can use the private key contained in the certificate to sign CRLs.
+证书公钥可用于证书吊销列表（CRL）的签名操作。
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ The certificate holder can use the private key contained in the certificate to s
 KEYUSAGE_ENCIPHER_ONLY = 7
 ```
 
-The certificate holder can use the key to perform encryption operations only.
+密钥只能用于加密操作，不能用于解密操作。
 
 **Since:** 12
 
@@ -160,7 +160,7 @@ The certificate holder can use the key to perform encryption operations only.
 KEYUSAGE_DECIPHER_ONLY = 8
 ```
 
-The certificate holder can use the key to perform decryption operations only.
+密钥只能用于解密操作，不能用于加密操作。
 
 **Since:** 12
 

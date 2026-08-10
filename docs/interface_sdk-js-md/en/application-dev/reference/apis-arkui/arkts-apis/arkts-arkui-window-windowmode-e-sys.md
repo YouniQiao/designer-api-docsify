@@ -1,6 +1,6 @@
 # WindowMode (System API)
 
-Enumerates the window modes.
+窗口模式枚举。
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ Enumerates the window modes.
 UNDEFINED = 1
 ```
 
-The window mode is not defined by the application.
+表示APP未定义窗口模式。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ The window mode is not defined by the application.
 FULLSCREEN = 2
 ```
 
-The application is displayed in full screen.
+表示APP全屏模式。
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ The application is displayed in full screen.
 PRIMARY = 3
 ```
 
-The application is displayed in the primary window in split-screen mode. In top-bottom splits, the top screen is primary; in left-right splits, the left screen is primary.
+表示APP分屏多窗口主要模式。上下分屏时，上分屏为主要模式。左右分屏时，左分屏为主要模式。
 
 **Since:** 7
 
@@ -72,7 +72,7 @@ The application is displayed in the primary window in split-screen mode. In top-
 SECONDARY = 4
 ```
 
-The application is displayed in the secondary window in split-screen mode. In top-bottom splits, the bottom screen is secondary; in left-right splits, the right screen is secondary.
+表示APP分屏多窗口次要模式。上下分屏时，下分屏为次要模式。左右分屏时，右分屏为次要模式。
 
 **Since:** 7
 
@@ -90,7 +90,7 @@ The application is displayed in the secondary window in split-screen mode. In to
 FLOATING = 5
 ```
 
-The application is displayed in a floating window.
+表示APP自由悬浮形式窗口模式。
 
 **Since:** 7
 

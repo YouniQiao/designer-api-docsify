@@ -1,5 +1,11 @@
 # getSkillInfoForSelf
 
+## 导入模块
+
+```TypeScript
+import { skillManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getSkillInfoForSelf
 
 ```TypeScript
@@ -38,6 +44,6 @@ function getSkillInfoForSelf(moduleName: string, skillName: string, flags: int):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module is not found. |
-| [17700093](../errorcode-bundle.md#17700093-指定的skillname不存在) | The specified skillName is not found. |
+| 17700093 | The specified skillName is not found. |
+| 17700002 | The specified module is not found. |
 

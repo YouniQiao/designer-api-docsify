@@ -18,7 +18,7 @@ subtitle?: ResourceStr
 
 半模态面板的副标题。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ title: ResourceStr
 
 半模态面板的主标题。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 11
 

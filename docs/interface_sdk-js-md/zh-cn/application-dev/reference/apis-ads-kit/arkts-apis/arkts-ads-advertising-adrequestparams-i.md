@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Advertising.Ads
 
+## 导入模块
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## [key: string]
 
 ```TypeScript
@@ -18,7 +24,7 @@
 
 自定义参数。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 **类型：** number \| boolean \| string \| undefined
 

@@ -1,5 +1,11 @@
 # setOtaUpdateNonceEnable
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## setOtaUpdateNonceEnable
 
 ```TypeScript
@@ -7,9 +13,10 @@ function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 ```
 
 设置OTA更新时Nonce的启用状态（默认为启用状态）。启用后，系统将在OTA更新过程中校验Nonce的有效性，从而防止重放攻击，提升系统安全性。
-    **说明：**  
-    
-    为保障系统安全，若非内网升级等特殊业务需求，不建议禁用Nonce校验。
+
+> **说明：**
+> 
+> 为保障系统安全，若非内网升级等特殊业务需求，不建议禁用Nonce校验。
 
 **起始版本：** 26.0.0
 
@@ -27,20 +34,20 @@ function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | isEnable | boolean | 是 | true表示启用OTA更新Nonce，false表示禁用OTA更新Nonce。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200016 | Service timeout. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { systemManager } from '@kit.MDMKit';

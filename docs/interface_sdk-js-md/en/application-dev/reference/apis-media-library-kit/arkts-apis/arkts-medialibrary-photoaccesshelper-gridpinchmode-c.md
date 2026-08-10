@@ -10,6 +10,12 @@ Represents the pinch mode of the grid in the picker.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## defaultGridLevel
 
 ```TypeScript
@@ -18,7 +24,7 @@ defaultGridLevel?: GridLevel
 
 Grid level after the picker is started. The default value is **STANDARD**.
 
-**Type:** GridLevel
+**Type:** [GridLevel](arkts-medialibrary-photoaccesshelper-gridlevel-e.md)
 
 **Since:** 23
 
@@ -40,7 +46,7 @@ gridPinchModeType?: GridPinchModeType
 
 Grid pinch mode. If this parameter is set, the pinch function is supported. Otherwise, the pinch function is not supported.
 
-**Type:** GridPinchModeType
+**Type:** [GridPinchModeType](arkts-medialibrary-photoaccesshelper-gridpinchmodetype-e.md)
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # FontVariation
 
-Describes a font variation.
+可变字体属性。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes a font variation.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## axis
 
 ```TypeScript
 axis: string
 ```
 
-Keyword identifier in the variable font property key-value pair, such as 'wght' (weight), 'wdth' (width), and 'ital' (italic).
+可变字体属性键值对中的关键字标识，如'wght'（字重）、'wdth'（字宽）和'ital'（斜体）等。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Keyword identifier in the variable font property key-value pair, such as 'wght' 
 isNormalized?: boolean
 ```
 
-Whether to normalize. If the value is **true**, the value range of the value field is -1 to 1, which maps the minimum value to the maximum value configured in the font file. The value **0** indicates the default value configured in the font file. If the value is **false**, the value range of the value field is the adjustable range supported by the font file itself. The default value is **false**.
+是否归一化。值为true时，value字段取值范围为-1~1，映射字体文件中配置的最小值到最大值范围，0表示字体文件中配置的默认值；值为false时，value字段取值范围为字体文件本身支持调节的范围；默认为false。
 
 **Type:** boolean
 
@@ -56,9 +62,9 @@ Whether to normalize. If the value is **true**, the value range of the value fie
 value: double
 ```
 
-Value in the font variation key-value pair.
+可变字体属性键值对的值。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

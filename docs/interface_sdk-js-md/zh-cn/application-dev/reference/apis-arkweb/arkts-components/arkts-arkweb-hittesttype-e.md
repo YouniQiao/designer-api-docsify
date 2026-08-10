@@ -8,7 +8,7 @@
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md)
 
 <!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
 
@@ -28,7 +28,7 @@ EditText = 0
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType.EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#edittext)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType.EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#edittext)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,7 +50,7 @@ Email = 1
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#email)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#email)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +72,7 @@ HttpAnchor = 2
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType.HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchor)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType.HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#httpanchor)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -94,7 +94,7 @@ HttpAnchorImg = 3
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType.HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType.HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -116,7 +116,7 @@ HTML::img标签。
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#img)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#img)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -138,7 +138,7 @@ Map = 5
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#map)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#map)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -160,7 +160,7 @@ Phone = 6
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#phone)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#phone)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -182,7 +182,7 @@ Unknown = 7
 
 **废弃版本：** 21
 
-**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#unknown)
+**替代接口：** [@ohos.web.webview:webview.WebHitTestType.Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#unknown)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

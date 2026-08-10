@@ -1,5 +1,11 @@
 # dial
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## dial
 
 ```TypeScript
@@ -27,10 +33,10 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates additional information carried in the call. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
+| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes | Indicates additional information carried in the call. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,7 +77,7 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates additional information carried in the call. |
+| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | No | Indicates additional information carried in the call. |
 
 **Return value:**
 
@@ -79,7 +85,7 @@ Makes a call.
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns the result of the call. Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -122,9 +128,9 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,24 +1,28 @@
 # matchMediaSync
 
+## Modules to Import
+
+```TypeScript
+import { mediaquery } from 'kits/@kit.ArkUI';
+```
+
 ## matchMediaSync
 
 ```TypeScript
 function matchMediaSync(condition: string): MediaQueryListener
 ```
 
-Sets the media query condition. This API returns the corresponding media query listener.
-    **NOTE**  
-    
-    - This API is supported since API version 7 and deprecated since API version 18. You are advised to use  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ instead. Before calling this API, you  
-    need to obtain the \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ object using the  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_.  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ to obtain the  
-    [MediaQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ object associated with the current UI context.
+设置媒体查询的查询条件，并返回对应的监听句柄。
+
+> **说明：**
+> 
+> -matchMediaSync需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [getMediaQuery](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmediaquery)方法获取
+> [MediaQuery](arkts-arkui-uicontext.md)对象，然后通过该对象进行调用。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getMediaQuery](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmediaquery)方法获取当前UI上下文关联的
+> [MediaQuery](arkts-arkui-uicontext.md)对象。
 
 **Since:** 7
 
@@ -40,15 +44,15 @@ Sets the media query condition. This API returns the corresponding media query l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | string | Yes | Media query condition. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| condition | string | Yes | 媒体事件的匹配条件，具体可参考[媒体查询语法规则](../../../ui/arkts-layout-development-media-query.md#语法规则)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Media query listener, which is used to register or deregister the listening callback. |
+| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体事件监听句柄，用于注册和注销监听回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { mediaquery } from '@kit.ArkUI';

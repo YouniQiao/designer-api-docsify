@@ -1,17 +1,16 @@
 # Tokenizer
 
-Enumerates tokenizers that can be used for FTS. Use the enum name rather than the enum value.
+描述fts（全文搜索）场景下使用的分词器枚举。请使用枚举名称而非枚举值。
 
-The table creation statement varies with the tokenizer in use.
+在使用不同的分词器时，使用的建表语句会有所区别。
 
-For details about the definition of **this.context** in the sample code, see the application  
-[context]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the stage model.
+示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。
 
-The following is an example of the table creation statement when **ICU\_TOKENIZER** is used:
+使用ICU_TOKENIZER分词器时，创建表的示例：
 
-The following is an example of the table creation statement when **CUSTOM\_TOKENIZER** is used:
+使用CUSTOM_TOKENIZER分词器时，创建表的示例：
 
-The following is an example of the table creation statement when **CUSTOM\_TOKENIZER** is used:
+使用CUSTOM_TOKENIZER分词器，并指定分词模式时，创建表的示例：
 
 **Since:** 17
 
@@ -27,7 +26,7 @@ The following is an example of the table creation statement when **CUSTOM\_TOKEN
 NONE_TOKENIZER = 0
 ```
 
-NONE\_TOKENIZER: not use tokenizer
+不使用分词器。
 
 **Since:** 17
 
@@ -43,9 +42,9 @@ NONE\_TOKENIZER: not use tokenizer
 ICU_TOKENIZER = 1
 ```
 
-The ICU tokenizer is used, which supports Chinese and multiple languages. If the ICU tokenizer is used, you can set the language to use, for example, **zh\_CN** for Chinese and **tr\_TR** for Turkish. For details about the supported languages, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. For details about the language abbreviations, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+表示使用icu分词器，支持中文以及多国语言。指定icu分词器时，可指定使用哪种语言，例如zh_CN表示中文，tr_TR表示土耳其语等。支持的语言种类，请查阅  
+[ICU分词器](https://gitcode.com/openharmony/third_party_icu/blob/master/icu4c/source/data/lang/zh.txt)。语言缩写请查阅该目录（  
+[ICU支持的语言缩写](https://gitcode.com/openharmony/third_party_icu/tree/master/icu4c/source/data/locales)）下的文件名。
 
 **Since:** 17
 
@@ -61,7 +60,7 @@ The ICU tokenizer is used, which supports Chinese and multiple languages. If the
 CUSTOM_TOKENIZER = 2
 ```
 
-A custom tokenizer is used. Chinese (simplified and traditional), English, and Arabic numerals are supported.Compared with **ICU\_TOKENIZER**, **CUSTOM\_TOKENIZER** has advantages in tokenization accuracy and resident memory usage. The self-developed tokenizer supports two modes: default tokenization mode and short word tokenization mode (short\_words). You can use the cut\_mode parameter to specify the mode. If no mode is specified, the default mode is used.
+表示使用自研分词器，可支持中文（简体、繁体）、英文、阿拉伯数字。CUSTOM_TOKENIZER相比ICU_TOKENIZER在分词准确率、常驻内存占用上更有优势。自研分词器支持默认分词模式和短词分词模式（short_words）两种，使用参数cut_mode可指定模式，不指定模式时使用默认模式。
 
 **Since:** 18
 

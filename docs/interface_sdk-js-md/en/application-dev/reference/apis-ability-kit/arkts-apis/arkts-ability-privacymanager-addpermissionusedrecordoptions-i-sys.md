@@ -1,6 +1,6 @@
 # AddPermissionUsedRecordOptions (System API)
 
-Represents the options for adding a permission usage record.
+添加权限使用记录可选参数集。
 
 **Since:** 12
 
@@ -12,14 +12,20 @@ Represents the options for adding a permission usage record.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## enhancedIdentity
 
 ```TypeScript
 enhancedIdentity?: string
 ```
 
-Extension identity, used to identify additional identity information of the caller. This field is passed in when it is necessary to distinguish permission usage records from different call sources under the same application.The length does not exceed 48 characters. Passing an excessively long value when calling  
-[addPermissionUsedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ will return error code 12100001.The maximum length is 48. Default value: empty string.
+扩展身份，用于标识调用方的附加身份信息。当需要区分同一应用下不同调用来源的权限使用记录时传入此字段。长度不超过48个字符，调用  
+[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord)时传入超长值会返回错误码12100001。最大长度为48。默认值：空字符串。
 
 **Type:** string
 
@@ -41,11 +47,11 @@ Extension identity, used to identify additional identity information of the call
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission usage type.
+敏感权限使用类型。
 
-Default value: NORMAL\_TYPE.
+默认值：NORMAL_TYPE。
 
-**Type:** PermissionUsedType
+**Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **Since:** 12
 

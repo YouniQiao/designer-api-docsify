@@ -1,12 +1,18 @@
 # revokePermission (System API)
 
+## Modules to Import
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## revokePermission
 
 ```TypeScript
 function revokePermission(tokenID: int): Promise<void>
 ```
 
-Revoke all persistence permissions for the application.
+撤销指定应用的全部持久化文件授权，使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -26,23 +32,43 @@ Revoke all persistence permissions for the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Token ID of the application. |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标应用的访问令牌标识。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 13900001 | Operation not permitted. |
 | 13900020 | Invalid tokenID |
+| 801 | Capability not supported. |
+| 13900001 | Operation not permitted. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | The caller is not a system application. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function revokeAllPermissionExample() {
+  try {
+    let tokenID = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system app, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system app.
+    fileShare.revokePermission(tokenID).then(() => {
+      console.info('revoke persist permission successfully.');
+    }).catch((err: BusinessError) => {
+      console.error(`revoke persist permission failed, Code: ${err.code}, message: ${err.message}`);
+    });
+  } catch (error) {
+    console.error(`revoke persist permission failed error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
 
 
 ## revokePermission
@@ -51,7 +77,7 @@ Revoke all persistence permissions for the application.
 function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<void>
 ```
 
-Revoke persistence permissions for the URI.
+撤销指定应用对URI的持久化授权，使用Promise异步回调。
 
 **Since:** 26.0.0
 
@@ -71,24 +97,56 @@ Revoke persistence permissions for the URI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Token ID of the application. |
-| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information to revoke permission on URIs. |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标应用的访问令牌标识。 |
+| policies | Array&lt;PolicyInfo&gt; | Yes | 需要撤销持久化授权的URI策略信息数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types; 3.Invalid policy size. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| 13900001 | Operation not permitted. |
-| 13900011 | Out of memory |
 | 13900020 | Invalid tokenID |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; 3.Invalid policy size. |
+| 801 | Capability not supported. |
+| 13900001 | Operation not permitted. |
+| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| 202 | The caller is not a system application. |
+| 13900011 | Out of memory |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function revokeSpecificPermissionExample() {
+  try {
+    let tokenID = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system app, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system app.
+    let policyInfo: fileShare.PolicyInfo = {
+      uri: 'file://docs/storage/Users/currentUser/Documents/1.txt',
+      operationMode: fileShare.OperationMode.READ_MODE | fileShare.OperationMode.WRITE_MODE,
+    };
+    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
+    fileShare.revokePermission(tokenID, policies).then(() => {
+      console.info('revoke persist permission successfully.');
+    }).catch((err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
+      console.error(`revoke persist permission failed. Code: ${err.code}, message: ${err.message}`);
+      if (err.code === 13900001 && err.data) {
+        for (let i = 0; i < err.data.length; i++) {
+          console.error(`error code: ${JSON.stringify(err.data[i].code)}`);
+          console.error(`error URI: ${JSON.stringify(err.data[i].uri)}`);
+          console.error(`error reason: ${JSON.stringify(err.data[i].message)}`);
+        }
+      }
+    });
+  } catch (error) {
+    console.error(`revokePermission error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
 

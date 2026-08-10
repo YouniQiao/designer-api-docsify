@@ -4,7 +4,7 @@
 declare type OnRadioChangeCallback = (isChecked: boolean) => void
 ```
 
-Defines the callback type for radio button selected state changes.
+单选框选中状态改变时触发的回调函数类型定义。
 
 **Since:** 18
 

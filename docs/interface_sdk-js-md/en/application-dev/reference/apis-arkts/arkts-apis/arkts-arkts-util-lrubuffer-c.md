@@ -1,6 +1,6 @@
 # LruBuffer
 
-The LruBuffer algorithm replaces the least used data with new data when the buffer space is insufficient.
+LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的数据。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## [Symbol.iterator]
 
 ```TypeScript
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-Specifies the default iterator for an object.
+指定对象的默认迭代器。
 
 **Since:** 8
 
@@ -38,9 +44,9 @@ Specifies the default iterator for an object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -54,7 +60,7 @@ let result = pro[Symbol.iterator]();
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-Performs subsequent operations after a value is removed.
+在移除值后执行后续操作。
 
 **Since:** 8
 
@@ -72,12 +78,12 @@ Performs subsequent operations after a value is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEvict | boolean | Yes | Whether the capacity is insufficient. If the value is **true**, this API is called due to insufficient capacity. |
-| key | K | Yes | Key removed. |
-| value | V | Yes | Value removed. |
-| newValue | V | Yes | New value for the key if the **put()** method is called and the key to be added already exists. In other cases, this parameter is left blank. |
+| isEvict | boolean | Yes | 容量是否不足。如果值为 **true**，则由于容量不足而调用此 API。 |
+| key | K | Yes | 被移除的 key。 |
+| value | V | Yes | 被移除的值。 |
+| newValue | V | Yes | 如果调用了 **put()** 方法并且要添加的 key 已存在时该 key 的新值。其他情况下此参数为空。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class ChildLruBuffer<K, V> extends util.LruBuffer<K, V> {
@@ -108,7 +114,7 @@ lru.put(33, 3);
 clear(): void
 ```
 
-Clears key-value pairs from this cache. The **afterRemoval()** API will be called to perform subsequent operations.
+从此缓存中清除键值对。将调用 **afterRemoval()** API 执行后续操作。
 
 **Since:** 8
 
@@ -122,7 +128,7 @@ Clears key-value pairs from this cache. The **afterRemoval()** API will be calle
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -137,7 +143,7 @@ pro.clear();
 constructor(capacity?: number)
 ```
 
-A constructor used to create a **LruBuffer** instance. The default capacity of the cache is 64.
+用于创建 **LruBuffer** 实例的构造函数。缓存的默认容量为 64。
 
 **Since:** 8
 
@@ -155,9 +161,9 @@ A constructor used to create a **LruBuffer** instance. The default capacity of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capacity | number | No | Capacity of the cache to create. The default value is **64**. |
+| capacity | number | No | 要创建的缓存的容量。默认值为 **64**。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -169,7 +175,7 @@ let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 contains(key: K): boolean
 ```
 
-Checks whether this cache contains the specified key.
+判断此缓存是否包含指定的 key。
 
 **Since:** 8
 
@@ -187,15 +193,15 @@ Checks whether this cache contains the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key to check. |
+| key | K | Yes | 要检查的 key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the cache contains the specified key; otherwise, **false** is returned. |
+| boolean | 检查结果。如果缓存包含指定的 key，则返回 **true**；否则返回 **false**。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -211,7 +217,7 @@ console.info('result = ' + result);
 createDefault(key: K): V
 ```
 
-Creates a value if the value of the specified key is not available.
+当指定 key 的值不可用时，创建一个值。
 
 **Since:** 8
 
@@ -229,15 +235,15 @@ Creates a value if the value of the specified key is not available.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key of which the value is missing. |
+| key | K | Yes | 缺少值的 key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | Value of the key. |
+| V | key 对应的值。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -250,7 +256,7 @@ let result = pro.createDefault(50);
 entries(): IterableIterator<[K, V]>
 ```
 
-Obtains a new iterator object that contains all key-value pairs in this object.
+获取一个新的迭代器对象，该对象包含此对象中的所有键值对。
 
 **Since:** 8
 
@@ -268,9 +274,9 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[K, V]&gt; | Iterable array. |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 可迭代的数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -284,7 +290,7 @@ let result = pro.entries();
 get(key: K): V | undefined
 ```
 
-Obtains the value of the specified key.
+获取指定 key 对应的值。
 
 **Since:** 8
 
@@ -302,15 +308,15 @@ Obtains the value of the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key based on which the value is queried. |
+| key | K | Yes | 要查询值的 key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | Value of the key. If no match is found, **undefined** is returned. |
+| V | key 对应的值。如果未找到匹配项，则返回 **undefined**。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -326,7 +332,7 @@ console.info("result = " + result);
 getCapacity(): number
 ```
 
-Obtains the capacity of this cache.
+获取此缓存的容量。
 
 **Since:** 8
 
@@ -344,9 +350,9 @@ Obtains the capacity of this cache.
 
 | Type | Description |
 | --- | --- |
-| number | Capacity of the cache. |
+| number | 缓存的容量。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -361,7 +367,7 @@ console.info("result = " + result);
 getCreateCount(): number
 ```
 
-Obtains the number of return values for **createDefault()**.
+获取 **createDefault()** 的返回值数量。
 
 **Since:** 8
 
@@ -379,9 +385,9 @@ Obtains the number of return values for **createDefault()**.
 
 | Type | Description |
 | --- | --- |
-| number | Number of return values for **createDefault()**. |
+| number | createDefault()** 的返回值数量。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -397,7 +403,7 @@ console.info("result = " + result);
 getMatchCount(): number
 ```
 
-Obtains the number of times that the queried values are matched.
+获取查询值匹配的次数。
 
 **Since:** 8
 
@@ -415,9 +421,9 @@ Obtains the number of times that the queried values are matched.
 
 | Type | Description |
 | --- | --- |
-| number | Number of times that the queried values are matched. |
+| number | 查询值匹配的次数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -434,7 +440,7 @@ console.info("result = " + result);
 getMissCount(): number
 ```
 
-Obtains the number of times that the queried values are mismatched.
+获取查询值未匹配的次数。
 
 **Since:** 8
 
@@ -452,9 +458,9 @@ Obtains the number of times that the queried values are mismatched.
 
 | Type | Description |
 | --- | --- |
-| number | Number of times that the queried values are mismatched. |
+| number | 查询值未匹配的次数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -471,7 +477,7 @@ console.info("result = " + result);
 getPutCount(): number
 ```
 
-Obtains the number of additions to this cache.
+获取向此缓存添加的次数。
 
 **Since:** 8
 
@@ -489,9 +495,9 @@ Obtains the number of additions to this cache.
 
 | Type | Description |
 | --- | --- |
-| number | Number of additions to the cache. |
+| number | 向缓存添加的次数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -507,7 +513,7 @@ console.info("result = " + result);
 getRemovalCount(): number
 ```
 
-Obtains the number of removals from this cache.
+获取从此缓存中移除的次数。
 
 **Since:** 8
 
@@ -525,9 +531,9 @@ Obtains the number of removals from this cache.
 
 | Type | Description |
 | --- | --- |
-| number | Number of removals from the cache. |
+| number | 从缓存中移除的次数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -545,7 +551,7 @@ console.info("result = " + result);
 isEmpty(): boolean
 ```
 
-Checks whether this cache is empty.
+判断此缓存是否为空。
 
 **Since:** 8
 
@@ -563,9 +569,9 @@ Checks whether this cache is empty.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the cache does not contain any value. |
+| boolean | 如果缓存不包含任何值，则返回 **true**。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -581,7 +587,7 @@ console.info("result = " + result);
 keys(): K[]
 ```
 
-Obtains all keys in this cache, listed from the most to the least recently accessed.
+获取此缓存中的所有 key，按从最近最多访问到最近最少访问的顺序排列。
 
 **Since:** 8
 
@@ -599,9 +605,9 @@ Obtains all keys in this cache, listed from the most to the least recently acces
 
 | Type | Description |
 | --- | --- |
-| K[] | All keys in the cache, listed from the most to the least recently accessed. |
+| K[] | 此缓存中的所有 key，按从最近最多访问到最近最少访问的顺序排列。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -617,7 +623,7 @@ console.info("result = " + result);
 put(key: K, value: V): V
 ```
 
-Adds a key-value pair to this cache.
+向此缓存添加键值对。
 
 **Since:** 8
 
@@ -635,16 +641,16 @@ Adds a key-value pair to this cache.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key of the key-value pair to add. |
-| value | V | Yes | Value of the key-value pair to add. |
+| key | K | Yes | 要添加的键值对的 key。 |
+| value | V | Yes | 要添加的键值对的 value。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | Value added. If the key already exists, the existing value is returned; if **null** is passed in for **key** or **value**, an error is thrown. |
+| V | 添加的值。如果 key 已存在，则返回已存在的值；如果 **key** 或 **value** 传入 **null**，则抛出错误。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -659,7 +665,7 @@ console.info("result = " + result);
 remove(key: K): V | undefined
 ```
 
-Removes the specified key and its value from this cache.
+从此缓存中移除指定的 key 及其对应的值。
 
 **Since:** 8
 
@@ -677,15 +683,15 @@ Removes the specified key and its value from this cache.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | Key to remove. |
+| key | K | Yes | 要移除的 key。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | Optional** object containing the removed key-value pair. If the key does not exist, an empty **Optional** object is returned; if **null** is passed in for **key**, an error is thrown. |
+| V | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional** 对象；如果 **key** 传入 **null**，则抛出错误。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -701,7 +707,7 @@ console.info("result = " + result);
 toString(): string
 ```
 
-Obtains the string representation of this cache.
+获取此缓存的字符串表示形式。
 
 **Since:** 8
 
@@ -719,9 +725,9 @@ Obtains the string representation of this cache.
 
 | Type | Description |
 | --- | --- |
-| string | String representation of this cache. |
+| string | 此缓存的字符串表示形式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -739,7 +745,7 @@ console.info("result = " + result);
 updateCapacity(newCapacity: number): void
 ```
 
-Changes the cache capacity. If the new capacity is less than or equal to **0**, an exception will be thrown.
+改变缓存容量。如果新容量小于等于 **0**，则抛出异常。
 
 **Since:** 8
 
@@ -757,9 +763,9 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newCapacity | number | Yes | New capacity of the cache. |
+| newCapacity | number | Yes | 缓存的新容量。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -772,7 +778,7 @@ pro.updateCapacity(100);
 values(): V[]
 ```
 
-Obtains all values in this cache, listed from the most to the least recently accessed.
+获取此缓存中的所有值，按从最近最多访问到最近最少访问的顺序排列。
 
 **Since:** 8
 
@@ -790,9 +796,9 @@ Obtains all values in this cache, listed from the most to the least recently acc
 
 | Type | Description |
 | --- | --- |
-| V[] | All values in the cache, listed from the most to the least recently accessed. |
+| V[] | 此缓存中的所有值，按从最近最多访问到最近最少访问的顺序排列。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pro : util.LruBuffer<number|string,number|string> = new util.LruBuffer();
@@ -810,7 +816,7 @@ console.info("result = " + result);
 length: number
 ```
 
-Total number of values in this cache.
+此缓存中值的总数。
 
 **Type:** number
 

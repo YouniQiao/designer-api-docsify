@@ -1,6 +1,6 @@
 # LazyDynamicLayoutAttribute
 
-Defines the LazyDynamicLayout attribute functions.
+定义LazyDynamicLayout组件。
 
 **Inheritance/Implementation:** LazyDynamicLayoutAttribute extends [CommonMethod<LazyDynamicLayoutAttribute>](CommonMethod<LazyDynamicLayoutAttribute>)
 
@@ -12,13 +12,19 @@ Defines the LazyDynamicLayout attribute functions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from 'kits/@kit.ArkUI';
+```
+
 ## onVisibleIndexesChange
 
 ```TypeScript
 onVisibleIndexesChange(callback: Callback<int[]> | undefined): LazyDynamicLayoutAttribute
 ```
 
-Called when visible indexes change.
+当可见索引更改时调用。
 
 **Since:** 26.0.0
 
@@ -36,11 +42,11 @@ Called when visible indexes change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int[]&gt; \| undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Passing undefined will unregister the callback. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;int[]&gt; \| undefined | Yes | 可见索引变化时回调的回调函数。 &lt;br&gt;传递undefined将取消注册回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
 

@@ -1,12 +1,18 @@
 # createPort
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createPort
 
 ```TypeScript
 function createPort(uuid: string): void
 ```
 
-Creates a NearLink listening port that can receive data by UUID.
+通过UUID创建可以接收数据的星闪端口。
 
 **Since:** 26.0.0
 
@@ -24,18 +30,18 @@ Creates a NearLink listening port that can receive data by UUID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | string | Yes | Indicates application service UUID. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_NearLink standard UUIDs not allowed. |
+| uuid | string | Yes | 应用服务UUID &lt;br&gt;长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 &lt;br&gt;禁止使用星闪标准服务UUID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
-| 36100003 | NearLink disabled. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100020 | The UUID is already registered. |
 | 36100021 | Port exceeds the upper limit. |
-| 36100043 | Invalid UUID. |
-| 36100044 | NearLink standard UUID not allowed. |
+| 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID. |
 

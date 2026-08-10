@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## clearMonitors
 
 ```TypeScript
@@ -92,7 +98,7 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitorCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | 是 | 手势识别时调用的回调函数。 |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | 是 | 手势识别时调用的回调函数。 |
 
 ## requestSelected
 
@@ -140,5 +146,5 @@ unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, Gesture
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitorCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | 是 | 识别手势时调用的回调函数。 |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | 是 | 识别手势时调用的回调函数。 |
 

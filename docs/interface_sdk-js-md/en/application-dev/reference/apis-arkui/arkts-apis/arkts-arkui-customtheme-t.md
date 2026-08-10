@@ -4,7 +4,7 @@
 declare type CustomTheme = import('../api/@ohos.arkui.theme').CustomTheme
 ```
 
-Defines a custom theme.
+用于自定义WithTheme作用域内组件的配色方案，具体配色项通过CustomColors接口配置。
 
 **Since:** 12
 

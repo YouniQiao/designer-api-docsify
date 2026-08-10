@@ -18,5 +18,5 @@ type OnResultFn = (parameter: AbilityResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当调用 [terminateSelfWithResult]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ 方法终止UIExtensionAbility时返回的结果。  |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 当调用 [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateselfwithresult) 方法终止UIExtensionAbility时返回的结果。 |
 

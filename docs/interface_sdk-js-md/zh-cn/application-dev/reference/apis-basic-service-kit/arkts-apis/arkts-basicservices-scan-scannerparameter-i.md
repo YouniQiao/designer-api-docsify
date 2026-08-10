@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## optionConstraintInt
 
 ```TypeScript
@@ -18,7 +24,7 @@ optionConstraintInt?: int[]
 
 选项整数约束。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 20
 
@@ -36,7 +42,7 @@ optionConstraintRange?: Range
 
 选项范围约束。
 
-**类型：** Range
+**类型：** [Range](arkts-basicservices-scan-range-i.md)
 
 **起始版本：** 20
 
@@ -72,7 +78,7 @@ optionConstraintType: ConstraintType
 
 选项约束类型。
 
-**类型：** ConstraintType
+**类型：** [ConstraintType](arkts-basicservices-scan-constrainttype-e.md)
 
 **起始版本：** 20
 
@@ -108,7 +114,7 @@ optionIndex: int
 
 选项索引。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -162,7 +168,7 @@ optionType: OptionValueType
 
 选项值类型。
 
-**类型：** OptionValueType
+**类型：** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
 **起始版本：** 20
 
@@ -180,7 +186,7 @@ optionUnit: PhysicalUnit
 
 选项物理单位。
 
-**类型：** PhysicalUnit
+**类型：** [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md)
 
 **起始版本：** 20
 

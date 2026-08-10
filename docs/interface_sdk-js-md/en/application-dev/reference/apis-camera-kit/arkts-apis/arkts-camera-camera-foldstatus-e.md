@@ -1,6 +1,6 @@
 # FoldStatus
 
-Enumerates the fold states available for a fordable device.
+枚举，折叠机折叠状态。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the fold states available for a fordable device.
 NON_FOLDABLE = 0
 ```
 
-The device is not foldable.
+表示当前设备不可折叠。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ The device is not foldable.
 EXPANDED = 1
 ```
 
-The device is fully unfolded.
+表示当前设备折叠状态为完全展开。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ The device is fully unfolded.
 FOLDED = 2
 ```
 
-The device is folded.
+表示当前设备折叠状态为折叠。
 
 **Since:** 12
 

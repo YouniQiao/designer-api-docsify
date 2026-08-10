@@ -1,5 +1,11 @@
 # usbFunctionsFromString（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## usbFunctionsFromString
 
 ```TypeScript
@@ -34,7 +40,7 @@ function usbFunctionsFromString(funcs: string): number
 | --- | --- |
 | number | 转化后的功能列表对应的数字掩码。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let funcs = "acm";

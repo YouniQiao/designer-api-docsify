@@ -1,6 +1,6 @@
 # NoiseReductionMode
 
-Enumerates the noise reduction modes.
+降噪模式枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates the noise reduction modes.
 FIDELITY = 0
 ```
 
-Fidelity mode, no noise cancellation.
+保真模式，无噪音消除。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Fidelity mode, no noise cancellation.
 PURE_VOCALS = 1
 ```
 
-Pure vocals mode, enhanced noise reduction.
+风噪消除模式。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Pure vocals mode, enhanced noise reduction.
 STANDARD = 2
 ```
 
-Standard mode, weak noise reduction.
+标准模式，弱降噪。
 
 **Since:** 26.0.0
 

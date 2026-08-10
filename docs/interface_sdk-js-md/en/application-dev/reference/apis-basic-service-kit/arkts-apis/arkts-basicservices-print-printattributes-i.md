@@ -1,6 +1,6 @@
 # PrintAttributes
 
-Defines the print attributes.
+定义打印参数的接口。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Defines the print attributes.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## colorMode
 
 ```TypeScript
 colorMode?: PrintColorMode
 ```
 
-Color mode of the files to print.
+表示待打印文件的色彩模式。
 
-**Type:** PrintColorMode
+**Type:** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
 **Since:** 11
 
@@ -34,9 +40,9 @@ Color mode of the files to print.
 copyNumber?: int
 ```
 
-Number of printed file copies. The default value is **1**.
+表示文件打印份数。默认值为1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -52,9 +58,9 @@ Number of printed file copies. The default value is **1**.
 directionMode?: PrintDirectionMode
 ```
 
-Print direction mode.
+表示待打印文件的方向。
 
-**Type:** PrintDirectionMode
+**Type:** [PrintDirectionMode](arkts-basicservices-print-printdirectionmode-e.md)
 
 **Since:** 11
 
@@ -70,9 +76,9 @@ Print direction mode.
 duplexMode?: PrintDuplexMode
 ```
 
-Duplex mode of the files to print.
+表示待打印文件的单双面模式。
 
-**Type:** PrintDuplexMode
+**Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **Since:** 11
 
@@ -88,9 +94,9 @@ Duplex mode of the files to print.
 pageRange?: PrintPageRange
 ```
 
-Page range of the file to print.
+表示待打印文件的页面范围。
 
-**Type:** PrintPageRange
+**Type:** [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
 
 **Since:** 11
 
@@ -106,9 +112,9 @@ Page range of the file to print.
 pageSize?: PrintPageSize | PrintPageType
 ```
 
-Page size of the file to print.
+表示待打印文件的纸张类型。
 
-**Type:** PrintPageSize \| PrintPageType
+**Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| PrintPageType
 
 **Since:** 11
 

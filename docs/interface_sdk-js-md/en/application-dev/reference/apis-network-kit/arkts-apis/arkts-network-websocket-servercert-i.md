@@ -10,6 +10,12 @@ The serverCert field of the server certificate, which includes two attributes:Fi
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## certPath
 
 ```TypeScript

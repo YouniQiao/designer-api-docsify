@@ -1,17 +1,22 @@
 # createAVRecorder
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createAVRecorder
 
 ```TypeScript
 function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 ```
 
-Creates an AVRecorder instance. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    An application can create multiple AVRecorder instances. However, because the device shares a common audio  
-    channel, only one instance can record audio at a time. Any attempt to create the second instance for audio  
-    recording fails due to audio channel conflicts.
+创建音视频录制实例。使用callback异步回调。
+
+> **说明：**
+> 
+> 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
 
 **Since:** 9
 
@@ -25,15 +30,15 @@ Creates an AVRecorder instance. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVRecorder&gt; | Yes | Callback function, which returns an **AVRecorder** instance for recording audio and video. Otherwise, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVRecorder&gt; | Yes | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| 5400101 | No memory. Return by callback. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,7 +61,7 @@ media.createAVRecorder((error: BusinessError, recorder: media.AVRecorder) => {
 function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 ```
 
-Creates an **AVRecorder** instance. This API uses an asynchronous callback to return the result.
+创建音视频录制实例。使用callback异步回调。
 
 **Since:** 23
 
@@ -70,13 +75,13 @@ Creates an **AVRecorder** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVRecorder \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVRecorder** instance is returned; otherwise, **undefined** is returned. The instance can be used to record audio and video. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVRecorder \| undefined&gt; | Yes | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| 5400101 | No memory. Return by callback. |
 
 
 ## createAVRecorder
@@ -85,12 +90,11 @@ Creates an **AVRecorder** instance. This API uses an asynchronous callback to re
 function createAVRecorder(): Promise<AVRecorder>
 ```
 
-Creates an AVRecorder instance. This API uses a promise to return the result.
-    **NOTE**  
-    
-    An application can create multiple AVRecorder instances. However, because the device shares a common audio  
-    channel, only one instance can record audio at a time. Any attempt to create the second instance for audio  
-    recording fails due to audio channel conflicts.
+创建音视频录制实例。使用Promise异步回调。
+
+> **说明：**
+> 
+> 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
 
 **Since:** 9
 
@@ -106,15 +110,15 @@ Creates an AVRecorder instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVRecorder&gt; | Promise used to return an **AVRecorder** instance, which can be used to record audio and video. Otherwise, **null** is returned. |
+| Promise&lt;AVRecorder&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -138,7 +142,7 @@ media.createAVRecorder().then((recorder: media.AVRecorder) => {
 function createAVRecorder(): Promise<AVRecorder | undefined>
 ```
 
-Creates an **AVRecorder** instance. This API uses a promise to return the result.
+创建音视频录制实例。使用Promise异步回调。
 
 **Since:** 23
 
@@ -152,11 +156,11 @@ Creates an **AVRecorder** instance. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVRecorder \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVRecorder** instance is returned; otherwise, **undefined** is returned. The instance can be used to record audio and video. |
+| Promise&lt;AVRecorder \| undefined&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
 

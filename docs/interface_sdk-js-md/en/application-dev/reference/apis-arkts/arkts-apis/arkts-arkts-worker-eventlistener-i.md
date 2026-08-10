@@ -1,6 +1,6 @@
 # EventListener
 
-Implements event listening.
+事件监听类用于处理事件。
 
 **Since:** 7
 
@@ -14,13 +14,19 @@ Implements event listening.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## [[Call]]
 
 ```TypeScript
 (evt: Event): void | Promise<void>
 ```
 
-Specifies the callback to invoke.
+指定要调用的回调函数。
 
 **Since:** 7
 
@@ -38,9 +44,9 @@ Specifies the callback to invoke.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| evt | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | evt evt Event class for the callback to invoke. |
+| evt | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | evt evt 回调的事件类。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets

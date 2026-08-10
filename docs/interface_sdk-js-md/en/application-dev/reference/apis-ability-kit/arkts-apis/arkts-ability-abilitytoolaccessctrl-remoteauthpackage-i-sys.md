@@ -1,6 +1,6 @@
 # RemoteAuthPackage (System API)
 
-Remote authorization package.
+远程授权包。
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ Remote authorization package.
 challenge: string
 ```
 
-Challenge value.
+挑战值。
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Challenge value.
 remoteMessage: string
 ```
 
-Remote message.
+远程消息。
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Remote message.
 ticket: string
 ```
 
-Ticket string.
+凭据字符串。
 
 **Type:** string
 

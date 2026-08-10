@@ -10,6 +10,12 @@ Wi-Fi的SSID和BSSID信息。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.MDMKit';
+```
+
 ## bssid
 
 ```TypeScript
@@ -18,11 +24,11 @@ bssid?: string
 
 Wi-Fi热点的MAC地址，例如：00:11:22:33:44:55。获取方式如下：打开设置应用-点击系统选项-点击开发者选项-开启WLAN详细日志记录开关，然后进入设置应用中的WLAN列表，查看显示的MAC地址。若一个Wi-Fi对应多个MAC地址，需添加所有MAC地址。
 
-作为[addDisallowedWifiList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和  
-[removeDisallowedWifiList]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口的入参时，该属性可选，默认值为空字符串。
+作为[addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md#adddisallowedwifilist)和  
+[removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md#removedisallowedwifilist)接口的入参时，该属性可选，默认值为空字符串。
 
-作为[addAllowedWifiList]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_和  
-[removeAllowedWifiList]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_接口入参时，从API version 21开始，该属性可选，默认值为空字符串。API version 20及之前的版本，该属性必填。
+作为[addAllowedWifiList](arkts-mdm-wifimanager-addallowedwifilist-f.md#addallowedwifilist)和  
+[removeAllowedWifiList](arkts-mdm-wifimanager-removeallowedwifilist-f.md#removeallowedwifilist)接口入参时，从API version 21开始，该属性可选，默认值为空字符串。API version 20及之前的版本，该属性必填。
 
 **类型：** string
 

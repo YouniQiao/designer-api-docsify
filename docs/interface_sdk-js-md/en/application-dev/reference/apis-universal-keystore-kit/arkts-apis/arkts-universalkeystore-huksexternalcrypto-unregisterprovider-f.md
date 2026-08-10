@@ -1,12 +1,18 @@
 # unregisterProvider
 
+## Modules to Import
+
+```TypeScript
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## unregisterProvider
 
 ```TypeScript
 function unregisterProvider(providerName: string, params?: Array<HuksExternalCryptoParam>): Promise<void>
 ```
 
-Unregisters a specified external Provider. This API uses a promise to return the result.
+注销指定的外部provider。使用Promise异步回调。
 
 **Since:** 22
 
@@ -22,28 +28,28 @@ Unregisters a specified external Provider. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| providerName | string | Yes | Provider name, which contains a maximum of 128 characters. It is recommended that the value contain the vendor information, be globally unique, and not contain sensitive data such as personal contact information. If a provider has registered multiple extension capabilities, all the extension capabilities of the provider will be unregistered. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed during the operation.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_You can specify [HUKS\_\_\_ESCAPED\_UNDERSCORE\_\_\_EXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_CRYPTO\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_ABILITY\_\_\_ESCAPED\_UNDERSCORE\_\_\_NAME]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in the **params** parameter to unregister the corresponding **cryptoExtensionAbility** based on the bundle name, **providerName**, and **abilityName**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If [HUKS\_\_\_ESCAPED\_UNDERSCORE\_\_\_EXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_CRYPTO\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_ABILITY\_\_\_ESCAPED\_UNDERSCORE\_\_\_NAME]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is not specified in the **params** parameter or the **params** parameter is not passed, all providers under the corresponding **providerName** are unregistered. |
+| providerName | string | Yes | provider名称，最大长度为128。建议包含厂商信息，全局唯一，不要包含个人联系方式等敏感数据。如果provider注册了多个扩展能力，则该provider下的 扩展能力都会被注销。 |
+| params | Array&lt;HuksExternalCryptoParam&gt; | No | 操作时需传入的参数。&lt;br&gt;可以在param参数中指定 [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，将根据“包名 + providerName + abilityName”注销对应的cryptoExtensionAbility。&lt;br&gt;如果未在params参数中指定 [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，或者未传入params参数，则注销对应的 providerName下的所有Provider。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | the provider is not found. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
+| 801 | api is not supported. |
+| 12000005 | IPC communication failed. |
+| 12000018 | the input parameter is invalid. |
+| 201 | check permission failed. |
+| 12000014 | memory is insufficient. |
+| 12000012 | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
+| 12000011 | the provider is not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
@@ -65,7 +71,7 @@ const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [
 ];
 huksExternalCrypto.unregisterProvider(providerName, extProperties)
     .then((data) => {
-        console.info(`promise: unregisterProvider success`);
+        console.info('promise: unregisterProvider success.');
     });
 ```
 

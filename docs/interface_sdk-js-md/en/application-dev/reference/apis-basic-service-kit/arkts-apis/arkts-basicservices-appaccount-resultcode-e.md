@@ -1,9 +1,10 @@
 # ResultCode
 
-Enumerates the result codes.
-    **NOTE**\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_  
-        This API is supported since API version 8 and deprecated since API version 9. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示返回码的枚举。
+
+> **说明：**&lt;br/&gt;
+> > 从API version 8开始支持，从API version 9开始废弃。相关信息建议查看
+> [账号管理错误码](../../../reference/apis-basic-services-kit/errorcode-account.md)替代。
 
 **Since:** 8
 
@@ -21,7 +22,7 @@ Enumerates the result codes.
 SUCCESS = 0
 ```
 
-The operation is successful.
+表示操作成功。
 
 **Since:** 8
 
@@ -39,7 +40,7 @@ The operation is successful.
 ERROR_ACCOUNT_NOT_EXIST = 10001
 ```
 
-The application account does not exist.
+表示应用账号不存在。
 
 **Since:** 8
 
@@ -57,7 +58,7 @@ The application account does not exist.
 ERROR_APP_ACCOUNT_SERVICE_EXCEPTION = 10002
 ```
 
-The **AppAccountManager** service is abnormal.
+表示应用账号服务异常。
 
 **Since:** 8
 
@@ -75,7 +76,7 @@ The **AppAccountManager** service is abnormal.
 ERROR_INVALID_PASSWORD = 10003
 ```
 
-The password is invalid.
+表示密码无效。
 
 **Since:** 8
 
@@ -93,7 +94,7 @@ The password is invalid.
 ERROR_INVALID_REQUEST = 10004
 ```
 
-The request is invalid.
+表示请求无效。
 
 **Since:** 8
 
@@ -111,7 +112,7 @@ The request is invalid.
 ERROR_INVALID_RESPONSE = 10005
 ```
 
-The response is invalid.
+表示响应无效。
 
 **Since:** 8
 
@@ -129,7 +130,7 @@ The response is invalid.
 ERROR_NETWORK_EXCEPTION = 10006
 ```
 
-The network is abnormal.
+表示网络异常。
 
 **Since:** 8
 
@@ -147,7 +148,7 @@ The network is abnormal.
 ERROR_OAUTH_AUTHENTICATOR_NOT_EXIST = 10007
 ```
 
-The authenticator does not exist.
+表示认证器不存在。
 
 **Since:** 8
 
@@ -165,7 +166,7 @@ The authenticator does not exist.
 ERROR_OAUTH_CANCELED = 10008
 ```
 
-The authentication is canceled.
+表示鉴权取消。
 
 **Since:** 8
 
@@ -183,7 +184,7 @@ The authentication is canceled.
 ERROR_OAUTH_LIST_TOO_LARGE = 10009
 ```
 
-The size of the OAuth list exceeds the limit.
+表示开放授权列表过大。
 
 **Since:** 8
 
@@ -201,7 +202,7 @@ The size of the OAuth list exceeds the limit.
 ERROR_OAUTH_SERVICE_BUSY = 10010
 ```
 
-The OAuth service is busy.
+表示开放授权服务忙碌。
 
 **Since:** 8
 
@@ -219,7 +220,7 @@ The OAuth service is busy.
 ERROR_OAUTH_SERVICE_EXCEPTION = 10011
 ```
 
-The OAuth service is abnormal.
+表示开放授权服务异常。
 
 **Since:** 8
 
@@ -237,7 +238,7 @@ The OAuth service is abnormal.
 ERROR_OAUTH_SESSION_NOT_EXIST = 10012
 ```
 
-The session to be authenticated does not exist.
+表示鉴权会话不存在。
 
 **Since:** 8
 
@@ -255,7 +256,7 @@ The session to be authenticated does not exist.
 ERROR_OAUTH_TIMEOUT = 10013
 ```
 
-The authentication timed out.
+表示鉴权超时。
 
 **Since:** 8
 
@@ -273,7 +274,7 @@ The authentication timed out.
 ERROR_OAUTH_TOKEN_NOT_EXIST = 10014
 ```
 
-The authorization token does not exist.
+表示开放授权令牌不存在。
 
 **Since:** 8
 
@@ -291,7 +292,7 @@ The authorization token does not exist.
 ERROR_OAUTH_TOKEN_TOO_MANY = 10015
 ```
 
-The number of OAuth tokens reaches the limit.
+表示开放授权令牌过多。
 
 **Since:** 8
 
@@ -309,7 +310,7 @@ The number of OAuth tokens reaches the limit.
 ERROR_OAUTH_UNSUPPORT_ACTION = 10016
 ```
 
-The authentication operation is not supported.
+表示不支持的鉴权操作。
 
 **Since:** 8
 
@@ -327,7 +328,7 @@ The authentication operation is not supported.
 ERROR_OAUTH_UNSUPPORT_AUTH_TYPE = 10017
 ```
 
-The authentication type is not supported.
+表示不支持的鉴权类型。
 
 **Since:** 8
 
@@ -345,7 +346,7 @@ The authentication type is not supported.
 ERROR_PERMISSION_DENIED = 10018
 ```
 
-The required permission is missing.
+表示权限不足。
 
 **Since:** 8
 

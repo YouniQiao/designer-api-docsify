@@ -1,20 +1,19 @@
 # AeadParamsSpec
 
-Describes parameters in  
-[init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from  
-[ParamsSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
+用于AEAD（带附加数据的认证加密）对称加解密的  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法参数，继承自  
+[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_It is applicable to the CCM and GCM modes of  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_It is applicable to the GCM mode of  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_It is applicable to \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.
-    **NOTE**  
-    
-    When **AeadParamsSpec** is used for encryption in AES-CCM mode:  
-    - If the tag length is specified during encryption, the same length must be passed during decryption.  
-    
-    - In CCM mode, only one of [update]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ and  
-    [doFinal]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ can be called for encryption or decryption, and each method can  
-    be called only once.
+&lt;br&gt;适用于[AES算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#aes)的CCM和GCM分组模式。&lt;br&gt;适用于[SM4算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#sm4)的GCM分组模式。&lt;br&gt;适用于  
+[ChaCha20-Poly1305算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20)分组模式。
+
+> **说明：**
+> 
+> 在AES-CCM模式下使用AeadParamsSpec加密时：
+> - 如果加密时指定了tag长度，解密时也必须传入相同的长度。
+> 
+> - CCM模式下[update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update)与[doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)只能调用其
+> 中一个进行加密或者解密，且每个方法只能调用一次。
 
 **Inheritance/Implementation:** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
@@ -26,13 +25,19 @@ Describes parameters in
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## authenticatedData
 
 ```TypeScript
 authenticatedData?: Uint8Array
 ```
 
-Optional additional authenticated data.
+指定可选的附加认证数据。
 
 **Type:** Uint8Array
 
@@ -54,12 +59,13 @@ Optional additional authenticated data.
 nonce: Uint8Array
 ```
 
-Number used once.
-    **NOTE**  
-    - For AES-CCM, the nonce length ranges from 7 to 13 bytes.  
-    - For AES-GCM, the nonce length ranges from 1 to 128 bytes, 12 bytes are recommended.  
-    - For SM4-GCM, the nonce length ranges from 1 to 128 bytes, 12 bytes are recommended.  
-    - For ChaCha20-Poly1305, the nonce length must be 12 bytes.
+指明加解密参数nonce。
+
+> **说明：**
+> - 对于AES-CCM，nonce长度的取值范围为7~13字节。
+> - 对于AES-GCM，nonce长度范围为1~128字节，推荐使用12字节。
+> - 对于SM4-GCM，nonce长度范围为1~128字节，推荐使用12字节。
+> - 对于ChaCha20-Poly1305，nonce长度必须为12字节。
 
 **Type:** Uint8Array
 
@@ -81,16 +87,17 @@ Number used once.
 tagLen?: int
 ```
 
-Authentication tag length, in bytes.
+认证标签长度，单位为字节。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_For encryption, the tag will be added to the end of the ciphertext.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_For decryption, the tag should be at the end of the ciphertext.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_The value should be an integer.
-    **NOTE**  
-    - For AES-CCM, the default value is 12. The supported values are 4, 6, 8, 10, 12, 14, and 16.  
-    - For AES-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16.  
-    - For SM4-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16.  
-    - For ChaCha20-Poly1305, the default value is 16. The supported value is 16.
+&lt;br&gt;加密时，标签将被添加到密文末尾。&lt;br&gt;解密时，标签应位于密文末尾。&lt;br&gt;取值应为整数。
 
-**Type:** int
+> **说明：**
+> - 对于AES-CCM，默认值为12。支持的取值为4、6、8、10、12、14和16。
+> - 对于AES-GCM，默认值为16。支持的取值为4、8、12、13、14、15和16。
+> - 对于SM4-GCM，默认值为16。支持的取值为4、8、12、13、14、15和16。
+> - 对于ChaCha20-Poly1305，默认值为16。支持的取值为16。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

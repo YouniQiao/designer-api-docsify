@@ -1,6 +1,6 @@
 # ExchangeKey
 
-Defines new key of exchange data.
+定义交换数据的新键值。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines new key of exchange data.
 end: string
 ```
 
-New key to assign to the second position in the exchange. The original key is used by default.
+为第二个交换的位置分配新的键值，默认使用原键值。
 
 **Type:** string
 
@@ -38,7 +38,7 @@ New key to assign to the second position in the exchange. The original key is us
 start: string
 ```
 
-New key to assign to the first position in the exchange. The original key is used by default.
+为第一个交换的位置分配新的键值，默认使用原键值。
 
 **Type:** string
 

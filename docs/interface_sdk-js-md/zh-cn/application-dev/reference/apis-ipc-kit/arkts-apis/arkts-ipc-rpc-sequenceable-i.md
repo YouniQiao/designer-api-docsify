@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## marshalling
 
 ```TypeScript
@@ -38,7 +44,7 @@ marshalling(dataOut: MessageParcel): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataOut | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 可序列对象将被封送到的MessageParcel对象。 |
+| dataOut | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 可序列对象将被封送到的MessageParcel对象。 |
 
 **返回值：**
 
@@ -46,7 +52,7 @@ marshalling(dataOut: MessageParcel): boolean
 | --- | --- |
 | boolean | true：封送成功，false：封送失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -108,7 +114,7 @@ unmarshalling(dataIn: MessageParcel): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataIn | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 已将可序列对象封送到其中的MessageParcel对象。 |
+| dataIn | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 已将可序列对象封送到其中的MessageParcel对象。 |
 
 **返回值：**
 
@@ -116,7 +122,7 @@ unmarshalling(dataIn: MessageParcel): boolean
 | --- | --- |
 | boolean | true：反序列化成功，false：反序列化失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

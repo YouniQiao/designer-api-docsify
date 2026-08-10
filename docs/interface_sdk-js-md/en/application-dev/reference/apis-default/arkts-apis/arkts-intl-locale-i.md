@@ -18,7 +18,7 @@ Gets the most likely values for the language, script, and region of the locale b
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |  |
 
 ## minimize
 
@@ -26,7 +26,7 @@ Gets the most likely values for the language, script, and region of the locale b
 minimize(): Locale
 ```
 
-Attempts to remove information about the locale that would be added by calling \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+Attempts to remove information about the locale that would be added by calling `Locale.maximize()`.
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -36,7 +36,7 @@ Attempts to remove information about the locale that would be added by calling \
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |  |
 
 ## toString
 
@@ -54,7 +54,7 @@ Returns the locale's full locale identifier string.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [BCP47LanguageTag](../../apis-arkts/arkts-apis/arkts-arkts-intl-bcp47languagetag-t.md) |  |
 
 ## baseName
 

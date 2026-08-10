@@ -1,12 +1,18 @@
 # getResourceManager
 
+## Modules to Import
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## getResourceManager
 
 ```TypeScript
 export function getResourceManager(callback: AsyncCallback<ResourceManager>): void
 ```
 
-Obtains the **ResourceManager** object of the current application. This API uses an asynchronous callback to return the result.
+获取当前应用的资源管理对象。使用callback异步回调。
 
 **Since:** 6
 
@@ -22,9 +28,9 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ResourceManager&gt; | Yes | Callback used to return the **ResourceManager** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | Yes | 回调函数，返回资源管理对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
@@ -58,7 +64,7 @@ export default {
 export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void
 ```
 
-Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result.
+获取指定应用的资源管理对象。使用callback异步回调。
 
 **Since:** 6
 
@@ -74,10 +80,10 @@ Obtains the **ResourceManager** object of the specified application. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ResourceManager&gt; | Yes | Callback used to return the **ResourceManager** object. |
+| bundleName | string | Yes | 应用包名。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | Yes | 回调函数，返回应用包名对应的资源管理对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
@@ -113,7 +119,7 @@ export default {
 export function getResourceManager(): Promise<ResourceManager>
 ```
 
-Obtains the **ResourceManager** object of the current application. This API uses a promise to return the result.
+获取当前应用的资源管理对象。使用Promise异步回调。
 
 **Since:** 6
 
@@ -129,9 +135,9 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResourceManager&gt; | Promise used to return the **ResourceManager** object. |
+| Promise&lt;ResourceManager&gt; | Promise对象，返回资源管理对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
@@ -161,7 +167,7 @@ export default {
 export function getResourceManager(bundleName: string): Promise<ResourceManager>
 ```
 
-Obtains the **ResourceManager** object of the specified application. This API uses a promise to return the result.
+获取指定应用的资源管理对象。使用Promise异步回调。
 
 **Since:** 6
 
@@ -177,15 +183,15 @@ Obtains the **ResourceManager** object of the specified application. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
+| bundleName | string | Yes | 应用包名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResourceManager&gt; | Promise used to return the **ResourceManager** object. |
+| Promise&lt;ResourceManager&gt; | Promise对象，返回应用包名对应的资源管理对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';

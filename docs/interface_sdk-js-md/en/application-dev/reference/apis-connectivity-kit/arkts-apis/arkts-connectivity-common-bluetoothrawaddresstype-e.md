@@ -1,6 +1,6 @@
 # BluetoothRawAddressType
 
-Enum for the type of Bluetooth raw address.The enum is used only when the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+Enum for the type of Bluetooth raw address.The enum is used only when the {@link BluetoothAddress#addressType} is {@link BluetoothAddressType#REAL}.
 
 **Since:** 23
 

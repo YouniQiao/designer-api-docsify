@@ -1,5 +1,11 @@
 # getDeviceRotationRadian (System API)
 
+## Modules to Import
+
+```TypeScript
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## getDeviceRotationRadian
 
 ```TypeScript
@@ -30,11 +36,11 @@ The posture data contains the rotation angles of the x, y, and z axes, that is, 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ device capabilities. |
-| [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-abnormal-service) | Service exception. |
+| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| 202 | Permission check failed. A non-system application uses the system API. |
+| 32500001 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { deviceStatus } from '@kit.MultimodalAwarenessKit';

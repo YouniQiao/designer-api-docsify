@@ -1,6 +1,6 @@
-# @ohos.systemTime(System Time and Time Zone)
+# @ohos.systemTime(系统时间、时区)
 
-The **systemTime** module provides system time and time zone features. You can use the APIs of this module to set and obtain the system time and time zone.
+本模块主要由系统时间和系统时区功能组成。开发者可以设置、获取系统时间及系统时区。
 
 **Since:** 7
 
@@ -14,29 +14,35 @@ The **systemTime** module provides system time and time zone features. You can u
 
 **System capability:** SystemCapability.MiscServices.Time
 
+## Modules to Import
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime) | Obtains the time elapsed since the Unix epoch. This API uses an asynchronous callback to return the result. |
-| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime-1) | Obtains the time elapsed since the Unix epoch. This API uses an asynchronous callback to return the result. |
-| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime-2) | Obtains the time elapsed since the Unix epoch. This API uses a promise to return the result. |
-| [getDate](arkts-basicservices-systemtime-getdate-f.md#getdate) | Obtains the current system date. This API uses an asynchronous callback to return the result. |
-| [getDate](arkts-basicservices-systemtime-getdate-f.md#getdate-1) | Obtains the current system date. This API uses a promise to return the result. |
-| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime) | Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses an asynchronous callback to return the result. |
-| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime-1) | Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses an asynchronous callback to return the result. |
-| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime-2) | Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses a promise to return the result. |
-| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime) | Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous callback to return the result. |
-| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime-1) | Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous callback to return the result. |
-| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime-2) | Obtains the time elapsed since system startup, including the deep sleep time. This API uses a promise to return the result. |
-| [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md#gettimezone) | Obtains the system time zone. This API uses an asynchronous callback to return the result. |
-| [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md#gettimezone-1) | Obtains the system time zone. This API uses a promise to return the result. |
-| [setDate](arkts-basicservices-systemtime-setdate-f.md#setdate) | Sets the system date. This API uses an asynchronous callback to return the result. |
-| [setDate](arkts-basicservices-systemtime-setdate-f.md#setdate-1) | Sets the system date. This API uses a promise to return the result. |
-| [setTime](arkts-basicservices-systemtime-settime-f.md#settime) | Sets the system time. This API uses an asynchronous callback to return the result. |
-| [setTime](arkts-basicservices-systemtime-settime-f.md#settime-1) | Sets the system time. This API uses a promise to return the result. |
-| [setTimezone](arkts-basicservices-systemtime-settimezone-f.md#settimezone) | Sets the system time zone. This API uses an asynchronous callback to return the result. |
-| [setTimezone](arkts-basicservices-systemtime-settimezone-f.md#settimezone-1) | Sets the system time zone. This API uses a promise to return the result. |
+| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime) | 获取自Unix纪元以来经过的时间，使用callback异步回调。 |
+| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime-1) | 获取自Unix纪元以来经过的时间，使用callback异步回调。 |
+| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime-2) | 获取自Unix纪元以来经过的时间，使用Promise异步回调。 |
+| [getDate](arkts-basicservices-systemtime-getdate-f.md#getdate) | 获取当前系统日期，使用callback异步回调。 |
+| [getDate](arkts-basicservices-systemtime-getdate-f.md#getdate-1) | 获取当前系统日期，使用Promise异步回调。 |
+| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback异步回调。 |
+| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime-1) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback异步回调。 |
+| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime-2) | 获取自系统启动以来经过的时间，不包括深度睡眠时间，使用Promise异步回调。 |
+| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。 |
+| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime-1) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。 |
+| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime-2) | 获取自系统启动以来经过的时间，包括深度睡眠时间，使用Promise异步回调。 |
+| [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md#gettimezone) | 获取系统时区，使用callback异步回调。 |
+| [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md#gettimezone-1) | 获取系统时区，使用Promise异步回调。 |
+| [setDate](arkts-basicservices-systemtime-setdate-f.md#setdate) | 设置系统日期，使用callback异步回调。 |
+| [setDate](arkts-basicservices-systemtime-setdate-f.md#setdate-1) | 设置系统日期，使用Promise异步回调。 |
+| [setTime](arkts-basicservices-systemtime-settime-f.md#settime) | 设置系统时间，使用callback异步回调。 |
+| [setTime](arkts-basicservices-systemtime-settime-f.md#settime-1) | 设置系统时间，使用Promise异步回调。 |
+| [setTimezone](arkts-basicservices-systemtime-settimezone-f.md#settimezone) | 设置系统时区，使用callback异步回调。 |
+| [setTimezone](arkts-basicservices-systemtime-settimezone-f.md#settimezone-1) | 使用Promise异步回调设置系统时区。 |
 

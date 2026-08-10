@@ -4,7 +4,7 @@
 declare type WebviewController = import('../api/@ohos.web.webview').default.WebviewController
 ```
 
-Provides methods for controlling the web controller.
+提供Web控制器的方法。
 
 **Since:** 9
 

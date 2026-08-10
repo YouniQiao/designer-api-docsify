@@ -1,6 +1,6 @@
 # Service
 
-Describes the SSAP service.
+SSAP服务。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes the SSAP service.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## events
 
 ```TypeScript
 events?: Event[]
 ```
 
-The events belong to this service.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_This field is not supported in [addService]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+属于此服务的事件。&lt;br&gt;[addService](arkts-connectivity-ssap-server-i.md#addservice)方法中不支持该字段。
 
-**Type:** Event[]
+**Type:** [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[]
 
 **Since:** 26.0.0
 
@@ -38,9 +44,9 @@ The events belong to this service.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_This field 
 methods?: Method[]
 ```
 
-The methods belong to this service.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_This field is not supported in [addService]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+属于此服务的方法。&lt;br&gt;[addService](arkts-connectivity-ssap-server-i.md#addservice)方法中不支持此字段。
 
-**Type:** Method[]
+**Type:** [Method](arkts-connectivity-ssap-method-i-sys.md)[]
 
 **Since:** 26.0.0
 

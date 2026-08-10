@@ -1,11 +1,11 @@
 # PluginComponentOptions (System API)
 
-Defines options for constructing a **PluginComponent**.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While historical version information is preserved for anonymous objects, there may be cases where the outer element  
-    's @since version number is higher than inner elements'. This does not affect interface usability.
+定义用于构造插件组件的选项。
+
+> **说明：**
+> 
+> 为了规范化匿名对象定义，此处的元素定义已在API版本18中进行修订。
+> 虽然为匿名对象保留了历史版本信息，但可能会出现外层元素的@since版本号高于内层元素的情况。这不影响接口的可用性。
 
 **Since:** 9
 
@@ -23,7 +23,7 @@ Defines options for constructing a **PluginComponent**.
 data: any
 ```
 
-Data passed to the **PluginComponent** provider.
+传给插件组件提供方使用的数据，类型不限（支持对象、字符串等）。具体数据格式由使用方与提供方协商定义。
 
 **Type:** any
 
@@ -43,9 +43,9 @@ Data passed to the **PluginComponent** provider.
 template: PluginComponentTemplate
 ```
 
-Template of the **PluginComponent**, which is bound to the component defined by the provider.
+插件组件模板。
 
-**Type:** PluginComponentTemplate
+**Type:** [PluginComponentTemplate](../arkts-apis/arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
 
 **Since:** 9
 

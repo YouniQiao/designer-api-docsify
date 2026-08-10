@@ -1,12 +1,18 @@
 # onFreeze
 
+## Modules to Import
+
+```TypeScript
+import { errorManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onFreeze
 
 ```TypeScript
 function onFreeze(observer: FreezeObserver): void
 ```
 
-Register an observer for freeze event.This function can only be called from main thread.Please note that each process only supports registering one observer.If you register multiple times, the later one will overwrite the previous one.
+注册冻屏事件观测器。此函数只能在主线程中调用。请注意，每个进程只支持注册一个观测器。如果多次注册，后注册的将覆盖之前的。
 
 **Since:** 24
 
@@ -20,12 +26,12 @@ Register an observer for freeze event.This function can only be called from main
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The freeze event observer. |
+| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | Yes | 应用主线程freeze观测器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| 16200001 | 调用者无效。 |
 

@@ -10,6 +10,12 @@ The correspondence information between IP and MAC address.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## iface
 
 ```TypeScript
@@ -36,7 +42,7 @@ ipAddress: NetAddress
 
 Link address of the network.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **Since:** 22
 

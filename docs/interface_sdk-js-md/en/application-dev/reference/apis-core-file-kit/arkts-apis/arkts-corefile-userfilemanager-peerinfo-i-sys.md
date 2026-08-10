@@ -14,6 +14,12 @@ Defines information about a registered device.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { userFileManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## deviceName
 
 ```TypeScript
@@ -42,7 +48,7 @@ Name of the registered device.
 readonly isOnline: boolean
 ```
 
-Whether the registered device is online. The value **true** means the registered device is online; the value  
+Whether the registered device is online. The value **true** means the registered device is online; the value   
 **false** means the opposite.
 
 **Type:** boolean

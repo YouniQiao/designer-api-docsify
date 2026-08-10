@@ -1,6 +1,6 @@
 # MenuItemConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **继承/实现关系：** MenuItemConfiguration extends [CommonConfiguration<MenuItemConfiguration>](CommonConfiguration<MenuItemConfiguration>)
 
@@ -20,10 +20,10 @@ triggerSelect(index: number, value: string): void
 
 下拉菜单选中某一项的回调函数。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_**说明：**
+&lt;br/&gt;**说明：**
 
-\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_index会赋值给事件[onSelect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件  
-[onSelect]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_回调中的文本参数。
+&lt;br/&gt;index会赋值给事件[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void))回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件  
+[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void))回调中的文本参数。
 
 **起始版本：** 12
 
@@ -56,7 +56,7 @@ icon?: ResourceStr
 
 string格式可用于加载网络图片和本地图片。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
 
@@ -126,7 +126,7 @@ symbolIcon?: SymbolGlyphModifier
 
 symbolIcon优先级高于icon。
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 12
 
@@ -152,7 +152,7 @@ value: ResourceStr
 
 当文本字符的长度超过菜单项文本区域的宽度时，文本将会被截断。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
 

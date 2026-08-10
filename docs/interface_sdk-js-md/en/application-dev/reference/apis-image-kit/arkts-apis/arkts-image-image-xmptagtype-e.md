@@ -1,6 +1,6 @@
 # XMPTagType
 
-Enumerates XMP tag type.
+表示XMP标签类型的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates XMP tag type.
 UNKNOWN = 0
 ```
 
-Unknown XMP tag type.
+未知类型。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Unknown XMP tag type.
 STRING = 1
 ```
 
-String XMP tag type.
+字符串类型。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ String XMP tag type.
 UNORDERED_ARRAY = 2
 ```
 
-Unordered array XMP tag type.
+无序数组类型。序列化时，此类型在XMP元数据中的格式为&lt;rdf:Bag&gt;。
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Unordered array XMP tag type.
 ORDERED_ARRAY = 3
 ```
 
-Ordered array XMP tag type.
+有序数组类型。序列化时，此类型在XMP元数据中的格式为&lt;rdf:Seq&gt;。
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ Ordered array XMP tag type.
 ALTERNATE_ARRAY = 4
 ```
 
-Alternate array XMP tag type.
+备选数组类型。序列化时，此类型在XMP元数据中的格式为&lt;rdf:Alt&gt;。
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ Alternate array XMP tag type.
 ALTERNATE_TEXT = 5
 ```
 
-Alternate text XMP tag type.
+多语言文本类型。序列化时，此类型为XMP格式的xml:lang限定符组成的备选数组。
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ Alternate text XMP tag type.
 STRUCTURE = 6
 ```
 
-Structure XMP tag type.
+结构体类型。不同于数组元素，结构体字段可以属于不同的命名空间。
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # CertChainBuildResult
 
-Represents the certificate chain build result.
+表示证书链创建结果。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents the certificate chain build result.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## certChain
 
 ```TypeScript
 readonly certChain: X509CertChain
 ```
 
-Certificate chain object created.
+生成的证书链对象。
 
-**Type:** X509CertChain
+**Type:** [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Certificate chain object created.
 readonly validationResult: CertChainValidationResult
 ```
 
-Result of the certificate chain validation.
+证书链校验结果。
 
-**Type:** CertChainValidationResult
+**Type:** [CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)
 
 **Since:** 12
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## error
 
 ```TypeScript
@@ -20,7 +26,7 @@ error: ErrorType
 
 上传的错误类型。
 
-**类型：** ErrorType
+**类型：** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
 
 **起始版本：** 26.0.0
 
@@ -42,7 +48,7 @@ processed: long
 
 已上传数据大小，取值范围[0, 9223372036854775807]，单位：Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 26.0.0
 
@@ -64,7 +70,7 @@ size: long
 
 当前文件总大小，取值范围[0, 9223372036854775807]，单位：Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 26.0.0
 
@@ -86,7 +92,7 @@ state: UploadState
 
 文件上传状态。
 
-**类型：** UploadState
+**类型：** [UploadState](arkts-corefile-cloudsync-uploadstate-e-sys.md)
 
 **起始版本：** 26.0.0
 

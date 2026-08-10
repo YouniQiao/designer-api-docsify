@@ -20,5 +20,5 @@ type OnAtomicServiceRequestSuccessFn = (appId: string) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appId | string | 是 | 被拉起原子化服务的appId。  |
+| appId | string | 是 | 被拉起原子化服务的appId。 |
 

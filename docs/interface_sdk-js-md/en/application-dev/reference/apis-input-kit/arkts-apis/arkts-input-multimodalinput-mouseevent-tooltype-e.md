@@ -1,6 +1,6 @@
 # ToolType
 
-Enumerates tool types.
+工具类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates tool types.
 UNKNOWN = 0
 ```
 
-Unknown type.
+未知类型。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Unknown type.
 MOUSE = 1
 ```
 
-Mouse.
+鼠标。
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Mouse.
 JOYSTICK = 2
 ```
 
-Joystick.
+操纵杆。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Joystick.
 TOUCHPAD = 3
 ```
 
-Touchpad.
+触控板。
 
 **Since:** 11
 

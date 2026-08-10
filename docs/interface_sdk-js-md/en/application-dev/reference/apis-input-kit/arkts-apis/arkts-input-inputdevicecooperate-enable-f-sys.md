@@ -1,12 +1,25 @@
 # enable (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
+```
+
 ## enable
 
 ```TypeScript
 function enable(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables screen hopping. This API uses an asynchronous callback to return the result.
+开启、关闭键鼠穿越，使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用
+> [cooperate.prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md/arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate)、
+> [cooperate.unprepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md/arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md#unpreparecooperate)
+> 替代。
 
 **Since:** 9
 
@@ -26,17 +39,17 @@ Enables or disables screen hopping. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable screen hopping. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
+| enable | boolean | Yes | 键鼠穿越使能状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当开启键鼠穿越成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDeviceCooperate } from '@kit.InputKit';
@@ -50,15 +63,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            inputDeviceCooperate.enable(true, (error: BusinessError) => {
+           inputDeviceCooperate.enable(true, (error: BusinessError) => {
               if (error) {
-                console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to enable keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 return;
               }
-              console.info(`Keyboard mouse crossing enable success.`);
+              console.info(`Succeeded in enabling keyboard mouse crossing.`);
             });
           } catch (error) {
-            console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to enable keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -73,7 +86,13 @@ struct Index {
 function enable(enable: boolean): Promise<void>
 ```
 
-Specifies whether to enable screen hopping. This API uses a promise to return the result.
+开启、关闭键鼠穿越，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用
+> [cooperate.prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md/arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate)、
+> [cooperate.unprepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md/arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md#unpreparecooperate)替代。
 
 **Since:** 9
 
@@ -93,22 +112,22 @@ Specifies whether to enable screen hopping. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable screen hopping. |
+| enable | boolean | Yes | 键鼠穿越使能状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDeviceCooperate } from '@kit.InputKit';
@@ -121,15 +140,11 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          try {
-            inputDeviceCooperate.enable(true).then(() => {
-              console.info(`Keyboard mouse crossing enable success.`);
-            }, (error: BusinessError) => {
-              console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
+          inputDeviceCooperate.enable(true).then(() => {
+            console.info(`Succeeded in enabling keyboard mouse crossing.`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to enable keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          });
         })
     }
   }

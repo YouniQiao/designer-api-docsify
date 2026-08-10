@@ -1,17 +1,24 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## off('BundleStatusChange')
 
 ```TypeScript
 function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 ```
 
-Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
-    [off]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+取消注册Callback。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [off](@ohos.bundle.bundleMonitor:bundleMonitor.off(type: BundleChangedEvent, callback?: Callback&lt;BundleChangedInfo&gt;))
+> 替代。
 
 **Since:** 8
 
@@ -33,8 +40,8 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'BundleStatusChange' | Yes | Event type. Only **BundleStatusChange** is supported. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return a successful result or error information. |
+| type | 'BundleStatusChange' | Yes | 指示应执行命令，只支持BundleStatusChange。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 程序启动作为入参的回调函数，返回正确结果或错误信息。 |
 
 
 ## off('BundleStatusChange')
@@ -43,12 +50,13 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 function off(type: 'BundleStatusChange'): Promise<string>
 ```
 
-Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
-    [off]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    instead.
+取消注册Callback。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [off](@ohos.bundle.bundleMonitor:bundleMonitor.off(type: BundleChangedEvent, callback?: Callback&lt;BundleChangedInfo&gt;))
+> 替代。
 
 **Since:** 8
 
@@ -70,11 +78,11 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'BundleStatusChange' | Yes | Event type. Only **BundleStatusChange** is supported. |
+| type | 'BundleStatusChange' | Yes | 指示应执行命令，只支持BundleStatusChange。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a successful result or error information. |
+| Promise&lt;string&gt; | Promise形式返回正确结果或错误信息。 |
 

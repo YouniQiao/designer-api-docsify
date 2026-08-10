@@ -1,5 +1,11 @@
 # isAppUid
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## isAppUid
 
 ```TypeScript
@@ -32,7 +38,7 @@ function isAppUid(v: number): boolean
 | --- | --- |
 | boolean | 返回判断结果。如果是应用程序的 uid 则返回 true； 否则返回 false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // uid通过process.uid获取

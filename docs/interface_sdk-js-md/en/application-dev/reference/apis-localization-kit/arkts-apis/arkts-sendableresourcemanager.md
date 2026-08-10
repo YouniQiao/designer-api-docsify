@@ -1,8 +1,8 @@
 # @ohos.sendableResourceManager
 
-This module provides the mutual conversion between [Resource]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ objects and  
-[SendableResource]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ objects. \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ implements the  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_ API and supports cross-thread transmission. After cross-thread transmission, the \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ object can be converted back to a \_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_ object and passed as a parameter to the [resource management]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ APIs to obtain resources.
+本模块提供[Resource](arkts-localization-sendableresourcemanager-resource-t.md)对象与  
+[SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md)对象之间的相互转换功能。SendableResource实现了  
+[ISendable](../../../arkts-utils/arkts-sendable.md#isendable)接口，支持跨线程传输。跨线程传输后，SendableResource对象可以再转换为Resource对象，作为参数传递给[资源管理](arkts-resourcemanager.md)接口以获取资源。
 
 **Since:** 12
 
@@ -12,19 +12,25 @@ This module provides the mutual conversion between [Resource]\_\_\_JSDOC\_LINK\_
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+## Modules to Import
+
+```TypeScript
+import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md#resourcetosendableresource) | Converts a \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object to a \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object that can be used for cross-thread transmission. |
-| [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md#sendableresourcetoresource) | Converts a \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object transmitted across threads to a \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object. |
+| [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md#resourcetosendableresource) | 将Resource对象转换为可用于跨线程传输的SendableResource对象。 |
+| [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md#sendableresourcetoresource) | 将跨线程传输的SendableResource对象转换为Resource对象。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Resource](arkts-localization-sendableresourcemanager-resource-t.md) | Represents resource-related information, including the application bundle name, application module name, resource ID, resource type, and other resource parameters. |
-| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | Represents Sendable resource-related information for cross-thread transmission, including the application bundle name, application module name, resource ID, resource type, and other resource parameters. |
+| [Resource](arkts-localization-sendableresourcemanager-resource-t.md) | 表示资源相关信息，包括应用包名、应用模块名、资源ID、资源类型和其他资源参数。 |
+| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 表示跨线程传输的Sendable资源相关信息，包括应用包名、应用模块名、资源ID、资源类型和其他资源参数。 |
 

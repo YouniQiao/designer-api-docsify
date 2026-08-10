@@ -1,6 +1,6 @@
 # CommonEventBatteryChangedKey
 
-表示COMMON\_EVENT\_BATTERY\_CHANGED通用事件附加信息的查询键。
+表示COMMON_EVENT_BATTERY_CHANGED通用事件附加信息的查询键。
 
 **起始版本：** 23
 

@@ -1,17 +1,24 @@
 # setLogLevel
 
+## Modules to Import
+
+```TypeScript
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setLogLevel
 
 ```TypeScript
 function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 ```
 
-Sets the minimum log level of the current application process.
+设置当前应用程序进程的最低日志级别。
 
-You can configure different preference strategies using the **prefer** parameter. The **PREFER\_CLOSE\_LOG** strategy has the same effect as the **setMinLogLevel()** function.
-    **NOTE**  
-    
-    This function does not take effect for debug applications.
+可通过prefer参数配置不同的偏好策略。如果选择策略PREFER_CLOSE_LOG，等同于调用setMinLogLevel函数。
+
+> **注意：**
+> 
+> debug版本应用下，此函数不生效。
 
 **Since:** 21
 
@@ -27,6 +34,6 @@ You can configure different preference strategies using the **prefer** parameter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Log level. |
-| prefer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Preference strategy. |
+| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | 日志级别。 |
+| prefer | [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md) | Yes | 偏好策略。 |
 

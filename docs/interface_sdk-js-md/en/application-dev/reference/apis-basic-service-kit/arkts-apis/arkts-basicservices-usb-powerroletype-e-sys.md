@@ -1,6 +1,6 @@
 # PowerRoleType (System API)
 
-Enumerates power role types.
+电源角色类型。
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ Enumerates power role types.
 NONE = 0
 ```
 
-None
+无。
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ None
 SOURCE = 1
 ```
 
-External power supply.
+外部供电。
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ External power supply.
 SINK = 2
 ```
 
-Internal power supply.
+内部供电。
 
 **Since:** 9
 

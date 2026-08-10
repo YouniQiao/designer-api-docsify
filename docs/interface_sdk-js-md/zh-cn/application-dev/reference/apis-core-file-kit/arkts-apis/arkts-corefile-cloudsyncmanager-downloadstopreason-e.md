@@ -1,6 +1,6 @@
 # DownloadStopReason
 
-全量下载停止原因的枚举，默认值为NO\_STOP。
+全量下载停止原因的枚举，默认值为NO_STOP。
 
 **起始版本：** 20
 

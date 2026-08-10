@@ -1,7 +1,7 @@
 # WindowMode
 
 启动UIAbility时窗口的创建模式，类型为枚举。可配合  
-[startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法使用。
+[startAbility](arkts-ability-uiabilitycontext-c.md#startability)方法使用。
 
 **起始版本：** 12
 

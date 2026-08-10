@@ -1,6 +1,6 @@
 # UpgradeStatus (System API)
 
-Enumerates update states.
+升级状态。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates update states.
 WAITING_DOWNLOAD = 20
 ```
 
-Waiting for download.
+待下载。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Waiting for download.
 DOWNLOADING = 21
 ```
 
-Downloading.
+下载中。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Downloading.
 DOWNLOAD_PAUSED = 22
 ```
 
-Download paused.
+下载暂停。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Download paused.
 DOWNLOAD_FAIL = 23
 ```
 
-Download failed.
+下载失败。
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ Download failed.
 WAITING_INSTALL = 30
 ```
 
-Waiting for installation.
+待安装。
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Waiting for installation.
 UPDATING = 31
 ```
 
-Updating.
+更新中。
 
 **Since:** 9
 
@@ -126,7 +126,7 @@ Updating.
 WAITING_APPLY = 40
 ```
 
-Waiting for applying the upgrade.
+待生效。
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ Waiting for applying the upgrade.
 APPLYING = 41
 ```
 
-Applying the update.
+生效中。
 
 **Since:** 9
 
@@ -162,7 +162,7 @@ Applying the update.
 UPGRADE_SUCCESS = 50
 ```
 
-Update succeeded.
+升级成功。
 
 **Since:** 9
 
@@ -180,7 +180,7 @@ Update succeeded.
 UPGRADE_FAIL = 51
 ```
 
-Update failed.
+升级失败。
 
 **Since:** 9
 

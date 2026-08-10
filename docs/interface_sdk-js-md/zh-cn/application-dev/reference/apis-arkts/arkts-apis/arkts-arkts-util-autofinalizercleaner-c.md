@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## register
 
 ```TypeScript
@@ -32,6 +38,6 @@ static register<T>(obj: AutoFinalizer<T>, heldValue: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| obj | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 是 | 注册到 cleaner 的对象。 |
+| obj | [AutoFinalizer](arkts-arkts-util-autofinalizer-i.md)&lt;T&gt; | 是 | 注册到 cleaner 的对象。 |
 | heldValue | T | 是 | 传递给 finalizer 的值。 |
 

@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## onAcquireInfo
 
 ```TypeScript
@@ -46,7 +52,7 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void
 | acquire | number | 是 |  |
 | extraInfo | any | 是 |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -84,9 +90,9 @@ onResult: (result: number, extraInfo: AuthResult) => void
 
 回调函数，返回认证结果。
 
-- **result**: 认证结果，参见[ResultCode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。  
+- **result**: 认证结果，参见[ResultCode](arkts-userauthentication-userauth-resultcode-e.md)。  
 - **extraInfo**: 扩展信息，不同情况下的具体信息。如果身份验证通过，则在extraInfo中返回用户认证令牌；如果身份验证失败，则在extraInfo中返回剩余的用户认证次数；如果身份验证执行器被锁定，则在  
-extraInfo中返回冻结时间，类型为[AuthResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+extraInfo中返回冻结时间，类型为[AuthResult](arkts-userauthentication-userauth-authresult-i.md)。
 
 **起始版本：** 8
 
@@ -105,9 +111,9 @@ extraInfo中返回冻结时间，类型为[AuthResult]\_\_\_JSDOC\_LINK\_DESC\_U
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | result | number | 是 |  |
-| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| extraInfo | [AuthResult](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-authresult-i.md) | 是 |  |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';

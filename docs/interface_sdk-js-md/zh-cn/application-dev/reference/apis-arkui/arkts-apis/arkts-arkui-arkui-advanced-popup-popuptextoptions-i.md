@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
+
 ## fontColor
 
 ```TypeScript
@@ -18,9 +24,9 @@ fontColor?: ResourceColor
 
 设置文本字体颜色。
 
-默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
+默认值：`\$r('sys.color.ohos_id_color_text_secondary')`
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **默认值：** $r('sys.color.ohos_id_color_text_secondary')
 
@@ -42,7 +48,7 @@ fontSize?: number | string | Resource
 
 设置文本字体大小。
 
-默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
+默认值：`\$r('sys.float.ohos_id_text_size_body2')` 
 
 string类型可选值：可以转化为数字的字符串（如'10'）或带长度单位的字符串（如'10px'），不支持设置百分比字符串。
 
@@ -96,13 +102,13 @@ string类型仅支持number类型取值的字符串形式，例如“400”，�
 text?: ResourceStr
 ```
 
-设置文本内容。
+设置文本内容。 
 
 **ArkTS模式：** 该接口仅适用于ArkTS-Sta。
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 

@@ -20,6 +20,6 @@ export type SliderTriggerChangeCallback = (value: double, mode: SliderChangeMode
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double | 是 | 设置当前的进度值。\_\_\_HTML\_TAG\_USD\_2\_\_\_取值范围：[[min]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_-[max]\_\_\_JSDOC\_LINK\_USD\_1\_\_\_]  |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 设置事件触发的相关状态值。  |
+| value | double | 是 | 设置当前的进度值。<br/>取值范围：[[min](../arkts-components/arkts-arkui-slideroptions-i.md/arkts-arkui-slideroptions-i.md)-[max](../arkts-components/arkts-arkui-slideroptions-i.md/arkts-arkui-slideroptions-i.md)] |
+| mode | [SliderChangeMode](../arkts-components/arkts-arkui-sliderchangemode-e.md) | 是 | 设置事件触发的相关状态值。 |
 

@@ -12,13 +12,19 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { AgentExtensionAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## onAgentInvoked
 
 ```TypeScript
 onAgentInvoked(agentId: string): void
 ```
 
-Called back when a LOW\_CODE agent is invoked.
+Called back when a LOW_CODE agent is invoked.
 
 **Since:** 26.0.0
 
@@ -36,5 +42,5 @@ Called back when a LOW\_CODE agent is invoked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agentId | string | Yes | Indicates the LOW\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE agent ID. |
+| agentId | string | Yes | Indicates the LOW_CODE agent ID. |
 

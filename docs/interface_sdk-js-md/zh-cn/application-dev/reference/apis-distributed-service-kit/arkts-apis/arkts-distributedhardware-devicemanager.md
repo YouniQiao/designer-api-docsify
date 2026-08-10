@@ -1,7 +1,7 @@
 # @ohos.distributedHardware.deviceManager
 
 本模块能力已更新至新模块。建议使用新模块的接口进行开发，参见  
-[@ohos.distributedDeviceManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。本模块提供分布式设备管理能力。系统应用可调用接口实现如下功能：
+[@ohos.distributedDeviceManager](arkts-distributeddevicemanager.md)。本模块提供分布式设备管理能力。系统应用可调用接口实现如下功能：
 
 - 注册和解除注册设备上下线变化监听。  
 - 发现周边不可信设备。  
@@ -21,6 +21,12 @@
 <!--Device-unnamed-declare namespace deviceManager--><!--Device-unnamed-declare namespace deviceManager-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+```
 
 ## 汇总
 

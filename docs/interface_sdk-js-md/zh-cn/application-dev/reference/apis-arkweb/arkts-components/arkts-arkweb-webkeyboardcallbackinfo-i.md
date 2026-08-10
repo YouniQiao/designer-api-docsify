@@ -1,6 +1,6 @@
 # WebKeyboardCallbackInfo
 
-Defines the web keyboard callback info related to the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ event.
+Defines the web keyboard callback info related to the {@link onInterceptKeyboardAttach} event.
 
 **起始版本：** 12
 
@@ -18,7 +18,7 @@ attributes: Record<string, string>
 
 The attributes of web input element.
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ controller: WebKeyboardController
 
 The web keyboard controller.
 
-**类型：** WebKeyboardController
+**类型：** [WebKeyboardController](arkts-arkweb-webkeyboardcontroller-c.md)
 
 **起始版本：** 12
 

@@ -10,6 +10,12 @@ Matching WLAN information structure.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## index
 
 ```TypeScript
@@ -18,7 +24,7 @@ index: int
 
 Indicates the index of the matched WLAN in the wlanBssidArray.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

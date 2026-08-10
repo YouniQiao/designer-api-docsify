@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly code:SyncResultCode
 
 表示同步结果的状态码。
 
-**类型：** SyncResultCode
+**类型：** [SyncResultCode](arkts-arkdata-relationalstore-syncresultcode-e.md)
 
 **起始版本：** 26.0.0
 
@@ -37,7 +43,7 @@ readonly device:string
 ```
 
 表示同步的设备ID，可通过  
-[getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_等接口获取所有可信设备ID列表。
+[getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)等接口获取所有可信设备ID列表。
 
 **类型：** string
 

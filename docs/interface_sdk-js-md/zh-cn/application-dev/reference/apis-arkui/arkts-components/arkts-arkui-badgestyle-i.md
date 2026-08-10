@@ -1,10 +1,11 @@
 # BadgeStyle
 
 Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大小。
-    **说明：**  
-    
-    当\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_大于0且\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_与\_\_\_INLINE\_CODE\_DESC\_USD\_2\_\_\_颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 \_\_\_INLINE\_CODE\_DESC\_USD\_3\_\_\_ 颜色的描边线。如  
-    需实现相关场景，建议使用[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_组件设置[outline]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_代替Badge组件。
+
+> **说明：**
+> 
+> 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边线。如
+> 需实现相关场景，建议使用[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件设置[outline](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#outline)代替Badge组件。
 
 **起始版本：** 7
 
@@ -24,7 +25,7 @@ Badge的颜色。
 
 默认值：Color.Red
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Red
 
@@ -84,7 +85,7 @@ borderColor?: ResourceColor
 
 默认值：Color.Red
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Red
 
@@ -116,7 +117,7 @@ borderWidth?: Length
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 1vp
 
@@ -142,7 +143,7 @@ color?: ResourceColor
 
 默认值：Color.White
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.White
 
@@ -262,7 +263,7 @@ outerBorderColor?: ResourceColor
 
 默认值：Color.White
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.White
 
@@ -292,7 +293,7 @@ outerBorderWidth?: LengthMetrics
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **默认值：** 0vp
 

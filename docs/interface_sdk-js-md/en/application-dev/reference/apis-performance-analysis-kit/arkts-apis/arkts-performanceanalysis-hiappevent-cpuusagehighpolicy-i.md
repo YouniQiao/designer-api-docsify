@@ -1,10 +1,10 @@
 # CpuUsageHighPolicy
 
-Defines the configuration policy for the high CPU usage event.
-    **NOTE**  
-    
-    After this API is called, the setting is persisted. If this API is called again and the corresponding parameter  
-    is not set, the value used by the system last time is used.
+提供CPU高负载事件配置策略的定义。
+
+> **注意：**
+> 
+> 该接口被调用后，会将设置值持久化。后续重复调用该接口时，若不设置对应参数，则取上一次系统取用的值。
 
 **Since:** 22
 
@@ -14,17 +14,23 @@ Defines the configuration policy for the high CPU usage event.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## backgroundLoadThreshold
 
 ```TypeScript
 backgroundLoadThreshold?: int
 ```
 
-High CPU usage threshold of the application background, in percentage. The value range is **[1, 100]**. The default value is **10**. If the value is not within the threshold range, the default value **10** is used.
+应用后台CPU高负载异常阈值，阈值范围：[1, 100]，单位：%，默认值：10。若设置值在阈值范围外，系统将取用默认值10。
 
-**Note**: It is recommended that the value be less than **10**.
+**说明：**建议取值小于10。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -42,11 +48,11 @@ High CPU usage threshold of the application background, in percentage. The value
 foregroundLoadThreshold?: int
 ```
 
-High CPU usage threshold of the application foreground, in percentage. The value range is **[1, 100]**. The default value is **30**. If the value is not within the threshold range, the default value **30** is used.
+应用前台CPU高负载异常阈值，阈值范围：[1, 100]，单位：%，默认值：30。若设置值在阈值范围外，系统将取用默认值30。
 
-**Note**: It is recommended that the value be less than **30**.
+**说明：**建议取值小于30。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -64,21 +70,21 @@ High CPU usage threshold of the application foreground, in percentage. The value
 perfLogCaptureCount?: int
 ```
 
-Number of log collection times per day. Once the system detects that the number of log collection times exceeds the set value, the system still reports the event normally, but the **external\_log** field in the exception event is not attached with the log file path information.
+采样栈每日采集次数。一旦系统检测到当前异常日志的采集次数超过设置值，系统仍会正常上报事件，但异常事件中的external_log字段，将不再附加日志文件路径信息。
 
-For debug-type applications, the threshold range is **[-1, 100]**.
+Debug版本应用，阈值范围：[-1, 100]；
 
-For release-type applications, the threshold range is **[0, 20]**.
+Release版本应用，阈值范围：[0, 20]。
 
-Unit: times. Default value: **1**.
+单位：次，默认值：1。
 
-If the value is not within the threshold range, the default value **1** is used.
+若设置值在阈值范围外，系统将取用默认值1。
 
-**NOTE**
+**说明：**
 
-1. The value **-1** indicates that log collection times are not limited.2. The value **0** indicates that logs are not collected.3. A value greater than **0** indicates the maximum number of daily collection times.
+1. 值为-1，表示不限制采集日志次数。 2. 值为0，表示不采集日志。 3. 值大于0，表示每日采集次数上限。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -96,11 +102,11 @@ If the value is not within the threshold range, the default value **1** is used.
 threadLoadInterval?: int
 ```
 
-Interval for detecting high CPU usage of application threads, in seconds. The value range is **[5, 3600]**. The default value is **60**.
+应用线程CPU高负载异常检测周期，阈值范围：[5, 3600]，单位：秒，默认值：60。
 
-If the value is not within the threshold range, the default value **60** is used.
+若设置值在阈值范围外，系统将取用默认值60。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -118,9 +124,9 @@ If the value is not within the threshold range, the default value **60** is used
 threadLoadThreshold?: int
 ```
 
-High CPU usage threshold of the application thread, in percentage. The value range is **[15, 100]**. The default value is **70**. If the value is not within the threshold range, the default value **70** is used.
+应用线程CPU高负载异常阈值，阈值范围：[15, 100]，单位：%，默认值：70。若设置值在阈值范围外，系统将取用默认值70。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

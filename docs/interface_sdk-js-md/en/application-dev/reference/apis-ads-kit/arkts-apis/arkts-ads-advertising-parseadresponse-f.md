@@ -1,19 +1,24 @@
 # parseAdResponse
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## parseAdResponse
 
 ```TypeScript
-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, 
-    context: common.UIAbilityContext): void
+function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void
 ```
 
-Parses and processes the body of an ad response(this API is only open to some pre-installed system applications).
+解析并处理广告响应体（该接口仅对部分系统预置应用开放）。
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void-End-->
+<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -21,20 +26,20 @@ Parses and processes the body of an ad response(this API is only open to some pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adResponse | string | Yes | Ad response body. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback listener for ad requests. |
-| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| adResponse | string | Yes | 广告响应体。 |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes | 请求广告回调监听。 |
+| context | common.UIAbilityContext | Yes | UIAbility的上下文环境。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) | Failed to parse the ad response. |
+| 401 | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Device not supported. |
+| 21800005 | Failed to parse the ad response. |
+| 21800001 | System internal error. |
 
-**Example**
+## Examples
 
 For details about how to obtain the context, see [Acquisition of Context](../../application-models/application-context-stage.md#acquisition-of-context).
 

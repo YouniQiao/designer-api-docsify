@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## errorCode
 
 ```TypeScript
@@ -18,7 +24,7 @@ errorCode?: ConnectErrorCode
 
 表示连接错误码。
 
-**类型：** ConnectErrorCode
+**类型：** [ConnectErrorCode](arkts-distributedservice-abilityconnectionmanager-connecterrorcode-e.md)
 
 **起始版本：** 18
 

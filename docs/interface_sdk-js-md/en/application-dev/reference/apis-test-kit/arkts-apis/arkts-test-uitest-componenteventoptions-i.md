@@ -1,6 +1,6 @@
 # ComponentEventOptions
 
-Describes the extended configuration of component operation event listening,which is used to specify the listening process configuration and event filtering conditions.
+控件操作事件监听的扩展配置，用于指定监听过程配置及事件筛选条件。
 
 **Since:** 22
 
@@ -10,17 +10,23 @@ Describes the extended configuration of component operation event listening,whic
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## on
 
 ```TypeScript
 on?: On
 ```
 
-Attribute requirements of the target component to listen for. By default, all components are listened for.  
-**Note**: Only components with specified attributes can be listened for. Components with relative positions such as  
-**On.isBefore**, **On.isAfter**, and **On.within** cannot be listened for.
+监听目标控件的属性要求，默认监听所有控件。
 
-**Type:** On
+**说明：** 仅支持监听指定属性要求的控件，不支持监听指定On.isBefore、On.isAfter、On.within等相对位置的控件。
+
+**Type:** [On](arkts-test-uitest-on-c.md)
 
 **Since:** 22
 
@@ -38,9 +44,9 @@ Attribute requirements of the target component to listen for. By default, all co
 timeout?: int
 ```
 
-Listening timeout interval , to prevent listening failures casued by event notification delay.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range: The value should be >= 500\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Default value: 10000\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Unit: ms
+监听超时时间，取值范围：大于等于500的整数，默认值为10000，单位：ms。传入不在范围内的值抛出错误码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

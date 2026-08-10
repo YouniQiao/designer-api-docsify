@@ -4,7 +4,7 @@
 export type ErrorObserver = _ErrorObserver.default
 ```
 
-Defines the ErrorObserver module.
+ErrorObserver模块。
 
 **Since:** 9
 

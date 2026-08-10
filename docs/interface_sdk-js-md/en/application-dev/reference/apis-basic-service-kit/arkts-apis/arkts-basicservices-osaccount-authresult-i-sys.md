@@ -1,6 +1,6 @@
 # AuthResult (System API)
 
-Defines the authentication result information.
+表示认证结果的信息。
 
 **Since:** 8
 
@@ -12,15 +12,21 @@ Defines the authentication result information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## accountId
 
 ```TypeScript
 accountId?: int
 ```
 
-OS account ID, which is **undefined** by default.
+指示系统账号标识，默认为undefined。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -38,7 +44,7 @@ OS account ID, which is **undefined** by default.
 credentialId?: Uint8Array
 ```
 
-Credential ID, which is left blank by default.
+指示凭据ID，默认为空。
 
 **Type:** Uint8Array
 
@@ -58,9 +64,9 @@ Credential ID, which is left blank by default.
 freezingTime?: int
 ```
 
-Freezing time, in milliseconds. The default value is **-1**.
+指示冻结时间，单位为ms，默认为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -78,9 +84,9 @@ Freezing time, in milliseconds. The default value is **-1**.
 nextPhaseFreezingTime?: int
 ```
 
-Next freezing time, in milliseconds. The default value is **undefined**.
+指示下次冻结时间，单位为ms，默认为undefined。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -98,9 +104,9 @@ Next freezing time, in milliseconds. The default value is **undefined**.
 pinValidityPeriod?: long
 ```
 
-Authentication validity period, in milliseconds. The default value is **undefined**.
+指示认证有效期，单位为ms，默认为undefined。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -118,9 +124,9 @@ Authentication validity period, in milliseconds. The default value is **undefine
 remainTimes?: int
 ```
 
-Number of remaining authentication times, which is **-1** by default.
+指示剩余次数，默认为-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -138,7 +144,7 @@ Number of remaining authentication times, which is **-1** by default.
 token?: Uint8Array
 ```
 
-Authentication token, which is left blank by default.
+指示认证令牌，默认为空。
 
 **Type:** Uint8Array
 

@@ -14,13 +14,19 @@ MakerNoteHuaweiMetadata implements Metadata
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## clone
 
 ```TypeScript
 clone(): Promise<MakerNoteHuaweiMetadata>
 ```
 
-对[MakerNoteHuaweiMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_元数据进行克隆。使用Promise异步回调。
+对[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)元数据进行克隆。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -36,7 +42,7 @@ clone(): Promise<MakerNoteHuaweiMetadata>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise对象，当成功获取元数据时返回MakerNoteHuaweiMetadata元数据实例。 |
+| Promise&lt;[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)&gt; | Promise对象，当成功获取元数据时返回MakerNoteHuaweiMetadata元数据实例。 |
 
 ## createInstance
 
@@ -44,7 +50,7 @@ clone(): Promise<MakerNoteHuaweiMetadata>
 static createInstance(): MakerNoteHuaweiMetadata
 ```
 
-返回[MakerNoteHuaweiMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的空实例。
+返回[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)的空实例。
 
 **起始版本：** 23
 
@@ -60,7 +66,7 @@ static createInstance(): MakerNoteHuaweiMetadata
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回MakerNoteHuaweiMetadata的空实例。 |
+| [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) | 返回MakerNoteHuaweiMetadata的空实例。 |
 
 ## getAllProperties
 
@@ -118,7 +124,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 获取图像中属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -146,7 +152,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## setBlob
 
@@ -182,7 +188,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| 7600206 | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -192,7 +198,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 批量设置图片元数据中的指定属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -208,7 +214,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 包含要修改的MakerNoteHuaweiMetadata对象属性键值对的数组。 |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | 是 | 包含要修改的MakerNoteHuaweiMetadata对象属性键值对的数组。 |
 
 **返回值：**
 
@@ -220,7 +226,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## burstNumber
 
@@ -230,7 +236,7 @@ burstNumber?: int
 
 连拍数量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -250,7 +256,7 @@ captureMode?: int
 
 捕获模式。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -290,7 +296,7 @@ faceConfidences?: int[]
 
 对指定数量的面孔置信度。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -310,7 +316,7 @@ faceCount?: int
 
 人脸数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -330,7 +336,7 @@ faceSmileScores?: int[]
 
 特定数量面孔的微笑得分。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 
@@ -350,7 +356,7 @@ focusMode?: FocusMode
 
 镜头对焦控制策略，决定相机如何调整焦距。
 
-**类型：** FocusMode
+**类型：** [FocusMode](../../apis-camera-kit/arkts-apis/arkts-camera-camera-focusmode-e.md)
 
 **起始版本：** 23
 
@@ -452,7 +458,7 @@ physicalAperture?: int
 
 物理光圈值。单位是fNumber。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -472,7 +478,7 @@ pitchAngle?: int
 
 俯仰角度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -492,7 +498,7 @@ rollAngle?: int
 
 左右滚动角度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -512,7 +518,7 @@ sceneBeachConfidence?: int
 
 拍摄场景：海滩置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -532,7 +538,7 @@ sceneBlueSkyConfidence?: int
 
 拍摄场景：蓝天置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -552,7 +558,7 @@ sceneFlowersConfidence?: int
 
 拍摄场景：花卉置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -572,7 +578,7 @@ sceneFoodConfidence?: int
 
 拍摄场景：美食置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -592,7 +598,7 @@ sceneGreenPlantConfidence?: int
 
 拍摄场景：绿色植物置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -612,7 +618,7 @@ sceneNightConfidence?: int
 
 拍摄场景：夜景置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -632,7 +638,7 @@ sceneSnowConfidence?: int
 
 拍摄场景：雪景置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -652,7 +658,7 @@ sceneStageConfidence?: int
 
 拍摄场景：舞台演出置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -672,7 +678,7 @@ sceneSunsetConfidence?: int
 
 拍摄场景：日落置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -692,7 +698,7 @@ sceneTextConfidence?: int
 
 拍摄场景：文本置信度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -712,7 +718,7 @@ sceneVersion?: int
 
 场景识别算法版本号。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -732,7 +738,7 @@ xmageBottom?: int
 
 当照片包含XMAGE水印时，原始图片上，有效内容区域（不含水印覆盖范围）的下边界（相对于图片左上角原点）的垂直坐标。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -752,7 +758,7 @@ xmageColorMode?: XmageColorMode
 
 XMAGE颜色模式。
 
-**类型：** XmageColorMode
+**类型：** [XmageColorMode](arkts-image-image-xmagecolormode-e.md)
 
 **起始版本：** 23
 
@@ -772,7 +778,7 @@ xmageLeft?: int
 
 当照片包含XMAGE水印时，原始图片上，有效内容区域（不含水印覆盖范围）的左边界（相对于图片左上角原点）的水平坐标。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -792,7 +798,7 @@ xmageRight?: int
 
 当照片包含XMAGE水印时，原始图片上，有效内容区域（不含水印覆盖范围）的右边界（相对于图片左上角原点）的水平坐标。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -812,7 +818,7 @@ xmageTop?: int
 
 当照片包含XMAGE水印时，原始图片上，有效内容区域（不含水印覆盖范围）的上边界（相对于图片左上角原点）的垂直坐标。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -830,9 +836,9 @@ xmageTop?: int
 xmageWatermarkMode?: int
 ```
 
-XMAGE水印模式。具体取值请参考[Constants]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

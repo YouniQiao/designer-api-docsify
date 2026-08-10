@@ -1,6 +1,6 @@
 # SearchPlayVideoInfo
 
-The definition of SearchPlayVideoInfo.
+搜播的视频信息的定义。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The definition of SearchPlayVideoInfo.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## entityId
 
 ```TypeScript
 entityId: string
 ```
 
-Unique id of the Media.
+音频的唯一标识。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Unique id of the Media.
 episodeId?: string
 ```
 
-The episodeId of the video.
+视频的集数ID。
 
 **Type:** string
 
@@ -56,9 +62,9 @@ The episodeId of the video.
 episodeNumber?: int
 ```
 
-The episodeNumber of the video.
+视频的剧集序号。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -76,7 +82,7 @@ The episodeNumber of the video.
 extras?: string
 ```
 
-The extras of the video.
+视频的额外信息。
 
 **Type:** string
 

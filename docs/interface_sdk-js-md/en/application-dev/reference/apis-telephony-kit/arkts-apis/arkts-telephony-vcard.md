@@ -10,6 +10,12 @@ Provides applications with APIs for obtaining vcard.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { vcard } from 'kits/@kit.TelephonyKit';
+```
+
 ## Summary
 
 ### Functions

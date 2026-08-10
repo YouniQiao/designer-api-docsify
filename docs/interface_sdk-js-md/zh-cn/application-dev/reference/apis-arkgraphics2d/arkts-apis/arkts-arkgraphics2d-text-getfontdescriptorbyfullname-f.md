@@ -1,5 +1,11 @@
 # getFontDescriptorByFullName
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## getFontDescriptorByFullName
 
 ```TypeScript
@@ -24,8 +30,8 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fullName | string | 是 | 指定的字体名称。可以使用[getSystemFontFullNamesByType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取。 |
-| fontType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定的字体类型。 |
+| fullName | string | 是 | 指定的字体名称。可以使用[getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype)获取。 |
+| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | 是 | 指定的字体类型。 |
 
 **返回值：**
 
@@ -37,11 +43,9 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -64,40 +68,6 @@ struct Index {
             promise.then((fontDescriptor) => {
               console.info(`desc: ${JSON.stringify(fontDescriptor)}`)
             }).catch((error: BusinessError) => {
-              console.error(`Failed to get fontDescriptor by fullName, error: ${JSON.stringify(error)}`);
-            });
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, Row, FontWeight} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D"
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button("get fontDescriptor")
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .width(300)
-          .height(80)
-          .onClick(() => {
-            let fontType:text.SystemFontType = text.SystemFontType.GENERIC
-            let promise = text.getFontDescriptorByFullName("HarmonyOS Sans", fontType)
-            promise.then((fontdecriptor: text.FontDescriptor) => {
-              console.info(`desc: ${JSON.stringify(fontdecriptor)}`)
-            }).catch((error: Error) => {
               console.error(`Failed to get fontDescriptor by fullName, error: ${JSON.stringify(error)}`);
             });
           })

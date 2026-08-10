@@ -24,7 +24,7 @@ borderRadius?: Length
 
 取值范围：[0, +∞)。异常值时取默认值。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
@@ -46,12 +46,12 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-下划线的图源。支持[DrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[PixelMapDrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[LayeredDrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_和  
-[AnimatedDrawableDescriptor]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_类型。当传入无效图源时将显示默认的实线型下划线。
+下划线的图源。支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、  
+[PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、  
+[LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和  
+[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划线。
 
-**类型：** DrawableDescriptor
+**类型：** [DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 22
 
@@ -79,7 +79,7 @@ height?: Length
 
 取值范围：[0, +∞)。异常值时取默认值。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 2vp
 
@@ -109,7 +109,7 @@ marginTop?: Length
 
 取值范围：[0, +∞)。异常值时取默认值。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 8vp
 
@@ -141,7 +141,7 @@ width?: Length
 
 宽度设置为0时，按页签文本宽度显示。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 

@@ -1,7 +1,7 @@
 # Scenarios
 
-Enumerates the scenarios where the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ lifecycle callback is not triggered. It is used in the  
-[setOnNewWantSkipScenarios]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API.
+表示不触发[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)生命周期回调场景的枚举，用于  
+[setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口。
 
 **Since:** 20
 
@@ -17,7 +17,7 @@ Enumerates the scenarios where the [onNewWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\
 SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 ```
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_A scenario where the system API \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is called to move the UIAbility to the foreground.\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+&lt;!--RP1--&gt;系统接口[missionManager.moveMissionToFront](./js-apis-app-ability-missionManager-sys.md#missionmanagermovemissiontofront-2)接口触发的UIAbility到前台场景。&lt;!--RP1End--&gt;
 
 **Since:** 20
 
@@ -37,7 +37,7 @@ SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 SCENARIO_SHOW_ABILITY = 0x00000002
 ```
 
-A scenario where the [showAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API is called to move the UIAbility to the foreground.
+[showAbility](arkts-ability-uiabilitycontext-c.md#showability)接口触发的UIAbility到前台场景。
 
 **Since:** 20
 
@@ -57,8 +57,7 @@ A scenario where the [showAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API is c
 SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004
 ```
 
-A scenario where the  
-[backToCallerAbilityWithResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_API is called to move the UIAbility to the foreground.
+[backToCallerAbilityWithResult](arkts-ability-uiabilitycontext-c.md#backtocallerabilitywithresult)接口触发的UIAbility到前台场景。
 
 **Since:** 20
 

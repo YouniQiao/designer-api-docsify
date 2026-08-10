@@ -1,8 +1,8 @@
 # BusinessError
 
-Defines an error parameter. This API inherits from the **Error** class and is used to pass standard error information, including the error code and optional additional information.
+错误参数，继承自Error类，用于在接口调用失败时传递标准化的错误信息，包含错误码和可选的附加信息。
 
-**Inheritance/Implementation:** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-static/error-error-c.md)
+**Inheritance/Implementation:** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
 
 **Since:** 6
 
@@ -12,13 +12,19 @@ Defines an error parameter. This API inherits from the **Error** class and is us
 
 **System capability:** SystemCapability.Base
 
+## Modules to Import
+
+```TypeScript
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
+```
+
 ## code
 
 ```TypeScript
 code: number
 ```
 
-Error code returned when the API fails to be called. The specific error code is defined by each API. For details,see the error code description of the corresponding API.
+接口调用失败返回的错误码信息。具体错误码值由各接口定义，请参考对应接口的错误码说明。
 
 **Type:** number
 
@@ -40,7 +46,7 @@ Error code returned when the API fails to be called. The specific error code is 
 data?: T
 ```
 
-Error message returned when the API fails to be called. If this parameter is left empty, the error object does not contain additional data.
+接口调用失败时返回的附加错误信息。如果不填，则错误对象不包含附加数据。
 
 **Type:** T
 

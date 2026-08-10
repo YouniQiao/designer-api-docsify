@@ -18,7 +18,7 @@ autoDisable?: Boolean
 
 Search无文本内容时按钮置灰且不可点击。
 
-默认值：false
+默认值：false 
 
 true表示开启按钮置灰功能，false表示不开启。
 
@@ -46,7 +46,7 @@ fontColor?: ResourceColor
 
 文本按钮字体颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
 
@@ -70,7 +70,7 @@ fontSize?: Length
 
 默认值：跟随主题。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
 

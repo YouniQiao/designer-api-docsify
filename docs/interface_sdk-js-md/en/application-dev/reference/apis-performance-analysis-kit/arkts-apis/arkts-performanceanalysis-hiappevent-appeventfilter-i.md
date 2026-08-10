@@ -1,10 +1,10 @@
 # AppEventFilter
 
-Defines parameters of subscription filtering conditions of a [Watcher]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API is used to set event filtering conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed to.
-    **NOTE**  
-    
-    The subscription specifications of system events vary according to application types. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的订阅过滤条件的参数选项。用于在事件观察者中设置事件过滤条件，确保只有满足过滤条件的事件才会被监听处理。
+
+> **说明：**
+> 
+> 不同类型应用上，系统事件的订阅规格不同，具体规格可参见[HiAppEvent约束与限制](../../../dfx/hiappevent-intro.md#约束与限制)。
 
 **Since:** 9
 
@@ -14,14 +14,19 @@ Defines parameters of subscription filtering conditions of a [Watcher]\_\_\_JSDO
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## domain
 
 ```TypeScript
 domain: string
 ```
 
-Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or the event domain of the custom event information ([AppEventInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) passed through the  
-[Write]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API.
+需要订阅的事件领域。可以是系统事件领域（hiAppEvent.domain.OS）或开发者在使用[Write](arkts-performanceanalysis-hiappevent-write-f.md#write)接口时传入的自定义事件信息（[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)）中的事件领域。
 
 **Type:** string
 
@@ -41,9 +46,9 @@ Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or
 eventTypes?: EventType[]
 ```
 
-Event types. If this parameter is not set, events are not filtered by default.
+需要订阅的事件类型集合。默认不进行过滤。
 
-**Type:** EventType[]
+**Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)[]
 
 **Since:** 9
 
@@ -61,7 +66,7 @@ Event types. If this parameter is not set, events are not filtered by default.
 names?: string[]
 ```
 
-Names of the events to be subscribed. If this parameter is not set, events are not filtered by default.
+需要订阅的事件名称集合。默认不进行过滤。
 
 **Type:** string[]
 

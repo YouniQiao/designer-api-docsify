@@ -1,12 +1,18 @@
 # chargingStatus
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## chargingStatus
 
 ```TypeScript
 function chargingStatus(): BatteryChargeState
 ```
 
-Battery charging state of the current device.
+表示当前设备电池的充电状态。
 
 **Since:** 23
 
@@ -20,5 +26,5 @@ Battery charging state of the current device.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the battery charging state of the current device. |
+| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | 返回当前设备电池的充电状态。 |
 

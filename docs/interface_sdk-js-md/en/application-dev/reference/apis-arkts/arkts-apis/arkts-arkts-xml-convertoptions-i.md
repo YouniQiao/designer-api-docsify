@@ -1,6 +1,6 @@
 # ConvertOptions
 
-Options for conversion.
+转换选项，用于自定义XML到JavaScript对象的转换行为，如控制是否修剪空白字符、是否忽略特定组件（声明、指令、属性、注释、CDATA、Doctype和文本等），以及指定输出对象中各类型组件的属性键名称。
 
 **Since:** 8
 
@@ -10,13 +10,19 @@ Options for conversion.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { convertxml } from 'kits/@kit.ArkTS';
+```
+
 ## attributesKey
 
 ```TypeScript
 attributesKey: string
 ```
 
-Name of the attribute key for **attributes** in the output object.
+用于输出对象中attributes的属性键的名称，仅在ignoreAttributes为false时生效。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Name of the attribute key for **attributes** in the output object.
 cdataKey: string
 ```
 
-Name of the attribute key for **cdata** in the output object.
+用于输出对象中cdata的属性键的名称，仅在ignoreCDATA为false时生效。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Name of the attribute key for **cdata** in the output object.
 commentKey: string
 ```
 
-Name of the attribute key for **comment** in the output object.
+用于输出对象中comment的属性键的名称，仅在ignoreComment为false时生效。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ Name of the attribute key for **comment** in the output object.
 declarationKey: string
 ```
 
-Name of the attribute key for **declaration** in the output object.
+用于输出对象中declaration的属性键的名称，仅在ignoreDeclaration为false时生效。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ Name of the attribute key for **declaration** in the output object.
 doctypeKey: string
 ```
 
-Name of the attribute key for **doctype** in the output object.
+用于输出对象中doctype的属性键的名称，仅在ignoreDoctype为false时生效。
 
 **Type:** string
 
@@ -116,7 +122,7 @@ Name of the attribute key for **doctype** in the output object.
 elementsKey: string
 ```
 
-Name of the attribute key for **elements** in the output object.
+用于输出对象中elements的属性键的名称。
 
 **Type:** string
 
@@ -136,7 +142,7 @@ Name of the attribute key for **elements** in the output object.
 ignoreAttributes?: boolean
 ```
 
-Whether to ignore the element's attribute information. The value **true** means to ignore the element's attribute information, and **false** means the opposite. The default value is **false**.
+是否忽略元素的属性信息，true表示忽略元素的属性信息，false表示保留元素的属性信息，默认false。
 
 **Type:** boolean
 
@@ -156,7 +162,7 @@ Whether to ignore the element's attribute information. The value **true** means 
 ignoreCDATA?: boolean
 ```
 
-Whether to ignore the element's CDATA information. The value **true** means to ignore the element's CDATA information, and **false** means the opposite. The default value is **false**.
+是否忽略元素的CDATA（Character Data）信息，true表示忽略元素的CDATA信息，false表示保留元素的CDATA信息，默认false。
 
 **Type:** boolean
 
@@ -176,7 +182,7 @@ Whether to ignore the element's CDATA information. The value **true** means to i
 ignoreComment?: boolean
 ```
 
-Whether to ignore element comments. The value **true** means to ignore element comments, and **false** means the opposite. The default value is **false**.
+是否忽略元素的注释信息，true表示忽略元素的注释信息，false表示保留元素的注释信息，默认false。
 
 **Type:** boolean
 
@@ -196,8 +202,7 @@ Whether to ignore element comments. The value **true** means to ignore element c
 ignoreDeclaration?: boolean
 ```
 
-Whether to ignore the XML declaration. The value **true** means to ignore the XML declaration, and **false**  
-means the opposite. The default value is **false**.
+是否忽略XML声明，true表示忽略XML声明，false表示保留XML声明，默认false。
 
 **Type:** boolean
 
@@ -217,7 +222,7 @@ means the opposite. The default value is **false**.
 ignoreDoctype?: boolean
 ```
 
-Whether to ignore the element's Doctype information. The value **true** means to ignore the element's Doctype information, and **false** means the opposite. The default value is **false**.
+是否忽略Doctype（Document Type Declaration）信息，true表示忽略元素的Doctype信息，false表示保留元素的Doctype信息，默认false。
 
 **Type:** boolean
 
@@ -237,7 +242,7 @@ Whether to ignore the element's Doctype information. The value **true** means to
 ignoreInstruction?: boolean
 ```
 
-Whether to ignore the XML processing instruction. The value **true** means to ignore the XML processing instruction, and **false** means the opposite. The default value is **false**.
+是否忽略XML处理指令，true表示忽略XML处理指令，false表示保留XML处理指令，默认false。
 
 **Type:** boolean
 
@@ -257,7 +262,7 @@ Whether to ignore the XML processing instruction. The value **true** means to ig
 ignoreText?: boolean
 ```
 
-Whether to ignore the element's text information. The value **true** means to ignore the element's text information, and **false** means the opposite. The default value is **false**.
+是否忽略元素的文本信息，true表示忽略元素的文本信息，false表示保留元素的文本信息，默认false。
 
 **Type:** boolean
 
@@ -277,7 +282,7 @@ Whether to ignore the element's text information. The value **true** means to ig
 instructionKey: string
 ```
 
-Name of the attribute key for **instruction** in the output object.
+用于输出对象中instruction的属性键的名称，仅在ignoreInstruction为false时生效。
 
 **Type:** string
 
@@ -297,7 +302,7 @@ Name of the attribute key for **instruction** in the output object.
 nameKey: string
 ```
 
-Name of the attribute key for **name** in the output object.
+用于输出对象中name的属性键的名称。
 
 **Type:** string
 
@@ -317,7 +322,7 @@ Name of the attribute key for **name** in the output object.
 parentKey: string
 ```
 
-Name of the attribute key for **parent** in the output object.
+用于输出对象中parent的属性键的名称，parent表示当前元素所属的父元素名称。
 
 **Type:** string
 
@@ -337,7 +342,7 @@ Name of the attribute key for **parent** in the output object.
 textKey: string
 ```
 
-Name of the attribute key for **text** in the output object.
+用于输出对象中text的属性键的名称，仅在ignoreText为false时生效。
 
 **Type:** string
 
@@ -357,7 +362,7 @@ Name of the attribute key for **text** in the output object.
 trim: boolean
 ```
 
-Whether to trim the whitespace characters before and after the text. The value **true** means to trim the whitespace characters before and after the text, and **false** means to keep them.
+是否修剪位于文本内容前后的空白字符，true表示元素内文本内容前后的空白字符将会被修剪，false则表示空白字符会被保留，默认false。
 
 **Type:** boolean
 
@@ -377,7 +382,7 @@ Whether to trim the whitespace characters before and after the text. The value *
 typeKey: string
 ```
 
-Name of the attribute key for **type** in the output object.
+用于输出对象中type的属性键的名称，type标识XML组件的类型（如element、text、cdata、comment、instruction等）。
 
 **Type:** string
 

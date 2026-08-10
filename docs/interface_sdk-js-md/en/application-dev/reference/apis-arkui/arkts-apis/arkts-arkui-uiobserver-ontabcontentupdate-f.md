@@ -1,12 +1,18 @@
 # onTabContentUpdate
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## onTabContentUpdate
 
 ```TypeScript
 export function onTabContentUpdate(options: ObserverOptions, callback: Callback<TabContentInfo>): void
 ```
 
-Registers a callback function to be called when the tabContent is showed or hidden.
+监听TabContent页面的切换事件。
 
 **Since:** 23
 
@@ -22,8 +28,8 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The options object. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TabContentInfo&gt; | Yes | The callback function to be called when when the tabContent is showed or hidden. |
+| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes | 指定监听的Tabs组件的id。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | Yes | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
 
 
 ## onTabContentUpdate
@@ -32,7 +38,7 @@ Registers a callback function to be called when the tabContent is showed or hidd
 export function onTabContentUpdate(callback: Callback<TabContentInfo>): void
 ```
 
-Registers a callback function to be called when the tabContent is showed or hidden.
+监听TabContent页面的切换事件。
 
 **Since:** 23
 
@@ -48,5 +54,5 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | Yes | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
 

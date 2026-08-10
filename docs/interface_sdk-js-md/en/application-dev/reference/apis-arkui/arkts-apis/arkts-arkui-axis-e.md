@@ -1,6 +1,6 @@
 # Axis
 
-Defines the axis direction.
+定义轴的方向。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Defines the axis direction.
 Vertical
 ```
 
-Vertical direction.
+方向为纵向。
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Vertical direction.
 Horizontal
 ```
 
-Horizontal direction.
+方向为横向。
 
 **Since:** 7
 

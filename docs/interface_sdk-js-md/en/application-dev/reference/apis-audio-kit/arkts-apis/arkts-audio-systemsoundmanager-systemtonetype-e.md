@@ -1,6 +1,6 @@
 # SystemToneType
 
-Enum for system tone type.
+枚举，系统铃声类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enum for system tone type.
 SYSTEM_TONE_TYPE_SIM_CARD_0 = 0
 ```
 
-System tone type for sim card 0.
+sim卡1的短信提示音。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ System tone type for sim card 0.
 SYSTEM_TONE_TYPE_SIM_CARD_1 = 1
 ```
 
-System tone type for sim card 1.
+sim卡2的短信提示音。
 
 **Since:** 11
 
@@ -42,49 +42,13 @@ System tone type for sim card 1.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
-## SYSTEM_TONE_TYPE_ESIM_CARD_0
-
-```TypeScript
-SYSTEM_TONE_TYPE_ESIM_CARD_0 = 2
-```
-
-System tone type for esim card 0.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SystemToneType-SYSTEM_TONE_TYPE_ESIM_CARD_0 = 2--><!--Device-SystemToneType-SYSTEM_TONE_TYPE_ESIM_CARD_0 = 2-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-## SYSTEM_TONE_TYPE_ESIM_CARD_1
-
-```TypeScript
-SYSTEM_TONE_TYPE_ESIM_CARD_1 = 3
-```
-
-System tone type for esim card 1.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SystemToneType-SYSTEM_TONE_TYPE_ESIM_CARD_1 = 3--><!--Device-SystemToneType-SYSTEM_TONE_TYPE_ESIM_CARD_1 = 3-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
 ## SYSTEM_TONE_TYPE_NOTIFICATION
 
 ```TypeScript
 SYSTEM_TONE_TYPE_NOTIFICATION = 32
 ```
 
-System tone type notification.
+通知提示音。
 
 **Since:** 11
 

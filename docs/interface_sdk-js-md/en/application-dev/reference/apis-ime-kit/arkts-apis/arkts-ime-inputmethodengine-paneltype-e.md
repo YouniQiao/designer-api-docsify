@@ -1,6 +1,11 @@
 # PanelType
 
-Enumerates the types of the input method panel.
+输入法面板类型枚举。
+
+| 名称 | 值 | 说明 |  
+| ------------ | -- | ------------------ |  
+| SOFT_KEYBOARD | 0 | 软键盘类型。 |  
+| STATUS_BAR | 1 | 状态栏类型。 |
 
 **Since:** 10
 
@@ -16,7 +21,7 @@ Enumerates the types of the input method panel.
 SOFT_KEYBOARD = 0
 ```
 
-Panel for displaying a virtual software keyboard.
+软键盘类型。
 
 **Since:** 10
 
@@ -32,7 +37,7 @@ Panel for displaying a virtual software keyboard.
 STATUS_BAR
 ```
 
-Panel for displaying status bar.
+状态栏类型。
 
 **Since:** 10
 

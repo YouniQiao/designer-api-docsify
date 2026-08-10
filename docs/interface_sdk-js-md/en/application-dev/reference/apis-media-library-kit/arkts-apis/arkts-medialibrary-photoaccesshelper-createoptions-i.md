@@ -15,6 +15,12 @@ The title must meet the following requirements:
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## subtype
 
 ```TypeScript
@@ -23,7 +29,7 @@ subtype?: PhotoSubtype
 
 Subtype of the image or video file.
 
-**Type:** PhotoSubtype
+**Type:** [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md)
 
 **Since:** 12
 

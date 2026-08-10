@@ -1,6 +1,6 @@
 # Album
 
-The definition of Album.
+专辑的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
 
 **Inheritance/Implementation:** Album extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -12,13 +12,19 @@ The definition of Album.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## episodeCounts
 
 ```TypeScript
 episodeCounts?: string
 ```
 
-Total number of episodes in the program
+专辑的总音频数。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ Total number of episodes in the program
 favSubscribeData: FavoriteData
 ```
 
-Favorite/Subscribe information.
+收藏或订阅的信息。
 
-**Type:** FavoriteData
+**Type:** [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md)
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ Favorite/Subscribe information.
 playCounts: string
 ```
 
-Play counts.
+播放量。
 
 **Type:** string
 
@@ -78,7 +84,7 @@ Play counts.
 singer: string
 ```
 
-Singer name.
+歌手名。
 
 **Type:** string
 

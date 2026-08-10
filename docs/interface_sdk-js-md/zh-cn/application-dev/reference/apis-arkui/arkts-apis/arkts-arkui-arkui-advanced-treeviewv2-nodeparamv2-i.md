@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
+
 ## container
 
 ```TypeScript
@@ -66,7 +72,7 @@ editIcon?: ResourceStr
 
 默认值：空字符串。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -88,7 +94,7 @@ icon?: ResourceStr
 
 默认值：空字符串。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -158,7 +164,7 @@ primaryTitle?: ResourceStr
 
 默认值：空字符串。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -180,7 +186,7 @@ secondaryTitle?: ResourceStr
 
 默认值：空字符串。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -202,7 +208,7 @@ selectedIcon?: ResourceStr
 
 默认值：空字符串。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
 
@@ -224,7 +230,7 @@ Symbol编辑图标样式，优先级大于editIcon。
 
 默认值：undefined，编辑时显示与非编辑态一样
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 
@@ -246,7 +252,7 @@ Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和i
 
 默认值：undefined，表示不显示Symbol图标。
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 
@@ -268,7 +274,7 @@ Symbol选中图标样式，优先级大于selectedIcon。
 
 默认值：undefined，选中时显示与未选中一样
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 

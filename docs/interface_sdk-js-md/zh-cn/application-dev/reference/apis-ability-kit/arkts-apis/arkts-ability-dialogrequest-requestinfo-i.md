@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { dialogRequest } from 'kits/@kit.AbilityKit';
+```
+
 ## windowRect
 
 ```TypeScript
@@ -18,7 +24,7 @@ windowRect?: WindowRect
 
 表示模态弹框的位置属性。
 
-**类型：** WindowRect
+**类型：** [WindowRect](arkts-ability-dialogrequest-windowrect-i.md)
 
 **起始版本：** 10
 

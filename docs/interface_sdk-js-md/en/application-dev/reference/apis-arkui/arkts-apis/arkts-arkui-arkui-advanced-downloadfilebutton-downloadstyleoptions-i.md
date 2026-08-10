@@ -10,6 +10,12 @@ Defines the DownloadFileButton style option.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from 'kits/@kit.ArkUI';
+```
+
 ## fontColor
 
 ```TypeScript
@@ -18,7 +24,7 @@ fontColor?: ResourceColor
 
 Font color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ fontSize?: Dimension
 
 Font size.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 23
 
@@ -78,7 +84,7 @@ fontStyle?: FontStyle
 
 Font Style.
 
-**Type:** FontStyle
+**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **Since:** 23
 
@@ -118,7 +124,7 @@ iconColor?: ResourceColor
 
 Icon color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
 
@@ -138,7 +144,7 @@ iconSize?: Dimension
 
 Icon size.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 23
 
@@ -158,7 +164,7 @@ layoutDirection?: DownloadLayoutDirection
 
 Layout direction.
 
-**Type:** DownloadLayoutDirection
+**Type:** [DownloadLayoutDirection](arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md)
 
 **Since:** 23
 
@@ -178,7 +184,7 @@ textIconSpace?: Dimension
 
 Text and Icon space.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 23
 

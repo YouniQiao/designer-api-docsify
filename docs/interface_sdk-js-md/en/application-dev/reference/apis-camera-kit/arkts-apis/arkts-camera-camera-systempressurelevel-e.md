@@ -1,6 +1,6 @@
 # SystemPressureLevel
 
-Enumerates the system pressure levels.
+枚举，系统压力等级。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the system pressure levels.
 SYSTEM_PRESSURE_NORMAL = 0
 ```
 
-The system pressure is normal.
+系统压力正常。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ The system pressure is normal.
 SYSTEM_PRESSURE_MILD = 1
 ```
 
-The system pressure is elevated but not actively managed by the system.
+系统压力升高，但是系统不会主动管控。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ The system pressure is elevated but not actively managed by the system.
 SYSTEM_PRESSURE_SEVERE = 2
 ```
 
-The system pressure may affect the overall image quality and performance.
+系统压力可能对图像总质量、性能产生影响。
 
 **Since:** 20
 
@@ -70,7 +70,7 @@ The system pressure may affect the overall image quality and performance.
 SYSTEM_PRESSURE_CRITICAL = 3
 ```
 
-The system pressure has a significant impact on the image quality and performance.
+系统压力对图像质量、性能产生显著影响。
 
 **Since:** 20
 
@@ -88,7 +88,7 @@ The system pressure has a significant impact on the image quality and performanc
 SYSTEM_PRESSURE_SHUTDOWN = 4
 ```
 
-The system pressure is too high, causing the system to shut down.
+系统压力过高，停止工作。
 
 **Since:** 20
 

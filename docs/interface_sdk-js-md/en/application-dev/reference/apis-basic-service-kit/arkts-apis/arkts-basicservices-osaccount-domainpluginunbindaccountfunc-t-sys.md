@@ -5,7 +5,7 @@ type DomainPluginUnbindAccountFunc = (domainAccountInfo: DomainAccountInfo,
     callback: AsyncCallback<void>) => void
 ```
 
-Unbind the specified domain account.
+解绑指定的域账号。
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ Unbind the specified domain account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the domain account information.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Indicates the callback for notifying the unbinding result.  |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 表示域账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示绑定结果回调。 |
 

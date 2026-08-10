@@ -4,7 +4,7 @@
 declare type ButtonTriggerClickCallback = (xPos: number, yPos: number) => void
 ```
 
-Defines the callback type used in **ButtonConfiguration**.
+定义ButtonConfiguration中使用的回调类型。
 
 **Since:** 12
 
@@ -22,6 +22,6 @@ Defines the callback type used in **ButtonConfiguration**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xPos | number | Yes | X-coordinate of the click point.\_\_\_HTML\_TAG\_USD\_0\_\_\_Unit: vp  |
-| yPos | number | Yes | Y-coordinate of the click point.\_\_\_HTML\_TAG\_USD\_0\_\_\_Unit: vp  |
+| xPos | number | Yes | 点击位置x的坐标。<br/>单位：vp |
+| yPos | number | Yes | 点击位置y的坐标。<br/>单位：vp |
 

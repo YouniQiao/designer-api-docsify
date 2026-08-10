@@ -1,57 +1,44 @@
 # Grid
 
-The **Grid** component consists of cells formed by rows and columns. You can specify the cells where items are
-located to form various layouts.
+网格容器，由“行”和“列”分割的单元格所组成，通过指定“项目”所在的单元格做出各种各样的布局。
 
-> **NOTE**
+> **说明：**
 >
-> The component has been bound with gestures to implement functions such as follow-up scrolling. If you need to add
-> custom gestures, refer to [Gesture Blocking Enhancement]{@link common}.
+> 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强]{@link ./common}进行处理。
 
-## Child Components
+## 子组件
 
-Child components are limited to [GridItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_ and custom components. When using custom components inside  
-**Grid**, it is recommended to wrap the custom component with a **GridItem** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.
+仅支持[GridItem]{@link ./gridItem}子组件和自定义组件。自定义组件在Grid下使用时，建议使用GridItem作为自定义组件的顶层组件，不建议给自定义组件设置属性和事件方法。
 
-Child components can be dynamically generated using rendering control types  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_, and  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_. **LazyForEach** or **Repeat** is recommended to optimize performance.
-    **NOTE**  
-    
-    Below are the rules for calculating the indexes of the child components of **Grid**:  
-    
-    The index increases in ascending order of child components.  
-    
-    In the **if/else** statement, only the child components in the branch where the condition is met participate in the  
-    index calculation.  
-    
-    In the ForEach/LazyForEach and Repeat statements, index values are calculated for all expanded child components.  
-    
-    After changes occur in \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_, and  
-    \_\_\_MD\_LINK\_DESC\_USD\_7\_\_\_, index values are updated  
-    accordingly for child components.  
-    
-    The child component that has the **visibility** attribute set to **Hidden** or **None** is included in the index  
-    calculation.  
-    
-    The child component that has the **visibility** attribute set to **None** is not displayed, but still takes up the  
-    corresponding cell.  
-    
-    The child component that has the **position** attribute set is displayed in the corresponding cell, offset by the  
-    distance specified by **position** relative to the upper left corner of the grid. This child component does not  
-    scroll with the corresponding cell and is not displayed after the corresponding cell extends beyond the display  
-    range of the grid.  
-    
-    When there is a gap between child components, it is filled as much as possible based on the current display area.  
-    Therefore, the relative position of grid items may change as the grid scrolls.  
-    
-    Since API version 21, the maximum width and height of a single **Grid** child component are 16777216 px. In API  
-    version 20 and earlier versions, the maximum width and height of a single **Grid** child component are 1000000 px.  
-    Exceeding these limits may result in scrolling or display abnormalities.
+支持通过渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、  
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和  
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+
+> **说明：**
+> 
+> Grid子组件的索引值计算规则：
+> 
+> 按子组件的顺序依次递增。
+> 
+> if/else语句中，只有条件成立分支内的子组件会参与索引值计算，条件不成立分支内的子组件不计算索引值。
+> 
+> ForEach/LazyForEach和Repeat语句中，会计算展开所有子组件索引值。
+> 
+> [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和
+> [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)发生变化以后，会更新子组件索引值。
+> 
+> Grid子组件的visibility属性设置为Hidden或None时依然会计算索引值。
+> 
+> Grid子组件的visibility属性设置为None时不显示，但依然会占用子组件对应的网格。
+> 
+> Grid子组件设置position属性，会占用子组件对应的网格，子组件将显示在相对Grid左上角偏移position的位置。该子组件不会随其对应网格滚动，在对应网格滑出Grid显示范围外后不显示。
+> 
+> 当Grid子组件之间留有空隙时，会根据当前的展示区域尽可能填补空隙，因此GridItem可能会随着网格滚动而改变相对位置。
+> 
+> 从API version 21开始，Grid单个子组件的宽高最大为16777216px；API version 20及之前，Grid单个子组件的宽高最大为1000000px。子组件超出该大小可能导致滚动或显示异常。
 
 ## Grid
 
@@ -59,7 +46,7 @@ Child components can be dynamically generated using rendering control types
 Grid(scroller?: Scroller, layoutOptions?: GridLayoutOptions)
 ```
 
-Creates a **Grid** component.
+创建网格容器。
 
 **Since:** 7
 
@@ -75,8 +62,17 @@ Creates a **Grid** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Controller, which can be bound to scrollable components.\_\_\_HTML\_TAG\_USD\_5\_\_\_**NOTE**\_\_\_HTML\_TAG\_USD\_6\_\_\_It cannot be bound to the same scrolling control object as other scrollable components, such as [ArcList]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_, [List]\_\_\_JSDOC\_LINK\_USD\_1\_\_\_, [Grid]\_\_\_JSDOC\_LINK\_USD\_2\_\_\_, [Scroll]\_\_\_JSDOC\_LINK\_USD\_3\_\_\_, and [WaterFlow]\_\_\_JSDOC\_LINK\_USD\_4\_\_\_.  |
-| layoutOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Grid layout options. |
+| scroller | [Scroller](arkts-arkui-scroller-c.md) | No | 可滚动组件的控制器。用于与可滚动组件进行绑定。不设置时不绑定外部控制器，组件自行管理滚动行为。<br/>**说明：** <br/>不允许和其他滚动类组件，如： [ArcList]{@link @ohos.arkui.ArcList}、[List]{@link ./list}、[Grid]{@link ./grid}、[Scroll]{@link ./scroll}和 [WaterFlow]{@link ./water_flow}绑定同一个滚动控制对象。 |
+| layoutOptions | [GridLayoutOptions](../arkts-apis/arkts-arkui-grid-gridlayoutoptions-i.md) | No | Grid布局选项，用于配置GridItem跨行跨列等布局信息。不传入时，Grid按照rowsTemplate、columnsTemplate 等常规属性以及GridItem自身属性进行布局，不启用GridLayoutOptions提供的布局选项。<br/> |
 
 ## Summary
 
+- [ComputedBarAttribute](arkts-arkui-grid-computedbarattribute-i.md)
+- [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md)
+- [StartLineInfo](arkts-arkui-grid-startlineinfo-i-sys.md)
+- [UIGridEvent](arkts-arkui-grid-uigridevent-i.md)
+- [OnGetStartIndexByIndexCallback](arkts-arkui-grid-ongetstartindexbyindexcallback-t-sys.md)
+- [OnGetStartIndexByOffsetCallback](arkts-arkui-grid-ongetstartindexbyoffsetcallback-t-sys.md)
+- [OnGridScrollIndexCallback](arkts-arkui-grid-ongridscrollindexcallback-t.md)
+- [GridDirection](arkts-arkui-grid-griddirection-e.md)
+- [GridItemAlignment](arkts-arkui-grid-griditemalignment-e.md)

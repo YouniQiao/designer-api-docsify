@@ -7,7 +7,7 @@ export type RadiusItem = [
 ]
 ```
 
-Defines the RadiusItem.The first element is the width of the rounded corner, the second is the height of the rounded corner.
+设置圆角的宽度和高度。第一个参数是圆角的宽度，第二个参数是圆角的高度。
 
 **Since:** 23
 

@@ -1,12 +1,18 @@
 # dumpHeapData
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## dumpHeapData
 
 ```TypeScript
 function dumpHeapData(filename: string): void
 ```
 
-�����������ת��������\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_�ļ���
+�����������ת��������`filename.heapsnapshot`�ļ���
 
 **起始版本：** 8
 
@@ -24,9 +30,9 @@ function dumpHeapData(filename: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filename | string | 是 | �û��Զ�����������ת���ļ���������Ӧ�õ�\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Ŀ¼�������Ըò���������heapsnapshot�ļ���string���ȵ����ֵΪ128�� |
+| filename | string | 是 | �û��Զ�����������ת���ļ���������Ӧ�õ�`files`Ŀ¼�������Ըò���������heapsnapshot�ļ���string���ȵ����ֵΪ128�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

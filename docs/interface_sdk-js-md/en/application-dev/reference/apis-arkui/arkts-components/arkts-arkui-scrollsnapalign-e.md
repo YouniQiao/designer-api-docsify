@@ -1,6 +1,6 @@
 # ScrollSnapAlign
 
-Enumerates the alignment modes of list items when scrolling ends.
+设置列表项滚动结束对齐效果。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the alignment modes of list items when scrolling ends.
 NONE = 0
 ```
 
-No alignment. This is the default value.
+默认无列表项滚动结束对齐效果。
 
 **Since:** 10
 
@@ -36,11 +36,11 @@ No alignment. This is the default value.
 START = 1
 ```
 
-The first item in the view is aligned at the start of the list.
+视图中的第一项将在列表的开头对齐。
 
-**NOTE**
+**说明：**
 
-When the list hits the end, the items at the end must be completely displayed. In this case, the items at the start may not be aligned.
+当列表位移至末端，需要将末端的item完整显示，可能出现开头不对齐的情况。
 
 **Since:** 10
 
@@ -60,11 +60,11 @@ When the list hits the end, the items at the end must be completely displayed. I
 CENTER = 2
 ```
 
-The middle items in the view are aligned in the center of the list.
+视图中的中间项将在列表中心对齐。
 
-**NOTE**
+**说明：**
 
-The top and end items can be aligned to the center of the list. In this case, which may cause empty space to be visible in the list display.
+顶端和末尾的item都可以在列表中心对齐，列表显示可能露出空白。
 
 **Since:** 10
 
@@ -84,11 +84,11 @@ The top and end items can be aligned to the center of the list. In this case, wh
 END = 3
 ```
 
-The last item in the view is aligned at the end of the list.
+视图中的最后一项将在列表末尾对齐。
 
-**NOTE**
+**说明：**
 
-When the list hits the start, the items at the start must be completely displayed. In this case, the items at the end may not be aligned.
+当列表位移至顶端，需要将顶端的item完整显示，可能出现末尾不对齐的情况。
 
 **Since:** 10
 

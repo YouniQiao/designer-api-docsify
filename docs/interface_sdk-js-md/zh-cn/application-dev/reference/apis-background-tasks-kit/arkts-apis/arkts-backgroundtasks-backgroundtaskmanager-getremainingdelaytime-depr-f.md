@@ -24,10 +24,10 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestId | number | 是 | 延迟挂起的请求ID。这个值通过调用 [requestSuspendDelay]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_方法获取。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 是 | 回调函数，返回本次短时任务的剩余时间，单位：ms。 |
+| requestId | number | 是 | 延迟挂起的请求ID。这个值通过调用 [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay)方法获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回本次短时任务的剩余时间，单位：ms。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import backgroundTaskManager from '@ohos.backgroundTaskManager';
@@ -68,7 +68,7 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestId | number | 是 | 延迟挂起的请求ID。这个值通过调用 [requestSuspendDelay]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_方法获取。 |
+| requestId | number | 是 | 延迟挂起的请求ID。这个值通过调用 [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay)方法获取。 |
 
 **返回值：**
 
@@ -76,7 +76,7 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象，返回本次短时任务的剩余时间，单位：ms。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import backgroundTaskManager from '@ohos.backgroundTaskManager';

@@ -1,6 +1,6 @@
 # Watcher (System API)
 
-Defines a watcher for event subscription.
+系统事件订阅者对象接口。
 
 **Since:** 9
 
@@ -12,14 +12,19 @@ Defines a watcher for event subscription.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## onEvent
 
 ```TypeScript
 onEvent: (info: SysEventInfo) => void
 ```
 
-Callback for event subscription: (info: [SysEventInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) =  
-    void
+订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void。
 
 **Since:** 9
 
@@ -35,7 +40,7 @@ Callback for event subscription: (info: [SysEventInfo]\_\_\_JSDOC\_LINK\_DESC\_U
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | Yes |  |
 
 ## onServiceDied
 
@@ -43,8 +48,7 @@ Callback for event subscription: (info: [SysEventInfo]\_\_\_JSDOC\_LINK\_DESC\_U
 onServiceDied: () => void
 ```
 
-Callback for disabling of event subscription: () =  
-    void
+系统事件服务关闭的回调方法() => void。
 
 **Since:** 9
 
@@ -62,9 +66,9 @@ Callback for disabling of event subscription: () =
 rules: WatchRule[]
 ```
 
-Array of matching event subscription rules.
+订阅对象数组，每个订阅者对象包含多个订阅规则。
 
-**Type:** WatchRule[]
+**Type:** [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)[]
 
 **Since:** 9
 

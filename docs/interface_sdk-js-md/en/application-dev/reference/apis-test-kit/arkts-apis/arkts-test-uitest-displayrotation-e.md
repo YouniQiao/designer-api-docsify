@@ -1,6 +1,6 @@
 # DisplayRotation
 
-Describes the display rotation of the device.
+设备显示器的显示方向。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Describes the display rotation of the device.
 ROTATION_0 = 0
 ```
 
-The device display is not rotated and is in its original vertical orientation.
+设备显示器不旋转，初始形态垂直显示。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ The device display is not rotated and is in its original vertical orientation.
 ROTATION_90 = 1
 ```
 
-The device display rotates 90° clockwise and is in landscape orientation.
+设备显示器顺时针旋转90°，水平显示。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The device display rotates 90° clockwise and is in landscape orientation.
 ROTATION_180 = 2
 ```
 
-The device display rotates 180° clockwise and is in reverse vertical orientation.
+设备显示器顺时针旋转180°，逆向垂直显示。
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ The device display rotates 180° clockwise and is in reverse vertical orientatio
 ROTATION_270 = 3
 ```
 
-The device display rotates 270° clockwise and is in reverse landscape orientation.
+设备显示器顺时针旋转270°，逆向水平显示。
 
 **Since:** 9
 

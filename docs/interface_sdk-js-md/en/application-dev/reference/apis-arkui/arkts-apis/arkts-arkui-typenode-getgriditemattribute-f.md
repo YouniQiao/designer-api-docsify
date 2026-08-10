@@ -6,7 +6,7 @@
 export function getGridItemAttribute(node: FrameNode): GridItemAttribute | undefined
 ```
 
-Get the attribute instance of FrameNode to set attributes.
+获取FrameNode的属性实例用于属性设置。
 
 **Since:** 26.0.0
 
@@ -22,11 +22,11 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the target FrameNode. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标 FrameNode |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

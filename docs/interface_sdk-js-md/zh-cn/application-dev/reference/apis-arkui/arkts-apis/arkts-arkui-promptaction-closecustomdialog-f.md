@@ -1,5 +1,11 @@
 # closeCustomDialog
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## closeCustomDialog
 
 ```TypeScript
@@ -7,17 +13,18 @@ function closeCustomDialog(dialogId: number): void
 ```
 
 关闭自定义弹窗。
-    **说明：**  
-    
-    - 从API version 11开始支持，从API version 18开始废弃，建议使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。  
-closeCustomDialog需先通过\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中的  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_方法获取  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_对象，然后通过该对象进行调用。且直接使用closeCustomDialog可能导致  
-\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_的问题。  
-    
-    - 从API version 12开始，可以通过使用\_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_中的  
-\_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_方法获取当前UI上下文关联的  
-\_\_\_MD\_LINK\_DESC\_USD\_7\_\_\_对象。
+
+> **说明：**
+> 
+> - 从API version 11开始支持，从API version 18开始废弃，建议使用[closeCustomDialog](arkts-apis-uicontext-promptaction.md#closecustomdialog12-1)替代。
+closeCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
+[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取  
+[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用closeCustomDialog可能导致  
+[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> 
+> - 从API version 12开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
+[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
+[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
 
 **起始版本：** 11
 
@@ -45,6 +52,6 @@ closeCustomDialog需先通过\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中的
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| 100001 | Internal error. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

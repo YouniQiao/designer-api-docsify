@@ -1,5 +1,11 @@
 # addFirewallRule
 
+## 导入模块
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
+
 ## addFirewallRule
 
 ```TypeScript
@@ -10,15 +16,16 @@ function addFirewallRule(admin: Want, firewallRule: FirewallRule): void
 
 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-从API version 23开始，支持[LogType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    - 添加了[Action]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_为ALLOW规则后，将会默认添加DENY规则，不在ALLOW规则之内的网络数据包将会被丢弃或拦截。  
-    
-    - 设备重启，将会清空防火墙过滤规则。  
-    
-    - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规  
-    则中，均按[Action]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_为ALLOW、DENY、REJECT的顺序进行匹配。
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+
+> **说明：**
+> 
+> - 添加了[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后，将会默认添加DENY规则，不在ALLOW规则之内的网络数据包将会被丢弃或拦截。
+> 
+> - 设备重启，将会清空防火墙过滤规则。
+> 
+> - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md#adddomainfilterrule)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规
+> 则中，均按[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
 
 **起始版本：** 12
 
@@ -36,19 +43,19 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| firewallRule | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 添加防火墙过滤规则。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| firewallRule | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | 是 | 添加防火墙过滤规则。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { networkManager } from '@kit.MDMKit';

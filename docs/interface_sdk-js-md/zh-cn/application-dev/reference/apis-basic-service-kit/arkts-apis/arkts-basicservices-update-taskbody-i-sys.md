@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## errorMessages
 
 ```TypeScript
@@ -40,7 +46,7 @@ installMode: int
 
 安装模式，取值范围[0, 2]。取值原则：0为正常升级，适用于用户主动触发升级的场景；1为夜间升级，适用于设置夜间时段自动升级的场景；2为自动升级，适用于系统自动检测并执行升级的场景。应根据升级策略和用户体验需求选择。超出范围时抛出异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ progress: int
 
 进度，单位为%，取值范围[0, 100]，超出范围时抛出异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -78,9 +84,9 @@ progress: int
 status: UpgradeStatus
 ```
 
-升级状态。用于标识升级任务的当前执行阶段。包含下载状态（WAITING\_DOWNLOAD到DOWNLOAD\_FAIL）、安装状态（WAITING\_INSTALL到UPDATING）、生效状态（WAITING\_APPLY到APPLYING）和最终结果（UPGRADE\_SUCCESS或UPGRADE\_FAIL），用于任务状态监控、进度展示和异常处理等场景。
+升级状态。用于标识升级任务的当前执行阶段。包含下载状态（WAITING_DOWNLOAD到DOWNLOAD_FAIL）、安装状态（WAITING_INSTALL到UPDATING）、生效状态（WAITING_APPLY到APPLYING）和最终结果（UPGRADE_SUCCESS或UPGRADE_FAIL），用于任务状态监控、进度展示和异常处理等场景。
 
-**类型：** UpgradeStatus
+**类型：** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
 **起始版本：** 9
 
@@ -98,9 +104,9 @@ status: UpgradeStatus
 subStatus: int
 ```
 
-子状态，取值范围参考[UpgradeStatus]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_状态码。
+子状态，取值范围参考[UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)状态码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -140,7 +146,7 @@ versionDigestInfo: VersionDigestInfo
 
 版本摘要。
 
-**类型：** VersionDigestInfo
+**类型：** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
 **起始版本：** 9
 

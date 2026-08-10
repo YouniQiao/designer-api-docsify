@@ -1,6 +1,6 @@
 # AVVolumePanel
 
-A panel to set the system audio output volume.
+音量面板，可用于在当前应用内展示音量调节面板。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ A panel to set the system audio output volume.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
+## Modules to Import
+
+```TypeScript
+import { AVVolumePanelParameter, AVVolumePanel } from 'kits/@kit.AudioKit';
+```
+
 ## build
 
 ```TypeScript
 build(): void
 ```
 
-The method to build component.
+用于构造组件的建造接口。
 
 **Since:** 23
 
@@ -36,7 +42,15 @@ The method to build component.
 volumeLevel?: int
 ```
 
-Sets the device volume through the volume panel.The value should be between mininum and maxinum current device volume, otherwise it will be discarded.
+通过音量面板设置的音量值。
+
+该值应介于当前设备音量的最小值和最大值之间。
+
+如果该值大于当前设备音量的最大值，则视为设置最大音量值。
+
+如果该值小于当前设备音量的最小值，则视为设置最小音量值。
+
+获取设备的最大值、最小值和当前值，可参考[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)。
 
 **Type:** int
 
@@ -54,9 +68,11 @@ Sets the device volume through the volume panel.The value should be between mini
 volumeParameter?: AVVolumePanelParameter
 ```
 
-Sets the custom parameters of volume panel.
+设置音量面板的自定义参数。 
 
-**Type:** AVVolumePanelParameter
+如果不设置该参数，则为系统音量条。
+
+**Type:** [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
 
 **Since:** 23
 

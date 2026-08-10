@@ -1,6 +1,6 @@
 # AxisAction
 
-Enumerates the types of axis actions for axis events.
+定义轴事件的轴动作类型。
 
 **Since:** 17
 
@@ -16,7 +16,7 @@ Enumerates the types of axis actions for axis events.
 NONE = 0
 ```
 
-No axis event.
+无轴事件。
 
 **Since:** 17
 
@@ -36,7 +36,7 @@ No axis event.
 BEGIN = 1
 ```
 
-The axis event begins.
+轴事件开始。
 
 **Since:** 17
 
@@ -56,7 +56,7 @@ The axis event begins.
 UPDATE = 2
 ```
 
-The axis event is in progress.
+轴事件触发中。
 
 **Since:** 17
 
@@ -76,7 +76,7 @@ The axis event is in progress.
 END = 3
 ```
 
-The axis event ends.
+轴事件结束。
 
 **Since:** 17
 
@@ -96,7 +96,7 @@ The axis event ends.
 CANCEL = 4
 ```
 
-The axis event is canceled.
+轴事件取消。
 
 **Since:** 17
 

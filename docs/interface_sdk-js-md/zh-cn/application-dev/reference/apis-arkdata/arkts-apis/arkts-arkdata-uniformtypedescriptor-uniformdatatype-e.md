@@ -1,6 +1,6 @@
 # UniformDataType
 
-标准化数据类型之间存在归属关系，例如JPEG图片类型归属于IMAGE类型。更多预置数据类型参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+标准化数据类型之间存在归属关系，例如JPEG图片类型归属于IMAGE类型。更多预置数据类型参考[UTD预置列表](../../../database/uniform-data-type-list.md)。
 
 下表以枚举形式，列举了常用的标准化数据类型定义。
 
@@ -242,7 +242,7 @@ SOURCE_CODE = 'general.source-code'
 SCRIPT = 'general.script'
 ```
 
-所有脚本语言源代码的基类型，归属类型为SOURCE\_CODE。
+所有脚本语言源代码的基类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 11
 
@@ -278,7 +278,7 @@ shell脚本类型，归属类型为SCRIPT。
 CSH_SCRIPT = 'general.csh-script'
 ```
 
-C-shell脚本类型，归属类型为SHELL\_SCRIPT。
+C-shell脚本类型，归属类型为SHELL_SCRIPT。
 
 **起始版本：** 11
 
@@ -296,7 +296,7 @@ C-shell脚本类型，归属类型为SHELL\_SCRIPT。
 PERL_SCRIPT = 'general.perl-script'
 ```
 
-Perl脚本类型，归属类型为SHELL\_SCRIPT。
+Perl脚本类型，归属类型为SHELL_SCRIPT。
 
 **起始版本：** 11
 
@@ -314,7 +314,7 @@ Perl脚本类型，归属类型为SHELL\_SCRIPT。
 PHP_SCRIPT = 'general.php-script'
 ```
 
-PHP脚本类型，归属类型为SHELL\_SCRIPT。
+PHP脚本类型，归属类型为SHELL_SCRIPT。
 
 **起始版本：** 11
 
@@ -332,7 +332,7 @@ PHP脚本类型，归属类型为SHELL\_SCRIPT。
 PYTHON_SCRIPT = 'general.python-script'
 ```
 
-Python脚本类型，归属类型为SHELL\_SCRIPT。
+Python脚本类型，归属类型为SHELL_SCRIPT。
 
 **起始版本：** 11
 
@@ -350,7 +350,7 @@ Python脚本类型，归属类型为SHELL\_SCRIPT。
 RUBY_SCRIPT = 'general.ruby-script'
 ```
 
-Ruby脚本类型，归属类型为SHELL\_SCRIPT。
+Ruby脚本类型，归属类型为SHELL_SCRIPT。
 
 **起始版本：** 11
 
@@ -368,7 +368,7 @@ Ruby脚本类型，归属类型为SHELL\_SCRIPT。
 TYPE_SCRIPT = 'general.type-script'
 ```
 
-TypeScript源代码类型，归属类型为SOURCE\_CODE。
+TypeScript源代码类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 11
 
@@ -386,7 +386,7 @@ TypeScript源代码类型，归属类型为SOURCE\_CODE。
 JAVA_SCRIPT = 'general.java-script'
 ```
 
-JavaScript源代码类型，归属类型为SOURCE\_CODE。
+JavaScript源代码类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 11
 
@@ -422,7 +422,7 @@ CSS样式表类型，归属类型为SCRIPT。
 C_HEADER = 'general.c-header'
 ```
 
-C头文件类型，归属类型为SOURCE\_CODE。
+C头文件类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 11
 
@@ -440,7 +440,7 @@ C头文件类型，归属类型为SOURCE\_CODE。
 C_SOURCE = 'general.c-source'
 ```
 
-C源代码类型，归属类型为SOURCE\_CODE。
+C源代码类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 11
 
@@ -458,7 +458,7 @@ C源代码类型，归属类型为SOURCE\_CODE。
 C_PLUS_PLUS_HEADER = 'general.c-plus-plus-header'
 ```
 
-C++头文件类型，归属类型为SOURCE\_CODE。
+C++头文件类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 11
 
@@ -476,7 +476,7 @@ C++头文件类型，归属类型为SOURCE\_CODE。
 C_PLUS_PLUS_SOURCE = 'general.c-plus-plus-source'
 ```
 
-C++源代码类型，归属类型为SOURCE\_CODE。
+C++源代码类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 11
 
@@ -494,7 +494,7 @@ C++源代码类型，归属类型为SOURCE\_CODE。
 JAVA_SOURCE = 'general.java-source'
 ```
 
-Java源代码类型，归属类型为SOURCE\_CODE。
+Java源代码类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 11
 
@@ -512,7 +512,7 @@ Java源代码类型，归属类型为SOURCE\_CODE。
 TEX = 'general.tex'
 ```
 
-TEX源代码类型，归属类型为SOURCE\_CODE。
+TEX源代码类型，归属类型为SOURCE_CODE。
 
 **起始版本：** 12
 
@@ -602,7 +602,7 @@ DELIMITED_VALUES_TEXT = 'general.delimited-values-text'
 COMMA_SEPARATED_VALUES_TEXT = 'general.comma-separated-values-text'
 ```
 
-CSV文本类型，归属类型为DELIMITED\_VALUES\_TEXT。
+CSV文本类型，归属类型为DELIMITED_VALUES_TEXT。
 
 **起始版本：** 12
 
@@ -620,7 +620,7 @@ CSV文本类型，归属类型为DELIMITED\_VALUES\_TEXT。
 TAB_SEPARATED_VALUES_TEXT = 'general.tab-separated-values-text'
 ```
 
-TSV文本类型，归属类型为DELIMITED\_VALUES\_TEXT。
+TSV文本类型，归属类型为DELIMITED_VALUES_TEXT。
 
 **起始版本：** 12
 
@@ -638,7 +638,7 @@ TSV文本类型，归属类型为DELIMITED\_VALUES\_TEXT。
 EBOOK = 'general.ebook'
 ```
 
-所有电子书文件格式的基类型，归属类型为COMPOSITE\_OBJECT。
+所有电子书文件格式的基类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 11
 
@@ -1090,7 +1090,7 @@ FlashPix 图像文件类型，归属类型为IMAGE。
 WORD_DOC = 'com.microsoft.word.doc'
 ```
 
-Microsoft Word数据类型，归属类型为COMPOSITE\_OBJECT。
+Microsoft Word数据类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 11
 
@@ -1108,7 +1108,7 @@ Microsoft Word数据类型，归属类型为COMPOSITE\_OBJECT。
 EXCEL = 'com.microsoft.excel.xls'
 ```
 
-Microsoft Excel数据类型，归属类型为COMPOSITE\_OBJECT。
+Microsoft Excel数据类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 11
 
@@ -1126,7 +1126,7 @@ Microsoft Excel数据类型，归属类型为COMPOSITE\_OBJECT。
 PPT = 'com.microsoft.powerpoint.ppt'
 ```
 
-Microsoft PowerPoint演示文稿类型，归属类型为COMPOSITE\_OBJECT。
+Microsoft PowerPoint演示文稿类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 11
 
@@ -1144,7 +1144,7 @@ Microsoft PowerPoint演示文稿类型，归属类型为COMPOSITE\_OBJECT。
 WORD_DOT = 'com.microsoft.word.dot'
 ```
 
-Microsoft Word模板类型，归属类型为COMPOSITE\_OBJECT。
+Microsoft Word模板类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -1162,7 +1162,7 @@ Microsoft Word模板类型，归属类型为COMPOSITE\_OBJECT。
 POWERPOINT_PPS = 'com.microsoft.powerpoint.pps'
 ```
 
-Microsoft PowerPoint演示文稿幻灯片放映类型，归属类型为COMPOSITE\_OBJECT。
+Microsoft PowerPoint演示文稿幻灯片放映类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -1180,7 +1180,7 @@ Microsoft PowerPoint演示文稿幻灯片放映类型，归属类型为COMPOSITE
 POWERPOINT_POT = 'com.microsoft.powerpoint.pot'
 ```
 
-Microsoft PowerPoint演示文稿模板类型，归属类型为COMPOSITE\_OBJECT。
+Microsoft PowerPoint演示文稿模板类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -1198,7 +1198,7 @@ Microsoft PowerPoint演示文稿模板类型，归属类型为COMPOSITE\_OBJECT�
 EXCEL_XLT = 'com.microsoft.excel.xlt'
 ```
 
-Microsoft Excel模板类型，归属类型为COMPOSITE\_OBJECT。
+Microsoft Excel模板类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -1216,7 +1216,7 @@ Microsoft Excel模板类型，归属类型为COMPOSITE\_OBJECT。
 VISIO_VSD = 'com.microsoft.visio.vsd'
 ```
 
-Microsoft Visio数据类型，归属类型为COMPOSITE\_OBJECT。
+Microsoft Visio数据类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -1234,7 +1234,7 @@ Microsoft Visio数据类型，归属类型为COMPOSITE\_OBJECT。
 PDF = 'com.adobe.pdf'
 ```
 
-PDF数据类型，归属类型为COMPOSITE\_OBJECT。
+PDF数据类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 11
 
@@ -1252,7 +1252,7 @@ PDF数据类型，归属类型为COMPOSITE\_OBJECT。
 POSTSCRIPT = 'com.adobe.postscript'
 ```
 
-PostScript数据类型，归属类型为COMPOSITE\_OBJECT。
+PostScript数据类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 11
 
@@ -2088,7 +2088,7 @@ OPG存档文件类型，归属类型为ARCHIVE。
 TAZ_ARCHIVE = 'general.taz-archive'
 ```
 
-TAR压缩文件类型，归属类型为TAR\_ARCHIVE。
+TAR压缩文件类型，归属类型为TAR_ARCHIVE。
 
 **起始版本：** 12
 
@@ -2142,7 +2142,7 @@ DISK_IMAGE = 'general.disk-image'
 ISO = 'general.iso'
 ```
 
-光盘映像文件类型，归属类型为DISK\_IMAGE。
+光盘映像文件类型，归属类型为DISK_IMAGE。
 
 **起始版本：** 12
 
@@ -2286,7 +2286,7 @@ OPENXML = 'org.openxmlformats.openxml'
 WORDPROCESSINGML_DOCUMENT = 'org.openxmlformats.wordprocessingml.document'
 ```
 
-开源XML文档类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML文档类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2304,7 +2304,7 @@ WORDPROCESSINGML_DOCUMENT = 'org.openxmlformats.wordprocessingml.document'
 SPREADSHEETML_SHEET = 'org.openxmlformats.spreadsheetml.sheet'
 ```
 
-开源XML电子表格类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML电子表格类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2322,7 +2322,7 @@ SPREADSHEETML_SHEET = 'org.openxmlformats.spreadsheetml.sheet'
 PRESENTATIONML_PRESENTATION = 'org.openxmlformats.presentationml.presentation'
 ```
 
-开源XML演示文稿类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML演示文稿类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2340,7 +2340,7 @@ PRESENTATIONML_PRESENTATION = 'org.openxmlformats.presentationml.presentation'
 DRAWINGML_VISIO = 'org.openxmlformats.drawingml.visio'
 ```
 
-开源XML绘图文件类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML绘图文件类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2358,7 +2358,7 @@ DRAWINGML_VISIO = 'org.openxmlformats.drawingml.visio'
 DRAWINGML_TEMPLATE = 'org.openxmlformats.drawingml.template'
 ```
 
-开源XML绘图模板类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML绘图模板类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2376,7 +2376,7 @@ DRAWINGML_TEMPLATE = 'org.openxmlformats.drawingml.template'
 WORDPROCESSINGML_TEMPLATE = 'org.openxmlformats.wordprocessingml.template'
 ```
 
-开源XML文档模板类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML文档模板类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2394,7 +2394,7 @@ WORDPROCESSINGML_TEMPLATE = 'org.openxmlformats.wordprocessingml.template'
 PRESENTATIONML_TEMPLATE = 'org.openxmlformats.presentationml.template'
 ```
 
-开源XML演示文稿模板类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML演示文稿模板类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2412,7 +2412,7 @@ PRESENTATIONML_TEMPLATE = 'org.openxmlformats.presentationml.template'
 PRESENTATIONML_SLIDESHOW = 'org.openxmlformats.presentationml.slideshow'
 ```
 
-开源XML演示文稿幻灯片放映类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML演示文稿幻灯片放映类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2430,7 +2430,7 @@ PRESENTATIONML_SLIDESHOW = 'org.openxmlformats.presentationml.slideshow'
 SPREADSHEETML_TEMPLATE = 'org.openxmlformats.spreadsheetml.template'
 ```
 
-开源XML电子表格模板类型，归属类型为OPENXML和COMPOSITE\_OBJECT。
+开源XML电子表格模板类型，归属类型为OPENXML和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2466,7 +2466,7 @@ Office应用程序的开源文档类型，归属类型为ARCHIVE。
 OPENDOCUMENT_TEXT = 'org.oasis.opendocument.text'
 ```
 
-开源文档类型，归属类型为OPENDOCUMENT和COMPOSITE\_OBJECT。
+开源文档类型，归属类型为OPENDOCUMENT和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2484,7 +2484,7 @@ OPENDOCUMENT_TEXT = 'org.oasis.opendocument.text'
 OPENDOCUMENT_SPREADSHEET = 'org.oasis.opendocument.spreadsheet'
 ```
 
-开源文档电子表格类型，归属类型为OPENDOCUMENT和COMPOSITE\_OBJECT。
+开源文档电子表格类型，归属类型为OPENDOCUMENT和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2502,7 +2502,7 @@ OPENDOCUMENT_SPREADSHEET = 'org.oasis.opendocument.spreadsheet'
 OPENDOCUMENT_PRESENTATION = 'org.oasis.opendocument.presentation'
 ```
 
-开源文档演示类型，归属类型为OPENDOCUMENT和COMPOSITE\_OBJECT。
+开源文档演示类型，归属类型为OPENDOCUMENT和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -2520,7 +2520,7 @@ OPENDOCUMENT_PRESENTATION = 'org.oasis.opendocument.presentation'
 OPENDOCUMENT_GRAPHICS = 'org.oasis.opendocument.graphics'
 ```
 
-开源文档图形类型，归属类型为OPENDOCUMENT和COMPOSITE\_OBJECT。
+开源文档图形类型，归属类型为OPENDOCUMENT和COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -3048,7 +3048,7 @@ OPENHARMONY_PACKAGE = 'openharmony.package'
 OPENHARMONY_HAP = 'openharmony.hap'
 ```
 
-系统定义的能力包，归属类型为OPENHARMONY\_PACKAGE。
+系统定义的能力包，归属类型为OPENHARMONY_PACKAGE。
 
 **起始版本：** 11
 
@@ -3066,7 +3066,7 @@ OPENHARMONY_HAP = 'openharmony.hap'
 OPENHARMONY_HDOC = 'openharmony.hdoc'
 ```
 
-系统定义的备忘录数据类型，归属类型为COMPOSITE\_OBJECT。
+系统定义的备忘录数据类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -3084,7 +3084,7 @@ OPENHARMONY_HDOC = 'openharmony.hdoc'
 OPENHARMONY_HINOTE = 'openharmony.hinote'
 ```
 
-系统定义的笔记数据类型，归属类型为COMPOSITE\_OBJECT。
+系统定义的笔记数据类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -3102,7 +3102,7 @@ OPENHARMONY_HINOTE = 'openharmony.hinote'
 OPENHARMONY_STYLED_STRING = 'openharmony.styled-string'
 ```
 
-系统定义的样式字符串类型，归属类型为COMPOSITE\_OBJECT。
+系统定义的样式字符串类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 
@@ -3138,7 +3138,7 @@ OPENHARMONY_WANT = 'openharmony.want'
 OFD = 'general.ofd'
 ```
 
-开放版式文档类型，归属类型为COMPOSITE\_OBJECT。
+开放版式文档类型，归属类型为COMPOSITE_OBJECT。
 
 **起始版本：** 12
 

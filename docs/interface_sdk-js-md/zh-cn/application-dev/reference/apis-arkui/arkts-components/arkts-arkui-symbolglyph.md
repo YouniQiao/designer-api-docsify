@@ -33,7 +33,13 @@ SymbolGlyph(value?: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | SymbolGlyph组件的资源名，如 \$r('sys.symbol.ohos\_wifi')。不传入时不显示图标。  |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 | SymbolGlyph组件的资源名，如 \$r('sys.symbol.ohos_wifi')。不传入时不显示图标。 |
 
 ## 汇总
 
+- [EffectDirection](arkts-arkui-symbolglyph-effectdirection-e.md)
+- [EffectFillStyle](arkts-arkui-symbolglyph-effectfillstyle-e.md)
+- [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
+- [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md)
+- [SymbolEffectStrategy](arkts-arkui-symbolglyph-symboleffectstrategy-e.md)
+- [SymbolRenderingStrategy](arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md)

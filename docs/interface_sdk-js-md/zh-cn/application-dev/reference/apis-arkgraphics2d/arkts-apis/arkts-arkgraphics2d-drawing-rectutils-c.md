@@ -5,13 +5,14 @@
 主要的使用场景：
 
 1. 矩形快速构建与获取基本属性，如构造新矩形、拷贝矩形、获取矩形的宽高以及中心点等。2. 边界计算与调整，如判断包含关系、计算与更新矩形之间交集和并集，更新边界值等。3. 矩形平移与状态判断，如对矩形进行平移、将矩形平移到指定位置、判断矩形是否为空以及判断两个矩形是否相等。4. 矩形边界规范化，如对存在反转情况的矩形边界值进行交换排序等。
-    **说明：**  
-    
-    - 本Class首批接口从API version 20开始支持。  
-    
-    - 本模块使用屏幕物理像素单位px。  
-    
-    - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 20开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 20
 
@@ -20,6 +21,12 @@
 <!--Device-drawing-class RectUtils--><!--Device-drawing-class RectUtils-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## centerX
 
@@ -53,7 +60,7 @@ static centerX(rect: common2D.Rect): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 返回矩形中心的x轴坐标。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形中心的x轴坐标。单位为物理像素px。 |
 
 ## centerY
 
@@ -87,7 +94,7 @@ static centerY(rect: common2D.Rect): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 返回矩形中心的y轴坐标。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形中心的y轴坐标。单位为物理像素px。 |
 
 ## contains
 
@@ -145,10 +152,10 @@ static contains(rect: common2D.Rect, left: double, top: double, right: double, b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 用于判断是否包含由左上右下坐标组成的矩形的原矩形对象。 |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **返回值：**
 
@@ -183,8 +190,8 @@ static contains(rect: common2D.Rect, x: double, y: double): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 用于判断是否包含指定点的原矩形对象。 |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 要判断点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 要判断点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要判断点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要判断点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **返回值：**
 
@@ -224,7 +231,7 @@ static getHeight(rect: common2D.Rect): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 返回矩形的高。如果矩形的上边界大于下边界，获取的高度为负值，上边界小于下边界则为正值。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形的高。如果矩形的上边界大于下边界，获取的高度为负值，上边界小于下边界则为正值。单位为物理像素px。 |
 
 ## getWidth
 
@@ -258,7 +265,7 @@ static getWidth(rect: common2D.Rect): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 返回矩形的宽。如果矩形的左边界大于右边界，获取的宽度为负值，左边界小于右边界则为正值。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回矩形的宽。如果矩形的左边界大于右边界，获取的宽度为负值，左边界小于右边界则为正值。单位为物理像素px。 |
 
 ## inset
 
@@ -287,10 +294,10 @@ static inset(rect: common2D.Rect, left: double, top: double, right: double, bott
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 需要进行边界调整的原矩形对象。 |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 添加到矩形左边界的值（矩形左上角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 添加到矩形上边界的值（矩形左上角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 添加到矩形右边界的值（矩形右下角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 添加到矩形下边界的值（矩形右下角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 添加到矩形左边界的值（矩形左上角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 添加到矩形上边界的值（矩形左上角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 添加到矩形右边界的值（矩形右下角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 添加到矩形下边界的值（矩形右下角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
 
 ## intersect
 
@@ -461,7 +468,7 @@ static makeCopy(src: common2D.Rect): common2D.Rect | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect |  创建的新矩形。 |
+| common2D.Rect | 创建的新矩形。 |
 
 ## makeEmpty
 
@@ -505,7 +512,7 @@ static makeEmpty(): common2D.Rect | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect |  创建的矩形对象。 |
+| common2D.Rect | 创建的矩形对象。 |
 
 ## makeLtrb
 
@@ -567,7 +574,7 @@ static makeLtrb(left: double, top: double, right: double, bottom: double): commo
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect |  创建的矩形。 |
+| common2D.Rect | 创建的矩形。 |
 
 ## offset
 
@@ -596,8 +603,8 @@ static offset(rect: common2D.Rect, dx: double, dy: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 发生平移的矩形区域。 |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 水平方向平移的距离，该参数为浮点数。0表示不平移，负数表示向左平移，正数表示向右平移。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 竖直方向平移的距离，该参数为浮点数。0表示不平移，负数表示向上平移，正数表示向下平移。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 水平方向平移的距离，该参数为浮点数。0表示不平移，负数表示向左平移，正数表示向右平移。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 竖直方向平移的距离，该参数为浮点数。0表示不平移，负数表示向上平移，正数表示向下平移。单位为物理像素px。 |
 
 ## offsetTo
 
@@ -626,8 +633,8 @@ static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 发生平移的矩形区域。 |
-| newLeft | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 要平移到的对应位置的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| newTop | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 要平移到的对应位置的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| newLeft | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要平移到的对应位置的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| newTop | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要平移到的对应位置的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## setEmpty
 
@@ -678,10 +685,10 @@ static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 需要更新边界值的原矩形对象。 |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| left | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的左上角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## setRect
 

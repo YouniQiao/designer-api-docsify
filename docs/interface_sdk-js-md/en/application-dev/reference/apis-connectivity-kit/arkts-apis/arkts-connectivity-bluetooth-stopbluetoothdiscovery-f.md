@@ -1,5 +1,11 @@
 # stopBluetoothDiscovery
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## stopBluetoothDiscovery
 
 ```TypeScript
@@ -28,7 +34,7 @@ Stops Bluetooth device scanning.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let result : boolean = bluetooth.stopBluetoothDiscovery();

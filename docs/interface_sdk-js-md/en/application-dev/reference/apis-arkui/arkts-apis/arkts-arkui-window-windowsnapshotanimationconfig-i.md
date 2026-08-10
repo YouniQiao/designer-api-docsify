@@ -1,6 +1,6 @@
 # WindowSnapshotAnimationConfig
 
-Configuration for window snapshot animation.
+窗口截图动效的配置。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Configuration for window snapshot animation.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## delay
 
 ```TypeScript
 delay?: long
 ```
 
-The delay before the window snapshot fade-out animation begins (ms).If left unspecified, the parameter defaults to a value determined by the system animation context:350 for transitions between WindowStatusType.FLOATING and WindowStatusType.FULLSCREEN window status.50 for all other screenshot animation scenarios.The valid range for this parameter is 0-350.
+窗口截图淡出动效开始前的延迟时间（毫秒）。如果未指定，则该参数默认为由系统动效上下文确定的值：窗口状态在WindowStatusType.FLOATING和WindowStatusType.FULLSCREEN之间转换为50。350适用于所有其他截图动效场景。此参数的有效范围为0-350。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ The delay before the window snapshot fade-out animation begins (ms).If left unsp
 duration?: long
 ```
 
-The duration of the window snapshot fade-out animation (ms).If left unspecified, the parameter defaults to a value determined by the system animation context:400 for transitions between WindowStatusType.FLOATING and WindowStatusType.FULLSCREEN window status.250 for all other screenshot animation scenarios.The valid range for this parameter is 0-400.
+窗口截图淡出动效的持续时间（毫秒）。如果未指定，则该参数默认为由系统动效上下文确定的值：窗口状态在WindowStatusType.FLOING和WindowStatusType.FULLSCREEN之间转换为250。400适用于所有其他屏幕截图动效场景。此参数的有效范围为0-400。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 

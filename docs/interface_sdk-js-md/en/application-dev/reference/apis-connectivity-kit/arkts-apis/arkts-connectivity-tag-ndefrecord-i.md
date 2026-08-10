@@ -1,6 +1,6 @@
 # NdefRecord
 
-NDEF records definition, see NFCForum-TS-NDEF\_1.0.
+NDEF records definition, see NFCForum-TS-NDEF_1.0.
 
 **Since:** 12
 
@@ -10,6 +10,12 @@ NDEF records definition, see NFCForum-TS-NDEF\_1.0.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
+## Modules to Import
+
+```TypeScript
+import { tag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## id
 
 ```TypeScript
@@ -18,7 +24,7 @@ id: int[]
 
 id of NdefRecord
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 12
 
@@ -38,7 +44,7 @@ payload: int[]
 
 payload of NdefRecord
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 12
 
@@ -58,7 +64,7 @@ rtdType: int[]
 
 RTD type of NdefRecord
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 12
 
@@ -78,7 +84,7 @@ tnf: int
 
 tnf of NdefRecord
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

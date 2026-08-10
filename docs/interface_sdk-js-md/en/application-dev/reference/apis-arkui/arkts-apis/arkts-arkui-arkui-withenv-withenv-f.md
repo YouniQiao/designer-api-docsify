@@ -1,5 +1,11 @@
 # WithEnv
 
+## Modules to Import
+
+```TypeScript
+import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
+```
+
 ## WithEnv
 
 ```TypeScript
@@ -8,7 +14,7 @@ export declare function WithEnv(
 ): WithEnvAttribute
 ```
 
-Define the WithEnv component that allows setting environment properties for child components.
+WithEnv组件用于为子组件树设置局部环境变量作用域。开发者可以通过该组件为后代组件提供自定义环境变量，或设置系统环境变量。
 
 **Since:** 26.0.0
 
@@ -24,11 +30,11 @@ Define the WithEnv component that allows setting environment properties for chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the content of the component |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 组件的内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) |  |
 

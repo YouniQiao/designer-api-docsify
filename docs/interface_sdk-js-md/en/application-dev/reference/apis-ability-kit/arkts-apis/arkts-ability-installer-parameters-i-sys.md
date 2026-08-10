@@ -1,6 +1,6 @@
 # Parameters (System API)
 
-Describes the extended parameter information.
+扩展参数信息。
 
 **Since:** 15
 
@@ -12,13 +12,19 @@ Describes the extended parameter information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## key
 
 ```TypeScript
 key: string
 ```
 
-Key of an extended parameter.
+扩展参数键。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Key of an extended parameter.
 value: string
 ```
 
-Value of the extended parameter.
+扩展参数值。
 
 **Type:** string
 

@@ -1,10 +1,10 @@
 # PixelStretchEffectOptions
 
-Describes the pixel stretch effect options.
+像素扩展属性集合，用于描述像素扩展的信息。
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare interface PixelStretchEffectOptions--><!--Device-unnamed-declare interface PixelStretchEffectOptions-End-->
 
@@ -16,15 +16,17 @@ Describes the pixel stretch effect options.
 bottom?: Length
 ```
 
-Length by which a pixel is stretched towards the right edge of the image.
+组件图像下边沿像素扩展距离。
 
-**Type:** Length
+默认值：0vp
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +42,17 @@ Length by which a pixel is stretched towards the right edge of the image.
 left?: Length
 ```
 
-Length by which a pixel is stretched towards the left edge of the image.
+组件图像左边沿像素扩展距离。
 
-**Type:** Length
+默认值：0vp
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,15 +68,17 @@ Length by which a pixel is stretched towards the left edge of the image.
 right?: Length
 ```
 
-Length by which a pixel is stretched towards the right edge of the image.
+组件图像右边沿像素扩展距离。
 
-**Type:** Length
+默认值：0vp
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,15 +94,17 @@ Length by which a pixel is stretched towards the right edge of the image.
 top?: Length
 ```
 
-Length by which a pixel is stretched towards the top edge of the image.
+组件图像上边沿像素扩展距离。
 
-**Type:** Length
+默认值：0vp
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
-**Since:** 10
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

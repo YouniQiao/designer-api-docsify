@@ -1,5 +1,11 @@
 # startEthEap
 
+## Modules to Import
+
+```TypeScript
+import { eap } from 'kits/@kit.NetworkKit';
+```
+
 ## startEthEap
 
 ```TypeScript
@@ -23,20 +29,20 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netId | number | Yes | Indicates the eth network id to start EAP authentication. |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the eap profile. |
+| profile | [EthEapProfile](arkts-network-eap-etheapprofile-i.md) | Yes | Indicates the eap profile. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [33200001](../errorcode-net-eap.md#33200001-invalid-netid) | Invalid netId |
-| [33200003](../errorcode-net-eap.md#33200003-invalid-eth-eap-configuration) | Invalid profile |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
-| [33200010](../errorcode-net-eap.md#33200010-invalid-eap-status) | invalid eth state |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
+| 33200010 | invalid eth state |
+| 33200009 | netmanager stop |
+| 201 | Permission denied. |
+| 33200003 | Invalid profile |
+| 33200099 | internal error |
+| 33200001 | Invalid netId |
 
-**Example**
+## Examples
 
 ```TypeScript
 import {eap} from '@kit.NetworkKit';

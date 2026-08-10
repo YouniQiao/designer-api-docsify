@@ -1,5 +1,11 @@
 # getLastLocation
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## getLastLocation
 
 ```TypeScript
@@ -24,19 +30,19 @@ Obtain last known location.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The last known location information. |
+| [Location](arkts-location-geolocationmanager-location-i.md) | The last known location information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.getLastLocation} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the geographical location. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.getLastLocation} due to limited device capabilities. |
+| 3301200 | Failed to obtain the geographical location. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

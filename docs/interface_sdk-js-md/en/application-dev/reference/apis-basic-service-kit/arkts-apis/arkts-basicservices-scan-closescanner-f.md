@@ -1,12 +1,18 @@
 # closeScanner
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## closeScanner
 
 ```TypeScript
 function closeScanner(scannerId: string): Promise<void>
 ```
 
-Closes a scanner. This API uses a promise to return the result.
+关闭扫描仪。使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,21 +28,21 @@ Closes a scanner. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | ID of the scanner to be closed. |
+| scannerId | string | Yes | 要关闭的扫描仪的ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

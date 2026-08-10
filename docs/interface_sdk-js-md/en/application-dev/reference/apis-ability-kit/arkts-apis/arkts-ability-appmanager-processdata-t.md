@@ -4,7 +4,7 @@
 export type ProcessData = _ProcessData.default
 ```
 
-Defines the process data.
+进程数据。
 
 **Since:** 14
 

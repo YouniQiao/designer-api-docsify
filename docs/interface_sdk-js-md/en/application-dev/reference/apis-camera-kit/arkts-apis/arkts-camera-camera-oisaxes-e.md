@@ -1,6 +1,6 @@
 # OISAxes
 
-Enumerates the OIS axes.
+枚举，光学防抖（OIS）轴向。
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Enumerates the OIS axes.
 PITCH = 0
 ```
 
-Pitch axis. It controls the up-down rotation of the camera body, that is, the camera body rotates around the axis horizontal to the lens.
+俯仰轴。相控制相机机身上下旋转，即机身围绕与镜头水平方向的轴旋转。
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ Pitch axis. It controls the up-down rotation of the camera body, that is, the ca
 YAW = 1
 ```
 
-Yaw axis. It controls the left-right rotation of the camera body, that is, the camera body rotates around the axis perpendicular to the lens.
+偏航轴。控制相机机身左右旋转，即机身围绕与镜头垂直方向的轴旋转。
 
 **Since:** 24
 

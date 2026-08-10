@@ -10,6 +10,12 @@ Describes the information about a single POI.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## additionalInfo
 
 ```TypeScript
@@ -80,7 +86,7 @@ confidence: double
 
 Indicates the confidence of POI information.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 19
 
@@ -120,7 +126,7 @@ latitude: double
 
 Indicates the latitude of POI.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 19
 
@@ -160,7 +166,7 @@ longitude: double
 
 Indicates the longitude of POI.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 19
 

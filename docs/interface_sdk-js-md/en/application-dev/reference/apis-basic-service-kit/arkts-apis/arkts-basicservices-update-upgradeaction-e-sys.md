@@ -1,6 +1,6 @@
 # UpgradeAction (System API)
 
-Represents an update mode.
+升级方式。
 
 **Since:** 9
 
@@ -18,8 +18,7 @@ Represents an update mode.
 UPGRADE = 'upgrade'
 ```
 
-Difference package, which contains only the different parts between the current version and the target version.It is applicable to the incremental upgrade when the basic version has been installed. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+差分包，仅包含与当前版本的差异部分，适用于已安装基础版本的增量升级场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
 
 **Since:** 9
 
@@ -37,7 +36,7 @@ Difference package, which contains only the different parts between the current 
 RECOVERY = 'recovery'
 ```
 
-Repair package, which is a special upgrade package used to fix system errors or restore system functions. It is applicable to repair in case of system failure. For details, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+修复包，用于修复系统异常或恢复系统功能的特殊升级包，适用于系统故障修复场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
 
 **Since:** 9
 

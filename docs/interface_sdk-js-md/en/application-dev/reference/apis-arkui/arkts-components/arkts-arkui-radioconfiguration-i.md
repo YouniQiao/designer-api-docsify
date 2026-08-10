@@ -1,7 +1,6 @@
 # RadioConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from  
-[CommonConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
 
 **Inheritance/Implementation:** RadioConfiguration extends [CommonConfiguration<RadioConfiguration>](CommonConfiguration<RadioConfiguration>)
 
@@ -19,11 +18,11 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 checked: boolean
 ```
 
-Whether the radio button is selected.
+设置单选框的选中状态。
 
-Default value: **false**
+默认值：false
 
-**true**: The radio button is selected. **false**: The radio button is not selected.
+值为true时，单选框被选中。值为false时，单选框不被选中。
 
 **Type:** boolean
 
@@ -45,11 +44,11 @@ Default value: **false**
 triggerChange: Callback<boolean>
 ```
 
-Changes the selected state of the radio button.
+用于触发单选框选中状态变化的回调函数。
 
-The value **true** means that the radio button changes from unselected to selected, and **false** means that the radio button changes from selected to unselected.
+值为true时，表示从未选中变为选中。值为false时，表示从选中变为未选中。
 
-**Type:** Callback&lt;boolean&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 
 **Since:** 12
 
@@ -69,7 +68,7 @@ The value **true** means that the radio button changes from unselected to select
 value: string
 ```
 
-Current value of the radio button.
+当前单选框的值。
 
 **Type:** string
 

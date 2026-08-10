@@ -1,6 +1,6 @@
 # HitTestType
 
-Enumerates the test result types of the click event.
+点击事件检测结果类型。
 
 **Since:** 8
 
@@ -8,7 +8,7 @@ Enumerates the test result types of the click event.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md)
 
 <!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
 
@@ -20,7 +20,7 @@ Enumerates the test result types of the click event.
 EditText = 0
 ```
 
-Editable area.
+可编辑的区域。
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Editable area.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#edittext)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#edittext)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +42,7 @@ Editable area.
 Email = 1
 ```
 
-Email address.
+电子邮件地址。
 
 **Since:** 8
 
@@ -50,7 +50,7 @@ Email address.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#email)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#email)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +64,7 @@ Email address.
 HttpAnchor = 2
 ```
 
-Hyperlink whose **src** is **http**.
+超链接，其src为http。
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Hyperlink whose **src** is **http**.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchor)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#httpanchor)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -86,7 +86,7 @@ Hyperlink whose **src** is **http**.
 HttpAnchorImg = 3
 ```
 
-Image with a hyperlink, where **src** is **http**.
+带有超链接的图片，其中超链接的src为http。
 
 **Since:** 8
 
@@ -94,7 +94,7 @@ Image with a hyperlink, where **src** is **http**.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,7 +108,7 @@ Image with a hyperlink, where **src** is **http**.
 Img = 4
 ```
 
-HTML::img tag.
+HTML::img标签。
 
 **Since:** 8
 
@@ -116,7 +116,7 @@ HTML::img tag.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#img)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#img)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,7 +130,7 @@ HTML::img tag.
 Map = 5
 ```
 
-Geographical address.
+地理地址。
 
 **Since:** 8
 
@@ -138,7 +138,7 @@ Geographical address.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#map)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#map)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -152,7 +152,7 @@ Geographical address.
 Phone = 6
 ```
 
-Phone number.
+电话号码。
 
 **Since:** 8
 
@@ -160,7 +160,7 @@ Phone number.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#phone)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#phone)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -174,7 +174,7 @@ Phone number.
 Unknown = 7
 ```
 
-Unknown content.
+未知内容。
 
 **Since:** 8
 
@@ -182,7 +182,7 @@ Unknown content.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#unknown)
+**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#unknown)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

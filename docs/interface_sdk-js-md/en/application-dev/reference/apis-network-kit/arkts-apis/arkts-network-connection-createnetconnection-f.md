@@ -1,5 +1,11 @@
 # createNetConnection
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## createNetConnection
 
 ```TypeScript
@@ -22,16 +28,16 @@ Create a network connection with optional netSpecifier and timeout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netSpecifier | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the network specifier. See \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| timeout | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | The time in milliseconds to attempt looking for a suitable network before \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is called. |
+| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Indicates the network specifier. See {@link NetSpecifier}. |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | The time in milliseconds to attempt looking for a suitable network before {@link NetConnection#netUnavailable} is called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the NetConnection of the NetSpecifier. |
+| [NetConnection](arkts-network-connection-netconnection-i.md) | the NetConnection of the NetSpecifier. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

@@ -1,21 +1,27 @@
 # ArcList
 
+## Modules to Import
+
+```TypeScript
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## ArcList
 
 ```TypeScript
 export declare function ArcList(
-    options?: ArkListOptions,
+    options?: ArkListOptions, 
     content_?: CustomBuilder,
 ): ArcListAttribute
 ```
 
-Defines ArcList Component.
+创建弧形列表实例，传入弧形列表配置项参数。
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute-End-->
+<!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,     content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,     content_?: CustomBuilder,): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -23,14 +29,14 @@ Defines ArcList Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | No |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
 
 
 ## ArcList
@@ -42,11 +48,11 @@ export declare function ArcList(
 ): ArcListAttribute
 ```
 
-Defines ArcList Component.
+定义ArcList组件。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Decorator:** @Builder
 
@@ -60,12 +66,12 @@ Defines ArcList Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ArcListAttribute&gt; | Yes | The style to create an ArcList. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcListAttribute&gt; | Yes | The style to create an ArcList. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the ArcList. |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | ArcList的属性。 |
 

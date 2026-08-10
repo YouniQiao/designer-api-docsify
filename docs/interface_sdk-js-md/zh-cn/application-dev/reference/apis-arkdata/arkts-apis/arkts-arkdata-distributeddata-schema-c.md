@@ -1,6 +1,6 @@
 # Schema
 
-表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中。
+表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](arkts-arkdata-distributeddata-options-i.md)中。
 
 **起始版本：** 8
 
@@ -86,7 +86,7 @@ root: FieldNode
 
 表示json根对象。
 
-**类型：** FieldNode
+**类型：** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
 
 **起始版本：** 8
 

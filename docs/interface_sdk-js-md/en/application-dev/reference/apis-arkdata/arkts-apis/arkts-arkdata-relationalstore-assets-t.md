@@ -4,7 +4,7 @@
 type Assets = Asset[]
 ```
 
-Indicates several assets in one column
+表示[Asset](arkts-arkdata-relationalstore-asset-i.md)类型的数组。
 
 **Since:** 10
 

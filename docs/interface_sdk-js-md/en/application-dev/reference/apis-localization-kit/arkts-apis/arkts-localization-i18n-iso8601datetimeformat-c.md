@@ -1,7 +1,6 @@
 # ISO8601DateTimeFormat
 
-Provide a DateTime formatting interface which could format date to ISO 8601 standard string.  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+符合ISO 8601标准的日期格式化对象。
 
 **Since:** 26.0.0
 
@@ -11,13 +10,19 @@ Provide a DateTime formatting interface which could format date to ISO 8601 stan
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 public constructor(options?: ISO8601DateTimeFormatOptions)
 ```
 
-A constructor used to create a ISO8601DateTimeFormat object.
+创建符合ISO 8601标准的日期格式化对象。
 
 **Since:** 26.0.0
 
@@ -35,7 +40,7 @@ A constructor used to create a ISO8601DateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for creating a date formatting object that complies with ISO 8601. Default format is yyyy-MM-ddThh:mm:ssZZZZZ. |
+| options | [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | No | 符合ISO 8601标准的日期格式化对象创建时的配置项。 默认值：所有属性都取默认值时的配置项。 |
 
 ## format
 
@@ -43,7 +48,7 @@ A constructor used to create a ISO8601DateTimeFormat object.
 public format(date: Date): string
 ```
 
-Formats a date to ISO 8601 formatted string.
+对时间日期进行格式化，返回符合ISO 8601标准的时间日期字符串。
 
 **Since:** 26.0.0
 
@@ -61,11 +66,11 @@ Formats a date to ISO 8601 formatted string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | date to be formatted. Note: The month starts from 0. For example, 0 indicates January. |
+| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Date and time string that complies with ISO 8601. |
+| string | 符合ISO8601标准的时间日期字符串。 |
 

@@ -1,5 +1,11 @@
 # dumpJsRawHeapData
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## dumpJsRawHeapData
 
 ```TypeScript
@@ -7,11 +13,12 @@ function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 ```
 
 Ϊ��ǰ�߳�ת���������ԭʼ�ѿ��գ������ɵ�rawheap��ʽ�ļ���ʹ��Promise�첽�ص���ɡ����ļ���ͨ��rawheap-translator����ת��Ϊheapsnapshot��ʽ�ļ����н�����
-    **ע��**  
-    
-    ϵͳͨ���ýӿ�ת����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����  
-    
-    �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
+
+> **ע��**
+> 
+> ϵͳͨ���ýӿ�ת����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����
+> 
+> �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
 
 **起始版本：** 18
 
@@ -39,16 +46,16 @@ function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-配额超限) | Quota exceeded. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) | Fork operation failed. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) | Failed to wait for the child process to finish. |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) | Timeout while waiting for the child process to finish. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) | Disk remaining space too low. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) | Napi interface call exception. |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) | Repeated data dump. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) | Failed to create dump file. |
+| 11400109 | Timeout while waiting for the child process to finish. |
+| 11400108 | Failed to wait for the child process to finish. |
+| 11400111 | Napi interface call exception. |
+| 11400110 | Disk remaining space too low. |
+| 11400107 | Fork operation failed. |
+| 11400106 | Quota exceeded. |
+| 11400113 | Failed to create dump file. |
+| 11400112 | Repeated data dump. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
@@ -68,11 +75,12 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 ```
 
 Ϊ��ǰ�߳�ת���������ԭʼ�ѿ��գ���֧�����nodeId���档���ɵ��ļ�Ϊrawheap��ʽ��ʹ��Promise�첽�ص���ɡ����ļ���ͨ��rawheap-translator����ת��Ϊheapsnapshot��ʽ�ļ����н�����
-    **ע��**  
-    
-    ϵͳͨ���ýӿ�ת����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����  
-    
-    �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
+
+> **ע��**
+> 
+> ϵͳͨ���ýӿ�ת����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����
+> 
+> �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
 
 **起始版本：** 24
 
@@ -103,16 +111,16 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-配额超限) | Quota exceeded. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) | Fork operation failed. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) | Failed to wait for the child process to finish. |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) | Timeout while waiting for the child process to finish. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) | Disk remaining space too low. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) | Napi interface call exception. |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) | Repeated data dump. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) | Failed to create dump file. |
+| 11400109 | Timeout while waiting for the child process to finish. |
+| 11400108 | Failed to wait for the child process to finish. |
+| 11400111 | Napi interface call exception. |
+| 11400110 | Disk remaining space too low. |
+| 11400107 | Fork operation failed. |
+| 11400106 | Quota exceeded. |
+| 11400113 | Failed to create dump file. |
+| 11400112 | Repeated data dump. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
@@ -133,11 +141,12 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boo
 ```
 
 Ϊ��ǰ�̻߳����������������������ԭʼ�ѿ��գ���֧�����nodeId���棬���ɵ��ļ�Ϊrawheap��ʽ��ʹ��Promise�첽�ص����ļ���ͨ��rawheap-translator����ת��Ϊheapsnapshot��ʽ�ļ����н�����
-    **ע��**  
-    
-    ϵͳͨ���ýӿ�ת�����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����  
-    
-    �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
+
+> **ע��**
+> 
+> ϵͳͨ���ýӿ�ת�����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����
+> 
+> �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
 
 **起始版本：** 26.0.0
 
@@ -169,16 +178,16 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-配额超限) | Quota exceeded. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) | Fork operation failed. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) | Failed to wait for the child process to finish. |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) | Timeout while waiting for the child process to finish. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) | Disk remaining space too low. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) | Napi interface call exception. |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) | Repeated data dump. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) | Failed to create dump file. |
+| 11400109 | Timeout while waiting for the child process to finish. |
+| 11400108 | Failed to wait for the child process to finish. |
+| 11400111 | Napi interface call exception. |
+| 11400110 | Disk remaining space too low. |
+| 11400107 | Fork operation failed. |
+| 11400106 | Quota exceeded. |
+| 11400113 | Failed to create dump file. |
+| 11400112 | Repeated data dump. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

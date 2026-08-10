@@ -1,6 +1,6 @@
 # CompressMethod
 
-The deflate compression method (the only one supported in this version).
+压缩模式。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ The deflate compression method (the only one supported in this version).
 DEFLATED = 8
 ```
 
-Compression method.
+压缩方法。
 
 **Since:** 12
 

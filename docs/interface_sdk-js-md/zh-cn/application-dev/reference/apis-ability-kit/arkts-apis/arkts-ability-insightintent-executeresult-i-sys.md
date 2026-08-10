@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { insightIntent } from 'kits/@kit.AbilityKit';
+```
+
 ## interactionInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ interactionInfo?: InteractionInfo
 
 意图执行完成后返回的交互信息。
 
-**类型：** InteractionInfo
+**类型：** [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md)
 
 **起始版本：** 26.1.0
 

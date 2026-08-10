@@ -1,12 +1,18 @@
 # addPortAuthorization (System API)
 
+## Modules to Import
+
+```TypeScript
+import { serial } from 'kits/@kit.BasicServicesKit';
+```
+
 ## addPortAuthorization
 
 ```TypeScript
 function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 ```
 
-Adds the permission for applications to access the serial port.This API is open only to system applications that display a pop-up window for serial port authorization.
+添加应用访问串口端口的权限仅面向串口授权弹窗系统应用开放
 
 **Since:** 26.0.0
 
@@ -24,21 +30,21 @@ Adds the permission for applications to access the serial port.This API is open 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenId | string | Yes | Token ID of the authorized application. |
-| deviceId | string | Yes | Serial port device ID. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For an onboard serial port, the value is portName. For a USB virtual serial port, the value is the combination of VID+PID+SN. |
+| tokenId | string | Yes | 被授权应用的tokenId |
+| deviceId | string | Yes | 串口设备ID &lt;br&gt;对于板载串口，取值为portName；对于USB虚拟串口，取值为vid+pid+SN拼接。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
-| [35700008](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700008-permission-denied) | Permission denied. |
+| 35700001 | Service error. |
+| 35700002 | Invalid parameter. |
+| 35700008 | Permission denied. |
+| 202 | Permission denied. Called by non-system application |
 

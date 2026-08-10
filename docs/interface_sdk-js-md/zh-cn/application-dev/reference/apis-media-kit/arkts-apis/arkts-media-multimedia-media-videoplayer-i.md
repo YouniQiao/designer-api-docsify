@@ -1,10 +1,11 @@
 # VideoPlayer
 
 视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过  
-[createVideoPlayer()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构建一个VideoPlayer实例。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_替代。
+[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer)构建一个VideoPlayer实例。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md)替代。
 
 **起始版本：** 8
 
@@ -18,6 +19,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## getTrackDescription
 
 ```TypeScript
@@ -25,11 +32,12 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 ```
 
 获取视频轨道信息。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.getTrackDescription]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)
+> 替代。
 
 **起始版本：** 8
 
@@ -47,7 +55,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;MediaDescription&gt;&gt; | 是 | 回调函数。获取视频轨道信息成功时，err为undefined，data为获取到的视频轨道信息 MediaDescription数组，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MediaDescription&gt;&gt; | 是 | 回调函数。获取视频轨道信息成功时，err为undefined，data为获取到的视频轨道信息 MediaDescription数组，否则为错误对象。 |
 
 ## getTrackDescription
 
@@ -56,10 +64,11 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 ```
 
 获取视频轨道信息。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.getTrackDescription]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)替代。
 
 **起始版本：** 8
 
@@ -86,11 +95,12 @@ on(type: 'playbackCompleted', callback: Callback<void>): void
 ```
 
 开始监听视频播放完成事件。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.on('stateChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))
+> 替代。
 
 **起始版本：** 8
 
@@ -109,7 +119,7 @@ on(type: 'playbackCompleted', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playbackCompleted' | 是 | 视频播放完成事件回调类型，支持的事件：'playbackCompleted'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 视频播放完成事件回调方法。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 视频播放完成事件回调方法。 |
 
 ## on('bufferingUpdate')
 
@@ -118,11 +128,12 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 ```
 
 开始监听视频缓存更新事件。仅网络播放支持该订阅事件。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.on('bufferingUpdate')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.on('bufferingUpdate')](@ohos.multimedia.media:media.AVPlayer.on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler))
+> 替代。
 
 **起始版本：** 8
 
@@ -141,7 +152,7 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | 是 | 视频缓存事件回调类型，支持的事件：'bufferingUpdate'。 |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | 是 | 视频缓存事件回调方法。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ [BufferingInfoType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_value值固定为0。 |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | 是 | 视频缓存事件回调方法。&lt;br&gt; [BufferingInfoType](@ohos.multimedia.media:media.BufferingInfoType)value值固定为0。 |
 
 ## on('startRenderFrame')
 
@@ -150,11 +161,12 @@ on(type: 'startRenderFrame', callback: Callback<void>): void
 ```
 
 开始监听视频播放首帧送显上报事件。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.on('startRenderFrame')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.on('startRenderFrame')](@ohos.multimedia.media:media.AVPlayer.on(type: 'startRenderFrame', callback: Callback&lt;void&gt;))
+> 替代。
 
 **起始版本：** 8
 
@@ -173,7 +185,7 @@ on(type: 'startRenderFrame', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'startRenderFrame' | 是 | 视频播放首帧送显上报事件回调类型，支持的事件：'startRenderFrame'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 视频播放首帧送显上报事件回调方法。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 视频播放首帧送显上报事件回调方法。 |
 
 ## on('videoSizeChanged')
 
@@ -182,11 +194,12 @@ on(type: 'videoSizeChanged', callback: (width: number, height: number) => void):
 ```
 
 开始监听视频播放宽高变化事件。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.on('videoSizeChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.on('videoSizeChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler))
+> 替代。
 
 **起始版本：** 8
 
@@ -213,12 +226,13 @@ on(type: 'videoSizeChanged', callback: (width: number, height: number) => void):
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-监听音频焦点变化事件，参考[audio.InterruptEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    从API version 9开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.on('audioInterrupt')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    替代。
+监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md/arkts-audio-audio-interruptevent-i.md)。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.on('audioInterrupt')](@ohos.multimedia.media:media.AVPlayer.on(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;))
+> 替代。
 
 **起始版本：** 9
 
@@ -246,11 +260,12 @@ on(type: 'error', callback: ErrorCallback): void
 ```
 
 开始监听视频播放错误事件，当上报error错误事件后，用户需处理error事件，退出播放操作。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.on('error')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替  
-    代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.on('error')](@ohos.multimedia.media:media.AVPlayer.on(type: 'error', callback: ErrorCallback))替
+> 代。
 
 **起始版本：** 8
 
@@ -268,8 +283,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 播放错误事件回调类型，支持的事件包括：'error'。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- 'error'：视频播放中发生错误，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 播放错误事件回调方法。 |
+| type | 'error' | 是 | 播放错误事件回调类型，支持的事件包括：'error'。&lt;br&gt;- 'error'：视频播放中发生错误，触发该事件。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 播放错误事件回调方法。 |
 
 ## pause
 
@@ -278,10 +293,11 @@ pause(callback: AsyncCallback<void>): void
 ```
 
 通过回调方式暂停播放视频。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.pause]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)替代。
 
 **起始版本：** 8
 
@@ -299,7 +315,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当暂停播放视频成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停播放视频成功，err为undefined，否则为错误对象。 |
 
 ## pause
 
@@ -308,10 +324,11 @@ pause(): Promise<void>
 ```
 
 暂停播放视频。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.pause]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)
+> 替代。
 
 **起始版本：** 8
 
@@ -338,10 +355,11 @@ play(callback: AsyncCallback<void>): void
 ```
 
 开始播放视频。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.play]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.play](arkts-media-media-avplayer-i.md#play)替代。
 
 **起始版本：** 8
 
@@ -359,7 +377,7 @@ play(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当开始播放视频成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始播放视频成功，err为undefined，否则为错误对象。 |
 
 ## play
 
@@ -368,10 +386,11 @@ play(): Promise<void>
 ```
 
 开始播放视频。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.play]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代  
-    。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.play](arkts-media-media-avplayer-i.md#play)替代
+> 。
 
 **起始版本：** 8
 
@@ -398,10 +417,11 @@ prepare(callback: AsyncCallback<void>): void
 ```
 
 准备播放视频。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.prepare](arkts-media-media-avplayer-i.md#prepare)替代。
 
 **起始版本：** 8
 
@@ -419,7 +439,7 @@ prepare(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当准备播放视频成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当准备播放视频成功，err为undefined，否则为错误对象。 |
 
 ## prepare
 
@@ -428,10 +448,11 @@ prepare(): Promise<void>
 ```
 
 准备播放视频。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.prepare]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.prepare](arkts-media-media-avplayer-i.md#prepare)替代。
 
 **起始版本：** 8
 
@@ -458,10 +479,11 @@ release(callback: AsyncCallback<void>): void
 ```
 
 释放视频资源。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.release](arkts-media-media-avplayer-i.md#release)替代。
 
 **起始版本：** 8
 
@@ -479,7 +501,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当释放视频资源成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放视频资源成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -488,10 +510,11 @@ release(): Promise<void>
 ```
 
 释放视频资源。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.release]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.release](arkts-media-media-avplayer-i.md#release)替代。
 
 **起始版本：** 8
 
@@ -518,10 +541,11 @@ reset(callback: AsyncCallback<void>): void
 ```
 
 重置播放视频。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.reset]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)替代。
 
 **起始版本：** 8
 
@@ -539,7 +563,7 @@ reset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当重置播放视频成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重置播放视频成功，err为undefined，否则为错误对象。 |
 
 ## reset
 
@@ -548,10 +572,11 @@ reset(): Promise<void>
 ```
 
 重置播放视频。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.reset]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)
+> 替代。
 
 **起始版本：** 8
 
@@ -578,9 +603,10 @@ seek(timeMs: number, callback: AsyncCallback<number>): void
 ```
 
 跳转到指定播放位置，默认跳转到指定时间点的上一个关键帧。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)替代。
 
 **起始版本：** 8
 
@@ -599,7 +625,7 @@ seek(timeMs: number, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
 
 ## seek
 
@@ -608,9 +634,10 @@ seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void
 ```
 
 跳转到指定播放位置。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)替代。
 
 **起始版本：** 8
 
@@ -629,8 +656,8 @@ seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 跳转模式。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
+| mode | [SeekMode](../../apis-arkui/arkts-components/arkts-arkui-seekmode-e.md) | 是 | 跳转模式。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
 
 ## seek
 
@@ -639,9 +666,10 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 ```
 
 跳转到指定播放位置，如果没有设置mode则跳转到指定时间点的上一个关键帧。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)替代。
 
 **起始版本：** 8
 
@@ -660,7 +688,7 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 基于视频I帧的跳转模式，默认为SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_PREV\_\_\_ESCAPED\_UNDERSCORE\_\_\_SYNC模式。 |
+| mode | [SeekMode](../../apis-arkui/arkts-components/arkts-arkui-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式。 |
 
 **返回值：**
 
@@ -675,12 +703,13 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 ```
 
 设置SurfaceId。通过回调函数获取返回值。
-    **说明：**  
-    
-    - SetDisplaySurface需要在设置url和Prepare之间，无音频的视频流必须设置Surface否则Prepare失败。  
-    
-    - 从API version 8开始支持，从API version 9开始废弃，建议使用  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> - SetDisplaySurface需要在设置url和Prepare之间，无音频的视频流必须设置Surface否则Prepare失败。
+> 
+> - 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.surfaceId](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#属性)替代。
 
 **起始版本：** 8
 
@@ -698,8 +727,8 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 [XComponent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当设置SurfaceId成功，err为undefined，否则为错误对象。 |
+| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置SurfaceId成功，err为undefined，否则为错误对象。 |
 
 ## setDisplaySurface
 
@@ -708,12 +737,13 @@ setDisplaySurface(surfaceId: string): Promise<void>
 ```
 
 设置SurfaceId。通过Promise获取返回值。
-    **说明：**  
-    
-    - SetDisplaySurface需要在设置url和Prepare之间，无音频的视频流必须设置Surface否则Prepare失败。  
-    
-    - 从API version 8开始支持，从API version 9开始废弃，建议使用  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> - SetDisplaySurface需要在设置url和Prepare之间，无音频的视频流必须设置Surface否则Prepare失败。
+> 
+> - 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.surfaceId](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#属性)替代。
 
 **起始版本：** 8
 
@@ -731,7 +761,7 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 [XComponent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)。 |
 
 **返回值：**
 
@@ -746,10 +776,11 @@ setSpeed(speed: number, callback: AsyncCallback<number>): void
 ```
 
 设置播放速度。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.setSpeed]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.setSpeed](@ohos.multimedia.media:media.AVPlayer.setSpeed)替代。
 
 **起始版本：** 8
 
@@ -767,8 +798,8 @@ setSpeed(speed: number, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speed | number | 是 | 指定播放视频速度，具体见[PlaybackSpeed]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 是 | 回调函数。设置播放速度成功时，err为undefined，data为设置的播放速度，否则为错误对象。 |
+| speed | number | 是 | 指定播放视频速度，具体见[PlaybackSpeed](@ohos.multimedia.media:media.PlaybackSpeed)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。设置播放速度成功时，err为undefined，data为设置的播放速度，否则为错误对象。 |
 
 ## setSpeed
 
@@ -777,10 +808,11 @@ setSpeed(speed: number): Promise<number>
 ```
 
 设置播放速度。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.setSpeed]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.setSpeed](@ohos.multimedia.media:media.AVPlayer.setSpeed)替代。
 
 **起始版本：** 8
 
@@ -798,7 +830,7 @@ setSpeed(speed: number): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speed | number | 是 | 指定播放视频速度，具体见[PlaybackSpeed]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| speed | number | 是 | 指定播放视频速度，具体见[PlaybackSpeed](@ohos.multimedia.media:media.PlaybackSpeed)。 |
 
 **返回值：**
 
@@ -813,10 +845,11 @@ setVolume(vol: number, callback: AsyncCallback<void>): void
 ```
 
 设置音量。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.setVolume]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)替代。
 
 **起始版本：** 8
 
@@ -835,7 +868,7 @@ setVolume(vol: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | vol | number | 是 | 指定的相对音量大小，取值范围为[0.00-1.00]，1表示最大音量，即100%。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当设置音量成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置音量成功，err为undefined，否则为错误对象。 |
 
 ## setVolume
 
@@ -844,10 +877,11 @@ setVolume(vol: number): Promise<void>
 ```
 
 设置音量。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.setVolume]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)替代。
 
 **起始版本：** 8
 
@@ -880,10 +914,11 @@ stop(callback: AsyncCallback<void>): void
 ```
 
 通过回调方式停止播放视频。通过回调函数获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用  
-    [AVPlayer.stop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)替代。
 
 **起始版本：** 8
 
@@ -901,7 +936,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当停止播放视频成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止播放视频成功，err为undefined，否则为错误对象。 |
 
 ## stop
 
@@ -910,10 +945,11 @@ stop(): Promise<void>
 ```
 
 停止播放视频。通过Promise获取返回值。
-    **说明：**  
-    
-    从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.stop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代  
-    。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)替代
+> 。
 
 **起始版本：** 8
 
@@ -1009,7 +1045,7 @@ fdSrc: AVFileDescriptor
 
 **使用示例**：
 
-假设一个连续存储的音乐文件:
+假设一个连续存储的音乐文件: 
 
 视频1(地址偏移:0，字节长度:100)
 
@@ -1021,7 +1057,7 @@ fdSrc: AVFileDescriptor
 
 假设是一个独立的视频文件: 请使用src=fd://xx
 
-**类型：** AVFileDescriptor
+**类型：** [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)
 
 **起始版本：** 9
 
@@ -1087,7 +1123,7 @@ readonly state: VideoPlayState
 
 视频播放的状态。
 
-**类型：** VideoPlayState
+**类型：** [VideoPlayState](arkts-media-videoplaystate-t.md)
 
 **起始版本：** 8
 
@@ -1113,7 +1149,7 @@ url: string
 
 1. fd类型播放：fd://xx
 
-![](../../../reference/apis-media-kit/figures/zh-cn\_image\_url.png)
+![](../../../reference/apis-media-kit/figures/zh-cn_image_url.png)
 
 2. http网络播放: http://xx3. https网络播放: https://xx4. hls网络播放路径：http://xx或者https://xx5. file类型: file://xx
 
@@ -1141,9 +1177,9 @@ url: string
 videoScaleType?: VideoScaleType
 ```
 
-视频缩放模式。默认值为VIDEO\_SCALE\_TYPE\_FIT。
+视频缩放模式。默认值为VIDEO_SCALE_TYPE_FIT。
 
-**类型：** VideoScaleType
+**类型：** [VideoScaleType](arkts-media-multimedia-media-videoscaletype-e.md)
 
 **起始版本：** 9
 

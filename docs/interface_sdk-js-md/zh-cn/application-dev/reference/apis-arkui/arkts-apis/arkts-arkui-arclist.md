@@ -1,5 +1,11 @@
 # @ohos.arkui.ArcList
 
+## 导入模块
+
+```TypeScript
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 接口

@@ -1,8 +1,8 @@
 # SlotType
 
-Enumerates the notification slot types.
+通知渠道类型。
 
-Different types correspond to different [SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ values,determining the reminder behavior of the notification.
+不同类型对应不同的SlotLevel，决定通知的提醒行为。
 
 **Since:** 9
 
@@ -18,8 +18,7 @@ Different types correspond to different [SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\
 UNKNOWN_TYPE = 0
 ```
 
-Unknown type. This type corresponds to the  
-[SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of **LEVEL\_MIN**.
+未知类型。该类型对应SlotLevel为LEVEL_MIN。
 
 **Since:** 9
 
@@ -37,8 +36,7 @@ Unknown type. This type corresponds to the
 SOCIAL_COMMUNICATION = 1
 ```
 
-Social communication. This type corresponds to the  
-[SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of **LEVEL\_HIGH**.
+社交通讯。该类型对应SlotLevel为LEVEL_HIGH。
 
 **Since:** 9
 
@@ -56,8 +54,7 @@ Social communication. This type corresponds to the
 SERVICE_INFORMATION = 2
 ```
 
-Service information. This type corresponds to the  
-[SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of **LEVEL\_HIGH**.
+服务提醒。该类型对应SlotLevel为LEVEL_HIGH。
 
 **Since:** 9
 
@@ -75,8 +72,7 @@ Service information. This type corresponds to the
 CONTENT_INFORMATION = 3
 ```
 
-Content information. This type corresponds to the  
-[SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of **LEVEL\_MIN**.
+内容资讯。该类型对应SlotLevel为LEVEL_MIN。
 
 **Since:** 9
 
@@ -94,8 +90,7 @@ Content information. This type corresponds to the
 LIVE_VIEW = 4
 ```
 
-Live view. A third-party application cannot directly create a notification of this type. Instead, after the system proxy creates a notification, the third-party application can release the notification with the same ID to update the specified content. This type corresponds to the  
-[SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of **LEVEL\_DEFAULT**.
+实况窗。不支持三方应用直接创建该渠道类型通知，可以由系统代理创建后， 三方应用发布同ID的通知来更新指定内容。该类型对应SlotLevel为LEVEL_DEFAULT。
 
 **Since:** 11
 
@@ -113,8 +108,7 @@ Live view. A third-party application cannot directly create a notification of th
 CUSTOMER_SERVICE = 5
 ```
 
-Customer service message. This type is used for messages between users and customer service providers. The messages must be initiated by users. This type corresponds to the  
-[SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of **LEVEL\_DEFAULT**.
+客服消息。该类型用于用户与商家之间的客服消息，需由用户主动发起。 该类型对应SlotLevel为LEVEL_DEFAULT。
 
 **Since:** 11
 
@@ -132,8 +126,7 @@ Customer service message. This type is used for messages between users and custo
 OTHER_TYPES = 0xFFFF
 ```
 
-Other types. This type corresponds to the  
-[SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of **LEVEL\_MIN**.
+其他。该类型对应SlotLevel为LEVEL_MIN。
 
 **Since:** 9
 

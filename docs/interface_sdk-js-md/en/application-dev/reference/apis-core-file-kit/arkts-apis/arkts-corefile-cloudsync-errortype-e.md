@@ -1,15 +1,11 @@
 # ErrorType
 
-Enumerates the device-cloud sync errors.
+端云同步失败类型，为枚举类型。
 
-- In the current phase, **NETWORK\_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are  
-unavailable. If the mobile data network is available, the synchronization can be performed normally.  
-- During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY\_LEVEL\_LOW**  
-will be return when the current upload is complete.  
-- When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not  
-allowed.  
-- If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in  
-the cloud.
+- 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络，若有一种类型网络可用，则能正常同步。  
+- 同步过程中，非充电场景下，电量低于10%，完成当前批上行同步后停止同步，返回低电量；  
+- 触发同步时，非充电场景下，若电量低于10%，则不允许同步  
+- 上行时，若云端空间不足，则文件上行失败，云端无该文件记录。
 
 **Since:** 12
 
@@ -25,7 +21,7 @@ the cloud.
 NO_ERROR = 0
 ```
 
-No error.
+没有错误。
 
 **Since:** 12
 
@@ -41,7 +37,7 @@ No error.
 NETWORK_UNAVAILABLE = 1
 ```
 
-No network is available.
+所有网络不可用。
 
 **Since:** 12
 
@@ -57,7 +53,7 @@ No network is available.
 WIFI_UNAVAILABLE = 2
 ```
 
-Wi-Fi is unavailable.
+WIFI不可用。
 
 **Since:** 12
 
@@ -73,7 +69,7 @@ Wi-Fi is unavailable.
 BATTERY_LEVEL_LOW = 3
 ```
 
-The battery level is lower than 10%.
+低电量（低于10%）。
 
 **Since:** 12
 
@@ -89,7 +85,7 @@ The battery level is lower than 10%.
 BATTERY_LEVEL_WARNING = 4
 ```
 
-The battery level is lower than 15%.
+告警电量（低于15%）。
 
 **Since:** 12
 
@@ -105,7 +101,7 @@ The battery level is lower than 15%.
 CLOUD_STORAGE_FULL = 5
 ```
 
-The cloud space is insufficient.
+云端空间不足。
 
 **Since:** 12
 
@@ -121,7 +117,7 @@ The cloud space is insufficient.
 LOCAL_STORAGE_FULL = 6
 ```
 
-The local space is insufficient.
+本地空间不足。
 
 **Since:** 12
 
@@ -137,7 +133,7 @@ The local space is insufficient.
 DEVICE_TEMPERATURE_TOO_HIGH = 7
 ```
 
-The device temperature is too high.
+设备温度过高。
 
 **Since:** 12
 
@@ -153,7 +149,7 @@ The device temperature is too high.
 REMOTE_SERVER_ABNORMAL = 8
 ```
 
-The remote service is unavailable.
+远端服务不可用。
 
 **Since:** 20
 

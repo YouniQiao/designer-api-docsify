@@ -4,7 +4,7 @@
 export type CalleeCallback = (indata: rpc.MessageSequence) => rpc.Parcelable
 ```
 
-Defines the callback of the registration message notification of the UIAbility.
+通用组件服务端注册消息通知的回调函数类型。
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ Defines the callback of the registration message notification of the UIAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indata | rpc.MessageSequence | Yes | Data to be transferred.  |
+| indata | rpc.MessageSequence | Yes | 发送需传递的数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| rpc.Parcelable | Returned data object.  |
+| rpc.Parcelable | 返回的数据对象。 |
 

@@ -1,5 +1,11 @@
 # isDebugState
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## isDebugState
 
 ```TypeScript
@@ -22,7 +28,7 @@ function isDebugState(): boolean
 | --- | --- |
 | boolean | Ӧ�ý��̵�Ark���Native���Ƿ��ڵ���״̬��true�����ڵ���״̬��false��δ���ڵ���״̬�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

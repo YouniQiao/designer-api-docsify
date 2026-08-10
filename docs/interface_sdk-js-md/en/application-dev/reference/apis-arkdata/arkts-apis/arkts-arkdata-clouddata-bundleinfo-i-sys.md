@@ -1,6 +1,6 @@
 # BundleInfo (System API)
 
-Bundle information configuration.
+端云协同应用信息。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Bundle information configuration.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Indicates the name of the application.
+应用包名。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Indicates the name of the application.
 storeId?: string
 ```
 
-Indicates the store ID.
+数据库名称。默认值为空字符串，此时查询该应用下所有数据库。
 
 **Type:** string
 

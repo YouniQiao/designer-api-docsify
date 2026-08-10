@@ -3,7 +3,7 @@
 策略变更事件。
 
 该接口目前在  
-[onAdminPolicyChanged]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口中作为回调入参使用。
+[onAdminPolicyChanged](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged)接口中作为回调入参使用。
 
 **起始版本：** 26.0.0
 
@@ -12,6 +12,12 @@
 <!--Device-common-export interface PolicyChangedEvent--><!--Device-common-export interface PolicyChangedEvent-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { common } from 'kits/@kit.MDMKit';
+```
 
 ## bundleName
 
@@ -39,7 +45,7 @@ bundleName: string
 functionName: string
 ```
 
-接口名称。例如调用[setPasswordPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口时，该字段返回值为setPasswordPolicy。
+接口名称。例如调用[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy)接口时，该字段返回值为setPasswordPolicy。
 
 **类型：** string
 
@@ -60,7 +66,7 @@ parameters: string
 ```
 
 调用接口时传入的参数值（不包含admin参数），JSON格式字符串。例如调用  
-[setPasswordPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，该字段返回值为{"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},\$","validityPeriod":1808309786000,"additionalDescription":"至少8个字符，且包含数字和字母。"}}。
+[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy)接口，该字段返回值为{"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},\$","validityPeriod":1808309786000,"additionalDescription":"至少8个字符，且包含数字和字母。"}}。
 
 **类型：** string
 

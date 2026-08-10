@@ -1,5 +1,11 @@
 # chargingStatus
 
+## 导入模块
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## chargingStatus
 
 ```TypeScript
@@ -20,13 +26,5 @@ function chargingStatus(): BatteryChargeState
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前设备电池的充电状态。 |
-
-**示例：**
-
-```TypeScript
-// ArkTS-Sta示例
-let result = batteryInfo.chargingStatus();
-console.info("The result is: " + result);
-```
+| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | 返回当前设备电池的充电状态。 |
 

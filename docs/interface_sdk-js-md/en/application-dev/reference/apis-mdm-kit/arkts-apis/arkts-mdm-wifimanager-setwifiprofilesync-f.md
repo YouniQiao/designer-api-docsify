@@ -1,12 +1,18 @@
 # setWifiProfileSync
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.MDMKit';
+```
+
 ## setWifiProfileSync
 
 ```TypeScript
 function setWifiProfileSync(admin: Want, profile: WifiProfile): void
 ```
 
-Configures Wi-Fi for the current device to connect to a specified network.
+为当前设备配置Wi-Fi，连接到指定网络。
 
 **Since:** 12
 
@@ -24,26 +30,25 @@ Configures Wi-Fi for the current device to connect to a specified network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Wi-Fi configuration information, which is used to specify the configuration parameters of the Wi-Fi network to be connected, including the SSID, BSSID, key, and security type. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| profile | [WifiProfile](arkts-mdm-wifimanager-wifiprofile-i.md) | Yes | Wi-Fi配置信息，用于指定要连接的Wi-Fi网络的配置参数，包括SSID、BSSID、密钥、安全类型等。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 Scenario 1: public Wi-Fi development
 
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -66,12 +71,11 @@ try {
 }
 ```
 
-Multiple Wi-Fi networks with the same name but different BSSIDs
+Scenario 2: Multiple Wi-Fi networks with the same name but different BSSIDs
 
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -100,7 +104,6 @@ Scenario 3: old industrial devices with low security
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -129,7 +132,6 @@ Scenario 4: home networks, small offices, and consumer routers
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -157,7 +159,6 @@ Scenario 5: modern IoT device networks
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -185,7 +186,6 @@ Scenario 6: company networks and university campus networks
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -229,7 +229,6 @@ try {
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -273,7 +272,6 @@ try {
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -317,7 +315,6 @@ try {
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -363,7 +360,6 @@ Scenario 7: fixed IP address for client access
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.

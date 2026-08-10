@@ -22,7 +22,7 @@
 FlowItem()
 ```
 
-用于创建瀑布流子组件，仅支持作为[WaterFlow]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_组件的子组件使用。
+用于创建瀑布流子组件，仅支持作为[WaterFlow]{@link ./water_flow}组件的子组件使用。
 
 **起始版本：** 9
 

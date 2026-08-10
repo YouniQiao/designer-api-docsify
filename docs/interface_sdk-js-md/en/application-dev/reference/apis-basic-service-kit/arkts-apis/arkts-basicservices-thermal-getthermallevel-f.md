@@ -1,12 +1,18 @@
 # getThermalLevel
 
+## Modules to Import
+
+```TypeScript
+import { thermal } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getThermalLevel
 
 ```TypeScript
 function getThermalLevel(): ThermalLevel
 ```
 
-Obtains the current thermal level.
+获取当前热档位信息。
 
 **Since:** 8
 
@@ -24,9 +30,9 @@ Obtains the current thermal level.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Thermal level. |
+| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | 热档位信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let level = thermal.getThermalLevel();

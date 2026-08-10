@@ -10,6 +10,12 @@ This interface is used to obtain the progress information of file upload or down
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## receiveSize
 
 ```TypeScript
@@ -18,7 +24,7 @@ receiveSize: int
 
 Number of data bytes received.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -38,7 +44,7 @@ totalSize: int
 
 Total number of bytes to receive.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 

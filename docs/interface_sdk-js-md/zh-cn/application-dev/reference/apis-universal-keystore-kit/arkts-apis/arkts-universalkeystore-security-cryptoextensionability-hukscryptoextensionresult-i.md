@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
+## 导入模块
+
+```TypeScript
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## authState
 
 ```TypeScript
@@ -34,8 +40,7 @@ authState?: int
 certs?: Array<HuksCryptoExtensionCertInfo>
 ```
 
-/**  
-证书。
+/**证书。
 
 **类型：** Array&lt;HuksCryptoExtensionCertInfo&gt;
 

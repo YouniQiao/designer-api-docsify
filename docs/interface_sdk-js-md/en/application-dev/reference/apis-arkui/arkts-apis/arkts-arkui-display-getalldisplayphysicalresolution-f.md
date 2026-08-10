@@ -1,12 +1,18 @@
 # getAllDisplayPhysicalResolution
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getAllDisplayPhysicalResolution
 
 ```TypeScript
 function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>
 ```
 
-Obtains all the display modes supported by the current device, along with the physical screen resolutions for each mode. This API uses a promise to return the result.
+获取当前设备支持的所有显示模式及其对应的物理屏幕分辨率信息对象。使用Promise异步回调。
 
 **Since:** 12
 
@@ -22,19 +28,18 @@ Obtains all the display modes supported by the current device, along with the ph
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DisplayPhysicalResolution&gt;&gt; | Promise used to return all the DisplayPhysicalResolution objects. The objects are sorted in ascending order of physical screen resolution information in the array. |
+| Promise&lt;Array&lt;DisplayPhysicalResolution&gt;&gt; | Promise对象。返回当前所有的DisplayPhysicalResolution对象，对象数组内按物理屏幕分辨率信息从低到高的顺序排列。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
 
 let promise = display.getAllDisplayPhysicalResolution();
 promise.then((resolutionObjects) => {

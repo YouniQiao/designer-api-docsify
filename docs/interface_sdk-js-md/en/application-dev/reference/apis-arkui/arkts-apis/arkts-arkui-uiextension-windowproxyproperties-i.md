@@ -1,6 +1,6 @@
 # WindowProxyProperties
 
-Provides information about a component.
+用于表示组件的相关信息。
 
 **Since:** 14
 
@@ -10,13 +10,19 @@ Provides information about a component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiExtension } from 'kits/@kit.ArkUI';
+```
+
 ## uiExtensionHostWindowProxyRect
 
 ```TypeScript
 uiExtensionHostWindowProxyRect: window.Rect
 ```
 
-Position and size of the component (**EmbeddedComponent** or **UIExtensionComponent**).
+组件（EmbeddedComponent或UIExtensionComponent）的位置和宽高。
 
 **Type:** window.Rect
 

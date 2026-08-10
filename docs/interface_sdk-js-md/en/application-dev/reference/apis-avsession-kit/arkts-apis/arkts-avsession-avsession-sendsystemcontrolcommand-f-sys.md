@@ -1,12 +1,18 @@
 # sendSystemControlCommand (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## sendSystemControlCommand
 
 ```TypeScript
 function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void
 ```
 
-Send system control command.The system automatically selects the recipient.
+发送控制命令给置顶会话。结果通过callback异步回调方式返回。
 
 **Since:** 9
 
@@ -24,21 +30,21 @@ Send system control command.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The command to be sent. See \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | AVSession的相关命令和命令相关参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. |
+| 6600105 | Invalid session command. |
+| 6600107 | Too many commands or events. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let cmd : avSession.AVControlCommandType = 'play';
@@ -57,12 +63,8 @@ let avcommand: avSession.AVControlCommand = {command:cmd};
 // let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
 // let cmd : avSession.AVControlCommandType = 'toggleFavorite';
 // let avcommand = {command:cmd, parameter:"false"};
-avSession.sendSystemControlCommand(avcommand, (err) => {
-  if (err) {
-    console.error(`SendSystemControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('sendSystemControlCommand successfully');
-  }
+avSession.sendSystemControlCommand(avcommand, () => {
+    console.info('Succeeded in sending system control command.');
 });
 ```
 
@@ -73,7 +75,7 @@ avSession.sendSystemControlCommand(avcommand, (err) => {
 function sendSystemControlCommand(command: AVControlCommand): Promise<void>
 ```
 
-Send system control command.The system automatically selects the recipient.
+发送控制命令给置顶会话。结果通过Promise异步回调方式返回。
 
 **Since:** 9
 
@@ -91,30 +93,28 @@ Send system control command.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The command to be sent. See \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | AVSession的相关命令和命令相关参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
-| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. |
+| 6600105 | Invalid session command. |
+| 6600107 | Too many commands or events. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let cmd : avSession.AVControlCommandType = 'play';
 // let cmd : avSession.AVControlCommandType = 'pause';
 // let cmd : avSession.AVControlCommandType = 'stop';
@@ -132,9 +132,7 @@ let avcommand: avSession.AVControlCommand = {command:cmd};
 // let cmd : avSession.AVControlCommandType = 'toggleFavorite';
 // let avcommand = {command:cmd, parameter:"false"};
 avSession.sendSystemControlCommand(avcommand).then(() => {
-  console.info('SendSystemControlCommand successfully');
-}).catch((err: BusinessError) => {
-  console.error(`SendSystemControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
+  console.info('Succeeded in sending system control command.');
 });
 ```
 

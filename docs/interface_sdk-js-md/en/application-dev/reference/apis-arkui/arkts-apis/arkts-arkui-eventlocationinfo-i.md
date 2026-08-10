@@ -1,6 +1,6 @@
 # EventLocationInfo
 
-Provides coordinate information for tap gestures.
+用于点击手势获取点击位置坐标。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Provides coordinate information for tap gestures.
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-Gets the coordinates of the top-left corner of the current component based on its real-time position.
+获取点击位置相对于当前组件实时位置的左上角坐标。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  return the coordinates of the top-left corner of the current component based on its real-time position. |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## displayX
 
@@ -42,11 +42,11 @@ Gets the coordinates of the top-left corner of the current component based on it
 displayX: number
 ```
 
-X coordinate relative to the upper left corner of the screen.
+相对于屏幕的左上角X坐标。
 
-Value range: [0, +∞)
+取值范围：[0, +∞) 
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -68,11 +68,11 @@ Unit: vp
 displayY: number
 ```
 
-Y coordinate relative to the upper left corner of the screen.
+相对于屏幕的左上角Y坐标。
 
-Value range: [0, +∞)
+取值范围：[0, +∞) 
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -94,11 +94,11 @@ Unit: vp
 globalDisplayX?: number
 ```
 
-X coordinate in the coordinate system with the upper left corner of the main screen as the origin.
+相对于主屏幕左上角为原点的坐标系中的X坐标。
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -120,11 +120,11 @@ Value range: [0, +∞)
 globalDisplayY?: number
 ```
 
-Y coordinate in the coordinate system with the upper left corner of the main screen as the origin.
+相对于主屏幕左上角为原点的坐标系中的Y坐标。
 
-Unit: vp
+单位：vp
 
-Value range: [0, +∞)
+取值范围：[0, +∞)
 
 **Type:** number
 
@@ -146,11 +146,11 @@ Value range: [0, +∞)
 windowX: number
 ```
 
-X coordinate relative to the upper left corner of the window.
+相对于窗口的左上角X坐标。
 
-Value range: [0, +∞)
+取值范围：[0, +∞) 
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -172,11 +172,11 @@ Unit: vp
 windowY: number
 ```
 
-Y coordinate relative to the upper left corner of the window.
+相对于窗口的左上角Y坐标。
 
-Value range: [0, +∞)
+取值范围：[0, +∞) 
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -198,11 +198,11 @@ Unit: vp
 x: number
 ```
 
-X coordinate relative to the upper left corner of the component.
+相对于组件左上角的X坐标。
 
-Value range: [0, +∞)
+取值范围：[0, +∞) 
 
-Unit: vp
+单位：vp
 
 **Type:** number
 
@@ -224,11 +224,11 @@ Unit: vp
 y: number
 ```
 
-Y coordinate relative to the upper left corner of the component.
+相对于组件左上角的Y坐标。
 
-Value range: [0, +∞)
+取值范围：[0, +∞) 
 
-Unit: vp
+单位：vp
 
 **Type:** number
 

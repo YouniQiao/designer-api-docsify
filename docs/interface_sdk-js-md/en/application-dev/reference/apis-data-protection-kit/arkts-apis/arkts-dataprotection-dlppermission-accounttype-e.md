@@ -1,6 +1,6 @@
 # AccountType
 
-Enumerates the types of authorized accounts.
+表示授权账号类型的枚举。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates the types of authorized accounts.
 CLOUD_ACCOUNT = 1
 ```
 
-Cloud account.
+表示云账号。
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ Cloud account.
 DOMAIN_ACCOUNT = 2
 ```
 
-Domain account.
+表示域账号。
 
 **Since:** 21
 
@@ -48,7 +48,7 @@ Domain account.
 ENTERPRISE_ACCOUNT = 4
 ```
 
-Enterprise account.
+表示企业账号。
 
 **Since:** 21
 

@@ -1,8 +1,8 @@
 # AccessibilityAction (System API)
 
-Enumerates executable actions for accessibility node elements.
+表示无障碍节点元素可执行的操作枚举。
 
-Accessibility node elements are UI components that support accessibility actions, such as buttons, text boxes, and so on.
+无障碍节点元素是指，UI界面上可执行无障碍操作的一些组件，例如：按钮、文本输入框等组件。
 
 **Since:** 20
 
@@ -20,7 +20,7 @@ Accessibility node elements are UI components that support accessibility actions
 ACCESSIBILITY_FOCUS = 0
 ```
 
-Gain an accessibility focus.
+表示获得无障碍焦点。
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ Gain an accessibility focus.
 CLEAR_ACCESSIBILITY_FOCUS = 1
 ```
 
-Clear an accessibility focus.
+表示清除无障碍焦点。
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ Clear an accessibility focus.
 FOCUS = 2
 ```
 
-Gain a focus for a component.
+表示组件获得焦点。
 
 **Since:** 20
 
@@ -74,7 +74,7 @@ Gain a focus for a component.
 CLEAR_FOCUS = 3
 ```
 
-Clear a focus for a component.
+表示清除组件焦点。
 
 **Since:** 20
 
@@ -92,7 +92,7 @@ Clear a focus for a component.
 CLICK = 4
 ```
 
-Click a component.
+表示点击组件。
 
 **Since:** 20
 
@@ -110,7 +110,7 @@ Click a component.
 LONG_CLICK = 5
 ```
 
-Long press a component.
+表示长按点击组件。
 
 **Since:** 20
 
@@ -128,7 +128,7 @@ Long press a component.
 CUT = 6
 ```
 
-Cut the content of a component.
+表示剪切组件内容。
 
 **Since:** 20
 
@@ -146,7 +146,7 @@ Cut the content of a component.
 COPY = 7
 ```
 
-Copy the content of a component.
+表示拷贝组件内容。
 
 **Since:** 20
 
@@ -164,7 +164,7 @@ Copy the content of a component.
 PASTE = 8
 ```
 
-Paste the content into a component.
+表示粘贴内容到组件。
 
 **Since:** 20
 
@@ -182,7 +182,7 @@ Paste the content into a component.
 SELECT = 9
 ```
 
-Select a component.
+表示选择组件。
 
 **Since:** 20
 
@@ -200,7 +200,7 @@ Select a component.
 SET_TEXT = 10
 ```
 
-Set the text of a component.
+表示设置组件的文本。
 
 **Since:** 20
 
@@ -218,7 +218,7 @@ Set the text of a component.
 SCROLL_FORWARD = 11
 ```
 
-Scroll a component forward.
+表示向前滚动组件。
 
 **Since:** 20
 
@@ -236,7 +236,7 @@ Scroll a component forward.
 SCROLL_BACKWARD = 12
 ```
 
-Scroll a component backward.
+表示向后滚动组件。
 
 **Since:** 20
 
@@ -254,7 +254,7 @@ Scroll a component backward.
 SET_SELECTION = 13
 ```
 
-Select a text range in a component.
+表示选定组件内文本范围。
 
 **Since:** 20
 
@@ -272,7 +272,7 @@ Select a text range in a component.
 SET_CURSOR_POSITION = 14
 ```
 
-Set the cursor position in a component.
+表示设置组件内的光标位置。
 
 **Since:** 20
 
@@ -290,7 +290,7 @@ Set the cursor position in a component.
 HOME = 15
 ```
 
-Return to the home screen.
+表示组件返回首页操作。
 
 **Since:** 20
 
@@ -308,7 +308,7 @@ Return to the home screen.
 BACK = 16
 ```
 
-Return to the previous screen.
+表示执行返回操作。
 
 **Since:** 20
 
@@ -326,7 +326,7 @@ Return to the previous screen.
 RECENT_TASK = 17
 ```
 
-Open a recent task.
+显示最近任务。
 
 **Since:** 20
 
@@ -344,7 +344,7 @@ Open a recent task.
 NOTIFICATION_CENTER = 18
 ```
 
-Open the notification center.
+显示通知中心。
 
 **Since:** 20
 
@@ -362,7 +362,7 @@ Open the notification center.
 CONTROL_CENTER = 19
 ```
 
-Open the control center.
+显示控制中心。
 
 **Since:** 20
 
@@ -380,7 +380,7 @@ Open the control center.
 SPAN_CLICK = 20
 ```
 
-Click a text span.
+对局部文本进行点击操作。
 
 **Since:** 20
 
@@ -398,7 +398,7 @@ Click a text span.
 INJECT_ACTION = 21
 ```
 
-Injection action.
+表示注入动作。
 
 **Since:** 26.0.0
 

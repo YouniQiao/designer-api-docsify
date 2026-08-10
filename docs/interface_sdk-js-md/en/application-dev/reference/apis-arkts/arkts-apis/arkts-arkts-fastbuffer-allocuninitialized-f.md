@@ -1,12 +1,18 @@
 # allocUninitialized
 
+## Modules to Import
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## allocUninitialized
 
 ```TypeScript
 function allocUninitialized(size: number): FastBuffer
 ```
 
-Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will not be initially filled.
+创建指定大小未初始化的FastBuffer对象。调用[fill](arkts-arkts-fastbuffer-fastbuffer-c.md#fill)函数初始化该对象。
 
 **Since:** 20
 
@@ -22,15 +28,15 @@ Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | The desired size (in bytes) of the new FastBuffer |
+| size | number | Yes | 指定的FastBuffer对象长度，单位：字节。取值范围：0 <= size <= UINT32_MAX。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return a new allocated FastBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 未初始化的FastBuffer实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

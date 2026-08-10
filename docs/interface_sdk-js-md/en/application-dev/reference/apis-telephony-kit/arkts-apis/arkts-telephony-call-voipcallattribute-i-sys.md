@@ -12,6 +12,12 @@ Indicates the voip call detail information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## abilityName
 
 ```TypeScript

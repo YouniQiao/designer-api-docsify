@@ -1,6 +1,6 @@
 # DataArray
 
-Defines a list of data arrays.
+数据数组的列表。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines a list of data arrays.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## data
 
 ```TypeScript
 data: Array<Uint8Array>
 ```
 
-Indicates the content of the data array.
+表示数据数组内容。
 
 **Type:** Array&lt;Uint8Array&gt;
 

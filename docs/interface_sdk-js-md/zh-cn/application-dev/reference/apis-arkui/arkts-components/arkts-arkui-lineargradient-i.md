@@ -58,7 +58,7 @@ direction?: GradientDirection
 
 Linear Gradient Direction
 
-**类型：** GradientDirection
+**类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **起始版本：** 11
 

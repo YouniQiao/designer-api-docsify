@@ -1,12 +1,18 @@
 # getMaterialInfo
 
+## Modules to Import
+
+```TypeScript
+import { uiMaterial } from 'kits/@kit.ArkUI';
+```
+
 ## getMaterialInfo
 
 ```TypeScript
 export function getMaterialInfo(): MaterialInfo
 ```
 
-Obtains the material configuration information of this application. The returned configuration information comes from the metadata configured in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file of the application.
+获取当前应用的材质配置信息。返回的配置信息来自应用在[module.json5](../../../quick-start/module-configuration-file.md)中配置的metadata。
 
 **Since:** 26.0.0
 
@@ -22,5 +28,5 @@ Obtains the material configuration information of this application. The returned
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Material configuration information of this application, including the material enabling state and material type. |
+| [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) | 返回当前应用的材质配置信息，包含材质使能状态和材质类型。 |
 

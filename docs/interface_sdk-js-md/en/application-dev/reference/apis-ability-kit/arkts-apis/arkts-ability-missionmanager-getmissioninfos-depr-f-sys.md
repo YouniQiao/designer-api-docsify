@@ -6,7 +6,7 @@
 function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallback<Array<MissionInfo>>): void
 ```
 
-Obtains information about all missions. This API uses an asynchronous callback to return the result.
+获取所有任务信息。使用callback异步回调。
 
 **Since:** 8
 
@@ -28,11 +28,11 @@ Obtains information about all missions. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
-| numMax | number | Yes | Maximum number of missions whose information can be obtained. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;MissionInfo&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
+| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
+| numMax | number | Yes | 任务信息数量上限。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Yes | 回调函数，返回任务信息数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -54,7 +54,7 @@ missionManager.getMissionInfos('', 10, (error, missions) => {
 function getMissionInfos(deviceId: string, numMax: number): Promise<Array<MissionInfo>>
 ```
 
-Obtains information about all missions. This API uses a promise to return the result.
+获取所有任务信息。使用Promise异步回调。
 
 **Since:** 8
 
@@ -76,16 +76,16 @@ Obtains information about all missions. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
-| numMax | number | Yes | Maximum number of missions whose information can be obtained. |
+| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
+| numMax | number | Yes | 任务信息数量上限。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MissionInfo&gt;&gt; | Promise used to return the array of mission information obtained. |
+| Promise&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Promise对象，返回任务信息数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

@@ -4,9 +4,9 @@
 type BCP47LanguageTag = string
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ definition.
+[BCP 47 language tag](http://tools.ietf.org/html/rfc5646) definition.
 
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
 **ArkTS mode:** ArkTS-Dyn only
 

@@ -1,6 +1,6 @@
 # Point
 
-Set poly to poly point.
+坐标点的数据结构。
 
 **Since:** 23
 
@@ -10,13 +10,21 @@ Set poly to poly point.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { matrix4 } from 'kits/@kit.ArkUI';
+```
+
 ## x
 
 ```TypeScript
 x: double
 ```
 
-Point x.
+x轴坐标。
+
+取值范围：(-∞, +∞)
 
 **Type:** double
 
@@ -36,7 +44,9 @@ Point x.
 y: double
 ```
 
-Point y.
+y轴坐标。
+
+取值范围：(-∞, +∞)
 
 **Type:** double
 

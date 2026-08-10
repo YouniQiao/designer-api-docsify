@@ -1,6 +1,6 @@
-# @ohos.multimedia.cameraPicker(Camera Picker)
+# @ohos.multimedia.cameraPicker(相机选择器)
 
-The module provides APIs for an application to use the system camera to take photos or record videos, depending on the media type specified by the application. The application must call these APIs within a UIAbility. Otherwise, the camera picker cannot be started.
+本模块提供相机拍照与录制的能力。应用可选择媒体类型实现拍照和录制的功能。调用此类接口时，应用必须在界面UIAbility中调用，否则无法启动cameraPicker应用。
 
 **Since:** 11
 
@@ -10,24 +10,30 @@ The module provides APIs for an application to use the system camera to take pho
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { cameraPicker } from 'kits/@kit.CameraKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [pick](arkts-camera-camerapicker-pick-f.md#pick) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
+| [pick](arkts-camera-camerapicker-pick-f.md#pick) | 拉起相机选择器，根据媒体类型进入相应的模式。使用Promise异步回调。 |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md) | Defines the configuration information about the camera picker. |
-| [PickerResult](arkts-camera-camerapicker-pickerresult-c.md) | Defines the processing result of the camera picker. |
+| [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md) | 相机选择器的配置信息。 |
+| [PickerResult](arkts-camera-camerapicker-pickerresult-c.md) | 相机选择器的处理结果。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md) | Enumerates the media types displayed in the camera picker. |
+| [PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md) | 枚举，相机选择器的媒体类型。 |
 

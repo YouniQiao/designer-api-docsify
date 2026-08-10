@@ -3,7 +3,7 @@
 SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。
 
 在调用SingleKVStore的方法前，需要先通过  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构建一个SingleKVStore实例。
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个SingleKVStore实例。
 
 **起始版本：** 9
 
@@ -12,6 +12,12 @@ SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据�
 <!--Device-distributedKVStore-interface SingleKVStore--><!--Device-distributedKVStore-interface SingleKVStore-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
 
 ## delete
 
@@ -36,7 +42,15 @@ delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## delete
 
@@ -68,6 +82,14 @@ delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+
 ## getResultSet
 
 ```TypeScript
@@ -91,7 +113,15 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KVStoreResultSet&gt; | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
 
 ## getResultSet
 
@@ -123,6 +153,14 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 | --- | --- |
 | Promise&lt;KVStoreResultSet&gt; | Promise对象。返回KVStoreResultSet对象。 [ |
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 15100001 | Over max limits.<br>**适用版本：** 10+ |
+
 ## putBatch
 
 ```TypeScript
@@ -145,8 +183,16 @@ putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | 是 | 表示要插入的数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
+| value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 表示要插入的数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## putBatch
 
@@ -170,13 +216,21 @@ putBatch(value: Array<ValuesBucket>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | 是 | 表示要插入的数据。 |
+| value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 表示要插入的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## putValuesBuckets
 
@@ -200,8 +254,15 @@ putValuesBuckets(value: Array<ValuesBucket>, callback: AsyncCallback<void>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | 是 | 表示要插入的数据。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 [ |
+| value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 表示要插入的数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 15100005 | Database or result set already closed. [ |
+| 202 | Permission verification failed, application which is not a system application uses system API. [ |
 
 ## putValuesBuckets
 
@@ -225,11 +286,18 @@ putValuesBuckets(value: Array<ValuesBucket>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | 是 | 表示要插入的数据。 |
+| value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 表示要插入的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 15100005 | Database or result set already closed. [ |
+| 202 | Permission verification failed, application which is not a system application uses system API. [ |
 

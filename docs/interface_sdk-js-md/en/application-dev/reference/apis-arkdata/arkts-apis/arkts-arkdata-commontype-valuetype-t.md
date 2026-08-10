@@ -4,7 +4,7 @@
 type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets
 ```
 
-Enumerates the value types, which vary with the parameter function.
+用于表示允许的数据字段类型，接口参数具体类型根据其功能而定。。
 
 **Since:** 11
 
@@ -16,12 +16,12 @@ Enumerates the value types, which vary with the parameter function.
 
 | Type | Description |
 | --- | --- |
-| null | The value is null. |
-| long | The value is a 64-bit integer (int64\_t). |
-| double | The value is a floating-point number (float). |
-| string | The value is a string. |
-| boolean | The value is true or false. |
-| Uint8Array | The value is an array of 8-bit unsigned integers. |
-| Asset | The value is an instance of the Asset type. |
-| Assets | The value is an instance of the Assets type. |
+| null | 表示值类型为空。 |
+| long | 表示值类型为数字。 |
+| double | 表示值类型为数字。 |
+| string | 表示值类型为字符串。 |
+| boolean | 表示值类型为布尔值。 |
+| Uint8Array | 表示值类型为Uint8类型的数组。 |
+| Asset | 表示值类型为附件Asset。 |
+| Assets | 表示值类型为附件数组Assets。 |
 

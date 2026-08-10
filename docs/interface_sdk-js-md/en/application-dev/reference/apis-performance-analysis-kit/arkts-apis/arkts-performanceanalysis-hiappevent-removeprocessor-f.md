@@ -1,12 +1,18 @@
 # removeProcessor
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## removeProcessor
 
 ```TypeScript
 function removeProcessor(id: long): void
 ```
 
-Removes the data processor of a reported event.
+移除上报事件的数据处理者。
 
 **Since:** 11
 
@@ -22,28 +28,28 @@ Removes the data processor of a reported event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of a data processor. The value must be greater than **0**. The value is obtained by calling [addProcessor]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or [addProcessorFromConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 上报事件数据处理者ID。值大于0。由调用[addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor)或 [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig)接口返回值所得。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-    let processor: hiAppEvent.Processor = {
-      name: 'analytics_demo'
-    };
-    let id: number = hiAppEvent.addProcessor(processor);
-    // Remove a specified data processor based on the ID returned after the data processor is added.
-    hiAppEvent.removeProcessor(id);
+  let processor: hiAppEvent.Processor = {
+    name: 'analytics_demo'
+  };
+  let id: number = hiAppEvent.addProcessor(processor);
+  // Remove a specified data processor based on the ID returned after the data processor is added.
+  hiAppEvent.removeProcessor(id);
 } catch (error) {
-    hilog.error(0x0000, 'hiAppEvent', `failed to removeProcessor event, code=${error.code}`);
+  hilog.error(0x0000, 'hiAppEvent', `failed to removeProcessor event, code=${error.code}`);
 }
 ```
 

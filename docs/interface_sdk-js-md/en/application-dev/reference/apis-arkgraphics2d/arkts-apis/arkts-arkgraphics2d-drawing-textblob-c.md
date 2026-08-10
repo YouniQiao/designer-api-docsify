@@ -1,12 +1,12 @@
 # TextBlob
 
-Defines a block consisting of one or more characters with the same font.
-    **NOTE**  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - The module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+TextBlob是由一个或多个具有相同字型的字符组成的字块。支持通过文本、字符串、RunBuffer等多种方式创建字形集合，适用于需要批量渲染文本或获取文字边界框的场景。
+
+> **说明：**
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 11
 
@@ -16,13 +16,19 @@ Defines a block consisting of one or more characters with the same font.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## bounds
 
 ```TypeScript
 bounds(): common2D.Rect
 ```
 
-Obtains the rectangular bounding box of the text blob.
+获取文字边界框的矩形区域。
 
 **Since:** 11
 
@@ -36,7 +42,7 @@ Obtains the rectangular bounding box of the text blob.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Rectangular bounding box. |
+| common2D.Rect | 文字边界框的矩形区域。 |
 
 ## bounds
 
@@ -44,7 +50,7 @@ Obtains the rectangular bounding box of the text blob.
 bounds(): common2D.Rect | undefined
 ```
 
-Obtains the rectangular bounding box of the text blob.
+获取文字边界框的矩形区域。
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ Obtains the rectangular bounding box of the text blob.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Rect object. |
+| common2D.Rect | 文字边界框的矩形区域。创建失败时返回undefined。 |
 
 ## makeFromPosText
 
@@ -66,7 +72,7 @@ Obtains the rectangular bounding box of the text blob.
 static makeFromPosText(text: string, len: number, points: common2D.Point[], font: Font): TextBlob
 ```
 
-Creates a **TextBlob** object from the text. The coordinates of each font in the **TextBlob** object are determined by the coordinate information in the **points** array.
+使用文本创建TextBlob对象，其中每个字形的坐标由points中对应的坐标信息决定。
 
 **Since:** 12
 
@@ -80,22 +86,22 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Content to be used for drawing the text blob. |
-| len | number | Yes | Number of glyphs, which is an integer obtained from [countText]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| points | common2D.Point[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of **len**. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font** object. |
+| text | string | Yes | 绘制字形的文本内容。 |
+| len | number | Yes | 字形个数，由[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取，该参数为整数。 |
+| points | common2D.Point[] | Yes | 点数组，用于指定每个字形的坐标，长度必须为len。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 字型对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob** object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | 由文本和坐标信息创建的TextBlob对象，用于后续绘制字形。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromPosText
 
@@ -103,7 +109,7 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 static makeFromPosText(text: string, len: int, points: common2D.Point[], font: Font): TextBlob | undefined
 ```
 
-Creates a TextBlob object from the text.The coordinates of each font in the TextBlob object are determined by the coordinate information in the points array.
+使用文本创建TextBlob对象，其中每个字形的坐标由points中对应的坐标信息决定。
 
 **Since:** 23
 
@@ -117,22 +123,22 @@ Creates a TextBlob object from the text.The coordinates of each font in the Text
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Content to be used for drawing the text blob. |
-| len | int | Yes | Number of fonts. The value is an integer and is obtained from countText. |
-| points | common2D.Point[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of len. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specify text size, font, text scale, etc. |
+| text | string | Yes | 绘制字形的文本内容。 |
+| len | int | Yes | 字形个数，由[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取，该参数为整数。 |
+| points | common2D.Point[] | Yes | 点数组，用于指定每个字形的坐标，长度必须为len。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 字型对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | 由文本和坐标信息创建的TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromRunBuffer
 
@@ -140,7 +146,7 @@ Creates a TextBlob object from the text.The coordinates of each font in the Text
 static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob
 ```
 
-Creates a **TextBlob** object based on the **RunBuffer** information.
+基于RunBuffer信息创建TextBlob对象。
 
 **Since:** 11
 
@@ -154,21 +160,21 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | Array&lt;TextBlobRunBuffer&gt; | Yes | TextBlobRunBuffer** array. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font** object. |
-| bounds | common2D.Rect | No | Bounding box. If this parameter is not set, there is no bounding box. |
+| pos | Array&lt;TextBlobRunBuffer&gt; | Yes | TextBlobRunBuffer数组，每个元素包含字形ID及位置坐标信息。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 字型对象。 |
+| bounds | common2D.Rect | No | 文字边界框的矩形区域；如果不设置，则不预设边界框。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob** object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | 基于RunBuffer创建的TextBlob对象，用于后续绘制字形。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromRunBuffer
 
@@ -176,7 +182,7 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob | undefined
 ```
 
-Creates a Textblob object based on the RunBuffer information.
+基于RunBuffer信息创建TextBlob对象。
 
 **Since:** 23
 
@@ -190,21 +196,21 @@ Creates a Textblob object based on the RunBuffer information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | Array&lt;TextBlobRunBuffer&gt; | Yes | The array of TextBlobRunBuffer. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font used for this run. |
-| bounds | common2D.Rect | No | Optional run bounding box. The default value is null; |
+| pos | Array&lt;TextBlobRunBuffer&gt; | Yes | TTextBlobRunBuffer数组，每个元素包含字形ID及位置坐标信息。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 字型对象。 |
+| bounds | common2D.Rect | No | 文字边界框的矩形区域；如果不设置，则不预设边界框。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | 基于RunBuffer创建的TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromString
 
@@ -212,7 +218,7 @@ Creates a Textblob object based on the RunBuffer information.
 static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob
 ```
 
-Converts a value of the string type into a **TextBlob** object.
+根据指定的编码类型和字型，使用string类型的值创建TextBlob对象。
 
 **Since:** 11
 
@@ -226,21 +232,21 @@ Converts a value of the string type into a **TextBlob** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Content to be used for drawing the text blob. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font** object. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding type. The default value is **TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8**. Currently, only **TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8** takes effect, and other encoding types are treated as **TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8**. |
+| text | string | Yes | 绘制字形的文本内容。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 字型对象。 |
+| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | No | 编码类型，默认值为TEXT_ENCODING_UTF8。当前只有TEXT_ENCODING_UTF8生效，其余编码类型也会被视为 TEXT_ENCODING_UTF8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob** object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob对象，用于后续绘制字形。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromString
 
@@ -248,7 +254,7 @@ Converts a value of the string type into a **TextBlob** object.
 static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob | undefined
 ```
 
-Converts a value of the string type into a TextBlob object.
+根据指定的编码类型和字型，使用string类型的值创建TextBlob对象
 
 **Since:** 23
 
@@ -262,21 +268,21 @@ Converts a value of the string type into a TextBlob object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Content to be used for drawing the text blob. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specify text size, font, text scale, etc. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding type. The default value is TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8. Currently, only TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8 takes effect, and other encoding types are treated as TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8. |
+| text | string | Yes | 绘制字形的文本内容。 |
+| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 字型对象。 |
+| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | No | 编码类型，默认值为TEXT_ENCODING_UTF8。当前只有TEXT_ENCODING_UTF8生效，其余编码类型也会被视为 TEXT_ENCODING_UTF8。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## uniqueID
 
@@ -290,7 +296,7 @@ ArkTS-Sta:
 uniqueID(): long
 ```
 
-Obtains the unique, non-zero identifier of this **TextBlob** object.
+获取该TextBlob对象的唯一非零标识符。
 
 **Since:** 12
 
@@ -304,5 +310,5 @@ Obtains the unique, non-zero identifier of this **TextBlob** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Unique, non-zero identifier of this **TextBlob** object. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回TextBlob对象的唯一的非零标识符。 |
 

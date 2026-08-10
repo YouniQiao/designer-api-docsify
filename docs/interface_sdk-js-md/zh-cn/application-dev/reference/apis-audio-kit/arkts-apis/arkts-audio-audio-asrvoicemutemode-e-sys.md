@@ -90,7 +90,7 @@ Mute the voice call stream.
 OUTPUT_MUTE_EX = 4
 ```
 
-Based on the OUTPUT\_MUTE, send output stream to voice call record.
+Based on the OUTPUT_MUTE, send output stream to voice call record.
 
 **起始版本：** 12
 

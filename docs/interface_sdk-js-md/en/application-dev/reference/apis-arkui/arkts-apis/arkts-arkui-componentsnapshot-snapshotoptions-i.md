@@ -10,6 +10,12 @@ Defines the extra options for snapshot taking.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
+
 ## colorMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ colorMode?: ColorModeOptions
 
 Set the color space options for current snapshot taking.
 
-**Type:** ColorModeOptions
+**Type:** [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md)
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ dynamicRangeMode?: DynamicRangeModeOptions
 
 Set the dynamic range mode options for current snapshot taking.
 
-**Type:** DynamicRangeModeOptions
+**Type:** [DynamicRangeModeOptions](arkts-arkui-componentsnapshot-dynamicrangemodeoptions-i.md)
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ region?: SnapshotRegionType
 
 Defines the rect region type of the snapshot.
 
-**Type:** SnapshotRegionType
+**Type:** [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md)
 
 **Since:** 23
 

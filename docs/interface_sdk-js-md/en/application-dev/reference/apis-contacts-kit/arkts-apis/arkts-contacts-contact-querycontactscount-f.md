@@ -1,12 +1,18 @@
 # queryContactsCount
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## queryContactsCount
 
 ```TypeScript
 function queryContactsCount(context: Context): Promise<int>
 ```
 
-Queries the number of all contacts. This API uses a promise to return the result.
+查询所有联系人的数量。使用Promise异步回调。
 
 **Since:** 22
 
@@ -24,34 +30,34 @@ Queries the number of all contacts. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise used to return the result, which is the number of queried contacts. |
+| Promise&lt;int&gt; | Promise对象。返回查询到的联系人数量。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| 201 | Permission denied. |
+| 16700001 | General error. |
 
-**Example**
+## Examples
+
+In the examples of this document, the UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let promise = contact.queryContactsCount(context);
 promise.then((data) => {
   console.info(`Succeeded in querying ContactsCount. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query ContactsCount. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

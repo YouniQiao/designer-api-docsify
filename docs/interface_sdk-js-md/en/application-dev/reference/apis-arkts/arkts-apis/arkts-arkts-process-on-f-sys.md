@@ -1,12 +1,18 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## on
 
 ```TypeScript
 function on(type: string, listener: EventListener): void
 ```
 
-Register for an event
+注册事件。
 
 **Since:** 7
 
@@ -22,6 +28,6 @@ Register for an event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Indicates the type of event registered. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Represents the registered event function |
+| type | string | Yes | 表示注册的事件类型。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | 表示注册的事件函数。 |
 

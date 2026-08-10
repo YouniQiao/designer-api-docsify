@@ -1,6 +1,6 @@
 # WebNavigationType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for the navigation's type.
+Enum type supplied to {@link navigationType} for the navigation's type.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ A new entry was created due to a navigation happened on the main frame.Contains 
 MAIN_FRAME_EXISTING_ENTRY = 2
 ```
 
-Navigate to an existing entry due to a navigation on the main frame.e.g.1. History navigations.2. Reloads (contains loading the same url).3. Same-document navigations(history.replaceState(), location.replace()).
+Navigate to an existing entry due to a navigation on the main frame.e.g. 1. History navigations. 2. Reloads (contains loading the same url). 3. Same-document navigations(history.replaceState(), location.replace()).
 
 **Since:** 11
 

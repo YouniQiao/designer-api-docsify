@@ -1,12 +1,18 @@
 # getPortList
 
+## Modules to Import
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getPortList
 
 ```TypeScript
 function getPortList(): Readonly<SerialPort>[]
 ```
 
-Obtains the serial port device list, including the device name and port number.
+查询串口设备清单，包括设备名称和对应的端口号。
 
 **Since:** 19
 
@@ -20,9 +26,9 @@ Obtains the serial port device list, including the device name and port number.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SerialPort&gt;[] | Serial port information list. |
+| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;SerialPort&gt;[] | Serial port information list. |
 
-**Example**
+## Examples
 
 The following sample code shows the basic process for calling the getPortList API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
@@ -34,11 +40,10 @@ import { serialManager } from '@kit.BasicServicesKit';
 function getPortList() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (portList === undefined || portList.length === 0) {
-    console.info('usbSerial portList is empty');
+  if (!portList || portList.length === 0) {
+    console.error('usbSerial portList is empty');
     return;
   }
-  let portId: number = portList[0].portId;
 }
 ```
 

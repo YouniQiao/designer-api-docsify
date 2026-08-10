@@ -1,6 +1,6 @@
 # SystemBarStyle
 
-Describes the properties of the status bar. These properties are valid for the page-level status bar.
+状态栏的属性。在设置页面级状态栏属性时使用。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes the properties of the status bar. These properties are valid for the p
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## statusBarContentColor
 
 ```TypeScript
 statusBarContentColor?: string
 ```
 
-Color of the text on the status bar. The default value is **'#E5FFFFFF'**.
+状态栏文字颜色。默认值：`'#E5FFFFFF'`。
 
 **Type:** string
 

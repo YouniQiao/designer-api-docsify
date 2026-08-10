@@ -1,6 +1,6 @@
 # OperateCheckV2Options
 
-Declare interface OperateCheckV2Options
+声明接口OperateCheckV2Options
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Declare interface OperateCheckV2Options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## onChange
 
 ```TypeScript
 onChange?: OnChangeCallback
 ```
 
-Callback function when operate the checkbox/switch/radio.
+操作checkbox/switch/radio时的回调函数。
 
 **Since:** 26.0.0
 
@@ -34,9 +40,9 @@ Callback function when operate the checkbox/switch/radio.
 accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of the checkbox/switch/radio.
+Switch/CheckBox/Radio的无障碍描述。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -54,7 +60,7 @@ The accessibilityDescription of the checkbox/switch/radio.
 accessibilityLevel?: string
 ```
 
-The accessibilityLevel of the checkbox/switch/radio.
+Switch/CheckBox/Radio的无障碍重要性。
 
 **Type:** string
 
@@ -76,9 +82,9 @@ The accessibilityLevel of the checkbox/switch/radio.
 accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of the checkbox/switch/radio.
+Switch/CheckBox/Radio的无障碍文本属性。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -96,7 +102,7 @@ The accessibilityText of the checkbox/switch/radio.
 isCheck?: boolean
 ```
 
-Whether is checked on default.
+是否默认选中。
 
 **Type:** boolean
 

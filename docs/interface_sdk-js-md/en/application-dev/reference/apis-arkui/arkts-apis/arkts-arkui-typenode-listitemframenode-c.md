@@ -1,6 +1,6 @@
 # ListItemFrameNode
 
-Define the ListItem type of FrameNode.
+定义ListItem类型的FrameNode。
 
 **Inheritance/Implementation:** ListItemFrameNode extends [TypedFrameNode<ListItemAttribute>](TypedFrameNode<ListItemAttribute>)
 
@@ -18,7 +18,7 @@ Define the ListItem type of FrameNode.
 abstract initialize(options?: ListItemOptions): ListItemAttribute
 ```
 
-Initialize ListItem FrameNode.
+初始化ListItem类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize ListItem FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | list item options. |
+| options | [ListItemOptions](../arkts-components/arkts-arkui-listitemoptions-i.md) | No | list节点的选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) |  |
 

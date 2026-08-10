@@ -1,6 +1,6 @@
 # SerialPort
 
-Represents the parameters of a serial port.
+串口参数。
 
 **Since:** 19
 
@@ -10,13 +10,19 @@ Represents the parameters of a serial port.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
+## Modules to Import
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## deviceName
 
 ```TypeScript
 deviceName: string
 ```
 
-Serial port device name.
+串口设备名称。
 
 **Type:** string
 
@@ -34,9 +40,9 @@ Serial port device name.
 portId: int
 ```
 
-Port number.
+端口号。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 19
 

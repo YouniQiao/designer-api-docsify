@@ -1,6 +1,6 @@
 # TextMenuShowMode
 
-Enumerates the text menu display modes.
+菜单的显示模式。
 
 **Since:** 16
 
@@ -16,7 +16,7 @@ Enumerates the text menu display modes.
 DEFAULT = 0
 ```
 
-The menu is displayed in the current window.
+显示在当前窗口中。
 
 **Since:** 16
 
@@ -36,21 +36,20 @@ The menu is displayed in the current window.
 PREFER_WINDOW = 1
 ```
 
-The menu is preferentially displayed in a separate window. If a separate window is not supported, the menu is displayed in the current window.
+优先显示在独立窗口中，若不支持独立窗口，则显示在当前窗口中。
 
-**NOTE**
+**说明：**
 
-Displaying the text selection menu in a separate window is not supported for window types other than the app main window, app sub-window, system modal window, and system desktop window.
+除应用主窗口、应用子窗口、系统模态窗口及系统桌面类型的窗口外，其他类型的窗口不支持将文本选择菜单显示在独立窗口中。
 
-Displaying the text selection menu in a separate window is not supported in the previewer.
+在预览器中不支持将文本选择菜单显示在独立窗口中。
 
-Displaying the text selection menu in a separate window is not supported in  
-[UIExtension]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+在[UIExtension](arkts-arkui-uiextension.md)中不支持将文本选择菜单显示在独立窗口中。
 
-When a text component is displayed in a child window of [Popup]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_,  
-[Dialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, or [Menu]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_,the corresponding text selection menu cannot be displayed in a separate window.
+当文本类组件已经显示在子窗类型的[Popup](arkts-arkui-advanced-popup.md)、[Dialog](arkts-arkui-advanced-dialog.md)、  
+[Toast](../../../ui/arkts-create-toast.md)、[Menu](arkts-arkui-menu-menu-f.md#menu)中时，不支持将其对应的文本选择菜单显示在独立窗口中。
 
-When **autoFill** is available for **TextInput** or **TextArea**, the corresponding text selection menu cannot be displayed in a separate window.
+当TextInput、TextArea可支持拉起AutoFill时，不支持将其对应的文本选择菜单显示在独立窗口中。
 
 **Since:** 16
 

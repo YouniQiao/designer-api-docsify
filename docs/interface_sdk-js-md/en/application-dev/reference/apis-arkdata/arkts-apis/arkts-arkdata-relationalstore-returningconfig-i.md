@@ -1,6 +1,6 @@
 # ReturningConfig
 
-Specifies the list of field names to return after returning-related APIs are called and the maximum number of records allowed in the result set.
+指定returning相关接口操作后需要返回的字段名列表和结果集中允许包含的最大记录数。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Specifies the list of field names to return after returning-related APIs are cal
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## columns
 
 ```TypeScript
 columns: Array<string>
 ```
 
-Fields returned in the result set. One to four fields are supported for input. Note: Field names containing spaces ( ), commas (,), or asterisks (*) are not allowed.
+指定结果集中返回的字段，支持传入1到4个字段。注意：不能传入带有空格、逗号以及星号的字段名。
 
 **Type:** Array&lt;string&gt;
 
@@ -36,10 +42,9 @@ Fields returned in the result set. One to four fields are supported for input. N
 maxReturningCount?: int
 ```
 
-Maximum number of rows returned in the result set. The default value is **1024**, and the maximum value is  
-**32766**. Note: If the actual number of modified rows exceeds the value set for **maxReturningCount**, the system will discard the excess data.
+指定结果集返回的最大行数量，默认为1024条，最大支持32766条。注意：当实际修改行数超过maxReturningCount设置的值时，系统会丢弃超出部分的数据。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

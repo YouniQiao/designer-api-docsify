@@ -98,9 +98,9 @@ KEYCODE_MEDIA_PLAY_PAUSE = 10
 
 多媒体键：播放/暂停。
 
-与KEYCODE\_PLAYPAUSE的区别为：
+与KEYCODE_PLAYPAUSE的区别为：
 
-KEYCODE\_PLAYPAUSE是较早的定义，KEYCODE\_MEDIA\_PLAY\_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
+KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
 
 **起始版本：** 9
 
@@ -3014,9 +3014,9 @@ KEYCODE_PLAYPAUSE = 2630
 
 多媒体键：播放/暂停。
 
-与KEYCODE\_MEDIA\_PLAY\_PAUSE的区别为：
+与KEYCODE_MEDIA_PLAY_PAUSE的区别为：
 
-KEYCODE\_PLAYPAUSE是较早的定义，KEYCODE\_MEDIA\_PLAY\_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
+KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
 
 **起始版本：** 9
 
@@ -4536,7 +4536,7 @@ KEYCODE_BRIGHTNESS_MAX = 2725
 KEYCODE_KBDINPUTASSIST_PREV = 2726
 ```
 
-键盘输入Assist\_Previous，查看输入法输入记录。
+键盘输入Assist_Previous，查看输入法输入记录。
 
 **起始版本：** 9
 
@@ -4552,7 +4552,7 @@ KEYCODE_KBDINPUTASSIST_PREV = 2726
 KEYCODE_KBDINPUTASSIST_NEXT = 2727
 ```
 
-键盘输入Assist\_Next，查看输入法输入拓展。
+键盘输入Assist_Next，查看输入法输入拓展。
 
 **起始版本：** 9
 
@@ -4568,7 +4568,7 @@ KEYCODE_KBDINPUTASSIST_NEXT = 2727
 KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728
 ```
 
-键盘输入Assist\_Previous，切换输入组中上一个输入法。
+键盘输入Assist_Previous，切换输入组中上一个输入法。
 
 **起始版本：** 9
 
@@ -4584,7 +4584,7 @@ KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728
 KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729
 ```
 
-键盘输入Assist\_Next，切换输入组中下一个输入法。
+键盘输入Assist_Next，切换输入组中下一个输入法。
 
 **起始版本：** 9
 
@@ -4600,7 +4600,7 @@ KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729
 KEYCODE_KBDINPUTASSIST_ACCEPT = 2730
 ```
 
-键盘输入Assist\_Accept。
+键盘输入Assist_Accept。
 
 **起始版本：** 9
 
@@ -4616,7 +4616,7 @@ KEYCODE_KBDINPUTASSIST_ACCEPT = 2730
 KEYCODE_KBDINPUTASSIST_CANCEL = 2731
 ```
 
-键盘输入Assist\_Cancel。
+键盘输入Assist_Cancel。
 
 **起始版本：** 9
 

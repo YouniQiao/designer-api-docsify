@@ -1,10 +1,10 @@
 # MultiNavigation
 
-MultiNavigation({navDestination: PageMapBuilder | undefined, multiStack: MultiNavPathStack, onNavigationModeChange?:OnNavigationModeChangeCallback, onHomeShowOnTop?: OnHomeShowOnTopCallback})
+MultiNavigation({navDestination: PageMapBuilder | undefined, multiStack: MultiNavPathStack, onNavigationModeChange?: OnNavigationModeChangeCallback, onHomeShowOnTop?: OnHomeShowOnTopCallback})
 
 创建并初始化MultiNavigation组件。
 
-MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左侧主页点击时，会触发详情页的加载并同时清除右侧所有其他详情页，确保右侧仅展示最新加载的详情页。然而，若在右侧的详情页上再次执行详情页加载操作，系统将不会执行清栈动作。效果可参见\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左侧主页点击时，会触发详情页的加载并同时清除右侧所有其他详情页，确保右侧仅展示最新加载的详情页。然而，若在右侧的详情页上再次执行详情页加载操作，系统将不会执行清栈动作。效果可参见[主页跳转详情页效果演示](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-MultiNavigation copy.md#示例)。
 
 **起始版本：** 23
 
@@ -15,6 +15,12 @@ MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左�
 <!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from 'kits/@kit.ArkUI';
+```
 
 ## build
 
@@ -80,7 +86,7 @@ multiStack: MultiNavPathStack
 
 设置路由栈。
 
-**类型：** MultiNavPathStack
+**类型：** [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md)
 
 **起始版本：** 23
 
@@ -104,7 +110,7 @@ navDestination: PageMapBuilder | undefined
 
 取值为undefined时，不会加载。
 
-**类型：** PageMapBuilder \| undefined
+**类型：** [PageMapBuilder](arkts-arkui-pagemapbuilder-t.md) \| undefined
 
 **起始版本：** 23
 

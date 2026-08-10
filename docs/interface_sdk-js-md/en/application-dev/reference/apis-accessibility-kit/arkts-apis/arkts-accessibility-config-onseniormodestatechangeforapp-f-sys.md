@@ -1,5 +1,11 @@
 # onSeniorModeStateChangeForApp (System API)
 
+## Modules to Import
+
+```TypeScript
+import { config } from 'kits/@kit.AccessibilityKit';
+```
+
 ## onSeniorModeStateChangeForApp
 
 ```TypeScript
@@ -26,12 +32,39 @@ Register an observer for anyone application's senior mode state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AppSeniorModeInfo&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AppSeniorModeInfo&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_A non-system application calls a system API. |
+| 201 | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+
+@Entry
+@Component
+struct Index {
+  callback = (data: config.AppSeniorModeInfo) => {
+    console.info(`callback data, name: ${data.bundleName}, appIndex: ${data.appIndex}, seniorModeState: ${data.seniorModeState}`);
+  }
+
+  aboutToAppear(): void {
+    config.onSeniorModeStateChangeForApp(this.callback);
+  }
+
+  aboutToDisappear(): void {
+    config.offSeniorModeStateChangeForApp(this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```
 

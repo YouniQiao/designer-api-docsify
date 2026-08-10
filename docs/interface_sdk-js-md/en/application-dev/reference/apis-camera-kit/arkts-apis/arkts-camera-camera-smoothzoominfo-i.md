@@ -1,6 +1,6 @@
 # SmoothZoomInfo
 
-Describes the smooth zoom information.
+平滑变焦参数信息。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Describes the smooth zoom information.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## duration
 
 ```TypeScript
 duration: int
 ```
 
-Total duration of smooth zoom, in milliseconds.
+平滑变焦总时长。单位ms。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

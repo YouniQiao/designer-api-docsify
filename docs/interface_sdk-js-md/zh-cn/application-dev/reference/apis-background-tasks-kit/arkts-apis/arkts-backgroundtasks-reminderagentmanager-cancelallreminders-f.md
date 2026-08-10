@@ -1,5 +1,11 @@
 # cancelAllReminders
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## cancelAllReminders
 
 ```TypeScript
@@ -20,18 +26,16 @@ function cancelAllReminders(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。 当取消代理提醒成功，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 当取消代理提醒成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
-| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
+| 401 | If the input parameter is not valid parameter. |
+| 1700004 | The bundle name does not exist. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -44,23 +48,6 @@ reminderAgentManager.cancelAllReminders((err: BusinessError) =>{
     console.info("cancelAllReminders callback")
   }
 });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let cancelCallback = (err: BusinessError | null) => {
-  if (err) {
-    console.error(`Failed to cancel all reminder. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in canceling all reminders.`);
-  }
-}
-
-reminderAgentManager.cancelAllReminders(cancelCallback);
 ```
 
 
@@ -90,12 +77,10 @@ function cancelAllReminders(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
-| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
+| 401 | If the input parameter is not valid parameter. |
+| 1700004 | The bundle name does not exist. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -105,18 +90,6 @@ reminderAgentManager.cancelAllReminders().then(() => {
   console.info("cancelAllReminders promise")
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.cancelAllReminders().then(() => {
-  console.info(`Succeeded in canceling all reminders.`);
-}).catch((err): void => {
-  console.error(`Failed to cancel all reminder. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

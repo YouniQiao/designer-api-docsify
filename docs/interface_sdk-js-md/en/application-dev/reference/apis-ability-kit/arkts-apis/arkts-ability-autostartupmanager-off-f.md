@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('systemAutoStartup')
 
 ```TypeScript
 function off(type: 'systemAutoStartup', callback?: AutoStartupCallback): void
 ```
 
-Unregisters the callback used to listen for auto-startup status changes of an application component.Starting from API version 21, this API can be properly called only on phones, 2-in-1 devices, tablets, and wearables. On other devices, it returns the error code 16000050.Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned.For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
+注销监听应用组件开机自启动状态变化的回调函数。从API version 18开始，该接口仅在2in1和Wearable设备中可正常调用，在其他设备上返回16000050错误码。对于API version 18之前版本，该接口仅在2in1设备中可正常调用，在其他设备上返回16000050错误码。
 
 **Since:** 11
 
@@ -24,15 +30,15 @@ Unregisters the callback used to listen for auto-startup status changes of an ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemAutoStartup' | Yes | Event type. The value is fixed at **systemAutoStartup**, which can be called only by system applications. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used for unregistration. |
+| type | 'systemAutoStartup' | Yes | 固定取值“systemAutoStartup”，表示为系统应用所调用。 |
+| callback | [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | No | 监听应用组件开机自启动状态变化的回调对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_BOOT". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
+| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| 16000050 | Failed to connect to the system service. |
+| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| 202 | Permission denied, non-system app called system api. |
 

@@ -1,6 +1,6 @@
 # PanGestureInterface
 
-PanGesture is used to trigger a pan gesture when the movement distance of a finger on the screen reaches the minimum value.
+滑动手势事件，当滑动的最小距离达到设定的最小值时触发滑动手势事件。
 
 **Inheritance/Implementation:** PanGestureInterface extends [GestureInterface<PanGestureInterface>](GestureInterface<PanGestureInterface>)
 
@@ -18,7 +18,7 @@ PanGesture is used to trigger a pan gesture when the movement distance of a fing
 (value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface
 ```
 
-Creates a pan gesture. Inherits from [GestureInterface\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+创建滑动手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ Creates a pan gesture. Inherits from [GestureInterface\_\_\_HTML\_TAG\_DESC\_USD
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## [[Call]]
 
@@ -48,7 +48,7 @@ Creates a pan gesture. Inherits from [GestureInterface\_\_\_HTML\_TAG\_DESC\_USD
 (options?: PanGestureHandlerOptions): PanGestureInterface
 ```
 
-Creates a pan gesture. Compared with [PanGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ | PanGestureOptions)},this API adds the **isFingerCountLimited** and **distanceMap** parameters to **options**, which control whether to enforce the exact number of fingers touching the screen and specify the minimum pan distance required to trigger the gesture for different input sources, respectively.
+创建滑动手势对象。与[PanGesture](arkts-arkui-pangestureinterface-i.md) | PanGestureOptions)}相比，options参数新增了对isFingerCountLimited和distanceMap参数，分别表示是否检查触摸屏幕的手指数量以及指定不同输入源触发滑动手势事件的最小滑动距离。
 
 **Since:** 15
 
@@ -66,13 +66,13 @@ Creates a pan gesture. Compared with [PanGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the swipe gesture handler. |
+| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | No | 滑动手势处理器配置参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -80,7 +80,7 @@ Creates a pan gesture. Compared with [PanGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0
 onActionCancel(event: () => void): PanGestureInterface
 ```
 
-Registers the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful pan gesture recognition. No gesture event information is returned.
+设置滑动手势取消回调。滑动手势识别成功后，接收到触摸取消事件时触发回调。不返回手势事件信息。
 
 **Since:** 7
 
@@ -96,13 +96,13 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | Callback for pan gesture cancellation. |
+| event | () =&gt; void | Yes | 滑动手势取消回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionCancel
 
@@ -110,7 +110,7 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 onActionCancel(event: Callback<GestureEvent>): PanGestureInterface
 ```
 
-Registers the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful pan gesture recognition. Gesture event information is returned.
+设置滑动手势取消回调。滑动手势识别成功后，接收到触摸取消事件时触发回调。返回手势事件信息。
 
 **Since:** 18
 
@@ -128,13 +128,13 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback for pan gesture cancellation. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 滑动手势取消回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionEnd
 
@@ -142,7 +142,7 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface
 ```
 
-Registers the callback for pan gesture completion. This callback is triggered when all fingers are lifted after successful pan gesture recognition.
+设置滑动手势结束回调。滑动手势识别成功后，手指抬起时触发回调。
 
 **Since:** 7
 
@@ -158,13 +158,13 @@ Registers the callback for pan gesture completion. This callback is triggered wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for pan gesture completion. |
+| event | (event: GestureEvent) =&gt; void | Yes | 滑动手势结束回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionStart
 
@@ -172,7 +172,7 @@ Registers the callback for pan gesture completion. This callback is triggered wh
 onActionStart(event: (event: GestureEvent) => void): PanGestureInterface
 ```
 
-Registers the callback for successful pan gesture recognition.
+设置滑动手势识别成功回调。
 
 **Since:** 7
 
@@ -188,13 +188,13 @@ Registers the callback for successful pan gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for successful pan gesture recognition. |
+| event | (event: GestureEvent) =&gt; void | Yes | 滑动手势识别成功回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 
 ## onActionUpdate
 
@@ -202,7 +202,7 @@ Registers the callback for successful pan gesture recognition.
 onActionUpdate(event: (event: GestureEvent) => void): PanGestureInterface
 ```
 
-Registers the callback for pan gesture updates. If **fingerList** contains multiple fingers, this callback updates the location information of only one finger each time.
+设置滑动手势更新回调。fingerList为多根手指时，该回调监听每次只会更新一根手指的位置信息。
 
 **Since:** 7
 
@@ -218,11 +218,11 @@ Registers the callback for pan gesture updates. If **fingerList** contains multi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for pan gesture updates. |
+| event | (event: GestureEvent) =&gt; void | Yes | 滑动手势更新回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
 

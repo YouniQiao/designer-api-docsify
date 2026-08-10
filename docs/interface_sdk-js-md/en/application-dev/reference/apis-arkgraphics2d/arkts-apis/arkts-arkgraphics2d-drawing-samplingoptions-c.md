@@ -1,14 +1,14 @@
 # SamplingOptions
 
-Implements sampling options.
-    **NOTE**  
-    
-    - The initial APIs of this class are supported since API version 12.  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+采样选项对象，用于配置图像采样时的过滤模式，控制图像缩放或变换过程中的像素采样方式。典型使用场景为在Canvas上绘制图像（如drawImage）时，以不同过滤模式决定图像的采样质量与渲染效果。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 12开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 12
 
@@ -18,14 +18,19 @@ Implements sampling options.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Creates a **SamplingOptions** object, where the default value of  
-[FilterMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **FILTER\_MODE\_NEAREST**.
+构造一个新的采样选项对象，[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md)的默认值为FILTER_MODE_NEAREST。
 
 **Since:** 12
 
@@ -41,7 +46,7 @@ Creates a **SamplingOptions** object, where the default value of
 constructor(filterMode: FilterMode)
 ```
 
-Creates a **SamplingOptions** object.
+构造一个新的采样选项对象，可通过指定filterMode参数适配不同的图像采样场景。
 
 **Since:** 12
 
@@ -55,11 +60,11 @@ Creates a **SamplingOptions** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter mode. |
+| filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | 过滤模式，用于指定图像采样时的过滤算法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

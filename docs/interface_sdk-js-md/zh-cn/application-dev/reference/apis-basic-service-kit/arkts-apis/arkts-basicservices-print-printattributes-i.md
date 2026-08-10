@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## colorMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ colorMode?: PrintColorMode
 
 表示待打印文件的色彩模式。
 
-**类型：** PrintColorMode
+**类型：** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
 **起始版本：** 11
 
@@ -36,7 +42,7 @@ copyNumber?: int
 
 表示文件打印份数。默认值为1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -54,7 +60,7 @@ directionMode?: PrintDirectionMode
 
 表示待打印文件的方向。
 
-**类型：** PrintDirectionMode
+**类型：** [PrintDirectionMode](arkts-basicservices-print-printdirectionmode-e.md)
 
 **起始版本：** 11
 
@@ -72,7 +78,7 @@ duplexMode?: PrintDuplexMode
 
 表示待打印文件的单双面模式。
 
-**类型：** PrintDuplexMode
+**类型：** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **起始版本：** 11
 
@@ -90,7 +96,7 @@ pageRange?: PrintPageRange
 
 表示待打印文件的页面范围。
 
-**类型：** PrintPageRange
+**类型：** [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
 
 **起始版本：** 11
 
@@ -108,7 +114,7 @@ pageSize?: PrintPageSize | PrintPageType
 
 表示待打印文件的纸张类型。
 
-**类型：** PrintPageSize \| PrintPageType
+**类型：** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| PrintPageType
 
 **起始版本：** 11
 

@@ -1,40 +1,38 @@
 # ProximityResponse
 
-Callback invoked when the proximity sensor data changes.
+接近光传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**Since:** 3
+**Inheritance/Implementation:** ProximityResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**Since:** 8
 
-**Deprecated since:** 8
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Substitutes:** ohos.sensor/sensor#ProximityResponse
+<!--Device-sensor-interface ProximityResponse extends Response--><!--Device-sensor-interface ProximityResponse extends Response-End-->
 
-<!--Device-unnamed-export interface ProximityResponse--><!--Device-unnamed-export interface ProximityResponse-End-->
+**System capability:** SystemCapability.Sensors.Sensor
 
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
 
 ## distance
 
 ```TypeScript
-distance: number
+distance: double
 ```
 
-Distance between a visible object and the device screen.
+可见物体与设备显示器的接近程度。取值范围：0表示接近（物体靠近设备），大于0表示远离（物体远离设备）。
 
-**Type:** number
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-**Deprecated since:** 8
+<!--Device-ProximityResponse-distance: double--><!--Device-ProximityResponse-distance: double-End-->
 
-**Substitutes:** ohos.sensor/sensor#ProximityResponse.distance
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-ProximityResponse-distance: number--><!--Device-ProximityResponse-distance: number-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
+**System capability:** SystemCapability.Sensors.Sensor
 

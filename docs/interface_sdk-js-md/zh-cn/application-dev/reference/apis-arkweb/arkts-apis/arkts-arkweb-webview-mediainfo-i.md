@@ -1,6 +1,6 @@
 # MediaInfo
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建接管网页媒体播放的播放器。
+[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建接管网页媒体播放的播放器。
 
 **起始版本：** 23
 
@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## attributes
 
 ```TypeScript
 attributes: Record<string, string>
 ```
 
-Attributes in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**.
+Attributes in **&lt;video&gt;** or **&lt;audio&gt;**.
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 23
 
@@ -34,7 +40,7 @@ Attributes in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC
 controlList: string[]
 ```
 
-Value of the **controlslist** attribute in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**.
+Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;**.
 
 **类型：** string[]
 
@@ -52,10 +58,9 @@ Value of the **controlslist** attribute in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_
 controlsShown: boolean
 ```
 
-Whether the **controls** attribute exists in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**.
+Whether the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**.
 
-The value **true** means that the **controls** attribute exists in **\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_**, and **false**  
-means the opposite.
+The value **true** means that the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**, and **false**means the opposite.
 
 **类型：** boolean
 
@@ -73,7 +78,7 @@ means the opposite.
 embedID: string
 ```
 
-ID of **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_** on the web page.
+ID of **&lt;video&gt;** or **&lt;audio&gt;** on the web page.
 
 **类型：** string
 
@@ -93,7 +98,7 @@ headers: Record<string, string>
 
 HTTP headers that need to be included in the player's request for media resources.
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 23
 
@@ -111,7 +116,7 @@ mediaSrcList: MediaSourceInfo[]
 
 Source of the media. There may be multiple sources. The application needs to select a supported source to play.
 
-**类型：** MediaSourceInfo[]
+**类型：** [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md)[]
 
 **起始版本：** 23
 
@@ -129,7 +134,7 @@ mediaType: MediaType
 
 Type of the media.
 
-**类型：** MediaType
+**类型：** [MediaType](arkts-arkweb-webview-mediatype-e.md)
 
 **起始版本：** 23
 
@@ -185,7 +190,7 @@ preload: Preload
 
 Whether preloading is required.
 
-**类型：** Preload
+**类型：** [Preload](arkts-arkweb-webview-preload-e.md)
 
 **起始版本：** 23
 
@@ -203,7 +208,7 @@ surfaceInfo: NativeMediaPlayerSurfaceInfo
 
 Surface information used for same-layer rendering.
 
-**类型：** NativeMediaPlayerSurfaceInfo
+**类型：** [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md)
 
 **起始版本：** 23
 

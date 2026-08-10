@@ -20,6 +20,6 @@ export type OnTextSelectionChangeCallback = (selectionStart: int, selectionEnd: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | int | 是 | 所选文本的起始位置，文字的起始位置为0。  |
-| selectionEnd | int | 是 | 所选文本的结束位置。  |
+| selectionStart | int | 是 | 所选文本的起始位置，文字的起始位置为0。 |
+| selectionEnd | int | 是 | 所选文本的结束位置。 |
 

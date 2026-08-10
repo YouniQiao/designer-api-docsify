@@ -1,12 +1,18 @@
 # queryAllActivePrintJobs (System API)
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## queryAllActivePrintJobs
 
 ```TypeScript
 function queryAllActivePrintJobs(): Promise<PrintJob[]>
 ```
 
-Queries all active print jobs. This API uses a promise to return the result.
+查询所有活跃中的打印任务，使用Promise进行异步回调。
 
 **Since:** 20
 
@@ -30,6 +36,6 @@ Queries all active print jobs. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 

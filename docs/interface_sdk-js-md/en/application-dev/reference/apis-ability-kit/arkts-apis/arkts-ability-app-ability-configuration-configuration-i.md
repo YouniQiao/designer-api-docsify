@@ -1,6 +1,6 @@
 # Configuration
 
-The module defines the environment variables for the application runtime, including language, dark/light color mode,screen orientation, and font size. You can subscribe to these environment variables to adapt to different user preferences and enhance the interaction experience.
+定义了应用运行时的环境变量，包含语言、深浅色、屏幕方向、字体等。开发者可以通过订阅环境变量，适配不同用户偏好，提升交互体验。
 
 **Since:** 9
 
@@ -10,22 +10,27 @@ The module defines the environment variables for the application runtime, includ
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
+## Modules to Import
+
+```TypeScript
+import { Configuration } from 'kits/@kit.AbilityKit';
+```
+
 ## colorMode
 
 ```TypeScript
 colorMode?: ConfigurationConstant.ColorMode
 ```
 
-Dark/Light color mode of the application. The light color mode is used by default.
+表示应用深浅色模式，默认为浅色。
 
-You can  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+支持开发者[设置应用或组件深浅色](../../application-models/subscribe-system-environment-variable-changes.md#设置深浅色模式)。
 
-The options are as follows:
+取值范围：
 
-- **COLOR\_MODE\_NOT\_SET**: The color mode is not set.  
-- **COLOR\_MODE\_LIGHT**: light mode.  
-- **COLOR\_MODE\_DARK**: dark mode.
+- COLOR_MODE_NOT_SET：未设置  
+- COLOR_MODE_LIGHT：浅色模式  
+- COLOR_MODE_DARK：深色模式
 
 **Type:** ConfigurationConstant.ColorMode
 
@@ -45,17 +50,18 @@ The options are as follows:
 direction?: ConfigurationConstant.Direction
 ```
 
-Screen orientation of the application.
+表示应用屏幕方向。
 
-The options are as follows:
+取值范围：
 
-- **DIRECTION\_NOT\_SET**: The screen orientation is not set.  
-- **DIRECTION\_HORIZONTAL**: horizontal direction.  
-- **DIRECTION\_VERTICAL**: vertical direction.
+- DIRECTION_NOT_SET：未设置  
+- DIRECTION_HORIZONTAL：水平方向  
+- DIRECTION_VERTICAL：垂直方向 
 
-You can subscribe to changes to this environment variable in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_and \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, but not in the  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_.
+该环境变量支持在[UIAbility](./js-apis-app-ability-uiAbility.md)组件和  
+[UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md)组件中订阅，不支持在  
+[ApplicationContext](./js-apis-inner-application-applicationContext.md)和  
+[AbilityStage](./js-apis-app-ability-abilityStage.md)组件容器中订阅。
 
 **Type:** ConfigurationConstant.Direction
 
@@ -75,13 +81,14 @@ You can subscribe to changes to this environment variable in the \_\_\_MD\_LINK\
 displayId?: long
 ```
 
-ID of the display where the application is located.
+表示应用所在的物理屏幕ID。
 
-You can subscribe to changes to this environment variable in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_and \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, but not in the  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_.
+该环境变量支持在[UIAbility](./js-apis-app-ability-uiAbility.md)组件和  
+[UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md)组件中订阅，不支持在  
+[ApplicationContext](./js-apis-inner-application-applicationContext.md)和  
+[AbilityStage](./js-apis-app-ability-abilityStage.md)组件容器中订阅。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -99,7 +106,7 @@ You can subscribe to changes to this environment variable in the \_\_\_MD\_LINK\
 fontId?: string
 ```
 
-Unique ID of the font.
+表示应用字体的唯一ID。
 
 **Type:** string
 
@@ -119,12 +126,11 @@ Unique ID of the font.
 fontSizeScale?: double
 ```
 
-Font size scale ratio. The value is a non-negative number. The default value is **1**.
+表示字体大小缩放比例，取值为非负数，默认值为1。
 
-You can  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+支持开发者[设置应用字体大小](../../application-models/subscribe-system-environment-variable-changes.md#设置字体大小)。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -142,9 +148,9 @@ You can
 fontWeightScale?: double
 ```
 
-Font weight scale ratio. The value is a non-negative number. The default value is **1**.
+表示字体粗细缩放比例，取值为非负数，默认值为1。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -162,8 +168,7 @@ Font weight scale ratio. The value is a non-negative number. The default value i
 hasPointerDevice?: boolean
 ```
 
-Whether a pointer device, such as a keyboard, mouse, or touchpad, is connected. **true** if connected, **false**  
-otherwise.
+表示指针设备是否已连接，如键鼠、触控板等。true表示设备已连接，false表示设备未连接。
 
 **Type:** boolean
 
@@ -183,13 +188,11 @@ otherwise.
 language?: string
 ```
 
-Current language of the application, for example, **zh** (Chinese) or **en** (English).
+表示应用当前语言，例如“zh"(中文)，“en”（英文）。
 
-You can  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+支持开发者[设置应用语言](../../application-models/subscribe-system-environment-variable-changes.md#设置应用语言)。
 
-For details about the value range, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+取值范围参考[获取系统支持的语言列表](../apis-localization-kit/js-apis-i18n.md#getsystemlanguages9)。
 
 **Type:** string
 
@@ -209,9 +212,9 @@ For details about the value range, see
 locale?: Intl.Locale
 ```
 
-Locale.
+表示区域设置。
 
-The application automatically adjusts its behavior based on the current locale to meet the localization requirements of users. This property can be set by configuring the system language, system region, and application preferred language.
+应用会根据当前的区域设置自动调整其行为，以符合用户的本地化需求。该属性可以通过设置系统语言、设置系统地区和设置应用偏好语言等方式设置。
 
 **Type:** Intl.Locale
 
@@ -231,7 +234,7 @@ The application automatically adjusts its behavior based on the current locale t
 mcc?: string
 ```
 
-Mobile country code.
+表示移动设备国家代码。
 
 **Type:** string
 
@@ -251,7 +254,7 @@ Mobile country code.
 mnc?: string
 ```
 
-Mobile network code.
+表示移动设备网络代码。
 
 **Type:** string
 
@@ -271,23 +274,24 @@ Mobile network code.
 screenDensity?: ConfigurationConstant.ScreenDensity
 ```
 
-Screen density.
+表示屏幕显示密度。
 
-The options are as follows:
+取值范围：
 
-- **SCREEN\_DENSITY\_NOT\_SET**: The pixel density is not set.  
-- **SCREEN\_DENSITY\_SDPI**: 120.  
-- **SCREEN\_DENSITY\_MDPI**: 160.  
-- **SCREEN\_DENSITY\_LDPI**: 240.  
-- **SCREEN\_DENSITY\_XLDPI**: 320.  
-- **SCREEN\_DENSITY\_XXLDPI**: 480.  
-- **SCREEN\_DENSITY\_XXXLDPI**: 640.
+- SCREEN_DENSITY_NOT_SET：未设置  
+- SCREEN_DENSITY_SDPI：120  
+- SCREEN_DENSITY_MDPI：160  
+- SCREEN_DENSITY_LDPI：240  
+- SCREEN_DENSITY_XLDPI：320  
+- SCREEN_DENSITY_XXLDPI：480  
+- SCREEN_DENSITY_XXXLDPI：640 
 
-The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect.
+字体显示大小与屏幕像素密度呈正相关关系。通过监听屏幕像素密度变化，可以感知字体显示大小的调整。通常情况下，对于相同的物理尺寸，屏幕像素密度越高，字体显示效果越大。 
 
-You can subscribe to changes to this environment variable in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_and \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, but not in the  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ or  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_.
+该环境变量支持在[UIAbility](./js-apis-app-ability-uiAbility.md)组件和  
+[UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md)组件中订阅，不支持在  
+[ApplicationContext](./js-apis-inner-application-applicationContext.md)和  
+[AbilityStage](./js-apis-app-ability-abilityStage.md)组件容器中订阅。
 
 **Type:** ConfigurationConstant.ScreenDensity
 

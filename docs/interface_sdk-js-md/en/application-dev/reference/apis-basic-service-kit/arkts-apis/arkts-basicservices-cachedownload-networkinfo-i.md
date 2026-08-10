@@ -1,6 +1,6 @@
 # NetworkInfo
 
-Describes the pre-downloaded network information.
+预下载的网络信息。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Describes the pre-downloaded network information.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## dnsServers
 
 ```TypeScript
 readonly dnsServers: string[]
 ```
 
-DNS servers used for downloading resources.
+下载资源时使用的dns服务器列表。
 
 **Type:** string[]
 
@@ -34,7 +40,7 @@ DNS servers used for downloading resources.
 readonly ip?: string
 ```
 
-IP address of the URL used for downloading resources. When the DNS resolution fails, the IP address is undefined.
+下载资源时url的ip地址。当dns解析失败时，ip为undefined。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # WantAgentFlags
 
-Enumerates the flags used by the WantAgent objects.
+表示WantAgent行为控制标志，用于配置WantAgent的创建和触发行为。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the flags used by the WantAgent objects.
 ONE_TIME_FLAG = 0
 ```
 
-The WantAgent object can be used only once.
+WantAgent仅能使用一次，trigger触发后自动cancel取消。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ The WantAgent object can be used only once.
 NO_BUILD_FLAG
 ```
 
-The WantAgent object does not exist and hence it is not created. In this case, \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_null\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ is returned.
+如果描述WantAgent对象不存在，则不创建它，直接返回null。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The WantAgent object does not exist and hence it is not created. In this case, \
 CANCEL_PRESENT_FLAG
 ```
 
-The existing WantAgent object should be canceled before a new object is generated.
+在生成一个新的WantAgent对象前取消已存在的一个WantAgent对象。
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ The existing WantAgent object should be canceled before a new object is generate
 UPDATE_PRESENT_FLAG
 ```
 
-Extra information of the existing WantAgent object is replaced with that of the new object.
+使用新的WantAgent的额外数据替换已存在的WantAgent中的额外数据。
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ Extra information of the existing WantAgent object is replaced with that of the 
 CONSTANT_FLAG
 ```
 
-The WantAgent object is immutable.
+WantAgent是不可变的。
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ The WantAgent object is immutable.
 REPLACE_ELEMENT
 ```
 
-The element property in the current Want can be replaced by the element property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+当前Want中的element属性可被WantAgent.trigger()中Want的element属性取代。当前版本暂不支持。
 
 **Since:** 9
 
@@ -124,7 +124,7 @@ The element property in the current Want can be replaced by the element property
 REPLACE_ACTION
 ```
 
-The action property in the current Want can be replaced by the action property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+当前Want中的action属性可被WantAgent.trigger()中Want的action属性取代。当前版本暂不支持。
 
 **Since:** 9
 
@@ -142,7 +142,7 @@ The action property in the current Want can be replaced by the action property i
 REPLACE_URI
 ```
 
-The uri property in the current Want can be replaced by the uri property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+当前Want中的uri属性可被WantAgent.trigger()中Want的uri属性取代。当前版本暂不支持。
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ The uri property in the current Want can be replaced by the uri property in the 
 REPLACE_ENTITIES
 ```
 
-The \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_entities\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ property in the current Want can be replaced by the \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_entities\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+当前Want中的entities属性可被WantAgent.trigger()中Want的entities属性取代。当前版本暂不支持。
 
 **Since:** 9
 
@@ -178,7 +178,7 @@ The \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_entities\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_
 REPLACE_BUNDLE
 ```
 
-The \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_bundleName\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ property in the current Want can be replaced by the \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_bundleName\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_ property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+当前Want中的bundleName属性可被WantAgent.trigger()中Want的bundleName属性取代。当前版本暂不支持。
 
 **Since:** 9
 

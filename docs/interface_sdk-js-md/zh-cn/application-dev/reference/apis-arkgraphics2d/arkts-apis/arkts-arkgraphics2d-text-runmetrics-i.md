@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## fontMetrics
 
 ```TypeScript
@@ -38,7 +44,7 @@ textStyle: TextStyle
 
 字体的样式信息。
 
-**类型：** TextStyle
+**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **起始版本：** 12
 

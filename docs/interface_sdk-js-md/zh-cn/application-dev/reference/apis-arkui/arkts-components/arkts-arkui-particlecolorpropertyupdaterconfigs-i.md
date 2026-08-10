@@ -18,7 +18,7 @@
 
 表示变化方式为曲线变化时，颜色变化的配置。数组类型表示当前属性可以设置多段动画，如0ms-3000ms，3000ms-5000ms，5000ms-8000ms分别设置动画。
 
-**类型：** Array&lt;ParticlePropertyAnimation&lt;ResourceColor&gt;&gt;
+**类型：** Array&lt;ParticlePropertyAnimation&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;&gt;
 
 **起始版本：** 10
 
@@ -62,7 +62,7 @@
 
 表示变化方式为均匀变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。
 
-**类型：** ParticleColorOptions
+**类型：** [ParticleColorOptions](arkts-arkui-particlecoloroptions-i.md)
 
 **起始版本：** 10
 

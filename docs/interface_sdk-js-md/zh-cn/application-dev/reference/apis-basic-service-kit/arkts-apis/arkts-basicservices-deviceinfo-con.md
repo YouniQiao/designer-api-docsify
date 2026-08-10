@@ -262,9 +262,9 @@ const deviceColor: string
 const deviceType: string
 ```
 
-设备类型。详细请参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+设备类型。详细请参考[deviceTypes标签](../../../quick-start/module-configuration-file.md#devicetypes标签)。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_wearable\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+示例：&lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt;
 
 **起始版本：** 6
 
@@ -284,9 +284,9 @@ const diskSN: string
 
 硬盘序列号。
 
-**说明** ：该字段只能在2in1设备进行查询，其他设备查询结果为空。
+**说明：**该字段只能在2in1设备进行查询，其他设备查询结果为空。
 
-ohos.permission.ACCESS\_DISK\_PHY\_INFO
+ohos.permission.ACCESS_DISK_PHY_INFO 
 
 示例：2502EM400567
 
@@ -308,7 +308,7 @@ const displayVersion: string
 
 产品版本。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_XXX X.X.X.X\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+示例：&lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
 
 **起始版本：** 6
 
@@ -324,7 +324,7 @@ const displayVersion: string
 const distributionOSApiName: string
 ```
 
-发行版系统api版本名称\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_，由发行方定义\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_。
+发行版系统api版本名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。
 
 **起始版本：** 13
 
@@ -340,7 +340,7 @@ const distributionOSApiName: string
 const distributionOSApiVersion: number
 ```
 
-发行版系统api版本\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_，由发行方定义\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_。
+发行版系统api版本&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。
 
 示例：50001
 
@@ -358,7 +358,7 @@ const distributionOSApiVersion: number
 const distributionOSName: string
 ```
 
-发行版系统名称\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_，由发行方定义\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_。
+发行版系统名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。
 
 示例：OpenHarmony
 
@@ -376,7 +376,7 @@ const distributionOSName: string
 const distributionOSReleaseType: string
 ```
 
-发行版系统类型\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_，由发行方定义\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_。
+发行版系统类型&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。
 
 示例：Release
 
@@ -394,7 +394,7 @@ const distributionOSReleaseType: string
 const distributionOSVersion: string
 ```
 
-发行版系统版本号\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_，由发行方定义\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_。\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+发行版系统版本号&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。&lt;!--RP11--&gt;&lt;!--RP11End--&gt;
 
 示例：5.0.0
 
@@ -450,7 +450,7 @@ const hardwareModel: string
 
 硬件版本号。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_TASA00CVN1\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+示例：&lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
 
 **起始版本：** 6
 
@@ -470,7 +470,7 @@ const hardwareProfile: string
 
 **说明：**
 
-从API version 6 开始支持，从API version 9 开始废弃，建议使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_替代。
+从API version 6 开始支持，从API version 9 开始废弃，建议使用[系统能力SystemCapability](../../../reference/syscap.md)替代。
 
 示例：default
 
@@ -544,7 +544,7 @@ const marketName: string
 
 外部产品系列。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Mate XX\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+示例：&lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
 
 **起始版本：** 6
 
@@ -560,9 +560,9 @@ const marketName: string
 const osFullName: string
 ```
 
-系统版本，版本格式\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony-x.x.x.x,x为数值。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+系统版本，版本格式&lt;!--RP12--&gt;OpenHarmony-x.x.x.x,x为数值。&lt;!--RP12End--&gt;
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_OpenHarmony-x.x.x.x，其中x表示数字占位符。\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+示例：&lt;!--RP10--&gt;OpenHarmony-x.x.x.x，其中x表示数字占位符。&lt;!--RP10End--&gt;
 
 如需获取版本号各段数值，建议直接使用majorVersion、seniorVersion、featureVersion、buildVersion字段，可提升效率，不建议解析osFullName获取。
 
@@ -590,7 +590,7 @@ const osReleaseType: string
 
 - Release：面向开发者公开发布的正式版本，承诺API稳定性。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Canary/Beta/Release\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+示例：&lt;!--RP9--&gt;Canary/Beta/Release&lt;!--RP9End--&gt;
 
 **起始版本：** 6
 
@@ -624,7 +624,7 @@ const productModel: string
 
 认证型号。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_TAS-AL00\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+示例：&lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
 
 **起始版本：** 6
 
@@ -664,7 +664,7 @@ const productSeries: string
 
 产品系列。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_TAS\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+示例：&lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
 
 **起始版本：** 6
 
@@ -750,7 +750,7 @@ const securityPatchTag: string
 
 安全补丁级别。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_2021/01/01\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+示例：&lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
 
 **起始版本：** 6
 
@@ -788,7 +788,7 @@ const serial: string
 
 **说明：**可作为设备唯一识别码。
 
-ohos.permission.sec.ACCESS\_UDID(该权限只允许系统应用及企业定制应用申请)
+ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业定制应用申请) 
 
 示例：序列号随设备差异
 
@@ -810,7 +810,7 @@ const softwareModel: string
 
 内部软件子型号。
 
-示例：\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_TAS-AL00\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+示例：&lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
 
 **起始版本：** 6
 
@@ -830,7 +830,7 @@ const udid: string
 
 **说明：**数据长度为65字节。可作为设备唯一识别码。
 
-ohos.permission.sec.ACCESS\_UDID(该权限只允许系统应用及企业类应用申请)
+ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业类应用申请)
 
 示例：9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
 

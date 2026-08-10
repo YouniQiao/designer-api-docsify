@@ -1,6 +1,8 @@
 # PathShape
 
-Defines a path drawing class.
+用于clipShape和maskShape接口的路径。
+
+继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。
 
 **Inheritance/Implementation:** PathShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
@@ -12,13 +14,19 @@ Defines a path drawing class.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## commands
 
 ```TypeScript
 commands(commands: string): this
 ```
 
-Sets the commands for drawing the PathShape.
+设置路径的绘制指令。
 
 **Since:** 23
 
@@ -34,13 +42,13 @@ Sets the commands for drawing the PathShape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commands | string | Yes |  |
+| commands | string | Yes | 路径的绘制指令。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| this | 返回PathShape对象。 |
 
 ## constructor
 
@@ -48,7 +56,7 @@ Sets the commands for drawing the PathShape.
 constructor(options?: PathShapeOptions)
 ```
 
-Constructor.
+创建PathShape对象。
 
 **Since:** 23
 
@@ -64,5 +72,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | No | 路径参数。 |
 

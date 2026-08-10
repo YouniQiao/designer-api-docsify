@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## alias
 
 ```TypeScript
@@ -100,7 +106,7 @@ type: FieldType
 
 字段类型。
 
-**类型：** FieldType
+**类型：** [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md)
 
 **起始版本：** 11
 

@@ -1,6 +1,6 @@
 # EdgeLightPosition (System API)
 
-Defines the position of the edge light effect.
+边缘流光位置。
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Defines the position of the edge light effect.
 TOP_LEFT = 0
 ```
 
-Edge light effect in the upper left corner.
+边缘流光在左上角。
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Edge light effect in the upper left corner.
 TOP_RIGHT = 1
 ```
 
-Edge light effect is in the upper right corner.
+边缘流光在右上角。
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ Edge light effect is in the upper right corner.
 BOTTOM_LEFT = 2
 ```
 
-Edge light effect is in the lower left corner.
+边缘流光在左下角。
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ Edge light effect is in the lower left corner.
 BOTTOM_RIGHT = 3
 ```
 
-Edge light effect is in the lower right corner.
+边缘流光在右下角。
 
 **Since:** 26.0.0
 
@@ -98,7 +98,7 @@ Edge light effect is in the lower right corner.
 TOP = 4
 ```
 
-Edge light effect is on the top edge.
+边缘流光在顶部。
 
 **Since:** 26.0.0
 
@@ -118,7 +118,7 @@ Edge light effect is on the top edge.
 BOTTOM = 5
 ```
 
-The light effect starts from the bottom edge.
+边缘流光在底部。
 
 **Since:** 26.0.0
 
@@ -138,7 +138,7 @@ The light effect starts from the bottom edge.
 LEFT = 6
 ```
 
-Edge light effect is on the left edge.
+边缘流光在左边。
 
 **Since:** 26.0.0
 
@@ -158,7 +158,7 @@ Edge light effect is on the left edge.
 RIGHT = 7
 ```
 
-Edge light effect is on the right edge.
+边缘流光在右边。
 
 **Since:** 26.0.0
 

@@ -1,12 +1,18 @@
 # createGZip
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createGZip
 
 ```TypeScript
 function createGZip(): Promise<GZip>
 ```
 
-Creates this **GZip** object. This API uses a promise to return the result.
+创建GZip对象。使用Promise异步回调。
 
 **Since:** 12
 
@@ -22,9 +28,9 @@ Creates this **GZip** object. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GZip&gt; | Promise used to return the **GZip** object created. |
+| Promise&lt;GZip&gt; | Promise对象。返回GZip对象实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

@@ -20,5 +20,5 @@ export declare type GestureListenerCallback = (info: GestureTriggerInfo) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the gesture details triggered with user interaction  |
+| info | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | 是 | the gesture details triggered with user interaction |
 

@@ -1,6 +1,6 @@
 # CertChainValidationParameters
 
-Represents the parameters for certificate chain validation.
+表示证书链校验的参数。
 
 **Since:** 11
 
@@ -10,14 +10,20 @@ Represents the parameters for certificate chain validation.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## allowDownloadIntermediateCa
 
 ```TypeScript
 allowDownloadIntermediateCa?: boolean
 ```
 
-Whether to allow the application to download the missing intermediate CA certificate from the network.  
-**true** means yes; **false** otherwise. The default value is **false**.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_The download address is obtained from the certificate AIA extension. Only HTTP is supported. To use the network for download, you need to request the **ohos.permission.INTERNET** permission. For details about the permission configuration, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示是否允许尝试从网络下载缺失的中间CA证书。 true表示允许；false表示不允许。默认值为false。&lt;br&gt;下载地址将从证书AIA扩展中获取，仅支持http，如需使用网络下载，需申请ohos.permission.INTERNET权限。配置方式请参见  
+[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 **Type:** boolean
 
@@ -39,7 +45,7 @@ Whether to allow the application to download the missing intermediate CA certifi
 certCRLs?: Array<CertCRLCollection>
 ```
 
-CRL collections used to check whether the certificate is revoked.
+用于检查证书是否被吊销的CRL集合。
 
 **Type:** Array&lt;CertCRLCollection&gt;
 
@@ -59,7 +65,7 @@ CRL collections used to check whether the certificate is revoked.
 date?: string
 ```
 
-Date for checking certificate validity.
+用于检查证书有效性的日期。
 
 **Type:** string
 
@@ -79,7 +85,7 @@ Date for checking certificate validity.
 keyUsage?: Array<KeyUsageType>
 ```
 
-Usage of the key in the certificate to be validated.
+表示需要校验证书中的密钥用途。
 
 **Type:** Array&lt;KeyUsageType&gt;
 
@@ -99,9 +105,9 @@ Usage of the key in the certificate to be validated.
 policy?: ValidationPolicyType
 ```
 
-Type of the policy for certificate validation.
+表示需要校验证书的策略类型。
 
-**Type:** ValidationPolicyType
+**Type:** [ValidationPolicyType](arkts-devicecertificate-cert-validationpolicytype-e.md)
 
 **Since:** 12
 
@@ -119,9 +125,9 @@ Type of the policy for certificate validation.
 revocationCheckParam?: RevocationCheckParameter
 ```
 
-Parameters for checking the certificate revocation status.
+表示需要校验证书吊销状态的参数对象。
 
-**Type:** RevocationCheckParameter
+**Type:** [RevocationCheckParameter](arkts-devicecertificate-cert-revocationcheckparameter-i.md)
 
 **Since:** 12
 
@@ -139,7 +145,7 @@ Parameters for checking the certificate revocation status.
 sslHostname?: string
 ```
 
-Host name in the certificate to be verified. This parameter must be used together with **policy**.
+表示需要校验证书中主机名，与policy配合使用。
 
 **Type:** string
 
@@ -159,7 +165,7 @@ Host name in the certificate to be verified. This parameter must be used togethe
 trustAnchors: Array<X509TrustAnchor>
 ```
 
-List of trusted anchors.
+表示信任锚列表。
 
 **Type:** Array&lt;X509TrustAnchor&gt;
 
@@ -179,8 +185,7 @@ List of trusted anchors.
 trustSystemCa?: boolean
 ```
 
-Whether to use the prebuilt CA certificate to validate the certificate chain. **true** means yes; **false**  
-otherwise.
+表示是否使用系统预置CA证书校验证书链。true表示使用；false表示不使用。
 
 **Type:** boolean
 

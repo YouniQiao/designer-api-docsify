@@ -56,7 +56,7 @@ Constructs a new Message with a what code and handler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| what | int | Yes | the message code. &lt;br&gt;The value should be an integer. |
 | handler | concurrency.MessageHandler | Yes | the handler to process this message. |
 
 ## constructor
@@ -81,7 +81,7 @@ Constructs a new Message with a what code, object, and handler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
+| what | int | Yes | the message code. &lt;br&gt;The value should be an integer. |
 | obj | Any | Yes | the object attached to this message. |
 | handler | concurrency.MessageHandler | Yes | the handler to process this message. |
 

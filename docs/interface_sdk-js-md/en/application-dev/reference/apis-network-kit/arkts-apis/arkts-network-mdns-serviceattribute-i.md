@@ -10,6 +10,12 @@ Defines the mDNS service attribute information.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
+## Modules to Import
+
+```TypeScript
+import { mdns } from 'kits/@kit.NetworkKit';
+```
+
 ## key
 
 ```TypeScript

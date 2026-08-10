@@ -1,6 +1,6 @@
 # Movement
 
-Describes the direction in which the cursor moves when the text is selected.
+选中文本时，光标移动的方向
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the direction in which the cursor moves when the text is selected.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## direction
 
 ```TypeScript
 direction: Direction
 ```
 
-Direction in which the cursor moves when the text is selected.
+选中文本时，光标的移动方向。
 
-**Type:** Direction
+**Type:** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
 
 **Since:** 10
 

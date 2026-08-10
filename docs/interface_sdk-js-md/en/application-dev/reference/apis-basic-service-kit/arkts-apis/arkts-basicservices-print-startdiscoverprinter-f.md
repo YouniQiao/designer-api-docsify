@@ -1,12 +1,18 @@
 # startDiscoverPrinter
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## startDiscoverPrinter
 
 ```TypeScript
 function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Discovers printers by specifying the extension list. The discovered printers contain the specified print extension abilities. If an empty extension list is specified, all extension abilities are loaded. This API uses an asynchronous callback to return the result.
+通过指定“打印扩展能力列表”来发现打印机，发现的打印机具备包含指定的打印扩展能力。如果指定空的打印扩展能力列表，则表示加载所有扩展能力。使用callback异步回调。
 
 **Since:** 20
 
@@ -24,16 +30,17 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback to be invoked when a printer is discovered. |
+| extensionList | Array&lt;string&gt; | Yes | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步开始发现打印机之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 10 - 19 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -59,7 +66,7 @@ print.startDiscoverPrinter(extensionList, (err: BusinessError) => {
 function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 ```
 
-Discovers printers by specifying the extension list. The discovered printers contain the specified print extension abilities. If an empty extension list is specified, all extension abilities are loaded. This API uses a promise to return the result.
+通过指定“打印扩展能力列表”来发现打印机，发现的打印机具备包含指定的打印扩展能力。如果指定空的打印扩展能力列表，则表示加载所有扩展能力，使用Promise异步回调。
 
 **Since:** 20
 
@@ -77,21 +84,22 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
+| extensionList | Array&lt;string&gt; | Yes | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**Applicable version:** 10 - 19 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

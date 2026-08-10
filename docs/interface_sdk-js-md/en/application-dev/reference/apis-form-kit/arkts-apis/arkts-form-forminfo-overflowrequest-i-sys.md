@@ -12,6 +12,12 @@ Provides OverflowRequest about request/cancel form's overflow
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## formId
 
 ```TypeScript
@@ -60,7 +66,7 @@ overflowInfo?: OverflowInfo
 
 The form's overflow animation parameter
 
-**Type:** OverflowInfo
+**Type:** [OverflowInfo](arkts-form-forminfo-overflowinfo-i.md)
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # DialogCustomOptions
 
-Options for the custom-style dialog.The dialog content is provided as the first parameter of present() method,not inside this options object.
+自定义样式对话框的选项。对话内容作为present()方法的第一个参数提供。不在此选项对象中。
 
 **Inheritance/Implementation:** DialogCustomOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
 
@@ -12,13 +12,19 @@ Options for the custom-style dialog.The dialog content is provided as the first 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## customStyle
 
 ```TypeScript
 customStyle?: boolean
 ```
 
-Whether to enable the custom style.
+是否开启自定义样式。
 
 **Type:** boolean
 

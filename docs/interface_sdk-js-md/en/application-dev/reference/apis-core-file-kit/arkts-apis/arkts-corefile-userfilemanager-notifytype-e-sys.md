@@ -8,7 +8,7 @@ Enumerates the notification event types.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md/arkts-medialibrary-photoaccesshelper-notifytype-e.md)
 
 <!--Device-userFileManager-enum NotifyType--><!--Device-userFileManager-enum NotifyType-End-->
 
@@ -30,7 +30,7 @@ A file asset or album is added.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_ADD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_add)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_ADD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_add)
 
 <!--Device-NotifyType-NOTIFY_ADD--><!--Device-NotifyType-NOTIFY_ADD-End-->
 
@@ -52,7 +52,7 @@ A file asset or album is updated.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_UPDATE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_update)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_UPDATE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_update)
 
 <!--Device-NotifyType-NOTIFY_UPDATE--><!--Device-NotifyType-NOTIFY_UPDATE-End-->
 
@@ -74,7 +74,7 @@ A file asset or album is removed.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_REMOVE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_remove)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_REMOVE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_remove)
 
 <!--Device-NotifyType-NOTIFY_REMOVE--><!--Device-NotifyType-NOTIFY_REMOVE-End-->
 
@@ -96,7 +96,7 @@ A file asset is added to the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_ALBUM_ADD_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_album_add_asset)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_ALBUM_ADD_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_album_add_asset)
 
 <!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET-End-->
 
@@ -118,7 +118,7 @@ A file asset is removed from the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_ALBUM_REMOVE_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_album_remove_asset)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.NotifyType.NOTIFY_ALBUM_REMOVE_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_album_remove_asset)
 
 <!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET-End-->
 

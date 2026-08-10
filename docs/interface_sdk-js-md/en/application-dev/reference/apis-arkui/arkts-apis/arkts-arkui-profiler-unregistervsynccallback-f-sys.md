@@ -6,7 +6,7 @@
 function unregisterVsyncCallback(): void
 ```
 
-Unregisters vsync callback.
+注销vsync回调。
 
 **Since:** 8
 

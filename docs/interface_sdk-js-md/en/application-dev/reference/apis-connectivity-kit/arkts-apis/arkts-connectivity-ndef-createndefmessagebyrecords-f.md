@@ -1,5 +1,11 @@
 # createNdefMessageByRecords
 
+## Modules to Import
+
+```TypeScript
+import { tag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createNdefMessageByRecords
 
 ```TypeScript
@@ -20,17 +26,17 @@ Creates an NDEF message with record list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ndefRecords | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | The NDEF records to parse NDEF message. |
+| ndefRecords | [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md)[] | Yes | The NDEF records to parse NDEF message. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The instance of NdefMessage. |
+| [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | The instance of NdefMessage. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 

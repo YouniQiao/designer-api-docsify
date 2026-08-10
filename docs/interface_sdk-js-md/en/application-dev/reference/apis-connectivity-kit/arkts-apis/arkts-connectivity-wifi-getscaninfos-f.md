@@ -1,5 +1,11 @@
 # getScanInfos
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getScanInfos
 
 ```TypeScript
@@ -55,9 +61,9 @@ Obtains the hotspot information that scanned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

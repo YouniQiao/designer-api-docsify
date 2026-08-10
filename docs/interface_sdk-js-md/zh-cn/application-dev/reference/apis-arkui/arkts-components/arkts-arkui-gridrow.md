@@ -38,7 +38,14 @@ GridRow(option?: GridRowOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 |  |
+| option | [GridRowOptions](../arkts-apis/arkts-arkui-gridrow-gridrowoptions-i.md) | 否 |  |
 
 ## 汇总
 
+- [BreakPoints](arkts-arkui-gridrow-breakpoints-i.md)
+- [GridRowColumnOption](arkts-arkui-gridrow-gridrowcolumnoption-i.md)
+- [GridRowOptions](arkts-arkui-gridrow-gridrowoptions-i.md)
+- [GridRowSizeOption](arkts-arkui-gridrow-gridrowsizeoption-i.md)
+- [GutterOption](arkts-arkui-gridrow-gutteroption-i.md)
+- [BreakpointsReference](arkts-arkui-gridrow-breakpointsreference-e.md)
+- [GridRowDirection](arkts-arkui-gridrow-gridrowdirection-e.md)

@@ -4,7 +4,7 @@
 export declare type NodeRenderStateChangeCallback = (state: NodeRenderState, node?: FrameNode) => void
 ```
 
-Defines the callback type used in UIObserver to monitor one specific node's render state.
+定义UIObserver监听指定节点渲染状态时使用的回调类型。
 
 **Since:** 26.0.0
 
@@ -20,6 +20,6 @@ Defines the callback type used in UIObserver to monitor one specific node's rend
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the node's render state  |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the information of frameNode  |
+| state | [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) | Yes | the node's render state |
+| node | [FrameNode](arkts-arkui-framenode-t.md) | No | the information of frameNode |
 

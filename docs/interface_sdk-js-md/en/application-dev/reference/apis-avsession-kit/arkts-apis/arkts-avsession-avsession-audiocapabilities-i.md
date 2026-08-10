@@ -1,6 +1,6 @@
 # AudioCapabilities
 
-Audio capabilities.
+表示投播设备支持的音频能力。
 
 **Since:** 20
 
@@ -10,13 +10,19 @@ Audio capabilities.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## streamInfos
 
 ```TypeScript
 readonly streamInfos: Array<audio.AudioStreamInfo>
 ```
 
-Audio stream information.
+音频能力参数的列表。
 
 **Type:** Array&lt;audio.AudioStreamInfo&gt;
 

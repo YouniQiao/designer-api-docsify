@@ -1,5 +1,11 @@
 # isScreenOn
 
+## 导入模块
+
+```TypeScript
+import { power } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isScreenOn
 
 ```TypeScript
@@ -24,18 +30,18 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 回调函数。当检测成功，err为undefined，data为获取到的亮灭屏状态，返回true表示亮屏，返回false表示灭屏；否则为错误对象 。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检测成功，err为undefined，data为获取到的亮灭屏状态，返回true表示亮屏，返回false表示灭屏；否则为错误对象 。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-power.isScreenOn((err: Error, data: boolean) => {
-    if (typeof err === 'undefined') {
-        console.info('screen on status is ' + data);
-    } else {
-        console.error('check screen status failed, err: ' + err);
+power.isScreenOn((err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`Failed to check screen status. Code: ${err.code}, message: ${err.message}`);
+        return;
     }
-})
+    console.info('screen on status is ' + data);
+});
 ```
 
 
@@ -65,15 +71,15 @@ function isScreenOn(): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示亮屏；返回false表示灭屏。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 power.isScreenOn()
 .then((data: boolean) => {
     console.info('screen on status is ' + data);
 })
-.catch((err: Error) => {
-    console.error('check screen status failed, err: ' + err);
-})
+.catch((err: BusinessError) => {
+    console.error(`Failed to check screen status. Code: ${err.code}, message: ${err.message}`);
+});
 ```
 

@@ -14,6 +14,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { DataType } from 'kits/@kit.ArkData';
+```
+
 ## close
 
 ```TypeScript
@@ -36,7 +42,7 @@ close(): void
 
 **系统接口：** 此接口为系统接口。
 
-**示例：**
+## 示例
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -76,7 +82,7 @@ getBlob(columnIndex: int): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -84,7 +90,7 @@ getBlob(columnIndex: int): Uint8Array
 | --- | --- |
 | Uint8Array | 以字节数组的形式返回指定列的值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let columnIndex = 1;
@@ -137,9 +143,9 @@ getColumnIndex(columnName: string): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 返回指定列的索引。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定列的索引。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let ColumnName = "name";
@@ -181,7 +187,7 @@ getColumnName(columnIndex: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示结果集中指定列的索引。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示结果集中指定列的索引。 |
 
 **返回值：**
 
@@ -189,7 +195,7 @@ getColumnName(columnIndex: int): string
 | --- | --- |
 | string | 返回指定列的名称。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let columnIndex = 1;
@@ -231,21 +237,26 @@ getDataType(columnIndex: int): DataType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示结果集中指定列的索引。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示结果集中指定列的索引。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回指定列的类型。 |
+| [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | 返回指定列的类型。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let columnIndex = 1;
 if (resultSet != undefined) {
-  let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
-  console.info('resultSet.getDataType: ' + getDataType);
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
+    console.info('resultSet.getDataType: ' + getDataType);
+  }
 }
 ```
 
@@ -281,22 +292,26 @@ getDouble(columnIndex: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Value obtained. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Value obtained. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
-  console.info('resultSet.getDouble: ' + getDouble);
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
+    console.info('resultSet.getDouble: ' + getDouble);
+  }
 }
 ```
 
@@ -332,22 +347,26 @@ getLong(columnIndex: int): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 以长整数值形式返回指定列的值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 以长整数值形式返回指定列的值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
-  console.info('resultSet.getLong: ' + getLong);
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
+    console.info('resultSet.getLong: ' + getLong);
+  }
 }
 ```
 
@@ -383,7 +402,7 @@ getString(columnIndex: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -391,14 +410,18 @@ getString(columnIndex: int): string
 | --- | --- |
 | string | 以字符串形式返回指定列的值。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getString = (resultSet as DataShareResultSet).getString(columnIndex);
-  console.info('resultSet.getString: ' + getString);
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getString = (resultSet as DataShareResultSet).getString(columnIndex);
+    console.info('resultSet.getString: ' + getString);
+  }
 }
 ```
 
@@ -432,7 +455,7 @@ goTo(offset: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示相对于当前位置的偏移量。offset为负值表示向前偏移，正值则表示向后偏移。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示相对于当前位置的偏移量。offset为负值表示向前偏移，正值则表示向后偏移。 |
 
 **返回值：**
 
@@ -440,7 +463,7 @@ goTo(offset: int): boolean
 | --- | --- |
 | boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let goToNum = 1;
@@ -476,7 +499,7 @@ goToFirstRow(): boolean
 | --- | --- |
 | boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // resultSet需依照本页的使用说明进行创建。
@@ -512,7 +535,7 @@ goToLastRow(): boolean
 | --- | --- |
 | boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -547,7 +570,7 @@ goToNextRow(): boolean
 | --- | --- |
 | boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -582,7 +605,7 @@ goToPreviousRow(): boolean
 | --- | --- |
 | boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -621,7 +644,7 @@ goToRow(position: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示要移动到的指定位置，从 0 开始。 |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示要移动到的指定位置，从 0 开始。 |
 
 **返回值：**
 
@@ -629,7 +652,7 @@ goToRow(position: int): boolean
 | --- | --- |
 | boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let goToRowNum = 2;
@@ -647,7 +670,7 @@ columnCount: int
 
 结果集中的列数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -713,7 +736,7 @@ rowCount: int
 
 结果集中的行数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

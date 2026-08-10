@@ -1,8 +1,8 @@
 # MenuOptions
 
-配置弹出菜单的参数，继承自[ContextMenuOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+配置弹出菜单的参数，继承自[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)。
 
-**继承/实现关系：** MenuOptions extends [ContextMenuOptions](../arkts-apis/arkts-arkui-component/common-contextmenuoptions-i.md)
+**继承/实现关系：** MenuOptions extends [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)
 
 **起始版本：** 10
 
@@ -54,9 +54,9 @@ title?: ResourceStr
 
 **说明：**
 
-仅在content设置为Array&lt;[MenuElement]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_&gt; 时生效。
+仅在content设置为Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; 时生效。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 

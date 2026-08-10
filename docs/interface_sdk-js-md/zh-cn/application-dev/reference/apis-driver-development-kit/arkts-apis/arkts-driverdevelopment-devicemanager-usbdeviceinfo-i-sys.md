@@ -1,6 +1,6 @@
 # USBDeviceInfo（系统接口）
 
-USB设备详细信息，继承自[DeviceInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)。
 
 **继承/实现关系：** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)
 
@@ -13,6 +13,12 @@ USB设备详细信息，继承自[DeviceInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
 
 ## interfaceDescList
 
@@ -42,7 +48,7 @@ productId: int
 
 USB设备Product ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -62,7 +68,7 @@ vendorId: int
 
 USB设备Vendor ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

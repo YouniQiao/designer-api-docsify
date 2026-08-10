@@ -1,6 +1,6 @@
 # HiTraceTracepointType
 
-Enumerates trace point types.
+跟踪埋点类型枚举。用于标识业务流程中的关键节点，例如CS和CR用于标记客户端请求的发送和接收，SS和SR用于标记服务端请求的接收和发送，GENERAL用于标记无法归入上述四种场景的其他关键节点。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates trace point types.
 CS = 0
 ```
 
-CS trace point.
+客户端发送(Client Send)。
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ CS trace point.
 CR = 1
 ```
 
-CR trace point.
+客户端接收(Client Receive)。
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ CR trace point.
 SS = 2
 ```
 
-SS trace point.
+服务端发送(Server Send)。
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ SS trace point.
 SR = 3
 ```
 
-SR trace point.
+服务端接收(Server Receive)。
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ SR trace point.
 GENERAL = 4
 ```
 
-General type, which identifies the trace points except the CS, CR, SS, and SR trace points.
+通用类型，标识CS、CR、SS、SR四种场景之外的埋点。
 
 **Since:** 8
 

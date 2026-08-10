@@ -1,6 +1,6 @@
 # SubWindowOptions
 
-Describes the parameters used for creating a child window.
+子窗口创建参数。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Describes the parameters used for creating a child window.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## isTopmost
 
 ```TypeScript
 isTopmost?: boolean
 ```
 
-Whether the child window is topmost. **true** if topmost, **false** otherwise. The default value is **false**.
+子窗口是否启用置顶属性。true表示子窗口置顶，false表示子窗口不置顶。不设置，则默认为false。
 
 **Type:** boolean
 

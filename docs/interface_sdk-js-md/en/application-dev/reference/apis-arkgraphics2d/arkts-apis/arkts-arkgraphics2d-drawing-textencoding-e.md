@@ -1,6 +1,6 @@
 # TextEncoding
 
-Enumerates the text encoding types.
+文本的编码类型枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the text encoding types.
 TEXT_ENCODING_UTF8 = 0
 ```
 
-One byte is used to indicate UTF-8 or ASCII characters.
+UTF-8或ASCII编码，UTF-8使用1-4个字节表示字符，ASCII使用1个字节表示字符。
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ One byte is used to indicate UTF-8 or ASCII characters.
 TEXT_ENCODING_UTF16 = 1
 ```
 
-Two bytes are used to indicate most Unicode characters.
+使用2个字节表示大部分Unicode。
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ Two bytes are used to indicate most Unicode characters.
 TEXT_ENCODING_UTF32 = 2
 ```
 
-Four bytes are used to indicate all Unicode characters.
+使用4个字节表示全部Unicode。
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ Four bytes are used to indicate all Unicode characters.
 TEXT_ENCODING_GLYPH_ID = 3
 ```
 
-Two bytes are used to indicate the glyph index.
+使用2个字节表示glyph index。
 
 **Since:** 11
 

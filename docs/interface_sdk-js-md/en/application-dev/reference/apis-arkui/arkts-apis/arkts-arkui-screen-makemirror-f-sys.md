@@ -1,12 +1,18 @@
 # makeMirror (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## makeMirror
 
 ```TypeScript
 function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCallback<long>): void
 ```
 
-Sets the screen to mirror mode. This API uses an asynchronous callback to return the result.
+将屏幕设置为镜像模式，使用callback异步回调。
 
 **Since:** 9
 
@@ -22,29 +28,31 @@ Sets the screen to mirror mode. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainScreen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the primary screen. The ID must be a non-negative integer. |
-| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;long&gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long&gt; | Yes | Callback used to return the group ID of the secondary screens, where the ID is a positive integer. |
+| mainScreen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 主屏幕ID，该参数仅支持整数输入。 |
+| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | Yes | 镜像屏幕ID集合，其中ID应为整数。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。返回镜像屏幕的群组id，其中id为整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400001 | Invalid display or screen. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let mainScreenId: number = 0;
-let mirrorScreenIds: Array<number> = [1, 2, 3];
+// Obtain the screen ID using getAllScreens().
+let mainScreenId: number = 0; // Main screen ID.
+let mirrorScreenIds: Array<number> = [1, 2, 3]; // ID array of mirrored screens.
+// Set the screen to mirror mode.
 screen.makeMirror(mainScreenId, mirrorScreenIds, (err: BusinessError, data: number) => {
   const errCode: number = err.code;
   if (errCode) {
-    console.error(`Failed to set screen mirroring. Code:${err.code}, message is ${err.message}`);
+    console.error(`Failed to set screen mirroring. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
@@ -58,7 +66,7 @@ screen.makeMirror(mainScreenId, mirrorScreenIds, (err: BusinessError, data: numb
 function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>
 ```
 
-Sets the screen to mirror mode. This API uses a promise to return the result.
+将屏幕设置为镜像模式，使用Promise异步回调。
 
 **Since:** 9
 
@@ -74,34 +82,36 @@ Sets the screen to mirror mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainScreen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the primary screen. The ID must be a non-negative integer. |
-| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;long&gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
+| mainScreen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 主屏幕ID，该参数仅支持整数输入。 |
+| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | Yes | 镜像屏幕ID集合。其中ID应为整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the group ID of the secondary screens, where the ID is a positive integer. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回镜像屏幕的群组id，其中id为整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| 1400001 | Invalid display or screen. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let mainScreenId: number = 0;
-let mirrorScreenIds: Array<number> = [1, 2, 3];
+// Obtain the screen ID using getAllScreens().
+let mainScreenId: number = 0; // Main screen ID.
+let mirrorScreenIds: Array<number> = [1, 2, 3]; // ID array of mirrored screens.
+// Set the screen to mirror mode.
 screen.makeMirror(mainScreenId, mirrorScreenIds).then((data: number) => {
   console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to set screen mirroring. Code:${err.code}, message is ${err.message}`);
+  console.error(`Failed to set screen mirroring. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

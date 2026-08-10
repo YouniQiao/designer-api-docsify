@@ -20,5 +20,5 @@ type OnContinueDoneCallback = (result: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | The result code of continue mission.  |
+| result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | The result code of continue mission. |
 

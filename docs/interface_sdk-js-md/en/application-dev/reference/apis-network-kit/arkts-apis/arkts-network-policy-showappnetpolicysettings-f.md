@@ -1,12 +1,18 @@
 # showAppNetPolicySettings
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## showAppNetPolicySettings
 
 ```TypeScript
 function showAppNetPolicySettings(context: Context): Promise<void>
 ```
 
-Open the network settings interface of the application, which is presented in a semi-modal form and can be used to configure the network connection method. This API uses a promise to return the result.
+Open the network settings interface of the application, which is presented in a semi-modal form and can  be used to configure the network connection method. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -22,7 +28,7 @@ Open the network settings interface of the application, which is presented in a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates Context instance. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates Context instance. |
 
 **Return value:**
 
@@ -30,7 +36,7 @@ Open the network settings interface of the application, which is presented in a 
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the function. |
 
-**Example**
+## Examples
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 

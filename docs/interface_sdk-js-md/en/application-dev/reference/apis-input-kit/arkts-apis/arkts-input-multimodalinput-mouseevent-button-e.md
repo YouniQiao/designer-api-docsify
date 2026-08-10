@@ -1,6 +1,6 @@
 # Button
 
-Enumerates mouse buttons.
+鼠标按键。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates mouse buttons.
 LEFT = 0
 ```
 
-Left button.
+鼠标左键。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Left button.
 MIDDLE = 1
 ```
 
-Middle button.
+鼠标中键。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Middle button.
 RIGHT = 2
 ```
 
-Right button
+鼠标右键。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Right button
 SIDE = 3
 ```
 
-Side button.
+鼠标侧边键。
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Side button.
 EXTRA = 4
 ```
 
-Extended button.
+鼠标扩展键。
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ Extended button.
 FORWARD = 5
 ```
 
-Forward button.
+鼠标前进键。
 
 **Since:** 9
 
@@ -112,7 +112,7 @@ Forward button.
 BACK = 6
 ```
 
-Back button.
+鼠标后退键。
 
 **Since:** 9
 
@@ -128,7 +128,7 @@ Back button.
 TASK = 7
 ```
 
-Task button.
+鼠标任务键。
 
 **Since:** 9
 

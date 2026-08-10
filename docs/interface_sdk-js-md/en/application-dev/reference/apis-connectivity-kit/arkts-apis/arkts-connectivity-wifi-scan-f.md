@@ -1,5 +1,11 @@
 # scan
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## scan
 
 ```TypeScript
@@ -8,7 +14,7 @@ function scan(): boolean
 
 Scans Wi-Fi hotspot.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This API works in asynchronous mode.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;This API works in asynchronous mode.&lt;/p&gt;
 
 **Since:** 6
 
@@ -30,15 +36,15 @@ Scans Wi-Fi hotspot.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';
 
 try {
-	wifi.scan();
+  wifi.scan();
 }catch(error){
-	console.error("failed:" + JSON.stringify(error));
+  console.error("failed:" + JSON.stringify(error));
 }
 ```
 

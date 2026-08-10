@@ -1,6 +1,6 @@
 # AudioScene
 
-Enumerates the audio scenes.
+表示音频场景的枚举。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enumerates the audio scenes.
 AUDIO_SCENE_DEFAULT = 0
 ```
 
-Default audio scene.
+默认音频场景。
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Default audio scene.
 AUDIO_SCENE_RINGING = 1
 ```
 
-Ringing audio scene.
+响铃模式。
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Ringing audio scene.
 AUDIO_SCENE_PHONE_CALL = 2
 ```
 
-Phone call audio scene.
+电话模式。
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Phone call audio scene.
 AUDIO_SCENE_VOICE_CHAT = 3
 ```
 
-Voice chat audio scene.
+语音聊天模式。
 
 **Since:** 8
 

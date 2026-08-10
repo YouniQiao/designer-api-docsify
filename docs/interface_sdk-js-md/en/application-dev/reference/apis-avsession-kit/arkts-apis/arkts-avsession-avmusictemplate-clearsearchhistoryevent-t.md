@@ -4,7 +4,7 @@
 type ClearSearchHistoryEvent = () => Promise<OperResult>
 ```
 
-The clear search history event.
+清除搜索历史事件。使用Promise异步回调。
 
 **Since:** 23
 

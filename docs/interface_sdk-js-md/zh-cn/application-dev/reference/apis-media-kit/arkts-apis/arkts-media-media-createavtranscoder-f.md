@@ -1,5 +1,11 @@
 # createAVTranscoder
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createAVTranscoder
 
 ```TypeScript
@@ -7,9 +13,10 @@ function createAVTranscoder(): Promise<AVTranscoder>
 ```
 
 创建视频转码实例。使用Promise异步回调。
-    **说明：**  
-    
-    可创建的视频转码实例不能超过2个。
+
+> **说明：**
+> 
+> 可创建的视频转码实例不能超过2个。
 
 **起始版本：** 12
 
@@ -31,10 +38,9 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,7 +67,7 @@ function createAVTranscoder(): Promise<AVTranscoder | undefined>
 
 Creates an **AVTranscoder** instance. This API uses a promise to return the result.
 
-**NOTE**
+**NOTE：**
 
 A maximum of 2 **AVTranscoder** instances can be created.
 
@@ -83,5 +89,5 @@ A maximum of 2 **AVTranscoder** instances can be created.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
 

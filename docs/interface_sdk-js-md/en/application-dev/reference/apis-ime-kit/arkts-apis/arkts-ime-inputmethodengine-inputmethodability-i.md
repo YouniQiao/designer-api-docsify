@@ -1,8 +1,9 @@
 # InputMethodAbility
 
-In the following API examples, you must first use  
-[getInputMethodAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an **InputMethodAbility**  
-instance, and then call the APIs using the obtained instance.
+InputMethodAbility是输入法应用的核心能力对象，提供输入法生命周期管理、面板创建与销毁、事件订阅等功能。输入法应用通过  
+[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)获取该实例。
+
+下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)获取到InputMethodAbility实例后，通过实例调用。
 
 **Since:** 9
 
@@ -12,26 +13,20 @@ instance, and then call the APIs using the obtained instance.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## createPanel
 
 ```TypeScript
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the  
-[InputMethodExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ class. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Only one [SOFT\_KEYBOARD]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ panel and one  
-    [STATUS\_BAR]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ panel can be created for a single input method.
-    The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such  
-    as  
-    [window.createWindow]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_  
-    , [bindContextMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_,  
-    and [CustomDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_. You are advised to adopt  
-    alternative solutions to sub-windows, such as using a [dialog box]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ or  
-    [bindMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_, or set  
-    **showInSubwindow** to **false**.
+创建输入法面板，仅支持输入法应用在  
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)（输入法扩展能力）类中调用。使用callback异步回调。
 
 **Since:** 10
 
@@ -45,36 +40,43 @@ Creates an input method panel. This API can be called only by the input method a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current context of the input method. |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the input method panel. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | 当前输入法应用上下文信息。 |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | 输入法面板信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes | 回调函数。当输入法面板创建成功，返回当前创建的输入法面板对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800004 | not an input method application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine, InputMethodExtensionAbility } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
 
 let panelInfo: inputMethodEngine.PanelInfo = {
   type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
   flag: inputMethodEngine.PanelFlag.FLG_FIXED
 }
 
-if (!this.context) {
-  inputMethodEngine.getInputMethodAbility()
-    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
-      if (err) {
-        console.error(`Failed to createPanel. Code is ${err.code}, message is ${err.message}`);
-        return;
-      }
-      console.info('Succeed in creating panel.');
-    })
+class InputMethodExt extends InputMethodExtensionAbility {
+    onCreate(want: Want): void {
+        console.info(`onCreate, want: ${want.abilityName}`);
+        if (!this.context) {
+            inputMethodEngine.getInputMethodAbility()
+            .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+                if (err) {
+                console.error(`Failed to createPanel. Code is ${err.code}, message is ${err.message}`);
+                return;
+              }
+                console.info('Succeed in creating panel.');
+            })
+        }
+    }
 }
 ```
 
@@ -84,20 +86,8 @@ if (!this.context) {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the  
-[InputMethodExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ class. This API uses a promise to return the result.
-    **NOTE**  
-    
-    Only one [SOFT\_KEYBOARD]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ panel and one  
-    [STATUS\_BAR]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ panel can be created for a single input method.
-    The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such  
-    as  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    , [bindContextMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_,  
-    and [CustomDialog]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_. You are advised to adopt  
-    alternative solutions to sub-windows, such as using a [dialog box]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ or  
-    [bindMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_, or set  
-    **showInSubwindow** to **false**.
+创建输入法面板，仅支持输入法应用在  
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)类中调用。使用promise异步回调。
 
 **Since:** 10
 
@@ -111,8 +101,8 @@ Creates an input method panel. This API can be called only by the input method a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current context of the input method. |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the input method panel. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | 当前输入法应用上下文信息。 |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | 输入法面板信息。 |
 
 **Return value:**
 
@@ -124,26 +114,33 @@ Creates an input method panel. This API can be called only by the input method a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 12800004 | not an input method application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine, InputMethodExtensionAbility } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
 
 let panelInfo: inputMethodEngine.PanelInfo = {
   type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
   flag: inputMethodEngine.PanelFlag.FLG_FIXED
 }
 
-if (this.context) {
-  inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo)
-    .then((panel: inputMethodEngine.Panel) => {
-      console.info('Succeed in creating panel.');
-    }).catch((err: BusinessError) => {
-    console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
-  })
+class InputMethodExt extends InputMethodExtensionAbility {
+    onCreate(want: Want): void {
+        console.info(`onCreate, want: ${want.abilityName}`);
+        if (this.context) {
+            inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo)
+                .then((panel: inputMethodEngine.Panel) => {
+                console.info('Succeed in creating panel.');
+            }).catch((err: BusinessError) => {
+                console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+            })
+        }
+    }
 }
 ```
 
@@ -153,7 +150,7 @@ if (this.context) {
 destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 ```
 
-Destroys the specified input method panel. This API uses an asynchronous callback to return the result.
+销毁输入法面板。需先通过 createPanel 创建面板后调用。使用callback异步回调。
 
 **Since:** 10
 
@@ -167,16 +164,16 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Input method panel to destroy. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| panel | [Panel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes | 要销毁的面板对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当输入法面板销毁成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -216,7 +213,7 @@ if (inputPanel) {
 destroyPanel(panel: Panel): Promise<void>
 ```
 
-Destroys the specified input method panel. This API uses a promise to return the result.
+销毁输入法面板。使用promise异步回调。
 
 **Since:** 10
 
@@ -230,7 +227,7 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Input method panel to destroy. |
+| panel | [Panel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes | 要销毁的面板对象。 |
 
 **Return value:**
 
@@ -242,9 +239,9 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -282,7 +279,7 @@ if (inputPanel) {
 getSecurityMode(): SecurityMode
 ```
 
-Obtains the current security mode of the input method.
+获取输入法应用的当前安全模式。
 
 **Since:** 11
 
@@ -296,15 +293,15 @@ Obtains the current security mode of the input method.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Security mode. |
+| [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) | 安全模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+| 12800004 | not an input method application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let security: inputMethodEngine.SecurityMode = inputMethodEngine.getInputMethodAbility().getSecurityMode();
@@ -317,7 +314,7 @@ console.error(`getSecurityMode, securityMode is : ${security}`);
 off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void
 ```
 
-Disables listening for the input method binding event. This API uses an asynchronous callback to return the result.
+取消订阅输入法绑定成功事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -331,10 +328,10 @@ Disables listening for the input method binding event. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'inputStart' | Yes | 设置监听类型，固定取值为'inputStart'。 |
+| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('inputStart');
@@ -346,7 +343,7 @@ inputMethodEngine.getInputMethodAbility().off('inputStart');
 off(type: 'inputStop', callback: () => void): void
 ```
 
-Disables listening for the input method stop event. This API uses an asynchronous callback to return the result.
+取消订阅停止输入法应用事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -360,10 +357,10 @@ Disables listening for the input method stop event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
-| callback | () =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'inputStop' | Yes | 设置监听类型，固定取值为'inputStop'。 |
+| callback | () =&gt; void | Yes | 取消订阅的回调函数，用于取消特定的键盘显示/隐藏事件订阅。传入callback时取消指定回调的订阅，不传入时取消type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
@@ -377,7 +374,7 @@ inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
 off(type: 'setCallingWindow', callback: (wid: number) => void): void
 ```
 
-Disables listening for the window invocation setting event. This API uses an asynchronous callback to return the result.
+取消订阅设置调用窗口事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -391,10 +388,10 @@ Disables listening for the window invocation setting event. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
-| callback | (wid: number) =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'setCallingWindow' | Yes | 设置监听类型，固定取值为'setCallingWindow'。 |
+| callback | (wid: number) =&gt; void | Yes | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (wid: number) => {
@@ -408,7 +405,7 @@ inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (wid: number) 
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -422,10 +419,10 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardShow'** indicates the keyboard display event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | No | Callback used to return the result. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | 设置监听类型。&lt;br/&gt;- 'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;- 'keyboardHide'表示隐 藏输入法软键盘。 |
+| callback | () =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('keyboardShow', () => {
@@ -442,7 +439,7 @@ inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -456,10 +453,10 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardShow'** indicates the keyboard display event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | No | Callback used to return the result. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | 设置监听类型。&lt;br/&gt;- 'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;- 'keyboardHide'表示隐 藏输入法软键盘。 |
+| callback | () =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('keyboardShow', () => {
@@ -476,7 +473,7 @@ inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
 off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void
 ```
 
-Disables listening for the input method subtype setting event. This API uses an asynchronous callback to return the result.
+取消订阅设置输入法子类型事件。使用callback异步回调。
 
 **Since:** 9
 
@@ -490,10 +487,10 @@ Disables listening for the input method subtype setting event. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
-| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'setSubtype' | Yes | 设置监听类型，固定取值为'setSubtype'。 |
+| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
@@ -507,7 +504,7 @@ inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
 off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 ```
 
-Disables listening for the security mode changes of the input method. This API uses an asynchronous callback to return the result.
+取消订阅输入法安全模式改变类型事件。使用callback异步回调。
 
 **Since:** 11
 
@@ -521,10 +518,10 @@ Disables listening for the security mode changes of the input method. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SecurityMode&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'securityModeChange' | Yes | 设置监听类型，固定取值为'securityModeChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let securityChangeCallback: (securityMode: inputMethodEngine.SecurityMode) => void =
@@ -542,7 +539,7 @@ inputMethodAbility.off('securityModeChange', securityChangeCallback);
 off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-Disables listening for the private data event of the input method. This API uses an asynchronous callback to return the result.
+取消订阅输入法私有数据事件。使用callback异步回调。
 
 **Since:** 12
 
@@ -556,16 +553,16 @@ Disables listening for the private data event of the input method. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'privateCommand' | Yes | 设置监听类型，固定取值为'privateCommand'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| 12800010 | not the preconfigured default input method. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
@@ -584,7 +581,7 @@ inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCa
 off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
 ```
 
-Disables listening for changes of the screen ID of the window associated with the edit box. This API uses an asynchronous callback to return the result.
+取消订阅编辑框对应窗口所在屏幕ID变化事件。使用callback异步回调。
 
 **Since:** 18
 
@@ -598,10 +595,10 @@ Disables listening for changes of the screen ID of the window associated with th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'callingDisplayDidChange' | Yes | 设置监听类型，固定取值为'callingDisplayDidChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (num: number) => {
@@ -615,7 +612,11 @@ inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (num: n
 off(type: 'discardTypingText', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the event of discarding candidate words and sends the event to the input method. This API uses an asynchronous callback to return the result.
+取消订阅编辑框应用发送\u201c清空候选词\u201d事件到输入法。使用callback异步回调。
+
+**使用场景：** 编辑框应用需要通知输入法清空当前候选词列表时使用（如用户切换输入框、提交表单后等场景）。
+
+**使用后效果：** 当编辑框应用发送清空候选词请求时触发回调，输入法应用应在回调中清空候选词列表和预输入文本。
 
 **Since:** 20
 
@@ -629,10 +630,10 @@ Unsubscribes from the event of discarding candidate words and sends the event to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| type | 'discardTypingText' | Yes | 设置监听类型，固定取值为'discardTypingText'。&lt;br/&gt; - 'discardTypingText'：表示取消订阅编辑框应用发送“清 空候选词”事件到输入法。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
@@ -646,7 +647,7 @@ inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
 offCallingDisplayDidChange(callback?: Callback<int>): void
 ```
 
-Unsubscribe 'callingDisplayDidChange' event.
+取消编辑框对应窗口所在屏幕ID变化。使用callback异步回调。
 
 **Since:** 23
 
@@ -660,7 +661,7 @@ Unsubscribe 'callingDisplayDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | No | optional, the callback called when calling display id changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offDiscardTypingText
 
@@ -668,7 +669,7 @@ Unsubscribe 'callingDisplayDidChange' event.
 offDiscardTypingText(callback?: Callback<void>): void
 ```
 
-Unsubscribe 'discardTypingText' event.
+取消订阅编辑框应用发送“清空候选词”事件到输入法。使用callback异步回调。
 
 **Since:** 23
 
@@ -682,7 +683,7 @@ Unsubscribe 'discardTypingText' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | optional, the callback called when the edit box requests to discard typing text. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offInputStart
 
@@ -690,7 +691,7 @@ Unsubscribe 'discardTypingText' event.
 offInputStart(callback?: IMAInputStartCallback): void
 ```
 
-Unsubscribe 'inputStart' event.
+取消订阅输入法绑定成功事件。
 
 **Since:** 23
 
@@ -704,7 +705,7 @@ Unsubscribe 'inputStart' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | optional, the callback called when edit box requests keyboard. |
+| callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offInputStop
 
@@ -712,7 +713,7 @@ Unsubscribe 'inputStart' event.
 offInputStop(callback: Callback<void>): void
 ```
 
-Unsubscribe 'inputStop'.
+取消订阅输入法输入停止（inputStop）事件，停止监听系统要求输入法终止输入流程的触发动作。
 
 **Since:** 23
 
@@ -726,7 +727,7 @@ Unsubscribe 'inputStop'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 to terminate itself. |
 
 ## offKeyboardHide
 
@@ -734,7 +735,7 @@ Unsubscribe 'inputStop'.
 offKeyboardHide(callback?: Callback<void>): void
 ```
 
-Unsubscribe 'keyboardHide'.
+取消订阅输入法键盘隐藏（keyboardHide）事件，停止监听输入法键盘隐藏的触发动作。
 
 **Since:** 23
 
@@ -748,7 +749,7 @@ Unsubscribe 'keyboardHide'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | optional, the callback called when hiding keyboard. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数。 |
 
 ## offKeyboardShow
 
@@ -756,7 +757,7 @@ Unsubscribe 'keyboardHide'.
 offKeyboardShow(callback?: Callback<void>): void
 ```
 
-Unsubscribe 'keyboardShow'.
+取消订阅输入法事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -770,7 +771,7 @@ Unsubscribe 'keyboardShow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | optional, the callback called when showing keyboard. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数。 |
 
 ## offPrivateCommand
 
@@ -778,7 +779,7 @@ Unsubscribe 'keyboardShow'.
 offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-Unsubscribe 'privateCommand'. This function can only be called by default input method configured by system.
+取消订阅输入法私有数据事件。使用callback异步回调。该接口只能被系统预置输入法调用。
 
 **Since:** 23
 
@@ -792,13 +793,13 @@ Unsubscribe 'privateCommand'. This function can only be called by default input 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, CommandDataType&gt;&gt; | No | optional, the callback called when receiving private command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | 回调函数，返回向输入法应用发送的私有数据。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| 12800010 | not the preconfigured default input method. |
 
 ## offSecurityModeChange
 
@@ -806,7 +807,7 @@ Unsubscribe 'privateCommand'. This function can only be called by default input 
 offSecurityModeChange(callback?: Callback<SecurityMode>): void
 ```
 
-Unsubscribe 'securityModeChange' event.
+取消订阅输入法安全模式改变类型事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -820,7 +821,7 @@ Unsubscribe 'securityModeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SecurityMode&gt; | No | optional, the callback called when the security mode changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offSetCallingWindow
 
@@ -828,7 +829,7 @@ Unsubscribe 'securityModeChange' event.
 offSetCallingWindow(callback: Callback<int>): void
 ```
 
-Unsubscribe 'setCallingWindow'.
+取消订阅编辑框设置调用窗口 ID（setCallingWindow）事件，停止监听编辑框设置调用窗口标识的触发动作。
 
 **Since:** 23
 
@@ -842,7 +843,7 @@ Unsubscribe 'setCallingWindow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## offSetSubtype
 
@@ -850,7 +851,7 @@ Unsubscribe 'setCallingWindow'.
 offSetSubtype(callback?: Callback<InputMethodSubtype>): void
 ```
 
-Unsubscribe 'setSubtype'.
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -864,7 +865,7 @@ Unsubscribe 'setSubtype'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;InputMethodSubtype&gt; | No | optional, the callback called when the system notify to switch subtype. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 to switch subtype. |
 
 ## on('inputStart')
 
@@ -872,7 +873,11 @@ Unsubscribe 'setSubtype'.
 on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void
 ```
 
-Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
+订阅输入法绑定成功事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要在编辑框获得焦点并绑定输入法时，获取KeyboardController和InputClient实例以进行后续的键盘操作和文本交互。
+
+**使用后效果：** 当编辑框绑定到输入法应用时，触发回调并返回KeyboardController和InputClient实例。输入法应用可在回调中创建面板、加载键盘页面、订阅KeyboardDelegate事件等。
 
 **Since:** 9
 
@@ -886,10 +891,10 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | Yes | Callback used to return instances related to input method operations. |
+| type | 'inputStart' | Yes | 设置监听类型，固定取值为'inputStart'。 |
+| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | Yes | 回调函数，返回输入法操作相关实例。kbController为键盘控制器实例，用于控制键盘显示/隐藏；inputClient为输入客户端实例，用于与编辑框进行文本交 互。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -906,7 +911,11 @@ inputMethodEngine.getInputMethodAbility()
 on(type: 'inputStop', callback: () => void): void
 ```
 
-Enables listening for the input method unbinding event. This API uses an asynchronous callback to return the result.
+订阅停止输入法应用事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要在编辑框失去焦点或用户切换输入法时，执行清理操作（如隐藏面板、释放资源）。
+
+**使用后效果：** 当输入法应用被停止绑定时触发回调。输入法应用应在回调中隐藏面板、取消事件订阅、释放InputClient相关资源。
 
 **Since:** 9
 
@@ -920,10 +929,10 @@ Enables listening for the input method unbinding event. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| type | 'inputStop' | Yes | 设置监听类型，固定取值为'inputStop'。 |
+| callback | () =&gt; void | Yes | 回调函数，无返回参数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
@@ -937,7 +946,11 @@ inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
 on(type: 'setCallingWindow', callback: (wid: number) => void): void
 ```
 
-Enables listening for the window invocation setting event. This API uses an asynchronous callback to return the result.
+订阅设置调用窗口事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要在绑定应用的窗口发生变化时（如应用切换窗口、多窗口场景），调整面板位置或重新定位。
+
+**使用后效果：** 当调用方窗口发生变化时触发回调，返回新的窗口ID。输入法应用可根据窗口ID调整面板位置。
 
 **Since:** 9
 
@@ -951,10 +964,10 @@ Enables listening for the window invocation setting event. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
-| callback | (wid: number) =&gt; void | Yes | Callback used to return the window ID of the caller. |
+| type | 'setCallingWindow' | Yes | 设置监听类型，固定取值为'setCallingWindow'。 |
+| callback | (wid: number) =&gt; void | Yes | 回调函数，参数为调用方窗口的Id。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (wid: number) => {
@@ -968,7 +981,11 @@ inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (wid: number) =
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要在软键盘显示/隐藏时，执行相应的界面更新操作（如调整面板布局、更新候选词区域）。
+
+**使用后效果：** 当软键盘显示请求触发时，'keyboardShow'回调被调用，输入法应用应在回调中调用panel.show()显示面板；当软键盘隐藏请求触发时，'keyboardHide'回调被调用，输入法应用应在回调中调用panel.hide()隐藏面板。
 
 **Since:** 9
 
@@ -982,10 +999,10 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardShow'** indicates the keyboard display event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | 设置监听类型。&lt;br/&gt;- 'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;- 'keyboardHide'表示隐 藏输入法软键盘。 |
+| callback | () =&gt; void | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('keyboardShow', () => {
@@ -1002,7 +1019,11 @@ inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要在软键盘显示/隐藏时，执行相应的界面更新操作（如调整面板布局、更新候选词区域）。
+
+**使用后效果：** 当软键盘显示请求触发时，'keyboardShow'回调被调用，输入法应用应在回调中调用panel.show()显示面板；当软键盘隐藏请求触发时，'keyboardHide'回调被调用，输入法应用应在回调中调用panel.hide()隐藏面板。
 
 **Since:** 9
 
@@ -1016,10 +1037,10 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardShow'** indicates the keyboard display event. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | 设置监听类型。&lt;br/&gt;- 'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;- 'keyboardHide'表示隐 藏输入法软键盘。 |
+| callback | () =&gt; void | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('keyboardShow', () => {
@@ -1036,7 +1057,11 @@ inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
 on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void
 ```
 
-Enables listening for the input method subtype setting event. This API uses an asynchronous callback to return the result.
+订阅设置输入法子类型事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要在子类型（如语言、输入模式）发生变化时，切换到对应的键盘布局或输入逻辑。
+
+**使用后效果：** 当输入法子类型变化时触发回调，返回新的输入法子类型信息。
 
 **Since:** 9
 
@@ -1050,10 +1075,10 @@ Enables listening for the input method subtype setting event. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
-| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method subtype. |
+| type | 'setSubtype' | Yes | 设置监听类型，固定取值为'setSubtype'。 |
+| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | 回调函数，返回设置的输入法子类型（InputMethodSubtype，输入法子类型）。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
@@ -1069,7 +1094,11 @@ inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: 
 on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 ```
 
-Enables listening for the security mode changes of the input method. This API uses an asynchronous callback to return the result.
+订阅输入法安全模式改变类型事件。使用callback异步回调。
+
+**使用场景：** 输入法应用需要在安全模式发生变化时（如编辑框切换到密码输入模式、隐私模式等），调整键盘行为（如禁止截图、切换到安全键盘布局等）。
+
+**使用后效果：** 当安全模式变化时触发回调，返回当前的安全模式值。
 
 **Since:** 11
 
@@ -1083,10 +1112,10 @@ Enables listening for the security mode changes of the input method. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SecurityMode&gt; | Yes | Callback used to return the current security mode. |
+| type | 'securityModeChange' | Yes | 设置监听类型，固定取值为'securityModeChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | Yes | 回调函数，返回当前输入法应用的安全模式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -1101,7 +1130,11 @@ inputMethodEngine.getInputMethodAbility()
 on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-Enables listening for the private data event of the input method. This API uses an asynchronous callback to return the result.
+订阅输入法私有数据事件。使用callback异步回调。
+
+**使用场景：** 应用与输入法之间需要传递私有数据（如自定义命令、配置信息等）时使用。仅系统默认输入法应用可订阅此事件。
+
+**使用后效果：** 当绑定应用向输入法发送私有数据时触发回调，返回私有数据记录。
 
 **Since:** 12
 
@@ -1115,16 +1148,16 @@ Enables listening for the private data event of the input method. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
+| type | 'privateCommand' | Yes | 设置监听类型，固定取值为'privateCommand'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | 回调函数，返回向输入法应用发送的私有数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| 12800010 | not the preconfigured default input method. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
@@ -1142,7 +1175,11 @@ inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCal
 on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 ```
 
-Enables listening for changes of the screen ID of the window associated with the edit box. This API uses an asynchronous callback to return the result.
+订阅编辑框对应窗口所在屏幕ID变化事件。使用callback异步回调。
+
+**使用场景：** 多屏幕设备场景下，编辑框在不同屏幕间切换时，输入法应用需根据新的屏幕ID调整面板位置和大小。
+
+**使用后效果：** 当编辑框所在屏幕ID发生变化时触发回调，返回新的屏幕ID。
 
 **Since:** 18
 
@@ -1156,16 +1193,16 @@ Enables listening for changes of the screen ID of the window associated with the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
+| type | 'callingDisplayDidChange' | Yes | 设置监听类型，固定取值为'callingDisplayDidChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | 回调函数，返回编辑框设置对应窗口屏幕ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| 801 | capability not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let callingDisplayDidChangeCallback: (num: number) => void = (num: number) => {
@@ -1180,7 +1217,11 @@ inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingD
 on(type: 'discardTypingText', callback: Callback<void>): void
 ```
 
-Subscribes to the event of discarding candidate words and sends the event to the input method. This API uses an asynchronous callback to return the result.
+订阅编辑框应用发送\u201c清空候选词\u201d事件到输入法。使用callback异步回调。
+
+**使用场景：** 编辑框应用需要通知输入法清空当前候选词列表时使用（如用户切换输入框、提交表单后等场景）。
+
+**使用后效果：** 当编辑框应用发送清空候选词请求时触发回调，输入法应用应在回调中清空候选词列表和预输入文本。
 
 **Since:** 20
 
@@ -1194,10 +1235,10 @@ Subscribes to the event of discarding candidate words and sends the event to the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **'discardTypingText'** : indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| type | 'discardTypingText' | Yes | 设置监听类型，固定取值为'discardTypingText'。&lt;br/&gt; - 'discardTypingText'：表示订阅编辑框应用发送“清空候 选词”事件到输入法。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
@@ -1211,7 +1252,7 @@ inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
 onCallingDisplayDidChange(callback: Callback<int>): void
 ```
 
-Subscribe 'callingDisplayDidChange' event.
+订阅编辑框对应窗口所在屏幕ID变化。使用callback异步回调。
 
 **Since:** 23
 
@@ -1225,13 +1266,13 @@ Subscribe 'callingDisplayDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | the callback called when calling display id changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 回调函数，返回编辑框设置对应窗口屏幕ID。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| 801 | capability not supported. |
 
 ## onDiscardTypingText
 
@@ -1239,7 +1280,7 @@ Subscribe 'callingDisplayDidChange' event.
 onDiscardTypingText(callback: Callback<void>): void
 ```
 
-Subscribe 'discardTypingText' event.
+订阅编辑框应用发送“清空候选词”事件到输入法。使用callback异步回调。
 
 **Since:** 23
 
@@ -1253,7 +1294,7 @@ Subscribe 'discardTypingText' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback called when the edit box requests to discard typing text. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## onInputStart
 
@@ -1261,7 +1302,7 @@ Subscribe 'discardTypingText' event.
 onInputStart(callback: IMAInputStartCallback): void
 ```
 
-Subscribe 'inputStart' event.
+订阅输入法绑定成功事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -1275,7 +1316,7 @@ Subscribe 'inputStart' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the callback called when edit box requests keyboard. |
+| callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | Yes | 回调函数，返回订阅输入法的KeyboardController和TextInputClient实例。 |
 
 ## onInputStop
 
@@ -1283,7 +1324,7 @@ Subscribe 'inputStart' event.
 onInputStop(callback: Callback<void>): void
 ```
 
-Subscribe 'inputStop'.
+订阅停止输入法应用事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -1297,7 +1338,7 @@ Subscribe 'inputStop'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 系统要求输入法终止输入流程时触发的回调函数，无入参，用于执行输入停止后的清理逻辑（如隐藏键盘、释放资源等）。 to terminate itself. |
 
 ## onKeyboardHide
 
@@ -1305,7 +1346,7 @@ Subscribe 'inputStop'.
 onKeyboardHide(callback: Callback<void>): void
 ```
 
-Subscribe 'keyboardHide'.
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -1319,7 +1360,7 @@ Subscribe 'keyboardHide'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback called when hiding keyboard. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## onKeyboardShow
 
@@ -1327,7 +1368,7 @@ Subscribe 'keyboardHide'.
 onKeyboardShow(callback: Callback<void>): void
 ```
 
-Subscribe 'keyboardShow'.
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -1341,7 +1382,7 @@ Subscribe 'keyboardShow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback called when showing keyboard. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## onPrivateCommand
 
@@ -1349,7 +1390,7 @@ Subscribe 'keyboardShow'.
 onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-Subscribe 'privateCommand'. This function can only be called by default input method configured by system.
+订阅输入法私有数据事件。使用callback异步回调。该接口只能被系统预置输入法调用。
 
 **Since:** 23
 
@@ -1363,13 +1404,13 @@ Subscribe 'privateCommand'. This function can only be called by default input me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | the callback called when receiving private command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | 回调函数，返回向输入法应用发送的私有数据。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| 12800010 | not the preconfigured default input method. |
 
 ## onSecurityModeChange
 
@@ -1377,7 +1418,7 @@ Subscribe 'privateCommand'. This function can only be called by default input me
 onSecurityModeChange(callback: Callback<SecurityMode>): void
 ```
 
-Subscribe 'securityModeChange' event.
+订阅输入法安全模式改变类型事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -1391,7 +1432,7 @@ Subscribe 'securityModeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SecurityMode&gt; | Yes | the callback called when the security mode changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | Yes | 回调函数，返回当前输入法应用的安全模式。 |
 
 ## onSetCallingWindow
 
@@ -1399,7 +1440,7 @@ Subscribe 'securityModeChange' event.
 onSetCallingWindow(callback: Callback<int>): void
 ```
 
-Subscribe 'setCallingWindow'.
+订阅设置调用窗口事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -1413,7 +1454,7 @@ Subscribe 'setCallingWindow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 回调函数，返回调用方窗口的Id。 |
 
 ## onSetSubtype
 
@@ -1421,7 +1462,7 @@ Subscribe 'setCallingWindow'.
 onSetSubtype(callback: Callback<InputMethodSubtype>): void
 ```
 
-Subscribe 'setSubtype'.
+订阅设置输入法子类型事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -1435,5 +1476,5 @@ Subscribe 'setSubtype'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;InputMethodSubtype&gt; | Yes | the callback called when the system notify to switch subtype. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | Yes | 回调函数，返回设置的输入法子类型。 to switch subtype. |
 

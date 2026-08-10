@@ -1,5 +1,11 @@
 # setProcDumpInSharedOOM
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## setProcDumpInSharedOOM
 
 ```TypeScript
@@ -7,13 +13,14 @@ function setProcDumpInSharedOOM(enable: boolean): void
 ```
 
 ��ת���Ķѿ������̼߳���Ϊ���̼���
-    **ע��**  
-    
-    Ҫ��ת�����̼��Ķѿ��գ����øýӿڲ�����true������OOMʱ��������SharedHeap OOM����������ȱһ���ɡ�  
-    
-    �ýӿڲ�Ӱ������������ת���Ķѿ������ݡ��磺����Ӱ��dumpJsRawHeapData�Ľ����  
-    
-    �ýӿ���Ӧ�õ����������ڿɱ���ε��ã��������һ�ε��õ�ִ�н������Ч��
+
+> **ע��**
+> 
+> Ҫ��ת�����̼��Ķѿ��գ����øýӿڲ�����true������OOMʱ��������SharedHeap OOM����������ȱһ���ɡ�
+> 
+> �ýӿڲ�Ӱ������������ת���Ķѿ������ݡ��磺����Ӱ��dumpJsRawHeapData�Ľ����
+> 
+> �ýӿ���Ӧ�õ����������ڿɱ���ε��ã��������һ�ε��õ�ִ�н������Ч��
 
 **起始版本：** 24
 
@@ -33,7 +40,7 @@ function setProcDumpInSharedOOM(enable: boolean): void
 | --- | --- | --- | --- |
 | enable | boolean | 是 | �����̷���SharedHeap OOMʱ��ϵͳ�����ݸý��������������������һ�ε��øýӿ�����¼����Ϣ��ת����Ӧ����Ķѿ��ա� true�����̼��� false���̼߳��� Ĭ��ֵ��false�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

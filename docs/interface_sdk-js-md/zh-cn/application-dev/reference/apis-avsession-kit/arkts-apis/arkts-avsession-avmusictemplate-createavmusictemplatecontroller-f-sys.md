@@ -1,5 +1,11 @@
 # createAVMusicTemplateController（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## createAVMusicTemplateController
 
 ```TypeScript
@@ -32,15 +38,15 @@ function createAVMusicTemplateController(sessionId: string): AVMusicTemplateCont
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 音频模板控制器实例，用于与接入音频模板的媒体应用进行数据交互。 |
+| [AVMusicTemplateController](arkts-avsession-avmusictemplate-avmusictemplatecontroller-c.md) | 音频模板控制器实例，用于与接入音频模板的媒体应用进行数据交互。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verify failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function createAVMusicTemplateController can not work correctly due to limited device capabilities. |
-| [35000002](../errorcode-avmusictemplate.md#35000002-音频模板控制器创建失败) | Failed to create the AVMusicTemplate controller. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| 801 | Capability not supported.function createAVMusicTemplateController can not work correctly due to limited device capabilities. |
+| 35000005 | AVMusicTemplate does not exist. |
+| 35000002 | Failed to create the AVMusicTemplate controller. |
+| 201 | Permission verify failed. |
+| 202 | Not System App. |
 

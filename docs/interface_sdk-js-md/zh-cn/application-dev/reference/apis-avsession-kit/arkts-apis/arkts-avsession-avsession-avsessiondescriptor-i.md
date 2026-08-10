@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## elementName
 
 ```TypeScript
@@ -18,7 +24,7 @@ elementName: ElementName
 
 会话所属应用的信息（包含bundleName、abilityName等）。
 
-**类型：** ElementName
+**类型：** [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md)
 
 **起始版本：** 23
 
@@ -36,7 +42,7 @@ isActive: boolean
 
 会话是否被激活。
 
-true：已被激活。
+true：已被激活。 
 
 false：没有被激活。
 
@@ -56,7 +62,7 @@ false：没有被激活。
 isTopSession: boolean
 ```
 
-会话是否为最新的会话。
+会话是否为最新的会话。 
 
 true：是最新的会话。
 
@@ -82,7 +88,7 @@ outputDevice: OutputDeviceInfo
 
 **系统接口：** 该接口为系统接口。
 
-**类型：** OutputDeviceInfo
+**类型：** [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)
 
 **起始版本：** 9
 
@@ -136,7 +142,7 @@ type: AVSessionType
 
 会话类型。
 
-**类型：** AVSessionType
+**类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
 **起始版本：** 23
 
@@ -154,7 +160,7 @@ userId?: int
 
 当前会话所属的userId
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

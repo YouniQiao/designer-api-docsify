@@ -1,6 +1,6 @@
 # SubscriptionType
 
-Enumerates the data subscription types.
+数据订阅类型枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the data subscription types.
 SUBSCRIPTION_TYPE_EXACT_URI = 0
 ```
 
-Data change of the specified URI.
+表示订阅指定uri路径的数据变更。
 
 **Since:** 12
 

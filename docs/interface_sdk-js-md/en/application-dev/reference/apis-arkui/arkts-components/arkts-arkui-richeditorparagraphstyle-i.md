@@ -1,6 +1,6 @@
 # RichEditorParagraphStyle
 
-Describes the paragraph style.
+段落样式。
 
 **Since:** 11
 
@@ -16,10 +16,10 @@ Describes the paragraph style.
 leadingMargin?: Dimension | LeadingMarginPlaceholder
 ```
 
-Indent of the paragraph. It has no effect if the paragraph starts with an image or builder span. If of the  
-**Dimension** type, this parameter cannot be set in percentage. Default value: **{"size":["0.00px","0.00px"]}
+设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置，默认单位为vp。默认值：{"size":  
+["0.00px","0.00px"]}
 
-**Type:** Dimension \| LeadingMarginPlaceholder
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| LeadingMarginPlaceholder
 
 **Since:** 11
 
@@ -39,13 +39,13 @@ Indent of the paragraph. It has no effect if the paragraph starts with an image 
 lineBreakStrategy?: LineBreakStrategy
 ```
 
-Line break rule.
+设置折行规则。 
 
-Default value: **LineBreakStrategy.GREEDY**
+默认值：LineBreakStrategy.GREEDY
 
-This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphens are not supported.
+在wordBreak不等于breakAll的时候生效，不支持连字符。
 
-**Type:** LineBreakStrategy
+**Type:** [LineBreakStrategy](../arkts-apis/arkts-arkui-enums-linebreakstrategy-e.md)
 
 **Since:** 12
 
@@ -65,11 +65,13 @@ This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphe
 paragraphSpacing?: number
 ```
 
-Spacing between paragraphs.
+设置段落间距大小。
 
-Unit: fp
+单位：fp
 
-Default value: **0
+取值范围：[0, +∞)。传入负值时，按默认值处理。
+
+段落间距默认大小为0。
 
 **Type:** number
 
@@ -91,9 +93,14 @@ Default value: **0
 shaderStyle?: ShaderStyle
 ```
 
-Set shader style.
+设置文本着色器效果。
 
-**Type:** ShaderStyle
+默认值：undefined，不设置着色器效果。
+
+该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
+[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的fontColor。
+
+**Type:** [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md)
 
 **Since:** 26.0.0
 
@@ -113,11 +120,9 @@ Set shader style.
 textAlign?: TextAlign
 ```
 
-Horizontal alignment mode of the text.
+设置文本段落在水平方向的对齐方式。默认值：TextAlign.START
 
-Default value: **TextAlign.START
-
-**Type:** TextAlign
+**Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
 
 **Since:** 11
 
@@ -137,11 +142,11 @@ Default value: **TextAlign.START
 textDirection?: TextDirection
 ```
 
-Sets the text direction.
+设置文本方向。
 
-Default value: TextDirection.DEFAULT
+默认值：TextDirection.DEFAULT
 
-**Type:** TextDirection
+**Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
 
 **Since:** 23
 
@@ -161,11 +166,11 @@ Default value: TextDirection.DEFAULT
 textVerticalAlign?: TextVerticalAlign
 ```
 
-Vertical alignment of text paragraphs.
+设置文本段落在垂直方向的对齐方式。
 
-Default value: **TextVerticalAlign.BASELINE**.
+默认值：TextVerticalAlign.BASELINE
 
-**Type:** TextVerticalAlign
+**Type:** [TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)
 
 **Since:** 20
 
@@ -185,11 +190,11 @@ Default value: **TextVerticalAlign.BASELINE**.
 wordBreak?: WordBreak
 ```
 
-Word break rule.
+设置断行规则。
 
-Default value: **WordBreak.BREAK\_WORD
+默认值：WordBreak.BREAK_WORD。
 
-**Type:** WordBreak
+**Type:** [WordBreak](../arkts-apis/arkts-arkui-enums-wordbreak-e.md)
 
 **Since:** 12
 

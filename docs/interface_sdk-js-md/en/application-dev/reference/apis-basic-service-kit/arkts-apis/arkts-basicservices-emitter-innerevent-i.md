@@ -1,6 +1,6 @@
 # InnerEvent
 
-Describes an event to subscribe to or emit. The **EventPriority** settings do not take effect under event subscription.
+订阅或发送的事件，订阅事件时`EventPriority`不生效。
 
 **Since:** 7
 
@@ -10,15 +10,21 @@ Describes an event to subscribe to or emit. The **EventPriority** settings do no
 
 **System capability:** SystemCapability.Notification.Emitter
 
+## Modules to Import
+
+```TypeScript
+import { emitter } from 'kits/@kit.BasicServicesKit';
+```
+
 ## eventId
 
 ```TypeScript
 eventId: long
 ```
 
-Event ID.
+事件ID，由开发者定义，用于辨别事件。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 7
 
@@ -36,9 +42,9 @@ Event ID.
 priority?: EventPriority
 ```
 
-Event priority. The default value is **EventPriority.LOW**.
+事件的优先级，默认值为EventPriority.LOW。
 
-**Type:** EventPriority
+**Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
 **Since:** 7
 

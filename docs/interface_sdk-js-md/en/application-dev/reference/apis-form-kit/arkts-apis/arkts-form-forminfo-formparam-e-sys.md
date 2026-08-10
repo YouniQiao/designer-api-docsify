@@ -145,7 +145,7 @@ Template widget description.
 FORM_FONT_SIZE_SCALE_KEY = 'ohos.extra.param.key.form_font_size_scale'
 ```
 
-Indicates the key specifying font size scale of the form.which is represented as want: {"parameters": {FORM\_FONT\_SIZE\_SCALE\_KEY: 1.0}}.
+Indicates the key specifying font size scale of the form.which is represented as want: { "parameters": { FORM_FONT_SIZE_SCALE_KEY: 1.0 }}.
 
 **Since:** 26.0.0
 
@@ -165,7 +165,7 @@ Indicates the key specifying font size scale of the form.which is represented as
 FORM_FONT_WEIGHT_SCALE_KEY = 'ohos.extra.param.key.form_font_weight_scale'
 ```
 
-Indicates the key specifying font weight scale of the form.which is represented as want: {"parameters": {FORM\_FONT\_WEIGHT\_SCALE\_KEY: 1.0}}
+Indicates the key specifying font weight scale of the form.which is represented as want: { "parameters": { FORM_FONT_WEIGHT_SCALE_KEY: 1.0 }}
 
 **Since:** 26.0.0
 

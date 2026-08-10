@@ -1,6 +1,6 @@
 # OverlayManagerOptions
 
-the property of OverlayManager.
+初始化[OverlayManager](arkts-arkui-uicontext.md)时所用参数。
 
 **Since:** 23
 
@@ -10,16 +10,20 @@ the property of OverlayManager.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## onBackPress
 
 ```TypeScript
 onBackPress?: OnOverlayBackPressCallback
 ```
 
-Callback for intercepting back-press events on an overlay.
-
-**NOTE**  
-1. When this callback is registered and **enableBackPressedEvent** is set to **true**,the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components.2. Return **true** to intercept the event (the event is consumed and will not be passed to lower layers), or **false** to allow the event to propagate through to the components below the overlay.
+Callback for intercepting back-press events on an overlay.  
+**NOTE：**1. When this callback is registered and **enableBackPressedEvent** is set to **true**, the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback  to decide whether the event should be propagated to the underlying components.2. Return **true** to intercept the event (the event is consumed and will not be passed  to lower layers), or **false** to allow the event to propagate through to the components  below the overlay.
 
 **Since:** 26.0.0
 
@@ -37,7 +41,7 @@ Callback for intercepting back-press events on an overlay.
 enableBackPressedEvent?: boolean
 ```
 
-Set whether support backPressed event or not.
+是否支持通过侧滑手势关闭OverlayManager下的ComponentContent，true表示可以通过侧滑关闭，false表示不可以通过侧滑关闭，默认值为false。
 
 **Type:** boolean
 
@@ -59,7 +63,7 @@ Set whether support backPressed event or not.
 renderRootOverlay?: boolean
 ```
 
-the render property of overlay node.
+是否渲染overlay根节点，true表示渲染overlay根节点，false表示不渲染overlay根节点，默认值为true。
 
 **Type:** boolean
 

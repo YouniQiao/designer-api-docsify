@@ -1,12 +1,18 @@
 # cancelSerialRight
 
+## Modules to Import
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## cancelSerialRight
 
 ```TypeScript
 function cancelSerialRight(portId: int): void
 ```
 
-Cancels the permission to access the serial port device when the application is running. This API is used to close the enabled serial port device.
+移除应用程序运行时访问串口设备的权限。此接口会调用close关闭已打开的串口。
 
 **Since:** 19
 
@@ -20,19 +26,19 @@ Cancels the permission to access the serial port device when the application is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| portId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-database-operation-exception) | Database operation exception. |
-| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
-| [31400002](../../apis-basic-services-kit/errorcode-usb.md#31400002-no-serial-port-device-access-permission) | Access denied. Call requestSerialRight to request user authorization first. |
-| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 31400003 | PortId does not exist. |
+| 31400002 | Access denied. Call requestSerialRight to request user authorization first. |
+| 14400005 | Database operation exception. |
+| 31400001 | Serial port management exception. |
 
-**Example**
+## Examples
 
 The following sample code shows the basic process for calling the cancelSerialRight API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
@@ -44,8 +50,8 @@ import { serialManager } from '@kit.BasicServicesKit';
 function cancelSerialRight() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (portList === undefined || portList.length === 0) {
-    console.info('usbSerial portList is empty');
+  if (!portList || portList.length === 0) {
+    console.error('usbSerial portList is empty');
     return;
   }
   let portId: number = portList[0].portId;
@@ -54,8 +60,8 @@ function cancelSerialRight() {
   if (!serialManager.hasSerialRight(portId)) {
     serialManager.requestSerialRight(portId).then(result => {
       if (!result) {
-        // If the application does not have the access permission and is not granted by the user, the application exits.
-        console.info('user is not granted the operation  permission');
+        // If the application does not have the access permission and the user does not grant the permission, the application exits.
+        console.error('user is not granted the operation permission');
         return;
       } else {
         console.info('grant permission successfully');

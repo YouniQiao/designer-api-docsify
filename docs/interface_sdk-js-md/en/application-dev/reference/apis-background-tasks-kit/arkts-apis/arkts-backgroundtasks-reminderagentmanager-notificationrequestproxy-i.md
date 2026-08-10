@@ -1,6 +1,6 @@
 # NotificationRequestProxy
 
-Notification request proxy.
+通知请求信息。
 
 **Since:** 26.0.0
 
@@ -10,14 +10,20 @@ Notification request proxy.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## appMessageId
 
 ```TypeScript
 appMessageId?: string
 ```
 
-Unique ID carried in a notification sent by an application, which is used for notification deduplication.This parameter is left empty by default. For details, see  
-[NotificationRequest.appMessageId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+应用发送通知携带的唯一标识字段，用于通知去重，默认为空。具体请参考  
+[NotificationRequest.appMessageId](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md)。
 
 **Type:** string
 
@@ -37,13 +43,11 @@ Unique ID carried in a notification sent by an application, which is used for no
 isAlertOnce?: boolean
 ```
 
-Whether to send a notification alert only once when a notification is published or updated. The default value is  
-**false**. For details, see  
-[NotificationRequest.isAlertOnce]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+发布或更新该通知时，是否只进行一次通知提醒，默认为false。具体请参考  
+[NotificationRequest.isAlertOnce](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md)。
 
-- **true**: An alert is sent only when the notification is published for the first time. For subsequent update,  
-the alert mode is changed to [LEVEL\_LOW]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-- **false**: The alert is sent in the configured alert mode.
+- true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slotlevel-e.md/arkts-notification-notificationmanager-slotlevel-e.md).  
+- false：每次均按照配置的通知提醒方式进行提醒。
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # Size
 
-Describes the size of an image.
+表示图片尺寸。
 
 **Since:** 6
 
@@ -9,6 +9,12 @@ Describes the size of an image.
 <!--Device-image-interface Size--><!--Device-image-interface Size-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
+
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
 
 ## height
 
@@ -20,7 +26,7 @@ Height
 
 Unit:px.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 6
 
@@ -44,7 +50,7 @@ Width
 
 Unit:px.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 6
 

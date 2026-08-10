@@ -1,12 +1,18 @@
 # within
 
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## within
 
 ```TypeScript
 export function within(on: On): On
 ```
 
-Requires that the target Component which is inside of another Component that specified by the given \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_object,used to locate Component relatively.
+Requires that the target Component which is inside of another Component that specified by the given {@link On}object,used to locate Component relatively.
 
 **起始版本：** 23
 
@@ -20,11 +26,11 @@ Requires that the target Component which is inside of another Component that spe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | describes the attribute requirements of Component which the target one is inside of. |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | describes the attribute requirements of Component which the target one is inside of. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | this { |
+| [On](arkts-test-uitest-on-c.md) | this { |
 

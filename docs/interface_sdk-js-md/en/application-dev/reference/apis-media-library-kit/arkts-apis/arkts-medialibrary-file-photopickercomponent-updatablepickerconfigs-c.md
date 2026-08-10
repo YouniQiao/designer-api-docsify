@@ -1,7 +1,7 @@
 # UpdatablePickerConfigs
 
 Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of  
-[PickerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md).
 
 **Since:** 22
 
@@ -10,6 +10,12 @@ Describes the updatable attributes of the **PhotoPickerComponent**. These attrib
 <!--Device-unnamed-export declare class UpdatablePickerConfigs--><!--Device-unnamed-export declare class UpdatablePickerConfigs-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## Modules to Import
+
+```TypeScript
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+```
 
 ## appAlbumFilters
 
@@ -83,8 +89,7 @@ The value is an 8-digit hexadecimal color code.
 backgroundOpacity?: number
 ```
 
-Background opacity of the picker. The value range is [0, 1]. **0** indicates completely transparent, and **1**  
-indicates completely opaque.
+Background opacity of the picker. The value range is [0, 1]. **0** indicates completely transparent, and **1**indicates completely opaque.
 
 **Type:** number
 
@@ -152,9 +157,9 @@ edgeEffect?: EdgeEffect
 
 Scrolling effect when the Picker grid page reaches the edge.
 
-The default value is [EdgeEffect.Spring]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+The default value is [EdgeEffect.Spring](../../apis-arkui/arkts-apis/arkts-arkui-enums-edgeeffect-e.md/arkts-arkui-enums-edgeeffect-e.md).
 
-**Type:** EdgeEffect
+**Type:** [EdgeEffect](../../apis-arkui/arkts-apis/arkts-arkui-edgeeffect-e.md)
 
 **Since:** 23
 
@@ -176,7 +181,7 @@ gridMargin?: Margin
 
 Margin of the component grid.
 
-**Type:** Margin
+**Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 26.0.0
 
@@ -310,7 +315,7 @@ mimeType?: photoAccessHelper.PhotoViewMIMETypes
 
 MIME types.
 
-If this parameter is not specified, **IMAGE\_VIDEO\_TYPE** is used by default.
+If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by default.
 
 **Type:** photoAccessHelper.PhotoViewMIMETypes
 
@@ -358,7 +363,7 @@ Background color of the photo browser page.
 
 The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
 
-**Type:** PickerColorMode
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
 
@@ -378,7 +383,7 @@ photoBrowserMargin?: Margin
 
 Margin of the component large image.
 
-**Type:** Margin
+**Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 26.0.0
 
@@ -420,9 +425,9 @@ selectMode?: SelectMode
 
 Picker selection mode.
 
-**SINGLE\_SELECT** or **MULTI\_SELECT**. The default value is **MULTI\_SELECT**.
+**SINGLE_SELECT** or **MULTI_SELECT**. The default value is **MULTI_SELECT**.
 
-**Type:** SelectMode
+**Type:** [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 22
 
@@ -440,7 +445,7 @@ Picker selection mode.
 singleSelectionMode?: photoAccessHelper.SingleSelectionMode
 ```
 
-Single selection mode. The default value is **SingleSelectionMode.BROWSER\_MODE**.
+Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**.
 
 **Type:** photoAccessHelper.SingleSelectionMode
 
@@ -466,7 +471,7 @@ Dark/Light color mode (excluding the background color) of other components on th
 
 When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark background color, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light background color for the same reason.
 
-**Type:** PickerColorMode
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
 

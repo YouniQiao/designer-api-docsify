@@ -1,19 +1,22 @@
 # startNativeChildProcess
 
+## Modules to Import
+
+```TypeScript
+import { childProcessManager } from 'kits/@kit.AbilityKit';
+```
+
 ## startNativeChildProcess
 
 ```TypeScript
 function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>
 ```
 
-Starts a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801is returned.
-    **NOTE**  
-    
-    The child process started by calling this API does not inherit the resources of the parent process. After the  
-    child process is created, its PID is returned, the dynamic link library file specified in the parameters is  
-    loaded, and the entry function of the child process is executed. Once the entry function is done, the child  
-    process is automatically destroyed. After the process that calls this API is destroyed, the created child process  
-    is also destroyed.
+启动[Native子进程](../../../application-models/ability-terminology.md#native子进程)。使用Promise异步回调。该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回801错误码。
+
+> **说明：**
+> 
+> 调用该接口创建的子进程不会继承父进程资源，子进程创建成功会返回子进程pid，然后加载参数中指定的动态链接库文件并执行子进程的入口函数，入口函数执行完后子进程会自动销毁。调用该接口的进程销毁后，所创建的子进程也会一并销毁。
 
 **Since:** 13
 
@@ -29,27 +32,27 @@ Starts a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entryPoint | string | Yes | The symbol and entry function of the dynamic link library called in the child process are separated by a colon (:), for example, **libentry.so:Main**. |
-| args | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters transferred to the child process. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Startup configuration of the child process. |
+| entryPoint | string | Yes | 子进程中调用动态库的符号和入口函数，中间用“:”隔开（例如“libentry.so:Main”)。 |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | Yes | 传递到子进程的参数。 |
+| options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | No | 子进程的启动配置选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the PID of the child process. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回子进程pid。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
-| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 16000050 | Internal error. |
+| 16000061 | Operation not supported. |
+| 16000062 | The number of child processes exceeds the upper limit. |
 
-**Example**
+## Examples
 
 Sample code for the child process is provided below. For details, see [Native Child Process Development (C/C++) - Creating a Native Child Process That Supports Pass-by-Parameter](../../application-models/capi_nativechildprocess_development_guideline.md#creating-a-native-child-process-that-supports-pass-by-parameter).
 

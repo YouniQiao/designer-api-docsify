@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## delayUpdateTime
 
 ```TypeScript
@@ -37,8 +43,8 @@ disableSystemOtaUpdate?: boolean
 ```
 
 表示是否禁用在公网环境下升级。true表示禁用公网升级，false表示不禁用公网升级。如果作为  
-[systemManager.setOtaUpdatePolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的入参，该字段可缺省，缺省时保持当前配置不变。当前配置可通过  
-[systemManager.getOtaUpdatePolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口获取。禁用公网升级后，可以采用内网升级。
+[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy)的入参，该字段可缺省，缺省时保持当前配置不变。当前配置可通过  
+[systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getotaupdatepolicy)接口获取。禁用公网升级后，可以采用内网升级。
 
 **类型：** boolean
 
@@ -120,7 +126,7 @@ policyType: PolicyType
 
 表示升级策略类型。
 
-**类型：** PolicyType
+**类型：** [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md)
 
 **起始版本：** 12
 

@@ -1,26 +1,24 @@
 # @ohos.resourceManager
 
-This module provides the capabilities to access application resources and system resources. It allows applications to obtain the best-matching application or system resources based on the current  
-[configuration]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, supporting internationalization resource matching and multi-device adaptation. For details about the matching rules, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+本模块提供应用资源和系统资源的访问能力，允许应用根据当前的[Configuration](arkts-localization-resourcemanager-configuration-c.md)配置，获取最匹配的应用资源或系统资源，支持国际化资源匹配和多设备适配。具体匹配规则参考[资源匹配](../../../quick-start/resource-categories-and-access.md#资源匹配)。
 
-The configuration includes language, script, country/region, orientation, color mode, Mobile Country Code (MCC),Mobile Network Code (MNC), device type, and screen density.
+Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式、Mcc（移动国家码）和Mnc（移动网络码）、设备类型、屏幕密度。
 
-**Use scenarios**  
-- Application internationalization: Automatically obtains matching string resources based on the user's language and  
-region.  
-- Multi-device adaptation: Obtains appropriate media resources based on device type and screen density.  
-- Dynamic resource configuration: Obtains resources corresponding to the current device state, such as orientation  
-and color mode.
+**使用场景**：
 
-**How to Use**  
-- In the FA model, you need to import the module and then call  
-[getResourceManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ to obtain a **ResourceManager** object.  
-- Since API version 9, in the stage model, the stage model allows you to obtain the **resourceManager** object  
-through context without importing any module. For details about the context, see  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.
+- 应用国际化：根据用户语言和地区自动获取匹配的字符串资源。  
+- 多设备适配：根据设备类型、屏幕密度获取合适的媒体资源。  
+- 动态资源配置：根据设备状态（横竖屏、颜色模式等）获取对应配置的资源。
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+**使用说明**：
+
+- FA模型需要先导入模块，再调用[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager)接口获取资源管理对象。  
+- 从API version 9开始，Stage模型无需导入模块，支持通过Context获取资源管理resourceManager对象。Context的更多介绍请参考  
+[应用上下文Context](../../../application-models/application-context-stage.md)。
+
+ ```ts  import { UIAbility } from '@kit.AbilityKit'; import { window } from '@kit.ArkUI';
+
+ export default class EntryAbility extends UIAbility { onWindowStageCreate(windowStage: window.WindowStage) { let context = this.context; let resourceManager = context.resourceManager; } } ```
 
 **Since:** 6
 
@@ -30,46 +28,52 @@ through context without importing any module. For details about the context, see
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+## Modules to Import
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) | Obtains the **ResourceManager** object of the current application. This API uses an asynchronous callback to return the result. |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-1) | Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result. |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-2) | Obtains the **ResourceManager** object of the current application. This API uses a promise to return the result. |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-3) | Obtains the **ResourceManager** object of the specified application. This API uses a promise to return the result. |
-| [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager) | Obtains a system resource management object for accessing preset system resources. |
-| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getsystemresourcemanager) | Obtains a system resource management object for accessing preset system resources. |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) | 获取当前应用的资源管理对象。使用callback异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-1) | 获取指定应用的资源管理对象。使用callback异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-2) | 获取当前应用的资源管理对象。使用Promise异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-3) | 获取指定应用的资源管理对象。使用Promise异步回调。 |
+| [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
+| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getsystemresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [Configuration](arkts-localization-resourcemanager-configuration-c.md) | Defines the device configuration. |
-| [DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md) | Defines the device capability. |
+| [Configuration](arkts-localization-resourcemanager-configuration-c.md) | 表示当前设备的状态。 |
+| [DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md) | 表示设备支持的能力。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md) | Asynchronous callback interface. |
-| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. |
+| [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md) | 异步回调接口 |
+| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | 提供访问应用资源和系统资源的能力，可访问的资源范围为当前Context对应的HAP/HSP模块中的资源以及所有的系统资源。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ColorMode](arkts-localization-resourcemanager-colormode-e.md) | Defines the color mode of the current device. |
-| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | Enumerates the device types.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| [Direction](arkts-localization-resourcemanager-direction-e.md) | Enumerates the screen directions. |
-| [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md) | Enumerates the screen density types. |
+| [ColorMode](arkts-localization-resourcemanager-colormode-e.md) | 用于表示当前设备颜色模式。 |
+| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | 用于表示当前设备类型。  &lt;!--RP1--&gt;  &lt;!--RP1End--&gt; |
+| [Direction](arkts-localization-resourcemanager-direction-e.md) | 用于表示设备屏幕方向。 |
+| [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md) | 用于表示当前设备屏幕密度。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | Describes the file descriptor information of the HAP where the rawfile is located. |
-| [Resource](arkts-localization-resourcemanager-resource-t.md) | Describes the resource information, including the application package name, application module name, resource ID,resource type, and formatting parameters. |
+| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | 表示rawfile文件所在HAP的文件描述符信息。 |
+| [Resource](arkts-localization-resourcemanager-resource-t.md) | 表示资源相关信息，包括应用包名、应用模块名、资源ID、资源类型和格式化参数等。 |
 

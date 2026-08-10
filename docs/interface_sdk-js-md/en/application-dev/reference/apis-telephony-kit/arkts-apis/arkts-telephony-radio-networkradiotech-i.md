@@ -10,6 +10,12 @@ Describes the radio access technology (RAT) of registered network.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## csRadioTech
 
 ```TypeScript
@@ -18,7 +24,7 @@ csRadioTech: RadioTechnology
 
 Indicates radio access technology (RAT) of circuit service (CS) domain.
 
-**Type:** RadioTechnology
+**Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
 **Since:** 11
 
@@ -36,7 +42,7 @@ psRadioTech: RadioTechnology
 
 Indicates radio access technology (RAT) of packet service (PS) domain.
 
-**Type:** RadioTechnology
+**Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # FilterOptions
 
-Defines contact filter options.
+联系人过滤参数。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Defines contact filter options.
 
 **System capability:** SystemCapability.Applications.Contacts
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## filterCondition
 
 ```TypeScript
 filterCondition: FilterCondition
 ```
 
-Filter criteria.
+过滤条件。
 
-**Type:** FilterCondition
+**Type:** [FilterCondition](arkts-contacts-contact-filtercondition-e.md)
 
 **Since:** 15
 
@@ -36,7 +42,7 @@ Filter criteria.
 value?: string | ValueType[]
 ```
 
-Filter value. The default value is **undefined**.
+过滤值，默认为undefined。
 
 **Type:** string \| ValueType[]
 

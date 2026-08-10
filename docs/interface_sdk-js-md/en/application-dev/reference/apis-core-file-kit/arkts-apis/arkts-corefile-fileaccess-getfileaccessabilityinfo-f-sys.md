@@ -1,12 +1,18 @@
 # getFileAccessAbilityInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { fileAccess } from 'kits/@kit.CoreFileKit';
+```
+
 ## getFileAccessAbilityInfo
 
 ```TypeScript
 function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void
 ```
 
-Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses an asynchronous callback to return the result.
+以异步方法获取系统内extension配置为fileAccess类型的所有Want信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -28,44 +34,44 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt;&gt; | Yes | The callback is used to return a Array\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt;&gt; | Yes | The callback is used to return a Array&lt;Want&gt; object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -93,7 +99,7 @@ async function getFileAccessAbilityInfo() {
 function getFileAccessAbilityInfo(): Promise<Array<Want>>
 ```
 
-Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses a promise to return the result.
+以异步方法获取系统内extension配置为fileAccess类型的所有Want信息。使用Promise异步回调。
 
 **Since:** 9
 
@@ -115,44 +121,44 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt;&gt; | Returns the wants. |
+| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt;&gt; | Returns the wants. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
+| 13900038 | Value too large for defined data type |
+| 13900033 | Too many symbolic links encountered |
+| 13900034 | Operation would block |
+| 13900041 | Quota exceeded |
+| 13900042 | Unknown error |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900023 | Text file busy |
+| 13900017 | No such device |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900029 | Resource deadlock would occur |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
+| 13900004 | Interrupted system call |
+| 13900006 | No such device or address |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
 | 14300002 | Invalid uri |
+| 13900013 | Bad address |
 | 14300003 | Fail to get fileextension info |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 14300001 | IPC error |
+| 13900008 | Bad file descriptor |
 | 14300004 | Get wrong result |
+| 13900011 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

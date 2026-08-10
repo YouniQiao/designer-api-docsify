@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+import { AbilityConstant } from 'kits/@kit.AbilityKit';
+```
+
 ## lastExitDetailInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ lastExitDetailInfo?: LastExitDetailInfo
 
 表示Ability上次退出时的关键运行信息（含进程ID、退出时间戳、RSS内存值等）。
 
-**类型：** LastExitDetailInfo
+**类型：** [LastExitDetailInfo](arkts-ability-abilityconstant-lastexitdetailinfo-i.md)
 
 **起始版本：** 18
 
@@ -62,7 +68,7 @@ lastExitReason: LastExitReason
 
 枚举类型，表示Ability上次退出原因。
 
-**类型：** LastExitReason
+**类型：** [LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md)
 
 **起始版本：** 9
 
@@ -82,9 +88,9 @@ lastExitReason: LastExitReason
 launchReason: LaunchReason
 ```
 
-枚举类型，表示Ability启动原因（如故障恢复拉起、意图调用拉起、原子化服务分享拉起等），详见[LaunchReason]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+枚举类型，表示Ability启动原因（如故障恢复拉起、意图调用拉起、原子化服务分享拉起等），详见[LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)。
 
-**类型：** LaunchReason
+**类型：** [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)
 
 **起始版本：** 9
 
@@ -132,7 +138,7 @@ launchUTCTime?: long
 
 该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 23
 
@@ -158,7 +164,7 @@ launchUptime?: long
 
 该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 23
 

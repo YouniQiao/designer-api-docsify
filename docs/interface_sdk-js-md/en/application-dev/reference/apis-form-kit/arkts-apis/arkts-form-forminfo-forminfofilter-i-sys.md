@@ -10,6 +10,12 @@ The optional options used as filters to ask getFormsInfo to return formInfos fro
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## bundleName
 
 ```TypeScript
@@ -36,9 +42,9 @@ optional bundleName that used to ask getFormsInfo to return form infos with the 
 supportedDimensions?: Array<int>
 ```
 
-optional supportedDimensions that used to ask getFormsInfo to return form infos with the same supportedDimensions.The minimum length is 1, refer to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+optional supportedDimensions that used to ask getFormsInfo to return form infos with the same supportedDimensions.The minimum length is 1, refer to {@link formInfo.FormDimension}.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ optional supportedDimensions that used to ask getFormsInfo to return form infos 
 supportedShapes?: Array<int>
 ```
 
-optional supportedShapes that used to ask getFormsInfo to return form infos with the same supportedShapes.The minimum length is 1, Refer to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+optional supportedShapes that used to ask getFormsInfo to return form infos with the same supportedShapes.The minimum length is 1, Refer to {@link formInfo.FormShape}.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 12
 

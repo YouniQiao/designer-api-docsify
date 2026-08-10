@@ -18,7 +18,7 @@ align: VerticalAlign
 
 The align of localized align param.
 
-**类型：** VerticalAlign
+**类型：** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
 **起始版本：** 12
 

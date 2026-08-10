@@ -1,6 +1,6 @@
 # ArcButtonPosition
 
-Describes the Position of arc button.
+定义ArcButton可设置的弧形按钮的类型。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Describes the Position of arc button.
 TOP_EDGE = 0
 ```
 
-The top edge button is located above the circular screen.
+上弧形按钮，位于圆形屏幕上方。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ The top edge button is located above the circular screen.
 BOTTOM_EDGE = 1
 ```
 
-The bottom edge button is located below the circular screen.
+底部弧形按钮，位于圆形屏幕底部。
 
 **Since:** 23
 

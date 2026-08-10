@@ -1,6 +1,6 @@
 # TagInfo
 
-Provides tag information.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
+Provides tag information.&lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
 
 **Since:** 12
 
@@ -10,6 +10,12 @@ Provides tag information.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This class provides 
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
+## Modules to Import
+
+```TypeScript
+import { tag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## extrasData
 
 ```TypeScript
@@ -18,7 +24,7 @@ extrasData: PacMap[]
 
 The extra data for each technology of this tag.
 
-**Type:** PacMap[]
+**Type:** [PacMap](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-pacmap-i.md)[]
 
 **Since:** 9
 
@@ -62,7 +68,7 @@ tagRfDiscId: int
 
 The the RF discovery id of this tag.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

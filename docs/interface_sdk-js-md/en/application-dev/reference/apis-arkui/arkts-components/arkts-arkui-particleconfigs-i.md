@@ -1,6 +1,6 @@
 # ParticleConfigs
 
-Defines the particle configs.
+设置粒子配置项。
 
 **Since:** 10
 
@@ -16,9 +16,9 @@ Defines the particle configs.
 [ParticleType.IMAGE]: ImageParticleParameters
 ```
 
-Image particle configuration.
+图片粒子配置。
 
-**Type:** ImageParticleParameters
+**Type:** [ImageParticleParameters](../arkts-apis/arkts-arkui-particle-imageparticleparameters-i.md)
 
 **Since:** 10
 
@@ -38,9 +38,9 @@ Image particle configuration.
 [ParticleType.POINT]: PointParticleParameters
 ```
 
-Point particle configuration.
+点状粒子配置。
 
-**Type:** PointParticleParameters
+**Type:** [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md)
 
 **Since:** 10
 

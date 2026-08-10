@@ -1,12 +1,18 @@
 # authUkeyPin (System API)
 
+## Modules to Import
+
+```TypeScript
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## authUkeyPin
 
 ```TypeScript
 function authUkeyPin(resourceId: string, params: Array<HuksExternalCryptoParam>): Promise<void>
 ```
 
-Authenticates a UKey PIN. This API uses a promise to return the result.
+PIN码认证。使用Promise异步回调。
 
 **Since:** 22
 
@@ -22,33 +28,33 @@ Authenticates a UKey PIN. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | Resource ID of a container in the UKey, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . The result contains **resourceId**. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | Parameters to be passed during the operation. The mandatory tag is [HUKS\_\_\_ESCAPED\_UNDERSCORE\_\_\_EXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_CRYPTO\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_UKEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_PIN]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| resourceId | string | Yes | Ukey中某容器的资源ID，可通过 [导出证书的接口](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) 获取，其结果中附带resourceId。 |
+| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | 操作时需传入的参数，必选TAG： [HUKS_EXT_CRYPTO_TAG_UKEY_PIN](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md) 。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application and is not allowed to use system applications. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | the UKey driver operation failed. |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal. This error may occur if the process function is not found, or due to other issues. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
-| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed. |
-| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | the UKey PIN is locked. |
-| [12000022](../errorcode-huks.md#12000022-incorrect-ukey-pin) | the UKey PIN is incorrect. |
-| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy. |
+| 801 | api is not supported. |
+| 12000006 | the UKey driver operation failed. |
+| 12000022 | the UKey PIN is incorrect. |
+| 12000005 | IPC communication failed. |
+| 12000021 | the UKey PIN is locked. |
+| 12000020 | the provider operation failed. |
+| 12000018 | the input parameter is invalid. |
+| 12000014 | memory is insufficient. |
+| 202 | The caller is not a system application and is not allowed to use system applications. |
+| 12000012 | Device environment or input parameter abnormal. This error may occur if the process function is not found, or due to other issues. |
+| 12000011 | queried entity does not exist. |
+| 12000024 | the provider or UKey is busy. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';

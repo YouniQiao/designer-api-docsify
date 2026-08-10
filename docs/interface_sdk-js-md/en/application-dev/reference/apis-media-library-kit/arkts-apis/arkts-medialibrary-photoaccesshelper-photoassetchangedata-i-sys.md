@@ -10,6 +10,12 @@ Describes the change data of a media asset.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## thumbnailChangeStatus
 
 ```TypeScript
@@ -18,7 +24,7 @@ thumbnailChangeStatus: ThumbnailChangeStatus
 
 Change status of the thumbnail (image/video).
 
-**Type:** ThumbnailChangeStatus
+**Type:** [ThumbnailChangeStatus](arkts-medialibrary-photoaccesshelper-thumbnailchangestatus-e-sys.md)
 
 **Since:** 20
 
@@ -38,7 +44,7 @@ version: long
 
 Version number of the media asset notification, which is used to determine the order of notifications.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 

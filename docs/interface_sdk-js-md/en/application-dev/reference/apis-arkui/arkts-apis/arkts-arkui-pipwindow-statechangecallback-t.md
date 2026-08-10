@@ -4,7 +4,7 @@
 type StateChangeCallback = (state: PiPState, reason: string) => void
 ```
 
-Describe picture-in-picture stage change event callback.
+描述画中画生命周期状态变化事件回调。
 
 **Since:** 26.0.0
 
@@ -18,6 +18,6 @@ Describe picture-in-picture stage change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | pip window state  |
-| reason | string | Yes | the reason of state change  |
+| state | [PiPState](arkts-arkui-pipwindow-pipstate-e.md) | Yes | 画中画窗口状态。 |
+| reason | string | Yes | 当前生命周期的切换原因。 |
 

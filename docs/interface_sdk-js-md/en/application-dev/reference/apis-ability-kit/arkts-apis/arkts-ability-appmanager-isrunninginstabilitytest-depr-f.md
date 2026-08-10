@@ -6,11 +6,11 @@
 function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the system is undergoing a stability test. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    A stability test scenario refers to a specific testing environment designed to verify application reliability  
-    under complex, extreme, or long-term operating conditions.
+查询当前系统是否处于稳定性测试场景。使用callback异步回调。
+
+> **说明：**
+> 
+> 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the API call result and the result indicating whether the system is undergoing a stability test. You can perform error handling or custom processing in this callback. **true** if the system is undergoing a stability test, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 以回调方式返回接口运行结果及当前系统是否处于稳定性测试场景，可进行错误处理或其他自定义处理。返回true表示系统处于稳定性测试场景，返回false表示 系统不处于稳定性测试场景。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -51,11 +51,11 @@ appManager.isRunningInStabilityTest((error, flag) => {
 function isRunningInStabilityTest(): Promise<boolean>
 ```
 
-Checks whether the system is undergoing a stability test. This API uses a promise to return the result.
-    **NOTE**  
-    
-    A stability test scenario refers to a specific testing environment designed to verify application reliability  
-    under complex, extreme, or long-term operating conditions.
+查询当前系统是否处于稳定性测试场景。使用Promise异步回调。
+
+> **说明：**
+> 
+> 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
 
 **Since:** 8
 
@@ -73,9 +73,9 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the API call result and the result indicating whether the system is undergoing a stability test. You can perform error handling or custom processing in this callback. **true** if the system is undergoing a stability test, **false** otherwise. |
+| Promise&lt;boolean&gt; | 以Promise方式返回接口运行结果及当前是否处于稳定性测试场景，可进行错误处理或其他自定义处理。返回true表示系统处于稳定性测试场景，返回false表示系统不处于稳定性测试场景 。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

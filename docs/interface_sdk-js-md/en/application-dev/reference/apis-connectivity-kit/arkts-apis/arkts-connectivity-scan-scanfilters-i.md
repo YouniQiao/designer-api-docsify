@@ -1,6 +1,6 @@
 # ScanFilters
 
-Describes the scan filters.
+扫描过滤器。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the scan filters.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address?: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Indicates the device address.The length must be 17, The value consists of hexade
 deviceName?: string
 ```
 
-Indicates the device name.
+设备名称。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Indicates the device name.
 manufacturerData?: ArrayBuffer
 ```
 
-Indicates the manufacturer data.
+制造商数据。
 
 **Type:** ArrayBuffer
 
@@ -76,7 +82,7 @@ Indicates the manufacturer data.
 manufacturerDataMask?: ArrayBuffer
 ```
 
-Indicates the manufacturer data mask.If a manufacturer data mask is set in the scan filter, its length must match the manufacturer data length.
+制造商数据掩码。
 
 **Type:** ArrayBuffer
 
@@ -96,9 +102,9 @@ Indicates the manufacturer data mask.If a manufacturer data mask is set in the s
 manufacturerId?: int
 ```
 
-Indicates the manufacturer ID.
+厂商ID。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -116,9 +122,9 @@ Indicates the manufacturer ID.
 rssi?: int
 ```
 
-Indicates the RSSI.Unit: dBm, The value must be an integer within [-128,127].
+接收信号强度指示。单位为： 分贝毫瓦，取值应为[-128,127]内的整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

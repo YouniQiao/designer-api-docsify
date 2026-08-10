@@ -1,26 +1,24 @@
 # Rating
 
-The **Rating** component provides a rating bar.
+提供在给定范围内选择评分的组件，通常用于商品评价、内容打分等应用场景。
 
-> **NOTE**
+> **说明：**
 
-> - If the parent node of the **Rating** component has fixed dimensions, you must also specify the width and height 
-> for the **Rating** component, or set its parent node's [clip]{@link CommonMethod#clip(clip: Optional<boolean>)} 
-> attribute to **true**.
+> - 当Rating的父节点有指定宽高时，需为Rating组件指定宽高，或为父节点设置值为true的[clip]{@link CommonMethod#clip(clip: Optional<boolean>)}属性。
 
-## Child Components
+## 子组件
 
-Not supported
+无
 
-## Sequential Keyboard Navigation Specifications
+## 键盘走焦规格
 
-| Key | Description |  
+| 按键 | 功能描述 |  
 |------------|-----------------------------|  
-| Tab | Switch the focus between components. |  
-| Left and right arrow keys | Increase or decrease the rating on preview at the specified step, without changing the actual rating.|  
-| Home | Move the focus to the first star, without changing the actual rating. |  
-| End | Move the focus to the last star, without changing the actual rating. |  
-| Space/Enter | Submit the rating result based on the current rating. |
+| Tab | 组件间切换焦点。 |  
+| 左右方向键 | 评分预览增加/减少（步长为stepSize），不改变实际分值。 |  
+| Home | 移动到第一个星星， 不改变实际分值。 |  
+| End | 移动到最后一个星星， 不改变实际分值。 |  
+| Space/Enter | 将当前预览的评分值设置为实际评分。 |
 
 ## Rating
 
@@ -44,7 +42,11 @@ Rating(options?: RatingOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Rating bar options.\_\_\_HTML\_TAG\_USD\_0\_\_\_ The default values of the parameters in **RatingOptions** apply if this parameter is not set. |
+| options | [RatingOptions](../arkts-apis/arkts-arkui-rating-ratingoptions-i.md) | No | 设置评分组件。<br/> 未设置时，则按照RatingOptions中各参数的默认值配置。 |
 
 ## Summary
 
+- [RatingConfiguration](arkts-arkui-rating-ratingconfiguration-i.md)
+- [RatingOptions](arkts-arkui-rating-ratingoptions-i.md)
+- [StarStyleOptions](arkts-arkui-rating-starstyleoptions-i.md)
+- [OnRatingChangeCallback](arkts-arkui-rating-onratingchangecallback-t.md)

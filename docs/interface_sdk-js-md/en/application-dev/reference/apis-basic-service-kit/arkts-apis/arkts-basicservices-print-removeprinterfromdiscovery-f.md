@@ -1,12 +1,18 @@
 # removePrinterFromDiscovery
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## removePrinterFromDiscovery
 
 ```TypeScript
 function removePrinterFromDiscovery(printerId: string): Promise<void>
 ```
 
-Removes a printer from the printer discovery list. This API uses a promise to return the result.
+从系统打印机发现列表里移除打印机，使用Promise异步回调。
 
 **Since:** 14
 
@@ -22,22 +28,22 @@ Removes a printer from the printer discovery list. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Printer to remove. |
+| printerId | string | Yes | 表示待移除的打印机。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

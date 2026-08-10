@@ -1,12 +1,18 @@
 # getSystemMemInfo
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getSystemMemInfo
 
 ```TypeScript
 function getSystemMemInfo(): SystemMemInfo
 ```
 
-Obtains system memory information. This API is implemented by reading data from the **\/proc/meminfo** node.
+��ȡϵͳ�ڴ���Ϣ����ȡ/proc/meminfo�ڵ�����ݡ�
 
 **Since:** 12
 
@@ -20,9 +26,9 @@ Obtains system memory information. This API is implemented by reading data from 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | System memory information. |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | ϵͳ�ڴ���Ϣ�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

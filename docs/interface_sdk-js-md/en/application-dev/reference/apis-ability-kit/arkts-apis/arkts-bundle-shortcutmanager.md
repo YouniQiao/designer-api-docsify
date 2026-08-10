@@ -1,6 +1,6 @@
 # @ohos.bundle.shortcutManager
 
-This module provides the application's management capabilities for shortcuts, including setting whether a shortcut is displayed. Through shortcuts, users can quickly launch specific features of an app from the home screen,improving the app's ease of use and user retention. Typical usage scenarios include: providing users with quick access to frequently used features, dynamically adjusting the display of shortcuts based on user habits, etc.
+本模块提供应用对于[快捷方式](../../../quick-start/typical-scenario-configuration.md)的管理能力，包括设置快捷方式是否显示等。
 
 **Since:** 20
 
@@ -10,29 +10,34 @@ This module provides the application's management capabilities for shortcuts, in
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
+## Modules to Import
+
+```TypeScript
+import { shortcutManager } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [addDesktopShortcutInfo](arkts-ability-shortcutmanager-adddesktopshortcutinfo-f.md#adddesktopshortcutinfo) | Adds a shortcut for the given user. This API uses a promise to return the result. |
-| [addDynamicShortcutInfos](arkts-ability-shortcutmanager-adddynamicshortcutinfos-f.md#adddynamicshortcutinfos) | Adds dynamic shortcuts for the given user. |
-| [deleteDesktopShortcutInfo](arkts-ability-shortcutmanager-deletedesktopshortcutinfo-f.md#deletedesktopshortcutinfo) | Deletes a shortcut for the given user. This API uses a promise to return the result. |
-| [deleteDynamicShortcutInfos](arkts-ability-shortcutmanager-deletedynamicshortcutinfos-f.md#deletedynamicshortcutinfos) | Deletes dynamic shortcuts. |
-| [getAllDesktopShortcutInfo](arkts-ability-shortcutmanager-getalldesktopshortcutinfo-f.md#getalldesktopshortcutinfo) | Obtains the information about all shortcuts of the given user. |
-| [getAllShortcutInfoForSelf](arkts-ability-shortcutmanager-getallshortcutinfoforself-f.md#getallshortcutinfoforself) | Obtains all the shortcut information defined in the  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ file of the current application. This API uses a promise to return the result. |
-| [getShortcutInfoByAbility](arkts-ability-shortcutmanager-getshortcutinfobyability-f.md#getshortcutinfobyability) | Obtains shortcut info by bundleName, moduleName, abilityName, userId and appIndex.If you need to obtains shortcut info under the current user, ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO\_\_\_ESCAPED\_UNDERSCORE\_\_\_PRIVILEGED needs to be applied for.If you need to obtains shortcut info under other users, ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO\_\_\_ESCAPED\_UNDERSCORE\_\_\_PRIVILEGED and ohos.permission.INTERACT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACROSS\_\_\_ESCAPED\_UNDERSCORE\_\_\_LOCAL\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACCOUNTS need to be applied for. |
-| [isShortcutSupported](arkts-ability-shortcutmanager-isshortcutsupported-f.md#isshortcutsupported) | Checks whether the current device supports shortcuts. |
-| [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md#setshortcutvisibleforself) | Sets whether to display the specified shortcut for the current application. This API uses a promise to return the result. |
-| [setShortcutsEnabled](arkts-ability-shortcutmanager-setshortcutsenabled-f.md#setshortcutsenabled) | Enables or disables the specified static shortcuts. This API uses a promise to return the result. |
-| [updateDesktopShortcutInfo](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f.md#updatedesktopshortcutinfo) | Updates a shortcut for the given user. This API uses a promise to return the result. |
+| [addDesktopShortcutInfo](arkts-ability-shortcutmanager-adddesktopshortcutinfo-f.md#adddesktopshortcutinfo) | 增加指定用户的快捷方式信息。使用Promise异步回调。 |
+| [addDynamicShortcutInfos](arkts-ability-shortcutmanager-adddynamicshortcutinfos-f.md#adddynamicshortcutinfos) | 添加指定用户的动态快捷方式。 |
+| [deleteDesktopShortcutInfo](arkts-ability-shortcutmanager-deletedesktopshortcutinfo-f.md#deletedesktopshortcutinfo) | 删除指定用户的快捷方式信息。使用Promise异步回调。 |
+| [deleteDynamicShortcutInfos](arkts-ability-shortcutmanager-deletedynamicshortcutinfos-f.md#deletedynamicshortcutinfos) | 删除指定的动态快捷方式。 |
+| [getAllDesktopShortcutInfo](arkts-ability-shortcutmanager-getalldesktopshortcutinfo-f.md#getalldesktopshortcutinfo) | 查询指定用户的所有快捷方式信息。 |
+| [getAllShortcutInfoForSelf](arkts-ability-shortcutmanager-getallshortcutinfoforself-f.md#getallshortcutinfoforself) | 查询当前应用[配置文件](../../../quick-start/module-configuration-file.md#shortcuts标签)中定义的所有快捷方式信息。使用Promise异步回调。 |
+| [getShortcutInfoByAbility](arkts-ability-shortcutmanager-getshortcutinfobyability-f.md#getshortcutinfobyability) | 查询指定用户下指定UIAbility的快捷方式信息。 |
+| [isShortcutSupported](arkts-ability-shortcutmanager-isshortcutsupported-f.md#isshortcutsupported) | 查询当前设备是否支持快捷方式。 |
+| [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md#setshortcutvisibleforself) | 设置当前应用指定的快捷方式是否显示。使用Promise异步回调。 |
+| [setShortcutsEnabled](arkts-ability-shortcutmanager-setshortcutsenabled-f.md#setshortcutsenabled) | 设置启用或禁用传入的静态快捷方式。使用Promise异步回调。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t.md) | Defines the custom data in the shortcut configuration. |
-| [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md) | Defines the shortcut information defined in the  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ file of the application. |
-| [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t.md) | Defines the target \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ defined in the shortcut configuration. |
+| [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t.md) | 快捷方式配置信息中的自定义数据。 |
+| [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md) | 应用[module.json5配置文件](../../../quick-start/module-configuration-file.md#shortcuts标签)中定义的快捷方式信息。 |
+| [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t.md) | 快捷方式内定义的目标[wants](../../../quick-start/module-configuration-file.md#wants标签)信息集合。 |
 

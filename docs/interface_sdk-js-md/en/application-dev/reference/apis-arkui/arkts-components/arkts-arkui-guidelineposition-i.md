@@ -1,6 +1,6 @@
 # GuideLinePosition
 
-Defines the position of a guideline.
+guideLine位置参数，用于定义guideLine的位置。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines the position of a guideline.
 end? : Dimension
 ```
 
-Distance between the guideline and the right or bottom of the container.Unit: vp.
+guideLine距离容器右侧或者底部的距离。单位：vp。与start二选一，若同时声明则仅start生效。若容器的width被声明为"auto"，则Axis.Vertical类型的guideLine不支持使用end方式声明；若容器的height被声明为"auto"，则Axis.Horizontal类型的guideLine不支持使用end方式声明。
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
 
@@ -38,9 +38,11 @@ Distance between the guideline and the right or bottom of the container.Unit: vp
 start? : Dimension
 ```
 
-Distance between the guideline and the left or top of the container.Unit: vp.
+guideLine距离容器左侧或者顶部的距离。单位：vp。
 
-**Type:** Dimension
+默认值：0。与end二选一，若同时声明则仅start生效。若容器的width被声明为"auto"，则Axis.Vertical类型的guideLine只能使用start方式声明（不允许使用百分比）；若容器的height被声明为"auto"，则Axis.Horizontal类型的guideLine只能使用start方式声明（不允许使用百分比）。
+
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
 

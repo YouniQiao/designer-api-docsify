@@ -1,12 +1,18 @@
 # getAllSessionDescriptors (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## getAllSessionDescriptors
 
 ```TypeScript
 function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void
 ```
 
-Get all avsession descriptors of the system
+获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,32 +30,43 @@ Get all avsession descriptors of the system
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | Yes | async callback for an array of AVSessionDescriptors. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | Yes | 回调函数。返回所有会话描述的只读对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
 
-avSession.getAllSessionDescriptors((err: BusinessError, descriptors: avSession.AVSessionDescriptor[]) => {
-  if (err) {
-    console.error(`GetAllSessionDescriptors BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`GetAllSessionDescriptors : SUCCESS : descriptors.length : ${descriptors.length}`);
-    if (descriptors.length > 0 ) {
-        console.info(`getAllSessionDescriptors : SUCCESS : descriptors[0].isActive : ${descriptors[0].isActive}`);
-        console.info(`getAllSessionDescriptors : SUCCESS : descriptors[0].type : ${descriptors[0].type}`);
-        console.info(`getAllSessionDescriptors : SUCCESS : descriptors[0].sessionTag : ${descriptors[0].sessionTag}`);
-    }
-  }
-});
+@Entry 
+@Component 
+struct Index { 
+  @State message: string = 'hello world'; 
+
+  build() { 
+    Column() { 
+        Text(this.message) 
+          .onClick(()=>{ 
+            avSession.getAllSessionDescriptors((descriptors: avSession.AVSessionDescriptor[]) => { 
+                console.info(`Succeeded in getting all session descriptors, length: ${descriptors.length}`); 
+                if (descriptors.length > 0 ) { 
+                    console.info(`Succeeded in getting session descriptor, isActive: ${descriptors[0].isActive}`); 
+                    console.info(`Succeeded in getting session descriptor, type: ${descriptors[0].type}`); 
+                    console.info(`Succeeded in getting session descriptor, sessionTag: ${descriptors[0].sessionTag}`); 
+                } 
+            }); 
+          }) 
+      } 
+    .width('100%') 
+    .height('100%') 
+  } 
+}
 ```
 

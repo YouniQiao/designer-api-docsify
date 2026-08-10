@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## release
 
 ```TypeScript
@@ -44,7 +50,7 @@ main: ImageType
 
 Object of the full-quality image and the uncompressed image.
 
-**类型：** ImageType
+**类型：** [ImageType](arkts-camera-camera-imagetype-t.md)
 
 **起始版本：** 23
 

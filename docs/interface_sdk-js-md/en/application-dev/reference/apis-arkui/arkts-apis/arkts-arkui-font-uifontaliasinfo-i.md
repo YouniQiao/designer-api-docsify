@@ -8,13 +8,19 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## name
 
 ```TypeScript
 name: string
 ```
 
-Font set name.
+别名名称。
 
 **Type:** string
 
@@ -34,7 +40,9 @@ Font set name.
 weight: double
 ```
 
-Weight the font set contains only fonts with, if weight = 0,this font set can contain fonts with any weight.
+当weight>0时表示此字体集只包含所指定weight的字体，当weight=0时，表示此字体集包含所有字体。
+
+可返回的值有0、100、400、700、900。
 
 **Type:** double
 

@@ -36,13 +36,13 @@ alignment?: DialogAlignment
 
 弹窗在竖直方向上的对齐方式。
 
-默认值：DialogAlignment.Bottom
+默认值：DialogAlignment.Bottom 
 
 **说明：**
 
 若在UIExtension中设置showInSubWindow为true，弹窗将基于UIExtension的宿主窗口对齐。
 
-**类型：** DialogAlignment
+**类型：** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **起始版本：** 8
 
@@ -86,13 +86,13 @@ backgroundBlurStyle?: BlurStyle
 
 弹窗背板模糊材质。
 
-默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT\_ULTRA\_THICK。
+默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。
 
 **说明：**
 
 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -116,7 +116,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 背景模糊效果。默认值请参考BackgroundBlurStyleOptions类型说明。
 
-**类型：** BackgroundBlurStyleOptions
+**类型：** [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 19
 
@@ -144,7 +144,7 @@ backgroundColor?: ResourceColor
 
 backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
@@ -168,7 +168,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数。默认值请参考BackgroundEffectOptions类型说明。
 
-**类型：** BackgroundEffectOptions
+**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 19
 
@@ -198,7 +198,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。
 
-**类型：** ResourceColor \| EdgeColors \| LocalizedEdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
 
 **默认值：** Color.Black - borderColor must be used with borderWidth in pairs.
 
@@ -226,7 +226,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**类型：** BorderStyle \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-enums-borderstyle-e.md) \| EdgeStyles
 
 **默认值：** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
@@ -262,7 +262,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。
 
-**类型：** Dimension \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
 
 **默认值：** 0 - When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
@@ -286,7 +286,7 @@ confirm?: ActionSheetButtonOptions
 
 确认Button的使能状态、默认焦点、按钮风格、文本内容和点击回调。
 
-**类型：** ActionSheetButtonOptions
+**类型：** [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md)
 
 **起始版本：** 8
 
@@ -310,7 +310,7 @@ cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
-圆角大小受组件尺寸限制，最大值为组件宽或高的一半，若值为负，则按照默认值处理。
+圆角大小受组件尺寸限制，最大值为组件宽或高的一半，若值为负，则按照默认值处理。 
 
 百分比参数方式：以父元素弹窗宽和高的百分比来设置弹窗的圆角。
 
@@ -318,7 +318,7 @@ cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 当cornerRadius属性类型为LocalizedBorderRadiuses时，支持随语言习惯改变布局顺序。
 
-**类型：** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **默认值：** - {topLeft:'32vp', topRight:'32vp', bottomLeft:'32vp', bottomRight:'32vp'}, The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used. When set to a percentage, the value defines the radius as a percentage of the parent component's width or height.
 
@@ -377,7 +377,7 @@ height?: Dimension
 - 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。  
 - 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** - Default maximum height of the dialog box: 0.9 x (Window height – Safe area) <br>When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
@@ -401,9 +401,9 @@ hoverModeArea?: HoverModeAreaType
 
 悬停态下弹窗默认展示区域。
 
-默认值：HoverModeAreaType.BOTTOM\_SCREEN。
+默认值：HoverModeAreaType.BOTTOM_SCREEN。
 
-**类型：** HoverModeAreaType
+**类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -429,10 +429,10 @@ immersiveMode?: ImmersiveMode
 
 **说明：**
 
-- 默认值：ImmersiveMode.DEFAULT  
+- 默认值：ImmersiveMode.DEFAULT   
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** ImmersiveMode
+**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT - This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
@@ -484,10 +484,10 @@ levelMode?: LevelMode
 
 **说明：**
 
-- 默认值：LevelMode.OVERLAY  
+- 默认值：LevelMode.OVERLAY   
 - 仅当showInSubWindow属性设置为false时生效。
 
-**类型：** LevelMode
+**类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY - This parameter takes effect only when showInSubWindow is set to false.
 
@@ -513,10 +513,10 @@ levelOrder?: LevelOrder
 
 **说明：**
 
-- 默认值：LevelOrder.clamp(0)  
+- 默认值：LevelOrder.clamp(0)   
 - 不支持动态刷新顺序。
 
-**类型：** LevelOrder
+**类型：** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **默认值：** The value returns by LevelOrder.clamp(0)
 
@@ -538,7 +538,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-设置页面级弹窗需要显示的层级下的[getUniqueId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)。
 
 取值范围：大于等于0的数字。
 
@@ -568,13 +568,13 @@ maskRect?: Rectangle
 
 弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。
 
-默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
+默认值：{ x: 0, y: 0, width: '100%', height: '100%' } 
 
 **说明：**
 
 showInSubWindow为true时，maskRect不生效。
 
-**类型：** Rectangle
+**类型：** [Rectangle](arkts-arkui-common-rectangle-i.md)
 
 **默认值：** - {x:0,y:0, width:'100%', height:'100%'} [since 11]
 
@@ -622,11 +622,11 @@ offset?: ActionSheetOffset
 
 默认值：
 
-1.alignment设置为Top、TopStart、TopEnd时默认值为{dx: 0,dy: "40vp"}
+1.alignment设置为Top、TopStart、TopEnd时默认值为{dx: 0,dy: "40vp"} 
 
 2.alignment设置为其他时默认值为{dx: 0,dy: "-40vp"}
 
-**类型：** ActionSheetOffset
+**类型：** [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md)
 
 **起始版本：** 8
 
@@ -648,10 +648,7 @@ onDidAppear?: Callback<void>
 
 **说明：**
 
-1.正常时序依次为：onWillAppear >  
-    onDidAppear >  
-    onWillDisappear >  
-    onDidDisappear。
+1.正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
@@ -659,7 +656,7 @@ onDidAppear?: Callback<void>
 
 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -683,12 +680,9 @@ onDidDisappear?: Callback<void>
 
 **说明：**
 
-正常时序依次为：onWillAppear >  
-    onDidAppear >  
-    onWillDisappear >  
-    onDidDisappear。
+正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -712,14 +706,11 @@ onWillAppear?: Callback<void>
 
 **说明：**
 
-1.正常时序依次为：onWillAppear >  
-    onDidAppear >  
-    onWillDisappear >  
-    onDidDisappear。
+1.正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -743,12 +734,9 @@ onWillDisappear?: Callback<void>
 
 **说明：**
 
-正常时序依次为：onWillAppear >  
-    onDidAppear >  
-    onWillDisappear >  
-    onDidDisappear。
+正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 19
 
@@ -772,11 +760,11 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 **说明：**
 
-1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE\_BUTTON的枚举值。
+1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。
 
 2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** Callback&lt;DismissDialogAction&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DismissDialogAction&gt;
 
 **起始版本：** 12
 
@@ -796,11 +784,11 @@ onWillDismiss?: Callback<DismissDialogAction>
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。
+设置弹窗背板的阴影。 
 
-当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER\_FLOATING\_MD，失焦为ShadowStyle.OUTER\_FLOATING\_SM。其他设备默认无阴影。
+当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
 **默认值：** - Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
@@ -876,7 +864,7 @@ subtitle?: ResourceStr
 
 当文本内容过长无法显示时，用省略号代替未显示的部分。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 
@@ -900,15 +888,15 @@ systemMaterial?: SystemUiMaterial
 
 **说明：**
 
-- 默认值：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的style为  
-ImmersiveStyle.ULTRA\_THICK的  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_对象。设置undefined时与默认值保持一致。  
-- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、背景模糊  
-[backgroundBlurStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、背景效果[backgroundEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、边框颜色  
-[borderColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、边框宽度[borderWidth]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、阴影  
-[shadow]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_，不建议与上述接口一起使用。
+- 默认值：[ImmersiveOptions](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersiveoptions)的style为  
+ImmersiveStyle.ULTRA_THICK的  
+[ImmersiveMaterial](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivematerial)对象。设置undefined时与默认值保持一致。  
+- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、背景模糊  
+[backgroundBlurStyle](arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)、背景效果[backgroundEffect](arkts-arkui-common-commonmethod-i.md#backgroundeffect)、边框颜色  
+[borderColor](arkts-arkui-common-commonmethod-i.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-common-commonmethod-i.md#borderwidth)、阴影  
+[shadow](arkts-arkui-common-commonmethod-i.md#shadow)，不建议与上述接口一起使用。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 
@@ -960,7 +948,7 @@ transition?: TransitionEffect
 
 3.退出动效中按back键，不会打断退出动效，退出动效继续执行，继续按back键退出应用。
 
-**类型：** TransitionEffect
+**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 12
 
@@ -987,7 +975,7 @@ width?: Dimension
 - 弹窗宽度默认最大值：400vp。  
 - 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** - Default maximum width of the dialog box: 400 vp, When this parameter is set to a percentage, the reference width of the dialog box is the width of the window where the dialog box is located. You can decrease or increase the width as needed.
 

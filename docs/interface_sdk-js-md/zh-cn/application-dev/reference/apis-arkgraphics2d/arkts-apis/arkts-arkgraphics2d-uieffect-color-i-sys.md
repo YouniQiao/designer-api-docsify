@@ -12,6 +12,12 @@ RGBA格式的颜色描述。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alpha
 
 ```TypeScript
@@ -20,7 +26,7 @@ alpha: double
 
 颜色的A分量（透明度）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -40,7 +46,7 @@ blue: double
 
 颜色的B分量（蓝色）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -60,7 +66,7 @@ green: double
 
 颜色的G分量（绿色）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 
@@ -80,7 +86,7 @@ red: double
 
 颜色的R分量（红色）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 20
 

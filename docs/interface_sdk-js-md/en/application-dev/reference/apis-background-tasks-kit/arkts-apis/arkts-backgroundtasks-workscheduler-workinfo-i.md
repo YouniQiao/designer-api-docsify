@@ -1,6 +1,6 @@
 # WorkInfo
 
-Represents the deferred task information, which is used to set the trigger condition.
+延迟任务的具体信息, 用于设置延迟任务的触发条件等。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Represents the deferred task information, which is used to set the trigger condi
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
+## Modules to Import
+
+```TypeScript
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Ability name in the bundle.
+包内ability名称。
 
 **Type:** string
 
@@ -36,11 +42,11 @@ Ability name in the bundle.
 batteryLevel?: int
 ```
 
-Battery level.
+电量。
 
-Value range: [0, 100]
+取值范围：[0, 100]
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Value range: [0, 100]
 batteryStatus?: BatteryStatus
 ```
 
-Battery status.
+电池状态。
 
-**Type:** BatteryStatus
+**Type:** [BatteryStatus](arkts-backgroundtasks-workscheduler-batterystatus-e.md)
 
 **Since:** 9
 
@@ -78,7 +84,7 @@ Battery status.
 bundleName: string
 ```
 
-Bundle name of the application where the deferred task is located.
+延迟任务所在应用的包名。
 
 **Type:** string
 
@@ -98,9 +104,9 @@ Bundle name of the application where the deferred task is located.
 chargerType?: ChargingType
 ```
 
-Charging type.
+充电类型。
 
-**Type:** ChargingType
+**Type:** [ChargingType](arkts-backgroundtasks-workscheduler-chargingtype-e.md)
 
 **Since:** 9
 
@@ -118,9 +124,9 @@ Charging type.
 earliestStartTime?: int
 ```
 
-Interval between the initial execution time and the request time for a task, in milliseconds. The default value is **0**, and the value must be greater than or equal to 0.The value range is all integers.
+任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -138,9 +144,9 @@ Interval between the initial execution time and the request time for a task, in 
 idleWaitTime?: int
 ```
 
-Idle wait time, in milliseconds.
+空闲等待时间，单位：ms。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -158,10 +164,10 @@ Idle wait time, in milliseconds.
 isCharging?: boolean
 ```
 
-Whether the device needs to enter the charging state. The default value is **false**.
+是否充电，默认为false。
 
-- **true**: The device needs to enter the charging state to trigger deferred task scheduling.  
-- **false**: The device does not need to enter the charging state to trigger deferred task scheduling.
+- true表示充电触发延迟任务回调。  
+- false表示不充电触发延迟任务回调。
 
 **Type:** boolean
 
@@ -181,11 +187,10 @@ Whether the device needs to enter the charging state. The default value is **fal
 isDeepIdle?: boolean
 ```
 
-Whether the device needs to enter the idle state to trigger deferred task scheduling. The default value is  
-**false**.
+是否要求设备进入空闲状态，默认为false。
 
-- **true**: The device needs to enter the idle state to trigger deferred task scheduling.  
-- **false**: The device does not need to enter the idle state to trigger deferred task scheduling.
+- true表示需要。  
+- false表示不需要。
 
 **Type:** boolean
 
@@ -205,10 +210,10 @@ Whether the device needs to enter the idle state to trigger deferred task schedu
 isPersisted?: boolean
 ```
 
-Whether the registered deferred task can be saved in the system. The default value is **false**.
+注册的延迟任务是否可保存在系统中，默认为false。
 
-- **true**: The task can be saved. That is, the task can be restored after the system restarts.  
-- **false**: The task cannot be saved.
+- true表示可保存，即系统重启后，任务可恢复。  
+- false表示不可保存。
 
 **Type:** boolean
 
@@ -228,10 +233,10 @@ Whether the registered deferred task can be saved in the system. The default val
 isRepeat?: boolean
 ```
 
-Whether the task is repeated. The default value is **false**.
+是否循环任务，默认为false。
 
-- **true**: The task is repeated.  
-- **false**: The task is not repeated.
+- true表示循环任务。  
+- false表示非循环任务。
 
 **Type:** boolean
 
@@ -251,9 +256,9 @@ Whether the task is repeated. The default value is **false**.
 networkType?: NetworkType
 ```
 
-Network type.
+网络类型。
 
-**Type:** NetworkType
+**Type:** [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md)
 
 **Since:** 9
 
@@ -271,9 +276,9 @@ Network type.
 parameters?: Record<string, int | double | string | boolean>
 ```
 
-Carried parameters.
+携带参数信息。
 
-**Type:** Record&lt;string, int \| double \| string \| boolean&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| double \| string \| boolean&gt;
 
 **Since:** 9
 
@@ -291,9 +296,9 @@ Carried parameters.
 repeatCount?: int
 ```
 
-Number of repeat times.
+循环次数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -311,9 +316,9 @@ Number of repeat times.
 repeatCycleTime?: int
 ```
 
-Repeat interval, in milliseconds.
+循环间隔，单位：ms。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -331,9 +336,9 @@ Repeat interval, in milliseconds.
 storageRequest?: StorageRequest
 ```
 
-Storage status.
+存储状态。
 
-**Type:** StorageRequest
+**Type:** [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
 
 **Since:** 9
 
@@ -351,9 +356,9 @@ Storage status.
 workId: int
 ```
 
-ID of the deferred task.
+延迟任务ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

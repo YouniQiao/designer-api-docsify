@@ -9,7 +9,7 @@ format(value: number, unit: RelativeTimeFormatUnit): string
 ```
 
 Formats a value and a unit according to the locale and formatting options of the given  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_object.
+[`Intl.RelativeTimeFormat`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat)object.
 
 While this method automatically provides the correct plural forms,the grammatical form is otherwise as neutral as possible.
 
@@ -24,7 +24,7 @@ It is the caller's responsibility to handle cut-off logic such as deciding betwe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes |  |
-| unit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |  |
 
 **Return value:**
 
@@ -49,13 +49,13 @@ Returns an array of objects representing the relative time format in parts that 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes |  |
-| unit | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] |  |
+| [RelativeTimeFormatPart](arkts-intl-relativetimeformatpart-t.md)[] |  |
 
 ## resolvedOptions
 
@@ -63,9 +63,9 @@ Returns an array of objects representing the relative time format in parts that 
 resolvedOptions(): ResolvedRelativeTimeFormatOptions
 ```
 
-Provides access to the locale and options computed during initialization of this \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ object.
+Provides access to the locale and options computed during initialization of this `Intl.RelativeTimeFormat` object.
 
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions).
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -75,5 +75,5 @@ Provides access to the locale and options computed during initialization of this
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ResolvedRelativeTimeFormatOptions](arkts-intl-resolvedrelativetimeformatoptions-i.md) |  |
 

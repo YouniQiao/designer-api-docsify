@@ -4,7 +4,7 @@
 declare type TransitionFinishCallback = (transitionIn: boolean) => void
 ```
 
-Represents the type of callback for the end of a component's transition animation.
+组件转场动画的结束回调类型。
 
 **Since:** 12
 
@@ -24,5 +24,5 @@ Represents the type of callback for the end of a component's transition animatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionIn | boolean | Yes | Type of callback for the end of the transition animation.\_\_\_HTML\_TAG\_USD\_0\_\_\_The value **true** indicates that the callback is for the end of an appearance animation, and **false** indicates that the callback is for the end of a disappearance animation.  |
+| transitionIn | boolean | Yes | 该入参表示转场动画的结束回调类型。<br/>该参数为true表示该转场回调是出现动画的结束回调，该参数为false表示该转场回调是消失动画的结束回调。 |
 

@@ -1,6 +1,6 @@
 # Rect
 
-Describes the rectangular area of the window.
+窗口矩形区域。
 
 **Since:** 7
 
@@ -10,15 +10,21 @@ Describes the rectangular area of the window.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Height of the rectangle, in px. The value must be an integer.
+矩形区域的高度，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -36,9 +42,9 @@ Height of the rectangle, in px. The value must be an integer.
 left: int
 ```
 
-Left boundary of the rectangle, in px. The value must be an integer.
+矩形区域的左边界，单位为px，该参数为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -56,9 +62,9 @@ Left boundary of the rectangle, in px. The value must be an integer.
 top: int
 ```
 
-Top boundary of the rectangle, in px. The value must be an integer.
+矩形区域的上边界，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 
@@ -76,9 +82,9 @@ Top boundary of the rectangle, in px. The value must be an integer.
 width: int
 ```
 
-Width of the rectangle, in px. The value must be an integer.
+矩形区域的宽度，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 7
 

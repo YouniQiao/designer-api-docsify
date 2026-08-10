@@ -2,7 +2,7 @@
 
 ExifMetadata implements Metadata
 
-Exchangeable Image File Format (Exif) metadata.
+Exif（Exchangeable image file format）元数据。
 
 **Inheritance/Implementation:** ExifMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -14,13 +14,19 @@ Exchangeable Image File Format (Exif) metadata.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## clone
 
 ```TypeScript
 clone(): Promise<ExifMetadata>
 ```
 
-Clones the Exif metadata. This API returns the result asynchronously through a promise.
+对Exif元数据进行克隆。使用Promise异步回调。
 
 **Since:** 23
 
@@ -36,7 +42,7 @@ Clones the Exif metadata. This API returns the result asynchronously through a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the Exif metadata instance if the operation is successful. |
+| Promise&lt;[ExifMetadata](arkts-image-image-exifmetadata-c.md)&gt; | Promise对象，成功返回Exif元数据实例。 |
 
 ## createInstance
 
@@ -44,7 +50,7 @@ Clones the Exif metadata. This API returns the result asynchronously through a p
 static createInstance(): ExifMetadata
 ```
 
-Creates an empty [ExifMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
+创建一个空的[ExifMetadata](arkts-image-image-exifmetadata-c.md)实例。
 
 **Since:** 23
 
@@ -60,7 +66,7 @@ Creates an empty [ExifMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Empty **ExifMetadata** instance. |
+| [ExifMetadata](arkts-image-image-exifmetadata-c.md) | 返回ExifMetadata的空实例。 |
 
 ## getAllProperties
 
@@ -68,7 +74,7 @@ Creates an empty [ExifMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
+获取图片中所有元数据的属性和值。使用Promise异步回调。
 
 **Since:** 23
 
@@ -84,7 +90,7 @@ Obtains all properties and their values from the image metadata. This API return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
 
 ## getBlob
 
@@ -92,7 +98,7 @@ Obtains all properties and their values from the image metadata. This API return
 getBlob(): Promise<ArrayBuffer>
 ```
 
-Obtains the metadata in binary format. This API uses a promise to return the result.
+以二进制数据的形式获取元数据。使用Promise异步回调。
 
 **Since:** 23
 
@@ -108,7 +114,7 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回元数据的二进制数据。 |
 
 ## getProperties
 
@@ -116,9 +122,9 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-Obtains the property values from image metadata. This API returns the result asynchronously through a promise.
+获取图像的元数据属性值。使用Promise异步回调。
 
-For details about the properties, see [PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **Since:** 23
 
@@ -134,19 +140,19 @@ For details about the properties, see [PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array&lt;string&gt; | Yes | Names of the properties to query. |
+| key | Array&lt;string&gt; | Yes | 要获取的值的属性名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the obtained image metadata property values. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回获取到的图像元数据属性值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## setBlob
 
@@ -154,7 +160,7 @@ For details about the properties, see [PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\
 setBlob(blob: ArrayBuffer): Promise<void>
 ```
 
-Replaces the current metadata with binary data. This API uses a promise to return the result.
+使用二进制数据替换当前元数据。使用Promise异步回调。
 
 **Since:** 23
 
@@ -170,19 +176,19 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blob | ArrayBuffer | Yes | Binary data used to replace the metadata. |
+| blob | ArrayBuffer | Yes | 要替换的二进制数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| 7600206 | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -190,9 +196,9 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。
 
-For details about the properties, see [PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **Since:** 23
 
@@ -208,19 +214,19 @@ For details about the properties, see [PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing properties and corresponding values of the **ExifMetadata** object. |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | 用户要修改的ExifMetadata对象的属性和键值对的集合。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## apertureValue
 
@@ -228,9 +234,9 @@ For details about the properties, see [PropertyKey]\_\_\_JSDOC\_LINK\_DESC\_USD\
 apertureValue?: double
 ```
 
-Lens aperture. The unit is APEX.
+镜头光圈。单位为APEX。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -248,7 +254,7 @@ Lens aperture. The unit is APEX.
 artist?: string
 ```
 
-Name of the person who creates the image.
+创建图像的人的姓名。
 
 **Type:** string
 
@@ -268,9 +274,9 @@ Name of the person who creates the image.
 bitsPerSample?: int[]
 ```
 
-Number of bits for each pixel component. For example, RGB has 3 components with a format of 8,8,8.
+像素各分量的位数。如RGB是3分量，格式是8，8，8。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -288,7 +294,7 @@ Number of bits for each pixel component. For example, RGB has 3 components with 
 bodySerialNumber?: string
 ```
 
-Serial number of the camera body.
+相机机身的序列号。
 
 **Type:** string
 
@@ -308,9 +314,9 @@ Serial number of the camera body.
 brightnessValue?: double
 ```
 
-Image brightness. The unit is APEX.
+图像的亮度值。单位为APEX。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -328,7 +334,7 @@ Image brightness. The unit is APEX.
 cameraOwnerName?: string
 ```
 
-Name of the camera owner.
+相机所有者的姓名。
 
 **Type:** string
 
@@ -348,7 +354,7 @@ Name of the camera owner.
 cfaPattern?: ArrayBuffer
 ```
 
-Color filter array (CFA) geometric pattern of the image sensor.
+图像传感器的滤色器阵列CFA（Color Filter Array）几何图案。
 
 **Type:** ArrayBuffer
 
@@ -368,9 +374,9 @@ Color filter array (CFA) geometric pattern of the image sensor.
 colorSpace?: int
 ```
 
-Color space information, which is usually recorded as a color space descriptor.The value range is all integers.
+颜色空间信息标签，通常记录为颜色空间说明符。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -388,7 +394,7 @@ Color space information, which is usually recorded as a color space descriptor.T
 componentsConfiguration?: string
 ```
 
-Information about the compressed data.
+压缩数据的信息。
 
 **Type:** string
 
@@ -408,9 +414,9 @@ Information about the compressed data.
 compositeImage?: int
 ```
 
-Whether the image is a composite image.The value range is all integers.
+指示图像是否为合成图像。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -428,9 +434,9 @@ Whether the image is a composite image.The value range is all integers.
 compressedBitsPerPixel?: double
 ```
 
-Image compression scheme. The unit is bit/pixel.
+图像压缩方案。单位为每像素比特。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -448,9 +454,9 @@ Image compression scheme. The unit is bit/pixel.
 compression?: int
 ```
 
-Algorithm standard for image compression.The value range is all integers.
+用于图像压缩的算法标准。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -468,9 +474,9 @@ Algorithm standard for image compression.The value range is all integers.
 contrast?: int
 ```
 
-Contrast optimization policy applied by the camera. For example, standard processing and contrast reduction.The value range is all integers.
+相机应用的对比度优化策略。例如：标准处理、弱化对比度等。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -488,7 +494,7 @@ Contrast optimization policy applied by the camera. For example, standard proces
 copyright?: string
 ```
 
-Copyright notice of the image.
+图像的版权信息。
 
 **Type:** string
 
@@ -508,9 +514,9 @@ Copyright notice of the image.
 customRendered?: int
 ```
 
-Special processing of image data, such as HDR composition and AI scene enhancement.The value range is all integers.
+表示对图像数据的特殊处理，如HDR合成、AI场景增强。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -528,7 +534,9 @@ Special processing of image data, such as HDR composition and AI scene enhanceme
 dateTime?: string
 ```
 
-Date and time when the image is created.In this standard, it refers to the file date and time. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).For example, 2025:12:15 18:44:59.
+图像创建的日期和时间。
+
+在本标准中，指文件更改的日期和时间。格式为：“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。例如：“2025:12:15 18:44:59”。
 
 **Type:** string
 
@@ -548,8 +556,9 @@ Date and time when the image is created.In this standard, it refers to the file 
 dateTimeDigitized?: string
 ```
 
-Date and time when the image is stored as digital data.For example, if a DSC captures an image and records the file at the same time, the values of **DateTimeOriginal**  
-and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
+将图像作为数字数据存储的日期和时间。
+
+例如，如果DSC捕获了图像，并同时记录了文件，则DateTimeOriginal和DateTimeDigitized将具有相同的内容。格式为“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。
 
 **Type:** string
 
@@ -569,7 +578,9 @@ and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS
 dateTimeOriginal?: string
 ```
 
-Date and time when the original image data is generated.For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
+生成原始图像数据的日期和时间。
+
+对于DSC（Digital Still Camera 数码静态相机），会记录拍摄照片的日期和时间。格式为“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。
 
 **Type:** string
 
@@ -589,7 +600,7 @@ Date and time when the original image data is generated.For a digital still came
 deviceSettingDescription?: ArrayBuffer
 ```
 
-Capture condition information of a specific camera model.
+特定相机型号的拍照条件信息。
 
 **Type:** ArrayBuffer
 
@@ -609,9 +620,9 @@ Capture condition information of a specific camera model.
 digitalZoomRatio?: double
 ```
 
-Digital zoom ratio used when the image is captured.
+拍摄时的数字变焦比。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -629,7 +640,7 @@ Digital zoom ratio used when the image is captured.
 exifVersion?: string
 ```
 
-Version of the supported Exif standard.
+支持的Exif标准的版本。
 
 **Type:** string
 
@@ -649,9 +660,9 @@ Version of the supported Exif standard.
 exposureBiasValue?: double
 ```
 
-Exposure bias.
+曝光偏差值。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -669,9 +680,9 @@ Exposure bias.
 exposureIndex?: double
 ```
 
-Exposure index selected at the time the image is captured.
+拍摄时选定的曝光指数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -689,9 +700,9 @@ Exposure index selected at the time the image is captured.
 exposureMode?: int
 ```
 
-Exposure mode.The value range is all integers.
+曝光模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -709,9 +720,9 @@ Exposure mode.The value range is all integers.
 exposureProgram?: int
 ```
 
-Class used for exposure setting when the camera captures a photo.The value range is all integers.
+相机在拍摄照片时用于设置曝光的程序类。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -729,9 +740,9 @@ Class used for exposure setting when the camera captures a photo.The value range
 exposureTime?: double
 ```
 
-Exposure time.
+曝光时间。单位为秒（s）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -749,9 +760,9 @@ Exposure time.
 fNumber?: double
 ```
 
-F number, for example, f/1.8.
+光圈值，如f/1.8。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -769,7 +780,7 @@ F number, for example, f/1.8.
 fileSource?: ArrayBuffer
 ```
 
-Image source.
+指示图像源。
 
 **Type:** ArrayBuffer
 
@@ -789,9 +800,9 @@ Image source.
 flash?: int
 ```
 
-Flash.The value range is all integers.
+闪光。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -809,9 +820,9 @@ Flash.The value range is all integers.
 flashEnergy?: double
 ```
 
-Flash energy at the time the image is captured. The unit is beam candlepower seconds (BCPS).
+图像捕获时的闪光灯能量。单位为光束烛光秒（BCPS，Beam Candlepower Seconds）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -829,7 +840,7 @@ Flash energy at the time the image is captured. The unit is beam candlepower sec
 flashpixVersion?: string
 ```
 
-FlashPix format version supported by the FlashPix Extension Resource (FPXR), which is used to enhance device compatibility.
+FPXR（FlashPix Extension Resource）支持的FlashPix格式版本，用于增强设备兼容性。
 
 **Type:** string
 
@@ -849,9 +860,9 @@ FlashPix format version supported by the FlashPix Extension Resource (FPXR), whi
 focalLength?: double
 ```
 
-Focal length of the lens, in milliseconds.
+焦距。单位为毫米（mm）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -869,9 +880,9 @@ Focal length of the lens, in milliseconds.
 focalLengthIn35mmFilm?: int
 ```
 
-Focal length of the 35 mm film.The value should be an integer.
+换算成35mm等效焦距。单位为毫米（mm）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -889,9 +900,9 @@ Focal length of the 35 mm film.The value should be an integer.
 focalPlaneResolutionUnit?: int
 ```
 
-Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**.The value range is all integers.
+FocalPlaneXResolution和FocalPlaneYResolution的测量单位。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -909,9 +920,9 @@ Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**.The 
 focalPlaneXResolution?: double
 ```
 
-Number of pixels per unit physical length in the X-axis of the sensor's physical plane.
+传感器物理平面X轴方向上每单位物理长度的像素数量。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -929,9 +940,9 @@ Number of pixels per unit physical length in the X-axis of the sensor's physical
 focalPlaneYResolution?: double
 ```
 
-Number of pixels per unit physical length in the Y-axis of the sensor's physical plane.
+传感器物理平面Y轴方向上每单位物理长度的像素数量。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -949,9 +960,9 @@ Number of pixels per unit physical length in the Y-axis of the sensor's physical
 gainControl?: int
 ```
 
-Degree of overall image gain adjustment.The value range is all integers.
+整体图像增益调整程度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -969,9 +980,9 @@ Degree of overall image gain adjustment.The value range is all integers.
 gamma?: double
 ```
 
-Gamma value of each component.
+每个组件的伽玛值。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -989,9 +1000,9 @@ Gamma value of each component.
 gpsAltitude?: double
 ```
 
-GPS altitude based on **GPSAltitudeRef**.
+基于GPSAltitudeRef中的参考高度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1009,9 +1020,9 @@ GPS altitude based on **GPSAltitudeRef**.
 gpsAltitudeRef?: int
 ```
 
-GPS altitude reference.The value range is all integers.
+用于GPS的参考高度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1029,7 +1040,7 @@ GPS altitude reference.The value range is all integers.
 gpsAreaInformation?: string
 ```
 
-String of the GPS area name.
+GPS区域名称的字符串。
 
 **Type:** string
 
@@ -1049,7 +1060,7 @@ String of the GPS area name.
 gpsDateStamp?: string
 ```
 
-GPS date stamp.
+GPS日期戳。
 
 **Type:** string
 
@@ -1069,9 +1080,9 @@ GPS date stamp.
 gpsDestBearing?: double
 ```
 
-Bearing to the destination.
+到达目的地的方位。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1089,7 +1100,7 @@ Bearing to the destination.
 gpsDestBearingRef?: string
 ```
 
-Bearing reference to the destination.
+指向目的地的方位参考。
 
 **Type:** string
 
@@ -1109,9 +1120,9 @@ Bearing reference to the destination.
 gpsDestDistance?: double
 ```
 
-Distance to the destination.
+到目的地的距离。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1129,7 +1140,7 @@ Distance to the destination.
 gpsDestDistanceRef?: string
 ```
 
-Unit used to express the distance to the destination.
+到目标点距离的测量单位。
 
 **Type:** string
 
@@ -1149,9 +1160,9 @@ Unit used to express the distance to the destination.
 gpsDestLatitude?: double[]
 ```
 
-Latitude of the destination.
+目的地的纬度。
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -1169,7 +1180,7 @@ Latitude of the destination.
 gpsDestLatitudeRef?: string
 ```
 
-Latitude reference of the destination.
+指示目标点的纬度参考。
 
 **Type:** string
 
@@ -1189,9 +1200,9 @@ Latitude reference of the destination.
 gpsDestLongitude?: double[]
 ```
 
-Longitude of the destination.
+目的地的经度。
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -1209,7 +1220,7 @@ Longitude of the destination.
 gpsDestLongitudeRef?: string
 ```
 
-Longitude reference of the destination.
+指示目标点的经度参考。
 
 **Type:** string
 
@@ -1229,9 +1240,9 @@ Longitude reference of the destination.
 gpsDifferential?: int
 ```
 
-Whether differential correction has been applied to the GPS data, which is crucial for precise positioning accuracy.The value range is all integers.
+是否对GPS数据应用了差分校正，这对精确定位精度至关重要。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1249,9 +1260,9 @@ Whether differential correction has been applied to the GPS data, which is cruci
 gpsDop?: double
 ```
 
-Dilution of Precision (DOP) of the GPS data.
+GPS数据精度DOP精度衰减因子（Dilution of Precision）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1269,9 +1280,9 @@ Dilution of Precision (DOP) of the GPS data.
 gpsHPositioningError?: double
 ```
 
-Horizontal positioning error, in meters.
+水平定位误差。单位为米（m）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1289,9 +1300,9 @@ Horizontal positioning error, in meters.
 gpsImgDirection?: double
 ```
 
-Image orientation at the time of capture.
+拍摄时图像的方向。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1309,7 +1320,7 @@ Image orientation at the time of capture.
 gpsImgDirectionRef?: string
 ```
 
-Reference of the image orientation.
+图像方向的参考。
 
 **Type:** string
 
@@ -1329,10 +1340,13 @@ Reference of the image orientation.
 gpsLatitude?: double[]
 ```
 
-GPS latitude.The latitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.When using degrees and minutes, the minutes are stored with up to two decimal places, in the  
-**dd/1, mmmm/100, 0/1** format.
+GPS纬度。
 
-**Type:** double[]
+纬度用三个RATIONAL（分数形式存储的数值）值表示，分别是度、分和秒，格式为dd/1、mm/1、ss/1。
+
+当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100,0/1。
+
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -1350,7 +1364,7 @@ GPS latitude.The latitude is represented by three RATIONAL values (numeric value
 gpsLatitudeRef?: string
 ```
 
-GPS latitude reference. For example, **N** indicates north latitude, and **S** indicates south latitude.
+GPS纬度参考。例如，N表示北纬，S表示南纬。
 
 **Type:** string
 
@@ -1370,10 +1384,13 @@ GPS latitude reference. For example, **N** indicates north latitude, and **S** i
 gpsLongitude?: double[]
 ```
 
-GPS longitude.The longitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.When using degrees and minutes, the minutes are stored with up to two decimal places, in the  
-**dd/1, mmmm/100, 0/1** format.
+GPS经度。
 
-**Type:** double[]
+经度用三个RATIONAL（分数形式存储的数值）值表示，分别是度、分和秒，格式为dd/1、mm/1、ss/1。
+
+当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100，0/1。
+
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -1391,7 +1408,7 @@ GPS longitude.The longitude is represented by three RATIONAL values (numeric val
 gpsLongitudeRef?: string
 ```
 
-GPS longitude reference. For example, **E** indicates east longitude, and **W** indicates west longitude.
+GPS经度参考。例如，E表示东经，W表示西经。
 
 **Type:** string
 
@@ -1411,7 +1428,7 @@ GPS longitude reference. For example, **E** indicates east longitude, and **W** 
 gpsMapDatum?: string
 ```
 
-Geodetic data used by the GPS receiver.
+GPS接收机使用的大地测量数据。
 
 **Type:** string
 
@@ -1431,7 +1448,7 @@ Geodetic data used by the GPS receiver.
 gpsMeasureMode?: string
 ```
 
-GPS measurement mode.
+GPS测量模式。
 
 **Type:** string
 
@@ -1451,7 +1468,7 @@ GPS measurement mode.
 gpsProcessingMethod?: string
 ```
 
-Name of the positioning method.
+记录定位方法的名称。
 
 **Type:** string
 
@@ -1471,7 +1488,7 @@ Name of the positioning method.
 gpsSatellites?: string
 ```
 
-GPS satellite used for measurement. Generally, the value is the GPS satellite's pseudo-random noise (PRN) number.
+用于测量的GPS卫星。通常是它的伪随机噪声码（PRN）编号。
 
 **Type:** string
 
@@ -1491,9 +1508,9 @@ GPS satellite used for measurement. Generally, the value is the GPS satellite's 
 gpsSpeed?: double
 ```
 
-Speed of the GPS receiver.
+GPS接收器移动的速度。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1511,7 +1528,7 @@ Speed of the GPS receiver.
 gpsSpeedRef?: string
 ```
 
-Speed unit of the GPS receiver.
+GPS接收器移动速度的单位。
 
 **Type:** string
 
@@ -1531,7 +1548,7 @@ Speed unit of the GPS receiver.
 gpsStatus?: string
 ```
 
-Status of the GPS receiver when the image is recorded.
+记录图像时GPS接收器的状态。
 
 **Type:** string
 
@@ -1551,9 +1568,9 @@ Status of the GPS receiver when the image is recorded.
 gpsTimestamp?: double[]
 ```
 
-GPS timestamp.
+GPS时间戳。
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -1571,9 +1588,9 @@ GPS timestamp.
 gpsTrack?: double
 ```
 
-Movement direction of the GPS receiver.
+GPS接收器移动的方向。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1591,7 +1608,7 @@ Movement direction of the GPS receiver.
 gpsTrackRef?: string
 ```
 
-Reference for the GPS receiver movement direction.
+提供GPS接收机运动方向的参考。
 
 **Type:** string
 
@@ -1611,9 +1628,9 @@ Reference for the GPS receiver movement direction.
 gpsVersionID?: int[]
 ```
 
-GPS information format version identifier.
+GPS信息的格式版本标识符。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -1631,7 +1648,7 @@ GPS information format version identifier.
 imageDescription?: string
 ```
 
-Image description.
+图像描述。
 
 **Type:** string
 
@@ -1651,9 +1668,9 @@ Image description.
 imageLength?: int
 ```
 
-Image length. The unit is px.
+图像长度。单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1671,7 +1688,7 @@ Image length. The unit is px.
 imageUniqueId?: string
 ```
 
-Unique ID assigned to each image.
+为每个图像分配的唯一标识符。
 
 **Type:** string
 
@@ -1691,9 +1708,9 @@ Unique ID assigned to each image.
 imageWidth?: int
 ```
 
-Image width. The unit is px.
+图像宽度。单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1711,9 +1728,9 @@ Image width. The unit is px.
 isoSpeedLatitudeyyy?: int
 ```
 
-Maximum dynamic range recordable by the camera sensor in a single exposure. The unit is EV.The value should be an integer.
+表示相机传感器在单次曝光中可记录的最大动态范围。单位为EV。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1731,9 +1748,9 @@ Maximum dynamic range recordable by the camera sensor in a single exposure. The 
 isoSpeedLatitudezzz?: int
 ```
 
-Highlight retention capacity of the camera sensor in overexposure. The unit is EV.The value should be an integer.
+表示相机传感器在过曝方向保护高光细节的能力边界。单位为EV。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1751,9 +1768,9 @@ Highlight retention capacity of the camera sensor in overexposure. The unit is E
 isoSpeedRatings?: int
 ```
 
-ISO speed and latitude of the camera or input device, which are specified in ISO 12232.The value range is all integers.
+ISO 12232中指定的相机或输入设备的ISO速度和ISO纬度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1771,9 +1788,9 @@ ISO speed and latitude of the camera or input device, which are specified in ISO
 jpegInterchangeFormat?: int
 ```
 
-Start of Image (SOI) marker of the JPEG bitstream in interchange format.The value range is all integers.
+JPEG交换格式比特流的SOI（Start of Image）标记。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1791,9 +1808,9 @@ Start of Image (SOI) marker of the JPEG bitstream in interchange format.The valu
 jpegInterchangeFormatLength?: int
 ```
 
-Number of bytes in the JPEG stream.The value range is all integers.
+JPEG流的字节数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1811,7 +1828,7 @@ Number of bytes in the JPEG stream.The value range is all integers.
 lensMake?: string
 ```
 
-Manufacturer of the lens.
+镜头的制造商。
 
 **Type:** string
 
@@ -1831,7 +1848,7 @@ Manufacturer of the lens.
 lensModel?: string
 ```
 
-Model of the lens.
+镜头的型号名称。
 
 **Type:** string
 
@@ -1851,7 +1868,7 @@ Model of the lens.
 lensSerialNumber?: string
 ```
 
-Serial number of the lens.
+镜头的序列号。
 
 **Type:** string
 
@@ -1871,9 +1888,9 @@ Serial number of the lens.
 lensSpecification?: double[]
 ```
 
-Specifications of the lens.
+所用镜头的规格。
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -1891,9 +1908,9 @@ Specifications of the lens.
 lightSource?: int
 ```
 
-Light source.The value range is all integers.
+光源。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1911,7 +1928,7 @@ Light source.The value range is all integers.
 make?: string
 ```
 
-Manufacturer name of the capture device.
+拍摄设备的品牌制造商名称。
 
 **Type:** string
 
@@ -1931,7 +1948,7 @@ Manufacturer name of the capture device.
 makerNote?: ArrayBuffer
 ```
 
-Information required by the Exif/Design rule for Camera File system (DCF) writer manufacturer.
+Exif/相机文件系统设计规则DCF（Design rule for Camera File system）写入器制造商记录所需信息的标签。
 
 **Type:** ArrayBuffer
 
@@ -1951,9 +1968,9 @@ Information required by the Exif/Design rule for Camera File system (DCF) writer
 maxApertureValue?: double
 ```
 
-Minimum aperture value of the lens.
+镜头的最小光圈值。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -1971,9 +1988,9 @@ Minimum aperture value of the lens.
 meteringMode?: int
 ```
 
-Metering mode.The value range is all integers.
+测光模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -1991,7 +2008,7 @@ Metering mode.The value range is all integers.
 model?: string
 ```
 
-Camera model.
+相机型号。
 
 **Type:** string
 
@@ -2011,9 +2028,9 @@ Camera model.
 newSubfileType?: int
 ```
 
-Data type of a subfile (for example, basic types such as text or image, rather than specific storage formats).The value range is all integers.
+表示该子文件的数据类型（例如文本/图像等基本类型，而非具体存储格式）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2031,7 +2048,7 @@ Data type of a subfile (for example, basic types such as text or image, rather t
 oecf?: ArrayBuffer
 ```
 
-Opto-Electric Conversion Function (OECF) specified in ISO 14524.
+ISO 14524中规定的光电转换函数（OECF）。
 
 **Type:** ArrayBuffer
 
@@ -2051,7 +2068,7 @@ Opto-Electric Conversion Function (OECF) specified in ISO 14524.
 offsetTime?: string
 ```
 
-Geographical time zone of the device.
+作为DateTime标签的补充元数据，解决因地理时区变化导致的时间戳歧义问题。
 
 **Type:** string
 
@@ -2071,7 +2088,7 @@ Geographical time zone of the device.
 offsetTimeDigitized?: string
 ```
 
-Coordinated Universal Time (UTC) offset at the time of image digitization, which helps to precisely adjust the timestamp.
+记录图像数字化时的UTC协调世界时（Coordinated Universal Time）偏移，有助于精确调整时间戳。
 
 **Type:** string
 
@@ -2091,7 +2108,7 @@ Coordinated Universal Time (UTC) offset at the time of image digitization, which
 offsetTimeOriginal?: string
 ```
 
-Geographical time zone of the device.
+设备的地理时区位置。
 
 **Type:** string
 
@@ -2111,9 +2128,9 @@ Geographical time zone of the device.
 orientation?: Orientation
 ```
 
-Image orientation.
+图像方向。
 
-**Type:** Orientation
+**Type:** [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md)
 
 **Since:** 23
 
@@ -2131,9 +2148,9 @@ Image orientation.
 photoMode?: int
 ```
 
-Image mode.The value range is all integers.
+照片模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2151,9 +2168,9 @@ Image mode.The value range is all integers.
 photographicSensitivity?: int[]
 ```
 
-Sensitivity of the camera or input device during image capture.
+拍摄图像时相机或输入设备的灵敏度。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -2171,9 +2188,9 @@ Sensitivity of the camera or input device during image capture.
 photometricInterpretation?: int
 ```
 
-Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma).The value range is all integers.
+像素组成，如RGB（红绿蓝，Red Green Blue）和YCbCr（亮度-蓝色色差-红色色差，Luma-Chrominance）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2191,9 +2208,9 @@ Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-differen
 pixelXDimension?: int
 ```
 
-Image size on the X axis (horizontal axis in a two-dimensional coordinate system).The value range is all integers.
+图像在X轴上的（二维坐标系中的Horizontal Axis）尺寸。单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2211,9 +2228,9 @@ Image size on the X axis (horizontal axis in a two-dimensional coordinate system
 pixelYDimension?: int
 ```
 
-Image size on the Y axis (vertical axis in a two-dimensional coordinate system).The value range is all integers.
+图像在Y轴上的（二维坐标系中的Vertical Axis）尺寸。单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2231,9 +2248,9 @@ Image size on the Y axis (vertical axis in a two-dimensional coordinate system).
 planarConfiguration?: int
 ```
 
-Whether the pixel components are recorded in chunked or planar format.The value range is all integers.
+指示像素分量是以块状或平面格式记录。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2251,9 +2268,9 @@ Whether the pixel components are recorded in chunked or planar format.The value 
 primaryChromaticities?: double[]
 ```
 
-Chromaticity of the image primaries.
+图像原色的色度。
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -2271,9 +2288,9 @@ Chromaticity of the image primaries.
 recommendedExposureIndex?: int
 ```
 
-GPS measurement mode.The value range is all integers.
+推荐曝光指数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2291,9 +2308,9 @@ GPS measurement mode.The value range is all integers.
 referenceBlackWhite?: double[]
 ```
 
-Reference black point value and white point value.
+参考黑点值和白点值。
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -2311,7 +2328,7 @@ Reference black point value and white point value.
 relatedSoundFile?: string
 ```
 
-Name of the audio file related to the image data.
+与图像数据相关的音频文件的名称。
 
 **Type:** string
 
@@ -2331,9 +2348,9 @@ Name of the audio file related to the image data.
 resolutionUnit?: int
 ```
 
-Unit of the image resolution in the width and height directions.The value range is all integers.
+用于测量宽度方向上的图像分辨率和高度方向上的图像分辨率的单位。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2351,9 +2368,9 @@ Unit of the image resolution in the width and height directions.The value range 
 rowsPerStrip?: int
 ```
 
-Number of rows per image strip.The value range is all integers.
+每条图像数据的行数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2371,9 +2388,13 @@ Number of rows per image strip.The value range is all integers.
 samplesPerPixel?: int
 ```
 
-Number of color components per pixel, applicable to RGB and YCbCr color models.Since both the models are three-component models (three color channels, or one luminance component plus two chroma components), the standard value for this property is 3.For JPEG-compressed images, this property will be replaced by the corresponding JPEG marker.The value range is all integers.
+记录每个像素的颜色分量数量，适用于RGB（红绿蓝，Red Green Blue）和YCbCr（亮度-蓝色色差-红色色差，Luma-Chrominance）色彩模型。
 
-**Type:** int
+由于这两种模型都是三分量模型（一个亮度分量加两个色度分量，或三个颜色通道），因此该标签的标准值为3。
+
+对于JPEG压缩图像，此标签将会被对应的JPEG标记替换。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2391,9 +2412,9 @@ Number of color components per pixel, applicable to RGB and YCbCr color models.S
 saturation?: int
 ```
 
-Color saturation adjustment policy applied by the camera. For example, standard processing and saturation reduction.The value range is all integers.
+相机应用的色彩饱和度调节策略。例如：标准、降饱和模式等。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2411,9 +2432,9 @@ Color saturation adjustment policy applied by the camera. For example, standard 
 sceneCaptureType?: int
 ```
 
-Type of the scene that is captured.The value range is all integers.
+拍摄的场景类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2431,7 +2452,7 @@ Type of the scene that is captured.The value range is all integers.
 sceneType?: ArrayBuffer
 ```
 
-Scene type.
+场景类型。
 
 **Type:** ArrayBuffer
 
@@ -2451,9 +2472,9 @@ Scene type.
 sensingMethod?: int
 ```
 
-Type of the image sensor on the camera.The value range is all integers.
+摄像头的图像传感器类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2471,9 +2492,9 @@ Type of the image sensor on the camera.The value range is all integers.
 sensitivityType?: int
 ```
 
-Sensitivity type.The value range is all integers.
+灵敏度类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2491,9 +2512,9 @@ Sensitivity type.The value range is all integers.
 sharpness?: int
 ```
 
-Edge enhancement processing method applied by the camera. For example, weak sharpening and standard sharpening.The value range is all integers.
+相机应用的边缘增强处理方式。例如：弱锐化、标准锐化等。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2511,9 +2532,9 @@ Edge enhancement processing method applied by the camera. For example, weak shar
 shutterSpeedValue?: double
 ```
 
-Shutter speed, expressed as an Additive System of Photographic Exposure (APEX) value.
+快门速度，表示为摄影曝光相加系统值APEX（Additive System of Photographic Exposure）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -2531,7 +2552,7 @@ Shutter speed, expressed as an Additive System of Photographic Exposure (APEX) v
 software?: string
 ```
 
-Name and version number of the software used to create the image.
+用于生成图像的软件名称和版本。
 
 **Type:** string
 
@@ -2551,7 +2572,7 @@ Name and version number of the software used to create the image.
 sourceExposureTimesOfCompositeImage?: ArrayBuffer
 ```
 
-Exposure time of source images for the composite image, for example, 1/33 s.
+合成图像的源图像的曝光时间，例如1/33秒。
 
 **Type:** ArrayBuffer
 
@@ -2571,9 +2592,9 @@ Exposure time of source images for the composite image, for example, 1/33 s.
 sourceImageNumberOfCompositeImage?: int[]
 ```
 
-Number of source images of the composite image.
+用于合成图像的源图像数量。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -2591,7 +2612,7 @@ Number of source images of the composite image.
 spatialFrequencyResponse?: ArrayBuffer
 ```
 
-Spatial frequency table of the camera or input device.
+相机或输入设备空间频率表。
 
 **Type:** ArrayBuffer
 
@@ -2611,7 +2632,7 @@ Spatial frequency table of the camera or input device.
 spectralSensitivity?: string
 ```
 
-Spectral sensitivity of each channel of the camera.
+指示相机每个通道的光谱灵敏度。
 
 **Type:** string
 
@@ -2631,9 +2652,9 @@ Spectral sensitivity of each channel of the camera.
 standardOutputSensitivity?: int
 ```
 
-Standard output sensitivity.The value range is all integers.
+标准输出灵敏度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2651,9 +2672,9 @@ Standard output sensitivity.The value range is all integers.
 stripByteCounts?: int[]
 ```
 
-Number of bytes in each strip after compression.
+压缩后每个条带中的字节数。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -2671,9 +2692,13 @@ Number of bytes in each strip after compression.
 stripOffsets?: int[]
 ```
 
-Strip storage offset of the image data, in bytes.To improve the efficiency of large image access, the original pixel data is divided into multiple contiguous blocks (called strips).This property stores the starting offset of each strip in the file sequentially.
+图像数据的分块存储偏移量，单位为字节（Byte）。
 
-**Type:** int[]
+为提高大图像访问效率，原始像素数据被分割为多个连续区块（称为条带）。
+
+此标签按顺序存储每个条带在文件中的起始位置偏移量。
+
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -2691,9 +2716,9 @@ Strip storage offset of the image data, in bytes.To improve the efficiency of la
 subfileType?: int
 ```
 
-Data type of a subfile. It has been deprecated. Use **newSubfileType** instead.The value range is all integers.
+已弃用标签，表示该子文件中的数据类型。请使用newSubfileType替代。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2711,9 +2736,9 @@ Data type of a subfile. It has been deprecated. Use **newSubfileType** instead.T
 subjectArea?: int[]
 ```
 
-Location and area of the main object in the entire scene.
+用于指示主要对象在整个场景中的位置和区域。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -2731,9 +2756,9 @@ Location and area of the main object in the entire scene.
 subjectDistance?: double
 ```
 
-Distance from the capture device to the photographed object, in meters.
+拍照设备到被摄体的距离。单位为米（m）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -2751,9 +2776,9 @@ Distance from the capture device to the photographed object, in meters.
 subjectDistanceRange?: int
 ```
 
-Distance range to the object.The value range is all integers.
+指示到对象的距离范围。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2771,9 +2796,9 @@ Distance range to the object.The value range is all integers.
 subjectLocation?: int[]
 ```
 
-Pixel coordinates of the primary object in the image (based on the origin in the upper left corner).
+图像中主体的像素坐标（基于左上角原点）。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -2791,7 +2816,7 @@ Pixel coordinates of the primary object in the image (based on the origin in the
 subsecTime?: string
 ```
 
-Second fraction of **DateTime**.
+记录DateTime标记的秒分数的标记。
 
 **Type:** string
 
@@ -2811,7 +2836,7 @@ Second fraction of **DateTime**.
 subsecTimeDigitized?: string
 ```
 
-Second of **DateTimeDigitized**.
+记录DateTimeDigitized标记的秒数。
 
 **Type:** string
 
@@ -2831,7 +2856,7 @@ Second of **DateTimeDigitized**.
 subsecTimeOriginal?: string
 ```
 
-Second of **DateTimeOriginal**.
+记录DateTimeOriginal标记的秒数。
 
 **Type:** string
 
@@ -2851,7 +2876,7 @@ Second of **DateTimeOriginal**.
 transferFunction?: string
 ```
 
-Transfer function for the image, which is usually used for color correction.
+图像的传递函数，通常用于颜色校正。
 
 **Type:** string
 
@@ -2871,7 +2896,7 @@ Transfer function for the image, which is usually used for color correction.
 userComment?: string
 ```
 
-User comments.
+用户评论。
 
 **Type:** string
 
@@ -2891,9 +2916,9 @@ User comments.
 whiteBalance?: int
 ```
 
-White balance.The value range is all integers.
+白平衡。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2911,9 +2936,9 @@ White balance.The value range is all integers.
 whitePoint?: double[]
 ```
 
-Chromaticity of the image white point.
+图像白点的色度。
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -2931,9 +2956,9 @@ Chromaticity of the image white point.
 xResolution?: double
 ```
 
-Image resolution in the width direction.
+宽度方向上的图像分辨率。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
@@ -2951,9 +2976,9 @@ Image resolution in the width direction.
 yCbCrCoefficients?: double[]
 ```
 
-Transformation matrix coefficients for converting RGB image data to YCbCr image data.
+用于将RGB图像数据转换为YCbCr图像数据的变换矩阵系数。
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 23
 
@@ -2971,9 +2996,9 @@ Transformation matrix coefficients for converting RGB image data to YCbCr image 
 yCbCrPositioning?: int
 ```
 
-Position of chroma components relative to the luminance component.The value range is all integers.
+色度分量相对于亮度分量的位置。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -2991,9 +3016,9 @@ Position of chroma components relative to the luminance component.The value rang
 yCbCrSubSampling?: int[]
 ```
 
-Sampling ratios of the chroma components and luminance component.
+色度分量与亮度分量的采样比。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 23
 
@@ -3011,9 +3036,9 @@ Sampling ratios of the chroma components and luminance component.
 yResolution?: double
 ```
 
-Image resolution in the height direction.
+高度方向上的图像分辨率。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 

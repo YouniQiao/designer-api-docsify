@@ -10,6 +10,12 @@ Represents the network connection handle.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## on('netAvailable')
 
 ```TypeScript
@@ -33,9 +39,9 @@ Registers a listener for netAvailable events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netAvailable' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetHandle&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -81,9 +87,9 @@ Registers a listener for netBlockStatusChange events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netBlockStatusChange' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetBlockStatusInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetBlockStatusInfo&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -131,9 +137,9 @@ Registers a listener for **netCapabilitiesChange** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netCapabilitiesChange' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetCapabilityInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetCapabilityInfo&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -179,9 +185,9 @@ Registers a listener for netConnectionPropertiesChange events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netConnectionPropertiesChange' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetConnectionPropertyInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetConnectionPropertyInfo&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -229,9 +235,9 @@ Registers a listener for **netLost** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netLost' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetHandle&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -279,9 +285,9 @@ Registers a listener for netUnavailable events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netUnavailable' | Yes | Indicates Event name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -326,7 +332,7 @@ Registers a listener for netBlockStatusChange events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetBlockStatusInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetBlockStatusInfo&gt; | Yes | the callback used to return the result. |
 
 ## onNetLost
 
@@ -350,7 +356,7 @@ Registers a listener for **netLost** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetHandle&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | the callback used to return the result. |
 
 ## onNetUnavailable
 
@@ -374,7 +380,7 @@ Registers a listener for netUnavailable events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 ## register
 
@@ -400,20 +406,20 @@ Receives status change notifications of a specified network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of register. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of register. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [2101008](../errorcode-net-connection.md#2101008-callback-already-exists) | The callback already exists. |
-| [2101022](../errorcode-net-connection.md#2101022-number-of-requests-exceeding-the-maximum) | The number of requests exceeded the maximum allowed. |
+| 2101008 | The callback already exists. |
+| 401 | Parameter error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 201 | Permission denied. |
+| 2101022 | The number of requests exceeded the maximum allowed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -447,18 +453,18 @@ Cancels listening for network status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of unregister. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [2101007](../errorcode-net-connection.md#2101007-callback-not-exist) | The callback does not exist. |
+| 401 | Parameter error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+| 2101007 | The callback does not exist. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

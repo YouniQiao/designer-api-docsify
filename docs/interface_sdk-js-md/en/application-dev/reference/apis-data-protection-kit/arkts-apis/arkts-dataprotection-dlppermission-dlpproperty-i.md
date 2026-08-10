@@ -1,6 +1,6 @@
 # DLPProperty
 
-Represents the authorization information.
+表示授权相关信息。
 
 **Since:** 21
 
@@ -10,15 +10,21 @@ Represents the authorization information.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## actionUponExpiry
 
 ```TypeScript
 actionUponExpiry?: ActionType
 ```
 
-Whether the file can be opened after the permission expires (with the editing permission). This parameter is valid only when **expireTime** is not empty. This parameter is left empty by default.
+表示到期后文件是否允许打开（打开后拥有编辑权限），仅在expireTime不为空时生效，默认为空。
 
-**Type:** ActionType
+**Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 
 **Since:** 21
 
@@ -34,7 +40,7 @@ Whether the file can be opened after the permission expires (with the editing pe
 allowedOpenCount?: number
 ```
 
-Number of allowed opening times. The default value is **0**. No value range restriction is specified.
+表示允许打开的次数，默认为0。无范围限制。
 
 **Type:** number
 
@@ -52,7 +58,7 @@ Number of allowed opening times. The default value is **0**. No value range rest
 authUserList?: Array<AuthUser>
 ```
 
-List of users who are authorized to access the DLP file. By default, this parameter is left blank.
+表示授权用户列表，默认为空。
 
 **Type:** Array&lt;AuthUser&gt;
 
@@ -70,7 +76,7 @@ List of users who are authorized to access the DLP file. By default, this parame
 contactAccount: string
 ```
 
-Account of the contact. The value contains 1 to 255 bytes. If the value is out of range, error code 401is thrown.
+表示联系人账号。长度不超过255字节，超出此范围抛出错误码401。
 
 **Type:** string
 
@@ -88,7 +94,7 @@ Account of the contact. The value contains 1 to 255 bytes. If the value is out o
 countdown?: number
 ```
 
-Validity period for file viewing, in seconds. The default value is 0. After the validity period expires,the file is automatically closed. The value range is [-2\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_31\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_, 2\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_31\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_-1].
+表示文件可被查看的有效时间，超时后打开的文件将自动关闭，默认为0，单位：s。取值范围为[-2&lt;sup&gt;31&lt;/sup&gt;, 2&lt;sup&gt;31&lt;/sup&gt;-1]。
 
 **Type:** number
 
@@ -108,7 +114,7 @@ Validity period for file viewing, in seconds. The default value is 0. After the 
 everyoneAccessList?: Array<DLPFileAccess>
 ```
 
-Permission granted to everyone. This parameter is left blank by default.
+表示授予所有人的权限，默认为空。
 
 **Type:** Array&lt;DLPFileAccess&gt;
 
@@ -126,7 +132,7 @@ Permission granted to everyone. This parameter is left blank by default.
 expireTime?: number
 ```
 
-Timestamp when the file permission has expired. This parameter is left blank by default. The value must be greater than or equal to 0. If the value is out of range, an error code is thrown. Unit: s.
+表示文件权限到期时间戳，默认为空。取值范围大于等于0，超出此范围抛出错误码。单位：s。
 
 **Type:** number
 
@@ -144,9 +150,9 @@ Timestamp when the file permission has expired. This parameter is left blank by 
 extensionFields?: Record<string, Object>
 ```
 
-Extended attribute of a DLP file. This parameter is left empty by default.
+表示DLP文件的扩展属性，默认为空。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 24
 
@@ -164,7 +170,7 @@ Extended attribute of a DLP file. This parameter is left empty by default.
 fileId?: string
 ```
 
-System account ID. This parameter is left empty by default. The value contains a maximum of 255 bytes. If the value is out of range, error code 401 is thrown.
+表示文件的标识，默认为空。长度不超过255字节，超出此范围抛出错误码401。
 
 **Type:** string
 
@@ -182,7 +188,7 @@ System account ID. This parameter is left empty by default. The value contains a
 offlineAccess: boolean
 ```
 
-Whether the file can be accessed offline. **true**: yes; **false**: no.
+表示是否是离线打开。true表示允许离线打开，false表示不可离线打开。
 
 **Type:** boolean
 
@@ -200,7 +206,7 @@ Whether the file can be accessed offline. **true**: yes; **false**: no.
 ownerAccount: string
 ```
 
-Account of the owner who can set the permission. The value contains 1 to 255 bytes. If the value is out of range, error code 401 is thrown.
+表示权限设置者账号。长度不超过255字节，超出此范围抛出错误码401。
 
 **Type:** string
 
@@ -218,7 +224,7 @@ Account of the owner who can set the permission. The value contains 1 to 255 byt
 ownerAccountID: string
 ```
 
-Account ID of the owner. The value contains a maximum of 255 bytes. If the value is out of range, error code401 is thrown.
+表示权限设置者账号的ID。长度不超过255字节，超出此范围抛出错误码401。
 
 **Type:** string
 
@@ -236,9 +242,9 @@ Account ID of the owner. The value contains a maximum of 255 bytes. If the value
 ownerAccountType: AccountType
 ```
 
-Account type of the owner.
+表示权限设置者账号类型。
 
-**Type:** AccountType
+**Type:** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
 
 **Since:** 21
 
@@ -254,7 +260,7 @@ Account type of the owner.
 waterMarkConfig?: boolean
 ```
 
-Whether watermarks are required. **true**: yes; **false**: no. This parameter is left empty by default.
+表示是否要求添加水印。true表示要求添加水印，false表示不要求添加水印，默认为空。
 
 **Type:** boolean
 

@@ -1,12 +1,18 @@
 # request (System API)
 
+## Modules to Import
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## request
 
 ```TypeScript
 export function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void
 ```
 
-Plugin component request method used to send a request for the information of the template it wants.
+组件使用方向组件提供方主动请求组件。组件提供方需通过onRequest事件监听响应请求，并通过回调返回组件模板信息。
 
 **Since:** 23
 
@@ -24,6 +30,6 @@ Plugin component request method used to send a request for the information of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Plugin component request parameters for stage. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RequestCallbackParameters&gt; | Yes | Plugin component request event callback. |
+| param | [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes | 组件模板的详细请求信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestCallbackParameters&gt; | Yes | 此次请求的异步回调，通过回调接口的参数返回请求响应的数据。 |
 

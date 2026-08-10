@@ -10,6 +10,12 @@ Get network status information.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## blocked
 
 ```TypeScript
@@ -36,7 +42,7 @@ netHandle: NetHandle
 
 Defines the handle of the data network.
 
-**Type:** NetHandle
+**Type:** [NetHandle](arkts-network-connection-nethandle-i.md)
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # DialogTextStyleOptions
 
-Defines DialogTextStyleOptions in the dialog.
+在Dialog定义文本样式属性。
 
 **Since:** 26.1.0
 
@@ -10,15 +10,21 @@ Defines DialogTextStyleOptions in the dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## wordBreak
 
 ```TypeScript
 wordBreak?: WordBreak
 ```
 
-Set the word break type.
+设置分词类型。
 
-**Type:** WordBreak
+**Type:** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
 
 **Since:** 26.1.0
 

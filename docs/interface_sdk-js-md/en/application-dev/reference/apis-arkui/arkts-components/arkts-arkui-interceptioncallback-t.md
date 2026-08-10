@@ -4,7 +4,7 @@
 declare type InterceptionCallback = (from: NavPathInfo|NavBar, to: NavPathInfo|NavBar, pathStack: NavPathStack, operation: NavigationOperation, isAnimated: boolean) => void
 ```
 
-Defines the callback triggered before a navigation page is redirected.
+Navigation页面跳转前的拦截回调。
 
 **Since:** 22
 
@@ -22,9 +22,9 @@ Defines the callback triggered before a navigation page is redirected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| NavBar | Yes | Information about the exit page. The value **navBar** indicates that the top page is the home page.  |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| NavBar | Yes | Information about the enter page. The value **navBar** indicates that the top page is the home page.  |
-| pathStack | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page stack.  |
-| operation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current page redirection type.  |
-| isAnimated | boolean | Yes | Whether to enable the transition animation. \_\_\_HTML\_TAG\_USD\_0\_\_\_**true**: Enable the transition animation.\_\_\_HTML\_TAG\_USD\_1\_\_\_**false**: Disable the transition animation.  |
+| from | [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | 退场页面信息。参数值为navBar，则表示跳转前的页面为Navigation首页。 |
+| to | [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | 进场页面信息。参数值为navBar，则表示跳转的目标页面为Navigation首页。 |
+| pathStack | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | 页面栈。 |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | 当前页面跳转类型。 |
+| isAnimated | boolean | Yes | 页面跳转是否有动画。<br/>true：页面跳转有动画。<br/>false：页面跳转没有动画。 |
 

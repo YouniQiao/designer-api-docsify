@@ -1,6 +1,6 @@
 # InterruptEvent
 
-Describes the interruption event received by the application when the audio is interrupted.
+音频中断时，应用接收的中断事件。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Describes the interruption event received by the application when the audio is i
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## eventType
 
 ```TypeScript
 eventType: InterruptType
 ```
 
-Whether the audio interruption has started or ended.
+音频中断事件类型，开始或是结束。
 
-**Type:** InterruptType
+**Type:** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Whether the audio interruption has started or ended.
 forceType: InterruptForceType
 ```
 
-Whether the audio interruption is forcibly taken by the system or taken by an application.
+操作是由系统强制执行或是由应用程序执行。
 
-**Type:** InterruptForceType
+**Type:** [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)
 
 **Since:** 9
 
@@ -56,9 +62,9 @@ Whether the audio interruption is forcibly taken by the system or taken by an ap
 hintType: InterruptHint
 ```
 
-Hint provided along the interruption to provide information related to the interruption event.
+中断提示，用于提供中断事件的相关信息。
 
-**Type:** InterruptHint
+**Type:** [InterruptHint](arkts-audio-audio-interrupthint-e.md)
 
 **Since:** 9
 

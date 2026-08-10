@@ -1,6 +1,6 @@
 # DataBlob
 
-Encapsulates binary data. The core field **data** is of the Uint8Array type.
+二进制数据的封装接口，核心字段data为Uint8Array类型。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Encapsulates binary data. The core field **data** is of the Uint8Array type.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## data
 
 ```TypeScript
 data: Uint8Array
 ```
 
-Indicates the content of the data blob.
+表示数据内容。
 
 **Type:** Uint8Array
 

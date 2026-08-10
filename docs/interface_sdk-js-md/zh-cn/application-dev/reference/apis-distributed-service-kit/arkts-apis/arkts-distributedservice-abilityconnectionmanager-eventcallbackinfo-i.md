@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## data
 
 ```TypeScript
@@ -58,7 +64,7 @@ reason?: DisconnectReason
 
 表示断连原因。
 
-**类型：** DisconnectReason
+**类型：** [DisconnectReason](arkts-distributedservice-abilityconnectionmanager-disconnectreason-e.md)
 
 **起始版本：** 18
 
@@ -78,7 +84,7 @@ sessionId: int
 
 表示当前事件对应的协同会话ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

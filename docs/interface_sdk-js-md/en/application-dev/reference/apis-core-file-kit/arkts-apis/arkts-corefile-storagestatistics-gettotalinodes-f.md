@@ -1,12 +1,18 @@
 # getTotalInodes
 
+## Modules to Import
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getTotalInodes
 
 ```TypeScript
 function getTotalInodes(): Promise<long>
 ```
 
-Get the total inodes.
+获取文件系统的inode资源总量，仅支持查询系统数据分区。使用Promise异步回调。
 
 **Since:** 24
 
@@ -22,7 +28,7 @@ Get the total inodes.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | return Promise |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回文件系统inode资源总量。 |
 
 **Error codes:**
 
@@ -31,7 +37,7 @@ Get the total inodes.
 | 13600001 | IPC error. |
 | 13600016 | Failed to query the inode information of the data partition. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

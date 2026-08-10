@@ -1,6 +1,6 @@
 # AudioSessionScene
 
-Enumerates the audio session scenes.
+枚举音频会话场景。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the audio session scenes.
 AUDIO_SESSION_SCENE_MEDIA = 0
 ```
 
-Scene for media.
+媒体音频会话场景。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Scene for media.
 AUDIO_SESSION_SCENE_GAME = 1
 ```
 
-Scene for game.
+游戏音频会话场景。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ Scene for game.
 AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2
 ```
 
-Scene for voice communication.
+VoIP语音通话音频会话场景。
 
 **Since:** 20
 

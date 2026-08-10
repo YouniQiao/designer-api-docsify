@@ -1,6 +1,7 @@
 # SystemDefinedPixelMap
 
-Represents the image data type corresponding to [PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ defined by the system. It is a child class of [SystemDefinedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and holds only binary data of **PixelMap**.
+与系统侧定义的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)数据类型对应的图片数据类型，是  
+[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类，仅保存PixelMap的二进制数据。
 
 **Inheritance/Implementation:** SystemDefinedPixelMap extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
@@ -12,13 +13,19 @@ Represents the image data type corresponding to [PixelMap]\_\_\_JSDOC\_LINK\_DES
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## rawData
 
 ```TypeScript
 set rawData(value: Uint8Array)
 ```
 
-Indicates the raw data of pixel map
+PixelMap对象的二进制数据。
 
 **Type:** Uint8Array
 

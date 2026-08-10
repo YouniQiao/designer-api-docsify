@@ -1,12 +1,18 @@
 # getRealActiveTime
 
+## Modules to Import
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getRealActiveTime
 
 ```TypeScript
 function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void
 ```
 
-Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses an asynchronous callback to return the result.
+获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback异步回调。
 
 **Since:** 8
 
@@ -24,8 +30,8 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | Yes | Whether the time to return is in nanoseconds.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **true**: The result is in nanoseconds.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **false**: The result is in milliseconds. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. |
+| isNano | boolean | Yes | 返回结果是否为纳秒数。&lt;br/&gt;- true：表示返回结果为纳秒数（ns）。 &lt;br/&gt;- false：表示返回结果为毫秒数（ms）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回自系统启动以来经过的时间，不包括深度睡眠时间。 |
 
 **Error codes:**
 
@@ -33,7 +39,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -59,7 +65,7 @@ try {
 function getRealActiveTime(callback: AsyncCallback<number>): void
 ```
 
-Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses an asynchronous callback to return the result.
+获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback异步回调。
 
 **Since:** 8
 
@@ -77,7 +83,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回自系统启动以来经过的时间（ms），不包括深度睡眠时间。 |
 
 **Error codes:**
 
@@ -85,7 +91,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,7 +117,7 @@ try {
 function getRealActiveTime(isNano?: boolean): Promise<number>
 ```
 
-Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses a promise to return the result.
+获取自系统启动以来经过的时间，不包括深度睡眠时间，使用Promise异步回调。
 
 **Since:** 8
 
@@ -129,13 +135,13 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **true**: The result is in nanoseconds.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **false**: The result is in milliseconds. |
+| isNano | boolean | No | 返回结果是否为纳秒数，默认值为false。&lt;br/&gt;- true：表示返回结果为纳秒数（ns）。 &lt;br/&gt;- false：表示返回结果为毫秒数（ms）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the time elapsed since system startup, excluding the deep sleep time. |
+| Promise&lt;number&gt; | Promise对象，返回自系统启动以来经过的时间，但不包括深度睡眠时间。 |
 
 **Error codes:**
 
@@ -143,7 +149,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

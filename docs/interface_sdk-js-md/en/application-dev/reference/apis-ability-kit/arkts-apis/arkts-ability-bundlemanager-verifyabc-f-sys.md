@@ -1,12 +1,18 @@
 # verifyAbc (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## verifyAbc
 
 ```TypeScript
 function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callback: AsyncCallback<void>): void
 ```
 
-Verifies an .abc file. This API uses an asynchronous callback to return the result.
+根据给定的abcPaths和deleteOriginalFiles校验.abc文件。使用callback异步回调。
 
 **Since:** 11
 
@@ -24,20 +30,20 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abcPaths | Array&lt;string&gt; | Yes | Path of the .abc file. |
-| deleteOriginalFiles | boolean | Yes | Whether to delete the .abc file. **true** to delete, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | [Callback]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| abcPaths | Array&lt;string&gt; | Yes | .abc文件路径。 |
+| deleteOriginalFiles | boolean | Yes | 是否删除.abc文件，true删除，false不删除。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined；否则为错 误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) | Failed to verify the abc file. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700201 | Failed to verify the abc file. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -67,7 +73,7 @@ try {
 function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promise<void>
 ```
 
-Verifies an .abc file. This API uses a promise to return the result.
+根据给定的abcPaths和deleteOriginalFiles校验.abc文件。使用Promise异步回调。
 
 **Since:** 11
 
@@ -85,25 +91,25 @@ Verifies an .abc file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abcPaths | Array&lt;string&gt; | Yes | Path of the .abc file. |
-| deleteOriginalFiles | boolean | Yes | Whether to delete the .abc file. **true** to delete, **false** otherwise. |
+| abcPaths | Array&lt;string&gt; | Yes | .abc文件路径。 |
+| deleteOriginalFiles | boolean | Yes | 是否删除.abc文件，true删除，false不删除。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) | Failed to verify the abc file. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700201 | Failed to verify the abc file. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -1,12 +1,18 @@
 # trigger
 
+## Modules to Import
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
+
 ## trigger
 
 ```TypeScript
 function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void
 ```
 
-Proactively triggers a WantAgent object.This API uses an asynchronous callback to return the result.
+触发WantAgent实例，执行指定的操作（启动Ability、发送公共事件等）。使用callback异步回调。
 
 **Since:** 9
 
@@ -22,17 +28,17 @@ Proactively triggers a WantAgent object.This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target WantAgent object. |
-| triggerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CompleteData&gt; | No | Callback used to return the result. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | Yes | 表示触发WantAgent实例时携带的信息，如自定义的extraInfos。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CompleteData&gt; | No | 主动激发WantAgent实例的回调方法。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';

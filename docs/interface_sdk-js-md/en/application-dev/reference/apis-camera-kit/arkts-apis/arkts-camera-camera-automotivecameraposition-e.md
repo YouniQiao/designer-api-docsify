@@ -1,6 +1,6 @@
 # AutomotiveCameraPosition
 
-Enum for automotive camera position.
+表示Car设备摄像头位置的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enum for automotive camera position.
 AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0
 ```
 
-Exterior other position.
+Car设备外部其他位置摄像头。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Exterior other position.
 AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_FRONT = 1
 ```
 
-Exterior front position.
+Car设备外部前侧摄像头。
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ Exterior front position.
 AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2
 ```
 
-Exterior rear position.
+Car设备外部后侧摄像头。
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ Exterior rear position.
 AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_LEFT = 3
 ```
 
-Exterior left position.
+Car设备外部左侧摄像头。
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ Exterior left position.
 AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_RIGHT = 4
 ```
 
-Exterior right position.
+Car设备外部右侧摄像头。
 
 **Since:** 26.0.0
 
@@ -116,7 +116,7 @@ Exterior right position.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_OTHER = 5
 ```
 
-Interior other position.
+Car设备内部其他位置摄像头。
 
 **Since:** 26.0.0
 
@@ -136,7 +136,7 @@ Interior other position.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6
 ```
 
-Interior left side position of the first row.
+Car设备内部第一排左侧摄像头。
 
 **Since:** 26.0.0
 
@@ -156,7 +156,7 @@ Interior left side position of the first row.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_CENTER = 7
 ```
 
-Interior center side position of the first row.
+Car设备内部第一排中央摄像头。
 
 **Since:** 26.0.0
 
@@ -176,7 +176,7 @@ Interior center side position of the first row.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_RIGHT = 8
 ```
 
-Interior right side position of the first row.
+Car设备内部第一排右侧摄像头。
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ Interior right side position of the first row.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9
 ```
 
-Interior left side position of the second row.
+Car设备内部第二排左侧摄像头。
 
 **Since:** 26.0.0
 
@@ -216,7 +216,7 @@ Interior left side position of the second row.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_CENTER = 10
 ```
 
-Interior center side position of the second row.
+Car设备内部第二排中央摄像头。
 
 **Since:** 26.0.0
 
@@ -236,7 +236,7 @@ Interior center side position of the second row.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_RIGHT = 11
 ```
 
-Interior right side position of the second row.
+Car设备内部第二排右侧摄像头。
 
 **Since:** 26.0.0
 
@@ -256,7 +256,7 @@ Interior right side position of the second row.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12
 ```
 
-Interior left side position of the third row.
+Car设备内部第三排左侧摄像头。
 
 **Since:** 26.0.0
 
@@ -276,7 +276,7 @@ Interior left side position of the third row.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_CENTER = 13
 ```
 
-Interior center side position of the third row.
+Car设备内部第三排中央摄像头。
 
 **Since:** 26.0.0
 
@@ -296,7 +296,7 @@ Interior center side position of the third row.
 AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_RIGHT = 14
 ```
 
-Interior right side position of the third row.
+Car设备内部第三排右侧摄像头。
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # CameraStatusInfo
 
-Describes the camera status information.
+相机管理器回调返回的接口实例，该实例表示相机状态信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the camera status information.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## camera
 
 ```TypeScript
 camera: CameraDevice
 ```
 
-Camera device.
+相机信息。
 
-**Type:** CameraDevice
+**Type:** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Camera device.
 status: CameraStatus
 ```
 
-Camera status.
+相机状态。
 
-**Type:** CameraStatus
+**Type:** [CameraStatus](arkts-camera-camera-camerastatus-e.md)
 
 **Since:** 10
 

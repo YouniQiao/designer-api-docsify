@@ -6,7 +6,7 @@
 declare function statSync(path: string): Stat
 ```
 
-Obtains file information. This API returns the result synchronously.
+以同步方法获取文件的信息。
 
 **Since:** 6
 
@@ -24,11 +24,11 @@ Obtains file information. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
+| path | string | Yes | 待获取文件的应用沙箱路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | File information obtained. |
+| [Stat](arkts-corefile-fileio-stat-i.md) | 表示文件的具体信息。 |
 

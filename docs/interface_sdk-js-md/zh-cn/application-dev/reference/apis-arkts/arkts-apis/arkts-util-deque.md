@@ -11,6 +11,12 @@ Deque（double-ended queue）基于循环队列的数据结构实现，支持两
  > - 容器类使用静态语言实现，限制了内部存储方式和所支持的属性，不支持自定义属性和方法。
 
 
+## 导入模块
+
+```TypeScript
+import { Deque } from 'kits/@kit.ArkTS';
+```
+
 ## 汇总
 
 ### 类

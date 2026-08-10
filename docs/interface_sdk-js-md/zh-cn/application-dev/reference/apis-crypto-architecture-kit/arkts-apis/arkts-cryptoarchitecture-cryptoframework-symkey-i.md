@@ -1,10 +1,10 @@
 # SymKey
 
-对称密钥，是[Key]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，在对称加解密时需要将其对象传入  
-[Cipher]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_实例的  
-[init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_方法使用。
+对称密钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在对称加解密时需要将其对象传入  
+[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法使用。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_对称密钥通过对称密钥生成器[SymKeyGenerator]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_来生成。
+&lt;br&gt;对称密钥通过对称密钥生成器[SymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md)来生成。
 
 **继承/实现关系：** SymKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)
 
@@ -17,6 +17,12 @@
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
 
 ## clearMem
 
@@ -38,7 +44,7 @@ clearMem(): void
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

@@ -12,6 +12,12 @@ Defines additional options for selecting media assets from Gallery. It inherits 
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## themeColor
 
 ```TypeScript
@@ -20,7 +26,7 @@ themeColor?: CustomColors
 
 Theme color
 
-**Type:** CustomColors
+**Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
 **Since:** 12
 
@@ -40,10 +46,10 @@ userId?: int
 
 ID of the user space to access. The default value is **-1**.
 
-To use it as a parameter of  
-[PhotoViewPicker.select]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, request the permission **ohos.permission.INTERACT\_ACROSS\_LOCAL\_ACCOUNTS**.
+To use it as a parameter of   
+[PhotoViewPicker.select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select), request the permission **ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 

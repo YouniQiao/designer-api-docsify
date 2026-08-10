@@ -20,5 +20,5 @@ type OnBackupSizeReport = (reportInfo: string) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reportInfo | string | 是 | 框架扫描到的应用待备份数据量信息，为JSON格式字符串。  |
+| reportInfo | string | 是 | 框架扫描到的应用待备份数据量信息，为JSON格式字符串。 |
 

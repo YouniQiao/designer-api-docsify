@@ -34,7 +34,7 @@ setExtraConfig(config: InputMethodExtraConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 输入法扩展信息。 |
+| config | [InputMethodExtraConfig](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | 是 | 输入法扩展信息。 |
 
 ## nodeId
 

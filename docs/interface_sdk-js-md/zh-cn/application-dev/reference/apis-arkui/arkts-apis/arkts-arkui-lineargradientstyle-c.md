@@ -1,8 +1,8 @@
 # LinearGradientStyle
 
-显示为线性渐变。LinearGradientStyle继承自[ShaderStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+显示为线性渐变。LinearGradientStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md)。
 
-**继承/实现关系：** LinearGradientStyle extends [ShaderStyle](arkts-arkui-component/textcommon-shaderstyle-c.md)
+**继承/实现关系：** LinearGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **起始版本：** 20
 
@@ -36,7 +36,7 @@ constructor(options: LinearGradientOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 显示为线性渐变效果。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_[LinearGradientOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中的direction默认值按 [GradientDirection]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中的NONE处理。 |
+| options | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | 是 | 显示为线性渐变效果。 &lt;br&gt;[LinearGradientOptions](arkts-arkui-common-lineargradientoptions-i.md)中的direction默认值按 [GradientDirection](arkts-arkui-enums-gradientdirection-e.md)中的NONE处理。 |
 
 ## options
 
@@ -46,7 +46,7 @@ options: LinearGradientOptions
 
 显示为线性渐变效果。
 
-**类型：** LinearGradientOptions
+**类型：** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
 
 **起始版本：** 20
 

@@ -4,7 +4,7 @@
 export type AgentExtensionConnectCallback = _AgentExtensionConnectCallback
 ```
 
-Represents the AgentExtensionConnectCallback type.
+表示AgentExtensionConnectCallback类型。
 
 **Since:** 24
 

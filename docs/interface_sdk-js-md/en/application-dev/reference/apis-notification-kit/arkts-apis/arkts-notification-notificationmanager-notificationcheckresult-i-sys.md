@@ -1,6 +1,6 @@
 # NotificationCheckResult (System API)
 
-Describes the result of check notifications.
+通知校验结果。
 
 **Since:** 10
 
@@ -12,19 +12,21 @@ Describes the result of check notifications.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## code
 
 ```TypeScript
 code: int
 ```
 
-Result code.
+0-display，1-no display。
 
-**0**: display.
-
-**1**: no display.
-
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -44,7 +46,7 @@ Result code.
 message: string
 ```
 
-Result.
+结果信息。
 
 **Type:** string
 

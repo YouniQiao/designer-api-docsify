@@ -6,10 +6,16 @@ Popup是用于显示特定样式气泡。
  > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
  > - 该组件不支持在Wearable设备上使用。
  >
- > - 建议结合[Popup控制](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的自定义气泡功能。
+ > - 建议结合[Popup控制](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中的自定义气泡功能。
  ######  子组件
  无
 
+
+## 导入模块
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
 
 ## 汇总
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## priority
 
 ```TypeScript
@@ -18,7 +24,7 @@ priority?: Priority
 
 当前线程的优先级。如果返回为空，表示当前没有任务执行。不建议修改此值。
 
-**类型：** Priority
+**类型：** [Priority](arkts-arkts-taskpool-priority-e.md)
 
 **起始版本：** 10
 

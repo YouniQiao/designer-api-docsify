@@ -1,6 +1,6 @@
 # PhotoSubtype
 
-Enumerates the [PhotoAsset]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ types.
+Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) types.
 
 **Since:** 12
 

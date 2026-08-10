@@ -1,6 +1,6 @@
 # OsAccountInfo
 
-Represents information about an OS account.
+表示系统账号信息。
 
 **Since:** 7
 
@@ -10,15 +10,21 @@ Represents information about an OS account.
 
 **System capability:** SystemCapability.Account.OsAccount
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isLoggedIn
 
 ```TypeScript
 isLoggedIn?: boolean
 ```
 
-Whether the OS account is logged in. The value **true** means that the OS account has logged in; the value **false** means the opposite.
+是否登录。true表示已登录；false表示未登录。
 
-This is a system API. The default value is **false**.
+此接口为系统接口，默认为false。
 
 **Type:** boolean
 
@@ -38,9 +44,9 @@ This is a system API. The default value is **false**.
 shortName?: string
 ```
 
-Short name of the OS account.
+系统账号的短名称。
 
-This is a system API and is left blank by default.
+此接口为系统接口，默认为空。
 
 **Type:** string
 

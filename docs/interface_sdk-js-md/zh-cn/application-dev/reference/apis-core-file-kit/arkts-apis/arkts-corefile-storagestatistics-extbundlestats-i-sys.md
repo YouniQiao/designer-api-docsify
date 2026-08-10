@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## businessName
 
 ```TypeScript
@@ -40,7 +46,7 @@ businessName: string
 flag: boolean
 ```
 
-系统应用或系统服务的空间占用是否需要在“设置-存储”界面单独展示。true表示单独显示，false表示不单独显示。该值为false时，空间占用会被归并到businessName指定的应用中。
+系统应用或系统服务的空间占用是否需要在“设置-存储”界面单独展示。true表示单独显示，false表示不单独显示。 该值为false时，空间占用会被归并到businessName指定的应用中。
 
 **类型：** boolean
 
@@ -64,7 +70,7 @@ size: long
 
 系统应用或系统服务的空间占用大小，单位Byte。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 23
 

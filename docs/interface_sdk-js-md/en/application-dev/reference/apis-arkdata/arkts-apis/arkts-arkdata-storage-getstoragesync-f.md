@@ -6,7 +6,7 @@
 function getStorageSync(path: string): Storage
 ```
 
-Reads the specified file and loads its data to the **Storage** instance for data operations.
+读取指定文件，将数据加载到Storage实例，用于数据操作。
 
 **Since:** 6
 
@@ -22,11 +22,11 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the target file. |
+| path | string | Yes | 应用程序内部数据存储路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Storage** instance used for data storage operations. |
+| [Storage](arkts-arkdata-system-storage-storage-c.md) | 获取到要操作的Storage实例，用于进行数据存储操作。 |
 

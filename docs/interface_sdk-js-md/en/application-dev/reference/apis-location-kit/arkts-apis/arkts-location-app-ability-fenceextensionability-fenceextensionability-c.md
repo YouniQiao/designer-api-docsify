@@ -10,6 +10,12 @@ Class of fence extension ability.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { FenceExtensionAbility } from 'kits/@kit.LocationKit';
+```
+
 ## onDestroy
 
 ```TypeScript
@@ -28,7 +34,7 @@ Called back before a fence extension is destroyed.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FenceExtensionAbility } from '@kit.LocationKit';
@@ -64,9 +70,9 @@ Called back when geofence status is change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | transition | geoLocationManager.GeofenceTransition | Yes | Geofence transition status |
-| additions | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, string&gt; | Yes | Indicates additional information |
+| additions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | Indicates additional information |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { FenceExtensionAbility, geoLocationManager } from '@kit.LocationKit';
@@ -121,7 +127,7 @@ context: FenceExtensionContext
 
 Indicates the fence extension context.
 
-**Type:** FenceExtensionContext
+**Type:** [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md)
 
 **Since:** 14
 

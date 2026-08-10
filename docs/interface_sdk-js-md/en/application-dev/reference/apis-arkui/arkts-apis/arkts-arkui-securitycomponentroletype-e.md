@@ -1,6 +1,6 @@
 # SecurityComponentRoleType
 
-Defines the screen reader role type of the component.
+定义组件的屏幕朗读功能角色类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines the screen reader role type of the component.
 ROLE_NONE = 0
 ```
 
-Null.
+Null
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Null.
 BUTTON = 1
 ```
 
-Button.
+按钮
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # WindowSizeLayoutBreakpointInfo
 
-Defines the window size layout breakpoint information.This interface provides the current breakpoint classification of the window's width and height based on the configured breakpoint thresholds.
+定义窗口大小断点信息。这个接口定义了当前窗口长宽的断点信息，基于配置好的断点阈值。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Defines the window size layout breakpoint information.This interface provides th
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## heightBreakpoint
 
 ```TypeScript
 readonly heightBreakpoint: HeightBreakpoint
 ```
 
-The height breakpoint classification of the current window.This value indicates which height category the window currently falls into based on the configured height breakpoint thresholds and aspect ratio.
+当前窗口的高度断点分类。该值根据已配置的高度断点阈值和宽高比，指示窗口当前所处的高度类别。
 
-**Type:** HeightBreakpoint
+**Type:** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
 
 **Since:** 24
 
@@ -36,9 +42,9 @@ The height breakpoint classification of the current window.This value indicates 
 readonly widthBreakpoint: WidthBreakpoint
 ```
 
-The width breakpoint classification of the current window.This value indicates which width category the window currently falls into based on the configured width breakpoint thresholds.
+当前窗口的宽度断点分类。该值根据已配置的宽度断点阈值，指示窗口当前处于哪个宽度类别。
 
-**Type:** WidthBreakpoint
+**Type:** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 
 **Since:** 24
 

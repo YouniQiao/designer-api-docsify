@@ -1,6 +1,6 @@
 # DownloadConfig
 
-Defines the download task configuration.
+下载任务的配置信息。
 
 **Since:** 6
 
@@ -10,13 +10,19 @@ Defines the download task configuration.
 
 **System capability:** SystemCapability.MiscServices.Download
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## background
 
 ```TypeScript
 background?: boolean
 ```
 
-Whether to enable the background task notification. When this parameter is enabled, the download status is displayed in the notification panel. The value **true** means the parameter is enabled, and **false** means the opposite. The default value is **false**.
+后台任务通知开关，启用后可在通知中显示下载状态。true表示启用，false表示禁用。默认值为false。
 
 **Type:** boolean
 
@@ -34,7 +40,7 @@ Whether to enable the background task notification. When this parameter is enabl
 description?: string
 ```
 
-Description of the download session. The default value is an empty string.
+设置下载会话的描述。默认值为空字符串。
 
 **Type:** string
 
@@ -52,11 +58,11 @@ Description of the download session. The default value is an empty string.
 enableMetered?: boolean
 ```
 
-Whether download is allowed on a metered connection. The value **true** means the download is allowed, and  
-**false** means the opposite. The default value is **false**.
-    **NOTE**  
-    
-    In general cases, a mobile data connection is metered, while a Wi-Fi connection is not.
+表示设置是否允许在按流量计费的连接下下载任务的配置信息。true表示允许，false表示不允许。默认值为false。
+
+> **说明：**
+> 
+> Wi-Fi为非计费网络，数据流量为计费网络。
 
 **Type:** boolean
 
@@ -74,8 +80,7 @@ Whether download is allowed on a metered connection. The value **true** means th
 enableRoaming?: boolean
 ```
 
-Whether download is allowed on a roaming network. The value **true** means the download is allowed, and **false**  
-means the opposite. The default value is **false**.
+表示设置是否允许在漫游网络中下载任务的配置信息。true表示允许，false表示不允许。默认值为false。
 
 **Type:** boolean
 
@@ -93,12 +98,12 @@ means the opposite. The default value is **false**.
 filePath?: string
 ```
 
-Path where the downloaded file is stored. The default value is the cache directory of the caller (that is, the input **context**). The default file name is the part truncated from the last slash (/) in the URL.
+设置下载路径。默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。
 
-- In the FA model, use the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_method to obtain the application storage path.  
-- In the Stage model, use the **AbilityContext** class in  
-[Context (Context Base Class of the Stage Model)]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the file path.
+- FA模型下使用  
+[Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir)方法获取应用存储路径。
+
+- Stage模型下使用[Context (Stage模型的上下文基类)](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)中AbilityContext的类获取文件路径。
 
 **Type:** string
 
@@ -116,7 +121,7 @@ Path where the downloaded file is stored. The default value is the cache directo
 header?: Object
 ```
 
-HTTPS flag header to be included in the download request. The default value is empty.
+添加要包含在下载请求中的HTTPS标志头。默认值为空。
 
 **Type:** Object
 
@@ -134,15 +139,16 @@ HTTPS flag header to be included in the download request. The default value is e
 networkType?: int
 ```
 
-Network type that can be used for download. The allowed network type is determined by bitwise operation of  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. The following settings are supported:
+设置允许下载的网络类型，通过  
+[网络类型常量](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)的位运算方式决定允许的网络类型，支持如下几种设置方式: 
 
-- Only the cellular network is supported. The parameter is **NETWORK\_MOBILE** or **0x00000001**.  
-- Only WLAN is supported. The parameter is **NETWORK\_WIFI** or **0x00010000**.  
-- Both cellular network and WLAN are supported, which is the default settings. The parameter is  
-**NETWORK\_MOBILE 
+- 仅支持蜂窝网络下载，参数为NETWORK_MOBILE或0x00000001   
+- 仅支持WLAN网络下载，参数为NETWORK_WIFI或0x00010000  
+- 参数默认值，支持蜂窝/WLAN网络下载，参数为NETWORK_MOBILE | NETWORK_WIFI或0x00010001。
 
-**Type:** int
+当参数为NETWORK_MOBILE | NETWORK_WIFI时，enableMetered和enableRoaming参数不生效。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 6
 
@@ -158,7 +164,7 @@ Network type that can be used for download. The allowed network type is determin
 title?: string
 ```
 
-Download task name. The default value is **download**.
+设置下载任务名称。默认值为download。
 
 **Type:** string
 
@@ -176,8 +182,8 @@ Download task name. The default value is **download**.
 url: string
 ```
 
-Resource URL. From API version 6 to 14, the value contains a maximum of 2048 characters; since API version 15,the value contains a maximum of 8192 characters.  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is supported.
+资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持  
+[HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
 
 **Type:** string
 

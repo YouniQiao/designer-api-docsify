@@ -12,6 +12,12 @@ Defines the user age group detection result.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
+## Modules to Import
+
+```TypeScript
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## ageGroup
 
 ```TypeScript
@@ -20,7 +26,7 @@ ageGroup?: UserAgeGroup
 
 User age group, for example, child or adult.
 
-**Type:** UserAgeGroup
+**Type:** [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 
 **Since:** 20
 

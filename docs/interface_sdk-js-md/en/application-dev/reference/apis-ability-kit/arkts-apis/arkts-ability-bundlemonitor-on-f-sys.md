@@ -1,12 +1,18 @@
 # on (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleMonitor } from 'kits/@kit.AbilityKit';
+```
+
 ## on
 
 ```TypeScript
 function on(type: BundleChangedEvent, callback: Callback<BundleChangedInfo>): void
 ```
 
-Register to monitor the installation status
+注册监听应用的安装、卸载、更新。使用callback异步回调。
 
 **Since:** 9
 
@@ -24,18 +30,18 @@ Register to monitor the installation status
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the command should be implement. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleChangedInfo&gt; | Yes | Indicates the callback to be register. |
+| type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Yes | 注册监听的事件类型。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BundleChangedInfo&gt; | Yes | 回调函数，当回调成功时，err为undefined，data为应用变更信息；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 201 | Verify permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleMonitor } from '@kit.AbilityKit';

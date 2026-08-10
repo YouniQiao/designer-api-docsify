@@ -1,6 +1,6 @@
 # VirtualScreenConfig
 
-Describes the virtual screen parameters.
+创建虚拟屏幕的参数。
 
 **Since:** 16
 
@@ -10,15 +10,21 @@ Describes the virtual screen parameters.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## density
 
 ```TypeScript
 density: double
 ```
 
-Density of the virtual screen, in px. The value is a floating-point number.
+指定虚拟屏幕的密度，单位为px，该参数为浮点数。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 16
 
@@ -34,9 +40,9 @@ Density of the virtual screen, in px. The value is a floating-point number.
 height: long
 ```
 
-Height of the virtual screen, in px. The value must be a positive integer.
+指定虚拟屏幕的高度，单位为px，该参数应为正整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 16
 
@@ -52,7 +58,7 @@ Height of the virtual screen, in px. The value must be a positive integer.
 name: string
 ```
 
-Name of the virtual screen, which can be customized.
+指定虚拟屏幕的名称，用户可自行定义。
 
 **Type:** string
 
@@ -70,8 +76,7 @@ Name of the virtual screen, which can be customized.
 supportsFocus?: boolean
 ```
 
-Whether the virtual screen is focusable. **true** if focusable, **false** otherwise. The default value is  
-**true**.
+指定虚拟屏幕是否可获得焦点。true表示可获焦，false表示不可获焦，默认值为true。
 
 **Type:** boolean
 
@@ -89,7 +94,7 @@ Whether the virtual screen is focusable. **true** if focusable, **false** otherw
 surfaceId: string
 ```
 
-Surface ID of the virtual screen, which can be customized. The maximum length for this parameter is 4096 bytes.If it goes beyond that, only the first 4096 bytes are used.
+指定虚拟屏幕的surfaceId，用户可自行定义，该参数最大长度为4096个字节，超出最大长度时则取前4096个字节。
 
 **Type:** string
 
@@ -107,9 +112,9 @@ Surface ID of the virtual screen, which can be customized. The maximum length fo
 width: long
 ```
 
-Width of the virtual screen, in px. The value must be a positive integer.
+指定虚拟屏幕的宽度，单位为px，该参数应为正整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 16
 

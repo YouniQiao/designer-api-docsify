@@ -4,7 +4,7 @@
 type OnFullScreenEnterCallback = (event: FullScreenEnterEvent) => void
 ```
 
-Defines a callback invoked when the **Web** component enters full screen mode.
+Web组件进入全屏时触发的回调。
 
 **Since:** 12
 
@@ -20,5 +20,5 @@ Defines a callback invoked when the **Web** component enters full screen mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback event for the **Web** component to enter full screen mode.  |
+| event | [FullScreenEnterEvent](../arkts-apis/arkts-arkweb-web-fullscreenenterevent-i.md) | Yes | Web组件进入全屏的回调事件详情。 |
 

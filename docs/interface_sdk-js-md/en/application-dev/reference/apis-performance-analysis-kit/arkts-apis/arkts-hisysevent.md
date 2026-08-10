@@ -1,6 +1,6 @@
 # @ohos.hiSysEvent
 
-The **hiSysEvent** module provides the system event logging functions, such as configuring trace points, subscribing to system events, and querying system events written to the event file.
+本模块提供了系统事件打点能力，包括系统事件的埋点、落盘系统事件的订阅及已落盘的系统事件的查询能力。
 
 **Since:** 9
 
@@ -12,6 +12,12 @@ The **hiSysEvent** module provides the system event logging functions, such as c
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -19,14 +25,14 @@ The **hiSysEvent** module provides the system event logging functions, such as c
 
 | Name | Description |
 | --- | --- |
-| [addWatcher](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md#addwatcher) | Adds a watcher for event subscription. |
-| [exportSysEvents](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md#exportsysevents) | Exports system events in batches and writes them as a file to the fixed directory of the application sandbox (that is, /data/storage/el2/base/cache/hiview/event/). |
-| [query](arkts-performanceanalysis-hisysevent-query-f-sys.md#query) | Queries system events. |
-| [removeWatcher](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md#removewatcher) | Removes a watcher used for event subscription. |
-| [subscribe](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md#subscribe) | Subscribes to real-time system events that occur occasionally or occur in a low frequency. These events are written as a file to the fixed directory of the application sandbox (that is,/data/storage/el2/base/cache/hiview/event/). |
-| [unsubscribe](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md#unsubscribe) | Unsubscribes from system events. |
-| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write) | Writes event information to the event file. This API uses a promise to return the result. |
-| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write-1) | Writes event information to the event file. This API uses an asynchronous callback to return the result. |
+| [addWatcher](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md#addwatcher) | 订阅系统事件，接收[Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md/arkts-corefile-file-fs-watcher-i.md)类型的对象作为事件参数。 |
+| [exportSysEvents](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md#exportsysevents) | 批量导出系统事件，以文件格式写入应用沙箱固定目录(/data/storage/el2/base/cache/hiview/event/)。 |
+| [query](arkts-performanceanalysis-hisysevent-query-f-sys.md#query) | 查询系统事件。 |
+| [removeWatcher](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md#removewatcher) | 取消订阅系统事件，接收[Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md/arkts-corefile-file-fs-watcher-i.md)类型的对象作为事件参数。 |
+| [subscribe](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md#subscribe) | 订阅实时系统事件(事件需满足低频率或偶发性的约束条件)，事件发生时立即以文件格式写入应用沙箱固定目录(/data/storage/el2/base/cache/hiview/event/)。 |
+| [unsubscribe](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md#unsubscribe) | 取消订阅系统事件。 |
+| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write) | 系统事件打点方法，接收[SysEventInfo](SysEventInfo)类型的对象作为事件参数，使用promise方式作为异步回调。 |
+| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write-1) | 系统事件打点方法，接收[SysEventInfo](SysEventInfo)类型的对象作为事件参数，使用callback方式作为异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -34,12 +40,12 @@ The **hiSysEvent** module provides the system event logging functions, such as c
 
 | Name | Description |
 | --- | --- |
-| [Querier](arkts-performanceanalysis-hisysevent-querier-i-sys.md) | Defines an event query instance. |
-| [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | Defines arguments for an event query. |
-| [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md) | Defines event query rules. |
-| [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | Defines a system event. |
-| [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md) | Defines event subscription rules. |
-| [Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md) | Defines a watcher for event subscription. |
+| [Querier](arkts-performanceanalysis-hisysevent-querier-i-sys.md) | 系统事件查询者对象接口。 |
+| [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | 系统事件查询参数对象接口。 |
+| [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md) | 系统事件查询规则对象接口。 |
+| [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | 系统事件信息对象接口。 |
+| [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md) | 系统事件订阅规则对象接口。 |
+| [Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md) | 系统事件订阅者对象接口。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -47,7 +53,7 @@ The **hiSysEvent** module provides the system event logging functions, such as c
 
 | Name | Description |
 | --- | --- |
-| [EventType](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md) | Enumerate system event types. |
-| [RuleType](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md) | Enumerates matching rule types. |
+| [EventType](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md) | 系统事件类型枚举。 |
+| [RuleType](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md) | 匹配规则类型枚举。 |
 <!--DelEnd-->
 

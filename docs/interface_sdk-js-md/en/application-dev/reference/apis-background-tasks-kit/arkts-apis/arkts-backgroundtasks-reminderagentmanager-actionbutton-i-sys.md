@@ -1,6 +1,6 @@
 # ActionButton
 
-Describes the button displayed for a reminder.
+弹出的提醒中按钮的类型和标题。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Describes the button displayed for a reminder.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## dataShareUpdate
 
 ```TypeScript
 dataShareUpdate?: DataShareUpdate
 ```
 
-The application database will be updated after a click on the button.
+点击按钮将更新应用数据库。
 
-**Type:** DataShareUpdate
+**Type:** [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md)
 
 **Since:** 11
 
@@ -36,9 +42,9 @@ The application database will be updated after a click on the button.
 wantAgent?: WantAgent
 ```
 
-Information about the ability that is displayed after the button is clicked.
+点击按钮跳转的ability信息。
 
-**Type:** WantAgent
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 10
 

@@ -12,6 +12,12 @@ Describes the details of a cloud media asset download task. It is the return val
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## errorCode
 
 ```TypeScript
@@ -20,7 +26,7 @@ readonly errorCode: CloudMediaTaskPauseCause
 
 Reason why the download task is suspended.
 
-**Type:** CloudMediaTaskPauseCause
+**Type:** [CloudMediaTaskPauseCause](arkts-medialibrary-photoaccesshelper-cloudmediataskpausecause-e-sys.md)
 
 **Since:** 14
 
@@ -60,7 +66,7 @@ readonly taskStatus: CloudMediaAssetTaskStatus
 
 Status of the download task.
 
-**Type:** CloudMediaAssetTaskStatus
+**Type:** [CloudMediaAssetTaskStatus](arkts-medialibrary-photoaccesshelper-cloudmediaassettaskstatus-e-sys.md)
 
 **Since:** 14
 

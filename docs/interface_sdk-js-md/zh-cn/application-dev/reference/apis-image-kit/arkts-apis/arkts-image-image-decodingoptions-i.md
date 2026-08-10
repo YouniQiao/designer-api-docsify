@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## cropAndScaleStrategy
 
 ```TypeScript
@@ -18,9 +24,9 @@ cropAndScaleStrategy?: CropAndScaleStrategy
 
 解码参数如果同时设置desiredRegion与desiredSize，由此决定裁剪与缩放操作的先后策略。
 
-仅支持设置：SCALE\_FIRST、CROP\_FIRST。
+仅支持设置：SCALE_FIRST、CROP_FIRST。
 
-**类型：** CropAndScaleStrategy
+**类型：** [CropAndScaleStrategy](arkts-image-image-cropandscalestrategy-e.md)
 
 **起始版本：** 18
 
@@ -56,11 +62,11 @@ desiredDynamicRange?: DecodingDynamicRange
 
 目标动态范围，默认值为SDR。
 
-通过[CreateIncrementalSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建的ImageSource不支持设置此属性，默认解码为SDR内容。
+通过[CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource)创建的ImageSource不支持设置此属性，默认解码为SDR内容。
 
 如果平台不支持HDR，设置无效，默认解码为SDR内容。
 
-**类型：** DecodingDynamicRange
+**类型：** [DecodingDynamicRange](arkts-image-image-decodingdynamicrange-e.md)
 
 **起始版本：** 12
 
@@ -76,9 +82,9 @@ desiredDynamicRange?: DecodingDynamicRange
 desiredPixelFormat?: PixelMapFormat
 ```
 
-解码的像素格式。默认值为RGBA\_8888。仅支持设置：RGBA\_8888、BGRA\_8888和RGB\_565。有透明通道图片格式不支持设置RGB\_565，如PNG、GIF、ICO和WEBP。
+解码的像素格式。默认值为RGBA_8888。仅支持设置：RGBA_8888、BGRA_8888和RGB_565。有透明通道图片格式不支持设置RGB_565，如PNG、GIF、ICO和WEBP。
 
-**类型：** PixelMapFormat
+**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **起始版本：** 7
 
@@ -100,9 +106,9 @@ desiredRegion?: Region
 
 解码图像中由Region指定的矩形区域，当原始图像很大而只需要解码图像的一部分时，可以设置该参数，有助于提升性能，默认为原始大小。
 
-注意：若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP\_FIRST。
+注意：若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
 
-**类型：** Region
+**类型：** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
 
 **起始版本：** 7
 
@@ -124,9 +130,9 @@ desiredSize?: Size
 
 期望输出大小，必须为正整数，若与原尺寸比例不一致，则会进行拉伸/缩放到指定尺寸，默认为原始尺寸。
 
-注意：若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP\_FIRST。
+注意：若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 7
 
@@ -172,7 +178,7 @@ fitDensity?: int
 
 图像像素密度。单位：ppi（像素/英寸）。默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -194,7 +200,7 @@ index?: int
 
 解码图片序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为：[0, (帧数-1)]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -216,7 +222,7 @@ rotate?: int
 
 旋转角度。单位：角度（deg）。默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 
@@ -238,7 +244,7 @@ sampleSize?: int
 
 缩略图采样大小，默认值为1。当前只能取1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 7
 

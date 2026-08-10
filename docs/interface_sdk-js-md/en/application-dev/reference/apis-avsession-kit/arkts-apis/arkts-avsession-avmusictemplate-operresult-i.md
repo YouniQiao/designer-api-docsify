@@ -1,6 +1,6 @@
 # OperResult
 
-The definition of the operate result.
+操作结果的定义。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ The definition of the operate result.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## errorCode
 
 ```TypeScript
 errorCode: int
 ```
 
-error code.
+错误码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -36,7 +42,7 @@ error code.
 errorMsg?: string
 ```
 
-error message.
+错误信息。
 
 **Type:** string
 

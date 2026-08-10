@@ -10,6 +10,12 @@ Recent photo info
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## dateTaken
 
 ```TypeScript
@@ -18,7 +24,7 @@ dateTaken?: long
 
 Time when the recent image or video was shot (in milliseconds since January 1, 1970). The unit is ms.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 

@@ -12,15 +12,21 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## subWindowOptions
 
 ```TypeScript
 subWindowOptions?: SubWindowOptions
 ```
 
-创建子窗口的参数。无默认参数，当windowAttribute配置为SUB\_WINDOW时必选，否则会导致窗口创建失败。
+创建子窗口的参数。无默认参数，当windowAttribute配置为SUB_WINDOW时必选，否则会导致窗口创建失败。
 
-**类型：** SubWindowOptions
+**类型：** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i-sys.md)
 
 **起始版本：** 14
 
@@ -40,9 +46,9 @@ subWindowOptions?: SubWindowOptions
 systemWindowOptions?: SystemWindowOptions
 ```
 
-创建系统窗口的参数。无默认参数，当windowAttribute配置为SYSTEM\_WINDOW时必选，否则会导致窗口创建失败。
+创建系统窗口的参数。无默认参数，当windowAttribute配置为SYSTEM_WINDOW时必选，否则会导致窗口创建失败。
 
-**类型：** SystemWindowOptions
+**类型：** [SystemWindowOptions](arkts-arkui-window-systemwindowoptions-i-sys.md)
 
 **起始版本：** 14
 
@@ -62,9 +68,9 @@ systemWindowOptions?: SystemWindowOptions
 windowAttribute: ExtensionWindowAttribute
 ```
 
-窗口的属性。用于配置创建的窗口是子窗口还是系统窗口。当windowAttribute配置为SUB\_WINDOW时须配置subWindowOptions，当windowAttribute配置为SYSTEM\_WINDOW时须配置systemWindowOptions，否则创建窗口失败。
+窗口的属性。用于配置创建的窗口是子窗口还是系统窗口。当windowAttribute配置为SUB_WINDOW时须配置subWindowOptions，当windowAttribute配置为SYSTEM_WINDOW时须配置systemWindowOptions，否则创建窗口失败。
 
-**类型：** ExtensionWindowAttribute
+**类型：** [ExtensionWindowAttribute](arkts-arkui-window-extensionwindowattribute-e-sys.md)
 
 **起始版本：** 14
 
@@ -108,7 +114,7 @@ windowRect: Rect
 
 窗口矩形区域。
 
-**类型：** Rect
+**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **起始版本：** 14
 

@@ -1,6 +1,6 @@
 # RichEditorGesture
 
-User gesture event.
+用户手势事件。
 
 **Since:** 11
 
@@ -16,13 +16,13 @@ User gesture event.
 onClick?: Callback<ClickEvent>
 ```
 
-Triggered when [ClickEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ occurs.
+[ClickEvent](../arkts-apis/arkts-arkui-common-clickevent-i.md/arkts-arkui-common-clickevent-i.md)为用户点击事件。
 
-It is executed on completion of a single click.
+点击完成时回调事件。
 
-On a double-click, the first click triggers the callback event.
+双击时，第一次点击触发回调事件。
 
-**Type:** Callback&lt;ClickEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt;
 
 **Since:** 11
 
@@ -42,11 +42,11 @@ On a double-click, the first click triggers the callback event.
 onLongPress?: Callback<GestureEvent>
 ```
 
-Triggered when the user performs a long press.
+[GestureEvent](../../../reference/apis-arkui/arkui-ts/ts-gesture-common.md#gestureevent对象说明)为用户长按事件。
 
-It is executed on completion of a long press.
+长按完成时回调事件。
 
-**Type:** Callback&lt;GestureEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;GestureEvent&gt;
 
 **Since:** 11
 

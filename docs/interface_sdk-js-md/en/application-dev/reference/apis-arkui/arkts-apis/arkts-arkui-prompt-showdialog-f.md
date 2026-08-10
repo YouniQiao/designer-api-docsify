@@ -1,12 +1,18 @@
 # showDialog
 
+## Modules to Import
+
+```TypeScript
+import { prompt } from 'kits/@kit.ArkUI';
+```
+
 ## showDialog
 
 ```TypeScript
 function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void
 ```
 
-Displays the dialog box.
+创建并显示对话框，对话框响应结果异步返回。
 
 **Since:** 8
 
@@ -24,10 +30,10 @@ Displays the dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ShowDialogSuccessResponse&gt; | Yes |  |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | 页面显示对话框信息描述。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes | 对话框响应结果回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import prompt from '@ohos.prompt'
@@ -60,7 +66,7 @@ prompt.showDialog({
 function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
 ```
 
-Displays the dialog box.
+创建并显示对话框，对话框响应后同步返回结果。
 
 **Since:** 8
 
@@ -78,15 +84,15 @@ Displays the dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | 对话框选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ShowDialogSuccessResponse&gt; |  |
+| Promise&lt;ShowDialogSuccessResponse&gt; | 对话框响应结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import prompt from '@ohos.prompt'

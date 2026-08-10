@@ -1,6 +1,6 @@
 # LoopMode
 
-Loop Play Mode Definition
+表示媒体播放循环模式的枚举。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Loop Play Mode Definition
 LOOP_MODE_SEQUENCE = 0
 ```
 
-The default mode is sequential playback
+顺序播放。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ The default mode is sequential playback
 LOOP_MODE_SINGLE = 1
 ```
 
-Single loop mode
+单曲循环。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ Single loop mode
 LOOP_MODE_LIST = 2
 ```
 
-List loop mode
+表单循环。
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ List loop mode
 LOOP_MODE_SHUFFLE = 3
 ```
 
-Shuffle playback mode
+随机播放。
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ Shuffle playback mode
 LOOP_MODE_CUSTOM = 4
 ```
 
-Custom playback mode supported by application
+自定义播放。
 
 **Since:** 11
 

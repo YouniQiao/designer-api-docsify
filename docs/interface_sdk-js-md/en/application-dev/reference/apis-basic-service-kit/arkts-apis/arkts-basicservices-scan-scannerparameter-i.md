@@ -1,6 +1,6 @@
 # ScannerParameter
 
-Defines the scanner parameters.
+定义扫描仪参数的接口。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Defines the scanner parameters.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## optionConstraintInt
 
 ```TypeScript
 optionConstraintInt?: int[]
 ```
 
-Integer constraints of the option.
+选项整数约束。
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Integer constraints of the option.
 optionConstraintRange?: Range
 ```
 
-Range constraint of the option.
+选项范围约束。
 
-**Type:** Range
+**Type:** [Range](arkts-basicservices-scan-range-i.md)
 
 **Since:** 20
 
@@ -52,7 +58,7 @@ Range constraint of the option.
 optionConstraintString?: string[]
 ```
 
-String constraints of the option.
+选项字符串约束。
 
 **Type:** string[]
 
@@ -70,9 +76,9 @@ String constraints of the option.
 optionConstraintType: ConstraintType
 ```
 
-Constraint type of the option.
+选项约束类型。
 
-**Type:** ConstraintType
+**Type:** [ConstraintType](arkts-basicservices-scan-constrainttype-e.md)
 
 **Since:** 20
 
@@ -88,7 +94,7 @@ Constraint type of the option.
 optionDesc: string
 ```
 
-Option description.
+选项描述。
 
 **Type:** string
 
@@ -106,9 +112,9 @@ Option description.
 optionIndex: int
 ```
 
-Option index.
+选项索引。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -124,7 +130,7 @@ Option index.
 optionName: string
 ```
 
-Option name.
+选项名称。
 
 **Type:** string
 
@@ -142,7 +148,7 @@ Option name.
 optionTitle: string
 ```
 
-Option title.
+选项标题。
 
 **Type:** string
 
@@ -160,9 +166,9 @@ Option title.
 optionType: OptionValueType
 ```
 
-Option value type.
+选项值类型。
 
-**Type:** OptionValueType
+**Type:** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
 **Since:** 20
 
@@ -178,9 +184,9 @@ Option value type.
 optionUnit: PhysicalUnit
 ```
 
-Physical unit of the option.
+选项物理单位。
 
-**Type:** PhysicalUnit
+**Type:** [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md)
 
 **Since:** 20
 

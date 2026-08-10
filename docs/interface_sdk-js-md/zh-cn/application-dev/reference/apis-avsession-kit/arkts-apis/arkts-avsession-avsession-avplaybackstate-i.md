@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## activeItemId
 
 ```TypeScript
@@ -18,7 +24,7 @@ activeItemId?: int
 
 正在播放的媒体ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ bufferedTime?: long
 
 缓冲时间。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -58,7 +64,7 @@ duration?: int
 
 当前媒体资源的时长，单位为毫秒（ms）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -116,7 +122,7 @@ loopMode?: LoopMode
 
 循环模式。
 
-**类型：** LoopMode
+**类型：** [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
 **起始版本：** 10
 
@@ -136,7 +142,7 @@ maxVolume?: int
 
 最大音量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -176,7 +182,7 @@ position?: PlaybackPosition
 
 播放位置。
 
-**类型：** PlaybackPosition
+**类型：** [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md)
 
 **起始版本：** 10
 
@@ -196,7 +202,7 @@ speed?: double
 
 播放倍速。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 10
 
@@ -216,7 +222,7 @@ state?: PlaybackState
 
 播放状态。
 
-**类型：** PlaybackState
+**类型：** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
 **起始版本：** 10
 
@@ -236,7 +242,7 @@ videoHeight?: int
 
 媒体资源的视频高度，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -256,7 +262,7 @@ videoWidth?: int
 
 媒体资源的视频宽度，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -276,7 +282,7 @@ volume?: int
 
 正在播放的媒体音量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

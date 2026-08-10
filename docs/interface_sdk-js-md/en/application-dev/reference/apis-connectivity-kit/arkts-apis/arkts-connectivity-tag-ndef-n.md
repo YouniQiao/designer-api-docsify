@@ -10,6 +10,12 @@ Provides methods for accessing NDEF tag.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
+## Modules to Import
+
+```TypeScript
+import { tag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

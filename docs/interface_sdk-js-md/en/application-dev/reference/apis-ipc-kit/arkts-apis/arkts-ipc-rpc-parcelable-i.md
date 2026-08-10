@@ -1,6 +1,6 @@
 # Parcelable
 
-Writes an object to a **MessageSequence** and reads it from the **MessageSequence** during IPC.
+在进程间通信（IPC）期间，将类的对象写入MessageSequence并从MessageSequence中恢复它们。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Writes an object to a **MessageSequence** and reads it from the **MessageSequenc
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## marshalling
 
 ```TypeScript
 marshalling(dataOut: MessageSequence): boolean
 ```
 
-Marshals this **Parcelable** object into a **MessageSequence** object.
+将此可序列对象封送到MessageSequence中。
 
 **Since:** 9
 
@@ -30,15 +36,15 @@ Marshals this **Parcelable** object into a **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOut | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageSequence** object to which the **Parcelable** object is to be marshaled. |
+| dataOut | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 可序列对象将被封送到的MessageSequence对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：封送成功，false：封送失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -81,7 +87,7 @@ try {
 unmarshalling(dataIn: MessageSequence): boolean
 ```
 
-Unmarshals this **Parcelable** object from a **MessageSequence** object.
+从MessageSequence中解封此可序列对象。
 
 **Since:** 9
 
@@ -95,15 +101,15 @@ Unmarshals this **Parcelable** object from a **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageSequence** object from which the **Parcelable** object is to be unmarshaled. |
+| dataIn | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 已将可序列对象封送到其中的MessageSequence对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：反序列化成功，false：反序列化失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

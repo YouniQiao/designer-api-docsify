@@ -1,6 +1,6 @@
 # EditableSaveButtonV2
 
-Declaration of the save button configuration.
+保存按钮配置类，使用@ObservedV2装饰器，支持状态观察。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declaration of the save button configuration.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(options?: EditableSaveButtonV2Options)
 ```
 
-Constructor of EditableSaveButtonV2.
+EditableSaveButtonV2的构造函数。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ Constructor of EditableSaveButtonV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of the save button |
+| options | [EditableSaveButtonV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | No | 保存按钮配置选项。 |
 
 ## onAction
 
@@ -42,7 +48,7 @@ Constructor of EditableSaveButtonV2.
 public onAction?: OnActionCallback
 ```
 
-Callback function when click on the save button.
+点击保存按钮的回调函数。未设置时点击按钮无响应。
 
 **Since:** 26.0.0
 
@@ -60,7 +66,13 @@ Callback function when click on the save button.
 public defaultFocus: boolean
 ```
 
-Whether to get focus by default.
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **Type:** boolean
 
@@ -82,7 +94,13 @@ Whether to get focus by default.
 public isRequired: boolean
 ```
 
-Whether to show the save button.
+是否显示保存按钮。
+
+true：显示保存按钮。
+
+false：不显示保存按钮。
+
+默认值：true。
 
 **Type:** boolean
 

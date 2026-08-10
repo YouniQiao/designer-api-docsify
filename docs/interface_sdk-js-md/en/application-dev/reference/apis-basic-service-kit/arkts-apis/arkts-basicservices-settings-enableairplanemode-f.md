@@ -1,5 +1,11 @@
 # enableAirplaneMode
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## enableAirplaneMode
 
 ```TypeScript
@@ -23,9 +29,9 @@ Enables or disables airplane mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let isEnabled :boolean = true;
@@ -67,9 +73,9 @@ Enables or disables airplane mode.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Return Promise. |
+| Promise&lt;void&gt; | Return Promise. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let isEnabled :boolean = true;

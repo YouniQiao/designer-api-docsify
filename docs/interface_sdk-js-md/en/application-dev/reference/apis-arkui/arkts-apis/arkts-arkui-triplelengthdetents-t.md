@@ -8,7 +8,7 @@ export type TripleLengthDetents = [
 ]
 ```
 
-Defines the detent array of a three-length.
+定义了三个高度的挡位。
 
 **Since:** 23
 

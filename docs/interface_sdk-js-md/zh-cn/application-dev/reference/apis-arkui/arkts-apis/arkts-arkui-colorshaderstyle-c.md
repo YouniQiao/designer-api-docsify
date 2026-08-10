@@ -1,8 +1,8 @@
 # ColorShaderStyle
 
-显示为纯色。ColorShaderStyle继承自[ShaderStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+显示为纯色。ColorShaderStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md)。
 
-**继承/实现关系：** ColorShaderStyle extends [ShaderStyle](arkts-arkui-component/textcommon-shaderstyle-c.md)
+**继承/实现关系：** ColorShaderStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **起始版本：** 20
 
@@ -36,7 +36,7 @@ constructor(color: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 显示为纯色效果。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 显示为纯色效果。 |
 
 ## color
 
@@ -46,7 +46,7 @@ color: ResourceColor
 
 显示为纯色效果。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 20
 

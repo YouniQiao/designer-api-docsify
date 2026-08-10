@@ -4,7 +4,7 @@
 declare type MenuOnAppearCallback = (start: number, end: number) => void
 ```
 
-Represents the callback invoked when the custom context menu on selection appears.
+自定义选择菜单弹出时触发的回调事件。
 
 **Since:** 12
 
@@ -22,6 +22,6 @@ Represents the callback invoked when the custom context menu on selection appear
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Start position of the selected content.  |
-| end | number | Yes | End position of the selected content.  |
+| start | number | Yes | 选中内容的起始位置。 |
+| end | number | Yes | 选中内容的终止位置。 |
 

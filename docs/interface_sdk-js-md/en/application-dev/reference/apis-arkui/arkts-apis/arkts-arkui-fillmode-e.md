@@ -1,6 +1,6 @@
 # FillMode
 
-Sets the status before and after execution of the animation in the current playback direction.
+设置当前播放方向下，动画开始前和结束后的状态。动画结束后的状态由fillMode和reverse属性共同决定。例如，fillMode为Forwards表示停止时维持动画最后一个关键帧的状态，若reverse为false则维持正播的最后一帧，即最后一张图，若reverse为true则维持逆播的最后一帧，即第一张图。
 
 **Since:** 7
 
@@ -13,10 +13,10 @@ Sets the status before and after execution of the animation in the current playb
 ## None
 
 ```TypeScript
-None = 0
+None
 ```
 
-If the animation is not executed, no style is applied to the target. After the animation is played, the initial default state is restored.
+动画未执行时，不应用任何样式到目标；播放完成后，恢复初始默认状态。
 
 **Since:** 7
 
@@ -26,17 +26,17 @@ If the animation is not executed, no style is applied to the target. After the a
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-FillMode-None = 0--><!--Device-FillMode-None = 0-End-->
+<!--Device-FillMode-None--><!--Device-FillMode-None-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Forwards
 
 ```TypeScript
-Forwards = 1
+Forwards
 ```
 
-The target component retains the state set by the last keyframe encountered during execution of the animation.
+目标将保留动画执行期间最后一个关键帧的状态。
 
 **Since:** 7
 
@@ -46,18 +46,17 @@ The target component retains the state set by the last keyframe encountered duri
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-FillMode-Forwards = 1--><!--Device-FillMode-Forwards = 1-End-->
+<!--Device-FillMode-Forwards--><!--Device-FillMode-Forwards-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Backwards
 
 ```TypeScript
-Backwards = 2
+Backwards
 ```
 
-The animation applies the values defined in the first relevant keyframe once it is applied to the target component,and retains the values during the period set by **delay**. The first relevant keyframe depends on the value of  
-**playMode**. If **playMode** is **Normal** or **Alternate**, the first relevant keyframe is in the **from** state.If **playMode** is **Reverse** or **AlternateReverse**, the first relevant keyframe is in the **to** state.
+动画应用于目标时，立即采用第一个关键帧定义的值，并在delay期间保留此值。第一个关键帧取决于playMode，playMode为Normal或Alternate时，帧为from状态；playMode为Reverse或AlternateReverse时，帧为to状态。
 
 **Since:** 7
 
@@ -67,17 +66,17 @@ The animation applies the values defined in the first relevant keyframe once it 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-FillMode-Backwards = 2--><!--Device-FillMode-Backwards = 2-End-->
+<!--Device-FillMode-Backwards--><!--Device-FillMode-Backwards-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Both
 
 ```TypeScript
-Both = 3
+Both
 ```
 
-The animation follows the rules for both **Forwards** and **Backwards**, extending the animation attributes in both directions.
+动画将遵循Forwards和Backwards的规则，从而在两个方向上扩展动画属性。
 
 **Since:** 7
 
@@ -87,7 +86,7 @@ The animation follows the rules for both **Forwards** and **Backwards**, extendi
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-FillMode-Both = 3--><!--Device-FillMode-Both = 3-End-->
+<!--Device-FillMode-Both--><!--Device-FillMode-Both-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

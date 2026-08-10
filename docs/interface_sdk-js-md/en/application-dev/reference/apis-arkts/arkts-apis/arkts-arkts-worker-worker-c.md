@@ -1,6 +1,6 @@
 # Worker
 
-The Worker class contains all Worker functions.
+Worker类包含所有Worker功能。
 
 **Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md)
 
@@ -16,13 +16,19 @@ The Worker class contains all Worker functions.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(scriptURL: string, options?: WorkerOptions)
 ```
 
-Creates a worker instance
+创建一个worker实例。
 
 **Since:** 7
 
@@ -40,10 +46,10 @@ Creates a worker instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scriptURL | string | Yes | scriptURL URL of the script to be executed by the worker |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options that can be set for the worker |
+| scriptURL | string | Yes | scriptURL worker执行的脚本URL。 |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No | 可为worker设置的选项。 |
 
-**Example**
+## Examples
 
 The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
 
@@ -61,7 +67,7 @@ const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: 
 off(type: string, listener?: EventListener): void
 ```
 
-Removes an event listener to the worker.
+移除Worker的事件监听。
 
 **Since:** 7
 
@@ -79,10 +85,10 @@ Removes an event listener to the worker.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event for which the event listener is removed. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | listener Callback of the event listener to remove. |
+| type | string | Yes | 需要移除的事件类型。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No | listener 要移除的事件监听的回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -99,7 +105,7 @@ workerInstance.off("alert");
 on(type: string, listener: EventListener): void
 ```
 
-Adds an event listener to the worker.
+向Worker添加一个事件监听。
 
 **Since:** 7
 
@@ -117,10 +123,10 @@ Adds an event listener to the worker.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | type Adds an event listener to the worker. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | listener Callback to invoke when an event of the specified type occurs. |
+| type | string | Yes | type 向Worker添加一个事件监听。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener 当指定类型的事件发生时调用的回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -138,7 +144,7 @@ workerInstance.on("alert", () => {
 once(type: string, listener: EventListener): void
 ```
 
-Adds an event listener to the worker and removes the event listener automatically after it is invoked once.
+向Worker添加一个事件监听，该事件监听只执行一次，执行完后会自动删除。
 
 **Since:** 7
 
@@ -156,10 +162,10 @@ Adds an event listener to the worker and removes the event listener automaticall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | listener Callback to invoke when an event of the specified type occurs |
+| type | string | Yes | 监听的事件类型。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener 当指定类型的事件发生时调用的回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -177,7 +183,7 @@ workerInstance.once("alert", () => {
 onerror?: (err: ErrorEvent) => void
 ```
 
-The onerror attribute of the worker specifies the event handler to be called when an exception occurs during worker execution.The event handler is executed in the host thread.
+onerror属性用于指定Worker在执行过程中发生异常时被调用的事件处理程序，该事件处理程序在宿主线程中执行。
 
 **Since:** 7
 
@@ -195,7 +201,7 @@ The onerror attribute of the worker specifies the event handler to be called whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |  |
 
 ## onexit
 
@@ -203,7 +209,7 @@ The onerror attribute of the worker specifies the event handler to be called whe
 onexit?: (code: number) => void
 ```
 
-Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function,the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
+当Worker销毁时被调用的事件处理程序，处理程序在宿主线程中执行。回调函数中code类型为number，异常退出为1，正常退出为0。默认值为undefined。
 
 **Since:** 7
 
@@ -229,7 +235,7 @@ Called when the Worker thread exits. The event handler is executed in the host t
 onmessage?: (event: MessageEvent) => void
 ```
 
-The onmessage attribute of the worker specifies the event handler to be called then the host thread receives a message created by itself and sent by the worker through the parentPort.postMessage.The event handler is executed in the host thread.
+onmessage属性用于指定当宿主线程接收到来自其创建的Worker通过parentPort.postMessage发送的消息时被调用的事件处理程序，该事件处理程序在宿主线程中执行。
 
 **Since:** 7
 
@@ -247,7 +253,7 @@ The onmessage attribute of the worker specifies the event handler to be called t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| event | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Yes |  |
 
 ## onmessageerror
 
@@ -255,7 +261,7 @@ The onmessage attribute of the worker specifies the event handler to be called t
 onmessageerror?: (event: MessageEvent) => void
 ```
 
-The onmessage attribute of the worker specifies the event handler when the worker receives a message that cannot be serialized.The event handler is executed in the host thread.
+onmessage属性用于指定当Worker收到一条无法被序列化的消息时被调用的事件处理程序，该事件处理程序在宿主线程中执行。
 
 **Since:** 7
 
@@ -273,7 +279,7 @@ The onmessage attribute of the worker specifies the event handler when the worke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| event | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Yes |  |
 
 ## postMessage
 
@@ -281,7 +287,7 @@ The onmessage attribute of the worker specifies the event handler when the worke
 postMessage(message: Object, transfer: ArrayBuffer[]): void
 ```
 
-Sends a message to the worker thread.The data is transferred using the structured clone algorithm.
+向Worker线程发送消息。数据通过结构化克隆算法传递。
 
 **Since:** 7
 
@@ -299,10 +305,10 @@ Sends a message to the worker thread.The data is transferred using the structure
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the worker |
-| transfer | ArrayBuffer[] | Yes | transfer ArrayBuffer instance that can be transferred. The transferList array cannot contain null. |
+| message | Object | Yes | 发送至Worker的数据。 |
+| transfer | ArrayBuffer[] | Yes | transfer 可转移的ArrayBuffer实例对象。 transferList数组不可包含null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -320,7 +326,7 @@ workerInstance.postMessage(buffer, [buffer]);
 postMessage(message: Object, options?: PostMessageOptions): void
 ```
 
-Sends a message to the worker thread.The data is transferred using the structured clone algorithm.
+向Worker线程发送消息。数据通过结构化克隆算法传递。
 
 **Since:** 7
 
@@ -338,10 +344,10 @@ Sends a message to the worker thread.The data is transferred using the structure
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the worker |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Option can be set for postmessage. The transferList array cannot contain null. |
+| message | Object | Yes | 发送至Worker的数据。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | 可为postMessage设置的选项。 transferList数组不可包含null。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets
@@ -361,7 +367,7 @@ workerInstance.postMessage(buffer, [buffer]);
 terminate(): void
 ```
 
-Terminates the worker thread to stop the worker from receiving messages
+销毁Worker线程，终止Worker接收消息。
 
 **Since:** 7
 
@@ -375,7 +381,7 @@ Terminates the worker thread to stop the worker from receiving messages
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Example**
+## Examples
 
 ```TypeScript
 // Index.ets

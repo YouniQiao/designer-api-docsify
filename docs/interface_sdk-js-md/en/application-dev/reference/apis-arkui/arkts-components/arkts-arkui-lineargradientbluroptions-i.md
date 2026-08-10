@@ -1,7 +1,5 @@
 # LinearGradientBlurOptions
 
-Linear Gradient Blur Interface
-
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
@@ -16,13 +14,13 @@ Linear Gradient Blur Interface
 direction: GradientDirection
 ```
 
-Gradient blur direction.
+渐变模糊方向。
 
-Default value:
+默认值：
 
 GradientDirection.Bottom
 
-**Type:** GradientDirection
+**Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **Since:** 12
 
@@ -42,9 +40,9 @@ GradientDirection.Bottom
 fractionStops: FractionStop[]
 ```
 
-Gradient blur stops. The value is a set of binary arrays, each of which indicates [blur degree, blur position] and consists of numbers ranging from 0 to 1 (those less than 0 are treated as **0**, and those greater than 1 are treated as **1**). The blur positions in the arrays must be in strict ascending order. Noncompliance will be logged. For the blur settings to take effect, the number of binary arrays must be greater than or equal to 2.
+数组中保存的每一个二元数组（取值0-1，小于0则为0，大于1则为1）表示[模糊程度, 模糊位置]；模糊位置需严格递增，开发者传入的数据不符合规范会记录日志，渐变模糊数组中二元数组个数必须大于等于2，否则渐变模糊不生效。
 
-**Type:** FractionStop[]
+**Type:** [FractionStop](arkts-arkui-fractionstop-t.md)[]
 
 **Since:** 12
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## allowedPreinstalledBundles
 
 ```TypeScript
@@ -58,9 +64,9 @@ disallowedPreinstalledBundles?: Array<string>
 shortName: string
 ```
 
-表示账号短名称（用作个人文件夹目录）。
+表示账号短名称（用作个人文件夹目录）。 
 
-**约束：**
+**约束：** 
 
 1. 不允许出现的字符：&lt; &gt; | : " * ? / \2. 不允许独立出现的字符串：.或..3. 长度不超过255个字符。
 

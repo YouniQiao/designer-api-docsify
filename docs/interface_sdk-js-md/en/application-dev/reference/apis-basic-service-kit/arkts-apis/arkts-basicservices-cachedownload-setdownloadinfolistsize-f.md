@@ -1,18 +1,22 @@
 # setDownloadInfoListSize
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setDownloadInfoListSize
 
 ```TypeScript
 function setDownloadInfoListSize(size: long): void
 ```
 
-Sets the size of the download information list.
+设置下载信息列表的大小。
 
-- The download information list is used to store pre-downloaded information.  
-- Each pre-download generates a piece of download information with a unique URL. Only the latest download  
-information is saved for the same URL.  
-- If the list size is increased using this API, the original information in the list remains unchanged; if the  
-list size is decreased, the LRU mode is used by default to clear excess cached data in the list.
+- 下载信息列表用于存储预下载信息。  
+- 下载信息和url一一对应，每次预下载都会生成一个下载信息，相同url下只会保存最新的下载信息。  
+- 使用该接口调整列表大小时，size更新增大，列表中原有的信息不变，更新减小，默认使用“LRU”（最近最少使用）方式清除多余的已缓存信息。
 
 **Since:** 20
 
@@ -26,9 +30,9 @@ list size is decreased, the LRU mode is used by default to clear excess cached d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Size of the download information list. The value ranges from 0 to 8192. The default value is **0**, indicating that no download information is stored. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 设置的下载信息列表大小。取值范围：[0, 8192]，默认为0，表示不会存储任何下载信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';

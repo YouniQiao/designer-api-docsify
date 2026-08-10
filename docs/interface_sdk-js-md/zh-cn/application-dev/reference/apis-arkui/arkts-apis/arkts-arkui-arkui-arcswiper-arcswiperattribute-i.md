@@ -1,8 +1,8 @@
 # ArcSwiperAttribute
 
-除支持[通用属性]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_外，还支持以下属性，不支持[Menu控制]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
+除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性，不支持[Menu控制](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
 
-**继承/实现关系：** ArcSwiperAttribute extends [CommonMethod](arkts-arkui-component/common-commonmethod-i.md)
+**继承/实现关系：** ArcSwiperAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,12 @@
 <!--Device-unnamed-export declare interface ArcSwiperAttribute extends CommonMethod--><!--Device-unnamed-export declare interface ArcSwiperAttribute extends CommonMethod-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+```
 
 ## customContentTransition
 
@@ -21,7 +27,7 @@ default customContentTransition(transition: ArcSwiperContentAnimatedTransition |
 自定义ArcSwiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调，开发者可在回调中设置透明度、缩放比例、位移等属性。
 
 在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。
+[SwiperContentTransitionProxy](../../../reference/apis-arkui/arkui-ts/ts-container-arcswiper copy.md#swipercontenttransitionproxy)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。
 
 **起始版本：** 26.0.0
 
@@ -37,7 +43,7 @@ default customContentTransition(transition: ArcSwiperContentAnimatedTransition |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transition | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | ArcSwiper自定义切换动画相关信息。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，无回调。 |
+| transition | [ArcSwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-arcswipercontentanimatedtransition-i.md) \| undefined | 是 | ArcSwiper自定义切换动画相关信息。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **返回值：**
 
@@ -67,7 +73,7 @@ default digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 旋转表冠的灵敏度。设置不同灵敏度级别可调整表冠滚动的响应速度。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，旋转表冠的灵敏度为CrownSensitivity.MEDIUM。 |
+| sensitivity | [CrownSensitivity](arkts-arkui-crownsensitivity-e.md) \| undefined | 是 | 旋转表冠的灵敏度。设置不同灵敏度级别可调整表冠滚动的响应速度。&lt;br/&gt;取值为undefined时，旋转表冠的灵敏度为CrownSensitivity.MEDIUM。 |
 
 **返回值：**
 
@@ -97,7 +103,7 @@ default disableSwipe(disabled: boolean | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| disabled | boolean \| undefined | 是 | 是否禁用组件滑动切换功能。设置为true禁用，false不禁用。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，不禁用组件滑动切换功能。 |
+| disabled | boolean \| undefined | 是 | 是否禁用组件滑动切换功能。设置为true禁用，false不禁用。&lt;br/&gt;取值为undefined时，不禁用组件滑动切换功能。 |
 
 **返回值：**
 
@@ -127,7 +133,7 @@ default disableTransitionAnimation(disabled: boolean | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| disabled | boolean \| undefined | 是 | 是否关闭特殊动效效果。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_传入参数非法时，按false处理。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，不关闭特殊动效效果。 |
+| disabled | boolean \| undefined | 是 | 是否关闭特殊动效效果。&lt;br/&gt;传入参数非法时，按false处理。&lt;br/&gt;取值为undefined时，不关闭特殊动效效果。 |
 
 **返回值：**
 
@@ -157,7 +163,7 @@ default duration(duration: int | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| duration | int \| undefined | 是 | 子组件切换的动画时长。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，子组件切换的动画时长为400。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：毫秒 |
+| duration | int \| undefined | 是 | 子组件切换的动画时长。&lt;br/&gt;取值为undefined时，子组件切换的动画时长为400。&lt;br/&gt;单位：毫秒 |
 
 **返回值：**
 
@@ -171,7 +177,7 @@ default duration(duration: int | undefined): this
 default effectMode(edgeEffect: EdgeEffect | undefined): this
 ```
 
-设置边缘滑动效果。未通过该接口设置时，边缘滑动效果默认为EdgeEffect.Spring。通过[ArcSwiperController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
+设置边缘滑动效果。未通过该接口设置时，边缘滑动效果默认为EdgeEffect.Spring。通过[ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md)的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
 
 **起始版本：** 26.0.0
 
@@ -187,7 +193,7 @@ default effectMode(edgeEffect: EdgeEffect | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 边缘滑动效果。通过ArcSwiperController接口控制翻页时，回弹效果不生效。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，边缘滑动效果为EdgeEffect.Spring。 |
+| edgeEffect | [EdgeEffect](arkts-arkui-edgeeffect-e.md) \| undefined | 是 | 边缘滑动效果。通过ArcSwiperController接口控制翻页时，回弹效果不生效。&lt;br/&gt;取值为undefined时，边缘滑动效果为EdgeEffect.Spring。 |
 
 **返回值：**
 
@@ -217,7 +223,7 @@ default index(index: int | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int \| undefined | 是 | 当前在容器中显示的子组件的索引值。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，当前在容器中显示的子组件的索引值为0。 |
+| index | int \| undefined | 是 | 当前在容器中显示的子组件的索引值。&lt;br/&gt;取值为undefined时，当前在容器中显示的子组件的索引值为0。 |
 
 **返回值：**
 
@@ -247,7 +253,7 @@ default indicator(style: ArcDotIndicator | boolean | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| boolean \| undefined | 是 | ArcDotIndicator：弧形圆点指示器属性及功能。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- boolean：是否启用弧形圆点指示器。 设置为true启用，false不启用。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，启用弧形圆点指示器样式。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认类型：ArcDotIndicator |
+| style | [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) \| boolean \| undefined | 是 | ArcDotIndicator：弧形圆点指示器属性及功能。&lt;br/&gt;- boolean：是否启用弧形圆点指示器。 设置为true启用，false不启用。&lt;br/&gt;取值为undefined时，启用弧形圆点指示器样式。&lt;br/&gt;默认类型：ArcDotIndicator |
 
 **返回值：**
 
@@ -263,7 +269,7 @@ default onAnimationEnd(handler: AnimationEndHandler | undefined): this
 
 切换动画结束时触发该回调。默认无回调。
 
-当ArcSwiper切换动效结束时触发，包括动画过程中手势中断，通过[SwiperController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_调用finishAnimation。参数为动画结束后的index值，多列ArcSwiper时，index为最左侧组件的索引。
+当ArcSwiper切换动效结束时触发，包括动画过程中手势中断，通过[SwiperController](arkts-arkui-swiper-swipercontroller-c.md)调用finishAnimation。参数为动画结束后的index值，多列ArcSwiper时，index为最左侧组件的索引。
 
 **起始版本：** 26.0.0
 
@@ -279,7 +285,7 @@ default onAnimationEnd(handler: AnimationEndHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 切换动画结束时触发该回调。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，无回调。 |
+| handler | [AnimationEndHandler](arkts-arkui-animationendhandler-t.md) \| undefined | 是 | 切换动画结束时触发该回调。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **返回值：**
 
@@ -309,7 +315,7 @@ default onAnimationStart(handler: AnimationStartHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 切换动画开始时的回调。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，无回调。 |
+| handler | [AnimationStartHandler](arkts-arkui-animationstarthandler-t.md) \| undefined | 是 | 切换动画开始时的回调。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **返回值：**
 
@@ -325,7 +331,7 @@ default onChange(handler: IndexChangedHandler | undefined): this
 
 当前显示子组件的索引变化时触发该事件，返回值为当前显示子组件的索引值。
 
-ArcSwiper组件结合\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_使用时，不能在onChange事件里触发子页面UI的刷新。
+ArcSwiper组件结合[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，不能在onChange事件里触发子页面UI的刷新。
 
 **起始版本：** 26.0.0
 
@@ -341,7 +347,7 @@ ArcSwiper组件结合\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_使用时，不能在onCh
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 当前显示的子组件索引变化时触发该事件。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，无回调。 |
+| handler | [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) \| undefined | 是 | 当前显示的子组件索引变化时触发该事件。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **返回值：**
 
@@ -371,7 +377,7 @@ default onGestureSwipe(handler: GestureSwipeHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | 是 | 在页面跟手滑动过程中，逐帧触发该回调。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，无回调。 |
+| handler | [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md) \| undefined | 是 | 在页面跟手滑动过程中，逐帧触发该回调。&lt;br/&gt;取值为undefined时，无回调。 |
 
 **返回值：**
 
@@ -401,7 +407,7 @@ default setArcSwiperOptions(controller?: ArcSwiperController): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | ArcSwiper构造函数选项 |
+| controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | 否 | ArcSwiper构造函数选项 |
 
 **返回值：**
 
@@ -431,7 +437,7 @@ default vertical(isVertical: boolean | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isVertical | boolean \| undefined | 是 | 是否为纵向滑动。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true表示纵向滑动；false表示横向滑动。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值为undefined时，进行横向滑动。 |
+| isVertical | boolean \| undefined | 是 | 是否为纵向滑动。&lt;br/&gt;true表示纵向滑动；false表示横向滑动。&lt;br/&gt;取值为undefined时，进行横向滑动。 |
 
 **返回值：**
 

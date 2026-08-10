@@ -1,6 +1,6 @@
 # AuthInstance
 
-Implements user authentication.
+执行用户认证的对象。
 
 **Since:** 9
 
@@ -14,18 +14,24 @@ Implements user authentication.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## cancel
 
 ```TypeScript
 cancel: () => void
 ```
 
-Cancels this authentication.
-    **NOTE**  
-    
-    Use the obtained [AuthInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object to call this API to cancel authentication.  
-    This [AuthInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ must be the object that is currently performing  
-    authentication.
+取消认证。
+
+> **说明：**
+> 
+> 使用获取到的[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)对象调用该接口进行取消认证，此[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)需要是正
+> 在进行认证的对象。
 
 **Since:** 9
 
@@ -45,11 +51,11 @@ Cancels this authentication.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| 401 | Parameter error. |
+| 201 | Permission denied. |
+| 12500002 | General operation error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -61,9 +67,9 @@ let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
 try {
   let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
   auth.cancel();
-  console.info('cancel auth success');
+  console.info('cancel auth successfully.');
 } catch (error) {
-  console.error(`cancel auth failed, error = ${error}`);
+  console.error(`cancel auth failed. Code: ${error?.code}, message: ${error?.message}`);
 }
 ```
 
@@ -73,14 +79,14 @@ try {
 off: (name: AuthEventKey) => void
 ```
 
-Unsubscribes from the user authentication events of the specified type.
+取消订阅特定类型的认证事件。
 
-- **name**: indicates the authentication event type. The value **result** means to unsubscribe from the  
-authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    The [AuthInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ instance used to invoke this API must be the one used to  
-    subscribe to the event.
+- **name**: 表示认证事件类型，取值为"result"时，取消订阅认证结果；取值为"tip"时，取消订阅认证过程中的提示信息，类型为  
+[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)。
+
+> **说明：**
+> 
+> 需要使用已经成功订阅事件的[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)对象调用该接口进行取消订阅。
 
 **Since:** 9
 
@@ -98,16 +104,16 @@ authentication result, and the value **tip** means to unsubscribe from the authe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| name | [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| 401 | Parameter error. |
+| 12500002 | General operation error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -120,17 +126,14 @@ try {
   // Subscribe to the authentication result.
   auth.on('result', {
     callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`authV9 result ${result.result}`);
-      console.info(`authV9 token ${result.token}`);
-      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
-      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
+      console.info(`result: ${result.result}`);
     }
   });
   // Unsubscribe from the authentication result.
   auth.off('result');
-  console.info('cancel subscribe authentication event success');
+  console.info('cancel subscribe authentication event successfully.');
 } catch (error) {
-  console.error(`cancel subscribe authentication event failed, error = ${error}`);
+  console.error(`cancel subscribe authentication event failed. Code: ${error?.code}, message: ${error?.message}`);
   // do error.
 }
 ```
@@ -141,15 +144,15 @@ try {
 on: (name: AuthEventKey, callback: AuthEvent) => void
 ```
 
-Subscribes to the user authentication events of the specified type.
+订阅指定类型的用户认证事件。
 
-- **name**: indicates the authentication event type. The value **result** means that the callback returns the  
-authentication result, and the value **tip** means that the callback returns the authentication tip information.For details, see [AuthEventKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-- **callback**: callback used to return the authentication result or tip information. For details, see  
-[AuthEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
-    **NOTE**  
-    
-    Use the [AuthInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instance obtained to call this API.
+- **name**: 表示认证事件类型，取值为"result"时，回调函数返回认证结果；取值为"tip"时，回调函数返回认证过程中的提示信息，类型为  
+[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)。  
+- **callback**: 认证接口的回调函数，用于返回认证结果或认证过程中的提示信息，类型为[AuthEvent](arkts-userauthentication-userauth-authevent-i.md)。
+
+> **说明：**
+> 
+> 使用获取到的[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)对象调用该接口进行订阅。
 
 **Since:** 9
 
@@ -167,17 +170,17 @@ authentication result, and the value **tip** means that the callback returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| name | [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) | Yes |  |
+| callback | [AuthEvent](arkts-userauthentication-userauth-authevent-i.md) | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| 401 | Parameter error. |
+| 12500002 | General operation error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -190,10 +193,7 @@ try {
   // Subscribe to the authentication result.
   auth.on('result', {
     callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`authV9 result ${result.result}`);
-      console.info(`authV9 token ${result.token}`);
-      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
-      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
+      console.info(`result: ${result.result}`);
     }
   });
   // Subscribe to authentication tip information.
@@ -212,9 +212,9 @@ try {
     }
   } as userAuth.AuthEvent);
   auth.start();
-  console.info('authV9 start success');
+  console.info('auth start successfully.');
 } catch (error) {
-  console.error(`authV9 error = ${error}`);
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
   // do error.
 }
 ```
@@ -225,10 +225,11 @@ try {
 start: () => void
 ```
 
-Starts authentication.
-    **NOTE**  
-    
-    Use the obtained [AuthInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object to call this API for authentication.
+开始认证。
+
+> **说明：**
+> 
+> 使用获取到的[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)对象调用该接口进行认证。
 
 **Since:** 9
 
@@ -248,19 +249,19 @@ Starts authentication.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [12500001](../errorcode-useriam.md#12500001-authentication-failed) | Authentication failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) | The operation is canceled. |
-| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) | The operation is time-out. |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
-| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) | The authentication task is busy. |
-| [12500009](../errorcode-useriam.md#12500009-authentication-locked) | The authenticator is locked. |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
+| 401 | Parameter error. |
+| 12500010 | The type of credential has not been enrolled. |
+| 12500009 | The authenticator is locked. |
+| 12500006 | The authentication trust level is not supported. |
+| 201 | Permission denied. |
+| 12500007 | The authentication task is busy. |
+| 12500004 | The operation is time-out. |
+| 12500005 | The authentication type is not supported. |
+| 12500002 | General operation error. |
+| 12500003 | The operation is canceled. |
+| 12500001 | Authentication failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -272,9 +273,9 @@ let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
 try {
   let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
   auth.start();
-  console.info('authV9 start auth success');
+  console.info('auth start successfully.');
 } catch (error) {
-  console.error(`authV9 start auth failed, error = ${error}`);
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
 }
 ```
 

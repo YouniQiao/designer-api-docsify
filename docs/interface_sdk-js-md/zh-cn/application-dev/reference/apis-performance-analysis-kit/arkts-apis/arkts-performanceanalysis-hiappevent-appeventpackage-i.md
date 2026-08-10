@@ -1,6 +1,6 @@
 # AppEventPackage
 
-提供订阅返回的事件包的参数定义。可用于获取事件包的详细信息，事件包由[takeNext]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口获得。
+提供订阅返回的事件包的参数定义。可用于获取事件包的详细信息，事件包由[takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takenext)接口获得。
 
 **起始版本：** 9
 
@@ -9,6 +9,12 @@
 <!--Device-hiAppEvent-interface AppEventPackage--><!--Device-hiAppEvent-interface AppEventPackage-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
 
 ## appEventInfos
 
@@ -64,7 +70,7 @@ packageId: int
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -86,7 +92,7 @@ row: int
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -108,7 +114,7 @@ size: int
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

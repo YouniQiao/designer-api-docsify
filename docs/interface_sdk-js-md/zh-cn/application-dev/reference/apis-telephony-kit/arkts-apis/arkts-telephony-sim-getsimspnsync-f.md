@@ -1,5 +1,11 @@
 # getSimSpnSync
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## getSimSpnSync
 
 ```TypeScript
@@ -8,7 +14,7 @@ function getSimSpnSync(slotId: int): string
 
 Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **起始版本：** 10
 
@@ -22,7 +28,7 @@ Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
 
 **返回值：**
 
@@ -30,7 +36,7 @@ Obtains the service provider name (SPN) of the SIM card in a specified slot.
 | --- | --- |
 | string | Returns the SPN; returns an empty string if no EFSPN file is configured for the SIM card. in the SIM card. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

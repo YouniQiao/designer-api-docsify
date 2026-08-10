@@ -39,7 +39,7 @@ Use new function to create Rect.Anonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| RoundedRectOptions | 否 | Rect options |
+| options | [RectOptions](../arkts-apis/arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | 否 | Rect options |
 
 ## Rect
 
@@ -67,7 +67,9 @@ Rect(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| RoundedRectOptions | 否 | Rect绘制属性，包含宽度、高度、圆角等配置。不传入时使用各属性默认值绘制矩形（宽高和圆角均为0）。 \_\_\_HTML\_TAG\_USD\_0\_\_\_异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [RectOptions](../arkts-apis/arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | 否 | Rect绘制属性，包含宽度、高度、圆角等配置。不传入时使用各属性默认值绘制矩形（宽高和圆角均为0）。 <br>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 
+- [RectOptions](arkts-arkui-rect-rectoptions-i.md)
+- [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md)

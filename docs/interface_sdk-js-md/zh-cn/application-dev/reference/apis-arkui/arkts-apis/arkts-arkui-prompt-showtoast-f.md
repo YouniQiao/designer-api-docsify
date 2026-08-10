@@ -1,5 +1,11 @@
 # showToast
 
+## 导入模块
+
+```TypeScript
+import { prompt } from 'kits/@kit.ArkUI';
+```
+
 ## showToast
 
 ```TypeScript
@@ -24,9 +30,9 @@ function showToast(options: ShowToastOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本弹窗选项。 |
+| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 是 | 文本弹窗选项。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import prompt from '@ohos.prompt'

@@ -1,6 +1,6 @@
 # Note
 
-Defines a contact's note.
+联系人的备注类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's note.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## noteContent
 
 ```TypeScript
 noteContent: string
 ```
 
-Notes of the contact.
+联系人的备注内容。
 
 **Type:** string
 

@@ -12,6 +12,12 @@ Surface configuration parameters.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## flip
 
 ```TypeScript
@@ -20,7 +26,7 @@ flip?: FlipOptions
 
 视频是否翻转。
 
-**类型：** FlipOptions
+**类型：** [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md)
 
 **起始版本：** 18
 
@@ -42,7 +48,7 @@ format?: VideoPixelFormat
 
 视频像素格式，此选项必须在发送端配置。必须在流启动前设置，设置后不可更新。
 
-**类型：** VideoPixelFormat
+**类型：** [VideoPixelFormat](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md)
 
 **起始版本：** 18
 
@@ -64,7 +70,7 @@ height: int
 
 编码长度。必须在流启动前设置，设置后不可更新。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -86,7 +92,7 @@ rotation?: int
 
 视频旋转角度。旋转角度范围为{0, 90, 180, 270}，默认为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -108,7 +114,7 @@ width: int
 
 编码宽度。必须在流启动前设置，设置后不可更新。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

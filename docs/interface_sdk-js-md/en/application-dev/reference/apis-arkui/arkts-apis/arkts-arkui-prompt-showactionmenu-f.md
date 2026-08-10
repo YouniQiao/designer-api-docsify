@@ -1,12 +1,18 @@
 # showActionMenu
 
+## Modules to Import
+
+```TypeScript
+import { prompt } from 'kits/@kit.ArkUI';
+```
+
 ## showActionMenu
 
 ```TypeScript
 function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void
 ```
 
-Displays the menu.
+创建并显示操作菜单，菜单响应结果异步返回。
 
 **Since:** 8
 
@@ -24,10 +30,10 @@ Displays the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ActionMenuSuccessResponse&gt; | Yes |  |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | 操作菜单选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes | 菜单响应结果回调。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import prompt from '@ohos.prompt'
@@ -59,7 +65,7 @@ prompt.showActionMenu({
 function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>
 ```
 
-Displays the menu.
+创建并显示操作菜单，菜单响应后同步返回结果。
 
 **Since:** 8
 
@@ -77,15 +83,15 @@ Displays the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | 操作菜单选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ActionMenuSuccessResponse&gt; |  |
+| Promise&lt;ActionMenuSuccessResponse&gt; | 菜单响应结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import prompt from '@ohos.prompt'

@@ -1,16 +1,8 @@
 # WebStorage
 
-Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web**  
-components in an application share a **WebStorage** object.
-    **NOTE**  
-    
-    - The sample effect is subject to the actual device.  
-    
-    - You must load the **Web** component before calling the APIs in **WebStorage**.  
-    
-    - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the  
-    kernel discards Web SQL. For details about the ArkWeb kernel version, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+Implements a WebStorage object to manage the Web SQL database and HTML5 Web Storage APIs.All Web components in an application share a WebStorage object.
+
+&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;You must load the Web component before calling the APIs in WebStorage.&lt;/p&gt;
 
 **Since:** 23
 
@@ -20,13 +12,19 @@ components in an application share a **WebStorage** object.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## deleteAllData
 
 ```TypeScript
 static deleteAllData(incognito?: boolean): void
 ```
 
-Deletes all storage data used by JavaScript storage APIs, including the Web SQL Database and HTML5-supported Web storage APIs.
+Deletes all data in the Web SQL Database.
 
 **Since:** 23
 
@@ -40,7 +38,7 @@ Deletes all storage data used by JavaScript storage APIs, including the Web SQL 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. The value **true** means to delete all data in the Web SQL Database in incognito mode, and **false** means the opposite.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **undefined** or **null** is passed, the value is **false**. |
+| incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. {@code true} means to delete all data in the Web SQL Database in incognito mode; {@code false} means to delete all data in the Web SQL Database in normal non-incognito mode. |
 
 ## deleteOrigin
 
@@ -62,14 +60,14 @@ Deletes all data in the specified origin.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Index of the origin, which is obtained through [getOrigins]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| origin | string | Yes | Index of the origin, which is obtained through {@link getOrigins}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100011 | Invalid origin. |
 
 ## getOriginQuota
 
@@ -97,14 +95,14 @@ Get the web storage quota with the origin.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;double&gt; |  the promise returned by the function. Unit: byte. |
+| Promise&lt;double&gt; | the promise returned by the function. Unit: byte. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. @static |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100011 | Invalid origin. @static |
 
 ## getOriginQuota
 
@@ -112,7 +110,7 @@ Get the web storage quota with the origin.
 static getOriginQuota(origin: string, callback: AsyncCallback<double>): void
 ```
 
-Obtains the storage quota of an origin in Web SQL Database and HTML5-supported Web Storage APIs, in bytes.This API uses an asynchronous callback to return the result.
+Get the web storage quota with the origin.
 
 **Since:** 23
 
@@ -126,15 +124,15 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Index of the origin. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | Yes | The origin which to be inquired. - Storage quota of the origin.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
+| origin | string | Yes | The origin which to be inquired. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | the callback of getOriginQuota. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100011 | Invalid origin. @static |
 
 ## getOriginUsage
 
@@ -142,7 +140,7 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 static getOriginUsage(origin: string): Promise<double>
 ```
 
-Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses a promise to return the result.
+Get the web amount of storage with the origin.
 
 **Since:** 23
 
@@ -156,20 +154,20 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Index of the origin. |
+| origin | string | Yes | The origin which to be inquired. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;double&gt; | Promise used to return the storage usage of the origin. |
+| Promise&lt;double&gt; | the promise returned by the function. Unit: byte. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100011 | Invalid origin. @static |
 
 ## getOriginUsage
 
@@ -177,7 +175,7 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 static getOriginUsage(origin: string, callback: AsyncCallback<double>): void
 ```
 
-Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses an asynchronous callback to return the result.
+Get the web amount of storage with the origin.
 
 **Since:** 23
 
@@ -191,15 +189,15 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Index of the origin. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | Yes | Storage usage of the origin. |
+| origin | string | Yes | The origin which to be inquired. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | the callback of getOriginUsage. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100011 | Invalid origin. @static |
 
 ## getOrigins
 
@@ -207,7 +205,7 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 static getOrigins(): Promise<Array<WebStorageOrigin>>
 ```
 
-Obtains information about origins that are currently using the Web SQL Database and HTML5-supported Web Storage APIs. This API uses a promise to return the result.
+Obtains information about all origins that are currently using the Web SQL Database.This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -221,14 +219,14 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WebStorageOrigin&gt;&gt; | Promise used to return the information about the origins. |
+| Promise&lt;Array&lt;WebStorageOrigin&gt;&gt; | Promise used to return the information about the origins. For details, see { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100012](../errorcode-webview.md#17100012-no-web-storage-origin) | Invalid web storage origin. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100012 | Invalid web storage origin. |
 
 ## getOrigins
 
@@ -236,7 +234,7 @@ Obtains information about origins that are currently using the Web SQL Database 
 static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 ```
 
-Obtains information about origins that are currently using the Web SQL Database and HTML5-supported Web Storage APIs. This API uses an asynchronous callback to return the result.
+Obtains information about all origins that are currently using the Web SQL Database.This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -250,12 +248,12 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;WebStorageOrigin&gt;&gt; | Yes | Callback used to return the information about the origins. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WebStorageOrigin&gt;&gt; | Yes | Callback used to return the information about the origins. For details, see {@link WebStorageOrigin}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100012](../errorcode-webview.md#17100012-no-web-storage-origin) | Invalid web storage origin. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100012 | Invalid web storage origin. |
 

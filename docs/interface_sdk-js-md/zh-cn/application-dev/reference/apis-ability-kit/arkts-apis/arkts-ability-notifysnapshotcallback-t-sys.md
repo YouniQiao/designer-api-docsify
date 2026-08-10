@@ -22,6 +22,6 @@ type NotifySnapshotCallback = (deviceId: string, mission: int) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | Indicates the deviceId snapshot changed.  |
-| mission | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Indicates the id of mission.  |
+| deviceId | string | 是 | Indicates the deviceId snapshot changed. |
+| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the id of mission. |
 

@@ -1,9 +1,9 @@
 # PolicyChangedEvent
 
-Defines the policy change event.
+策略变更事件。
 
-This API is used as a callback input parameter of  
-[onAdminPolicyChanged]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+该接口目前在  
+[onAdminPolicyChanged](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged)接口中作为回调入参使用。
 
 **Since:** 26.0.0
 
@@ -13,13 +13,19 @@ This API is used as a callback input parameter of
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { common } from 'kits/@kit.MDMKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-App bundle name.
+应用包名。
 
 **Type:** string
 
@@ -39,8 +45,7 @@ App bundle name.
 functionName: string
 ```
 
-API name. For example, if the  
-[setPasswordPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API is called, the value of this parameter is **setPasswordPolicy**.
+接口名称。例如调用[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy)接口时，该字段返回值为setPasswordPolicy。
 
 **Type:** string
 
@@ -60,8 +65,8 @@ API name. For example, if the
 parameters: string
 ```
 
-Input parameter value (excluding the **admin** parameter) when an API is called. The value is a JSON string. For example, if the [setPasswordPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API is called, the return value of this parameter is  
-**{"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},\$","validityPeriod":1808309786000,"additionalDescription":"It must contain at least eight characters, including digits and letters."}}**.
+调用接口时传入的参数值（不包含admin参数），JSON格式字符串。例如调用  
+[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy)接口，该字段返回值为{"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},\$","validityPeriod":1808309786000,"additionalDescription":"至少8个字符，且包含数字和字母。"}}。
 
 **Type:** string
 
@@ -81,7 +86,7 @@ Input parameter value (excluding the **admin** parameter) when an API is called.
 time: number
 ```
 
-Timestamp when an API is called, in milliseconds.
+调用接口的时间戳，单位：ms。
 
 **Type:** number
 

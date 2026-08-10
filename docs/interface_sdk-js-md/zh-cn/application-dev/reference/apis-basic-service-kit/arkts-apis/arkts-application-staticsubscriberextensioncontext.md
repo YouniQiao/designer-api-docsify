@@ -1,5 +1,11 @@
 # @ohos.application.StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)
 
+## 导入模块
+
+```TypeScript
+import { StaticSubscriberExtensionContext } from 'kits/@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 <!--Del-->

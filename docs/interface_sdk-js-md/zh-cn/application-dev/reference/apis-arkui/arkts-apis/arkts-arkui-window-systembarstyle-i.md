@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## statusBarContentColor
 
 ```TypeScript
 statusBarContentColor?: string
 ```
 
-状态栏文字颜色。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+状态栏文字颜色。默认值：`'#E5FFFFFF'`。
 
 **类型：** string
 

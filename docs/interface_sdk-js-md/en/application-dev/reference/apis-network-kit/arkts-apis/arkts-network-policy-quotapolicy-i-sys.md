@@ -12,13 +12,19 @@ Policies that limit network quota.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## lastLimitRemind
 
 ```TypeScript
 lastLimitRemind?: number
 ```
 
-The time of the last limit reminder. For notifying only, default: REMIND\_NEVER.
+The time of the last limit reminder. For notifying only, default: REMIND_NEVER.
 
 **Type:** number
 
@@ -38,7 +44,7 @@ The time of the last limit reminder. For notifying only, default: REMIND\_NEVER.
 lastWarningRemind?: number
 ```
 
-The time of the last warning reminder. For notifying only, default: REMIND\_NEVER.
+The time of the last warning reminder. For notifying only, default: REMIND_NEVER.
 
 **Type:** number
 
@@ -58,9 +64,9 @@ The time of the last warning reminder. For notifying only, default: REMIND\_NEVE
 limitAction: LimitAction
 ```
 
-The action while the used bytes reach the limit, see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+The action while the used bytes reach the limit, see {@link LimitAction}.
 
-**Type:** LimitAction
+**Type:** [LimitAction](arkts-network-policy-limitaction-e-sys.md)
 
 **Since:** 10
 
@@ -78,7 +84,7 @@ The action while the used bytes reach the limit, see \_\_\_JSDOC\_LINK\_DESC\_US
 limitBytes: number
 ```
 
-The limit threshold of traffic, default: DATA\_USAGE\_UNKNOWN.
+The limit threshold of traffic, default: DATA_USAGE_UNKNOWN.
 
 **Type:** number
 
@@ -138,7 +144,7 @@ The period and the start time for quota policy, default: "M1" (Monthly cycle).
 warningBytes: number
 ```
 
-The warning threshold of traffic, default: DATA\_USAGE\_UNKNOWN.
+The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
 
 **Type:** number
 

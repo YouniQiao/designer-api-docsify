@@ -1,12 +1,18 @@
 # offApplicationStateChange
 
+## Modules to Import
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offApplicationStateChange
 
 ```TypeScript
 function offApplicationStateChange(observerId: int, callback: AsyncCallback<void>): void
 ```
 
-Unregister application state observer.
+注销应用状态监听器。使用callback异步回调。
 
 **Since:** 23
 
@@ -22,15 +28,15 @@ Unregister application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerId | int | Yes | Indicates the number code of the observer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of off. |
+| observerId | int | Yes | 注册的应用状态监听器ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of off. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 
 
 ## offApplicationStateChange
@@ -39,7 +45,7 @@ Unregister application state observer.
 function offApplicationStateChange(observerId: int): Promise<void>
 ```
 
-Unregister application state observer.
+注销应用状态监听器。使用Promise异步回调。
 
 **Since:** 23
 
@@ -55,7 +61,7 @@ Unregister application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerId | int | Yes | Indicates the number code of the observer. |
+| observerId | int | Yes | 注册的应用状态监听器ID。 |
 
 **Return value:**
 
@@ -67,6 +73,6 @@ Unregister application state observer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
 

@@ -1,6 +1,6 @@
 # Point
 
-Describes the point coordinates, which are used for focus and exposure configuration.
+点坐标用于对焦和曝光配置。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the point coordinates, which are used for focus and exposure configura
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## x
 
 ```TypeScript
 x: double
 ```
 
-X coordinate of a point.
+点的x坐标。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ X coordinate of a point.
 y: double
 ```
 
-Y coordinate of a point.
+点的y坐标。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 

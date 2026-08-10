@@ -6,8 +6,8 @@
 const MAX_ALLOWABLE_REUSE_DURATION: 300000
 ```
 
-Maximum reuse duration of the authentication result, in milliseconds. The value is **300000** (5 minutes). This constant is used to limit the maximum duration for reusing an authentication result, preventing security risks caused by reusing expired authentication results for a long time. It can be used as the maximum value of the  
-**reuseDuration** parameter in [ReuseUnlockResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+复用解锁认证结果最大有效时长，值为300000毫秒（5分钟）。用于限制认证结果复用的最大时长，防止长时间复用过期的认证结果带来的安全风险。该常量可作为  
+[ReuseUnlockResult](arkts-userauthentication-userauth-reuseunlockresult-i.md)中reuseDuration参数的最大值。
 
 **Since:** 12
 
@@ -25,8 +25,8 @@ Maximum reuse duration of the authentication result, in milliseconds. The value 
 const PERMANENT_LOCKOUT_DURATION: int = 0x7fffffff
 ```
 
-Permanent lockout duration, in milliseconds. The value is **0x7fffffff**. When the number of failed authentication attempts reaches the upper limit, the authenticator enters the permanent lockout status. In this case, PIN authentication is required for unlocking. This value is used to identify the permanent lockout status of the authenticator, which can be returned by the **lockoutDuration** field in  
-[AuthLockState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+永久冻结时间，值为0x7fffffff毫秒。当认证不通过次数达到上限后，认证器将进入永久冻结状态，此时需要通过PIN认证才能解锁。该值用于标识认证器的永久冻结状态，可通过  
+[AuthLockState](arkts-userauthentication-userauth-authlockstate-i.md)的lockoutDuration字段返回。
 
 **Since:** 22
 

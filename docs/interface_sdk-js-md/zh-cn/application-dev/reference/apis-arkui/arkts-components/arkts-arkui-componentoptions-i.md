@@ -18,11 +18,11 @@ freezeWhenInactive : boolean
 
 配置自定义组件支持组件冻结。true：开启组件冻结，false：不开启组件冻结。当开发者未指定ComponentOptions时，freezeWhenInactive将使用false作为默认值。
 
-从API version 11开始，支持通过此参数配置\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_组件冻结。示例可见\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
+从API version 11开始，支持通过此参数配置[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)组件冻结。示例可见[自定义组件冻结](../../../ui/state-management/arkts-custom-components-freeze.md)。
 
 从API version 12开始，支持通过此参数配置  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_组件冻结。示例可见  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_。
+[@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)组件冻结。示例可见  
+[自定义组件冻结](../../../ui/state-management/arkts-custom-components-freezeV2.md)。
 
 **类型：** boolean
 
@@ -74,7 +74,7 @@ reusePool?: ReusePoolOwnership
 
 在自定义组件上配置全局复用池的类型，适用于应用中存在多个同类型可复用自定义组件、需要在组件实例间共享或隔离复用资源以提升复用效率的场景。如果不传入，则全局复用池不会生效。reusePool需与poolAccepts配合使用，reusePool参数被设置时，poolAccepts必须为非空数组，否则全局复用不生效。
 
-**类型：** ReusePoolOwnership
+**类型：** [ReusePoolOwnership](../arkts-apis/arkts-arkui-customcomponent-reusepoolownership-e.md)
 
 **默认值：** perInstance
 

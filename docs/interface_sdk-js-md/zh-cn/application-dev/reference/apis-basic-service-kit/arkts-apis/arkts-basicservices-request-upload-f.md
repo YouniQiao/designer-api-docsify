@@ -1,5 +1,11 @@
 # upload
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## upload
 
 ```TypeScript
@@ -28,16 +34,16 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 上传的配置信息。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;UploadTask&gt; | 是 | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为 错误对象。 |
+| config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | 是 | 上传的配置信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;UploadTask&gt; | 是 | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为 错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let uploadTask: request.UploadTask;
@@ -86,7 +92,7 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 上传的配置信息。 |
+| config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | 是 | 上传的配置信息。 |
 
 **返回值：**
 
@@ -98,9 +104,9 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| 201 | The permissions check fails. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let uploadTask: request.UploadTask;

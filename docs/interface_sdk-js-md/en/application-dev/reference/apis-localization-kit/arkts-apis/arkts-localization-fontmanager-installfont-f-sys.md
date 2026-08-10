@@ -1,12 +1,18 @@
 # installFont (System API)
 
+## Modules to Import
+
+```TypeScript
+import { fontManager } from 'kits/@kit.LocalizationKit';
+```
+
 ## installFont
 
 ```TypeScript
 function installFont(path: string): Promise<int>
 ```
 
-Installs a font file from a specified path into the system font library. This API uses a promise to return the result.After successful installation, applications can use the font by its font name.
+将指定路径下的字体文件安装到系统字体库中。使用Promise异步回调。安装成功后，应用可以通过字体名称使用该字体。
 
 **Since:** 19
 
@@ -24,24 +30,24 @@ Installs a font file from a specified path into the system font library. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path to the font file to be installed. Only .ttf and .ttc font files are supported. |
+| path | string | Yes | 待安装的字体文件路径，仅支持.ttf和.ttc格式的字体文件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the installation result. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- The value **0** indicates that the installation is successful and the font has been added to the system font library. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Any other value indicates that the installation failed. Troubleshoot based on the error code. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回安装结果。 &lt;br&gt;- 返回0：安装成功，字体已添加到系统字体库。 &lt;br&gt;- 返回其他值：安装失败，请根据错误码排查原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system application. |
-| [31100101](../errorcode-font-manager.md#31100101-font-file-not-exist) | Font does not exist. |
-| [31100102](../errorcode-font-manager.md#31100102-failed-to-install-font-file) | Font is not supported. |
-| [31100103](../errorcode-font-manager.md#31100103-failed-to-copy-font-file) | Font file copy failed. |
-| [31100104](../errorcode-font-manager.md#31100104-font-file-already-installed) | Font file installed. |
-| [31100105](../errorcode-font-manager.md#31100105-number-of-installed-font-files-reaching-the-maximum) | Exceeded maximum number of installed files. |
-| [31100106](../errorcode-font-manager.md#31100106-font-file-installation-failed-due-to-other-errors) | Other error. |
+| 31100106 | Other error. |
+| 31100104 | Font file installed. |
+| 31100105 | Exceeded maximum number of installed files. |
+| 201 | Permission denied. |
+| 202 | Non-system application. |
+| 31100102 | Font is not supported. |
+| 31100103 | Font file copy failed. |
+| 31100101 | Font does not exist. |
 

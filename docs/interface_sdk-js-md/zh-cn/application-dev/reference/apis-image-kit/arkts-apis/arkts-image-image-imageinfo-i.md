@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## alphaType
 
 ```TypeScript
@@ -18,7 +24,7 @@ alphaType: AlphaType
 
 透明度。
 
-**类型：** AlphaType
+**类型：** [AlphaType](arkts-image-image-alphatype-e.md)
 
 **起始版本：** 12
 
@@ -40,7 +46,7 @@ density: int
 
 像素密度。单位：ppi（像素/英寸）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -60,8 +66,8 @@ density: int
 isHdr: boolean
 ```
 
-true表示图片为高动态范围（HDR），false表示图片非高动态范围（SDR）。对于[ImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，代表源图片是否为HDR；对于  
-[PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，代表解码后的PixelMap是否为HDR。
+true表示图片为高动态范围（HDR），false表示图片非高动态范围（SDR）。对于[ImageSource](arkts-image-image-imagesource-i.md)，代表源图片是否为HDR；对于  
+[PixelMap](arkts-image-image-pixelmap-i.md)，代表解码后的PixelMap是否为HDR。
 
 **类型：** boolean
 
@@ -81,9 +87,9 @@ mimeType: string
 
 图片真实格式（MIME type）。
 
-图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_的format。
+图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption](arkts-image-image-packingoption-i.md)的format。
 
-可以使用ImageSource\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中的supportedFormats和ImagePacker\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_中的supportedFormats查看解码和编码支持的格式范围。
+可以使用ImageSource[属性](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性)中的supportedFormats和ImagePacker[属性](../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md#属性)中的supportedFormats查看解码和编码支持的格式范围。
 
 **类型：** string
 
@@ -103,7 +109,7 @@ pixelFormat: PixelMapFormat
 
 像素格式。
 
-**类型：** PixelMapFormat
+**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **起始版本：** 12
 
@@ -125,7 +131,7 @@ size: Size
 
 图片大小。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 6
 
@@ -147,7 +153,7 @@ stride: int
 
 跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride >= size.width * 4，不满足时数据读取异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 

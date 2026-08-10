@@ -1,5 +1,11 @@
 # getSignalInformationSync
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## getSignalInformationSync
 
 ```TypeScript
@@ -20,7 +26,7 @@ Obtains the list of signal strength information of the registered network corres
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
 
 **Return value:**
 
@@ -28,7 +34,7 @@ Obtains the list of signal strength information of the registered network corres
 | --- | --- |
 | Array&lt;SignalInformation&gt; | Returns the callback for getting the instance list of the child classes derived from { |
 
-**Example**
+## Examples
 
 ```TypeScript
 let slotId: number = 0;

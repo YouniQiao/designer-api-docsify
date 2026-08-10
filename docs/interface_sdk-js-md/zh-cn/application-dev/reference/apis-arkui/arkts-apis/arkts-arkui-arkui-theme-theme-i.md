@@ -1,7 +1,7 @@
 # Theme
 
 当前生效的主题风格对象，可从  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中获取。
+[onWillApplyTheme](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#onwillapplytheme12)中获取。
 
 **起始版本：** 23
 
@@ -11,6 +11,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomTheme } from 'kits/@kit.ArkUI';
+```
+
 ## colors
 
 ```TypeScript
@@ -19,7 +25,7 @@ colors: Colors
 
 主题颜色资源。
 
-**类型：** Colors
+**类型：** [Colors](arkts-arkui-arkui-theme-colors-i.md)
 
 **起始版本：** 23
 

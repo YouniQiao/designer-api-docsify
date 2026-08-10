@@ -10,6 +10,12 @@ Describes the manufacturer data.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## manufactureId
 
 ```TypeScript
@@ -18,7 +24,7 @@ manufactureId: int
 
 Indicates the manufacturer ID assigned by Bluetooth SIG
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

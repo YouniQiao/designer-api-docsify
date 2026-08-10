@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## altitude
 
 ```TypeScript
@@ -18,7 +24,7 @@ altitude: double
 
 海拔（米）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ latitude: double
 
 纬度（度）。取值范围：[-90, 90]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 10
 
@@ -58,7 +64,7 @@ longitude: double
 
 经度（度）。取值范围：[-180, 180]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 10
 

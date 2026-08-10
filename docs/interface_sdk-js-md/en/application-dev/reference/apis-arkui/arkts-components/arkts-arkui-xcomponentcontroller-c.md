@@ -1,6 +1,6 @@
 # XComponentController
 
-Defines the controller of the **XComponent**. You can bind the controller to the **XComponent** to call the component APIs through the controller.
+定义XComponent的控制器。您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Defines the controller of the **XComponent**. You can bind the controller to the
 constructor()
 ```
 
-A constructor used to create a **XComponentController** object.
+用于创建XComponentController实例的构造函数。
 
 **Since:** 8
 
@@ -34,8 +34,7 @@ A constructor used to create a **XComponentController** object.
 getXComponentContext(): Object
 ```
 
-Obtains the context of an **XComponent** object. This API works only when **type** of the **XComponent** is set to  
-**SURFACE("surface")** or **TEXTURE**.
+获取XComponent对象的context。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **Since:** 8
 
@@ -51,7 +50,7 @@ Obtains the context of an **XComponent** object. This API works only when **type
 
 | Type | Description |
 | --- | --- |
-| Object | Context of the **XComponent** object. The APIs contained in the context are defined by developers. The context is passed as the first parameter of the **onLoad** callback. |
+| Object | XComponent对象的context。 context中包含的接口由开发者定义。 context作为onLoad回调的第一个参数传入。 |
 
 ## getXComponentSurfaceId
 
@@ -59,8 +58,7 @@ Obtains the context of an **XComponent** object. This API works only when **type
 getXComponentSurfaceId(): string
 ```
 
-Obtains the ID of the surface held by the **XComponent**. This API works only when **type** of the **XComponent**  
-is **SURFACE("surface")** or **TEXTURE**.
+获取XComponent所持有的surface的ID，可用于@ohos相关接口。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **Since:** 9
 
@@ -76,7 +74,7 @@ is **SURFACE("surface")** or **TEXTURE**.
 
 | Type | Description |
 | --- | --- |
-| string | ID of the surface held by the **XComponent**. |
+| string | XComponent所持有的surface的ID。 |
 
 ## getXComponentSurfaceRect
 
@@ -84,8 +82,7 @@ is **SURFACE("surface")** or **TEXTURE**.
 getXComponentSurfaceRect(): SurfaceRect
 ```
 
-Obtains the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent**  
-type is **SURFACE("surface")** or **TEXTURE**.
+获取XComponent所持有的surface的矩形。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **Since:** 12
 
@@ -103,7 +100,7 @@ type is **SURFACE("surface")** or **TEXTURE**.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rectangle of the surface held by the **XComponent**. |
+| [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | XComponent所持有的surface的矩形。 |
 
 ## getXComponentSurfaceRotation
 
@@ -111,7 +108,7 @@ type is **SURFACE("surface")** or **TEXTURE**.
 getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 ```
 
-Obtains whether the orientation of the surface held by this **XComponent** is locked when the screen rotates. This API is effective only when the **XComponent** type is **SURFACE** (**"surface"**).
+获取屏幕旋转时此XComponent所持有的surface的方向是否锁定。该接口仅在XComponent的type设置为SURFACE("surface")时生效。
 
 **Since:** 12
 
@@ -129,7 +126,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SurfaceRotationOptions&gt; | Whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
+| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;SurfaceRotationOptions&gt; | surface旋转选项的结果。 |
 
 ## lockCanvas
 
@@ -137,7 +134,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 lockCanvas(): DrawingCanvas | null
 ```
 
-Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods,see [Canvas]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md/arkts-arkgraphics2d-drawing-canvas-c.md)。
 
 **Since:** 20
 
@@ -155,7 +152,7 @@ Obtains a canvas object for drawing content on the **XComponent** component. For
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a Canvas for drawing into the surface created by XComponent. Returns null if the surface is not available. |
+| [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | 返回用于在XComponent创建的surface上绘制的Canvas。 如果surface不可用，则返回null。 |
 
 ## onSurfaceChanged
 
@@ -163,8 +160,9 @@ Obtains a canvas object for drawing content on the **XComponent** component. For
 onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 ```
 
-Triggered when the surface held by the **XComponent** has its size changed (including the time when the  
-**XComponent** is created with the specified size). This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
+当XComponent所持有的surface大小发生变化时触发（包括XComponent以指定大小创建时）。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **Since:** 12
 
@@ -182,8 +180,8 @@ Triggered when the surface held by the **XComponent** has its size changed (incl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
-| rect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Area for displaying the surface held by the **XComponent**. |
+| surfaceId | string | Yes | XComponent所持有的surface的ID。 |
+| rect | [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | Yes | 用于显示XComponent所持有的surface的矩形。 |
 
 ## onSurfaceCreated
 
@@ -191,8 +189,9 @@ Triggered when the surface held by the **XComponent** has its size changed (incl
 onSurfaceCreated(surfaceId: string): void
 ```
 
-Triggered when the surface held by the **XComponent** is created. This API works only when **type** of the  
-**XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
+当XComponent所持有的surface创建完成时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **Since:** 12
 
@@ -210,7 +209,7 @@ Triggered when the surface held by the **XComponent** is created. This API works
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
+| surfaceId | string | Yes | XComponent所持有的surface的ID。 |
 
 ## onSurfaceDestroyed
 
@@ -218,8 +217,9 @@ Triggered when the surface held by the **XComponent** is created. This API works
 onSurfaceDestroyed(surfaceId: string): void
 ```
 
-Triggered when the surface held by the **XComponent** is destroyed. This API works only when **type** of the  
-**XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
+当XComponent所持有的surface销毁时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **Since:** 12
 
@@ -237,7 +237,7 @@ Triggered when the surface held by the **XComponent** is destroyed. This API wor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
+| surfaceId | string | Yes | XComponent所持有的surface的ID。 |
 
 ## setXComponentSurfaceConfig
 
@@ -245,11 +245,11 @@ Triggered when the surface held by the **XComponent** is destroyed. This API wor
 setXComponentSurfaceConfig(config: SurfaceConfig):void
 ```
 
-Sets the options of the surface created by the **XComponent**, which determine whether the surface held by the  
-**XComponent** is considered opaque during rendering.
-    **NOTE**  
-    
-    This API takes effect only when the type of **XComponent** is **TEXTURE** or **SURFACE**.
+设置XComponent创建的surface的配置。
+
+> **说明：**
+> 
+> 此接口仅在XComponent的type为TEXTURE或SURFACE时生效。
 
 **Since:** 22
 
@@ -267,7 +267,7 @@ Sets the options of the surface created by the **XComponent**, which determine w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | surface config |
+| config | [SurfaceConfig](../arkts-apis/arkts-arkui-xcomponent-surfaceconfig-i.md) | Yes | surface配置 |
 
 ## setXComponentSurfaceRect
 
@@ -275,8 +275,7 @@ Sets the options of the surface created by the **XComponent**, which determine w
 setXComponentSurfaceRect(rect: SurfaceRect): void
 ```
 
-Sets the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent**  
-type is **SURFACE("surface")** or **TEXTURE**.
+设置XComponent所持有的surface的矩形。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **Since:** 12
 
@@ -294,7 +293,7 @@ type is **SURFACE("surface")** or **TEXTURE**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rectangle of the surface held by the **XComponent**. |
+| rect | [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | Yes | XComponent所持有的surface的矩形。 |
 
 ## setXComponentSurfaceRotation
 
@@ -302,7 +301,7 @@ type is **SURFACE("surface")** or **TEXTURE**.
 setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 ```
 
-Sets whether to lock the orientation of the surface held by this **XComponent** when the screen rotates. This API is effective only when the **XComponent** type is **SURFACE** (**"surface"**).
+设置屏幕旋转时是否锁定此XComponent所持有的surface的方向。该接口仅在XComponent的type设置为SURFACE("surface")时生效。
 
 **Since:** 12
 
@@ -320,7 +319,7 @@ Sets whether to lock the orientation of the surface held by this **XComponent** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Whether to lock the orientation of the surface held by the current **XComponent** when the screen rotates. |
+| rotationOptions | [SurfaceRotationOptions](../arkts-apis/arkts-arkui-xcomponent-surfacerotationoptions-i.md) | Yes | 屏幕旋转时是否锁定当前XComponent所持有的surface的方向。 |
 
 ## setXComponentSurfaceSize
 
@@ -331,10 +330,9 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the  
-**XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
+设置XComponent所持有的surface的宽度和高度。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-Unit: px.
+单位：px。
 
 **Since:** 9
 
@@ -352,7 +350,7 @@ Unit: px.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | {     surfaceWidth: number;     surfaceHeight: number;   } | Yes | Width and Height of the surface held by the XComponent. |
+| value | {     surfaceWidth: number;     surfaceHeight: number;   } | Yes | XComponent所持有的surface的宽度和高度。 |
 
 ## startImageAnalyzer
 
@@ -360,16 +358,17 @@ Unit: px.
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is  
-[enabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer](XComponentAttribute#enableAnalyzer)，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。
 
-Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.
+由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。
 
-If this API is repeatedly called before the execution is complete, an error callback is triggered.
-    **NOTE**
-    The image analysis type cannot be dynamically modified.  
-    
-    This API depends on device capabilities. If it is called on an incompatible device, an error code is returned.
+如果在执行完成之前重复调用此接口，将触发错误回调。
+
+> **说明：**
+
+> 图像分析类型无法动态修改。
+> 
+> 此接口依赖于设备能力。在不兼容的设备上调用将返回错误码。
 
 **Since:** 12
 
@@ -387,21 +386,21 @@ If this API is repeatedly called before the execution is complete, an error call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Settings of the AI image analyzer. |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | AI图像分析器的设置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. It is used to indicate AI-based analysis is successfully executed. |
+| Promise&lt;void&gt; | 用于返回结果的Promise。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
+| 110001 | 不支持图像分析特性。 |
+| 110003 | 图像分析已停止。 |
+| 110002 | 图像分析正在执行中。 |
 
 ## stopImageAnalyzer
 
@@ -409,12 +408,13 @@ If this API is repeatedly called before the execution is complete, an error call
 stopImageAnalyzer(): void
 ```
 
-Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
-    **NOTE**
-    If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is  
-    triggered.  
-    
-    This feature depends on device capabilities.
+停止AI分析功能，AI分析展示的内容将被销毁。仅type为SURFACE或TEXTURE时有效。
+
+> **说明：**
+
+> 如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。
+> 
+> 此特性依赖于设备能力。
 
 **Since:** 12
 
@@ -434,7 +434,7 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 unlockCanvasAndPost(canvas: DrawingCanvas):void
 ```
 
-Submits the drawn content from a canvas object to the display area of the **XComponent** component and releases the canvas object.
+将Canvas的新内容发布到XComponent创建的surface，并释放该Canvas。
 
 **Since:** 20
 
@@ -452,5 +452,5 @@ Submits the drawn content from a canvas object to the display area of the **XCom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The canvas previously obtained from lockCanvas. |
+| canvas | [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | Yes | 之前通过lockCanvas获取的canvas。 |
 

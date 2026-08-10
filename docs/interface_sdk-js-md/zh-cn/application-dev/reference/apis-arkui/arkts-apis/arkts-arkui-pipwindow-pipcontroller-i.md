@@ -2,7 +2,7 @@
 
 画中画控制器实例。用于启动、停止画中画以及更新回调注册等。
 
-下列API示例中都需先使用[PiPWindow.create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法获取到PiPController实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create)方法获取到PiPController实例，再通过此实例调用对应方法。
 
 **起始版本：** 11
 
@@ -11,6 +11,12 @@
 <!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
+
+## 导入模块
+
+```TypeScript
+import { PiPWindow } from 'kits/@kit.ArkUI';
+```
 
 ## getPiPSettingSwitch
 
@@ -40,23 +46,25 @@ getPiPSettingSwitch(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pipSwitchStatus: boolean | undefined = undefined;
 try {
+  // 获取自动启动画中画开关状态
   let promise : Promise<boolean> = this.pipController.getPiPSettingSwitch();
   promise.then((data) => {
+    // 保存获取到的开关状态
     pipSwitchStatus = data;
     console.info('Succeeded in getting pip switch status. switchStatus: ' + JSON.stringify(data));
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to get pip switch status. Cause code: ${err.code}, message: ${err.message}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get pip switch status. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to get pip switch status. Cause code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to get pip switch status. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -88,23 +96,25 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.The PiP controller has been destroyed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.The PiP window is not created or has been destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300014 | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pipWindowInfo: PiPWindow.PiPWindowInfo | undefined = undefined;
 try {
+  // 获取画中画窗口信息
   let promise : Promise<PiPWindow.PiPWindowInfo> = this.pipController.getPiPWindowInfo();
   promise.then((data) => {
+    // 保存获取到的画中画窗口信息
     pipWindowInfo = data;
     console.info('Success in get pip window info. Info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to get pip window info. Cause code: ${err.code}, message: ${err.message}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get pip window info. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to get pip window info. Cause code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to get pip window info. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -136,22 +146,24 @@ isPiPActive(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.The PiP controller has been destroyed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.The PiP window is not created or has been destroyed. |
+| 1300014 | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let pipActiveStatus: boolean | undefined = undefined;
 try {
+  // 获取画中画的可见状态
   let promise : Promise<boolean> | undefined = this.pipController?.isPiPActive();
   promise?.then((data) => {
+    // 保存获取到的画中画可见状态
     pipActiveStatus = data;
     console.info('Succeeded in getting pip active status. activeStatus: ' + JSON.stringify(data));
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to get pip active status. Cause code: ${err.code}, message: ${err.message}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get pip active status. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to get pip active status. Cause code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to get pip active status. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -179,9 +191,10 @@ off(type: 'stateChange'): void
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
+// 关闭画中画生命周期状态变化的监听
 this.pipController.off('stateChange');
 ```
 
@@ -192,7 +205,7 @@ off(type: 'controlPanelActionEvent'): void
 ```
 
 关闭画中画控制面板控件动作事件的监听。推荐使用  
-[off('controlEvent')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_来关闭画中画控制面板控件动作事件的监听。
+[off('controlEvent')](PiPWindow.PiPController.off(type: 'controlEvent', callback?: Callback&lt;ControlEventParam&gt;))来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
 
@@ -210,9 +223,10 @@ off(type: 'controlPanelActionEvent'): void
 | --- | --- | --- | --- |
 | type | 'controlPanelActionEvent' | 是 | 事件类型，固定为'controlPanelActionEvent'，即画中画控制面板控件动作事件。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
+// 关闭画中画控制面板控件动作事件的监听
 this.pipController.off('controlPanelActionEvent');
 ```
 
@@ -239,14 +253,15 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ControlEventParam&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let callbackFunc = (event: PiPWindow.ControlEventParam) => {
   console.info(`receive control event: ${event.controlType}, ${event.status}`);
 }
+// 关闭画中画控制面板控件动作事件的监听
 this.pipController.off('controlEvent', callbackFunc);
 ```
 
@@ -273,15 +288,15 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PiPWindowSize&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 const callback = (size: PiPWindow.PiPWindowSize) => {
@@ -291,7 +306,7 @@ try {
   // 通过on接口开启监听
   this.pipController.on('pipWindowSizeChange', callback);
 } catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to enable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
 }
 
 try {
@@ -300,7 +315,7 @@ try {
   // 如果通过on开启多个callback进行监听，同时关闭所有监听：
   this.pipController.off('pipWindowSizeChange');
 } catch (exception) {
-  console.error(`Failed to disable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to disable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -327,14 +342,15 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | 是 | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let callback = (activeStatus: boolean) => {
   console.info(`pip window is visible: ${activeStatus}`);
 }
+// 关闭画中画窗口可见状态变化事件的监听
 this.pipController.off('activeStatusChange', callback);
 ```
 
@@ -358,14 +374,14 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
+| 801 | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| 1300014 | PiP internal error. |
 
 ## offControlEvent
 
@@ -387,16 +403,7 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ControlEventParam&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
-
-**示例：**
-
-```TypeScript
-let callbackFunc = (event: PiPWindow.ControlEventParam) => {
-  console.info(`receive control event: ${event.controlType}, ${event.status}`);
-}
-this.pipController.offControlEvent(callbackFunc);
-```
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
 
 ## offControlPanelActionEvent
 
@@ -404,7 +411,7 @@ this.pipController.offControlEvent(callbackFunc);
 offControlPanelActionEvent(): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。推荐使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_来关闭画中画控制面板控件动作事件的监听。
+关闭画中画控制面板控件动作事件的监听。推荐使用[offControlEvent](#offcontrolevent)来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 26.0.0
 
@@ -413,12 +420,6 @@ offControlPanelActionEvent(): void
 <!--Device-PiPController-offControlPanelActionEvent(): void--><!--Device-PiPController-offControlPanelActionEvent(): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
-
-**示例：**
-
-```TypeScript
-this.pipController.offControlPanelActionEvent();
-```
 
 ## offPipWindowSizeChange
 
@@ -440,36 +441,13 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PiPWindowSize&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-
-**示例：**
-
-```TypeScript
-const callback = (size: PiPWindow.PiPWindowSize) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  this.pipController.onPipWindowSizeChange(callback);
-} catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-
-try {
-  // 关闭指定callback的监听
-  this.pipController.offPipWindowSizeChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  this.pipController.offPipWindowSizeChange();
-} catch (exception) {
-  console.error(`Failed to disable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## offStateChange
 
@@ -486,12 +464,6 @@ offStateChange(): void
 <!--Device-PiPController-offStateChange(): void--><!--Device-PiPController-offStateChange(): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
-
-**示例：**
-
-```TypeScript
-this.pipController.offStateChange();
-```
 
 ## on('stateChange')
 
@@ -516,11 +488,12 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
-| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_state：[PiPState]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，表示当前画中画生命周期状态。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_reason：string，表示当前生命周期的切换原因。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_在\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_12\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_OpenHarmony 6.1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_13\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_之前，reason始终为“0”，无需关注。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_从\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_14\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_OpenHarmony 6.1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_15\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_开始，reason为当前生命周期的切换原因： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_"requestStart"：应用调用startPip接口； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_"autoStart"：应用退后台触发画中画自动启动； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_"requestDelete"：应用调用stopPip接口； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_"panelActionDelete"：用户点击画中画窗口的关闭按钮； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_"dragDelete"：用户将画中画窗口拖入垃圾桶； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_11\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
+| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。&lt;br/&gt;state：[PiPState](arkts-arkui-pipwindow-pipstate-e.md)，表示当前画中画生命周期状态。 &lt;br/&gt;reason：string，表示当前生命周期的切换原因。 &lt;br/&gt;在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。 &lt;br/&gt;从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因： &lt;br/&gt;"requestStart"：应用调用startPip接口； &lt;br/&gt;"autoStart"：应用退后台触发画中画自动启动； &lt;br/&gt;"requestDelete"：应用调用stopPip接口； &lt;br/&gt;"panelActionDelete"：用户点击画中画窗口的关闭按钮； &lt;br/&gt;"dragDelete"：用户将画中画窗口拖入垃圾桶； &lt;br/&gt;"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； &lt;br/&gt;"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
+// 开启画中画生命周期状态变化的监听
 this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {
   let curState: string = '';
   switch (state) {
@@ -556,7 +529,7 @@ on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): 
 ```
 
 开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用  
-[on('controlEvent')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_来开启画中画控制面板控件动作事件的监听。
+[on('controlEvent')](PiPWindow.PiPController.on(type: 'controlEvent', callback: Callback&lt;ControlEventParam&gt;))来开启画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
 
@@ -573,11 +546,12 @@ on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlPanelActionEvent' | 是 | 事件类型，固定为'controlPanelActionEvent'，即画中画控制面板控件动作事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 描述画中画控制面板控件动作事件回调。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 12 |
+| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 是 | 描述画中画控制面板控件动作事件回调。<br>**起始版本：** 12 |
 
-**示例：**
+## 示例
 
 ```TypeScript
+// 开启画中画控制面板控件动作事件的监听
 this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEventType, status?: number) => {
   switch (event) {
     case 'playbackStateChanged':
@@ -629,11 +603,12 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ControlEventParam&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
+// 开启画中画控制面板控件动作事件的监听
 this.pipController.on('controlEvent', (control) => {
   switch (control.controlType) {
     case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:
@@ -685,24 +660,25 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PiPWindowSize&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300014 | PiP internal error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 try {
+  // 开启画中画窗口尺寸变化事件的监听
   this.pipController.on('pipWindowSizeChange', (size: PiPWindow.PiPWindowSize) => {
     console.info('Succeeded in enabling the listener for pip window size changes. size: ' + JSON.stringify(size));
   });
 } catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to enable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -729,14 +705,15 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | 是 | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let callback = (activeStatus: boolean) => {
   console.info(`pip window is visible: ${activeStatus}`);
 }
+// 开启画中画窗口可见状态变化事件的监听
 this.pipController.on('activeStatusChange', callback);
 ```
 
@@ -760,23 +737,14 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_画中画显示状态变化回调函数 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 &lt;br&gt;画中画显示状态变化回调函数 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
-
-**示例：**
-
-```TypeScript
-let callback = (activeStatus: boolean) => {
-  console.info(`pip window is visible: ${activeStatus}`);
-}
-this.pipController.onActiveStatusChange(callback);
-```
+| 801 | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## onControlEvent
 
@@ -798,38 +766,7 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ControlEventParam&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
-
-**示例：**
-
-```TypeScript
-this.pipController.onControlEvent((control) => {
-  switch (control.controlType) {
-    case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:
-      if (control.status === PiPWindow.PiPControlStatus.PAUSE) {
-        // 停止视频
-      } else if (control.status === PiPWindow.PiPControlStatus.PLAY) {
-        // 播放视频
-      }
-      break;
-    case PiPWindow.PiPControlType.VIDEO_NEXT:
-      // 切换到下一个视频
-      break;
-    case PiPWindow.PiPControlType.VIDEO_PREVIOUS:
-      // 切换到上一个视频
-      break;
-    case PiPWindow.PiPControlType.FAST_FORWARD:
-      // 视频进度快进
-      break;
-    case PiPWindow.PiPControlType.FAST_BACKWARD:
-      // 视频进度后退
-      break;
-    default:
-      break;
-  }
-  console.info('registerControlEventCallback, controlType:' + control.controlType + ', status' + control.status);
-});
-```
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
 ## onControlPanelActionEvent
 
@@ -837,7 +774,7 @@ this.pipController.onControlEvent((control) => {
 onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_来开启画中画控制面板控件动作事件的监听。
+开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用[onControlEvent](#oncontrolevent)来开启画中画控制面板控件动作事件的监听。
 
 **起始版本：** 26.0.0
 
@@ -851,38 +788,7 @@ onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Used to handle {'controlPanelActionEvent'} command. |
-
-**示例：**
-
-```TypeScript
-this.pipController.onControlPanelActionEvent((event: PiPWindow.PiPActionEventType, status?: int) => {
-  switch (event) {
-    case 'playbackStateChanged':
-      if (status === 0) {
-        // 停止视频
-      } else if (status === 1) {
-        // 播放视频
-      }
-      break;
-    case 'nextVideo':
-      // 切换到下一个视频
-      break;
-    case 'previousVideo':
-      // 切换到上一个视频
-      break;
-    case 'fastForward':
-      // 视频进度快进
-      break;
-    case 'fastBackward':
-      // 视频进度后退
-      break;
-    default:
-      break;
-  }
-  console.info('registerActionEventCallback, event:' + event);
-});
-```
+| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 是 | Used to handle {'controlPanelActionEvent'} command. |
 
 ## onPipWindowSizeChange
 
@@ -904,26 +810,14 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PiPWindowSize&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
-
-**示例：**
-
-```TypeScript
-try {
-  this.pipController.onPipWindowSizeChange((size: PiPWindow.PiPWindowSize) => {
-    console.info('Succeeded in enabling the listener for pip window size changes. size: ' + JSON.stringify(size));
-  });
-} catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## onStateChange
 
@@ -945,38 +839,7 @@ onStateChange(callback: StateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 描述画中画生命周期状态变化回调。 |
-
-**示例：**
-
-```TypeScript
-this.pipController.onStateChange((state: PiPWindow.PiPState, reason: string) => {
-  let curState: string = '';
-  switch (state) {
-    case PiPWindow.PiPState.ABOUT_TO_START:
-      curState = 'ABOUT_TO_START';
-      break;
-    case PiPWindow.PiPState.STARTED:
-      curState = 'STARTED';
-      break;
-    case PiPWindow.PiPState.ABOUT_TO_STOP:
-      curState = 'ABOUT_TO_STOP';
-      break;
-    case PiPWindow.PiPState.STOPPED:
-      curState = 'STOPPED';
-      break;
-    case PiPWindow.PiPState.ABOUT_TO_RESTORE:
-      curState = 'ABOUT_TO_RESTORE';
-      break;
-    case PiPWindow.PiPState.ERROR:
-      curState = 'ERROR';
-      break;
-    default:
-      break;
-  }
-  console.info('stateChange:' + curState + ' reason:' + reason);
-});
-```
+| callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | 是 | 描述画中画生命周期状态变化回调。 |
 
 ## setAutoStartEnabled
 
@@ -1004,11 +867,11 @@ setAutoStartEnabled(enable: boolean): void
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 如返回桌面时需自动启动画中画，则该参数配置为true，否则为false。若设置-系统-智慧多窗-自动启动画中画开关为关闭状态，就算该参数配置为true，应用返回桌面时也不 会自动启动画中画窗口。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let enable: boolean = true;
-this.pipController.setAutoStartEnabled(enable);
+this.pipController.setAutoStartEnabled(enable); // 设置应用主窗退后台时自动启动画中画
 ```
 
 ## setPiPControlEnabled
@@ -1033,15 +896,15 @@ setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controlType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示画中画控制面板控件类型。 |
+| controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | 是 | 表示画中画控制面板控件类型。 |
 | enabled | boolean | 是 | 表示画中画控制面板控件使能状态。true表示控件为可使用状态，false则为禁用状态。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let controlType: PiPWindow.PiPControlType = PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE; // 视频播放控制面板中播放/暂停控件。
 let enabled: boolean = false; // 视频播放控制面板中播放/暂停控件为禁用状态。
-this.pipController.setPiPControlEnabled(controlType, enabled);
+this.pipController.setPiPControlEnabled(controlType, enabled); // 设置控制面板控件使能状态
 ```
 
 ## startPiP
@@ -1072,20 +935,20 @@ startPiP(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.The PiP controller has been destroyed. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.The PiP window is not created or has been destroyed. |
-| [1300013](../errorcode-window.md#1300013-创建画中画窗口失败) | Failed to create the PiP window. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.PiP configuration parameters are invalid, such as pipOption or context is null. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.The XComponentController or main window is null. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.The main window is not shown (non-auto-start scenario). \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_4.Navigation component operation failed. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
-| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
-| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started float view.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 26.0.0+ |
+| 1300034 | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**适用版本：** 26.0.0+ |
+| 1300015 | Repeated PiP operation. |
+| 1300014 | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
+| 1300013 | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
+| 1300012 | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 开发者可根据pipController的定义方式自行实现pipController的调用
-let promise : Promise<void> = this.pipController.startPiP();
+let promise : Promise<void> = this.pipController.startPiP(); // 启动画中画
 promise.then(() => {
   console.info(`Succeeded in starting pip.`);
-}).catch((err: BusinessError): void => {
+}).catch((err: BusinessError) => {
   console.error(`Failed to start pip. Cause:${err.code}, message:${err.message}`);
 });
 ```
@@ -1118,17 +981,17 @@ stopPiP(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300011](../errorcode-window.md#1300011-销毁画中画窗口失败) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
-| [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
-| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
+| 1300011 | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
+| 1300015 | Repeated PiP operation. |
+| 1300012 | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
-let promise : Promise<void> = this.pipController.stopPiP();
+let promise : Promise<void> = this.pipController.stopPiP(); // 停止画中画
 promise.then(() => {
   console.info(`Succeeded in stopping pip.`);
-}).catch((err: BusinessError): void => {
+}).catch((err: BusinessError) => {
   console.error(`Failed to stop pip. Cause:${err.code}, message:${err.message}`);
 });
 ```
@@ -1167,43 +1030,21 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { typeNode, UIContext } from '@kit.ArkUI';
 
-let context: UIContext | undefined = undefined; // 可传入UIContext或在布局中通过this.getUIContext()为context赋有效值
+let context: UIContext = this.getUIContext(); // 通过this.getUIContext()获取UIContext
 
 try {
-  let contentNode = typeNode.createNode(context, "XComponent");
-  this.pipController.updateContentNode(contentNode);
+  let contentNode = typeNode.createNode(context, "XComponent"); // 创建XComponent节点用于渲染画中画内容
+  this.pipController.updateContentNode(contentNode); // 更新画中画节点内容
 } catch (exception) {
-  console.error(`Failed to update content node. Cause: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { typeNode } from 'arkui.FrameNode';
-import { UIContext } from '@ohos.arkui.UIContext';
-import { XComponentController, XComponentOptions } from '@ohos.arkui.component';
-
-try {
-  let context: UIContext = this.getUIContext(); // 可传入UIContext或在布局中通过this.getUIContext()为context赋有效值
-  let options: XComponentOptions = {
-    type: XComponentType.SURFACE,
-    controller: new XComponentController()
-  }
-  let contentNode: typeNode.XComponent = typeNode.createXComponentNodeWithOptions(context, options);
-  this.pipController?.updateContentNode(contentNode);
-} catch (exception) {
-  console.error(`Failed to update content node. Cause: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to update content node. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -1235,25 +1076,15 @@ updateContentSize(width: int, height: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示媒体内容宽度，必须为大于0的整数，单位为px。用于更新画中画窗口比例。 |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示媒体内容高度，必须为大于0的整数，单位为px。用于更新画中画窗口比例。 |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示媒体内容宽度，必须为大于0的整数，单位为px。用于更新画中画窗口比例。 |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示媒体内容高度，必须为大于0的整数，单位为px。用于更新画中画窗口比例。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 let width: number = 540; // 假设当前内容宽度变为540px。
 let height: number = 960; // 假设当前内容高度变为960px。
-this.pipController.updateContentSize(width, height);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let width: int = 540; // 假设当前内容宽度变为540px。
-let height: int = 960; // 假设当前内容高度变为960px。
-this.pipController.updateContentSize(width, height);
+this.pipController.updateContentSize(width, height); // 更新画中画窗口内容尺寸
 ```
 
 ## updatePiPControlStatus
@@ -1278,14 +1109,14 @@ updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controlType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示画中画控制面板控件类型。目前仅支持VIDEO\_\_\_ESCAPED\_UNDERSCORE\_\_\_PLAY\_\_\_ESCAPED\_UNDERSCORE\_\_\_PAUSE、MICROPHONE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SWITCH、CAMERA\_\_\_ESCAPED\_UNDERSCORE\_\_\_SWITCH和 MUTE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SWITCH这几种控件类型，传入其他控件类型不生效也不报错。 |
-| status | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示画中画控制面板控件状态。 |
+| controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | 是 | 表示画中画控制面板控件类型。目前仅支持VIDEO_PLAY_PAUSE、MICROPHONE_SWITCH、CAMERA_SWITCH和 MUTE_SWITCH这几种控件类型，传入其他控件类型不生效也不报错。 |
+| status | [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) | 是 | 表示画中画控制面板控件状态。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let controlType: PiPWindow.PiPControlType = PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE; // 视频播放控制面板中播放/暂停控件。
 let status: PiPWindow.PiPControlStatus = PiPWindow.PiPControlStatus.PLAY; // 视频播放控制面板中播放/暂停控件为播放状态。
-this.pipController.updatePiPControlStatus(controlType, status);
+this.pipController.updatePiPControlStatus(controlType, status); // 更新控制面板控件状态
 ```
 

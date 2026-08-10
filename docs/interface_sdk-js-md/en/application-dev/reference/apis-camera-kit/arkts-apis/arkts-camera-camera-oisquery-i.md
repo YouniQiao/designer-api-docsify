@@ -10,6 +10,12 @@ OIS (Optical Image Stabilization) query interface.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getCurrentCustomOISBias
 
 ArkTS-Dyn:
@@ -40,20 +46,20 @@ Gets the current custom bias value for the specified OIS axis.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oisAxis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The OIS axis |
+| oisAxis | [OISAxes](arkts-camera-camera-oisaxes-e.md) | Yes | The OIS axis |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | The current bias value. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The current bias value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## getCurrentOISMode
 
@@ -79,14 +85,14 @@ Gets the current OIS mode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The current OIS mode. |
+| [OISMode](arkts-camera-camera-oismode-e.md) | The current OIS mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## getSupportedOISBiasRange
 
@@ -118,20 +124,20 @@ Gets the supported bias range for the specified OIS axis.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oisAxis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The OIS axis. |
+| oisAxis | [OISAxes](arkts-camera-camera-oisaxes-e.md) | Yes | The OIS axis. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | The bias range. |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | The bias range. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## getSupportedOISBiasStep
 
@@ -163,20 +169,20 @@ Gets the bias step for the specified OIS axis.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oisAxis | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The OIS axis. |
+| oisAxis | [OISAxes](arkts-camera-camera-oisaxes-e.md) | Yes | The OIS axis. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | The bias step value. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The bias step value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## isOISModeSupported
 
@@ -202,7 +208,7 @@ Checks if the specified OIS mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The OIS mode to check. |
+| mode | [OISMode](arkts-camera-camera-oismode-e.md) | Yes | The OIS mode to check. |
 
 **Return value:**
 
@@ -214,6 +220,6 @@ Checks if the specified OIS mode is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 

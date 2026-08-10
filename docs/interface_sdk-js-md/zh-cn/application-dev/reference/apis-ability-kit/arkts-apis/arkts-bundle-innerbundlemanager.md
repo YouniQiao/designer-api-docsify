@@ -10,6 +10,12 @@ The module provides APIs for the Home Screen application.
  > The APIs provided by this module are system APIs.
 
 
+## 导入模块
+
+```TypeScript
+import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 命名空间

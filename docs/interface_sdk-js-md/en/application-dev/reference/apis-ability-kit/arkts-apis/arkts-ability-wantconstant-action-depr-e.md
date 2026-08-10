@@ -1,6 +1,6 @@
 # Action
 
-Enumerates the action constants of the Want object. **action** specifies the operation to execute.
+want操作的常数。用于表示要执行的通用操作。
 
 **Since:** 6
 
@@ -18,7 +18,7 @@ Enumerates the action constants of the Want object. **action** specifies the ope
 ACTION_HOME = 'ohos.want.action.home'
 ```
 
-Action of returning to the home page.
+指示返回原点的操作。
 
 **Since:** 6
 
@@ -36,7 +36,7 @@ Action of returning to the home page.
 ACTION_DIAL = 'ohos.want.action.dial'
 ```
 
-Action of launching the numeric keypad.
+指示启动显示小键盘的页面功能的操作。
 
 **Since:** 6
 
@@ -54,7 +54,7 @@ Action of launching the numeric keypad.
 ACTION_SEARCH = 'ohos.want.action.search'
 ```
 
-Action of launching the search function.
+指示启动页面搜索功能的操作。
 
 **Since:** 6
 
@@ -72,7 +72,7 @@ Action of launching the search function.
 ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'
 ```
 
-Action of launching the UI that provides wireless network settings, for example, Wi-Fi options.
+指示启动提供无线网络设置的页面功能的操作，例如，Wi-Fi选项。
 
 **Since:** 6
 
@@ -90,7 +90,7 @@ Action of launching the UI that provides wireless network settings, for example,
 ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'
 ```
 
-Action of launching the UI for managing installed applications.
+指示启动管理已安装应用程序的页面功能的操作。
 
 **Since:** 6
 
@@ -108,7 +108,7 @@ Action of launching the UI for managing installed applications.
 ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'
 ```
 
-Action of launching the UI that displays the details of an application.
+指示启动显示指定应用程序详细信息的页面功能的操作。
 
 **Since:** 6
 
@@ -126,7 +126,7 @@ Action of launching the UI that displays the details of an application.
 ACTION_SET_ALARM = 'ohos.want.action.setAlarm'
 ```
 
-Action of launching the UI for setting the alarm clock.
+指示启动页面功能以设置闹钟的操作。
 
 **Since:** 6
 
@@ -144,7 +144,7 @@ Action of launching the UI for setting the alarm clock.
 ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'
 ```
 
-Action of launching the UI that displays all alarms.
+指示启动显示所有警报的页面功能的操作。
 
 **Since:** 6
 
@@ -162,7 +162,7 @@ Action of launching the UI that displays all alarms.
 ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'
 ```
 
-Action of launching the UI for snoozing an alarm.
+指示启动用于使闹钟睡眠的页面功能的操作。
 
 **Since:** 6
 
@@ -180,7 +180,7 @@ Action of launching the UI for snoozing an alarm.
 ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'
 ```
 
-Action of launching the UI for deleting an alarm.
+指示启动删除闹钟的页面功能的操作。
 
 **Since:** 6
 
@@ -198,7 +198,7 @@ Action of launching the UI for deleting an alarm.
 ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'
 ```
 
-Action of launching the UI for dismissing a timer.
+指示启动页面功能以关闭计时器的操作。
 
 **Since:** 6
 
@@ -216,7 +216,7 @@ Action of launching the UI for dismissing a timer.
 ACTION_SEND_SMS = 'ohos.want.action.sendSms'
 ```
 
-Action of launching the UI for sending an SMS message.
+指示启动发送sms的页面功能的操作。
 
 **Since:** 6
 
@@ -234,7 +234,7 @@ Action of launching the UI for sending an SMS message.
 ACTION_CHOOSE = 'ohos.want.action.choose'
 ```
 
-Action of launching the UI for opening a contact or picture.
+指示启动页面功能以打开联系人或图片的操作。
 
 **Since:** 6
 
@@ -252,7 +252,7 @@ Action of launching the UI for opening a contact or picture.
 ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'
 ```
 
-Action of launching the UI for photographing.
+指示启动页面拍照功能的操作。
 
 **Since:** 8
 
@@ -270,7 +270,7 @@ Action of launching the UI for photographing.
 ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'
 ```
 
-Action of launching the UI for shooting a video.
+指示启动页面功能以拍摄视频的操作。
 
 **Since:** 8
 
@@ -288,7 +288,7 @@ Action of launching the UI for shooting a video.
 ACTION_SELECT = 'ohos.want.action.select'
 ```
 
-Action of launching the UI for application selection.
+指示显示应用程序选择对话框的操作。
 
 **Since:** 6
 
@@ -306,7 +306,7 @@ Action of launching the UI for application selection.
 ACTION_SEND_DATA = 'ohos.want.action.sendData'
 ```
 
-Action of launching the UI for sending a single data record.
+指示发送单个数据记录的操作。
 
 **Since:** 6
 
@@ -324,7 +324,7 @@ Action of launching the UI for sending a single data record.
 ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'
 ```
 
-Action of launching the UI for sending multiple data records.
+指示发送多个数据记录的操作。
 
 **Since:** 6
 
@@ -342,7 +342,7 @@ Action of launching the UI for sending multiple data records.
 ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'
 ```
 
-Action of requesting a media scanner to scan a file and add the file to the media library.
+指示请求媒体扫描仪扫描文件并将文件添加到媒体库的操作。
 
 **Since:** 6
 
@@ -360,7 +360,7 @@ Action of requesting a media scanner to scan a file and add the file to the medi
 ACTION_VIEW_DATA = 'ohos.want.action.viewData'
 ```
 
-Action of viewing data.
+指示查看数据的操作。
 
 **Since:** 6
 
@@ -378,7 +378,7 @@ Action of viewing data.
 ACTION_EDIT_DATA = 'ohos.want.action.editData'
 ```
 
-Action of editing data.
+指示编辑数据的操作。
 
 **Since:** 6
 
@@ -396,7 +396,7 @@ Action of editing data.
 INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'
 ```
 
-Action of displaying selection options with an action selector.
+指示用行为选择器来展示选择的操作。
 
 **Since:** 6
 
@@ -414,7 +414,7 @@ Action of displaying selection options with an action selector.
 INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'
 ```
 
-Title of the character sequence dialog box used with the action selector.
+指示与行为选择器一起使用时的字符序列对话框标题。
 
 **Since:** 6
 
@@ -432,7 +432,7 @@ Title of the character sequence dialog box used with the action selector.
 ACTION_FILE_SELECT = 'ohos.action.fileSelect'
 ```
 
-Action of selecting a file.
+指示选择文件的操作。
 
 **Since:** 7
 
@@ -450,7 +450,7 @@ Action of selecting a file.
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-URI of the data stream associated with the target when the data is sent. The value must be an array of the string type.
+指示发送数据时与目标关联的数据流的URI。对应的value必须是string类型的数组。
 
 **Since:** 7
 
@@ -468,7 +468,7 @@ URI of the data stream associated with the target when the data is sent. The val
 ACTION_APP_ACCOUNT_OAUTH = 'ohos.account.appAccount.action.oauth'
 ```
 
-Action of providing the OAuth service.
+指示提供oauth服务的操作。
 
 **Since:** 8
 

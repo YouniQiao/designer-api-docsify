@@ -1,6 +1,6 @@
 # SystemEnvKey
 
-Defines the class of System Env Key.
+系统环境变量Key对应的类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines the class of System Env Key.
 protected constructor()
 ```
 
-constructor.
+用于创建该类的实例对象。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ constructor.
 private type?: T
 ```
 
-The corresponding type of the system env key.
+系统环境变量Key对应值的数据类型，默认值为undefined。
 
 **Type:** T
 

@@ -70,7 +70,7 @@ VIDEO_HDR10 = 2
 VIDEO_HDR_VIVID = 3
 ```
 
-支持视频的HDR\_VIVID格式。
+支持视频的HDR_VIVID格式。
 
 **起始版本：** 11
 
@@ -88,7 +88,7 @@ VIDEO_HDR_VIVID = 3
 IMAGE_HDR_VIVID_DUAL = 4
 ```
 
-支持图片的HDR\_VIVID格式，以dual JPEG格式存储。
+支持图片的HDR_VIVID格式，以dual JPEG格式存储。
 
 **起始版本：** 11
 
@@ -106,7 +106,7 @@ IMAGE_HDR_VIVID_DUAL = 4
 IMAGE_HDR_VIVID_SINGLE = 5
 ```
 
-支持图片的HDR\_VIVID格式，以single HEIF格式存储。
+支持图片的HDR_VIVID格式，以single HEIF格式存储。
 
 **起始版本：** 11
 
@@ -124,7 +124,7 @@ IMAGE_HDR_VIVID_SINGLE = 5
 IMAGE_HDR_ISO_DUAL = 6
 ```
 
-支持图片的HDR\_ISO格式，以dual JPEG格式存储。
+支持图片的HDR_ISO格式，以dual JPEG格式存储。
 
 **起始版本：** 11
 
@@ -142,7 +142,7 @@ IMAGE_HDR_ISO_DUAL = 6
 IMAGE_HDR_ISO_SINGLE = 7
 ```
 
-支持图片的HDR\_ISO格式，以single HEIF格式存储。
+支持图片的HDR_ISO格式，以single HEIF格式存储。
 
 **起始版本：** 11
 

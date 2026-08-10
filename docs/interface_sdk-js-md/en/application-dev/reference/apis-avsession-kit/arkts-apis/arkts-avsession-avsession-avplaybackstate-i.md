@@ -1,6 +1,6 @@
 # AVPlaybackState
 
-Used to indicate the playback state of the current media.If the playback state of the media changes, it needs to be updated synchronously
+媒体播放状态的相关属性。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Used to indicate the playback state of the current media.If the playback state o
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## activeItemId
 
 ```TypeScript
 activeItemId?: int
 ```
 
-Current active item id
+正在播放的媒体ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Current active item id
 bufferedTime?: long
 ```
 
-The current buffered time, the maximum playable position, described by milliseconds.
+缓冲时间。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 
@@ -56,9 +62,9 @@ The current buffered time, the maximum playable position, described by milliseco
 duration?: int
 ```
 
-The duration of this media asset, described by milliseconds.
+当前媒体资源的时长，单位为毫秒（ms）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -74,7 +80,7 @@ The duration of this media asset, described by milliseconds.
 extras?: {[key: string]: Object}
 ```
 
-Current custom media packets
+自定义媒体数据。
 
 **Type:** {[key: string]: Object}
 
@@ -94,7 +100,7 @@ Current custom media packets
 isFavorite?: boolean
 ```
 
-Current Favorite Status
+表示是否收藏。true表示收藏，false表示不收藏。
 
 **Type:** boolean
 
@@ -114,9 +120,9 @@ Current Favorite Status
 loopMode?: LoopMode
 ```
 
-Current playback loop mode. See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+循环模式。
 
-**Type:** LoopMode
+**Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
 **Since:** 10
 
@@ -134,9 +140,9 @@ Current playback loop mode. See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 maxVolume?: int
 ```
 
-maximum volume
+最大音量。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -154,7 +160,7 @@ maximum volume
 muted?: boolean
 ```
 
-Current muted status
+当前是否是静音状态。true表示是，false表示不是。
 
 **Type:** boolean
 
@@ -174,9 +180,9 @@ Current muted status
 position?: PlaybackPosition
 ```
 
-Current playback position of this media. See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+播放位置。
 
-**Type:** PlaybackPosition
+**Type:** [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md)
 
 **Since:** 10
 
@@ -194,9 +200,9 @@ Current playback position of this media. See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 speed?: double
 ```
 
-Current playback speed
+播放倍速。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -214,9 +220,9 @@ Current playback speed
 state?: PlaybackState
 ```
 
-Current playback state. See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+播放状态。
 
-**Type:** PlaybackState
+**Type:** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
 **Since:** 10
 
@@ -234,9 +240,9 @@ Current playback state. See \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 videoHeight?: int
 ```
 
-The video height of this media asset.
+媒体资源的视频高度，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -254,9 +260,9 @@ The video height of this media asset.
 videoWidth?: int
 ```
 
-The video width of this media asset.
+媒体资源的视频宽度，单位为像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -274,9 +280,9 @@ The video width of this media asset.
 volume?: int
 ```
 
-Current player volume
+正在播放的媒体音量。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

@@ -1,5 +1,11 @@
 # off（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## off('appForegroundState')
 
 ```TypeScript
@@ -25,18 +31,18 @@ function off(type: 'appForegroundState', observer?: AppForegroundStateObserver):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'appForegroundState' | 是 | 调用接口类型，固定填'appForegroundState'字符串。 |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 取消注册的应用启动和退出监听器。 |
+| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | 否 | 取消注册的应用启动和退出监听器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -96,18 +102,18 @@ function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateOb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'abilityFirstFrameState' | 是 | 调用接口类型，固定填'abilityFirstFrameState'字符串。 |
-| observer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
+| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | 否 | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -115,7 +121,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let abilityFirstFrameStateObserverForAll: appManager.AbilityFirstFrameStateObserver = {
   onAbilityFirstFrameDrawn(abilityStateData: appManager.AbilityFirstFrameStateData) {
-    console.info(`abilityFirstFrame: , ${JSON.stringify(abilityStateData)}`);
+    console.info('abilityFirstFrame: ', JSON.stringify(abilityStateData));
   }
 };
 

@@ -22,7 +22,7 @@ deleteEntries: Entry[]
 
 数据删除记录。
 
-**类型：** Entry[]
+**类型：** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
 
 **起始版本：** 7
 
@@ -66,7 +66,7 @@ insertEntries: Entry[]
 
 数据添加记录。
 
-**类型：** Entry[]
+**类型：** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
 
 **起始版本：** 7
 
@@ -88,7 +88,7 @@ updateEntries: Entry[]
 
 数据更新记录。
 
-**类型：** Entry[]
+**类型：** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
 
 **起始版本：** 7
 

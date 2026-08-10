@@ -1,43 +1,49 @@
 # @ohos.arkui.advanced.ComposeListItemV2
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## Summary
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md) | Declare ContentItemV2 |
-| [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md) | Declare type OperateButtonV2 |
-| [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md) | Declare type OperateCheckV2 |
-| [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md) | Declare type OperateIconV2 |
-| [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md) | Declare OperateItemV2 |
+| [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md) | 列表左侧显示的图标、图标大小以及中间元素文字内容。 |
+| [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md) | 列表右侧按钮元素的类型。 |
+| [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md) | 列表右侧元素为Switch、CheckBox、Radio的类型。 |
+| [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md) | 列表右侧图标元素的类型。 |
+| [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md) | 列表右侧显示的元素类型。 |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [ComposeListItemV2](arkts-arkui-arkui-advanced-composelistitemv2-composelistitemv2-s.md) | Declare ComposeListItemV2 |
+| [ComposeListItemV2](arkts-arkui-arkui-advanced-composelistitemv2-composelistitemv2-s.md) | 列表组件，可自定义列表左侧、中间元素以及右侧显示内容。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ContentItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | Declare interface ContentItemV2Options |
-| [OperateButtonV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | Declare interface OperateButtonV2Options |
-| [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | Declare interface OperateCheckV2Options |
-| [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | Declare interface OperateIconV2Options |
-| [OperateItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | Declare interface OperateItemV2Options |
+| [ContentItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | 声明接口ContentItemV2Options |
+| [OperateButtonV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | 声明接口OperateButtonV2Options |
+| [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | 声明接口OperateCheckV2Options |
+| [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | 声明接口OperateIconV2Options |
+| [OperateItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | 声明接口OperateItemV2Options |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md) | Declare enum IconTypeV2 |
+| [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md) | 列表左侧图标类型。 |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnActionCallback](arkts-arkui-onactioncallback-t.md) | Callback function when operate the icon. |
-| [OnChangeCallback](arkts-arkui-onchangecallback-t.md) | Callback function when operate the checkbox/switch/radio. |
+| [OnActionCallback](arkts-arkui-onactioncallback-t.md) | 操作图标时的回调函数。 |
+| [OnChangeCallback](arkts-arkui-onchangecallback-t.md) | 操作复选框/开关/单选按钮时的回调函数。 |
 

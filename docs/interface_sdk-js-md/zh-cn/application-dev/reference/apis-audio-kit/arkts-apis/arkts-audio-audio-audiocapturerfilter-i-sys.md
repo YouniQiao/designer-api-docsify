@@ -10,13 +10,19 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerInfo
 
 ```TypeScript
 capturerInfo?: AudioCapturerInfo
 ```
 
-**类型：** AudioCapturerInfo
+**类型：** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
 **起始版本：** 18
 
@@ -36,7 +42,7 @@ uid?: int
 
 Application uid.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 

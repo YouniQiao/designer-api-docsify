@@ -10,6 +10,12 @@ Represents the properties of a form object.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## contentType
 
 ```TypeScript
@@ -52,7 +58,7 @@ This parameter sets a mime part's body content from memory data.
 filePath?: string
 ```
 
-This parameter sets a mime part's body content from the file's contents.This is an alternative to curl\_mime\_data for setting data to a mime part.If data is empty, filePath must be set.If data has a value, filePath does not take effect.
+This parameter sets a mime part's body content from the file's contents.This is an alternative to curl_mime_data for setting data to a mime part.If data is empty, filePath must be set.If data has a value, filePath does not take effect.
 
 **Type:** string
 

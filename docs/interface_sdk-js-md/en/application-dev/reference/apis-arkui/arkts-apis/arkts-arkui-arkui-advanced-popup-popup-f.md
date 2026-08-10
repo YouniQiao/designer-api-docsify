@@ -1,12 +1,16 @@
 # Popup
 
+## Modules to Import
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
+
 ## Popup
 
 ```TypeScript
 export declare function Popup(options: PopupOptions): void
 ```
-
-Build function of popup. This component is implemented based on state management V1.
 
 **Since:** 23
 
@@ -24,5 +28,5 @@ Build function of popup. This component is implemented based on state management
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | popup option. |
+| options | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Yes | 定义Popup组件的类型。 |
 

@@ -10,13 +10,19 @@ class MeasureUtils
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## getParagraphs
 
 ```TypeScript
 getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>
 ```
 
-Get layout info of the styled string.
+获取属性字符串的布局信息。
 
 **Since:** 24
 
@@ -32,14 +38,14 @@ Get layout info of the styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The styled string value. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The layout options. |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 属性字符串值。 |
+| options | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | No | 布局选项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | paragraph result |
+| Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | paragraph result |
 
 ## measureText
 
@@ -47,7 +53,7 @@ Get layout info of the styled string.
 measureText(options: MeasureOptions): double
 ```
 
-Obtains the width of the specified text in a single line layout.
+获取单行文本的宽度。
 
 **Since:** 23
 
@@ -63,7 +69,7 @@ Obtains the width of the specified text in a single line layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options. |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes | Options. |
 
 **Return value:**
 
@@ -77,7 +83,7 @@ Obtains the width of the specified text in a single line layout.
 measureTextSize(options: MeasureOptions): SizeOptions
 ```
 
-Obtains the width and height of the specified text in a single line layout.
+获取单行文本的宽度和高度。
 
 **Since:** 23
 
@@ -93,11 +99,11 @@ Obtains the width and height of the specified text in a single line layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options of measure area occupied by text. |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes | Options of measure area occupied by text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | width and height for text to display |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | width and height for text to display |
 

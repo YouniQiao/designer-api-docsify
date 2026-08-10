@@ -1,7 +1,7 @@
 # ProcessMode
 
-Enumerates the process modes of the UIAbility after it is started.As a property of [StartOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, **ProcessMode** takes effect only in  
-[UIAbilityContext.startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_and is used to specify the process mode of the target UIAbility.This value takes effect only on 2-in-1 devices and tablets. If it is used on other devices, error code 801 is returned.
+UIAbility启动后的进程模式。ProcessMode作为[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)的一个属性，仅在  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效，用来指定目标UIAbility的进程模式。该功能仅在2in1和Tablet设备上生效，在其他设备中返回801错误码。
 
 **Since:** 12
 
@@ -17,11 +17,11 @@ Enumerates the process modes of the UIAbility after it is started.As a property 
 NEW_PROCESS_ATTACH_TO_PARENT = 1
 ```
 
-A new process is created, the UIAbility is started on the process, and the process exits along with the parent process.
+创建一个新进程，并在该进程上启动UIAbility。该进程会跟随父进程退出。
 
-**Constraints**:
+**约束：**
 
-In this mode, the target UIAbility and caller must be in the same application.
+使用此模式时，要求目标UIAbility跟调用方是在同一个应用。
 
 **Since:** 12
 
@@ -39,11 +39,11 @@ In this mode, the target UIAbility and caller must be in the same application.
 NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM = 2
 ```
 
-A new process is created, the UIAbility is started on the process, and the process is bound to the status bar icon.
+创建一个新进程，在该进程上启动UIAbility，并绑定该进程到状态栏图标上。
 
-**Constraints**:
+**约束：**
 
-In this mode, the target UIAbility and caller must be in the same application, and the application must have an icon in the status bar.
+使用此模式时，要求目标UIAbility跟调用方是在同一个应用，并且应用要在状态栏中有图标。
 
 **Since:** 12
 
@@ -61,11 +61,11 @@ In this mode, the target UIAbility and caller must be in the same application, a
 ATTACH_TO_STATUS_BAR_ITEM = 3
 ```
 
-The UIAbility is started, and the process of the UIAbility is bound to the status bar icon.
+启动UIAbility，并绑定该UIAbility所在进程到状态栏图标上。
 
-**Constraints**:
+**约束：**
 
-In this mode, the target UIAbility and caller must be in the same application, and the application must have an icon in the status bar.
+使用此模式时，要求目标UIAbility跟调用方是在同一个应用，并且应用要在状态栏中有图标。
 
 **Since:** 12
 

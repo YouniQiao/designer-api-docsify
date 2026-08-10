@@ -1,6 +1,6 @@
 # IpProfile
 
-Represents IP configuration information.
+IP配置信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents IP configuration information.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.MDMKit';
+```
+
 ## dnsServers
 
 ```TypeScript
 dnsServers: number[]
 ```
 
-DNS server. The array can contain a maximum of two addresses: the primary DNS server and the secondary DNS server. The address ranges from 0.0.0.0 to 255.255.255.255.
+DNS服务器，数组内最多包含首选DNS服务器和备用DNS服务器两个地址。地址值范围0.0.0.0到255.255.255.255。
 
 **Type:** number[]
 
@@ -36,7 +42,7 @@ DNS server. The array can contain a maximum of two addresses: the primary DNS se
 domains: Array<string>
 ```
 
-Domain information.
+域信息。
 
 **Type:** Array&lt;string&gt;
 
@@ -56,7 +62,7 @@ Domain information.
 gateway: number
 ```
 
-Default gateway, represented in decimal format, usually the IP address of the router. The address ranges from 0.0.0.0 to 255.255.255.255.
+默认网关，十进制表示，通常是路由器的IP地址。地址值范围0.0.0.0到255.255.255.255。
 
 **Type:** number
 
@@ -76,8 +82,7 @@ Default gateway, represented in decimal format, usually the IP address of the ro
 ipAddress: number
 ```
 
-IP address, represented in decimal format. For example, the standard dotted decimal notation **192.168.1.1**  
-corresponds to the decimal value **3232235777**. The address ranges from 0.0.0.0 to 255.255.255.255.
+IP地址，十进制表示，正常点分十进制写法为192.168.1.1，对应的十进制为3232235777。地址值范围0.0.0.0到255.255.255.255。
 
 **Type:** number
 
@@ -97,7 +102,7 @@ corresponds to the decimal value **3232235777**. The address ranges from 0.0.0.0
 prefixLength: number
 ```
 
-Subnet mask. The address ranges from 0.0.0.0 to 255.255.255.255.
+子网掩码。地址值范围0.0.0.0到255.255.255.255。
 
 **Type:** number
 

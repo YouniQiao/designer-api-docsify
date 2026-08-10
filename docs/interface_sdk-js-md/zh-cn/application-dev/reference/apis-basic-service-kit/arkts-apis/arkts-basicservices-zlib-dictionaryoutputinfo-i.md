@@ -10,6 +10,12 @@ InflateGetDictionary和deflateGetDictionary这两个函数会返回值的相关�
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## dictionaryLength
 
 ```TypeScript
@@ -18,7 +24,7 @@ dictionaryLength: int
 
 字典的长度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -36,9 +42,9 @@ dictionaryLength: int
 status: ReturnStatus
 ```
 
-参考[ReturnStatus枚举定义]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md)。
 
-**类型：** ReturnStatus
+**类型：** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **起始版本：** 12
 

@@ -1,5 +1,11 @@
 # parse
 
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## parse
 
 ```TypeScript
@@ -23,12 +29,12 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 有效的JSON字符串。 |
-| reviver | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 转换函数，传入该参数，可以用来修改解析生成的原始值。默认值是undefined。该参数目前仅支持传入undefined值，其他值会被忽略或视为无效。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 解析的配置，传入该参数，可以用来控制解析生成的结果类型。默认值是undefined。 |
+| reviver | [Transformer](arkts-arkts-ason-transformer-t.md) | 否 | 转换函数，传入该参数，可以用来修改解析生成的原始值。默认值是undefined。该参数目前仅支持传入undefined值，其他值会被忽略或视为无效。 |
+| options | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 否 | 解析的配置，传入该参数，可以用来控制解析生成的结果类型。默认值是undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回ISendable数据或null。入参为null时，返回null。 |
+| [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) | 返回ISendable数据或null。入参为null时，返回null。 |
 

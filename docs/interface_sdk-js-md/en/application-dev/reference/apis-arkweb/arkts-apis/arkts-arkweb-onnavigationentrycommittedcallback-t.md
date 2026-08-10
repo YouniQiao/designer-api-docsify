@@ -18,5 +18,5 @@ The callback of load committed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loadCommittedDetails | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of onNavigationEntryCommitted.  |
+| loadCommittedDetails | [LoadCommittedDetails](arkts-arkweb-web-loadcommitteddetails-i.md) | Yes | callback information of onNavigationEntryCommitted. |
 

@@ -10,6 +10,12 @@ Certificate pinning option.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## hashAlgorithm
 
 ```TypeScript

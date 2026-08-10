@@ -1,12 +1,18 @@
 # addWatcher (System API)
 
+## Modules to Import
+
+```TypeScript
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## addWatcher
 
 ```TypeScript
 function addWatcher(watcher: Watcher): void
 ```
 
-Adds a watcher for event subscription.
+订阅系统事件，接收[Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md)类型的对象作为事件参数。
 
 **Since:** 9
 
@@ -24,19 +30,19 @@ Adds a watcher for event subscription.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Watcher for event subscription. |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes | 系统事件订阅者对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ\_\_\_ESCAPED\_UNDERSCORE\_\_\_DFX\_\_\_ESCAPED\_UNDERSCORE\_\_\_SYSEVENT. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [11200101](../errorcode-hisysevent-sys.md#11200101-number-of-event-watchers-exceeding-the-limit) | The number of watchers exceeds the limit. |
-| [11200102](../errorcode-hisysevent-sys.md#11200102-number-of-event-watcher-rules-exceeding-the-limit) | The number of watch rules exceeds the limit. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 201 | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| 202 | System API is not allowed called by Non-system application. |
+| 11200102 | The number of watch rules exceeds the limit. |
+| 11200101 | The number of watchers exceeds the limit. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';

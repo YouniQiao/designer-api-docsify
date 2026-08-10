@@ -12,6 +12,12 @@ Indicates the options of call event.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## eventId
 
 ```TypeScript
@@ -20,7 +26,7 @@ eventId: CallAbilityEventId
 
 Indicates the event ID of call ability.
 
-**Type:** CallAbilityEventId
+**Type:** [CallAbilityEventId](arkts-telephony-call-callabilityeventid-e-sys.md)
 
 **Since:** 8
 

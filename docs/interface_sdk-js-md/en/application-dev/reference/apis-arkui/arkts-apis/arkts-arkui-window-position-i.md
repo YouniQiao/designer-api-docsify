@@ -1,6 +1,6 @@
 # Position
 
-Describes the position of the window or component.
+窗口或组件的位置。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the position of the window or component.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## x
 
 ```TypeScript
 x: int
 ```
 
-X coordinate, in px. The value must be an integer.
+x坐标，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ X coordinate, in px. The value must be an integer.
 y: int
 ```
 
-Y coordinate, in px. The value must be an integer.
+y坐标，单位为px，该参数应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

@@ -10,6 +10,12 @@ This module provides the capability of content processing for images, including 
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
+## Modules to Import
+
+```TypeScript
+import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+```
+
 ## Summary
 
 ### Functions

@@ -1,10 +1,10 @@
 # SyncState
 
-Enumerates the device-cloud sync states.
-    **NOTE**  
-    
-    If a sync progress event listener is registered for an application, a callback will be invoked to notify the  
-    application when the device-cloud sync state is changed.
+端云同步状态，为枚举类型。
+
+> **说明：**
+> 
+> 以下同步状态发生变更时，如果应用注册了同步过程事件监听，则通过回调通知应用。
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ Enumerates the device-cloud sync states.
 UPLOADING = 0
 ```
 
-The file is being uploaded.
+上行同步中。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ The file is being uploaded.
 UPLOAD_FAILED = 1
 ```
 
-Upload failed.
+上行同步失败。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Upload failed.
 DOWNLOADING = 2
 ```
 
-The file is being downloaded.
+下行同步中。
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ The file is being downloaded.
 DOWNLOAD_FAILED = 3
 ```
 
-Download failed.
+下行同步失败。
 
 **Since:** 12
 
@@ -84,7 +84,7 @@ Download failed.
 COMPLETED = 4
 ```
 
-Sync completed.
+同步成功。
 
 **Since:** 12
 
@@ -100,7 +100,7 @@ Sync completed.
 STOPPED = 5
 ```
 
-Sync stopped.
+同步已停止。
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # TreeListenerV2
 
-Declare class TreeListenerV2
+树视图组件的监听器，可以将此对象绑定至树视图组件，然后通过它监听树视图的节点的变化，同一个树视图监听器不可以控制多个树视图组件。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Declare class TreeListenerV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
+
 ## offNodeAdd
 
 ```TypeScript
 offNodeAdd(callback?: OnChangedCallback): void
 ```
 
-Destroy node add callback event.
+取消节点添加事件监听。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -32,7 +38,7 @@ Destroy node add callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeClick
 
@@ -40,7 +46,7 @@ Destroy node add callback event.
 offNodeClick(callback?: OnChangedCallback): void
 ```
 
-Destroy node click callback event.
+取消节点点击事件监听。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -56,7 +62,7 @@ Destroy node click callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeDelete
 
@@ -64,7 +70,7 @@ Destroy node click callback event.
 offNodeDelete(callback?: OnChangedCallback): void
 ```
 
-Destroy node delete callback event.
+取消节点删除事件监听。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -80,7 +86,7 @@ Destroy node delete callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeModify
 
@@ -88,7 +94,7 @@ Destroy node delete callback event.
 offNodeModify(callback?: OnChangedCallback): void
 ```
 
-Destroy node modify callback event.
+取消节点修改事件监听。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -104,7 +110,7 @@ Destroy node modify callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeMove
 
@@ -112,7 +118,7 @@ Destroy node modify callback event.
 offNodeMove(callback?: OnChangedCallback): void
 ```
 
-Destroy node move callback event.
+取消节点移动事件监听。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -128,7 +134,7 @@ Destroy node move callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## onNodeAdd
 
@@ -136,7 +142,7 @@ Destroy node move callback event.
 onNodeAdd(callback: OnChangedCallback): void
 ```
 
-Node add event registration and processing.The event will not be destroyed after being processed.
+注册节点添加事件监听，持续监听节点添加事件。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -152,7 +158,7 @@ Node add event registration and processing.The event will not be destroyed after
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeClick
 
@@ -160,7 +166,7 @@ Node add event registration and processing.The event will not be destroyed after
 onNodeClick(callback: OnChangedCallback): void
 ```
 
-Node click event registration and processing.The event will not be destroyed after being processed.
+注册节点点击事件监听，持续监听节点点击事件。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -176,7 +182,7 @@ Node click event registration and processing.The event will not be destroyed aft
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeDelete
 
@@ -184,7 +190,7 @@ Node click event registration and processing.The event will not be destroyed aft
 onNodeDelete(callback: OnChangedCallback): void
 ```
 
-Node delete event registration and processing.The event will not be destroyed after being processed.
+注册节点删除事件监听，持续监听节点删除事件。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -200,7 +206,7 @@ Node delete event registration and processing.The event will not be destroyed af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeModify
 
@@ -208,7 +214,7 @@ Node delete event registration and processing.The event will not be destroyed af
 onNodeModify(callback: OnChangedCallback): void
 ```
 
-Node modify event registration and processing.The event will not be destroyed after being processed.
+注册节点修改事件监听，持续监听节点修改事件。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -224,7 +230,7 @@ Node modify event registration and processing.The event will not be destroyed af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeMove
 
@@ -232,7 +238,7 @@ Node modify event registration and processing.The event will not be destroyed af
 onNodeMove(callback: OnChangedCallback): void
 ```
 
-Node move event registration and processing.The event will not be destroyed after being processed.
+注册节点移动事件监听，持续监听节点移动事件。节点移动通过拖拽操作触发。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -248,7 +254,7 @@ Node move event registration and processing.The event will not be destroyed afte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeAdd
 
@@ -256,7 +262,7 @@ Node move event registration and processing.The event will not be destroyed afte
 onceNodeAdd(callback: OnChangedCallback): void
 ```
 
-Node add event registration and processing.After the event is processed once, it will be destroyed.
+注册节点添加事件监听，监听一次后自动销毁。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -272,7 +278,7 @@ Node add event registration and processing.After the event is processed once, it
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeClick
 
@@ -280,7 +286,7 @@ Node add event registration and processing.After the event is processed once, it
 onceNodeClick(callback: OnChangedCallback): void
 ```
 
-Node click event registration and processing.After the event is processed once, it will be destroyed.
+注册节点点击事件监听，监听一次后自动销毁。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -296,7 +302,7 @@ Node click event registration and processing.After the event is processed once, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeDelete
 
@@ -304,7 +310,7 @@ Node click event registration and processing.After the event is processed once, 
 onceNodeDelete(callback: OnChangedCallback): void
 ```
 
-Node delete event registration and processing.After the event is processed once, it will be destroyed.
+注册节点删除事件监听，监听一次后自动销毁。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -320,7 +326,7 @@ Node delete event registration and processing.After the event is processed once,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeModify
 
@@ -328,7 +334,7 @@ Node delete event registration and processing.After the event is processed once,
 onceNodeModify(callback: OnChangedCallback): void
 ```
 
-Node modify event registration and processing.After the event is processed once, it will be destroyed.
+注册节点修改事件监听，监听一次后自动销毁。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -344,7 +350,7 @@ Node modify event registration and processing.After the event is processed once,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeMove
 
@@ -352,7 +358,7 @@ Node modify event registration and processing.After the event is processed once,
 onceNodeMove(callback: OnChangedCallback): void
 ```
 
-Node move event registration and processing.After the event is processed once, it will be destroyed.
+注册节点移动事件监听，监听一次后自动销毁。使用callback回调。
 
 **Since:** 26.0.0
 
@@ -368,5 +374,5 @@ Node move event registration and processing.After the event is processed once, i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 

@@ -1,6 +1,6 @@
 # DownloadInfo
 
-Describes the pre-downloaded download information.
+预下载的下载信息。
 
 **Since:** 20
 
@@ -10,15 +10,21 @@ Describes the pre-downloaded download information.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+## Modules to Import
+
+```TypeScript
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+```
+
 ## network
 
 ```TypeScript
 readonly network: NetworkInfo
 ```
 
-Pre-downloaded network information.
+预下载的网络信息。
 
-**Type:** NetworkInfo
+**Type:** [NetworkInfo](arkts-basicservices-cachedownload-networkinfo-i.md)
 
 **Since:** 20
 
@@ -34,9 +40,9 @@ Pre-downloaded network information.
 readonly performance: PerformanceInfo
 ```
 
-Pre-downloaded performance information.
+预下载的性能信息。
 
-**Type:** PerformanceInfo
+**Type:** [PerformanceInfo](arkts-basicservices-cachedownload-performanceinfo-i.md)
 
 **Since:** 20
 
@@ -52,9 +58,9 @@ Pre-downloaded performance information.
 readonly resource: ResourceInfo
 ```
 
-Pre-downloaded resource information.
+预下载的资源信息。
 
-**Type:** ResourceInfo
+**Type:** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 
 **Since:** 20
 

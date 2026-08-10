@@ -12,6 +12,12 @@ Describes a depth data object.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## release
 
 ```TypeScript
@@ -40,9 +46,9 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 async function releaseDepthData(depthData: camera.DepthData): Promise<void> {
@@ -58,7 +64,7 @@ readonly dataAccuracy: DepthDataAccuracy
 
 Accuracy of the depth data, which can be either relative accuracy or absolute accuracy.
 
-**Type:** DepthDataAccuracy
+**Type:** [DepthDataAccuracy](arkts-camera-camera-depthdataaccuracy-e-sys.md)
 
 **Since:** 13
 
@@ -98,7 +104,7 @@ readonly format: CameraFormat
 
 Camera output format.
 
-**Type:** CameraFormat
+**Type:** [CameraFormat](arkts-camera-camera-cameraformat-e-sys.md)
 
 **Since:** 13
 
@@ -118,7 +124,7 @@ readonly qualityLevel: DepthDataQualityLevel
 
 Quality level of the depth map.
 
-**Type:** DepthDataQualityLevel
+**Type:** [DepthDataQualityLevel](arkts-camera-camera-depthdataqualitylevel-e-sys.md)
 
 **Since:** 13
 

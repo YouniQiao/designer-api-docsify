@@ -1,5 +1,11 @@
 # healthStatus
 
+## 导入模块
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## healthStatus
 
 ```TypeScript
@@ -20,13 +26,5 @@ function healthStatus(): BatteryHealthState
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前设备电池的健康状态。 |
-
-**示例：**
-
-```TypeScript
-// ArkTS-Sta示例
-let result = batteryInfo.healthStatus();
-console.info("The result is: " + result);
-```
+| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | 返回当前设备电池的健康状态。 |
 

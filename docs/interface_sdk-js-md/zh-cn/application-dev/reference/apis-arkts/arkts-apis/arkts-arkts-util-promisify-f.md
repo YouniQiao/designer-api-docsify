@@ -1,5 +1,11 @@
 # promisify
 
+## 导入模块
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## promisify
 
 ```TypeScript
@@ -26,5 +32,5 @@ Takes a function following the common error-first callback style, i.e taking an 
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return a function that returns promises |
+| [PromisifiedFunc](arkts-arkts-util-promisifiedfunc-t.md) | Return a function that returns promises |
 

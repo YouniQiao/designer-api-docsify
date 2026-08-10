@@ -13,10 +13,10 @@ The font weight of the text
 ## Lighter
 
 ```TypeScript
-Lighter
+Lighter = 0
 ```
 
-100 font weight (thin).
+Defines a lighter value than [Inherited Value]..
 
 **Since:** 7
 
@@ -26,17 +26,17 @@ Lighter
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FontWeight-Lighter--><!--Device-FontWeight-Lighter-End-->
+<!--Device-FontWeight-Lighter = 0--><!--Device-FontWeight-Lighter = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Normal
 
 ```TypeScript
-Normal
+Normal = 1
 ```
 
-400 font weight (normal).
+Normal font. Equivalent to a digital value of 400.
 
 **Since:** 7
 
@@ -46,17 +46,17 @@ Normal
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FontWeight-Normal--><!--Device-FontWeight-Normal-End-->
+<!--Device-FontWeight-Normal = 1--><!--Device-FontWeight-Normal = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Regular
 
 ```TypeScript
-Regular
+Regular = 2
 ```
 
-400 font weight (normal), which is the same as the Normal effect.
+Defines a more general value than [Inherited Value].
 
 **Since:** 7
 
@@ -66,17 +66,17 @@ Regular
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FontWeight-Regular--><!--Device-FontWeight-Regular-End-->
+<!--Device-FontWeight-Regular = 2--><!--Device-FontWeight-Regular = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Medium
 
 ```TypeScript
-Medium
+Medium = 3
 ```
 
-500 font weight (medium).
+Defines a value that is more centered than [Inherited Value].
 
 **Since:** 7
 
@@ -86,17 +86,17 @@ Medium
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FontWeight-Medium--><!--Device-FontWeight-Medium-End-->
+<!--Device-FontWeight-Medium = 3--><!--Device-FontWeight-Medium = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Bold
 
 ```TypeScript
-Bold
+Bold = 4
 ```
 
-700 font weight (bold).
+Bold. Equivalent to a numeric value of 700.
 
 **Since:** 7
 
@@ -106,17 +106,17 @@ Bold
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FontWeight-Bold--><!--Device-FontWeight-Bold-End-->
+<!--Device-FontWeight-Bold = 4--><!--Device-FontWeight-Bold = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Bolder
 
 ```TypeScript
-Bolder
+Bolder = 5
 ```
 
-900 font weight (extra bold).
+Defines a value that is heavier than [Inherited Value].
 
 **Since:** 7
 
@@ -126,7 +126,7 @@ Bolder
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FontWeight-Bolder--><!--Device-FontWeight-Bolder-End-->
+<!--Device-FontWeight-Bolder = 5--><!--Device-FontWeight-Bolder = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

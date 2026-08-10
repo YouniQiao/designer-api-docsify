@@ -1,6 +1,6 @@
 # AdvertisingData
 
-Describes the advertising data.
+广播数据。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the advertising data.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## includeDeviceName
 
 ```TypeScript
 includeDeviceName?: boolean
 ```
 
-Indicates whether the device name will be included.Default value: false.
+指示是否包含设备名称。默认值： 默认值：false。
 
 **Type:** boolean
 
@@ -36,9 +42,9 @@ Indicates whether the device name will be included.Default value: false.
 manufacturerData?: ManufacturerData[]
 ```
 
-The specified manufacturer data.
+制造商数据。
 
-**Type:** ManufacturerData[]
+**Type:** [ManufacturerData](arkts-connectivity-advertising-manufacturerdata-i.md)[]
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ The specified manufacturer data.
 serviceData?: ServiceData[]
 ```
 
-The specified service data.
+服务数据。
 
-**Type:** ServiceData[]
+**Type:** [ServiceData](arkts-connectivity-advertising-servicedata-i.md)[]
 
 **Since:** 26.0.0
 
@@ -76,7 +82,7 @@ The specified service data.
 serviceUuids?: string[]
 ```
 
-The specified service UUIDs.The length of each UUID must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
+指定的服务UUID。UUID的长度必须为36，由36位十六进制数字和“-”组成。例如：FFFFFFFF-1234-5678-ABCD-000000001234，表示128位的标识符。
 
 **Type:** string[]
 

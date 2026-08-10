@@ -44,7 +44,9 @@ Flex(value?: FlexOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Flex容器的配置选项，用于设置子组件的排列方向、换行方式、对齐方式和间距。不传入时使用默认配置，各属性默认值详见 \_\_\_MD\_LINK\_USD\_0\_\_\_对象说明。  |
+| value | [FlexOptions](arkts-arkui-flexoptions-i.md) | 否 | Flex容器的配置选项，用于设置子组件的排列方向、换行方式、对齐方式和间距。不传入时使用默认配置，各属性默认值详见 [FlexOptions](docroot://reference/apis-arkui/arkui-ts/ts-container-flex.md#flexoptions对象说明)对象说明。 |
 
 ## 汇总
 
+- [FlexOptions](arkts-arkui-flex-flexoptions-i.md)
+- [FlexSpaceOptions](arkts-arkui-flex-flexspaceoptions-i.md)

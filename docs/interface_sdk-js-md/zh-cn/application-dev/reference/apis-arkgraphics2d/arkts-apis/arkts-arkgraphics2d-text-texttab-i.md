@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## alignment
 
 ```TypeScript
 alignment: TextAlign
 ```
 
-段落中制表符之后的文本对齐方式，支持设置[TextAlign]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的LEFT左对齐、RIGHT右对齐和CENTER居中对齐方式，未列出的枚举值将视为左对齐，默认为左对齐。
+段落中制表符之后的文本对齐方式，支持设置[TextAlign](arkts-arkgraphics2d-text-textalign-e.md)的LEFT左对齐、RIGHT右对齐和CENTER居中对齐方式，未列出的枚举值将视为左对齐，默认为左对齐。
 
-**类型：** TextAlign
+**类型：** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
 
 **起始版本：** 18
 
@@ -38,7 +44,7 @@ location: double
 
 制表符之后的文本对齐位置，浮点数，单位为物理像素px，最小值为1.0，当该值小于1.0时，该制表符会被替换为一个空格。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 18
 

@@ -1,6 +1,6 @@
 # BlankScreenDetectionConfig
 
-Defines the configuration options of the blank screen detection policy.
+定义白屏检测的策略配置选项。
 
 **Since:** 22
 
@@ -16,11 +16,11 @@ Defines the configuration options of the blank screen detection policy.
 contentfulNodesCountThreshold?: number
 ```
 
-Threshold for number of detected contentful nodes. This parameter takes effect only when the contentful node detection policy is used.
+在使用到检测有内容的节点检测策略时，才会生效。
 
-The value ranges from 0 to the maximum number of nodes in the detection policy. If the value is less than or equal to the threshold, the near-blank screen is triggered.
+可以设置0-\${检测策略最大节点}，如果小于等于阈值则会触发近似白屏。
 
-Default value: **0**.
+默认值：0。
 
 **Type:** number
 
@@ -38,15 +38,15 @@ Default value: **0**.
 detectionMethods?: BlankScreenDetectionMethod[]
 ```
 
-Methods of the detection policy. The value is an array.
+使用检测策略的方法，是一个数组。
 
-**NOTE**
+注：
 
-1. Duplicate values are ignored.
+1.重复值会忽略。
 
-Default value: **[BlankScreenDetectionMethod.DETECTION\_CONTENTFUL\_NODES\_SEVENTEEN]**.
+默认值：[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEEN]。
 
-**Type:** BlankScreenDetectionMethod[]
+**Type:** [BlankScreenDetectionMethod](arkts-arkweb-blankscreendetectionmethod-e.md)[]
 
 **Since:** 22
 
@@ -62,7 +62,17 @@ Default value: **[BlankScreenDetectionMethod.DETECTION\_CONTENTFUL\_NODES\_SEVEN
 detectionTiming?: number[]
 ```
 
-The settings of the timing when web try to detect current page is blank or not.The timing is the duration after web navigation.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Length range:[0,+∞).Default value:[1.0,3.0,5.0].\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_1. Duplicate values are ignored.2. The value must be greater than 0. If the value is less than 0, the value is ignored.Unit: second.
+用以设置需要在加载后多少秒的时机来检测是否白屏。
+
+单位：秒。
+
+注：
+
+1.重复值会忽略。
+
+2.需大于0，小于0的值会被忽略。
+
+默认值：[1.0,3.0,5.0]。
 
 **Type:** number[]
 
@@ -80,7 +90,7 @@ The settings of the timing when web try to detect current page is blank or not.T
 enable: boolean
 ```
 
-Whether to enable the blank screen policy.
+是否使能白屏策略功能。
 
 **Type:** boolean
 

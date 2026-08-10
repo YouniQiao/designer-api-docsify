@@ -10,6 +10,12 @@ The message received or sent from web message port.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## getArray
 
 ```TypeScript
@@ -30,13 +36,13 @@ Get the array value of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string \| double \| long \| boolean&gt; |  Returns data of Array type |
+| Array&lt;string \| double \| long \| boolean&gt; | Returns data of Array type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getArrayBuffer
 
@@ -58,13 +64,13 @@ Get the array buffer value of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer |  Returns data of ArrayBuffer type |
+| ArrayBuffer | Returns data of ArrayBuffer type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getBoolean
 
@@ -86,13 +92,13 @@ Get the boolean value of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  Returns data of Boolean type |
+| boolean | Returns data of Boolean type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getError
 
@@ -114,13 +120,13 @@ Get the error value of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| Error |  Returns data of Error type |
+| Error | Returns data of Error type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getNumber
 
@@ -142,13 +148,13 @@ Get the number value of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| double |  Returns data of number type |
+| double | Returns data of number type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getString
 
@@ -170,13 +176,13 @@ Get the string value of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  Returns data of string type |
+| string | Returns data of string type |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 17100014 | The type and value of the message do not match. |
 
 ## getType
 
@@ -198,7 +204,7 @@ Get the type of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns data of WebMessageType type |
+| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
 
 ## setArray
 
@@ -226,8 +232,8 @@ Set the array value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100014 | The type and value of the message do not match. |
 
 ## setArrayBuffer
 
@@ -255,8 +261,8 @@ Set the array buffer value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100014 | The type and value of the message do not match. |
 
 ## setBoolean
 
@@ -284,8 +290,8 @@ Set the boolean value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100014 | The type and value of the message do not match. |
 
 ## setError
 
@@ -313,8 +319,8 @@ Set the error value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100014 | The type and value of the message do not match. |
 
 ## setNumber
 
@@ -342,8 +348,8 @@ Set the number value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100014 | The type and value of the message do not match. |
 
 ## setString
 
@@ -371,8 +377,8 @@ Set the string value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100014 | The type and value of the message do not match. |
 
 ## setType
 
@@ -394,12 +400,12 @@ Set the type of the web message.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | set WebMessageType type data |
+| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | 是 | set WebMessageType type data |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| 17100014 | The type and value of the message do not match. |
 

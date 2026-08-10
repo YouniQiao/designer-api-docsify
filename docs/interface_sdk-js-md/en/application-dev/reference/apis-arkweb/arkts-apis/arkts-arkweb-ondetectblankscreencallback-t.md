@@ -18,5 +18,5 @@ The callback when web engine detects current page is blank or nearly blank.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the detection event info.  |
+| event | [BlankScreenDetectionEventInfo](arkts-arkweb-web-blankscreendetectioneventinfo-i.md) | Yes | the detection event info. |
 

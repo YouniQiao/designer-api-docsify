@@ -1,6 +1,6 @@
 # ResourceType (System API)
 
-Enumerates the efficiency resource types.
+能效资源类型。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates the efficiency resource types.
 CPU = 1
 ```
 
-CPU resource. Such type of resource prevents an application from being suspended.
+CPU资源，申请后应用进程不被挂起。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ CPU resource. Such type of resource prevents an application from being suspended
 COMMON_EVENT = 1 << 1
 ```
 
-Common event resource. Such type of resource ensures that an application in the suspended state can receive common events.
+公共事件资源，申请后应用进程被挂起后，可以收到公共事件。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Common event resource. Such type of resource ensures that an application in the 
 TIMER = 1 << 2
 ```
 
-Timer resource. Such type of resource ensures that an application in the suspended state can be woken up by system timers.
+计时器，申请后应用进程被挂起后，Timer仍然可以唤醒应用。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Timer resource. Such type of resource ensures that an application in the suspend
 WORK_SCHEDULER = 1 << 3
 ```
 
-Deferred task resource. Such type of resource provides a loose control policy for an application.
+延迟任务资源，申请后延迟任务管控变宽松。
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ Deferred task resource. Such type of resource provides a loose control policy fo
 BLUETOOTH = 1 << 4
 ```
 
-Bluetooth resource. Such type of resource ensures that an application in the suspended state can be woken up by Bluetooth-related events.
+蓝牙资源，申请后应用进程被挂起后，蓝牙相关事件仍然可以唤醒应用。
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Bluetooth resource. Such type of resource ensures that an application in the sus
 GPS = 1 << 5
 ```
 
-GPS resource. Such type of resource ensures that an application in the suspended state can be woken up by GPS-related events.
+GPS资源，申请后应用进程被挂起后，GPS相关事件可以唤醒应用。
 
 **Since:** 9
 
@@ -126,7 +126,7 @@ GPS resource. Such type of resource ensures that an application in the suspended
 AUDIO = 1 << 6
 ```
 
-Audio resource. Such type of resource prevents an application from being suspended when the application has an audio being played.
+音频资源，有音频播放时对应的应用进程不被挂起。
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ Audio resource. Such type of resource prevents an application from being suspend
 RUNNING_LOCK = 1 << 7
 ```
 
-RUNNING\_LOCK resources are not proxied when the application is suspended.
+RUNNING_LOCK资源，申请后挂起状态不会代理RUNNING_BACKGROUND锁。
 
 **Since:** 10
 
@@ -162,7 +162,7 @@ RUNNING\_LOCK resources are not proxied when the application is suspended.
 SENSOR = 1 << 8
 ```
 
-Sensor callbacks are not intercepted.
+申请后不拦截Sensor回调。
 
 **Since:** 10
 

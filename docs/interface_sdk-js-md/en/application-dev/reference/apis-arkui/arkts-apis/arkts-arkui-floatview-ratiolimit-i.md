@@ -1,6 +1,6 @@
 # RatioLimit
 
-Provides the aspect ratio range of the float view. The aspect ratio is obtained by dividing the width of the rectangular area of the window by its height.
+标准悬浮窗的宽高比限制范围。宽高比比值由窗口矩形区域的宽除以高获得。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Provides the aspect ratio range of the float view. The aspect ratio is obtained 
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## maxRatio
 
 ```TypeScript
 maxRatio: double
 ```
 
-Maximum aspect ratio of the float view.
+标准悬浮窗的宽高比最大值。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Maximum aspect ratio of the float view.
 minRatio: double
 ```
 
-Minimum aspect ratio of the float view.
+标准悬浮窗的宽高比最小值。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 

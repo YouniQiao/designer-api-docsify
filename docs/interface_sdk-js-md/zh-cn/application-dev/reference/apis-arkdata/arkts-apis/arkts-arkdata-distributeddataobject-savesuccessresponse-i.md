@@ -1,6 +1,6 @@
 # SaveSuccessResponse
 
-[save]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口回调信息。
+[save](arkts-arkdata-distributeddataobject-dataobject-i.md#save)接口回调信息。
 
 **起始版本：** 9
 
@@ -9,6 +9,12 @@
 <!--Device-distributedDataObject-interface SaveSuccessResponse--><!--Device-distributedDataObject-interface SaveSuccessResponse-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+## 导入模块
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
 
 ## deviceId
 
@@ -54,7 +60,7 @@ version: int
 
 已保存对象的版本，取值为非负整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

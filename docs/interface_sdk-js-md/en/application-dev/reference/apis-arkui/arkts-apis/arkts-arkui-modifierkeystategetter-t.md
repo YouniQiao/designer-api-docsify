@@ -20,11 +20,11 @@ The modifier key state query function block.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Indicate the modifier keys to query.  |
+| keys | Array&lt;string&gt; | Yes | Indicate the modifier keys to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | - the query result  |
+| boolean | the query result |
 

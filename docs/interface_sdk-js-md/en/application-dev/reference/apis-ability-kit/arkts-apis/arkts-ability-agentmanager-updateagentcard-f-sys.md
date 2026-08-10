@@ -1,5 +1,11 @@
 # updateAgentCard (System API)
 
+## Modules to Import
+
+```TypeScript
+import { agentManager } from 'kits/@kit.AbilityKit';
+```
+
 ## updateAgentCard
 
 ```TypeScript
@@ -26,7 +32,7 @@ Updates the AgentCard within specified agent id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agentCard | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The AgentCard information to update. |
+| agentCard | [AgentCard](arkts-ability-agentcard-i.md) | Yes | The AgentCard information to update. |
 
 **Return value:**
 
@@ -38,13 +44,13 @@ Updates the AgentCard within specified agent id.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
-| [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
-| [35600001](../errorcode-ability.md#35600001-the-specified-agentid-does-not-exist) | The specified agentId does not exist. |
-| 35600004 | The specified AgentCard version is older than the current version. |
+| 16000001 | The specified ability does not exist. |
+| 16000002 | Incorrect ability type. |
+| 16000050 | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 | 35600005 | The specified AgentCard version is invalid. |
+| 18500001 | The bundle does not exist or no patch has been applied. |
+| 35600004 | The specified AgentCard version is older than the current version. |
+| 35600001 | The specified agentId does not exist. |
 

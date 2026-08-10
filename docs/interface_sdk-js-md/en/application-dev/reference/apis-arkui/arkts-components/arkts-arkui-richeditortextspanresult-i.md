@@ -1,6 +1,6 @@
 # RichEditorTextSpanResult
 
-Provides the text span information.
+文本Span信息。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Provides the text span information.
 offsetInSpan: [number, number]
 ```
 
-Start and end positions of the valid content in the text span.
+文本Span内容里有效内容的起始和结束位置。
 
 **Type:** [number, number]
 
@@ -38,9 +38,11 @@ Start and end positions of the valid content in the text span.
 paragraphStyle?: RichEditorParagraphStyle
 ```
 
-Paragraph style.
+段落样式。
 
-**Type:** RichEditorParagraphStyle
+省略时，使用系统默认段落样式。
+
+**Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
 
 **Since:** 12
 
@@ -60,7 +62,7 @@ Paragraph style.
 previewText?: string
 ```
 
-Content of the preview text.
+文本Span预上屏内容。
 
 **Type:** string
 
@@ -82,9 +84,9 @@ Content of the preview text.
 spanPosition: RichEditorSpanPosition
 ```
 
-Span position.
+Span位置。
 
-**Type:** RichEditorSpanPosition
+**Type:** [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md)
 
 **Since:** 10
 
@@ -104,9 +106,9 @@ Span position.
 symbolSpanStyle?: RichEditorSymbolSpanStyle
 ```
 
-Style of the **SymbolSpan** component.
+组件SymbolSpan样式信息。
 
-**Type:** RichEditorSymbolSpanStyle
+**Type:** [RichEditorSymbolSpanStyle](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
 
 **Since:** 11
 
@@ -126,9 +128,9 @@ Style of the **SymbolSpan** component.
 textStyle: RichEditorTextStyleResult
 ```
 
-Text span style.
+文本Span样式信息。
 
-**Type:** RichEditorTextStyleResult
+**Type:** [RichEditorTextStyleResult](../arkts-apis/arkts-arkui-richeditor-richeditortextstyleresult-i.md)
 
 **Since:** 10
 
@@ -148,11 +150,13 @@ Text span style.
 urlStyle?: RichEditorUrlStyle
 ```
 
-URL information.
+url信息。
 
-Default value: **undefined
+默认值：undefined。
 
-**Type:** RichEditorUrlStyle
+当需要为文本设置超链接样式时传入此参数。
+
+**Type:** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **Since:** 19
 
@@ -172,7 +176,7 @@ Default value: **undefined
 value: string
 ```
 
-Content of the text span or symbol ID.
+文本Span内容或Symbol的id。
 
 **Type:** string
 
@@ -194,9 +198,11 @@ Content of the text span or symbol ID.
 valueResource?: Resource
 ```
 
-Content of the **SymbolSpan** component.
+SymbolSpan资源内容。
 
-**Type:** Resource
+默认值：undefined。
+
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 11
 

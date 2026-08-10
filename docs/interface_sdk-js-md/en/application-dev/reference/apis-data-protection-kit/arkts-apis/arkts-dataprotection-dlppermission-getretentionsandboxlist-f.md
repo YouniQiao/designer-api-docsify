@@ -1,14 +1,20 @@
 # getRetentionSandboxList
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## getRetentionSandboxList
 
 ```TypeScript
 function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result.
+查询指定应用的保留沙箱信息列表。仅支持在非DLP沙箱应用中调用。使用Promise异步回调。
 
-This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
+该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。
 
 **Since:** 10
 
@@ -22,38 +28,33 @@ This API is used to query the sandbox retention information of a specified appli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | No | Bundle name of the application, which is used to query the sandbox retention information of the application. This parameter is required when you need to query the sandbox retention information of another application. It is optional when you need to query the sandbox retention information of the current application. The value contains 7 to 128 bytes. If the value is out of range, error code 401 is thrown. |
+| bundleName | string | No | 指定应用包名，用于查询该应用的保留沙箱信息列表。当需要查询其他应用的保留沙箱信息时传入此参数，当需要查询当前应用的保留沙箱信息时可不传此参数。长度范围 [7, 128]字节，超出此范围抛出错误码401。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | Promise used to return the sandbox retention information obtained. |
+| Promise&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | Promise对象。返回查询的沙箱信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100007 | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-async function ExampleFunction() {
-  try {
-    let res:Array<dlpPermission.RetentionSandboxInfo> = await dlpPermission.getRetentionSandboxList(); // Obtain the sandbox apps in the retention state.
-    console.info('res', JSON.stringify(res))
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  }
-}
+dlpPermission.getRetentionSandboxList().then((sandboxList) => { // Obtain the sandbox retention information.
+  console.info('sandboxList', JSON.stringify(sandboxList));
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
 ```
 
 
@@ -63,9 +64,9 @@ async function ExampleFunction() {
 function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.
+查询指定应用的保留沙箱信息列表。仅支持在非DLP沙箱应用中调用。使用callback异步回调。
 
-This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
+该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。
 
 **Since:** 10
 
@@ -79,36 +80,30 @@ This API is used to query the sandbox retention information of a specified appli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application, which is used to query the sandbox retention information of the application. This parameter is required when you need to query the sandbox retention information of another application. It is optional when you need to query the sandbox retention information of the current application. The value contains 7 to 128 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| bundleName | string | Yes | 指定应用包名，用于查询该应用的保留沙箱信息列表。长度范围[7, 128]字节，超出此范围抛出错误码401。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | Yes | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100007 | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  dlpPermission.getRetentionSandboxList("bundleName", (err, res) => {
-    if (err != undefined) {
-      console.error('getRetentionSandboxList error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the sandbox retention information.
-} catch (err) {
-  console.error('getRetentionSandboxList error,', (err as BusinessError).code, (err as BusinessError).message);
-}
+dlpPermission.getRetentionSandboxList("bundleName", (err, sandboxList) => {
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('sandboxList', JSON.stringify(sandboxList));
+  }
+}); // Obtain the sandbox retention information.
 ```
 
 
@@ -118,9 +113,9 @@ try {
 function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void
 ```
 
-Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.
+查询当前应用的保留沙箱信息列表。使用callback异步回调。
 
-This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.This API can be called only in non-DLP sandbox applications.
+该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。仅支持在非DLP沙箱应用中调用。
 
 **Since:** 10
 
@@ -134,34 +129,28 @@ This API is used to query the sandbox retention information of a specified appli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | Yes | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100007 | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  dlpPermission.getRetentionSandboxList((err, res) => {
-    if (err != undefined) {
-      console.error('getRetentionSandboxList error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the sandbox retention information.
-} catch (err) {
-  console.error('getRetentionSandboxList error,', (err as BusinessError).code, (err as BusinessError).message);
-}
+dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
+  if (err) {
+    console.error('getRetentionSandboxList error,', err.code, err.message);
+  } else {
+    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
+  }
+}); // Obtain the sandbox retention information.
 ```
 

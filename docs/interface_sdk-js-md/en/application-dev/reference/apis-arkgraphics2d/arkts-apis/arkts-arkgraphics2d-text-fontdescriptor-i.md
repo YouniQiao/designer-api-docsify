@@ -1,6 +1,6 @@
 # FontDescriptor
 
-Describes the font descriptor information.
+字体描述符信息。
 
 **Since:** 14
 
@@ -10,13 +10,19 @@ Describes the font descriptor information.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## copyright
 
 ```TypeScript
 copyright?: string
 ```
 
-Font copyright information. Any string is acceptable. The default value is an empty string.
+字体版权信息，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Font copyright information. Any string is acceptable. The default value is an em
 fontFamily?: string
 ```
 
-Family name of the font. Any string is acceptable. The default value is an empty string.
+字体家族，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Family name of the font. Any string is acceptable. The default value is an empty
 fontFeatures?: Array<string>
 ```
 
-Array of OpenType feature tags supported by the font. The default value is an empty array. Each element in the array is a feature tag string (such as 'liga' for standard ligatures and 'kern' for kerning adjustment),indicating the font features supported by the font.
+字体支持的OpenType特性标签数组，默认为空数组。数组中每个元素为特性标签字符串（如'liga'表示标准连字、'kern'表示字距调整），表示该字体支持的字体特性。
 
 **Type:** Array&lt;string&gt;
 
@@ -78,7 +84,7 @@ Array of OpenType feature tags supported by the font. The default value is an em
 fontSubfamily?: string
 ```
 
-Subfamily name of the font. Any string is acceptable. The default value is an empty string.
+子字体家族，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -98,7 +104,7 @@ Subfamily name of the font. Any string is acceptable. The default value is an em
 fullName?: string
 ```
 
-Font name. Any string is acceptable. The default value is an empty string.
+字体名称，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -118,9 +124,9 @@ Font name. Any string is acceptable. The default value is an empty string.
 index?: int
 ```
 
-Font index. This parameter is valid only when the font file is in TTC format. The value is **0** for the TTF format.
+字体索引，字体文件为ttc类型时有效，ttf类型统一为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -140,9 +146,9 @@ Font index. This parameter is valid only when the font file is in TTC format. Th
 italic?: int
 ```
 
-Whether the font is italic. The value **0** means that the font is not italic, and **1** means the opposite. The default value is **0**.
+是否是斜体字体，0表示非斜体，1表示斜体，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 
@@ -160,7 +166,7 @@ Whether the font is italic. The value **0** means that the font is not italic, a
 languages?: Array<string>
 ```
 
-List of languages supported by the font. The default value is an empty array. Each element in the array is a language tag string in BCP 47 format (such as 'en' and 'zh-Hans'), indicating the writing languages supported by the font.
+字体支持的语言列表，默认为空数组。数组中每个元素为BCP 47格式的语言标签字符串（如'en'、'zh-Hans'），表示该字体支持的书写语言。
 
 **Type:** Array&lt;string&gt;
 
@@ -182,7 +188,7 @@ List of languages supported by the font. The default value is an empty array. Ea
 license?: string
 ```
 
-Font license information. Any string is acceptable. The default value is an empty string.
+字体许可证信息，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -202,7 +208,7 @@ Font license information. Any string is acceptable. The default value is an empt
 localFamilyName?: string
 ```
 
-Extracts the font family name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
+根据系统语言配置提取字体家族名称，字体文件中若无当前语言对应配置则取“en”对应信息。
 
 **Type:** string
 
@@ -222,7 +228,7 @@ Extracts the font family name based on the system language configuration. If the
 localFullName?: string
 ```
 
-Extracts the full font name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
+根据系统语言配置提取字体全名，字体文件中若无当前语言对应配置则取“en”对应信息。
 
 **Type:** string
 
@@ -242,7 +248,7 @@ Extracts the full font name based on the system language configuration. If the f
 localPostscriptName?: string
 ```
 
-Extracts the unique font ID based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
+根据系统语言配置提取字体唯一标识，字体文件中若无当前语言对应配置则取“en”对应信息。
 
 **Type:** string
 
@@ -262,7 +268,7 @@ Extracts the unique font ID based on the system language configuration. If the f
 localSubFamilyName?: string
 ```
 
-Extracts the font subfamily name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
+根据系统语言配置提取子字体家族名称，字体文件中若无当前语言对应配置则取“en”对应信息。
 
 **Type:** string
 
@@ -282,7 +288,7 @@ Extracts the font subfamily name based on the system language configuration. If 
 manufacture?: string
 ```
 
-Font manufacturer information. Any string is acceptable. The default value is an empty string.
+字体制造商信息，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -302,7 +308,7 @@ Font manufacturer information. Any string is acceptable. The default value is an
 monoSpace?: boolean
 ```
 
-Whether the font is monospaced. The value **true** means that the font is monospaced, and **false** means the opposite. The default value is **false**.
+是否是等宽字体，true表示等宽，false表示非等宽，默认值为false。
 
 **Type:** boolean
 
@@ -322,7 +328,7 @@ Whether the font is monospaced. The value **true** means that the font is monosp
 path?: string
 ```
 
-Absolute path of the font. Any string that complies with the system restrictions is acceptable. The default value is an empty string.
+字体绝对路径，可取遵循系统限制的任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -342,7 +348,7 @@ Absolute path of the font. Any string that complies with the system restrictions
 postScriptName?: string
 ```
 
-Unique name of the font. Any string is acceptable. The default value is an empty string.
+字体唯一标识名称，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -362,7 +368,7 @@ Unique name of the font. Any string is acceptable. The default value is an empty
 symbolic?: boolean
 ```
 
-Whether the font is symbolic. The value **true** means that the font is symbolic, and **false** means the opposite.
+是否支持符号，true表示支持，false表示不支持，默认值为false。
 
 **Type:** boolean
 
@@ -382,7 +388,7 @@ Whether the font is symbolic. The value **true** means that the font is symbolic
 trademark?: string
 ```
 
-Font trademark information. Any string is acceptable. The default value is an empty string.
+字体商标信息，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -402,7 +408,7 @@ Font trademark information. Any string is acceptable. The default value is an em
 variationAxisRecords?: Array<FontVariationAxis>
 ```
 
-Font variable axis record array, which is used to describe the variable axis information supported by the font.For non-variable fonts, this field is **undefined**.
+字体可变轴记录数组，用于描述字体支持的可变轴信息。非可变字体此字段为undefined。
 
 **Type:** Array&lt;FontVariationAxis&gt;
 
@@ -422,7 +428,7 @@ Font variable axis record array, which is used to describe the variable axis inf
 variationInstanceRecords?: Array<FontVariationInstance>
 ```
 
-Font variable instance record array, which is used to describe the variable instance information supported by the font. For non-variable fonts, this field is **undefined**.
+字体可变实例记录数组，用于描述字体支持的可变实例信息。非可变字体此字段为undefined。
 
 **Type:** Array&lt;FontVariationInstance&gt;
 
@@ -442,7 +448,7 @@ Font variable instance record array, which is used to describe the variable inst
 version?: string
 ```
 
-Font version. Any string is acceptable. The default value is an empty string.
+字体版本，可取任意字符串，默认为空字符串。
 
 **Type:** string
 
@@ -462,9 +468,9 @@ Font version. Any string is acceptable. The default value is an empty string.
 weight?: FontWeight
 ```
 
-Font weight. The default value is **0**.
+字体字重，默认值为0。
 
-**Type:** FontWeight
+**Type:** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
 
 **Since:** 14
 
@@ -482,9 +488,9 @@ Font weight. The default value is **0**.
 width?: int
 ```
 
-Font width. The value is an integer ranging from 1 to 9. The default value is **0**.
+字体宽度，取值范围1-9整数，默认值为0。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 

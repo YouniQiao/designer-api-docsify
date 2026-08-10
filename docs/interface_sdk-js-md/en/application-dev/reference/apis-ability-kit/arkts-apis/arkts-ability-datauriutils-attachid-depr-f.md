@@ -33,7 +33,7 @@ Attaches the given ID to the end of the path component of the given uri.
 | --- | --- |
 | string | Returns the uri object with the given ID attached. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

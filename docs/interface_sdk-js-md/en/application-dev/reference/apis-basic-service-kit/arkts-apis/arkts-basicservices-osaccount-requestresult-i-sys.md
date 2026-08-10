@@ -1,6 +1,6 @@
 # RequestResult (System API)
 
-Defines the request result information.
+表示请求结果的信息。
 
 **Since:** 8
 
@@ -12,13 +12,19 @@ Defines the request result information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## credentialId
 
 ```TypeScript
 credentialId?: Uint8Array
 ```
 
-Credential ID, which is left blank by default.
+指示凭据索引，默认为空。
 
 **Type:** Uint8Array
 

@@ -1,14 +1,20 @@
 # accessSync
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## accessSync
 
 ```TypeScript
 declare function accessSync(path: string, mode?: AccessModeType): boolean
 ```
 
-Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously.
+以同步方法检查文件或目录是否存在，或校验操作权限。
 
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **Since:** 9
 
@@ -24,31 +30,31 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file or directory. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file or directory exists.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| path | string | Yes | 文件或目录应用沙箱路径。 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | 文件或目录校验的权限。不填该参数则默认校验文件或目录是否存在。<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** means the file exists; the value **false** means the opposite. |
+| boolean | 返回true，表示文件存在；返回false，表示文件不存在。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
+| 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
+| 13900023 | Text file busy |
+| 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900018 | Not a directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## accessSync
@@ -57,9 +63,9 @@ If the read, write, or read and write permission verification fails, the error c
 declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
 ```
 
-Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously.
+以同步方法检查文件或目录是否在本地，或校验操作权限。
 
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **Since:** 12
 
@@ -73,28 +79,28 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file to check. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Permission on the file or directory to check. |
-| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Position of the file or directory to check. |
+| path | string | Yes | 文件应用沙箱路径。 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | 文件或目录校验的权限。 |
+| flag | [AccessFlagType](arkts-corefile-fileio-accessflagtype-e.md) | Yes | 文件或目录校验的位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** means the file is a local file and has the related permission. The value **false** means the file does not exist or is on the cloud or a distributed device. |
+| boolean | 返回true，表示文件在本地且校验权限存在；返回false，表示文件不存在或者文件在云端或其他分布式设备上。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 13900020 | Invalid argument |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900005 | I/O error |
-| 13900011 | Out of memory |
+| 13900023 | Text file busy |
+| 13900033 | Too many symbolic links encountered |
+| 13900018 | Not a directory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900023 | Text file busy |
 | 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
+| 13900011 | Out of memory |
 

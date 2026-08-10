@@ -1,7 +1,6 @@
 # DocumentViewPicker
 
-Provides APIs for selecting and saving documents in different formats. Before using the APIs of  
-**DocumentViewPicker**, you need to create a **DocumentViewPicker** instance.
+文件选择器对象，用来支撑选择和保存各种格式文档。在使用前，需要先创建DocumentViewPicker实例。
 
 **Since:** 9
 
@@ -11,13 +10,19 @@ Provides APIs for selecting and saving documents in different formats. Before us
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-A constructor used to create a **DocumentViewPicker** instance. This constructor is not recommended due to the potential risk of operation failure.
+创建DocumentViewPicker对象，不推荐使用该构造函数，会出现概率性失败问题。
 
 **Since:** 12
 
@@ -29,7 +34,7 @@ A constructor used to create a **DocumentViewPicker** instance. This constructor
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
-**Example**
+## Examples
 
 ```TypeScript
 let documentPicker = new picker.DocumentViewPicker(); // Construction without parameter is not recommended. There is a possibility that the DocumentViewPicker instance fails to start.
@@ -41,8 +46,8 @@ let documentPicker = new picker.DocumentViewPicker(); // Construction without pa
 constructor(context: Context)
 ```
 
-A constructor used to create a **DocumentViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+创建DocumentViewPicker对象，推荐使用该构造函数，获取context参考  
+[getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12)。
 
 **Since:** 12
 
@@ -58,9 +63,9 @@ A constructor used to create a **DocumentViewPicker** instance. This constructor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -94,10 +99,11 @@ struct Index {
 constructor(context: Context, window: window.Window)
 ```
 
-A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object.
-    **NOTE**  
-    
-    This method is supported on 2-in-1 devices and tablets since API version 19.
+应用自行创建窗口中，可用通过该构造函数创建DocumentViewPicker对象。一般场景推荐使用constructor(context: Context)方法创建DocumentViewPicker对象。
+
+> **说明：**
+> 
+> 从API version 19开始，2in1和Tablet设备支持该方法。
 
 **Since:** 13
 
@@ -111,10 +117,10 @@ A constructor used to create a **DocumentViewPicker** object in a window created
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| window | window.Window | Yes | Window instance created by the application. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
+| window | window.Window | Yes | 应用创建的窗口实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -157,10 +163,8 @@ ArkTS-Sta:
 getSelectedIndex(): int
 ```
 
-Obtains the index of the file suffix type of the file saved.This method takes effect only when used with  
-[save()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.This method can be used only after [DocumentSaveOptions.fileSuffixChoices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is configured.The index (number) returned by this method indicates the location of the file suffix specified in  
-[DocumentSaveOptions.fileSuffixChoices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. If no file suffix is specified,  
-**getSelectedIndex()** returns **-1**.
+获取保存成功后的文件后缀类型的下标。该方法只在调用 [save()](arkts-corefile-picker-documentviewpicker-c.md#save)时使用生效，其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)。该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数  
+[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)里的某个后缀类型。如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
 
 **Since:** 14
 
@@ -176,7 +180,7 @@ Obtains the index of the file suffix type of the file saved.This method takes ef
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Subscript (number) of the selected suffix type in [DocumentSaveOptions.fileSuffixChoices]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回所选后缀类型在[DocumentSaveOptions.fileSuffixChoices]{ |
 
 ## save
 
@@ -184,7 +188,7 @@ Obtains the index of the file suffix type of the file saved.This method takes ef
 save(option?: DocumentSaveOptions): Promise<Array<string>>
 ```
 
-Starts a **documentPicker** page for the user to save one or more documents. This API uses a promise to return the result.
+通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用Promise异步回调。
 
 **Since:** 9
 
@@ -200,15 +204,15 @@ Starts a **documentPicker** page for the user to save one or more documents. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for saving the documents. If this parameter is not specified, a **documentPicker** page will be displayed for the user to enter the names of the documents to save. |
+| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | No | documentPicker保存选项。若无此参数， 则拉起documentPicker界面后需用户自行输入保存的文件名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents saved. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**Note**: For details about how to use the returned URIs, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -237,7 +241,7 @@ async function example10(context: common.UIAbilityContext) { // Ensure that cont
 save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
+通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
 
 **Since:** 9
 
@@ -253,10 +257,10 @@ Starts a **documentPicker** page for the user to save one or more documents. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for saving the documents. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**Note**: For details about how to use the returned URIs, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | Yes | documentPicker保存选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | callback 返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -287,7 +291,7 @@ async function example11(context: common.UIAbilityContext) { // Ensure that cont
 save(callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
+通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
 
 **Since:** 9
 
@@ -303,9 +307,9 @@ Starts a **documentPicker** page for the user to save one or more documents. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**Note**: For details about how to use the returned URIs, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | callback 返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -334,7 +338,7 @@ async function example12(context: common.UIAbilityContext) { // Ensure that cont
 select(option?: DocumentSelectOptions): Promise<Array<string>>
 ```
 
-Starts a **documentPicker** page for the user to select one or more documents. This API uses a promise to return the result.
+通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用Promise异步回调。
 
 **Since:** 9
 
@@ -350,15 +354,15 @@ Starts a **documentPicker** page for the user to select one or more documents. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for selecting documents. If this parameter is not specified, the **documentPicker** page is displayed by default. |
+| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | No | documentPicker选择选项。若无此参数，则默认拉起documentPicker主界面。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents selected. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **Note**: For details about how to use the returned URIs, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -386,7 +390,7 @@ async function example07(context: common.UIAbilityContext) { // Ensure that cont
 select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
+通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
 
 **Since:** 9
 
@@ -402,10 +406,10 @@ Starts a **documentPicker** page for the user to select one or more documents. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for selecting documents. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**Note**: For details about how to use the returned URIs, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | Yes | documentPicker选择选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | callback 返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -435,7 +439,7 @@ async function example08(context: common.UIAbilityContext) { // Ensure that cont
 select(callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
+通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
 
 **Since:** 9
 
@@ -451,9 +455,9 @@ Starts a **documentPicker** page for the user to select one or more documents. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**Note**: For details about how to use the returned URIs, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | callback 返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

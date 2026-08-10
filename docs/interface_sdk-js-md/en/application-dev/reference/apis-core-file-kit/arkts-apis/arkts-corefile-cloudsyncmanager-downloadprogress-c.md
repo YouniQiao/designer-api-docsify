@@ -1,6 +1,6 @@
 # DownloadProgress
 
-Describes the full download progress.
+全量下载任务的进度信息。
 
 **Since:** 20
 
@@ -10,16 +10,21 @@ Describes the full download progress.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
+## Modules to Import
+
+```TypeScript
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+```
+
 ## downloadedSize
 
 ```TypeScript
 downloadedSize: long
 ```
 
-Size of the downloaded data, in bytes. The value range is  
-[0, INT64\_MAX). If the progress is abnormal, **INT64\_MAX** is returned.
+已下载数据大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -35,10 +40,9 @@ Size of the downloaded data, in bytes. The value range is
 failedCount: int
 ```
 
-Number of files that fail to be downloaded. The value range is [0, INT32\_MAX]. If the progress is abnormal,  
-**-1** is returned.
+下载失败的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -54,9 +58,9 @@ Number of files that fail to be downloaded. The value range is [0, INT32\_MAX]. 
 state: DownloadState
 ```
 
-Download state.
+下载任务的状态。
 
-**Type:** DownloadState
+**Type:** [DownloadState](arkts-corefile-cloudsyncmanager-downloadstate-e.md)
 
 **Since:** 20
 
@@ -72,9 +76,9 @@ Download state.
 stopReason: DownloadStopReason
 ```
 
-Reason why the download stops.
+下载停止的原因。
 
-**Type:** DownloadStopReason
+**Type:** [DownloadStopReason](arkts-corefile-cloudsyncmanager-downloadstopreason-e.md)
 
 **Since:** 20
 
@@ -90,9 +94,9 @@ Reason why the download stops.
 successfulCount: int
 ```
 
-Number of downloaded files. The value range is [0, INT32\_MAX]. If the progress is abnormal, **-1** is returned.
+已下载的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -108,9 +112,9 @@ Number of downloaded files. The value range is [0, INT32\_MAX]. If the progress 
 totalCount: int
 ```
 
-Total number of files to be downloaded. The value range is [0, INT32\_MAX]. If the progress is abnormal, **-1** is returned.
+待下载文件总个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -126,10 +130,9 @@ Total number of files to be downloaded. The value range is [0, INT32\_MAX]. If t
 totalSize: long
 ```
 
-Total size of the files to be downloaded, in bytes. The value range is  
-[0, INT64\_MAX). If the progress is abnormal, **INT64\_MAX** is returned.
+需要下载文件的总大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 

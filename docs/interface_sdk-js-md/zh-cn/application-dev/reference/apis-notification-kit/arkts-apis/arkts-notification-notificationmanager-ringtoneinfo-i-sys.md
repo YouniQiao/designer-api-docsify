@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## ringtoneFileName
 
 ```TypeScript
@@ -60,7 +66,7 @@ ringtoneType: RingtoneType
 
 铃声的类型。
 
-**类型：** RingtoneType
+**类型：** [RingtoneType](../../apis-audio-kit/arkts-apis/arkts-audio-systemsoundmanager-ringtonetype-e.md)
 
 **起始版本：** 21
 

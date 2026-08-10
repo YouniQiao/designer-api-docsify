@@ -1,6 +1,6 @@
 # SelectionContainerEditMenuOptions
 
-Defines custom edit menu options for SelectionContainer.
+SelectionContainer自定义编辑菜单选项。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines custom edit menu options for SelectionContainer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## onMenuItemClick
 
 ```TypeScript
 onMenuItemClick?: OnMenuItemClickWithTextCallback
 ```
 
-Invoked upon clicking an item, capable of intercepting the default system menu execution behavior.
+点击菜单项时触发，可拦截系统默认菜单执行行为。默认值为空，不触发该回调。
 
 **Since:** 26.0.0
 
@@ -34,9 +40,9 @@ Invoked upon clicking an item, capable of intercepting the default system menu e
 onCreateMenu?: OnCreateMenuCallback
 ```
 
-Passes the default menu, invokes before every display to generate a menu for triggering click events.
+每次菜单显示前触发，传入默认菜单项并返回处理后的菜单项。默认值为空，不触发该回调。
 
-**Type:** OnCreateMenuCallback
+**Type:** [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md)
 
 **Since:** 26.0.0
 
@@ -54,9 +60,9 @@ Passes the default menu, invokes before every display to generate a menu for tri
 onPrepareMenu?: OnPrepareMenuCallback
 ```
 
-Callback before displaying the menu when the selection text changes.
+文本选中内容变化后、菜单显示前触发，可在该回调中调整菜单数据。默认值为空，不触发该回调。
 
-**Type:** OnPrepareMenuCallback
+**Type:** [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md)
 
 **Since:** 26.0.0
 

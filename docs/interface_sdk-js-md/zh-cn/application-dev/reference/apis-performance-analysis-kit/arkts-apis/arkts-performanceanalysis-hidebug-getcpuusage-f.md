@@ -1,5 +1,11 @@
 # getCpuUsage
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getCpuUsage
 
 ```TypeScript
@@ -7,9 +13,10 @@ function getCpuUsage() : double
 ```
 
 ��ȡ���̵�CPUʹ���ʡ�
-    **ע��**  
-    
-    ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
+
+> **ע��**
+> 
+> ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
 
 **起始版本：** 9
 
@@ -23,9 +30,9 @@ function getCpuUsage() : double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | ��ȡ���̵�CPUʹ���ʡ���ռ����Ϊ50%���򷵻�0.5�� |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | ��ȡ���̵�CPUʹ���ʡ���ռ����Ϊ50%���򷵻�0.5�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

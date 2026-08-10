@@ -10,6 +10,12 @@ Wi-Fi device configuration information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## configStatus
 
 ```TypeScript
@@ -18,7 +24,7 @@ configStatus?: int
 
 Device config status: 0 - enabled, 1 - disabled, 2 - permanent disabled, 3 - unknown.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -38,7 +44,7 @@ creatorUid?: int
 
 The UID of the Wi-Fi configuration creator.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -58,7 +64,7 @@ disableReason?: int
 
 Disable reason
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -78,7 +84,7 @@ family?: int
 
 Static IP family: 0 - IPv4, 1 - Ipv6.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -98,7 +104,7 @@ ipType?: IpType
 
 IP Type
 
-**Type:** IpType
+**Type:** [IpType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-iptype-e.md)
 
 **Since:** 9
 
@@ -158,7 +164,7 @@ proxyConfig?: WifiProxyConfig
 
 Proxy config.
 
-**Type:** WifiProxyConfig
+**Type:** [WifiProxyConfig](arkts-connectivity-wifimanager-wifiproxyconfig-i-sys.md)
 
 **Since:** 10
 
@@ -198,7 +204,7 @@ randomMacType?: int
 
 Random mac type
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -218,7 +224,7 @@ staticIp?: IpConfig
 
 IP config of static
 
-**Type:** IpConfig
+**Type:** [IpConfig](arkts-connectivity-wifi-ipconfig-i-sys.md)
 
 **Since:** 9
 
@@ -238,7 +244,7 @@ staticIpv6?: Ipv6Config
 
 IPv6 config of static
 
-**Type:** Ipv6Config
+**Type:** [Ipv6Config](arkts-connectivity-wifimanager-ipv6config-i-sys.md)
 
 **Since:** 20
 

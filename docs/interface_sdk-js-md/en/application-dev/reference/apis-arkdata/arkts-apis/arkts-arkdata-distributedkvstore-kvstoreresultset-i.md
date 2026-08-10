@@ -1,11 +1,15 @@
 # KVStoreResultSet
 
-Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a time.The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.Before calling any API in **KVStoreResultSet**, you must use **  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-** to construct a **SingleKVStore** or **DeviceKVStore** instance.
-    **NOTE**  
-    
-    The cursor start position of **KVStoreResultSet** is **-1**.
+提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。
+
+KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
+
+在调用KVStoreResultSet的方法前，需要先通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个SingleKVStore或者DeviceKVStore实例。
+
+> **说明：**
+> 
+> KVStoreResultSet的游标起始位置为-1。
 
 **Since:** 9
 
@@ -14,6 +18,12 @@ Provides APIs for obtaining the distributed KV store result sets. A maximum of e
 <!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
 
 ## getCount
 
@@ -27,7 +37,7 @@ ArkTS-Sta:
 getCount(): int
 ```
 
-Obtains the total number of rows in the result set.
+获取结果集中的总行数。
 
 **Since:** 9
 
@@ -43,9 +53,9 @@ Obtains the total number of rows in the result set.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Total number of rows obtained. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回数据的总行数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -57,12 +67,13 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     count = resultSet.getCount();
-    console.info("getCount succeed:" + count);
+    console.info('getCount succeed:' + count);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("getCount failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get count. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -72,7 +83,7 @@ try {
 getEntry(): Entry
 ```
 
-Obtains the KV pair from the current position.
+从当前位置获取对应的键值对。
 
 **Since:** 9
 
@@ -88,9 +99,9 @@ Obtains the KV pair from the current position.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | KV pair obtained. |
+| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 返回键值对。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -101,12 +112,13 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let entry = resultSet.getEntry();
-    console.info("getEntry succeed:" + JSON.stringify(entry));
+    console.info('getEntry succeed:' + JSON.stringify(entry));
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("getEntry failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get entry. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -122,8 +134,8 @@ ArkTS-Sta:
 getPosition(): int
 ```
 
-Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[moveToLast]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取结果集中当前的读取位置。读取位置会因[moveToFirst](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetofirst)、  
+[moveToLast](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetolast)等操作而发生变化。
 
 **Since:** 9
 
@@ -139,9 +151,9 @@ Obtains the current data read position (position from which data is read) in the
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Current data read position obtained. The value must be greater than or equal to **-1**. The value **-1 ** means no data is read; the value **0** indicates the first row. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前读取位置。取值范围>= -1，值为 -1 时表示还未开始读取，值为 0 时表示第一行。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -153,12 +165,13 @@ try {
     console.info('getResultSet succeeded.');
     resultSet = result;
     position = resultSet.getPosition();
-    console.info("getPosition succeed:" + position);
+    console.info('getPosition succeed:' + position);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("getPosition failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get position. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -168,7 +181,7 @@ try {
 isAfterLast(): boolean
 ```
 
-Checks whether the data read position is after the last row.
+检查读取位置是否在最后一行之后。
 
 **Since:** 9
 
@@ -184,9 +197,9 @@ Checks whether the data read position is after the last row.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data read position is after the last row; returns **false** otherwise. |
+| boolean | 返回true表示读取位置在最后一行之后；返回false表示读取位置不在最后一行之后。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -197,12 +210,13 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let isAfterLast = resultSet.isAfterLast();
-    console.info("Check isAfterLast succeed:" + isAfterLast);
+    console.info('Check isAfterLast succeed:' + isAfterLast);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("Check isAfterLast failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check isAfterLast. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -212,7 +226,7 @@ try {
 isBeforeFirst(): boolean
 ```
 
-Checks whether the data read position is before the first row.
+检查读取位置是否在第一行之前。
 
 **Since:** 9
 
@@ -228,9 +242,9 @@ Checks whether the data read position is before the first row.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data read position is before the first row; returns **false** otherwise. |
+| boolean | 返回true表示读取位置在第一行之前；返回false表示读取位置不在第一行之前。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -241,12 +255,13 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let isBeforeFirst = resultSet.isBeforeFirst();
-    console.info("Check isBeforeFirst succeed: " + isBeforeFirst);
+    console.info('Check isBeforeFirst succeed: ' + isBeforeFirst);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("Check isBeforeFirst failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check isBeforeFirst. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -256,7 +271,7 @@ try {
 isFirst(): boolean
 ```
 
-Checks whether the data read position is the first row.
+检查读取位置是否为第一行。
 
 **Since:** 9
 
@@ -272,9 +287,9 @@ Checks whether the data read position is the first row.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the first row is being read; returns **false** otherwise. |
+| boolean | 返回true表示读取位置为第一行；返回false表示读取位置不是第一行。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -286,12 +301,13 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     isFirst = resultSet.isFirst();
-    console.info("Check isFirst succeed:" + isFirst);
+    console.info('Check isFirst succeed:' + isFirst);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("Check isFirst failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check isFirst. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -301,7 +317,7 @@ try {
 isLast(): boolean
 ```
 
-Checks whether the data read position is the last row.
+检查读取位置是否为最后一行。
 
 **Since:** 9
 
@@ -317,9 +333,9 @@ Checks whether the data read position is the last row.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the last row is being read; returns **false** otherwise. |
+| boolean | 返回true表示读取位置为最后一行；返回false表示读取位置不是最后一行。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -331,12 +347,13 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     isLast = resultSet.isLast();
-    console.info("Check isLast succeed: " + isLast);
+    console.info('Check isLast succeed: ' + isLast);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("Check isLast failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check isLast. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -352,7 +369,7 @@ ArkTS-Sta:
 move(offset: int): boolean
 ```
 
-Moves the data read position with the specified offset from the current position. That is, moves the number of rows specified by **offset** from the current position.
+将读取位置移动到当前位置的相对偏移量。即当前游标位置向下偏移 offset 行。
 
 **Since:** 9
 
@@ -368,21 +385,21 @@ Moves the data read position with the specified offset from the current position
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset to move the data read position. A positive value means to move forward; a negative value means to move backward. If the cursor is beyond the start or end position of the result set, **false** is returned. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示与当前位置的相对偏移量，正偏移表示向结果集末尾方向移动（行号增大），负偏移表示向结果集起始方向移动（行号减小）。当游标超出结果集最前或者最后的位置时，接口返回false。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -396,11 +413,11 @@ try {
     moved = resultSet.move(2); // If the current position is 0, move the read position forward by two rows, that is, move to row 3.
     console.info(`Succeeded in moving.moved = ${moved}`);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to move.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to move. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -410,7 +427,7 @@ try {
 moveToFirst(): boolean
 ```
 
-Moves the data read position to the first row. If the result set is empty, **false** will be returned.
+将读取位置移动到第一行。如果结果集为空，则返回false。
 
 **Since:** 9
 
@@ -426,9 +443,9 @@ Moves the data read position to the first row. If the result set is empty, **fal
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -440,12 +457,13 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     moved = resultSet.moveToFirst();
-    console.info("moveToFirst succeed: " + moved);
+    console.info('moveToFirst succeed: ' + moved);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("moveToFirst failed " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to move to first. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -455,7 +473,7 @@ try {
 moveToLast(): boolean
 ```
 
-Moves the data read position to the last row. If the result set is empty, **false** will be returned.
+将读取位置移动到最后一行。如果结果集为空，则返回false。
 
 **Since:** 9
 
@@ -471,9 +489,9 @@ Moves the data read position to the last row. If the result set is empty, **fals
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -485,12 +503,13 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     moved = resultSet.moveToLast();
-    console.info("moveToLast succeed:" + moved);
+    console.info('moveToLast succeed:' + moved);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("moveToLast failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to move to last. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -500,7 +519,7 @@ try {
 moveToNext(): boolean
 ```
 
-Moves the data read position to the next row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
+将读取位置移动到下一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
 
 **Since:** 9
 
@@ -516,9 +535,9 @@ Moves the data read position to the next row. If the result set is empty, **fals
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -531,13 +550,14 @@ try {
     resultSet = result;
     do {
       moved = resultSet.moveToNext();
-      console.info("moveToNext succeed: " + moved);
-    } while (moved)
+      console.info('moveToNext succeed: ' + moved);
+    } while (moved);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("moveToNext failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to move to next. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -553,7 +573,7 @@ ArkTS-Sta:
 moveToPosition(position: int): boolean
 ```
 
-Moves the data read position from 0 to an absolute position.
+将读取位置从 0 移动到绝对位置。
 
 **Since:** 9
 
@@ -569,21 +589,21 @@ Moves the data read position from 0 to an absolute position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Absolute position to move to. If the absolute position exceeds the start or end position of the result set, **false** is returned. |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示绝对位置。当绝对位置超出结果集最前或者最后的位置时，接口返回false。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -597,11 +617,11 @@ try {
     moved = resultSet.moveToPosition(1);
     console.info(`Succeeded in moving to position.moved=${moved}`);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to move to position.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to move to position. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -611,7 +631,7 @@ try {
 moveToPrevious(): boolean
 ```
 
-Moves the data read position to the previous row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
+将读取位置移动到上一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
 
 **Since:** 9
 
@@ -627,9 +647,9 @@ Moves the data read position to the previous row. If the result set is empty, **
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -642,12 +662,13 @@ try {
     resultSet = result;
     moved = resultSet.moveToLast();
     moved = resultSet.moveToPrevious();
-    console.info("moveToPrevious succeed:" + moved);
+    console.info('moveToPrevious succeed:' + moved);
   }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error("moveToPrevious failed: " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to move to previous. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

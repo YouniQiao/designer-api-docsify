@@ -12,6 +12,12 @@ Describes the scene feature detection result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## detected
 
 ```TypeScript
@@ -40,7 +46,7 @@ readonly featureType: SceneFeatureType
 
 Scene feature type.
 
-**Type:** SceneFeatureType
+**Type:** [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md)
 
 **Since:** 12
 

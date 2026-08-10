@@ -10,6 +10,12 @@ Provides methods for enabling/disabling bluetooth or monitoring bluetooth state.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { access } from 'kits/@kit.ConnectivityKit';
+```
+
 ## Summary
 
 ### Functions

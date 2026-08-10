@@ -1,6 +1,6 @@
 # ScannerSyncMode
 
-Enumerates the scanner sync codes.
+定义扫描仪同步码的枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the scanner sync codes.
 UPDATE_STR = 'update'
 ```
 
-Update code, which indicates that the scanner ID changes.
+更新码，表示扫描仪id的变化。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Update code, which indicates that the scanner ID changes.
 DELETE_STR = 'delete'
 ```
 
-Deletion code, which indicates that the scanner is offline.
+删除码，表示扫描仪掉线。
 
 **Since:** 20
 

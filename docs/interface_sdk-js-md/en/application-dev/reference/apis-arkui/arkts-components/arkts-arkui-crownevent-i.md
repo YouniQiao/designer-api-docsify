@@ -1,6 +1,6 @@
 # CrownEvent
 
-Defines a data structure for the crown event received by a component. It includes the timestamp, angular velocity,rotation angle, crown action, and event propagation disabling.
+组件接收表冠事件的数据结构。内容包括时间戳、旋转角速度、旋转角度、表冠动作和阻止事件冒泡。
 
 **Since:** 18
 
@@ -16,9 +16,9 @@ Defines a data structure for the crown event received by a component. It include
 action: CrownAction
 ```
 
-Crown action.
+表冠动作。
 
-**Type:** CrownAction
+**Type:** [CrownAction](../arkts-apis/arkts-arkui-crownaction-e.md)
 
 **Since:** 18
 
@@ -38,9 +38,9 @@ Crown action.
 angularVelocity: number
 ```
 
-Angular velocity.
+旋转角速度。
 
-Unit: deg/s
+单位：deg/s
 
 **Type:** number
 
@@ -62,11 +62,11 @@ Unit: deg/s
 degree: number
 ```
 
-Relative rotation angle.
+相对旋转角度。
 
-Unit: deg
+单位：deg 
 
-Value range: [-360, 360]
+取值范围:[-360, 360]。
 
 **Type:** number
 
@@ -88,9 +88,9 @@ Value range: [-360, 360]
 stopPropagation: Callback<void>
 ```
 
-Disables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
+阻止[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 18
 
@@ -110,9 +110,9 @@ Disables \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ propagation.
 timestamp: number
 ```
 
-Timestamp.
+时间戳。触发事件时距离系统启动的时间间隔。
 
-Unit: ns
+单位：ns
 
 **Type:** number
 

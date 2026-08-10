@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
+## 导入模块
+
+```TypeScript
+import { intelligence } from 'kits/@kit.ArkData';
+```
+
 ## cachePath
 
 ```TypeScript
@@ -52,9 +58,9 @@ isNpuAvailable: boolean
 modelInfo?: CloudModelInfo
 ```
 
-云侧模型类型和版本信息，在使用文本向量模型时配置，通过[getSupportedCloudModel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口获取支持的模型信息，默认值为空。
+云侧模型类型和版本信息，在使用文本向量模型时配置，通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel)接口获取支持的模型信息，默认值为空。
 
-**类型：** CloudModelInfo
+**类型：** [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)
 
 **起始版本：** 26.0.0
 
@@ -72,9 +78,9 @@ modelInfo?: CloudModelInfo
 networkPolicy?: NetworkPolicy
 ```
 
-下载云侧模型时使用的网络策略，默认值为WIFI\_ONLY。此参数仅在使用文本嵌入模型时生效，在使用图像嵌入模型场景此参数不生效。
+下载云侧模型时使用的网络策略，默认值为WIFI_ONLY。此参数仅在使用文本嵌入模型时生效，在使用图像嵌入模型场景此参数不生效。
 
-**类型：** NetworkPolicy
+**类型：** [NetworkPolicy](arkts-arkdata-intelligence-networkpolicy-e.md)
 
 **起始版本：** 26.0.0
 
@@ -94,7 +100,7 @@ version: ModelVersion
 
 模型的版本。
 
-**类型：** ModelVersion
+**类型：** [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
 
 **起始版本：** 15
 

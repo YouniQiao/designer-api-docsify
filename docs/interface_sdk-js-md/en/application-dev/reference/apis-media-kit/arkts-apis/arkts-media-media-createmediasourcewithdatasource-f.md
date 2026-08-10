@@ -1,12 +1,18 @@
 # createMediaSourceWithDataSource
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createMediaSourceWithDataSource
 
 ```TypeScript
 function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSource | undefined
 ```
 
-Creates a media source from a custom data source.
+通过自定义数据源创建媒体源。
 
 **Since:** 26.0.0
 
@@ -24,11 +30,37 @@ Creates a media source from a custom data source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSrc | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Interface definition for obtaining media data. |
+| dataSrc | [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md) | Yes | 流式媒体资源描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | MediaSource instance if the operation is successful; returns undefined otherwise. |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
+
+## Examples
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { fileIo as fs, ReadOptions } from '@kit.CoreFileKit';
+
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let fileDescriptor = await context.resourceManager.getRawFd('xxx.mp4');
+let file = fs.openSync("xxx.mp4");
+let dataSrc: media.AVDataSrcDescriptor = {
+  fileSize: fileDescriptor.length,
+  callback: (buf: ArrayBuffer, length: number, pos?: number) => {
+    let readLen = 0;
+    if (pos) {
+      let option: ReadOptions = {
+        offset: pos,
+        length: length,
+      };
+      readLen = fs.readSync(file.fd, buf, option);
+    }
+    return readLen > 0 ? readLen : -1;
+  }
+}
+let mediaSource : media.MediaSource | undefined =  media.createMediaSourceWithDataSource(dataSrc);
+```
 

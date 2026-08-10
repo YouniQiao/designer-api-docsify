@@ -1,6 +1,6 @@
 # PermissionStateChangeInfo
 
-Represents the permission state change details.
+表示某次权限授权状态变化的详情。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Represents the permission state change details.
 
 **System capability:** SystemCapability.Security.AccessToken
 
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## change
 
 ```TypeScript
 change: PermissionStateChangeType
 ```
 
-Operation that triggers the permission state change.
+权限授权状态变化类型。
 
-**Type:** PermissionStateChangeType
+**Type:** [PermissionStateChangeType](arkts-ability-abilityaccessctrl-permissionstatechangetype-e.md)
 
 **Since:** 18
 
@@ -36,10 +42,9 @@ Operation that triggers the permission state change.
 permissionName: Permissions
 ```
 
-Permissions whose authorization state changes. For details about the permissions, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+当前授权状态发生变化的权限名，合法的权限名取值可在[应用权限列表](../../../security/AccessToken/app-permissions.md)中查询。
 
-**Type:** Permissions
+**Type:** [Permissions](arkts-ability-permissions-t.md)
 
 **Since:** 18
 
@@ -57,11 +62,9 @@ Permissions whose authorization state changes. For details about the permissions
 tokenID: int
 ```
 
-ID of the subscribed application, which can be obtained through the  
-[accessTokenId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ field in ApplicationInfo of BundleInfo. \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_For BundleInfo acquisition, please refer to:  
-[bundleManager.getBundleInfoSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+被订阅的应用身份标识。该参数必须为大于0的整数，传入0时返回错误码12100001。BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 

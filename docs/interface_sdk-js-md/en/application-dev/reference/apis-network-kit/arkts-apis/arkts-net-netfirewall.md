@@ -10,6 +10,12 @@ Provides interfaces to manage net firewall.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
+## Modules to Import
+
+```TypeScript
+import { netFirewall } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions
@@ -21,7 +27,7 @@ Provides interfaces to manage net firewall.
 | [getNetFirewallRule](arkts-network-netfirewall-getnetfirewallrule-f.md#getnetfirewallrule) | Get a specified firewall rule by userId and ruleId. |
 | [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md#getnetfirewallrules) | Get firewall rules by userId, and it is necessary to specify the pagination query parameters. |
 | [removeNetFirewallRule](arkts-network-netfirewall-removenetfirewallrule-f.md#removenetfirewallrule) | Delete a firewall rule by userId and ruleId. |
-| [setNetFirewallPolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md#setnetfirewallpolicy) | Set firewall policy by userId.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| [setNetFirewallPolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md#setnetfirewallpolicy) | Set firewall policy by userId.&lt;p&gt;Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.&lt;/p&gt; |
 | [updateNetFirewallRule](arkts-network-netfirewall-updatenetfirewallrule-f.md#updatenetfirewallrule) | Update a firewall rule. |
 
 <!--Del-->

@@ -1,8 +1,8 @@
 # TimeOptions
 
-TimeOptions defines options for the time picker.
+TimeOptions定义时间选择器的选项。
 
-Inherits from [CommonOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
 
 **Inheritance/Implementation:** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
@@ -14,17 +14,23 @@ Inherits from [CommonOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
+
 ## format
 
 ```TypeScript
 format?: TimeFormat
 ```
 
-Defines the format of the time picker.
+定义时间选择器的格式。
 
-Default value: TimeFormat.HOUR\_MINUTE
+默认值：TimeFormat.HOUR_MINUTE
 
-**Type:** TimeFormat
+**Type:** [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
 
 **Default:** TimeFormat.HOUR_MINUTE
 
@@ -44,12 +50,12 @@ Default value: TimeFormat.HOUR\_MINUTE
 useMilitaryTime?: boolean
 ```
 
-Specifies whether to display time in 24-hour format.
+指定是否使用24小时制显示时间。
 
-- true: Time is displayed in 24-hour format.  
-- false: Time is displayed in 12-hour format.
+- true：时间以24小时制展示。  
+- false：时间以12小时制展示。
 
-Default value: false
+默认值：false
 
 **Type:** boolean
 

@@ -1,7 +1,8 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService provides two callback functions,  
-[onAtomicServiceRequestSuccess]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and [onAtomicServiceRequestFailure]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,to handle the results of successful and failed atomic service launch requests, respectively.
+CompletionHandlerForAtomicService提供了  
+[onAtomicServiceRequestSuccess](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess)和  
+[onAtomicServiceRequestFailure](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure)两个回调函数，分别在打开原子化服务成功和失败时回调。
 
 **Since:** 23
 
@@ -11,13 +12,19 @@ CompletionHandlerForAtomicService provides two callback functions,
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { FailureCode } from 'kits/@kit.AbilityKit';
+```
+
 ## onAtomicServiceRequestFailure
 
 ```TypeScript
 onAtomicServiceRequestFailure: OnAtomicServiceRequestFailureFn
 ```
 
-Notify the failure result of openAtomicService.
+打开原子化服务失败时的回调函数。
 
 **Since:** 23
 
@@ -35,7 +42,7 @@ Notify the failure result of openAtomicService.
 onAtomicServiceRequestSuccess: OnAtomicServiceRequestSuccessFn
 ```
 
-Notify the success result of openAtomicService.
+打开原子化服务成功时的回调函数。
 
 **Since:** 23
 

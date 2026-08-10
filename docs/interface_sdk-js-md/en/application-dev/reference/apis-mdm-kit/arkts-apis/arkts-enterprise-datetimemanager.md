@@ -1,12 +1,13 @@
-# @ohos.enterprise.dateTimeManager(System Time Management)
+# @ohos.enterprise.dateTimeManager(系统时间管理)
 
-The **dateTimeManager** module provides APIs for system time management.
-    **NOTE**  
-    
-    The APIs of this module are available only to  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, and can be  
-    called only after the device administrator application is activated via  
-    [enableAdmin]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+本模块提供系统时间管理能力。
+
+> **说明：**
+> 
+> 本模块接口仅对[MDM应用](../../../mdm/mdm-kit-term.md#mdm应用)开放，需通过
+> [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin)接口将设备管理应用激活后调用。
+> 
+> 本模块接口均为系统接口。
 
 **Since:** 9
 
@@ -18,6 +19,12 @@ The **dateTimeManager** module provides APIs for system time management.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { dateTimeManager } from 'kits/@kit.MDMKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -25,11 +32,11 @@ The **dateTimeManager** module provides APIs for system time management.
 
 | Name | Description |
 | --- | --- |
-| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md#disallowmodifydatetime) | Disallows the device to modify the system time. This API uses an asynchronous callback to return the result. |
-| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md#disallowmodifydatetime-1) | Disallows the device to modify the system time. This API uses a promise to return the result. |
-| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md#ismodifydatetimedisallowed) | Queries whether the system time of a device can be modified. This API uses an asynchronous callback to return the result. |
-| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md#ismodifydatetimedisallowed-1) | Queries whether the system time of a device can be modified. This API uses a promise to return the result. |
-| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md#setdatetime) | Sets the system time. This API uses an asynchronous callback to return the result. |
-| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md#setdatetime-1) | Sets the system time. This API uses a promise to return the result. |
+| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md#disallowmodifydatetime) | 禁止设备修改系统时间。使用callback异步回调。 |
+| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md#disallowmodifydatetime-1) | 禁止设备修改系统时间。使用Promise异步回调。 |
+| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md#ismodifydatetimedisallowed) | 查询设备是否允许修改系统时间。使用callback异步回调。 |
+| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md#ismodifydatetimedisallowed-1) | 查询设备是否允许修改系统时间。使用Promise异步回调。 |
+| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md#setdatetime) | 设置系统时间。使用callback异步回调。 |
+| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md#setdatetime-1) | 设置系统时间。使用Promise异步回调。 |
 <!--DelEnd-->
 

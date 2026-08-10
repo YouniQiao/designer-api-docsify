@@ -10,6 +10,12 @@ Provides TCP and UDP Socket APIs.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## Summary
 
 ### Functions

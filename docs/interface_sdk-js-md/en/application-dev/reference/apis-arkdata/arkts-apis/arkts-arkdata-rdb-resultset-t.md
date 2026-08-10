@@ -4,7 +4,7 @@
 export type ResultSet = _ResultSet
 ```
 
-Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range.
+配置RdbPredicates以匹配数据字段为ValueType且value超出给定范围的指定字段。该方法等同于SQL语句中的"NOT BETWEEN"。
 
 **Since:** 7
 

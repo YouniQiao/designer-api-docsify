@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerFlags
 
 ```TypeScript
@@ -20,7 +26,7 @@ capturerFlags: int
 
 设置为0即可。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -38,7 +44,7 @@ source: SourceType
 
 音源类型。
 
-**类型：** SourceType
+**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **起始版本：** 8
 

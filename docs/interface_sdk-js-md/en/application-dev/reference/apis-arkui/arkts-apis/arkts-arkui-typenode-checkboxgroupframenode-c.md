@@ -1,6 +1,6 @@
 # CheckboxGroupFrameNode
 
-Define the CheckboxGroup type of FrameNode.
+定义CheckboxGroup类型的FrameNode。
 
 **Inheritance/Implementation:** CheckboxGroupFrameNode extends [TypedFrameNode<CheckboxGroupAttribute>](TypedFrameNode<CheckboxGroupAttribute>)
 
@@ -18,7 +18,7 @@ Define the CheckboxGroup type of FrameNode.
 abstract initialize(options?: CheckboxGroupOptions): CheckboxGroupAttribute
 ```
 
-Initialize CheckboxGroup FrameNode.
+初始化CheckboxGroup类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize CheckboxGroup FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| options | [CheckboxGroupOptions](../arkts-components/arkts-arkui-checkboxgroupoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [CheckboxGroupAttribute](../arkts-components/arkts-arkui-checkboxgroup-attribute.md) |  |
 

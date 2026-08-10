@@ -1,6 +1,6 @@
 # CustomSpanDrawInfo
 
-Defines the CustomSpanDrawInfo interface.
+定义自定义绘制Span的绘制信息接口。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines the CustomSpanDrawInfo interface.
 baseline: number
 ```
 
-Baseline offset of the line where the custom span is located.
+自定义绘制Span的所在行的基线偏移量。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -40,9 +40,9 @@ Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 lineBottom: number
 ```
 
-Bottom margin of the custom span relative to the **Text** component.
+自定义绘制Span相对于Text组件的下边距。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -64,9 +64,9 @@ Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 lineTop: number
 ```
 
-Top margin of the custom span relative to the **Text** component.
+自定义绘制Span相对于Text组件的上边距。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 
@@ -88,9 +88,9 @@ Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 x: number
 ```
 
-Offset of the custom span relative to the mounted component.
+自定义绘制Span相对于挂载组件的偏移。
 
-Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **Type:** number
 

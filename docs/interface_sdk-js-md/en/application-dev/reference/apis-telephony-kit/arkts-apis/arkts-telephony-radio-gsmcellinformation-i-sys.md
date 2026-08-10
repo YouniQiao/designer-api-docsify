@@ -12,6 +12,12 @@ Obtains GSM cell information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## arfcn
 
 ```TypeScript
@@ -20,7 +26,7 @@ arfcn: int
 
 Indicates the ARFCN(absolute radio frequency channel int).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -40,7 +46,7 @@ bsic: int
 
 Indicates the base station identification code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ cellId: int
 
 Indicates the cell identification.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ lac: int
 
 Indicates the location area code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

@@ -1,12 +1,18 @@
 # setStaticSubscriberState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setStaticSubscriberState
 
 ```TypeScript
 function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables static subscription for an app. This API uses an asynchronous callback to return the result.
+为当前应用设置静态订阅事件使能或去使能状态。使用callback异步回调。
 
 **Since:** 10
 
@@ -24,42 +30,26 @@ Enables or disables static subscription for an app. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether static subscription is enabled.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **true**: enabled; **false**: disabled. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| enable | boolean | Yes | 表示静态订阅事件使能状态。true：使能，false：去使能。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置静态订阅事件使能状态成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1500007 | Failed to send the message to the common event service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1500008 | Failed to initialize the common event service. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 commonEventManager.setStaticSubscriberState(true, (err: BusinessError) => {
   if (err.code != 0) {
-    console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-    return;
-  }
-  console.info(`setStaticSubscriberState success`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(true, (err: BusinessError | null) => {
-  if (err != null) {
-    console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+    console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
     return;
   }
   console.info(`setStaticSubscriberState success`);
@@ -73,7 +63,7 @@ commonEventManager.setStaticSubscriberState(true, (err: BusinessError | null) =>
 function setStaticSubscriberState(enable: boolean): Promise<void>
 ```
 
-Enables or disables static subscription for an app. This API uses a promise to return the result.
+为当前应用设置静态订阅事件使能或去使能状态。使用Promise异步回调。
 
 **Since:** 10
 
@@ -91,47 +81,32 @@ Enables or disables static subscription for an app. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether static subscription is enabled.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **true**: enabled; **false**: disabled. |
+| enable | boolean | Yes | 表示静态订阅事件使能状态。true：使能，false：去使能。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1500007 | Failed to send the message to the common event service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1500008 | Failed to initialize the common event service. |
 
-**Example**
-
-ArkTS-Dyn example:
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 commonEventManager.setStaticSubscriberState(false).then(() => {
   console.info(`setStaticSubscriberState success`);
-}).catch ((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
+}).catch((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 ```
 
@@ -142,7 +117,7 @@ commonEventManager.setStaticSubscriberState(false).then(() => {
 function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>
 ```
 
-Enables or disables static subscription to a common event for the current app. This API uses a promise to return the result.
+设置当前应用的静态订阅公共事件的使能状态。使用Promise异步回调。
 
 **Since:** 12
 
@@ -160,34 +135,34 @@ Enables or disables static subscription to a common event for the current app. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether static subscription is enabled.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **true**: enabled; **false**: disabled. |
-| events | Array&lt;string&gt; | No | List of common event names to be set. By default, the list is empty, indicating that the status of all common events subscribed to in static mode by the current app is to be set. |
+| enable | boolean | Yes | 表示静态订阅事件使能状态。true：使能，false：去使能。 |
+| events | Array&lt;string&gt; | No | 表示需要设置的公共事件名称列表，默认为空列表，表示设置当前应用所有的 静态订阅公共事件状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1500007 | Failed to send the message to the common event service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1500008 | Failed to initialize the common event service. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let eventName: string[] = ['usual.event.SEND_DATA'];
 commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
+  console.info(`setStaticSubscriberState success`);
 }).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 ```
 
@@ -198,7 +173,7 @@ commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
 function setStaticSubscriberState(enable: boolean, events: Array<string>): Promise<void>
 ```
 
-Set static subscriber state.
+为当前应用设置静态订阅事件的使能状态，并且记录事件名称。使用Promise异步回调。
 
 **Since:** 23
 
@@ -216,35 +191,21 @@ Set static subscriber state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | static subscribe event enable/disable state. |
-| events | Array&lt;string&gt; | Yes | The events array. |
+| enable | boolean | Yes | 表示静态订阅事件使能状态。 true：使能 false：去使能。 |
+| events | Array&lt;string&gt; | Yes | 表示记录事件名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let evenName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, evenName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1500007 | Failed to send the message to the common event service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 1500008 | Failed to initialize the common event service. |
 

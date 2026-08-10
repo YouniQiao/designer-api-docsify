@@ -1,5 +1,11 @@
 # importWrappedKeyItemAsUser (System API)
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## importWrappedKeyItemAsUser
 
 ```TypeScript
@@ -10,7 +16,7 @@ function importWrappedKeyItemAsUser(
   ): Promise<void>
 ```
 
-Imports a key securely for the specified user. This API uses a promise to return the result.
+Import Wrapped Key As User.
 
 **Since:** 12
 
@@ -31,7 +37,7 @@ Imports a key securely for the specified user. This API uses a promise to return
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Alias of the wrapped key to import. |
 | wrappingKeyAlias | string | Yes | Alias of the key used to decrypt the wrapped key. |
-| huksOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for importing the wrapped key. The algorithm, key purpose, and key length are mandatory. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Options for importing the wrapped key. The algorithm, key purpose, and key length are mandatory. |
 
 **Return value:**
 
@@ -43,24 +49,24 @@ Imports a key securely for the specified user. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application permission is not sufficient, which may be caused by lack of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | non-system applications are not allowed to use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
+| 801 | api is not supported |
+| 12000017 | The key with the same alias already exists<br>**Applicable version:** 20 and later |
+| 201 | the application permission is not sufficient, which may be caused by lack of &lt;br&gt;cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
+| 202 | non-system applications are not allowed to use system APIs. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 12000006 | error occurred in crypto engine |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000003 | algorithm param is invalid |
+| 12000002 | algorithm param is missing |
+| 12000001 | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
+| 12000015 | Failed to obtain the security information via UserIAM |
+| 12000014 | memory is insufficient |
+| 12000013 | queried credential does not exist |
+| 12000012 | Device environment or input parameter abnormal |
+| 12000011 | queried entity does not exist |
 
-**Example**
+## Examples
 
 The values of the following cryptography-related variables (such as initializationVector, associatedData, and nonce) are for reference only and cannot be directly used in the service logic. You need to set them based on actual situation.
 

@@ -1,5 +1,11 @@
 # createPixelMap
 
+## Modules to Import
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## createPixelMap
 
 ```TypeScript
@@ -29,14 +35,14 @@ Create PixelMap by data buffer.
 | --- | --- |
 | Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function Demo() {
+async function CreatePixelMap() {
     const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
     let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 4, width: 6 } }
     sendableImage.createPixelMap(color, opts).then((pixelMap: sendableImage.PixelMap) => {

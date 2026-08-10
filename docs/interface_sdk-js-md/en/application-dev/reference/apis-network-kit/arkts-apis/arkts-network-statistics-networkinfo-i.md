@@ -10,6 +10,12 @@ Parameters for obtaining detailed information on specified network traffic usage
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { statistics } from 'kits/@kit.NetworkKit';
+```
+
 ## endTime
 
 ```TypeScript
@@ -18,7 +24,7 @@ endTime: int
 
 End time for querying traffic.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -36,7 +42,7 @@ simId?: int
 
 SIM card id for querying traffic.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -54,7 +60,7 @@ startTime: int
 
 Start time for querying traffic.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 
@@ -72,7 +78,7 @@ type: NetBearType
 
 Network type for querying traffic.
 
-**Type:** NetBearType
+**Type:** [NetBearType](arkts-network-connection-netbeartype-e.md)
 
 **Since:** 22
 

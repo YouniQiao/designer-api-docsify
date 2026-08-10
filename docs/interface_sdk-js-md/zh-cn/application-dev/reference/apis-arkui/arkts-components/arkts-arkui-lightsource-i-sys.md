@@ -22,7 +22,7 @@ color?: ResourceColor
 
 默认值：Color.White
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -66,7 +66,7 @@ positionX: Dimension
 
 光源相对于当前组件的X坐标。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 
@@ -88,7 +88,7 @@ positionY: Dimension
 
 光源相对于当前组件的Y坐标。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 
@@ -110,7 +110,7 @@ positionZ: Dimension
 
 光源高度。光源越高，照射范围越大。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 

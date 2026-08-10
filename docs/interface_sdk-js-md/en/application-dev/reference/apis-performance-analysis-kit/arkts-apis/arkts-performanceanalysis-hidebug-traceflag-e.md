@@ -1,6 +1,6 @@
 # TraceFlag
 
-Describes types of trace collection threads, including the main thread and all threads.
+�����ɼ�trace�̵߳����ͣ��������̺߳������̡߳�
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Describes types of trace collection threads, including the main thread and all t
 MAIN_THREAD = 1
 ```
 
-The main thread of the application.
+ֻ�ɼ���ǰӦ�����̡߳�
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ The main thread of the application.
 ALL_THREADS = 2
 ```
 
-All threads of the application.
+�ɼ���ǰӦ���������̡߳�
 
 **Since:** 12
 

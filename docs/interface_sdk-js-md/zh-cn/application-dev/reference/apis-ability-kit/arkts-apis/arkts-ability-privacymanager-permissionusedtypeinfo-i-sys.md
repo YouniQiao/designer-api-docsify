@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## permissionName
 
 ```TypeScript
@@ -20,7 +26,7 @@ permissionName: Permissions
 
 被访问的敏感权限名称。
 
-**类型：** Permissions
+**类型：** [Permissions](arkts-ability-permissions-t.md)
 
 **起始版本：** 12
 
@@ -40,7 +46,7 @@ tokenId: int
 
 访问敏感权限的应用身份标识。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -60,7 +66,7 @@ usedType: PermissionUsedType
 
 敏感权限使用类型。
 
-**类型：** PermissionUsedType
+**类型：** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **起始版本：** 12
 

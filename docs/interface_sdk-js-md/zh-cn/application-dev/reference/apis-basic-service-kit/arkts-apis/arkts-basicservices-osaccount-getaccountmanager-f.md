@@ -1,5 +1,11 @@
 # getAccountManager
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAccountManager
 
 ```TypeScript
@@ -20,9 +26,9 @@ function getAccountManager(): AccountManager
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 系统账号管理对象。 |
+| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | 系统账号管理对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();

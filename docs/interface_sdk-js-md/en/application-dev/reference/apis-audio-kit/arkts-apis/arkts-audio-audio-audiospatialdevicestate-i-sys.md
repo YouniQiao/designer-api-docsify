@@ -1,7 +1,5 @@
 # AudioSpatialDeviceState (System API)
 
-Describes spatial device state.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -12,13 +10,17 @@ Describes spatial device state.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
-
-Spatial device address.
 
 **Type:** string
 
@@ -38,8 +40,6 @@ Spatial device address.
 isHeadTrackingSupported: boolean
 ```
 
-Whether the spatial device supports head tracking.
-
 **Type:** boolean
 
 **Since:** 11
@@ -57,8 +57,6 @@ Whether the spatial device supports head tracking.
 ```TypeScript
 isSpatializationSupported: boolean
 ```
-
-Whether the spatial device supports spatial rendering.
 
 **Type:** boolean
 
@@ -78,9 +76,7 @@ Whether the spatial device supports spatial rendering.
 spatialDeviceType: AudioSpatialDeviceType
 ```
 
-Spatial device type.
-
-**Type:** AudioSpatialDeviceType
+**Type:** [AudioSpatialDeviceType](arkts-audio-audio-audiospatialdevicetype-e-sys.md)
 
 **Since:** 11
 

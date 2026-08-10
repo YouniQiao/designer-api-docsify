@@ -4,9 +4,7 @@
 export type SystemUpdateCallback = (data: SubscribeCallbackData) => void
 ```
 
-type SystemUpdateCallback = (data: SubscribeCallbackData) =  
-    void  
-返回携带系统属性值通知信息的回调函数类型。
+type SystemUpdateCallback = (data: SubscribeCallbackData) => void返回携带系统属性值通知信息的回调函数类型。
 
 **起始版本：** 23
 
@@ -24,5 +22,5 @@ type SystemUpdateCallback = (data: SubscribeCallbackData) =
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 返回携带系统属性值的通知信息。  |
+| data | [SubscribeCallbackData](arkts-notification-notificationsubscribe-subscribecallbackdata-t-sys.md) | 是 | 返回携带系统属性值的通知信息。 |
 

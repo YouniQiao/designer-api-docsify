@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## previousVolume
 
 ```TypeScript
@@ -18,7 +24,7 @@ previousVolume?: int
 
 变化前的音量值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -36,7 +42,7 @@ streamUsage: StreamUsage
 
 音量发生变化的音频流。
 
-**类型：** StreamUsage
+**类型：** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **起始版本：** 20
 
@@ -72,7 +78,7 @@ volume: int
 
 音量值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 

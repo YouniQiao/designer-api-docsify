@@ -18,7 +18,7 @@ Indicates the lock states.
 LOCK_OFF = 0
 ```
 
-Indicates that the lock state card is in the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_off\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ state.
+Indicates that the lock state card is in the &lt;b&gt;off&lt;/b&gt; state.
 
 **起始版本：** 8
 
@@ -36,7 +36,7 @@ Indicates that the lock state card is in the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_
 LOCK_ON = 1
 ```
 
-Indicates that the lock state card is in the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_on\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ state.
+Indicates that the lock state card is in the &lt;b&gt;on&lt;/b&gt; state.
 
 **起始版本：** 8
 

@@ -1,12 +1,18 @@
 # getFormsInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
 ## getFormsInfo
 
 ```TypeScript
 function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 ```
 
-Obtains the widget information provided by a specified application on the device (excluding template widgets).This API uses an asynchronous callback to return the result.
+Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -25,19 +31,19 @@ Obtains the widget information provided by a specified application on the device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
+| 16500100 | Failed to obtain the configuration information. |
 
 
 ## getFormsInfo
@@ -50,7 +56,7 @@ function getFormsInfo(
   ): void
 ```
 
-Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses an asynchronous callback to return the result.
+Obtains the widget information provided by a specified application on the device (excluding template widgets). This  API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -70,19 +76,19 @@ Obtains the widget information provided by a specified application on the device
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Module name. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
+| 16500100 | Failed to obtain the configuration information. |
 
 
 ## getFormsInfo
@@ -91,7 +97,7 @@ Obtains the widget information provided by a specified application on the device
 function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<formInfo.FormInfo>>
 ```
 
-Obtains the widget information provided by a specified application on the device (excluding template widgets).This API uses a promise to return the result.
+Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -122,13 +128,13 @@ Obtains the widget information provided by a specified application on the device
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
+| 16500100 | Failed to obtain the configuration information. |
 
 
 ## getFormsInfo
@@ -167,11 +173,11 @@ Obtains the widget information provided by a specified application on the device
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
+| 16500100 | Failed to obtain the configuration information. |
 

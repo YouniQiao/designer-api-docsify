@@ -1,10 +1,12 @@
 # Navigator
 
-The **Navigator** component provides redirection.
+路由容器组件，提供路由跳转能力。
 
-## Child Components
+> **说明：**
 
-Supported
+## 子组件
+
+可以包含子组件。
 
 ## Navigator
 
@@ -12,7 +14,7 @@ Supported
 Navigator(value?: { target: string; type?: NavigationType })
 ```
 
-Called when the route jumps.
+在路由跳转时调用。
 
 **Since:** 7
 
@@ -32,7 +34,7 @@ Called when the route jumps.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { target: string; type?: NavigationType } | No | Information about the page to be redirected to.\_\_\_HTML\_TAG\_USD\_0\_\_\_target: Path of the target page to be redirected to. \_\_\_HTML\_TAG\_USD\_1\_\_\_type: Navigation type.\_\_\_HTML\_TAG\_USD\_2\_\_\_Default value: **NavigationType.Push**  |
+| value | { target: string; type?: NavigationType } | No | 跳转页面的信息。<br/>target：指定跳转目标页面的路径。<br/>type：指定路由方式。<br/>默认值：NavigationType.Push |
 
 ## Navigator
 
@@ -40,7 +42,9 @@ Called when the route jumps.
 Navigator()
 ```
 
-Called when using the navigator.
+在使用Navigator时调用。
+
+NavigationAttribute为Navigation组件的属性。
 
 **Since:** 7
 
@@ -58,3 +62,4 @@ Called when using the navigator.
 
 ## Summary
 
+- [NavigationType](arkts-arkui-navigator-navigationtype-e.md)

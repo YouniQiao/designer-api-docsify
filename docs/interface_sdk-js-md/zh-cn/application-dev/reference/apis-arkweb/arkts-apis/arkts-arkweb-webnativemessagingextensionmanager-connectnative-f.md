@@ -1,5 +1,11 @@
 # connectNative
 
+## 导入模块
+
+```TypeScript
+import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
+```
+
 ## connectNative
 
 ```TypeScript
@@ -24,9 +30,9 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 调用方UIAbility的上下文。 |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 启动Ability的want信息，其parameters中需包含'ohos.arkweb.messageReadPipe'（读管道FD）、' ohos.arkweb.messageWritePipe'（写管道FD）和'ohos.arkweb.extensionOrigin'（插件URI）。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WebExtensionConnection状态的回调对象。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | 是 | 调用方UIAbility的上下文。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息，其parameters中需包含'ohos.arkweb.messageReadPipe'（读管道FD）、' ohos.arkweb.messageWritePipe'（写管道FD）和'ohos.arkweb.extensionOrigin'（插件URI）。 |
+| callback | [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | 是 | WebExtensionConnection状态的回调对象。 |
 
 **返回值：**
 
@@ -38,5 +44,5 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 801 | Capability not supported. |
 

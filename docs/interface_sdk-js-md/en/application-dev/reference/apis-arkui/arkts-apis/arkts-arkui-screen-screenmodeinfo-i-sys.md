@@ -1,6 +1,6 @@
 # ScreenModeInfo (System API)
 
-Defines the screen mode information.
+屏幕显示模式信息。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Defines the screen mode information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: long
 ```
 
-Height of the screen, in px. The value is an integer.
+屏幕的高度，单位为px，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Height of the screen, in px. The value is an integer.
 id: long
 ```
 
-Screen ID. The value must be an integer.
+屏幕的id，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Screen ID. The value must be an integer.
 refreshRate: int
 ```
 
-Refresh rate of the screen, in hz. The value is an integer.
+屏幕的刷新率，单位为hz，该参数为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -78,9 +84,9 @@ Refresh rate of the screen, in hz. The value is an integer.
 width: long
 ```
 
-Width of the screen, in px. The value is an integer.
+屏幕的宽度，单位为px，该参数为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

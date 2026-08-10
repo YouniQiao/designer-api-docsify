@@ -1,5 +1,11 @@
 # getProfile
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getProfile
 
 ```TypeScript
@@ -24,15 +30,15 @@ Obtains the instance of profile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The profile id.. |
+| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | Yes | The profile id.. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns instance of profile. |
+| [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md) | Returns instance of profile. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;

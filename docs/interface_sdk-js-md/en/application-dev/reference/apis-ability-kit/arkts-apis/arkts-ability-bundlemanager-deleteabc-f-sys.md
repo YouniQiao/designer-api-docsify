@@ -1,12 +1,18 @@
 # deleteAbc (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## deleteAbc
 
 ```TypeScript
 function deleteAbc(abcPath: string): Promise<void>
 ```
 
-Deletes an .abc file based on the specified file path. This API uses a promise to return the result.
+根据给定的abcPath删除.abc文件。使用Promise异步回调。
 
 **Since:** 11
 
@@ -24,24 +30,24 @@ Deletes an .abc file based on the specified file path. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abcPath | string | Yes | Path of the .abc file. |
+| abcPath | string | Yes | .abc文件路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700202](../errorcode-bundle.md#17700202-abc-file-deletion-failure) | Failed to delete the abc file. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 17700202 | Failed to delete the abc file. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

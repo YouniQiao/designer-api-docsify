@@ -16,9 +16,9 @@
 DEFAULT = 0
 ```
 
-默认模式。\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_、  
-[AlphabetIndexer]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_在组件本身未设置背景颜色、模糊参数和阴影参数时默认开启沉浸式系统材质；[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_设置  
-[copyOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_后长按或双击触发的文本菜单默认开启沉浸式系统材质；其他组件由应用主动设置。
+默认模式。[弹出框Dialog](../../../ui/arkts-base-dialog-overview.md)、[即时反馈（Toast）](../../../ui/arkts-create-toast.md)、  
+[AlphabetIndexer](alphabet_indexer)在组件本身未设置背景颜色、模糊参数和阴影参数时默认开启沉浸式系统材质；[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)设置  
+[copyOption](arkts-arkui-text-textattribute-i.md#copyoption)后长按或双击触发的文本菜单默认开启沉浸式系统材质；其他组件由应用主动设置。
 
 **起始版本：** 26.0.0
 
@@ -36,13 +36,13 @@ DEFAULT = 0
 ENABLE = 1
 ```
 
-使能模式。\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_、  
-[AlphabetIndexer]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、[ChipGroup]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、  
-[Chip]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_、[Select]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、[菜单控制]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、[Toggle]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、  
-[SegmentButton]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、  
-[SegmentButtonV2]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、[Slider]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_、  
-[bindSheet]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_、[SelectionMenu]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_组件默认开启沉浸式系统材质；  
-[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_13\_\_\_设置[copyOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_14\_\_\_后长按或双击触发的文本菜单默认开启沉浸式系统材质。此模式下，沉浸式系统材质样式生效的优先级高于组件本身设置的背景色、模糊、阴影和边框样式。其他组件需开发者主动设置。
+使能模式。[弹出框Dialog](../../../ui/arkts-base-dialog-overview.md)、[即时反馈（Toast）](../../../ui/arkts-create-toast.md)、  
+[AlphabetIndexer](alphabet_indexer)、[ChipGroup](arkts-arkui-advanced-chipgroup.md)、  
+[Chip](arkts-arkui-advanced-chip.md)、[Select](arkts-arkui-select-select-f.md#select)、[菜单控制](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)、[Toggle](arkts-arkui-toggle-toggle-f.md#toggle)、  
+[SegmentButton](arkts-arkui-advanced-segmentbutton.md)、  
+[SegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2.md)、[Slider](arkts-arkui-slider-slider-f.md#slider)、  
+[bindSheet](arkts-arkui-common-commonmethod-i.md#bindsheet)、[SelectionMenu](arkts-arkui-advanced-selectionmenu.md)组件默认开启沉浸式系统材质；  
+[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)设置[copyOption](arkts-arkui-text-textattribute-i.md#copyoption)后长按或双击触发的文本菜单默认开启沉浸式系统材质。此模式下，沉浸式系统材质样式生效的优先级高于组件本身设置的背景色、模糊、阴影和边框样式。其他组件需开发者主动设置。
 
 **起始版本：** 26.0.0
 

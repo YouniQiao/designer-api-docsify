@@ -10,6 +10,12 @@ GzError返回信息。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## status
 
 ```TypeScript
@@ -18,7 +24,7 @@ status: ReturnStatus
 
 返回zlib文件状态码，参考ReturnStatus的定义。
 
-**类型：** ReturnStatus
+**类型：** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **起始版本：** 12
 

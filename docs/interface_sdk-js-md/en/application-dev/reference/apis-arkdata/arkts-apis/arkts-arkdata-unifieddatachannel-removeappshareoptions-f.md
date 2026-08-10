@@ -1,12 +1,18 @@
 # removeAppShareOptions
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## removeAppShareOptions
 
 ```TypeScript
 function removeAppShareOptions(intention: Intention): void
 ```
 
-Removes the data control information set by [setAppShareOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+清除[setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions)设置的管控信息。调用成功后，setAppShareOptions设置的管控信息被清除，应用内拖拽通道数据恢复到默认使用范围。
 
 **Since:** 14
 
@@ -25,25 +31,27 @@ Removes the data control information set by [setAppShareOptions]\_\_\_JSDOC\_LIN
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intention | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the data channel. Currently, only the data channel of the **DRAG** type is supported. |
+| intention | [Intention](arkts-arkdata-unifieddatachannel-intention-e.md) | Yes | 表示数据操作相关的数据通路类型，目前仅支持DRAG类型数据通道。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission " ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_UDMF\_\_\_ESCAPED\_UNDERSCORE\_\_\_APP\_\_\_ESCAPED\_UNDERSCORE\_\_\_SHARE\_\_\_ESCAPED\_UNDERSCORE\_\_\_OPTION".\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 14 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied. Interface caller does not have permission " ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION".<br>**Applicable version:** 14 and later |
+| 202 | Permission verification failed, application which is not a system application uses system API.<br>**Applicable version:** 12 - 13 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+
 try {
   unifiedDataChannel.removeAppShareOptions(unifiedDataChannel.Intention.DRAG);
-  console.info(`[UDMF]removeAppShareOptions success. `);
-}catch (e){
+  console.info(`[UDMF]removeAppShareOptions success.`);
+} catch (e) {
   let error: BusinessError = e as BusinessError;
-  console.error(`[UDMF]removeAppShareOptions throws an exception. code is ${error.code}, message is ${error.message} `);
+  console.error(`[UDMF]removeAppShareOptions throws an exception. code is ${error.code}, message is ${error.message}`);
 }
 ```
 

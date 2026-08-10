@@ -1,6 +1,6 @@
 # TriggerCondition
 
-Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的onTrigger回调触发条件的参数选项。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Defines the triggering condition parameters of the **onTrigger** callback of a [
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## row
 
 ```TypeScript
 row?: int
 ```
 
-Total number of events that trigger callback. The value is a positive integer. The default value is 0, indicating that no callback is triggered. If this parameter is set to a negative value, the default value is used.
+满足触发回调的事件总数量，正整数。默认值0，不触发回调。传入负值时，会被置为默认值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Total number of events that trigger callback. The value is a positive integer. T
 size?: int
 ```
 
-Total size of events that trigger callback. The value is a positive integer, in bytes. The default value is 0,indicating that no callback is triggered. If this parameter is set to a negative value, the default value is used.
+满足触发回调的事件总大小，正整数，单位为byte。默认值0，不触发回调。传入负值时，会被置为默认值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -56,9 +62,9 @@ Total size of events that trigger callback. The value is a positive integer, in 
 timeOut?: int
 ```
 
-Timeout interval for triggering callback. The value is a positive integer, in unit of 30s. The default value is0, indicating that no callback is triggered. If this parameter is set to a negative value, the default value is used.
+满足触发回调的超时时长，正整数，单位为s，值为timeOut * 30。默认值0，不触发回调。传入负值时，会被置为默认值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

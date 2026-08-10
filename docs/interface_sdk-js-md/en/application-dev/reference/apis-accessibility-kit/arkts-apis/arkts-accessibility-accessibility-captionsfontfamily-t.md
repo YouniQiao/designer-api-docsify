@@ -5,7 +5,7 @@ type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |
      'monospacedSansSerif' | 'sansSerif' | 'casual' | 'cursive' | 'smallCapitals'
 ```
 
-Enumerates the font families of captions.
+字幕字体。
 
 **Since:** 8
 
@@ -21,12 +21,12 @@ Enumerates the font families of captions.
 
 | Type | Description |
 | --- | --- |
-| 'default' | Default font family. |
-| 'monospacedSerif' | Monospaced Serif fonts, which use the same width for each character. |
-| 'serif' | Serif fonts. |
-| 'monospacedSansSerif' | Monospaced Sans Serif fonts, which use the same width for each character. |
-| 'sansSerif' | Sans Serif fonts. |
-| 'casual' | Casual fonts. |
-| 'cursive' | Cursive fonts. |
-| 'smallCapitals' | Small caps fonts. |
+| 'default' | 表示默认字体。 |
+| 'monospacedSerif' | 表示等宽 Serif 字体。 |
+| 'serif' | 表示Serif 字体。 |
+| 'monospacedSansSerif' | 表示等宽 Sans Serif 字体。 |
+| 'sansSerif' | 表示Sans Serif 字体。 |
+| 'casual' | 表示非正式字体。 |
+| 'cursive' | 表示手写字体。 |
+| 'smallCapitals' | 表示小型大写字母字体。 |
 

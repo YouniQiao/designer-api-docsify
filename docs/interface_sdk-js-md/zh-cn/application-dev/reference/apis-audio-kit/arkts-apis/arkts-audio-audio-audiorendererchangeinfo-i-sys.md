@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## clientUid
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly clientUid: int
 
 Uid for audio renderer client application.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ Uid for audio renderer client application.
 readonly rendererState: AudioState
 ```
 
-**类型：** AudioState
+**类型：** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
 
 **起始版本：** 9
 

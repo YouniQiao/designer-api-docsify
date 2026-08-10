@@ -1,19 +1,25 @@
 # setTextUndefinedGlyphDisplay
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## setTextUndefinedGlyphDisplay
 
 ```TypeScript
 function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): void
 ```
 
-Sets the glyph type to be used when characters are mapped to the .notdef (undefined) glyph.
+设置字符映射到.notdef（未定义）字形时要使用的字形类型。
 
-After this API is called, any subsequently rendered text containing undefined glyphs will be displayed according to this setting.
+调用此接口后，后续渲染的文本若包含未定义字形，均按此设置显示。
 
-This setting affects how to display undefined characters in the font:
+此配置会影响显示字体中未定义字符的方式：
 
-- The default behavior follows the .notdef glyph design of the font.  
-- After this feature is enabled, characters without glyphs are displayed as a tofu block.
+- 默认使用字体的.notdef字形设计。  
+- 开启后，缺失字形的字符将以豆腐块形式显示。
 
 **Since:** 20
 
@@ -29,9 +35,9 @@ This setting affects how to display undefined characters in the font:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| noGlyphShow | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Display mode of characters that cannot be shaped. |
+| noGlyphShow | [TextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-textundefinedglyphdisplay-e.md) | Yes | 无法塑形字符的显示方式。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 text.setTextUndefinedGlyphDisplay(text.TextUndefinedGlyphDisplay.USE_TOFU)

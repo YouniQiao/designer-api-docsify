@@ -1,6 +1,6 @@
 # UninstallDisposedRule (System API)
 
-Describes an uninstallation disposed rule.
+标识卸载处置规则。
 
 **Since:** 15
 
@@ -12,15 +12,21 @@ Describes an uninstallation disposed rule.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { appControl } from 'kits/@kit.AbilityKit';
+```
+
 ## priority
 
 ```TypeScript
 priority: int
 ```
 
-Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer.A smaller value indicates a higher priority.
+拦截规则的优先级，用于规则列表查询结果排序。取值为整数，数值越小，优先级越高，排序越靠前。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -38,9 +44,9 @@ Priority of the disposed rule, which is used to sort the query results of the ru
 uninstallComponentType: UninstallComponentType
 ```
 
-Type of the ability to start during interception.
+拦截时将拉起能力的类型。
 
-**Type:** UninstallComponentType
+**Type:** [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md)
 
 **Since:** 15
 
@@ -58,9 +64,9 @@ Type of the ability to start during interception.
 want: Want
 ```
 
-Component displayed when the application is disposed of.
+指定应用被拦截时，跳转到的组件。
 
-**Type:** Want
+**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 15
 

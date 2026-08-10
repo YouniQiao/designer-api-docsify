@@ -1,5 +1,11 @@
 # truncateSync
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## truncateSync
 
 ```TypeScript
@@ -29,20 +35,20 @@ declare function truncateSync(file: string | number, len?: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900023 | Text file busy |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
+| 13900004 | Interrupted system call |
+| 13900005 | I/O error |
+| 13900001 | Operation not permitted |
 | 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
+| 13900013 | Bad address |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 

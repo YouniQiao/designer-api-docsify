@@ -1,6 +1,6 @@
 # TranslateOptions (System API)
 
-Describes the translation parameters.
+平移参数。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Describes the translation parameters.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## x
 
 ```TypeScript
 x?: double
 ```
 
-Distance to translate along the x-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
+X轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -38,9 +44,9 @@ Distance to translate along the x-axis. The value is a floating-point number, th
 y?: double
 ```
 
-Distance to translate along the y-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
+Y轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 
@@ -58,9 +64,9 @@ Distance to translate along the y-axis. The value is a floating-point number, th
 z?: double
 ```
 
-Distance to translate along the z-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
+Z轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 9
 

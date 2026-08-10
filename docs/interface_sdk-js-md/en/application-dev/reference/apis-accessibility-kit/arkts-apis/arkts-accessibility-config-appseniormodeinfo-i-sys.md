@@ -12,6 +12,12 @@ Indicates the senior mode information of an application.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { config } from 'kits/@kit.AccessibilityKit';
+```
+
 ## appIndex
 
 ```TypeScript
@@ -20,7 +26,7 @@ appIndex?: int
 
 Indicates the index of clone app.The value must be an integer greater than or equal to 0. Default value: 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

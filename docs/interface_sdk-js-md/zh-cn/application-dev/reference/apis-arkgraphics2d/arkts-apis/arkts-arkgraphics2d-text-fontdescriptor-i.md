@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## copyright
 
 ```TypeScript
@@ -120,7 +126,7 @@ index?: int
 
 字体索引，字体文件为ttc类型时有效，ttf类型统一为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -142,7 +148,7 @@ italic?: int
 
 是否是斜体字体，0表示非斜体，1表示斜体，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 14
 
@@ -464,7 +470,7 @@ weight?: FontWeight
 
 字体字重，默认值为0。
 
-**类型：** FontWeight
+**类型：** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
 
 **起始版本：** 14
 
@@ -484,7 +490,7 @@ width?: int
 
 字体宽度，取值范围1-9整数，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 14
 

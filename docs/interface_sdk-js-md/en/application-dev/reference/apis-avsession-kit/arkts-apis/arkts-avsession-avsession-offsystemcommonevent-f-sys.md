@@ -1,12 +1,18 @@
 # offSystemCommonEvent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## offSystemCommonEvent
 
 ```TypeScript
 function offSystemCommonEvent(callback?: EventProcess): void
 ```
 
-Unregister system common event callback
+取消注册通用事件回调监听
 
 **Since:** 24
 
@@ -24,12 +30,12 @@ Unregister system common event callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Used to handle event when the common command is received |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | No | 处理事件回调 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| 6600101 | Session service exception. |
+| 202 | Not System App. |
 

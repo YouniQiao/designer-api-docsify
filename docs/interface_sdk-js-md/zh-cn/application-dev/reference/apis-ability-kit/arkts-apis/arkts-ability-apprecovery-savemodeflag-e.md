@@ -1,6 +1,6 @@
 # SaveModeFlag
 
-状态保存标志，[enableAppRecovery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口状态保存方式的参数，该类型为枚举。
+状态保存标志，[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口状态保存方式的参数，该类型为枚举。
 
 **起始版本：** 9
 

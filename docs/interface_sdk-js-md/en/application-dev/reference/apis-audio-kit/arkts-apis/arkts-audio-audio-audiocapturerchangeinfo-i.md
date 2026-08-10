@@ -1,6 +1,6 @@
 # AudioCapturerChangeInfo
 
-Describes the audio capturer change event.
+描述音频采集器更改信息。
 
 **Since:** 9
 
@@ -10,15 +10,21 @@ Describes the audio capturer change event.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## capturerInfo
 
 ```TypeScript
 readonly capturerInfo: AudioCapturerInfo
 ```
 
-Audio capturer information.
+音频采集器信息。
 
-**Type:** AudioCapturerInfo
+**Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
 **Since:** 9
 
@@ -34,9 +40,9 @@ Audio capturer information.
 readonly deviceDescriptors: AudioDeviceDescriptors
 ```
 
-Audio device information.
+音频设备信息。
 
-**Type:** AudioDeviceDescriptors
+**Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **Since:** 9
 
@@ -52,7 +58,7 @@ Audio device information.
 readonly muted?: boolean
 ```
 
-Whether the audio capturer is muted. **true** if muted, **false** otherwise.
+音频采集器是否处于静音状态。true表示静音，false表示非静音。
 
 **Type:** boolean
 
@@ -70,9 +76,9 @@ Whether the audio capturer is muted. **true** if muted, **false** otherwise.
 readonly streamId: int
 ```
 
-Unique ID of an audio stream.
+音频流唯一id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

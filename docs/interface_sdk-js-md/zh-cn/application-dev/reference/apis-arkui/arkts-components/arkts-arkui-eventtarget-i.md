@@ -1,6 +1,6 @@
 # EventTarget
 
-[BaseEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中参数target的类型。
+[BaseEvent](arkts-arkui-baseevent-i.md)中参数target的类型。
 
 触发事件的元素对象的显示区域。
 
@@ -20,7 +20,7 @@ area: Area
 
 目标元素的区域信息。
 
-**类型：** Area
+**类型：** [Area](../arkts-apis/arkts-arkui-area-i.md)
 
 **起始版本：** 8
 
@@ -40,7 +40,7 @@ area: Area
 id?: string
 ```
 
-开发者设置的节点[id]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。默认值：undefined
+开发者设置的节点[id](arkts-arkui-commonmethod-c.md#id)。默认值：undefined
 
 **类型：** string
 

@@ -1,6 +1,6 @@
 # FieldType (System API)
 
-Enumerates the types of the fields in a database table. Use the enum name rather than the enum value.
+描述数据库表中字段类型的枚举。请使用枚举名而非枚举值。
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ Enumerates the types of the fields in a database table. Use the enum name rather
 NULL = 0
 ```
 
-NULL.
+类型为空。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ NULL.
 NUMBER = 1
 ```
 
-Number.
+数值类型。
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ Number.
 REAL = 2
 ```
 
-Double-precision floating point.
+双精度浮点类型。
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ Double-precision floating point.
 TEXT = 3
 ```
 
-Text.
+文本类型。
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ Text.
 BOOL = 4
 ```
 
-Boolean.
+布尔类型。
 
 **Since:** 11
 
@@ -108,7 +108,7 @@ Boolean.
 BLOB = 5
 ```
 
-BLOB, which can hold a binary file.
+二进制大对象类型，可以存储二进制文件。
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ BLOB, which can hold a binary file.
 ASSET = 6
 ```
 
-Asset. For details, see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+资产类型。
 
 **Since:** 11
 
@@ -144,7 +144,7 @@ Asset. For details, see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 ASSETS = 7
 ```
 
-Assets. For details, see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+资产列表类型。
 
 **Since:** 11
 

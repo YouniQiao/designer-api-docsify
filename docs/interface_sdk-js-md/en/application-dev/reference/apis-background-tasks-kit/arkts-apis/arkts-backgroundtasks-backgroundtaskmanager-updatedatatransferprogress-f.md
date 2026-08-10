@@ -1,12 +1,18 @@
 # updateDataTransferProgress
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## updateDataTransferProgress
 
 ```TypeScript
 function updateDataTransferProgress(context: Context, progressInfo: DataTransferProgress): void
 ```
 
-Update notification. Only data transfer ContinuousTasks are supported.
+更新通知。仅支持数据传输类型长时任务。
 
 **Since:** 26.1.0
 
@@ -24,16 +30,16 @@ Update notification. Only data transfer ContinuousTasks are supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. |
-| progressInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notify progress data. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用运行的上下文。 |
+| progressInfo | [DataTransferProgress](arkts-backgroundtasks-backgroundtaskmanager-datatransferprogress-i.md) | Yes | 长时任务通知进度信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
-| [9800006](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800006-notification-verification-failure-for-a-continuous-task) | Notification verification failed for a continuous task. |
-| [9800007](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800007-continuous-task-storage-failure) | Continuous task storage failed. |
+| 9800005 | Continuous task verification failed. |
+| 9800004 | System service operation failed. |
+| 9800007 | Continuous task storage failed. |
+| 9800006 | Notification verification failed for a continuous task. |
+| 201 | Permission denied. |
 

@@ -1,12 +1,18 @@
 # unregister
 
+## Modules to Import
+
+```TypeScript
+import { continuationManager } from 'kits/@kit.AbilityKit';
+```
+
 ## unregister
 
 ```TypeScript
 function unregister(token: number, callback: AsyncCallback<void>): void
 ```
 
-Unregisters the continuation management service. This API uses an asynchronous callback to return the result.
+解注册流转管理服务，传入注册时获取的token进行解注册，使用AsyncCallback方式作为异步方法。
 
 **Since:** 8
 
@@ -26,10 +32,10 @@ Unregisters the continuation management service. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the unregistration is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| token | number | Yes | 注册后的token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当解注册成功，err为undefined，否则返回错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -51,7 +57,7 @@ continuationManager.unregister(token, (err) => {
 function unregister(token: number): Promise<void>
 ```
 
-Unregisters the continuation management service. This API uses a promise to return the result.
+解注册流转管理服务，传入注册时获取的token进行解注册，使用Promise方式作为异步方法。
 
 **Since:** 8
 
@@ -71,15 +77,15 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| token | number | Yes | 注册后的token。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

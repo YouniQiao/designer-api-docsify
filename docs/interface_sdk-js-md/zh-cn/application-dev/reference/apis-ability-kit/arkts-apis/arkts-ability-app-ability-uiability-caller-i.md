@@ -1,6 +1,6 @@
 # Caller
 
-调用方Caller UIAbility通过[startAbilityByCall]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口拉起目标Callee UIAbility，目标UIAbility启动成功后，返回一个Caller对象给调用方进行通信。
+调用方Caller UIAbility通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall)接口拉起目标Callee UIAbility，目标UIAbility启动成功后，返回一个Caller对象给调用方进行通信。
 
 **起始版本：** 9
 
@@ -9,6 +9,12 @@
 <!--Device-unnamed-export interface Caller--><!--Device-unnamed-export interface Caller-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## 导入模块
+
+```TypeScript
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
+```
 
 ## call
 
@@ -45,14 +51,12 @@ Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16200002 | The callee does not exist. |
+| 16200001 | The caller has been released. |
+| 16000050 | Internal error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -60,7 +64,7 @@ import { window } from '@kit.ArkUI';
 import { rpc } from '@kit.IPCKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class MyMessageable implements rpc.Parcelable { // 自定义的Parcelable数据结构
+class MyMessageAble implements rpc.Parcelable { // 自定义的Parcelable数据结构
   name: string;
   str: string;
   num: number = 1;
@@ -111,66 +115,6 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, Caller } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import rpc from '@ohos.rpc';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class MyMessageAble implements rpc.Parcelable { // 自定义的Parcelable数据结构
-  name: string;
-  str: string;
-  num: int = 1;
-
-  constructor(name: string, str: string) {
-    this.name = name;
-    this.str = str;
-  }
-
-  marshalling(messageSequence: rpc.MessageSequence) {
-    messageSequence.writeInt(this.num);
-    messageSequence.writeString(this.str);
-    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
-    return true;
-  }
-
-  unmarshalling(messageSequence: rpc.MessageSequence) {
-    this.num = messageSequence.readInt();
-    this.str = messageSequence.readString();
-    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
-    return true;
-  }
-}
-
-let method = 'call_Function'; // 约定的通知消息字符串
-let caller: Caller;
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: ''
-    }).then((obj) => {
-      caller = obj;
-      let msg = new MyMessageAble('msg', 'world'); // 参考Parcelable数据定义
-      caller.call(method, msg)
-        .then(() => {
-          console.info('Caller call() called');
-        })
-        .catch((callErr: BusinessError<void>): void => {
-          console.error(`Caller.call catch error, error.code: ${callErr.code}, error.message: ${callErr.message}`);
-        });
-    }).catch((err: BusinessError<void>): void => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
-
 ## callWithResult
 
 ```TypeScript
@@ -206,14 +150,12 @@ Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16200002 | The callee does not exist. |
+| 16200001 | The caller has been released. |
+| 16000050 | Internal error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -221,10 +163,10 @@ import { window } from '@kit.ArkUI';
 import { rpc } from '@kit.IPCKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class MyMessageAble implements rpc.Parcelable {
-  name: string;
-  str: string;
-  num: number = 1;
+class MyMessageable implements rpc.Parcelable {
+  name: string
+  str: string
+  num: number = 1
 
   constructor(name: string, str: string) {
     this.name = name;
@@ -275,76 +217,13 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, Caller } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import rpc from '@ohos.rpc';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class MyMessageAble implements rpc.Parcelable {
-  name: string;
-  str: string;
-  num: int = 1;
-
-  constructor(name: string, str: string) {
-    this.name = name;
-    this.str = str;
-  }
-
-  marshalling(messageSequence: rpc.MessageSequence) {
-    messageSequence.writeInt(this.num);
-    messageSequence.writeString(this.str);
-    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
-    return true;
-  }
-
-  unmarshalling(messageSequence: rpc.MessageSequence) {
-    this.num = messageSequence.readInt();
-    this.str = messageSequence.readString();
-    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
-    return true;
-  }
-}
-
-let method = 'call_Function';
-let caller: Caller;
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: ''
-    }).then((obj) => {
-      caller = obj;
-      let msg = new MyMessageAble('msg', 'world');
-      // 向Callee发送消息并获取返回结果
-      caller.callWithResult(method, msg)
-        .then((data) => {
-          console.info('Caller callWithResult() called');
-          let retMsg = new MyMessageAble('msg', 'world');
-          data.readParcelable(retMsg); // 读取Callee返回的Parcelable数据
-        })
-        .catch((callErr: BusinessError<void>): void => {
-          console.error(`Caller.callWithResult catch error, error.code: ${callErr.code}, error.message: ${callErr.message}`);
-        });
-    }).catch((err: BusinessError<void>): void => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
-
 ## off('release')
 
 ```TypeScript
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-取消注册Callee UIAbility断开通知的监听，与[on('release')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_是反向操作，当前暂未支持。
+取消注册Callee UIAbility断开通知的监听，与[on('release')](Caller.on)是反向操作，当前暂未支持。
 
 **起始版本：** 9
 
@@ -361,15 +240,15 @@ off(type: 'release', callback: OnReleaseCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'release' | 是 | 监听releaseCall事件，固定为'release'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回off回调结果。 |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | 是 | 回调函数，返回off回调结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
@@ -407,7 +286,7 @@ export default class MainUIAbility extends UIAbility {
 off(type: 'release'): void
 ```
 
-取消注册Callee UIAbility断开通知的监听，与[Caller.on('release')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_是反向操作，当前暂未支持。
+取消注册Callee UIAbility断开通知的监听，与[Caller.on('release')](Caller.on)是反向操作，当前暂未支持。
 
 **起始版本：** 9
 
@@ -429,9 +308,9 @@ off(type: 'release'): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
@@ -470,7 +349,7 @@ export default class MainUIAbility extends UIAbility {
 offRelease(callback: OnReleaseCallback): void
 ```
 
-取消注册Callee UIAbility断开的通知，与[Caller.onRelease]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_是反向操作。
+取消注册Callee UIAbility断开的通知，与[Caller.onRelease](Caller.onRelease)是反向操作。
 
 **起始版本：** 23
 
@@ -486,45 +365,7 @@ offRelease(callback: OnReleaseCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回off回调结果。 |
-
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let caller: Caller;
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: ''
-    }).then((obj) => {
-      caller = obj;
-      try {
-        let onReleaseCallBack: OnReleaseCallback = (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        };
-        caller.onRelease(onReleaseCallBack);
-        caller.offRelease(onReleaseCallBack);
-      } catch (e) {
-        const error = e as BusinessError;
-        console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((e) => {
-      const err = e as BusinessError;
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | 是 | 回调函数，返回off回调结果。 |
 
 ## offRelease
 
@@ -532,7 +373,7 @@ export default class MainUIAbility extends UIAbility {
 offRelease(): void
 ```
 
-取消注册Callee UIAbility断开的通知，与[Caller.onRelease]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_是反向操作。
+取消注册Callee UIAbility断开的通知，与[Caller.onRelease](Caller.onRelease)是反向操作。
 
 **起始版本：** 23
 
@@ -543,44 +384,6 @@ offRelease(): void
 <!--Device-Caller-offRelease(): void--><!--Device-Caller-offRelease(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例：**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let caller: Caller;
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: ''
-    }).then((obj) => {
-      caller = obj;
-      try {
-        let onReleaseCallBack: OnReleaseCallback = (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        };
-        caller.onRelease(onReleaseCallBack);
-        caller.offRelease();
-      } catch (e) {
-        const error = e as BusinessError;
-        console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((e) => {
-      const err = e as BusinessError;
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
 
 ## on('release')
 
@@ -605,16 +408,16 @@ Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'release' | 是 | 监听releaseCall事件，固定为'release'。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回on回调结果。 |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | 是 | 回调函数，返回on回调结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16200001 | The caller has been released. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -667,16 +470,16 @@ Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回onRelease回调结果。 |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | 是 | 回调函数，返回onRelease回调结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16200001 | The caller has been released. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -697,9 +500,9 @@ export default class MainUIAbility extends UIAbility {
           console.info(`Caller OnRelease CallBack is called ${str}`);
         });
       } catch (error) {
-        console.error(`Caller.onRelease catch error, error: ${error}`);
+        console.error(`Caller.onRelease catch error, error.code: ${error.code}, error.message: ${error.message}`);
       }
-    }).catch((err: BusinessError<void>): void => {
+    }).catch((err: BusinessError) => {
       console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
     });
   }
@@ -728,16 +531,16 @@ onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 回调函数，返回onRemoteStateChange回调结果。 |
+| callback | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | 是 | 回调函数，返回onRemoteStateChange回调结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 16200001 | The caller has been released. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -763,7 +566,7 @@ export default class MainAbility extends UIAbility {
         let msg = (error as BusinessError).message; 
         console.error(`Caller.onRemoteStateChange catch error, error.code: ${code}, error.message: ${msg}.`);
       }
-    }).catch((err: BusinessError<void>): void => {
+    }).catch((err: BusinessError) => {
       console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
     });
   }
@@ -792,10 +595,10 @@ Caller主动释放与Callee UIAbility的连接。调用该接口后，Caller不�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) | The callee does not exist. |
+| 16200002 | The callee does not exist. |
+| 16200001 | The caller has been released. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -816,9 +619,9 @@ export default class MainUIAbility extends UIAbility {
         // 释放Caller与Callee的连接
         caller.release();
       } catch (releaseErr) {
-        console.error(`Caller.release catch error, error: ${releaseErr}`);
+        console.error(`Caller.release catch error, error.code: ${releaseErr.code}, error.message: ${releaseErr.message}`);
       }
-    }).catch((err: BusinessError<void>): void => {
+    }).catch((err: BusinessError) => {
       console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
     });
   }

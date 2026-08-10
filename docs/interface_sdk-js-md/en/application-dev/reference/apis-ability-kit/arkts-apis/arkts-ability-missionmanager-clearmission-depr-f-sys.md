@@ -6,7 +6,7 @@
 function clearMission(missionId: number, callback: AsyncCallback<void>): void
 ```
 
-Clears a given mission, regardless of whether it is locked. This API uses an asynchronous callback to return the result.
+清理指定任务id的任务，无论该任务是否被锁定。使用callback异步回调。
 
 **Since:** 8
 
@@ -28,10 +28,10 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the mission is cleared, **err** is **undefined**. Otherwise, **err** is an error object. |
+| missionId | number | Yes | 任务ID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当清理指定任务id的任务成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -57,7 +57,7 @@ try {
 function clearMission(missionId: number): Promise<void>
 ```
 
-Clears a given mission, regardless of whether it is locked. This API uses a promise to return the result.
+清理指定任务id的任务，无论该任务是否被锁定。使用Promise异步回调。
 
 **Since:** 8
 
@@ -79,15 +79,15 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID. |
+| missionId | number | Yes | 任务ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

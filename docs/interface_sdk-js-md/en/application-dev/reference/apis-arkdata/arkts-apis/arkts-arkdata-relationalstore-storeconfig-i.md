@@ -1,6 +1,6 @@
 # StoreConfig
 
-Defines the RDB store configuration.
+管理关系数据库配置。
 
 **Since:** 9
 
@@ -10,21 +10,25 @@ Defines the RDB store configuration.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## allowRebuild
 
 ```TypeScript
 allowRebuild?: boolean
 ```
 
-Whether to automatically delete the RDB store and create an empty table in the case of an exception.
+指定数据库是否支持异常时自动删除，并重建一个空库空表，默认不自动删除。
 
-**true**: delete the RDB store and create an empty table in the case of an exception.
+true：自动删除。
 
-**false** (default): not delete the RDB store in the case of an exception.
+false：不自动删除。
 
-This parameter is supported since API version 12.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+从API version 12开始，支持此可选参数。
 
 **Type:** boolean
 
@@ -42,16 +46,12 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 autoCleanDirtyData?: boolean
 ```
 
-Whether to automatically clear the dirty data (data that has been deleted from the cloud) from the local device.The value **true** means to clear the dirty data automatically; **false** means to clear the data manually.
+指定是否自动清理云端删除后同步到本地的数据，true表示自动清理，false表示手动清理，默认自动清理。
 
-Default value: **true**.
+对于端云协同的数据库，当云端删除的数据同步到设备端时，可通过该参数设置设备端是否自动清理。手动清理可以通过  
+[cleanDirtyData&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkdata-relationalstore-rdbstore-i.md#cleandirtydata)接口清理。
 
-For a database with device-cloud synergy, this parameter can be used to set whether to automatically clear the data deleted from the cloud on the device. You can manually clear the data by calling  
-[cleanDirtyData\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_11+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
-
-This parameter is supported since API version 11.
-
-SystemCapability.DistributedDataManager.CloudSync.Client
+从API version 11开始，支持此可选参数。
 
 **Type:** boolean
 
@@ -69,18 +69,15 @@ SystemCapability.DistributedDataManager.CloudSync.Client
 cryptoParam?: CryptoParam
 ```
 
-Custom encryption parameters.
+指定用户自定义的加密参数。
 
-If this parameter is left empty, the default encryption parameters are used. For details, see default values of  
-[CryptoParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+当此参数不填时，使用默认的加密参数，见[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)各参数默认值。
 
-This parameter is valid only when **encrypt** is set to **true** or the key is not empty.
+此配置只有在encrypt选项设置为true或密钥非空时才有效。
 
-This parameter is supported since API version 14.
+从API version 14开始，支持此可选参数。
 
-SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Type:** CryptoParam
+**Type:** [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)
 
 **Since:** 14
 
@@ -96,14 +93,11 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 customDir?: string
 ```
 
-Custom database path.
+数据库自定义路径。
 
-**Constraints**: The maximum length of the database path is 128 bytes. If the database path exceeds 128 bytes,the RDB store fails to be opened and an error is returned.
+**使用约束：** 数据库路径大小限制为128字节，如果超过该大小会开库失败，抛出错误码401，请参见[通用错误码](../../../reference/errorcode-universal.md)。
 
-This parameter is supported since API version 11. The database is created in the following directory structure:  
-**context.databaseDir** + **"/rdb/"** + **customDir**, where **context.databaseDir** indicates the path of the application sandbox, **"/rdb/"** indicates the relational database created, and **customDir** indicates a user-defined path. If this parameter is left blank, the **RdbStore** instance will be created in the sandbox directory of the application by default. Since API version 18, if the **rootDir** parameter is also configured, the database in the following path will be opened or deleted: **rootDir** + "/" + **customDir** + "/" + **name**.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+从API version 11开始，支持此可选参数。数据库将在如下的目录结构中被创建：context.databaseDir + "/rdb/" + customDir，其中context.databaseDir是应用沙箱对应的路径，"/rdb/"表示创建的是关系型数据库，customDir表示自定义的路径。当此参数不填时，默认在本应用沙箱目录下创建RdbStore实例。从API version 18开始，如果同时配置了rootDir参数，将打开或删除如下路径数据库：rootDir + "/" + customDir + "/" + name。
 
 **Type:** string
 
@@ -121,14 +115,11 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 dataGroupId?: string
 ```
 
-Application group ID. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Currently, this parameter is not supported.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+应用组ID，&lt;!--RP1--&gt;暂不支持指定dataGroupId在对应的沙箱路径下创建RdbStore实例。&lt;!--RP1End--&gt;
 
-**Model restriction**: This parameter can be used only in the stage model.
+**模型约束：** 此属性仅在Stage模型下可用。
 
-This parameter is supported since API version 10. If **dataGroupId** is specified, the **RdbStore** instance will be created in the sandbox directory of the specified **dataGroupId**. However, the encrypted RDB store in this sandbox directory does not support multi-process access. If this parameter is left blank, the **RdbStore**  
-instance will be created in the sandbox directory of the application by default.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+从API version 10开始，支持此可选参数。dataGroupId共享沙箱的方式不支持多进程访问加密数据库，当此参数不填时，默认在本应用沙箱目录下创建RdbStore实例。
 
 **Type:** string
 
@@ -148,9 +139,7 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 enableSemanticIndex?: boolean
 ```
 
-Whether to enable the semantic index processing feature for the database. The value **true** means to enable the semantic index processing feature; **false** means the opposite. The default value is **false**.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+指定数据库是否启用语义索引处理功能。true表示启用语义索引处理功能，false表示不启用。默认为false。
 
 **Type:** boolean
 
@@ -168,14 +157,11 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 encrypt?: boolean
 ```
 
-Whether to encrypt the RDB store. After the database is created, this parameter cannot be modified directly. To change the database encryption status, call the  
-[rekeyEx]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.
+指定数据库是否加密，默认非加密。数据库创建完成后，此参数不允许直接修改。如需变更数据库加密状态，请调用[rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyex)接口进行更新操作。
 
-**true**: encrypt the RDB store.
+true：加密。
 
-**false** (default): not encrypt the RDB store.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+false：非加密。
 
 **Type:** boolean
 
@@ -193,15 +179,13 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 isReadOnly?: boolean
 ```
 
-Whether the RDB store is read-only.
+指定数据库是否只读，默认为数据库可读写。
 
-**true**: The RDB store is read-only. Writing data to the RDB store will result in error code 801.
+true：只允许从数据库读取数据，不允许对数据库进行写操作，否则会返回错误码801。
 
-**false** (default): The RDB store is readable and writeable.
+false：允许对数据库进行读写操作。
 
-This parameter is supported since API version 12.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+从API version 12开始，支持此可选参数。
 
 **Type:** boolean
 
@@ -219,9 +203,7 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 name: string
 ```
 
-Database file name, which is the unique identifier of the RDB store. Creating two databases with the same name in the same process is prohibited; otherwise, functions such as device-device sync, device-cloud sync, silent access, and key backup may malfunction.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+数据库文件名，也是数据库唯一标识符，不能为空字符串且不能包含路径分隔符/。同一进程禁止创建两个同名的数据库，否则可能导致端端同步、端云同步、静默访问以及密钥备份等功能出现异常。
 
 **Type:** string
 
@@ -239,11 +221,9 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 persist?: boolean
 ```
 
-Whether to persist an RDB store. The value **true** means to persist the RDB store; **false** means the opposite(using an in-memory database). The default value is **true**.
+指定数据库是否需要持久化。true表示持久化，false表示不持久化，即内存数据库。默认为true。
 
-An in-memory database does not support encryption, backup, restore, cross-process access, and distributed capabilities, with the **securityLevel** property ignored.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+内存数据库不支持加密、backup、restore、跨进程访问及分布式能力，securityLevel属性会被忽略。
 
 **Type:** boolean
 
@@ -261,10 +241,8 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 pluginLibs?: Array<string>
 ```
 
-Loads custom dynamic libraries. Multiple dynamic library names can be passed in the array. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+配置加载自定义动态库，数组中可传入多个动态库名称，默认值为空数组。具体请见  
+[pluginLibs的使用约束和示例](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#pluginlibs的使用约束和示例)。
 
 **Type:** Array&lt;string&gt;
 
@@ -282,11 +260,9 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 rootDir?: string
 ```
 
-Root path of the database.
+指定数据库根路径，默认值为空字符串。
 
-This parameter is supported since API version 18. The database in the **rootDir** + "/" + **customDir** directory will be opened or deleted. The database opened is read-only. Writing data to a read-only database will trigger error 801. If this parameter is set when you want to open or delete an RDB store, ensure that the database file exists in the corresponding path and the caller has the read permission. Otherwise, error 14800010 will be returned.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+从API version 18开始，支持此可选参数。将从如下目录打开或删除数据库：rootDir + "/" + customDir。通过设置此参数打开的数据库为只读模式，不允许对数据库进行写操作，否则返回错误码801。配置此参数打开或删除数据库时，应确保对应路径下数据库文件存在，并且有读取权限，否则返回错误码14800010。
 
 **Type:** string
 
@@ -304,11 +280,9 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 securityLevel: SecurityLevel
 ```
 
-Security level of the RDB store.
+设置数据库安全级别。
 
-SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Type:** SecurityLevel
+**Type:** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
 
 **Since:** 9
 
@@ -324,15 +298,14 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 tokenizer?: Tokenizer
 ```
 
-Type of the tokenizer to be used for FTS.
+指定用户在FTS（Full-Text Search）场景下使用哪种分词器。
 
-If this parameter is left blank, English tokenization is supported if FTS does not support Chinese or multi-language tokenization.
+当此参数不填时，则在FTS下不支持中文以及多国语言分词，但仍可支持英文分词。
 
-If you want to use a custom tokenizer, you can configure it through the **pluginLibs** parameter. For details,see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+如果用户想使用自定义分词器，可以通过pluginLibs参数进行配置，具体请见  
+[pluginLibs的使用约束和示例](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#pluginlibs的使用约束和示例)。
 
-SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Type:** Tokenizer
+**Type:** [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md)
 
 **Since:** 17
 
@@ -348,16 +321,11 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 vector?: boolean
 ```
 
-Whether the RDB store is a vector store. The value **true** means the RDB store is a vector store, and the value  
-**false** means the opposite.
+指定数据库是否是向量数据库，true表示向量数据库，false表示关系型数据库，默认为false。
 
-Default value: **false**.
+向量数据库适用于存储和处理高维向量数据，关系型数据库适用于存储和处理结构化数据。
 
-The vector store is ideal for storing and managing high-dimensional vector data, while the RDB store is optimal for storing and processing structured data.
-
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
-
-SystemCapability.DistributedDataManager.RelationalStore.Core
+当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
 
 **Type:** boolean
 

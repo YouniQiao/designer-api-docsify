@@ -42,7 +42,7 @@ storage? : LocalStorage
 
 页面级的UI状态存储。当需要在页面外部预先创建并管理UI状态、或需要将已有的LocalStorage实例绑定到此页面以实现状态共享时，传入此参数。当未传入时，框架会创建一个新的LocalStorage实例作为默认值。当useSharedStorage设置为true且storage已赋值时，useSharedStorage的值优先级更高。
 
-**类型：** LocalStorage
+**类型：** [LocalStorage](../arkts-apis/arkts-arkui-localstorage-localstorage-c.md)
 
 **起始版本：** 10
 
@@ -65,7 +65,7 @@ useSharedStorage? : boolean
 ```
 
 是否使用  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_传入的LocalStorage实例。默认值false。true：使用共享的LocalStorage实例（前提条件：需确保loadContent接口已传入LocalStorage实例；若未传入，则创建新的LocalStorage实例）。false：不使用共享的LocalStorage实例。当useSharedStorage设置为true且storage已赋值时，useSharedStorage的值优先级更高。
+[loadContent](../arkts-apis/arkts-arkui-window-windowstage-i.md/arkts-arkui-window-windowstage-i.md#loadcontent)传入的LocalStorage实例。默认值false。true：使用共享的LocalStorage实例（前提条件：需确保loadContent接口已传入LocalStorage实例；若未传入，则创建新的LocalStorage实例）。false：不使用共享的LocalStorage实例。当useSharedStorage设置为true且storage已赋值时，useSharedStorage的值优先级更高。
 
 **类型：** boolean
 

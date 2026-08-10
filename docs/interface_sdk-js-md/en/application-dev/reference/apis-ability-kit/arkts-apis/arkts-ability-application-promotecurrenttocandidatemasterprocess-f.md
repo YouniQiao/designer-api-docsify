@@ -1,36 +1,37 @@
 # promoteCurrentToCandidateMasterProcess
 
+## Modules to Import
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## promoteCurrentToCandidateMasterProcess
 
 ```TypeScript
 export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): Promise<void>
 ```
 
-Adds the current process into the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ list. This API uses a promise to return the result.When the \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ is destroyed and a UIAbility or UIExtensionAbility with **isolationProcess** set to **true** is restarted, the system takes corresponding actions based on whether there is a candidate master process.
+开发者可以调用该接口将当前进程放入[备选主控进程](../../../application-models/ability-terminology.md#candidatemasterprocess备选主控进程)链表。使用Promise异步回调。当[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)销毁后，再次启动配置了isolationProcess为true的UIAbility/UIExtensionAbility组件时，系统会根据是否存在备选主控进程执行相应操作。
 
-- If a candidate master process exists, the system sets the process at the head of the candidate master process  
-list as the new master process and triggers the  
-[onNewProcessRequest]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ callback.  
-- If no candidate master process exists, the system performs the following operations based on the component type:  
- - For a UIAbility, the system creates an empty process as the master process.  
- - For a UIExtensionAbility, the system first tries to reuse an existing UIExtensionAbility process as the new  
-master process. If no available process exists, it creates an empty process as the master process.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801is returned.
-    **NOTE**  
-    
-    If the current process is already the  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_, calling this API has no  
-    effect and does not generate an error code.  
-    
-    A process can be set as a candidate master process only if it is currently running a component with  
-    **isolationProcess** set to **true** or has previously as the main process.  
-    
-    
-    The **isolationProcess** field can be set to **true** in the  
-    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_ file, but only for the UIExtensionAbility of  
-    the sys/commonUI type.
+- 如果存在备选主控进程，系统会将备选主控进程链表首节点的进程设置为主控进程，触发  
+[onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequest)回调。  
+- 如果不存在备选主控进程，系统会根据组件类型执行相应的操作。  
+ - 对于UIAbility组件，系统将创建新的空进程作为主控进程。  
+ - 对于UIExtensionAbility组件，系统会优先复用已有的UIExtensionAbility进程作为新的主控进程，无可用进程时则创建新的空进程作为主控进程。  
+该接口在PC/2in1、Tablet中可正常调用，在其他设备类型中返回801错误码。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_
+> **说明：**
+> 
+> 如果当前进程已经是[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)，调用该接口无效并且不会抛出错误码。
+> 
+> 当前进程只有运行了isolationProcess字段设为true的组件，或曾经成为过主控进程，开发者才可将其设置为备选主控进程。
+> 
+> 
+> 当前仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配
+> 置isolationProcess字段为true。
+
+&lt;!--DelEnd--&gt;
 
 **Since:** 20
 
@@ -46,22 +47,22 @@ master process. If no available process exists, it creates an empty process as t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertToHead | boolean | Yes | Whether to add the current process to the head of the candidate master process list. **true** to add the current process to the head of the list, **false** to add the current process to the tail of the list. |
+| insertToHead | boolean | Yes | 表示是否将当前进程放入备选主控进程链表的表头。true表示放入表头，false表示放入表尾。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000115](../errorcode-ability.md#16000115-current-process-cannot-be-set-as-candidate-master-process) | The current process cannot be set as a candidate master process. |
+| 801 | Capability not supported. |
+| 16000115 | The current process cannot be set as a candidate master process. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';

@@ -1,10 +1,10 @@
 # RichEditorUpdateSymbolSpanStyleOptions
 
-Defines the symbol span style options.
+SymbolSpan样式选项。
 
-Inherits [RichEditorSpanStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)。
 
-**Inheritance/Implementation:** RichEditorUpdateSymbolSpanStyleOptions extends [RichEditorSpanStyleOptions](../arkts-apis/arkts-arkui-component/richeditor-richeditorspanstyleoptions-i.md)
+**Inheritance/Implementation:** RichEditorUpdateSymbolSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)
 
 **Since:** 11
 
@@ -20,9 +20,9 @@ Inherits [RichEditorSpanStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 symbolStyle: RichEditorSymbolSpanStyle
 ```
 
-Style of the symbol span.
+SymbolSpan的样式信息。
 
-**Type:** RichEditorSymbolSpanStyle
+**Type:** [RichEditorSymbolSpanStyle](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
 
 **Since:** 11
 

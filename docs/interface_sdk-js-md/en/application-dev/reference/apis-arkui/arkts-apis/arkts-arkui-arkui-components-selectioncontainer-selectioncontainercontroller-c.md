@@ -1,6 +1,6 @@
 # SelectionContainerController
 
-Defines the controller of the SelectionContainer component.
+SelectionContainer组件的控制器。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines the controller of the SelectionContainer component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## clearTextSelection
 
 ```TypeScript
 clearTextSelection(): void
 ```
 
-Clears the current text selection of the SelectionContainer,and closes the selection menu if it is currently shown.
+清除SelectionContainer当前的文本选中状态；若选择菜单正在显示，会同时关闭选择菜单。
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ Clears the current text selection of the SelectionContainer,and closes the selec
 closeSelectionMenu(): void
 ```
 
-Closes the custom or default selection menu of the SelectionContainer.
+关闭SelectionContainer的自定义或默认选择菜单。
 
 **Since:** 26.0.0
 

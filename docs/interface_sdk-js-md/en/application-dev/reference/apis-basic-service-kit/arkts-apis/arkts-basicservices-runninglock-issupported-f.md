@@ -1,12 +1,18 @@
 # isSupported
 
+## Modules to Import
+
+```TypeScript
+import { runningLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isSupported
 
 ```TypeScript
 function isSupported(type: RunningLockType): boolean
 ```
 
-Checks whether a specified type of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported.
+查询系统是否支持该类型的锁。
 
 **Since:** 9
 
@@ -20,21 +26,21 @@ Checks whether a specified type of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the running lock. The value must be an enum. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 需要查询的锁的类型；该参数必须是一个枚举类。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the specified type of the running lock is supported, and the value **false** indicates the opposite. |
+| boolean | 返回true表示支持，返回false表示不支持。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

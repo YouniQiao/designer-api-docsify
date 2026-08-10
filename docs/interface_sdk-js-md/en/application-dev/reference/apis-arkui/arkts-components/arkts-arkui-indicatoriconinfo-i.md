@@ -1,6 +1,6 @@
 # IndicatorIconInfo
 
-Set the indicator item's icon for a specified index.
+为指定的导航点索引设置的图标。
 
 **Since:** 26.0.0
 
@@ -16,9 +16,9 @@ Set the indicator item's icon for a specified index.
 icon: ResourceStr | SymbolGlyphModifier
 ```
 
-Icon that needs to be set.
+需要设置的图标。
 
-**Type:** ResourceStr \| SymbolGlyphModifier
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| SymbolGlyphModifier
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ Icon that needs to be set.
 index: int
 ```
 
-The specified index.The value should be an integer.
+指定索引。取值限定为整数。
 
 **Type:** int
 

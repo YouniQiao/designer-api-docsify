@@ -1,6 +1,6 @@
 # TaskSignal
 
-Provides APIs for interrupting a copy task.
+拷贝中断信号。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Provides APIs for interrupting a copy task.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## cancel
 
 ```TypeScript
 cancel(): void
 ```
 
-Cancels a copy task.
+取消拷贝任务。
 
 **Since:** 12
 
@@ -30,15 +36,14 @@ Cancels a copy task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900010 | Try again |
 | 13900012 | Permission denied by the file system |
+| 13900010 | Try again |
 | 13900043 | No task can be canceled. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
 import { fileUri } from '@kit.CoreFileKit';
 import { common } from '@kit.AbilityKit';
 
@@ -50,21 +55,21 @@ let srcDirPathLocal: string = pathDir + "/src";
 let dstDirPathLocal: string = pathDir + "/dest";
 let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
 let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
-let copySignal = new fs.TaskSignal;
-let progressListener: fs.ProgressListener = (progress: fs.Progress) => {
+let copySignal = new fileIo.TaskSignal;
+let progressListener: fileIo.ProgressListener = (progress: fileIo.Progress) => {
   console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
   if (progress.processedSize / progress.totalSize > 0.5) {
     copySignal.cancel();
     console.info("copy cancel.");
   }
 };
-let options: fs.CopyOptions = {
+let options: fileIo.CopyOptions = {
   "progressListener" : progressListener,
   "copySignal" : copySignal,
 }
 
 try {
-  fs.copy(srcDirUriLocal, dstDirUriLocal, options, (err: BusinessError) => {
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, options, (err: BusinessError) => {
     if (err) {
       console.error("copy fail, err: ", err.message);
       return;
@@ -82,11 +87,11 @@ try {
 onCancel(): Promise<string>
 ```
 
-    **NOTE**  
-    
-    This API is supported since API version 12 and deprecated since API version 24.
+> **说明：**
+> 
+> 从API version 12开始支持，从API version 24开始废弃。
 
-Subscribes to the event reported when a copy task is canceled.
+取消拷贝事件监听。
 
 **Since:** 12
 
@@ -102,7 +107,7 @@ Subscribes to the event reported when a copy task is canceled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the path of the last file copied. |
+| Promise&lt;string&gt; | Promise对象。最后一个拷贝的文件路径。 |
 
 **Error codes:**
 
@@ -112,12 +117,12 @@ Subscribes to the event reported when a copy task is canceled.
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
 import { TaskSignal } from '@kit.CoreFileKit';
-let copySignal: fs.TaskSignal = new TaskSignal();
+
+let copySignal: fileIo.TaskSignal = new TaskSignal();
 copySignal.onCancel();
 ```
 

@@ -1,6 +1,6 @@
 # DrawableDescriptor
 
-父类对象提供可重写的方法，包含：获取[PixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_实例，图片资源加载能力。
+父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)实例，图片资源加载能力。
 
 **起始版本：** 23
 
@@ -9,6 +9,12 @@
 <!--Device-unnamed-export declare class DrawableDescriptor--><!--Device-unnamed-export declare class DrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+```
 
 ## constructor
 

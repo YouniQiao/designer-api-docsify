@@ -12,6 +12,12 @@ ManualIso object.
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getIso
 
 ArkTS-Dyn:
@@ -40,14 +46,15 @@ Gets current ISO.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | The current ISO. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | The current ISO. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 24+ |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 12 - 23 |
 
 ## setIso
 
@@ -61,7 +68,7 @@ ArkTS-Sta:
 setIso(iso: int): void
 ```
 
-Sets ISO sensitivity value, within the range of getSupportedIsoRange. This control can not be effective if ExposureMode is set to EXPOSURE\_MODE\_LOCKED.
+Sets ISO sensitivity value, within the range of getSupportedIsoRange. This control can not be effective if ExposureMode is set to EXPOSURE_MODE_LOCKED.
 
 **起始版本：** 24
 
@@ -77,12 +84,14 @@ Sets ISO sensitivity value, within the range of getSupportedIsoRange. This contr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iso | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ISO |
+| iso | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ISO |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 24+ |
+| 7400101 | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 23 |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 12 - 23 |
 

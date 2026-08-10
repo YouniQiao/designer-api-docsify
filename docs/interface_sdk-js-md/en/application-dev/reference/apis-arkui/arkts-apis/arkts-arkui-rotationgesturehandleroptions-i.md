@@ -1,9 +1,8 @@
 # RotationGestureHandlerOptions
 
-Provides the parameters of the rotation gesture handler. Inherits from  
-[BaseHandlerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+旋转手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
-**Inheritance/Implementation:** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-component/gesture-basehandleroptions-i.md)
+**Inheritance/Implementation:** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **Since:** 12
 
@@ -19,13 +18,13 @@ Provides the parameters of the rotation gesture handler. Inherits from
 angle?: number
 ```
 
-Minimum angle change required to trigger the rotation gesture, in degrees (deg).
+触发旋转手势的最小改变度数，单位为deg。
 
-Default value: **1**
+默认值：1 
 
-**NOTE**
+**说明：**
 
-If the value is less than or equal to 0 or greater than 360, it will be converted to the default value.
+当改变度数的值小于等于0或大于360时，会被转化为默认值。
 
 **Type:** number
 
@@ -47,13 +46,13 @@ If the value is less than or equal to 0 or greater than 360, it will be converte
 fingers?: number
 ```
 
-Minimum number of fingers required to trigger the rotation gesture. The value ranges from 2 to 5.
+触发旋转的最少手指数，最小为2指，最大为5指。
 
-Default value: **2**
+默认值：2 
 
-Value range: [2, 5]
+取值范围：[2, 5]
 
-While more fingers than the minimum number can be pressed to trigger the gesture, only the first two fingers participate in gesture calculation.
+触发手势时手指数量可以多于fingers参数值，但仅最先落下的两指参与手势计算。
 
 **Type:** number
 

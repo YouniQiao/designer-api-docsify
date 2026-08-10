@@ -24,8 +24,8 @@ function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通知渠道类型，目前分为社交通信、服务提醒、内容咨询和其他类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NotificationSlot&gt; | 是 | 表示被指定的回调方法。 |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 通知渠道类型，目前分为社交通信、服务提醒、内容咨询和其他类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | 是 | 表示被指定的回调方法。 |
 
 
 ## getSlot
@@ -52,11 +52,11 @@ function getSlot(slotType: SlotType): Promise<NotificationSlot>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通知渠道类型，目前分为社交通信、服务提醒、内容咨询和其他类型。 |
+| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 通知渠道类型，目前分为社交通信、服务提醒、内容咨询和其他类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NotificationSlot&gt; | 以Promise形式返回获取一个通知通道。 |
+| Promise&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | 以Promise形式返回获取一个通知通道。 |
 

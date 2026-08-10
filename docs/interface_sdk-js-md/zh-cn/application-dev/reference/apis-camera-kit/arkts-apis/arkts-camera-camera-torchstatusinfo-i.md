@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## isTorchActive
 
 ```TypeScript
@@ -58,7 +64,7 @@ readonly torchLevel: double
 
 手电筒亮度等级，取值范围为[0,1]，越靠近1，亮度越大。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 11
 

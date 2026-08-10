@@ -10,6 +10,12 @@ Defines the Web resource request used for scheme handler.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## getFrameUrl
 
 ```TypeScript
@@ -74,7 +80,7 @@ Get http body stream.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return http body stream. If request has no http body stream, return null. |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
 
 ## getReferrer
 
@@ -140,7 +146,7 @@ Get request's resource type.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the request's resource type. |
+| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Return the request's resource type. |
 
 ## getRequestUrl
 

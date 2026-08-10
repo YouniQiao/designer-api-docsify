@@ -11,10 +11,10 @@
 
 ## 约束
 
-EmbeddedComponent**仅支持在拥有多进程权限的设备上使用。
+**EmbeddedComponent**仅支持在拥有多进程权限的设备上使用。
 
 **EmbeddedComponent**只能在UIAbility中使用，且默认情况下被拉起的EmbeddedUIExtensionAbility需与UIAbility属于同一应用。从API版本26.0.0开始，在同时满足以下条件时，允许**EmbeddedComponent**跨应用拉起EmbeddedUIExtensionAbility：  
-- **EmbeddedComponent**所属应用申请了ohos.permission.SUPPORT\_CROSS\_APP\_EMBED\_FOR\_OA权限（该权限仅企业普通应用可申请）；  
+- **EmbeddedComponent**所属应用申请了ohos.permission.SUPPORT_CROSS_APP_EMBED_FOR_OA权限（该权限仅企业普通应用可申请）；  
 - 该应用的appIdentifier在EmbeddedUIExtensionAbility支持的应用清单（即extensionAbilities标签的appIdentifierAllowList属性）中。
 
 ## 子组件
@@ -48,8 +48,8 @@ EmbeddedComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| loader | import('../api/@ohos.app.ability.Want').default | 是 | 表示要加载的EmbeddedUIExtensionAbility。  |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 提供方的类型。  |
+| loader | import('../api/@ohos.app.ability.Want').default | 是 | 表示要加载的EmbeddedUIExtensionAbility。 |
+| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | 是 | 提供方的类型。 |
 
 ## EmbeddedComponent
 
@@ -79,9 +79,13 @@ EmbeddedComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| loader | import('../api/@ohos.app.ability.Want').default | 是 | 要加载的EmbeddedUIExtensionAbility。  |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 提供方的类型。  |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 嵌入式组件的可选配置项，用于设置占位符、DPI跟随策略、窗口模式跟随策略等。  |
+| loader | import('../api/@ohos.app.ability.Want').default | 是 | 要加载的EmbeddedUIExtensionAbility。 |
+| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | 是 | 提供方的类型。 |
+| options | [EmbeddedOptions](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedoptions-i.md) | 否 | 嵌入式组件的可选配置项，用于设置占位符、DPI跟随策略、窗口模式跟随策略等。 |
 
 ## 汇总
 
+- [EmbeddedOptions](arkts-arkui-embeddedcomponent-embeddedoptions-i.md)
+- [TerminationInfo](arkts-arkui-embeddedcomponent-terminationinfo-i.md)
+- [EmbeddedDpiFollowStrategy](arkts-arkui-embeddedcomponent-embeddeddpifollowstrategy-e.md)
+- [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedcomponent-embeddedwindowmodefollowstrategy-e.md)

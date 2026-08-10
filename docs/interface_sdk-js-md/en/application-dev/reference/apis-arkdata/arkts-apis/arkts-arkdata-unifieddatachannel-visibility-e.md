@@ -1,6 +1,6 @@
 # Visibility
 
-Enumerates the data visibility levels.
+表示数据的可见性等级枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the data visibility levels.
 ALL
 ```
 
-Visible to all applications.
+可见性等级，所有应用可见。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ Visible to all applications.
 OWN_PROCESS
 ```
 
-Visible only to the data provider.
+可见性等级，仅数据提供者可见。
 
 **Since:** 20
 

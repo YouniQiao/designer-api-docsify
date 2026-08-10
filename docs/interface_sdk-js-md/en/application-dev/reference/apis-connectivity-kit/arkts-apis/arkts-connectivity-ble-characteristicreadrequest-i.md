@@ -10,6 +10,12 @@ Describes the parameters of the Gatt client's characteristic read request.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## characteristicUuid
 
 ```TypeScript
@@ -62,7 +68,7 @@ offset: int
 
 Indicates the byte offset of the start position for reading characteristic value
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -106,7 +112,7 @@ transId: int
 
 The Id of the read request
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

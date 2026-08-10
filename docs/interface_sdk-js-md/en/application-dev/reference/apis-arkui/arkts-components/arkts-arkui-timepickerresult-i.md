@@ -1,6 +1,6 @@
 # TimePickerResult
 
-Describes a time in 24-hour format.
+返回选中的时间结果，hour取值0-23，与展示制式无关。
 
 **Since:** 8
 
@@ -16,9 +16,9 @@ Describes a time in 24-hour format.
 hour: number
 ```
 
-Hour portion of the selected time.
+选中时间的时。
 
-Value range: [0-23]
+取值范围：[0-23]，与展示制式无关。
 
 **Type:** number
 
@@ -38,9 +38,9 @@ Value range: [0-23]
 minute: number
 ```
 
-Minute portion of the selected time.
+选中时间的分。
 
-Value range: [0-59]
+取值范围：[0-59]
 
 **Type:** number
 
@@ -60,9 +60,9 @@ Value range: [0-59]
 second: number
 ```
 
-Second portion of the selected time.
+选中时间的秒。
 
-Value range: [0-59]
+取值范围：[0-59]
 
 **Type:** number
 

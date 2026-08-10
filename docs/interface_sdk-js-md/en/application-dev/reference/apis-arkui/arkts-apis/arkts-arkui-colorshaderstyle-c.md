@@ -1,8 +1,8 @@
 # ColorShaderStyle
 
-Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+显示为纯色。ColorShaderStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md)。
 
-**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-component/textcommon-shaderstyle-c.md)
+**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle]\_\_\_JS
 constructor(color: ResourceColor)
 ```
 
-A constructor used to create a **ResourceColor** object.
+用于创建ColorShaderStyle对象的构造函数。
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ A constructor used to create a **ResourceColor** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for displaying a solid color. |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 显示为纯色效果。 |
 
 ## color
 
@@ -44,9 +44,9 @@ A constructor used to create a **ResourceColor** object.
 color: ResourceColor
 ```
 
-Options for displaying a solid color.
+显示为纯色效果。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 20
 

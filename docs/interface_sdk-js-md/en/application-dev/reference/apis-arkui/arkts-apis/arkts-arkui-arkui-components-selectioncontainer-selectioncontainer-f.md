@@ -1,12 +1,18 @@
 # SelectionContainer
 
+## Modules to Import
+
+```TypeScript
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+```
+
 ## SelectionContainer
 
 ```TypeScript
 export declare function SelectionContainer(content_?: CustomBuilder): SelectionContainerAttribute
 ```
 
-Defines SelectionContainer component.
+创建一个SelectionContainer组件。
 
 **Since:** 26.0.0
 
@@ -22,13 +28,13 @@ Defines SelectionContainer component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | container. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
 
 
 ## SelectionContainer
@@ -39,7 +45,7 @@ export declare function SelectionContainer(
 ): SelectionContainerAttribute
 ```
 
-Defines SelectionContainer component.It requires calling setSelectionContainerOptions at start of the component attribute set-up,and it requires calling applyAttributesFinish at the end of the component attribute set-up.
+创建一个SelectionContainer组件。需要在组件属性设置开始时调用setSelectionContainerOptions，并在组件属性设置结束时调用applyAttributesFinish。
 
 **Since:** 26.0.0
 
@@ -57,11 +63,11 @@ Defines SelectionContainer component.It requires calling setSelectionContainerOp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SelectionContainerAttribute&gt; | Yes | the callback to set up SelectionContainer's attributes. |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SelectionContainerAttribute&gt; | Yes | 设置SelectionContainer属性的回调。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 

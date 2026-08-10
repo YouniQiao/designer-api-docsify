@@ -34,11 +34,11 @@ abstract initialize(value?: FlexOptions): FlexAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Flex节点的选项。 |
+| value | [FlexOptions](../arkts-components/arkts-arkui-flexoptions-i.md) | 否 | Flex节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) |  |
 

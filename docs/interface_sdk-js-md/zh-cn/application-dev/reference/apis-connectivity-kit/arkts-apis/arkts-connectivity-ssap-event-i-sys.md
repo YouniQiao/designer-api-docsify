@@ -12,13 +12,19 @@ SSAP事件。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { ssap } from 'kits/@kit.ConnectivityKit';
+```
+
 ## eventUuid
 
 ```TypeScript
 eventUuid: string
 ```
 
-事件实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_不允许使用NearLink标准UUID。
+事件实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **类型：** string
 
@@ -62,7 +68,7 @@ parameter?: ArrayBuffer
 serviceUuid: string
 ```
 
-事件所属服务实例的UUID长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_禁止使用星闪标准服务UUID。
+事件所属服务实例的UUID长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;禁止使用星闪标准服务UUID。
 
 **类型：** string
 

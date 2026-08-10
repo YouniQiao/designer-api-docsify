@@ -6,7 +6,7 @@
 const APPEND: int
 ```
 
-File append write. The value is 0o2000.
+以追加方式打开，后续写将追加到文件末尾。值为 0o2000。
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ File append write. The value is 0o2000.
 const CREATE: int
 ```
 
-If not exist, create file. The value is 0o100.
+若文件不存在，则创建文件。值为 0o100。
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ If not exist, create file. The value is 0o100.
 const DIR: int
 ```
 
-File is Dir. The value is 0o200000.
+如果path不指向目录，则出错。值为 0o200000。
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ File is Dir. The value is 0o200000.
 const NOFOLLOW: int
 ```
 
-File is not symbolic link. The value is 0o400000.
+如果path指向符号链接，则出错。值为 0o400000。
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ File is not symbolic link. The value is 0o400000.
 const NONBLOCK: int
 ```
 
-File open in nonblocking mode. The value is 0o4000.
+如果path指向FIFO、块特殊文件或字符特殊文件，则本次打开及后续 IO 进行非阻塞操作。值为 0o4000。
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ File open in nonblocking mode. The value is 0o4000.
 const READ_ONLY: int
 ```
 
-Read only Permission. The value is 0o0.
+只读打开。值为 0o0。
 
 **Since:** 23
 
@@ -114,7 +114,7 @@ Read only Permission. The value is 0o0.
 const READ_WRITE: int
 ```
 
-Write and Read Permission. The value is 0o2.
+读写打开。值为 0o2。
 
 **Since:** 23
 
@@ -132,7 +132,7 @@ Write and Read Permission. The value is 0o2.
 const SYNC: int
 ```
 
-SYNC IO. The value is 0o4010000.
+以同步IO的方式打开文件。值为 0o4010000。
 
 **Since:** 23
 
@@ -150,7 +150,7 @@ SYNC IO. The value is 0o4010000.
 const TRUNC: int
 ```
 
-File truncate len 0. The value is 0o1000.
+如果文件存在且以只写或读写的方式打开，则将其长度裁剪为零。值为 0o1000
 
 **Since:** 23
 
@@ -168,7 +168,7 @@ File truncate len 0. The value is 0o1000.
 const UNCACHE: int
 ```
 
-UNCACHE IO. The value is 0o10000000000.
+读写文件不进行页缓存。值为 0o10000000000。
 
 **Since:** 26.0.0
 
@@ -186,7 +186,7 @@ UNCACHE IO. The value is 0o10000000000.
 const WRITE_ONLY: int
 ```
 
-Write only Permission. The value is 0o1.
+只写打开。值为 0o1。
 
 **Since:** 23
 

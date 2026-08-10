@@ -1,6 +1,6 @@
 # PopupButtonOptions
 
-Defines the popup button options
+PopupButtonOptions定义按钮的相关属性和事件。
 
 **Since:** 23
 
@@ -10,15 +10,23 @@ Defines the popup button options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+```
+
 ## action
 
 ```TypeScript
 action?: VoidCallback
 ```
 
-Set the button callback.
+设置按钮click回调。 
 
-**Type:** VoidCallback
+默认不执行任何操作。
+
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
 **Since:** 23
 
@@ -36,9 +44,11 @@ Set the button callback.
 fontColor?: ResourceColor
 ```
 
-Set the button font color.
+设置按钮文本字体颜色。
 
-**Type:** ResourceColor
+默认值：`\$r('sys.color.ohos_id_color_text_primary_activated')`
+
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Default:** $r('sys.color.ohos_id_color_text_primary_activated')
 
@@ -58,7 +68,13 @@ Set the button font color.
 fontSize?: number | string | Resource
 ```
 
-Set the button font size.
+设置按钮文本字体大小。 
+
+默认值：`\$r('sys.float.ohos_id_text_size_button2')`
+
+string类型可选值：可以转化为数字的字符串（如'10'）或带长度单位的字符串（如'10px'），不支持设置百分比字符串。
+
+设置值为异常值时取默认值。
 
 **Type:** number \| string \| Resource
 
@@ -80,9 +96,13 @@ Set the button font size.
 text?: ResourceStr
 ```
 
-Set the button display content.
+设置按钮内容。 
 
-**Type:** ResourceStr
+**ArkTS模式：** 该接口仅适用于ArkTS-Sta。 
+
+**ArkTS-Sta起始版本：** 23
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 

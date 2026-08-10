@@ -1,6 +1,6 @@
 # DynamicRangeMode
 
-Describes the dynamic range of the image to be displayed.
+期望展示的图像动态范围。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Describes the dynamic range of the image to be displayed.
 HIGH = 0
 ```
 
-Unrestricted dynamic range, which allows for the maximum brightening of an image.
+不受限动态范围，最大限度进行图片提亮。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Unrestricted dynamic range, which allows for the maximum brightening of an image
 CONSTRAINT = 1
 ```
 
-Restricted dynamic range, which brightens an image within certain constraints.
+受限动态范围，受限进行图片提亮。
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Restricted dynamic range, which brightens an image within certain constraints.
 STANDARD = 2
 ```
 
-Standard dynamic range, which does not brighten an image.
+标准动态范围，不进行图片提亮。
 
 **Since:** 12
 

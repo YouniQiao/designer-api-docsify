@@ -1,6 +1,6 @@
 # LazyWaterFlowLayoutAttribute
 
-Defines the lazy waterflow layout attribute.
+定义懒加载瀑布流布局属性。
 
 **Inheritance/Implementation:** LazyWaterFlowLayoutAttribute extends [CommonMethod<T>](CommonMethod<T>)
 
@@ -12,13 +12,19 @@ Defines the lazy waterflow layout attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## columnsGap
 
 ```TypeScript
 columnsGap(value: LengthMetrics | undefined): T
 ```
 
-The spacing between columns.
+列之间的间距。
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ The spacing between columns.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The spacing between columns. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | 列之间的间距。 &lt;br&gt;默认值：LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -50,7 +56,7 @@ The spacing between columns.
 footer(builder: CustomBuilder | undefined): T
 ```
 
-Sets the footer of the lazy waterflow layout.
+设置懒加载瀑布流布局的footer。
 
 **Since:** 26.0.0
 
@@ -68,7 +74,7 @@ Sets the footer of the lazy waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The footer builder function. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Passing undefined will remove the footer. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | footer生成器函数 &lt;br&gt;传递undefined将删除footer。 |
 
 **Return value:**
 
@@ -82,7 +88,7 @@ Sets the footer of the lazy waterflow layout.
 header(builder: CustomBuilder | undefined): T
 ```
 
-Sets the header of the lazy waterflow layout.
+设置懒加载瀑布流布局的header。
 
 **Since:** 26.0.0
 
@@ -100,7 +106,7 @@ Sets the header of the lazy waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The header builder function. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Passing undefined will remove the header. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | header生成器函数 &lt;br&gt;传递undefined将删除header。 |
 
 **Return value:**
 
@@ -114,7 +120,7 @@ Sets the header of the lazy waterflow layout.
 onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 ```
 
-Called when the first or last item displayed in the component changes.It is triggered once when the component is initialized.
+当组件中显示的第一个或最后一个项目更改时调用。它在组件初始化时会触发一次。
 
 **Since:** 26.0.0
 
@@ -132,7 +138,7 @@ Called when the first or last item displayed in the component changes.It is trig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Passing undefined will unregister the callback. |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | 回调函数，当可见区域中子组件的索引发生变化时触发。 &lt;br&gt;传递undefined将取消注册回调。 |
 
 **Return value:**
 
@@ -146,7 +152,7 @@ Called when the first or last item displayed in the component changes.It is trig
 rowsGap(value: LengthMetrics | undefined): T
 ```
 
-The spacing between rows.
+行之间的间距。
 
 **Since:** 26.0.0
 
@@ -164,7 +170,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The spacing between rows. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | 行之间的间距。 &lt;br&gt;默认值：LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -178,7 +184,7 @@ The spacing between rows.
 sticky(sticky: StickyStyle | undefined): T
 ```
 
-Sets the sticky style for header and footer.
+设置header和footer的吸顶吸底样式。
 
 **Since:** 26.0.0
 
@@ -196,7 +202,7 @@ Sets the sticky style for header and footer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | The sticky style for header and footer. |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | header和footer的吸顶吸底样式 |
 
 **Return value:**
 

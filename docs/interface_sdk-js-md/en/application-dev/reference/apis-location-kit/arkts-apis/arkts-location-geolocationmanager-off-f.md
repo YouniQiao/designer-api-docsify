@@ -1,12 +1,18 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## off('locationChange')
 
 ```TypeScript
 function off(type: 'locationChange', callback?: Callback<Location>): void
 ```
 
-Unsubscribe location changed.You are advised to use the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+Unsubscribe location changed.You are advised to use the {@link offLocationChange} instead.
 
 **Since:** 9
 
@@ -26,16 +32,19 @@ Unsubscribe location changed.You are advised to use the \_\_\_JSDOC\_LINK\_DESC\
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Location&gt; | No | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | No | Indicates the callback for reporting the location result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('locationChange')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('locationChange')} due to limited device capabilities. |
+| 3301200 | Failed to obtain the geographical location. Introduced in API 9 and will not be threw above API 17.<br>**Applicable version:** 9 - 17 |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. Introduced in API 9 and will not be threw above API 24.<br>**Applicable version:** 9 - 24 |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. Introduced in API 9 and will not be threw above API 17.<br>**Applicable version:** 9 - 17 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -84,18 +93,18 @@ Unsubscribe continuous location error changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationError' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LocationError&gt; | No | Indicates the callback for reporting the continuous location error. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocationError&gt; | No | Indicates the callback for reporting the continuous location error. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('locationError')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('locationError')} due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -133,17 +142,17 @@ Unsubscribe location switch changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationEnabledChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Indicates the callback for reporting the location switch status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Indicates the callback for reporting the location switch status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('locationEnabledChange')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('locationEnabledChange')} due to limited device capabilities. |
+| 3301000 | The location service is unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -183,19 +192,20 @@ Unsubscribe to cache GNSS locations update messages.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Location&gt;&gt; | No | Indicates the callback for reporting the cached gnss locations. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | No | Indicates the callback for reporting the cached gnss locations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('cachedGnssLocationsChange')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('cachedGnssLocationsChange')} due to limited device capabilities. |
+| 3301200 | Failed to obtain the geographical location.<br>**Applicable version:** 9 - 17 |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -239,19 +249,19 @@ Unsubscribe satellite status changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'satelliteStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SatelliteStatusInfo&gt; | No | Indicates the callback for reporting the satellite status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | No | Indicates the callback for reporting the satellite status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('satelliteStatusChange')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('satelliteStatusChange')} due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -291,19 +301,19 @@ Unsubscribe nmea message changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'nmeaMessage' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | No | Indicates the callback for reporting the nmea message. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback for reporting the nmea message. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('nmeaMessage')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('nmeaMessage')} due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -345,20 +355,21 @@ Remove a geofence and unsubscribe geofence status changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssFenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the Geofence configuration parameters. |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates which ability to start when the geofence event is triggered. |
+| request | [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md) | Yes | Indicates the Geofence configuration parameters. |
+| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('gnssFenceStatusChange')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3301600](../errorcode-geoLocationManager.md#3301600-geofence-operation-failed) | Failed to operate the geofence. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('gnssFenceStatusChange')} due to limited device capabilities. |
+| 3301600 | Failed to operate the geofence. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 9 - 24 |
+| 3301000 | The location service is unavailable. |
+| 3301100 | The location switch is off. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -414,18 +425,18 @@ Unregistering the callback function for listening to country code changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'countryCodeChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CountryCode&gt; | No | Indicates the callback for reporting country code changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CountryCode&gt; | No | Indicates the callback for reporting country code changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('countryCodeChange')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301500](../errorcode-geoLocationManager.md#3301500-area-information-query-failed) | Failed to query the area information. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('countryCodeChange')} due to limited device capabilities. |
+| 3301000 | The location service is unavailable. |
+| 3301500 | Failed to query the area information. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -466,18 +477,18 @@ Stop bluetooth scanning and unregister to listen to bluetooth scanning result ch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bluetoothScanResultChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BluetoothScanResult&gt; | No | Indicates the callback for reporting Bluetooth scan info. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothScanResult&gt; | No | Indicates the callback for reporting Bluetooth scan info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.off('bluetoothScanResultChange')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.off('bluetoothScanResultChange')} due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 3301000 | The location service is unavailable. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

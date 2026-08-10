@@ -1,19 +1,26 @@
 # usbSubmitTransfer
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## usbSubmitTransfer
 
 ```TypeScript
 function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Requests a USB data transfer.
-    **NOTE**  
-    
-    This API uses an asynchronous callback to return the result.  
-    
-    Before calling this API, call the  
-    [usbManager.claimInterface]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    API to claim a communication interface.
+提交异步传输请求。
+
+> **说明：**
+> 
+> 本接口为异步接口，调用后立刻返回，实际读写操作的结果以回调的方式返回。
+> 
+> 在调用该接口前需要通过
+> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)
+> claim通信接口。
 
 **Since:** 18
 
@@ -27,20 +34,20 @@ Requests a USB data transfer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transfer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | As a USB data transfer interface, it is required for a client to initiate a transfer request. |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | 作为通用USB数据传输接口，客户端需要填充这个对象中的参数，用以发起传输请求。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400007](../../apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) | Resource busy. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. The transfer has already been submitted.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. The interface is claimed by another program or driver. |
-| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
-| [14400009](../../apis-basic-services-kit/errorcode-usb.md#14400009-insufficient-memory) | Insufficient memory. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Memory allocation failed. |
-| [14400012](../../apis-basic-services-kit/errorcode-usb.md#14400012-io-error) | Transmission I/O error. |
+| 801 | Capability not supported. |
+| 14400009 | Insufficient memory. Possible causes:  &lt;br&gt;1. Memory allocation failed. |
+| 14400008 | No such device (it may have been disconnected). |
+| 14400012 | Transmission I/O error. |
+| 14400001 | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| 14400007 | Resource busy. Possible causes:  &lt;br&gt;1. The transfer has already been submitted.  &lt;br&gt;2. The interface is claimed by another program or driver. |
 
-**Example**
+## Examples
 
 The following sample code shows the basic process for calling the usbSubmitTransfer API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols to ensure correct data transfer and device compatibility.
 
@@ -54,15 +61,19 @@ function usbSubmitTransfer() {
     console.info(`device list is empty`);
     return;
   }
-  let device: usbManager.USBDevice = devicesList[0];
+  let device: usbManager.USBDevice = devicesList?.[0];
   usbManager.requestRight(device.name);
+  if (!usbManager.hasRight(device.name)) {
+    console.info(`request right fail`);
+    return;
+  }
   let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
   // Obtain the endpoint address.
-  let endpoint = device.configs[0].interfaces[0]?.endpoints.find((value) => {
+  let endpoint = device.configs?.[0]?.interfaces?.[0]?.endpoints.find((value) => {
     return value.direction === 0 && value.type === 2
   })
   // Obtain the first ID of the device.
-  let ret: number = usbManager.claimInterface(devicepipe, device.configs[0].interfaces[0], true);
+  let ret: number = usbManager.claimInterface(devicepipe, device.configs?.[0]?.interfaces?.[0], true);
 
   let transferParams: usbManager.UsbDataTransferParams = {
     devPipe: devicepipe,

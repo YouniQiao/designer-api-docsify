@@ -5,7 +5,7 @@ type WindowCloseCallback = (closingWindowTarget: WindowAnimationTarget,
     finishCallback: WindowAnimationFinishedCallback) => void
 ```
 
-Callback function on closing a window.
+关闭窗口时的回调。
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ Callback function on closing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| closingWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback.  |
+| closingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
 

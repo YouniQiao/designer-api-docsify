@@ -1,6 +1,6 @@
 # RemoteControlParams (System API)
 
-Interaction params for remote control
+远程控制交互参数
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ Interaction params for remote control
 challenge?: string
 ```
 
-Anti-replay challenge.
+防重放challenge。
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Anti-replay challenge.
 controlledDeviceName?: string
 ```
 
-Device name of controlled device.
+被控设备的设备名称。
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Device name of controlled device.
 controllerDeviceName?: string
 ```
 
-Device name of controller device.
+主控设备的设备名称。
 
 **Type:** string
 
@@ -78,7 +78,7 @@ Device name of controller device.
 remoteControlTicket?: string
 ```
 
-Remote control ticket for trusted devices.
+可信设备的远程控制凭证。
 
 **Type:** string
 
@@ -98,7 +98,7 @@ Remote control ticket for trusted devices.
 signVerifyMsg?: string
 ```
 
-Extra message required for signature verification.
+签名认证需要的额外信息。
 
 **Type:** string
 

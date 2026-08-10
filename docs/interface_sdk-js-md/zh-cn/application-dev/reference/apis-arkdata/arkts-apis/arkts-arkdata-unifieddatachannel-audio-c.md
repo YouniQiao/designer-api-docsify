@@ -1,6 +1,6 @@
 # Audio
 
-音频类型数据，是[File]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，用于描述音频文件。
+音频类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述音频文件。
 
 **继承/实现关系：** Audio extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
@@ -12,13 +12,19 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## audioUri
 
 ```TypeScript
 set audioUri(value: string)
 ```
 
-本地音频数据uri或网络音频uri，本地音频数据uri可通过[getUriFromPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_函数获取。
+本地音频数据uri或网络音频uri，本地音频数据uri可通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)函数获取。
 
 **类型：** string
 

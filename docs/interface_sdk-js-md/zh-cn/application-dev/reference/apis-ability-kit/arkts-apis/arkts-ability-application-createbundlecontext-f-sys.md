@@ -1,5 +1,11 @@
 # createBundleContext（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## createBundleContext
 
 ```TypeScript
@@ -7,12 +13,13 @@ export function createBundleContext(context: Context, bundleName: string): Promi
 ```
 
 根据入参Context创建相应应用的Context。使用Promise异步回调。
-    **说明：**  
-    
-    从API version 18开始，Context支持获取当前应用的进程名  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。  
-    createBundleContext创建的Context中的processName属性与入参Context中的processName属性一致，其他属性根据入参Context、bundleName和moduleName获得相应  
-    的属性值。
+
+> **说明：**
+> 
+> 从API version 18开始，Context支持获取当前应用的进程名
+> [processName](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context)。
+> createBundleContext创建的Context中的processName属性与入参Context中的processName属性一致，其他属性根据入参Context、bundleName和moduleName获得相应
+> 的属性值。
 
 **起始版本：** 12
 
@@ -32,38 +39,38 @@ export function createBundleContext(context: Context, bundleName: string): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示应用上下文。 |
+| context | [Context](arkts-ability-context-c-sys.md) | 是 | 表示应用上下文。 |
 | bundleName | string | 是 | 表示应用包名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise对象。返回创建的Context。 |
+| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; | Promise对象。返回创建的Context。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { UIAbility, application, common, Context } from '@kit.AbilityKit';
+import { UIAbility, application, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
   onCreate() {
     let moduleContext: common.Context;
     try {
-      application.createBundleContext(this.context, 'bundlename').then((data: common.Context) => {
+      application.createBundleContext(this.context, 'bundlename').then((data: common.Context)=>{
         moduleContext = data;
         console.info('createBundleContext success!');
-      }).catch((error: Error) => {
-        console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+      }).catch((error : BusinessError)=>{
+        console.error(`createBundleContext failed, error.code: ${error.code}, error.message: ${error.message}`);
       })
     } catch (error) {
       console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);

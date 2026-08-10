@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## appWindow
 
 ```TypeScript
@@ -40,9 +46,9 @@ appWindow?: window.Window
 windowMode?: WindowModeType
 ```
 
-用户认证界面的显示类型。DIALOG\_BOX适用于大多数认证场景（用户体验较好），FULLSCREEN适用于需要沉浸式认证体验或认证信息较多的场景。不传入时默认为WindowModeType.DIALOG\_BOX。
+用户认证界面的显示类型。DIALOG_BOX适用于大多数认证场景（用户体验较好），FULLSCREEN适用于需要沉浸式认证体验或认证信息较多的场景。不传入时默认为WindowModeType.DIALOG_BOX。
 
-**类型：** WindowModeType
+**类型：** [WindowModeType](arkts-userauthentication-userauth-windowmodetype-e-sys.md)
 
 **默认值：** WindowModeType.DIALOG_BOX
 

@@ -1,6 +1,6 @@
 # AudioRendererInfo
 
-Describes audio renderer information.
+音频渲染器信息。
 
 **Since:** 8
 
@@ -10,15 +10,25 @@ Describes audio renderer information.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## content
 
 ```TypeScript
 content?: ContentType
 ```
 
-Audio content type.
+音频内容类型。
 
-**Type:** ContentType
+API version 8、9为必填参数，从API version 10开始为可选参数，默认值为CONTENT_TYPE_UNKNOWN。
+
+从API version 8开始支持，从API version 10开始废弃，建议使用usage替代。
+
+**Type:** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
 
 **Since:** 8
 
@@ -38,11 +48,11 @@ Audio content type.
 rendererFlags: int
 ```
 
-Flags that control the renderer behavior.
+播放流行为标志。
 
-Set this parameter to **0**.
+设置为0即可。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -60,9 +70,9 @@ Set this parameter to **0**.
 usage: StreamUsage
 ```
 
-Audio stream usage.
+音频流使用类型。
 
-**Type:** StreamUsage
+**Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **Since:** 8
 
@@ -80,9 +90,9 @@ Audio stream usage.
 volumeMode?: AudioVolumeMode
 ```
 
-Audio volume mode config. If volumeMode is set to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, this audio renderer will be affected by app volume percentage set by \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_
+音频的音量模式。默认值为SYSTEM_GLOBAL。
 
-**Type:** AudioVolumeMode
+**Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
 **Since:** 19
 

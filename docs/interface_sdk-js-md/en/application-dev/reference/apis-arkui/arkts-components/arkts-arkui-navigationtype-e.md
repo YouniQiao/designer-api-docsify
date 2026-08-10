@@ -1,6 +1,6 @@
 # NavigationType
 
-Navigation type.
+路由的跳转方式。
 
 **Since:** 7
 
@@ -8,7 +8,7 @@ Navigation type.
 
 **Deprecated since:** 13
 
-**Substitutes:** [Navigation](../arkts-apis/arkts-arkui-component/navigation-navigation-f.md#navigation)
+**Substitutes:** [Navigation](../arkts-apis/arkts-arkui-navigation-navigation-f.md/arkts-arkui-navigation-navigation-f.md#navigation)
 
 <!--Device-unnamed-declare enum NavigationType--><!--Device-unnamed-declare enum NavigationType-End-->
 
@@ -20,12 +20,9 @@ Navigation type.
 Push
 ```
 
-Navigates to the specified page in the application.
+跳转到应用内的指定页面。
 
-**NOTE**
-
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[pushPath]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+**说明：**<br/
 
 **Since:** 7
 
@@ -33,7 +30,7 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack#pushPath](../arkts-apis/arkts-arkui-component/navigation-navpathstack-c.md#pushpath)
+**Substitutes:** [NavPathStack#pushPath](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#pushpath)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,20 +44,13 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 Back
 ```
 
-Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no page is specified, the previous page is returned to.
-
-**NOTE**
-
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[pop]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
-
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack#pop](../arkts-apis/arkts-arkui-component/navigation-navpathstack-c.md#pop)
+**Substitutes:** [NavPathStack#pop](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#pop)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,20 +64,13 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 Replace
 ```
 
-Replaces the current page with another one in the application and destroys the current page.
-
-**NOTE**
-
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[replacePath]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
-
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack.replacePath](../arkts-apis/arkts-arkui-component/navigation-navpathstack-c.md#replacepath)
+**Substitutes:** [NavPathStack.replacePath](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#replacepath)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

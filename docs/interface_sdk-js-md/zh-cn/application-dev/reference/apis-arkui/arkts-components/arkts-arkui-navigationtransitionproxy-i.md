@@ -84,7 +84,7 @@ from: NavContentInfo
 
 退场页面信息。
 
-**类型：** NavContentInfo
+**类型：** [NavContentInfo](arkts-arkui-navcontentinfo-i.md)
 
 **起始版本：** 11
 
@@ -134,7 +134,7 @@ to: NavContentInfo
 
 进场页面信息。
 
-**类型：** NavContentInfo
+**类型：** [NavContentInfo](arkts-arkui-navcontentinfo-i.md)
 
 **起始版本：** 11
 

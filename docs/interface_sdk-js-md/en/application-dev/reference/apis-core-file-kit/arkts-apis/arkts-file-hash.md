@@ -1,6 +1,6 @@
 # @ohos.file.hash
 
-The **FileHash** module implements hash processing on files.
+该模块提供文件哈希处理能力，对文件内容进行哈希处理。
 
 **Since:** 9
 
@@ -10,19 +10,25 @@ The **FileHash** module implements hash processing on files.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { hash } from 'kits/@kit.CoreFileKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [createHash](arkts-corefile-hash-createhash-f.md#createhash) | Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm. |
-| [hash](arkts-corefile-hash-f.md#hash) | Calculates a hash value for a file. This API uses a promise to return the result. |
-| [hash](arkts-corefile-hash-f.md#hash-1) | Calculates a hash value for a file. This API uses an asynchronous callback to return the result. |
+| [createHash](arkts-corefile-hash-createhash-f.md#createhash) | 创建并返回 HashStream 对象，该对象可用于使用给定的 algorithm 生成哈希摘要。 |
+| [hash](arkts-corefile-hash-f.md#hash) | 计算文件的哈希值，使用Promise异步回调。 |
+| [hash](arkts-corefile-hash-f.md#hash-1) | 计算文件的哈希值，使用callback异步回调。 |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) | The **HashStream** class is a utility for creating a message digest of data. You can use  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to create a  **HashStream** instance. |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) | HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md#createhash) 接口获得。 |
 

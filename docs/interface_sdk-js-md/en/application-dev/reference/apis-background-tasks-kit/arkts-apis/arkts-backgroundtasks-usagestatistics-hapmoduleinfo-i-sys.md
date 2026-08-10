@@ -1,5 +1,7 @@
 # HapModuleInfo (System API)
 
+FA模型的使用信息属性集合。
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -10,15 +12,21 @@
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityDescriptionId
 
 ```TypeScript
 abilityDescriptionId?: long
 ```
 
-The description id of main ability.
+FA的MainAbility descriptionId。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -36,9 +44,9 @@ The description id of main ability.
 abilityIconId?: long
 ```
 
-The icon id of main ability.
+FA的MainAbility iconId。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -56,9 +64,9 @@ The icon id of main ability.
 abilityLableId?: long
 ```
 
-The ability id of main ability.
+FA的MainAbility labelId。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -76,7 +84,7 @@ The ability id of main ability.
 abilityName?: string
 ```
 
-The main ability name of module.
+FA的MainAbility名。
 
 **Type:** string
 
@@ -96,9 +104,9 @@ The main ability name of module.
 appLabelId?: long
 ```
 
-The label id of application.
+FA的应用labelId。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -116,7 +124,7 @@ The label id of application.
 bundleName: string
 ```
 
-The bundle name.
+应用名称。
 
 **Type:** string
 
@@ -136,9 +144,9 @@ The bundle name.
 descriptionId?: long
 ```
 
-The description id of application.
+FA所属的应用descriptionId。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -156,7 +164,7 @@ The description id of application.
 deviceId?: string
 ```
 
-The device id of module.
+设备Id。
 
 **Type:** string
 
@@ -176,7 +184,7 @@ The device id of module.
 formRecords: Array<HapFormInfo>
 ```
 
-The form usage record list of current module.
+FA中卡片的使用记录。
 
 **Type:** Array&lt;HapFormInfo&gt;
 
@@ -196,9 +204,9 @@ The form usage record list of current module.
 labelId?: long
 ```
 
-The label id of module.
+FA所属module的labelId。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -216,9 +224,9 @@ The label id of module.
 lastModuleUsedTime: long
 ```
 
-The last time when the module was accessed, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+FA的上一次使用时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -236,9 +244,9 @@ The last time when the module was accessed, in milliseconds.\_\_\_HTML\_TAG\_DES
 launchedCount: int
 ```
 
-The launch count of module.
+FA的启动次数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -256,7 +264,7 @@ The launch count of module.
 moduleName: string
 ```
 
-The module name.
+FA所属module名。
 
 **Type:** string
 

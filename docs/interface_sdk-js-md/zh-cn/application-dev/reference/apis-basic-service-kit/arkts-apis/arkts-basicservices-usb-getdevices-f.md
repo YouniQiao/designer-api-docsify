@@ -1,5 +1,11 @@
 # getDevices
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getDevices
 
 ```TypeScript
@@ -26,7 +32,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 | --- | --- |
 | Array&lt;Readonly&lt;USBDevice&gt;&gt; | 设备信息列表。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let devicesList = usb.getDevices();

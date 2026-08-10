@@ -4,7 +4,7 @@
 export type AbilityFormInfo = _PackInfo.AbilityFormInfo
 ```
 
-Defines the widget information.
+卡片信息。
 
 **Since:** 9
 

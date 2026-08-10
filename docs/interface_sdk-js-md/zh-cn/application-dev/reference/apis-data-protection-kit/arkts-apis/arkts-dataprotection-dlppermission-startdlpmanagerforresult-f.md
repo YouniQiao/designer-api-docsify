@@ -1,17 +1,24 @@
 # startDLPManagerForResult
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## startDLPManagerForResult
 
 ```TypeScript
 function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>
 ```
 
-在当前[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_界面以无边框形式打开DLP权限管理应用。使用Promise异步回调。
+在当前[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md)界面以无边框形式打开DLP权限管理应用。使用Promise异步回调。
 
 该接口用于拉起DLP权限管理应用配置文件权限，并将用户操作结果返回给调用方。
-    **说明：**  
-    
-    该接口仅支持域账号调用。
+
+> **说明：**
+> 
+> 该接口仅支持域账号调用。
 
 **起始版本：** 11
 
@@ -27,8 +34,8 @@ function startDLPManagerForResult(context: common.UIAbilityContext, want: Want):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext | 是 | 当前窗口 [UIAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 上下文。 |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 请求对象，必须包含uri和displayName字段。 |
+| context | common.UIAbilityContext | 是 | 当前窗口 [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md) 上下文。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 请求对象，必须包含uri和displayName字段。 |
 
 **返回值：**
 
@@ -40,13 +47,13 @@ function startDLPManagerForResult(context: common.UIAbilityContext, want: Want):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
-| [19100016](../errorcode-dlp.md#19100016-want参数中没有uri) | The uri field is missing in the want parameter. |
-| [19100017](../errorcode-dlp.md#19100017-want参数中parameters内没有displayname) | The displayName field is missing in the want parameter. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100017 | The displayName field is missing in the want parameter. |
+| 19100016 | The uri field is missing in the want parameter. |
+| 19100011 | The system ability works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

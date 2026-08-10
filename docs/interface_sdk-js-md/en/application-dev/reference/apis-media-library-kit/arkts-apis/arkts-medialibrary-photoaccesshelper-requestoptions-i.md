@@ -10,17 +10,23 @@ Represents request options.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## compatibleMode
 
 ```TypeScript
 compatibleMode?: CompatibleMode
 ```
 
-HDR video transcoding policy, which can be **FAST\_ORIGINAL\_FORMAT\_MODE** (maintaining the original HDR format) or  
-**COMPATIBLE\_FORMAT\_MODE** (converting HDR content to SDR format). The default value is  
-**FAST\_ORIGINAL\_FORMAT\_MODE**.
+HDR video transcoding policy, which can be **FAST_ORIGINAL_FORMAT_MODE** (maintaining the original HDR format) or  
+**COMPATIBLE_FORMAT_MODE** (converting HDR content to SDR format). The default value is   
+**FAST_ORIGINAL_FORMAT_MODE**.
 
-**Type:** CompatibleMode
+**Type:** [CompatibleMode](arkts-medialibrary-photoaccesshelper-compatiblemode-e.md)
 
 **Since:** 15
 
@@ -36,9 +42,9 @@ HDR video transcoding policy, which can be **FAST\_ORIGINAL\_FORMAT\_MODE** (mai
 deliveryMode: DeliveryMode
 ```
 
-Delivery mode of the requested asset. The value can be **FAST\_MODE**, **HIGH\_QUALITY\_MODE**, or **BALANCE\_MODE**.
+Delivery mode of the requested asset. The value can be **FAST_MODE**, **HIGH_QUALITY_MODE**, or **BALANCE_MODE**.
 
-**Type:** DeliveryMode
+**Type:** [DeliveryMode](arkts-medialibrary-photoaccesshelper-deliverymode-e.md)
 
 **Since:** 11
 
@@ -56,7 +62,7 @@ mediaAssetProgressHandler?: MediaAssetProgressHandler
 
 Callback used to return the HDR-to-SDR conversion progress.
 
-**Type:** MediaAssetProgressHandler
+**Type:** [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md)
 
 **Since:** 15
 

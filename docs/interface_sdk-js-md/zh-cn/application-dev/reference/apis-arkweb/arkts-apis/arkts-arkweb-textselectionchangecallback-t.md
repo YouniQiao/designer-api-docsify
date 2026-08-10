@@ -18,5 +18,5 @@ Callback with the selected text after the text selection content changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionText | string | 是 | the selected text after the text selection content changes.  |
+| selectionText | string | 是 | the selected text after the text selection content changes. |
 

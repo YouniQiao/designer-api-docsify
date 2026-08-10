@@ -1,7 +1,7 @@
 # MetadataCatBodyObject
 
-相机检测到的猫的身体元数据信息，继承自[MetadataObject]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。[CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_相机信息中的数据来源，通过metadataOutput.  
-[on('metadataObjectsAvailable')]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口获取。
+相机检测到的猫的身体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.  
+[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>))接口获取。
 
 **继承/实现关系：** MetadataCatBodyObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 
@@ -14,4 +14,10 @@
 <!--Device-camera-interface MetadataCatBodyObject extends MetadataObject--><!--Device-camera-interface MetadataCatBodyObject extends MetadataObject-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 

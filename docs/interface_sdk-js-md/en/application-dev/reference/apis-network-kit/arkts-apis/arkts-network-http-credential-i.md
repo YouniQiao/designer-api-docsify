@@ -10,6 +10,12 @@ HTTP credential. Some server or proxy server need this.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## password
 
 ```TypeScript

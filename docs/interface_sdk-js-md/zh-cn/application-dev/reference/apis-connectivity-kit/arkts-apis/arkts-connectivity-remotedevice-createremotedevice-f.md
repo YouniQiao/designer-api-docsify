@@ -1,5 +1,11 @@
 # createRemoteDevice
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## createRemoteDevice
 
 ```TypeScript
@@ -22,18 +28,18 @@ function createRemoteDevice(address: string): RemoteDevice
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | string | 是 | 设备地址。例如，“11:22:33:AA:BB:FF” \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。 |
+| address | string | 是 | 设备地址。例如，“11:22:33:AA:BB:FF” &lt;br&gt;长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回近链路远程设备实例。 |
+| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | 返回近链路远程设备实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
-| [36100041](../errorcode-nearlink-service.md#36100041-无效地址) | Invalid address. |
+| 801 | Capability not supported because the chip does not support it. |
+| 36100041 | Invalid address. |
 

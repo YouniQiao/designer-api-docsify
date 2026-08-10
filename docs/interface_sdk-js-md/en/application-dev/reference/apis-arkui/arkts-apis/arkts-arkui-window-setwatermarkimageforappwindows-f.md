@@ -1,13 +1,19 @@
 # setWatermarkImageForAppWindows
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## setWatermarkImageForAppWindows
 
 ```TypeScript
 function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>
 ```
 
-Sets a watermark image for windows in the current application process. This API uses a promise to return the result. This API must be called after  
-[loadContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_takes effect.
+设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 21
 
@@ -21,23 +27,23 @@ Sets a watermark image for windows in the current application process. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap \| undefined | Yes | If this parameter is set to **image.PixelMap**, a watermark image is set. If this parameter is set to **undefined**, the watermark is removed.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the width and height of the image both surpass the window and screen sizes, error code 1300016 is returned.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the width or height of the image goes beyond the window dimensions, the excess part is trimmed.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the width or height of the image falls short of the window dimensions, the shortfall is automatically repeated to complete the image. |
+| pixelMap | image.PixelMap \| undefined | Yes | 传入`image.PixelMap`表示设置水印图片，传入`undefined`表示取消水印显示。&lt;br/&gt;如果图片尺寸的宽和高 同时超过窗口尺寸以及屏幕尺寸的宽和高，返回错误码1300016。&lt;br/&gt;如果图片尺寸的宽或高超过窗口尺寸的宽或高，超出窗口宽或高的部分会被裁剪。&lt;br/&gt;如果图片尺寸的宽或高小于窗口尺寸的宽或高，小于的部分会自动重复补充 。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setWatermarkImageForAppWindows can not work correctly due to limited device capabilities. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function setWatermarkImageForAppWindows can not work correctly due to limited device capabilities. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image } from "@kit.ImageKit";

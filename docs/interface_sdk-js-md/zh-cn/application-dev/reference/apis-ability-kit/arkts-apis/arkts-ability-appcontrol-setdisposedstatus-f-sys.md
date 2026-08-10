@@ -1,5 +1,11 @@
 # setDisposedStatus（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from 'kits/@kit.AbilityKit';
+```
+
 ## setDisposedStatus
 
 ```TypeScript
@@ -24,23 +30,21 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appId | string | 是 | 需要设置处置的应用的appId。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| disposedWant | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 对应用的处置意图。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当设置处置状态成功，err为null；否则为错误对象。 |
+| appId | string | 是 | 需要设置处置的应用的appId。&lt;br&gt; appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见 [获取应用的appId](../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appid)。 |
+| disposedWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 对应用的处置意图。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置处置状态成功，err为null；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700005 | The specified app ID is empty string. |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';
@@ -52,33 +56,6 @@ let want: Want = { bundleName: 'com.example.myapplication' };
 
 try {
   appControl.setDisposedStatus(appId, want, (error: BusinessError, data) => {
-    if (error) {
-      let message = (error as BusinessError).message;
-      console.error('setDisposedStatus failed ' + message);
-      return;
-    }
-    console.info('setDisposedStatus success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-// 开发者需根据实际工程更新appId和want。
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = { bundleName: 'com.example.myapplication' };
-
-try {
-  appControl.setDisposedStatus(appId, want, (error: BusinessError | null, data) => {
     if (error) {
       let message = (error as BusinessError).message;
       console.error('setDisposedStatus failed ' + message);
@@ -117,8 +94,8 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appId | string | 是 | 需要设置处置状态的应用的appId。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| disposedWant | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 对应用的处置意图。 |
+| appId | string | 是 | 需要设置处置状态的应用的appId。&lt;br&gt; appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见 [获取应用的appId](../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appid)。 |
+| disposedWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 对应用的处置意图。 |
 
 **返回值：**
 
@@ -130,15 +107,13 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700005 | The specified app ID is empty string. |
 
-**示例：**
-
-ArkTS-Dyn示例:
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -153,35 +128,9 @@ try {
     .then(() => {
       console.info('setDisposedStatus success');
     }).catch((error: BusinessError) => {
-      let message = (error as BusinessError).message;
-      console.error('setDisposedStatus failed ' + message);
+    let message = (error as BusinessError).message;
+    console.error('setDisposedStatus failed ' + message);
   });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
-// 开发者需根据实际工程更新appId和want。
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = {bundleName: 'com.example.myapplication'};
-
-try {
-  appControl.setDisposedStatus(appId, want)
-    .then(() => {
-      console.info('setDisposedStatus success');
-    }).catch((error: Error) => {
-      let message = (error as BusinessError).message;
-      console.error('setDisposedStatus failed ' + message);
-    });
 } catch (error) {
   let message = (error as BusinessError).message;
   console.error('setDisposedStatus failed ' + message);

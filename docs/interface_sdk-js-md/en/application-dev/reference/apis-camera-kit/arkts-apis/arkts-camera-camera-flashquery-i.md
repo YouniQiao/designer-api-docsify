@@ -1,12 +1,10 @@
 # FlashQuery
 
-FlashQuery provides APIs to query the flash status and mode of a camera device.
-    **NOTE**  
-    
-    - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
-    preserved the initial version information of inner elements. As a result, you might see outer element's @since  
-    version number being higher than that of the inner elements. However, this discrepancy does not affect the  
-    functionality of the interface.
+提供了查询设备的闪光灯状态和模式的能力。
+
+> **说明：**
+> 
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **Since:** 12
 
@@ -16,13 +14,19 @@ FlashQuery provides APIs to query the flash status and mode of a camera device.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## hasFlash
 
 ```TypeScript
 hasFlash(): boolean
 ```
 
-Checks whether the camera device has flash.
+检测是否有闪光灯，返回是否支持闪光灯。
 
 **Since:** 11
 
@@ -38,13 +42,13 @@ Checks whether the camera device has flash.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the camera has flash. **true** if it has, **false** otherwise. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **false** is returned, [isFlashModeSupported]{ |
+| boolean | 表示设备是否支持闪光灯。true表示支持闪光灯，false表示不支持闪光灯。 &lt;br&gt;如果返回false，则[isFlashModeSupported]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
 
 ## isFlashModeSupported
 
@@ -52,7 +56,7 @@ Checks whether the camera device has flash.
 isFlashModeSupported(flashMode: FlashMode): boolean
 ```
 
-Checks whether a flash mode is supported.
+检测闪光灯模式是否支持。
 
 **Since:** 11
 
@@ -68,17 +72,17 @@ Checks whether a flash mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flashMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Flash mode. If the input parameter is null or undefined, it is treated as 0 and the flash is turned off. |
+| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | Yes | 指定闪光灯模式。传参为null或者undefined，作为0处理，闪光灯关闭。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| boolean | 检测表示支持该闪光灯模式。true表示支持，false表示不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
 

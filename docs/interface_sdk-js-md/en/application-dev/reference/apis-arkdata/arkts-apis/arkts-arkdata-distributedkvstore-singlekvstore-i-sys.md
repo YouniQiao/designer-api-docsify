@@ -1,7 +1,9 @@
 # SingleKVStore
 
-Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events.Before calling any method in **SingleKVStore**, you must use  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain a **SingleKVStore** instance.
+SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。
+
+在调用SingleKVStore的方法前，需要先通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个SingleKVStore实例。
 
 **Since:** 9
 
@@ -11,17 +13,21 @@ Provides APIs for data management in a single KV store, such as adding data, del
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## delete
 
 ```TypeScript
 delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>): void
 ```
 
-Deletes the key-value pairs based on the dataSharePredicates.
+从数据库中删除符合predicates条件的键值对，使用callback异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,18 +41,16 @@ Deletes the key-value pairs based on the dataSharePredicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the dataSharePredicates. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of delete. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | 指示筛选条件，不允许为null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## delete
 
@@ -54,11 +58,9 @@ Deletes the key-value pairs based on the dataSharePredicates.
 delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>
 ```
 
-Deletes the key-value pairs based on the dataSharePredicates.
+从数据库中删除符合predicates条件的键值对，使用Promise异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,23 +74,21 @@ Deletes the key-value pairs based on the dataSharePredicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the dataSharePredicates. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | 指示筛选条件，不允许为null。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## getResultSet
 
@@ -96,11 +96,9 @@ Deletes the key-value pairs based on the dataSharePredicates.
 getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains the KVStoreResultSet object matching the specified predicate object.
+获取与指定Predicates对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，需要及时调用closeResultSet方法关闭结果集以释放资源。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,18 +112,16 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the datasharePredicates. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KVStoreResultSet&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the specified {@code dataSharePredicates.DataSharePredicates} object. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | 指示筛选条件，不允许为null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## getResultSet
 
@@ -133,11 +129,9 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>
 ```
 
-Obtains the KVStoreResultSet object matching the specified predicate object.
+获取与指定Predicates对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，需要及时调用closeResultSet方法关闭结果集以释放资源。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,23 +145,21 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the datasharePredicates. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | 指示筛选条件，不允许为null。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | {KVStoreResultSet}: the { |
+| Promise&lt;KVStoreResultSet&gt; | Promise对象。返回KVStoreResultSet对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## putBatch
 
@@ -175,11 +167,9 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 ```
 
-Writes values of ValuesBucket type into the {@code SingleKVStore} database.
+批量写入键值对数据，每个ValuesBucket对象包含key和value字段，使用callback异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -193,18 +183,16 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | Yes | Indicates the ValuesBucket array to be inserted. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of putBatch. |
+| value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | 表示要插入的数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。成功时err为undefined，失败时err为错误对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## putBatch
 
@@ -212,11 +200,9 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 putBatch(value: Array<ValuesBucket>): Promise<void>
 ```
 
-Writes values of ValuesBucket type into the {@code SingleKVStore} database.
+批量写入键值对数据，每个ValuesBucket对象包含key和value字段，使用Promise异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,23 +216,21 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | Yes | Indicates the ValuesBucket array to be inserted. |
+| value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | 表示要插入的数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100003 | Database corrupted. [ |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## putValuesBuckets
 
@@ -254,11 +238,9 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 putValuesBuckets(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 ```
 
-Writes values of ValuesBucket type into the {@code SingleKVStore} database.
+将值写入SingleKVStore数据库，使用callback异步回调。
 
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,17 +254,15 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | Yes | Indicates the ValuesBucket array to be inserted. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | the callback of putBatch. |
+| value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | 表示要插入的数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 15100005 | Database or result set already closed. [ |
+| 202 | Permission verification failed, application which is not a system application uses system API. [ |
 
 ## putValuesBuckets
 
@@ -290,11 +270,9 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 putValuesBuckets(value: Array<ValuesBucket>): Promise<void>
 ```
 
-Writes values of ValuesBucket type into the {@code SingleKVStore} database.
+将valuesbucket类型的值写入SingleKVStore数据库，使用Promise异步回调。
 
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -308,20 +286,18 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | Yes | Indicates the ValuesBucket array to be inserted. |
+| value | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | 表示要插入的数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| 15100005 | Database or result set already closed. [ |
+| 202 | Permission verification failed, application which is not a system application uses system API. [ |
 

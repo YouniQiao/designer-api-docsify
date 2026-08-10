@@ -18,7 +18,7 @@ action: CrownAction
 
 表冠动作。
 
-**类型：** CrownAction
+**类型：** [CrownAction](../arkts-apis/arkts-arkui-crownaction-e.md)
 
 **起始版本：** 18
 
@@ -64,7 +64,7 @@ degree: number
 
 相对旋转角度。
 
-单位：deg
+单位：deg 
 
 取值范围:[-360, 360]。
 
@@ -88,9 +88,9 @@ degree: number
 stopPropagation: Callback<void>
 ```
 
-阻止\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+阻止[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 18
 

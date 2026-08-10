@@ -1,6 +1,6 @@
 # UnitInfo
 
-Defines the measurement unit information.
+度量衡单位信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the measurement unit information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## measureSystem
 
 ```TypeScript
 measureSystem: string
 ```
 
-Measurement system. The value can be "SI", "US", or "UK".
+单位的度量体系，取值包括：'SI', 'US', 'UK'。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Measurement system. The value can be "SI", "US", or "UK".
 unit: string
 ```
 
-Name of the measurement unit, for example, "meter", "inch", or "cup".
+单位的名称，如：'meter', 'inch', 'cup'等。
 
 **Type:** string
 

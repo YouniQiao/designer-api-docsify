@@ -16,15 +16,15 @@
 acceleration?: AccelerationOptions<ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER>
 ```
 
-粒子加速度配置。
+粒子加速度配置。 
 
-**说明**：
+**说明：**
 
 speed表示加速度大小，angle表示加速度方向（单位为角度）。
 
 默认值：{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }
 
-**类型：** AccelerationOptions&lt;ACC\_SPEED\_UPDATER, ACC\_ANGLE\_UPDATER&gt;
+**类型：** [AccelerationOptions](../arkts-apis/arkts-arkui-particle-accelerationoptions-i.md)&lt;ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER&gt;
 
 **默认值：** {speed:{range:[0,0]};angle:{range:[0,0]}}
 
@@ -48,11 +48,11 @@ color?: ParticleColorPropertyOptions<COLOR_UPDATER>
 
 粒子颜色配置。
 
-**说明**：
+**说明：**
 
 默认值：{ range:[Color.White,Color.White] } 。图片粒子不支持设置颜色。
 
-**类型：** ParticleColorPropertyOptions&lt;COLOR\_UPDATER&gt;
+**类型：** [ParticleColorPropertyOptions](arkts-arkui-particlecolorpropertyoptions-i.md)&lt;COLOR_UPDATER&gt;
 
 **默认值：** {range:['#FFFFFF','#FFFFFF']}
 
@@ -76,7 +76,7 @@ emitter: EmitterOptions<PARTICLE>
 
 粒子发射器配置。
 
-**类型：** EmitterOptions&lt;PARTICLE&gt;
+**类型：** [EmitterOptions](arkts-arkui-emitteroptions-i.md)&lt;PARTICLE&gt;
 
 **起始版本：** 10
 
@@ -100,7 +100,7 @@ opacity?: ParticlePropertyOptions<number, OPACITY_UPDATER>
 
 默认值：{ range:[1.0,1.0] }
 
-**类型：** ParticlePropertyOptions&lt;number, OPACITY\_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, OPACITY_UPDATER&gt;
 
 **默认值：** {range:[1.0,1.0]}
 
@@ -126,7 +126,7 @@ scale?: ParticlePropertyOptions<number, SCALE_UPDATER>
 
 默认值：{ range:[1.0,1.0] }
 
-**类型：** ParticlePropertyOptions&lt;number, SCALE\_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, SCALE_UPDATER&gt;
 
 **默认值：** {range:[1.0,1.0]}
 
@@ -148,13 +148,13 @@ scale?: ParticlePropertyOptions<number, SCALE_UPDATER>
 spin?: ParticlePropertyOptions<number, SPIN_UPDATER>
 ```
 
-粒子自旋角度配置。
+粒子自旋角度配置。 
 
 默认值：{range:[0.0,0.0]}
 
 方向：正数表示顺时针旋转，负数表示逆时针旋转。
 
-**类型：** ParticlePropertyOptions&lt;number, SPIN\_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, SPIN_UPDATER&gt;
 
 **默认值：** {range:[0,0]}
 
@@ -178,13 +178,13 @@ velocity?: VelocityOptions
 
 粒子速度配置。
 
-**说明**：
+**说明：**
 
 speed表示速度大小。angle表示速度的方向（单位为角度），以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
 
 默认值：{ speed:[0.0,0.0],angle:[0.0,0.0] }
 
-**类型：** VelocityOptions
+**类型：** [VelocityOptions](../arkts-apis/arkts-arkui-particle-velocityoptions-i.md)
 
 **默认值：** {speed:[0,0];angle:[0,0]}
 

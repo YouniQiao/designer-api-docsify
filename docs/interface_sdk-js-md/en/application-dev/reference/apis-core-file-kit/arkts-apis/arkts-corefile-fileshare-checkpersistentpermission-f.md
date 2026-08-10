@@ -1,12 +1,18 @@
 # checkPersistentPermission
 
+## Modules to Import
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## checkPersistentPermission
 
 ```TypeScript
 function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>
 ```
 
-Check persistent permissions for the URI.
+校验所选择的多个文件或目录URI是否已持久化授权，使用Promise异步回调。
 
 **Since:** 17
 
@@ -20,23 +26,23 @@ Check persistent permissions for the URI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information to grant permission on URIs. |
+| policies | Array&lt;PolicyInfo&gt; | Yes | 需要校验持久化授权状态的URI策略信息数组。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; | Returns the persistent state of uri permissions. |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Promise对象，返回URI权限的持久化状态数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| 801 | Capability not supported. |
 | 13900042 | Out of memory |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

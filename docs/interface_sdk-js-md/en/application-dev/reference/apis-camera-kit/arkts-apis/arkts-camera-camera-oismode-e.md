@@ -1,6 +1,6 @@
 # OISMode
 
-Enumerates the optical image stabilization (OIS) mode.
+枚举，光学防抖（Optical Image Stabilization）模式。
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Enumerates the optical image stabilization (OIS) mode.
 OFF = 0
 ```
 
-OIS is disabled.
+光学防抖关闭。
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ OIS is disabled.
 AUTO = 1
 ```
 
-OIS is automatically controlled.
+光学防抖自动控制。
 
 **Since:** 24
 
@@ -56,7 +56,7 @@ OIS is automatically controlled.
 CUSTOM = 2
 ```
 
-OIS is controlled by the application.
+光学防抖由应用控制。
 
 **Since:** 24
 

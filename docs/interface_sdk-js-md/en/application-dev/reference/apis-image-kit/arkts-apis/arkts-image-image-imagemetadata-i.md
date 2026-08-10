@@ -1,6 +1,6 @@
 # ImageMetadata
 
-Metadata set of an image.
+图像的元数据集。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Metadata set of an image.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## avisMetadata
 
 ```TypeScript
 avisMetadata?: AvisMetadata
 ```
 
-Avis metadata.
+AVIS图像元数据。
 
-**Type:** AvisMetadata
+**Type:** [AvisMetadata](arkts-image-image-avismetadata-c.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Avis metadata.
 dngMetadata?: DngMetadata
 ```
 
-Dng metadata.
+DNG图像元数据。
 
-**Type:** DngMetadata
+**Type:** [DngMetadata](arkts-image-image-dngmetadata-c.md)
 
 **Since:** 24
 
@@ -56,9 +62,9 @@ Dng metadata.
 exifMetadata?: ExifMetadata
 ```
 
-Exif metadata.
+Exif元数据。
 
-**Type:** ExifMetadata
+**Type:** [ExifMetadata](arkts-image-image-exifmetadata-c.md)
 
 **Since:** 23
 
@@ -76,9 +82,9 @@ Exif metadata.
 gifMetadata?: GifMetadata
 ```
 
-Gif metadata.
+GIF图像元数据。
 
-**Type:** GifMetadata
+**Type:** [GifMetadata](arkts-image-image-gifmetadata-c.md)
 
 **Since:** 26.0.0
 
@@ -96,9 +102,9 @@ Gif metadata.
 heifsMetadata?: HeifsMetadata
 ```
 
-Heifs metadata.
+HEIF序列图像元数据类，用于存储图像的元数据。
 
-**Type:** HeifsMetadata
+**Type:** [HeifsMetadata](arkts-image-image-heifsmetadata-c.md)
 
 **Since:** 23
 
@@ -116,9 +122,9 @@ Heifs metadata.
 jfifMetadata?: JfifMetadata
 ```
 
-Jfif metadata.
+JFIF图像元数据。
 
-**Type:** JfifMetadata
+**Type:** [JfifMetadata](arkts-image-image-jfifmetadata-c.md)
 
 **Since:** 26.0.0
 
@@ -136,9 +142,9 @@ Jfif metadata.
 makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata
 ```
 
-Huawei Camera metadata.
+来自Huawei相机的照片元数据。
 
-**Type:** MakerNoteHuaweiMetadata
+**Type:** [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)
 
 **Since:** 23
 
@@ -156,9 +162,9 @@ Huawei Camera metadata.
 pngMetadata?: PngMetadata
 ```
 
-Png metadata.
+PNG图像元数据。
 
-**Type:** PngMetadata
+**Type:** [PngMetadata](arkts-image-image-pngmetadata-c.md)
 
 **Since:** 26.0.0
 
@@ -176,9 +182,9 @@ Png metadata.
 tiffMetadata?: TiffMetadata
 ```
 
-Tiff metadata.
+TIFF图像元数据。
 
-**Type:** TiffMetadata
+**Type:** [TiffMetadata](arkts-image-image-tiffmetadata-c.md)
 
 **Since:** 26.0.0
 
@@ -196,9 +202,9 @@ Tiff metadata.
 webPMetadata?: WebPMetadata
 ```
 
-WebP metadata.
+WebP图像元数据类，用于存储图像的元数据。
 
-**Type:** WebPMetadata
+**Type:** [WebPMetadata](arkts-image-image-webpmetadata-c.md)
 
 **Since:** 24
 
@@ -216,9 +222,9 @@ WebP metadata.
 xmpMetadata?: XMPMetadata
 ```
 
-XMP metadata.
+XMP元数据。
 
-**Type:** XMPMetadata
+**Type:** [XMPMetadata](arkts-image-image-xmpmetadata-c.md)
 
 **Since:** 26.0.0
 

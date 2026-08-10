@@ -4,7 +4,7 @@
 export type ExtensionAbilityInfo = _ExtensionAbilityInfo.ExtensionAbilityInfo
 ```
 
-Defines the ExtensionAbility information.
+ExtensionAbility信息。
 
 **Since:** 9
 

@@ -17,6 +17,12 @@ The module provides APIs for setting and obtaining installation-free information
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { freeInstall } from 'kits/@kit.AbilityKit';
+```
+
 ## 汇总
 
 <!--Del-->

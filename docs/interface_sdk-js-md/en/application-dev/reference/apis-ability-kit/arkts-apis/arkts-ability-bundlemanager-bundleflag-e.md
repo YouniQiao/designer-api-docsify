@@ -1,6 +1,6 @@
 # BundleFlag
 
-Enumerates the bundle flags, which indicate the type of bundle information to obtain.
+包信息标志，指示需要获取的包信息的内容。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 GET_BUNDLE_INFO_DEFAULT = 0x00000000
 ```
 
-Used to obtain the default bundle information. The obtained information does not contain information about the signature, application, HAP module, ability, ExtensionAbility, or permission.
+获取默认包信息，不包含signatureInfo、applicationInfo、hapModuleInfo、ability、extensionAbility和permission的信息。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Used to obtain the default bundle information. The obtained information does not
 GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001
 ```
 
-Used to obtain the bundle information with application information. The obtained information does not contain information about the signature, HAP module, ability, ExtensionAbility, or permission.
+用于获取包含applicationInfo的bundleInfo，获取的bundleInfo不包含signatureInfo、hapModuleInfo、ability、extensionAbility和permission的信息。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Used to obtain the bundle information with application information. The obtained
 GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002
 ```
 
-Used to obtain the bundle information with HAP module information. The obtained information does not contain information about the signature, application, ability, ExtensionAbility, or permission.
+用于获取包含hapModuleInfo的bundleInfo，获取的bundleInfo不包含signatureInfo、applicationInfo、ability、extensionAbility和permission的信息。
 
 **Since:** 9
 
@@ -70,8 +70,7 @@ Used to obtain the bundle information with HAP module information. The obtained 
 GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004
 ```
 
-Used to obtain the bundle information with ability information. The obtained information does not contain information about the signature, application, ExtensionAbility, or permission. It must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE**.
+用于获取包含ability的bundleInfo，获取的bundleInfo不包含signatureInfo、applicationInfo、extensionAbility和permission的信息。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
 **Since:** 9
 
@@ -89,8 +88,7 @@ Used to obtain the bundle information with ability information. The obtained inf
 GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY = 0x00000008
 ```
 
-Used to obtain the bundle information with ExtensionAbility information. The obtained information does not contain information about the signature, application, ability, or permission. It must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE**.
+用于获取包含extensionAbility的bundleInfo，获取的bundleInfo不包含signatureInfo、applicationInfo、ability 和permission的信息。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
 **Since:** 9
 
@@ -108,7 +106,7 @@ Used to obtain the bundle information with ExtensionAbility information. The obt
 GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010
 ```
 
-Used to obtain the bundle information with permission information. The obtained information does not contain information about the signature, application, HAP module, ability, or ExtensionAbility.
+用于获取包含permission的bundleInfo。获取的bundleInfo不包含signatureInfo、applicationInfo、hapModuleInfo、extensionAbility和ability的信息。
 
 **Since:** 9
 
@@ -126,17 +124,16 @@ Used to obtain the bundle information with permission information. The obtained 
 GET_BUNDLE_INFO_WITH_METADATA = 0x00000020
 ```
 
-Used to obtain the metadata contained in the application, module, ability, or ExtensionAbility information. It must be used together with **GET\_BUNDLE\_INFO\_WITH\_APPLICATION**, **GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE**,  
-**GET\_BUNDLE\_INFO\_WITH\_ABILITY**, and **GET\_BUNDLE\_INFO\_WITH\_EXTENSION\_ABILITY**.
+用于获取applicationInfo、moduleInfo、abilityInfo和extensionAbilityInfo中包含的metadata。单独使用不生效，它需要与GET_BUNDLE_INFO_WITH_APPLICATION、GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY配合使用，其中：
 
-- To obtain the metadata contained in the application information, it must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_APPLICATION**.  
-- To obtain the metadata contained in the module information, it must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE**.  
-- To obtain the metadata contained in the ability information, it must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE** and **GET\_BUNDLE\_INFO\_WITH\_ABILITY**.  
-- To obtain the metadata contained in the ExtensionAbility information, it must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE** and **GET\_BUNDLE\_INFO\_WITH\_EXTENSION\_ABILITY**.
+-?获取applicationInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_APPLICATION一起使用。
+
+-?获取moduleInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
+
+-?获取abilityInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY一起使用。
+
+-?获取extensionAbilityInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY一起使  
+用。
 
 **Since:** 9
 
@@ -154,7 +151,7 @@ Used to obtain the metadata contained in the application, module, ability, or Ex
 GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040
 ```
 
-Used to obtain the information about disabled bundles and abilities of a bundle. The obtained information does not contain information about the signature, application, HAP module, ability, ExtensionAbility, or permission.
+用于获取application被禁用的BundleInfo和被禁用的Ability信息。获取的bundleInfo不包含signatureInfo、applicationInfo、hapModuleInfo、ability、extensionAbility和permission的信息。
 
 **Since:** 9
 
@@ -172,7 +169,7 @@ Used to obtain the information about disabled bundles and abilities of a bundle.
 GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080
 ```
 
-Used to obtain the bundle information with signature information. The obtained information does not contain information about the application, HAP module, ability, ExtensionAbility, or permission.
+用于获取包含signatureInfo的bundleInfo。获取的bundleInfo不包含applicationInfo、hapModuleInfo、extensionAbility、ability和permission的信息。
 
 **Since:** 9
 
@@ -190,8 +187,7 @@ Used to obtain the bundle information with signature information. The obtained i
 GET_BUNDLE_INFO_WITH_MENU = 0x00000100
 ```
 
-Used to obtain the bundle information with the file context menu configuration. It must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE**.
+用于获取包含fileContextMenuConfig的bundleInfo。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
 **Since:** 11
 
@@ -209,8 +205,7 @@ Used to obtain the bundle information with the file context menu configuration. 
 GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200
 ```
 
-Used to obtain the bundle information with the router map. It must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE**.
+用于获取包含routerMap的bundleInfo。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
 **Since:** 12
 
@@ -228,9 +223,7 @@ Used to obtain the bundle information with the router map. It must be used toget
 GET_BUNDLE_INFO_WITH_SKILL = 0x00000800
 ```
 
-Used to obtain the bundle information with the skills. It must be used together with  
-**GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE**, **GET\_BUNDLE\_INFO\_WITH\_ABILITY**, and  
-**GET\_BUNDLE\_INFO\_WITH\_EXTENSION\_ABILITY**.
+用于获取包含skills的bundleInfo。单独使用不生效，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY一起使用。
 
 **Since:** 12
 
@@ -248,7 +241,7 @@ Used to obtain the bundle information with the skills. It must be used together 
 GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000
 ```
 
-Used to obtain the bundle information with the HAP module information. It is valid only for bundleInfo.hapModulesInfo corresponding to the entry module. If the entry module does not exist, the bundleInfo.hapModulesInfo list is empty. The obtained bundle information does not contain information about the signature, application, ability, ExtensionAbility, or permission.
+用于获取包含hapModuleInfo的bundleInfo，仅支持entry模块对应的bundleInfo.hapModulesInfo，如果entry模块不存在，bundleInfo.hapModulesInfo列表为空。获取的bundleInfo不包含signatureInfo、applicationInfo、ability、extensionAbility和permission的信息。
 
 **Since:** 23
 

@@ -1,5 +1,11 @@
 # hasRecoverCacheInGeneratorDialog (System API)
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## hasRecoverCacheInGeneratorDialog
 
 ```TypeScript
@@ -24,7 +30,7 @@ Check whether cache files that can be restored exist in GeneratorDialog.The pers
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the context of dialog for ui display. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes | the context of dialog for ui display. |
 
 **Return value:**
 

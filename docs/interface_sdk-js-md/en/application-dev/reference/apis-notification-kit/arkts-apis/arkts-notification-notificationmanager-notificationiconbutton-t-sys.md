@@ -4,7 +4,7 @@
 export type NotificationIconButton = _NotificationIconButton
 ```
 
-System notification button.
+系统通知按钮。
 
 **Since:** 23
 

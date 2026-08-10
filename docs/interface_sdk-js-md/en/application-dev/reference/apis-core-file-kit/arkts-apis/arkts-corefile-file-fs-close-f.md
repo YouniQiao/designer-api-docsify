@@ -1,12 +1,18 @@
 # close
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## close
 
 ```TypeScript
 declare function close(file: number | File): Promise<void>
 ```
 
-Closes a file or directory. This API uses a promise to return the result.
+关闭文件或目录，使用promise异步回调。
 
 **Since:** 9
 
@@ -22,13 +28,13 @@ Closes a file or directory. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| File | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
+| file | number \| File | Yes | 已打开的File对象或已打开的文件描述符fd。关闭后file对象或文件描述符fd不再具备实际意义，不可再用于进行读写等操作。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **Error codes:**
 
@@ -48,7 +54,7 @@ Closes a file or directory. This API uses a promise to return the result.
 declare function close(file: number | File, callback: AsyncCallback<void>): void
 ```
 
-Closes a file or directory. This API uses an asynchronous callback to return the result.
+关闭文件或目录，使用callback异步回调。
 
 **Since:** 9
 
@@ -64,8 +70,8 @@ Closes a file or directory. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| File | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| file | number \| File | Yes | 已打开的File对象或已打开的文件描述符fd。关闭后file对象或文件描述符fd不再具备实际意义，不可再用于进行读写等操作。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步关闭文件或目录之后的回调。 |
 
 **Error codes:**
 

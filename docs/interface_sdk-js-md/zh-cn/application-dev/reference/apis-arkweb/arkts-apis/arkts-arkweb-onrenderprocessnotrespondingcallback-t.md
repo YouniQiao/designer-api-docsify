@@ -18,5 +18,5 @@ The callback of render process not responding.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | details of onRenderProcessNotResponding.  |
+| data | [RenderProcessNotRespondingData](../arkts-components/arkts-arkweb-renderprocessnotrespondingdata-i.md) | 是 | details of onRenderProcessNotResponding. |
 

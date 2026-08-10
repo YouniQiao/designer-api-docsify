@@ -10,6 +10,12 @@ The ProxyRule used by insertProxyRule.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## getSchemeFilter
 
 ```TypeScript
@@ -30,7 +36,7 @@ Returns the scheme filter used for this rule.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The scheme filter used for this rule. |
+| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
 
 ## getUrl
 

@@ -1,6 +1,6 @@
 # MenuGridPosition
 
-The position of grid in menu.
+栅格菜单在菜单中的位置枚举值。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The position of grid in menu.
 TOP = 0
 ```
 
-The grid is located at the top of the menu.
+栅格在上方。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ The grid is located at the top of the menu.
 BOTTOM = 1
 ```
 
-The grid is located at the bottom of the menu.
+栅格在下方。
 
 **Since:** 26.0.0
 

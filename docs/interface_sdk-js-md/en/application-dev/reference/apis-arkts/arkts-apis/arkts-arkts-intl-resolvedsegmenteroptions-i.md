@@ -18,7 +18,7 @@ granularity: SegmenterGranularity
 
 Granularity option.
 
-**Type:** SegmenterGranularity
+**Type:** [SegmenterGranularity](arkts-arkts-intl-segmentergranularity-t.md)
 
 **Since:** 26.0.0
 

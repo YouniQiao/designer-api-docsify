@@ -1,6 +1,6 @@
 # FactoryResetStrategy (System API)
 
-Represents the factory reset strategy, which contains the **scope** (reset scope) and **strategy** (reset strategy description) fields.
+恢复出厂设置策略，包含scope(重置范围)和strategy(重置策略描述)字段。
 
 **Since:** 26.0.0
 
@@ -12,16 +12,21 @@ Represents the factory reset strategy, which contains the **scope** (reset scope
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## scope
 
 ```TypeScript
 scope: FactoryResetScope
 ```
 
-Reset scope. The value **DATA** indicates that only data in the user partition is cleared; **DATA\_AND\_OS**  
-indicates that data in both the user partition and OS partition is cleared.
+重置范围。DATA仅清除用户数据分区，适用于仅清除数据的场景；DATA_AND_OS同时清除用户数据分区和操作系统分区，适用于同时清除系统和数据的场景。
 
-**Type:** FactoryResetScope
+**Type:** [FactoryResetScope](arkts-basicservices-update-factoryresetscope-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -41,7 +46,7 @@ indicates that data in both the user partition and OS partition is cleared.
 strategy: string
 ```
 
-Reset strategy, which specifies the specific strategy for the reset operation. The value is a string of 0 to 64characters. The value can contain letters, digits, underscores (\_), hyphens (-), and spaces. An exception is thrown if the value is out of range or contains invalid characters. This parameter describes the reset operation.For example, **quick erase** indicates fast data erasure, and **deep erase** indicates deep erasure.
+重置策略，用于记录重置操作的具体策略信息。长度范围[0，64]，单位：字符，有效字符包括字母、数字、下划线、连字符和空格。超出范围或包含无效字符时抛出异常。为重置操作的自定义描述文本，如quick erase表示快速擦除、deep erase表示深度擦除等。
 
 **Type:** string
 

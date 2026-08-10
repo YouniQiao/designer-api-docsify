@@ -18,7 +18,7 @@ onClick?: Callback<ClickEvent>
 
 设置点击事件。
 
-**类型：** Callback&lt;ClickEvent&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt;
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ onLongPress?: Callback<GestureEvent>
 
 设置长按事件。
 
-**类型：** Callback&lt;GestureEvent&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;GestureEvent&gt;
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ onTouch?: Callback<TouchEvent>
 
 设置触摸事件。
 
-**类型：** Callback&lt;TouchEvent&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt;
 
 **起始版本：** 20
 

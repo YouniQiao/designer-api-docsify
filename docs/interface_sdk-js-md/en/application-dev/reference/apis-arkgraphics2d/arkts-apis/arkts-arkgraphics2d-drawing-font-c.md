@@ -1,12 +1,12 @@
 # Font
 
-Describes the attributes used for text rendering, such as size and typeface.
-    **NOTE**  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+Font类用于描述字型绘制时所使用的属性（如大小、字体、粗细、倾斜、缩放等），并支持文本测量、字形转换、路径轮廓获取、主题字体跟随等能力。
+
+> **说明：**
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 11
 
@@ -15,6 +15,12 @@ Describes the attributes used for text rendering, such as size and typeface.
 <!--Device-drawing-class Font--><!--Device-drawing-class Font-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## countText
 
@@ -28,7 +34,7 @@ ArkTS-Sta:
 countText(text: string): int
 ```
 
-Obtains the number of glyphs represented by text.
+获取文本所表示的字符数量。
 
 **Since:** 12
 
@@ -44,19 +50,19 @@ Obtains the number of glyphs represented by text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Content of the item in the operation area. |
+| text | string | Yes | 待计数的文本内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of glyphs represented by the text. The value is an integer. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回文本所表示的字符数量，整数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createPathForGlyph
 
@@ -64,7 +70,7 @@ Obtains the number of glyphs represented by text.
 createPathForGlyph(index: number): Path
 ```
 
-Obtains the outline path of a glyph.
+获取指定字形的路径轮廓。
 
 **Since:** 18
 
@@ -80,13 +86,13 @@ Obtains the outline path of a glyph.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the glyph. |
+| index | number | Yes | 字形索引，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Outline path of the glyph. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回指定字形的路径轮廓。 |
 
 ## createPathForGlyph
 
@@ -94,7 +100,7 @@ Obtains the outline path of a glyph.
 createPathForGlyph(index: int): Path | undefined
 ```
 
-Obtains the outline path of a glyph.
+获取指定字形的路径轮廓。
 
 **Since:** 23
 
@@ -108,13 +114,13 @@ Obtains the outline path of a glyph.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the glyph. |
+| index | int | Yes | 字形索引，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Outline path of the glyph. Note: Path use y-axis-goes-down system, y axis is inverted to the y-axis-goes-up system. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回指定字形的路径轮廓。获取失败时返回undefined。 |
 
 ## enableEmbolden
 
@@ -122,7 +128,7 @@ Obtains the outline path of a glyph.
 enableEmbolden(isEmbolden: boolean): void
 ```
 
-Enables emboldened fonts.
+使能字型粗体。
 
 **Since:** 11
 
@@ -138,13 +144,13 @@ Enables emboldened fonts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEmbolden | boolean | Yes | Whether to enable emboldened fonts. **true** to enable, **false** otherwise. |
+| isEmbolden | boolean | Yes | 表示是否使能字型粗体。true表示使能，false表示不使能。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## enableLinearMetrics
 
@@ -152,7 +158,7 @@ Enables emboldened fonts.
 enableLinearMetrics(isLinearMetrics: boolean): void
 ```
 
-Enables linear font scaling.
+使能字型的线性缩放。
 
 **Since:** 11
 
@@ -168,13 +174,13 @@ Enables linear font scaling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLinearMetrics | boolean | Yes | Whether to enable linear font scaling. **true** to enable, **false** otherwise. |
+| isLinearMetrics | boolean | Yes | 表示是否使能字型的线性缩放。true表示使能，false表示不使能。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## enableSubpixel
 
@@ -182,7 +188,7 @@ Enables linear font scaling.
 enableSubpixel(isSubpixel: boolean): void
 ```
 
-Enables subpixel font rendering.
+使能字型亚像素级别的文字绘制，显示效果平滑。
 
 **Since:** 11
 
@@ -198,13 +204,13 @@ Enables subpixel font rendering.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSubpixel | boolean | Yes | Whether to enable subpixel font rendering. **true** to enable, **false** otherwise. |
+| isSubpixel | boolean | Yes | 表示是否使能字型亚像素级别的文字绘制。true表示使能，false表示不使能。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getBounds
 
@@ -212,7 +218,7 @@ Enables subpixel font rendering.
 getBounds(glyphs: Array<number>): Array<common2D.Rect>
 ```
 
-Obtains the rectangular bounding box of each glyph in an array.
+获取字形数组中每个字形的边界矩形。
 
 **Since:** 18
 
@@ -228,13 +234,13 @@ Obtains the rectangular bounding box of each glyph in an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphs | Array&lt;number&gt; | Yes | Glyph array, which can be generated by [textToGlyphs]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| glyphs | Array&lt;number&gt; | Yes | 字形索引数组，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Rect&gt; | Array that holds the rectangular bounding boxes. |
+| Array&lt;common2D.Rect&gt; | 返回字形边界矩形数组。 |
 
 ## getBounds
 
@@ -242,7 +248,7 @@ Obtains the rectangular bounding box of each glyph in an array.
 getBounds(glyphs: Array<int>): Array<common2D.Rect> | undefined
 ```
 
-Obtains the rectangular bounding box of each glyph in an array.
+获取字形数组中每个字形的边界矩形。
 
 **Since:** 23
 
@@ -256,13 +262,13 @@ Obtains the rectangular bounding box of each glyph in an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphs | Array&lt;int&gt; | Yes | Glyph array, which can be generated by textToGlyphs. |
+| glyphs | Array&lt;int&gt; | Yes | 字形索引数组，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Rect&gt; | Array that holds the rectangular bounding boxes. Note: 1. Rect use y-axis-goes-down system, y axis is inverted to the y-axis-goes-up system. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Rect use two points(left-bottom & right-top) to describe the bound. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. The bound rect will be snap to integral boundaries. |
+| Array&lt;common2D.Rect&gt; | 返回字形边界矩形数组。 |
 
 ## getEdging
 
@@ -270,7 +276,7 @@ Obtains the rectangular bounding box of each glyph in an array.
 getEdging(): FontEdging
 ```
 
-Obtains the font edging effect.
+获取字型边缘效果。
 
 **Since:** 12
 
@@ -286,7 +292,7 @@ Obtains the font edging effect.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Font edging effect. |
+| [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) | 返回字型边缘效果。 |
 
 ## getEdging
 
@@ -294,7 +300,7 @@ Obtains the font edging effect.
 getEdging(): FontEdging | undefined
 ```
 
-Obtains the font edging effect.
+获取字型边缘效果。
 
 **Since:** 23
 
@@ -308,7 +314,7 @@ Obtains the font edging effect.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Font edging effect. |
+| [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) | 返回字型边缘效果。获取失败时返回undefined。 |
 
 ## getHinting
 
@@ -316,7 +322,7 @@ Obtains the font edging effect.
 getHinting(): FontHinting
 ```
 
-Obtains the font hinting effect.
+获取字型轮廓效果。
 
 **Since:** 12
 
@@ -332,7 +338,7 @@ Obtains the font hinting effect.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Font hinting effect. |
+| [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | 返回字型轮廓效果。 |
 
 ## getHinting
 
@@ -354,7 +360,7 @@ Obtains the font hinting effect.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Font hinting effect. |
+| [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | Font hinting effect. |
 
 ## getMetrics
 
@@ -362,7 +368,7 @@ Obtains the font hinting effect.
 getMetrics(): FontMetrics
 ```
 
-Obtains the font metrics of the typeface.
+获取与字体关联的FontMetrics属性。
 
 **Since:** 11
 
@@ -378,7 +384,7 @@ Obtains the font metrics of the typeface.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Font metrics. |
+| [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) | 与字体关联的度量属性对象。 |
 
 ## getMetrics
 
@@ -386,7 +392,7 @@ Obtains the font metrics of the typeface.
 getMetrics(): FontMetrics | undefined
 ```
 
-Obtains the font metrics of the typeface.
+获取与字体关联的FontMetrics属性。
 
 **Since:** 23
 
@@ -400,7 +406,7 @@ Obtains the font metrics of the typeface.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The fontMetrics value returned to the caller. |
+| [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) | 与字体关联的度量属性对象。获取失败时返回undefined。 |
 
 ## getScaleX
 
@@ -414,7 +420,7 @@ ArkTS-Sta:
 getScaleX(): double
 ```
 
-Obtains the horizontal scale ratio of this font.
+获取字型在x轴方向上的缩放比例。
 
 **Since:** 12
 
@@ -430,7 +436,7 @@ Obtains the horizontal scale ratio of this font.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Horizontal scale ratio. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回字型在x轴方向上的缩放比例。 |
 
 ## getSize
 
@@ -444,7 +450,7 @@ ArkTS-Sta:
 getSize(): double
 ```
 
-Obtains the font size.
+获取字型大小。
 
 **Since:** 11
 
@@ -460,7 +466,7 @@ Obtains the font size.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Font size. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回字型大小，浮点数。单位为物理像素px。 |
 
 ## getSkewX
 
@@ -474,7 +480,7 @@ ArkTS-Sta:
 getSkewX(): double
 ```
 
-Obtains the horizontal skew factor of this font.
+获取字型在x轴方向上的倾斜比例。
 
 **Since:** 12
 
@@ -490,7 +496,7 @@ Obtains the horizontal skew factor of this font.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Horizontal skew factor. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回字型在x轴方向上的倾斜比例。 |
 
 ## getTextPath
 
@@ -498,7 +504,7 @@ Obtains the horizontal skew factor of this font.
 getTextPath(text: string, byteLength: number, x: number, y: number): Path
 ```
 
-Obtains the outline path of a text.
+获取文字的路径轮廓。
 
 **Since:** 18
 
@@ -514,22 +520,22 @@ Obtains the outline path of a text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | UTF-8 text-encoded characters. |
-| byteLength | number | Yes | Length of the outline path, which is obtained based on the minimum value between the passed value of **byteLength** and the actual text byte size. |
-| x | number | Yes | X coordinate of the text in the drawing area, with the origin as the start point. |
-| y | number | Yes | Y coordinate of the text in the drawing area, with the origin as the start point. |
+| text | string | Yes | 表示以UTF-8格式编码的文本字符串。 |
+| byteLength | number | Yes | 表示要获取对应文本路径的字节长度。按传入的字节长度和实际的文本字节大小之间的最小值来获取对应的文本路径。 |
+| x | number | Yes | 表示文本在绘图区域内以原点为起始位置的X坐标。单位为物理像素px。 |
+| y | number | Yes | 表示文本在绘图区域内以原点为起始位置的Y坐标。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Outline path of the text. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本的路径轮廓。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getTextPath
 
@@ -537,7 +543,7 @@ Obtains the outline path of a text.
 getTextPath(text: string, byteLength: int, x: double, y: double): Path | undefined
 ```
 
-Obtains the outline path of a text.
+获取文字的路径轮廓。
 
 **Since:** 23
 
@@ -551,22 +557,22 @@ Obtains the outline path of a text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | UTF-8 text-encoded characters. |
-| byteLength | int | Yes | Length of the outline path, which is obtained based on the minimum value between the passed value of byteLength and the actual text byte size. |
-| x | double | Yes | X coordinate of the text in the drawing area, with the origin as the start point. |
-| y | double | Yes | Y coordinate of the text in the drawing area, with the origin as the start point. |
+| text | string | Yes | 表示以UTF-8格式编码的文本字符串。 |
+| byteLength | int | Yes | 表示要获取对应文本路径的字节长度。按传入的字节长度和实际的文本字节大小之间的最小值来获取对应的文本路径。 |
+| x | double | Yes | 表示文本在绘图区域内以原点为起始位置的X坐标。单位为物理像素px。 |
+| y | double | Yes | 表示文本在绘图区域内以原点为起始位置的Y坐标。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Outline path of the text. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本的路径轮廓。获取失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getTextPathWithFallback
 
@@ -574,7 +580,7 @@ Obtains the outline path of a text.
 getTextPathWithFallback(text: string, byteLength: number, x: number, y: number): Path
 ```
 
-Gets the path outline for the given text with font fallback support.
+获取文字的轮廓路径，支持字体回退能力。
 
 **Since:** 26.0.0
 
@@ -590,16 +596,16 @@ Gets the path outline for the given text with font fallback support.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | UTF-8 text-encoded. |
-| byteLength | number | Yes | The length of the text in bytes. which is obtained based on the minimum value between the passed value of byteLength and the actual text byte size. |
-| x | number | Yes | X coordinate of the text in the drawing area, with the origin as the start point. |
-| y | number | Yes | Y coordinate of the text in the drawing area, with the origin as the start point. |
+| text | string | Yes | 表示以UTF-8格式编码的文本字符串。 |
+| byteLength | number | Yes | 表示要获取对应文本路径的字节长度，按传入的字节长度和实际的文本字节大小之间的最小值来获取对应的文本路径。 |
+| x | number | Yes | 表示文本在绘图区域内以原点为起始位置的X坐标。单位为物理像素px。 |
+| y | number | Yes | 表示文本在绘图区域内以原点为起始位置的Y坐标。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Outline path of the text. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
 
 ## getTextPathWithFallback
 
@@ -607,7 +613,7 @@ Gets the path outline for the given text with font fallback support.
 getTextPathWithFallback(text: string, byteLength: int, x: double, y: double): Path | undefined
 ```
 
-Gets the path outline for the given text with font fallback support.
+获取文字的轮廓路径，支持字体回退能力。
 
 **Since:** 26.0.0
 
@@ -623,16 +629,16 @@ Gets the path outline for the given text with font fallback support.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | UTF-8 text-encoded. |
-| byteLength | int | Yes | The length of the text in bytes. which is obtained based on the minimum value between the passed value of byteLength and the actual text byte size. |
-| x | double | Yes | X coordinate of the text in the drawing area, with the origin as the start point. |
-| y | double | Yes | Y coordinate of the text in the drawing area, with the origin as the start point. |
+| text | string | Yes | 表示以UTF-8格式编码的文本字符串。 |
+| byteLength | int | Yes | 表示要获取对应文本路径的字节长度，按传入的字节长度和实际的文本字节大小之间的最小值来获取对应的文本路径。 |
+| x | double | Yes | 表示文本在绘图区域内以原点为起始位置的X坐标。单位为物理像素px。 |
+| y | double | Yes | 表示文本在绘图区域内以原点为起始位置的Y坐标。单位为物理像素px。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the path outline for the text. |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
 
 ## getTypeface
 
@@ -640,7 +646,7 @@ Gets the path outline for the given text with font fallback support.
 getTypeface(): Typeface
 ```
 
-Obtains the typeface.
+获取字体。
 
 **Since:** 11
 
@@ -656,7 +662,7 @@ Obtains the typeface.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Font. |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 字体。 |
 
 ## getTypeface
 
@@ -664,7 +670,7 @@ Obtains the typeface.
 getTypeface(): Typeface | undefined
 ```
 
-Obtains the typeface.
+获取字体。
 
 **Since:** 23
 
@@ -678,7 +684,7 @@ Obtains the typeface.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Typeface object. |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 字体。获取失败时返回undefined。 |
 
 ## getWidths
 
@@ -686,7 +692,7 @@ Obtains the typeface.
 getWidths(glyphs: Array<number>): Array<number>
 ```
 
-Obtains the width of each glyph in an array.
+获取字形数组中每个字形对应的宽度。
 
 **Since:** 12
 
@@ -702,19 +708,19 @@ Obtains the width of each glyph in an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphs | Array&lt;number&gt; | Yes | Glyph array, which can be generated by [textToGlyphs]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| glyphs | Array&lt;number&gt; | Yes | 字形索引数组，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Glyph width array. |
+| Array&lt;number&gt; | 返回字形宽度数组，浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getWidths
 
@@ -722,7 +728,7 @@ Obtains the width of each glyph in an array.
 getWidths(glyphs: Array<int>): Array<double> | undefined
 ```
 
-Obtains the width of each glyph in an array.
+获取字形数组中每个字形对应的宽度。
 
 **Since:** 23
 
@@ -736,19 +742,19 @@ Obtains the width of each glyph in an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphs | Array&lt;int&gt; | Yes | Glyph array, which can be generated by textToGlyphs. |
+| glyphs | Array&lt;int&gt; | Yes | 字形索引数组，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;double&gt; | Glyph array, which can be generated by textToGlyphs. |
+| Array&lt;double&gt; | 返回字形宽度数组，浮点数。单位为物理像素px。获取失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isBaselineSnap
 
@@ -756,7 +762,7 @@ Obtains the width of each glyph in an array.
 isBaselineSnap(): boolean
 ```
 
-Checks whether baselines are requested to be snapped to pixels when the current canvas matrix is axis aligned.
+当前画布矩阵轴对齐时，获取字型基线是否与像素对齐的结果。
 
 **Since:** 12
 
@@ -772,7 +778,7 @@ Checks whether baselines are requested to be snapped to pixels when the current 
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the baselines are requested to be snapped to pixels, and **false** means the opposite. |
+| boolean | 返回字型基线是否与像素对齐，true表示对齐，false表示不对齐。 |
 
 ## isEmbeddedBitmaps
 
@@ -780,7 +786,7 @@ Checks whether baselines are requested to be snapped to pixels when the current 
 isEmbeddedBitmaps(): boolean
 ```
 
-Checks whether bitmaps are used in this font.
+获取字型是否使用内嵌位图渲染的结果。
 
 **Since:** 12
 
@@ -796,7 +802,7 @@ Checks whether bitmaps are used in this font.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the bitmaps are used, and **false** means the opposite. |
+| boolean | 返回字型是否使用内嵌位图渲染的结果，true表示使用内嵌位图字形，false表示不转换成位图处理。 |
 
 ## isEmbolden
 
@@ -804,7 +810,7 @@ Checks whether bitmaps are used in this font.
 isEmbolden(): boolean
 ```
 
-Checks whether the bold effect is set for this font.
+获取字型是否设置了粗体效果。
 
 **Since:** 12
 
@@ -820,7 +826,7 @@ Checks whether the bold effect is set for this font.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the bold effect is set, and **false** means the opposite. |
+| boolean | 返回字型是否设置粗体效果的结果，true表示设置了粗体效果，false表示未设置粗体效果。 |
 
 ## isForceAutoHinting
 
@@ -828,7 +834,7 @@ Checks whether the bold effect is set for this font.
 isForceAutoHinting(): boolean
 ```
 
-Checks whether auto hinting is forcibly used.
+获取字型是否自动调整轮廓以优化渲染效果的结果。
 
 **Since:** 12
 
@@ -844,7 +850,7 @@ Checks whether auto hinting is forcibly used.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that auto hinting is forcibly used, and **false** means the opposite. |
+| boolean | 返回字型是否自动调整轮廓以优化渲染效果的结果，true为自动调整，false为不自动调整。 |
 
 ## isLinearMetrics
 
@@ -852,7 +858,7 @@ Checks whether auto hinting is forcibly used.
 isLinearMetrics(): boolean
 ```
 
-Checks whether linear scaling is used for this font.
+获取字型是否可以线性缩放。
 
 **Since:** 12
 
@@ -868,7 +874,7 @@ Checks whether linear scaling is used for this font.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that linear scaling is used, and **false** means the opposite. |
+| boolean | 返回字型是否可线性缩放的结果，true表示可线性缩放，false表示不可线性缩放。 |
 
 ## isSubpixel
 
@@ -876,7 +882,7 @@ Checks whether linear scaling is used for this font.
 isSubpixel(): boolean
 ```
 
-Checks whether sub-pixel rendering is used for a font.
+获取字型是否使用亚像素渲染。
 
 **Since:** 12
 
@@ -892,7 +898,7 @@ Checks whether sub-pixel rendering is used for a font.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that sub-pixel rendering is used, and **false** means the opposite. |
+| boolean | 返回字型是否使用亚像素渲染的结果，true表示使用，false表示不使用。 |
 
 ## isThemeFontFollowed
 
@@ -900,7 +906,7 @@ Checks whether sub-pixel rendering is used for a font.
 isThemeFontFollowed(): boolean
 ```
 
-Checks whether the font follows the theme font. By default, the font follows the theme font.
+获取字型中的字体是否跟随主题字体。默认不跟随。
 
 **Since:** 15
 
@@ -916,7 +922,7 @@ Checks whether the font follows the theme font. By default, the font follows the
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the theme font is followed, and **false** means the opposite. |
+| boolean | 返回字型中的字体是否跟随主题字体的结果，true表示跟随主题字体，false表示不跟随主题字体。 |
 
 ## measureSingleCharacter
 
@@ -930,7 +936,7 @@ ArkTS-Sta:
 measureSingleCharacter(text: string): double
 ```
 
-Measures the width of a single character. If the typeface of the current font does not support the character to measure, the system typeface is used to measure the character width.
+测量单个字符的宽度。当前字型中的字体不支持待测量字符时，退化到使用系统字体测量字符宽度。
 
 **Since:** 12
 
@@ -946,19 +952,19 @@ Measures the width of a single character. If the typeface of the current font do
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Single character to measure. The length of the string must be **1**. |
+| text | string | Yes | 待测量的单个字符，字符串的长度必须为1。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Width of the character. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 字符的宽度，浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## measureSingleCharacterWithFeatures
 
@@ -972,7 +978,7 @@ ArkTS-Sta:
 measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): double
 ```
 
-Measures the width of a single character with font features. If the typeface of the current font does not support the character to measure, the system typeface is used to measure the character width.
+测量单个字符的宽度，字符带有字体特征。当前字型中的字体不支持待测量字符时，退化到使用系统字体测量字符宽度。
 
 **Since:** 20
 
@@ -988,20 +994,20 @@ Measures the width of a single character with font features. If the typeface of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Pointer to the single character to measure. The length of the string must be **1**. |
-| features | Array&lt;FontFeature&gt; | Yes | Array of the font feature object. For an empty array, the preset font features in the TrueType Font (TTF) file are used. |
+| text | string | Yes | 待测量的单个字符。字符串长度必须为1。 |
+| features | Array&lt;FontFeature&gt; | Yes | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Width of the character. The value is a floating point number in px. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 字符的宽度，浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## measureText
 
@@ -1015,11 +1021,12 @@ ArkTS-Sta:
 measureText(text: string, encoding: TextEncoding): double
 ```
 
-Measures the text width.
-    **NOTE**  
-    
-    This API is used to measure the text width of the original string. To measure the text width after typesetting,  
-    call \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+测量文本的宽度。
+
+> **说明：**
+> 
+> 此接口用于测量原始字符串的文本宽度，若想测量排版后的文本宽度，建议使用
+> [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12)替代。
 
 **Since:** 11
 
@@ -1035,20 +1042,20 @@ Measures the text width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Content of the item in the operation area. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Pointer to the encoding format. |
+| text | string | Yes | 待测量的文本内容，将按encoding指定的编码方式进行解析。 |
+| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | Yes | 指定文本的编码格式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Width of the text. The value is a floating point number. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 文本的宽度，浮点数。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setBaselineSnap
 
@@ -1056,7 +1063,7 @@ Measures the text width.
 setBaselineSnap(isBaselineSnap: boolean): void
 ```
 
-Sets whether to request that baselines be snapped to pixels when the current canvas matrix is axis aligned.
+当前画布矩阵轴对齐时，设置字型基线是否与像素对齐。
 
 **Since:** 12
 
@@ -1072,13 +1079,13 @@ Sets whether to request that baselines be snapped to pixels when the current can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isBaselineSnap | boolean | Yes | Check result. The value **true** means to request that baselines be snapped to pixels, and **false** means the opposite. |
+| isBaselineSnap | boolean | Yes | 表示字型基线是否与像素对齐，true表示对齐，false表示不对齐。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setEdging
 
@@ -1086,7 +1093,7 @@ Sets whether to request that baselines be snapped to pixels when the current can
 setEdging(edging: FontEdging): void
 ```
 
-Sets a font edging effect.
+设置字型边缘效果。
 
 **Since:** 12
 
@@ -1102,13 +1109,13 @@ Sets a font edging effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edging | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font edging effect. |
+| edging | [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) | Yes | 字型边缘效果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setEmbeddedBitmaps
 
@@ -1116,7 +1123,7 @@ Sets a font edging effect.
 setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void
 ```
 
-Sets whether to use bitmaps in this font.
+设置字型是否使用字体文件中内嵌的位图字形进行渲染。
 
 **Since:** 12
 
@@ -1132,13 +1139,13 @@ Sets whether to use bitmaps in this font.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEmbeddedBitmaps | boolean | Yes | Whether to use bitmaps in the font. The value **true** means to use bitmaps in the font, and **false** means the opposite. |
+| isEmbeddedBitmaps | boolean | Yes | 设置字型是否使用字体文件中内嵌的位图字形进行渲染，true表示使用内嵌位图字形，false表示不转换成位图处理。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setForceAutoHinting
 
@@ -1146,7 +1153,7 @@ Sets whether to use bitmaps in this font.
 setForceAutoHinting(isForceAutoHinting: boolean): void
 ```
 
-Sets whether to forcibly use auto hinting, that is, whether to always hint glyphs.
+设置是否自动调整字型轮廓以优化渲染效果。
 
 **Since:** 12
 
@@ -1162,13 +1169,13 @@ Sets whether to forcibly use auto hinting, that is, whether to always hint glyph
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isForceAutoHinting | boolean | Yes | Check result. The value **true** means to forcibly use auto hinting, and **false** means the opposite. |
+| isForceAutoHinting | boolean | Yes | 是否自动调整字型轮廓以优化渲染效果，true为自动调整，false为不自动调整。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setHinting
 
@@ -1176,7 +1183,7 @@ Sets whether to forcibly use auto hinting, that is, whether to always hint glyph
 setHinting(hinting: FontHinting): void
 ```
 
-Sets a font hinting effect.
+设置字型轮廓效果。
 
 **Since:** 12
 
@@ -1192,13 +1199,13 @@ Sets a font hinting effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hinting | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font hinting effect. |
+| hinting | [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | Yes | 字型轮廓效果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setScaleX
 
@@ -1212,7 +1219,7 @@ ArkTS-Sta:
 setScaleX(scaleX: double): void
 ```
 
-Sets a horizontal scale factor for this font.
+设置字型在x轴方向上的缩放比例。
 
 **Since:** 12
 
@@ -1228,13 +1235,13 @@ Sets a horizontal scale factor for this font.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scaleX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Horizontal scale factor. The value is a floating point number. |
+| scaleX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 字型在x轴上的缩放比例，该参数为浮点数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setSize
 
@@ -1248,7 +1255,7 @@ ArkTS-Sta:
 setSize(textSize: double): void
 ```
 
-Sets the font size.
+设置字型大小。
 
 **Since:** 11
 
@@ -1264,13 +1271,13 @@ Sets the font size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textSize | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Font size. The value is a floating point number. If a negative number is passed in, the size is set to **0**. If the size is **0**, the text drawn will not be displayed. |
+| textSize | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 字型大小。该参数为浮点数，为负数时会被置为0，为0时绘制的文字不会显示。单位为物理像素px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setSkewX
 
@@ -1284,7 +1291,7 @@ ArkTS-Sta:
 setSkewX(skewX: double): void
 ```
 
-Sets a horizontal skew factor for this font.
+设置字型在x轴方向上的倾斜比例。
 
 **Since:** 12
 
@@ -1300,13 +1307,13 @@ Sets a horizontal skew factor for this font.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skewX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Horizontal skew factor. A positive number means a skew to the left, and a negative number means a skew to the right. The value is a floating point number. |
+| skewX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 字型在x轴方向上的倾斜比例，正数表示向左倾斜，负数表示向右倾斜，该参数为浮点数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setThemeFontFollowed
 
@@ -1314,7 +1321,7 @@ Sets a horizontal skew factor for this font.
 setThemeFontFollowed(followed: boolean): void
 ```
 
-Sets whether to follow the theme font. When **followed** is set to **true**, the theme font is used if it is enabled by the system and no typeface is set.
+设置字型中的字体是否跟随主题字体。设置跟随主题字体后，若系统启用主题字体并且字型未被设置字体，字型会使用该主题字体。
 
 **Since:** 15
 
@@ -1330,13 +1337,13 @@ Sets whether to follow the theme font. When **followed** is set to **true**, the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| followed | boolean | Yes | Whether to follow the theme font. The value **true** means to follow the theme font , and **false** means the opposite. |
+| followed | boolean | Yes | 字型中的字体是否跟随主题字体，true表示跟随主题字体，false表示不跟随主题字体。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setTypeface
 
@@ -1344,7 +1351,7 @@ Sets whether to follow the theme font. When **followed** is set to **true**, the
 setTypeface(typeface: Typeface): void
 ```
 
-Sets the typeface style (including attributes such as font name, weight, and italic) for the font.
+为字型设置字体样式（包括字体名称、粗细、斜体等属性）。
 
 **Since:** 11
 
@@ -1360,13 +1367,13 @@ Sets the typeface style (including attributes such as font name, weight, and ita
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeface | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Typeface style (including attributes such as font name, weight, and italic). |
+| typeface | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Yes | 字体样式，包括字体名称、粗细、斜体等属性。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## textToGlyphs
 
@@ -1374,7 +1381,7 @@ Sets the typeface style (including attributes such as font name, weight, and ita
 textToGlyphs(text: string, glyphCount?: number): Array<number>
 ```
 
-Converts text into glyph indexes.
+将文本转换为字形索引。
 
 **Since:** 12
 
@@ -1390,20 +1397,20 @@ Converts text into glyph indexes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text string. |
-| glyphCount | number | No | Number of glyphs represented by the text. The value must be the same as the value obtained from [countText]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The default value is the number of characters in the text string. The value is an integer. |
+| text | string | Yes | 待转换为字形索引的文本字符串。 |
+| glyphCount | number | No | 文本表示的字符数量，该参数为整数。传入时必须与[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取的值相等，不传入时默认为 text表示的字符数量。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array that holds the glyph indexes. |
+| Array&lt;number&gt; | 返回转换得到的字形索引数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## textToGlyphs
 
@@ -1411,7 +1418,7 @@ Converts text into glyph indexes.
 textToGlyphs(text: string, glyphCount?: int): Array<int> | undefined
 ```
 
-Converts text into glyph indexes.
+将文本转换为字形索引。
 
 **Since:** 23
 
@@ -1425,18 +1432,18 @@ Converts text into glyph indexes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text string. |
-| glyphCount | int | No | Number of glyphs represented by the text. The value must be the same as the value obtained from countText. The default value is the number of characters in the text string. The value is an integer. |
+| text | string | Yes | 待转换为字形索引的文本字符串。 |
+| glyphCount | int | No | 文本表示的字符数量，必须与[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取的值相等。 当不传该参数，或者glyphCount传入undefined时，默认为text的字符数量，该参数为整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;int&gt; | Returns the storage for glyph indices. |
+| Array&lt;int&gt; | 返回转换得到的字形索引数组。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

@@ -1,5 +1,11 @@
 # convertToPixelMap
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from 'kits/@kit.ImageKit';
+```
+
 ## convertToPixelMap
 
 ```TypeScript
@@ -20,7 +26,7 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the src pixelmap. |
+| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | the src pixelmap. |
 
 **返回值：**
 
@@ -32,10 +38,10 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
+| 401 | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 62980104 | Failed to initialize the internal object. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

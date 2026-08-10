@@ -1,19 +1,24 @@
 # setWatermarkImage
 
+## Modules to Import
+
+```TypeScript
+import { securityManager } from 'kits/@kit.MDMKit';
+```
+
 ## setWatermarkImage
 
 ```TypeScript
 function setWatermarkImage(admin: Want, bundleName: string, source: string | image.PixelMap, accountId: number): void
 ```
 
-Sets a watermark policy for a specified application of a specified user. Currently, a maximum of 100 policies can be saved.
-    **NOTE**  
-    
-    1. This API is intended for setting watermarks on third-party applications in enterprise scenarios to reduce the  
-    risk of information leakage. You are not advised to set watermarks for system applications (such as the home  
-    screen application), as unknown exceptions may occur.  
-    
-    2. The watermark image will be tiled repeatedly to cover the entire application interface.
+为指定用户的指定应用设置水印策略。当前只支持最多保存100个策略。
+
+> **说明：**
+> 
+> 1.本接口适用于企业场景下为三方应用设置水印，降低企业信息泄露风险。不建议为系统应用设置水印（如：桌面应用），可能存在未知异常。
+> 
+> 2.水印图片会以平铺方式重复覆盖整个应用界面。
 
 **Since:** 14
 
@@ -31,21 +36,21 @@ Sets a watermark policy for a specified application of a specified user. Current
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| bundleName | string | Yes | Bundle name of the application for which the watermark is set. |
-| source | string \| image.PixelMap | Yes | string** indicates the image path, which is the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**image.PixelMap** indicates the image object. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The size of the image pixel data cannot exceed 500 KB. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The size of the image pixel data is calculated as follows: Image width (pixels) × Image height (pixels) × Number of bytes per pixel (typically 4). For example, the size of a 100 × 100 image is 100 × 100 × 4 = 40,000 bytes. |
-| accountId | number | Yes | User ID. You can call [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of **@ohos.account.osAccount** to obtain the user ID. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| bundleName | string | Yes | 被设置水印的应用包名。 |
+| source | string \| image.PixelMap | Yes | string表示图像路径，图像路径为应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径。 &lt;br&gt;image.PixelMap表示图像对象。 &lt;br&gt;图像像素占用大小不得超过500KB。 &lt;br&gt;图像像素占用大小计算公式：图像宽度(像素)×图像高度 (像素)×每个像素占用的字节数（通常为4）。例如：一张 100x100 的图片，图像像素占用大小为100×100×4=40000字节。 |
+| accountId | number | Yes | 用户ID。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';
@@ -61,10 +66,10 @@ let bundleName: string = 'com.example.myapplication';
 let source: string = '/data/storage/el1/base/test.png';
 let accountId: number = 100;
 try {
-    securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId);
-    console.info(`Succeeded in setting set watermarkImage policy.`);
+  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId);
+  console.info(`Succeeded in setting watermarkImage policy.`);
 } catch(err) {
-    console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -75,25 +80,17 @@ try {
 function setWatermarkImage(admin: Want, bundleName: string, source: string | image.PixelMap, accountId: number, properties: WatermarkProperties): void
 ```
 
-Sets a watermark policy for a specified application of a specified user. Currently, a maximum of 100 policies can be saved.
-    **NOTE**  
-    
-    This API is intended for setting watermarks on third-party applications in enterprise scenarios to reduce the  
-    risk of information leakage. You are not advised to set watermarks for system applications (such as the home  
-    screen application), as unknown exceptions may occur.  
-    
-    The row and column parameters in the watermark [properties]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ must be  
-    integers in the range [1, 255]. If a value less than 1 or greater than 255 is passed, the API returns error code  
-    9200012.  
-    
-    When both the row count and column count are set to **1**, a single watermark image is displayed at the center of  
-    the screen. When the row count is set to **m** and the column count to **n**, m × n watermark images are  
-    displayed in an m-by-n grid layout. If the specified row and column counts are too large for the grid layout to  
-    fit within the window, the watermark will be repeatedly tiled across the entire application window, starting from  
-    the top-left corner. Any part of the watermark image that exceeds the right or bottom edges of the window will be  
-    clipped. (For example, for a screen size of 1260 × 2720 pixels and a watermark image of 100 × 100 pixels, if the  
-    row count exceeds 27 or the column count exceeds 12, the watermark will be repeatedly tiled to cover the entire  
-    application window.)
+为指定用户的指定应用设置水印策略。当前只支持最多保存100个策略。
+
+> **说明：**
+> 
+> 本接口适用于企业场景下为三方应用设置水印，降低企业信息泄露风险。不建议为系统应用设置水印（如：桌面应用），可能存在未知异常。
+> 
+> 当水印属性[properties](arkts-mdm-securitymanager-watermarkproperties-i.md)行列参数的取值范围是[1, 255]内的整数。若传入小于1或大于255的值，接口会返回错误码920001
+> 2。
+> 
+> 当水印属性行数和列数都为1时，居中显示单个水印图片。当水印属性行数为m，列数为n时，按m行n列的网格布局排列显示m\*n个水印图片。当水印属性行列参数过大，导致网格布局无法适应窗口大小时，水印会以窗口左上角为原点，以平铺方式重
+> 复覆盖整个应用窗口界面，水印图片超出界面右侧、下侧的部分会被裁剪（例如屏幕宽高是1260\*2720，水印图片宽高是100\*100，若设置的行数超过27，或设置的列数超过12，水印会以平铺方式重复覆盖整个应用窗口界面）。
 
 **Since:** 26.0.0
 
@@ -111,18 +108,98 @@ Sets a watermark policy for a specified application of a specified user. Current
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| bundleName | string | Yes | Bundle name of the application for which the watermark is set. |
-| source | string \| image.PixelMap | Yes | string** indicates the image path, which is the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**image.PixelMap** indicates the image object. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The size of the image pixel data cannot exceed 500 KB. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The size of the image pixel data is calculated as follows: Image width (pixels) × Image height (pixels) × Number of bytes per pixel (typically 4). For example, the size of a 100 × 100 image is 100 × 100 × 4 = 40,000 bytes. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of **@ohos.account.osAccount** to obtain the user ID. |
-| properties | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Number of rows and columns for the watermark. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| bundleName | string | Yes | 被设置水印的应用包名。 |
+| source | string \| image.PixelMap | Yes | string表示图像路径，图像路径为应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径。 &lt;br&gt;image.PixelMap表示图像对象。 &lt;br&gt;图像像素占用大小不得超过500KB。 &lt;br&gt;图像像素占用大小计算公式：图像宽度(像素)×图像高度 (像素)×每个像素占用的字节数（通常为4）。例如：一张 100x100 的图片，图像像素占用大小为100×100×4=40000字节。 |
+| accountId | number | Yes | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
+| properties | [WatermarkProperties](arkts-mdm-securitymanager-watermarkproperties-i.md) | Yes | 配置水印的行列数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200012 | Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let source: string = '/data/storage/el1/base/test.png';
+let accountId: number = 100;
+// Set them with actual values. In the sample code, the number of rows and the number of columns are both set to 1 for the watermark, and a single watermark image is displayed in the center.
+let properties: securityManager.WatermarkProperties = {
+  intervalsRow: 1,
+  intervalsCol: 1
+}
+try {
+  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
+  console.info(`Succeeded in setting watermarkImage policy.`);
+} catch(err) {
+  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let source: string = '/data/storage/el1/base/test.png';
+let accountId: number = 100;
+// Set them with actual values. The device screen size is 1260 × 2720, and the watermark image size is 100 × 100. In this example, the watermark properties are set to 27 rows and 12 columns, displaying 27 × 12 watermark images in a 27-row by 12-column grid layout.
+let properties: securityManager.WatermarkProperties = {
+  intervalsRow: 27,
+  intervalsCol: 12
+}
+try {
+  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
+  console.info(`Succeeded in setting watermarkImage policy.`);
+} catch(err) {
+  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let source: string = '/data/storage/el1/base/test.png';
+let accountId: number = 100;
+// Set them with actual values. The device screen size is 1260 × 2720, and the watermark image size is 100 × 100. In this example, the watermark properties are set to 28 rows and 12 columns. Since 28 × 100 > 2720, the grid layout cannot fit within the window. As a result, the watermark will be repeatedly tiled across the entire application window, starting from the top-left corner. Any watermark image that exceeds the right or bottom edges of the window will be clipped.
+let properties: securityManager.WatermarkProperties = {
+  intervalsRow: 28,
+  intervalsCol: 12
+}
+try {
+  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
+  console.info(`Succeeded in setting watermarkImage policy.`);
+} catch(err) {
+  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
 

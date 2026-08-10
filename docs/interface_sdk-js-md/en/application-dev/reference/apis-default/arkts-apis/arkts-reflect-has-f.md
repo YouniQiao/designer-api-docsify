@@ -6,7 +6,7 @@
 function has(target: object, propertyKey: PropertyKey): boolean
 ```
 
-Equivalent to \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
+Equivalent to `propertyKey in target`.
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -17,7 +17,7 @@ Equivalent to \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| propertyKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |  |
 
 **Return value:**
 

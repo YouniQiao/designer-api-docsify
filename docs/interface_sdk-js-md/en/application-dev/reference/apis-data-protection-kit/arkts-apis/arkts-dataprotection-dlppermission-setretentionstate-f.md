@@ -1,12 +1,18 @@
 # setRetentionState
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## setRetentionState
 
 ```TypeScript
 function setRetentionState(docUris: Array<string>): Promise<void>
 ```
 
-Sets the retention state for sandbox applications. By default, when a DLP file is opened, the system automatically creates a sandbox environment. After the file is closed, the sandbox is automatically destroyed.After the retention state is set, the sandbox environment is retained even if the DLP file is closed, allowing the system to quickly reopen the same DLP file. This is applicable to scenarios where the same DLP file needs to be frequently operated, improving the file opening efficiency. This API uses a promise to return the result.
+设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用Promise异步回调。
 
 **Since:** 10
 
@@ -20,41 +26,36 @@ Sets the retention state for sandbox applications. By default, when a DLP file i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| docUris | Array&lt;string&gt; | Yes | URIs of the files to be set with the retention state. The length of the array is not limited. Each string contains a maximum of 4095 bytes. If the string is out of range, error code 401 is thrown. |
+| docUris | Array&lt;string&gt; | Yes | 表示需要设置保留状态的文件uri列表。不对Array长度进行限制，每个string不超过4095字节，超出此范围抛出错误码401。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100006](../errorcode-dlp.md#19100006-access-denied-for-a-nondlp-sandbox-application) | No permission to call this API, which is available only for DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100006 | No permission to call this API, which is available only for DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-async function ExampleFunction() {
-  let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-  try {
-    let inSandbox = await dlpPermission.isInSandbox(); // Check whether the application is running in a sandbox.
-    if (inSandbox) {
-      dlpPermission.setRetentionState([uri]); // Set the retention state for a sandbox application.
-    }
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
+dlpPermission.isInSandbox().then(async (inSandbox) => {
+  if (inSandbox) {
+    await dlpPermission.setRetentionState([uri]); // Set the sandbox retention state.
   }
-}
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+}); // Whether the application is running in a sandbox.
 ```
 
 
@@ -64,7 +65,7 @@ async function ExampleFunction() {
 function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Sets the retention state for sandbox applications. By default, when a DLP file is opened, the system automatically creates a sandbox environment. After the file is closed, the sandbox is automatically destroyed.After the retention state is set, the sandbox environment is retained even if the DLP file is closed, allowing the system to quickly reopen the same DLP file. This is applicable to scenarios where the same DLP file needs to be frequently operated, improving the file opening efficiency.
+设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用callback异步回调。
 
 **Since:** 10
 
@@ -78,37 +79,36 @@ Sets the retention state for sandbox applications. By default, when a DLP file i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| docUris | Array&lt;string&gt; | Yes | URIs of the files to be set with the retention state. The length of the array is not limited. Each string contains a maximum of 4095 bytes. If the string is out of range, error code 401 is thrown. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| docUris | Array&lt;string&gt; | Yes | 表示需要设置保留状态的文件uri列表。不对Array长度进行限制，每个string长度不超过4095字节，超出此范围抛出错误码401。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。err为undefined时表示设置成功；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100006](../errorcode-dlp.md#19100006-access-denied-for-a-nondlp-sandbox-application) | No permission to call this API, which is available only for DLP sandbox applications. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 19100001 | Invalid parameter value. |
+| 19100006 | No permission to call this API, which is available only for DLP sandbox applications. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-try {
-  dlpPermission.setRetentionState([uri], (err, res) => {
-    if (err != undefined) {
-      console.error('setRetentionState error,', err.code, err.message);
-    } else {
-      console.info('setRetentionState success');
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Set the sandbox retention state.
-} catch (err) {
-  console.error('setRetentionState error,', (err as BusinessError).code, (err as BusinessError).message);
-}
+dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
+  if (inSandbox) {
+    dlpPermission.setRetentionState([uri], (err) => {
+      if (err) {
+        console.error(`Failed to set retention state. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('setRetentionState success');
+      }
+    }); // Set the sandbox retention state.
+  }
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
 ```
 

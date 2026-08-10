@@ -1,6 +1,6 @@
 # PushParameterForStage (System API)
 
-Plugin component push parameters which is used in push function.
+用于设置Stage模型下使用pluginComponentManager.push方法时需要传递的参数。
 
 **Since:** 23
 
@@ -12,15 +12,21 @@ Plugin component push parameters which is used in push function.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+```
+
 ## data
 
 ```TypeScript
 data: KVObject
 ```
 
-Defines data.
+组件数据，以键值对形式存储。用于向组件使用方传递业务数据，如页面路径（key为'js'，value为模板路径字符串）及自定义数据字段。
 
-**Type:** KVObject
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -40,9 +46,9 @@ Defines data.
 extraData: KVObject
 ```
 
-Defines extraData.
+附加数据，用于在发送组件时传递额外的自定义数据，与组件数据（data）区分，可根据业务需要设置。
 
-**Type:** KVObject
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -62,7 +68,7 @@ Defines extraData.
 jsonPath?: string
 ```
 
-Defines jsonPath.
+存放模板路径的external.json文件的路径。当需要从external.json文件加载模板路径而非通过Push通信发送模板时传入此参数。当jsonPath字段不为空时不触发Push通信，组件模板路径从external.json文件中读取；当jsonPath为空（默认）时，通过Push通信向组件使用方发送组件模板。
 
 **Type:** string
 
@@ -84,7 +90,7 @@ Defines jsonPath.
 name: string
 ```
 
-Defines name.
+组件名称，当jsonPath不为空时需与external.json文件中的键名一致。
 
 **Type:** string
 
@@ -106,9 +112,9 @@ Defines name.
 owner: Want
 ```
 
-Defines owner.
+组件提供方Ability信息。
 
-**Type:** Want
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
 
@@ -128,9 +134,9 @@ Defines owner.
 target: Want
 ```
 
-Defines target.
+组件使用方Ability信息。
 
-**Type:** Want
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
 

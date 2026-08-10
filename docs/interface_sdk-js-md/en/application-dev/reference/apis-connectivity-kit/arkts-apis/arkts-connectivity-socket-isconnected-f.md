@@ -1,5 +1,11 @@
 # isConnected
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isConnected
 
 ```TypeScript
@@ -20,7 +26,7 @@ Check whether the current socket connection has been established.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates client socket. |
+| clientSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates client socket. |
 
 **Return value:**
 
@@ -28,7 +34,7 @@ Check whether the current socket connection has been established.
 | --- | --- |
 | boolean | Indicates whether or not it is connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

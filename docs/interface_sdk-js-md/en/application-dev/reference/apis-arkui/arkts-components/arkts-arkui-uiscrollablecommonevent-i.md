@@ -1,8 +1,8 @@
 # UIScrollableCommonEvent
 
-Defines a UIScrollableCommonEvent which is used to set event to target component.
+用于设置滚动事件回调。
 
-**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](../arkts-apis/arkts-arkui-component/common-uicommonevent-i.md)
+**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md)
 
 **Since:** 19
 
@@ -18,7 +18,9 @@ Defines a UIScrollableCommonEvent which is used to set event to target component
 setOnReachEnd(callback: Callback<void> | undefined): void
 ```
 
-Set or reset the callback which is triggered when the scrolling reaches the end position.
+设置[onReachEnd](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachend11)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -36,7 +38,7 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the end position. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | onReachEnd事件的回调函数。 |
 
 ## setOnReachStart
 
@@ -44,7 +46,9 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 setOnReachStart(callback: Callback<void> | undefined): void
 ```
 
-Set or reset the callback which is triggered when the scrolling reaches the start position.
+设置[onReachStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachstart11)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -62,7 +66,7 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the start position. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | onReachStart事件的回调函数。 |
 
 ## setOnScrollFrameBegin
 
@@ -70,7 +74,9 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 ```
 
-Set or reset the callback which is triggered when scrolling begin each frame.
+设置[onScrollFrameBegin](../arkts-apis/arkts-arkui-scroll-scrollattribute-i.md/arkts-arkui-scroll-scrollattribute-i.md#onscrollframebegin)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -88,7 +94,7 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | callback function, triggered when the scrolling begin each frame. |
+| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) \| undefined | Yes | onScrollFrameBegin事件的回调函数。 |
 
 ## setOnScrollStart
 
@@ -96,7 +102,9 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 setOnScrollStart(callback: Callback<void> | undefined): void
 ```
 
-Set or reset the callback which is triggered when the scrolling started.
+设置[onScrollStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstart11)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -114,7 +122,7 @@ Set or reset the callback which is triggered when the scrolling started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling started. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | onScrollStart事件的回调函数。 |
 
 ## setOnScrollStop
 
@@ -122,7 +130,9 @@ Set or reset the callback which is triggered when the scrolling started.
 setOnScrollStop(callback: Callback<void> | undefined): void
 ```
 
-Set or reset the callback which is triggered when the scrolling stoped.
+设置[onScrollStop](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstop11)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -140,5 +150,5 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling stoped. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | onScrollStop事件的回调函数。 |
 

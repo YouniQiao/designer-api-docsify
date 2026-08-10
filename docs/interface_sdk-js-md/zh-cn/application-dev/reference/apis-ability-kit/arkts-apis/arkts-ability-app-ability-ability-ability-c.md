@@ -1,9 +1,9 @@
 # Ability
 
-Ability类是应用生命周期调度的基本单元，是[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_和  
-[ExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_的基类，提供系统配置更新回调和系统内存级别变化回调能力。该基类不支持开发者直接继承，开发者应根据具体的业务场景选择使用[UIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_或  
-[ExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_，相关指南参见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-app-ability-uiability.md)和  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的基类，提供系统配置更新回调和系统内存级别变化回调能力。该基类不支持开发者直接继承，开发者应根据具体的业务场景选择使用[UIAbility](arkts-app-ability-uiability.md)或  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)，相关指南参见  
+[Ability Kit简介](../../../application-models/abilitykit-overview.md)。
 
 **起始版本：** 9
 
@@ -13,6 +13,12 @@ Ability类是应用生命周期调度的基本单元，是[UIAbility]\_\_\_JSDOC
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## 导入模块
+
+```TypeScript
+import { Ability } from 'kits/@kit.AbilityKit';
+```
+
 ## onConfigurationUpdate
 
 ```TypeScript
@@ -20,11 +26,12 @@ onConfigurationUpdate(newConfig: Configuration): void
 ```
 
 当系统环境变量发生变化时，系统会触发该回调。开发者可以重写该回调实现对系统环境变量变化时的响应，例如当系统语言类型发生变化时，应用可以在回调中进行定制化的处理等。
-    **说明：**  
-    
-    该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口设置  
-    应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+
+> **说明：**
+> 
+> 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口设置
+> 应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见
+> [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
 **起始版本：** 9
 
@@ -42,9 +49,9 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| newConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示更新后的配置信息。 |
+| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 | 表示更新后的配置信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Ability是顶层基类，不支持开发者直接继承。故以派生类UIAbility举例说明。
@@ -64,9 +71,10 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
 当整机可用内存变化到指定程度时，系统会触发该回调。开发者可以重写该回调实现对内存级别变化的响应，例如释放缓存数据等。
-    **说明：**  
-    
-    onMemoryLevel回调运行在当前进程的主线程中，如果在该回调中做耗时的UI组件释放，会阻塞主线程任务，因此不建议在该回调中释放UI组件。
+
+> **说明：**
+> 
+> onMemoryLevel回调运行在当前进程的主线程中，如果在该回调中做耗时的UI组件释放，会阻塞主线程任务，因此不建议在该回调中释放UI组件。
 
 **起始版本：** 9
 
@@ -84,9 +92,9 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Ability是顶层基类，不支持开发者直接继承。故以派生类UIAbility举例说明。

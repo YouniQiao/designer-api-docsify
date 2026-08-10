@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## getParent
 
 ```TypeScript
@@ -37,8 +43,8 @@ getParent(): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900005 | I/O error |
-| 13900042 | Unknown error |
 | 14300002 | Invalid URI |
+| 13900042 | Unknown error |
 
 ## lock
 
@@ -73,9 +79,9 @@ lock(exclusive?: boolean): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
@@ -99,16 +105,16 @@ lock(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
@@ -133,16 +139,16 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | exclusive | boolean | 是 | 是否施加独占锁。true：施加独占锁；false：不施加独占锁。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
@@ -173,9 +179,9 @@ tryLock(exclusive?: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
@@ -200,9 +206,9 @@ unlock(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 

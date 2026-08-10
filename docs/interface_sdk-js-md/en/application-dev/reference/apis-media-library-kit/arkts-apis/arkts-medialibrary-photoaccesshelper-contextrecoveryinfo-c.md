@@ -10,6 +10,12 @@ Describes the information about the context of exiting the PhotoPicker. It can b
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## albumUri
 
 ```TypeScript
@@ -19,7 +25,7 @@ albumUri: string
 URI of the album in the media library when the user selects an image and exits.
 
 - If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string.  
-- If the user exits after selecting from search results, text recommendations, or avatar recommendations, the  
+- If the user exits after selecting from search results, text recommendations, or avatar recommendations, the   
 next restoration is not supported, and the returned **albumUri** is an empty string.
 
 The default value is an empty string.
@@ -62,10 +68,10 @@ File name of the top-left image in the grid interface when the user last selecte
 fileSize?: int
 ```
 
-File size of the top-left image in the grid interface when the user last selected an image. The default value is  
+File size of the top-left image in the grid interface when the user last selected an image. The default value is   
 **0**.Unit: Byte, The value must be an integer greater than or equal to 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -87,7 +93,7 @@ gridLevel?: GridLevel
 
 Level of the grid when the user exits last time.
 
-**Type:** GridLevel
+**Type:** [GridLevel](arkts-medialibrary-photoaccesshelper-gridlevel-e.md)
 
 **Since:** 23
 
@@ -107,12 +113,12 @@ Level of the grid when the user exits last time.
 recommendationType: int
 ```
 
-Enumerated value of the recommended content set by the user during the last selection. For details, see  
-[RecommendationType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Enumerated value of the recommended content set by the user during the last selection. For details, see   
+[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).
 
 If no recommendation was set during the last selection, the default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -130,12 +136,12 @@ If no recommendation was set during the last selection, the default value is **0
 selectedRecommendationType: int
 ```
 
-Enumerated value of the recommended content selected by the user during the last selection. For details, see  
-[RecommendationType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Enumerated value of the recommended content selected by the user during the last selection. For details, see   
+[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).
 
 If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 
@@ -182,7 +188,7 @@ Time of the top-left image in the grid interface when the user last selected an 
 
 Unit: ms, The value must be greater than or equal to 0.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 21
 
@@ -204,7 +210,7 @@ Version number of the state data, used to verify the compatibility of the state 
 
 The version number must be greater than or equal to 1.0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 21
 

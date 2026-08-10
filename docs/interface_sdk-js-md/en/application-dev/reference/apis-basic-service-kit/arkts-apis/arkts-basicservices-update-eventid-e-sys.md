@@ -1,6 +1,6 @@
 # EventId (System API)
 
-Enumerates event IDs.
+事件ID。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Enumerates event IDs.
 EVENT_TASK_BASE = EventClassify.TASK
 ```
 
-Task event.
+任务事件。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Task event.
 EVENT_TASK_RECEIVE = 0x01000001
 ```
 
-Task received.
+收到任务。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Task received.
 EVENT_TASK_CANCEL = 0x01000002
 ```
 
-Task cancelled.
+取消任务。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Task cancelled.
 EVENT_DOWNLOAD_WAIT = 0x01000003
 ```
 
-Waiting for download.
+待下载。
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ Waiting for download.
 EVENT_DOWNLOAD_START = 0x01000004
 ```
 
-Download started.
+开始下载。
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Download started.
 EVENT_DOWNLOAD_UPDATE = 0x01000005
 ```
 
-Download progress update.
+下载进度更新。
 
 **Since:** 9
 
@@ -126,7 +126,7 @@ Download progress update.
 EVENT_DOWNLOAD_PAUSE = 0x01000006
 ```
 
-Download paused.
+下载暂停。
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ Download paused.
 EVENT_DOWNLOAD_RESUME = 0x01000007
 ```
 
-Download resumed.
+恢复下载。
 
 **Since:** 9
 
@@ -162,7 +162,7 @@ Download resumed.
 EVENT_DOWNLOAD_SUCCESS = 0x01000008
 ```
 
-Download succeeded.
+下载成功。
 
 **Since:** 9
 
@@ -180,7 +180,7 @@ Download succeeded.
 EVENT_DOWNLOAD_FAIL = 0x01000009
 ```
 
-Download failed.
+下载失败。
 
 **Since:** 9
 
@@ -198,7 +198,7 @@ Download failed.
 EVENT_UPGRADE_WAIT = 0x0100000a
 ```
 
-Waiting for upgrade.
+待升级。
 
 **Since:** 9
 
@@ -216,7 +216,7 @@ Waiting for upgrade.
 EVENT_UPGRADE_START = 0x0100000b
 ```
 
-Upgrade started.
+开始升级。
 
 **Since:** 9
 
@@ -234,7 +234,7 @@ Upgrade started.
 EVENT_UPGRADE_UPDATE = 0x0100000c
 ```
 
-Upgrade in progress.
+升级中。
 
 **Since:** 9
 
@@ -252,7 +252,7 @@ Upgrade in progress.
 EVENT_APPLY_WAIT = 0x0100000d
 ```
 
-Waiting for applying the upgrade.
+待生效。
 
 **Since:** 9
 
@@ -270,7 +270,7 @@ Waiting for applying the upgrade.
 EVENT_APPLY_START = 0x0100000e
 ```
 
-Applying the upgrade.
+开始生效。
 
 **Since:** 9
 
@@ -288,7 +288,7 @@ Applying the upgrade.
 EVENT_UPGRADE_SUCCESS = 0x0100000f
 ```
 
-Upgrade succeeded.
+升级成功。
 
 **Since:** 9
 
@@ -306,7 +306,7 @@ Upgrade succeeded.
 EVENT_UPGRADE_FAIL = 0x01000010
 ```
 
-Update failed.
+升级失败。
 
 **Since:** 9
 

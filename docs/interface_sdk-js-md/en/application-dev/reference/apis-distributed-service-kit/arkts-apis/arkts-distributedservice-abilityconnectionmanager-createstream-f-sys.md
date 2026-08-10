@@ -1,5 +1,11 @@
 # createStream (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## createStream
 
 ```TypeScript
@@ -24,26 +30,26 @@ Creating a Stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Ability connection Session id. |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Transport Stream Parameters |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Ability connection Session id. |
+| param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | Yes | Transport Stream Parameters |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | The promise returned by the function, contain the ID of a transport stream. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returned by the function, contain the ID of a transport stream. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) | Only one stream can be created for the current session. |
-| [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-bit-rate-not-supported) | Bitrate not supported. |
-| [32300004](../../apis-distributedservice-kit/errorcode-device-manager.md#32300004-color-space-not-supported) | Color space not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 32300004 | Color space not supported. |
+| 202 | Not system App. |
+| 32300001 | Only one stream can be created for the current session. |
+| 32300003 | Bitrate not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

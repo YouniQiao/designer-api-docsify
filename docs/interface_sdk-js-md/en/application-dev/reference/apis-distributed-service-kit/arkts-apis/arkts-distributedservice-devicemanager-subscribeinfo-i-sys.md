@@ -1,6 +1,6 @@
 # SubscribeInfo (System API)
 
-Defines subscription information.
+发现信息。
 
 **Since:** 7
 
@@ -14,15 +14,21 @@ Defines subscription information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## capability
 
 ```TypeScript
 capability: SubscribeCap
 ```
 
-Discovery capability.
+发现能力。
 
-**Type:** SubscribeCap
+**Type:** [SubscribeCap](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)
 
 **Since:** 7
 
@@ -42,9 +48,9 @@ Discovery capability.
 freq: ExchangeFreq
 ```
 
-Frequency of device discovery.
+发现频率。
 
-**Type:** ExchangeFreq
+**Type:** [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)
 
 **Since:** 7
 
@@ -64,7 +70,7 @@ Frequency of device discovery.
 isSameAccount: boolean
 ```
 
-Whether the account is the same as the current account. The value **true** indicates the same account and the value **false** indicates a different account.
+是否同账号，true表示同账号，false表示异账号。
 
 **Type:** boolean
 
@@ -86,7 +92,7 @@ Whether the account is the same as the current account. The value **true** indic
 isWakeRemote: boolean
 ```
 
-Whether to wake up the device. The value **true** means to wake up the device and the value **false** means the opposite.
+是否唤醒设备，true表示唤醒，false表示不用唤醒。
 
 **Type:** boolean
 
@@ -108,9 +114,9 @@ Whether to wake up the device. The value **true** means to wake up the device an
 medium: ExchangeMedium
 ```
 
-Medium used for device discovery.
+发现类型。
 
-**Type:** ExchangeMedium
+**Type:** [ExchangeMedium](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md)
 
 **Since:** 7
 
@@ -130,9 +136,9 @@ Medium used for device discovery.
 mode: DiscoverMode
 ```
 
-Device discovery mode.
+发现模式。
 
-**Type:** DiscoverMode
+**Type:** [DiscoverMode](arkts-distributedservice-devicemanager-discovermode-e-sys.md)
 
 **Since:** 7
 
@@ -152,7 +158,7 @@ Device discovery mode.
 subscribeId: number
 ```
 
-Subscription ID, used to identify a device discovery period. The value ranges from 1 to 65535.
+发现标识，用于标识不同的发现周期。 取值范围1~65535。
 
 **Type:** number
 

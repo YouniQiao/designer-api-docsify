@@ -18,7 +18,7 @@ index: ExchangeIndex
 
 交换位置。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
 
-**类型：** ExchangeIndex
+**类型：** [ExchangeIndex](arkts-arkui-exchangeindex-i.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ key?: ExchangeKey
 
 分配新的键值，默认使用原键值。
 
-**类型：** ExchangeKey
+**类型：** [ExchangeKey](arkts-arkui-exchangekey-i.md)
 
 **起始版本：** 12
 

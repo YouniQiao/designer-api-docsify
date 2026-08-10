@@ -1,6 +1,6 @@
 # RemindType (System API)
 
-Specify the remind type, see \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Specify the remind type, see {@link updateRemindPolicy}.
 
 **Since:** 10
 

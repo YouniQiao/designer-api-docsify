@@ -1,6 +1,6 @@
 # Single
 
-单曲的定义。继承自[MediaEntity]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+单曲的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
 
 **继承/实现关系：** Single extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## downloadProgress
 
 ```TypeScript
@@ -20,7 +26,7 @@ downloadProgress?: int
 
 歌曲下载进度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -40,7 +46,7 @@ downloadStatus?: DownloadStatus
 
 歌曲下载状态。
 
-**类型：** DownloadStatus
+**类型：** [DownloadStatus](arkts-avsession-avmusictemplate-downloadstatus-e.md)
 
 **起始版本：** 23
 
@@ -60,7 +66,7 @@ favSubscribeData: FavoriteData
 
 收藏或订阅的信息。
 
-**类型：** FavoriteData
+**类型：** [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md)
 
 **起始版本：** 23
 
@@ -100,7 +106,7 @@ playInfo: PlayInfo
 
 播放歌曲信息。
 
-**类型：** PlayInfo
+**类型：** [PlayInfo](arkts-avsession-avmusictemplate-playinfo-i.md)
 
 **起始版本：** 23
 
@@ -120,7 +126,7 @@ settings?: SettingItem[]
 
 歌曲设置项的数组。
 
-**类型：** SettingItem[]
+**类型：** [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]
 
 **起始版本：** 23
 

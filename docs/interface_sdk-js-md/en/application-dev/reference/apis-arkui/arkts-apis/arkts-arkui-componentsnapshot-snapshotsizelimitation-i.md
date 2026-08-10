@@ -10,6 +10,12 @@ Defines the size limitation for component snapshot taking.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
+
 ## maxHeight
 
 ```TypeScript

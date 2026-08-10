@@ -1,5 +1,11 @@
 # removeAllNetwork (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## removeAllNetwork
 
 ```TypeScript
@@ -30,7 +36,7 @@ Removes all the saved Wi-Fi configurations.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

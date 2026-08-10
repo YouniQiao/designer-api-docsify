@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## desiredAuxiliaryPictures
 
 ```TypeScript
 desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 ```
 
-设置AuxiliaryPicture类型，当未指定或传入空的Array时，系统会解码所有可用的AuxiliaryPicture类型。
+设置AuxiliaryPicture类型，当未指定或传入空的Array时，系统会解码所有可用的AuxiliaryPicture类型。 
 
 如果不希望解码任何辅助图，可以直接解码为PixelMap，使用PixelMap创建仅包含主图的Picture。
 
@@ -36,13 +42,13 @@ desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 desiredPixelFormat?: PixelMapFormat
 ```
 
-解码的像素格式。默认值为RGBA\_8888。
+解码的像素格式。默认值为RGBA_8888。
 
-仅支持设置：RGBA\_8888、BGRA\_8888、RGB\_565、NV12及NV21。
+仅支持设置：RGBA_8888、BGRA_8888、RGB_565、NV12及NV21。
 
 当设置其他不支持的像素格式时，返回解码失败。
 
-**类型：** PixelMapFormat
+**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **起始版本：** 24
 
@@ -66,7 +72,7 @@ desiredSizeForMainPixelMap?: Size
 
 辅助图的宽度与高度均与主图按照同比例进行相应拉伸/缩放。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 24
 

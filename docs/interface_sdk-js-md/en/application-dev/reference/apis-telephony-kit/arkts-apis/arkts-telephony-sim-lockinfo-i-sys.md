@@ -12,6 +12,12 @@ Defines the personalized lock information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## lockType
 
 ```TypeScript
@@ -20,7 +26,7 @@ lockType: LockType
 
 Indicates the lock type.
 
-**Type:** LockType
+**Type:** [LockType](arkts-telephony-sim-locktype-e-sys.md)
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ state: LockState
 
 Indicates the lock state.
 
-**Type:** LockState
+**Type:** [LockState](arkts-telephony-sim-lockstate-e-sys.md)
 
 **Since:** 8
 

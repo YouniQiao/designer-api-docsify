@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
@@ -38,7 +44,7 @@ pairingType: PairingType
 
 配对类型。
 
-**类型：** PairingType
+**类型：** [PairingType](arkts-connectivity-remotedevice-pairingtype-e.md)
 
 **起始版本：** 26.0.0
 

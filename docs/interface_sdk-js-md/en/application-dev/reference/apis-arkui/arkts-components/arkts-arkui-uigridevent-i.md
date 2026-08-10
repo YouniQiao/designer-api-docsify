@@ -1,9 +1,10 @@
 # UIGridEvent
 
-Represents the return value of the  
-[getEvent('Grid')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method in **frameNode**,which can be used to set scroll events for a **Grid** node.
+frameNode中[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent)方法的返回值，可用于给Grid节点设置滚动事件。
 
-**Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](../arkts-apis/arkts-arkui-component/common-uiscrollablecommonevent-i.md)
+UIGridEvent继承于[UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)。
+
+**Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)
 
 **Since:** 19
 
@@ -19,10 +20,9 @@ Represents the return value of the
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-Sets the callback for the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ event.
+设置[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)事件的回调。
 
-If the input parameter is **undefined**, the event callback is reset.
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -40,7 +40,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Callback for the **onDidScroll** event. |
+| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | onDidScroll事件的回调函数。传入undefined时，会重置事件回调。 |
 
 ## setOnScrollIndex
 
@@ -48,10 +48,9 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 ```
 
-Sets the callback of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ event.
+设置[onScrollIndex](GridAttribute#onScrollIndex)事件的回调。
 
-If the input parameter is **undefined**, the event callback is reset.
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -69,7 +68,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Callback for the **onScrollIndex** event. |
+| callback | [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) \| undefined | Yes | onScrollIndex事件的回调函数。传入undefined时，会重置事件回调。 |
 
 ## setOnWillScroll
 
@@ -77,10 +76,9 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-Sets the callback for the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ event.
+设置[onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12)事件的回调。
 
-If the input parameter is **undefined**, the event callback is reset.
+方法入参为undefined时，会重置事件回调。
 
 **Since:** 19
 
@@ -98,5 +96,5 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Callback for the **onWillScroll** event. |
+| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | onWillScroll事件的回调函数。传入undefined时，会重置事件回调。 |
 

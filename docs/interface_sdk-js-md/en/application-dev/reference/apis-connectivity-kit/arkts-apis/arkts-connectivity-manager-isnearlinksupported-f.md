@@ -1,12 +1,18 @@
 # isNearLinkSupported
 
+## Modules to Import
+
+```TypeScript
+import { manager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isNearLinkSupported
 
 ```TypeScript
 function isNearLinkSupported(): boolean
 ```
 
-Check whether the current device supports NearLink.
+检查当前设备是否支持星闪。
 
 **Since:** 26.0.0
 
@@ -22,5 +28,5 @@ Check whether the current device supports NearLink.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return whether the NearLink is supported. |
+| boolean | 返回是否支持星闪。 |
 

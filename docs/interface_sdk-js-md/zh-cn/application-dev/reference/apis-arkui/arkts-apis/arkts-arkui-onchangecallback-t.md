@@ -20,5 +20,5 @@ declare type OnChangeCallback = (value: boolean) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 复选框/开关/单选按钮的值。  |
+| value | boolean | 是 | 复选框/开关/单选按钮的值。 |
 

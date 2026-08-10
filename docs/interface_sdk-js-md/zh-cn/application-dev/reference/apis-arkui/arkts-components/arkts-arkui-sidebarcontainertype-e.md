@@ -20,8 +20,8 @@ Embed = 0
 
 整体容器大小不变时，显示侧边栏会导致内容区缩小，隐藏侧边栏会扩大内容区。
 
-组件尺寸小于[minContentWidth]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ +  
-[minSideBarWidth]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，并且未设置showSideBar时，默认不显示侧边栏。
+组件尺寸小于[minContentWidth](SideBarContainerAttribute#minContentWidth) +  
+[minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number))，并且未设置showSideBar时，默认不显示侧边栏。
 
 设置了showSideBar属性时，以showSideBar属性设置的值为准。
 
@@ -45,7 +45,7 @@ Embed = 0
 Overlay = 1
 ```
 
-侧边栏浮在内容区上面，不会影响内容区的大小。适用于需要临时展示侧边栏的场景。\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_组件尺寸小于minContentWidth时，内容区会被截断显示。
+侧边栏浮在内容区上面，不会影响内容区的大小。适用于需要临时展示侧边栏的场景。&lt;br/&gt;组件尺寸小于minContentWidth时，内容区会被截断显示。
 
 **起始版本：** 8
 

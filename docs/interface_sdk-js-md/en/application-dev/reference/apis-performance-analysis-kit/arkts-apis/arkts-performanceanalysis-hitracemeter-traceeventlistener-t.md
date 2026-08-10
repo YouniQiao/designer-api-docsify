@@ -4,7 +4,7 @@
 type TraceEventListener = (traceStatus: boolean) => void
 ```
 
-Defines a callback to listen for whether the trace capture is enabled.
+定义应用trace捕获开关状态切换时的回调函数类型。
 
 **Since:** 22
 
@@ -20,5 +20,5 @@ Defines a callback to listen for whether the trace capture is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| traceStatus | boolean | Yes | Whether the trace capture is enabled for the current application. The value **true** indicates that the trace capture is enabled, and **false** indicates the opposite.  |
+| traceStatus | boolean | Yes | 当前应用trace捕获开关状态。 true：开启；false：关闭。 |
 

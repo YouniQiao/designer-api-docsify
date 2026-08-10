@@ -1,12 +1,18 @@
 # getAppNet
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## getAppNet
 
 ```TypeScript
 function getAppNet(callback: AsyncCallback<NetHandle>): void
 ```
 
-Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ bound to a process using \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
 
 **Since:** 9
 
@@ -20,17 +26,17 @@ Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ bound to a process using \_\_\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NetHandle&gt; | Yes | Returns the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ bound to the process; returns {@code null} if no \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is bound to the process.For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Returns the {@link NetHandle} bound to the process; returns {@code null} if no {@link NetHandle} is bound to the process.For details, see {@link NetHandle}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 401 | Parameter error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -52,7 +58,7 @@ connection.getAppNet((error: BusinessError, data: connection.NetHandle) => {
 function getAppNet(): Promise<NetHandle>
 ```
 
-Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ bound to a process using \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
 
 **Since:** 9
 
@@ -72,10 +78,10 @@ Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ bound to a process using \_\_\
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

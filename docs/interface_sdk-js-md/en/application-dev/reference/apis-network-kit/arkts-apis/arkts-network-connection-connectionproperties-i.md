@@ -10,6 +10,12 @@ Defines the network connection properties.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## dnses
 
 ```TypeScript
@@ -130,7 +136,7 @@ mtu: int
 
 Maximum transmission unit.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

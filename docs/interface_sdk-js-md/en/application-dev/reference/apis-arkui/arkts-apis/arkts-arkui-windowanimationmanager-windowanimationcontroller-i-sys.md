@@ -1,6 +1,6 @@
 # WindowAnimationController (System API)
 
-Window animation controller.
+窗口动画控制器。在创建一个WindowAnimationController对象时，需要实现其中的所有回调函数。
 
 **Since:** 9
 
@@ -12,6 +12,12 @@ Window animation controller.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
+```
+
 ## onAppTransition
 
 ```TypeScript
@@ -19,7 +25,7 @@ onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowA
       finishCallback: WindowAnimationFinishedCallback): void
 ```
 
-Called on application transition.
+应用转场时的回调。
 
 **Since:** 9
 
@@ -37,11 +43,11 @@ Called on application transition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window target of the source application. |
-| toWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window target of the destination application. |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback. |
+| fromWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 转场前的动画窗口。 |
+| toWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 转场后的动画窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
 
-**Example**
+## Examples
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
@@ -51,7 +57,7 @@ For details, see the sample code under [windowAnimationManager.setController](#w
 onAppTransition?: AppTransitionCallback
 ```
 
-Callback function on application transition.
+应用转场时的回调。
 
 **Since:** 23
 
@@ -69,7 +75,7 @@ Callback function on application transition.
 onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: WindowAnimationFinishedCallback): void
 ```
 
-Called on closing a window.
+关闭窗口时的回调。
 
 **Since:** 9
 
@@ -87,10 +93,10 @@ Called on closing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| closingWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback. |
+| closingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
 
-**Example**
+## Examples
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
@@ -100,7 +106,7 @@ For details, see the sample code under [windowAnimationManager.setController](#w
 onCloseWindow?: WindowCloseCallback
 ```
 
-Callback function on closing a window.
+关闭窗口时的回调。
 
 **Since:** 23
 
@@ -119,7 +125,7 @@ onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
       finishCallback: WindowAnimationFinishedCallback): void
 ```
 
-Called on minimizing a window.
+最小化窗口时的回调。
 
 **Since:** 9
 
@@ -137,10 +143,10 @@ Called on minimizing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimizingWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window target of the minimizing window. |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback. |
+| minimizingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
 
-**Example**
+## Examples
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
@@ -150,7 +156,7 @@ For details, see the sample code under [windowAnimationManager.setController](#w
 onMinimizeWindow?: WindowMinimizationCallback
 ```
 
-Callback function on minimizing a window.
+最小化窗口时的回调。
 
 **Since:** 23
 
@@ -168,7 +174,7 @@ Callback function on minimizing a window.
 onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void
 ```
 
-Called on unlocking the screen.
+屏幕解锁时的回调。
 
 **Since:** 9
 
@@ -186,7 +192,7 @@ Called on unlocking the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
 
 ## onScreenUnlock
 
@@ -194,7 +200,7 @@ Called on unlocking the screen.
 onScreenUnlock?: ScreenUnlockCallback
 ```
 
-Callback function on unlocking the screen.
+屏幕解锁时的回调。
 
 **Since:** 23
 
@@ -213,7 +219,7 @@ onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
       finishCallback: WindowAnimationFinishedCallback): void
 ```
 
-Called on starting an application form launcher.
+从桌面启动应用时的回调。
 
 **Since:** 9
 
@@ -231,10 +237,10 @@ Called on starting an application form launcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates Window target of the starting application. |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback. |
+| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
 
-**Example**
+## Examples
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
@@ -244,7 +250,7 @@ For details, see the sample code under [windowAnimationManager.setController](#w
 onStartAppFromLauncher?: AppStartCallback
 ```
 
-Callback function on starting an application form launcher.
+从桌面启动应用时的回调。
 
 **Since:** 23
 
@@ -263,7 +269,7 @@ onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
       finishCallback: WindowAnimationFinishedCallback): void
 ```
 
-Called on starting an application form other.
+从除了桌面和最近任务列表以外其他地方启动应用时的回调。
 
 **Since:** 9
 
@@ -281,10 +287,10 @@ Called on starting an application form other.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window target of the starting application. |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback. |
+| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调 |
 
-**Example**
+## Examples
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
@@ -294,7 +300,7 @@ For details, see the sample code under [windowAnimationManager.setController](#w
 onStartAppFromOther?: AppStartCallback
 ```
 
-Callback function on starting an application form other.
+从除了桌面和最近任务列表以外其他地方启动应用时的回调。
 
 **Since:** 23
 
@@ -313,7 +319,7 @@ onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
       finishCallback: WindowAnimationFinishedCallback): void
 ```
 
-Called on starting an application form recent.
+从最近任务列表启动应用时的回调。
 
 **Since:** 9
 
@@ -331,10 +337,10 @@ Called on starting an application form recent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Window target of the starting application. |
-| finishCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation finished callback. |
+| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
 
-**Example**
+## Examples
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
@@ -344,7 +350,7 @@ For details, see the sample code under [windowAnimationManager.setController](#w
 onStartAppFromRecent?: AppStartCallback
 ```
 
-Callback function on starting an application form recent.
+从最近任务列表启动应用时的回调。
 
 **Since:** 23
 
@@ -363,7 +369,7 @@ onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
       floatingWindowTargets: Array<WindowAnimationTarget>): void
 ```
 
-Called on window animation targets update.
+动画目标窗口更新时的回调。
 
 **Since:** 9
 
@@ -381,10 +387,10 @@ Called on window animation targets update.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullScreenWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The fullscreen window target. |
-| floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | All the floating window targets. |
+| fullScreenWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 全屏状态的动画目标窗口。 |
+| floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | 悬浮状态的动画目标窗口。 |
 
-**Example**
+## Examples
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
@@ -394,7 +400,7 @@ For details, see the sample code under [windowAnimationManager.setController](#w
 onWindowAnimationTargetsUpdate?: WindowAnimationTargetsUpdationCallback
 ```
 
-Callback function on window animation targets update.
+动画目标窗口更新时的回调。
 
 **Since:** 23
 

@@ -22,13 +22,13 @@ export function bindTextAreaController(node: FrameNode, controller: TextAreaCont
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 目标节点。 |
-| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the controller which is bind to 目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 目标节点。 |
+| controller | [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md) | 是 | the controller which is bind to 目标节点。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| 100021 | The FrameNode is not modifiable. |
+| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 

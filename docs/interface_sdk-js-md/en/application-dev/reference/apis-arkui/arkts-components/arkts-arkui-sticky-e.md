@@ -1,6 +1,6 @@
 # Sticky
 
-Enumerates the sticky effects for list items.
+ListItem吸顶效果枚举。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Enumerates the sticky effects for list items.
 None
 ```
 
-No sticky.
+无吸顶效果。
 
 **Since:** 7
 
@@ -38,7 +38,7 @@ No sticky.
 Normal
 ```
 
-The list item is sticky with no special effects.
+Normal mode
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ The list item is sticky with no special effects.
 Opacity
 ```
 
-The list item is sticky with opacity changes.
+Set opacity.
 
 **Since:** 7
 

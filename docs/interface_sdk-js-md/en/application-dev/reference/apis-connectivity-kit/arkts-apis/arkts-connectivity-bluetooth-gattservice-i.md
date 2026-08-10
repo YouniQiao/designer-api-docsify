@@ -14,13 +14,19 @@ Describes the Gatt service.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## characteristics
 
 ```TypeScript
 characteristics: Array<BLECharacteristic>
 ```
 
-The \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ list belongs to this GattService instance
+The {@link BLECharacteristic} list belongs to this GattService instance
 
 **Type:** Array&lt;BLECharacteristic&gt;
 
@@ -44,7 +50,7 @@ includeServices?: Array<GattService>
 
 The list of GATT services contained in the service
 
-**Type:** Array&lt;GattService&gt;
+**Type:** Array&lt;[GattService](arkts-connectivity-bluetooth-gattservice-i.md)&gt;
 
 **Since:** 7
 

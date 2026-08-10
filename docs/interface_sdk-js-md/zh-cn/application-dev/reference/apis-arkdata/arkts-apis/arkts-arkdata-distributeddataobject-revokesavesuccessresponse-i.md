@@ -1,6 +1,6 @@
 # RevokeSaveSuccessResponse
 
-[revokeSave]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口回调信息。
+[revokeSave](arkts-arkdata-distributeddataobject-dataobject-i.md#revokesave)接口回调信息。
 
 **起始版本：** 9
 
@@ -9,6 +9,12 @@
 <!--Device-distributedDataObject-interface RevokeSaveSuccessResponse--><!--Device-distributedDataObject-interface RevokeSaveSuccessResponse-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+## 导入模块
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
 
 ## sessionId
 

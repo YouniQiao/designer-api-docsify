@@ -1,5 +1,11 @@
 # @ohos.file.AlbumPickerComponent(A component which supports applications to select album)
 
+## Modules to Import
+
+```TypeScript
+import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## Summary
 
 ### Classes

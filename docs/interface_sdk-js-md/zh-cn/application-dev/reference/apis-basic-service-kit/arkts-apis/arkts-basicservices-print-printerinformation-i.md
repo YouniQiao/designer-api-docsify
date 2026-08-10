@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## alias
 
 ```TypeScript
@@ -36,7 +42,7 @@ capability?: PrinterCapabilities
 
 表示打印机能力。
 
-**类型：** PrinterCapabilities
+**类型：** [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
 
 **起始版本：** 14
 
@@ -90,7 +96,7 @@ preferences?: PrinterPreferences
 
 表示打印机首选项。
 
-**类型：** PrinterPreferences
+**类型：** [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
 
 **起始版本：** 18
 
@@ -162,7 +168,7 @@ printerStatus: PrinterStatus
 
 表示当前打印机状态。
 
-**类型：** PrinterStatus
+**类型：** [PrinterStatus](arkts-basicservices-print-printerstatus-e.md)
 
 **起始版本：** 14
 
@@ -182,7 +188,7 @@ selectedDriver?: PpdInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** PpdInfo
+**类型：** [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
 
 **起始版本：** 24
 

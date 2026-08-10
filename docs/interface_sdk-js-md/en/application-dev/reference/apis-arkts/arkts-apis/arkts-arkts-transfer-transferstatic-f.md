@@ -1,12 +1,18 @@
 # transferStatic
 
+## Modules to Import
+
+```TypeScript
+import { transfer } from 'kits/@kit.ArkTS';
+```
+
 ## transferStatic
 
 ```TypeScript
 function transferStatic(input: Any, inputName: string): Object
 ```
 
-Converting the 1.0 object to a 1.2 object.
+将1.0对象转换为1.2对象。
 
 **Since:** 23
 
@@ -22,18 +28,18 @@ Converting the 1.0 object to a 1.2 object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | Any | Yes | The 1.0 object that needs to be converted |
-| inputName | string | Yes | name registered by the subsystem. |
+| input | Any | Yes | 需要转换的1.0对象。 |
+| inputName | string | Yes | 子系统注册的名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Object |
+| Object | 转换后的对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200067 | Transfer Error. The input name is not supported! |
+| 10200067 | 转换错误，不支持的输入名称！ |
 

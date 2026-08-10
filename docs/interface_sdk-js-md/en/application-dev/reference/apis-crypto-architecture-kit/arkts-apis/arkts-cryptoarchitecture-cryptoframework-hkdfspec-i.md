@@ -1,16 +1,14 @@
 # HKDFSpec
 
-Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is a parameter for HKDF key derivation.
-    **NOTE**  
-    
-    **key** is the original key material entered by the user. An empty string can be passed in for **info** and  
-    **salt** based on the mode.  
-    
-    For example, if the mode is **EXTRACT\_AND\_EXPAND**, all parameter values must be passed in. If the mode is  
-    **EXTRACT\_ONLY**, **info** can be empty. When **HKDFSpec** is constructed, pass in **null** to **info**.  
-    
-    The default mode is **EXTRACT\_AND\_EXPAND**. The value **HKDF|SHA256|EXTRACT\_AND\_EXPAND** is equivalent to  
-    **HKDF|SHA256**.
+密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为HKDF密钥派生函数进行密钥派生时的输入。
+
+> **说明：**
+> 
+> key指的是用户输入的最初的密钥材料。根据模式的不同info与salt可以传空，但是不可不传。
+> 
+> 例如：EXTRACT_AND_EXPAND模式需要输入全部的值，EXTRACT_ONLY模式info可以为空，在构建HKDFSpec的时候，info传入null值。
+> 
+> 默认的模式为EXTRACT_AND_EXPAND，"HKDF|SHA256|EXTRACT_AND_EXPAND"等价于"HKDF|SHA256"。
 
 **Inheritance/Implementation:** HKDFSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -22,13 +20,19 @@ Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## info
 
 ```TypeScript
 info: Uint8Array
 ```
 
-Information used to expand the key.
+拓展信息。
 
 **Type:** Uint8Array
 
@@ -48,7 +52,7 @@ Information used to expand the key.
 key: string | Uint8Array
 ```
 
-Key material.
+密钥材料。
 
 **Type:** string \| Uint8Array
 
@@ -68,9 +72,9 @@ Key material.
 keySize: int
 ```
 
-Length of the derived key, in bytes.
+派生得到的密钥字节长度，单位为bytes。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -88,7 +92,7 @@ Length of the derived key, in bytes.
 salt: Uint8Array
 ```
 
-Salt value.
+盐值。
 
 **Type:** Uint8Array
 

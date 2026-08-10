@@ -1,24 +1,18 @@
 # ResponseRegion
 
-Defines a touch target consisting of an input tool type, touch position, and size.
-    **NOTE**  
-    
-    - When the parent component has [clip]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ set to **true**, child component  
-    interaction is affected by the parent component's response region. Children outside the parent component's response  
-    region won't respond to gestures or events.  
-    
-    - If the input tool type, touch position, and size are not configured for a touch target, default values are used.  
-    
-    - Positive calculation results for x and y represent shifts to the right and down, respectively. Negative  
-    calculation results represent shifts to the left and up, respectively.  
-    
-    - If the width and height are of the string type, the string must be in lowercase. Dynamic calculation with  
-    **calc()** is supported. The format of the input string for **calc()** is Width/Height scaling ratio ± Width/Height  
-    increment, where the scaling ratio is a percentage and the increment unit is px or vp. For example, in  
-    **calc(80% + 10vp)**, **80%** is the width/height scaling ratio, and **10vp** is the width/height increment. If the  
-    width and height are of the **LengthMetrics** type and the unit is percent, the width and height are calculated  
-    relative to the component's own width and height. **percent(1)** indicates 100%. If the calculation result is a  
-    negative value, the default value is used.
+由输入工具类型、触摸位置和大小组成的触摸热区。
+
+> **说明：**
+> 
+> - 当父组件设置[clip](arkts-arkui-commonmethod-c.md#clip)为true时，子组件的响应会受到父组件触摸热区的影响，不在父组件触摸热区内的子组件无法响应手势和事件。
+> 
+> - 如果触摸热区未配置输入工具类型，触摸位置和大小均采用默认值。
+> 
+> - x和y的计算结果为正值时，分别代表向右偏移和向下偏移；当计算结果为负值时，分别代表向左偏移和向上偏移。
+> 
+> - width和height采用string类型时，string需采用小写字符否则不生效，支持calc()的动态计算。指定calc()的入参字符串格式为'宽高缩放比例 ± 宽高增量'，宽高缩放比例为百分比，宽高增量单位为px或
+> vp。例如'calc(80% + 10vp)'中，80%为宽高缩放比例、10vp为宽高增量。width和height采用LengthMetrics类型且单位为percent时，相对于组件自身宽高进行计算，percent(1)代表1
+> 00%。当计算结果为负值时，采用默认值。
 
 **Since:** 22
 
@@ -34,11 +28,11 @@ Defines a touch target consisting of an input tool type, touch position, and siz
 height?: LengthMetrics | string
 ```
 
-Height of the touch target.
+触摸热区的高度。
 
-Default value: **LengthMetrics.percent(1)
+默认值：LengthMetrics.percent(1)
 
-**Type:** LengthMetrics \| string
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| string
 
 **Default:** LengthMetrics.percent(1)
 
@@ -60,11 +54,11 @@ Default value: **LengthMetrics.percent(1)
 tool?: ResponseRegionSupportedTool
 ```
 
-Type of the input tool applicable to the touch target.
+触摸热区适用的输入工具类型。
 
-Default value: **ResponseRegionSupportedTool.ALL
+默认值：ResponseRegionSupportedTool.ALL
 
-**Type:** ResponseRegionSupportedTool
+**Type:** [ResponseRegionSupportedTool](../arkts-apis/arkts-arkui-responseregionsupportedtool-e.md)
 
 **Default:** ResponseRegionSupportedTool.ALL
 
@@ -86,11 +80,11 @@ Default value: **ResponseRegionSupportedTool.ALL
 width?: LengthMetrics | string
 ```
 
-Width of the touch target.
+触摸热区的宽度。
 
-Default value: **LengthMetrics.percent(1)
+默认值：LengthMetrics.percent(1)
 
-**Type:** LengthMetrics \| string
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| string
 
 **Default:** LengthMetrics.percent(1)
 
@@ -112,11 +106,11 @@ Default value: **LengthMetrics.percent(1)
 x?: LengthMetrics
 ```
 
-X coordinate of the touch point relative to the upper left corner of the component.
+触摸点相对于组件左上角的x轴坐标。
 
-Default value: **LengthMetrics.vp(0)
+默认值：LengthMetrics.vp(0)
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
@@ -138,11 +132,11 @@ Default value: **LengthMetrics.vp(0)
 y?: LengthMetrics
 ```
 
-Y coordinate of the touch point relative to the upper left corner of the component.
+触摸点相对于组件左上角的y轴坐标。
 
-Default value: **LengthMetrics.vp(0)
+默认值：LengthMetrics.vp(0)
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

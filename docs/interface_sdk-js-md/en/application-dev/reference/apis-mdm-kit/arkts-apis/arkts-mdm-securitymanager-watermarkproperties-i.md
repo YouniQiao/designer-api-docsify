@@ -1,6 +1,6 @@
 # WatermarkProperties
 
-Defines watermark properties.
+水印属性。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines watermark properties.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { securityManager } from 'kits/@kit.MDMKit';
+```
+
 ## intervalsCol
 
 ```TypeScript
 intervalsCol: number
 ```
 
-Number of columns for displaying the watermark.
+显示水印的列数。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ Number of columns for displaying the watermark.
 intervalsRow: number
 ```
 
-Number of rows for displaying the watermark.
+显示水印的行数。
 
 **Type:** number
 

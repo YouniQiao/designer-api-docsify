@@ -1,6 +1,6 @@
 # ConnectionParams
 
-Describes the parameters for connection.
+连接参数。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the parameters for connection.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+```
+
 ## address
 
 ```TypeScript
 address: string
 ```
 
-Indicates the connected device address.The length must be 17, The value consists of hexadecimal digits and colons (:),for example, 11:22:33:AA:BB:FF.
+连接的设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Indicates the connected device address.The length must be 17, The value consists
 transferMode?: TransferMode
 ```
 
-Data transfer mode. The basic transfer mode is used by default Default value: BASIC.
+数据传输模式。默认使用基本传输模式默认值： 默认值：BASIC。
 
-**Type:** TransferMode
+**Type:** [TransferMode](arkts-connectivity-datatransfer-transfermode-e.md)
 
 **Since:** 26.0.0
 
@@ -56,7 +62,7 @@ Data transfer mode. The basic transfer mode is used by default Default value: BA
 uuid: string
 ```
 
-Indicates the service UUID.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_NearLink standard UUIDs are not allowed.
+服务ID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;禁止使用星闪标准服务UUID。
 
 **Type:** string
 
